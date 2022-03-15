@@ -8,7 +8,7 @@ import io.pulumi.aws.ec2.inputs.FleetOnDemandOptionsArgs;
 import io.pulumi.aws.ec2.inputs.FleetSpotOptionsArgs;
 import io.pulumi.aws.ec2.inputs.FleetTargetCapacitySpecificationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Whether running instances should be terminated if the total target capacity of the EC2 Fleet is decreased below the current size of the EC2. Valid values: `no-termination`, `termination`. Defaults to `termination`.
      * 
      */
-    @InputImport(name="excessCapacityTerminationPolicy")
+    @Import(name="excessCapacityTerminationPolicy")
       private final @Nullable Output<String> excessCapacityTerminationPolicy;
 
     public Output<String> getExcessCapacityTerminationPolicy() {
@@ -35,7 +35,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Nested argument containing EC2 Launch Template configurations. Defined below.
      * 
      */
-    @InputImport(name="launchTemplateConfig", required=true)
+    @Import(name="launchTemplateConfig", required=true)
       private final Output<FleetLaunchTemplateConfigArgs> launchTemplateConfig;
 
     public Output<FleetLaunchTemplateConfigArgs> getLaunchTemplateConfig() {
@@ -46,7 +46,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Nested argument containing On-Demand configurations. Defined below.
      * 
      */
-    @InputImport(name="onDemandOptions")
+    @Import(name="onDemandOptions")
       private final @Nullable Output<FleetOnDemandOptionsArgs> onDemandOptions;
 
     public Output<FleetOnDemandOptionsArgs> getOnDemandOptions() {
@@ -57,7 +57,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Whether EC2 Fleet should replace unhealthy instances. Defaults to `false`.
      * 
      */
-    @InputImport(name="replaceUnhealthyInstances")
+    @Import(name="replaceUnhealthyInstances")
       private final @Nullable Output<Boolean> replaceUnhealthyInstances;
 
     public Output<Boolean> getReplaceUnhealthyInstances() {
@@ -68,7 +68,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Nested argument containing Spot configurations. Defined below.
      * 
      */
-    @InputImport(name="spotOptions")
+    @Import(name="spotOptions")
       private final @Nullable Output<FleetSpotOptionsArgs> spotOptions;
 
     public Output<FleetSpotOptionsArgs> getSpotOptions() {
@@ -79,7 +79,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Map of Fleet tags. To tag instances at launch, specify the tags in the Launch Template. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -90,7 +90,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Nested argument containing target capacity configurations. Defined below.
      * 
      */
-    @InputImport(name="targetCapacitySpecification", required=true)
+    @Import(name="targetCapacitySpecification", required=true)
       private final Output<FleetTargetCapacitySpecificationArgs> targetCapacitySpecification;
 
     public Output<FleetTargetCapacitySpecificationArgs> getTargetCapacitySpecification() {
@@ -101,7 +101,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to terminate instances for an EC2 Fleet if it is deleted successfully. Defaults to `false`.
      * 
      */
-    @InputImport(name="terminateInstances")
+    @Import(name="terminateInstances")
       private final @Nullable Output<Boolean> terminateInstances;
 
     public Output<Boolean> getTerminateInstances() {
@@ -112,7 +112,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Whether running instances should be terminated when the EC2 Fleet expires. Defaults to `false`.
      * 
      */
-    @InputImport(name="terminateInstancesWithExpiration")
+    @Import(name="terminateInstancesWithExpiration")
       private final @Nullable Output<Boolean> terminateInstancesWithExpiration;
 
     public Output<Boolean> getTerminateInstancesWithExpiration() {
@@ -123,7 +123,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * The type of request. Indicates whether the EC2 Fleet only requests the target capacity, or also attempts to maintain it. Valid values: `maintain`, `request`. Defaults to `maintain`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

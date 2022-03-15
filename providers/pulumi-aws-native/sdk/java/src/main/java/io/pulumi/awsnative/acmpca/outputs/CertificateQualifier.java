@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificateQualifier {
     private final String cpsUri;
 
-    @OutputCustomType.Constructor
-    private CertificateQualifier(@OutputCustomType.Parameter("cpsUri") String cpsUri) {
+    @CustomType.Constructor
+    private CertificateQualifier(@CustomType.Parameter("cpsUri") String cpsUri) {
         this.cpsUri = cpsUri;
     }
 

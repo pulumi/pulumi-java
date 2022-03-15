@@ -7,7 +7,7 @@ import io.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationMetr
 import io.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationArgs;
 import io.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationArgs e
      * The load metric specification.
      * 
      */
-    @InputImport(name="predefinedLoadMetricSpecification")
+    @Import(name="predefinedLoadMetricSpecification")
       private final @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationArgs> predefinedLoadMetricSpecification;
 
     public Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecificationArgs> getPredefinedLoadMetricSpecification() {
@@ -32,7 +32,7 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationArgs e
      * The metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling metric and load metric to use.
      * 
      */
-    @InputImport(name="predefinedMetricPairSpecification")
+    @Import(name="predefinedMetricPairSpecification")
       private final @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationArgs> predefinedMetricPairSpecification;
 
     public Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecificationArgs> getPredefinedMetricPairSpecification() {
@@ -43,7 +43,7 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationArgs e
      * The scaling metric specification.
      * 
      */
-    @InputImport(name="predefinedScalingMetricSpecification")
+    @Import(name="predefinedScalingMetricSpecification")
       private final @Nullable Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationArgs> predefinedScalingMetricSpecification;
 
     public Output<PolicyPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecificationArgs> getPredefinedScalingMetricSpecification() {
@@ -54,7 +54,7 @@ public final class PolicyPredictiveScalingConfigurationMetricSpecificationArgs e
      * The target value for the metric.
      * 
      */
-    @InputImport(name="targetValue", required=true)
+    @Import(name="targetValue", required=true)
       private final Output<Integer> targetValue;
 
     public Output<Integer> getTargetValue() {

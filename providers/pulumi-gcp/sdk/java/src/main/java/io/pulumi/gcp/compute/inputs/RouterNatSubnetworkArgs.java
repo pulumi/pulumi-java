@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RouterNatSubnetworkArgs extends io.pulumi.resources.ResourceA
      * Self-link of subnetwork to NAT
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class RouterNatSubnetworkArgs extends io.pulumi.resources.ResourceA
      * sourceIpRangesToNat
      * 
      */
-    @InputImport(name="secondaryIpRangeNames")
+    @Import(name="secondaryIpRangeNames")
       private final @Nullable Output<List<String>> secondaryIpRangeNames;
 
     public Output<List<String>> getSecondaryIpRangeNames() {
@@ -47,7 +47,7 @@ public final class RouterNatSubnetworkArgs extends io.pulumi.resources.ResourceA
      * `PRIMARY_IP_RANGE`.
      * 
      */
-    @InputImport(name="sourceIpRangesToNats", required=true)
+    @Import(name="sourceIpRangesToNats", required=true)
       private final Output<List<String>> sourceIpRangesToNats;
 
     public Output<List<String>> getSourceIpRangesToNats() {

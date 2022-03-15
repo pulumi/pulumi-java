@@ -7,7 +7,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupRuleActionAllowArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleActionBlockArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleActionCountArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
      * Instructs AWS WAF to allow the web request. See Allow below for details.
      * 
      */
-    @InputImport(name="allow")
+    @Import(name="allow")
       private final @Nullable Output<RuleGroupRuleActionAllowArgs> allow;
 
     public Output<RuleGroupRuleActionAllowArgs> getAllow() {
@@ -31,7 +31,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
      * Instructs AWS WAF to block the web request. See Block below for details.
      * 
      */
-    @InputImport(name="block")
+    @Import(name="block")
       private final @Nullable Output<RuleGroupRuleActionBlockArgs> block;
 
     public Output<RuleGroupRuleActionBlockArgs> getBlock() {
@@ -42,7 +42,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
      * Instructs AWS WAF to count the web request and allow it. See Count below for details.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<RuleGroupRuleActionCountArgs> count;
 
     public Output<RuleGroupRuleActionCountArgs> getCount() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkRuleConditionResponse {
     /**
      * Description of the rule condition.
@@ -59,17 +59,17 @@ public final class NetworkRuleConditionResponse {
      */
     private final @Nullable List<String> sourceIpGroups;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkRuleConditionResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
-        @OutputCustomType.Parameter("destinationIpGroups") @Nullable List<String> destinationIpGroups,
-        @OutputCustomType.Parameter("destinationPorts") @Nullable List<String> destinationPorts,
-        @OutputCustomType.Parameter("ipProtocols") @Nullable List<String> ipProtocols,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("ruleConditionType") String ruleConditionType,
-        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
-        @OutputCustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
+        @CustomType.Parameter("destinationIpGroups") @Nullable List<String> destinationIpGroups,
+        @CustomType.Parameter("destinationPorts") @Nullable List<String> destinationPorts,
+        @CustomType.Parameter("ipProtocols") @Nullable List<String> ipProtocols,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("ruleConditionType") String ruleConditionType,
+        @CustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @CustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups) {
         this.description = description;
         this.destinationAddresses = destinationAddresses;
         this.destinationIpGroups = destinationIpGroups;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class NotificationRateLimitResponse extends io.pulumi.resources.Inv
      * Not more than one notification per period.
      * 
      */
-    @InputImport(name="period", required=true)
+    @Import(name="period", required=true)
       private final String period;
 
     public String getPeriod() {

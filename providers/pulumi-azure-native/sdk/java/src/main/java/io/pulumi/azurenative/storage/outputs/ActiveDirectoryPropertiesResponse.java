@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ActiveDirectoryPropertiesResponse {
     /**
      * Specifies the security identifier (SID) for Azure Storage.
@@ -40,14 +40,14 @@ public final class ActiveDirectoryPropertiesResponse {
      */
     private final String netBiosDomainName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ActiveDirectoryPropertiesResponse(
-        @OutputCustomType.Parameter("azureStorageSid") String azureStorageSid,
-        @OutputCustomType.Parameter("domainGuid") String domainGuid,
-        @OutputCustomType.Parameter("domainName") String domainName,
-        @OutputCustomType.Parameter("domainSid") String domainSid,
-        @OutputCustomType.Parameter("forestName") String forestName,
-        @OutputCustomType.Parameter("netBiosDomainName") String netBiosDomainName) {
+        @CustomType.Parameter("azureStorageSid") String azureStorageSid,
+        @CustomType.Parameter("domainGuid") String domainGuid,
+        @CustomType.Parameter("domainName") String domainName,
+        @CustomType.Parameter("domainSid") String domainSid,
+        @CustomType.Parameter("forestName") String forestName,
+        @CustomType.Parameter("netBiosDomainName") String netBiosDomainName) {
         this.azureStorageSid = azureStorageSid;
         this.domainGuid = domainGuid;
         this.domainName = domainName;

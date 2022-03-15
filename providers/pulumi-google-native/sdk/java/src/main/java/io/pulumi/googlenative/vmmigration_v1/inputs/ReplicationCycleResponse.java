@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
      * The current progress in percentage of this cycle.
      * 
      */
-    @InputImport(name="progressPercent", required=true)
+    @Import(name="progressPercent", required=true)
       private final Integer progressPercent;
 
     public Integer getProgressPercent() {
@@ -32,7 +32,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
      * The time the replication cycle has started.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {

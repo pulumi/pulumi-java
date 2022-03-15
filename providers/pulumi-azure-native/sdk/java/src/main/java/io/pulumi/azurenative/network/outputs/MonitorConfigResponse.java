@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.MonitorConfigResponseCustomHeaders;
 import io.pulumi.azurenative.network.outputs.MonitorConfigResponseExpectedStatusCodeRanges;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MonitorConfigResponse {
     /**
      * List of custom headers.
@@ -61,17 +61,17 @@ public final class MonitorConfigResponse {
      */
     private final @Nullable Double toleratedNumberOfFailures;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MonitorConfigResponse(
-        @OutputCustomType.Parameter("customHeaders") @Nullable List<MonitorConfigResponseCustomHeaders> customHeaders,
-        @OutputCustomType.Parameter("expectedStatusCodeRanges") @Nullable List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges,
-        @OutputCustomType.Parameter("intervalInSeconds") @Nullable Double intervalInSeconds,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("port") @Nullable Double port,
-        @OutputCustomType.Parameter("profileMonitorStatus") @Nullable String profileMonitorStatus,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Double timeoutInSeconds,
-        @OutputCustomType.Parameter("toleratedNumberOfFailures") @Nullable Double toleratedNumberOfFailures) {
+        @CustomType.Parameter("customHeaders") @Nullable List<MonitorConfigResponseCustomHeaders> customHeaders,
+        @CustomType.Parameter("expectedStatusCodeRanges") @Nullable List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges,
+        @CustomType.Parameter("intervalInSeconds") @Nullable Double intervalInSeconds,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("port") @Nullable Double port,
+        @CustomType.Parameter("profileMonitorStatus") @Nullable String profileMonitorStatus,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("timeoutInSeconds") @Nullable Double timeoutInSeconds,
+        @CustomType.Parameter("toleratedNumberOfFailures") @Nullable Double toleratedNumberOfFailures) {
         this.customHeaders = customHeaders;
         this.expectedStatusCodeRanges = expectedStatusCodeRanges;
         this.intervalInSeconds = intervalInSeconds;

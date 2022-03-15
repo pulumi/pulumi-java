@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArg
      * Workspace active directory administrator type
      * 
      */
-    @InputImport(name="administratorType")
+    @Import(name="administratorType")
       private final @Nullable Output<String> administratorType;
 
     public Output<String> getAdministratorType() {
@@ -29,7 +29,7 @@ public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArg
      * Login of the workspace active directory administrator
      * 
      */
-    @InputImport(name="login")
+    @Import(name="login")
       private final @Nullable Output<String> login;
 
     public Output<String> getLogin() {
@@ -40,7 +40,7 @@ public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArg
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArg
      * Object ID of the workspace active directory administrator
      * 
      */
-    @InputImport(name="sid")
+    @Import(name="sid")
       private final @Nullable Output<String> sid;
 
     public Output<String> getSid() {
@@ -62,7 +62,7 @@ public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArg
      * Tenant ID of the workspace active directory administrator
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
@@ -73,7 +73,7 @@ public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArg
      * The name of the workspace
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

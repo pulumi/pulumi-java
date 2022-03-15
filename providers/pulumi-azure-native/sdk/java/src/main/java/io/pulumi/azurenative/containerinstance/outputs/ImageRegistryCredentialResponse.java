@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageRegistryCredentialResponse {
     /**
      * The password for the private registry.
@@ -27,11 +27,11 @@ public final class ImageRegistryCredentialResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageRegistryCredentialResponse(
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("server") String server,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("server") String server,
+        @CustomType.Parameter("username") String username) {
         this.password = password;
         this.server = server;
         this.username = username;

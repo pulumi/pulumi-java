@@ -8,7 +8,7 @@ import io.pulumi.aws.ec2.VpcEndpointServiceArgs;
 import io.pulumi.aws.ec2.inputs.VpcEndpointServiceState;
 import io.pulumi.aws.ec2.outputs.VpcEndpointServicePrivateDnsNameConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -43,7 +43,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
      * 
      */
-    @OutputExport(name="acceptanceRequired", type=Boolean.class, parameters={})
+    @Export(name="acceptanceRequired", type=Boolean.class, parameters={})
     private Output<Boolean> acceptanceRequired;
 
     /**
@@ -57,7 +57,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * The ARNs of one or more principals allowed to discover the endpoint service.
      * 
      */
-    @OutputExport(name="allowedPrincipals", type=List.class, parameters={String.class})
+    @Export(name="allowedPrincipals", type=List.class, parameters={String.class})
     private Output<List<String>> allowedPrincipals;
 
     /**
@@ -71,7 +71,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the VPC endpoint service.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -85,7 +85,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * The Availability Zones in which the service is available.
      * 
      */
-    @OutputExport(name="availabilityZones", type=List.class, parameters={String.class})
+    @Export(name="availabilityZones", type=List.class, parameters={String.class})
     private Output<List<String>> availabilityZones;
 
     /**
@@ -99,7 +99,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * The DNS names for the service.
      * 
      */
-    @OutputExport(name="baseEndpointDnsNames", type=List.class, parameters={String.class})
+    @Export(name="baseEndpointDnsNames", type=List.class, parameters={String.class})
     private Output<List<String>> baseEndpointDnsNames;
 
     /**
@@ -113,7 +113,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * Amazon Resource Names (ARNs) of one or more Gateway Load Balancers for the endpoint service.
      * 
      */
-    @OutputExport(name="gatewayLoadBalancerArns", type=List.class, parameters={String.class})
+    @Export(name="gatewayLoadBalancerArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> gatewayLoadBalancerArns;
 
     /**
@@ -127,7 +127,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * Whether or not the service manages its VPC endpoints - `true` or `false`.
      * 
      */
-    @OutputExport(name="managesVpcEndpoints", type=Boolean.class, parameters={})
+    @Export(name="managesVpcEndpoints", type=Boolean.class, parameters={})
     private Output<Boolean> managesVpcEndpoints;
 
     /**
@@ -141,7 +141,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * Amazon Resource Names (ARNs) of one or more Network Load Balancers for the endpoint service.
      * 
      */
-    @OutputExport(name="networkLoadBalancerArns", type=List.class, parameters={String.class})
+    @Export(name="networkLoadBalancerArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> networkLoadBalancerArns;
 
     /**
@@ -155,7 +155,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * The private DNS name for the service.
      * 
      */
-    @OutputExport(name="privateDnsName", type=String.class, parameters={})
+    @Export(name="privateDnsName", type=String.class, parameters={})
     private Output<String> privateDnsName;
 
     /**
@@ -169,7 +169,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * List of objects containing information about the endpoint service private DNS name configuration.
      * 
      */
-    @OutputExport(name="privateDnsNameConfigurations", type=List.class, parameters={VpcEndpointServicePrivateDnsNameConfiguration.class})
+    @Export(name="privateDnsNameConfigurations", type=List.class, parameters={VpcEndpointServicePrivateDnsNameConfiguration.class})
     private Output<List<VpcEndpointServicePrivateDnsNameConfiguration>> privateDnsNameConfigurations;
 
     /**
@@ -183,7 +183,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * The service name.
      * 
      */
-    @OutputExport(name="serviceName", type=String.class, parameters={})
+    @Export(name="serviceName", type=String.class, parameters={})
     private Output<String> serviceName;
 
     /**
@@ -197,7 +197,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * The service type, `Gateway` or `Interface`.
      * 
      */
-    @OutputExport(name="serviceType", type=String.class, parameters={})
+    @Export(name="serviceType", type=String.class, parameters={})
     private Output<String> serviceType;
 
     /**
@@ -211,7 +211,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * Verification state of the VPC endpoint service. Consumers of the endpoint service can use the private name only when the state is `verified`.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -225,7 +225,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -239,7 +239,7 @@ public class VpcEndpointService extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

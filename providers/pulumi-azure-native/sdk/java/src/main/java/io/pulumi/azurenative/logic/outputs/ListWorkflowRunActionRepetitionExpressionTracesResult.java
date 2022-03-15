@@ -4,17 +4,17 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.ExpressionRootResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListWorkflowRunActionRepetitionExpressionTracesResult {
     private final @Nullable List<ExpressionRootResponse> inputs;
 
-    @OutputCustomType.Constructor
-    private ListWorkflowRunActionRepetitionExpressionTracesResult(@OutputCustomType.Parameter("inputs") @Nullable List<ExpressionRootResponse> inputs) {
+    @CustomType.Constructor
+    private ListWorkflowRunActionRepetitionExpressionTracesResult(@CustomType.Parameter("inputs") @Nullable List<ExpressionRootResponse> inputs) {
         this.inputs = inputs;
     }
 

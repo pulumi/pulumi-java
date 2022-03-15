@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GoogleAdWordsLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
@@ -106,25 +106,25 @@ public final class GoogleAdWordsLinkedServiceResponse {
      */
     private final @Nullable Object useSystemTrustStore;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleAdWordsLinkedServiceResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
-        @OutputCustomType.Parameter("clientCustomerID") @Nullable Object clientCustomerID,
-        @OutputCustomType.Parameter("clientId") @Nullable Object clientId,
-        @OutputCustomType.Parameter("clientSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("connectionProperties") @Nullable Object connectionProperties,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("developerToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> developerToken,
-        @OutputCustomType.Parameter("email") @Nullable Object email,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("keyFilePath") @Nullable Object keyFilePath,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("refreshToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken,
-        @OutputCustomType.Parameter("trustedCertPath") @Nullable Object trustedCertPath,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("useSystemTrustStore") @Nullable Object useSystemTrustStore) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @CustomType.Parameter("clientCustomerID") @Nullable Object clientCustomerID,
+        @CustomType.Parameter("clientId") @Nullable Object clientId,
+        @CustomType.Parameter("clientSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("connectionProperties") @Nullable Object connectionProperties,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("developerToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> developerToken,
+        @CustomType.Parameter("email") @Nullable Object email,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("keyFilePath") @Nullable Object keyFilePath,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("refreshToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken,
+        @CustomType.Parameter("trustedCertPath") @Nullable Object trustedCertPath,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("useSystemTrustStore") @Nullable Object useSystemTrustStore) {
         this.annotations = annotations;
         this.authenticationType = authenticationType;
         this.clientCustomerID = clientCustomerID;

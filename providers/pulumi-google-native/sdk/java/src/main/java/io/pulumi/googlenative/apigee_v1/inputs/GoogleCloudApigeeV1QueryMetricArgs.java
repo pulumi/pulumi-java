@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
      * Alias for the metric. Alias will be used to replace metric name in query results.
      * 
      */
-    @InputImport(name="alias")
+    @Import(name="alias")
       private final @Nullable Output<String> alias;
 
     public Output<String> getAlias() {
@@ -33,7 +33,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
      * Aggregation function: avg, min, max, or sum.
      * 
      */
-    @InputImport(name="function")
+    @Import(name="function")
       private final @Nullable Output<String> function;
 
     public Output<String> getFunction() {
@@ -44,7 +44,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
      * Metric name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
      * One of `+`, `-`, `/`, `%`, `*`.
      * 
      */
-    @InputImport(name="operator")
+    @Import(name="operator")
       private final @Nullable Output<String> operator;
 
     public Output<String> getOperator() {
@@ -66,7 +66,7 @@ public final class GoogleCloudApigeeV1QueryMetricArgs extends io.pulumi.resource
      * Operand value should be provided when operator is set.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

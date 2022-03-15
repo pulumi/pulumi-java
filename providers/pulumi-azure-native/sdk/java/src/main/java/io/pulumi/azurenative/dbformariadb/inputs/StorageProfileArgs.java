@@ -7,7 +7,7 @@ import io.pulumi.azurenative.dbformariadb.enums.GeoRedundantBackup;
 import io.pulumi.azurenative.dbformariadb.enums.StorageAutogrow;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Backup retention days for the server.
      * 
      */
-    @InputImport(name="backupRetentionDays")
+    @Import(name="backupRetentionDays")
       private final @Nullable Output<Integer> backupRetentionDays;
 
     public Output<Integer> getBackupRetentionDays() {
@@ -37,7 +37,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Enable Geo-redundant or not for server backup.
      * 
      */
-    @InputImport(name="geoRedundantBackup")
+    @Import(name="geoRedundantBackup")
       private final @Nullable Output<Either<String,GeoRedundantBackup>> geoRedundantBackup;
 
     public Output<Either<String,GeoRedundantBackup>> getGeoRedundantBackup() {
@@ -48,7 +48,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Enable Storage Auto Grow.
      * 
      */
-    @InputImport(name="storageAutogrow")
+    @Import(name="storageAutogrow")
       private final @Nullable Output<Either<String,StorageAutogrow>> storageAutogrow;
 
     public Output<Either<String,StorageAutogrow>> getStorageAutogrow() {
@@ -59,7 +59,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Max storage allowed for a server.
      * 
      */
-    @InputImport(name="storageMB")
+    @Import(name="storageMB")
       private final @Nullable Output<Integer> storageMB;
 
     public Output<Integer> getStorageMB() {

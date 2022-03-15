@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VolumeResponse {
     /**
      * Name of the volume to mount. Volume names must be unique per build step and must be valid names for Docker volumes. Each named volume must be used by at least two build steps.
@@ -20,10 +20,10 @@ public final class VolumeResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VolumeResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("path") String path) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("path") String path) {
         this.name = name;
         this.path = path;
     }

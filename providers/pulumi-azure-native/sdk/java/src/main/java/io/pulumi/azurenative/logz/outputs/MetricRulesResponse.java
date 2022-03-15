@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.logz.outputs;
 
 import io.pulumi.azurenative.logz.outputs.FilteringTagResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricRulesResponse {
     /**
      * List of filtering tags to be used for capturing metrics. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
@@ -24,10 +24,10 @@ public final class MetricRulesResponse {
      */
     private final @Nullable String subscriptionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricRulesResponse(
-        @OutputCustomType.Parameter("filteringTags") @Nullable List<FilteringTagResponse> filteringTags,
-        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId) {
+        @CustomType.Parameter("filteringTags") @Nullable List<FilteringTagResponse> filteringTags,
+        @CustomType.Parameter("subscriptionId") @Nullable String subscriptionId) {
         this.filteringTags = filteringTags;
         this.subscriptionId = subscriptionId;
     }

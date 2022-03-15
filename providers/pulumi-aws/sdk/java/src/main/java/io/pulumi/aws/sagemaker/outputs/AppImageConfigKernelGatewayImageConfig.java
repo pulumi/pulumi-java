@@ -5,12 +5,12 @@ package io.pulumi.aws.sagemaker.outputs;
 
 import io.pulumi.aws.sagemaker.outputs.AppImageConfigKernelGatewayImageConfigFileSystemConfig;
 import io.pulumi.aws.sagemaker.outputs.AppImageConfigKernelGatewayImageConfigKernelSpec;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppImageConfigKernelGatewayImageConfig {
     /**
      * The URL where the Git repository is located. See File System Config details below.
@@ -23,10 +23,10 @@ public final class AppImageConfigKernelGatewayImageConfig {
      */
     private final AppImageConfigKernelGatewayImageConfigKernelSpec kernelSpec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppImageConfigKernelGatewayImageConfig(
-        @OutputCustomType.Parameter("fileSystemConfig") @Nullable AppImageConfigKernelGatewayImageConfigFileSystemConfig fileSystemConfig,
-        @OutputCustomType.Parameter("kernelSpec") AppImageConfigKernelGatewayImageConfigKernelSpec kernelSpec) {
+        @CustomType.Parameter("fileSystemConfig") @Nullable AppImageConfigKernelGatewayImageConfigFileSystemConfig fileSystemConfig,
+        @CustomType.Parameter("kernelSpec") AppImageConfigKernelGatewayImageConfigKernelSpec kernelSpec) {
         this.fileSystemConfig = fileSystemConfig;
         this.kernelSpec = kernelSpec;
     }

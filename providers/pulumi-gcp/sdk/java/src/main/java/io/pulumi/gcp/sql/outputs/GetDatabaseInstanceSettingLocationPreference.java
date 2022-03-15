@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDatabaseInstanceSettingLocationPreference {
     private final String followGaeApplication;
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatabaseInstanceSettingLocationPreference(
-        @OutputCustomType.Parameter("followGaeApplication") String followGaeApplication,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("followGaeApplication") String followGaeApplication,
+        @CustomType.Parameter("zone") String zone) {
         this.followGaeApplication = followGaeApplication;
         this.zone = zone;
     }

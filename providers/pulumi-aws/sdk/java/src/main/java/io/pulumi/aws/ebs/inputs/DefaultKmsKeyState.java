@@ -4,7 +4,7 @@
 package io.pulumi.aws.ebs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DefaultKmsKeyState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use to encrypt the EBS volume.
      * 
      */
-    @InputImport(name="keyArn")
+    @Import(name="keyArn")
       private final @Nullable Output<String> keyArn;
 
     public Output<String> getKeyArn() {

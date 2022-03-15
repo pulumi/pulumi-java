@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
      * Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. The default is `false`.
      * 
      */
-    @InputImport(name="includeControlDetails")
+    @Import(name="includeControlDetails")
       private final @Nullable Output<Boolean> includeControlDetails;
 
     public Output<Boolean> getIncludeControlDetails() {
@@ -30,7 +30,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
      * Include NULL and empty columns in the target. The default is `false`.
      * 
      */
-    @InputImport(name="includeNullAndEmpty")
+    @Import(name="includeNullAndEmpty")
       private final @Nullable Output<Boolean> includeNullAndEmpty;
 
     public Output<Boolean> getIncludeNullAndEmpty() {
@@ -41,7 +41,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
      * Shows the partition value within the Kinesis message output, unless the partition type is schema-table-type. The default is `false`.
      * 
      */
-    @InputImport(name="includePartitionValue")
+    @Import(name="includePartitionValue")
       private final @Nullable Output<Boolean> includePartitionValue;
 
     public Output<Boolean> getIncludePartitionValue() {
@@ -52,7 +52,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
      * Includes any data definition language (DDL) operations that change the table in the control data. The default is `false`.
      * 
      */
-    @InputImport(name="includeTableAlterOperations")
+    @Import(name="includeTableAlterOperations")
       private final @Nullable Output<Boolean> includeTableAlterOperations;
 
     public Output<Boolean> getIncludeTableAlterOperations() {
@@ -63,7 +63,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
      * Provides detailed transaction information from the source database. The default is `false`.
      * 
      */
-    @InputImport(name="includeTransactionDetails")
+    @Import(name="includeTransactionDetails")
       private final @Nullable Output<Boolean> includeTransactionDetails;
 
     public Output<Boolean> getIncludeTransactionDetails() {
@@ -74,7 +74,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
      * Output format for the records created. Defaults to `json`. Valid values are `json` and `json_unformatted` (a single line with no tab).
      * 
      */
-    @InputImport(name="messageFormat")
+    @Import(name="messageFormat")
       private final @Nullable Output<String> messageFormat;
 
     public Output<String> getMessageFormat() {
@@ -85,7 +85,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
      * Prefixes schema and table names to partition values, when the partition type is primary-key-type. The default is `false`.
      * 
      */
-    @InputImport(name="partitionIncludeSchemaTable")
+    @Import(name="partitionIncludeSchemaTable")
       private final @Nullable Output<Boolean> partitionIncludeSchemaTable;
 
     public Output<Boolean> getPartitionIncludeSchemaTable() {
@@ -96,7 +96,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
      * Amazon Resource Name (ARN) of the IAM Role with permissions to write to the Kinesis data stream.
      * 
      */
-    @InputImport(name="serviceAccessRoleArn")
+    @Import(name="serviceAccessRoleArn")
       private final @Nullable Output<String> serviceAccessRoleArn;
 
     public Output<String> getServiceAccessRoleArn() {
@@ -107,7 +107,7 @@ public final class EndpointKinesisSettingsGetArgs extends io.pulumi.resources.Re
      * Amazon Resource Name (ARN) of the Kinesis data stream.
      * 
      */
-    @InputImport(name="streamArn")
+    @Import(name="streamArn")
       private final @Nullable Output<String> streamArn;
 
     public Output<String> getStreamArn() {

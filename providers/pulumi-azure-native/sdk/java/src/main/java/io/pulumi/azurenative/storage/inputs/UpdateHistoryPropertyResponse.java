@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
      * The immutability period for the blobs in the container since the policy creation, in days.
      * 
      */
-    @InputImport(name="immutabilityPeriodSinceCreationInDays", required=true)
+    @Import(name="immutabilityPeriodSinceCreationInDays", required=true)
       private final Integer immutabilityPeriodSinceCreationInDays;
 
     public Integer getImmutabilityPeriodSinceCreationInDays() {
@@ -32,7 +32,7 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
      * Returns the Object ID of the user who updated the ImmutabilityPolicy.
      * 
      */
-    @InputImport(name="objectIdentifier", required=true)
+    @Import(name="objectIdentifier", required=true)
       private final String objectIdentifier;
 
     public String getObjectIdentifier() {
@@ -43,7 +43,7 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
      * Returns the Tenant ID that issued the token for the user who updated the ImmutabilityPolicy.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {
@@ -54,7 +54,7 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
      * Returns the date and time the ImmutabilityPolicy was updated.
      * 
      */
-    @InputImport(name="timestamp", required=true)
+    @Import(name="timestamp", required=true)
       private final String timestamp;
 
     public String getTimestamp() {
@@ -65,7 +65,7 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
      * The ImmutabilityPolicy update type of a blob container, possible values include: put, lock and extend.
      * 
      */
-    @InputImport(name="update", required=true)
+    @Import(name="update", required=true)
       private final String update;
 
     public String getUpdate() {
@@ -76,7 +76,7 @@ public final class UpdateHistoryPropertyResponse extends io.pulumi.resources.Inv
      * Returns the User Principal Name of the user who updated the ImmutabilityPolicy.
      * 
      */
-    @InputImport(name="upn", required=true)
+    @Import(name="upn", required=true)
       private final String upn;
 
     public String getUpn() {

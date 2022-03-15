@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetTopicSchemaSetting extends io.pulumi.resources.InvokeArgs 
 
     public static final GetTopicSchemaSetting Empty = new GetTopicSchemaSetting();
 
-    @InputImport(name="encoding", required=true)
+    @Import(name="encoding", required=true)
       private final String encoding;
 
     public String getEncoding() {
         return this.encoding;
     }
 
-    @InputImport(name="schema", required=true)
+    @Import(name="schema", required=true)
       private final String schema;
 
     public String getSchema() {

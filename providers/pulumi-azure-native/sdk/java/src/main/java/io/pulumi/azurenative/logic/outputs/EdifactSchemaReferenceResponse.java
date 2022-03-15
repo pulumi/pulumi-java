@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdifactSchemaReferenceResponse {
     /**
      * The association assigned code.
@@ -47,15 +47,15 @@ public final class EdifactSchemaReferenceResponse {
      */
     private final @Nullable String senderApplicationQualifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdifactSchemaReferenceResponse(
-        @OutputCustomType.Parameter("associationAssignedCode") @Nullable String associationAssignedCode,
-        @OutputCustomType.Parameter("messageId") String messageId,
-        @OutputCustomType.Parameter("messageRelease") String messageRelease,
-        @OutputCustomType.Parameter("messageVersion") String messageVersion,
-        @OutputCustomType.Parameter("schemaName") String schemaName,
-        @OutputCustomType.Parameter("senderApplicationId") @Nullable String senderApplicationId,
-        @OutputCustomType.Parameter("senderApplicationQualifier") @Nullable String senderApplicationQualifier) {
+        @CustomType.Parameter("associationAssignedCode") @Nullable String associationAssignedCode,
+        @CustomType.Parameter("messageId") String messageId,
+        @CustomType.Parameter("messageRelease") String messageRelease,
+        @CustomType.Parameter("messageVersion") String messageVersion,
+        @CustomType.Parameter("schemaName") String schemaName,
+        @CustomType.Parameter("senderApplicationId") @Nullable String senderApplicationId,
+        @CustomType.Parameter("senderApplicationQualifier") @Nullable String senderApplicationQualifier) {
         this.associationAssignedCode = associationAssignedCode;
         this.messageId = messageId;
         this.messageRelease = messageRelease;

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.RestoreInfoResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTableResult {
     /**
      * Map from cluster ID to per-cluster table state. If it could not be determined whether or not the table has data in a particular cluster (for example, if its zone is unavailable), then there will be an entry for the cluster with UNKNOWN `replication_status`. Views: `REPLICATION_VIEW`, `ENCRYPTION_VIEW`, `FULL`
@@ -37,13 +37,13 @@ public final class GetTableResult {
      */
     private final RestoreInfoResponse restoreInfo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTableResult(
-        @OutputCustomType.Parameter("clusterStates") Map<String,String> clusterStates,
-        @OutputCustomType.Parameter("columnFamilies") Map<String,String> columnFamilies,
-        @OutputCustomType.Parameter("granularity") String granularity,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("restoreInfo") RestoreInfoResponse restoreInfo) {
+        @CustomType.Parameter("clusterStates") Map<String,String> clusterStates,
+        @CustomType.Parameter("columnFamilies") Map<String,String> columnFamilies,
+        @CustomType.Parameter("granularity") String granularity,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("restoreInfo") RestoreInfoResponse restoreInfo) {
         this.clusterStates = clusterStates;
         this.columnFamilies = columnFamilies;
         this.granularity = granularity;

@@ -7,14 +7,14 @@ import io.pulumi.awsnative.stepfunctions.enums.StateMachineType;
 import io.pulumi.awsnative.stepfunctions.outputs.StateMachineLoggingConfiguration;
 import io.pulumi.awsnative.stepfunctions.outputs.StateMachineTagsEntry;
 import io.pulumi.awsnative.stepfunctions.outputs.StateMachineTracingConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStateMachineResult {
     private final @Nullable String arn;
     private final @Nullable String definitionString;
@@ -25,16 +25,16 @@ public final class GetStateMachineResult {
     private final @Nullable List<StateMachineTagsEntry> tags;
     private final @Nullable StateMachineTracingConfiguration tracingConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStateMachineResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("definitionString") @Nullable String definitionString,
-        @OutputCustomType.Parameter("loggingConfiguration") @Nullable StateMachineLoggingConfiguration loggingConfiguration,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("stateMachineType") @Nullable StateMachineType stateMachineType,
-        @OutputCustomType.Parameter("tags") @Nullable List<StateMachineTagsEntry> tags,
-        @OutputCustomType.Parameter("tracingConfiguration") @Nullable StateMachineTracingConfiguration tracingConfiguration) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("definitionString") @Nullable String definitionString,
+        @CustomType.Parameter("loggingConfiguration") @Nullable StateMachineLoggingConfiguration loggingConfiguration,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("stateMachineType") @Nullable StateMachineType stateMachineType,
+        @CustomType.Parameter("tags") @Nullable List<StateMachineTagsEntry> tags,
+        @CustomType.Parameter("tracingConfiguration") @Nullable StateMachineTracingConfiguration tracingConfiguration) {
         this.arn = arn;
         this.definitionString = definitionString;
         this.loggingConfiguration = loggingConfiguration;

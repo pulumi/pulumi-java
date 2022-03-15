@@ -5,19 +5,19 @@ package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupFieldToMatch;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupTextTransformation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupSqliMatchStatement {
     private final RuleGroupFieldToMatch fieldToMatch;
     private final List<RuleGroupTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupSqliMatchStatement(
-        @OutputCustomType.Parameter("fieldToMatch") RuleGroupFieldToMatch fieldToMatch,
-        @OutputCustomType.Parameter("textTransformations") List<RuleGroupTextTransformation> textTransformations) {
+        @CustomType.Parameter("fieldToMatch") RuleGroupFieldToMatch fieldToMatch,
+        @CustomType.Parameter("textTransformations") List<RuleGroupTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = textTransformations;
     }

@@ -7,7 +7,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupCustomResponseBodyGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleGetArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupVisibilityConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the IP Set that this statement references.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -35,7 +35,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * The web ACL capacity units (WCUs) required for this rule group. See [here](https://docs.aws.amazon.com/waf/latest/APIReference/API_CreateRuleGroup.html#API_CreateRuleGroup_RequestSyntax) for general information and [here](https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-statements-list.html) for capacity specific information.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
@@ -46,7 +46,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * Defines custom response bodies that can be referenced by `custom_response` actions. See Custom Response Body below for details.
      * 
      */
-    @InputImport(name="customResponseBodies")
+    @Import(name="customResponseBodies")
       private final @Nullable Output<List<RuleGroupCustomResponseBodyGetArgs>> customResponseBodies;
 
     public Output<List<RuleGroupCustomResponseBodyGetArgs>> getCustomResponseBodies() {
@@ -57,14 +57,14 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * A friendly description of the rule group.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="lockToken")
+    @Import(name="lockToken")
       private final @Nullable Output<String> lockToken;
 
     public Output<String> getLockToken() {
@@ -75,7 +75,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * The label string.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -86,7 +86,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<RuleGroupRuleGetArgs>> rules;
 
     public Output<List<RuleGroupRuleGetArgs>> getRules() {
@@ -97,7 +97,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the region `us-east-1` (N. Virginia) on the AWS provider.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
@@ -108,7 +108,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * An array of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -119,7 +119,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -130,7 +130,7 @@ public final class RuleGroupState extends io.pulumi.resources.ResourceArgs {
      * Defines and enables Amazon CloudWatch metrics and web request sample collection. See Visibility Configuration below for details.
      * 
      */
-    @InputImport(name="visibilityConfig")
+    @Import(name="visibilityConfig")
       private final @Nullable Output<RuleGroupVisibilityConfigGetArgs> visibilityConfig;
 
     public Output<RuleGroupVisibilityConfigGetArgs> getVisibilityConfig() {

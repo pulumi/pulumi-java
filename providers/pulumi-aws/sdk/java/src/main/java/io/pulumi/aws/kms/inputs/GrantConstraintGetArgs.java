@@ -4,7 +4,7 @@
 package io.pulumi.aws.kms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GrantConstraintGetArgs extends io.pulumi.resources.ResourceAr
      * A list of key-value pairs that must match the encryption context in subsequent cryptographic operation requests. The grant allows the operation only when the encryption context in the request is the same as the encryption context specified in this constraint. Conflicts with `encryption_context_subset`.
      * 
      */
-    @InputImport(name="encryptionContextEquals")
+    @Import(name="encryptionContextEquals")
       private final @Nullable Output<Map<String,String>> encryptionContextEquals;
 
     public Output<Map<String,String>> getEncryptionContextEquals() {
@@ -30,7 +30,7 @@ public final class GrantConstraintGetArgs extends io.pulumi.resources.ResourceAr
      * A list of key-value pairs that must be included in the encryption context of subsequent cryptographic operation requests. The grant allows the cryptographic operation only when the encryption context in the request includes the key-value pairs specified in this constraint, although it can include additional key-value pairs. Conflicts with `encryption_context_equals`.
      * 
      */
-    @InputImport(name="encryptionContextSubset")
+    @Import(name="encryptionContextSubset")
       private final @Nullable Output<Map<String,String>> encryptionContextSubset;
 
     public Output<Map<String,String>> getEncryptionContextSubset() {

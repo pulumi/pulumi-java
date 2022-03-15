@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.MigrateSyncCompleteCommandInputResponse;
 import io.pulumi.azurenative.datamigration.inputs.MigrateSyncCompleteCommandOutputResponse;
 import io.pulumi.azurenative.datamigration.inputs.ODataErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
      * Expected value is 'Migrate.Sync.Complete.Database'.
      * 
      */
-    @InputImport(name="commandType", required=true)
+    @Import(name="commandType", required=true)
       private final String commandType;
 
     public String getCommandType() {
@@ -38,7 +38,7 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
      * Array of errors. This is ignored if submitted.
      * 
      */
-    @InputImport(name="errors", required=true)
+    @Import(name="errors", required=true)
       private final List<ODataErrorResponse> errors;
 
     public List<ODataErrorResponse> getErrors() {
@@ -49,7 +49,7 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
      * Command input
      * 
      */
-    @InputImport(name="input")
+    @Import(name="input")
       private final @Nullable MigrateSyncCompleteCommandInputResponse input;
 
     public Optional<MigrateSyncCompleteCommandInputResponse> getInput() {
@@ -60,7 +60,7 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
      * Command output. This is ignored if submitted.
      * 
      */
-    @InputImport(name="output", required=true)
+    @Import(name="output", required=true)
       private final MigrateSyncCompleteCommandOutputResponse output;
 
     public MigrateSyncCompleteCommandOutputResponse getOutput() {
@@ -71,7 +71,7 @@ public final class MigrateSyncCompleteCommandPropertiesResponse extends io.pulum
      * The state of the command. This is ignored if submitted.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {

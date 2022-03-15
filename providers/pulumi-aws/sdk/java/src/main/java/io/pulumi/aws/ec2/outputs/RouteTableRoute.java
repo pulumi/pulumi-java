@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RouteTableRoute {
     /**
      * Identifier of a carrier gateway. This attribute can only be used when the VPC contains a subnet which is associated with a Wavelength Zone.
@@ -77,21 +77,21 @@ public final class RouteTableRoute {
      */
     private final @Nullable String vpcPeeringConnectionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteTableRoute(
-        @OutputCustomType.Parameter("carrierGatewayId") @Nullable String carrierGatewayId,
-        @OutputCustomType.Parameter("cidrBlock") @Nullable String cidrBlock,
-        @OutputCustomType.Parameter("destinationPrefixListId") @Nullable String destinationPrefixListId,
-        @OutputCustomType.Parameter("egressOnlyGatewayId") @Nullable String egressOnlyGatewayId,
-        @OutputCustomType.Parameter("gatewayId") @Nullable String gatewayId,
-        @OutputCustomType.Parameter("instanceId") @Nullable String instanceId,
-        @OutputCustomType.Parameter("ipv6CidrBlock") @Nullable String ipv6CidrBlock,
-        @OutputCustomType.Parameter("localGatewayId") @Nullable String localGatewayId,
-        @OutputCustomType.Parameter("natGatewayId") @Nullable String natGatewayId,
-        @OutputCustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
-        @OutputCustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId,
-        @OutputCustomType.Parameter("vpcEndpointId") @Nullable String vpcEndpointId,
-        @OutputCustomType.Parameter("vpcPeeringConnectionId") @Nullable String vpcPeeringConnectionId) {
+        @CustomType.Parameter("carrierGatewayId") @Nullable String carrierGatewayId,
+        @CustomType.Parameter("cidrBlock") @Nullable String cidrBlock,
+        @CustomType.Parameter("destinationPrefixListId") @Nullable String destinationPrefixListId,
+        @CustomType.Parameter("egressOnlyGatewayId") @Nullable String egressOnlyGatewayId,
+        @CustomType.Parameter("gatewayId") @Nullable String gatewayId,
+        @CustomType.Parameter("instanceId") @Nullable String instanceId,
+        @CustomType.Parameter("ipv6CidrBlock") @Nullable String ipv6CidrBlock,
+        @CustomType.Parameter("localGatewayId") @Nullable String localGatewayId,
+        @CustomType.Parameter("natGatewayId") @Nullable String natGatewayId,
+        @CustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
+        @CustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId,
+        @CustomType.Parameter("vpcEndpointId") @Nullable String vpcEndpointId,
+        @CustomType.Parameter("vpcPeeringConnectionId") @Nullable String vpcPeeringConnectionId) {
         this.carrierGatewayId = carrierGatewayId;
         this.cidrBlock = cidrBlock;
         this.destinationPrefixListId = destinationPrefixListId;

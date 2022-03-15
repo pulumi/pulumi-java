@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * The accelerator card attached to each VM.
      * 
      */
-    @InputImport(name="accelerator")
+    @Import(name="accelerator")
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs> accelerator;
 
     public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigArgs> getAccelerator() {
@@ -36,7 +36,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/
      * 
      */
-    @InputImport(name="diskSizeGb", required=true)
+    @Import(name="diskSizeGb", required=true)
       private final Output<String> diskSizeGb;
 
     public Output<String> getDiskSizeGb() {
@@ -47,7 +47,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * Disk Type to use for the worker. See [Storage options](https://cloud.google.com/compute/docs/disks/#introduction). Currently only `pd-standard` and `pd-ssd` are supported.
      * 
      */
-    @InputImport(name="diskType", required=true)
+    @Import(name="diskType", required=true)
       private final Output<String> diskType;
 
     public Output<String> getDiskType() {
@@ -58,7 +58,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * Labels associated with the workers. Label keys and values can be no longer than 63 characters, can only contain lowercase letters, numeric characters, underscores and dashes. International letters are permitted. Label keys must start with a letter. Label values are optional. There can not be more than 64 labels per resource.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -69,7 +69,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * Machine type of the worker, such as `e2-standard-2`. See https://cloud.google.com/compute/docs/machine-types for a list of supported machine types. Note that `f1-micro` and `g1-small` are not yet supported.
      * 
      */
-    @InputImport(name="machineType", required=true)
+    @Import(name="machineType", required=true)
       private final Output<String> machineType;
 
     public Output<String> getMachineType() {
@@ -80,7 +80,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * The maximum number of actions a worker can execute concurrently.
      * 
      */
-    @InputImport(name="maxConcurrentActions")
+    @Import(name="maxConcurrentActions")
       private final @Nullable Output<String> maxConcurrentActions;
 
     public Output<String> getMaxConcurrentActions() {
@@ -91,7 +91,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * Minimum CPU platform to use when creating the worker. See [CPU Platforms](https://cloud.google.com/compute/docs/cpu-platforms).
      * 
      */
-    @InputImport(name="minCpuPlatform")
+    @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
     public Output<String> getMinCpuPlatform() {
@@ -102,7 +102,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * Determines the type of network access granted to workers. Possible values: - "public": Workers can connect to the public internet. - "private": Workers can only connect to Google APIs and services. - "restricted-private": Workers can only connect to Google APIs that are reachable through `restricted.googleapis.com` (`199.36.153.4/30`).
      * 
      */
-    @InputImport(name="networkAccess")
+    @Import(name="networkAccess")
       private final @Nullable Output<String> networkAccess;
 
     public Output<String> getNetworkAccess() {
@@ -113,7 +113,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * Determines whether the worker is reserved (equivalent to a Compute Engine on-demand VM and therefore won't be preempted). See [Preemptible VMs](https://cloud.google.com/preemptible-vms/) for more details.
      * 
      */
-    @InputImport(name="reserved")
+    @Import(name="reserved")
       private final @Nullable Output<Boolean> reserved;
 
     public Output<Boolean> getReserved() {
@@ -124,7 +124,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * The node type name to be used for sole-tenant nodes.
      * 
      */
-    @InputImport(name="soleTenantNodeType")
+    @Import(name="soleTenantNodeType")
       private final @Nullable Output<String> soleTenantNodeType;
 
     public Output<String> getSoleTenantNodeType() {
@@ -135,7 +135,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArg
      * The name of the image used by each VM.
      * 
      */
-    @InputImport(name="vmImage")
+    @Import(name="vmImage")
       private final @Nullable Output<String> vmImage;
 
     public Output<String> getVmImage() {

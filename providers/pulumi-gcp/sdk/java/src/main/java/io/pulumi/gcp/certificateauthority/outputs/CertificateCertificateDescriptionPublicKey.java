@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateCertificateDescriptionPublicKey {
     /**
      * The format of the public key. Currently, only PEM format is supported.
@@ -23,10 +23,10 @@ public final class CertificateCertificateDescriptionPublicKey {
      */
     private final @Nullable String key;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateCertificateDescriptionPublicKey(
-        @OutputCustomType.Parameter("format") @Nullable String format,
-        @OutputCustomType.Parameter("key") @Nullable String key) {
+        @CustomType.Parameter("format") @Nullable String format,
+        @CustomType.Parameter("key") @Nullable String key) {
         this.format = format;
         this.key = key;
     }

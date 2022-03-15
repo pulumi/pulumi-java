@@ -10,7 +10,7 @@ import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleMonitoringOutputCo
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleMonitoringResources;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleNetworkConfig;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleStoppingCondition;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class MonitoringScheduleMonitoringJobDefinition extends io.pulumi.r
 
     public static final MonitoringScheduleMonitoringJobDefinition Empty = new MonitoringScheduleMonitoringJobDefinition();
 
-    @InputImport(name="baselineConfig")
+    @Import(name="baselineConfig")
       private final @Nullable MonitoringScheduleBaselineConfig baselineConfig;
 
     public Optional<MonitoringScheduleBaselineConfig> getBaselineConfig() {
@@ -38,42 +38,42 @@ public final class MonitoringScheduleMonitoringJobDefinition extends io.pulumi.r
      * Sets the environment variables in the Docker container
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable Object environment;
 
     public Optional<Object> getEnvironment() {
         return this.environment == null ? Optional.empty() : Optional.ofNullable(this.environment);
     }
 
-    @InputImport(name="monitoringAppSpecification", required=true)
+    @Import(name="monitoringAppSpecification", required=true)
       private final MonitoringScheduleMonitoringAppSpecification monitoringAppSpecification;
 
     public MonitoringScheduleMonitoringAppSpecification getMonitoringAppSpecification() {
         return this.monitoringAppSpecification;
     }
 
-    @InputImport(name="monitoringInputs", required=true)
+    @Import(name="monitoringInputs", required=true)
       private final List<MonitoringScheduleMonitoringInput> monitoringInputs;
 
     public List<MonitoringScheduleMonitoringInput> getMonitoringInputs() {
         return this.monitoringInputs;
     }
 
-    @InputImport(name="monitoringOutputConfig", required=true)
+    @Import(name="monitoringOutputConfig", required=true)
       private final MonitoringScheduleMonitoringOutputConfig monitoringOutputConfig;
 
     public MonitoringScheduleMonitoringOutputConfig getMonitoringOutputConfig() {
         return this.monitoringOutputConfig;
     }
 
-    @InputImport(name="monitoringResources", required=true)
+    @Import(name="monitoringResources", required=true)
       private final MonitoringScheduleMonitoringResources monitoringResources;
 
     public MonitoringScheduleMonitoringResources getMonitoringResources() {
         return this.monitoringResources;
     }
 
-    @InputImport(name="networkConfig")
+    @Import(name="networkConfig")
       private final @Nullable MonitoringScheduleNetworkConfig networkConfig;
 
     public Optional<MonitoringScheduleNetworkConfig> getNetworkConfig() {
@@ -84,14 +84,14 @@ public final class MonitoringScheduleMonitoringJobDefinition extends io.pulumi.r
      * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="stoppingCondition")
+    @Import(name="stoppingCondition")
       private final @Nullable MonitoringScheduleStoppingCondition stoppingCondition;
 
     public Optional<MonitoringScheduleStoppingCondition> getStoppingCondition() {

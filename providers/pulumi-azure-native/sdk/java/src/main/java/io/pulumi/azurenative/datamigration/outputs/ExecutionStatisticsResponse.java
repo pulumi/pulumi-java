@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.WaitStatisticsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExecutionStatisticsResponse {
     /**
      * CPU Time in millisecond(s) for the query execution
@@ -46,14 +46,14 @@ public final class ExecutionStatisticsResponse {
      */
     private final @Nullable Map<String,WaitStatisticsResponse> waitStats;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExecutionStatisticsResponse(
-        @OutputCustomType.Parameter("cpuTimeMs") Double cpuTimeMs,
-        @OutputCustomType.Parameter("elapsedTimeMs") Double elapsedTimeMs,
-        @OutputCustomType.Parameter("executionCount") Double executionCount,
-        @OutputCustomType.Parameter("hasErrors") Boolean hasErrors,
-        @OutputCustomType.Parameter("sqlErrors") List<String> sqlErrors,
-        @OutputCustomType.Parameter("waitStats") @Nullable Map<String,WaitStatisticsResponse> waitStats) {
+        @CustomType.Parameter("cpuTimeMs") Double cpuTimeMs,
+        @CustomType.Parameter("elapsedTimeMs") Double elapsedTimeMs,
+        @CustomType.Parameter("executionCount") Double executionCount,
+        @CustomType.Parameter("hasErrors") Boolean hasErrors,
+        @CustomType.Parameter("sqlErrors") List<String> sqlErrors,
+        @CustomType.Parameter("waitStats") @Nullable Map<String,WaitStatisticsResponse> waitStats) {
         this.cpuTimeMs = cpuTimeMs;
         this.elapsedTimeMs = elapsedTimeMs;
         this.executionCount = executionCount;

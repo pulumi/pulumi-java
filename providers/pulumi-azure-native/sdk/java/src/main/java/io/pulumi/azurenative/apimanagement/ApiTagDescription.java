@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.ApiTagDescriptionArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ApiTagDescription extends io.pulumi.resources.CustomResource {
      * Description of the Tag.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -48,7 +48,7 @@ public class ApiTagDescription extends io.pulumi.resources.CustomResource {
      * Tag name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -62,7 +62,7 @@ public class ApiTagDescription extends io.pulumi.resources.CustomResource {
      * Description of the external resources describing the tag.
      * 
      */
-    @OutputExport(name="externalDocsDescription", type=String.class, parameters={})
+    @Export(name="externalDocsDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalDocsDescription;
 
     /**
@@ -76,7 +76,7 @@ public class ApiTagDescription extends io.pulumi.resources.CustomResource {
      * Absolute URL of external resources describing the tag.
      * 
      */
-    @OutputExport(name="externalDocsUrl", type=String.class, parameters={})
+    @Export(name="externalDocsUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalDocsUrl;
 
     /**
@@ -90,7 +90,7 @@ public class ApiTagDescription extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -104,7 +104,7 @@ public class ApiTagDescription extends io.pulumi.resources.CustomResource {
      * Identifier of the tag in the form of /tags/{tagId}
      * 
      */
-    @OutputExport(name="tagId", type=String.class, parameters={})
+    @Export(name="tagId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tagId;
 
     /**
@@ -118,7 +118,7 @@ public class ApiTagDescription extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

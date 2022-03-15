@@ -4,13 +4,13 @@
 package io.pulumi.aws.backup.outputs;
 
 import io.pulumi.aws.backup.outputs.PlanRuleCopyActionLifecycle;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PlanRuleCopyAction {
     /**
      * An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup.
@@ -23,10 +23,10 @@ public final class PlanRuleCopyAction {
      */
     private final @Nullable PlanRuleCopyActionLifecycle lifecycle;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PlanRuleCopyAction(
-        @OutputCustomType.Parameter("destinationVaultArn") String destinationVaultArn,
-        @OutputCustomType.Parameter("lifecycle") @Nullable PlanRuleCopyActionLifecycle lifecycle) {
+        @CustomType.Parameter("destinationVaultArn") String destinationVaultArn,
+        @CustomType.Parameter("lifecycle") @Nullable PlanRuleCopyActionLifecycle lifecycle) {
         this.destinationVaultArn = destinationVaultArn;
         this.lifecycle = lifecycle;
     }

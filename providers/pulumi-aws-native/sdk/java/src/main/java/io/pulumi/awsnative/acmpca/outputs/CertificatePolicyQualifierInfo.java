@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.acmpca.outputs;
 
 import io.pulumi.awsnative.acmpca.outputs.CertificateQualifier;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificatePolicyQualifierInfo {
     private final String policyQualifierId;
     private final CertificateQualifier qualifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificatePolicyQualifierInfo(
-        @OutputCustomType.Parameter("policyQualifierId") String policyQualifierId,
-        @OutputCustomType.Parameter("qualifier") CertificateQualifier qualifier) {
+        @CustomType.Parameter("policyQualifierId") String policyQualifierId,
+        @CustomType.Parameter("qualifier") CertificateQualifier qualifier) {
         this.policyQualifierId = policyQualifierId;
         this.qualifier = qualifier;
     }

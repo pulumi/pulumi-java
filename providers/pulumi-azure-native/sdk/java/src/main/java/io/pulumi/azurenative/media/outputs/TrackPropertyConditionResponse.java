@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TrackPropertyConditionResponse {
     /**
      * Track property condition operation
@@ -27,11 +27,11 @@ public final class TrackPropertyConditionResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TrackPropertyConditionResponse(
-        @OutputCustomType.Parameter("operation") String operation,
-        @OutputCustomType.Parameter("property") String property,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("operation") String operation,
+        @CustomType.Parameter("property") String property,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.operation = operation;
         this.property = property;
         this.value = value;

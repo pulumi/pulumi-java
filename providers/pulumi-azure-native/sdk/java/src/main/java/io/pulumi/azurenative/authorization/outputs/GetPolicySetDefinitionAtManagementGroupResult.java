@@ -6,7 +6,7 @@ package io.pulumi.azurenative.authorization.outputs;
 import io.pulumi.azurenative.authorization.outputs.ParameterDefinitionsValueResponse;
 import io.pulumi.azurenative.authorization.outputs.PolicyDefinitionGroupResponse;
 import io.pulumi.azurenative.authorization.outputs.PolicyDefinitionReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPolicySetDefinitionAtManagementGroupResult {
     /**
      * The policy set definition description.
@@ -68,18 +68,18 @@ public final class GetPolicySetDefinitionAtManagementGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPolicySetDefinitionAtManagementGroupResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterDefinitionsValueResponse> parameters,
-        @OutputCustomType.Parameter("policyDefinitionGroups") @Nullable List<PolicyDefinitionGroupResponse> policyDefinitionGroups,
-        @OutputCustomType.Parameter("policyDefinitions") List<PolicyDefinitionReferenceResponse> policyDefinitions,
-        @OutputCustomType.Parameter("policyType") @Nullable String policyType,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("metadata") @Nullable Object metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterDefinitionsValueResponse> parameters,
+        @CustomType.Parameter("policyDefinitionGroups") @Nullable List<PolicyDefinitionGroupResponse> policyDefinitionGroups,
+        @CustomType.Parameter("policyDefinitions") List<PolicyDefinitionReferenceResponse> policyDefinitions,
+        @CustomType.Parameter("policyType") @Nullable String policyType,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.displayName = displayName;
         this.id = id;

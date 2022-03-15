@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.notebooks.outputs.RuntimeVirtualMachineVirtualMachineConfig;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuntimeVirtualMachine {
     /**
      * - 
@@ -31,11 +31,11 @@ public final class RuntimeVirtualMachine {
      */
     private final @Nullable RuntimeVirtualMachineVirtualMachineConfig virtualMachineConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuntimeVirtualMachine(
-        @OutputCustomType.Parameter("instanceId") @Nullable String instanceId,
-        @OutputCustomType.Parameter("instanceName") @Nullable String instanceName,
-        @OutputCustomType.Parameter("virtualMachineConfig") @Nullable RuntimeVirtualMachineVirtualMachineConfig virtualMachineConfig) {
+        @CustomType.Parameter("instanceId") @Nullable String instanceId,
+        @CustomType.Parameter("instanceName") @Nullable String instanceName,
+        @CustomType.Parameter("virtualMachineConfig") @Nullable RuntimeVirtualMachineVirtualMachineConfig virtualMachineConfig) {
         this.instanceId = instanceId;
         this.instanceName = instanceName;
         this.virtualMachineConfig = virtualMachineConfig;

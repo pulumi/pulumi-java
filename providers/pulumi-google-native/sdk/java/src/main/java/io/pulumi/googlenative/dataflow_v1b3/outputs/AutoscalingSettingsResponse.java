@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AutoscalingSettingsResponse {
     /**
      * The algorithm to use for autoscaling.
@@ -21,10 +21,10 @@ public final class AutoscalingSettingsResponse {
      */
     private final Integer maxNumWorkers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscalingSettingsResponse(
-        @OutputCustomType.Parameter("algorithm") String algorithm,
-        @OutputCustomType.Parameter("maxNumWorkers") Integer maxNumWorkers) {
+        @CustomType.Parameter("algorithm") String algorithm,
+        @CustomType.Parameter("maxNumWorkers") Integer maxNumWorkers) {
         this.algorithm = algorithm;
         this.maxNumWorkers = maxNumWorkers;
     }

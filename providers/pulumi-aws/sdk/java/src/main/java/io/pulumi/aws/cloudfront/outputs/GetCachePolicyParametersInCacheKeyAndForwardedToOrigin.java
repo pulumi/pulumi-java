@@ -6,12 +6,12 @@ package io.pulumi.aws.cloudfront.outputs;
 import io.pulumi.aws.cloudfront.outputs.GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig;
 import io.pulumi.aws.cloudfront.outputs.GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig;
 import io.pulumi.aws.cloudfront.outputs.GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCachePolicyParametersInCacheKeyAndForwardedToOrigin {
     /**
      * Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the cache key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
@@ -39,13 +39,13 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOrigin {
      */
     private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig> queryStringsConfigs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCachePolicyParametersInCacheKeyAndForwardedToOrigin(
-        @OutputCustomType.Parameter("cookiesConfigs") List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig> cookiesConfigs,
-        @OutputCustomType.Parameter("enableAcceptEncodingBrotli") Boolean enableAcceptEncodingBrotli,
-        @OutputCustomType.Parameter("enableAcceptEncodingGzip") Boolean enableAcceptEncodingGzip,
-        @OutputCustomType.Parameter("headersConfigs") List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig> headersConfigs,
-        @OutputCustomType.Parameter("queryStringsConfigs") List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig> queryStringsConfigs) {
+        @CustomType.Parameter("cookiesConfigs") List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfig> cookiesConfigs,
+        @CustomType.Parameter("enableAcceptEncodingBrotli") Boolean enableAcceptEncodingBrotli,
+        @CustomType.Parameter("enableAcceptEncodingGzip") Boolean enableAcceptEncodingGzip,
+        @CustomType.Parameter("headersConfigs") List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig> headersConfigs,
+        @CustomType.Parameter("queryStringsConfigs") List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig> queryStringsConfigs) {
         this.cookiesConfigs = cookiesConfigs;
         this.enableAcceptEncodingBrotli = enableAcceptEncodingBrotli;
         this.enableAcceptEncodingGzip = enableAcceptEncodingGzip;

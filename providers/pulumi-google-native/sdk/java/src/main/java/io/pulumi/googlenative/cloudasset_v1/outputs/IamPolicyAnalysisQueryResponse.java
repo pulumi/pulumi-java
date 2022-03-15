@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudasset_v1.outputs.AccessSelectorResponse;
 import io.pulumi.googlenative.cloudasset_v1.outputs.ConditionContextResponse;
 import io.pulumi.googlenative.cloudasset_v1.outputs.IdentitySelectorResponse;
@@ -12,7 +12,7 @@ import io.pulumi.googlenative.cloudasset_v1.outputs.ResourceSelectorResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IamPolicyAnalysisQueryResponse {
     /**
      * Optional. Specifies roles or permissions for analysis. This is optional.
@@ -45,14 +45,14 @@ public final class IamPolicyAnalysisQueryResponse {
      */
     private final String scope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IamPolicyAnalysisQueryResponse(
-        @OutputCustomType.Parameter("accessSelector") AccessSelectorResponse accessSelector,
-        @OutputCustomType.Parameter("conditionContext") ConditionContextResponse conditionContext,
-        @OutputCustomType.Parameter("identitySelector") IdentitySelectorResponse identitySelector,
-        @OutputCustomType.Parameter("options") OptionsResponse options,
-        @OutputCustomType.Parameter("resourceSelector") ResourceSelectorResponse resourceSelector,
-        @OutputCustomType.Parameter("scope") String scope) {
+        @CustomType.Parameter("accessSelector") AccessSelectorResponse accessSelector,
+        @CustomType.Parameter("conditionContext") ConditionContextResponse conditionContext,
+        @CustomType.Parameter("identitySelector") IdentitySelectorResponse identitySelector,
+        @CustomType.Parameter("options") OptionsResponse options,
+        @CustomType.Parameter("resourceSelector") ResourceSelectorResponse resourceSelector,
+        @CustomType.Parameter("scope") String scope) {
         this.accessSelector = accessSelector;
         this.conditionContext = conditionContext;
         this.identitySelector = identitySelector;

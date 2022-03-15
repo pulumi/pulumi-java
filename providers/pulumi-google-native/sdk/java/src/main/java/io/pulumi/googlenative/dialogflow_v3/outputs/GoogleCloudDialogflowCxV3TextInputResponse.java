@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3TextInputResponse {
     /**
      * The UTF-8 encoded natural language text to be processed. Text length must not exceed 256 characters.
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowCxV3TextInputResponse {
      */
     private final String text;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowCxV3TextInputResponse(@OutputCustomType.Parameter("text") String text) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowCxV3TextInputResponse(@CustomType.Parameter("text") String text) {
         this.text = text;
     }
 

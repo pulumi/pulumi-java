@@ -13,7 +13,7 @@ import io.pulumi.azurenative.sql.enums.SecondaryType;
 import io.pulumi.azurenative.sql.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -31,7 +31,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled
      * 
      */
-    @InputImport(name="autoPauseDelay")
+    @Import(name="autoPauseDelay")
       private final @Nullable Output<Integer> autoPauseDelay;
 
     public Output<Integer> getAutoPauseDelay() {
@@ -42,7 +42,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * Collation of the metadata catalog.
      * 
      */
-    @InputImport(name="catalogCollation")
+    @Import(name="catalogCollation")
       private final @Nullable Output<Either<String,CatalogCollationType>> catalogCollation;
 
     public Output<Either<String,CatalogCollationType>> getCatalogCollation() {
@@ -53,7 +53,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The collation of the database.
      * 
      */
-    @InputImport(name="collation")
+    @Import(name="collation")
       private final @Nullable Output<String> collation;
 
     public Output<String> getCollation() {
@@ -80,7 +80,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * Copy, Secondary, and RestoreLongTermRetentionBackup are not supported for DataWarehouse edition.
      * 
      */
-    @InputImport(name="createMode")
+    @Import(name="createMode")
       private final @Nullable Output<Either<String,CreateMode>> createMode;
 
     public Output<Either<String,CreateMode>> getCreateMode() {
@@ -91,7 +91,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the database.
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -102,7 +102,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The resource identifier of the elastic pool containing this database.
      * 
      */
-    @InputImport(name="elasticPoolId")
+    @Import(name="elasticPoolId")
       private final @Nullable Output<String> elasticPoolId;
 
     public Output<String> getElasticPoolId() {
@@ -113,7 +113,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The number of secondary replicas associated with the database that are used to provide high availability.
      * 
      */
-    @InputImport(name="highAvailabilityReplicaCount")
+    @Import(name="highAvailabilityReplicaCount")
       private final @Nullable Output<Integer> highAvailabilityReplicaCount;
 
     public Output<Integer> getHighAvailabilityReplicaCount() {
@@ -124,7 +124,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The license type to apply for this database. `LicenseIncluded` if you need a license, or `BasePrice` if you have a license and are eligible for the Azure Hybrid Benefit.
      * 
      */
-    @InputImport(name="licenseType")
+    @Import(name="licenseType")
       private final @Nullable Output<Either<String,DatabaseLicenseType>> licenseType;
 
     public Output<Either<String,DatabaseLicenseType>> getLicenseType() {
@@ -135,7 +135,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -146,7 +146,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The resource identifier of the long term retention backup associated with create operation of this database.
      * 
      */
-    @InputImport(name="longTermRetentionBackupResourceId")
+    @Import(name="longTermRetentionBackupResourceId")
       private final @Nullable Output<String> longTermRetentionBackupResourceId;
 
     public Output<String> getLongTermRetentionBackupResourceId() {
@@ -157,7 +157,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * Maintenance configuration id assigned to the database. This configuration defines the period when the maintenance updates will occur.
      * 
      */
-    @InputImport(name="maintenanceConfigurationId")
+    @Import(name="maintenanceConfigurationId")
       private final @Nullable Output<String> maintenanceConfigurationId;
 
     public Output<String> getMaintenanceConfigurationId() {
@@ -168,7 +168,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The max size of the database expressed in bytes.
      * 
      */
-    @InputImport(name="maxSizeBytes")
+    @Import(name="maxSizeBytes")
       private final @Nullable Output<Double> maxSizeBytes;
 
     public Output<Double> getMaxSizeBytes() {
@@ -179,7 +179,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * Minimal capacity that database will always have allocated, if not paused
      * 
      */
-    @InputImport(name="minCapacity")
+    @Import(name="minCapacity")
       private final @Nullable Output<Double> minCapacity;
 
     public Output<Double> getMinCapacity() {
@@ -190,7 +190,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The state of read-only routing. If enabled, connections that have application intent set to readonly in their connection string may be routed to a readonly secondary replica in the same region.
      * 
      */
-    @InputImport(name="readScale")
+    @Import(name="readScale")
       private final @Nullable Output<Either<String,DatabaseReadScale>> readScale;
 
     public Output<Either<String,DatabaseReadScale>> getReadScale() {
@@ -201,7 +201,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The resource identifier of the recoverable database associated with create operation of this database.
      * 
      */
-    @InputImport(name="recoverableDatabaseId")
+    @Import(name="recoverableDatabaseId")
       private final @Nullable Output<String> recoverableDatabaseId;
 
     public Output<String> getRecoverableDatabaseId() {
@@ -212,7 +212,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The resource identifier of the recovery point associated with create operation of this database.
      * 
      */
-    @InputImport(name="recoveryServicesRecoveryPointId")
+    @Import(name="recoveryServicesRecoveryPointId")
       private final @Nullable Output<String> recoveryServicesRecoveryPointId;
 
     public Output<String> getRecoveryServicesRecoveryPointId() {
@@ -223,7 +223,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The storage account type to be used to store backups for this database.
      * 
      */
-    @InputImport(name="requestedBackupStorageRedundancy")
+    @Import(name="requestedBackupStorageRedundancy")
       private final @Nullable Output<Either<String,RequestedBackupStorageRedundancy>> requestedBackupStorageRedundancy;
 
     public Output<Either<String,RequestedBackupStorageRedundancy>> getRequestedBackupStorageRedundancy() {
@@ -234,7 +234,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -245,7 +245,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The resource identifier of the restorable dropped database associated with create operation of this database.
      * 
      */
-    @InputImport(name="restorableDroppedDatabaseId")
+    @Import(name="restorableDroppedDatabaseId")
       private final @Nullable Output<String> restorableDroppedDatabaseId;
 
     public Output<String> getRestorableDroppedDatabaseId() {
@@ -256,7 +256,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
      * 
      */
-    @InputImport(name="restorePointInTime")
+    @Import(name="restorePointInTime")
       private final @Nullable Output<String> restorePointInTime;
 
     public Output<String> getRestorePointInTime() {
@@ -267,7 +267,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the sample schema to apply when creating this database.
      * 
      */
-    @InputImport(name="sampleName")
+    @Import(name="sampleName")
       private final @Nullable Output<Either<String,SampleName>> sampleName;
 
     public Output<Either<String,SampleName>> getSampleName() {
@@ -278,7 +278,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The secondary type of the database if it is a secondary.  Valid values are Geo and Named.
      * 
      */
-    @InputImport(name="secondaryType")
+    @Import(name="secondaryType")
       private final @Nullable Output<Either<String,SecondaryType>> secondaryType;
 
     public Output<Either<String,SecondaryType>> getSecondaryType() {
@@ -289,7 +289,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -302,7 +302,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or one of the following commands:
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -313,7 +313,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the time that the database was deleted.
      * 
      */
-    @InputImport(name="sourceDatabaseDeletionDate")
+    @Import(name="sourceDatabaseDeletionDate")
       private final @Nullable Output<String> sourceDatabaseDeletionDate;
 
     public Output<String> getSourceDatabaseDeletionDate() {
@@ -324,7 +324,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * The resource identifier of the source database associated with create operation of this database.
      * 
      */
-    @InputImport(name="sourceDatabaseId")
+    @Import(name="sourceDatabaseId")
       private final @Nullable Output<String> sourceDatabaseId;
 
     public Output<String> getSourceDatabaseId() {
@@ -335,7 +335,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -346,7 +346,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not this database is zone redundant, which means the replicas of this database will be spread across multiple availability zones.
      * 
      */
-    @InputImport(name="zoneRedundant")
+    @Import(name="zoneRedundant")
       private final @Nullable Output<Boolean> zoneRedundant;
 
     public Output<Boolean> getZoneRedundant() {

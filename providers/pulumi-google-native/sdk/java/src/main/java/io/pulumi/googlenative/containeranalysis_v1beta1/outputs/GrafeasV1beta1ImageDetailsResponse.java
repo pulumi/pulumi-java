@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.DerivedResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GrafeasV1beta1ImageDetailsResponse {
     /**
      * Immutable. The child image derived from the base image.
@@ -15,8 +15,8 @@ public final class GrafeasV1beta1ImageDetailsResponse {
      */
     private final DerivedResponse derivedImage;
 
-    @OutputCustomType.Constructor
-    private GrafeasV1beta1ImageDetailsResponse(@OutputCustomType.Parameter("derivedImage") DerivedResponse derivedImage) {
+    @CustomType.Constructor
+    private GrafeasV1beta1ImageDetailsResponse(@CustomType.Parameter("derivedImage") DerivedResponse derivedImage) {
         this.derivedImage = derivedImage;
     }
 

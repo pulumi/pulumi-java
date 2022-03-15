@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.signer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetProfilePermissionArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetProfilePermissionArgs Empty = new GetProfilePermissionArgs();
 
-    @InputImport(name="profileName", required=true)
+    @Import(name="profileName", required=true)
       private final String profileName;
 
     public String getProfileName() {
         return this.profileName;
     }
 
-    @InputImport(name="statementId", required=true)
+    @Import(name="statementId", required=true)
       private final String statementId;
 
     public String getStatementId() {

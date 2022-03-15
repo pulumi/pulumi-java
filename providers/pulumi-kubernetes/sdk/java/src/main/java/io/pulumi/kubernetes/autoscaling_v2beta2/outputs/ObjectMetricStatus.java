@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.CrossVersionObjectReference;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.MetricIdentifier;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.MetricValueStatus;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ObjectMetricStatus {
     /**
      * current contains the current value for the given metric
@@ -23,11 +23,11 @@ public final class ObjectMetricStatus {
      */
     private final MetricIdentifier metric;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObjectMetricStatus(
-        @OutputCustomType.Parameter("current") MetricValueStatus current,
-        @OutputCustomType.Parameter("describedObject") CrossVersionObjectReference describedObject,
-        @OutputCustomType.Parameter("metric") MetricIdentifier metric) {
+        @CustomType.Parameter("current") MetricValueStatus current,
+        @CustomType.Parameter("describedObject") CrossVersionObjectReference describedObject,
+        @CustomType.Parameter("metric") MetricIdentifier metric) {
         this.current = current;
         this.describedObject = describedObject;
         this.metric = metric;

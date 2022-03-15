@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sqs.QueuePolicyArgs;
 import io.pulumi.aws.sqs.inputs.QueuePolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class QueuePolicy extends io.pulumi.resources.CustomResource {
      * The JSON policy for the SQS queue.
      * 
      */
-    @OutputExport(name="policy", type=String.class, parameters={})
+    @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
     /**
@@ -47,7 +47,7 @@ public class QueuePolicy extends io.pulumi.resources.CustomResource {
      * The URL of the SQS Queue to which to attach the policy
      * 
      */
-    @OutputExport(name="queueUrl", type=String.class, parameters={})
+    @Export(name="queueUrl", type=String.class, parameters={})
     private Output<String> queueUrl;
 
     /**

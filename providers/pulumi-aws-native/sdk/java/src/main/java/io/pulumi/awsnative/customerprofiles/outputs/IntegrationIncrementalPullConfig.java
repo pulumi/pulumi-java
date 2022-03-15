@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.customerprofiles.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationIncrementalPullConfig {
     private final @Nullable String datetimeTypeFieldName;
 
-    @OutputCustomType.Constructor
-    private IntegrationIncrementalPullConfig(@OutputCustomType.Parameter("datetimeTypeFieldName") @Nullable String datetimeTypeFieldName) {
+    @CustomType.Constructor
+    private IntegrationIncrementalPullConfig(@CustomType.Parameter("datetimeTypeFieldName") @Nullable String datetimeTypeFieldName) {
         this.datetimeTypeFieldName = datetimeTypeFieldName;
     }
 

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UpgradeDistributionResponse {
     /**
      * The operating system classification of this Upgrade, as specified by the upstream operating system upgrade feed.
@@ -31,12 +31,12 @@ public final class UpgradeDistributionResponse {
      */
     private final String severity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UpgradeDistributionResponse(
-        @OutputCustomType.Parameter("classification") String classification,
-        @OutputCustomType.Parameter("cpeUri") String cpeUri,
-        @OutputCustomType.Parameter("cve") List<String> cve,
-        @OutputCustomType.Parameter("severity") String severity) {
+        @CustomType.Parameter("classification") String classification,
+        @CustomType.Parameter("cpeUri") String cpeUri,
+        @CustomType.Parameter("cve") List<String> cve,
+        @CustomType.Parameter("severity") String severity) {
         this.classification = classification;
         this.cpeUri = cpeUri;
         this.cve = cve;

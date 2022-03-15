@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GlobalClusterGlobalClusterMemberArgs extends io.pulumi.resour
      * Amazon Resource Name (ARN) of member DB Cluster
      * 
      */
-    @InputImport(name="dbClusterArn")
+    @Import(name="dbClusterArn")
       private final @Nullable Output<String> dbClusterArn;
 
     public Output<String> getDbClusterArn() {
@@ -30,7 +30,7 @@ public final class GlobalClusterGlobalClusterMemberArgs extends io.pulumi.resour
      * Whether the member is the primary DB Cluster
      * 
      */
-    @InputImport(name="isWriter")
+    @Import(name="isWriter")
       private final @Nullable Output<Boolean> isWriter;
 
     public Output<Boolean> getIsWriter() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.docdb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * are applied immediately, or during the next maintenance window. Default is`false`.
      * 
      */
-    @InputImport(name="applyImmediately")
+    @Import(name="applyImmediately")
       private final @Nullable Output<Boolean> applyImmediately;
 
     public Output<Boolean> getApplyImmediately() {
@@ -33,7 +33,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * Amazon Resource Name (ARN) of cluster instance
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -44,7 +44,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * Indicates that minor engine upgrades will be applied automatically to the DB instance during the maintenance window. Default `true`.
      * 
      */
-    @InputImport(name="autoMinorVersionUpgrade")
+    @Import(name="autoMinorVersionUpgrade")
       private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
     public Output<Boolean> getAutoMinorVersionUpgrade() {
@@ -55,7 +55,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * The EC2 Availability Zone that the DB instance is created in. See [docs](https://docs.aws.amazon.com/documentdb/latest/developerguide/API_CreateDBInstance.html) about the details.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -66,7 +66,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * (Optional) The identifier of the CA certificate for the DB instance.
      * 
      */
-    @InputImport(name="caCertIdentifier")
+    @Import(name="caCertIdentifier")
       private final @Nullable Output<String> caCertIdentifier;
 
     public Output<String> getCaCertIdentifier() {
@@ -77,7 +77,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * The identifier of the `aws.docdb.Cluster` in which to launch this instance.
      * 
      */
-    @InputImport(name="clusterIdentifier")
+    @Import(name="clusterIdentifier")
       private final @Nullable Output<String> clusterIdentifier;
 
     public Output<String> getClusterIdentifier() {
@@ -88,7 +88,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * The DB subnet group to associate with this DB instance.
      * 
      */
-    @InputImport(name="dbSubnetGroupName")
+    @Import(name="dbSubnetGroupName")
       private final @Nullable Output<String> dbSubnetGroupName;
 
     public Output<String> getDbSubnetGroupName() {
@@ -99,7 +99,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * The region-unique, immutable identifier for the DB instance.
      * 
      */
-    @InputImport(name="dbiResourceId")
+    @Import(name="dbiResourceId")
       private final @Nullable Output<String> dbiResourceId;
 
     public Output<String> getDbiResourceId() {
@@ -110,7 +110,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * The DNS address for this instance. May not be writable
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
     public Output<String> getEndpoint() {
@@ -121,7 +121,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * The name of the database engine to be used for the DocDB instance. Defaults to `docdb`. Valid Values: `docdb`.
      * 
      */
-    @InputImport(name="engine")
+    @Import(name="engine")
       private final @Nullable Output<String> engine;
 
     public Output<String> getEngine() {
@@ -132,7 +132,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * The database engine version
      * 
      */
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
@@ -143,7 +143,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * The identifier for the DocDB instance, if omitted, this provider will assign a random, unique identifier.
      * 
      */
-    @InputImport(name="identifier")
+    @Import(name="identifier")
       private final @Nullable Output<String> identifier;
 
     public Output<String> getIdentifier() {
@@ -154,7 +154,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
      * 
      */
-    @InputImport(name="identifierPrefix")
+    @Import(name="identifierPrefix")
       private final @Nullable Output<String> identifierPrefix;
 
     public Output<String> getIdentifierPrefix() {
@@ -179,7 +179,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * - db.t3.medium
      * 
      */
-    @InputImport(name="instanceClass")
+    @Import(name="instanceClass")
       private final @Nullable Output<String> instanceClass;
 
     public Output<String> getInstanceClass() {
@@ -190,7 +190,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * The ARN for the KMS encryption key if one is set to the cluster.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -201,7 +201,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * The database port
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -212,7 +212,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * The daily time range during which automated backups are created if automated backups are enabled.
      * 
      */
-    @InputImport(name="preferredBackupWindow")
+    @Import(name="preferredBackupWindow")
       private final @Nullable Output<String> preferredBackupWindow;
 
     public Output<String> getPreferredBackupWindow() {
@@ -224,7 +224,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
      * 
      */
-    @InputImport(name="preferredMaintenanceWindow")
+    @Import(name="preferredMaintenanceWindow")
       private final @Nullable Output<String> preferredMaintenanceWindow;
 
     public Output<String> getPreferredMaintenanceWindow() {
@@ -235,14 +235,14 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
      * 
      */
-    @InputImport(name="promotionTier")
+    @Import(name="promotionTier")
       private final @Nullable Output<Integer> promotionTier;
 
     public Output<Integer> getPromotionTier() {
         return this.promotionTier == null ? Output.empty() : this.promotionTier;
     }
 
-    @InputImport(name="publiclyAccessible")
+    @Import(name="publiclyAccessible")
       private final @Nullable Output<Boolean> publiclyAccessible;
 
     public Output<Boolean> getPubliclyAccessible() {
@@ -253,7 +253,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * Specifies whether the DB cluster is encrypted.
      * 
      */
-    @InputImport(name="storageEncrypted")
+    @Import(name="storageEncrypted")
       private final @Nullable Output<Boolean> storageEncrypted;
 
     public Output<Boolean> getStorageEncrypted() {
@@ -264,7 +264,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * A map of tags to assign to the instance. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -275,7 +275,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -286,7 +286,7 @@ public final class ClusterInstanceState extends io.pulumi.resources.ResourceArgs
      * Boolean indicating if this instance is writable. `False` indicates this instance is a read replica.
      * 
      */
-    @InputImport(name="writer")
+    @Import(name="writer")
       private final @Nullable Output<Boolean> writer;
 
     public Output<Boolean> getWriter() {

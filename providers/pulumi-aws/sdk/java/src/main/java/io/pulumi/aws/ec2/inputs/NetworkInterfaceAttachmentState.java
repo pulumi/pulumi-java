@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
      * The ENI Attachment ID.
      * 
      */
-    @InputImport(name="attachmentId")
+    @Import(name="attachmentId")
       private final @Nullable Output<String> attachmentId;
 
     public Output<String> getAttachmentId() {
@@ -30,7 +30,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
      * Network interface index (int).
      * 
      */
-    @InputImport(name="deviceIndex")
+    @Import(name="deviceIndex")
       private final @Nullable Output<Integer> deviceIndex;
 
     public Output<Integer> getDeviceIndex() {
@@ -41,7 +41,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
      * Instance ID to attach.
      * 
      */
-    @InputImport(name="instanceId")
+    @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -52,7 +52,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
      * ENI ID to attach.
      * 
      */
-    @InputImport(name="networkInterfaceId")
+    @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {
@@ -63,7 +63,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
      * The status of the Network Interface Attachment.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

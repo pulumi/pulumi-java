@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.IpAddressResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowEndpointsResponse {
     /**
      * The access endpoint ip address.
@@ -22,10 +22,10 @@ public final class FlowEndpointsResponse {
      */
     private final @Nullable List<IpAddressResponse> outgoingIpAddresses;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowEndpointsResponse(
-        @OutputCustomType.Parameter("accessEndpointIpAddresses") @Nullable List<IpAddressResponse> accessEndpointIpAddresses,
-        @OutputCustomType.Parameter("outgoingIpAddresses") @Nullable List<IpAddressResponse> outgoingIpAddresses) {
+        @CustomType.Parameter("accessEndpointIpAddresses") @Nullable List<IpAddressResponse> accessEndpointIpAddresses,
+        @CustomType.Parameter("outgoingIpAddresses") @Nullable List<IpAddressResponse> outgoingIpAddresses) {
         this.accessEndpointIpAddresses = accessEndpointIpAddresses;
         this.outgoingIpAddresses = outgoingIpAddresses;
     }

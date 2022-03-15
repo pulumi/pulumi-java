@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.VirtualDirectoryArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
      * Physical path.
      * 
      */
-    @InputImport(name="physicalPath")
+    @Import(name="physicalPath")
       private final @Nullable Output<String> physicalPath;
 
     public Output<String> getPhysicalPath() {
@@ -36,7 +36,7 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
      * <code>true</code> if preloading is enabled; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="preloadEnabled")
+    @Import(name="preloadEnabled")
       private final @Nullable Output<Boolean> preloadEnabled;
 
     public Output<Boolean> getPreloadEnabled() {
@@ -47,7 +47,7 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
      * Virtual directories for virtual application.
      * 
      */
-    @InputImport(name="virtualDirectories")
+    @Import(name="virtualDirectories")
       private final @Nullable Output<List<VirtualDirectoryArgs>> virtualDirectories;
 
     public Output<List<VirtualDirectoryArgs>> getVirtualDirectories() {
@@ -58,7 +58,7 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
      * Virtual path.
      * 
      */
-    @InputImport(name="virtualPath")
+    @Import(name="virtualPath")
       private final @Nullable Output<String> virtualPath;
 
     public Output<String> getVirtualPath() {

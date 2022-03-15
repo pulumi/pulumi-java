@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.RouterAdvertisedIpRangeResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouterBgpResponse {
     /**
      * User-specified flag to indicate which mode to use for advertisement. The options are DEFAULT or CUSTOM.
@@ -38,13 +38,13 @@ public final class RouterBgpResponse {
      */
     private final Integer keepaliveInterval;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouterBgpResponse(
-        @OutputCustomType.Parameter("advertiseMode") String advertiseMode,
-        @OutputCustomType.Parameter("advertisedGroups") List<String> advertisedGroups,
-        @OutputCustomType.Parameter("advertisedIpRanges") List<RouterAdvertisedIpRangeResponse> advertisedIpRanges,
-        @OutputCustomType.Parameter("asn") Integer asn,
-        @OutputCustomType.Parameter("keepaliveInterval") Integer keepaliveInterval) {
+        @CustomType.Parameter("advertiseMode") String advertiseMode,
+        @CustomType.Parameter("advertisedGroups") List<String> advertisedGroups,
+        @CustomType.Parameter("advertisedIpRanges") List<RouterAdvertisedIpRangeResponse> advertisedIpRanges,
+        @CustomType.Parameter("asn") Integer asn,
+        @CustomType.Parameter("keepaliveInterval") Integer keepaliveInterval) {
         this.advertiseMode = advertiseMode;
         this.advertisedGroups = advertisedGroups;
         this.advertisedIpRanges = advertisedIpRanges;

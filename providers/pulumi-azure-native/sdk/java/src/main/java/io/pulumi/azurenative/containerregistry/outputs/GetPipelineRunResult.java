@@ -6,13 +6,13 @@ package io.pulumi.azurenative.containerregistry.outputs;
 import io.pulumi.azurenative.containerregistry.outputs.PipelineRunRequestResponse;
 import io.pulumi.azurenative.containerregistry.outputs.PipelineRunResponseResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPipelineRunResult {
     /**
      * How the pipeline run should be forced to recreate even if the pipeline run configuration has not changed.
@@ -55,16 +55,16 @@ public final class GetPipelineRunResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPipelineRunResult(
-        @OutputCustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("request") @Nullable PipelineRunRequestResponse request,
-        @OutputCustomType.Parameter("response") PipelineRunResponseResponse response,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("request") @Nullable PipelineRunRequestResponse request,
+        @CustomType.Parameter("response") PipelineRunResponseResponse response,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.forceUpdateTag = forceUpdateTag;
         this.id = id;
         this.name = name;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AutoStoragePropertiesResponse extends io.pulumi.resources.Inv
      * The UTC time at which storage keys were last synchronized with the Batch account.
      * 
      */
-    @InputImport(name="lastKeySync", required=true)
+    @Import(name="lastKeySync", required=true)
       private final String lastKeySync;
 
     public String getLastKeySync() {
@@ -31,7 +31,7 @@ public final class AutoStoragePropertiesResponse extends io.pulumi.resources.Inv
      * The resource ID of the storage account to be used for auto-storage account.
      * 
      */
-    @InputImport(name="storageAccountId", required=true)
+    @Import(name="storageAccountId", required=true)
       private final String storageAccountId;
 
     public String getStorageAccountId() {

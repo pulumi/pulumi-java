@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class PresignedUrlConfigPropertiesArgs extends io.pulumi.resources.
 
     public static final PresignedUrlConfigPropertiesArgs Empty = new PresignedUrlConfigPropertiesArgs();
 
-    @InputImport(name="expiresInSec")
+    @Import(name="expiresInSec")
       private final @Nullable Output<Integer> expiresInSec;
 
     public Output<Integer> getExpiresInSec() {
         return this.expiresInSec == null ? Output.empty() : this.expiresInSec;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

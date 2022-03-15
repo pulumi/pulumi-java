@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomCopyOptionResponse {
     /**
      * Data copied after given timespan
@@ -23,10 +23,10 @@ public final class CustomCopyOptionResponse {
      */
     private final String objectType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomCopyOptionResponse(
-        @OutputCustomType.Parameter("duration") @Nullable String duration,
-        @OutputCustomType.Parameter("objectType") String objectType) {
+        @CustomType.Parameter("duration") @Nullable String duration,
+        @CustomType.Parameter("objectType") String objectType) {
         this.duration = duration;
         this.objectType = objectType;
     }

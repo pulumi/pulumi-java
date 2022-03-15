@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datamigration_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SqlAclEntryResponse {
     /**
      * The time when this access control entry expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example: `2012-11-15T16:19:00.094Z`.
@@ -30,12 +30,12 @@ public final class SqlAclEntryResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlAclEntryResponse(
-        @OutputCustomType.Parameter("expireTime") String expireTime,
-        @OutputCustomType.Parameter("label") String label,
-        @OutputCustomType.Parameter("ttl") String ttl,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("expireTime") String expireTime,
+        @CustomType.Parameter("label") String label,
+        @CustomType.Parameter("ttl") String ttl,
+        @CustomType.Parameter("value") String value) {
         this.expireTime = expireTime;
         this.label = label;
         this.ttl = ttl;

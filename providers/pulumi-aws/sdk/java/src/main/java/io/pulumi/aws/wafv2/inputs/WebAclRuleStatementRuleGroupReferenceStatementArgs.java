@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WebAclRuleStatementRuleGroupReferenceStatementArgs extends io
      * The Amazon Resource Name (ARN) of the `aws.wafv2.RuleGroup` resource.
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class WebAclRuleStatementRuleGroupReferenceStatementArgs extends io
      * The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
      * 
      */
-    @InputImport(name="excludedRules")
+    @Import(name="excludedRules")
       private final @Nullable Output<List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs>> excludedRules;
 
     public Output<List<WebAclRuleStatementRuleGroupReferenceStatementExcludedRuleArgs>> getExcludedRules() {

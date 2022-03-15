@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.efs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAccessPointPosixUser {
     /**
      * Group ID
@@ -27,11 +27,11 @@ public final class GetAccessPointPosixUser {
      */
     private final Integer uid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccessPointPosixUser(
-        @OutputCustomType.Parameter("gid") Integer gid,
-        @OutputCustomType.Parameter("secondaryGids") List<Integer> secondaryGids,
-        @OutputCustomType.Parameter("uid") Integer uid) {
+        @CustomType.Parameter("gid") Integer gid,
+        @CustomType.Parameter("secondaryGids") List<Integer> secondaryGids,
+        @CustomType.Parameter("uid") Integer uid) {
         this.gid = gid;
         this.secondaryGids = secondaryGids;
         this.uid = uid;

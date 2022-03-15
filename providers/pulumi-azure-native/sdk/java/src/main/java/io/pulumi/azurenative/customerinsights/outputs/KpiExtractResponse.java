@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KpiExtractResponse {
     /**
      * The expression.
@@ -20,10 +20,10 @@ public final class KpiExtractResponse {
      */
     private final String extractName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KpiExtractResponse(
-        @OutputCustomType.Parameter("expression") String expression,
-        @OutputCustomType.Parameter("extractName") String extractName) {
+        @CustomType.Parameter("expression") String expression,
+        @CustomType.Parameter("extractName") String extractName) {
         this.expression = expression;
         this.extractName = extractName;
     }

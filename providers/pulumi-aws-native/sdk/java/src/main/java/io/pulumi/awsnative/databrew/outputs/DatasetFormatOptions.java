@@ -6,22 +6,22 @@ package io.pulumi.awsnative.databrew.outputs;
 import io.pulumi.awsnative.databrew.outputs.DatasetCsvOptions;
 import io.pulumi.awsnative.databrew.outputs.DatasetExcelOptions;
 import io.pulumi.awsnative.databrew.outputs.DatasetJsonOptions;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetFormatOptions {
     private final @Nullable DatasetCsvOptions csv;
     private final @Nullable DatasetExcelOptions excel;
     private final @Nullable DatasetJsonOptions json;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetFormatOptions(
-        @OutputCustomType.Parameter("csv") @Nullable DatasetCsvOptions csv,
-        @OutputCustomType.Parameter("excel") @Nullable DatasetExcelOptions excel,
-        @OutputCustomType.Parameter("json") @Nullable DatasetJsonOptions json) {
+        @CustomType.Parameter("csv") @Nullable DatasetCsvOptions csv,
+        @CustomType.Parameter("excel") @Nullable DatasetExcelOptions excel,
+        @CustomType.Parameter("json") @Nullable DatasetJsonOptions json) {
         this.csv = csv;
         this.excel = excel;
         this.json = json;

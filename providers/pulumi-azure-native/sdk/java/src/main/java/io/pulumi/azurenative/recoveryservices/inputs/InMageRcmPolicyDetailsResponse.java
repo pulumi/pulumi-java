@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class InMageRcmPolicyDetailsResponse extends io.pulumi.resources.In
      * The app consistent snapshot frequency in minutes.
      * 
      */
-    @InputImport(name="appConsistentFrequencyInMinutes", required=true)
+    @Import(name="appConsistentFrequencyInMinutes", required=true)
       private final Integer appConsistentFrequencyInMinutes;
 
     public Integer getAppConsistentFrequencyInMinutes() {
@@ -32,7 +32,7 @@ public final class InMageRcmPolicyDetailsResponse extends io.pulumi.resources.In
      * The crash consistent snapshot frequency in minutes.
      * 
      */
-    @InputImport(name="crashConsistentFrequencyInMinutes", required=true)
+    @Import(name="crashConsistentFrequencyInMinutes", required=true)
       private final Integer crashConsistentFrequencyInMinutes;
 
     public Integer getCrashConsistentFrequencyInMinutes() {
@@ -43,7 +43,7 @@ public final class InMageRcmPolicyDetailsResponse extends io.pulumi.resources.In
      * A value indicating whether multi-VM sync has to be enabled.
      * 
      */
-    @InputImport(name="enableMultiVmSync", required=true)
+    @Import(name="enableMultiVmSync", required=true)
       private final String enableMultiVmSync;
 
     public String getEnableMultiVmSync() {
@@ -55,7 +55,7 @@ public final class InMageRcmPolicyDetailsResponse extends io.pulumi.resources.In
      * Expected value is 'InMageRcm'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -66,7 +66,7 @@ public final class InMageRcmPolicyDetailsResponse extends io.pulumi.resources.In
      * The duration in minutes until which the recovery points need to be stored.
      * 
      */
-    @InputImport(name="recoveryPointHistoryInMinutes", required=true)
+    @Import(name="recoveryPointHistoryInMinutes", required=true)
       private final Integer recoveryPointHistoryInMinutes;
 
     public Integer getRecoveryPointHistoryInMinutes() {

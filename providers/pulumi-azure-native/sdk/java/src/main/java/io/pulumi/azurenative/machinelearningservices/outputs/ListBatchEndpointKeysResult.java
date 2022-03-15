@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListBatchEndpointKeysResult {
     /**
      * The primary key.
@@ -22,10 +22,10 @@ public final class ListBatchEndpointKeysResult {
      */
     private final @Nullable String secondaryKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListBatchEndpointKeysResult(
-        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
-        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
+        @CustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @CustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
         this.primaryKey = primaryKey;
         this.secondaryKey = secondaryKey;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PatchDeploymentPatchConfigAptGetArgs extends io.pulumi.resour
      * List of KBs to exclude from update.
      * 
      */
-    @InputImport(name="excludes")
+    @Import(name="excludes")
       private final @Nullable Output<List<String>> excludes;
 
     public Output<List<String>> getExcludes() {
@@ -32,7 +32,7 @@ public final class PatchDeploymentPatchConfigAptGetArgs extends io.pulumi.resour
      * any other patch configuration fields.
      * 
      */
-    @InputImport(name="exclusivePackages")
+    @Import(name="exclusivePackages")
       private final @Nullable Output<List<String>> exclusivePackages;
 
     public Output<List<String>> getExclusivePackages() {
@@ -44,7 +44,7 @@ public final class PatchDeploymentPatchConfigAptGetArgs extends io.pulumi.resour
      * Possible values are `DIST` and `UPGRADE`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.enums.ReservationAffinityConsumeReservationType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
      * Specifies the type of reservation from which this instance can consume resources: ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See Consuming reserved instances for examples.
      * 
      */
-    @InputImport(name="consumeReservationType")
+    @Import(name="consumeReservationType")
       private final @Nullable Output<ReservationAffinityConsumeReservationType> consumeReservationType;
 
     public Output<ReservationAffinityConsumeReservationType> getConsumeReservationType() {
@@ -35,7 +35,7 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
      * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify googleapis.com/reservation-name as the key and specify the name of your reservation as its value.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -46,7 +46,7 @@ public final class ReservationAffinityArgs extends io.pulumi.resources.ResourceA
      * Corresponds to the label values of a reservation resource. This can be either a name to a reservation in the same project or "projects/different-project/reservations/some-reservation-name" to target a shared reservation in the same zone but in a different project.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {

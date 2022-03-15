@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials {
     /**
      * Azure shared access signature. See [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
@@ -15,8 +15,8 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredent
      */
     private final String sasToken;
 
-    @OutputCustomType.Constructor
-    private TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials(@OutputCustomType.Parameter("sasToken") String sasToken) {
+    @CustomType.Constructor
+    private TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials(@CustomType.Parameter("sasToken") String sasToken) {
         this.sasToken = sasToken;
     }
 

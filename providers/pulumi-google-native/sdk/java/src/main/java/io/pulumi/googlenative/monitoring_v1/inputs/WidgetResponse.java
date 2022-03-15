@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.inputs.AlertChartResponse;
 import io.pulumi.googlenative.monitoring_v1.inputs.EmptyResponse;
 import io.pulumi.googlenative.monitoring_v1.inputs.LogsPanelResponse;
@@ -27,7 +27,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
      * A chart of alert policy data.
      * 
      */
-    @InputImport(name="alertChart", required=true)
+    @Import(name="alertChart", required=true)
       private final AlertChartResponse alertChart;
 
     public AlertChartResponse getAlertChart() {
@@ -38,7 +38,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
      * A blank space.
      * 
      */
-    @InputImport(name="blank", required=true)
+    @Import(name="blank", required=true)
       private final EmptyResponse blank;
 
     public EmptyResponse getBlank() {
@@ -49,7 +49,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
      * A widget that shows a stream of logs.
      * 
      */
-    @InputImport(name="logsPanel", required=true)
+    @Import(name="logsPanel", required=true)
       private final LogsPanelResponse logsPanel;
 
     public LogsPanelResponse getLogsPanel() {
@@ -60,7 +60,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
      * A scorecard summarizing time series data.
      * 
      */
-    @InputImport(name="scorecard", required=true)
+    @Import(name="scorecard", required=true)
       private final ScorecardResponse scorecard;
 
     public ScorecardResponse getScorecard() {
@@ -71,7 +71,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
      * A raw string or markdown displaying textual content.
      * 
      */
-    @InputImport(name="text", required=true)
+    @Import(name="text", required=true)
       private final TextResponse text;
 
     public TextResponse getText() {
@@ -82,7 +82,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
      * A widget that displays time series data in a tabular format.
      * 
      */
-    @InputImport(name="timeSeriesTable", required=true)
+    @Import(name="timeSeriesTable", required=true)
       private final TimeSeriesTableResponse timeSeriesTable;
 
     public TimeSeriesTableResponse getTimeSeriesTable() {
@@ -93,7 +93,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The title of the widget.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final String title;
 
     public String getTitle() {
@@ -104,7 +104,7 @@ public final class WidgetResponse extends io.pulumi.resources.InvokeArgs {
      * A chart of time series data.
      * 
      */
-    @InputImport(name="xyChart", required=true)
+    @Import(name="xyChart", required=true)
       private final XyChartResponse xyChart;
 
     public XyChartResponse getXyChart() {

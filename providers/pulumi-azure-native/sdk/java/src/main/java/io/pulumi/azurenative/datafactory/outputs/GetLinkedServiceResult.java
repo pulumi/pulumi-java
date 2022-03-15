@@ -105,12 +105,12 @@ import io.pulumi.azurenative.datafactory.outputs.VerticaLinkedServiceResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebLinkedServiceResponse;
 import io.pulumi.azurenative.datafactory.outputs.XeroLinkedServiceResponse;
 import io.pulumi.azurenative.datafactory.outputs.ZohoLinkedServiceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLinkedServiceResult {
     /**
      * Etag identifies change in the resource.
@@ -138,13 +138,13 @@ public final class GetLinkedServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLinkedServiceResult(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") Object properties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") Object properties,
+        @CustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

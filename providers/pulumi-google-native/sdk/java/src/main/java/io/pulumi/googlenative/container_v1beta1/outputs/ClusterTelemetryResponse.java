@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterTelemetryResponse {
     /**
      * Type of the integration.
@@ -15,8 +15,8 @@ public final class ClusterTelemetryResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private ClusterTelemetryResponse(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private ClusterTelemetryResponse(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

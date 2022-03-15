@@ -6,13 +6,13 @@ package io.pulumi.aws.kinesisanalyticsv2.outputs;
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationInput;
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutput;
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationSqlApplicationConfiguration {
     /**
      * The input stream used by the application.
@@ -30,11 +30,11 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource referenceDataSource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationApplicationConfigurationSqlApplicationConfiguration(
-        @OutputCustomType.Parameter("input") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInput input,
-        @OutputCustomType.Parameter("outputs") @Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutput> outputs,
-        @OutputCustomType.Parameter("referenceDataSource") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource referenceDataSource) {
+        @CustomType.Parameter("input") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInput input,
+        @CustomType.Parameter("outputs") @Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutput> outputs,
+        @CustomType.Parameter("referenceDataSource") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource referenceDataSource) {
         this.input = input;
         this.outputs = outputs;
         this.referenceDataSource = referenceDataSource;

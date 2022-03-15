@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.advisor.SuppressionArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class Suppression extends io.pulumi.resources.CustomResource {
      * Gets or sets the expiration time stamp.
      * 
      */
-    @OutputExport(name="expirationTimeStamp", type=String.class, parameters={})
+    @Export(name="expirationTimeStamp", type=String.class, parameters={})
     private Output<String> expirationTimeStamp;
 
     /**
@@ -48,7 +48,7 @@ public class Suppression extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -62,7 +62,7 @@ public class Suppression extends io.pulumi.resources.CustomResource {
      * The GUID of the suppression.
      * 
      */
-    @OutputExport(name="suppressionId", type=String.class, parameters={})
+    @Export(name="suppressionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> suppressionId;
 
     /**
@@ -76,7 +76,7 @@ public class Suppression extends io.pulumi.resources.CustomResource {
      * The duration for which the suppression is valid.
      * 
      */
-    @OutputExport(name="ttl", type=String.class, parameters={})
+    @Export(name="ttl", type=String.class, parameters={})
     private Output</* @Nullable */ String> ttl;
 
     /**
@@ -90,7 +90,7 @@ public class Suppression extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

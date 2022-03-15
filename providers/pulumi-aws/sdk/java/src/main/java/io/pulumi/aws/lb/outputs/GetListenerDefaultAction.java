@@ -8,13 +8,13 @@ import io.pulumi.aws.lb.outputs.GetListenerDefaultActionAuthenticateOidc;
 import io.pulumi.aws.lb.outputs.GetListenerDefaultActionFixedResponse;
 import io.pulumi.aws.lb.outputs.GetListenerDefaultActionForward;
 import io.pulumi.aws.lb.outputs.GetListenerDefaultActionRedirect;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetListenerDefaultAction {
     private final List<GetListenerDefaultActionAuthenticateCognito> authenticateCognitos;
     private final List<GetListenerDefaultActionAuthenticateOidc> authenticateOidcs;
@@ -25,16 +25,16 @@ public final class GetListenerDefaultAction {
     private final String targetGroupArn;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetListenerDefaultAction(
-        @OutputCustomType.Parameter("authenticateCognitos") List<GetListenerDefaultActionAuthenticateCognito> authenticateCognitos,
-        @OutputCustomType.Parameter("authenticateOidcs") List<GetListenerDefaultActionAuthenticateOidc> authenticateOidcs,
-        @OutputCustomType.Parameter("fixedResponses") List<GetListenerDefaultActionFixedResponse> fixedResponses,
-        @OutputCustomType.Parameter("forwards") List<GetListenerDefaultActionForward> forwards,
-        @OutputCustomType.Parameter("order") Integer order,
-        @OutputCustomType.Parameter("redirects") List<GetListenerDefaultActionRedirect> redirects,
-        @OutputCustomType.Parameter("targetGroupArn") String targetGroupArn,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("authenticateCognitos") List<GetListenerDefaultActionAuthenticateCognito> authenticateCognitos,
+        @CustomType.Parameter("authenticateOidcs") List<GetListenerDefaultActionAuthenticateOidc> authenticateOidcs,
+        @CustomType.Parameter("fixedResponses") List<GetListenerDefaultActionFixedResponse> fixedResponses,
+        @CustomType.Parameter("forwards") List<GetListenerDefaultActionForward> forwards,
+        @CustomType.Parameter("order") Integer order,
+        @CustomType.Parameter("redirects") List<GetListenerDefaultActionRedirect> redirects,
+        @CustomType.Parameter("targetGroupArn") String targetGroupArn,
+        @CustomType.Parameter("type") String type) {
         this.authenticateCognitos = authenticateCognitos;
         this.authenticateOidcs = authenticateOidcs;
         this.fixedResponses = fixedResponses;

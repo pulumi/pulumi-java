@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.TrackSelectionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StreamingPolicyContentKeyResponse {
     /**
      * Label can be used to specify Content Key when creating a Streaming Locator
@@ -29,11 +29,11 @@ public final class StreamingPolicyContentKeyResponse {
      */
     private final @Nullable List<TrackSelectionResponse> tracks;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StreamingPolicyContentKeyResponse(
-        @OutputCustomType.Parameter("label") @Nullable String label,
-        @OutputCustomType.Parameter("policyName") @Nullable String policyName,
-        @OutputCustomType.Parameter("tracks") @Nullable List<TrackSelectionResponse> tracks) {
+        @CustomType.Parameter("label") @Nullable String label,
+        @CustomType.Parameter("policyName") @Nullable String policyName,
+        @CustomType.Parameter("tracks") @Nullable List<TrackSelectionResponse> tracks) {
         this.label = label;
         this.policyName = policyName;
         this.tracks = tracks;

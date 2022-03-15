@@ -3,24 +3,24 @@
 
 package io.pulumi.aws.route53.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDelegationSetResult {
     private final String arn;
     private final String callerReference;
     private final String id;
     private final List<String> nameServers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDelegationSetResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("callerReference") String callerReference,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("nameServers") List<String> nameServers) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("callerReference") String callerReference,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("nameServers") List<String> nameServers) {
         this.arn = arn;
         this.callerReference = callerReference;
         this.id = id;

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLoggingConfigurationArgs extends io.pulumi.resources.Invok
      * The Amazon Resource Name (ARN) of the web ACL that you want to associate with LogDestinationConfigs.
      * 
      */
-    @InputImport(name="resourceArn", required=true)
+    @Import(name="resourceArn", required=true)
       private final String resourceArn;
 
     public String getResourceArn() {

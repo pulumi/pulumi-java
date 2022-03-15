@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PodConditionArgs extends io.pulumi.resources.ResourceArgs {
      * Last time we probed the condition.
      * 
      */
-    @InputImport(name="lastProbeTime")
+    @Import(name="lastProbeTime")
       private final @Nullable Output<String> lastProbeTime;
 
     public Output<String> getLastProbeTime() {
@@ -33,7 +33,7 @@ public final class PodConditionArgs extends io.pulumi.resources.ResourceArgs {
      * Last time the condition transitioned from one status to another.
      * 
      */
-    @InputImport(name="lastTransitionTime")
+    @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
 
     public Output<String> getLastTransitionTime() {
@@ -44,7 +44,7 @@ public final class PodConditionArgs extends io.pulumi.resources.ResourceArgs {
      * Human-readable message indicating details about last transition.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
@@ -55,7 +55,7 @@ public final class PodConditionArgs extends io.pulumi.resources.ResourceArgs {
      * Unique, one-word, CamelCase reason for the condition's last transition.
      * 
      */
-    @InputImport(name="reason")
+    @Import(name="reason")
       private final @Nullable Output<String> reason;
 
     public Output<String> getReason() {
@@ -66,7 +66,7 @@ public final class PodConditionArgs extends io.pulumi.resources.ResourceArgs {
      * Status is the status of the condition. Can be True, False, Unknown. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#pod-conditions
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<String> status;
 
     public Output<String> getStatus() {
@@ -83,7 +83,7 @@ public final class PodConditionArgs extends io.pulumi.resources.ResourceArgs {
      *  - `"Ready"` means the pod is able to service requests and should be added to the load balancing pools of all matching services.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

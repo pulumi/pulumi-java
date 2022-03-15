@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kms.outputs;
 
 import io.pulumi.awsnative.kms.outputs.ReplicaKeyTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetReplicaKeyResult {
     private final @Nullable String arn;
     /**
@@ -38,14 +38,14 @@ public final class GetReplicaKeyResult {
      */
     private final @Nullable List<ReplicaKeyTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetReplicaKeyResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("keyId") @Nullable String keyId,
-        @OutputCustomType.Parameter("keyPolicy") @Nullable Object keyPolicy,
-        @OutputCustomType.Parameter("tags") @Nullable List<ReplicaKeyTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("keyId") @Nullable String keyId,
+        @CustomType.Parameter("keyPolicy") @Nullable Object keyPolicy,
+        @CustomType.Parameter("tags") @Nullable List<ReplicaKeyTag> tags) {
         this.arn = arn;
         this.description = description;
         this.enabled = enabled;

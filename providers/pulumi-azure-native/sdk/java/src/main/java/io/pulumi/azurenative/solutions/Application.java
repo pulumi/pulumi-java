@@ -17,7 +17,7 @@ import io.pulumi.azurenative.solutions.outputs.PlanResponse;
 import io.pulumi.azurenative.solutions.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -46,7 +46,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The fully qualified path of managed application definition Id.
      * 
      */
-    @OutputExport(name="applicationDefinitionId", type=String.class, parameters={})
+    @Export(name="applicationDefinitionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> applicationDefinitionId;
 
     /**
@@ -60,7 +60,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The collection of managed application artifacts.
      * 
      */
-    @OutputExport(name="artifacts", type=List.class, parameters={ApplicationArtifactResponse.class})
+    @Export(name="artifacts", type=List.class, parameters={ApplicationArtifactResponse.class})
     private Output<List<ApplicationArtifactResponse>> artifacts;
 
     /**
@@ -74,7 +74,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The  read-only authorizations property that is retrieved from the application package.
      * 
      */
-    @OutputExport(name="authorizations", type=List.class, parameters={ApplicationAuthorizationResponse.class})
+    @Export(name="authorizations", type=List.class, parameters={ApplicationAuthorizationResponse.class})
     private Output<List<ApplicationAuthorizationResponse>> authorizations;
 
     /**
@@ -88,7 +88,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The managed application billing details.
      * 
      */
-    @OutputExport(name="billingDetails", type=ApplicationBillingDetailsDefinitionResponse.class, parameters={})
+    @Export(name="billingDetails", type=ApplicationBillingDetailsDefinitionResponse.class, parameters={})
     private Output<ApplicationBillingDetailsDefinitionResponse> billingDetails;
 
     /**
@@ -102,7 +102,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The client entity that created the JIT request.
      * 
      */
-    @OutputExport(name="createdBy", type=ApplicationClientDetailsResponse.class, parameters={})
+    @Export(name="createdBy", type=ApplicationClientDetailsResponse.class, parameters={})
     private Output<ApplicationClientDetailsResponse> createdBy;
 
     /**
@@ -116,7 +116,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The read-only customer support property that is retrieved from the application package.
      * 
      */
-    @OutputExport(name="customerSupport", type=ApplicationPackageContactResponse.class, parameters={})
+    @Export(name="customerSupport", type=ApplicationPackageContactResponse.class, parameters={})
     private Output<ApplicationPackageContactResponse> customerSupport;
 
     /**
@@ -130,7 +130,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The identity of the resource.
      * 
      */
-    @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
+    @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
@@ -144,7 +144,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The managed application Jit access policy.
      * 
      */
-    @OutputExport(name="jitAccessPolicy", type=ApplicationJitAccessPolicyResponse.class, parameters={})
+    @Export(name="jitAccessPolicy", type=ApplicationJitAccessPolicyResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationJitAccessPolicyResponse> jitAccessPolicy;
 
     /**
@@ -158,7 +158,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The kind of the managed application. Allowed values are MarketPlace and ServiceCatalog.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -172,7 +172,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -186,7 +186,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * ID of the resource that manages this resource.
      * 
      */
-    @OutputExport(name="managedBy", type=String.class, parameters={})
+    @Export(name="managedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedBy;
 
     /**
@@ -200,7 +200,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The managed resource group Id.
      * 
      */
-    @OutputExport(name="managedResourceGroupId", type=String.class, parameters={})
+    @Export(name="managedResourceGroupId", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedResourceGroupId;
 
     /**
@@ -214,7 +214,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The managed application management mode.
      * 
      */
-    @OutputExport(name="managementMode", type=String.class, parameters={})
+    @Export(name="managementMode", type=String.class, parameters={})
     private Output<String> managementMode;
 
     /**
@@ -228,7 +228,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -242,7 +242,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Name and value pairs that define the managed application outputs.
      * 
      */
-    @OutputExport(name="outputs", type=Object.class, parameters={})
+    @Export(name="outputs", type=Object.class, parameters={})
     private Output<Object> outputs;
 
     /**
@@ -256,7 +256,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Name and value pairs that define the managed application parameters. It can be a JObject or a well formed JSON string.
      * 
      */
-    @OutputExport(name="parameters", type=Object.class, parameters={})
+    @Export(name="parameters", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> parameters;
 
     /**
@@ -270,7 +270,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The plan information.
      * 
      */
-    @OutputExport(name="plan", type=PlanResponse.class, parameters={})
+    @Export(name="plan", type=PlanResponse.class, parameters={})
     private Output</* @Nullable */ PlanResponse> plan;
 
     /**
@@ -284,7 +284,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The managed application provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -298,7 +298,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The publisher tenant Id.
      * 
      */
-    @OutputExport(name="publisherTenantId", type=String.class, parameters={})
+    @Export(name="publisherTenantId", type=String.class, parameters={})
     private Output<String> publisherTenantId;
 
     /**
@@ -312,7 +312,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The SKU of the resource.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -326,7 +326,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The read-only support URLs property that is retrieved from the application package.
      * 
      */
-    @OutputExport(name="supportUrls", type=ApplicationPackageSupportUrlsResponse.class, parameters={})
+    @Export(name="supportUrls", type=ApplicationPackageSupportUrlsResponse.class, parameters={})
     private Output<ApplicationPackageSupportUrlsResponse> supportUrls;
 
     /**
@@ -340,7 +340,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -354,7 +354,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -368,7 +368,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The client entity that last updated the JIT request.
      * 
      */
-    @OutputExport(name="updatedBy", type=ApplicationClientDetailsResponse.class, parameters={})
+    @Export(name="updatedBy", type=ApplicationClientDetailsResponse.class, parameters={})
     private Output<ApplicationClientDetailsResponse> updatedBy;
 
     /**

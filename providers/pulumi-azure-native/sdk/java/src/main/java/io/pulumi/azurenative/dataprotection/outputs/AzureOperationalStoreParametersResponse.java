@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureOperationalStoreParametersResponse {
     /**
      * type of datastore; Operational/Vault/Archive
@@ -28,11 +28,11 @@ public final class AzureOperationalStoreParametersResponse {
      */
     private final @Nullable String resourceGroupId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureOperationalStoreParametersResponse(
-        @OutputCustomType.Parameter("dataStoreType") String dataStoreType,
-        @OutputCustomType.Parameter("objectType") String objectType,
-        @OutputCustomType.Parameter("resourceGroupId") @Nullable String resourceGroupId) {
+        @CustomType.Parameter("dataStoreType") String dataStoreType,
+        @CustomType.Parameter("objectType") String objectType,
+        @CustomType.Parameter("resourceGroupId") @Nullable String resourceGroupId) {
         this.dataStoreType = dataStoreType;
         this.objectType = objectType;
         this.resourceGroupId = resourceGroupId;

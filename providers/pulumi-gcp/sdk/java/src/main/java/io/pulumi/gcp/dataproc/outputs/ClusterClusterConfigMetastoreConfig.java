@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClusterConfigMetastoreConfig {
     /**
      * Resource name of an existing Dataproc Metastore service.
@@ -15,8 +15,8 @@ public final class ClusterClusterConfigMetastoreConfig {
      */
     private final String dataprocMetastoreService;
 
-    @OutputCustomType.Constructor
-    private ClusterClusterConfigMetastoreConfig(@OutputCustomType.Parameter("dataprocMetastoreService") String dataprocMetastoreService) {
+    @CustomType.Constructor
+    private ClusterClusterConfigMetastoreConfig(@CustomType.Parameter("dataprocMetastoreService") String dataprocMetastoreService) {
         this.dataprocMetastoreService = dataprocMetastoreService;
     }
 

@@ -5,24 +5,24 @@ package io.pulumi.awsnative.workspaces.outputs;
 
 import io.pulumi.awsnative.workspaces.enums.ConnectionAliasState;
 import io.pulumi.awsnative.workspaces.outputs.ConnectionAliasAssociation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectionAliasResult {
     private final @Nullable String aliasId;
     private final @Nullable List<ConnectionAliasAssociation> associations;
     private final @Nullable ConnectionAliasState connectionAliasState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectionAliasResult(
-        @OutputCustomType.Parameter("aliasId") @Nullable String aliasId,
-        @OutputCustomType.Parameter("associations") @Nullable List<ConnectionAliasAssociation> associations,
-        @OutputCustomType.Parameter("connectionAliasState") @Nullable ConnectionAliasState connectionAliasState) {
+        @CustomType.Parameter("aliasId") @Nullable String aliasId,
+        @CustomType.Parameter("associations") @Nullable List<ConnectionAliasAssociation> associations,
+        @CustomType.Parameter("connectionAliasState") @Nullable ConnectionAliasState connectionAliasState) {
         this.aliasId = aliasId;
         this.associations = associations;
         this.connectionAliasState = connectionAliasState;

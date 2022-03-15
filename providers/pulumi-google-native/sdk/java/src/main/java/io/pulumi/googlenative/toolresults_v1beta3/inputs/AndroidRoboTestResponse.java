@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * The initial activity that should be used to start the app. Optional
      * 
      */
-    @InputImport(name="appInitialActivity", required=true)
+    @Import(name="appInitialActivity", required=true)
       private final String appInitialActivity;
 
     public String getAppInitialActivity() {
@@ -32,7 +32,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * The java package for the bootstrap. Optional
      * 
      */
-    @InputImport(name="bootstrapPackageId", required=true)
+    @Import(name="bootstrapPackageId", required=true)
       private final String bootstrapPackageId;
 
     public String getBootstrapPackageId() {
@@ -43,7 +43,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * The runner class for the bootstrap. Optional
      * 
      */
-    @InputImport(name="bootstrapRunnerClass", required=true)
+    @Import(name="bootstrapRunnerClass", required=true)
       private final String bootstrapRunnerClass;
 
     public String getBootstrapRunnerClass() {
@@ -54,7 +54,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * The max depth of the traversal stack Robo can explore. Optional
      * 
      */
-    @InputImport(name="maxDepth", required=true)
+    @Import(name="maxDepth", required=true)
       private final Integer maxDepth;
 
     public Integer getMaxDepth() {
@@ -65,7 +65,7 @@ public final class AndroidRoboTestResponse extends io.pulumi.resources.InvokeArg
      * The max number of steps/actions Robo can execute. Default is no limit (0). Optional
      * 
      */
-    @InputImport(name="maxSteps", required=true)
+    @Import(name="maxSteps", required=true)
       private final Integer maxSteps;
 
     public Integer getMaxSteps() {

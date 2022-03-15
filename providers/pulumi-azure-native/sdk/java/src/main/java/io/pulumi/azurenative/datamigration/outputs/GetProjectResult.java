@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datamigration.outputs.MiSqlConnectionInfoResponse;
 import io.pulumi.azurenative.datamigration.outputs.MySqlConnectionInfoResponse;
 import io.pulumi.azurenative.datamigration.outputs.PostgreSqlConnectionInfoResponse;
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProjectResult {
     /**
      * UTC Date and time when project was created
@@ -80,20 +80,20 @@ public final class GetProjectResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProjectResult(
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("databasesInfo") @Nullable List<DatabaseInfoResponse> databasesInfo,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sourceConnectionInfo") @Nullable Object sourceConnectionInfo,
-        @OutputCustomType.Parameter("sourcePlatform") String sourcePlatform,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("targetConnectionInfo") @Nullable Object targetConnectionInfo,
-        @OutputCustomType.Parameter("targetPlatform") String targetPlatform,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("databasesInfo") @Nullable List<DatabaseInfoResponse> databasesInfo,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sourceConnectionInfo") @Nullable Object sourceConnectionInfo,
+        @CustomType.Parameter("sourcePlatform") String sourcePlatform,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("targetConnectionInfo") @Nullable Object targetConnectionInfo,
+        @CustomType.Parameter("targetPlatform") String targetPlatform,
+        @CustomType.Parameter("type") String type) {
         this.creationTime = creationTime;
         this.databasesInfo = databasesInfo;
         this.id = id;

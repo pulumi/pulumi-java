@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.URLMapHeaderActionRequestHeadersToAddArgs;
 import io.pulumi.gcp.compute.inputs.URLMapHeaderActionResponseHeadersToAddArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class URLMapHeaderActionArgs extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="requestHeadersToAdds")
+    @Import(name="requestHeadersToAdds")
       private final @Nullable Output<List<URLMapHeaderActionRequestHeadersToAddArgs>> requestHeadersToAdds;
 
     public Output<List<URLMapHeaderActionRequestHeadersToAddArgs>> getRequestHeadersToAdds() {
@@ -34,7 +34,7 @@ public final class URLMapHeaderActionArgs extends io.pulumi.resources.ResourceAr
      * forwarding the request to the backendService.
      * 
      */
-    @InputImport(name="requestHeadersToRemoves")
+    @Import(name="requestHeadersToRemoves")
       private final @Nullable Output<List<String>> requestHeadersToRemoves;
 
     public Output<List<String>> getRequestHeadersToRemoves() {
@@ -46,7 +46,7 @@ public final class URLMapHeaderActionArgs extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="responseHeadersToAdds")
+    @Import(name="responseHeadersToAdds")
       private final @Nullable Output<List<URLMapHeaderActionResponseHeadersToAddArgs>> responseHeadersToAdds;
 
     public Output<List<URLMapHeaderActionResponseHeadersToAddArgs>> getResponseHeadersToAdds() {
@@ -58,7 +58,7 @@ public final class URLMapHeaderActionArgs extends io.pulumi.resources.ResourceAr
      * response back to the client.
      * 
      */
-    @InputImport(name="responseHeadersToRemoves")
+    @Import(name="responseHeadersToRemoves")
       private final @Nullable Output<List<String>> responseHeadersToRemoves;
 
     public Output<List<String>> getResponseHeadersToRemoves() {

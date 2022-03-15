@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs;
@@ -21,7 +21,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
      * An Apt Repository.
      * 
      */
-    @InputImport(name="apt")
+    @Import(name="apt")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs> apt;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs> getApt() {
@@ -32,7 +32,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
      * A Goo Repository.
      * 
      */
-    @InputImport(name="goo")
+    @Import(name="goo")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs> goo;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs> getGoo() {
@@ -43,7 +43,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
      * A Yum Repository.
      * 
      */
-    @InputImport(name="yum")
+    @Import(name="yum")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs> yum;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs> getYum() {
@@ -54,7 +54,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
      * A Zypper Repository.
      * 
      */
-    @InputImport(name="zypper")
+    @Import(name="zypper")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperArgs> zypper;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperArgs> getZypper() {

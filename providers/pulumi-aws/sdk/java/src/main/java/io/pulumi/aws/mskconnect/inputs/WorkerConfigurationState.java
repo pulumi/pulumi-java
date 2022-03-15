@@ -4,7 +4,7 @@
 package io.pulumi.aws.mskconnect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
      * the Amazon Resource Name (ARN) of the worker configuration.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
      * A summary description of the worker configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -41,7 +41,7 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
      * an ID of the latest successfully created revision of the worker configuration.
      * 
      */
-    @InputImport(name="latestRevision")
+    @Import(name="latestRevision")
       private final @Nullable Output<Integer> latestRevision;
 
     public Output<Integer> getLatestRevision() {
@@ -52,7 +52,7 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
      * The name of the worker configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -63,7 +63,7 @@ public final class WorkerConfigurationState extends io.pulumi.resources.Resource
      * Contents of connect-distributed.properties file. The value can be either base64 encoded or in raw format.
      * 
      */
-    @InputImport(name="propertiesFileContent")
+    @Import(name="propertiesFileContent")
       private final @Nullable Output<String> propertiesFileContent;
 
     public Output<String> getPropertiesFileContent() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.guardduty.PublishingDestinationArgs;
 import io.pulumi.aws.guardduty.inputs.PublishingDestinationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class PublishingDestination extends io.pulumi.resources.CustomResource {
      * The bucket arn and prefix under which the findings get exported. Bucket-ARN is required, the prefix is optional and will be `AWSLogs/[Account-ID]/GuardDuty/[Region]/` if not provided
      * 
      */
-    @OutputExport(name="destinationArn", type=String.class, parameters={})
+    @Export(name="destinationArn", type=String.class, parameters={})
     private Output<String> destinationArn;
 
     /**
@@ -46,7 +46,7 @@ public class PublishingDestination extends io.pulumi.resources.CustomResource {
      * Currently there is only "S3" available as destination type which is also the default value
      * 
      */
-    @OutputExport(name="destinationType", type=String.class, parameters={})
+    @Export(name="destinationType", type=String.class, parameters={})
     private Output</* @Nullable */ String> destinationType;
 
     /**
@@ -60,7 +60,7 @@ public class PublishingDestination extends io.pulumi.resources.CustomResource {
      * The detector ID of the GuardDuty.
      * 
      */
-    @OutputExport(name="detectorId", type=String.class, parameters={})
+    @Export(name="detectorId", type=String.class, parameters={})
     private Output<String> detectorId;
 
     /**
@@ -74,7 +74,7 @@ public class PublishingDestination extends io.pulumi.resources.CustomResource {
      * The ARN of the KMS key used to encrypt GuardDuty findings. GuardDuty enforces this to be encrypted.
      * 
      */
-    @OutputExport(name="kmsKeyArn", type=String.class, parameters={})
+    @Export(name="kmsKeyArn", type=String.class, parameters={})
     private Output<String> kmsKeyArn;
 
     /**

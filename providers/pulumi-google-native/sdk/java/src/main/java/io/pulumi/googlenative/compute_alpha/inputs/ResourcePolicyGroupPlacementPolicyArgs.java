@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.ResourcePolicyGroupPlacementPolicyCollocation;
 import io.pulumi.googlenative.compute_alpha.enums.ResourcePolicyGroupPlacementPolicyLocality;
 import io.pulumi.googlenative.compute_alpha.enums.ResourcePolicyGroupPlacementPolicyScope;
@@ -26,7 +26,7 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
      * The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
      * 
      */
-    @InputImport(name="availabilityDomainCount")
+    @Import(name="availabilityDomainCount")
       private final @Nullable Output<Integer> availabilityDomainCount;
 
     public Output<Integer> getAvailabilityDomainCount() {
@@ -37,7 +37,7 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
      * Specifies network collocation
      * 
      */
-    @InputImport(name="collocation")
+    @Import(name="collocation")
       private final @Nullable Output<ResourcePolicyGroupPlacementPolicyCollocation> collocation;
 
     public Output<ResourcePolicyGroupPlacementPolicyCollocation> getCollocation() {
@@ -48,7 +48,7 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
      * Specifies network locality
      * 
      */
-    @InputImport(name="locality")
+    @Import(name="locality")
       private final @Nullable Output<ResourcePolicyGroupPlacementPolicyLocality> locality;
 
     public Output<ResourcePolicyGroupPlacementPolicyLocality> getLocality() {
@@ -59,7 +59,7 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
      * Scope specifies the availability domain to which the VMs should be spread.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<ResourcePolicyGroupPlacementPolicyScope> scope;
 
     public Output<ResourcePolicyGroupPlacementPolicyScope> getScope() {
@@ -70,7 +70,7 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
      * Specifies instances to hosts placement relationship
      * 
      */
-    @InputImport(name="style")
+    @Import(name="style")
       private final @Nullable Output<ResourcePolicyGroupPlacementPolicyStyle> style;
 
     public Output<ResourcePolicyGroupPlacementPolicyStyle> getStyle() {
@@ -81,7 +81,7 @@ public final class ResourcePolicyGroupPlacementPolicyArgs extends io.pulumi.reso
      * Number of vms in this placement group
      * 
      */
-    @InputImport(name="vmCount")
+    @Import(name="vmCount")
       private final @Nullable Output<Integer> vmCount;
 
     public Output<Integer> getVmCount() {

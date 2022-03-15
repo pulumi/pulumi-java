@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.secretmanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CustomerManagedEncryptionResponse {
     /**
      * The resource name of the Cloud KMS CryptoKey used to encrypt secret payloads. For secrets using the UserManaged replication policy type, Cloud KMS CryptoKeys must reside in the same location as the replica location. For secrets using the Automatic replication policy type, Cloud KMS CryptoKeys must reside in `global`. The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`.
@@ -15,8 +15,8 @@ public final class CustomerManagedEncryptionResponse {
      */
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor
-    private CustomerManagedEncryptionResponse(@OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
+    @CustomType.Constructor
+    private CustomerManagedEncryptionResponse(@CustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 

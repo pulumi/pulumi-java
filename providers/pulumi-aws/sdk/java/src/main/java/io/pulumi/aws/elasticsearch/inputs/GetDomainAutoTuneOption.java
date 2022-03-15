@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.aws.elasticsearch.inputs.GetDomainAutoTuneOptionMaintenanceSchedule;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetDomainAutoTuneOption extends io.pulumi.resources.InvokeArg
      * The Auto-Tune desired state for the domain.
      * 
      */
-    @InputImport(name="desiredState", required=true)
+    @Import(name="desiredState", required=true)
       private final String desiredState;
 
     public String getDesiredState() {
@@ -29,7 +29,7 @@ public final class GetDomainAutoTuneOption extends io.pulumi.resources.InvokeArg
      * A list of the nested configurations for the Auto-Tune maintenance windows of the domain.
      * 
      */
-    @InputImport(name="maintenanceSchedules", required=true)
+    @Import(name="maintenanceSchedules", required=true)
       private final List<GetDomainAutoTuneOptionMaintenanceSchedule> maintenanceSchedules;
 
     public List<GetDomainAutoTuneOptionMaintenanceSchedule> getMaintenanceSchedules() {
@@ -40,7 +40,7 @@ public final class GetDomainAutoTuneOption extends io.pulumi.resources.InvokeArg
      * Whether the domain is set to roll back to default Auto-Tune settings when disabling Auto-Tune.
      * 
      */
-    @InputImport(name="rollbackOnDisable", required=true)
+    @Import(name="rollbackOnDisable", required=true)
       private final String rollbackOnDisable;
 
     public String getRollbackOnDisable() {

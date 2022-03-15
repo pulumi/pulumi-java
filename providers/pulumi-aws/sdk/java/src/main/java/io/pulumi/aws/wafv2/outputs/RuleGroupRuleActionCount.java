@@ -4,12 +4,12 @@
 package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleActionCountCustomRequestHandling;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleActionCount {
     /**
      * Defines custom handling for the web request. See Custom Request Handling below for details.
@@ -17,8 +17,8 @@ public final class RuleGroupRuleActionCount {
      */
     private final @Nullable RuleGroupRuleActionCountCustomRequestHandling customRequestHandling;
 
-    @OutputCustomType.Constructor
-    private RuleGroupRuleActionCount(@OutputCustomType.Parameter("customRequestHandling") @Nullable RuleGroupRuleActionCountCustomRequestHandling customRequestHandling) {
+    @CustomType.Constructor
+    private RuleGroupRuleActionCount(@CustomType.Parameter("customRequestHandling") @Nullable RuleGroupRuleActionCountCustomRequestHandling customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatalabelingV1beta1TextMetadataResponse {
     /**
      * The language of this text, as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). Default value is en-US.
@@ -15,8 +15,8 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataResponse {
      */
     private final String languageCode;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDatalabelingV1beta1TextMetadataResponse(@OutputCustomType.Parameter("languageCode") String languageCode) {
+    @CustomType.Constructor
+    private GoogleCloudDatalabelingV1beta1TextMetadataResponse(@CustomType.Parameter("languageCode") String languageCode) {
         this.languageCode = languageCode;
     }
 

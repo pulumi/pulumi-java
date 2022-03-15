@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ParquetFormatArgs extends io.pulumi.resources.ResourceArgs {
      * Deserializer. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="deserializer")
+    @Import(name="deserializer")
       private final @Nullable Output<Object> deserializer;
 
     public Output<Object> getDeserializer() {
@@ -34,7 +34,7 @@ public final class ParquetFormatArgs extends io.pulumi.resources.ResourceArgs {
      * Serializer. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="serializer")
+    @Import(name="serializer")
       private final @Nullable Output<Object> serializer;
 
     public Output<Object> getSerializer() {
@@ -46,7 +46,7 @@ public final class ParquetFormatArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'ParquetFormat'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

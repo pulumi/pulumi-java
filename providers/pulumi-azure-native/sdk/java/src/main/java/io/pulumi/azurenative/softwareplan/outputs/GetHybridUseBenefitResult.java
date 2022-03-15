@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.softwareplan.outputs;
 
 import io.pulumi.azurenative.softwareplan.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetHybridUseBenefitResult {
     /**
      * Created date
@@ -52,16 +52,16 @@ public final class GetHybridUseBenefitResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHybridUseBenefitResult(
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("etag") Integer etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sku") SkuResponse sku,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("etag") Integer etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sku") SkuResponse sku,
+        @CustomType.Parameter("type") String type) {
         this.createdDate = createdDate;
         this.etag = etag;
         this.id = id;

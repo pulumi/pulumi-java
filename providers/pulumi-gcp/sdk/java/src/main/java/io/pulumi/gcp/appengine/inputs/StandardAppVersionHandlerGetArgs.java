@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionHandlerScriptGetArgs;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionHandlerStaticFilesGetArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class StandardAppVersionHandlerGetArgs extends io.pulumi.resources.
      * Possible values are `AUTH_FAIL_ACTION_REDIRECT` and `AUTH_FAIL_ACTION_UNAUTHORIZED`.
      * 
      */
-    @InputImport(name="authFailAction")
+    @Import(name="authFailAction")
       private final @Nullable Output<String> authFailAction;
 
     public Output<String> getAuthFailAction() {
@@ -33,7 +33,7 @@ public final class StandardAppVersionHandlerGetArgs extends io.pulumi.resources.
      * Possible values are `LOGIN_OPTIONAL`, `LOGIN_ADMIN`, and `LOGIN_REQUIRED`.
      * 
      */
-    @InputImport(name="login")
+    @Import(name="login")
       private final @Nullable Output<String> login;
 
     public Output<String> getLogin() {
@@ -45,7 +45,7 @@ public final class StandardAppVersionHandlerGetArgs extends io.pulumi.resources.
      * Possible values are `REDIRECT_HTTP_RESPONSE_CODE_301`, `REDIRECT_HTTP_RESPONSE_CODE_302`, `REDIRECT_HTTP_RESPONSE_CODE_303`, and `REDIRECT_HTTP_RESPONSE_CODE_307`.
      * 
      */
-    @InputImport(name="redirectHttpResponseCode")
+    @Import(name="redirectHttpResponseCode")
       private final @Nullable Output<String> redirectHttpResponseCode;
 
     public Output<String> getRedirectHttpResponseCode() {
@@ -58,7 +58,7 @@ public final class StandardAppVersionHandlerGetArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="script")
+    @Import(name="script")
       private final @Nullable Output<StandardAppVersionHandlerScriptGetArgs> script;
 
     public Output<StandardAppVersionHandlerScriptGetArgs> getScript() {
@@ -70,7 +70,7 @@ public final class StandardAppVersionHandlerGetArgs extends io.pulumi.resources.
      * Possible values are `SECURE_DEFAULT`, `SECURE_NEVER`, `SECURE_OPTIONAL`, and `SECURE_ALWAYS`.
      * 
      */
-    @InputImport(name="securityLevel")
+    @Import(name="securityLevel")
       private final @Nullable Output<String> securityLevel;
 
     public Output<String> getSecurityLevel() {
@@ -82,7 +82,7 @@ public final class StandardAppVersionHandlerGetArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="staticFiles")
+    @Import(name="staticFiles")
       private final @Nullable Output<StandardAppVersionHandlerStaticFilesGetArgs> staticFiles;
 
     public Output<StandardAppVersionHandlerStaticFilesGetArgs> getStaticFiles() {
@@ -94,7 +94,7 @@ public final class StandardAppVersionHandlerGetArgs extends io.pulumi.resources.
      * All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
      * 
      */
-    @InputImport(name="urlRegex")
+    @Import(name="urlRegex")
       private final @Nullable Output<String> urlRegex;
 
     public Output<String> getUrlRegex() {

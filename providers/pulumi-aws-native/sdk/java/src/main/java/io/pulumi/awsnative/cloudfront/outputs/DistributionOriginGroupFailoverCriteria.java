@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.DistributionStatusCodes;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DistributionOriginGroupFailoverCriteria {
     private final DistributionStatusCodes statusCodes;
 
-    @OutputCustomType.Constructor
-    private DistributionOriginGroupFailoverCriteria(@OutputCustomType.Parameter("statusCodes") DistributionStatusCodes statusCodes) {
+    @CustomType.Constructor
+    private DistributionOriginGroupFailoverCriteria(@CustomType.Parameter("statusCodes") DistributionStatusCodes statusCodes) {
         this.statusCodes = statusCodes;
     }
 

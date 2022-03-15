@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.ServiceAttachmentConnectionPreference;
 import io.pulumi.googlenative.compute_alpha.inputs.ServiceAttachmentConsumerProjectLimitArgs;
 import java.lang.Boolean;
@@ -22,7 +22,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * The connection preference of service attachment. The value can be set to ACCEPT_AUTOMATIC. An ACCEPT_AUTOMATIC service attachment is one that always accepts the connection from consumer forwarding rules.
      * 
      */
-    @InputImport(name="connectionPreference")
+    @Import(name="connectionPreference")
       private final @Nullable Output<ServiceAttachmentConnectionPreference> connectionPreference;
 
     public Output<ServiceAttachmentConnectionPreference> getConnectionPreference() {
@@ -33,7 +33,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * Projects that are allowed to connect to this service attachment.
      * 
      */
-    @InputImport(name="consumerAcceptLists")
+    @Import(name="consumerAcceptLists")
       private final @Nullable Output<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists;
 
     public Output<List<ServiceAttachmentConsumerProjectLimitArgs>> getConsumerAcceptLists() {
@@ -44,7 +44,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * Projects that are not allowed to connect to this service attachment. The project can be specified using its id or number.
      * 
      */
-    @InputImport(name="consumerRejectLists")
+    @Import(name="consumerRejectLists")
       private final @Nullable Output<List<String>> consumerRejectLists;
 
     public Output<List<String>> getConsumerRejectLists() {
@@ -55,7 +55,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -66,7 +66,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * If specified, the domain name will be used during the integration between the PSC connected endpoints and the Cloud DNS. For example, this is a valid domain name: "p.mycompany.com.". Current max number of domain names supported is 1.
      * 
      */
-    @InputImport(name="domainNames")
+    @Import(name="domainNames")
       private final @Nullable Output<List<String>> domainNames;
 
     public Output<List<String>> getDomainNames() {
@@ -77,7 +77,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * If true, enable the proxy protocol which is for supplying client TCP/IP address data in TCP connections that traverse proxies on their way to destination servers.
      * 
      */
-    @InputImport(name="enableProxyProtocol")
+    @Import(name="enableProxyProtocol")
       private final @Nullable Output<Boolean> enableProxyProtocol;
 
     public Output<Boolean> getEnableProxyProtocol() {
@@ -88,7 +88,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -99,7 +99,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * An array of URLs where each entry is the URL of a subnet provided by the service producer to use for NAT in this service attachment.
      * 
      */
-    @InputImport(name="natSubnets")
+    @Import(name="natSubnets")
       private final @Nullable Output<List<String>> natSubnets;
 
     public Output<List<String>> getNatSubnets() {
@@ -110,28 +110,28 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * The URL of a forwarding rule with loadBalancingScheme INTERNAL* that is serving the endpoint identified by this service attachment.
      * 
      */
-    @InputImport(name="producerForwardingRule")
+    @Import(name="producerForwardingRule")
       private final @Nullable Output<String> producerForwardingRule;
 
     public Output<String> getProducerForwardingRule() {
         return this.producerForwardingRule == null ? Output.empty() : this.producerForwardingRule;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {
         return this.region;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -142,7 +142,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * The URL of a service serving the endpoint identified by this service attachment.
      * 
      */
-    @InputImport(name="targetService")
+    @Import(name="targetService")
       private final @Nullable Output<String> targetService;
 
     public Output<String> getTargetService() {

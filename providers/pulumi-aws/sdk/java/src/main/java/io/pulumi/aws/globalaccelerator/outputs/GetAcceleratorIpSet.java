@@ -3,20 +3,20 @@
 
 package io.pulumi.aws.globalaccelerator.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAcceleratorIpSet {
     private final List<String> ipAddresses;
     private final String ipFamily;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAcceleratorIpSet(
-        @OutputCustomType.Parameter("ipAddresses") List<String> ipAddresses,
-        @OutputCustomType.Parameter("ipFamily") String ipFamily) {
+        @CustomType.Parameter("ipAddresses") List<String> ipAddresses,
+        @CustomType.Parameter("ipFamily") String ipFamily) {
         this.ipAddresses = ipAddresses;
         this.ipFamily = ipFamily;
     }

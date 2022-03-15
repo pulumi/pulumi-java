@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.diagflow.inputs.CxPageFormParameterFillBehaviorArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
      * The human-readable name of the parameter, unique within the form.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -32,7 +32,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
      * Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/entityTypes/<Entity Type ID> for developer entity types.
      * 
      */
-    @InputImport(name="entityType")
+    @Import(name="entityType")
       private final @Nullable Output<String> entityType;
 
     public Output<String> getEntityType() {
@@ -44,7 +44,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="fillBehavior")
+    @Import(name="fillBehavior")
       private final @Nullable Output<CxPageFormParameterFillBehaviorArgs> fillBehavior;
 
     public Output<CxPageFormParameterFillBehaviorArgs> getFillBehavior() {
@@ -55,7 +55,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
      * Indicates whether the parameter represents a list of values.
      * 
      */
-    @InputImport(name="isList")
+    @Import(name="isList")
       private final @Nullable Output<Boolean> isList;
 
     public Output<Boolean> getIsList() {
@@ -67,7 +67,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
      * If redaction is enabled, the parameter content will be replaced by parameter name during logging. Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
      * 
      */
-    @InputImport(name="redact")
+    @Import(name="redact")
       private final @Nullable Output<Boolean> redact;
 
     public Output<Boolean> getRedact() {
@@ -79,7 +79,7 @@ public final class CxPageFormParameterArgs extends io.pulumi.resources.ResourceA
      * Required parameters must be filled before form filling concludes.
      * 
      */
-    @InputImport(name="required")
+    @Import(name="required")
       private final @Nullable Output<Boolean> required;
 
     public Output<Boolean> getRequired() {

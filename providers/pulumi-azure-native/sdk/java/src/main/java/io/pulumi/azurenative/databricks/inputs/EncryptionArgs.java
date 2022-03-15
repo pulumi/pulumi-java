@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databricks.inputs;
 import io.pulumi.azurenative.databricks.enums.KeySource;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of KeyVault key.
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
@@ -35,7 +35,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault
      * 
      */
-    @InputImport(name="keySource")
+    @Import(name="keySource")
       private final @Nullable Output<Either<String,KeySource>> keySource;
 
     public Output<Either<String,KeySource>> getKeySource() {
@@ -46,7 +46,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * The Uri of KeyVault.
      * 
      */
-    @InputImport(name="keyVaultUri")
+    @Import(name="keyVaultUri")
       private final @Nullable Output<String> keyVaultUri;
 
     public Output<String> getKeyVaultUri() {
@@ -57,7 +57,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * The version of KeyVault key.
      * 
      */
-    @InputImport(name="keyVersion")
+    @Import(name="keyVersion")
       private final @Nullable Output<String> keyVersion;
 
     public Output<String> getKeyVersion() {

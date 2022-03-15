@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OSPolicyResourcePackageResourceZypperResponse {
     /**
      * Package name.
@@ -15,8 +15,8 @@ public final class OSPolicyResourcePackageResourceZypperResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private OSPolicyResourcePackageResourceZypperResponse(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private OSPolicyResourcePackageResourceZypperResponse(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

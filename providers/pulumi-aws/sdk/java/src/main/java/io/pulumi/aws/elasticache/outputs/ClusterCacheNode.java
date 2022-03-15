@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.elasticache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterCacheNode {
     private final @Nullable String address;
     /**
@@ -25,12 +25,12 @@ public final class ClusterCacheNode {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterCacheNode(
-        @OutputCustomType.Parameter("address") @Nullable String address,
-        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("port") @Nullable Integer port) {
+        @CustomType.Parameter("address") @Nullable String address,
+        @CustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("port") @Nullable Integer port) {
         this.address = address;
         this.availabilityZone = availabilityZone;
         this.id = id;

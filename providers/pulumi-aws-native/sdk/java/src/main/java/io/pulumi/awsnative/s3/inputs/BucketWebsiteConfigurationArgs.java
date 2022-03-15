@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.inputs.BucketRedirectAllRequestsToArgs;
 import io.pulumi.awsnative.s3.inputs.BucketRoutingRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.Re
      * The name of the error document for the website.
      * 
      */
-    @InputImport(name="errorDocument")
+    @Import(name="errorDocument")
       private final @Nullable Output<String> errorDocument;
 
     public Output<String> getErrorDocument() {
@@ -36,21 +36,21 @@ public final class BucketWebsiteConfigurationArgs extends io.pulumi.resources.Re
      * The name of the index document for the website.
      * 
      */
-    @InputImport(name="indexDocument")
+    @Import(name="indexDocument")
       private final @Nullable Output<String> indexDocument;
 
     public Output<String> getIndexDocument() {
         return this.indexDocument == null ? Output.empty() : this.indexDocument;
     }
 
-    @InputImport(name="redirectAllRequestsTo")
+    @Import(name="redirectAllRequestsTo")
       private final @Nullable Output<BucketRedirectAllRequestsToArgs> redirectAllRequestsTo;
 
     public Output<BucketRedirectAllRequestsToArgs> getRedirectAllRequestsTo() {
         return this.redirectAllRequestsTo == null ? Output.empty() : this.redirectAllRequestsTo;
     }
 
-    @InputImport(name="routingRules")
+    @Import(name="routingRules")
       private final @Nullable Output<List<BucketRoutingRuleArgs>> routingRules;
 
     public Output<List<BucketRoutingRuleArgs>> getRoutingRules() {

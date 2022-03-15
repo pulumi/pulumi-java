@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kusto.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
      * A boolean value that indicate if the optimized autoscale feature is enabled or not.
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -33,7 +33,7 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
      * Maximum allowed instances count.
      * 
      */
-    @InputImport(name="maximum", required=true)
+    @Import(name="maximum", required=true)
       private final Output<Integer> maximum;
 
     public Output<Integer> getMaximum() {
@@ -44,7 +44,7 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
      * Minimum allowed instances count.
      * 
      */
-    @InputImport(name="minimum", required=true)
+    @Import(name="minimum", required=true)
       private final Output<Integer> minimum;
 
     public Output<Integer> getMinimum() {
@@ -55,7 +55,7 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
      * The version of the template defined, for instance 1.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final Output<Integer> version;
 
     public Output<Integer> getVersion() {

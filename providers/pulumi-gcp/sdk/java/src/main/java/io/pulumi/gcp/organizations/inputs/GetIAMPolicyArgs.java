@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.organizations.inputs.GetIAMPolicyAuditConfig;
 import io.pulumi.gcp.organizations.inputs.GetIAMPolicyBinding;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class GetIAMPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * A nested configuration block that defines logging additional configuration for your project. This field is only supported on `gcp.projects.IAMPolicy`, `gcp.folder.IAMPolicy` and `gcp.organizations.IAMPolicy`.
      * 
      */
-    @InputImport(name="auditConfigs")
+    @Import(name="auditConfigs")
       private final @Nullable List<GetIAMPolicyAuditConfig> auditConfigs;
 
     public List<GetIAMPolicyAuditConfig> getAuditConfigs() {
@@ -33,7 +33,7 @@ public final class GetIAMPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * `binding` arguments are supported.
      * 
      */
-    @InputImport(name="bindings")
+    @Import(name="bindings")
       private final @Nullable List<GetIAMPolicyBinding> bindings;
 
     public List<GetIAMPolicyBinding> getBindings() {

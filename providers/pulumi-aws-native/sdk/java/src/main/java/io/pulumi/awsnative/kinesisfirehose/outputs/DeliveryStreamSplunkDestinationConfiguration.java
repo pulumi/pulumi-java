@@ -8,14 +8,14 @@ import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamCloudWatchLoggi
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamProcessingConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamS3DestinationConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamSplunkRetryOptions;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamSplunkDestinationConfiguration {
     private final @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions;
     private final @Nullable Integer hECAcknowledgmentTimeoutInSeconds;
@@ -27,17 +27,17 @@ public final class DeliveryStreamSplunkDestinationConfiguration {
     private final @Nullable String s3BackupMode;
     private final DeliveryStreamS3DestinationConfiguration s3Configuration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamSplunkDestinationConfiguration(
-        @OutputCustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
-        @OutputCustomType.Parameter("hECAcknowledgmentTimeoutInSeconds") @Nullable Integer hECAcknowledgmentTimeoutInSeconds,
-        @OutputCustomType.Parameter("hECEndpoint") String hECEndpoint,
-        @OutputCustomType.Parameter("hECEndpointType") DeliveryStreamSplunkDestinationConfigurationHECEndpointType hECEndpointType,
-        @OutputCustomType.Parameter("hECToken") String hECToken,
-        @OutputCustomType.Parameter("processingConfiguration") @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
-        @OutputCustomType.Parameter("retryOptions") @Nullable DeliveryStreamSplunkRetryOptions retryOptions,
-        @OutputCustomType.Parameter("s3BackupMode") @Nullable String s3BackupMode,
-        @OutputCustomType.Parameter("s3Configuration") DeliveryStreamS3DestinationConfiguration s3Configuration) {
+        @CustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
+        @CustomType.Parameter("hECAcknowledgmentTimeoutInSeconds") @Nullable Integer hECAcknowledgmentTimeoutInSeconds,
+        @CustomType.Parameter("hECEndpoint") String hECEndpoint,
+        @CustomType.Parameter("hECEndpointType") DeliveryStreamSplunkDestinationConfigurationHECEndpointType hECEndpointType,
+        @CustomType.Parameter("hECToken") String hECToken,
+        @CustomType.Parameter("processingConfiguration") @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
+        @CustomType.Parameter("retryOptions") @Nullable DeliveryStreamSplunkRetryOptions retryOptions,
+        @CustomType.Parameter("s3BackupMode") @Nullable String s3BackupMode,
+        @CustomType.Parameter("s3Configuration") DeliveryStreamS3DestinationConfiguration s3Configuration) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         this.hECAcknowledgmentTimeoutInSeconds = hECAcknowledgmentTimeoutInSeconds;
         this.hECEndpoint = hECEndpoint;

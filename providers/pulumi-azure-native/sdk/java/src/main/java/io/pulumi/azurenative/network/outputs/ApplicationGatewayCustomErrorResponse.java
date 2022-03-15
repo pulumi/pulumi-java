@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayCustomErrorResponse {
     /**
      * Error page URL of the application gateway customer error.
@@ -22,10 +22,10 @@ public final class ApplicationGatewayCustomErrorResponse {
      */
     private final @Nullable String statusCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayCustomErrorResponse(
-        @OutputCustomType.Parameter("customErrorPageUrl") @Nullable String customErrorPageUrl,
-        @OutputCustomType.Parameter("statusCode") @Nullable String statusCode) {
+        @CustomType.Parameter("customErrorPageUrl") @Nullable String customErrorPageUrl,
+        @CustomType.Parameter("statusCode") @Nullable String statusCode) {
         this.customErrorPageUrl = customErrorPageUrl;
         this.statusCode = statusCode;
     }

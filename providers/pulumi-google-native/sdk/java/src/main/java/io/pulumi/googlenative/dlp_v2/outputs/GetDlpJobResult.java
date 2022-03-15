@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ErrorResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InspectDataSourceDetailsResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDlpJobResult {
     /**
      * Time when the job was created.
@@ -64,18 +64,18 @@ public final class GetDlpJobResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDlpJobResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("errors") List<GooglePrivacyDlpV2ErrorResponse> errors,
-        @OutputCustomType.Parameter("inspectDetails") GooglePrivacyDlpV2InspectDataSourceDetailsResponse inspectDetails,
-        @OutputCustomType.Parameter("jobTriggerName") String jobTriggerName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("riskDetails") GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse riskDetails,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("errors") List<GooglePrivacyDlpV2ErrorResponse> errors,
+        @CustomType.Parameter("inspectDetails") GooglePrivacyDlpV2InspectDataSourceDetailsResponse inspectDetails,
+        @CustomType.Parameter("jobTriggerName") String jobTriggerName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("riskDetails") GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse riskDetails,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("type") String type) {
         this.createTime = createTime;
         this.endTime = endTime;
         this.errors = errors;

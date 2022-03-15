@@ -9,7 +9,7 @@ import io.pulumi.azurenative.enterpriseknowledgegraph.outputs.EnterpriseKnowledg
 import io.pulumi.azurenative.enterpriseknowledgegraph.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class EnterpriseKnowledgeGraph extends io.pulumi.resources.CustomResource
      * Specifies the location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -51,7 +51,7 @@ public class EnterpriseKnowledgeGraph extends io.pulumi.resources.CustomResource
      * Specifies the name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class EnterpriseKnowledgeGraph extends io.pulumi.resources.CustomResource
      * The set of properties specific to EnterpriseKnowledgeGraph resource
      * 
      */
-    @OutputExport(name="properties", type=EnterpriseKnowledgeGraphPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=EnterpriseKnowledgeGraphPropertiesResponse.class, parameters={})
     private Output<EnterpriseKnowledgeGraphPropertiesResponse> properties;
 
     /**
@@ -79,7 +79,7 @@ public class EnterpriseKnowledgeGraph extends io.pulumi.resources.CustomResource
      * Gets or sets the SKU of the resource.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -93,7 +93,7 @@ public class EnterpriseKnowledgeGraph extends io.pulumi.resources.CustomResource
      * Contains resource tags defined as key/value pairs.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -107,7 +107,7 @@ public class EnterpriseKnowledgeGraph extends io.pulumi.resources.CustomResource
      * Specifies the type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

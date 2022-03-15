@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kendra.enums.DataSourceSharePointConfigurationSharePo
 import io.pulumi.awsnative.kendra.inputs.DataSourceS3Path;
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMapping;
 import io.pulumi.awsnative.kendra.inputs.DataSourceVpcConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,84 +24,84 @@ public final class DataSourceSharePointConfiguration extends io.pulumi.resources
 
     public static final DataSourceSharePointConfiguration Empty = new DataSourceSharePointConfiguration();
 
-    @InputImport(name="crawlAttachments")
+    @Import(name="crawlAttachments")
       private final @Nullable Boolean crawlAttachments;
 
     public Optional<Boolean> getCrawlAttachments() {
         return this.crawlAttachments == null ? Optional.empty() : Optional.ofNullable(this.crawlAttachments);
     }
 
-    @InputImport(name="disableLocalGroups")
+    @Import(name="disableLocalGroups")
       private final @Nullable Boolean disableLocalGroups;
 
     public Optional<Boolean> getDisableLocalGroups() {
         return this.disableLocalGroups == null ? Optional.empty() : Optional.ofNullable(this.disableLocalGroups);
     }
 
-    @InputImport(name="documentTitleFieldName")
+    @Import(name="documentTitleFieldName")
       private final @Nullable String documentTitleFieldName;
 
     public Optional<String> getDocumentTitleFieldName() {
         return this.documentTitleFieldName == null ? Optional.empty() : Optional.ofNullable(this.documentTitleFieldName);
     }
 
-    @InputImport(name="exclusionPatterns")
+    @Import(name="exclusionPatterns")
       private final @Nullable List<String> exclusionPatterns;
 
     public List<String> getExclusionPatterns() {
         return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
     }
 
-    @InputImport(name="fieldMappings")
+    @Import(name="fieldMappings")
       private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
     public List<DataSourceToIndexFieldMapping> getFieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
 
-    @InputImport(name="inclusionPatterns")
+    @Import(name="inclusionPatterns")
       private final @Nullable List<String> inclusionPatterns;
 
     public List<String> getInclusionPatterns() {
         return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
     }
 
-    @InputImport(name="secretArn", required=true)
+    @Import(name="secretArn", required=true)
       private final String secretArn;
 
     public String getSecretArn() {
         return this.secretArn;
     }
 
-    @InputImport(name="sharePointVersion", required=true)
+    @Import(name="sharePointVersion", required=true)
       private final DataSourceSharePointConfigurationSharePointVersion sharePointVersion;
 
     public DataSourceSharePointConfigurationSharePointVersion getSharePointVersion() {
         return this.sharePointVersion;
     }
 
-    @InputImport(name="sslCertificateS3Path")
+    @Import(name="sslCertificateS3Path")
       private final @Nullable DataSourceS3Path sslCertificateS3Path;
 
     public Optional<DataSourceS3Path> getSslCertificateS3Path() {
         return this.sslCertificateS3Path == null ? Optional.empty() : Optional.ofNullable(this.sslCertificateS3Path);
     }
 
-    @InputImport(name="urls", required=true)
+    @Import(name="urls", required=true)
       private final List<String> urls;
 
     public List<String> getUrls() {
         return this.urls;
     }
 
-    @InputImport(name="useChangeLog")
+    @Import(name="useChangeLog")
       private final @Nullable Boolean useChangeLog;
 
     public Optional<Boolean> getUseChangeLog() {
         return this.useChangeLog == null ? Optional.empty() : Optional.ofNullable(this.useChangeLog);
     }
 
-    @InputImport(name="vpcConfiguration")
+    @Import(name="vpcConfiguration")
       private final @Nullable DataSourceVpcConfiguration vpcConfiguration;
 
     public Optional<DataSourceVpcConfiguration> getVpcConfiguration() {

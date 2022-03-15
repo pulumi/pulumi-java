@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ApplicationHAClusterPrometheusExporterArgs extends io.pulumi.
      * Prometheus exporter port.
      * 
      */
-    @InputImport(name="prometheusPort")
+    @Import(name="prometheusPort")
       private final @Nullable Output<String> prometheusPort;
 
     public Output<String> getPrometheusPort() {

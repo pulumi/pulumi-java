@@ -5,13 +5,13 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.VpnLinkBgpSettingsResponse;
 import io.pulumi.azurenative.network.outputs.VpnLinkProviderPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VpnSiteLinkResponse {
     /**
      * The set of bgp properties.
@@ -59,17 +59,17 @@ public final class VpnSiteLinkResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpnSiteLinkResponse(
-        @OutputCustomType.Parameter("bgpProperties") @Nullable VpnLinkBgpSettingsResponse bgpProperties,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("linkProperties") @Nullable VpnLinkProviderPropertiesResponse linkProperties,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("bgpProperties") @Nullable VpnLinkBgpSettingsResponse bgpProperties,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("fqdn") @Nullable String fqdn,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("linkProperties") @Nullable VpnLinkProviderPropertiesResponse linkProperties,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.bgpProperties = bgpProperties;
         this.etag = etag;
         this.fqdn = fqdn;

@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.ImageTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetImageResult {
     private final @Nullable String imageArn;
     private final @Nullable String imageDescription;
@@ -23,13 +23,13 @@ public final class GetImageResult {
      */
     private final @Nullable List<ImageTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetImageResult(
-        @OutputCustomType.Parameter("imageArn") @Nullable String imageArn,
-        @OutputCustomType.Parameter("imageDescription") @Nullable String imageDescription,
-        @OutputCustomType.Parameter("imageDisplayName") @Nullable String imageDisplayName,
-        @OutputCustomType.Parameter("imageRoleArn") @Nullable String imageRoleArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<ImageTag> tags) {
+        @CustomType.Parameter("imageArn") @Nullable String imageArn,
+        @CustomType.Parameter("imageDescription") @Nullable String imageDescription,
+        @CustomType.Parameter("imageDisplayName") @Nullable String imageDisplayName,
+        @CustomType.Parameter("imageRoleArn") @Nullable String imageRoleArn,
+        @CustomType.Parameter("tags") @Nullable List<ImageTag> tags) {
         this.imageArn = imageArn;
         this.imageDescription = imageDescription;
         this.imageDisplayName = imageDisplayName;

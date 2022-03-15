@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.customerprofiles.outputs;
 
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationOperatorPropertiesKeys;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationTaskPropertiesMap {
     private final IntegrationOperatorPropertiesKeys operatorPropertyKey;
     private final String property;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationTaskPropertiesMap(
-        @OutputCustomType.Parameter("operatorPropertyKey") IntegrationOperatorPropertiesKeys operatorPropertyKey,
-        @OutputCustomType.Parameter("property") String property) {
+        @CustomType.Parameter("operatorPropertyKey") IntegrationOperatorPropertiesKeys operatorPropertyKey,
+        @CustomType.Parameter("property") String property) {
         this.operatorPropertyKey = operatorPropertyKey;
         this.property = property;
     }

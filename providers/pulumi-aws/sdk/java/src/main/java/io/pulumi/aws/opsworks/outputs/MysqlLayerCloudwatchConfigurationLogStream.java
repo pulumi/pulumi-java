@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.opsworks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MysqlLayerCloudwatchConfigurationLogStream {
     private final @Nullable Integer batchCount;
     private final @Nullable Integer batchSize;
@@ -24,19 +24,19 @@ public final class MysqlLayerCloudwatchConfigurationLogStream {
     private final @Nullable String multilineStartPattern;
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MysqlLayerCloudwatchConfigurationLogStream(
-        @OutputCustomType.Parameter("batchCount") @Nullable Integer batchCount,
-        @OutputCustomType.Parameter("batchSize") @Nullable Integer batchSize,
-        @OutputCustomType.Parameter("bufferDuration") @Nullable Integer bufferDuration,
-        @OutputCustomType.Parameter("datetimeFormat") @Nullable String datetimeFormat,
-        @OutputCustomType.Parameter("encoding") @Nullable String encoding,
-        @OutputCustomType.Parameter("file") String file,
-        @OutputCustomType.Parameter("fileFingerprintLines") @Nullable String fileFingerprintLines,
-        @OutputCustomType.Parameter("initialPosition") @Nullable String initialPosition,
-        @OutputCustomType.Parameter("logGroupName") String logGroupName,
-        @OutputCustomType.Parameter("multilineStartPattern") @Nullable String multilineStartPattern,
-        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
+        @CustomType.Parameter("batchCount") @Nullable Integer batchCount,
+        @CustomType.Parameter("batchSize") @Nullable Integer batchSize,
+        @CustomType.Parameter("bufferDuration") @Nullable Integer bufferDuration,
+        @CustomType.Parameter("datetimeFormat") @Nullable String datetimeFormat,
+        @CustomType.Parameter("encoding") @Nullable String encoding,
+        @CustomType.Parameter("file") String file,
+        @CustomType.Parameter("fileFingerprintLines") @Nullable String fileFingerprintLines,
+        @CustomType.Parameter("initialPosition") @Nullable String initialPosition,
+        @CustomType.Parameter("logGroupName") String logGroupName,
+        @CustomType.Parameter("multilineStartPattern") @Nullable String multilineStartPattern,
+        @CustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.batchCount = batchCount;
         this.batchSize = batchSize;
         this.bufferDuration = bufferDuration;

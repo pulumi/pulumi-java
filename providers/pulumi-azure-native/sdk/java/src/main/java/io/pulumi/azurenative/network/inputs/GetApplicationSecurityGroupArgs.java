@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetApplicationSecurityGroupArgs extends io.pulumi.resources.I
      * The name of the application security group.
      * 
      */
-    @InputImport(name="applicationSecurityGroupName", required=true)
+    @Import(name="applicationSecurityGroupName", required=true)
       private final String applicationSecurityGroupName;
 
     public String getApplicationSecurityGroupName() {
@@ -27,7 +27,7 @@ public final class GetApplicationSecurityGroupArgs extends io.pulumi.resources.I
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

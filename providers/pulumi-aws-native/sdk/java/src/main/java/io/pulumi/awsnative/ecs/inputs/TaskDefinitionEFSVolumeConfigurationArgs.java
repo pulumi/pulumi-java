@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ecs.inputs;
 import io.pulumi.awsnative.ecs.enums.TaskDefinitionEFSVolumeConfigurationTransitEncryption;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionAuthorizationConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,35 +17,35 @@ public final class TaskDefinitionEFSVolumeConfigurationArgs extends io.pulumi.re
 
     public static final TaskDefinitionEFSVolumeConfigurationArgs Empty = new TaskDefinitionEFSVolumeConfigurationArgs();
 
-    @InputImport(name="authorizationConfig")
+    @Import(name="authorizationConfig")
       private final @Nullable Output<TaskDefinitionAuthorizationConfigArgs> authorizationConfig;
 
     public Output<TaskDefinitionAuthorizationConfigArgs> getAuthorizationConfig() {
         return this.authorizationConfig == null ? Output.empty() : this.authorizationConfig;
     }
 
-    @InputImport(name="filesystemId", required=true)
+    @Import(name="filesystemId", required=true)
       private final Output<String> filesystemId;
 
     public Output<String> getFilesystemId() {
         return this.filesystemId;
     }
 
-    @InputImport(name="rootDirectory")
+    @Import(name="rootDirectory")
       private final @Nullable Output<String> rootDirectory;
 
     public Output<String> getRootDirectory() {
         return this.rootDirectory == null ? Output.empty() : this.rootDirectory;
     }
 
-    @InputImport(name="transitEncryption")
+    @Import(name="transitEncryption")
       private final @Nullable Output<TaskDefinitionEFSVolumeConfigurationTransitEncryption> transitEncryption;
 
     public Output<TaskDefinitionEFSVolumeConfigurationTransitEncryption> getTransitEncryption() {
         return this.transitEncryption == null ? Output.empty() : this.transitEncryption;
     }
 
-    @InputImport(name="transitEncryptionPort")
+    @Import(name="transitEncryptionPort")
       private final @Nullable Output<Integer> transitEncryptionPort;
 
     public Output<Integer> getTransitEncryptionPort() {

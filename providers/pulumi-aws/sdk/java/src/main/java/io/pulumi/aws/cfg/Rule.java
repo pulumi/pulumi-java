@@ -9,7 +9,7 @@ import io.pulumi.aws.cfg.inputs.RuleState;
 import io.pulumi.aws.cfg.outputs.RuleScope;
 import io.pulumi.aws.cfg.outputs.RuleSource;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -37,7 +37,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * The ARN of the config rule
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -51,7 +51,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * Description of the rule
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -65,7 +65,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * A string in JSON format that is passed to the AWS Config rule Lambda function.
      * 
      */
-    @OutputExport(name="inputParameters", type=String.class, parameters={})
+    @Export(name="inputParameters", type=String.class, parameters={})
     private Output</* @Nullable */ String> inputParameters;
 
     /**
@@ -79,7 +79,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * The frequency that you want AWS Config to run evaluations for a rule that is triggered periodically. If specified, requires `message_type` to be `ScheduledNotification`.
      * 
      */
-    @OutputExport(name="maximumExecutionFrequency", type=String.class, parameters={})
+    @Export(name="maximumExecutionFrequency", type=String.class, parameters={})
     private Output</* @Nullable */ String> maximumExecutionFrequency;
 
     /**
@@ -93,7 +93,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * The name of the rule
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * The ID of the config rule
      * 
      */
-    @OutputExport(name="ruleId", type=String.class, parameters={})
+    @Export(name="ruleId", type=String.class, parameters={})
     private Output<String> ruleId;
 
     /**
@@ -121,7 +121,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * Scope defines which resources can trigger an evaluation for the rule as documented below.
      * 
      */
-    @OutputExport(name="scope", type=RuleScope.class, parameters={})
+    @Export(name="scope", type=RuleScope.class, parameters={})
     private Output</* @Nullable */ RuleScope> scope;
 
     /**
@@ -135,7 +135,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * Source specifies the rule owner, the rule identifier, and the notifications that cause the function to evaluate your AWS resources as documented below.
      * 
      */
-    @OutputExport(name="source", type=RuleSource.class, parameters={})
+    @Export(name="source", type=RuleSource.class, parameters={})
     private Output<RuleSource> source;
 
     /**
@@ -149,7 +149,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -163,7 +163,7 @@ public class Rule extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

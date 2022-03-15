@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cache;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Redis cache.
      * 
      */
-    @InputImport(name="cacheName", required=true)
+    @Import(name="cacheName", required=true)
       private final Output<String> cacheName;
 
     public Output<String> getCacheName() {
@@ -29,7 +29,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * highest IP address included in the range
      * 
      */
-    @InputImport(name="endIP", required=true)
+    @Import(name="endIP", required=true)
       private final Output<String> endIP;
 
     public Output<String> getEndIP() {
@@ -40,7 +40,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the firewall rule.
      * 
      */
-    @InputImport(name="ruleName")
+    @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {
@@ -62,7 +62,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * lowest IP address included in the range
      * 
      */
-    @InputImport(name="startIP", required=true)
+    @Import(name="startIP", required=true)
       private final Output<String> startIP;
 
     public Output<String> getStartIP() {

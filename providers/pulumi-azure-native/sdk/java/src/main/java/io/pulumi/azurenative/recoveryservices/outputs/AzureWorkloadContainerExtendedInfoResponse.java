@@ -5,14 +5,14 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.DistributedNodesInfoResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.InquiryInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureWorkloadContainerExtendedInfoResponse {
     /**
      * Host Os Name in case of Stand Alone and Cluster Name in case of distributed container.
@@ -30,11 +30,11 @@ public final class AzureWorkloadContainerExtendedInfoResponse {
      */
     private final @Nullable List<DistributedNodesInfoResponse> nodesList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureWorkloadContainerExtendedInfoResponse(
-        @OutputCustomType.Parameter("hostServerName") @Nullable String hostServerName,
-        @OutputCustomType.Parameter("inquiryInfo") @Nullable InquiryInfoResponse inquiryInfo,
-        @OutputCustomType.Parameter("nodesList") @Nullable List<DistributedNodesInfoResponse> nodesList) {
+        @CustomType.Parameter("hostServerName") @Nullable String hostServerName,
+        @CustomType.Parameter("inquiryInfo") @Nullable InquiryInfoResponse inquiryInfo,
+        @CustomType.Parameter("nodesList") @Nullable List<DistributedNodesInfoResponse> nodesList) {
         this.hostServerName = hostServerName;
         this.inquiryInfo = inquiryInfo;
         this.nodesList = nodesList;

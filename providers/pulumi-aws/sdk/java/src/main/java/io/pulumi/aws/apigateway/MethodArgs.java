@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * Specify if the method requires an API key
      * 
      */
-    @InputImport(name="apiKeyRequired")
+    @Import(name="apiKeyRequired")
       private final @Nullable Output<Boolean> apiKeyRequired;
 
     public Output<Boolean> getApiKeyRequired() {
@@ -32,7 +32,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * The type of authorization used for the method (`NONE`, `CUSTOM`, `AWS_IAM`, `COGNITO_USER_POOLS`)
      * 
      */
-    @InputImport(name="authorization", required=true)
+    @Import(name="authorization", required=true)
       private final Output<String> authorization;
 
     public Output<String> getAuthorization() {
@@ -43,7 +43,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * The authorization scopes used when the authorization is `COGNITO_USER_POOLS`
      * 
      */
-    @InputImport(name="authorizationScopes")
+    @Import(name="authorizationScopes")
       private final @Nullable Output<List<String>> authorizationScopes;
 
     public Output<List<String>> getAuthorizationScopes() {
@@ -54,7 +54,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * The authorizer id to be used when the authorization is `CUSTOM` or `COGNITO_USER_POOLS`
      * 
      */
-    @InputImport(name="authorizerId")
+    @Import(name="authorizerId")
       private final @Nullable Output<String> authorizerId;
 
     public Output<String> getAuthorizerId() {
@@ -65,7 +65,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
      * 
      */
-    @InputImport(name="httpMethod", required=true)
+    @Import(name="httpMethod", required=true)
       private final Output<String> httpMethod;
 
     public Output<String> getHttpMethod() {
@@ -76,7 +76,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * The function name that will be given to the method when generating an SDK through API Gateway. If omitted, API Gateway will generate a function name based on the resource path and HTTP verb.
      * 
      */
-    @InputImport(name="operationName")
+    @Import(name="operationName")
       private final @Nullable Output<String> operationName;
 
     public Output<String> getOperationName() {
@@ -89,7 +89,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * and value is either `Error`, `Empty` (built-in models) or `aws.apigateway.Model`'s `name`.
      * 
      */
-    @InputImport(name="requestModels")
+    @Import(name="requestModels")
       private final @Nullable Output<Map<String,String>> requestModels;
 
     public Output<Map<String,String>> getRequestModels() {
@@ -101,7 +101,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * For example: `request_parameters = {"method.request.header.X-Some-Header" = true "method.request.querystring.some-query-param" = true}` would define that the header `X-Some-Header` and the query string `some-query-param` must be provided in the request.
      * 
      */
-    @InputImport(name="requestParameters")
+    @Import(name="requestParameters")
       private final @Nullable Output<Map<String,Boolean>> requestParameters;
 
     public Output<Map<String,Boolean>> getRequestParameters() {
@@ -112,7 +112,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of a `aws.apigateway.RequestValidator`
      * 
      */
-    @InputImport(name="requestValidatorId")
+    @Import(name="requestValidatorId")
       private final @Nullable Output<String> requestValidatorId;
 
     public Output<String> getRequestValidatorId() {
@@ -123,7 +123,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * The API resource ID
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -134,7 +134,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the associated REST API
      * 
      */
-    @InputImport(name="restApi", required=true)
+    @Import(name="restApi", required=true)
       private final Output<String> restApi;
 
     public Output<String> getRestApi() {

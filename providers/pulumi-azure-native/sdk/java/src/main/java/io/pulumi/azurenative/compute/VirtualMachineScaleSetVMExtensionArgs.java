@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.compute.inputs.VirtualMachineExtensionInstanceViewArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
      */
-    @InputImport(name="autoUpgradeMinorVersion")
+    @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
     public Output<Boolean> getAutoUpgradeMinorVersion() {
@@ -32,7 +32,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
      * 
      */
-    @InputImport(name="enableAutomaticUpgrade")
+    @Import(name="enableAutomaticUpgrade")
       private final @Nullable Output<Boolean> enableAutomaticUpgrade;
 
     public Output<Boolean> getEnableAutomaticUpgrade() {
@@ -43,7 +43,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * How the extension handler should be forced to update even if the extension configuration has not changed.
      * 
      */
-    @InputImport(name="forceUpdateTag")
+    @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
 
     public Output<String> getForceUpdateTag() {
@@ -54,7 +54,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * The instance ID of the virtual machine.
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -65,7 +65,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * The virtual machine extension instance view.
      * 
      */
-    @InputImport(name="instanceView")
+    @Import(name="instanceView")
       private final @Nullable Output<VirtualMachineExtensionInstanceViewArgs> instanceView;
 
     public Output<VirtualMachineExtensionInstanceViewArgs> getInstanceView() {
@@ -76,7 +76,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
      * 
      */
-    @InputImport(name="protectedSettings")
+    @Import(name="protectedSettings")
       private final @Nullable Output<Object> protectedSettings;
 
     public Output<Object> getProtectedSettings() {
@@ -87,7 +87,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * The name of the extension handler publisher.
      * 
      */
-    @InputImport(name="publisher")
+    @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
     public Output<String> getPublisher() {
@@ -98,7 +98,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -109,7 +109,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * Json formatted public settings for the extension.
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable Output<Object> settings;
 
     public Output<Object> getSettings() {
@@ -120,7 +120,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * Specifies the type of the extension; an example is "CustomScriptExtension".
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -131,7 +131,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * Specifies the version of the script handler.
      * 
      */
-    @InputImport(name="typeHandlerVersion")
+    @Import(name="typeHandlerVersion")
       private final @Nullable Output<String> typeHandlerVersion;
 
     public Output<String> getTypeHandlerVersion() {
@@ -142,7 +142,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * The name of the virtual machine extension.
      * 
      */
-    @InputImport(name="vmExtensionName")
+    @Import(name="vmExtensionName")
       private final @Nullable Output<String> vmExtensionName;
 
     public Output<String> getVmExtensionName() {
@@ -153,7 +153,7 @@ public final class VirtualMachineScaleSetVMExtensionArgs extends io.pulumi.resou
      * The name of the VM scale set.
      * 
      */
-    @InputImport(name="vmScaleSetName", required=true)
+    @Import(name="vmScaleSetName", required=true)
       private final Output<String> vmScaleSetName;
 
     public Output<String> getVmScaleSetName() {

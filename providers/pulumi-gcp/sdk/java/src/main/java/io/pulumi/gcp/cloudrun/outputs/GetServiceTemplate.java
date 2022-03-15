@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateMetadata;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpec;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceTemplate {
     private final List<GetServiceTemplateMetadata> metadatas;
     private final List<GetServiceTemplateSpec> specs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceTemplate(
-        @OutputCustomType.Parameter("metadatas") List<GetServiceTemplateMetadata> metadatas,
-        @OutputCustomType.Parameter("specs") List<GetServiceTemplateSpec> specs) {
+        @CustomType.Parameter("metadatas") List<GetServiceTemplateMetadata> metadatas,
+        @CustomType.Parameter("specs") List<GetServiceTemplateSpec> specs) {
         this.metadatas = metadatas;
         this.specs = specs;
     }

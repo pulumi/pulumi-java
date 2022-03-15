@@ -3,18 +3,18 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceGroupManagerStatusVersionTarget {
     private final @Nullable Boolean isReached;
 
-    @OutputCustomType.Constructor
-    private InstanceGroupManagerStatusVersionTarget(@OutputCustomType.Parameter("isReached") @Nullable Boolean isReached) {
+    @CustomType.Constructor
+    private InstanceGroupManagerStatusVersionTarget(@CustomType.Parameter("isReached") @Nullable Boolean isReached) {
         this.isReached = isReached;
     }
 

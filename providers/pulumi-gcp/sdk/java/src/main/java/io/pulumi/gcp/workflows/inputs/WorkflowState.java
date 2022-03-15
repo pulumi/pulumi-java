@@ -4,7 +4,7 @@
 package io.pulumi.gcp.workflows.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * fractional digits.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -31,7 +31,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * Description of the workflow provided by the user. Must be at most 1000 unicode characters long.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * A set of key/value label pairs to assign to this Workflow.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -53,7 +53,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * Name of the Workflow.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * specified prefix. If this and name are unspecified, a random value is chosen for the name.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -77,7 +77,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -88,7 +88,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * The region of the workflow.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -99,7 +99,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * The revision of the workflow. A new one is generated if the service account or source contents is changed.
      * 
      */
-    @InputImport(name="revisionId")
+    @Import(name="revisionId")
       private final @Nullable Output<String> revisionId;
 
     public Output<String> getRevisionId() {
@@ -112,7 +112,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * Format: projects/{project}/serviceAccounts/{account}.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
@@ -123,7 +123,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * Workflow code to be executed. The size limit is 32KB.
      * 
      */
-    @InputImport(name="sourceContents")
+    @Import(name="sourceContents")
       private final @Nullable Output<String> sourceContents;
 
     public Output<String> getSourceContents() {
@@ -134,7 +134,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * State of the workflow deployment.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -146,7 +146,7 @@ public final class WorkflowState extends io.pulumi.resources.ResourceArgs {
      * nine fractional digits.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesAssignmentGroupLabel;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesAssignmentOsType;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GuestPoliciesAssignment {
     /**
      * Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups,
@@ -51,13 +51,13 @@ public final class GuestPoliciesAssignment {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestPoliciesAssignment(
-        @OutputCustomType.Parameter("groupLabels") @Nullable List<GuestPoliciesAssignmentGroupLabel> groupLabels,
-        @OutputCustomType.Parameter("instanceNamePrefixes") @Nullable List<String> instanceNamePrefixes,
-        @OutputCustomType.Parameter("instances") @Nullable List<String> instances,
-        @OutputCustomType.Parameter("osTypes") @Nullable List<GuestPoliciesAssignmentOsType> osTypes,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("groupLabels") @Nullable List<GuestPoliciesAssignmentGroupLabel> groupLabels,
+        @CustomType.Parameter("instanceNamePrefixes") @Nullable List<String> instanceNamePrefixes,
+        @CustomType.Parameter("instances") @Nullable List<String> instances,
+        @CustomType.Parameter("osTypes") @Nullable List<GuestPoliciesAssignmentOsType> osTypes,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.groupLabels = groupLabels;
         this.instanceNamePrefixes = instanceNamePrefixes;
         this.instances = instances;

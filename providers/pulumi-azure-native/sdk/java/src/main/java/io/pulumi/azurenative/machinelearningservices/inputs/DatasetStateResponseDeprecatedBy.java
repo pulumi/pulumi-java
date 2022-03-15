@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DatasetStateResponseDeprecatedBy extends io.pulumi.resources.
      * Unique Dataset identifier.
      * 
      */
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final String datasetId;
 
     public String getDatasetId() {
@@ -33,7 +33,7 @@ public final class DatasetStateResponseDeprecatedBy extends io.pulumi.resources.
      * Definition Version
      * 
      */
-    @InputImport(name="definitionVersion")
+    @Import(name="definitionVersion")
       private final @Nullable String definitionVersion;
 
     public Optional<String> getDefinitionVersion() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionDeploymentFileArgs;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionDeploymentZipArgs;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class StandardAppVersionDeploymentArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="files")
+    @Import(name="files")
       private final @Nullable Output<List<StandardAppVersionDeploymentFileArgs>> files;
 
     public Output<List<StandardAppVersionDeploymentFileArgs>> getFiles() {
@@ -34,7 +34,7 @@ public final class StandardAppVersionDeploymentArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="zip")
+    @Import(name="zip")
       private final @Nullable Output<StandardAppVersionDeploymentZipArgs> zip;
 
     public Output<StandardAppVersionDeploymentZipArgs> getZip() {

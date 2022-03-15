@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExternalMetricStatus {
     /**
      * currentAverageValue is the current value of metric averaged over autoscaled pods.
@@ -33,12 +33,12 @@ public final class ExternalMetricStatus {
      */
     private final @Nullable LabelSelector metricSelector;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExternalMetricStatus(
-        @OutputCustomType.Parameter("currentAverageValue") @Nullable String currentAverageValue,
-        @OutputCustomType.Parameter("currentValue") String currentValue,
-        @OutputCustomType.Parameter("metricName") String metricName,
-        @OutputCustomType.Parameter("metricSelector") @Nullable LabelSelector metricSelector) {
+        @CustomType.Parameter("currentAverageValue") @Nullable String currentAverageValue,
+        @CustomType.Parameter("currentValue") String currentValue,
+        @CustomType.Parameter("metricName") String metricName,
+        @CustomType.Parameter("metricSelector") @Nullable LabelSelector metricSelector) {
         this.currentAverageValue = currentAverageValue;
         this.currentValue = currentValue;
         this.metricName = metricName;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class IncidentOwnerInfoResponse extends io.pulumi.resources.InvokeA
      * The name of the user the incident is assigned to.
      * 
      */
-    @InputImport(name="assignedTo")
+    @Import(name="assignedTo")
       private final @Nullable String assignedTo;
 
     public Optional<String> getAssignedTo() {
@@ -33,7 +33,7 @@ public final class IncidentOwnerInfoResponse extends io.pulumi.resources.InvokeA
      * The email of the user the incident is assigned to.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable String email;
 
     public Optional<String> getEmail() {
@@ -44,7 +44,7 @@ public final class IncidentOwnerInfoResponse extends io.pulumi.resources.InvokeA
      * The object id of the user the incident is assigned to.
      * 
      */
-    @InputImport(name="objectId")
+    @Import(name="objectId")
       private final @Nullable String objectId;
 
     public Optional<String> getObjectId() {
@@ -55,7 +55,7 @@ public final class IncidentOwnerInfoResponse extends io.pulumi.resources.InvokeA
      * The user principal name of the user the incident is assigned to.
      * 
      */
-    @InputImport(name="userPrincipalName")
+    @Import(name="userPrincipalName")
       private final @Nullable String userPrincipalName;
 
     public Optional<String> getUserPrincipalName() {

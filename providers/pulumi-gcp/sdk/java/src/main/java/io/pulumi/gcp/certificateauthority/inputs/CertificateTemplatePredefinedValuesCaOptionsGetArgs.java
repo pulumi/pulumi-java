@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CertificateTemplatePredefinedValuesCaOptionsGetArgs extends i
      * Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
      * 
      */
-    @InputImport(name="isCa")
+    @Import(name="isCa")
       private final @Nullable Output<Boolean> isCa;
 
     public Output<Boolean> getIsCa() {
@@ -30,7 +30,7 @@ public final class CertificateTemplatePredefinedValuesCaOptionsGetArgs extends i
      * Optional. Refers to the path length restriction X.509 extension. For a CA certificate, this value describes the depth of subordinate CA certificates that are allowed. If this value is less than 0, the request will fail. If this value is missing, the max path length will be omitted from the CA certificate.
      * 
      */
-    @InputImport(name="maxIssuerPathLength")
+    @Import(name="maxIssuerPathLength")
       private final @Nullable Output<Integer> maxIssuerPathLength;
 
     public Output<Integer> getMaxIssuerPathLength() {

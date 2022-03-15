@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CisBenchmarkResponse {
     /**
      * The profile level of this CIS benchmark check.
@@ -21,10 +21,10 @@ public final class CisBenchmarkResponse {
      */
     private final String severity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CisBenchmarkResponse(
-        @OutputCustomType.Parameter("profileLevel") Integer profileLevel,
-        @OutputCustomType.Parameter("severity") String severity) {
+        @CustomType.Parameter("profileLevel") Integer profileLevel,
+        @CustomType.Parameter("severity") String severity) {
         this.profileLevel = profileLevel;
         this.severity = severity;
     }

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LongTermSchedulePolicyResponse {
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
@@ -16,8 +16,8 @@ public final class LongTermSchedulePolicyResponse {
      */
     private final String schedulePolicyType;
 
-    @OutputCustomType.Constructor
-    private LongTermSchedulePolicyResponse(@OutputCustomType.Parameter("schedulePolicyType") String schedulePolicyType) {
+    @CustomType.Constructor
+    private LongTermSchedulePolicyResponse(@CustomType.Parameter("schedulePolicyType") String schedulePolicyType) {
         this.schedulePolicyType = schedulePolicyType;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
      * Name of a VPN gateway.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -31,7 +31,7 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
      * IP address of the VPN gateway.
      * 
      */
-    @InputImport(name="ipAddress", required=true)
+    @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
     public String getIpAddress() {
@@ -42,7 +42,7 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
      * URI of a Compute Engine network where the VPN gateway is configured.
      * 
      */
-    @InputImport(name="networkUri", required=true)
+    @Import(name="networkUri", required=true)
       private final String networkUri;
 
     public String getNetworkUri() {
@@ -53,7 +53,7 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
      * Name of a Google Cloud region where this VPN gateway is configured.
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final String region;
 
     public String getRegion() {
@@ -64,7 +64,7 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
      * URI of a VPN gateway.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {
@@ -75,7 +75,7 @@ public final class VpnGatewayInfoResponse extends io.pulumi.resources.InvokeArgs
      * A VPN tunnel that is associated with this VPN gateway. There may be multiple VPN tunnels configured on a VPN gateway, and only the one relevant to the test is displayed.
      * 
      */
-    @InputImport(name="vpnTunnelUri", required=true)
+    @Import(name="vpnTunnelUri", required=true)
       private final String vpnTunnelUri;
 
     public String getVpnTunnelUri() {

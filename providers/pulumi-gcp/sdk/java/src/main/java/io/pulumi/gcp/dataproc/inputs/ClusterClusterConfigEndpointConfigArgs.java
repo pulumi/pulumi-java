@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -22,14 +22,14 @@ public final class ClusterClusterConfigEndpointConfigArgs extends io.pulumi.reso
      * on the cluster from external sources (aka Component Gateway). Defaults to false.
      * 
      */
-    @InputImport(name="enableHttpPortAccess", required=true)
+    @Import(name="enableHttpPortAccess", required=true)
       private final Output<Boolean> enableHttpPortAccess;
 
     public Output<Boolean> getEnableHttpPortAccess() {
         return this.enableHttpPortAccess;
     }
 
-    @InputImport(name="httpPorts")
+    @Import(name="httpPorts")
       private final @Nullable Output<Map<String,Object>> httpPorts;
 
     public Output<Map<String,Object>> getHttpPorts() {

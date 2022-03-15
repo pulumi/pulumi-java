@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.elastic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ElasticCloudUserResponse extends io.pulumi.resources.InvokeAr
      * Elastic cloud default dashboard sso URL of the Elastic user account.
      * 
      */
-    @InputImport(name="elasticCloudSsoDefaultUrl", required=true)
+    @Import(name="elasticCloudSsoDefaultUrl", required=true)
       private final String elasticCloudSsoDefaultUrl;
 
     public String getElasticCloudSsoDefaultUrl() {
@@ -31,7 +31,7 @@ public final class ElasticCloudUserResponse extends io.pulumi.resources.InvokeAr
      * Email of the Elastic User Account.
      * 
      */
-    @InputImport(name="emailAddress", required=true)
+    @Import(name="emailAddress", required=true)
       private final String emailAddress;
 
     public String getEmailAddress() {
@@ -42,7 +42,7 @@ public final class ElasticCloudUserResponse extends io.pulumi.resources.InvokeAr
      * User Id of the elastic account of the User.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {

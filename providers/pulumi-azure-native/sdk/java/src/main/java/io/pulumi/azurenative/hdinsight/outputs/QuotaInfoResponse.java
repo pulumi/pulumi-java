@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class QuotaInfoResponse {
     /**
      * The cores used by the cluster.
@@ -17,8 +17,8 @@ public final class QuotaInfoResponse {
      */
     private final @Nullable Integer coresUsed;
 
-    @OutputCustomType.Constructor
-    private QuotaInfoResponse(@OutputCustomType.Parameter("coresUsed") @Nullable Integer coresUsed) {
+    @CustomType.Constructor
+    private QuotaInfoResponse(@CustomType.Parameter("coresUsed") @Nullable Integer coresUsed) {
         this.coresUsed = coresUsed;
     }
 

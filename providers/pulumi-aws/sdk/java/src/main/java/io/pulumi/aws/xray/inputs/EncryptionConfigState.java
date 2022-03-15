@@ -4,7 +4,7 @@
 package io.pulumi.aws.xray.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class EncryptionConfigState extends io.pulumi.resources.ResourceArg
      * An AWS KMS customer master key (CMK) ARN.
      * 
      */
-    @InputImport(name="keyId")
+    @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
     public Output<String> getKeyId() {
@@ -29,7 +29,7 @@ public final class EncryptionConfigState extends io.pulumi.resources.ResourceArg
      * The type of encryption. Set to `KMS` to use your own key for encryption. Set to `NONE` for default encryption.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

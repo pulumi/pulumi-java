@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.LauncherActivityIntentResponse;
 import io.pulumi.googlenative.testing_v1.inputs.StartActivityIntentResponse;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class RoboStartingIntentResponse extends io.pulumi.resources.Invoke
      * An intent that starts the main launcher activity.
      * 
      */
-    @InputImport(name="launcherActivity", required=true)
+    @Import(name="launcherActivity", required=true)
       private final LauncherActivityIntentResponse launcherActivity;
 
     public LauncherActivityIntentResponse getLauncherActivity() {
@@ -33,7 +33,7 @@ public final class RoboStartingIntentResponse extends io.pulumi.resources.Invoke
      * An intent that starts an activity with specific details.
      * 
      */
-    @InputImport(name="startActivity", required=true)
+    @Import(name="startActivity", required=true)
       private final StartActivityIntentResponse startActivity;
 
     public StartActivityIntentResponse getStartActivity() {
@@ -44,7 +44,7 @@ public final class RoboStartingIntentResponse extends io.pulumi.resources.Invoke
      * Timeout in seconds for each intent.
      * 
      */
-    @InputImport(name="timeout", required=true)
+    @Import(name="timeout", required=true)
       private final String timeout;
 
     public String getTimeout() {

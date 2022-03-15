@@ -9,7 +9,7 @@ import io.pulumi.azurenative.operationalinsights.inputs.IdentityArgs;
 import io.pulumi.azurenative.operationalinsights.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The cluster's billing type.
      * 
      */
-    @InputImport(name="billingType")
+    @Import(name="billingType")
       private final @Nullable Output<Either<String,BillingType>> billingType;
 
     public Output<Either<String,BillingType>> getBillingType() {
@@ -36,7 +36,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Log Analytics cluster.
      * 
      */
-    @InputImport(name="clusterName")
+    @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -47,7 +47,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The identity of the resource.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
@@ -58,7 +58,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.
      * 
      */
-    @InputImport(name="isAvailabilityZonesEnabled")
+    @Import(name="isAvailabilityZonesEnabled")
       private final @Nullable Output<Boolean> isAvailabilityZonesEnabled;
 
     public Output<Boolean> getIsAvailabilityZonesEnabled() {
@@ -69,7 +69,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Configures whether cluster will use double encryption. This Property can not be modified after cluster creation. Default value is 'true'
      * 
      */
-    @InputImport(name="isDoubleEncryptionEnabled")
+    @Import(name="isDoubleEncryptionEnabled")
       private final @Nullable Output<Boolean> isDoubleEncryptionEnabled;
 
     public Output<Boolean> getIsDoubleEncryptionEnabled() {
@@ -80,7 +80,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The associated key properties.
      * 
      */
-    @InputImport(name="keyVaultProperties")
+    @Import(name="keyVaultProperties")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
@@ -91,7 +91,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -102,7 +102,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -113,7 +113,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The sku properties.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<ClusterSkuArgs> sku;
 
     public Output<ClusterSkuArgs> getSku() {
@@ -124,7 +124,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

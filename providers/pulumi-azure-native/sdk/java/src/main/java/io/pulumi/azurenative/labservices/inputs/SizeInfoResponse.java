@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class SizeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Represents the actual compute size, e.g. Standard_A2_v2.
      * 
      */
-    @InputImport(name="computeSize")
+    @Import(name="computeSize")
       private final @Nullable String computeSize;
 
     public Optional<String> getComputeSize() {
@@ -35,7 +35,7 @@ public final class SizeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The amount of memory available (in GB).
      * 
      */
-    @InputImport(name="memory")
+    @Import(name="memory")
       private final @Nullable Double memory;
 
     public Optional<Double> getMemory() {
@@ -46,7 +46,7 @@ public final class SizeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The number of cores a VM of this size has.
      * 
      */
-    @InputImport(name="numberOfCores")
+    @Import(name="numberOfCores")
       private final @Nullable Integer numberOfCores;
 
     public Optional<Integer> getNumberOfCores() {
@@ -57,7 +57,7 @@ public final class SizeInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The pay-as-you-go price per hour this size will cost. It does not include discounts and may not reflect the actual price the size will cost.
      * 
      */
-    @InputImport(name="price")
+    @Import(name="price")
       private final @Nullable Double price;
 
     public Optional<Double> getPrice() {

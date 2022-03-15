@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcce
      * The number of the accelerator cards of this type exposed to this instance.
      * 
      */
-    @InputImport(name="acceleratorCount")
+    @Import(name="acceleratorCount")
       private final @Nullable Output<Integer> acceleratorCount;
 
     public Output<Integer> getAcceleratorCount() {
@@ -30,7 +30,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMasterConfigAcce
      * Full URL, partial URI, or short name of the accelerator type resource to expose to this instance. See (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the accelerator type resource, for example, `nvidia-tesla-k80`.
      * 
      */
-    @InputImport(name="acceleratorType")
+    @Import(name="acceleratorType")
       private final @Nullable Output<String> acceleratorType;
 
     public Output<String> getAcceleratorType() {

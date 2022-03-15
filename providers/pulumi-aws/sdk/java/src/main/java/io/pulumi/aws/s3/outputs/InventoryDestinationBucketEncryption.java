@@ -5,12 +5,12 @@ package io.pulumi.aws.s3.outputs;
 
 import io.pulumi.aws.s3.outputs.InventoryDestinationBucketEncryptionSseKms;
 import io.pulumi.aws.s3.outputs.InventoryDestinationBucketEncryptionSseS3;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InventoryDestinationBucketEncryption {
     /**
      * Specifies to use server-side encryption with AWS KMS-managed keys to encrypt the inventory file (documented below).
@@ -23,10 +23,10 @@ public final class InventoryDestinationBucketEncryption {
      */
     private final @Nullable InventoryDestinationBucketEncryptionSseS3 sseS3;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InventoryDestinationBucketEncryption(
-        @OutputCustomType.Parameter("sseKms") @Nullable InventoryDestinationBucketEncryptionSseKms sseKms,
-        @OutputCustomType.Parameter("sseS3") @Nullable InventoryDestinationBucketEncryptionSseS3 sseS3) {
+        @CustomType.Parameter("sseKms") @Nullable InventoryDestinationBucketEncryptionSseKms sseKms,
+        @CustomType.Parameter("sseS3") @Nullable InventoryDestinationBucketEncryptionSseS3 sseS3) {
         this.sseKms = sseKms;
         this.sseS3 = sseS3;
     }

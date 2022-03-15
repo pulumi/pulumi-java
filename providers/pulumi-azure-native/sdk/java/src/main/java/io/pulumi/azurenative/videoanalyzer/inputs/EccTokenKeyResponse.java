@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class EccTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * Elliptical curve algorithm to be used: ES256, ES384 or ES512.
      * 
      */
-    @InputImport(name="alg", required=true)
+    @Import(name="alg", required=true)
       private final String alg;
 
     public String getAlg() {
@@ -31,7 +31,7 @@ public final class EccTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * JWT token key id. Validation keys are looked up based on the key id present on the JWT token header.
      * 
      */
-    @InputImport(name="kid", required=true)
+    @Import(name="kid", required=true)
       private final String kid;
 
     public String getKid() {
@@ -43,7 +43,7 @@ public final class EccTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is '#Microsoft.VideoAnalyzer.EccTokenKey'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -54,7 +54,7 @@ public final class EccTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * X coordinate.
      * 
      */
-    @InputImport(name="x", required=true)
+    @Import(name="x", required=true)
       private final String x;
 
     public String getX() {
@@ -65,7 +65,7 @@ public final class EccTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * Y coordinate.
      * 
      */
-    @InputImport(name="y", required=true)
+    @Import(name="y", required=true)
       private final String y;
 
     public String getY() {

@@ -19,7 +19,7 @@ import io.pulumi.aws.cognito.outputs.UserPoolUserPoolAddOns;
 import io.pulumi.aws.cognito.outputs.UserPoolUsernameConfiguration;
 import io.pulumi.aws.cognito.outputs.UserPoolVerificationMessageTemplate;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -47,7 +47,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.
      * 
      */
-    @OutputExport(name="accountRecoverySetting", type=UserPoolAccountRecoverySetting.class, parameters={})
+    @Export(name="accountRecoverySetting", type=UserPoolAccountRecoverySetting.class, parameters={})
     private Output</* @Nullable */ UserPoolAccountRecoverySetting> accountRecoverySetting;
 
     /**
@@ -61,7 +61,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Configuration block for creating a new user profile. Detailed below.
      * 
      */
-    @OutputExport(name="adminCreateUserConfig", type=UserPoolAdminCreateUserConfig.class, parameters={})
+    @Export(name="adminCreateUserConfig", type=UserPoolAdminCreateUserConfig.class, parameters={})
     private Output<UserPoolAdminCreateUserConfig> adminCreateUserConfig;
 
     /**
@@ -75,7 +75,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Attributes supported as an alias for this user pool. Valid values: `phone_number`, `email`, or `preferred_username`. Conflicts with `username_attributes`.
      * 
      */
-    @OutputExport(name="aliasAttributes", type=List.class, parameters={String.class})
+    @Export(name="aliasAttributes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> aliasAttributes;
 
     /**
@@ -89,7 +89,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * ARN of the user pool.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -103,7 +103,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Attributes to be auto-verified. Valid values: `email`, `phone_number`.
      * 
      */
-    @OutputExport(name="autoVerifiedAttributes", type=List.class, parameters={String.class})
+    @Export(name="autoVerifiedAttributes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> autoVerifiedAttributes;
 
     /**
@@ -117,7 +117,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Date the user pool was created.
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -131,7 +131,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * A custom domain name that you provide to Amazon Cognito. This parameter applies only if you use a custom domain to host the sign-up and sign-in pages for your application. For example: `auth.example.com`.
      * 
      */
-    @OutputExport(name="customDomain", type=String.class, parameters={})
+    @Export(name="customDomain", type=String.class, parameters={})
     private Output<String> customDomain;
 
     /**
@@ -145,7 +145,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Configuration block for the user pool's device tracking. Detailed below.
      * 
      */
-    @OutputExport(name="deviceConfiguration", type=UserPoolDeviceConfiguration.class, parameters={})
+    @Export(name="deviceConfiguration", type=UserPoolDeviceConfiguration.class, parameters={})
     private Output</* @Nullable */ UserPoolDeviceConfiguration> deviceConfiguration;
 
     /**
@@ -159,7 +159,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Holds the domain prefix if the user pool has a domain associated with it.
      * 
      */
-    @OutputExport(name="domain", type=String.class, parameters={})
+    @Export(name="domain", type=String.class, parameters={})
     private Output<String> domain;
 
     /**
@@ -173,7 +173,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Configuration block for configuring email. Detailed below.
      * 
      */
-    @OutputExport(name="emailConfiguration", type=UserPoolEmailConfiguration.class, parameters={})
+    @Export(name="emailConfiguration", type=UserPoolEmailConfiguration.class, parameters={})
     private Output</* @Nullable */ UserPoolEmailConfiguration> emailConfiguration;
 
     /**
@@ -187,7 +187,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * String representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
      * 
      */
-    @OutputExport(name="emailVerificationMessage", type=String.class, parameters={})
+    @Export(name="emailVerificationMessage", type=String.class, parameters={})
     private Output<String> emailVerificationMessage;
 
     /**
@@ -201,7 +201,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * String representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
      * 
      */
-    @OutputExport(name="emailVerificationSubject", type=String.class, parameters={})
+    @Export(name="emailVerificationSubject", type=String.class, parameters={})
     private Output<String> emailVerificationSubject;
 
     /**
@@ -215,7 +215,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Endpoint name of the user pool. Example format: `cognito-idp.REGION.amazonaws.com/xxxx_yyyyy`
      * 
      */
-    @OutputExport(name="endpoint", type=String.class, parameters={})
+    @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
@@ -229,7 +229,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * A number estimating the size of the user pool.
      * 
      */
-    @OutputExport(name="estimatedNumberOfUsers", type=Integer.class, parameters={})
+    @Export(name="estimatedNumberOfUsers", type=Integer.class, parameters={})
     private Output<Integer> estimatedNumberOfUsers;
 
     /**
@@ -243,7 +243,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Configuration block for the AWS Lambda triggers associated with the user pool. Detailed below.
      * 
      */
-    @OutputExport(name="lambdaConfig", type=UserPoolLambdaConfig.class, parameters={})
+    @Export(name="lambdaConfig", type=UserPoolLambdaConfig.class, parameters={})
     private Output</* @Nullable */ UserPoolLambdaConfig> lambdaConfig;
 
     /**
@@ -257,7 +257,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Date the user pool was last modified.
      * 
      */
-    @OutputExport(name="lastModifiedDate", type=String.class, parameters={})
+    @Export(name="lastModifiedDate", type=String.class, parameters={})
     private Output<String> lastModifiedDate;
 
     /**
@@ -271,7 +271,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values are `OFF` (MFA Tokens are not required), `ON` (MFA is required for all users to sign in; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured), or `OPTIONAL` (MFA Will be required only for individual users who have MFA Enabled; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured).
      * 
      */
-    @OutputExport(name="mfaConfiguration", type=String.class, parameters={})
+    @Export(name="mfaConfiguration", type=String.class, parameters={})
     private Output</* @Nullable */ String> mfaConfiguration;
 
     /**
@@ -285,7 +285,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Name of the attribute.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -299,7 +299,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Configuration blocked for information about the user pool password policy. Detailed below.
      * 
      */
-    @OutputExport(name="passwordPolicy", type=UserPoolPasswordPolicy.class, parameters={})
+    @Export(name="passwordPolicy", type=UserPoolPasswordPolicy.class, parameters={})
     private Output<UserPoolPasswordPolicy> passwordPolicy;
 
     /**
@@ -313,7 +313,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.
      * 
      */
-    @OutputExport(name="schemas", type=List.class, parameters={UserPoolSchema.class})
+    @Export(name="schemas", type=List.class, parameters={UserPoolSchema.class})
     private Output</* @Nullable */ List<UserPoolSchema>> schemas;
 
     /**
@@ -327,7 +327,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * String representing the SMS authentication message. The Message must contain the `{####}` placeholder, which will be replaced with the code.
      * 
      */
-    @OutputExport(name="smsAuthenticationMessage", type=String.class, parameters={})
+    @Export(name="smsAuthenticationMessage", type=String.class, parameters={})
     private Output</* @Nullable */ String> smsAuthenticationMessage;
 
     /**
@@ -341,7 +341,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection.
      * 
      */
-    @OutputExport(name="smsConfiguration", type=UserPoolSmsConfiguration.class, parameters={})
+    @Export(name="smsConfiguration", type=UserPoolSmsConfiguration.class, parameters={})
     private Output<UserPoolSmsConfiguration> smsConfiguration;
 
     /**
@@ -355,7 +355,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * String representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
      * 
      */
-    @OutputExport(name="smsVerificationMessage", type=String.class, parameters={})
+    @Export(name="smsVerificationMessage", type=String.class, parameters={})
     private Output<String> smsVerificationMessage;
 
     /**
@@ -369,7 +369,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
      * 
      */
-    @OutputExport(name="softwareTokenMfaConfiguration", type=UserPoolSoftwareTokenMfaConfiguration.class, parameters={})
+    @Export(name="softwareTokenMfaConfiguration", type=UserPoolSoftwareTokenMfaConfiguration.class, parameters={})
     private Output</* @Nullable */ UserPoolSoftwareTokenMfaConfiguration> softwareTokenMfaConfiguration;
 
     /**
@@ -383,7 +383,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Map of tags to assign to the User Pool. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -397,7 +397,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -411,7 +411,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.
      * 
      */
-    @OutputExport(name="userPoolAddOns", type=UserPoolUserPoolAddOns.class, parameters={})
+    @Export(name="userPoolAddOns", type=UserPoolUserPoolAddOns.class, parameters={})
     private Output</* @Nullable */ UserPoolUserPoolAddOns> userPoolAddOns;
 
     /**
@@ -425,7 +425,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
      * 
      */
-    @OutputExport(name="usernameAttributes", type=List.class, parameters={String.class})
+    @Export(name="usernameAttributes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> usernameAttributes;
 
     /**
@@ -439,7 +439,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Configuration block for username configuration. Detailed below.
      * 
      */
-    @OutputExport(name="usernameConfiguration", type=UserPoolUsernameConfiguration.class, parameters={})
+    @Export(name="usernameConfiguration", type=UserPoolUsernameConfiguration.class, parameters={})
     private Output</* @Nullable */ UserPoolUsernameConfiguration> usernameConfiguration;
 
     /**
@@ -453,7 +453,7 @@ public class UserPool extends io.pulumi.resources.CustomResource {
      * Configuration block for verification message templates. Detailed below.
      * 
      */
-    @OutputExport(name="verificationMessageTemplate", type=UserPoolVerificationMessageTemplate.class, parameters={})
+    @Export(name="verificationMessageTemplate", type=UserPoolVerificationMessageTemplate.class, parameters={})
     private Output<UserPoolVerificationMessageTemplate> verificationMessageTemplate;
 
     /**

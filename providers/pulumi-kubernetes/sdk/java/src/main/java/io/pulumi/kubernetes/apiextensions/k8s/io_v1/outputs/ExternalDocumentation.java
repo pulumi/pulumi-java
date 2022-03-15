@@ -3,21 +3,21 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExternalDocumentation {
     private final @Nullable String description;
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExternalDocumentation(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.description = description;
         this.url = url;
     }

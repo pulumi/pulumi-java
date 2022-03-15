@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.resiliencehub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AppTagMap {
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppTagMap() {
     }
 

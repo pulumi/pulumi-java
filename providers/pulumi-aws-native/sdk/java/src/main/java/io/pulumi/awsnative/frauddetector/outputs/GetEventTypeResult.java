@@ -7,14 +7,14 @@ import io.pulumi.awsnative.frauddetector.outputs.EventTypeEntityType;
 import io.pulumi.awsnative.frauddetector.outputs.EventTypeEventVariable;
 import io.pulumi.awsnative.frauddetector.outputs.EventTypeLabel;
 import io.pulumi.awsnative.frauddetector.outputs.EventTypeTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEventTypeResult {
     /**
      * The ARN of the event type.
@@ -45,16 +45,16 @@ public final class GetEventTypeResult {
      */
     private final @Nullable List<EventTypeTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEventTypeResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("entityTypes") @Nullable List<EventTypeEntityType> entityTypes,
-        @OutputCustomType.Parameter("eventVariables") @Nullable List<EventTypeEventVariable> eventVariables,
-        @OutputCustomType.Parameter("labels") @Nullable List<EventTypeLabel> labels,
-        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
-        @OutputCustomType.Parameter("tags") @Nullable List<EventTypeTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("entityTypes") @Nullable List<EventTypeEntityType> entityTypes,
+        @CustomType.Parameter("eventVariables") @Nullable List<EventTypeEventVariable> eventVariables,
+        @CustomType.Parameter("labels") @Nullable List<EventTypeLabel> labels,
+        @CustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @CustomType.Parameter("tags") @Nullable List<EventTypeTag> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.description = description;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData extends
      * If the multi cloud account is of membership type organization, list of accounts excluded from offering
      * 
      */
-    @InputImport(name="excludedAccountIds")
+    @Import(name="excludedAccountIds")
       private final @Nullable List<String> excludedAccountIds;
 
     public List<String> getExcludedAccountIds() {
@@ -34,7 +34,7 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData extends
      * The multi cloud account's membership type in the organization
      * 
      */
-    @InputImport(name="organizationMembershipType")
+    @Import(name="organizationMembershipType")
       private final @Nullable String organizationMembershipType;
 
     public Optional<String> getOrganizationMembershipType() {
@@ -45,7 +45,7 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData extends
      * If the multi cloud account is not of membership type organization, this will be the ID of the account's parent
      * 
      */
-    @InputImport(name="parentHierarchyId")
+    @Import(name="parentHierarchyId")
       private final @Nullable String parentHierarchyId;
 
     public Optional<String> getParentHierarchyId() {
@@ -56,7 +56,7 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData extends
      * If the multi cloud account is of membership type organization, this will be the name of the onboarding stackset
      * 
      */
-    @InputImport(name="stacksetName")
+    @Import(name="stacksetName")
       private final @Nullable String stacksetName;
 
     public Optional<String> getStacksetName() {

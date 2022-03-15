@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.InnerErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
      * Unique code for this error
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable String code;
 
     public Optional<String> getCode() {
@@ -37,7 +37,7 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
      * Additional related Errors
      * 
      */
-    @InputImport(name="details")
+    @Import(name="details")
       private final @Nullable List<UserFacingErrorResponse> details;
 
     public List<UserFacingErrorResponse> getDetails() {
@@ -48,7 +48,7 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
      * Inner Error
      * 
      */
-    @InputImport(name="innerError")
+    @Import(name="innerError")
       private final @Nullable InnerErrorResponse innerError;
 
     public Optional<InnerErrorResponse> getInnerError() {
@@ -59,7 +59,7 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
      * Whether the operation will be retryable or not
      * 
      */
-    @InputImport(name="isRetryable")
+    @Import(name="isRetryable")
       private final @Nullable Boolean isRetryable;
 
     public Optional<Boolean> getIsRetryable() {
@@ -70,14 +70,14 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
      * Whether the operation is due to a user error or service error
      * 
      */
-    @InputImport(name="isUserError")
+    @Import(name="isUserError")
       private final @Nullable Boolean isUserError;
 
     public Optional<Boolean> getIsUserError() {
         return this.isUserError == null ? Optional.empty() : Optional.ofNullable(this.isUserError);
     }
 
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
@@ -88,7 +88,7 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
      * Any key value pairs that can be injected inside error object
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -99,7 +99,7 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
      * RecommendedAction � localized.
      * 
      */
-    @InputImport(name="recommendedAction")
+    @Import(name="recommendedAction")
       private final @Nullable List<String> recommendedAction;
 
     public List<String> getRecommendedAction() {
@@ -110,7 +110,7 @@ public final class UserFacingErrorResponse extends io.pulumi.resources.InvokeArg
      * Target of the error.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable String target;
 
     public Optional<String> getTarget() {

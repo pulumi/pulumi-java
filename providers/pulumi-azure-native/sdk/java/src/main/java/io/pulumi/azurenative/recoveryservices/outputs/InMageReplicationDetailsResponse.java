@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.InMageProtectedDiskDetails
 import io.pulumi.azurenative.recoveryservices.outputs.InitialReplicationDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.OSDiskDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMNicDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InMageReplicationDetailsResponse {
     /**
      * The active location of the VM. If the VM is being protected from Azure, this field will take values from { Azure, OnPrem }. If the VM is being protected between two data-centers, this field will be OnPrem always.
@@ -213,46 +213,46 @@ public final class InMageReplicationDetailsResponse {
      */
     private final @Nullable String vmProtectionStateDescription;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InMageReplicationDetailsResponse(
-        @OutputCustomType.Parameter("activeSiteType") @Nullable String activeSiteType,
-        @OutputCustomType.Parameter("agentDetails") @Nullable InMageAgentDetailsResponse agentDetails,
-        @OutputCustomType.Parameter("azureStorageAccountId") @Nullable String azureStorageAccountId,
-        @OutputCustomType.Parameter("compressedDataRateInMB") @Nullable Double compressedDataRateInMB,
-        @OutputCustomType.Parameter("consistencyPoints") @Nullable Map<String,String> consistencyPoints,
-        @OutputCustomType.Parameter("datastores") @Nullable List<String> datastores,
-        @OutputCustomType.Parameter("discoveryType") @Nullable String discoveryType,
-        @OutputCustomType.Parameter("diskResized") @Nullable String diskResized,
-        @OutputCustomType.Parameter("infrastructureVmId") @Nullable String infrastructureVmId,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
-        @OutputCustomType.Parameter("lastRpoCalculatedTime") @Nullable String lastRpoCalculatedTime,
-        @OutputCustomType.Parameter("lastUpdateReceivedTime") @Nullable String lastUpdateReceivedTime,
-        @OutputCustomType.Parameter("masterTargetId") @Nullable String masterTargetId,
-        @OutputCustomType.Parameter("multiVmGroupId") @Nullable String multiVmGroupId,
-        @OutputCustomType.Parameter("multiVmGroupName") @Nullable String multiVmGroupName,
-        @OutputCustomType.Parameter("multiVmSyncStatus") @Nullable String multiVmSyncStatus,
-        @OutputCustomType.Parameter("osDetails") @Nullable OSDiskDetailsResponse osDetails,
-        @OutputCustomType.Parameter("osVersion") @Nullable String osVersion,
-        @OutputCustomType.Parameter("processServerId") @Nullable String processServerId,
-        @OutputCustomType.Parameter("protectedDisks") @Nullable List<InMageProtectedDiskDetailsResponse> protectedDisks,
-        @OutputCustomType.Parameter("protectionStage") @Nullable String protectionStage,
-        @OutputCustomType.Parameter("rebootAfterUpdateStatus") @Nullable String rebootAfterUpdateStatus,
-        @OutputCustomType.Parameter("replicaId") @Nullable String replicaId,
-        @OutputCustomType.Parameter("resyncDetails") @Nullable InitialReplicationDetailsResponse resyncDetails,
-        @OutputCustomType.Parameter("retentionWindowEnd") @Nullable String retentionWindowEnd,
-        @OutputCustomType.Parameter("retentionWindowStart") @Nullable String retentionWindowStart,
-        @OutputCustomType.Parameter("rpoInSeconds") @Nullable Double rpoInSeconds,
-        @OutputCustomType.Parameter("sourceVmCpuCount") @Nullable Integer sourceVmCpuCount,
-        @OutputCustomType.Parameter("sourceVmRamSizeInMB") @Nullable Integer sourceVmRamSizeInMB,
-        @OutputCustomType.Parameter("uncompressedDataRateInMB") @Nullable Double uncompressedDataRateInMB,
-        @OutputCustomType.Parameter("vCenterInfrastructureId") @Nullable String vCenterInfrastructureId,
-        @OutputCustomType.Parameter("validationErrors") @Nullable List<HealthErrorResponse> validationErrors,
-        @OutputCustomType.Parameter("vmId") @Nullable String vmId,
-        @OutputCustomType.Parameter("vmNics") @Nullable List<VMNicDetailsResponse> vmNics,
-        @OutputCustomType.Parameter("vmProtectionState") @Nullable String vmProtectionState,
-        @OutputCustomType.Parameter("vmProtectionStateDescription") @Nullable String vmProtectionStateDescription) {
+        @CustomType.Parameter("activeSiteType") @Nullable String activeSiteType,
+        @CustomType.Parameter("agentDetails") @Nullable InMageAgentDetailsResponse agentDetails,
+        @CustomType.Parameter("azureStorageAccountId") @Nullable String azureStorageAccountId,
+        @CustomType.Parameter("compressedDataRateInMB") @Nullable Double compressedDataRateInMB,
+        @CustomType.Parameter("consistencyPoints") @Nullable Map<String,String> consistencyPoints,
+        @CustomType.Parameter("datastores") @Nullable List<String> datastores,
+        @CustomType.Parameter("discoveryType") @Nullable String discoveryType,
+        @CustomType.Parameter("diskResized") @Nullable String diskResized,
+        @CustomType.Parameter("infrastructureVmId") @Nullable String infrastructureVmId,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
+        @CustomType.Parameter("lastRpoCalculatedTime") @Nullable String lastRpoCalculatedTime,
+        @CustomType.Parameter("lastUpdateReceivedTime") @Nullable String lastUpdateReceivedTime,
+        @CustomType.Parameter("masterTargetId") @Nullable String masterTargetId,
+        @CustomType.Parameter("multiVmGroupId") @Nullable String multiVmGroupId,
+        @CustomType.Parameter("multiVmGroupName") @Nullable String multiVmGroupName,
+        @CustomType.Parameter("multiVmSyncStatus") @Nullable String multiVmSyncStatus,
+        @CustomType.Parameter("osDetails") @Nullable OSDiskDetailsResponse osDetails,
+        @CustomType.Parameter("osVersion") @Nullable String osVersion,
+        @CustomType.Parameter("processServerId") @Nullable String processServerId,
+        @CustomType.Parameter("protectedDisks") @Nullable List<InMageProtectedDiskDetailsResponse> protectedDisks,
+        @CustomType.Parameter("protectionStage") @Nullable String protectionStage,
+        @CustomType.Parameter("rebootAfterUpdateStatus") @Nullable String rebootAfterUpdateStatus,
+        @CustomType.Parameter("replicaId") @Nullable String replicaId,
+        @CustomType.Parameter("resyncDetails") @Nullable InitialReplicationDetailsResponse resyncDetails,
+        @CustomType.Parameter("retentionWindowEnd") @Nullable String retentionWindowEnd,
+        @CustomType.Parameter("retentionWindowStart") @Nullable String retentionWindowStart,
+        @CustomType.Parameter("rpoInSeconds") @Nullable Double rpoInSeconds,
+        @CustomType.Parameter("sourceVmCpuCount") @Nullable Integer sourceVmCpuCount,
+        @CustomType.Parameter("sourceVmRamSizeInMB") @Nullable Integer sourceVmRamSizeInMB,
+        @CustomType.Parameter("uncompressedDataRateInMB") @Nullable Double uncompressedDataRateInMB,
+        @CustomType.Parameter("vCenterInfrastructureId") @Nullable String vCenterInfrastructureId,
+        @CustomType.Parameter("validationErrors") @Nullable List<HealthErrorResponse> validationErrors,
+        @CustomType.Parameter("vmId") @Nullable String vmId,
+        @CustomType.Parameter("vmNics") @Nullable List<VMNicDetailsResponse> vmNics,
+        @CustomType.Parameter("vmProtectionState") @Nullable String vmProtectionState,
+        @CustomType.Parameter("vmProtectionStateDescription") @Nullable String vmProtectionStateDescription) {
         this.activeSiteType = activeSiteType;
         this.agentDetails = agentDetails;
         this.azureStorageAccountId = azureStorageAccountId;

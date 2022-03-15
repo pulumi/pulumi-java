@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WindowsPropertiesResponse {
     /**
      * KB numbers excluded from the software update configuration.
@@ -33,12 +33,12 @@ public final class WindowsPropertiesResponse {
      */
     private final @Nullable String rebootSetting;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WindowsPropertiesResponse(
-        @OutputCustomType.Parameter("excludedKbNumbers") @Nullable List<String> excludedKbNumbers,
-        @OutputCustomType.Parameter("includedKbNumbers") @Nullable List<String> includedKbNumbers,
-        @OutputCustomType.Parameter("includedUpdateClassifications") @Nullable String includedUpdateClassifications,
-        @OutputCustomType.Parameter("rebootSetting") @Nullable String rebootSetting) {
+        @CustomType.Parameter("excludedKbNumbers") @Nullable List<String> excludedKbNumbers,
+        @CustomType.Parameter("includedKbNumbers") @Nullable List<String> includedKbNumbers,
+        @CustomType.Parameter("includedUpdateClassifications") @Nullable String includedUpdateClassifications,
+        @CustomType.Parameter("rebootSetting") @Nullable String rebootSetting) {
         this.excludedKbNumbers = excludedKbNumbers;
         this.includedKbNumbers = includedKbNumbers;
         this.includedUpdateClassifications = includedUpdateClassifications;

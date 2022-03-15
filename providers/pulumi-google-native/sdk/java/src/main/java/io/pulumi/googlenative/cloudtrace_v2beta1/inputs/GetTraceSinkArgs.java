@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtrace_v2beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetTraceSinkArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTraceSinkArgs Empty = new GetTraceSinkArgs();
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="traceSinkId", required=true)
+    @Import(name="traceSinkId", required=true)
       private final String traceSinkId;
 
     public String getTraceSinkId() {

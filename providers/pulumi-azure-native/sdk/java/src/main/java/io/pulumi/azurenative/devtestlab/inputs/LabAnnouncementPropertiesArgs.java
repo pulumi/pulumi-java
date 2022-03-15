@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.EnableStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
      * Is the lab announcement active/enabled at this time?
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Either<String,EnableStatus>> enabled;
 
     public Output<Either<String,EnableStatus>> getEnabled() {
@@ -36,7 +36,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
      * The time at which the announcement expires (null for never)
      * 
      */
-    @InputImport(name="expirationDate")
+    @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
     public Output<String> getExpirationDate() {
@@ -47,7 +47,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
      * Has this announcement expired?
      * 
      */
-    @InputImport(name="expired")
+    @Import(name="expired")
       private final @Nullable Output<Boolean> expired;
 
     public Output<Boolean> getExpired() {
@@ -58,7 +58,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
      * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
      * 
      */
-    @InputImport(name="markdown")
+    @Import(name="markdown")
       private final @Nullable Output<String> markdown;
 
     public Output<String> getMarkdown() {
@@ -69,7 +69,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
      * The plain text title for the lab announcement
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {

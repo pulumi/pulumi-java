@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RouteArgs;
@@ -70,7 +70,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -86,7 +86,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Only IPv4 is supported.
      * 
      */
-    @OutputExport(name="destRange", type=String.class, parameters={})
+    @Export(name="destRange", type=String.class, parameters={})
     private Output<String> destRange;
 
     /**
@@ -107,7 +107,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -127,7 +127,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The network that this route applies to.
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
@@ -147,7 +147,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * * The string `default-internet-gateway`.
      * 
      */
-    @OutputExport(name="nextHopGateway", type=String.class, parameters={})
+    @Export(name="nextHopGateway", type=String.class, parameters={})
     private Output</* @Nullable */ String> nextHopGateway;
 
     /**
@@ -179,7 +179,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      *   a public (non-RFC 1918) IP CIDR range.
      * 
      */
-    @OutputExport(name="nextHopIlb", type=String.class, parameters={})
+    @Export(name="nextHopIlb", type=String.class, parameters={})
     private Output</* @Nullable */ String> nextHopIlb;
 
     /**
@@ -210,7 +210,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * * Just the instance name, with the zone in `next_hop_instance_zone`.
      * 
      */
-    @OutputExport(name="nextHopInstance", type=String.class, parameters={})
+    @Export(name="nextHopInstance", type=String.class, parameters={})
     private Output</* @Nullable */ String> nextHopInstance;
 
     /**
@@ -232,7 +232,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * a URL.
      * 
      */
-    @OutputExport(name="nextHopInstanceZone", type=String.class, parameters={})
+    @Export(name="nextHopInstanceZone", type=String.class, parameters={})
     private Output<String> nextHopInstanceZone;
 
     /**
@@ -249,7 +249,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Network IP address of an instance that should handle matching packets.
      * 
      */
-    @OutputExport(name="nextHopIp", type=String.class, parameters={})
+    @Export(name="nextHopIp", type=String.class, parameters={})
     private Output<String> nextHopIp;
 
     /**
@@ -263,7 +263,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * URL to a Network that should handle matching packets.
      * 
      */
-    @OutputExport(name="nextHopNetwork", type=String.class, parameters={})
+    @Export(name="nextHopNetwork", type=String.class, parameters={})
     private Output<String> nextHopNetwork;
 
     /**
@@ -277,7 +277,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * URL to a VpnTunnel that should handle matching packets.
      * 
      */
-    @OutputExport(name="nextHopVpnTunnel", type=String.class, parameters={})
+    @Export(name="nextHopVpnTunnel", type=String.class, parameters={})
     private Output</* @Nullable */ String> nextHopVpnTunnel;
 
     /**
@@ -295,7 +295,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Default value is 1000. Valid range is 0 through 65535.
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> priority;
 
     /**
@@ -314,7 +314,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -329,7 +329,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -343,7 +343,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * A list of instance tags to which this route applies.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={String.class})
+    @Export(name="tags", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> tags;
 
     /**

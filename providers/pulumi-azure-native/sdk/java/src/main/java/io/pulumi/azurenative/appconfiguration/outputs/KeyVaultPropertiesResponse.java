@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.appconfiguration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultPropertiesResponse {
     /**
      * The client id of the identity which will be used to access key vault.
@@ -22,10 +22,10 @@ public final class KeyVaultPropertiesResponse {
      */
     private final @Nullable String keyIdentifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyVaultPropertiesResponse(
-        @OutputCustomType.Parameter("identityClientId") @Nullable String identityClientId,
-        @OutputCustomType.Parameter("keyIdentifier") @Nullable String keyIdentifier) {
+        @CustomType.Parameter("identityClientId") @Nullable String identityClientId,
+        @CustomType.Parameter("keyIdentifier") @Nullable String keyIdentifier) {
         this.identityClientId = identityClientId;
         this.keyIdentifier = keyIdentifier;
     }

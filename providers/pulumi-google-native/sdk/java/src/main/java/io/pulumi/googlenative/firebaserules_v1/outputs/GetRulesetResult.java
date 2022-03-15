@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.firebaserules_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.firebaserules_v1.outputs.MetadataResponse;
 import io.pulumi.googlenative.firebaserules_v1.outputs.SourceResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRulesetResult {
     /**
      * Time the `Ruleset` was created.
@@ -32,12 +32,12 @@ public final class GetRulesetResult {
      */
     private final SourceResponse source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRulesetResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("metadata") MetadataResponse metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("source") SourceResponse source) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("metadata") MetadataResponse metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("source") SourceResponse source) {
         this.createTime = createTime;
         this.metadata = metadata;
         this.name = name;

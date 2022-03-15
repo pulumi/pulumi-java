@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DnsResourceReferenceResponse {
     /**
      * A list of dns Records
@@ -23,10 +23,10 @@ public final class DnsResourceReferenceResponse {
      */
     private final @Nullable SubResourceResponse targetResource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DnsResourceReferenceResponse(
-        @OutputCustomType.Parameter("dnsResources") @Nullable List<SubResourceResponse> dnsResources,
-        @OutputCustomType.Parameter("targetResource") @Nullable SubResourceResponse targetResource) {
+        @CustomType.Parameter("dnsResources") @Nullable List<SubResourceResponse> dnsResources,
+        @CustomType.Parameter("targetResource") @Nullable SubResourceResponse targetResource) {
         this.dnsResources = dnsResources;
         this.targetResource = targetResource;
     }

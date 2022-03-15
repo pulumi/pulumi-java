@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage;
 
 import io.pulumi.awsnative.mediapackage.inputs.AssetTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the PackagingGroup for the Asset.
      * 
      */
-    @InputImport(name="packagingGroupId", required=true)
+    @Import(name="packagingGroupId", required=true)
       private final Output<String> packagingGroupId;
 
     public Output<String> getPackagingGroupId() {
@@ -31,7 +31,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * The resource ID to include in SPEKE key requests.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -42,7 +42,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of the source object in S3.
      * 
      */
-    @InputImport(name="sourceArn", required=true)
+    @Import(name="sourceArn", required=true)
       private final Output<String> sourceArn;
 
     public Output<String> getSourceArn() {
@@ -53,7 +53,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * The IAM role_arn used to access the source S3 bucket.
      * 
      */
-    @InputImport(name="sourceRoleArn", required=true)
+    @Import(name="sourceRoleArn", required=true)
       private final Output<String> sourceRoleArn;
 
     public Output<String> getSourceRoleArn() {
@@ -64,7 +64,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * A collection of tags associated with a resource
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<AssetTagArgs>> tags;
 
     public Output<List<AssetTagArgs>> getTags() {

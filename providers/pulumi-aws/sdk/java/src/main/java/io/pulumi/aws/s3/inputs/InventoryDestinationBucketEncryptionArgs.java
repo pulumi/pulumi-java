@@ -6,7 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.InventoryDestinationBucketEncryptionSseKmsArgs;
 import io.pulumi.aws.s3.inputs.InventoryDestinationBucketEncryptionSseS3Args;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class InventoryDestinationBucketEncryptionArgs extends io.pulumi.re
      * Specifies to use server-side encryption with AWS KMS-managed keys to encrypt the inventory file (documented below).
      * 
      */
-    @InputImport(name="sseKms")
+    @Import(name="sseKms")
       private final @Nullable Output<InventoryDestinationBucketEncryptionSseKmsArgs> sseKms;
 
     public Output<InventoryDestinationBucketEncryptionSseKmsArgs> getSseKms() {
@@ -30,7 +30,7 @@ public final class InventoryDestinationBucketEncryptionArgs extends io.pulumi.re
      * Specifies to use server-side encryption with Amazon S3-managed keys (SSE-S3) to encrypt the inventory file.
      * 
      */
-    @InputImport(name="sseS3")
+    @Import(name="sseS3")
       private final @Nullable Output<InventoryDestinationBucketEncryptionSseS3Args> sseS3;
 
     public Output<InventoryDestinationBucketEncryptionSseS3Args> getSseS3() {

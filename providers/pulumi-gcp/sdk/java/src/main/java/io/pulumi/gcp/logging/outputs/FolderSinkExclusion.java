@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.logging.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FolderSinkExclusion {
     /**
      * A description of this exclusion.
@@ -34,12 +34,12 @@ public final class FolderSinkExclusion {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FolderSinkExclusion(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("disabled") @Nullable Boolean disabled,
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("disabled") @Nullable Boolean disabled,
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("name") String name) {
         this.description = description;
         this.disabled = disabled;
         this.filter = filter;

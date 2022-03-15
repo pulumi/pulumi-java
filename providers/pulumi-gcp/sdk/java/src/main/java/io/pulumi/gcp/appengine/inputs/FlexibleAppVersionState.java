@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionApiConfigGetArgs;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionAutomaticScalingGetArgs;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentGetArgs;
@@ -34,7 +34,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="apiConfig")
+    @Import(name="apiConfig")
       private final @Nullable Output<FlexibleAppVersionApiConfigGetArgs> apiConfig;
 
     public Output<FlexibleAppVersionApiConfigGetArgs> getApiConfig() {
@@ -46,7 +46,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="automaticScaling")
+    @Import(name="automaticScaling")
       private final @Nullable Output<FlexibleAppVersionAutomaticScalingGetArgs> automaticScaling;
 
     public Output<FlexibleAppVersionAutomaticScalingGetArgs> getAutomaticScaling() {
@@ -57,7 +57,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Metadata settings that are supplied to this version to enable beta runtime features.
      * 
      */
-    @InputImport(name="betaSettings")
+    @Import(name="betaSettings")
       private final @Nullable Output<Map<String,String>> betaSettings;
 
     public Output<Map<String,String>> getBetaSettings() {
@@ -69,7 +69,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
      * 
      */
-    @InputImport(name="defaultExpiration")
+    @Import(name="defaultExpiration")
       private final @Nullable Output<String> defaultExpiration;
 
     public Output<String> getDefaultExpiration() {
@@ -80,7 +80,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * If set to `true`, the service will be deleted if it is the last version.
      * 
      */
-    @InputImport(name="deleteServiceOnDestroy")
+    @Import(name="deleteServiceOnDestroy")
       private final @Nullable Output<Boolean> deleteServiceOnDestroy;
 
     public Output<Boolean> getDeleteServiceOnDestroy() {
@@ -92,7 +92,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="deployment")
+    @Import(name="deployment")
       private final @Nullable Output<FlexibleAppVersionDeploymentGetArgs> deployment;
 
     public Output<FlexibleAppVersionDeploymentGetArgs> getDeployment() {
@@ -104,7 +104,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="endpointsApiService")
+    @Import(name="endpointsApiService")
       private final @Nullable Output<FlexibleAppVersionEndpointsApiServiceGetArgs> endpointsApiService;
 
     public Output<FlexibleAppVersionEndpointsApiServiceGetArgs> getEndpointsApiService() {
@@ -116,7 +116,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="entrypoint")
+    @Import(name="entrypoint")
       private final @Nullable Output<FlexibleAppVersionEntrypointGetArgs> entrypoint;
 
     public Output<FlexibleAppVersionEntrypointGetArgs> getEntrypoint() {
@@ -127,7 +127,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
      * 
      */
-    @InputImport(name="envVariables")
+    @Import(name="envVariables")
       private final @Nullable Output<Map<String,String>> envVariables;
 
     public Output<Map<String,String>> getEnvVariables() {
@@ -140,7 +140,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="handlers")
+    @Import(name="handlers")
       private final @Nullable Output<List<FlexibleAppVersionHandlerGetArgs>> handlers;
 
     public Output<List<FlexibleAppVersionHandlerGetArgs>> getHandlers() {
@@ -152,7 +152,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
      * 
      */
-    @InputImport(name="inboundServices")
+    @Import(name="inboundServices")
       private final @Nullable Output<List<String>> inboundServices;
 
     public Output<List<String>> getInboundServices() {
@@ -166,7 +166,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
      * 
      */
-    @InputImport(name="instanceClass")
+    @Import(name="instanceClass")
       private final @Nullable Output<String> instanceClass;
 
     public Output<String> getInstanceClass() {
@@ -178,7 +178,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="livenessCheck")
+    @Import(name="livenessCheck")
       private final @Nullable Output<FlexibleAppVersionLivenessCheckGetArgs> livenessCheck;
 
     public Output<FlexibleAppVersionLivenessCheckGetArgs> getLivenessCheck() {
@@ -190,7 +190,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="manualScaling")
+    @Import(name="manualScaling")
       private final @Nullable Output<FlexibleAppVersionManualScalingGetArgs> manualScaling;
 
     public Output<FlexibleAppVersionManualScalingGetArgs> getManualScaling() {
@@ -201,7 +201,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -213,7 +213,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<FlexibleAppVersionNetworkGetArgs> network;
 
     public Output<FlexibleAppVersionNetworkGetArgs> getNetwork() {
@@ -224,7 +224,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Files that match this pattern will not be built into this version. Only applicable for Go runtimes.
      * 
      */
-    @InputImport(name="nobuildFilesRegex")
+    @Import(name="nobuildFilesRegex")
       private final @Nullable Output<String> nobuildFilesRegex;
 
     public Output<String> getNobuildFilesRegex() {
@@ -235,7 +235,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * If set to `true`, the application version will not be deleted.
      * 
      */
-    @InputImport(name="noopOnDestroy")
+    @Import(name="noopOnDestroy")
       private final @Nullable Output<Boolean> noopOnDestroy;
 
     public Output<Boolean> getNoopOnDestroy() {
@@ -247,7 +247,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -259,7 +259,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="readinessCheck")
+    @Import(name="readinessCheck")
       private final @Nullable Output<FlexibleAppVersionReadinessCheckGetArgs> readinessCheck;
 
     public Output<FlexibleAppVersionReadinessCheckGetArgs> getReadinessCheck() {
@@ -271,7 +271,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<FlexibleAppVersionResourcesGetArgs> resources;
 
     public Output<FlexibleAppVersionResourcesGetArgs> getResources() {
@@ -282,7 +282,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Desired runtime. Example python27.
      * 
      */
-    @InputImport(name="runtime")
+    @Import(name="runtime")
       private final @Nullable Output<String> runtime;
 
     public Output<String> getRuntime() {
@@ -295,7 +295,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Substitute `<language>` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
      * 
      */
-    @InputImport(name="runtimeApiVersion")
+    @Import(name="runtimeApiVersion")
       private final @Nullable Output<String> runtimeApiVersion;
 
     public Output<String> getRuntimeApiVersion() {
@@ -306,7 +306,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * The channel of the runtime to use. Only available for some runtimes.
      * 
      */
-    @InputImport(name="runtimeChannel")
+    @Import(name="runtimeChannel")
       private final @Nullable Output<String> runtimeChannel;
 
     public Output<String> getRuntimeChannel() {
@@ -317,7 +317,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * The path or name of the app's main executable.
      * 
      */
-    @InputImport(name="runtimeMainExecutablePath")
+    @Import(name="runtimeMainExecutablePath")
       private final @Nullable Output<String> runtimeMainExecutablePath;
 
     public Output<String> getRuntimeMainExecutablePath() {
@@ -328,7 +328,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * AppEngine service resource. Can contain numbers, letters, and hyphens.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
@@ -341,7 +341,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Possible values are `SERVING` and `STOPPED`.
      * 
      */
-    @InputImport(name="servingStatus")
+    @Import(name="servingStatus")
       private final @Nullable Output<String> servingStatus;
 
     public Output<String> getServingStatus() {
@@ -353,7 +353,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Reserved names,"default", "latest", and any name with the prefix "ah-".
      * 
      */
-    @InputImport(name="versionId")
+    @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
     public Output<String> getVersionId() {
@@ -365,7 +365,7 @@ public final class FlexibleAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="vpcAccessConnector")
+    @Import(name="vpcAccessConnector")
       private final @Nullable Output<FlexibleAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector;
 
     public Output<FlexibleAppVersionVpcAccessConnectorGetArgs> getVpcAccessConnector() {

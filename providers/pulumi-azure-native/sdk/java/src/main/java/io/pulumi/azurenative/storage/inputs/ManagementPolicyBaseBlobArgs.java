@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.DateAfterModificationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
      * The function to delete the blob
      * 
      */
-    @InputImport(name="delete")
+    @Import(name="delete")
       private final @Nullable Output<DateAfterModificationArgs> delete;
 
     public Output<DateAfterModificationArgs> getDelete() {
@@ -34,7 +34,7 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
      * This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.
      * 
      */
-    @InputImport(name="enableAutoTierToHotFromCool")
+    @Import(name="enableAutoTierToHotFromCool")
       private final @Nullable Output<Boolean> enableAutoTierToHotFromCool;
 
     public Output<Boolean> getEnableAutoTierToHotFromCool() {
@@ -45,7 +45,7 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
      * The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier
      * 
      */
-    @InputImport(name="tierToArchive")
+    @Import(name="tierToArchive")
       private final @Nullable Output<DateAfterModificationArgs> tierToArchive;
 
     public Output<DateAfterModificationArgs> getTierToArchive() {
@@ -56,7 +56,7 @@ public final class ManagementPolicyBaseBlobArgs extends io.pulumi.resources.Reso
      * The function to tier blobs to cool storage. Support blobs currently at Hot tier
      * 
      */
-    @InputImport(name="tierToCool")
+    @Import(name="tierToCool")
       private final @Nullable Output<DateAfterModificationArgs> tierToCool;
 
     public Output<DateAfterModificationArgs> getTierToCool() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetParameterResult {
     private final String arn;
     /**
@@ -25,15 +25,15 @@ public final class GetParameterResult {
     private final Integer version;
     private final @Nullable Boolean withDecryption;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetParameterResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") String value,
-        @OutputCustomType.Parameter("version") Integer version,
-        @OutputCustomType.Parameter("withDecryption") @Nullable Boolean withDecryption) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") String value,
+        @CustomType.Parameter("version") Integer version,
+        @CustomType.Parameter("withDecryption") @Nullable Boolean withDecryption) {
         this.arn = arn;
         this.id = id;
         this.name = name;

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicecatalog.ProductPortfolioAssociationArgs;
 import io.pulumi.aws.servicecatalog.inputs.ProductPortfolioAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class ProductPortfolioAssociation extends io.pulumi.resources.CustomResou
      * Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    @OutputExport(name="acceptLanguage", type=String.class, parameters={})
+    @Export(name="acceptLanguage", type=String.class, parameters={})
     private Output</* @Nullable */ String> acceptLanguage;
 
     /**
@@ -46,7 +46,7 @@ public class ProductPortfolioAssociation extends io.pulumi.resources.CustomResou
      * Portfolio identifier.
      * 
      */
-    @OutputExport(name="portfolioId", type=String.class, parameters={})
+    @Export(name="portfolioId", type=String.class, parameters={})
     private Output<String> portfolioId;
 
     /**
@@ -60,7 +60,7 @@ public class ProductPortfolioAssociation extends io.pulumi.resources.CustomResou
      * Product identifier.
      * 
      */
-    @OutputExport(name="productId", type=String.class, parameters={})
+    @Export(name="productId", type=String.class, parameters={})
     private Output<String> productId;
 
     /**
@@ -74,7 +74,7 @@ public class ProductPortfolioAssociation extends io.pulumi.resources.CustomResou
      * Identifier of the source portfolio.
      * 
      */
-    @OutputExport(name="sourcePortfolioId", type=String.class, parameters={})
+    @Export(name="sourcePortfolioId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourcePortfolioId;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs;
 import io.pulumi.gcp.container.inputs.ClusterClusterAutoscalingResourceLimitGetArgs;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="autoProvisioningDefaults")
+    @Import(name="autoProvisioningDefaults")
       private final @Nullable Output<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> autoProvisioningDefaults;
 
     public Output<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> getAutoProvisioningDefaults() {
@@ -37,7 +37,7 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
      * when deciding to remove nodes from a cluster. Can be `BALANCED` or `OPTIMIZE_UTILIZATION`. Defaults to `BALANCED`.
      * 
      */
-    @InputImport(name="autoscalingProfile")
+    @Import(name="autoscalingProfile")
       private final @Nullable Output<String> autoscalingProfile;
 
     public Output<String> getAutoscalingProfile() {
@@ -49,7 +49,7 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
      * If enabled, pods must be valid under a PodSecurityPolicy to be created.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -63,7 +63,7 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
      * in addition to node auto-provisioning. Structure is documented below.
      * 
      */
-    @InputImport(name="resourceLimits")
+    @Import(name="resourceLimits")
       private final @Nullable Output<List<ClusterClusterAutoscalingResourceLimitGetArgs>> resourceLimits;
 
     public Output<List<ClusterClusterAutoscalingResourceLimitGetArgs>> getResourceLimits() {

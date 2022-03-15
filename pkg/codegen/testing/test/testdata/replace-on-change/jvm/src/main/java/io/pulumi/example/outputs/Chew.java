@@ -3,18 +3,18 @@
 
 package io.pulumi.example.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.example.Dog;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Chew {
     private final @Nullable Dog owner;
 
-    @OutputCustomType.Constructor
-    private Chew(@OutputCustomType.Parameter("owner") @Nullable Dog owner) {
+    @CustomType.Constructor
+    private Chew(@CustomType.Parameter("owner") @Nullable Dog owner) {
         this.owner = owner;
     }
 

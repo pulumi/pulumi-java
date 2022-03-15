@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.NetworkInterfaceNicType;
 import io.pulumi.googlenative.compute_alpha.enums.NetworkInterfaceStackType;
 import io.pulumi.googlenative.compute_alpha.inputs.AccessConfigArgs;
@@ -29,7 +29,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * An array of configurations for this interface. Currently, only one access config, ONE_TO_ONE_NAT, is supported. If there are no accessConfigs specified, then this instance will have no external internet access.
      * 
      */
-    @InputImport(name="accessConfigs")
+    @Import(name="accessConfigs")
       private final @Nullable Output<List<AccessConfigArgs>> accessConfigs;
 
     public Output<List<AccessConfigArgs>> getAccessConfigs() {
@@ -40,7 +40,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * An array of alias IP ranges for this network interface. You can only specify this field for network interfaces in VPC networks.
      * 
      */
-    @InputImport(name="aliasIpRanges")
+    @Import(name="aliasIpRanges")
       private final @Nullable Output<List<AliasIpRangeArgs>> aliasIpRanges;
 
     public Output<List<AliasIpRangeArgs>> getAliasIpRanges() {
@@ -51,7 +51,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * The prefix length of the primary internal IPv6 range.
      * 
      */
-    @InputImport(name="internalIpv6PrefixLength")
+    @Import(name="internalIpv6PrefixLength")
       private final @Nullable Output<Integer> internalIpv6PrefixLength;
 
     public Output<Integer> getInternalIpv6PrefixLength() {
@@ -62,7 +62,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * An array of IPv6 access configurations for this interface. Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig specified, then this instance will have no external IPv6 Internet access.
      * 
      */
-    @InputImport(name="ipv6AccessConfigs")
+    @Import(name="ipv6AccessConfigs")
       private final @Nullable Output<List<AccessConfigArgs>> ipv6AccessConfigs;
 
     public Output<List<AccessConfigArgs>> getIpv6AccessConfigs() {
@@ -73,7 +73,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * An IPv6 internal network address for this network interface.
      * 
      */
-    @InputImport(name="ipv6Address")
+    @Import(name="ipv6Address")
       private final @Nullable Output<String> ipv6Address;
 
     public Output<String> getIpv6Address() {
@@ -84,7 +84,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * URL of the VPC network resource for this instance. When creating an instance, if neither the network nor the subnetwork is specified, the default network global/networks/default is used. If the selected project doesn't have the default network, you must specify a network or subnet. If the network is not specified but the subnetwork is specified, the network is inferred. If you specify this property, you can specify the network as a full or partial URL. For example, the following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/project/global/networks/ network - projects/project/global/networks/network - global/networks/default
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -95,7 +95,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * An IPv4 internal IP address to assign to the instance for this network interface. If not specified by the user, an unused internal IP is assigned by the system.
      * 
      */
-    @InputImport(name="networkIP")
+    @Import(name="networkIP")
       private final @Nullable Output<String> networkIP;
 
     public Output<String> getNetworkIP() {
@@ -106,7 +106,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
      * 
      */
-    @InputImport(name="nicType")
+    @Import(name="nicType")
       private final @Nullable Output<NetworkInterfaceNicType> nicType;
 
     public Output<NetworkInterfaceNicType> getNicType() {
@@ -117,7 +117,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It'll be empty if not specified by the users.
      * 
      */
-    @InputImport(name="queueCount")
+    @Import(name="queueCount")
       private final @Nullable Output<Integer> queueCount;
 
     public Output<Integer> getQueueCount() {
@@ -128,7 +128,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * The stack type for this network interface to identify whether the IPv6 feature is enabled or not. If not specified, IPV4_ONLY will be used. This field can be both set at instance creation and update network interface operations.
      * 
      */
-    @InputImport(name="stackType")
+    @Import(name="stackType")
       private final @Nullable Output<NetworkInterfaceStackType> stackType;
 
     public Output<NetworkInterfaceStackType> getStackType() {
@@ -139,7 +139,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * SubInterfaces help enable L2 communication for the instance over subnetworks that support L2. Every network interface will get a default untagged (vlan not specified) subinterface. Users can specify additional tagged subinterfaces which are sub-fields to the Network Interface.
      * 
      */
-    @InputImport(name="subinterfaces")
+    @Import(name="subinterfaces")
       private final @Nullable Output<List<NetworkInterfaceSubInterfaceArgs>> subinterfaces;
 
     public Output<List<NetworkInterfaceSubInterfaceArgs>> getSubinterfaces() {
@@ -150,7 +150,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * The URL of the Subnetwork resource for this instance. If the network resource is in legacy mode, do not specify this field. If the network is in auto subnet mode, specifying the subnetwork is optional. If the network is in custom subnet mode, specifying the subnetwork is required. If you specify this field, you can specify the subnetwork as a full or partial URL. For example, the following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/region /subnetworks/subnetwork - regions/region/subnetworks/subnetwork
      * 
      */
-    @InputImport(name="subnetwork")
+    @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {

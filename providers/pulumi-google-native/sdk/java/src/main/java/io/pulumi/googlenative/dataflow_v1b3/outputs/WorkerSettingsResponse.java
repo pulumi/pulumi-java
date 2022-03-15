@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkerSettingsResponse {
     /**
      * The base URL for accessing Google Cloud APIs. When workers access Google Cloud APIs, they logically do so via relative URLs. If this field is specified, it supplies the base URL to use for resolving these relative URLs. The normative algorithm used is defined by RFC 1808, "Relative Uniform Resource Locators". If not specified, the default value is "http://www.googleapis.com/"
@@ -41,14 +41,14 @@ public final class WorkerSettingsResponse {
      */
     private final String workerId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkerSettingsResponse(
-        @OutputCustomType.Parameter("baseUrl") String baseUrl,
-        @OutputCustomType.Parameter("reportingEnabled") Boolean reportingEnabled,
-        @OutputCustomType.Parameter("servicePath") String servicePath,
-        @OutputCustomType.Parameter("shuffleServicePath") String shuffleServicePath,
-        @OutputCustomType.Parameter("tempStoragePrefix") String tempStoragePrefix,
-        @OutputCustomType.Parameter("workerId") String workerId) {
+        @CustomType.Parameter("baseUrl") String baseUrl,
+        @CustomType.Parameter("reportingEnabled") Boolean reportingEnabled,
+        @CustomType.Parameter("servicePath") String servicePath,
+        @CustomType.Parameter("shuffleServicePath") String shuffleServicePath,
+        @CustomType.Parameter("tempStoragePrefix") String tempStoragePrefix,
+        @CustomType.Parameter("workerId") String workerId) {
         this.baseUrl = baseUrl;
         this.reportingEnabled = reportingEnabled;
         this.servicePath = servicePath;

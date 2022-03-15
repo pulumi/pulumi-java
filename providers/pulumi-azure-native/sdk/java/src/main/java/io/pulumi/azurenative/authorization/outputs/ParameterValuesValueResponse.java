@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ParameterValuesValueResponse {
     /**
      * The value of the parameter.
@@ -17,8 +17,8 @@ public final class ParameterValuesValueResponse {
      */
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor
-    private ParameterValuesValueResponse(@OutputCustomType.Parameter("value") @Nullable Object value) {
+    @CustomType.Constructor
+    private ParameterValuesValueResponse(@CustomType.Parameter("value") @Nullable Object value) {
         this.value = value;
     }
 

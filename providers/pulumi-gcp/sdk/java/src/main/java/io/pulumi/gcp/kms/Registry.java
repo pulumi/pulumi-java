@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.kms.RegistryArgs;
@@ -29,7 +29,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * List of public key certificates to authenticate devices.
      * 
      */
-    @OutputExport(name="credentials", type=List.class, parameters={RegistryCredential.class})
+    @Export(name="credentials", type=List.class, parameters={RegistryCredential.class})
     private Output</* @Nullable */ List<RegistryCredential>> credentials;
 
     /**
@@ -43,7 +43,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * List of configurations for event notifications, such as PubSub topics to publish device events to.
      * 
      */
-    @OutputExport(name="eventNotificationConfigs", type=List.class, parameters={RegistryEventNotificationConfigItem.class})
+    @Export(name="eventNotificationConfigs", type=List.class, parameters={RegistryEventNotificationConfigItem.class})
     private Output<List<RegistryEventNotificationConfigItem>> eventNotificationConfigs;
 
     /**
@@ -57,7 +57,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * Activate or deactivate HTTP.
      * 
      */
-    @OutputExport(name="httpConfig", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="httpConfig", type=Map.class, parameters={String.class, Object.class})
     private Output<Map<String,Object>> httpConfig;
 
     /**
@@ -74,7 +74,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * "DEBUG"]
      * 
      */
-    @OutputExport(name="logLevel", type=String.class, parameters={})
+    @Export(name="logLevel", type=String.class, parameters={})
     private Output</* @Nullable */ String> logLevel;
 
     /**
@@ -91,7 +91,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * Activate or deactivate MQTT.
      * 
      */
-    @OutputExport(name="mqttConfig", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="mqttConfig", type=Map.class, parameters={String.class, Object.class})
     private Output<Map<String,Object>> mqttConfig;
 
     /**
@@ -105,7 +105,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * A unique name for the resource, required by device registry.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -115,7 +115,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     public Output<String> getProject() {
@@ -125,7 +125,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The region in which the created registry should reside. If it is not provided, the provider region is used.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -139,7 +139,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * A PubSub topic to publish device state updates.
      * 
      */
-    @OutputExport(name="stateNotificationConfig", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="stateNotificationConfig", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> stateNotificationConfig;
 
     /**

@@ -21,7 +21,7 @@ import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetVMNetworkProf
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetVMProtectionPolicyResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -47,7 +47,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * Specifies additional capabilities enabled or disabled on the virtual machine in the scale set. For instance: whether the virtual machine has the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
      * 
      */
-    @OutputExport(name="additionalCapabilities", type=AdditionalCapabilitiesResponse.class, parameters={})
+    @Export(name="additionalCapabilities", type=AdditionalCapabilitiesResponse.class, parameters={})
     private Output</* @Nullable */ AdditionalCapabilitiesResponse> additionalCapabilities;
 
     /**
@@ -61,7 +61,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Availability sets overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). <br><br> For more information on Azure planned maintenance, see [Maintenance and updates for Virtual Machines in Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates) <br><br> Currently, a VM can only be added to availability set at creation time. An existing VM cannot be added to an availability set.
      * 
      */
-    @OutputExport(name="availabilitySet", type=SubResourceResponse.class, parameters={})
+    @Export(name="availabilitySet", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> availabilitySet;
 
     /**
@@ -75,7 +75,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.
      * 
      */
-    @OutputExport(name="diagnosticsProfile", type=DiagnosticsProfileResponse.class, parameters={})
+    @Export(name="diagnosticsProfile", type=DiagnosticsProfileResponse.class, parameters={})
     private Output</* @Nullable */ DiagnosticsProfileResponse> diagnosticsProfile;
 
     /**
@@ -89,7 +89,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * Specifies the hardware settings for the virtual machine.
      * 
      */
-    @OutputExport(name="hardwareProfile", type=HardwareProfileResponse.class, parameters={})
+    @Export(name="hardwareProfile", type=HardwareProfileResponse.class, parameters={})
     private Output</* @Nullable */ HardwareProfileResponse> hardwareProfile;
 
     /**
@@ -103,7 +103,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * The virtual machine instance ID.
      * 
      */
-    @OutputExport(name="instanceId", type=String.class, parameters={})
+    @Export(name="instanceId", type=String.class, parameters={})
     private Output<String> instanceId;
 
     /**
@@ -117,7 +117,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * The virtual machine instance view.
      * 
      */
-    @OutputExport(name="instanceView", type=VirtualMachineScaleSetVMInstanceViewResponse.class, parameters={})
+    @Export(name="instanceView", type=VirtualMachineScaleSetVMInstanceViewResponse.class, parameters={})
     private Output<VirtualMachineScaleSetVMInstanceViewResponse> instanceView;
 
     /**
@@ -131,7 +131,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * Specifies whether the latest model has been applied to the virtual machine.
      * 
      */
-    @OutputExport(name="latestModelApplied", type=Boolean.class, parameters={})
+    @Export(name="latestModelApplied", type=Boolean.class, parameters={})
     private Output<Boolean> latestModelApplied;
 
     /**
@@ -145,7 +145,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15
      * 
      */
-    @OutputExport(name="licenseType", type=String.class, parameters={})
+    @Export(name="licenseType", type=String.class, parameters={})
     private Output</* @Nullable */ String> licenseType;
 
     /**
@@ -159,7 +159,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -173,7 +173,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * Specifies whether the model applied to the virtual machine is the model of the virtual machine scale set or the customized model for the virtual machine.
      * 
      */
-    @OutputExport(name="modelDefinitionApplied", type=String.class, parameters={})
+    @Export(name="modelDefinitionApplied", type=String.class, parameters={})
     private Output<String> modelDefinitionApplied;
 
     /**
@@ -187,7 +187,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -201,7 +201,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * Specifies the network interfaces of the virtual machine.
      * 
      */
-    @OutputExport(name="networkProfile", type=NetworkProfileResponse.class, parameters={})
+    @Export(name="networkProfile", type=NetworkProfileResponse.class, parameters={})
     private Output</* @Nullable */ NetworkProfileResponse> networkProfile;
 
     /**
@@ -215,7 +215,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * Specifies the network profile configuration of the virtual machine.
      * 
      */
-    @OutputExport(name="networkProfileConfiguration", type=VirtualMachineScaleSetVMNetworkProfileConfigurationResponse.class, parameters={})
+    @Export(name="networkProfileConfiguration", type=VirtualMachineScaleSetVMNetworkProfileConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ VirtualMachineScaleSetVMNetworkProfileConfigurationResponse> networkProfileConfiguration;
 
     /**
@@ -229,7 +229,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * Specifies the operating system settings for the virtual machine.
      * 
      */
-    @OutputExport(name="osProfile", type=OSProfileResponse.class, parameters={})
+    @Export(name="osProfile", type=OSProfileResponse.class, parameters={})
     private Output</* @Nullable */ OSProfileResponse> osProfile;
 
     /**
@@ -243,7 +243,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.
      * 
      */
-    @OutputExport(name="plan", type=PlanResponse.class, parameters={})
+    @Export(name="plan", type=PlanResponse.class, parameters={})
     private Output</* @Nullable */ PlanResponse> plan;
 
     /**
@@ -257,7 +257,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * Specifies the protection policy of the virtual machine.
      * 
      */
-    @OutputExport(name="protectionPolicy", type=VirtualMachineScaleSetVMProtectionPolicyResponse.class, parameters={})
+    @Export(name="protectionPolicy", type=VirtualMachineScaleSetVMProtectionPolicyResponse.class, parameters={})
     private Output</* @Nullable */ VirtualMachineScaleSetVMProtectionPolicyResponse> protectionPolicy;
 
     /**
@@ -271,7 +271,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * The provisioning state, which only appears in the response.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -285,7 +285,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * The virtual machine child extension resources.
      * 
      */
-    @OutputExport(name="resources", type=List.class, parameters={VirtualMachineExtensionResponse.class})
+    @Export(name="resources", type=List.class, parameters={VirtualMachineExtensionResponse.class})
     private Output<List<VirtualMachineExtensionResponse>> resources;
 
     /**
@@ -299,7 +299,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * Specifies the Security related profile settings for the virtual machine.
      * 
      */
-    @OutputExport(name="securityProfile", type=SecurityProfileResponse.class, parameters={})
+    @Export(name="securityProfile", type=SecurityProfileResponse.class, parameters={})
     private Output</* @Nullable */ SecurityProfileResponse> securityProfile;
 
     /**
@@ -313,7 +313,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * The virtual machine SKU.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
@@ -327,7 +327,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * Specifies the storage settings for the virtual machine disks.
      * 
      */
-    @OutputExport(name="storageProfile", type=StorageProfileResponse.class, parameters={})
+    @Export(name="storageProfile", type=StorageProfileResponse.class, parameters={})
     private Output</* @Nullable */ StorageProfileResponse> storageProfile;
 
     /**
@@ -341,7 +341,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -355,7 +355,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -369,7 +369,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * UserData for the VM, which must be base-64 encoded. Customer should not pass any secrets in here. <br><br>Minimum api-version: 2021-03-01
      * 
      */
-    @OutputExport(name="userData", type=String.class, parameters={})
+    @Export(name="userData", type=String.class, parameters={})
     private Output</* @Nullable */ String> userData;
 
     /**
@@ -383,7 +383,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * Azure VM unique ID.
      * 
      */
-    @OutputExport(name="vmId", type=String.class, parameters={})
+    @Export(name="vmId", type=String.class, parameters={})
     private Output<String> vmId;
 
     /**
@@ -397,7 +397,7 @@ public class VirtualMachineScaleSetVM extends io.pulumi.resources.CustomResource
      * The virtual machine zones.
      * 
      */
-    @OutputExport(name="zones", type=List.class, parameters={String.class})
+    @Export(name="zones", type=List.class, parameters={String.class})
     private Output<List<String>> zones;
 
     /**

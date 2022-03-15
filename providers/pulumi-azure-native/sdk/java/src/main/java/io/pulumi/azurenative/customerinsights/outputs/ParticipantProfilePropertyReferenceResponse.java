@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ParticipantProfilePropertyReferenceResponse {
     /**
      * The source interaction property that maps to the target profile property.
@@ -20,10 +20,10 @@ public final class ParticipantProfilePropertyReferenceResponse {
      */
     private final String profilePropertyName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ParticipantProfilePropertyReferenceResponse(
-        @OutputCustomType.Parameter("interactionPropertyName") String interactionPropertyName,
-        @OutputCustomType.Parameter("profilePropertyName") String profilePropertyName) {
+        @CustomType.Parameter("interactionPropertyName") String interactionPropertyName,
+        @CustomType.Parameter("profilePropertyName") String profilePropertyName) {
         this.interactionPropertyName = interactionPropertyName;
         this.profilePropertyName = profilePropertyName;
     }

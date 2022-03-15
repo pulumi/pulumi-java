@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logz.inputs;
 import io.pulumi.azurenative.logz.enums.TagAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class FilteringTagArgs extends io.pulumi.resources.ResourceArgs {
      * Valid actions for a filtering tag. Exclusion takes priority over inclusion.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<Either<String,TagAction>> action;
 
     public Output<Either<String,TagAction>> getAction() {
@@ -35,7 +35,7 @@ public final class FilteringTagArgs extends io.pulumi.resources.ResourceArgs {
      * The name (also known as the key) of the tag.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class FilteringTagArgs extends io.pulumi.resources.ResourceArgs {
      * The value of the tag.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

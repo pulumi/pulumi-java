@@ -13,7 +13,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.ExtendedPropertiesArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.KPIResourceHealthDetailsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Type of backup management for the backed up item.
      * 
      */
-    @InputImport(name="backupManagementType")
+    @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
     public Output<Either<String,BackupManagementType>> getBackupManagementType() {
@@ -44,7 +44,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Name of the backup set the backup item belongs to
      * 
      */
-    @InputImport(name="backupSetName")
+    @Import(name="backupSetName")
       private final @Nullable Output<String> backupSetName;
 
     public Output<String> getBackupSetName() {
@@ -55,7 +55,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Unique name of container
      * 
      */
-    @InputImport(name="containerName")
+    @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
     public Output<String> getContainerName() {
@@ -66,7 +66,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
      * 
      */
-    @InputImport(name="createMode")
+    @Import(name="createMode")
       private final @Nullable Output<Either<String,CreateMode>> createMode;
 
     public Output<Either<String,CreateMode>> getCreateMode() {
@@ -77,7 +77,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Time for deferred deletion in UTC
      * 
      */
-    @InputImport(name="deferredDeleteTimeInUTC")
+    @Import(name="deferredDeleteTimeInUTC")
       private final @Nullable Output<String> deferredDeleteTimeInUTC;
 
     public Output<String> getDeferredDeleteTimeInUTC() {
@@ -88,7 +88,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Time remaining before the DS marked for deferred delete is permanently deleted
      * 
      */
-    @InputImport(name="deferredDeleteTimeRemaining")
+    @Import(name="deferredDeleteTimeRemaining")
       private final @Nullable Output<String> deferredDeleteTimeRemaining;
 
     public Output<String> getDeferredDeleteTimeRemaining() {
@@ -99,7 +99,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Additional information for this backup item.
      * 
      */
-    @InputImport(name="extendedInfo")
+    @Import(name="extendedInfo")
       private final @Nullable Output<AzureIaaSVMProtectedItemExtendedInfoArgs> extendedInfo;
 
     public Output<AzureIaaSVMProtectedItemExtendedInfoArgs> getExtendedInfo() {
@@ -110,7 +110,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Extended Properties for Azure IaasVM Backup.
      * 
      */
-    @InputImport(name="extendedProperties")
+    @Import(name="extendedProperties")
       private final @Nullable Output<ExtendedPropertiesArgs> extendedProperties;
 
     public Output<ExtendedPropertiesArgs> getExtendedProperties() {
@@ -121,7 +121,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Friendly name of the VM represented by this backup item.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -132,7 +132,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Health status of protected item.
      * 
      */
-    @InputImport(name="healthStatus")
+    @Import(name="healthStatus")
       private final @Nullable Output<Either<String,HealthStatus>> healthStatus;
 
     public Output<Either<String,HealthStatus>> getHealthStatus() {
@@ -143,7 +143,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Flag to identify whether the deferred deleted DS is to be purged soon
      * 
      */
-    @InputImport(name="isDeferredDeleteScheduleUpcoming")
+    @Import(name="isDeferredDeleteScheduleUpcoming")
       private final @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
 
     public Output<Boolean> getIsDeferredDeleteScheduleUpcoming() {
@@ -154,7 +154,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Flag to identify that deferred deleted DS is to be moved into Pause state
      * 
      */
-    @InputImport(name="isRehydrate")
+    @Import(name="isRehydrate")
       private final @Nullable Output<Boolean> isRehydrate;
 
     public Output<Boolean> getIsRehydrate() {
@@ -165,7 +165,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Flag to identify whether the DS is scheduled for deferred delete
      * 
      */
-    @InputImport(name="isScheduledForDeferredDelete")
+    @Import(name="isScheduledForDeferredDelete")
       private final @Nullable Output<Boolean> isScheduledForDeferredDelete;
 
     public Output<Boolean> getIsScheduledForDeferredDelete() {
@@ -176,7 +176,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Health details of different KPIs
      * 
      */
-    @InputImport(name="kpisHealths")
+    @Import(name="kpisHealths")
       private final @Nullable Output<Map<String,KPIResourceHealthDetailsArgs>> kpisHealths;
 
     public Output<Map<String,KPIResourceHealthDetailsArgs>> getKpisHealths() {
@@ -187,7 +187,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Last backup operation status.
      * 
      */
-    @InputImport(name="lastBackupStatus")
+    @Import(name="lastBackupStatus")
       private final @Nullable Output<String> lastBackupStatus;
 
     public Output<String> getLastBackupStatus() {
@@ -198,7 +198,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Timestamp of the last backup operation on this backup item.
      * 
      */
-    @InputImport(name="lastBackupTime")
+    @Import(name="lastBackupTime")
       private final @Nullable Output<String> lastBackupTime;
 
     public Output<String> getLastBackupTime() {
@@ -209,7 +209,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Timestamp when the last (latest) backup copy was created for this backup item.
      * 
      */
-    @InputImport(name="lastRecoveryPoint")
+    @Import(name="lastRecoveryPoint")
       private final @Nullable Output<String> lastRecoveryPoint;
 
     public Output<String> getLastRecoveryPoint() {
@@ -220,7 +220,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * ID of the backup policy with which this item is backed up.
      * 
      */
-    @InputImport(name="policyId")
+    @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {
@@ -231,7 +231,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Data ID of the protected item.
      * 
      */
-    @InputImport(name="protectedItemDataId")
+    @Import(name="protectedItemDataId")
       private final @Nullable Output<String> protectedItemDataId;
 
     public Output<String> getProtectedItemDataId() {
@@ -243,7 +243,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Expected value is 'AzureIaaSVMProtectedItem'.
      * 
      */
-    @InputImport(name="protectedItemType", required=true)
+    @Import(name="protectedItemType", required=true)
       private final Output<String> protectedItemType;
 
     public Output<String> getProtectedItemType() {
@@ -254,7 +254,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Backup state of this backup item.
      * 
      */
-    @InputImport(name="protectionState")
+    @Import(name="protectionState")
       private final @Nullable Output<Either<String,ProtectionState>> protectionState;
 
     public Output<Either<String,ProtectionState>> getProtectionState() {
@@ -265,7 +265,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Backup status of this backup item.
      * 
      */
-    @InputImport(name="protectionStatus")
+    @Import(name="protectionStatus")
       private final @Nullable Output<String> protectionStatus;
 
     public Output<String> getProtectionStatus() {
@@ -276,7 +276,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * ARM ID of the resource to be backed up.
      * 
      */
-    @InputImport(name="sourceResourceId")
+    @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
 
     public Output<String> getSourceResourceId() {
@@ -287,7 +287,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Fully qualified ARM ID of the virtual machine represented by this item.
      * 
      */
-    @InputImport(name="virtualMachineId")
+    @Import(name="virtualMachineId")
       private final @Nullable Output<String> virtualMachineId;
 
     public Output<String> getVirtualMachineId() {
@@ -298,7 +298,7 @@ public final class AzureIaaSVMProtectedItemArgs extends io.pulumi.resources.Reso
      * Type of workload this item represents.
      * 
      */
-    @InputImport(name="workloadType")
+    @Import(name="workloadType")
       private final @Nullable Output<Either<String,DataSourceType>> workloadType;
 
     public Output<Either<String,DataSourceType>> getWorkloadType() {

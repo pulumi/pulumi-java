@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.GcsDestinationConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArg
      * Destination connection profile identifier.
      * 
      */
-    @InputImport(name="destinationConnectionProfileName", required=true)
+    @Import(name="destinationConnectionProfileName", required=true)
       private final Output<String> destinationConnectionProfileName;
 
     public Output<String> getDestinationConnectionProfileName() {
@@ -34,7 +34,7 @@ public final class DestinationConfigArgs extends io.pulumi.resources.ResourceArg
      * GCS destination configuration.
      * 
      */
-    @InputImport(name="gcsDestinationConfig")
+    @Import(name="gcsDestinationConfig")
       private final @Nullable Output<GcsDestinationConfigArgs> gcsDestinationConfig;
 
     public Output<GcsDestinationConfigArgs> getGcsDestinationConfig() {

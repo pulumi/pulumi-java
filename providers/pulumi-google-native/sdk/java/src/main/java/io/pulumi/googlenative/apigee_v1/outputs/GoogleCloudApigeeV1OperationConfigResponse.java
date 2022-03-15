@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AttributeResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1OperationResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1QuotaResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1OperationConfigResponse {
     /**
      * Name of the API proxy or remote service with which the resources, methods, and quota are associated.
@@ -34,12 +34,12 @@ public final class GoogleCloudApigeeV1OperationConfigResponse {
      */
     private final GoogleCloudApigeeV1QuotaResponse quota;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1OperationConfigResponse(
-        @OutputCustomType.Parameter("apiSource") String apiSource,
-        @OutputCustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
-        @OutputCustomType.Parameter("operations") List<GoogleCloudApigeeV1OperationResponse> operations,
-        @OutputCustomType.Parameter("quota") GoogleCloudApigeeV1QuotaResponse quota) {
+        @CustomType.Parameter("apiSource") String apiSource,
+        @CustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
+        @CustomType.Parameter("operations") List<GoogleCloudApigeeV1OperationResponse> operations,
+        @CustomType.Parameter("quota") GoogleCloudApigeeV1QuotaResponse quota) {
         this.apiSource = apiSource;
         this.attributes = attributes;
         this.operations = operations;

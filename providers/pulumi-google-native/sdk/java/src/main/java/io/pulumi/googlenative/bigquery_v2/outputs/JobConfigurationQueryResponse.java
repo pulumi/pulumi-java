@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.ClusteringResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.ConnectionPropertyResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.DatasetReferenceResponse;
@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobConfigurationQueryResponse {
     /**
      * [Optional] If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance. Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed. However, you must still set destinationTable when result size exceeds the allowed maximum response size.
@@ -138,31 +138,31 @@ public final class JobConfigurationQueryResponse {
      */
     private final String writeDisposition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobConfigurationQueryResponse(
-        @OutputCustomType.Parameter("allowLargeResults") Boolean allowLargeResults,
-        @OutputCustomType.Parameter("clustering") ClusteringResponse clustering,
-        @OutputCustomType.Parameter("connectionProperties") List<ConnectionPropertyResponse> connectionProperties,
-        @OutputCustomType.Parameter("createDisposition") String createDisposition,
-        @OutputCustomType.Parameter("createSession") Boolean createSession,
-        @OutputCustomType.Parameter("defaultDataset") DatasetReferenceResponse defaultDataset,
-        @OutputCustomType.Parameter("destinationEncryptionConfiguration") EncryptionConfigurationResponse destinationEncryptionConfiguration,
-        @OutputCustomType.Parameter("destinationTable") TableReferenceResponse destinationTable,
-        @OutputCustomType.Parameter("flattenResults") Boolean flattenResults,
-        @OutputCustomType.Parameter("maximumBillingTier") Integer maximumBillingTier,
-        @OutputCustomType.Parameter("maximumBytesBilled") String maximumBytesBilled,
-        @OutputCustomType.Parameter("parameterMode") String parameterMode,
-        @OutputCustomType.Parameter("priority") String priority,
-        @OutputCustomType.Parameter("query") String query,
-        @OutputCustomType.Parameter("queryParameters") List<QueryParameterResponse> queryParameters,
-        @OutputCustomType.Parameter("rangePartitioning") RangePartitioningResponse rangePartitioning,
-        @OutputCustomType.Parameter("schemaUpdateOptions") List<String> schemaUpdateOptions,
-        @OutputCustomType.Parameter("tableDefinitions") Map<String,String> tableDefinitions,
-        @OutputCustomType.Parameter("timePartitioning") TimePartitioningResponse timePartitioning,
-        @OutputCustomType.Parameter("useLegacySql") Boolean useLegacySql,
-        @OutputCustomType.Parameter("useQueryCache") Boolean useQueryCache,
-        @OutputCustomType.Parameter("userDefinedFunctionResources") List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources,
-        @OutputCustomType.Parameter("writeDisposition") String writeDisposition) {
+        @CustomType.Parameter("allowLargeResults") Boolean allowLargeResults,
+        @CustomType.Parameter("clustering") ClusteringResponse clustering,
+        @CustomType.Parameter("connectionProperties") List<ConnectionPropertyResponse> connectionProperties,
+        @CustomType.Parameter("createDisposition") String createDisposition,
+        @CustomType.Parameter("createSession") Boolean createSession,
+        @CustomType.Parameter("defaultDataset") DatasetReferenceResponse defaultDataset,
+        @CustomType.Parameter("destinationEncryptionConfiguration") EncryptionConfigurationResponse destinationEncryptionConfiguration,
+        @CustomType.Parameter("destinationTable") TableReferenceResponse destinationTable,
+        @CustomType.Parameter("flattenResults") Boolean flattenResults,
+        @CustomType.Parameter("maximumBillingTier") Integer maximumBillingTier,
+        @CustomType.Parameter("maximumBytesBilled") String maximumBytesBilled,
+        @CustomType.Parameter("parameterMode") String parameterMode,
+        @CustomType.Parameter("priority") String priority,
+        @CustomType.Parameter("query") String query,
+        @CustomType.Parameter("queryParameters") List<QueryParameterResponse> queryParameters,
+        @CustomType.Parameter("rangePartitioning") RangePartitioningResponse rangePartitioning,
+        @CustomType.Parameter("schemaUpdateOptions") List<String> schemaUpdateOptions,
+        @CustomType.Parameter("tableDefinitions") Map<String,String> tableDefinitions,
+        @CustomType.Parameter("timePartitioning") TimePartitioningResponse timePartitioning,
+        @CustomType.Parameter("useLegacySql") Boolean useLegacySql,
+        @CustomType.Parameter("useQueryCache") Boolean useQueryCache,
+        @CustomType.Parameter("userDefinedFunctionResources") List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources,
+        @CustomType.Parameter("writeDisposition") String writeDisposition) {
         this.allowLargeResults = allowLargeResults;
         this.clustering = clustering;
         this.connectionProperties = connectionProperties;

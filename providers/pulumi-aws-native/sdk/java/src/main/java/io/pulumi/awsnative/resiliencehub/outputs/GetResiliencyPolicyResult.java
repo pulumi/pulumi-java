@@ -7,13 +7,13 @@ import io.pulumi.awsnative.resiliencehub.enums.ResiliencyPolicyDataLocationConst
 import io.pulumi.awsnative.resiliencehub.enums.ResiliencyPolicyTier;
 import io.pulumi.awsnative.resiliencehub.outputs.ResiliencyPolicyPolicyMap;
 import io.pulumi.awsnative.resiliencehub.outputs.ResiliencyPolicyTagMap;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResiliencyPolicyResult {
     /**
      * Data Location Constraint of the Policy.
@@ -43,15 +43,15 @@ public final class GetResiliencyPolicyResult {
      */
     private final @Nullable ResiliencyPolicyTier tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResiliencyPolicyResult(
-        @OutputCustomType.Parameter("dataLocationConstraint") @Nullable ResiliencyPolicyDataLocationConstraint dataLocationConstraint,
-        @OutputCustomType.Parameter("policy") @Nullable ResiliencyPolicyPolicyMap policy,
-        @OutputCustomType.Parameter("policyArn") @Nullable String policyArn,
-        @OutputCustomType.Parameter("policyDescription") @Nullable String policyDescription,
-        @OutputCustomType.Parameter("policyName") @Nullable String policyName,
-        @OutputCustomType.Parameter("tags") @Nullable ResiliencyPolicyTagMap tags,
-        @OutputCustomType.Parameter("tier") @Nullable ResiliencyPolicyTier tier) {
+        @CustomType.Parameter("dataLocationConstraint") @Nullable ResiliencyPolicyDataLocationConstraint dataLocationConstraint,
+        @CustomType.Parameter("policy") @Nullable ResiliencyPolicyPolicyMap policy,
+        @CustomType.Parameter("policyArn") @Nullable String policyArn,
+        @CustomType.Parameter("policyDescription") @Nullable String policyDescription,
+        @CustomType.Parameter("policyName") @Nullable String policyName,
+        @CustomType.Parameter("tags") @Nullable ResiliencyPolicyTagMap tags,
+        @CustomType.Parameter("tier") @Nullable ResiliencyPolicyTier tier) {
         this.dataLocationConstraint = dataLocationConstraint;
         this.policy = policy;
         this.policyArn = policyArn;

@@ -5,13 +5,13 @@ package io.pulumi.awsnative.lightsail.outputs;
 
 import io.pulumi.awsnative.lightsail.enums.InstanceAddOnStatus;
 import io.pulumi.awsnative.lightsail.outputs.InstanceAutoSnapshotAddOn;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceAddOn {
     /**
      * The add-on type
@@ -25,11 +25,11 @@ public final class InstanceAddOn {
      */
     private final @Nullable InstanceAddOnStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceAddOn(
-        @OutputCustomType.Parameter("addOnType") String addOnType,
-        @OutputCustomType.Parameter("autoSnapshotAddOnRequest") @Nullable InstanceAutoSnapshotAddOn autoSnapshotAddOnRequest,
-        @OutputCustomType.Parameter("status") @Nullable InstanceAddOnStatus status) {
+        @CustomType.Parameter("addOnType") String addOnType,
+        @CustomType.Parameter("autoSnapshotAddOnRequest") @Nullable InstanceAutoSnapshotAddOn autoSnapshotAddOnRequest,
+        @CustomType.Parameter("status") @Nullable InstanceAddOnStatus status) {
         this.addOnType = addOnType;
         this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
         this.status = status;

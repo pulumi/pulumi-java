@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
      * currentAverageValue is the current value of metric averaged over autoscaled pods.
      * 
      */
-    @InputImport(name="currentAverageValue")
+    @Import(name="currentAverageValue")
       private final @Nullable Output<String> currentAverageValue;
 
     public Output<String> getCurrentAverageValue() {
@@ -34,7 +34,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
      * currentValue is the current value of the metric (as a quantity)
      * 
      */
-    @InputImport(name="currentValue", required=true)
+    @Import(name="currentValue", required=true)
       private final Output<String> currentValue;
 
     public Output<String> getCurrentValue() {
@@ -45,7 +45,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
      * metricName is the name of a metric used for autoscaling in metric system.
      * 
      */
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -56,7 +56,7 @@ public final class ExternalMetricStatusArgs extends io.pulumi.resources.Resource
      * metricSelector is used to identify a specific time series within a given metric.
      * 
      */
-    @InputImport(name="metricSelector")
+    @Import(name="metricSelector")
       private final @Nullable Output<LabelSelectorArgs> metricSelector;
 
     public Output<LabelSelectorArgs> getMetricSelector() {

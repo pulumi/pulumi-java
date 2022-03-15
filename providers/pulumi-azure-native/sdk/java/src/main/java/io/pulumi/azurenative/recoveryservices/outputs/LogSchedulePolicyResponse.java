@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LogSchedulePolicyResponse {
     /**
      * Frequency of the log schedule operation of this policy in minutes.
@@ -24,10 +24,10 @@ public final class LogSchedulePolicyResponse {
      */
     private final String schedulePolicyType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LogSchedulePolicyResponse(
-        @OutputCustomType.Parameter("scheduleFrequencyInMins") @Nullable Integer scheduleFrequencyInMins,
-        @OutputCustomType.Parameter("schedulePolicyType") String schedulePolicyType) {
+        @CustomType.Parameter("scheduleFrequencyInMins") @Nullable Integer scheduleFrequencyInMins,
+        @CustomType.Parameter("schedulePolicyType") String schedulePolicyType) {
         this.scheduleFrequencyInMins = scheduleFrequencyInMins;
         this.schedulePolicyType = schedulePolicyType;
     }

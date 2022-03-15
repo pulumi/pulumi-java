@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.EncryptionInfoResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackupResult {
     /**
      * The encryption information for the backup.
@@ -51,16 +51,16 @@ public final class GetBackupResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackupResult(
-        @OutputCustomType.Parameter("encryptionInfo") EncryptionInfoResponse encryptionInfo,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("expireTime") String expireTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sizeBytes") String sizeBytes,
-        @OutputCustomType.Parameter("sourceTable") String sourceTable,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("encryptionInfo") EncryptionInfoResponse encryptionInfo,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("expireTime") String expireTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sizeBytes") String sizeBytes,
+        @CustomType.Parameter("sourceTable") String sourceTable,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("state") String state) {
         this.encryptionInfo = encryptionInfo;
         this.endTime = endTime;
         this.expireTime = expireTime;

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.CertificateInformationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateConfigurationResponse {
     /**
      * Certificate information.
@@ -33,12 +33,12 @@ public final class CertificateConfigurationResponse {
      */
     private final String storeName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateConfigurationResponse(
-        @OutputCustomType.Parameter("certificate") @Nullable CertificateInformationResponse certificate,
-        @OutputCustomType.Parameter("certificatePassword") @Nullable String certificatePassword,
-        @OutputCustomType.Parameter("encodedCertificate") @Nullable String encodedCertificate,
-        @OutputCustomType.Parameter("storeName") String storeName) {
+        @CustomType.Parameter("certificate") @Nullable CertificateInformationResponse certificate,
+        @CustomType.Parameter("certificatePassword") @Nullable String certificatePassword,
+        @CustomType.Parameter("encodedCertificate") @Nullable String encodedCertificate,
+        @CustomType.Parameter("storeName") String storeName) {
         this.certificate = certificate;
         this.certificatePassword = certificatePassword;
         this.encodedCertificate = encodedCertificate;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.TargetGrpcProxyArgs;
@@ -50,7 +50,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -64,7 +64,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * An optional description of this resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -81,7 +81,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * fingerprint, make a get() request to retrieve the TargetGrpcProxy. A base64-encoded string.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -104,7 +104,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -125,7 +125,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -140,7 +140,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -154,7 +154,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * Server-defined URL with id for the resource.
      * 
      */
-    @OutputExport(name="selfLinkWithId", type=String.class, parameters={})
+    @Export(name="selfLinkWithId", type=String.class, parameters={})
     private Output<String> selfLinkWithId;
 
     /**
@@ -170,7 +170,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * must be set to GRPC.
      * 
      */
-    @OutputExport(name="urlMap", type=String.class, parameters={})
+    @Export(name="urlMap", type=String.class, parameters={})
     private Output</* @Nullable */ String> urlMap;
 
     /**
@@ -195,7 +195,7 @@ public class TargetGrpcProxy extends io.pulumi.resources.CustomResource {
      * it is connecting to
      * 
      */
-    @OutputExport(name="validateForProxyless", type=Boolean.class, parameters={})
+    @Export(name="validateForProxyless", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> validateForProxyless;
 
     /**

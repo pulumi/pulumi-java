@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.transfer.outputs;
 
 import io.pulumi.awsnative.transfer.outputs.WorkflowS3Tag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowStepTagStepDetailsProperties {
     /**
      * The name of the step, used as an identifier.
@@ -24,10 +24,10 @@ public final class WorkflowStepTagStepDetailsProperties {
      */
     private final @Nullable List<WorkflowS3Tag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowStepTagStepDetailsProperties(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tags") @Nullable List<WorkflowS3Tag> tags) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tags") @Nullable List<WorkflowS3Tag> tags) {
         this.name = name;
         this.tags = tags;
     }

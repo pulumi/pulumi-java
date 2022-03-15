@@ -6,7 +6,7 @@ package io.pulumi.azurenative.security.inputs;
 import io.pulumi.azurenative.security.enums.AssessmentStatusCode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs
      * Programmatic code for the cause of the assessment status
      * 
      */
-    @InputImport(name="cause")
+    @Import(name="cause")
       private final @Nullable Output<String> cause;
 
     public Output<String> getCause() {
@@ -35,7 +35,7 @@ public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs
      * Programmatic code for the status of the assessment
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final Output<Either<String,AssessmentStatusCode>> code;
 
     public Output<Either<String,AssessmentStatusCode>> getCode() {
@@ -46,7 +46,7 @@ public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs
      * Human readable description of the assessment status
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {

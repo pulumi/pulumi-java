@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleSqs {
     /**
      * The URL of the Amazon SQS queue.
@@ -26,11 +26,11 @@ public final class TopicRuleSqs {
      */
     private final Boolean useBase64;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleSqs(
-        @OutputCustomType.Parameter("queueUrl") String queueUrl,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("useBase64") Boolean useBase64) {
+        @CustomType.Parameter("queueUrl") String queueUrl,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("useBase64") Boolean useBase64) {
         this.queueUrl = queueUrl;
         this.roleArn = roleArn;
         this.useBase64 = useBase64;

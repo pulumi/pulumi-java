@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssm.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class ResourceDataSyncAwsOrganizationsSourceArgs extends io.pulumi.
 
     public static final ResourceDataSyncAwsOrganizationsSourceArgs Empty = new ResourceDataSyncAwsOrganizationsSourceArgs();
 
-    @InputImport(name="organizationSourceType", required=true)
+    @Import(name="organizationSourceType", required=true)
       private final Output<String> organizationSourceType;
 
     public Output<String> getOrganizationSourceType() {
         return this.organizationSourceType;
     }
 
-    @InputImport(name="organizationalUnits")
+    @Import(name="organizationalUnits")
       private final @Nullable Output<List<String>> organizationalUnits;
 
     public Output<List<String>> getOrganizationalUnits() {

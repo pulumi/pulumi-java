@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ResponseMessageResponse;
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
      * Conditional cases for this fulfillment.
      * 
      */
-    @InputImport(name="conditionalCases", required=true)
+    @Import(name="conditionalCases", required=true)
       private final List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse> conditionalCases;
 
     public List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse> getConditionalCases() {
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
      * The list of rich message responses to present to the user.
      * 
      */
-    @InputImport(name="messages", required=true)
+    @Import(name="messages", required=true)
       private final List<GoogleCloudDialogflowCxV3ResponseMessageResponse> messages;
 
     public List<GoogleCloudDialogflowCxV3ResponseMessageResponse> getMessages() {
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
      * Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
      * 
      */
-    @InputImport(name="returnPartialResponses", required=true)
+    @Import(name="returnPartialResponses", required=true)
       private final Boolean returnPartialResponses;
 
     public Boolean getReturnPartialResponses() {
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
      * Set parameter values before executing the webhook.
      * 
      */
-    @InputImport(name="setParameterActions", required=true)
+    @Import(name="setParameterActions", required=true)
       private final List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse> setParameterActions;
 
     public List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse> getSetParameterActions() {
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
      * The tag used by the webhook to identify which fulfillment is being called. This field is required if `webhook` is specified.
      * 
      */
-    @InputImport(name="tag", required=true)
+    @Import(name="tag", required=true)
       private final String tag;
 
     public String getTag() {
@@ -80,7 +80,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
      * The webhook to call. Format: `projects//locations//agents//webhooks/`.
      * 
      */
-    @InputImport(name="webhook", required=true)
+    @Import(name="webhook", required=true)
       private final String webhook;
 
     public String getWebhook() {

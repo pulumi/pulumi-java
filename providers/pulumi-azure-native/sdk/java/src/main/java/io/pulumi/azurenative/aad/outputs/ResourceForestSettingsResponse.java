@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.aad.outputs;
 
 import io.pulumi.azurenative.aad.outputs.ForestTrustResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceForestSettingsResponse {
     /**
      * Resource Forest
@@ -24,10 +24,10 @@ public final class ResourceForestSettingsResponse {
      */
     private final @Nullable List<ForestTrustResponse> settings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceForestSettingsResponse(
-        @OutputCustomType.Parameter("resourceForest") @Nullable String resourceForest,
-        @OutputCustomType.Parameter("settings") @Nullable List<ForestTrustResponse> settings) {
+        @CustomType.Parameter("resourceForest") @Nullable String resourceForest,
+        @CustomType.Parameter("settings") @Nullable List<ForestTrustResponse> settings) {
         this.resourceForest = resourceForest;
         this.settings = settings;
     }

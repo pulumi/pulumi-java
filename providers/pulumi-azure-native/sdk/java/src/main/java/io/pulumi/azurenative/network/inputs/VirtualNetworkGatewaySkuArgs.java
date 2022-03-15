@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.VirtualNetworkGatewaySkuName;
 import io.pulumi.azurenative.network.enums.VirtualNetworkGatewaySkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class VirtualNetworkGatewaySkuArgs extends io.pulumi.resources.Reso
      * Gateway SKU name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<Either<String,VirtualNetworkGatewaySkuName>> name;
 
     public Output<Either<String,VirtualNetworkGatewaySkuName>> getName() {
@@ -36,7 +36,7 @@ public final class VirtualNetworkGatewaySkuArgs extends io.pulumi.resources.Reso
      * Gateway SKU tier.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<Either<String,VirtualNetworkGatewaySkuTier>> tier;
 
     public Output<Either<String,VirtualNetworkGatewaySkuTier>> getTier() {

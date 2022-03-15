@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetUserResult {
     /**
      * A string for what access a user possesses within the associated ElastiCache replication groups or clusters.
@@ -37,15 +37,15 @@ public final class GetUserResult {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserResult(
-        @OutputCustomType.Parameter("accessString") @Nullable String accessString,
-        @OutputCustomType.Parameter("engine") @Nullable String engine,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("noPasswordRequired") @Nullable Boolean noPasswordRequired,
-        @OutputCustomType.Parameter("passwords") @Nullable List<String> passwords,
-        @OutputCustomType.Parameter("userId") String userId,
-        @OutputCustomType.Parameter("userName") @Nullable String userName) {
+        @CustomType.Parameter("accessString") @Nullable String accessString,
+        @CustomType.Parameter("engine") @Nullable String engine,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("noPasswordRequired") @Nullable Boolean noPasswordRequired,
+        @CustomType.Parameter("passwords") @Nullable List<String> passwords,
+        @CustomType.Parameter("userId") String userId,
+        @CustomType.Parameter("userName") @Nullable String userName) {
         this.accessString = accessString;
         this.engine = engine;
         this.id = id;

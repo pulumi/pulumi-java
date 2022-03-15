@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.NetworkInterfaceIPConfigurationResp
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * An array of references to IP addresses defined in network interfaces.
      * 
      */
-    @OutputExport(name="backendIPConfigurations", type=List.class, parameters={NetworkInterfaceIPConfigurationResponse.class})
+    @Export(name="backendIPConfigurations", type=List.class, parameters={NetworkInterfaceIPConfigurationResponse.class})
     private Output<List<NetworkInterfaceIPConfigurationResponse>> backendIPConfigurations;
 
     /**
@@ -51,7 +51,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -65,7 +65,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * An array of backend addresses.
      * 
      */
-    @OutputExport(name="loadBalancerBackendAddresses", type=List.class, parameters={LoadBalancerBackendAddressResponse.class})
+    @Export(name="loadBalancerBackendAddresses", type=List.class, parameters={LoadBalancerBackendAddressResponse.class})
     private Output</* @Nullable */ List<LoadBalancerBackendAddressResponse>> loadBalancerBackendAddresses;
 
     /**
@@ -79,7 +79,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * An array of references to load balancing rules that use this backend address pool.
      * 
      */
-    @OutputExport(name="loadBalancingRules", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="loadBalancingRules", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> loadBalancingRules;
 
     /**
@@ -93,7 +93,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * The location of the backend address pool.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -107,7 +107,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * The name of the resource that is unique within the set of backend address pools used by the load balancer. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -121,7 +121,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * A reference to an outbound rule that uses this backend address pool.
      * 
      */
-    @OutputExport(name="outboundRule", type=SubResourceResponse.class, parameters={})
+    @Export(name="outboundRule", type=SubResourceResponse.class, parameters={})
     private Output<SubResourceResponse> outboundRule;
 
     /**
@@ -135,7 +135,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * An array of references to outbound rules that use this backend address pool.
      * 
      */
-    @OutputExport(name="outboundRules", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="outboundRules", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> outboundRules;
 
     /**
@@ -149,7 +149,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * The provisioning state of the backend address pool resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -163,7 +163,7 @@ public class LoadBalancerBackendAddressPool extends io.pulumi.resources.CustomRe
      * Type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

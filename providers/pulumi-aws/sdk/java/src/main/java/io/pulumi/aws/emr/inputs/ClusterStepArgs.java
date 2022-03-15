@@ -5,7 +5,7 @@ package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.aws.emr.inputs.ClusterStepHadoopJarStepArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ClusterStepArgs extends io.pulumi.resources.ResourceArgs {
      * Action to take if the step fails. Valid values: `TERMINATE_JOB_FLOW`, `TERMINATE_CLUSTER`, `CANCEL_AND_WAIT`, and `CONTINUE`
      * 
      */
-    @InputImport(name="actionOnFailure", required=true)
+    @Import(name="actionOnFailure", required=true)
       private final Output<String> actionOnFailure;
 
     public Output<String> getActionOnFailure() {
@@ -29,7 +29,7 @@ public final class ClusterStepArgs extends io.pulumi.resources.ResourceArgs {
      * JAR file used for the step. See below.
      * 
      */
-    @InputImport(name="hadoopJarStep", required=true)
+    @Import(name="hadoopJarStep", required=true)
       private final Output<ClusterStepHadoopJarStepArgs> hadoopJarStep;
 
     public Output<ClusterStepHadoopJarStepArgs> getHadoopJarStep() {
@@ -40,7 +40,7 @@ public final class ClusterStepArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the step.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

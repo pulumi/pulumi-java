@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SourceCredentialArgs extends io.pulumi.resources.ResourceArgs
      * The type of authentication used to connect to a GitHub, GitHub Enterprise, or Bitbucket repository. An OAUTH connection is not supported by the API.
      * 
      */
-    @InputImport(name="authType", required=true)
+    @Import(name="authType", required=true)
       private final Output<String> authType;
 
     public Output<String> getAuthType() {
@@ -29,7 +29,7 @@ public final class SourceCredentialArgs extends io.pulumi.resources.ResourceArgs
      * The source provider used for this project.
      * 
      */
-    @InputImport(name="serverType", required=true)
+    @Import(name="serverType", required=true)
       private final Output<String> serverType;
 
     public Output<String> getServerType() {
@@ -40,7 +40,7 @@ public final class SourceCredentialArgs extends io.pulumi.resources.ResourceArgs
      * For `GitHub` or `GitHub Enterprise`, this is the personal access token. For `Bitbucket`, this is the app password.
      * 
      */
-    @InputImport(name="token", required=true)
+    @Import(name="token", required=true)
       private final Output<String> token;
 
     public Output<String> getToken() {
@@ -51,7 +51,7 @@ public final class SourceCredentialArgs extends io.pulumi.resources.ResourceArgs
      * The Bitbucket username when the authType is `BASIC_AUTH`. This parameter is not valid for other types of source providers or connections.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {

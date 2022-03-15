@@ -4,13 +4,13 @@
 package io.pulumi.aws.s3.outputs;
 
 import io.pulumi.aws.s3.outputs.InventoryDestinationBucketEncryption;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InventoryDestinationBucket {
     /**
      * The ID of the account that owns the destination bucket. Recommended to be set to prevent problems if the destination bucket ownership changes.
@@ -38,13 +38,13 @@ public final class InventoryDestinationBucket {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InventoryDestinationBucket(
-        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
-        @OutputCustomType.Parameter("bucketArn") String bucketArn,
-        @OutputCustomType.Parameter("encryption") @Nullable InventoryDestinationBucketEncryption encryption,
-        @OutputCustomType.Parameter("format") String format,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
+        @CustomType.Parameter("accountId") @Nullable String accountId,
+        @CustomType.Parameter("bucketArn") String bucketArn,
+        @CustomType.Parameter("encryption") @Nullable InventoryDestinationBucketEncryption encryption,
+        @CustomType.Parameter("format") String format,
+        @CustomType.Parameter("prefix") @Nullable String prefix) {
         this.accountId = accountId;
         this.bucketArn = bucketArn;
         this.encryption = encryption;

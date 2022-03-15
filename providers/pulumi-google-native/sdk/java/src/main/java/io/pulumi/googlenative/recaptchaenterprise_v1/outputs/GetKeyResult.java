@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recaptchaenterprise_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.recaptchaenterprise_v1.outputs.GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse;
 import io.pulumi.googlenative.recaptchaenterprise_v1.outputs.GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse;
 import io.pulumi.googlenative.recaptchaenterprise_v1.outputs.GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetKeyResult {
     /**
      * Settings for keys that can be used by Android apps.
@@ -61,17 +61,17 @@ public final class GetKeyResult {
      */
     private final GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse webSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKeyResult(
-        @OutputCustomType.Parameter("androidSettings") GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse androidSettings,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("iosSettings") GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse iosSettings,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("testingOptions") GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse testingOptions,
-        @OutputCustomType.Parameter("wafSettings") GoogleCloudRecaptchaenterpriseV1WafSettingsResponse wafSettings,
-        @OutputCustomType.Parameter("webSettings") GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse webSettings) {
+        @CustomType.Parameter("androidSettings") GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse androidSettings,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("iosSettings") GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse iosSettings,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("testingOptions") GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse testingOptions,
+        @CustomType.Parameter("wafSettings") GoogleCloudRecaptchaenterpriseV1WafSettingsResponse wafSettings,
+        @CustomType.Parameter("webSettings") GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse webSettings) {
         this.androidSettings = androidSettings;
         this.createTime = createTime;
         this.displayName = displayName;

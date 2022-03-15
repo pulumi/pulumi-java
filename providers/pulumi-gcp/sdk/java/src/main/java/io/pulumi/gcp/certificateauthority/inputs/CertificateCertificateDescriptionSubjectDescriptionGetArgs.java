@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionSubjectDescriptionSubjectGetArgs;
 import java.lang.String;
@@ -17,7 +17,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionGetArgs ex
 
     public static final CertificateCertificateDescriptionSubjectDescriptionGetArgs Empty = new CertificateCertificateDescriptionSubjectDescriptionGetArgs();
 
-    @InputImport(name="hexSerialNumber")
+    @Import(name="hexSerialNumber")
       private final @Nullable Output<String> hexSerialNumber;
 
     public Output<String> getHexSerialNumber() {
@@ -30,21 +30,21 @@ public final class CertificateCertificateDescriptionSubjectDescriptionGetArgs ex
      * fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="lifetime")
+    @Import(name="lifetime")
       private final @Nullable Output<String> lifetime;
 
     public Output<String> getLifetime() {
         return this.lifetime == null ? Output.empty() : this.lifetime;
     }
 
-    @InputImport(name="notAfterTime")
+    @Import(name="notAfterTime")
       private final @Nullable Output<String> notAfterTime;
 
     public Output<String> getNotAfterTime() {
         return this.notAfterTime == null ? Output.empty() : this.notAfterTime;
     }
 
-    @InputImport(name="notBeforeTime")
+    @Import(name="notBeforeTime")
       private final @Nullable Output<String> notBeforeTime;
 
     public Output<String> getNotBeforeTime() {
@@ -56,7 +56,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionGetArgs ex
      * Structure is documented below.
      * 
      */
-    @InputImport(name="subjectAltNames")
+    @Import(name="subjectAltNames")
       private final @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameGetArgs>> subjectAltNames;
 
     public Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameGetArgs>> getSubjectAltNames() {
@@ -68,7 +68,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionGetArgs ex
      * Structure is documented below.
      * 
      */
-    @InputImport(name="subjects")
+    @Import(name="subjects")
       private final @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectGetArgs>> subjects;
 
     public Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectGetArgs>> getSubjects() {

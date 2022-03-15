@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainMappingSslSettings {
     /**
      * ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will
@@ -39,11 +39,11 @@ public final class DomainMappingSslSettings {
      */
     private final String sslManagementType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainMappingSslSettings(
-        @OutputCustomType.Parameter("certificateId") @Nullable String certificateId,
-        @OutputCustomType.Parameter("pendingManagedCertificateId") @Nullable String pendingManagedCertificateId,
-        @OutputCustomType.Parameter("sslManagementType") String sslManagementType) {
+        @CustomType.Parameter("certificateId") @Nullable String certificateId,
+        @CustomType.Parameter("pendingManagedCertificateId") @Nullable String pendingManagedCertificateId,
+        @CustomType.Parameter("sslManagementType") String sslManagementType) {
         this.certificateId = certificateId;
         this.pendingManagedCertificateId = pendingManagedCertificateId;
         this.sslManagementType = sslManagementType;

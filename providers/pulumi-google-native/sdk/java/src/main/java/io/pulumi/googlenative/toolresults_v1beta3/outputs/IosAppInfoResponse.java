@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IosAppInfoResponse {
     /**
      * The name of the app. Required
@@ -15,8 +15,8 @@ public final class IosAppInfoResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private IosAppInfoResponse(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private IosAppInfoResponse(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

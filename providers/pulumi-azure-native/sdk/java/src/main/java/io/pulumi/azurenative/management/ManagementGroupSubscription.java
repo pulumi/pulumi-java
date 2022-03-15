@@ -8,7 +8,7 @@ import io.pulumi.azurenative.management.ManagementGroupSubscriptionArgs;
 import io.pulumi.azurenative.management.outputs.DescendantParentGroupInfoResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ManagementGroupSubscription extends io.pulumi.resources.CustomResou
      * The friendly name of the subscription.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -49,7 +49,7 @@ public class ManagementGroupSubscription extends io.pulumi.resources.CustomResou
      * The stringified id of the subscription. For example, 00000000-0000-0000-0000-000000000000
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class ManagementGroupSubscription extends io.pulumi.resources.CustomResou
      * The ID of the parent management group.
      * 
      */
-    @OutputExport(name="parent", type=DescendantParentGroupInfoResponse.class, parameters={})
+    @Export(name="parent", type=DescendantParentGroupInfoResponse.class, parameters={})
     private Output</* @Nullable */ DescendantParentGroupInfoResponse> parent;
 
     /**
@@ -77,7 +77,7 @@ public class ManagementGroupSubscription extends io.pulumi.resources.CustomResou
      * The state of the subscription.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
@@ -91,7 +91,7 @@ public class ManagementGroupSubscription extends io.pulumi.resources.CustomResou
      * The AAD Tenant ID associated with the subscription. For example, 00000000-0000-0000-0000-000000000000
      * 
      */
-    @OutputExport(name="tenant", type=String.class, parameters={})
+    @Export(name="tenant", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenant;
 
     /**
@@ -105,7 +105,7 @@ public class ManagementGroupSubscription extends io.pulumi.resources.CustomResou
      * The type of the resource.  For example, Microsoft.Management/managementGroups/subscriptions
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

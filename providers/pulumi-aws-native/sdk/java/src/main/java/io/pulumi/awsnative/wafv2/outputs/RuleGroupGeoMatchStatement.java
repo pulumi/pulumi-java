@@ -4,22 +4,22 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupForwardedIPConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupGeoMatchStatement {
     private final @Nullable List<String> countryCodes;
     private final @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupGeoMatchStatement(
-        @OutputCustomType.Parameter("countryCodes") @Nullable List<String> countryCodes,
-        @OutputCustomType.Parameter("forwardedIPConfig") @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig) {
+        @CustomType.Parameter("countryCodes") @Nullable List<String> countryCodes,
+        @CustomType.Parameter("forwardedIPConfig") @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig) {
         this.countryCodes = countryCodes;
         this.forwardedIPConfig = forwardedIPConfig;
     }

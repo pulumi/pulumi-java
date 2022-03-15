@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.BackendServiceIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,35 +16,35 @@ public final class BackendServiceIamBindingArgs extends io.pulumi.resources.Reso
 
     public static final BackendServiceIamBindingArgs Empty = new BackendServiceIamBindingArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<BackendServiceIamBindingConditionArgs> condition;
 
     public Output<BackendServiceIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
         return this.members;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

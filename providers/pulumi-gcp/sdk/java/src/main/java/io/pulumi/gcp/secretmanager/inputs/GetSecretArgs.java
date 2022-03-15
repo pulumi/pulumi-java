@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the project in which the resource belongs.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
@@ -29,7 +29,7 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the secret.
      * 
      */
-    @InputImport(name="secretId", required=true)
+    @Import(name="secretId", required=true)
       private final String secretId;
 
     public String getSecretId() {

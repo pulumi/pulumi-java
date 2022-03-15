@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VpnClientConnectionHealthDetailResponse {
     /**
      * The egress bytes per second.
@@ -71,20 +71,20 @@ public final class VpnClientConnectionHealthDetailResponse {
      */
     private final String vpnUserName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpnClientConnectionHealthDetailResponse(
-        @OutputCustomType.Parameter("egressBytesTransferred") Double egressBytesTransferred,
-        @OutputCustomType.Parameter("egressPacketsTransferred") Double egressPacketsTransferred,
-        @OutputCustomType.Parameter("ingressBytesTransferred") Double ingressBytesTransferred,
-        @OutputCustomType.Parameter("ingressPacketsTransferred") Double ingressPacketsTransferred,
-        @OutputCustomType.Parameter("maxBandwidth") Double maxBandwidth,
-        @OutputCustomType.Parameter("maxPacketsPerSecond") Double maxPacketsPerSecond,
-        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
-        @OutputCustomType.Parameter("publicIpAddress") String publicIpAddress,
-        @OutputCustomType.Parameter("vpnConnectionDuration") Double vpnConnectionDuration,
-        @OutputCustomType.Parameter("vpnConnectionId") String vpnConnectionId,
-        @OutputCustomType.Parameter("vpnConnectionTime") String vpnConnectionTime,
-        @OutputCustomType.Parameter("vpnUserName") String vpnUserName) {
+        @CustomType.Parameter("egressBytesTransferred") Double egressBytesTransferred,
+        @CustomType.Parameter("egressPacketsTransferred") Double egressPacketsTransferred,
+        @CustomType.Parameter("ingressBytesTransferred") Double ingressBytesTransferred,
+        @CustomType.Parameter("ingressPacketsTransferred") Double ingressPacketsTransferred,
+        @CustomType.Parameter("maxBandwidth") Double maxBandwidth,
+        @CustomType.Parameter("maxPacketsPerSecond") Double maxPacketsPerSecond,
+        @CustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @CustomType.Parameter("publicIpAddress") String publicIpAddress,
+        @CustomType.Parameter("vpnConnectionDuration") Double vpnConnectionDuration,
+        @CustomType.Parameter("vpnConnectionId") String vpnConnectionId,
+        @CustomType.Parameter("vpnConnectionTime") String vpnConnectionTime,
+        @CustomType.Parameter("vpnUserName") String vpnUserName) {
         this.egressBytesTransferred = egressBytesTransferred;
         this.egressPacketsTransferred = egressPacketsTransferred;
         this.ingressBytesTransferred = ingressBytesTransferred;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.CxAgentArgs;
@@ -49,7 +49,7 @@ public class CxAgent extends io.pulumi.resources.CustomResource {
      * The URI of the agent's avatar. Avatars are used throughout the Dialogflow console and in the self-hosted Web Demo integration.
      * 
      */
-    @OutputExport(name="avatarUri", type=String.class, parameters={})
+    @Export(name="avatarUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> avatarUri;
 
     /**
@@ -64,7 +64,7 @@ public class CxAgent extends io.pulumi.resources.CustomResource {
      * for a list of the currently supported language codes. This field cannot be updated after creation.
      * 
      */
-    @OutputExport(name="defaultLanguageCode", type=String.class, parameters={})
+    @Export(name="defaultLanguageCode", type=String.class, parameters={})
     private Output<String> defaultLanguageCode;
 
     /**
@@ -79,7 +79,7 @@ public class CxAgent extends io.pulumi.resources.CustomResource {
      * The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -93,7 +93,7 @@ public class CxAgent extends io.pulumi.resources.CustomResource {
      * The human-readable name of the agent, unique within the location.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -107,7 +107,7 @@ public class CxAgent extends io.pulumi.resources.CustomResource {
      * Indicates if automatic spell correction is enabled in detect intent requests.
      * 
      */
-    @OutputExport(name="enableSpellCorrection", type=Boolean.class, parameters={})
+    @Export(name="enableSpellCorrection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableSpellCorrection;
 
     /**
@@ -121,7 +121,7 @@ public class CxAgent extends io.pulumi.resources.CustomResource {
      * Determines whether this agent should log conversation queries.
      * 
      */
-    @OutputExport(name="enableStackdriverLogging", type=Boolean.class, parameters={})
+    @Export(name="enableStackdriverLogging", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableStackdriverLogging;
 
     /**
@@ -138,7 +138,7 @@ public class CxAgent extends io.pulumi.resources.CustomResource {
      * Another options is to use global location so you don't need to manually configure location settings.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -155,7 +155,7 @@ public class CxAgent extends io.pulumi.resources.CustomResource {
      * The unique identifier of the agent.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -170,7 +170,7 @@ public class CxAgent extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -185,7 +185,7 @@ public class CxAgent extends io.pulumi.resources.CustomResource {
      * Name of the SecuritySettings reference for the agent. Format: projects/<Project ID>/locations/<Location ID>/securitySettings/<Security Settings ID>.
      * 
      */
-    @OutputExport(name="securitySettings", type=String.class, parameters={})
+    @Export(name="securitySettings", type=String.class, parameters={})
     private Output</* @Nullable */ String> securitySettings;
 
     /**
@@ -200,7 +200,7 @@ public class CxAgent extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="speechToTextSettings", type=CxAgentSpeechToTextSettings.class, parameters={})
+    @Export(name="speechToTextSettings", type=CxAgentSpeechToTextSettings.class, parameters={})
     private Output</* @Nullable */ CxAgentSpeechToTextSettings> speechToTextSettings;
 
     /**
@@ -217,7 +217,7 @@ public class CxAgent extends io.pulumi.resources.CustomResource {
      * ID>.
      * 
      */
-    @OutputExport(name="startFlow", type=String.class, parameters={})
+    @Export(name="startFlow", type=String.class, parameters={})
     private Output<String> startFlow;
 
     /**
@@ -233,7 +233,7 @@ public class CxAgent extends io.pulumi.resources.CustomResource {
      * The list of all languages supported by this agent (except for the default_language_code).
      * 
      */
-    @OutputExport(name="supportedLanguageCodes", type=List.class, parameters={String.class})
+    @Export(name="supportedLanguageCodes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> supportedLanguageCodes;
 
     /**
@@ -248,7 +248,7 @@ public class CxAgent extends io.pulumi.resources.CustomResource {
      * Europe/Paris.
      * 
      */
-    @OutputExport(name="timeZone", type=String.class, parameters={})
+    @Export(name="timeZone", type=String.class, parameters={})
     private Output<String> timeZone;
 
     /**

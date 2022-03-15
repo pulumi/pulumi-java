@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class JobColumnSelector extends io.pulumi.resources.InvokeArgs {
 
     public static final JobColumnSelector Empty = new JobColumnSelector();
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
-    @InputImport(name="regex")
+    @Import(name="regex")
       private final @Nullable String regex;
 
     public Optional<String> getRegex() {

@@ -6,14 +6,14 @@ package io.pulumi.awsnative.lex.outputs;
 import io.pulumi.awsnative.lex.outputs.BotExternalSourceSetting;
 import io.pulumi.awsnative.lex.outputs.BotSlotTypeValue;
 import io.pulumi.awsnative.lex.outputs.BotSlotValueSelectionSetting;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotSlotType {
     private final @Nullable String description;
     private final @Nullable BotExternalSourceSetting externalSourceSetting;
@@ -22,14 +22,14 @@ public final class BotSlotType {
     private final @Nullable List<BotSlotTypeValue> slotTypeValues;
     private final @Nullable BotSlotValueSelectionSetting valueSelectionSetting;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotSlotType(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("externalSourceSetting") @Nullable BotExternalSourceSetting externalSourceSetting,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parentSlotTypeSignature") @Nullable String parentSlotTypeSignature,
-        @OutputCustomType.Parameter("slotTypeValues") @Nullable List<BotSlotTypeValue> slotTypeValues,
-        @OutputCustomType.Parameter("valueSelectionSetting") @Nullable BotSlotValueSelectionSetting valueSelectionSetting) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("externalSourceSetting") @Nullable BotExternalSourceSetting externalSourceSetting,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parentSlotTypeSignature") @Nullable String parentSlotTypeSignature,
+        @CustomType.Parameter("slotTypeValues") @Nullable List<BotSlotTypeValue> slotTypeValues,
+        @CustomType.Parameter("valueSelectionSetting") @Nullable BotSlotValueSelectionSetting valueSelectionSetting) {
         this.description = description;
         this.externalSourceSetting = externalSourceSetting;
         this.name = name;

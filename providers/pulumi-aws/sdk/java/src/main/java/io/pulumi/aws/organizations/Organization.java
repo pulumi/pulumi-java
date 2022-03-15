@@ -10,7 +10,7 @@ import io.pulumi.aws.organizations.outputs.OrganizationAccount;
 import io.pulumi.aws.organizations.outputs.OrganizationNonMasterAccount;
 import io.pulumi.aws.organizations.outputs.OrganizationRoot;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * List of organization accounts including the master account. For a list excluding the master account, see the `non_master_accounts` attribute. All elements have these attributes:
      * 
      */
-    @OutputExport(name="accounts", type=List.class, parameters={OrganizationAccount.class})
+    @Export(name="accounts", type=List.class, parameters={OrganizationAccount.class})
     private Output<List<OrganizationAccount>> accounts;
 
     /**
@@ -52,7 +52,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * ARN of the root
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -66,7 +66,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * List of AWS service principal names for which you want to enable integration with your organization. This is typically in the form of a URL, such as service-abbreviation.amazonaws.com. Organization must have `feature_set` set to `ALL`. For additional information, see the [AWS Organizations User Guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html).
      * 
      */
-    @OutputExport(name="awsServiceAccessPrincipals", type=List.class, parameters={String.class})
+    @Export(name="awsServiceAccessPrincipals", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> awsServiceAccessPrincipals;
 
     /**
@@ -80,7 +80,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * List of Organizations policy types to enable in the Organization Root. Organization must have `feature_set` set to `ALL`. For additional information about valid policy types (e.g., `AISERVICES_OPT_OUT_POLICY`, `BACKUP_POLICY`, `SERVICE_CONTROL_POLICY`, and `TAG_POLICY`), see the [AWS Organizations API Reference](https://docs.aws.amazon.com/organizations/latest/APIReference/API_EnablePolicyType.html).
      * 
      */
-    @OutputExport(name="enabledPolicyTypes", type=List.class, parameters={String.class})
+    @Export(name="enabledPolicyTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> enabledPolicyTypes;
 
     /**
@@ -94,7 +94,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Specify "ALL" (default) or "CONSOLIDATED_BILLING".
      * 
      */
-    @OutputExport(name="featureSet", type=String.class, parameters={})
+    @Export(name="featureSet", type=String.class, parameters={})
     private Output</* @Nullable */ String> featureSet;
 
     /**
@@ -108,7 +108,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * ARN of the master account
      * 
      */
-    @OutputExport(name="masterAccountArn", type=String.class, parameters={})
+    @Export(name="masterAccountArn", type=String.class, parameters={})
     private Output<String> masterAccountArn;
 
     /**
@@ -122,7 +122,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Email address of the master account
      * 
      */
-    @OutputExport(name="masterAccountEmail", type=String.class, parameters={})
+    @Export(name="masterAccountEmail", type=String.class, parameters={})
     private Output<String> masterAccountEmail;
 
     /**
@@ -136,7 +136,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Identifier of the master account
      * 
      */
-    @OutputExport(name="masterAccountId", type=String.class, parameters={})
+    @Export(name="masterAccountId", type=String.class, parameters={})
     private Output<String> masterAccountId;
 
     /**
@@ -150,7 +150,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * List of organization accounts excluding the master account. For a list including the master account, see the `accounts` attribute. All elements have these attributes:
      * 
      */
-    @OutputExport(name="nonMasterAccounts", type=List.class, parameters={OrganizationNonMasterAccount.class})
+    @Export(name="nonMasterAccounts", type=List.class, parameters={OrganizationNonMasterAccount.class})
     private Output<List<OrganizationNonMasterAccount>> nonMasterAccounts;
 
     /**
@@ -164,7 +164,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * List of organization roots. All elements have these attributes:
      * 
      */
-    @OutputExport(name="roots", type=List.class, parameters={OrganizationRoot.class})
+    @Export(name="roots", type=List.class, parameters={OrganizationRoot.class})
     private Output<List<OrganizationRoot>> roots;
 
     /**

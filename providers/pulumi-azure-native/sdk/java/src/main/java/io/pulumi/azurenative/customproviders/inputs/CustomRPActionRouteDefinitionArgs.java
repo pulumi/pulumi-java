@@ -6,7 +6,7 @@ package io.pulumi.azurenative.customproviders.inputs;
 import io.pulumi.azurenative.customproviders.enums.ActionRouting;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class CustomRPActionRouteDefinitionArgs extends io.pulumi.resources
      * The route definition endpoint URI that the custom resource provider will proxy requests to. This can be in the form of a flat URI (e.g. 'https://testendpoint/') or can specify to route via a path (e.g. 'https://testendpoint/{requestPath}')
      * 
      */
-    @InputImport(name="endpoint", required=true)
+    @Import(name="endpoint", required=true)
       private final Output<String> endpoint;
 
     public Output<String> getEndpoint() {
@@ -35,7 +35,7 @@ public final class CustomRPActionRouteDefinitionArgs extends io.pulumi.resources
      * The name of the route definition. This becomes the name for the ARM extension (e.g. '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CustomProviders/resourceProviders/{resourceProviderName}/{name}')
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class CustomRPActionRouteDefinitionArgs extends io.pulumi.resources
      * The routing types that are supported for action requests.
      * 
      */
-    @InputImport(name="routingType")
+    @Import(name="routingType")
       private final @Nullable Output<Either<String,ActionRouting>> routingType;
 
     public Output<Either<String,ActionRouting>> getRoutingType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse exten
      * The environment ID associated with the metrics.
      * 
      */
-    @InputImport(name="env", required=true)
+    @Import(name="env", required=true)
       private final String env;
 
     public String getEnv() {
@@ -31,7 +31,7 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse exten
      * The instance ID associated with the metrics. In Apigee Hybrid, the value is configured during installation.
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final String instanceId;
 
     public String getInstanceId() {
@@ -42,7 +42,7 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse exten
      * The location associated with the metrics.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {

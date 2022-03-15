@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.policy_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.policy_v1beta1.outputs.IDRange;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SupplementalGroupsStrategyOptions {
     /**
      * ranges are the allowed ranges of supplemental groups.  If you would like to force a single supplemental group then supply a single range with the same start and end. Required for MustRunAs.
@@ -24,10 +24,10 @@ public final class SupplementalGroupsStrategyOptions {
      */
     private final @Nullable String rule;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SupplementalGroupsStrategyOptions(
-        @OutputCustomType.Parameter("ranges") @Nullable List<IDRange> ranges,
-        @OutputCustomType.Parameter("rule") @Nullable String rule) {
+        @CustomType.Parameter("ranges") @Nullable List<IDRange> ranges,
+        @CustomType.Parameter("rule") @Nullable String rule) {
         this.ranges = ranges;
         this.rule = rule;
     }

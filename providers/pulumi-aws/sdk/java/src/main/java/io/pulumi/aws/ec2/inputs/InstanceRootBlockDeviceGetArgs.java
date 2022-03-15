@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class InstanceRootBlockDeviceGetArgs extends io.pulumi.resources.Re
      * Whether the volume should be destroyed on instance termination. Defaults to `true`.
      * 
      */
-    @InputImport(name="deleteOnTermination")
+    @Import(name="deleteOnTermination")
       private final @Nullable Output<Boolean> deleteOnTermination;
 
     public Output<Boolean> getDeleteOnTermination() {
@@ -32,7 +32,7 @@ public final class InstanceRootBlockDeviceGetArgs extends io.pulumi.resources.Re
      * Name of the device to mount.
      * 
      */
-    @InputImport(name="deviceName")
+    @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -43,7 +43,7 @@ public final class InstanceRootBlockDeviceGetArgs extends io.pulumi.resources.Re
      * Whether to enable volume encryption. Defaults to `false`. Must be configured to perform drift detection.
      * 
      */
-    @InputImport(name="encrypted")
+    @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
@@ -54,7 +54,7 @@ public final class InstanceRootBlockDeviceGetArgs extends io.pulumi.resources.Re
      * Amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `io1`, `io2` or `gp3`.
      * 
      */
-    @InputImport(name="iops")
+    @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
@@ -65,7 +65,7 @@ public final class InstanceRootBlockDeviceGetArgs extends io.pulumi.resources.Re
      * Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -76,7 +76,7 @@ public final class InstanceRootBlockDeviceGetArgs extends io.pulumi.resources.Re
      * A map of tags to assign to the device.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -87,7 +87,7 @@ public final class InstanceRootBlockDeviceGetArgs extends io.pulumi.resources.Re
      * Throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `gp3`.
      * 
      */
-    @InputImport(name="throughput")
+    @Import(name="throughput")
       private final @Nullable Output<Integer> throughput;
 
     public Output<Integer> getThroughput() {
@@ -98,7 +98,7 @@ public final class InstanceRootBlockDeviceGetArgs extends io.pulumi.resources.Re
      * ID of the volume. For example, the ID can be accessed like this, `aws_instance.web.root_block_device.0.volume_id`.
      * 
      */
-    @InputImport(name="volumeId")
+    @Import(name="volumeId")
       private final @Nullable Output<String> volumeId;
 
     public Output<String> getVolumeId() {
@@ -109,7 +109,7 @@ public final class InstanceRootBlockDeviceGetArgs extends io.pulumi.resources.Re
      * Size of the volume in gibibytes (GiB).
      * 
      */
-    @InputImport(name="volumeSize")
+    @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
     public Output<Integer> getVolumeSize() {
@@ -120,7 +120,7 @@ public final class InstanceRootBlockDeviceGetArgs extends io.pulumi.resources.Re
      * Type of volume. Valid values include `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1`, or `st1`. Defaults to `gp2`.
      * 
      */
-    @InputImport(name="volumeType")
+    @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {

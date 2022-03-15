@@ -3,24 +3,24 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThrottlingMetricResponse {
     private final @Nullable String interval;
     private final Double limit;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ThrottlingMetricResponse(
-        @OutputCustomType.Parameter("interval") @Nullable String interval,
-        @OutputCustomType.Parameter("limit") Double limit,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("interval") @Nullable String interval,
+        @CustomType.Parameter("limit") Double limit,
+        @CustomType.Parameter("type") String type) {
         this.interval = interval;
         this.limit = limit;
         this.type = type;

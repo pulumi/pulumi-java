@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SchematizedDataResponse {
     /**
      * JSON output of the parser.
@@ -20,10 +20,10 @@ public final class SchematizedDataResponse {
      */
     private final String error;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SchematizedDataResponse(
-        @OutputCustomType.Parameter("data") String data,
-        @OutputCustomType.Parameter("error") String error) {
+        @CustomType.Parameter("data") String data,
+        @CustomType.Parameter("error") String error) {
         this.data = data;
         this.error = error;
     }

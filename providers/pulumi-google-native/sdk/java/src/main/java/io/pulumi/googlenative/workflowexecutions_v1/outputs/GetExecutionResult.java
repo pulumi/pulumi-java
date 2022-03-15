@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.workflowexecutions_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.workflowexecutions_v1.outputs.ErrorResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetExecutionResult {
     /**
      * Input parameters of the execution represented as a JSON string. The size limit is 32KB. *Note*: If you are using the REST API directly to run your workflow, you must escape any JSON string value of `argument`. Example: `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`
@@ -56,17 +56,17 @@ public final class GetExecutionResult {
      */
     private final String workflowRevisionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExecutionResult(
-        @OutputCustomType.Parameter("argument") String argument,
-        @OutputCustomType.Parameter("callLogLevel") String callLogLevel,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("error") ErrorResponse error,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("result") String result,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("workflowRevisionId") String workflowRevisionId) {
+        @CustomType.Parameter("argument") String argument,
+        @CustomType.Parameter("callLogLevel") String callLogLevel,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("error") ErrorResponse error,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("result") String result,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("workflowRevisionId") String workflowRevisionId) {
         this.argument = argument;
         this.callLogLevel = callLogLevel;
         this.endTime = endTime;

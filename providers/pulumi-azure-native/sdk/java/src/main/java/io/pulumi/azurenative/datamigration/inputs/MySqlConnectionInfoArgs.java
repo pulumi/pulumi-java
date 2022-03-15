@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
      * Password credential.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -34,7 +34,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
      * Port for Server
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -45,7 +45,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
      * Name of the server
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -57,7 +57,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
      * Expected value is 'MySqlConnectionInfo'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -68,7 +68,7 @@ public final class MySqlConnectionInfoArgs extends io.pulumi.resources.ResourceA
      * User name
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {

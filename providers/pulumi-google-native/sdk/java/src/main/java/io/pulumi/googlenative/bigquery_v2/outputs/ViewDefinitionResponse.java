@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.UserDefinedFunctionResourceResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ViewDefinitionResponse {
     /**
      * [Required] A query that BigQuery executes when the view is referenced.
@@ -33,12 +33,12 @@ public final class ViewDefinitionResponse {
      */
     private final List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ViewDefinitionResponse(
-        @OutputCustomType.Parameter("query") String query,
-        @OutputCustomType.Parameter("useExplicitColumnNames") Boolean useExplicitColumnNames,
-        @OutputCustomType.Parameter("useLegacySql") Boolean useLegacySql,
-        @OutputCustomType.Parameter("userDefinedFunctionResources") List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources) {
+        @CustomType.Parameter("query") String query,
+        @CustomType.Parameter("useExplicitColumnNames") Boolean useExplicitColumnNames,
+        @CustomType.Parameter("useLegacySql") Boolean useLegacySql,
+        @CustomType.Parameter("userDefinedFunctionResources") List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources) {
         this.query = query;
         this.useExplicitColumnNames = useExplicitColumnNames;
         this.useLegacySql = useLegacySql;

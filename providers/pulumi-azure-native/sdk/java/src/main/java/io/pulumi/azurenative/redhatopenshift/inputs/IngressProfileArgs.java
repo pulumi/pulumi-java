@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.redhatopenshift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The IP of the ingress (immutable).
      * 
      */
-    @InputImport(name="ip")
+    @Import(name="ip")
       private final @Nullable Output<String> ip;
 
     public Output<String> getIp() {
@@ -33,7 +33,7 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The ingress profile name.  Must be "default" (immutable).
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Ingress visibility (immutable).
      * 
      */
-    @InputImport(name="visibility")
+    @Import(name="visibility")
       private final @Nullable Output<String> visibility;
 
     public Output<String> getVisibility() {

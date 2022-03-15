@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedZoneServiceDirectoryConfigNamespace {
     /**
      * The fully qualified or partial URL of the service directory namespace that should be
@@ -19,8 +19,8 @@ public final class ManagedZoneServiceDirectoryConfigNamespace {
      */
     private final String namespaceUrl;
 
-    @OutputCustomType.Constructor
-    private ManagedZoneServiceDirectoryConfigNamespace(@OutputCustomType.Parameter("namespaceUrl") String namespaceUrl) {
+    @CustomType.Constructor
+    private ManagedZoneServiceDirectoryConfigNamespace(@CustomType.Parameter("namespaceUrl") String namespaceUrl) {
         this.namespaceUrl = namespaceUrl;
     }
 

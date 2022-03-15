@@ -12,7 +12,7 @@ import io.pulumi.awsnative.budgets.outputs.BudgetsActionActionThreshold;
 import io.pulumi.awsnative.budgets.outputs.BudgetsActionDefinition;
 import io.pulumi.awsnative.budgets.outputs.BudgetsActionSubscriber;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,55 +24,55 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:budgets:BudgetsAction")
 public class BudgetsAction extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="actionId", type=String.class, parameters={})
+    @Export(name="actionId", type=String.class, parameters={})
     private Output<String> actionId;
 
     public Output<String> getActionId() {
         return this.actionId;
     }
-    @OutputExport(name="actionThreshold", type=BudgetsActionActionThreshold.class, parameters={})
+    @Export(name="actionThreshold", type=BudgetsActionActionThreshold.class, parameters={})
     private Output<BudgetsActionActionThreshold> actionThreshold;
 
     public Output<BudgetsActionActionThreshold> getActionThreshold() {
         return this.actionThreshold;
     }
-    @OutputExport(name="actionType", type=BudgetsActionActionType.class, parameters={})
+    @Export(name="actionType", type=BudgetsActionActionType.class, parameters={})
     private Output<BudgetsActionActionType> actionType;
 
     public Output<BudgetsActionActionType> getActionType() {
         return this.actionType;
     }
-    @OutputExport(name="approvalModel", type=BudgetsActionApprovalModel.class, parameters={})
+    @Export(name="approvalModel", type=BudgetsActionApprovalModel.class, parameters={})
     private Output</* @Nullable */ BudgetsActionApprovalModel> approvalModel;
 
     public Output</* @Nullable */ BudgetsActionApprovalModel> getApprovalModel() {
         return this.approvalModel;
     }
-    @OutputExport(name="budgetName", type=String.class, parameters={})
+    @Export(name="budgetName", type=String.class, parameters={})
     private Output<String> budgetName;
 
     public Output<String> getBudgetName() {
         return this.budgetName;
     }
-    @OutputExport(name="definition", type=BudgetsActionDefinition.class, parameters={})
+    @Export(name="definition", type=BudgetsActionDefinition.class, parameters={})
     private Output<BudgetsActionDefinition> definition;
 
     public Output<BudgetsActionDefinition> getDefinition() {
         return this.definition;
     }
-    @OutputExport(name="executionRoleArn", type=String.class, parameters={})
+    @Export(name="executionRoleArn", type=String.class, parameters={})
     private Output<String> executionRoleArn;
 
     public Output<String> getExecutionRoleArn() {
         return this.executionRoleArn;
     }
-    @OutputExport(name="notificationType", type=BudgetsActionNotificationType.class, parameters={})
+    @Export(name="notificationType", type=BudgetsActionNotificationType.class, parameters={})
     private Output<BudgetsActionNotificationType> notificationType;
 
     public Output<BudgetsActionNotificationType> getNotificationType() {
         return this.notificationType;
     }
-    @OutputExport(name="subscribers", type=List.class, parameters={BudgetsActionSubscriber.class})
+    @Export(name="subscribers", type=List.class, parameters={BudgetsActionSubscriber.class})
     private Output<List<BudgetsActionSubscriber>> subscribers;
 
     public Output<List<BudgetsActionSubscriber>> getSubscribers() {

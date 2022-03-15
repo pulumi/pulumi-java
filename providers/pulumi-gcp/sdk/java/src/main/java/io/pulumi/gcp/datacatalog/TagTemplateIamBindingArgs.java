@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.datacatalog.inputs.TagTemplateIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,42 +16,42 @@ public final class TagTemplateIamBindingArgs extends io.pulumi.resources.Resourc
 
     public static final TagTemplateIamBindingArgs Empty = new TagTemplateIamBindingArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<TagTemplateIamBindingConditionArgs> condition;
 
     public Output<TagTemplateIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
         return this.members;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
         return this.region == null ? Output.empty() : this.region;
     }
 
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {
         return this.role;
     }
 
-    @InputImport(name="tagTemplate", required=true)
+    @Import(name="tagTemplate", required=true)
       private final Output<String> tagTemplate;
 
     public Output<String> getTagTemplate() {

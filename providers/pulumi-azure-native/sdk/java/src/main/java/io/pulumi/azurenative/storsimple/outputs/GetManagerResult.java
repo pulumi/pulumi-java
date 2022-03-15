@@ -5,14 +5,14 @@ package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.ManagerIntrinsicSettingsResponse;
 import io.pulumi.azurenative.storsimple.outputs.ManagerSkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetManagerResult {
     /**
      * Represents the type of StorSimple Manager.
@@ -60,17 +60,17 @@ public final class GetManagerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagerResult(
-        @OutputCustomType.Parameter("cisIntrinsicSettings") @Nullable ManagerIntrinsicSettingsResponse cisIntrinsicSettings,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("sku") @Nullable ManagerSkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("cisIntrinsicSettings") @Nullable ManagerIntrinsicSettingsResponse cisIntrinsicSettings,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("sku") @Nullable ManagerSkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.cisIntrinsicSettings = cisIntrinsicSettings;
         this.etag = etag;
         this.id = id;

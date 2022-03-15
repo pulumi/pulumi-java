@@ -8,7 +8,7 @@ import io.pulumi.aws.s3.BucketObjectArgs;
 import io.pulumi.aws.s3.inputs.BucketObjectState;
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -41,7 +41,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * [Canned ACL](https://docs.aws.amazon.com/AmazonS3/latest/dev/acl-overview.html#canned-acl) to apply. Valid values are `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, `bucket-owner-read`, and `bucket-owner-full-control`. Defaults to `private`.
      * 
      */
-    @OutputExport(name="acl", type=String.class, parameters={})
+    @Export(name="acl", type=String.class, parameters={})
     private Output</* @Nullable */ String> acl;
 
     /**
@@ -55,7 +55,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Name of the bucket to put the file in. Alternatively, an [S3 access point](https://docs.aws.amazon.com/AmazonS3/latest/dev/using-access-points.html) ARN can be specified.
      * 
      */
-    @OutputExport(name="bucket", type=String.class, parameters={})
+    @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
@@ -69,7 +69,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Whether or not to use [Amazon S3 Bucket Keys](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-key.html) for SSE-KMS.
      * 
      */
-    @OutputExport(name="bucketKeyEnabled", type=Boolean.class, parameters={})
+    @Export(name="bucketKeyEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> bucketKeyEnabled;
 
     /**
@@ -83,7 +83,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Caching behavior along the request/reply chain Read [w3c cache_control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) for further details.
      * 
      */
-    @OutputExport(name="cacheControl", type=String.class, parameters={})
+    @Export(name="cacheControl", type=String.class, parameters={})
     private Output</* @Nullable */ String> cacheControl;
 
     /**
@@ -97,7 +97,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
      * 
      */
-    @OutputExport(name="content", type=String.class, parameters={})
+    @Export(name="content", type=String.class, parameters={})
     private Output</* @Nullable */ String> content;
 
     /**
@@ -111,7 +111,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the `gzipbase64` function with small text strings. For larger objects, use `source` to stream the content from a disk file.
      * 
      */
-    @OutputExport(name="contentBase64", type=String.class, parameters={})
+    @Export(name="contentBase64", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentBase64;
 
     /**
@@ -125,7 +125,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Presentational information for the object. Read [w3c content_disposition](http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1) for further information.
      * 
      */
-    @OutputExport(name="contentDisposition", type=String.class, parameters={})
+    @Export(name="contentDisposition", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentDisposition;
 
     /**
@@ -139,7 +139,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Content encodings that have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read [w3c content encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11) for further information.
      * 
      */
-    @OutputExport(name="contentEncoding", type=String.class, parameters={})
+    @Export(name="contentEncoding", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentEncoding;
 
     /**
@@ -153,7 +153,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Language the content is in e.g., en-US or en-GB.
      * 
      */
-    @OutputExport(name="contentLanguage", type=String.class, parameters={})
+    @Export(name="contentLanguage", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentLanguage;
 
     /**
@@ -167,7 +167,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Standard MIME type describing the format of the object data, e.g., application/octet-stream. All Valid MIME Types are valid for this input.
      * 
      */
-    @OutputExport(name="contentType", type=String.class, parameters={})
+    @Export(name="contentType", type=String.class, parameters={})
     private Output<String> contentType;
 
     /**
@@ -181,7 +181,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Triggers updates when the value changes. The only meaningful value is `filemd5("path/to/file")`. This attribute is not compatible with KMS encryption, `kms_key_id` or `server_side_encryption = "aws:kms"` (see `source_hash` instead).
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -195,7 +195,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Whether to allow the object to be deleted by removing any legal hold on any object version. Default is `false`. This value should be set to `true` only if the bucket has S3 object lock enabled.
      * 
      */
-    @OutputExport(name="forceDestroy", type=Boolean.class, parameters={})
+    @Export(name="forceDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDestroy;
 
     /**
@@ -209,7 +209,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Name of the object once it is in the bucket.
      * 
      */
-    @OutputExport(name="key", type=String.class, parameters={})
+    @Export(name="key", type=String.class, parameters={})
     private Output<String> key;
 
     /**
@@ -223,7 +223,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * ARN of the KMS Key to use for object encryption. If the S3 Bucket has server-side encryption enabled, that value will automatically be used. If referencing the `aws.kms.Key` resource, use the `arn` attribute. If referencing the `aws.kms.Alias` data source or resource, use the `target_key_arn` attribute. This provider will only perform drift detection if a configuration value is provided.
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output<String> kmsKeyId;
 
     /**
@@ -237,7 +237,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Map of keys/values to provision metadata (will be automatically prefixed by `x-amz-meta-`, note that only lowercase label are currently supported by the AWS Go API).
      * 
      */
-    @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
+    @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> metadata;
 
     /**
@@ -251,7 +251,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * [Legal hold](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-legal-holds) status that you want to apply to the specified object. Valid values are `ON` and `OFF`.
      * 
      */
-    @OutputExport(name="objectLockLegalHoldStatus", type=String.class, parameters={})
+    @Export(name="objectLockLegalHoldStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> objectLockLegalHoldStatus;
 
     /**
@@ -265,7 +265,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Object lock [retention mode](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-modes) that you want to apply to this object. Valid values are `GOVERNANCE` and `COMPLIANCE`.
      * 
      */
-    @OutputExport(name="objectLockMode", type=String.class, parameters={})
+    @Export(name="objectLockMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> objectLockMode;
 
     /**
@@ -279,7 +279,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Date and time, in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8), when this object's object lock will [expire](https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock-overview.html#object-lock-retention-periods).
      * 
      */
-    @OutputExport(name="objectLockRetainUntilDate", type=String.class, parameters={})
+    @Export(name="objectLockRetainUntilDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> objectLockRetainUntilDate;
 
     /**
@@ -293,7 +293,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Server-side encryption of the object in S3. Valid values are "`AES256`" and "`aws:kms`".
      * 
      */
-    @OutputExport(name="serverSideEncryption", type=String.class, parameters={})
+    @Export(name="serverSideEncryption", type=String.class, parameters={})
     private Output<String> serverSideEncryption;
 
     /**
@@ -307,7 +307,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Path to a file that will be read and uploaded as raw bytes for the object content.
      * 
      */
-    @OutputExport(name="source", type=AssetOrArchive.class, parameters={})
+    @Export(name="source", type=AssetOrArchive.class, parameters={})
     private Output</* @Nullable */ AssetOrArchive> source;
 
     /**
@@ -321,7 +321,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Triggers updates like `etag` but useful to address `etag` encryption limitations. Set using `filemd5("path/to/source")`. (The value is only stored in state and not saved by AWS.)
      * 
      */
-    @OutputExport(name="sourceHash", type=String.class, parameters={})
+    @Export(name="sourceHash", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceHash;
 
     /**
@@ -335,7 +335,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * [Storage Class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObject.html#AmazonS3-PutObject-request-header-StorageClass) for the object. Defaults to "`STANDARD`".
      * 
      */
-    @OutputExport(name="storageClass", type=String.class, parameters={})
+    @Export(name="storageClass", type=String.class, parameters={})
     private Output<String> storageClass;
 
     /**
@@ -349,7 +349,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Map of tags to assign to the object. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -363,7 +363,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -377,7 +377,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Unique version ID value for the object, if bucket versioning is enabled.
      * 
      */
-    @OutputExport(name="versionId", type=String.class, parameters={})
+    @Export(name="versionId", type=String.class, parameters={})
     private Output<String> versionId;
 
     /**
@@ -391,7 +391,7 @@ public class BucketObject extends io.pulumi.resources.CustomResource {
      * Target URL for [website redirect](http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html).
      * 
      */
-    @OutputExport(name="websiteRedirect", type=String.class, parameters={})
+    @Export(name="websiteRedirect", type=String.class, parameters={})
     private Output</* @Nullable */ String> websiteRedirect;
 
     /**

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VideoPublishingOptionsResponse {
     /**
      * When set to 'true' content will not be archived or recorded. This is used, for example, when the topology is used only for low latency video streaming. Default is 'false'.  If set to 'true', then "disableRtspPublishing" must be set to 'false'.
@@ -22,10 +22,10 @@ public final class VideoPublishingOptionsResponse {
      */
     private final @Nullable String disableRtspPublishing;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VideoPublishingOptionsResponse(
-        @OutputCustomType.Parameter("disableArchive") @Nullable String disableArchive,
-        @OutputCustomType.Parameter("disableRtspPublishing") @Nullable String disableRtspPublishing) {
+        @CustomType.Parameter("disableArchive") @Nullable String disableArchive,
+        @CustomType.Parameter("disableRtspPublishing") @Nullable String disableRtspPublishing) {
         this.disableArchive = disableArchive;
         this.disableRtspPublishing = disableRtspPublishing;
     }

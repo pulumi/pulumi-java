@@ -4,7 +4,7 @@
 package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
      * The aspect ratio of thumbnails. The following values are valid: auto, 1:1, 4:3, 3:2, 16:9
      * 
      */
-    @InputImport(name="aspectRatio")
+    @Import(name="aspectRatio")
       private final @Nullable Output<String> aspectRatio;
 
     public Output<String> getAspectRatio() {
@@ -29,7 +29,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
      * The format of thumbnails, if any. Valid formats are jpg and png.
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable Output<String> format;
 
     public Output<String> getFormat() {
@@ -40,7 +40,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
      * The approximate number of seconds between thumbnails. The value must be an integer. The actual interval can vary by several seconds from one thumbnail to the next.
      * 
      */
-    @InputImport(name="interval")
+    @Import(name="interval")
       private final @Nullable Output<String> interval;
 
     public Output<String> getInterval() {
@@ -51,7 +51,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
      * The maximum height of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1080 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 3072, inclusive.
      * 
      */
-    @InputImport(name="maxHeight")
+    @Import(name="maxHeight")
       private final @Nullable Output<String> maxHeight;
 
     public Output<String> getMaxHeight() {
@@ -62,7 +62,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
      * The maximum width of thumbnails, in pixels. If you specify auto, Elastic Transcoder uses 1920 (Full HD) as the default value. If you specify a numeric value, enter an even integer between 32 and 4096, inclusive.
      * 
      */
-    @InputImport(name="maxWidth")
+    @Import(name="maxWidth")
       private final @Nullable Output<String> maxWidth;
 
     public Output<String> getMaxWidth() {
@@ -73,7 +73,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
      * When you set PaddingPolicy to Pad, Elastic Transcoder might add black bars to the top and bottom and/or left and right sides of thumbnails to make the total size of the thumbnails match the values that you specified for thumbnail MaxWidth and MaxHeight settings.
      * 
      */
-    @InputImport(name="paddingPolicy")
+    @Import(name="paddingPolicy")
       private final @Nullable Output<String> paddingPolicy;
 
     public Output<String> getPaddingPolicy() {
@@ -84,7 +84,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
      * The width and height of thumbnail files in pixels, in the format WidthxHeight, where both values are even integers. The values cannot exceed the width and height that you specified in the Video:Resolution object. (To better control resolution and aspect ratio of thumbnails, we recommend that you use the thumbnail values `max_width`, `max_height`, `sizing_policy`, and `padding_policy` instead of `resolution` and `aspect_ratio`. The two groups of settings are mutually exclusive. Do not use them together)
      * 
      */
-    @InputImport(name="resolution")
+    @Import(name="resolution")
       private final @Nullable Output<String> resolution;
 
     public Output<String> getResolution() {
@@ -95,7 +95,7 @@ public final class PresetThumbnailsGetArgs extends io.pulumi.resources.ResourceA
      * A value that controls scaling of thumbnails. Valid values are: `Fit`, `Fill`, `Stretch`, `Keep`, `ShrinkToFit`, and `ShrinkToFill`.
      * 
      */
-    @InputImport(name="sizingPolicy")
+    @Import(name="sizingPolicy")
       private final @Nullable Output<String> sizingPolicy;
 
     public Output<String> getSizingPolicy() {

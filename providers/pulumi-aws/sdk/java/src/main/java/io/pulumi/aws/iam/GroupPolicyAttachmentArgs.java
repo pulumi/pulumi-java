@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GroupPolicyAttachmentArgs extends io.pulumi.resources.Resourc
      * The group the policy should be applied to
      * 
      */
-    @InputImport(name="group", required=true)
+    @Import(name="group", required=true)
       private final Output<String> group;
 
     public Output<String> getGroup() {
@@ -28,7 +28,7 @@ public final class GroupPolicyAttachmentArgs extends io.pulumi.resources.Resourc
      * The ARN of the policy you want to apply
      * 
      */
-    @InputImport(name="policyArn", required=true)
+    @Import(name="policyArn", required=true)
       private final Output<String> policyArn;
 
     public Output<String> getPolicyArn() {

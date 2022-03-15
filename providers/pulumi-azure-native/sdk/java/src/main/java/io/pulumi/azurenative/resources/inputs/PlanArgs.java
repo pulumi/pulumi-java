@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * The plan ID.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * The offer ID.
      * 
      */
-    @InputImport(name="product")
+    @Import(name="product")
       private final @Nullable Output<String> product;
 
     public Output<String> getProduct() {
@@ -44,7 +44,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * The promotion code.
      * 
      */
-    @InputImport(name="promotionCode")
+    @Import(name="promotionCode")
       private final @Nullable Output<String> promotionCode;
 
     public Output<String> getPromotionCode() {
@@ -55,7 +55,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * The publisher ID.
      * 
      */
-    @InputImport(name="publisher")
+    @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
     public Output<String> getPublisher() {
@@ -66,7 +66,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * The plan's version.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

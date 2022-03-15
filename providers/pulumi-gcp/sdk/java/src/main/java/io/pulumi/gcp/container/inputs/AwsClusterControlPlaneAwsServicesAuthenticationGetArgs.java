@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationGetArgs extend
      * Required. The Amazon Resource Name (ARN) of the role that the Anthos Multi-Cloud API will assume when managing AWS resources on your account.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -29,7 +29,7 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationGetArgs extend
      * Optional. An identifier for the assumed role session. When unspecified, it defaults to `multicloud-service-agent`.
      * 
      */
-    @InputImport(name="roleSessionName")
+    @Import(name="roleSessionName")
       private final @Nullable Output<String> roleSessionName;
 
     public Output<String> getRoleSessionName() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.autoscaling.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GroupWarmPool {
     /**
      * Specifies the total maximum number of instances that are allowed to be in the warm pool or in any state except Terminated for the Auto Scaling group.
@@ -28,11 +28,11 @@ public final class GroupWarmPool {
      */
     private final @Nullable String poolState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GroupWarmPool(
-        @OutputCustomType.Parameter("maxGroupPreparedCapacity") @Nullable Integer maxGroupPreparedCapacity,
-        @OutputCustomType.Parameter("minSize") @Nullable Integer minSize,
-        @OutputCustomType.Parameter("poolState") @Nullable String poolState) {
+        @CustomType.Parameter("maxGroupPreparedCapacity") @Nullable Integer maxGroupPreparedCapacity,
+        @CustomType.Parameter("minSize") @Nullable Integer minSize,
+        @CustomType.Parameter("poolState") @Nullable String poolState) {
         this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
         this.minSize = minSize;
         this.poolState = poolState;

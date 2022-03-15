@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JavaScriptFunctionBindingResponse {
     /**
      * The JavaScript code containing a single function definition. For example: 'function (x, y) { return x + y; }'
@@ -23,10 +23,10 @@ public final class JavaScriptFunctionBindingResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JavaScriptFunctionBindingResponse(
-        @OutputCustomType.Parameter("script") @Nullable String script,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("script") @Nullable String script,
+        @CustomType.Parameter("type") String type) {
         this.script = script;
         this.type = type;
     }

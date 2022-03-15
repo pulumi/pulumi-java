@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,7 +32,7 @@ public final class AlertPolicyConditionConditionThresholdDenominatorAggregationA
      * otherwise an error is returned.
      * 
      */
-    @InputImport(name="alignmentPeriod")
+    @Import(name="alignmentPeriod")
       private final @Nullable Output<String> alignmentPeriod;
 
     public Output<String> getAlignmentPeriod() {
@@ -60,7 +60,7 @@ public final class AlertPolicyConditionConditionThresholdDenominatorAggregationA
      * Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
      * 
      */
-    @InputImport(name="crossSeriesReducer")
+    @Import(name="crossSeriesReducer")
       private final @Nullable Output<String> crossSeriesReducer;
 
     public Output<String> getCrossSeriesReducer() {
@@ -95,7 +95,7 @@ public final class AlertPolicyConditionConditionThresholdDenominatorAggregationA
      * ignored.
      * 
      */
-    @InputImport(name="groupByFields")
+    @Import(name="groupByFields")
       private final @Nullable Output<List<String>> groupByFields;
 
     public Output<List<String>> getGroupByFields() {
@@ -123,7 +123,7 @@ public final class AlertPolicyConditionConditionThresholdDenominatorAggregationA
      * Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
      * 
      */
-    @InputImport(name="perSeriesAligner")
+    @Import(name="perSeriesAligner")
       private final @Nullable Output<String> perSeriesAligner;
 
     public Output<String> getPerSeriesAligner() {

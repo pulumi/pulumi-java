@@ -4,12 +4,12 @@
 package io.pulumi.aws.s3control.outputs;
 
 import io.pulumi.aws.s3control.outputs.ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ObjectLambdaAccessPointConfigurationTransformationConfiguration {
     /**
      * The actions of an Object Lambda Access Point configuration. Valid values: `GetObject`.
@@ -22,10 +22,10 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
      */
     private final ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation contentTransformation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObjectLambdaAccessPointConfigurationTransformationConfiguration(
-        @OutputCustomType.Parameter("actions") List<String> actions,
-        @OutputCustomType.Parameter("contentTransformation") ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation contentTransformation) {
+        @CustomType.Parameter("actions") List<String> actions,
+        @CustomType.Parameter("contentTransformation") ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformation contentTransformation) {
         this.actions = actions;
         this.contentTransformation = contentTransformation;
     }

@@ -6,12 +6,12 @@ package io.pulumi.aws.appmesh.outputs;
 import io.pulumi.aws.appmesh.outputs.GatewayRouteSpecGrpcRoute;
 import io.pulumi.aws.appmesh.outputs.GatewayRouteSpecHttp2Route;
 import io.pulumi.aws.appmesh.outputs.GatewayRouteSpecHttpRoute;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GatewayRouteSpec {
     /**
      * The specification of a gRPC gateway route.
@@ -29,11 +29,11 @@ public final class GatewayRouteSpec {
      */
     private final @Nullable GatewayRouteSpecHttpRoute httpRoute;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GatewayRouteSpec(
-        @OutputCustomType.Parameter("grpcRoute") @Nullable GatewayRouteSpecGrpcRoute grpcRoute,
-        @OutputCustomType.Parameter("http2Route") @Nullable GatewayRouteSpecHttp2Route http2Route,
-        @OutputCustomType.Parameter("httpRoute") @Nullable GatewayRouteSpecHttpRoute httpRoute) {
+        @CustomType.Parameter("grpcRoute") @Nullable GatewayRouteSpecGrpcRoute grpcRoute,
+        @CustomType.Parameter("http2Route") @Nullable GatewayRouteSpecHttp2Route http2Route,
+        @CustomType.Parameter("httpRoute") @Nullable GatewayRouteSpecHttpRoute httpRoute) {
         this.grpcRoute = grpcRoute;
         this.http2Route = http2Route;
         this.httpRoute = httpRoute;

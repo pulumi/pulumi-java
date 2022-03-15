@@ -3,19 +3,19 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GrafeasV1beta1IntotoSignatureResponse {
     private final String keyid;
     private final String sig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GrafeasV1beta1IntotoSignatureResponse(
-        @OutputCustomType.Parameter("keyid") String keyid,
-        @OutputCustomType.Parameter("sig") String sig) {
+        @CustomType.Parameter("keyid") String keyid,
+        @CustomType.Parameter("sig") String sig) {
         this.keyid = keyid;
         this.sig = sig;
     }

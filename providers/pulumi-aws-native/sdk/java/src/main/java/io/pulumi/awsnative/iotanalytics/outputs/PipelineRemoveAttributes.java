@@ -3,24 +3,24 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineRemoveAttributes {
     private final List<String> attributes;
     private final String name;
     private final @Nullable String next;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineRemoveAttributes(
-        @OutputCustomType.Parameter("attributes") List<String> attributes,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("next") @Nullable String next) {
+        @CustomType.Parameter("attributes") List<String> attributes,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("next") @Nullable String next) {
         this.attributes = attributes;
         this.name = name;
         this.next = next;

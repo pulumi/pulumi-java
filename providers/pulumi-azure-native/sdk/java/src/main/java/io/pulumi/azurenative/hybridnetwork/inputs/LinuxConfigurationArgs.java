@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 
 import io.pulumi.azurenative.hybridnetwork.inputs.SshConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
      * Specifies the ssh key configuration for a Linux OS.
      * 
      */
-    @InputImport(name="ssh")
+    @Import(name="ssh")
       private final @Nullable Output<SshConfigurationArgs> ssh;
 
     public Output<SshConfigurationArgs> getSsh() {

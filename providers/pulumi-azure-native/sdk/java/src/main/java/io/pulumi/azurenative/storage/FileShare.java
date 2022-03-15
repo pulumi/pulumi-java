@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storage.FileShareArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -38,7 +38,7 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * Access tier for specific share. GpV2 account can choose between TransactionOptimized (default), Hot, and Cool. FileStorage account can choose Premium.
      * 
      */
-    @OutputExport(name="accessTier", type=String.class, parameters={})
+    @Export(name="accessTier", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessTier;
 
     /**
@@ -52,7 +52,7 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * Indicates the last modification time for share access tier.
      * 
      */
-    @OutputExport(name="accessTierChangeTime", type=String.class, parameters={})
+    @Export(name="accessTierChangeTime", type=String.class, parameters={})
     private Output<String> accessTierChangeTime;
 
     /**
@@ -66,7 +66,7 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * Indicates if there is a pending transition for access tier.
      * 
      */
-    @OutputExport(name="accessTierStatus", type=String.class, parameters={})
+    @Export(name="accessTierStatus", type=String.class, parameters={})
     private Output<String> accessTierStatus;
 
     /**
@@ -80,7 +80,7 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * Indicates whether the share was deleted.
      * 
      */
-    @OutputExport(name="deleted", type=Boolean.class, parameters={})
+    @Export(name="deleted", type=Boolean.class, parameters={})
     private Output<Boolean> deleted;
 
     /**
@@ -94,7 +94,7 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * The deleted time if the share was deleted.
      * 
      */
-    @OutputExport(name="deletedTime", type=String.class, parameters={})
+    @Export(name="deletedTime", type=String.class, parameters={})
     private Output<String> deletedTime;
 
     /**
@@ -108,7 +108,7 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * The authentication protocol that is used for the file share. Can only be specified when creating a share.
      * 
      */
-    @OutputExport(name="enabledProtocols", type=String.class, parameters={})
+    @Export(name="enabledProtocols", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabledProtocols;
 
     /**
@@ -122,7 +122,7 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * Resource Etag.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -136,7 +136,7 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * Returns the date and time the share was last modified.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
@@ -150,7 +150,7 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * A name-value pair to associate with the share as metadata.
      * 
      */
-    @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
+    @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> metadata;
 
     /**
@@ -164,7 +164,7 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -178,7 +178,7 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * Remaining retention days for share that was soft deleted.
      * 
      */
-    @OutputExport(name="remainingRetentionDays", type=Integer.class, parameters={})
+    @Export(name="remainingRetentionDays", type=Integer.class, parameters={})
     private Output<Integer> remainingRetentionDays;
 
     /**
@@ -192,7 +192,7 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * The property is for NFS share only. The default is NoRootSquash.
      * 
      */
-    @OutputExport(name="rootSquash", type=String.class, parameters={})
+    @Export(name="rootSquash", type=String.class, parameters={})
     private Output</* @Nullable */ String> rootSquash;
 
     /**
@@ -206,7 +206,7 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * The maximum size of the share, in gigabytes. Must be greater than 0, and less than or equal to 5TB (5120). For Large File Shares, the maximum size is 102400.
      * 
      */
-    @OutputExport(name="shareQuota", type=Integer.class, parameters={})
+    @Export(name="shareQuota", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> shareQuota;
 
     /**
@@ -220,7 +220,7 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * The approximate size of the data stored on the share. Note that this value may not include all recently created or recently resized files.
      * 
      */
-    @OutputExport(name="shareUsageBytes", type=Double.class, parameters={})
+    @Export(name="shareUsageBytes", type=Double.class, parameters={})
     private Output<Double> shareUsageBytes;
 
     /**
@@ -234,7 +234,7 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * Creation time of share snapshot returned in the response of list shares with expand param "snapshots".
      * 
      */
-    @OutputExport(name="snapshotTime", type=String.class, parameters={})
+    @Export(name="snapshotTime", type=String.class, parameters={})
     private Output<String> snapshotTime;
 
     /**
@@ -248,7 +248,7 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -262,7 +262,7 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * The version of the share.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

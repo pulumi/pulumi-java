@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.rds.ProxyTargetArgs;
 import io.pulumi.aws.rds.inputs.ProxyTargetState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class ProxyTarget extends io.pulumi.resources.CustomResource {
      * DB cluster identifier.
      * 
      */
-    @OutputExport(name="dbClusterIdentifier", type=String.class, parameters={})
+    @Export(name="dbClusterIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> dbClusterIdentifier;
 
     /**
@@ -53,7 +53,7 @@ public class ProxyTarget extends io.pulumi.resources.CustomResource {
      * DB instance identifier.
      * 
      */
-    @OutputExport(name="dbInstanceIdentifier", type=String.class, parameters={})
+    @Export(name="dbInstanceIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> dbInstanceIdentifier;
 
     /**
@@ -67,7 +67,7 @@ public class ProxyTarget extends io.pulumi.resources.CustomResource {
      * The name of the DB proxy.
      * 
      */
-    @OutputExport(name="dbProxyName", type=String.class, parameters={})
+    @Export(name="dbProxyName", type=String.class, parameters={})
     private Output<String> dbProxyName;
 
     /**
@@ -81,7 +81,7 @@ public class ProxyTarget extends io.pulumi.resources.CustomResource {
      * Hostname for the target RDS DB Instance. Only returned for `RDS_INSTANCE` type.
      * 
      */
-    @OutputExport(name="endpoint", type=String.class, parameters={})
+    @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
@@ -95,7 +95,7 @@ public class ProxyTarget extends io.pulumi.resources.CustomResource {
      * Port for the target RDS DB Instance or Aurora DB Cluster.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
     /**
@@ -109,7 +109,7 @@ public class ProxyTarget extends io.pulumi.resources.CustomResource {
      * Identifier representing the DB Instance or DB Cluster target.
      * 
      */
-    @OutputExport(name="rdsResourceId", type=String.class, parameters={})
+    @Export(name="rdsResourceId", type=String.class, parameters={})
     private Output<String> rdsResourceId;
 
     /**
@@ -123,7 +123,7 @@ public class ProxyTarget extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) for the DB instance or DB cluster. Currently not returned by the RDS API.
      * 
      */
-    @OutputExport(name="targetArn", type=String.class, parameters={})
+    @Export(name="targetArn", type=String.class, parameters={})
     private Output<String> targetArn;
 
     /**
@@ -137,7 +137,7 @@ public class ProxyTarget extends io.pulumi.resources.CustomResource {
      * The name of the target group.
      * 
      */
-    @OutputExport(name="targetGroupName", type=String.class, parameters={})
+    @Export(name="targetGroupName", type=String.class, parameters={})
     private Output<String> targetGroupName;
 
     /**
@@ -151,7 +151,7 @@ public class ProxyTarget extends io.pulumi.resources.CustomResource {
      * DB Cluster identifier for the DB Instance target. Not returned unless manually importing an `RDS_INSTANCE` target that is part of a DB Cluster.
      * 
      */
-    @OutputExport(name="trackedClusterId", type=String.class, parameters={})
+    @Export(name="trackedClusterId", type=String.class, parameters={})
     private Output<String> trackedClusterId;
 
     /**
@@ -165,7 +165,7 @@ public class ProxyTarget extends io.pulumi.resources.CustomResource {
      * Type of targetE.g., `RDS_INSTANCE` or `TRACKED_CLUSTER`
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

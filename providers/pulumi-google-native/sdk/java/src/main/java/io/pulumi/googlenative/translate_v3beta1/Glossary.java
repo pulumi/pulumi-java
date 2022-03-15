@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.translate_v3beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.translate_v3beta1.GlossaryArgs;
@@ -25,7 +25,7 @@ public class Glossary extends io.pulumi.resources.CustomResource {
      * When the glossary creation was finished.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
@@ -39,7 +39,7 @@ public class Glossary extends io.pulumi.resources.CustomResource {
      * The number of entries defined in the glossary.
      * 
      */
-    @OutputExport(name="entryCount", type=Integer.class, parameters={})
+    @Export(name="entryCount", type=Integer.class, parameters={})
     private Output<Integer> entryCount;
 
     /**
@@ -53,7 +53,7 @@ public class Glossary extends io.pulumi.resources.CustomResource {
      * Provides examples to build the glossary from. Total glossary must not exceed 10M Unicode codepoints.
      * 
      */
-    @OutputExport(name="inputConfig", type=GlossaryInputConfigResponse.class, parameters={})
+    @Export(name="inputConfig", type=GlossaryInputConfigResponse.class, parameters={})
     private Output<GlossaryInputConfigResponse> inputConfig;
 
     /**
@@ -67,7 +67,7 @@ public class Glossary extends io.pulumi.resources.CustomResource {
      * Used with equivalent term set glossaries.
      * 
      */
-    @OutputExport(name="languageCodesSet", type=LanguageCodesSetResponse.class, parameters={})
+    @Export(name="languageCodesSet", type=LanguageCodesSetResponse.class, parameters={})
     private Output<LanguageCodesSetResponse> languageCodesSet;
 
     /**
@@ -81,7 +81,7 @@ public class Glossary extends io.pulumi.resources.CustomResource {
      * Used with unidirectional glossaries.
      * 
      */
-    @OutputExport(name="languagePair", type=LanguageCodePairResponse.class, parameters={})
+    @Export(name="languagePair", type=LanguageCodePairResponse.class, parameters={})
     private Output<LanguageCodePairResponse> languagePair;
 
     /**
@@ -95,7 +95,7 @@ public class Glossary extends io.pulumi.resources.CustomResource {
      * The resource name of the glossary. Glossary names have the form `projects/{project-number-or-id}/locations/{location-id}/glossaries/{glossary-id}`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -109,7 +109,7 @@ public class Glossary extends io.pulumi.resources.CustomResource {
      * When CreateGlossary was called.
      * 
      */
-    @OutputExport(name="submitTime", type=String.class, parameters={})
+    @Export(name="submitTime", type=String.class, parameters={})
     private Output<String> submitTime;
 
     /**

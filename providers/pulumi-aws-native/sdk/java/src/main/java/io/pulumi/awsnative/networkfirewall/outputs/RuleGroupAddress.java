@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupAddress {
     private final String addressDefinition;
 
-    @OutputCustomType.Constructor
-    private RuleGroupAddress(@OutputCustomType.Parameter("addressDefinition") String addressDefinition) {
+    @CustomType.Constructor
+    private RuleGroupAddress(@CustomType.Parameter("addressDefinition") String addressDefinition) {
         this.addressDefinition = addressDefinition;
     }
 

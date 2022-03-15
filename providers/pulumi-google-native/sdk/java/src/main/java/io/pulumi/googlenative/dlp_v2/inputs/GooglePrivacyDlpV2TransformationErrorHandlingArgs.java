@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2LeaveUntransformedArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ThrowErrorArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingArgs extends io.
      * Ignore errors
      * 
      */
-    @InputImport(name="leaveUntransformed")
+    @Import(name="leaveUntransformed")
       private final @Nullable Output<GooglePrivacyDlpV2LeaveUntransformedArgs> leaveUntransformed;
 
     public Output<GooglePrivacyDlpV2LeaveUntransformedArgs> getLeaveUntransformed() {
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingArgs extends io.
      * Throw an error
      * 
      */
-    @InputImport(name="throwError")
+    @Import(name="throwError")
       private final @Nullable Output<GooglePrivacyDlpV2ThrowErrorArgs> throwError;
 
     public Output<GooglePrivacyDlpV2ThrowErrorArgs> getThrowError() {

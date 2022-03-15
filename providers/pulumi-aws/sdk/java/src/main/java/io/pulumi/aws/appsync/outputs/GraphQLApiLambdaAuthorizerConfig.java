@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.appsync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GraphQLApiLambdaAuthorizerConfig {
     /**
      * The number of seconds a response should be cached for. The default is 5 minutes (300 seconds). The Lambda function can override this by returning a `ttlOverride` key in its response. A value of 0 disables caching of responses. Minimum value of 0. Maximum value of 3600.
@@ -28,11 +28,11 @@ public final class GraphQLApiLambdaAuthorizerConfig {
      */
     private final @Nullable String identityValidationExpression;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GraphQLApiLambdaAuthorizerConfig(
-        @OutputCustomType.Parameter("authorizerResultTtlInSeconds") @Nullable Integer authorizerResultTtlInSeconds,
-        @OutputCustomType.Parameter("authorizerUri") String authorizerUri,
-        @OutputCustomType.Parameter("identityValidationExpression") @Nullable String identityValidationExpression) {
+        @CustomType.Parameter("authorizerResultTtlInSeconds") @Nullable Integer authorizerResultTtlInSeconds,
+        @CustomType.Parameter("authorizerUri") String authorizerUri,
+        @CustomType.Parameter("identityValidationExpression") @Nullable String identityValidationExpression) {
         this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
         this.authorizerUri = authorizerUri;
         this.identityValidationExpression = identityValidationExpression;

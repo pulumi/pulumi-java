@@ -4,7 +4,7 @@
 package io.pulumi.gcp.orgpolicy;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.orgpolicy.PolicyArgs;
@@ -41,7 +41,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Immutable. The resource name of the Policy. Must be one of the following forms, where constraint_name is the name of the constraint which this Policy configures: * `projects/{project_number}/policies/{constraint_name}` * `folders/{folder_id}/policies/{constraint_name}` * `organizations/{organization_id}/policies/{constraint_name}` For example, "projects/123/policies/compute.disableSerialPortAccess". Note: `projects/{project_id}/policies/{constraint_name}` is also an acceptable name for API requests, but responses will return the name using the equivalent project number.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -55,7 +55,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The parent of the resource.
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -69,7 +69,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Basic information about the Organization Policy.
      * 
      */
-    @OutputExport(name="spec", type=PolicySpec.class, parameters={})
+    @Export(name="spec", type=PolicySpec.class, parameters={})
     private Output</* @Nullable */ PolicySpec> spec;
 
     /**

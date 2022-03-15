@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateKeyUsage {
     private final @Nullable Boolean cRLSign;
     private final @Nullable Boolean dataEncipherment;
@@ -21,17 +21,17 @@ public final class CertificateKeyUsage {
     private final @Nullable Boolean keyEncipherment;
     private final @Nullable Boolean nonRepudiation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateKeyUsage(
-        @OutputCustomType.Parameter("cRLSign") @Nullable Boolean cRLSign,
-        @OutputCustomType.Parameter("dataEncipherment") @Nullable Boolean dataEncipherment,
-        @OutputCustomType.Parameter("decipherOnly") @Nullable Boolean decipherOnly,
-        @OutputCustomType.Parameter("digitalSignature") @Nullable Boolean digitalSignature,
-        @OutputCustomType.Parameter("encipherOnly") @Nullable Boolean encipherOnly,
-        @OutputCustomType.Parameter("keyAgreement") @Nullable Boolean keyAgreement,
-        @OutputCustomType.Parameter("keyCertSign") @Nullable Boolean keyCertSign,
-        @OutputCustomType.Parameter("keyEncipherment") @Nullable Boolean keyEncipherment,
-        @OutputCustomType.Parameter("nonRepudiation") @Nullable Boolean nonRepudiation) {
+        @CustomType.Parameter("cRLSign") @Nullable Boolean cRLSign,
+        @CustomType.Parameter("dataEncipherment") @Nullable Boolean dataEncipherment,
+        @CustomType.Parameter("decipherOnly") @Nullable Boolean decipherOnly,
+        @CustomType.Parameter("digitalSignature") @Nullable Boolean digitalSignature,
+        @CustomType.Parameter("encipherOnly") @Nullable Boolean encipherOnly,
+        @CustomType.Parameter("keyAgreement") @Nullable Boolean keyAgreement,
+        @CustomType.Parameter("keyCertSign") @Nullable Boolean keyCertSign,
+        @CustomType.Parameter("keyEncipherment") @Nullable Boolean keyEncipherment,
+        @CustomType.Parameter("nonRepudiation") @Nullable Boolean nonRepudiation) {
         this.cRLSign = cRLSign;
         this.dataEncipherment = dataEncipherment;
         this.decipherOnly = decipherOnly;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
      * Pass client-specific information to the Lambda function that you are invoking.
      * 
      */
-    @InputImport(name="clientContext")
+    @Import(name="clientContext")
       private final @Nullable Output<String> clientContext;
 
     public Output<String> getClientContext() {
@@ -29,7 +29,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
      * JSON to provide to your Lambda function as input.
      * 
      */
-    @InputImport(name="payload")
+    @Import(name="payload")
       private final @Nullable Output<String> payload;
 
     public Output<String> getPayload() {
@@ -40,7 +40,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
      * Specify a Lambda function version or alias name.
      * 
      */
-    @InputImport(name="qualifier")
+    @Import(name="qualifier")
       private final @Nullable Output<String> qualifier;
 
     public Output<String> getQualifier() {

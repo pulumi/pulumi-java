@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FrontDoorManagedRuleGroupOverrideResponse;
 import io.pulumi.azurenative.network.inputs.ManagedRuleExclusionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class FrontDoorManagedRuleSetResponse extends io.pulumi.resources.I
      * Describes the exclusions that are applied to all rules in the set.
      * 
      */
-    @InputImport(name="exclusions")
+    @Import(name="exclusions")
       private final @Nullable List<ManagedRuleExclusionResponse> exclusions;
 
     public List<ManagedRuleExclusionResponse> getExclusions() {
@@ -36,7 +36,7 @@ public final class FrontDoorManagedRuleSetResponse extends io.pulumi.resources.I
      * Defines the rule group overrides to apply to the rule set.
      * 
      */
-    @InputImport(name="ruleGroupOverrides")
+    @Import(name="ruleGroupOverrides")
       private final @Nullable List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides;
 
     public List<FrontDoorManagedRuleGroupOverrideResponse> getRuleGroupOverrides() {
@@ -47,7 +47,7 @@ public final class FrontDoorManagedRuleSetResponse extends io.pulumi.resources.I
      * Defines the action to take when a managed rule set score threshold is met.
      * 
      */
-    @InputImport(name="ruleSetAction")
+    @Import(name="ruleSetAction")
       private final @Nullable String ruleSetAction;
 
     public Optional<String> getRuleSetAction() {
@@ -58,7 +58,7 @@ public final class FrontDoorManagedRuleSetResponse extends io.pulumi.resources.I
      * Defines the rule set type to use.
      * 
      */
-    @InputImport(name="ruleSetType", required=true)
+    @Import(name="ruleSetType", required=true)
       private final String ruleSetType;
 
     public String getRuleSetType() {
@@ -69,7 +69,7 @@ public final class FrontDoorManagedRuleSetResponse extends io.pulumi.resources.I
      * Defines the version of the rule set to use.
      * 
      */
-    @InputImport(name="ruleSetVersion", required=true)
+    @Import(name="ruleSetVersion", required=true)
       private final String ruleSetVersion;
 
     public String getRuleSetVersion() {

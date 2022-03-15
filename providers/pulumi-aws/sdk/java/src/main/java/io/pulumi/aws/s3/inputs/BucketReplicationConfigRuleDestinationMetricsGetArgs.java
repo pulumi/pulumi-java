@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BucketReplicationConfigRuleDestinationMetricsGetArgs extends 
      * A configuration block that specifies the time threshold for emitting the `s3:Replication:OperationMissedThreshold` event documented below.
      * 
      */
-    @InputImport(name="eventThreshold")
+    @Import(name="eventThreshold")
       private final @Nullable Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> eventThreshold;
 
     public Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> getEventThreshold() {
@@ -30,7 +30,7 @@ public final class BucketReplicationConfigRuleDestinationMetricsGetArgs extends 
      * The status of the Destination Metrics. Either `"Enabled"` or `"Disabled"`.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<String> status;
 
     public Output<String> getStatus() {

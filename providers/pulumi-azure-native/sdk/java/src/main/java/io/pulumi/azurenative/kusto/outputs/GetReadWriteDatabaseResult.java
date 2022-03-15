@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.kusto.outputs;
 
 import io.pulumi.azurenative.kusto.outputs.DatabaseStatisticsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetReadWriteDatabaseResult {
     /**
      * The time the data should be kept in cache for fast queries in TimeSpan.
@@ -65,18 +65,18 @@ public final class GetReadWriteDatabaseResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetReadWriteDatabaseResult(
-        @OutputCustomType.Parameter("hotCachePeriod") @Nullable String hotCachePeriod,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isFollowed") Boolean isFollowed,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("softDeletePeriod") @Nullable String softDeletePeriod,
-        @OutputCustomType.Parameter("statistics") DatabaseStatisticsResponse statistics,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("hotCachePeriod") @Nullable String hotCachePeriod,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isFollowed") Boolean isFollowed,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("softDeletePeriod") @Nullable String softDeletePeriod,
+        @CustomType.Parameter("statistics") DatabaseStatisticsResponse statistics,
+        @CustomType.Parameter("type") String type) {
         this.hotCachePeriod = hotCachePeriod;
         this.id = id;
         this.isFollowed = isFollowed;

@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketIntelligentTieringConfigurationTiering {
     /**
      * S3 Intelligent-Tiering access tier. Valid values: `ARCHIVE_CONFIGURATION`, `DEEP_ARCHIVE_CONFIGURATION`.
@@ -21,10 +21,10 @@ public final class BucketIntelligentTieringConfigurationTiering {
      */
     private final Integer days;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketIntelligentTieringConfigurationTiering(
-        @OutputCustomType.Parameter("accessTier") String accessTier,
-        @OutputCustomType.Parameter("days") Integer days) {
+        @CustomType.Parameter("accessTier") String accessTier,
+        @CustomType.Parameter("days") Integer days) {
         this.accessTier = accessTier;
         this.days = days;
     }

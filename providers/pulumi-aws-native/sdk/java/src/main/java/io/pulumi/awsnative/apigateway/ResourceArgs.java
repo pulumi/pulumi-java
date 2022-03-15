@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The parent resource's identifier.
      * 
      */
-    @InputImport(name="parentId", required=true)
+    @Import(name="parentId", required=true)
       private final Output<String> parentId;
 
     public Output<String> getParentId() {
@@ -28,7 +28,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The last path segment for this resource.
      * 
      */
-    @InputImport(name="pathPart", required=true)
+    @Import(name="pathPart", required=true)
       private final Output<String> pathPart;
 
     public Output<String> getPathPart() {
@@ -39,7 +39,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the RestApi resource in which you want to create this resource..
      * 
      */
-    @InputImport(name="restApiId", required=true)
+    @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
     public Output<String> getRestApiId() {

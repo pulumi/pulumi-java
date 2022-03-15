@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.InstanceFromTemplateAdvancedMachineFeaturesArgs;
 import io.pulumi.gcp.compute.inputs.InstanceFromTemplateAttachedDiskArgs;
 import io.pulumi.gcp.compute.inputs.InstanceFromTemplateBootDiskArgs;
@@ -33,7 +33,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * Controls for advanced machine-related behavior features.
      * 
      */
-    @InputImport(name="advancedMachineFeatures")
+    @Import(name="advancedMachineFeatures")
       private final @Nullable Output<InstanceFromTemplateAdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
     public Output<InstanceFromTemplateAdvancedMachineFeaturesArgs> getAdvancedMachineFeatures() {
@@ -45,7 +45,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * stopping the instance without setting this field, the update will fail.
      * 
      */
-    @InputImport(name="allowStoppingForUpdate")
+    @Import(name="allowStoppingForUpdate")
       private final @Nullable Output<Boolean> allowStoppingForUpdate;
 
     public Output<Boolean> getAllowStoppingForUpdate() {
@@ -56,7 +56,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * List of disks attached to the instance
      * 
      */
-    @InputImport(name="attachedDisks")
+    @Import(name="attachedDisks")
       private final @Nullable Output<List<InstanceFromTemplateAttachedDiskArgs>> attachedDisks;
 
     public Output<List<InstanceFromTemplateAttachedDiskArgs>> getAttachedDisks() {
@@ -67,7 +67,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * The boot disk for the instance.
      * 
      */
-    @InputImport(name="bootDisk")
+    @Import(name="bootDisk")
       private final @Nullable Output<InstanceFromTemplateBootDiskArgs> bootDisk;
 
     public Output<InstanceFromTemplateBootDiskArgs> getBootDisk() {
@@ -78,7 +78,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
      * 
      */
-    @InputImport(name="canIpForward")
+    @Import(name="canIpForward")
       private final @Nullable Output<Boolean> canIpForward;
 
     public Output<Boolean> getCanIpForward() {
@@ -90,7 +90,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * to create.
      * 
      */
-    @InputImport(name="confidentialInstanceConfig")
+    @Import(name="confidentialInstanceConfig")
       private final @Nullable Output<InstanceFromTemplateConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
     public Output<InstanceFromTemplateConfidentialInstanceConfigArgs> getConfidentialInstanceConfig() {
@@ -101,7 +101,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * Whether deletion protection is enabled on this instance.
      * 
      */
-    @InputImport(name="deletionProtection")
+    @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
     public Output<Boolean> getDeletionProtection() {
@@ -112,7 +112,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * A brief description of the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -123,7 +123,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * Desired status of the instance. Either "RUNNING" or "TERMINATED".
      * 
      */
-    @InputImport(name="desiredStatus")
+    @Import(name="desiredStatus")
       private final @Nullable Output<String> desiredStatus;
 
     public Output<String> getDesiredStatus() {
@@ -134,7 +134,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * Whether the instance has virtual displays enabled.
      * 
      */
-    @InputImport(name="enableDisplay")
+    @Import(name="enableDisplay")
       private final @Nullable Output<Boolean> enableDisplay;
 
     public Output<Boolean> getEnableDisplay() {
@@ -145,7 +145,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * List of the type and count of accelerator cards attached to the instance.
      * 
      */
-    @InputImport(name="guestAccelerators")
+    @Import(name="guestAccelerators")
       private final @Nullable Output<List<InstanceFromTemplateGuestAcceleratorArgs>> guestAccelerators;
 
     public Output<List<InstanceFromTemplateGuestAcceleratorArgs>> getGuestAccelerators() {
@@ -158,7 +158,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="hostname")
+    @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
     public Output<String> getHostname() {
@@ -169,7 +169,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * A set of key/value label pairs assigned to the instance.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -180,7 +180,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * The machine type to create.
      * 
      */
-    @InputImport(name="machineType")
+    @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
     public Output<String> getMachineType() {
@@ -191,7 +191,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * Metadata key/value pairs made available within the instance.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -202,7 +202,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * Metadata startup scripts made available within the instance.
      * 
      */
-    @InputImport(name="metadataStartupScript")
+    @Import(name="metadataStartupScript")
       private final @Nullable Output<String> metadataStartupScript;
 
     public Output<String> getMetadataStartupScript() {
@@ -213,7 +213,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * The minimum CPU platform specified for the VM instance.
      * 
      */
-    @InputImport(name="minCpuPlatform")
+    @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
     public Output<String> getMinCpuPlatform() {
@@ -225,7 +225,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -236,7 +236,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * The networks attached to the instance.
      * 
      */
-    @InputImport(name="networkInterfaces")
+    @Import(name="networkInterfaces")
       private final @Nullable Output<List<InstanceFromTemplateNetworkInterfaceArgs>> networkInterfaces;
 
     public Output<List<InstanceFromTemplateNetworkInterfaceArgs>> getNetworkInterfaces() {
@@ -248,7 +248,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * default network performance configuration.
      * 
      */
-    @InputImport(name="networkPerformanceConfig")
+    @Import(name="networkPerformanceConfig")
       private final @Nullable Output<InstanceFromTemplateNetworkPerformanceConfigArgs> networkPerformanceConfig;
 
     public Output<InstanceFromTemplateNetworkPerformanceConfigArgs> getNetworkPerformanceConfig() {
@@ -260,7 +260,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * self_link nor project are provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -271,7 +271,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * Specifies the reservations that this instance can consume from.
      * 
      */
-    @InputImport(name="reservationAffinity")
+    @Import(name="reservationAffinity")
       private final @Nullable Output<InstanceFromTemplateReservationAffinityArgs> reservationAffinity;
 
     public Output<InstanceFromTemplateReservationAffinityArgs> getReservationAffinity() {
@@ -283,7 +283,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * is supported.
      * 
      */
-    @InputImport(name="resourcePolicies")
+    @Import(name="resourcePolicies")
       private final @Nullable Output<String> resourcePolicies;
 
     public Output<String> getResourcePolicies() {
@@ -294,7 +294,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * The scheduling strategy being used by the instance.
      * 
      */
-    @InputImport(name="scheduling")
+    @Import(name="scheduling")
       private final @Nullable Output<InstanceFromTemplateSchedulingArgs> scheduling;
 
     public Output<InstanceFromTemplateSchedulingArgs> getScheduling() {
@@ -305,7 +305,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * The scratch disks attached to the instance.
      * 
      */
-    @InputImport(name="scratchDisks")
+    @Import(name="scratchDisks")
       private final @Nullable Output<List<InstanceFromTemplateScratchDiskArgs>> scratchDisks;
 
     public Output<List<InstanceFromTemplateScratchDiskArgs>> getScratchDisks() {
@@ -316,7 +316,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * The service account to attach to the instance.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<InstanceFromTemplateServiceAccountArgs> serviceAccount;
 
     public Output<InstanceFromTemplateServiceAccountArgs> getServiceAccount() {
@@ -327,7 +327,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * The shielded vm config being used by the instance.
      * 
      */
-    @InputImport(name="shieldedInstanceConfig")
+    @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<InstanceFromTemplateShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Output<InstanceFromTemplateShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
@@ -339,7 +339,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * template to create the instance based on.
      * 
      */
-    @InputImport(name="sourceInstanceTemplate", required=true)
+    @Import(name="sourceInstanceTemplate", required=true)
       private final Output<String> sourceInstanceTemplate;
 
     public Output<String> getSourceInstanceTemplate() {
@@ -350,7 +350,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * The list of tags attached to the instance.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
@@ -362,7 +362,7 @@ public final class InstanceFromTemplateArgs extends io.pulumi.resources.Resource
      * set, the provider zone is used.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

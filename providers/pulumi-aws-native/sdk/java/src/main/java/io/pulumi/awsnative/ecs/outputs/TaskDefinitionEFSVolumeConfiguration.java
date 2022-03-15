@@ -5,14 +5,14 @@ package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.enums.TaskDefinitionEFSVolumeConfigurationTransitEncryption;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionAuthorizationConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionEFSVolumeConfiguration {
     private final @Nullable TaskDefinitionAuthorizationConfig authorizationConfig;
     private final String filesystemId;
@@ -20,13 +20,13 @@ public final class TaskDefinitionEFSVolumeConfiguration {
     private final @Nullable TaskDefinitionEFSVolumeConfigurationTransitEncryption transitEncryption;
     private final @Nullable Integer transitEncryptionPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionEFSVolumeConfiguration(
-        @OutputCustomType.Parameter("authorizationConfig") @Nullable TaskDefinitionAuthorizationConfig authorizationConfig,
-        @OutputCustomType.Parameter("filesystemId") String filesystemId,
-        @OutputCustomType.Parameter("rootDirectory") @Nullable String rootDirectory,
-        @OutputCustomType.Parameter("transitEncryption") @Nullable TaskDefinitionEFSVolumeConfigurationTransitEncryption transitEncryption,
-        @OutputCustomType.Parameter("transitEncryptionPort") @Nullable Integer transitEncryptionPort) {
+        @CustomType.Parameter("authorizationConfig") @Nullable TaskDefinitionAuthorizationConfig authorizationConfig,
+        @CustomType.Parameter("filesystemId") String filesystemId,
+        @CustomType.Parameter("rootDirectory") @Nullable String rootDirectory,
+        @CustomType.Parameter("transitEncryption") @Nullable TaskDefinitionEFSVolumeConfigurationTransitEncryption transitEncryption,
+        @CustomType.Parameter("transitEncryptionPort") @Nullable Integer transitEncryptionPort) {
         this.authorizationConfig = authorizationConfig;
         this.filesystemId = filesystemId;
         this.rootDirectory = rootDirectory;

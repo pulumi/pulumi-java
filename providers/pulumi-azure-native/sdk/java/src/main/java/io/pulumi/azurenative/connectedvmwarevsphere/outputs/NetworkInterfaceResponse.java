@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.NicIPSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInterfaceResponse {
     /**
      * Gets or sets the device key value.
@@ -71,19 +71,19 @@ public final class NetworkInterfaceResponse {
      */
     private final @Nullable String powerOnBoot;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInterfaceResponse(
-        @OutputCustomType.Parameter("deviceKey") @Nullable Integer deviceKey,
-        @OutputCustomType.Parameter("ipAddresses") List<String> ipAddresses,
-        @OutputCustomType.Parameter("ipSettings") @Nullable NicIPSettingsResponse ipSettings,
-        @OutputCustomType.Parameter("label") String label,
-        @OutputCustomType.Parameter("macAddress") String macAddress,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("networkId") @Nullable String networkId,
-        @OutputCustomType.Parameter("networkMoName") String networkMoName,
-        @OutputCustomType.Parameter("networkMoRefId") String networkMoRefId,
-        @OutputCustomType.Parameter("nicType") @Nullable String nicType,
-        @OutputCustomType.Parameter("powerOnBoot") @Nullable String powerOnBoot) {
+        @CustomType.Parameter("deviceKey") @Nullable Integer deviceKey,
+        @CustomType.Parameter("ipAddresses") List<String> ipAddresses,
+        @CustomType.Parameter("ipSettings") @Nullable NicIPSettingsResponse ipSettings,
+        @CustomType.Parameter("label") String label,
+        @CustomType.Parameter("macAddress") String macAddress,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("networkId") @Nullable String networkId,
+        @CustomType.Parameter("networkMoName") String networkMoName,
+        @CustomType.Parameter("networkMoRefId") String networkMoRefId,
+        @CustomType.Parameter("nicType") @Nullable String nicType,
+        @CustomType.Parameter("powerOnBoot") @Nullable String powerOnBoot) {
         this.deviceKey = deviceKey;
         this.ipAddresses = ipAddresses;
         this.ipSettings = ipSettings;

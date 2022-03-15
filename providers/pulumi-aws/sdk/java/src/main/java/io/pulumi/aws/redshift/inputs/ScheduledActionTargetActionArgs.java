@@ -7,7 +7,7 @@ import io.pulumi.aws.redshift.inputs.ScheduledActionTargetActionPauseClusterArgs
 import io.pulumi.aws.redshift.inputs.ScheduledActionTargetActionResizeClusterArgs;
 import io.pulumi.aws.redshift.inputs.ScheduledActionTargetActionResumeClusterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class ScheduledActionTargetActionArgs extends io.pulumi.resources.R
      * An action that runs a `PauseCluster` API operation. Documented below.
      * 
      */
-    @InputImport(name="pauseCluster")
+    @Import(name="pauseCluster")
       private final @Nullable Output<ScheduledActionTargetActionPauseClusterArgs> pauseCluster;
 
     public Output<ScheduledActionTargetActionPauseClusterArgs> getPauseCluster() {
@@ -31,7 +31,7 @@ public final class ScheduledActionTargetActionArgs extends io.pulumi.resources.R
      * An action that runs a `ResizeCluster` API operation. Documented below.
      * 
      */
-    @InputImport(name="resizeCluster")
+    @Import(name="resizeCluster")
       private final @Nullable Output<ScheduledActionTargetActionResizeClusterArgs> resizeCluster;
 
     public Output<ScheduledActionTargetActionResizeClusterArgs> getResizeCluster() {
@@ -42,7 +42,7 @@ public final class ScheduledActionTargetActionArgs extends io.pulumi.resources.R
      * An action that runs a `ResumeCluster` API operation. Documented below.
      * 
      */
-    @InputImport(name="resumeCluster")
+    @Import(name="resumeCluster")
       private final @Nullable Output<ScheduledActionTargetActionResumeClusterArgs> resumeCluster;
 
     public Output<ScheduledActionTargetActionResumeClusterArgs> getResumeCluster() {

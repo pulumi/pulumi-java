@@ -5,20 +5,20 @@ package io.pulumi.awsnative.customerprofiles.outputs;
 
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationTriggerType;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationTriggerProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationTriggerConfig {
     private final @Nullable IntegrationTriggerProperties triggerProperties;
     private final IntegrationTriggerType triggerType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationTriggerConfig(
-        @OutputCustomType.Parameter("triggerProperties") @Nullable IntegrationTriggerProperties triggerProperties,
-        @OutputCustomType.Parameter("triggerType") IntegrationTriggerType triggerType) {
+        @CustomType.Parameter("triggerProperties") @Nullable IntegrationTriggerProperties triggerProperties,
+        @CustomType.Parameter("triggerType") IntegrationTriggerType triggerType) {
         this.triggerProperties = triggerProperties;
         this.triggerType = triggerType;
     }

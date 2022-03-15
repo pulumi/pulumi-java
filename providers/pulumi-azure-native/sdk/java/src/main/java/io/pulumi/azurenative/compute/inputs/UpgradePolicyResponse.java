@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.AutomaticOSUpgradePolicyResponse;
 import io.pulumi.azurenative.compute.inputs.RollingUpgradePolicyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class UpgradePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * Configuration parameters used for performing automatic OS Upgrade.
      * 
      */
-    @InputImport(name="automaticOSUpgradePolicy")
+    @Import(name="automaticOSUpgradePolicy")
       private final @Nullable AutomaticOSUpgradePolicyResponse automaticOSUpgradePolicy;
 
     public Optional<AutomaticOSUpgradePolicyResponse> getAutomaticOSUpgradePolicy() {
@@ -35,7 +35,7 @@ public final class UpgradePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * Specifies the mode of an upgrade to virtual machines in the scale set.<br /><br /> Possible values are:<br /><br /> **Manual** - You  control the application of updates to virtual machines in the scale set. You do this by using the manualUpgrade action.<br /><br /> **Automatic** - All virtual machines in the scale set are  automatically updated at the same time.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable String mode;
 
     public Optional<String> getMode() {
@@ -46,7 +46,7 @@ public final class UpgradePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * The configuration parameters used while performing a rolling upgrade.
      * 
      */
-    @InputImport(name="rollingUpgradePolicy")
+    @Import(name="rollingUpgradePolicy")
       private final @Nullable RollingUpgradePolicyResponse rollingUpgradePolicy;
 
     public Optional<RollingUpgradePolicyResponse> getRollingUpgradePolicy() {

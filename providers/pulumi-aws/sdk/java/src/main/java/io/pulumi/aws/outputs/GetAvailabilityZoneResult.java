@@ -4,7 +4,7 @@
 package io.pulumi.aws.outputs;
 
 import io.pulumi.aws.outputs.GetAvailabilityZoneFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAvailabilityZoneResult {
     private final @Nullable Boolean allAvailabilityZones;
     private final @Nullable List<GetAvailabilityZoneFilter> filters;
@@ -67,22 +67,22 @@ public final class GetAvailabilityZoneResult {
      */
     private final String zoneType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAvailabilityZoneResult(
-        @OutputCustomType.Parameter("allAvailabilityZones") @Nullable Boolean allAvailabilityZones,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetAvailabilityZoneFilter> filters,
-        @OutputCustomType.Parameter("groupName") String groupName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nameSuffix") String nameSuffix,
-        @OutputCustomType.Parameter("networkBorderGroup") String networkBorderGroup,
-        @OutputCustomType.Parameter("optInStatus") String optInStatus,
-        @OutputCustomType.Parameter("parentZoneId") String parentZoneId,
-        @OutputCustomType.Parameter("parentZoneName") String parentZoneName,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("zoneId") String zoneId,
-        @OutputCustomType.Parameter("zoneType") String zoneType) {
+        @CustomType.Parameter("allAvailabilityZones") @Nullable Boolean allAvailabilityZones,
+        @CustomType.Parameter("filters") @Nullable List<GetAvailabilityZoneFilter> filters,
+        @CustomType.Parameter("groupName") String groupName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nameSuffix") String nameSuffix,
+        @CustomType.Parameter("networkBorderGroup") String networkBorderGroup,
+        @CustomType.Parameter("optInStatus") String optInStatus,
+        @CustomType.Parameter("parentZoneId") String parentZoneId,
+        @CustomType.Parameter("parentZoneName") String parentZoneName,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("zoneId") String zoneId,
+        @CustomType.Parameter("zoneType") String zoneType) {
         this.allAvailabilityZones = allAvailabilityZones;
         this.filters = filters;
         this.groupName = groupName;

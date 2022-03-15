@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal.outputs;
 
 import io.pulumi.azurenative.portal.outputs.DashboardPartsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DashboardLensResponse {
     /**
      * The dashboard len's metadata.
@@ -31,11 +31,11 @@ public final class DashboardLensResponse {
      */
     private final List<DashboardPartsResponse> parts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DashboardLensResponse(
-        @OutputCustomType.Parameter("metadata") @Nullable Map<String,Object> metadata,
-        @OutputCustomType.Parameter("order") Integer order,
-        @OutputCustomType.Parameter("parts") List<DashboardPartsResponse> parts) {
+        @CustomType.Parameter("metadata") @Nullable Map<String,Object> metadata,
+        @CustomType.Parameter("order") Integer order,
+        @CustomType.Parameter("parts") List<DashboardPartsResponse> parts) {
         this.metadata = metadata;
         this.order = order;
         this.parts = parts;

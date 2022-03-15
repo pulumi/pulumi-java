@@ -9,7 +9,7 @@ import io.pulumi.azurenative.appconfiguration.inputs.ResourceIdentityArgs;
 import io.pulumi.azurenative.appconfiguration.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * The name of the configuration store.
      * 
      */
-    @InputImport(name="configStoreName")
+    @Import(name="configStoreName")
       private final @Nullable Output<String> configStoreName;
 
     public Output<String> getConfigStoreName() {
@@ -35,7 +35,7 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * The encryption settings of the configuration store.
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<EncryptionPropertiesArgs> encryption;
 
     public Output<EncryptionPropertiesArgs> getEncryption() {
@@ -46,7 +46,7 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * The managed identity information, if configured.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
     public Output<ResourceIdentityArgs> getIdentity() {
@@ -57,7 +57,7 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -68,7 +68,7 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * Control permission for data plane traffic coming from public networks while private endpoint is enabled.
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
@@ -79,7 +79,7 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group to which the container registry belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -90,7 +90,7 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * The sku of the configuration store.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -101,7 +101,7 @@ public final class ConfigurationStoreArgs extends io.pulumi.resources.ResourceAr
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancingRuleResponse {
     /**
      * A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs.
@@ -95,24 +95,24 @@ public final class LoadBalancingRuleResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoadBalancingRuleResponse(
-        @OutputCustomType.Parameter("backendAddressPool") @Nullable SubResourceResponse backendAddressPool,
-        @OutputCustomType.Parameter("backendPort") @Nullable Integer backendPort,
-        @OutputCustomType.Parameter("disableOutboundSnat") @Nullable Boolean disableOutboundSnat,
-        @OutputCustomType.Parameter("enableFloatingIP") @Nullable Boolean enableFloatingIP,
-        @OutputCustomType.Parameter("enableTcpReset") @Nullable Boolean enableTcpReset,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("frontendIPConfiguration") @Nullable SubResourceResponse frontendIPConfiguration,
-        @OutputCustomType.Parameter("frontendPort") Integer frontendPort,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
-        @OutputCustomType.Parameter("loadDistribution") @Nullable String loadDistribution,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("probe") @Nullable SubResourceResponse probe,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("backendAddressPool") @Nullable SubResourceResponse backendAddressPool,
+        @CustomType.Parameter("backendPort") @Nullable Integer backendPort,
+        @CustomType.Parameter("disableOutboundSnat") @Nullable Boolean disableOutboundSnat,
+        @CustomType.Parameter("enableFloatingIP") @Nullable Boolean enableFloatingIP,
+        @CustomType.Parameter("enableTcpReset") @Nullable Boolean enableTcpReset,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("frontendIPConfiguration") @Nullable SubResourceResponse frontendIPConfiguration,
+        @CustomType.Parameter("frontendPort") Integer frontendPort,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
+        @CustomType.Parameter("loadDistribution") @Nullable String loadDistribution,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("probe") @Nullable SubResourceResponse probe,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.backendAddressPool = backendAddressPool;
         this.backendPort = backendPort;
         this.disableOutboundSnat = disableOutboundSnat;

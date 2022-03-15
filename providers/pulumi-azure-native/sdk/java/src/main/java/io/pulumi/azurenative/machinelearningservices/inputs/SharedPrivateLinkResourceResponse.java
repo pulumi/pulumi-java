@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
      * The private link resource group id.
      * 
      */
-    @InputImport(name="groupId")
+    @Import(name="groupId")
       private final @Nullable String groupId;
 
     public Optional<String> getGroupId() {
@@ -29,7 +29,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
      * Unique name of the private link.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -40,7 +40,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
      * The resource id that private link links to.
      * 
      */
-    @InputImport(name="privateLinkResourceId")
+    @Import(name="privateLinkResourceId")
       private final @Nullable String privateLinkResourceId;
 
     public Optional<String> getPrivateLinkResourceId() {
@@ -51,7 +51,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
      * Request message.
      * 
      */
-    @InputImport(name="requestMessage")
+    @Import(name="requestMessage")
       private final @Nullable String requestMessage;
 
     public Optional<String> getRequestMessage() {
@@ -62,7 +62,7 @@ public final class SharedPrivateLinkResourceResponse extends io.pulumi.resources
      * Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDiskResult {
     /**
      * The creation date of the disk.
@@ -94,24 +94,24 @@ public final class GetDiskResult {
      */
     private final String uniqueIdentifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDiskResult(
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("diskBlobName") @Nullable String diskBlobName,
-        @OutputCustomType.Parameter("diskSizeGiB") @Nullable Integer diskSizeGiB,
-        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
-        @OutputCustomType.Parameter("diskUri") @Nullable String diskUri,
-        @OutputCustomType.Parameter("hostCaching") @Nullable String hostCaching,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("leasedByLabVmId") @Nullable String leasedByLabVmId,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("managedDiskId") @Nullable String managedDiskId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("diskBlobName") @Nullable String diskBlobName,
+        @CustomType.Parameter("diskSizeGiB") @Nullable Integer diskSizeGiB,
+        @CustomType.Parameter("diskType") @Nullable String diskType,
+        @CustomType.Parameter("diskUri") @Nullable String diskUri,
+        @CustomType.Parameter("hostCaching") @Nullable String hostCaching,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("leasedByLabVmId") @Nullable String leasedByLabVmId,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("managedDiskId") @Nullable String managedDiskId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
         this.createdDate = createdDate;
         this.diskBlobName = diskBlobName;
         this.diskSizeGiB = diskSizeGiB;

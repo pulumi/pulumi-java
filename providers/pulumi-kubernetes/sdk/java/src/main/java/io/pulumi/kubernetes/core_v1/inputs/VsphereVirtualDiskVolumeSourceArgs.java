@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
      * 
      */
-    @InputImport(name="fsType")
+    @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
     public Output<String> getFsType() {
@@ -33,7 +33,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
      * Storage Policy Based Management (SPBM) profile ID associated with the StoragePolicyName.
      * 
      */
-    @InputImport(name="storagePolicyID")
+    @Import(name="storagePolicyID")
       private final @Nullable Output<String> storagePolicyID;
 
     public Output<String> getStoragePolicyID() {
@@ -44,7 +44,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
      * Storage Policy Based Management (SPBM) profile name.
      * 
      */
-    @InputImport(name="storagePolicyName")
+    @Import(name="storagePolicyName")
       private final @Nullable Output<String> storagePolicyName;
 
     public Output<String> getStoragePolicyName() {
@@ -55,7 +55,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
      * Path that identifies vSphere volume vmdk
      * 
      */
-    @InputImport(name="volumePath", required=true)
+    @Import(name="volumePath", required=true)
       private final Output<String> volumePath;
 
     public Output<String> getVolumePath() {

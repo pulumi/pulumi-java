@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.organizations.inputs.IAMBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
 
     public static final IAMBindingState Empty = new IAMBindingState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<IAMBindingConditionGetArgs> condition;
 
     public Output<IAMBindingConditionGetArgs> getCondition() {
@@ -27,7 +27,7 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
      * (Computed) The etag of the organization's IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -38,7 +38,7 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
      * A list of users that the role should apply to. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
      * 
      */
-    @InputImport(name="members")
+    @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -49,7 +49,7 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
      * The numeric ID of the organization in which you want to create a custom role.
      * 
      */
-    @InputImport(name="orgId")
+    @Import(name="orgId")
       private final @Nullable Output<String> orgId;
 
     public Output<String> getOrgId() {
@@ -62,7 +62,7 @@ public final class IAMBindingState extends io.pulumi.resources.ResourceArgs {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mq.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetBrokerMaintenanceWindowStartTime extends io.pulumi.resourc
 
     public static final GetBrokerMaintenanceWindowStartTime Empty = new GetBrokerMaintenanceWindowStartTime();
 
-    @InputImport(name="dayOfWeek", required=true)
+    @Import(name="dayOfWeek", required=true)
       private final String dayOfWeek;
 
     public String getDayOfWeek() {
         return this.dayOfWeek;
     }
 
-    @InputImport(name="timeOfDay", required=true)
+    @Import(name="timeOfDay", required=true)
       private final String timeOfDay;
 
     public String getTimeOfDay() {
         return this.timeOfDay;
     }
 
-    @InputImport(name="timeZone", required=true)
+    @Import(name="timeZone", required=true)
       private final String timeZone;
 
     public String getTimeZone() {

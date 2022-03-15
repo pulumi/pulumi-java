@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
      * The name of the Auto Scaling group to which you want to assign the lifecycle hook
      * 
      */
-    @InputImport(name="autoscalingGroupName")
+    @Import(name="autoscalingGroupName")
       private final @Nullable Output<String> autoscalingGroupName;
 
     public Output<String> getAutoscalingGroupName() {
@@ -30,7 +30,7 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
      * Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses or if an unexpected failure occurs. The value for this parameter can be either CONTINUE or ABANDON. The default value for this parameter is ABANDON.
      * 
      */
-    @InputImport(name="defaultResult")
+    @Import(name="defaultResult")
       private final @Nullable Output<String> defaultResult;
 
     public Output<String> getDefaultResult() {
@@ -41,7 +41,7 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
      * Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the DefaultResult parameter
      * 
      */
-    @InputImport(name="heartbeatTimeout")
+    @Import(name="heartbeatTimeout")
       private final @Nullable Output<Integer> heartbeatTimeout;
 
     public Output<Integer> getHeartbeatTimeout() {
@@ -52,7 +52,7 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
      * The instance state to which you want to attach the lifecycle hook. For a list of lifecycle hook types, see [describe-lifecycle-hook-types](https://docs.aws.amazon.com/cli/latest/reference/autoscaling/describe-lifecycle-hook-types.html#examples)
      * 
      */
-    @InputImport(name="lifecycleTransition")
+    @Import(name="lifecycleTransition")
       private final @Nullable Output<String> lifecycleTransition;
 
     public Output<String> getLifecycleTransition() {
@@ -63,7 +63,7 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
      * The name of the lifecycle hook.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -74,7 +74,7 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
      * Contains additional information that you want to include any time Auto Scaling sends a message to the notification target.
      * 
      */
-    @InputImport(name="notificationMetadata")
+    @Import(name="notificationMetadata")
       private final @Nullable Output<String> notificationMetadata;
 
     public Output<String> getNotificationMetadata() {
@@ -85,7 +85,7 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the notification target that Auto Scaling will use to notify you when an instance is in the transition state for the lifecycle hook. This ARN target can be either an SQS queue or an SNS topic.
      * 
      */
-    @InputImport(name="notificationTargetArn")
+    @Import(name="notificationTargetArn")
       private final @Nullable Output<String> notificationTargetArn;
 
     public Output<String> getNotificationTargetArn() {
@@ -96,7 +96,7 @@ public final class LifecycleHookState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {

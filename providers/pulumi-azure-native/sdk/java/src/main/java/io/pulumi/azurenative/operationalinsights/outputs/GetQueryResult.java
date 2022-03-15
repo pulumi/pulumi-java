@@ -5,7 +5,7 @@ package io.pulumi.azurenative.operationalinsights.outputs;
 
 import io.pulumi.azurenative.operationalinsights.outputs.LogAnalyticsQueryPackQueryPropertiesResponseRelated;
 import io.pulumi.azurenative.operationalinsights.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetQueryResult {
     /**
      * Object Id of user creating the query.
@@ -82,21 +82,21 @@ public final class GetQueryResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetQueryResult(
-        @OutputCustomType.Parameter("author") String author,
-        @OutputCustomType.Parameter("body") String body,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") Object properties,
-        @OutputCustomType.Parameter("related") @Nullable LogAnalyticsQueryPackQueryPropertiesResponseRelated related,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,List<String>> tags,
-        @OutputCustomType.Parameter("timeCreated") String timeCreated,
-        @OutputCustomType.Parameter("timeModified") String timeModified,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("author") String author,
+        @CustomType.Parameter("body") String body,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") Object properties,
+        @CustomType.Parameter("related") @Nullable LogAnalyticsQueryPackQueryPropertiesResponseRelated related,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,List<String>> tags,
+        @CustomType.Parameter("timeCreated") String timeCreated,
+        @CustomType.Parameter("timeModified") String timeModified,
+        @CustomType.Parameter("type") String type) {
         this.author = author;
         this.body = body;
         this.description = description;

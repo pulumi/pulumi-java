@@ -6,26 +6,26 @@ package io.pulumi.awsnative.iotanalytics.outputs;
 import io.pulumi.awsnative.iotanalytics.outputs.ChannelRetentionPeriod;
 import io.pulumi.awsnative.iotanalytics.outputs.ChannelStorage;
 import io.pulumi.awsnative.iotanalytics.outputs.ChannelTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetChannelResult {
     private final @Nullable ChannelStorage channelStorage;
     private final @Nullable String id;
     private final @Nullable ChannelRetentionPeriod retentionPeriod;
     private final @Nullable List<ChannelTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetChannelResult(
-        @OutputCustomType.Parameter("channelStorage") @Nullable ChannelStorage channelStorage,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("retentionPeriod") @Nullable ChannelRetentionPeriod retentionPeriod,
-        @OutputCustomType.Parameter("tags") @Nullable List<ChannelTag> tags) {
+        @CustomType.Parameter("channelStorage") @Nullable ChannelStorage channelStorage,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("retentionPeriod") @Nullable ChannelRetentionPeriod retentionPeriod,
+        @CustomType.Parameter("tags") @Nullable List<ChannelTag> tags) {
         this.channelStorage = channelStorage;
         this.id = id;
         this.retentionPeriod = retentionPeriod;

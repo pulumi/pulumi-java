@@ -17,7 +17,7 @@ import io.pulumi.awsnative.opensearchservice.outputs.DomainSnapshotOptions;
 import io.pulumi.awsnative.opensearchservice.outputs.DomainTag;
 import io.pulumi.awsnative.opensearchservice.outputs.DomainVPCOptions;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -30,109 +30,109 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:opensearchservice:Domain")
 public class Domain extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="accessPolicies", type=Object.class, parameters={})
+    @Export(name="accessPolicies", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> accessPolicies;
 
     public Output</* @Nullable */ Object> getAccessPolicies() {
         return this.accessPolicies;
     }
-    @OutputExport(name="advancedOptions", type=Object.class, parameters={})
+    @Export(name="advancedOptions", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> advancedOptions;
 
     public Output</* @Nullable */ Object> getAdvancedOptions() {
         return this.advancedOptions;
     }
-    @OutputExport(name="advancedSecurityOptions", type=DomainAdvancedSecurityOptionsInput.class, parameters={})
+    @Export(name="advancedSecurityOptions", type=DomainAdvancedSecurityOptionsInput.class, parameters={})
     private Output</* @Nullable */ DomainAdvancedSecurityOptionsInput> advancedSecurityOptions;
 
     public Output</* @Nullable */ DomainAdvancedSecurityOptionsInput> getAdvancedSecurityOptions() {
         return this.advancedSecurityOptions;
     }
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="clusterConfig", type=DomainClusterConfig.class, parameters={})
+    @Export(name="clusterConfig", type=DomainClusterConfig.class, parameters={})
     private Output</* @Nullable */ DomainClusterConfig> clusterConfig;
 
     public Output</* @Nullable */ DomainClusterConfig> getClusterConfig() {
         return this.clusterConfig;
     }
-    @OutputExport(name="cognitoOptions", type=DomainCognitoOptions.class, parameters={})
+    @Export(name="cognitoOptions", type=DomainCognitoOptions.class, parameters={})
     private Output</* @Nullable */ DomainCognitoOptions> cognitoOptions;
 
     public Output</* @Nullable */ DomainCognitoOptions> getCognitoOptions() {
         return this.cognitoOptions;
     }
-    @OutputExport(name="domainArn", type=String.class, parameters={})
+    @Export(name="domainArn", type=String.class, parameters={})
     private Output<String> domainArn;
 
     public Output<String> getDomainArn() {
         return this.domainArn;
     }
-    @OutputExport(name="domainEndpoint", type=String.class, parameters={})
+    @Export(name="domainEndpoint", type=String.class, parameters={})
     private Output<String> domainEndpoint;
 
     public Output<String> getDomainEndpoint() {
         return this.domainEndpoint;
     }
-    @OutputExport(name="domainEndpointOptions", type=DomainEndpointOptions.class, parameters={})
+    @Export(name="domainEndpointOptions", type=DomainEndpointOptions.class, parameters={})
     private Output</* @Nullable */ DomainEndpointOptions> domainEndpointOptions;
 
     public Output</* @Nullable */ DomainEndpointOptions> getDomainEndpointOptions() {
         return this.domainEndpointOptions;
     }
-    @OutputExport(name="domainEndpoints", type=Object.class, parameters={})
+    @Export(name="domainEndpoints", type=Object.class, parameters={})
     private Output<Object> domainEndpoints;
 
     public Output<Object> getDomainEndpoints() {
         return this.domainEndpoints;
     }
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainName;
 
     public Output</* @Nullable */ String> getDomainName() {
         return this.domainName;
     }
-    @OutputExport(name="eBSOptions", type=DomainEBSOptions.class, parameters={})
+    @Export(name="eBSOptions", type=DomainEBSOptions.class, parameters={})
     private Output</* @Nullable */ DomainEBSOptions> eBSOptions;
 
     public Output</* @Nullable */ DomainEBSOptions> getEBSOptions() {
         return this.eBSOptions;
     }
-    @OutputExport(name="encryptionAtRestOptions", type=DomainEncryptionAtRestOptions.class, parameters={})
+    @Export(name="encryptionAtRestOptions", type=DomainEncryptionAtRestOptions.class, parameters={})
     private Output</* @Nullable */ DomainEncryptionAtRestOptions> encryptionAtRestOptions;
 
     public Output</* @Nullable */ DomainEncryptionAtRestOptions> getEncryptionAtRestOptions() {
         return this.encryptionAtRestOptions;
     }
-    @OutputExport(name="engineVersion", type=String.class, parameters={})
+    @Export(name="engineVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> engineVersion;
 
     public Output</* @Nullable */ String> getEngineVersion() {
         return this.engineVersion;
     }
-    @OutputExport(name="logPublishingOptions", type=Object.class, parameters={})
+    @Export(name="logPublishingOptions", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> logPublishingOptions;
 
     public Output</* @Nullable */ Object> getLogPublishingOptions() {
         return this.logPublishingOptions;
     }
-    @OutputExport(name="nodeToNodeEncryptionOptions", type=DomainNodeToNodeEncryptionOptions.class, parameters={})
+    @Export(name="nodeToNodeEncryptionOptions", type=DomainNodeToNodeEncryptionOptions.class, parameters={})
     private Output</* @Nullable */ DomainNodeToNodeEncryptionOptions> nodeToNodeEncryptionOptions;
 
     public Output</* @Nullable */ DomainNodeToNodeEncryptionOptions> getNodeToNodeEncryptionOptions() {
         return this.nodeToNodeEncryptionOptions;
     }
-    @OutputExport(name="serviceSoftwareOptions", type=DomainServiceSoftwareOptions.class, parameters={})
+    @Export(name="serviceSoftwareOptions", type=DomainServiceSoftwareOptions.class, parameters={})
     private Output<DomainServiceSoftwareOptions> serviceSoftwareOptions;
 
     public Output<DomainServiceSoftwareOptions> getServiceSoftwareOptions() {
         return this.serviceSoftwareOptions;
     }
-    @OutputExport(name="snapshotOptions", type=DomainSnapshotOptions.class, parameters={})
+    @Export(name="snapshotOptions", type=DomainSnapshotOptions.class, parameters={})
     private Output</* @Nullable */ DomainSnapshotOptions> snapshotOptions;
 
     public Output</* @Nullable */ DomainSnapshotOptions> getSnapshotOptions() {
@@ -142,7 +142,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * An arbitrary set of tags (key-value pairs) for this Domain.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DomainTag.class})
+    @Export(name="tags", type=List.class, parameters={DomainTag.class})
     private Output</* @Nullable */ List<DomainTag>> tags;
 
     /**
@@ -152,7 +152,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<DomainTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="vPCOptions", type=DomainVPCOptions.class, parameters={})
+    @Export(name="vPCOptions", type=DomainVPCOptions.class, parameters={})
     private Output</* @Nullable */ DomainVPCOptions> vPCOptions;
 
     public Output</* @Nullable */ DomainVPCOptions> getVPCOptions() {

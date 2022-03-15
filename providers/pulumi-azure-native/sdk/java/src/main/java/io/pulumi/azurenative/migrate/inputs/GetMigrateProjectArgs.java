@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetMigrateProjectArgs extends io.pulumi.resources.InvokeArgs 
      * Name of the Azure Migrate project.
      * 
      */
-    @InputImport(name="migrateProjectName", required=true)
+    @Import(name="migrateProjectName", required=true)
       private final String migrateProjectName;
 
     public String getMigrateProjectName() {
@@ -27,7 +27,7 @@ public final class GetMigrateProjectArgs extends io.pulumi.resources.InvokeArgs 
      * Name of the Azure Resource Group that migrate project is part of.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

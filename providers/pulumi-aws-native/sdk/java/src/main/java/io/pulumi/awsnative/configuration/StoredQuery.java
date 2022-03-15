@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.configuration.StoredQueryArgs;
 import io.pulumi.awsnative.configuration.outputs.StoredQueryTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -19,31 +19,31 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:configuration:StoredQuery")
 public class StoredQuery extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="queryArn", type=String.class, parameters={})
+    @Export(name="queryArn", type=String.class, parameters={})
     private Output<String> queryArn;
 
     public Output<String> getQueryArn() {
         return this.queryArn;
     }
-    @OutputExport(name="queryDescription", type=String.class, parameters={})
+    @Export(name="queryDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> queryDescription;
 
     public Output</* @Nullable */ String> getQueryDescription() {
         return this.queryDescription;
     }
-    @OutputExport(name="queryExpression", type=String.class, parameters={})
+    @Export(name="queryExpression", type=String.class, parameters={})
     private Output<String> queryExpression;
 
     public Output<String> getQueryExpression() {
         return this.queryExpression;
     }
-    @OutputExport(name="queryId", type=String.class, parameters={})
+    @Export(name="queryId", type=String.class, parameters={})
     private Output<String> queryId;
 
     public Output<String> getQueryId() {
         return this.queryId;
     }
-    @OutputExport(name="queryName", type=String.class, parameters={})
+    @Export(name="queryName", type=String.class, parameters={})
     private Output<String> queryName;
 
     public Output<String> getQueryName() {
@@ -53,7 +53,7 @@ public class StoredQuery extends io.pulumi.resources.CustomResource {
      * The tags for the stored query.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={StoredQueryTag.class})
+    @Export(name="tags", type=List.class, parameters={StoredQueryTag.class})
     private Output</* @Nullable */ List<StoredQueryTag>> tags;
 
     /**

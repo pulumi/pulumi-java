@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.QueryParameterTypeResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class QueryParameterTypeStructTypesItemResponse {
     /**
      * [Optional] Human-oriented description of the field.
@@ -26,11 +26,11 @@ public final class QueryParameterTypeStructTypesItemResponse {
      */
     private final QueryParameterTypeResponse type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QueryParameterTypeStructTypesItemResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") QueryParameterTypeResponse type) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") QueryParameterTypeResponse type) {
         this.description = description;
         this.name = name;
         this.type = type;

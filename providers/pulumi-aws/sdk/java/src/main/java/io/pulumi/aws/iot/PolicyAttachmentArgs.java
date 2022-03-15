@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * The name of the policy to attach.
      * 
      */
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -28,7 +28,7 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * The identity to which the policy is attached.
      * 
      */
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final Output<String> target;
 
     public Output<String> getTarget() {

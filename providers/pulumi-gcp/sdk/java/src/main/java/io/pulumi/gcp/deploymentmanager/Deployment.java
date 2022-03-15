@@ -4,7 +4,7 @@
 package io.pulumi.gcp.deploymentmanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.deploymentmanager.DeploymentArgs;
@@ -62,7 +62,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
      * 
      */
-    @OutputExport(name="createPolicy", type=String.class, parameters={})
+    @Export(name="createPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> createPolicy;
 
     /**
@@ -89,7 +89,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Possible values are `ABANDON` and `DELETE`.
      * 
      */
-    @OutputExport(name="deletePolicy", type=String.class, parameters={})
+    @Export(name="deletePolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> deletePolicy;
 
     /**
@@ -110,7 +110,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Unique identifier for deployment. Output only.
      * 
      */
-    @OutputExport(name="deploymentId", type=String.class, parameters={})
+    @Export(name="deploymentId", type=String.class, parameters={})
     private Output<String> deploymentId;
 
     /**
@@ -124,7 +124,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Optional user-provided description of deployment.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -139,7 +139,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="labels", type=List.class, parameters={DeploymentLabel.class})
+    @Export(name="labels", type=List.class, parameters={DeploymentLabel.class})
     private Output</* @Nullable */ List<DeploymentLabel>> labels;
 
     /**
@@ -154,7 +154,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Output only. URL of the manifest representing the last manifest that was successfully deployed.
      * 
      */
-    @OutputExport(name="manifest", type=String.class, parameters={})
+    @Export(name="manifest", type=String.class, parameters={})
     private Output<String> manifest;
 
     /**
@@ -169,7 +169,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * configuration.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -191,7 +191,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * to true or if other fields are updated while preview is true.
      * 
      */
-    @OutputExport(name="preview", type=Boolean.class, parameters={})
+    @Export(name="preview", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> preview;
 
     /**
@@ -213,7 +213,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -228,7 +228,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Output only. Server defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -244,7 +244,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="target", type=DeploymentTarget.class, parameters={})
+    @Export(name="target", type=DeploymentTarget.class, parameters={})
     private Output<DeploymentTarget> target;
 
     /**

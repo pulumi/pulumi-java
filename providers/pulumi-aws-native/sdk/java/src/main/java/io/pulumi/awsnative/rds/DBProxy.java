@@ -9,7 +9,7 @@ import io.pulumi.awsnative.rds.enums.DBProxyEngineFamily;
 import io.pulumi.awsnative.rds.outputs.DBProxyAuthFormat;
 import io.pulumi.awsnative.rds.outputs.DBProxyTagFormat;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,7 +27,7 @@ public class DBProxy extends io.pulumi.resources.CustomResource {
      * The authorization mechanism that the proxy uses.
      * 
      */
-    @OutputExport(name="auth", type=List.class, parameters={DBProxyAuthFormat.class})
+    @Export(name="auth", type=List.class, parameters={DBProxyAuthFormat.class})
     private Output<List<DBProxyAuthFormat>> auth;
 
     /**
@@ -41,7 +41,7 @@ public class DBProxy extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the proxy.
      * 
      */
-    @OutputExport(name="dBProxyArn", type=String.class, parameters={})
+    @Export(name="dBProxyArn", type=String.class, parameters={})
     private Output<String> dBProxyArn;
 
     /**
@@ -55,7 +55,7 @@ public class DBProxy extends io.pulumi.resources.CustomResource {
      * The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region.
      * 
      */
-    @OutputExport(name="dBProxyName", type=String.class, parameters={})
+    @Export(name="dBProxyName", type=String.class, parameters={})
     private Output<String> dBProxyName;
 
     /**
@@ -69,7 +69,7 @@ public class DBProxy extends io.pulumi.resources.CustomResource {
      * Whether the proxy includes detailed information about SQL statements in its logs.
      * 
      */
-    @OutputExport(name="debugLogging", type=Boolean.class, parameters={})
+    @Export(name="debugLogging", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> debugLogging;
 
     /**
@@ -83,7 +83,7 @@ public class DBProxy extends io.pulumi.resources.CustomResource {
      * The endpoint that you can use to connect to the proxy. You include the endpoint value in the connection string for a database client application.
      * 
      */
-    @OutputExport(name="endpoint", type=String.class, parameters={})
+    @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
@@ -97,7 +97,7 @@ public class DBProxy extends io.pulumi.resources.CustomResource {
      * The kinds of databases that the proxy can connect to.
      * 
      */
-    @OutputExport(name="engineFamily", type=DBProxyEngineFamily.class, parameters={})
+    @Export(name="engineFamily", type=DBProxyEngineFamily.class, parameters={})
     private Output<DBProxyEngineFamily> engineFamily;
 
     /**
@@ -111,7 +111,7 @@ public class DBProxy extends io.pulumi.resources.CustomResource {
      * The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it.
      * 
      */
-    @OutputExport(name="idleClientTimeout", type=Integer.class, parameters={})
+    @Export(name="idleClientTimeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> idleClientTimeout;
 
     /**
@@ -125,7 +125,7 @@ public class DBProxy extends io.pulumi.resources.CustomResource {
      * A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy.
      * 
      */
-    @OutputExport(name="requireTLS", type=Boolean.class, parameters={})
+    @Export(name="requireTLS", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> requireTLS;
 
     /**
@@ -139,7 +139,7 @@ public class DBProxy extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -153,7 +153,7 @@ public class DBProxy extends io.pulumi.resources.CustomResource {
      * An optional set of key-value pairs to associate arbitrary data of your choosing with the proxy.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DBProxyTagFormat.class})
+    @Export(name="tags", type=List.class, parameters={DBProxyTagFormat.class})
     private Output</* @Nullable */ List<DBProxyTagFormat>> tags;
 
     /**
@@ -167,7 +167,7 @@ public class DBProxy extends io.pulumi.resources.CustomResource {
      * VPC security group IDs to associate with the new proxy.
      * 
      */
-    @OutputExport(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
+    @Export(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> vpcSecurityGroupIds;
 
     /**
@@ -181,7 +181,7 @@ public class DBProxy extends io.pulumi.resources.CustomResource {
      * VPC subnet IDs to associate with the new proxy.
      * 
      */
-    @OutputExport(name="vpcSubnetIds", type=List.class, parameters={String.class})
+    @Export(name="vpcSubnetIds", type=List.class, parameters={String.class})
     private Output<List<String>> vpcSubnetIds;
 
     /**

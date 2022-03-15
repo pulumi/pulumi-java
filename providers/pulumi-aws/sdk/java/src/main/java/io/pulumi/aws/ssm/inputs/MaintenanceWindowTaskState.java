@@ -6,7 +6,7 @@ package io.pulumi.aws.ssm.inputs;
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTargetGetArgs;
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class MaintenanceWindowTaskState extends io.pulumi.resources.Resour
      * The description of the maintenance window task.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class MaintenanceWindowTaskState extends io.pulumi.resources.Resour
      * The maximum number of targets this task can be run for in parallel.
      * 
      */
-    @InputImport(name="maxConcurrency")
+    @Import(name="maxConcurrency")
       private final @Nullable Output<String> maxConcurrency;
 
     public Output<String> getMaxConcurrency() {
@@ -44,7 +44,7 @@ public final class MaintenanceWindowTaskState extends io.pulumi.resources.Resour
      * The maximum number of errors allowed before this task stops being scheduled.
      * 
      */
-    @InputImport(name="maxErrors")
+    @Import(name="maxErrors")
       private final @Nullable Output<String> maxErrors;
 
     public Output<String> getMaxErrors() {
@@ -55,7 +55,7 @@ public final class MaintenanceWindowTaskState extends io.pulumi.resources.Resour
      * The name of the maintenance window task.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -66,7 +66,7 @@ public final class MaintenanceWindowTaskState extends io.pulumi.resources.Resour
      * The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -77,7 +77,7 @@ public final class MaintenanceWindowTaskState extends io.pulumi.resources.Resour
      * The role that should be assumed when executing the task. If a role is not provided, Systems Manager uses your account's service-linked role. If no service-linked role for Systems Manager exists in your account, it is created for you.
      * 
      */
-    @InputImport(name="serviceRoleArn")
+    @Import(name="serviceRoleArn")
       private final @Nullable Output<String> serviceRoleArn;
 
     public Output<String> getServiceRoleArn() {
@@ -88,7 +88,7 @@ public final class MaintenanceWindowTaskState extends io.pulumi.resources.Resour
      * The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
      * 
      */
-    @InputImport(name="targets")
+    @Import(name="targets")
       private final @Nullable Output<List<MaintenanceWindowTaskTargetGetArgs>> targets;
 
     public Output<List<MaintenanceWindowTaskTargetGetArgs>> getTargets() {
@@ -99,7 +99,7 @@ public final class MaintenanceWindowTaskState extends io.pulumi.resources.Resour
      * The ARN of the task to execute.
      * 
      */
-    @InputImport(name="taskArn")
+    @Import(name="taskArn")
       private final @Nullable Output<String> taskArn;
 
     public Output<String> getTaskArn() {
@@ -110,7 +110,7 @@ public final class MaintenanceWindowTaskState extends io.pulumi.resources.Resour
      * Configuration block with parameters for task execution.
      * 
      */
-    @InputImport(name="taskInvocationParameters")
+    @Import(name="taskInvocationParameters")
       private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersGetArgs> taskInvocationParameters;
 
     public Output<MaintenanceWindowTaskTaskInvocationParametersGetArgs> getTaskInvocationParameters() {
@@ -121,7 +121,7 @@ public final class MaintenanceWindowTaskState extends io.pulumi.resources.Resour
      * The type of task being registered. Valid values: `AUTOMATION`, `LAMBDA`, `RUN_COMMAND` or `STEP_FUNCTIONS`.
      * 
      */
-    @InputImport(name="taskType")
+    @Import(name="taskType")
       private final @Nullable Output<String> taskType;
 
     public Output<String> getTaskType() {
@@ -132,7 +132,7 @@ public final class MaintenanceWindowTaskState extends io.pulumi.resources.Resour
      * The Id of the maintenance window to register the task with.
      * 
      */
-    @InputImport(name="windowId")
+    @Import(name="windowId")
       private final @Nullable Output<String> windowId;
 
     public Output<String> getWindowId() {

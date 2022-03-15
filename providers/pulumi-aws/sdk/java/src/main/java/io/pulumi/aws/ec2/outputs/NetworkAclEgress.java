@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkAclEgress {
     /**
      * The action to take.
@@ -60,17 +60,17 @@ public final class NetworkAclEgress {
      */
     private final Integer toPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkAclEgress(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("cidrBlock") @Nullable String cidrBlock,
-        @OutputCustomType.Parameter("fromPort") Integer fromPort,
-        @OutputCustomType.Parameter("icmpCode") @Nullable Integer icmpCode,
-        @OutputCustomType.Parameter("icmpType") @Nullable Integer icmpType,
-        @OutputCustomType.Parameter("ipv6CidrBlock") @Nullable String ipv6CidrBlock,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("ruleNo") Integer ruleNo,
-        @OutputCustomType.Parameter("toPort") Integer toPort) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("cidrBlock") @Nullable String cidrBlock,
+        @CustomType.Parameter("fromPort") Integer fromPort,
+        @CustomType.Parameter("icmpCode") @Nullable Integer icmpCode,
+        @CustomType.Parameter("icmpType") @Nullable Integer icmpType,
+        @CustomType.Parameter("ipv6CidrBlock") @Nullable String ipv6CidrBlock,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("ruleNo") Integer ruleNo,
+        @CustomType.Parameter("toPort") Integer toPort) {
         this.action = action;
         this.cidrBlock = cidrBlock;
         this.fromPort = fromPort;

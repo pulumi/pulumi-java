@@ -8,7 +8,7 @@ import io.pulumi.aws.cloudwatch.MetricAlarmArgs;
 import io.pulumi.aws.cloudwatch.inputs.MetricAlarmState;
 import io.pulumi.aws.cloudwatch.outputs.MetricAlarmMetricQuery;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -46,7 +46,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * Indicates whether or not actions should be executed during any changes to the alarm's state. Defaults to `true`.
      * 
      */
-    @OutputExport(name="actionsEnabled", type=Boolean.class, parameters={})
+    @Export(name="actionsEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> actionsEnabled;
 
     /**
@@ -60,7 +60,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * The list of actions to execute when this alarm transitions into an ALARM state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    @OutputExport(name="alarmActions", type=List.class, parameters={String.class})
+    @Export(name="alarmActions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> alarmActions;
 
     /**
@@ -74,7 +74,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * The description for the alarm.
      * 
      */
-    @OutputExport(name="alarmDescription", type=String.class, parameters={})
+    @Export(name="alarmDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> alarmDescription;
 
     /**
@@ -88,7 +88,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * The ARN of the CloudWatch Metric Alarm.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -102,7 +102,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand. Either of the following is supported: `GreaterThanOrEqualToThreshold`, `GreaterThanThreshold`, `LessThanThreshold`, `LessThanOrEqualToThreshold`. Additionally, the values  `LessThanLowerOrGreaterThanUpperThreshold`, `LessThanLowerThreshold`, and `GreaterThanUpperThreshold` are used only for alarms based on anomaly detection models.
      * 
      */
-    @OutputExport(name="comparisonOperator", type=String.class, parameters={})
+    @Export(name="comparisonOperator", type=String.class, parameters={})
     private Output<String> comparisonOperator;
 
     /**
@@ -116,7 +116,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * The number of datapoints that must be breaching to trigger the alarm.
      * 
      */
-    @OutputExport(name="datapointsToAlarm", type=Integer.class, parameters={})
+    @Export(name="datapointsToAlarm", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> datapointsToAlarm;
 
     /**
@@ -130,7 +130,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
      */
-    @OutputExport(name="dimensions", type=Map.class, parameters={String.class, String.class})
+    @Export(name="dimensions", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> dimensions;
 
     /**
@@ -149,7 +149,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * The following values are supported: `ignore`, and `evaluate`.
      * 
      */
-    @OutputExport(name="evaluateLowSampleCountPercentiles", type=String.class, parameters={})
+    @Export(name="evaluateLowSampleCountPercentiles", type=String.class, parameters={})
     private Output<String> evaluateLowSampleCountPercentiles;
 
     /**
@@ -168,7 +168,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * The number of periods over which data is compared to the specified threshold.
      * 
      */
-    @OutputExport(name="evaluationPeriods", type=Integer.class, parameters={})
+    @Export(name="evaluationPeriods", type=Integer.class, parameters={})
     private Output<Integer> evaluationPeriods;
 
     /**
@@ -182,7 +182,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * The percentile statistic for the metric associated with the alarm. Specify a value between p0.0 and p100.
      * 
      */
-    @OutputExport(name="extendedStatistic", type=String.class, parameters={})
+    @Export(name="extendedStatistic", type=String.class, parameters={})
     private Output</* @Nullable */ String> extendedStatistic;
 
     /**
@@ -196,7 +196,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * The list of actions to execute when this alarm transitions into an INSUFFICIENT_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    @OutputExport(name="insufficientDataActions", type=List.class, parameters={String.class})
+    @Export(name="insufficientDataActions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> insufficientDataActions;
 
     /**
@@ -211,7 +211,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
      */
-    @OutputExport(name="metricName", type=String.class, parameters={})
+    @Export(name="metricName", type=String.class, parameters={})
     private Output</* @Nullable */ String> metricName;
 
     /**
@@ -226,7 +226,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * Enables you to create an alarm based on a metric math expression. You may specify at most 20.
      * 
      */
-    @OutputExport(name="metricQueries", type=List.class, parameters={MetricAlarmMetricQuery.class})
+    @Export(name="metricQueries", type=List.class, parameters={MetricAlarmMetricQuery.class})
     private Output</* @Nullable */ List<MetricAlarmMetricQuery>> metricQueries;
 
     /**
@@ -240,7 +240,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * The descriptive name for the alarm. This name must be unique within the user's AWS account
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -255,7 +255,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
      */
-    @OutputExport(name="namespace", type=String.class, parameters={})
+    @Export(name="namespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> namespace;
 
     /**
@@ -270,7 +270,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * The list of actions to execute when this alarm transitions into an OK state from any other state. Each action is specified as an Amazon Resource Name (ARN).
      * 
      */
-    @OutputExport(name="okActions", type=List.class, parameters={String.class})
+    @Export(name="okActions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> okActions;
 
     /**
@@ -284,7 +284,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * The period in seconds over which the specified `stat` is applied.
      * 
      */
-    @OutputExport(name="period", type=Integer.class, parameters={})
+    @Export(name="period", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> period;
 
     /**
@@ -299,7 +299,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * Either of the following is supported: `SampleCount`, `Average`, `Sum`, `Minimum`, `Maximum`
      * 
      */
-    @OutputExport(name="statistic", type=String.class, parameters={})
+    @Export(name="statistic", type=String.class, parameters={})
     private Output</* @Nullable */ String> statistic;
 
     /**
@@ -314,7 +314,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -328,7 +328,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -342,7 +342,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * The value against which the specified statistic is compared. This parameter is required for alarms based on static thresholds, but should not be used for alarms based on anomaly detection models.
      * 
      */
-    @OutputExport(name="threshold", type=Double.class, parameters={})
+    @Export(name="threshold", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> threshold;
 
     /**
@@ -356,7 +356,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * If this is an alarm based on an anomaly detection model, make this value match the ID of the ANOMALY_DETECTION_BAND function.
      * 
      */
-    @OutputExport(name="thresholdMetricId", type=String.class, parameters={})
+    @Export(name="thresholdMetricId", type=String.class, parameters={})
     private Output</* @Nullable */ String> thresholdMetricId;
 
     /**
@@ -370,7 +370,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * Sets how this alarm is to handle missing data points. The following values are supported: `missing`, `ignore`, `breaching` and `notBreaching`. Defaults to `missing`.
      * 
      */
-    @OutputExport(name="treatMissingData", type=String.class, parameters={})
+    @Export(name="treatMissingData", type=String.class, parameters={})
     private Output</* @Nullable */ String> treatMissingData;
 
     /**
@@ -384,7 +384,7 @@ public class MetricAlarm extends io.pulumi.resources.CustomResource {
      * The unit for this metric.
      * 
      */
-    @OutputExport(name="unit", type=String.class, parameters={})
+    @Export(name="unit", type=String.class, parameters={})
     private Output</* @Nullable */ String> unit;
 
     /**

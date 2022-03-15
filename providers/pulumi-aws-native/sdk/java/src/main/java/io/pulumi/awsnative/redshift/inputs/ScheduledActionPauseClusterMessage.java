@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ScheduledActionPauseClusterMessage extends io.pulumi.resource
 
     public static final ScheduledActionPauseClusterMessage Empty = new ScheduledActionPauseClusterMessage();
 
-    @InputImport(name="clusterIdentifier", required=true)
+    @Import(name="clusterIdentifier", required=true)
       private final String clusterIdentifier;
 
     public String getClusterIdentifier() {

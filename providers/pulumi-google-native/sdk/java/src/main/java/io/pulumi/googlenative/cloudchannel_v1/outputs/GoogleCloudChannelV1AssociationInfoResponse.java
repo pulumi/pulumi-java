@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudChannelV1AssociationInfoResponse {
     /**
      * The name of the base entitlement, for which this entitlement is an add-on.
@@ -15,8 +15,8 @@ public final class GoogleCloudChannelV1AssociationInfoResponse {
      */
     private final String baseEntitlement;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudChannelV1AssociationInfoResponse(@OutputCustomType.Parameter("baseEntitlement") String baseEntitlement) {
+    @CustomType.Constructor
+    private GoogleCloudChannelV1AssociationInfoResponse(@CustomType.Parameter("baseEntitlement") String baseEntitlement) {
         this.baseEntitlement = baseEntitlement;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class X509CertificateNameArgs extends io.pulumi.resources.ResourceA
      * Thumbprint for the Issuer of the Certificate.
      * 
      */
-    @InputImport(name="issuerCertificateThumbprint")
+    @Import(name="issuerCertificateThumbprint")
       private final @Nullable Output<String> issuerCertificateThumbprint;
 
     public Output<String> getIssuerCertificateThumbprint() {
@@ -33,7 +33,7 @@ public final class X509CertificateNameArgs extends io.pulumi.resources.ResourceA
      * Common Name of the Certificate.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

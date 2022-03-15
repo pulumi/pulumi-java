@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SyslogDataSourceResponse {
     /**
      * The list of facility names.
@@ -35,12 +35,12 @@ public final class SyslogDataSourceResponse {
      */
     private final @Nullable List<String> streams;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SyslogDataSourceResponse(
-        @OutputCustomType.Parameter("facilityNames") @Nullable List<String> facilityNames,
-        @OutputCustomType.Parameter("logLevels") @Nullable List<String> logLevels,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("streams") @Nullable List<String> streams) {
+        @CustomType.Parameter("facilityNames") @Nullable List<String> facilityNames,
+        @CustomType.Parameter("logLevels") @Nullable List<String> logLevels,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("streams") @Nullable List<String> streams) {
         this.facilityNames = facilityNames;
         this.logLevels = logLevels;
         this.name = name;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.AwsClusterAuthorizationArgs;
 import io.pulumi.gcp.container.inputs.AwsClusterControlPlaneArgs;
 import io.pulumi.gcp.container.inputs.AwsClusterFleetArgs;
@@ -23,7 +23,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
     public Output<Map<String,String>> getAnnotations() {
@@ -34,7 +34,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Required. Configuration related to the cluster RBAC settings.
      * 
      */
-    @InputImport(name="authorization", required=true)
+    @Import(name="authorization", required=true)
       private final Output<AwsClusterAuthorizationArgs> authorization;
 
     public Output<AwsClusterAuthorizationArgs> getAuthorization() {
@@ -45,7 +45,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Required. The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
      * 
      */
-    @InputImport(name="awsRegion", required=true)
+    @Import(name="awsRegion", required=true)
       private final Output<String> awsRegion;
 
     public Output<String> getAwsRegion() {
@@ -56,7 +56,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Required. Configuration related to the cluster control plane.
      * 
      */
-    @InputImport(name="controlPlane", required=true)
+    @Import(name="controlPlane", required=true)
       private final Output<AwsClusterControlPlaneArgs> controlPlane;
 
     public Output<AwsClusterControlPlaneArgs> getControlPlane() {
@@ -67,7 +67,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -78,7 +78,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Fleet configuration.
      * 
      */
-    @InputImport(name="fleet", required=true)
+    @Import(name="fleet", required=true)
       private final Output<AwsClusterFleetArgs> fleet;
 
     public Output<AwsClusterFleetArgs> getFleet() {
@@ -89,7 +89,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The location for the resource
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -100,7 +100,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The name of this resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -111,7 +111,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Required. Cluster-wide networking configuration.
      * 
      */
-    @InputImport(name="networking", required=true)
+    @Import(name="networking", required=true)
       private final Output<AwsClusterNetworkingArgs> networking;
 
     public Output<AwsClusterNetworkingArgs> getNetworking() {
@@ -122,7 +122,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The project for the resource
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

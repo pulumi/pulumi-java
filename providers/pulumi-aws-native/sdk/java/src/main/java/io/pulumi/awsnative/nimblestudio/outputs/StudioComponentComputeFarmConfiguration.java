@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.nimblestudio.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StudioComponentComputeFarmConfiguration {
     /**
      * <p>The name of an Active Directory user that is used on ComputeFarm worker instances.</p>
@@ -22,10 +22,10 @@ public final class StudioComponentComputeFarmConfiguration {
      */
     private final @Nullable String endpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StudioComponentComputeFarmConfiguration(
-        @OutputCustomType.Parameter("activeDirectoryUser") @Nullable String activeDirectoryUser,
-        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint) {
+        @CustomType.Parameter("activeDirectoryUser") @Nullable String activeDirectoryUser,
+        @CustomType.Parameter("endpoint") @Nullable String endpoint) {
         this.activeDirectoryUser = activeDirectoryUser;
         this.endpoint = endpoint;
     }

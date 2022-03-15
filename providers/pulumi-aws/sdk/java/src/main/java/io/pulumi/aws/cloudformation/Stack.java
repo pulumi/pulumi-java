@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudformation.StackArgs;
 import io.pulumi.aws.cloudformation.inputs.StackState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -37,7 +37,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPAND`
      * 
      */
-    @OutputExport(name="capabilities", type=List.class, parameters={String.class})
+    @Export(name="capabilities", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> capabilities;
 
     /**
@@ -53,7 +53,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Conflicts with `on_failure`.
      * 
      */
-    @OutputExport(name="disableRollback", type=Boolean.class, parameters={})
+    @Export(name="disableRollback", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableRollback;
 
     /**
@@ -68,7 +68,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
      * 
      */
-    @OutputExport(name="iamRoleArn", type=String.class, parameters={})
+    @Export(name="iamRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> iamRoleArn;
 
     /**
@@ -82,7 +82,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Stack name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -96,7 +96,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * A list of SNS topic ARNs to publish stack related events.
      * 
      */
-    @OutputExport(name="notificationArns", type=List.class, parameters={String.class})
+    @Export(name="notificationArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> notificationArns;
 
     /**
@@ -111,7 +111,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`.
      * 
      */
-    @OutputExport(name="onFailure", type=String.class, parameters={})
+    @Export(name="onFailure", type=String.class, parameters={})
     private Output</* @Nullable */ String> onFailure;
 
     /**
@@ -126,7 +126,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * A map of outputs from the stack.
      * 
      */
-    @OutputExport(name="outputs", type=Map.class, parameters={String.class, String.class})
+    @Export(name="outputs", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> outputs;
 
     /**
@@ -140,7 +140,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * A map of Parameter structures that specify input parameters for the stack.
      * 
      */
-    @OutputExport(name="parameters", type=Map.class, parameters={String.class, String.class})
+    @Export(name="parameters", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> parameters;
 
     /**
@@ -155,7 +155,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Conflicts w/ `policy_url`.
      * 
      */
-    @OutputExport(name="policyBody", type=String.class, parameters={})
+    @Export(name="policyBody", type=String.class, parameters={})
     private Output<String> policyBody;
 
     /**
@@ -171,7 +171,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Conflicts w/ `policy_body`.
      * 
      */
-    @OutputExport(name="policyUrl", type=String.class, parameters={})
+    @Export(name="policyUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyUrl;
 
     /**
@@ -186,7 +186,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Map of resource tags to associate with this stack. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -200,7 +200,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -214,7 +214,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Structure containing the template body (max size: 51,200 bytes).
      * 
      */
-    @OutputExport(name="templateBody", type=String.class, parameters={})
+    @Export(name="templateBody", type=String.class, parameters={})
     private Output<String> templateBody;
 
     /**
@@ -228,7 +228,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * Location of a file containing the template body (max size: 460,800 bytes).
      * 
      */
-    @OutputExport(name="templateUrl", type=String.class, parameters={})
+    @Export(name="templateUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateUrl;
 
     /**
@@ -242,7 +242,7 @@ public class Stack extends io.pulumi.resources.CustomResource {
      * The amount of time that can pass before the stack status becomes `CREATE_FAILED`.
      * 
      */
-    @OutputExport(name="timeoutInMinutes", type=Integer.class, parameters={})
+    @Export(name="timeoutInMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeoutInMinutes;
 
     /**

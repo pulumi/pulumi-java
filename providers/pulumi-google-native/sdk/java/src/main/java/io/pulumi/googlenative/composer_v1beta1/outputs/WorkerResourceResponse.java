@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.composer_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkerResourceResponse {
     /**
      * Optional. CPU request and limit for a single Airflow worker replica.
@@ -36,13 +36,13 @@ public final class WorkerResourceResponse {
      */
     private final Double storageGb;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkerResourceResponse(
-        @OutputCustomType.Parameter("cpu") Double cpu,
-        @OutputCustomType.Parameter("maxCount") Integer maxCount,
-        @OutputCustomType.Parameter("memoryGb") Double memoryGb,
-        @OutputCustomType.Parameter("minCount") Integer minCount,
-        @OutputCustomType.Parameter("storageGb") Double storageGb) {
+        @CustomType.Parameter("cpu") Double cpu,
+        @CustomType.Parameter("maxCount") Integer maxCount,
+        @CustomType.Parameter("memoryGb") Double memoryGb,
+        @CustomType.Parameter("minCount") Integer minCount,
+        @CustomType.Parameter("storageGb") Double storageGb) {
         this.cpu = cpu;
         this.maxCount = maxCount;
         this.memoryGb = memoryGb;

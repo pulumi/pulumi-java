@@ -8,14 +8,14 @@ import io.pulumi.azurenative.media.outputs.DeinterlaceResponse;
 import io.pulumi.azurenative.media.outputs.RectangleResponse;
 import io.pulumi.azurenative.media.outputs.VideoOverlayResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FiltersResponse {
     /**
      * The parameters for the rectangular window with which to crop the input video.
@@ -38,12 +38,12 @@ public final class FiltersResponse {
      */
     private final @Nullable String rotation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FiltersResponse(
-        @OutputCustomType.Parameter("crop") @Nullable RectangleResponse crop,
-        @OutputCustomType.Parameter("deinterlace") @Nullable DeinterlaceResponse deinterlace,
-        @OutputCustomType.Parameter("overlays") @Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays,
-        @OutputCustomType.Parameter("rotation") @Nullable String rotation) {
+        @CustomType.Parameter("crop") @Nullable RectangleResponse crop,
+        @CustomType.Parameter("deinterlace") @Nullable DeinterlaceResponse deinterlace,
+        @CustomType.Parameter("overlays") @Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays,
+        @CustomType.Parameter("rotation") @Nullable String rotation) {
         this.crop = crop;
         this.deinterlace = deinterlace;
         this.overlays = overlays;

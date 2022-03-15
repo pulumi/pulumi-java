@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class UrlRewriteResponse extends io.pulumi.resources.InvokeArgs {
      * Before forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be from 1 to 255 characters.
      * 
      */
-    @InputImport(name="hostRewrite", required=true)
+    @Import(name="hostRewrite", required=true)
       private final String hostRewrite;
 
     public String getHostRewrite() {
@@ -31,7 +31,7 @@ public final class UrlRewriteResponse extends io.pulumi.resources.InvokeArgs {
      * Before forwarding the request to the selected backend service, the matching portion of the request's path is replaced by pathPrefixRewrite. The value must be from 1 to 1024 characters.
      * 
      */
-    @InputImport(name="pathPrefixRewrite", required=true)
+    @Import(name="pathPrefixRewrite", required=true)
       private final String pathPrefixRewrite;
 
     public String getPathPrefixRewrite() {

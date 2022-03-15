@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionUrlMapHostRule {
     /**
      * Description of this test case.
@@ -32,11 +32,11 @@ public final class RegionUrlMapHostRule {
      */
     private final String pathMatcher;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionUrlMapHostRule(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("hosts") List<String> hosts,
-        @OutputCustomType.Parameter("pathMatcher") String pathMatcher) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("hosts") List<String> hosts,
+        @CustomType.Parameter("pathMatcher") String pathMatcher) {
         this.description = description;
         this.hosts = hosts;
         this.pathMatcher = pathMatcher;

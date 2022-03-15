@@ -8,7 +8,7 @@ import io.pulumi.aws.synthetics.inputs.CanaryRunConfigArgs;
 import io.pulumi.aws.synthetics.inputs.CanaryScheduleArgs;
 import io.pulumi.aws.synthetics.inputs.CanaryVpcConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * configuration for canary artifacts, including the encryption-at-rest settings for artifacts that the canary uploads to Amazon S3. See Artifact Config.
      * 
      */
-    @InputImport(name="artifactConfig")
+    @Import(name="artifactConfig")
       private final @Nullable Output<CanaryArtifactConfigArgs> artifactConfig;
 
     public Output<CanaryArtifactConfigArgs> getArtifactConfig() {
@@ -36,7 +36,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Location in Amazon S3 where Synthetics stores artifacts from the test runs of this canary.
      * 
      */
-    @InputImport(name="artifactS3Location", required=true)
+    @Import(name="artifactS3Location", required=true)
       private final Output<String> artifactS3Location;
 
     public Output<String> getArtifactS3Location() {
@@ -47,7 +47,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of the IAM role to be used to run the canary. see [AWS Docs](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_CreateCanary.html#API_CreateCanary_RequestSyntax) for permissions needs for IAM Role.
      * 
      */
-    @InputImport(name="executionRoleArn", required=true)
+    @Import(name="executionRoleArn", required=true)
       private final Output<String> executionRoleArn;
 
     public Output<String> getExecutionRoleArn() {
@@ -58,7 +58,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Number of days to retain data about failed runs of this canary. If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
      * 
      */
-    @InputImport(name="failureRetentionPeriod")
+    @Import(name="failureRetentionPeriod")
       private final @Nullable Output<Integer> failureRetentionPeriod;
 
     public Output<Integer> getFailureRetentionPeriod() {
@@ -69,7 +69,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Entry point to use for the source code when running the canary. This value must end with the string `.handler` .
      * 
      */
-    @InputImport(name="handler", required=true)
+    @Import(name="handler", required=true)
       private final Output<String> handler;
 
     public Output<String> getHandler() {
@@ -80,7 +80,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Name for this canary. Has a maximum length of 21 characters. Valid characters are lowercase alphanumeric, hyphen, or underscore.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -91,7 +91,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for individual canary runs. Detailed below.
      * 
      */
-    @InputImport(name="runConfig")
+    @Import(name="runConfig")
       private final @Nullable Output<CanaryRunConfigArgs> runConfig;
 
     public Output<CanaryRunConfigArgs> getRunConfig() {
@@ -102,7 +102,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Runtime version to use for the canary. Versions change often so consult the [Amazon CloudWatch documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Library.html) for the latest valid versions. Values include `syn-python-selenium-1.0`, `syn-nodejs-puppeteer-3.0`, `syn-nodejs-2.2`, `syn-nodejs-2.1`, `syn-nodejs-2.0`, and `syn-1.0`.
      * 
      */
-    @InputImport(name="runtimeVersion", required=true)
+    @Import(name="runtimeVersion", required=true)
       private final Output<String> runtimeVersion;
 
     public Output<String> getRuntimeVersion() {
@@ -113,7 +113,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Full bucket name which is used if your canary script is located in S3. The bucket must already exist. Specify the full bucket name including s3:// as the start of the bucket name. **Conflicts with `zip_file`.**
      * 
      */
-    @InputImport(name="s3Bucket")
+    @Import(name="s3Bucket")
       private final @Nullable Output<String> s3Bucket;
 
     public Output<String> getS3Bucket() {
@@ -124,7 +124,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * S3 key of your script. **Conflicts with `zip_file`.**
      * 
      */
-    @InputImport(name="s3Key")
+    @Import(name="s3Key")
       private final @Nullable Output<String> s3Key;
 
     public Output<String> getS3Key() {
@@ -135,7 +135,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * S3 version ID of your script. **Conflicts with `zip_file`.**
      * 
      */
-    @InputImport(name="s3Version")
+    @Import(name="s3Version")
       private final @Nullable Output<String> s3Version;
 
     public Output<String> getS3Version() {
@@ -146,7 +146,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block providing how often the canary is to run and when these test runs are to stop. Detailed below.
      * 
      */
-    @InputImport(name="schedule", required=true)
+    @Import(name="schedule", required=true)
       private final Output<CanaryScheduleArgs> schedule;
 
     public Output<CanaryScheduleArgs> getSchedule() {
@@ -157,7 +157,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to run or stop the canary.
      * 
      */
-    @InputImport(name="startCanary")
+    @Import(name="startCanary")
       private final @Nullable Output<Boolean> startCanary;
 
     public Output<Boolean> getStartCanary() {
@@ -168,7 +168,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Number of days to retain data about successful runs of this canary. If you omit this field, the default of 31 days is used. The valid range is 1 to 455 days.
      * 
      */
-    @InputImport(name="successRetentionPeriod")
+    @Import(name="successRetentionPeriod")
       private final @Nullable Output<Integer> successRetentionPeriod;
 
     public Output<Integer> getSuccessRetentionPeriod() {
@@ -179,7 +179,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -190,7 +190,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="vpcConfig")
+    @Import(name="vpcConfig")
       private final @Nullable Output<CanaryVpcConfigArgs> vpcConfig;
 
     public Output<CanaryVpcConfigArgs> getVpcConfig() {
@@ -201,7 +201,7 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
      * ZIP file that contains the script, if you input your canary script directly into the canary instead of referring to an S3 location. It can be up to 5 MB. **Conflicts with `s3_bucket`, `s3_key`, and `s3_version`.**
      * 
      */
-    @InputImport(name="zipFile")
+    @Import(name="zipFile")
       private final @Nullable Output<String> zipFile;
 
     public Output<String> getZipFile() {

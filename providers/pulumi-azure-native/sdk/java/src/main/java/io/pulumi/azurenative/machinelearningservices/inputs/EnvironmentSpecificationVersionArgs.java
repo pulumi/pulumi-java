@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.DockerImageArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.InferenceContainerPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -30,7 +30,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * <see href="https://repo2docker.readthedocs.io/en/latest/config_files.html#environment-yml-install-a-conda-environment" />
      * 
      */
-    @InputImport(name="condaFile")
+    @Import(name="condaFile")
       private final @Nullable Output<String> condaFile;
 
     public Output<String> getCondaFile() {
@@ -41,7 +41,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * The asset description text.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -52,7 +52,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * Configuration settings for Docker.
      * 
      */
-    @InputImport(name="docker")
+    @Import(name="docker")
       private final @Nullable Output<Either<DockerBuildArgs,DockerImageArgs>> docker;
 
     public Output<Either<DockerBuildArgs,DockerImageArgs>> getDocker() {
@@ -63,7 +63,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * Defines configuration specific to inference.
      * 
      */
-    @InputImport(name="inferenceContainerProperties")
+    @Import(name="inferenceContainerProperties")
       private final @Nullable Output<InferenceContainerPropertiesArgs> inferenceContainerProperties;
 
     public Output<InferenceContainerPropertiesArgs> getInferenceContainerProperties() {
@@ -74,7 +74,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * If the name version are system generated (anonymous registration).
      * 
      */
-    @InputImport(name="isAnonymous")
+    @Import(name="isAnonymous")
       private final @Nullable Output<Boolean> isAnonymous;
 
     public Output<Boolean> getIsAnonymous() {
@@ -85,7 +85,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * The asset property dictionary.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -96,7 +96,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
      * Tag dictionary. Tags can be added, removed, and updated.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

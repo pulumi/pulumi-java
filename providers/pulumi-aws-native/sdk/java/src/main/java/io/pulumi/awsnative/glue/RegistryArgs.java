@@ -5,7 +5,7 @@ package io.pulumi.awsnative.glue;
 
 import io.pulumi.awsnative.glue.inputs.RegistryTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the registry. If description is not provided, there will not be any default value for this.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the registry to be created of max length of 255, and may only contain letters, numbers, hyphen, underscore, dollar sign, or hash mark.  No whitespace.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
      * List of tags to tag the Registry
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<RegistryTagArgs>> tags;
 
     public Output<List<RegistryTagArgs>> getTags() {

@@ -12,7 +12,7 @@ import io.pulumi.azurenative.network.outputs.PrivateLinkServiceConnectionRespons
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * An array of custom dns configurations.
      * 
      */
-    @OutputExport(name="customDnsConfigs", type=List.class, parameters={CustomDnsConfigPropertiesFormatResponse.class})
+    @Export(name="customDnsConfigs", type=List.class, parameters={CustomDnsConfigPropertiesFormatResponse.class})
     private Output</* @Nullable */ List<CustomDnsConfigPropertiesFormatResponse>> customDnsConfigs;
 
     /**
@@ -54,7 +54,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -68,7 +68,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * The extended location of the load balancer.
      * 
      */
-    @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
+    @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
@@ -82,7 +82,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -96,7 +96,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.
      * 
      */
-    @OutputExport(name="manualPrivateLinkServiceConnections", type=List.class, parameters={PrivateLinkServiceConnectionResponse.class})
+    @Export(name="manualPrivateLinkServiceConnections", type=List.class, parameters={PrivateLinkServiceConnectionResponse.class})
     private Output</* @Nullable */ List<PrivateLinkServiceConnectionResponse>> manualPrivateLinkServiceConnections;
 
     /**
@@ -110,7 +110,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -124,7 +124,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * An array of references to the network interfaces created for this private endpoint.
      * 
      */
-    @OutputExport(name="networkInterfaces", type=List.class, parameters={NetworkInterfaceResponse.class})
+    @Export(name="networkInterfaces", type=List.class, parameters={NetworkInterfaceResponse.class})
     private Output<List<NetworkInterfaceResponse>> networkInterfaces;
 
     /**
@@ -138,7 +138,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * A grouping of information about the connection to the remote resource.
      * 
      */
-    @OutputExport(name="privateLinkServiceConnections", type=List.class, parameters={PrivateLinkServiceConnectionResponse.class})
+    @Export(name="privateLinkServiceConnections", type=List.class, parameters={PrivateLinkServiceConnectionResponse.class})
     private Output</* @Nullable */ List<PrivateLinkServiceConnectionResponse>> privateLinkServiceConnections;
 
     /**
@@ -152,7 +152,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * The provisioning state of the private endpoint resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -166,7 +166,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * The ID of the subnet from which the private IP will be allocated.
      * 
      */
-    @OutputExport(name="subnet", type=SubnetResponse.class, parameters={})
+    @Export(name="subnet", type=SubnetResponse.class, parameters={})
     private Output</* @Nullable */ SubnetResponse> subnet;
 
     /**
@@ -180,7 +180,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -194,7 +194,7 @@ public class PrivateEndpoint extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

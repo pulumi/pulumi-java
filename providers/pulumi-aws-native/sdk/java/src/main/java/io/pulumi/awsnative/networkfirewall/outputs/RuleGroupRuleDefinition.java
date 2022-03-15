@@ -4,20 +4,20 @@
 package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupMatchAttributes;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleDefinition {
     private final List<String> actions;
     private final RuleGroupMatchAttributes matchAttributes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleDefinition(
-        @OutputCustomType.Parameter("actions") List<String> actions,
-        @OutputCustomType.Parameter("matchAttributes") RuleGroupMatchAttributes matchAttributes) {
+        @CustomType.Parameter("actions") List<String> actions,
+        @CustomType.Parameter("matchAttributes") RuleGroupMatchAttributes matchAttributes) {
         this.actions = actions;
         this.matchAttributes = matchAttributes;
     }

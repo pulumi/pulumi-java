@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigateway_v1.inputs.ApigatewayAuditLogConfigResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ApigatewayAuditConfigResponse extends io.pulumi.resources.Inv
      * The configuration for logging of each type of permission.
      * 
      */
-    @InputImport(name="auditLogConfigs", required=true)
+    @Import(name="auditLogConfigs", required=true)
       private final List<ApigatewayAuditLogConfigResponse> auditLogConfigs;
 
     public List<ApigatewayAuditLogConfigResponse> getAuditLogConfigs() {
@@ -33,7 +33,7 @@ public final class ApigatewayAuditConfigResponse extends io.pulumi.resources.Inv
      * Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final String service;
 
     public String getService() {

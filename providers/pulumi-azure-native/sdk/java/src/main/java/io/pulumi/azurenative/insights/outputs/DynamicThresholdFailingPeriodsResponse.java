@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DynamicThresholdFailingPeriodsResponse {
     /**
      * The number of violations to trigger an alert. Should be smaller or equal to numberOfEvaluationPeriods.
@@ -20,10 +20,10 @@ public final class DynamicThresholdFailingPeriodsResponse {
      */
     private final Double numberOfEvaluationPeriods;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DynamicThresholdFailingPeriodsResponse(
-        @OutputCustomType.Parameter("minFailingPeriodsToAlert") Double minFailingPeriodsToAlert,
-        @OutputCustomType.Parameter("numberOfEvaluationPeriods") Double numberOfEvaluationPeriods) {
+        @CustomType.Parameter("minFailingPeriodsToAlert") Double minFailingPeriodsToAlert,
+        @CustomType.Parameter("numberOfEvaluationPeriods") Double numberOfEvaluationPeriods) {
         this.minFailingPeriodsToAlert = minFailingPeriodsToAlert;
         this.numberOfEvaluationPeriods = numberOfEvaluationPeriods;
     }

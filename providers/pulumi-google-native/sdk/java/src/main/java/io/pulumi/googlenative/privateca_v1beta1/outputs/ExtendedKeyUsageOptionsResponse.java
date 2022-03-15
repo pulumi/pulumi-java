@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExtendedKeyUsageOptionsResponse {
     /**
      * Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
@@ -40,14 +40,14 @@ public final class ExtendedKeyUsageOptionsResponse {
      */
     private final Boolean timeStamping;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExtendedKeyUsageOptionsResponse(
-        @OutputCustomType.Parameter("clientAuth") Boolean clientAuth,
-        @OutputCustomType.Parameter("codeSigning") Boolean codeSigning,
-        @OutputCustomType.Parameter("emailProtection") Boolean emailProtection,
-        @OutputCustomType.Parameter("ocspSigning") Boolean ocspSigning,
-        @OutputCustomType.Parameter("serverAuth") Boolean serverAuth,
-        @OutputCustomType.Parameter("timeStamping") Boolean timeStamping) {
+        @CustomType.Parameter("clientAuth") Boolean clientAuth,
+        @CustomType.Parameter("codeSigning") Boolean codeSigning,
+        @CustomType.Parameter("emailProtection") Boolean emailProtection,
+        @CustomType.Parameter("ocspSigning") Boolean ocspSigning,
+        @CustomType.Parameter("serverAuth") Boolean serverAuth,
+        @CustomType.Parameter("timeStamping") Boolean timeStamping) {
         this.clientAuth = clientAuth;
         this.codeSigning = codeSigning;
         this.emailProtection = emailProtection;

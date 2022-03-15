@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.FirewallPolicyAssociationArgs;
@@ -38,7 +38,7 @@ public class FirewallPolicyAssociation extends io.pulumi.resources.CustomResourc
      * The target that the firewall policy is attached to.
      * 
      */
-    @OutputExport(name="attachmentTarget", type=String.class, parameters={})
+    @Export(name="attachmentTarget", type=String.class, parameters={})
     private Output<String> attachmentTarget;
 
     /**
@@ -52,7 +52,7 @@ public class FirewallPolicyAssociation extends io.pulumi.resources.CustomResourc
      * The firewall policy ID of the association.
      * 
      */
-    @OutputExport(name="firewallPolicy", type=String.class, parameters={})
+    @Export(name="firewallPolicy", type=String.class, parameters={})
     private Output<String> firewallPolicy;
 
     /**
@@ -66,7 +66,7 @@ public class FirewallPolicyAssociation extends io.pulumi.resources.CustomResourc
      * The name for an association.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class FirewallPolicyAssociation extends io.pulumi.resources.CustomResourc
      * The short name of the firewall policy of the association.
      * 
      */
-    @OutputExport(name="shortName", type=String.class, parameters={})
+    @Export(name="shortName", type=String.class, parameters={})
     private Output<String> shortName;
 
     /**

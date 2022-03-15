@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VolumeBackupPropertiesResponse extends io.pulumi.resources.In
      * Backup Enabled
      * 
      */
-    @InputImport(name="backupEnabled")
+    @Import(name="backupEnabled")
       private final @Nullable Boolean backupEnabled;
 
     public Optional<Boolean> getBackupEnabled() {
@@ -34,7 +34,7 @@ public final class VolumeBackupPropertiesResponse extends io.pulumi.resources.In
      * Backup Policy Resource ID
      * 
      */
-    @InputImport(name="backupPolicyId")
+    @Import(name="backupPolicyId")
       private final @Nullable String backupPolicyId;
 
     public Optional<String> getBackupPolicyId() {
@@ -45,7 +45,7 @@ public final class VolumeBackupPropertiesResponse extends io.pulumi.resources.In
      * Policy Enforced
      * 
      */
-    @InputImport(name="policyEnforced")
+    @Import(name="policyEnforced")
       private final @Nullable Boolean policyEnforced;
 
     public Optional<Boolean> getPolicyEnforced() {
@@ -56,7 +56,7 @@ public final class VolumeBackupPropertiesResponse extends io.pulumi.resources.In
      * Vault Resource ID
      * 
      */
-    @InputImport(name="vaultId")
+    @Import(name="vaultId")
       private final @Nullable String vaultId;
 
     public Optional<String> getVaultId() {

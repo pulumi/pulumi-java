@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GpuResourceResponse extends io.pulumi.resources.InvokeArgs {
      * The count of the GPU resource.
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Integer count;
 
     public Integer getCount() {
@@ -32,7 +32,7 @@ public final class GpuResourceResponse extends io.pulumi.resources.InvokeArgs {
      * The SKU of the GPU resource.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final String sku;
 
     public String getSku() {

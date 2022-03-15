@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class JobStepExecutionOptionsResponse extends io.pulumi.resources.I
      * Initial delay between retries for job step execution.
      * 
      */
-    @InputImport(name="initialRetryIntervalSeconds")
+    @Import(name="initialRetryIntervalSeconds")
       private final @Nullable Integer initialRetryIntervalSeconds;
 
     public Optional<Integer> getInitialRetryIntervalSeconds() {
@@ -34,7 +34,7 @@ public final class JobStepExecutionOptionsResponse extends io.pulumi.resources.I
      * The maximum amount of time to wait between retries for job step execution.
      * 
      */
-    @InputImport(name="maximumRetryIntervalSeconds")
+    @Import(name="maximumRetryIntervalSeconds")
       private final @Nullable Integer maximumRetryIntervalSeconds;
 
     public Optional<Integer> getMaximumRetryIntervalSeconds() {
@@ -45,7 +45,7 @@ public final class JobStepExecutionOptionsResponse extends io.pulumi.resources.I
      * Maximum number of times the job step will be reattempted if the first attempt fails.
      * 
      */
-    @InputImport(name="retryAttempts")
+    @Import(name="retryAttempts")
       private final @Nullable Integer retryAttempts;
 
     public Optional<Integer> getRetryAttempts() {
@@ -56,7 +56,7 @@ public final class JobStepExecutionOptionsResponse extends io.pulumi.resources.I
      * The backoff multiplier for the time between retries.
      * 
      */
-    @InputImport(name="retryIntervalBackoffMultiplier")
+    @Import(name="retryIntervalBackoffMultiplier")
       private final @Nullable Double retryIntervalBackoffMultiplier;
 
     public Optional<Double> getRetryIntervalBackoffMultiplier() {
@@ -67,7 +67,7 @@ public final class JobStepExecutionOptionsResponse extends io.pulumi.resources.I
      * Execution timeout for the job step.
      * 
      */
-    @InputImport(name="timeoutSeconds")
+    @Import(name="timeoutSeconds")
       private final @Nullable Integer timeoutSeconds;
 
     public Optional<Integer> getTimeoutSeconds() {

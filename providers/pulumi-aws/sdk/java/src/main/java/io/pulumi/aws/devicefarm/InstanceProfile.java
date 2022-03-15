@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.devicefarm.InstanceProfileArgs;
 import io.pulumi.aws.devicefarm.inputs.InstanceProfileState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name of this instance profile.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -51,7 +51,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * The description of the instance profile.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -65,7 +65,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * An array of strings that specifies the list of app packages that should not be cleaned up from the device after a test run.
      * 
      */
-    @OutputExport(name="excludeAppPackagesFromCleanups", type=List.class, parameters={String.class})
+    @Export(name="excludeAppPackagesFromCleanups", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> excludeAppPackagesFromCleanups;
 
     /**
@@ -79,7 +79,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * The name for the instance profile.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * When set to `true`, Device Farm removes app packages after a test run. The default value is `false` for private devices.
      * 
      */
-    @OutputExport(name="packageCleanup", type=Boolean.class, parameters={})
+    @Export(name="packageCleanup", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> packageCleanup;
 
     /**
@@ -107,7 +107,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * When set to `true`, Device Farm reboots the instance after a test run. The default value is `true`.
      * 
      */
-    @OutputExport(name="rebootAfterUse", type=Boolean.class, parameters={})
+    @Export(name="rebootAfterUse", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> rebootAfterUse;
 
     /**
@@ -121,7 +121,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -135,7 +135,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

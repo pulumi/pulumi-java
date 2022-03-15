@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.UserAssignedIdentityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
      * Binding selector to use for the AzureIdentityBinding resource.
      * 
      */
-    @InputImport(name="bindingSelector")
+    @Import(name="bindingSelector")
       private final @Nullable Output<String> bindingSelector;
 
     public Output<String> getBindingSelector() {
@@ -30,7 +30,7 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
      * Information of the user assigned identity.
      * 
      */
-    @InputImport(name="identity", required=true)
+    @Import(name="identity", required=true)
       private final Output<UserAssignedIdentityArgs> identity;
 
     public Output<UserAssignedIdentityArgs> getIdentity() {
@@ -41,7 +41,7 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
      * Name of the pod identity.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
      * Namespace of the pod identity.
      * 
      */
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
     public Output<String> getNamespace() {

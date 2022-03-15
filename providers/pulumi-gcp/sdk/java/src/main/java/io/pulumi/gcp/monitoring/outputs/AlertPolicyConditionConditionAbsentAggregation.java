@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AlertPolicyConditionConditionAbsentAggregation {
     /**
      * The alignment period for per-time
@@ -104,12 +104,12 @@ public final class AlertPolicyConditionConditionAbsentAggregation {
      */
     private final @Nullable String perSeriesAligner;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AlertPolicyConditionConditionAbsentAggregation(
-        @OutputCustomType.Parameter("alignmentPeriod") @Nullable String alignmentPeriod,
-        @OutputCustomType.Parameter("crossSeriesReducer") @Nullable String crossSeriesReducer,
-        @OutputCustomType.Parameter("groupByFields") @Nullable List<String> groupByFields,
-        @OutputCustomType.Parameter("perSeriesAligner") @Nullable String perSeriesAligner) {
+        @CustomType.Parameter("alignmentPeriod") @Nullable String alignmentPeriod,
+        @CustomType.Parameter("crossSeriesReducer") @Nullable String crossSeriesReducer,
+        @CustomType.Parameter("groupByFields") @Nullable List<String> groupByFields,
+        @CustomType.Parameter("perSeriesAligner") @Nullable String perSeriesAligner) {
         this.alignmentPeriod = alignmentPeriod;
         this.crossSeriesReducer = crossSeriesReducer;
         this.groupByFields = groupByFields;

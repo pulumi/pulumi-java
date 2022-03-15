@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.VersionResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was found in.
      * 
      */
-    @InputImport(name="affectedCpeUri", required=true)
+    @Import(name="affectedCpeUri", required=true)
       private final String affectedCpeUri;
 
     public String getAffectedCpeUri() {
@@ -33,7 +33,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * The package this vulnerability was found in.
      * 
      */
-    @InputImport(name="affectedPackage", required=true)
+    @Import(name="affectedPackage", required=true)
       private final String affectedPackage;
 
     public String getAffectedPackage() {
@@ -44,7 +44,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * The version of the package that is installed on the resource affected by this vulnerability.
      * 
      */
-    @InputImport(name="affectedVersion", required=true)
+    @Import(name="affectedVersion", required=true)
       private final VersionResponse affectedVersion;
 
     public VersionResponse getAffectedVersion() {
@@ -55,7 +55,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when it is not available.
      * 
      */
-    @InputImport(name="effectiveSeverity", required=true)
+    @Import(name="effectiveSeverity", required=true)
       private final String effectiveSeverity;
 
     public String getEffectiveSeverity() {
@@ -66,7 +66,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * Whether a fix is available for this package.
      * 
      */
-    @InputImport(name="fixAvailable", required=true)
+    @Import(name="fixAvailable", required=true)
       private final Boolean fixAvailable;
 
     public Boolean getFixAvailable() {
@@ -77,7 +77,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was fixed in. It is possible for this to be different from the affected_cpe_uri.
      * 
      */
-    @InputImport(name="fixedCpeUri", required=true)
+    @Import(name="fixedCpeUri", required=true)
       private final String fixedCpeUri;
 
     public String getFixedCpeUri() {
@@ -88,7 +88,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * The package this vulnerability was fixed in. It is possible for this to be different from the affected_package.
      * 
      */
-    @InputImport(name="fixedPackage", required=true)
+    @Import(name="fixedPackage", required=true)
       private final String fixedPackage;
 
     public String getFixedPackage() {
@@ -99,7 +99,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * The version of the package this vulnerability was fixed in. Setting this to VersionKind.MAXIMUM means no fix is yet available.
      * 
      */
-    @InputImport(name="fixedVersion", required=true)
+    @Import(name="fixedVersion", required=true)
       private final VersionResponse fixedVersion;
 
     public VersionResponse getFixedVersion() {
@@ -110,7 +110,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * The type of package (e.g. OS, MAVEN, GO).
      * 
      */
-    @InputImport(name="packageType", required=true)
+    @Import(name="packageType", required=true)
       private final String packageType;
 
     public String getPackageType() {

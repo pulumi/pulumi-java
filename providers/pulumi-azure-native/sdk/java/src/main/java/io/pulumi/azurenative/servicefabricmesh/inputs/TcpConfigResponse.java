@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.GatewayDestinationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TcpConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Describes destination endpoint for routing traffic.
      * 
      */
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final GatewayDestinationResponse destination;
 
     public GatewayDestinationResponse getDestination() {
@@ -33,7 +33,7 @@ public final class TcpConfigResponse extends io.pulumi.resources.InvokeArgs {
      * tcp gateway config name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -44,7 +44,7 @@ public final class TcpConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the port at which the service endpoint below needs to be exposed.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {

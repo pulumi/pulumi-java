@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53recoveryreadiness;
 
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ReadinessCheckTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the ReadinessCheck to create.
      * 
      */
-    @InputImport(name="readinessCheckName")
+    @Import(name="readinessCheckName")
       private final @Nullable Output<String> readinessCheckName;
 
     public Output<String> getReadinessCheckName() {
@@ -31,7 +31,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource set to check.
      * 
      */
-    @InputImport(name="resourceSetName")
+    @Import(name="resourceSetName")
       private final @Nullable Output<String> resourceSetName;
 
     public Output<String> getResourceSetName() {
@@ -42,7 +42,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * A collection of tags associated with a resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ReadinessCheckTagArgs>> tags;
 
     public Output<List<ReadinessCheckTagArgs>> getTags() {

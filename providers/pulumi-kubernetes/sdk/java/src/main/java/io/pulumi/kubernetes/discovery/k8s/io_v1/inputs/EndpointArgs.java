@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.discovery.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import io.pulumi.kubernetes.discovery.k8s.io_v1.inputs.EndpointConditionsArgs;
 import io.pulumi.kubernetes.discovery.k8s.io_v1.inputs.EndpointHintsArgs;
@@ -27,7 +27,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * addresses of this endpoint. The contents of this field are interpreted according to the corresponding EndpointSlice addressType field. Consumers must handle different types of addresses in the context of their own capabilities. This must contain at least one address but no more than 100.
      * 
      */
-    @InputImport(name="addresses", required=true)
+    @Import(name="addresses", required=true)
       private final Output<List<String>> addresses;
 
     public Output<List<String>> getAddresses() {
@@ -38,7 +38,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * conditions contains information about the current status of the endpoint.
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<EndpointConditionsArgs> conditions;
 
     public Output<EndpointConditionsArgs> getConditions() {
@@ -49,7 +49,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * deprecatedTopology contains topology information part of the v1beta1 API. This field is deprecated, and will be removed when the v1beta1 API is removed (no sooner than kubernetes v1.24).  While this field can hold values, it is not writable through the v1 API, and any attempts to write to it will be silently ignored. Topology information can be found in the zone and nodeName fields instead.
      * 
      */
-    @InputImport(name="deprecatedTopology")
+    @Import(name="deprecatedTopology")
       private final @Nullable Output<Map<String,String>> deprecatedTopology;
 
     public Output<Map<String,String>> getDeprecatedTopology() {
@@ -60,7 +60,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * hints contains information associated with how an endpoint should be consumed.
      * 
      */
-    @InputImport(name="hints")
+    @Import(name="hints")
       private final @Nullable Output<EndpointHintsArgs> hints;
 
     public Output<EndpointHintsArgs> getHints() {
@@ -71,7 +71,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * hostname of this endpoint. This field may be used by consumers of endpoints to distinguish endpoints from each other (e.g. in DNS names). Multiple endpoints which use the same hostname should be considered fungible (e.g. multiple A values in DNS). Must be lowercase and pass DNS Label (RFC 1123) validation.
      * 
      */
-    @InputImport(name="hostname")
+    @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
     public Output<String> getHostname() {
@@ -82,7 +82,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * nodeName represents the name of the Node hosting this endpoint. This can be used to determine endpoints local to a Node. This field can be enabled with the EndpointSliceNodeName feature gate.
      * 
      */
-    @InputImport(name="nodeName")
+    @Import(name="nodeName")
       private final @Nullable Output<String> nodeName;
 
     public Output<String> getNodeName() {
@@ -93,7 +93,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * targetRef is a reference to a Kubernetes object that represents this endpoint.
      * 
      */
-    @InputImport(name="targetRef")
+    @Import(name="targetRef")
       private final @Nullable Output<ObjectReferenceArgs> targetRef;
 
     public Output<ObjectReferenceArgs> getTargetRef() {
@@ -104,7 +104,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * zone is the name of the Zone this endpoint exists in.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

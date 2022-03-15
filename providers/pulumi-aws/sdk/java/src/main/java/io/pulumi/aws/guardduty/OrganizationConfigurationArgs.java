@@ -5,7 +5,7 @@ package io.pulumi.aws.guardduty;
 
 import io.pulumi.aws.guardduty.inputs.OrganizationConfigurationDatasourcesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class OrganizationConfigurationArgs extends io.pulumi.resources.Res
      * When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
      * 
      */
-    @InputImport(name="autoEnable", required=true)
+    @Import(name="autoEnable", required=true)
       private final Output<Boolean> autoEnable;
 
     public Output<Boolean> getAutoEnable() {
@@ -31,7 +31,7 @@ public final class OrganizationConfigurationArgs extends io.pulumi.resources.Res
      * Configuration for the collected datasources.
      * 
      */
-    @InputImport(name="datasources")
+    @Import(name="datasources")
       private final @Nullable Output<OrganizationConfigurationDatasourcesArgs> datasources;
 
     public Output<OrganizationConfigurationDatasourcesArgs> getDatasources() {
@@ -42,7 +42,7 @@ public final class OrganizationConfigurationArgs extends io.pulumi.resources.Res
      * The detector ID of the GuardDuty account.
      * 
      */
-    @InputImport(name="detectorId", required=true)
+    @Import(name="detectorId", required=true)
       private final Output<String> detectorId;
 
     public Output<String> getDetectorId() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.resources.TagAtScopeArgs;
 import io.pulumi.azurenative.resources.outputs.TagsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class TagAtScope extends io.pulumi.resources.CustomResource {
      * The name of the tags wrapper resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class TagAtScope extends io.pulumi.resources.CustomResource {
      * The set of tags.
      * 
      */
-    @OutputExport(name="properties", type=TagsResponse.class, parameters={})
+    @Export(name="properties", type=TagsResponse.class, parameters={})
     private Output<TagsResponse> properties;
 
     /**
@@ -63,7 +63,7 @@ public class TagAtScope extends io.pulumi.resources.CustomResource {
      * The type of the tags wrapper resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

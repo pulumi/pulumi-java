@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1ApiProductRefResponse;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeResponse;
 import java.lang.String;
@@ -19,7 +19,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
      * List of API products this credential can be used for.
      * 
      */
-    @InputImport(name="apiProducts", required=true)
+    @Import(name="apiProducts", required=true)
       private final List<GoogleCloudApigeeV1ApiProductRefResponse> apiProducts;
 
     public List<GoogleCloudApigeeV1ApiProductRefResponse> getApiProducts() {
@@ -30,7 +30,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
      * List of attributes associated with this credential.
      * 
      */
-    @InputImport(name="attributes", required=true)
+    @Import(name="attributes", required=true)
       private final List<GoogleCloudApigeeV1AttributeResponse> attributes;
 
     public List<GoogleCloudApigeeV1AttributeResponse> getAttributes() {
@@ -41,7 +41,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
      * Consumer key.
      * 
      */
-    @InputImport(name="consumerKey", required=true)
+    @Import(name="consumerKey", required=true)
       private final String consumerKey;
 
     public String getConsumerKey() {
@@ -52,7 +52,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
      * Secret key.
      * 
      */
-    @InputImport(name="consumerSecret", required=true)
+    @Import(name="consumerSecret", required=true)
       private final String consumerSecret;
 
     public String getConsumerSecret() {
@@ -63,7 +63,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
      * Time the credential will expire in milliseconds since epoch.
      * 
      */
-    @InputImport(name="expiresAt", required=true)
+    @Import(name="expiresAt", required=true)
       private final String expiresAt;
 
     public String getExpiresAt() {
@@ -74,7 +74,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
      * Time the credential was issued in milliseconds since epoch.
      * 
      */
-    @InputImport(name="issuedAt", required=true)
+    @Import(name="issuedAt", required=true)
       private final String issuedAt;
 
     public String getIssuedAt() {
@@ -85,7 +85,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
      * List of scopes to apply to the app. Specified scopes must already exist on the API product that you associate with the app.
      * 
      */
-    @InputImport(name="scopes", required=true)
+    @Import(name="scopes", required=true)
       private final List<String> scopes;
 
     public List<String> getScopes() {
@@ -96,7 +96,7 @@ public final class GoogleCloudApigeeV1CredentialResponse extends io.pulumi.resou
      * Status of the credential. Valid values include `approved` or `revoked`.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

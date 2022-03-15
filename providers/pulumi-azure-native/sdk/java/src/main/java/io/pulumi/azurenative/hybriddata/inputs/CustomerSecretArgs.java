@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybriddata.inputs;
 
 import io.pulumi.azurenative.hybriddata.enums.SupportedAlgorithm;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
      * The encryption algorithm used to encrypt data.
      * 
      */
-    @InputImport(name="algorithm", required=true)
+    @Import(name="algorithm", required=true)
       private final Output<SupportedAlgorithm> algorithm;
 
     public Output<SupportedAlgorithm> getAlgorithm() {
@@ -33,7 +33,7 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier to the data service input object which this secret corresponds to.
      * 
      */
-    @InputImport(name="keyIdentifier", required=true)
+    @Import(name="keyIdentifier", required=true)
       private final Output<String> keyIdentifier;
 
     public Output<String> getKeyIdentifier() {
@@ -44,7 +44,7 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
      * It contains the encrypted customer secret.
      * 
      */
-    @InputImport(name="keyValue", required=true)
+    @Import(name="keyValue", required=true)
       private final Output<String> keyValue;
 
     public Output<String> getKeyValue() {

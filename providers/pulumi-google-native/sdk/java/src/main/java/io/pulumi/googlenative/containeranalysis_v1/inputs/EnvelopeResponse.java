@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.EnvelopeSignatureResponse;
 import java.lang.String;
 import java.util.List;
@@ -18,21 +18,21 @@ public final class EnvelopeResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final EnvelopeResponse Empty = new EnvelopeResponse();
 
-    @InputImport(name="payload", required=true)
+    @Import(name="payload", required=true)
       private final String payload;
 
     public String getPayload() {
         return this.payload;
     }
 
-    @InputImport(name="payloadType", required=true)
+    @Import(name="payloadType", required=true)
       private final String payloadType;
 
     public String getPayloadType() {
         return this.payloadType;
     }
 
-    @InputImport(name="signatures", required=true)
+    @Import(name="signatures", required=true)
       private final List<EnvelopeSignatureResponse> signatures;
 
     public List<EnvelopeSignatureResponse> getSignatures() {

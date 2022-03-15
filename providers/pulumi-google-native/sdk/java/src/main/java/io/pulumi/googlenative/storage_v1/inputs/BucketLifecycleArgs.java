@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.storage_v1.inputs.BucketLifecycleRuleItemArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BucketLifecycleArgs extends io.pulumi.resources.ResourceArgs 
      * A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.
      * 
      */
-    @InputImport(name="rule")
+    @Import(name="rule")
       private final @Nullable Output<List<BucketLifecycleRuleItemArgs>> rule;
 
     public Output<List<BucketLifecycleRuleItemArgs>> getRule() {

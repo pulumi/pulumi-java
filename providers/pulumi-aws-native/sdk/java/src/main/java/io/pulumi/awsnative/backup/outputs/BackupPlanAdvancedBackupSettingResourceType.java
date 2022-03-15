@@ -3,20 +3,20 @@
 
 package io.pulumi.awsnative.backup.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackupPlanAdvancedBackupSettingResourceType {
     private final Object backupOptions;
     private final String resourceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackupPlanAdvancedBackupSettingResourceType(
-        @OutputCustomType.Parameter("backupOptions") Object backupOptions,
-        @OutputCustomType.Parameter("resourceType") String resourceType) {
+        @CustomType.Parameter("backupOptions") Object backupOptions,
+        @CustomType.Parameter("resourceType") String resourceType) {
         this.backupOptions = backupOptions;
         this.resourceType = resourceType;
     }

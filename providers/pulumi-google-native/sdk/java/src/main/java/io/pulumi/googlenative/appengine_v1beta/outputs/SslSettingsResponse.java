@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SslSettingsResponse {
     /**
      * ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will remove SSL support.By default, a managed certificate is automatically created for every domain mapping. To omit SSL support or to configure SSL manually, specify SslManagementType.MANUAL on a CREATE or UPDATE request. You must be authorized to administer the AuthorizedCertificate resource to manually map it to a DomainMapping resource. Example: 12345.
@@ -25,11 +25,11 @@ public final class SslSettingsResponse {
      */
     private final String sslManagementType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SslSettingsResponse(
-        @OutputCustomType.Parameter("certificateId") String certificateId,
-        @OutputCustomType.Parameter("pendingManagedCertificateId") String pendingManagedCertificateId,
-        @OutputCustomType.Parameter("sslManagementType") String sslManagementType) {
+        @CustomType.Parameter("certificateId") String certificateId,
+        @CustomType.Parameter("pendingManagedCertificateId") String pendingManagedCertificateId,
+        @CustomType.Parameter("sslManagementType") String sslManagementType) {
         this.certificateId = certificateId;
         this.pendingManagedCertificateId = pendingManagedCertificateId;
         this.sslManagementType = sslManagementType;

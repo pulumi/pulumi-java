@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs;
@@ -27,7 +27,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleArgs extends io.pulu
      * be specified.
      * 
      */
-    @InputImport(name="fullPathMatch")
+    @Import(name="fullPathMatch")
       private final @Nullable Output<String> fullPathMatch;
 
     public Output<String> getFullPathMatch() {
@@ -40,7 +40,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleArgs extends io.pulu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="headerMatches")
+    @Import(name="headerMatches")
       private final @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> headerMatches;
 
     public Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> getHeaderMatches() {
@@ -52,7 +52,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleArgs extends io.pulu
      * Defaults to false.
      * 
      */
-    @InputImport(name="ignoreCase")
+    @Import(name="ignoreCase")
       private final @Nullable Output<Boolean> ignoreCase;
 
     public Output<Boolean> getIgnoreCase() {
@@ -74,7 +74,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleArgs extends io.pulu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="metadataFilters")
+    @Import(name="metadataFilters")
       private final @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs>> metadataFilters;
 
     public Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs>> getMetadataFilters() {
@@ -87,7 +87,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleArgs extends io.pulu
      * must be set.
      * 
      */
-    @InputImport(name="prefixMatch")
+    @Import(name="prefixMatch")
       private final @Nullable Output<String> prefixMatch;
 
     public Output<String> getPrefixMatch() {
@@ -100,7 +100,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleArgs extends io.pulu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="queryParameterMatches")
+    @Import(name="queryParameterMatches")
       private final @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> queryParameterMatches;
 
     public Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> getQueryParameterMatches() {
@@ -114,7 +114,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleArgs extends io.pulu
      * exactMatch and regexMatch must be set.
      * 
      */
-    @InputImport(name="regexMatch")
+    @Import(name="regexMatch")
       private final @Nullable Output<String> regexMatch;
 
     public Output<String> getRegexMatch() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.SecretObjectResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public final class CustomRegistryCredentialsResponse extends io.pulumi.resources
      * source of authentication used for accessing the registry.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable String identity;
 
     public Optional<String> getIdentity() {
@@ -39,7 +39,7 @@ public final class CustomRegistryCredentialsResponse extends io.pulumi.resources
      * object that allows multiple ways of providing the value for it.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable SecretObjectResponse password;
 
     public Optional<SecretObjectResponse> getPassword() {
@@ -50,7 +50,7 @@ public final class CustomRegistryCredentialsResponse extends io.pulumi.resources
      * The username for logging into the custom registry.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable SecretObjectResponse userName;
 
     public Optional<SecretObjectResponse> getUserName() {

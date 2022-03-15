@@ -8,7 +8,7 @@ import io.pulumi.aws.appstream.DirectoryConfigArgs;
 import io.pulumi.aws.appstream.inputs.DirectoryConfigState;
 import io.pulumi.aws.appstream.outputs.DirectoryConfigServiceAccountCredentials;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class DirectoryConfig extends io.pulumi.resources.CustomResource {
      * Date and time, in UTC and extended RFC 3339 format, when the directory config was created.
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -48,7 +48,7 @@ public class DirectoryConfig extends io.pulumi.resources.CustomResource {
      * Fully qualified name of the directory.
      * 
      */
-    @OutputExport(name="directoryName", type=String.class, parameters={})
+    @Export(name="directoryName", type=String.class, parameters={})
     private Output<String> directoryName;
 
     /**
@@ -62,7 +62,7 @@ public class DirectoryConfig extends io.pulumi.resources.CustomResource {
      * Distinguished names of the organizational units for computer accounts.
      * 
      */
-    @OutputExport(name="organizationalUnitDistinguishedNames", type=List.class, parameters={String.class})
+    @Export(name="organizationalUnitDistinguishedNames", type=List.class, parameters={String.class})
     private Output<List<String>> organizationalUnitDistinguishedNames;
 
     /**
@@ -76,7 +76,7 @@ public class DirectoryConfig extends io.pulumi.resources.CustomResource {
      * Configuration block for the name of the directory and organizational unit (OU) to use to join the directory config to a Microsoft Active Directory domain. See `service_account_credentials` below.
      * 
      */
-    @OutputExport(name="serviceAccountCredentials", type=DirectoryConfigServiceAccountCredentials.class, parameters={})
+    @Export(name="serviceAccountCredentials", type=DirectoryConfigServiceAccountCredentials.class, parameters={})
     private Output<DirectoryConfigServiceAccountCredentials> serviceAccountCredentials;
 
     /**

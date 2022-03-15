@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceResp
 import io.pulumi.azurenative.datafactory.inputs.CredentialReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class WebActivityAuthenticationResponse extends io.pulumi.resources
      * The credential reference containing authentication information.
      * 
      */
-    @InputImport(name="credential")
+    @Import(name="credential")
       private final @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> getCredential() {
@@ -38,7 +38,7 @@ public final class WebActivityAuthenticationResponse extends io.pulumi.resources
      * Password for the PFX file or basic authentication / Secret when used for ServicePrincipal
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
@@ -49,7 +49,7 @@ public final class WebActivityAuthenticationResponse extends io.pulumi.resources
      * Base64-encoded contents of a PFX file or Certificate when used for ServicePrincipal
      * 
      */
-    @InputImport(name="pfx")
+    @Import(name="pfx")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPfx() {
@@ -60,7 +60,7 @@ public final class WebActivityAuthenticationResponse extends io.pulumi.resources
      * Resource for which Azure Auth token will be requested when using MSI Authentication. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="resource")
+    @Import(name="resource")
       private final @Nullable Object resource;
 
     public Optional<Object> getResource() {
@@ -71,7 +71,7 @@ public final class WebActivityAuthenticationResponse extends io.pulumi.resources
      * Web activity authentication (Basic/ClientCertificate/MSI/ServicePrincipal)
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -82,7 +82,7 @@ public final class WebActivityAuthenticationResponse extends io.pulumi.resources
      * TenantId for which Azure Auth token will be requested when using ServicePrincipal Authentication. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="userTenant")
+    @Import(name="userTenant")
       private final @Nullable Object userTenant;
 
     public Optional<Object> getUserTenant() {
@@ -93,7 +93,7 @@ public final class WebActivityAuthenticationResponse extends io.pulumi.resources
      * Web activity authentication user name for basic authentication or ClientID when used for ServicePrincipal. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Object username;
 
     public Optional<Object> getUsername() {

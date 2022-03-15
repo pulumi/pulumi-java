@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -30,7 +30,7 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
      * Rollout retry attempt ordinal to get the result of. If not specified, result of the latest attempt will be returned.
      * 
      */
-    @InputImport(name="retryAttempt")
+    @Import(name="retryAttempt")
       private final @Nullable Integer retryAttempt;
 
     public Optional<Integer> getRetryAttempt() {
@@ -41,7 +41,7 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
      * The rollout name.
      * 
      */
-    @InputImport(name="rolloutName", required=true)
+    @Import(name="rolloutName", required=true)
       private final String rolloutName;
 
     public String getRolloutName() {

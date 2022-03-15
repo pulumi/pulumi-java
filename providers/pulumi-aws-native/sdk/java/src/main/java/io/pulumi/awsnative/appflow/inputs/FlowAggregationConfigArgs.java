@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowAggregationType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -14,7 +14,7 @@ public final class FlowAggregationConfigArgs extends io.pulumi.resources.Resourc
 
     public static final FlowAggregationConfigArgs Empty = new FlowAggregationConfigArgs();
 
-    @InputImport(name="aggregationType")
+    @Import(name="aggregationType")
       private final @Nullable Output<FlowAggregationType> aggregationType;
 
     public Output<FlowAggregationType> getAggregationType() {

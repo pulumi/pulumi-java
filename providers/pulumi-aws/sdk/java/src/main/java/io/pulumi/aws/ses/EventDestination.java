@@ -10,7 +10,7 @@ import io.pulumi.aws.ses.outputs.EventDestinationCloudwatchDestination;
 import io.pulumi.aws.ses.outputs.EventDestinationKinesisDestination;
 import io.pulumi.aws.ses.outputs.EventDestinationSnsDestination;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class EventDestination extends io.pulumi.resources.CustomResource {
      * The SES event destination ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -51,7 +51,7 @@ public class EventDestination extends io.pulumi.resources.CustomResource {
      * CloudWatch destination for the events
      * 
      */
-    @OutputExport(name="cloudwatchDestinations", type=List.class, parameters={EventDestinationCloudwatchDestination.class})
+    @Export(name="cloudwatchDestinations", type=List.class, parameters={EventDestinationCloudwatchDestination.class})
     private Output</* @Nullable */ List<EventDestinationCloudwatchDestination>> cloudwatchDestinations;
 
     /**
@@ -65,7 +65,7 @@ public class EventDestination extends io.pulumi.resources.CustomResource {
      * The name of the configuration set
      * 
      */
-    @OutputExport(name="configurationSetName", type=String.class, parameters={})
+    @Export(name="configurationSetName", type=String.class, parameters={})
     private Output<String> configurationSetName;
 
     /**
@@ -79,7 +79,7 @@ public class EventDestination extends io.pulumi.resources.CustomResource {
      * If true, the event destination will be enabled
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -93,7 +93,7 @@ public class EventDestination extends io.pulumi.resources.CustomResource {
      * Send the events to a kinesis firehose destination
      * 
      */
-    @OutputExport(name="kinesisDestination", type=EventDestinationKinesisDestination.class, parameters={})
+    @Export(name="kinesisDestination", type=EventDestinationKinesisDestination.class, parameters={})
     private Output</* @Nullable */ EventDestinationKinesisDestination> kinesisDestination;
 
     /**
@@ -107,7 +107,7 @@ public class EventDestination extends io.pulumi.resources.CustomResource {
      * A list of matching types. May be any of `"send"`, `"reject"`, `"bounce"`, `"complaint"`, `"delivery"`, `"open"`, `"click"`, or `"renderingFailure"`.
      * 
      */
-    @OutputExport(name="matchingTypes", type=List.class, parameters={String.class})
+    @Export(name="matchingTypes", type=List.class, parameters={String.class})
     private Output<List<String>> matchingTypes;
 
     /**
@@ -121,7 +121,7 @@ public class EventDestination extends io.pulumi.resources.CustomResource {
      * The name of the event destination
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -135,7 +135,7 @@ public class EventDestination extends io.pulumi.resources.CustomResource {
      * Send the events to an SNS Topic destination
      * 
      */
-    @OutputExport(name="snsDestination", type=EventDestinationSnsDestination.class, parameters={})
+    @Export(name="snsDestination", type=EventDestinationSnsDestination.class, parameters={})
     private Output</* @Nullable */ EventDestinationSnsDestination> snsDestination;
 
     /**

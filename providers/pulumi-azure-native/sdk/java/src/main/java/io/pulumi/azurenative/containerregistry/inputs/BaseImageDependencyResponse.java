@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
      * The sha256-based digest of the image manifest.
      * 
      */
-    @InputImport(name="digest")
+    @Import(name="digest")
       private final @Nullable String digest;
 
     public Optional<String> getDigest() {
@@ -33,7 +33,7 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
      * The registry login server.
      * 
      */
-    @InputImport(name="registry")
+    @Import(name="registry")
       private final @Nullable String registry;
 
     public Optional<String> getRegistry() {
@@ -44,7 +44,7 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
      * The repository name.
      * 
      */
-    @InputImport(name="repository")
+    @Import(name="repository")
       private final @Nullable String repository;
 
     public Optional<String> getRepository() {
@@ -55,7 +55,7 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
      * The tag name.
      * 
      */
-    @InputImport(name="tag")
+    @Import(name="tag")
       private final @Nullable String tag;
 
     public Optional<String> getTag() {
@@ -66,7 +66,7 @@ public final class BaseImageDependencyResponse extends io.pulumi.resources.Invok
      * The type of the base image dependency.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

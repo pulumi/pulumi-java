@@ -5,11 +5,11 @@ package io.pulumi.aws.glue.outputs;
 
 import io.pulumi.aws.glue.outputs.GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption;
 import io.pulumi.aws.glue.outputs.GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting {
     /**
      * When connection password protection is enabled, the Data Catalog uses a customer-provided key to encrypt the password as part of CreateConnection or UpdateConnection and store it in the ENCRYPTED_PASSWORD field in the connection properties. You can enable catalog encryption or only password encryption. see Connection Password Encryption.
@@ -22,10 +22,10 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting 
      */
     private final List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting(
-        @OutputCustomType.Parameter("connectionPasswordEncryptions") List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> connectionPasswordEncryptions,
-        @OutputCustomType.Parameter("encryptionAtRests") List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests) {
+        @CustomType.Parameter("connectionPasswordEncryptions") List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> connectionPasswordEncryptions,
+        @CustomType.Parameter("encryptionAtRests") List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests) {
         this.connectionPasswordEncryptions = connectionPasswordEncryptions;
         this.encryptionAtRests = encryptionAtRests;
     }

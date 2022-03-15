@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
      * The target that the firewall policy is attached to.
      * 
      */
-    @InputImport(name="attachmentTarget", required=true)
+    @Import(name="attachmentTarget", required=true)
       private final String attachmentTarget;
 
     public String getAttachmentTarget() {
@@ -27,7 +27,7 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
      * Deprecated, please use short name instead. The display name of the firewall policy of the association.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -38,7 +38,7 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
      * The firewall policy ID of the association.
      * 
      */
-    @InputImport(name="firewallPolicyId", required=true)
+    @Import(name="firewallPolicyId", required=true)
       private final String firewallPolicyId;
 
     public String getFirewallPolicyId() {
@@ -49,7 +49,7 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
      * The name for an association.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -60,7 +60,7 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
      * The short name of the firewall policy of the association.
      * 
      */
-    @InputImport(name="shortName", required=true)
+    @Import(name="shortName", required=true)
       private final String shortName;
 
     public String getShortName() {

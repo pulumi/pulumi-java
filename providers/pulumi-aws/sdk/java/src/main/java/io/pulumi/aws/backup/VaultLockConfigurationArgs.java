@@ -4,7 +4,7 @@
 package io.pulumi.aws.backup;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
      * Name of the backup vault to add a lock configuration for.
      * 
      */
-    @InputImport(name="backupVaultName", required=true)
+    @Import(name="backupVaultName", required=true)
       private final Output<String> backupVaultName;
 
     public Output<String> getBackupVaultName() {
@@ -30,7 +30,7 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
      * The number of days before the lock date.
      * 
      */
-    @InputImport(name="changeableForDays")
+    @Import(name="changeableForDays")
       private final @Nullable Output<Integer> changeableForDays;
 
     public Output<Integer> getChangeableForDays() {
@@ -41,7 +41,7 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
      * The maximum retention period that the vault retains its recovery points.
      * 
      */
-    @InputImport(name="maxRetentionDays")
+    @Import(name="maxRetentionDays")
       private final @Nullable Output<Integer> maxRetentionDays;
 
     public Output<Integer> getMaxRetentionDays() {
@@ -52,7 +52,7 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
      * The minimum retention period that the vault retains its recovery points.
      * 
      */
-    @InputImport(name="minRetentionDays")
+    @Import(name="minRetentionDays")
       private final @Nullable Output<Integer> minRetentionDays;
 
     public Output<Integer> getMinRetentionDays() {

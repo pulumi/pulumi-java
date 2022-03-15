@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.NetworkEndpointArgs;
@@ -57,7 +57,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * The instance must be in the same zone of network endpoint group.
      * 
      */
-    @OutputExport(name="instance", type=String.class, parameters={})
+    @Export(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
     /**
@@ -75,7 +75,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * range).
      * 
      */
-    @OutputExport(name="ipAddress", type=String.class, parameters={})
+    @Export(name="ipAddress", type=String.class, parameters={})
     private Output<String> ipAddress;
 
     /**
@@ -91,7 +91,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * The network endpoint group this endpoint is part of.
      * 
      */
-    @OutputExport(name="networkEndpointGroup", type=String.class, parameters={})
+    @Export(name="networkEndpointGroup", type=String.class, parameters={})
     private Output<String> networkEndpointGroup;
 
     /**
@@ -105,7 +105,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * Port number of network endpoint.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
     /**
@@ -120,7 +120,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -135,7 +135,7 @@ public class NetworkEndpoint extends io.pulumi.resources.CustomResource {
      * Zone where the containing network endpoint group is located.
      * 
      */
-    @OutputExport(name="zone", type=String.class, parameters={})
+    @Export(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
     /**

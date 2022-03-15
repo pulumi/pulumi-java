@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CryptoKeyIAMPolicyArgs extends io.pulumi.resources.ResourceAr
      * the provider's project setting will be used as a fallback.
      * 
      */
-    @InputImport(name="cryptoKeyId", required=true)
+    @Import(name="cryptoKeyId", required=true)
       private final Output<String> cryptoKeyId;
 
     public Output<String> getCryptoKeyId() {
@@ -32,7 +32,7 @@ public final class CryptoKeyIAMPolicyArgs extends io.pulumi.resources.ResourceAr
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @InputImport(name="policyData", required=true)
+    @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
     public Output<String> getPolicyData() {

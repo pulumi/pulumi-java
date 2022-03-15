@@ -4,13 +4,13 @@
 package io.pulumi.aws.s3.outputs;
 
 import io.pulumi.aws.s3.outputs.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketServerSideEncryptionConfigurationRule {
     /**
      * A single object for setting server-side encryption by default. (documented below)
@@ -23,10 +23,10 @@ public final class BucketServerSideEncryptionConfigurationRule {
      */
     private final @Nullable Boolean bucketKeyEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketServerSideEncryptionConfigurationRule(
-        @OutputCustomType.Parameter("applyServerSideEncryptionByDefault") BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault applyServerSideEncryptionByDefault,
-        @OutputCustomType.Parameter("bucketKeyEnabled") @Nullable Boolean bucketKeyEnabled) {
+        @CustomType.Parameter("applyServerSideEncryptionByDefault") BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault applyServerSideEncryptionByDefault,
+        @CustomType.Parameter("bucketKeyEnabled") @Nullable Boolean bucketKeyEnabled) {
         this.applyServerSideEncryptionByDefault = applyServerSideEncryptionByDefault;
         this.bucketKeyEnabled = bucketKeyEnabled;
     }

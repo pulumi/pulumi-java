@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2betaRuleIgnoreActionArgs extends io.pulumi
      * Terms to ignore in the search query.
      * 
      */
-    @InputImport(name="ignoreTerms")
+    @Import(name="ignoreTerms")
       private final @Nullable Output<List<String>> ignoreTerms;
 
     public Output<List<String>> getIgnoreTerms() {

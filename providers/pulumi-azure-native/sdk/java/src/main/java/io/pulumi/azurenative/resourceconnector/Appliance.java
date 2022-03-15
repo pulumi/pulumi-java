@@ -10,7 +10,7 @@ import io.pulumi.azurenative.resourceconnector.outputs.IdentityResponse;
 import io.pulumi.azurenative.resourceconnector.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * Represents a supported Fabric/Infra. (AKSEdge etc...).
      * 
      */
-    @OutputExport(name="distro", type=String.class, parameters={})
+    @Export(name="distro", type=String.class, parameters={})
     private Output</* @Nullable */ String> distro;
 
     /**
@@ -52,7 +52,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * Identity for the resource.
      * 
      */
-    @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
+    @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
@@ -66,7 +66,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * Contains infrastructure information about the Appliance
      * 
      */
-    @OutputExport(name="infrastructureConfig", type=AppliancePropertiesResponseInfrastructureConfig.class, parameters={})
+    @Export(name="infrastructureConfig", type=AppliancePropertiesResponseInfrastructureConfig.class, parameters={})
     private Output</* @Nullable */ AppliancePropertiesResponseInfrastructureConfig> infrastructureConfig;
 
     /**
@@ -80,7 +80,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -94,7 +94,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * The current deployment or provisioning state, which only appears in the response.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -122,7 +122,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * Certificates pair used to download MSI certificate from HIS
      * 
      */
-    @OutputExport(name="publicKey", type=String.class, parameters={})
+    @Export(name="publicKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicKey;
 
     /**
@@ -136,7 +136,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * Appliance’s health and state of connection to on-prem
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -150,7 +150,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -164,7 +164,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -178,7 +178,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -192,7 +192,7 @@ public class Appliance extends io.pulumi.resources.CustomResource {
      * Version of the Appliance
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

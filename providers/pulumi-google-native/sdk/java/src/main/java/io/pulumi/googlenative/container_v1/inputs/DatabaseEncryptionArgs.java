@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1.enums.DatabaseEncryptionState;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceAr
      * Name of CloudKMS key to use for the encryption of secrets in etcd. Ex. projects/my-project/locations/global/keyRings/my-ring/cryptoKeys/my-key
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
@@ -34,7 +34,7 @@ public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceAr
      * Denotes the state of etcd encryption.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<DatabaseEncryptionState> state;
 
     public Output<DatabaseEncryptionState> getState() {

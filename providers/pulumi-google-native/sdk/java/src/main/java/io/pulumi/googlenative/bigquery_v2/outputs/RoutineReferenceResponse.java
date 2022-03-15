@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RoutineReferenceResponse {
     /**
      * [Required] The ID of the dataset containing this routine.
@@ -25,11 +25,11 @@ public final class RoutineReferenceResponse {
      */
     private final String routineId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RoutineReferenceResponse(
-        @OutputCustomType.Parameter("datasetId") String datasetId,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("routineId") String routineId) {
+        @CustomType.Parameter("datasetId") String datasetId,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("routineId") String routineId) {
         this.datasetId = datasetId;
         this.project = project;
         this.routineId = routineId;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * frequency (in minutes) at which rule condition should be evaluated.
      * 
      */
-    @InputImport(name="frequencyInMinutes", required=true)
+    @Import(name="frequencyInMinutes", required=true)
       private final Output<Integer> frequencyInMinutes;
 
     public Output<Integer> getFrequencyInMinutes() {
@@ -32,7 +32,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * Time window for which data needs to be fetched for query (should be greater than or equal to frequencyInMinutes).
      * 
      */
-    @InputImport(name="timeWindowInMinutes", required=true)
+    @Import(name="timeWindowInMinutes", required=true)
       private final Output<Integer> timeWindowInMinutes;
 
     public Output<Integer> getTimeWindowInMinutes() {

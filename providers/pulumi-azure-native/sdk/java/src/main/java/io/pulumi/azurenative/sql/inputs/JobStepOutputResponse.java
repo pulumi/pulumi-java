@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
      * The resource ID of the credential to use to connect to the output destination.
      * 
      */
-    @InputImport(name="credential", required=true)
+    @Import(name="credential", required=true)
       private final String credential;
 
     public String getCredential() {
@@ -33,7 +33,7 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
      * The output destination database.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final String databaseName;
 
     public String getDatabaseName() {
@@ -44,7 +44,7 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
      * The output destination resource group.
      * 
      */
-    @InputImport(name="resourceGroupName")
+    @Import(name="resourceGroupName")
       private final @Nullable String resourceGroupName;
 
     public Optional<String> getResourceGroupName() {
@@ -55,7 +55,7 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
      * The output destination schema.
      * 
      */
-    @InputImport(name="schemaName")
+    @Import(name="schemaName")
       private final @Nullable String schemaName;
 
     public Optional<String> getSchemaName() {
@@ -66,7 +66,7 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
      * The output destination server name.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final String serverName;
 
     public String getServerName() {
@@ -77,7 +77,7 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
      * The output destination subscription id.
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {
@@ -88,7 +88,7 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
      * The output destination table.
      * 
      */
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final String tableName;
 
     public String getTableName() {
@@ -99,7 +99,7 @@ public final class JobStepOutputResponse extends io.pulumi.resources.InvokeArgs 
      * The output destination type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

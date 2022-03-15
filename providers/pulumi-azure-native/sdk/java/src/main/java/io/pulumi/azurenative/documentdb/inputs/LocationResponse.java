@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * The connection endpoint for the specific region. Example: https://&lt;accountName&gt;-&lt;locationName&gt;.documents.azure.com:443/
      * 
      */
-    @InputImport(name="documentEndpoint", required=true)
+    @Import(name="documentEndpoint", required=true)
       private final String documentEndpoint;
 
     public String getDocumentEndpoint() {
@@ -35,7 +35,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
      * 
      */
-    @InputImport(name="failoverPriority")
+    @Import(name="failoverPriority")
       private final @Nullable Integer failoverPriority;
 
     public Optional<Integer> getFailoverPriority() {
@@ -46,7 +46,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * The unique identifier of the region within the database account. Example: &lt;accountName&gt;-&lt;locationName&gt;.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -57,7 +57,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * Flag to indicate whether or not this region is an AvailabilityZone region
      * 
      */
-    @InputImport(name="isZoneRedundant")
+    @Import(name="isZoneRedundant")
       private final @Nullable Boolean isZoneRedundant;
 
     public Optional<Boolean> getIsZoneRedundant() {
@@ -68,7 +68,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the region.
      * 
      */
-    @InputImport(name="locationName")
+    @Import(name="locationName")
       private final @Nullable String locationName;
 
     public Optional<String> getLocationName() {
@@ -79,7 +79,7 @@ public final class LocationResponse extends io.pulumi.resources.InvokeArgs {
      * The status of the Cosmos DB account at the time the operation was called. The status can be one of following. 'Creating' – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. 'Succeeded' – the Cosmos DB account is active for use. 'Updating' – the Cosmos DB account is being updated. 'Deleting' – the Cosmos DB account is being deleted. 'Failed' – the Cosmos DB account failed creation. 'DeletionFailed' – the Cosmos DB account deletion failed.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

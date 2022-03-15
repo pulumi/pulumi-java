@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReplicatingStepResponse {
     /**
      * The source disks replication rate for the last 30 minutes in bytes per second.
@@ -30,12 +30,12 @@ public final class ReplicatingStepResponse {
      */
     private final String totalBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicatingStepResponse(
-        @OutputCustomType.Parameter("lastThirtyMinutesAverageBytesPerSecond") String lastThirtyMinutesAverageBytesPerSecond,
-        @OutputCustomType.Parameter("lastTwoMinutesAverageBytesPerSecond") String lastTwoMinutesAverageBytesPerSecond,
-        @OutputCustomType.Parameter("replicatedBytes") String replicatedBytes,
-        @OutputCustomType.Parameter("totalBytes") String totalBytes) {
+        @CustomType.Parameter("lastThirtyMinutesAverageBytesPerSecond") String lastThirtyMinutesAverageBytesPerSecond,
+        @CustomType.Parameter("lastTwoMinutesAverageBytesPerSecond") String lastTwoMinutesAverageBytesPerSecond,
+        @CustomType.Parameter("replicatedBytes") String replicatedBytes,
+        @CustomType.Parameter("totalBytes") String totalBytes) {
         this.lastThirtyMinutesAverageBytesPerSecond = lastThirtyMinutesAverageBytesPerSecond;
         this.lastTwoMinutesAverageBytesPerSecond = lastTwoMinutesAverageBytesPerSecond;
         this.replicatedBytes = replicatedBytes;

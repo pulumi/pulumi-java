@@ -7,7 +7,7 @@ import io.pulumi.azurenative.alertsmanagement.enums.SuppressionType;
 import io.pulumi.azurenative.alertsmanagement.inputs.SuppressionScheduleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SuppressionConfigArgs extends io.pulumi.resources.ResourceArg
      * Specifies when the suppression should be applied
      * 
      */
-    @InputImport(name="recurrenceType", required=true)
+    @Import(name="recurrenceType", required=true)
       private final Output<Either<String,SuppressionType>> recurrenceType;
 
     public Output<Either<String,SuppressionType>> getRecurrenceType() {
@@ -36,7 +36,7 @@ public final class SuppressionConfigArgs extends io.pulumi.resources.ResourceArg
      * suppression schedule configuration
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<SuppressionScheduleArgs> schedule;
 
     public Output<SuppressionScheduleArgs> getSchedule() {

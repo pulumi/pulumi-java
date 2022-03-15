@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerTargetGroupStickinessConfig {
     private final @Nullable Integer durationSeconds;
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerTargetGroupStickinessConfig(
-        @OutputCustomType.Parameter("durationSeconds") @Nullable Integer durationSeconds,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
+        @CustomType.Parameter("durationSeconds") @Nullable Integer durationSeconds,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.durationSeconds = durationSeconds;
         this.enabled = enabled;
     }

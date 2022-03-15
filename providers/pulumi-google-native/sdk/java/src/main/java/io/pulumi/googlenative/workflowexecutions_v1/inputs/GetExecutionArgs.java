@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.workflowexecutions_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,35 +14,35 @@ public final class GetExecutionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetExecutionArgs Empty = new GetExecutionArgs();
 
-    @InputImport(name="executionId", required=true)
+    @Import(name="executionId", required=true)
       private final String executionId;
 
     public String getExecutionId() {
         return this.executionId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="view")
+    @Import(name="view")
       private final @Nullable String view;
 
     public Optional<String> getView() {
         return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
     }
 
-    @InputImport(name="workflowId", required=true)
+    @Import(name="workflowId", required=true)
       private final String workflowId;
 
     public String getWorkflowId() {

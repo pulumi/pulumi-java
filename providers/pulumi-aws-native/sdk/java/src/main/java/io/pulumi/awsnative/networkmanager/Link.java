@@ -8,7 +8,7 @@ import io.pulumi.awsnative.networkmanager.LinkArgs;
 import io.pulumi.awsnative.networkmanager.outputs.LinkBandwidth;
 import io.pulumi.awsnative.networkmanager.outputs.LinkTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * The Bandwidth for the link.
      * 
      */
-    @OutputExport(name="bandwidth", type=LinkBandwidth.class, parameters={})
+    @Export(name="bandwidth", type=LinkBandwidth.class, parameters={})
     private Output<LinkBandwidth> bandwidth;
 
     /**
@@ -38,7 +38,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * The description of the link.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -52,7 +52,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * The ID of the global network.
      * 
      */
-    @OutputExport(name="globalNetworkId", type=String.class, parameters={})
+    @Export(name="globalNetworkId", type=String.class, parameters={})
     private Output<String> globalNetworkId;
 
     /**
@@ -66,7 +66,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the link.
      * 
      */
-    @OutputExport(name="linkArn", type=String.class, parameters={})
+    @Export(name="linkArn", type=String.class, parameters={})
     private Output<String> linkArn;
 
     /**
@@ -80,7 +80,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * The ID of the link.
      * 
      */
-    @OutputExport(name="linkId", type=String.class, parameters={})
+    @Export(name="linkId", type=String.class, parameters={})
     private Output<String> linkId;
 
     /**
@@ -94,7 +94,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * The provider of the link.
      * 
      */
-    @OutputExport(name="provider", type=String.class, parameters={})
+    @Export(name="provider", type=String.class, parameters={})
     private Output</* @Nullable */ String> provider;
 
     /**
@@ -108,7 +108,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * The ID of the site
      * 
      */
-    @OutputExport(name="siteId", type=String.class, parameters={})
+    @Export(name="siteId", type=String.class, parameters={})
     private Output<String> siteId;
 
     /**
@@ -122,7 +122,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * The tags for the link.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={LinkTag.class})
+    @Export(name="tags", type=List.class, parameters={LinkTag.class})
     private Output</* @Nullable */ List<LinkTag>> tags;
 
     /**
@@ -136,7 +136,7 @@ public class Link extends io.pulumi.resources.CustomResource {
      * The type of the link.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Default is "xfs".
      * 
      */
-    @InputImport(name="fsType")
+    @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
     public Output<String> getFsType() {
@@ -35,7 +35,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * The host address of the ScaleIO API Gateway.
      * 
      */
-    @InputImport(name="gateway", required=true)
+    @Import(name="gateway", required=true)
       private final Output<String> gateway;
 
     public Output<String> getGateway() {
@@ -46,7 +46,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * The name of the ScaleIO Protection Domain for the configured storage.
      * 
      */
-    @InputImport(name="protectionDomain")
+    @Import(name="protectionDomain")
       private final @Nullable Output<String> protectionDomain;
 
     public Output<String> getProtectionDomain() {
@@ -57,7 +57,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
@@ -68,7 +68,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.
      * 
      */
-    @InputImport(name="secretRef", required=true)
+    @Import(name="secretRef", required=true)
       private final Output<LocalObjectReferenceArgs> secretRef;
 
     public Output<LocalObjectReferenceArgs> getSecretRef() {
@@ -79,7 +79,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * Flag to enable/disable SSL communication with Gateway, default false
      * 
      */
-    @InputImport(name="sslEnabled")
+    @Import(name="sslEnabled")
       private final @Nullable Output<Boolean> sslEnabled;
 
     public Output<Boolean> getSslEnabled() {
@@ -90,7 +90,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * Indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.
      * 
      */
-    @InputImport(name="storageMode")
+    @Import(name="storageMode")
       private final @Nullable Output<String> storageMode;
 
     public Output<String> getStorageMode() {
@@ -101,7 +101,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * The ScaleIO Storage Pool associated with the protection domain.
      * 
      */
-    @InputImport(name="storagePool")
+    @Import(name="storagePool")
       private final @Nullable Output<String> storagePool;
 
     public Output<String> getStoragePool() {
@@ -112,7 +112,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * The name of the storage system as configured in ScaleIO.
      * 
      */
-    @InputImport(name="system", required=true)
+    @Import(name="system", required=true)
       private final Output<String> system;
 
     public Output<String> getSystem() {
@@ -123,7 +123,7 @@ public final class ScaleIOVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * The name of a volume already created in the ScaleIO system that is associated with this volume source.
      * 
      */
-    @InputImport(name="volumeName")
+    @Import(name="volumeName")
       private final @Nullable Output<String> volumeName;
 
     public Output<String> getVolumeName() {

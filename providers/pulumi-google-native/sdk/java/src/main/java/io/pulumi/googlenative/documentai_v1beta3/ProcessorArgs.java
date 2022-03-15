@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.documentai_v1beta3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
      * The time the processor was created.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -29,7 +29,7 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
      * The default processor version.
      * 
      */
-    @InputImport(name="defaultProcessorVersion")
+    @Import(name="defaultProcessorVersion")
       private final @Nullable Output<String> defaultProcessorVersion;
 
     public Output<String> getDefaultProcessorVersion() {
@@ -40,7 +40,7 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
      * The display name of the processor.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -51,21 +51,21 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
      * The KMS key used for encryption/decryption in CMEK scenarios. See https://cloud.google.com/security-key-management.
      * 
      */
-    @InputImport(name="kmsKeyName")
+    @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -76,7 +76,7 @@ public final class ProcessorArgs extends io.pulumi.resources.ResourceArgs {
      * The processor type, e.g., INVOICE_PARSING, W2_PARSING, etc.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

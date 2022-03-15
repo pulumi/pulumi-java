@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cloudtrail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TrailAdvancedEventSelectorFieldSelector {
     /**
      * A list of values that includes events that match the last few characters of the event record field specified as the value of `field`.
@@ -47,15 +47,15 @@ public final class TrailAdvancedEventSelectorFieldSelector {
      */
     private final @Nullable List<String> startsWiths;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TrailAdvancedEventSelectorFieldSelector(
-        @OutputCustomType.Parameter("endsWiths") @Nullable List<String> endsWiths,
-        @OutputCustomType.Parameter("equals") @Nullable List<String> equals,
-        @OutputCustomType.Parameter("field") String field,
-        @OutputCustomType.Parameter("notEndsWiths") @Nullable List<String> notEndsWiths,
-        @OutputCustomType.Parameter("notEquals") @Nullable List<String> notEquals,
-        @OutputCustomType.Parameter("notStartsWiths") @Nullable List<String> notStartsWiths,
-        @OutputCustomType.Parameter("startsWiths") @Nullable List<String> startsWiths) {
+        @CustomType.Parameter("endsWiths") @Nullable List<String> endsWiths,
+        @CustomType.Parameter("equals") @Nullable List<String> equals,
+        @CustomType.Parameter("field") String field,
+        @CustomType.Parameter("notEndsWiths") @Nullable List<String> notEndsWiths,
+        @CustomType.Parameter("notEquals") @Nullable List<String> notEquals,
+        @CustomType.Parameter("notStartsWiths") @Nullable List<String> notStartsWiths,
+        @CustomType.Parameter("startsWiths") @Nullable List<String> startsWiths) {
         this.endsWiths = endsWiths;
         this.equals = equals;
         this.field = field;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetManagedZoneArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetManagedZoneArgs Empty = new GetManagedZoneArgs();
 
-    @InputImport(name="clientOperationId")
+    @Import(name="clientOperationId")
       private final @Nullable String clientOperationId;
 
     public Optional<String> getClientOperationId() {
         return this.clientOperationId == null ? Optional.empty() : Optional.ofNullable(this.clientOperationId);
     }
 
-    @InputImport(name="managedZone", required=true)
+    @Import(name="managedZone", required=true)
       private final String managedZone;
 
     public String getManagedZone() {
         return this.managedZone;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

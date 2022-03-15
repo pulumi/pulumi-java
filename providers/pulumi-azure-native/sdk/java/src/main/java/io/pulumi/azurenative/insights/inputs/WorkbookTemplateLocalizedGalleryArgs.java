@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.WorkbookTemplateGalleryArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends io.pulumi.resour
      * Workbook galleries supported by the template.
      * 
      */
-    @InputImport(name="galleries")
+    @Import(name="galleries")
       private final @Nullable Output<List<WorkbookTemplateGalleryArgs>> galleries;
 
     public Output<List<WorkbookTemplateGalleryArgs>> getGalleries() {
@@ -35,7 +35,7 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends io.pulumi.resour
      * Valid JSON object containing workbook template payload.
      * 
      */
-    @InputImport(name="templateData")
+    @Import(name="templateData")
       private final @Nullable Output<Object> templateData;
 
     public Output<Object> getTemplateData() {

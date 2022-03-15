@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GuestPoliciesRecipeArtifactGcsArgs extends io.pulumi.resource
      * this value would be my-bucket.
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -32,7 +32,7 @@ public final class GuestPoliciesRecipeArtifactGcsArgs extends io.pulumi.resource
      * https://storage.googleapis.com/my-bucket/foo/bar#1234567 this value would be 1234567.
      * 
      */
-    @InputImport(name="generation")
+    @Import(name="generation")
       private final @Nullable Output<Integer> generation;
 
     public Output<Integer> getGeneration() {
@@ -44,7 +44,7 @@ public final class GuestPoliciesRecipeArtifactGcsArgs extends io.pulumi.resource
      * this value would be foo/bar.
      * 
      */
-    @InputImport(name="object")
+    @Import(name="object")
       private final @Nullable Output<String> object;
 
     public Output<String> getObject() {

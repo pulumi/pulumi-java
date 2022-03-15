@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.CallCredentialsArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.ChannelCredentialsArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
      * The call credentials to access the SDS server.
      * 
      */
-    @InputImport(name="callCredentials")
+    @Import(name="callCredentials")
       private final @Nullable Output<CallCredentialsArgs> callCredentials;
 
     public Output<CallCredentialsArgs> getCallCredentials() {
@@ -35,7 +35,7 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
      * The channel credentials to access the SDS server.
      * 
      */
-    @InputImport(name="channelCredentials")
+    @Import(name="channelCredentials")
       private final @Nullable Output<ChannelCredentialsArgs> channelCredentials;
 
     public Output<ChannelCredentialsArgs> getChannelCredentials() {
@@ -46,7 +46,7 @@ public final class GrpcServiceConfigArgs extends io.pulumi.resources.ResourceArg
      * The target URI of the SDS server.
      * 
      */
-    @InputImport(name="targetUri")
+    @Import(name="targetUri")
       private final @Nullable Output<String> targetUri;
 
     public Output<String> getTargetUri() {

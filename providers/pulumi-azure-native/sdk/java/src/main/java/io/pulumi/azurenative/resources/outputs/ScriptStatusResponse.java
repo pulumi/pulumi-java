@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.resources.outputs;
 
 import io.pulumi.azurenative.resources.outputs.ErrorResponseResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScriptStatusResponse {
     /**
      * ACI resource Id.
@@ -43,14 +43,14 @@ public final class ScriptStatusResponse {
      */
     private final String storageAccountId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScriptStatusResponse(
-        @OutputCustomType.Parameter("containerInstanceId") String containerInstanceId,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("error") @Nullable ErrorResponseResponse error,
-        @OutputCustomType.Parameter("expirationTime") String expirationTime,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("storageAccountId") String storageAccountId) {
+        @CustomType.Parameter("containerInstanceId") String containerInstanceId,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("error") @Nullable ErrorResponseResponse error,
+        @CustomType.Parameter("expirationTime") String expirationTime,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("storageAccountId") String storageAccountId) {
         this.containerInstanceId = containerInstanceId;
         this.endTime = endTime;
         this.error = error;

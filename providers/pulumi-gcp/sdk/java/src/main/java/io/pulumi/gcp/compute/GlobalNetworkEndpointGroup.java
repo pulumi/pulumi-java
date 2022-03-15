@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.GlobalNetworkEndpointGroupArgs;
@@ -53,7 +53,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * network endpoint.
      * 
      */
-    @OutputExport(name="defaultPort", type=Integer.class, parameters={})
+    @Export(name="defaultPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> defaultPort;
 
     /**
@@ -69,7 +69,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -90,7 +90,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -111,7 +111,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * Possible values are `INTERNET_IP_PORT` and `INTERNET_FQDN_PORT`.
      * 
      */
-    @OutputExport(name="networkEndpointType", type=String.class, parameters={})
+    @Export(name="networkEndpointType", type=String.class, parameters={})
     private Output<String> networkEndpointType;
 
     /**
@@ -127,7 +127,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -142,7 +142,7 @@ public class GlobalNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**

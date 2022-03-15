@@ -7,14 +7,14 @@ import io.pulumi.azurenative.insights.outputs.DataCollectionEndpointResourceResp
 import io.pulumi.azurenative.insights.outputs.DataCollectionEndpointResponseConfigurationAccess;
 import io.pulumi.azurenative.insights.outputs.DataCollectionEndpointResponseLogsIngestion;
 import io.pulumi.azurenative.insights.outputs.DataCollectionEndpointResponseNetworkAcls;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDataCollectionEndpointResult {
     /**
      * The endpoint used by agents to access their configuration.
@@ -87,22 +87,22 @@ public final class GetDataCollectionEndpointResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDataCollectionEndpointResult(
-        @OutputCustomType.Parameter("configurationAccess") @Nullable DataCollectionEndpointResponseConfigurationAccess configurationAccess,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("immutableId") @Nullable String immutableId,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("logsIngestion") @Nullable DataCollectionEndpointResponseLogsIngestion logsIngestion,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkAcls") @Nullable DataCollectionEndpointResponseNetworkAcls networkAcls,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("systemData") DataCollectionEndpointResourceResponseSystemData systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("configurationAccess") @Nullable DataCollectionEndpointResponseConfigurationAccess configurationAccess,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("immutableId") @Nullable String immutableId,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("logsIngestion") @Nullable DataCollectionEndpointResponseLogsIngestion logsIngestion,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkAcls") @Nullable DataCollectionEndpointResponseNetworkAcls networkAcls,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") DataCollectionEndpointResourceResponseSystemData systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.configurationAccess = configurationAccess;
         this.description = description;
         this.etag = etag;

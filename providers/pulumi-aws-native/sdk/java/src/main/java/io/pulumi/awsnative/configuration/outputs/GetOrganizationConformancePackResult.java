@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.configuration.outputs;
 
 import io.pulumi.awsnative.configuration.outputs.OrganizationConformancePackConformancePackInputParameter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOrganizationConformancePackResult {
     /**
      * A list of ConformancePackInputParameter objects.
@@ -34,12 +34,12 @@ public final class GetOrganizationConformancePackResult {
      */
     private final @Nullable List<String> excludedAccounts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOrganizationConformancePackResult(
-        @OutputCustomType.Parameter("conformancePackInputParameters") @Nullable List<OrganizationConformancePackConformancePackInputParameter> conformancePackInputParameters,
-        @OutputCustomType.Parameter("deliveryS3Bucket") @Nullable String deliveryS3Bucket,
-        @OutputCustomType.Parameter("deliveryS3KeyPrefix") @Nullable String deliveryS3KeyPrefix,
-        @OutputCustomType.Parameter("excludedAccounts") @Nullable List<String> excludedAccounts) {
+        @CustomType.Parameter("conformancePackInputParameters") @Nullable List<OrganizationConformancePackConformancePackInputParameter> conformancePackInputParameters,
+        @CustomType.Parameter("deliveryS3Bucket") @Nullable String deliveryS3Bucket,
+        @CustomType.Parameter("deliveryS3KeyPrefix") @Nullable String deliveryS3KeyPrefix,
+        @CustomType.Parameter("excludedAccounts") @Nullable List<String> excludedAccounts) {
         this.conformancePackInputParameters = conformancePackInputParameters;
         this.deliveryS3Bucket = deliveryS3Bucket;
         this.deliveryS3KeyPrefix = deliveryS3KeyPrefix;

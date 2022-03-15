@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.artifactregistry_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MavenRepositoryConfigResponse {
     /**
      * The repository with this flag will allow publishing the same snapshot versions.
@@ -21,10 +21,10 @@ public final class MavenRepositoryConfigResponse {
      */
     private final String versionPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MavenRepositoryConfigResponse(
-        @OutputCustomType.Parameter("allowSnapshotOverwrites") Boolean allowSnapshotOverwrites,
-        @OutputCustomType.Parameter("versionPolicy") String versionPolicy) {
+        @CustomType.Parameter("allowSnapshotOverwrites") Boolean allowSnapshotOverwrites,
+        @CustomType.Parameter("versionPolicy") String versionPolicy) {
         this.allowSnapshotOverwrites = allowSnapshotOverwrites;
         this.versionPolicy = versionPolicy;
     }

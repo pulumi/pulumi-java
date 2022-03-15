@@ -6,14 +6,14 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.ConnectivityGroupItemResponse;
 import io.pulumi.azurenative.network.outputs.HubResponse;
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectivityConfigurationResult {
     /**
      * Groups for configuration
@@ -81,21 +81,21 @@ public final class GetConnectivityConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectivityConfigurationResult(
-        @OutputCustomType.Parameter("appliesToGroups") @Nullable List<ConnectivityGroupItemResponse> appliesToGroups,
-        @OutputCustomType.Parameter("connectivityTopology") String connectivityTopology,
-        @OutputCustomType.Parameter("deleteExistingPeering") @Nullable String deleteExistingPeering,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("hubs") @Nullable List<HubResponse> hubs,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isGlobal") @Nullable String isGlobal,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("appliesToGroups") @Nullable List<ConnectivityGroupItemResponse> appliesToGroups,
+        @CustomType.Parameter("connectivityTopology") String connectivityTopology,
+        @CustomType.Parameter("deleteExistingPeering") @Nullable String deleteExistingPeering,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("hubs") @Nullable List<HubResponse> hubs,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isGlobal") @Nullable String isGlobal,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.appliesToGroups = appliesToGroups;
         this.connectivityTopology = connectivityTopology;
         this.deleteExistingPeering = deleteExistingPeering;

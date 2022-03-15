@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.retail_v2alpha.enums.ControlSolutionTypesItem;
 import io.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaRuleArgs;
 import io.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs;
@@ -18,14 +18,14 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ControlArgs Empty = new ControlArgs();
 
-    @InputImport(name="catalogId", required=true)
+    @Import(name="catalogId", required=true)
       private final Output<String> catalogId;
 
     public Output<String> getCatalogId() {
         return this.catalogId;
     }
 
-    @InputImport(name="controlId", required=true)
+    @Import(name="controlId", required=true)
       private final Output<String> controlId;
 
     public Output<String> getControlId() {
@@ -36,7 +36,7 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
      * The human readable control display name. Used in Retail UI. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is thrown.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -47,14 +47,14 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
      * A facet specification to perform faceted search.
      * 
      */
-    @InputImport(name="facetSpec")
+    @Import(name="facetSpec")
       private final @Nullable Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs> facetSpec;
 
     public Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs> getFacetSpec() {
         return this.facetSpec == null ? Output.empty() : this.facetSpec;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -65,14 +65,14 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}controls/*
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -83,7 +83,7 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
      * A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost "gShoe" when query full matches "Running Shoes".
      * 
      */
-    @InputImport(name="rule")
+    @Import(name="rule")
       private final @Nullable Output<GoogleCloudRetailV2alphaRuleArgs> rule;
 
     public Output<GoogleCloudRetailV2alphaRuleArgs> getRule() {
@@ -94,7 +94,7 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment.
      * 
      */
-    @InputImport(name="solutionTypes", required=true)
+    @Import(name="solutionTypes", required=true)
       private final Output<List<ControlSolutionTypesItem>> solutionTypes;
 
     public Output<List<ControlSolutionTypesItem>> getSolutionTypes() {

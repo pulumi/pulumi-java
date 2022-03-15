@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1ImageResponse;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse;
@@ -25,7 +25,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * Optional. The available quantity of the item.
      * 
      */
-    @InputImport(name="availableQuantity", required=true)
+    @Import(name="availableQuantity", required=true)
       private final String availableQuantity;
 
     public String getAvailableQuantity() {
@@ -36,7 +36,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * Optional. Canonical URL directly linking to the item detail page with a length limit of 5 KiB..
      * 
      */
-    @InputImport(name="canonicalProductUri", required=true)
+    @Import(name="canonicalProductUri", required=true)
       private final String canonicalProductUri;
 
     public String getCanonicalProductUri() {
@@ -47,7 +47,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * Optional. A map to pass the costs associated with the product. For example: {"manufacturing": 45.5} The profit of selling this item is computed like so: * If 'exactPrice' is provided, profit = displayPrice - sum(costs) * If 'priceRange' is provided, profit = minPrice - sum(costs)
      * 
      */
-    @InputImport(name="costs", required=true)
+    @Import(name="costs", required=true)
       private final Map<String,String> costs;
 
     public Map<String,String> getCosts() {
@@ -58,7 +58,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * Optional. Only required if the price is set. Currency code for price/costs. Use three-character ISO-4217 code.
      * 
      */
-    @InputImport(name="currencyCode", required=true)
+    @Import(name="currencyCode", required=true)
       private final String currencyCode;
 
     public String getCurrencyCode() {
@@ -69,7 +69,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * Optional. The exact product price.
      * 
      */
-    @InputImport(name="exactPrice", required=true)
+    @Import(name="exactPrice", required=true)
       private final GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse exactPrice;
 
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse getExactPrice() {
@@ -80,7 +80,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * Optional. Product images for the catalog item.
      * 
      */
-    @InputImport(name="images", required=true)
+    @Import(name="images", required=true)
       private final List<GoogleCloudRecommendationengineV1beta1ImageResponse> images;
 
     public List<GoogleCloudRecommendationengineV1beta1ImageResponse> getImages() {
@@ -91,7 +91,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * Optional. The product price range.
      * 
      */
-    @InputImport(name="priceRange", required=true)
+    @Import(name="priceRange", required=true)
       private final GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse priceRange;
 
     public GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeResponse getPriceRange() {
@@ -102,7 +102,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemRespo
      * Optional. Online stock state of the catalog item. Default is `IN_STOCK`.
      * 
      */
-    @InputImport(name="stockState", required=true)
+    @Import(name="stockState", required=true)
       private final String stockState;
 
     public String getStockState() {

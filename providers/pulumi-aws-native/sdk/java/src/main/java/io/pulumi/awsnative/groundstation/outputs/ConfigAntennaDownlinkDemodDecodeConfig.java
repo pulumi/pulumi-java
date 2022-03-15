@@ -6,22 +6,22 @@ package io.pulumi.awsnative.groundstation.outputs;
 import io.pulumi.awsnative.groundstation.outputs.ConfigDecodeConfig;
 import io.pulumi.awsnative.groundstation.outputs.ConfigDemodulationConfig;
 import io.pulumi.awsnative.groundstation.outputs.ConfigSpectrumConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigAntennaDownlinkDemodDecodeConfig {
     private final @Nullable ConfigDecodeConfig decodeConfig;
     private final @Nullable ConfigDemodulationConfig demodulationConfig;
     private final @Nullable ConfigSpectrumConfig spectrumConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigAntennaDownlinkDemodDecodeConfig(
-        @OutputCustomType.Parameter("decodeConfig") @Nullable ConfigDecodeConfig decodeConfig,
-        @OutputCustomType.Parameter("demodulationConfig") @Nullable ConfigDemodulationConfig demodulationConfig,
-        @OutputCustomType.Parameter("spectrumConfig") @Nullable ConfigSpectrumConfig spectrumConfig) {
+        @CustomType.Parameter("decodeConfig") @Nullable ConfigDecodeConfig decodeConfig,
+        @CustomType.Parameter("demodulationConfig") @Nullable ConfigDemodulationConfig demodulationConfig,
+        @CustomType.Parameter("spectrumConfig") @Nullable ConfigSpectrumConfig spectrumConfig) {
         this.decodeConfig = decodeConfig;
         this.demodulationConfig = demodulationConfig;
         this.spectrumConfig = spectrumConfig;

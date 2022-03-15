@@ -6,7 +6,7 @@ package io.pulumi.aws.macie2.inputs;
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingExcludesGetArgs;
 import io.pulumi.aws.macie2.inputs.ClassificationJobS3JobDefinitionScopingIncludesGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class ClassificationJobS3JobDefinitionScopingGetArgs extends io.pul
      * The property- or tag-based conditions that determine which objects to exclude from the analysis. (documented below)
      * 
      */
-    @InputImport(name="excludes")
+    @Import(name="excludes")
       private final @Nullable Output<ClassificationJobS3JobDefinitionScopingExcludesGetArgs> excludes;
 
     public Output<ClassificationJobS3JobDefinitionScopingExcludesGetArgs> getExcludes() {
@@ -30,7 +30,7 @@ public final class ClassificationJobS3JobDefinitionScopingGetArgs extends io.pul
      * The property- or tag-based conditions that determine which objects to include in the analysis. (documented below)
      * 
      */
-    @InputImport(name="includes")
+    @Import(name="includes")
       private final @Nullable Output<ClassificationJobS3JobDefinitionScopingIncludesGetArgs> includes;
 
     public Output<ClassificationJobS3JobDefinitionScopingIncludesGetArgs> getIncludes() {

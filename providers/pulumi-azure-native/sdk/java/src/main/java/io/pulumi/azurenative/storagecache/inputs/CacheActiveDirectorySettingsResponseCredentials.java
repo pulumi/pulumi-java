@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CacheActiveDirectorySettingsResponseCredentials extends io.pu
      * Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final String password;
 
     public String getPassword() {
@@ -31,7 +31,7 @@ public final class CacheActiveDirectorySettingsResponseCredentials extends io.pu
      * Username of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final String username;
 
     public String getUsername() {

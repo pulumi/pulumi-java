@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricAlarmMetricQueryMetric {
     /**
      * The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
@@ -47,14 +47,14 @@ public final class MetricAlarmMetricQueryMetric {
      */
     private final @Nullable String unit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricAlarmMetricQueryMetric(
-        @OutputCustomType.Parameter("dimensions") @Nullable Map<String,String> dimensions,
-        @OutputCustomType.Parameter("metricName") String metricName,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
-        @OutputCustomType.Parameter("period") Integer period,
-        @OutputCustomType.Parameter("stat") String stat,
-        @OutputCustomType.Parameter("unit") @Nullable String unit) {
+        @CustomType.Parameter("dimensions") @Nullable Map<String,String> dimensions,
+        @CustomType.Parameter("metricName") String metricName,
+        @CustomType.Parameter("namespace") @Nullable String namespace,
+        @CustomType.Parameter("period") Integer period,
+        @CustomType.Parameter("stat") String stat,
+        @CustomType.Parameter("unit") @Nullable String unit) {
         this.dimensions = dimensions;
         this.metricName = metricName;
         this.namespace = namespace;

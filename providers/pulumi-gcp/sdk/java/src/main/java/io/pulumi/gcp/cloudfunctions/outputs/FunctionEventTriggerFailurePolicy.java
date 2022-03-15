@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.cloudfunctions.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FunctionEventTriggerFailurePolicy {
     /**
      * Whether the function should be retried on failure. Defaults to `false`.
@@ -15,8 +15,8 @@ public final class FunctionEventTriggerFailurePolicy {
      */
     private final Boolean retry;
 
-    @OutputCustomType.Constructor
-    private FunctionEventTriggerFailurePolicy(@OutputCustomType.Parameter("retry") Boolean retry) {
+    @CustomType.Constructor
+    private FunctionEventTriggerFailurePolicy(@CustomType.Parameter("retry") Boolean retry) {
         this.retry = retry;
     }
 

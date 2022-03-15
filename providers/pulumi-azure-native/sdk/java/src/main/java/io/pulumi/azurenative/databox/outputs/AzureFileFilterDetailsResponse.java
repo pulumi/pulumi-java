@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureFileFilterDetailsResponse {
     /**
      * List of full path of the files to be transferred.
@@ -27,11 +27,11 @@ public final class AzureFileFilterDetailsResponse {
      */
     private final @Nullable List<String> fileShareList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureFileFilterDetailsResponse(
-        @OutputCustomType.Parameter("filePathList") @Nullable List<String> filePathList,
-        @OutputCustomType.Parameter("filePrefixList") @Nullable List<String> filePrefixList,
-        @OutputCustomType.Parameter("fileShareList") @Nullable List<String> fileShareList) {
+        @CustomType.Parameter("filePathList") @Nullable List<String> filePathList,
+        @CustomType.Parameter("filePrefixList") @Nullable List<String> filePrefixList,
+        @CustomType.Parameter("fileShareList") @Nullable List<String> fileShareList) {
         this.filePathList = filePathList;
         this.filePrefixList = filePrefixList;
         this.fileShareList = fileShareList;

@@ -5,20 +5,20 @@ package io.pulumi.awsnative.acmpca.outputs;
 
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityCrlConfiguration;
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityOcspConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateAuthorityRevocationConfiguration {
     private final @Nullable CertificateAuthorityCrlConfiguration crlConfiguration;
     private final @Nullable CertificateAuthorityOcspConfiguration ocspConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateAuthorityRevocationConfiguration(
-        @OutputCustomType.Parameter("crlConfiguration") @Nullable CertificateAuthorityCrlConfiguration crlConfiguration,
-        @OutputCustomType.Parameter("ocspConfiguration") @Nullable CertificateAuthorityOcspConfiguration ocspConfiguration) {
+        @CustomType.Parameter("crlConfiguration") @Nullable CertificateAuthorityCrlConfiguration crlConfiguration,
+        @CustomType.Parameter("ocspConfiguration") @Nullable CertificateAuthorityOcspConfiguration ocspConfiguration) {
         this.crlConfiguration = crlConfiguration;
         this.ocspConfiguration = ocspConfiguration;
     }

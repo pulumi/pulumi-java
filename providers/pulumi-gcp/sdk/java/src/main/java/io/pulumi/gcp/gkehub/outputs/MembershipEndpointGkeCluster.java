@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MembershipEndpointGkeCluster {
     private final String resourceLink;
 
-    @OutputCustomType.Constructor
-    private MembershipEndpointGkeCluster(@OutputCustomType.Parameter("resourceLink") String resourceLink) {
+    @CustomType.Constructor
+    private MembershipEndpointGkeCluster(@CustomType.Parameter("resourceLink") String resourceLink) {
         this.resourceLink = resourceLink;
     }
 

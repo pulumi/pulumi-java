@@ -4,14 +4,14 @@
 package io.pulumi.aws.wafregional.outputs;
 
 import io.pulumi.aws.wafregional.outputs.RuleGroupActivatedRuleAction;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupActivatedRule {
     /**
      * Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.
@@ -34,12 +34,12 @@ public final class RuleGroupActivatedRule {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupActivatedRule(
-        @OutputCustomType.Parameter("action") RuleGroupActivatedRuleAction action,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("ruleId") String ruleId,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("action") RuleGroupActivatedRuleAction action,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("ruleId") String ruleId,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.action = action;
         this.priority = priority;
         this.ruleId = ruleId;

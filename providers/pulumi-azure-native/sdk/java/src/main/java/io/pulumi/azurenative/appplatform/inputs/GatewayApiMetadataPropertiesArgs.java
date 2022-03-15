@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
      * Detailed description of the APIs available on the Gateway instance (default: `Generated OpenAPI 3 document that describes the API routes configured.`)
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
      * Location of additional documentation for the APIs available on the Gateway instance
      * 
      */
-    @InputImport(name="documentation")
+    @Import(name="documentation")
       private final @Nullable Output<String> documentation;
 
     public Output<String> getDocumentation() {
@@ -44,7 +44,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
      * Base URL that API consumers will use to access APIs on the Gateway instance.
      * 
      */
-    @InputImport(name="serverUrl")
+    @Import(name="serverUrl")
       private final @Nullable Output<String> serverUrl;
 
     public Output<String> getServerUrl() {
@@ -55,7 +55,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
      * Title describing the context of the APIs available on the Gateway instance (default: `Spring Cloud Gateway for K8S`)
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
@@ -66,7 +66,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
      * Version of APIs available on this Gateway instance (default: `unspecified`).
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

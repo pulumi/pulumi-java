@@ -5,7 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeComponentParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
      * The Amazon Resource Name (ARN) of the component.
      * 
      */
-    @InputImport(name="componentArn")
+    @Import(name="componentArn")
       private final @Nullable Output<String> componentArn;
 
     public Output<String> getComponentArn() {
@@ -35,7 +35,7 @@ public final class ImageRecipeComponentConfigurationArgs extends io.pulumi.resou
      * A group of parameter settings that are used to configure the component for a specific recipe.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<ImageRecipeComponentParameterArgs>> parameters;
 
     public Output<List<ImageRecipeComponentParameterArgs>> getParameters() {

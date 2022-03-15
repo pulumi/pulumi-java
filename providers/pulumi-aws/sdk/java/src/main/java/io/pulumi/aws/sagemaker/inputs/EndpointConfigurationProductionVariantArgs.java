@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
      * The size of the Elastic Inference (EI) instance to use for the production variant.
      * 
      */
-    @InputImport(name="acceleratorType")
+    @Import(name="acceleratorType")
       private final @Nullable Output<String> acceleratorType;
 
     public Output<String> getAcceleratorType() {
@@ -31,7 +31,7 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
      * Initial number of instances used for auto-scaling.
      * 
      */
-    @InputImport(name="initialInstanceCount", required=true)
+    @Import(name="initialInstanceCount", required=true)
       private final Output<Integer> initialInstanceCount;
 
     public Output<Integer> getInitialInstanceCount() {
@@ -42,7 +42,7 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
      * Determines initial traffic distribution among all of the models that you specify in the endpoint configuration. If unspecified, it defaults to 1.0.
      * 
      */
-    @InputImport(name="initialVariantWeight")
+    @Import(name="initialVariantWeight")
       private final @Nullable Output<Double> initialVariantWeight;
 
     public Output<Double> getInitialVariantWeight() {
@@ -53,7 +53,7 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
      * The type of instance to start.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -64,7 +64,7 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
      * The name of the model to use.
      * 
      */
-    @InputImport(name="modelName", required=true)
+    @Import(name="modelName", required=true)
       private final Output<String> modelName;
 
     public Output<String> getModelName() {
@@ -75,7 +75,7 @@ public final class EndpointConfigurationProductionVariantArgs extends io.pulumi.
      * The name of the variant. If omitted, this provider will assign a random, unique name.
      * 
      */
-    @InputImport(name="variantName")
+    @Import(name="variantName")
       private final @Nullable Output<String> variantName;
 
     public Output<String> getVariantName() {

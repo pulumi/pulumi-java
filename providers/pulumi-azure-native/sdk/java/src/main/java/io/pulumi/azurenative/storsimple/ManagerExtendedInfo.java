@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.storsimple.ManagerExtendedInfoArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * Represents the encryption algorithm used to encrypt the keys. None - if Key is saved in plain text format. Algorithm name - if key is encrypted
      * 
      */
-    @OutputExport(name="algorithm", type=String.class, parameters={})
+    @Export(name="algorithm", type=String.class, parameters={})
     private Output<String> algorithm;
 
     /**
@@ -48,7 +48,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * Represents the CEK of the resource.
      * 
      */
-    @OutputExport(name="encryptionKey", type=String.class, parameters={})
+    @Export(name="encryptionKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> encryptionKey;
 
     /**
@@ -62,7 +62,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * Represents the Cert thumbprint that was used to encrypt the CEK.
      * 
      */
-    @OutputExport(name="encryptionKeyThumbprint", type=String.class, parameters={})
+    @Export(name="encryptionKeyThumbprint", type=String.class, parameters={})
     private Output</* @Nullable */ String> encryptionKeyThumbprint;
 
     /**
@@ -76,7 +76,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * The etag of the resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -90,7 +90,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * Represents the CIK of the resource.
      * 
      */
-    @OutputExport(name="integrityKey", type=String.class, parameters={})
+    @Export(name="integrityKey", type=String.class, parameters={})
     private Output<String> integrityKey;
 
     /**
@@ -104,7 +104,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -118,7 +118,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * The name of the object.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -132,7 +132,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * Represents the portal thumbprint which can be used optionally to encrypt the entire data before storing it.
      * 
      */
-    @OutputExport(name="portalCertificateThumbprint", type=String.class, parameters={})
+    @Export(name="portalCertificateThumbprint", type=String.class, parameters={})
     private Output</* @Nullable */ String> portalCertificateThumbprint;
 
     /**
@@ -146,7 +146,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -160,7 +160,7 @@ public class ManagerExtendedInfo extends io.pulumi.resources.CustomResource {
      * The version of the extended info being persisted.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**

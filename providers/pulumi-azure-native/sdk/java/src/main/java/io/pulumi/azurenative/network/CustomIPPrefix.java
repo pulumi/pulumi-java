@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class CustomIPPrefix extends io.pulumi.resources.CustomResource {
      * The prefix range in CIDR notation. Should include the start address and the prefix length.
      * 
      */
-    @OutputExport(name="cidr", type=String.class, parameters={})
+    @Export(name="cidr", type=String.class, parameters={})
     private Output</* @Nullable */ String> cidr;
 
     /**
@@ -51,7 +51,7 @@ public class CustomIPPrefix extends io.pulumi.resources.CustomResource {
      * The commissioned state of the Custom IP Prefix.
      * 
      */
-    @OutputExport(name="commissionedState", type=String.class, parameters={})
+    @Export(name="commissionedState", type=String.class, parameters={})
     private Output</* @Nullable */ String> commissionedState;
 
     /**
@@ -65,7 +65,7 @@ public class CustomIPPrefix extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -79,7 +79,7 @@ public class CustomIPPrefix extends io.pulumi.resources.CustomResource {
      * The extended location of the custom IP prefix.
      * 
      */
-    @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
+    @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
@@ -93,7 +93,7 @@ public class CustomIPPrefix extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -107,7 +107,7 @@ public class CustomIPPrefix extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class CustomIPPrefix extends io.pulumi.resources.CustomResource {
      * The provisioning state of the custom IP prefix resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -135,7 +135,7 @@ public class CustomIPPrefix extends io.pulumi.resources.CustomResource {
      * The list of all referenced PublicIpPrefixes.
      * 
      */
-    @OutputExport(name="publicIpPrefixes", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="publicIpPrefixes", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> publicIpPrefixes;
 
     /**
@@ -149,7 +149,7 @@ public class CustomIPPrefix extends io.pulumi.resources.CustomResource {
      * The resource GUID property of the custom IP prefix resource.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -163,7 +163,7 @@ public class CustomIPPrefix extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -177,7 +177,7 @@ public class CustomIPPrefix extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -191,7 +191,7 @@ public class CustomIPPrefix extends io.pulumi.resources.CustomResource {
      * A list of availability zones denoting the IP allocated for the resource needs to come from.
      * 
      */
-    @OutputExport(name="zones", type=List.class, parameters={String.class})
+    @Export(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
     /**

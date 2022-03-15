@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class CodeVersionResponse extends io.pulumi.resources.InvokeArgs {
      * ARM resource ID of the datastore where the asset is located.
      * 
      */
-    @InputImport(name="datastoreId")
+    @Import(name="datastoreId")
       private final @Nullable String datastoreId;
 
     public Optional<String> getDatastoreId() {
@@ -35,7 +35,7 @@ public final class CodeVersionResponse extends io.pulumi.resources.InvokeArgs {
      * The asset description text.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -46,7 +46,7 @@ public final class CodeVersionResponse extends io.pulumi.resources.InvokeArgs {
      * If the name version are system generated (anonymous registration).
      * 
      */
-    @InputImport(name="isAnonymous")
+    @Import(name="isAnonymous")
       private final @Nullable Boolean isAnonymous;
 
     public Optional<Boolean> getIsAnonymous() {
@@ -57,7 +57,7 @@ public final class CodeVersionResponse extends io.pulumi.resources.InvokeArgs {
      * The path of the file/directory in the datastore.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {
@@ -68,7 +68,7 @@ public final class CodeVersionResponse extends io.pulumi.resources.InvokeArgs {
      * The asset property dictionary.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -79,7 +79,7 @@ public final class CodeVersionResponse extends io.pulumi.resources.InvokeArgs {
      * Tag dictionary. Tags can be added, removed, and updated.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

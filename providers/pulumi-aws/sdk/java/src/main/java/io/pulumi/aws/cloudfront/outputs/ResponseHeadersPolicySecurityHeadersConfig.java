@@ -9,12 +9,12 @@ import io.pulumi.aws.cloudfront.outputs.ResponseHeadersPolicySecurityHeadersConf
 import io.pulumi.aws.cloudfront.outputs.ResponseHeadersPolicySecurityHeadersConfigReferrerPolicy;
 import io.pulumi.aws.cloudfront.outputs.ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity;
 import io.pulumi.aws.cloudfront.outputs.ResponseHeadersPolicySecurityHeadersConfigXssProtection;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResponseHeadersPolicySecurityHeadersConfig {
     /**
      * The policy directives and their values that CloudFront includes as values for the `Content-Security-Policy` HTTP response header.
@@ -47,14 +47,14 @@ public final class ResponseHeadersPolicySecurityHeadersConfig {
      */
     private final @Nullable ResponseHeadersPolicySecurityHeadersConfigXssProtection xssProtection;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResponseHeadersPolicySecurityHeadersConfig(
-        @OutputCustomType.Parameter("contentSecurityPolicy") @Nullable ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy contentSecurityPolicy,
-        @OutputCustomType.Parameter("contentTypeOptions") @Nullable ResponseHeadersPolicySecurityHeadersConfigContentTypeOptions contentTypeOptions,
-        @OutputCustomType.Parameter("frameOptions") @Nullable ResponseHeadersPolicySecurityHeadersConfigFrameOptions frameOptions,
-        @OutputCustomType.Parameter("referrerPolicy") @Nullable ResponseHeadersPolicySecurityHeadersConfigReferrerPolicy referrerPolicy,
-        @OutputCustomType.Parameter("strictTransportSecurity") @Nullable ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity strictTransportSecurity,
-        @OutputCustomType.Parameter("xssProtection") @Nullable ResponseHeadersPolicySecurityHeadersConfigXssProtection xssProtection) {
+        @CustomType.Parameter("contentSecurityPolicy") @Nullable ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy contentSecurityPolicy,
+        @CustomType.Parameter("contentTypeOptions") @Nullable ResponseHeadersPolicySecurityHeadersConfigContentTypeOptions contentTypeOptions,
+        @CustomType.Parameter("frameOptions") @Nullable ResponseHeadersPolicySecurityHeadersConfigFrameOptions frameOptions,
+        @CustomType.Parameter("referrerPolicy") @Nullable ResponseHeadersPolicySecurityHeadersConfigReferrerPolicy referrerPolicy,
+        @CustomType.Parameter("strictTransportSecurity") @Nullable ResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity strictTransportSecurity,
+        @CustomType.Parameter("xssProtection") @Nullable ResponseHeadersPolicySecurityHeadersConfigXssProtection xssProtection) {
         this.contentSecurityPolicy = contentSecurityPolicy;
         this.contentTypeOptions = contentTypeOptions;
         this.frameOptions = frameOptions;

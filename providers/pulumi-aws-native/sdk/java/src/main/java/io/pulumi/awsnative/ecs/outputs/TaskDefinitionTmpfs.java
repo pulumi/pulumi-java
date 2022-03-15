@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,17 +11,17 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionTmpfs {
     private final @Nullable String containerPath;
     private final @Nullable List<String> mountOptions;
     private final Integer size;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionTmpfs(
-        @OutputCustomType.Parameter("containerPath") @Nullable String containerPath,
-        @OutputCustomType.Parameter("mountOptions") @Nullable List<String> mountOptions,
-        @OutputCustomType.Parameter("size") Integer size) {
+        @CustomType.Parameter("containerPath") @Nullable String containerPath,
+        @CustomType.Parameter("mountOptions") @Nullable List<String> mountOptions,
+        @CustomType.Parameter("size") Integer size) {
         this.containerPath = containerPath;
         this.mountOptions = mountOptions;
         this.size = size;

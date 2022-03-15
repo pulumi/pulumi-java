@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ChannelRetentionPeriod {
     private final @Nullable Integer numberOfDays;
     private final @Nullable Boolean unlimited;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ChannelRetentionPeriod(
-        @OutputCustomType.Parameter("numberOfDays") @Nullable Integer numberOfDays,
-        @OutputCustomType.Parameter("unlimited") @Nullable Boolean unlimited) {
+        @CustomType.Parameter("numberOfDays") @Nullable Integer numberOfDays,
+        @CustomType.Parameter("unlimited") @Nullable Boolean unlimited) {
         this.numberOfDays = numberOfDays;
         this.unlimited = unlimited;
     }

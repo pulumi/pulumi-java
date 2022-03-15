@@ -4,7 +4,7 @@
 package io.pulumi.aws.kms.inputs;
 
 import io.pulumi.aws.kms.inputs.GetSecretSecret;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSecretArgs Empty = new GetSecretArgs();
 
-    @InputImport(name="secrets", required=true)
+    @Import(name="secrets", required=true)
       private final List<GetSecretSecret> secrets;
 
     public List<GetSecretSecret> getSecrets() {

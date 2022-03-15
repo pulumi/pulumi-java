@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDefaultServiceAccountResult {
     /**
      * The display name for the service account.
@@ -36,14 +36,14 @@ public final class GetDefaultServiceAccountResult {
      */
     private final String uniqueId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDefaultServiceAccountResult(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("uniqueId") String uniqueId) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("uniqueId") String uniqueId) {
         this.displayName = displayName;
         this.email = email;
         this.id = id;

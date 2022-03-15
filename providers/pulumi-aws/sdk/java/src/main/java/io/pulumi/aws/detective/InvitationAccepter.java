@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.detective.InvitationAccepterArgs;
 import io.pulumi.aws.detective.inputs.InvitationAccepterState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class InvitationAccepter extends io.pulumi.resources.CustomResource {
      * ARN of the behavior graph that the member account is accepting the invitation for.
      * 
      */
-    @OutputExport(name="graphArn", type=String.class, parameters={})
+    @Export(name="graphArn", type=String.class, parameters={})
     private Output<String> graphArn;
 
     /**

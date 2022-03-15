@@ -8,7 +8,7 @@ import io.pulumi.azurenative.avs.outputs.EndpointsResponse;
 import io.pulumi.azurenative.avs.outputs.IdentitySourceResponse;
 import io.pulumi.azurenative.avs.outputs.ManagementClusterResponse;
 import io.pulumi.azurenative.avs.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPrivateCloudResult {
     /**
      * An ExpressRoute Circuit
@@ -119,28 +119,28 @@ public final class GetPrivateCloudResult {
      */
     private final String vmotionNetwork;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPrivateCloudResult(
-        @OutputCustomType.Parameter("circuit") @Nullable CircuitResponse circuit,
-        @OutputCustomType.Parameter("endpoints") EndpointsResponse endpoints,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identitySources") @Nullable List<IdentitySourceResponse> identitySources,
-        @OutputCustomType.Parameter("internet") @Nullable String internet,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("managementCluster") ManagementClusterResponse managementCluster,
-        @OutputCustomType.Parameter("managementNetwork") String managementNetwork,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkBlock") String networkBlock,
-        @OutputCustomType.Parameter("nsxtCertificateThumbprint") String nsxtCertificateThumbprint,
-        @OutputCustomType.Parameter("nsxtPassword") @Nullable String nsxtPassword,
-        @OutputCustomType.Parameter("provisioningNetwork") String provisioningNetwork,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sku") SkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vcenterCertificateThumbprint") String vcenterCertificateThumbprint,
-        @OutputCustomType.Parameter("vcenterPassword") @Nullable String vcenterPassword,
-        @OutputCustomType.Parameter("vmotionNetwork") String vmotionNetwork) {
+        @CustomType.Parameter("circuit") @Nullable CircuitResponse circuit,
+        @CustomType.Parameter("endpoints") EndpointsResponse endpoints,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identitySources") @Nullable List<IdentitySourceResponse> identitySources,
+        @CustomType.Parameter("internet") @Nullable String internet,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("managementCluster") ManagementClusterResponse managementCluster,
+        @CustomType.Parameter("managementNetwork") String managementNetwork,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkBlock") String networkBlock,
+        @CustomType.Parameter("nsxtCertificateThumbprint") String nsxtCertificateThumbprint,
+        @CustomType.Parameter("nsxtPassword") @Nullable String nsxtPassword,
+        @CustomType.Parameter("provisioningNetwork") String provisioningNetwork,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sku") SkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vcenterCertificateThumbprint") String vcenterCertificateThumbprint,
+        @CustomType.Parameter("vcenterPassword") @Nullable String vcenterPassword,
+        @CustomType.Parameter("vmotionNetwork") String vmotionNetwork) {
         this.circuit = circuit;
         this.endpoints = endpoints;
         this.id = id;

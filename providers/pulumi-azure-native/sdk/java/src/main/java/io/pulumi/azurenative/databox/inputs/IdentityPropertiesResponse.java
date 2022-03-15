@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.inputs.UserAssignedPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
      * Managed service identity type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -34,7 +34,7 @@ public final class IdentityPropertiesResponse extends io.pulumi.resources.Invoke
      * User assigned identity properties.
      * 
      */
-    @InputImport(name="userAssigned")
+    @Import(name="userAssigned")
       private final @Nullable UserAssignedPropertiesResponse userAssigned;
 
     public Optional<UserAssignedPropertiesResponse> getUserAssigned() {

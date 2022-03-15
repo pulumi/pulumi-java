@@ -4,11 +4,11 @@
 package io.pulumi.awsnative.robomaker.outputs;
 
 import io.pulumi.awsnative.robomaker.enums.SimulationApplicationRenderingEngineName;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SimulationApplicationRenderingEngine {
     /**
      * The name of the rendering engine.
@@ -21,10 +21,10 @@ public final class SimulationApplicationRenderingEngine {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SimulationApplicationRenderingEngine(
-        @OutputCustomType.Parameter("name") SimulationApplicationRenderingEngineName name,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("name") SimulationApplicationRenderingEngineName name,
+        @CustomType.Parameter("version") String version) {
         this.name = name;
         this.version = version;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.notebooks_v1.inputs.RuntimeAccessConfigArgs;
 import io.pulumi.googlenative.notebooks_v1.inputs.RuntimeSoftwareConfigArgs;
 import io.pulumi.googlenative.notebooks_v1.inputs.VirtualMachineArgs;
@@ -21,28 +21,28 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * The config settings for accessing runtime.
      * 
      */
-    @InputImport(name="accessConfig")
+    @Import(name="accessConfig")
       private final @Nullable Output<RuntimeAccessConfigArgs> accessConfig;
 
     public Output<RuntimeAccessConfigArgs> getAccessConfig() {
         return this.accessConfig == null ? Output.empty() : this.accessConfig;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="runtimeId", required=true)
+    @Import(name="runtimeId", required=true)
       private final Output<String> runtimeId;
 
     public Output<String> getRuntimeId() {
@@ -53,7 +53,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * The config settings for software inside the runtime.
      * 
      */
-    @InputImport(name="softwareConfig")
+    @Import(name="softwareConfig")
       private final @Nullable Output<RuntimeSoftwareConfigArgs> softwareConfig;
 
     public Output<RuntimeSoftwareConfigArgs> getSoftwareConfig() {
@@ -64,7 +64,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * Use a Compute Engine VM image to start the managed notebook instance.
      * 
      */
-    @InputImport(name="virtualMachine")
+    @Import(name="virtualMachine")
       private final @Nullable Output<VirtualMachineArgs> virtualMachine;
 
     public Output<VirtualMachineArgs> getVirtualMachine() {

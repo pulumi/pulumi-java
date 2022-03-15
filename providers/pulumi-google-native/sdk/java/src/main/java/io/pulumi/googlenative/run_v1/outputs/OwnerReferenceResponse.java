@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OwnerReferenceResponse {
     /**
      * API version of the referent.
@@ -41,14 +41,14 @@ public final class OwnerReferenceResponse {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OwnerReferenceResponse(
-        @OutputCustomType.Parameter("apiVersion") String apiVersion,
-        @OutputCustomType.Parameter("blockOwnerDeletion") Boolean blockOwnerDeletion,
-        @OutputCustomType.Parameter("controller") Boolean controller,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("uid") String uid) {
+        @CustomType.Parameter("apiVersion") String apiVersion,
+        @CustomType.Parameter("blockOwnerDeletion") Boolean blockOwnerDeletion,
+        @CustomType.Parameter("controller") Boolean controller,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("uid") String uid) {
         this.apiVersion = apiVersion;
         this.blockOwnerDeletion = blockOwnerDeletion;
         this.controller = controller;

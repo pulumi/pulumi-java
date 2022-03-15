@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePerson
      * Account number of the LivePerson account to connect. This is the account number you input at the login page.
      * 
      */
-    @InputImport(name="accountNumber", required=true)
+    @Import(name="accountNumber", required=true)
       private final Output<String> accountNumber;
 
     public Output<String> getAccountNumber() {

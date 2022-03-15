@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SecretResourcePropertiesResponse extends io.pulumi.resources.
      * The type of the content stored in the secret value. The value of this property is opaque to Service Fabric. Once set, the value of this property cannot be changed.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable String contentType;
 
     public Optional<String> getContentType() {
@@ -33,7 +33,7 @@ public final class SecretResourcePropertiesResponse extends io.pulumi.resources.
      * User readable description of the secret.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -45,7 +45,7 @@ public final class SecretResourcePropertiesResponse extends io.pulumi.resources.
      * Expected value is 'SecretResourceProperties'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -56,7 +56,7 @@ public final class SecretResourcePropertiesResponse extends io.pulumi.resources.
      * State of the resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -67,7 +67,7 @@ public final class SecretResourcePropertiesResponse extends io.pulumi.resources.
      * Status of the resource.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -78,7 +78,7 @@ public final class SecretResourcePropertiesResponse extends io.pulumi.resources.
      * Gives additional information about the current status of the secret.
      * 
      */
-    @InputImport(name="statusDetails", required=true)
+    @Import(name="statusDetails", required=true)
       private final String statusDetails;
 
     public String getStatusDetails() {

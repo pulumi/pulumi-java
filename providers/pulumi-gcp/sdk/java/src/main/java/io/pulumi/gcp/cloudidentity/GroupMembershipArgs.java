@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudidentity;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipMemberKeyArgs;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipPreferredMemberKeyArgs;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipRoleArgs;
@@ -22,7 +22,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the Group to create this membership in.
      * 
      */
-    @InputImport(name="group", required=true)
+    @Import(name="group", required=true)
       private final Output<String> group;
 
     public Output<String> getGroup() {
@@ -34,7 +34,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="memberKey")
+    @Import(name="memberKey")
       private final @Nullable Output<GroupMembershipMemberKeyArgs> memberKey;
 
     public Output<GroupMembershipMemberKeyArgs> getMemberKey() {
@@ -46,7 +46,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="preferredMemberKey")
+    @Import(name="preferredMemberKey")
       private final @Nullable Output<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey;
 
     public Output<GroupMembershipPreferredMemberKeyArgs> getPreferredMemberKey() {
@@ -59,7 +59,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="roles", required=true)
+    @Import(name="roles", required=true)
       private final Output<List<GroupMembershipRoleArgs>> roles;
 
     public Output<List<GroupMembershipRoleArgs>> getRoles() {

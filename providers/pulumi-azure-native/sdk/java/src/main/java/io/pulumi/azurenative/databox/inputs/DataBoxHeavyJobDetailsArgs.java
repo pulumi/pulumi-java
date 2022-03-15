@@ -10,7 +10,7 @@ import io.pulumi.azurenative.databox.inputs.KeyEncryptionKeyArgs;
 import io.pulumi.azurenative.databox.inputs.PreferencesArgs;
 import io.pulumi.azurenative.databox.inputs.ShippingAddressArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
      * Contact details for notification and shipping.
      * 
      */
-    @InputImport(name="contactDetails", required=true)
+    @Import(name="contactDetails", required=true)
       private final Output<ContactDetailsArgs> contactDetails;
 
     public Output<ContactDetailsArgs> getContactDetails() {
@@ -41,7 +41,7 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
      * Details of the data to be exported from azure.
      * 
      */
-    @InputImport(name="dataExportDetails")
+    @Import(name="dataExportDetails")
       private final @Nullable Output<List<DataExportDetailsArgs>> dataExportDetails;
 
     public Output<List<DataExportDetailsArgs>> getDataExportDetails() {
@@ -52,7 +52,7 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
      * Details of the data to be imported into azure.
      * 
      */
-    @InputImport(name="dataImportDetails")
+    @Import(name="dataImportDetails")
       private final @Nullable Output<List<DataImportDetailsArgs>> dataImportDetails;
 
     public Output<List<DataImportDetailsArgs>> getDataImportDetails() {
@@ -63,7 +63,7 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
      * Set Device password for unlocking Databox Heavy. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
      * 
      */
-    @InputImport(name="devicePassword")
+    @Import(name="devicePassword")
       private final @Nullable Output<String> devicePassword;
 
     public Output<String> getDevicePassword() {
@@ -74,7 +74,7 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
      * The expected size of the data, which needs to be transferred in this job, in terabytes.
      * 
      */
-    @InputImport(name="expectedDataSizeInTeraBytes")
+    @Import(name="expectedDataSizeInTeraBytes")
       private final @Nullable Output<Integer> expectedDataSizeInTeraBytes;
 
     public Output<Integer> getExpectedDataSizeInTeraBytes() {
@@ -86,7 +86,7 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
      * Expected value is 'DataBoxHeavy'.
      * 
      */
-    @InputImport(name="jobDetailsType", required=true)
+    @Import(name="jobDetailsType", required=true)
       private final Output<String> jobDetailsType;
 
     public Output<String> getJobDetailsType() {
@@ -97,7 +97,7 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
      * Details about which key encryption type is being used.
      * 
      */
-    @InputImport(name="keyEncryptionKey")
+    @Import(name="keyEncryptionKey")
       private final @Nullable Output<KeyEncryptionKeyArgs> keyEncryptionKey;
 
     public Output<KeyEncryptionKeyArgs> getKeyEncryptionKey() {
@@ -108,7 +108,7 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
      * Preferences for the order.
      * 
      */
-    @InputImport(name="preferences")
+    @Import(name="preferences")
       private final @Nullable Output<PreferencesArgs> preferences;
 
     public Output<PreferencesArgs> getPreferences() {
@@ -119,7 +119,7 @@ public final class DataBoxHeavyJobDetailsArgs extends io.pulumi.resources.Resour
      * Shipping address of the customer.
      * 
      */
-    @InputImport(name="shippingAddress")
+    @Import(name="shippingAddress")
       private final @Nullable Output<ShippingAddressArgs> shippingAddress;
 
     public Output<ShippingAddressArgs> getShippingAddress() {

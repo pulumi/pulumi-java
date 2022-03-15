@@ -12,7 +12,7 @@ import io.pulumi.azurenative.security.inputs.RecommendationConfigurationProperti
 import io.pulumi.azurenative.security.inputs.UserDefinedResourcesPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +28,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * List of additional workspaces
      * 
      */
-    @InputImport(name="additionalWorkspaces")
+    @Import(name="additionalWorkspaces")
       private final @Nullable Output<List<AdditionalWorkspacesPropertiesArgs>> additionalWorkspaces;
 
     public Output<List<AdditionalWorkspacesPropertiesArgs>> getAdditionalWorkspaces() {
@@ -39,7 +39,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * Disabled data sources. Disabling these data sources compromises the system.
      * 
      */
-    @InputImport(name="disabledDataSources")
+    @Import(name="disabledDataSources")
       private final @Nullable Output<List<Either<String,DataSource>>> disabledDataSources;
 
     public Output<List<Either<String,DataSource>>> getDisabledDataSources() {
@@ -50,7 +50,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * Resource display name.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -61,7 +61,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * List of additional options for exporting to workspace data.
      * 
      */
-    @InputImport(name="export")
+    @Import(name="export")
       private final @Nullable Output<List<Either<String,ExportData>>> export;
 
     public Output<List<Either<String,ExportData>>> getExport() {
@@ -72,7 +72,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * IoT Hub resource IDs
      * 
      */
-    @InputImport(name="iotHubs", required=true)
+    @Import(name="iotHubs", required=true)
       private final Output<List<String>> iotHubs;
 
     public Output<List<String>> getIotHubs() {
@@ -83,7 +83,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -94,7 +94,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * List of the configuration status for each recommendation type.
      * 
      */
-    @InputImport(name="recommendationsConfiguration")
+    @Import(name="recommendationsConfiguration")
       private final @Nullable Output<List<RecommendationConfigurationPropertiesArgs>> recommendationsConfiguration;
 
     public Output<List<RecommendationConfigurationPropertiesArgs>> getRecommendationsConfiguration() {
@@ -105,7 +105,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -116,7 +116,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * The name of the IoT Security solution.
      * 
      */
-    @InputImport(name="solutionName")
+    @Import(name="solutionName")
       private final @Nullable Output<String> solutionName;
 
     public Output<String> getSolutionName() {
@@ -127,7 +127,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * Status of the IoT Security solution.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,SecuritySolutionStatus>> status;
 
     public Output<Either<String,SecuritySolutionStatus>> getStatus() {
@@ -138,7 +138,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -149,7 +149,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * Unmasked IP address logging status
      * 
      */
-    @InputImport(name="unmaskedIpLoggingStatus")
+    @Import(name="unmaskedIpLoggingStatus")
       private final @Nullable Output<Either<String,UnmaskedIpLoggingStatus>> unmaskedIpLoggingStatus;
 
     public Output<Either<String,UnmaskedIpLoggingStatus>> getUnmaskedIpLoggingStatus() {
@@ -160,7 +160,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * Properties of the IoT Security solution's user defined resources.
      * 
      */
-    @InputImport(name="userDefinedResources")
+    @Import(name="userDefinedResources")
       private final @Nullable Output<UserDefinedResourcesPropertiesArgs> userDefinedResources;
 
     public Output<UserDefinedResourcesPropertiesArgs> getUserDefinedResources() {
@@ -171,7 +171,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * Workspace resource ID
      * 
      */
-    @InputImport(name="workspace")
+    @Import(name="workspace")
       private final @Nullable Output<String> workspace;
 
     public Output<String> getWorkspace() {

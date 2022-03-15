@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticbeanstalk.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetSolutionStackArgs extends io.pulumi.resources.InvokeArgs {
      * recent solution stack.
      * 
      */
-    @InputImport(name="mostRecent")
+    @Import(name="mostRecent")
       private final @Nullable Boolean mostRecent;
 
     public Optional<Boolean> getMostRecent() {
@@ -33,7 +33,7 @@ public final class GetSolutionStackArgs extends io.pulumi.resources.InvokeArgs {
      * AWS documentation for reference solution stack names.
      * 
      */
-    @InputImport(name="nameRegex", required=true)
+    @Import(name="nameRegex", required=true)
       private final String nameRegex;
 
     public String getNameRegex() {

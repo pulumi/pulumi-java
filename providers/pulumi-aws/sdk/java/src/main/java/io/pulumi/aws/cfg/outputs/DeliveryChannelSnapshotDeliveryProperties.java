@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cfg.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryChannelSnapshotDeliveryProperties {
     /**
      * - The frequency with which AWS Config recurringly delivers configuration snapshotsE.g., `One_Hour` or `Three_Hours`. Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIReference/API_ConfigSnapshotDeliveryProperties.html#API_ConfigSnapshotDeliveryProperties_Contents).
@@ -17,8 +17,8 @@ public final class DeliveryChannelSnapshotDeliveryProperties {
      */
     private final @Nullable String deliveryFrequency;
 
-    @OutputCustomType.Constructor
-    private DeliveryChannelSnapshotDeliveryProperties(@OutputCustomType.Parameter("deliveryFrequency") @Nullable String deliveryFrequency) {
+    @CustomType.Constructor
+    private DeliveryChannelSnapshotDeliveryProperties(@CustomType.Parameter("deliveryFrequency") @Nullable String deliveryFrequency) {
         this.deliveryFrequency = deliveryFrequency;
     }
 

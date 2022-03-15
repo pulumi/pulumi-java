@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.enums.DependencyCondition;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ActivityDependencyArgs extends io.pulumi.resources.ResourceAr
      * Activity name.
      * 
      */
-    @InputImport(name="activity", required=true)
+    @Import(name="activity", required=true)
       private final Output<String> activity;
 
     public Output<String> getActivity() {
@@ -35,7 +35,7 @@ public final class ActivityDependencyArgs extends io.pulumi.resources.ResourceAr
      * Match-Condition for the dependency.
      * 
      */
-    @InputImport(name="dependencyConditions", required=true)
+    @Import(name="dependencyConditions", required=true)
       private final Output<List<Either<String,DependencyCondition>>> dependencyConditions;
 
     public Output<List<Either<String,DependencyCondition>>> getDependencyConditions() {

@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointStreamSelectionStreamOrder;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OriginEndpointStreamSelection {
     /**
      * The maximum video bitrate (bps) to include in output.
@@ -28,11 +28,11 @@ public final class OriginEndpointStreamSelection {
      */
     private final @Nullable OriginEndpointStreamSelectionStreamOrder streamOrder;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OriginEndpointStreamSelection(
-        @OutputCustomType.Parameter("maxVideoBitsPerSecond") @Nullable Integer maxVideoBitsPerSecond,
-        @OutputCustomType.Parameter("minVideoBitsPerSecond") @Nullable Integer minVideoBitsPerSecond,
-        @OutputCustomType.Parameter("streamOrder") @Nullable OriginEndpointStreamSelectionStreamOrder streamOrder) {
+        @CustomType.Parameter("maxVideoBitsPerSecond") @Nullable Integer maxVideoBitsPerSecond,
+        @CustomType.Parameter("minVideoBitsPerSecond") @Nullable Integer minVideoBitsPerSecond,
+        @CustomType.Parameter("streamOrder") @Nullable OriginEndpointStreamSelectionStreamOrder streamOrder) {
         this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
         this.minVideoBitsPerSecond = minVideoBitsPerSecond;
         this.streamOrder = streamOrder;

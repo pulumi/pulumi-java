@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TargetIpFilterRuleResponse {
     /**
      * The desired action for requests captured by this rule.
@@ -32,12 +32,12 @@ public final class TargetIpFilterRuleResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TargetIpFilterRuleResponse(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("filterName") String filterName,
-        @OutputCustomType.Parameter("ipMask") String ipMask,
-        @OutputCustomType.Parameter("target") @Nullable String target) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("filterName") String filterName,
+        @CustomType.Parameter("ipMask") String ipMask,
+        @CustomType.Parameter("target") @Nullable String target) {
         this.action = action;
         this.filterName = filterName;
         this.ipMask = ipMask;

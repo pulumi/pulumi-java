@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse {
     /**
      * Optional. Description of the card (at most 2000 bytes). At least one of the title, description or media must be set.
@@ -33,12 +33,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("media") GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media,
-        @OutputCustomType.Parameter("suggestions") List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("media") GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media,
+        @CustomType.Parameter("suggestions") List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions,
+        @CustomType.Parameter("title") String title) {
         this.description = description;
         this.media = media;
         this.suggestions = suggestions;

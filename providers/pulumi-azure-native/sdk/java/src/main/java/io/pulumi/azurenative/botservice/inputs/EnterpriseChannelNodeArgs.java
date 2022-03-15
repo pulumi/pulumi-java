@@ -6,7 +6,7 @@ package io.pulumi.azurenative.botservice.inputs;
 import io.pulumi.azurenative.botservice.enums.EnterpriseChannelNodeState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
      * The location of the Enterprise Channel Node.
      * 
      */
-    @InputImport(name="azureLocation", required=true)
+    @Import(name="azureLocation", required=true)
       private final Output<String> azureLocation;
 
     public Output<String> getAzureLocation() {
@@ -35,7 +35,7 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
      * The sku of the Enterprise Channel Node.
      * 
      */
-    @InputImport(name="azureSku", required=true)
+    @Import(name="azureSku", required=true)
       private final Output<String> azureSku;
 
     public Output<String> getAzureSku() {
@@ -46,7 +46,7 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
      * The name of the Enterprise Channel Node.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class EnterpriseChannelNodeArgs extends io.pulumi.resources.Resourc
      * The current state of the Enterprise Channel Node.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<Either<String,EnterpriseChannelNodeState>> state;
 
     public Output<Either<String,EnterpriseChannelNodeState>> getState() {

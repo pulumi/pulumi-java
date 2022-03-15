@@ -4,7 +4,7 @@
 package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SecurityGroupIngressArgs extends io.pulumi.resources.Resource
      * The CIDR block to accept
      * 
      */
-    @InputImport(name="cidr")
+    @Import(name="cidr")
       private final @Nullable Output<String> cidr;
 
     public Output<String> getCidr() {
@@ -29,7 +29,7 @@ public final class SecurityGroupIngressArgs extends io.pulumi.resources.Resource
      * The name of the security group to authorize
      * 
      */
-    @InputImport(name="securityGroupName")
+    @Import(name="securityGroupName")
       private final @Nullable Output<String> securityGroupName;
 
     public Output<String> getSecurityGroupName() {
@@ -41,7 +41,7 @@ public final class SecurityGroupIngressArgs extends io.pulumi.resources.Resource
      * by `security_group_name`.
      * 
      */
-    @InputImport(name="securityGroupOwnerId")
+    @Import(name="securityGroupOwnerId")
       private final @Nullable Output<String> securityGroupOwnerId;
 
     public Output<String> getSecurityGroupOwnerId() {

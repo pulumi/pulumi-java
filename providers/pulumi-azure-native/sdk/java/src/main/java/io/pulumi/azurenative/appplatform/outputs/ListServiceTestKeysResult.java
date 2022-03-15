@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListServiceTestKeysResult {
     /**
      * Indicates whether the test endpoint feature enabled or not
@@ -38,13 +38,13 @@ public final class ListServiceTestKeysResult {
      */
     private final @Nullable String secondaryTestEndpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListServiceTestKeysResult(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
-        @OutputCustomType.Parameter("primaryTestEndpoint") @Nullable String primaryTestEndpoint,
-        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey,
-        @OutputCustomType.Parameter("secondaryTestEndpoint") @Nullable String secondaryTestEndpoint) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @CustomType.Parameter("primaryTestEndpoint") @Nullable String primaryTestEndpoint,
+        @CustomType.Parameter("secondaryKey") @Nullable String secondaryKey,
+        @CustomType.Parameter("secondaryTestEndpoint") @Nullable String secondaryTestEndpoint) {
         this.enabled = enabled;
         this.primaryKey = primaryKey;
         this.primaryTestEndpoint = primaryTestEndpoint;

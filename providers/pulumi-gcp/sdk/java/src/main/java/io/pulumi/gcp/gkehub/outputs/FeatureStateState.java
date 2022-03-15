@@ -3,23 +3,23 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FeatureStateState {
     private final @Nullable String code;
     private final @Nullable String description;
     private final @Nullable String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FeatureStateState(
-        @OutputCustomType.Parameter("code") @Nullable String code,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime) {
+        @CustomType.Parameter("code") @Nullable String code,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("updateTime") @Nullable String updateTime) {
         this.code = code;
         this.description = description;
         this.updateTime = updateTime;

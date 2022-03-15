@@ -8,14 +8,14 @@ import io.pulumi.aws.applicationloadbalancing.outputs.ListenerDefaultActionAuthe
 import io.pulumi.aws.applicationloadbalancing.outputs.ListenerDefaultActionFixedResponse;
 import io.pulumi.aws.applicationloadbalancing.outputs.ListenerDefaultActionForward;
 import io.pulumi.aws.applicationloadbalancing.outputs.ListenerDefaultActionRedirect;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerDefaultAction {
     /**
      * Configuration block for using Amazon Cognito to authenticate users. Specify only when `type` is `authenticate-cognito`. Detailed below.
@@ -58,16 +58,16 @@ public final class ListenerDefaultAction {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerDefaultAction(
-        @OutputCustomType.Parameter("authenticateCognito") @Nullable ListenerDefaultActionAuthenticateCognito authenticateCognito,
-        @OutputCustomType.Parameter("authenticateOidc") @Nullable ListenerDefaultActionAuthenticateOidc authenticateOidc,
-        @OutputCustomType.Parameter("fixedResponse") @Nullable ListenerDefaultActionFixedResponse fixedResponse,
-        @OutputCustomType.Parameter("forward") @Nullable ListenerDefaultActionForward forward,
-        @OutputCustomType.Parameter("order") @Nullable Integer order,
-        @OutputCustomType.Parameter("redirect") @Nullable ListenerDefaultActionRedirect redirect,
-        @OutputCustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("authenticateCognito") @Nullable ListenerDefaultActionAuthenticateCognito authenticateCognito,
+        @CustomType.Parameter("authenticateOidc") @Nullable ListenerDefaultActionAuthenticateOidc authenticateOidc,
+        @CustomType.Parameter("fixedResponse") @Nullable ListenerDefaultActionFixedResponse fixedResponse,
+        @CustomType.Parameter("forward") @Nullable ListenerDefaultActionForward forward,
+        @CustomType.Parameter("order") @Nullable Integer order,
+        @CustomType.Parameter("redirect") @Nullable ListenerDefaultActionRedirect redirect,
+        @CustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn,
+        @CustomType.Parameter("type") String type) {
         this.authenticateCognito = authenticateCognito;
         this.authenticateOidc = authenticateOidc;
         this.fixedResponse = fixedResponse;

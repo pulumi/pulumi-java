@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CodeSigningConfigAllowedPublishers extends io.pulumi.resource
      * List of Signing profile version Arns
      * 
      */
-    @InputImport(name="signingProfileVersionArns", required=true)
+    @Import(name="signingProfileVersionArns", required=true)
       private final List<String> signingProfileVersionArns;
 
     public List<String> getSigningProfileVersionArns() {

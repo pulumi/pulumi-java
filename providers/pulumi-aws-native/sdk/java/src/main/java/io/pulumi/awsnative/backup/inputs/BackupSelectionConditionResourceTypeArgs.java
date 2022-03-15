@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,21 +13,21 @@ public final class BackupSelectionConditionResourceTypeArgs extends io.pulumi.re
 
     public static final BackupSelectionConditionResourceTypeArgs Empty = new BackupSelectionConditionResourceTypeArgs();
 
-    @InputImport(name="conditionKey", required=true)
+    @Import(name="conditionKey", required=true)
       private final Output<String> conditionKey;
 
     public Output<String> getConditionKey() {
         return this.conditionKey;
     }
 
-    @InputImport(name="conditionType", required=true)
+    @Import(name="conditionType", required=true)
       private final Output<String> conditionType;
 
     public Output<String> getConditionType() {
         return this.conditionType;
     }
 
-    @InputImport(name="conditionValue", required=true)
+    @Import(name="conditionValue", required=true)
       private final Output<String> conditionValue;
 
     public Output<String> getConditionValue() {

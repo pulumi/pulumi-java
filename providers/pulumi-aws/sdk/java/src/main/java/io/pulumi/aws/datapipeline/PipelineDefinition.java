@@ -10,7 +10,7 @@ import io.pulumi.aws.datapipeline.outputs.PipelineDefinitionParameterObject;
 import io.pulumi.aws.datapipeline.outputs.PipelineDefinitionParameterValue;
 import io.pulumi.aws.datapipeline.outputs.PipelineDefinitionPipelineObject;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class PipelineDefinition extends io.pulumi.resources.CustomResource {
      * Configuration block for the parameter objects used in the pipeline definition. See below
      * 
      */
-    @OutputExport(name="parameterObjects", type=List.class, parameters={PipelineDefinitionParameterObject.class})
+    @Export(name="parameterObjects", type=List.class, parameters={PipelineDefinitionParameterObject.class})
     private Output</* @Nullable */ List<PipelineDefinitionParameterObject>> parameterObjects;
 
     /**
@@ -50,7 +50,7 @@ public class PipelineDefinition extends io.pulumi.resources.CustomResource {
      * Configuration block for the parameter values used in the pipeline definition. See below
      * 
      */
-    @OutputExport(name="parameterValues", type=List.class, parameters={PipelineDefinitionParameterValue.class})
+    @Export(name="parameterValues", type=List.class, parameters={PipelineDefinitionParameterValue.class})
     private Output</* @Nullable */ List<PipelineDefinitionParameterValue>> parameterValues;
 
     /**
@@ -64,7 +64,7 @@ public class PipelineDefinition extends io.pulumi.resources.CustomResource {
      * ID of the pipeline.
      * 
      */
-    @OutputExport(name="pipelineId", type=String.class, parameters={})
+    @Export(name="pipelineId", type=String.class, parameters={})
     private Output<String> pipelineId;
 
     /**
@@ -78,7 +78,7 @@ public class PipelineDefinition extends io.pulumi.resources.CustomResource {
      * Configuration block for the objects that define the pipeline. See below
      * 
      */
-    @OutputExport(name="pipelineObjects", type=List.class, parameters={PipelineDefinitionPipelineObject.class})
+    @Export(name="pipelineObjects", type=List.class, parameters={PipelineDefinitionPipelineObject.class})
     private Output<List<PipelineDefinitionPipelineObject>> pipelineObjects;
 
     /**

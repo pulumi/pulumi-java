@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.DatabaseBackupSettingResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListWebAppBackupStatusSecretsSlotResult {
     /**
      * Id of the backup.
@@ -102,25 +102,25 @@ public final class ListWebAppBackupStatusSecretsSlotResult {
      */
     private final Double websiteSizeInBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListWebAppBackupStatusSecretsSlotResult(
-        @OutputCustomType.Parameter("backupId") Integer backupId,
-        @OutputCustomType.Parameter("blobName") String blobName,
-        @OutputCustomType.Parameter("correlationId") String correlationId,
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("databases") List<DatabaseBackupSettingResponse> databases,
-        @OutputCustomType.Parameter("finishedTimeStamp") String finishedTimeStamp,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("lastRestoreTimeStamp") String lastRestoreTimeStamp,
-        @OutputCustomType.Parameter("log") String log,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("scheduled") Boolean scheduled,
-        @OutputCustomType.Parameter("sizeInBytes") Double sizeInBytes,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("storageAccountUrl") String storageAccountUrl,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("websiteSizeInBytes") Double websiteSizeInBytes) {
+        @CustomType.Parameter("backupId") Integer backupId,
+        @CustomType.Parameter("blobName") String blobName,
+        @CustomType.Parameter("correlationId") String correlationId,
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("databases") List<DatabaseBackupSettingResponse> databases,
+        @CustomType.Parameter("finishedTimeStamp") String finishedTimeStamp,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("lastRestoreTimeStamp") String lastRestoreTimeStamp,
+        @CustomType.Parameter("log") String log,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("scheduled") Boolean scheduled,
+        @CustomType.Parameter("sizeInBytes") Double sizeInBytes,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("storageAccountUrl") String storageAccountUrl,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("websiteSizeInBytes") Double websiteSizeInBytes) {
         this.backupId = backupId;
         this.blobName = blobName;
         this.correlationId = correlationId;

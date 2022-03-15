@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class TagSettingsPropertiesResponse extends io.pulumi.resources.Inv
      * Filter VMs by Any or All specified tags.
      * 
      */
-    @InputImport(name="filterOperator")
+    @Import(name="filterOperator")
       private final @Nullable String filterOperator;
 
     public Optional<String> getFilterOperator() {
@@ -35,7 +35,7 @@ public final class TagSettingsPropertiesResponse extends io.pulumi.resources.Inv
      * Dictionary of tags with its list of values.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,List<String>> tags;
 
     public Map<String,List<String>> getTags() {

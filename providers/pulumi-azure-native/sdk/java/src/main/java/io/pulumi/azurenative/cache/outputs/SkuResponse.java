@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.cache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SkuResponse {
     /**
      * The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).
@@ -26,11 +26,11 @@ public final class SkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkuResponse(
-        @OutputCustomType.Parameter("capacity") Integer capacity,
-        @OutputCustomType.Parameter("family") String family,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("capacity") Integer capacity,
+        @CustomType.Parameter("family") String family,
+        @CustomType.Parameter("name") String name) {
         this.capacity = capacity;
         this.family = family;
         this.name = name;

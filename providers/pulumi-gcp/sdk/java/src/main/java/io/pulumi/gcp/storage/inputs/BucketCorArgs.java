@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class BucketCorArgs extends io.pulumi.resources.ResourceArgs {
      * The value, in seconds, to return in the [Access-Control-Max-Age header](https://www.w3.org/TR/cors/#access-control-max-age-response-header) used in preflight responses.
      * 
      */
-    @InputImport(name="maxAgeSeconds")
+    @Import(name="maxAgeSeconds")
       private final @Nullable Output<Integer> maxAgeSeconds;
 
     public Output<Integer> getMaxAgeSeconds() {
@@ -31,7 +31,7 @@ public final class BucketCorArgs extends io.pulumi.resources.ResourceArgs {
      * The list of HTTP methods on which to include CORS response headers, (GET, OPTIONS, POST, etc) Note: "*" is permitted in the list of methods, and means "any method".
      * 
      */
-    @InputImport(name="methods")
+    @Import(name="methods")
       private final @Nullable Output<List<String>> methods;
 
     public Output<List<String>> getMethods() {
@@ -42,7 +42,7 @@ public final class BucketCorArgs extends io.pulumi.resources.ResourceArgs {
      * The list of [Origins](https://tools.ietf.org/html/rfc6454) eligible to receive CORS response headers. Note: "*" is permitted in the list of origins, and means "any Origin".
      * 
      */
-    @InputImport(name="origins")
+    @Import(name="origins")
       private final @Nullable Output<List<String>> origins;
 
     public Output<List<String>> getOrigins() {
@@ -53,7 +53,7 @@ public final class BucketCorArgs extends io.pulumi.resources.ResourceArgs {
      * The list of HTTP headers other than the [simple response headers](https://www.w3.org/TR/cors/#simple-response-header) to give permission for the user-agent to share across domains.
      * 
      */
-    @InputImport(name="responseHeaders")
+    @Import(name="responseHeaders")
       private final @Nullable Output<List<String>> responseHeaders;
 
     public Output<List<String>> getResponseHeaders() {

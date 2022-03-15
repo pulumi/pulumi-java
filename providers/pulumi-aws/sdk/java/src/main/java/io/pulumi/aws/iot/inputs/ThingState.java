@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the thing.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
      * Map of attributes of the thing.
      * 
      */
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable Output<Map<String,String>> attributes;
 
     public Output<Map<String,String>> getAttributes() {
@@ -42,7 +42,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
      * The default client ID.
      * 
      */
-    @InputImport(name="defaultClientId")
+    @Import(name="defaultClientId")
       private final @Nullable Output<String> defaultClientId;
 
     public Output<String> getDefaultClientId() {
@@ -53,7 +53,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
      * The name of the thing.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -64,7 +64,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
      * The thing type name.
      * 
      */
-    @InputImport(name="thingTypeName")
+    @Import(name="thingTypeName")
       private final @Nullable Output<String> thingTypeName;
 
     public Output<String> getThingTypeName() {
@@ -75,7 +75,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
      * The current version of the thing record in the registry.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelVariableValueArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class AssetModelExpressionVariableArgs extends io.pulumi.resources.
      * The friendly name of the variable to be used in the expression.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -29,7 +29,7 @@ public final class AssetModelExpressionVariableArgs extends io.pulumi.resources.
      * The variable that identifies an asset property from which to use values.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<AssetModelVariableValueArgs> value;
 
     public Output<AssetModelVariableValueArgs> getValue() {

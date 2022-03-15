@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.ram.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResourceShareFilter {
     /**
      * The name of the tag key to filter on.
@@ -21,10 +21,10 @@ public final class GetResourceShareFilter {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourceShareFilter(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("values") List<String> values) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("values") List<String> values) {
         this.name = name;
         this.values = values;
     }

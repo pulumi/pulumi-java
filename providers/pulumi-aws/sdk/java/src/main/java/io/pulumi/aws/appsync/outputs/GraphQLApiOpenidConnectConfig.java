@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.appsync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GraphQLApiOpenidConnectConfig {
     /**
      * Number of milliseconds a token is valid after being authenticated.
@@ -33,12 +33,12 @@ public final class GraphQLApiOpenidConnectConfig {
      */
     private final String issuer;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GraphQLApiOpenidConnectConfig(
-        @OutputCustomType.Parameter("authTtl") @Nullable Integer authTtl,
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("iatTtl") @Nullable Integer iatTtl,
-        @OutputCustomType.Parameter("issuer") String issuer) {
+        @CustomType.Parameter("authTtl") @Nullable Integer authTtl,
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("iatTtl") @Nullable Integer iatTtl,
+        @CustomType.Parameter("issuer") String issuer) {
         this.authTtl = authTtl;
         this.clientId = clientId;
         this.iatTtl = iatTtl;

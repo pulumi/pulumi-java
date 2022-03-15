@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.servicediscovery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDnsNamespaceResult {
     /**
      * The Amazon Resource Name (ARN) of the namespace.
@@ -32,14 +32,14 @@ public final class GetDnsNamespaceResult {
     private final String name;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDnsNamespaceResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("hostedZone") String hostedZone,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("hostedZone") String hostedZone,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.arn = arn;
         this.description = description;
         this.hostedZone = hostedZone;

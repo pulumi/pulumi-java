@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAuthorizerResult {
     /**
      * Optional customer-defined field, used in OpenAPI imports and exports without functional impact.
@@ -60,18 +60,18 @@ public final class GetAuthorizerResult {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAuthorizerResult(
-        @OutputCustomType.Parameter("authType") @Nullable String authType,
-        @OutputCustomType.Parameter("authorizerCredentials") @Nullable String authorizerCredentials,
-        @OutputCustomType.Parameter("authorizerId") @Nullable String authorizerId,
-        @OutputCustomType.Parameter("authorizerResultTtlInSeconds") @Nullable Integer authorizerResultTtlInSeconds,
-        @OutputCustomType.Parameter("authorizerUri") @Nullable String authorizerUri,
-        @OutputCustomType.Parameter("identitySource") @Nullable String identitySource,
-        @OutputCustomType.Parameter("identityValidationExpression") @Nullable String identityValidationExpression,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("providerARNs") @Nullable List<String> providerARNs,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("authType") @Nullable String authType,
+        @CustomType.Parameter("authorizerCredentials") @Nullable String authorizerCredentials,
+        @CustomType.Parameter("authorizerId") @Nullable String authorizerId,
+        @CustomType.Parameter("authorizerResultTtlInSeconds") @Nullable Integer authorizerResultTtlInSeconds,
+        @CustomType.Parameter("authorizerUri") @Nullable String authorizerUri,
+        @CustomType.Parameter("identitySource") @Nullable String identitySource,
+        @CustomType.Parameter("identityValidationExpression") @Nullable String identityValidationExpression,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("providerARNs") @Nullable List<String> providerARNs,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.authType = authType;
         this.authorizerCredentials = authorizerCredentials;
         this.authorizerId = authorizerId;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CnameRecordResponse {
     /**
      * The canonical name for this CNAME record.
@@ -17,8 +17,8 @@ public final class CnameRecordResponse {
      */
     private final @Nullable String cname;
 
-    @OutputCustomType.Constructor
-    private CnameRecordResponse(@OutputCustomType.Parameter("cname") @Nullable String cname) {
+    @CustomType.Constructor
+    private CnameRecordResponse(@CustomType.Parameter("cname") @Nullable String cname) {
         this.cname = cname;
     }
 

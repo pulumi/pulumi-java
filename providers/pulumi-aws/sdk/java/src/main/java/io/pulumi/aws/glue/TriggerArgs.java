@@ -6,7 +6,7 @@ package io.pulumi.aws.glue;
 import io.pulumi.aws.glue.inputs.TriggerActionArgs;
 import io.pulumi.aws.glue.inputs.TriggerPredicateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * List of actions initiated by this trigger when it fires. See Actions Below.
      * 
      */
-    @InputImport(name="actions", required=true)
+    @Import(name="actions", required=true)
       private final Output<List<TriggerActionArgs>> actions;
 
     public Output<List<TriggerActionArgs>> getActions() {
@@ -34,7 +34,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the new trigger.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Start the trigger. Defaults to `true`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -56,7 +56,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the trigger.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -67,7 +67,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. See Predicate Below.
      * 
      */
-    @InputImport(name="predicate")
+    @Import(name="predicate")
       private final @Nullable Output<TriggerPredicateArgs> predicate;
 
     public Output<TriggerPredicateArgs> getPredicate() {
@@ -78,7 +78,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
     public Output<String> getSchedule() {
@@ -89,7 +89,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Set to true to start `SCHEDULED` and `CONDITIONAL` triggers when created. True is not supported for `ON_DEMAND` triggers.
      * 
      */
-    @InputImport(name="startOnCreation")
+    @Import(name="startOnCreation")
       private final @Nullable Output<Boolean> startOnCreation;
 
     public Output<Boolean> getStartOnCreation() {
@@ -100,7 +100,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -111,7 +111,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * The type of trigger. Valid values are `CONDITIONAL`, `ON_DEMAND`, and `SCHEDULED`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -122,7 +122,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (`ON_DEMAND` or `SCHEDULED` type) and can contain multiple additional `CONDITIONAL` triggers.
      * 
      */
-    @InputImport(name="workflowName")
+    @Import(name="workflowName")
       private final @Nullable Output<String> workflowName;
 
     public Output<String> getWorkflowName() {

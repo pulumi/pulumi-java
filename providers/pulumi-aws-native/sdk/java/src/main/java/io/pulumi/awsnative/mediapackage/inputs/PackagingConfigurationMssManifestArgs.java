@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationStreamSelectionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class PackagingConfigurationMssManifestArgs extends io.pulumi.resou
 
     public static final PackagingConfigurationMssManifestArgs Empty = new PackagingConfigurationMssManifestArgs();
 
-    @InputImport(name="manifestName")
+    @Import(name="manifestName")
       private final @Nullable Output<String> manifestName;
 
     public Output<String> getManifestName() {
         return this.manifestName == null ? Output.empty() : this.manifestName;
     }
 
-    @InputImport(name="streamSelection")
+    @Import(name="streamSelection")
       private final @Nullable Output<PackagingConfigurationStreamSelectionArgs> streamSelection;
 
     public Output<PackagingConfigurationStreamSelectionArgs> getStreamSelection() {

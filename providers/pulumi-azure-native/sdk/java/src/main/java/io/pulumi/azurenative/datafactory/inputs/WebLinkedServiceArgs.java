@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.WebAnonymousAuthenticationArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebBasicAuthenticationArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebClientCertificateAuthenticationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -41,7 +41,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -52,7 +52,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -63,7 +63,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -75,7 +75,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * Expected value is 'Web'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -86,7 +86,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * Web linked service properties.
      * 
      */
-    @InputImport(name="typeProperties", required=true)
+    @Import(name="typeProperties", required=true)
       private final Output<Object> typeProperties;
 
     public Output<Object> getTypeProperties() {

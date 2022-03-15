@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ProvisionedConcurrencyConfigState extends io.pulumi.resources
      * Name or Amazon Resource Name (ARN) of the Lambda Function.
      * 
      */
-    @InputImport(name="functionName")
+    @Import(name="functionName")
       private final @Nullable Output<String> functionName;
 
     public Output<String> getFunctionName() {
@@ -30,7 +30,7 @@ public final class ProvisionedConcurrencyConfigState extends io.pulumi.resources
      * Amount of capacity to allocate. Must be greater than or equal to `1`.
      * 
      */
-    @InputImport(name="provisionedConcurrentExecutions")
+    @Import(name="provisionedConcurrentExecutions")
       private final @Nullable Output<Integer> provisionedConcurrentExecutions;
 
     public Output<Integer> getProvisionedConcurrentExecutions() {
@@ -41,7 +41,7 @@ public final class ProvisionedConcurrencyConfigState extends io.pulumi.resources
      * Lambda Function version or Lambda Alias name.
      * 
      */
-    @InputImport(name="qualifier")
+    @Import(name="qualifier")
       private final @Nullable Output<String> qualifier;
 
     public Output<String> getQualifier() {

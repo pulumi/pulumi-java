@@ -8,7 +8,7 @@ import io.pulumi.awsnative.apigateway.inputs.DeploymentCanarySettingArgs;
 import io.pulumi.awsnative.apigateway.inputs.DeploymentMethodSettingArgs;
 import io.pulumi.awsnative.apigateway.inputs.DeploymentTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -27,7 +27,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * Specifies settings for logging access in this stage.
      * 
      */
-    @InputImport(name="accessLogSetting")
+    @Import(name="accessLogSetting")
       private final @Nullable Output<DeploymentAccessLogSettingArgs> accessLogSetting;
 
     public Output<DeploymentAccessLogSettingArgs> getAccessLogSetting() {
@@ -38,7 +38,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * Indicates whether cache clustering is enabled for the stage.
      * 
      */
-    @InputImport(name="cacheClusterEnabled")
+    @Import(name="cacheClusterEnabled")
       private final @Nullable Output<Boolean> cacheClusterEnabled;
 
     public Output<Boolean> getCacheClusterEnabled() {
@@ -49,7 +49,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * The size of the stage's cache cluster.
      * 
      */
-    @InputImport(name="cacheClusterSize")
+    @Import(name="cacheClusterSize")
       private final @Nullable Output<String> cacheClusterSize;
 
     public Output<String> getCacheClusterSize() {
@@ -60,7 +60,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
      * 
      */
-    @InputImport(name="cacheDataEncrypted")
+    @Import(name="cacheDataEncrypted")
       private final @Nullable Output<Boolean> cacheDataEncrypted;
 
     public Output<Boolean> getCacheDataEncrypted() {
@@ -71,7 +71,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * The time-to-live (TTL) period, in seconds, that specifies how long API Gateway caches responses.
      * 
      */
-    @InputImport(name="cacheTtlInSeconds")
+    @Import(name="cacheTtlInSeconds")
       private final @Nullable Output<Integer> cacheTtlInSeconds;
 
     public Output<Integer> getCacheTtlInSeconds() {
@@ -82,7 +82,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * Indicates whether responses are cached and returned for requests. You must enable a cache cluster on the stage to cache responses.
      * 
      */
-    @InputImport(name="cachingEnabled")
+    @Import(name="cachingEnabled")
       private final @Nullable Output<Boolean> cachingEnabled;
 
     public Output<Boolean> getCachingEnabled() {
@@ -93,7 +93,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * Specifies settings for the canary deployment in this stage.
      * 
      */
-    @InputImport(name="canarySetting")
+    @Import(name="canarySetting")
       private final @Nullable Output<DeploymentCanarySettingArgs> canarySetting;
 
     public Output<DeploymentCanarySettingArgs> getCanarySetting() {
@@ -104,7 +104,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * The identifier of the client certificate that API Gateway uses to call your integration endpoints in the stage.
      * 
      */
-    @InputImport(name="clientCertificateId")
+    @Import(name="clientCertificateId")
       private final @Nullable Output<String> clientCertificateId;
 
     public Output<String> getClientCertificateId() {
@@ -115,7 +115,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * Indicates whether data trace logging is enabled for methods in the stage. API Gateway pushes these logs to Amazon CloudWatch Logs.
      * 
      */
-    @InputImport(name="dataTraceEnabled")
+    @Import(name="dataTraceEnabled")
       private final @Nullable Output<Boolean> dataTraceEnabled;
 
     public Output<Boolean> getDataTraceEnabled() {
@@ -126,7 +126,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * A description of the purpose of the stage.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -137,7 +137,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * The version identifier of the API documentation snapshot.
      * 
      */
-    @InputImport(name="documentationVersion")
+    @Import(name="documentationVersion")
       private final @Nullable Output<String> documentationVersion;
 
     public Output<String> getDocumentationVersion() {
@@ -148,7 +148,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * The logging level for this method. For valid values, see the loggingLevel property of the Stage resource in the Amazon API Gateway API Reference.
      * 
      */
-    @InputImport(name="loggingLevel")
+    @Import(name="loggingLevel")
       private final @Nullable Output<String> loggingLevel;
 
     public Output<String> getLoggingLevel() {
@@ -159,7 +159,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * Configures settings for all of the stage's methods.
      * 
      */
-    @InputImport(name="methodSettings")
+    @Import(name="methodSettings")
       private final @Nullable Output<List<DeploymentMethodSettingArgs>> methodSettings;
 
     public Output<List<DeploymentMethodSettingArgs>> getMethodSettings() {
@@ -170,7 +170,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * Indicates whether Amazon CloudWatch metrics are enabled for methods in the stage.
      * 
      */
-    @InputImport(name="metricsEnabled")
+    @Import(name="metricsEnabled")
       private final @Nullable Output<Boolean> metricsEnabled;
 
     public Output<Boolean> getMetricsEnabled() {
@@ -181,7 +181,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * An array of arbitrary tags (key-value pairs) to associate with the stage.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DeploymentTagArgs>> tags;
 
     public Output<List<DeploymentTagArgs>> getTags() {
@@ -192,7 +192,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * The number of burst requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
      * 
      */
-    @InputImport(name="throttlingBurstLimit")
+    @Import(name="throttlingBurstLimit")
       private final @Nullable Output<Integer> throttlingBurstLimit;
 
     public Output<Integer> getThrottlingBurstLimit() {
@@ -203,7 +203,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * The number of steady-state requests per second that API Gateway permits across all APIs, stages, and methods in your AWS account.
      * 
      */
-    @InputImport(name="throttlingRateLimit")
+    @Import(name="throttlingRateLimit")
       private final @Nullable Output<Double> throttlingRateLimit;
 
     public Output<Double> getThrottlingRateLimit() {
@@ -214,7 +214,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * Specifies whether active tracing with X-ray is enabled for this stage.
      * 
      */
-    @InputImport(name="tracingEnabled")
+    @Import(name="tracingEnabled")
       private final @Nullable Output<Boolean> tracingEnabled;
 
     public Output<Boolean> getTracingEnabled() {
@@ -225,7 +225,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * A map that defines the stage variables. Variable names must consist of alphanumeric characters, and the values must match the following regular expression: [A-Za-z0-9-._~:/?#&=,]+.
      * 
      */
-    @InputImport(name="variables")
+    @Import(name="variables")
       private final @Nullable Output<Object> variables;
 
     public Output<Object> getVariables() {

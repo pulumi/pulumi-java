@@ -5,20 +5,20 @@ package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.AccessPolicyPortal;
 import io.pulumi.awsnative.iotsitewise.outputs.AccessPolicyProject;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessPolicyResource {
     private final @Nullable AccessPolicyPortal portal;
     private final @Nullable AccessPolicyProject project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessPolicyResource(
-        @OutputCustomType.Parameter("portal") @Nullable AccessPolicyPortal portal,
-        @OutputCustomType.Parameter("project") @Nullable AccessPolicyProject project) {
+        @CustomType.Parameter("portal") @Nullable AccessPolicyPortal portal,
+        @CustomType.Parameter("project") @Nullable AccessPolicyProject project) {
         this.portal = portal;
         this.project = project;
     }

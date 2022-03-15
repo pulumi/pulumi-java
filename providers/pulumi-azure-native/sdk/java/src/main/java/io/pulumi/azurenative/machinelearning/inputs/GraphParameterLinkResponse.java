@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GraphParameterLinkResponse extends io.pulumi.resources.Invoke
      * The graph node's identifier
      * 
      */
-    @InputImport(name="nodeId", required=true)
+    @Import(name="nodeId", required=true)
       private final String nodeId;
 
     public String getNodeId() {
@@ -31,7 +31,7 @@ public final class GraphParameterLinkResponse extends io.pulumi.resources.Invoke
      * The identifier of the node parameter that the global parameter maps to.
      * 
      */
-    @InputImport(name="parameterKey", required=true)
+    @Import(name="parameterKey", required=true)
       private final String parameterKey;
 
     public String getParameterKey() {

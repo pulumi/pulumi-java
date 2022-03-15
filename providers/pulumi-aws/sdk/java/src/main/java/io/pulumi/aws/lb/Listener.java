@@ -9,7 +9,7 @@ import io.pulumi.aws.lb.inputs.ListenerState;
 import io.pulumi.aws.lb.outputs.ListenerDefaultAction;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * Name of the Application-Layer Protocol Negotiation (ALPN) policy. Can be set if `protocol` is `TLS`. Valid values are `HTTP1Only`, `HTTP2Only`, `HTTP2Optional`, `HTTP2Preferred`, and `None`.
      * 
      */
-    @OutputExport(name="alpnPolicy", type=String.class, parameters={})
+    @Export(name="alpnPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> alpnPolicy;
 
     /**
@@ -53,7 +53,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * ARN of the target group.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -67,7 +67,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * ARN of the default SSL server certificate. Exactly one certificate is required if the protocol is HTTPS. For adding additional SSL certificates, see the `aws.lb.ListenerCertificate` resource.
      * 
      */
-    @OutputExport(name="certificateArn", type=String.class, parameters={})
+    @Export(name="certificateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateArn;
 
     /**
@@ -81,7 +81,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * Configuration block for default actions. Detailed below.
      * 
      */
-    @OutputExport(name="defaultActions", type=List.class, parameters={ListenerDefaultAction.class})
+    @Export(name="defaultActions", type=List.class, parameters={ListenerDefaultAction.class})
     private Output<List<ListenerDefaultAction>> defaultActions;
 
     /**
@@ -95,7 +95,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * ARN of the load balancer.
      * 
      */
-    @OutputExport(name="loadBalancerArn", type=String.class, parameters={})
+    @Export(name="loadBalancerArn", type=String.class, parameters={})
     private Output<String> loadBalancerArn;
 
     /**
@@ -109,7 +109,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * Port. Specify a value from `1` to `65535` or `#{port}`. Defaults to `#{port}`.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     /**
@@ -123,7 +123,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * Protocol. Valid values are `HTTP`, `HTTPS`, or `#{protocol}`. Defaults to `#{protocol}`.
      * 
      */
-    @OutputExport(name="protocol", type=String.class, parameters={})
+    @Export(name="protocol", type=String.class, parameters={})
     private Output<String> protocol;
 
     /**
@@ -137,7 +137,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * Name of the SSL Policy for the listener. Required if `protocol` is `HTTPS` or `TLS`.
      * 
      */
-    @OutputExport(name="sslPolicy", type=String.class, parameters={})
+    @Export(name="sslPolicy", type=String.class, parameters={})
     private Output<String> sslPolicy;
 
     /**
@@ -151,7 +151,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -165,7 +165,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

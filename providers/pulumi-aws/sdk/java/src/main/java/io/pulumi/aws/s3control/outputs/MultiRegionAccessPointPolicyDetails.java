@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.s3control.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MultiRegionAccessPointPolicyDetails {
     /**
      * The name of the Multi-Region Access Point.
@@ -20,10 +20,10 @@ public final class MultiRegionAccessPointPolicyDetails {
      */
     private final String policy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MultiRegionAccessPointPolicyDetails(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policy") String policy) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policy") String policy) {
         this.name = name;
         this.policy = policy;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class TypePropertiesMappingResponse extends io.pulumi.resources.Inv
      * Link type.
      * 
      */
-    @InputImport(name="linkType")
+    @Import(name="linkType")
       private final @Nullable String linkType;
 
     public Optional<String> getLinkType() {
@@ -33,7 +33,7 @@ public final class TypePropertiesMappingResponse extends io.pulumi.resources.Inv
      *  Property name on the source Entity Type.
      * 
      */
-    @InputImport(name="sourcePropertyName", required=true)
+    @Import(name="sourcePropertyName", required=true)
       private final String sourcePropertyName;
 
     public String getSourcePropertyName() {
@@ -44,7 +44,7 @@ public final class TypePropertiesMappingResponse extends io.pulumi.resources.Inv
      * Property name on the target Entity Type.
      * 
      */
-    @InputImport(name="targetPropertyName", required=true)
+    @Import(name="targetPropertyName", required=true)
       private final String targetPropertyName;
 
     public String getTargetPropertyName() {

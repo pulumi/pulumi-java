@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AwsClusterFleetArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the managed Hub Membership resource associated to this cluster. Membership names are formatted as projects/<project-number>/locations/global/membership/<cluster-id>.
      * 
      */
-    @InputImport(name="membership")
+    @Import(name="membership")
       private final @Nullable Output<String> membership;
 
     public Output<String> getMembership() {
@@ -30,7 +30,7 @@ public final class AwsClusterFleetArgs extends io.pulumi.resources.ResourceArgs 
      * The project for the resource
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

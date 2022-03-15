@@ -4,7 +4,7 @@
 package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ComputeEnvironmentComputeResourcesLaunchTemplateArgs extends 
      * ID of the launch template. You must specify either the launch template ID or launch template name in the request, but not both.
      * 
      */
-    @InputImport(name="launchTemplateId")
+    @Import(name="launchTemplateId")
       private final @Nullable Output<String> launchTemplateId;
 
     public Output<String> getLaunchTemplateId() {
@@ -29,7 +29,7 @@ public final class ComputeEnvironmentComputeResourcesLaunchTemplateArgs extends 
      * Name of the launch template.
      * 
      */
-    @InputImport(name="launchTemplateName")
+    @Import(name="launchTemplateName")
       private final @Nullable Output<String> launchTemplateName;
 
     public Output<String> getLaunchTemplateName() {
@@ -40,7 +40,7 @@ public final class ComputeEnvironmentComputeResourcesLaunchTemplateArgs extends 
      * The version number of the launch template. Default: The default version of the launch template.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

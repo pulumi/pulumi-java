@@ -5,23 +5,23 @@ package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.enums.RulesetThresholdType;
 import io.pulumi.awsnative.databrew.enums.RulesetThresholdUnit;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RulesetThreshold {
     private final @Nullable RulesetThresholdType type;
     private final @Nullable RulesetThresholdUnit unit;
     private final Double value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RulesetThreshold(
-        @OutputCustomType.Parameter("type") @Nullable RulesetThresholdType type,
-        @OutputCustomType.Parameter("unit") @Nullable RulesetThresholdUnit unit,
-        @OutputCustomType.Parameter("value") Double value) {
+        @CustomType.Parameter("type") @Nullable RulesetThresholdType type,
+        @CustomType.Parameter("unit") @Nullable RulesetThresholdUnit unit,
+        @CustomType.Parameter("value") Double value) {
         this.type = type;
         this.unit = unit;
         this.value = value;

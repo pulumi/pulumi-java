@@ -5,14 +5,14 @@ package io.pulumi.aws.imagebuilder.outputs;
 
 import io.pulumi.aws.imagebuilder.outputs.GetImageImageTestsConfiguration;
 import io.pulumi.aws.imagebuilder.outputs.GetImageOutputResource;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetImageResult {
     private final String arn;
     /**
@@ -86,23 +86,23 @@ public final class GetImageResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetImageResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("buildVersionArn") String buildVersionArn,
-        @OutputCustomType.Parameter("dateCreated") String dateCreated,
-        @OutputCustomType.Parameter("distributionConfigurationArn") String distributionConfigurationArn,
-        @OutputCustomType.Parameter("enhancedImageMetadataEnabled") Boolean enhancedImageMetadataEnabled,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("imageRecipeArn") String imageRecipeArn,
-        @OutputCustomType.Parameter("imageTestsConfigurations") List<GetImageImageTestsConfiguration> imageTestsConfigurations,
-        @OutputCustomType.Parameter("infrastructureConfigurationArn") String infrastructureConfigurationArn,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("osVersion") String osVersion,
-        @OutputCustomType.Parameter("outputResources") List<GetImageOutputResource> outputResources,
-        @OutputCustomType.Parameter("platform") String platform,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("buildVersionArn") String buildVersionArn,
+        @CustomType.Parameter("dateCreated") String dateCreated,
+        @CustomType.Parameter("distributionConfigurationArn") String distributionConfigurationArn,
+        @CustomType.Parameter("enhancedImageMetadataEnabled") Boolean enhancedImageMetadataEnabled,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("imageRecipeArn") String imageRecipeArn,
+        @CustomType.Parameter("imageTestsConfigurations") List<GetImageImageTestsConfiguration> imageTestsConfigurations,
+        @CustomType.Parameter("infrastructureConfigurationArn") String infrastructureConfigurationArn,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("osVersion") String osVersion,
+        @CustomType.Parameter("outputResources") List<GetImageOutputResource> outputResources,
+        @CustomType.Parameter("platform") String platform,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("version") String version) {
         this.arn = arn;
         this.buildVersionArn = buildVersionArn;
         this.dateCreated = dateCreated;

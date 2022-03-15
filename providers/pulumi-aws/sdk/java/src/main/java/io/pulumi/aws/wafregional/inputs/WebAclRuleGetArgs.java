@@ -6,7 +6,7 @@ package io.pulumi.aws.wafregional.inputs;
 import io.pulumi.aws.wafregional.inputs.WebAclRuleActionGetArgs;
 import io.pulumi.aws.wafregional.inputs.WebAclRuleOverrideActionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WebAclRuleGetArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block of the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Not used if `type` is `GROUP`. Detailed below.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<WebAclRuleActionGetArgs> action;
 
     public Output<WebAclRuleActionGetArgs> getAction() {
@@ -32,7 +32,7 @@ public final class WebAclRuleGetArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block of the override the action that a group requests CloudFront or AWS WAF takes when a web request matches the conditions in the rule.  Only used if `type` is `GROUP`. Detailed below.
      * 
      */
-    @InputImport(name="overrideAction")
+    @Import(name="overrideAction")
       private final @Nullable Output<WebAclRuleOverrideActionGetArgs> overrideAction;
 
     public Output<WebAclRuleOverrideActionGetArgs> getOverrideAction() {
@@ -44,7 +44,7 @@ public final class WebAclRuleGetArgs extends io.pulumi.resources.ResourceArgs {
      * Rules with a lower value are evaluated before rules with a higher value.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -55,7 +55,7 @@ public final class WebAclRuleGetArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the associated WAF (Regional) rule (e.g. `aws.wafregional.Rule`). WAF (Global) rules cannot be used.
      * 
      */
-    @InputImport(name="ruleId", required=true)
+    @Import(name="ruleId", required=true)
       private final Output<String> ruleId;
 
     public Output<String> getRuleId() {
@@ -66,7 +66,7 @@ public final class WebAclRuleGetArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. Valid values for `action` are `ALLOW`, `BLOCK` or `COUNT`. Valid values for `override_action` are `COUNT` and `NONE`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

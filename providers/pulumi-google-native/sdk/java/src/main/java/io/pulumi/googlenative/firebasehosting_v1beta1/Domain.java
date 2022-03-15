@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebasehosting_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebasehosting_v1beta1.DomainArgs;
@@ -24,7 +24,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The domain name of the association.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -38,7 +38,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * If set, the domain should redirect with the provided parameters.
      * 
      */
-    @OutputExport(name="domainRedirect", type=DomainRedirectResponse.class, parameters={})
+    @Export(name="domainRedirect", type=DomainRedirectResponse.class, parameters={})
     private Output<DomainRedirectResponse> domainRedirect;
 
     /**
@@ -52,7 +52,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Information about the provisioning of certificates and the health of the DNS resolution for the domain.
      * 
      */
-    @OutputExport(name="provisioning", type=DomainProvisioningResponse.class, parameters={})
+    @Export(name="provisioning", type=DomainProvisioningResponse.class, parameters={})
     private Output<DomainProvisioningResponse> provisioning;
 
     /**
@@ -66,7 +66,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The site name of the association.
      * 
      */
-    @OutputExport(name="site", type=String.class, parameters={})
+    @Export(name="site", type=String.class, parameters={})
     private Output<String> site;
 
     /**
@@ -80,7 +80,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Additional status of the domain association.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -94,7 +94,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The time at which the domain was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

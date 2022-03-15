@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBuildServiceBuildResultLogResult {
     /**
      * The public download URL of this build result log
@@ -17,8 +17,8 @@ public final class GetBuildServiceBuildResultLogResult {
      */
     private final @Nullable String blobUrl;
 
-    @OutputCustomType.Constructor
-    private GetBuildServiceBuildResultLogResult(@OutputCustomType.Parameter("blobUrl") @Nullable String blobUrl) {
+    @CustomType.Constructor
+    private GetBuildServiceBuildResultLogResult(@CustomType.Parameter("blobUrl") @Nullable String blobUrl) {
         this.blobUrl = blobUrl;
     }
 

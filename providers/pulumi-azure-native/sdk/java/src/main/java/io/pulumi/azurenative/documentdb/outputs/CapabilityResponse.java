@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CapabilityResponse {
     /**
      * Name of the Cosmos DB capability. For example, "name": "EnableCassandra". Current values also include "EnableTable" and "EnableGremlin".
@@ -17,8 +17,8 @@ public final class CapabilityResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private CapabilityResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private CapabilityResponse(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

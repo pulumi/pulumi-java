@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotGrammarSlotTypeSettingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class BotExternalSourceSettingArgs extends io.pulumi.resources.Reso
 
     public static final BotExternalSourceSettingArgs Empty = new BotExternalSourceSettingArgs();
 
-    @InputImport(name="grammarSlotTypeSetting")
+    @Import(name="grammarSlotTypeSetting")
       private final @Nullable Output<BotGrammarSlotTypeSettingArgs> grammarSlotTypeSetting;
 
     public Output<BotGrammarSlotTypeSettingArgs> getGrammarSlotTypeSetting() {

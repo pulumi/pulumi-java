@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.cloudidentity_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudidentity_v1.outputs.EntityKeyResponse;
 import io.pulumi.googlenative.cloudidentity_v1.outputs.MembershipRoleResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetMembershipResult {
     /**
      * The time when the `Membership` was created.
@@ -43,14 +43,14 @@ public final class GetMembershipResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMembershipResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("preferredMemberKey") EntityKeyResponse preferredMemberKey,
-        @OutputCustomType.Parameter("roles") List<MembershipRoleResponse> roles,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("preferredMemberKey") EntityKeyResponse preferredMemberKey,
+        @CustomType.Parameter("roles") List<MembershipRoleResponse> roles,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.name = name;
         this.preferredMemberKey = preferredMemberKey;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.enums.WsdlImportMethod;
 import io.pulumi.azurenative.web.inputs.WsdlServiceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * The WSDL content
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
@@ -36,7 +36,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * The WSDL import method
      * 
      */
-    @InputImport(name="importMethod")
+    @Import(name="importMethod")
       private final @Nullable Output<Either<String,WsdlImportMethod>> importMethod;
 
     public Output<Either<String,WsdlImportMethod>> getImportMethod() {
@@ -47,7 +47,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * The service with name and endpoint names
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<WsdlServiceArgs> service;
 
     public Output<WsdlServiceArgs> getService() {
@@ -58,7 +58,7 @@ public final class WsdlDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * The WSDL URL
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

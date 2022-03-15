@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TargetsPresentConditionResponse {
     /**
      * The list of Target names that are missing. For example, projects/{project_id}/locations/{location_name}/targets/{target_name}.
@@ -27,11 +27,11 @@ public final class TargetsPresentConditionResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TargetsPresentConditionResponse(
-        @OutputCustomType.Parameter("missingTargets") List<String> missingTargets,
-        @OutputCustomType.Parameter("status") Boolean status,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("missingTargets") List<String> missingTargets,
+        @CustomType.Parameter("status") Boolean status,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.missingTargets = missingTargets;
         this.status = status;
         this.updateTime = updateTime;

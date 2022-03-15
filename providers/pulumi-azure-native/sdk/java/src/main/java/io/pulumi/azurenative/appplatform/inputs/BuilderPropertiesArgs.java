@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.inputs.BuildpacksGroupPropertiesArgs;
 import io.pulumi.azurenative.appplatform.inputs.StackPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class BuilderPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Builder buildpack groups.
      * 
      */
-    @InputImport(name="buildpackGroups")
+    @Import(name="buildpackGroups")
       private final @Nullable Output<List<BuildpacksGroupPropertiesArgs>> buildpackGroups;
 
     public Output<List<BuildpacksGroupPropertiesArgs>> getBuildpackGroups() {
@@ -35,7 +35,7 @@ public final class BuilderPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Builder cluster stack property.
      * 
      */
-    @InputImport(name="stack")
+    @Import(name="stack")
       private final @Nullable Output<StackPropertiesArgs> stack;
 
     public Output<StackPropertiesArgs> getStack() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.redhatopenshift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServicePrincipalProfileResponse {
     /**
      * The client ID used for the cluster (immutable).
@@ -22,10 +22,10 @@ public final class ServicePrincipalProfileResponse {
      */
     private final @Nullable String clientSecret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicePrincipalProfileResponse(
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret) {
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("clientSecret") @Nullable String clientSecret) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CrawlerDeltaTarget {
     /**
      * The name of the connection to use to connect to the Delta table target.
@@ -27,11 +27,11 @@ public final class CrawlerDeltaTarget {
      */
     private final Boolean writeManifest;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CrawlerDeltaTarget(
-        @OutputCustomType.Parameter("connectionName") String connectionName,
-        @OutputCustomType.Parameter("deltaTables") List<String> deltaTables,
-        @OutputCustomType.Parameter("writeManifest") Boolean writeManifest) {
+        @CustomType.Parameter("connectionName") String connectionName,
+        @CustomType.Parameter("deltaTables") List<String> deltaTables,
+        @CustomType.Parameter("writeManifest") Boolean writeManifest) {
         this.connectionName = connectionName;
         this.deltaTables = deltaTables;
         this.writeManifest = writeManifest;

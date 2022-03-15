@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse {
     /**
      * Optional. The parameter name for the value extracted from the annotated part of the example. This field is required for annotated parts of the training phrase.
@@ -31,12 +31,12 @@ public final class GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse 
      */
     private final Boolean userDefined;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentTrainingPhrasePartResponse(
-        @OutputCustomType.Parameter("alias") String alias,
-        @OutputCustomType.Parameter("entityType") String entityType,
-        @OutputCustomType.Parameter("text") String text,
-        @OutputCustomType.Parameter("userDefined") Boolean userDefined) {
+        @CustomType.Parameter("alias") String alias,
+        @CustomType.Parameter("entityType") String entityType,
+        @CustomType.Parameter("text") String text,
+        @CustomType.Parameter("userDefined") Boolean userDefined) {
         this.alias = alias;
         this.entityType = entityType;
         this.text = text;

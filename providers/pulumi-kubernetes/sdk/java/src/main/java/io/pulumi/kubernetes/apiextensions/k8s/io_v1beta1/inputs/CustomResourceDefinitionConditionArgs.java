@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
      * lastTransitionTime last time the condition transitioned from one status to another.
      * 
      */
-    @InputImport(name="lastTransitionTime")
+    @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
 
     public Output<String> getLastTransitionTime() {
@@ -33,7 +33,7 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
      * message is a human-readable message indicating details about last transition.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
@@ -44,7 +44,7 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
      * reason is a unique, one-word, CamelCase reason for the condition's last transition.
      * 
      */
-    @InputImport(name="reason")
+    @Import(name="reason")
       private final @Nullable Output<String> reason;
 
     public Output<String> getReason() {
@@ -55,7 +55,7 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
      * status is the status of the condition. Can be True, False, Unknown.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<String> status;
 
     public Output<String> getStatus() {
@@ -66,7 +66,7 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
      * type is the type of the condition. Types include Established, NamesAccepted and Terminating.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

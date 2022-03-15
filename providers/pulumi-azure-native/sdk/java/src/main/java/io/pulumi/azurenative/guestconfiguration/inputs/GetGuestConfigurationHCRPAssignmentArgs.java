@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.guestconfiguration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends io.pulumi.res
      * The guest configuration assignment name.
      * 
      */
-    @InputImport(name="guestConfigurationAssignmentName", required=true)
+    @Import(name="guestConfigurationAssignmentName", required=true)
       private final String guestConfigurationAssignmentName;
 
     public String getGuestConfigurationAssignmentName() {
@@ -27,7 +27,7 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends io.pulumi.res
      * The name of the ARC machine.
      * 
      */
-    @InputImport(name="machineName", required=true)
+    @Import(name="machineName", required=true)
       private final String machineName;
 
     public String getMachineName() {
@@ -38,7 +38,7 @@ public final class GetGuestConfigurationHCRPAssignmentArgs extends io.pulumi.res
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.ParallelismConfigurationProperties;
 import io.pulumi.awsnative.sagemaker.outputs.PipelineTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPipelineResult {
     private final @Nullable ParallelismConfigurationProperties parallelismConfiguration;
     private final @Nullable Object pipelineDefinition;
@@ -34,14 +34,14 @@ public final class GetPipelineResult {
     private final @Nullable String roleArn;
     private final @Nullable List<PipelineTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPipelineResult(
-        @OutputCustomType.Parameter("parallelismConfiguration") @Nullable ParallelismConfigurationProperties parallelismConfiguration,
-        @OutputCustomType.Parameter("pipelineDefinition") @Nullable Object pipelineDefinition,
-        @OutputCustomType.Parameter("pipelineDescription") @Nullable String pipelineDescription,
-        @OutputCustomType.Parameter("pipelineDisplayName") @Nullable String pipelineDisplayName,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<PipelineTag> tags) {
+        @CustomType.Parameter("parallelismConfiguration") @Nullable ParallelismConfigurationProperties parallelismConfiguration,
+        @CustomType.Parameter("pipelineDefinition") @Nullable Object pipelineDefinition,
+        @CustomType.Parameter("pipelineDescription") @Nullable String pipelineDescription,
+        @CustomType.Parameter("pipelineDisplayName") @Nullable String pipelineDisplayName,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("tags") @Nullable List<PipelineTag> tags) {
         this.parallelismConfiguration = parallelismConfiguration;
         this.pipelineDefinition = pipelineDefinition;
         this.pipelineDescription = pipelineDescription;

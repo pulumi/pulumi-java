@@ -8,7 +8,7 @@ import io.pulumi.azurenative.hybridnetwork.VendorSkusArgs;
 import io.pulumi.azurenative.hybridnetwork.outputs.NetworkFunctionTemplateResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -37,7 +37,7 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
      * The sku deployment mode.
      * 
      */
-    @OutputExport(name="deploymentMode", type=String.class, parameters={})
+    @Export(name="deploymentMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> deploymentMode;
 
     /**
@@ -51,7 +51,7 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
      * The parameters for the managed application to be supplied by the vendor.
      * 
      */
-    @OutputExport(name="managedApplicationParameters", type=Object.class, parameters={})
+    @Export(name="managedApplicationParameters", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> managedApplicationParameters;
 
     /**
@@ -65,7 +65,7 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
      * The template for the managed application deployment.
      * 
      */
-    @OutputExport(name="managedApplicationTemplate", type=Object.class, parameters={})
+    @Export(name="managedApplicationTemplate", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> managedApplicationTemplate;
 
     /**
@@ -79,7 +79,7 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
      * The template definition of the network function.
      * 
      */
-    @OutputExport(name="networkFunctionTemplate", type=NetworkFunctionTemplateResponse.class, parameters={})
+    @Export(name="networkFunctionTemplate", type=NetworkFunctionTemplateResponse.class, parameters={})
     private Output</* @Nullable */ NetworkFunctionTemplateResponse> networkFunctionTemplate;
 
     /**
@@ -107,7 +107,7 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
      * Indicates if the vendor sku is in preview mode.
      * 
      */
-    @OutputExport(name="preview", type=Boolean.class, parameters={})
+    @Export(name="preview", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> preview;
 
     /**
@@ -121,7 +121,7 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
      * The provisioning state of the vendor sku sub resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -135,7 +135,7 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
      * The sku type.
      * 
      */
-    @OutputExport(name="skuType", type=String.class, parameters={})
+    @Export(name="skuType", type=String.class, parameters={})
     private Output</* @Nullable */ String> skuType;
 
     /**
@@ -149,7 +149,7 @@ public class VendorSkus extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

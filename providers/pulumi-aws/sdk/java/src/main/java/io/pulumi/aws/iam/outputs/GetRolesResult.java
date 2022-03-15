@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRolesResult {
     /**
      * Set of ARNs of the matched IAM roles.
@@ -30,13 +30,13 @@ public final class GetRolesResult {
     private final List<String> names;
     private final @Nullable String pathPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRolesResult(
-        @OutputCustomType.Parameter("arns") List<String> arns,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("nameRegex") @Nullable String nameRegex,
-        @OutputCustomType.Parameter("names") List<String> names,
-        @OutputCustomType.Parameter("pathPrefix") @Nullable String pathPrefix) {
+        @CustomType.Parameter("arns") List<String> arns,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("nameRegex") @Nullable String nameRegex,
+        @CustomType.Parameter("names") List<String> names,
+        @CustomType.Parameter("pathPrefix") @Nullable String pathPrefix) {
         this.arns = arns;
         this.id = id;
         this.nameRegex = nameRegex;

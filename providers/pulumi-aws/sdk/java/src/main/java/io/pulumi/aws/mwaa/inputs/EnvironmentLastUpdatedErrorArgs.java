@@ -4,7 +4,7 @@
 package io.pulumi.aws.mwaa.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class EnvironmentLastUpdatedErrorArgs extends io.pulumi.resources.R
 
     public static final EnvironmentLastUpdatedErrorArgs Empty = new EnvironmentLastUpdatedErrorArgs();
 
-    @InputImport(name="errorCode")
+    @Import(name="errorCode")
       private final @Nullable Output<String> errorCode;
 
     public Output<String> getErrorCode() {
         return this.errorCode == null ? Output.empty() : this.errorCode;
     }
 
-    @InputImport(name="errorMessage")
+    @Import(name="errorMessage")
       private final @Nullable Output<String> errorMessage;
 
     public Output<String> getErrorMessage() {

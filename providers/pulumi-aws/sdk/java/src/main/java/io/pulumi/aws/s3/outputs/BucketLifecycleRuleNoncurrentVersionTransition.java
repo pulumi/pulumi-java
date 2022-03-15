@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketLifecycleRuleNoncurrentVersionTransition {
     /**
      * Specifies the number of days noncurrent object versions transition.
@@ -23,10 +23,10 @@ public final class BucketLifecycleRuleNoncurrentVersionTransition {
      */
     private final String storageClass;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketLifecycleRuleNoncurrentVersionTransition(
-        @OutputCustomType.Parameter("days") @Nullable Integer days,
-        @OutputCustomType.Parameter("storageClass") String storageClass) {
+        @CustomType.Parameter("days") @Nullable Integer days,
+        @CustomType.Parameter("storageClass") String storageClass) {
         this.days = days;
         this.storageClass = storageClass;
     }

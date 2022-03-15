@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.ExternalRefResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.LicenseResponse;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
      * Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document
      * 
      */
-    @InputImport(name="analyzed", required=true)
+    @Import(name="analyzed", required=true)
       private final Boolean analyzed;
 
     public Boolean getAnalyzed() {
@@ -35,7 +35,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
      * A place for the SPDX data creator to record, at the package level, acknowledgements that may be needed to be communicated in some contexts
      * 
      */
-    @InputImport(name="attribution", required=true)
+    @Import(name="attribution", required=true)
       private final String attribution;
 
     public String getAttribution() {
@@ -46,7 +46,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
      * Provide an independently reproducible mechanism that permits unique identification of a specific package that correlates to the data in this SPDX file
      * 
      */
-    @InputImport(name="checksum", required=true)
+    @Import(name="checksum", required=true)
       private final String checksum;
 
     public String getChecksum() {
@@ -57,7 +57,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
      * Identify the copyright holders of the package, as well as any dates present
      * 
      */
-    @InputImport(name="copyright", required=true)
+    @Import(name="copyright", required=true)
       private final String copyright;
 
     public String getCopyright() {
@@ -68,7 +68,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
      * A more detailed description of the package
      * 
      */
-    @InputImport(name="detailedDescription", required=true)
+    @Import(name="detailedDescription", required=true)
       private final String detailedDescription;
 
     public String getDetailedDescription() {
@@ -79,7 +79,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
      * This section identifies the download Universal Resource Locator (URL), or a specific location within a version control system (VCS) for the package at the time that the SPDX file was created
      * 
      */
-    @InputImport(name="downloadLocation", required=true)
+    @Import(name="downloadLocation", required=true)
       private final String downloadLocation;
 
     public String getDownloadLocation() {
@@ -90,7 +90,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
      * ExternalRef
      * 
      */
-    @InputImport(name="externalRefs", required=true)
+    @Import(name="externalRefs", required=true)
       private final List<ExternalRefResponse> externalRefs;
 
     public List<ExternalRefResponse> getExternalRefs() {
@@ -101,7 +101,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
      * Contain the license the SPDX file creator has concluded as governing the This field is to contain a list of all licenses found in the package. The relationship between licenses (i.e., conjunctive, disjunctive) is not specified in this field – it is simply a listing of all licenses found
      * 
      */
-    @InputImport(name="filesLicenseInfo", required=true)
+    @Import(name="filesLicenseInfo", required=true)
       private final List<String> filesLicenseInfo;
 
     public List<String> getFilesLicenseInfo() {
@@ -112,7 +112,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
      * Provide a place for the SPDX file creator to record a web site that serves as the package's home page
      * 
      */
-    @InputImport(name="homePage", required=true)
+    @Import(name="homePage", required=true)
       private final String homePage;
 
     public String getHomePage() {
@@ -123,7 +123,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
      * List the licenses that have been declared by the authors of the package
      * 
      */
-    @InputImport(name="licenseDeclared", required=true)
+    @Import(name="licenseDeclared", required=true)
       private final LicenseResponse licenseDeclared;
 
     public LicenseResponse getLicenseDeclared() {
@@ -134,7 +134,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
      * If the package identified in the SPDX file originated from a different person or organization than identified as Package Supplier, this field identifies from where or whom the package originally came
      * 
      */
-    @InputImport(name="originator", required=true)
+    @Import(name="originator", required=true)
       private final String originator;
 
     public String getOriginator() {
@@ -145,7 +145,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
      * The type of package: OS, MAVEN, GO, GO_STDLIB, etc.
      * 
      */
-    @InputImport(name="packageType", required=true)
+    @Import(name="packageType", required=true)
       private final String packageType;
 
     public String getPackageType() {
@@ -156,7 +156,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
      * A short description of the package
      * 
      */
-    @InputImport(name="summaryDescription", required=true)
+    @Import(name="summaryDescription", required=true)
       private final String summaryDescription;
 
     public String getSummaryDescription() {
@@ -167,7 +167,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
      * Identify the actual distribution source for the package/directory identified in the SPDX file
      * 
      */
-    @InputImport(name="supplier", required=true)
+    @Import(name="supplier", required=true)
       private final String supplier;
 
     public String getSupplier() {
@@ -178,7 +178,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
      * Identify the full name of the package as given by the Package Originator
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final String title;
 
     public String getTitle() {
@@ -189,7 +189,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
      * This field provides an independently reproducible mechanism identifying specific contents of a package based on the actual files (except the SPDX file itself, if it is included in the package) that make up each package and that correlates to the data in this SPDX file
      * 
      */
-    @InputImport(name="verificationCode", required=true)
+    @Import(name="verificationCode", required=true)
       private final String verificationCode;
 
     public String getVerificationCode() {
@@ -200,7 +200,7 @@ public final class PackageInfoNoteResponse extends io.pulumi.resources.InvokeArg
      * Identify the version of the package
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

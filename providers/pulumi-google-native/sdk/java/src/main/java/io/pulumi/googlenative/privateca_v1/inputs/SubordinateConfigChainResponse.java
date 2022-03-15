@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SubordinateConfigChainResponse extends io.pulumi.resources.In
      * Expected to be in leaf-to-root order according to RFC 5246.
      * 
      */
-    @InputImport(name="pemCertificates", required=true)
+    @Import(name="pemCertificates", required=true)
       private final List<String> pemCertificates;
 
     public List<String> getPemCertificates() {

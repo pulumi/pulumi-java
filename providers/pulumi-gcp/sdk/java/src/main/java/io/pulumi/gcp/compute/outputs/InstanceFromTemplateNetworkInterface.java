@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.InstanceFromTemplateNetworkInterfaceAccessConfig;
 import io.pulumi.gcp.compute.outputs.InstanceFromTemplateNetworkInterfaceAliasIpRange;
 import io.pulumi.gcp.compute.outputs.InstanceFromTemplateNetworkInterfaceIpv6AccessConfig;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceFromTemplateNetworkInterface {
     private final @Nullable List<InstanceFromTemplateNetworkInterfaceAccessConfig> accessConfigs;
     private final @Nullable List<InstanceFromTemplateNetworkInterfaceAliasIpRange> aliasIpRanges;
@@ -34,20 +34,20 @@ public final class InstanceFromTemplateNetworkInterface {
     private final @Nullable String subnetwork;
     private final @Nullable String subnetworkProject;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceFromTemplateNetworkInterface(
-        @OutputCustomType.Parameter("accessConfigs") @Nullable List<InstanceFromTemplateNetworkInterfaceAccessConfig> accessConfigs,
-        @OutputCustomType.Parameter("aliasIpRanges") @Nullable List<InstanceFromTemplateNetworkInterfaceAliasIpRange> aliasIpRanges,
-        @OutputCustomType.Parameter("ipv6AccessConfigs") @Nullable List<InstanceFromTemplateNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs,
-        @OutputCustomType.Parameter("ipv6AccessType") @Nullable String ipv6AccessType,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("network") @Nullable String network,
-        @OutputCustomType.Parameter("networkIp") @Nullable String networkIp,
-        @OutputCustomType.Parameter("nicType") @Nullable String nicType,
-        @OutputCustomType.Parameter("queueCount") @Nullable Integer queueCount,
-        @OutputCustomType.Parameter("stackType") @Nullable String stackType,
-        @OutputCustomType.Parameter("subnetwork") @Nullable String subnetwork,
-        @OutputCustomType.Parameter("subnetworkProject") @Nullable String subnetworkProject) {
+        @CustomType.Parameter("accessConfigs") @Nullable List<InstanceFromTemplateNetworkInterfaceAccessConfig> accessConfigs,
+        @CustomType.Parameter("aliasIpRanges") @Nullable List<InstanceFromTemplateNetworkInterfaceAliasIpRange> aliasIpRanges,
+        @CustomType.Parameter("ipv6AccessConfigs") @Nullable List<InstanceFromTemplateNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs,
+        @CustomType.Parameter("ipv6AccessType") @Nullable String ipv6AccessType,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("network") @Nullable String network,
+        @CustomType.Parameter("networkIp") @Nullable String networkIp,
+        @CustomType.Parameter("nicType") @Nullable String nicType,
+        @CustomType.Parameter("queueCount") @Nullable Integer queueCount,
+        @CustomType.Parameter("stackType") @Nullable String stackType,
+        @CustomType.Parameter("subnetwork") @Nullable String subnetwork,
+        @CustomType.Parameter("subnetworkProject") @Nullable String subnetworkProject) {
         this.accessConfigs = accessConfigs;
         this.aliasIpRanges = aliasIpRanges;
         this.ipv6AccessConfigs = ipv6AccessConfigs;

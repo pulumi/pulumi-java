@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.enums.ModelExplainabilityJobDefinitionS3OutputS3UploadMode;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModelExplainabilityJobDefinitionS3Output {
     /**
      * The local path to the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job. LocalPath is an absolute path for the output data.
@@ -28,11 +28,11 @@ public final class ModelExplainabilityJobDefinitionS3Output {
      */
     private final String s3Uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelExplainabilityJobDefinitionS3Output(
-        @OutputCustomType.Parameter("localPath") String localPath,
-        @OutputCustomType.Parameter("s3UploadMode") @Nullable ModelExplainabilityJobDefinitionS3OutputS3UploadMode s3UploadMode,
-        @OutputCustomType.Parameter("s3Uri") String s3Uri) {
+        @CustomType.Parameter("localPath") String localPath,
+        @CustomType.Parameter("s3UploadMode") @Nullable ModelExplainabilityJobDefinitionS3OutputS3UploadMode s3UploadMode,
+        @CustomType.Parameter("s3Uri") String s3Uri) {
         this.localPath = localPath;
         this.s3UploadMode = s3UploadMode;
         this.s3Uri = s3Uri;

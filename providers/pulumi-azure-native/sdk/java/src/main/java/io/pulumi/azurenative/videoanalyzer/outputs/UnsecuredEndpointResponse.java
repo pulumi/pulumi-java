@@ -5,13 +5,13 @@ package io.pulumi.azurenative.videoanalyzer.outputs;
 
 import io.pulumi.azurenative.videoanalyzer.outputs.SecureIotDeviceRemoteTunnelResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.UsernamePasswordCredentialsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UnsecuredEndpointResponse {
     /**
      * Credentials to be presented to the endpoint.
@@ -35,12 +35,12 @@ public final class UnsecuredEndpointResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UnsecuredEndpointResponse(
-        @OutputCustomType.Parameter("credentials") UsernamePasswordCredentialsResponse credentials,
-        @OutputCustomType.Parameter("tunnel") @Nullable SecureIotDeviceRemoteTunnelResponse tunnel,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("credentials") UsernamePasswordCredentialsResponse credentials,
+        @CustomType.Parameter("tunnel") @Nullable SecureIotDeviceRemoteTunnelResponse tunnel,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("url") String url) {
         this.credentials = credentials;
         this.tunnel = tunnel;
         this.type = type;

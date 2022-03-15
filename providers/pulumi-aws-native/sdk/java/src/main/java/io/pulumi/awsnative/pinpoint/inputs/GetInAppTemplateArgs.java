@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.pinpoint.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetInAppTemplateArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetInAppTemplateArgs Empty = new GetInAppTemplateArgs();
 
-    @InputImport(name="templateName", required=true)
+    @Import(name="templateName", required=true)
       private final String templateName;
 
     public String getTemplateName() {

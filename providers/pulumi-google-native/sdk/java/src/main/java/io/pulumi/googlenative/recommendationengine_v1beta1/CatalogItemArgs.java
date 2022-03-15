@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recommendationengine_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1FeatureMapArgs;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs;
@@ -18,7 +18,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CatalogItemArgs Empty = new CatalogItemArgs();
 
-    @InputImport(name="catalogId", required=true)
+    @Import(name="catalogId", required=true)
       private final Output<String> catalogId;
 
     public Output<String> getCatalogId() {
@@ -29,7 +29,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * Catalog item categories. This field is repeated for supporting one catalog item belonging to several parallel category hierarchies. For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categoryHierarchies": [ { "categories": ["Shoes & Accessories", "Shoes"]}, { "categories": ["Sports & Fitness", "Athletic Clothing", "Shoes"] } ]
      * 
      */
-    @InputImport(name="categoryHierarchies", required=true)
+    @Import(name="categoryHierarchies", required=true)
       private final Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies;
 
     public Output<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> getCategoryHierarchies() {
@@ -40,7 +40,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Catalog item description. UTF-8 encoded string with a length limit of 5 KiB.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -51,7 +51,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * Catalog item identifier. UTF-8 encoded string with a length limit of 128 bytes. This id must be unique among all catalog items within the same catalog. It should also be used when logging user events in order for the user events to be joined with the Catalog.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -62,7 +62,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Highly encouraged. Extra catalog item attributes to be included in the recommendation model. For example, for retail products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the item attributes here.
      * 
      */
-    @InputImport(name="itemAttributes")
+    @Import(name="itemAttributes")
       private final @Nullable Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes;
 
     public Output<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> getItemAttributes() {
@@ -73,14 +73,14 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Variant group identifier for prediction results. UTF-8 encoded string with a length limit of 128 bytes. This field must be enabled before it can be used. [Learn more](/recommendations-ai/docs/catalog#item-group-id).
      * 
      */
-    @InputImport(name="itemGroupId")
+    @Import(name="itemGroupId")
       private final @Nullable Output<String> itemGroupId;
 
     public Output<String> getItemGroupId() {
         return this.itemGroupId == null ? Output.empty() : this.itemGroupId;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -91,14 +91,14 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Metadata specific to retail products.
      * 
      */
-    @InputImport(name="productMetadata")
+    @Import(name="productMetadata")
       private final @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata;
 
     public Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> getProductMetadata() {
         return this.productMetadata == null ? Output.empty() : this.productMetadata;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -109,7 +109,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Filtering tags associated with the catalog item. Each tag should be a UTF-8 encoded string with a length limit of 1 KiB. This tag can be used for filtering recommendation results by passing the tag as part of the predict request filter.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
@@ -120,7 +120,7 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
      * Catalog item title. UTF-8 encoded string with a length limit of 1 KiB.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final Output<String> title;
 
     public Output<String> getTitle() {

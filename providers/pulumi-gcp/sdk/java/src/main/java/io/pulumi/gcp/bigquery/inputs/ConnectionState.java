@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.ConnectionCloudSqlGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="cloudSql")
+    @Import(name="cloudSql")
       private final @Nullable Output<ConnectionCloudSqlGetArgs> cloudSql;
 
     public Output<ConnectionCloudSqlGetArgs> getCloudSql() {
@@ -32,7 +32,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * Optional connection id that should be assigned to the created connection.
      * 
      */
-    @InputImport(name="connectionId")
+    @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
     public Output<String> getConnectionId() {
@@ -43,7 +43,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * A descriptive description for the connection
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -54,7 +54,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * A descriptive name for the connection
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -65,7 +65,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * True if the connection has credential assigned.
      * 
      */
-    @InputImport(name="hasCredential")
+    @Import(name="hasCredential")
       private final @Nullable Output<Boolean> hasCredential;
 
     public Output<Boolean> getHasCredential() {
@@ -79,7 +79,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -91,7 +91,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * "projects/{project_id}/locations/{location_id}/connections/{connectionId}"
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -103,7 +103,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

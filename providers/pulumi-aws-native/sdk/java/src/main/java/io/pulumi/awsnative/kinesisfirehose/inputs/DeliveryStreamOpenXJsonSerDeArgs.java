@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class DeliveryStreamOpenXJsonSerDeArgs extends io.pulumi.resources.
 
     public static final DeliveryStreamOpenXJsonSerDeArgs Empty = new DeliveryStreamOpenXJsonSerDeArgs();
 
-    @InputImport(name="caseInsensitive")
+    @Import(name="caseInsensitive")
       private final @Nullable Output<Boolean> caseInsensitive;
 
     public Output<Boolean> getCaseInsensitive() {
         return this.caseInsensitive == null ? Output.empty() : this.caseInsensitive;
     }
 
-    @InputImport(name="columnToJsonKeyMappings")
+    @Import(name="columnToJsonKeyMappings")
       private final @Nullable Output<Object> columnToJsonKeyMappings;
 
     public Output<Object> getColumnToJsonKeyMappings() {
         return this.columnToJsonKeyMappings == null ? Output.empty() : this.columnToJsonKeyMappings;
     }
 
-    @InputImport(name="convertDotsInJsonKeysToUnderscores")
+    @Import(name="convertDotsInJsonKeysToUnderscores")
       private final @Nullable Output<Boolean> convertDotsInJsonKeysToUnderscores;
 
     public Output<Boolean> getConvertDotsInJsonKeysToUnderscores() {

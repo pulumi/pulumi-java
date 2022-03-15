@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ResourceRangeArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum number of the resource.
      * 
      */
-    @InputImport(name="max")
+    @Import(name="max")
       private final @Nullable Output<Integer> max;
 
     public Output<Integer> getMax() {
@@ -33,7 +33,7 @@ public final class ResourceRangeArgs extends io.pulumi.resources.ResourceArgs {
      * The minimum number of the resource.
      * 
      */
-    @InputImport(name="min")
+    @Import(name="min")
       private final @Nullable Output<Integer> min;
 
     public Output<Integer> getMin() {

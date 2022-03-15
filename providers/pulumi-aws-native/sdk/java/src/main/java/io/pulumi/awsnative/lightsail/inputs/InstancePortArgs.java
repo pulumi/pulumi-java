@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * Access Direction for Protocol of the Instance(inbound/outbound).
      * 
      */
-    @InputImport(name="accessDirection")
+    @Import(name="accessDirection")
       private final @Nullable Output<String> accessDirection;
 
     public Output<String> getAccessDirection() {
@@ -35,7 +35,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * Access From Protocol of the Instance.
      * 
      */
-    @InputImport(name="accessFrom")
+    @Import(name="accessFrom")
       private final @Nullable Output<String> accessFrom;
 
     public Output<String> getAccessFrom() {
@@ -46,21 +46,21 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * Access Type Protocol of the Instance.
      * 
      */
-    @InputImport(name="accessType")
+    @Import(name="accessType")
       private final @Nullable Output<String> accessType;
 
     public Output<String> getAccessType() {
         return this.accessType == null ? Output.empty() : this.accessType;
     }
 
-    @InputImport(name="cidrListAliases")
+    @Import(name="cidrListAliases")
       private final @Nullable Output<List<String>> cidrListAliases;
 
     public Output<List<String>> getCidrListAliases() {
         return this.cidrListAliases == null ? Output.empty() : this.cidrListAliases;
     }
 
-    @InputImport(name="cidrs")
+    @Import(name="cidrs")
       private final @Nullable Output<List<String>> cidrs;
 
     public Output<List<String>> getCidrs() {
@@ -71,7 +71,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * CommonName for Protocol of the Instance.
      * 
      */
-    @InputImport(name="commonName")
+    @Import(name="commonName")
       private final @Nullable Output<String> commonName;
 
     public Output<String> getCommonName() {
@@ -82,14 +82,14 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * From Port of the Instance.
      * 
      */
-    @InputImport(name="fromPort")
+    @Import(name="fromPort")
       private final @Nullable Output<Integer> fromPort;
 
     public Output<Integer> getFromPort() {
         return this.fromPort == null ? Output.empty() : this.fromPort;
     }
 
-    @InputImport(name="ipv6Cidrs")
+    @Import(name="ipv6Cidrs")
       private final @Nullable Output<List<String>> ipv6Cidrs;
 
     public Output<List<String>> getIpv6Cidrs() {
@@ -100,7 +100,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * Port Protocol of the Instance.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
@@ -111,7 +111,7 @@ public final class InstancePortArgs extends io.pulumi.resources.ResourceArgs {
      * To Port of the Instance.
      * 
      */
-    @InputImport(name="toPort")
+    @Import(name="toPort")
       private final @Nullable Output<Integer> toPort;
 
     public Output<Integer> getToPort() {

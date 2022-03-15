@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
      * Default email option. Must be either `CONFIRM_WITH_CODE` or `CONFIRM_WITH_LINK`. Defaults to `CONFIRM_WITH_CODE`.
      * 
      */
-    @InputImport(name="defaultEmailOption")
+    @Import(name="defaultEmailOption")
       private final @Nullable Output<String> defaultEmailOption;
 
     public Output<String> getDefaultEmailOption() {
@@ -29,7 +29,7 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
      * Email message template. Must contain the `{####}` placeholder. Conflicts with `email_verification_message` argument.
      * 
      */
-    @InputImport(name="emailMessage")
+    @Import(name="emailMessage")
       private final @Nullable Output<String> emailMessage;
 
     public Output<String> getEmailMessage() {
@@ -40,7 +40,7 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
      * Email message template for sending a confirmation link to the user, it must contain the `{##Click Here##}` placeholder.
      * 
      */
-    @InputImport(name="emailMessageByLink")
+    @Import(name="emailMessageByLink")
       private final @Nullable Output<String> emailMessageByLink;
 
     public Output<String> getEmailMessageByLink() {
@@ -51,7 +51,7 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
      * Subject line for the email message template. Conflicts with `email_verification_subject` argument.
      * 
      */
-    @InputImport(name="emailSubject")
+    @Import(name="emailSubject")
       private final @Nullable Output<String> emailSubject;
 
     public Output<String> getEmailSubject() {
@@ -62,7 +62,7 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
      * Subject line for the email message template for sending a confirmation link to the user.
      * 
      */
-    @InputImport(name="emailSubjectByLink")
+    @Import(name="emailSubjectByLink")
       private final @Nullable Output<String> emailSubjectByLink;
 
     public Output<String> getEmailSubjectByLink() {
@@ -73,7 +73,7 @@ public final class UserPoolVerificationMessageTemplateGetArgs extends io.pulumi.
      * SMS message template. Must contain the `{####}` placeholder. Conflicts with `sms_verification_message` argument.
      * 
      */
-    @InputImport(name="smsMessage")
+    @Import(name="smsMessage")
       private final @Nullable Output<String> smsMessage;
 
     public Output<String> getSmsMessage() {

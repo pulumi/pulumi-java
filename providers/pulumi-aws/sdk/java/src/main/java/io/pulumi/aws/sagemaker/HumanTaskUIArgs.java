@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.HumanTaskUIUiTemplateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class HumanTaskUIArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Human Task UI.
      * 
      */
-    @InputImport(name="humanTaskUiName", required=true)
+    @Import(name="humanTaskUiName", required=true)
       private final Output<String> humanTaskUiName;
 
     public Output<String> getHumanTaskUiName() {
@@ -31,7 +31,7 @@ public final class HumanTaskUIArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -42,7 +42,7 @@ public final class HumanTaskUIArgs extends io.pulumi.resources.ResourceArgs {
      * The Liquid template for the worker user interface. See UI Template below.
      * 
      */
-    @InputImport(name="uiTemplate", required=true)
+    @Import(name="uiTemplate", required=true)
       private final Output<HumanTaskUIUiTemplateArgs> uiTemplate;
 
     public Output<HumanTaskUIUiTemplateArgs> getUiTemplate() {

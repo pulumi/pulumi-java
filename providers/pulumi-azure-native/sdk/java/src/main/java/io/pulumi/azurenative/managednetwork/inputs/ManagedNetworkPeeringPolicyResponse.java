@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managednetwork.inputs;
 
 import io.pulumi.azurenative.managednetwork.inputs.ManagedNetworkPeeringPolicyPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ManagedNetworkPeeringPolicyResponse extends io.pulumi.resourc
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -34,7 +34,7 @@ public final class ManagedNetworkPeeringPolicyResponse extends io.pulumi.resourc
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -45,7 +45,7 @@ public final class ManagedNetworkPeeringPolicyResponse extends io.pulumi.resourc
      * The name of the resource
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -56,7 +56,7 @@ public final class ManagedNetworkPeeringPolicyResponse extends io.pulumi.resourc
      * Gets or sets the properties of a Managed Network Policy
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable ManagedNetworkPeeringPolicyPropertiesResponse properties;
 
     public Optional<ManagedNetworkPeeringPolicyPropertiesResponse> getProperties() {
@@ -67,7 +67,7 @@ public final class ManagedNetworkPeeringPolicyResponse extends io.pulumi.resourc
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

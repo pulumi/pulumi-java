@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.InstanceReservationAffinitySpecificReservationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
      * Structure is documented below.
      * 
      */
-    @InputImport(name="specificReservation")
+    @Import(name="specificReservation")
       private final @Nullable Output<InstanceReservationAffinitySpecificReservationArgs> specificReservation;
 
     public Output<InstanceReservationAffinitySpecificReservationArgs> getSpecificReservation() {
@@ -31,7 +31,7 @@ public final class InstanceReservationAffinityArgs extends io.pulumi.resources.R
      * The type of reservation from which this instance can consume resources.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

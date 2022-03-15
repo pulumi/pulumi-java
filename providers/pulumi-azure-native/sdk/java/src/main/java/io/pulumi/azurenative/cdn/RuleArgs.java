@@ -28,7 +28,7 @@ import io.pulumi.azurenative.cdn.inputs.UrlRewriteActionArgs;
 import io.pulumi.azurenative.cdn.inputs.UrlSigningActionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -45,7 +45,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * A list of actions that are executed when all the conditions of a rule are satisfied.
      * 
      */
-    @InputImport(name="actions", required=true)
+    @Import(name="actions", required=true)
       private final Output<List<Object>> actions;
 
     public Output<List<Object>> getActions() {
@@ -56,7 +56,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * A list of conditions that must be matched for the actions to be executed
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<Object>> conditions;
 
     public Output<List<Object>> getConditions() {
@@ -67,7 +67,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * If this rule is a match should the rules engine continue running the remaining rules or stop. If not present, defaults to Continue.
      * 
      */
-    @InputImport(name="matchProcessingBehavior")
+    @Import(name="matchProcessingBehavior")
       private final @Nullable Output<Either<String,MatchProcessingBehavior>> matchProcessingBehavior;
 
     public Output<Either<String,MatchProcessingBehavior>> getMatchProcessingBehavior() {
@@ -78,7 +78,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
      * 
      */
-    @InputImport(name="order", required=true)
+    @Import(name="order", required=true)
       private final Output<Integer> order;
 
     public Output<Integer> getOrder() {
@@ -89,7 +89,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the CDN profile which is unique within the resource group.
      * 
      */
-    @InputImport(name="profileName", required=true)
+    @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
     public Output<String> getProfileName() {
@@ -100,7 +100,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -111,7 +111,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the delivery rule which is unique within the endpoint.
      * 
      */
-    @InputImport(name="ruleName")
+    @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {
@@ -122,7 +122,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the rule set under the profile.
      * 
      */
-    @InputImport(name="ruleSetName", required=true)
+    @Import(name="ruleSetName", required=true)
       private final Output<String> ruleSetName;
 
     public Output<String> getRuleSetName() {

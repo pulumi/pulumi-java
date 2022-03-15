@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.analysisservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class GatewayDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Uri of the DMTS cluster.
      * 
      */
-    @InputImport(name="dmtsClusterUri", required=true)
+    @Import(name="dmtsClusterUri", required=true)
       private final String dmtsClusterUri;
 
     public String getDmtsClusterUri() {
@@ -33,7 +33,7 @@ public final class GatewayDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Gateway object id from in the DMTS cluster for the gateway resource.
      * 
      */
-    @InputImport(name="gatewayObjectId", required=true)
+    @Import(name="gatewayObjectId", required=true)
       private final String gatewayObjectId;
 
     public String getGatewayObjectId() {
@@ -44,7 +44,7 @@ public final class GatewayDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Gateway resource to be associated with the server.
      * 
      */
-    @InputImport(name="gatewayResourceId")
+    @Import(name="gatewayResourceId")
       private final @Nullable String gatewayResourceId;
 
     public Optional<String> getGatewayResourceId() {

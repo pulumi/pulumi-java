@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigqueryconnection_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigqueryconnection_v1beta1.enums.AuditLogConfigLogType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
      * 
      */
-    @InputImport(name="exemptedMembers")
+    @Import(name="exemptedMembers")
       private final @Nullable Output<List<String>> exemptedMembers;
 
     public Output<List<String>> getExemptedMembers() {
@@ -35,7 +35,7 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The log type that this config enables.
      * 
      */
-    @InputImport(name="logType")
+    @Import(name="logType")
       private final @Nullable Output<AuditLogConfigLogType> logType;
 
     public Output<AuditLogConfigLogType> getLogType() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.alb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ListenerCertificateState extends io.pulumi.resources.Resource
      * The ARN of the certificate to attach to the listener.
      * 
      */
-    @InputImport(name="certificateArn")
+    @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
@@ -29,7 +29,7 @@ public final class ListenerCertificateState extends io.pulumi.resources.Resource
      * The ARN of the listener to which to attach the certificate.
      * 
      */
-    @InputImport(name="listenerArn")
+    @Import(name="listenerArn")
       private final @Nullable Output<String> listenerArn;
 
     public Output<String> getListenerArn() {

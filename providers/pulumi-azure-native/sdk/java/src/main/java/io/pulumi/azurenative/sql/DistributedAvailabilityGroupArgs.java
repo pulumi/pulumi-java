@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.enums.ReplicationMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
      * The distributed availability group name.
      * 
      */
-    @InputImport(name="distributedAvailabilityGroupName")
+    @Import(name="distributedAvailabilityGroupName")
       private final @Nullable Output<String> distributedAvailabilityGroupName;
 
     public Output<String> getDistributedAvailabilityGroupName() {
@@ -31,7 +31,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
      * The name of the managed instance.
      * 
      */
-    @InputImport(name="managedInstanceName", required=true)
+    @Import(name="managedInstanceName", required=true)
       private final Output<String> managedInstanceName;
 
     public Output<String> getManagedInstanceName() {
@@ -42,7 +42,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
      * The primary availability group name
      * 
      */
-    @InputImport(name="primaryAvailabilityGroupName")
+    @Import(name="primaryAvailabilityGroupName")
       private final @Nullable Output<String> primaryAvailabilityGroupName;
 
     public Output<String> getPrimaryAvailabilityGroupName() {
@@ -53,7 +53,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
      * The replication mode of a distributed availability group. Parameter will be ignored during link creation.
      * 
      */
-    @InputImport(name="replicationMode")
+    @Import(name="replicationMode")
       private final @Nullable Output<Either<String,ReplicationMode>> replicationMode;
 
     public Output<Either<String,ReplicationMode>> getReplicationMode() {
@@ -64,7 +64,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
      * The secondary availability group name
      * 
      */
-    @InputImport(name="secondaryAvailabilityGroupName")
+    @Import(name="secondaryAvailabilityGroupName")
       private final @Nullable Output<String> secondaryAvailabilityGroupName;
 
     public Output<String> getSecondaryAvailabilityGroupName() {
@@ -86,7 +86,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
      * The source endpoint
      * 
      */
-    @InputImport(name="sourceEndpoint")
+    @Import(name="sourceEndpoint")
       private final @Nullable Output<String> sourceEndpoint;
 
     public Output<String> getSourceEndpoint() {
@@ -97,7 +97,7 @@ public final class DistributedAvailabilityGroupArgs extends io.pulumi.resources.
      * The name of the target database
      * 
      */
-    @InputImport(name="targetDatabase")
+    @Import(name="targetDatabase")
       private final @Nullable Output<String> targetDatabase;
 
     public Output<String> getTargetDatabase() {

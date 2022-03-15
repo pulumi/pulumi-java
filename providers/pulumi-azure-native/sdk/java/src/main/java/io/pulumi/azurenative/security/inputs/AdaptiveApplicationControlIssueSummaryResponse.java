@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AdaptiveApplicationControlIssueSummaryResponse extends io.pul
      * An alert that machines within a group can have
      * 
      */
-    @InputImport(name="issue")
+    @Import(name="issue")
       private final @Nullable String issue;
 
     public Optional<String> getIssue() {
@@ -34,7 +34,7 @@ public final class AdaptiveApplicationControlIssueSummaryResponse extends io.pul
      * The number of machines in the group that have this alert
      * 
      */
-    @InputImport(name="numberOfVms")
+    @Import(name="numberOfVms")
       private final @Nullable Double numberOfVms;
 
     public Optional<Double> getNumberOfVms() {

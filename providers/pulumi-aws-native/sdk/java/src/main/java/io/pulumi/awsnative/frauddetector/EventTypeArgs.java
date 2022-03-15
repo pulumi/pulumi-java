@@ -8,7 +8,7 @@ import io.pulumi.awsnative.frauddetector.inputs.EventTypeEventVariableArgs;
 import io.pulumi.awsnative.frauddetector.inputs.EventTypeLabelArgs;
 import io.pulumi.awsnative.frauddetector.inputs.EventTypeTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,28 +23,28 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the event type.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="entityTypes", required=true)
+    @Import(name="entityTypes", required=true)
       private final Output<List<EventTypeEntityTypeArgs>> entityTypes;
 
     public Output<List<EventTypeEntityTypeArgs>> getEntityTypes() {
         return this.entityTypes;
     }
 
-    @InputImport(name="eventVariables", required=true)
+    @Import(name="eventVariables", required=true)
       private final Output<List<EventTypeEventVariableArgs>> eventVariables;
 
     public Output<List<EventTypeEventVariableArgs>> getEventVariables() {
         return this.eventVariables;
     }
 
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Output<List<EventTypeLabelArgs>> labels;
 
     public Output<List<EventTypeLabelArgs>> getLabels() {
@@ -55,7 +55,7 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
      * The name for the event type
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -66,7 +66,7 @@ public final class EventTypeArgs extends io.pulumi.resources.ResourceArgs {
      * Tags associated with this event type.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<EventTypeTagArgs>> tags;
 
     public Output<List<EventTypeTagArgs>> getTags() {

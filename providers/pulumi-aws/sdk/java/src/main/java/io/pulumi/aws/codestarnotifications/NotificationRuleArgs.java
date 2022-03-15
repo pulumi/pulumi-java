@@ -5,7 +5,7 @@ package io.pulumi.aws.codestarnotifications;
 
 import io.pulumi.aws.codestarnotifications.inputs.NotificationRuleTargetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
      * The level of detail to include in the notifications for this resource. Possible values are `BASIC` and `FULL`.
      * 
      */
-    @InputImport(name="detailType", required=true)
+    @Import(name="detailType", required=true)
       private final Output<String> detailType;
 
     public Output<String> getDetailType() {
@@ -33,7 +33,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
      * For list of allowed events see [here](https://docs.aws.amazon.com/codestar-notifications/latest/userguide/concepts.html#concepts-api).
      * 
      */
-    @InputImport(name="eventTypeIds", required=true)
+    @Import(name="eventTypeIds", required=true)
       private final Output<List<String>> eventTypeIds;
 
     public Output<List<String>> getEventTypeIds() {
@@ -44,7 +44,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
      * The name of notification rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
      * The ARN of the resource to associate with the notification rule.
      * 
      */
-    @InputImport(name="resource", required=true)
+    @Import(name="resource", required=true)
       private final Output<String> resource;
 
     public Output<String> getResource() {
@@ -66,7 +66,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
      * The status of the notification rule. Possible values are `ENABLED` and `DISABLED`, default is `ENABLED`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -77,7 +77,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -88,7 +88,7 @@ public final class NotificationRuleArgs extends io.pulumi.resources.ResourceArgs
      * Configuration blocks containing notification target information. Can be specified multiple times. At least one target must be specified on creation.
      * 
      */
-    @InputImport(name="targets")
+    @Import(name="targets")
       private final @Nullable Output<List<NotificationRuleTargetArgs>> targets;
 
     public Output<List<NotificationRuleTargetArgs>> getTargets() {

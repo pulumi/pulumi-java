@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TerminateNotificationProfileArgs extends io.pulumi.resources.
      * Specifies whether the Terminate Scheduled event is enabled or disabled.
      * 
      */
-    @InputImport(name="enable")
+    @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
@@ -30,7 +30,7 @@ public final class TerminateNotificationProfileArgs extends io.pulumi.resources.
      * Configurable length of time a Virtual Machine being deleted will have to potentially approve the Terminate Scheduled Event before the event is auto approved (timed out). The configuration must be specified in ISO 8601 format, the default value is 5 minutes (PT5M)
      * 
      */
-    @InputImport(name="notBeforeTimeout")
+    @Import(name="notBeforeTimeout")
       private final @Nullable Output<String> notBeforeTimeout;
 
     public Output<String> getNotBeforeTimeout() {

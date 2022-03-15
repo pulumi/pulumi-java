@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iotfleethub.ApplicationArgs;
 import io.pulumi.awsnative.iotfleethub.outputs.ApplicationTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The ARN of the application.
      * 
      */
-    @OutputExport(name="applicationArn", type=String.class, parameters={})
+    @Export(name="applicationArn", type=String.class, parameters={})
     private Output<String> applicationArn;
 
     /**
@@ -38,7 +38,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * When the Application was created
      * 
      */
-    @OutputExport(name="applicationCreationDate", type=Integer.class, parameters={})
+    @Export(name="applicationCreationDate", type=Integer.class, parameters={})
     private Output<Integer> applicationCreationDate;
 
     /**
@@ -52,7 +52,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Application Description, should be between 1 and 2048 characters.
      * 
      */
-    @OutputExport(name="applicationDescription", type=String.class, parameters={})
+    @Export(name="applicationDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> applicationDescription;
 
     /**
@@ -66,7 +66,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The ID of the application.
      * 
      */
-    @OutputExport(name="applicationId", type=String.class, parameters={})
+    @Export(name="applicationId", type=String.class, parameters={})
     private Output<String> applicationId;
 
     /**
@@ -80,7 +80,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * When the Application was last updated
      * 
      */
-    @OutputExport(name="applicationLastUpdateDate", type=Integer.class, parameters={})
+    @Export(name="applicationLastUpdateDate", type=Integer.class, parameters={})
     private Output<Integer> applicationLastUpdateDate;
 
     /**
@@ -94,7 +94,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Application Name, should be between 1 and 256 characters.
      * 
      */
-    @OutputExport(name="applicationName", type=String.class, parameters={})
+    @Export(name="applicationName", type=String.class, parameters={})
     private Output<String> applicationName;
 
     /**
@@ -108,7 +108,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The current state of the application.
      * 
      */
-    @OutputExport(name="applicationState", type=String.class, parameters={})
+    @Export(name="applicationState", type=String.class, parameters={})
     private Output<String> applicationState;
 
     /**
@@ -122,7 +122,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The URL of the application.
      * 
      */
-    @OutputExport(name="applicationUrl", type=String.class, parameters={})
+    @Export(name="applicationUrl", type=String.class, parameters={})
     private Output<String> applicationUrl;
 
     /**
@@ -136,7 +136,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * A message indicating why Create or Delete Application failed.
      * 
      */
-    @OutputExport(name="errorMessage", type=String.class, parameters={})
+    @Export(name="errorMessage", type=String.class, parameters={})
     private Output<String> errorMessage;
 
     /**
@@ -150,7 +150,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The ARN of the role that the web application assumes when it interacts with AWS IoT Core. For more info on configuring this attribute, see https://docs.aws.amazon.com/iot/latest/apireference/API_iotfleethub_CreateApplication.html#API_iotfleethub_CreateApplication_RequestSyntax
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -164,7 +164,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The AWS SSO application generated client ID (used with AWS SSO APIs).
      * 
      */
-    @OutputExport(name="ssoClientId", type=String.class, parameters={})
+    @Export(name="ssoClientId", type=String.class, parameters={})
     private Output<String> ssoClientId;
 
     /**
@@ -178,7 +178,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * A list of key-value pairs that contain metadata for the application.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ApplicationTag.class})
+    @Export(name="tags", type=List.class, parameters={ApplicationTag.class})
     private Output</* @Nullable */ List<ApplicationTag>> tags;
 
     /**

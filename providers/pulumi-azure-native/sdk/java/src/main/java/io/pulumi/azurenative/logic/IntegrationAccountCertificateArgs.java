@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic;
 
 import io.pulumi.azurenative.logic.inputs.KeyVaultKeyReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
      * The integration account certificate name.
      * 
      */
-    @InputImport(name="certificateName")
+    @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
 
     public Output<String> getCertificateName() {
@@ -32,7 +32,7 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
      * The integration account name.
      * 
      */
-    @InputImport(name="integrationAccountName", required=true)
+    @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
 
     public Output<String> getIntegrationAccountName() {
@@ -43,7 +43,7 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
      * The key details in the key vault.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<KeyVaultKeyReferenceArgs> key;
 
     public Output<KeyVaultKeyReferenceArgs> getKey() {
@@ -54,7 +54,7 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -65,7 +65,7 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
      * The metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
@@ -76,7 +76,7 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
      * The public certificate.
      * 
      */
-    @InputImport(name="publicCertificate")
+    @Import(name="publicCertificate")
       private final @Nullable Output<String> publicCertificate;
 
     public Output<String> getPublicCertificate() {
@@ -87,7 +87,7 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -98,7 +98,7 @@ public final class IntegrationAccountCertificateArgs extends io.pulumi.resources
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

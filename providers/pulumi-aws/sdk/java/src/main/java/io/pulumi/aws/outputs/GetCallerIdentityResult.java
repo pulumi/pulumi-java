@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCallerIdentityResult {
     /**
      * AWS Account ID number of the account that owns or contains the calling entity.
@@ -30,12 +30,12 @@ public final class GetCallerIdentityResult {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCallerIdentityResult(
-        @OutputCustomType.Parameter("accountId") String accountId,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("userId") String userId) {
+        @CustomType.Parameter("accountId") String accountId,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("userId") String userId) {
         this.accountId = accountId;
         this.arn = arn;
         this.id = id;

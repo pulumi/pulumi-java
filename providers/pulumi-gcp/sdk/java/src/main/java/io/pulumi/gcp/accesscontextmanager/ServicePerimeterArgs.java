@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterSpecArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterStatusArgs;
 import java.lang.Boolean;
@@ -22,7 +22,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * behavior.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -47,7 +47,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * Format: accessPolicies/{policy_id}
      * 
      */
-    @InputImport(name="parent", required=true)
+    @Import(name="parent", required=true)
       private final Output<String> parent;
 
     public Output<String> getParent() {
@@ -73,7 +73,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
      * 
      */
-    @InputImport(name="perimeterType")
+    @Import(name="perimeterType")
       private final @Nullable Output<String> perimeterType;
 
     public Output<String> getPerimeterType() {
@@ -88,7 +88,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="spec")
+    @Import(name="spec")
       private final @Nullable Output<ServicePerimeterSpecArgs> spec;
 
     public Output<ServicePerimeterSpecArgs> getSpec() {
@@ -102,7 +102,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<ServicePerimeterStatusArgs> status;
 
     public Output<ServicePerimeterStatusArgs> getStatus() {
@@ -113,7 +113,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * Human readable title. Must be unique within the Policy.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final Output<String> title;
 
     public Output<String> getTitle() {
@@ -132,7 +132,7 @@ public final class ServicePerimeterArgs extends io.pulumi.resources.ResourceArgs
      * bet set to True if any of the fields in the spec are set to non-default values.
      * 
      */
-    @InputImport(name="useExplicitDryRunSpec")
+    @Import(name="useExplicitDryRunSpec")
       private final @Nullable Output<Boolean> useExplicitDryRunSpec;
 
     public Output<Boolean> getUseExplicitDryRunSpec() {

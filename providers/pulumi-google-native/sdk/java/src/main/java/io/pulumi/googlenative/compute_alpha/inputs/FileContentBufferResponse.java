@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class FileContentBufferResponse extends io.pulumi.resources.InvokeA
      * The raw content in the secure keys file.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final String content;
 
     public String getContent() {
@@ -27,7 +27,7 @@ public final class FileContentBufferResponse extends io.pulumi.resources.InvokeA
      * The file type of source file.
      * 
      */
-    @InputImport(name="fileType", required=true)
+    @Import(name="fileType", required=true)
       private final String fileType;
 
     public String getFileType() {

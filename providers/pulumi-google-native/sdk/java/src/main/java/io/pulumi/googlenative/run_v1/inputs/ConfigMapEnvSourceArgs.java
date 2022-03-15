@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1.inputs.LocalObjectReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ConfigMapEnvSourceArgs extends io.pulumi.resources.ResourceAr
      * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
      * 
      */
-    @InputImport(name="localObjectReference")
+    @Import(name="localObjectReference")
       private final @Nullable Output<LocalObjectReferenceArgs> localObjectReference;
 
     public Output<LocalObjectReferenceArgs> getLocalObjectReference() {
@@ -35,7 +35,7 @@ public final class ConfigMapEnvSourceArgs extends io.pulumi.resources.ResourceAr
      * The ConfigMap to select from.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class ConfigMapEnvSourceArgs extends io.pulumi.resources.ResourceAr
      * (Optional) Specify whether the ConfigMap must be defined
      * 
      */
-    @InputImport(name="optional")
+    @Import(name="optional")
       private final @Nullable Output<Boolean> optional;
 
     public Output<Boolean> getOptional() {

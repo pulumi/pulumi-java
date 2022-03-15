@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.webpubsub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ManagedIdentitySettingsResponse extends io.pulumi.resources.I
      * It also appears in the aud (audience) claim of the issued token.
      * 
      */
-    @InputImport(name="resource")
+    @Import(name="resource")
       private final @Nullable String resource;
 
     public Optional<String> getResource() {

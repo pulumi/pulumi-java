@@ -8,7 +8,7 @@ import io.pulumi.azurenative.peering.PeerAsnArgs;
 import io.pulumi.azurenative.peering.outputs.ContactDetailResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class PeerAsn extends io.pulumi.resources.CustomResource {
      * The error message for the validation state
      * 
      */
-    @OutputExport(name="errorMessage", type=String.class, parameters={})
+    @Export(name="errorMessage", type=String.class, parameters={})
     private Output<String> errorMessage;
 
     /**
@@ -50,7 +50,7 @@ public class PeerAsn extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class PeerAsn extends io.pulumi.resources.CustomResource {
      * The Autonomous System Number (ASN) of the peer.
      * 
      */
-    @OutputExport(name="peerAsn", type=Integer.class, parameters={})
+    @Export(name="peerAsn", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> peerAsn;
 
     /**
@@ -78,7 +78,7 @@ public class PeerAsn extends io.pulumi.resources.CustomResource {
      * The contact details of the peer.
      * 
      */
-    @OutputExport(name="peerContactDetail", type=List.class, parameters={ContactDetailResponse.class})
+    @Export(name="peerContactDetail", type=List.class, parameters={ContactDetailResponse.class})
     private Output</* @Nullable */ List<ContactDetailResponse>> peerContactDetail;
 
     /**
@@ -92,7 +92,7 @@ public class PeerAsn extends io.pulumi.resources.CustomResource {
      * The name of the peer.
      * 
      */
-    @OutputExport(name="peerName", type=String.class, parameters={})
+    @Export(name="peerName", type=String.class, parameters={})
     private Output</* @Nullable */ String> peerName;
 
     /**
@@ -106,7 +106,7 @@ public class PeerAsn extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -120,7 +120,7 @@ public class PeerAsn extends io.pulumi.resources.CustomResource {
      * The validation state of the ASN associated with the peer.
      * 
      */
-    @OutputExport(name="validationState", type=String.class, parameters={})
+    @Export(name="validationState", type=String.class, parameters={})
     private Output</* @Nullable */ String> validationState;
 
     /**

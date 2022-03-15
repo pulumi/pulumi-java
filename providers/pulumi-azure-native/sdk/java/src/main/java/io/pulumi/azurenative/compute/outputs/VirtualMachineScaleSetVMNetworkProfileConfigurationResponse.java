@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetNetworkConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineScaleSetVMNetworkProfileConfigurationResponse {
     /**
      * The list of network configurations.
@@ -17,8 +17,8 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationResponse {
      */
     private final @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
 
-    @OutputCustomType.Constructor
-    private VirtualMachineScaleSetVMNetworkProfileConfigurationResponse(@OutputCustomType.Parameter("networkInterfaceConfigurations") @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
+    @CustomType.Constructor
+    private VirtualMachineScaleSetVMNetworkProfileConfigurationResponse(@CustomType.Parameter("networkInterfaceConfigurations") @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
         this.networkInterfaceConfigurations = networkInterfaceConfigurations;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.autoscaling.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLaunchConfigurationArgs extends io.pulumi.resources.Invoke
      * The name of the launch configuration. This name must be unique per Region per account.
      * 
      */
-    @InputImport(name="launchConfigurationName", required=true)
+    @Import(name="launchConfigurationName", required=true)
       private final String launchConfigurationName;
 
     public String getLaunchConfigurationName() {

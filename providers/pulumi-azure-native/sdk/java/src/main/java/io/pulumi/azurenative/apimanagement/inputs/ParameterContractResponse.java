@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
      * Default parameter value.
      * 
      */
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable String defaultValue;
 
     public Optional<String> getDefaultValue() {
@@ -35,7 +35,7 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
      * Parameter description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -46,7 +46,7 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
      * Parameter name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -57,7 +57,7 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
      * Specifies whether parameter is required or not.
      * 
      */
-    @InputImport(name="required")
+    @Import(name="required")
       private final @Nullable Boolean required;
 
     public Optional<Boolean> getRequired() {
@@ -68,7 +68,7 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
      * Parameter type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -79,7 +79,7 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
      * Parameter values.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable List<String> values;
 
     public List<String> getValues() {

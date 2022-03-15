@@ -5,7 +5,7 @@ package io.pulumi.aws.route53recoveryreadiness.inputs;
 
 import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTargetResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
 
     public static final ResourceSetResourceArgs Empty = new ResourceSetResourceArgs();
 
-    @InputImport(name="componentId")
+    @Import(name="componentId")
       private final @Nullable Output<String> componentId;
 
     public Output<String> getComponentId() {
@@ -27,7 +27,7 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
      * Component for DNS/Routing Control Readiness Checks.
      * 
      */
-    @InputImport(name="dnsTargetResource")
+    @Import(name="dnsTargetResource")
       private final @Nullable Output<ResourceSetResourceDnsTargetResourceArgs> dnsTargetResource;
 
     public Output<ResourceSetResourceDnsTargetResourceArgs> getDnsTargetResource() {
@@ -38,7 +38,7 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
      * Recovery group ARN or cell ARN that contains this resource set.
      * 
      */
-    @InputImport(name="readinessScopes")
+    @Import(name="readinessScopes")
       private final @Nullable Output<List<String>> readinessScopes;
 
     public Output<List<String>> getReadinessScopes() {
@@ -49,7 +49,7 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
      * ARN of the resource.
      * 
      */
-    @InputImport(name="resourceArn")
+    @Import(name="resourceArn")
       private final @Nullable Output<String> resourceArn;
 
     public Output<String> getResourceArn() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class DeviceStateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeviceStateArgs Empty = new DeviceStateArgs();
 
-    @InputImport(name="binaryData")
+    @Import(name="binaryData")
       private final @Nullable Output<String> binaryData;
 
     public Output<String> getBinaryData() {
         return this.binaryData == null ? Output.empty() : this.binaryData;
     }
 
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

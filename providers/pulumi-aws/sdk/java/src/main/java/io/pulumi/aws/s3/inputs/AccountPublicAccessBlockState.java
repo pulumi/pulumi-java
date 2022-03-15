@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AccountPublicAccessBlockState extends io.pulumi.resources.Res
      * AWS account ID to configure. Defaults to automatically determined account ID of the this provider AWS provider.
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -32,7 +32,7 @@ public final class AccountPublicAccessBlockState extends io.pulumi.resources.Res
      * * PUT Object calls fail if the request includes a public ACL.
      * 
      */
-    @InputImport(name="blockPublicAcls")
+    @Import(name="blockPublicAcls")
       private final @Nullable Output<Boolean> blockPublicAcls;
 
     public Output<Boolean> getBlockPublicAcls() {
@@ -44,7 +44,7 @@ public final class AccountPublicAccessBlockState extends io.pulumi.resources.Res
      * * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
      * 
      */
-    @InputImport(name="blockPublicPolicy")
+    @Import(name="blockPublicPolicy")
       private final @Nullable Output<Boolean> blockPublicPolicy;
 
     public Output<Boolean> getBlockPublicPolicy() {
@@ -56,7 +56,7 @@ public final class AccountPublicAccessBlockState extends io.pulumi.resources.Res
      * * Ignore all public ACLs on buckets in this account and any objects that they contain.
      * 
      */
-    @InputImport(name="ignorePublicAcls")
+    @Import(name="ignorePublicAcls")
       private final @Nullable Output<Boolean> ignorePublicAcls;
 
     public Output<Boolean> getIgnorePublicAcls() {
@@ -68,7 +68,7 @@ public final class AccountPublicAccessBlockState extends io.pulumi.resources.Res
      * * Only the bucket owner and AWS Services can access buckets with public policies.
      * 
      */
-    @InputImport(name="restrictPublicBuckets")
+    @Import(name="restrictPublicBuckets")
       private final @Nullable Output<Boolean> restrictPublicBuckets;
 
     public Output<Boolean> getRestrictPublicBuckets() {

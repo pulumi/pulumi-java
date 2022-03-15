@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DebugOptionsResponse {
     /**
      * When true, enables the logging of the literal hot key to the user's Cloud Logging.
@@ -15,8 +15,8 @@ public final class DebugOptionsResponse {
      */
     private final Boolean enableHotKeyLogging;
 
-    @OutputCustomType.Constructor
-    private DebugOptionsResponse(@OutputCustomType.Parameter("enableHotKeyLogging") Boolean enableHotKeyLogging) {
+    @CustomType.Constructor
+    private DebugOptionsResponse(@CustomType.Parameter("enableHotKeyLogging") Boolean enableHotKeyLogging) {
         this.enableHotKeyLogging = enableHotKeyLogging;
     }
 

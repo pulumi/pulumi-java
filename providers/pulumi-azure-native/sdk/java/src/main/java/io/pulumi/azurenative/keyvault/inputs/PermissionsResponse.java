@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.keyvault.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PermissionsResponse extends io.pulumi.resources.InvokeArgs {
      * Permissions to certificates
      * 
      */
-    @InputImport(name="certificates")
+    @Import(name="certificates")
       private final @Nullable List<String> certificates;
 
     public List<String> getCertificates() {
@@ -34,7 +34,7 @@ public final class PermissionsResponse extends io.pulumi.resources.InvokeArgs {
      * Permissions to keys
      * 
      */
-    @InputImport(name="keys")
+    @Import(name="keys")
       private final @Nullable List<String> keys;
 
     public List<String> getKeys() {
@@ -45,7 +45,7 @@ public final class PermissionsResponse extends io.pulumi.resources.InvokeArgs {
      * Permissions to secrets
      * 
      */
-    @InputImport(name="secrets")
+    @Import(name="secrets")
       private final @Nullable List<String> secrets;
 
     public List<String> getSecrets() {
@@ -56,7 +56,7 @@ public final class PermissionsResponse extends io.pulumi.resources.InvokeArgs {
      * Permissions to storage accounts
      * 
      */
-    @InputImport(name="storage")
+    @Import(name="storage")
       private final @Nullable List<String> storage;
 
     public List<String> getStorage() {

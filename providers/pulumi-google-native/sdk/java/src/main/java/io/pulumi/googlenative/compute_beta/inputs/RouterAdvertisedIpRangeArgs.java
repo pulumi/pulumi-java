@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RouterAdvertisedIpRangeArgs extends io.pulumi.resources.Resou
      * User-specified description for the IP range.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class RouterAdvertisedIpRangeArgs extends io.pulumi.resources.Resou
      * The IP range to advertise. The value must be a CIDR-formatted string.
      * 
      */
-    @InputImport(name="range")
+    @Import(name="range")
       private final @Nullable Output<String> range;
 
     public Output<String> getRange() {

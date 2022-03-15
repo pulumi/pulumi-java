@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.outputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse {
     /**
      * The accelerator card attached to each VM.
@@ -68,19 +68,19 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigRes
      */
     private final String vmImage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse(
-        @OutputCustomType.Parameter("accelerator") GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse accelerator,
-        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
-        @OutputCustomType.Parameter("diskType") String diskType,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("maxConcurrentActions") String maxConcurrentActions,
-        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
-        @OutputCustomType.Parameter("networkAccess") String networkAccess,
-        @OutputCustomType.Parameter("reserved") Boolean reserved,
-        @OutputCustomType.Parameter("soleTenantNodeType") String soleTenantNodeType,
-        @OutputCustomType.Parameter("vmImage") String vmImage) {
+        @CustomType.Parameter("accelerator") GoogleDevtoolsRemotebuildexecutionAdminV1alphaAcceleratorConfigResponse accelerator,
+        @CustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @CustomType.Parameter("diskType") String diskType,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("maxConcurrentActions") String maxConcurrentActions,
+        @CustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @CustomType.Parameter("networkAccess") String networkAccess,
+        @CustomType.Parameter("reserved") Boolean reserved,
+        @CustomType.Parameter("soleTenantNodeType") String soleTenantNodeType,
+        @CustomType.Parameter("vmImage") String vmImage) {
         this.accelerator = accelerator;
         this.diskSizeGb = diskSizeGb;
         this.diskType = diskType;

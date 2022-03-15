@@ -4,7 +4,7 @@
 package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SnapshotScheduleAssociationState extends io.pulumi.resources.
      * The cluster identifier.
      * 
      */
-    @InputImport(name="clusterIdentifier")
+    @Import(name="clusterIdentifier")
       private final @Nullable Output<String> clusterIdentifier;
 
     public Output<String> getClusterIdentifier() {
@@ -29,7 +29,7 @@ public final class SnapshotScheduleAssociationState extends io.pulumi.resources.
      * The snapshot schedule identifier.
      * 
      */
-    @InputImport(name="scheduleIdentifier")
+    @Import(name="scheduleIdentifier")
       private final @Nullable Output<String> scheduleIdentifier;
 
     public Output<String> getScheduleIdentifier() {

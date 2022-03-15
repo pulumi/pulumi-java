@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.WebACLCustomResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebACLBlockAction {
     private final @Nullable WebACLCustomResponse customResponse;
 
-    @OutputCustomType.Constructor
-    private WebACLBlockAction(@OutputCustomType.Parameter("customResponse") @Nullable WebACLCustomResponse customResponse) {
+    @CustomType.Constructor
+    private WebACLBlockAction(@CustomType.Parameter("customResponse") @Nullable WebACLCustomResponse customResponse) {
         this.customResponse = customResponse;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
      * The role assignment state eligible/active to review
      * 
      */
-    @InputImport(name="assignmentState", required=true)
+    @Import(name="assignmentState", required=true)
       private final String assignmentState;
 
     public String getAssignmentState() {
@@ -34,7 +34,7 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
      * Flag to indicate whether to expand nested memberships or not.
      * 
      */
-    @InputImport(name="expandNestedMemberships")
+    @Import(name="expandNestedMemberships")
       private final @Nullable Boolean expandNestedMemberships;
 
     public Optional<Boolean> getExpandNestedMemberships() {
@@ -45,7 +45,7 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
      * Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
      * 
      */
-    @InputImport(name="inactiveDuration")
+    @Import(name="inactiveDuration")
       private final @Nullable String inactiveDuration;
 
     public Optional<String> getInactiveDuration() {
@@ -56,7 +56,7 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
      * The identity type user/servicePrincipal to review
      * 
      */
-    @InputImport(name="principalType", required=true)
+    @Import(name="principalType", required=true)
       private final String principalType;
 
     public String getPrincipalType() {
@@ -67,7 +67,7 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
      * ResourceId in which this review is getting created
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final String resourceId;
 
     public String getResourceId() {
@@ -78,7 +78,7 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
      * This is used to indicate the role being reviewed
      * 
      */
-    @InputImport(name="roleDefinitionId", required=true)
+    @Import(name="roleDefinitionId", required=true)
       private final String roleDefinitionId;
 
     public String getRoleDefinitionId() {

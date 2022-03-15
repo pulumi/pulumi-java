@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.workspaces.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkspaceWorkspaceProperty {
     /**
      * The compute type. For more information, see [Amazon WorkSpaces Bundles](http://aws.amazon.com/workspaces/details/#Amazon_WorkSpaces_Bundles). Valid values are `VALUE`, `STANDARD`, `PERFORMANCE`, `POWER`, `GRAPHICS`, `POWERPRO` and `GRAPHICSPRO`.
@@ -36,13 +36,13 @@ public final class GetWorkspaceWorkspaceProperty {
      */
     private final Integer userVolumeSizeGib;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkspaceWorkspaceProperty(
-        @OutputCustomType.Parameter("computeTypeName") String computeTypeName,
-        @OutputCustomType.Parameter("rootVolumeSizeGib") Integer rootVolumeSizeGib,
-        @OutputCustomType.Parameter("runningMode") String runningMode,
-        @OutputCustomType.Parameter("runningModeAutoStopTimeoutInMinutes") Integer runningModeAutoStopTimeoutInMinutes,
-        @OutputCustomType.Parameter("userVolumeSizeGib") Integer userVolumeSizeGib) {
+        @CustomType.Parameter("computeTypeName") String computeTypeName,
+        @CustomType.Parameter("rootVolumeSizeGib") Integer rootVolumeSizeGib,
+        @CustomType.Parameter("runningMode") String runningMode,
+        @CustomType.Parameter("runningModeAutoStopTimeoutInMinutes") Integer runningModeAutoStopTimeoutInMinutes,
+        @CustomType.Parameter("userVolumeSizeGib") Integer userVolumeSizeGib) {
         this.computeTypeName = computeTypeName;
         this.rootVolumeSizeGib = rootVolumeSizeGib;
         this.runningMode = runningMode;

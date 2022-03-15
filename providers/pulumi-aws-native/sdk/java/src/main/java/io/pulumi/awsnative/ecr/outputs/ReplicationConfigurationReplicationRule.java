@@ -5,12 +5,12 @@ package io.pulumi.awsnative.ecr.outputs;
 
 import io.pulumi.awsnative.ecr.outputs.ReplicationConfigurationReplicationDestination;
 import io.pulumi.awsnative.ecr.outputs.ReplicationConfigurationRepositoryFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReplicationConfigurationReplicationRule {
     /**
      * An array of objects representing the details of a replication destination.
@@ -23,10 +23,10 @@ public final class ReplicationConfigurationReplicationRule {
      */
     private final @Nullable List<ReplicationConfigurationRepositoryFilter> repositoryFilters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicationConfigurationReplicationRule(
-        @OutputCustomType.Parameter("destinations") List<ReplicationConfigurationReplicationDestination> destinations,
-        @OutputCustomType.Parameter("repositoryFilters") @Nullable List<ReplicationConfigurationRepositoryFilter> repositoryFilters) {
+        @CustomType.Parameter("destinations") List<ReplicationConfigurationReplicationDestination> destinations,
+        @CustomType.Parameter("repositoryFilters") @Nullable List<ReplicationConfigurationRepositoryFilter> repositoryFilters) {
         this.destinations = destinations;
         this.repositoryFilters = repositoryFilters;
     }

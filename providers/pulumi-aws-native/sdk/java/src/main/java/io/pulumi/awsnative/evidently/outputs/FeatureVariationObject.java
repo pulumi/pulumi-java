@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.evidently.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FeatureVariationObject {
     private final @Nullable Boolean booleanValue;
     private final @Nullable Double doubleValue;
@@ -19,13 +19,13 @@ public final class FeatureVariationObject {
     private final @Nullable String stringValue;
     private final @Nullable String variationName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FeatureVariationObject(
-        @OutputCustomType.Parameter("booleanValue") @Nullable Boolean booleanValue,
-        @OutputCustomType.Parameter("doubleValue") @Nullable Double doubleValue,
-        @OutputCustomType.Parameter("longValue") @Nullable Double longValue,
-        @OutputCustomType.Parameter("stringValue") @Nullable String stringValue,
-        @OutputCustomType.Parameter("variationName") @Nullable String variationName) {
+        @CustomType.Parameter("booleanValue") @Nullable Boolean booleanValue,
+        @CustomType.Parameter("doubleValue") @Nullable Double doubleValue,
+        @CustomType.Parameter("longValue") @Nullable Double longValue,
+        @CustomType.Parameter("stringValue") @Nullable String stringValue,
+        @CustomType.Parameter("variationName") @Nullable String variationName) {
         this.booleanValue = booleanValue;
         this.doubleValue = doubleValue;
         this.longValue = longValue;

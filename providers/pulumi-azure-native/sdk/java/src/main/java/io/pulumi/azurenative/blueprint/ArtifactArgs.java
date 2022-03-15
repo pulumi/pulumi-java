@@ -6,7 +6,7 @@ package io.pulumi.azurenative.blueprint;
 import io.pulumi.azurenative.blueprint.enums.ArtifactKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the blueprint artifact.
      * 
      */
-    @InputImport(name="artifactName")
+    @Import(name="artifactName")
       private final @Nullable Output<String> artifactName;
 
     public Output<String> getArtifactName() {
@@ -31,7 +31,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the blueprint definition.
      * 
      */
-    @InputImport(name="blueprintName", required=true)
+    @Import(name="blueprintName", required=true)
       private final Output<String> blueprintName;
 
     public Output<String> getBlueprintName() {
@@ -42,7 +42,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the kind of blueprint artifact.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<Either<String,ArtifactKind>> kind;
 
     public Output<Either<String,ArtifactKind>> getKind() {
@@ -53,7 +53,7 @@ public final class ArtifactArgs extends io.pulumi.resources.ResourceArgs {
      * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
      * 
      */
-    @InputImport(name="resourceScope", required=true)
+    @Import(name="resourceScope", required=true)
       private final Output<String> resourceScope;
 
     public Output<String> getResourceScope() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.ExpressRouteConnectionResponse;
 import io.pulumi.azurenative.network.outputs.ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration;
 import io.pulumi.azurenative.network.outputs.VirtualHubIdResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetExpressRouteGatewayResult {
     /**
      * Configuration for auto scaling.
@@ -67,18 +67,18 @@ public final class GetExpressRouteGatewayResult {
      */
     private final VirtualHubIdResponse virtualHub;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExpressRouteGatewayResult(
-        @OutputCustomType.Parameter("autoScaleConfiguration") @Nullable ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration autoScaleConfiguration,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("expressRouteConnections") List<ExpressRouteConnectionResponse> expressRouteConnections,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualHub") VirtualHubIdResponse virtualHub) {
+        @CustomType.Parameter("autoScaleConfiguration") @Nullable ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration autoScaleConfiguration,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("expressRouteConnections") List<ExpressRouteConnectionResponse> expressRouteConnections,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualHub") VirtualHubIdResponse virtualHub) {
         this.autoScaleConfiguration = autoScaleConfiguration;
         this.etag = etag;
         this.expressRouteConnections = expressRouteConnections;

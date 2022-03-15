@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BucketBillingArgs extends io.pulumi.resources.ResourceArgs {
      * When set to true, Requester Pays is enabled for this bucket.
      * 
      */
-    @InputImport(name="requesterPays")
+    @Import(name="requesterPays")
       private final @Nullable Output<Boolean> requesterPays;
 
     public Output<Boolean> getRequesterPays() {

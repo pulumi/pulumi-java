@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DomainDkimState extends io.pulumi.resources.ResourceArgs {
      * in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim-dns-records.html).
      * 
      */
-    @InputImport(name="dkimTokens")
+    @Import(name="dkimTokens")
       private final @Nullable Output<List<String>> dkimTokens;
 
     public Output<List<String>> getDkimTokens() {
@@ -35,7 +35,7 @@ public final class DomainDkimState extends io.pulumi.resources.ResourceArgs {
      * Verified domain name to generate DKIM tokens for.
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {

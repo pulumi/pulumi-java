@@ -11,7 +11,7 @@ import io.pulumi.azurenative.hanaonazure.outputs.OSProfileResponse;
 import io.pulumi.azurenative.hanaonazure.outputs.StorageProfileResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public class HanaInstance extends io.pulumi.resources.CustomResource {
      * Specifies the HANA instance unique ID.
      * 
      */
-    @OutputExport(name="hanaInstanceId", type=String.class, parameters={})
+    @Export(name="hanaInstanceId", type=String.class, parameters={})
     private Output<String> hanaInstanceId;
 
     /**
@@ -53,7 +53,7 @@ public class HanaInstance extends io.pulumi.resources.CustomResource {
      * Specifies the hardware settings for the HANA instance.
      * 
      */
-    @OutputExport(name="hardwareProfile", type=HardwareProfileResponse.class, parameters={})
+    @Export(name="hardwareProfile", type=HardwareProfileResponse.class, parameters={})
     private Output</* @Nullable */ HardwareProfileResponse> hardwareProfile;
 
     /**
@@ -67,7 +67,7 @@ public class HanaInstance extends io.pulumi.resources.CustomResource {
      * Hardware revision of a HANA instance
      * 
      */
-    @OutputExport(name="hwRevision", type=String.class, parameters={})
+    @Export(name="hwRevision", type=String.class, parameters={})
     private Output<String> hwRevision;
 
     /**
@@ -81,7 +81,7 @@ public class HanaInstance extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -95,7 +95,7 @@ public class HanaInstance extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -109,7 +109,7 @@ public class HanaInstance extends io.pulumi.resources.CustomResource {
      * Specifies the network settings for the HANA instance.
      * 
      */
-    @OutputExport(name="networkProfile", type=NetworkProfileResponse.class, parameters={})
+    @Export(name="networkProfile", type=NetworkProfileResponse.class, parameters={})
     private Output</* @Nullable */ NetworkProfileResponse> networkProfile;
 
     /**
@@ -123,7 +123,7 @@ public class HanaInstance extends io.pulumi.resources.CustomResource {
      * Specifies the operating system settings for the HANA instance.
      * 
      */
-    @OutputExport(name="osProfile", type=OSProfileResponse.class, parameters={})
+    @Export(name="osProfile", type=OSProfileResponse.class, parameters={})
     private Output</* @Nullable */ OSProfileResponse> osProfile;
 
     /**
@@ -137,7 +137,7 @@ public class HanaInstance extends io.pulumi.resources.CustomResource {
      * ARM ID of another HanaInstance that will share a network with this HanaInstance
      * 
      */
-    @OutputExport(name="partnerNodeId", type=String.class, parameters={})
+    @Export(name="partnerNodeId", type=String.class, parameters={})
     private Output</* @Nullable */ String> partnerNodeId;
 
     /**
@@ -151,7 +151,7 @@ public class HanaInstance extends io.pulumi.resources.CustomResource {
      * Resource power state
      * 
      */
-    @OutputExport(name="powerState", type=String.class, parameters={})
+    @Export(name="powerState", type=String.class, parameters={})
     private Output<String> powerState;
 
     /**
@@ -165,7 +165,7 @@ public class HanaInstance extends io.pulumi.resources.CustomResource {
      * State of provisioning of the HanaInstance
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -179,7 +179,7 @@ public class HanaInstance extends io.pulumi.resources.CustomResource {
      * Resource proximity placement group
      * 
      */
-    @OutputExport(name="proximityPlacementGroup", type=String.class, parameters={})
+    @Export(name="proximityPlacementGroup", type=String.class, parameters={})
     private Output<String> proximityPlacementGroup;
 
     /**
@@ -193,7 +193,7 @@ public class HanaInstance extends io.pulumi.resources.CustomResource {
      * Specifies the storage settings for the HANA instance disks.
      * 
      */
-    @OutputExport(name="storageProfile", type=StorageProfileResponse.class, parameters={})
+    @Export(name="storageProfile", type=StorageProfileResponse.class, parameters={})
     private Output</* @Nullable */ StorageProfileResponse> storageProfile;
 
     /**
@@ -207,7 +207,7 @@ public class HanaInstance extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -221,7 +221,7 @@ public class HanaInstance extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

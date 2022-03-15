@@ -6,7 +6,7 @@ package io.pulumi.azurenative.eventgrid;
 import io.pulumi.azurenative.eventgrid.enums.PartnerRegistrationVisibilityState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * for creating the partner registration.
      * 
      */
-    @InputImport(name="authorizedAzureSubscriptionIds")
+    @Import(name="authorizedAzureSubscriptionIds")
       private final @Nullable Output<List<String>> authorizedAzureSubscriptionIds;
 
     public Output<List<String>> getAuthorizedAzureSubscriptionIds() {
@@ -36,7 +36,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * The extension of the customer service URI of the publisher.
      * 
      */
-    @InputImport(name="customerServiceUri")
+    @Import(name="customerServiceUri")
       private final @Nullable Output<String> customerServiceUri;
 
     public Output<String> getCustomerServiceUri() {
@@ -47,7 +47,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * Location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -58,7 +58,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * URI of the logo.
      * 
      */
-    @InputImport(name="logoUri")
+    @Import(name="logoUri")
       private final @Nullable Output<String> logoUri;
 
     public Output<String> getLogoUri() {
@@ -70,7 +70,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * Length of this description should not exceed 2048 characters.
      * 
      */
-    @InputImport(name="longDescription")
+    @Import(name="longDescription")
       private final @Nullable Output<String> longDescription;
 
     public Output<String> getLongDescription() {
@@ -81,7 +81,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * The extension of the customer service number of the publisher. Only digits are allowed and number of digits should not exceed 10.
      * 
      */
-    @InputImport(name="partnerCustomerServiceExtension")
+    @Import(name="partnerCustomerServiceExtension")
       private final @Nullable Output<String> partnerCustomerServiceExtension;
 
     public Output<String> getPartnerCustomerServiceExtension() {
@@ -95,7 +95,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * +966 7 5115 2471. Examples of invalid phone numbers are: +1 (515) 123-4567, 1 515 123 4567 and +966 121 5115 24 7 551 1234 43
      * 
      */
-    @InputImport(name="partnerCustomerServiceNumber")
+    @Import(name="partnerCustomerServiceNumber")
       private final @Nullable Output<String> partnerCustomerServiceNumber;
 
     public Output<String> getPartnerCustomerServiceNumber() {
@@ -106,7 +106,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * Official name of the partner name. For example: "Contoso".
      * 
      */
-    @InputImport(name="partnerName")
+    @Import(name="partnerName")
       private final @Nullable Output<String> partnerName;
 
     public Output<String> getPartnerName() {
@@ -117,7 +117,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * Name of the partner registration.
      * 
      */
-    @InputImport(name="partnerRegistrationName")
+    @Import(name="partnerRegistrationName")
       private final @Nullable Output<String> partnerRegistrationName;
 
     public Output<String> getPartnerRegistrationName() {
@@ -128,7 +128,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * Short description of the partner resource type. The length of this description should not exceed 256 characters.
      * 
      */
-    @InputImport(name="partnerResourceTypeDescription")
+    @Import(name="partnerResourceTypeDescription")
       private final @Nullable Output<String> partnerResourceTypeDescription;
 
     public Output<String> getPartnerResourceTypeDescription() {
@@ -139,7 +139,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * Display name of the partner resource type.
      * 
      */
-    @InputImport(name="partnerResourceTypeDisplayName")
+    @Import(name="partnerResourceTypeDisplayName")
       private final @Nullable Output<String> partnerResourceTypeDisplayName;
 
     public Output<String> getPartnerResourceTypeDisplayName() {
@@ -150,7 +150,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * Name of the partner resource type.
      * 
      */
-    @InputImport(name="partnerResourceTypeName")
+    @Import(name="partnerResourceTypeName")
       private final @Nullable Output<String> partnerResourceTypeName;
 
     public Output<String> getPartnerResourceTypeName() {
@@ -161,7 +161,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * The name of the resource group within the user's subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -173,7 +173,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * integration on an event source.
      * 
      */
-    @InputImport(name="setupUri")
+    @Import(name="setupUri")
       private final @Nullable Output<String> setupUri;
 
     public Output<String> getSetupUri() {
@@ -184,7 +184,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * Tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -195,7 +195,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
      * Visibility state of the partner registration.
      * 
      */
-    @InputImport(name="visibilityState")
+    @Import(name="visibilityState")
       private final @Nullable Output<Either<String,PartnerRegistrationVisibilityState>> visibilityState;
 
     public Output<Either<String,PartnerRegistrationVisibilityState>> getVisibilityState() {

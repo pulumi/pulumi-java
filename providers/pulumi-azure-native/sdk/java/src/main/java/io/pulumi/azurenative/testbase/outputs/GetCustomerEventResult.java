@@ -5,12 +5,12 @@ package io.pulumi.azurenative.testbase.outputs;
 
 import io.pulumi.azurenative.testbase.outputs.NotificationEventReceiverResponse;
 import io.pulumi.azurenative.testbase.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCustomerEventResult {
     /**
      * The name of the event subscribed to.
@@ -43,14 +43,14 @@ public final class GetCustomerEventResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCustomerEventResult(
-        @OutputCustomType.Parameter("eventName") String eventName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("receivers") List<NotificationEventReceiverResponse> receivers,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("eventName") String eventName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("receivers") List<NotificationEventReceiverResponse> receivers,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.eventName = eventName;
         this.id = id;
         this.name = name;

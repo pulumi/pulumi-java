@@ -14,7 +14,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.IdentityArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.SkuArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.VirtualMachineArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -30,7 +30,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * Name of the Azure Machine Learning compute.
      * 
      */
-    @InputImport(name="computeName")
+    @Import(name="computeName")
       private final @Nullable Output<String> computeName;
 
     public Output<String> getComputeName() {
@@ -41,7 +41,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * The identity of the resource.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
@@ -52,7 +52,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * Specifies the location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -63,7 +63,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * Compute properties
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Object> properties;
 
     public Output<Object> getProperties() {
@@ -74,7 +74,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * Name of the resource group in which workspace is located.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -85,7 +85,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * The sku of the workspace.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -96,7 +96,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * Contains resource tags defined as key/value pairs.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -107,7 +107,7 @@ public final class MachineLearningComputeArgs extends io.pulumi.resources.Resour
      * Name of Azure Machine Learning workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

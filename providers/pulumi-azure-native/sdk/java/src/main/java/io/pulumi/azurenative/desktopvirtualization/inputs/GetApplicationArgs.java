@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.desktopvirtualization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the application group
      * 
      */
-    @InputImport(name="applicationGroupName", required=true)
+    @Import(name="applicationGroupName", required=true)
       private final String applicationGroupName;
 
     public String getApplicationGroupName() {
@@ -27,7 +27,7 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the application within the specified application group
      * 
      */
-    @InputImport(name="applicationName", required=true)
+    @Import(name="applicationName", required=true)
       private final String applicationName;
 
     public String getApplicationName() {
@@ -38,7 +38,7 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

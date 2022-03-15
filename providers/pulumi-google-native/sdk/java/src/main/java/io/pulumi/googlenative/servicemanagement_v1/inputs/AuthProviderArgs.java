@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.JwtLocationArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The list of JWT [audiences](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32#section-4.1.3). that are allowed to access. A JWT containing any of these audiences will be accepted. When this setting is absent, JWTs with audiences: - "https://[service.name]/[google.protobuf.Api.name]" - "https://[service.name]/" will be accepted. For example, if no audiences are in the setting, LibraryService API will accept JWTs with the following audiences: - https://library-example.googleapis.com/google.example.library.v1.LibraryService - https://library-example.googleapis.com/ Example: audiences: bookstore_android.apps.googleusercontent.com, bookstore_web.apps.googleusercontent.com
      * 
      */
-    @InputImport(name="audiences")
+    @Import(name="audiences")
       private final @Nullable Output<String> audiences;
 
     public Output<String> getAudiences() {
@@ -35,7 +35,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Redirect URL if JWT token is required but not present or is expired. Implement authorizationUrl of securityDefinitions in OpenAPI spec.
      * 
      */
-    @InputImport(name="authorizationUrl")
+    @Import(name="authorizationUrl")
       private final @Nullable Output<String> authorizationUrl;
 
     public Output<String> getAuthorizationUrl() {
@@ -46,7 +46,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The unique identifier of the auth provider. It will be referred to by `AuthRequirement.provider_id`. Example: "bookstore_auth".
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -57,7 +57,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Identifies the principal that issued the JWT. See https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32#section-4.1.1 Usually a URL or an email address. Example: https://securetoken.google.com Example: 1234567-compute@developer.gserviceaccount.com
      * 
      */
-    @InputImport(name="issuer")
+    @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
     public Output<String> getIssuer() {
@@ -68,7 +68,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
      * URL of the provider's public key set to validate signature of the JWT. See [OpenID Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderMetadata). Optional if the key set document: - can be retrieved from [OpenID Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html) of the issuer. - can be inferred from the email domain of the issuer (e.g. a Google service account). Example: https://www.googleapis.com/oauth2/v1/certs
      * 
      */
-    @InputImport(name="jwksUri")
+    @Import(name="jwksUri")
       private final @Nullable Output<String> jwksUri;
 
     public Output<String> getJwksUri() {
@@ -79,7 +79,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Defines the locations to extract the JWT. JWT locations can be either from HTTP headers or URL query parameters. The rule is that the first match wins. The checking order is: checking all headers first, then URL query parameters. If not specified, default to use following 3 locations: 1) Authorization: Bearer 2) x-goog-iap-jwt-assertion 3) access_token query parameter Default locations can be specified as followings: jwt_locations: - header: Authorization value_prefix: "Bearer " - header: x-goog-iap-jwt-assertion - query: access_token
      * 
      */
-    @InputImport(name="jwtLocations")
+    @Import(name="jwtLocations")
       private final @Nullable Output<List<JwtLocationArgs>> jwtLocations;
 
     public Output<List<JwtLocationArgs>> getJwtLocations() {

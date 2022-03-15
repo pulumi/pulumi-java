@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apps_v1beta1.outputs.StatefulSetUpdateStrategy;
 import io.pulumi.kubernetes.core_v1.outputs.PersistentVolumeClaim;
 import io.pulumi.kubernetes.core_v1.outputs.PodTemplateSpec;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StatefulSetSpec {
     /**
      * podManagementPolicy controls how pods are created during initial scale up, when replacing pods on nodes, or when scaling down. The default policy is `OrderedReady`, where pods are created in increasing order (pod-0, then pod-1, etc) and the controller will wait until each pod is ready before continuing. When scaling down, the pods are removed in the opposite order. The alternative policy is `Parallel` which will create pods in parallel to match the desired scale without waiting, and on scale down will delete all pods at once.
@@ -58,16 +58,16 @@ public final class StatefulSetSpec {
      */
     private final @Nullable List<PersistentVolumeClaim> volumeClaimTemplates;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StatefulSetSpec(
-        @OutputCustomType.Parameter("podManagementPolicy") @Nullable String podManagementPolicy,
-        @OutputCustomType.Parameter("replicas") @Nullable Integer replicas,
-        @OutputCustomType.Parameter("revisionHistoryLimit") @Nullable Integer revisionHistoryLimit,
-        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector,
-        @OutputCustomType.Parameter("serviceName") String serviceName,
-        @OutputCustomType.Parameter("template") PodTemplateSpec template,
-        @OutputCustomType.Parameter("updateStrategy") @Nullable StatefulSetUpdateStrategy updateStrategy,
-        @OutputCustomType.Parameter("volumeClaimTemplates") @Nullable List<PersistentVolumeClaim> volumeClaimTemplates) {
+        @CustomType.Parameter("podManagementPolicy") @Nullable String podManagementPolicy,
+        @CustomType.Parameter("replicas") @Nullable Integer replicas,
+        @CustomType.Parameter("revisionHistoryLimit") @Nullable Integer revisionHistoryLimit,
+        @CustomType.Parameter("selector") @Nullable LabelSelector selector,
+        @CustomType.Parameter("serviceName") String serviceName,
+        @CustomType.Parameter("template") PodTemplateSpec template,
+        @CustomType.Parameter("updateStrategy") @Nullable StatefulSetUpdateStrategy updateStrategy,
+        @CustomType.Parameter("volumeClaimTemplates") @Nullable List<PersistentVolumeClaim> volumeClaimTemplates) {
         this.podManagementPolicy = podManagementPolicy;
         this.replicas = replicas;
         this.revisionHistoryLimit = revisionHistoryLimit;

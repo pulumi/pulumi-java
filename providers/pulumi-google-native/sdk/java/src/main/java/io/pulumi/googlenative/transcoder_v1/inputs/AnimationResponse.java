@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.transcoder_v1.inputs.AnimationEndResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.AnimationFadeResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.AnimationStaticResponse;
@@ -22,7 +22,7 @@ public final class AnimationResponse extends io.pulumi.resources.InvokeArgs {
      * End previous animation.
      * 
      */
-    @InputImport(name="animationEnd", required=true)
+    @Import(name="animationEnd", required=true)
       private final AnimationEndResponse animationEnd;
 
     public AnimationEndResponse getAnimationEnd() {
@@ -33,7 +33,7 @@ public final class AnimationResponse extends io.pulumi.resources.InvokeArgs {
      * Display overlay object with fade animation.
      * 
      */
-    @InputImport(name="animationFade", required=true)
+    @Import(name="animationFade", required=true)
       private final AnimationFadeResponse animationFade;
 
     public AnimationFadeResponse getAnimationFade() {
@@ -44,7 +44,7 @@ public final class AnimationResponse extends io.pulumi.resources.InvokeArgs {
      * Display static overlay object.
      * 
      */
-    @InputImport(name="animationStatic", required=true)
+    @Import(name="animationStatic", required=true)
       private final AnimationStaticResponse animationStatic;
 
     public AnimationStaticResponse getAnimationStatic() {

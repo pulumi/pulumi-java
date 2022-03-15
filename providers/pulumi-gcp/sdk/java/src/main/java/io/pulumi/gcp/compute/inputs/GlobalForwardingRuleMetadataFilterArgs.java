@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.GlobalForwardingRuleMetadataFilterFilterLabelArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GlobalForwardingRuleMetadataFilterArgs extends io.pulumi.reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="filterLabels", required=true)
+    @Import(name="filterLabels", required=true)
       private final Output<List<GlobalForwardingRuleMetadataFilterFilterLabelArgs>> filterLabels;
 
     public Output<List<GlobalForwardingRuleMetadataFilterFilterLabelArgs>> getFilterLabels() {
@@ -39,7 +39,7 @@ public final class GlobalForwardingRuleMetadataFilterArgs extends io.pulumi.reso
      * Possible values are `MATCH_ANY` and `MATCH_ALL`.
      * 
      */
-    @InputImport(name="filterMatchCriteria", required=true)
+    @Import(name="filterMatchCriteria", required=true)
       private final Output<String> filterMatchCriteria;
 
     public Output<String> getFilterMatchCriteria() {

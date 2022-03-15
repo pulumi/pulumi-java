@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.BitbucketServerConfigResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.PullRequestFilterResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.PushFilterResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BitbucketServerTriggerConfigResponse {
     /**
      * The BitbucketServerConfig specified in the bitbucket_server_config_resource field.
@@ -43,14 +43,14 @@ public final class BitbucketServerTriggerConfigResponse {
      */
     private final String repoSlug;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BitbucketServerTriggerConfigResponse(
-        @OutputCustomType.Parameter("bitbucketServerConfig") BitbucketServerConfigResponse bitbucketServerConfig,
-        @OutputCustomType.Parameter("bitbucketServerConfigResource") String bitbucketServerConfigResource,
-        @OutputCustomType.Parameter("projectKey") String projectKey,
-        @OutputCustomType.Parameter("pullRequest") PullRequestFilterResponse pullRequest,
-        @OutputCustomType.Parameter("push") PushFilterResponse push,
-        @OutputCustomType.Parameter("repoSlug") String repoSlug) {
+        @CustomType.Parameter("bitbucketServerConfig") BitbucketServerConfigResponse bitbucketServerConfig,
+        @CustomType.Parameter("bitbucketServerConfigResource") String bitbucketServerConfigResource,
+        @CustomType.Parameter("projectKey") String projectKey,
+        @CustomType.Parameter("pullRequest") PullRequestFilterResponse pullRequest,
+        @CustomType.Parameter("push") PushFilterResponse push,
+        @CustomType.Parameter("repoSlug") String repoSlug) {
         this.bitbucketServerConfig = bitbucketServerConfig;
         this.bitbucketServerConfigResource = bitbucketServerConfigResource;
         this.projectKey = projectKey;

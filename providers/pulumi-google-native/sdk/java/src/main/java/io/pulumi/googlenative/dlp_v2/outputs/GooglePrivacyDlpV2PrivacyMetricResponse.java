@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CategoricalStatsConfigResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2KAnonymityConfigResponse;
@@ -12,7 +12,7 @@ import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2LDiversityConfigR
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2NumericalStatsConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2PrivacyMetricResponse {
     /**
      * Categorical stats
@@ -45,14 +45,14 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse {
      */
     private final GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2PrivacyMetricResponse(
-        @OutputCustomType.Parameter("categoricalStatsConfig") GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig,
-        @OutputCustomType.Parameter("deltaPresenceEstimationConfig") GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig,
-        @OutputCustomType.Parameter("kAnonymityConfig") GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig,
-        @OutputCustomType.Parameter("kMapEstimationConfig") GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig,
-        @OutputCustomType.Parameter("lDiversityConfig") GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig,
-        @OutputCustomType.Parameter("numericalStatsConfig") GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig) {
+        @CustomType.Parameter("categoricalStatsConfig") GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig,
+        @CustomType.Parameter("deltaPresenceEstimationConfig") GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig,
+        @CustomType.Parameter("kAnonymityConfig") GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig,
+        @CustomType.Parameter("kMapEstimationConfig") GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig,
+        @CustomType.Parameter("lDiversityConfig") GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig,
+        @CustomType.Parameter("numericalStatsConfig") GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig) {
         this.categoricalStatsConfig = categoricalStatsConfig;
         this.deltaPresenceEstimationConfig = deltaPresenceEstimationConfig;
         this.kAnonymityConfig = kAnonymityConfig;

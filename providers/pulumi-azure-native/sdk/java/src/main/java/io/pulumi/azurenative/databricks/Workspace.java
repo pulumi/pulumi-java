@@ -12,7 +12,7 @@ import io.pulumi.azurenative.databricks.outputs.WorkspaceCustomParametersRespons
 import io.pulumi.azurenative.databricks.outputs.WorkspaceProviderAuthorizationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The workspace provider authorizations.
      * 
      */
-    @OutputExport(name="authorizations", type=List.class, parameters={WorkspaceProviderAuthorizationResponse.class})
+    @Export(name="authorizations", type=List.class, parameters={WorkspaceProviderAuthorizationResponse.class})
     private Output</* @Nullable */ List<WorkspaceProviderAuthorizationResponse>> authorizations;
 
     /**
@@ -54,7 +54,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Indicates the Object ID, PUID and Application ID of entity that created the workspace.
      * 
      */
-    @OutputExport(name="createdBy", type=CreatedByResponse.class, parameters={})
+    @Export(name="createdBy", type=CreatedByResponse.class, parameters={})
     private Output</* @Nullable */ CreatedByResponse> createdBy;
 
     /**
@@ -68,7 +68,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Specifies the date and time when the workspace is created.
      * 
      */
-    @OutputExport(name="createdDateTime", type=String.class, parameters={})
+    @Export(name="createdDateTime", type=String.class, parameters={})
     private Output<String> createdDateTime;
 
     /**
@@ -82,7 +82,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -96,7 +96,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The managed resource group Id.
      * 
      */
-    @OutputExport(name="managedResourceGroupId", type=String.class, parameters={})
+    @Export(name="managedResourceGroupId", type=String.class, parameters={})
     private Output<String> managedResourceGroupId;
 
     /**
@@ -110,7 +110,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -124,7 +124,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The workspace's custom parameters.
      * 
      */
-    @OutputExport(name="parameters", type=WorkspaceCustomParametersResponse.class, parameters={})
+    @Export(name="parameters", type=WorkspaceCustomParametersResponse.class, parameters={})
     private Output</* @Nullable */ WorkspaceCustomParametersResponse> parameters;
 
     /**
@@ -138,7 +138,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The workspace provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -152,7 +152,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The SKU of the resource.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -166,7 +166,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The details of Managed Identity of Storage Account
      * 
      */
-    @OutputExport(name="storageAccountIdentity", type=ManagedIdentityConfigurationResponse.class, parameters={})
+    @Export(name="storageAccountIdentity", type=ManagedIdentityConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ ManagedIdentityConfigurationResponse> storageAccountIdentity;
 
     /**
@@ -180,7 +180,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -194,7 +194,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -208,7 +208,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The blob URI where the UI definition file is located.
      * 
      */
-    @OutputExport(name="uiDefinitionUri", type=String.class, parameters={})
+    @Export(name="uiDefinitionUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> uiDefinitionUri;
 
     /**
@@ -222,7 +222,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Indicates the Object ID, PUID and Application ID of entity that last updated the workspace.
      * 
      */
-    @OutputExport(name="updatedBy", type=CreatedByResponse.class, parameters={})
+    @Export(name="updatedBy", type=CreatedByResponse.class, parameters={})
     private Output</* @Nullable */ CreatedByResponse> updatedBy;
 
     /**
@@ -236,7 +236,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The unique identifier of the databricks workspace in databricks control plane.
      * 
      */
-    @OutputExport(name="workspaceId", type=String.class, parameters={})
+    @Export(name="workspaceId", type=String.class, parameters={})
     private Output<String> workspaceId;
 
     /**
@@ -250,7 +250,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The workspace URL which is of the format 'adb-{workspaceId}.{random}.azuredatabricks.net'
      * 
      */
-    @OutputExport(name="workspaceUrl", type=String.class, parameters={})
+    @Export(name="workspaceUrl", type=String.class, parameters={})
     private Output<String> workspaceUrl;
 
     /**

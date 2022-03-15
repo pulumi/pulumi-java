@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.DefaultRouteTableRouteGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
      * The ARN of the route table.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
      * ID of the default route table.
      * 
      */
-    @InputImport(name="defaultRouteTableId")
+    @Import(name="defaultRouteTableId")
       private final @Nullable Output<String> defaultRouteTableId;
 
     public Output<String> getDefaultRouteTableId() {
@@ -43,7 +43,7 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
      * ID of the AWS account that owns the route table.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -54,7 +54,7 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
      * List of virtual gateways for propagation.
      * 
      */
-    @InputImport(name="propagatingVgws")
+    @Import(name="propagatingVgws")
       private final @Nullable Output<List<String>> propagatingVgws;
 
     public Output<List<String>> getPropagatingVgws() {
@@ -65,7 +65,7 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
      * Set of objects. Detailed below
      * 
      */
-    @InputImport(name="routes")
+    @Import(name="routes")
       private final @Nullable Output<List<DefaultRouteTableRouteGetArgs>> routes;
 
     public Output<List<DefaultRouteTableRouteGetArgs>> getRoutes() {
@@ -76,7 +76,7 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
      * Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -87,7 +87,7 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -98,7 +98,7 @@ public final class DefaultRouteTableState extends io.pulumi.resources.ResourceAr
      * ID of the VPC.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

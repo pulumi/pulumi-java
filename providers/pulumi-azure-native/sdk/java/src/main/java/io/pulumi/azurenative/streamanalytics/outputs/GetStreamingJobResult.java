@@ -8,7 +8,7 @@ import io.pulumi.azurenative.streamanalytics.outputs.InputResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.OutputResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.SkuResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.TransformationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStreamingJobResult {
     /**
      * Controls certain runtime behaviors of the streaming job.
@@ -140,32 +140,32 @@ public final class GetStreamingJobResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStreamingJobResult(
-        @OutputCustomType.Parameter("compatibilityLevel") @Nullable String compatibilityLevel,
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("dataLocale") @Nullable String dataLocale,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("eventsLateArrivalMaxDelayInSeconds") @Nullable Integer eventsLateArrivalMaxDelayInSeconds,
-        @OutputCustomType.Parameter("eventsOutOfOrderMaxDelayInSeconds") @Nullable Integer eventsOutOfOrderMaxDelayInSeconds,
-        @OutputCustomType.Parameter("eventsOutOfOrderPolicy") @Nullable String eventsOutOfOrderPolicy,
-        @OutputCustomType.Parameter("functions") @Nullable List<FunctionResponse> functions,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("inputs") @Nullable List<InputResponse> inputs,
-        @OutputCustomType.Parameter("jobId") String jobId,
-        @OutputCustomType.Parameter("jobState") String jobState,
-        @OutputCustomType.Parameter("lastOutputEventTime") String lastOutputEventTime,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputErrorPolicy") @Nullable String outputErrorPolicy,
-        @OutputCustomType.Parameter("outputStartMode") @Nullable String outputStartMode,
-        @OutputCustomType.Parameter("outputStartTime") @Nullable String outputStartTime,
-        @OutputCustomType.Parameter("outputs") @Nullable List<OutputResponse> outputs,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("transformation") @Nullable TransformationResponse transformation,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("compatibilityLevel") @Nullable String compatibilityLevel,
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("dataLocale") @Nullable String dataLocale,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("eventsLateArrivalMaxDelayInSeconds") @Nullable Integer eventsLateArrivalMaxDelayInSeconds,
+        @CustomType.Parameter("eventsOutOfOrderMaxDelayInSeconds") @Nullable Integer eventsOutOfOrderMaxDelayInSeconds,
+        @CustomType.Parameter("eventsOutOfOrderPolicy") @Nullable String eventsOutOfOrderPolicy,
+        @CustomType.Parameter("functions") @Nullable List<FunctionResponse> functions,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("inputs") @Nullable List<InputResponse> inputs,
+        @CustomType.Parameter("jobId") String jobId,
+        @CustomType.Parameter("jobState") String jobState,
+        @CustomType.Parameter("lastOutputEventTime") String lastOutputEventTime,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputErrorPolicy") @Nullable String outputErrorPolicy,
+        @CustomType.Parameter("outputStartMode") @Nullable String outputStartMode,
+        @CustomType.Parameter("outputStartTime") @Nullable String outputStartTime,
+        @CustomType.Parameter("outputs") @Nullable List<OutputResponse> outputs,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("transformation") @Nullable TransformationResponse transformation,
+        @CustomType.Parameter("type") String type) {
         this.compatibilityLevel = compatibilityLevel;
         this.createdDate = createdDate;
         this.dataLocale = dataLocale;

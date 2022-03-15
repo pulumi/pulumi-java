@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends io.pulumi.resources
      * The distribution of broker nodes across availability zones ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-model-brokerazdistribution)). Currently the only valid value is `DEFAULT`.
      * 
      */
-    @InputImport(name="azDistribution")
+    @Import(name="azDistribution")
       private final @Nullable Output<String> azDistribution;
 
     public Output<String> getAzDistribution() {
@@ -31,7 +31,7 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends io.pulumi.resources
      * A list of subnets to connect to in client VPC ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-prop-brokernodegroupinfo-clientsubnets)).
      * 
      */
-    @InputImport(name="clientSubnets", required=true)
+    @Import(name="clientSubnets", required=true)
       private final Output<List<String>> clientSubnets;
 
     public Output<List<String>> getClientSubnets() {
@@ -42,7 +42,7 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends io.pulumi.resources
      * The size in GiB of the EBS volume for the data drive on each broker node.
      * 
      */
-    @InputImport(name="ebsVolumeSize", required=true)
+    @Import(name="ebsVolumeSize", required=true)
       private final Output<Integer> ebsVolumeSize;
 
     public Output<Integer> getEbsVolumeSize() {
@@ -53,7 +53,7 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends io.pulumi.resources
      * Specify the instance type to use for the kafka brokersE.g., kafka.m5.large. ([Pricing info](https://aws.amazon.com/msk/pricing/))
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -64,7 +64,7 @@ public final class ClusterBrokerNodeGroupInfoGetArgs extends io.pulumi.resources
      * A list of the security groups to associate with the elastic network interfaces to control who can communicate with the cluster.
      * 
      */
-    @InputImport(name="securityGroups", required=true)
+    @Import(name="securityGroups", required=true)
       private final Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {

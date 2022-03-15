@@ -5,7 +5,7 @@ package io.pulumi.aws.mskconnect.inputs;
 
 import io.pulumi.aws.mskconnect.inputs.CustomPluginLocationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CustomPluginState extends io.pulumi.resources.ResourceArgs {
      * the Amazon Resource Name (ARN) of the custom plugin.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class CustomPluginState extends io.pulumi.resources.ResourceArgs {
      * The type of the plugin file. Allowed values are `ZIP` and `JAR`.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -42,7 +42,7 @@ public final class CustomPluginState extends io.pulumi.resources.ResourceArgs {
      * A summary description of the custom plugin.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -53,7 +53,7 @@ public final class CustomPluginState extends io.pulumi.resources.ResourceArgs {
      * an ID of the latest successfully created revision of the custom plugin.
      * 
      */
-    @InputImport(name="latestRevision")
+    @Import(name="latestRevision")
       private final @Nullable Output<Integer> latestRevision;
 
     public Output<Integer> getLatestRevision() {
@@ -64,7 +64,7 @@ public final class CustomPluginState extends io.pulumi.resources.ResourceArgs {
      * Information about the location of a custom plugin. See below.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<CustomPluginLocationGetArgs> location;
 
     public Output<CustomPluginLocationGetArgs> getLocation() {
@@ -75,7 +75,7 @@ public final class CustomPluginState extends io.pulumi.resources.ResourceArgs {
      * The name of the custom plugin..
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -86,7 +86,7 @@ public final class CustomPluginState extends io.pulumi.resources.ResourceArgs {
      * the state of the custom plugin.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaPriceInfoPriceRangeResponse;
 import java.lang.Double;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
      * The costs associated with the sale of a particular product. Used for gross profit reporting. * Profit = price - cost Google Merchant Center property [cost_of_goods_sold](https://support.google.com/merchants/answer/9017895).
      * 
      */
-    @InputImport(name="cost", required=true)
+    @Import(name="cost", required=true)
       private final Double cost;
 
     public Double getCost() {
@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
      * The 3-letter currency code defined in [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). If this field is an unrecognizable currency code, an INVALID_ARGUMENT error is returned. The Product.Type.VARIANT Products with the same Product.primary_product_id must share the same currency_code. Otherwise, a FAILED_PRECONDITION error is returned.
      * 
      */
-    @InputImport(name="currencyCode", required=true)
+    @Import(name="currencyCode", required=true)
       private final String currencyCode;
 
     public String getCurrencyCode() {
@@ -44,7 +44,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
      * Price of the product without any discount. If zero, by default set to be the price.
      * 
      */
-    @InputImport(name="originalPrice", required=true)
+    @Import(name="originalPrice", required=true)
       private final Double originalPrice;
 
     public Double getOriginalPrice() {
@@ -55,7 +55,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
      * Price of the product. Google Merchant Center property [price](https://support.google.com/merchants/answer/6324371). Schema.org property [Offer.price](https://schema.org/price).
      * 
      */
-    @InputImport(name="price", required=true)
+    @Import(name="price", required=true)
       private final Double price;
 
     public Double getPrice() {
@@ -66,7 +66,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
      * The timestamp when the price starts to be effective. This can be set as a future timestamp, and the price is only used for search after price_effective_time. If so, the original_price must be set and original_price is used before price_effective_time. Do not set if price is always effective because it will cause additional latency during search.
      * 
      */
-    @InputImport(name="priceEffectiveTime", required=true)
+    @Import(name="priceEffectiveTime", required=true)
       private final String priceEffectiveTime;
 
     public String getPriceEffectiveTime() {
@@ -77,7 +77,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
      * The timestamp when the price stops to be effective. The price is used for search before price_expire_time. If this field is set, the original_price must be set and original_price is used after price_expire_time. Do not set if price is always effective because it will cause additional latency during search.
      * 
      */
-    @InputImport(name="priceExpireTime", required=true)
+    @Import(name="priceExpireTime", required=true)
       private final String priceExpireTime;
 
     public String getPriceExpireTime() {
@@ -88,7 +88,7 @@ public final class GoogleCloudRetailV2betaPriceInfoResponse extends io.pulumi.re
      * The price range of all the child Product.Type.VARIANT Products grouped together on the Product.Type.PRIMARY Product. Only populated for Product.Type.PRIMARY Products. Note: This field is OUTPUT_ONLY for ProductService.GetProduct. Do not set this field in API requests.
      * 
      */
-    @InputImport(name="priceRange", required=true)
+    @Import(name="priceRange", required=true)
       private final GoogleCloudRetailV2betaPriceInfoPriceRangeResponse priceRange;
 
     public GoogleCloudRetailV2betaPriceInfoPriceRangeResponse getPriceRange() {

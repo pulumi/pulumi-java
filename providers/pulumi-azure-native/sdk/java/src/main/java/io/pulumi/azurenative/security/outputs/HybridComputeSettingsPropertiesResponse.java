@@ -5,13 +5,13 @@ package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.ProxyServerPropertiesResponse;
 import io.pulumi.azurenative.security.outputs.ServicePrincipalPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HybridComputeSettingsPropertiesResponse {
     /**
      * Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
@@ -44,14 +44,14 @@ public final class HybridComputeSettingsPropertiesResponse {
      */
     private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HybridComputeSettingsPropertiesResponse(
-        @OutputCustomType.Parameter("autoProvision") String autoProvision,
-        @OutputCustomType.Parameter("hybridComputeProvisioningState") String hybridComputeProvisioningState,
-        @OutputCustomType.Parameter("proxyServer") @Nullable ProxyServerPropertiesResponse proxyServer,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("resourceGroupName") @Nullable String resourceGroupName,
-        @OutputCustomType.Parameter("servicePrincipal") @Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
+        @CustomType.Parameter("autoProvision") String autoProvision,
+        @CustomType.Parameter("hybridComputeProvisioningState") String hybridComputeProvisioningState,
+        @CustomType.Parameter("proxyServer") @Nullable ProxyServerPropertiesResponse proxyServer,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("resourceGroupName") @Nullable String resourceGroupName,
+        @CustomType.Parameter("servicePrincipal") @Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
         this.autoProvision = autoProvision;
         this.hybridComputeProvisioningState = hybridComputeProvisioningState;
         this.proxyServer = proxyServer;

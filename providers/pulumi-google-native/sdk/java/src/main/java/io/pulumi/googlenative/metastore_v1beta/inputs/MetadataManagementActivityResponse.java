@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.metastore_v1beta.inputs.MetadataExportResponse;
 import io.pulumi.googlenative.metastore_v1beta.inputs.RestoreResponse;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class MetadataManagementActivityResponse extends io.pulumi.resource
      * The latest metadata exports of the metastore service.
      * 
      */
-    @InputImport(name="metadataExports", required=true)
+    @Import(name="metadataExports", required=true)
       private final List<MetadataExportResponse> metadataExports;
 
     public List<MetadataExportResponse> getMetadataExports() {
@@ -33,7 +33,7 @@ public final class MetadataManagementActivityResponse extends io.pulumi.resource
      * The latest restores of the metastore service.
      * 
      */
-    @InputImport(name="restores", required=true)
+    @Import(name="restores", required=true)
       private final List<RestoreResponse> restores;
 
     public List<RestoreResponse> getRestores() {

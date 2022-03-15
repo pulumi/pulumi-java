@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectToTargetSqlDbTaskOutputResponse {
     /**
      * Source databases as a map from database name to database id
@@ -31,12 +31,12 @@ public final class ConnectToTargetSqlDbTaskOutputResponse {
      */
     private final String targetServerVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectToTargetSqlDbTaskOutputResponse(
-        @OutputCustomType.Parameter("databases") Map<String,String> databases,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
-        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion) {
+        @CustomType.Parameter("databases") Map<String,String> databases,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
+        @CustomType.Parameter("targetServerVersion") String targetServerVersion) {
         this.databases = databases;
         this.id = id;
         this.targetServerBrandVersion = targetServerBrandVersion;

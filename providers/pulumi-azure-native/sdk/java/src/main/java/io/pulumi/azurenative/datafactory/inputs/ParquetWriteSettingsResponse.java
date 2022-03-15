@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ParquetWriteSettingsResponse extends io.pulumi.resources.Invo
      * Specifies the file name pattern <fileNamePrefix>_<fileIndex>.<fileExtension> when copy from non-file based store without partitionOptions. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="fileNamePrefix")
+    @Import(name="fileNamePrefix")
       private final @Nullable Object fileNamePrefix;
 
     public Optional<Object> getFileNamePrefix() {
@@ -34,7 +34,7 @@ public final class ParquetWriteSettingsResponse extends io.pulumi.resources.Invo
      * Limit the written file's row count to be smaller than or equal to the specified count. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxRowsPerFile")
+    @Import(name="maxRowsPerFile")
       private final @Nullable Object maxRowsPerFile;
 
     public Optional<Object> getMaxRowsPerFile() {
@@ -46,7 +46,7 @@ public final class ParquetWriteSettingsResponse extends io.pulumi.resources.Invo
      * Expected value is 'ParquetWriteSettings'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

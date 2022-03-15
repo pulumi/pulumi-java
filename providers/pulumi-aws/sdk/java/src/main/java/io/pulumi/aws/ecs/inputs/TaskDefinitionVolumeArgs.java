@@ -7,7 +7,7 @@ import io.pulumi.aws.ecs.inputs.TaskDefinitionVolumeDockerVolumeConfigurationArg
 import io.pulumi.aws.ecs.inputs.TaskDefinitionVolumeEfsVolumeConfigurationArgs;
 import io.pulumi.aws.ecs.inputs.TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
      * Configuration block to configure a docker volume. Detailed below.
      * 
      */
-    @InputImport(name="dockerVolumeConfiguration")
+    @Import(name="dockerVolumeConfiguration")
       private final @Nullable Output<TaskDefinitionVolumeDockerVolumeConfigurationArgs> dockerVolumeConfiguration;
 
     public Output<TaskDefinitionVolumeDockerVolumeConfigurationArgs> getDockerVolumeConfiguration() {
@@ -32,7 +32,7 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
      * Configuration block for an EFS volume. Detailed below.
      * 
      */
-    @InputImport(name="efsVolumeConfiguration")
+    @Import(name="efsVolumeConfiguration")
       private final @Nullable Output<TaskDefinitionVolumeEfsVolumeConfigurationArgs> efsVolumeConfiguration;
 
     public Output<TaskDefinitionVolumeEfsVolumeConfigurationArgs> getEfsVolumeConfiguration() {
@@ -43,7 +43,7 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
      * Configuration block for an FSX Windows File Server volume. Detailed below.
      * 
      */
-    @InputImport(name="fsxWindowsFileServerVolumeConfiguration")
+    @Import(name="fsxWindowsFileServerVolumeConfiguration")
       private final @Nullable Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs> fsxWindowsFileServerVolumeConfiguration;
 
     public Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs> getFsxWindowsFileServerVolumeConfiguration() {
@@ -54,7 +54,7 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
      * Path on the host container instance that is presented to the container. If not set, ECS will create a nonpersistent data volume that starts empty and is deleted after the task has finished.
      * 
      */
-    @InputImport(name="hostPath")
+    @Import(name="hostPath")
       private final @Nullable Output<String> hostPath;
 
     public Output<String> getHostPath() {
@@ -66,7 +66,7 @@ public final class TaskDefinitionVolumeArgs extends io.pulumi.resources.Resource
      * parameter of container definition in the `mountPoints` section.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

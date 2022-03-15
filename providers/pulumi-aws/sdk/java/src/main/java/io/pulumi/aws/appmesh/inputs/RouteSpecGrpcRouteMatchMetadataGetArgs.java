@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteMatchMetadataMatchGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RouteSpecGrpcRouteMatchMetadataGetArgs extends io.pulumi.reso
      * If `true`, the match is on the opposite of the `match` criteria. Default is `false`.
      * 
      */
-    @InputImport(name="invert")
+    @Import(name="invert")
       private final @Nullable Output<Boolean> invert;
 
     public Output<Boolean> getInvert() {
@@ -31,7 +31,7 @@ public final class RouteSpecGrpcRouteMatchMetadataGetArgs extends io.pulumi.reso
      * The data to match from the request.
      * 
      */
-    @InputImport(name="match")
+    @Import(name="match")
       private final @Nullable Output<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> match;
 
     public Output<RouteSpecGrpcRouteMatchMetadataMatchGetArgs> getMatch() {
@@ -42,7 +42,7 @@ public final class RouteSpecGrpcRouteMatchMetadataGetArgs extends io.pulumi.reso
      * The name of the route. Must be between 1 and 50 characters in length.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

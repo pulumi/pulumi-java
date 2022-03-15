@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.ExecutionState;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.MatrixDimensionDefinitionArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.OutcomeArgs;
@@ -24,7 +24,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * The time when the Execution status transitioned to COMPLETE. This value will be set automatically when state transitions to COMPLETE. - In response: set if the execution state is COMPLETE. - In create/update request: never set
      * 
      */
-    @InputImport(name="completionTime")
+    @Import(name="completionTime")
       private final @Nullable Output<TimestampArgs> completionTime;
 
     public Output<TimestampArgs> getCompletionTime() {
@@ -35,7 +35,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * The time when the Execution was created. This value will be set automatically when CreateExecution is called. - In response: always set - In create/update request: never set
      * 
      */
-    @InputImport(name="creationTime")
+    @Import(name="creationTime")
       private final @Nullable Output<TimestampArgs> creationTime;
 
     public Output<TimestampArgs> getCreationTime() {
@@ -46,7 +46,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * The dimensions along which different steps in this execution may vary. This must remain fixed over the life of the execution. Returns INVALID_ARGUMENT if this field is set in an update request. Returns INVALID_ARGUMENT if the same name occurs in more than one dimension_definition. Returns INVALID_ARGUMENT if the size of the list is over 100. - In response: present if set by create - In create request: optional - In update request: never set
      * 
      */
-    @InputImport(name="dimensionDefinitions")
+    @Import(name="dimensionDefinitions")
       private final @Nullable Output<List<MatrixDimensionDefinitionArgs>> dimensionDefinitions;
 
     public Output<List<MatrixDimensionDefinitionArgs>> getDimensionDefinitions() {
@@ -57,14 +57,14 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * A unique identifier within a History for this Execution. Returns INVALID_ARGUMENT if this field is set or overwritten by the caller. - In response always set - In create/update request: never set
      * 
      */
-    @InputImport(name="executionId")
+    @Import(name="executionId")
       private final @Nullable Output<String> executionId;
 
     public Output<String> getExecutionId() {
         return this.executionId == null ? Output.empty() : this.executionId;
     }
 
-    @InputImport(name="historyId", required=true)
+    @Import(name="historyId", required=true)
       private final Output<String> historyId;
 
     public Output<String> getHistoryId() {
@@ -75,21 +75,21 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * Classify the result, for example into SUCCESS or FAILURE - In response: present if set by create/update request - In create/update request: optional
      * 
      */
-    @InputImport(name="outcome")
+    @Import(name="outcome")
       private final @Nullable Output<OutcomeArgs> outcome;
 
     public Output<OutcomeArgs> getOutcome() {
         return this.outcome == null ? Output.empty() : this.outcome;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -100,7 +100,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * Lightweight information about execution request. - In response: present if set by create - In create: optional - In update: optional
      * 
      */
-    @InputImport(name="specification")
+    @Import(name="specification")
       private final @Nullable Output<SpecificationArgs> specification;
 
     public Output<SpecificationArgs> getSpecification() {
@@ -111,7 +111,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * The initial state is IN_PROGRESS. The only legal state transitions is from IN_PROGRESS to COMPLETE. A PRECONDITION_FAILED will be returned if an invalid transition is requested. The state can only be set to COMPLETE once. A FAILED_PRECONDITION will be returned if the state is set to COMPLETE multiple times. If the state is set to COMPLETE, all the in-progress steps within the execution will be set as COMPLETE. If the outcome of the step is not set, the outcome will be set to INCONCLUSIVE. - In response always set - In create/update request: optional
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<ExecutionState> state;
 
     public Output<ExecutionState> getState() {
@@ -122,7 +122,7 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * TestExecution Matrix ID that the TestExecutionService uses. - In response: present if set by create - In create: optional - In update: never set
      * 
      */
-    @InputImport(name="testExecutionMatrixId")
+    @Import(name="testExecutionMatrixId")
       private final @Nullable Output<String> testExecutionMatrixId;
 
     public Output<String> getTestExecutionMatrixId() {

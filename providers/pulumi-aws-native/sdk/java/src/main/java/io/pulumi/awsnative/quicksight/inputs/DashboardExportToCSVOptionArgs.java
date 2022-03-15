@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.enums.DashboardBehavior;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class DashboardExportToCSVOptionArgs extends io.pulumi.resources.Re
 
     public static final DashboardExportToCSVOptionArgs Empty = new DashboardExportToCSVOptionArgs();
 
-    @InputImport(name="availabilityStatus")
+    @Import(name="availabilityStatus")
       private final @Nullable Output<DashboardBehavior> availabilityStatus;
 
     public Output<DashboardBehavior> getAvailabilityStatus() {

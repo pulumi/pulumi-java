@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceConnectionConfiguration {
     private final String databaseHost;
     private final String databaseName;
@@ -16,13 +16,13 @@ public final class DataSourceConnectionConfiguration {
     private final String secretArn;
     private final String tableName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceConnectionConfiguration(
-        @OutputCustomType.Parameter("databaseHost") String databaseHost,
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("databasePort") Integer databasePort,
-        @OutputCustomType.Parameter("secretArn") String secretArn,
-        @OutputCustomType.Parameter("tableName") String tableName) {
+        @CustomType.Parameter("databaseHost") String databaseHost,
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("databasePort") Integer databasePort,
+        @CustomType.Parameter("secretArn") String secretArn,
+        @CustomType.Parameter("tableName") String tableName) {
         this.databaseHost = databaseHost;
         this.databaseName = databaseName;
         this.databasePort = databasePort;

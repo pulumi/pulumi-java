@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyInventoryFilterResponse;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyResourceResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OSPolicyResourceGroupResponse {
     /**
      * List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name='rhel' and inventory_filters[1].os_short_name='centos' If the list is empty, this resource group will be applied to the target VM unconditionally.
@@ -22,10 +22,10 @@ public final class OSPolicyResourceGroupResponse {
      */
     private final List<OSPolicyResourceResponse> resources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OSPolicyResourceGroupResponse(
-        @OutputCustomType.Parameter("inventoryFilters") List<OSPolicyInventoryFilterResponse> inventoryFilters,
-        @OutputCustomType.Parameter("resources") List<OSPolicyResourceResponse> resources) {
+        @CustomType.Parameter("inventoryFilters") List<OSPolicyInventoryFilterResponse> inventoryFilters,
+        @CustomType.Parameter("resources") List<OSPolicyResourceResponse> resources) {
         this.inventoryFilters = inventoryFilters;
         this.resources = resources;
     }

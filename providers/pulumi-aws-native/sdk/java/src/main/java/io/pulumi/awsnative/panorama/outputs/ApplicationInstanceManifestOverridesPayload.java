@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.panorama.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationInstanceManifestOverridesPayload {
     private final @Nullable String payloadData;
 
-    @OutputCustomType.Constructor
-    private ApplicationInstanceManifestOverridesPayload(@OutputCustomType.Parameter("payloadData") @Nullable String payloadData) {
+    @CustomType.Constructor
+    private ApplicationInstanceManifestOverridesPayload(@CustomType.Parameter("payloadData") @Nullable String payloadData) {
         this.payloadData = payloadData;
     }
 

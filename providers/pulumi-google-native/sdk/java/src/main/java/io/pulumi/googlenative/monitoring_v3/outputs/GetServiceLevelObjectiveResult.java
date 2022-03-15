@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.ServiceLevelIndicatorResponse;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceLevelObjectiveResult {
     /**
      * A calendar period, semantically "since the start of the current ". At this time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
@@ -48,15 +48,15 @@ public final class GetServiceLevelObjectiveResult {
      */
     private final Map<String,String> userLabels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceLevelObjectiveResult(
-        @OutputCustomType.Parameter("calendarPeriod") String calendarPeriod,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("goal") Double goal,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("rollingPeriod") String rollingPeriod,
-        @OutputCustomType.Parameter("serviceLevelIndicator") ServiceLevelIndicatorResponse serviceLevelIndicator,
-        @OutputCustomType.Parameter("userLabels") Map<String,String> userLabels) {
+        @CustomType.Parameter("calendarPeriod") String calendarPeriod,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("goal") Double goal,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("rollingPeriod") String rollingPeriod,
+        @CustomType.Parameter("serviceLevelIndicator") ServiceLevelIndicatorResponse serviceLevelIndicator,
+        @CustomType.Parameter("userLabels") Map<String,String> userLabels) {
         this.calendarPeriod = calendarPeriod;
         this.displayName = displayName;
         this.goal = goal;

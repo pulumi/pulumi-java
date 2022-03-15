@@ -5,14 +5,14 @@ package io.pulumi.awsnative.forecast.outputs;
 
 import io.pulumi.awsnative.forecast.enums.DatasetGroupDomain;
 import io.pulumi.awsnative.forecast.outputs.DatasetGroupTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDatasetGroupResult {
     /**
      * An array of Amazon Resource Names (ARNs) of the datasets that you want to include in the dataset group.
@@ -35,12 +35,12 @@ public final class GetDatasetGroupResult {
      */
     private final @Nullable List<DatasetGroupTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatasetGroupResult(
-        @OutputCustomType.Parameter("datasetArns") @Nullable List<String> datasetArns,
-        @OutputCustomType.Parameter("datasetGroupArn") @Nullable String datasetGroupArn,
-        @OutputCustomType.Parameter("domain") @Nullable DatasetGroupDomain domain,
-        @OutputCustomType.Parameter("tags") @Nullable List<DatasetGroupTag> tags) {
+        @CustomType.Parameter("datasetArns") @Nullable List<String> datasetArns,
+        @CustomType.Parameter("datasetGroupArn") @Nullable String datasetGroupArn,
+        @CustomType.Parameter("domain") @Nullable DatasetGroupDomain domain,
+        @CustomType.Parameter("tags") @Nullable List<DatasetGroupTag> tags) {
         this.datasetArns = datasetArns;
         this.datasetGroupArn = datasetGroupArn;
         this.domain = domain;

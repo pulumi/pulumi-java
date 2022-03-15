@@ -5,13 +5,13 @@ package io.pulumi.awsnative.lambda.outputs;
 
 import io.pulumi.awsnative.lambda.outputs.CodeSigningConfigAllowedPublishers;
 import io.pulumi.awsnative.lambda.outputs.CodeSigningConfigCodeSigningPolicies;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCodeSigningConfigResult {
     /**
      * When the CodeSigningConfig is later on attached to a function, the function code will be expected to be signed by profiles from this list
@@ -39,13 +39,13 @@ public final class GetCodeSigningConfigResult {
      */
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCodeSigningConfigResult(
-        @OutputCustomType.Parameter("allowedPublishers") @Nullable CodeSigningConfigAllowedPublishers allowedPublishers,
-        @OutputCustomType.Parameter("codeSigningConfigArn") @Nullable String codeSigningConfigArn,
-        @OutputCustomType.Parameter("codeSigningConfigId") @Nullable String codeSigningConfigId,
-        @OutputCustomType.Parameter("codeSigningPolicies") @Nullable CodeSigningConfigCodeSigningPolicies codeSigningPolicies,
-        @OutputCustomType.Parameter("description") @Nullable String description) {
+        @CustomType.Parameter("allowedPublishers") @Nullable CodeSigningConfigAllowedPublishers allowedPublishers,
+        @CustomType.Parameter("codeSigningConfigArn") @Nullable String codeSigningConfigArn,
+        @CustomType.Parameter("codeSigningConfigId") @Nullable String codeSigningConfigId,
+        @CustomType.Parameter("codeSigningPolicies") @Nullable CodeSigningConfigCodeSigningPolicies codeSigningPolicies,
+        @CustomType.Parameter("description") @Nullable String description) {
         this.allowedPublishers = allowedPublishers;
         this.codeSigningConfigArn = codeSigningConfigArn;
         this.codeSigningConfigId = codeSigningConfigId;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RsaKeyTypeResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The maximum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.
      * 
      */
-    @InputImport(name="maxModulusSize", required=true)
+    @Import(name="maxModulusSize", required=true)
       private final String maxModulusSize;
 
     public String getMaxModulusSize() {
@@ -31,7 +31,7 @@ public final class RsaKeyTypeResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The minimum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service-level min RSA modulus size will continue to apply.
      * 
      */
-    @InputImport(name="minModulusSize", required=true)
+    @Import(name="minModulusSize", required=true)
       private final String minModulusSize;
 
     public String getMinModulusSize() {

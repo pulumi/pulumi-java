@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class WorkforceCognitoConfigGetArgs extends io.pulumi.resources.Res
      * The OIDC IdP client ID used to configure your private workforce.
      * 
      */
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -28,7 +28,7 @@ public final class WorkforceCognitoConfigGetArgs extends io.pulumi.resources.Res
      * The id for your Amazon Cognito user pool.
      * 
      */
-    @InputImport(name="userPool", required=true)
+    @Import(name="userPool", required=true)
       private final Output<String> userPool;
 
     public Output<String> getUserPool() {

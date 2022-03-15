@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsDiskResponse {
     /**
      * Specifies the size of os disk in gigabytes. This is the fully expanded disk size needed of the VHD image on the ASE. This disk size should be greater than the size of the VHD provided in vhdUri.
@@ -28,11 +28,11 @@ public final class OsDiskResponse {
      */
     private final @Nullable String osType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsDiskResponse(
-        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("osType") @Nullable String osType) {
+        @CustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("osType") @Nullable String osType) {
         this.diskSizeGB = diskSizeGB;
         this.name = name;
         this.osType = osType;

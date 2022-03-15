@@ -5,13 +5,13 @@ package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.enums.DataSetRowLevelPermissionFormatVersion;
 import io.pulumi.awsnative.quicksight.enums.DataSetRowLevelPermissionPolicy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSetRowLevelPermissionDataSet {
     /**
      * <p>The Amazon Resource Name (ARN) of the permission dataset.</p>
@@ -26,12 +26,12 @@ public final class DataSetRowLevelPermissionDataSet {
     private final @Nullable String namespace;
     private final DataSetRowLevelPermissionPolicy permissionPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSetRowLevelPermissionDataSet(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("formatVersion") @Nullable DataSetRowLevelPermissionFormatVersion formatVersion,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
-        @OutputCustomType.Parameter("permissionPolicy") DataSetRowLevelPermissionPolicy permissionPolicy) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("formatVersion") @Nullable DataSetRowLevelPermissionFormatVersion formatVersion,
+        @CustomType.Parameter("namespace") @Nullable String namespace,
+        @CustomType.Parameter("permissionPolicy") DataSetRowLevelPermissionPolicy permissionPolicy) {
         this.arn = arn;
         this.formatVersion = formatVersion;
         this.namespace = namespace;

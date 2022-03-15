@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecContainerEnv;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecContainerEnvFrom;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecContainerPort;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTemplateSpecContainer {
     /**
      * Arguments to the entrypoint.
@@ -109,17 +109,17 @@ public final class ServiceTemplateSpecContainer {
         @Deprecated /* Not supported by Cloud Run fully managed */
     private final @Nullable String workingDir;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTemplateSpecContainer(
-        @OutputCustomType.Parameter("args") @Nullable List<String> args,
-        @OutputCustomType.Parameter("commands") @Nullable List<String> commands,
-        @OutputCustomType.Parameter("envFroms") @Nullable List<ServiceTemplateSpecContainerEnvFrom> envFroms,
-        @OutputCustomType.Parameter("envs") @Nullable List<ServiceTemplateSpecContainerEnv> envs,
-        @OutputCustomType.Parameter("image") String image,
-        @OutputCustomType.Parameter("ports") @Nullable List<ServiceTemplateSpecContainerPort> ports,
-        @OutputCustomType.Parameter("resources") @Nullable ServiceTemplateSpecContainerResources resources,
-        @OutputCustomType.Parameter("volumeMounts") @Nullable List<ServiceTemplateSpecContainerVolumeMount> volumeMounts,
-        @OutputCustomType.Parameter("workingDir") @Nullable String workingDir) {
+        @CustomType.Parameter("args") @Nullable List<String> args,
+        @CustomType.Parameter("commands") @Nullable List<String> commands,
+        @CustomType.Parameter("envFroms") @Nullable List<ServiceTemplateSpecContainerEnvFrom> envFroms,
+        @CustomType.Parameter("envs") @Nullable List<ServiceTemplateSpecContainerEnv> envs,
+        @CustomType.Parameter("image") String image,
+        @CustomType.Parameter("ports") @Nullable List<ServiceTemplateSpecContainerPort> ports,
+        @CustomType.Parameter("resources") @Nullable ServiceTemplateSpecContainerResources resources,
+        @CustomType.Parameter("volumeMounts") @Nullable List<ServiceTemplateSpecContainerVolumeMount> volumeMounts,
+        @CustomType.Parameter("workingDir") @Nullable String workingDir) {
         this.args = args;
         this.commands = commands;
         this.envFroms = envFroms;

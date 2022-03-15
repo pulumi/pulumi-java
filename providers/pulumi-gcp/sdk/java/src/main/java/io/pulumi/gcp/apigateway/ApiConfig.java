@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigateway.ApiConfigArgs;
@@ -50,7 +50,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * The API to attach the config to.
      * 
      */
-    @OutputExport(name="api", type=String.class, parameters={})
+    @Export(name="api", type=String.class, parameters={})
     private Output<String> api;
 
     /**
@@ -64,7 +64,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * Identifier to assign to the API Config. Must be unique within scope of the parent resource(api).
      * 
      */
-    @OutputExport(name="apiConfigId", type=String.class, parameters={})
+    @Export(name="apiConfigId", type=String.class, parameters={})
     private Output<String> apiConfigId;
 
     /**
@@ -79,7 +79,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * specified prefix. If this and api_config_id are unspecified, a random value is chosen for the name.
      * 
      */
-    @OutputExport(name="apiConfigIdPrefix", type=String.class, parameters={})
+    @Export(name="apiConfigIdPrefix", type=String.class, parameters={})
     private Output<String> apiConfigIdPrefix;
 
     /**
@@ -94,7 +94,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * A user-visible name for the API.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -110,7 +110,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="gatewayConfig", type=ApiConfigGatewayConfig.class, parameters={})
+    @Export(name="gatewayConfig", type=ApiConfigGatewayConfig.class, parameters={})
     private Output</* @Nullable */ ApiConfigGatewayConfig> gatewayConfig;
 
     /**
@@ -126,7 +126,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * Resource labels to represent user-provided metadata.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -140,7 +140,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * The resource name of the API Config.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -155,7 +155,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="openapiDocuments", type=List.class, parameters={ApiConfigOpenapiDocument.class})
+    @Export(name="openapiDocuments", type=List.class, parameters={ApiConfigOpenapiDocument.class})
     private Output<List<ApiConfigOpenapiDocument>> openapiDocuments;
 
     /**
@@ -171,7 +171,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -186,7 +186,7 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
      * The ID of the associated Service Config (https://cloud.google.com/service-infrastructure/docs/glossary#config).
      * 
      */
-    @OutputExport(name="serviceConfigId", type=String.class, parameters={})
+    @Export(name="serviceConfigId", type=String.class, parameters={})
     private Output<String> serviceConfigId;
 
     /**

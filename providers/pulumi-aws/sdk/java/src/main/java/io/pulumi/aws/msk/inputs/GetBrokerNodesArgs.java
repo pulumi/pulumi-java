@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.msk.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetBrokerNodesArgs extends io.pulumi.resources.InvokeArgs {
      * The ARN of the cluster the nodes belong to.
      * 
      */
-    @InputImport(name="clusterArn", required=true)
+    @Import(name="clusterArn", required=true)
       private final String clusterArn;
 
     public String getClusterArn() {

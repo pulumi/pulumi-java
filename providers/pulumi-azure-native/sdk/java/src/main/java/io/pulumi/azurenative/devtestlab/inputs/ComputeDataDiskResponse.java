@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ComputeDataDiskResponse extends io.pulumi.resources.InvokeArg
      * Gets data disk size in GiB.
      * 
      */
-    @InputImport(name="diskSizeGiB")
+    @Import(name="diskSizeGiB")
       private final @Nullable Integer diskSizeGiB;
 
     public Optional<Integer> getDiskSizeGiB() {
@@ -34,7 +34,7 @@ public final class ComputeDataDiskResponse extends io.pulumi.resources.InvokeArg
      * When backed by a blob, the URI of underlying blob.
      * 
      */
-    @InputImport(name="diskUri")
+    @Import(name="diskUri")
       private final @Nullable String diskUri;
 
     public Optional<String> getDiskUri() {
@@ -45,7 +45,7 @@ public final class ComputeDataDiskResponse extends io.pulumi.resources.InvokeArg
      * When backed by managed disk, this is the ID of the compute disk resource.
      * 
      */
-    @InputImport(name="managedDiskId")
+    @Import(name="managedDiskId")
       private final @Nullable String managedDiskId;
 
     public Optional<String> getManagedDiskId() {
@@ -56,7 +56,7 @@ public final class ComputeDataDiskResponse extends io.pulumi.resources.InvokeArg
      * Gets data disk name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class IntentFollowupIntentInfoArgs extends io.pulumi.resources.Reso
 
     public static final IntentFollowupIntentInfoArgs Empty = new IntentFollowupIntentInfoArgs();
 
-    @InputImport(name="followupIntentName")
+    @Import(name="followupIntentName")
       private final @Nullable Output<String> followupIntentName;
 
     public Output<String> getFollowupIntentName() {
@@ -26,7 +26,7 @@ public final class IntentFollowupIntentInfoArgs extends io.pulumi.resources.Reso
      * Format: projects/<Project ID>/agent/intents/<Intent ID>.
      * 
      */
-    @InputImport(name="parentFollowupIntentName")
+    @Import(name="parentFollowupIntentName")
       private final @Nullable Output<String> parentFollowupIntentName;
 
     public Output<String> getParentFollowupIntentName() {

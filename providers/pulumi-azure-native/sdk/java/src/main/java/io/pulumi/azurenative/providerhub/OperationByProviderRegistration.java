@@ -8,7 +8,7 @@ import io.pulumi.azurenative.providerhub.OperationByProviderRegistrationArgs;
 import io.pulumi.azurenative.providerhub.outputs.OperationsDefinitionResponseDisplay;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -32,7 +32,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="azure-native:providerhub:OperationByProviderRegistration")
 public class OperationByProviderRegistration extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="actionType", type=String.class, parameters={})
+    @Export(name="actionType", type=String.class, parameters={})
     private Output</* @Nullable */ String> actionType;
 
     public Output</* @Nullable */ String> getActionType() {
@@ -42,7 +42,7 @@ public class OperationByProviderRegistration extends io.pulumi.resources.CustomR
      * Display information of the operation.
      * 
      */
-    @OutputExport(name="display", type=OperationsDefinitionResponseDisplay.class, parameters={})
+    @Export(name="display", type=OperationsDefinitionResponseDisplay.class, parameters={})
     private Output<OperationsDefinitionResponseDisplay> display;
 
     /**
@@ -56,7 +56,7 @@ public class OperationByProviderRegistration extends io.pulumi.resources.CustomR
      * Indicates whether the operation applies to data-plane.
      * 
      */
-    @OutputExport(name="isDataAction", type=Boolean.class, parameters={})
+    @Export(name="isDataAction", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isDataAction;
 
     /**
@@ -70,7 +70,7 @@ public class OperationByProviderRegistration extends io.pulumi.resources.CustomR
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,13 +80,13 @@ public class OperationByProviderRegistration extends io.pulumi.resources.CustomR
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="origin", type=String.class, parameters={})
+    @Export(name="origin", type=String.class, parameters={})
     private Output</* @Nullable */ String> origin;
 
     public Output</* @Nullable */ String> getOrigin() {
         return this.origin;
     }
-    @OutputExport(name="properties", type=Object.class, parameters={})
+    @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     public Output<Object> getProperties() {
@@ -96,7 +96,7 @@ public class OperationByProviderRegistration extends io.pulumi.resources.CustomR
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

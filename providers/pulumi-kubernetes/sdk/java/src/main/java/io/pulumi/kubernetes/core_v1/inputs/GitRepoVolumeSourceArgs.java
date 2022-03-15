@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class GitRepoVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * Target directory name. Must not contain or start with '..'.  If '.' is supplied, the volume directory will be the git repository.  Otherwise, if specified, the volume will contain the git repository in the subdirectory with the given name.
      * 
      */
-    @InputImport(name="directory")
+    @Import(name="directory")
       private final @Nullable Output<String> directory;
 
     public Output<String> getDirectory() {
@@ -35,7 +35,7 @@ public final class GitRepoVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * Repository URL
      * 
      */
-    @InputImport(name="repository", required=true)
+    @Import(name="repository", required=true)
       private final Output<String> repository;
 
     public Output<String> getRepository() {
@@ -46,7 +46,7 @@ public final class GitRepoVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * Commit hash for the specified revision.
      * 
      */
-    @InputImport(name="revision")
+    @Import(name="revision")
       private final @Nullable Output<String> revision;
 
     public Output<String> getRevision() {

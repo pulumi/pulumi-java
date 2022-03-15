@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkResponse {
     /**
      * List of ports, or port pairs, to forward from the virtual machine to the application container. Only applicable in the App Engine flexible environment.
@@ -37,13 +37,13 @@ public final class NetworkResponse {
      */
     private final String subnetworkName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkResponse(
-        @OutputCustomType.Parameter("forwardedPorts") List<String> forwardedPorts,
-        @OutputCustomType.Parameter("instanceTag") String instanceTag,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sessionAffinity") Boolean sessionAffinity,
-        @OutputCustomType.Parameter("subnetworkName") String subnetworkName) {
+        @CustomType.Parameter("forwardedPorts") List<String> forwardedPorts,
+        @CustomType.Parameter("instanceTag") String instanceTag,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sessionAffinity") Boolean sessionAffinity,
+        @CustomType.Parameter("subnetworkName") String subnetworkName) {
         this.forwardedPorts = forwardedPorts;
         this.instanceTag = instanceTag;
         this.name = name;

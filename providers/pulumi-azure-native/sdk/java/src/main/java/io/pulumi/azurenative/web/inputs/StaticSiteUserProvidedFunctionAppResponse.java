@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
      * The date and time on which the function app was registered with the static site.
      * 
      */
-    @InputImport(name="createdOn", required=true)
+    @Import(name="createdOn", required=true)
       private final String createdOn;
 
     public String getCreatedOn() {
@@ -33,7 +33,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
      * The region of the function app registered with the static site
      * 
      */
-    @InputImport(name="functionAppRegion")
+    @Import(name="functionAppRegion")
       private final @Nullable String functionAppRegion;
 
     public Optional<String> getFunctionAppRegion() {
@@ -44,7 +44,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
      * The resource id of the function app registered with the static site
      * 
      */
-    @InputImport(name="functionAppResourceId")
+    @Import(name="functionAppResourceId")
       private final @Nullable String functionAppResourceId;
 
     public Optional<String> getFunctionAppResourceId() {
@@ -55,7 +55,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
      * Resource Id.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -66,7 +66,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable String kind;
 
     public Optional<String> getKind() {
@@ -77,7 +77,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
      * Resource Name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -88,7 +88,7 @@ public final class StaticSiteUserProvidedFunctionAppResponse extends io.pulumi.r
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1NluSettingsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetVersionResult {
     /**
      * Create time of the version.
@@ -41,14 +41,14 @@ public final class GetVersionResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVersionResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nluSettings") GoogleCloudDialogflowCxV3beta1NluSettingsResponse nluSettings,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nluSettings") GoogleCloudDialogflowCxV3beta1NluSettingsResponse nluSettings,
+        @CustomType.Parameter("state") String state) {
         this.createTime = createTime;
         this.description = description;
         this.displayName = displayName;

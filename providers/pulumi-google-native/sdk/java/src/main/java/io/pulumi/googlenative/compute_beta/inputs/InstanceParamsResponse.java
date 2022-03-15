@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class InstanceParamsResponse extends io.pulumi.resources.InvokeArgs
      * Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
      * 
      */
-    @InputImport(name="resourceManagerTags", required=true)
+    @Import(name="resourceManagerTags", required=true)
       private final Map<String,String> resourceManagerTags;
 
     public Map<String,String> getResourceManagerTags() {

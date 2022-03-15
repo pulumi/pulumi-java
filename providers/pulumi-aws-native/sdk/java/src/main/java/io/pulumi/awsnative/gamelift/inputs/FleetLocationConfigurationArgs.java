@@ -5,7 +5,7 @@ package io.pulumi.awsnative.gamelift.inputs;
 
 import io.pulumi.awsnative.gamelift.inputs.FleetLocationCapacityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class FleetLocationConfigurationArgs extends io.pulumi.resources.Re
 
     public static final FleetLocationConfigurationArgs Empty = new FleetLocationConfigurationArgs();
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
         return this.location;
     }
 
-    @InputImport(name="locationCapacity")
+    @Import(name="locationCapacity")
       private final @Nullable Output<FleetLocationCapacityArgs> locationCapacity;
 
     public Output<FleetLocationCapacityArgs> getLocationCapacity() {

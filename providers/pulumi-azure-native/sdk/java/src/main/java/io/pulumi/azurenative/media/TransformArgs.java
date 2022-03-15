@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.media.inputs.TransformOutputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
      * The Media Services account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -31,7 +31,7 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
      * An optional verbose description of the Transform.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
      * An array of one or more TransformOutputs that the Transform should generate.
      * 
      */
-    @InputImport(name="outputs", required=true)
+    @Import(name="outputs", required=true)
       private final Output<List<TransformOutputArgs>> outputs;
 
     public Output<List<TransformOutputArgs>> getOutputs() {
@@ -53,7 +53,7 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
      * The Transform name.
      * 
      */
-    @InputImport(name="transformName")
+    @Import(name="transformName")
       private final @Nullable Output<String> transformName;
 
     public Output<String> getTransformName() {

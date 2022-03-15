@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.VPCTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVPCResult {
     /**
      * A list of IPv4 CIDR block association IDs for the VPC.
@@ -66,17 +66,17 @@ public final class GetVPCResult {
      */
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVPCResult(
-        @OutputCustomType.Parameter("cidrBlockAssociations") @Nullable List<String> cidrBlockAssociations,
-        @OutputCustomType.Parameter("defaultNetworkAcl") @Nullable String defaultNetworkAcl,
-        @OutputCustomType.Parameter("defaultSecurityGroup") @Nullable String defaultSecurityGroup,
-        @OutputCustomType.Parameter("enableDnsHostnames") @Nullable Boolean enableDnsHostnames,
-        @OutputCustomType.Parameter("enableDnsSupport") @Nullable Boolean enableDnsSupport,
-        @OutputCustomType.Parameter("instanceTenancy") @Nullable String instanceTenancy,
-        @OutputCustomType.Parameter("ipv6CidrBlocks") @Nullable List<String> ipv6CidrBlocks,
-        @OutputCustomType.Parameter("tags") @Nullable List<VPCTag> tags,
-        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
+        @CustomType.Parameter("cidrBlockAssociations") @Nullable List<String> cidrBlockAssociations,
+        @CustomType.Parameter("defaultNetworkAcl") @Nullable String defaultNetworkAcl,
+        @CustomType.Parameter("defaultSecurityGroup") @Nullable String defaultSecurityGroup,
+        @CustomType.Parameter("enableDnsHostnames") @Nullable Boolean enableDnsHostnames,
+        @CustomType.Parameter("enableDnsSupport") @Nullable Boolean enableDnsSupport,
+        @CustomType.Parameter("instanceTenancy") @Nullable String instanceTenancy,
+        @CustomType.Parameter("ipv6CidrBlocks") @Nullable List<String> ipv6CidrBlocks,
+        @CustomType.Parameter("tags") @Nullable List<VPCTag> tags,
+        @CustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.cidrBlockAssociations = cidrBlockAssociations;
         this.defaultNetworkAcl = defaultNetworkAcl;
         this.defaultSecurityGroup = defaultSecurityGroup;

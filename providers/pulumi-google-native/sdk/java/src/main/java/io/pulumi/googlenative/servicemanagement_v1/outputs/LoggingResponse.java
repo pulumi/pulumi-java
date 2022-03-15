@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.LoggingDestinationResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LoggingResponse {
     /**
      * Logging configurations for sending logs to the consumer project. There can be multiple consumer destinations, each one must have a different monitored resource type. A log can be used in at most one consumer destination.
@@ -21,10 +21,10 @@ public final class LoggingResponse {
      */
     private final List<LoggingDestinationResponse> producerDestinations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoggingResponse(
-        @OutputCustomType.Parameter("consumerDestinations") List<LoggingDestinationResponse> consumerDestinations,
-        @OutputCustomType.Parameter("producerDestinations") List<LoggingDestinationResponse> producerDestinations) {
+        @CustomType.Parameter("consumerDestinations") List<LoggingDestinationResponse> consumerDestinations,
+        @CustomType.Parameter("producerDestinations") List<LoggingDestinationResponse> producerDestinations) {
         this.consumerDestinations = consumerDestinations;
         this.producerDestinations = producerDestinations;
     }

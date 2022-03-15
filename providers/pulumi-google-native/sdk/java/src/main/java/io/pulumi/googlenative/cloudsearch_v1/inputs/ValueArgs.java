@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.DateArgs;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -21,42 +21,42 @@ public final class ValueArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ValueArgs Empty = new ValueArgs();
 
-    @InputImport(name="booleanValue")
+    @Import(name="booleanValue")
       private final @Nullable Output<Boolean> booleanValue;
 
     public Output<Boolean> getBooleanValue() {
         return this.booleanValue == null ? Output.empty() : this.booleanValue;
     }
 
-    @InputImport(name="dateValue")
+    @Import(name="dateValue")
       private final @Nullable Output<DateArgs> dateValue;
 
     public Output<DateArgs> getDateValue() {
         return this.dateValue == null ? Output.empty() : this.dateValue;
     }
 
-    @InputImport(name="doubleValue")
+    @Import(name="doubleValue")
       private final @Nullable Output<Double> doubleValue;
 
     public Output<Double> getDoubleValue() {
         return this.doubleValue == null ? Output.empty() : this.doubleValue;
     }
 
-    @InputImport(name="integerValue")
+    @Import(name="integerValue")
       private final @Nullable Output<String> integerValue;
 
     public Output<String> getIntegerValue() {
         return this.integerValue == null ? Output.empty() : this.integerValue;
     }
 
-    @InputImport(name="stringValue")
+    @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
     public Output<String> getStringValue() {
         return this.stringValue == null ? Output.empty() : this.stringValue;
     }
 
-    @InputImport(name="timestampValue")
+    @Import(name="timestampValue")
       private final @Nullable Output<String> timestampValue;
 
     public Output<String> getTimestampValue() {

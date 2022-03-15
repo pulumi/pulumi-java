@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOnlineDeploymentLogsResult {
     /**
      * The retrieved online deployment logs.
@@ -17,8 +17,8 @@ public final class GetOnlineDeploymentLogsResult {
      */
     private final @Nullable String content;
 
-    @OutputCustomType.Constructor
-    private GetOnlineDeploymentLogsResult(@OutputCustomType.Parameter("content") @Nullable String content) {
+    @CustomType.Constructor
+    private GetOnlineDeploymentLogsResult(@CustomType.Parameter("content") @Nullable String content) {
         this.content = content;
     }
 

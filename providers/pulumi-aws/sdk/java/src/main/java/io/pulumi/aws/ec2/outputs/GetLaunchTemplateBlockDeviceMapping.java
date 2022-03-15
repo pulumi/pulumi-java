@@ -4,24 +4,24 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetLaunchTemplateBlockDeviceMappingEb;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLaunchTemplateBlockDeviceMapping {
     private final String deviceName;
     private final List<GetLaunchTemplateBlockDeviceMappingEb> ebs;
     private final String noDevice;
     private final String virtualName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLaunchTemplateBlockDeviceMapping(
-        @OutputCustomType.Parameter("deviceName") String deviceName,
-        @OutputCustomType.Parameter("ebs") List<GetLaunchTemplateBlockDeviceMappingEb> ebs,
-        @OutputCustomType.Parameter("noDevice") String noDevice,
-        @OutputCustomType.Parameter("virtualName") String virtualName) {
+        @CustomType.Parameter("deviceName") String deviceName,
+        @CustomType.Parameter("ebs") List<GetLaunchTemplateBlockDeviceMappingEb> ebs,
+        @CustomType.Parameter("noDevice") String noDevice,
+        @CustomType.Parameter("virtualName") String virtualName) {
         this.deviceName = deviceName;
         this.ebs = ebs;
         this.noDevice = noDevice;

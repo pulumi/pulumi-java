@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WeekDayOfMonthResponse {
     /**
      * A day of the week.
@@ -26,11 +26,11 @@ public final class WeekDayOfMonthResponse {
      */
     private final Integer weekOrdinal;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WeekDayOfMonthResponse(
-        @OutputCustomType.Parameter("dayOfWeek") String dayOfWeek,
-        @OutputCustomType.Parameter("dayOffset") Integer dayOffset,
-        @OutputCustomType.Parameter("weekOrdinal") Integer weekOrdinal) {
+        @CustomType.Parameter("dayOfWeek") String dayOfWeek,
+        @CustomType.Parameter("dayOffset") Integer dayOffset,
+        @CustomType.Parameter("weekOrdinal") Integer weekOrdinal) {
         this.dayOfWeek = dayOfWeek;
         this.dayOffset = dayOffset;
         this.weekOrdinal = weekOrdinal;

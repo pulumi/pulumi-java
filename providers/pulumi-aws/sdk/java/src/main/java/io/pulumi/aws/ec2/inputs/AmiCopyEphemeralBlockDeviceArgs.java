@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AmiCopyEphemeralBlockDeviceArgs extends io.pulumi.resources.R
      * The path at which the device is exposed to created instances.
      * 
      */
-    @InputImport(name="deviceName")
+    @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -30,7 +30,7 @@ public final class AmiCopyEphemeralBlockDeviceArgs extends io.pulumi.resources.R
      * *N* is a volume number starting from zero.
      * 
      */
-    @InputImport(name="virtualName")
+    @Import(name="virtualName")
       private final @Nullable Output<String> virtualName;
 
     public Output<String> getVirtualName() {

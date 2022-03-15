@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.securitycenter_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSourceResult {
     /**
      * The canonical name of the finding. It's either "organizations/{organization_id}/sources/{source_id}", "folders/{folder_id}/sources/{source_id}" or "projects/{project_number}/sources/{source_id}", depending on the closest CRM ancestor of the resource associated with the finding.
@@ -30,12 +30,12 @@ public final class GetSourceResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSourceResult(
-        @OutputCustomType.Parameter("canonicalName") String canonicalName,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("canonicalName") String canonicalName,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name) {
         this.canonicalName = canonicalName;
         this.description = description;
         this.displayName = displayName;

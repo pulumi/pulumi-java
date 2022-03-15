@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class NamespacedGkeDeploymentTargetResponse extends io.pulumi.resou
      * Optional. A namespace within the GKE cluster to deploy into.
      * 
      */
-    @InputImport(name="clusterNamespace", required=true)
+    @Import(name="clusterNamespace", required=true)
       private final String clusterNamespace;
 
     public String getClusterNamespace() {
@@ -31,7 +31,7 @@ public final class NamespacedGkeDeploymentTargetResponse extends io.pulumi.resou
      * Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
      * 
      */
-    @InputImport(name="targetGkeCluster", required=true)
+    @Import(name="targetGkeCluster", required=true)
       private final String targetGkeCluster;
 
     public String getTargetGkeCluster() {

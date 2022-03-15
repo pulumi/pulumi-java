@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.composer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebServerResourceResponse {
     /**
      * Optional. CPU request and limit for Airflow web server.
@@ -25,11 +25,11 @@ public final class WebServerResourceResponse {
      */
     private final Double storageGb;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebServerResourceResponse(
-        @OutputCustomType.Parameter("cpu") Double cpu,
-        @OutputCustomType.Parameter("memoryGb") Double memoryGb,
-        @OutputCustomType.Parameter("storageGb") Double storageGb) {
+        @CustomType.Parameter("cpu") Double cpu,
+        @CustomType.Parameter("memoryGb") Double memoryGb,
+        @CustomType.Parameter("storageGb") Double storageGb) {
         this.cpu = cpu;
         this.memoryGb = memoryGb;
         this.storageGb = storageGb;

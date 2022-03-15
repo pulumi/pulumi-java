@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.PrivateDnsZoneConfigResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPrivateDnsZoneGroupResult {
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -39,13 +39,13 @@ public final class GetPrivateDnsZoneGroupResult {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPrivateDnsZoneGroupResult(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("privateDnsZoneConfigs") @Nullable List<PrivateDnsZoneConfigResponse> privateDnsZoneConfigs,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("privateDnsZoneConfigs") @Nullable List<PrivateDnsZoneConfigResponse> privateDnsZoneConfigs,
+        @CustomType.Parameter("provisioningState") String provisioningState) {
         this.etag = etag;
         this.id = id;
         this.name = name;

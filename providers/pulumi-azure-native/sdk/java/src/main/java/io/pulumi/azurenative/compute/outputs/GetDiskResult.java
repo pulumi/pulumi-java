@@ -12,7 +12,7 @@ import io.pulumi.azurenative.compute.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.compute.outputs.PropertyUpdatesInProgressResponse;
 import io.pulumi.azurenative.compute.outputs.PurchasePlanResponse;
 import io.pulumi.azurenative.compute.outputs.ShareInfoElementResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDiskResult {
     /**
      * Set to true to enable bursting beyond the provisioned performance target of the disk. Bursting is disabled by default. Does not apply to Ultra disks.
@@ -201,43 +201,43 @@ public final class GetDiskResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDiskResult(
-        @OutputCustomType.Parameter("burstingEnabled") @Nullable Boolean burstingEnabled,
-        @OutputCustomType.Parameter("creationData") CreationDataResponse creationData,
-        @OutputCustomType.Parameter("diskAccessId") @Nullable String diskAccessId,
-        @OutputCustomType.Parameter("diskIOPSReadOnly") @Nullable Double diskIOPSReadOnly,
-        @OutputCustomType.Parameter("diskIOPSReadWrite") @Nullable Double diskIOPSReadWrite,
-        @OutputCustomType.Parameter("diskMBpsReadOnly") @Nullable Double diskMBpsReadOnly,
-        @OutputCustomType.Parameter("diskMBpsReadWrite") @Nullable Double diskMBpsReadWrite,
-        @OutputCustomType.Parameter("diskSizeBytes") Double diskSizeBytes,
-        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
-        @OutputCustomType.Parameter("diskState") String diskState,
-        @OutputCustomType.Parameter("encryption") @Nullable EncryptionResponse encryption,
-        @OutputCustomType.Parameter("encryptionSettingsCollection") @Nullable EncryptionSettingsCollectionResponse encryptionSettingsCollection,
-        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
-        @OutputCustomType.Parameter("hyperVGeneration") @Nullable String hyperVGeneration,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("managedBy") String managedBy,
-        @OutputCustomType.Parameter("managedByExtended") List<String> managedByExtended,
-        @OutputCustomType.Parameter("maxShares") @Nullable Integer maxShares,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkAccessPolicy") @Nullable String networkAccessPolicy,
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("propertyUpdatesInProgress") PropertyUpdatesInProgressResponse propertyUpdatesInProgress,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("purchasePlan") @Nullable PurchasePlanResponse purchasePlan,
-        @OutputCustomType.Parameter("securityProfile") @Nullable DiskSecurityProfileResponse securityProfile,
-        @OutputCustomType.Parameter("shareInfo") List<ShareInfoElementResponse> shareInfo,
-        @OutputCustomType.Parameter("sku") @Nullable DiskSkuResponse sku,
-        @OutputCustomType.Parameter("supportsHibernation") @Nullable Boolean supportsHibernation,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("tier") @Nullable String tier,
-        @OutputCustomType.Parameter("timeCreated") String timeCreated,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueId") String uniqueId,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("burstingEnabled") @Nullable Boolean burstingEnabled,
+        @CustomType.Parameter("creationData") CreationDataResponse creationData,
+        @CustomType.Parameter("diskAccessId") @Nullable String diskAccessId,
+        @CustomType.Parameter("diskIOPSReadOnly") @Nullable Double diskIOPSReadOnly,
+        @CustomType.Parameter("diskIOPSReadWrite") @Nullable Double diskIOPSReadWrite,
+        @CustomType.Parameter("diskMBpsReadOnly") @Nullable Double diskMBpsReadOnly,
+        @CustomType.Parameter("diskMBpsReadWrite") @Nullable Double diskMBpsReadWrite,
+        @CustomType.Parameter("diskSizeBytes") Double diskSizeBytes,
+        @CustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @CustomType.Parameter("diskState") String diskState,
+        @CustomType.Parameter("encryption") @Nullable EncryptionResponse encryption,
+        @CustomType.Parameter("encryptionSettingsCollection") @Nullable EncryptionSettingsCollectionResponse encryptionSettingsCollection,
+        @CustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @CustomType.Parameter("hyperVGeneration") @Nullable String hyperVGeneration,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("managedBy") String managedBy,
+        @CustomType.Parameter("managedByExtended") List<String> managedByExtended,
+        @CustomType.Parameter("maxShares") @Nullable Integer maxShares,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkAccessPolicy") @Nullable String networkAccessPolicy,
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("propertyUpdatesInProgress") PropertyUpdatesInProgressResponse propertyUpdatesInProgress,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("purchasePlan") @Nullable PurchasePlanResponse purchasePlan,
+        @CustomType.Parameter("securityProfile") @Nullable DiskSecurityProfileResponse securityProfile,
+        @CustomType.Parameter("shareInfo") List<ShareInfoElementResponse> shareInfo,
+        @CustomType.Parameter("sku") @Nullable DiskSkuResponse sku,
+        @CustomType.Parameter("supportsHibernation") @Nullable Boolean supportsHibernation,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("tier") @Nullable String tier,
+        @CustomType.Parameter("timeCreated") String timeCreated,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueId") String uniqueId,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.burstingEnabled = burstingEnabled;
         this.creationData = creationData;
         this.diskAccessId = diskAccessId;

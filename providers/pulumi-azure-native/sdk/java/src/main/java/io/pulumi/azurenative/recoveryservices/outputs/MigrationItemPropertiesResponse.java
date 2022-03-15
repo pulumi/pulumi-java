@@ -6,14 +6,14 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 import io.pulumi.azurenative.recoveryservices.outputs.CurrentJobDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.HealthErrorResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMwareCbtMigrationDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MigrationItemPropertiesResponse {
     /**
      * The allowed operations on the migration item, based on the current migration state of the item.
@@ -81,21 +81,21 @@ public final class MigrationItemPropertiesResponse {
      */
     private final String testMigrateStateDescription;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrationItemPropertiesResponse(
-        @OutputCustomType.Parameter("allowedOperations") List<String> allowedOperations,
-        @OutputCustomType.Parameter("currentJob") CurrentJobDetailsResponse currentJob,
-        @OutputCustomType.Parameter("health") String health,
-        @OutputCustomType.Parameter("healthErrors") List<HealthErrorResponse> healthErrors,
-        @OutputCustomType.Parameter("machineName") String machineName,
-        @OutputCustomType.Parameter("migrationState") String migrationState,
-        @OutputCustomType.Parameter("migrationStateDescription") String migrationStateDescription,
-        @OutputCustomType.Parameter("policyFriendlyName") String policyFriendlyName,
-        @OutputCustomType.Parameter("policyId") String policyId,
-        @OutputCustomType.Parameter("providerSpecificDetails") @Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails,
-        @OutputCustomType.Parameter("recoveryServicesProviderId") String recoveryServicesProviderId,
-        @OutputCustomType.Parameter("testMigrateState") String testMigrateState,
-        @OutputCustomType.Parameter("testMigrateStateDescription") String testMigrateStateDescription) {
+        @CustomType.Parameter("allowedOperations") List<String> allowedOperations,
+        @CustomType.Parameter("currentJob") CurrentJobDetailsResponse currentJob,
+        @CustomType.Parameter("health") String health,
+        @CustomType.Parameter("healthErrors") List<HealthErrorResponse> healthErrors,
+        @CustomType.Parameter("machineName") String machineName,
+        @CustomType.Parameter("migrationState") String migrationState,
+        @CustomType.Parameter("migrationStateDescription") String migrationStateDescription,
+        @CustomType.Parameter("policyFriendlyName") String policyFriendlyName,
+        @CustomType.Parameter("policyId") String policyId,
+        @CustomType.Parameter("providerSpecificDetails") @Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails,
+        @CustomType.Parameter("recoveryServicesProviderId") String recoveryServicesProviderId,
+        @CustomType.Parameter("testMigrateState") String testMigrateState,
+        @CustomType.Parameter("testMigrateStateDescription") String testMigrateStateDescription) {
         this.allowedOperations = allowedOperations;
         this.currentJob = currentJob;
         this.health = health;

@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificatePropertiesResponse {
     /**
      * base-64 representation of X509 certificate .cer file or just .pem file content.
@@ -46,15 +46,15 @@ public final class CertificatePropertiesResponse {
      */
     private final String updated;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificatePropertiesResponse(
-        @OutputCustomType.Parameter("certificate") String certificate,
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("expiry") String expiry,
-        @OutputCustomType.Parameter("isVerified") Boolean isVerified,
-        @OutputCustomType.Parameter("subject") String subject,
-        @OutputCustomType.Parameter("thumbprint") String thumbprint,
-        @OutputCustomType.Parameter("updated") String updated) {
+        @CustomType.Parameter("certificate") String certificate,
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("expiry") String expiry,
+        @CustomType.Parameter("isVerified") Boolean isVerified,
+        @CustomType.Parameter("subject") String subject,
+        @CustomType.Parameter("thumbprint") String thumbprint,
+        @CustomType.Parameter("updated") String updated) {
         this.certificate = certificate;
         this.created = created;
         this.expiry = expiry;

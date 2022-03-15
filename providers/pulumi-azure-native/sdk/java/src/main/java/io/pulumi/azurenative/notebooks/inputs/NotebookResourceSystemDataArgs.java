@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.notebooks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,42 +18,42 @@ public final class NotebookResourceSystemDataArgs extends io.pulumi.resources.Re
 
     public static final NotebookResourceSystemDataArgs Empty = new NotebookResourceSystemDataArgs();
 
-    @InputImport(name="createdAt")
+    @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
         return this.createdAt == null ? Output.empty() : this.createdAt;
     }
 
-    @InputImport(name="createdBy")
+    @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
 
     public Output<String> getCreatedBy() {
         return this.createdBy == null ? Output.empty() : this.createdBy;
     }
 
-    @InputImport(name="createdByType")
+    @Import(name="createdByType")
       private final @Nullable Output<String> createdByType;
 
     public Output<String> getCreatedByType() {
         return this.createdByType == null ? Output.empty() : this.createdByType;
     }
 
-    @InputImport(name="lastModifiedAt")
+    @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
 
     public Output<String> getLastModifiedAt() {
         return this.lastModifiedAt == null ? Output.empty() : this.lastModifiedAt;
     }
 
-    @InputImport(name="lastModifiedBy")
+    @Import(name="lastModifiedBy")
       private final @Nullable Output<String> lastModifiedBy;
 
     public Output<String> getLastModifiedBy() {
         return this.lastModifiedBy == null ? Output.empty() : this.lastModifiedBy;
     }
 
-    @InputImport(name="lastModifiedByType")
+    @Import(name="lastModifiedByType")
       private final @Nullable Output<String> lastModifiedByType;
 
     public Output<String> getLastModifiedByType() {

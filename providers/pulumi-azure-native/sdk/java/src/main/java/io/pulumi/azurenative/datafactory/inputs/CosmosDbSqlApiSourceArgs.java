@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
      */
-    @InputImport(name="additionalColumns")
+    @Import(name="additionalColumns")
       private final @Nullable Output<Object> additionalColumns;
 
     public Output<Object> getAdditionalColumns() {
@@ -34,7 +34,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * Whether detect primitive values as datetime values. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="detectDatetime")
+    @Import(name="detectDatetime")
       private final @Nullable Output<Object> detectDatetime;
 
     public Output<Object> getDetectDatetime() {
@@ -45,7 +45,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
     public Output<Object> getDisableMetricsCollection() {
@@ -56,7 +56,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
     public Output<Object> getMaxConcurrentConnections() {
@@ -67,7 +67,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * Page size of the result. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="pageSize")
+    @Import(name="pageSize")
       private final @Nullable Output<Object> pageSize;
 
     public Output<Object> getPageSize() {
@@ -78,7 +78,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * Preferred regions. Type: array of strings (or Expression with resultType array of strings).
      * 
      */
-    @InputImport(name="preferredRegions")
+    @Import(name="preferredRegions")
       private final @Nullable Output<Object> preferredRegions;
 
     public Output<Object> getPreferredRegions() {
@@ -89,7 +89,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * SQL API query. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Output<Object> query;
 
     public Output<Object> getQuery() {
@@ -100,7 +100,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="sourceRetryCount")
+    @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
 
     public Output<Object> getSourceRetryCount() {
@@ -111,7 +111,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="sourceRetryWait")
+    @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
 
     public Output<Object> getSourceRetryWait() {
@@ -123,7 +123,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * Expected value is 'CosmosDbSqlApiSource'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

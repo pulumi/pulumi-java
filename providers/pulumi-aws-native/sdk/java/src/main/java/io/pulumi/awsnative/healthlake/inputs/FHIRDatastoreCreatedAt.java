@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.healthlake.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FHIRDatastoreCreatedAt extends io.pulumi.resources.InvokeArgs
      * Nanoseconds.
      * 
      */
-    @InputImport(name="nanos", required=true)
+    @Import(name="nanos", required=true)
       private final Integer nanos;
 
     public Integer getNanos() {
@@ -32,7 +32,7 @@ public final class FHIRDatastoreCreatedAt extends io.pulumi.resources.InvokeArgs
      * Seconds since epoch.
      * 
      */
-    @InputImport(name="seconds", required=true)
+    @Import(name="seconds", required=true)
       private final String seconds;
 
     public String getSeconds() {

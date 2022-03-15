@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.gamelift.outputs;
 
 import io.pulumi.awsnative.gamelift.outputs.GameServerGroupTargetTrackingConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GameServerGroupAutoScalingPolicy {
     private final @Nullable Double estimatedInstanceWarmup;
     private final GameServerGroupTargetTrackingConfiguration targetTrackingConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GameServerGroupAutoScalingPolicy(
-        @OutputCustomType.Parameter("estimatedInstanceWarmup") @Nullable Double estimatedInstanceWarmup,
-        @OutputCustomType.Parameter("targetTrackingConfiguration") GameServerGroupTargetTrackingConfiguration targetTrackingConfiguration) {
+        @CustomType.Parameter("estimatedInstanceWarmup") @Nullable Double estimatedInstanceWarmup,
+        @CustomType.Parameter("targetTrackingConfiguration") GameServerGroupTargetTrackingConfiguration targetTrackingConfiguration) {
         this.estimatedInstanceWarmup = estimatedInstanceWarmup;
         this.targetTrackingConfiguration = targetTrackingConfiguration;
     }

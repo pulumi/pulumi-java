@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasourceSetResponse {
     /**
      * DatasourceType of the resource.
@@ -47,15 +47,15 @@ public final class DatasourceSetResponse {
      */
     private final @Nullable String resourceUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasourceSetResponse(
-        @OutputCustomType.Parameter("datasourceType") @Nullable String datasourceType,
-        @OutputCustomType.Parameter("objectType") @Nullable String objectType,
-        @OutputCustomType.Parameter("resourceID") String resourceID,
-        @OutputCustomType.Parameter("resourceLocation") @Nullable String resourceLocation,
-        @OutputCustomType.Parameter("resourceName") @Nullable String resourceName,
-        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
-        @OutputCustomType.Parameter("resourceUri") @Nullable String resourceUri) {
+        @CustomType.Parameter("datasourceType") @Nullable String datasourceType,
+        @CustomType.Parameter("objectType") @Nullable String objectType,
+        @CustomType.Parameter("resourceID") String resourceID,
+        @CustomType.Parameter("resourceLocation") @Nullable String resourceLocation,
+        @CustomType.Parameter("resourceName") @Nullable String resourceName,
+        @CustomType.Parameter("resourceType") @Nullable String resourceType,
+        @CustomType.Parameter("resourceUri") @Nullable String resourceUri) {
         this.datasourceType = datasourceType;
         this.objectType = objectType;
         this.resourceID = resourceID;

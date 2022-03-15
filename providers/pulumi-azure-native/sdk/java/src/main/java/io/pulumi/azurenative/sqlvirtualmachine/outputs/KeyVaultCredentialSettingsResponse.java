@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultCredentialSettingsResponse {
     /**
      * Azure Key Vault url.
@@ -33,12 +33,12 @@ public final class KeyVaultCredentialSettingsResponse {
      */
     private final @Nullable String servicePrincipalName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyVaultCredentialSettingsResponse(
-        @OutputCustomType.Parameter("azureKeyVaultUrl") @Nullable String azureKeyVaultUrl,
-        @OutputCustomType.Parameter("credentialName") @Nullable String credentialName,
-        @OutputCustomType.Parameter("enable") @Nullable Boolean enable,
-        @OutputCustomType.Parameter("servicePrincipalName") @Nullable String servicePrincipalName) {
+        @CustomType.Parameter("azureKeyVaultUrl") @Nullable String azureKeyVaultUrl,
+        @CustomType.Parameter("credentialName") @Nullable String credentialName,
+        @CustomType.Parameter("enable") @Nullable Boolean enable,
+        @CustomType.Parameter("servicePrincipalName") @Nullable String servicePrincipalName) {
         this.azureKeyVaultUrl = azureKeyVaultUrl;
         this.credentialName = credentialName;
         this.enable = enable;

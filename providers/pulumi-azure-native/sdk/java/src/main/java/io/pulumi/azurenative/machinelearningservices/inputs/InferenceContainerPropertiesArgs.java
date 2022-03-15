@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.RouteArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
      * The route to check the liveness of the inference server container.
      * 
      */
-    @InputImport(name="livenessRoute")
+    @Import(name="livenessRoute")
       private final @Nullable Output<RouteArgs> livenessRoute;
 
     public Output<RouteArgs> getLivenessRoute() {
@@ -29,7 +29,7 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
      * The route to check the readiness of the inference server container.
      * 
      */
-    @InputImport(name="readinessRoute")
+    @Import(name="readinessRoute")
       private final @Nullable Output<RouteArgs> readinessRoute;
 
     public Output<RouteArgs> getReadinessRoute() {
@@ -40,7 +40,7 @@ public final class InferenceContainerPropertiesArgs extends io.pulumi.resources.
      * The port to send the scoring requests to, within the inference server container.
      * 
      */
-    @InputImport(name="scoringRoute")
+    @Import(name="scoringRoute")
       private final @Nullable Output<RouteArgs> scoringRoute;
 
     public Output<RouteArgs> getScoringRoute() {

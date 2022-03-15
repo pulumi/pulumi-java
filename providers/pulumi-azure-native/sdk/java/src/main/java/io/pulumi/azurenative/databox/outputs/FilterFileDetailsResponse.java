@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FilterFileDetailsResponse {
     /**
      * Path of the file that contains the details of all items to transfer.
@@ -20,10 +20,10 @@ public final class FilterFileDetailsResponse {
      */
     private final String filterFileType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FilterFileDetailsResponse(
-        @OutputCustomType.Parameter("filterFilePath") String filterFilePath,
-        @OutputCustomType.Parameter("filterFileType") String filterFileType) {
+        @CustomType.Parameter("filterFilePath") String filterFilePath,
+        @CustomType.Parameter("filterFileType") String filterFileType) {
         this.filterFilePath = filterFilePath;
         this.filterFileType = filterFileType;
     }

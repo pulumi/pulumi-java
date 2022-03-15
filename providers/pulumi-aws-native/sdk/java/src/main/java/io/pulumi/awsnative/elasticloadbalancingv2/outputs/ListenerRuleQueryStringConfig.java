@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.elasticloadbalancingv2.outputs;
 
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleQueryStringKeyValue;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerRuleQueryStringConfig {
     private final @Nullable List<ListenerRuleQueryStringKeyValue> values;
 
-    @OutputCustomType.Constructor
-    private ListenerRuleQueryStringConfig(@OutputCustomType.Parameter("values") @Nullable List<ListenerRuleQueryStringKeyValue> values) {
+    @CustomType.Constructor
+    private ListenerRuleQueryStringConfig(@CustomType.Parameter("values") @Nullable List<ListenerRuleQueryStringKeyValue> values) {
         this.values = values;
     }
 

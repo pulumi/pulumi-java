@@ -4,7 +4,7 @@
 package io.pulumi.aws.transfer;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The public key portion of an SSH key pair.
      * 
      */
-    @InputImport(name="body", required=true)
+    @Import(name="body", required=true)
       private final Output<String> body;
 
     public Output<String> getBody() {
@@ -28,7 +28,7 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The Server ID of the Transfer Server (e.g., `s-12345678`)
      * 
      */
-    @InputImport(name="serverId", required=true)
+    @Import(name="serverId", required=true)
       private final Output<String> serverId;
 
     public Output<String> getServerId() {
@@ -39,7 +39,7 @@ public final class SshKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the user account that is assigned to one or more servers.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final Output<String> userName;
 
     public Output<String> getUserName() {

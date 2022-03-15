@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TestTargetsForShardArgs extends io.pulumi.resources.ResourceA
      * Group of packages, classes, and/or test methods to be run for each shard. The targets need to be specified in AndroidJUnitRunner argument format. For example, "package com.my.packages" "class com.my.package.MyClass". The number of shard_test_targets must be greater than 0.
      * 
      */
-    @InputImport(name="testTargets")
+    @Import(name="testTargets")
       private final @Nullable Output<List<String>> testTargets;
 
     public Output<List<String>> getTestTargets() {

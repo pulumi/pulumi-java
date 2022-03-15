@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class AiMetadataStoreStateArgs extends io.pulumi.resources.Resource
 
     public static final AiMetadataStoreStateArgs Empty = new AiMetadataStoreStateArgs();
 
-    @InputImport(name="diskUtilizationBytes")
+    @Import(name="diskUtilizationBytes")
       private final @Nullable Output<String> diskUtilizationBytes;
 
     public Output<String> getDiskUtilizationBytes() {

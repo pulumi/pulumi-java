@@ -6,7 +6,7 @@ package io.pulumi.awsnative.rum;
 import io.pulumi.awsnative.rum.inputs.AppMonitorConfigurationArgs;
 import io.pulumi.awsnative.rum.inputs.AppMonitorTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AppMonitorArgs Empty = new AppMonitorArgs();
 
-    @InputImport(name="appMonitorConfiguration")
+    @Import(name="appMonitorConfiguration")
       private final @Nullable Output<AppMonitorConfigurationArgs> appMonitorConfiguration;
 
     public Output<AppMonitorConfigurationArgs> getAppMonitorConfiguration() {
@@ -29,7 +29,7 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * Data collected by RUM is kept by RUM for 30 days and then deleted. This parameter specifies whether RUM sends a copy of this telemetry data to CWLlong in your account. This enables you to keep the telemetry data for more than 30 days, but it does incur CWLlong charges. If you omit this parameter, the default is false
      * 
      */
-    @InputImport(name="cwLogEnabled")
+    @Import(name="cwLogEnabled")
       private final @Nullable Output<Boolean> cwLogEnabled;
 
     public Output<Boolean> getCwLogEnabled() {
@@ -40,7 +40,7 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * The top-level internet domain name for which your application has administrative authority.
      * 
      */
-    @InputImport(name="domain", required=true)
+    @Import(name="domain", required=true)
       private final Output<String> domain;
 
     public Output<String> getDomain() {
@@ -51,14 +51,14 @@ public final class AppMonitorArgs extends io.pulumi.resources.ResourceArgs {
      * A name for the app monitor
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<AppMonitorTagArgs>> tags;
 
     public Output<List<AppMonitorTagArgs>> getTags() {

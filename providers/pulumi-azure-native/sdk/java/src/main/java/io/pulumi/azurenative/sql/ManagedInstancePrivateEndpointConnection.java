@@ -9,7 +9,7 @@ import io.pulumi.azurenative.sql.outputs.ManagedInstancePrivateEndpointPropertyR
 import io.pulumi.azurenative.sql.outputs.ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class ManagedInstancePrivateEndpointConnection extends io.pulumi.resource
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class ManagedInstancePrivateEndpointConnection extends io.pulumi.resource
      * Private endpoint which the connection belongs to.
      * 
      */
-    @OutputExport(name="privateEndpoint", type=ManagedInstancePrivateEndpointPropertyResponse.class, parameters={})
+    @Export(name="privateEndpoint", type=ManagedInstancePrivateEndpointPropertyResponse.class, parameters={})
     private Output</* @Nullable */ ManagedInstancePrivateEndpointPropertyResponse> privateEndpoint;
 
     /**
@@ -64,7 +64,7 @@ public class ManagedInstancePrivateEndpointConnection extends io.pulumi.resource
      * Connection State of the Private Endpoint Connection.
      * 
      */
-    @OutputExport(name="privateLinkServiceConnectionState", type=ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse.class, parameters={})
+    @Export(name="privateLinkServiceConnectionState", type=ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse.class, parameters={})
     private Output</* @Nullable */ ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse> privateLinkServiceConnectionState;
 
     /**
@@ -78,7 +78,7 @@ public class ManagedInstancePrivateEndpointConnection extends io.pulumi.resource
      * State of the Private Endpoint Connection.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -92,7 +92,7 @@ public class ManagedInstancePrivateEndpointConnection extends io.pulumi.resource
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

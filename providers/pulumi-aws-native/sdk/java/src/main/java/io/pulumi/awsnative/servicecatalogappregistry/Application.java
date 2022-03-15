@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.servicecatalogappregistry.ApplicationArgs;
 import io.pulumi.awsnative.servicecatalogappregistry.outputs.ApplicationTags;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:servicecatalogappregistry:Application")
 public class Application extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -28,7 +28,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The description of the application.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -42,7 +42,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The name of the application.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -52,7 +52,7 @@ public class Application extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="tags", type=ApplicationTags.class, parameters={})
+    @Export(name="tags", type=ApplicationTags.class, parameters={})
     private Output</* @Nullable */ ApplicationTags> tags;
 
     public Output</* @Nullable */ ApplicationTags> getTags() {

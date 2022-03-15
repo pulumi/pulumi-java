@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.SecureStringResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
      * The password of the administrator user account of the catalog database.
      * 
      */
-    @InputImport(name="catalogAdminPassword")
+    @Import(name="catalogAdminPassword")
       private final @Nullable SecureStringResponse catalogAdminPassword;
 
     public Optional<SecureStringResponse> getCatalogAdminPassword() {
@@ -34,7 +34,7 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
      * The administrator user name of catalog database.
      * 
      */
-    @InputImport(name="catalogAdminUserName")
+    @Import(name="catalogAdminUserName")
       private final @Nullable String catalogAdminUserName;
 
     public Optional<String> getCatalogAdminUserName() {
@@ -45,7 +45,7 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
      * The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
      * 
      */
-    @InputImport(name="catalogPricingTier")
+    @Import(name="catalogPricingTier")
       private final @Nullable String catalogPricingTier;
 
     public Optional<String> getCatalogPricingTier() {
@@ -56,7 +56,7 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse extends io.pulumi.r
      * The catalog database server URL.
      * 
      */
-    @InputImport(name="catalogServerEndpoint")
+    @Import(name="catalogServerEndpoint")
       private final @Nullable String catalogServerEndpoint;
 
     public Optional<String> getCatalogServerEndpoint() {

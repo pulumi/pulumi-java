@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.vertex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AiFeatureStoreOnlineServingConfig {
     /**
      * The number of nodes for each cluster. The number of nodes will not scale automatically but can be scaled manually by providing different values when updating.
@@ -15,8 +15,8 @@ public final class AiFeatureStoreOnlineServingConfig {
      */
     private final Integer fixedNodeCount;
 
-    @OutputCustomType.Constructor
-    private AiFeatureStoreOnlineServingConfig(@OutputCustomType.Parameter("fixedNodeCount") Integer fixedNodeCount) {
+    @CustomType.Constructor
+    private AiFeatureStoreOnlineServingConfig(@CustomType.Parameter("fixedNodeCount") Integer fixedNodeCount) {
         this.fixedNodeCount = fixedNodeCount;
     }
 

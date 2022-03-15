@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.mixedreality.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class ObjectAnchorsAccountResponseIdentity extends io.pulumi.resour
      * The principal ID of resource identity.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {
@@ -29,7 +29,7 @@ public final class ObjectAnchorsAccountResponseIdentity extends io.pulumi.resour
      * The tenant ID of resource.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {
@@ -40,7 +40,7 @@ public final class ObjectAnchorsAccountResponseIdentity extends io.pulumi.resour
      * The identity type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DayDetailsResponse {
     /**
      * The time of day the schedule will occur.
@@ -17,8 +17,8 @@ public final class DayDetailsResponse {
      */
     private final @Nullable String time;
 
-    @OutputCustomType.Constructor
-    private DayDetailsResponse(@OutputCustomType.Parameter("time") @Nullable String time) {
+    @CustomType.Constructor
+    private DayDetailsResponse(@CustomType.Parameter("time") @Nullable String time) {
         this.time = time;
     }
 

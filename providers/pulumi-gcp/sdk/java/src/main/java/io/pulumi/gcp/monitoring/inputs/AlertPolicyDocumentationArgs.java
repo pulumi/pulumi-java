@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class AlertPolicyDocumentationArgs extends io.pulumi.resources.Reso
      * whichever is smaller.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
@@ -33,7 +33,7 @@ public final class AlertPolicyDocumentationArgs extends io.pulumi.resources.Reso
      * "text/markdown" is supported.
      * 
      */
-    @InputImport(name="mimeType")
+    @Import(name="mimeType")
       private final @Nullable Output<String> mimeType;
 
     public Output<String> getMimeType() {

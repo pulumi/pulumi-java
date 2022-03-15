@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.desktopvirtualization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class RegistrationInfoResponse extends io.pulumi.resources.InvokeAr
      * Expiration time of registration token.
      * 
      */
-    @InputImport(name="expirationTime")
+    @Import(name="expirationTime")
       private final @Nullable String expirationTime;
 
     public Optional<String> getExpirationTime() {
@@ -33,7 +33,7 @@ public final class RegistrationInfoResponse extends io.pulumi.resources.InvokeAr
      * The type of resetting the token.
      * 
      */
-    @InputImport(name="registrationTokenOperation")
+    @Import(name="registrationTokenOperation")
       private final @Nullable String registrationTokenOperation;
 
     public Optional<String> getRegistrationTokenOperation() {
@@ -44,7 +44,7 @@ public final class RegistrationInfoResponse extends io.pulumi.resources.InvokeAr
      * The registration token base64 encoded string.
      * 
      */
-    @InputImport(name="token")
+    @Import(name="token")
       private final @Nullable String token;
 
     public Optional<String> getToken() {

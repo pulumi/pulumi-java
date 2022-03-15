@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetForwardingRuleResult {
     private final Boolean allPorts;
     private final Boolean allowGlobalAccess;
@@ -43,32 +43,32 @@ public final class GetForwardingRuleResult {
     private final String subnetwork;
     private final String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetForwardingRuleResult(
-        @OutputCustomType.Parameter("allPorts") Boolean allPorts,
-        @OutputCustomType.Parameter("allowGlobalAccess") Boolean allowGlobalAccess,
-        @OutputCustomType.Parameter("backendService") String backendService,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ipAddress") String ipAddress,
-        @OutputCustomType.Parameter("ipProtocol") String ipProtocol,
-        @OutputCustomType.Parameter("isMirroringCollector") Boolean isMirroringCollector,
-        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("loadBalancingScheme") String loadBalancingScheme,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("networkTier") String networkTier,
-        @OutputCustomType.Parameter("portRange") String portRange,
-        @OutputCustomType.Parameter("ports") List<String> ports,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("serviceLabel") String serviceLabel,
-        @OutputCustomType.Parameter("serviceName") String serviceName,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork,
-        @OutputCustomType.Parameter("target") String target) {
+        @CustomType.Parameter("allPorts") Boolean allPorts,
+        @CustomType.Parameter("allowGlobalAccess") Boolean allowGlobalAccess,
+        @CustomType.Parameter("backendService") String backendService,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ipAddress") String ipAddress,
+        @CustomType.Parameter("ipProtocol") String ipProtocol,
+        @CustomType.Parameter("isMirroringCollector") Boolean isMirroringCollector,
+        @CustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("loadBalancingScheme") String loadBalancingScheme,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("networkTier") String networkTier,
+        @CustomType.Parameter("portRange") String portRange,
+        @CustomType.Parameter("ports") List<String> ports,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("serviceLabel") String serviceLabel,
+        @CustomType.Parameter("serviceName") String serviceName,
+        @CustomType.Parameter("subnetwork") String subnetwork,
+        @CustomType.Parameter("target") String target) {
         this.allPorts = allPorts;
         this.allowGlobalAccess = allowGlobalAccess;
         this.backendService = backendService;

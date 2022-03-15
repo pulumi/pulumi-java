@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class TopicRuleErrorActionIotAnalyticsArgs extends io.pulumi.resour
      * Name of AWS IOT Analytics channel.
      * 
      */
-    @InputImport(name="channelName", required=true)
+    @Import(name="channelName", required=true)
       private final Output<String> channelName;
 
     public Output<String> getChannelName() {
@@ -28,7 +28,7 @@ public final class TopicRuleErrorActionIotAnalyticsArgs extends io.pulumi.resour
      * The ARN of the IAM role that grants access.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

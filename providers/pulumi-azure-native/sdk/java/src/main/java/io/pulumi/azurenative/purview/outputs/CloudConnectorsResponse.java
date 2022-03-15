@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.purview.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CloudConnectorsResponse {
     /**
      * AWS external identifier.
@@ -16,8 +16,8 @@ public final class CloudConnectorsResponse {
      */
     private final String awsExternalId;
 
-    @OutputCustomType.Constructor
-    private CloudConnectorsResponse(@OutputCustomType.Parameter("awsExternalId") String awsExternalId) {
+    @CustomType.Constructor
+    private CloudConnectorsResponse(@CustomType.Parameter("awsExternalId") String awsExternalId) {
         this.awsExternalId = awsExternalId;
     }
 

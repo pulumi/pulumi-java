@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,42 +14,42 @@ public final class InstanceFromMachineImageAttachedDiskGetArgs extends io.pulumi
 
     public static final InstanceFromMachineImageAttachedDiskGetArgs Empty = new InstanceFromMachineImageAttachedDiskGetArgs();
 
-    @InputImport(name="deviceName")
+    @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
         return this.deviceName == null ? Output.empty() : this.deviceName;
     }
 
-    @InputImport(name="diskEncryptionKeyRaw")
+    @Import(name="diskEncryptionKeyRaw")
       private final @Nullable Output<String> diskEncryptionKeyRaw;
 
     public Output<String> getDiskEncryptionKeyRaw() {
         return this.diskEncryptionKeyRaw == null ? Output.empty() : this.diskEncryptionKeyRaw;
     }
 
-    @InputImport(name="diskEncryptionKeySha256")
+    @Import(name="diskEncryptionKeySha256")
       private final @Nullable Output<String> diskEncryptionKeySha256;
 
     public Output<String> getDiskEncryptionKeySha256() {
         return this.diskEncryptionKeySha256 == null ? Output.empty() : this.diskEncryptionKeySha256;
     }
 
-    @InputImport(name="kmsKeySelfLink")
+    @Import(name="kmsKeySelfLink")
       private final @Nullable Output<String> kmsKeySelfLink;
 
     public Output<String> getKmsKeySelfLink() {
         return this.kmsKeySelfLink == null ? Output.empty() : this.kmsKeySelfLink;
     }
 
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
         return this.mode == null ? Output.empty() : this.mode;
     }
 
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<String> source;
 
     public Output<String> getSource() {

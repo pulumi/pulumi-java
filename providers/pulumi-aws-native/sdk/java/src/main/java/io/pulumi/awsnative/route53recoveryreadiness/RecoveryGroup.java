@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53recoveryreadiness.RecoveryGroupArgs;
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.RecoveryGroupTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * A list of the cell Amazon Resource Names (ARNs) in the recovery group.
      * 
      */
-    @OutputExport(name="cells", type=List.class, parameters={String.class})
+    @Export(name="cells", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> cells;
 
     /**
@@ -37,7 +37,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * A collection of tags associated with a resource.
      * 
      */
-    @OutputExport(name="recoveryGroupArn", type=String.class, parameters={})
+    @Export(name="recoveryGroupArn", type=String.class, parameters={})
     private Output<String> recoveryGroupArn;
 
     /**
@@ -51,7 +51,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * The name of the recovery group to create.
      * 
      */
-    @OutputExport(name="recoveryGroupName", type=String.class, parameters={})
+    @Export(name="recoveryGroupName", type=String.class, parameters={})
     private Output<String> recoveryGroupName;
 
     /**
@@ -65,7 +65,7 @@ public class RecoveryGroup extends io.pulumi.resources.CustomResource {
      * A collection of tags associated with a resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={RecoveryGroupTag.class})
+    @Export(name="tags", type=List.class, parameters={RecoveryGroupTag.class})
     private Output</* @Nullable */ List<RecoveryGroupTag>> tags;
 
     /**

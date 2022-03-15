@@ -5,12 +5,12 @@ package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.AutoScaleSettingsResponse;
 import io.pulumi.azurenative.batch.outputs.FixedScaleSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScaleSettingsResponse {
     /**
      * This property and fixedScale are mutually exclusive and one of the properties must be specified.
@@ -23,10 +23,10 @@ public final class ScaleSettingsResponse {
      */
     private final @Nullable FixedScaleSettingsResponse fixedScale;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScaleSettingsResponse(
-        @OutputCustomType.Parameter("autoScale") @Nullable AutoScaleSettingsResponse autoScale,
-        @OutputCustomType.Parameter("fixedScale") @Nullable FixedScaleSettingsResponse fixedScale) {
+        @CustomType.Parameter("autoScale") @Nullable AutoScaleSettingsResponse autoScale,
+        @CustomType.Parameter("fixedScale") @Nullable FixedScaleSettingsResponse fixedScale) {
         this.autoScale = autoScale;
         this.fixedScale = fixedScale;
     }

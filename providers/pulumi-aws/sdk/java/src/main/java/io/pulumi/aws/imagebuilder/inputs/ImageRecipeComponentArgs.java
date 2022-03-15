@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ImageRecipeComponentArgs extends io.pulumi.resources.Resource
      * Amazon Resource Name (ARN) of the Image Builder Component to associate.
      * 
      */
-    @InputImport(name="componentArn", required=true)
+    @Import(name="componentArn", required=true)
       private final Output<String> componentArn;
 
     public Output<String> getComponentArn() {

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.signalrservice.outputs;
 
 import io.pulumi.azurenative.signalrservice.outputs.UpstreamTemplateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServerlessUpstreamSettingsResponse {
     /**
      * Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.
@@ -17,8 +17,8 @@ public final class ServerlessUpstreamSettingsResponse {
      */
     private final @Nullable List<UpstreamTemplateResponse> templates;
 
-    @OutputCustomType.Constructor
-    private ServerlessUpstreamSettingsResponse(@OutputCustomType.Parameter("templates") @Nullable List<UpstreamTemplateResponse> templates) {
+    @CustomType.Constructor
+    private ServerlessUpstreamSettingsResponse(@CustomType.Parameter("templates") @Nullable List<UpstreamTemplateResponse> templates) {
         this.templates = templates;
     }
 

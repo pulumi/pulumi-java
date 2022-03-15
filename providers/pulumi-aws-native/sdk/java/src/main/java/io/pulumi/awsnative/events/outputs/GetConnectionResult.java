@@ -5,13 +5,13 @@ package io.pulumi.awsnative.events.outputs;
 
 import io.pulumi.awsnative.events.enums.ConnectionAuthorizationType;
 import io.pulumi.awsnative.events.outputs.AuthParametersProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectionResult {
     /**
      * The arn of the connection resource.
@@ -31,13 +31,13 @@ public final class GetConnectionResult {
      */
     private final @Nullable String secretArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectionResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("authParameters") @Nullable AuthParametersProperties authParameters,
-        @OutputCustomType.Parameter("authorizationType") @Nullable ConnectionAuthorizationType authorizationType,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("secretArn") @Nullable String secretArn) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("authParameters") @Nullable AuthParametersProperties authParameters,
+        @CustomType.Parameter("authorizationType") @Nullable ConnectionAuthorizationType authorizationType,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("secretArn") @Nullable String secretArn) {
         this.arn = arn;
         this.authParameters = authParameters;
         this.authorizationType = authorizationType;

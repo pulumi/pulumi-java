@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelProperty;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssetModelCompositeModel {
     /**
      * The property definitions of the asset model. You can specify up to 200 properties per asset model.
@@ -34,12 +34,12 @@ public final class AssetModelCompositeModel {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssetModelCompositeModel(
-        @OutputCustomType.Parameter("compositeModelProperties") @Nullable List<AssetModelProperty> compositeModelProperties,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("compositeModelProperties") @Nullable List<AssetModelProperty> compositeModelProperties,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.compositeModelProperties = compositeModelProperties;
         this.description = description;
         this.name = name;

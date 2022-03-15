@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.enums.TransportProtocol;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * A reference to a pool of DIPs. Inbound traffic is randomly load balanced across IPs in the backend IPs.
      * 
      */
-    @InputImport(name="backendAddressPool")
+    @Import(name="backendAddressPool")
       private final @Nullable Output<SubResourceArgs> backendAddressPool;
 
     public Output<SubResourceArgs> getBackendAddressPool() {
@@ -39,7 +39,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * The port used for internal connections on the endpoint. Acceptable values are between 0 and 65535. Note that value 0 enables "Any Port".
      * 
      */
-    @InputImport(name="backendPort")
+    @Import(name="backendPort")
       private final @Nullable Output<Integer> backendPort;
 
     public Output<Integer> getBackendPort() {
@@ -50,7 +50,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * Configures SNAT for the VMs in the backend pool to use the publicIP address specified in the frontend of the load balancing rule.
      * 
      */
-    @InputImport(name="disableOutboundSnat")
+    @Import(name="disableOutboundSnat")
       private final @Nullable Output<Boolean> disableOutboundSnat;
 
     public Output<Boolean> getDisableOutboundSnat() {
@@ -61,7 +61,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
      * 
      */
-    @InputImport(name="enableFloatingIP")
+    @Import(name="enableFloatingIP")
       private final @Nullable Output<Boolean> enableFloatingIP;
 
     public Output<Boolean> getEnableFloatingIP() {
@@ -72,7 +72,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
      * 
      */
-    @InputImport(name="enableTcpReset")
+    @Import(name="enableTcpReset")
       private final @Nullable Output<Boolean> enableTcpReset;
 
     public Output<Boolean> getEnableTcpReset() {
@@ -83,7 +83,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * A reference to frontend IP addresses.
      * 
      */
-    @InputImport(name="frontendIPConfiguration")
+    @Import(name="frontendIPConfiguration")
       private final @Nullable Output<SubResourceArgs> frontendIPConfiguration;
 
     public Output<SubResourceArgs> getFrontendIPConfiguration() {
@@ -94,7 +94,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 0 and 65534. Note that value 0 enables "Any Port".
      * 
      */
-    @InputImport(name="frontendPort", required=true)
+    @Import(name="frontendPort", required=true)
       private final Output<Integer> frontendPort;
 
     public Output<Integer> getFrontendPort() {
@@ -105,7 +105,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -116,7 +116,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
      * 
      */
-    @InputImport(name="idleTimeoutInMinutes")
+    @Import(name="idleTimeoutInMinutes")
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
     public Output<Integer> getIdleTimeoutInMinutes() {
@@ -127,7 +127,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * The load distribution policy for this rule.
      * 
      */
-    @InputImport(name="loadDistribution")
+    @Import(name="loadDistribution")
       private final @Nullable Output<Either<String,LoadDistribution>> loadDistribution;
 
     public Output<Either<String,LoadDistribution>> getLoadDistribution() {
@@ -138,7 +138,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * The name of the resource that is unique within the set of load balancing rules used by the load balancer. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -149,7 +149,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * The reference to the load balancer probe used by the load balancing rule.
      * 
      */
-    @InputImport(name="probe")
+    @Import(name="probe")
       private final @Nullable Output<SubResourceArgs> probe;
 
     public Output<SubResourceArgs> getProbe() {
@@ -160,7 +160,7 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
      * The reference to the transport protocol used by the load balancing rule.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<Either<String,TransportProtocol>> protocol;
 
     public Output<Either<String,TransportProtocol>> getProtocol() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class YarnApplicationResponse extends io.pulumi.resources.InvokeArg
      * The application name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -32,7 +32,7 @@ public final class YarnApplicationResponse extends io.pulumi.resources.InvokeArg
      * The numerical progress of the application, from 1 to 100.
      * 
      */
-    @InputImport(name="progress", required=true)
+    @Import(name="progress", required=true)
       private final Double progress;
 
     public Double getProgress() {
@@ -43,7 +43,7 @@ public final class YarnApplicationResponse extends io.pulumi.resources.InvokeArg
      * The application state.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -54,7 +54,7 @@ public final class YarnApplicationResponse extends io.pulumi.resources.InvokeArg
      * The HTTP URL of the ApplicationMaster, HistoryServer, or TimelineServer that provides application-specific information. The URL uses the internal hostname, and requires a proxy server for resolution and, possibly, access.
      * 
      */
-    @InputImport(name="trackingUrl", required=true)
+    @Import(name="trackingUrl", required=true)
       private final String trackingUrl;
 
     public String getTrackingUrl() {

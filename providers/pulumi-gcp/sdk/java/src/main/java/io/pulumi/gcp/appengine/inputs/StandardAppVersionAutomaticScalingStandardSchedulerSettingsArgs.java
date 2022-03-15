@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsAr
      * Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
      * 
      */
-    @InputImport(name="maxInstances")
+    @Import(name="maxInstances")
       private final @Nullable Output<Integer> maxInstances;
 
     public Output<Integer> getMaxInstances() {
@@ -30,7 +30,7 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsAr
      * Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.
      * 
      */
-    @InputImport(name="minInstances")
+    @Import(name="minInstances")
       private final @Nullable Output<Integer> minInstances;
 
     public Output<Integer> getMinInstances() {
@@ -41,7 +41,7 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsAr
      * Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
      * 
      */
-    @InputImport(name="targetCpuUtilization")
+    @Import(name="targetCpuUtilization")
       private final @Nullable Output<Double> targetCpuUtilization;
 
     public Output<Double> getTargetCpuUtilization() {
@@ -52,7 +52,7 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettingsAr
      * Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
      * 
      */
-    @InputImport(name="targetThroughputUtilization")
+    @Import(name="targetThroughputUtilization")
       private final @Nullable Output<Double> targetThroughputUtilization;
 
     public Output<Double> getTargetThroughputUtilization() {

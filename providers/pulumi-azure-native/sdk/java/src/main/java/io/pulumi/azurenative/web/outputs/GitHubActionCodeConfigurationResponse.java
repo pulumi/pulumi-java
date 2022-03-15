@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GitHubActionCodeConfigurationResponse {
     /**
      * Runtime stack is used to determine the workflow file content for code base apps.
@@ -22,10 +22,10 @@ public final class GitHubActionCodeConfigurationResponse {
      */
     private final @Nullable String runtimeVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GitHubActionCodeConfigurationResponse(
-        @OutputCustomType.Parameter("runtimeStack") @Nullable String runtimeStack,
-        @OutputCustomType.Parameter("runtimeVersion") @Nullable String runtimeVersion) {
+        @CustomType.Parameter("runtimeStack") @Nullable String runtimeStack,
+        @CustomType.Parameter("runtimeVersion") @Nullable String runtimeVersion) {
         this.runtimeStack = runtimeStack;
         this.runtimeVersion = runtimeVersion;
     }

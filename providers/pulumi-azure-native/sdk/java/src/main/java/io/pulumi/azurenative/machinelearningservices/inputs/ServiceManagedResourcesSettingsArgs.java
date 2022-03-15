@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.CosmosDbSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class ServiceManagedResourcesSettingsArgs extends io.pulumi.resourc
      * The settings for the service managed cosmosdb account.
      * 
      */
-    @InputImport(name="cosmosDb")
+    @Import(name="cosmosDb")
       private final @Nullable Output<CosmosDbSettingsArgs> cosmosDb;
 
     public Output<CosmosDbSettingsArgs> getCosmosDb() {

@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowLookoutMetricsDestinationProperties {
     private final @Nullable String object;
 
-    @OutputCustomType.Constructor
-    private FlowLookoutMetricsDestinationProperties(@OutputCustomType.Parameter("object") @Nullable String object) {
+    @CustomType.Constructor
+    private FlowLookoutMetricsDestinationProperties(@CustomType.Parameter("object") @Nullable String object) {
         this.object = object;
     }
 

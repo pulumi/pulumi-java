@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StateHistoryResponse {
     /**
      * The state of the batch at this point in history.
@@ -25,11 +25,11 @@ public final class StateHistoryResponse {
      */
     private final String stateStartTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StateHistoryResponse(
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stateMessage") String stateMessage,
-        @OutputCustomType.Parameter("stateStartTime") String stateStartTime) {
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stateMessage") String stateMessage,
+        @CustomType.Parameter("stateStartTime") String stateStartTime) {
         this.state = state;
         this.stateMessage = stateMessage;
         this.stateStartTime = stateStartTime;

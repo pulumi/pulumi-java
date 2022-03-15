@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.networkmanagement_v1.inputs.AbortInfoResponse;
 import io.pulumi.googlenative.networkmanagement_v1.inputs.CloudSQLInstanceInfoResponse;
 import io.pulumi.googlenative.networkmanagement_v1.inputs.DeliverInfoResponse;
@@ -36,7 +36,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * Display information of the final state "abort" and reason.
      * 
      */
-    @InputImport(name="abort", required=true)
+    @Import(name="abort", required=true)
       private final AbortInfoResponse abort;
 
     public AbortInfoResponse getAbort() {
@@ -47,7 +47,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * This is a step that leads to the final state Drop.
      * 
      */
-    @InputImport(name="causesDrop", required=true)
+    @Import(name="causesDrop", required=true)
       private final Boolean causesDrop;
 
     public Boolean getCausesDrop() {
@@ -58,7 +58,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * Display information of a Cloud SQL instance.
      * 
      */
-    @InputImport(name="cloudSqlInstance", required=true)
+    @Import(name="cloudSqlInstance", required=true)
       private final CloudSQLInstanceInfoResponse cloudSqlInstance;
 
     public CloudSQLInstanceInfoResponse getCloudSqlInstance() {
@@ -69,7 +69,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * Display information of the final state "deliver" and reason.
      * 
      */
-    @InputImport(name="deliver", required=true)
+    @Import(name="deliver", required=true)
       private final DeliverInfoResponse deliver;
 
     public DeliverInfoResponse getDeliver() {
@@ -80,7 +80,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * A description of the step. Usually this is a summary of the state.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -91,7 +91,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * Display information of the final state "drop" and reason.
      * 
      */
-    @InputImport(name="drop", required=true)
+    @Import(name="drop", required=true)
       private final DropInfoResponse drop;
 
     public DropInfoResponse getDrop() {
@@ -102,7 +102,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * Display information of the source and destination under analysis. The endpoint information in an intermediate state may differ with the initial input, as it might be modified by state like NAT, or Connection Proxy.
      * 
      */
-    @InputImport(name="endpoint", required=true)
+    @Import(name="endpoint", required=true)
       private final EndpointInfoResponse endpoint;
 
     public EndpointInfoResponse getEndpoint() {
@@ -113,7 +113,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * Display information of a Compute Engine firewall rule.
      * 
      */
-    @InputImport(name="firewall", required=true)
+    @Import(name="firewall", required=true)
       private final FirewallInfoResponse firewall;
 
     public FirewallInfoResponse getFirewall() {
@@ -124,7 +124,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * Display information of the final state "forward" and reason.
      * 
      */
-    @InputImport(name="forward", required=true)
+    @Import(name="forward", required=true)
       private final ForwardInfoResponse forward;
 
     public ForwardInfoResponse getForward() {
@@ -135,7 +135,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * Display information of a Compute Engine forwarding rule.
      * 
      */
-    @InputImport(name="forwardingRule", required=true)
+    @Import(name="forwardingRule", required=true)
       private final ForwardingRuleInfoResponse forwardingRule;
 
     public ForwardingRuleInfoResponse getForwardingRule() {
@@ -146,7 +146,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * Display information of a Google Kubernetes Engine cluster master.
      * 
      */
-    @InputImport(name="gkeMaster", required=true)
+    @Import(name="gkeMaster", required=true)
       private final GKEMasterInfoResponse gkeMaster;
 
     public GKEMasterInfoResponse getGkeMaster() {
@@ -157,7 +157,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * Display information of a Compute Engine instance.
      * 
      */
-    @InputImport(name="instance", required=true)
+    @Import(name="instance", required=true)
       private final InstanceInfoResponse instance;
 
     public InstanceInfoResponse getInstance() {
@@ -168,7 +168,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * Display information of the load balancers.
      * 
      */
-    @InputImport(name="loadBalancer", required=true)
+    @Import(name="loadBalancer", required=true)
       private final LoadBalancerInfoResponse loadBalancer;
 
     public LoadBalancerInfoResponse getLoadBalancer() {
@@ -179,7 +179,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * Display information of a Google Cloud network.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final NetworkInfoResponse network;
 
     public NetworkInfoResponse getNetwork() {
@@ -190,7 +190,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * Project ID that contains the configuration this step is validating.
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final String project;
 
     public String getProject() {
@@ -201,7 +201,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * Display information of a Compute Engine route.
      * 
      */
-    @InputImport(name="route", required=true)
+    @Import(name="route", required=true)
       private final RouteInfoResponse route;
 
     public RouteInfoResponse getRoute() {
@@ -212,7 +212,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * Each step is in one of the pre-defined states.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -223,7 +223,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * Display information of a Compute Engine VPN gateway.
      * 
      */
-    @InputImport(name="vpnGateway", required=true)
+    @Import(name="vpnGateway", required=true)
       private final VpnGatewayInfoResponse vpnGateway;
 
     public VpnGatewayInfoResponse getVpnGateway() {
@@ -234,7 +234,7 @@ public final class StepResponse extends io.pulumi.resources.InvokeArgs {
      * Display information of a Compute Engine VPN tunnel.
      * 
      */
-    @InputImport(name="vpnTunnel", required=true)
+    @Import(name="vpnTunnel", required=true)
       private final VpnTunnelInfoResponse vpnTunnel;
 
     public VpnTunnelInfoResponse getVpnTunnel() {

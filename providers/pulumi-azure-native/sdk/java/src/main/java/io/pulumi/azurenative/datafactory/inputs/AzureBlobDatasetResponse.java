@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.inputs.OrcFormatResponse;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.ParquetFormatResponse;
 import io.pulumi.azurenative.datafactory.inputs.TextFormatResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public final class AzureBlobDatasetResponse extends io.pulumi.resources.InvokeAr
      * List of tags that can be used for describing the Dataset.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -45,7 +45,7 @@ public final class AzureBlobDatasetResponse extends io.pulumi.resources.InvokeAr
      * The data compression method used for the blob storage.
      * 
      */
-    @InputImport(name="compression")
+    @Import(name="compression")
       private final @Nullable DatasetCompressionResponse compression;
 
     public Optional<DatasetCompressionResponse> getCompression() {
@@ -56,7 +56,7 @@ public final class AzureBlobDatasetResponse extends io.pulumi.resources.InvokeAr
      * Dataset description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -67,7 +67,7 @@ public final class AzureBlobDatasetResponse extends io.pulumi.resources.InvokeAr
      * The name of the Azure Blob. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="fileName")
+    @Import(name="fileName")
       private final @Nullable Object fileName;
 
     public Optional<Object> getFileName() {
@@ -78,7 +78,7 @@ public final class AzureBlobDatasetResponse extends io.pulumi.resources.InvokeAr
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
      */
-    @InputImport(name="folder")
+    @Import(name="folder")
       private final @Nullable DatasetResponseFolder folder;
 
     public Optional<DatasetResponseFolder> getFolder() {
@@ -89,7 +89,7 @@ public final class AzureBlobDatasetResponse extends io.pulumi.resources.InvokeAr
      * The path of the Azure Blob storage. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="folderPath")
+    @Import(name="folderPath")
       private final @Nullable Object folderPath;
 
     public Optional<Object> getFolderPath() {
@@ -100,7 +100,7 @@ public final class AzureBlobDatasetResponse extends io.pulumi.resources.InvokeAr
      * The format of the Azure Blob storage.
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable Object format;
 
     public Object getFormat() {
@@ -111,7 +111,7 @@ public final class AzureBlobDatasetResponse extends io.pulumi.resources.InvokeAr
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName", required=true)
+    @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse getLinkedServiceName() {
@@ -122,7 +122,7 @@ public final class AzureBlobDatasetResponse extends io.pulumi.resources.InvokeAr
      * The end of Azure Blob's modified datetime. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="modifiedDatetimeEnd")
+    @Import(name="modifiedDatetimeEnd")
       private final @Nullable Object modifiedDatetimeEnd;
 
     public Optional<Object> getModifiedDatetimeEnd() {
@@ -133,7 +133,7 @@ public final class AzureBlobDatasetResponse extends io.pulumi.resources.InvokeAr
      * The start of Azure Blob's modified datetime. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="modifiedDatetimeStart")
+    @Import(name="modifiedDatetimeStart")
       private final @Nullable Object modifiedDatetimeStart;
 
     public Optional<Object> getModifiedDatetimeStart() {
@@ -144,7 +144,7 @@ public final class AzureBlobDatasetResponse extends io.pulumi.resources.InvokeAr
      * Parameters for dataset.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -155,7 +155,7 @@ public final class AzureBlobDatasetResponse extends io.pulumi.resources.InvokeAr
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Object schema;
 
     public Optional<Object> getSchema() {
@@ -166,7 +166,7 @@ public final class AzureBlobDatasetResponse extends io.pulumi.resources.InvokeAr
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
      */
-    @InputImport(name="structure")
+    @Import(name="structure")
       private final @Nullable Object structure;
 
     public Optional<Object> getStructure() {
@@ -177,7 +177,7 @@ public final class AzureBlobDatasetResponse extends io.pulumi.resources.InvokeAr
      * The root of blob path. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="tableRootLocation")
+    @Import(name="tableRootLocation")
       private final @Nullable Object tableRootLocation;
 
     public Optional<Object> getTableRootLocation() {
@@ -189,7 +189,7 @@ public final class AzureBlobDatasetResponse extends io.pulumi.resources.InvokeAr
      * Expected value is 'AzureBlob'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

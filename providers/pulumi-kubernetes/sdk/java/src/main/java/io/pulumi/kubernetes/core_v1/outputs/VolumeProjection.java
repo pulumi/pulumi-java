@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ConfigMapProjection;
 import io.pulumi.kubernetes.core_v1.outputs.DownwardAPIProjection;
 import io.pulumi.kubernetes.core_v1.outputs.SecretProjection;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VolumeProjection {
     /**
      * information about the configMap data to project
@@ -35,12 +35,12 @@ public final class VolumeProjection {
      */
     private final @Nullable ServiceAccountTokenProjection serviceAccountToken;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VolumeProjection(
-        @OutputCustomType.Parameter("configMap") @Nullable ConfigMapProjection configMap,
-        @OutputCustomType.Parameter("downwardAPI") @Nullable DownwardAPIProjection downwardAPI,
-        @OutputCustomType.Parameter("secret") @Nullable SecretProjection secret,
-        @OutputCustomType.Parameter("serviceAccountToken") @Nullable ServiceAccountTokenProjection serviceAccountToken) {
+        @CustomType.Parameter("configMap") @Nullable ConfigMapProjection configMap,
+        @CustomType.Parameter("downwardAPI") @Nullable DownwardAPIProjection downwardAPI,
+        @CustomType.Parameter("secret") @Nullable SecretProjection secret,
+        @CustomType.Parameter("serviceAccountToken") @Nullable ServiceAccountTokenProjection serviceAccountToken) {
         this.configMap = configMap;
         this.downwardAPI = downwardAPI;
         this.secret = secret;

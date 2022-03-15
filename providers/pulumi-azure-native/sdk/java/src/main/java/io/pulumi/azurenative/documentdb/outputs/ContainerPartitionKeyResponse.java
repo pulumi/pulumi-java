@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerPartitionKeyResponse {
     /**
      * Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
@@ -35,12 +35,12 @@ public final class ContainerPartitionKeyResponse {
      */
     private final @Nullable Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerPartitionKeyResponse(
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("paths") @Nullable List<String> paths,
-        @OutputCustomType.Parameter("systemKey") Boolean systemKey,
-        @OutputCustomType.Parameter("version") @Nullable Integer version) {
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("paths") @Nullable List<String> paths,
+        @CustomType.Parameter("systemKey") Boolean systemKey,
+        @CustomType.Parameter("version") @Nullable Integer version) {
         this.kind = kind;
         this.paths = paths;
         this.systemKey = systemKey;

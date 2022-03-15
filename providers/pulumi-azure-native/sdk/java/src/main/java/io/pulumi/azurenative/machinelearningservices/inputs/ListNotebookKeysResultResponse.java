@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class ListNotebookKeysResultResponse extends io.pulumi.resources.In
 
     public static final ListNotebookKeysResultResponse Empty = new ListNotebookKeysResultResponse();
 
-    @InputImport(name="primaryAccessKey", required=true)
+    @Import(name="primaryAccessKey", required=true)
       private final String primaryAccessKey;
 
     public String getPrimaryAccessKey() {
         return this.primaryAccessKey;
     }
 
-    @InputImport(name="secondaryAccessKey", required=true)
+    @Import(name="secondaryAccessKey", required=true)
       private final String secondaryAccessKey;
 
     public String getSecondaryAccessKey() {

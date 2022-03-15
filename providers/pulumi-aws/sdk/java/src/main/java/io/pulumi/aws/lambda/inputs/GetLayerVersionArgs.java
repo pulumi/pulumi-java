@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetLayerVersionArgs extends io.pulumi.resources.InvokeArgs {
      * Specific architecture the layer version could support. Conflicts with `version`. If specified, the latest available layer version supporting the provided architecture will be used.
      * 
      */
-    @InputImport(name="compatibleArchitecture")
+    @Import(name="compatibleArchitecture")
       private final @Nullable String compatibleArchitecture;
 
     public Optional<String> getCompatibleArchitecture() {
@@ -30,7 +30,7 @@ public final class GetLayerVersionArgs extends io.pulumi.resources.InvokeArgs {
      * Specific runtime the layer version must support. Conflicts with `version`. If specified, the latest available layer version supporting the provided runtime will be used.
      * 
      */
-    @InputImport(name="compatibleRuntime")
+    @Import(name="compatibleRuntime")
       private final @Nullable String compatibleRuntime;
 
     public Optional<String> getCompatibleRuntime() {
@@ -41,7 +41,7 @@ public final class GetLayerVersionArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the lambda layer.
      * 
      */
-    @InputImport(name="layerName", required=true)
+    @Import(name="layerName", required=true)
       private final String layerName;
 
     public String getLayerName() {
@@ -52,7 +52,7 @@ public final class GetLayerVersionArgs extends io.pulumi.resources.InvokeArgs {
      * Specific layer version. Conflicts with `compatible_runtime` and `compatible_architecture`. If omitted, the latest available layer version will be used.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Integer version;
 
     public Optional<Integer> getVersion() {

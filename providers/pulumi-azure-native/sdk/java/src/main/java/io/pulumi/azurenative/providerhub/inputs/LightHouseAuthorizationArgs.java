@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class LightHouseAuthorizationArgs extends io.pulumi.resources.Resou
 
     public static final LightHouseAuthorizationArgs Empty = new LightHouseAuthorizationArgs();
 
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
     public Output<String> getPrincipalId() {
         return this.principalId;
     }
 
-    @InputImport(name="roleDefinitionId", required=true)
+    @Import(name="roleDefinitionId", required=true)
       private final Output<String> roleDefinitionId;
 
     public Output<String> getRoleDefinitionId() {

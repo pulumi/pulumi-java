@@ -4,7 +4,7 @@
 package io.pulumi.gcp.spanner;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.spanner.DatabaseIAMPolicyArgs;
@@ -63,7 +63,7 @@ public class DatabaseIAMPolicy extends io.pulumi.resources.CustomResource {
      * The name of the Spanner database.
      * 
      */
-    @OutputExport(name="database", type=String.class, parameters={})
+    @Export(name="database", type=String.class, parameters={})
     private Output<String> database;
 
     /**
@@ -77,7 +77,7 @@ public class DatabaseIAMPolicy extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the database's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -91,7 +91,7 @@ public class DatabaseIAMPolicy extends io.pulumi.resources.CustomResource {
      * The name of the Spanner instance the database belongs to.
      * 
      */
-    @OutputExport(name="instance", type=String.class, parameters={})
+    @Export(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
     /**
@@ -106,7 +106,7 @@ public class DatabaseIAMPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @OutputExport(name="policyData", type=String.class, parameters={})
+    @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
     /**
@@ -122,7 +122,7 @@ public class DatabaseIAMPolicy extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

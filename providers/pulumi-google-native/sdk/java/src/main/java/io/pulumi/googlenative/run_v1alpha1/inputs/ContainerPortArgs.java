@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * (Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.
      * 
      */
-    @InputImport(name="containerPort")
+    @Import(name="containerPort")
       private final @Nullable Output<Integer> containerPort;
 
     public Output<Integer> getContainerPort() {
@@ -34,7 +34,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * (Optional) If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -45,7 +45,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
      * (Optional) Protocol for port. Must be "TCP". Defaults to "TCP".
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {

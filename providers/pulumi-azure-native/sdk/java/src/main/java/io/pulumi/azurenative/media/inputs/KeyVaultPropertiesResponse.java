@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * The current key used to encrypt the Media Services account, including the key version.
      * 
      */
-    @InputImport(name="currentKeyIdentifier", required=true)
+    @Import(name="currentKeyIdentifier", required=true)
       private final String currentKeyIdentifier;
 
     public String getCurrentKeyIdentifier() {
@@ -29,7 +29,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * The URL of the Key Vault key used to encrypt the account. The key may either be versioned (for example https://vault/keys/mykey/version1) or reference a key without a version (for example https://vault/keys/mykey).
      * 
      */
-    @InputImport(name="keyIdentifier")
+    @Import(name="keyIdentifier")
       private final @Nullable String keyIdentifier;
 
     public Optional<String> getKeyIdentifier() {

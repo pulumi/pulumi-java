@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.RecoveryPlanActionArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.RecoveryPlanProtectedItemArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
      * The end group actions.
      * 
      */
-    @InputImport(name="endGroupActions")
+    @Import(name="endGroupActions")
       private final @Nullable Output<List<RecoveryPlanActionArgs>> endGroupActions;
 
     public Output<List<RecoveryPlanActionArgs>> getEndGroupActions() {
@@ -38,7 +38,7 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
      * The group type.
      * 
      */
-    @InputImport(name="groupType", required=true)
+    @Import(name="groupType", required=true)
       private final Output<Either<String,RecoveryPlanGroupType>> groupType;
 
     public Output<Either<String,RecoveryPlanGroupType>> getGroupType() {
@@ -49,7 +49,7 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
      * The list of protected items.
      * 
      */
-    @InputImport(name="replicationProtectedItems")
+    @Import(name="replicationProtectedItems")
       private final @Nullable Output<List<RecoveryPlanProtectedItemArgs>> replicationProtectedItems;
 
     public Output<List<RecoveryPlanProtectedItemArgs>> getReplicationProtectedItems() {
@@ -60,7 +60,7 @@ public final class RecoveryPlanGroupArgs extends io.pulumi.resources.ResourceArg
      * The start group actions.
      * 
      */
-    @InputImport(name="startGroupActions")
+    @Import(name="startGroupActions")
       private final @Nullable Output<List<RecoveryPlanActionArgs>> startGroupActions;
 
     public Output<List<RecoveryPlanActionArgs>> getStartGroupActions() {

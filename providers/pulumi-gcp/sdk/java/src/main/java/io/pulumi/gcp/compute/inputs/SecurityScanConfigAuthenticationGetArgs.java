@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationCustomAccountGetArgs;
 import io.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationGoogleAccountGetArgs;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SecurityScanConfigAuthenticationGetArgs extends io.pulumi.res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="customAccount")
+    @Import(name="customAccount")
       private final @Nullable Output<SecurityScanConfigAuthenticationCustomAccountGetArgs> customAccount;
 
     public Output<SecurityScanConfigAuthenticationCustomAccountGetArgs> getCustomAccount() {
@@ -32,7 +32,7 @@ public final class SecurityScanConfigAuthenticationGetArgs extends io.pulumi.res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="googleAccount")
+    @Import(name="googleAccount")
       private final @Nullable Output<SecurityScanConfigAuthenticationGoogleAccountGetArgs> googleAccount;
 
     public Output<SecurityScanConfigAuthenticationGoogleAccountGetArgs> getGoogleAccount() {

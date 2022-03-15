@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSqlDWTableDataSetResult {
     /**
      * Unique id for identifying a data set resource
@@ -62,18 +62,18 @@ public final class GetSqlDWTableDataSetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSqlDWTableDataSetResult(
-        @OutputCustomType.Parameter("dataSetId") String dataSetId,
-        @OutputCustomType.Parameter("dataWarehouseName") String dataWarehouseName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("schemaName") String schemaName,
-        @OutputCustomType.Parameter("sqlServerResourceId") String sqlServerResourceId,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tableName") String tableName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("dataSetId") String dataSetId,
+        @CustomType.Parameter("dataWarehouseName") String dataWarehouseName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("schemaName") String schemaName,
+        @CustomType.Parameter("sqlServerResourceId") String sqlServerResourceId,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tableName") String tableName,
+        @CustomType.Parameter("type") String type) {
         this.dataSetId = dataSetId;
         this.dataWarehouseName = dataWarehouseName;
         this.id = id;

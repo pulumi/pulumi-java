@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.ContextRuleResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContextResponse {
     /**
      * A list of RPC context rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
@@ -16,8 +16,8 @@ public final class ContextResponse {
      */
     private final List<ContextRuleResponse> rules;
 
-    @OutputCustomType.Constructor
-    private ContextResponse(@OutputCustomType.Parameter("rules") List<ContextRuleResponse> rules) {
+    @CustomType.Constructor
+    private ContextResponse(@CustomType.Parameter("rules") List<ContextRuleResponse> rules) {
         this.rules = rules;
     }
 

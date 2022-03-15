@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CustomHttpPatternResponse {
     /**
      * The name of this custom HTTP verb.
@@ -20,10 +20,10 @@ public final class CustomHttpPatternResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomHttpPatternResponse(
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("path") String path) {
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("path") String path) {
         this.kind = kind;
         this.path = path;
     }

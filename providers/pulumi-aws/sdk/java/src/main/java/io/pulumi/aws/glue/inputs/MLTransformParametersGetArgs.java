@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.MLTransformParametersFindMatchesParametersGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class MLTransformParametersGetArgs extends io.pulumi.resources.Reso
      * The parameters for the find matches algorithm. see Find Matches Parameters.
      * 
      */
-    @InputImport(name="findMatchesParameters", required=true)
+    @Import(name="findMatchesParameters", required=true)
       private final Output<MLTransformParametersFindMatchesParametersGetArgs> findMatchesParameters;
 
     public Output<MLTransformParametersFindMatchesParametersGetArgs> getFindMatchesParameters() {
@@ -29,7 +29,7 @@ public final class MLTransformParametersGetArgs extends io.pulumi.resources.Reso
      * The type of machine learning transform. For information about the types of machine learning transforms, see [Creating Machine Learning Transforms](http://docs.aws.amazon.com/glue/latest/dg/add-job-machine-learning-transform.html).
      * 
      */
-    @InputImport(name="transformType", required=true)
+    @Import(name="transformType", required=true)
       private final Output<String> transformType;
 
     public Output<String> getTransformType() {

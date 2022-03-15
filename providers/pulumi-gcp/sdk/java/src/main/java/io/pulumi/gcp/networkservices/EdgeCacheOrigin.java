@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.networkservices.EdgeCacheOriginArgs;
@@ -44,7 +44,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * A human-readable description of the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -61,7 +61,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * A reference to a Topic resource.
      * 
      */
-    @OutputExport(name="failoverOrigin", type=String.class, parameters={})
+    @Export(name="failoverOrigin", type=String.class, parameters={})
     private Output</* @Nullable */ String> failoverOrigin;
 
     /**
@@ -78,7 +78,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * Set of label tags associated with the EdgeCache resource.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -99,7 +99,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * Defaults to 1. Must be a value greater than 0 and less than 4.
      * 
      */
-    @OutputExport(name="maxAttempts", type=Integer.class, parameters={})
+    @Export(name="maxAttempts", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxAttempts;
 
     /**
@@ -122,7 +122,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * and all following characters must be a dash, underscore, letter or digit.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -141,7 +141,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * If a Cloud Storage bucket is provided, it must be in the canonical "gs://bucketname" format. Other forms, such as "storage.googleapis.com", will be rejected.
      * 
      */
-    @OutputExport(name="originAddress", type=String.class, parameters={})
+    @Export(name="originAddress", type=String.class, parameters={})
     private Output<String> originAddress;
 
     /**
@@ -159,7 +159,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * Defaults to port 443 for HTTP2 and HTTPS protocols, and port 80 for HTTP.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
     /**
@@ -175,7 +175,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -192,7 +192,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * Possible values are `HTTP2`, `HTTPS`, and `HTTP`.
      * 
      */
-    @OutputExport(name="protocol", type=String.class, parameters={})
+    @Export(name="protocol", type=String.class, parameters={})
     private Output<String> protocol;
 
     /**
@@ -220,7 +220,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      *   Each value may be one of `CONNECT_FAILURE`, `HTTP_5XX`, `GATEWAY_ERROR`, `RETRIABLE_4XX`, and `NOT_FOUND`.
      * 
      */
-    @OutputExport(name="retryConditions", type=List.class, parameters={String.class})
+    @Export(name="retryConditions", type=List.class, parameters={String.class})
     private Output<List<String>> retryConditions;
 
     /**
@@ -247,7 +247,7 @@ public class EdgeCacheOrigin extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="timeout", type=EdgeCacheOriginTimeout.class, parameters={})
+    @Export(name="timeout", type=EdgeCacheOriginTimeout.class, parameters={})
     private Output</* @Nullable */ EdgeCacheOriginTimeout> timeout;
 
     /**

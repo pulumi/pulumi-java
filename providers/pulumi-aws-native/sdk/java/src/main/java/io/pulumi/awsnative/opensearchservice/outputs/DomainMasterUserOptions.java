@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.opensearchservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainMasterUserOptions {
     private final @Nullable String masterUserARN;
     private final @Nullable String masterUserName;
     private final @Nullable String masterUserPassword;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainMasterUserOptions(
-        @OutputCustomType.Parameter("masterUserARN") @Nullable String masterUserARN,
-        @OutputCustomType.Parameter("masterUserName") @Nullable String masterUserName,
-        @OutputCustomType.Parameter("masterUserPassword") @Nullable String masterUserPassword) {
+        @CustomType.Parameter("masterUserARN") @Nullable String masterUserARN,
+        @CustomType.Parameter("masterUserName") @Nullable String masterUserName,
+        @CustomType.Parameter("masterUserPassword") @Nullable String masterUserPassword) {
         this.masterUserARN = masterUserARN;
         this.masterUserName = masterUserName;
         this.masterUserPassword = masterUserPassword;

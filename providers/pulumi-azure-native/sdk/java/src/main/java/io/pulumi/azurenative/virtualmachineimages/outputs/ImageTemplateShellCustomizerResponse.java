@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageTemplateShellCustomizerResponse {
     /**
      * Array of shell commands to execute
@@ -39,13 +39,13 @@ public final class ImageTemplateShellCustomizerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageTemplateShellCustomizerResponse(
-        @OutputCustomType.Parameter("inline") @Nullable List<String> inline,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("scriptUri") @Nullable String scriptUri,
-        @OutputCustomType.Parameter("sha256Checksum") @Nullable String sha256Checksum,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("inline") @Nullable List<String> inline,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("scriptUri") @Nullable String scriptUri,
+        @CustomType.Parameter("sha256Checksum") @Nullable String sha256Checksum,
+        @CustomType.Parameter("type") String type) {
         this.inline = inline;
         this.name = name;
         this.scriptUri = scriptUri;

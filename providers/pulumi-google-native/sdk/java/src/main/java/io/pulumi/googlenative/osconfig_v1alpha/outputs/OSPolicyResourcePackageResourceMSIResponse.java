@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyResourceFileResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OSPolicyResourcePackageResourceMSIResponse {
     /**
      * Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
@@ -22,10 +22,10 @@ public final class OSPolicyResourcePackageResourceMSIResponse {
      */
     private final OSPolicyResourceFileResponse source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OSPolicyResourcePackageResourceMSIResponse(
-        @OutputCustomType.Parameter("properties") List<String> properties,
-        @OutputCustomType.Parameter("source") OSPolicyResourceFileResponse source) {
+        @CustomType.Parameter("properties") List<String> properties,
+        @CustomType.Parameter("source") OSPolicyResourceFileResponse source) {
         this.properties = properties;
         this.source = source;
     }

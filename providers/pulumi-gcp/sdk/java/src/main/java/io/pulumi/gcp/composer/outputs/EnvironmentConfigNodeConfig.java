@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.composer.outputs.EnvironmentConfigNodeConfigIpAllocationPolicy;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentConfigNodeConfig {
     private final @Nullable Integer diskSizeGb;
     private final @Nullable Boolean enableIpMasqAgent;
@@ -27,19 +27,19 @@ public final class EnvironmentConfigNodeConfig {
     private final @Nullable List<String> tags;
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentConfigNodeConfig(
-        @OutputCustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
-        @OutputCustomType.Parameter("enableIpMasqAgent") @Nullable Boolean enableIpMasqAgent,
-        @OutputCustomType.Parameter("ipAllocationPolicy") @Nullable EnvironmentConfigNodeConfigIpAllocationPolicy ipAllocationPolicy,
-        @OutputCustomType.Parameter("machineType") @Nullable String machineType,
-        @OutputCustomType.Parameter("maxPodsPerNode") @Nullable Integer maxPodsPerNode,
-        @OutputCustomType.Parameter("network") @Nullable String network,
-        @OutputCustomType.Parameter("oauthScopes") @Nullable List<String> oauthScopes,
-        @OutputCustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
-        @OutputCustomType.Parameter("subnetwork") @Nullable String subnetwork,
-        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
-        @OutputCustomType.Parameter("zone") @Nullable String zone) {
+        @CustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
+        @CustomType.Parameter("enableIpMasqAgent") @Nullable Boolean enableIpMasqAgent,
+        @CustomType.Parameter("ipAllocationPolicy") @Nullable EnvironmentConfigNodeConfigIpAllocationPolicy ipAllocationPolicy,
+        @CustomType.Parameter("machineType") @Nullable String machineType,
+        @CustomType.Parameter("maxPodsPerNode") @Nullable Integer maxPodsPerNode,
+        @CustomType.Parameter("network") @Nullable String network,
+        @CustomType.Parameter("oauthScopes") @Nullable List<String> oauthScopes,
+        @CustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
+        @CustomType.Parameter("subnetwork") @Nullable String subnetwork,
+        @CustomType.Parameter("tags") @Nullable List<String> tags,
+        @CustomType.Parameter("zone") @Nullable String zone) {
         this.diskSizeGb = diskSizeGb;
         this.enableIpMasqAgent = enableIpMasqAgent;
         this.ipAllocationPolicy = ipAllocationPolicy;

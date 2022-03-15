@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.purview.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class CloudConnectorsResponse extends io.pulumi.resources.InvokeArg
      * Configured in AWS to allow use of the role arn used for scanning
      * 
      */
-    @InputImport(name="awsExternalId", required=true)
+    @Import(name="awsExternalId", required=true)
       private final String awsExternalId;
 
     public String getAwsExternalId() {

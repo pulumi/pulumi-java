@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
      * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
      * 
      */
-    @InputImport(name="threadsPerCore")
+    @Import(name="threadsPerCore")
       private final @Nullable Output<String> threadsPerCore;
 
     public Output<String> getThreadsPerCore() {

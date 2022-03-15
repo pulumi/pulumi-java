@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.solutions.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class JitSchedulingPolicyArgs extends io.pulumi.resources.ResourceA
 
     public static final JitSchedulingPolicyArgs Empty = new JitSchedulingPolicyArgs();
 
-    @InputImport(name="duration", required=true)
+    @Import(name="duration", required=true)
       private final Output<String> duration;
 
     public Output<String> getDuration() {
@@ -28,7 +28,7 @@ public final class JitSchedulingPolicyArgs extends io.pulumi.resources.ResourceA
      * The start time of the request.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
     public Output<String> getStartTime() {

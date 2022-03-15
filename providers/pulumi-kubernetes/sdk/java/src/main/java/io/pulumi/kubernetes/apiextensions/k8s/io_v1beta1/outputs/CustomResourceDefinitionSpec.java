@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs.CustomResourceColumnDefinition;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs.CustomResourceConversion;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs.CustomResourceDefinitionNames;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomResourceDefinitionSpec {
     /**
      * additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. If present, this field configures columns for all versions. Top-level and per-version columns are mutually exclusive. If no top-level or per-version columns are specified, a single column displaying the age of the custom resource is used.
@@ -70,18 +70,18 @@ public final class CustomResourceDefinitionSpec {
      */
     private final @Nullable List<CustomResourceDefinitionVersion> versions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomResourceDefinitionSpec(
-        @OutputCustomType.Parameter("additionalPrinterColumns") @Nullable List<CustomResourceColumnDefinition> additionalPrinterColumns,
-        @OutputCustomType.Parameter("conversion") @Nullable CustomResourceConversion conversion,
-        @OutputCustomType.Parameter("group") String group,
-        @OutputCustomType.Parameter("names") CustomResourceDefinitionNames names,
-        @OutputCustomType.Parameter("preserveUnknownFields") @Nullable Boolean preserveUnknownFields,
-        @OutputCustomType.Parameter("scope") String scope,
-        @OutputCustomType.Parameter("subresources") @Nullable CustomResourceSubresources subresources,
-        @OutputCustomType.Parameter("validation") @Nullable CustomResourceValidation validation,
-        @OutputCustomType.Parameter("version") @Nullable String version,
-        @OutputCustomType.Parameter("versions") @Nullable List<CustomResourceDefinitionVersion> versions) {
+        @CustomType.Parameter("additionalPrinterColumns") @Nullable List<CustomResourceColumnDefinition> additionalPrinterColumns,
+        @CustomType.Parameter("conversion") @Nullable CustomResourceConversion conversion,
+        @CustomType.Parameter("group") String group,
+        @CustomType.Parameter("names") CustomResourceDefinitionNames names,
+        @CustomType.Parameter("preserveUnknownFields") @Nullable Boolean preserveUnknownFields,
+        @CustomType.Parameter("scope") String scope,
+        @CustomType.Parameter("subresources") @Nullable CustomResourceSubresources subresources,
+        @CustomType.Parameter("validation") @Nullable CustomResourceValidation validation,
+        @CustomType.Parameter("version") @Nullable String version,
+        @CustomType.Parameter("versions") @Nullable List<CustomResourceDefinitionVersion> versions) {
         this.additionalPrinterColumns = additionalPrinterColumns;
         this.conversion = conversion;
         this.group = group;

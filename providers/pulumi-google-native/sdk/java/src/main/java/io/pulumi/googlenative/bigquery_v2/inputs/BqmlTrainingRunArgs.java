@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.BqmlIterationResultArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.BqmlTrainingRunTrainingOptionsArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
      * [Output-only, Beta] List of each iteration results.
      * 
      */
-    @InputImport(name="iterationResults")
+    @Import(name="iterationResults")
       private final @Nullable Output<List<BqmlIterationResultArgs>> iterationResults;
 
     public Output<List<BqmlIterationResultArgs>> getIterationResults() {
@@ -32,7 +32,7 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
      * [Output-only, Beta] Training run start time in milliseconds since the epoch.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -43,7 +43,7 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
      * [Output-only, Beta] Different state applicable for a training run. IN PROGRESS: Training run is in progress. FAILED: Training run ended due to a non-retryable failure. SUCCEEDED: Training run successfully completed. CANCELLED: Training run cancelled by the user.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -54,7 +54,7 @@ public final class BqmlTrainingRunArgs extends io.pulumi.resources.ResourceArgs 
      * [Output-only, Beta] Training options used by this training run. These options are mutable for subsequent training runs. Default values are explicitly stored for options not specified in the input query of the first training run. For subsequent training runs, any option not explicitly specified in the input query will be copied from the previous training run.
      * 
      */
-    @InputImport(name="trainingOptions")
+    @Import(name="trainingOptions")
       private final @Nullable Output<BqmlTrainingRunTrainingOptionsArgs> trainingOptions;
 
     public Output<BqmlTrainingRunTrainingOptionsArgs> getTrainingOptions() {

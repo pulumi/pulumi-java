@@ -4,7 +4,7 @@
 package io.pulumi.aws.elb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LoadBalancerCookieStickinessPolicyState extends io.pulumi.res
      * the session cookie should be considered stale, expressed in seconds.
      * 
      */
-    @InputImport(name="cookieExpirationPeriod")
+    @Import(name="cookieExpirationPeriod")
       private final @Nullable Output<Integer> cookieExpirationPeriod;
 
     public Output<Integer> getCookieExpirationPeriod() {
@@ -33,7 +33,7 @@ public final class LoadBalancerCookieStickinessPolicyState extends io.pulumi.res
      * balancer.
      * 
      */
-    @InputImport(name="lbPort")
+    @Import(name="lbPort")
       private final @Nullable Output<Integer> lbPort;
 
     public Output<Integer> getLbPort() {
@@ -45,7 +45,7 @@ public final class LoadBalancerCookieStickinessPolicyState extends io.pulumi.res
      * should be attached.
      * 
      */
-    @InputImport(name="loadBalancer")
+    @Import(name="loadBalancer")
       private final @Nullable Output<String> loadBalancer;
 
     public Output<String> getLoadBalancer() {
@@ -56,7 +56,7 @@ public final class LoadBalancerCookieStickinessPolicyState extends io.pulumi.res
      * The name of the stickiness policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

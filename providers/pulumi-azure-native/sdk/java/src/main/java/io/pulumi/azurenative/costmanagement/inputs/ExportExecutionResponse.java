@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.CommonExportPropertiesResponse;
 import io.pulumi.azurenative.costmanagement.inputs.ErrorDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
      */
-    @InputImport(name="eTag")
+    @Import(name="eTag")
       private final @Nullable String eTag;
 
     public Optional<String> getETag() {
@@ -35,7 +35,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * The details of any error.
      * 
      */
-    @InputImport(name="error")
+    @Import(name="error")
       private final @Nullable ErrorDetailsResponse error;
 
     public Optional<ErrorDetailsResponse> getError() {
@@ -46,7 +46,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * The type of the export execution.
      * 
      */
-    @InputImport(name="executionType")
+    @Import(name="executionType")
       private final @Nullable String executionType;
 
     public Optional<String> getExecutionType() {
@@ -57,7 +57,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * The name of the exported file.
      * 
      */
-    @InputImport(name="fileName")
+    @Import(name="fileName")
       private final @Nullable String fileName;
 
     public Optional<String> getFileName() {
@@ -68,7 +68,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * Resource Id.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -79,7 +79,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * Resource name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -90,7 +90,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * The time when the export execution finished.
      * 
      */
-    @InputImport(name="processingEndTime")
+    @Import(name="processingEndTime")
       private final @Nullable String processingEndTime;
 
     public Optional<String> getProcessingEndTime() {
@@ -101,7 +101,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * The time when export was picked up to be executed.
      * 
      */
-    @InputImport(name="processingStartTime")
+    @Import(name="processingStartTime")
       private final @Nullable String processingStartTime;
 
     public Optional<String> getProcessingStartTime() {
@@ -112,7 +112,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * The export settings that were in effect for this execution.
      * 
      */
-    @InputImport(name="runSettings")
+    @Import(name="runSettings")
       private final @Nullable CommonExportPropertiesResponse runSettings;
 
     public Optional<CommonExportPropertiesResponse> getRunSettings() {
@@ -123,7 +123,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * The last known status of the export execution.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -134,7 +134,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * The identifier for the entity that executed the export. For OnDemand executions it is the user email. For scheduled executions it is 'System'.
      * 
      */
-    @InputImport(name="submittedBy")
+    @Import(name="submittedBy")
       private final @Nullable String submittedBy;
 
     public Optional<String> getSubmittedBy() {
@@ -145,7 +145,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * The time when export was queued to be executed.
      * 
      */
-    @InputImport(name="submittedTime")
+    @Import(name="submittedTime")
       private final @Nullable String submittedTime;
 
     public Optional<String> getSubmittedTime() {
@@ -156,7 +156,7 @@ public final class ExportExecutionResponse extends io.pulumi.resources.InvokeArg
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.storagecache.outputs;
 
 import io.pulumi.azurenative.storagecache.outputs.KeyVaultKeyReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CacheEncryptionSettingsResponse {
     /**
      * Specifies the location of the key encryption key in Key Vault.
@@ -17,8 +17,8 @@ public final class CacheEncryptionSettingsResponse {
      */
     private final @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
 
-    @OutputCustomType.Constructor
-    private CacheEncryptionSettingsResponse(@OutputCustomType.Parameter("keyEncryptionKey") @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey) {
+    @CustomType.Constructor
+    private CacheEncryptionSettingsResponse(@CustomType.Parameter("keyEncryptionKey") @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey) {
         this.keyEncryptionKey = keyEncryptionKey;
     }
 

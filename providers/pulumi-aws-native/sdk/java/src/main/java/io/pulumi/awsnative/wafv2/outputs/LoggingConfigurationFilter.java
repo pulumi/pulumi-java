@@ -6,11 +6,11 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFilterBehavior;
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFilterRequirement;
 import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationCondition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LoggingConfigurationFilter {
     /**
      * How to handle logs that satisfy the filter's conditions and requirement.
@@ -28,11 +28,11 @@ public final class LoggingConfigurationFilter {
      */
     private final LoggingConfigurationFilterRequirement requirement;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoggingConfigurationFilter(
-        @OutputCustomType.Parameter("behavior") LoggingConfigurationFilterBehavior behavior,
-        @OutputCustomType.Parameter("conditions") List<LoggingConfigurationCondition> conditions,
-        @OutputCustomType.Parameter("requirement") LoggingConfigurationFilterRequirement requirement) {
+        @CustomType.Parameter("behavior") LoggingConfigurationFilterBehavior behavior,
+        @CustomType.Parameter("conditions") List<LoggingConfigurationCondition> conditions,
+        @CustomType.Parameter("requirement") LoggingConfigurationFilterRequirement requirement) {
         this.behavior = behavior;
         this.conditions = conditions;
         this.requirement = requirement;

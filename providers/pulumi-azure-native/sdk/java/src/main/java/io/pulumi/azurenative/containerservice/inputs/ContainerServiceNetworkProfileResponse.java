@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.ManagedClusterLoadBalancerProfileResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
      * 
      */
-    @InputImport(name="dnsServiceIP")
+    @Import(name="dnsServiceIP")
       private final @Nullable String dnsServiceIP;
 
     public Optional<String> getDnsServiceIP() {
@@ -34,7 +34,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
      * 
      */
-    @InputImport(name="dockerBridgeCidr")
+    @Import(name="dockerBridgeCidr")
       private final @Nullable String dockerBridgeCidr;
 
     public Optional<String> getDockerBridgeCidr() {
@@ -45,7 +45,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * Profile of the cluster load balancer.
      * 
      */
-    @InputImport(name="loadBalancerProfile")
+    @Import(name="loadBalancerProfile")
       private final @Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile;
 
     public Optional<ManagedClusterLoadBalancerProfileResponse> getLoadBalancerProfile() {
@@ -56,7 +56,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * The load balancer sku for the managed cluster.
      * 
      */
-    @InputImport(name="loadBalancerSku")
+    @Import(name="loadBalancerSku")
       private final @Nullable String loadBalancerSku;
 
     public Optional<String> getLoadBalancerSku() {
@@ -67,7 +67,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * Network mode used for building Kubernetes network.
      * 
      */
-    @InputImport(name="networkMode")
+    @Import(name="networkMode")
       private final @Nullable String networkMode;
 
     public Optional<String> getNetworkMode() {
@@ -78,7 +78,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * Network plugin used for building Kubernetes network.
      * 
      */
-    @InputImport(name="networkPlugin")
+    @Import(name="networkPlugin")
       private final @Nullable String networkPlugin;
 
     public Optional<String> getNetworkPlugin() {
@@ -89,7 +89,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * Network policy used for building Kubernetes network.
      * 
      */
-    @InputImport(name="networkPolicy")
+    @Import(name="networkPolicy")
       private final @Nullable String networkPolicy;
 
     public Optional<String> getNetworkPolicy() {
@@ -100,7 +100,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * The outbound (egress) routing method.
      * 
      */
-    @InputImport(name="outboundType")
+    @Import(name="outboundType")
       private final @Nullable String outboundType;
 
     public Optional<String> getOutboundType() {
@@ -111,7 +111,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * A CIDR notation IP range from which to assign pod IPs when kubenet is used.
      * 
      */
-    @InputImport(name="podCidr")
+    @Import(name="podCidr")
       private final @Nullable String podCidr;
 
     public Optional<String> getPodCidr() {
@@ -122,7 +122,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
      * 
      */
-    @InputImport(name="serviceCidr")
+    @Import(name="serviceCidr")
       private final @Nullable String serviceCidr;
 
     public Optional<String> getServiceCidr() {

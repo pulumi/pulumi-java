@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.RolloutStepResponse;
 import io.pulumi.azurenative.deploymentmanager.inputs.ServiceUnitArtifactsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
      * The artifacts for the service unit.
      * 
      */
-    @InputImport(name="artifacts")
+    @Import(name="artifacts")
       private final @Nullable ServiceUnitArtifactsResponse artifacts;
 
     public Optional<ServiceUnitArtifactsResponse> getArtifacts() {
@@ -36,7 +36,7 @@ public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
      * Describes the type of ARM deployment to be performed on the resource.
      * 
      */
-    @InputImport(name="deploymentMode", required=true)
+    @Import(name="deploymentMode", required=true)
       private final String deploymentMode;
 
     public String getDeploymentMode() {
@@ -47,7 +47,7 @@ public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the service unit.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -58,7 +58,7 @@ public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
      * Detailed step information, if present.
      * 
      */
-    @InputImport(name="steps")
+    @Import(name="steps")
       private final @Nullable List<RolloutStepResponse> steps;
 
     public List<RolloutStepResponse> getSteps() {
@@ -69,7 +69,7 @@ public final class ServiceUnitResponse extends io.pulumi.resources.InvokeArgs {
      * The Azure Resource Group to which the resources in the service unit belong to or should be deployed to.
      * 
      */
-    @InputImport(name="targetResourceGroup", required=true)
+    @Import(name="targetResourceGroup", required=true)
       private final String targetResourceGroup;
 
     public String getTargetResourceGroup() {

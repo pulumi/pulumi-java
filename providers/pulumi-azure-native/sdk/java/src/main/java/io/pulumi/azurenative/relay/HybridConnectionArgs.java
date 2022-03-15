@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.relay;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
      * The hybrid connection name.
      * 
      */
-    @InputImport(name="hybridConnectionName")
+    @Import(name="hybridConnectionName")
       private final @Nullable Output<String> hybridConnectionName;
 
     public Output<String> getHybridConnectionName() {
@@ -30,7 +30,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
      * The namespace name
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
@@ -41,7 +41,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
      * Returns true if client authorization is needed for this hybrid connection; otherwise, false.
      * 
      */
-    @InputImport(name="requiresClientAuthorization")
+    @Import(name="requiresClientAuthorization")
       private final @Nullable Output<Boolean> requiresClientAuthorization;
 
     public Output<Boolean> getRequiresClientAuthorization() {
@@ -52,7 +52,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
      * The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
      * 
      */
-    @InputImport(name="userMetadata")
+    @Import(name="userMetadata")
       private final @Nullable Output<String> userMetadata;
 
     public Output<String> getUserMetadata() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRegisteredServerResult {
     /**
      * Registered Server Agent Version
@@ -138,33 +138,33 @@ public final class GetRegisteredServerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegisteredServerResult(
-        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
-        @OutputCustomType.Parameter("agentVersionExpirationDate") String agentVersionExpirationDate,
-        @OutputCustomType.Parameter("agentVersionStatus") String agentVersionStatus,
-        @OutputCustomType.Parameter("clusterId") @Nullable String clusterId,
-        @OutputCustomType.Parameter("clusterName") @Nullable String clusterName,
-        @OutputCustomType.Parameter("discoveryEndpointUri") @Nullable String discoveryEndpointUri,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastHeartBeat") @Nullable String lastHeartBeat,
-        @OutputCustomType.Parameter("lastOperationName") @Nullable String lastOperationName,
-        @OutputCustomType.Parameter("lastWorkflowId") @Nullable String lastWorkflowId,
-        @OutputCustomType.Parameter("managementEndpointUri") @Nullable String managementEndpointUri,
-        @OutputCustomType.Parameter("monitoringConfiguration") @Nullable String monitoringConfiguration,
-        @OutputCustomType.Parameter("monitoringEndpointUri") @Nullable String monitoringEndpointUri,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("resourceLocation") @Nullable String resourceLocation,
-        @OutputCustomType.Parameter("serverCertificate") @Nullable String serverCertificate,
-        @OutputCustomType.Parameter("serverId") @Nullable String serverId,
-        @OutputCustomType.Parameter("serverManagementErrorCode") @Nullable Integer serverManagementErrorCode,
-        @OutputCustomType.Parameter("serverOSVersion") @Nullable String serverOSVersion,
-        @OutputCustomType.Parameter("serverRole") @Nullable String serverRole,
-        @OutputCustomType.Parameter("serviceLocation") @Nullable String serviceLocation,
-        @OutputCustomType.Parameter("storageSyncServiceUid") @Nullable String storageSyncServiceUid,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @CustomType.Parameter("agentVersionExpirationDate") String agentVersionExpirationDate,
+        @CustomType.Parameter("agentVersionStatus") String agentVersionStatus,
+        @CustomType.Parameter("clusterId") @Nullable String clusterId,
+        @CustomType.Parameter("clusterName") @Nullable String clusterName,
+        @CustomType.Parameter("discoveryEndpointUri") @Nullable String discoveryEndpointUri,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastHeartBeat") @Nullable String lastHeartBeat,
+        @CustomType.Parameter("lastOperationName") @Nullable String lastOperationName,
+        @CustomType.Parameter("lastWorkflowId") @Nullable String lastWorkflowId,
+        @CustomType.Parameter("managementEndpointUri") @Nullable String managementEndpointUri,
+        @CustomType.Parameter("monitoringConfiguration") @Nullable String monitoringConfiguration,
+        @CustomType.Parameter("monitoringEndpointUri") @Nullable String monitoringEndpointUri,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("resourceLocation") @Nullable String resourceLocation,
+        @CustomType.Parameter("serverCertificate") @Nullable String serverCertificate,
+        @CustomType.Parameter("serverId") @Nullable String serverId,
+        @CustomType.Parameter("serverManagementErrorCode") @Nullable Integer serverManagementErrorCode,
+        @CustomType.Parameter("serverOSVersion") @Nullable String serverOSVersion,
+        @CustomType.Parameter("serverRole") @Nullable String serverRole,
+        @CustomType.Parameter("serviceLocation") @Nullable String serviceLocation,
+        @CustomType.Parameter("storageSyncServiceUid") @Nullable String storageSyncServiceUid,
+        @CustomType.Parameter("type") String type) {
         this.agentVersion = agentVersion;
         this.agentVersionExpirationDate = agentVersionExpirationDate;
         this.agentVersionStatus = agentVersionStatus;

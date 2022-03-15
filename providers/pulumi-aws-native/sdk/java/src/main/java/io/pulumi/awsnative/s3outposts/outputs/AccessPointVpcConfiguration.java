@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.s3outposts.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessPointVpcConfiguration {
     /**
      * Virtual Private Cloud (VPC) Id from which AccessPoint will allow requests.
@@ -17,8 +17,8 @@ public final class AccessPointVpcConfiguration {
      */
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor
-    private AccessPointVpcConfiguration(@OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
+    @CustomType.Constructor
+    private AccessPointVpcConfiguration(@CustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.vpcId = vpcId;
     }
 

@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.healthcare.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.healthcare.outputs.FhirStoreStreamConfigBigqueryDestination;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FhirStoreStreamConfig {
     /**
      * The destination BigQuery structure that contains both the dataset location and corresponding schema config.
@@ -30,10 +30,10 @@ public final class FhirStoreStreamConfig {
      */
     private final @Nullable List<String> resourceTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FhirStoreStreamConfig(
-        @OutputCustomType.Parameter("bigqueryDestination") FhirStoreStreamConfigBigqueryDestination bigqueryDestination,
-        @OutputCustomType.Parameter("resourceTypes") @Nullable List<String> resourceTypes) {
+        @CustomType.Parameter("bigqueryDestination") FhirStoreStreamConfigBigqueryDestination bigqueryDestination,
+        @CustomType.Parameter("resourceTypes") @Nullable List<String> resourceTypes) {
         this.bigqueryDestination = bigqueryDestination;
         this.resourceTypes = resourceTypes;
     }

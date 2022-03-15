@@ -4,7 +4,7 @@
 package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PipelineContentConfigPermissionGetArgs extends io.pulumi.reso
      * The permission that you want to give to the AWS user that you specified in `content_config_permissions.grantee`. Valid values are `Read`, `ReadAcp`, `WriteAcp` or `FullControl`.
      * 
      */
-    @InputImport(name="accesses")
+    @Import(name="accesses")
       private final @Nullable Output<List<String>> accesses;
 
     public Output<List<String>> getAccesses() {
@@ -30,7 +30,7 @@ public final class PipelineContentConfigPermissionGetArgs extends io.pulumi.reso
      * The AWS user or group that you want to have access to transcoded files and playlists.
      * 
      */
-    @InputImport(name="grantee")
+    @Import(name="grantee")
       private final @Nullable Output<String> grantee;
 
     public Output<String> getGrantee() {
@@ -41,7 +41,7 @@ public final class PipelineContentConfigPermissionGetArgs extends io.pulumi.reso
      * Specify the type of value that appears in the `content_config_permissions.grantee` object. Valid values are `Canonical`, `Email` or `Group`.
      * 
      */
-    @InputImport(name="granteeType")
+    @Import(name="granteeType")
       private final @Nullable Output<String> granteeType;
 
     public Output<String> getGranteeType() {

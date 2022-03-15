@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class VpcPeeringConnectionAccepterAccepterArgs extends io.pulumi.re
      * with the peer VPC over the VPC Peering Connection.
      * 
      */
-    @InputImport(name="allowClassicLinkToRemoteVpc")
+    @Import(name="allowClassicLinkToRemoteVpc")
       private final @Nullable Output<Boolean> allowClassicLinkToRemoteVpc;
 
     public Output<Boolean> getAllowClassicLinkToRemoteVpc() {
@@ -31,7 +31,7 @@ public final class VpcPeeringConnectionAccepterAccepterArgs extends io.pulumi.re
      * private IP addresses when queried from instances in a peer VPC.
      * 
      */
-    @InputImport(name="allowRemoteVpcDnsResolution")
+    @Import(name="allowRemoteVpcDnsResolution")
       private final @Nullable Output<Boolean> allowRemoteVpcDnsResolution;
 
     public Output<Boolean> getAllowRemoteVpcDnsResolution() {
@@ -43,7 +43,7 @@ public final class VpcPeeringConnectionAccepterAccepterArgs extends io.pulumi.re
      * connection in the peer VPC over the VPC Peering Connection.
      * 
      */
-    @InputImport(name="allowVpcToRemoteClassicLink")
+    @Import(name="allowVpcToRemoteClassicLink")
       private final @Nullable Output<Boolean> allowVpcToRemoteClassicLink;
 
     public Output<Boolean> getAllowVpcToRemoteClassicLink() {

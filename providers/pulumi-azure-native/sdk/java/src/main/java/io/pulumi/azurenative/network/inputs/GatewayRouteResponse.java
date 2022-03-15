@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
      * The route's AS path sequence.
      * 
      */
-    @InputImport(name="asPath", required=true)
+    @Import(name="asPath", required=true)
       private final String asPath;
 
     public String getAsPath() {
@@ -32,7 +32,7 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
      * The gateway's local address.
      * 
      */
-    @InputImport(name="localAddress", required=true)
+    @Import(name="localAddress", required=true)
       private final String localAddress;
 
     public String getLocalAddress() {
@@ -43,7 +43,7 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
      * The route's network prefix.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final String network;
 
     public String getNetwork() {
@@ -54,7 +54,7 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
      * The route's next hop.
      * 
      */
-    @InputImport(name="nextHop", required=true)
+    @Import(name="nextHop", required=true)
       private final String nextHop;
 
     public String getNextHop() {
@@ -65,7 +65,7 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
      * The source this route was learned from.
      * 
      */
-    @InputImport(name="origin", required=true)
+    @Import(name="origin", required=true)
       private final String origin;
 
     public String getOrigin() {
@@ -76,7 +76,7 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
      * The peer this route was learned from.
      * 
      */
-    @InputImport(name="sourcePeer", required=true)
+    @Import(name="sourcePeer", required=true)
       private final String sourcePeer;
 
     public String getSourcePeer() {
@@ -87,7 +87,7 @@ public final class GatewayRouteResponse extends io.pulumi.resources.InvokeArgs {
      * The route's weight.
      * 
      */
-    @InputImport(name="weight", required=true)
+    @Import(name="weight", required=true)
       private final Integer weight;
 
     public Integer getWeight() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storsimple;
 
 import io.pulumi.azurenative.storsimple.enums.Kind;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the backup policy to be created/updated.
      * 
      */
-    @InputImport(name="backupPolicyName")
+    @Import(name="backupPolicyName")
       private final @Nullable Output<String> backupPolicyName;
 
     public Output<String> getBackupPolicyName() {
@@ -31,7 +31,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The device name
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -42,7 +42,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<Kind> kind;
 
     public Output<Kind> getKind() {
@@ -53,7 +53,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The manager name
      * 
      */
-    @InputImport(name="managerName", required=true)
+    @Import(name="managerName", required=true)
       private final Output<String> managerName;
 
     public Output<String> getManagerName() {
@@ -64,7 +64,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The path IDs of the volumes which are part of the backup policy.
      * 
      */
-    @InputImport(name="volumeIds", required=true)
+    @Import(name="volumeIds", required=true)
       private final Output<List<String>> volumeIds;
 
     public Output<List<String>> getVolumeIds() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ServiceAttachmentConnectedEndpointResponse extends io.pulumi.
      * The url of a connected endpoint.
      * 
      */
-    @InputImport(name="endpoint", required=true)
+    @Import(name="endpoint", required=true)
       private final String endpoint;
 
     public String getEndpoint() {
@@ -31,7 +31,7 @@ public final class ServiceAttachmentConnectedEndpointResponse extends io.pulumi.
      * The PSC connection id of the connected endpoint.
      * 
      */
-    @InputImport(name="pscConnectionId", required=true)
+    @Import(name="pscConnectionId", required=true)
       private final String pscConnectionId;
 
     public String getPscConnectionId() {
@@ -42,7 +42,7 @@ public final class ServiceAttachmentConnectedEndpointResponse extends io.pulumi.
      * The status of a connected endpoint to this service attachment.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

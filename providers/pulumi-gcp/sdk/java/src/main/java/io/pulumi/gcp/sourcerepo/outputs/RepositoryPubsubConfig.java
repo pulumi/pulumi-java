@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.sourcerepo.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RepositoryPubsubConfig {
     /**
      * The format of the Cloud Pub/Sub messages.
@@ -33,11 +33,11 @@ public final class RepositoryPubsubConfig {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RepositoryPubsubConfig(
-        @OutputCustomType.Parameter("messageFormat") String messageFormat,
-        @OutputCustomType.Parameter("serviceAccountEmail") @Nullable String serviceAccountEmail,
-        @OutputCustomType.Parameter("topic") String topic) {
+        @CustomType.Parameter("messageFormat") String messageFormat,
+        @CustomType.Parameter("serviceAccountEmail") @Nullable String serviceAccountEmail,
+        @CustomType.Parameter("topic") String topic) {
         this.messageFormat = messageFormat;
         this.serviceAccountEmail = serviceAccountEmail;
         this.topic = topic;

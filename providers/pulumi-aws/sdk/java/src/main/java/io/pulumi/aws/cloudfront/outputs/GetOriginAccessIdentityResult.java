@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetOriginAccessIdentityResult {
     /**
      * Internal value used by CloudFront to allow future
@@ -48,15 +48,15 @@ public final class GetOriginAccessIdentityResult {
      */
     private final String s3CanonicalUserId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOriginAccessIdentityResult(
-        @OutputCustomType.Parameter("callerReference") String callerReference,
-        @OutputCustomType.Parameter("cloudfrontAccessIdentityPath") String cloudfrontAccessIdentityPath,
-        @OutputCustomType.Parameter("comment") String comment,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("iamArn") String iamArn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("s3CanonicalUserId") String s3CanonicalUserId) {
+        @CustomType.Parameter("callerReference") String callerReference,
+        @CustomType.Parameter("cloudfrontAccessIdentityPath") String cloudfrontAccessIdentityPath,
+        @CustomType.Parameter("comment") String comment,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("iamArn") String iamArn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("s3CanonicalUserId") String s3CanonicalUserId) {
         this.callerReference = callerReference;
         this.cloudfrontAccessIdentityPath = cloudfrontAccessIdentityPath;
         this.comment = comment;

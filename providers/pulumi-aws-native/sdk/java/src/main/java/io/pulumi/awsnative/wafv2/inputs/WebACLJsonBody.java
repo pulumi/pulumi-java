@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.WebACLBodyParsingFallbackBehavior;
 import io.pulumi.awsnative.wafv2.enums.WebACLJsonMatchScope;
 import io.pulumi.awsnative.wafv2.inputs.WebACLJsonMatchPattern;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,21 +20,21 @@ public final class WebACLJsonBody extends io.pulumi.resources.InvokeArgs {
 
     public static final WebACLJsonBody Empty = new WebACLJsonBody();
 
-    @InputImport(name="invalidFallbackBehavior")
+    @Import(name="invalidFallbackBehavior")
       private final @Nullable WebACLBodyParsingFallbackBehavior invalidFallbackBehavior;
 
     public Optional<WebACLBodyParsingFallbackBehavior> getInvalidFallbackBehavior() {
         return this.invalidFallbackBehavior == null ? Optional.empty() : Optional.ofNullable(this.invalidFallbackBehavior);
     }
 
-    @InputImport(name="matchPattern", required=true)
+    @Import(name="matchPattern", required=true)
       private final WebACLJsonMatchPattern matchPattern;
 
     public WebACLJsonMatchPattern getMatchPattern() {
         return this.matchPattern;
     }
 
-    @InputImport(name="matchScope", required=true)
+    @Import(name="matchScope", required=true)
       private final WebACLJsonMatchScope matchScope;
 
     public WebACLJsonMatchScope getMatchScope() {

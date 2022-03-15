@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AwsClusterControlPlaneProxyConfigGetArgs extends io.pulumi.re
      * The ARN of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
      * 
      */
-    @InputImport(name="secretArn", required=true)
+    @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
     public Output<String> getSecretArn() {
@@ -28,7 +28,7 @@ public final class AwsClusterControlPlaneProxyConfigGetArgs extends io.pulumi.re
      * The version string of the AWS Secret Manager secret that contains the HTTP(S) proxy configuration.
      * 
      */
-    @InputImport(name="secretVersion", required=true)
+    @Import(name="secretVersion", required=true)
       private final Output<String> secretVersion;
 
     public Output<String> getSecretVersion() {

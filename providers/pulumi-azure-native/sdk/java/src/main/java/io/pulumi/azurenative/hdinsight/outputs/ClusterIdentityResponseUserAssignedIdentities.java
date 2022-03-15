@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterIdentityResponseUserAssignedIdentities {
     /**
      * The client id of user assigned identity.
@@ -27,11 +27,11 @@ public final class ClusterIdentityResponseUserAssignedIdentities {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterIdentityResponseUserAssignedIdentities(
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("principalId") String principalId,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.clientId = clientId;
         this.principalId = principalId;
         this.tenantId = tenantId;

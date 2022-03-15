@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import io.pulumi.googlenative.testing_v1.inputs.IosDeviceFileArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
      * iOS apps to install in addition to those being directly tested.
      * 
      */
-    @InputImport(name="additionalIpas")
+    @Import(name="additionalIpas")
       private final @Nullable Output<List<FileReferenceArgs>> additionalIpas;
 
     public Output<List<FileReferenceArgs>> getAdditionalIpas() {
@@ -36,7 +36,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
      * The network traffic profile used for running the test. Available network profiles can be queried by using the NETWORK_CONFIGURATION environment type when calling TestEnvironmentDiscoveryService.GetTestEnvironmentCatalog.
      * 
      */
-    @InputImport(name="networkProfile")
+    @Import(name="networkProfile")
       private final @Nullable Output<String> networkProfile;
 
     public Output<String> getNetworkProfile() {
@@ -47,7 +47,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
      * List of directories on the device to upload to Cloud Storage at the end of the test. Directories should either be in a shared directory (such as /private/var/mobile/Media) or within an accessible directory inside the app's filesystem (such as /Documents) by specifying the bundle ID.
      * 
      */
-    @InputImport(name="pullDirectories")
+    @Import(name="pullDirectories")
       private final @Nullable Output<List<IosDeviceFileArgs>> pullDirectories;
 
     public Output<List<IosDeviceFileArgs>> getPullDirectories() {
@@ -58,7 +58,7 @@ public final class IosTestSetupArgs extends io.pulumi.resources.ResourceArgs {
      * List of files to push to the device before starting the test.
      * 
      */
-    @InputImport(name="pushFiles")
+    @Import(name="pushFiles")
       private final @Nullable Output<List<IosDeviceFileArgs>> pushFiles;
 
     public Output<List<IosDeviceFileArgs>> getPushFiles() {

@@ -8,7 +8,7 @@ import io.pulumi.aws.dax.ParameterGroupArgs;
 import io.pulumi.aws.dax.inputs.ParameterGroupState;
 import io.pulumi.aws.dax.outputs.ParameterGroupParameter;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * A description of the parameter group.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -48,7 +48,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * The name of the parameter group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -62,7 +62,7 @@ public class ParameterGroup extends io.pulumi.resources.CustomResource {
      * The parameters of the parameter group.
      * 
      */
-    @OutputExport(name="parameters", type=List.class, parameters={ParameterGroupParameter.class})
+    @Export(name="parameters", type=List.class, parameters={ParameterGroupParameter.class})
     private Output<List<ParameterGroupParameter>> parameters;
 
     /**

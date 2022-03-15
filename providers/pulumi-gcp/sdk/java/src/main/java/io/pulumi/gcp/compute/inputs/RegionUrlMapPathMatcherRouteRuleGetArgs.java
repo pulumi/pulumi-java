@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs;
@@ -27,7 +27,7 @@ public final class RegionUrlMapPathMatcherRouteRuleGetArgs extends io.pulumi.res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="headerAction")
+    @Import(name="headerAction")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs> headerAction;
 
     public Output<RegionUrlMapPathMatcherRouteRuleHeaderActionGetArgs> getHeaderAction() {
@@ -39,7 +39,7 @@ public final class RegionUrlMapPathMatcherRouteRuleGetArgs extends io.pulumi.res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="matchRules")
+    @Import(name="matchRules")
       private final @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs>> matchRules;
 
     public Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs>> getMatchRules() {
@@ -62,7 +62,7 @@ public final class RegionUrlMapPathMatcherRouteRuleGetArgs extends io.pulumi.res
      * future without any impact on existing rules.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -79,7 +79,7 @@ public final class RegionUrlMapPathMatcherRouteRuleGetArgs extends io.pulumi.res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="routeAction")
+    @Import(name="routeAction")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs> routeAction;
 
     public Output<RegionUrlMapPathMatcherRouteRuleRouteActionGetArgs> getRouteAction() {
@@ -90,7 +90,7 @@ public final class RegionUrlMapPathMatcherRouteRuleGetArgs extends io.pulumi.res
      * A reference to expected RegionBackendService resource the given URL should be mapped to.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
@@ -104,7 +104,7 @@ public final class RegionUrlMapPathMatcherRouteRuleGetArgs extends io.pulumi.res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="urlRedirect")
+    @Import(name="urlRedirect")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleUrlRedirectGetArgs> urlRedirect;
 
     public Output<RegionUrlMapPathMatcherRouteRuleUrlRedirectGetArgs> getUrlRedirect() {

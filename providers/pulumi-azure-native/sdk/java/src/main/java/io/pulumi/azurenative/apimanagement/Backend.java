@@ -11,7 +11,7 @@ import io.pulumi.azurenative.apimanagement.outputs.BackendProxyContractResponse;
 import io.pulumi.azurenative.apimanagement.outputs.BackendTlsPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * Backend Credentials Contract Properties
      * 
      */
-    @OutputExport(name="credentials", type=BackendCredentialsContractResponse.class, parameters={})
+    @Export(name="credentials", type=BackendCredentialsContractResponse.class, parameters={})
     private Output</* @Nullable */ BackendCredentialsContractResponse> credentials;
 
     /**
@@ -52,7 +52,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * Backend Description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -66,7 +66,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * Backend Properties contract
      * 
      */
-    @OutputExport(name="properties", type=BackendPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=BackendPropertiesResponse.class, parameters={})
     private Output<BackendPropertiesResponse> properties;
 
     /**
@@ -94,7 +94,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * Backend communication protocol.
      * 
      */
-    @OutputExport(name="protocol", type=String.class, parameters={})
+    @Export(name="protocol", type=String.class, parameters={})
     private Output<String> protocol;
 
     /**
@@ -108,7 +108,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * Backend Proxy Contract Properties
      * 
      */
-    @OutputExport(name="proxy", type=BackendProxyContractResponse.class, parameters={})
+    @Export(name="proxy", type=BackendProxyContractResponse.class, parameters={})
     private Output</* @Nullable */ BackendProxyContractResponse> proxy;
 
     /**
@@ -122,7 +122,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * Management Uri of the Resource in External System. This url can be the Arm Resource Id of Logic Apps, Function Apps or Api Apps.
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
     /**
@@ -136,7 +136,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * Backend Title.
      * 
      */
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output</* @Nullable */ String> title;
 
     /**
@@ -150,7 +150,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * Backend TLS Properties
      * 
      */
-    @OutputExport(name="tls", type=BackendTlsPropertiesResponse.class, parameters={})
+    @Export(name="tls", type=BackendTlsPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ BackendTlsPropertiesResponse> tls;
 
     /**
@@ -164,7 +164,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -178,7 +178,7 @@ public class Backend extends io.pulumi.resources.CustomResource {
      * Runtime Url of the Backend.
      * 
      */
-    @OutputExport(name="url", type=String.class, parameters={})
+    @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**

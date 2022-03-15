@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayRewriteRuleActionSetResponse;
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayRewriteRuleConditionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayRewriteRuleResponse {
     /**
      * Set of actions to be done as part of the rewrite Rule.
@@ -36,12 +36,12 @@ public final class ApplicationGatewayRewriteRuleResponse {
      */
     private final @Nullable Integer ruleSequence;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayRewriteRuleResponse(
-        @OutputCustomType.Parameter("actionSet") @Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet,
-        @OutputCustomType.Parameter("conditions") @Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("ruleSequence") @Nullable Integer ruleSequence) {
+        @CustomType.Parameter("actionSet") @Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet,
+        @CustomType.Parameter("conditions") @Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("ruleSequence") @Nullable Integer ruleSequence) {
         this.actionSet = actionSet;
         this.conditions = conditions;
         this.name = name;

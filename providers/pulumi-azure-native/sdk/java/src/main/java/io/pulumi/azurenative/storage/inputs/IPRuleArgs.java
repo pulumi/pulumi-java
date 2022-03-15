@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.enums.Action;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The action of IP ACL rule.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<Action> action;
 
     public Output<Action> getAction() {
@@ -34,7 +34,7 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.
      * 
      */
-    @InputImport(name="iPAddressOrRange", required=true)
+    @Import(name="iPAddressOrRange", required=true)
       private final Output<String> iPAddressOrRange;
 
     public Output<String> getIPAddressOrRange() {

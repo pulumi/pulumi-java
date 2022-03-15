@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.SnapshotSnapshotType;
 import io.pulumi.googlenative.compute_alpha.inputs.CustomerEncryptionKeyArgs;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Creates the new snapshot in the snapshot chain labeled with the specified name. The chain name must be 1-63 characters long and comply with RFC1035. This is an uncommon option only for advanced service owners who needs to create separate snapshot chains, for example, for chargeback tracking. When you describe your snapshot resource, this field is visible only if it has a non-empty value.
      * 
      */
-    @InputImport(name="chainName")
+    @Import(name="chainName")
       private final @Nullable Output<String> chainName;
 
     public Output<String> getChainName() {
@@ -34,7 +34,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * [Input Only] Whether to attempt an application consistent snapshot by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
      * 
      */
-    @InputImport(name="guestFlush")
+    @Import(name="guestFlush")
       private final @Nullable Output<Boolean> guestFlush;
 
     public Output<Boolean> getGuestFlush() {
@@ -56,7 +56,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Labels to apply to this snapshot. These can be later modified by the setLabels method. Label values may be empty.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -67,7 +67,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * An opaque location hint used to place the snapshot close to other resources. This field is for use by internal tools that use the public API.
      * 
      */
-    @InputImport(name="locationHint")
+    @Import(name="locationHint")
       private final @Nullable Output<String> locationHint;
 
     public Output<String> getLocationHint() {
@@ -78,21 +78,21 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -103,7 +103,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Encrypts the snapshot using a customer-supplied encryption key. After you encrypt a snapshot using a customer-supplied key, you must provide the same key if you use the snapshot later. For example, you must provide the encryption key when you create a disk from the encrypted snapshot in a future request. Customer-supplied encryption keys do not protect access to metadata of the snapshot. If you do not provide an encryption key when creating the snapshot, then the snapshot will be encrypted using an automatically generated key and you do not need to provide a key to use the snapshot later.
      * 
      */
-    @InputImport(name="snapshotEncryptionKey")
+    @Import(name="snapshotEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> snapshotEncryptionKey;
 
     public Output<CustomerEncryptionKeyArgs> getSnapshotEncryptionKey() {
@@ -114,7 +114,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates the type of the snapshot.
      * 
      */
-    @InputImport(name="snapshotType")
+    @Import(name="snapshotType")
       private final @Nullable Output<SnapshotSnapshotType> snapshotType;
 
     public Output<SnapshotSnapshotType> getSnapshotType() {
@@ -125,7 +125,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * The source disk used to create this snapshot.
      * 
      */
-    @InputImport(name="sourceDisk")
+    @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
 
     public Output<String> getSourceDisk() {
@@ -136,7 +136,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.
      * 
      */
-    @InputImport(name="sourceDiskEncryptionKey")
+    @Import(name="sourceDiskEncryptionKey")
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceDiskEncryptionKey;
 
     public Output<CustomerEncryptionKeyArgs> getSourceDiskEncryptionKey() {
@@ -147,7 +147,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * The source instant snapshot used to create this snapshot. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instantSnapshots/instantSnapshot - projects/project/zones/zone/instantSnapshots/instantSnapshot - zones/zone/instantSnapshots/instantSnapshot
      * 
      */
-    @InputImport(name="sourceInstantSnapshot")
+    @Import(name="sourceInstantSnapshot")
       private final @Nullable Output<String> sourceInstantSnapshot;
 
     public Output<String> getSourceInstantSnapshot() {
@@ -158,7 +158,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
      * 
      */
-    @InputImport(name="storageLocations")
+    @Import(name="storageLocations")
       private final @Nullable Output<List<String>> storageLocations;
 
     public Output<List<String>> getStorageLocations() {

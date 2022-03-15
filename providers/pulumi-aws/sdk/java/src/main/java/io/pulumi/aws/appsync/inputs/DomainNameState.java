@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * The domain name that AppSync provides.
      * 
      */
-    @InputImport(name="appsyncDomainName")
+    @Import(name="appsyncDomainName")
       private final @Nullable Output<String> appsyncDomainName;
 
     public Output<String> getAppsyncDomainName() {
@@ -29,7 +29,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the certificate. This can be an Certificate Manager (ACM) certificate or an Identity and Access Management (IAM) server certificate. The certifiacte must reside in us-east-1.
      * 
      */
-    @InputImport(name="certificateArn")
+    @Import(name="certificateArn")
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
@@ -40,7 +40,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * A description of the Domain Name.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -51,7 +51,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * The domain name.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -62,7 +62,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * The ID of your Amazon Route 53 hosted zone.
      * 
      */
-    @InputImport(name="hostedZoneId")
+    @Import(name="hostedZoneId")
       private final @Nullable Output<String> hostedZoneId;
 
     public Output<String> getHostedZoneId() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.OrganizationExclusionArgs;
@@ -39,7 +39,7 @@ public class OrganizationExclusion extends io.pulumi.resources.CustomResource {
      * A human-readable description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -54,7 +54,7 @@ public class OrganizationExclusion extends io.pulumi.resources.CustomResource {
      * false.
      * 
      */
-    @OutputExport(name="disabled", type=Boolean.class, parameters={})
+    @Export(name="disabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disabled;
 
     /**
@@ -71,7 +71,7 @@ public class OrganizationExclusion extends io.pulumi.resources.CustomResource {
      * write a filter.
      * 
      */
-    @OutputExport(name="filter", type=String.class, parameters={})
+    @Export(name="filter", type=String.class, parameters={})
     private Output<String> filter;
 
     /**
@@ -87,7 +87,7 @@ public class OrganizationExclusion extends io.pulumi.resources.CustomResource {
      * The name of the logging exclusion.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -101,7 +101,7 @@ public class OrganizationExclusion extends io.pulumi.resources.CustomResource {
      * The organization to create the exclusion in.
      * 
      */
-    @OutputExport(name="orgId", type=String.class, parameters={})
+    @Export(name="orgId", type=String.class, parameters={})
     private Output<String> orgId;
 
     /**

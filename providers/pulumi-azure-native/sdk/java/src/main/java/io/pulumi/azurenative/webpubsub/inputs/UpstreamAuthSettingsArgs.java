@@ -7,7 +7,7 @@ import io.pulumi.azurenative.webpubsub.enums.UpstreamAuthType;
 import io.pulumi.azurenative.webpubsub.inputs.ManagedIdentitySettingsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class UpstreamAuthSettingsArgs extends io.pulumi.resources.Resource
      * Managed identity settings for upstream.
      * 
      */
-    @InputImport(name="managedIdentity")
+    @Import(name="managedIdentity")
       private final @Nullable Output<ManagedIdentitySettingsArgs> managedIdentity;
 
     public Output<ManagedIdentitySettingsArgs> getManagedIdentity() {
@@ -36,7 +36,7 @@ public final class UpstreamAuthSettingsArgs extends io.pulumi.resources.Resource
      * Upstream auth type enum.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,UpstreamAuthType>> type;
 
     public Output<Either<String,UpstreamAuthType>> getType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.networksecurity_v1.outputs.GoogleCloudNetworksecurityV1CertificateProviderResponse;
 import io.pulumi.googlenative.networksecurity_v1.outputs.ValidationCAResponse;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClientTlsPolicyResult {
     /**
      * Optional. Defines a mechanism to provision client identity (public and private keys) for peer to peer authentication. The presence of this dictates mTLS.
@@ -54,16 +54,16 @@ public final class GetClientTlsPolicyResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClientTlsPolicyResult(
-        @OutputCustomType.Parameter("clientCertificate") GoogleCloudNetworksecurityV1CertificateProviderResponse clientCertificate,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("serverValidationCa") List<ValidationCAResponse> serverValidationCa,
-        @OutputCustomType.Parameter("sni") String sni,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("clientCertificate") GoogleCloudNetworksecurityV1CertificateProviderResponse clientCertificate,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("serverValidationCa") List<ValidationCAResponse> serverValidationCa,
+        @CustomType.Parameter("sni") String sni,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.clientCertificate = clientCertificate;
         this.createTime = createTime;
         this.description = description;

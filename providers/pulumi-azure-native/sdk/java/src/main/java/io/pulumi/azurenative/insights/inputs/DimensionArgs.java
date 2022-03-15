@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.enums.Operator;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the dimension
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -35,7 +35,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * Operator for dimension values
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final Output<Either<String,Operator>> operator;
 
     public Output<Either<String,Operator>> getOperator() {
@@ -46,7 +46,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
      * List of dimension values
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final Output<List<String>> values;
 
     public Output<List<String>> getValues() {

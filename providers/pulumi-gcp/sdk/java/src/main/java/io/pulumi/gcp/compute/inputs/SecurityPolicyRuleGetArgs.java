@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyRuleMatchGetArgs;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyRuleRateLimitOptionsGetArgs;
 import java.lang.Boolean;
@@ -26,7 +26,7 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
      * * "threshold" : limit client traffic to the configured threshold. Configure parameters for this action in rateLimitOptions. Requires rateLimitOptions to be set for this.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<String> action;
 
     public Output<String> getAction() {
@@ -37,7 +37,7 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
      * An optional description of this rule. Max size is 64.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -49,7 +49,7 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
      * If it evaluates to true, the corresponding `action` is enforced. Structure is documented below.
      * 
      */
-    @InputImport(name="match", required=true)
+    @Import(name="match", required=true)
       private final Output<SecurityPolicyRuleMatchGetArgs> match;
 
     public Output<SecurityPolicyRuleMatchGetArgs> getMatch() {
@@ -61,7 +61,7 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
      * Stackdriver logs for requests that trigger a preview action are annotated as such.
      * 
      */
-    @InputImport(name="preview")
+    @Import(name="preview")
       private final @Nullable Output<Boolean> preview;
 
     public Output<Boolean> getPreview() {
@@ -73,7 +73,7 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
      * Rules are evaluated from highest priority (lowest numerically) to lowest priority (highest numerically) in order.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -85,7 +85,7 @@ public final class SecurityPolicyRuleGetArgs extends io.pulumi.resources.Resourc
      * Must be specified if the `action` is "rate_based_bad" or "throttle". Cannot be specified for other actions. Structure is documented below.
      * 
      */
-    @InputImport(name="rateLimitOptions")
+    @Import(name="rateLimitOptions")
       private final @Nullable Output<SecurityPolicyRuleRateLimitOptionsGetArgs> rateLimitOptions;
 
     public Output<SecurityPolicyRuleRateLimitOptionsGetArgs> getRateLimitOptions() {

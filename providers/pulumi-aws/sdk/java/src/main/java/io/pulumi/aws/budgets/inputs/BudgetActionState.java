@@ -7,7 +7,7 @@ import io.pulumi.aws.budgets.inputs.BudgetActionActionThresholdGetArgs;
 import io.pulumi.aws.budgets.inputs.BudgetActionDefinitionGetArgs;
 import io.pulumi.aws.budgets.inputs.BudgetActionSubscriberGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * The ID of the target account for budget. Will use current user's account_id by default if omitted.
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -33,7 +33,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * The id of the budget action.
      * 
      */
-    @InputImport(name="actionId")
+    @Import(name="actionId")
       private final @Nullable Output<String> actionId;
 
     public Output<String> getActionId() {
@@ -44,7 +44,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * The trigger threshold of the action. See Action Threshold.
      * 
      */
-    @InputImport(name="actionThreshold")
+    @Import(name="actionThreshold")
       private final @Nullable Output<BudgetActionActionThresholdGetArgs> actionThreshold;
 
     public Output<BudgetActionActionThresholdGetArgs> getActionThreshold() {
@@ -55,7 +55,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * The type of action. This defines the type of tasks that can be carried out by this action. This field also determines the format for definition. Valid values are `APPLY_IAM_POLICY`, `APPLY_SCP_POLICY`, and `RUN_SSM_DOCUMENTS`.
      * 
      */
-    @InputImport(name="actionType")
+    @Import(name="actionType")
       private final @Nullable Output<String> actionType;
 
     public Output<String> getActionType() {
@@ -66,7 +66,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * This specifies if the action needs manual or automatic approval. Valid values are `AUTOMATIC` and `MANUAL`.
      * 
      */
-    @InputImport(name="approvalModel")
+    @Import(name="approvalModel")
       private final @Nullable Output<String> approvalModel;
 
     public Output<String> getApprovalModel() {
@@ -77,7 +77,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the budget action.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -88,7 +88,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * The name of a budget.
      * 
      */
-    @InputImport(name="budgetName")
+    @Import(name="budgetName")
       private final @Nullable Output<String> budgetName;
 
     public Output<String> getBudgetName() {
@@ -99,7 +99,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * Specifies all of the type-specific parameters. See Definition.
      * 
      */
-    @InputImport(name="definition")
+    @Import(name="definition")
       private final @Nullable Output<BudgetActionDefinitionGetArgs> definition;
 
     public Output<BudgetActionDefinitionGetArgs> getDefinition() {
@@ -110,7 +110,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * The role passed for action execution and reversion. Roles and actions must be in the same account.
      * 
      */
-    @InputImport(name="executionRoleArn")
+    @Import(name="executionRoleArn")
       private final @Nullable Output<String> executionRoleArn;
 
     public Output<String> getExecutionRoleArn() {
@@ -121,7 +121,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * The type of a notification. Valid values are `ACTUAL` or `FORECASTED`.
      * 
      */
-    @InputImport(name="notificationType")
+    @Import(name="notificationType")
       private final @Nullable Output<String> notificationType;
 
     public Output<String> getNotificationType() {
@@ -132,7 +132,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * The status of the budget action.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -143,7 +143,7 @@ public final class BudgetActionState extends io.pulumi.resources.ResourceArgs {
      * A list of subscribers. See Subscriber.
      * 
      */
-    @InputImport(name="subscribers")
+    @Import(name="subscribers")
       private final @Nullable Output<List<BudgetActionSubscriberGetArgs>> subscribers;
 
     public Output<List<BudgetActionSubscriberGetArgs>> getSubscribers() {

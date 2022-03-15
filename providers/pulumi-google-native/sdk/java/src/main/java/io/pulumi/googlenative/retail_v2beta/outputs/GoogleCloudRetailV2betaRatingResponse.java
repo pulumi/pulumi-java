@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2betaRatingResponse {
     /**
      * The average rating of the Product. The rating is scaled at 1-5. Otherwise, an INVALID_ARGUMENT error is returned.
@@ -27,11 +27,11 @@ public final class GoogleCloudRetailV2betaRatingResponse {
      */
     private final List<Integer> ratingHistogram;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRetailV2betaRatingResponse(
-        @OutputCustomType.Parameter("averageRating") Double averageRating,
-        @OutputCustomType.Parameter("ratingCount") Integer ratingCount,
-        @OutputCustomType.Parameter("ratingHistogram") List<Integer> ratingHistogram) {
+        @CustomType.Parameter("averageRating") Double averageRating,
+        @CustomType.Parameter("ratingCount") Integer ratingCount,
+        @CustomType.Parameter("ratingHistogram") List<Integer> ratingHistogram) {
         this.averageRating = averageRating;
         this.ratingCount = ratingCount;
         this.ratingHistogram = ratingHistogram;

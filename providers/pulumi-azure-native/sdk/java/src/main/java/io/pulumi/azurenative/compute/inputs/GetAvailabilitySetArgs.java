@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAvailabilitySetArgs extends io.pulumi.resources.InvokeArgs
      * The name of the availability set.
      * 
      */
-    @InputImport(name="availabilitySetName", required=true)
+    @Import(name="availabilitySetName", required=true)
       private final String availabilitySetName;
 
     public String getAvailabilitySetName() {
@@ -27,7 +27,7 @@ public final class GetAvailabilitySetArgs extends io.pulumi.resources.InvokeArgs
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OSPolicyResourceFileRemoteResponse {
     /**
      * SHA256 checksum of the remote file.
@@ -20,10 +20,10 @@ public final class OSPolicyResourceFileRemoteResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OSPolicyResourceFileRemoteResponse(
-        @OutputCustomType.Parameter("sha256Checksum") String sha256Checksum,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("sha256Checksum") String sha256Checksum,
+        @CustomType.Parameter("uri") String uri) {
         this.sha256Checksum = sha256Checksum;
         this.uri = uri;
     }

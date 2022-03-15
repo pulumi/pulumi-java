@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.firebaseml_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.firebaseml_v1beta2.outputs.StatusResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OperationResponse {
     /**
      * If the value is `false`, it means the operation is still in progress. If `true`, the operation is completed, and either `error` or `response` is available.
@@ -38,13 +38,13 @@ public final class OperationResponse {
      */
     private final Map<String,String> response;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OperationResponse(
-        @OutputCustomType.Parameter("done") Boolean done,
-        @OutputCustomType.Parameter("error") StatusResponse error,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("response") Map<String,String> response) {
+        @CustomType.Parameter("done") Boolean done,
+        @CustomType.Parameter("error") StatusResponse error,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("response") Map<String,String> response) {
         this.done = done;
         this.error = error;
         this.metadata = metadata;

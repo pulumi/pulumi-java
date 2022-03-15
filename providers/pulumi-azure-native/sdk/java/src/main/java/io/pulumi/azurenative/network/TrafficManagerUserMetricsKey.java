@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.TrafficManagerUserMetricsKeyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class TrafficManagerUserMetricsKey extends io.pulumi.resources.CustomReso
      * The key returned by the User Metrics operation.
      * 
      */
-    @OutputExport(name="key", type=String.class, parameters={})
+    @Export(name="key", type=String.class, parameters={})
     private Output</* @Nullable */ String> key;
 
     /**
@@ -48,7 +48,7 @@ public class TrafficManagerUserMetricsKey extends io.pulumi.resources.CustomReso
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -62,7 +62,7 @@ public class TrafficManagerUserMetricsKey extends io.pulumi.resources.CustomReso
      * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**

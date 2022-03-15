@@ -10,7 +10,7 @@ import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple2;
 import io.pulumi.core.internal.Constants;
-import io.pulumi.core.internal.InputOutputData;
+import io.pulumi.core.internal.OutputData;
 import io.pulumi.resources.DependencyResource;
 import io.pulumi.resources.Resource;
 
@@ -27,7 +27,7 @@ import static io.pulumi.serialization.internal.Structs.*;
  */
 public class Deserializer {
 
-    public InputOutputData<Object> deserialize(Value value) {
+    public OutputData<Object> deserialize(Value value) {
         Objects.requireNonNull(value);
         return deserializeCore(value, v -> {
             switch (v.getKindCase()) {
@@ -57,7 +57,7 @@ public class Deserializer {
         });
     }
 
-    private <T> InputOutputData<T> deserializeCore(Value value, Function<Value, InputOutputData<T>> func) {
+    private <T> OutputData<T> deserializeCore(Value value, Function<Value, OutputData<T>> func) {
         var secret = unwrapSecret(value);
         boolean isSecret = secret.t2;
         value = secret.t1;
@@ -70,17 +70,17 @@ public class Deserializer {
         var assetOrArchive = tryDeserializeAssetOrArchive(value);
         if (assetOrArchive.isPresent()) {
             //noinspection unchecked
-            return InputOutputData.ofNullable(ImmutableSet.of(), (T) assetOrArchive.get(), true, isSecret);
+            return OutputData.ofNullable(ImmutableSet.of(), (T) assetOrArchive.get(), true, isSecret);
         }
 
         var resource = tryDeserializeResource(value);
         if (resource.isPresent()) {
             //noinspection unchecked
-            return InputOutputData.ofNullable(ImmutableSet.of(), (T) resource.get(), true, isSecret);
+            return OutputData.ofNullable(ImmutableSet.of(), (T) resource.get(), true, isSecret);
         }
 
         var innerData = func.apply(value);
-        return InputOutputData.ofNullable(
+        return OutputData.ofNullable(
                 innerData.getResources(),
                 innerData.getValueNullable(),
                 innerData.isKnown(),
@@ -88,31 +88,31 @@ public class Deserializer {
         );
     }
 
-    public <T> InputOutputData<T> deserializeUnknown(boolean isSecret) {
-        return InputOutputData.ofNullable(ImmutableSet.of(), null, false, isSecret);
+    public <T> OutputData<T> deserializeUnknown(boolean isSecret) {
+        return OutputData.ofNullable(ImmutableSet.of(), null, false, isSecret);
     }
 
-    private InputOutputData<Void> deserializeEmpty(@SuppressWarnings("unused") Value unused) {
-        return InputOutputData.empty();
+    private OutputData<Void> deserializeEmpty(@SuppressWarnings("unused") Value unused) {
+        return OutputData.empty();
     }
 
-    private InputOutputData<Boolean> deserializeBoolean(Value value) {
+    private OutputData<Boolean> deserializeBoolean(Value value) {
         return deserializePrimitive(value, BOOL_VALUE, Value::getBoolValue);
     }
 
-    private InputOutputData<String> deserializeString(Value value) {
+    private OutputData<String> deserializeString(Value value) {
         return deserializePrimitive(value, STRING_VALUE, Value::getStringValue);
     }
 
-    private InputOutputData<Double> deserializeDouble(Value value) {
+    private OutputData<Double> deserializeDouble(Value value) {
         return deserializePrimitive(value, NUMBER_VALUE, Value::getNumberValue);
     }
 
-    private <T> InputOutputData<T> deserializePrimitive(Value value, Value.KindCase kind, Function<Value, T> func) {
-        return deserializeOneOf(value, kind, v -> InputOutputData.of(ImmutableSet.of(), func.apply(v)));
+    private <T> OutputData<T> deserializePrimitive(Value value, Value.KindCase kind, Function<Value, T> func) {
+        return deserializeOneOf(value, kind, v -> OutputData.of(ImmutableSet.of(), func.apply(v)));
     }
 
-    private InputOutputData<List<?>> deserializeList(Value value) {
+    private OutputData<List<?>> deserializeList(Value value) {
         return deserializeOneOf(value, LIST_VALUE, v -> {
             var resources = new HashSet<Resource>();
             var result = new LinkedList<Optional<?>>();
@@ -128,14 +128,14 @@ public class Deserializer {
             }
 
             if (isKnown) {
-                return InputOutputData.ofNullable(
+                return OutputData.ofNullable(
                         ImmutableSet.copyOf(resources),
                         ImmutableList.copyOf(result),
                         true,
                         isSecret
                 );
             } else {
-                return InputOutputData.ofNullable(
+                return OutputData.ofNullable(
                         ImmutableSet.copyOf(resources),
                         null,
                         false,
@@ -145,7 +145,7 @@ public class Deserializer {
         });
     }
 
-    private InputOutputData<Map<String, Optional<?>>> deserializeStruct(Value value) {
+    private OutputData<Map<String, Optional<?>>> deserializeStruct(Value value) {
         return deserializeOneOf(value, STRUCT_VALUE, v -> {
             var resources = new HashSet<Resource>();
             var result = new HashMap<String, Optional<?>>();
@@ -171,7 +171,7 @@ public class Deserializer {
                 isSecret = isSecret || elementData.isSecret();
             }
 
-            return InputOutputData.ofNullable(
+            return OutputData.ofNullable(
                     ImmutableSet.copyOf(resources),
                     ImmutableMap.copyOf(result),
                     isKnown, isSecret
@@ -180,7 +180,7 @@ public class Deserializer {
     }
 
 
-    private <T> InputOutputData<T> deserializeOneOf(Value value, Value.KindCase kind, Function<Value, InputOutputData<T>> func) {
+    private <T> OutputData<T> deserializeOneOf(Value value, Value.KindCase kind, Function<Value, OutputData<T>> func) {
         return deserializeCore(value, v -> {
             if (v.getKindCase() == kind) {
                 return func.apply(v);

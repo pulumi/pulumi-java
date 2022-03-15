@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datashare.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScheduledSourceSynchronizationSettingResponse {
     /**
      * Kind of synchronization setting on share.
@@ -28,11 +28,11 @@ public final class ScheduledSourceSynchronizationSettingResponse {
      */
     private final @Nullable String synchronizationTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduledSourceSynchronizationSettingResponse(
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("recurrenceInterval") @Nullable String recurrenceInterval,
-        @OutputCustomType.Parameter("synchronizationTime") @Nullable String synchronizationTime) {
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("recurrenceInterval") @Nullable String recurrenceInterval,
+        @CustomType.Parameter("synchronizationTime") @Nullable String synchronizationTime) {
         this.kind = kind;
         this.recurrenceInterval = recurrenceInterval;
         this.synchronizationTime = synchronizationTime;

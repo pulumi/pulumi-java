@@ -5,21 +5,21 @@ package io.pulumi.awsnative.acmpca.outputs;
 
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityAccessDescription;
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityKeyUsage;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateAuthorityCsrExtensions {
     private final @Nullable CertificateAuthorityKeyUsage keyUsage;
     private final @Nullable List<CertificateAuthorityAccessDescription> subjectInformationAccess;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateAuthorityCsrExtensions(
-        @OutputCustomType.Parameter("keyUsage") @Nullable CertificateAuthorityKeyUsage keyUsage,
-        @OutputCustomType.Parameter("subjectInformationAccess") @Nullable List<CertificateAuthorityAccessDescription> subjectInformationAccess) {
+        @CustomType.Parameter("keyUsage") @Nullable CertificateAuthorityKeyUsage keyUsage,
+        @CustomType.Parameter("subjectInformationAccess") @Nullable List<CertificateAuthorityAccessDescription> subjectInformationAccess) {
         this.keyUsage = keyUsage;
         this.subjectInformationAccess = subjectInformationAccess;
     }

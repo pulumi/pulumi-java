@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
      * The certificate version of key vault.
      * 
      */
-    @InputImport(name="certVersion")
+    @Import(name="certVersion")
       private final @Nullable Output<String> certVersion;
 
     public Output<String> getCertVersion() {
@@ -33,7 +33,7 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
      * The certificate name of key vault.
      * 
      */
-    @InputImport(name="keyVaultCertName", required=true)
+    @Import(name="keyVaultCertName", required=true)
       private final Output<String> keyVaultCertName;
 
     public Output<String> getKeyVaultCertName() {
@@ -44,7 +44,7 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
      * The vault uri of user key vault.
      * 
      */
-    @InputImport(name="vaultUri", required=true)
+    @Import(name="vaultUri", required=true)
       private final Output<String> vaultUri;
 
     public Output<String> getVaultUri() {

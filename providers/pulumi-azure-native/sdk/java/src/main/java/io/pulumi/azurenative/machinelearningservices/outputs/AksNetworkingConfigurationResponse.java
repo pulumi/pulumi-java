@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AksNetworkingConfigurationResponse {
     /**
      * An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
@@ -32,12 +32,12 @@ public final class AksNetworkingConfigurationResponse {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AksNetworkingConfigurationResponse(
-        @OutputCustomType.Parameter("dnsServiceIP") @Nullable String dnsServiceIP,
-        @OutputCustomType.Parameter("dockerBridgeCidr") @Nullable String dockerBridgeCidr,
-        @OutputCustomType.Parameter("serviceCidr") @Nullable String serviceCidr,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
+        @CustomType.Parameter("dnsServiceIP") @Nullable String dnsServiceIP,
+        @CustomType.Parameter("dockerBridgeCidr") @Nullable String dockerBridgeCidr,
+        @CustomType.Parameter("serviceCidr") @Nullable String serviceCidr,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.dnsServiceIP = dnsServiceIP;
         this.dockerBridgeCidr = dockerBridgeCidr;
         this.serviceCidr = serviceCidr;

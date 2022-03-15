@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.dbformariadb.outputs;
 
 import io.pulumi.azurenative.dbformariadb.outputs.ServerPrivateEndpointConnectionPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServerPrivateEndpointConnectionResponse {
     /**
      * Resource Id of the private endpoint connection.
@@ -21,10 +21,10 @@ public final class ServerPrivateEndpointConnectionResponse {
      */
     private final ServerPrivateEndpointConnectionPropertiesResponse properties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServerPrivateEndpointConnectionResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("properties") ServerPrivateEndpointConnectionPropertiesResponse properties) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("properties") ServerPrivateEndpointConnectionPropertiesResponse properties) {
         this.id = id;
         this.properties = properties;
     }

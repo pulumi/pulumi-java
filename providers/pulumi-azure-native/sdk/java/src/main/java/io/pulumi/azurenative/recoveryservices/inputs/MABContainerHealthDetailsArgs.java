@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
      * Health Code
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable Output<Integer> code;
 
     public Output<Integer> getCode() {
@@ -35,7 +35,7 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
      * Health Message
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
@@ -46,7 +46,7 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
      * Health Recommended Actions
      * 
      */
-    @InputImport(name="recommendations")
+    @Import(name="recommendations")
       private final @Nullable Output<List<String>> recommendations;
 
     public Output<List<String>> getRecommendations() {
@@ -57,7 +57,7 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
      * Health Title
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {

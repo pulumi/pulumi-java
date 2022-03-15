@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeviceGatewayConfig {
     /**
      * Indicates whether the device is a gateway.
@@ -37,12 +37,12 @@ public final class DeviceGatewayConfig {
      */
     private final @Nullable String lastAccessedGatewayTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeviceGatewayConfig(
-        @OutputCustomType.Parameter("gatewayAuthMethod") @Nullable String gatewayAuthMethod,
-        @OutputCustomType.Parameter("gatewayType") @Nullable String gatewayType,
-        @OutputCustomType.Parameter("lastAccessedGatewayId") @Nullable String lastAccessedGatewayId,
-        @OutputCustomType.Parameter("lastAccessedGatewayTime") @Nullable String lastAccessedGatewayTime) {
+        @CustomType.Parameter("gatewayAuthMethod") @Nullable String gatewayAuthMethod,
+        @CustomType.Parameter("gatewayType") @Nullable String gatewayType,
+        @CustomType.Parameter("lastAccessedGatewayId") @Nullable String lastAccessedGatewayId,
+        @CustomType.Parameter("lastAccessedGatewayTime") @Nullable String lastAccessedGatewayTime) {
         this.gatewayAuthMethod = gatewayAuthMethod;
         this.gatewayType = gatewayType;
         this.lastAccessedGatewayId = lastAccessedGatewayId;

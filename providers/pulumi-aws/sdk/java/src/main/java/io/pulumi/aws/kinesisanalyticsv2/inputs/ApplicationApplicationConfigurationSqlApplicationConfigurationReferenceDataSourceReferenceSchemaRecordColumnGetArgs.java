@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * A reference to the data element in the streaming input or the reference data source.
      * 
      */
-    @InputImport(name="mapping")
+    @Import(name="mapping")
       private final @Nullable Output<String> mapping;
 
     public Output<String> getMapping() {
@@ -29,7 +29,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * The name of the column that is created in the in-application input stream or reference table.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -40,7 +40,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * The type of column created in the in-application input stream or reference table.
      * 
      */
-    @InputImport(name="sqlType", required=true)
+    @Import(name="sqlType", required=true)
       private final Output<String> sqlType;
 
     public Output<String> getSqlType() {

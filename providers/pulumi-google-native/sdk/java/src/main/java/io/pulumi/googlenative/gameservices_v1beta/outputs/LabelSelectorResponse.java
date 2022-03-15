@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LabelSelectorResponse {
     /**
      * Resource labels for this selector.
@@ -16,8 +16,8 @@ public final class LabelSelectorResponse {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor
-    private LabelSelectorResponse(@OutputCustomType.Parameter("labels") Map<String,String> labels) {
+    @CustomType.Constructor
+    private LabelSelectorResponse(@CustomType.Parameter("labels") Map<String,String> labels) {
         this.labels = labels;
     }
 

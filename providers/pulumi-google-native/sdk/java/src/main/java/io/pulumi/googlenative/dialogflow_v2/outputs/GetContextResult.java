@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetContextResult {
     /**
      * Optional. The number of conversational query requests after which the context expires. The default is `0`. If set to `0`, the context expires immediately. Contexts expire automatically after 20 minutes if there are no matching queries.
@@ -27,11 +27,11 @@ public final class GetContextResult {
      */
     private final Map<String,String> parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetContextResult(
-        @OutputCustomType.Parameter("lifespanCount") Integer lifespanCount,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") Map<String,String> parameters) {
+        @CustomType.Parameter("lifespanCount") Integer lifespanCount,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") Map<String,String> parameters) {
         this.lifespanCount = lifespanCount;
         this.name = name;
         this.parameters = parameters;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArg
      * A Boolean value that determines whether CloudFront includes the `mode=block` directive in the `X-XSS-Protection` header.
      * 
      */
-    @InputImport(name="modeBlock")
+    @Import(name="modeBlock")
       private final @Nullable Output<Boolean> modeBlock;
 
     public Output<Boolean> getModeBlock() {
@@ -30,7 +30,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArg
      * A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
      * 
      */
-    @InputImport(name="override", required=true)
+    @Import(name="override", required=true)
       private final Output<Boolean> override;
 
     public Output<Boolean> getOverride() {
@@ -41,7 +41,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArg
      * A Boolean value that determines the value of the `X-XSS-Protection` HTTP response header. When this setting is `true`, the value of the `X-XSS-Protection` header is `1`. When this setting is `false`, the value of the `X-XSS-Protection` header is `0`.
      * 
      */
-    @InputImport(name="protection", required=true)
+    @Import(name="protection", required=true)
       private final Output<Boolean> protection;
 
     public Output<Boolean> getProtection() {
@@ -52,7 +52,7 @@ public final class ResponseHeadersPolicySecurityHeadersConfigXssProtectionGetArg
      * A reporting URI, which CloudFront uses as the value of the report directive in the `X-XSS-Protection` header. You cannot specify a `report_uri` when `mode_block` is `true`.
      * 
      */
-    @InputImport(name="reportUri")
+    @Import(name="reportUri")
       private final @Nullable Output<String> reportUri;
 
     public Output<String> getReportUri() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.autoscalingplans.inputs;
 import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanApplicationSourceGetArgs;
 import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanScalingInstructionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ScalingPlanState extends io.pulumi.resources.ResourceArgs {
      * A CloudFormation stack or set of tags. You can create one scaling plan per application source.
      * 
      */
-    @InputImport(name="applicationSource")
+    @Import(name="applicationSource")
       private final @Nullable Output<ScalingPlanApplicationSourceGetArgs> applicationSource;
 
     public Output<ScalingPlanApplicationSourceGetArgs> getApplicationSource() {
@@ -33,7 +33,7 @@ public final class ScalingPlanState extends io.pulumi.resources.ResourceArgs {
      * The name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class ScalingPlanState extends io.pulumi.resources.ResourceArgs {
      * The scaling instructions. More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_ScalingInstruction.html).
      * 
      */
-    @InputImport(name="scalingInstructions")
+    @Import(name="scalingInstructions")
       private final @Nullable Output<List<ScalingPlanScalingInstructionGetArgs>> scalingInstructions;
 
     public Output<List<ScalingPlanScalingInstructionGetArgs>> getScalingInstructions() {
@@ -55,7 +55,7 @@ public final class ScalingPlanState extends io.pulumi.resources.ResourceArgs {
      * The version number of the scaling plan. This value is always 1.
      * 
      */
-    @InputImport(name="scalingPlanVersion")
+    @Import(name="scalingPlanVersion")
       private final @Nullable Output<Integer> scalingPlanVersion;
 
     public Output<Integer> getScalingPlanVersion() {

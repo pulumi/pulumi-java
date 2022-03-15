@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.FileReferenceResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.TestCaseReferenceResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.TimestampResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ToolOutputReferenceResponse {
     /**
      * The creation time of the file. - In response: present if set by create/update request - In create/update request: optional
@@ -27,11 +27,11 @@ public final class ToolOutputReferenceResponse {
      */
     private final TestCaseReferenceResponse testCase;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ToolOutputReferenceResponse(
-        @OutputCustomType.Parameter("creationTime") TimestampResponse creationTime,
-        @OutputCustomType.Parameter("output") FileReferenceResponse output,
-        @OutputCustomType.Parameter("testCase") TestCaseReferenceResponse testCase) {
+        @CustomType.Parameter("creationTime") TimestampResponse creationTime,
+        @CustomType.Parameter("output") FileReferenceResponse output,
+        @CustomType.Parameter("testCase") TestCaseReferenceResponse testCase) {
         this.creationTime = creationTime;
         this.output = output;
         this.testCase = testCase;

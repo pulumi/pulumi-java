@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.kafkaconnect.outputs;
 
 import io.pulumi.awsnative.kafkaconnect.enums.ConnectorKafkaClusterClientAuthenticationType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorKafkaClusterClientAuthentication {
     private final ConnectorKafkaClusterClientAuthenticationType authenticationType;
 
-    @OutputCustomType.Constructor
-    private ConnectorKafkaClusterClientAuthentication(@OutputCustomType.Parameter("authenticationType") ConnectorKafkaClusterClientAuthenticationType authenticationType) {
+    @CustomType.Constructor
+    private ConnectorKafkaClusterClientAuthentication(@CustomType.Parameter("authenticationType") ConnectorKafkaClusterClientAuthenticationType authenticationType) {
         this.authenticationType = authenticationType;
     }
 

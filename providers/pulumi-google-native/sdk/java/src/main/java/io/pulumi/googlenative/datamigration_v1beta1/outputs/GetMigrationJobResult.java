@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.DatabaseTypeResponse;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.ReverseSshConnectivityResponse;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.StaticIpConnectivityResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetMigrationJobResult {
     /**
      * The timestamp when the migration job resource was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
@@ -111,27 +111,27 @@ public final class GetMigrationJobResult {
      */
     private final VpcPeeringConnectivityResponse vpcPeeringConnectivity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMigrationJobResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("destination") String destination,
-        @OutputCustomType.Parameter("destinationDatabase") DatabaseTypeResponse destinationDatabase,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("dumpPath") String dumpPath,
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("error") StatusResponse error,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("phase") String phase,
-        @OutputCustomType.Parameter("reverseSshConnectivity") ReverseSshConnectivityResponse reverseSshConnectivity,
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("sourceDatabase") DatabaseTypeResponse sourceDatabase,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("staticIpConnectivity") StaticIpConnectivityResponse staticIpConnectivity,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("vpcPeeringConnectivity") VpcPeeringConnectivityResponse vpcPeeringConnectivity) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("destination") String destination,
+        @CustomType.Parameter("destinationDatabase") DatabaseTypeResponse destinationDatabase,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("dumpPath") String dumpPath,
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("error") StatusResponse error,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("phase") String phase,
+        @CustomType.Parameter("reverseSshConnectivity") ReverseSshConnectivityResponse reverseSshConnectivity,
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("sourceDatabase") DatabaseTypeResponse sourceDatabase,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("staticIpConnectivity") StaticIpConnectivityResponse staticIpConnectivity,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("vpcPeeringConnectivity") VpcPeeringConnectivityResponse vpcPeeringConnectivity) {
         this.createTime = createTime;
         this.destination = destination;
         this.destinationDatabase = destinationDatabase;

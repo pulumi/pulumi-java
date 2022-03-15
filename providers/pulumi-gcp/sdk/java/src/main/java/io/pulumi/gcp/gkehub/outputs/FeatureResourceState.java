@@ -3,22 +3,22 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FeatureResourceState {
     private final @Nullable Boolean hasResources;
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FeatureResourceState(
-        @OutputCustomType.Parameter("hasResources") @Nullable Boolean hasResources,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("hasResources") @Nullable Boolean hasResources,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.hasResources = hasResources;
         this.state = state;
     }

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TcpCheckResponse {
     /**
      * The TCP port on the server against which to run the check. Will be combined with host (specified within the monitored_resource) to construct the full URL. Required.
@@ -15,8 +15,8 @@ public final class TcpCheckResponse {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor
-    private TcpCheckResponse(@OutputCustomType.Parameter("port") Integer port) {
+    @CustomType.Constructor
+    private TcpCheckResponse(@CustomType.Parameter("port") Integer port) {
         this.port = port;
     }
 

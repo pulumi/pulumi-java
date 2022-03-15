@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.EnumValueResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.OptionResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.SourceContextResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EnumResponse {
     /**
      * Enum value definitions.
@@ -39,13 +39,13 @@ public final class EnumResponse {
      */
     private final String syntax;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnumResponse(
-        @OutputCustomType.Parameter("enumvalue") List<EnumValueResponse> enumvalue,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("options") List<OptionResponse> options,
-        @OutputCustomType.Parameter("sourceContext") SourceContextResponse sourceContext,
-        @OutputCustomType.Parameter("syntax") String syntax) {
+        @CustomType.Parameter("enumvalue") List<EnumValueResponse> enumvalue,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("options") List<OptionResponse> options,
+        @CustomType.Parameter("sourceContext") SourceContextResponse sourceContext,
+        @CustomType.Parameter("syntax") String syntax) {
         this.enumvalue = enumvalue;
         this.name = name;
         this.options = options;

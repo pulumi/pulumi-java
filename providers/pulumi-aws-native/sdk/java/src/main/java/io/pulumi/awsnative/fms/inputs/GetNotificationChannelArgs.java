@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.fms.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
 
     public static final GetNotificationChannelArgs Empty = new GetNotificationChannelArgs();
 
-    @InputImport(name="snsTopicArn", required=true)
+    @Import(name="snsTopicArn", required=true)
       private final String snsTopicArn;
 
     public String getSnsTopicArn() {

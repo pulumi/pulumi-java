@@ -7,7 +7,7 @@ import io.pulumi.azurenative.testbase.enums.Action;
 import io.pulumi.azurenative.testbase.enums.ContentType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * The action of the command.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<Either<String,Action>> action;
 
     public Output<Either<String,Action>> getAction() {
@@ -38,7 +38,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether to run the command even if a previous command is failed.
      * 
      */
-    @InputImport(name="alwaysRun")
+    @Import(name="alwaysRun")
       private final @Nullable Output<Boolean> alwaysRun;
 
     public Output<Boolean> getAlwaysRun() {
@@ -49,7 +49,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether to apply update before the command.
      * 
      */
-    @InputImport(name="applyUpdateBefore")
+    @Import(name="applyUpdateBefore")
       private final @Nullable Output<Boolean> applyUpdateBefore;
 
     public Output<Boolean> getApplyUpdateBefore() {
@@ -60,7 +60,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * The content of the command. The content depends on source type.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final Output<String> content;
 
     public Output<String> getContent() {
@@ -71,7 +71,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * The type of command content.
      * 
      */
-    @InputImport(name="contentType", required=true)
+    @Import(name="contentType", required=true)
       private final Output<Either<String,ContentType>> contentType;
 
     public Output<Either<String,ContentType>> getContentType() {
@@ -82,7 +82,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the max run time of the command.
      * 
      */
-    @InputImport(name="maxRunTime")
+    @Import(name="maxRunTime")
       private final @Nullable Output<Integer> maxRunTime;
 
     public Output<Integer> getMaxRunTime() {
@@ -93,7 +93,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the command.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -104,7 +104,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether to restart the VM after the command executed.
      * 
      */
-    @InputImport(name="restartAfter")
+    @Import(name="restartAfter")
       private final @Nullable Output<Boolean> restartAfter;
 
     public Output<Boolean> getRestartAfter() {
@@ -115,7 +115,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether to run the command in interactive mode.
      * 
      */
-    @InputImport(name="runAsInteractive")
+    @Import(name="runAsInteractive")
       private final @Nullable Output<Boolean> runAsInteractive;
 
     public Output<Boolean> getRunAsInteractive() {
@@ -126,7 +126,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether to run the command as administrator.
      * 
      */
-    @InputImport(name="runElevated")
+    @Import(name="runElevated")
       private final @Nullable Output<Boolean> runElevated;
 
     public Output<Boolean> getRunElevated() {

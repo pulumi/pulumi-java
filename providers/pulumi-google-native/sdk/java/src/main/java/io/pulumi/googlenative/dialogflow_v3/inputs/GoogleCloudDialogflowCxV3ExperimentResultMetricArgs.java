@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.enums.GoogleCloudDialogflowCxV3ExperimentResultMetricCountType;
 import io.pulumi.googlenative.dialogflow_v3.enums.GoogleCloudDialogflowCxV3ExperimentResultMetricType;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalArgs;
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricArgs extends i
      * The probability that the treatment is better than all other treatments in the experiment
      * 
      */
-    @InputImport(name="confidenceInterval")
+    @Import(name="confidenceInterval")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalArgs> confidenceInterval;
 
     public Output<GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalArgs> getConfidenceInterval() {
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricArgs extends i
      * Count value of a metric.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<Double> count;
 
     public Output<Double> getCount() {
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricArgs extends i
      * Count-based metric type. Only one of type or count_type is specified in each Metric.
      * 
      */
-    @InputImport(name="countType")
+    @Import(name="countType")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ExperimentResultMetricCountType> countType;
 
     public Output<GoogleCloudDialogflowCxV3ExperimentResultMetricCountType> getCountType() {
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricArgs extends i
      * Ratio value of a metric.
      * 
      */
-    @InputImport(name="ratio")
+    @Import(name="ratio")
       private final @Nullable Output<Double> ratio;
 
     public Output<Double> getRatio() {
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricArgs extends i
      * Ratio-based metric type. Only one of type or count_type is specified in each Metric.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ExperimentResultMetricType> type;
 
     public Output<GoogleCloudDialogflowCxV3ExperimentResultMetricType> getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.DisplayDataArgs;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.ExecutionStageSummaryArgs;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.TransformSummaryArgs;
@@ -25,7 +25,7 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
      * Pipeline level display data.
      * 
      */
-    @InputImport(name="displayData")
+    @Import(name="displayData")
       private final @Nullable Output<List<DisplayDataArgs>> displayData;
 
     public Output<List<DisplayDataArgs>> getDisplayData() {
@@ -36,7 +36,7 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
      * Description of each stage of execution of the pipeline.
      * 
      */
-    @InputImport(name="executionPipelineStage")
+    @Import(name="executionPipelineStage")
       private final @Nullable Output<List<ExecutionStageSummaryArgs>> executionPipelineStage;
 
     public Output<List<ExecutionStageSummaryArgs>> getExecutionPipelineStage() {
@@ -47,7 +47,7 @@ public final class PipelineDescriptionArgs extends io.pulumi.resources.ResourceA
      * Description of each transform in the pipeline and collections between them.
      * 
      */
-    @InputImport(name="originalPipelineTransform")
+    @Import(name="originalPipelineTransform")
       private final @Nullable Output<List<TransformSummaryArgs>> originalPipelineTransform;
 
     public Output<List<TransformSummaryArgs>> getOriginalPipelineTransform() {

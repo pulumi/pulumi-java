@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KeyVersionSpecResponse {
     /**
      * The algorithm to use for creating a managed Cloud KMS key for a for a simplified experience. All managed keys will be have their ProtectionLevel as `HSM`.
@@ -20,10 +20,10 @@ public final class KeyVersionSpecResponse {
      */
     private final String cloudKmsKeyVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyVersionSpecResponse(
-        @OutputCustomType.Parameter("algorithm") String algorithm,
-        @OutputCustomType.Parameter("cloudKmsKeyVersion") String cloudKmsKeyVersion) {
+        @CustomType.Parameter("algorithm") String algorithm,
+        @CustomType.Parameter("cloudKmsKeyVersion") String cloudKmsKeyVersion) {
         this.algorithm = algorithm;
         this.cloudKmsKeyVersion = cloudKmsKeyVersion;
     }

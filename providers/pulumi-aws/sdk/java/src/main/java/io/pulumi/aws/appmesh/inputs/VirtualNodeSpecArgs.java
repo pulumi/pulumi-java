@@ -9,7 +9,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecLoggingArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecServiceDiscoveryArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
      * The defaults for backends.
      * 
      */
-    @InputImport(name="backendDefaults")
+    @Import(name="backendDefaults")
       private final @Nullable Output<VirtualNodeSpecBackendDefaultsArgs> backendDefaults;
 
     public Output<VirtualNodeSpecBackendDefaultsArgs> getBackendDefaults() {
@@ -34,7 +34,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
      * The backends to which the virtual node is expected to send outbound traffic.
      * 
      */
-    @InputImport(name="backends")
+    @Import(name="backends")
       private final @Nullable Output<List<VirtualNodeSpecBackendArgs>> backends;
 
     public Output<List<VirtualNodeSpecBackendArgs>> getBackends() {
@@ -45,7 +45,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
      * The listeners from which the virtual node is expected to receive inbound traffic.
      * 
      */
-    @InputImport(name="listener")
+    @Import(name="listener")
       private final @Nullable Output<VirtualNodeSpecListenerArgs> listener;
 
     public Output<VirtualNodeSpecListenerArgs> getListener() {
@@ -56,7 +56,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
      * The inbound and outbound access logging information for the virtual node.
      * 
      */
-    @InputImport(name="logging")
+    @Import(name="logging")
       private final @Nullable Output<VirtualNodeSpecLoggingArgs> logging;
 
     public Output<VirtualNodeSpecLoggingArgs> getLogging() {
@@ -67,7 +67,7 @@ public final class VirtualNodeSpecArgs extends io.pulumi.resources.ResourceArgs 
      * The service discovery information for the virtual node.
      * 
      */
-    @InputImport(name="serviceDiscovery")
+    @Import(name="serviceDiscovery")
       private final @Nullable Output<VirtualNodeSpecServiceDiscoveryArgs> serviceDiscovery;
 
     public Output<VirtualNodeSpecServiceDiscoveryArgs> getServiceDiscovery() {

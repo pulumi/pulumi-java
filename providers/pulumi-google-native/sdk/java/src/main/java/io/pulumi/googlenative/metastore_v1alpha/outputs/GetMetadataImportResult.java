@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.DatabaseDumpResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetMetadataImportResult {
     /**
      * The time when the metadata import was started.
@@ -46,15 +46,15 @@ public final class GetMetadataImportResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMetadataImportResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("databaseDump") DatabaseDumpResponse databaseDump,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("databaseDump") DatabaseDumpResponse databaseDump,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.databaseDump = databaseDump;
         this.description = description;

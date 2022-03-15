@@ -8,7 +8,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.SecureIotDeviceRemoteTunnelArg
 import io.pulumi.azurenative.videoanalyzer.inputs.TlsValidationOptionsArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.UsernamePasswordCredentialsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Credentials to be presented to the endpoint.
      * 
      */
-    @InputImport(name="credentials", required=true)
+    @Import(name="credentials", required=true)
       private final Output<UsernamePasswordCredentialsArgs> credentials;
 
     public Output<UsernamePasswordCredentialsArgs> getCredentials() {
@@ -37,7 +37,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * List of trusted certificate authorities when authenticating a TLS connection. A null list designates that Azure Video Analyzer's list of trusted authorities should be used.
      * 
      */
-    @InputImport(name="trustedCertificates")
+    @Import(name="trustedCertificates")
       private final @Nullable Output<PemCertificateListArgs> trustedCertificates;
 
     public Output<PemCertificateListArgs> getTrustedCertificates() {
@@ -48,7 +48,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Describes the tunnel through which Video Analyzer can connect to the endpoint URL. This is an optional property, typically used when the endpoint is behind a firewall.
      * 
      */
-    @InputImport(name="tunnel")
+    @Import(name="tunnel")
       private final @Nullable Output<SecureIotDeviceRemoteTunnelArgs> tunnel;
 
     public Output<SecureIotDeviceRemoteTunnelArgs> getTunnel() {
@@ -60,7 +60,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is '#Microsoft.VideoAnalyzer.TlsEndpoint'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -71,7 +71,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The endpoint URL for Video Analyzer to connect to.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final Output<String> url;
 
     public Output<String> getUrl() {
@@ -82,7 +82,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Validation options to use when authenticating a TLS connection. By default, strict validation is used.
      * 
      */
-    @InputImport(name="validationOptions")
+    @Import(name="validationOptions")
       private final @Nullable Output<TlsValidationOptionsArgs> validationOptions;
 
     public Output<TlsValidationOptionsArgs> getValidationOptions() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resourc
 
     public static final NodeTemplateNodeTypeFlexibilityArgs Empty = new NodeTemplateNodeTypeFlexibilityArgs();
 
-    @InputImport(name="cpus")
+    @Import(name="cpus")
       private final @Nullable Output<String> cpus;
 
     public Output<String> getCpus() {
         return this.cpus == null ? Output.empty() : this.cpus;
     }
 
-    @InputImport(name="localSsd")
+    @Import(name="localSsd")
       private final @Nullable Output<String> localSsd;
 
     public Output<String> getLocalSsd() {
         return this.localSsd == null ? Output.empty() : this.localSsd;
     }
 
-    @InputImport(name="memory")
+    @Import(name="memory")
       private final @Nullable Output<String> memory;
 
     public Output<String> getMemory() {

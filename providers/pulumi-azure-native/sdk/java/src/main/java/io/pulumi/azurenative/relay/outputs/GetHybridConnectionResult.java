@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.relay.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHybridConnectionResult {
     /**
      * The time the hybrid connection was created.
@@ -54,16 +54,16 @@ public final class GetHybridConnectionResult {
      */
     private final @Nullable String userMetadata;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHybridConnectionResult(
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("listenerCount") Integer listenerCount,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("requiresClientAuthorization") @Nullable Boolean requiresClientAuthorization,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updatedAt") String updatedAt,
-        @OutputCustomType.Parameter("userMetadata") @Nullable String userMetadata) {
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("listenerCount") Integer listenerCount,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("requiresClientAuthorization") @Nullable Boolean requiresClientAuthorization,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updatedAt") String updatedAt,
+        @CustomType.Parameter("userMetadata") @Nullable String userMetadata) {
         this.createdAt = createdAt;
         this.id = id;
         this.listenerCount = listenerCount;

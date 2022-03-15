@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blockchain.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the end IP address of the firewall rule range.
      * 
      */
-    @InputImport(name="endIpAddress")
+    @Import(name="endIpAddress")
       private final @Nullable Output<String> endIpAddress;
 
     public Output<String> getEndIpAddress() {
@@ -33,7 +33,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the name of the firewall rules.
      * 
      */
-    @InputImport(name="ruleName")
+    @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {
@@ -44,7 +44,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the start IP address of the firewall rule range.
      * 
      */
-    @InputImport(name="startIpAddress")
+    @Import(name="startIpAddress")
       private final @Nullable Output<String> startIpAddress;
 
     public Output<String> getStartIpAddress() {

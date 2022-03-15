@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ObjectiveResponse {
     /**
      * Defines supported metric goals for hyperparameter tuning
@@ -20,10 +20,10 @@ public final class ObjectiveResponse {
      */
     private final String primaryMetric;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObjectiveResponse(
-        @OutputCustomType.Parameter("goal") String goal,
-        @OutputCustomType.Parameter("primaryMetric") String primaryMetric) {
+        @CustomType.Parameter("goal") String goal,
+        @CustomType.Parameter("primaryMetric") String primaryMetric) {
         this.goal = goal;
         this.primaryMetric = primaryMetric;
     }

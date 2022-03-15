@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datamigration.inputs.FileShareArgs;
 import io.pulumi.azurenative.datamigration.inputs.SelectedCertificateInputArgs;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
      * Backup file share information for file share to be used for temporarily storing files.
      * 
      */
-    @InputImport(name="backupFileShare", required=true)
+    @Import(name="backupFileShare", required=true)
       private final Output<FileShareArgs> backupFileShare;
 
     public Output<FileShareArgs> getBackupFileShare() {
@@ -35,7 +35,7 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
      * Connection information for SQL Server
      * 
      */
-    @InputImport(name="connectionInfo", required=true)
+    @Import(name="connectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> connectionInfo;
 
     public Output<SqlConnectionInfoArgs> getConnectionInfo() {
@@ -46,7 +46,7 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
      * List containing certificate names and corresponding password to use for encrypting the exported certificate.
      * 
      */
-    @InputImport(name="selectedCertificates", required=true)
+    @Import(name="selectedCertificates", required=true)
       private final Output<List<SelectedCertificateInputArgs>> selectedCertificates;
 
     public Output<List<SelectedCertificateInputArgs>> getSelectedCertificates() {

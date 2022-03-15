@@ -16,7 +16,7 @@ import io.pulumi.aws.ec2.outputs.GetLaunchTemplateMonitoring;
 import io.pulumi.aws.ec2.outputs.GetLaunchTemplateNetworkInterface;
 import io.pulumi.aws.ec2.outputs.GetLaunchTemplatePlacement;
 import io.pulumi.aws.ec2.outputs.GetLaunchTemplateTagSpecification;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLaunchTemplateResult {
     /**
      * Amazon Resource Name (ARN) of the launch template.
@@ -184,39 +184,39 @@ public final class GetLaunchTemplateResult {
      */
     private final List<String> vpcSecurityGroupIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLaunchTemplateResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("blockDeviceMappings") List<GetLaunchTemplateBlockDeviceMapping> blockDeviceMappings,
-        @OutputCustomType.Parameter("creditSpecifications") List<GetLaunchTemplateCreditSpecification> creditSpecifications,
-        @OutputCustomType.Parameter("defaultVersion") Integer defaultVersion,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("disableApiTermination") Boolean disableApiTermination,
-        @OutputCustomType.Parameter("ebsOptimized") String ebsOptimized,
-        @OutputCustomType.Parameter("elasticGpuSpecifications") List<GetLaunchTemplateElasticGpuSpecification> elasticGpuSpecifications,
-        @OutputCustomType.Parameter("enclaveOptions") List<GetLaunchTemplateEnclaveOption> enclaveOptions,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetLaunchTemplateFilter> filters,
-        @OutputCustomType.Parameter("hibernationOptions") List<GetLaunchTemplateHibernationOption> hibernationOptions,
-        @OutputCustomType.Parameter("iamInstanceProfiles") List<GetLaunchTemplateIamInstanceProfile> iamInstanceProfiles,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("imageId") String imageId,
-        @OutputCustomType.Parameter("instanceInitiatedShutdownBehavior") String instanceInitiatedShutdownBehavior,
-        @OutputCustomType.Parameter("instanceMarketOptions") List<GetLaunchTemplateInstanceMarketOption> instanceMarketOptions,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("kernelId") String kernelId,
-        @OutputCustomType.Parameter("keyName") String keyName,
-        @OutputCustomType.Parameter("latestVersion") Integer latestVersion,
-        @OutputCustomType.Parameter("metadataOptions") List<GetLaunchTemplateMetadataOption> metadataOptions,
-        @OutputCustomType.Parameter("monitorings") List<GetLaunchTemplateMonitoring> monitorings,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("networkInterfaces") List<GetLaunchTemplateNetworkInterface> networkInterfaces,
-        @OutputCustomType.Parameter("placements") List<GetLaunchTemplatePlacement> placements,
-        @OutputCustomType.Parameter("ramDiskId") String ramDiskId,
-        @OutputCustomType.Parameter("securityGroupNames") List<String> securityGroupNames,
-        @OutputCustomType.Parameter("tagSpecifications") List<GetLaunchTemplateTagSpecification> tagSpecifications,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("userData") String userData,
-        @OutputCustomType.Parameter("vpcSecurityGroupIds") List<String> vpcSecurityGroupIds) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("blockDeviceMappings") List<GetLaunchTemplateBlockDeviceMapping> blockDeviceMappings,
+        @CustomType.Parameter("creditSpecifications") List<GetLaunchTemplateCreditSpecification> creditSpecifications,
+        @CustomType.Parameter("defaultVersion") Integer defaultVersion,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("disableApiTermination") Boolean disableApiTermination,
+        @CustomType.Parameter("ebsOptimized") String ebsOptimized,
+        @CustomType.Parameter("elasticGpuSpecifications") List<GetLaunchTemplateElasticGpuSpecification> elasticGpuSpecifications,
+        @CustomType.Parameter("enclaveOptions") List<GetLaunchTemplateEnclaveOption> enclaveOptions,
+        @CustomType.Parameter("filters") @Nullable List<GetLaunchTemplateFilter> filters,
+        @CustomType.Parameter("hibernationOptions") List<GetLaunchTemplateHibernationOption> hibernationOptions,
+        @CustomType.Parameter("iamInstanceProfiles") List<GetLaunchTemplateIamInstanceProfile> iamInstanceProfiles,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("imageId") String imageId,
+        @CustomType.Parameter("instanceInitiatedShutdownBehavior") String instanceInitiatedShutdownBehavior,
+        @CustomType.Parameter("instanceMarketOptions") List<GetLaunchTemplateInstanceMarketOption> instanceMarketOptions,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("kernelId") String kernelId,
+        @CustomType.Parameter("keyName") String keyName,
+        @CustomType.Parameter("latestVersion") Integer latestVersion,
+        @CustomType.Parameter("metadataOptions") List<GetLaunchTemplateMetadataOption> metadataOptions,
+        @CustomType.Parameter("monitorings") List<GetLaunchTemplateMonitoring> monitorings,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("networkInterfaces") List<GetLaunchTemplateNetworkInterface> networkInterfaces,
+        @CustomType.Parameter("placements") List<GetLaunchTemplatePlacement> placements,
+        @CustomType.Parameter("ramDiskId") String ramDiskId,
+        @CustomType.Parameter("securityGroupNames") List<String> securityGroupNames,
+        @CustomType.Parameter("tagSpecifications") List<GetLaunchTemplateTagSpecification> tagSpecifications,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("userData") String userData,
+        @CustomType.Parameter("vpcSecurityGroupIds") List<String> vpcSecurityGroupIds) {
         this.arn = arn;
         this.blockDeviceMappings = blockDeviceMappings;
         this.creditSpecifications = creditSpecifications;

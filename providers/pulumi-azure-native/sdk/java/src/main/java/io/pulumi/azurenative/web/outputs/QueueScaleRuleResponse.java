@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ScaleRuleAuthResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class QueueScaleRuleResponse {
     /**
      * Authentication secrets for the queue scale rule.
@@ -30,11 +30,11 @@ public final class QueueScaleRuleResponse {
      */
     private final @Nullable String queueName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QueueScaleRuleResponse(
-        @OutputCustomType.Parameter("auth") @Nullable List<ScaleRuleAuthResponse> auth,
-        @OutputCustomType.Parameter("queueLength") @Nullable Integer queueLength,
-        @OutputCustomType.Parameter("queueName") @Nullable String queueName) {
+        @CustomType.Parameter("auth") @Nullable List<ScaleRuleAuthResponse> auth,
+        @CustomType.Parameter("queueLength") @Nullable Integer queueLength,
+        @CustomType.Parameter("queueName") @Nullable String queueName) {
         this.auth = auth;
         this.queueLength = queueLength;
         this.queueName = queueName;

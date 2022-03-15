@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.ssm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AssociationTarget {
     /**
      * Either `InstanceIds` or `tag:Tag Name` to specify an EC2 tag.
@@ -21,10 +21,10 @@ public final class AssociationTarget {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssociationTarget(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("values") List<String> values) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("values") List<String> values) {
         this.key = key;
         this.values = values;
     }

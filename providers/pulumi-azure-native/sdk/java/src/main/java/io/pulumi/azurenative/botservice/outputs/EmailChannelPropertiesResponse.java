@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EmailChannelPropertiesResponse {
     /**
      * The email address
@@ -28,11 +28,11 @@ public final class EmailChannelPropertiesResponse {
      */
     private final @Nullable String password;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EmailChannelPropertiesResponse(
-        @OutputCustomType.Parameter("emailAddress") String emailAddress,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("password") @Nullable String password) {
+        @CustomType.Parameter("emailAddress") String emailAddress,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("password") @Nullable String password) {
         this.emailAddress = emailAddress;
         this.isEnabled = isEnabled;
         this.password = password;

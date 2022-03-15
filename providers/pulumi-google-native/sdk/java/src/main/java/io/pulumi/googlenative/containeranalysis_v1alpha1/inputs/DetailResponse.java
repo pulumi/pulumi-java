@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VersionResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VulnerabilityLocationResponse;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar. This field can be used as a filter in list requests.
      * 
      */
-    @InputImport(name="cpeUri", required=true)
+    @Import(name="cpeUri", required=true)
       private final String cpeUri;
 
     public String getCpeUri() {
@@ -34,7 +34,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * A vendor-specific description of this note.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -45,7 +45,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The fix for this specific package version.
      * 
      */
-    @InputImport(name="fixedLocation", required=true)
+    @Import(name="fixedLocation", required=true)
       private final VulnerabilityLocationResponse fixedLocation;
 
     public VulnerabilityLocationResponse getFixedLocation() {
@@ -56,7 +56,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * Whether this Detail is obsolete. Occurrences are expected not to point to obsolete details.
      * 
      */
-    @InputImport(name="isObsolete", required=true)
+    @Import(name="isObsolete", required=true)
       private final Boolean isObsolete;
 
     public Boolean getIsObsolete() {
@@ -67,7 +67,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The max version of the package in which the vulnerability exists.
      * 
      */
-    @InputImport(name="maxAffectedVersion", required=true)
+    @Import(name="maxAffectedVersion", required=true)
       private final VersionResponse maxAffectedVersion;
 
     public VersionResponse getMaxAffectedVersion() {
@@ -78,7 +78,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The min version of the package in which the vulnerability exists.
      * 
      */
-    @InputImport(name="minAffectedVersion", required=true)
+    @Import(name="minAffectedVersion", required=true)
       private final VersionResponse minAffectedVersion;
 
     public VersionResponse getMinAffectedVersion() {
@@ -89,7 +89,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the package where the vulnerability was found. This field can be used as a filter in list requests.
      * 
      */
-    @InputImport(name="package", required=true)
+    @Import(name="package", required=true)
       private final String $package;
 
     public String get$package() {
@@ -100,7 +100,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The type of package; whether native or non native(ruby gems, node.js packages etc)
      * 
      */
-    @InputImport(name="packageType", required=true)
+    @Import(name="packageType", required=true)
       private final String packageType;
 
     public String getPackageType() {
@@ -111,7 +111,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The severity (eg: distro assigned severity) for this vulnerability.
      * 
      */
-    @InputImport(name="severityName", required=true)
+    @Import(name="severityName", required=true)
       private final String severityName;
 
     public String getSeverityName() {
@@ -122,7 +122,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The source from which the information in this Detail was obtained.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final String source;
 
     public String getSource() {
@@ -133,7 +133,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * The vendor of the product. e.g. "google"
      * 
      */
-    @InputImport(name="vendor", required=true)
+    @Import(name="vendor", required=true)
       private final String vendor;
 
     public String getVendor() {

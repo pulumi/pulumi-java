@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class IdAssetReferenceResponse extends io.pulumi.resources.InvokeAr
      * ARM resource ID of the asset.
      * 
      */
-    @InputImport(name="assetId", required=true)
+    @Import(name="assetId", required=true)
       private final String assetId;
 
     public String getAssetId() {
@@ -32,7 +32,7 @@ public final class IdAssetReferenceResponse extends io.pulumi.resources.InvokeAr
      * Expected value is 'Id'.
      * 
      */
-    @InputImport(name="referenceType", required=true)
+    @Import(name="referenceType", required=true)
       private final String referenceType;
 
     public String getReferenceType() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SSISAccessCredentialResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SSISLogLocationResponse {
     /**
      * The package execution log access credential.
@@ -34,12 +34,12 @@ public final class SSISLogLocationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SSISLogLocationResponse(
-        @OutputCustomType.Parameter("accessCredential") @Nullable SSISAccessCredentialResponse accessCredential,
-        @OutputCustomType.Parameter("logPath") Object logPath,
-        @OutputCustomType.Parameter("logRefreshInterval") @Nullable Object logRefreshInterval,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accessCredential") @Nullable SSISAccessCredentialResponse accessCredential,
+        @CustomType.Parameter("logPath") Object logPath,
+        @CustomType.Parameter("logRefreshInterval") @Nullable Object logRefreshInterval,
+        @CustomType.Parameter("type") String type) {
         this.accessCredential = accessCredential;
         this.logPath = logPath;
         this.logRefreshInterval = logRefreshInterval;

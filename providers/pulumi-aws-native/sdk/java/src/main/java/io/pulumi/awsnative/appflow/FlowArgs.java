@@ -9,7 +9,7 @@ import io.pulumi.awsnative.appflow.inputs.FlowTagArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowTaskArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowTriggerConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the flow.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * List of Destination connectors of the flow.
      * 
      */
-    @InputImport(name="destinationFlowConfigList", required=true)
+    @Import(name="destinationFlowConfigList", required=true)
       private final Output<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList;
 
     public Output<List<FlowDestinationFlowConfigArgs>> getDestinationFlowConfigList() {
@@ -46,7 +46,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the flow.
      * 
      */
-    @InputImport(name="flowName")
+    @Import(name="flowName")
       private final @Nullable Output<String> flowName;
 
     public Output<String> getFlowName() {
@@ -57,7 +57,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
      * 
      */
-    @InputImport(name="kMSArn")
+    @Import(name="kMSArn")
       private final @Nullable Output<String> kMSArn;
 
     public Output<String> getKMSArn() {
@@ -68,7 +68,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * Configurations of Source connector of the flow.
      * 
      */
-    @InputImport(name="sourceFlowConfig", required=true)
+    @Import(name="sourceFlowConfig", required=true)
       private final Output<FlowSourceFlowConfigArgs> sourceFlowConfig;
 
     public Output<FlowSourceFlowConfigArgs> getSourceFlowConfig() {
@@ -79,7 +79,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * List of Tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<FlowTagArgs>> tags;
 
     public Output<List<FlowTagArgs>> getTags() {
@@ -90,7 +90,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * List of tasks for the flow.
      * 
      */
-    @InputImport(name="tasks", required=true)
+    @Import(name="tasks", required=true)
       private final Output<List<FlowTaskArgs>> tasks;
 
     public Output<List<FlowTaskArgs>> getTasks() {
@@ -101,7 +101,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * Trigger settings of the flow.
      * 
      */
-    @InputImport(name="triggerConfig", required=true)
+    @Import(name="triggerConfig", required=true)
       private final Output<FlowTriggerConfigArgs> triggerConfig;
 
     public Output<FlowTriggerConfigArgs> getTriggerConfig() {

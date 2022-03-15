@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.hdinsight.outputs;
 
 import io.pulumi.azurenative.hdinsight.outputs.StorageAccountResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageProfileResponse {
     /**
      * The list of storage accounts in the cluster.
@@ -17,8 +17,8 @@ public final class StorageProfileResponse {
      */
     private final @Nullable List<StorageAccountResponse> storageaccounts;
 
-    @OutputCustomType.Constructor
-    private StorageProfileResponse(@OutputCustomType.Parameter("storageaccounts") @Nullable List<StorageAccountResponse> storageaccounts) {
+    @CustomType.Constructor
+    private StorageProfileResponse(@CustomType.Parameter("storageaccounts") @Nullable List<StorageAccountResponse> storageaccounts) {
         this.storageaccounts = storageaccounts;
     }
 

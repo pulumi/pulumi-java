@@ -6,14 +6,14 @@ package io.pulumi.awsnative.sagemaker.outputs;
 import io.pulumi.awsnative.sagemaker.outputs.DomainJupyterServerAppSettings;
 import io.pulumi.awsnative.sagemaker.outputs.DomainKernelGatewayAppSettings;
 import io.pulumi.awsnative.sagemaker.outputs.DomainSharingSettings;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainUserSettings {
     /**
      * The user profile Amazon Resource Name (ARN).
@@ -41,13 +41,13 @@ public final class DomainUserSettings {
      */
     private final @Nullable DomainSharingSettings sharingSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainUserSettings(
-        @OutputCustomType.Parameter("executionRole") @Nullable String executionRole,
-        @OutputCustomType.Parameter("jupyterServerAppSettings") @Nullable DomainJupyterServerAppSettings jupyterServerAppSettings,
-        @OutputCustomType.Parameter("kernelGatewayAppSettings") @Nullable DomainKernelGatewayAppSettings kernelGatewayAppSettings,
-        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
-        @OutputCustomType.Parameter("sharingSettings") @Nullable DomainSharingSettings sharingSettings) {
+        @CustomType.Parameter("executionRole") @Nullable String executionRole,
+        @CustomType.Parameter("jupyterServerAppSettings") @Nullable DomainJupyterServerAppSettings jupyterServerAppSettings,
+        @CustomType.Parameter("kernelGatewayAppSettings") @Nullable DomainKernelGatewayAppSettings kernelGatewayAppSettings,
+        @CustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @CustomType.Parameter("sharingSettings") @Nullable DomainSharingSettings sharingSettings) {
         this.executionRole = executionRole;
         this.jupyterServerAppSettings = jupyterServerAppSettings;
         this.kernelGatewayAppSettings = kernelGatewayAppSettings;

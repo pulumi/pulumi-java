@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecTcpRouteActionGetArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecTcpRouteTimeoutGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class RouteSpecTcpRouteGetArgs extends io.pulumi.resources.Resource
      * The action to take if a match is determined.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<RouteSpecTcpRouteActionGetArgs> action;
 
     public Output<RouteSpecTcpRouteActionGetArgs> getAction() {
@@ -30,7 +30,7 @@ public final class RouteSpecTcpRouteGetArgs extends io.pulumi.resources.Resource
      * The types of timeouts.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<RouteSpecTcpRouteTimeoutGetArgs> timeout;
 
     public Output<RouteSpecTcpRouteTimeoutGetArgs> getTimeout() {

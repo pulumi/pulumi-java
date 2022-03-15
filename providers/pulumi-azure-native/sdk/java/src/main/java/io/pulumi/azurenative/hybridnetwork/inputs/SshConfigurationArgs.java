@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 
 import io.pulumi.azurenative.hybridnetwork.inputs.SshPublicKeyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SshConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * The list of SSH public keys used to authenticate with linux based VMs.
      * 
      */
-    @InputImport(name="publicKeys")
+    @Import(name="publicKeys")
       private final @Nullable Output<List<SshPublicKeyArgs>> publicKeys;
 
     public Output<List<SshPublicKeyArgs>> getPublicKeys() {

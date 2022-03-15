@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.ExtendedLocationArgs;
 import io.pulumi.azurenative.network.inputs.PrivateLinkServiceConnectionArgs;
 import io.pulumi.azurenative.network.inputs.SubnetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * An array of custom dns configurations.
      * 
      */
-    @InputImport(name="customDnsConfigs")
+    @Import(name="customDnsConfigs")
       private final @Nullable Output<List<CustomDnsConfigPropertiesFormatArgs>> customDnsConfigs;
 
     public Output<List<CustomDnsConfigPropertiesFormatArgs>> getCustomDnsConfigs() {
@@ -35,7 +35,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * The extended location of the load balancer.
      * 
      */
-    @InputImport(name="extendedLocation")
+    @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
     public Output<ExtendedLocationArgs> getExtendedLocation() {
@@ -46,7 +46,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -57,7 +57,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -68,7 +68,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * A grouping of information about the connection to the remote resource. Used when the network admin does not have access to approve connections to the remote resource.
      * 
      */
-    @InputImport(name="manualPrivateLinkServiceConnections")
+    @Import(name="manualPrivateLinkServiceConnections")
       private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
 
     public Output<List<PrivateLinkServiceConnectionArgs>> getManualPrivateLinkServiceConnections() {
@@ -79,7 +79,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the private endpoint.
      * 
      */
-    @InputImport(name="privateEndpointName")
+    @Import(name="privateEndpointName")
       private final @Nullable Output<String> privateEndpointName;
 
     public Output<String> getPrivateEndpointName() {
@@ -90,7 +90,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * A grouping of information about the connection to the remote resource.
      * 
      */
-    @InputImport(name="privateLinkServiceConnections")
+    @Import(name="privateLinkServiceConnections")
       private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
 
     public Output<List<PrivateLinkServiceConnectionArgs>> getPrivateLinkServiceConnections() {
@@ -101,7 +101,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -112,7 +112,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * The ID of the subnet from which the private IP will be allocated.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<SubnetArgs> subnet;
 
     public Output<SubnetArgs> getSubnet() {
@@ -123,7 +123,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

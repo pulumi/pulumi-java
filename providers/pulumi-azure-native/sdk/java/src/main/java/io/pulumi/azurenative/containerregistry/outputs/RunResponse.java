@@ -10,7 +10,7 @@ import io.pulumi.azurenative.containerregistry.outputs.PlatformPropertiesRespons
 import io.pulumi.azurenative.containerregistry.outputs.SourceTriggerDescriptorResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TimerTriggerDescriptorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RunResponse {
     /**
      * The machine configuration of the run agent.
@@ -151,34 +151,34 @@ public final class RunResponse {
      */
     private final @Nullable String updateTriggerToken;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RunResponse(
-        @OutputCustomType.Parameter("agentConfiguration") @Nullable AgentPropertiesResponse agentConfiguration,
-        @OutputCustomType.Parameter("agentPoolName") @Nullable String agentPoolName,
-        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
-        @OutputCustomType.Parameter("customRegistries") @Nullable List<String> customRegistries,
-        @OutputCustomType.Parameter("finishTime") @Nullable String finishTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("imageUpdateTrigger") @Nullable ImageUpdateTriggerResponse imageUpdateTrigger,
-        @OutputCustomType.Parameter("isArchiveEnabled") @Nullable Boolean isArchiveEnabled,
-        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
-        @OutputCustomType.Parameter("logArtifact") ImageDescriptorResponse logArtifact,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputImages") @Nullable List<ImageDescriptorResponse> outputImages,
-        @OutputCustomType.Parameter("platform") @Nullable PlatformPropertiesResponse platform,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("runErrorMessage") String runErrorMessage,
-        @OutputCustomType.Parameter("runId") @Nullable String runId,
-        @OutputCustomType.Parameter("runType") @Nullable String runType,
-        @OutputCustomType.Parameter("sourceRegistryAuth") @Nullable String sourceRegistryAuth,
-        @OutputCustomType.Parameter("sourceTrigger") @Nullable SourceTriggerDescriptorResponse sourceTrigger,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("task") @Nullable String task,
-        @OutputCustomType.Parameter("timerTrigger") @Nullable TimerTriggerDescriptorResponse timerTrigger,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updateTriggerToken") @Nullable String updateTriggerToken) {
+        @CustomType.Parameter("agentConfiguration") @Nullable AgentPropertiesResponse agentConfiguration,
+        @CustomType.Parameter("agentPoolName") @Nullable String agentPoolName,
+        @CustomType.Parameter("createTime") @Nullable String createTime,
+        @CustomType.Parameter("customRegistries") @Nullable List<String> customRegistries,
+        @CustomType.Parameter("finishTime") @Nullable String finishTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("imageUpdateTrigger") @Nullable ImageUpdateTriggerResponse imageUpdateTrigger,
+        @CustomType.Parameter("isArchiveEnabled") @Nullable Boolean isArchiveEnabled,
+        @CustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @CustomType.Parameter("logArtifact") ImageDescriptorResponse logArtifact,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputImages") @Nullable List<ImageDescriptorResponse> outputImages,
+        @CustomType.Parameter("platform") @Nullable PlatformPropertiesResponse platform,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("runErrorMessage") String runErrorMessage,
+        @CustomType.Parameter("runId") @Nullable String runId,
+        @CustomType.Parameter("runType") @Nullable String runType,
+        @CustomType.Parameter("sourceRegistryAuth") @Nullable String sourceRegistryAuth,
+        @CustomType.Parameter("sourceTrigger") @Nullable SourceTriggerDescriptorResponse sourceTrigger,
+        @CustomType.Parameter("startTime") @Nullable String startTime,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("task") @Nullable String task,
+        @CustomType.Parameter("timerTrigger") @Nullable TimerTriggerDescriptorResponse timerTrigger,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updateTriggerToken") @Nullable String updateTriggerToken) {
         this.agentConfiguration = agentConfiguration;
         this.agentPoolName = agentPoolName;
         this.createTime = createTime;

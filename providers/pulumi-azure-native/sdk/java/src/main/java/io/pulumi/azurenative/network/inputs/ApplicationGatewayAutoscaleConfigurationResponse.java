@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse extends io.p
      * Upper bound on number of Application Gateway capacity.
      * 
      */
-    @InputImport(name="maxCapacity")
+    @Import(name="maxCapacity")
       private final @Nullable Integer maxCapacity;
 
     public Optional<Integer> getMaxCapacity() {
@@ -33,7 +33,7 @@ public final class ApplicationGatewayAutoscaleConfigurationResponse extends io.p
      * Lower bound on number of Application Gateway capacity.
      * 
      */
-    @InputImport(name="minCapacity", required=true)
+    @Import(name="minCapacity", required=true)
       private final Integer minCapacity;
 
     public Integer getMinCapacity() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.logic.outputs.IntegrationAccountSkuResponse;
 import io.pulumi.azurenative.logic.outputs.ResourceReferenceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class IntegrationAccount extends io.pulumi.resources.CustomResource {
      * The integration service environment.
      * 
      */
-    @OutputExport(name="integrationServiceEnvironment", type=ResourceReferenceResponse.class, parameters={})
+    @Export(name="integrationServiceEnvironment", type=ResourceReferenceResponse.class, parameters={})
     private Output</* @Nullable */ ResourceReferenceResponse> integrationServiceEnvironment;
 
     /**
@@ -51,7 +51,7 @@ public class IntegrationAccount extends io.pulumi.resources.CustomResource {
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -65,7 +65,7 @@ public class IntegrationAccount extends io.pulumi.resources.CustomResource {
      * Gets the resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class IntegrationAccount extends io.pulumi.resources.CustomResource {
      * The sku.
      * 
      */
-    @OutputExport(name="sku", type=IntegrationAccountSkuResponse.class, parameters={})
+    @Export(name="sku", type=IntegrationAccountSkuResponse.class, parameters={})
     private Output</* @Nullable */ IntegrationAccountSkuResponse> sku;
 
     /**
@@ -93,7 +93,7 @@ public class IntegrationAccount extends io.pulumi.resources.CustomResource {
      * The workflow state.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
@@ -107,7 +107,7 @@ public class IntegrationAccount extends io.pulumi.resources.CustomResource {
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -121,7 +121,7 @@ public class IntegrationAccount extends io.pulumi.resources.CustomResource {
      * Gets the resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

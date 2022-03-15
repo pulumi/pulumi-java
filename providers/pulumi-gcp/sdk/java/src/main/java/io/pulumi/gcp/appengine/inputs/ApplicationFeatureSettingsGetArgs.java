@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ApplicationFeatureSettingsGetArgs extends io.pulumi.resources
      * and liveness checks.
      * 
      */
-    @InputImport(name="splitHealthChecks", required=true)
+    @Import(name="splitHealthChecks", required=true)
       private final Output<Boolean> splitHealthChecks;
 
     public Output<Boolean> getSplitHealthChecks() {

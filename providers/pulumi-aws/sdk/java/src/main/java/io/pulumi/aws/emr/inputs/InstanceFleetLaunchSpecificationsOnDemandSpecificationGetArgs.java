@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class InstanceFleetLaunchSpecificationsOnDemandSpecificationGetArgs
      * Specifies the strategy to use in launching Spot instance fleets. Currently, the only option is `capacity-optimized` (the default), which launches instances from Spot instance pools with optimal capacity for the number of instances that are launching.
      * 
      */
-    @InputImport(name="allocationStrategy", required=true)
+    @Import(name="allocationStrategy", required=true)
       private final Output<String> allocationStrategy;
 
     public Output<String> getAllocationStrategy() {

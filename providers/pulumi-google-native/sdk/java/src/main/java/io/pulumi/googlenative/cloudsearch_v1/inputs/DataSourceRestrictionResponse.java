@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.FilterOptionsResponse;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.SourceResponse;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class DataSourceRestrictionResponse extends io.pulumi.resources.Inv
      * Filter options restricting the results. If multiple filters are present, they are grouped by object type before joining. Filters with the same object type are joined conjunctively, then the resulting expressions are joined disjunctively. The maximum number of elements is 20. NOTE: Suggest API supports only few filters at the moment: "objecttype", "type" and "mimetype". For now, schema specific filters cannot be used to filter suggestions.
      * 
      */
-    @InputImport(name="filterOptions", required=true)
+    @Import(name="filterOptions", required=true)
       private final List<FilterOptionsResponse> filterOptions;
 
     public List<FilterOptionsResponse> getFilterOptions() {
@@ -33,7 +33,7 @@ public final class DataSourceRestrictionResponse extends io.pulumi.resources.Inv
      * The source of restriction.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final SourceResponse source;
 
     public SourceResponse getSource() {

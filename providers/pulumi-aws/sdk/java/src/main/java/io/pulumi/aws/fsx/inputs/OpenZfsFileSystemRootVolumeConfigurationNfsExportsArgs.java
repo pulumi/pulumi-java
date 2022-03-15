@@ -5,7 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.aws.fsx.inputs.OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs extend
      * - A list of configuration objects that contain the client and options for mounting the OpenZFS file system. Maximum of 25 items. See Client Configurations Below.
      * 
      */
-    @InputImport(name="clientConfigurations", required=true)
+    @Import(name="clientConfigurations", required=true)
       private final Output<List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationArgs>> clientConfigurations;
 
     public Output<List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfigurationArgs>> getClientConfigurations() {

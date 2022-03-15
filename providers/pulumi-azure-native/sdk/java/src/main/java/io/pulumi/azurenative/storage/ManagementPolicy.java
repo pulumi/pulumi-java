@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storage.ManagementPolicyArgs;
 import io.pulumi.azurenative.storage.outputs.ManagementPolicySchemaResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ManagementPolicy extends io.pulumi.resources.CustomResource {
      * Returns the date and time the ManagementPolicies was last modified.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
@@ -49,7 +49,7 @@ public class ManagementPolicy extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class ManagementPolicy extends io.pulumi.resources.CustomResource {
      * The Storage Account ManagementPolicy, in JSON format. See more details in: https://docs.microsoft.com/en-us/azure/storage/common/storage-lifecycle-managment-concepts.
      * 
      */
-    @OutputExport(name="policy", type=ManagementPolicySchemaResponse.class, parameters={})
+    @Export(name="policy", type=ManagementPolicySchemaResponse.class, parameters={})
     private Output<ManagementPolicySchemaResponse> policy;
 
     /**
@@ -77,7 +77,7 @@ public class ManagementPolicy extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -7,7 +7,7 @@ import io.pulumi.aws.opsworks.inputs.InstanceEbsBlockDeviceGetArgs;
 import io.pulumi.aws.opsworks.inputs.InstanceEphemeralBlockDeviceGetArgs;
 import io.pulumi.aws.opsworks.inputs.InstanceRootBlockDeviceGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
      * 
      */
-    @InputImport(name="agentVersion")
+    @Import(name="agentVersion")
       private final @Nullable Output<String> agentVersion;
 
     public Output<String> getAgentVersion() {
@@ -34,7 +34,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
      * 
      */
-    @InputImport(name="amiId")
+    @Import(name="amiId")
       private final @Nullable Output<String> amiId;
 
     public Output<String> getAmiId() {
@@ -45,7 +45,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
      * 
      */
-    @InputImport(name="architecture")
+    @Import(name="architecture")
       private final @Nullable Output<String> architecture;
 
     public Output<String> getArchitecture() {
@@ -56,7 +56,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
      * 
      */
-    @InputImport(name="autoScalingType")
+    @Import(name="autoScalingType")
       private final @Nullable Output<String> autoScalingType;
 
     public Output<String> getAutoScalingType() {
@@ -68,28 +68,28 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * by default.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
     }
 
-    @InputImport(name="createdAt")
+    @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
         return this.createdAt == null ? Output.empty() : this.createdAt;
     }
 
-    @InputImport(name="deleteEbs")
+    @Import(name="deleteEbs")
       private final @Nullable Output<Boolean> deleteEbs;
 
     public Output<Boolean> getDeleteEbs() {
         return this.deleteEbs == null ? Output.empty() : this.deleteEbs;
     }
 
-    @InputImport(name="deleteEip")
+    @Import(name="deleteEip")
       private final @Nullable Output<Boolean> deleteEip;
 
     public Output<Boolean> getDeleteEip() {
@@ -101,7 +101,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * instance.  See Block Devices below for details.
      * 
      */
-    @InputImport(name="ebsBlockDevices")
+    @Import(name="ebsBlockDevices")
       private final @Nullable Output<List<InstanceEbsBlockDeviceGetArgs>> ebsBlockDevices;
 
     public Output<List<InstanceEbsBlockDeviceGetArgs>> getEbsBlockDevices() {
@@ -112,7 +112,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * If true, the launched EC2 instance will be EBS-optimized.
      * 
      */
-    @InputImport(name="ebsOptimized")
+    @Import(name="ebsOptimized")
       private final @Nullable Output<Boolean> ebsOptimized;
 
     public Output<Boolean> getEbsOptimized() {
@@ -123,21 +123,21 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * EC2 instance ID
      * 
      */
-    @InputImport(name="ec2InstanceId")
+    @Import(name="ec2InstanceId")
       private final @Nullable Output<String> ec2InstanceId;
 
     public Output<String> getEc2InstanceId() {
         return this.ec2InstanceId == null ? Output.empty() : this.ec2InstanceId;
     }
 
-    @InputImport(name="ecsClusterArn")
+    @Import(name="ecsClusterArn")
       private final @Nullable Output<String> ecsClusterArn;
 
     public Output<String> getEcsClusterArn() {
         return this.ecsClusterArn == null ? Output.empty() : this.ecsClusterArn;
     }
 
-    @InputImport(name="elasticIp")
+    @Import(name="elasticIp")
       private final @Nullable Output<String> elasticIp;
 
     public Output<String> getElasticIp() {
@@ -149,7 +149,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * "Instance Store") volumes on the instance. See Block Devices below for details.
      * 
      */
-    @InputImport(name="ephemeralBlockDevices")
+    @Import(name="ephemeralBlockDevices")
       private final @Nullable Output<List<InstanceEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
 
     public Output<List<InstanceEphemeralBlockDeviceGetArgs>> getEphemeralBlockDevices() {
@@ -160,14 +160,14 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The instance's host name.
      * 
      */
-    @InputImport(name="hostname")
+    @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
     public Output<String> getHostname() {
         return this.hostname == null ? Output.empty() : this.hostname;
     }
 
-    @InputImport(name="infrastructureClass")
+    @Import(name="infrastructureClass")
       private final @Nullable Output<String> infrastructureClass;
 
     public Output<String> getInfrastructureClass() {
@@ -178,14 +178,14 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
      * 
      */
-    @InputImport(name="installUpdatesOnBoot")
+    @Import(name="installUpdatesOnBoot")
       private final @Nullable Output<Boolean> installUpdatesOnBoot;
 
     public Output<Boolean> getInstallUpdatesOnBoot() {
         return this.installUpdatesOnBoot == null ? Output.empty() : this.installUpdatesOnBoot;
     }
 
-    @InputImport(name="instanceProfileArn")
+    @Import(name="instanceProfileArn")
       private final @Nullable Output<String> instanceProfileArn;
 
     public Output<String> getInstanceProfileArn() {
@@ -196,14 +196,14 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The type of instance to start
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
         return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
-    @InputImport(name="lastServiceErrorId")
+    @Import(name="lastServiceErrorId")
       private final @Nullable Output<String> lastServiceErrorId;
 
     public Output<String> getLastServiceErrorId() {
@@ -214,7 +214,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The ids of the layers the instance will belong to.
      * 
      */
-    @InputImport(name="layerIds")
+    @Import(name="layerIds")
       private final @Nullable Output<List<String>> layerIds;
 
     public Output<List<String>> getLayerIds() {
@@ -225,14 +225,14 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Name of operating system that will be installed.
      * 
      */
-    @InputImport(name="os")
+    @Import(name="os")
       private final @Nullable Output<String> os;
 
     public Output<String> getOs() {
         return this.os == null ? Output.empty() : this.os;
     }
 
-    @InputImport(name="platform")
+    @Import(name="platform")
       private final @Nullable Output<String> platform;
 
     public Output<String> getPlatform() {
@@ -245,7 +245,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * for your VPC
      * 
      */
-    @InputImport(name="privateDns")
+    @Import(name="privateDns")
       private final @Nullable Output<String> privateDns;
 
     public Output<String> getPrivateDns() {
@@ -256,7 +256,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The private IP address assigned to the instance
      * 
      */
-    @InputImport(name="privateIp")
+    @Import(name="privateIp")
       private final @Nullable Output<String> privateIp;
 
     public Output<String> getPrivateIp() {
@@ -268,7 +268,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * is only available if you've enabled DNS hostnames for your VPC
      * 
      */
-    @InputImport(name="publicDns")
+    @Import(name="publicDns")
       private final @Nullable Output<String> publicDns;
 
     public Output<String> getPublicDns() {
@@ -279,42 +279,42 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The public IP address assigned to the instance, if applicable.
      * 
      */
-    @InputImport(name="publicIp")
+    @Import(name="publicIp")
       private final @Nullable Output<String> publicIp;
 
     public Output<String> getPublicIp() {
         return this.publicIp == null ? Output.empty() : this.publicIp;
     }
 
-    @InputImport(name="registeredBy")
+    @Import(name="registeredBy")
       private final @Nullable Output<String> registeredBy;
 
     public Output<String> getRegisteredBy() {
         return this.registeredBy == null ? Output.empty() : this.registeredBy;
     }
 
-    @InputImport(name="reportedAgentVersion")
+    @Import(name="reportedAgentVersion")
       private final @Nullable Output<String> reportedAgentVersion;
 
     public Output<String> getReportedAgentVersion() {
         return this.reportedAgentVersion == null ? Output.empty() : this.reportedAgentVersion;
     }
 
-    @InputImport(name="reportedOsFamily")
+    @Import(name="reportedOsFamily")
       private final @Nullable Output<String> reportedOsFamily;
 
     public Output<String> getReportedOsFamily() {
         return this.reportedOsFamily == null ? Output.empty() : this.reportedOsFamily;
     }
 
-    @InputImport(name="reportedOsName")
+    @Import(name="reportedOsName")
       private final @Nullable Output<String> reportedOsName;
 
     public Output<String> getReportedOsName() {
         return this.reportedOsName == null ? Output.empty() : this.reportedOsName;
     }
 
-    @InputImport(name="reportedOsVersion")
+    @Import(name="reportedOsVersion")
       private final @Nullable Output<String> reportedOsVersion;
 
     public Output<String> getReportedOsVersion() {
@@ -326,7 +326,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * device of the instance. See Block Devices below for details.
      * 
      */
-    @InputImport(name="rootBlockDevices")
+    @Import(name="rootBlockDevices")
       private final @Nullable Output<List<InstanceRootBlockDeviceGetArgs>> rootBlockDevices;
 
     public Output<List<InstanceRootBlockDeviceGetArgs>> getRootBlockDevices() {
@@ -337,14 +337,14 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
      * 
      */
-    @InputImport(name="rootDeviceType")
+    @Import(name="rootDeviceType")
       private final @Nullable Output<String> rootDeviceType;
 
     public Output<String> getRootDeviceType() {
         return this.rootDeviceType == null ? Output.empty() : this.rootDeviceType;
     }
 
-    @InputImport(name="rootDeviceVolumeId")
+    @Import(name="rootDeviceVolumeId")
       private final @Nullable Output<String> rootDeviceVolumeId;
 
     public Output<String> getRootDeviceVolumeId() {
@@ -355,21 +355,21 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The associated security groups.
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
     }
 
-    @InputImport(name="sshHostDsaKeyFingerprint")
+    @Import(name="sshHostDsaKeyFingerprint")
       private final @Nullable Output<String> sshHostDsaKeyFingerprint;
 
     public Output<String> getSshHostDsaKeyFingerprint() {
         return this.sshHostDsaKeyFingerprint == null ? Output.empty() : this.sshHostDsaKeyFingerprint;
     }
 
-    @InputImport(name="sshHostRsaKeyFingerprint")
+    @Import(name="sshHostRsaKeyFingerprint")
       private final @Nullable Output<String> sshHostRsaKeyFingerprint;
 
     public Output<String> getSshHostRsaKeyFingerprint() {
@@ -380,7 +380,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Name of the SSH keypair that instances will have by default.
      * 
      */
-    @InputImport(name="sshKeyName")
+    @Import(name="sshKeyName")
       private final @Nullable Output<String> sshKeyName;
 
     public Output<String> getSshKeyName() {
@@ -391,7 +391,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The id of the stack the instance will belong to.
      * 
      */
-    @InputImport(name="stackId")
+    @Import(name="stackId")
       private final @Nullable Output<String> stackId;
 
     public Output<String> getStackId() {
@@ -402,14 +402,14 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The desired state of the instance.  Can be either `"running"` or `"stopped"`.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
         return this.state == null ? Output.empty() : this.state;
     }
 
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -420,7 +420,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Subnet ID to attach to
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -431,7 +431,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
      * 
      */
-    @InputImport(name="tenancy")
+    @Import(name="tenancy")
       private final @Nullable Output<String> tenancy;
 
     public Output<String> getTenancy() {
@@ -443,7 +443,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * will use. Can be either `"paravirtual"` or `"hvm"`.
      * 
      */
-    @InputImport(name="virtualizationType")
+    @Import(name="virtualizationType")
       private final @Nullable Output<String> virtualizationType;
 
     public Output<String> getVirtualizationType() {

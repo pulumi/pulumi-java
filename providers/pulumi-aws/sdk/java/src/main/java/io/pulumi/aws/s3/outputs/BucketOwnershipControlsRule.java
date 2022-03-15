@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketOwnershipControlsRule {
     /**
      * Object ownership. Valid values: `BucketOwnerPreferred`, `ObjectWriter` or `BucketOwnerEnforced`
@@ -15,8 +15,8 @@ public final class BucketOwnershipControlsRule {
      */
     private final String objectOwnership;
 
-    @OutputCustomType.Constructor
-    private BucketOwnershipControlsRule(@OutputCustomType.Parameter("objectOwnership") String objectOwnership) {
+    @CustomType.Constructor
+    private BucketOwnershipControlsRule(@CustomType.Parameter("objectOwnership") String objectOwnership) {
         this.objectOwnership = objectOwnership;
     }
 

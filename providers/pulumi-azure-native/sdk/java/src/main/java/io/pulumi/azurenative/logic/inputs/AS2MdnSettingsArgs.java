@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.enums.HashingAlgorithm;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The disposition notification to header value.
      * 
      */
-    @InputImport(name="dispositionNotificationTo")
+    @Import(name="dispositionNotificationTo")
       private final @Nullable Output<String> dispositionNotificationTo;
 
     public Output<String> getDispositionNotificationTo() {
@@ -36,7 +36,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The MDN text.
      * 
      */
-    @InputImport(name="mdnText")
+    @Import(name="mdnText")
       private final @Nullable Output<String> mdnText;
 
     public Output<String> getMdnText() {
@@ -47,7 +47,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The signing or hashing algorithm.
      * 
      */
-    @InputImport(name="micHashingAlgorithm", required=true)
+    @Import(name="micHashingAlgorithm", required=true)
       private final Output<Either<String,HashingAlgorithm>> micHashingAlgorithm;
 
     public Output<Either<String,HashingAlgorithm>> getMicHashingAlgorithm() {
@@ -58,7 +58,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The value indicating whether to send or request a MDN.
      * 
      */
-    @InputImport(name="needMDN", required=true)
+    @Import(name="needMDN", required=true)
       private final Output<Boolean> needMDN;
 
     public Output<Boolean> getNeedMDN() {
@@ -69,7 +69,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The receipt delivery URL.
      * 
      */
-    @InputImport(name="receiptDeliveryUrl")
+    @Import(name="receiptDeliveryUrl")
       private final @Nullable Output<String> receiptDeliveryUrl;
 
     public Output<String> getReceiptDeliveryUrl() {
@@ -80,7 +80,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The value indicating whether to send inbound MDN to message box.
      * 
      */
-    @InputImport(name="sendInboundMDNToMessageBox", required=true)
+    @Import(name="sendInboundMDNToMessageBox", required=true)
       private final Output<Boolean> sendInboundMDNToMessageBox;
 
     public Output<Boolean> getSendInboundMDNToMessageBox() {
@@ -91,7 +91,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The value indicating whether to send the asynchronous MDN.
      * 
      */
-    @InputImport(name="sendMDNAsynchronously", required=true)
+    @Import(name="sendMDNAsynchronously", required=true)
       private final Output<Boolean> sendMDNAsynchronously;
 
     public Output<Boolean> getSendMDNAsynchronously() {
@@ -102,7 +102,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The value indicating whether the MDN needs to be signed or not.
      * 
      */
-    @InputImport(name="signMDN", required=true)
+    @Import(name="signMDN", required=true)
       private final Output<Boolean> signMDN;
 
     public Output<Boolean> getSignMDN() {
@@ -113,7 +113,7 @@ public final class AS2MdnSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The value indicating whether to sign the outbound MDN if optional.
      * 
      */
-    @InputImport(name="signOutboundMDNIfOptional", required=true)
+    @Import(name="signOutboundMDNIfOptional", required=true)
       private final Output<Boolean> signOutboundMDNIfOptional;
 
     public Output<Boolean> getSignOutboundMDNIfOptional() {

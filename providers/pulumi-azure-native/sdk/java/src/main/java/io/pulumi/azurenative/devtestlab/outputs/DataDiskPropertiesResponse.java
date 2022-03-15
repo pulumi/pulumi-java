@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.AttachNewDataDiskOptionsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataDiskPropertiesResponse {
     /**
      * Specifies options to attach a new disk to the virtual machine.
@@ -28,11 +28,11 @@ public final class DataDiskPropertiesResponse {
      */
     private final @Nullable String hostCaching;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataDiskPropertiesResponse(
-        @OutputCustomType.Parameter("attachNewDataDiskOptions") @Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions,
-        @OutputCustomType.Parameter("existingLabDiskId") @Nullable String existingLabDiskId,
-        @OutputCustomType.Parameter("hostCaching") @Nullable String hostCaching) {
+        @CustomType.Parameter("attachNewDataDiskOptions") @Nullable AttachNewDataDiskOptionsResponse attachNewDataDiskOptions,
+        @CustomType.Parameter("existingLabDiskId") @Nullable String existingLabDiskId,
+        @CustomType.Parameter("hostCaching") @Nullable String hostCaching) {
         this.attachNewDataDiskOptions = attachNewDataDiskOptions;
         this.existingLabDiskId = existingLabDiskId;
         this.hostCaching = hostCaching;

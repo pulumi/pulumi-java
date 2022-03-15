@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddGetArgs;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddGetArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class URLMapPathMatcherRouteRuleHeaderActionGetArgs extends io.pulu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="requestHeadersToAdds")
+    @Import(name="requestHeadersToAdds")
       private final @Nullable Output<List<URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddGetArgs>> requestHeadersToAdds;
 
     public Output<List<URLMapPathMatcherRouteRuleHeaderActionRequestHeadersToAddGetArgs>> getRequestHeadersToAdds() {
@@ -34,7 +34,7 @@ public final class URLMapPathMatcherRouteRuleHeaderActionGetArgs extends io.pulu
      * forwarding the request to the backendService.
      * 
      */
-    @InputImport(name="requestHeadersToRemoves")
+    @Import(name="requestHeadersToRemoves")
       private final @Nullable Output<List<String>> requestHeadersToRemoves;
 
     public Output<List<String>> getRequestHeadersToRemoves() {
@@ -46,7 +46,7 @@ public final class URLMapPathMatcherRouteRuleHeaderActionGetArgs extends io.pulu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="responseHeadersToAdds")
+    @Import(name="responseHeadersToAdds")
       private final @Nullable Output<List<URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddGetArgs>> responseHeadersToAdds;
 
     public Output<List<URLMapPathMatcherRouteRuleHeaderActionResponseHeadersToAddGetArgs>> getResponseHeadersToAdds() {
@@ -58,7 +58,7 @@ public final class URLMapPathMatcherRouteRuleHeaderActionGetArgs extends io.pulu
      * response back to the client.
      * 
      */
-    @InputImport(name="responseHeadersToRemoves")
+    @Import(name="responseHeadersToRemoves")
       private final @Nullable Output<List<String>> responseHeadersToRemoves;
 
     public Output<List<String>> getResponseHeadersToRemoves() {

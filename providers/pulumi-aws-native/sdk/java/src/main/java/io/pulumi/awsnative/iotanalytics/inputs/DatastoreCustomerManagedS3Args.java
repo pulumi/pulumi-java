@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class DatastoreCustomerManagedS3Args extends io.pulumi.resources.Re
 
     public static final DatastoreCustomerManagedS3Args Empty = new DatastoreCustomerManagedS3Args();
 
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
         return this.bucket;
     }
 
-    @InputImport(name="keyPrefix")
+    @Import(name="keyPrefix")
       private final @Nullable Output<String> keyPrefix;
 
     public Output<String> getKeyPrefix() {
         return this.keyPrefix == null ? Output.empty() : this.keyPrefix;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

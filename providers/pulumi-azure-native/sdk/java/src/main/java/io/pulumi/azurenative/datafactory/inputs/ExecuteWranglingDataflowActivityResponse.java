@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.PowerQuerySinkMappingResponse;
 import io.pulumi.azurenative.datafactory.inputs.PowerQuerySinkResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * Compute properties for data flow activity.
      * 
      */
-    @InputImport(name="compute")
+    @Import(name="compute")
       private final @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute;
 
     public Optional<ExecuteDataFlowActivityTypePropertiesResponseCompute> getCompute() {
@@ -45,7 +45,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
      * 
      */
-    @InputImport(name="continueOnError")
+    @Import(name="continueOnError")
       private final @Nullable Object continueOnError;
 
     public Optional<Object> getContinueOnError() {
@@ -56,7 +56,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * Data flow reference.
      * 
      */
-    @InputImport(name="dataFlow", required=true)
+    @Import(name="dataFlow", required=true)
       private final DataFlowReferenceResponse dataFlow;
 
     public DataFlowReferenceResponse getDataFlow() {
@@ -67,7 +67,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
@@ -78,7 +78,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -89,7 +89,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="integrationRuntime")
+    @Import(name="integrationRuntime")
       private final @Nullable IntegrationRuntimeReferenceResponse integrationRuntime;
 
     public Optional<IntegrationRuntimeReferenceResponse> getIntegrationRuntime() {
@@ -100,7 +100,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -111,7 +111,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * Activity policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
@@ -122,7 +122,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * List of mapping for Power Query mashup query to sink dataset(s).
      * 
      */
-    @InputImport(name="queries")
+    @Import(name="queries")
       private final @Nullable List<PowerQuerySinkMappingResponse> queries;
 
     public List<PowerQuerySinkMappingResponse> getQueries() {
@@ -133,7 +133,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
      * 
      */
-    @InputImport(name="runConcurrently")
+    @Import(name="runConcurrently")
       private final @Nullable Object runConcurrently;
 
     public Optional<Object> getRunConcurrently() {
@@ -144,7 +144,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * (Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.
      * 
      */
-    @InputImport(name="sinks")
+    @Import(name="sinks")
       private final @Nullable Map<String,PowerQuerySinkResponse> sinks;
 
     public Map<String,PowerQuerySinkResponse> getSinks() {
@@ -155,7 +155,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * Staging info for execute data flow activity.
      * 
      */
-    @InputImport(name="staging")
+    @Import(name="staging")
       private final @Nullable DataFlowStagingInfoResponse staging;
 
     public Optional<DataFlowStagingInfoResponse> getStaging() {
@@ -166,7 +166,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * Trace level setting used for data flow monitoring output. Supported values are: 'coarse', 'fine', and 'none'. Type: string (or Expression with resultType string)
      * 
      */
-    @InputImport(name="traceLevel")
+    @Import(name="traceLevel")
       private final @Nullable Object traceLevel;
 
     public Optional<Object> getTraceLevel() {
@@ -178,7 +178,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * Expected value is 'ExecuteWranglingDataflow'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -189,7 +189,7 @@ public final class ExecuteWranglingDataflowActivityResponse extends io.pulumi.re
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {

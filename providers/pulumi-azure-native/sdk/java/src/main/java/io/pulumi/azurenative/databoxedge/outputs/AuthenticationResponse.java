@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.SymmetricKeyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AuthenticationResponse {
     /**
      * Symmetric key for authentication.
@@ -17,8 +17,8 @@ public final class AuthenticationResponse {
      */
     private final @Nullable SymmetricKeyResponse symmetricKey;
 
-    @OutputCustomType.Constructor
-    private AuthenticationResponse(@OutputCustomType.Parameter("symmetricKey") @Nullable SymmetricKeyResponse symmetricKey) {
+    @CustomType.Constructor
+    private AuthenticationResponse(@CustomType.Parameter("symmetricKey") @Nullable SymmetricKeyResponse symmetricKey) {
         this.symmetricKey = symmetricKey;
     }
 

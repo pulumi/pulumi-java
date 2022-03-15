@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotMessageGroupArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -25,21 +25,21 @@ public final class BotPromptSpecificationArgs extends io.pulumi.resources.Resour
      * Indicates whether the user can interrupt a speech prompt from the bot.
      * 
      */
-    @InputImport(name="allowInterrupt")
+    @Import(name="allowInterrupt")
       private final @Nullable Output<Boolean> allowInterrupt;
 
     public Output<Boolean> getAllowInterrupt() {
         return this.allowInterrupt == null ? Output.empty() : this.allowInterrupt;
     }
 
-    @InputImport(name="maxRetries", required=true)
+    @Import(name="maxRetries", required=true)
       private final Output<Integer> maxRetries;
 
     public Output<Integer> getMaxRetries() {
         return this.maxRetries;
     }
 
-    @InputImport(name="messageGroupsList", required=true)
+    @Import(name="messageGroupsList", required=true)
       private final Output<List<BotMessageGroupArgs>> messageGroupsList;
 
     public Output<List<BotMessageGroupArgs>> getMessageGroupsList() {

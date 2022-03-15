@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.datasync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EfsLocationEc2Config {
     /**
      * List of Amazon Resource Names (ARNs) of the EC2 Security Groups that are associated with the EFS Mount Target.
@@ -21,10 +21,10 @@ public final class EfsLocationEc2Config {
      */
     private final String subnetArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EfsLocationEc2Config(
-        @OutputCustomType.Parameter("securityGroupArns") List<String> securityGroupArns,
-        @OutputCustomType.Parameter("subnetArn") String subnetArn) {
+        @CustomType.Parameter("securityGroupArns") List<String> securityGroupArns,
+        @CustomType.Parameter("subnetArn") String subnetArn) {
         this.securityGroupArns = securityGroupArns;
         this.subnetArn = subnetArn;
     }

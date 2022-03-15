@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SelectVideoTrackByIdArgs extends io.pulumi.resources.Resource
      * Expected value is '#Microsoft.Media.SelectVideoTrackById'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -34,7 +34,7 @@ public final class SelectVideoTrackByIdArgs extends io.pulumi.resources.Resource
      * Track identifier to select
      * 
      */
-    @InputImport(name="trackId", required=true)
+    @Import(name="trackId", required=true)
       private final Output<Double> trackId;
 
     public Output<Double> getTrackId() {

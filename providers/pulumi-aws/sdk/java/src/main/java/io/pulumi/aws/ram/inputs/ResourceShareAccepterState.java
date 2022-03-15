@@ -4,7 +4,7 @@
 package io.pulumi.aws.ram.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * The ARN of the resource share invitation.
      * 
      */
-    @InputImport(name="invitationArn")
+    @Import(name="invitationArn")
       private final @Nullable Output<String> invitationArn;
 
     public Output<String> getInvitationArn() {
@@ -30,7 +30,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * The account ID of the receiver account which accepts the invitation.
      * 
      */
-    @InputImport(name="receiverAccountId")
+    @Import(name="receiverAccountId")
       private final @Nullable Output<String> receiverAccountId;
 
     public Output<String> getReceiverAccountId() {
@@ -41,7 +41,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * A list of the resource ARNs shared via the resource share.
      * 
      */
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
     public Output<List<String>> getResources() {
@@ -52,7 +52,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * The account ID of the sender account which submits the invitation.
      * 
      */
-    @InputImport(name="senderAccountId")
+    @Import(name="senderAccountId")
       private final @Nullable Output<String> senderAccountId;
 
     public Output<String> getSenderAccountId() {
@@ -63,7 +63,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * The ARN of the resource share.
      * 
      */
-    @InputImport(name="shareArn")
+    @Import(name="shareArn")
       private final @Nullable Output<String> shareArn;
 
     public Output<String> getShareArn() {
@@ -74,7 +74,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * The ID of the resource share as displayed in the console.
      * 
      */
-    @InputImport(name="shareId")
+    @Import(name="shareId")
       private final @Nullable Output<String> shareId;
 
     public Output<String> getShareId() {
@@ -85,7 +85,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * The name of the resource share.
      * 
      */
-    @InputImport(name="shareName")
+    @Import(name="shareName")
       private final @Nullable Output<String> shareName;
 
     public Output<String> getShareName() {
@@ -96,7 +96,7 @@ public final class ResourceShareAccepterState extends io.pulumi.resources.Resour
      * The status of the resource share (ACTIVE, PENDING, FAILED, DELETING, DELETED).
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

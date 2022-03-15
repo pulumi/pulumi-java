@@ -9,7 +9,7 @@ import io.pulumi.azurenative.web.inputs.RegistryCredentialsArgs;
 import io.pulumi.azurenative.web.inputs.SecretArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * <list><item>Multiple: multiple revisions can be active. If no value if provided, this is the default</item><item>Single: Only one revision can be active at a time. Revision weights can not be used in this mode</item></list>
      * 
      */
-    @InputImport(name="activeRevisionsMode")
+    @Import(name="activeRevisionsMode")
       private final @Nullable Output<Either<String,ActiveRevisionsMode>> activeRevisionsMode;
 
     public Output<Either<String,ActiveRevisionsMode>> getActiveRevisionsMode() {
@@ -40,7 +40,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * Ingress configurations.
      * 
      */
-    @InputImport(name="ingress")
+    @Import(name="ingress")
       private final @Nullable Output<IngressArgs> ingress;
 
     public Output<IngressArgs> getIngress() {
@@ -51,7 +51,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * Collection of private container registry credentials for containers used by the Container app
      * 
      */
-    @InputImport(name="registries")
+    @Import(name="registries")
       private final @Nullable Output<List<RegistryCredentialsArgs>> registries;
 
     public Output<List<RegistryCredentialsArgs>> getRegistries() {
@@ -62,7 +62,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * Collection of secrets used by a Container app
      * 
      */
-    @InputImport(name="secrets")
+    @Import(name="secrets")
       private final @Nullable Output<List<SecretArgs>> secrets;
 
     public Output<List<SecretArgs>> getSecrets() {

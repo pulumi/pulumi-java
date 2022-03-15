@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.InquiryValidationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
      * Inquiry validation such as permissions and other backup validations.
      * 
      */
-    @InputImport(name="inquiryValidation")
+    @Import(name="inquiryValidation")
       private final @Nullable Output<InquiryValidationArgs> inquiryValidation;
 
     public Output<InquiryValidationArgs> getInquiryValidation() {
@@ -35,7 +35,7 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
      * Contains the protectable item Count inside this Container.
      * 
      */
-    @InputImport(name="itemCount")
+    @Import(name="itemCount")
       private final @Nullable Output<Double> itemCount;
 
     public Output<Double> getItemCount() {
@@ -46,7 +46,7 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
      * Type of the Workload such as SQL, Oracle etc.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

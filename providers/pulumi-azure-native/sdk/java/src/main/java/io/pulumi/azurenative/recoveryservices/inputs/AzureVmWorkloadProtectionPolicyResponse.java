@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.SettingsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.SubProtectionPolicyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
      * Expected value is 'AzureWorkload'.
      * 
      */
-    @InputImport(name="backupManagementType", required=true)
+    @Import(name="backupManagementType", required=true)
       private final String backupManagementType;
 
     public String getBackupManagementType() {
@@ -39,7 +39,7 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
      * Fix the policy inconsistency
      * 
      */
-    @InputImport(name="makePolicyConsistent")
+    @Import(name="makePolicyConsistent")
       private final @Nullable Boolean makePolicyConsistent;
 
     public Optional<Boolean> getMakePolicyConsistent() {
@@ -50,7 +50,7 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
      * Number of items associated with this policy.
      * 
      */
-    @InputImport(name="protectedItemsCount")
+    @Import(name="protectedItemsCount")
       private final @Nullable Integer protectedItemsCount;
 
     public Optional<Integer> getProtectedItemsCount() {
@@ -61,7 +61,7 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
      * Common settings for the backup management
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable SettingsResponse settings;
 
     public Optional<SettingsResponse> getSettings() {
@@ -72,7 +72,7 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
      * List of sub-protection policies which includes schedule and retention
      * 
      */
-    @InputImport(name="subProtectionPolicy")
+    @Import(name="subProtectionPolicy")
       private final @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
 
     public List<SubProtectionPolicyResponse> getSubProtectionPolicy() {
@@ -83,7 +83,7 @@ public final class AzureVmWorkloadProtectionPolicyResponse extends io.pulumi.res
      * Type of workload for the backup management
      * 
      */
-    @InputImport(name="workLoadType")
+    @Import(name="workLoadType")
       private final @Nullable String workLoadType;
 
     public Optional<String> getWorkLoadType() {

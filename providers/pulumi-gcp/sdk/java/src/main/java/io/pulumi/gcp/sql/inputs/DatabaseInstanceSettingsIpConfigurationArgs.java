@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,14 +21,14 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends io.pulumi
      * The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://datatracker.ietf.org/doc/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression a-z?.
      * 
      */
-    @InputImport(name="allocatedIpRange")
+    @Import(name="allocatedIpRange")
       private final @Nullable Output<String> allocatedIpRange;
 
     public Output<String> getAllocatedIpRange() {
         return this.allocatedIpRange == null ? Output.empty() : this.allocatedIpRange;
     }
 
-    @InputImport(name="authorizedNetworks")
+    @Import(name="authorizedNetworks")
       private final @Nullable Output<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> authorizedNetworks;
 
     public Output<List<DatabaseInstanceSettingsIpConfigurationAuthorizedNetworkArgs>> getAuthorizedNetworks() {
@@ -41,7 +41,7 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends io.pulumi
      * `private_network` must be configured.
      * 
      */
-    @InputImport(name="ipv4Enabled")
+    @Import(name="ipv4Enabled")
       private final @Nullable Output<Boolean> ipv4Enabled;
 
     public Output<Boolean> getIpv4Enabled() {
@@ -56,7 +56,7 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends io.pulumi
      * This setting can be updated, but it cannot be removed after it is set.
      * 
      */
-    @InputImport(name="privateNetwork")
+    @Import(name="privateNetwork")
       private final @Nullable Output<String> privateNetwork;
 
     public Output<String> getPrivateNetwork() {
@@ -67,7 +67,7 @@ public final class DatabaseInstanceSettingsIpConfigurationArgs extends io.pulumi
      * Whether SSL connections over IP are enforced or not.
      * 
      */
-    @InputImport(name="requireSsl")
+    @Import(name="requireSsl")
       private final @Nullable Output<Boolean> requireSsl;
 
     public Output<Boolean> getRequireSsl() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ExpressRouteCircuitPeeringConfigResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends io.pulum
      * The Microsoft peering configuration.
      * 
      */
-    @InputImport(name="microsoftPeeringConfig")
+    @Import(name="microsoftPeeringConfig")
       private final @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig;
 
     public Optional<ExpressRouteCircuitPeeringConfigResponse> getMicrosoftPeeringConfig() {
@@ -35,7 +35,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends io.pulum
      * The primary address prefix.
      * 
      */
-    @InputImport(name="primaryPeerAddressPrefix")
+    @Import(name="primaryPeerAddressPrefix")
       private final @Nullable String primaryPeerAddressPrefix;
 
     public Optional<String> getPrimaryPeerAddressPrefix() {
@@ -46,7 +46,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends io.pulum
      * The reference to the RouteFilter resource.
      * 
      */
-    @InputImport(name="routeFilter")
+    @Import(name="routeFilter")
       private final @Nullable SubResourceResponse routeFilter;
 
     public Optional<SubResourceResponse> getRouteFilter() {
@@ -57,7 +57,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends io.pulum
      * The secondary address prefix.
      * 
      */
-    @InputImport(name="secondaryPeerAddressPrefix")
+    @Import(name="secondaryPeerAddressPrefix")
       private final @Nullable String secondaryPeerAddressPrefix;
 
     public Optional<String> getSecondaryPeerAddressPrefix() {
@@ -68,7 +68,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends io.pulum
      * The state of peering.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {

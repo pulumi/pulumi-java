@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse {
     /**
      * The Data Catalog resource name of the dataset entry the current table belongs to, for example, `projects/{project_id}/locations/{location}/entrygroups/{entry_group_id}/entries/{entry_id}`.
@@ -25,11 +25,11 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
      */
     private final String tablePrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse(
-        @OutputCustomType.Parameter("dataset") String dataset,
-        @OutputCustomType.Parameter("shardCount") String shardCount,
-        @OutputCustomType.Parameter("tablePrefix") String tablePrefix) {
+        @CustomType.Parameter("dataset") String dataset,
+        @CustomType.Parameter("shardCount") String shardCount,
+        @CustomType.Parameter("tablePrefix") String tablePrefix) {
         this.dataset = dataset;
         this.shardCount = shardCount;
         this.tablePrefix = tablePrefix;

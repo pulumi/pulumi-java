@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.HintResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AuthorityResponse {
     /**
      * Hint hints at the purpose of the attestation authority.
@@ -15,8 +15,8 @@ public final class AuthorityResponse {
      */
     private final HintResponse hint;
 
-    @OutputCustomType.Constructor
-    private AuthorityResponse(@OutputCustomType.Parameter("hint") HintResponse hint) {
+    @CustomType.Constructor
+    private AuthorityResponse(@CustomType.Parameter("hint") HintResponse hint) {
         this.hint = hint;
     }
 

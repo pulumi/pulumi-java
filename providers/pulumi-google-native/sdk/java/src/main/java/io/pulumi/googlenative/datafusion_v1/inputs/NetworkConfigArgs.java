@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datafusion_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The IP range in CIDR notation to use for the managed Data Fusion instance nodes. This range must not overlap with any other ranges used in the customer network.
      * 
      */
-    @InputImport(name="ipAllocation")
+    @Import(name="ipAllocation")
       private final @Nullable Output<String> ipAllocation;
 
     public Output<String> getIpAllocation() {
@@ -33,7 +33,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the network in the customer project with which the Tenant Project will be peered for executing pipelines. In case of shared VPC where the network resides in another host project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {

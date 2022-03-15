@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.maps.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListAccountSasResult {
     /**
      * The shared access signature access token.
@@ -15,8 +15,8 @@ public final class ListAccountSasResult {
      */
     private final String accountSasToken;
 
-    @OutputCustomType.Constructor
-    private ListAccountSasResult(@OutputCustomType.Parameter("accountSasToken") String accountSasToken) {
+    @CustomType.Constructor
+    private ListAccountSasResult(@CustomType.Parameter("accountSasToken") String accountSasToken) {
         this.accountSasToken = accountSasToken;
     }
 

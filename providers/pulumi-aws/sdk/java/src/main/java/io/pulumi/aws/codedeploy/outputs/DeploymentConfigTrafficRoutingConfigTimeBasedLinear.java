@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.codedeploy.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentConfigTrafficRoutingConfigTimeBasedLinear {
     /**
      * The number of minutes between each incremental traffic shift of a `TimeBasedLinear` deployment.
@@ -22,10 +22,10 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedLinear {
      */
     private final @Nullable Integer percentage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentConfigTrafficRoutingConfigTimeBasedLinear(
-        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
-        @OutputCustomType.Parameter("percentage") @Nullable Integer percentage) {
+        @CustomType.Parameter("interval") @Nullable Integer interval,
+        @CustomType.Parameter("percentage") @Nullable Integer percentage) {
         this.interval = interval;
         this.percentage = percentage;
     }

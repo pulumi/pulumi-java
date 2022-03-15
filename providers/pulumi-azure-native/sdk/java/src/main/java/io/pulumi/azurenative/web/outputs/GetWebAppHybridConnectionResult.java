@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebAppHybridConnectionResult {
     /**
      * The hostname of the endpoint.
@@ -74,20 +74,20 @@ public final class GetWebAppHybridConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebAppHybridConnectionResult(
-        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("relayArmUri") @Nullable String relayArmUri,
-        @OutputCustomType.Parameter("relayName") @Nullable String relayName,
-        @OutputCustomType.Parameter("sendKeyName") @Nullable String sendKeyName,
-        @OutputCustomType.Parameter("sendKeyValue") @Nullable String sendKeyValue,
-        @OutputCustomType.Parameter("serviceBusNamespace") @Nullable String serviceBusNamespace,
-        @OutputCustomType.Parameter("serviceBusSuffix") @Nullable String serviceBusSuffix,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("hostname") @Nullable String hostname,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("relayArmUri") @Nullable String relayArmUri,
+        @CustomType.Parameter("relayName") @Nullable String relayName,
+        @CustomType.Parameter("sendKeyName") @Nullable String sendKeyName,
+        @CustomType.Parameter("sendKeyValue") @Nullable String sendKeyValue,
+        @CustomType.Parameter("serviceBusNamespace") @Nullable String serviceBusNamespace,
+        @CustomType.Parameter("serviceBusSuffix") @Nullable String serviceBusSuffix,
+        @CustomType.Parameter("type") String type) {
         this.hostname = hostname;
         this.id = id;
         this.kind = kind;

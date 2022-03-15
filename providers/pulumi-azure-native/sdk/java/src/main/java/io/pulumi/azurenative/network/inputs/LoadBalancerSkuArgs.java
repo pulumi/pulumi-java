@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.LoadBalancerSkuName;
 import io.pulumi.azurenative.network.enums.LoadBalancerSkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class LoadBalancerSkuArgs extends io.pulumi.resources.ResourceArgs 
      * Name of a load balancer SKU.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<Either<String,LoadBalancerSkuName>> name;
 
     public Output<Either<String,LoadBalancerSkuName>> getName() {
@@ -36,7 +36,7 @@ public final class LoadBalancerSkuArgs extends io.pulumi.resources.ResourceArgs 
      * Tier of a load balancer SKU.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<Either<String,LoadBalancerSkuTier>> tier;
 
     public Output<Either<String,LoadBalancerSkuTier>> getTier() {

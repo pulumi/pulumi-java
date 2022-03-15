@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class NodePoolUpgradeSettingsArgs extends io.pulumi.resources.Resou
      * Can be set to 0 or greater.
      * 
      */
-    @InputImport(name="maxSurge", required=true)
+    @Import(name="maxSurge", required=true)
       private final Output<Integer> maxSurge;
 
     public Output<Integer> getMaxSurge() {
@@ -32,7 +32,7 @@ public final class NodePoolUpgradeSettingsArgs extends io.pulumi.resources.Resou
      * parallel. Can be set to 0 or greater.
      * 
      */
-    @InputImport(name="maxUnavailable", required=true)
+    @Import(name="maxUnavailable", required=true)
       private final Output<Integer> maxUnavailable;
 
     public Output<Integer> getMaxUnavailable() {

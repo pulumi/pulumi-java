@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.nimblestudio.outputs;
 
 import io.pulumi.awsnative.nimblestudio.outputs.LaunchProfileStreamConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLaunchProfileResult {
     /**
      * <p>The description.</p>
@@ -38,14 +38,14 @@ public final class GetLaunchProfileResult {
      */
     private final @Nullable List<String> studioComponentIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLaunchProfileResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("launchProfileId") @Nullable String launchProfileId,
-        @OutputCustomType.Parameter("launchProfileProtocolVersions") @Nullable List<String> launchProfileProtocolVersions,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("streamConfiguration") @Nullable LaunchProfileStreamConfiguration streamConfiguration,
-        @OutputCustomType.Parameter("studioComponentIds") @Nullable List<String> studioComponentIds) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("launchProfileId") @Nullable String launchProfileId,
+        @CustomType.Parameter("launchProfileProtocolVersions") @Nullable List<String> launchProfileProtocolVersions,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("streamConfiguration") @Nullable LaunchProfileStreamConfiguration streamConfiguration,
+        @CustomType.Parameter("studioComponentIds") @Nullable List<String> studioComponentIds) {
         this.description = description;
         this.launchProfileId = launchProfileId;
         this.launchProfileProtocolVersions = launchProfileProtocolVersions;

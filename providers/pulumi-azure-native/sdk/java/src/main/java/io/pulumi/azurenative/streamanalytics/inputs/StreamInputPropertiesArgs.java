@@ -10,7 +10,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.EventHubStreamInputDataSourc
 import io.pulumi.azurenative.streamanalytics.inputs.IoTHubStreamInputDataSourceArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.JsonSerializationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
      * Describes an input data source that contains stream data. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="datasource")
+    @Import(name="datasource")
       private final @Nullable Output<Object> datasource;
 
     public Output<Object> getDatasource() {
@@ -40,7 +40,7 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
      * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="serialization")
+    @Import(name="serialization")
       private final @Nullable Output<Object> serialization;
 
     public Output<Object> getSerialization() {
@@ -52,7 +52,7 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
      * Expected value is 'Stream'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

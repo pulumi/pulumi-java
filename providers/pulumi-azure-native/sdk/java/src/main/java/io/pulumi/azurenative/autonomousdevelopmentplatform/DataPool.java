@@ -9,7 +9,7 @@ import io.pulumi.azurenative.autonomousdevelopmentplatform.outputs.DataPoolLocat
 import io.pulumi.azurenative.autonomousdevelopmentplatform.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class DataPool extends io.pulumi.resources.CustomResource {
      * The Data Pool's data-plane ID
      * 
      */
-    @OutputExport(name="dataPoolId", type=String.class, parameters={})
+    @Export(name="dataPoolId", type=String.class, parameters={})
     private Output<String> dataPoolId;
 
     /**
@@ -50,7 +50,7 @@ public class DataPool extends io.pulumi.resources.CustomResource {
      * Gets or sets the collection of locations where Data Pool resources should be created
      * 
      */
-    @OutputExport(name="locations", type=List.class, parameters={DataPoolLocationResponse.class})
+    @Export(name="locations", type=List.class, parameters={DataPoolLocationResponse.class})
     private Output<List<DataPoolLocationResponse>> locations;
 
     /**
@@ -64,7 +64,7 @@ public class DataPool extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class DataPool extends io.pulumi.resources.CustomResource {
      * Gets the status of the data pool at the time the operation was called
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -92,7 +92,7 @@ public class DataPool extends io.pulumi.resources.CustomResource {
      * The system meta data relating to this resource
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -106,7 +106,7 @@ public class DataPool extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

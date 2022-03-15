@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.SecurityPolicyRuleRateLimitOptionsBanThreshold;
 import io.pulumi.gcp.compute.outputs.SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions;
 import io.pulumi.gcp.compute.outputs.SecurityPolicyRuleRateLimitOptionsRateLimitThreshold;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyRuleRateLimitOptions {
     /**
      * Can only be specified if the `action` for the rule is "rate_based_ban".
@@ -57,16 +57,16 @@ public final class SecurityPolicyRuleRateLimitOptions {
      */
     private final SecurityPolicyRuleRateLimitOptionsRateLimitThreshold rateLimitThreshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityPolicyRuleRateLimitOptions(
-        @OutputCustomType.Parameter("banDurationSec") @Nullable Integer banDurationSec,
-        @OutputCustomType.Parameter("banThreshold") @Nullable SecurityPolicyRuleRateLimitOptionsBanThreshold banThreshold,
-        @OutputCustomType.Parameter("conformAction") String conformAction,
-        @OutputCustomType.Parameter("enforceOnKey") @Nullable String enforceOnKey,
-        @OutputCustomType.Parameter("enforceOnKeyName") @Nullable String enforceOnKeyName,
-        @OutputCustomType.Parameter("exceedAction") String exceedAction,
-        @OutputCustomType.Parameter("exceedRedirectOptions") @Nullable SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions exceedRedirectOptions,
-        @OutputCustomType.Parameter("rateLimitThreshold") SecurityPolicyRuleRateLimitOptionsRateLimitThreshold rateLimitThreshold) {
+        @CustomType.Parameter("banDurationSec") @Nullable Integer banDurationSec,
+        @CustomType.Parameter("banThreshold") @Nullable SecurityPolicyRuleRateLimitOptionsBanThreshold banThreshold,
+        @CustomType.Parameter("conformAction") String conformAction,
+        @CustomType.Parameter("enforceOnKey") @Nullable String enforceOnKey,
+        @CustomType.Parameter("enforceOnKeyName") @Nullable String enforceOnKeyName,
+        @CustomType.Parameter("exceedAction") String exceedAction,
+        @CustomType.Parameter("exceedRedirectOptions") @Nullable SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions exceedRedirectOptions,
+        @CustomType.Parameter("rateLimitThreshold") SecurityPolicyRuleRateLimitOptionsRateLimitThreshold rateLimitThreshold) {
         this.banDurationSec = banDurationSec;
         this.banThreshold = banThreshold;
         this.conformAction = conformAction;

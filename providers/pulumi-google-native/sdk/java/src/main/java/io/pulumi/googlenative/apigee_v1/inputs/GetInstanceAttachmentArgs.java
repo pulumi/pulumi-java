@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetInstanceAttachmentArgs extends io.pulumi.resources.InvokeA
 
     public static final GetInstanceAttachmentArgs Empty = new GetInstanceAttachmentArgs();
 
-    @InputImport(name="attachmentId", required=true)
+    @Import(name="attachmentId", required=true)
       private final String attachmentId;
 
     public String getAttachmentId() {
         return this.attachmentId;
     }
 
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final String organizationId;
 
     public String getOrganizationId() {

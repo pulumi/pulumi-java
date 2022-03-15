@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.file_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.file_v1beta1.InstanceArgs;
@@ -27,7 +27,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The time when the instance was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -41,7 +41,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The description of the instance (2048 characters or less).
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -55,7 +55,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -69,7 +69,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * File system shares on the instance. For this version, only a single file share is supported.
      * 
      */
-    @OutputExport(name="fileShares", type=List.class, parameters={FileShareConfigResponse.class})
+    @Export(name="fileShares", type=List.class, parameters={FileShareConfigResponse.class})
     private Output<List<FileShareConfigResponse>> fileShares;
 
     /**
@@ -83,7 +83,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * KMS key name used for data encryption.
      * 
      */
-    @OutputExport(name="kmsKeyName", type=String.class, parameters={})
+    @Export(name="kmsKeyName", type=String.class, parameters={})
     private Output<String> kmsKeyName;
 
     /**
@@ -97,7 +97,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Resource labels to represent user provided metadata.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -111,7 +111,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The resource name of the instance, in the format `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -125,7 +125,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * VPC networks to which the instance is connected. For this version, only a single network is supported.
      * 
      */
-    @OutputExport(name="networks", type=List.class, parameters={NetworkConfigResponse.class})
+    @Export(name="networks", type=List.class, parameters={NetworkConfigResponse.class})
     private Output<List<NetworkConfigResponse>> networks;
 
     /**
@@ -139,7 +139,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Reserved for future use.
      * 
      */
-    @OutputExport(name="satisfiesPzs", type=Boolean.class, parameters={})
+    @Export(name="satisfiesPzs", type=Boolean.class, parameters={})
     private Output<Boolean> satisfiesPzs;
 
     /**
@@ -153,7 +153,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The instance state.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -167,7 +167,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Additional information about the instance state, if available.
      * 
      */
-    @OutputExport(name="statusMessage", type=String.class, parameters={})
+    @Export(name="statusMessage", type=String.class, parameters={})
     private Output<String> statusMessage;
 
     /**
@@ -181,7 +181,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * field indicates all the reasons the instance is in "SUSPENDED" state.
      * 
      */
-    @OutputExport(name="suspensionReasons", type=List.class, parameters={String.class})
+    @Export(name="suspensionReasons", type=List.class, parameters={String.class})
     private Output<List<String>> suspensionReasons;
 
     /**
@@ -195,7 +195,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The service tier of the instance.
      * 
      */
-    @OutputExport(name="tier", type=String.class, parameters={})
+    @Export(name="tier", type=String.class, parameters={})
     private Output<String> tier;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
 
     public static final WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigArgs Empty = new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigArgs();
 
-    @InputImport(name="instanceGroupManagerName")
+    @Import(name="instanceGroupManagerName")
       private final @Nullable Output<String> instanceGroupManagerName;
 
     public Output<String> getInstanceGroupManagerName() {
         return this.instanceGroupManagerName == null ? Output.empty() : this.instanceGroupManagerName;
     }
 
-    @InputImport(name="instanceTemplateName")
+    @Import(name="instanceTemplateName")
       private final @Nullable Output<String> instanceTemplateName;
 
     public Output<String> getInstanceTemplateName() {

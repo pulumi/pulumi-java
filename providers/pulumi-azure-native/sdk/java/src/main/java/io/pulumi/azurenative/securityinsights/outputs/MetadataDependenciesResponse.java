@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetadataDependenciesResponse {
     /**
      * Id of the content item we depend on
@@ -43,14 +43,14 @@ public final class MetadataDependenciesResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetadataDependenciesResponse(
-        @OutputCustomType.Parameter("contentId") @Nullable String contentId,
-        @OutputCustomType.Parameter("criteria") @Nullable List<MetadataDependenciesResponse> criteria,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("operator") @Nullable String operator,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("contentId") @Nullable String contentId,
+        @CustomType.Parameter("criteria") @Nullable List<MetadataDependenciesResponse> criteria,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("operator") @Nullable String operator,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.contentId = contentId;
         this.criteria = criteria;
         this.kind = kind;

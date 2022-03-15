@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudRetailV2alphaRuleRedirectActionResponse extends io
      * URL must have length equal or less than 2000 characters.
      * 
      */
-    @InputImport(name="redirectUri", required=true)
+    @Import(name="redirectUri", required=true)
       private final String redirectUri;
 
     public String getRedirectUri() {

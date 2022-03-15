@@ -8,7 +8,7 @@ import io.pulumi.aws.s3.BucketReplicationConfigArgs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigState;
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigRule;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +48,7 @@ public class BucketReplicationConfig extends io.pulumi.resources.CustomResource 
      * The name of the source S3 bucket you want Amazon S3 to monitor.
      * 
      */
-    @OutputExport(name="bucket", type=String.class, parameters={})
+    @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
@@ -62,7 +62,7 @@ public class BucketReplicationConfig extends io.pulumi.resources.CustomResource 
      * The ARN of the IAM role for Amazon S3 to assume when replicating the objects.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**
@@ -76,7 +76,7 @@ public class BucketReplicationConfig extends io.pulumi.resources.CustomResource 
      * Set of configuration blocks describing the rules managing the replication documented below.
      * 
      */
-    @OutputExport(name="rules", type=List.class, parameters={BucketReplicationConfigRule.class})
+    @Export(name="rules", type=List.class, parameters={BucketReplicationConfigRule.class})
     private Output<List<BucketReplicationConfigRule>> rules;
 
     /**

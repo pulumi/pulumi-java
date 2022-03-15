@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserPoolClientTokenValidityUnits {
     /**
      * Time unit in for the value in `access_token_validity`, defaults to `hours`.
@@ -27,11 +27,11 @@ public final class UserPoolClientTokenValidityUnits {
      */
     private final @Nullable String refreshToken;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserPoolClientTokenValidityUnits(
-        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
-        @OutputCustomType.Parameter("idToken") @Nullable String idToken,
-        @OutputCustomType.Parameter("refreshToken") @Nullable String refreshToken) {
+        @CustomType.Parameter("accessToken") @Nullable String accessToken,
+        @CustomType.Parameter("idToken") @Nullable String idToken,
+        @CustomType.Parameter("refreshToken") @Nullable String refreshToken) {
         this.accessToken = accessToken;
         this.idToken = idToken;
         this.refreshToken = refreshToken;

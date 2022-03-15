@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.SetValueArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
      * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
      * 
      */
-    @InputImport(name="contextAccessToken")
+    @Import(name="contextAccessToken")
       private final @Nullable Output<String> contextAccessToken;
 
     public Output<String> getContextAccessToken() {
@@ -35,7 +35,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
      * The URL(absolute or relative) of the source context for the task step.
      * 
      */
-    @InputImport(name="contextPath")
+    @Import(name="contextPath")
       private final @Nullable Output<String> contextPath;
 
     public Output<String> getContextPath() {
@@ -46,7 +46,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
      * Base64 encoded value of the template/definition file content.
      * 
      */
-    @InputImport(name="encodedTaskContent", required=true)
+    @Import(name="encodedTaskContent", required=true)
       private final Output<String> encodedTaskContent;
 
     public Output<String> getEncodedTaskContent() {
@@ -57,7 +57,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
      * Base64 encoded value of the parameters/values file content.
      * 
      */
-    @InputImport(name="encodedValuesContent")
+    @Import(name="encodedValuesContent")
       private final @Nullable Output<String> encodedValuesContent;
 
     public Output<String> getEncodedValuesContent() {
@@ -69,7 +69,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
      * Expected value is 'EncodedTask'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -80,7 +80,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
      * The collection of overridable values that can be passed when running a task.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<SetValueArgs>> values;
 
     public Output<List<SetValueArgs>> getValues() {

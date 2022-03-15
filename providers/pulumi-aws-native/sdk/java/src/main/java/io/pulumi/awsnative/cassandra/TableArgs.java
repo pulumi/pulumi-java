@@ -9,7 +9,7 @@ import io.pulumi.awsnative.cassandra.inputs.TableColumnArgs;
 import io.pulumi.awsnative.cassandra.inputs.TableEncryptionSpecificationArgs;
 import io.pulumi.awsnative.cassandra.inputs.TableTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TableArgs Empty = new TableArgs();
 
-    @InputImport(name="billingMode")
+    @Import(name="billingMode")
       private final @Nullable Output<TableBillingModeArgs> billingMode;
 
     public Output<TableBillingModeArgs> getBillingMode() {
@@ -33,7 +33,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Clustering key columns of the table
      * 
      */
-    @InputImport(name="clusteringKeyColumns")
+    @Import(name="clusteringKeyColumns")
       private final @Nullable Output<List<TableClusteringKeyColumnArgs>> clusteringKeyColumns;
 
     public Output<List<TableClusteringKeyColumnArgs>> getClusteringKeyColumns() {
@@ -44,14 +44,14 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Default TTL (Time To Live) in seconds, where zero is disabled. If the value is greater than zero, TTL is enabled for the entire table and an expiration timestamp is added to each column.
      * 
      */
-    @InputImport(name="defaultTimeToLive")
+    @Import(name="defaultTimeToLive")
       private final @Nullable Output<Integer> defaultTimeToLive;
 
     public Output<Integer> getDefaultTimeToLive() {
         return this.defaultTimeToLive == null ? Output.empty() : this.defaultTimeToLive;
     }
 
-    @InputImport(name="encryptionSpecification")
+    @Import(name="encryptionSpecification")
       private final @Nullable Output<TableEncryptionSpecificationArgs> encryptionSpecification;
 
     public Output<TableEncryptionSpecificationArgs> getEncryptionSpecification() {
@@ -62,7 +62,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Name for Cassandra keyspace
      * 
      */
-    @InputImport(name="keyspaceName", required=true)
+    @Import(name="keyspaceName", required=true)
       private final Output<String> keyspaceName;
 
     public Output<String> getKeyspaceName() {
@@ -73,7 +73,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Partition key columns of the table
      * 
      */
-    @InputImport(name="partitionKeyColumns", required=true)
+    @Import(name="partitionKeyColumns", required=true)
       private final Output<List<TableColumnArgs>> partitionKeyColumns;
 
     public Output<List<TableColumnArgs>> getPartitionKeyColumns() {
@@ -84,7 +84,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether point in time recovery is enabled (true) or disabled (false) on the table
      * 
      */
-    @InputImport(name="pointInTimeRecoveryEnabled")
+    @Import(name="pointInTimeRecoveryEnabled")
       private final @Nullable Output<Boolean> pointInTimeRecoveryEnabled;
 
     public Output<Boolean> getPointInTimeRecoveryEnabled() {
@@ -95,7 +95,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Non-key columns of the table
      * 
      */
-    @InputImport(name="regularColumns")
+    @Import(name="regularColumns")
       private final @Nullable Output<List<TableColumnArgs>> regularColumns;
 
     public Output<List<TableColumnArgs>> getRegularColumns() {
@@ -106,7 +106,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Name for Cassandra table
      * 
      */
-    @InputImport(name="tableName")
+    @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
     public Output<String> getTableName() {
@@ -117,7 +117,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<TableTagArgs>> tags;
 
     public Output<List<TableTagArgs>> getTags() {

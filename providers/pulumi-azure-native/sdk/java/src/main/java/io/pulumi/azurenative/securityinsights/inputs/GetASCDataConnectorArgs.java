@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetASCDataConnectorArgs extends io.pulumi.resources.InvokeArg
      * Connector ID
      * 
      */
-    @InputImport(name="dataConnectorId", required=true)
+    @Import(name="dataConnectorId", required=true)
       private final String dataConnectorId;
 
     public String getDataConnectorId() {
@@ -27,7 +27,7 @@ public final class GetASCDataConnectorArgs extends io.pulumi.resources.InvokeArg
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetASCDataConnectorArgs extends io.pulumi.resources.InvokeArg
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
     public String getWorkspaceName() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VmUtilizationMetricsResponse {
     /**
      * Average CPU usage, percent.
@@ -51,16 +51,16 @@ public final class VmUtilizationMetricsResponse {
      */
     private final String networkThroughputMaxKbps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VmUtilizationMetricsResponse(
-        @OutputCustomType.Parameter("cpuAveragePercent") Integer cpuAveragePercent,
-        @OutputCustomType.Parameter("cpuMaxPercent") Integer cpuMaxPercent,
-        @OutputCustomType.Parameter("diskIoRateAverageKbps") String diskIoRateAverageKbps,
-        @OutputCustomType.Parameter("diskIoRateMaxKbps") String diskIoRateMaxKbps,
-        @OutputCustomType.Parameter("memoryAveragePercent") Integer memoryAveragePercent,
-        @OutputCustomType.Parameter("memoryMaxPercent") Integer memoryMaxPercent,
-        @OutputCustomType.Parameter("networkThroughputAverageKbps") String networkThroughputAverageKbps,
-        @OutputCustomType.Parameter("networkThroughputMaxKbps") String networkThroughputMaxKbps) {
+        @CustomType.Parameter("cpuAveragePercent") Integer cpuAveragePercent,
+        @CustomType.Parameter("cpuMaxPercent") Integer cpuMaxPercent,
+        @CustomType.Parameter("diskIoRateAverageKbps") String diskIoRateAverageKbps,
+        @CustomType.Parameter("diskIoRateMaxKbps") String diskIoRateMaxKbps,
+        @CustomType.Parameter("memoryAveragePercent") Integer memoryAveragePercent,
+        @CustomType.Parameter("memoryMaxPercent") Integer memoryMaxPercent,
+        @CustomType.Parameter("networkThroughputAverageKbps") String networkThroughputAverageKbps,
+        @CustomType.Parameter("networkThroughputMaxKbps") String networkThroughputMaxKbps) {
         this.cpuAveragePercent = cpuAveragePercent;
         this.cpuMaxPercent = cpuMaxPercent;
         this.diskIoRateAverageKbps = diskIoRateAverageKbps;

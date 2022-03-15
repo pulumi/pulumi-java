@@ -5,13 +5,13 @@ package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.AccessPolicyIdentity;
 import io.pulumi.awsnative.iotsitewise.outputs.AccessPolicyResource;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAccessPolicyResult {
     /**
      * The ARN of the access policy.
@@ -39,13 +39,13 @@ public final class GetAccessPolicyResult {
      */
     private final @Nullable AccessPolicyResource accessPolicyResource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccessPolicyResult(
-        @OutputCustomType.Parameter("accessPolicyArn") @Nullable String accessPolicyArn,
-        @OutputCustomType.Parameter("accessPolicyId") @Nullable String accessPolicyId,
-        @OutputCustomType.Parameter("accessPolicyIdentity") @Nullable AccessPolicyIdentity accessPolicyIdentity,
-        @OutputCustomType.Parameter("accessPolicyPermission") @Nullable String accessPolicyPermission,
-        @OutputCustomType.Parameter("accessPolicyResource") @Nullable AccessPolicyResource accessPolicyResource) {
+        @CustomType.Parameter("accessPolicyArn") @Nullable String accessPolicyArn,
+        @CustomType.Parameter("accessPolicyId") @Nullable String accessPolicyId,
+        @CustomType.Parameter("accessPolicyIdentity") @Nullable AccessPolicyIdentity accessPolicyIdentity,
+        @CustomType.Parameter("accessPolicyPermission") @Nullable String accessPolicyPermission,
+        @CustomType.Parameter("accessPolicyResource") @Nullable AccessPolicyResource accessPolicyResource) {
         this.accessPolicyArn = accessPolicyArn;
         this.accessPolicyId = accessPolicyId;
         this.accessPolicyIdentity = accessPolicyIdentity;

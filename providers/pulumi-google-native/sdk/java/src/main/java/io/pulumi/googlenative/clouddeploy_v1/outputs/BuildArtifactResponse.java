@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BuildArtifactResponse {
     /**
      * Image name in Skaffold configuration.
@@ -20,10 +20,10 @@ public final class BuildArtifactResponse {
      */
     private final String tag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BuildArtifactResponse(
-        @OutputCustomType.Parameter("image") String image,
-        @OutputCustomType.Parameter("tag") String tag) {
+        @CustomType.Parameter("image") String image,
+        @CustomType.Parameter("tag") String tag) {
         this.image = image;
         this.tag = tag;
     }

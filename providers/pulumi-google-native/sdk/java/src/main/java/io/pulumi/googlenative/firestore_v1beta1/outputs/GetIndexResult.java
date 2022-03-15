@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.firestore_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.firestore_v1beta1.outputs.GoogleFirestoreAdminV1beta1IndexFieldResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetIndexResult {
     /**
      * The collection ID to which this index applies. Required.
@@ -32,12 +32,12 @@ public final class GetIndexResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIndexResult(
-        @OutputCustomType.Parameter("collectionId") String collectionId,
-        @OutputCustomType.Parameter("fields") List<GoogleFirestoreAdminV1beta1IndexFieldResponse> fields,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("collectionId") String collectionId,
+        @CustomType.Parameter("fields") List<GoogleFirestoreAdminV1beta1IndexFieldResponse> fields,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state) {
         this.collectionId = collectionId;
         this.fields = fields;
         this.name = name;

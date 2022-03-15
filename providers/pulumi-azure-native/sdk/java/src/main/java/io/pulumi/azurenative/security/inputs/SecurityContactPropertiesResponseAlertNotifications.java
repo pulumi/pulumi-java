@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SecurityContactPropertiesResponseAlertNotifications extends i
      * Defines the minimal alert severity which will be sent as email notifications
      * 
      */
-    @InputImport(name="minimalSeverity")
+    @Import(name="minimalSeverity")
       private final @Nullable String minimalSeverity;
 
     public Optional<String> getMinimalSeverity() {
@@ -33,7 +33,7 @@ public final class SecurityContactPropertiesResponseAlertNotifications extends i
      * Defines if email notifications will be sent about new security alerts
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {

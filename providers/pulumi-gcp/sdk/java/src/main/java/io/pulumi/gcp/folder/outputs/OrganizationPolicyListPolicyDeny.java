@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.folder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OrganizationPolicyListPolicyDeny {
     /**
      * The policy allows or denies all values.
@@ -24,10 +24,10 @@ public final class OrganizationPolicyListPolicyDeny {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OrganizationPolicyListPolicyDeny(
-        @OutputCustomType.Parameter("all") @Nullable Boolean all,
-        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
+        @CustomType.Parameter("all") @Nullable Boolean all,
+        @CustomType.Parameter("values") @Nullable List<String> values) {
         this.all = all;
         this.values = values;
     }

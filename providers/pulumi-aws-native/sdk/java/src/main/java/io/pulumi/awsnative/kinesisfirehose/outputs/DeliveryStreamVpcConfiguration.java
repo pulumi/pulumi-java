@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamVpcConfiguration {
     private final String roleARN;
     private final List<String> securityGroupIds;
     private final List<String> subnetIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamVpcConfiguration(
-        @OutputCustomType.Parameter("roleARN") String roleARN,
-        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds) {
+        @CustomType.Parameter("roleARN") String roleARN,
+        @CustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds) {
         this.roleARN = roleARN;
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;

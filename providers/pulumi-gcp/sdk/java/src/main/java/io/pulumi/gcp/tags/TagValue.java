@@ -4,7 +4,7 @@
 package io.pulumi.gcp.tags;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.tags.TagValueArgs;
@@ -43,7 +43,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -58,7 +58,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * User-assigned description of the TagValue. Must not exceed 256 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -72,7 +72,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * The generated numeric id for the TagValue.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -86,7 +86,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * Output only. Namespaced name of the TagValue. Will be in the format {organizationId}/{tag_key_short_name}/{shortName}.
      * 
      */
-    @OutputExport(name="namespacedName", type=String.class, parameters={})
+    @Export(name="namespacedName", type=String.class, parameters={})
     private Output<String> namespacedName;
 
     /**
@@ -100,7 +100,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * Input only. The resource name of the new TagValue's parent. Must be of the form tagKeys/{tag_key_id}.
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -115,7 +115,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * The short name must be 63 characters or less, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
      */
-    @OutputExport(name="shortName", type=String.class, parameters={})
+    @Export(name="shortName", type=String.class, parameters={})
     private Output<String> shortName;
 
     /**
@@ -131,7 +131,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

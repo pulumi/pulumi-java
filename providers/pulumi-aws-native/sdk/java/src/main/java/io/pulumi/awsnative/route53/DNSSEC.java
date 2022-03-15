@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53.DNSSECArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class DNSSEC extends io.pulumi.resources.CustomResource {
      * The unique string (ID) used to identify a hosted zone.
      * 
      */
-    @OutputExport(name="hostedZoneId", type=String.class, parameters={})
+    @Export(name="hostedZoneId", type=String.class, parameters={})
     private Output<String> hostedZoneId;
 
     /**

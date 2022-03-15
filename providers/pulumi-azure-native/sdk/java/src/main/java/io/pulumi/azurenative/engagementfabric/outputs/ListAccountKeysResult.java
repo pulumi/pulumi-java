@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.engagementfabric.outputs;
 
 import io.pulumi.azurenative.engagementfabric.outputs.KeyDescriptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListAccountKeysResult {
     /**
      * Account keys
@@ -16,8 +16,8 @@ public final class ListAccountKeysResult {
      */
     private final List<KeyDescriptionResponse> value;
 
-    @OutputCustomType.Constructor
-    private ListAccountKeysResult(@OutputCustomType.Parameter("value") List<KeyDescriptionResponse> value) {
+    @CustomType.Constructor
+    private ListAccountKeysResult(@CustomType.Parameter("value") List<KeyDescriptionResponse> value) {
         this.value = value;
     }
 

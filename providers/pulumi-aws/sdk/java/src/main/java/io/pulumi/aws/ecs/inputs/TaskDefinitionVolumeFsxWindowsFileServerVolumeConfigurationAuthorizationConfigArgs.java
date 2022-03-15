@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAu
      * The authorization credential option to use. The authorization credential options can be provided using either the Amazon Resource Name (ARN) of an AWS Secrets Manager secret or AWS Systems Manager Parameter Store parameter. The ARNs refer to the stored credentials.
      * 
      */
-    @InputImport(name="credentialsParameter", required=true)
+    @Import(name="credentialsParameter", required=true)
       private final Output<String> credentialsParameter;
 
     public Output<String> getCredentialsParameter() {
@@ -28,7 +28,7 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAu
      * A fully qualified domain name hosted by an AWS Directory Service Managed Microsoft AD (Active Directory) or self-hosted AD on Amazon EC2.
      * 
      */
-    @InputImport(name="domain", required=true)
+    @Import(name="domain", required=true)
       private final Output<String> domain;
 
     public Output<String> getDomain() {

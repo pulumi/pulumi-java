@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigqueryreservation_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigqueryreservation_v1beta1.CapacityCommitmentArgs;
@@ -23,7 +23,7 @@ public class CapacityCommitment extends io.pulumi.resources.CustomResource {
      * The end of the current commitment period. It is applicable only for ACTIVE capacity commitments.
      * 
      */
-    @OutputExport(name="commitmentEndTime", type=String.class, parameters={})
+    @Export(name="commitmentEndTime", type=String.class, parameters={})
     private Output<String> commitmentEndTime;
 
     /**
@@ -37,7 +37,7 @@ public class CapacityCommitment extends io.pulumi.resources.CustomResource {
      * The start of the current commitment period. It is applicable only for ACTIVE capacity commitments.
      * 
      */
-    @OutputExport(name="commitmentStartTime", type=String.class, parameters={})
+    @Export(name="commitmentStartTime", type=String.class, parameters={})
     private Output<String> commitmentStartTime;
 
     /**
@@ -51,7 +51,7 @@ public class CapacityCommitment extends io.pulumi.resources.CustomResource {
      * For FAILED commitment plan, provides the reason of failure.
      * 
      */
-    @OutputExport(name="failureStatus", type=StatusResponse.class, parameters={})
+    @Export(name="failureStatus", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> failureStatus;
 
     /**
@@ -65,7 +65,7 @@ public class CapacityCommitment extends io.pulumi.resources.CustomResource {
      * The resource name of the capacity commitment, e.g., `projects/myproject/locations/US/capacityCommitments/123`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class CapacityCommitment extends io.pulumi.resources.CustomResource {
      * Capacity commitment commitment plan.
      * 
      */
-    @OutputExport(name="plan", type=String.class, parameters={})
+    @Export(name="plan", type=String.class, parameters={})
     private Output<String> plan;
 
     /**
@@ -93,7 +93,7 @@ public class CapacityCommitment extends io.pulumi.resources.CustomResource {
      * The plan this capacity commitment is converted to after commitment_end_time passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable for ANNUAL commitments.
      * 
      */
-    @OutputExport(name="renewalPlan", type=String.class, parameters={})
+    @Export(name="renewalPlan", type=String.class, parameters={})
     private Output<String> renewalPlan;
 
     /**
@@ -107,7 +107,7 @@ public class CapacityCommitment extends io.pulumi.resources.CustomResource {
      * Number of slots in this commitment.
      * 
      */
-    @OutputExport(name="slotCount", type=String.class, parameters={})
+    @Export(name="slotCount", type=String.class, parameters={})
     private Output<String> slotCount;
 
     /**
@@ -121,7 +121,7 @@ public class CapacityCommitment extends io.pulumi.resources.CustomResource {
      * State of the commitment.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

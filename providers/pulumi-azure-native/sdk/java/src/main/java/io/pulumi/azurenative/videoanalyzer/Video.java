@@ -11,7 +11,7 @@ import io.pulumi.azurenative.videoanalyzer.outputs.VideoMediaInfoResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoStreamingResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class Video extends io.pulumi.resources.CustomResource {
      * Optional video description provided by the user. Value can be up to 2048 characters long.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -52,7 +52,7 @@ public class Video extends io.pulumi.resources.CustomResource {
      * Video flags contain information about the available video actions and its dynamic properties based on the current video state.
      * 
      */
-    @OutputExport(name="flags", type=VideoFlagsResponse.class, parameters={})
+    @Export(name="flags", type=VideoFlagsResponse.class, parameters={})
     private Output<VideoFlagsResponse> flags;
 
     /**
@@ -66,7 +66,7 @@ public class Video extends io.pulumi.resources.CustomResource {
      * Contains information about the video and audio content.
      * 
      */
-    @OutputExport(name="mediaInfo", type=VideoMediaInfoResponse.class, parameters={})
+    @Export(name="mediaInfo", type=VideoMediaInfoResponse.class, parameters={})
     private Output<VideoMediaInfoResponse> mediaInfo;
 
     /**
@@ -80,7 +80,7 @@ public class Video extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class Video extends io.pulumi.resources.CustomResource {
      * Video streaming holds information about video streaming URLs.
      * 
      */
-    @OutputExport(name="streaming", type=VideoStreamingResponse.class, parameters={})
+    @Export(name="streaming", type=VideoStreamingResponse.class, parameters={})
     private Output<VideoStreamingResponse> streaming;
 
     /**
@@ -108,7 +108,7 @@ public class Video extends io.pulumi.resources.CustomResource {
      * The system metadata relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -122,7 +122,7 @@ public class Video extends io.pulumi.resources.CustomResource {
      * Optional video title provided by the user. Value can be up to 256 characters long.
      * 
      */
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output</* @Nullable */ String> title;
 
     /**
@@ -136,7 +136,7 @@ public class Video extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

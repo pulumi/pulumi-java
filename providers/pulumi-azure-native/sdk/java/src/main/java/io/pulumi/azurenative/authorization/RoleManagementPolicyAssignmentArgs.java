@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
      * The policy id role management policy assignment.
      * 
      */
-    @InputImport(name="policyId")
+    @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {
@@ -29,7 +29,7 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
      * The role definition of management policy assignment.
      * 
      */
-    @InputImport(name="roleDefinitionId")
+    @Import(name="roleDefinitionId")
       private final @Nullable Output<String> roleDefinitionId;
 
     public Output<String> getRoleDefinitionId() {
@@ -40,7 +40,7 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
      * The name of format {guid_guid} the role management policy assignment to upsert.
      * 
      */
-    @InputImport(name="roleManagementPolicyAssignmentName")
+    @Import(name="roleManagementPolicyAssignmentName")
       private final @Nullable Output<String> roleManagementPolicyAssignmentName;
 
     public Output<String> getRoleManagementPolicyAssignmentName() {
@@ -51,7 +51,7 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
      * The role management policy scope.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {

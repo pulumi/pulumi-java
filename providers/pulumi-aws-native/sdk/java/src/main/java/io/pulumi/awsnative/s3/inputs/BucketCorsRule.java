@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketCorsRuleAllowedMethodsItem;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class BucketCorsRule extends io.pulumi.resources.InvokeArgs {
      * Headers that are specified in the Access-Control-Request-Headers header.
      * 
      */
-    @InputImport(name="allowedHeaders")
+    @Import(name="allowedHeaders")
       private final @Nullable List<String> allowedHeaders;
 
     public List<String> getAllowedHeaders() {
@@ -36,7 +36,7 @@ public final class BucketCorsRule extends io.pulumi.resources.InvokeArgs {
      * An HTTP method that you allow the origin to execute.
      * 
      */
-    @InputImport(name="allowedMethods", required=true)
+    @Import(name="allowedMethods", required=true)
       private final List<BucketCorsRuleAllowedMethodsItem> allowedMethods;
 
     public List<BucketCorsRuleAllowedMethodsItem> getAllowedMethods() {
@@ -47,7 +47,7 @@ public final class BucketCorsRule extends io.pulumi.resources.InvokeArgs {
      * One or more origins you want customers to be able to access the bucket from.
      * 
      */
-    @InputImport(name="allowedOrigins", required=true)
+    @Import(name="allowedOrigins", required=true)
       private final List<String> allowedOrigins;
 
     public List<String> getAllowedOrigins() {
@@ -58,7 +58,7 @@ public final class BucketCorsRule extends io.pulumi.resources.InvokeArgs {
      * One or more headers in the response that you want customers to be able to access from their applications (for example, from a JavaScript XMLHttpRequest object).
      * 
      */
-    @InputImport(name="exposedHeaders")
+    @Import(name="exposedHeaders")
       private final @Nullable List<String> exposedHeaders;
 
     public List<String> getExposedHeaders() {
@@ -69,7 +69,7 @@ public final class BucketCorsRule extends io.pulumi.resources.InvokeArgs {
      * A unique identifier for this rule.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -80,7 +80,7 @@ public final class BucketCorsRule extends io.pulumi.resources.InvokeArgs {
      * The time in seconds that your browser is to cache the preflight response for the specified resource.
      * 
      */
-    @InputImport(name="maxAge")
+    @Import(name="maxAge")
       private final @Nullable Integer maxAge;
 
     public Optional<Integer> getMaxAge() {

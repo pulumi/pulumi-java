@@ -5,7 +5,7 @@ package io.pulumi.azurenative.autonomousdevelopmentplatform;
 
 import io.pulumi.azurenative.autonomousdevelopmentplatform.inputs.DataPoolLocationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the ADP account
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -31,7 +31,7 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Data Pool
      * 
      */
-    @InputImport(name="dataPoolName")
+    @Import(name="dataPoolName")
       private final @Nullable Output<String> dataPoolName;
 
     public Output<String> getDataPoolName() {
@@ -42,7 +42,7 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the collection of locations where Data Pool resources should be created
      * 
      */
-    @InputImport(name="locations", required=true)
+    @Import(name="locations", required=true)
       private final Output<List<DataPoolLocationArgs>> locations;
 
     public Output<List<DataPoolLocationArgs>> getLocations() {
@@ -53,7 +53,7 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

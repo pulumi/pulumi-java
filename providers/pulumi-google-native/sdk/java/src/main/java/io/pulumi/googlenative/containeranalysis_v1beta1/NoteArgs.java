@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.AuthorityArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.BasisArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.BuildArgs;
@@ -32,7 +32,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing an attestation role.
      * 
      */
-    @InputImport(name="attestationAuthority")
+    @Import(name="attestationAuthority")
       private final @Nullable Output<AuthorityArgs> attestationAuthority;
 
     public Output<AuthorityArgs> getAttestationAuthority() {
@@ -43,7 +43,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing a base image.
      * 
      */
-    @InputImport(name="baseImage")
+    @Import(name="baseImage")
       private final @Nullable Output<BasisArgs> baseImage;
 
     public Output<BasisArgs> getBaseImage() {
@@ -54,7 +54,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing build provenance for a verifiable build.
      * 
      */
-    @InputImport(name="build")
+    @Import(name="build")
       private final @Nullable Output<BuildArgs> build;
 
     public Output<BuildArgs> getBuild() {
@@ -65,7 +65,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing something that can be deployed.
      * 
      */
-    @InputImport(name="deployable")
+    @Import(name="deployable")
       private final @Nullable Output<DeployableArgs> deployable;
 
     public Output<DeployableArgs> getDeployable() {
@@ -76,7 +76,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing the initial analysis of a resource.
      * 
      */
-    @InputImport(name="discovery")
+    @Import(name="discovery")
       private final @Nullable Output<DiscoveryArgs> discovery;
 
     public Output<DiscoveryArgs> getDiscovery() {
@@ -87,7 +87,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * Time of expiration for this note. Empty if note does not expire.
      * 
      */
-    @InputImport(name="expirationTime")
+    @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
     public Output<String> getExpirationTime() {
@@ -98,7 +98,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing an in-toto link.
      * 
      */
-    @InputImport(name="intoto")
+    @Import(name="intoto")
       private final @Nullable Output<InTotoArgs> intoto;
 
     public Output<InTotoArgs> getIntoto() {
@@ -109,14 +109,14 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A detailed description of this note.
      * 
      */
-    @InputImport(name="longDescription")
+    @Import(name="longDescription")
       private final @Nullable Output<String> longDescription;
 
     public Output<String> getLongDescription() {
         return this.longDescription == null ? Output.empty() : this.longDescription;
     }
 
-    @InputImport(name="noteId", required=true)
+    @Import(name="noteId", required=true)
       private final Output<String> noteId;
 
     public Output<String> getNoteId() {
@@ -127,14 +127,14 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing a package hosted by various package managers.
      * 
      */
-    @InputImport(name="package")
+    @Import(name="package")
       private final @Nullable Output<PackageArgs> $package;
 
     public Output<PackageArgs> get$package() {
         return this.$package == null ? Output.empty() : this.$package;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -145,7 +145,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * Other notes related to this note.
      * 
      */
-    @InputImport(name="relatedNoteNames")
+    @Import(name="relatedNoteNames")
       private final @Nullable Output<List<String>> relatedNoteNames;
 
     public Output<List<String>> getRelatedNoteNames() {
@@ -156,7 +156,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * URLs associated with this note.
      * 
      */
-    @InputImport(name="relatedUrl")
+    @Import(name="relatedUrl")
       private final @Nullable Output<List<RelatedUrlArgs>> relatedUrl;
 
     public Output<List<RelatedUrlArgs>> getRelatedUrl() {
@@ -167,7 +167,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing a software bill of materials.
      * 
      */
-    @InputImport(name="sbom")
+    @Import(name="sbom")
       private final @Nullable Output<DocumentNoteArgs> sbom;
 
     public Output<DocumentNoteArgs> getSbom() {
@@ -178,7 +178,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A one sentence description of this note.
      * 
      */
-    @InputImport(name="shortDescription")
+    @Import(name="shortDescription")
       private final @Nullable Output<String> shortDescription;
 
     public Output<String> getShortDescription() {
@@ -189,7 +189,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing an SPDX File.
      * 
      */
-    @InputImport(name="spdxFile")
+    @Import(name="spdxFile")
       private final @Nullable Output<FileNoteArgs> spdxFile;
 
     public Output<FileNoteArgs> getSpdxFile() {
@@ -200,7 +200,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing an SPDX Package.
      * 
      */
-    @InputImport(name="spdxPackage")
+    @Import(name="spdxPackage")
       private final @Nullable Output<PackageInfoNoteArgs> spdxPackage;
 
     public Output<PackageInfoNoteArgs> getSpdxPackage() {
@@ -211,7 +211,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing an SPDX File.
      * 
      */
-    @InputImport(name="spdxRelationship")
+    @Import(name="spdxRelationship")
       private final @Nullable Output<RelationshipNoteArgs> spdxRelationship;
 
     public Output<RelationshipNoteArgs> getSpdxRelationship() {
@@ -222,7 +222,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A note describing a package vulnerability.
      * 
      */
-    @InputImport(name="vulnerability")
+    @Import(name="vulnerability")
       private final @Nullable Output<VulnerabilityArgs> vulnerability;
 
     public Output<VulnerabilityArgs> getVulnerability() {

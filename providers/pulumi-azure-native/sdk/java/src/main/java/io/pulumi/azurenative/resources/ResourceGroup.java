@@ -8,7 +8,7 @@ import io.pulumi.azurenative.resources.ResourceGroupArgs;
 import io.pulumi.azurenative.resources.outputs.ResourceGroupPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class ResourceGroup extends io.pulumi.resources.CustomResource {
      * The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -50,7 +50,7 @@ public class ResourceGroup extends io.pulumi.resources.CustomResource {
      * The ID of the resource that manages this resource group.
      * 
      */
-    @OutputExport(name="managedBy", type=String.class, parameters={})
+    @Export(name="managedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedBy;
 
     /**
@@ -64,7 +64,7 @@ public class ResourceGroup extends io.pulumi.resources.CustomResource {
      * The name of the resource group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class ResourceGroup extends io.pulumi.resources.CustomResource {
      * The resource group properties.
      * 
      */
-    @OutputExport(name="properties", type=ResourceGroupPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=ResourceGroupPropertiesResponse.class, parameters={})
     private Output<ResourceGroupPropertiesResponse> properties;
 
     /**
@@ -92,7 +92,7 @@ public class ResourceGroup extends io.pulumi.resources.CustomResource {
      * The tags attached to the resource group.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -106,7 +106,7 @@ public class ResourceGroup extends io.pulumi.resources.CustomResource {
      * The type of the resource group.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

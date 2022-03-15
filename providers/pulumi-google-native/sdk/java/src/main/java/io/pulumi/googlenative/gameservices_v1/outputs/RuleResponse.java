@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.gameservices_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.gameservices_v1.outputs.ConditionResponse;
 import io.pulumi.googlenative.gameservices_v1.outputs.LogConfigResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleResponse {
     /**
      * Required
@@ -48,15 +48,15 @@ public final class RuleResponse {
      */
     private final List<String> permissions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleResponse(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("conditions") List<ConditionResponse> conditions,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("in") List<String> in,
-        @OutputCustomType.Parameter("logConfig") List<LogConfigResponse> logConfig,
-        @OutputCustomType.Parameter("notIn") List<String> notIn,
-        @OutputCustomType.Parameter("permissions") List<String> permissions) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("conditions") List<ConditionResponse> conditions,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("in") List<String> in,
+        @CustomType.Parameter("logConfig") List<LogConfigResponse> logConfig,
+        @CustomType.Parameter("notIn") List<String> notIn,
+        @CustomType.Parameter("permissions") List<String> permissions) {
         this.action = action;
         this.conditions = conditions;
         this.description = description;

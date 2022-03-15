@@ -4,10 +4,10 @@
 package io.pulumi.aws.ecr.outputs;
 
 import io.pulumi.aws.ecr.outputs.ReplicationConfigurationReplicationConfigurationRule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReplicationConfigurationReplicationConfiguration {
     /**
      * The replication rules for a replication configuration. A maximum of 10 are allowed per `replication_configuration`. See Rule
@@ -15,8 +15,8 @@ public final class ReplicationConfigurationReplicationConfiguration {
      */
     private final ReplicationConfigurationReplicationConfigurationRule rule;
 
-    @OutputCustomType.Constructor
-    private ReplicationConfigurationReplicationConfiguration(@OutputCustomType.Parameter("rule") ReplicationConfigurationReplicationConfigurationRule rule) {
+    @CustomType.Constructor
+    private ReplicationConfigurationReplicationConfiguration(@CustomType.Parameter("rule") ReplicationConfigurationReplicationConfigurationRule rule) {
         this.rule = rule;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ScheduledSourceSynchronizationSettingResponse extends io.pulu
      * Expected value is 'ScheduleBased'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -34,7 +34,7 @@ public final class ScheduledSourceSynchronizationSettingResponse extends io.pulu
      * Recurrence Interval
      * 
      */
-    @InputImport(name="recurrenceInterval")
+    @Import(name="recurrenceInterval")
       private final @Nullable String recurrenceInterval;
 
     public Optional<String> getRecurrenceInterval() {
@@ -45,7 +45,7 @@ public final class ScheduledSourceSynchronizationSettingResponse extends io.pulu
      * Synchronization time
      * 
      */
-    @InputImport(name="synchronizationTime")
+    @Import(name="synchronizationTime")
       private final @Nullable String synchronizationTime;
 
     public Optional<String> getSynchronizationTime() {

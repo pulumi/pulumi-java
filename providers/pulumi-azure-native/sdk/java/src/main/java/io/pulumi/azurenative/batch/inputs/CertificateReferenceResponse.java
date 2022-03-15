@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class CertificateReferenceResponse extends io.pulumi.resources.Invo
 
     public static final CertificateReferenceResponse Empty = new CertificateReferenceResponse();
 
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -26,7 +26,7 @@ public final class CertificateReferenceResponse extends io.pulumi.resources.Invo
      * The default value is currentUser. This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
      * 
      */
-    @InputImport(name="storeLocation")
+    @Import(name="storeLocation")
       private final @Nullable String storeLocation;
 
     public Optional<String> getStoreLocation() {
@@ -37,14 +37,14 @@ public final class CertificateReferenceResponse extends io.pulumi.resources.Invo
      * This property is applicable only for pools configured with Windows nodes (that is, created with cloudServiceConfiguration, or with virtualMachineConfiguration using a Windows image reference). Common store names include: My, Root, CA, Trust, Disallowed, TrustedPeople, TrustedPublisher, AuthRoot, AddressBook, but any custom store name can also be used. The default value is My.
      * 
      */
-    @InputImport(name="storeName")
+    @Import(name="storeName")
       private final @Nullable String storeName;
 
     public Optional<String> getStoreName() {
         return this.storeName == null ? Optional.empty() : Optional.ofNullable(this.storeName);
     }
 
-    @InputImport(name="visibility")
+    @Import(name="visibility")
       private final @Nullable List<String> visibility;
 
     public List<String> getVisibility() {

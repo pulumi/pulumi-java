@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FunctionEnvironment {
     /**
      * Map of environment variables that are accessible from the function code during execution.
@@ -17,8 +17,8 @@ public final class FunctionEnvironment {
      */
     private final @Nullable Map<String,String> variables;
 
-    @OutputCustomType.Constructor
-    private FunctionEnvironment(@OutputCustomType.Parameter("variables") @Nullable Map<String,String> variables) {
+    @CustomType.Constructor
+    private FunctionEnvironment(@CustomType.Parameter("variables") @Nullable Map<String,String> variables) {
         this.variables = variables;
     }
 

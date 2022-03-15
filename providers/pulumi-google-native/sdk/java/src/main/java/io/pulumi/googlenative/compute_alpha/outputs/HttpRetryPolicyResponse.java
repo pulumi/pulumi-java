@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.DurationResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpRetryPolicyResponse {
     /**
      * Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
@@ -28,11 +28,11 @@ public final class HttpRetryPolicyResponse {
      */
     private final List<String> retryConditions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpRetryPolicyResponse(
-        @OutputCustomType.Parameter("numRetries") Integer numRetries,
-        @OutputCustomType.Parameter("perTryTimeout") DurationResponse perTryTimeout,
-        @OutputCustomType.Parameter("retryConditions") List<String> retryConditions) {
+        @CustomType.Parameter("numRetries") Integer numRetries,
+        @CustomType.Parameter("perTryTimeout") DurationResponse perTryTimeout,
+        @CustomType.Parameter("retryConditions") List<String> retryConditions) {
         this.numRetries = numRetries;
         this.perTryTimeout = perTryTimeout;
         this.retryConditions = retryConditions;

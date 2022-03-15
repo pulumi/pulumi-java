@@ -3,23 +3,23 @@
 
 package io.pulumi.gcp.redis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.redis.outputs.GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceMaintenancePolicyWeeklyMaintenanceWindow {
     private final String day;
     private final String duration;
     private final List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> startTimes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceMaintenancePolicyWeeklyMaintenanceWindow(
-        @OutputCustomType.Parameter("day") String day,
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("startTimes") List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> startTimes) {
+        @CustomType.Parameter("day") String day,
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("startTimes") List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> startTimes) {
         this.day = day;
         this.duration = duration;
         this.startTimes = startTimes;

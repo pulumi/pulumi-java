@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VideoStreamingResponse {
     /**
      * Video streaming base URL for the video archive. When present, archived video can be played through the Azure Video Analyzer player. Alternatively, this URL can be used with compatible DASH or HLS players by appending the following to the base URL:
@@ -23,8 +23,8 @@ public final class VideoStreamingResponse {
      */
     private final @Nullable String archiveBaseUrl;
 
-    @OutputCustomType.Constructor
-    private VideoStreamingResponse(@OutputCustomType.Parameter("archiveBaseUrl") @Nullable String archiveBaseUrl) {
+    @CustomType.Constructor
+    private VideoStreamingResponse(@CustomType.Parameter("archiveBaseUrl") @Nullable String archiveBaseUrl) {
         this.archiveBaseUrl = archiveBaseUrl;
     }
 

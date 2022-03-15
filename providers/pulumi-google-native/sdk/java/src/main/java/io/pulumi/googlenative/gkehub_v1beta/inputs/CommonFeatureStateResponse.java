@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gkehub_v1beta.inputs.AppDevExperienceFeatureStateResponse;
 import io.pulumi.googlenative.gkehub_v1beta.inputs.FeatureStateResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CommonFeatureStateResponse extends io.pulumi.resources.Invoke
      * Appdevexperience specific state.
      * 
      */
-    @InputImport(name="appdevexperience", required=true)
+    @Import(name="appdevexperience", required=true)
       private final AppDevExperienceFeatureStateResponse appdevexperience;
 
     public AppDevExperienceFeatureStateResponse getAppdevexperience() {
@@ -32,7 +32,7 @@ public final class CommonFeatureStateResponse extends io.pulumi.resources.Invoke
      * The "running state" of the Feature in this Hub.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final FeatureStateResponse state;
 
     public FeatureStateResponse getState() {

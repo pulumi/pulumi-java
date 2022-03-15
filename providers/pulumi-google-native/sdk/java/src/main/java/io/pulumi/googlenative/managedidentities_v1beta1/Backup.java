@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.managedidentities_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.managedidentities_v1beta1.BackupArgs;
@@ -23,7 +23,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The time the backups was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -37,7 +37,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Optional. Resource labels to represent user provided metadata.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -51,7 +51,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The unique name of the Backup in the form of projects/{project_id}/locations/global/domains/{domain_name}/backups/{name}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The current state of the backup.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -79,7 +79,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Additional information about the current status of this backup, if available.
      * 
      */
-    @OutputExport(name="statusMessage", type=String.class, parameters={})
+    @Export(name="statusMessage", type=String.class, parameters={})
     private Output<String> statusMessage;
 
     /**
@@ -93,7 +93,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Indicates whether it’s an on-demand backup or scheduled.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -107,7 +107,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Last update time.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

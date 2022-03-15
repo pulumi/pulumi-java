@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.apprunner.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVpcConnectorResult {
     /**
      * The Amazon Resource Name (ARN) of this VPC connector.
@@ -23,10 +23,10 @@ public final class GetVpcConnectorResult {
      */
     private final @Nullable Integer vpcConnectorRevision;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVpcConnectorResult(
-        @OutputCustomType.Parameter("vpcConnectorArn") @Nullable String vpcConnectorArn,
-        @OutputCustomType.Parameter("vpcConnectorRevision") @Nullable Integer vpcConnectorRevision) {
+        @CustomType.Parameter("vpcConnectorArn") @Nullable String vpcConnectorArn,
+        @CustomType.Parameter("vpcConnectorRevision") @Nullable Integer vpcConnectorRevision) {
         this.vpcConnectorArn = vpcConnectorArn;
         this.vpcConnectorRevision = vpcConnectorRevision;
     }

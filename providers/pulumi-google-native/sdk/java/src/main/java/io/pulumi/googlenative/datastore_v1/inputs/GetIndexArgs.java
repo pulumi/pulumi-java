@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastore_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetIndexArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIndexArgs Empty = new GetIndexArgs();
 
-    @InputImport(name="indexId", required=true)
+    @Import(name="indexId", required=true)
       private final String indexId;
 
     public String getIndexId() {
         return this.indexId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

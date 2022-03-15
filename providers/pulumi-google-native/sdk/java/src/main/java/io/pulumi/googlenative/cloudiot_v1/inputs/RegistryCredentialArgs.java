@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudiot_v1.inputs.PublicKeyCertificateArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RegistryCredentialArgs extends io.pulumi.resources.ResourceAr
      * A public key certificate used to verify the device credentials.
      * 
      */
-    @InputImport(name="publicKeyCertificate")
+    @Import(name="publicKeyCertificate")
       private final @Nullable Output<PublicKeyCertificateArgs> publicKeyCertificate;
 
     public Output<PublicKeyCertificateArgs> getPublicKeyCertificate() {

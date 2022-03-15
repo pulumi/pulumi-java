@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.translate_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.translate_v3beta1.outputs.GlossaryInputConfigResponse;
 import io.pulumi.googlenative.translate_v3beta1.outputs.LanguageCodePairResponse;
 import io.pulumi.googlenative.translate_v3beta1.outputs.LanguageCodesSetResponse;
@@ -11,7 +11,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGlossaryResult {
     /**
      * When the glossary creation was finished.
@@ -49,15 +49,15 @@ public final class GetGlossaryResult {
      */
     private final String submitTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGlossaryResult(
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("entryCount") Integer entryCount,
-        @OutputCustomType.Parameter("inputConfig") GlossaryInputConfigResponse inputConfig,
-        @OutputCustomType.Parameter("languageCodesSet") LanguageCodesSetResponse languageCodesSet,
-        @OutputCustomType.Parameter("languagePair") LanguageCodePairResponse languagePair,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("submitTime") String submitTime) {
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("entryCount") Integer entryCount,
+        @CustomType.Parameter("inputConfig") GlossaryInputConfigResponse inputConfig,
+        @CustomType.Parameter("languageCodesSet") LanguageCodesSetResponse languageCodesSet,
+        @CustomType.Parameter("languagePair") LanguageCodePairResponse languagePair,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("submitTime") String submitTime) {
         this.endTime = endTime;
         this.entryCount = entryCount;
         this.inputConfig = inputConfig;

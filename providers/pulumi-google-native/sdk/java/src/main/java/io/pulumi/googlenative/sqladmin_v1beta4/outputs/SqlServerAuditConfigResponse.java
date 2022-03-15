@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SqlServerAuditConfigResponse {
     /**
      * The name of the destination bucket (e.g., gs://mybucket).
@@ -20,10 +20,10 @@ public final class SqlServerAuditConfigResponse {
      */
     private final String kind;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlServerAuditConfigResponse(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("kind") String kind) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("kind") String kind) {
         this.bucket = bucket;
         this.kind = kind;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.confidentialledger.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AADBasedSecurityPrincipalResponse extends io.pulumi.resources
      * LedgerRole associated with the Security Principal of Ledger
      * 
      */
-    @InputImport(name="ledgerRoleName")
+    @Import(name="ledgerRoleName")
       private final @Nullable String ledgerRoleName;
 
     public Optional<String> getLedgerRoleName() {
@@ -33,7 +33,7 @@ public final class AADBasedSecurityPrincipalResponse extends io.pulumi.resources
      * UUID/GUID based Principal Id of the Security Principal
      * 
      */
-    @InputImport(name="principalId")
+    @Import(name="principalId")
       private final @Nullable String principalId;
 
     public Optional<String> getPrincipalId() {
@@ -44,7 +44,7 @@ public final class AADBasedSecurityPrincipalResponse extends io.pulumi.resources
      * UUID/GUID based Tenant Id of the Security Principal
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {

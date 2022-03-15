@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InterconnectMacsecPreSharedKeyResponse {
     /**
      * A name for this pre-shared key. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
@@ -20,10 +20,10 @@ public final class InterconnectMacsecPreSharedKeyResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InterconnectMacsecPreSharedKeyResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("startTime") String startTime) {
         this.name = name;
         this.startTime = startTime;
     }

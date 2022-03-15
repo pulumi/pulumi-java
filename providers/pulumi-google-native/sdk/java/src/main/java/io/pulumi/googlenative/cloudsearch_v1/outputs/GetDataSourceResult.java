@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.GSuitePrincipalResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDataSourceResult {
     /**
      * If true, sets the datasource to read-only mode. In read-only mode, the Indexing API rejects any requests to index or delete items in this source. Enabling read-only mode does not stop the processing of previously accepted data.
@@ -58,17 +58,17 @@ public final class GetDataSourceResult {
      */
     private final String shortName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDataSourceResult(
-        @OutputCustomType.Parameter("disableModifications") Boolean disableModifications,
-        @OutputCustomType.Parameter("disableServing") Boolean disableServing,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("indexingServiceAccounts") List<String> indexingServiceAccounts,
-        @OutputCustomType.Parameter("itemsVisibility") List<GSuitePrincipalResponse> itemsVisibility,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operationIds") List<String> operationIds,
-        @OutputCustomType.Parameter("returnThumbnailUrls") Boolean returnThumbnailUrls,
-        @OutputCustomType.Parameter("shortName") String shortName) {
+        @CustomType.Parameter("disableModifications") Boolean disableModifications,
+        @CustomType.Parameter("disableServing") Boolean disableServing,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("indexingServiceAccounts") List<String> indexingServiceAccounts,
+        @CustomType.Parameter("itemsVisibility") List<GSuitePrincipalResponse> itemsVisibility,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operationIds") List<String> operationIds,
+        @CustomType.Parameter("returnThumbnailUrls") Boolean returnThumbnailUrls,
+        @CustomType.Parameter("shortName") String shortName) {
         this.disableModifications = disableModifications;
         this.disableServing = disableServing;
         this.displayName = displayName;

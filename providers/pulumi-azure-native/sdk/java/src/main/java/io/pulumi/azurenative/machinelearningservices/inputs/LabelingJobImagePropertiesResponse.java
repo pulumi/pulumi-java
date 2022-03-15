@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class LabelingJobImagePropertiesResponse extends io.pulumi.resource
      * Annotation type of image labeling tasks.
      * 
      */
-    @InputImport(name="annotationType")
+    @Import(name="annotationType")
       private final @Nullable String annotationType;
 
     public Optional<String> getAnnotationType() {
@@ -29,7 +29,7 @@ public final class LabelingJobImagePropertiesResponse extends io.pulumi.resource
      * Media type of data asset.
      * 
      */
-    @InputImport(name="mediaType", required=true)
+    @Import(name="mediaType", required=true)
       private final String mediaType;
 
     public String getMediaType() {

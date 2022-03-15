@@ -5,21 +5,21 @@ package io.pulumi.awsnative.kinesisfirehose.outputs;
 
 import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamHttpEndpointRequestConfigurationContentEncoding;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamHttpEndpointCommonAttribute;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamHttpEndpointRequestConfiguration {
     private final @Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes;
     private final @Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamHttpEndpointRequestConfiguration(
-        @OutputCustomType.Parameter("commonAttributes") @Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes,
-        @OutputCustomType.Parameter("contentEncoding") @Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding) {
+        @CustomType.Parameter("commonAttributes") @Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes,
+        @CustomType.Parameter("contentEncoding") @Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding) {
         this.commonAttributes = commonAttributes;
         this.contentEncoding = contentEncoding;
     }

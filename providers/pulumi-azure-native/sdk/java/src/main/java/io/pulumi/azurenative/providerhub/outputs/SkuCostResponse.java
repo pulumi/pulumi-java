@@ -3,24 +3,24 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SkuCostResponse {
     private final @Nullable String extendedUnit;
     private final String meterId;
     private final @Nullable Integer quantity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkuCostResponse(
-        @OutputCustomType.Parameter("extendedUnit") @Nullable String extendedUnit,
-        @OutputCustomType.Parameter("meterId") String meterId,
-        @OutputCustomType.Parameter("quantity") @Nullable Integer quantity) {
+        @CustomType.Parameter("extendedUnit") @Nullable String extendedUnit,
+        @CustomType.Parameter("meterId") String meterId,
+        @CustomType.Parameter("quantity") @Nullable Integer quantity) {
         this.extendedUnit = extendedUnit;
         this.meterId = meterId;
         this.quantity = quantity;

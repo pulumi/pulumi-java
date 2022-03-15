@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1beta1.ConsentStoreArgs;
@@ -23,7 +23,7 @@ public class ConsentStore extends io.pulumi.resources.CustomResource {
      * Optional. Default time to live for Consents created in this store. Must be at least 24 hours. Updating this field will not affect the expiration time of existing consents.
      * 
      */
-    @OutputExport(name="defaultConsentTtl", type=String.class, parameters={})
+    @Export(name="defaultConsentTtl", type=String.class, parameters={})
     private Output<String> defaultConsentTtl;
 
     /**
@@ -37,7 +37,7 @@ public class ConsentStore extends io.pulumi.resources.CustomResource {
      * Optional. If `true`, UpdateConsent creates the Consent if it does not already exist. If unspecified, defaults to `false`.
      * 
      */
-    @OutputExport(name="enableConsentCreateOnUpdate", type=Boolean.class, parameters={})
+    @Export(name="enableConsentCreateOnUpdate", type=Boolean.class, parameters={})
     private Output<Boolean> enableConsentCreateOnUpdate;
 
     /**
@@ -51,7 +51,7 @@ public class ConsentStore extends io.pulumi.resources.CustomResource {
      * Optional. User-supplied key-value pairs used to organize consent stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62}. Label values must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63}. No more than 64 labels can be associated with a given store. For more information: https://cloud.google.com/healthcare/docs/how-tos/labeling-resources
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -65,7 +65,7 @@ public class ConsentStore extends io.pulumi.resources.CustomResource {
      * Resource name of the consent store, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}`. Cannot be changed after creation.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

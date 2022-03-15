@@ -28,7 +28,7 @@ import io.pulumi.azurenative.datamigration.outputs.ValidateMigrationInputSqlServ
 import io.pulumi.azurenative.datamigration.outputs.ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -56,7 +56,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * HTTP strong entity tag value. This is ignored if submitted.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -70,7 +70,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -84,7 +84,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * Custom task properties
      * 
      */
-    @OutputExport(name="properties", type=Object.class, parameters={})
+    @Export(name="properties", type=Object.class, parameters={})
     private Output<Object> properties;
 
     /**
@@ -98,7 +98,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

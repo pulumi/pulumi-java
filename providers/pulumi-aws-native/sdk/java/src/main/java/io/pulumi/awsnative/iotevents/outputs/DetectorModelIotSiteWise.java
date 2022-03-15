@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelAssetPropertyValue;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorModelIotSiteWise {
     /**
      * The ID of the asset that has the specified property. You can specify an expression.
@@ -34,13 +34,13 @@ public final class DetectorModelIotSiteWise {
     private final @Nullable String propertyId;
     private final DetectorModelAssetPropertyValue propertyValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorModelIotSiteWise(
-        @OutputCustomType.Parameter("assetId") @Nullable String assetId,
-        @OutputCustomType.Parameter("entryId") @Nullable String entryId,
-        @OutputCustomType.Parameter("propertyAlias") @Nullable String propertyAlias,
-        @OutputCustomType.Parameter("propertyId") @Nullable String propertyId,
-        @OutputCustomType.Parameter("propertyValue") DetectorModelAssetPropertyValue propertyValue) {
+        @CustomType.Parameter("assetId") @Nullable String assetId,
+        @CustomType.Parameter("entryId") @Nullable String entryId,
+        @CustomType.Parameter("propertyAlias") @Nullable String propertyAlias,
+        @CustomType.Parameter("propertyId") @Nullable String propertyId,
+        @CustomType.Parameter("propertyValue") DetectorModelAssetPropertyValue propertyValue) {
         this.assetId = assetId;
         this.entryId = entryId;
         this.propertyAlias = propertyAlias;

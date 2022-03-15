@@ -4,7 +4,7 @@
 package io.pulumi.aws.globalaccelerator.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ListenerPortRangeGetArgs extends io.pulumi.resources.Resource
      * The first port in the range of ports, inclusive.
      * 
      */
-    @InputImport(name="fromPort")
+    @Import(name="fromPort")
       private final @Nullable Output<Integer> fromPort;
 
     public Output<Integer> getFromPort() {
@@ -29,7 +29,7 @@ public final class ListenerPortRangeGetArgs extends io.pulumi.resources.Resource
      * The last port in the range of ports, inclusive.
      * 
      */
-    @InputImport(name="toPort")
+    @Import(name="toPort")
       private final @Nullable Output<Integer> toPort;
 
     public Output<Integer> getToPort() {

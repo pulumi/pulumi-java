@@ -8,7 +8,7 @@ import io.pulumi.awsnative.quicksight.inputs.AnalysisDecimalParameterArgs;
 import io.pulumi.awsnative.quicksight.inputs.AnalysisIntegerParameterArgs;
 import io.pulumi.awsnative.quicksight.inputs.AnalysisStringParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
      * <p>Date-time parameters.</p>
      * 
      */
-    @InputImport(name="dateTimeParameters")
+    @Import(name="dateTimeParameters")
       private final @Nullable Output<List<AnalysisDateTimeParameterArgs>> dateTimeParameters;
 
     public Output<List<AnalysisDateTimeParameterArgs>> getDateTimeParameters() {
@@ -37,7 +37,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
      * <p>Decimal parameters.</p>
      * 
      */
-    @InputImport(name="decimalParameters")
+    @Import(name="decimalParameters")
       private final @Nullable Output<List<AnalysisDecimalParameterArgs>> decimalParameters;
 
     public Output<List<AnalysisDecimalParameterArgs>> getDecimalParameters() {
@@ -48,7 +48,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
      * <p>Integer parameters.</p>
      * 
      */
-    @InputImport(name="integerParameters")
+    @Import(name="integerParameters")
       private final @Nullable Output<List<AnalysisIntegerParameterArgs>> integerParameters;
 
     public Output<List<AnalysisIntegerParameterArgs>> getIntegerParameters() {
@@ -59,7 +59,7 @@ public final class AnalysisParametersArgs extends io.pulumi.resources.ResourceAr
      * <p>String parameters.</p>
      * 
      */
-    @InputImport(name="stringParameters")
+    @Import(name="stringParameters")
       private final @Nullable Output<List<AnalysisStringParameterArgs>> stringParameters;
 
     public Output<List<AnalysisStringParameterArgs>> getStringParameters() {

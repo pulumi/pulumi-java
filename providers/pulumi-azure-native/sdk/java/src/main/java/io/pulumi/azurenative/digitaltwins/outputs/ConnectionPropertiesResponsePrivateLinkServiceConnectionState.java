@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.digitaltwins.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionPropertiesResponsePrivateLinkServiceConnectionState {
     /**
      * Actions required for a private endpoint connection.
@@ -27,11 +27,11 @@ public final class ConnectionPropertiesResponsePrivateLinkServiceConnectionState
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionPropertiesResponsePrivateLinkServiceConnectionState(
-        @OutputCustomType.Parameter("actionsRequired") @Nullable String actionsRequired,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("actionsRequired") @Nullable String actionsRequired,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("status") String status) {
         this.actionsRequired = actionsRequired;
         this.description = description;
         this.status = status;

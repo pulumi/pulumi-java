@@ -4,13 +4,13 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.LaunchTemplateInstanceMarketOptionsSpotOptions;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LaunchTemplateInstanceMarketOptions {
     /**
      * The market type. Can be `spot`.
@@ -23,10 +23,10 @@ public final class LaunchTemplateInstanceMarketOptions {
      */
     private final @Nullable LaunchTemplateInstanceMarketOptionsSpotOptions spotOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LaunchTemplateInstanceMarketOptions(
-        @OutputCustomType.Parameter("marketType") @Nullable String marketType,
-        @OutputCustomType.Parameter("spotOptions") @Nullable LaunchTemplateInstanceMarketOptionsSpotOptions spotOptions) {
+        @CustomType.Parameter("marketType") @Nullable String marketType,
+        @CustomType.Parameter("spotOptions") @Nullable LaunchTemplateInstanceMarketOptionsSpotOptions spotOptions) {
         this.marketType = marketType;
         this.spotOptions = spotOptions;
     }

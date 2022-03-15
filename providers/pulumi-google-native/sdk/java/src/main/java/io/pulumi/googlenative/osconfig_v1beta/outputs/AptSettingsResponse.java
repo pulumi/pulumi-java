@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AptSettingsResponse {
     /**
      * List of packages to exclude from update. These packages will be excluded
@@ -26,11 +26,11 @@ public final class AptSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AptSettingsResponse(
-        @OutputCustomType.Parameter("excludes") List<String> excludes,
-        @OutputCustomType.Parameter("exclusivePackages") List<String> exclusivePackages,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("excludes") List<String> excludes,
+        @CustomType.Parameter("exclusivePackages") List<String> exclusivePackages,
+        @CustomType.Parameter("type") String type) {
         this.excludes = excludes;
         this.exclusivePackages = exclusivePackages;
         this.type = type;

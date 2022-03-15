@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.gameservices.outputs.GetGameServerDeploymentRolloutGameServerConfigOverride;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGameServerDeploymentRolloutResult {
     private final String defaultGameServerConfig;
     private final String deploymentId;
@@ -27,14 +27,14 @@ public final class GetGameServerDeploymentRolloutResult {
      */
     private final String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGameServerDeploymentRolloutResult(
-        @OutputCustomType.Parameter("defaultGameServerConfig") String defaultGameServerConfig,
-        @OutputCustomType.Parameter("deploymentId") String deploymentId,
-        @OutputCustomType.Parameter("gameServerConfigOverrides") List<GetGameServerDeploymentRolloutGameServerConfigOverride> gameServerConfigOverrides,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") String project) {
+        @CustomType.Parameter("defaultGameServerConfig") String defaultGameServerConfig,
+        @CustomType.Parameter("deploymentId") String deploymentId,
+        @CustomType.Parameter("gameServerConfigOverrides") List<GetGameServerDeploymentRolloutGameServerConfigOverride> gameServerConfigOverrides,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") String project) {
         this.defaultGameServerConfig = defaultGameServerConfig;
         this.deploymentId = deploymentId;
         this.gameServerConfigOverrides = gameServerConfigOverrides;

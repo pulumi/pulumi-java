@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SdkHarnessContainerImageResponse {
     /**
      * A docker container image that resides in Google Container Registry.
@@ -26,11 +26,11 @@ public final class SdkHarnessContainerImageResponse {
      */
     private final Boolean useSingleCorePerContainer;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SdkHarnessContainerImageResponse(
-        @OutputCustomType.Parameter("containerImage") String containerImage,
-        @OutputCustomType.Parameter("environmentId") String environmentId,
-        @OutputCustomType.Parameter("useSingleCorePerContainer") Boolean useSingleCorePerContainer) {
+        @CustomType.Parameter("containerImage") String containerImage,
+        @CustomType.Parameter("environmentId") String environmentId,
+        @CustomType.Parameter("useSingleCorePerContainer") Boolean useSingleCorePerContainer) {
         this.containerImage = containerImage;
         this.environmentId = environmentId;
         this.useSingleCorePerContainer = useSingleCorePerContainer;

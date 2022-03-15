@@ -5,14 +5,14 @@ package io.pulumi.awsnative.lookoutmetrics.outputs;
 
 import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorConfig;
 import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorMetricSet;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAnomalyDetectorResult {
     /**
      * Configuration options for the AnomalyDetector
@@ -36,13 +36,13 @@ public final class GetAnomalyDetectorResult {
      */
     private final @Nullable List<AnomalyDetectorMetricSet> metricSetList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAnomalyDetectorResult(
-        @OutputCustomType.Parameter("anomalyDetectorConfig") @Nullable AnomalyDetectorConfig anomalyDetectorConfig,
-        @OutputCustomType.Parameter("anomalyDetectorDescription") @Nullable String anomalyDetectorDescription,
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
-        @OutputCustomType.Parameter("metricSetList") @Nullable List<AnomalyDetectorMetricSet> metricSetList) {
+        @CustomType.Parameter("anomalyDetectorConfig") @Nullable AnomalyDetectorConfig anomalyDetectorConfig,
+        @CustomType.Parameter("anomalyDetectorDescription") @Nullable String anomalyDetectorDescription,
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @CustomType.Parameter("metricSetList") @Nullable List<AnomalyDetectorMetricSet> metricSetList) {
         this.anomalyDetectorConfig = anomalyDetectorConfig;
         this.anomalyDetectorDescription = anomalyDetectorDescription;
         this.arn = arn;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.orbital.inputs;
 import io.pulumi.azurenative.orbital.enums.Protocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an end point.
      * 
      */
-    @InputImport(name="endPointName", required=true)
+    @Import(name="endPointName", required=true)
       private final Output<String> endPointName;
 
     public Output<String> getEndPointName() {
@@ -34,7 +34,7 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
      * IP Address.
      * 
      */
-    @InputImport(name="ipAddress", required=true)
+    @Import(name="ipAddress", required=true)
       private final Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -45,7 +45,7 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
      * TCP port to listen on to receive data.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Output<String> port;
 
     public Output<String> getPort() {
@@ -56,7 +56,7 @@ public final class EndPointArgs extends io.pulumi.resources.ResourceArgs {
      * Protocol either UDP or TCP.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<Either<String,Protocol>> protocol;
 
     public Output<Either<String,Protocol>> getProtocol() {

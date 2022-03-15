@@ -4,7 +4,7 @@
 package io.pulumi.aws.timestreamwrite.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class TableRetentionPropertiesArgs extends io.pulumi.resources.Reso
      * The duration for which data must be stored in the magnetic store. Minimum value of 1. Maximum value of 73000.
      * 
      */
-    @InputImport(name="magneticStoreRetentionPeriodInDays", required=true)
+    @Import(name="magneticStoreRetentionPeriodInDays", required=true)
       private final Output<Integer> magneticStoreRetentionPeriodInDays;
 
     public Output<Integer> getMagneticStoreRetentionPeriodInDays() {
@@ -28,7 +28,7 @@ public final class TableRetentionPropertiesArgs extends io.pulumi.resources.Reso
      * The duration for which data must be stored in the memory store. Minimum value of 1. Maximum value of 8766.
      * 
      */
-    @InputImport(name="memoryStoreRetentionPeriodInHours", required=true)
+    @Import(name="memoryStoreRetentionPeriodInHours", required=true)
       private final Output<Integer> memoryStoreRetentionPeriodInHours;
 
     public Output<Integer> getMemoryStoreRetentionPeriodInHours() {

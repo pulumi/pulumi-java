@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class TeradataLinkedServiceArgs extends io.pulumi.resources.Resourc
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -42,7 +42,7 @@ public final class TeradataLinkedServiceArgs extends io.pulumi.resources.Resourc
      * AuthenticationType to be used for connection.
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable Output<Either<String,TeradataAuthenticationType>> authenticationType;
 
     public Output<Either<String,TeradataAuthenticationType>> getAuthenticationType() {
@@ -53,7 +53,7 @@ public final class TeradataLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -64,7 +64,7 @@ public final class TeradataLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Teradata ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="connectionString")
+    @Import(name="connectionString")
       private final @Nullable Output<Object> connectionString;
 
     public Output<Object> getConnectionString() {
@@ -75,7 +75,7 @@ public final class TeradataLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -86,7 +86,7 @@ public final class TeradataLinkedServiceArgs extends io.pulumi.resources.Resourc
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -97,7 +97,7 @@ public final class TeradataLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -108,7 +108,7 @@ public final class TeradataLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Password for authentication.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
@@ -119,7 +119,7 @@ public final class TeradataLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Server name for connection. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="server")
+    @Import(name="server")
       private final @Nullable Output<Object> server;
 
     public Output<Object> getServer() {
@@ -131,7 +131,7 @@ public final class TeradataLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Expected value is 'Teradata'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -142,7 +142,7 @@ public final class TeradataLinkedServiceArgs extends io.pulumi.resources.Resourc
      * Username for authentication. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<Object> username;
 
     public Output<Object> getUsername() {

@@ -3,24 +3,24 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowErrorHandlingConfig {
     private final @Nullable String bucketName;
     private final @Nullable String bucketPrefix;
     private final @Nullable Boolean failOnFirstError;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowErrorHandlingConfig(
-        @OutputCustomType.Parameter("bucketName") @Nullable String bucketName,
-        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
-        @OutputCustomType.Parameter("failOnFirstError") @Nullable Boolean failOnFirstError) {
+        @CustomType.Parameter("bucketName") @Nullable String bucketName,
+        @CustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
+        @CustomType.Parameter("failOnFirstError") @Nullable Boolean failOnFirstError) {
         this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
         this.failOnFirstError = failOnFirstError;

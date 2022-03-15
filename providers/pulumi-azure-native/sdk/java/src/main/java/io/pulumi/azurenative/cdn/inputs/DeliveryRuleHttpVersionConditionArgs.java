@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.HttpVersionMatchConditionParametersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class DeliveryRuleHttpVersionConditionArgs extends io.pulumi.resour
      * Expected value is 'HttpVersion'.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class DeliveryRuleHttpVersionConditionArgs extends io.pulumi.resour
      * Defines the parameters for the condition.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final Output<HttpVersionMatchConditionParametersArgs> parameters;
 
     public Output<HttpVersionMatchConditionParametersArgs> getParameters() {

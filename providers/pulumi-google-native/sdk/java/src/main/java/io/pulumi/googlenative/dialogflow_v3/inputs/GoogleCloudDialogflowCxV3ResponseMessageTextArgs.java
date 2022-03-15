@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextArgs extends io.p
      * A collection of text responses.
      * 
      */
-    @InputImport(name="text", required=true)
+    @Import(name="text", required=true)
       private final Output<List<String>> text;
 
     public Output<List<String>> getText() {

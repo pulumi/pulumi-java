@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * Used to correct mistakes in the version numbering scheme.
      * 
      */
-    @InputImport(name="epoch", required=true)
+    @Import(name="epoch", required=true)
       private final Integer epoch;
 
     public Integer getEpoch() {
@@ -33,7 +33,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * Human readable version string. This string is of the form :- and is only set when kind is NORMAL.
      * 
      */
-    @InputImport(name="fullName", required=true)
+    @Import(name="fullName", required=true)
       private final String fullName;
 
     public String getFullName() {
@@ -44,7 +44,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * Whether this version is specifying part of an inclusive range. Grafeas does not have the capability to specify version ranges; instead we have fields that specify start version and end versions. At times this is insufficient - we also need to specify whether the version is included in the range or is excluded from the range. This boolean is expected to be set to true when the version is included in a range.
      * 
      */
-    @InputImport(name="inclusive", required=true)
+    @Import(name="inclusive", required=true)
       private final Boolean inclusive;
 
     public Boolean getInclusive() {
@@ -55,7 +55,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * Distinguishes between sentinel MIN/MAX versions and normal versions.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -66,7 +66,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * Required only when version kind is NORMAL. The main part of the version name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -77,7 +77,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * The iteration of the package build from the above version.
      * 
      */
-    @InputImport(name="revision", required=true)
+    @Import(name="revision", required=true)
       private final String revision;
 
     public String getRevision() {

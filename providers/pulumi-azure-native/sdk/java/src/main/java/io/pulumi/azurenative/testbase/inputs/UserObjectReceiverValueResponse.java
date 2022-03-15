@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class UserObjectReceiverValueResponse extends io.pulumi.resources.I
      * user object ids.
      * 
      */
-    @InputImport(name="userObjectIds")
+    @Import(name="userObjectIds")
       private final @Nullable List<String> userObjectIds;
 
     public List<String> getUserObjectIds() {

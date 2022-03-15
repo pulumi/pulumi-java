@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class ResourceTypeRegistrationPropertiesResponseFeaturesRule extend
 
     public static final ResourceTypeRegistrationPropertiesResponseFeaturesRule Empty = new ResourceTypeRegistrationPropertiesResponseFeaturesRule();
 
-    @InputImport(name="requiredFeaturesPolicy", required=true)
+    @Import(name="requiredFeaturesPolicy", required=true)
       private final String requiredFeaturesPolicy;
 
     public String getRequiredFeaturesPolicy() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleOverrideActionCountArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleOverrideActionNoneArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class WebAclRuleOverrideActionArgs extends io.pulumi.resources.Reso
      * Override the rule action setting to count (i.e., only count matches). Configured as an empty block `{}`.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<WebAclRuleOverrideActionCountArgs> count;
 
     public Output<WebAclRuleOverrideActionCountArgs> getCount() {
@@ -30,7 +30,7 @@ public final class WebAclRuleOverrideActionArgs extends io.pulumi.resources.Reso
      * Don't override the rule action setting. Configured as an empty block `{}`.
      * 
      */
-    @InputImport(name="none")
+    @Import(name="none")
       private final @Nullable Output<WebAclRuleOverrideActionNoneArgs> none;
 
     public Output<WebAclRuleOverrideActionNoneArgs> getNone() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
      * Indicates the account type. Allowed values include: EA, PAYG, Modern, Internal, Unknown.
      * 
      */
-    @InputImport(name="channel", required=true)
+    @Import(name="channel", required=true)
       private final String channel;
 
     public String getChannel() {
@@ -29,7 +29,7 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
      * Resource ID used by Resource Manager to uniquely identify the scope.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -40,7 +40,7 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
      * Display name for the scope.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -51,7 +51,7 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
      * Resource ID of the parent scope. For instance, subscription's resource ID for a resource group or a management group resource ID for a subscription.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable String parent;
 
     public Optional<String> getParent() {
@@ -62,7 +62,7 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
      * Indicates the status of the scope. Status only applies to subscriptions and billing accounts.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -73,7 +73,7 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
      * Indicates the type of modern account. Allowed values include: Individual, Enterprise, Partner, Indirect, NotApplicable
      * 
      */
-    @InputImport(name="subchannel", required=true)
+    @Import(name="subchannel", required=true)
       private final String subchannel;
 
     public String getSubchannel() {

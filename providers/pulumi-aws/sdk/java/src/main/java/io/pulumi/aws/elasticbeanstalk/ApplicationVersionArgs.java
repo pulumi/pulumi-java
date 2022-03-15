@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticbeanstalk;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * Name of the Beanstalk Application the version is associated with.
      * 
      */
-    @InputImport(name="application", required=true)
+    @Import(name="application", required=true)
       private final Output<String> application;
 
     public Output<String> getApplication() {
@@ -31,7 +31,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * S3 bucket that contains the Application Version source bundle.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -42,7 +42,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * Short description of the Application Version.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -53,7 +53,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * On delete, force an Application Version to be deleted when it may be in use by multiple Elastic Beanstalk Environments.
      * 
      */
-    @InputImport(name="forceDelete")
+    @Import(name="forceDelete")
       private final @Nullable Output<Boolean> forceDelete;
 
     public Output<Boolean> getForceDelete() {
@@ -64,7 +64,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * S3 object that is the Application Version source bundle.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -75,7 +75,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * Unique name for the this Application Version.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -86,7 +86,7 @@ public final class ApplicationVersionArgs extends io.pulumi.resources.ResourceAr
      * Key-value map of tags for the Elastic Beanstalk Application Version. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

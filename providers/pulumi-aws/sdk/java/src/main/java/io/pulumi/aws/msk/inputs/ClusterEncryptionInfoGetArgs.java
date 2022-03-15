@@ -5,7 +5,7 @@ package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.aws.msk.inputs.ClusterEncryptionInfoEncryptionInTransitGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ClusterEncryptionInfoGetArgs extends io.pulumi.resources.Reso
      * You may specify a KMS key short ID or ARN (it will always output an ARN) to use for encrypting your data at rest.  If no key is specified, an AWS managed KMS ('aws/msk' managed service) key will be used for encrypting the data at rest.
      * 
      */
-    @InputImport(name="encryptionAtRestKmsKeyArn")
+    @Import(name="encryptionAtRestKmsKeyArn")
       private final @Nullable Output<String> encryptionAtRestKmsKeyArn;
 
     public Output<String> getEncryptionAtRestKmsKeyArn() {
@@ -30,7 +30,7 @@ public final class ClusterEncryptionInfoGetArgs extends io.pulumi.resources.Reso
      * Configuration block to specify encryption in transit. See below.
      * 
      */
-    @InputImport(name="encryptionInTransit")
+    @Import(name="encryptionInTransit")
       private final @Nullable Output<ClusterEncryptionInfoEncryptionInTransitGetArgs> encryptionInTransit;
 
     public Output<ClusterEncryptionInfoEncryptionInTransitGetArgs> getEncryptionInTransit() {

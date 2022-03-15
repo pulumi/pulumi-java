@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudbuild_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkerConfigResponse {
     /**
      * Size of the disk attached to the worker, in GB. See [Worker pool config file](https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). Specify a value of up to 1000. If `0` is specified, Cloud Build will use a standard disk size.
@@ -26,11 +26,11 @@ public final class WorkerConfigResponse {
      */
     private final Boolean noExternalIp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkerConfigResponse(
-        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("noExternalIp") Boolean noExternalIp) {
+        @CustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("noExternalIp") Boolean noExternalIp) {
         this.diskSizeGb = diskSizeGb;
         this.machineType = machineType;
         this.noExternalIp = noExternalIp;

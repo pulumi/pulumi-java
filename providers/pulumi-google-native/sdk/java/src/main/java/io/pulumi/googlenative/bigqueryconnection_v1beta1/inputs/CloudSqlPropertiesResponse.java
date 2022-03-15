@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigqueryconnection_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigqueryconnection_v1beta1.inputs.CloudSqlCredentialResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CloudSqlPropertiesResponse extends io.pulumi.resources.Invoke
      * Input only. Cloud SQL credential.
      * 
      */
-    @InputImport(name="credential", required=true)
+    @Import(name="credential", required=true)
       private final CloudSqlCredentialResponse credential;
 
     public CloudSqlCredentialResponse getCredential() {
@@ -32,7 +32,7 @@ public final class CloudSqlPropertiesResponse extends io.pulumi.resources.Invoke
      * Database name.
      * 
      */
-    @InputImport(name="database", required=true)
+    @Import(name="database", required=true)
       private final String database;
 
     public String getDatabase() {
@@ -43,7 +43,7 @@ public final class CloudSqlPropertiesResponse extends io.pulumi.resources.Invoke
      * Cloud SQL instance ID in the form `project:location:instance`.
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final String instanceId;
 
     public String getInstanceId() {
@@ -54,7 +54,7 @@ public final class CloudSqlPropertiesResponse extends io.pulumi.resources.Invoke
      * Type of the Cloud SQL database.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

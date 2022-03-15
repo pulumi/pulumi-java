@@ -7,14 +7,14 @@ import io.pulumi.azurenative.compute.outputs.CloudServiceExtensionProfileRespons
 import io.pulumi.azurenative.compute.outputs.CloudServiceNetworkProfileResponse;
 import io.pulumi.azurenative.compute.outputs.CloudServiceOsProfileResponse;
 import io.pulumi.azurenative.compute.outputs.CloudServiceRoleProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CloudServicePropertiesResponse {
     /**
      * (Optional) Indicates whether the role sku properties (roleProfile.roles.sku) specified in the model/template should override the role instance count and vm size specified in the .cscfg and .csdef respectively.
@@ -83,20 +83,20 @@ public final class CloudServicePropertiesResponse {
      */
     private final @Nullable String upgradeMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudServicePropertiesResponse(
-        @OutputCustomType.Parameter("allowModelOverride") @Nullable Boolean allowModelOverride,
-        @OutputCustomType.Parameter("configuration") @Nullable String configuration,
-        @OutputCustomType.Parameter("configurationUrl") @Nullable String configurationUrl,
-        @OutputCustomType.Parameter("extensionProfile") @Nullable CloudServiceExtensionProfileResponse extensionProfile,
-        @OutputCustomType.Parameter("networkProfile") @Nullable CloudServiceNetworkProfileResponse networkProfile,
-        @OutputCustomType.Parameter("osProfile") @Nullable CloudServiceOsProfileResponse osProfile,
-        @OutputCustomType.Parameter("packageUrl") @Nullable String packageUrl,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("roleProfile") @Nullable CloudServiceRoleProfileResponse roleProfile,
-        @OutputCustomType.Parameter("startCloudService") @Nullable Boolean startCloudService,
-        @OutputCustomType.Parameter("uniqueId") String uniqueId,
-        @OutputCustomType.Parameter("upgradeMode") @Nullable String upgradeMode) {
+        @CustomType.Parameter("allowModelOverride") @Nullable Boolean allowModelOverride,
+        @CustomType.Parameter("configuration") @Nullable String configuration,
+        @CustomType.Parameter("configurationUrl") @Nullable String configurationUrl,
+        @CustomType.Parameter("extensionProfile") @Nullable CloudServiceExtensionProfileResponse extensionProfile,
+        @CustomType.Parameter("networkProfile") @Nullable CloudServiceNetworkProfileResponse networkProfile,
+        @CustomType.Parameter("osProfile") @Nullable CloudServiceOsProfileResponse osProfile,
+        @CustomType.Parameter("packageUrl") @Nullable String packageUrl,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("roleProfile") @Nullable CloudServiceRoleProfileResponse roleProfile,
+        @CustomType.Parameter("startCloudService") @Nullable Boolean startCloudService,
+        @CustomType.Parameter("uniqueId") String uniqueId,
+        @CustomType.Parameter("upgradeMode") @Nullable String upgradeMode) {
         this.allowModelOverride = allowModelOverride;
         this.configuration = configuration;
         this.configurationUrl = configurationUrl;

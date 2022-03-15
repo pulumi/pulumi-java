@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetInboundNatRuleArgs extends io.pulumi.resources.InvokeArgs 
      * Expands referenced resources.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -29,7 +29,7 @@ public final class GetInboundNatRuleArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the inbound nat rule.
      * 
      */
-    @InputImport(name="inboundNatRuleName", required=true)
+    @Import(name="inboundNatRuleName", required=true)
       private final String inboundNatRuleName;
 
     public String getInboundNatRuleName() {
@@ -40,7 +40,7 @@ public final class GetInboundNatRuleArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the load balancer.
      * 
      */
-    @InputImport(name="loadBalancerName", required=true)
+    @Import(name="loadBalancerName", required=true)
       private final String loadBalancerName;
 
     public String getLoadBalancerName() {
@@ -51,7 +51,7 @@ public final class GetInboundNatRuleArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

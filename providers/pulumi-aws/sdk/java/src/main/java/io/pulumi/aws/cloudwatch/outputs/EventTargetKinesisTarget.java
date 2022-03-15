@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventTargetKinesisTarget {
     /**
      * The JSON path to be extracted from the event and used as the partition key.
@@ -17,8 +17,8 @@ public final class EventTargetKinesisTarget {
      */
     private final @Nullable String partitionKeyPath;
 
-    @OutputCustomType.Constructor
-    private EventTargetKinesisTarget(@OutputCustomType.Parameter("partitionKeyPath") @Nullable String partitionKeyPath) {
+    @CustomType.Constructor
+    private EventTargetKinesisTarget(@CustomType.Parameter("partitionKeyPath") @Nullable String partitionKeyPath) {
         this.partitionKeyPath = partitionKeyPath;
     }
 

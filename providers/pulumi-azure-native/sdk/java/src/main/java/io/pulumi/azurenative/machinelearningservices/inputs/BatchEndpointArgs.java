@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.enums.EndpointAuthMode;
 import io.pulumi.azurenative.machinelearningservices.inputs.EndpointAuthKeysArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Enum to determine endpoint authentication mode.
      * 
      */
-    @InputImport(name="authMode")
+    @Import(name="authMode")
       private final @Nullable Output<Either<String,EndpointAuthMode>> authMode;
 
     public Output<Either<String,EndpointAuthMode>> getAuthMode() {
@@ -38,7 +38,7 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the inference endpoint.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -50,7 +50,7 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * This property will always be returned as null. AuthKey values must be retrieved using the ListKeys API.
      * 
      */
-    @InputImport(name="keys")
+    @Import(name="keys")
       private final @Nullable Output<EndpointAuthKeysArgs> keys;
 
     public Output<EndpointAuthKeysArgs> getKeys() {
@@ -61,7 +61,7 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Property dictionary. Properties can be added, but not removed or altered.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -72,7 +72,7 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Traffic rules on how the traffic will be routed across deployments.
      * 
      */
-    @InputImport(name="traffic")
+    @Import(name="traffic")
       private final @Nullable Output<Map<String,Integer>> traffic;
 
     public Output<Map<String,Integer>> getTraffic() {

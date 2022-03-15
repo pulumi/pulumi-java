@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PosixFilesystemArgs extends io.pulumi.resources.ResourceArgs 
      * Root directory path to the filesystem.
      * 
      */
-    @InputImport(name="rootDirectory")
+    @Import(name="rootDirectory")
       private final @Nullable Output<String> rootDirectory;
 
     public Output<String> getRootDirectory() {

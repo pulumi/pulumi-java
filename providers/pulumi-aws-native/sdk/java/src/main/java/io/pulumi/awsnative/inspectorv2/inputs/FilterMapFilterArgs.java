@@ -5,7 +5,7 @@ package io.pulumi.awsnative.inspectorv2.inputs;
 
 import io.pulumi.awsnative.inspectorv2.enums.FilterMapComparison;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,21 +15,21 @@ public final class FilterMapFilterArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final FilterMapFilterArgs Empty = new FilterMapFilterArgs();
 
-    @InputImport(name="comparison", required=true)
+    @Import(name="comparison", required=true)
       private final Output<FilterMapComparison> comparison;
 
     public Output<FilterMapComparison> getComparison() {
         return this.comparison;
     }
 
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
         return this.key == null ? Output.empty() : this.key;
     }
 
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

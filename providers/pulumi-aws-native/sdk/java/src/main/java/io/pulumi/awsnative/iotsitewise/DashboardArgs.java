@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotsitewise;
 
 import io.pulumi.awsnative.iotsitewise.inputs.DashboardTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * The dashboard definition specified in a JSON literal.
      * 
      */
-    @InputImport(name="dashboardDefinition", required=true)
+    @Import(name="dashboardDefinition", required=true)
       private final Output<String> dashboardDefinition;
 
     public Output<String> getDashboardDefinition() {
@@ -31,7 +31,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * A description for the dashboard.
      * 
      */
-    @InputImport(name="dashboardDescription", required=true)
+    @Import(name="dashboardDescription", required=true)
       private final Output<String> dashboardDescription;
 
     public Output<String> getDashboardDescription() {
@@ -42,7 +42,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * A friendly name for the dashboard.
      * 
      */
-    @InputImport(name="dashboardName")
+    @Import(name="dashboardName")
       private final @Nullable Output<String> dashboardName;
 
     public Output<String> getDashboardName() {
@@ -53,7 +53,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the project in which to create the dashboard.
      * 
      */
-    @InputImport(name="projectId")
+    @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
     public Output<String> getProjectId() {
@@ -64,7 +64,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * A list of key-value pairs that contain metadata for the dashboard.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DashboardTagArgs>> tags;
 
     public Output<List<DashboardTagArgs>> getTags() {

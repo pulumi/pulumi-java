@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssoadmin;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class PermissionSetInlinePolicyArgs extends io.pulumi.resources.Res
      * The IAM inline policy to attach to a Permission Set.
      * 
      */
-    @InputImport(name="inlinePolicy", required=true)
+    @Import(name="inlinePolicy", required=true)
       private final Output<String> inlinePolicy;
 
     public Output<String> getInlinePolicy() {
@@ -28,7 +28,7 @@ public final class PermissionSetInlinePolicyArgs extends io.pulumi.resources.Res
      * The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
      * 
      */
-    @InputImport(name="instanceArn", required=true)
+    @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
     public Output<String> getInstanceArn() {
@@ -39,7 +39,7 @@ public final class PermissionSetInlinePolicyArgs extends io.pulumi.resources.Res
      * The Amazon Resource Name (ARN) of the Permission Set.
      * 
      */
-    @InputImport(name="permissionSetArn", required=true)
+    @Import(name="permissionSetArn", required=true)
       private final Output<String> permissionSetArn;
 
     public Output<String> getPermissionSetArn() {

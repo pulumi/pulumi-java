@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClientIPConfig {
     /**
      * timeoutSeconds specifies the seconds of ClientIP type session sticky time. The value must be >0 && <=86400(for 1 day) if ServiceAffinity == "ClientIP". Default value is 10800(for 3 hours).
@@ -17,8 +17,8 @@ public final class ClientIPConfig {
      */
     private final @Nullable Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor
-    private ClientIPConfig(@OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
+    @CustomType.Constructor
+    private ClientIPConfig(@CustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
     }
 

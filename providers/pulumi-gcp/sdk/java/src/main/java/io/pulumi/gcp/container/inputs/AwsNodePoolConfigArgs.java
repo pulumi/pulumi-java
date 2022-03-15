@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.AwsNodePoolConfigConfigEncryptionArgs;
 import io.pulumi.gcp.container.inputs.AwsNodePoolConfigRootVolumeArgs;
 import io.pulumi.gcp.container.inputs.AwsNodePoolConfigSshConfigArgs;
@@ -24,7 +24,7 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
      * Required. The ARN of the AWS KMS key used to encrypt node pool configuration.
      * 
      */
-    @InputImport(name="configEncryption", required=true)
+    @Import(name="configEncryption", required=true)
       private final Output<AwsNodePoolConfigConfigEncryptionArgs> configEncryption;
 
     public Output<AwsNodePoolConfigConfigEncryptionArgs> getConfigEncryption() {
@@ -35,7 +35,7 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
      * Required. The name of the AWS IAM role assigned to nodes in the pool.
      * 
      */
-    @InputImport(name="iamInstanceProfile", required=true)
+    @Import(name="iamInstanceProfile", required=true)
       private final Output<String> iamInstanceProfile;
 
     public Output<String> getIamInstanceProfile() {
@@ -46,7 +46,7 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
      * Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -57,7 +57,7 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
      * Optional. The initial labels assigned to nodes of this node pool. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -68,7 +68,7 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
      * Optional. Template for the root volume provisioned for node pool nodes. Volumes will be provisioned in the availability zone assigned to the node pool subnet. When unspecified, it defaults to 32 GiB with the GP2 volume type.
      * 
      */
-    @InputImport(name="rootVolume")
+    @Import(name="rootVolume")
       private final @Nullable Output<AwsNodePoolConfigRootVolumeArgs> rootVolume;
 
     public Output<AwsNodePoolConfigRootVolumeArgs> getRootVolume() {
@@ -79,7 +79,7 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
      * Optional. The IDs of additional security groups to add to nodes in this pool. The manager will automatically create security groups with minimum rules needed for a functioning cluster.
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -90,7 +90,7 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
      * Optional. The SSH configuration.
      * 
      */
-    @InputImport(name="sshConfig")
+    @Import(name="sshConfig")
       private final @Nullable Output<AwsNodePoolConfigSshConfigArgs> sshConfig;
 
     public Output<AwsNodePoolConfigSshConfigArgs> getSshConfig() {
@@ -101,7 +101,7 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
      * Optional. Key/value metadata to assign to each underlying AWS resource. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -112,7 +112,7 @@ public final class AwsNodePoolConfigArgs extends io.pulumi.resources.ResourceArg
      * Optional. The initial taints assigned to nodes of this node pool.
      * 
      */
-    @InputImport(name="taints")
+    @Import(name="taints")
       private final @Nullable Output<List<AwsNodePoolConfigTaintArgs>> taints;
 
     public Output<List<AwsNodePoolConfigTaintArgs>> getTaints() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.cloudformation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StackSetParameter {
     /**
      * The key associated with the parameter. If you don't specify a key and value for a particular parameter, AWS CloudFormation uses the default value that is specified in your template.
@@ -20,10 +20,10 @@ public final class StackSetParameter {
      */
     private final String parameterValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StackSetParameter(
-        @OutputCustomType.Parameter("parameterKey") String parameterKey,
-        @OutputCustomType.Parameter("parameterValue") String parameterValue) {
+        @CustomType.Parameter("parameterKey") String parameterKey,
+        @CustomType.Parameter("parameterValue") String parameterValue) {
         this.parameterKey = parameterKey;
         this.parameterValue = parameterValue;
     }

@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionBackendServiceConnectionTrackingPolicy {
     /**
      * Specifies connection persistence when backends are unhealthy.
@@ -51,11 +51,11 @@ public final class RegionBackendServiceConnectionTrackingPolicy {
      */
     private final @Nullable String trackingMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionBackendServiceConnectionTrackingPolicy(
-        @OutputCustomType.Parameter("connectionPersistenceOnUnhealthyBackends") @Nullable String connectionPersistenceOnUnhealthyBackends,
-        @OutputCustomType.Parameter("idleTimeoutSec") @Nullable Integer idleTimeoutSec,
-        @OutputCustomType.Parameter("trackingMode") @Nullable String trackingMode) {
+        @CustomType.Parameter("connectionPersistenceOnUnhealthyBackends") @Nullable String connectionPersistenceOnUnhealthyBackends,
+        @CustomType.Parameter("idleTimeoutSec") @Nullable Integer idleTimeoutSec,
+        @CustomType.Parameter("trackingMode") @Nullable String trackingMode) {
         this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
         this.idleTimeoutSec = idleTimeoutSec;
         this.trackingMode = trackingMode;

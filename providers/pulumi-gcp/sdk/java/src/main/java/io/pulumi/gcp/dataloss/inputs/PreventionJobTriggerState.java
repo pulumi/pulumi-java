@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerTriggerGetArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * A description of the job trigger.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * User set display name of the job trigger.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -44,7 +44,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="inspectJob")
+    @Import(name="inspectJob")
       private final @Nullable Output<PreventionJobTriggerInspectJobGetArgs> inspectJob;
 
     public Output<PreventionJobTriggerInspectJobGetArgs> getInspectJob() {
@@ -55,7 +55,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * The timestamp of the last time this trigger executed.
      * 
      */
-    @InputImport(name="lastRunTime")
+    @Import(name="lastRunTime")
       private final @Nullable Output<String> lastRunTime;
 
     public Output<String> getLastRunTime() {
@@ -66,7 +66,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * The name of the Datastore kind.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -78,7 +78,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * or `projects/{{project}}/locations/{{location}}`
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -91,7 +91,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -103,7 +103,7 @@ public final class PreventionJobTriggerState extends io.pulumi.resources.Resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="triggers")
+    @Import(name="triggers")
       private final @Nullable Output<List<PreventionJobTriggerTriggerGetArgs>> triggers;
 
     public Output<List<PreventionJobTriggerTriggerGetArgs>> getTriggers() {

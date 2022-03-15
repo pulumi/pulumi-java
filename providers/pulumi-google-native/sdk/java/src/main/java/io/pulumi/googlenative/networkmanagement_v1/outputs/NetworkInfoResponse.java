@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInfoResponse {
     /**
      * Name of a Compute Engine network.
@@ -25,11 +25,11 @@ public final class NetworkInfoResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInfoResponse(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("matchedIpRange") String matchedIpRange,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("matchedIpRange") String matchedIpRange,
+        @CustomType.Parameter("uri") String uri) {
         this.displayName = displayName;
         this.matchedIpRange = matchedIpRange;
         this.uri = uri;

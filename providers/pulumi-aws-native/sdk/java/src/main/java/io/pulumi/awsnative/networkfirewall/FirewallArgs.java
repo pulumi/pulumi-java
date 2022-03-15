@@ -6,7 +6,7 @@ package io.pulumi.awsnative.networkfirewall;
 import io.pulumi.awsnative.networkfirewall.inputs.FirewallSubnetMappingArgs;
 import io.pulumi.awsnative.networkfirewall.inputs.FirewallTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,63 +18,63 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FirewallArgs Empty = new FirewallArgs();
 
-    @InputImport(name="deleteProtection")
+    @Import(name="deleteProtection")
       private final @Nullable Output<Boolean> deleteProtection;
 
     public Output<Boolean> getDeleteProtection() {
         return this.deleteProtection == null ? Output.empty() : this.deleteProtection;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="firewallName")
+    @Import(name="firewallName")
       private final @Nullable Output<String> firewallName;
 
     public Output<String> getFirewallName() {
         return this.firewallName == null ? Output.empty() : this.firewallName;
     }
 
-    @InputImport(name="firewallPolicyArn", required=true)
+    @Import(name="firewallPolicyArn", required=true)
       private final Output<String> firewallPolicyArn;
 
     public Output<String> getFirewallPolicyArn() {
         return this.firewallPolicyArn;
     }
 
-    @InputImport(name="firewallPolicyChangeProtection")
+    @Import(name="firewallPolicyChangeProtection")
       private final @Nullable Output<Boolean> firewallPolicyChangeProtection;
 
     public Output<Boolean> getFirewallPolicyChangeProtection() {
         return this.firewallPolicyChangeProtection == null ? Output.empty() : this.firewallPolicyChangeProtection;
     }
 
-    @InputImport(name="subnetChangeProtection")
+    @Import(name="subnetChangeProtection")
       private final @Nullable Output<Boolean> subnetChangeProtection;
 
     public Output<Boolean> getSubnetChangeProtection() {
         return this.subnetChangeProtection == null ? Output.empty() : this.subnetChangeProtection;
     }
 
-    @InputImport(name="subnetMappings", required=true)
+    @Import(name="subnetMappings", required=true)
       private final Output<List<FirewallSubnetMappingArgs>> subnetMappings;
 
     public Output<List<FirewallSubnetMappingArgs>> getSubnetMappings() {
         return this.subnetMappings;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<FirewallTagArgs>> tags;
 
     public Output<List<FirewallTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
     public Output<String> getVpcId() {

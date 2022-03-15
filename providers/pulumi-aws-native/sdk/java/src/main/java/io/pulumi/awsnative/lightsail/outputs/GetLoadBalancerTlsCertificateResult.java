@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLoadBalancerTlsCertificateResult {
     /**
      * When true, the SSL/TLS certificate is attached to the Lightsail load balancer.
@@ -24,11 +24,11 @@ public final class GetLoadBalancerTlsCertificateResult {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLoadBalancerTlsCertificateResult(
-        @OutputCustomType.Parameter("isAttached") @Nullable Boolean isAttached,
-        @OutputCustomType.Parameter("loadBalancerTlsCertificateArn") @Nullable String loadBalancerTlsCertificateArn,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("isAttached") @Nullable Boolean isAttached,
+        @CustomType.Parameter("loadBalancerTlsCertificateArn") @Nullable String loadBalancerTlsCertificateArn,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.isAttached = isAttached;
         this.loadBalancerTlsCertificateArn = loadBalancerTlsCertificateArn;
         this.status = status;

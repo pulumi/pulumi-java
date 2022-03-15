@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobScheduleResponse {
     /**
      * Whether or not the schedule is enabled.
@@ -38,13 +38,13 @@ public final class JobScheduleResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobScheduleResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("interval") @Nullable String interval,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("interval") @Nullable String interval,
+        @CustomType.Parameter("startTime") @Nullable String startTime,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.enabled = enabled;
         this.endTime = endTime;
         this.interval = interval;

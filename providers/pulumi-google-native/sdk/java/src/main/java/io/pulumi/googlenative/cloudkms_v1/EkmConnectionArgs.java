@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudkms_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudkms_v1.inputs.ServiceResolverArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EkmConnectionArgs Empty = new EkmConnectionArgs();
 
-    @InputImport(name="ekmConnectionId", required=true)
+    @Import(name="ekmConnectionId", required=true)
       private final Output<String> ekmConnectionId;
 
     public Output<String> getEkmConnectionId() {
@@ -27,21 +27,21 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * This checksum is computed by the server based on the value of other fields, and may be sent on update requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -52,7 +52,7 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * A list of ServiceResolvers where the EKM can be reached. There should be one ServiceResolver per EKM replica. Currently, only a single ServiceResolver is supported.
      * 
      */
-    @InputImport(name="serviceResolvers")
+    @Import(name="serviceResolvers")
       private final @Nullable Output<List<ServiceResolverArgs>> serviceResolvers;
 
     public Output<List<ServiceResolverArgs>> getServiceResolvers() {

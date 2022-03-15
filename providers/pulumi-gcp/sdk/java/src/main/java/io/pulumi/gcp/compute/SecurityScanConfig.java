@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.SecurityScanConfigArgs;
@@ -55,7 +55,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="authentication", type=SecurityScanConfigAuthentication.class, parameters={})
+    @Export(name="authentication", type=SecurityScanConfigAuthentication.class, parameters={})
     private Output</* @Nullable */ SecurityScanConfigAuthentication> authentication;
 
     /**
@@ -72,7 +72,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * https://cloud.google.com/security-scanner/docs/excluded-urls
      * 
      */
-    @OutputExport(name="blacklistPatterns", type=List.class, parameters={String.class})
+    @Export(name="blacklistPatterns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> blacklistPatterns;
 
     /**
@@ -87,7 +87,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * The user provider display name of the ScanConfig.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -103,7 +103,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * Possible values are `ENABLED` and `DISABLED`.
      * 
      */
-    @OutputExport(name="exportToSecurityCommandCenter", type=String.class, parameters={})
+    @Export(name="exportToSecurityCommandCenter", type=String.class, parameters={})
     private Output</* @Nullable */ String> exportToSecurityCommandCenter;
 
     /**
@@ -120,7 +120,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * Defaults to 15.
      * 
      */
-    @OutputExport(name="maxQps", type=Integer.class, parameters={})
+    @Export(name="maxQps", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxQps;
 
     /**
@@ -135,7 +135,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -150,7 +150,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -166,7 +166,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="schedule", type=SecurityScanConfigSchedule.class, parameters={})
+    @Export(name="schedule", type=SecurityScanConfigSchedule.class, parameters={})
     private Output</* @Nullable */ SecurityScanConfigSchedule> schedule;
 
     /**
@@ -181,7 +181,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * The starting URLs from which the scanner finds site pages.
      * 
      */
-    @OutputExport(name="startingUrls", type=List.class, parameters={String.class})
+    @Export(name="startingUrls", type=List.class, parameters={String.class})
     private Output<List<String>> startingUrls;
 
     /**
@@ -196,7 +196,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * Each value may be one of `APP_ENGINE` and `COMPUTE`.
      * 
      */
-    @OutputExport(name="targetPlatforms", type=List.class, parameters={String.class})
+    @Export(name="targetPlatforms", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> targetPlatforms;
 
     /**
@@ -213,7 +213,7 @@ public class SecurityScanConfig extends io.pulumi.resources.CustomResource {
      * Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, and `SAFARI_IPHONE`.
      * 
      */
-    @OutputExport(name="userAgent", type=String.class, parameters={})
+    @Export(name="userAgent", type=String.class, parameters={})
     private Output</* @Nullable */ String> userAgent;
 
     /**

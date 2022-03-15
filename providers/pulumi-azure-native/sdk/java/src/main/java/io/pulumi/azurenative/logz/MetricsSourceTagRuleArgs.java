@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logz;
 
 import io.pulumi.azurenative.logz.inputs.MetricsTagRulesPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
      * Metrics Account resource name
      * 
      */
-    @InputImport(name="metricsSourceName", required=true)
+    @Import(name="metricsSourceName", required=true)
       private final Output<String> metricsSourceName;
 
     public Output<String> getMetricsSourceName() {
@@ -30,7 +30,7 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
      * Monitor resource name
      * 
      */
-    @InputImport(name="monitorName", required=true)
+    @Import(name="monitorName", required=true)
       private final Output<String> monitorName;
 
     public Output<String> getMonitorName() {
@@ -41,7 +41,7 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
      * Definition of the properties for a TagRules resource.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<MetricsTagRulesPropertiesArgs> properties;
 
     public Output<MetricsTagRulesPropertiesArgs> getProperties() {
@@ -52,14 +52,14 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
-    @InputImport(name="ruleSetName")
+    @Import(name="ruleSetName")
       private final @Nullable Output<String> ruleSetName;
 
     public Output<String> getRuleSetName() {

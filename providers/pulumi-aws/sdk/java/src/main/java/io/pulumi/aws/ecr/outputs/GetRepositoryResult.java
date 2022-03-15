@@ -5,13 +5,13 @@ package io.pulumi.aws.ecr.outputs;
 
 import io.pulumi.aws.ecr.outputs.GetRepositoryEncryptionConfiguration;
 import io.pulumi.aws.ecr.outputs.GetRepositoryImageScanningConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRepositoryResult {
     /**
      * Full ARN of the repository.
@@ -51,17 +51,17 @@ public final class GetRepositoryResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRepositoryResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("encryptionConfigurations") List<GetRepositoryEncryptionConfiguration> encryptionConfigurations,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("imageScanningConfigurations") List<GetRepositoryImageScanningConfiguration> imageScanningConfigurations,
-        @OutputCustomType.Parameter("imageTagMutability") String imageTagMutability,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("registryId") String registryId,
-        @OutputCustomType.Parameter("repositoryUrl") String repositoryUrl,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("encryptionConfigurations") List<GetRepositoryEncryptionConfiguration> encryptionConfigurations,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("imageScanningConfigurations") List<GetRepositoryImageScanningConfiguration> imageScanningConfigurations,
+        @CustomType.Parameter("imageTagMutability") String imageTagMutability,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("registryId") String registryId,
+        @CustomType.Parameter("repositoryUrl") String repositoryUrl,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.encryptionConfigurations = encryptionConfigurations;
         this.id = id;

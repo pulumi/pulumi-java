@@ -5,7 +5,7 @@ package io.pulumi.awsnative.greengrassv2;
 
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaFunctionRecipeSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class ComponentVersionArgs extends io.pulumi.resources.ResourceArgs
 
     public static final ComponentVersionArgs Empty = new ComponentVersionArgs();
 
-    @InputImport(name="inlineRecipe")
+    @Import(name="inlineRecipe")
       private final @Nullable Output<String> inlineRecipe;
 
     public Output<String> getInlineRecipe() {
         return this.inlineRecipe == null ? Output.empty() : this.inlineRecipe;
     }
 
-    @InputImport(name="lambdaFunction")
+    @Import(name="lambdaFunction")
       private final @Nullable Output<ComponentVersionLambdaFunctionRecipeSourceArgs> lambdaFunction;
 
     public Output<ComponentVersionLambdaFunctionRecipeSourceArgs> getLambdaFunction() {
         return this.lambdaFunction == null ? Output.empty() : this.lambdaFunction;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
     public Output<Object> getTags() {

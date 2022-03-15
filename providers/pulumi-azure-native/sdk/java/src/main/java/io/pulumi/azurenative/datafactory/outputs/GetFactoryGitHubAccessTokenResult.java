@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFactoryGitHubAccessTokenResult {
     /**
      * GitHub access token.
@@ -17,8 +17,8 @@ public final class GetFactoryGitHubAccessTokenResult {
      */
     private final @Nullable String gitHubAccessToken;
 
-    @OutputCustomType.Constructor
-    private GetFactoryGitHubAccessTokenResult(@OutputCustomType.Parameter("gitHubAccessToken") @Nullable String gitHubAccessToken) {
+    @CustomType.Constructor
+    private GetFactoryGitHubAccessTokenResult(@CustomType.Parameter("gitHubAccessToken") @Nullable String gitHubAccessToken) {
         this.gitHubAccessToken = gitHubAccessToken;
     }
 

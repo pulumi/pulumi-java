@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class UserPoolSmsConfigurationArgs extends io.pulumi.resources.Reso
      * External ID used in IAM role trust relationships. For more information about using external IDs, see [How to Use an External ID When Granting Access to Your AWS Resources to a Third Party](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html).
      * 
      */
-    @InputImport(name="externalId", required=true)
+    @Import(name="externalId", required=true)
       private final Output<String> externalId;
 
     public Output<String> getExternalId() {
@@ -28,7 +28,7 @@ public final class UserPoolSmsConfigurationArgs extends io.pulumi.resources.Reso
      * ARN of the Amazon SNS caller. This is usually the IAM role that you've given Cognito permission to assume.
      * 
      */
-    @InputImport(name="snsCallerArn", required=true)
+    @Import(name="snsCallerArn", required=true)
       private final Output<String> snsCallerArn;
 
     public Output<String> getSnsCallerArn() {

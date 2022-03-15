@@ -5,13 +5,13 @@ package io.pulumi.awsnative.route53resolver.outputs;
 
 import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigAssociationError;
 import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigAssociationStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResolverQueryLoggingConfigAssociationResult {
     /**
      * Rfc3339TimeString
@@ -39,13 +39,13 @@ public final class GetResolverQueryLoggingConfigAssociationResult {
      */
     private final @Nullable ResolverQueryLoggingConfigAssociationStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResolverQueryLoggingConfigAssociationResult(
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("error") @Nullable ResolverQueryLoggingConfigAssociationError error,
-        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("status") @Nullable ResolverQueryLoggingConfigAssociationStatus status) {
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("error") @Nullable ResolverQueryLoggingConfigAssociationError error,
+        @CustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("status") @Nullable ResolverQueryLoggingConfigAssociationStatus status) {
         this.creationTime = creationTime;
         this.error = error;
         this.errorMessage = errorMessage;

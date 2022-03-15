@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.SharedPublicIpAddressConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInterfacePropertiesResponse {
     /**
      * The DNS name.
@@ -58,17 +58,17 @@ public final class NetworkInterfacePropertiesResponse {
      */
     private final @Nullable String virtualNetworkId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInterfacePropertiesResponse(
-        @OutputCustomType.Parameter("dnsName") @Nullable String dnsName,
-        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
-        @OutputCustomType.Parameter("publicIpAddress") @Nullable String publicIpAddress,
-        @OutputCustomType.Parameter("publicIpAddressId") @Nullable String publicIpAddressId,
-        @OutputCustomType.Parameter("rdpAuthority") @Nullable String rdpAuthority,
-        @OutputCustomType.Parameter("sharedPublicIpAddressConfiguration") @Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration,
-        @OutputCustomType.Parameter("sshAuthority") @Nullable String sshAuthority,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
-        @OutputCustomType.Parameter("virtualNetworkId") @Nullable String virtualNetworkId) {
+        @CustomType.Parameter("dnsName") @Nullable String dnsName,
+        @CustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
+        @CustomType.Parameter("publicIpAddress") @Nullable String publicIpAddress,
+        @CustomType.Parameter("publicIpAddressId") @Nullable String publicIpAddressId,
+        @CustomType.Parameter("rdpAuthority") @Nullable String rdpAuthority,
+        @CustomType.Parameter("sharedPublicIpAddressConfiguration") @Nullable SharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration,
+        @CustomType.Parameter("sshAuthority") @Nullable String sshAuthority,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId,
+        @CustomType.Parameter("virtualNetworkId") @Nullable String virtualNetworkId) {
         this.dnsName = dnsName;
         this.privateIpAddress = privateIpAddress;
         this.publicIpAddress = publicIpAddress;

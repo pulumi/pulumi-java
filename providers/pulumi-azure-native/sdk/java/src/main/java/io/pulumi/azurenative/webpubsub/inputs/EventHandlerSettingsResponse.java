@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.azurenative.webpubsub.inputs.EventHandlerTemplateResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class EventHandlerSettingsResponse extends io.pulumi.resources.Invo
      * Get or set the EventHandler items. The key is the hub name and the value is the corresponding EventHandlerTemplate.
      * 
      */
-    @InputImport(name="items")
+    @Import(name="items")
       private final @Nullable Map<String,List<EventHandlerTemplateResponse>> items;
 
     public Map<String,List<EventHandlerTemplateResponse>> getItems() {

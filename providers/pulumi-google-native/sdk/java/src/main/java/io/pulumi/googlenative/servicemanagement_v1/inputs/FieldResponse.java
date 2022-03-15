@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * The field cardinality.
      * 
      */
-    @InputImport(name="cardinality", required=true)
+    @Import(name="cardinality", required=true)
       private final String cardinality;
 
     public String getCardinality() {
@@ -35,7 +35,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * The string value of the default value of this field. Proto2 syntax only.
      * 
      */
-    @InputImport(name="defaultValue", required=true)
+    @Import(name="defaultValue", required=true)
       private final String defaultValue;
 
     public String getDefaultValue() {
@@ -46,7 +46,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * The field JSON name.
      * 
      */
-    @InputImport(name="jsonName", required=true)
+    @Import(name="jsonName", required=true)
       private final String jsonName;
 
     public String getJsonName() {
@@ -57,7 +57,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * The field type.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -68,7 +68,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * The field name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -79,7 +79,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * The field number.
      * 
      */
-    @InputImport(name="number", required=true)
+    @Import(name="number", required=true)
       private final Integer number;
 
     public Integer getNumber() {
@@ -90,7 +90,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * The index of the field type in `Type.oneofs`, for message or enumeration types. The first type has index 1; zero means the type is not in the list.
      * 
      */
-    @InputImport(name="oneofIndex", required=true)
+    @Import(name="oneofIndex", required=true)
       private final Integer oneofIndex;
 
     public Integer getOneofIndex() {
@@ -101,7 +101,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * The protocol buffer options.
      * 
      */
-    @InputImport(name="options", required=true)
+    @Import(name="options", required=true)
       private final List<OptionResponse> options;
 
     public List<OptionResponse> getOptions() {
@@ -112,7 +112,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * Whether to use alternative packed wire representation.
      * 
      */
-    @InputImport(name="packed", required=true)
+    @Import(name="packed", required=true)
       private final Boolean packed;
 
     public Boolean getPacked() {
@@ -123,7 +123,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * The field type URL, without the scheme, for message or enumeration types. Example: `"type.googleapis.com/google.protobuf.Timestamp"`.
      * 
      */
-    @InputImport(name="typeUrl", required=true)
+    @Import(name="typeUrl", required=true)
       private final String typeUrl;
 
     public String getTypeUrl() {

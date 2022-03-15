@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.macie2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClassificationJobS3JobDefinitionBucketDefinition {
     /**
      * The unique identifier for the AWS account that owns the buckets.
@@ -21,10 +21,10 @@ public final class ClassificationJobS3JobDefinitionBucketDefinition {
      */
     private final List<String> buckets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClassificationJobS3JobDefinitionBucketDefinition(
-        @OutputCustomType.Parameter("accountId") String accountId,
-        @OutputCustomType.Parameter("buckets") List<String> buckets) {
+        @CustomType.Parameter("accountId") String accountId,
+        @CustomType.Parameter("buckets") List<String> buckets) {
         this.accountId = accountId;
         this.buckets = buckets;
     }

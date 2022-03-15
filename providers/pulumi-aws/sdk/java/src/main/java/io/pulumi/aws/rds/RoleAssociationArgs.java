@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class RoleAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * DB Instance Identifier to associate with the IAM Role.
      * 
      */
-    @InputImport(name="dbInstanceIdentifier", required=true)
+    @Import(name="dbInstanceIdentifier", required=true)
       private final Output<String> dbInstanceIdentifier;
 
     public Output<String> getDbInstanceIdentifier() {
@@ -28,7 +28,7 @@ public final class RoleAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the feature for association. This can be found in the AWS documentation relevant to the integration or a full list is available in the `SupportedFeatureNames` list returned by [AWS CLI rds describe-db-engine-versions](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-engine-versions.html).
      * 
      */
-    @InputImport(name="featureName", required=true)
+    @Import(name="featureName", required=true)
       private final Output<String> featureName;
 
     public Output<String> getFeatureName() {
@@ -39,7 +39,7 @@ public final class RoleAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * Amazon Resource Name (ARN) of the IAM Role to associate with the DB Instance.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

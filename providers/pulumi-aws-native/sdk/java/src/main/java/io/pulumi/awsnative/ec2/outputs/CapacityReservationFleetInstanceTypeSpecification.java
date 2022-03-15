@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CapacityReservationFleetInstanceTypeSpecification {
     private final @Nullable String availabilityZone;
     private final @Nullable String availabilityZoneId;
@@ -22,15 +22,15 @@ public final class CapacityReservationFleetInstanceTypeSpecification {
     private final @Nullable Integer priority;
     private final @Nullable Double weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CapacityReservationFleetInstanceTypeSpecification(
-        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
-        @OutputCustomType.Parameter("availabilityZoneId") @Nullable String availabilityZoneId,
-        @OutputCustomType.Parameter("ebsOptimized") @Nullable Boolean ebsOptimized,
-        @OutputCustomType.Parameter("instancePlatform") @Nullable String instancePlatform,
-        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("weight") @Nullable Double weight) {
+        @CustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @CustomType.Parameter("availabilityZoneId") @Nullable String availabilityZoneId,
+        @CustomType.Parameter("ebsOptimized") @Nullable Boolean ebsOptimized,
+        @CustomType.Parameter("instancePlatform") @Nullable String instancePlatform,
+        @CustomType.Parameter("instanceType") @Nullable String instanceType,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("weight") @Nullable Double weight) {
         this.availabilityZone = availabilityZone;
         this.availabilityZoneId = availabilityZoneId;
         this.ebsOptimized = ebsOptimized;

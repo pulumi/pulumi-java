@@ -10,7 +10,7 @@ import io.pulumi.awsnative.ec2.enums.IPAMPoolState;
 import io.pulumi.awsnative.ec2.outputs.IPAMPoolProvisionedCidr;
 import io.pulumi.awsnative.ec2.outputs.IPAMPoolTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -28,7 +28,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * The address family of the address space in this pool. Either IPv4 or IPv6.
      * 
      */
-    @OutputExport(name="addressFamily", type=String.class, parameters={})
+    @Export(name="addressFamily", type=String.class, parameters={})
     private Output<String> addressFamily;
 
     /**
@@ -42,7 +42,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * The default netmask length for allocations made from this pool. This value is used when the netmask length of an allocation isn't specified.
      * 
      */
-    @OutputExport(name="allocationDefaultNetmaskLength", type=Integer.class, parameters={})
+    @Export(name="allocationDefaultNetmaskLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> allocationDefaultNetmaskLength;
 
     /**
@@ -56,7 +56,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * The maximum allowed netmask length for allocations made from this pool.
      * 
      */
-    @OutputExport(name="allocationMaxNetmaskLength", type=Integer.class, parameters={})
+    @Export(name="allocationMaxNetmaskLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> allocationMaxNetmaskLength;
 
     /**
@@ -70,7 +70,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * The minimum allowed netmask length for allocations made from this pool.
      * 
      */
-    @OutputExport(name="allocationMinNetmaskLength", type=Integer.class, parameters={})
+    @Export(name="allocationMinNetmaskLength", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> allocationMinNetmaskLength;
 
     /**
@@ -84,7 +84,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * When specified, an allocation will not be allowed unless a resource has a matching set of tags.
      * 
      */
-    @OutputExport(name="allocationResourceTags", type=List.class, parameters={IPAMPoolTag.class})
+    @Export(name="allocationResourceTags", type=List.class, parameters={IPAMPoolTag.class})
     private Output</* @Nullable */ List<IPAMPoolTag>> allocationResourceTags;
 
     /**
@@ -98,7 +98,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the IPAM Pool.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -112,7 +112,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * Determines what to do if IPAM discovers resources that haven't been assigned an allocation. If set to true, an allocation will be made automatically.
      * 
      */
-    @OutputExport(name="autoImport", type=Boolean.class, parameters={})
+    @Export(name="autoImport", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoImport;
 
     /**
@@ -122,7 +122,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Boolean> getAutoImport() {
         return this.autoImport;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
@@ -132,7 +132,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the IPAM this pool is a part of.
      * 
      */
-    @OutputExport(name="ipamArn", type=String.class, parameters={})
+    @Export(name="ipamArn", type=String.class, parameters={})
     private Output<String> ipamArn;
 
     /**
@@ -146,7 +146,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * Id of the IPAM Pool.
      * 
      */
-    @OutputExport(name="ipamPoolId", type=String.class, parameters={})
+    @Export(name="ipamPoolId", type=String.class, parameters={})
     private Output<String> ipamPoolId;
 
     /**
@@ -160,7 +160,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the scope this pool is a part of.
      * 
      */
-    @OutputExport(name="ipamScopeArn", type=String.class, parameters={})
+    @Export(name="ipamScopeArn", type=String.class, parameters={})
     private Output<String> ipamScopeArn;
 
     /**
@@ -174,7 +174,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * The Id of the scope this pool is a part of.
      * 
      */
-    @OutputExport(name="ipamScopeId", type=String.class, parameters={})
+    @Export(name="ipamScopeId", type=String.class, parameters={})
     private Output<String> ipamScopeId;
 
     /**
@@ -188,7 +188,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * Determines whether this scope contains publicly routable space or space for a private network
      * 
      */
-    @OutputExport(name="ipamScopeType", type=IPAMPoolIpamScopeType.class, parameters={})
+    @Export(name="ipamScopeType", type=IPAMPoolIpamScopeType.class, parameters={})
     private Output<IPAMPoolIpamScopeType> ipamScopeType;
 
     /**
@@ -202,7 +202,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * The region of this pool. If not set, this will default to "None" which will disable non-custom allocations. If the locale has been specified for the source pool, this value must match.
      * 
      */
-    @OutputExport(name="locale", type=String.class, parameters={})
+    @Export(name="locale", type=String.class, parameters={})
     private Output</* @Nullable */ String> locale;
 
     /**
@@ -216,7 +216,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * The depth of this pool in the source pool hierarchy.
      * 
      */
-    @OutputExport(name="poolDepth", type=Integer.class, parameters={})
+    @Export(name="poolDepth", type=Integer.class, parameters={})
     private Output<Integer> poolDepth;
 
     /**
@@ -230,7 +230,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * A list of cidrs representing the address space available for allocation in this pool.
      * 
      */
-    @OutputExport(name="provisionedCidrs", type=List.class, parameters={IPAMPoolProvisionedCidr.class})
+    @Export(name="provisionedCidrs", type=List.class, parameters={IPAMPoolProvisionedCidr.class})
     private Output</* @Nullable */ List<IPAMPoolProvisionedCidr>> provisionedCidrs;
 
     /**
@@ -244,7 +244,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * Determines whether or not address space from this pool is publicly advertised. Must be set if and only if the pool is IPv6.
      * 
      */
-    @OutputExport(name="publiclyAdvertisable", type=Boolean.class, parameters={})
+    @Export(name="publiclyAdvertisable", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> publiclyAdvertisable;
 
     /**
@@ -258,7 +258,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * The Id of this pool's source. If set, all space provisioned in this pool must be free space provisioned in the parent pool.
      * 
      */
-    @OutputExport(name="sourceIpamPoolId", type=String.class, parameters={})
+    @Export(name="sourceIpamPoolId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceIpamPoolId;
 
     /**
@@ -272,7 +272,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * The state of this pool. This can be one of the following values: "create-in-progress", "create-complete", "modify-in-progress", "modify-complete", "delete-in-progress", or "delete-complete"
      * 
      */
-    @OutputExport(name="state", type=IPAMPoolState.class, parameters={})
+    @Export(name="state", type=IPAMPoolState.class, parameters={})
     private Output<IPAMPoolState> state;
 
     /**
@@ -286,7 +286,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * An explanation of how the pool arrived at it current state.
      * 
      */
-    @OutputExport(name="stateMessage", type=String.class, parameters={})
+    @Export(name="stateMessage", type=String.class, parameters={})
     private Output<String> stateMessage;
 
     /**
@@ -300,7 +300,7 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={IPAMPoolTag.class})
+    @Export(name="tags", type=List.class, parameters={IPAMPoolTag.class})
     private Output</* @Nullable */ List<IPAMPoolTag>> tags;
 
     /**

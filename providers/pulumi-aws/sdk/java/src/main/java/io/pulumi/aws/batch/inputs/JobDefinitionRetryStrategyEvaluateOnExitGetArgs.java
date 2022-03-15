@@ -4,7 +4,7 @@
 package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitGetArgs extends io.pu
      * Specifies the action to take if all of the specified conditions are met. The values are not case sensitive. Valid values: `RETRY`, `EXIT`.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<String> action;
 
     public Output<String> getAction() {
@@ -29,7 +29,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitGetArgs extends io.pu
      * A glob pattern to match against the decimal representation of the exit code returned for a job.
      * 
      */
-    @InputImport(name="onExitCode")
+    @Import(name="onExitCode")
       private final @Nullable Output<String> onExitCode;
 
     public Output<String> getOnExitCode() {
@@ -40,7 +40,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitGetArgs extends io.pu
      * A glob pattern to match against the reason returned for a job.
      * 
      */
-    @InputImport(name="onReason")
+    @Import(name="onReason")
       private final @Nullable Output<String> onReason;
 
     public Output<String> getOnReason() {
@@ -51,7 +51,7 @@ public final class JobDefinitionRetryStrategyEvaluateOnExitGetArgs extends io.pu
      * A glob pattern to match against the status reason returned for a job.
      * 
      */
-    @InputImport(name="onStatusReason")
+    @Import(name="onStatusReason")
       private final @Nullable Output<String> onStatusReason;
 
     public Output<String> getOnStatusReason() {

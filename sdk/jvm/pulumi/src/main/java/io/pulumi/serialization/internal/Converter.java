@@ -15,10 +15,10 @@ import io.pulumi.core.Asset.InvalidAsset;
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Either;
 import io.pulumi.core.TypeShape;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.core.annotations.EnumType;
-import io.pulumi.core.annotations.OutputCustomType;
-import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.Maps;
+import io.pulumi.core.internal.OutputData;
 import io.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
@@ -46,15 +46,15 @@ public class Converter {
         this.log = requireNonNull(log);
     }
 
-    public <T> InputOutputData<T> convertValue(String context, Value value, Class<T> targetType) {
+    public <T> OutputData<T> convertValue(String context, Value value, Class<T> targetType) {
         return convertValue(context, value, TypeShape.of(targetType));
     }
 
-    public <T> InputOutputData<T> convertValue(String context, Value value, TypeShape<T> targetType) {
+    public <T> OutputData<T> convertValue(String context, Value value, TypeShape<T> targetType) {
         return convertValue(context, value, targetType, ImmutableSet.of());
     }
 
-    public <T> InputOutputData<T> convertValue(
+    public <T> OutputData<T> convertValue(
             String context, Value value, TypeShape<T> targetType, ImmutableSet<Resource> resources
     ) {
         requireNonNull(context);
@@ -67,7 +67,7 @@ public class Converter {
         var deserializer = new Deserializer();
         var data = deserializer.deserialize(value);
         // Note: nulls can enter the system as the representation of an 'unknown' value,
-        //       but the Deserializer will wrap it in an InputOutputData, and we get them as a null here
+        //       but the Deserializer will wrap it in an OutputData, and we get them as a null here
         @Nullable
         var converted = data.isKnown()
                 ? convertObjectUntyped(context, data.getValueNullable(), targetType)
@@ -89,7 +89,7 @@ public class Converter {
                 .build();
 
         //noinspection unchecked
-        return InputOutputData.ofNullable(mergedResources, (T) converted, data.isKnown(), data.isSecret());
+        return OutputData.ofNullable(mergedResources, (T) converted, data.isKnown(), data.isSecret());
     }
 
     @Nullable
@@ -276,13 +276,13 @@ public class Converter {
             return tryConvertMap(context, value, targetType);
         }
 
-        var propertyTypeAnnotation = targetType.getAnnotation(OutputCustomType.class);
+        var propertyTypeAnnotation = targetType.getAnnotation(CustomType.class);
         if (propertyTypeAnnotation.isPresent()) {
-            var constructor = targetType.getAnnotatedConstructor(OutputCustomType.Constructor.class);
+            var constructor = targetType.getAnnotatedConstructor(CustomType.Constructor.class);
             var constructorAnnotation = Optional.ofNullable(
-                    constructor.getAnnotation(OutputCustomType.Constructor.class)
+                    constructor.getAnnotation(CustomType.Constructor.class)
             ).orElseThrow(() -> new IllegalStateException(String.format(
-                    "Expected a single constructor annotated with '@%s'.", OutputCustomType.Constructor.class.getSimpleName()
+                    "Expected a single constructor annotated with '@%s'.", CustomType.Constructor.class.getSimpleName()
             ))); // validated before
 
             //noinspection unchecked
@@ -292,7 +292,7 @@ public class Converter {
 
             // Validate that we can decode the argument we've received
             var expectedParameterNames = Arrays.stream(constructorParameters)
-                    .map(p -> Optional.ofNullable(p.getAnnotation(OutputCustomType.Parameter.class)))
+                    .map(p -> Optional.ofNullable(p.getAnnotation(CustomType.Parameter.class)))
                     .filter(Optional::isPresent)
                     .map(p -> p.get().value())
                     .collect(toSet());
@@ -304,8 +304,8 @@ public class Converter {
                                     "Constructor '%s' expects parameter names of: '%s', " +
                                     "but does not expect: '%s'. Unable to deserialize.",
                             targetType.getTypeName(),
-                            OutputCustomType.class.getTypeName(),
-                            OutputCustomType.Constructor.class.getTypeName(),
+                            CustomType.class.getTypeName(),
+                            CustomType.Constructor.class.getTypeName(),
                             constructor,
                             String.join(",", expectedParameterNames),
                             argumentName
@@ -316,8 +316,8 @@ public class Converter {
                 var parameter = constructorParameters[i];
                 // we cannot use parameter.getName(), because it will be just e.g. 'arg0'
                 var parameterName = Optional.ofNullable(
-                        parameter.getAnnotation(OutputCustomType.Parameter.class)
-                ).map(OutputCustomType.Parameter::value);
+                        parameter.getAnnotation(CustomType.Parameter.class)
+                ).map(CustomType.Parameter::value);
 
                 if (parameterName.isEmpty()) {
                     throw new IllegalArgumentException(String.format(
@@ -326,11 +326,11 @@ public class Converter {
                                     "Constructor '%s' parameter nr %d (starting from 0) lacks @%s annotation, " +
                                     "but it is required to deserialize.",
                             targetType.getTypeName(),
-                            OutputCustomType.class.getTypeName(),
-                            OutputCustomType.Constructor.class.getTypeName(),
+                            CustomType.class.getTypeName(),
+                            CustomType.Constructor.class.getTypeName(),
                             constructor,
                             i,
-                            OutputCustomType.Parameter.class.getSimpleName()
+                            CustomType.Parameter.class.getSimpleName()
                     ));
                 }
 
@@ -353,8 +353,8 @@ public class Converter {
                                         "Constructor '%s' parameter named '%s' (nr %d starting from 0) lacks @%s annotation, " +
                                         "so the value is required, but there is no value to deserialize.",
                                 targetType.getTypeName(),
-                                OutputCustomType.class.getTypeName(),
-                                OutputCustomType.Constructor.class.getTypeName(),
+                                CustomType.class.getTypeName(),
+                                CustomType.Constructor.class.getTypeName(),
                                 constructor,
                                 parameterName.get(),
                                 i,
@@ -652,9 +652,9 @@ public class Converter {
             return;
         }
 
-        var propertyTypeAnnotation = targetType.getAnnotation(OutputCustomType.class);
+        var propertyTypeAnnotation = targetType.getAnnotation(CustomType.class);
         if (propertyTypeAnnotation.isPresent()) {
-            var constructor = targetType.getAnnotatedConstructor(OutputCustomType.Constructor.class);
+            var constructor = targetType.getAnnotatedConstructor(CustomType.Constructor.class);
 
             Parameter[] parameters = constructor.getParameters();
             for (Parameter parameter : parameters) {
@@ -672,7 +672,7 @@ public class Converter {
                 "%s; Invalid type '%s' while deserializing. Allowed types are: " +
                         "String, Boolean, Integer, Double, List<> and Map<String, Object> or " +
                         "a class explicitly marked with the @%s.",
-                context, targetType.getTypeName(), OutputCustomType.class.getSimpleName()
+                context, targetType.getTypeName(), CustomType.class.getSimpleName()
         ));
     }
 }

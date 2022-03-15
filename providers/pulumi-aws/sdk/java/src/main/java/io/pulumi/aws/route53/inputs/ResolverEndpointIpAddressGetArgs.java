@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +18,14 @@ public final class ResolverEndpointIpAddressGetArgs extends io.pulumi.resources.
      * The IP address in the subnet that you want to use for DNS queries.
      * 
      */
-    @InputImport(name="ip")
+    @Import(name="ip")
       private final @Nullable Output<String> ip;
 
     public Output<String> getIp() {
         return this.ip == null ? Output.empty() : this.ip;
     }
 
-    @InputImport(name="ipId")
+    @Import(name="ipId")
       private final @Nullable Output<String> ipId;
 
     public Output<String> getIpId() {
@@ -36,7 +36,7 @@ public final class ResolverEndpointIpAddressGetArgs extends io.pulumi.resources.
      * The ID of the subnet that contains the IP address.
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
     public Output<String> getSubnetId() {

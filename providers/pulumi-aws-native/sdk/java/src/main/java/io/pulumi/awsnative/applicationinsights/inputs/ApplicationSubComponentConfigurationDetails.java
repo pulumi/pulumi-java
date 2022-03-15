@@ -6,7 +6,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationAlarmMetric;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationLog;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationWindowsEvent;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ApplicationSubComponentConfigurationDetails extends io.pulumi
      * A list of metrics to monitor for the component.
      * 
      */
-    @InputImport(name="alarmMetrics")
+    @Import(name="alarmMetrics")
       private final @Nullable List<ApplicationAlarmMetric> alarmMetrics;
 
     public List<ApplicationAlarmMetric> getAlarmMetrics() {
@@ -36,7 +36,7 @@ public final class ApplicationSubComponentConfigurationDetails extends io.pulumi
      * A list of logs to monitor for the component.
      * 
      */
-    @InputImport(name="logs")
+    @Import(name="logs")
       private final @Nullable List<ApplicationLog> logs;
 
     public List<ApplicationLog> getLogs() {
@@ -47,7 +47,7 @@ public final class ApplicationSubComponentConfigurationDetails extends io.pulumi
      * A list of Windows Events to log.
      * 
      */
-    @InputImport(name="windowsEvents")
+    @Import(name="windowsEvents")
       private final @Nullable List<ApplicationWindowsEvent> windowsEvents;
 
     public List<ApplicationWindowsEvent> getWindowsEvents() {

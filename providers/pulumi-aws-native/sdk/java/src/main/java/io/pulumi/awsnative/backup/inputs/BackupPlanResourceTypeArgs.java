@@ -6,7 +6,7 @@ package io.pulumi.awsnative.backup.inputs;
 import io.pulumi.awsnative.backup.inputs.BackupPlanAdvancedBackupSettingResourceTypeArgs;
 import io.pulumi.awsnative.backup.inputs.BackupPlanBackupRuleResourceTypeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class BackupPlanResourceTypeArgs extends io.pulumi.resources.Resour
 
     public static final BackupPlanResourceTypeArgs Empty = new BackupPlanResourceTypeArgs();
 
-    @InputImport(name="advancedBackupSettings")
+    @Import(name="advancedBackupSettings")
       private final @Nullable Output<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> advancedBackupSettings;
 
     public Output<List<BackupPlanAdvancedBackupSettingResourceTypeArgs>> getAdvancedBackupSettings() {
         return this.advancedBackupSettings == null ? Output.empty() : this.advancedBackupSettings;
     }
 
-    @InputImport(name="backupPlanName", required=true)
+    @Import(name="backupPlanName", required=true)
       private final Output<String> backupPlanName;
 
     public Output<String> getBackupPlanName() {
         return this.backupPlanName;
     }
 
-    @InputImport(name="backupPlanRule", required=true)
+    @Import(name="backupPlanRule", required=true)
       private final Output<List<BackupPlanBackupRuleResourceTypeArgs>> backupPlanRule;
 
     public Output<List<BackupPlanBackupRuleResourceTypeArgs>> getBackupPlanRule() {

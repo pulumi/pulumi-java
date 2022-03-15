@@ -4,7 +4,7 @@
 package io.pulumi.gcp.eventarc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class TriggerMatchingCriteriaArgs extends io.pulumi.resources.Resou
      * Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. All triggers MUST provide a filter for the 'type' attribute.
      * 
      */
-    @InputImport(name="attribute", required=true)
+    @Import(name="attribute", required=true)
       private final Output<String> attribute;
 
     public Output<String> getAttribute() {
@@ -28,7 +28,7 @@ public final class TriggerMatchingCriteriaArgs extends io.pulumi.resources.Resou
      * Required. The value for the attribute.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

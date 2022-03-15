@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.enums.JobTriggerStatus;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectJobConfigArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TriggerArgs;
@@ -22,7 +22,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * User provided description (max 256 chars)
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Display name (max 100 chars)
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -44,14 +44,14 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * For inspect jobs, a snapshot of the configuration.
      * 
      */
-    @InputImport(name="inspectJob")
+    @Import(name="inspectJob")
       private final @Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
 
     public Output<GooglePrivacyDlpV2InspectJobConfigArgs> getInspectJob() {
         return this.inspectJob == null ? Output.empty() : this.inspectJob;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -62,14 +62,14 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Unique resource name for the triggeredJob, assigned by the service when the triggeredJob is created, for example `projects/dlp-test-project/jobTriggers/53234423`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -80,7 +80,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * A status for this trigger.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<JobTriggerStatus> status;
 
     public Output<JobTriggerStatus> getStatus() {
@@ -91,7 +91,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * The trigger id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
      * 
      */
-    @InputImport(name="triggerId")
+    @Import(name="triggerId")
       private final @Nullable Output<String> triggerId;
 
     public Output<String> getTriggerId() {
@@ -102,7 +102,7 @@ public final class JobTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * A list of triggers which will be OR'ed together. Only one in the list needs to trigger for a job to be started. The list may contain only a single Schedule trigger and must have at least one object.
      * 
      */
-    @InputImport(name="triggers")
+    @Import(name="triggers")
       private final @Nullable Output<List<GooglePrivacyDlpV2TriggerArgs>> triggers;
 
     public Output<List<GooglePrivacyDlpV2TriggerArgs>> getTriggers() {

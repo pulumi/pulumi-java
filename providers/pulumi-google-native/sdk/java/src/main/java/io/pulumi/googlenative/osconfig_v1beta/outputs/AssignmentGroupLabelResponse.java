@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AssignmentGroupLabelResponse {
     /**
      * Google Compute Engine instance labels that must be present for an instance to be included in this assignment group.
@@ -16,8 +16,8 @@ public final class AssignmentGroupLabelResponse {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor
-    private AssignmentGroupLabelResponse(@OutputCustomType.Parameter("labels") Map<String,String> labels) {
+    @CustomType.Constructor
+    private AssignmentGroupLabelResponse(@CustomType.Parameter("labels") Map<String,String> labels) {
         this.labels = labels;
     }
 

@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.ssm.outputs;
 
 import io.pulumi.awsnative.ssm.outputs.ResourceDataSyncSyncSource;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResourceDataSyncResult {
     private final @Nullable ResourceDataSyncSyncSource syncSource;
 
-    @OutputCustomType.Constructor
-    private GetResourceDataSyncResult(@OutputCustomType.Parameter("syncSource") @Nullable ResourceDataSyncSyncSource syncSource) {
+    @CustomType.Constructor
+    private GetResourceDataSyncResult(@CustomType.Parameter("syncSource") @Nullable ResourceDataSyncSyncSource syncSource) {
         this.syncSource = syncSource;
     }
 

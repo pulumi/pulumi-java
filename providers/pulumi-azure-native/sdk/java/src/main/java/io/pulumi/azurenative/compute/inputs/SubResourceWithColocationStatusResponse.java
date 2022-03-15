@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class SubResourceWithColocationStatusResponse extends io.pulumi.res
      * Describes colocation status of a resource in the Proximity Placement Group.
      * 
      */
-    @InputImport(name="colocationStatus")
+    @Import(name="colocationStatus")
       private final @Nullable InstanceViewStatusResponse colocationStatus;
 
     public Optional<InstanceViewStatusResponse> getColocationStatus() {
@@ -30,7 +30,7 @@ public final class SubResourceWithColocationStatusResponse extends io.pulumi.res
      * Resource Id
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {

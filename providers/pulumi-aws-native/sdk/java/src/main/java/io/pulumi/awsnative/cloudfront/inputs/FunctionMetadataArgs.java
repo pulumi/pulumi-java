@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class FunctionMetadataArgs extends io.pulumi.resources.ResourceArgs
 
     public static final FunctionMetadataArgs Empty = new FunctionMetadataArgs();
 
-    @InputImport(name="functionARN")
+    @Import(name="functionARN")
       private final @Nullable Output<String> functionARN;
 
     public Output<String> getFunctionARN() {

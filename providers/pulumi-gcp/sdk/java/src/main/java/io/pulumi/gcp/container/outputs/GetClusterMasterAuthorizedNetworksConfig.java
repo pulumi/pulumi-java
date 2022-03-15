@@ -3,17 +3,17 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.GetClusterMasterAuthorizedNetworksConfigCidrBlock;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterMasterAuthorizedNetworksConfig {
     private final List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks;
 
-    @OutputCustomType.Constructor
-    private GetClusterMasterAuthorizedNetworksConfig(@OutputCustomType.Parameter("cidrBlocks") List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
+    @CustomType.Constructor
+    private GetClusterMasterAuthorizedNetworksConfig(@CustomType.Parameter("cidrBlocks") List<GetClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
         this.cidrBlocks = cidrBlocks;
     }
 

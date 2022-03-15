@@ -5,26 +5,26 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.TopicRuleHttpActionHeader;
 import io.pulumi.awsnative.iot.outputs.TopicRuleHttpAuthorization;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleHttpAction {
     private final @Nullable TopicRuleHttpAuthorization auth;
     private final @Nullable String confirmationUrl;
     private final @Nullable List<TopicRuleHttpActionHeader> headers;
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleHttpAction(
-        @OutputCustomType.Parameter("auth") @Nullable TopicRuleHttpAuthorization auth,
-        @OutputCustomType.Parameter("confirmationUrl") @Nullable String confirmationUrl,
-        @OutputCustomType.Parameter("headers") @Nullable List<TopicRuleHttpActionHeader> headers,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("auth") @Nullable TopicRuleHttpAuthorization auth,
+        @CustomType.Parameter("confirmationUrl") @Nullable String confirmationUrl,
+        @CustomType.Parameter("headers") @Nullable List<TopicRuleHttpActionHeader> headers,
+        @CustomType.Parameter("url") String url) {
         this.auth = auth;
         this.confirmationUrl = confirmationUrl;
         this.headers = headers;

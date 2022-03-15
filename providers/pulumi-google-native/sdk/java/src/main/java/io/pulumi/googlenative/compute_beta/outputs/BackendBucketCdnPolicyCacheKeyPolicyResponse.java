@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackendBucketCdnPolicyCacheKeyPolicyResponse {
     /**
      * Allows HTTP request headers (by name) to be used in the cache key.
@@ -21,10 +21,10 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse {
      */
     private final List<String> queryStringWhitelist;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendBucketCdnPolicyCacheKeyPolicyResponse(
-        @OutputCustomType.Parameter("includeHttpHeaders") List<String> includeHttpHeaders,
-        @OutputCustomType.Parameter("queryStringWhitelist") List<String> queryStringWhitelist) {
+        @CustomType.Parameter("includeHttpHeaders") List<String> includeHttpHeaders,
+        @CustomType.Parameter("queryStringWhitelist") List<String> queryStringWhitelist) {
         this.includeHttpHeaders = includeHttpHeaders;
         this.queryStringWhitelist = queryStringWhitelist;
     }

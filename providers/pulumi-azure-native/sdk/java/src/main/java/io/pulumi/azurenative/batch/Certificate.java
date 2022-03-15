@@ -8,7 +8,7 @@ import io.pulumi.azurenative.batch.CertificateArgs;
 import io.pulumi.azurenative.batch.outputs.DeleteCertificateErrorResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * This is only returned when the certificate provisioningState is 'Failed'.
      * 
      */
-    @OutputExport(name="deleteCertificateError", type=DeleteCertificateErrorResponse.class, parameters={})
+    @Export(name="deleteCertificateError", type=DeleteCertificateErrorResponse.class, parameters={})
     private Output<DeleteCertificateErrorResponse> deleteCertificateError;
 
     /**
@@ -49,7 +49,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The ETag of the resource, used for concurrency statements.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -63,7 +63,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The format of the certificate - either Pfx or Cer. If omitted, the default is Pfx.
      * 
      */
-    @OutputExport(name="format", type=String.class, parameters={})
+    @Export(name="format", type=String.class, parameters={})
     private Output</* @Nullable */ String> format;
 
     /**
@@ -77,7 +77,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The previous provisioned state of the resource
      * 
      */
-    @OutputExport(name="previousProvisioningState", type=String.class, parameters={})
+    @Export(name="previousProvisioningState", type=String.class, parameters={})
     private Output<String> previousProvisioningState;
 
     /**
@@ -101,19 +101,19 @@ public class Certificate extends io.pulumi.resources.CustomResource {
     public Output<String> getPreviousProvisioningState() {
         return this.previousProvisioningState;
     }
-    @OutputExport(name="previousProvisioningStateTransitionTime", type=String.class, parameters={})
+    @Export(name="previousProvisioningStateTransitionTime", type=String.class, parameters={})
     private Output<String> previousProvisioningStateTransitionTime;
 
     public Output<String> getPreviousProvisioningStateTransitionTime() {
         return this.previousProvisioningStateTransitionTime;
     }
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    @OutputExport(name="provisioningStateTransitionTime", type=String.class, parameters={})
+    @Export(name="provisioningStateTransitionTime", type=String.class, parameters={})
     private Output<String> provisioningStateTransitionTime;
 
     public Output<String> getProvisioningStateTransitionTime() {
@@ -123,7 +123,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The public key of the certificate.
      * 
      */
-    @OutputExport(name="publicData", type=String.class, parameters={})
+    @Export(name="publicData", type=String.class, parameters={})
     private Output<String> publicData;
 
     /**
@@ -137,7 +137,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * This must match the thumbprint from the name.
      * 
      */
-    @OutputExport(name="thumbprint", type=String.class, parameters={})
+    @Export(name="thumbprint", type=String.class, parameters={})
     private Output</* @Nullable */ String> thumbprint;
 
     /**
@@ -151,7 +151,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * This must match the first portion of the certificate name. Currently required to be 'SHA1'.
      * 
      */
-    @OutputExport(name="thumbprintAlgorithm", type=String.class, parameters={})
+    @Export(name="thumbprintAlgorithm", type=String.class, parameters={})
     private Output</* @Nullable */ String> thumbprintAlgorithm;
 
     /**
@@ -165,7 +165,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

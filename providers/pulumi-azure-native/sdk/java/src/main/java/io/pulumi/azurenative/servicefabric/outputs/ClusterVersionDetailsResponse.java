@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterVersionDetailsResponse {
     /**
      * The Service Fabric runtime version of the cluster.
@@ -27,11 +27,11 @@ public final class ClusterVersionDetailsResponse {
      */
     private final @Nullable String supportExpiryUtc;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterVersionDetailsResponse(
-        @OutputCustomType.Parameter("codeVersion") @Nullable String codeVersion,
-        @OutputCustomType.Parameter("environment") @Nullable String environment,
-        @OutputCustomType.Parameter("supportExpiryUtc") @Nullable String supportExpiryUtc) {
+        @CustomType.Parameter("codeVersion") @Nullable String codeVersion,
+        @CustomType.Parameter("environment") @Nullable String environment,
+        @CustomType.Parameter("supportExpiryUtc") @Nullable String supportExpiryUtc) {
         this.codeVersion = codeVersion;
         this.environment = environment;
         this.supportExpiryUtc = supportExpiryUtc;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CryptoKeyResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeResponse;
@@ -11,7 +11,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse {
     /**
      * Common alphabets.
@@ -44,14 +44,14 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse {
      */
     private final GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse(
-        @OutputCustomType.Parameter("commonAlphabet") String commonAlphabet,
-        @OutputCustomType.Parameter("context") GooglePrivacyDlpV2FieldIdResponse context,
-        @OutputCustomType.Parameter("cryptoKey") GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
-        @OutputCustomType.Parameter("customAlphabet") String customAlphabet,
-        @OutputCustomType.Parameter("radix") Integer radix,
-        @OutputCustomType.Parameter("surrogateInfoType") GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
+        @CustomType.Parameter("commonAlphabet") String commonAlphabet,
+        @CustomType.Parameter("context") GooglePrivacyDlpV2FieldIdResponse context,
+        @CustomType.Parameter("cryptoKey") GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
+        @CustomType.Parameter("customAlphabet") String customAlphabet,
+        @CustomType.Parameter("radix") Integer radix,
+        @CustomType.Parameter("surrogateInfoType") GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
         this.commonAlphabet = commonAlphabet;
         this.context = context;
         this.cryptoKey = cryptoKey;

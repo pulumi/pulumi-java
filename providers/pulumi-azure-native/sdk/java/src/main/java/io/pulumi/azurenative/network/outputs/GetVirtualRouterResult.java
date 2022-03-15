@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualRouterResult {
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -76,20 +76,20 @@ public final class GetVirtualRouterResult {
      */
     private final @Nullable List<String> virtualRouterIps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualRouterResult(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("hostedGateway") @Nullable SubResourceResponse hostedGateway,
-        @OutputCustomType.Parameter("hostedSubnet") @Nullable SubResourceResponse hostedSubnet,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("peerings") List<SubResourceResponse> peerings,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualRouterAsn") @Nullable Double virtualRouterAsn,
-        @OutputCustomType.Parameter("virtualRouterIps") @Nullable List<String> virtualRouterIps) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("hostedGateway") @Nullable SubResourceResponse hostedGateway,
+        @CustomType.Parameter("hostedSubnet") @Nullable SubResourceResponse hostedSubnet,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("peerings") List<SubResourceResponse> peerings,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualRouterAsn") @Nullable Double virtualRouterAsn,
+        @CustomType.Parameter("virtualRouterIps") @Nullable List<String> virtualRouterIps) {
         this.etag = etag;
         this.hostedGateway = hostedGateway;
         this.hostedSubnet = hostedSubnet;

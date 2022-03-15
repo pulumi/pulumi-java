@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class ManagedZonePrivateVisibilityConfigNetworkArgs extends io.pulu
 
     public static final ManagedZonePrivateVisibilityConfigNetworkArgs Empty = new ManagedZonePrivateVisibilityConfigNetworkArgs();
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -25,7 +25,7 @@ public final class ManagedZonePrivateVisibilityConfigNetworkArgs extends io.pulu
      * The fully qualified URL of the VPC network to bind to. Format this URL like https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}
      * 
      */
-    @InputImport(name="networkUrl")
+    @Import(name="networkUrl")
       private final @Nullable Output<String> networkUrl;
 
     public Output<String> getNetworkUrl() {

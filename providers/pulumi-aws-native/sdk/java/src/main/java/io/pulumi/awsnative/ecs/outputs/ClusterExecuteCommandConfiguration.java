@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.outputs.ClusterExecuteCommandLogConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterExecuteCommandConfiguration {
     private final @Nullable String kmsKeyId;
     private final @Nullable ClusterExecuteCommandLogConfiguration logConfiguration;
     private final @Nullable String logging;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterExecuteCommandConfiguration(
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
-        @OutputCustomType.Parameter("logConfiguration") @Nullable ClusterExecuteCommandLogConfiguration logConfiguration,
-        @OutputCustomType.Parameter("logging") @Nullable String logging) {
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @CustomType.Parameter("logConfiguration") @Nullable ClusterExecuteCommandLogConfiguration logConfiguration,
+        @CustomType.Parameter("logging") @Nullable String logging) {
         this.kmsKeyId = kmsKeyId;
         this.logConfiguration = logConfiguration;
         this.logging = logging;

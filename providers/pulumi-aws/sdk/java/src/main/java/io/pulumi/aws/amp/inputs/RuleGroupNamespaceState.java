@@ -4,7 +4,7 @@
 package io.pulumi.aws.amp.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RuleGroupNamespaceState extends io.pulumi.resources.ResourceA
      * the rule group namespace data that you want to be applied. See more [in AWS Docs](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-Ruler.html).
      * 
      */
-    @InputImport(name="data")
+    @Import(name="data")
       private final @Nullable Output<String> data;
 
     public Output<String> getData() {
@@ -29,7 +29,7 @@ public final class RuleGroupNamespaceState extends io.pulumi.resources.ResourceA
      * The name of the rule group namespace
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -40,7 +40,7 @@ public final class RuleGroupNamespaceState extends io.pulumi.resources.ResourceA
      * The id of the prometheus workspace the rule group namespace should be linked to
      * 
      */
-    @InputImport(name="workspaceId")
+    @Import(name="workspaceId")
       private final @Nullable Output<String> workspaceId;
 
     public Output<String> getWorkspaceId() {

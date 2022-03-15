@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ConsentLinkParameterDefinition;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ListConnectionConsentLinksArgs extends io.pulumi.resources.In
      * Connection name
      * 
      */
-    @InputImport(name="connectionName", required=true)
+    @Import(name="connectionName", required=true)
       private final String connectionName;
 
     public String getConnectionName() {
@@ -31,7 +31,7 @@ public final class ListConnectionConsentLinksArgs extends io.pulumi.resources.In
      * Collection of resources
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable List<ConsentLinkParameterDefinition> parameters;
 
     public List<ConsentLinkParameterDefinition> getParameters() {
@@ -42,7 +42,7 @@ public final class ListConnectionConsentLinksArgs extends io.pulumi.resources.In
      * The resource group
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class ListConnectionConsentLinksArgs extends io.pulumi.resources.In
      * Subscription Id
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {

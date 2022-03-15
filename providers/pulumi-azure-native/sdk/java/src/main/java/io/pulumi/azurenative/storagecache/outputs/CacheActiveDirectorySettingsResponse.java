@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.storagecache.outputs;
 
 import io.pulumi.azurenative.storagecache.outputs.CacheActiveDirectorySettingsResponseCredentials;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CacheActiveDirectorySettingsResponse {
     /**
      * The NetBIOS name to assign to the HPC Cache when it joins the Active Directory domain as a server. Length must 1-15 characters from the class [-0-9a-zA-Z].
@@ -48,15 +48,15 @@ public final class CacheActiveDirectorySettingsResponse {
      */
     private final @Nullable String secondaryDnsIpAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CacheActiveDirectorySettingsResponse(
-        @OutputCustomType.Parameter("cacheNetBiosName") String cacheNetBiosName,
-        @OutputCustomType.Parameter("credentials") @Nullable CacheActiveDirectorySettingsResponseCredentials credentials,
-        @OutputCustomType.Parameter("domainJoined") String domainJoined,
-        @OutputCustomType.Parameter("domainName") String domainName,
-        @OutputCustomType.Parameter("domainNetBiosName") String domainNetBiosName,
-        @OutputCustomType.Parameter("primaryDnsIpAddress") String primaryDnsIpAddress,
-        @OutputCustomType.Parameter("secondaryDnsIpAddress") @Nullable String secondaryDnsIpAddress) {
+        @CustomType.Parameter("cacheNetBiosName") String cacheNetBiosName,
+        @CustomType.Parameter("credentials") @Nullable CacheActiveDirectorySettingsResponseCredentials credentials,
+        @CustomType.Parameter("domainJoined") String domainJoined,
+        @CustomType.Parameter("domainName") String domainName,
+        @CustomType.Parameter("domainNetBiosName") String domainNetBiosName,
+        @CustomType.Parameter("primaryDnsIpAddress") String primaryDnsIpAddress,
+        @CustomType.Parameter("secondaryDnsIpAddress") @Nullable String secondaryDnsIpAddress) {
         this.cacheNetBiosName = cacheNetBiosName;
         this.credentials = credentials;
         this.domainJoined = domainJoined;

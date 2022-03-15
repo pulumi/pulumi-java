@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RecordConditionResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GooglePrivacyDlpV2RecordSuppressionResponse extends io.pulumi
      * A condition that when it evaluates to true will result in the record being evaluated to be suppressed from the transformed content.
      * 
      */
-    @InputImport(name="condition", required=true)
+    @Import(name="condition", required=true)
       private final GooglePrivacyDlpV2RecordConditionResponse condition;
 
     public GooglePrivacyDlpV2RecordConditionResponse getCondition() {

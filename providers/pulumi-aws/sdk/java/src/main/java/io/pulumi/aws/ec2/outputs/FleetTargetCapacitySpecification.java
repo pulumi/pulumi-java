@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FleetTargetCapacitySpecification {
     /**
      * Default target capacity type. Valid values: `on-demand`, `spot`.
@@ -33,12 +33,12 @@ public final class FleetTargetCapacitySpecification {
      */
     private final Integer totalTargetCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FleetTargetCapacitySpecification(
-        @OutputCustomType.Parameter("defaultTargetCapacityType") String defaultTargetCapacityType,
-        @OutputCustomType.Parameter("onDemandTargetCapacity") @Nullable Integer onDemandTargetCapacity,
-        @OutputCustomType.Parameter("spotTargetCapacity") @Nullable Integer spotTargetCapacity,
-        @OutputCustomType.Parameter("totalTargetCapacity") Integer totalTargetCapacity) {
+        @CustomType.Parameter("defaultTargetCapacityType") String defaultTargetCapacityType,
+        @CustomType.Parameter("onDemandTargetCapacity") @Nullable Integer onDemandTargetCapacity,
+        @CustomType.Parameter("spotTargetCapacity") @Nullable Integer spotTargetCapacity,
+        @CustomType.Parameter("totalTargetCapacity") Integer totalTargetCapacity) {
         this.defaultTargetCapacityType = defaultTargetCapacityType;
         this.onDemandTargetCapacity = onDemandTargetCapacity;
         this.spotTargetCapacity = spotTargetCapacity;

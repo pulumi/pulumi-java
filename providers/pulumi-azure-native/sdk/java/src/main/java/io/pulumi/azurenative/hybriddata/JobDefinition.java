@@ -9,7 +9,7 @@ import io.pulumi.azurenative.hybriddata.outputs.CustomerSecretResponse;
 import io.pulumi.azurenative.hybriddata.outputs.ScheduleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class JobDefinition extends io.pulumi.resources.CustomResource {
      * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
      * 
      */
-    @OutputExport(name="customerSecrets", type=List.class, parameters={CustomerSecretResponse.class})
+    @Export(name="customerSecrets", type=List.class, parameters={CustomerSecretResponse.class})
     private Output</* @Nullable */ List<CustomerSecretResponse>> customerSecrets;
 
     /**
@@ -51,7 +51,7 @@ public class JobDefinition extends io.pulumi.resources.CustomResource {
      * A generic json used differently by each data service type.
      * 
      */
-    @OutputExport(name="dataServiceInput", type=Object.class, parameters={})
+    @Export(name="dataServiceInput", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> dataServiceInput;
 
     /**
@@ -65,7 +65,7 @@ public class JobDefinition extends io.pulumi.resources.CustomResource {
      * Data Sink Id associated to the job definition.
      * 
      */
-    @OutputExport(name="dataSinkId", type=String.class, parameters={})
+    @Export(name="dataSinkId", type=String.class, parameters={})
     private Output<String> dataSinkId;
 
     /**
@@ -79,7 +79,7 @@ public class JobDefinition extends io.pulumi.resources.CustomResource {
      * Data Source Id associated to the job definition.
      * 
      */
-    @OutputExport(name="dataSourceId", type=String.class, parameters={})
+    @Export(name="dataSourceId", type=String.class, parameters={})
     private Output<String> dataSourceId;
 
     /**
@@ -93,7 +93,7 @@ public class JobDefinition extends io.pulumi.resources.CustomResource {
      * Last modified time of the job definition.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
     /**
@@ -107,7 +107,7 @@ public class JobDefinition extends io.pulumi.resources.CustomResource {
      * Name of the object.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class JobDefinition extends io.pulumi.resources.CustomResource {
      * This is the preferred geo location for the job to run.
      * 
      */
-    @OutputExport(name="runLocation", type=String.class, parameters={})
+    @Export(name="runLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> runLocation;
 
     /**
@@ -135,7 +135,7 @@ public class JobDefinition extends io.pulumi.resources.CustomResource {
      * Schedule for running the job definition
      * 
      */
-    @OutputExport(name="schedules", type=List.class, parameters={ScheduleResponse.class})
+    @Export(name="schedules", type=List.class, parameters={ScheduleResponse.class})
     private Output</* @Nullable */ List<ScheduleResponse>> schedules;
 
     /**
@@ -149,7 +149,7 @@ public class JobDefinition extends io.pulumi.resources.CustomResource {
      * State of the job definition.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -163,7 +163,7 @@ public class JobDefinition extends io.pulumi.resources.CustomResource {
      * Type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -177,7 +177,7 @@ public class JobDefinition extends io.pulumi.resources.CustomResource {
      * Enum to detect if user confirmation is required. If not passed will default to NotRequired.
      * 
      */
-    @OutputExport(name="userConfirmation", type=String.class, parameters={})
+    @Export(name="userConfirmation", type=String.class, parameters={})
     private Output</* @Nullable */ String> userConfirmation;
 
     /**

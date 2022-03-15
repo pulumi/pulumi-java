@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.cloudidentity.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudidentity.outputs.GetGroupsGroupGroupKey;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGroupsGroup {
     private final String createTime;
     private final String description;
@@ -26,17 +26,17 @@ public final class GetGroupsGroup {
     private final String parent;
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGroupsGroup(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("groupKeys") List<GetGroupsGroupGroupKey> groupKeys,
-        @OutputCustomType.Parameter("initialGroupConfig") String initialGroupConfig,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parent") String parent,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("groupKeys") List<GetGroupsGroupGroupKey> groupKeys,
+        @CustomType.Parameter("initialGroupConfig") String initialGroupConfig,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parent") String parent,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.displayName = displayName;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.DataFlowResponseFolder;
 import io.pulumi.azurenative.datafactory.inputs.DataFlowSinkResponse;
 import io.pulumi.azurenative.datafactory.inputs.DataFlowSourceResponse;
 import io.pulumi.azurenative.datafactory.inputs.TransformationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
      * List of tags that can be used for describing the data flow.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -39,7 +39,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
      * The description of the data flow.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -50,7 +50,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
      * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
      * 
      */
-    @InputImport(name="folder")
+    @Import(name="folder")
       private final @Nullable DataFlowResponseFolder folder;
 
     public Optional<DataFlowResponseFolder> getFolder() {
@@ -61,7 +61,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
      * Flowlet script.
      * 
      */
-    @InputImport(name="script")
+    @Import(name="script")
       private final @Nullable String script;
 
     public Optional<String> getScript() {
@@ -72,7 +72,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
      * Flowlet script lines.
      * 
      */
-    @InputImport(name="scriptLines")
+    @Import(name="scriptLines")
       private final @Nullable List<String> scriptLines;
 
     public List<String> getScriptLines() {
@@ -83,7 +83,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
      * List of sinks in Flowlet.
      * 
      */
-    @InputImport(name="sinks")
+    @Import(name="sinks")
       private final @Nullable List<DataFlowSinkResponse> sinks;
 
     public List<DataFlowSinkResponse> getSinks() {
@@ -94,7 +94,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
      * List of sources in Flowlet.
      * 
      */
-    @InputImport(name="sources")
+    @Import(name="sources")
       private final @Nullable List<DataFlowSourceResponse> sources;
 
     public List<DataFlowSourceResponse> getSources() {
@@ -105,7 +105,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
      * List of transformations in Flowlet.
      * 
      */
-    @InputImport(name="transformations")
+    @Import(name="transformations")
       private final @Nullable List<TransformationResponse> transformations;
 
     public List<TransformationResponse> getTransformations() {
@@ -117,7 +117,7 @@ public final class FlowletResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'Flowlet'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

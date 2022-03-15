@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.saas.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SaasPropertiesResponseTerm {
     /**
      * The end date of the current term
@@ -27,11 +27,11 @@ public final class SaasPropertiesResponseTerm {
      */
     private final @Nullable String termUnit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SaasPropertiesResponseTerm(
-        @OutputCustomType.Parameter("endDate") @Nullable String endDate,
-        @OutputCustomType.Parameter("startDate") @Nullable String startDate,
-        @OutputCustomType.Parameter("termUnit") @Nullable String termUnit) {
+        @CustomType.Parameter("endDate") @Nullable String endDate,
+        @CustomType.Parameter("startDate") @Nullable String startDate,
+        @CustomType.Parameter("termUnit") @Nullable String termUnit) {
         this.endDate = endDate;
         this.startDate = startDate;
         this.termUnit = termUnit;

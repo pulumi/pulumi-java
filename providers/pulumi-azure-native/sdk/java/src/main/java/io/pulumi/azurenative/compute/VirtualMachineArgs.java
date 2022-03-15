@@ -20,7 +20,7 @@ import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineIdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies additional capabilities enabled or disabled on the virtual machine.
      * 
      */
-    @InputImport(name="additionalCapabilities")
+    @Import(name="additionalCapabilities")
       private final @Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities;
 
     public Output<AdditionalCapabilitiesArgs> getAdditionalCapabilities() {
@@ -48,7 +48,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies information about the availability set that the virtual machine should be assigned to. Virtual machines specified in the same availability set are allocated to different nodes to maximize availability. For more information about availability sets, see [Availability sets overview](https://docs.microsoft.com/azure/virtual-machines/availability-set-overview). <br><br> For more information on Azure planned maintenance, see [Maintenance and updates for Virtual Machines in Azure](https://docs.microsoft.com/azure/virtual-machines/maintenance-and-updates) <br><br> Currently, a VM can only be added to availability set at creation time. The availability set to which the VM is being added should be under the same resource group as the availability set resource. An existing VM cannot be added to an availability set. <br><br>This property cannot exist along with a non-null properties.virtualMachineScaleSet reference.
      * 
      */
-    @InputImport(name="availabilitySet")
+    @Import(name="availabilitySet")
       private final @Nullable Output<SubResourceArgs> availabilitySet;
 
     public Output<SubResourceArgs> getAvailabilitySet() {
@@ -59,7 +59,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the billing related details of a Azure Spot virtual machine. <br><br>Minimum api-version: 2019-03-01.
      * 
      */
-    @InputImport(name="billingProfile")
+    @Import(name="billingProfile")
       private final @Nullable Output<BillingProfileArgs> billingProfile;
 
     public Output<BillingProfileArgs> getBillingProfile() {
@@ -70,7 +70,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the boot diagnostic settings state. <br><br>Minimum api-version: 2015-06-15.
      * 
      */
-    @InputImport(name="diagnosticsProfile")
+    @Import(name="diagnosticsProfile")
       private final @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile;
 
     public Output<DiagnosticsProfileArgs> getDiagnosticsProfile() {
@@ -81,7 +81,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the eviction policy for the Azure Spot virtual machine and Azure Spot scale set. <br><br>For Azure Spot virtual machines, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2019-03-01. <br><br>For Azure Spot scale sets, both 'Deallocate' and 'Delete' are supported and the minimum api-version is 2017-10-30-preview.
      * 
      */
-    @InputImport(name="evictionPolicy")
+    @Import(name="evictionPolicy")
       private final @Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy;
 
     public Output<Either<String,VirtualMachineEvictionPolicyTypes>> getEvictionPolicy() {
@@ -92,7 +92,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * The extended location of the Virtual Machine.
      * 
      */
-    @InputImport(name="extendedLocation")
+    @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
     public Output<ExtendedLocationArgs> getExtendedLocation() {
@@ -103,7 +103,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the time alloted for all extensions to start. The time duration should be between 15 minutes and 120 minutes (inclusive) and should be specified in ISO 8601 format. The default value is 90 minutes (PT1H30M). <br><br> Minimum api-version: 2020-06-01
      * 
      */
-    @InputImport(name="extensionsTimeBudget")
+    @Import(name="extensionsTimeBudget")
       private final @Nullable Output<String> extensionsTimeBudget;
 
     public Output<String> getExtensionsTimeBudget() {
@@ -114,7 +114,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the hardware settings for the virtual machine.
      * 
      */
-    @InputImport(name="hardwareProfile")
+    @Import(name="hardwareProfile")
       private final @Nullable Output<HardwareProfileArgs> hardwareProfile;
 
     public Output<HardwareProfileArgs> getHardwareProfile() {
@@ -125,7 +125,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies information about the dedicated host that the virtual machine resides in. <br><br>Minimum api-version: 2018-10-01.
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<SubResourceArgs> host;
 
     public Output<SubResourceArgs> getHost() {
@@ -136,7 +136,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies information about the dedicated host group that the virtual machine resides in. <br><br>Minimum api-version: 2020-06-01. <br><br>NOTE: User cannot specify both host and hostGroup properties.
      * 
      */
-    @InputImport(name="hostGroup")
+    @Import(name="hostGroup")
       private final @Nullable Output<SubResourceArgs> hostGroup;
 
     public Output<SubResourceArgs> getHostGroup() {
@@ -147,7 +147,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * The identity of the virtual machine, if configured.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<VirtualMachineIdentityArgs> identity;
 
     public Output<VirtualMachineIdentityArgs> getIdentity() {
@@ -158,7 +158,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies that the image or disk that is being used was licensed on-premises. <br><br> Possible values for Windows Server operating system are: <br><br> Windows_Client <br><br> Windows_Server <br><br> Possible values for Linux Server operating system are: <br><br> RHEL_BYOS (for RHEL) <br><br> SLES_BYOS (for SUSE) <br><br> For more information, see [Azure Hybrid Use Benefit for Windows Server](https://docs.microsoft.com/azure/virtual-machines/windows/hybrid-use-benefit-licensing) <br><br> [Azure Hybrid Use Benefit for Linux Server](https://docs.microsoft.com/azure/virtual-machines/linux/azure-hybrid-benefit-linux) <br><br> Minimum api-version: 2015-06-15
      * 
      */
-    @InputImport(name="licenseType")
+    @Import(name="licenseType")
       private final @Nullable Output<String> licenseType;
 
     public Output<String> getLicenseType() {
@@ -169,7 +169,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -180,7 +180,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the network interfaces of the virtual machine.
      * 
      */
-    @InputImport(name="networkProfile")
+    @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
     public Output<NetworkProfileArgs> getNetworkProfile() {
@@ -191,7 +191,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the operating system settings used while creating the virtual machine. Some of the settings cannot be changed once VM is provisioned.
      * 
      */
-    @InputImport(name="osProfile")
+    @Import(name="osProfile")
       private final @Nullable Output<OSProfileArgs> osProfile;
 
     public Output<OSProfileArgs> getOsProfile() {
@@ -202,7 +202,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started ->**. Enter any required information and then click **Save**.
      * 
      */
-    @InputImport(name="plan")
+    @Import(name="plan")
       private final @Nullable Output<PlanArgs> plan;
 
     public Output<PlanArgs> getPlan() {
@@ -213,7 +213,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the scale set logical fault domain into which the Virtual Machine will be created. By default, the Virtual Machine will by automatically assigned to a fault domain that best maintains balance across available fault domains.<br><li>This is applicable only if the 'virtualMachineScaleSet' property of this Virtual Machine is set.<li>The Virtual Machine Scale Set that is referenced, must have 'platformFaultDomainCount' &gt; 1.<li>This property cannot be updated once the Virtual Machine is created.<li>Fault domain assignment can be viewed in the Virtual Machine Instance View.<br><br>Minimum api‐version: 2020‐12‐01
      * 
      */
-    @InputImport(name="platformFaultDomain")
+    @Import(name="platformFaultDomain")
       private final @Nullable Output<Integer> platformFaultDomain;
 
     public Output<Integer> getPlatformFaultDomain() {
@@ -224,7 +224,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the priority for the virtual machine. <br><br>Minimum api-version: 2019-03-01
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority;
 
     public Output<Either<String,VirtualMachinePriorityTypes>> getPriority() {
@@ -235,7 +235,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies information about the proximity placement group that the virtual machine should be assigned to. <br><br>Minimum api-version: 2018-04-01.
      * 
      */
-    @InputImport(name="proximityPlacementGroup")
+    @Import(name="proximityPlacementGroup")
       private final @Nullable Output<SubResourceArgs> proximityPlacementGroup;
 
     public Output<SubResourceArgs> getProximityPlacementGroup() {
@@ -246,7 +246,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -257,7 +257,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies Scheduled Event related configurations.
      * 
      */
-    @InputImport(name="scheduledEventsProfile")
+    @Import(name="scheduledEventsProfile")
       private final @Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile;
 
     public Output<ScheduledEventsProfileArgs> getScheduledEventsProfile() {
@@ -268,7 +268,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the Security related profile settings for the virtual machine.
      * 
      */
-    @InputImport(name="securityProfile")
+    @Import(name="securityProfile")
       private final @Nullable Output<SecurityProfileArgs> securityProfile;
 
     public Output<SecurityProfileArgs> getSecurityProfile() {
@@ -279,7 +279,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the storage settings for the virtual machine disks.
      * 
      */
-    @InputImport(name="storageProfile")
+    @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
 
     public Output<StorageProfileArgs> getStorageProfile() {
@@ -290,7 +290,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -301,7 +301,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * UserData for the VM, which must be base-64 encoded. Customer should not pass any secrets in here. <br><br>Minimum api-version: 2021-03-01
      * 
      */
-    @InputImport(name="userData")
+    @Import(name="userData")
       private final @Nullable Output<String> userData;
 
     public Output<String> getUserData() {
@@ -312,7 +312,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies information about the virtual machine scale set that the virtual machine should be assigned to. Virtual machines specified in the same virtual machine scale set are allocated to different nodes to maximize availability. Currently, a VM can only be added to virtual machine scale set at creation time. An existing VM cannot be added to a virtual machine scale set. <br><br>This property cannot exist along with a non-null properties.availabilitySet reference. <br><br>Minimum api‐version: 2019‐03‐01
      * 
      */
-    @InputImport(name="virtualMachineScaleSet")
+    @Import(name="virtualMachineScaleSet")
       private final @Nullable Output<SubResourceArgs> virtualMachineScaleSet;
 
     public Output<SubResourceArgs> getVirtualMachineScaleSet() {
@@ -323,7 +323,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the virtual machine.
      * 
      */
-    @InputImport(name="vmName")
+    @Import(name="vmName")
       private final @Nullable Output<String> vmName;
 
     public Output<String> getVmName() {
@@ -334,7 +334,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * The virtual machine zones.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {

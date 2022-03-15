@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ivs.outputs;
 import io.pulumi.awsnative.ivs.enums.ChannelLatencyMode;
 import io.pulumi.awsnative.ivs.enums.ChannelType;
 import io.pulumi.awsnative.ivs.outputs.ChannelTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetChannelResult {
     /**
      * Channel ARN is automatically generated on creation and assigned as the unique identifier.
@@ -62,17 +62,17 @@ public final class GetChannelResult {
      */
     private final @Nullable ChannelType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetChannelResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("authorized") @Nullable Boolean authorized,
-        @OutputCustomType.Parameter("ingestEndpoint") @Nullable String ingestEndpoint,
-        @OutputCustomType.Parameter("latencyMode") @Nullable ChannelLatencyMode latencyMode,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("playbackUrl") @Nullable String playbackUrl,
-        @OutputCustomType.Parameter("recordingConfigurationArn") @Nullable String recordingConfigurationArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<ChannelTag> tags,
-        @OutputCustomType.Parameter("type") @Nullable ChannelType type) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("authorized") @Nullable Boolean authorized,
+        @CustomType.Parameter("ingestEndpoint") @Nullable String ingestEndpoint,
+        @CustomType.Parameter("latencyMode") @Nullable ChannelLatencyMode latencyMode,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("playbackUrl") @Nullable String playbackUrl,
+        @CustomType.Parameter("recordingConfigurationArn") @Nullable String recordingConfigurationArn,
+        @CustomType.Parameter("tags") @Nullable List<ChannelTag> tags,
+        @CustomType.Parameter("type") @Nullable ChannelType type) {
         this.arn = arn;
         this.authorized = authorized;
         this.ingestEndpoint = ingestEndpoint;

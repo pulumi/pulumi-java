@@ -8,7 +8,7 @@ import io.pulumi.azurenative.migrate.PrivateEndpointConnectionArgs;
 import io.pulumi.azurenative.migrate.outputs.PrivateEndpointConnectionPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * For optimistic concurrency control.
      * 
      */
-    @OutputExport(name="eTag", type=String.class, parameters={})
+    @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
@@ -49,7 +49,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Name of the private endpoint endpoint connection.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Properties of the private endpoint endpoint connection.
      * 
      */
-    @OutputExport(name="properties", type=PrivateEndpointConnectionPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=PrivateEndpointConnectionPropertiesResponse.class, parameters={})
     private Output<PrivateEndpointConnectionPropertiesResponse> properties;
 
     /**
@@ -77,7 +77,7 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
      * Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

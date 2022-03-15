@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.NotificationRateLimitResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AlertStrategyResponse {
     /**
      * If an alert policy that was active has no data for this long, any open incidents will close
@@ -21,10 +21,10 @@ public final class AlertStrategyResponse {
      */
     private final NotificationRateLimitResponse notificationRateLimit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AlertStrategyResponse(
-        @OutputCustomType.Parameter("autoClose") String autoClose,
-        @OutputCustomType.Parameter("notificationRateLimit") NotificationRateLimitResponse notificationRateLimit) {
+        @CustomType.Parameter("autoClose") String autoClose,
+        @CustomType.Parameter("notificationRateLimit") NotificationRateLimitResponse notificationRateLimit) {
         this.autoClose = autoClose;
         this.notificationRateLimit = notificationRateLimit;
     }

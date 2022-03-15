@@ -3,18 +3,18 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobReference {
     private final @Nullable String jobId;
 
-    @OutputCustomType.Constructor
-    private JobReference(@OutputCustomType.Parameter("jobId") @Nullable String jobId) {
+    @CustomType.Constructor
+    private JobReference(@CustomType.Parameter("jobId") @Nullable String jobId) {
         this.jobId = jobId;
     }
 

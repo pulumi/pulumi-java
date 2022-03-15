@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.codedeploy.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentGroupEcsService {
     /**
      * The name of the ECS cluster.
@@ -20,10 +20,10 @@ public final class DeploymentGroupEcsService {
      */
     private final String serviceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentGroupEcsService(
-        @OutputCustomType.Parameter("clusterName") String clusterName,
-        @OutputCustomType.Parameter("serviceName") String serviceName) {
+        @CustomType.Parameter("clusterName") String clusterName,
+        @CustomType.Parameter("serviceName") String serviceName) {
         this.clusterName = clusterName;
         this.serviceName = serviceName;
     }

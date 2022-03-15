@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ErrorsArgs extends io.pulumi.resources.ResourceArgs {
      * The error code.
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable Output<String> code;
 
     public Output<String> getCode() {
@@ -33,7 +33,7 @@ public final class ErrorsArgs extends io.pulumi.resources.ResourceArgs {
      * The error message.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {

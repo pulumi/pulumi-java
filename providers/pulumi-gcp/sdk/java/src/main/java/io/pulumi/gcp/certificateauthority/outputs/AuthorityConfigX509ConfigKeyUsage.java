@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509ConfigKeyUsageBaseKeyUsage;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsage;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AuthorityConfigX509ConfigKeyUsage {
     /**
      * Describes high-level ways in which a key may be used.
@@ -32,11 +32,11 @@ public final class AuthorityConfigX509ConfigKeyUsage {
      */
     private final @Nullable List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuthorityConfigX509ConfigKeyUsage(
-        @OutputCustomType.Parameter("baseKeyUsage") AuthorityConfigX509ConfigKeyUsageBaseKeyUsage baseKeyUsage,
-        @OutputCustomType.Parameter("extendedKeyUsage") AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage extendedKeyUsage,
-        @OutputCustomType.Parameter("unknownExtendedKeyUsages") @Nullable List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
+        @CustomType.Parameter("baseKeyUsage") AuthorityConfigX509ConfigKeyUsageBaseKeyUsage baseKeyUsage,
+        @CustomType.Parameter("extendedKeyUsage") AuthorityConfigX509ConfigKeyUsageExtendedKeyUsage extendedKeyUsage,
+        @CustomType.Parameter("unknownExtendedKeyUsages") @Nullable List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsage> unknownExtendedKeyUsages) {
         this.baseKeyUsage = baseKeyUsage;
         this.extendedKeyUsage = extendedKeyUsage;
         this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;

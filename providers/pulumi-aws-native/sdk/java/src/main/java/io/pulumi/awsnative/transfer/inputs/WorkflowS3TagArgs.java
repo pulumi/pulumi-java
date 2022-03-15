@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.transfer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class WorkflowS3TagArgs extends io.pulumi.resources.ResourceArgs {
      * The name assigned to the tag that you create.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -32,7 +32,7 @@ public final class WorkflowS3TagArgs extends io.pulumi.resources.ResourceArgs {
      * The value that corresponds to the key.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

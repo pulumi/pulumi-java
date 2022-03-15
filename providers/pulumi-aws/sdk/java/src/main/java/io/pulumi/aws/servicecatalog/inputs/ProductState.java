@@ -5,7 +5,7 @@ package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.aws.servicecatalog.inputs.ProductProvisioningArtifactParametersGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    @InputImport(name="acceptLanguage")
+    @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
     public Output<String> getAcceptLanguage() {
@@ -32,7 +32,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * ARN of the product.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -43,7 +43,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * Time when the product was created.
      * 
      */
-    @InputImport(name="createdTime")
+    @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
@@ -54,7 +54,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * Description of the provisioning artifact (i.e., version), including how it differs from the previous provisioning artifact.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -65,7 +65,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * Distributor (i.e., vendor) of the product.
      * 
      */
-    @InputImport(name="distributor")
+    @Import(name="distributor")
       private final @Nullable Output<String> distributor;
 
     public Output<String> getDistributor() {
@@ -76,7 +76,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * Whether the product has a default path. If the product does not have a default path, call `ListLaunchPaths` to disambiguate between paths.  Otherwise, `ListLaunchPaths` is not required, and the output of ProductViewSummary can be used directly with `DescribeProvisioningParameters`.
      * 
      */
-    @InputImport(name="hasDefaultPath")
+    @Import(name="hasDefaultPath")
       private final @Nullable Output<Boolean> hasDefaultPath;
 
     public Output<Boolean> getHasDefaultPath() {
@@ -87,7 +87,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * Name of the provisioning artifact (for example, `v1`, `v2beta`). No spaces are allowed.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -98,7 +98,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * Owner of the product.
      * 
      */
-    @InputImport(name="owner")
+    @Import(name="owner")
       private final @Nullable Output<String> owner;
 
     public Output<String> getOwner() {
@@ -109,7 +109,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * Configuration block for provisioning artifact (i.e., version) parameters. Detailed below.
      * 
      */
-    @InputImport(name="provisioningArtifactParameters")
+    @Import(name="provisioningArtifactParameters")
       private final @Nullable Output<ProductProvisioningArtifactParametersGetArgs> provisioningArtifactParameters;
 
     public Output<ProductProvisioningArtifactParametersGetArgs> getProvisioningArtifactParameters() {
@@ -120,7 +120,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * Status of the product.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -131,7 +131,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * Support information about the product.
      * 
      */
-    @InputImport(name="supportDescription")
+    @Import(name="supportDescription")
       private final @Nullable Output<String> supportDescription;
 
     public Output<String> getSupportDescription() {
@@ -142,7 +142,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * Contact email for product support.
      * 
      */
-    @InputImport(name="supportEmail")
+    @Import(name="supportEmail")
       private final @Nullable Output<String> supportEmail;
 
     public Output<String> getSupportEmail() {
@@ -153,7 +153,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * Contact URL for product support.
      * 
      */
-    @InputImport(name="supportUrl")
+    @Import(name="supportUrl")
       private final @Nullable Output<String> supportUrl;
 
     public Output<String> getSupportUrl() {
@@ -164,7 +164,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * Tags to apply to the product. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -175,7 +175,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -186,7 +186,7 @@ public final class ProductState extends io.pulumi.resources.ResourceArgs {
      * Type of provisioning artifact. Valid values: `CLOUD_FORMATION_TEMPLATE`, `MARKETPLACE_AMI`, `MARKETPLACE_CAR` (Marketplace Clusters and AWS Resources).
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

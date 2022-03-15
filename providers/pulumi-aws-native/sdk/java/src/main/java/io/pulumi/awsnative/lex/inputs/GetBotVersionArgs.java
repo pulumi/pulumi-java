@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetBotVersionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBotVersionArgs Empty = new GetBotVersionArgs();
 
-    @InputImport(name="botId", required=true)
+    @Import(name="botId", required=true)
       private final String botId;
 
     public String getBotId() {
         return this.botId;
     }
 
-    @InputImport(name="botVersion", required=true)
+    @Import(name="botVersion", required=true)
       private final String botVersion;
 
     public String getBotVersion() {

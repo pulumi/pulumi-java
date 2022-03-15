@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiPropertiesResponse {
     /**
      * Describes the ServerVersion of an a MongoDB account.
@@ -17,8 +17,8 @@ public final class ApiPropertiesResponse {
      */
     private final @Nullable String serverVersion;
 
-    @OutputCustomType.Constructor
-    private ApiPropertiesResponse(@OutputCustomType.Parameter("serverVersion") @Nullable String serverVersion) {
+    @CustomType.Constructor
+    private ApiPropertiesResponse(@CustomType.Parameter("serverVersion") @Nullable String serverVersion) {
         this.serverVersion = serverVersion;
     }
 

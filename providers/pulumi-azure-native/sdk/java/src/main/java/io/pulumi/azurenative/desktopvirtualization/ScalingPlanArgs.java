@@ -11,7 +11,7 @@ import io.pulumi.azurenative.desktopvirtualization.inputs.ScalingHostPoolReferen
 import io.pulumi.azurenative.desktopvirtualization.inputs.ScalingScheduleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * Description of scaling plan.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -39,7 +39,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * Exclusion tag for scaling plan.
      * 
      */
-    @InputImport(name="exclusionTag")
+    @Import(name="exclusionTag")
       private final @Nullable Output<String> exclusionTag;
 
     public Output<String> getExclusionTag() {
@@ -50,7 +50,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * User friendly name of scaling plan.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -61,7 +61,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * List of ScalingHostPoolReference definitions.
      * 
      */
-    @InputImport(name="hostPoolReferences")
+    @Import(name="hostPoolReferences")
       private final @Nullable Output<List<ScalingHostPoolReferenceArgs>> hostPoolReferences;
 
     public Output<List<ScalingHostPoolReferenceArgs>> getHostPoolReferences() {
@@ -72,14 +72,14 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * HostPool type for desktop.
      * 
      */
-    @InputImport(name="hostPoolType")
+    @Import(name="hostPoolType")
       private final @Nullable Output<Either<String,HostPoolType>> hostPoolType;
 
     public Output<Either<String,HostPoolType>> getHostPoolType() {
         return this.hostPoolType == null ? Output.empty() : this.hostPoolType;
     }
 
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
 
     public Output<ResourceModelWithAllowedPropertySetIdentityArgs> getIdentity() {
@@ -90,7 +90,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -101,7 +101,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -112,14 +112,14 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * The fully qualified resource ID of the resource that manages this resource. Indicates if this resource is managed by another Azure resource. If this is present, complete mode deployment will not delete the resource if it is removed from the template since it is managed by another resource.
      * 
      */
-    @InputImport(name="managedBy")
+    @Import(name="managedBy")
       private final @Nullable Output<String> managedBy;
 
     public Output<String> getManagedBy() {
         return this.managedBy == null ? Output.empty() : this.managedBy;
     }
 
-    @InputImport(name="plan")
+    @Import(name="plan")
       private final @Nullable Output<ResourceModelWithAllowedPropertySetPlanArgs> plan;
 
     public Output<ResourceModelWithAllowedPropertySetPlanArgs> getPlan() {
@@ -130,7 +130,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -141,7 +141,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * The ring number of scaling plan.
      * 
      */
-    @InputImport(name="ring")
+    @Import(name="ring")
       private final @Nullable Output<Integer> ring;
 
     public Output<Integer> getRing() {
@@ -152,7 +152,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the scaling plan.
      * 
      */
-    @InputImport(name="scalingPlanName")
+    @Import(name="scalingPlanName")
       private final @Nullable Output<String> scalingPlanName;
 
     public Output<String> getScalingPlanName() {
@@ -163,14 +163,14 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * List of ScalingSchedule definitions.
      * 
      */
-    @InputImport(name="schedules")
+    @Import(name="schedules")
       private final @Nullable Output<List<ScalingScheduleArgs>> schedules;
 
     public Output<List<ScalingScheduleArgs>> getSchedules() {
         return this.schedules == null ? Output.empty() : this.schedules;
     }
 
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<ResourceModelWithAllowedPropertySetSkuArgs> sku;
 
     public Output<ResourceModelWithAllowedPropertySetSkuArgs> getSku() {
@@ -181,7 +181,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -192,7 +192,7 @@ public final class ScalingPlanArgs extends io.pulumi.resources.ResourceArgs {
      * Timezone of the scaling plan.
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {

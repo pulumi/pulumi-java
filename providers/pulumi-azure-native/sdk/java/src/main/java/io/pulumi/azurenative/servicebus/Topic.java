@@ -8,7 +8,7 @@ import io.pulumi.azurenative.servicebus.TopicArgs;
 import io.pulumi.azurenative.servicebus.outputs.MessageCountDetailsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -38,7 +38,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Last time the message was sent, or a request was received, for this topic.
      * 
      */
-    @OutputExport(name="accessedAt", type=String.class, parameters={})
+    @Export(name="accessedAt", type=String.class, parameters={})
     private Output<String> accessedAt;
 
     /**
@@ -52,7 +52,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * ISO 8601 timespan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
      * 
      */
-    @OutputExport(name="autoDeleteOnIdle", type=String.class, parameters={})
+    @Export(name="autoDeleteOnIdle", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoDeleteOnIdle;
 
     /**
@@ -66,7 +66,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Message count details
      * 
      */
-    @OutputExport(name="countDetails", type=MessageCountDetailsResponse.class, parameters={})
+    @Export(name="countDetails", type=MessageCountDetailsResponse.class, parameters={})
     private Output<MessageCountDetailsResponse> countDetails;
 
     /**
@@ -80,7 +80,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Exact time the message was created.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -94,7 +94,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * ISO 8601 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
      * 
      */
-    @OutputExport(name="defaultMessageTimeToLive", type=String.class, parameters={})
+    @Export(name="defaultMessageTimeToLive", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultMessageTimeToLive;
 
     /**
@@ -108,7 +108,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * ISO8601 timespan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
      * 
      */
-    @OutputExport(name="duplicateDetectionHistoryTimeWindow", type=String.class, parameters={})
+    @Export(name="duplicateDetectionHistoryTimeWindow", type=String.class, parameters={})
     private Output</* @Nullable */ String> duplicateDetectionHistoryTimeWindow;
 
     /**
@@ -122,7 +122,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Value that indicates whether server-side batched operations are enabled.
      * 
      */
-    @OutputExport(name="enableBatchedOperations", type=Boolean.class, parameters={})
+    @Export(name="enableBatchedOperations", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableBatchedOperations;
 
     /**
@@ -136,7 +136,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Value that indicates whether Express Entities are enabled. An express topic holds a message in memory temporarily before writing it to persistent storage.
      * 
      */
-    @OutputExport(name="enableExpress", type=Boolean.class, parameters={})
+    @Export(name="enableExpress", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableExpress;
 
     /**
@@ -150,7 +150,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Value that indicates whether the topic to be partitioned across multiple message brokers is enabled.
      * 
      */
-    @OutputExport(name="enablePartitioning", type=Boolean.class, parameters={})
+    @Export(name="enablePartitioning", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enablePartitioning;
 
     /**
@@ -164,7 +164,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Maximum size of the topic in megabytes, which is the size of the memory allocated for the topic. Default is 1024.
      * 
      */
-    @OutputExport(name="maxSizeInMegabytes", type=Integer.class, parameters={})
+    @Export(name="maxSizeInMegabytes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxSizeInMegabytes;
 
     /**
@@ -178,7 +178,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -192,7 +192,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Value indicating if this topic requires duplicate detection.
      * 
      */
-    @OutputExport(name="requiresDuplicateDetection", type=Boolean.class, parameters={})
+    @Export(name="requiresDuplicateDetection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> requiresDuplicateDetection;
 
     /**
@@ -206,7 +206,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Size of the topic, in bytes.
      * 
      */
-    @OutputExport(name="sizeInBytes", type=Double.class, parameters={})
+    @Export(name="sizeInBytes", type=Double.class, parameters={})
     private Output<Double> sizeInBytes;
 
     /**
@@ -220,7 +220,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Enumerates the possible values for the status of a messaging entity.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
@@ -234,7 +234,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Number of subscriptions.
      * 
      */
-    @OutputExport(name="subscriptionCount", type=Integer.class, parameters={})
+    @Export(name="subscriptionCount", type=Integer.class, parameters={})
     private Output<Integer> subscriptionCount;
 
     /**
@@ -248,7 +248,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Value that indicates whether the topic supports ordering.
      * 
      */
-    @OutputExport(name="supportOrdering", type=Boolean.class, parameters={})
+    @Export(name="supportOrdering", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> supportOrdering;
 
     /**
@@ -262,7 +262,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -276,7 +276,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * The exact time the message was updated.
      * 
      */
-    @OutputExport(name="updatedAt", type=String.class, parameters={})
+    @Export(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
     /**

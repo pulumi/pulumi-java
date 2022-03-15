@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.folder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OrganizationPolicyBooleanPolicy {
     /**
      * If true, then the Policy is enforced. If false, then any configuration is acceptable.
@@ -15,8 +15,8 @@ public final class OrganizationPolicyBooleanPolicy {
      */
     private final Boolean enforced;
 
-    @OutputCustomType.Constructor
-    private OrganizationPolicyBooleanPolicy(@OutputCustomType.Parameter("enforced") Boolean enforced) {
+    @CustomType.Constructor
+    private OrganizationPolicyBooleanPolicy(@CustomType.Parameter("enforced") Boolean enforced) {
         this.enforced = enforced;
     }
 

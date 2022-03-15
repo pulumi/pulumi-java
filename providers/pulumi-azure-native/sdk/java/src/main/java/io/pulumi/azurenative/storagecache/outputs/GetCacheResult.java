@@ -12,7 +12,7 @@ import io.pulumi.azurenative.storagecache.outputs.CacheResponseSku;
 import io.pulumi.azurenative.storagecache.outputs.CacheSecuritySettingsResponse;
 import io.pulumi.azurenative.storagecache.outputs.CacheUpgradeStatusResponse;
 import io.pulumi.azurenative.storagecache.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCacheResult {
     /**
      * The size of this Cache, in GB.
@@ -114,26 +114,26 @@ public final class GetCacheResult {
      */
     private final @Nullable CacheUpgradeStatusResponse upgradeStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCacheResult(
-        @OutputCustomType.Parameter("cacheSizeGB") @Nullable Integer cacheSizeGB,
-        @OutputCustomType.Parameter("directoryServicesSettings") @Nullable CacheDirectorySettingsResponse directoryServicesSettings,
-        @OutputCustomType.Parameter("encryptionSettings") @Nullable CacheEncryptionSettingsResponse encryptionSettings,
-        @OutputCustomType.Parameter("health") CacheHealthResponse health,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable CacheIdentityResponse identity,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("mountAddresses") List<String> mountAddresses,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkSettings") @Nullable CacheNetworkSettingsResponse networkSettings,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("securitySettings") @Nullable CacheSecuritySettingsResponse securitySettings,
-        @OutputCustomType.Parameter("sku") @Nullable CacheResponseSku sku,
-        @OutputCustomType.Parameter("subnet") @Nullable String subnet,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("upgradeStatus") @Nullable CacheUpgradeStatusResponse upgradeStatus) {
+        @CustomType.Parameter("cacheSizeGB") @Nullable Integer cacheSizeGB,
+        @CustomType.Parameter("directoryServicesSettings") @Nullable CacheDirectorySettingsResponse directoryServicesSettings,
+        @CustomType.Parameter("encryptionSettings") @Nullable CacheEncryptionSettingsResponse encryptionSettings,
+        @CustomType.Parameter("health") CacheHealthResponse health,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable CacheIdentityResponse identity,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("mountAddresses") List<String> mountAddresses,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkSettings") @Nullable CacheNetworkSettingsResponse networkSettings,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("securitySettings") @Nullable CacheSecuritySettingsResponse securitySettings,
+        @CustomType.Parameter("sku") @Nullable CacheResponseSku sku,
+        @CustomType.Parameter("subnet") @Nullable String subnet,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("upgradeStatus") @Nullable CacheUpgradeStatusResponse upgradeStatus) {
         this.cacheSizeGB = cacheSizeGB;
         this.directoryServicesSettings = directoryServicesSettings;
         this.encryptionSettings = encryptionSettings;

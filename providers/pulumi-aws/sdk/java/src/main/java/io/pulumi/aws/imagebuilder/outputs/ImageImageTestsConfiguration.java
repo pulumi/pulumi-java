@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageImageTestsConfiguration {
     /**
      * Whether image tests are enabled. Defaults to `true`.
@@ -23,10 +23,10 @@ public final class ImageImageTestsConfiguration {
      */
     private final @Nullable Integer timeoutMinutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageImageTestsConfiguration(
-        @OutputCustomType.Parameter("imageTestsEnabled") @Nullable Boolean imageTestsEnabled,
-        @OutputCustomType.Parameter("timeoutMinutes") @Nullable Integer timeoutMinutes) {
+        @CustomType.Parameter("imageTestsEnabled") @Nullable Boolean imageTestsEnabled,
+        @CustomType.Parameter("timeoutMinutes") @Nullable Integer timeoutMinutes) {
         this.imageTestsEnabled = imageTestsEnabled;
         this.timeoutMinutes = timeoutMinutes;
     }

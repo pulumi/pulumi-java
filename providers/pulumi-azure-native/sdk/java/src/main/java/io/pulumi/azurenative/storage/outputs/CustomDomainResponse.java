@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomDomainResponse {
     /**
      * Gets or sets the custom domain name assigned to the storage account. Name is the CNAME source.
@@ -23,10 +23,10 @@ public final class CustomDomainResponse {
      */
     private final @Nullable Boolean useSubDomainName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomDomainResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("useSubDomainName") @Nullable Boolean useSubDomainName) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("useSubDomainName") @Nullable Boolean useSubDomainName) {
         this.name = name;
         this.useSubDomainName = useSubDomainName;
     }

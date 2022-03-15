@@ -5,7 +5,7 @@ package io.pulumi.azurenative.keyvault.outputs;
 
 import io.pulumi.azurenative.keyvault.outputs.MHSMNetworkRuleSetResponse;
 import io.pulumi.azurenative.keyvault.outputs.MHSMPrivateEndpointConnectionItemResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedHsmPropertiesResponse {
     /**
      * The create mode to indicate whether the resource is being created or is being recovered from a deleted resource.
@@ -82,21 +82,21 @@ public final class ManagedHsmPropertiesResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedHsmPropertiesResponse(
-        @OutputCustomType.Parameter("createMode") @Nullable String createMode,
-        @OutputCustomType.Parameter("enablePurgeProtection") @Nullable Boolean enablePurgeProtection,
-        @OutputCustomType.Parameter("enableSoftDelete") @Nullable Boolean enableSoftDelete,
-        @OutputCustomType.Parameter("hsmUri") String hsmUri,
-        @OutputCustomType.Parameter("initialAdminObjectIds") @Nullable List<String> initialAdminObjectIds,
-        @OutputCustomType.Parameter("networkAcls") @Nullable MHSMNetworkRuleSetResponse networkAcls,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<MHSMPrivateEndpointConnectionItemResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
-        @OutputCustomType.Parameter("scheduledPurgeDate") String scheduledPurgeDate,
-        @OutputCustomType.Parameter("softDeleteRetentionInDays") @Nullable Integer softDeleteRetentionInDays,
-        @OutputCustomType.Parameter("statusMessage") String statusMessage,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
+        @CustomType.Parameter("createMode") @Nullable String createMode,
+        @CustomType.Parameter("enablePurgeProtection") @Nullable Boolean enablePurgeProtection,
+        @CustomType.Parameter("enableSoftDelete") @Nullable Boolean enableSoftDelete,
+        @CustomType.Parameter("hsmUri") String hsmUri,
+        @CustomType.Parameter("initialAdminObjectIds") @Nullable List<String> initialAdminObjectIds,
+        @CustomType.Parameter("networkAcls") @Nullable MHSMNetworkRuleSetResponse networkAcls,
+        @CustomType.Parameter("privateEndpointConnections") List<MHSMPrivateEndpointConnectionItemResponse> privateEndpointConnections,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @CustomType.Parameter("scheduledPurgeDate") String scheduledPurgeDate,
+        @CustomType.Parameter("softDeleteRetentionInDays") @Nullable Integer softDeleteRetentionInDays,
+        @CustomType.Parameter("statusMessage") String statusMessage,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.createMode = createMode;
         this.enablePurgeProtection = enablePurgeProtection;
         this.enableSoftDelete = enableSoftDelete;

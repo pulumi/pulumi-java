@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.outputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse {
     /**
      * Which container image sources are allowed. Currently only RBE-supported registry (gcr.io) is allowed. One can allow all repositories under a project or one specific repository only. E.g. container_image_sources { policy: RESTRICTED allowed_values: [ "gcr.io/project-foo", "gcr.io/project-bar/repo-baz", ] } will allow any repositories under "gcr.io/project-foo" plus the repository "gcr.io/project-bar/repo-baz". Default (UNSPECIFIED) is equivalent to any source is allowed.
@@ -56,17 +56,17 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      */
     private final String linuxIsolation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse(
-        @OutputCustomType.Parameter("containerImageSources") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources,
-        @OutputCustomType.Parameter("dockerAddCapabilities") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerAddCapabilities,
-        @OutputCustomType.Parameter("dockerChrootPath") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerChrootPath,
-        @OutputCustomType.Parameter("dockerNetwork") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerNetwork,
-        @OutputCustomType.Parameter("dockerPrivileged") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerPrivileged,
-        @OutputCustomType.Parameter("dockerRunAsRoot") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRunAsRoot,
-        @OutputCustomType.Parameter("dockerRuntime") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime,
-        @OutputCustomType.Parameter("dockerSiblingContainers") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers,
-        @OutputCustomType.Parameter("linuxIsolation") String linuxIsolation) {
+        @CustomType.Parameter("containerImageSources") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources,
+        @CustomType.Parameter("dockerAddCapabilities") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerAddCapabilities,
+        @CustomType.Parameter("dockerChrootPath") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerChrootPath,
+        @CustomType.Parameter("dockerNetwork") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerNetwork,
+        @CustomType.Parameter("dockerPrivileged") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerPrivileged,
+        @CustomType.Parameter("dockerRunAsRoot") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRunAsRoot,
+        @CustomType.Parameter("dockerRuntime") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime,
+        @CustomType.Parameter("dockerSiblingContainers") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers,
+        @CustomType.Parameter("linuxIsolation") String linuxIsolation) {
         this.containerImageSources = containerImageSources;
         this.dockerAddCapabilities = dockerAddCapabilities;
         this.dockerChrootPath = dockerChrootPath;

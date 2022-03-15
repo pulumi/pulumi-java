@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatasetDefaultEncryptionConfiguration {
     /**
      * Describes the Cloud KMS encryption key that will be used to protect destination
@@ -17,8 +17,8 @@ public final class DatasetDefaultEncryptionConfiguration {
      */
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor
-    private DatasetDefaultEncryptionConfiguration(@OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
+    @CustomType.Constructor
+    private DatasetDefaultEncryptionConfiguration(@CustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 

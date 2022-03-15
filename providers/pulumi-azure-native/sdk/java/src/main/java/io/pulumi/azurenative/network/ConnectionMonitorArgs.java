@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.inputs.ConnectionMonitorSourceArgs;
 import io.pulumi.azurenative.network.inputs.ConnectionMonitorTestConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.ConnectionMonitorTestGroupArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * Determines if the connection monitor will start automatically once created.
      * 
      */
-    @InputImport(name="autoStart")
+    @Import(name="autoStart")
       private final @Nullable Output<Boolean> autoStart;
 
     public Output<Boolean> getAutoStart() {
@@ -39,7 +39,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * The name of the connection monitor.
      * 
      */
-    @InputImport(name="connectionMonitorName")
+    @Import(name="connectionMonitorName")
       private final @Nullable Output<String> connectionMonitorName;
 
     public Output<String> getConnectionMonitorName() {
@@ -50,7 +50,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * Describes the destination of connection monitor.
      * 
      */
-    @InputImport(name="destination")
+    @Import(name="destination")
       private final @Nullable Output<ConnectionMonitorDestinationArgs> destination;
 
     public Output<ConnectionMonitorDestinationArgs> getDestination() {
@@ -61,7 +61,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * List of connection monitor endpoints.
      * 
      */
-    @InputImport(name="endpoints")
+    @Import(name="endpoints")
       private final @Nullable Output<List<ConnectionMonitorEndpointArgs>> endpoints;
 
     public Output<List<ConnectionMonitorEndpointArgs>> getEndpoints() {
@@ -72,7 +72,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * Connection monitor location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -83,7 +83,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * Value indicating whether connection monitor V1 should be migrated to V2 format.
      * 
      */
-    @InputImport(name="migrate")
+    @Import(name="migrate")
       private final @Nullable Output<String> migrate;
 
     public Output<String> getMigrate() {
@@ -94,7 +94,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * Monitoring interval in seconds.
      * 
      */
-    @InputImport(name="monitoringIntervalInSeconds")
+    @Import(name="monitoringIntervalInSeconds")
       private final @Nullable Output<Integer> monitoringIntervalInSeconds;
 
     public Output<Integer> getMonitoringIntervalInSeconds() {
@@ -105,7 +105,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * The name of the Network Watcher resource.
      * 
      */
-    @InputImport(name="networkWatcherName", required=true)
+    @Import(name="networkWatcherName", required=true)
       private final Output<String> networkWatcherName;
 
     public Output<String> getNetworkWatcherName() {
@@ -116,7 +116,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * Optional notes to be associated with the connection monitor.
      * 
      */
-    @InputImport(name="notes")
+    @Import(name="notes")
       private final @Nullable Output<String> notes;
 
     public Output<String> getNotes() {
@@ -127,7 +127,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * List of connection monitor outputs.
      * 
      */
-    @InputImport(name="outputs")
+    @Import(name="outputs")
       private final @Nullable Output<List<ConnectionMonitorOutputArgs>> outputs;
 
     public Output<List<ConnectionMonitorOutputArgs>> getOutputs() {
@@ -138,7 +138,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * The name of the resource group containing Network Watcher.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -149,7 +149,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * Describes the source of connection monitor.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<ConnectionMonitorSourceArgs> source;
 
     public Output<ConnectionMonitorSourceArgs> getSource() {
@@ -160,7 +160,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * Connection monitor tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -171,7 +171,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * List of connection monitor test configurations.
      * 
      */
-    @InputImport(name="testConfigurations")
+    @Import(name="testConfigurations")
       private final @Nullable Output<List<ConnectionMonitorTestConfigurationArgs>> testConfigurations;
 
     public Output<List<ConnectionMonitorTestConfigurationArgs>> getTestConfigurations() {
@@ -182,7 +182,7 @@ public final class ConnectionMonitorArgs extends io.pulumi.resources.ResourceArg
      * List of connection monitor test groups.
      * 
      */
-    @InputImport(name="testGroups")
+    @Import(name="testGroups")
       private final @Nullable Output<List<ConnectionMonitorTestGroupArgs>> testGroups;
 
     public Output<List<ConnectionMonitorTestGroupArgs>> getTestGroups() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.stepfunctions.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class StateMachineCloudWatchLogsLogGroupArgs extends io.pulumi.reso
 
     public static final StateMachineCloudWatchLogsLogGroupArgs Empty = new StateMachineCloudWatchLogsLogGroupArgs();
 
-    @InputImport(name="logGroupArn")
+    @Import(name="logGroupArn")
       private final @Nullable Output<String> logGroupArn;
 
     public Output<String> getLogGroupArn() {

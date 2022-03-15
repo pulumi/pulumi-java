@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.NormalizedCoordinateResponse;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ImageResponse {
     /**
      * Target image opacity. Valid values are from `1.0` (solid, default) to `0.0` (transparent), exclusive. Set this to a value greater than `0.0`.
@@ -27,11 +27,11 @@ public final class ImageResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageResponse(
-        @OutputCustomType.Parameter("alpha") Double alpha,
-        @OutputCustomType.Parameter("resolution") NormalizedCoordinateResponse resolution,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("alpha") Double alpha,
+        @CustomType.Parameter("resolution") NormalizedCoordinateResponse resolution,
+        @CustomType.Parameter("uri") String uri) {
         this.alpha = alpha;
         this.resolution = resolution;
         this.uri = uri;

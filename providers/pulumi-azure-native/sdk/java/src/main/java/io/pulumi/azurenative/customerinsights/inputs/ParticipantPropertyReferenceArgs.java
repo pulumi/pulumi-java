@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ParticipantPropertyReferenceArgs extends io.pulumi.resources.
      * The source property that maps to the target property.
      * 
      */
-    @InputImport(name="sourcePropertyName", required=true)
+    @Import(name="sourcePropertyName", required=true)
       private final Output<String> sourcePropertyName;
 
     public Output<String> getSourcePropertyName() {
@@ -32,7 +32,7 @@ public final class ParticipantPropertyReferenceArgs extends io.pulumi.resources.
      * The target property that maps to the source property.
      * 
      */
-    @InputImport(name="targetPropertyName", required=true)
+    @Import(name="targetPropertyName", required=true)
       private final Output<String> targetPropertyName;
 
     public Output<String> getTargetPropertyName() {

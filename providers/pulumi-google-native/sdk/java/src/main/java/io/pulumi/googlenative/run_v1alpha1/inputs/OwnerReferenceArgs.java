@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * API version of the referent.
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
@@ -34,7 +34,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned. +optional
      * 
      */
-    @InputImport(name="blockOwnerDeletion")
+    @Import(name="blockOwnerDeletion")
       private final @Nullable Output<Boolean> blockOwnerDeletion;
 
     public Output<Boolean> getBlockOwnerDeletion() {
@@ -45,7 +45,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * If true, this reference points to the managing controller. +optional
      * 
      */
-    @InputImport(name="controller")
+    @Import(name="controller")
       private final @Nullable Output<Boolean> controller;
 
     public Output<Boolean> getController() {
@@ -56,7 +56,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -67,7 +67,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -78,7 +78,7 @@ public final class OwnerReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
      * 
      */
-    @InputImport(name="uid")
+    @Import(name="uid")
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {

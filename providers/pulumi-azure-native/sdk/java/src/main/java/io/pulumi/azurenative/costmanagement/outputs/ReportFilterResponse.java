@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ReportComparisonExpressionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReportFilterResponse {
     /**
      * The logical "AND" expression. Must have at least 2 items.
@@ -38,13 +38,13 @@ public final class ReportFilterResponse {
      */
     private final @Nullable ReportComparisonExpressionResponse tag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReportFilterResponse(
-        @OutputCustomType.Parameter("and") @Nullable List<ReportFilterResponse> and,
-        @OutputCustomType.Parameter("dimension") @Nullable ReportComparisonExpressionResponse dimension,
-        @OutputCustomType.Parameter("not") @Nullable ReportFilterResponse not,
-        @OutputCustomType.Parameter("or") @Nullable List<ReportFilterResponse> or,
-        @OutputCustomType.Parameter("tag") @Nullable ReportComparisonExpressionResponse tag) {
+        @CustomType.Parameter("and") @Nullable List<ReportFilterResponse> and,
+        @CustomType.Parameter("dimension") @Nullable ReportComparisonExpressionResponse dimension,
+        @CustomType.Parameter("not") @Nullable ReportFilterResponse not,
+        @CustomType.Parameter("or") @Nullable List<ReportFilterResponse> or,
+        @CustomType.Parameter("tag") @Nullable ReportComparisonExpressionResponse tag) {
         this.and = and;
         this.dimension = dimension;
         this.not = not;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.ArchiveDeploymentArgs;
@@ -22,7 +22,7 @@ public class ArchiveDeployment extends io.pulumi.resources.CustomResource {
      * The time at which the Archive Deployment was created in milliseconds since the epoch.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -36,7 +36,7 @@ public class ArchiveDeployment extends io.pulumi.resources.CustomResource {
      * Input only. The Google Cloud Storage signed URL returned from GenerateUploadUrl and used to upload the Archive zip file.
      * 
      */
-    @OutputExport(name="gcsUri", type=String.class, parameters={})
+    @Export(name="gcsUri", type=String.class, parameters={})
     private Output<String> gcsUri;
 
     /**
@@ -50,7 +50,7 @@ public class ArchiveDeployment extends io.pulumi.resources.CustomResource {
      * User-supplied key-value pairs used to organize ArchiveDeployments. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -64,7 +64,7 @@ public class ArchiveDeployment extends io.pulumi.resources.CustomResource {
      * Name of the Archive Deployment in the following format: `organizations/{org}/environments/{env}/archiveDeployments/{id}`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class ArchiveDeployment extends io.pulumi.resources.CustomResource {
      * A reference to the LRO that created this Archive Deployment in the following format: `organizations/{org}/operations/{id}`
      * 
      */
-    @OutputExport(name="operation", type=String.class, parameters={})
+    @Export(name="operation", type=String.class, parameters={})
     private Output<String> operation;
 
     /**
@@ -92,7 +92,7 @@ public class ArchiveDeployment extends io.pulumi.resources.CustomResource {
      * The time at which the Archive Deployment was updated in milliseconds since the epoch.
      * 
      */
-    @OutputExport(name="updatedAt", type=String.class, parameters={})
+    @Export(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
     /**

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse {
     /**
      * Paths of the imported libraries.
@@ -16,8 +16,8 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse {
      */
     private final List<String> importedLibraries;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse(@OutputCustomType.Parameter("importedLibraries") List<String> importedLibraries) {
+    @CustomType.Constructor
+    private GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse(@CustomType.Parameter("importedLibraries") List<String> importedLibraries) {
         this.importedLibraries = importedLibraries;
     }
 

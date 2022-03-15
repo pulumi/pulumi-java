@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.JobHadoopConfigLoggingConfigGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class JobHadoopConfigGetArgs extends io.pulumi.resources.ResourceAr
      * HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
      * 
      */
-    @InputImport(name="archiveUris")
+    @Import(name="archiveUris")
       private final @Nullable Output<List<String>> archiveUris;
 
     public Output<List<String>> getArchiveUris() {
@@ -32,7 +32,7 @@ public final class JobHadoopConfigGetArgs extends io.pulumi.resources.ResourceAr
      * The arguments to pass to the driver. Do not include arguments, such as -libjars or -Dfoo=bar, that can be set as job properties, since a collision may occur that causes an incorrect job submission.
      * 
      */
-    @InputImport(name="args")
+    @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
@@ -43,7 +43,7 @@ public final class JobHadoopConfigGetArgs extends io.pulumi.resources.ResourceAr
      * HCFS URIs of files to be copied to the working directory of Hadoop drivers and distributed tasks. Useful for naively parallel tasks.
      * 
      */
-    @InputImport(name="fileUris")
+    @Import(name="fileUris")
       private final @Nullable Output<List<String>> fileUris;
 
     public Output<List<String>> getFileUris() {
@@ -54,14 +54,14 @@ public final class JobHadoopConfigGetArgs extends io.pulumi.resources.ResourceAr
      * HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
      */
-    @InputImport(name="jarFileUris")
+    @Import(name="jarFileUris")
       private final @Nullable Output<List<String>> jarFileUris;
 
     public Output<List<String>> getJarFileUris() {
         return this.jarFileUris == null ? Output.empty() : this.jarFileUris;
     }
 
-    @InputImport(name="loggingConfig")
+    @Import(name="loggingConfig")
       private final @Nullable Output<JobHadoopConfigLoggingConfigGetArgs> loggingConfig;
 
     public Output<JobHadoopConfigLoggingConfigGetArgs> getLoggingConfig() {
@@ -72,7 +72,7 @@ public final class JobHadoopConfigGetArgs extends io.pulumi.resources.ResourceAr
      * The name of the driver's main class. The jar file containing the class must be in the default CLASSPATH or specified in `jar_file_uris`. Conflicts with `main_jar_file_uri`
      * 
      */
-    @InputImport(name="mainClass")
+    @Import(name="mainClass")
       private final @Nullable Output<String> mainClass;
 
     public Output<String> getMainClass() {
@@ -83,7 +83,7 @@ public final class JobHadoopConfigGetArgs extends io.pulumi.resources.ResourceAr
      * The HCFS URI of the jar file containing the main class. Examples: 'gs://foo-bucket/analytics-binaries/extract-useful-metrics-mr.jar' 'hdfs:/tmp/test-samples/custom-wordcount.jar' 'file:///home/usr/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar'. Conflicts with `main_class`
      * 
      */
-    @InputImport(name="mainJarFileUri")
+    @Import(name="mainJarFileUri")
       private final @Nullable Output<String> mainJarFileUri;
 
     public Output<String> getMainJarFileUri() {
@@ -94,7 +94,7 @@ public final class JobHadoopConfigGetArgs extends io.pulumi.resources.ResourceAr
      * A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {

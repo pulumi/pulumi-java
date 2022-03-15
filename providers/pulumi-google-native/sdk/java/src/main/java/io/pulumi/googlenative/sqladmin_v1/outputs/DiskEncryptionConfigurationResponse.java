@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DiskEncryptionConfigurationResponse {
     /**
      * This is always `sql#diskEncryptionConfiguration`.
@@ -20,10 +20,10 @@ public final class DiskEncryptionConfigurationResponse {
      */
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiskEncryptionConfigurationResponse(
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kind = kind;
         this.kmsKeyName = kmsKeyName;
     }

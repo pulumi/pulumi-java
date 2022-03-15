@@ -5,7 +5,7 @@ package io.pulumi.aws.rds;
 
 import io.pulumi.aws.rds.inputs.ParameterGroupParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the DB parameter group. Defaults to "Managed by Pulumi".
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The family of the DB parameter group.
      * 
      */
-    @InputImport(name="family", required=true)
+    @Import(name="family", required=true)
       private final Output<String> family;
 
     public Output<String> getFamily() {
@@ -43,7 +43,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the DB parameter.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -65,7 +65,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-parameters.html) after initial creation of the group.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<ParameterGroupParameterArgs>> parameters;
 
     public Output<List<ParameterGroupParameterArgs>> getParameters() {
@@ -76,7 +76,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

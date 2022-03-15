@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.datacatalog.inputs.TagFieldArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * `outer_column.inner_column`
      * 
      */
-    @InputImport(name="column")
+    @Import(name="column")
       private final @Nullable Output<String> column;
 
     public Output<String> getColumn() {
@@ -36,7 +36,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="fields", required=true)
+    @Import(name="fields", required=true)
       private final Output<List<TagFieldArgs>> fields;
 
     public Output<List<TagFieldArgs>> getFields() {
@@ -48,7 +48,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * all entries in that group.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -61,7 +61,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * This field cannot be modified after creation.
      * 
      */
-    @InputImport(name="template", required=true)
+    @Import(name="template", required=true)
       private final Output<String> template;
 
     public Output<String> getTemplate() {

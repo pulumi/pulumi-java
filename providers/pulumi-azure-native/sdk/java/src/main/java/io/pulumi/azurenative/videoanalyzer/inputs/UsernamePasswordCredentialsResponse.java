@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class UsernamePasswordCredentialsResponse extends io.pulumi.resourc
      * Password to be presented as part of the credentials. It is recommended that this value is parameterized as a secret string in order to prevent this value to be returned as part of the resource on API requests.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final String password;
 
     public String getPassword() {
@@ -32,7 +32,7 @@ public final class UsernamePasswordCredentialsResponse extends io.pulumi.resourc
      * Expected value is '#Microsoft.VideoAnalyzer.UsernamePasswordCredentials'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -43,7 +43,7 @@ public final class UsernamePasswordCredentialsResponse extends io.pulumi.resourc
      * Username to be presented as part of the credentials.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final String username;
 
     public String getUsername() {

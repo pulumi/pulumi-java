@@ -4,7 +4,7 @@
 package io.pulumi.aws.pinpoint.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AppCampaignHookGetArgs extends io.pulumi.resources.ResourceAr
      * Lambda function name or ARN to be called for delivery. Conflicts with `web_url`
      * 
      */
-    @InputImport(name="lambdaFunctionName")
+    @Import(name="lambdaFunctionName")
       private final @Nullable Output<String> lambdaFunctionName;
 
     public Output<String> getLambdaFunctionName() {
@@ -29,7 +29,7 @@ public final class AppCampaignHookGetArgs extends io.pulumi.resources.ResourceAr
      * What mode Lambda should be invoked in. Valid values for this parameter are `DELIVERY`, `FILTER`.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
@@ -40,7 +40,7 @@ public final class AppCampaignHookGetArgs extends io.pulumi.resources.ResourceAr
      * Web URL to call for hook. If the URL has authentication specified it will be added as authentication to the request. Conflicts with `lambda_function_name`
      * 
      */
-    @InputImport(name="webUrl")
+    @Import(name="webUrl")
       private final @Nullable Output<String> webUrl;
 
     public Output<String> getWebUrl() {

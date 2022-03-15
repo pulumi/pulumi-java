@@ -3,19 +3,19 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAmiProductCode {
     private final String productCodeId;
     private final String productCodeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAmiProductCode(
-        @OutputCustomType.Parameter("productCodeId") String productCodeId,
-        @OutputCustomType.Parameter("productCodeType") String productCodeType) {
+        @CustomType.Parameter("productCodeId") String productCodeId,
+        @CustomType.Parameter("productCodeType") String productCodeType) {
         this.productCodeId = productCodeId;
         this.productCodeType = productCodeType;
     }

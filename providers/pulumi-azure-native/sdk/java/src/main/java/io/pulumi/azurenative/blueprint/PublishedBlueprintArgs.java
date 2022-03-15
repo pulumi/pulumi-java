@@ -8,7 +8,7 @@ import io.pulumi.azurenative.blueprint.inputs.ParameterDefinitionArgs;
 import io.pulumi.azurenative.blueprint.inputs.ResourceGroupDefinitionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
      * Name of the published blueprint definition.
      * 
      */
-    @InputImport(name="blueprintName", required=true)
+    @Import(name="blueprintName", required=true)
       private final Output<String> blueprintName;
 
     public Output<String> getBlueprintName() {
@@ -34,7 +34,7 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
      * Version-specific change notes.
      * 
      */
-    @InputImport(name="changeNotes")
+    @Import(name="changeNotes")
       private final @Nullable Output<String> changeNotes;
 
     public Output<String> getChangeNotes() {
@@ -45,7 +45,7 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
      * Multi-line explain this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -56,7 +56,7 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
      * One-liner string explain this resource.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -67,7 +67,7 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
      * Parameters required by this blueprint definition.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterDefinitionArgs>> parameters;
 
     public Output<Map<String,ParameterDefinitionArgs>> getParameters() {
@@ -78,7 +78,7 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
      * Resource group placeholders defined by this blueprint definition.
      * 
      */
-    @InputImport(name="resourceGroups")
+    @Import(name="resourceGroups")
       private final @Nullable Output<Map<String,ResourceGroupDefinitionArgs>> resourceGroups;
 
     public Output<Map<String,ResourceGroupDefinitionArgs>> getResourceGroups() {
@@ -89,7 +89,7 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
      * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
      * 
      */
-    @InputImport(name="resourceScope", required=true)
+    @Import(name="resourceScope", required=true)
       private final Output<String> resourceScope;
 
     public Output<String> getResourceScope() {
@@ -100,7 +100,7 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
      * The scope where this blueprint definition can be assigned.
      * 
      */
-    @InputImport(name="targetScope")
+    @Import(name="targetScope")
       private final @Nullable Output<Either<String,BlueprintTargetScope>> targetScope;
 
     public Output<Either<String,BlueprintTargetScope>> getTargetScope() {
@@ -111,7 +111,7 @@ public final class PublishedBlueprintArgs extends io.pulumi.resources.ResourceAr
      * Version of the published blueprint definition.
      * 
      */
-    @InputImport(name="versionId")
+    @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
     public Output<String> getVersionId() {

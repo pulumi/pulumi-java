@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetUserSshKeyArgs extends io.pulumi.resources.InvokeArgs {
      * Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use `SSH`. To retrieve the public key in PEM format, use `PEM`.
      * 
      */
-    @InputImport(name="encoding", required=true)
+    @Import(name="encoding", required=true)
       private final String encoding;
 
     public String getEncoding() {
@@ -27,7 +27,7 @@ public final class GetUserSshKeyArgs extends io.pulumi.resources.InvokeArgs {
      * The unique identifier for the SSH public key.
      * 
      */
-    @InputImport(name="sshPublicKeyId", required=true)
+    @Import(name="sshPublicKeyId", required=true)
       private final String sshPublicKeyId;
 
     public String getSshPublicKeyId() {
@@ -38,7 +38,7 @@ public final class GetUserSshKeyArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the IAM user associated with the SSH public key.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final String username;
 
     public String getUsername() {

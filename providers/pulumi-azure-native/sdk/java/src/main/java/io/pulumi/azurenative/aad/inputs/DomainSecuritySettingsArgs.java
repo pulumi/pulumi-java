@@ -12,7 +12,7 @@ import io.pulumi.azurenative.aad.enums.SyncOnPremPasswords;
 import io.pulumi.azurenative.aad.enums.TlsV1;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +30,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * A flag to determine whether or not KerberosArmoring is enabled or disabled.
      * 
      */
-    @InputImport(name="kerberosArmoring")
+    @Import(name="kerberosArmoring")
       private final @Nullable Output<Either<String,KerberosArmoring>> kerberosArmoring;
 
     public Output<Either<String,KerberosArmoring>> getKerberosArmoring() {
@@ -41,7 +41,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * A flag to determine whether or not KerberosRc4Encryption is enabled or disabled.
      * 
      */
-    @InputImport(name="kerberosRc4Encryption")
+    @Import(name="kerberosRc4Encryption")
       private final @Nullable Output<Either<String,KerberosRc4Encryption>> kerberosRc4Encryption;
 
     public Output<Either<String,KerberosRc4Encryption>> getKerberosRc4Encryption() {
@@ -52,7 +52,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * A flag to determine whether or not NtlmV1 is enabled or disabled.
      * 
      */
-    @InputImport(name="ntlmV1")
+    @Import(name="ntlmV1")
       private final @Nullable Output<Either<String,NtlmV1>> ntlmV1;
 
     public Output<Either<String,NtlmV1>> getNtlmV1() {
@@ -63,7 +63,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
      * 
      */
-    @InputImport(name="syncKerberosPasswords")
+    @Import(name="syncKerberosPasswords")
       private final @Nullable Output<Either<String,SyncKerberosPasswords>> syncKerberosPasswords;
 
     public Output<Either<String,SyncKerberosPasswords>> getSyncKerberosPasswords() {
@@ -74,7 +74,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
      * 
      */
-    @InputImport(name="syncNtlmPasswords")
+    @Import(name="syncNtlmPasswords")
       private final @Nullable Output<Either<String,SyncNtlmPasswords>> syncNtlmPasswords;
 
     public Output<Either<String,SyncNtlmPasswords>> getSyncNtlmPasswords() {
@@ -85,7 +85,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
      * 
      */
-    @InputImport(name="syncOnPremPasswords")
+    @Import(name="syncOnPremPasswords")
       private final @Nullable Output<Either<String,SyncOnPremPasswords>> syncOnPremPasswords;
 
     public Output<Either<String,SyncOnPremPasswords>> getSyncOnPremPasswords() {
@@ -96,7 +96,7 @@ public final class DomainSecuritySettingsArgs extends io.pulumi.resources.Resour
      * A flag to determine whether or not TlsV1 is enabled or disabled.
      * 
      */
-    @InputImport(name="tlsV1")
+    @Import(name="tlsV1")
       private final @Nullable Output<Either<String,TlsV1>> tlsV1;
 
     public Output<Either<String,TlsV1>> getTlsV1() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class Hl7StoreIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * project setting will be used as a fallback.
      * 
      */
-    @InputImport(name="hl7V2StoreId", required=true)
+    @Import(name="hl7V2StoreId", required=true)
       private final Output<String> hl7V2StoreId;
 
     public Output<String> getHl7V2StoreId() {
@@ -32,7 +32,7 @@ public final class Hl7StoreIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @InputImport(name="policyData", required=true)
+    @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
     public Output<String> getPolicyData() {

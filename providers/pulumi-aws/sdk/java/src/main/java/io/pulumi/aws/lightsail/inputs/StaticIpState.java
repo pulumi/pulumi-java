@@ -4,7 +4,7 @@
 package io.pulumi.aws.lightsail.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the Lightsail static IP
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
      * The allocated static IP address
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -40,7 +40,7 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
      * The name for the allocated static IP
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -51,7 +51,7 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
      * The support code.
      * 
      */
-    @InputImport(name="supportCode")
+    @Import(name="supportCode")
       private final @Nullable Output<String> supportCode;
 
     public Output<String> getSupportCode() {

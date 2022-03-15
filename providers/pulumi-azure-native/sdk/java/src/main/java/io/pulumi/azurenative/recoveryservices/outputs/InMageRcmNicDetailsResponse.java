@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InMageRcmNicDetailsResponse {
     /**
      * A value indicating whether this is the primary NIC.
@@ -75,21 +75,21 @@ public final class InMageRcmNicDetailsResponse {
      */
     private final String testSubnetName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InMageRcmNicDetailsResponse(
-        @OutputCustomType.Parameter("isPrimaryNic") String isPrimaryNic,
-        @OutputCustomType.Parameter("isSelectedForFailover") String isSelectedForFailover,
-        @OutputCustomType.Parameter("nicId") String nicId,
-        @OutputCustomType.Parameter("sourceIPAddress") String sourceIPAddress,
-        @OutputCustomType.Parameter("sourceIPAddressType") String sourceIPAddressType,
-        @OutputCustomType.Parameter("sourceNetworkId") String sourceNetworkId,
-        @OutputCustomType.Parameter("sourceSubnetName") String sourceSubnetName,
-        @OutputCustomType.Parameter("targetIPAddress") String targetIPAddress,
-        @OutputCustomType.Parameter("targetIPAddressType") String targetIPAddressType,
-        @OutputCustomType.Parameter("targetSubnetName") String targetSubnetName,
-        @OutputCustomType.Parameter("testIPAddress") String testIPAddress,
-        @OutputCustomType.Parameter("testIPAddressType") String testIPAddressType,
-        @OutputCustomType.Parameter("testSubnetName") String testSubnetName) {
+        @CustomType.Parameter("isPrimaryNic") String isPrimaryNic,
+        @CustomType.Parameter("isSelectedForFailover") String isSelectedForFailover,
+        @CustomType.Parameter("nicId") String nicId,
+        @CustomType.Parameter("sourceIPAddress") String sourceIPAddress,
+        @CustomType.Parameter("sourceIPAddressType") String sourceIPAddressType,
+        @CustomType.Parameter("sourceNetworkId") String sourceNetworkId,
+        @CustomType.Parameter("sourceSubnetName") String sourceSubnetName,
+        @CustomType.Parameter("targetIPAddress") String targetIPAddress,
+        @CustomType.Parameter("targetIPAddressType") String targetIPAddressType,
+        @CustomType.Parameter("targetSubnetName") String targetSubnetName,
+        @CustomType.Parameter("testIPAddress") String testIPAddress,
+        @CustomType.Parameter("testIPAddressType") String testIPAddressType,
+        @CustomType.Parameter("testSubnetName") String testSubnetName) {
         this.isPrimaryNic = isPrimaryNic;
         this.isSelectedForFailover = isSelectedForFailover;
         this.nicId = nicId;

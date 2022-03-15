@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.DirectLineSiteResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DirectLineChannelPropertiesResponse {
     /**
      * Direct Line embed code of the resource
@@ -24,10 +24,10 @@ public final class DirectLineChannelPropertiesResponse {
      */
     private final @Nullable List<DirectLineSiteResponse> sites;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DirectLineChannelPropertiesResponse(
-        @OutputCustomType.Parameter("directLineEmbedCode") @Nullable String directLineEmbedCode,
-        @OutputCustomType.Parameter("sites") @Nullable List<DirectLineSiteResponse> sites) {
+        @CustomType.Parameter("directLineEmbedCode") @Nullable String directLineEmbedCode,
+        @CustomType.Parameter("sites") @Nullable List<DirectLineSiteResponse> sites) {
         this.directLineEmbedCode = directLineEmbedCode;
         this.sites = sites;
     }

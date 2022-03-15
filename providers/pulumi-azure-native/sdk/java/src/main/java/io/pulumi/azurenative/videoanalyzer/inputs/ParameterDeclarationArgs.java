@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 import io.pulumi.azurenative.videoanalyzer.enums.ParameterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
      * The default value for the parameter to be used if the pipeline does not specify a value.
      * 
      */
-    @InputImport(name="default")
+    @Import(name="default")
       private final @Nullable Output<String> $default;
 
     public Output<String> get$default() {
@@ -35,7 +35,7 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
      * Description of the parameter.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
      * Name of the parameter.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class ParameterDeclarationArgs extends io.pulumi.resources.Resource
      * Type of the parameter.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,ParameterType>> type;
 
     public Output<Either<String,ParameterType>> getType() {

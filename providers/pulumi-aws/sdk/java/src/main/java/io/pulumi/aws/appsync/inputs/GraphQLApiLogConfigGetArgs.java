@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GraphQLApiLogConfigGetArgs extends io.pulumi.resources.Resour
      * Amazon Resource Name of the service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.
      * 
      */
-    @InputImport(name="cloudwatchLogsRoleArn", required=true)
+    @Import(name="cloudwatchLogsRoleArn", required=true)
       private final Output<String> cloudwatchLogsRoleArn;
 
     public Output<String> getCloudwatchLogsRoleArn() {
@@ -30,7 +30,7 @@ public final class GraphQLApiLogConfigGetArgs extends io.pulumi.resources.Resour
      * Set to TRUE to exclude sections that contain information such as headers, context, and evaluated mapping templates, regardless of logging  level. Valid values: `true`, `false`. Default value: `false`
      * 
      */
-    @InputImport(name="excludeVerboseContent")
+    @Import(name="excludeVerboseContent")
       private final @Nullable Output<Boolean> excludeVerboseContent;
 
     public Output<Boolean> getExcludeVerboseContent() {
@@ -41,7 +41,7 @@ public final class GraphQLApiLogConfigGetArgs extends io.pulumi.resources.Resour
      * Field logging level. Valid values: `ALL`, `ERROR`, `NONE`.
      * 
      */
-    @InputImport(name="fieldLogLevel", required=true)
+    @Import(name="fieldLogLevel", required=true)
       private final Output<String> fieldLogLevel;
 
     public Output<String> getFieldLogLevel() {

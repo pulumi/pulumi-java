@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse {
     /**
      * The unique identifier of the followup intent. Format: `projects//agent/intents/`.
@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse 
      */
     private final String parentFollowupIntentName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentFollowupIntentInfoResponse(
-        @OutputCustomType.Parameter("followupIntentName") String followupIntentName,
-        @OutputCustomType.Parameter("parentFollowupIntentName") String parentFollowupIntentName) {
+        @CustomType.Parameter("followupIntentName") String followupIntentName,
+        @CustomType.Parameter("parentFollowupIntentName") String parentFollowupIntentName) {
         this.followupIntentName = followupIntentName;
         this.parentFollowupIntentName = parentFollowupIntentName;
     }

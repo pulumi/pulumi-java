@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GuestPoliciesAssignmentOsTypeGetArgs extends io.pulumi.resour
      * Targets VM instances with OS Inventory enabled and having the following OS architecture.
      * 
      */
-    @InputImport(name="osArchitecture")
+    @Import(name="osArchitecture")
       private final @Nullable Output<String> osArchitecture;
 
     public Output<String> getOsArchitecture() {
@@ -29,7 +29,7 @@ public final class GuestPoliciesAssignmentOsTypeGetArgs extends io.pulumi.resour
      * Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
      * 
      */
-    @InputImport(name="osShortName")
+    @Import(name="osShortName")
       private final @Nullable Output<String> osShortName;
 
     public Output<String> getOsShortName() {
@@ -40,7 +40,7 @@ public final class GuestPoliciesAssignmentOsTypeGetArgs extends io.pulumi.resour
      * Targets VM instances with OS Inventory enabled and having the following following OS version.
      * 
      */
-    @InputImport(name="osVersion")
+    @Import(name="osVersion")
       private final @Nullable Output<String> osVersion;
 
     public Output<String> getOsVersion() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class LinkedInfoResponse extends io.pulumi.resources.InvokeArgs {
      * LinkedId id.
      * 
      */
-    @InputImport(name="linkedId")
+    @Import(name="linkedId")
       private final @Nullable String linkedId;
 
     public Optional<String> getLinkedId() {
@@ -33,7 +33,7 @@ public final class LinkedInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Linked resource name.
      * 
      */
-    @InputImport(name="linkedResourceName")
+    @Import(name="linkedResourceName")
       private final @Nullable String linkedResourceName;
 
     public Optional<String> getLinkedResourceName() {
@@ -44,7 +44,7 @@ public final class LinkedInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Datastore origin
      * 
      */
-    @InputImport(name="origin")
+    @Import(name="origin")
       private final @Nullable String origin;
 
     public Optional<String> getOrigin() {

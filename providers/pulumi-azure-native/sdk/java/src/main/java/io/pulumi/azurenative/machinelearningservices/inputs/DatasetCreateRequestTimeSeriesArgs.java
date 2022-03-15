@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DatasetCreateRequestTimeSeriesArgs extends io.pulumi.resource
      * Column name to be used as CoarseGrainTimestamp. Can only be used if 'fineGrainTimestamp' is specified and cannot be same as 'fineGrainTimestamp'.
      * 
      */
-    @InputImport(name="coarseGrainTimestamp")
+    @Import(name="coarseGrainTimestamp")
       private final @Nullable Output<String> coarseGrainTimestamp;
 
     public Output<String> getCoarseGrainTimestamp() {
@@ -29,7 +29,7 @@ public final class DatasetCreateRequestTimeSeriesArgs extends io.pulumi.resource
      *  Column name to be used as FineGrainTimestamp
      * 
      */
-    @InputImport(name="fineGrainTimestamp")
+    @Import(name="fineGrainTimestamp")
       private final @Nullable Output<String> fineGrainTimestamp;
 
     public Output<String> getFineGrainTimestamp() {

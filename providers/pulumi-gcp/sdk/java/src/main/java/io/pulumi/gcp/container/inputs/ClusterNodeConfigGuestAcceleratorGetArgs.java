@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterNodeConfigGuestAcceleratorGetArgs extends io.pulumi.re
      * The number of the guest accelerator cards exposed to this instance.
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Output<Integer> count;
 
     public Output<Integer> getCount() {
@@ -30,7 +30,7 @@ public final class ClusterNodeConfigGuestAcceleratorGetArgs extends io.pulumi.re
      * Size of partitions to create on the GPU. Valid values are described in the NVIDIA mig [user guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/#partitioning).
      * 
      */
-    @InputImport(name="gpuPartitionSize")
+    @Import(name="gpuPartitionSize")
       private final @Nullable Output<String> gpuPartitionSize;
 
     public Output<String> getGpuPartitionSize() {
@@ -41,7 +41,7 @@ public final class ClusterNodeConfigGuestAcceleratorGetArgs extends io.pulumi.re
      * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

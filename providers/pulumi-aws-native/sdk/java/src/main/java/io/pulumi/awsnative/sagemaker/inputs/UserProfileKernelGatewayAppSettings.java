@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.UserProfileCustomImage;
 import io.pulumi.awsnative.sagemaker.inputs.UserProfileResourceSpec;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class UserProfileKernelGatewayAppSettings extends io.pulumi.resourc
      * A list of custom SageMaker images that are configured to run as a KernelGateway app.
      * 
      */
-    @InputImport(name="customImages")
+    @Import(name="customImages")
       private final @Nullable List<UserProfileCustomImage> customImages;
 
     public List<UserProfileCustomImage> getCustomImages() {
@@ -35,7 +35,7 @@ public final class UserProfileKernelGatewayAppSettings extends io.pulumi.resourc
      * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image used by the KernelGateway app.
      * 
      */
-    @InputImport(name="defaultResourceSpec")
+    @Import(name="defaultResourceSpec")
       private final @Nullable UserProfileResourceSpec defaultResourceSpec;
 
     public Optional<UserProfileResourceSpec> getDefaultResourceSpec() {

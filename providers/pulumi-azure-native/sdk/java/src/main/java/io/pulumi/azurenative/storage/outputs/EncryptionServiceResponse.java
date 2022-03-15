@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionServiceResponse {
     /**
      * A boolean indicating whether or not the service encrypts the data as it is stored.
@@ -28,11 +28,11 @@ public final class EncryptionServiceResponse {
      */
     private final String lastEnabledTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncryptionServiceResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("keyType") @Nullable String keyType,
-        @OutputCustomType.Parameter("lastEnabledTime") String lastEnabledTime) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("keyType") @Nullable String keyType,
+        @CustomType.Parameter("lastEnabledTime") String lastEnabledTime) {
         this.enabled = enabled;
         this.keyType = keyType;
         this.lastEnabledTime = lastEnabledTime;

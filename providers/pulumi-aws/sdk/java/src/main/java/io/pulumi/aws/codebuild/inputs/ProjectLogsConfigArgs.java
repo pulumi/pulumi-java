@@ -6,7 +6,7 @@ package io.pulumi.aws.codebuild.inputs;
 import io.pulumi.aws.codebuild.inputs.ProjectLogsConfigCloudwatchLogsArgs;
 import io.pulumi.aws.codebuild.inputs.ProjectLogsConfigS3LogsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class ProjectLogsConfigArgs extends io.pulumi.resources.ResourceArg
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="cloudwatchLogs")
+    @Import(name="cloudwatchLogs")
       private final @Nullable Output<ProjectLogsConfigCloudwatchLogsArgs> cloudwatchLogs;
 
     public Output<ProjectLogsConfigCloudwatchLogsArgs> getCloudwatchLogs() {
@@ -30,7 +30,7 @@ public final class ProjectLogsConfigArgs extends io.pulumi.resources.ResourceArg
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="s3Logs")
+    @Import(name="s3Logs")
       private final @Nullable Output<ProjectLogsConfigS3LogsArgs> s3Logs;
 
     public Output<ProjectLogsConfigS3LogsArgs> getS3Logs() {

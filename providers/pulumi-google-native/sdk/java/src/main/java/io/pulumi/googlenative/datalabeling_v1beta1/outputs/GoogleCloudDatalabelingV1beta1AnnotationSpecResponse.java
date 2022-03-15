@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse {
     /**
      * Optional. User-provided description of the annotation specification. The description can be up to 10,000 characters long.
@@ -26,11 +26,11 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse {
      */
     private final Integer index;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatalabelingV1beta1AnnotationSpecResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("index") Integer index) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("index") Integer index) {
         this.description = description;
         this.displayName = displayName;
         this.index = index;

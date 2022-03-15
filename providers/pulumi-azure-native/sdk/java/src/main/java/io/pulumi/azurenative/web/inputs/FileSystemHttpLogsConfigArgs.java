@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
      * True if configuration is enabled, false if it is disabled and null if configuration is not set.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -36,7 +36,7 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
      * 0 or lower means no retention.
      * 
      */
-    @InputImport(name="retentionInDays")
+    @Import(name="retentionInDays")
       private final @Nullable Output<Integer> retentionInDays;
 
     public Output<Integer> getRetentionInDays() {
@@ -49,7 +49,7 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
      * Value can range between 25 and 100.
      * 
      */
-    @InputImport(name="retentionInMb")
+    @Import(name="retentionInMb")
       private final @Nullable Output<Integer> retentionInMb;
 
     public Output<Integer> getRetentionInMb() {

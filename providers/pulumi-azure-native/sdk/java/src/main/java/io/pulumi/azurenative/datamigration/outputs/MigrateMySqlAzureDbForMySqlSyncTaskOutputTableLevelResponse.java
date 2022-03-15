@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse {
     /**
      * Number of applied deletes
@@ -87,23 +87,23 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse {
      */
     private final Double totalChangesApplied;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse(
-        @OutputCustomType.Parameter("cdcDeleteCounter") String cdcDeleteCounter,
-        @OutputCustomType.Parameter("cdcInsertCounter") String cdcInsertCounter,
-        @OutputCustomType.Parameter("cdcUpdateCounter") String cdcUpdateCounter,
-        @OutputCustomType.Parameter("dataErrorsCounter") Double dataErrorsCounter,
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("fullLoadEndedOn") String fullLoadEndedOn,
-        @OutputCustomType.Parameter("fullLoadEstFinishTime") String fullLoadEstFinishTime,
-        @OutputCustomType.Parameter("fullLoadStartedOn") String fullLoadStartedOn,
-        @OutputCustomType.Parameter("fullLoadTotalRows") Double fullLoadTotalRows,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("resultType") String resultType,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("tableName") String tableName,
-        @OutputCustomType.Parameter("totalChangesApplied") Double totalChangesApplied) {
+        @CustomType.Parameter("cdcDeleteCounter") String cdcDeleteCounter,
+        @CustomType.Parameter("cdcInsertCounter") String cdcInsertCounter,
+        @CustomType.Parameter("cdcUpdateCounter") String cdcUpdateCounter,
+        @CustomType.Parameter("dataErrorsCounter") Double dataErrorsCounter,
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("fullLoadEndedOn") String fullLoadEndedOn,
+        @CustomType.Parameter("fullLoadEstFinishTime") String fullLoadEstFinishTime,
+        @CustomType.Parameter("fullLoadStartedOn") String fullLoadStartedOn,
+        @CustomType.Parameter("fullLoadTotalRows") Double fullLoadTotalRows,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("resultType") String resultType,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("tableName") String tableName,
+        @CustomType.Parameter("totalChangesApplied") Double totalChangesApplied) {
         this.cdcDeleteCounter = cdcDeleteCounter;
         this.cdcInsertCounter = cdcInsertCounter;
         this.cdcUpdateCounter = cdcUpdateCounter;

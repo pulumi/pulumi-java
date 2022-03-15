@@ -4,22 +4,22 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.enums.DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceWebCrawlerSeedUrlConfiguration {
     private final List<String> seedUrls;
     private final @Nullable DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceWebCrawlerSeedUrlConfiguration(
-        @OutputCustomType.Parameter("seedUrls") List<String> seedUrls,
-        @OutputCustomType.Parameter("webCrawlerMode") @Nullable DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode) {
+        @CustomType.Parameter("seedUrls") List<String> seedUrls,
+        @CustomType.Parameter("webCrawlerMode") @Nullable DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode) {
         this.seedUrls = seedUrls;
         this.webCrawlerMode = webCrawlerMode;
     }

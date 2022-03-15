@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.enums.DayOfWeek;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RecurrenceScheduleOccurrenceArgs extends io.pulumi.resources.
      * The day of the week.
      * 
      */
-    @InputImport(name="day")
+    @Import(name="day")
       private final @Nullable Output<DayOfWeek> day;
 
     public Output<DayOfWeek> getDay() {
@@ -34,7 +34,7 @@ public final class RecurrenceScheduleOccurrenceArgs extends io.pulumi.resources.
      * The occurrence.
      * 
      */
-    @InputImport(name="occurrence")
+    @Import(name="occurrence")
       private final @Nullable Output<Integer> occurrence;
 
     public Output<Integer> getOccurrence() {

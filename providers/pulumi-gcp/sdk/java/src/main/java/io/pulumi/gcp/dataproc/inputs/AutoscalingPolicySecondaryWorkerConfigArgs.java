@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AutoscalingPolicySecondaryWorkerConfigArgs extends io.pulumi.
      * Bounds: [minInstances, ). Defaults to 0.
      * 
      */
-    @InputImport(name="maxInstances")
+    @Import(name="maxInstances")
       private final @Nullable Output<Integer> maxInstances;
 
     public Output<Integer> getMaxInstances() {
@@ -31,7 +31,7 @@ public final class AutoscalingPolicySecondaryWorkerConfigArgs extends io.pulumi.
      * Minimum number of instances for this group. Bounds: [0, maxInstances]. Defaults to 0.
      * 
      */
-    @InputImport(name="minInstances")
+    @Import(name="minInstances")
       private final @Nullable Output<Integer> minInstances;
 
     public Output<Integer> getMinInstances() {
@@ -53,7 +53,7 @@ public final class AutoscalingPolicySecondaryWorkerConfigArgs extends io.pulumi.
      * only on primary workers, the cluster will use primary workers only and no secondary workers.
      * 
      */
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
     public Output<Integer> getWeight() {

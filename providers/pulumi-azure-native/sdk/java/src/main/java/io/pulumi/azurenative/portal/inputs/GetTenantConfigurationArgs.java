@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetTenantConfigurationArgs extends io.pulumi.resources.Invoke
      * The configuration name. Value must be 'default'
      * 
      */
-    @InputImport(name="configurationName", required=true)
+    @Import(name="configurationName", required=true)
       private final String configurationName;
 
     public String getConfigurationName() {

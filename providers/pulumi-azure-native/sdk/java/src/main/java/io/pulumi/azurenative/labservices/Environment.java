@@ -10,7 +10,7 @@ import io.pulumi.azurenative.labservices.outputs.NetworkInterfaceResponse;
 import io.pulumi.azurenative.labservices.outputs.ResourceSetResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The name or email address of the user who has claimed the environment
      * 
      */
-    @OutputExport(name="claimedByUserName", type=String.class, parameters={})
+    @Export(name="claimedByUserName", type=String.class, parameters={})
     private Output<String> claimedByUserName;
 
     /**
@@ -50,7 +50,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The AAD object Id of the user who has claimed the environment
      * 
      */
-    @OutputExport(name="claimedByUserObjectId", type=String.class, parameters={})
+    @Export(name="claimedByUserObjectId", type=String.class, parameters={})
     private Output<String> claimedByUserObjectId;
 
     /**
@@ -64,7 +64,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The user principal Id of the user who has claimed the environment
      * 
      */
-    @OutputExport(name="claimedByUserPrincipalId", type=String.class, parameters={})
+    @Export(name="claimedByUserPrincipalId", type=String.class, parameters={})
     private Output<String> claimedByUserPrincipalId;
 
     /**
@@ -78,7 +78,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Is the environment claimed or not
      * 
      */
-    @OutputExport(name="isClaimed", type=Boolean.class, parameters={})
+    @Export(name="isClaimed", type=Boolean.class, parameters={})
     private Output<Boolean> isClaimed;
 
     /**
@@ -92,7 +92,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Last known power state of the environment
      * 
      */
-    @OutputExport(name="lastKnownPowerState", type=String.class, parameters={})
+    @Export(name="lastKnownPowerState", type=String.class, parameters={})
     private Output<String> lastKnownPowerState;
 
     /**
@@ -106,7 +106,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The details of the latest operation. ex: status, error
      * 
      */
-    @OutputExport(name="latestOperationResult", type=LatestOperationResultResponse.class, parameters={})
+    @Export(name="latestOperationResult", type=LatestOperationResultResponse.class, parameters={})
     private Output<LatestOperationResultResponse> latestOperationResult;
 
     /**
@@ -120,7 +120,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -134,7 +134,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -148,7 +148,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Network details of the environment
      * 
      */
-    @OutputExport(name="networkInterface", type=NetworkInterfaceResponse.class, parameters={})
+    @Export(name="networkInterface", type=NetworkInterfaceResponse.class, parameters={})
     private Output<NetworkInterfaceResponse> networkInterface;
 
     /**
@@ -162,7 +162,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * When the password was last reset on the environment.
      * 
      */
-    @OutputExport(name="passwordLastReset", type=String.class, parameters={})
+    @Export(name="passwordLastReset", type=String.class, parameters={})
     private Output<String> passwordLastReset;
 
     /**
@@ -176,7 +176,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The provisioning status of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -190,7 +190,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The set of a VM and the setting id it was created for
      * 
      */
-    @OutputExport(name="resourceSets", type=ResourceSetResponse.class, parameters={})
+    @Export(name="resourceSets", type=ResourceSetResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSetResponse> resourceSets;
 
     /**
@@ -204,7 +204,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -218,7 +218,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * How long the environment has been used by a lab user
      * 
      */
-    @OutputExport(name="totalUsage", type=String.class, parameters={})
+    @Export(name="totalUsage", type=String.class, parameters={})
     private Output<String> totalUsage;
 
     /**
@@ -232,7 +232,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -246,7 +246,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The unique immutable identifier of a resource (Guid).
      * 
      */
-    @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
+    @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> uniqueIdentifier;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DetectorModelClearTimerArgs extends io.pulumi.resources.Resou
 
     public static final DetectorModelClearTimerArgs Empty = new DetectorModelClearTimerArgs();
 
-    @InputImport(name="timerName", required=true)
+    @Import(name="timerName", required=true)
       private final Output<String> timerName;
 
     public Output<String> getTimerName() {

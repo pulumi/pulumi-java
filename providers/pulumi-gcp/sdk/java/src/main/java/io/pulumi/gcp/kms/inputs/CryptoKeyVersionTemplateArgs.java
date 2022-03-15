@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
      * See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
      * 
      */
-    @InputImport(name="algorithm", required=true)
+    @Import(name="algorithm", required=true)
       private final Output<String> algorithm;
 
     public Output<String> getAlgorithm() {
@@ -30,7 +30,7 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
      * The protection level to use when creating a version based on this template. Possible values include "SOFTWARE", "HSM", "EXTERNAL". Defaults to "SOFTWARE".
      * 
      */
-    @InputImport(name="protectionLevel")
+    @Import(name="protectionLevel")
       private final @Nullable Output<String> protectionLevel;
 
     public Output<String> getProtectionLevel() {

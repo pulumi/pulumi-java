@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetJobTemplateArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetJobTemplateArgs Empty = new GetJobTemplateArgs();
 
-    @InputImport(name="jobTemplateId", required=true)
+    @Import(name="jobTemplateId", required=true)
       private final String jobTemplateId;
 
     public String getJobTemplateId() {
         return this.jobTemplateId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

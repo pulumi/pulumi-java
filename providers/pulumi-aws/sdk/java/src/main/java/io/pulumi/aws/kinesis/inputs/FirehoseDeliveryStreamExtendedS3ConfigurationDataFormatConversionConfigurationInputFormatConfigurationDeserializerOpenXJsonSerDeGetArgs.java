@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * When set to true, which is the default, Kinesis Data Firehose converts JSON keys to lowercase before deserializing them.
      * 
      */
-    @InputImport(name="caseInsensitive")
+    @Import(name="caseInsensitive")
       private final @Nullable Output<Boolean> caseInsensitive;
 
     public Output<Boolean> getCaseInsensitive() {
@@ -31,7 +31,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * A map of column names to JSON keys that aren't identical to the column names. This is useful when the JSON contains keys that are Hive keywords. For example, timestamp is a Hive keyword. If you have a JSON key named timestamp, set this parameter to `{ ts = "timestamp" }` to map this key to a column named ts.
      * 
      */
-    @InputImport(name="columnToJsonKeyMappings")
+    @Import(name="columnToJsonKeyMappings")
       private final @Nullable Output<Map<String,String>> columnToJsonKeyMappings;
 
     public Output<Map<String,String>> getColumnToJsonKeyMappings() {
@@ -42,7 +42,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      * When set to `true`, specifies that the names of the keys include dots and that you want Kinesis Data Firehose to replace them with underscores. This is useful because Apache Hive does not allow dots in column names. For example, if the JSON contains a key whose name is "a.b", you can define the column name to be "a_b" when using this option. Defaults to `false`.
      * 
      */
-    @InputImport(name="convertDotsInJsonKeysToUnderscores")
+    @Import(name="convertDotsInJsonKeysToUnderscores")
       private final @Nullable Output<Boolean> convertDotsInJsonKeysToUnderscores;
 
     public Output<Boolean> getConvertDotsInJsonKeysToUnderscores() {

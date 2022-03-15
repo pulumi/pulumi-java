@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.DatasetFilterValueArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class DatasetFilterExpressionArgs extends io.pulumi.resources.Resou
      * Filtering expression for a parameter
      * 
      */
-    @InputImport(name="expression", required=true)
+    @Import(name="expression", required=true)
       private final Output<String> expression;
 
     public Output<String> getExpression() {
         return this.expression;
     }
 
-    @InputImport(name="valuesMap", required=true)
+    @Import(name="valuesMap", required=true)
       private final Output<List<DatasetFilterValueArgs>> valuesMap;
 
     public Output<List<DatasetFilterValueArgs>> getValuesMap() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.authorization.RoleAssignmentArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
      * 
      */
-    @OutputExport(name="condition", type=String.class, parameters={})
+    @Export(name="condition", type=String.class, parameters={})
     private Output</* @Nullable */ String> condition;
 
     /**
@@ -48,7 +48,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Version of the condition. Currently accepted value is '2.0'
      * 
      */
-    @OutputExport(name="conditionVersion", type=String.class, parameters={})
+    @Export(name="conditionVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> conditionVersion;
 
     /**
@@ -62,7 +62,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Id of the user who created the assignment
      * 
      */
-    @OutputExport(name="createdBy", type=String.class, parameters={})
+    @Export(name="createdBy", type=String.class, parameters={})
     private Output<String> createdBy;
 
     /**
@@ -76,7 +76,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Time it was created
      * 
      */
-    @OutputExport(name="createdOn", type=String.class, parameters={})
+    @Export(name="createdOn", type=String.class, parameters={})
     private Output<String> createdOn;
 
     /**
@@ -90,7 +90,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Id of the delegated managed identity resource
      * 
      */
-    @OutputExport(name="delegatedManagedIdentityResourceId", type=String.class, parameters={})
+    @Export(name="delegatedManagedIdentityResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> delegatedManagedIdentityResourceId;
 
     /**
@@ -104,7 +104,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Description of role assignment
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -118,7 +118,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * The role assignment name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -132,7 +132,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * The principal ID.
      * 
      */
-    @OutputExport(name="principalId", type=String.class, parameters={})
+    @Export(name="principalId", type=String.class, parameters={})
     private Output<String> principalId;
 
     /**
@@ -146,7 +146,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * The principal type of the assigned principal ID.
      * 
      */
-    @OutputExport(name="principalType", type=String.class, parameters={})
+    @Export(name="principalType", type=String.class, parameters={})
     private Output</* @Nullable */ String> principalType;
 
     /**
@@ -160,7 +160,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * The role definition ID.
      * 
      */
-    @OutputExport(name="roleDefinitionId", type=String.class, parameters={})
+    @Export(name="roleDefinitionId", type=String.class, parameters={})
     private Output<String> roleDefinitionId;
 
     /**
@@ -174,7 +174,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * The role assignment scope.
      * 
      */
-    @OutputExport(name="scope", type=String.class, parameters={})
+    @Export(name="scope", type=String.class, parameters={})
     private Output<String> scope;
 
     /**
@@ -188,7 +188,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * The role assignment type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -202,7 +202,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Id of the user who updated the assignment
      * 
      */
-    @OutputExport(name="updatedBy", type=String.class, parameters={})
+    @Export(name="updatedBy", type=String.class, parameters={})
     private Output<String> updatedBy;
 
     /**
@@ -216,7 +216,7 @@ public class RoleAssignment extends io.pulumi.resources.CustomResource {
      * Time it was updated
      * 
      */
-    @OutputExport(name="updatedOn", type=String.class, parameters={})
+    @Export(name="updatedOn", type=String.class, parameters={})
     private Output<String> updatedOn;
 
     /**

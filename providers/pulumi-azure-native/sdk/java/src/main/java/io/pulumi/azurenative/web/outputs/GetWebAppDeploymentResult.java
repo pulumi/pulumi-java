@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebAppDeploymentResult {
     /**
      * True if deployment is currently active, false if completed and null if not started.
@@ -79,21 +79,21 @@ public final class GetWebAppDeploymentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebAppDeploymentResult(
-        @OutputCustomType.Parameter("active") @Nullable Boolean active,
-        @OutputCustomType.Parameter("author") @Nullable String author,
-        @OutputCustomType.Parameter("authorEmail") @Nullable String authorEmail,
-        @OutputCustomType.Parameter("deployer") @Nullable String deployer,
-        @OutputCustomType.Parameter("details") @Nullable String details,
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
-        @OutputCustomType.Parameter("status") @Nullable Integer status,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("active") @Nullable Boolean active,
+        @CustomType.Parameter("author") @Nullable String author,
+        @CustomType.Parameter("authorEmail") @Nullable String authorEmail,
+        @CustomType.Parameter("deployer") @Nullable String deployer,
+        @CustomType.Parameter("details") @Nullable String details,
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("startTime") @Nullable String startTime,
+        @CustomType.Parameter("status") @Nullable Integer status,
+        @CustomType.Parameter("type") String type) {
         this.active = active;
         this.author = author;
         this.authorEmail = authorEmail;

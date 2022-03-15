@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.codecommit.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerTrigger {
     /**
      * The branches that will be included in the trigger configuration. If no branches are specified, the trigger will apply to all branches.
@@ -38,13 +38,13 @@ public final class TriggerTrigger {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerTrigger(
-        @OutputCustomType.Parameter("branches") @Nullable List<String> branches,
-        @OutputCustomType.Parameter("customData") @Nullable String customData,
-        @OutputCustomType.Parameter("destinationArn") String destinationArn,
-        @OutputCustomType.Parameter("events") List<String> events,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("branches") @Nullable List<String> branches,
+        @CustomType.Parameter("customData") @Nullable String customData,
+        @CustomType.Parameter("destinationArn") String destinationArn,
+        @CustomType.Parameter("events") List<String> events,
+        @CustomType.Parameter("name") String name) {
         this.branches = branches;
         this.customData = customData;
         this.destinationArn = destinationArn;

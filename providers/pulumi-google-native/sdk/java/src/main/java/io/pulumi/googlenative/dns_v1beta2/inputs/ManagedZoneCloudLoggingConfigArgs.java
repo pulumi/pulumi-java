@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,14 +23,14 @@ public final class ManagedZoneCloudLoggingConfigArgs extends io.pulumi.resources
      * If set, enable query logging for this ManagedZone. False by default, making logging opt-in.
      * 
      */
-    @InputImport(name="enableLogging")
+    @Import(name="enableLogging")
       private final @Nullable Output<Boolean> enableLogging;
 
     public Output<Boolean> getEnableLogging() {
         return this.enableLogging == null ? Output.empty() : this.enableLogging;
     }
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {

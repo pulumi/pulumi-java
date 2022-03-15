@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterNodePoolNodeConfigSandboxConfig {
     private final String sandboxType;
 
-    @OutputCustomType.Constructor
-    private GetClusterNodePoolNodeConfigSandboxConfig(@OutputCustomType.Parameter("sandboxType") String sandboxType) {
+    @CustomType.Constructor
+    private GetClusterNodePoolNodeConfigSandboxConfig(@CustomType.Parameter("sandboxType") String sandboxType) {
         this.sandboxType = sandboxType;
     }
 

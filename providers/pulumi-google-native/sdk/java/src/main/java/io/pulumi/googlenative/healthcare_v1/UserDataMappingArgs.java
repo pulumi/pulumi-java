@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1.inputs.AttributeArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final UserDataMappingArgs Empty = new UserDataMappingArgs();
 
-    @InputImport(name="consentStoreId", required=true)
+    @Import(name="consentStoreId", required=true)
       private final Output<String> consentStoreId;
 
     public Output<String> getConsentStoreId() {
@@ -27,21 +27,21 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
      * A unique identifier for the mapped resource.
      * 
      */
-    @InputImport(name="dataId", required=true)
+    @Import(name="dataId", required=true)
       private final Output<String> dataId;
 
     public Output<String> getDataId() {
         return this.dataId;
     }
 
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
     public Output<String> getDatasetId() {
         return this.datasetId;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -52,14 +52,14 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
      * Resource name of the User data mapping, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/userDataMappings/{user_data_mapping_id}`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -70,7 +70,7 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
      * Attributes of the resource. Only explicitly set attributes are displayed here. Attribute definitions with defaults set implicitly apply to these User data mappings. Attributes listed here must be single valued, that is, exactly one value is specified for the field "values" in each Attribute.
      * 
      */
-    @InputImport(name="resourceAttributes")
+    @Import(name="resourceAttributes")
       private final @Nullable Output<List<AttributeArgs>> resourceAttributes;
 
     public Output<List<AttributeArgs>> getResourceAttributes() {
@@ -81,7 +81,7 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
      * User's UUID provided by the client.
      * 
      */
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final Output<String> userId;
 
     public Output<String> getUserId() {

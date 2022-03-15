@@ -5,7 +5,7 @@ package io.pulumi.awsnative.panorama.outputs;
 
 import io.pulumi.awsnative.panorama.outputs.PackageStorageLocation;
 import io.pulumi.awsnative.panorama.outputs.PackageTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPackageResult {
     private final @Nullable String arn;
     private final @Nullable Integer createdTime;
@@ -21,13 +21,13 @@ public final class GetPackageResult {
     private final @Nullable PackageStorageLocation storageLocation;
     private final @Nullable List<PackageTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPackageResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("createdTime") @Nullable Integer createdTime,
-        @OutputCustomType.Parameter("packageId") @Nullable String packageId,
-        @OutputCustomType.Parameter("storageLocation") @Nullable PackageStorageLocation storageLocation,
-        @OutputCustomType.Parameter("tags") @Nullable List<PackageTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("createdTime") @Nullable Integer createdTime,
+        @CustomType.Parameter("packageId") @Nullable String packageId,
+        @CustomType.Parameter("storageLocation") @Nullable PackageStorageLocation storageLocation,
+        @CustomType.Parameter("tags") @Nullable List<PackageTag> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.packageId = packageId;

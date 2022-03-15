@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedIdentityResponse {
     /**
      * Specifies a user-assigned identity by client ID. For system-assigned, do not set this field.
@@ -33,12 +33,12 @@ public final class ManagedIdentityResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedIdentityResponse(
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("identityType") String identityType,
-        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("identityType") String identityType,
+        @CustomType.Parameter("objectId") @Nullable String objectId,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.clientId = clientId;
         this.identityType = identityType;
         this.objectId = objectId;

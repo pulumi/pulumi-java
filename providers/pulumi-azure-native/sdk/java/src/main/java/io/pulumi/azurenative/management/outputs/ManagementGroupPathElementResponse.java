@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.management.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagementGroupPathElementResponse {
     /**
      * The friendly name of the group.
@@ -22,10 +22,10 @@ public final class ManagementGroupPathElementResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagementGroupPathElementResponse(
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.displayName = displayName;
         this.name = name;
     }

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.batch.inputs.NodePlacementConfigurationArgs;
 import io.pulumi.azurenative.batch.inputs.VMExtensionArgs;
 import io.pulumi.azurenative.batch.inputs.WindowsConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * If specified, setup is performed on each node in the pool to allow tasks to run in containers. All regular tasks and job manager tasks run on this pool must specify the containerSettings property, and all other tasks may specify it.
      * 
      */
-    @InputImport(name="containerConfiguration")
+    @Import(name="containerConfiguration")
       private final @Nullable Output<ContainerConfigurationArgs> containerConfiguration;
 
     public Output<ContainerConfigurationArgs> getContainerConfiguration() {
@@ -37,7 +37,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * This property must be specified if the compute nodes in the pool need to have empty data disks attached to them.
      * 
      */
-    @InputImport(name="dataDisks")
+    @Import(name="dataDisks")
       private final @Nullable Output<List<DataDiskArgs>> dataDisks;
 
     public Output<List<DataDiskArgs>> getDataDisks() {
@@ -48,7 +48,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * If specified, encryption is performed on each node in the pool during node provisioning.
      * 
      */
-    @InputImport(name="diskEncryptionConfiguration")
+    @Import(name="diskEncryptionConfiguration")
       private final @Nullable Output<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
 
     public Output<DiskEncryptionConfigurationArgs> getDiskEncryptionConfiguration() {
@@ -59,14 +59,14 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * If specified, the extensions mentioned in this configuration will be installed on each node.
      * 
      */
-    @InputImport(name="extensions")
+    @Import(name="extensions")
       private final @Nullable Output<List<VMExtensionArgs>> extensions;
 
     public Output<List<VMExtensionArgs>> getExtensions() {
         return this.extensions == null ? Output.empty() : this.extensions;
     }
 
-    @InputImport(name="imageReference", required=true)
+    @Import(name="imageReference", required=true)
       private final Output<ImageReferenceArgs> imageReference;
 
     public Output<ImageReferenceArgs> getImageReference() {
@@ -80,7 +80,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      *  Windows_Client - The on-premises license is for Windows Client.
      * 
      */
-    @InputImport(name="licenseType")
+    @Import(name="licenseType")
       private final @Nullable Output<String> licenseType;
 
     public Output<String> getLicenseType() {
@@ -91,7 +91,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * The Batch node agent is a program that runs on each node in the pool, and provides the command-and-control interface between the node and the Batch service. There are different implementations of the node agent, known as SKUs, for different operating systems. You must specify a node agent SKU which matches the selected image reference. To get the list of supported node agent SKUs along with their list of verified image references, see the 'List supported node agent SKUs' operation.
      * 
      */
-    @InputImport(name="nodeAgentSkuId", required=true)
+    @Import(name="nodeAgentSkuId", required=true)
       private final Output<String> nodeAgentSkuId;
 
     public Output<String> getNodeAgentSkuId() {
@@ -102,7 +102,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * This configuration will specify rules on how nodes in the pool will be physically allocated.
      * 
      */
-    @InputImport(name="nodePlacementConfiguration")
+    @Import(name="nodePlacementConfiguration")
       private final @Nullable Output<NodePlacementConfigurationArgs> nodePlacementConfiguration;
 
     public Output<NodePlacementConfigurationArgs> getNodePlacementConfiguration() {
@@ -113,7 +113,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * This property must not be specified if the imageReference specifies a Linux OS image.
      * 
      */
-    @InputImport(name="windowsConfiguration")
+    @Import(name="windowsConfiguration")
       private final @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
 
     public Output<WindowsConfigurationArgs> getWindowsConfiguration() {

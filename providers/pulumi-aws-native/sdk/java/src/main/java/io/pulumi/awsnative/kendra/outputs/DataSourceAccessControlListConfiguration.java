@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceAccessControlListConfiguration {
     private final @Nullable String keyPath;
 
-    @OutputCustomType.Constructor
-    private DataSourceAccessControlListConfiguration(@OutputCustomType.Parameter("keyPath") @Nullable String keyPath) {
+    @CustomType.Constructor
+    private DataSourceAccessControlListConfiguration(@CustomType.Parameter("keyPath") @Nullable String keyPath) {
         this.keyPath = keyPath;
     }
 

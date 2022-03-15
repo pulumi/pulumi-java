@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.bigquery.outputs.JobExtractSourceModel;
 import io.pulumi.gcp.bigquery.outputs.JobExtractSourceTable;
 import java.lang.Boolean;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobExtract {
     /**
      * The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE.
@@ -62,16 +62,16 @@ public final class JobExtract {
      */
     private final @Nullable Boolean useAvroLogicalTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobExtract(
-        @OutputCustomType.Parameter("compression") @Nullable String compression,
-        @OutputCustomType.Parameter("destinationFormat") @Nullable String destinationFormat,
-        @OutputCustomType.Parameter("destinationUris") List<String> destinationUris,
-        @OutputCustomType.Parameter("fieldDelimiter") @Nullable String fieldDelimiter,
-        @OutputCustomType.Parameter("printHeader") @Nullable Boolean printHeader,
-        @OutputCustomType.Parameter("sourceModel") @Nullable JobExtractSourceModel sourceModel,
-        @OutputCustomType.Parameter("sourceTable") @Nullable JobExtractSourceTable sourceTable,
-        @OutputCustomType.Parameter("useAvroLogicalTypes") @Nullable Boolean useAvroLogicalTypes) {
+        @CustomType.Parameter("compression") @Nullable String compression,
+        @CustomType.Parameter("destinationFormat") @Nullable String destinationFormat,
+        @CustomType.Parameter("destinationUris") List<String> destinationUris,
+        @CustomType.Parameter("fieldDelimiter") @Nullable String fieldDelimiter,
+        @CustomType.Parameter("printHeader") @Nullable Boolean printHeader,
+        @CustomType.Parameter("sourceModel") @Nullable JobExtractSourceModel sourceModel,
+        @CustomType.Parameter("sourceTable") @Nullable JobExtractSourceTable sourceTable,
+        @CustomType.Parameter("useAvroLogicalTypes") @Nullable Boolean useAvroLogicalTypes) {
         this.compression = compression;
         this.destinationFormat = destinationFormat;
         this.destinationUris = destinationUris;

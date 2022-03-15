@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.AxisResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.ChartOptionsResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.DataSetResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class XyChartResponse {
     /**
      * Display options for the chart.
@@ -50,15 +50,15 @@ public final class XyChartResponse {
      */
     private final AxisResponse yAxis;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private XyChartResponse(
-        @OutputCustomType.Parameter("chartOptions") ChartOptionsResponse chartOptions,
-        @OutputCustomType.Parameter("dataSets") List<DataSetResponse> dataSets,
-        @OutputCustomType.Parameter("thresholds") List<ThresholdResponse> thresholds,
-        @OutputCustomType.Parameter("timeshiftDuration") String timeshiftDuration,
-        @OutputCustomType.Parameter("xAxis") AxisResponse xAxis,
-        @OutputCustomType.Parameter("y2Axis") AxisResponse y2Axis,
-        @OutputCustomType.Parameter("yAxis") AxisResponse yAxis) {
+        @CustomType.Parameter("chartOptions") ChartOptionsResponse chartOptions,
+        @CustomType.Parameter("dataSets") List<DataSetResponse> dataSets,
+        @CustomType.Parameter("thresholds") List<ThresholdResponse> thresholds,
+        @CustomType.Parameter("timeshiftDuration") String timeshiftDuration,
+        @CustomType.Parameter("xAxis") AxisResponse xAxis,
+        @CustomType.Parameter("y2Axis") AxisResponse y2Axis,
+        @CustomType.Parameter("yAxis") AxisResponse yAxis) {
         this.chartOptions = chartOptions;
         this.dataSets = dataSets;
         this.thresholds = thresholds;

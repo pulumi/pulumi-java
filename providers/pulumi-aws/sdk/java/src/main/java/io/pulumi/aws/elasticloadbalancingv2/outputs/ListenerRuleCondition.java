@@ -9,13 +9,13 @@ import io.pulumi.aws.elasticloadbalancingv2.outputs.ListenerRuleConditionHttpReq
 import io.pulumi.aws.elasticloadbalancingv2.outputs.ListenerRuleConditionPathPattern;
 import io.pulumi.aws.elasticloadbalancingv2.outputs.ListenerRuleConditionQueryString;
 import io.pulumi.aws.elasticloadbalancingv2.outputs.ListenerRuleConditionSourceIp;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerRuleCondition {
     /**
      * Contains a single `values` item which is a list of host header patterns to match. The maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied.
@@ -48,14 +48,14 @@ public final class ListenerRuleCondition {
      */
     private final @Nullable ListenerRuleConditionSourceIp sourceIp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerRuleCondition(
-        @OutputCustomType.Parameter("hostHeader") @Nullable ListenerRuleConditionHostHeader hostHeader,
-        @OutputCustomType.Parameter("httpHeader") @Nullable ListenerRuleConditionHttpHeader httpHeader,
-        @OutputCustomType.Parameter("httpRequestMethod") @Nullable ListenerRuleConditionHttpRequestMethod httpRequestMethod,
-        @OutputCustomType.Parameter("pathPattern") @Nullable ListenerRuleConditionPathPattern pathPattern,
-        @OutputCustomType.Parameter("queryStrings") @Nullable List<ListenerRuleConditionQueryString> queryStrings,
-        @OutputCustomType.Parameter("sourceIp") @Nullable ListenerRuleConditionSourceIp sourceIp) {
+        @CustomType.Parameter("hostHeader") @Nullable ListenerRuleConditionHostHeader hostHeader,
+        @CustomType.Parameter("httpHeader") @Nullable ListenerRuleConditionHttpHeader httpHeader,
+        @CustomType.Parameter("httpRequestMethod") @Nullable ListenerRuleConditionHttpRequestMethod httpRequestMethod,
+        @CustomType.Parameter("pathPattern") @Nullable ListenerRuleConditionPathPattern pathPattern,
+        @CustomType.Parameter("queryStrings") @Nullable List<ListenerRuleConditionQueryString> queryStrings,
+        @CustomType.Parameter("sourceIp") @Nullable ListenerRuleConditionSourceIp sourceIp) {
         this.hostHeader = hostHeader;
         this.httpHeader = httpHeader;
         this.httpRequestMethod = httpRequestMethod;

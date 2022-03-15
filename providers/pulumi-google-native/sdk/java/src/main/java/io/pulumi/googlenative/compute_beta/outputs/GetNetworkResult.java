@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.NetworkPeeringResponse;
 import io.pulumi.googlenative.compute_beta.outputs.NetworkRoutingConfigResponse;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNetworkResult {
     /**
      * Must be set to create a VPC network. If not set, a legacy network is created. When set to true, the VPC network is created in auto mode. When set to false, the VPC network is created in custom mode. An auto mode VPC network starts with one subnet per region. Each subnet has a predetermined range as described in Auto mode VPC network IP ranges. For custom mode VPC networks, you can add subnets using the subnetworks insert method.
@@ -70,19 +70,19 @@ public final class GetNetworkResult {
      */
     private final List<String> subnetworks;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNetworkResult(
-        @OutputCustomType.Parameter("autoCreateSubnetworks") Boolean autoCreateSubnetworks,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("gatewayIPv4") String gatewayIPv4,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("mtu") Integer mtu,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("peerings") List<NetworkPeeringResponse> peerings,
-        @OutputCustomType.Parameter("routingConfig") NetworkRoutingConfigResponse routingConfig,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("subnetworks") List<String> subnetworks) {
+        @CustomType.Parameter("autoCreateSubnetworks") Boolean autoCreateSubnetworks,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("gatewayIPv4") String gatewayIPv4,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("mtu") Integer mtu,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("peerings") List<NetworkPeeringResponse> peerings,
+        @CustomType.Parameter("routingConfig") NetworkRoutingConfigResponse routingConfig,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("subnetworks") List<String> subnetworks) {
         this.autoCreateSubnetworks = autoCreateSubnetworks;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

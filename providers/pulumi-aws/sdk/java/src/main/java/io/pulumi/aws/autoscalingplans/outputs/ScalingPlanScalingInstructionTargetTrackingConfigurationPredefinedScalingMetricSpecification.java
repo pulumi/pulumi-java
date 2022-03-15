@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.autoscalingplans.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification {
     /**
      * The metric type. Valid values: `ALBRequestCountPerTarget`, `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, `DynamoDBReadCapacityUtilization`, `DynamoDBWriteCapacityUtilization`, `ECSServiceAverageCPUUtilization`, `ECSServiceAverageMemoryUtilization`, `EC2SpotFleetRequestAverageCPUUtilization`, `EC2SpotFleetRequestAverageNetworkIn`, `EC2SpotFleetRequestAverageNetworkOut`, `RDSReaderAverageCPUUtilization`, `RDSReaderAverageDatabaseConnections`.
@@ -22,10 +22,10 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPrede
      */
     private final @Nullable String resourceLabel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification(
-        @OutputCustomType.Parameter("predefinedScalingMetricType") String predefinedScalingMetricType,
-        @OutputCustomType.Parameter("resourceLabel") @Nullable String resourceLabel) {
+        @CustomType.Parameter("predefinedScalingMetricType") String predefinedScalingMetricType,
+        @CustomType.Parameter("resourceLabel") @Nullable String resourceLabel) {
         this.predefinedScalingMetricType = predefinedScalingMetricType;
         this.resourceLabel = resourceLabel;
     }

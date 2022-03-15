@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gkehub_v1.inputs.AppDevExperienceFeatureSpecArgs;
 import io.pulumi.googlenative.gkehub_v1.inputs.MultiClusterIngressFeatureSpecArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
      * Appdevexperience specific spec.
      * 
      */
-    @InputImport(name="appdevexperience")
+    @Import(name="appdevexperience")
       private final @Nullable Output<AppDevExperienceFeatureSpecArgs> appdevexperience;
 
     public Output<AppDevExperienceFeatureSpecArgs> getAppdevexperience() {
@@ -34,7 +34,7 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
      * Multicluster Ingress-specific spec.
      * 
      */
-    @InputImport(name="multiclusteringress")
+    @Import(name="multiclusteringress")
       private final @Nullable Output<MultiClusterIngressFeatureSpecArgs> multiclusteringress;
 
     public Output<MultiClusterIngressFeatureSpecArgs> getMulticlusteringress() {

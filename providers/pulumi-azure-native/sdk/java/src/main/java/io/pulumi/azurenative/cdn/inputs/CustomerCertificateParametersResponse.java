@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
      * Certificate issuing authority.
      * 
      */
-    @InputImport(name="certificateAuthority")
+    @Import(name="certificateAuthority")
       private final @Nullable String certificateAuthority;
 
     public Optional<String> getCertificateAuthority() {
@@ -36,7 +36,7 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
      * Resource reference to the KV secret
      * 
      */
-    @InputImport(name="secretSource", required=true)
+    @Import(name="secretSource", required=true)
       private final ResourceReferenceResponse secretSource;
 
     public ResourceReferenceResponse getSecretSource() {
@@ -47,7 +47,7 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
      * Version of the secret to be used
      * 
      */
-    @InputImport(name="secretVersion")
+    @Import(name="secretVersion")
       private final @Nullable String secretVersion;
 
     public Optional<String> getSecretVersion() {
@@ -58,7 +58,7 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
      * The list of SANs.
      * 
      */
-    @InputImport(name="subjectAlternativeNames")
+    @Import(name="subjectAlternativeNames")
       private final @Nullable List<String> subjectAlternativeNames;
 
     public List<String> getSubjectAlternativeNames() {
@@ -70,7 +70,7 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
      * Expected value is 'CustomerCertificate'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -81,7 +81,7 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
      * Whether to use the latest version for the certificate
      * 
      */
-    @InputImport(name="useLatestVersion")
+    @Import(name="useLatestVersion")
       private final @Nullable Boolean useLatestVersion;
 
     public Optional<Boolean> getUseLatestVersion() {

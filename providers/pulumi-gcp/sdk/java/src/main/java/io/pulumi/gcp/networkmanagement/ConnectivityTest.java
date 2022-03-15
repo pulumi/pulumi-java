@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkmanagement;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.networkmanagement.ConnectivityTestArgs;
@@ -53,7 +53,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * Maximum of 512 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -82,7 +82,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="destination", type=ConnectivityTestDestination.class, parameters={})
+    @Export(name="destination", type=ConnectivityTestDestination.class, parameters={})
     private Output<ConnectivityTestDestination> destination;
 
     /**
@@ -110,7 +110,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * Resource labels to represent user-provided metadata.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -124,7 +124,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * Unique name for the connectivity test.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -139,7 +139,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -154,7 +154,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * IP Protocol of the test. When not provided, "TCP" is assumed.
      * 
      */
-    @OutputExport(name="protocol", type=String.class, parameters={})
+    @Export(name="protocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> protocol;
 
     /**
@@ -170,7 +170,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * boundaries.
      * 
      */
-    @OutputExport(name="relatedProjects", type=List.class, parameters={String.class})
+    @Export(name="relatedProjects", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> relatedProjects;
 
     /**
@@ -204,7 +204,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="source", type=ConnectivityTestSource.class, parameters={})
+    @Export(name="source", type=ConnectivityTestSource.class, parameters={})
     private Output<ConnectivityTestSource> source;
 
     /**

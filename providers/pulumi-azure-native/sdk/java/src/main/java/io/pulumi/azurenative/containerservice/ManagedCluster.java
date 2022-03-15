@@ -25,7 +25,7 @@ import io.pulumi.azurenative.containerservice.outputs.PowerStateResponse;
 import io.pulumi.azurenative.containerservice.outputs.PrivateLinkResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -55,7 +55,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Profile of Azure Active Directory configuration.
      * 
      */
-    @OutputExport(name="aadProfile", type=ManagedClusterAADProfileResponse.class, parameters={})
+    @Export(name="aadProfile", type=ManagedClusterAADProfileResponse.class, parameters={})
     private Output</* @Nullable */ ManagedClusterAADProfileResponse> aadProfile;
 
     /**
@@ -69,7 +69,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Profile of managed cluster add-on.
      * 
      */
-    @OutputExport(name="addonProfiles", type=Map.class, parameters={String.class, ManagedClusterAddonProfileResponse.class})
+    @Export(name="addonProfiles", type=Map.class, parameters={String.class, ManagedClusterAddonProfileResponse.class})
     private Output</* @Nullable */ Map<String,ManagedClusterAddonProfileResponse>> addonProfiles;
 
     /**
@@ -83,7 +83,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Properties of the agent pool.
      * 
      */
-    @OutputExport(name="agentPoolProfiles", type=List.class, parameters={ManagedClusterAgentPoolProfileResponse.class})
+    @Export(name="agentPoolProfiles", type=List.class, parameters={ManagedClusterAgentPoolProfileResponse.class})
     private Output</* @Nullable */ List<ManagedClusterAgentPoolProfileResponse>> agentPoolProfiles;
 
     /**
@@ -97,7 +97,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Access profile for managed cluster API server.
      * 
      */
-    @OutputExport(name="apiServerAccessProfile", type=ManagedClusterAPIServerAccessProfileResponse.class, parameters={})
+    @Export(name="apiServerAccessProfile", type=ManagedClusterAPIServerAccessProfileResponse.class, parameters={})
     private Output</* @Nullable */ ManagedClusterAPIServerAccessProfileResponse> apiServerAccessProfile;
 
     /**
@@ -111,7 +111,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Parameters to be applied to the cluster-autoscaler when enabled
      * 
      */
-    @OutputExport(name="autoScalerProfile", type=ManagedClusterPropertiesResponseAutoScalerProfile.class, parameters={})
+    @Export(name="autoScalerProfile", type=ManagedClusterPropertiesResponseAutoScalerProfile.class, parameters={})
     private Output</* @Nullable */ ManagedClusterPropertiesResponseAutoScalerProfile> autoScalerProfile;
 
     /**
@@ -125,7 +125,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Profile of auto upgrade configuration.
      * 
      */
-    @OutputExport(name="autoUpgradeProfile", type=ManagedClusterAutoUpgradeProfileResponse.class, parameters={})
+    @Export(name="autoUpgradeProfile", type=ManagedClusterAutoUpgradeProfileResponse.class, parameters={})
     private Output</* @Nullable */ ManagedClusterAutoUpgradeProfileResponse> autoUpgradeProfile;
 
     /**
@@ -139,7 +139,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * FQDN for the master pool which used by proxy config.
      * 
      */
-    @OutputExport(name="azurePortalFQDN", type=String.class, parameters={})
+    @Export(name="azurePortalFQDN", type=String.class, parameters={})
     private Output<String> azurePortalFQDN;
 
     /**
@@ -153,7 +153,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * If set to true, getting static credential will be disabled for this cluster. Expected to only be used for AAD clusters.
      * 
      */
-    @OutputExport(name="disableLocalAccounts", type=Boolean.class, parameters={})
+    @Export(name="disableLocalAccounts", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableLocalAccounts;
 
     /**
@@ -167,7 +167,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * ResourceId of the disk encryption set to use for enabling encryption at rest.
      * 
      */
-    @OutputExport(name="diskEncryptionSetID", type=String.class, parameters={})
+    @Export(name="diskEncryptionSetID", type=String.class, parameters={})
     private Output</* @Nullable */ String> diskEncryptionSetID;
 
     /**
@@ -181,7 +181,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * DNS prefix specified when creating the managed cluster.
      * 
      */
-    @OutputExport(name="dnsPrefix", type=String.class, parameters={})
+    @Export(name="dnsPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> dnsPrefix;
 
     /**
@@ -195,7 +195,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * (DEPRECATING) Whether to enable Kubernetes pod security policy (preview). This feature is set for removal on October 15th, 2020. Learn more at aka.ms/aks/azpodpolicy.
      * 
      */
-    @OutputExport(name="enablePodSecurityPolicy", type=Boolean.class, parameters={})
+    @Export(name="enablePodSecurityPolicy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enablePodSecurityPolicy;
 
     /**
@@ -209,7 +209,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Whether to enable Kubernetes Role-Based Access Control.
      * 
      */
-    @OutputExport(name="enableRBAC", type=Boolean.class, parameters={})
+    @Export(name="enableRBAC", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableRBAC;
 
     /**
@@ -223,7 +223,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * The extended location of the Virtual Machine.
      * 
      */
-    @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
+    @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
@@ -237,7 +237,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * FQDN for the master pool.
      * 
      */
-    @OutputExport(name="fqdn", type=String.class, parameters={})
+    @Export(name="fqdn", type=String.class, parameters={})
     private Output<String> fqdn;
 
     /**
@@ -251,7 +251,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * FQDN subdomain specified when creating private cluster with custom private dns zone.
      * 
      */
-    @OutputExport(name="fqdnSubdomain", type=String.class, parameters={})
+    @Export(name="fqdnSubdomain", type=String.class, parameters={})
     private Output</* @Nullable */ String> fqdnSubdomain;
 
     /**
@@ -265,7 +265,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Configurations for provisioning the cluster with HTTP proxy servers.
      * 
      */
-    @OutputExport(name="httpProxyConfig", type=ManagedClusterHTTPProxyConfigResponse.class, parameters={})
+    @Export(name="httpProxyConfig", type=ManagedClusterHTTPProxyConfigResponse.class, parameters={})
     private Output</* @Nullable */ ManagedClusterHTTPProxyConfigResponse> httpProxyConfig;
 
     /**
@@ -279,7 +279,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * The identity of the managed cluster, if configured.
      * 
      */
-    @OutputExport(name="identity", type=ManagedClusterIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ManagedClusterIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedClusterIdentityResponse> identity;
 
     /**
@@ -293,7 +293,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Identities associated with the cluster.
      * 
      */
-    @OutputExport(name="identityProfile", type=Map.class, parameters={String.class, ManagedClusterPropertiesResponseIdentityProfile.class})
+    @Export(name="identityProfile", type=Map.class, parameters={String.class, ManagedClusterPropertiesResponseIdentityProfile.class})
     private Output</* @Nullable */ Map<String,ManagedClusterPropertiesResponseIdentityProfile>> identityProfile;
 
     /**
@@ -307,7 +307,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Version of Kubernetes specified when creating the managed cluster.
      * 
      */
-    @OutputExport(name="kubernetesVersion", type=String.class, parameters={})
+    @Export(name="kubernetesVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> kubernetesVersion;
 
     /**
@@ -321,7 +321,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Profile for Linux VMs in the container service cluster.
      * 
      */
-    @OutputExport(name="linuxProfile", type=ContainerServiceLinuxProfileResponse.class, parameters={})
+    @Export(name="linuxProfile", type=ContainerServiceLinuxProfileResponse.class, parameters={})
     private Output</* @Nullable */ ContainerServiceLinuxProfileResponse> linuxProfile;
 
     /**
@@ -335,7 +335,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -349,7 +349,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * The max number of agent pools for the managed cluster.
      * 
      */
-    @OutputExport(name="maxAgentPools", type=Integer.class, parameters={})
+    @Export(name="maxAgentPools", type=Integer.class, parameters={})
     private Output<Integer> maxAgentPools;
 
     /**
@@ -363,7 +363,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -377,7 +377,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Profile of network configuration.
      * 
      */
-    @OutputExport(name="networkProfile", type=ContainerServiceNetworkProfileResponse.class, parameters={})
+    @Export(name="networkProfile", type=ContainerServiceNetworkProfileResponse.class, parameters={})
     private Output</* @Nullable */ ContainerServiceNetworkProfileResponse> networkProfile;
 
     /**
@@ -391,7 +391,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Name of the resource group containing agent pool nodes.
      * 
      */
-    @OutputExport(name="nodeResourceGroup", type=String.class, parameters={})
+    @Export(name="nodeResourceGroup", type=String.class, parameters={})
     private Output</* @Nullable */ String> nodeResourceGroup;
 
     /**
@@ -405,7 +405,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Profile of managed cluster pod identity.
      * 
      */
-    @OutputExport(name="podIdentityProfile", type=ManagedClusterPodIdentityProfileResponse.class, parameters={})
+    @Export(name="podIdentityProfile", type=ManagedClusterPodIdentityProfileResponse.class, parameters={})
     private Output</* @Nullable */ ManagedClusterPodIdentityProfileResponse> podIdentityProfile;
 
     /**
@@ -419,7 +419,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Represents the Power State of the cluster
      * 
      */
-    @OutputExport(name="powerState", type=PowerStateResponse.class, parameters={})
+    @Export(name="powerState", type=PowerStateResponse.class, parameters={})
     private Output<PowerStateResponse> powerState;
 
     /**
@@ -433,7 +433,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * FQDN of private cluster.
      * 
      */
-    @OutputExport(name="privateFQDN", type=String.class, parameters={})
+    @Export(name="privateFQDN", type=String.class, parameters={})
     private Output<String> privateFQDN;
 
     /**
@@ -447,7 +447,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Private link resources associated with the cluster.
      * 
      */
-    @OutputExport(name="privateLinkResources", type=List.class, parameters={PrivateLinkResourceResponse.class})
+    @Export(name="privateLinkResources", type=List.class, parameters={PrivateLinkResourceResponse.class})
     private Output</* @Nullable */ List<PrivateLinkResourceResponse>> privateLinkResources;
 
     /**
@@ -461,7 +461,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * The current deployment or provisioning state, which only appears in the response.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -475,7 +475,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Information about a service principal identity for the cluster to use for manipulating Azure APIs.
      * 
      */
-    @OutputExport(name="servicePrincipalProfile", type=ManagedClusterServicePrincipalProfileResponse.class, parameters={})
+    @Export(name="servicePrincipalProfile", type=ManagedClusterServicePrincipalProfileResponse.class, parameters={})
     private Output</* @Nullable */ ManagedClusterServicePrincipalProfileResponse> servicePrincipalProfile;
 
     /**
@@ -489,7 +489,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * The managed cluster SKU.
      * 
      */
-    @OutputExport(name="sku", type=ManagedClusterSKUResponse.class, parameters={})
+    @Export(name="sku", type=ManagedClusterSKUResponse.class, parameters={})
     private Output</* @Nullable */ ManagedClusterSKUResponse> sku;
 
     /**
@@ -503,7 +503,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -517,7 +517,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -531,7 +531,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Profile for Windows VMs in the container service cluster.
      * 
      */
-    @OutputExport(name="windowsProfile", type=ManagedClusterWindowsProfileResponse.class, parameters={})
+    @Export(name="windowsProfile", type=ManagedClusterWindowsProfileResponse.class, parameters={})
     private Output</* @Nullable */ ManagedClusterWindowsProfileResponse> windowsProfile;
 
     /**

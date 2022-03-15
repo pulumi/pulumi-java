@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetShareResult {
     /**
      * Time at which the share was created.
@@ -68,19 +68,19 @@ public final class GetShareResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetShareResult(
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("shareKind") @Nullable String shareKind,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("terms") @Nullable String terms,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userEmail") String userEmail,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("shareKind") @Nullable String shareKind,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("terms") @Nullable String terms,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userEmail") String userEmail,
+        @CustomType.Parameter("userName") String userName) {
         this.createdAt = createdAt;
         this.description = description;
         this.id = id;

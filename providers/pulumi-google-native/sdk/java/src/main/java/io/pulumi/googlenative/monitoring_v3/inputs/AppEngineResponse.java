@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AppEngineResponse extends io.pulumi.resources.InvokeArgs {
      * The ID of the App Engine module underlying this service. Corresponds to the module_id resource label in the gae_app monitored resource: https://cloud.google.com/monitoring/api/resources#tag_gae_app
      * 
      */
-    @InputImport(name="moduleId", required=true)
+    @Import(name="moduleId", required=true)
       private final String moduleId;
 
     public String getModuleId() {

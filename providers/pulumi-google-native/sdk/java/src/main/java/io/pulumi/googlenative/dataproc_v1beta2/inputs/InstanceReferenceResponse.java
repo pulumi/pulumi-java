@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
      * The unique identifier of the Compute Engine instance.
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final String instanceId;
 
     public String getInstanceId() {
@@ -31,7 +31,7 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
      * The user-friendly name of the Compute Engine instance.
      * 
      */
-    @InputImport(name="instanceName", required=true)
+    @Import(name="instanceName", required=true)
       private final String instanceName;
 
     public String getInstanceName() {
@@ -42,7 +42,7 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
      * The public key used for sharing data with this instance.
      * 
      */
-    @InputImport(name="publicKey", required=true)
+    @Import(name="publicKey", required=true)
       private final String publicKey;
 
     public String getPublicKey() {

@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.transfer.outputs;
 
 import io.pulumi.awsnative.transfer.outputs.WorkflowS3InputFileLocation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowInputFileLocation {
     private final @Nullable WorkflowS3InputFileLocation s3FileLocation;
 
-    @OutputCustomType.Constructor
-    private WorkflowInputFileLocation(@OutputCustomType.Parameter("s3FileLocation") @Nullable WorkflowS3InputFileLocation s3FileLocation) {
+    @CustomType.Constructor
+    private WorkflowInputFileLocation(@CustomType.Parameter("s3FileLocation") @Nullable WorkflowS3InputFileLocation s3FileLocation) {
         this.s3FileLocation = s3FileLocation;
     }
 

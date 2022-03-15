@@ -4,7 +4,7 @@
 package io.pulumi.aws.outputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProviderAssumeRoleArgs {
     private final @Nullable Output<Integer> durationSeconds;
     private final @Nullable Output<String> externalId;
@@ -23,16 +23,16 @@ public final class ProviderAssumeRoleArgs {
     private final @Nullable Output<Map<String,String>> tags;
     private final @Nullable Output<List<String>> transitiveTagKeys;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProviderAssumeRoleArgs(
-        @OutputCustomType.Parameter("durationSeconds") @Nullable Output<Integer> durationSeconds,
-        @OutputCustomType.Parameter("externalId") @Nullable Output<String> externalId,
-        @OutputCustomType.Parameter("policy") @Nullable Output<String> policy,
-        @OutputCustomType.Parameter("policyArns") @Nullable Output<List<String>> policyArns,
-        @OutputCustomType.Parameter("roleArn") @Nullable Output<String> roleArn,
-        @OutputCustomType.Parameter("sessionName") @Nullable Output<String> sessionName,
-        @OutputCustomType.Parameter("tags") @Nullable Output<Map<String,String>> tags,
-        @OutputCustomType.Parameter("transitiveTagKeys") @Nullable Output<List<String>> transitiveTagKeys) {
+        @CustomType.Parameter("durationSeconds") @Nullable Output<Integer> durationSeconds,
+        @CustomType.Parameter("externalId") @Nullable Output<String> externalId,
+        @CustomType.Parameter("policy") @Nullable Output<String> policy,
+        @CustomType.Parameter("policyArns") @Nullable Output<List<String>> policyArns,
+        @CustomType.Parameter("roleArn") @Nullable Output<String> roleArn,
+        @CustomType.Parameter("sessionName") @Nullable Output<String> sessionName,
+        @CustomType.Parameter("tags") @Nullable Output<Map<String,String>> tags,
+        @CustomType.Parameter("transitiveTagKeys") @Nullable Output<List<String>> transitiveTagKeys) {
         this.durationSeconds = durationSeconds;
         this.externalId = externalId;
         this.policy = policy;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DSSEHintArgs extends io.pulumi.resources.ResourceArgs {
      * The human readable name of this attestation authority, for example "cloudbuild-prod".
      * 
      */
-    @InputImport(name="humanReadableName", required=true)
+    @Import(name="humanReadableName", required=true)
       private final Output<String> humanReadableName;
 
     public Output<String> getHumanReadableName() {

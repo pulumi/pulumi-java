@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.elasticsearch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainCognitoOption {
     /**
      * Whether node to node encryption is enabled.
@@ -31,12 +31,12 @@ public final class GetDomainCognitoOption {
      */
     private final String userPoolId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainCognitoOption(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("identityPoolId") String identityPoolId,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("userPoolId") String userPoolId) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("identityPoolId") String identityPoolId,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("userPoolId") String userPoolId) {
         this.enabled = enabled;
         this.identityPoolId = identityPoolId;
         this.roleArn = roleArn;

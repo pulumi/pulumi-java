@@ -20,7 +20,7 @@ import io.pulumi.aws.ec2.inputs.LaunchTemplateNetworkInterfaceGetArgs;
 import io.pulumi.aws.ec2.inputs.LaunchTemplatePlacementGetArgs;
 import io.pulumi.aws.ec2.inputs.LaunchTemplateTagSpecificationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -38,7 +38,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * The Amazon Resource Name (ARN) of the instance profile.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -50,7 +50,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * See Block Devices below for details.
      * 
      */
-    @InputImport(name="blockDeviceMappings")
+    @Import(name="blockDeviceMappings")
       private final @Nullable Output<List<LaunchTemplateBlockDeviceMappingGetArgs>> blockDeviceMappings;
 
     public Output<List<LaunchTemplateBlockDeviceMappingGetArgs>> getBlockDeviceMappings() {
@@ -61,7 +61,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
      * 
      */
-    @InputImport(name="capacityReservationSpecification")
+    @Import(name="capacityReservationSpecification")
       private final @Nullable Output<LaunchTemplateCapacityReservationSpecificationGetArgs> capacityReservationSpecification;
 
     public Output<LaunchTemplateCapacityReservationSpecificationGetArgs> getCapacityReservationSpecification() {
@@ -72,7 +72,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * The CPU options for the instance. See CPU Options below for more details.
      * 
      */
-    @InputImport(name="cpuOptions")
+    @Import(name="cpuOptions")
       private final @Nullable Output<LaunchTemplateCpuOptionsGetArgs> cpuOptions;
 
     public Output<LaunchTemplateCpuOptionsGetArgs> getCpuOptions() {
@@ -84,7 +84,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * Specification below for more details.
      * 
      */
-    @InputImport(name="creditSpecification")
+    @Import(name="creditSpecification")
       private final @Nullable Output<LaunchTemplateCreditSpecificationGetArgs> creditSpecification;
 
     public Output<LaunchTemplateCreditSpecificationGetArgs> getCreditSpecification() {
@@ -95,7 +95,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * Default Version of the launch template.
      * 
      */
-    @InputImport(name="defaultVersion")
+    @Import(name="defaultVersion")
       private final @Nullable Output<Integer> defaultVersion;
 
     public Output<Integer> getDefaultVersion() {
@@ -106,7 +106,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * Description of the launch template.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -118,7 +118,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
      * 
      */
-    @InputImport(name="disableApiTermination")
+    @Import(name="disableApiTermination")
       private final @Nullable Output<Boolean> disableApiTermination;
 
     public Output<Boolean> getDisableApiTermination() {
@@ -129,7 +129,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * If `true`, the launched EC2 instance will be EBS-optimized.
      * 
      */
-    @InputImport(name="ebsOptimized")
+    @Import(name="ebsOptimized")
       private final @Nullable Output<String> ebsOptimized;
 
     public Output<String> getEbsOptimized() {
@@ -141,7 +141,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * below for more details.
      * 
      */
-    @InputImport(name="elasticGpuSpecifications")
+    @Import(name="elasticGpuSpecifications")
       private final @Nullable Output<List<LaunchTemplateElasticGpuSpecificationGetArgs>> elasticGpuSpecifications;
 
     public Output<List<LaunchTemplateElasticGpuSpecificationGetArgs>> getElasticGpuSpecifications() {
@@ -152,7 +152,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
      * 
      */
-    @InputImport(name="elasticInferenceAccelerator")
+    @Import(name="elasticInferenceAccelerator")
       private final @Nullable Output<LaunchTemplateElasticInferenceAcceleratorGetArgs> elasticInferenceAccelerator;
 
     public Output<LaunchTemplateElasticInferenceAcceleratorGetArgs> getElasticInferenceAccelerator() {
@@ -163,7 +163,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
      * 
      */
-    @InputImport(name="enclaveOptions")
+    @Import(name="enclaveOptions")
       private final @Nullable Output<LaunchTemplateEnclaveOptionsGetArgs> enclaveOptions;
 
     public Output<LaunchTemplateEnclaveOptionsGetArgs> getEnclaveOptions() {
@@ -174,7 +174,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * The hibernation options for the instance. See Hibernation Options below for more details.
      * 
      */
-    @InputImport(name="hibernationOptions")
+    @Import(name="hibernationOptions")
       private final @Nullable Output<LaunchTemplateHibernationOptionsGetArgs> hibernationOptions;
 
     public Output<LaunchTemplateHibernationOptionsGetArgs> getHibernationOptions() {
@@ -186,7 +186,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * below for more details.
      * 
      */
-    @InputImport(name="iamInstanceProfile")
+    @Import(name="iamInstanceProfile")
       private final @Nullable Output<LaunchTemplateIamInstanceProfileGetArgs> iamInstanceProfile;
 
     public Output<LaunchTemplateIamInstanceProfileGetArgs> getIamInstanceProfile() {
@@ -197,7 +197,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * The AMI from which to launch the instance.
      * 
      */
-    @InputImport(name="imageId")
+    @Import(name="imageId")
       private final @Nullable Output<String> imageId;
 
     public Output<String> getImageId() {
@@ -209,7 +209,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * (Default: `stop`).
      * 
      */
-    @InputImport(name="instanceInitiatedShutdownBehavior")
+    @Import(name="instanceInitiatedShutdownBehavior")
       private final @Nullable Output<String> instanceInitiatedShutdownBehavior;
 
     public Output<String> getInstanceInitiatedShutdownBehavior() {
@@ -221,7 +221,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * below for details.
      * 
      */
-    @InputImport(name="instanceMarketOptions")
+    @Import(name="instanceMarketOptions")
       private final @Nullable Output<LaunchTemplateInstanceMarketOptionsGetArgs> instanceMarketOptions;
 
     public Output<LaunchTemplateInstanceMarketOptionsGetArgs> getInstanceMarketOptions() {
@@ -232,7 +232,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * The type of the instance.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -243,7 +243,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * The kernel ID.
      * 
      */
-    @InputImport(name="kernelId")
+    @Import(name="kernelId")
       private final @Nullable Output<String> kernelId;
 
     public Output<String> getKernelId() {
@@ -254,7 +254,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * The key name to use for the instance.
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
@@ -265,7 +265,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * The latest version of the launch template.
      * 
      */
-    @InputImport(name="latestVersion")
+    @Import(name="latestVersion")
       private final @Nullable Output<Integer> latestVersion;
 
     public Output<Integer> getLatestVersion() {
@@ -276,7 +276,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * A list of license specifications to associate with. See License Specification below for more details.
      * 
      */
-    @InputImport(name="licenseSpecifications")
+    @Import(name="licenseSpecifications")
       private final @Nullable Output<List<LaunchTemplateLicenseSpecificationGetArgs>> licenseSpecifications;
 
     public Output<List<LaunchTemplateLicenseSpecificationGetArgs>> getLicenseSpecifications() {
@@ -287,7 +287,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * Customize the metadata options for the instance. See Metadata Options below for more details.
      * 
      */
-    @InputImport(name="metadataOptions")
+    @Import(name="metadataOptions")
       private final @Nullable Output<LaunchTemplateMetadataOptionsGetArgs> metadataOptions;
 
     public Output<LaunchTemplateMetadataOptionsGetArgs> getMetadataOptions() {
@@ -298,7 +298,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * The monitoring option for the instance. See Monitoring below for more details.
      * 
      */
-    @InputImport(name="monitoring")
+    @Import(name="monitoring")
       private final @Nullable Output<LaunchTemplateMonitoringGetArgs> monitoring;
 
     public Output<LaunchTemplateMonitoringGetArgs> getMonitoring() {
@@ -309,7 +309,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -320,7 +320,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -332,7 +332,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * Interfaces below for more details.
      * 
      */
-    @InputImport(name="networkInterfaces")
+    @Import(name="networkInterfaces")
       private final @Nullable Output<List<LaunchTemplateNetworkInterfaceGetArgs>> networkInterfaces;
 
     public Output<List<LaunchTemplateNetworkInterfaceGetArgs>> getNetworkInterfaces() {
@@ -343,7 +343,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * The placement of the instance. See Placement below for more details.
      * 
      */
-    @InputImport(name="placement")
+    @Import(name="placement")
       private final @Nullable Output<LaunchTemplatePlacementGetArgs> placement;
 
     public Output<LaunchTemplatePlacementGetArgs> getPlacement() {
@@ -354,7 +354,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * The ID of the RAM disk.
      * 
      */
-    @InputImport(name="ramDiskId")
+    @Import(name="ramDiskId")
       private final @Nullable Output<String> ramDiskId;
 
     public Output<String> getRamDiskId() {
@@ -366,7 +366,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * `vpc_security_group_ids` instead.
      * 
      */
-    @InputImport(name="securityGroupNames")
+    @Import(name="securityGroupNames")
       private final @Nullable Output<List<String>> securityGroupNames;
 
     public Output<List<String>> getSecurityGroupNames() {
@@ -377,7 +377,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * The tags to apply to the resources during launch. See Tag Specifications below for more details.
      * 
      */
-    @InputImport(name="tagSpecifications")
+    @Import(name="tagSpecifications")
       private final @Nullable Output<List<LaunchTemplateTagSpecificationGetArgs>> tagSpecifications;
 
     public Output<List<LaunchTemplateTagSpecificationGetArgs>> getTagSpecifications() {
@@ -388,7 +388,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * A map of tags to assign to the launch template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -399,7 +399,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -410,7 +410,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * Whether to update Default Version each update. Conflicts with `default_version`.
      * 
      */
-    @InputImport(name="updateDefaultVersion")
+    @Import(name="updateDefaultVersion")
       private final @Nullable Output<Boolean> updateDefaultVersion;
 
     public Output<Boolean> getUpdateDefaultVersion() {
@@ -421,7 +421,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * The Base64-encoded user data to provide when launching the instance.
      * 
      */
-    @InputImport(name="userData")
+    @Import(name="userData")
       private final @Nullable Output<String> userData;
 
     public Output<String> getUserData() {
@@ -432,7 +432,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
      * A list of security group IDs to associate with. Conflicts with `network_interfaces.security_groups`
      * 
      */
-    @InputImport(name="vpcSecurityGroupIds")
+    @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
     public Output<List<String>> getVpcSecurityGroupIds() {

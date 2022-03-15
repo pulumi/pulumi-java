@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.codedeploy.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentGroupDeploymentStyle {
     /**
      * Indicates whether to route deployment traffic behind a load balancer. Valid Values are `WITH_TRAFFIC_CONTROL` or `WITHOUT_TRAFFIC_CONTROL`. Default is `WITHOUT_TRAFFIC_CONTROL`.
@@ -22,10 +22,10 @@ public final class DeploymentGroupDeploymentStyle {
      */
     private final @Nullable String deploymentType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentGroupDeploymentStyle(
-        @OutputCustomType.Parameter("deploymentOption") @Nullable String deploymentOption,
-        @OutputCustomType.Parameter("deploymentType") @Nullable String deploymentType) {
+        @CustomType.Parameter("deploymentOption") @Nullable String deploymentOption,
+        @CustomType.Parameter("deploymentType") @Nullable String deploymentType) {
         this.deploymentOption = deploymentOption;
         this.deploymentType = deploymentType;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.storage_v1.HmacKeyArgs;
@@ -22,7 +22,7 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
      * The ID of the HMAC Key.
      * 
      */
-    @OutputExport(name="accessId", type=String.class, parameters={})
+    @Export(name="accessId", type=String.class, parameters={})
     private Output<String> accessId;
 
     /**
@@ -36,7 +36,7 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
      * HTTP 1.1 Entity tag for the HMAC key.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -50,7 +50,7 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
      * The kind of item this is. For HMAC Key metadata, this is always storage#hmacKeyMetadata.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -64,7 +64,7 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
      * Project ID owning the service account to which the key authenticates.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -78,7 +78,7 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
      * The link to this resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -92,7 +92,7 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
      * The email address of the key's associated service account.
      * 
      */
-    @OutputExport(name="serviceAccountEmail", type=String.class, parameters={})
+    @Export(name="serviceAccountEmail", type=String.class, parameters={})
     private Output<String> serviceAccountEmail;
 
     /**
@@ -106,7 +106,7 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
      * The state of the key. Can be one of ACTIVE, INACTIVE, or DELETED.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -120,7 +120,7 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
      * The creation time of the HMAC key in RFC 3339 format.
      * 
      */
-    @OutputExport(name="timeCreated", type=String.class, parameters={})
+    @Export(name="timeCreated", type=String.class, parameters={})
     private Output<String> timeCreated;
 
     /**
@@ -134,7 +134,7 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
      * The last modification time of the HMAC key metadata in RFC 3339 format.
      * 
      */
-    @OutputExport(name="updated", type=String.class, parameters={})
+    @Export(name="updated", type=String.class, parameters={})
     private Output<String> updated;
 
     /**

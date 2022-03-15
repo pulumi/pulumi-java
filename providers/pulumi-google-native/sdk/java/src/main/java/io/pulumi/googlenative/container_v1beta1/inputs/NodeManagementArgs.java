@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1beta1.inputs.AutoUpgradeOptionsArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the nodes will be automatically repaired.
      * 
      */
-    @InputImport(name="autoRepair")
+    @Import(name="autoRepair")
       private final @Nullable Output<Boolean> autoRepair;
 
     public Output<Boolean> getAutoRepair() {
@@ -34,7 +34,7 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the nodes will be automatically upgraded.
      * 
      */
-    @InputImport(name="autoUpgrade")
+    @Import(name="autoUpgrade")
       private final @Nullable Output<Boolean> autoUpgrade;
 
     public Output<Boolean> getAutoUpgrade() {
@@ -45,7 +45,7 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the Auto Upgrade knobs for the node pool.
      * 
      */
-    @InputImport(name="upgradeOptions")
+    @Import(name="upgradeOptions")
       private final @Nullable Output<AutoUpgradeOptionsArgs> upgradeOptions;
 
     public Output<AutoUpgradeOptionsArgs> getUpgradeOptions() {

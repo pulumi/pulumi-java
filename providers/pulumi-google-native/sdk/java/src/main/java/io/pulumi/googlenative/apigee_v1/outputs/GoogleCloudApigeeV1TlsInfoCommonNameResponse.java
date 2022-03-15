@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse {
     /**
      * The TLS Common Name string of the certificate.
@@ -21,10 +21,10 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse {
      */
     private final Boolean wildcardMatch;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1TlsInfoCommonNameResponse(
-        @OutputCustomType.Parameter("value") String value,
-        @OutputCustomType.Parameter("wildcardMatch") Boolean wildcardMatch) {
+        @CustomType.Parameter("value") String value,
+        @CustomType.Parameter("wildcardMatch") Boolean wildcardMatch) {
         this.value = value;
         this.wildcardMatch = wildcardMatch;
     }

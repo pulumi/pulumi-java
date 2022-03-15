@@ -6,14 +6,14 @@ package io.pulumi.azurenative.cdn.outputs;
 import io.pulumi.azurenative.cdn.outputs.CompressionSettingsResponse;
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRouteResult {
     /**
      * compression settings.
@@ -102,26 +102,26 @@ public final class GetRouteResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRouteResult(
-        @OutputCustomType.Parameter("compressionSettings") @Nullable CompressionSettingsResponse compressionSettings,
-        @OutputCustomType.Parameter("customDomains") @Nullable List<ResourceReferenceResponse> customDomains,
-        @OutputCustomType.Parameter("deploymentStatus") String deploymentStatus,
-        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
-        @OutputCustomType.Parameter("forwardingProtocol") @Nullable String forwardingProtocol,
-        @OutputCustomType.Parameter("httpsRedirect") @Nullable String httpsRedirect,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("linkToDefaultDomain") @Nullable String linkToDefaultDomain,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("originGroup") ResourceReferenceResponse originGroup,
-        @OutputCustomType.Parameter("originPath") @Nullable String originPath,
-        @OutputCustomType.Parameter("patternsToMatch") @Nullable List<String> patternsToMatch,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("queryStringCachingBehavior") @Nullable String queryStringCachingBehavior,
-        @OutputCustomType.Parameter("ruleSets") @Nullable List<ResourceReferenceResponse> ruleSets,
-        @OutputCustomType.Parameter("supportedProtocols") @Nullable List<String> supportedProtocols,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("compressionSettings") @Nullable CompressionSettingsResponse compressionSettings,
+        @CustomType.Parameter("customDomains") @Nullable List<ResourceReferenceResponse> customDomains,
+        @CustomType.Parameter("deploymentStatus") String deploymentStatus,
+        @CustomType.Parameter("enabledState") @Nullable String enabledState,
+        @CustomType.Parameter("forwardingProtocol") @Nullable String forwardingProtocol,
+        @CustomType.Parameter("httpsRedirect") @Nullable String httpsRedirect,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("linkToDefaultDomain") @Nullable String linkToDefaultDomain,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("originGroup") ResourceReferenceResponse originGroup,
+        @CustomType.Parameter("originPath") @Nullable String originPath,
+        @CustomType.Parameter("patternsToMatch") @Nullable List<String> patternsToMatch,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("queryStringCachingBehavior") @Nullable String queryStringCachingBehavior,
+        @CustomType.Parameter("ruleSets") @Nullable List<ResourceReferenceResponse> ruleSets,
+        @CustomType.Parameter("supportedProtocols") @Nullable List<String> supportedProtocols,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.compressionSettings = compressionSettings;
         this.customDomains = customDomains;
         this.deploymentStatus = deploymentStatus;

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class DatasetVersioningConfigurationArgs extends io.pulumi.resource
 
     public static final DatasetVersioningConfigurationArgs Empty = new DatasetVersioningConfigurationArgs();
 
-    @InputImport(name="maxVersions")
+    @Import(name="maxVersions")
       private final @Nullable Output<Integer> maxVersions;
 
     public Output<Integer> getMaxVersions() {
         return this.maxVersions == null ? Output.empty() : this.maxVersions;
     }
 
-    @InputImport(name="unlimited")
+    @Import(name="unlimited")
       private final @Nullable Output<Boolean> unlimited;
 
     public Output<Boolean> getUnlimited() {

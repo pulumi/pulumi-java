@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datashare.BlobContainerDataSetMappingArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class BlobContainerDataSetMapping extends io.pulumi.resources.CustomResou
      * BLOB Container name.
      * 
      */
-    @OutputExport(name="containerName", type=String.class, parameters={})
+    @Export(name="containerName", type=String.class, parameters={})
     private Output<String> containerName;
 
     /**
@@ -49,7 +49,7 @@ public class BlobContainerDataSetMapping extends io.pulumi.resources.CustomResou
      * The id of the source data set.
      * 
      */
-    @OutputExport(name="dataSetId", type=String.class, parameters={})
+    @Export(name="dataSetId", type=String.class, parameters={})
     private Output<String> dataSetId;
 
     /**
@@ -63,7 +63,7 @@ public class BlobContainerDataSetMapping extends io.pulumi.resources.CustomResou
      * Gets the status of the data set mapping.
      * 
      */
-    @OutputExport(name="dataSetMappingStatus", type=String.class, parameters={})
+    @Export(name="dataSetMappingStatus", type=String.class, parameters={})
     private Output<String> dataSetMappingStatus;
 
     /**
@@ -78,7 +78,7 @@ public class BlobContainerDataSetMapping extends io.pulumi.resources.CustomResou
      * Expected value is 'Container'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -93,7 +93,7 @@ public class BlobContainerDataSetMapping extends io.pulumi.resources.CustomResou
      * Name of the azure resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class BlobContainerDataSetMapping extends io.pulumi.resources.CustomResou
      * Provisioning state of the data set mapping.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -121,7 +121,7 @@ public class BlobContainerDataSetMapping extends io.pulumi.resources.CustomResou
      * Resource group of storage account.
      * 
      */
-    @OutputExport(name="resourceGroup", type=String.class, parameters={})
+    @Export(name="resourceGroup", type=String.class, parameters={})
     private Output<String> resourceGroup;
 
     /**
@@ -135,7 +135,7 @@ public class BlobContainerDataSetMapping extends io.pulumi.resources.CustomResou
      * Storage account name of the source data set.
      * 
      */
-    @OutputExport(name="storageAccountName", type=String.class, parameters={})
+    @Export(name="storageAccountName", type=String.class, parameters={})
     private Output<String> storageAccountName;
 
     /**
@@ -149,7 +149,7 @@ public class BlobContainerDataSetMapping extends io.pulumi.resources.CustomResou
      * Subscription id of storage account.
      * 
      */
-    @OutputExport(name="subscriptionId", type=String.class, parameters={})
+    @Export(name="subscriptionId", type=String.class, parameters={})
     private Output<String> subscriptionId;
 
     /**
@@ -163,7 +163,7 @@ public class BlobContainerDataSetMapping extends io.pulumi.resources.CustomResou
      * System Data of the Azure resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -177,7 +177,7 @@ public class BlobContainerDataSetMapping extends io.pulumi.resources.CustomResou
      * Type of the azure resource
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

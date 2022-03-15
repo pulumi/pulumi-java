@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ClusterReleaseChannelGetArgs extends io.pulumi.resources.Reso
      * * STABLE: Every few months upgrade cadence; Production users who need stability above all else, and for whom frequent upgrades are too risky.
      * 
      */
-    @InputImport(name="channel", required=true)
+    @Import(name="channel", required=true)
       private final Output<String> channel;
 
     public Output<String> getChannel() {

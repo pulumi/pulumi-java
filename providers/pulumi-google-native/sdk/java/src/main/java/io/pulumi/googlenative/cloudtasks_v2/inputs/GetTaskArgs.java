@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,35 +14,35 @@ public final class GetTaskArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTaskArgs Empty = new GetTaskArgs();
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="queueId", required=true)
+    @Import(name="queueId", required=true)
       private final String queueId;
 
     public String getQueueId() {
         return this.queueId;
     }
 
-    @InputImport(name="responseView")
+    @Import(name="responseView")
       private final @Nullable String responseView;
 
     public Optional<String> getResponseView() {
         return this.responseView == null ? Optional.empty() : Optional.ofNullable(this.responseView);
     }
 
-    @InputImport(name="taskId", required=true)
+    @Import(name="taskId", required=true)
       private final String taskId;
 
     public String getTaskId() {

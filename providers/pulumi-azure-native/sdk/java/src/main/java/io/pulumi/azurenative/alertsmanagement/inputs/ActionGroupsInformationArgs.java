@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ActionGroupsInformationArgs extends io.pulumi.resources.Resou
      * An optional custom email subject to use in email notifications.
      * 
      */
-    @InputImport(name="customEmailSubject")
+    @Import(name="customEmailSubject")
       private final @Nullable Output<String> customEmailSubject;
 
     public Output<String> getCustomEmailSubject() {
@@ -34,7 +34,7 @@ public final class ActionGroupsInformationArgs extends io.pulumi.resources.Resou
      * An optional custom web-hook payload to use in web-hook notifications.
      * 
      */
-    @InputImport(name="customWebhookPayload")
+    @Import(name="customWebhookPayload")
       private final @Nullable Output<String> customWebhookPayload;
 
     public Output<String> getCustomWebhookPayload() {
@@ -45,7 +45,7 @@ public final class ActionGroupsInformationArgs extends io.pulumi.resources.Resou
      * The Action Group resource IDs.
      * 
      */
-    @InputImport(name="groupIds", required=true)
+    @Import(name="groupIds", required=true)
       private final Output<List<String>> groupIds;
 
     public Output<List<String>> getGroupIds() {

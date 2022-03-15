@@ -10,7 +10,7 @@ import io.pulumi.azurenative.customproviders.outputs.CustomRPResourceTypeRouteDe
 import io.pulumi.azurenative.customproviders.outputs.CustomRPValidationsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class CustomResourceProvider extends io.pulumi.resources.CustomResource {
      * A list of actions that the custom resource provider implements.
      * 
      */
-    @OutputExport(name="actions", type=List.class, parameters={CustomRPActionRouteDefinitionResponse.class})
+    @Export(name="actions", type=List.class, parameters={CustomRPActionRouteDefinitionResponse.class})
     private Output</* @Nullable */ List<CustomRPActionRouteDefinitionResponse>> actions;
 
     /**
@@ -52,7 +52,7 @@ public class CustomResourceProvider extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -66,7 +66,7 @@ public class CustomResourceProvider extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class CustomResourceProvider extends io.pulumi.resources.CustomResource {
      * The provisioning state of the resource provider.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -94,7 +94,7 @@ public class CustomResourceProvider extends io.pulumi.resources.CustomResource {
      * A list of resource types that the custom resource provider implements.
      * 
      */
-    @OutputExport(name="resourceTypes", type=List.class, parameters={CustomRPResourceTypeRouteDefinitionResponse.class})
+    @Export(name="resourceTypes", type=List.class, parameters={CustomRPResourceTypeRouteDefinitionResponse.class})
     private Output</* @Nullable */ List<CustomRPResourceTypeRouteDefinitionResponse>> resourceTypes;
 
     /**
@@ -108,7 +108,7 @@ public class CustomResourceProvider extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -122,7 +122,7 @@ public class CustomResourceProvider extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -136,7 +136,7 @@ public class CustomResourceProvider extends io.pulumi.resources.CustomResource {
      * A list of validations to run on the custom resource provider's requests.
      * 
      */
-    @OutputExport(name="validations", type=List.class, parameters={CustomRPValidationsResponse.class})
+    @Export(name="validations", type=List.class, parameters={CustomRPValidationsResponse.class})
     private Output</* @Nullable */ List<CustomRPValidationsResponse>> validations;
 
     /**

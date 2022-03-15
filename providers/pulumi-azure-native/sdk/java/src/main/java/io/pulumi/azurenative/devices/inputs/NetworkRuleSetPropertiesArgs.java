@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devices.enums.DefaultAction;
 import io.pulumi.azurenative.devices.inputs.NetworkRuleSetIpRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.Reso
      * If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub
      * 
      */
-    @InputImport(name="applyToBuiltInEventHubEndpoint", required=true)
+    @Import(name="applyToBuiltInEventHubEndpoint", required=true)
       private final Output<Boolean> applyToBuiltInEventHubEndpoint;
 
     public Output<Boolean> getApplyToBuiltInEventHubEndpoint() {
@@ -38,7 +38,7 @@ public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.Reso
      * Default Action for Network Rule Set
      * 
      */
-    @InputImport(name="defaultAction")
+    @Import(name="defaultAction")
       private final @Nullable Output<Either<String,DefaultAction>> defaultAction;
 
     public Output<Either<String,DefaultAction>> getDefaultAction() {
@@ -49,7 +49,7 @@ public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.Reso
      * List of IP Rules
      * 
      */
-    @InputImport(name="ipRules", required=true)
+    @Import(name="ipRules", required=true)
       private final Output<List<NetworkRuleSetIpRuleArgs>> ipRules;
 
     public Output<List<NetworkRuleSetIpRuleArgs>> getIpRules() {

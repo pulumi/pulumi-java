@@ -9,7 +9,7 @@ import io.pulumi.awsnative.servicecatalog.enums.ServiceActionAcceptLanguage;
 import io.pulumi.awsnative.servicecatalog.enums.ServiceActionDefinitionType;
 import io.pulumi.awsnative.servicecatalog.outputs.ServiceActionDefinitionParameter;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -21,31 +21,31 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:servicecatalog:ServiceAction")
 public class ServiceAction extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="acceptLanguage", type=ServiceActionAcceptLanguage.class, parameters={})
+    @Export(name="acceptLanguage", type=ServiceActionAcceptLanguage.class, parameters={})
     private Output</* @Nullable */ ServiceActionAcceptLanguage> acceptLanguage;
 
     public Output</* @Nullable */ ServiceActionAcceptLanguage> getAcceptLanguage() {
         return this.acceptLanguage;
     }
-    @OutputExport(name="definition", type=List.class, parameters={ServiceActionDefinitionParameter.class})
+    @Export(name="definition", type=List.class, parameters={ServiceActionDefinitionParameter.class})
     private Output<List<ServiceActionDefinitionParameter>> definition;
 
     public Output<List<ServiceActionDefinitionParameter>> getDefinition() {
         return this.definition;
     }
-    @OutputExport(name="definitionType", type=ServiceActionDefinitionType.class, parameters={})
+    @Export(name="definitionType", type=ServiceActionDefinitionType.class, parameters={})
     private Output<ServiceActionDefinitionType> definitionType;
 
     public Output<ServiceActionDefinitionType> getDefinitionType() {
         return this.definitionType;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {

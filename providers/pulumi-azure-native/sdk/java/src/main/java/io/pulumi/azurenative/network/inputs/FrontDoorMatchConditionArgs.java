@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.enums.Operator;
 import io.pulumi.azurenative.network.enums.TransformType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.Resou
      * List of possible match values.
      * 
      */
-    @InputImport(name="matchValue", required=true)
+    @Import(name="matchValue", required=true)
       private final Output<List<String>> matchValue;
 
     public Output<List<String>> getMatchValue() {
@@ -39,7 +39,7 @@ public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.Resou
      * Request variable to compare with.
      * 
      */
-    @InputImport(name="matchVariable", required=true)
+    @Import(name="matchVariable", required=true)
       private final Output<Either<String,FrontDoorMatchVariable>> matchVariable;
 
     public Output<Either<String,FrontDoorMatchVariable>> getMatchVariable() {
@@ -50,7 +50,7 @@ public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.Resou
      * Describes if the result of this condition should be negated.
      * 
      */
-    @InputImport(name="negateCondition")
+    @Import(name="negateCondition")
       private final @Nullable Output<Boolean> negateCondition;
 
     public Output<Boolean> getNegateCondition() {
@@ -61,7 +61,7 @@ public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.Resou
      * Comparison type to use for matching with the variable value.
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final Output<Either<String,Operator>> operator;
 
     public Output<Either<String,Operator>> getOperator() {
@@ -72,7 +72,7 @@ public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.Resou
      * Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable Output<String> selector;
 
     public Output<String> getSelector() {
@@ -83,7 +83,7 @@ public final class FrontDoorMatchConditionArgs extends io.pulumi.resources.Resou
      * List of transforms.
      * 
      */
-    @InputImport(name="transforms")
+    @Import(name="transforms")
       private final @Nullable Output<List<Either<String,TransformType>>> transforms;
 
     public Output<List<Either<String,TransformType>>> getTransforms() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTagTemplateResult {
     /**
      * Display name for this template. Defaults to an empty string. The name must contain only Unicode letters, numbers (0-9), underscores (_), dashes (-), spaces ( ), and can't start or end with spaces. The maximum length is 200 characters.
@@ -32,12 +32,12 @@ public final class GetTagTemplateResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTagTemplateResult(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("fields") Map<String,String> fields,
-        @OutputCustomType.Parameter("isPubliclyReadable") Boolean isPubliclyReadable,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("fields") Map<String,String> fields,
+        @CustomType.Parameter("isPubliclyReadable") Boolean isPubliclyReadable,
+        @CustomType.Parameter("name") String name) {
         this.displayName = displayName;
         this.fields = fields;
         this.isPubliclyReadable = isPubliclyReadable;

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DomainValidationPropertiesResponse {
     /**
      * The date time that the token expires
@@ -20,10 +20,10 @@ public final class DomainValidationPropertiesResponse {
      */
     private final String validationToken;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainValidationPropertiesResponse(
-        @OutputCustomType.Parameter("expirationDate") String expirationDate,
-        @OutputCustomType.Parameter("validationToken") String validationToken) {
+        @CustomType.Parameter("expirationDate") String expirationDate,
+        @CustomType.Parameter("validationToken") String validationToken) {
         this.expirationDate = expirationDate;
         this.validationToken = validationToken;
     }

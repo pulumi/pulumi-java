@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs extend
      * Whether to consider case sensitivity when performing an exact match.
      * 
      */
-    @InputImport(name="caseSensitive")
+    @Import(name="caseSensitive")
       private final @Nullable Output<Boolean> caseSensitive;
 
     public Output<Boolean> getCaseSensitive() {

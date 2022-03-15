@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.AutomationRuleRunPlaybookActionResponseActionConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AutomationRuleRunPlaybookActionResponse {
     /**
      * The configuration of the run playbook automation rule action
@@ -28,11 +28,11 @@ public final class AutomationRuleRunPlaybookActionResponse {
      */
     private final Integer order;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutomationRuleRunPlaybookActionResponse(
-        @OutputCustomType.Parameter("actionConfiguration") AutomationRuleRunPlaybookActionResponseActionConfiguration actionConfiguration,
-        @OutputCustomType.Parameter("actionType") String actionType,
-        @OutputCustomType.Parameter("order") Integer order) {
+        @CustomType.Parameter("actionConfiguration") AutomationRuleRunPlaybookActionResponseActionConfiguration actionConfiguration,
+        @CustomType.Parameter("actionType") String actionType,
+        @CustomType.Parameter("order") Integer order) {
         this.actionConfiguration = actionConfiguration;
         this.actionType = actionType;
         this.order = order;

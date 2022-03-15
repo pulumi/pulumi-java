@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
      * ID of the Carrier Gateway.
      * 
      */
-    @InputImport(name="carrierGatewayId", required=true)
+    @Import(name="carrierGatewayId", required=true)
       private final String carrierGatewayId;
 
     public String getCarrierGatewayId() {
@@ -27,7 +27,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
      * CIDR block of the route.
      * 
      */
-    @InputImport(name="cidrBlock", required=true)
+    @Import(name="cidrBlock", required=true)
       private final String cidrBlock;
 
     public String getCidrBlock() {
@@ -38,7 +38,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
      * The ID of a managed prefix list destination of the route.
      * 
      */
-    @InputImport(name="destinationPrefixListId", required=true)
+    @Import(name="destinationPrefixListId", required=true)
       private final String destinationPrefixListId;
 
     public String getDestinationPrefixListId() {
@@ -49,7 +49,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
      * ID of the Egress Only Internet Gateway.
      * 
      */
-    @InputImport(name="egressOnlyGatewayId", required=true)
+    @Import(name="egressOnlyGatewayId", required=true)
       private final String egressOnlyGatewayId;
 
     public String getEgressOnlyGatewayId() {
@@ -60,7 +60,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
      * ID of an Internet Gateway or Virtual Private Gateway which is connected to the Route Table (not exported if not passed as a parameter).
      * 
      */
-    @InputImport(name="gatewayId", required=true)
+    @Import(name="gatewayId", required=true)
       private final String gatewayId;
 
     public String getGatewayId() {
@@ -71,7 +71,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
      * EC2 instance ID.
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final String instanceId;
 
     public String getInstanceId() {
@@ -82,7 +82,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
      * IPv6 CIDR block of the route.
      * 
      */
-    @InputImport(name="ipv6CidrBlock", required=true)
+    @Import(name="ipv6CidrBlock", required=true)
       private final String ipv6CidrBlock;
 
     public String getIpv6CidrBlock() {
@@ -93,7 +93,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
      * Local Gateway ID.
      * 
      */
-    @InputImport(name="localGatewayId", required=true)
+    @Import(name="localGatewayId", required=true)
       private final String localGatewayId;
 
     public String getLocalGatewayId() {
@@ -104,7 +104,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
      * NAT Gateway ID.
      * 
      */
-    @InputImport(name="natGatewayId", required=true)
+    @Import(name="natGatewayId", required=true)
       private final String natGatewayId;
 
     public String getNatGatewayId() {
@@ -115,7 +115,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
      * ID of the elastic network interface (eni) to use.
      * 
      */
-    @InputImport(name="networkInterfaceId", required=true)
+    @Import(name="networkInterfaceId", required=true)
       private final String networkInterfaceId;
 
     public String getNetworkInterfaceId() {
@@ -126,7 +126,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
      * EC2 Transit Gateway ID.
      * 
      */
-    @InputImport(name="transitGatewayId", required=true)
+    @Import(name="transitGatewayId", required=true)
       private final String transitGatewayId;
 
     public String getTransitGatewayId() {
@@ -137,7 +137,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
      * VPC Endpoint ID.
      * 
      */
-    @InputImport(name="vpcEndpointId", required=true)
+    @Import(name="vpcEndpointId", required=true)
       private final String vpcEndpointId;
 
     public String getVpcEndpointId() {
@@ -148,7 +148,7 @@ public final class GetRouteTableRoute extends io.pulumi.resources.InvokeArgs {
      * VPC Peering ID.
      * 
      */
-    @InputImport(name="vpcPeeringConnectionId", required=true)
+    @Import(name="vpcPeeringConnectionId", required=true)
       private final String vpcPeeringConnectionId;
 
     public String getVpcPeeringConnectionId() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.RouterBgpAdvertisedIpRange;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RouterBgp {
     /**
      * User-specified flag to indicate which mode to use for advertisement.
@@ -50,12 +50,12 @@ public final class RouterBgp {
      */
     private final Integer asn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouterBgp(
-        @OutputCustomType.Parameter("advertiseMode") @Nullable String advertiseMode,
-        @OutputCustomType.Parameter("advertisedGroups") @Nullable List<String> advertisedGroups,
-        @OutputCustomType.Parameter("advertisedIpRanges") @Nullable List<RouterBgpAdvertisedIpRange> advertisedIpRanges,
-        @OutputCustomType.Parameter("asn") Integer asn) {
+        @CustomType.Parameter("advertiseMode") @Nullable String advertiseMode,
+        @CustomType.Parameter("advertisedGroups") @Nullable List<String> advertisedGroups,
+        @CustomType.Parameter("advertisedIpRanges") @Nullable List<RouterBgpAdvertisedIpRange> advertisedIpRanges,
+        @CustomType.Parameter("asn") Integer asn) {
         this.advertiseMode = advertiseMode;
         this.advertisedGroups = advertisedGroups;
         this.advertisedIpRanges = advertisedIpRanges;

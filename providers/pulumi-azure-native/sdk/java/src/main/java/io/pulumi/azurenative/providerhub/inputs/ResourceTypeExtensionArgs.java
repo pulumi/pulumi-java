@@ -6,7 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.enums.ExtensionCategory;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class ResourceTypeExtensionArgs extends io.pulumi.resources.Resourc
 
     public static final ResourceTypeExtensionArgs Empty = new ResourceTypeExtensionArgs();
 
-    @InputImport(name="endpointUri")
+    @Import(name="endpointUri")
       private final @Nullable Output<String> endpointUri;
 
     public Output<String> getEndpointUri() {
         return this.endpointUri == null ? Output.empty() : this.endpointUri;
     }
 
-    @InputImport(name="extensionCategories")
+    @Import(name="extensionCategories")
       private final @Nullable Output<List<Either<String,ExtensionCategory>>> extensionCategories;
 
     public Output<List<Either<String,ExtensionCategory>>> getExtensionCategories() {
         return this.extensionCategories == null ? Output.empty() : this.extensionCategories;
     }
 
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {

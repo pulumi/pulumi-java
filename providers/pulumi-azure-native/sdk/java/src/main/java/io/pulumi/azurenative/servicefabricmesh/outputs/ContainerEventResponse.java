@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerEventResponse {
     /**
      * The count of the event.
@@ -43,14 +43,14 @@ public final class ContainerEventResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerEventResponse(
-        @OutputCustomType.Parameter("count") @Nullable Integer count,
-        @OutputCustomType.Parameter("firstTimestamp") @Nullable String firstTimestamp,
-        @OutputCustomType.Parameter("lastTimestamp") @Nullable String lastTimestamp,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("count") @Nullable Integer count,
+        @CustomType.Parameter("firstTimestamp") @Nullable String firstTimestamp,
+        @CustomType.Parameter("lastTimestamp") @Nullable String lastTimestamp,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.count = count;
         this.firstTimestamp = firstTimestamp;
         this.lastTimestamp = lastTimestamp;

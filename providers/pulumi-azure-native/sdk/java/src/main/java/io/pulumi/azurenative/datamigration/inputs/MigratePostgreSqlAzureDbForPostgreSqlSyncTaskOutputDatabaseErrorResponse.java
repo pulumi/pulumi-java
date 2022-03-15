@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.SyncMigrationDatabaseErrorEventResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
      * Error message
      * 
      */
-    @InputImport(name="errorMessage")
+    @Import(name="errorMessage")
       private final @Nullable String errorMessage;
 
     public Optional<String> getErrorMessage() {
@@ -31,7 +31,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
      * List of error events.
      * 
      */
-    @InputImport(name="events")
+    @Import(name="events")
       private final @Nullable List<SyncMigrationDatabaseErrorEventResponse> events;
 
     public List<SyncMigrationDatabaseErrorEventResponse> getEvents() {
@@ -42,7 +42,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -54,7 +54,7 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
      * Expected value is 'DatabaseLevelErrorOutput'.
      * 
      */
-    @InputImport(name="resultType", required=true)
+    @Import(name="resultType", required=true)
       private final String resultType;
 
     public String getResultType() {

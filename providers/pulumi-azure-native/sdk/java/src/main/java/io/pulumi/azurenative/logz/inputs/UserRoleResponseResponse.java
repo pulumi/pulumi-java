@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logz.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class UserRoleResponseResponse extends io.pulumi.resources.InvokeAr
      * User roles on configured in Logz.io account.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable String role;
 
     public Optional<String> getRole() {

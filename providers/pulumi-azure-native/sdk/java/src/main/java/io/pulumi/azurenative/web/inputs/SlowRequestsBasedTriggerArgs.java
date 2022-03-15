@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
      * Request Count.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {
@@ -34,7 +34,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
      * Request Path.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -45,7 +45,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
      * Time interval.
      * 
      */
-    @InputImport(name="timeInterval")
+    @Import(name="timeInterval")
       private final @Nullable Output<String> timeInterval;
 
     public Output<String> getTimeInterval() {
@@ -56,7 +56,7 @@ public final class SlowRequestsBasedTriggerArgs extends io.pulumi.resources.Reso
      * Time taken.
      * 
      */
-    @InputImport(name="timeTaken")
+    @Import(name="timeTaken")
       private final @Nullable Output<String> timeTaken;
 
     public Output<String> getTimeTaken() {

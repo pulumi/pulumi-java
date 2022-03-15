@@ -6,7 +6,7 @@ package io.pulumi.aws.ecr;
 import io.pulumi.aws.ecr.inputs.RepositoryEncryptionConfigurationArgs;
 import io.pulumi.aws.ecr.inputs.RepositoryImageScanningConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * Encryption configuration for the repository. See below for schema.
      * 
      */
-    @InputImport(name="encryptionConfigurations")
+    @Import(name="encryptionConfigurations")
       private final @Nullable Output<List<RepositoryEncryptionConfigurationArgs>> encryptionConfigurations;
 
     public Output<List<RepositoryEncryptionConfigurationArgs>> getEncryptionConfigurations() {
@@ -33,7 +33,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
      * 
      */
-    @InputImport(name="imageScanningConfiguration")
+    @Import(name="imageScanningConfiguration")
       private final @Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
 
     public Output<RepositoryImageScanningConfigurationArgs> getImageScanningConfiguration() {
@@ -44,7 +44,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The tag mutability setting for the repository. Must be one of: `MUTABLE` or `IMMUTABLE`. Defaults to `MUTABLE`.
      * 
      */
-    @InputImport(name="imageTagMutability")
+    @Import(name="imageTagMutability")
       private final @Nullable Output<String> imageTagMutability;
 
     public Output<String> getImageTagMutability() {
@@ -55,7 +55,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the repository.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -66,7 +66,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

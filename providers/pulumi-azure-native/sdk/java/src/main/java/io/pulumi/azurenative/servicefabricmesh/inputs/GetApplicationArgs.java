@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
      * The identity of the application.
      * 
      */
-    @InputImport(name="applicationResourceName", required=true)
+    @Import(name="applicationResourceName", required=true)
       private final String applicationResourceName;
 
     public String getApplicationResourceName() {
@@ -27,7 +27,7 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
      * Azure resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.memorydb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class UserAuthenticationModeGetArgs extends io.pulumi.resources.Res
      * The number of passwords belonging to the user.
      * 
      */
-    @InputImport(name="passwordCount")
+    @Import(name="passwordCount")
       private final @Nullable Output<Integer> passwordCount;
 
     public Output<Integer> getPasswordCount() {
@@ -31,7 +31,7 @@ public final class UserAuthenticationModeGetArgs extends io.pulumi.resources.Res
      * The set of passwords used for authentication. You can create up to two passwords for each user.
      * 
      */
-    @InputImport(name="passwords", required=true)
+    @Import(name="passwords", required=true)
       private final Output<List<String>> passwords;
 
     public Output<List<String>> getPasswords() {
@@ -42,7 +42,7 @@ public final class UserAuthenticationModeGetArgs extends io.pulumi.resources.Res
      * Indicates whether the user requires a password to authenticate. Must be set to `password`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

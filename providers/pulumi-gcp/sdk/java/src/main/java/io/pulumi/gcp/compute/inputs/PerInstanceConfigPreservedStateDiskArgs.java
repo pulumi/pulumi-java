@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class PerInstanceConfigPreservedStateDiskArgs extends io.pulumi.res
      * Possible values are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`.
      * 
      */
-    @InputImport(name="deleteRule")
+    @Import(name="deleteRule")
       private final @Nullable Output<String> deleteRule;
 
     public Output<String> getDeleteRule() {
@@ -35,7 +35,7 @@ public final class PerInstanceConfigPreservedStateDiskArgs extends io.pulumi.res
      * A unique device name that is reflected into the /dev/ tree of a Linux operating system running within the instance.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -48,7 +48,7 @@ public final class PerInstanceConfigPreservedStateDiskArgs extends io.pulumi.res
      * Possible values are `READ_ONLY` and `READ_WRITE`.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
@@ -60,7 +60,7 @@ public final class PerInstanceConfigPreservedStateDiskArgs extends io.pulumi.res
      * `projects/project-id/zones/zone/disks/disk-name`.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<String> source;
 
     public Output<String> getSource() {

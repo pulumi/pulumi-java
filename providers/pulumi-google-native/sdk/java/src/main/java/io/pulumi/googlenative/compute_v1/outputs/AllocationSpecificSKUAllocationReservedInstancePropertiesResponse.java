@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.compute_v1.outputs.AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResponse {
     /**
      * Specifies accelerator type and count.
@@ -38,13 +38,13 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      */
     private final String minCpuPlatform;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AllocationSpecificSKUAllocationReservedInstancePropertiesResponse(
-        @OutputCustomType.Parameter("guestAccelerators") List<AcceleratorConfigResponse> guestAccelerators,
-        @OutputCustomType.Parameter("localSsds") List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds,
-        @OutputCustomType.Parameter("locationHint") String locationHint,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform) {
+        @CustomType.Parameter("guestAccelerators") List<AcceleratorConfigResponse> guestAccelerators,
+        @CustomType.Parameter("localSsds") List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds,
+        @CustomType.Parameter("locationHint") String locationHint,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("minCpuPlatform") String minCpuPlatform) {
         this.guestAccelerators = guestAccelerators;
         this.localSsds = localSsds;
         this.locationHint = locationHint;

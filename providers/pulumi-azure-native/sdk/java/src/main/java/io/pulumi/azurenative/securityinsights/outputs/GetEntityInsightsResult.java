@@ -5,13 +5,13 @@ package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.EntityInsightItemResponse;
 import io.pulumi.azurenative.securityinsights.outputs.GetInsightsResultsMetadataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEntityInsightsResult {
     /**
      * The metadata from the get insights operation results.
@@ -24,10 +24,10 @@ public final class GetEntityInsightsResult {
      */
     private final @Nullable List<EntityInsightItemResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEntityInsightsResult(
-        @OutputCustomType.Parameter("metaData") @Nullable GetInsightsResultsMetadataResponse metaData,
-        @OutputCustomType.Parameter("value") @Nullable List<EntityInsightItemResponse> value) {
+        @CustomType.Parameter("metaData") @Nullable GetInsightsResultsMetadataResponse metaData,
+        @CustomType.Parameter("value") @Nullable List<EntityInsightItemResponse> value) {
         this.metaData = metaData;
         this.value = value;
     }

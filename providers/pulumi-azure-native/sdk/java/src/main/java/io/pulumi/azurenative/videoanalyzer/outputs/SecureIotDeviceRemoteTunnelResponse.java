@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecureIotDeviceRemoteTunnelResponse {
     /**
      * The IoT device id to use when establishing the remote tunnel. This string is case-sensitive.
@@ -26,11 +26,11 @@ public final class SecureIotDeviceRemoteTunnelResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecureIotDeviceRemoteTunnelResponse(
-        @OutputCustomType.Parameter("deviceId") String deviceId,
-        @OutputCustomType.Parameter("iotHubName") String iotHubName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("deviceId") String deviceId,
+        @CustomType.Parameter("iotHubName") String iotHubName,
+        @CustomType.Parameter("type") String type) {
         this.deviceId = deviceId;
         this.iotHubName = iotHubName;
         this.type = type;

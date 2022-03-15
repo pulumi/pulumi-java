@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference {
     /**
      * The name of the Cloud Run Service.
@@ -15,8 +15,8 @@ public final class GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectRef
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceCloneArgs;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceReplicaConfigurationArgs;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceRestoreBackupContextArgs;
@@ -25,7 +25,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * configuration is detailed below.
      * 
      */
-    @InputImport(name="clone")
+    @Import(name="clone")
       private final @Nullable Output<DatabaseInstanceCloneArgs> clone;
 
     public Output<DatabaseInstanceCloneArgs> getClone() {
@@ -44,7 +44,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * includes an up-to-date reference of supported versions.
      * 
      */
-    @InputImport(name="databaseVersion", required=true)
+    @Import(name="databaseVersion", required=true)
       private final Output<String> databaseVersion;
 
     public Output<String> getDatabaseVersion() {
@@ -56,7 +56,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * in state, a `destroy` or `update` command that deletes the instance will fail.
      * 
      */
-    @InputImport(name="deletionProtection")
+    @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
     public Output<Boolean> getDeletionProtection() {
@@ -74,7 +74,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
      * 
      */
-    @InputImport(name="encryptionKeyName")
+    @Import(name="encryptionKeyName")
       private final @Nullable Output<String> encryptionKeyName;
 
     public Output<String> getEncryptionKeyName() {
@@ -87,7 +87,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * have `binary_log_enabled` set, as well as existing backups.
      * 
      */
-    @InputImport(name="masterInstanceName")
+    @Import(name="masterInstanceName")
       private final @Nullable Output<String> masterInstanceName;
 
     public Output<String> getMasterInstanceName() {
@@ -98,7 +98,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * A name for this whitelist entry.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -109,7 +109,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * The full project ID of the source instance.`
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -125,7 +125,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * make sure you understand this.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -137,7 +137,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * configuration is detailed below. Valid only for MySQL instances.
      * 
      */
-    @InputImport(name="replicaConfiguration")
+    @Import(name="replicaConfiguration")
       private final @Nullable Output<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration;
 
     public Output<DatabaseInstanceReplicaConfigurationArgs> getReplicaConfiguration() {
@@ -151,7 +151,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * block during resource creation/update will trigger the restore action after the resource is created/updated.
      * 
      */
-    @InputImport(name="restoreBackupContext")
+    @Import(name="restoreBackupContext")
       private final @Nullable Output<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext;
 
     public Output<DatabaseInstanceRestoreBackupContextArgs> getRestoreBackupContext() {
@@ -162,7 +162,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
      * 
      */
-    @InputImport(name="rootPassword")
+    @Import(name="rootPassword")
       private final @Nullable Output<String> rootPassword;
 
     public Output<String> getRootPassword() {
@@ -174,7 +174,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * configuration is detailed below. Required if `clone` is not set.
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable Output<DatabaseInstanceSettingsArgs> settings;
 
     public Output<DatabaseInstanceSettingsArgs> getSettings() {

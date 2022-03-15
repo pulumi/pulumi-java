@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse {
     /**
      * The list of suggested replies.
@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse 
      */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse> suggestions;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse(@OutputCustomType.Parameter("suggestions") List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse> suggestions) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse(@CustomType.Parameter("suggestions") List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse> suggestions) {
         this.suggestions = suggestions;
     }
 

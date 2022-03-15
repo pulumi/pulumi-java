@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.DatasetResponseFolder;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
      * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="additionalHeaders")
+    @Import(name="additionalHeaders")
       private final @Nullable Object additionalHeaders;
 
     public Optional<Object> getAdditionalHeaders() {
@@ -39,7 +39,7 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
      * List of tags that can be used for describing the Dataset.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -50,7 +50,7 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
      * Dataset description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -61,7 +61,7 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
      */
-    @InputImport(name="folder")
+    @Import(name="folder")
       private final @Nullable DatasetResponseFolder folder;
 
     public Optional<DatasetResponseFolder> getFolder() {
@@ -72,7 +72,7 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName", required=true)
+    @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse getLinkedServiceName() {
@@ -83,7 +83,7 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
      * The pagination rules to compose next page requests. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="paginationRules")
+    @Import(name="paginationRules")
       private final @Nullable Object paginationRules;
 
     public Optional<Object> getPaginationRules() {
@@ -94,7 +94,7 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
      * Parameters for dataset.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -105,7 +105,7 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
      * The relative URL to the resource that the RESTful API provides. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="relativeUrl")
+    @Import(name="relativeUrl")
       private final @Nullable Object relativeUrl;
 
     public Optional<Object> getRelativeUrl() {
@@ -116,7 +116,7 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
      * The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="requestBody")
+    @Import(name="requestBody")
       private final @Nullable Object requestBody;
 
     public Optional<Object> getRequestBody() {
@@ -127,7 +127,7 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
      * The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="requestMethod")
+    @Import(name="requestMethod")
       private final @Nullable Object requestMethod;
 
     public Optional<Object> getRequestMethod() {
@@ -138,7 +138,7 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Object schema;
 
     public Optional<Object> getSchema() {
@@ -149,7 +149,7 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
      */
-    @InputImport(name="structure")
+    @Import(name="structure")
       private final @Nullable Object structure;
 
     public Optional<Object> getStructure() {
@@ -161,7 +161,7 @@ public final class RestResourceDatasetResponse extends io.pulumi.resources.Invok
      * Expected value is 'RestResource'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

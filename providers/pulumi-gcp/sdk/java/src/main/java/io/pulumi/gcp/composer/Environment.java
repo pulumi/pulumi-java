@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.composer.EnvironmentArgs;
@@ -38,7 +38,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Configuration parameters for this environment.
      * 
      */
-    @OutputExport(name="config", type=EnvironmentConfig.class, parameters={})
+    @Export(name="config", type=EnvironmentConfig.class, parameters={})
     private Output<EnvironmentConfig> config;
 
     /**
@@ -56,7 +56,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * associated with a given environment. Both keys and values must be <= 128 bytes in size.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -74,7 +74,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Name of the environment.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -88,7 +88,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -102,7 +102,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The location or Compute Engine region for the environment.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output</* @Nullable */ String> region;
 
     /**

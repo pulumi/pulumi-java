@@ -8,7 +8,7 @@ import io.pulumi.awsnative.connect.HoursOfOperationArgs;
 import io.pulumi.awsnative.connect.outputs.HoursOfOperationConfig;
 import io.pulumi.awsnative.connect.outputs.HoursOfOperationTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * Configuration information for the hours of operation: day, start time, and end time.
      * 
      */
-    @OutputExport(name="config", type=List.class, parameters={HoursOfOperationConfig.class})
+    @Export(name="config", type=List.class, parameters={HoursOfOperationConfig.class})
     private Output<List<HoursOfOperationConfig>> config;
 
     /**
@@ -40,7 +40,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * The description of the hours of operation.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -54,7 +54,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the hours of operation.
      * 
      */
-    @OutputExport(name="hoursOfOperationArn", type=String.class, parameters={})
+    @Export(name="hoursOfOperationArn", type=String.class, parameters={})
     private Output<String> hoursOfOperationArn;
 
     /**
@@ -68,7 +68,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * The identifier of the Amazon Connect instance.
      * 
      */
-    @OutputExport(name="instanceArn", type=String.class, parameters={})
+    @Export(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
     /**
@@ -82,7 +82,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * The name of the hours of operation.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -96,7 +96,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * One or more tags.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={HoursOfOperationTag.class})
+    @Export(name="tags", type=List.class, parameters={HoursOfOperationTag.class})
     private Output</* @Nullable */ List<HoursOfOperationTag>> tags;
 
     /**
@@ -110,7 +110,7 @@ public class HoursOfOperation extends io.pulumi.resources.CustomResource {
      * The time zone of the hours of operation.
      * 
      */
-    @OutputExport(name="timeZone", type=String.class, parameters={})
+    @Export(name="timeZone", type=String.class, parameters={})
     private Output<String> timeZone;
 
     /**

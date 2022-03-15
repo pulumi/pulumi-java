@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecArgs extends io.pulumi.re
      * The full file path
      * 
      */
-    @InputImport(name="filePath")
+    @Import(name="filePath")
       private final @Nullable Output<String> filePath;
 
     public Output<String> getFilePath() {
@@ -32,7 +32,7 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecArgs extends io.pulumi.re
      * The size of the file, in bytes.
      * 
      */
-    @InputImport(name="sizeBytes")
+    @Import(name="sizeBytes")
       private final @Nullable Output<Integer> sizeBytes;
 
     public Output<Integer> getSizeBytes() {

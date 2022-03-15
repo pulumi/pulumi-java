@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VirtualNodeSpecListenerHealthCheckArgs extends io.pulumi.reso
      * The number of consecutive successful health checks that must occur before declaring listener healthy.
      * 
      */
-    @InputImport(name="healthyThreshold", required=true)
+    @Import(name="healthyThreshold", required=true)
       private final Output<Integer> healthyThreshold;
 
     public Output<Integer> getHealthyThreshold() {
@@ -30,7 +30,7 @@ public final class VirtualNodeSpecListenerHealthCheckArgs extends io.pulumi.reso
      * The time period in milliseconds between each health check execution.
      * 
      */
-    @InputImport(name="intervalMillis", required=true)
+    @Import(name="intervalMillis", required=true)
       private final Output<Integer> intervalMillis;
 
     public Output<Integer> getIntervalMillis() {
@@ -41,7 +41,7 @@ public final class VirtualNodeSpecListenerHealthCheckArgs extends io.pulumi.reso
      * The destination path for the health check request. This is only required if the specified protocol is `http` or `http2`.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -52,7 +52,7 @@ public final class VirtualNodeSpecListenerHealthCheckArgs extends io.pulumi.reso
      * The destination port for the health check request. This port must match the port defined in the `port_mapping` for the listener.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -63,7 +63,7 @@ public final class VirtualNodeSpecListenerHealthCheckArgs extends io.pulumi.reso
      * The protocol for the health check request. Valid values are `http`, `http2`, `tcp` and `grpc`.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
     public Output<String> getProtocol() {
@@ -74,7 +74,7 @@ public final class VirtualNodeSpecListenerHealthCheckArgs extends io.pulumi.reso
      * The amount of time to wait when receiving a response from the health check, in milliseconds.
      * 
      */
-    @InputImport(name="timeoutMillis", required=true)
+    @Import(name="timeoutMillis", required=true)
       private final Output<Integer> timeoutMillis;
 
     public Output<Integer> getTimeoutMillis() {
@@ -85,7 +85,7 @@ public final class VirtualNodeSpecListenerHealthCheckArgs extends io.pulumi.reso
      * The number of consecutive failed health checks that must occur before declaring a virtual node unhealthy.
      * 
      */
-    @InputImport(name="unhealthyThreshold", required=true)
+    @Import(name="unhealthyThreshold", required=true)
       private final Output<Integer> unhealthyThreshold;
 
     public Output<Integer> getUnhealthyThreshold() {

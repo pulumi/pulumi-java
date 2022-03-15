@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecretManagerSecretResponse {
     /**
      * Environment variable name to associate with the secret. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step.
@@ -20,10 +20,10 @@ public final class SecretManagerSecretResponse {
      */
     private final String versionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecretManagerSecretResponse(
-        @OutputCustomType.Parameter("env") String env,
-        @OutputCustomType.Parameter("versionName") String versionName) {
+        @CustomType.Parameter("env") String env,
+        @CustomType.Parameter("versionName") String versionName) {
         this.env = env;
         this.versionName = versionName;
     }

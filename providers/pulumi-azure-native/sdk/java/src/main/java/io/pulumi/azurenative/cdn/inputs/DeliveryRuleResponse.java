@@ -25,7 +25,7 @@ import io.pulumi.azurenative.cdn.inputs.OriginGroupOverrideActionResponse;
 import io.pulumi.azurenative.cdn.inputs.UrlRedirectActionResponse;
 import io.pulumi.azurenative.cdn.inputs.UrlRewriteActionResponse;
 import io.pulumi.azurenative.cdn.inputs.UrlSigningActionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -47,7 +47,7 @@ public final class DeliveryRuleResponse extends io.pulumi.resources.InvokeArgs {
      * A list of actions that are executed when all the conditions of a rule are satisfied.
      * 
      */
-    @InputImport(name="actions", required=true)
+    @Import(name="actions", required=true)
       private final List<Object> actions;
 
     public List<Object> getActions() {
@@ -58,7 +58,7 @@ public final class DeliveryRuleResponse extends io.pulumi.resources.InvokeArgs {
      * A list of conditions that must be matched for the actions to be executed
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable List<Object> conditions;
 
     public List<Object> getConditions() {
@@ -69,7 +69,7 @@ public final class DeliveryRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the rule
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -80,7 +80,7 @@ public final class DeliveryRuleResponse extends io.pulumi.resources.InvokeArgs {
      * The order in which the rules are applied for the endpoint. Possible values {0,1,2,3,………}. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule. It does not require any condition and actions listed in it will always be applied.
      * 
      */
-    @InputImport(name="order", required=true)
+    @Import(name="order", required=true)
       private final Integer order;
 
     public Integer getOrder() {

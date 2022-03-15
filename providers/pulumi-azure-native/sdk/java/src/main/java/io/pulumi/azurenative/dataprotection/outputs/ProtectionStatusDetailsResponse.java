@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.UserFacingErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProtectionStatusDetailsResponse {
     /**
      * Specifies the protection status error of the resource
@@ -23,10 +23,10 @@ public final class ProtectionStatusDetailsResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProtectionStatusDetailsResponse(
-        @OutputCustomType.Parameter("errorDetails") @Nullable UserFacingErrorResponse errorDetails,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("errorDetails") @Nullable UserFacingErrorResponse errorDetails,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.errorDetails = errorDetails;
         this.status = status;
     }

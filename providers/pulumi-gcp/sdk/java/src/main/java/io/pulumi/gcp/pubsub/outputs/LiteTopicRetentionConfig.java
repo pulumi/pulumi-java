@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LiteTopicRetentionConfig {
     /**
      * The provisioned storage, in bytes, per partition. If the number of bytes stored
@@ -27,10 +27,10 @@ public final class LiteTopicRetentionConfig {
      */
     private final @Nullable String period;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LiteTopicRetentionConfig(
-        @OutputCustomType.Parameter("perPartitionBytes") String perPartitionBytes,
-        @OutputCustomType.Parameter("period") @Nullable String period) {
+        @CustomType.Parameter("perPartitionBytes") String perPartitionBytes,
+        @CustomType.Parameter("period") @Nullable String period) {
         this.perPartitionBytes = perPartitionBytes;
         this.period = period;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ManagedZoneCloudLoggingConfigResponse;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ManagedZoneDnsSecConfigResponse;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ManagedZoneForwardingConfigResponse;
@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetManagedZoneResult {
     private final ManagedZoneCloudLoggingConfigResponse cloudLoggingConfig;
     /**
@@ -91,24 +91,24 @@ public final class GetManagedZoneResult {
      */
     private final String visibility;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagedZoneResult(
-        @OutputCustomType.Parameter("cloudLoggingConfig") ManagedZoneCloudLoggingConfigResponse cloudLoggingConfig,
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("dnsName") String dnsName,
-        @OutputCustomType.Parameter("dnssecConfig") ManagedZoneDnsSecConfigResponse dnssecConfig,
-        @OutputCustomType.Parameter("forwardingConfig") ManagedZoneForwardingConfigResponse forwardingConfig,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nameServerSet") String nameServerSet,
-        @OutputCustomType.Parameter("nameServers") List<String> nameServers,
-        @OutputCustomType.Parameter("peeringConfig") ManagedZonePeeringConfigResponse peeringConfig,
-        @OutputCustomType.Parameter("privateVisibilityConfig") ManagedZonePrivateVisibilityConfigResponse privateVisibilityConfig,
-        @OutputCustomType.Parameter("reverseLookupConfig") ManagedZoneReverseLookupConfigResponse reverseLookupConfig,
-        @OutputCustomType.Parameter("serviceDirectoryConfig") ManagedZoneServiceDirectoryConfigResponse serviceDirectoryConfig,
-        @OutputCustomType.Parameter("visibility") String visibility) {
+        @CustomType.Parameter("cloudLoggingConfig") ManagedZoneCloudLoggingConfigResponse cloudLoggingConfig,
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("dnsName") String dnsName,
+        @CustomType.Parameter("dnssecConfig") ManagedZoneDnsSecConfigResponse dnssecConfig,
+        @CustomType.Parameter("forwardingConfig") ManagedZoneForwardingConfigResponse forwardingConfig,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nameServerSet") String nameServerSet,
+        @CustomType.Parameter("nameServers") List<String> nameServers,
+        @CustomType.Parameter("peeringConfig") ManagedZonePeeringConfigResponse peeringConfig,
+        @CustomType.Parameter("privateVisibilityConfig") ManagedZonePrivateVisibilityConfigResponse privateVisibilityConfig,
+        @CustomType.Parameter("reverseLookupConfig") ManagedZoneReverseLookupConfigResponse reverseLookupConfig,
+        @CustomType.Parameter("serviceDirectoryConfig") ManagedZoneServiceDirectoryConfigResponse serviceDirectoryConfig,
+        @CustomType.Parameter("visibility") String visibility) {
         this.cloudLoggingConfig = cloudLoggingConfig;
         this.creationTime = creationTime;
         this.description = description;

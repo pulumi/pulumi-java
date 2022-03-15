@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.appconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigurationProfileValidator {
     /**
      * Either the JSON Schema content or the Amazon Resource Name (ARN) of an AWS Lambda function.
@@ -22,10 +22,10 @@ public final class ConfigurationProfileValidator {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigurationProfileValidator(
-        @OutputCustomType.Parameter("content") @Nullable String content,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("content") @Nullable String content,
+        @CustomType.Parameter("type") String type) {
         this.content = content;
         this.type = type;
     }

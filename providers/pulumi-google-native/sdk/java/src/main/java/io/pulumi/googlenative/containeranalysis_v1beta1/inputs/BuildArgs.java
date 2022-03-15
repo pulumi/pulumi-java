@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.BuildSignatureArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. Version of the builder which produced this build.
      * 
      */
-    @InputImport(name="builderVersion", required=true)
+    @Import(name="builderVersion", required=true)
       private final Output<String> builderVersion;
 
     public Output<String> getBuilderVersion() {
@@ -34,7 +34,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * Signature of the build in occurrences pointing to this build note containing build details.
      * 
      */
-    @InputImport(name="signature")
+    @Import(name="signature")
       private final @Nullable Output<BuildSignatureArgs> signature;
 
     public Output<BuildSignatureArgs> getSignature() {

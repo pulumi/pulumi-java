@@ -6,7 +6,7 @@ package io.pulumi.aws.efs;
 import io.pulumi.aws.efs.inputs.AccessPointPosixUserArgs;
 import io.pulumi.aws.efs.inputs.AccessPointRootDirectoryArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the file system for which the access point is intended.
      * 
      */
-    @InputImport(name="fileSystemId", required=true)
+    @Import(name="fileSystemId", required=true)
       private final Output<String> fileSystemId;
 
     public Output<String> getFileSystemId() {
@@ -32,7 +32,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * Operating system user and group applied to all file system requests made using the access point. Detailed below.
      * 
      */
-    @InputImport(name="posixUser")
+    @Import(name="posixUser")
       private final @Nullable Output<AccessPointPosixUserArgs> posixUser;
 
     public Output<AccessPointPosixUserArgs> getPosixUser() {
@@ -43,7 +43,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * Directory on the Amazon EFS file system that the access point provides access to. Detailed below.
      * 
      */
-    @InputImport(name="rootDirectory")
+    @Import(name="rootDirectory")
       private final @Nullable Output<AccessPointRootDirectoryArgs> rootDirectory;
 
     public Output<AccessPointRootDirectoryArgs> getRootDirectory() {
@@ -54,7 +54,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -6,14 +6,14 @@ package io.pulumi.awsnative.quicksight.outputs;
 import io.pulumi.awsnative.quicksight.outputs.AnalysisError;
 import io.pulumi.awsnative.quicksight.outputs.AnalysisResourcePermission;
 import io.pulumi.awsnative.quicksight.outputs.AnalysisTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAnalysisResult {
     /**
      * <p>The Amazon Resource Name (ARN) of the analysis.</p>
@@ -62,16 +62,16 @@ public final class GetAnalysisResult {
      */
     private final @Nullable String themeArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAnalysisResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("dataSetArns") @Nullable List<String> dataSetArns,
-        @OutputCustomType.Parameter("errors") @Nullable List<AnalysisError> errors,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("permissions") @Nullable List<AnalysisResourcePermission> permissions,
-        @OutputCustomType.Parameter("tags") @Nullable List<AnalysisTag> tags,
-        @OutputCustomType.Parameter("themeArn") @Nullable String themeArn) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("dataSetArns") @Nullable List<String> dataSetArns,
+        @CustomType.Parameter("errors") @Nullable List<AnalysisError> errors,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("permissions") @Nullable List<AnalysisResourcePermission> permissions,
+        @CustomType.Parameter("tags") @Nullable List<AnalysisTag> tags,
+        @CustomType.Parameter("themeArn") @Nullable String themeArn) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.dataSetArns = dataSetArns;

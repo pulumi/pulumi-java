@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketNotificationFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketQueueConfiguration {
     /**
      * The Amazon S3 bucket event about which you want to publish messages to Amazon SQS.
@@ -28,11 +28,11 @@ public final class BucketQueueConfiguration {
      */
     private final String queue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketQueueConfiguration(
-        @OutputCustomType.Parameter("event") String event,
-        @OutputCustomType.Parameter("filter") @Nullable BucketNotificationFilter filter,
-        @OutputCustomType.Parameter("queue") String queue) {
+        @CustomType.Parameter("event") String event,
+        @CustomType.Parameter("filter") @Nullable BucketNotificationFilter filter,
+        @CustomType.Parameter("queue") String queue) {
         this.event = event;
         this.filter = filter;
         this.queue = queue;

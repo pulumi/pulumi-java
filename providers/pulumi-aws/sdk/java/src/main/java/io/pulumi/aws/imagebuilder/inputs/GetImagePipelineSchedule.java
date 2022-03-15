@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetImagePipelineSchedule extends io.pulumi.resources.InvokeAr
      * Condition when the pipeline should trigger a new image build.
      * 
      */
-    @InputImport(name="pipelineExecutionStartCondition", required=true)
+    @Import(name="pipelineExecutionStartCondition", required=true)
       private final String pipelineExecutionStartCondition;
 
     public String getPipelineExecutionStartCondition() {
@@ -27,7 +27,7 @@ public final class GetImagePipelineSchedule extends io.pulumi.resources.InvokeAr
      * Cron expression of how often the pipeline start condition is evaluated.
      * 
      */
-    @InputImport(name="scheduleExpression", required=true)
+    @Import(name="scheduleExpression", required=true)
       private final String scheduleExpression;
 
     public String getScheduleExpression() {

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.ServerInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServerTrustGroupResult {
     /**
      * Group members information for the server trust group.
@@ -37,13 +37,13 @@ public final class GetServerTrustGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServerTrustGroupResult(
-        @OutputCustomType.Parameter("groupMembers") List<ServerInfoResponse> groupMembers,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("trustScopes") List<String> trustScopes,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("groupMembers") List<ServerInfoResponse> groupMembers,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("trustScopes") List<String> trustScopes,
+        @CustomType.Parameter("type") String type) {
         this.groupMembers = groupMembers;
         this.id = id;
         this.name = name;

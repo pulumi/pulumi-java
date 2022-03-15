@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.inputs.ShareCredentialDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AccountCredentialDetailsResponse extends io.pulumi.resources.
      * Connection string of the account endpoint to use the account as a storage endpoint on the device.
      * 
      */
-    @InputImport(name="accountConnectionString", required=true)
+    @Import(name="accountConnectionString", required=true)
       private final String accountConnectionString;
 
     public String getAccountConnectionString() {
@@ -33,7 +33,7 @@ public final class AccountCredentialDetailsResponse extends io.pulumi.resources.
      * Name of the account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -44,7 +44,7 @@ public final class AccountCredentialDetailsResponse extends io.pulumi.resources.
      * Type of the account.
      * 
      */
-    @InputImport(name="dataAccountType", required=true)
+    @Import(name="dataAccountType", required=true)
       private final String dataAccountType;
 
     public String getDataAccountType() {
@@ -55,7 +55,7 @@ public final class AccountCredentialDetailsResponse extends io.pulumi.resources.
      * Per share level unencrypted access credentials.
      * 
      */
-    @InputImport(name="shareCredentialDetails", required=true)
+    @Import(name="shareCredentialDetails", required=true)
       private final List<ShareCredentialDetailsResponse> shareCredentialDetails;
 
     public List<ShareCredentialDetailsResponse> getShareCredentialDetails() {

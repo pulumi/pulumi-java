@@ -5,7 +5,7 @@ package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.aws.msk.inputs.ClusterLoggingInfoBrokerLogsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class ClusterLoggingInfoGetArgs extends io.pulumi.resources.Resourc
      * Configuration block for Broker Logs settings for logging info. See below.
      * 
      */
-    @InputImport(name="brokerLogs", required=true)
+    @Import(name="brokerLogs", required=true)
       private final Output<ClusterLoggingInfoBrokerLogsGetArgs> brokerLogs;
 
     public Output<ClusterLoggingInfoBrokerLogsGetArgs> getBrokerLogs() {

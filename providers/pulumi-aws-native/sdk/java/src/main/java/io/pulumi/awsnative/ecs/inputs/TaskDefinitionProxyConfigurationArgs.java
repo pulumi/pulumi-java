@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionKeyValuePairArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class TaskDefinitionProxyConfigurationArgs extends io.pulumi.resour
 
     public static final TaskDefinitionProxyConfigurationArgs Empty = new TaskDefinitionProxyConfigurationArgs();
 
-    @InputImport(name="containerName", required=true)
+    @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
     public Output<String> getContainerName() {
         return this.containerName;
     }
 
-    @InputImport(name="proxyConfigurationProperties")
+    @Import(name="proxyConfigurationProperties")
       private final @Nullable Output<List<TaskDefinitionKeyValuePairArgs>> proxyConfigurationProperties;
 
     public Output<List<TaskDefinitionKeyValuePairArgs>> getProxyConfigurationProperties() {
         return this.proxyConfigurationProperties == null ? Output.empty() : this.proxyConfigurationProperties;
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

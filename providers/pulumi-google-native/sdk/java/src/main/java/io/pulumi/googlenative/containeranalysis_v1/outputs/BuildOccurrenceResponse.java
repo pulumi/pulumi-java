@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.BuildProvenanceResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.InTotoStatementResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BuildOccurrenceResponse {
     /**
      * In-toto Statement representation as defined in spec. The intoto_statement can contain any type of provenance. The serialized payload of the statement can be stored and signed in the Occurrence's envelope.
@@ -27,11 +27,11 @@ public final class BuildOccurrenceResponse {
      */
     private final String provenanceBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BuildOccurrenceResponse(
-        @OutputCustomType.Parameter("intotoStatement") InTotoStatementResponse intotoStatement,
-        @OutputCustomType.Parameter("provenance") BuildProvenanceResponse provenance,
-        @OutputCustomType.Parameter("provenanceBytes") String provenanceBytes) {
+        @CustomType.Parameter("intotoStatement") InTotoStatementResponse intotoStatement,
+        @CustomType.Parameter("provenance") BuildProvenanceResponse provenance,
+        @CustomType.Parameter("provenanceBytes") String provenanceBytes) {
         this.intotoStatement = intotoStatement;
         this.provenance = provenance;
         this.provenanceBytes = provenanceBytes;

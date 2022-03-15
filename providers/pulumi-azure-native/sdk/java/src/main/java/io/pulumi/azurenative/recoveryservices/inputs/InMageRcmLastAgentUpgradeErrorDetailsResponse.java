@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends io.pulu
      * The error code.
      * 
      */
-    @InputImport(name="errorCode", required=true)
+    @Import(name="errorCode", required=true)
       private final String errorCode;
 
     public String getErrorCode() {
@@ -32,7 +32,7 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends io.pulu
      * The error message.
      * 
      */
-    @InputImport(name="errorMessage", required=true)
+    @Import(name="errorMessage", required=true)
       private final String errorMessage;
 
     public String getErrorMessage() {
@@ -43,7 +43,7 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends io.pulu
      * The error message parameters.
      * 
      */
-    @InputImport(name="errorMessageParameters", required=true)
+    @Import(name="errorMessageParameters", required=true)
       private final Map<String,String> errorMessageParameters;
 
     public Map<String,String> getErrorMessageParameters() {
@@ -54,7 +54,7 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends io.pulu
      * The error tags.
      * 
      */
-    @InputImport(name="errorTags", required=true)
+    @Import(name="errorTags", required=true)
       private final Map<String,String> errorTags;
 
     public Map<String,String> getErrorTags() {
@@ -65,7 +65,7 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends io.pulu
      * The possible causes.
      * 
      */
-    @InputImport(name="possibleCauses", required=true)
+    @Import(name="possibleCauses", required=true)
       private final String possibleCauses;
 
     public String getPossibleCauses() {
@@ -76,7 +76,7 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse extends io.pulu
      * The recommended action.
      * 
      */
-    @InputImport(name="recommendedAction", required=true)
+    @Import(name="recommendedAction", required=true)
       private final String recommendedAction;
 
     public String getRecommendedAction() {

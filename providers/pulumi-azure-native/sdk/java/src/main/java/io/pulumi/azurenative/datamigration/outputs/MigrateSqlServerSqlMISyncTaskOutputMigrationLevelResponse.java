@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse {
     /**
      * Count of databases
@@ -77,21 +77,21 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse {
      */
     private final String targetServerVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse(
-        @OutputCustomType.Parameter("databaseCount") Integer databaseCount,
-        @OutputCustomType.Parameter("databaseErrorCount") Integer databaseErrorCount,
-        @OutputCustomType.Parameter("endedOn") String endedOn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("resultType") String resultType,
-        @OutputCustomType.Parameter("sourceServerBrandVersion") String sourceServerBrandVersion,
-        @OutputCustomType.Parameter("sourceServerName") String sourceServerName,
-        @OutputCustomType.Parameter("sourceServerVersion") String sourceServerVersion,
-        @OutputCustomType.Parameter("startedOn") String startedOn,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
-        @OutputCustomType.Parameter("targetServerName") String targetServerName,
-        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion) {
+        @CustomType.Parameter("databaseCount") Integer databaseCount,
+        @CustomType.Parameter("databaseErrorCount") Integer databaseErrorCount,
+        @CustomType.Parameter("endedOn") String endedOn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("resultType") String resultType,
+        @CustomType.Parameter("sourceServerBrandVersion") String sourceServerBrandVersion,
+        @CustomType.Parameter("sourceServerName") String sourceServerName,
+        @CustomType.Parameter("sourceServerVersion") String sourceServerVersion,
+        @CustomType.Parameter("startedOn") String startedOn,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
+        @CustomType.Parameter("targetServerName") String targetServerName,
+        @CustomType.Parameter("targetServerVersion") String targetServerVersion) {
         this.databaseCount = databaseCount;
         this.databaseErrorCount = databaseErrorCount;
         this.endedOn = endedOn;

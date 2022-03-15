@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1SentimentConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse {
     /**
      * Optional. If allow_multi_label is true, contributors are able to choose multiple labels for one text segment.
@@ -27,11 +27,11 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
      */
     private final GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse(
-        @OutputCustomType.Parameter("allowMultiLabel") Boolean allowMultiLabel,
-        @OutputCustomType.Parameter("annotationSpecSet") String annotationSpecSet,
-        @OutputCustomType.Parameter("sentimentConfig") GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig) {
+        @CustomType.Parameter("allowMultiLabel") Boolean allowMultiLabel,
+        @CustomType.Parameter("annotationSpecSet") String annotationSpecSet,
+        @CustomType.Parameter("sentimentConfig") GoogleCloudDatalabelingV1beta1SentimentConfigResponse sentimentConfig) {
         this.allowMultiLabel = allowMultiLabel;
         this.annotationSpecSet = annotationSpecSet;
         this.sentimentConfig = sentimentConfig;

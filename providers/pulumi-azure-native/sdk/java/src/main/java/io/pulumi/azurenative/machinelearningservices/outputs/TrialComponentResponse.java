@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.MpiResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.OutputDataBindingResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.PyTorchResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.TensorFlowResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TrialComponentResponse {
     /**
      * ARM resource ID of the code asset.
@@ -60,16 +60,16 @@ public final class TrialComponentResponse {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TrialComponentResponse(
-        @OutputCustomType.Parameter("codeId") @Nullable String codeId,
-        @OutputCustomType.Parameter("command") String command,
-        @OutputCustomType.Parameter("distribution") @Nullable Object distribution,
-        @OutputCustomType.Parameter("environmentId") @Nullable String environmentId,
-        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
-        @OutputCustomType.Parameter("inputDataBindings") @Nullable Map<String,InputDataBindingResponse> inputDataBindings,
-        @OutputCustomType.Parameter("outputDataBindings") @Nullable Map<String,OutputDataBindingResponse> outputDataBindings,
-        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
+        @CustomType.Parameter("codeId") @Nullable String codeId,
+        @CustomType.Parameter("command") String command,
+        @CustomType.Parameter("distribution") @Nullable Object distribution,
+        @CustomType.Parameter("environmentId") @Nullable String environmentId,
+        @CustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @CustomType.Parameter("inputDataBindings") @Nullable Map<String,InputDataBindingResponse> inputDataBindings,
+        @CustomType.Parameter("outputDataBindings") @Nullable Map<String,OutputDataBindingResponse> outputDataBindings,
+        @CustomType.Parameter("timeout") @Nullable String timeout) {
         this.codeId = codeId;
         this.command = command;
         this.distribution = distribution;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.UniqueKeyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class UniqueKeyPolicyResponse extends io.pulumi.resources.InvokeArg
      * List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
      * 
      */
-    @InputImport(name="uniqueKeys")
+    @Import(name="uniqueKeys")
       private final @Nullable List<UniqueKeyResponse> uniqueKeys;
 
     public List<UniqueKeyResponse> getUniqueKeys() {

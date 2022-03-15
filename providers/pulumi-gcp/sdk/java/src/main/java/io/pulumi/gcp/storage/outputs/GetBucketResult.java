@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.storage.outputs.GetBucketCor;
 import io.pulumi.gcp.storage.outputs.GetBucketEncryption;
 import io.pulumi.gcp.storage.outputs.GetBucketLifecycleRule;
@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketResult {
     private final List<GetBucketCor> cors;
     private final Boolean defaultEventBasedHold;
@@ -44,28 +44,28 @@ public final class GetBucketResult {
     private final List<GetBucketVersioning> versionings;
     private final List<GetBucketWebsite> websites;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBucketResult(
-        @OutputCustomType.Parameter("cors") List<GetBucketCor> cors,
-        @OutputCustomType.Parameter("defaultEventBasedHold") Boolean defaultEventBasedHold,
-        @OutputCustomType.Parameter("encryptions") List<GetBucketEncryption> encryptions,
-        @OutputCustomType.Parameter("forceDestroy") Boolean forceDestroy,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("lifecycleRules") List<GetBucketLifecycleRule> lifecycleRules,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("loggings") List<GetBucketLogging> loggings,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("publicAccessPrevention") String publicAccessPrevention,
-        @OutputCustomType.Parameter("requesterPays") Boolean requesterPays,
-        @OutputCustomType.Parameter("retentionPolicies") List<GetBucketRetentionPolicy> retentionPolicies,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("storageClass") String storageClass,
-        @OutputCustomType.Parameter("uniformBucketLevelAccess") Boolean uniformBucketLevelAccess,
-        @OutputCustomType.Parameter("url") String url,
-        @OutputCustomType.Parameter("versionings") List<GetBucketVersioning> versionings,
-        @OutputCustomType.Parameter("websites") List<GetBucketWebsite> websites) {
+        @CustomType.Parameter("cors") List<GetBucketCor> cors,
+        @CustomType.Parameter("defaultEventBasedHold") Boolean defaultEventBasedHold,
+        @CustomType.Parameter("encryptions") List<GetBucketEncryption> encryptions,
+        @CustomType.Parameter("forceDestroy") Boolean forceDestroy,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("lifecycleRules") List<GetBucketLifecycleRule> lifecycleRules,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("loggings") List<GetBucketLogging> loggings,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("publicAccessPrevention") String publicAccessPrevention,
+        @CustomType.Parameter("requesterPays") Boolean requesterPays,
+        @CustomType.Parameter("retentionPolicies") List<GetBucketRetentionPolicy> retentionPolicies,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("storageClass") String storageClass,
+        @CustomType.Parameter("uniformBucketLevelAccess") Boolean uniformBucketLevelAccess,
+        @CustomType.Parameter("url") String url,
+        @CustomType.Parameter("versionings") List<GetBucketVersioning> versionings,
+        @CustomType.Parameter("websites") List<GetBucketWebsite> websites) {
         this.cors = cors;
         this.defaultEventBasedHold = defaultEventBasedHold;
         this.encryptions = encryptions;

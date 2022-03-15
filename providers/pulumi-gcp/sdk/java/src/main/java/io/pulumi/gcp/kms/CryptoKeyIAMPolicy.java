@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.kms.CryptoKeyIAMPolicyArgs;
@@ -65,7 +65,7 @@ public class CryptoKeyIAMPolicy extends io.pulumi.resources.CustomResource {
      * the provider's project setting will be used as a fallback.
      * 
      */
-    @OutputExport(name="cryptoKeyId", type=String.class, parameters={})
+    @Export(name="cryptoKeyId", type=String.class, parameters={})
     private Output<String> cryptoKeyId;
 
     /**
@@ -82,7 +82,7 @@ public class CryptoKeyIAMPolicy extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the project's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -97,7 +97,7 @@ public class CryptoKeyIAMPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @OutputExport(name="policyData", type=String.class, parameters={})
+    @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
     /**

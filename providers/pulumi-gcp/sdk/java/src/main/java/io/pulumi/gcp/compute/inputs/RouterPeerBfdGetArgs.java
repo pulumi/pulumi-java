@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RouterPeerBfdGetArgs extends io.pulumi.resources.ResourceArgs
      * must be between 1000 and 30000.
      * 
      */
-    @InputImport(name="minReceiveInterval")
+    @Import(name="minReceiveInterval")
       private final @Nullable Output<Integer> minReceiveInterval;
 
     public Output<Integer> getMinReceiveInterval() {
@@ -38,7 +38,7 @@ public final class RouterPeerBfdGetArgs extends io.pulumi.resources.ResourceArgs
      * this value must be between 1000 and 30000.
      * 
      */
-    @InputImport(name="minTransmitInterval")
+    @Import(name="minTransmitInterval")
       private final @Nullable Output<Integer> minTransmitInterval;
 
     public Output<Integer> getMinTransmitInterval() {
@@ -51,7 +51,7 @@ public final class RouterPeerBfdGetArgs extends io.pulumi.resources.ResourceArgs
      * be a value between 5 and 16.
      * 
      */
-    @InputImport(name="multiplier")
+    @Import(name="multiplier")
       private final @Nullable Output<Integer> multiplier;
 
     public Output<Integer> getMultiplier() {
@@ -67,7 +67,7 @@ public final class RouterPeerBfdGetArgs extends io.pulumi.resources.ResourceArgs
      * Possible values are `ACTIVE`, `DISABLED`, and `PASSIVE`.
      * 
      */
-    @InputImport(name="sessionInitializationMode", required=true)
+    @Import(name="sessionInitializationMode", required=true)
       private final Output<String> sessionInitializationMode;
 
     public Output<String> getSessionInitializationMode() {

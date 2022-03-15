@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.JobExtractSourceModelGetArgs;
 import io.pulumi.gcp.bigquery.inputs.JobExtractSourceTableGetArgs;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
      * The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.
      * 
      */
-    @InputImport(name="compression")
+    @Import(name="compression")
       private final @Nullable Output<String> compression;
 
     public Output<String> getCompression() {
@@ -36,7 +36,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
      * The default value for models is SAVED_MODEL.
      * 
      */
-    @InputImport(name="destinationFormat")
+    @Import(name="destinationFormat")
       private final @Nullable Output<String> destinationFormat;
 
     public Output<String> getDestinationFormat() {
@@ -47,7 +47,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
      * A list of fully-qualified Google Cloud Storage URIs where the extracted table should be written.
      * 
      */
-    @InputImport(name="destinationUris", required=true)
+    @Import(name="destinationUris", required=true)
       private final Output<List<String>> destinationUris;
 
     public Output<List<String>> getDestinationUris() {
@@ -59,7 +59,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
      * Default is ','
      * 
      */
-    @InputImport(name="fieldDelimiter")
+    @Import(name="fieldDelimiter")
       private final @Nullable Output<String> fieldDelimiter;
 
     public Output<String> getFieldDelimiter() {
@@ -70,7 +70,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to print out a header row in the results. Default is true.
      * 
      */
-    @InputImport(name="printHeader")
+    @Import(name="printHeader")
       private final @Nullable Output<Boolean> printHeader;
 
     public Output<Boolean> getPrintHeader() {
@@ -82,7 +82,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="sourceModel")
+    @Import(name="sourceModel")
       private final @Nullable Output<JobExtractSourceModelGetArgs> sourceModel;
 
     public Output<JobExtractSourceModelGetArgs> getSourceModel() {
@@ -94,7 +94,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="sourceTable")
+    @Import(name="sourceTable")
       private final @Nullable Output<JobExtractSourceTableGetArgs> sourceTable;
 
     public Output<JobExtractSourceTableGetArgs> getSourceTable() {
@@ -105,7 +105,7 @@ public final class JobExtractGetArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to use logical types when extracting to AVRO format.
      * 
      */
-    @InputImport(name="useAvroLogicalTypes")
+    @Import(name="useAvroLogicalTypes")
       private final @Nullable Output<Boolean> useAvroLogicalTypes;
 
     public Output<Boolean> getUseAvroLogicalTypes() {

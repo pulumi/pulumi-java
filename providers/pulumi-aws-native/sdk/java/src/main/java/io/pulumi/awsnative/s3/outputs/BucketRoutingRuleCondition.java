@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketRoutingRuleCondition {
     /**
      * The HTTP error code when the redirect is applied.
@@ -22,10 +22,10 @@ public final class BucketRoutingRuleCondition {
      */
     private final @Nullable String keyPrefixEquals;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketRoutingRuleCondition(
-        @OutputCustomType.Parameter("httpErrorCodeReturnedEquals") @Nullable String httpErrorCodeReturnedEquals,
-        @OutputCustomType.Parameter("keyPrefixEquals") @Nullable String keyPrefixEquals) {
+        @CustomType.Parameter("httpErrorCodeReturnedEquals") @Nullable String httpErrorCodeReturnedEquals,
+        @CustomType.Parameter("keyPrefixEquals") @Nullable String keyPrefixEquals) {
         this.httpErrorCodeReturnedEquals = httpErrorCodeReturnedEquals;
         this.keyPrefixEquals = keyPrefixEquals;
     }

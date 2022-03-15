@@ -5,7 +5,7 @@ package io.pulumi.azurenative.portal;
 
 import io.pulumi.azurenative.portal.inputs.UserPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UserSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The cloud shell user settings properties.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<UserPropertiesArgs> properties;
 
     public Output<UserPropertiesArgs> getProperties() {
@@ -30,7 +30,7 @@ public final class UserSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the user settings
      * 
      */
-    @InputImport(name="userSettingsName")
+    @Import(name="userSettingsName")
       private final @Nullable Output<String> userSettingsName;
 
     public Output<String> getUserSettingsName() {

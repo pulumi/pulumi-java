@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupCustomHTTPHeader;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupCustomResponse {
     /**
      * Custom response body key.
@@ -26,11 +26,11 @@ public final class RuleGroupCustomResponse {
      */
     private final @Nullable List<RuleGroupCustomHTTPHeader> responseHeaders;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupCustomResponse(
-        @OutputCustomType.Parameter("customResponseBodyKey") @Nullable String customResponseBodyKey,
-        @OutputCustomType.Parameter("responseCode") Integer responseCode,
-        @OutputCustomType.Parameter("responseHeaders") @Nullable List<RuleGroupCustomHTTPHeader> responseHeaders) {
+        @CustomType.Parameter("customResponseBodyKey") @Nullable String customResponseBodyKey,
+        @CustomType.Parameter("responseCode") Integer responseCode,
+        @CustomType.Parameter("responseHeaders") @Nullable List<RuleGroupCustomHTTPHeader> responseHeaders) {
         this.customResponseBodyKey = customResponseBodyKey;
         this.responseCode = responseCode;
         this.responseHeaders = responseHeaders;

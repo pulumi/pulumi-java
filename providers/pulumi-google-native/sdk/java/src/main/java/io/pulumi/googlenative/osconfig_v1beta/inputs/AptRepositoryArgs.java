@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1beta.enums.AptRepositoryArchiveType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * Type of archive files in this repository. The default behavior is DEB.
      * 
      */
-    @InputImport(name="archiveType")
+    @Import(name="archiveType")
       private final @Nullable Output<AptRepositoryArchiveType> archiveType;
 
     public Output<AptRepositoryArchiveType> getArchiveType() {
@@ -35,7 +35,7 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * List of components for this repository. Must contain at least one item.
      * 
      */
-    @InputImport(name="components", required=true)
+    @Import(name="components", required=true)
       private final Output<List<String>> components;
 
     public Output<List<String>> getComponents() {
@@ -46,7 +46,7 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * Distribution of this repository.
      * 
      */
-    @InputImport(name="distribution", required=true)
+    @Import(name="distribution", required=true)
       private final Output<String> distribution;
 
     public Output<String> getDistribution() {
@@ -57,7 +57,7 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg` containing all the keys in any applied guest policy.
      * 
      */
-    @InputImport(name="gpgKey")
+    @Import(name="gpgKey")
       private final @Nullable Output<String> gpgKey;
 
     public Output<String> getGpgKey() {
@@ -68,7 +68,7 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * URI for this repository.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {

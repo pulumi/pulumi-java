@@ -4,23 +4,23 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.PasswordResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegistryListCredentialsResultResponse {
     private final String location;
     private final @Nullable List<PasswordResponse> passwords;
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegistryListCredentialsResultResponse(
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("passwords") @Nullable List<PasswordResponse> passwords,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("passwords") @Nullable List<PasswordResponse> passwords,
+        @CustomType.Parameter("username") String username) {
         this.location = location;
         this.passwords = passwords;
         this.username = username;

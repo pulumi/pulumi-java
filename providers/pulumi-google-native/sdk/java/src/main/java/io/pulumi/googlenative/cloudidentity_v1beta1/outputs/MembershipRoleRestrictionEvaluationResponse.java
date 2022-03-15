@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MembershipRoleRestrictionEvaluationResponse {
     /**
      * The current state of the restriction
@@ -15,8 +15,8 @@ public final class MembershipRoleRestrictionEvaluationResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
-    private MembershipRoleRestrictionEvaluationResponse(@OutputCustomType.Parameter("state") String state) {
+    @CustomType.Constructor
+    private MembershipRoleRestrictionEvaluationResponse(@CustomType.Parameter("state") String state) {
         this.state = state;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.outputs;
 
 import io.pulumi.azurenative.authorization.outputs.ParameterValuesValueResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyDefinitionReferenceResponse {
     /**
      * The name of the groups that this policy definition reference belongs to.
@@ -35,12 +35,12 @@ public final class PolicyDefinitionReferenceResponse {
      */
     private final @Nullable String policyDefinitionReferenceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyDefinitionReferenceResponse(
-        @OutputCustomType.Parameter("groupNames") @Nullable List<String> groupNames,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterValuesValueResponse> parameters,
-        @OutputCustomType.Parameter("policyDefinitionId") String policyDefinitionId,
-        @OutputCustomType.Parameter("policyDefinitionReferenceId") @Nullable String policyDefinitionReferenceId) {
+        @CustomType.Parameter("groupNames") @Nullable List<String> groupNames,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterValuesValueResponse> parameters,
+        @CustomType.Parameter("policyDefinitionId") String policyDefinitionId,
+        @CustomType.Parameter("policyDefinitionReferenceId") @Nullable String policyDefinitionReferenceId) {
         this.groupNames = groupNames;
         this.parameters = parameters;
         this.policyDefinitionId = policyDefinitionId;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class TrafficMirrorSessionArgs extends io.pulumi.resources.Resource
      * A description of the traffic mirror session.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class TrafficMirrorSessionArgs extends io.pulumi.resources.Resource
      * ID of the source network interface. Not all network interfaces are eligible as mirror sources. On EC2 instances only nitro based instances support mirroring.
      * 
      */
-    @InputImport(name="networkInterfaceId", required=true)
+    @Import(name="networkInterfaceId", required=true)
       private final Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {
@@ -42,7 +42,7 @@ public final class TrafficMirrorSessionArgs extends io.pulumi.resources.Resource
      * The number of bytes in each packet to mirror. These are bytes after the VXLAN header. Do not specify this parameter when you want to mirror the entire packet. To mirror a subset of the packet, set this to the length (in bytes) that you want to mirror.
      * 
      */
-    @InputImport(name="packetLength")
+    @Import(name="packetLength")
       private final @Nullable Output<Integer> packetLength;
 
     public Output<Integer> getPacketLength() {
@@ -53,7 +53,7 @@ public final class TrafficMirrorSessionArgs extends io.pulumi.resources.Resource
      * - The session number determines the order in which sessions are evaluated when an interface is used by multiple sessions. The first session with a matching filter is the one that mirrors the packets.
      * 
      */
-    @InputImport(name="sessionNumber", required=true)
+    @Import(name="sessionNumber", required=true)
       private final Output<Integer> sessionNumber;
 
     public Output<Integer> getSessionNumber() {
@@ -64,7 +64,7 @@ public final class TrafficMirrorSessionArgs extends io.pulumi.resources.Resource
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -75,7 +75,7 @@ public final class TrafficMirrorSessionArgs extends io.pulumi.resources.Resource
      * ID of the traffic mirror filter to be used
      * 
      */
-    @InputImport(name="trafficMirrorFilterId", required=true)
+    @Import(name="trafficMirrorFilterId", required=true)
       private final Output<String> trafficMirrorFilterId;
 
     public Output<String> getTrafficMirrorFilterId() {
@@ -86,7 +86,7 @@ public final class TrafficMirrorSessionArgs extends io.pulumi.resources.Resource
      * ID of the traffic mirror target to be used
      * 
      */
-    @InputImport(name="trafficMirrorTargetId", required=true)
+    @Import(name="trafficMirrorTargetId", required=true)
       private final Output<String> trafficMirrorTargetId;
 
     public Output<String> getTrafficMirrorTargetId() {
@@ -97,7 +97,7 @@ public final class TrafficMirrorSessionArgs extends io.pulumi.resources.Resource
      * - The VXLAN ID for the Traffic Mirror session. For more information about the VXLAN protocol, see RFC 7348. If you do not specify a VirtualNetworkId, an account-wide unique id is chosen at random.
      * 
      */
-    @InputImport(name="virtualNetworkId")
+    @Import(name="virtualNetworkId")
       private final @Nullable Output<Integer> virtualNetworkId;
 
     public Output<Integer> getVirtualNetworkId() {

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.deploymentmanager.outputs.WaitStepPropertiesRespons
 import io.pulumi.core.Alias;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class Step extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -52,7 +52,7 @@ public class Step extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -66,7 +66,7 @@ public class Step extends io.pulumi.resources.CustomResource {
      * The properties that define the step.
      * 
      */
-    @OutputExport(name="properties", type=Either.class, parameters={HealthCheckStepPropertiesResponse.class, WaitStepPropertiesResponse.class})
+    @Export(name="properties", type=Either.class, parameters={HealthCheckStepPropertiesResponse.class, WaitStepPropertiesResponse.class})
     private Output<Either<HealthCheckStepPropertiesResponse,WaitStepPropertiesResponse>> properties;
 
     /**
@@ -80,7 +80,7 @@ public class Step extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -94,7 +94,7 @@ public class Step extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

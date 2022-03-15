@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuntimeShieldedInstanceConfigResponse {
     /**
      * Defines whether the instance has integrity monitoring enabled. Enables monitoring and attestation of the boot integrity of the instance. The attestation is performed against the integrity policy baseline. This baseline is initially derived from the implicitly trusted boot image when the instance is created. Enabled by default.
@@ -25,11 +25,11 @@ public final class RuntimeShieldedInstanceConfigResponse {
      */
     private final Boolean enableVtpm;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuntimeShieldedInstanceConfigResponse(
-        @OutputCustomType.Parameter("enableIntegrityMonitoring") Boolean enableIntegrityMonitoring,
-        @OutputCustomType.Parameter("enableSecureBoot") Boolean enableSecureBoot,
-        @OutputCustomType.Parameter("enableVtpm") Boolean enableVtpm) {
+        @CustomType.Parameter("enableIntegrityMonitoring") Boolean enableIntegrityMonitoring,
+        @CustomType.Parameter("enableSecureBoot") Boolean enableSecureBoot,
+        @CustomType.Parameter("enableVtpm") Boolean enableVtpm) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         this.enableSecureBoot = enableSecureBoot;
         this.enableVtpm = enableVtpm;

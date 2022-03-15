@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerPort {
     /**
      * Number of port to expose on the pod's IP address. This must be a valid port number, 0 < x < 65536.
@@ -43,13 +43,13 @@ public final class ContainerPort {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerPort(
-        @OutputCustomType.Parameter("containerPort") Integer containerPort,
-        @OutputCustomType.Parameter("hostIP") @Nullable String hostIP,
-        @OutputCustomType.Parameter("hostPort") @Nullable Integer hostPort,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
+        @CustomType.Parameter("containerPort") Integer containerPort,
+        @CustomType.Parameter("hostIP") @Nullable String hostIP,
+        @CustomType.Parameter("hostPort") @Nullable Integer hostPort,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("protocol") @Nullable String protocol) {
         this.containerPort = containerPort;
         this.hostIP = hostIP;
         this.hostPort = hostPort;

@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotResponseSpecification;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotIntentClosingSetting {
     private final BotResponseSpecification closingResponse;
     private final @Nullable Boolean isActive;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotIntentClosingSetting(
-        @OutputCustomType.Parameter("closingResponse") BotResponseSpecification closingResponse,
-        @OutputCustomType.Parameter("isActive") @Nullable Boolean isActive) {
+        @CustomType.Parameter("closingResponse") BotResponseSpecification closingResponse,
+        @CustomType.Parameter("isActive") @Nullable Boolean isActive) {
         this.closingResponse = closingResponse;
         this.isActive = isActive;
     }

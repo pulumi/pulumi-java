@@ -3,16 +3,16 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PrivateConnectivityResponse {
     private final String privateConnectionName;
 
-    @OutputCustomType.Constructor
-    private PrivateConnectivityResponse(@OutputCustomType.Parameter("privateConnectionName") String privateConnectionName) {
+    @CustomType.Constructor
+    private PrivateConnectivityResponse(@CustomType.Parameter("privateConnectionName") String privateConnectionName) {
         this.privateConnectionName = privateConnectionName;
     }
 

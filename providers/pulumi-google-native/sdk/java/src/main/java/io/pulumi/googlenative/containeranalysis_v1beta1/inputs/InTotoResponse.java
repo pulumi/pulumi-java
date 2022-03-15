@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.ArtifactRuleResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.SigningKeyResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
      * This field contains the expected command used to perform the step.
      * 
      */
-    @InputImport(name="expectedCommand", required=true)
+    @Import(name="expectedCommand", required=true)
       private final List<String> expectedCommand;
 
     public List<String> getExpectedCommand() {
@@ -34,14 +34,14 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
      * The following fields contain in-toto artifact rules identifying the artifacts that enter this supply chain step, and exit the supply chain step, i.e. materials and products of the step.
      * 
      */
-    @InputImport(name="expectedMaterials", required=true)
+    @Import(name="expectedMaterials", required=true)
       private final List<ArtifactRuleResponse> expectedMaterials;
 
     public List<ArtifactRuleResponse> getExpectedMaterials() {
         return this.expectedMaterials;
     }
 
-    @InputImport(name="expectedProducts", required=true)
+    @Import(name="expectedProducts", required=true)
       private final List<ArtifactRuleResponse> expectedProducts;
 
     public List<ArtifactRuleResponse> getExpectedProducts() {
@@ -52,7 +52,7 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
      * This field contains the public keys that can be used to verify the signatures on the step metadata.
      * 
      */
-    @InputImport(name="signingKeys", required=true)
+    @Import(name="signingKeys", required=true)
       private final List<SigningKeyResponse> signingKeys;
 
     public List<SigningKeyResponse> getSigningKeys() {
@@ -63,7 +63,7 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
      * This field identifies the name of the step in the supply chain.
      * 
      */
-    @InputImport(name="stepName", required=true)
+    @Import(name="stepName", required=true)
       private final String stepName;
 
     public String getStepName() {
@@ -74,7 +74,7 @@ public final class InTotoResponse extends io.pulumi.resources.InvokeArgs {
      * This field contains a value that indicates the minimum number of keys that need to be used to sign the step's in-toto link.
      * 
      */
-    @InputImport(name="threshold", required=true)
+    @Import(name="threshold", required=true)
       private final String threshold;
 
     public String getThreshold() {

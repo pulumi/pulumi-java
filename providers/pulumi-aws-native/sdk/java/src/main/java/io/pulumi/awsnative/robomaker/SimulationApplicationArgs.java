@@ -9,7 +9,7 @@ import io.pulumi.awsnative.robomaker.inputs.SimulationApplicationSimulationSoftw
 import io.pulumi.awsnative.robomaker.inputs.SimulationApplicationSourceConfigArgs;
 import io.pulumi.awsnative.robomaker.inputs.SimulationApplicationTagsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
      * The current revision id.
      * 
      */
-    @InputImport(name="currentRevisionId")
+    @Import(name="currentRevisionId")
       private final @Nullable Output<String> currentRevisionId;
 
     public Output<String> getCurrentRevisionId() {
@@ -35,7 +35,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
      * The URI of the Docker image for the robot application.
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable Output<String> environment;
 
     public Output<String> getEnvironment() {
@@ -46,7 +46,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
      * The name of the simulation application.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
      * The rendering engine for the simulation application.
      * 
      */
-    @InputImport(name="renderingEngine")
+    @Import(name="renderingEngine")
       private final @Nullable Output<SimulationApplicationRenderingEngineArgs> renderingEngine;
 
     public Output<SimulationApplicationRenderingEngineArgs> getRenderingEngine() {
@@ -68,7 +68,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
      * The robot software suite used by the simulation application.
      * 
      */
-    @InputImport(name="robotSoftwareSuite", required=true)
+    @Import(name="robotSoftwareSuite", required=true)
       private final Output<SimulationApplicationRobotSoftwareSuiteArgs> robotSoftwareSuite;
 
     public Output<SimulationApplicationRobotSoftwareSuiteArgs> getRobotSoftwareSuite() {
@@ -79,7 +79,7 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
      * The simulation software suite used by the simulation application.
      * 
      */
-    @InputImport(name="simulationSoftwareSuite", required=true)
+    @Import(name="simulationSoftwareSuite", required=true)
       private final Output<SimulationApplicationSimulationSoftwareSuiteArgs> simulationSoftwareSuite;
 
     public Output<SimulationApplicationSimulationSoftwareSuiteArgs> getSimulationSoftwareSuite() {
@@ -90,14 +90,14 @@ public final class SimulationApplicationArgs extends io.pulumi.resources.Resourc
      * The sources of the simulation application.
      * 
      */
-    @InputImport(name="sources")
+    @Import(name="sources")
       private final @Nullable Output<List<SimulationApplicationSourceConfigArgs>> sources;
 
     public Output<List<SimulationApplicationSourceConfigArgs>> getSources() {
         return this.sources == null ? Output.empty() : this.sources;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<SimulationApplicationTagsArgs> tags;
 
     public Output<SimulationApplicationTagsArgs> getTags() {

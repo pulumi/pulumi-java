@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PublishingOptionsResponse {
     /**
      * Optional. When true, publishes each CertificateAuthority's CA certificate and includes its URL in the "Authority Information Access" X.509 extension in all issued Certificates. If this is false, the CA certificate will not be published and the corresponding X.509 extension will not be written in issued certificates.
@@ -20,10 +20,10 @@ public final class PublishingOptionsResponse {
      */
     private final Boolean publishCrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PublishingOptionsResponse(
-        @OutputCustomType.Parameter("publishCaCert") Boolean publishCaCert,
-        @OutputCustomType.Parameter("publishCrl") Boolean publishCrl) {
+        @CustomType.Parameter("publishCaCert") Boolean publishCaCert,
+        @CustomType.Parameter("publishCrl") Boolean publishCrl) {
         this.publishCaCert = publishCaCert;
         this.publishCrl = publishCrl;
     }

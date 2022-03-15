@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.ReportConfigComparisonExpressionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
      * The logical "AND" expression. Must have at least 2 items.
      * 
      */
-    @InputImport(name="and")
+    @Import(name="and")
       private final @Nullable Output<List<ReportConfigFilterArgs>> and;
 
     public Output<List<ReportConfigFilterArgs>> getAnd() {
@@ -34,7 +34,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
      * Has comparison expression for a dimension
      * 
      */
-    @InputImport(name="dimensions")
+    @Import(name="dimensions")
       private final @Nullable Output<ReportConfigComparisonExpressionArgs> dimensions;
 
     public Output<ReportConfigComparisonExpressionArgs> getDimensions() {
@@ -45,7 +45,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
      * The logical "OR" expression. Must have at least 2 items.
      * 
      */
-    @InputImport(name="or")
+    @Import(name="or")
       private final @Nullable Output<List<ReportConfigFilterArgs>> or;
 
     public Output<List<ReportConfigFilterArgs>> getOr() {
@@ -56,7 +56,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
      * Has comparison expression for a tag key
      * 
      */
-    @InputImport(name="tagKey")
+    @Import(name="tagKey")
       private final @Nullable Output<ReportConfigComparisonExpressionArgs> tagKey;
 
     public Output<ReportConfigComparisonExpressionArgs> getTagKey() {
@@ -67,7 +67,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
      * Has comparison expression for a tag value
      * 
      */
-    @InputImport(name="tagValue")
+    @Import(name="tagValue")
       private final @Nullable Output<ReportConfigComparisonExpressionArgs> tagValue;
 
     public Output<ReportConfigComparisonExpressionArgs> getTagValue() {
@@ -78,7 +78,7 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
      * Has comparison expression for a tag
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<ReportConfigComparisonExpressionArgs> tags;
 
     public Output<ReportConfigComparisonExpressionArgs> getTags() {

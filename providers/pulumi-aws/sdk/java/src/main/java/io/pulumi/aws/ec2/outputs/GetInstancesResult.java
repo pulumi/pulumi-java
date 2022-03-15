@@ -4,14 +4,14 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetInstancesFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInstancesResult {
     private final @Nullable List<GetInstancesFilter> filters;
     /**
@@ -37,15 +37,15 @@ public final class GetInstancesResult {
      */
     private final List<String> publicIps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstancesResult(
-        @OutputCustomType.Parameter("filters") @Nullable List<GetInstancesFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ids") List<String> ids,
-        @OutputCustomType.Parameter("instanceStateNames") @Nullable List<String> instanceStateNames,
-        @OutputCustomType.Parameter("instanceTags") Map<String,String> instanceTags,
-        @OutputCustomType.Parameter("privateIps") List<String> privateIps,
-        @OutputCustomType.Parameter("publicIps") List<String> publicIps) {
+        @CustomType.Parameter("filters") @Nullable List<GetInstancesFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ids") List<String> ids,
+        @CustomType.Parameter("instanceStateNames") @Nullable List<String> instanceStateNames,
+        @CustomType.Parameter("instanceTags") Map<String,String> instanceTags,
+        @CustomType.Parameter("privateIps") List<String> privateIps,
+        @CustomType.Parameter("publicIps") List<String> publicIps) {
         this.filters = filters;
         this.id = id;
         this.ids = ids;

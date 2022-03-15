@@ -6,11 +6,11 @@ package io.pulumi.azurenative.databoxedge.outputs;
 import io.pulumi.azurenative.databoxedge.outputs.KubernetesClusterInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.KubernetesRoleResourcesResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetKubernetesRoleResult {
     /**
      * Host OS supported by the Kubernetes role.
@@ -69,19 +69,19 @@ public final class GetKubernetesRoleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKubernetesRoleResult(
-        @OutputCustomType.Parameter("hostPlatform") String hostPlatform,
-        @OutputCustomType.Parameter("hostPlatformType") String hostPlatformType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("kubernetesClusterInfo") KubernetesClusterInfoResponse kubernetesClusterInfo,
-        @OutputCustomType.Parameter("kubernetesRoleResources") KubernetesRoleResourcesResponse kubernetesRoleResources,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("roleStatus") String roleStatus,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("hostPlatform") String hostPlatform,
+        @CustomType.Parameter("hostPlatformType") String hostPlatformType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("kubernetesClusterInfo") KubernetesClusterInfoResponse kubernetesClusterInfo,
+        @CustomType.Parameter("kubernetesRoleResources") KubernetesRoleResourcesResponse kubernetesRoleResources,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("roleStatus") String roleStatus,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.hostPlatform = hostPlatform;
         this.hostPlatformType = hostPlatformType;
         this.id = id;

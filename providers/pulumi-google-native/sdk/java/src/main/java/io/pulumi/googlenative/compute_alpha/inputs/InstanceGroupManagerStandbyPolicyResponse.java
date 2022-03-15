@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class InstanceGroupManagerStandbyPolicyResponse extends io.pulumi.r
 
     public static final InstanceGroupManagerStandbyPolicyResponse Empty = new InstanceGroupManagerStandbyPolicyResponse();
 
-    @InputImport(name="initialDelaySec", required=true)
+    @Import(name="initialDelaySec", required=true)
       private final Integer initialDelaySec;
 
     public Integer getInitialDelaySec() {

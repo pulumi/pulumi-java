@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.MigrationValidationDatabaseSummaryResultResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse {
     /**
      * Result identifier
@@ -39,13 +39,13 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse {
      */
     private final @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateSqlServerSqlDbTaskOutputValidationResultResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("migrationId") String migrationId,
-        @OutputCustomType.Parameter("resultType") String resultType,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("summaryResults") @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("migrationId") String migrationId,
+        @CustomType.Parameter("resultType") String resultType,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("summaryResults") @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults) {
         this.id = id;
         this.migrationId = migrationId;
         this.resultType = resultType;

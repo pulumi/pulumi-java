@@ -8,7 +8,7 @@ import io.pulumi.azurenative.compute.enums.DiskCreateOptionTypes;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetManagedDiskParametersArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -29,7 +29,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
      * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
      * 
      */
-    @InputImport(name="caching")
+    @Import(name="caching")
       private final @Nullable Output<CachingTypes> caching;
 
     public Output<CachingTypes> getCaching() {
@@ -40,7 +40,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
      * The create option.
      * 
      */
-    @InputImport(name="createOption", required=true)
+    @Import(name="createOption", required=true)
       private final Output<Either<String,DiskCreateOptionTypes>> createOption;
 
     public Output<Either<String,DiskCreateOptionTypes>> getCreateOption() {
@@ -51,7 +51,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
      * Specifies the Read-Write IOPS for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
      * 
      */
-    @InputImport(name="diskIOPSReadWrite")
+    @Import(name="diskIOPSReadWrite")
       private final @Nullable Output<Double> diskIOPSReadWrite;
 
     public Output<Double> getDiskIOPSReadWrite() {
@@ -62,7 +62,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
      * Specifies the bandwidth in MB per second for the managed disk. Should be used only when StorageAccountType is UltraSSD_LRS. If not specified, a default value would be assigned based on diskSizeGB.
      * 
      */
-    @InputImport(name="diskMBpsReadWrite")
+    @Import(name="diskMBpsReadWrite")
       private final @Nullable Output<Double> diskMBpsReadWrite;
 
     public Output<Double> getDiskMBpsReadWrite() {
@@ -73,7 +73,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
      * Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
      * 
      */
-    @InputImport(name="diskSizeGB")
+    @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
 
     public Output<Integer> getDiskSizeGB() {
@@ -84,7 +84,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
      * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
      * 
      */
-    @InputImport(name="lun", required=true)
+    @Import(name="lun", required=true)
       private final Output<Integer> lun;
 
     public Output<Integer> getLun() {
@@ -95,7 +95,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
      * The managed disk parameters.
      * 
      */
-    @InputImport(name="managedDisk")
+    @Import(name="managedDisk")
       private final @Nullable Output<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk;
 
     public Output<VirtualMachineScaleSetManagedDiskParametersArgs> getManagedDisk() {
@@ -106,7 +106,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
      * The disk name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -117,7 +117,7 @@ public final class VirtualMachineScaleSetDataDiskArgs extends io.pulumi.resource
      * Specifies whether writeAccelerator should be enabled or disabled on the disk.
      * 
      */
-    @InputImport(name="writeAcceleratorEnabled")
+    @Import(name="writeAcceleratorEnabled")
       private final @Nullable Output<Boolean> writeAcceleratorEnabled;
 
     public Output<Boolean> getWriteAcceleratorEnabled() {

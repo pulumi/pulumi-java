@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,56 +14,56 @@ public final class RegistryImageBuildAuthConfigArgs extends io.pulumi.resources.
 
     public static final RegistryImageBuildAuthConfigArgs Empty = new RegistryImageBuildAuthConfigArgs();
 
-    @InputImport(name="auth")
+    @Import(name="auth")
       private final @Nullable Output<String> auth;
 
     public Output<String> getAuth() {
         return this.auth == null ? Output.empty() : this.auth;
     }
 
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
         return this.email == null ? Output.empty() : this.email;
     }
 
-    @InputImport(name="hostName", required=true)
+    @Import(name="hostName", required=true)
       private final Output<String> hostName;
 
     public Output<String> getHostName() {
         return this.hostName;
     }
 
-    @InputImport(name="identityToken")
+    @Import(name="identityToken")
       private final @Nullable Output<String> identityToken;
 
     public Output<String> getIdentityToken() {
         return this.identityToken == null ? Output.empty() : this.identityToken;
     }
 
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
         return this.password == null ? Output.empty() : this.password;
     }
 
-    @InputImport(name="registryToken")
+    @Import(name="registryToken")
       private final @Nullable Output<String> registryToken;
 
     public Output<String> getRegistryToken() {
         return this.registryToken == null ? Output.empty() : this.registryToken;
     }
 
-    @InputImport(name="serverAddress")
+    @Import(name="serverAddress")
       private final @Nullable Output<String> serverAddress;
 
     public Output<String> getServerAddress() {
         return this.serverAddress == null ? Output.empty() : this.serverAddress;
     }
 
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {

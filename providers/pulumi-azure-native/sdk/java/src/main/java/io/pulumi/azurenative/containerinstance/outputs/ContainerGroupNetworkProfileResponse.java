@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContainerGroupNetworkProfileResponse {
     /**
      * The identifier for a network profile.
@@ -15,8 +15,8 @@ public final class ContainerGroupNetworkProfileResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
-    private ContainerGroupNetworkProfileResponse(@OutputCustomType.Parameter("id") String id) {
+    @CustomType.Constructor
+    private ContainerGroupNetworkProfileResponse(@CustomType.Parameter("id") String id) {
         this.id = id;
     }
 

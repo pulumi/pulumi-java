@@ -8,7 +8,7 @@ import io.pulumi.azurenative.securityinsights.enums.TriggersWhen;
 import io.pulumi.azurenative.securityinsights.inputs.AutomationRulePropertyValuesConditionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
      * The conditions to evaluate to determine if the automation rule should be triggered on a given object
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<AutomationRulePropertyValuesConditionArgs>> conditions;
 
     public Output<List<AutomationRulePropertyValuesConditionArgs>> getConditions() {
@@ -39,7 +39,7 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
      * Determines when the automation rule should automatically expire and be disabled.
      * 
      */
-    @InputImport(name="expirationTimeUtc")
+    @Import(name="expirationTimeUtc")
       private final @Nullable Output<String> expirationTimeUtc;
 
     public Output<String> getExpirationTimeUtc() {
@@ -50,7 +50,7 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
      * Determines whether the automation rule is enabled or disabled.
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -61,7 +61,7 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
      * The type of object the automation rule triggers on
      * 
      */
-    @InputImport(name="triggersOn", required=true)
+    @Import(name="triggersOn", required=true)
       private final Output<Either<String,TriggersOn>> triggersOn;
 
     public Output<Either<String,TriggersOn>> getTriggersOn() {
@@ -72,7 +72,7 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
      * The type of event the automation rule triggers on
      * 
      */
-    @InputImport(name="triggersWhen", required=true)
+    @Import(name="triggersWhen", required=true)
       private final Output<Either<String,TriggersWhen>> triggersWhen;
 
     public Output<Either<String,TriggersWhen>> getTriggersWhen() {

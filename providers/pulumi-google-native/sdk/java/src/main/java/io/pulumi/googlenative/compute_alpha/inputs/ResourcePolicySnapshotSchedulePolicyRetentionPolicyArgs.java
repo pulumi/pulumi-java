@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch;
 import io.pulumi.googlenative.compute_alpha.enums.ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete;
 import java.lang.Integer;
@@ -24,14 +24,14 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs exten
      * Maximum age of the snapshot that is allowed to be kept.
      * 
      */
-    @InputImport(name="maxRetentionDays")
+    @Import(name="maxRetentionDays")
       private final @Nullable Output<Integer> maxRetentionDays;
 
     public Output<Integer> getMaxRetentionDays() {
         return this.maxRetentionDays == null ? Output.empty() : this.maxRetentionDays;
     }
 
-    @InputImport(name="onPolicySwitch")
+    @Import(name="onPolicySwitch")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch> onPolicySwitch;
 
     public Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnPolicySwitch> getOnPolicySwitch() {
@@ -42,7 +42,7 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyArgs exten
      * Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.
      * 
      */
-    @InputImport(name="onSourceDiskDelete")
+    @Import(name="onSourceDiskDelete")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete> onSourceDiskDelete;
 
     public Output<ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDelete> getOnSourceDiskDelete() {

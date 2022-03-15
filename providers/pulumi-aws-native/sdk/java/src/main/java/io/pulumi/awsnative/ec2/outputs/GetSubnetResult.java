@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.SubnetTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSubnetResult {
     private final @Nullable Boolean assignIpv6AddressOnCreation;
     private final @Nullable String ipv6CidrBlock;
@@ -22,15 +22,15 @@ public final class GetSubnetResult {
     private final @Nullable String subnetId;
     private final @Nullable List<SubnetTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSubnetResult(
-        @OutputCustomType.Parameter("assignIpv6AddressOnCreation") @Nullable Boolean assignIpv6AddressOnCreation,
-        @OutputCustomType.Parameter("ipv6CidrBlock") @Nullable String ipv6CidrBlock,
-        @OutputCustomType.Parameter("ipv6CidrBlocks") @Nullable List<String> ipv6CidrBlocks,
-        @OutputCustomType.Parameter("mapPublicIpOnLaunch") @Nullable Boolean mapPublicIpOnLaunch,
-        @OutputCustomType.Parameter("networkAclAssociationId") @Nullable String networkAclAssociationId,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
-        @OutputCustomType.Parameter("tags") @Nullable List<SubnetTag> tags) {
+        @CustomType.Parameter("assignIpv6AddressOnCreation") @Nullable Boolean assignIpv6AddressOnCreation,
+        @CustomType.Parameter("ipv6CidrBlock") @Nullable String ipv6CidrBlock,
+        @CustomType.Parameter("ipv6CidrBlocks") @Nullable List<String> ipv6CidrBlocks,
+        @CustomType.Parameter("mapPublicIpOnLaunch") @Nullable Boolean mapPublicIpOnLaunch,
+        @CustomType.Parameter("networkAclAssociationId") @Nullable String networkAclAssociationId,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId,
+        @CustomType.Parameter("tags") @Nullable List<SubnetTag> tags) {
         this.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
         this.ipv6CidrBlock = ipv6CidrBlock;
         this.ipv6CidrBlocks = ipv6CidrBlocks;

@@ -16,14 +16,14 @@ import io.pulumi.azurenative.streamanalytics.outputs.JsonSerializationResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.PowerBIOutputDataSourceResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.ServiceBusQueueOutputDataSourceResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.ServiceBusTopicOutputDataSourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOutputResult {
     /**
      * Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
@@ -61,15 +61,15 @@ public final class GetOutputResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOutputResult(
-        @OutputCustomType.Parameter("datasource") @Nullable Object datasource,
-        @OutputCustomType.Parameter("diagnostics") DiagnosticsResponse diagnostics,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("serialization") @Nullable Object serialization,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("datasource") @Nullable Object datasource,
+        @CustomType.Parameter("diagnostics") DiagnosticsResponse diagnostics,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("serialization") @Nullable Object serialization,
+        @CustomType.Parameter("type") String type) {
         this.datasource = datasource;
         this.diagnostics = diagnostics;
         this.etag = etag;

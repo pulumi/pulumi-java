@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ids_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.ids_v1.enums.EndpointSeverity;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,14 +21,14 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * User-provided description of the endpoint
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="endpointId", required=true)
+    @Import(name="endpointId", required=true)
       private final Output<String> endpointId;
 
     public Output<String> getEndpointId() {
@@ -39,14 +39,14 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The labels of the endpoint.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -57,21 +57,21 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The fully qualified URL of the network to which the IDS Endpoint is attached.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final Output<String> network;
 
     public Output<String> getNetwork() {
         return this.network;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -82,7 +82,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Lowest threat severity that this endpoint will alert on.
      * 
      */
-    @InputImport(name="severity", required=true)
+    @Import(name="severity", required=true)
       private final Output<EndpointSeverity> severity;
 
     public Output<EndpointSeverity> getSeverity() {
@@ -93,7 +93,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the endpoint should report traffic logs in addition to threat logs.
      * 
      */
-    @InputImport(name="trafficLogs")
+    @Import(name="trafficLogs")
       private final @Nullable Output<Boolean> trafficLogs;
 
     public Output<Boolean> getTrafficLogs() {

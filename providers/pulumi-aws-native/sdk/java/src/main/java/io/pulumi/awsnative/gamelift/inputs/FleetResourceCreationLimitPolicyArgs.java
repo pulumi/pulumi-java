@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.gamelift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class FleetResourceCreationLimitPolicyArgs extends io.pulumi.resour
      * The maximum number of game sessions that an individual can create during the policy period.
      * 
      */
-    @InputImport(name="newGameSessionsPerCreator")
+    @Import(name="newGameSessionsPerCreator")
       private final @Nullable Output<Integer> newGameSessionsPerCreator;
 
     public Output<Integer> getNewGameSessionsPerCreator() {
@@ -35,7 +35,7 @@ public final class FleetResourceCreationLimitPolicyArgs extends io.pulumi.resour
      * The time span used in evaluating the resource creation limit policy.
      * 
      */
-    @InputImport(name="policyPeriodInMinutes")
+    @Import(name="policyPeriodInMinutes")
       private final @Nullable Output<Integer> policyPeriodInMinutes;
 
     public Output<Integer> getPolicyPeriodInMinutes() {

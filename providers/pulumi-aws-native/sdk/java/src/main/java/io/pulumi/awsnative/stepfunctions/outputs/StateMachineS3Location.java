@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.stepfunctions.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StateMachineS3Location {
     private final String bucket;
     private final String key;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StateMachineS3Location(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.bucket = bucket;
         this.key = key;
         this.version = version;

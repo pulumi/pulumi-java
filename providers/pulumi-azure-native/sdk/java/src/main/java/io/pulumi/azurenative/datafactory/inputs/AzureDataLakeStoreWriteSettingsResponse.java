@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.res
      * The type of copy behavior for copy sink.
      * 
      */
-    @InputImport(name="copyBehavior")
+    @Import(name="copyBehavior")
       private final @Nullable Object copyBehavior;
 
     public Optional<Object> getCopyBehavior() {
@@ -34,7 +34,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.res
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
@@ -45,7 +45,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.res
      * Specifies the expiry time of the written files. The time is applied to the UTC time zone in the format of "2018-12-01T05:00:00Z". Default value is NULL. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="expiryDateTime")
+    @Import(name="expiryDateTime")
       private final @Nullable Object expiryDateTime;
 
     public Optional<Object> getExpiryDateTime() {
@@ -56,7 +56,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.res
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
@@ -68,7 +68,7 @@ public final class AzureDataLakeStoreWriteSettingsResponse extends io.pulumi.res
      * Expected value is 'AzureDataLakeStoreWriteSettings'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

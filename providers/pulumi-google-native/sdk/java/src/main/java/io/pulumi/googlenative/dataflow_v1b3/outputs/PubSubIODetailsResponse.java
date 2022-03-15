@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PubSubIODetailsResponse {
     /**
      * Subscription used in the connection.
@@ -20,10 +20,10 @@ public final class PubSubIODetailsResponse {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PubSubIODetailsResponse(
-        @OutputCustomType.Parameter("subscription") String subscription,
-        @OutputCustomType.Parameter("topic") String topic) {
+        @CustomType.Parameter("subscription") String subscription,
+        @CustomType.Parameter("topic") String topic) {
         this.subscription = subscription;
         this.topic = topic;
     }

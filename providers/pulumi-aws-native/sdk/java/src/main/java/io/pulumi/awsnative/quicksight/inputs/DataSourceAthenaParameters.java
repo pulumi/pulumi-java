@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DataSourceAthenaParameters extends io.pulumi.resources.Invoke
      * <p>The workgroup that Amazon Athena uses.</p>
      * 
      */
-    @InputImport(name="workGroup")
+    @Import(name="workGroup")
       private final @Nullable String workGroup;
 
     public Optional<String> getWorkGroup() {

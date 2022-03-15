@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * Enum to determine endpoint authentication mode.
      * 
      */
-    @InputImport(name="authMode")
+    @Import(name="authMode")
       private final @Nullable String authMode;
 
     public Optional<String> getAuthMode() {
@@ -35,7 +35,7 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * Description of the inference endpoint.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -46,7 +46,7 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * Property dictionary. Properties can be added, but not removed or altered.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -57,7 +57,7 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * Endpoint URI.
      * 
      */
-    @InputImport(name="scoringUri", required=true)
+    @Import(name="scoringUri", required=true)
       private final String scoringUri;
 
     public String getScoringUri() {
@@ -68,7 +68,7 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * Endpoint Swagger URI.
      * 
      */
-    @InputImport(name="swaggerUri", required=true)
+    @Import(name="swaggerUri", required=true)
       private final String swaggerUri;
 
     public String getSwaggerUri() {
@@ -79,7 +79,7 @@ public final class BatchEndpointResponse extends io.pulumi.resources.InvokeArgs 
      * Traffic rules on how the traffic will be routed across deployments.
      * 
      */
-    @InputImport(name="traffic")
+    @Import(name="traffic")
       private final @Nullable Map<String,Integer> traffic;
 
     public Map<String,Integer> getTraffic() {

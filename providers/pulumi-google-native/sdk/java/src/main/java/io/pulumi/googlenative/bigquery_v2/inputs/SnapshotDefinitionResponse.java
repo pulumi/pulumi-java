@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.TableReferenceResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class SnapshotDefinitionResponse extends io.pulumi.resources.Invoke
      * [Required] Reference describing the ID of the table that was snapshot.
      * 
      */
-    @InputImport(name="baseTableReference", required=true)
+    @Import(name="baseTableReference", required=true)
       private final TableReferenceResponse baseTableReference;
 
     public TableReferenceResponse getBaseTableReference() {
@@ -28,7 +28,7 @@ public final class SnapshotDefinitionResponse extends io.pulumi.resources.Invoke
      * [Required] The time at which the base table was snapshot. This value is reported in the JSON response using RFC3339 format.
      * 
      */
-    @InputImport(name="snapshotTime", required=true)
+    @Import(name="snapshotTime", required=true)
       private final String snapshotTime;
 
     public String getSnapshotTime() {

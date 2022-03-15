@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs ex
      * Display name of the parameter.
      * 
      */
-    @InputImport(name="parameter")
+    @Import(name="parameter")
       private final @Nullable Output<String> parameter;
 
     public Output<String> getParameter() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentSetParameterActionArgs ex
      * The new value of the parameter. A null value clears the parameter.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<Object> value;
 
     public Output<Object> getValue() {

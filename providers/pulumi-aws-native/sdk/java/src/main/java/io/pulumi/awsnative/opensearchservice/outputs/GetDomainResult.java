@@ -13,7 +13,7 @@ import io.pulumi.awsnative.opensearchservice.outputs.DomainServiceSoftwareOption
 import io.pulumi.awsnative.opensearchservice.outputs.DomainSnapshotOptions;
 import io.pulumi.awsnative.opensearchservice.outputs.DomainTag;
 import io.pulumi.awsnative.opensearchservice.outputs.DomainVPCOptions;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainResult {
     private final @Nullable Object accessPolicies;
     private final @Nullable Object advancedOptions;
@@ -47,27 +47,27 @@ public final class GetDomainResult {
     private final @Nullable List<DomainTag> tags;
     private final @Nullable DomainVPCOptions vPCOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainResult(
-        @OutputCustomType.Parameter("accessPolicies") @Nullable Object accessPolicies,
-        @OutputCustomType.Parameter("advancedOptions") @Nullable Object advancedOptions,
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("clusterConfig") @Nullable DomainClusterConfig clusterConfig,
-        @OutputCustomType.Parameter("cognitoOptions") @Nullable DomainCognitoOptions cognitoOptions,
-        @OutputCustomType.Parameter("domainArn") @Nullable String domainArn,
-        @OutputCustomType.Parameter("domainEndpoint") @Nullable String domainEndpoint,
-        @OutputCustomType.Parameter("domainEndpointOptions") @Nullable DomainEndpointOptions domainEndpointOptions,
-        @OutputCustomType.Parameter("domainEndpoints") @Nullable Object domainEndpoints,
-        @OutputCustomType.Parameter("eBSOptions") @Nullable DomainEBSOptions eBSOptions,
-        @OutputCustomType.Parameter("encryptionAtRestOptions") @Nullable DomainEncryptionAtRestOptions encryptionAtRestOptions,
-        @OutputCustomType.Parameter("engineVersion") @Nullable String engineVersion,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("logPublishingOptions") @Nullable Object logPublishingOptions,
-        @OutputCustomType.Parameter("nodeToNodeEncryptionOptions") @Nullable DomainNodeToNodeEncryptionOptions nodeToNodeEncryptionOptions,
-        @OutputCustomType.Parameter("serviceSoftwareOptions") @Nullable DomainServiceSoftwareOptions serviceSoftwareOptions,
-        @OutputCustomType.Parameter("snapshotOptions") @Nullable DomainSnapshotOptions snapshotOptions,
-        @OutputCustomType.Parameter("tags") @Nullable List<DomainTag> tags,
-        @OutputCustomType.Parameter("vPCOptions") @Nullable DomainVPCOptions vPCOptions) {
+        @CustomType.Parameter("accessPolicies") @Nullable Object accessPolicies,
+        @CustomType.Parameter("advancedOptions") @Nullable Object advancedOptions,
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("clusterConfig") @Nullable DomainClusterConfig clusterConfig,
+        @CustomType.Parameter("cognitoOptions") @Nullable DomainCognitoOptions cognitoOptions,
+        @CustomType.Parameter("domainArn") @Nullable String domainArn,
+        @CustomType.Parameter("domainEndpoint") @Nullable String domainEndpoint,
+        @CustomType.Parameter("domainEndpointOptions") @Nullable DomainEndpointOptions domainEndpointOptions,
+        @CustomType.Parameter("domainEndpoints") @Nullable Object domainEndpoints,
+        @CustomType.Parameter("eBSOptions") @Nullable DomainEBSOptions eBSOptions,
+        @CustomType.Parameter("encryptionAtRestOptions") @Nullable DomainEncryptionAtRestOptions encryptionAtRestOptions,
+        @CustomType.Parameter("engineVersion") @Nullable String engineVersion,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("logPublishingOptions") @Nullable Object logPublishingOptions,
+        @CustomType.Parameter("nodeToNodeEncryptionOptions") @Nullable DomainNodeToNodeEncryptionOptions nodeToNodeEncryptionOptions,
+        @CustomType.Parameter("serviceSoftwareOptions") @Nullable DomainServiceSoftwareOptions serviceSoftwareOptions,
+        @CustomType.Parameter("snapshotOptions") @Nullable DomainSnapshotOptions snapshotOptions,
+        @CustomType.Parameter("tags") @Nullable List<DomainTag> tags,
+        @CustomType.Parameter("vPCOptions") @Nullable DomainVPCOptions vPCOptions) {
         this.accessPolicies = accessPolicies;
         this.advancedOptions = advancedOptions;
         this.arn = arn;

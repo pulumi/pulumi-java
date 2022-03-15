@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1EduDataResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudChannelV1CloudIdentityInfoResponse {
     /**
      * URI of Customer's Admin console dashboard.
@@ -52,16 +52,16 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse {
      */
     private final String primaryDomain;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudChannelV1CloudIdentityInfoResponse(
-        @OutputCustomType.Parameter("adminConsoleUri") String adminConsoleUri,
-        @OutputCustomType.Parameter("alternateEmail") String alternateEmail,
-        @OutputCustomType.Parameter("customerType") String customerType,
-        @OutputCustomType.Parameter("eduData") GoogleCloudChannelV1EduDataResponse eduData,
-        @OutputCustomType.Parameter("isDomainVerified") Boolean isDomainVerified,
-        @OutputCustomType.Parameter("languageCode") String languageCode,
-        @OutputCustomType.Parameter("phoneNumber") String phoneNumber,
-        @OutputCustomType.Parameter("primaryDomain") String primaryDomain) {
+        @CustomType.Parameter("adminConsoleUri") String adminConsoleUri,
+        @CustomType.Parameter("alternateEmail") String alternateEmail,
+        @CustomType.Parameter("customerType") String customerType,
+        @CustomType.Parameter("eduData") GoogleCloudChannelV1EduDataResponse eduData,
+        @CustomType.Parameter("isDomainVerified") Boolean isDomainVerified,
+        @CustomType.Parameter("languageCode") String languageCode,
+        @CustomType.Parameter("phoneNumber") String phoneNumber,
+        @CustomType.Parameter("primaryDomain") String primaryDomain) {
         this.adminConsoleUri = adminConsoleUri;
         this.alternateEmail = alternateEmail;
         this.customerType = customerType;

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects {
     /**
      * Boolean which indicates if this criteria is enabled.
@@ -15,8 +15,8 @@ public final class BucketReplicationConfigurationRuleSourceSelectionCriteriaSseK
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private BucketReplicationConfigurationRuleSourceSelectionCriteriaSseKmsEncryptedObjects(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

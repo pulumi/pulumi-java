@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.AutomationRuleSetResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AutomationSourceResponse extends io.pulumi.resources.InvokeAr
      * A valid event source type.
      * 
      */
-    @InputImport(name="eventSource")
+    @Import(name="eventSource")
       private final @Nullable String eventSource;
 
     public Optional<String> getEventSource() {
@@ -35,7 +35,7 @@ public final class AutomationSourceResponse extends io.pulumi.resources.InvokeAr
      * A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').
      * 
      */
-    @InputImport(name="ruleSets")
+    @Import(name="ruleSets")
       private final @Nullable List<AutomationRuleSetResponse> ruleSets;
 
     public List<AutomationRuleSetResponse> getRuleSets() {

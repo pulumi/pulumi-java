@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
      * Linked storage account resource ID
      * 
      */
-    @InputImport(name="linkedStorageAccount")
+    @Import(name="linkedStorageAccount")
       private final @Nullable Output<String> linkedStorageAccount;
 
     public Output<String> getLinkedStorageAccount() {
@@ -29,7 +29,7 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
      * The name of the Application Insights component resource.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -51,7 +51,7 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
      * The type of the Application Insights component data source for the linked storage account.
      * 
      */
-    @InputImport(name="storageType")
+    @Import(name="storageType")
       private final @Nullable Output<String> storageType;
 
     public Output<String> getStorageType() {

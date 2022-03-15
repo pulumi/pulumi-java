@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.AppProfileSingleClusterRoutingGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class AppProfileState extends io.pulumi.resources.ResourceArgs {
      * The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
      * 
      */
-    @InputImport(name="appProfileId")
+    @Import(name="appProfileId")
       private final @Nullable Output<String> appProfileId;
 
     public Output<String> getAppProfileId() {
@@ -31,7 +31,7 @@ public final class AppProfileState extends io.pulumi.resources.ResourceArgs {
      * Long form description of the use case for this app profile.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class AppProfileState extends io.pulumi.resources.ResourceArgs {
      * If true, ignore safety checks when deleting/updating the app profile.
      * 
      */
-    @InputImport(name="ignoreWarnings")
+    @Import(name="ignoreWarnings")
       private final @Nullable Output<Boolean> ignoreWarnings;
 
     public Output<Boolean> getIgnoreWarnings() {
@@ -53,7 +53,7 @@ public final class AppProfileState extends io.pulumi.resources.ResourceArgs {
      * The name of the instance to create the app profile within.
      * 
      */
-    @InputImport(name="instance")
+    @Import(name="instance")
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
@@ -66,7 +66,7 @@ public final class AppProfileState extends io.pulumi.resources.ResourceArgs {
      * consistency to improve availability.
      * 
      */
-    @InputImport(name="multiClusterRoutingUseAny")
+    @Import(name="multiClusterRoutingUseAny")
       private final @Nullable Output<Boolean> multiClusterRoutingUseAny;
 
     public Output<Boolean> getMultiClusterRoutingUseAny() {
@@ -78,7 +78,7 @@ public final class AppProfileState extends io.pulumi.resources.ResourceArgs {
      * 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -90,7 +90,7 @@ public final class AppProfileState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -102,7 +102,7 @@ public final class AppProfileState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="singleClusterRouting")
+    @Import(name="singleClusterRouting")
       private final @Nullable Output<AppProfileSingleClusterRoutingGetArgs> singleClusterRouting;
 
     public Output<AppProfileSingleClusterRoutingGetArgs> getSingleClusterRouting() {

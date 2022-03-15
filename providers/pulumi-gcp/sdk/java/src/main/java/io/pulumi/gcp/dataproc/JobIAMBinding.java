@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataproc.JobIAMBindingArgs;
@@ -54,7 +54,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:dataproc/jobIAMBinding:JobIAMBinding")
 public class JobIAMBinding extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=JobIAMBindingCondition.class, parameters={})
+    @Export(name="condition", type=JobIAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ JobIAMBindingCondition> condition;
 
     public Output</* @Nullable */ JobIAMBindingCondition> getCondition() {
@@ -64,7 +64,7 @@ public class JobIAMBinding extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the jobs's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -74,13 +74,13 @@ public class JobIAMBinding extends io.pulumi.resources.CustomResource {
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="jobId", type=String.class, parameters={})
+    @Export(name="jobId", type=String.class, parameters={})
     private Output<String> jobId;
 
     public Output<String> getJobId() {
         return this.jobId;
     }
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -91,7 +91,7 @@ public class JobIAMBinding extends io.pulumi.resources.CustomResource {
      * is not provided, the provider will use a default.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -107,7 +107,7 @@ public class JobIAMBinding extends io.pulumi.resources.CustomResource {
      * is not provided, the provider will use a default.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -124,7 +124,7 @@ public class JobIAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

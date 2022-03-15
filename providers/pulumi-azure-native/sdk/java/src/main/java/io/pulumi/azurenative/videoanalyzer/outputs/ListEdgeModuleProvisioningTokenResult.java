@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListEdgeModuleProvisioningTokenResult {
     /**
      * The expiration date of the registration token. The Azure Video Analyzer IoT edge module must be initialized and connected to the Internet prior to the token expiration date.
@@ -20,10 +20,10 @@ public final class ListEdgeModuleProvisioningTokenResult {
      */
     private final String token;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListEdgeModuleProvisioningTokenResult(
-        @OutputCustomType.Parameter("expirationDate") String expirationDate,
-        @OutputCustomType.Parameter("token") String token) {
+        @CustomType.Parameter("expirationDate") String expirationDate,
+        @CustomType.Parameter("token") String token) {
         this.expirationDate = expirationDate;
         this.token = token;
     }

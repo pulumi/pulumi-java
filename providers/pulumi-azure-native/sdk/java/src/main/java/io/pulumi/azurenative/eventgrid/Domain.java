@@ -11,7 +11,7 @@ import io.pulumi.azurenative.eventgrid.outputs.PrivateEndpointConnectionResponse
 import io.pulumi.azurenative.eventgrid.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Endpoint for the domain.
      * 
      */
-    @OutputExport(name="endpoint", type=String.class, parameters={})
+    @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
@@ -53,7 +53,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
      * 
      */
-    @OutputExport(name="inboundIpRules", type=List.class, parameters={InboundIpRuleResponse.class})
+    @Export(name="inboundIpRules", type=List.class, parameters={InboundIpRuleResponse.class})
     private Output</* @Nullable */ List<InboundIpRuleResponse>> inboundIpRules;
 
     /**
@@ -67,7 +67,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * This determines the format that Event Grid should expect for incoming events published to the domain.
      * 
      */
-    @OutputExport(name="inputSchema", type=String.class, parameters={})
+    @Export(name="inputSchema", type=String.class, parameters={})
     private Output</* @Nullable */ String> inputSchema;
 
     /**
@@ -81,7 +81,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Information about the InputSchemaMapping which specified the info about mapping event payload.
      * 
      */
-    @OutputExport(name="inputSchemaMapping", type=JsonInputSchemaMappingResponse.class, parameters={})
+    @Export(name="inputSchemaMapping", type=JsonInputSchemaMappingResponse.class, parameters={})
     private Output</* @Nullable */ JsonInputSchemaMappingResponse> inputSchemaMapping;
 
     /**
@@ -95,7 +95,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -109,7 +109,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Metric resource id for the domain.
      * 
      */
-    @OutputExport(name="metricResourceId", type=String.class, parameters={})
+    @Export(name="metricResourceId", type=String.class, parameters={})
     private Output<String> metricResourceId;
 
     /**
@@ -123,7 +123,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -137,7 +137,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * List of private endpoint connections.
      * 
      */
-    @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
+    @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
@@ -151,7 +151,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Provisioning state of the domain.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -166,7 +166,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules" />
      * 
      */
-    @OutputExport(name="publicNetworkAccess", type=String.class, parameters={})
+    @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
@@ -181,7 +181,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The system metadata relating to Domain resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -195,7 +195,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -209,7 +209,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.outputs.FromEachInputFileResponse;
 import io.pulumi.azurenative.media.outputs.InputFileResponse;
 import io.pulumi.azurenative.media.outputs.UtcClipTimeResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobInputAssetResponse {
     /**
      * The name of the input Asset.
@@ -56,15 +56,15 @@ public final class JobInputAssetResponse {
      */
     private final @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobInputAssetResponse(
-        @OutputCustomType.Parameter("assetName") String assetName,
-        @OutputCustomType.Parameter("end") @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end,
-        @OutputCustomType.Parameter("files") @Nullable List<String> files,
-        @OutputCustomType.Parameter("inputDefinitions") @Nullable List<Object> inputDefinitions,
-        @OutputCustomType.Parameter("label") @Nullable String label,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("start") @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
+        @CustomType.Parameter("assetName") String assetName,
+        @CustomType.Parameter("end") @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end,
+        @CustomType.Parameter("files") @Nullable List<String> files,
+        @CustomType.Parameter("inputDefinitions") @Nullable List<Object> inputDefinitions,
+        @CustomType.Parameter("label") @Nullable String label,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("start") @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
         this.assetName = assetName;
         this.end = end;
         this.files = files;

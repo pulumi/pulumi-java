@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that's sent as the client_id parameter on OAuth requests.)
      * 
      */
-    @InputImport(name="clientIdLists", required=true)
+    @Import(name="clientIdLists", required=true)
       private final Output<List<String>> clientIdLists;
 
     public Output<List<String>> getClientIdLists() {
@@ -31,7 +31,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * Map of resource tags for the IAM OIDC provider. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -42,7 +42,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider's server certificate(s).
      * 
      */
-    @InputImport(name="thumbprintLists", required=true)
+    @Import(name="thumbprintLists", required=true)
       private final Output<List<String>> thumbprintLists;
 
     public Output<List<String>> getThumbprintLists() {
@@ -53,7 +53,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
      * The URL of the identity provider. Corresponds to the _iss_ claim.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final Output<String> url;
 
     public Output<String> getUrl() {

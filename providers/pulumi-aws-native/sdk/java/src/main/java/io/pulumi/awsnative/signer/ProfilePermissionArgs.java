@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.signer;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,35 +14,35 @@ public final class ProfilePermissionArgs extends io.pulumi.resources.ResourceArg
 
     public static final ProfilePermissionArgs Empty = new ProfilePermissionArgs();
 
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<String> action;
 
     public Output<String> getAction() {
         return this.action;
     }
 
-    @InputImport(name="principal", required=true)
+    @Import(name="principal", required=true)
       private final Output<String> principal;
 
     public Output<String> getPrincipal() {
         return this.principal;
     }
 
-    @InputImport(name="profileName", required=true)
+    @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
     public Output<String> getProfileName() {
         return this.profileName;
     }
 
-    @InputImport(name="profileVersion")
+    @Import(name="profileVersion")
       private final @Nullable Output<String> profileVersion;
 
     public Output<String> getProfileVersion() {
         return this.profileVersion == null ? Output.empty() : this.profileVersion;
     }
 
-    @InputImport(name="statementId", required=true)
+    @Import(name="statementId", required=true)
       private final Output<String> statementId;
 
     public Output<String> getStatementId() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.NetworkPolicyPeer;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.NetworkPolicyPort;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkPolicyEgressRule {
     /**
      * List of destination ports for outgoing traffic. Each item in this list is combined using a logical OR. If this field is empty or missing, this rule matches all ports (traffic not restricted by port). If this field is present and contains at least one item, then this rule allows traffic only if the traffic matches at least one port in the list.
@@ -23,10 +23,10 @@ public final class NetworkPolicyEgressRule {
      */
     private final @Nullable List<NetworkPolicyPeer> to;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkPolicyEgressRule(
-        @OutputCustomType.Parameter("ports") @Nullable List<NetworkPolicyPort> ports,
-        @OutputCustomType.Parameter("to") @Nullable List<NetworkPolicyPeer> to) {
+        @CustomType.Parameter("ports") @Nullable List<NetworkPolicyPort> ports,
+        @CustomType.Parameter("to") @Nullable List<NetworkPolicyPeer> to) {
         this.ports = ports;
         this.to = to;
     }

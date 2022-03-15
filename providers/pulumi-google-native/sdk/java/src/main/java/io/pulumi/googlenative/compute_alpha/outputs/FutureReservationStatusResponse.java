@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FutureReservationStatusResponse {
     /**
      * Fully qualified urls of the automatically created reservations at start_time.
@@ -31,12 +31,12 @@ public final class FutureReservationStatusResponse {
      */
     private final String procurementStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FutureReservationStatusResponse(
-        @OutputCustomType.Parameter("autoCreatedReservations") List<String> autoCreatedReservations,
-        @OutputCustomType.Parameter("fulfilledCount") String fulfilledCount,
-        @OutputCustomType.Parameter("lockTime") String lockTime,
-        @OutputCustomType.Parameter("procurementStatus") String procurementStatus) {
+        @CustomType.Parameter("autoCreatedReservations") List<String> autoCreatedReservations,
+        @CustomType.Parameter("fulfilledCount") String fulfilledCount,
+        @CustomType.Parameter("lockTime") String lockTime,
+        @CustomType.Parameter("procurementStatus") String procurementStatus) {
         this.autoCreatedReservations = autoCreatedReservations;
         this.fulfilledCount = fulfilledCount;
         this.lockTime = lockTime;

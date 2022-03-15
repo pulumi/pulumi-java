@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.ApiConnectionTestLinkResponse;
 import io.pulumi.azurenative.web.inputs.ApiReferenceResponse;
 import io.pulumi.azurenative.web.inputs.ConnectionStatusDefinitionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +19,7 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
 
     public static final ApiConnectionDefinitionResponseProperties Empty = new ApiConnectionDefinitionResponseProperties();
 
-    @InputImport(name="api")
+    @Import(name="api")
       private final @Nullable ApiReferenceResponse api;
 
     public Optional<ApiReferenceResponse> getApi() {
@@ -30,7 +30,7 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
      * Timestamp of last connection change
      * 
      */
-    @InputImport(name="changedTime")
+    @Import(name="changedTime")
       private final @Nullable String changedTime;
 
     public Optional<String> getChangedTime() {
@@ -41,7 +41,7 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
      * Timestamp of the connection creation
      * 
      */
-    @InputImport(name="createdTime")
+    @Import(name="createdTime")
       private final @Nullable String createdTime;
 
     public Optional<String> getCreatedTime() {
@@ -52,7 +52,7 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
      * Dictionary of custom parameter values
      * 
      */
-    @InputImport(name="customParameterValues")
+    @Import(name="customParameterValues")
       private final @Nullable Map<String,String> customParameterValues;
 
     public Map<String,String> getCustomParameterValues() {
@@ -63,7 +63,7 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
      * Display name
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -74,7 +74,7 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
      * Dictionary of nonsecret parameter values
      * 
      */
-    @InputImport(name="nonSecretParameterValues")
+    @Import(name="nonSecretParameterValues")
       private final @Nullable Map<String,String> nonSecretParameterValues;
 
     public Map<String,String> getNonSecretParameterValues() {
@@ -85,7 +85,7 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
      * Dictionary of parameter values
      * 
      */
-    @InputImport(name="parameterValues")
+    @Import(name="parameterValues")
       private final @Nullable Map<String,String> parameterValues;
 
     public Map<String,String> getParameterValues() {
@@ -96,7 +96,7 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
      * Status of the connection
      * 
      */
-    @InputImport(name="statuses")
+    @Import(name="statuses")
       private final @Nullable List<ConnectionStatusDefinitionResponse> statuses;
 
     public List<ConnectionStatusDefinitionResponse> getStatuses() {
@@ -107,7 +107,7 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
      * Links to test the API connection
      * 
      */
-    @InputImport(name="testLinks")
+    @Import(name="testLinks")
       private final @Nullable List<ApiConnectionTestLinkResponse> testLinks;
 
     public List<ApiConnectionTestLinkResponse> getTestLinks() {

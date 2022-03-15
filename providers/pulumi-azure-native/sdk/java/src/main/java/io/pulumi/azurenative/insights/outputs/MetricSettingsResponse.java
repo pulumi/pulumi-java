@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.RetentionPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricSettingsResponse {
     /**
      * Name of a Diagnostic Metric category for a resource type this setting is applied to. To obtain the list of Diagnostic metric categories for a resource, first perform a GET diagnostic settings operation.
@@ -34,12 +34,12 @@ public final class MetricSettingsResponse {
      */
     private final @Nullable String timeGrain;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricSettingsResponse(
-        @OutputCustomType.Parameter("category") @Nullable String category,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("retentionPolicy") @Nullable RetentionPolicyResponse retentionPolicy,
-        @OutputCustomType.Parameter("timeGrain") @Nullable String timeGrain) {
+        @CustomType.Parameter("category") @Nullable String category,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("retentionPolicy") @Nullable RetentionPolicyResponse retentionPolicy,
+        @CustomType.Parameter("timeGrain") @Nullable String timeGrain) {
         this.category = category;
         this.enabled = enabled;
         this.retentionPolicy = retentionPolicy;

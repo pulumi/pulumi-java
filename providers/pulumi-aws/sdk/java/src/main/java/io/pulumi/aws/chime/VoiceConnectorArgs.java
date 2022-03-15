@@ -4,7 +4,7 @@
 package io.pulumi.aws.chime;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * The AWS Region in which the Amazon Chime Voice Connector is created. Default value: `us-east-1`
      * 
      */
-    @InputImport(name="awsRegion")
+    @Import(name="awsRegion")
       private final @Nullable Output<String> awsRegion;
 
     public Output<String> getAwsRegion() {
@@ -30,7 +30,7 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Amazon Chime Voice Connector.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class VoiceConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * When enabled, requires encryption for the Amazon Chime Voice Connector.
      * 
      */
-    @InputImport(name="requireEncryption", required=true)
+    @Import(name="requireEncryption", required=true)
       private final Output<Boolean> requireEncryption;
 
     public Output<Boolean> getRequireEncryption() {

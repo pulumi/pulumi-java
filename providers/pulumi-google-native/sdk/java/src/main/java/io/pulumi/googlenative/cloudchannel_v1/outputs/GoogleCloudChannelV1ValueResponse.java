@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudChannelV1ValueResponse {
     /**
      * Represents a boolean value.
@@ -38,13 +38,13 @@ public final class GoogleCloudChannelV1ValueResponse {
      */
     private final String stringValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudChannelV1ValueResponse(
-        @OutputCustomType.Parameter("boolValue") Boolean boolValue,
-        @OutputCustomType.Parameter("doubleValue") Double doubleValue,
-        @OutputCustomType.Parameter("int64Value") String int64Value,
-        @OutputCustomType.Parameter("protoValue") Map<String,String> protoValue,
-        @OutputCustomType.Parameter("stringValue") String stringValue) {
+        @CustomType.Parameter("boolValue") Boolean boolValue,
+        @CustomType.Parameter("doubleValue") Double doubleValue,
+        @CustomType.Parameter("int64Value") String int64Value,
+        @CustomType.Parameter("protoValue") Map<String,String> protoValue,
+        @CustomType.Parameter("stringValue") String stringValue) {
         this.boolValue = boolValue;
         this.doubleValue = doubleValue;
         this.int64Value = int64Value;

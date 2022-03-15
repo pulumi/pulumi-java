@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.notificationhubs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class MpnsCredentialResponse extends io.pulumi.resources.InvokeArgs
      * The certificate key for this credential.
      * 
      */
-    @InputImport(name="certificateKey")
+    @Import(name="certificateKey")
       private final @Nullable String certificateKey;
 
     public Optional<String> getCertificateKey() {
@@ -33,7 +33,7 @@ public final class MpnsCredentialResponse extends io.pulumi.resources.InvokeArgs
      * The MPNS certificate.
      * 
      */
-    @InputImport(name="mpnsCertificate")
+    @Import(name="mpnsCertificate")
       private final @Nullable String mpnsCertificate;
 
     public Optional<String> getMpnsCertificate() {
@@ -44,7 +44,7 @@ public final class MpnsCredentialResponse extends io.pulumi.resources.InvokeArgs
      * The MPNS certificate Thumbprint
      * 
      */
-    @InputImport(name="thumbprint")
+    @Import(name="thumbprint")
       private final @Nullable String thumbprint;
 
     public Optional<String> getThumbprint() {

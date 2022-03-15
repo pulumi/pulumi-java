@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNetworkProfileResponse {
     /**
      * The ID of the virtual network.
@@ -22,10 +22,10 @@ public final class VirtualNetworkProfileResponse {
      */
     private final @Nullable String subnet;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNetworkProfileResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("subnet") @Nullable String subnet) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("subnet") @Nullable String subnet) {
         this.id = id;
         this.subnet = subnet;
     }

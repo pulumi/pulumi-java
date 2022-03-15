@@ -6,14 +6,14 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.ContainerResponse;
 import io.pulumi.azurenative.web.outputs.DaprResponse;
 import io.pulumi.azurenative.web.outputs.ScaleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TemplateResponse {
     /**
      * List of container definitions for the Container App.
@@ -36,12 +36,12 @@ public final class TemplateResponse {
      */
     private final @Nullable ScaleResponse scale;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TemplateResponse(
-        @OutputCustomType.Parameter("containers") @Nullable List<ContainerResponse> containers,
-        @OutputCustomType.Parameter("dapr") @Nullable DaprResponse dapr,
-        @OutputCustomType.Parameter("revisionSuffix") @Nullable String revisionSuffix,
-        @OutputCustomType.Parameter("scale") @Nullable ScaleResponse scale) {
+        @CustomType.Parameter("containers") @Nullable List<ContainerResponse> containers,
+        @CustomType.Parameter("dapr") @Nullable DaprResponse dapr,
+        @CustomType.Parameter("revisionSuffix") @Nullable String revisionSuffix,
+        @CustomType.Parameter("scale") @Nullable ScaleResponse scale) {
         this.containers = containers;
         this.dapr = dapr;
         this.revisionSuffix = revisionSuffix;

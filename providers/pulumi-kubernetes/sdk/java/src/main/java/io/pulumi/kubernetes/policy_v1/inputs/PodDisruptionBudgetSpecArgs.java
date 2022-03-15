@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.policy_v1.inputs;
 
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class PodDisruptionBudgetSpecArgs extends io.pulumi.resources.Resou
      * An eviction is allowed if at most "maxUnavailable" pods selected by "selector" are unavailable after the eviction, i.e. even in absence of the evicted pod. For example, one can prevent all voluntary evictions by specifying 0. This is a mutually exclusive setting with "minAvailable".
      * 
      */
-    @InputImport(name="maxUnavailable")
+    @Import(name="maxUnavailable")
       private final @Nullable Output<Either<Integer,String>> maxUnavailable;
 
     public Output<Either<Integer,String>> getMaxUnavailable() {
@@ -36,7 +36,7 @@ public final class PodDisruptionBudgetSpecArgs extends io.pulumi.resources.Resou
      * An eviction is allowed if at least "minAvailable" pods selected by "selector" will still be available after the eviction, i.e. even in the absence of the evicted pod.  So for example you can prevent all voluntary evictions by specifying "100%".
      * 
      */
-    @InputImport(name="minAvailable")
+    @Import(name="minAvailable")
       private final @Nullable Output<Either<Integer,String>> minAvailable;
 
     public Output<Either<Integer,String>> getMinAvailable() {
@@ -47,7 +47,7 @@ public final class PodDisruptionBudgetSpecArgs extends io.pulumi.resources.Resou
      * Label query over pods whose evictions are managed by the disruption budget. A null selector will match no pods, while an empty ({}) selector will select all pods within the namespace.
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;
 
     public Output<LabelSelectorArgs> getSelector() {

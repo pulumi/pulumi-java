@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.sqs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetQueueResult {
     /**
      * The Amazon Resource Name (ARN) of the queue.
@@ -32,13 +32,13 @@ public final class GetQueueResult {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetQueueResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("url") String url) {
         this.arn = arn;
         this.id = id;
         this.name = name;

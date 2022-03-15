@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FeatureGroupDataCatalogConfig {
     private final String catalog;
     private final String database;
     private final String tableName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FeatureGroupDataCatalogConfig(
-        @OutputCustomType.Parameter("catalog") String catalog,
-        @OutputCustomType.Parameter("database") String database,
-        @OutputCustomType.Parameter("tableName") String tableName) {
+        @CustomType.Parameter("catalog") String catalog,
+        @CustomType.Parameter("database") String database,
+        @CustomType.Parameter("tableName") String tableName) {
         this.catalog = catalog;
         this.database = database;
         this.tableName = tableName;

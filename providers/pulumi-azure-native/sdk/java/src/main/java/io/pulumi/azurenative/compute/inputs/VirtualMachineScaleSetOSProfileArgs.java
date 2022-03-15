@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.inputs.LinuxConfigurationArgs;
 import io.pulumi.azurenative.compute.inputs.VaultSecretGroupArgs;
 import io.pulumi.azurenative.compute.inputs.WindowsConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * Specifies the password of the administrator account. <br><br> **Minimum-length (Windows):** 8 characters <br><br> **Minimum-length (Linux):** 6 characters <br><br> **Max-length (Windows):** 123 characters <br><br> **Max-length (Linux):** 72 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!" <br><br> For resetting the password, see [How to reset the Remote Desktop service or its login password in a Windows VM](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/reset-rdp) <br><br> For resetting root password, see [Manage users, SSH, and check or repair disks on Azure Linux VMs using the VMAccess Extension](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/troubleshoot-ssh-connection)
      * 
      */
-    @InputImport(name="adminPassword")
+    @Import(name="adminPassword")
       private final @Nullable Output<String> adminPassword;
 
     public Output<String> getAdminPassword() {
@@ -37,7 +37,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * Specifies the name of the administrator account. <br><br> **Windows-only restriction:** Cannot end in "." <br><br> **Disallowed values:** "administrator", "admin", "user", "user1", "test", "user2", "test1", "user3", "admin1", "1", "123", "a", "actuser", "adm", "admin2", "aspnet", "backup", "console", "david", "guest", "john", "owner", "root", "server", "sql", "support", "support_388945a0", "sys", "test2", "test3", "user4", "user5". <br><br> **Minimum-length (Linux):** 1  character <br><br> **Max-length (Linux):** 64 characters <br><br> **Max-length (Windows):** 20 characters
      * 
      */
-    @InputImport(name="adminUsername")
+    @Import(name="adminUsername")
       private final @Nullable Output<String> adminUsername;
 
     public Output<String> getAdminUsername() {
@@ -48,7 +48,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * Specifies the computer name prefix for all of the virtual machines in the scale set. Computer name prefixes must be 1 to 15 characters long.
      * 
      */
-    @InputImport(name="computerNamePrefix")
+    @Import(name="computerNamePrefix")
       private final @Nullable Output<String> computerNamePrefix;
 
     public Output<String> getComputerNamePrefix() {
@@ -59,7 +59,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * Specifies a base-64 encoded string of custom data. The base-64 encoded string is decoded to a binary array that is saved as a file on the Virtual Machine. The maximum length of the binary array is 65535 bytes. <br><br> For using cloud-init for your VM, see [Using cloud-init to customize a Linux VM during creation](https://docs.microsoft.com/azure/virtual-machines/linux/using-cloud-init)
      * 
      */
-    @InputImport(name="customData")
+    @Import(name="customData")
       private final @Nullable Output<String> customData;
 
     public Output<String> getCustomData() {
@@ -70,7 +70,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * Specifies the Linux operating system settings on the virtual machine. <br><br>For a list of supported Linux distributions, see [Linux on Azure-Endorsed Distributions](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros).
      * 
      */
-    @InputImport(name="linuxConfiguration")
+    @Import(name="linuxConfiguration")
       private final @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
 
     public Output<LinuxConfigurationArgs> getLinuxConfiguration() {
@@ -81,7 +81,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * Specifies set of certificates that should be installed onto the virtual machines in the scale set. To install certificates on a virtual machine it is recommended to use the [Azure Key Vault virtual machine extension for Linux](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-linux) or the [Azure Key Vault virtual machine extension for Windows](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-windows).
      * 
      */
-    @InputImport(name="secrets")
+    @Import(name="secrets")
       private final @Nullable Output<List<VaultSecretGroupArgs>> secrets;
 
     public Output<List<VaultSecretGroupArgs>> getSecrets() {
@@ -92,7 +92,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * Specifies Windows operating system settings on the virtual machine.
      * 
      */
-    @InputImport(name="windowsConfiguration")
+    @Import(name="windowsConfiguration")
       private final @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
 
     public Output<WindowsConfigurationArgs> getWindowsConfiguration() {

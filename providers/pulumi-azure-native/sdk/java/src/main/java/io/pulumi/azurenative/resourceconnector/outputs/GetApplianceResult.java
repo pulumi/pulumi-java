@@ -6,14 +6,14 @@ package io.pulumi.azurenative.resourceconnector.outputs;
 import io.pulumi.azurenative.resourceconnector.outputs.AppliancePropertiesResponseInfrastructureConfig;
 import io.pulumi.azurenative.resourceconnector.outputs.IdentityResponse;
 import io.pulumi.azurenative.resourceconnector.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApplianceResult {
     /**
      * Represents a supported Fabric/Infra. (AKSEdge etc...).
@@ -81,21 +81,21 @@ public final class GetApplianceResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApplianceResult(
-        @OutputCustomType.Parameter("distro") @Nullable String distro,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
-        @OutputCustomType.Parameter("infrastructureConfig") @Nullable AppliancePropertiesResponseInfrastructureConfig infrastructureConfig,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicKey") @Nullable String publicKey,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("distro") @Nullable String distro,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @CustomType.Parameter("infrastructureConfig") @Nullable AppliancePropertiesResponseInfrastructureConfig infrastructureConfig,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicKey") @Nullable String publicKey,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") String version) {
         this.distro = distro;
         this.id = id;
         this.identity = identity;

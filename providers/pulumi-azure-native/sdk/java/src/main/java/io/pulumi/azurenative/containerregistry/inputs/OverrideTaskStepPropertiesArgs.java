@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.inputs.ArgumentArgs;
 import io.pulumi.azurenative.containerregistry.inputs.SetValueArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
      * executing a build step.
      * 
      */
-    @InputImport(name="arguments")
+    @Import(name="arguments")
       private final @Nullable Output<List<ArgumentArgs>> arguments;
 
     public Output<List<ArgumentArgs>> getArguments() {
@@ -33,7 +33,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
      * The source context against which run has to be queued.
      * 
      */
-    @InputImport(name="contextPath")
+    @Import(name="contextPath")
       private final @Nullable Output<String> contextPath;
 
     public Output<String> getContextPath() {
@@ -44,7 +44,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
      * The file against which run has to be queued.
      * 
      */
-    @InputImport(name="file")
+    @Import(name="file")
       private final @Nullable Output<String> file;
 
     public Output<String> getFile() {
@@ -55,7 +55,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
      * The name of the target build stage for the docker build.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {
@@ -66,7 +66,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
      * Base64 encoded update trigger token that will be attached with the base image trigger webhook.
      * 
      */
-    @InputImport(name="updateTriggerToken")
+    @Import(name="updateTriggerToken")
       private final @Nullable Output<String> updateTriggerToken;
 
     public Output<String> getUpdateTriggerToken() {
@@ -77,7 +77,7 @@ public final class OverrideTaskStepPropertiesArgs extends io.pulumi.resources.Re
      * The collection of overridable values that can be passed when running a Task.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<SetValueArgs>> values;
 
     public Output<List<SetValueArgs>> getValues() {

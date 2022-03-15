@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2BucketResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2BucketingConfigResponse {
     /**
      * Set of buckets. Ranges must be non-overlapping.
@@ -16,8 +16,8 @@ public final class GooglePrivacyDlpV2BucketingConfigResponse {
      */
     private final List<GooglePrivacyDlpV2BucketResponse> buckets;
 
-    @OutputCustomType.Constructor
-    private GooglePrivacyDlpV2BucketingConfigResponse(@OutputCustomType.Parameter("buckets") List<GooglePrivacyDlpV2BucketResponse> buckets) {
+    @CustomType.Constructor
+    private GooglePrivacyDlpV2BucketingConfigResponse(@CustomType.Parameter("buckets") List<GooglePrivacyDlpV2BucketResponse> buckets) {
         this.buckets = buckets;
     }
 

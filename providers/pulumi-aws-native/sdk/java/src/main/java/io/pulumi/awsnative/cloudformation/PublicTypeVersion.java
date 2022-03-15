@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cloudformation.PublicTypeVersionArgs;
 import io.pulumi.awsnative.cloudformation.enums.PublicTypeVersionType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Number (ARN) of the extension.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output</* @Nullable */ String> arn;
 
     /**
@@ -36,7 +36,7 @@ public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
      * A url to the S3 bucket where logs for the testType run will be available
      * 
      */
-    @OutputExport(name="logDeliveryBucket", type=String.class, parameters={})
+    @Export(name="logDeliveryBucket", type=String.class, parameters={})
     private Output</* @Nullable */ String> logDeliveryBucket;
 
     /**
@@ -50,7 +50,7 @@ public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Number (ARN) assigned to the public extension upon publication
      * 
      */
-    @OutputExport(name="publicTypeArn", type=String.class, parameters={})
+    @Export(name="publicTypeArn", type=String.class, parameters={})
     private Output<String> publicTypeArn;
 
     /**
@@ -64,7 +64,7 @@ public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
      * The version number of a public third-party extension
      * 
      */
-    @OutputExport(name="publicVersionNumber", type=String.class, parameters={})
+    @Export(name="publicVersionNumber", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicVersionNumber;
 
     /**
@@ -78,7 +78,7 @@ public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
      * The publisher id assigned by CloudFormation for publishing in this region.
      * 
      */
-    @OutputExport(name="publisherId", type=String.class, parameters={})
+    @Export(name="publisherId", type=String.class, parameters={})
     private Output<String> publisherId;
 
     /**
@@ -92,7 +92,7 @@ public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
      * The kind of extension
      * 
      */
-    @OutputExport(name="type", type=PublicTypeVersionType.class, parameters={})
+    @Export(name="type", type=PublicTypeVersionType.class, parameters={})
     private Output</* @Nullable */ PublicTypeVersionType> type;
 
     /**
@@ -108,7 +108,7 @@ public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
      * We recommend that type names adhere to the following pattern: company_or_organization::service::type.
      * 
      */
-    @OutputExport(name="typeName", type=String.class, parameters={})
+    @Export(name="typeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeName;
 
     /**
@@ -124,7 +124,7 @@ public class PublicTypeVersion extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Number (ARN) of the extension with the versionId.
      * 
      */
-    @OutputExport(name="typeVersionArn", type=String.class, parameters={})
+    @Export(name="typeVersionArn", type=String.class, parameters={})
     private Output<String> typeVersionArn;
 
     /**

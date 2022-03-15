@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appsync.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetDomainNameArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDomainNameArgs Empty = new GetDomainNameArgs();
 
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final String domainName;
 
     public String getDomainName() {

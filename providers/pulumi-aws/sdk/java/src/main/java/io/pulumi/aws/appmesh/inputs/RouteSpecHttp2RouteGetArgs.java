@@ -8,7 +8,7 @@ import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteMatchGetArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteRetryPolicyGetArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteTimeoutGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class RouteSpecHttp2RouteGetArgs extends io.pulumi.resources.Resour
      * The action to take if a match is determined.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<RouteSpecHttp2RouteActionGetArgs> action;
 
     public Output<RouteSpecHttp2RouteActionGetArgs> getAction() {
@@ -32,7 +32,7 @@ public final class RouteSpecHttp2RouteGetArgs extends io.pulumi.resources.Resour
      * The criteria for determining an gRPC request match.
      * 
      */
-    @InputImport(name="match", required=true)
+    @Import(name="match", required=true)
       private final Output<RouteSpecHttp2RouteMatchGetArgs> match;
 
     public Output<RouteSpecHttp2RouteMatchGetArgs> getMatch() {
@@ -43,7 +43,7 @@ public final class RouteSpecHttp2RouteGetArgs extends io.pulumi.resources.Resour
      * The retry policy.
      * 
      */
-    @InputImport(name="retryPolicy")
+    @Import(name="retryPolicy")
       private final @Nullable Output<RouteSpecHttp2RouteRetryPolicyGetArgs> retryPolicy;
 
     public Output<RouteSpecHttp2RouteRetryPolicyGetArgs> getRetryPolicy() {
@@ -54,7 +54,7 @@ public final class RouteSpecHttp2RouteGetArgs extends io.pulumi.resources.Resour
      * The types of timeouts.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<RouteSpecHttp2RouteTimeoutGetArgs> timeout;
 
     public Output<RouteSpecHttp2RouteTimeoutGetArgs> getTimeout() {

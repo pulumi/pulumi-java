@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.EndpointAddressArgs;
 import io.pulumi.kubernetes.core_v1.inputs.EndpointPortArgs;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
      * IP addresses which offer the related ports that are marked as ready. These endpoints should be considered safe for load balancers and clients to utilize.
      * 
      */
-    @InputImport(name="addresses")
+    @Import(name="addresses")
       private final @Nullable Output<List<EndpointAddressArgs>> addresses;
 
     public Output<List<EndpointAddressArgs>> getAddresses() {
@@ -42,7 +42,7 @@ public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
      * IP addresses which offer the related ports but are not currently marked as ready because they have not yet finished starting, have recently failed a readiness check, or have recently failed a liveness check.
      * 
      */
-    @InputImport(name="notReadyAddresses")
+    @Import(name="notReadyAddresses")
       private final @Nullable Output<List<EndpointAddressArgs>> notReadyAddresses;
 
     public Output<List<EndpointAddressArgs>> getNotReadyAddresses() {
@@ -53,7 +53,7 @@ public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
      * Port numbers available on the related IP addresses.
      * 
      */
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable Output<List<EndpointPortArgs>> ports;
 
     public Output<List<EndpointPortArgs>> getPorts() {

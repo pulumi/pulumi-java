@@ -6,7 +6,7 @@ package io.pulumi.awsnative.location;
 import io.pulumi.awsnative.location.enums.MapPricingPlan;
 import io.pulumi.awsnative.location.inputs.MapConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,28 +16,28 @@ public final class MapArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MapArgs Empty = new MapArgs();
 
-    @InputImport(name="configuration", required=true)
+    @Import(name="configuration", required=true)
       private final Output<MapConfigurationArgs> configuration;
 
     public Output<MapConfigurationArgs> getConfiguration() {
         return this.configuration;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="mapName")
+    @Import(name="mapName")
       private final @Nullable Output<String> mapName;
 
     public Output<String> getMapName() {
         return this.mapName == null ? Output.empty() : this.mapName;
     }
 
-    @InputImport(name="pricingPlan")
+    @Import(name="pricingPlan")
       private final @Nullable Output<MapPricingPlan> pricingPlan;
 
     public Output<MapPricingPlan> getPricingPlan() {

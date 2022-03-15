@@ -5,7 +5,7 @@ package io.pulumi.azurenative.peering;
 
 import io.pulumi.azurenative.peering.inputs.PeeringServiceSkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -31,7 +31,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The location (state/province) of the customer.
      * 
      */
-    @InputImport(name="peeringServiceLocation")
+    @Import(name="peeringServiceLocation")
       private final @Nullable Output<String> peeringServiceLocation;
 
     public Output<String> getPeeringServiceLocation() {
@@ -42,7 +42,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the peering service.
      * 
      */
-    @InputImport(name="peeringServiceName")
+    @Import(name="peeringServiceName")
       private final @Nullable Output<String> peeringServiceName;
 
     public Output<String> getPeeringServiceName() {
@@ -53,7 +53,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the service provider.
      * 
      */
-    @InputImport(name="peeringServiceProvider")
+    @Import(name="peeringServiceProvider")
       private final @Nullable Output<String> peeringServiceProvider;
 
     public Output<String> getPeeringServiceProvider() {
@@ -64,7 +64,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The backup peering (Microsoft/service provider) location to be used for customer traffic.
      * 
      */
-    @InputImport(name="providerBackupPeeringLocation")
+    @Import(name="providerBackupPeeringLocation")
       private final @Nullable Output<String> providerBackupPeeringLocation;
 
     public Output<String> getProviderBackupPeeringLocation() {
@@ -75,7 +75,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The primary peering (Microsoft/service provider) location to be used for customer traffic.
      * 
      */
-    @InputImport(name="providerPrimaryPeeringLocation")
+    @Import(name="providerPrimaryPeeringLocation")
       private final @Nullable Output<String> providerPrimaryPeeringLocation;
 
     public Output<String> getProviderPrimaryPeeringLocation() {
@@ -86,7 +86,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -97,7 +97,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU that defines the type of the peering service.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<PeeringServiceSkuArgs> sku;
 
     public Output<PeeringServiceSkuArgs> getSku() {
@@ -108,7 +108,7 @@ public final class PeeringServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

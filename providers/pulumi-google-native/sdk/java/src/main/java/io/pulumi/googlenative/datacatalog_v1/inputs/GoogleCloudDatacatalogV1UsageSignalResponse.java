@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse extends io.pulumi
      * The end timestamp of the duration of usage statistics.
      * 
      */
-    @InputImport(name="updateTime", required=true)
+    @Import(name="updateTime", required=true)
       private final String updateTime;
 
     public String getUpdateTime() {
@@ -32,7 +32,7 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse extends io.pulumi
      * Usage statistics over each of the predefined time ranges. Supported time ranges are `{"24H", "7D", "30D"}`.
      * 
      */
-    @InputImport(name="usageWithinTimeRange", required=true)
+    @Import(name="usageWithinTimeRange", required=true)
       private final Map<String,String> usageWithinTimeRange;
 
     public Map<String,String> getUsageWithinTimeRange() {

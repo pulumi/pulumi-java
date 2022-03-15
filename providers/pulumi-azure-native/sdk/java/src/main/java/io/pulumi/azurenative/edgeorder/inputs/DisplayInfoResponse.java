@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DisplayInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Configuration display name
      * 
      */
-    @InputImport(name="configurationDisplayName", required=true)
+    @Import(name="configurationDisplayName", required=true)
       private final String configurationDisplayName;
 
     public String getConfigurationDisplayName() {
@@ -31,7 +31,7 @@ public final class DisplayInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Product family display name
      * 
      */
-    @InputImport(name="productFamilyDisplayName", required=true)
+    @Import(name="productFamilyDisplayName", required=true)
       private final String productFamilyDisplayName;
 
     public String getProductFamilyDisplayName() {

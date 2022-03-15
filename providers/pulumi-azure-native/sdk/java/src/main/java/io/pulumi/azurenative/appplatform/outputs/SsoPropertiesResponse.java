@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SsoPropertiesResponse {
     /**
      * The public identifier for the application
@@ -33,12 +33,12 @@ public final class SsoPropertiesResponse {
      */
     private final @Nullable List<String> scope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SsoPropertiesResponse(
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
-        @OutputCustomType.Parameter("issuerUri") @Nullable String issuerUri,
-        @OutputCustomType.Parameter("scope") @Nullable List<String> scope) {
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @CustomType.Parameter("issuerUri") @Nullable String issuerUri,
+        @CustomType.Parameter("scope") @Nullable List<String> scope) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.issuerUri = issuerUri;

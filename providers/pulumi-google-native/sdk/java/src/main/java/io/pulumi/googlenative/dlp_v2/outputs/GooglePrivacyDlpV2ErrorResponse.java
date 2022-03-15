@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GoogleRpcStatusResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2ErrorResponse {
     /**
      * Detailed error codes and messages.
@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2ErrorResponse {
      */
     private final List<String> timestamps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2ErrorResponse(
-        @OutputCustomType.Parameter("details") GoogleRpcStatusResponse details,
-        @OutputCustomType.Parameter("timestamps") List<String> timestamps) {
+        @CustomType.Parameter("details") GoogleRpcStatusResponse details,
+        @CustomType.Parameter("timestamps") List<String> timestamps) {
         this.details = details;
         this.timestamps = timestamps;
     }

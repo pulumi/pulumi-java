@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datapipelines_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * Additional experiment flags for the job.
      * 
      */
-    @InputImport(name="additionalExperiments", required=true)
+    @Import(name="additionalExperiments", required=true)
       private final List<String> additionalExperiments;
 
     public List<String> getAdditionalExperiments() {
@@ -35,7 +35,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * Additional user labels to be specified for the job. Keys and values should follow the restrictions specified in the [labeling restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page. An object containing a list of key/value pairs. Example: { "name": "wrench", "mass": "1kg", "count": "3" }.
      * 
      */
-    @InputImport(name="additionalUserLabels", required=true)
+    @Import(name="additionalUserLabels", required=true)
       private final Map<String,String> additionalUserLabels;
 
     public Map<String,String> getAdditionalUserLabels() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * Whether to bypass the safety checks for the job's temporary directory. Use with caution.
      * 
      */
-    @InputImport(name="bypassTempDirValidation", required=true)
+    @Import(name="bypassTempDirValidation", required=true)
       private final Boolean bypassTempDirValidation;
 
     public Boolean getBypassTempDirValidation() {
@@ -57,7 +57,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * Whether to enable Streaming Engine for the job.
      * 
      */
-    @InputImport(name="enableStreamingEngine", required=true)
+    @Import(name="enableStreamingEngine", required=true)
       private final Boolean enableStreamingEngine;
 
     public Boolean getEnableStreamingEngine() {
@@ -68,7 +68,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * Configuration for VM IPs.
      * 
      */
-    @InputImport(name="ipConfiguration", required=true)
+    @Import(name="ipConfiguration", required=true)
       private final String ipConfiguration;
 
     public String getIpConfiguration() {
@@ -79,7 +79,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * Name for the Cloud KMS key for the job. The key format is: projects//locations//keyRings//cryptoKeys/
      * 
      */
-    @InputImport(name="kmsKeyName", required=true)
+    @Import(name="kmsKeyName", required=true)
       private final String kmsKeyName;
 
     public String getKmsKeyName() {
@@ -90,7 +90,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * The machine type to use for the job. Defaults to the value from the template if not specified.
      * 
      */
-    @InputImport(name="machineType", required=true)
+    @Import(name="machineType", required=true)
       private final String machineType;
 
     public String getMachineType() {
@@ -101,7 +101,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * The maximum number of Compute Engine instances to be made available to your pipeline during execution, from 1 to 1000.
      * 
      */
-    @InputImport(name="maxWorkers", required=true)
+    @Import(name="maxWorkers", required=true)
       private final Integer maxWorkers;
 
     public Integer getMaxWorkers() {
@@ -112,7 +112,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * Network to which VMs will be assigned. If empty or unspecified, the service will use the network "default".
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final String network;
 
     public String getNetwork() {
@@ -123,7 +123,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * The initial number of Compute Engine instances for the job.
      * 
      */
-    @InputImport(name="numWorkers", required=true)
+    @Import(name="numWorkers", required=true)
       private final Integer numWorkers;
 
     public Integer getNumWorkers() {
@@ -134,7 +134,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * The email address of the service account to run the job as.
      * 
      */
-    @InputImport(name="serviceAccountEmail", required=true)
+    @Import(name="serviceAccountEmail", required=true)
       private final String serviceAccountEmail;
 
     public String getServiceAccountEmail() {
@@ -145,7 +145,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * Subnetwork to which VMs will be assigned, if desired. You can specify a subnetwork using either a complete URL or an abbreviated path. Expected to be of the form "https://www.googleapis.com/compute/v1/projects/HOST_PROJECT_ID/regions/REGION/subnetworks/SUBNETWORK" or "regions/REGION/subnetworks/SUBNETWORK". If the subnetwork is located in a Shared VPC network, you must use the complete URL.
      * 
      */
-    @InputImport(name="subnetwork", required=true)
+    @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
     public String getSubnetwork() {
@@ -156,7 +156,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * The Cloud Storage path to use for temporary files. Must be a valid Cloud Storage URL, beginning with `gs://`.
      * 
      */
-    @InputImport(name="tempLocation", required=true)
+    @Import(name="tempLocation", required=true)
       private final String tempLocation;
 
     public String getTempLocation() {
@@ -167,7 +167,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * The Compute Engine region (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1". Mutually exclusive with worker_zone. If neither worker_region nor worker_zone is specified, default to the control plane's region.
      * 
      */
-    @InputImport(name="workerRegion", required=true)
+    @Import(name="workerRegion", required=true)
       private final String workerRegion;
 
     public String getWorkerRegion() {
@@ -178,7 +178,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * The Compute Engine zone (https://cloud.google.com/compute/docs/regions-zones/regions-zones) in which worker processing should occur, e.g. "us-west1-a". Mutually exclusive with worker_region. If neither worker_region nor worker_zone is specified, a zone in the control plane's region is chosen based on available capacity. If both `worker_zone` and `zone` are set, `worker_zone` takes precedence.
      * 
      */
-    @InputImport(name="workerZone", required=true)
+    @Import(name="workerZone", required=true)
       private final String workerZone;
 
     public String getWorkerZone() {
@@ -189,7 +189,7 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
      * The Compute Engine [availability zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones) for launching worker instances to run your pipeline. In the future, worker_zone will take precedence.
      * 
      */
-    @InputImport(name="zone", required=true)
+    @Import(name="zone", required=true)
       private final String zone;
 
     public String getZone() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.gkehub.inputs.FeatureStateStateGetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class FeatureStateGetArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final FeatureStateGetArgs Empty = new FeatureStateGetArgs();
 
-    @InputImport(name="states")
+    @Import(name="states")
       private final @Nullable Output<List<FeatureStateStateGetArgs>> states;
 
     public Output<List<FeatureStateStateGetArgs>> getStates() {

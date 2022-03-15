@@ -8,7 +8,7 @@ import io.pulumi.azurenative.batch.inputs.AzureFileShareConfigurationArgs;
 import io.pulumi.azurenative.batch.inputs.CIFSMountConfigurationArgs;
 import io.pulumi.azurenative.batch.inputs.NFSMountConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class MountConfigurationArgs extends io.pulumi.resources.ResourceAr
      * This property is mutually exclusive with all other properties.
      * 
      */
-    @InputImport(name="azureBlobFileSystemConfiguration")
+    @Import(name="azureBlobFileSystemConfiguration")
       private final @Nullable Output<AzureBlobFileSystemConfigurationArgs> azureBlobFileSystemConfiguration;
 
     public Output<AzureBlobFileSystemConfigurationArgs> getAzureBlobFileSystemConfiguration() {
@@ -32,7 +32,7 @@ public final class MountConfigurationArgs extends io.pulumi.resources.ResourceAr
      * This property is mutually exclusive with all other properties.
      * 
      */
-    @InputImport(name="azureFileShareConfiguration")
+    @Import(name="azureFileShareConfiguration")
       private final @Nullable Output<AzureFileShareConfigurationArgs> azureFileShareConfiguration;
 
     public Output<AzureFileShareConfigurationArgs> getAzureFileShareConfiguration() {
@@ -43,7 +43,7 @@ public final class MountConfigurationArgs extends io.pulumi.resources.ResourceAr
      * This property is mutually exclusive with all other properties.
      * 
      */
-    @InputImport(name="cifsMountConfiguration")
+    @Import(name="cifsMountConfiguration")
       private final @Nullable Output<CIFSMountConfigurationArgs> cifsMountConfiguration;
 
     public Output<CIFSMountConfigurationArgs> getCifsMountConfiguration() {
@@ -54,7 +54,7 @@ public final class MountConfigurationArgs extends io.pulumi.resources.ResourceAr
      * This property is mutually exclusive with all other properties.
      * 
      */
-    @InputImport(name="nfsMountConfiguration")
+    @Import(name="nfsMountConfiguration")
       private final @Nullable Output<NFSMountConfigurationArgs> nfsMountConfiguration;
 
     public Output<NFSMountConfigurationArgs> getNfsMountConfiguration() {

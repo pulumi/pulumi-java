@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * The latest data export rule modification time.
      * 
      */
-    @InputImport(name="createdDate")
+    @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
     public Output<String> getCreatedDate() {
@@ -31,7 +31,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * The data export rule ID.
      * 
      */
-    @InputImport(name="dataExportId")
+    @Import(name="dataExportId")
       private final @Nullable Output<String> dataExportId;
 
     public Output<String> getDataExportId() {
@@ -42,7 +42,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * The data export rule name.
      * 
      */
-    @InputImport(name="dataExportName")
+    @Import(name="dataExportName")
       private final @Nullable Output<String> dataExportName;
 
     public Output<String> getDataExportName() {
@@ -53,7 +53,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * Active when enabled.
      * 
      */
-    @InputImport(name="enable")
+    @Import(name="enable")
       private final @Nullable Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
@@ -64,7 +64,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Allows to define an Event Hub name. Not applicable when destination is Storage Account.
      * 
      */
-    @InputImport(name="eventHubName")
+    @Import(name="eventHubName")
       private final @Nullable Output<String> eventHubName;
 
     public Output<String> getEventHubName() {
@@ -75,7 +75,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * Date and time when the export was last modified.
      * 
      */
-    @InputImport(name="lastModifiedDate")
+    @Import(name="lastModifiedDate")
       private final @Nullable Output<String> lastModifiedDate;
 
     public Output<String> getLastModifiedDate() {
@@ -86,7 +86,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -97,7 +97,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -108,7 +108,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * An array of tables to export, for example: [“Heartbeat, SecurityEvent”].
      * 
      */
-    @InputImport(name="tableNames", required=true)
+    @Import(name="tableNames", required=true)
       private final Output<List<String>> tableNames;
 
     public Output<List<String>> getTableNames() {
@@ -119,7 +119,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

@@ -3,20 +3,20 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting {
     private final Integer retainedBackups;
     private final String retentionUnit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting(
-        @OutputCustomType.Parameter("retainedBackups") Integer retainedBackups,
-        @OutputCustomType.Parameter("retentionUnit") String retentionUnit) {
+        @CustomType.Parameter("retainedBackups") Integer retainedBackups,
+        @CustomType.Parameter("retentionUnit") String retentionUnit) {
         this.retainedBackups = retainedBackups;
         this.retentionUnit = retentionUnit;
     }

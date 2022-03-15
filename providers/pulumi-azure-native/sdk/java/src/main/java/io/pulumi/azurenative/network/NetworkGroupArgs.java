@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.GroupMembersItemArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Network group conditional filter.
      * 
      */
-    @InputImport(name="conditionalMembership")
+    @Import(name="conditionalMembership")
       private final @Nullable Output<String> conditionalMembership;
 
     public Output<String> getConditionalMembership() {
@@ -31,7 +31,7 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the network group.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A friendly name for the network group.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -53,7 +53,7 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Group members of network group.
      * 
      */
-    @InputImport(name="groupMembers")
+    @Import(name="groupMembers")
       private final @Nullable Output<List<GroupMembersItemArgs>> groupMembers;
 
     public Output<List<GroupMembersItemArgs>> getGroupMembers() {
@@ -64,7 +64,7 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Group member type.
      * 
      */
-    @InputImport(name="memberType")
+    @Import(name="memberType")
       private final @Nullable Output<String> memberType;
 
     public Output<String> getMemberType() {
@@ -75,7 +75,7 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the network group to get.
      * 
      */
-    @InputImport(name="networkGroupName")
+    @Import(name="networkGroupName")
       private final @Nullable Output<String> networkGroupName;
 
     public Output<String> getNetworkGroupName() {
@@ -86,7 +86,7 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the network manager.
      * 
      */
-    @InputImport(name="networkManagerName", required=true)
+    @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
 
     public Output<String> getNetworkManagerName() {
@@ -97,7 +97,7 @@ public final class NetworkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

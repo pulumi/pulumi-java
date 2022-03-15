@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.ModelDockerSectionResponseResponseBaseImageRegistry;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker extends io.p
      * Base Dockerfile used for Docker-based runs. Mutually exclusive with BaseImage.
      * 
      */
-    @InputImport(name="baseDockerfile")
+    @Import(name="baseDockerfile")
       private final @Nullable String baseDockerfile;
 
     public Optional<String> getBaseDockerfile() {
@@ -34,7 +34,7 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker extends io.p
      * Base image used for Docker-based runs. Mutually exclusive with BaseDockerfile.
      * 
      */
-    @InputImport(name="baseImage")
+    @Import(name="baseImage")
       private final @Nullable String baseImage;
 
     public Optional<String> getBaseImage() {
@@ -45,7 +45,7 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker extends io.p
      * Image registry that contains the base image.
      * 
      */
-    @InputImport(name="baseImageRegistry")
+    @Import(name="baseImageRegistry")
       private final @Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry;
 
     public Optional<ModelDockerSectionResponseResponseBaseImageRegistry> getBaseImageRegistry() {

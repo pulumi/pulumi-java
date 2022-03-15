@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ComputeInstanceConnectivityEndpointsResponse {
     /**
      * Private IP Address of this ComputeInstance (local to the VNET in which the compute instance is deployed).
@@ -20,10 +20,10 @@ public final class ComputeInstanceConnectivityEndpointsResponse {
      */
     private final String publicIpAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComputeInstanceConnectivityEndpointsResponse(
-        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
-        @OutputCustomType.Parameter("publicIpAddress") String publicIpAddress) {
+        @CustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @CustomType.Parameter("publicIpAddress") String publicIpAddress) {
         this.privateIpAddress = privateIpAddress;
         this.publicIpAddress = publicIpAddress;
     }

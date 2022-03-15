@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.KeyToPath;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigMapVolumeSource {
     /**
      * Optional: mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Defaults to 0644. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
@@ -36,12 +36,12 @@ public final class ConfigMapVolumeSource {
      */
     private final @Nullable Boolean optional;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigMapVolumeSource(
-        @OutputCustomType.Parameter("defaultMode") @Nullable Integer defaultMode,
-        @OutputCustomType.Parameter("items") @Nullable List<KeyToPath> items,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("optional") @Nullable Boolean optional) {
+        @CustomType.Parameter("defaultMode") @Nullable Integer defaultMode,
+        @CustomType.Parameter("items") @Nullable List<KeyToPath> items,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("optional") @Nullable Boolean optional) {
         this.defaultMode = defaultMode;
         this.items = items;
         this.name = name;

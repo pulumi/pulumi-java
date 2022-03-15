@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.domainregistration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ListTopLevelDomainAgreementsArgs extends io.pulumi.resources.
      * If <code>true</code>, then the list of agreements will include agreements for domain transfer as well; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="forTransfer")
+    @Import(name="forTransfer")
       private final @Nullable Boolean forTransfer;
 
     public Optional<Boolean> getForTransfer() {
@@ -30,7 +30,7 @@ public final class ListTopLevelDomainAgreementsArgs extends io.pulumi.resources.
      * If <code>true</code>, then the list of agreements will include agreements for domain privacy as well; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="includePrivacy")
+    @Import(name="includePrivacy")
       private final @Nullable Boolean includePrivacy;
 
     public Optional<Boolean> getIncludePrivacy() {
@@ -41,7 +41,7 @@ public final class ListTopLevelDomainAgreementsArgs extends io.pulumi.resources.
      * Name of the top-level domain.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

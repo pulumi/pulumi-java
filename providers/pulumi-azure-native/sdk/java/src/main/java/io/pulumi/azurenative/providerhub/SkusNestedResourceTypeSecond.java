@@ -8,7 +8,7 @@ import io.pulumi.azurenative.providerhub.SkusNestedResourceTypeSecondArgs;
 import io.pulumi.azurenative.providerhub.outputs.SkuResourceResponseProperties;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class SkusNestedResourceTypeSecond extends io.pulumi.resources.CustomReso
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -44,7 +44,7 @@ public class SkusNestedResourceTypeSecond extends io.pulumi.resources.CustomReso
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="properties", type=SkuResourceResponseProperties.class, parameters={})
+    @Export(name="properties", type=SkuResourceResponseProperties.class, parameters={})
     private Output<SkuResourceResponseProperties> properties;
 
     public Output<SkuResourceResponseProperties> getProperties() {
@@ -54,7 +54,7 @@ public class SkusNestedResourceTypeSecond extends io.pulumi.resources.CustomReso
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

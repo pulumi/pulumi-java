@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DomainValidationPropertiesResponse extends io.pulumi.resource
      * The date time that the token expires
      * 
      */
-    @InputImport(name="expirationDate", required=true)
+    @Import(name="expirationDate", required=true)
       private final String expirationDate;
 
     public String getExpirationDate() {
@@ -31,7 +31,7 @@ public final class DomainValidationPropertiesResponse extends io.pulumi.resource
      * Challenge used for DNS TXT record or file based validation
      * 
      */
-    @InputImport(name="validationToken", required=true)
+    @Import(name="validationToken", required=true)
       private final String validationToken;
 
     public String getValidationToken() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.s3.MultiRegionAccessPointPolicyArgs;
 import io.pulumi.awsnative.s3.outputs.PolicyStatusProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -23,7 +23,7 @@ public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomReso
      * The name of the Multi Region Access Point to apply policy
      * 
      */
-    @OutputExport(name="mrapName", type=String.class, parameters={})
+    @Export(name="mrapName", type=String.class, parameters={})
     private Output<String> mrapName;
 
     /**
@@ -37,7 +37,7 @@ public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomReso
      * Policy document to apply to a Multi Region Access Point
      * 
      */
-    @OutputExport(name="policy", type=Object.class, parameters={})
+    @Export(name="policy", type=Object.class, parameters={})
     private Output<Object> policy;
 
     /**
@@ -51,7 +51,7 @@ public class MultiRegionAccessPointPolicy extends io.pulumi.resources.CustomReso
      * The Policy Status associated with this Multi Region Access Point
      * 
      */
-    @OutputExport(name="policyStatus", type=PolicyStatusProperties.class, parameters={})
+    @Export(name="policyStatus", type=PolicyStatusProperties.class, parameters={})
     private Output<PolicyStatusProperties> policyStatus;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
      * The default branch for the Git repository.
      * 
      */
-    @InputImport(name="branch")
+    @Import(name="branch")
       private final @Nullable Output<String> branch;
 
     public Output<String> getBranch() {
@@ -29,7 +29,7 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
      * The URL where the Git repository is located.
      * 
      */
-    @InputImport(name="repositoryUrl", required=true)
+    @Import(name="repositoryUrl", required=true)
       private final Output<String> repositoryUrl;
 
     public Output<String> getRepositoryUrl() {
@@ -40,7 +40,7 @@ public final class CodeRepositoryGitConfigGetArgs extends io.pulumi.resources.Re
      * The Amazon Resource Name (ARN) of the AWS Secrets Manager secret that contains the credentials used to access the git repository. The secret must have a staging label of AWSCURRENT and must be in the following format: `{"username": UserName, "password": Password}`
      * 
      */
-    @InputImport(name="secretArn")
+    @Import(name="secretArn")
       private final @Nullable Output<String> secretArn;
 
     public Output<String> getSecretArn() {

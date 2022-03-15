@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.RollingUpdateDeployment;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentStrategy {
     /**
      * Rolling update config params. Present only if DeploymentStrategyType = RollingUpdate.
@@ -23,10 +23,10 @@ public final class DeploymentStrategy {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentStrategy(
-        @OutputCustomType.Parameter("rollingUpdate") @Nullable RollingUpdateDeployment rollingUpdate,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("rollingUpdate") @Nullable RollingUpdateDeployment rollingUpdate,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.rollingUpdate = rollingUpdate;
         this.type = type;
     }

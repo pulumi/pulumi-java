@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class UserProfileCustomImageArgs extends io.pulumi.resources.Resour
      * The Name of the AppImageConfig.
      * 
      */
-    @InputImport(name="appImageConfigName", required=true)
+    @Import(name="appImageConfigName", required=true)
       private final Output<String> appImageConfigName;
 
     public Output<String> getAppImageConfigName() {
@@ -34,7 +34,7 @@ public final class UserProfileCustomImageArgs extends io.pulumi.resources.Resour
      * The name of the CustomImage. Must be unique to your account.
      * 
      */
-    @InputImport(name="imageName", required=true)
+    @Import(name="imageName", required=true)
       private final Output<String> imageName;
 
     public Output<String> getImageName() {
@@ -45,7 +45,7 @@ public final class UserProfileCustomImageArgs extends io.pulumi.resources.Resour
      * The version number of the CustomImage.
      * 
      */
-    @InputImport(name="imageVersionNumber")
+    @Import(name="imageVersionNumber")
       private final @Nullable Output<Integer> imageVersionNumber;
 
     public Output<Integer> getImageVersionNumber() {

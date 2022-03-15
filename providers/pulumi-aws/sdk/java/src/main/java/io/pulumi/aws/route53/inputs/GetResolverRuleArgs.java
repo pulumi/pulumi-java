@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.route53.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetResolverRuleArgs extends io.pulumi.resources.InvokeArgs {
      * The domain name the desired resolver rule forwards DNS queries for. Conflicts with `resolver_rule_id`.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable String domainName;
 
     public Optional<String> getDomainName() {
@@ -30,7 +30,7 @@ public final class GetResolverRuleArgs extends io.pulumi.resources.InvokeArgs {
      * The friendly name of the desired resolver rule. Conflicts with `resolver_rule_id`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -41,7 +41,7 @@ public final class GetResolverRuleArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the outbound resolver endpoint of the desired resolver rule. Conflicts with `resolver_rule_id`.
      * 
      */
-    @InputImport(name="resolverEndpointId")
+    @Import(name="resolverEndpointId")
       private final @Nullable String resolverEndpointId;
 
     public Optional<String> getResolverEndpointId() {
@@ -52,7 +52,7 @@ public final class GetResolverRuleArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the desired resolver rule. Conflicts with `domain_name`, `name`, `resolver_endpoint_id` and `rule_type`.
      * 
      */
-    @InputImport(name="resolverRuleId")
+    @Import(name="resolverRuleId")
       private final @Nullable String resolverRuleId;
 
     public Optional<String> getResolverRuleId() {
@@ -63,7 +63,7 @@ public final class GetResolverRuleArgs extends io.pulumi.resources.InvokeArgs {
      * The rule type of the desired resolver rule. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`. Conflicts with `resolver_rule_id`.
      * 
      */
-    @InputImport(name="ruleType")
+    @Import(name="ruleType")
       private final @Nullable String ruleType;
 
     public Optional<String> getRuleType() {
@@ -74,7 +74,7 @@ public final class GetResolverRuleArgs extends io.pulumi.resources.InvokeArgs {
      * A map of tags assigned to the resolver rule.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerOutlierDetectionIntervalArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionArgs extends io.pulumi
      * The base amount of time for which a host is ejected.
      * 
      */
-    @InputImport(name="baseEjectionDuration", required=true)
+    @Import(name="baseEjectionDuration", required=true)
       private final Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationArgs> baseEjectionDuration;
 
     public Output<VirtualNodeSpecListenerOutlierDetectionBaseEjectionDurationArgs> getBaseEjectionDuration() {
@@ -30,7 +30,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionArgs extends io.pulumi
      * The time interval between ejection sweep analysis.
      * 
      */
-    @InputImport(name="interval", required=true)
+    @Import(name="interval", required=true)
       private final Output<VirtualNodeSpecListenerOutlierDetectionIntervalArgs> interval;
 
     public Output<VirtualNodeSpecListenerOutlierDetectionIntervalArgs> getInterval() {
@@ -42,7 +42,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionArgs extends io.pulumi
      * Minimum value of `0`. Maximum value of `100`.
      * 
      */
-    @InputImport(name="maxEjectionPercent", required=true)
+    @Import(name="maxEjectionPercent", required=true)
       private final Output<Integer> maxEjectionPercent;
 
     public Output<Integer> getMaxEjectionPercent() {
@@ -53,7 +53,7 @@ public final class VirtualNodeSpecListenerOutlierDetectionArgs extends io.pulumi
      * Number of consecutive `5xx` errors required for ejection. Minimum value of `1`.
      * 
      */
-    @InputImport(name="maxServerErrors", required=true)
+    @Import(name="maxServerErrors", required=true)
       private final Output<Integer> maxServerErrors;
 
     public Output<Integer> getMaxServerErrors() {

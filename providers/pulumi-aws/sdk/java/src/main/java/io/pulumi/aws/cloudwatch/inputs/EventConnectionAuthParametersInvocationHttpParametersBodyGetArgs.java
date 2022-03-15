@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EventConnectionAuthParametersInvocationHttpParametersBodyGetA
      * Specified whether the value is secret.
      * 
      */
-    @InputImport(name="isValueSecret")
+    @Import(name="isValueSecret")
       private final @Nullable Output<Boolean> isValueSecret;
 
     public Output<Boolean> getIsValueSecret() {
@@ -30,7 +30,7 @@ public final class EventConnectionAuthParametersInvocationHttpParametersBodyGetA
      * Header Name.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -41,7 +41,7 @@ public final class EventConnectionAuthParametersInvocationHttpParametersBodyGetA
      * Header Value. Created and stored in AWS Secrets Manager.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

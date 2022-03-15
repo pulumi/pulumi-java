@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearning.outputs.BlobLocationResponse;
 import io.pulumi.azurenative.machinelearning.outputs.InputPortResponse;
 import io.pulumi.azurenative.machinelearning.outputs.ModuleAssetParameterResponse;
 import io.pulumi.azurenative.machinelearning.outputs.OutputPortResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssetItemResponse {
     /**
      * Asset's Id.
@@ -58,16 +58,16 @@ public final class AssetItemResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssetItemResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("inputPorts") @Nullable Map<String,InputPortResponse> inputPorts,
-        @OutputCustomType.Parameter("locationInfo") BlobLocationResponse locationInfo,
-        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputPorts") @Nullable Map<String,OutputPortResponse> outputPorts,
-        @OutputCustomType.Parameter("parameters") @Nullable List<ModuleAssetParameterResponse> parameters,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("inputPorts") @Nullable Map<String,InputPortResponse> inputPorts,
+        @CustomType.Parameter("locationInfo") BlobLocationResponse locationInfo,
+        @CustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputPorts") @Nullable Map<String,OutputPortResponse> outputPorts,
+        @CustomType.Parameter("parameters") @Nullable List<ModuleAssetParameterResponse> parameters,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.inputPorts = inputPorts;
         this.locationInfo = locationInfo;

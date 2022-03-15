@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.inputs.BasicLevelArgs;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.inputs.CustomLevelArgs;
 import java.lang.String;
@@ -16,7 +16,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AccessLevelArgs Empty = new AccessLevelArgs();
 
-    @InputImport(name="accessPolicyId", required=true)
+    @Import(name="accessPolicyId", required=true)
       private final Output<String> accessPolicyId;
 
     public Output<String> getAccessPolicyId() {
@@ -27,7 +27,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * A `BasicLevel` composed of `Conditions`.
      * 
      */
-    @InputImport(name="basic")
+    @Import(name="basic")
       private final @Nullable Output<BasicLevelArgs> basic;
 
     public Output<BasicLevelArgs> getBasic() {
@@ -38,7 +38,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * A `CustomLevel` written in the Common Expression Language.
      * 
      */
-    @InputImport(name="custom")
+    @Import(name="custom")
       private final @Nullable Output<CustomLevelArgs> custom;
 
     public Output<CustomLevelArgs> getCustom() {
@@ -49,7 +49,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the `AccessLevel` and its use. Does not affect behavior.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -60,7 +60,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * Resource name for the Access Level. The `short_name` component must begin with a letter and only include alphanumeric and '_'. Format: `accessPolicies/{policy_id}/accessLevels/{short_name}`. The maximum length // of the `short_name` component is 50 characters.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -71,7 +71,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * Human readable title. Must be unique within the Policy.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {

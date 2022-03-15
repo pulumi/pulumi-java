@@ -9,7 +9,7 @@ import io.pulumi.azurenative.databoxedge.outputs.EdgeProfileResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource 
      * Edge Profile of the resource
      * 
      */
-    @OutputExport(name="edgeProfile", type=EdgeProfileResponse.class, parameters={})
+    @Export(name="edgeProfile", type=EdgeProfileResponse.class, parameters={})
     private Output<EdgeProfileResponse> edgeProfile;
 
     /**
@@ -51,7 +51,7 @@ public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource 
      * Expected value is 'CloudEdgeManagement'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -66,7 +66,7 @@ public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource 
      * Local Edge Management Status
      * 
      */
-    @OutputExport(name="localManagementStatus", type=String.class, parameters={})
+    @Export(name="localManagementStatus", type=String.class, parameters={})
     private Output<String> localManagementStatus;
 
     /**
@@ -80,7 +80,7 @@ public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource 
      * The object name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource 
      * Role status.
      * 
      */
-    @OutputExport(name="roleStatus", type=String.class, parameters={})
+    @Export(name="roleStatus", type=String.class, parameters={})
     private Output<String> roleStatus;
 
     /**
@@ -108,7 +108,7 @@ public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource 
      * Role configured on ASE resource
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -122,7 +122,7 @@ public class CloudEdgeManagementRole extends io.pulumi.resources.CustomResource 
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -10,7 +10,7 @@ import io.pulumi.awsnative.applicationinsights.outputs.ApplicationCustomComponen
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationLogPatternSet;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,7 +27,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The ARN of the ApplicationInsights application.
      * 
      */
-    @OutputExport(name="applicationARN", type=String.class, parameters={})
+    @Export(name="applicationARN", type=String.class, parameters={})
     private Output<String> applicationARN;
 
     /**
@@ -41,7 +41,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * If set to true, application will be configured with recommended monitoring configuration.
      * 
      */
-    @OutputExport(name="autoConfigurationEnabled", type=Boolean.class, parameters={})
+    @Export(name="autoConfigurationEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoConfigurationEnabled;
 
     /**
@@ -55,7 +55,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Indicates whether Application Insights can listen to CloudWatch events for the application resources.
      * 
      */
-    @OutputExport(name="cWEMonitorEnabled", type=Boolean.class, parameters={})
+    @Export(name="cWEMonitorEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> cWEMonitorEnabled;
 
     /**
@@ -69,7 +69,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The monitoring settings of the components.
      * 
      */
-    @OutputExport(name="componentMonitoringSettings", type=List.class, parameters={ApplicationComponentMonitoringSetting.class})
+    @Export(name="componentMonitoringSettings", type=List.class, parameters={ApplicationComponentMonitoringSetting.class})
     private Output</* @Nullable */ List<ApplicationComponentMonitoringSetting>> componentMonitoringSettings;
 
     /**
@@ -83,7 +83,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The custom grouped components.
      * 
      */
-    @OutputExport(name="customComponents", type=List.class, parameters={ApplicationCustomComponent.class})
+    @Export(name="customComponents", type=List.class, parameters={ApplicationCustomComponent.class})
     private Output</* @Nullable */ List<ApplicationCustomComponent>> customComponents;
 
     /**
@@ -97,7 +97,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The log pattern sets.
      * 
      */
-    @OutputExport(name="logPatternSets", type=List.class, parameters={ApplicationLogPatternSet.class})
+    @Export(name="logPatternSets", type=List.class, parameters={ApplicationLogPatternSet.class})
     private Output</* @Nullable */ List<ApplicationLogPatternSet>> logPatternSets;
 
     /**
@@ -111,7 +111,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * When set to true, creates opsItems for any problems detected on an application.
      * 
      */
-    @OutputExport(name="opsCenterEnabled", type=Boolean.class, parameters={})
+    @Export(name="opsCenterEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> opsCenterEnabled;
 
     /**
@@ -125,7 +125,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The SNS topic provided to Application Insights that is associated to the created opsItem.
      * 
      */
-    @OutputExport(name="opsItemSNSTopicArn", type=String.class, parameters={})
+    @Export(name="opsItemSNSTopicArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> opsItemSNSTopicArn;
 
     /**
@@ -139,7 +139,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The name of the resource group.
      * 
      */
-    @OutputExport(name="resourceGroupName", type=String.class, parameters={})
+    @Export(name="resourceGroupName", type=String.class, parameters={})
     private Output<String> resourceGroupName;
 
     /**
@@ -153,7 +153,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The tags of Application Insights application.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ApplicationTag.class})
+    @Export(name="tags", type=List.class, parameters={ApplicationTag.class})
     private Output</* @Nullable */ List<ApplicationTag>> tags;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
      * Description of the provisioning artifact (i.e., version), including how it differs from the previous provisioning artifact.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
      * Whether AWS Service Catalog stops validating the specified provisioning artifact template even if it is invalid.
      * 
      */
-    @InputImport(name="disableTemplateValidation")
+    @Import(name="disableTemplateValidation")
       private final @Nullable Output<Boolean> disableTemplateValidation;
 
     public Output<Boolean> getDisableTemplateValidation() {
@@ -41,7 +41,7 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
      * Name of the provisioning artifact (for example, `v1`, `v2beta`). No spaces are allowed.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
      * Template source as the physical ID of the resource that contains the template. Currently only supports CloudFormation stack ARN. Specify the physical ID as `arn:[partition]:cloudformation:[region]:[account ID]:stack/[stack name]/[resource ID]`.
      * 
      */
-    @InputImport(name="templatePhysicalId")
+    @Import(name="templatePhysicalId")
       private final @Nullable Output<String> templatePhysicalId;
 
     public Output<String> getTemplatePhysicalId() {
@@ -63,7 +63,7 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
      * Template source as URL of the CloudFormation template in Amazon S3.
      * 
      */
-    @InputImport(name="templateUrl")
+    @Import(name="templateUrl")
       private final @Nullable Output<String> templateUrl;
 
     public Output<String> getTemplateUrl() {
@@ -74,7 +74,7 @@ public final class ProductProvisioningArtifactParametersGetArgs extends io.pulum
      * Type of provisioning artifact. Valid values: `CLOUD_FORMATION_TEMPLATE`, `MARKETPLACE_AMI`, `MARKETPLACE_CAR` (Marketplace Clusters and AWS Resources).
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

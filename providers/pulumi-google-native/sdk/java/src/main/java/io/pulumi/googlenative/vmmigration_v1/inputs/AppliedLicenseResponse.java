@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AppliedLicenseResponse extends io.pulumi.resources.InvokeArgs
      * The OS license returned from the adaptation module's report.
      * 
      */
-    @InputImport(name="osLicense", required=true)
+    @Import(name="osLicense", required=true)
       private final String osLicense;
 
     public String getOsLicense() {
@@ -31,7 +31,7 @@ public final class AppliedLicenseResponse extends io.pulumi.resources.InvokeArgs
      * The license type that was used in OS adaptation.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

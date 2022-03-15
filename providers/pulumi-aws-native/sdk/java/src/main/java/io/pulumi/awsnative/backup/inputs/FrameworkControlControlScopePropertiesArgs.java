@@ -5,7 +5,7 @@ package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.awsnative.backup.inputs.FrameworkTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FrameworkControlControlScopePropertiesArgs extends io.pulumi.
      * The ID of the only AWS resource that you want your control scope to contain.
      * 
      */
-    @InputImport(name="complianceResourceIds")
+    @Import(name="complianceResourceIds")
       private final @Nullable Output<List<String>> complianceResourceIds;
 
     public Output<List<String>> getComplianceResourceIds() {
@@ -35,7 +35,7 @@ public final class FrameworkControlControlScopePropertiesArgs extends io.pulumi.
      * Describes whether the control scope includes one or more types of resources, such as `EFS` or `RDS`.
      * 
      */
-    @InputImport(name="complianceResourceTypes")
+    @Import(name="complianceResourceTypes")
       private final @Nullable Output<List<String>> complianceResourceTypes;
 
     public Output<List<String>> getComplianceResourceTypes() {
@@ -46,7 +46,7 @@ public final class FrameworkControlControlScopePropertiesArgs extends io.pulumi.
      * Describes whether the control scope includes resources with one or more tags. Each tag is a key-value pair.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<FrameworkTagArgs>> tags;
 
     public Output<List<FrameworkTagArgs>> getTags() {

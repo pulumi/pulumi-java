@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PlanQuantityResponse {
     /**
      * The quantity added to the commitment plan at an interval specified by its allowance frequency.
@@ -31,12 +31,12 @@ public final class PlanQuantityResponse {
      */
     private final String overageMeter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PlanQuantityResponse(
-        @OutputCustomType.Parameter("allowance") Double allowance,
-        @OutputCustomType.Parameter("amount") Double amount,
-        @OutputCustomType.Parameter("includedQuantityMeter") String includedQuantityMeter,
-        @OutputCustomType.Parameter("overageMeter") String overageMeter) {
+        @CustomType.Parameter("allowance") Double allowance,
+        @CustomType.Parameter("amount") Double amount,
+        @CustomType.Parameter("includedQuantityMeter") String includedQuantityMeter,
+        @CustomType.Parameter("overageMeter") String overageMeter) {
         this.allowance = allowance;
         this.amount = amount;
         this.includedQuantityMeter = includedQuantityMeter;

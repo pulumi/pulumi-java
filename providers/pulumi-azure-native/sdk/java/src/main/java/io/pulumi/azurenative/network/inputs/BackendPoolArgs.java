@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.BackendArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The set of backends for this pool
      * 
      */
-    @InputImport(name="backends")
+    @Import(name="backends")
       private final @Nullable Output<List<BackendArgs>> backends;
 
     public Output<List<BackendArgs>> getBackends() {
@@ -36,7 +36,7 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
      * L7 health probe settings for a backend pool
      * 
      */
-    @InputImport(name="healthProbeSettings")
+    @Import(name="healthProbeSettings")
       private final @Nullable Output<SubResourceArgs> healthProbeSettings;
 
     public Output<SubResourceArgs> getHealthProbeSettings() {
@@ -47,7 +47,7 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -58,7 +58,7 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Load balancing settings for a backend pool
      * 
      */
-    @InputImport(name="loadBalancingSettings")
+    @Import(name="loadBalancingSettings")
       private final @Nullable Output<SubResourceArgs> loadBalancingSettings;
 
     public Output<SubResourceArgs> getLoadBalancingSettings() {
@@ -69,7 +69,7 @@ public final class BackendPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Resource name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

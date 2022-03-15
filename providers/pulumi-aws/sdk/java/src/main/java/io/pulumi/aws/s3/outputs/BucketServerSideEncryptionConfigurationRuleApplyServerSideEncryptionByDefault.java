@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault {
     /**
      * The AWS KMS master key ID used for the SSE-KMS encryption. This can only be used when you set the value of `sse_algorithm` as `aws:kms`. The default `aws/s3` AWS KMS master key is used if this element is absent while the `sse_algorithm` is `aws:kms`.
@@ -22,10 +22,10 @@ public final class BucketServerSideEncryptionConfigurationRuleApplyServerSideEnc
      */
     private final String sseAlgorithm;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault(
-        @OutputCustomType.Parameter("kmsMasterKeyId") @Nullable String kmsMasterKeyId,
-        @OutputCustomType.Parameter("sseAlgorithm") String sseAlgorithm) {
+        @CustomType.Parameter("kmsMasterKeyId") @Nullable String kmsMasterKeyId,
+        @CustomType.Parameter("sseAlgorithm") String sseAlgorithm) {
         this.kmsMasterKeyId = kmsMasterKeyId;
         this.sseAlgorithm = sseAlgorithm;
     }

@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.nimblestudio.outputs;
 
 import io.pulumi.awsnative.nimblestudio.outputs.StudioEncryptionConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStudioResult {
     /**
      * <p>The IAM role that Studio Admins will assume when logging in to the Nimble Studio portal.</p>
@@ -45,16 +45,16 @@ public final class GetStudioResult {
      */
     private final @Nullable String userRoleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStudioResult(
-        @OutputCustomType.Parameter("adminRoleArn") @Nullable String adminRoleArn,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("homeRegion") @Nullable String homeRegion,
-        @OutputCustomType.Parameter("ssoClientId") @Nullable String ssoClientId,
-        @OutputCustomType.Parameter("studioEncryptionConfiguration") @Nullable StudioEncryptionConfiguration studioEncryptionConfiguration,
-        @OutputCustomType.Parameter("studioId") @Nullable String studioId,
-        @OutputCustomType.Parameter("studioUrl") @Nullable String studioUrl,
-        @OutputCustomType.Parameter("userRoleArn") @Nullable String userRoleArn) {
+        @CustomType.Parameter("adminRoleArn") @Nullable String adminRoleArn,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("homeRegion") @Nullable String homeRegion,
+        @CustomType.Parameter("ssoClientId") @Nullable String ssoClientId,
+        @CustomType.Parameter("studioEncryptionConfiguration") @Nullable StudioEncryptionConfiguration studioEncryptionConfiguration,
+        @CustomType.Parameter("studioId") @Nullable String studioId,
+        @CustomType.Parameter("studioUrl") @Nullable String studioUrl,
+        @CustomType.Parameter("userRoleArn") @Nullable String userRoleArn) {
         this.adminRoleArn = adminRoleArn;
         this.displayName = displayName;
         this.homeRegion = homeRegion;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.documentdb.inputs.ConflictResolutionPolicyResponse;
 import io.pulumi.azurenative.documentdb.inputs.ContainerPartitionKeyResponse;
 import io.pulumi.azurenative.documentdb.inputs.IndexingPolicyResponse;
 import io.pulumi.azurenative.documentdb.inputs.UniqueKeyPolicyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * Analytical TTL.
      * 
      */
-    @InputImport(name="analyticalStorageTtl")
+    @Import(name="analyticalStorageTtl")
       private final @Nullable Double analyticalStorageTtl;
 
     public Optional<Double> getAnalyticalStorageTtl() {
@@ -35,7 +35,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * The conflict resolution policy for the container.
      * 
      */
-    @InputImport(name="conflictResolutionPolicy")
+    @Import(name="conflictResolutionPolicy")
       private final @Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy;
 
     public Optional<ConflictResolutionPolicyResponse> getConflictResolutionPolicy() {
@@ -46,7 +46,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * Default time to live
      * 
      */
-    @InputImport(name="defaultTtl")
+    @Import(name="defaultTtl")
       private final @Nullable Integer defaultTtl;
 
     public Optional<Integer> getDefaultTtl() {
@@ -57,7 +57,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * A system generated property representing the resource etag required for optimistic concurrency control.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -68,7 +68,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * Name of the Cosmos DB SQL container
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -79,7 +79,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * The configuration of the indexing policy. By default, the indexing is automatic for all document paths within the container
      * 
      */
-    @InputImport(name="indexingPolicy")
+    @Import(name="indexingPolicy")
       private final @Nullable IndexingPolicyResponse indexingPolicy;
 
     public Optional<IndexingPolicyResponse> getIndexingPolicy() {
@@ -90,7 +90,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * The configuration of the partition key to be used for partitioning data into multiple partitions
      * 
      */
-    @InputImport(name="partitionKey")
+    @Import(name="partitionKey")
       private final @Nullable ContainerPartitionKeyResponse partitionKey;
 
     public Optional<ContainerPartitionKeyResponse> getPartitionKey() {
@@ -101,7 +101,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * A system generated property. A unique identifier.
      * 
      */
-    @InputImport(name="rid", required=true)
+    @Import(name="rid", required=true)
       private final String rid;
 
     public String getRid() {
@@ -112,7 +112,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * A system generated property that denotes the last updated timestamp of the resource.
      * 
      */
-    @InputImport(name="ts", required=true)
+    @Import(name="ts", required=true)
       private final Double ts;
 
     public Double getTs() {
@@ -123,7 +123,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure Cosmos DB service.
      * 
      */
-    @InputImport(name="uniqueKeyPolicy")
+    @Import(name="uniqueKeyPolicy")
       private final @Nullable UniqueKeyPolicyResponse uniqueKeyPolicy;
 
     public Optional<UniqueKeyPolicyResponse> getUniqueKeyPolicy() {

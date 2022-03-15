@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.enums.ProtectionStatus;
 import io.pulumi.azurenative.recoveryservices.enums.WorkloadItemType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
      * Type of backup management for the backed up item.
      * 
      */
-    @InputImport(name="backupManagementType")
+    @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
     public Output<Either<String,BackupManagementType>> getBackupManagementType() {
@@ -37,7 +37,7 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
      * ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
      * 
      */
-    @InputImport(name="itemId")
+    @Import(name="itemId")
       private final @Nullable Output<String> itemId;
 
     public Output<String> getItemId() {
@@ -48,7 +48,7 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
      * ID of the backup policy with which this item is backed up.
      * 
      */
-    @InputImport(name="policyId")
+    @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {
@@ -60,7 +60,7 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
      * Expected value is 'AzureWorkloadSQLAutoProtectionIntent'.
      * 
      */
-    @InputImport(name="protectionIntentItemType", required=true)
+    @Import(name="protectionIntentItemType", required=true)
       private final Output<String> protectionIntentItemType;
 
     public Output<String> getProtectionIntentItemType() {
@@ -71,7 +71,7 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
      * Backup state of this backup item.
      * 
      */
-    @InputImport(name="protectionState")
+    @Import(name="protectionState")
       private final @Nullable Output<Either<String,ProtectionStatus>> protectionState;
 
     public Output<Either<String,ProtectionStatus>> getProtectionState() {
@@ -82,7 +82,7 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
      * ARM ID of the resource to be backed up.
      * 
      */
-    @InputImport(name="sourceResourceId")
+    @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
 
     public Output<String> getSourceResourceId() {
@@ -93,7 +93,7 @@ public final class AzureWorkloadSQLAutoProtectionIntentArgs extends io.pulumi.re
      * Workload item type of the item for which intent is to be set
      * 
      */
-    @InputImport(name="workloadItemType")
+    @Import(name="workloadItemType")
       private final @Nullable Output<Either<String,WorkloadItemType>> workloadItemType;
 
     public Output<Either<String,WorkloadItemType>> getWorkloadItemType() {

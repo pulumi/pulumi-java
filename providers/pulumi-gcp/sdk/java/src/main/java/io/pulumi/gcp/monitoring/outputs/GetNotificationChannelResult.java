@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.monitoring.outputs.GetNotificationChannelSensitiveLabel;
 import java.lang.Boolean;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNotificationChannelResult {
     private final String description;
     private final @Nullable String displayName;
@@ -31,19 +31,19 @@ public final class GetNotificationChannelResult {
     private final @Nullable Map<String,String> userLabels;
     private final String verificationStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNotificationChannelResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("sensitiveLabels") List<GetNotificationChannelSensitiveLabel> sensitiveLabels,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("userLabels") @Nullable Map<String,String> userLabels,
-        @OutputCustomType.Parameter("verificationStatus") String verificationStatus) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("sensitiveLabels") List<GetNotificationChannelSensitiveLabel> sensitiveLabels,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("userLabels") @Nullable Map<String,String> userLabels,
+        @CustomType.Parameter("verificationStatus") String verificationStatus) {
         this.description = description;
         this.displayName = displayName;
         this.enabled = enabled;

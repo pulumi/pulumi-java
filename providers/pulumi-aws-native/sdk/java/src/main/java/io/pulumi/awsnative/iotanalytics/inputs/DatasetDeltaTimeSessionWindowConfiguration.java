@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class DatasetDeltaTimeSessionWindowConfiguration extends io.pulumi.
 
     public static final DatasetDeltaTimeSessionWindowConfiguration Empty = new DatasetDeltaTimeSessionWindowConfiguration();
 
-    @InputImport(name="timeoutInMinutes", required=true)
+    @Import(name="timeoutInMinutes", required=true)
       private final Integer timeoutInMinutes;
 
     public Integer getTimeoutInMinutes() {

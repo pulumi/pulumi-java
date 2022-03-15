@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
      * Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    @InputImport(name="acceptLanguage")
+    @Import(name="acceptLanguage")
       private final @Nullable String acceptLanguage;
 
     public Optional<String> getAcceptLanguage() {
@@ -30,7 +30,7 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
      * Product ID.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -41,7 +41,7 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
      * Tags to apply to the product.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

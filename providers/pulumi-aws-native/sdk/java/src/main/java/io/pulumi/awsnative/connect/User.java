@@ -9,7 +9,7 @@ import io.pulumi.awsnative.connect.outputs.UserIdentityInfo;
 import io.pulumi.awsnative.connect.outputs.UserPhoneConfig;
 import io.pulumi.awsnative.connect.outputs.UserTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The identifier of the user account in the directory used for identity management.
      * 
      */
-    @OutputExport(name="directoryUserId", type=String.class, parameters={})
+    @Export(name="directoryUserId", type=String.class, parameters={})
     private Output</* @Nullable */ String> directoryUserId;
 
     /**
@@ -39,7 +39,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The identifier of the hierarchy group for the user.
      * 
      */
-    @OutputExport(name="hierarchyGroupArn", type=String.class, parameters={})
+    @Export(name="hierarchyGroupArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> hierarchyGroupArn;
 
     /**
@@ -53,7 +53,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The information about the identity of the user.
      * 
      */
-    @OutputExport(name="identityInfo", type=UserIdentityInfo.class, parameters={})
+    @Export(name="identityInfo", type=UserIdentityInfo.class, parameters={})
     private Output</* @Nullable */ UserIdentityInfo> identityInfo;
 
     /**
@@ -67,7 +67,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The identifier of the Amazon Connect instance.
      * 
      */
-    @OutputExport(name="instanceArn", type=String.class, parameters={})
+    @Export(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
     /**
@@ -81,7 +81,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The password for the user account. A password is required if you are using Amazon Connect for identity management. Otherwise, it is an error to include a password.
      * 
      */
-    @OutputExport(name="password", type=String.class, parameters={})
+    @Export(name="password", type=String.class, parameters={})
     private Output</* @Nullable */ String> password;
 
     /**
@@ -95,7 +95,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The phone settings for the user.
      * 
      */
-    @OutputExport(name="phoneConfig", type=UserPhoneConfig.class, parameters={})
+    @Export(name="phoneConfig", type=UserPhoneConfig.class, parameters={})
     private Output<UserPhoneConfig> phoneConfig;
 
     /**
@@ -109,7 +109,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The identifier of the routing profile for the user.
      * 
      */
-    @OutputExport(name="routingProfileArn", type=String.class, parameters={})
+    @Export(name="routingProfileArn", type=String.class, parameters={})
     private Output<String> routingProfileArn;
 
     /**
@@ -123,7 +123,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * One or more security profile arns for the user
      * 
      */
-    @OutputExport(name="securityProfileArns", type=List.class, parameters={String.class})
+    @Export(name="securityProfileArns", type=List.class, parameters={String.class})
     private Output<List<String>> securityProfileArns;
 
     /**
@@ -137,7 +137,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * One or more tags.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={UserTag.class})
+    @Export(name="tags", type=List.class, parameters={UserTag.class})
     private Output</* @Nullable */ List<UserTag>> tags;
 
     /**
@@ -151,7 +151,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the user.
      * 
      */
-    @OutputExport(name="userArn", type=String.class, parameters={})
+    @Export(name="userArn", type=String.class, parameters={})
     private Output<String> userArn;
 
     /**
@@ -165,7 +165,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The user name for the account.
      * 
      */
-    @OutputExport(name="username", type=String.class, parameters={})
+    @Export(name="username", type=String.class, parameters={})
     private Output<String> username;
 
     /**

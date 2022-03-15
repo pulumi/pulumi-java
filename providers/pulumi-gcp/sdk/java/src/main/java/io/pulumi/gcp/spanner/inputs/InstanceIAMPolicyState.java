@@ -4,7 +4,7 @@
 package io.pulumi.gcp.spanner.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
      * (Computed) The etag of the instance's IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -29,7 +29,7 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
      * The name of the instance.
      * 
      */
-    @InputImport(name="instance")
+    @Import(name="instance")
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
@@ -41,7 +41,7 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @InputImport(name="policyData")
+    @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
     public Output<String> getPolicyData() {
@@ -53,7 +53,7 @@ public final class InstanceIAMPolicyState extends io.pulumi.resources.ResourceAr
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

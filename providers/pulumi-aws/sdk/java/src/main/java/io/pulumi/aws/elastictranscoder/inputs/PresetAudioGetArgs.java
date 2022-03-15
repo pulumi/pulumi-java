@@ -4,7 +4,7 @@
 package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PresetAudioGetArgs extends io.pulumi.resources.ResourceArgs {
      * The method of organizing audio channels and tracks. Use Audio:Channels to specify the number of channels in your output, and Audio:AudioPackingMode to specify the number of tracks and their relation to the channels. If you do not specify an Audio:AudioPackingMode, Elastic Transcoder uses SingleTrack.
      * 
      */
-    @InputImport(name="audioPackingMode")
+    @Import(name="audioPackingMode")
       private final @Nullable Output<String> audioPackingMode;
 
     public Output<String> getAudioPackingMode() {
@@ -29,7 +29,7 @@ public final class PresetAudioGetArgs extends io.pulumi.resources.ResourceArgs {
      * The bit rate of the audio stream in the output file, in kilobits/second. Enter an integer between 64 and 320, inclusive.
      * 
      */
-    @InputImport(name="bitRate")
+    @Import(name="bitRate")
       private final @Nullable Output<String> bitRate;
 
     public Output<String> getBitRate() {
@@ -40,7 +40,7 @@ public final class PresetAudioGetArgs extends io.pulumi.resources.ResourceArgs {
      * The number of audio channels in the output file
      * 
      */
-    @InputImport(name="channels")
+    @Import(name="channels")
       private final @Nullable Output<String> channels;
 
     public Output<String> getChannels() {
@@ -51,7 +51,7 @@ public final class PresetAudioGetArgs extends io.pulumi.resources.ResourceArgs {
      * The audio codec for the output file. Valid values are `AAC`, `flac`, `mp2`, `mp3`, `pcm`, and `vorbis`.
      * 
      */
-    @InputImport(name="codec")
+    @Import(name="codec")
       private final @Nullable Output<String> codec;
 
     public Output<String> getCodec() {
@@ -62,7 +62,7 @@ public final class PresetAudioGetArgs extends io.pulumi.resources.ResourceArgs {
      * The sample rate of the audio stream in the output file, in hertz. Valid values are: `auto`, `22050`, `32000`, `44100`, `48000`, `96000`
      * 
      */
-    @InputImport(name="sampleRate")
+    @Import(name="sampleRate")
       private final @Nullable Output<String> sampleRate;
 
     public Output<String> getSampleRate() {

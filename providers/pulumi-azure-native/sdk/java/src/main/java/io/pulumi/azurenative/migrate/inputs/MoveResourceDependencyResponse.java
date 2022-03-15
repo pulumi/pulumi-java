@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.AutomaticResolutionPropertiesResponse;
 import io.pulumi.azurenative.migrate.inputs.ManualResolutionPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
      * Defines the properties for automatic resolution.
      * 
      */
-    @InputImport(name="automaticResolution")
+    @Import(name="automaticResolution")
       private final @Nullable AutomaticResolutionPropertiesResponse automaticResolution;
 
     public Optional<AutomaticResolutionPropertiesResponse> getAutomaticResolution() {
@@ -35,7 +35,7 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
      * Defines the dependency type.
      * 
      */
-    @InputImport(name="dependencyType")
+    @Import(name="dependencyType")
       private final @Nullable String dependencyType;
 
     public Optional<String> getDependencyType() {
@@ -46,7 +46,7 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
      * Gets the source ARM ID of the dependent resource.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -57,7 +57,7 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
      * Gets or sets a value indicating whether the dependency is optional.
      * 
      */
-    @InputImport(name="isOptional")
+    @Import(name="isOptional")
       private final @Nullable String isOptional;
 
     public Optional<String> getIsOptional() {
@@ -68,7 +68,7 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
      * Defines the properties for manual resolution.
      * 
      */
-    @InputImport(name="manualResolution")
+    @Import(name="manualResolution")
       private final @Nullable ManualResolutionPropertiesResponse manualResolution;
 
     public Optional<ManualResolutionPropertiesResponse> getManualResolution() {
@@ -79,7 +79,7 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
      * Gets the dependency resolution status.
      * 
      */
-    @InputImport(name="resolutionStatus")
+    @Import(name="resolutionStatus")
       private final @Nullable String resolutionStatus;
 
     public Optional<String> getResolutionStatus() {
@@ -90,7 +90,7 @@ public final class MoveResourceDependencyResponse extends io.pulumi.resources.In
      * Defines the resolution type.
      * 
      */
-    @InputImport(name="resolutionType")
+    @Import(name="resolutionType")
       private final @Nullable String resolutionType;
 
     public Optional<String> getResolutionType() {

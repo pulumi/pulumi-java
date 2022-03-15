@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datashare.InvitationArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Invitation extends io.pulumi.resources.CustomResource {
      * The expiration date for the invitation and share subscription.
      * 
      */
-    @OutputExport(name="expirationDate", type=String.class, parameters={})
+    @Export(name="expirationDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> expirationDate;
 
     /**
@@ -49,7 +49,7 @@ public class Invitation extends io.pulumi.resources.CustomResource {
      * unique invitation id
      * 
      */
-    @OutputExport(name="invitationId", type=String.class, parameters={})
+    @Export(name="invitationId", type=String.class, parameters={})
     private Output<String> invitationId;
 
     /**
@@ -63,7 +63,7 @@ public class Invitation extends io.pulumi.resources.CustomResource {
      * The status of the invitation.
      * 
      */
-    @OutputExport(name="invitationStatus", type=String.class, parameters={})
+    @Export(name="invitationStatus", type=String.class, parameters={})
     private Output<String> invitationStatus;
 
     /**
@@ -77,7 +77,7 @@ public class Invitation extends io.pulumi.resources.CustomResource {
      * Name of the azure resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class Invitation extends io.pulumi.resources.CustomResource {
      * The time the recipient responded to the invitation.
      * 
      */
-    @OutputExport(name="respondedAt", type=String.class, parameters={})
+    @Export(name="respondedAt", type=String.class, parameters={})
     private Output<String> respondedAt;
 
     /**
@@ -105,7 +105,7 @@ public class Invitation extends io.pulumi.resources.CustomResource {
      * Gets the time at which the invitation was sent.
      * 
      */
-    @OutputExport(name="sentAt", type=String.class, parameters={})
+    @Export(name="sentAt", type=String.class, parameters={})
     private Output<String> sentAt;
 
     /**
@@ -119,7 +119,7 @@ public class Invitation extends io.pulumi.resources.CustomResource {
      * System Data of the Azure resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -133,7 +133,7 @@ public class Invitation extends io.pulumi.resources.CustomResource {
      * The target Azure AD Id. Can't be combined with email.
      * 
      */
-    @OutputExport(name="targetActiveDirectoryId", type=String.class, parameters={})
+    @Export(name="targetActiveDirectoryId", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetActiveDirectoryId;
 
     /**
@@ -147,7 +147,7 @@ public class Invitation extends io.pulumi.resources.CustomResource {
      * The email the invitation is directed to.
      * 
      */
-    @OutputExport(name="targetEmail", type=String.class, parameters={})
+    @Export(name="targetEmail", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetEmail;
 
     /**
@@ -163,7 +163,7 @@ public class Invitation extends io.pulumi.resources.CustomResource {
      * invitations to specific users or applications in an AD tenant.
      * 
      */
-    @OutputExport(name="targetObjectId", type=String.class, parameters={})
+    @Export(name="targetObjectId", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetObjectId;
 
     /**
@@ -179,7 +179,7 @@ public class Invitation extends io.pulumi.resources.CustomResource {
      * Type of the azure resource
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -193,7 +193,7 @@ public class Invitation extends io.pulumi.resources.CustomResource {
      * Email of the user who created the resource
      * 
      */
-    @OutputExport(name="userEmail", type=String.class, parameters={})
+    @Export(name="userEmail", type=String.class, parameters={})
     private Output<String> userEmail;
 
     /**
@@ -207,7 +207,7 @@ public class Invitation extends io.pulumi.resources.CustomResource {
      * Name of the user who created the resource
      * 
      */
-    @OutputExport(name="userName", type=String.class, parameters={})
+    @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**

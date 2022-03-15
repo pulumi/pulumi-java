@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1beta1.inputs.ManagedPrometheusConfigArgs;
 import io.pulumi.googlenative.container_v1beta1.inputs.MonitoringComponentConfigArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * Monitoring components configuration
      * 
      */
-    @InputImport(name="componentConfig")
+    @Import(name="componentConfig")
       private final @Nullable Output<MonitoringComponentConfigArgs> componentConfig;
 
     public Output<MonitoringComponentConfigArgs> getComponentConfig() {
@@ -34,7 +34,7 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
      * Enable Google Cloud Managed Service for Prometheus in the cluster.
      * 
      */
-    @InputImport(name="managedPrometheusConfig")
+    @Import(name="managedPrometheusConfig")
       private final @Nullable Output<ManagedPrometheusConfigArgs> managedPrometheusConfig;
 
     public Output<ManagedPrometheusConfigArgs> getManagedPrometheusConfig() {

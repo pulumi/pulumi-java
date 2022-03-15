@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.OrphanedUserInfoResponse;
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
 import io.pulumi.azurenative.datamigration.inputs.StartMigrationScenarioServerRoleResultResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * Selected agent jobs as a map from name to id
      * 
      */
-    @InputImport(name="agentJobs", required=true)
+    @Import(name="agentJobs", required=true)
       private final Map<String,String> agentJobs;
 
     public Map<String,String> getAgentJobs() {
@@ -32,7 +32,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * Selected databases as a map from database name to database id
      * 
      */
-    @InputImport(name="databases", required=true)
+    @Import(name="databases", required=true)
       private final Map<String,String> databases;
 
     public Map<String,String> getDatabases() {
@@ -43,7 +43,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * Migration end time
      * 
      */
-    @InputImport(name="endedOn", required=true)
+    @Import(name="endedOn", required=true)
       private final String endedOn;
 
     public String getEndedOn() {
@@ -54,7 +54,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * Migration exceptions and warnings.
      * 
      */
-    @InputImport(name="exceptionsAndWarnings", required=true)
+    @Import(name="exceptionsAndWarnings", required=true)
       private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
@@ -65,7 +65,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -76,7 +76,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * Selected logins as a map from name to id
      * 
      */
-    @InputImport(name="logins", required=true)
+    @Import(name="logins", required=true)
       private final Map<String,String> logins;
 
     public Map<String,String> getLogins() {
@@ -87,7 +87,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * Migration progress message
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -98,7 +98,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * List of orphaned users.
      * 
      */
-    @InputImport(name="orphanedUsersInfo", required=true)
+    @Import(name="orphanedUsersInfo", required=true)
       private final List<OrphanedUserInfoResponse> orphanedUsersInfo;
 
     public List<OrphanedUserInfoResponse> getOrphanedUsersInfo() {
@@ -110,7 +110,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * Expected value is 'MigrationLevelOutput'.
      * 
      */
-    @InputImport(name="resultType", required=true)
+    @Import(name="resultType", required=true)
       private final String resultType;
 
     public String getResultType() {
@@ -121,7 +121,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * Map of server role migration results.
      * 
      */
-    @InputImport(name="serverRoleResults", required=true)
+    @Import(name="serverRoleResults", required=true)
       private final Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults;
 
     public Map<String,StartMigrationScenarioServerRoleResultResponse> getServerRoleResults() {
@@ -132,7 +132,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * Source server brand version
      * 
      */
-    @InputImport(name="sourceServerBrandVersion", required=true)
+    @Import(name="sourceServerBrandVersion", required=true)
       private final String sourceServerBrandVersion;
 
     public String getSourceServerBrandVersion() {
@@ -143,7 +143,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * Source server version
      * 
      */
-    @InputImport(name="sourceServerVersion", required=true)
+    @Import(name="sourceServerVersion", required=true)
       private final String sourceServerVersion;
 
     public String getSourceServerVersion() {
@@ -154,7 +154,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * Migration start time
      * 
      */
-    @InputImport(name="startedOn", required=true)
+    @Import(name="startedOn", required=true)
       private final String startedOn;
 
     public String getStartedOn() {
@@ -165,7 +165,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * Current state of migration
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -176,7 +176,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * Current status of migration
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -187,7 +187,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * Target server brand version
      * 
      */
-    @InputImport(name="targetServerBrandVersion", required=true)
+    @Import(name="targetServerBrandVersion", required=true)
       private final String targetServerBrandVersion;
 
     public String getTargetServerBrandVersion() {
@@ -198,7 +198,7 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse extends
      * Target server version
      * 
      */
-    @InputImport(name="targetServerVersion", required=true)
+    @Import(name="targetServerVersion", required=true)
       private final String targetServerVersion;
 
     public String getTargetServerVersion() {

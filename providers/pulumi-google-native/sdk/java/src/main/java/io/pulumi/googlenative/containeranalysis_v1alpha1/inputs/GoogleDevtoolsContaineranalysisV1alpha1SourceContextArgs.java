@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs;
@@ -26,7 +26,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
      * A SourceContext referring to a revision in a Google Cloud Source Repo.
      * 
      */
-    @InputImport(name="cloudRepo")
+    @Import(name="cloudRepo")
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> cloudRepo;
 
     public Output<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> getCloudRepo() {
@@ -37,7 +37,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
      * A SourceContext referring to a Gerrit project.
      * 
      */
-    @InputImport(name="gerrit")
+    @Import(name="gerrit")
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> gerrit;
 
     public Output<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> getGerrit() {
@@ -48,7 +48,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
      * A SourceContext referring to any third party Git repo (e.g., GitHub).
      * 
      */
-    @InputImport(name="git")
+    @Import(name="git")
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> git;
 
     public Output<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> getGit() {
@@ -59,7 +59,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
      * Labels with user defined metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {

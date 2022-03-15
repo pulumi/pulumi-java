@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.enums.InfrastructureConfigurationInstanceMetadataOptionsHttpTokens;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InfrastructureConfigurationInstanceMetadataOptions {
     /**
      * Limit the number of hops that an instance metadata request can traverse to reach its destination.
@@ -23,10 +23,10 @@ public final class InfrastructureConfigurationInstanceMetadataOptions {
      */
     private final @Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InfrastructureConfigurationInstanceMetadataOptions(
-        @OutputCustomType.Parameter("httpPutResponseHopLimit") @Nullable Integer httpPutResponseHopLimit,
-        @OutputCustomType.Parameter("httpTokens") @Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens) {
+        @CustomType.Parameter("httpPutResponseHopLimit") @Nullable Integer httpPutResponseHopLimit,
+        @CustomType.Parameter("httpTokens") @Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens) {
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         this.httpTokens = httpTokens;
     }

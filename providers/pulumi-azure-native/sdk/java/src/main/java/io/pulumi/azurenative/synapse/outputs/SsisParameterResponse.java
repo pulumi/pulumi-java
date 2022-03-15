@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SsisParameterResponse {
     /**
      * Parameter type.
@@ -74,20 +74,20 @@ public final class SsisParameterResponse {
      */
     private final @Nullable String variable;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SsisParameterResponse(
-        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
-        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("designDefaultValue") @Nullable String designDefaultValue,
-        @OutputCustomType.Parameter("id") @Nullable Double id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("required") @Nullable Boolean required,
-        @OutputCustomType.Parameter("sensitive") @Nullable Boolean sensitive,
-        @OutputCustomType.Parameter("sensitiveDefaultValue") @Nullable String sensitiveDefaultValue,
-        @OutputCustomType.Parameter("valueSet") @Nullable Boolean valueSet,
-        @OutputCustomType.Parameter("valueType") @Nullable String valueType,
-        @OutputCustomType.Parameter("variable") @Nullable String variable) {
+        @CustomType.Parameter("dataType") @Nullable String dataType,
+        @CustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("designDefaultValue") @Nullable String designDefaultValue,
+        @CustomType.Parameter("id") @Nullable Double id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("required") @Nullable Boolean required,
+        @CustomType.Parameter("sensitive") @Nullable Boolean sensitive,
+        @CustomType.Parameter("sensitiveDefaultValue") @Nullable String sensitiveDefaultValue,
+        @CustomType.Parameter("valueSet") @Nullable Boolean valueSet,
+        @CustomType.Parameter("valueType") @Nullable String valueType,
+        @CustomType.Parameter("variable") @Nullable String variable) {
         this.dataType = dataType;
         this.defaultValue = defaultValue;
         this.description = description;

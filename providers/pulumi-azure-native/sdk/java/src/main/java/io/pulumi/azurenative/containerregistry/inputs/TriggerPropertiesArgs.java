@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.inputs.BaseImageTriggerArgs;
 import io.pulumi.azurenative.containerregistry.inputs.SourceTriggerArgs;
 import io.pulumi.azurenative.containerregistry.inputs.TimerTriggerArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
      * The trigger based on base image dependencies.
      * 
      */
-    @InputImport(name="baseImageTrigger")
+    @Import(name="baseImageTrigger")
       private final @Nullable Output<BaseImageTriggerArgs> baseImageTrigger;
 
     public Output<BaseImageTriggerArgs> getBaseImageTrigger() {
@@ -36,7 +36,7 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
      * The collection of triggers based on source code repository.
      * 
      */
-    @InputImport(name="sourceTriggers")
+    @Import(name="sourceTriggers")
       private final @Nullable Output<List<SourceTriggerArgs>> sourceTriggers;
 
     public Output<List<SourceTriggerArgs>> getSourceTriggers() {
@@ -47,7 +47,7 @@ public final class TriggerPropertiesArgs extends io.pulumi.resources.ResourceArg
      * The collection of timer triggers.
      * 
      */
-    @InputImport(name="timerTriggers")
+    @Import(name="timerTriggers")
       private final @Nullable Output<List<TimerTriggerArgs>> timerTriggers;
 
     public Output<List<TimerTriggerArgs>> getTimerTriggers() {

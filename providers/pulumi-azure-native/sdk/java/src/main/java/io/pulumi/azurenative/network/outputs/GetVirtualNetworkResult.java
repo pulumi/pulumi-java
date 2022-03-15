@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkBgpCommunitiesResponse;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkPeeringResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualNetworkResult {
     /**
      * The AddressSpace that contains an array of IP address ranges that can be used by subnets.
@@ -112,26 +112,26 @@ public final class GetVirtualNetworkResult {
      */
     private final @Nullable List<VirtualNetworkPeeringResponse> virtualNetworkPeerings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualNetworkResult(
-        @OutputCustomType.Parameter("addressSpace") @Nullable AddressSpaceResponse addressSpace,
-        @OutputCustomType.Parameter("bgpCommunities") @Nullable VirtualNetworkBgpCommunitiesResponse bgpCommunities,
-        @OutputCustomType.Parameter("ddosProtectionPlan") @Nullable SubResourceResponse ddosProtectionPlan,
-        @OutputCustomType.Parameter("dhcpOptions") @Nullable DhcpOptionsResponse dhcpOptions,
-        @OutputCustomType.Parameter("enableDdosProtection") @Nullable Boolean enableDdosProtection,
-        @OutputCustomType.Parameter("enableVmProtection") @Nullable Boolean enableVmProtection,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ipAllocations") @Nullable List<SubResourceResponse> ipAllocations,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
-        @OutputCustomType.Parameter("subnets") @Nullable List<SubnetResponse> subnets,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualNetworkPeerings") @Nullable List<VirtualNetworkPeeringResponse> virtualNetworkPeerings) {
+        @CustomType.Parameter("addressSpace") @Nullable AddressSpaceResponse addressSpace,
+        @CustomType.Parameter("bgpCommunities") @Nullable VirtualNetworkBgpCommunitiesResponse bgpCommunities,
+        @CustomType.Parameter("ddosProtectionPlan") @Nullable SubResourceResponse ddosProtectionPlan,
+        @CustomType.Parameter("dhcpOptions") @Nullable DhcpOptionsResponse dhcpOptions,
+        @CustomType.Parameter("enableDdosProtection") @Nullable Boolean enableDdosProtection,
+        @CustomType.Parameter("enableVmProtection") @Nullable Boolean enableVmProtection,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ipAllocations") @Nullable List<SubResourceResponse> ipAllocations,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceGuid") String resourceGuid,
+        @CustomType.Parameter("subnets") @Nullable List<SubnetResponse> subnets,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualNetworkPeerings") @Nullable List<VirtualNetworkPeeringResponse> virtualNetworkPeerings) {
         this.addressSpace = addressSpace;
         this.bgpCommunities = bgpCommunities;
         this.ddosProtectionPlan = ddosProtectionPlan;

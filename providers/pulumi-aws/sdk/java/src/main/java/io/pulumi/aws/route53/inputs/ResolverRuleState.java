@@ -5,7 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.aws.route53.inputs.ResolverRuleTargetIpGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * The ARN (Amazon Resource Name) for the resolver rule.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * DNS queries for this domain name are forwarded to the IP addresses that are specified using `target_ip`.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -43,7 +43,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * A friendly name that lets you easily find a rule in the Resolver dashboard in the Route 53 console.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * When a rule is shared with another AWS account, the account ID of the account that the rule is shared with.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -66,7 +66,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * This argument should only be specified for `FORWARD` type rules.
      * 
      */
-    @InputImport(name="resolverEndpointId")
+    @Import(name="resolverEndpointId")
       private final @Nullable Output<String> resolverEndpointId;
 
     public Output<String> getResolverEndpointId() {
@@ -77,7 +77,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * The rule type. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`.
      * 
      */
-    @InputImport(name="ruleType")
+    @Import(name="ruleType")
       private final @Nullable Output<String> ruleType;
 
     public Output<String> getRuleType() {
@@ -89,7 +89,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
      * 
      */
-    @InputImport(name="shareStatus")
+    @Import(name="shareStatus")
       private final @Nullable Output<String> shareStatus;
 
     public Output<String> getShareStatus() {
@@ -100,7 +100,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -111,7 +111,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -123,7 +123,7 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
      * This argument should only be specified for `FORWARD` type rules.
      * 
      */
-    @InputImport(name="targetIps")
+    @Import(name="targetIps")
       private final @Nullable Output<List<ResolverRuleTargetIpGetArgs>> targetIps;
 
     public Output<List<ResolverRuleTargetIpGetArgs>> getTargetIps() {

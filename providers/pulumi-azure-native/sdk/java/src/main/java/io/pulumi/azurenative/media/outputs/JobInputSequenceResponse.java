@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.JobInputClipResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobInputSequenceResponse {
     /**
      * JobInputs that make up the timeline.
@@ -24,10 +24,10 @@ public final class JobInputSequenceResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobInputSequenceResponse(
-        @OutputCustomType.Parameter("inputs") @Nullable List<JobInputClipResponse> inputs,
-        @OutputCustomType.Parameter("odataType") String odataType) {
+        @CustomType.Parameter("inputs") @Nullable List<JobInputClipResponse> inputs,
+        @CustomType.Parameter("odataType") String odataType) {
         this.inputs = inputs;
         this.odataType = odataType;
     }

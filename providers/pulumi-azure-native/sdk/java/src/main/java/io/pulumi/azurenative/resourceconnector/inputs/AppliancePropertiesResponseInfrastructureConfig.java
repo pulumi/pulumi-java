@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resourceconnector.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AppliancePropertiesResponseInfrastructureConfig extends io.pu
      * Information about the connected appliance.
      * 
      */
-    @InputImport(name="provider")
+    @Import(name="provider")
       private final @Nullable String provider;
 
     public Optional<String> getProvider() {

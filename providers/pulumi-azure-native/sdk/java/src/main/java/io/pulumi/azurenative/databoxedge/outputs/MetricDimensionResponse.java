@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MetricDimensionResponse {
     /**
      * The dimension value.
@@ -20,10 +20,10 @@ public final class MetricDimensionResponse {
      */
     private final String sourceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricDimensionResponse(
-        @OutputCustomType.Parameter("sourceName") String sourceName,
-        @OutputCustomType.Parameter("sourceType") String sourceType) {
+        @CustomType.Parameter("sourceName") String sourceName,
+        @CustomType.Parameter("sourceType") String sourceType) {
         this.sourceName = sourceName;
         this.sourceType = sourceType;
     }

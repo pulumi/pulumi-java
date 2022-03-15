@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.schemas.SchemaArgs;
 import io.pulumi.aws.schemas.inputs.SchemaState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -35,7 +35,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the discoverer.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The schema specification. Must be a valid Open API 3.0 spec.
      * 
      */
-    @OutputExport(name="content", type=String.class, parameters={})
+    @Export(name="content", type=String.class, parameters={})
     private Output<String> content;
 
     /**
@@ -63,7 +63,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The description of the schema. Maximum of 256 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -77,7 +77,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The last modified date of the schema.
      * 
      */
-    @OutputExport(name="lastModified", type=String.class, parameters={})
+    @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
@@ -91,7 +91,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The name of the schema. Maximum of 385 characters consisting of lower case letters, upper case letters, ., -, _, @.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The name of the registry in which this schema belongs.
      * 
      */
-    @OutputExport(name="registryName", type=String.class, parameters={})
+    @Export(name="registryName", type=String.class, parameters={})
     private Output<String> registryName;
 
     /**
@@ -119,7 +119,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -133,7 +133,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -147,7 +147,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The type of the schema. Valid values: `OpenApi3`.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -161,7 +161,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The version of the schema.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**
@@ -175,7 +175,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The created date of the version of the schema.
      * 
      */
-    @OutputExport(name="versionCreatedDate", type=String.class, parameters={})
+    @Export(name="versionCreatedDate", type=String.class, parameters={})
     private Output<String> versionCreatedDate;
 
     /**

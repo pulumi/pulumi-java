@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wisdom.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetAssistantAssociationArgs extends io.pulumi.resources.Invok
 
     public static final GetAssistantAssociationArgs Empty = new GetAssistantAssociationArgs();
 
-    @InputImport(name="assistantAssociationId", required=true)
+    @Import(name="assistantAssociationId", required=true)
       private final String assistantAssociationId;
 
     public String getAssistantAssociationId() {
         return this.assistantAssociationId;
     }
 
-    @InputImport(name="assistantId", required=true)
+    @Import(name="assistantId", required=true)
       private final String assistantId;
 
     public String getAssistantId() {

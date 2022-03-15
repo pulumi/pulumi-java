@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScaleCapacityResponse {
     /**
      * the number of instances that will be set if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default.
@@ -25,11 +25,11 @@ public final class ScaleCapacityResponse {
      */
     private final String minimum;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScaleCapacityResponse(
-        @OutputCustomType.Parameter("default") String $default,
-        @OutputCustomType.Parameter("maximum") String maximum,
-        @OutputCustomType.Parameter("minimum") String minimum) {
+        @CustomType.Parameter("default") String $default,
+        @CustomType.Parameter("maximum") String maximum,
+        @CustomType.Parameter("minimum") String minimum) {
         this.$default = $default;
         this.maximum = maximum;
         this.minimum = minimum;

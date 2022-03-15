@@ -5,13 +5,13 @@ package io.pulumi.azurenative.logz.outputs;
 
 import io.pulumi.azurenative.logz.outputs.LogRulesResponse;
 import io.pulumi.azurenative.logz.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MonitoringTagRulesPropertiesResponse {
     /**
      * Set of rules for sending logs for the Monitor resource.
@@ -29,11 +29,11 @@ public final class MonitoringTagRulesPropertiesResponse {
      */
     private final SystemDataResponse systemData;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MonitoringTagRulesPropertiesResponse(
-        @OutputCustomType.Parameter("logRules") @Nullable LogRulesResponse logRules,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData) {
+        @CustomType.Parameter("logRules") @Nullable LogRulesResponse logRules,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData) {
         this.logRules = logRules;
         this.provisioningState = provisioningState;
         this.systemData = systemData;

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ObjectFieldSelector;
 import io.pulumi.kubernetes.core_v1.outputs.ResourceFieldSelector;
 import java.lang.Integer;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DownwardAPIVolumeFile {
     /**
      * Required: Selects a field of the pod: only annotations, labels, name and namespace are supported.
@@ -35,12 +35,12 @@ public final class DownwardAPIVolumeFile {
      */
     private final @Nullable ResourceFieldSelector resourceFieldRef;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DownwardAPIVolumeFile(
-        @OutputCustomType.Parameter("fieldRef") @Nullable ObjectFieldSelector fieldRef,
-        @OutputCustomType.Parameter("mode") @Nullable Integer mode,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("resourceFieldRef") @Nullable ResourceFieldSelector resourceFieldRef) {
+        @CustomType.Parameter("fieldRef") @Nullable ObjectFieldSelector fieldRef,
+        @CustomType.Parameter("mode") @Nullable Integer mode,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("resourceFieldRef") @Nullable ResourceFieldSelector resourceFieldRef) {
         this.fieldRef = fieldRef;
         this.mode = mode;
         this.path = path;

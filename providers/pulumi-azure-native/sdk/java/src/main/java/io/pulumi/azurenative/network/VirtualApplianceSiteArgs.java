@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.Office365PolicyPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * Address Prefix.
      * 
      */
-    @InputImport(name="addressPrefix")
+    @Import(name="addressPrefix")
       private final @Nullable Output<String> addressPrefix;
 
     public Output<String> getAddressPrefix() {
@@ -30,7 +30,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -41,7 +41,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * Name of the virtual appliance site.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * The name of the Network Virtual Appliance.
      * 
      */
-    @InputImport(name="networkVirtualApplianceName", required=true)
+    @Import(name="networkVirtualApplianceName", required=true)
       private final Output<String> networkVirtualApplianceName;
 
     public Output<String> getNetworkVirtualApplianceName() {
@@ -63,7 +63,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * Office 365 Policy.
      * 
      */
-    @InputImport(name="o365Policy")
+    @Import(name="o365Policy")
       private final @Nullable Output<Office365PolicyPropertiesArgs> o365Policy;
 
     public Output<Office365PolicyPropertiesArgs> getO365Policy() {
@@ -74,7 +74,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -85,7 +85,7 @@ public final class VirtualApplianceSiteArgs extends io.pulumi.resources.Resource
      * The name of the site.
      * 
      */
-    @InputImport(name="siteName")
+    @Import(name="siteName")
       private final @Nullable Output<String> siteName;
 
     public Output<String> getSiteName() {

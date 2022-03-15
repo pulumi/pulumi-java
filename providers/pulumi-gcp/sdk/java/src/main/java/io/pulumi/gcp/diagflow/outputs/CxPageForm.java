@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.diagflow.outputs.CxPageFormParameter;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CxPageForm {
     /**
      * Parameters to collect from the user.
@@ -18,8 +18,8 @@ public final class CxPageForm {
      */
     private final @Nullable List<CxPageFormParameter> parameters;
 
-    @OutputCustomType.Constructor
-    private CxPageForm(@OutputCustomType.Parameter("parameters") @Nullable List<CxPageFormParameter> parameters) {
+    @CustomType.Constructor
+    private CxPageForm(@CustomType.Parameter("parameters") @Nullable List<CxPageFormParameter> parameters) {
         this.parameters = parameters;
     }
 

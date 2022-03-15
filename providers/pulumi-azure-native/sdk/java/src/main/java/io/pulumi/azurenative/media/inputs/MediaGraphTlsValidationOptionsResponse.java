@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MediaGraphTlsValidationOptionsResponse extends io.pulumi.reso
      * Ignore the host name (common name) during validation.
      * 
      */
-    @InputImport(name="ignoreHostname", required=true)
+    @Import(name="ignoreHostname", required=true)
       private final Boolean ignoreHostname;
 
     public Boolean getIgnoreHostname() {
@@ -31,7 +31,7 @@ public final class MediaGraphTlsValidationOptionsResponse extends io.pulumi.reso
      * Ignore the integrity of the certificate chain at the current time.
      * 
      */
-    @InputImport(name="ignoreSignature", required=true)
+    @Import(name="ignoreSignature", required=true)
       private final Boolean ignoreSignature;
 
     public Boolean getIgnoreSignature() {

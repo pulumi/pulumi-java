@@ -6,11 +6,11 @@ import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.OutputTests;
 import io.pulumi.core.Tuples;
-import io.pulumi.core.annotations.InputImport;
-import io.pulumi.core.annotations.OutputCustomType;
-import io.pulumi.core.annotations.OutputCustomType.Constructor;
-import io.pulumi.core.annotations.OutputCustomType.Parameter;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.CustomType;
+import io.pulumi.core.annotations.CustomType.Constructor;
+import io.pulumi.core.annotations.CustomType.Parameter;
+import io.pulumi.core.annotations.Export;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.internal.DeploymentTests;
@@ -183,7 +183,7 @@ public class MocksTest {
 
     @ResourceType(type = "aws:ec2/instance:Instance")
     public static class Instance extends CustomResource {
-        @OutputExport(type = String.class)
+        @Export(type = String.class)
         public Output<String> publicIp;
 
         public Instance(String name, InstanceArgs args, @Nullable CustomResourceOptions options) {
@@ -196,7 +196,7 @@ public class MocksTest {
     }
 
     public static class MyCustom extends CustomResource {
-        @OutputExport(type = Instance.class)
+        @Export(type = Instance.class)
         public Output<Instance> instance;
 
         public MyCustom(String name, MyCustomArgs args, @Nullable CustomResourceOptions options) {
@@ -205,7 +205,7 @@ public class MocksTest {
     }
 
     public static final class MyCustomArgs extends ResourceArgs {
-        @InputImport
+        @Import
         @Nullable
         public final Output<Instance> instance;
 
@@ -218,7 +218,7 @@ public class MocksTest {
         /**
          * The friendly IAM role name to match.
          */
-        @InputImport(required = true)
+        @Import(required = true)
         public final String name;
 
         public GetRoleArgs(String name) {
@@ -226,7 +226,7 @@ public class MocksTest {
         }
     }
 
-    @OutputCustomType
+    @CustomType
     public static final class GetRoleResult {
         /**
          * The Amazon Resource Name (ARN) specifying the role.
@@ -242,7 +242,7 @@ public class MocksTest {
     }
 
     public static class MyStack extends Stack {
-        @OutputExport(type = String.class)
+        @Export(type = String.class)
         public final Output<String> publicIp;
 
         public MyStack() {

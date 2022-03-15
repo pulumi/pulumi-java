@@ -4,7 +4,7 @@
 package io.pulumi.gcp.secretmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.secretmanager.inputs.SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SecretReplicationUserManagedReplicaGetArgs extends io.pulumi.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="customerManagedEncryption")
+    @Import(name="customerManagedEncryption")
       private final @Nullable Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> customerManagedEncryption;
 
     public Output<SecretReplicationUserManagedReplicaCustomerManagedEncryptionGetArgs> getCustomerManagedEncryption() {
@@ -31,7 +31,7 @@ public final class SecretReplicationUserManagedReplicaGetArgs extends io.pulumi.
      * The canonical IDs of the location to replicate data. For example: "us-east1".
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {

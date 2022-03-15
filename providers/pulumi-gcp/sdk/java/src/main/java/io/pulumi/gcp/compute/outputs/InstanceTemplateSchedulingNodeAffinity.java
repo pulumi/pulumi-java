@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceTemplateSchedulingNodeAffinity {
     /**
      * Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
@@ -27,11 +27,11 @@ public final class InstanceTemplateSchedulingNodeAffinity {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceTemplateSchedulingNodeAffinity(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("operator") String operator,
-        @OutputCustomType.Parameter("values") List<String> values) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("operator") String operator,
+        @CustomType.Parameter("values") List<String> values) {
         this.key = key;
         this.operator = operator;
         this.values = values;

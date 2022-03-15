@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPolicyResult {
     private final String arn;
     /**
@@ -46,17 +46,17 @@ public final class GetPolicyResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPolicyResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("pathPrefix") @Nullable String pathPrefix,
-        @OutputCustomType.Parameter("policy") String policy,
-        @OutputCustomType.Parameter("policyId") String policyId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("pathPrefix") @Nullable String pathPrefix,
+        @CustomType.Parameter("policy") String policy,
+        @CustomType.Parameter("policyId") String policyId,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.description = description;
         this.id = id;

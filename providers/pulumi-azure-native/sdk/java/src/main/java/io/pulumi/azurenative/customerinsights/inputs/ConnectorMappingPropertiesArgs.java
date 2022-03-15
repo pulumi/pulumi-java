@@ -9,7 +9,7 @@ import io.pulumi.azurenative.customerinsights.inputs.ConnectorMappingErrorManage
 import io.pulumi.azurenative.customerinsights.inputs.ConnectorMappingFormatArgs;
 import io.pulumi.azurenative.customerinsights.inputs.ConnectorMappingStructureArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
      * The availability of mapping property.
      * 
      */
-    @InputImport(name="availability", required=true)
+    @Import(name="availability", required=true)
       private final Output<ConnectorMappingAvailabilityArgs> availability;
 
     public Output<ConnectorMappingAvailabilityArgs> getAvailability() {
@@ -40,7 +40,7 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
      * The operation after import is done.
      * 
      */
-    @InputImport(name="completeOperation", required=true)
+    @Import(name="completeOperation", required=true)
       private final Output<ConnectorMappingCompleteOperationArgs> completeOperation;
 
     public Output<ConnectorMappingCompleteOperationArgs> getCompleteOperation() {
@@ -51,7 +51,7 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
      * The error management setting for the mapping.
      * 
      */
-    @InputImport(name="errorManagement", required=true)
+    @Import(name="errorManagement", required=true)
       private final Output<ConnectorMappingErrorManagementArgs> errorManagement;
 
     public Output<ConnectorMappingErrorManagementArgs> getErrorManagement() {
@@ -62,7 +62,7 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
      * The file filter for the mapping.
      * 
      */
-    @InputImport(name="fileFilter")
+    @Import(name="fileFilter")
       private final @Nullable Output<String> fileFilter;
 
     public Output<String> getFileFilter() {
@@ -73,7 +73,7 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
      * The folder path for the mapping.
      * 
      */
-    @InputImport(name="folderPath")
+    @Import(name="folderPath")
       private final @Nullable Output<String> folderPath;
 
     public Output<String> getFolderPath() {
@@ -84,7 +84,7 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
      * The format of mapping property.
      * 
      */
-    @InputImport(name="format", required=true)
+    @Import(name="format", required=true)
       private final Output<ConnectorMappingFormatArgs> format;
 
     public Output<ConnectorMappingFormatArgs> getFormat() {
@@ -95,7 +95,7 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
      * If the file contains a header or not.
      * 
      */
-    @InputImport(name="hasHeader")
+    @Import(name="hasHeader")
       private final @Nullable Output<Boolean> hasHeader;
 
     public Output<Boolean> getHasHeader() {
@@ -106,7 +106,7 @@ public final class ConnectorMappingPropertiesArgs extends io.pulumi.resources.Re
      * Ingestion mapping information at property level.
      * 
      */
-    @InputImport(name="structure", required=true)
+    @Import(name="structure", required=true)
       private final Output<List<ConnectorMappingStructureArgs>> structure;
 
     public Output<List<ConnectorMappingStructureArgs>> getStructure() {

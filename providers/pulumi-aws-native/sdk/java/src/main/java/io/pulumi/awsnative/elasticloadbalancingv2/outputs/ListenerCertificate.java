@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerCertificate {
     private final @Nullable String certificateArn;
 
-    @OutputCustomType.Constructor
-    private ListenerCertificate(@OutputCustomType.Parameter("certificateArn") @Nullable String certificateArn) {
+    @CustomType.Constructor
+    private ListenerCertificate(@CustomType.Parameter("certificateArn") @Nullable String certificateArn) {
         this.certificateArn = certificateArn;
     }
 

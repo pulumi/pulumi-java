@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class IosTestLoopResponse extends io.pulumi.resources.InvokeArgs {
      * The bundle id for the application under test.
      * 
      */
-    @InputImport(name="appBundleId", required=true)
+    @Import(name="appBundleId", required=true)
       private final String appBundleId;
 
     public String getAppBundleId() {
@@ -34,7 +34,7 @@ public final class IosTestLoopResponse extends io.pulumi.resources.InvokeArgs {
      * The .ipa of the application to test.
      * 
      */
-    @InputImport(name="appIpa", required=true)
+    @Import(name="appIpa", required=true)
       private final FileReferenceResponse appIpa;
 
     public FileReferenceResponse getAppIpa() {
@@ -45,7 +45,7 @@ public final class IosTestLoopResponse extends io.pulumi.resources.InvokeArgs {
      * The list of scenarios that should be run during the test. Defaults to the single scenario 0 if unspecified.
      * 
      */
-    @InputImport(name="scenarios", required=true)
+    @Import(name="scenarios", required=true)
       private final List<Integer> scenarios;
 
     public List<Integer> getScenarios() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfig;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigPreStepWindowsExecStepConfig;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PatchDeploymentPatchConfigPreStep {
     /**
      * The ExecStepConfig for all Linux VMs targeted by the PatchJob.
@@ -25,10 +25,10 @@ public final class PatchDeploymentPatchConfigPreStep {
      */
     private final @Nullable PatchDeploymentPatchConfigPreStepWindowsExecStepConfig windowsExecStepConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchDeploymentPatchConfigPreStep(
-        @OutputCustomType.Parameter("linuxExecStepConfig") @Nullable PatchDeploymentPatchConfigPreStepLinuxExecStepConfig linuxExecStepConfig,
-        @OutputCustomType.Parameter("windowsExecStepConfig") @Nullable PatchDeploymentPatchConfigPreStepWindowsExecStepConfig windowsExecStepConfig) {
+        @CustomType.Parameter("linuxExecStepConfig") @Nullable PatchDeploymentPatchConfigPreStepLinuxExecStepConfig linuxExecStepConfig,
+        @CustomType.Parameter("windowsExecStepConfig") @Nullable PatchDeploymentPatchConfigPreStepWindowsExecStepConfig windowsExecStepConfig) {
         this.linuxExecStepConfig = linuxExecStepConfig;
         this.windowsExecStepConfig = windowsExecStepConfig;
     }

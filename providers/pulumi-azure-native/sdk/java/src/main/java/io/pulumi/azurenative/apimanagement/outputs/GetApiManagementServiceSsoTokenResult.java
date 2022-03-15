@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApiManagementServiceSsoTokenResult {
     /**
      * Redirect URL to the Publisher Portal containing the SSO token.
@@ -17,8 +17,8 @@ public final class GetApiManagementServiceSsoTokenResult {
      */
     private final @Nullable String redirectUri;
 
-    @OutputCustomType.Constructor
-    private GetApiManagementServiceSsoTokenResult(@OutputCustomType.Parameter("redirectUri") @Nullable String redirectUri) {
+    @CustomType.Constructor
+    private GetApiManagementServiceSsoTokenResult(@CustomType.Parameter("redirectUri") @Nullable String redirectUri) {
         this.redirectUri = redirectUri;
     }
 

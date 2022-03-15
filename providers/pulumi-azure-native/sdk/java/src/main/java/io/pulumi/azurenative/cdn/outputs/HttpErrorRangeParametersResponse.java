@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HttpErrorRangeParametersResponse {
     /**
      * The inclusive start of the http status code range.
@@ -22,10 +22,10 @@ public final class HttpErrorRangeParametersResponse {
      */
     private final @Nullable Integer end;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpErrorRangeParametersResponse(
-        @OutputCustomType.Parameter("begin") @Nullable Integer begin,
-        @OutputCustomType.Parameter("end") @Nullable Integer end) {
+        @CustomType.Parameter("begin") @Nullable Integer begin,
+        @CustomType.Parameter("end") @Nullable Integer end) {
         this.begin = begin;
         this.end = end;
     }

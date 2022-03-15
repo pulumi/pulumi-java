@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceDefinitionSpecArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceDefinitionStatusArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
@@ -25,7 +25,7 @@ public final class CustomResourceDefinitionArgs extends io.pulumi.resources.Reso
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
@@ -36,14 +36,14 @@ public final class CustomResourceDefinitionArgs extends io.pulumi.resources.Reso
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
         return this.kind == null ? Output.empty() : this.kind;
     }
 
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
@@ -54,7 +54,7 @@ public final class CustomResourceDefinitionArgs extends io.pulumi.resources.Reso
      * spec describes how the user wants the resources to appear
      * 
      */
-    @InputImport(name="spec", required=true)
+    @Import(name="spec", required=true)
       private final Output<CustomResourceDefinitionSpecArgs> spec;
 
     public Output<CustomResourceDefinitionSpecArgs> getSpec() {
@@ -65,7 +65,7 @@ public final class CustomResourceDefinitionArgs extends io.pulumi.resources.Reso
      * status indicates the actual state of the CustomResourceDefinition
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<CustomResourceDefinitionStatusArgs> status;
 
     public Output<CustomResourceDefinitionStatusArgs> getStatus() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PtrRecordResponse extends io.pulumi.resources.InvokeArgs {
      * The PTR target domain name for this PTR record.
      * 
      */
-    @InputImport(name="ptrdname")
+    @Import(name="ptrdname")
       private final @Nullable String ptrdname;
 
     public Optional<String> getPtrdname() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.databrew.enums.JobOutputCompressionFormat;
 import io.pulumi.awsnative.databrew.enums.JobOutputFormat;
 import io.pulumi.awsnative.databrew.outputs.JobOutputFormatOptions;
 import io.pulumi.awsnative.databrew.outputs.JobS3Location;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobOutput {
     private final @Nullable JobOutputCompressionFormat compressionFormat;
     private final @Nullable JobOutputFormat format;
@@ -24,14 +24,14 @@ public final class JobOutput {
     private final @Nullable Boolean overwrite;
     private final @Nullable List<String> partitionColumns;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobOutput(
-        @OutputCustomType.Parameter("compressionFormat") @Nullable JobOutputCompressionFormat compressionFormat,
-        @OutputCustomType.Parameter("format") @Nullable JobOutputFormat format,
-        @OutputCustomType.Parameter("formatOptions") @Nullable JobOutputFormatOptions formatOptions,
-        @OutputCustomType.Parameter("location") JobS3Location location,
-        @OutputCustomType.Parameter("overwrite") @Nullable Boolean overwrite,
-        @OutputCustomType.Parameter("partitionColumns") @Nullable List<String> partitionColumns) {
+        @CustomType.Parameter("compressionFormat") @Nullable JobOutputCompressionFormat compressionFormat,
+        @CustomType.Parameter("format") @Nullable JobOutputFormat format,
+        @CustomType.Parameter("formatOptions") @Nullable JobOutputFormatOptions formatOptions,
+        @CustomType.Parameter("location") JobS3Location location,
+        @CustomType.Parameter("overwrite") @Nullable Boolean overwrite,
+        @CustomType.Parameter("partitionColumns") @Nullable List<String> partitionColumns) {
         this.compressionFormat = compressionFormat;
         this.format = format;
         this.formatOptions = formatOptions;

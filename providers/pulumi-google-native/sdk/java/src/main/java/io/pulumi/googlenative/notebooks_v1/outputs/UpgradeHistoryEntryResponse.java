@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UpgradeHistoryEntryResponse {
     /**
      * Action. Rolloback or Upgrade.
@@ -60,18 +60,18 @@ public final class UpgradeHistoryEntryResponse {
      */
     private final String vmImage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UpgradeHistoryEntryResponse(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("containerImage") String containerImage,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("framework") String framework,
-        @OutputCustomType.Parameter("snapshot") String snapshot,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("targetImage") String targetImage,
-        @OutputCustomType.Parameter("targetVersion") String targetVersion,
-        @OutputCustomType.Parameter("version") String version,
-        @OutputCustomType.Parameter("vmImage") String vmImage) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("containerImage") String containerImage,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("framework") String framework,
+        @CustomType.Parameter("snapshot") String snapshot,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("targetImage") String targetImage,
+        @CustomType.Parameter("targetVersion") String targetVersion,
+        @CustomType.Parameter("version") String version,
+        @CustomType.Parameter("vmImage") String vmImage) {
         this.action = action;
         this.containerImage = containerImage;
         this.createTime = createTime;

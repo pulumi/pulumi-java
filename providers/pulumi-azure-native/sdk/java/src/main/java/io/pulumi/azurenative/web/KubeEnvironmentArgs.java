@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.inputs.AppLogsConfigurationArgs;
 import io.pulumi.azurenative.web.inputs.ArcConfigurationArgs;
 import io.pulumi.azurenative.web.inputs.ExtendedLocationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -19,7 +19,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final KubeEnvironmentArgs Empty = new KubeEnvironmentArgs();
 
-    @InputImport(name="aksResourceID")
+    @Import(name="aksResourceID")
       private final @Nullable Output<String> aksResourceID;
 
     public Output<String> getAksResourceID() {
@@ -32,7 +32,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * supported
      * 
      */
-    @InputImport(name="appLogsConfiguration")
+    @Import(name="appLogsConfiguration")
       private final @Nullable Output<AppLogsConfigurationArgs> appLogsConfiguration;
 
     public Output<AppLogsConfigurationArgs> getAppLogsConfiguration() {
@@ -45,7 +45,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * FrontEnd Service ArtifactsStorageType etc.
      * 
      */
-    @InputImport(name="arcConfiguration")
+    @Import(name="arcConfiguration")
       private final @Nullable Output<ArcConfigurationArgs> arcConfiguration;
 
     public Output<ArcConfigurationArgs> getArcConfiguration() {
@@ -56,7 +56,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * Extended Location.
      * 
      */
-    @InputImport(name="extendedLocation")
+    @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
     public Output<ExtendedLocationArgs> getExtendedLocation() {
@@ -67,7 +67,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * Only visible within Vnet/Subnet
      * 
      */
-    @InputImport(name="internalLoadBalancerEnabled")
+    @Import(name="internalLoadBalancerEnabled")
       private final @Nullable Output<Boolean> internalLoadBalancerEnabled;
 
     public Output<Boolean> getInternalLoadBalancerEnabled() {
@@ -78,7 +78,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -89,7 +89,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * Resource Location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -100,7 +100,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the Kubernetes Environment.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -111,7 +111,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -122,7 +122,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * Static IP of the KubeEnvironment
      * 
      */
-    @InputImport(name="staticIp")
+    @Import(name="staticIp")
       private final @Nullable Output<String> staticIp;
 
     public Output<String> getStaticIp() {
@@ -133,7 +133,7 @@ public final class KubeEnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

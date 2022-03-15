@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.synapse.KeyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * Used to activate the workspace after a customer managed key is provided.
      * 
      */
-    @OutputExport(name="isActiveCMK", type=Boolean.class, parameters={})
+    @Export(name="isActiveCMK", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isActiveCMK;
 
     /**
@@ -49,7 +49,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The Key Vault Url of the workspace key.
      * 
      */
-    @OutputExport(name="keyVaultUrl", type=String.class, parameters={})
+    @Export(name="keyVaultUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyVaultUrl;
 
     /**
@@ -63,7 +63,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class Key extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

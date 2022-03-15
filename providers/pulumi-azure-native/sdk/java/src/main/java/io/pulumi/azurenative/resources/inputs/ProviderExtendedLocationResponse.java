@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ProviderExtendedLocationResponse extends io.pulumi.resources.
      * The extended locations for the azure location.
      * 
      */
-    @InputImport(name="extendedLocations")
+    @Import(name="extendedLocations")
       private final @Nullable List<String> extendedLocations;
 
     public List<String> getExtendedLocations() {
@@ -34,7 +34,7 @@ public final class ProviderExtendedLocationResponse extends io.pulumi.resources.
      * The azure location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -45,7 +45,7 @@ public final class ProviderExtendedLocationResponse extends io.pulumi.resources.
      * The extended location type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

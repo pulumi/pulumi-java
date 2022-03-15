@@ -5,7 +5,7 @@ package io.pulumi.awsnative.events.inputs;
 
 import io.pulumi.awsnative.events.inputs.ConnectionParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,21 +15,21 @@ public final class ConnectionHttpParametersArgs extends io.pulumi.resources.Reso
 
     public static final ConnectionHttpParametersArgs Empty = new ConnectionHttpParametersArgs();
 
-    @InputImport(name="bodyParameters")
+    @Import(name="bodyParameters")
       private final @Nullable Output<List<ConnectionParameterArgs>> bodyParameters;
 
     public Output<List<ConnectionParameterArgs>> getBodyParameters() {
         return this.bodyParameters == null ? Output.empty() : this.bodyParameters;
     }
 
-    @InputImport(name="headerParameters")
+    @Import(name="headerParameters")
       private final @Nullable Output<List<ConnectionParameterArgs>> headerParameters;
 
     public Output<List<ConnectionParameterArgs>> getHeaderParameters() {
         return this.headerParameters == null ? Output.empty() : this.headerParameters;
     }
 
-    @InputImport(name="queryStringParameters")
+    @Import(name="queryStringParameters")
       private final @Nullable Output<List<ConnectionParameterArgs>> queryStringParameters;
 
     public Output<List<ConnectionParameterArgs>> getQueryStringParameters() {

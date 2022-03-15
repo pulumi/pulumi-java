@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationInsightsComponentDataVolumeCapResponse {
     /**
      * Daily data volume cap in GB.
@@ -44,14 +44,14 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse {
      */
     private final @Nullable Integer warningThreshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationInsightsComponentDataVolumeCapResponse(
-        @OutputCustomType.Parameter("cap") @Nullable Double cap,
-        @OutputCustomType.Parameter("maxHistoryCap") Double maxHistoryCap,
-        @OutputCustomType.Parameter("resetTime") Integer resetTime,
-        @OutputCustomType.Parameter("stopSendNotificationWhenHitCap") @Nullable Boolean stopSendNotificationWhenHitCap,
-        @OutputCustomType.Parameter("stopSendNotificationWhenHitThreshold") @Nullable Boolean stopSendNotificationWhenHitThreshold,
-        @OutputCustomType.Parameter("warningThreshold") @Nullable Integer warningThreshold) {
+        @CustomType.Parameter("cap") @Nullable Double cap,
+        @CustomType.Parameter("maxHistoryCap") Double maxHistoryCap,
+        @CustomType.Parameter("resetTime") Integer resetTime,
+        @CustomType.Parameter("stopSendNotificationWhenHitCap") @Nullable Boolean stopSendNotificationWhenHitCap,
+        @CustomType.Parameter("stopSendNotificationWhenHitThreshold") @Nullable Boolean stopSendNotificationWhenHitThreshold,
+        @CustomType.Parameter("warningThreshold") @Nullable Integer warningThreshold) {
         this.cap = cap;
         this.maxHistoryCap = maxHistoryCap;
         this.resetTime = resetTime;

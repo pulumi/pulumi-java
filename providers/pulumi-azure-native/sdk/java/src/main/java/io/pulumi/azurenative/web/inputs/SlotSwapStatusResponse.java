@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SlotSwapStatusResponse extends io.pulumi.resources.InvokeArgs
      * The destination slot of the last swap operation.
      * 
      */
-    @InputImport(name="destinationSlotName", required=true)
+    @Import(name="destinationSlotName", required=true)
       private final String destinationSlotName;
 
     public String getDestinationSlotName() {
@@ -31,7 +31,7 @@ public final class SlotSwapStatusResponse extends io.pulumi.resources.InvokeArgs
      * The source slot of the last swap operation.
      * 
      */
-    @InputImport(name="sourceSlotName", required=true)
+    @Import(name="sourceSlotName", required=true)
       private final String sourceSlotName;
 
     public String getSourceSlotName() {
@@ -42,7 +42,7 @@ public final class SlotSwapStatusResponse extends io.pulumi.resources.InvokeArgs
      * The time the last successful slot swap completed.
      * 
      */
-    @InputImport(name="timestampUtc", required=true)
+    @Import(name="timestampUtc", required=true)
       private final String timestampUtc;
 
     public String getTimestampUtc() {

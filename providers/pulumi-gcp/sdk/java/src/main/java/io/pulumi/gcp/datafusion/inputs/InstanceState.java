@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datafusion.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.datafusion.inputs.InstanceNetworkConfigGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -32,7 +32,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines.
      * 
      */
-    @InputImport(name="dataprocServiceAccount")
+    @Import(name="dataprocServiceAccount")
       private final @Nullable Output<String> dataprocServiceAccount;
 
     public Output<String> getDataprocServiceAccount() {
@@ -43,7 +43,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * An optional description of the instance.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -54,7 +54,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Option to enable Stackdriver Logging.
      * 
      */
-    @InputImport(name="enableStackdriverLogging")
+    @Import(name="enableStackdriverLogging")
       private final @Nullable Output<Boolean> enableStackdriverLogging;
 
     public Output<Boolean> getEnableStackdriverLogging() {
@@ -65,7 +65,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Option to enable Stackdriver Monitoring.
      * 
      */
-    @InputImport(name="enableStackdriverMonitoring")
+    @Import(name="enableStackdriverMonitoring")
       private final @Nullable Output<Boolean> enableStackdriverMonitoring;
 
     public Output<Boolean> getEnableStackdriverMonitoring() {
@@ -77,7 +77,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * such as Compute Engine VMs.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -88,7 +88,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The ID of the instance or a fully qualified identifier for the instance.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -100,7 +100,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="networkConfig")
+    @Import(name="networkConfig")
       private final @Nullable Output<InstanceNetworkConfigGetArgs> networkConfig;
 
     public Output<InstanceNetworkConfigGetArgs> getNetworkConfig() {
@@ -111,7 +111,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Map of additional options used to configure the behavior of Data Fusion instance.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<Map<String,String>> options;
 
     public Output<Map<String,String>> getOptions() {
@@ -124,7 +124,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * able to access the public internet.
      * 
      */
-    @InputImport(name="privateInstance")
+    @Import(name="privateInstance")
       private final @Nullable Output<Boolean> privateInstance;
 
     public Output<Boolean> getPrivateInstance() {
@@ -136,7 +136,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -147,7 +147,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The region of the Data Fusion instance.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -158,7 +158,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Service account which will be used to access resources in the customer project.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
@@ -169,7 +169,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Endpoint on which the Data Fusion UI and REST APIs are accessible.
      * 
      */
-    @InputImport(name="serviceEndpoint")
+    @Import(name="serviceEndpoint")
       private final @Nullable Output<String> serviceEndpoint;
 
     public Output<String> getServiceEndpoint() {
@@ -182,7 +182,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * being upgraded - RESTARTING: Instance is being restarted
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -193,7 +193,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Additional information about the current state of this Data Fusion instance if available.
      * 
      */
-    @InputImport(name="stateMessage")
+    @Import(name="stateMessage")
       private final @Nullable Output<String> stateMessage;
 
     public Output<String> getStateMessage() {
@@ -214,7 +214,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      *   Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -225,7 +225,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
@@ -236,7 +236,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Current version of the Data Fusion.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

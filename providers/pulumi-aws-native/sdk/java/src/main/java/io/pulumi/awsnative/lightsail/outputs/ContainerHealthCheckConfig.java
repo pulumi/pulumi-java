@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerHealthCheckConfig {
     /**
      * The number of consecutive health checks successes required before moving the container to the Healthy state. The default value is 2.
@@ -43,14 +43,14 @@ public final class ContainerHealthCheckConfig {
      */
     private final @Nullable Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerHealthCheckConfig(
-        @OutputCustomType.Parameter("healthyThreshold") @Nullable Integer healthyThreshold,
-        @OutputCustomType.Parameter("intervalSeconds") @Nullable Integer intervalSeconds,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("successCodes") @Nullable String successCodes,
-        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds,
-        @OutputCustomType.Parameter("unhealthyThreshold") @Nullable Integer unhealthyThreshold) {
+        @CustomType.Parameter("healthyThreshold") @Nullable Integer healthyThreshold,
+        @CustomType.Parameter("intervalSeconds") @Nullable Integer intervalSeconds,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("successCodes") @Nullable String successCodes,
+        @CustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds,
+        @CustomType.Parameter("unhealthyThreshold") @Nullable Integer unhealthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         this.intervalSeconds = intervalSeconds;
         this.path = path;

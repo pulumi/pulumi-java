@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateAuthorityOcspConfiguration {
     private final @Nullable Boolean enabled;
     private final @Nullable String ocspCustomCname;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateAuthorityOcspConfiguration(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("ocspCustomCname") @Nullable String ocspCustomCname) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("ocspCustomCname") @Nullable String ocspCustomCname) {
         this.enabled = enabled;
         this.ocspCustomCname = ocspCustomCname;
     }

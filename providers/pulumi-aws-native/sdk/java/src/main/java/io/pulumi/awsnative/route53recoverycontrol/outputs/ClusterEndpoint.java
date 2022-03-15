@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.route53recoverycontrol.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterEndpoint {
     private final @Nullable String endpoint;
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterEndpoint(
-        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
-        @OutputCustomType.Parameter("region") @Nullable String region) {
+        @CustomType.Parameter("endpoint") @Nullable String endpoint,
+        @CustomType.Parameter("region") @Nullable String region) {
         this.endpoint = endpoint;
         this.region = region;
     }

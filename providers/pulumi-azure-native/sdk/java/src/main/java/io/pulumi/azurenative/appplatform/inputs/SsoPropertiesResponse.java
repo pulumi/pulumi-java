@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SsoPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The public identifier for the application
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
@@ -34,7 +34,7 @@ public final class SsoPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The secret known only to the application and the authorization server
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable String clientSecret;
 
     public Optional<String> getClientSecret() {
@@ -45,7 +45,7 @@ public final class SsoPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The URI of Issuer Identifier
      * 
      */
-    @InputImport(name="issuerUri")
+    @Import(name="issuerUri")
       private final @Nullable String issuerUri;
 
     public Optional<String> getIssuerUri() {
@@ -56,7 +56,7 @@ public final class SsoPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * It defines the specific actions applications can be allowed to do on a user's behalf
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable List<String> scope;
 
     public List<String> getScope() {

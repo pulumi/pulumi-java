@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datashare.SynapseWorkspaceSqlPoolTableDataSetMappin
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
      * The id of the source data set.
      * 
      */
-    @OutputExport(name="dataSetId", type=String.class, parameters={})
+    @Export(name="dataSetId", type=String.class, parameters={})
     private Output<String> dataSetId;
 
     /**
@@ -49,7 +49,7 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
      * Gets the status of the data set mapping.
      * 
      */
-    @OutputExport(name="dataSetMappingStatus", type=String.class, parameters={})
+    @Export(name="dataSetMappingStatus", type=String.class, parameters={})
     private Output<String> dataSetMappingStatus;
 
     /**
@@ -64,7 +64,7 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
      * Expected value is 'SynapseWorkspaceSqlPoolTable'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -79,7 +79,7 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
      * Name of the azure resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
      * Provisioning state of the data set mapping.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -107,7 +107,7 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
      * Resource id of the Synapse Workspace SQL Pool Table
      * 
      */
-    @OutputExport(name="synapseWorkspaceSqlPoolTableResourceId", type=String.class, parameters={})
+    @Export(name="synapseWorkspaceSqlPoolTableResourceId", type=String.class, parameters={})
     private Output<String> synapseWorkspaceSqlPoolTableResourceId;
 
     /**
@@ -121,7 +121,7 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
      * System Data of the Azure resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -135,7 +135,7 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
      * Type of the azure resource
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

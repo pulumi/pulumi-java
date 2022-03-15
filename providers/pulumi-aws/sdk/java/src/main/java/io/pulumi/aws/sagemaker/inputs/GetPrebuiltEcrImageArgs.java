@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetPrebuiltEcrImageArgs extends io.pulumi.resources.InvokeArg
      * The DNS suffix to use in the registry path. If not specified, the AWS provider sets it to the DNS suffix for the current region.
      * 
      */
-    @InputImport(name="dnsSuffix")
+    @Import(name="dnsSuffix")
       private final @Nullable String dnsSuffix;
 
     public Optional<String> getDnsSuffix() {
@@ -29,7 +29,7 @@ public final class GetPrebuiltEcrImageArgs extends io.pulumi.resources.InvokeArg
      * The image tag for the Docker image. If not specified, the AWS provider sets the value to `1`, which for many repositories indicates the latest version. Some repositories, such as XGBoost, do not support `1` or `latest` and specific version must be used.
      * 
      */
-    @InputImport(name="imageTag")
+    @Import(name="imageTag")
       private final @Nullable String imageTag;
 
     public Optional<String> getImageTag() {
@@ -40,7 +40,7 @@ public final class GetPrebuiltEcrImageArgs extends io.pulumi.resources.InvokeArg
      * The region to use in the registry path. If not specified, the AWS provider sets it to the current region.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable String region;
 
     public Optional<String> getRegion() {
@@ -51,7 +51,7 @@ public final class GetPrebuiltEcrImageArgs extends io.pulumi.resources.InvokeArg
      * The name of the repository, which is generally the algorithm or library. Values include `blazingtext`, `factorization-machines`, `forecasting-deepar`, `image-classification`, `ipinsights`, `kmeans`, `knn`, `lda`, `linear-learner`, `mxnet-inference-eia`, `mxnet-inference`, `mxnet-training`, `ntm`, `object-detection`, `object2vec`, `pca`, `pytorch-inference-eia`, `pytorch-inference`, `pytorch-training`, `randomcutforest`, `sagemaker-scikit-learn`, `sagemaker-sparkml-serving`, `sagemaker-xgboost`, `semantic-segmentation`, `seq2seq`, `tensorflow-inference-eia`, `tensorflow-inference`, `tensorflow-training`, `huggingface-tensorflow-training`, `huggingface-tensorflow-inference`, `huggingface-pytorch-training`, and `huggingface-pytorch-inference`.
      * 
      */
-    @InputImport(name="repositoryName", required=true)
+    @Import(name="repositoryName", required=true)
       private final String repositoryName;
 
     public String getRepositoryName() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort {
     /**
      * The HTTP status code used to abort the request. The value must be between 200
@@ -24,10 +24,10 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolic
      */
     private final Double percentage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort(
-        @OutputCustomType.Parameter("httpStatus") Integer httpStatus,
-        @OutputCustomType.Parameter("percentage") Double percentage) {
+        @CustomType.Parameter("httpStatus") Integer httpStatus,
+        @CustomType.Parameter("percentage") Double percentage) {
         this.httpStatus = httpStatus;
         this.percentage = percentage;
     }

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSyncGroupResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
@@ -35,13 +35,13 @@ public final class GetSyncGroupResult {
      */
     private final String uniqueId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSyncGroupResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("syncGroupStatus") String syncGroupStatus,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueId") String uniqueId) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("syncGroupStatus") String syncGroupStatus,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueId") String uniqueId) {
         this.id = id;
         this.name = name;
         this.syncGroupStatus = syncGroupStatus;

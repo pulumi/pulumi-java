@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.avs.WorkloadNetworkDhcpArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class WorkloadNetworkDhcp extends io.pulumi.resources.CustomResource {
      * Type of DHCP: SERVER or RELAY.
      * 
      */
-    @OutputExport(name="dhcpType", type=String.class, parameters={})
+    @Export(name="dhcpType", type=String.class, parameters={})
     private Output<String> dhcpType;
 
     /**
@@ -49,7 +49,7 @@ public class WorkloadNetworkDhcp extends io.pulumi.resources.CustomResource {
      * Display name of the DHCP entity.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -63,7 +63,7 @@ public class WorkloadNetworkDhcp extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class WorkloadNetworkDhcp extends io.pulumi.resources.CustomResource {
      * The provisioning state
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -91,7 +91,7 @@ public class WorkloadNetworkDhcp extends io.pulumi.resources.CustomResource {
      * NSX revision number.
      * 
      */
-    @OutputExport(name="revision", type=Double.class, parameters={})
+    @Export(name="revision", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> revision;
 
     /**
@@ -105,7 +105,7 @@ public class WorkloadNetworkDhcp extends io.pulumi.resources.CustomResource {
      * NSX Segments consuming DHCP.
      * 
      */
-    @OutputExport(name="segments", type=List.class, parameters={String.class})
+    @Export(name="segments", type=List.class, parameters={String.class})
     private Output<List<String>> segments;
 
     /**
@@ -119,7 +119,7 @@ public class WorkloadNetworkDhcp extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

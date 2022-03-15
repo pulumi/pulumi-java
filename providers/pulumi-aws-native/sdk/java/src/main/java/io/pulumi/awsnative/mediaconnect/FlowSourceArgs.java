@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediaconnect;
 import io.pulumi.awsnative.mediaconnect.enums.FlowSourceProtocol;
 import io.pulumi.awsnative.mediaconnect.inputs.FlowSourceEncryptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The type of encryption that is used on the content ingested from this source.
      * 
      */
-    @InputImport(name="decryption")
+    @Import(name="decryption")
       private final @Nullable Output<FlowSourceEncryptionArgs> decryption;
 
     public Output<FlowSourceEncryptionArgs> getDecryption() {
@@ -32,7 +32,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * A description for the source. This value is not used or seen outside of the current AWS Elemental MediaConnect account.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the entitlement that allows you to subscribe to content that comes from another AWS account. The entitlement is set by the content originator and the ARN is generated as part of the originator's flow.
      * 
      */
-    @InputImport(name="entitlementArn")
+    @Import(name="entitlementArn")
       private final @Nullable Output<String> entitlementArn;
 
     public Output<String> getEntitlementArn() {
@@ -54,7 +54,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of the flow.
      * 
      */
-    @InputImport(name="flowArn")
+    @Import(name="flowArn")
       private final @Nullable Output<String> flowArn;
 
     public Output<String> getFlowArn() {
@@ -65,7 +65,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The port that the flow will be listening on for incoming content.
      * 
      */
-    @InputImport(name="ingestPort")
+    @Import(name="ingestPort")
       private final @Nullable Output<Integer> ingestPort;
 
     public Output<Integer> getIngestPort() {
@@ -76,7 +76,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The smoothing max bitrate for RIST, RTP, and RTP-FEC streams.
      * 
      */
-    @InputImport(name="maxBitrate")
+    @Import(name="maxBitrate")
       private final @Nullable Output<Integer> maxBitrate;
 
     public Output<Integer> getMaxBitrate() {
@@ -87,7 +87,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum latency in milliseconds. This parameter applies only to RIST-based and Zixi-based streams.
      * 
      */
-    @InputImport(name="maxLatency")
+    @Import(name="maxLatency")
       private final @Nullable Output<Integer> maxLatency;
 
     public Output<Integer> getMaxLatency() {
@@ -98,7 +98,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the source.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -109,7 +109,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The protocol that is used by the source.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<FlowSourceProtocol> protocol;
 
     public Output<FlowSourceProtocol> getProtocol() {
@@ -120,7 +120,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The stream ID that you want to use for this transport. This parameter applies only to Zixi-based streams.
      * 
      */
-    @InputImport(name="streamId")
+    @Import(name="streamId")
       private final @Nullable Output<String> streamId;
 
     public Output<String> getStreamId() {
@@ -131,7 +131,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the VPC Interface this Source is configured with.
      * 
      */
-    @InputImport(name="vpcInterfaceName")
+    @Import(name="vpcInterfaceName")
       private final @Nullable Output<String> vpcInterfaceName;
 
     public Output<String> getVpcInterfaceName() {
@@ -142,7 +142,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The range of IP addresses that should be allowed to contribute content to your source. These IP addresses should be in the form of a Classless Inter-Domain Routing (CIDR) block; for example, 10.0.0.0/16.
      * 
      */
-    @InputImport(name="whitelistCidr")
+    @Import(name="whitelistCidr")
       private final @Nullable Output<String> whitelistCidr;
 
     public Output<String> getWhitelistCidr() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.ClientCredentialsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureStorageSectionResponse {
     /**
      *  Storage Account Key (Deprecated).
@@ -86,23 +86,23 @@ public final class AzureStorageSectionResponse {
      */
     private final @Nullable String subscriptionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureStorageSectionResponse(
-        @OutputCustomType.Parameter("accountKey") @Nullable String accountKey,
-        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
-        @OutputCustomType.Parameter("areWorkspaceManagedIdentitiesAllowed") @Nullable Boolean areWorkspaceManagedIdentitiesAllowed,
-        @OutputCustomType.Parameter("blobCacheTimeout") @Nullable Integer blobCacheTimeout,
-        @OutputCustomType.Parameter("clientCredentials") @Nullable ClientCredentialsResponse clientCredentials,
-        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
-        @OutputCustomType.Parameter("credential") @Nullable String credential,
-        @OutputCustomType.Parameter("credentialType") @Nullable String credentialType,
-        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
-        @OutputCustomType.Parameter("isSas") @Nullable Boolean isSas,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
-        @OutputCustomType.Parameter("sasToken") @Nullable String sasToken,
-        @OutputCustomType.Parameter("serviceDataAccessAuthIdentity") @Nullable String serviceDataAccessAuthIdentity,
-        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId) {
+        @CustomType.Parameter("accountKey") @Nullable String accountKey,
+        @CustomType.Parameter("accountName") @Nullable String accountName,
+        @CustomType.Parameter("areWorkspaceManagedIdentitiesAllowed") @Nullable Boolean areWorkspaceManagedIdentitiesAllowed,
+        @CustomType.Parameter("blobCacheTimeout") @Nullable Integer blobCacheTimeout,
+        @CustomType.Parameter("clientCredentials") @Nullable ClientCredentialsResponse clientCredentials,
+        @CustomType.Parameter("containerName") @Nullable String containerName,
+        @CustomType.Parameter("credential") @Nullable String credential,
+        @CustomType.Parameter("credentialType") @Nullable String credentialType,
+        @CustomType.Parameter("endpoint") @Nullable String endpoint,
+        @CustomType.Parameter("isSas") @Nullable Boolean isSas,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @CustomType.Parameter("sasToken") @Nullable String sasToken,
+        @CustomType.Parameter("serviceDataAccessAuthIdentity") @Nullable String serviceDataAccessAuthIdentity,
+        @CustomType.Parameter("subscriptionId") @Nullable String subscriptionId) {
         this.accountKey = accountKey;
         this.accountName = accountName;
         this.areWorkspaceManagedIdentitiesAllowed = areWorkspaceManagedIdentitiesAllowed;

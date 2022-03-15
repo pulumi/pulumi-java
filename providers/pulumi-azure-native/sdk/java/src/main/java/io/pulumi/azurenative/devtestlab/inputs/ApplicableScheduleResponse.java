@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.inputs.ScheduleResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
      * The identifier of the resource.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -35,7 +35,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
      * The auto-shutdown schedule, if one has been set at the lab or lab resource level.
      * 
      */
-    @InputImport(name="labVmsShutdown")
+    @Import(name="labVmsShutdown")
       private final @Nullable ScheduleResponse labVmsShutdown;
 
     public Optional<ScheduleResponse> getLabVmsShutdown() {
@@ -46,7 +46,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
      * The auto-startup schedule, if one has been set at the lab or lab resource level.
      * 
      */
-    @InputImport(name="labVmsStartup")
+    @Import(name="labVmsStartup")
       private final @Nullable ScheduleResponse labVmsStartup;
 
     public Optional<ScheduleResponse> getLabVmsStartup() {
@@ -57,7 +57,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -68,7 +68,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
      * The name of the resource.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -79,7 +79,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -90,7 +90,7 @@ public final class ApplicableScheduleResponse extends io.pulumi.resources.Invoke
      * The type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

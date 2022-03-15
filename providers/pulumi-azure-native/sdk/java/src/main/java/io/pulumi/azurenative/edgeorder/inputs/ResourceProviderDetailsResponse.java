@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ResourceProviderDetailsResponse extends io.pulumi.resources.I
      * Resource provider namespace
      * 
      */
-    @InputImport(name="resourceProviderNamespace", required=true)
+    @Import(name="resourceProviderNamespace", required=true)
       private final String resourceProviderNamespace;
 
     public String getResourceProviderNamespace() {

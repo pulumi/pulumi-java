@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
      * If not empty, the ID of the namespace to which the entities belong.
      * 
      */
-    @InputImport(name="namespaceId")
+    @Import(name="namespaceId")
       private final @Nullable Output<String> namespaceId;
 
     public Output<String> getNamespaceId() {
@@ -29,7 +29,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
      * The Google Cloud Platform project ID of the project containing the table.
      * 
      */
-    @InputImport(name="projectId", required=true)
+    @Import(name="projectId", required=true)
       private final Output<String> projectId;
 
     public Output<String> getProjectId() {

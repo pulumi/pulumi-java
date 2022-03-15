@@ -9,7 +9,7 @@ import io.pulumi.azurenative.security.outputs.SecurityContactPropertiesResponseA
 import io.pulumi.azurenative.security.outputs.SecurityContactPropertiesResponseNotificationsByRole;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class SecurityContact extends io.pulumi.resources.CustomResource {
      * Defines whether to send email notifications about new security alerts
      * 
      */
-    @OutputExport(name="alertNotifications", type=SecurityContactPropertiesResponseAlertNotifications.class, parameters={})
+    @Export(name="alertNotifications", type=SecurityContactPropertiesResponseAlertNotifications.class, parameters={})
     private Output</* @Nullable */ SecurityContactPropertiesResponseAlertNotifications> alertNotifications;
 
     /**
@@ -50,7 +50,7 @@ public class SecurityContact extends io.pulumi.resources.CustomResource {
      * List of email addresses which will get notifications from Azure Security Center by the configurations defined in this security contact.
      * 
      */
-    @OutputExport(name="emails", type=String.class, parameters={})
+    @Export(name="emails", type=String.class, parameters={})
     private Output</* @Nullable */ String> emails;
 
     /**
@@ -64,7 +64,7 @@ public class SecurityContact extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class SecurityContact extends io.pulumi.resources.CustomResource {
      * Defines whether to send email notifications from Azure Security Center to persons with specific RBAC roles on the subscription.
      * 
      */
-    @OutputExport(name="notificationsByRole", type=SecurityContactPropertiesResponseNotificationsByRole.class, parameters={})
+    @Export(name="notificationsByRole", type=SecurityContactPropertiesResponseNotificationsByRole.class, parameters={})
     private Output</* @Nullable */ SecurityContactPropertiesResponseNotificationsByRole> notificationsByRole;
 
     /**
@@ -92,7 +92,7 @@ public class SecurityContact extends io.pulumi.resources.CustomResource {
      * The security contact's phone number
      * 
      */
-    @OutputExport(name="phone", type=String.class, parameters={})
+    @Export(name="phone", type=String.class, parameters={})
     private Output</* @Nullable */ String> phone;
 
     /**
@@ -106,7 +106,7 @@ public class SecurityContact extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

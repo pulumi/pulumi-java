@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UsagePlanApiStageThrottle {
     /**
      * The API request burst limit, the maximum rate limit over a time ranging from one to a few seconds, depending upon whether the underlying token bucket is at its full capacity.
@@ -29,11 +29,11 @@ public final class UsagePlanApiStageThrottle {
      */
     private final @Nullable Double rateLimit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UsagePlanApiStageThrottle(
-        @OutputCustomType.Parameter("burstLimit") @Nullable Integer burstLimit,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("rateLimit") @Nullable Double rateLimit) {
+        @CustomType.Parameter("burstLimit") @Nullable Integer burstLimit,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("rateLimit") @Nullable Double rateLimit) {
         this.burstLimit = burstLimit;
         this.path = path;
         this.rateLimit = rateLimit;

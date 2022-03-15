@@ -4,7 +4,7 @@
 package io.pulumi.gcp.recaptcha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.recaptcha.EnterpriseKeyArgs;
@@ -45,7 +45,7 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * Settings for keys that can be used by Android apps.
      * 
      */
-    @OutputExport(name="androidSettings", type=EnterpriseKeyAndroidSettings.class, parameters={})
+    @Export(name="androidSettings", type=EnterpriseKeyAndroidSettings.class, parameters={})
     private Output</* @Nullable */ EnterpriseKeyAndroidSettings> androidSettings;
 
     /**
@@ -59,7 +59,7 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * The timestamp corresponding to the creation of this Key.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -73,7 +73,7 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * Human-readable display name of this key. Modifiable by user.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -87,7 +87,7 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * Settings for keys that can be used by iOS apps.
      * 
      */
-    @OutputExport(name="iosSettings", type=EnterpriseKeyIosSettings.class, parameters={})
+    @Export(name="iosSettings", type=EnterpriseKeyIosSettings.class, parameters={})
     private Output</* @Nullable */ EnterpriseKeyIosSettings> iosSettings;
 
     /**
@@ -101,7 +101,7 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * See [Creating and managing labels](https://cloud.google.com/recaptcha-enterprise/docs/labels).
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -115,7 +115,7 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * The resource name for the Key in the format "projects/{project}/keys/{key}".
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -129,7 +129,7 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * The project for the resource
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -143,7 +143,7 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * Options for user acceptance testing.
      * 
      */
-    @OutputExport(name="testingOptions", type=EnterpriseKeyTestingOptions.class, parameters={})
+    @Export(name="testingOptions", type=EnterpriseKeyTestingOptions.class, parameters={})
     private Output</* @Nullable */ EnterpriseKeyTestingOptions> testingOptions;
 
     /**
@@ -157,7 +157,7 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
      * Settings for keys that can be used by websites.
      * 
      */
-    @OutputExport(name="webSettings", type=EnterpriseKeyWebSettings.class, parameters={})
+    @Export(name="webSettings", type=EnterpriseKeyWebSettings.class, parameters={})
     private Output</* @Nullable */ EnterpriseKeyWebSettings> webSettings;
 
     /**

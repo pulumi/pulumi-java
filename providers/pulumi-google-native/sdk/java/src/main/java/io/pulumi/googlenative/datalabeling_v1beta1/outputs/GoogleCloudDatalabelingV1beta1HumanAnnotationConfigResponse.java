@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse {
     /**
      * Optional. A human-readable description for AnnotatedDataset. The description can be up to 10000 characters long.
@@ -57,17 +57,17 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse {
      */
     private final String userEmailAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse(
-        @OutputCustomType.Parameter("annotatedDatasetDescription") String annotatedDatasetDescription,
-        @OutputCustomType.Parameter("annotatedDatasetDisplayName") String annotatedDatasetDisplayName,
-        @OutputCustomType.Parameter("contributorEmails") List<String> contributorEmails,
-        @OutputCustomType.Parameter("instruction") String instruction,
-        @OutputCustomType.Parameter("labelGroup") String labelGroup,
-        @OutputCustomType.Parameter("languageCode") String languageCode,
-        @OutputCustomType.Parameter("questionDuration") String questionDuration,
-        @OutputCustomType.Parameter("replicaCount") Integer replicaCount,
-        @OutputCustomType.Parameter("userEmailAddress") String userEmailAddress) {
+        @CustomType.Parameter("annotatedDatasetDescription") String annotatedDatasetDescription,
+        @CustomType.Parameter("annotatedDatasetDisplayName") String annotatedDatasetDisplayName,
+        @CustomType.Parameter("contributorEmails") List<String> contributorEmails,
+        @CustomType.Parameter("instruction") String instruction,
+        @CustomType.Parameter("labelGroup") String labelGroup,
+        @CustomType.Parameter("languageCode") String languageCode,
+        @CustomType.Parameter("questionDuration") String questionDuration,
+        @CustomType.Parameter("replicaCount") Integer replicaCount,
+        @CustomType.Parameter("userEmailAddress") String userEmailAddress) {
         this.annotatedDatasetDescription = annotatedDatasetDescription;
         this.annotatedDatasetDisplayName = annotatedDatasetDisplayName;
         this.contributorEmails = contributorEmails;

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FunctionInputResponse {
     /**
      * The (Azure Stream Analytics supported) data type of the function input parameter. A list of valid Azure Stream Analytics data types are described at https://msdn.microsoft.com/en-us/library/azure/dn835065.aspx
@@ -23,10 +23,10 @@ public final class FunctionInputResponse {
      */
     private final @Nullable Boolean isConfigurationParameter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FunctionInputResponse(
-        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
-        @OutputCustomType.Parameter("isConfigurationParameter") @Nullable Boolean isConfigurationParameter) {
+        @CustomType.Parameter("dataType") @Nullable String dataType,
+        @CustomType.Parameter("isConfigurationParameter") @Nullable Boolean isConfigurationParameter) {
         this.dataType = dataType;
         this.isConfigurationParameter = isConfigurationParameter;
     }

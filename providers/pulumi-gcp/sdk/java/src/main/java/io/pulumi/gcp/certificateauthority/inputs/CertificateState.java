@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateRevocationDetailGetArgs;
@@ -23,7 +23,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * Certificate Authority name.
      * 
      */
-    @InputImport(name="certificateAuthority")
+    @Import(name="certificateAuthority")
       private final @Nullable Output<String> certificateAuthority;
 
     public Output<String> getCertificateAuthority() {
@@ -35,7 +35,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * this field is present.
      * 
      */
-    @InputImport(name="certificateDescriptions")
+    @Import(name="certificateDescriptions")
       private final @Nullable Output<List<CertificateCertificateDescriptionGetArgs>> certificateDescriptions;
 
     public Output<List<CertificateCertificateDescriptionGetArgs>> getCertificateDescriptions() {
@@ -50,7 +50,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * as the Certificate.
      * 
      */
-    @InputImport(name="certificateTemplate")
+    @Import(name="certificateTemplate")
       private final @Nullable Output<String> certificateTemplate;
 
     public Output<String> getCertificateTemplate() {
@@ -62,7 +62,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Output<CertificateConfigGetArgs> config;
 
     public Output<CertificateConfigGetArgs> getConfig() {
@@ -73,7 +73,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * The time that this resource was created on the server. This is in RFC3339 text format.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -84,7 +84,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * Labels with user-defined metadata to apply to this resource.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -97,7 +97,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="lifetime")
+    @Import(name="lifetime")
       private final @Nullable Output<String> lifetime;
 
     public Output<String> getLifetime() {
@@ -109,7 +109,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * running `gcloud privateca locations list`.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -120,7 +120,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * The name for this Certificate.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -131,7 +131,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * Output only. The pem-encoded, signed X.509 certificate.
      * 
      */
-    @InputImport(name="pemCertificate")
+    @Import(name="pemCertificate")
       private final @Nullable Output<String> pemCertificate;
 
     public Output<String> getPemCertificate() {
@@ -142,7 +142,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * Required. Expected to be in leaf-to-root order according to RFC 5246.
      * 
      */
-    @InputImport(name="pemCertificates")
+    @Import(name="pemCertificates")
       private final @Nullable Output<List<String>> pemCertificates;
 
     public Output<List<String>> getPemCertificates() {
@@ -153,7 +153,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * Immutable. A pem-encoded X.509 certificate signing request (CSR).
      * 
      */
-    @InputImport(name="pemCsr")
+    @Import(name="pemCsr")
       private final @Nullable Output<String> pemCsr;
 
     public Output<String> getPemCsr() {
@@ -164,7 +164,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * The name of the CaPool this Certificate belongs to.
      * 
      */
-    @InputImport(name="pool")
+    @Import(name="pool")
       private final @Nullable Output<String> pool;
 
     public Output<String> getPool() {
@@ -176,7 +176,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -188,7 +188,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * this field is present.
      * 
      */
-    @InputImport(name="revocationDetails")
+    @Import(name="revocationDetails")
       private final @Nullable Output<List<CertificateRevocationDetailGetArgs>> revocationDetails;
 
     public Output<List<CertificateRevocationDetailGetArgs>> getRevocationDetails() {
@@ -199,7 +199,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * Output only. The time at which this CertificateAuthority was updated. This is in RFC3339 text format.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

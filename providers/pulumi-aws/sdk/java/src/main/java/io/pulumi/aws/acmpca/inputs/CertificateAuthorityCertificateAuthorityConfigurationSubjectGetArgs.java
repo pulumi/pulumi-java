@@ -4,7 +4,7 @@
 package io.pulumi.aws.acmpca.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * Fully qualified domain name (FQDN) associated with the certificate subject. Must be less than or equal to 64 characters in length.
      * 
      */
-    @InputImport(name="commonName")
+    @Import(name="commonName")
       private final @Nullable Output<String> commonName;
 
     public Output<String> getCommonName() {
@@ -29,7 +29,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * Two digit code that specifies the country in which the certificate subject located. Must be less than or equal to 2 characters in length.
      * 
      */
-    @InputImport(name="country")
+    @Import(name="country")
       private final @Nullable Output<String> country;
 
     public Output<String> getCountry() {
@@ -40,7 +40,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * Disambiguating information for the certificate subject. Must be less than or equal to 64 characters in length.
      * 
      */
-    @InputImport(name="distinguishedNameQualifier")
+    @Import(name="distinguishedNameQualifier")
       private final @Nullable Output<String> distinguishedNameQualifier;
 
     public Output<String> getDistinguishedNameQualifier() {
@@ -51,7 +51,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * Typically a qualifier appended to the name of an individual. Examples include Jr. for junior, Sr. for senior, and III for third. Must be less than or equal to 3 characters in length.
      * 
      */
-    @InputImport(name="generationQualifier")
+    @Import(name="generationQualifier")
       private final @Nullable Output<String> generationQualifier;
 
     public Output<String> getGenerationQualifier() {
@@ -62,7 +62,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * First name. Must be less than or equal to 16 characters in length.
      * 
      */
-    @InputImport(name="givenName")
+    @Import(name="givenName")
       private final @Nullable Output<String> givenName;
 
     public Output<String> getGivenName() {
@@ -73,7 +73,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * Concatenation that typically contains the first letter of the `given_name`, the first letter of the middle name if one exists, and the first letter of the `surname`. Must be less than or equal to 5 characters in length.
      * 
      */
-    @InputImport(name="initials")
+    @Import(name="initials")
       private final @Nullable Output<String> initials;
 
     public Output<String> getInitials() {
@@ -84,7 +84,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * The locality (such as a city or town) in which the certificate subject is located. Must be less than or equal to 128 characters in length.
      * 
      */
-    @InputImport(name="locality")
+    @Import(name="locality")
       private final @Nullable Output<String> locality;
 
     public Output<String> getLocality() {
@@ -95,7 +95,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * Legal name of the organization with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
      * 
      */
-    @InputImport(name="organization")
+    @Import(name="organization")
       private final @Nullable Output<String> organization;
 
     public Output<String> getOrganization() {
@@ -106,7 +106,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * A subdivision or unit of the organization (such as sales or finance) with which the certificate subject is affiliated. Must be less than or equal to 64 characters in length.
      * 
      */
-    @InputImport(name="organizationalUnit")
+    @Import(name="organizationalUnit")
       private final @Nullable Output<String> organizationalUnit;
 
     public Output<String> getOrganizationalUnit() {
@@ -117,7 +117,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * Typically a shortened version of a longer `given_name`. For example, Jonathan is often shortened to John. Elizabeth is often shortened to Beth, Liz, or Eliza. Must be less than or equal to 128 characters in length.
      * 
      */
-    @InputImport(name="pseudonym")
+    @Import(name="pseudonym")
       private final @Nullable Output<String> pseudonym;
 
     public Output<String> getPseudonym() {
@@ -128,7 +128,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * State in which the subject of the certificate is located. Must be less than or equal to 128 characters in length.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -139,7 +139,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * Family name. In the US and the UK for example, the surname of an individual is ordered last. In Asian cultures the surname is typically ordered first. Must be less than or equal to 40 characters in length.
      * 
      */
-    @InputImport(name="surname")
+    @Import(name="surname")
       private final @Nullable Output<String> surname;
 
     public Output<String> getSurname() {
@@ -150,7 +150,7 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationSubjectG
      * A title such as Mr. or Ms. which is pre-pended to the name to refer formally to the certificate subject. Must be less than or equal to 64 characters in length.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {

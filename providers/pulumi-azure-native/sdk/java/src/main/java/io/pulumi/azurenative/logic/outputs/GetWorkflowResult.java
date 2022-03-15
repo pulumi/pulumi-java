@@ -9,7 +9,7 @@ import io.pulumi.azurenative.logic.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.logic.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.logic.outputs.SkuResponse;
 import io.pulumi.azurenative.logic.outputs.WorkflowParameterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkflowResult {
     /**
      * The access control configuration.
@@ -115,27 +115,27 @@ public final class GetWorkflowResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkflowResult(
-        @OutputCustomType.Parameter("accessControl") @Nullable FlowAccessControlConfigurationResponse accessControl,
-        @OutputCustomType.Parameter("accessEndpoint") String accessEndpoint,
-        @OutputCustomType.Parameter("changedTime") String changedTime,
-        @OutputCustomType.Parameter("createdTime") String createdTime,
-        @OutputCustomType.Parameter("definition") @Nullable Object definition,
-        @OutputCustomType.Parameter("endpointsConfiguration") @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
-        @OutputCustomType.Parameter("integrationAccount") @Nullable ResourceReferenceResponse integrationAccount,
-        @OutputCustomType.Parameter("integrationServiceEnvironment") @Nullable ResourceReferenceResponse integrationServiceEnvironment,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,WorkflowParameterResponse> parameters,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sku") SkuResponse sku,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("accessControl") @Nullable FlowAccessControlConfigurationResponse accessControl,
+        @CustomType.Parameter("accessEndpoint") String accessEndpoint,
+        @CustomType.Parameter("changedTime") String changedTime,
+        @CustomType.Parameter("createdTime") String createdTime,
+        @CustomType.Parameter("definition") @Nullable Object definition,
+        @CustomType.Parameter("endpointsConfiguration") @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @CustomType.Parameter("integrationAccount") @Nullable ResourceReferenceResponse integrationAccount,
+        @CustomType.Parameter("integrationServiceEnvironment") @Nullable ResourceReferenceResponse integrationServiceEnvironment,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") @Nullable Map<String,WorkflowParameterResponse> parameters,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sku") SkuResponse sku,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") String version) {
         this.accessControl = accessControl;
         this.accessEndpoint = accessEndpoint;
         this.changedTime = changedTime;

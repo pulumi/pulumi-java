@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.ReservationSpecificReservationInstancePropertiesGetArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ReservationSpecificReservationGetArgs extends io.pulumi.resou
      * The number of resources that are allocated.
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Output<Integer> count;
 
     public Output<Integer> getCount() {
@@ -31,7 +31,7 @@ public final class ReservationSpecificReservationGetArgs extends io.pulumi.resou
      * How many instances are in use.
      * 
      */
-    @InputImport(name="inUseCount")
+    @Import(name="inUseCount")
       private final @Nullable Output<Integer> inUseCount;
 
     public Output<Integer> getInUseCount() {
@@ -43,7 +43,7 @@ public final class ReservationSpecificReservationGetArgs extends io.pulumi.resou
      * Structure is documented below.
      * 
      */
-    @InputImport(name="instanceProperties", required=true)
+    @Import(name="instanceProperties", required=true)
       private final Output<ReservationSpecificReservationInstancePropertiesGetArgs> instanceProperties;
 
     public Output<ReservationSpecificReservationInstancePropertiesGetArgs> getInstanceProperties() {

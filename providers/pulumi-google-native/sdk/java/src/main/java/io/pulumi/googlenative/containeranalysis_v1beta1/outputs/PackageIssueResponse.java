@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.VulnerabilityLocationResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PackageIssueResponse {
     /**
      * The location of the vulnerability.
@@ -31,12 +31,12 @@ public final class PackageIssueResponse {
      */
     private final String packageType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackageIssueResponse(
-        @OutputCustomType.Parameter("affectedLocation") VulnerabilityLocationResponse affectedLocation,
-        @OutputCustomType.Parameter("effectiveSeverity") String effectiveSeverity,
-        @OutputCustomType.Parameter("fixedLocation") VulnerabilityLocationResponse fixedLocation,
-        @OutputCustomType.Parameter("packageType") String packageType) {
+        @CustomType.Parameter("affectedLocation") VulnerabilityLocationResponse affectedLocation,
+        @CustomType.Parameter("effectiveSeverity") String effectiveSeverity,
+        @CustomType.Parameter("fixedLocation") VulnerabilityLocationResponse fixedLocation,
+        @CustomType.Parameter("packageType") String packageType) {
         this.affectedLocation = affectedLocation;
         this.effectiveSeverity = effectiveSeverity;
         this.fixedLocation = fixedLocation;

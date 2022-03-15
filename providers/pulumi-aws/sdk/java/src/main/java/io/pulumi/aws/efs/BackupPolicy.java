@@ -8,7 +8,7 @@ import io.pulumi.aws.efs.BackupPolicyArgs;
 import io.pulumi.aws.efs.inputs.BackupPolicyState;
 import io.pulumi.aws.efs.outputs.BackupPolicyBackupPolicy;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * A backup_policy object (documented below).
      * 
      */
-    @OutputExport(name="backupPolicy", type=BackupPolicyBackupPolicy.class, parameters={})
+    @Export(name="backupPolicy", type=BackupPolicyBackupPolicy.class, parameters={})
     private Output<BackupPolicyBackupPolicy> backupPolicy;
 
     /**
@@ -48,7 +48,7 @@ public class BackupPolicy extends io.pulumi.resources.CustomResource {
      * The ID of the EFS file system.
      * 
      */
-    @OutputExport(name="fileSystemId", type=String.class, parameters={})
+    @Export(name="fileSystemId", type=String.class, parameters={})
     private Output<String> fileSystemId;
 
     /**

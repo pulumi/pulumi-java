@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * PEM-encoded format.
      * 
      */
-    @InputImport(name="certificateBody", required=true)
+    @Import(name="certificateBody", required=true)
       private final Output<String> certificateBody;
 
     public Output<String> getCertificateBody() {
@@ -33,7 +33,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * of the chain.
      * 
      */
-    @InputImport(name="certificateChain")
+    @Import(name="certificateChain")
       private final @Nullable Output<String> certificateChain;
 
     public Output<String> getCertificateChain() {
@@ -45,7 +45,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * path in this value. If omitted, this provider will assign a random, unique name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -71,7 +71,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -82,7 +82,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * The contents of the private key in PEM-encoded format.
      * 
      */
-    @InputImport(name="privateKey", required=true)
+    @Import(name="privateKey", required=true)
       private final Output<String> privateKey;
 
     public Output<String> getPrivateKey() {
@@ -93,7 +93,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
      * Map of resource tags for the server certificate. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

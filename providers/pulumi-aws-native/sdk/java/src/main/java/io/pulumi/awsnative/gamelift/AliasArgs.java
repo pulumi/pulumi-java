@@ -5,7 +5,7 @@ package io.pulumi.awsnative.gamelift;
 
 import io.pulumi.awsnative.gamelift.inputs.AliasRoutingStrategyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * A human-readable description of the alias.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * A descriptive label that is associated with an alias. Alias names do not need to be unique.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * A routing configuration that specifies where traffic is directed for this alias, such as to a fleet or to a message.
      * 
      */
-    @InputImport(name="routingStrategy", required=true)
+    @Import(name="routingStrategy", required=true)
       private final Output<AliasRoutingStrategyArgs> routingStrategy;
 
     public Output<AliasRoutingStrategyArgs> getRoutingStrategy() {

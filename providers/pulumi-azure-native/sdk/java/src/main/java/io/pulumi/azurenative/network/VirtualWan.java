@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.VirtualWanArgs;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * True if branch to branch traffic is allowed.
      * 
      */
-    @OutputExport(name="allowBranchToBranchTraffic", type=Boolean.class, parameters={})
+    @Export(name="allowBranchToBranchTraffic", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowBranchToBranchTraffic;
 
     /**
@@ -51,7 +51,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * True if Vnet to Vnet traffic is allowed.
      * 
      */
-    @OutputExport(name="allowVnetToVnetTraffic", type=Boolean.class, parameters={})
+    @Export(name="allowVnetToVnetTraffic", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowVnetToVnetTraffic;
 
     /**
@@ -65,7 +65,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * Vpn encryption to be disabled or not.
      * 
      */
-    @OutputExport(name="disableVpnEncryption", type=Boolean.class, parameters={})
+    @Export(name="disableVpnEncryption", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableVpnEncryption;
 
     /**
@@ -79,7 +79,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -93,7 +93,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -107,7 +107,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * The office local breakout category.
      * 
      */
-    @OutputExport(name="office365LocalBreakoutCategory", type=String.class, parameters={})
+    @Export(name="office365LocalBreakoutCategory", type=String.class, parameters={})
     private Output<String> office365LocalBreakoutCategory;
 
     /**
@@ -135,7 +135,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * The provisioning state of the virtual WAN resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -149,7 +149,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -163,7 +163,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -177,7 +177,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * List of VirtualHubs in the VirtualWAN.
      * 
      */
-    @OutputExport(name="virtualHubs", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="virtualHubs", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> virtualHubs;
 
     /**
@@ -191,7 +191,7 @@ public class VirtualWan extends io.pulumi.resources.CustomResource {
      * List of VpnSites in the VirtualWAN.
      * 
      */
-    @OutputExport(name="vpnSites", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="vpnSites", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> vpnSites;
 
     /**

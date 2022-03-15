@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.pubsublite_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.pubsublite_v1.outputs.PartitionConfigResponse;
 import io.pulumi.googlenative.pubsublite_v1.outputs.ReservationConfigResponse;
 import io.pulumi.googlenative.pubsublite_v1.outputs.RetentionConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTopicResult {
     /**
      * The name of the topic. Structured like: projects/{project_number}/locations/{location}/topics/{topic_id}
@@ -33,12 +33,12 @@ public final class GetTopicResult {
      */
     private final RetentionConfigResponse retentionConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTopicResult(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("partitionConfig") PartitionConfigResponse partitionConfig,
-        @OutputCustomType.Parameter("reservationConfig") ReservationConfigResponse reservationConfig,
-        @OutputCustomType.Parameter("retentionConfig") RetentionConfigResponse retentionConfig) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("partitionConfig") PartitionConfigResponse partitionConfig,
+        @CustomType.Parameter("reservationConfig") ReservationConfigResponse reservationConfig,
+        @CustomType.Parameter("retentionConfig") RetentionConfigResponse retentionConfig) {
         this.name = name;
         this.partitionConfig = partitionConfig;
         this.reservationConfig = reservationConfig;

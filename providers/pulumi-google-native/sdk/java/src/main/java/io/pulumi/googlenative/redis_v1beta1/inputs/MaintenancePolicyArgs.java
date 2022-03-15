@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.redis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.redis_v1beta1.inputs.WeeklyMaintenanceWindowArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
      * Optional. Description of what this policy is for. Create/Update methods return INVALID_ARGUMENT if the length is greater than 512.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
      * Optional. Maintenance window that is applied to resources covered by this policy. Minimum 1. For the current version, the maximum number of weekly_window is expected to be one.
      * 
      */
-    @InputImport(name="weeklyMaintenanceWindow")
+    @Import(name="weeklyMaintenanceWindow")
       private final @Nullable Output<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow;
 
     public Output<List<WeeklyMaintenanceWindowArgs>> getWeeklyMaintenanceWindow() {

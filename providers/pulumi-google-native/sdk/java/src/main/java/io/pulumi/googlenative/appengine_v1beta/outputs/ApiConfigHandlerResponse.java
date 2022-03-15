@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApiConfigHandlerResponse {
     /**
      * Action to take when users access resources that require authentication. Defaults to redirect.
@@ -35,13 +35,13 @@ public final class ApiConfigHandlerResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiConfigHandlerResponse(
-        @OutputCustomType.Parameter("authFailAction") String authFailAction,
-        @OutputCustomType.Parameter("login") String login,
-        @OutputCustomType.Parameter("script") String script,
-        @OutputCustomType.Parameter("securityLevel") String securityLevel,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("authFailAction") String authFailAction,
+        @CustomType.Parameter("login") String login,
+        @CustomType.Parameter("script") String script,
+        @CustomType.Parameter("securityLevel") String securityLevel,
+        @CustomType.Parameter("url") String url) {
         this.authFailAction = authFailAction;
         this.login = login;
         this.script = script;

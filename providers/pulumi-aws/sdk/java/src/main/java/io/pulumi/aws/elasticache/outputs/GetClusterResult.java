@@ -4,14 +4,14 @@
 package io.pulumi.aws.elasticache.outputs;
 
 import io.pulumi.aws.elasticache.outputs.GetClusterCacheNode;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     private final String arn;
     /**
@@ -122,30 +122,30 @@ public final class GetClusterResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
-        @OutputCustomType.Parameter("cacheNodes") List<GetClusterCacheNode> cacheNodes,
-        @OutputCustomType.Parameter("clusterAddress") String clusterAddress,
-        @OutputCustomType.Parameter("clusterId") String clusterId,
-        @OutputCustomType.Parameter("configurationEndpoint") String configurationEndpoint,
-        @OutputCustomType.Parameter("engine") String engine,
-        @OutputCustomType.Parameter("engineVersion") String engineVersion,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("maintenanceWindow") String maintenanceWindow,
-        @OutputCustomType.Parameter("nodeType") String nodeType,
-        @OutputCustomType.Parameter("notificationTopicArn") String notificationTopicArn,
-        @OutputCustomType.Parameter("numCacheNodes") Integer numCacheNodes,
-        @OutputCustomType.Parameter("parameterGroupName") String parameterGroupName,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("replicationGroupId") String replicationGroupId,
-        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
-        @OutputCustomType.Parameter("securityGroupNames") List<String> securityGroupNames,
-        @OutputCustomType.Parameter("snapshotRetentionLimit") Integer snapshotRetentionLimit,
-        @OutputCustomType.Parameter("snapshotWindow") String snapshotWindow,
-        @OutputCustomType.Parameter("subnetGroupName") String subnetGroupName,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("availabilityZone") String availabilityZone,
+        @CustomType.Parameter("cacheNodes") List<GetClusterCacheNode> cacheNodes,
+        @CustomType.Parameter("clusterAddress") String clusterAddress,
+        @CustomType.Parameter("clusterId") String clusterId,
+        @CustomType.Parameter("configurationEndpoint") String configurationEndpoint,
+        @CustomType.Parameter("engine") String engine,
+        @CustomType.Parameter("engineVersion") String engineVersion,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("maintenanceWindow") String maintenanceWindow,
+        @CustomType.Parameter("nodeType") String nodeType,
+        @CustomType.Parameter("notificationTopicArn") String notificationTopicArn,
+        @CustomType.Parameter("numCacheNodes") Integer numCacheNodes,
+        @CustomType.Parameter("parameterGroupName") String parameterGroupName,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("replicationGroupId") String replicationGroupId,
+        @CustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @CustomType.Parameter("securityGroupNames") List<String> securityGroupNames,
+        @CustomType.Parameter("snapshotRetentionLimit") Integer snapshotRetentionLimit,
+        @CustomType.Parameter("snapshotWindow") String snapshotWindow,
+        @CustomType.Parameter("subnetGroupName") String subnetGroupName,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.availabilityZone = availabilityZone;
         this.cacheNodes = cacheNodes;

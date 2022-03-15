@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.outputs.APIServiceCondition;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class APIServiceStatus {
     /**
      * Current service state of apiService.
@@ -17,8 +17,8 @@ public final class APIServiceStatus {
      */
     private final @Nullable List<APIServiceCondition> conditions;
 
-    @OutputCustomType.Constructor
-    private APIServiceStatus(@OutputCustomType.Parameter("conditions") @Nullable List<APIServiceCondition> conditions) {
+    @CustomType.Constructor
+    private APIServiceStatus(@CustomType.Parameter("conditions") @Nullable List<APIServiceCondition> conditions) {
         this.conditions = conditions;
     }
 

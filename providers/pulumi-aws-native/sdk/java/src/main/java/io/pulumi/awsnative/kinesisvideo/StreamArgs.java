@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kinesisvideo;
 
 import io.pulumi.awsnative.kinesisvideo.inputs.StreamTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * The number of hours till which Kinesis Video will retain the data in the stream
      * 
      */
-    @InputImport(name="dataRetentionInHours")
+    @Import(name="dataRetentionInHours")
       private final @Nullable Output<Integer> dataRetentionInHours;
 
     public Output<Integer> getDataRetentionInHours() {
@@ -32,7 +32,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the device that is writing to the stream.
      * 
      */
-    @InputImport(name="deviceName")
+    @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -43,7 +43,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * AWS KMS key ID that Kinesis Video Streams uses to encrypt stream data.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -54,7 +54,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * The media type of the stream. Consumers of the stream can use this information when processing the stream.
      * 
      */
-    @InputImport(name="mediaType")
+    @Import(name="mediaType")
       private final @Nullable Output<String> mediaType;
 
     public Output<String> getMediaType() {
@@ -65,7 +65,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Kinesis Video stream.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs associated with the Kinesis Video Stream.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<StreamTagArgs>> tags;
 
     public Output<List<StreamTagArgs>> getTags() {

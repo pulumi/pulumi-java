@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GuestPoliciesPackageRepositoryGoo {
     /**
      * Unique identifier for the recipe. Only one recipe with a given name is installed on an instance.
@@ -23,10 +23,10 @@ public final class GuestPoliciesPackageRepositoryGoo {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestPoliciesPackageRepositoryGoo(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("url") String url) {
         this.name = name;
         this.url = url;
     }

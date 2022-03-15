@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
      * Type of backup items associated with this container.
      * 
      */
-    @InputImport(name="backupItemType")
+    @Import(name="backupItemType")
       private final @Nullable String backupItemType;
 
     public Optional<String> getBackupItemType() {
@@ -34,7 +34,7 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
      * List of backup items associated with this container.
      * 
      */
-    @InputImport(name="backupItems")
+    @Import(name="backupItems")
       private final @Nullable List<String> backupItems;
 
     public List<String> getBackupItems() {
@@ -45,7 +45,7 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
      * Latest backup status of this container.
      * 
      */
-    @InputImport(name="lastBackupStatus")
+    @Import(name="lastBackupStatus")
       private final @Nullable String lastBackupStatus;
 
     public Optional<String> getLastBackupStatus() {
@@ -56,7 +56,7 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
      * Time stamp when this container was refreshed.
      * 
      */
-    @InputImport(name="lastRefreshedAt")
+    @Import(name="lastRefreshedAt")
       private final @Nullable String lastRefreshedAt;
 
     public Optional<String> getLastRefreshedAt() {
@@ -67,7 +67,7 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
      * Backup policy associated with this container.
      * 
      */
-    @InputImport(name="policyName")
+    @Import(name="policyName")
       private final @Nullable String policyName;
 
     public Optional<String> getPolicyName() {

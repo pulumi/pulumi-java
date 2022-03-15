@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datashare.ShareSubscriptionArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ShareSubscription extends io.pulumi.resources.CustomResource {
      * Time at which the share subscription was created.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -49,7 +49,7 @@ public class ShareSubscription extends io.pulumi.resources.CustomResource {
      * The expiration date of the share subscription.
      * 
      */
-    @OutputExport(name="expirationDate", type=String.class, parameters={})
+    @Export(name="expirationDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> expirationDate;
 
     /**
@@ -63,7 +63,7 @@ public class ShareSubscription extends io.pulumi.resources.CustomResource {
      * The invitation id.
      * 
      */
-    @OutputExport(name="invitationId", type=String.class, parameters={})
+    @Export(name="invitationId", type=String.class, parameters={})
     private Output<String> invitationId;
 
     /**
@@ -77,7 +77,7 @@ public class ShareSubscription extends io.pulumi.resources.CustomResource {
      * Name of the azure resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class ShareSubscription extends io.pulumi.resources.CustomResource {
      * Email of the provider who created the resource
      * 
      */
-    @OutputExport(name="providerEmail", type=String.class, parameters={})
+    @Export(name="providerEmail", type=String.class, parameters={})
     private Output<String> providerEmail;
 
     /**
@@ -105,7 +105,7 @@ public class ShareSubscription extends io.pulumi.resources.CustomResource {
      * Name of the provider who created the resource
      * 
      */
-    @OutputExport(name="providerName", type=String.class, parameters={})
+    @Export(name="providerName", type=String.class, parameters={})
     private Output<String> providerName;
 
     /**
@@ -119,7 +119,7 @@ public class ShareSubscription extends io.pulumi.resources.CustomResource {
      * Tenant name of the provider who created the resource
      * 
      */
-    @OutputExport(name="providerTenantName", type=String.class, parameters={})
+    @Export(name="providerTenantName", type=String.class, parameters={})
     private Output<String> providerTenantName;
 
     /**
@@ -133,7 +133,7 @@ public class ShareSubscription extends io.pulumi.resources.CustomResource {
      * Provisioning state of the share subscription
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -147,7 +147,7 @@ public class ShareSubscription extends io.pulumi.resources.CustomResource {
      * Description of share
      * 
      */
-    @OutputExport(name="shareDescription", type=String.class, parameters={})
+    @Export(name="shareDescription", type=String.class, parameters={})
     private Output<String> shareDescription;
 
     /**
@@ -161,7 +161,7 @@ public class ShareSubscription extends io.pulumi.resources.CustomResource {
      * Kind of share
      * 
      */
-    @OutputExport(name="shareKind", type=String.class, parameters={})
+    @Export(name="shareKind", type=String.class, parameters={})
     private Output<String> shareKind;
 
     /**
@@ -175,7 +175,7 @@ public class ShareSubscription extends io.pulumi.resources.CustomResource {
      * Name of the share
      * 
      */
-    @OutputExport(name="shareName", type=String.class, parameters={})
+    @Export(name="shareName", type=String.class, parameters={})
     private Output<String> shareName;
 
     /**
@@ -189,7 +189,7 @@ public class ShareSubscription extends io.pulumi.resources.CustomResource {
      * Gets the current status of share subscription.
      * 
      */
-    @OutputExport(name="shareSubscriptionStatus", type=String.class, parameters={})
+    @Export(name="shareSubscriptionStatus", type=String.class, parameters={})
     private Output<String> shareSubscriptionStatus;
 
     /**
@@ -203,7 +203,7 @@ public class ShareSubscription extends io.pulumi.resources.CustomResource {
      * Terms of a share
      * 
      */
-    @OutputExport(name="shareTerms", type=String.class, parameters={})
+    @Export(name="shareTerms", type=String.class, parameters={})
     private Output<String> shareTerms;
 
     /**
@@ -217,7 +217,7 @@ public class ShareSubscription extends io.pulumi.resources.CustomResource {
      * Source share location.
      * 
      */
-    @OutputExport(name="sourceShareLocation", type=String.class, parameters={})
+    @Export(name="sourceShareLocation", type=String.class, parameters={})
     private Output<String> sourceShareLocation;
 
     /**
@@ -231,7 +231,7 @@ public class ShareSubscription extends io.pulumi.resources.CustomResource {
      * System Data of the Azure resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -245,7 +245,7 @@ public class ShareSubscription extends io.pulumi.resources.CustomResource {
      * Type of the azure resource
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -259,7 +259,7 @@ public class ShareSubscription extends io.pulumi.resources.CustomResource {
      * Email of the user who created the resource
      * 
      */
-    @OutputExport(name="userEmail", type=String.class, parameters={})
+    @Export(name="userEmail", type=String.class, parameters={})
     private Output<String> userEmail;
 
     /**
@@ -273,7 +273,7 @@ public class ShareSubscription extends io.pulumi.resources.CustomResource {
      * Name of the user who created the resource
      * 
      */
-    @OutputExport(name="userName", type=String.class, parameters={})
+    @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**

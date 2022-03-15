@@ -6,14 +6,14 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureToAzureNetworkMappingSettingsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VmmToAzureNetworkMappingSettingsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VmmToVmmNetworkMappingSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkMappingPropertiesResponse {
     /**
      * The fabric specific settings.
@@ -61,17 +61,17 @@ public final class NetworkMappingPropertiesResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkMappingPropertiesResponse(
-        @OutputCustomType.Parameter("fabricSpecificSettings") @Nullable Object fabricSpecificSettings,
-        @OutputCustomType.Parameter("primaryFabricFriendlyName") @Nullable String primaryFabricFriendlyName,
-        @OutputCustomType.Parameter("primaryNetworkFriendlyName") @Nullable String primaryNetworkFriendlyName,
-        @OutputCustomType.Parameter("primaryNetworkId") @Nullable String primaryNetworkId,
-        @OutputCustomType.Parameter("recoveryFabricArmId") @Nullable String recoveryFabricArmId,
-        @OutputCustomType.Parameter("recoveryFabricFriendlyName") @Nullable String recoveryFabricFriendlyName,
-        @OutputCustomType.Parameter("recoveryNetworkFriendlyName") @Nullable String recoveryNetworkFriendlyName,
-        @OutputCustomType.Parameter("recoveryNetworkId") @Nullable String recoveryNetworkId,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("fabricSpecificSettings") @Nullable Object fabricSpecificSettings,
+        @CustomType.Parameter("primaryFabricFriendlyName") @Nullable String primaryFabricFriendlyName,
+        @CustomType.Parameter("primaryNetworkFriendlyName") @Nullable String primaryNetworkFriendlyName,
+        @CustomType.Parameter("primaryNetworkId") @Nullable String primaryNetworkId,
+        @CustomType.Parameter("recoveryFabricArmId") @Nullable String recoveryFabricArmId,
+        @CustomType.Parameter("recoveryFabricFriendlyName") @Nullable String recoveryFabricFriendlyName,
+        @CustomType.Parameter("recoveryNetworkFriendlyName") @Nullable String recoveryNetworkFriendlyName,
+        @CustomType.Parameter("recoveryNetworkId") @Nullable String recoveryNetworkId,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.fabricSpecificSettings = fabricSpecificSettings;
         this.primaryFabricFriendlyName = primaryFabricFriendlyName;
         this.primaryNetworkFriendlyName = primaryNetworkFriendlyName;

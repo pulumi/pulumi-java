@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.orbital.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SpacecraftLinkResponse extends io.pulumi.resources.InvokeArgs
      * Bandwidth in MHz
      * 
      */
-    @InputImport(name="bandwidthMHz", required=true)
+    @Import(name="bandwidthMHz", required=true)
       private final Double bandwidthMHz;
 
     public Double getBandwidthMHz() {
@@ -32,7 +32,7 @@ public final class SpacecraftLinkResponse extends io.pulumi.resources.InvokeArgs
      * Center Frequency in MHz
      * 
      */
-    @InputImport(name="centerFrequencyMHz", required=true)
+    @Import(name="centerFrequencyMHz", required=true)
       private final Double centerFrequencyMHz;
 
     public Double getCenterFrequencyMHz() {
@@ -43,7 +43,7 @@ public final class SpacecraftLinkResponse extends io.pulumi.resources.InvokeArgs
      * Direction (uplink or downlink)
      * 
      */
-    @InputImport(name="direction", required=true)
+    @Import(name="direction", required=true)
       private final String direction;
 
     public String getDirection() {
@@ -54,7 +54,7 @@ public final class SpacecraftLinkResponse extends io.pulumi.resources.InvokeArgs
      * polarization. eg (RHCP, LHCP)
      * 
      */
-    @InputImport(name="polarization", required=true)
+    @Import(name="polarization", required=true)
       private final String polarization;
 
     public String getPolarization() {

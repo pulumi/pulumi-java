@@ -8,7 +8,7 @@ import io.pulumi.aws.backup.inputs.SelectionConditionStringLikeArgs;
 import io.pulumi.aws.backup.inputs.SelectionConditionStringNotEqualArgs;
 import io.pulumi.aws.backup.inputs.SelectionConditionStringNotLikeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,28 +18,28 @@ public final class SelectionConditionArgs extends io.pulumi.resources.ResourceAr
 
     public static final SelectionConditionArgs Empty = new SelectionConditionArgs();
 
-    @InputImport(name="stringEquals")
+    @Import(name="stringEquals")
       private final @Nullable Output<List<SelectionConditionStringEqualArgs>> stringEquals;
 
     public Output<List<SelectionConditionStringEqualArgs>> getStringEquals() {
         return this.stringEquals == null ? Output.empty() : this.stringEquals;
     }
 
-    @InputImport(name="stringLikes")
+    @Import(name="stringLikes")
       private final @Nullable Output<List<SelectionConditionStringLikeArgs>> stringLikes;
 
     public Output<List<SelectionConditionStringLikeArgs>> getStringLikes() {
         return this.stringLikes == null ? Output.empty() : this.stringLikes;
     }
 
-    @InputImport(name="stringNotEquals")
+    @Import(name="stringNotEquals")
       private final @Nullable Output<List<SelectionConditionStringNotEqualArgs>> stringNotEquals;
 
     public Output<List<SelectionConditionStringNotEqualArgs>> getStringNotEquals() {
         return this.stringNotEquals == null ? Output.empty() : this.stringNotEquals;
     }
 
-    @InputImport(name="stringNotLikes")
+    @Import(name="stringNotLikes")
       private final @Nullable Output<List<SelectionConditionStringNotLikeArgs>> stringNotLikes;
 
     public Output<List<SelectionConditionStringNotLikeArgs>> getStringNotLikes() {

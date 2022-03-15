@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkloadCrrAccessTokenResponse {
     /**
      * Access token used for authentication
@@ -167,43 +167,43 @@ public final class WorkloadCrrAccessTokenResponse {
      */
     private final @Nullable String tokenExtendedInformation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkloadCrrAccessTokenResponse(
-        @OutputCustomType.Parameter("accessTokenString") @Nullable String accessTokenString,
-        @OutputCustomType.Parameter("bMSActiveRegion") @Nullable String bMSActiveRegion,
-        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
-        @OutputCustomType.Parameter("containerId") @Nullable String containerId,
-        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
-        @OutputCustomType.Parameter("containerType") @Nullable String containerType,
-        @OutputCustomType.Parameter("coordinatorServiceStampId") @Nullable String coordinatorServiceStampId,
-        @OutputCustomType.Parameter("coordinatorServiceStampUri") @Nullable String coordinatorServiceStampUri,
-        @OutputCustomType.Parameter("datasourceContainerName") @Nullable String datasourceContainerName,
-        @OutputCustomType.Parameter("datasourceId") @Nullable String datasourceId,
-        @OutputCustomType.Parameter("datasourceName") @Nullable String datasourceName,
-        @OutputCustomType.Parameter("datasourceType") @Nullable String datasourceType,
-        @OutputCustomType.Parameter("objectType") String objectType,
-        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
-        @OutputCustomType.Parameter("policyName") @Nullable String policyName,
-        @OutputCustomType.Parameter("protectableObjectContainerHostOsName") @Nullable String protectableObjectContainerHostOsName,
-        @OutputCustomType.Parameter("protectableObjectFriendlyName") @Nullable String protectableObjectFriendlyName,
-        @OutputCustomType.Parameter("protectableObjectParentLogicalContainerName") @Nullable String protectableObjectParentLogicalContainerName,
-        @OutputCustomType.Parameter("protectableObjectProtectionState") @Nullable String protectableObjectProtectionState,
-        @OutputCustomType.Parameter("protectableObjectUniqueName") @Nullable String protectableObjectUniqueName,
-        @OutputCustomType.Parameter("protectableObjectWorkloadType") @Nullable String protectableObjectWorkloadType,
-        @OutputCustomType.Parameter("protectionContainerId") @Nullable Double protectionContainerId,
-        @OutputCustomType.Parameter("protectionServiceStampId") @Nullable String protectionServiceStampId,
-        @OutputCustomType.Parameter("protectionServiceStampUri") @Nullable String protectionServiceStampUri,
-        @OutputCustomType.Parameter("recoveryPointId") @Nullable String recoveryPointId,
-        @OutputCustomType.Parameter("recoveryPointTime") @Nullable String recoveryPointTime,
-        @OutputCustomType.Parameter("resourceGroupName") @Nullable String resourceGroupName,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
-        @OutputCustomType.Parameter("resourceName") @Nullable String resourceName,
-        @OutputCustomType.Parameter("rpIsManagedVirtualMachine") @Nullable Boolean rpIsManagedVirtualMachine,
-        @OutputCustomType.Parameter("rpOriginalSAOption") @Nullable Boolean rpOriginalSAOption,
-        @OutputCustomType.Parameter("rpTierInformation") @Nullable Map<String,String> rpTierInformation,
-        @OutputCustomType.Parameter("rpVMSizeDescription") @Nullable String rpVMSizeDescription,
-        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
-        @OutputCustomType.Parameter("tokenExtendedInformation") @Nullable String tokenExtendedInformation) {
+        @CustomType.Parameter("accessTokenString") @Nullable String accessTokenString,
+        @CustomType.Parameter("bMSActiveRegion") @Nullable String bMSActiveRegion,
+        @CustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @CustomType.Parameter("containerId") @Nullable String containerId,
+        @CustomType.Parameter("containerName") @Nullable String containerName,
+        @CustomType.Parameter("containerType") @Nullable String containerType,
+        @CustomType.Parameter("coordinatorServiceStampId") @Nullable String coordinatorServiceStampId,
+        @CustomType.Parameter("coordinatorServiceStampUri") @Nullable String coordinatorServiceStampUri,
+        @CustomType.Parameter("datasourceContainerName") @Nullable String datasourceContainerName,
+        @CustomType.Parameter("datasourceId") @Nullable String datasourceId,
+        @CustomType.Parameter("datasourceName") @Nullable String datasourceName,
+        @CustomType.Parameter("datasourceType") @Nullable String datasourceType,
+        @CustomType.Parameter("objectType") String objectType,
+        @CustomType.Parameter("policyId") @Nullable String policyId,
+        @CustomType.Parameter("policyName") @Nullable String policyName,
+        @CustomType.Parameter("protectableObjectContainerHostOsName") @Nullable String protectableObjectContainerHostOsName,
+        @CustomType.Parameter("protectableObjectFriendlyName") @Nullable String protectableObjectFriendlyName,
+        @CustomType.Parameter("protectableObjectParentLogicalContainerName") @Nullable String protectableObjectParentLogicalContainerName,
+        @CustomType.Parameter("protectableObjectProtectionState") @Nullable String protectableObjectProtectionState,
+        @CustomType.Parameter("protectableObjectUniqueName") @Nullable String protectableObjectUniqueName,
+        @CustomType.Parameter("protectableObjectWorkloadType") @Nullable String protectableObjectWorkloadType,
+        @CustomType.Parameter("protectionContainerId") @Nullable Double protectionContainerId,
+        @CustomType.Parameter("protectionServiceStampId") @Nullable String protectionServiceStampId,
+        @CustomType.Parameter("protectionServiceStampUri") @Nullable String protectionServiceStampUri,
+        @CustomType.Parameter("recoveryPointId") @Nullable String recoveryPointId,
+        @CustomType.Parameter("recoveryPointTime") @Nullable String recoveryPointTime,
+        @CustomType.Parameter("resourceGroupName") @Nullable String resourceGroupName,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId,
+        @CustomType.Parameter("resourceName") @Nullable String resourceName,
+        @CustomType.Parameter("rpIsManagedVirtualMachine") @Nullable Boolean rpIsManagedVirtualMachine,
+        @CustomType.Parameter("rpOriginalSAOption") @Nullable Boolean rpOriginalSAOption,
+        @CustomType.Parameter("rpTierInformation") @Nullable Map<String,String> rpTierInformation,
+        @CustomType.Parameter("rpVMSizeDescription") @Nullable String rpVMSizeDescription,
+        @CustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @CustomType.Parameter("tokenExtendedInformation") @Nullable String tokenExtendedInformation) {
         this.accessTokenString = accessTokenString;
         this.bMSActiveRegion = bMSActiveRegion;
         this.backupManagementType = backupManagementType;

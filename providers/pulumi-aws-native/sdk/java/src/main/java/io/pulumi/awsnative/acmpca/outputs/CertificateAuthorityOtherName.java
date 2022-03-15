@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificateAuthorityOtherName {
     private final String typeId;
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateAuthorityOtherName(
-        @OutputCustomType.Parameter("typeId") String typeId,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("typeId") String typeId,
+        @CustomType.Parameter("value") String value) {
         this.typeId = typeId;
         this.value = value;
     }

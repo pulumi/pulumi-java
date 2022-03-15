@@ -45,7 +45,7 @@ import io.pulumi.azurenative.datafactory.outputs.VariableSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.WaitActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebActivityResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebHookActivityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -55,7 +55,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPipelineResult {
     /**
      * List of activities in pipeline.
@@ -123,21 +123,21 @@ public final class GetPipelineResult {
      */
     private final @Nullable Map<String,VariableSpecificationResponse> variables;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPipelineResult(
-        @OutputCustomType.Parameter("activities") @Nullable List<Object> activities,
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("concurrency") @Nullable Integer concurrency,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("folder") @Nullable PipelineResponseFolder folder,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("policy") @Nullable PipelinePolicyResponse policy,
-        @OutputCustomType.Parameter("runDimensions") @Nullable Map<String,Object> runDimensions,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("variables") @Nullable Map<String,VariableSpecificationResponse> variables) {
+        @CustomType.Parameter("activities") @Nullable List<Object> activities,
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("concurrency") @Nullable Integer concurrency,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("folder") @Nullable PipelineResponseFolder folder,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("policy") @Nullable PipelinePolicyResponse policy,
+        @CustomType.Parameter("runDimensions") @Nullable Map<String,Object> runDimensions,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("variables") @Nullable Map<String,VariableSpecificationResponse> variables) {
         this.activities = activities;
         this.annotations = annotations;
         this.concurrency = concurrency;

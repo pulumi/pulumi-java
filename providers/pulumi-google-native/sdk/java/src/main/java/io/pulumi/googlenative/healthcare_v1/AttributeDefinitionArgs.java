@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1.enums.AttributeDefinitionCategory;
 import java.lang.String;
 import java.util.List;
@@ -20,14 +20,14 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
      * Possible values for the attribute. The number of allowed values must not exceed 500. An empty list is invalid. The list can only be expanded after creation.
      * 
      */
-    @InputImport(name="allowedValues", required=true)
+    @Import(name="allowedValues", required=true)
       private final Output<List<String>> allowedValues;
 
     public Output<List<String>> getAllowedValues() {
         return this.allowedValues;
     }
 
-    @InputImport(name="attributeDefinitionId", required=true)
+    @Import(name="attributeDefinitionId", required=true)
       private final Output<String> attributeDefinitionId;
 
     public Output<String> getAttributeDefinitionId() {
@@ -38,7 +38,7 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
      * The category of the attribute. The value of this field cannot be changed after creation.
      * 
      */
-    @InputImport(name="category", required=true)
+    @Import(name="category", required=true)
       private final Output<AttributeDefinitionCategory> category;
 
     public Output<AttributeDefinitionCategory> getCategory() {
@@ -49,14 +49,14 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
      * Optional. Default values of the attribute in Consents. If no default values are specified, it defaults to an empty value.
      * 
      */
-    @InputImport(name="consentDefaultValues")
+    @Import(name="consentDefaultValues")
       private final @Nullable Output<List<String>> consentDefaultValues;
 
     public Output<List<String>> getConsentDefaultValues() {
         return this.consentDefaultValues == null ? Output.empty() : this.consentDefaultValues;
     }
 
-    @InputImport(name="consentStoreId", required=true)
+    @Import(name="consentStoreId", required=true)
       private final Output<String> consentStoreId;
 
     public Output<String> getConsentStoreId() {
@@ -67,14 +67,14 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
      * Optional. Default value of the attribute in User data mappings. If no default value is specified, it defaults to an empty value. This field is only applicable to attributes of the category `RESOURCE`.
      * 
      */
-    @InputImport(name="dataMappingDefaultValue")
+    @Import(name="dataMappingDefaultValue")
       private final @Nullable Output<String> dataMappingDefaultValue;
 
     public Output<String> getDataMappingDefaultValue() {
         return this.dataMappingDefaultValue == null ? Output.empty() : this.dataMappingDefaultValue;
     }
 
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
     public Output<String> getDatasetId() {
@@ -85,14 +85,14 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
      * Optional. A description of the attribute.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -103,14 +103,14 @@ public final class AttributeDefinitionArgs extends io.pulumi.resources.ResourceA
      * Resource name of the Attribute definition, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/attributeDefinitions/{attribute_definition_id}`. Cannot be changed after creation.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

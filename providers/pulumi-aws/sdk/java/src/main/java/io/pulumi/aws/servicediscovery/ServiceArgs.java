@@ -7,7 +7,7 @@ import io.pulumi.aws.servicediscovery.inputs.ServiceDnsConfigArgs;
 import io.pulumi.aws.servicediscovery.inputs.ServiceHealthCheckConfigArgs;
 import io.pulumi.aws.servicediscovery.inputs.ServiceHealthCheckCustomConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the service.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -34,7 +34,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
      * 
      */
-    @InputImport(name="dnsConfig")
+    @Import(name="dnsConfig")
       private final @Nullable Output<ServiceDnsConfigArgs> dnsConfig;
 
     public Output<ServiceDnsConfigArgs> getDnsConfig() {
@@ -45,7 +45,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable.
      * 
      */
-    @InputImport(name="forceDestroy")
+    @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
     public Output<Boolean> getForceDestroy() {
@@ -56,7 +56,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
      * 
      */
-    @InputImport(name="healthCheckConfig")
+    @Import(name="healthCheckConfig")
       private final @Nullable Output<ServiceHealthCheckConfigArgs> healthCheckConfig;
 
     public Output<ServiceHealthCheckConfigArgs> getHealthCheckConfig() {
@@ -67,7 +67,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * A complex type that contains settings for ECS managed health checks.
      * 
      */
-    @InputImport(name="healthCheckCustomConfig")
+    @Import(name="healthCheckCustomConfig")
       private final @Nullable Output<ServiceHealthCheckCustomConfigArgs> healthCheckCustomConfig;
 
     public Output<ServiceHealthCheckCustomConfigArgs> getHealthCheckCustomConfig() {
@@ -78,7 +78,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the service.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -89,7 +89,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the namespace to use for DNS configuration.
      * 
      */
-    @InputImport(name="namespaceId")
+    @Import(name="namespaceId")
       private final @Nullable Output<String> namespaceId;
 
     public Output<String> getNamespaceId() {
@@ -100,7 +100,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the service. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

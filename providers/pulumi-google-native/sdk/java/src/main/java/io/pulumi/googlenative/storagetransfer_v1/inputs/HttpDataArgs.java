@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class HttpDataArgs extends io.pulumi.resources.ResourceArgs {
      * The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
      * 
      */
-    @InputImport(name="listUrl", required=true)
+    @Import(name="listUrl", required=true)
       private final Output<String> listUrl;
 
     public Output<String> getListUrl() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.logging.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricBucketOptionsLinearBuckets {
     /**
      * Must be greater than 0.
@@ -28,11 +28,11 @@ public final class MetricBucketOptionsLinearBuckets {
      */
     private final @Nullable Double width;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricBucketOptionsLinearBuckets(
-        @OutputCustomType.Parameter("numFiniteBuckets") @Nullable Integer numFiniteBuckets,
-        @OutputCustomType.Parameter("offset") @Nullable Double offset,
-        @OutputCustomType.Parameter("width") @Nullable Double width) {
+        @CustomType.Parameter("numFiniteBuckets") @Nullable Integer numFiniteBuckets,
+        @CustomType.Parameter("offset") @Nullable Double offset,
+        @CustomType.Parameter("width") @Nullable Double width) {
         this.numFiniteBuckets = numFiniteBuckets;
         this.offset = offset;
         this.width = width;

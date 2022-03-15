@@ -5,7 +5,7 @@ package io.pulumi.azurenative.powerbi;
 
 import io.pulumi.azurenative.powerbi.inputs.AzureSkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
      * Azure location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -31,21 +31,21 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
      * Azure resource group
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<AzureSkuArgs> sku;
 
     public Output<AzureSkuArgs> getSku() {
         return this.sku == null ? Output.empty() : this.sku;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -56,7 +56,7 @@ public final class WorkspaceCollectionArgs extends io.pulumi.resources.ResourceA
      * Power BI Embedded Workspace Collection name
      * 
      */
-    @InputImport(name="workspaceCollectionName")
+    @Import(name="workspaceCollectionName")
       private final @Nullable Output<String> workspaceCollectionName;
 
     public Output<String> getWorkspaceCollectionName() {

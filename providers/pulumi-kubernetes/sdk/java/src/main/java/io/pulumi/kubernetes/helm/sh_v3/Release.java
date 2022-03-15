@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.helm.sh_v3;
 
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.helm.sh_v3.ReleaseArgs;
@@ -44,7 +44,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * If set, installation process purges chart on fail. `skipAwait` will be disabled automatically if atomic is used.
      * 
      */
-    @OutputExport(name="atomic", type=Boolean.class, parameters={})
+    @Export(name="atomic", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> atomic;
 
     /**
@@ -58,7 +58,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Chart name to be installed. A path may be used.
      * 
      */
-    @OutputExport(name="chart", type=String.class, parameters={})
+    @Export(name="chart", type=String.class, parameters={})
     private Output<String> chart;
 
     /**
@@ -72,7 +72,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Allow deletion of new resources created in this upgrade when upgrade fails.
      * 
      */
-    @OutputExport(name="cleanupOnFail", type=Boolean.class, parameters={})
+    @Export(name="cleanupOnFail", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> cleanupOnFail;
 
     /**
@@ -86,7 +86,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Create the namespace if it does not exist.
      * 
      */
-    @OutputExport(name="createNamespace", type=Boolean.class, parameters={})
+    @Export(name="createNamespace", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> createNamespace;
 
     /**
@@ -100,7 +100,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Run helm dependency update before installing the chart.
      * 
      */
-    @OutputExport(name="dependencyUpdate", type=Boolean.class, parameters={})
+    @Export(name="dependencyUpdate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> dependencyUpdate;
 
     /**
@@ -114,7 +114,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Add a custom description
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -128,7 +128,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Use chart development versions, too. Equivalent to version '>0.0.0-0'. If `version` is set, this is ignored.
      * 
      */
-    @OutputExport(name="devel", type=Boolean.class, parameters={})
+    @Export(name="devel", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> devel;
 
     /**
@@ -142,7 +142,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook
      * 
      */
-    @OutputExport(name="disableCRDHooks", type=Boolean.class, parameters={})
+    @Export(name="disableCRDHooks", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableCRDHooks;
 
     /**
@@ -156,7 +156,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema
      * 
      */
-    @OutputExport(name="disableOpenapiValidation", type=Boolean.class, parameters={})
+    @Export(name="disableOpenapiValidation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableOpenapiValidation;
 
     /**
@@ -170,7 +170,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Prevent hooks from running.
      * 
      */
-    @OutputExport(name="disableWebhooks", type=Boolean.class, parameters={})
+    @Export(name="disableWebhooks", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableWebhooks;
 
     /**
@@ -184,7 +184,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Force resource update through delete/recreate if needed.
      * 
      */
-    @OutputExport(name="forceUpdate", type=Boolean.class, parameters={})
+    @Export(name="forceUpdate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceUpdate;
 
     /**
@@ -198,7 +198,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Location of public keys used for verification. Used only if `verify` is true
      * 
      */
-    @OutputExport(name="keyring", type=String.class, parameters={})
+    @Export(name="keyring", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyring;
 
     /**
@@ -212,7 +212,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Run helm lint when planning.
      * 
      */
-    @OutputExport(name="lint", type=Boolean.class, parameters={})
+    @Export(name="lint", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> lint;
 
     /**
@@ -226,7 +226,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * The rendered manifests as JSON. Not yet supported.
      * 
      */
-    @OutputExport(name="manifest", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="manifest", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> manifest;
 
     /**
@@ -240,7 +240,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Limit the maximum number of revisions saved per release. Use 0 for no limit.
      * 
      */
-    @OutputExport(name="maxHistory", type=Integer.class, parameters={})
+    @Export(name="maxHistory", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxHistory;
 
     /**
@@ -254,7 +254,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Release name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -268,7 +268,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Namespace to install the release into.
      * 
      */
-    @OutputExport(name="namespace", type=String.class, parameters={})
+    @Export(name="namespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> namespace;
 
     /**
@@ -282,7 +282,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Postrender command to run.
      * 
      */
-    @OutputExport(name="postrender", type=String.class, parameters={})
+    @Export(name="postrender", type=String.class, parameters={})
     private Output</* @Nullable */ String> postrender;
 
     /**
@@ -296,7 +296,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Perform pods restart during upgrade/rollback.
      * 
      */
-    @OutputExport(name="recreatePods", type=Boolean.class, parameters={})
+    @Export(name="recreatePods", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> recreatePods;
 
     /**
@@ -310,7 +310,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * If set, render subchart notes along with the parent.
      * 
      */
-    @OutputExport(name="renderSubchartNotes", type=Boolean.class, parameters={})
+    @Export(name="renderSubchartNotes", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> renderSubchartNotes;
 
     /**
@@ -324,7 +324,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Re-use the given name, even if that name is already used. This is unsafe in production
      * 
      */
-    @OutputExport(name="replace", type=Boolean.class, parameters={})
+    @Export(name="replace", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> replace;
 
     /**
@@ -338,7 +338,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Specification defining the Helm chart repository to use.
      * 
      */
-    @OutputExport(name="repositoryOpts", type=RepositoryOpts.class, parameters={})
+    @Export(name="repositoryOpts", type=RepositoryOpts.class, parameters={})
     private Output</* @Nullable */ RepositoryOpts> repositoryOpts;
 
     /**
@@ -352,7 +352,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * When upgrading, reset the values to the ones built into the chart.
      * 
      */
-    @OutputExport(name="resetValues", type=Boolean.class, parameters={})
+    @Export(name="resetValues", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> resetValues;
 
     /**
@@ -366,7 +366,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Names of resources created by the release grouped by "kind/version".
      * 
      */
-    @OutputExport(name="resourceNames", type=Map.class, parameters={String.class, List.class})
+    @Export(name="resourceNames", type=Map.class, parameters={String.class, List.class})
     private Output</* @Nullable */ Map<String,List<String>>> resourceNames;
 
     /**
@@ -380,7 +380,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * When upgrading, reuse the last release's values and merge in any overrides. If 'resetValues' is specified, this is ignored
      * 
      */
-    @OutputExport(name="reuseValues", type=Boolean.class, parameters={})
+    @Export(name="reuseValues", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> reuseValues;
 
     /**
@@ -394,7 +394,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * By default, the provider waits until all resources are in a ready state before marking the release as successful. Setting this to true will skip such await logic.
      * 
      */
-    @OutputExport(name="skipAwait", type=Boolean.class, parameters={})
+    @Export(name="skipAwait", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> skipAwait;
 
     /**
@@ -408,7 +408,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * If set, no CRDs will be installed. By default, CRDs are installed if not already present.
      * 
      */
-    @OutputExport(name="skipCrds", type=Boolean.class, parameters={})
+    @Export(name="skipCrds", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> skipCrds;
 
     /**
@@ -422,7 +422,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Status of the deployed release.
      * 
      */
-    @OutputExport(name="status", type=ReleaseStatus.class, parameters={})
+    @Export(name="status", type=ReleaseStatus.class, parameters={})
     private Output<ReleaseStatus> status;
 
     /**
@@ -436,7 +436,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Time in seconds to wait for any individual kubernetes operation.
      * 
      */
-    @OutputExport(name="timeout", type=Integer.class, parameters={})
+    @Export(name="timeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeout;
 
     /**
@@ -450,7 +450,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * List of assets (raw yaml files). Content is read and merged with values (with values taking precedence).
      * 
      */
-    @OutputExport(name="valueYamlFiles", type=List.class, parameters={AssetOrArchive.class})
+    @Export(name="valueYamlFiles", type=List.class, parameters={AssetOrArchive.class})
     private Output</* @Nullable */ List<AssetOrArchive>> valueYamlFiles;
 
     /**
@@ -464,7 +464,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Custom values set for the release.
      * 
      */
-    @OutputExport(name="values", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="values", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> values;
 
     /**
@@ -478,7 +478,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Verify the package before installing it.
      * 
      */
-    @OutputExport(name="verify", type=Boolean.class, parameters={})
+    @Export(name="verify", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> verify;
 
     /**
@@ -492,7 +492,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Specify the exact chart version to install. If this is not specified, the latest version is installed.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**
@@ -506,7 +506,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Will wait until all Jobs have been completed before marking the release as successful. This is ignored if `skipAwait` is enabled.
      * 
      */
-    @OutputExport(name="waitForJobs", type=Boolean.class, parameters={})
+    @Export(name="waitForJobs", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> waitForJobs;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebaserules_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebaserules_v1.ReleaseArgs;
@@ -21,7 +21,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Time the release was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -35,7 +35,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Format: `projects/{project_id}/releases/{release_id}`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the `Release` to be created.
      * 
      */
-    @OutputExport(name="rulesetName", type=String.class, parameters={})
+    @Export(name="rulesetName", type=String.class, parameters={})
     private Output<String> rulesetName;
 
     /**
@@ -63,7 +63,7 @@ public class Release extends io.pulumi.resources.CustomResource {
      * Time the release was updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.SignatureResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GenericSignedAttestationResponse {
     /**
      * Type (for example schema) of the attestation payload that was signed. The verifier must ensure that the provided type is one that the verifier supports, and that the attestation payload is a valid instantiation of that type (for example by validating a JSON schema).
@@ -27,11 +27,11 @@ public final class GenericSignedAttestationResponse {
      */
     private final List<SignatureResponse> signatures;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GenericSignedAttestationResponse(
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("serializedPayload") String serializedPayload,
-        @OutputCustomType.Parameter("signatures") List<SignatureResponse> signatures) {
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("serializedPayload") String serializedPayload,
+        @CustomType.Parameter("signatures") List<SignatureResponse> signatures) {
         this.contentType = contentType;
         this.serializedPayload = serializedPayload;
         this.signatures = signatures;

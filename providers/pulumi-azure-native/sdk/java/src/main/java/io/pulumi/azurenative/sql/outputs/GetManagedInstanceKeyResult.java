@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetManagedInstanceKeyResult {
     /**
      * Key auto rotation opt-in flag. Either true or false.
@@ -46,15 +46,15 @@ public final class GetManagedInstanceKeyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetManagedInstanceKeyResult(
-        @OutputCustomType.Parameter("autoRotationEnabled") Boolean autoRotationEnabled,
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("thumbprint") String thumbprint,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("autoRotationEnabled") Boolean autoRotationEnabled,
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("thumbprint") String thumbprint,
+        @CustomType.Parameter("type") String type) {
         this.autoRotationEnabled = autoRotationEnabled;
         this.creationDate = creationDate;
         this.id = id;

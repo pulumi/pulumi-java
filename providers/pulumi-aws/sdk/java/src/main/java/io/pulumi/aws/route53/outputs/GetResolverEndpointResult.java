@@ -4,14 +4,14 @@
 package io.pulumi.aws.route53.outputs;
 
 import io.pulumi.aws.route53.outputs.GetResolverEndpointFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResolverEndpointResult {
     private final String arn;
     private final String direction;
@@ -27,17 +27,17 @@ public final class GetResolverEndpointResult {
     private final String status;
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResolverEndpointResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("direction") String direction,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetResolverEndpointFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ipAddresses") List<String> ipAddresses,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resolverEndpointId") @Nullable String resolverEndpointId,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("direction") String direction,
+        @CustomType.Parameter("filters") @Nullable List<GetResolverEndpointFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ipAddresses") List<String> ipAddresses,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resolverEndpointId") @Nullable String resolverEndpointId,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.arn = arn;
         this.direction = direction;
         this.filters = filters;

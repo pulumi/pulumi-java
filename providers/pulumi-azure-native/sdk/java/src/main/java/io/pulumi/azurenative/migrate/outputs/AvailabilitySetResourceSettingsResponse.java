@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AvailabilitySetResourceSettingsResponse {
     /**
      * Gets or sets the target fault domain.
@@ -34,12 +34,12 @@ public final class AvailabilitySetResourceSettingsResponse {
      */
     private final @Nullable Integer updateDomain;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AvailabilitySetResourceSettingsResponse(
-        @OutputCustomType.Parameter("faultDomain") @Nullable Integer faultDomain,
-        @OutputCustomType.Parameter("resourceType") String resourceType,
-        @OutputCustomType.Parameter("targetResourceName") String targetResourceName,
-        @OutputCustomType.Parameter("updateDomain") @Nullable Integer updateDomain) {
+        @CustomType.Parameter("faultDomain") @Nullable Integer faultDomain,
+        @CustomType.Parameter("resourceType") String resourceType,
+        @CustomType.Parameter("targetResourceName") String targetResourceName,
+        @CustomType.Parameter("updateDomain") @Nullable Integer updateDomain) {
         this.faultDomain = faultDomain;
         this.resourceType = resourceType;
         this.targetResourceName = targetResourceName;

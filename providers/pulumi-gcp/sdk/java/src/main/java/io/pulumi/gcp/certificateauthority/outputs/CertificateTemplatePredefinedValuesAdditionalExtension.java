@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateTemplatePredefinedValuesAdditionalExtensionObjectId;
 import java.lang.Boolean;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateTemplatePredefinedValuesAdditionalExtension {
     /**
      * Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
@@ -29,11 +29,11 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtension {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateTemplatePredefinedValuesAdditionalExtension(
-        @OutputCustomType.Parameter("critical") @Nullable Boolean critical,
-        @OutputCustomType.Parameter("objectId") CertificateTemplatePredefinedValuesAdditionalExtensionObjectId objectId,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("critical") @Nullable Boolean critical,
+        @CustomType.Parameter("objectId") CertificateTemplatePredefinedValuesAdditionalExtensionObjectId objectId,
+        @CustomType.Parameter("value") String value) {
         this.critical = critical;
         this.objectId = objectId;
         this.value = value;

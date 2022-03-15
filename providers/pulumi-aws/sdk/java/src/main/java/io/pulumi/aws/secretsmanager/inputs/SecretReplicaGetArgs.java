@@ -4,7 +4,7 @@
 package io.pulumi.aws.secretsmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
      * ARN, Key ID, or Alias of the AWS KMS key within the region secret is replicated to. If one is not specified, then Secrets Manager defaults to using the AWS account's default KMS key (`aws/secretsmanager`) in the region or creates one for use if non-existent.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -29,7 +29,7 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
      * Date that you last accessed the secret in the Region.
      * 
      */
-    @InputImport(name="lastAccessedDate")
+    @Import(name="lastAccessedDate")
       private final @Nullable Output<String> lastAccessedDate;
 
     public Output<String> getLastAccessedDate() {
@@ -40,7 +40,7 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
      * Region for replicating the secret.
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {
@@ -51,7 +51,7 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
      * Status can be `InProgress`, `Failed`, or `InSync`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -62,7 +62,7 @@ public final class SecretReplicaGetArgs extends io.pulumi.resources.ResourceArgs
      * Message such as `Replication succeeded` or `Secret with this name already exists in this region`.
      * 
      */
-    @InputImport(name="statusMessage")
+    @Import(name="statusMessage")
       private final @Nullable Output<String> statusMessage;
 
     public Output<String> getStatusMessage() {

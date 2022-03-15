@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceBusTopicOutputDataSourceResponse {
     /**
      * A string array of the names of output columns to be attached to Service Bus messages as custom properties.
@@ -44,14 +44,14 @@ public final class ServiceBusTopicOutputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceBusTopicOutputDataSourceResponse(
-        @OutputCustomType.Parameter("propertyColumns") @Nullable List<String> propertyColumns,
-        @OutputCustomType.Parameter("serviceBusNamespace") @Nullable String serviceBusNamespace,
-        @OutputCustomType.Parameter("sharedAccessPolicyKey") @Nullable String sharedAccessPolicyKey,
-        @OutputCustomType.Parameter("sharedAccessPolicyName") @Nullable String sharedAccessPolicyName,
-        @OutputCustomType.Parameter("topicName") @Nullable String topicName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("propertyColumns") @Nullable List<String> propertyColumns,
+        @CustomType.Parameter("serviceBusNamespace") @Nullable String serviceBusNamespace,
+        @CustomType.Parameter("sharedAccessPolicyKey") @Nullable String sharedAccessPolicyKey,
+        @CustomType.Parameter("sharedAccessPolicyName") @Nullable String sharedAccessPolicyName,
+        @CustomType.Parameter("topicName") @Nullable String topicName,
+        @CustomType.Parameter("type") String type) {
         this.propertyColumns = propertyColumns;
         this.serviceBusNamespace = serviceBusNamespace;
         this.sharedAccessPolicyKey = sharedAccessPolicyKey;

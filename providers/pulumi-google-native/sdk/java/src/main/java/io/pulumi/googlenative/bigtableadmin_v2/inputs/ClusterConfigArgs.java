@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.ClusterAutoscalingConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Autoscaling configuration for this cluster.
      * 
      */
-    @InputImport(name="clusterAutoscalingConfig")
+    @Import(name="clusterAutoscalingConfig")
       private final @Nullable Output<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig;
 
     public Output<ClusterAutoscalingConfigArgs> getClusterAutoscalingConfig() {

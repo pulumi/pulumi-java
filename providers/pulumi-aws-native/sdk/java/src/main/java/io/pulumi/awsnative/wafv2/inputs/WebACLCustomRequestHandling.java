@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLCustomHTTPHeader;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class WebACLCustomRequestHandling extends io.pulumi.resources.Invok
      * Collection of HTTP headers.
      * 
      */
-    @InputImport(name="insertHeaders", required=true)
+    @Import(name="insertHeaders", required=true)
       private final List<WebACLCustomHTTPHeader> insertHeaders;
 
     public List<WebACLCustomHTTPHeader> getInsertHeaders() {

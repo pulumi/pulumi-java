@@ -5,12 +5,12 @@ package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTlsValidationTrustFile;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTlsValidationTrustSds;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecListenerTlsValidationTrust {
     /**
      * The TLS validation context trust for a local file certificate.
@@ -23,10 +23,10 @@ public final class VirtualNodeSpecListenerTlsValidationTrust {
      */
     private final @Nullable VirtualNodeSpecListenerTlsValidationTrustSds sds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNodeSpecListenerTlsValidationTrust(
-        @OutputCustomType.Parameter("file") @Nullable VirtualNodeSpecListenerTlsValidationTrustFile file,
-        @OutputCustomType.Parameter("sds") @Nullable VirtualNodeSpecListenerTlsValidationTrustSds sds) {
+        @CustomType.Parameter("file") @Nullable VirtualNodeSpecListenerTlsValidationTrustFile file,
+        @CustomType.Parameter("sds") @Nullable VirtualNodeSpecListenerTlsValidationTrustSds sds) {
         this.file = file;
         this.sds = sds;
     }

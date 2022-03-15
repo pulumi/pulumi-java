@@ -6,14 +6,14 @@ package io.pulumi.azurenative.databoxedge.outputs;
 import io.pulumi.azurenative.databoxedge.outputs.AsymmetricEncryptedSecretResponse;
 import io.pulumi.azurenative.databoxedge.outputs.ShareAccessRightResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetUserResult {
     /**
      * The password details.
@@ -51,15 +51,15 @@ public final class GetUserResult {
      */
     private final String userType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserResult(
-        @OutputCustomType.Parameter("encryptedPassword") @Nullable AsymmetricEncryptedSecretResponse encryptedPassword,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("shareAccessRights") List<ShareAccessRightResponse> shareAccessRights,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userType") String userType) {
+        @CustomType.Parameter("encryptedPassword") @Nullable AsymmetricEncryptedSecretResponse encryptedPassword,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("shareAccessRights") List<ShareAccessRightResponse> shareAccessRights,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userType") String userType) {
         this.encryptedPassword = encryptedPassword;
         this.id = id;
         this.name = name;

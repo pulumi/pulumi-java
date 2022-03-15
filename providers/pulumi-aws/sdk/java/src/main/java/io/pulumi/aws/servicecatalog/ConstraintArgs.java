@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    @InputImport(name="acceptLanguage")
+    @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
     public Output<String> getAcceptLanguage() {
@@ -29,7 +29,7 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the constraint.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -40,7 +40,7 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * Constraint parameters in JSON format. The syntax depends on the constraint type. See details below.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final Output<String> parameters;
 
     public Output<String> getParameters() {
@@ -51,7 +51,7 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * Portfolio identifier.
      * 
      */
-    @InputImport(name="portfolioId", required=true)
+    @Import(name="portfolioId", required=true)
       private final Output<String> portfolioId;
 
     public Output<String> getPortfolioId() {
@@ -62,7 +62,7 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * Product identifier.
      * 
      */
-    @InputImport(name="productId", required=true)
+    @Import(name="productId", required=true)
       private final Output<String> productId;
 
     public Output<String> getProductId() {
@@ -73,7 +73,7 @@ public final class ConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * Type of constraint. Valid values are `LAUNCH`, `NOTIFICATION`, `RESOURCE_UPDATE`, `STACKSET`, and `TEMPLATE`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

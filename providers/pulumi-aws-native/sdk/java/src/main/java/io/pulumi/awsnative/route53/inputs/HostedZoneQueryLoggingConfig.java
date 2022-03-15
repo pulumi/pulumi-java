@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class HostedZoneQueryLoggingConfig extends io.pulumi.resources.Invo
      * The Amazon Resource Name (ARN) of the CloudWatch Logs log group that Amazon Route 53 is publishing logs to.
      * 
      */
-    @InputImport(name="cloudWatchLogsLogGroupArn", required=true)
+    @Import(name="cloudWatchLogsLogGroupArn", required=true)
       private final String cloudWatchLogsLogGroupArn;
 
     public String getCloudWatchLogsLogGroupArn() {

@@ -7,13 +7,13 @@ import io.pulumi.azurenative.cdn.outputs.AFDDomainHttpsParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.DomainValidationPropertiesResponse;
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAFDCustomDomainResult {
     /**
      * Resource reference to the Azure DNS zone
@@ -67,19 +67,19 @@ public final class GetAFDCustomDomainResult {
      */
     private final DomainValidationPropertiesResponse validationProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAFDCustomDomainResult(
-        @OutputCustomType.Parameter("azureDnsZone") @Nullable ResourceReferenceResponse azureDnsZone,
-        @OutputCustomType.Parameter("deploymentStatus") String deploymentStatus,
-        @OutputCustomType.Parameter("domainValidationState") String domainValidationState,
-        @OutputCustomType.Parameter("hostName") String hostName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tlsSettings") @Nullable AFDDomainHttpsParametersResponse tlsSettings,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("validationProperties") DomainValidationPropertiesResponse validationProperties) {
+        @CustomType.Parameter("azureDnsZone") @Nullable ResourceReferenceResponse azureDnsZone,
+        @CustomType.Parameter("deploymentStatus") String deploymentStatus,
+        @CustomType.Parameter("domainValidationState") String domainValidationState,
+        @CustomType.Parameter("hostName") String hostName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tlsSettings") @Nullable AFDDomainHttpsParametersResponse tlsSettings,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("validationProperties") DomainValidationPropertiesResponse validationProperties) {
         this.azureDnsZone = azureDnsZone;
         this.deploymentStatus = deploymentStatus;
         this.domainValidationState = domainValidationState;

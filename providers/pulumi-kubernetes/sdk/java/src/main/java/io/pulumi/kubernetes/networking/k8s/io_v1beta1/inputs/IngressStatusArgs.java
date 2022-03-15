@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.LoadBalancerStatusArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class IngressStatusArgs extends io.pulumi.resources.ResourceArgs {
      * LoadBalancer contains the current status of the load-balancer.
      * 
      */
-    @InputImport(name="loadBalancer")
+    @Import(name="loadBalancer")
       private final @Nullable Output<LoadBalancerStatusArgs> loadBalancer;
 
     public Output<LoadBalancerStatusArgs> getLoadBalancer() {

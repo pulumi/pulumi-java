@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.backup.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetReportPlanArgs extends io.pulumi.resources.InvokeArgs {
      * An Amazon Resource Name (ARN) that uniquely identifies a resource. The format of the ARN depends on the resource type.
      * 
      */
-    @InputImport(name="reportPlanArn", required=true)
+    @Import(name="reportPlanArn", required=true)
       private final String reportPlanArn;
 
     public String getReportPlanArn() {

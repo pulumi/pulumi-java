@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datamigration_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datamigration_v1beta1.ConnectionProfileArgs;
@@ -25,7 +25,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * A CloudSQL database connection profile.
      * 
      */
-    @OutputExport(name="cloudsql", type=CloudSqlConnectionProfileResponse.class, parameters={})
+    @Export(name="cloudsql", type=CloudSqlConnectionProfileResponse.class, parameters={})
     private Output<CloudSqlConnectionProfileResponse> cloudsql;
 
     /**
@@ -39,7 +39,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * The timestamp when the resource was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -53,7 +53,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * The connection profile display name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -67,7 +67,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * The error details in case of state FAILED.
      * 
      */
-    @OutputExport(name="error", type=StatusResponse.class, parameters={})
+    @Export(name="error", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> error;
 
     /**
@@ -81,7 +81,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * The resource labels for connection profile to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -95,7 +95,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * A MySQL database connection profile.
      * 
      */
-    @OutputExport(name="mysql", type=MySqlConnectionProfileResponse.class, parameters={})
+    @Export(name="mysql", type=MySqlConnectionProfileResponse.class, parameters={})
     private Output<MySqlConnectionProfileResponse> mysql;
 
     /**
@@ -109,7 +109,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * The name of this connection profile resource in the form of projects/{project}/locations/{location}/connectionProfiles/{connectionProfile}.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -123,7 +123,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * The database provider.
      * 
      */
-    @OutputExport(name="provider", type=String.class, parameters={})
+    @Export(name="provider", type=String.class, parameters={})
     private Output<String> provider;
 
     /**
@@ -137,7 +137,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * The current connection profile state (e.g. DRAFT, READY, or FAILED).
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -151,7 +151,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * The timestamp when the resource was last updated. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

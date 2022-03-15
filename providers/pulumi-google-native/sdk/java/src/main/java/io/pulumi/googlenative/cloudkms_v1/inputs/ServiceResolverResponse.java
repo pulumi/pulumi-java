@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudkms_v1.inputs.CertificateResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ServiceResolverResponse extends io.pulumi.resources.InvokeArg
      * Optional. The filter applied to the endpoints of the resolved service. If no filter is specified, all endpoints will be considered. An endpoint will be chosen arbitrarily from the filtered list for each request. For endpoint filter syntax and examples, see https://cloud.google.com/service-directory/docs/reference/rpc/google.cloud.servicedirectory.v1#resolveservicerequest.
      * 
      */
-    @InputImport(name="endpointFilter", required=true)
+    @Import(name="endpointFilter", required=true)
       private final String endpointFilter;
 
     public String getEndpointFilter() {
@@ -33,7 +33,7 @@ public final class ServiceResolverResponse extends io.pulumi.resources.InvokeArg
      * The hostname of the EKM replica used at TLS and HTTP layers.
      * 
      */
-    @InputImport(name="hostname", required=true)
+    @Import(name="hostname", required=true)
       private final String hostname;
 
     public String getHostname() {
@@ -44,7 +44,7 @@ public final class ServiceResolverResponse extends io.pulumi.resources.InvokeArg
      * A list of leaf server certificates used to authenticate HTTPS connections to the EKM replica.
      * 
      */
-    @InputImport(name="serverCertificates", required=true)
+    @Import(name="serverCertificates", required=true)
       private final List<CertificateResponse> serverCertificates;
 
     public List<CertificateResponse> getServerCertificates() {
@@ -55,7 +55,7 @@ public final class ServiceResolverResponse extends io.pulumi.resources.InvokeArg
      * The resource name of the Service Directory service pointing to an EKM replica, in the format `projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*`.
      * 
      */
-    @InputImport(name="serviceDirectoryService", required=true)
+    @Import(name="serviceDirectoryService", required=true)
       private final String serviceDirectoryService;
 
     public String getServiceDirectoryService() {

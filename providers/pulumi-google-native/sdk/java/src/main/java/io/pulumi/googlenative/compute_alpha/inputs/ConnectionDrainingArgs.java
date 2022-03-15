@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ConnectionDrainingArgs extends io.pulumi.resources.ResourceAr
      * Configures a duration timeout for existing requests on a removed backend instance. For supported load balancers and protocols, as described in Enabling connection draining.
      * 
      */
-    @InputImport(name="drainingTimeoutSec")
+    @Import(name="drainingTimeoutSec")
       private final @Nullable Output<Integer> drainingTimeoutSec;
 
     public Output<Integer> getDrainingTimeoutSec() {

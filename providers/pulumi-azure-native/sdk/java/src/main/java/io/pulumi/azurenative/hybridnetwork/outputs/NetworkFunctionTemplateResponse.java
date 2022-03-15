@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
 import io.pulumi.azurenative.hybridnetwork.outputs.NetworkFunctionRoleConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkFunctionTemplateResponse {
     /**
      * An array of network function role definitions.
@@ -17,8 +17,8 @@ public final class NetworkFunctionTemplateResponse {
      */
     private final @Nullable List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations;
 
-    @OutputCustomType.Constructor
-    private NetworkFunctionTemplateResponse(@OutputCustomType.Parameter("networkFunctionRoleConfigurations") @Nullable List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations) {
+    @CustomType.Constructor
+    private NetworkFunctionTemplateResponse(@CustomType.Parameter("networkFunctionRoleConfigurations") @Nullable List<NetworkFunctionRoleConfigurationResponse> networkFunctionRoleConfigurations) {
         this.networkFunctionRoleConfigurations = networkFunctionRoleConfigurations;
     }
 

@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MediaGraphPemCertificateListResponse {
     /**
      * PEM formatted public certificates, one per entry.
@@ -22,10 +22,10 @@ public final class MediaGraphPemCertificateListResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MediaGraphPemCertificateListResponse(
-        @OutputCustomType.Parameter("certificates") List<String> certificates,
-        @OutputCustomType.Parameter("odataType") String odataType) {
+        @CustomType.Parameter("certificates") List<String> certificates,
+        @CustomType.Parameter("odataType") String odataType) {
         this.certificates = certificates;
         this.odataType = odataType;
     }

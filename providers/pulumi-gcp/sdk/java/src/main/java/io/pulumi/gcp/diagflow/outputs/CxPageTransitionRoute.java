@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.diagflow.outputs.CxPageTransitionRouteTriggerFulfillment;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CxPageTransitionRoute {
     /**
      * The condition to evaluate against form parameters or session parameters.
@@ -49,14 +49,14 @@ public final class CxPageTransitionRoute {
      */
     private final @Nullable CxPageTransitionRouteTriggerFulfillment triggerFulfillment;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CxPageTransitionRoute(
-        @OutputCustomType.Parameter("condition") @Nullable String condition,
-        @OutputCustomType.Parameter("intent") @Nullable String intent,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("targetFlow") @Nullable String targetFlow,
-        @OutputCustomType.Parameter("targetPage") @Nullable String targetPage,
-        @OutputCustomType.Parameter("triggerFulfillment") @Nullable CxPageTransitionRouteTriggerFulfillment triggerFulfillment) {
+        @CustomType.Parameter("condition") @Nullable String condition,
+        @CustomType.Parameter("intent") @Nullable String intent,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("targetFlow") @Nullable String targetFlow,
+        @CustomType.Parameter("targetPage") @Nullable String targetPage,
+        @CustomType.Parameter("triggerFulfillment") @Nullable CxPageTransitionRouteTriggerFulfillment triggerFulfillment) {
         this.condition = condition;
         this.intent = intent;
         this.name = name;

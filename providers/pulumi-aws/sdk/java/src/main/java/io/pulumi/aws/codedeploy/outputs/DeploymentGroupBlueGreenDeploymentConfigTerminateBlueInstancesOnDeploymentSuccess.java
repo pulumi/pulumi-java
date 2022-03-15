@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.codedeploy.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess {
     /**
      * The action to take on instances in the original environment after a successful blue/green deployment.
@@ -25,10 +25,10 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
      */
     private final @Nullable Integer terminationWaitTimeInMinutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess(
-        @OutputCustomType.Parameter("action") @Nullable String action,
-        @OutputCustomType.Parameter("terminationWaitTimeInMinutes") @Nullable Integer terminationWaitTimeInMinutes) {
+        @CustomType.Parameter("action") @Nullable String action,
+        @CustomType.Parameter("terminationWaitTimeInMinutes") @Nullable Integer terminationWaitTimeInMinutes) {
         this.action = action;
         this.terminationWaitTimeInMinutes = terminationWaitTimeInMinutes;
     }

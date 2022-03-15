@@ -8,7 +8,7 @@ import io.pulumi.azurenative.portal.UserSettingsArgs;
 import io.pulumi.azurenative.portal.outputs.UserPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class UserSettings extends io.pulumi.resources.CustomResource {
      * The cloud shell user settings properties.
      * 
      */
-    @OutputExport(name="properties", type=UserPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=UserPropertiesResponse.class, parameters={})
     private Output<UserPropertiesResponse> properties;
 
     /**

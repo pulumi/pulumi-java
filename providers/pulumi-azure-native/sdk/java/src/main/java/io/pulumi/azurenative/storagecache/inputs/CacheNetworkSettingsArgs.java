@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
      * DNS search domain
      * 
      */
-    @InputImport(name="dnsSearchDomain")
+    @Import(name="dnsSearchDomain")
       private final @Nullable Output<String> dnsSearchDomain;
 
     public Output<String> getDnsSearchDomain() {
@@ -35,7 +35,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
      * DNS servers for the cache to use.  It will be set from the network configuration if no value is provided.
      * 
      */
-    @InputImport(name="dnsServers")
+    @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
     public Output<List<String>> getDnsServers() {
@@ -46,7 +46,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
      * The IPv4 maximum transmission unit configured for the subnet.
      * 
      */
-    @InputImport(name="mtu")
+    @Import(name="mtu")
       private final @Nullable Output<Integer> mtu;
 
     public Output<Integer> getMtu() {
@@ -57,7 +57,7 @@ public final class CacheNetworkSettingsArgs extends io.pulumi.resources.Resource
      * NTP server IP Address or FQDN for the cache to use. The default is time.windows.com.
      * 
      */
-    @InputImport(name="ntpServer")
+    @Import(name="ntpServer")
       private final @Nullable Output<String> ntpServer;
 
     public Output<String> getNtpServer() {

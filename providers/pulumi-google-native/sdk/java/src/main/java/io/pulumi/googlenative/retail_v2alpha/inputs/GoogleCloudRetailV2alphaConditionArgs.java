@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaConditionQueryTermArgs;
 import io.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaConditionTimeRangeArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2alphaConditionArgs extends io.pulumi.resou
      * Range of time(s) specifying when Condition is active. Condition true if any time range matches.
      * 
      */
-    @InputImport(name="activeTimeRange")
+    @Import(name="activeTimeRange")
       private final @Nullable Output<List<GoogleCloudRetailV2alphaConditionTimeRangeArgs>> activeTimeRange;
 
     public Output<List<GoogleCloudRetailV2alphaConditionTimeRangeArgs>> getActiveTimeRange() {
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2alphaConditionArgs extends io.pulumi.resou
      * A list (up to 10 entries) of terms to match the query on. If not specified, match all queries. If many query terms are specified, the condition is matched if any of the terms is a match (i.e. using the OR operator).
      * 
      */
-    @InputImport(name="queryTerms")
+    @Import(name="queryTerms")
       private final @Nullable Output<List<GoogleCloudRetailV2alphaConditionQueryTermArgs>> queryTerms;
 
     public Output<List<GoogleCloudRetailV2alphaConditionQueryTermArgs>> getQueryTerms() {

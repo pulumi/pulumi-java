@@ -8,7 +8,7 @@ import io.pulumi.aws.appmesh.GatewayRouteArgs;
 import io.pulumi.aws.appmesh.inputs.GatewayRouteState;
 import io.pulumi.aws.appmesh.outputs.GatewayRouteSpec;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -36,7 +36,7 @@ public class GatewayRoute extends io.pulumi.resources.CustomResource {
      * The ARN of the gateway route.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class GatewayRoute extends io.pulumi.resources.CustomResource {
      * The creation date of the gateway route.
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
@@ -64,7 +64,7 @@ public class GatewayRoute extends io.pulumi.resources.CustomResource {
      * The last update date of the gateway route.
      * 
      */
-    @OutputExport(name="lastUpdatedDate", type=String.class, parameters={})
+    @Export(name="lastUpdatedDate", type=String.class, parameters={})
     private Output<String> lastUpdatedDate;
 
     /**
@@ -78,7 +78,7 @@ public class GatewayRoute extends io.pulumi.resources.CustomResource {
      * The name of the service mesh in which to create the gateway route. Must be between 1 and 255 characters in length.
      * 
      */
-    @OutputExport(name="meshName", type=String.class, parameters={})
+    @Export(name="meshName", type=String.class, parameters={})
     private Output<String> meshName;
 
     /**
@@ -92,7 +92,7 @@ public class GatewayRoute extends io.pulumi.resources.CustomResource {
      * The AWS account ID of the service mesh's owner. Defaults to the account ID the [AWS provider](https://www.terraform.io/docs/providers/aws/index.html) is currently connected to.
      * 
      */
-    @OutputExport(name="meshOwner", type=String.class, parameters={})
+    @Export(name="meshOwner", type=String.class, parameters={})
     private Output<String> meshOwner;
 
     /**
@@ -106,7 +106,7 @@ public class GatewayRoute extends io.pulumi.resources.CustomResource {
      * The name to use for the gateway route. Must be between 1 and 255 characters in length.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class GatewayRoute extends io.pulumi.resources.CustomResource {
      * The resource owner's AWS account ID.
      * 
      */
-    @OutputExport(name="resourceOwner", type=String.class, parameters={})
+    @Export(name="resourceOwner", type=String.class, parameters={})
     private Output<String> resourceOwner;
 
     /**
@@ -134,7 +134,7 @@ public class GatewayRoute extends io.pulumi.resources.CustomResource {
      * The gateway route specification to apply.
      * 
      */
-    @OutputExport(name="spec", type=GatewayRouteSpec.class, parameters={})
+    @Export(name="spec", type=GatewayRouteSpec.class, parameters={})
     private Output<GatewayRouteSpec> spec;
 
     /**
@@ -148,7 +148,7 @@ public class GatewayRoute extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -162,7 +162,7 @@ public class GatewayRoute extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -176,7 +176,7 @@ public class GatewayRoute extends io.pulumi.resources.CustomResource {
      * The name of the virtual gateway to associate the gateway route with. Must be between 1 and 255 characters in length.
      * 
      */
-    @OutputExport(name="virtualGatewayName", type=String.class, parameters={})
+    @Export(name="virtualGatewayName", type=String.class, parameters={})
     private Output<String> virtualGatewayName;
 
     /**

@@ -13,7 +13,7 @@ import io.pulumi.awsnative.cloudfront.outputs.DistributionOrigin;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionOriginGroups;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionRestrictions;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionViewerCertificate;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionConfig {
     private final @Nullable List<String> aliases;
     private final @Nullable List<String> cNAMEs;
@@ -43,27 +43,27 @@ public final class DistributionConfig {
     private final @Nullable DistributionViewerCertificate viewerCertificate;
     private final @Nullable String webACLId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionConfig(
-        @OutputCustomType.Parameter("aliases") @Nullable List<String> aliases,
-        @OutputCustomType.Parameter("cNAMEs") @Nullable List<String> cNAMEs,
-        @OutputCustomType.Parameter("cacheBehaviors") @Nullable List<DistributionCacheBehavior> cacheBehaviors,
-        @OutputCustomType.Parameter("comment") @Nullable String comment,
-        @OutputCustomType.Parameter("customErrorResponses") @Nullable List<DistributionCustomErrorResponse> customErrorResponses,
-        @OutputCustomType.Parameter("customOrigin") @Nullable DistributionLegacyCustomOrigin customOrigin,
-        @OutputCustomType.Parameter("defaultCacheBehavior") @Nullable DistributionDefaultCacheBehavior defaultCacheBehavior,
-        @OutputCustomType.Parameter("defaultRootObject") @Nullable String defaultRootObject,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("httpVersion") @Nullable String httpVersion,
-        @OutputCustomType.Parameter("iPV6Enabled") @Nullable Boolean iPV6Enabled,
-        @OutputCustomType.Parameter("logging") @Nullable DistributionLogging logging,
-        @OutputCustomType.Parameter("originGroups") @Nullable DistributionOriginGroups originGroups,
-        @OutputCustomType.Parameter("origins") @Nullable List<DistributionOrigin> origins,
-        @OutputCustomType.Parameter("priceClass") @Nullable String priceClass,
-        @OutputCustomType.Parameter("restrictions") @Nullable DistributionRestrictions restrictions,
-        @OutputCustomType.Parameter("s3Origin") @Nullable DistributionLegacyS3Origin s3Origin,
-        @OutputCustomType.Parameter("viewerCertificate") @Nullable DistributionViewerCertificate viewerCertificate,
-        @OutputCustomType.Parameter("webACLId") @Nullable String webACLId) {
+        @CustomType.Parameter("aliases") @Nullable List<String> aliases,
+        @CustomType.Parameter("cNAMEs") @Nullable List<String> cNAMEs,
+        @CustomType.Parameter("cacheBehaviors") @Nullable List<DistributionCacheBehavior> cacheBehaviors,
+        @CustomType.Parameter("comment") @Nullable String comment,
+        @CustomType.Parameter("customErrorResponses") @Nullable List<DistributionCustomErrorResponse> customErrorResponses,
+        @CustomType.Parameter("customOrigin") @Nullable DistributionLegacyCustomOrigin customOrigin,
+        @CustomType.Parameter("defaultCacheBehavior") @Nullable DistributionDefaultCacheBehavior defaultCacheBehavior,
+        @CustomType.Parameter("defaultRootObject") @Nullable String defaultRootObject,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("httpVersion") @Nullable String httpVersion,
+        @CustomType.Parameter("iPV6Enabled") @Nullable Boolean iPV6Enabled,
+        @CustomType.Parameter("logging") @Nullable DistributionLogging logging,
+        @CustomType.Parameter("originGroups") @Nullable DistributionOriginGroups originGroups,
+        @CustomType.Parameter("origins") @Nullable List<DistributionOrigin> origins,
+        @CustomType.Parameter("priceClass") @Nullable String priceClass,
+        @CustomType.Parameter("restrictions") @Nullable DistributionRestrictions restrictions,
+        @CustomType.Parameter("s3Origin") @Nullable DistributionLegacyS3Origin s3Origin,
+        @CustomType.Parameter("viewerCertificate") @Nullable DistributionViewerCertificate viewerCertificate,
+        @CustomType.Parameter("webACLId") @Nullable String webACLId) {
         this.aliases = aliases;
         this.cNAMEs = cNAMEs;
         this.cacheBehaviors = cacheBehaviors;

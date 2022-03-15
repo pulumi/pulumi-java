@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class CloudTieringCachePerformanceResponse extends io.pulumi.resour
      * Count of bytes that were served from the local server
      * 
      */
-    @InputImport(name="cacheHitBytes", required=true)
+    @Import(name="cacheHitBytes", required=true)
       private final Double cacheHitBytes;
 
     public Double getCacheHitBytes() {
@@ -33,7 +33,7 @@ public final class CloudTieringCachePerformanceResponse extends io.pulumi.resour
      * Percentage of total bytes (hit + miss) that were served from the local server
      * 
      */
-    @InputImport(name="cacheHitBytesPercent", required=true)
+    @Import(name="cacheHitBytesPercent", required=true)
       private final Integer cacheHitBytesPercent;
 
     public Integer getCacheHitBytesPercent() {
@@ -44,7 +44,7 @@ public final class CloudTieringCachePerformanceResponse extends io.pulumi.resour
      * Count of bytes that were served from the cloud
      * 
      */
-    @InputImport(name="cacheMissBytes", required=true)
+    @Import(name="cacheMissBytes", required=true)
       private final Double cacheMissBytes;
 
     public Double getCacheMissBytes() {
@@ -55,7 +55,7 @@ public final class CloudTieringCachePerformanceResponse extends io.pulumi.resour
      * Last updated timestamp
      * 
      */
-    @InputImport(name="lastUpdatedTimestamp", required=true)
+    @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;
 
     public String getLastUpdatedTimestamp() {

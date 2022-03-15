@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGetHttpsEndpointResponse {
     /**
      * The list of access modes for the application.
@@ -50,15 +50,15 @@ public final class ApplicationGetHttpsEndpointResponse {
      */
     private final @Nullable String subDomainSuffix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGetHttpsEndpointResponse(
-        @OutputCustomType.Parameter("accessModes") @Nullable List<String> accessModes,
-        @OutputCustomType.Parameter("destinationPort") @Nullable Integer destinationPort,
-        @OutputCustomType.Parameter("disableGatewayAuth") @Nullable Boolean disableGatewayAuth,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
-        @OutputCustomType.Parameter("publicPort") Integer publicPort,
-        @OutputCustomType.Parameter("subDomainSuffix") @Nullable String subDomainSuffix) {
+        @CustomType.Parameter("accessModes") @Nullable List<String> accessModes,
+        @CustomType.Parameter("destinationPort") @Nullable Integer destinationPort,
+        @CustomType.Parameter("disableGatewayAuth") @Nullable Boolean disableGatewayAuth,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
+        @CustomType.Parameter("publicPort") Integer publicPort,
+        @CustomType.Parameter("subDomainSuffix") @Nullable String subDomainSuffix) {
         this.accessModes = accessModes;
         this.destinationPort = destinationPort;
         this.disableGatewayAuth = disableGatewayAuth;

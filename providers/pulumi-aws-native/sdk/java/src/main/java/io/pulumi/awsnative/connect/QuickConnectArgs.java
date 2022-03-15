@@ -6,7 +6,7 @@ package io.pulumi.awsnative.connect;
 import io.pulumi.awsnative.connect.inputs.QuickConnectConfigArgs;
 import io.pulumi.awsnative.connect.inputs.QuickConnectTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the quick connect.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier of the Amazon Connect instance.
      * 
      */
-    @InputImport(name="instanceArn", required=true)
+    @Import(name="instanceArn", required=true)
       private final Output<String> instanceArn;
 
     public Output<String> getInstanceArn() {
@@ -43,7 +43,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the quick connect.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration settings for the quick connect.
      * 
      */
-    @InputImport(name="quickConnectConfig", required=true)
+    @Import(name="quickConnectConfig", required=true)
       private final Output<QuickConnectConfigArgs> quickConnectConfig;
 
     public Output<QuickConnectConfigArgs> getQuickConnectConfig() {
@@ -65,7 +65,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * One or more tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<QuickConnectTagArgs>> tags;
 
     public Output<List<QuickConnectTagArgs>> getTags() {

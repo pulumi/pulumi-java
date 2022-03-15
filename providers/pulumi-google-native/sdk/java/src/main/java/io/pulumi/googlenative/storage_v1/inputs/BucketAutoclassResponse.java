@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BucketAutoclassResponse extends io.pulumi.resources.InvokeArg
      * Whether or not Autoclass is enabled on this bucket
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
@@ -32,7 +32,7 @@ public final class BucketAutoclassResponse extends io.pulumi.resources.InvokeArg
      * A date and time in RFC 3339 format representing the instant at which "enabled" was last toggled.
      * 
      */
-    @InputImport(name="toggleTime", required=true)
+    @Import(name="toggleTime", required=true)
       private final String toggleTime;
 
     public String getToggleTime() {

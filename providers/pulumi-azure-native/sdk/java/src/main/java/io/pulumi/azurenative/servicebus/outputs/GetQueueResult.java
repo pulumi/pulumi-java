@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicebus.outputs;
 
 import io.pulumi.azurenative.servicebus.outputs.MessageCountDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetQueueResult {
     /**
      * Last time a message was sent, or the last time there was a receive request to this queue.
@@ -136,32 +136,32 @@ public final class GetQueueResult {
      */
     private final String updatedAt;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetQueueResult(
-        @OutputCustomType.Parameter("accessedAt") String accessedAt,
-        @OutputCustomType.Parameter("autoDeleteOnIdle") @Nullable String autoDeleteOnIdle,
-        @OutputCustomType.Parameter("countDetails") MessageCountDetailsResponse countDetails,
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("deadLetteringOnMessageExpiration") @Nullable Boolean deadLetteringOnMessageExpiration,
-        @OutputCustomType.Parameter("defaultMessageTimeToLive") @Nullable String defaultMessageTimeToLive,
-        @OutputCustomType.Parameter("duplicateDetectionHistoryTimeWindow") @Nullable String duplicateDetectionHistoryTimeWindow,
-        @OutputCustomType.Parameter("enableBatchedOperations") @Nullable Boolean enableBatchedOperations,
-        @OutputCustomType.Parameter("enableExpress") @Nullable Boolean enableExpress,
-        @OutputCustomType.Parameter("enablePartitioning") @Nullable Boolean enablePartitioning,
-        @OutputCustomType.Parameter("forwardDeadLetteredMessagesTo") @Nullable String forwardDeadLetteredMessagesTo,
-        @OutputCustomType.Parameter("forwardTo") @Nullable String forwardTo,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lockDuration") @Nullable String lockDuration,
-        @OutputCustomType.Parameter("maxDeliveryCount") @Nullable Integer maxDeliveryCount,
-        @OutputCustomType.Parameter("maxSizeInMegabytes") @Nullable Integer maxSizeInMegabytes,
-        @OutputCustomType.Parameter("messageCount") Double messageCount,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("requiresDuplicateDetection") @Nullable Boolean requiresDuplicateDetection,
-        @OutputCustomType.Parameter("requiresSession") @Nullable Boolean requiresSession,
-        @OutputCustomType.Parameter("sizeInBytes") Double sizeInBytes,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updatedAt") String updatedAt) {
+        @CustomType.Parameter("accessedAt") String accessedAt,
+        @CustomType.Parameter("autoDeleteOnIdle") @Nullable String autoDeleteOnIdle,
+        @CustomType.Parameter("countDetails") MessageCountDetailsResponse countDetails,
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("deadLetteringOnMessageExpiration") @Nullable Boolean deadLetteringOnMessageExpiration,
+        @CustomType.Parameter("defaultMessageTimeToLive") @Nullable String defaultMessageTimeToLive,
+        @CustomType.Parameter("duplicateDetectionHistoryTimeWindow") @Nullable String duplicateDetectionHistoryTimeWindow,
+        @CustomType.Parameter("enableBatchedOperations") @Nullable Boolean enableBatchedOperations,
+        @CustomType.Parameter("enableExpress") @Nullable Boolean enableExpress,
+        @CustomType.Parameter("enablePartitioning") @Nullable Boolean enablePartitioning,
+        @CustomType.Parameter("forwardDeadLetteredMessagesTo") @Nullable String forwardDeadLetteredMessagesTo,
+        @CustomType.Parameter("forwardTo") @Nullable String forwardTo,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lockDuration") @Nullable String lockDuration,
+        @CustomType.Parameter("maxDeliveryCount") @Nullable Integer maxDeliveryCount,
+        @CustomType.Parameter("maxSizeInMegabytes") @Nullable Integer maxSizeInMegabytes,
+        @CustomType.Parameter("messageCount") Double messageCount,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("requiresDuplicateDetection") @Nullable Boolean requiresDuplicateDetection,
+        @CustomType.Parameter("requiresSession") @Nullable Boolean requiresSession,
+        @CustomType.Parameter("sizeInBytes") Double sizeInBytes,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updatedAt") String updatedAt) {
         this.accessedAt = accessedAt;
         this.autoDeleteOnIdle = autoDeleteOnIdle;
         this.countDetails = countDetails;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs extends
      * Indicates how to manage the order of stateful rule evaluation for the policy. Default value: `DEFAULT_ACTION_ORDER`. Valid values: `DEFAULT_ACTION_ORDER`, `STRICT_ORDER`.
      * 
      */
-    @InputImport(name="ruleOrder", required=true)
+    @Import(name="ruleOrder", required=true)
       private final Output<String> ruleOrder;
 
     public Output<String> getRuleOrder() {

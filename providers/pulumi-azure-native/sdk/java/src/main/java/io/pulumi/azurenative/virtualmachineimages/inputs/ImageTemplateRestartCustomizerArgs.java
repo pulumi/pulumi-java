@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
      * Friendly Name to provide context on what this customization step does
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
      * Command to check if restart succeeded [Default: '']
      * 
      */
-    @InputImport(name="restartCheckCommand")
+    @Import(name="restartCheckCommand")
       private final @Nullable Output<String> restartCheckCommand;
 
     public Output<String> getRestartCheckCommand() {
@@ -44,7 +44,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
      * Command to execute the restart [Default: 'shutdown /r /f /t 0 /c "packer restart"']
      * 
      */
-    @InputImport(name="restartCommand")
+    @Import(name="restartCommand")
       private final @Nullable Output<String> restartCommand;
 
     public Output<String> getRestartCommand() {
@@ -55,7 +55,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
      * Restart timeout specified as a string of magnitude and unit, e.g. '5m' (5 minutes) or '2h' (2 hours) [Default: '5m']
      * 
      */
-    @InputImport(name="restartTimeout")
+    @Import(name="restartTimeout")
       private final @Nullable Output<String> restartTimeout;
 
     public Output<String> getRestartTimeout() {
@@ -67,7 +67,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
      * Expected value is 'WindowsRestart'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

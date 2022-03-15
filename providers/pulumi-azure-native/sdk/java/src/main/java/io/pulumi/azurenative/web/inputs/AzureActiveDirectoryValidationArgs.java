@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.JwtClaimChecksArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AzureActiveDirectoryValidationArgs extends io.pulumi.resource
      * The list of audiences that can make successful authentication/authorization requests.
      * 
      */
-    @InputImport(name="allowedAudiences")
+    @Import(name="allowedAudiences")
       private final @Nullable Output<List<String>> allowedAudiences;
 
     public Output<List<String>> getAllowedAudiences() {
@@ -35,7 +35,7 @@ public final class AzureActiveDirectoryValidationArgs extends io.pulumi.resource
      * The configuration settings of the checks that should be made while validating the JWT Claims.
      * 
      */
-    @InputImport(name="jwtClaimChecks")
+    @Import(name="jwtClaimChecks")
       private final @Nullable Output<JwtClaimChecksArgs> jwtClaimChecks;
 
     public Output<JwtClaimChecksArgs> getJwtClaimChecks() {

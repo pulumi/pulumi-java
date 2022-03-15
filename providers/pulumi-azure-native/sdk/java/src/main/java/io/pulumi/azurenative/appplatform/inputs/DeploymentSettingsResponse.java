@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class DeploymentSettingsResponse extends io.pulumi.resources.Invoke
      * Required CPU, basic tier should be 1, standard tier should be in range (1, 4)
      * 
      */
-    @InputImport(name="cpu")
+    @Import(name="cpu")
       private final @Nullable Integer cpu;
 
     public Optional<Integer> getCpu() {
@@ -35,7 +35,7 @@ public final class DeploymentSettingsResponse extends io.pulumi.resources.Invoke
      * Collection of environment variables
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Map<String,String> environmentVariables;
 
     public Map<String,String> getEnvironmentVariables() {
@@ -46,7 +46,7 @@ public final class DeploymentSettingsResponse extends io.pulumi.resources.Invoke
      * JVM parameter
      * 
      */
-    @InputImport(name="jvmOptions")
+    @Import(name="jvmOptions")
       private final @Nullable String jvmOptions;
 
     public Optional<String> getJvmOptions() {
@@ -57,7 +57,7 @@ public final class DeploymentSettingsResponse extends io.pulumi.resources.Invoke
      * Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8)
      * 
      */
-    @InputImport(name="memoryInGB")
+    @Import(name="memoryInGB")
       private final @Nullable Integer memoryInGB;
 
     public Optional<Integer> getMemoryInGB() {
@@ -68,7 +68,7 @@ public final class DeploymentSettingsResponse extends io.pulumi.resources.Invoke
      * The path to the .NET executable relative to zip root
      * 
      */
-    @InputImport(name="netCoreMainEntryPath")
+    @Import(name="netCoreMainEntryPath")
       private final @Nullable String netCoreMainEntryPath;
 
     public Optional<String> getNetCoreMainEntryPath() {
@@ -79,7 +79,7 @@ public final class DeploymentSettingsResponse extends io.pulumi.resources.Invoke
      * Runtime version
      * 
      */
-    @InputImport(name="runtimeVersion")
+    @Import(name="runtimeVersion")
       private final @Nullable String runtimeVersion;
 
     public Optional<String> getRuntimeVersion() {

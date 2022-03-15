@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
      * The name of the company.
      * 
      */
-    @InputImport(name="companyName", required=true)
+    @Import(name="companyName", required=true)
       private final String companyName;
 
     public String getCompanyName() {
@@ -32,7 +32,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
      * The contact person name.
      * 
      */
-    @InputImport(name="contactPerson", required=true)
+    @Import(name="contactPerson", required=true)
       private final String contactPerson;
 
     public String getContactPerson() {
@@ -43,7 +43,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
      * The email list.
      * 
      */
-    @InputImport(name="emailList", required=true)
+    @Import(name="emailList", required=true)
       private final List<String> emailList;
 
     public List<String> getEmailList() {
@@ -54,7 +54,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
      * The phone number.
      * 
      */
-    @InputImport(name="phone", required=true)
+    @Import(name="phone", required=true)
       private final String phone;
 
     public String getPhone() {

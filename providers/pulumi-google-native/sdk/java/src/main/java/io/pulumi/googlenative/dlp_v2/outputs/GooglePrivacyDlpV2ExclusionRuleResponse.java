@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2DictionaryResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ExcludeInfoTypesResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2RegexResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2ExclusionRuleResponse {
     /**
      * Dictionary which defines the rule.
@@ -33,12 +33,12 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse {
      */
     private final GooglePrivacyDlpV2RegexResponse regex;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2ExclusionRuleResponse(
-        @OutputCustomType.Parameter("dictionary") GooglePrivacyDlpV2DictionaryResponse dictionary,
-        @OutputCustomType.Parameter("excludeInfoTypes") GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes,
-        @OutputCustomType.Parameter("matchingType") String matchingType,
-        @OutputCustomType.Parameter("regex") GooglePrivacyDlpV2RegexResponse regex) {
+        @CustomType.Parameter("dictionary") GooglePrivacyDlpV2DictionaryResponse dictionary,
+        @CustomType.Parameter("excludeInfoTypes") GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes,
+        @CustomType.Parameter("matchingType") String matchingType,
+        @CustomType.Parameter("regex") GooglePrivacyDlpV2RegexResponse regex) {
         this.dictionary = dictionary;
         this.excludeInfoTypes = excludeInfoTypes;
         this.matchingType = matchingType;

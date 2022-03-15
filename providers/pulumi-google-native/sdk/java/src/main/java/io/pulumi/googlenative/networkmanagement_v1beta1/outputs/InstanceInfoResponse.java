@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceInfoResponse {
     /**
      * Name of a Compute Engine instance.
@@ -51,16 +51,16 @@ public final class InstanceInfoResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceInfoResponse(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("externalIp") String externalIp,
-        @OutputCustomType.Parameter("interface") String $interface,
-        @OutputCustomType.Parameter("internalIp") String internalIp,
-        @OutputCustomType.Parameter("networkTags") List<String> networkTags,
-        @OutputCustomType.Parameter("networkUri") String networkUri,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("externalIp") String externalIp,
+        @CustomType.Parameter("interface") String $interface,
+        @CustomType.Parameter("internalIp") String internalIp,
+        @CustomType.Parameter("networkTags") List<String> networkTags,
+        @CustomType.Parameter("networkUri") String networkUri,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("uri") String uri) {
         this.displayName = displayName;
         this.externalIp = externalIp;
         this.$interface = $interface;

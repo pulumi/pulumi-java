@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsBackupConfigurationArgs;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsDatabaseFlagArgs;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceSettingsInsightsConfigArgs;
@@ -29,7 +29,7 @@ public final class DatabaseInstanceSettingsArgs extends io.pulumi.resources.Reso
      * active. Can be either `ALWAYS`, `NEVER` or `ON_DEMAND`.
      * 
      */
-    @InputImport(name="activationPolicy")
+    @Import(name="activationPolicy")
       private final @Nullable Output<String> activationPolicy;
 
     public Output<String> getActivationPolicy() {
@@ -43,14 +43,14 @@ public final class DatabaseInstanceSettingsArgs extends io.pulumi.resources.Reso
      * `settings.backup_configuration.binary_log_enabled` are both set to `true`.
      * 
      */
-    @InputImport(name="availabilityType")
+    @Import(name="availabilityType")
       private final @Nullable Output<String> availabilityType;
 
     public Output<String> getAvailabilityType() {
         return this.availabilityType == null ? Output.empty() : this.availabilityType;
     }
 
-    @InputImport(name="backupConfiguration")
+    @Import(name="backupConfiguration")
       private final @Nullable Output<DatabaseInstanceSettingsBackupConfigurationArgs> backupConfiguration;
 
     public Output<DatabaseInstanceSettingsBackupConfigurationArgs> getBackupConfiguration() {
@@ -61,14 +61,14 @@ public final class DatabaseInstanceSettingsArgs extends io.pulumi.resources.Reso
      * The name of server instance collation.
      * 
      */
-    @InputImport(name="collation")
+    @Import(name="collation")
       private final @Nullable Output<String> collation;
 
     public Output<String> getCollation() {
         return this.collation == null ? Output.empty() : this.collation;
     }
 
-    @InputImport(name="databaseFlags")
+    @Import(name="databaseFlags")
       private final @Nullable Output<List<DatabaseInstanceSettingsDatabaseFlagArgs>> databaseFlags;
 
     public Output<List<DatabaseInstanceSettingsDatabaseFlagArgs>> getDatabaseFlags() {
@@ -79,14 +79,14 @@ public final class DatabaseInstanceSettingsArgs extends io.pulumi.resources.Reso
      * Configuration to increase storage size automatically.  Note that future apply calls will attempt to resize the disk to the value specified in `disk_size` - if this is set, do not set `disk_size`.
      * 
      */
-    @InputImport(name="diskAutoresize")
+    @Import(name="diskAutoresize")
       private final @Nullable Output<Boolean> diskAutoresize;
 
     public Output<Boolean> getDiskAutoresize() {
         return this.diskAutoresize == null ? Output.empty() : this.diskAutoresize;
     }
 
-    @InputImport(name="diskAutoresizeLimit")
+    @Import(name="diskAutoresizeLimit")
       private final @Nullable Output<Integer> diskAutoresizeLimit;
 
     public Output<Integer> getDiskAutoresizeLimit() {
@@ -97,7 +97,7 @@ public final class DatabaseInstanceSettingsArgs extends io.pulumi.resources.Reso
      * The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased.
      * 
      */
-    @InputImport(name="diskSize")
+    @Import(name="diskSize")
       private final @Nullable Output<Integer> diskSize;
 
     public Output<Integer> getDiskSize() {
@@ -108,35 +108,35 @@ public final class DatabaseInstanceSettingsArgs extends io.pulumi.resources.Reso
      * The type of data disk: PD_SSD or PD_HDD.
      * 
      */
-    @InputImport(name="diskType")
+    @Import(name="diskType")
       private final @Nullable Output<String> diskType;
 
     public Output<String> getDiskType() {
         return this.diskType == null ? Output.empty() : this.diskType;
     }
 
-    @InputImport(name="insightsConfig")
+    @Import(name="insightsConfig")
       private final @Nullable Output<DatabaseInstanceSettingsInsightsConfigArgs> insightsConfig;
 
     public Output<DatabaseInstanceSettingsInsightsConfigArgs> getInsightsConfig() {
         return this.insightsConfig == null ? Output.empty() : this.insightsConfig;
     }
 
-    @InputImport(name="ipConfiguration")
+    @Import(name="ipConfiguration")
       private final @Nullable Output<DatabaseInstanceSettingsIpConfigurationArgs> ipConfiguration;
 
     public Output<DatabaseInstanceSettingsIpConfigurationArgs> getIpConfiguration() {
         return this.ipConfiguration == null ? Output.empty() : this.ipConfiguration;
     }
 
-    @InputImport(name="locationPreference")
+    @Import(name="locationPreference")
       private final @Nullable Output<DatabaseInstanceSettingsLocationPreferenceArgs> locationPreference;
 
     public Output<DatabaseInstanceSettingsLocationPreferenceArgs> getLocationPreference() {
         return this.locationPreference == null ? Output.empty() : this.locationPreference;
     }
 
-    @InputImport(name="maintenanceWindow")
+    @Import(name="maintenanceWindow")
       private final @Nullable Output<DatabaseInstanceSettingsMaintenanceWindowArgs> maintenanceWindow;
 
     public Output<DatabaseInstanceSettingsMaintenanceWindowArgs> getMaintenanceWindow() {
@@ -147,7 +147,7 @@ public final class DatabaseInstanceSettingsArgs extends io.pulumi.resources.Reso
      * Pricing plan for this instance, can only be `PER_USE`.
      * 
      */
-    @InputImport(name="pricingPlan")
+    @Import(name="pricingPlan")
       private final @Nullable Output<String> pricingPlan;
 
     public Output<String> getPricingPlan() {
@@ -160,7 +160,7 @@ public final class DatabaseInstanceSettingsArgs extends io.pulumi.resources.Reso
      * and custom machine types such as `db-custom-2-13312`. See the [Custom Machine Type Documentation](https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create) to learn about specifying custom machine types.
      * 
      */
-    @InputImport(name="tier", required=true)
+    @Import(name="tier", required=true)
       private final Output<String> tier;
 
     public Output<String> getTier() {
@@ -171,14 +171,14 @@ public final class DatabaseInstanceSettingsArgs extends io.pulumi.resources.Reso
      * A set of key/value user label pairs to assign to the instance.
      * 
      */
-    @InputImport(name="userLabels")
+    @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;
 
     public Output<Map<String,String>> getUserLabels() {
         return this.userLabels == null ? Output.empty() : this.userLabels;
     }
 
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {

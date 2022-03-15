@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1.enums.DnsKeySpecAlgorithm;
 import io.pulumi.googlenative.dns_v1.enums.DnsKeySpecKeyType;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
      * String mnemonic specifying the DNSSEC algorithm of this key.
      * 
      */
-    @InputImport(name="algorithm")
+    @Import(name="algorithm")
       private final @Nullable Output<DnsKeySpecAlgorithm> algorithm;
 
     public Output<DnsKeySpecAlgorithm> getAlgorithm() {
@@ -36,7 +36,7 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
      * Length of the keys in bits.
      * 
      */
-    @InputImport(name="keyLength")
+    @Import(name="keyLength")
       private final @Nullable Output<Integer> keyLength;
 
     public Output<Integer> getKeyLength() {
@@ -47,14 +47,14 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether this is a key signing key (KSK) or a zone signing key (ZSK). Key signing keys have the Secure Entry Point flag set and, when active, are only used to sign resource record sets of type DNSKEY. Zone signing keys do not have the Secure Entry Point flag set and are used to sign all other types of resource record sets.
      * 
      */
-    @InputImport(name="keyType")
+    @Import(name="keyType")
       private final @Nullable Output<DnsKeySpecKeyType> keyType;
 
     public Output<DnsKeySpecKeyType> getKeyType() {
         return this.keyType == null ? Output.empty() : this.keyType;
     }
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {

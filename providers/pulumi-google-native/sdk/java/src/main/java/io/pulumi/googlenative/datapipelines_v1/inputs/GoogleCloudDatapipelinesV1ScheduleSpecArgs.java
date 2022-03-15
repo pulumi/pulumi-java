@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datapipelines_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends io.pulumi.
      * Unix-cron format of the schedule. This information is retrieved from the linked Cloud Scheduler.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
     public Output<String> getSchedule() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDatapipelinesV1ScheduleSpecArgs extends io.pulumi.
      * Timezone ID. This matches the timezone IDs used by the Cloud Scheduler API. If empty, UTC time is assumed.
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {

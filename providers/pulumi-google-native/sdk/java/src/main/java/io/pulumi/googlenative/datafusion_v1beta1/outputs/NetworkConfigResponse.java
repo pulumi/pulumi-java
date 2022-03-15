@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datafusion_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkConfigResponse {
     /**
      * The IP range in CIDR notation to use for the managed Data Fusion instance nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.
@@ -20,10 +20,10 @@ public final class NetworkConfigResponse {
      */
     private final String network;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkConfigResponse(
-        @OutputCustomType.Parameter("ipAllocation") String ipAllocation,
-        @OutputCustomType.Parameter("network") String network) {
+        @CustomType.Parameter("ipAllocation") String ipAllocation,
+        @CustomType.Parameter("network") String network) {
         this.ipAllocation = ipAllocation;
         this.network = network;
     }

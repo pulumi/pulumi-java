@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.imagebuilder.ComponentArgs;
 import io.pulumi.aws.imagebuilder.inputs.ComponentState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * (Required) Amazon Resource Name (ARN) of the component.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -51,7 +51,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Change description of the component.
      * 
      */
-    @OutputExport(name="changeDescription", type=String.class, parameters={})
+    @Export(name="changeDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> changeDescription;
 
     /**
@@ -65,7 +65,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Inline YAML string with data of the component. Exactly one of `data` and `uri` can be specified. the provider will only perform drift detection of its value when present in a configuration.
      * 
      */
-    @OutputExport(name="data", type=String.class, parameters={})
+    @Export(name="data", type=String.class, parameters={})
     private Output<String> data;
 
     /**
@@ -79,7 +79,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Date the component was created.
      * 
      */
-    @OutputExport(name="dateCreated", type=String.class, parameters={})
+    @Export(name="dateCreated", type=String.class, parameters={})
     private Output<String> dateCreated;
 
     /**
@@ -93,7 +93,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Description of the component.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -107,7 +107,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Encryption status of the component.
      * 
      */
-    @OutputExport(name="encrypted", type=Boolean.class, parameters={})
+    @Export(name="encrypted", type=Boolean.class, parameters={})
     private Output<Boolean> encrypted;
 
     /**
@@ -121,7 +121,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the Key Management Service (KMS) Key used to encrypt the component.
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     /**
@@ -135,7 +135,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Name of the component.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -149,7 +149,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Owner of the component.
      * 
      */
-    @OutputExport(name="owner", type=String.class, parameters={})
+    @Export(name="owner", type=String.class, parameters={})
     private Output<String> owner;
 
     /**
@@ -163,7 +163,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Platform of the component.
      * 
      */
-    @OutputExport(name="platform", type=String.class, parameters={})
+    @Export(name="platform", type=String.class, parameters={})
     private Output<String> platform;
 
     /**
@@ -177,7 +177,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Set of Operating Systems (OS) supported by the component.
      * 
      */
-    @OutputExport(name="supportedOsVersions", type=List.class, parameters={String.class})
+    @Export(name="supportedOsVersions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> supportedOsVersions;
 
     /**
@@ -191,7 +191,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags for the component. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -205,7 +205,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -219,7 +219,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Type of the component.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -233,7 +233,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * S3 URI with data of the component. Exactly one of `data` and `uri` can be specified.
      * 
      */
-    @OutputExport(name="uri", type=String.class, parameters={})
+    @Export(name="uri", type=String.class, parameters={})
     private Output</* @Nullable */ String> uri;
 
     /**
@@ -247,7 +247,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Version of the component.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 
 import io.pulumi.azurenative.hybridnetwork.inputs.NetworkFunctionRoleConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class NetworkFunctionTemplateArgs extends io.pulumi.resources.Resou
      * An array of network function role definitions.
      * 
      */
-    @InputImport(name="networkFunctionRoleConfigurations")
+    @Import(name="networkFunctionRoleConfigurations")
       private final @Nullable Output<List<NetworkFunctionRoleConfigurationArgs>> networkFunctionRoleConfigurations;
 
     public Output<List<NetworkFunctionRoleConfigurationArgs>> getNetworkFunctionRoleConfigurations() {

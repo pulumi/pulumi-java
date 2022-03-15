@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInsightsAnalysisPortRange {
     private final @Nullable Integer from;
     private final @Nullable Integer to;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInsightsAnalysisPortRange(
-        @OutputCustomType.Parameter("from") @Nullable Integer from,
-        @OutputCustomType.Parameter("to") @Nullable Integer to) {
+        @CustomType.Parameter("from") @Nullable Integer from,
+        @CustomType.Parameter("to") @Nullable Integer to) {
         this.from = from;
         this.to = to;
     }

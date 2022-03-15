@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.HttpRouteConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HttpHostConfigArgs extends io.pulumi.resources.ResourceArgs {
      * http hostname config name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class HttpHostConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Route information to use for routing. Routes are processed in the order they are specified. Specify routes that are more specific before routes that can handle general cases.
      * 
      */
-    @InputImport(name="routes", required=true)
+    @Import(name="routes", required=true)
       private final Output<List<HttpRouteConfigArgs>> routes;
 
     public Output<List<HttpRouteConfigArgs>> getRoutes() {

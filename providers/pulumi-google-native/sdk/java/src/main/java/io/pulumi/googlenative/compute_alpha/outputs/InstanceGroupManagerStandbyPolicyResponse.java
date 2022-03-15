@@ -3,16 +3,16 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceGroupManagerStandbyPolicyResponse {
     private final Integer initialDelaySec;
 
-    @OutputCustomType.Constructor
-    private InstanceGroupManagerStandbyPolicyResponse(@OutputCustomType.Parameter("initialDelaySec") Integer initialDelaySec) {
+    @CustomType.Constructor
+    private InstanceGroupManagerStandbyPolicyResponse(@CustomType.Parameter("initialDelaySec") Integer initialDelaySec) {
         this.initialDelaySec = initialDelaySec;
     }
 

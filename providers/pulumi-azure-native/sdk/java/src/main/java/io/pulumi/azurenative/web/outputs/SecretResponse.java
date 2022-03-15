@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecretResponse {
     /**
      * Secret Name.
@@ -17,8 +17,8 @@ public final class SecretResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private SecretResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private SecretResponse(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AudioEncoderAacArgs extends io.pulumi.resources.ResourceArgs 
      * Bitrate, in kilobits per second or Kbps, at which audio should be encoded (2-channel stereo audio at a sampling rate of 48 kHz). Allowed values are 96, 112, 128, 160, 192, 224, and 256. If omitted, the bitrate of the input audio is used.
      * 
      */
-    @InputImport(name="bitrateKbps")
+    @Import(name="bitrateKbps")
       private final @Nullable Output<String> bitrateKbps;
 
     public Output<String> getBitrateKbps() {
@@ -34,7 +34,7 @@ public final class AudioEncoderAacArgs extends io.pulumi.resources.ResourceArgs 
      * Expected value is '#Microsoft.VideoAnalyzer.AudioEncoderAac'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

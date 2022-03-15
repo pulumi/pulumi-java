@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.BackendBucketCdnPolicyArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * Cloud Storage bucket name.
      * 
      */
-    @InputImport(name="bucketName", required=true)
+    @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
     public Output<String> getBucketName() {
@@ -33,7 +33,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="cdnPolicy")
+    @Import(name="cdnPolicy")
       private final @Nullable Output<BackendBucketCdnPolicyArgs> cdnPolicy;
 
     public Output<BackendBucketCdnPolicyArgs> getCdnPolicy() {
@@ -44,7 +44,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * Headers that the HTTP/S load balancer should add to proxied responses.
      * 
      */
-    @InputImport(name="customResponseHeaders")
+    @Import(name="customResponseHeaders")
       private final @Nullable Output<List<String>> customResponseHeaders;
 
     public Output<List<String>> getCustomResponseHeaders() {
@@ -56,7 +56,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * client when the resource is created.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -67,7 +67,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * If true, enable Cloud CDN for this BackendBucket.
      * 
      */
-    @InputImport(name="enableCdn")
+    @Import(name="enableCdn")
       private final @Nullable Output<Boolean> enableCdn;
 
     public Output<Boolean> getEnableCdn() {
@@ -84,7 +84,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -96,7 +96,7 @@ public final class BackendBucketArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

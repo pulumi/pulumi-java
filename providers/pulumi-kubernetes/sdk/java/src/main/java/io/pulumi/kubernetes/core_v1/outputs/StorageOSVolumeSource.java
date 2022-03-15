@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LocalObjectReference;
 import java.lang.Boolean;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageOSVolumeSource {
     /**
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
@@ -39,13 +39,13 @@ public final class StorageOSVolumeSource {
      */
     private final @Nullable String volumeNamespace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageOSVolumeSource(
-        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("secretRef") @Nullable LocalObjectReference secretRef,
-        @OutputCustomType.Parameter("volumeName") @Nullable String volumeName,
-        @OutputCustomType.Parameter("volumeNamespace") @Nullable String volumeNamespace) {
+        @CustomType.Parameter("fsType") @Nullable String fsType,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("secretRef") @Nullable LocalObjectReference secretRef,
+        @CustomType.Parameter("volumeName") @Nullable String volumeName,
+        @CustomType.Parameter("volumeNamespace") @Nullable String volumeNamespace) {
         this.fsType = fsType;
         this.readOnly = readOnly;
         this.secretRef = secretRef;

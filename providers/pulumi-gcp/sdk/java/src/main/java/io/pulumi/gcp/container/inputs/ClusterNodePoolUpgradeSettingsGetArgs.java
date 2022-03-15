@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class ClusterNodePoolUpgradeSettingsGetArgs extends io.pulumi.resou
 
     public static final ClusterNodePoolUpgradeSettingsGetArgs Empty = new ClusterNodePoolUpgradeSettingsGetArgs();
 
-    @InputImport(name="maxSurge", required=true)
+    @Import(name="maxSurge", required=true)
       private final Output<Integer> maxSurge;
 
     public Output<Integer> getMaxSurge() {
         return this.maxSurge;
     }
 
-    @InputImport(name="maxUnavailable", required=true)
+    @Import(name="maxUnavailable", required=true)
       private final Output<Integer> maxUnavailable;
 
     public Output<Integer> getMaxUnavailable() {

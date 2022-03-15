@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudtasks_v2beta2.inputs.AttemptStatusResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TaskStatusResponse extends io.pulumi.resources.InvokeArgs {
      * The number of attempts dispatched. This count includes attempts which have been dispatched but haven't received a response.
      * 
      */
-    @InputImport(name="attemptDispatchCount", required=true)
+    @Import(name="attemptDispatchCount", required=true)
       private final Integer attemptDispatchCount;
 
     public Integer getAttemptDispatchCount() {
@@ -32,7 +32,7 @@ public final class TaskStatusResponse extends io.pulumi.resources.InvokeArgs {
      * The number of attempts which have received a response. This field is not calculated for pull tasks.
      * 
      */
-    @InputImport(name="attemptResponseCount", required=true)
+    @Import(name="attemptResponseCount", required=true)
       private final Integer attemptResponseCount;
 
     public Integer getAttemptResponseCount() {
@@ -43,7 +43,7 @@ public final class TaskStatusResponse extends io.pulumi.resources.InvokeArgs {
      * The status of the task's first attempt. Only dispatch_time will be set. The other AttemptStatus information is not retained by Cloud Tasks. This field is not calculated for pull tasks.
      * 
      */
-    @InputImport(name="firstAttemptStatus", required=true)
+    @Import(name="firstAttemptStatus", required=true)
       private final AttemptStatusResponse firstAttemptStatus;
 
     public AttemptStatusResponse getFirstAttemptStatus() {
@@ -54,7 +54,7 @@ public final class TaskStatusResponse extends io.pulumi.resources.InvokeArgs {
      * The status of the task's last attempt. This field is not calculated for pull tasks.
      * 
      */
-    @InputImport(name="lastAttemptStatus", required=true)
+    @Import(name="lastAttemptStatus", required=true)
       private final AttemptStatusResponse lastAttemptStatus;
 
     public AttemptStatusResponse getLastAttemptStatus() {

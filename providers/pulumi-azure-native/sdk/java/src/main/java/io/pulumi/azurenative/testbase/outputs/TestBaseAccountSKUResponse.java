@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.testbase.outputs;
 
 import io.pulumi.azurenative.testbase.outputs.TestBaseAccountSKUCapabilityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TestBaseAccountSKUResponse {
     /**
      * The capabilities of a SKU.
@@ -39,13 +39,13 @@ public final class TestBaseAccountSKUResponse {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TestBaseAccountSKUResponse(
-        @OutputCustomType.Parameter("capabilities") List<TestBaseAccountSKUCapabilityResponse> capabilities,
-        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
-        @OutputCustomType.Parameter("tier") String tier) {
+        @CustomType.Parameter("capabilities") List<TestBaseAccountSKUCapabilityResponse> capabilities,
+        @CustomType.Parameter("locations") @Nullable List<String> locations,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceType") @Nullable String resourceType,
+        @CustomType.Parameter("tier") String tier) {
         this.capabilities = capabilities;
         this.locations = locations;
         this.name = name;

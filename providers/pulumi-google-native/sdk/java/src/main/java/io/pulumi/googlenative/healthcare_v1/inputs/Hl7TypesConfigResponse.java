@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1.inputs.TypeResponse;
 import io.pulumi.googlenative.healthcare_v1.inputs.VersionSourceResponse;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class Hl7TypesConfigResponse extends io.pulumi.resources.InvokeArgs
      * The HL7v2 type definitions.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final List<TypeResponse> type;
 
     public List<TypeResponse> getType() {
@@ -33,7 +33,7 @@ public final class Hl7TypesConfigResponse extends io.pulumi.resources.InvokeArgs
      * The version selectors that this config applies to. A message must match ALL version sources to apply.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final List<VersionSourceResponse> version;
 
     public List<VersionSourceResponse> getVersion() {

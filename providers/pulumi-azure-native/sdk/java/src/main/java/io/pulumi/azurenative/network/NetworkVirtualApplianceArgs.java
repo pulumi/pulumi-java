@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.azurenative.network.inputs.VirtualApplianceSkuPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * BootStrapConfigurationBlobs storage URLs.
      * 
      */
-    @InputImport(name="bootStrapConfigurationBlobs")
+    @Import(name="bootStrapConfigurationBlobs")
       private final @Nullable Output<List<String>> bootStrapConfigurationBlobs;
 
     public Output<List<String>> getBootStrapConfigurationBlobs() {
@@ -35,7 +35,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * CloudInitConfiguration string in plain text.
      * 
      */
-    @InputImport(name="cloudInitConfiguration")
+    @Import(name="cloudInitConfiguration")
       private final @Nullable Output<String> cloudInitConfiguration;
 
     public Output<String> getCloudInitConfiguration() {
@@ -46,7 +46,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * CloudInitConfigurationBlob storage URLs.
      * 
      */
-    @InputImport(name="cloudInitConfigurationBlobs")
+    @Import(name="cloudInitConfigurationBlobs")
       private final @Nullable Output<List<String>> cloudInitConfigurationBlobs;
 
     public Output<List<String>> getCloudInitConfigurationBlobs() {
@@ -57,7 +57,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -68,7 +68,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * The service principal that has read access to cloud-init and config blob.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
     public Output<ManagedServiceIdentityArgs> getIdentity() {
@@ -79,7 +79,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -90,7 +90,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * The name of Network Virtual Appliance.
      * 
      */
-    @InputImport(name="networkVirtualApplianceName")
+    @Import(name="networkVirtualApplianceName")
       private final @Nullable Output<String> networkVirtualApplianceName;
 
     public Output<String> getNetworkVirtualApplianceName() {
@@ -101,7 +101,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * Network Virtual Appliance SKU.
      * 
      */
-    @InputImport(name="nvaSku")
+    @Import(name="nvaSku")
       private final @Nullable Output<VirtualApplianceSkuPropertiesArgs> nvaSku;
 
     public Output<VirtualApplianceSkuPropertiesArgs> getNvaSku() {
@@ -112,7 +112,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -123,7 +123,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -134,7 +134,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * VirtualAppliance ASN.
      * 
      */
-    @InputImport(name="virtualApplianceAsn")
+    @Import(name="virtualApplianceAsn")
       private final @Nullable Output<Double> virtualApplianceAsn;
 
     public Output<Double> getVirtualApplianceAsn() {
@@ -145,7 +145,7 @@ public final class NetworkVirtualApplianceArgs extends io.pulumi.resources.Resou
      * The Virtual Hub where Network Virtual Appliance is being deployed.
      * 
      */
-    @InputImport(name="virtualHub")
+    @Import(name="virtualHub")
       private final @Nullable Output<SubResourceArgs> virtualHub;
 
     public Output<SubResourceArgs> getVirtualHub() {

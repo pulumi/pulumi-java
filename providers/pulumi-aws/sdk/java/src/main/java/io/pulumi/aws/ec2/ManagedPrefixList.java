@@ -8,7 +8,7 @@ import io.pulumi.aws.ec2.ManagedPrefixListArgs;
 import io.pulumi.aws.ec2.inputs.ManagedPrefixListState;
 import io.pulumi.aws.ec2.outputs.ManagedPrefixListEntry;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,7 +32,7 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
      * Address family (`IPv4` or `IPv6`) of this prefix list.
      * 
      */
-    @OutputExport(name="addressFamily", type=String.class, parameters={})
+    @Export(name="addressFamily", type=String.class, parameters={})
     private Output<String> addressFamily;
 
     /**
@@ -46,7 +46,7 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
      * ARN of the prefix list.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -60,7 +60,7 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
      * Configuration block for prefix list entry. Detailed below. Different entries may have overlapping CIDR blocks, but a particular CIDR should not be duplicated.
      * 
      */
-    @OutputExport(name="entries", type=List.class, parameters={ManagedPrefixListEntry.class})
+    @Export(name="entries", type=List.class, parameters={ManagedPrefixListEntry.class})
     private Output<List<ManagedPrefixListEntry>> entries;
 
     /**
@@ -74,7 +74,7 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
      * Maximum number of entries that this prefix list can contain.
      * 
      */
-    @OutputExport(name="maxEntries", type=Integer.class, parameters={})
+    @Export(name="maxEntries", type=Integer.class, parameters={})
     private Output<Integer> maxEntries;
 
     /**
@@ -88,7 +88,7 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
      * Name of this resource. The name must not start with `com.amazonaws`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -102,7 +102,7 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
      * ID of the AWS account that owns this prefix list.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -116,7 +116,7 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
      * Map of tags to assign to this resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -126,7 +126,7 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -136,7 +136,7 @@ public class ManagedPrefixList extends io.pulumi.resources.CustomResource {
      * Latest version of this prefix list.
      * 
      */
-    @OutputExport(name="version", type=Integer.class, parameters={})
+    @Export(name="version", type=Integer.class, parameters={})
     private Output<Integer> version;
 
     /**

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.JobConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetJobTemplateResult {
     /**
      * The configuration for this template.
@@ -21,10 +21,10 @@ public final class GetJobTemplateResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobTemplateResult(
-        @OutputCustomType.Parameter("config") JobConfigResponse config,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("config") JobConfigResponse config,
+        @CustomType.Parameter("name") String name) {
         this.config = config;
         this.name = name;
     }

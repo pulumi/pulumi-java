@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BiEngineReasonResponse {
     /**
      * High-level BI Engine reason for partial or disabled acceleration.
@@ -20,10 +20,10 @@ public final class BiEngineReasonResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BiEngineReasonResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("message") String message) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("message") String message) {
         this.code = code;
         this.message = message;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devops.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineTemplateResponse {
     /**
      * Unique identifier of the pipeline template.
@@ -22,10 +22,10 @@ public final class PipelineTemplateResponse {
      */
     private final @Nullable Map<String,String> parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineTemplateResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("parameters") @Nullable Map<String,String> parameters) {
         this.id = id;
         this.parameters = parameters;
     }

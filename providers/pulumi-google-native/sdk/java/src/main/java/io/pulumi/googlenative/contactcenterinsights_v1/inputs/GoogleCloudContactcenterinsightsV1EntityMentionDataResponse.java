@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1SentimentDataResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
      * The key of this entity in conversation entities. Can be used to retrieve the exact `Entity` this mention is attached to.
      * 
      */
-    @InputImport(name="entityUniqueId", required=true)
+    @Import(name="entityUniqueId", required=true)
       private final String entityUniqueId;
 
     public String getEntityUniqueId() {
@@ -32,7 +32,7 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
      * Sentiment expressed for this mention of the entity.
      * 
      */
-    @InputImport(name="sentiment", required=true)
+    @Import(name="sentiment", required=true)
       private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment;
 
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse getSentiment() {
@@ -43,7 +43,7 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
      * The type of the entity mention.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceEndpointSpecPort {
     private final @Nullable String name;
     private final @Nullable String protocol;
@@ -18,13 +18,13 @@ public final class ServiceEndpointSpecPort {
     private final @Nullable Integer publishedPort;
     private final Integer targetPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceEndpointSpecPort(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("publishMode") @Nullable String publishMode,
-        @OutputCustomType.Parameter("publishedPort") @Nullable Integer publishedPort,
-        @OutputCustomType.Parameter("targetPort") Integer targetPort) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("publishMode") @Nullable String publishMode,
+        @CustomType.Parameter("publishedPort") @Nullable Integer publishedPort,
+        @CustomType.Parameter("targetPort") Integer targetPort) {
         this.name = name;
         this.protocol = protocol;
         this.publishMode = publishMode;

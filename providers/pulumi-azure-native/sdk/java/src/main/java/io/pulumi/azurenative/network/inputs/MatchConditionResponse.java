@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.MatchVariableResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
      * Match value.
      * 
      */
-    @InputImport(name="matchValues", required=true)
+    @Import(name="matchValues", required=true)
       private final List<String> matchValues;
 
     public List<String> getMatchValues() {
@@ -36,7 +36,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
      * List of match variables.
      * 
      */
-    @InputImport(name="matchVariables", required=true)
+    @Import(name="matchVariables", required=true)
       private final List<MatchVariableResponse> matchVariables;
 
     public List<MatchVariableResponse> getMatchVariables() {
@@ -47,7 +47,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
      * Whether this is negate condition or not.
      * 
      */
-    @InputImport(name="negationConditon")
+    @Import(name="negationConditon")
       private final @Nullable Boolean negationConditon;
 
     public Optional<Boolean> getNegationConditon() {
@@ -58,7 +58,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
      * The operator to be matched.
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final String operator;
 
     public String getOperator() {
@@ -69,7 +69,7 @@ public final class MatchConditionResponse extends io.pulumi.resources.InvokeArgs
      * List of transforms.
      * 
      */
-    @InputImport(name="transforms")
+    @Import(name="transforms")
       private final @Nullable List<String> transforms;
 
     public List<String> getTransforms() {

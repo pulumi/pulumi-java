@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.MyWorkbookUserAssignedIdentitiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class MyWorkbookManagedIdentityResponse extends io.pulumi.resources
      * The identity type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -34,7 +34,7 @@ public final class MyWorkbookManagedIdentityResponse extends io.pulumi.resources
      * Customer Managed Identity
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable MyWorkbookUserAssignedIdentitiesResponse userAssignedIdentities;
 
     public Optional<MyWorkbookUserAssignedIdentitiesResponse> getUserAssignedIdentities() {

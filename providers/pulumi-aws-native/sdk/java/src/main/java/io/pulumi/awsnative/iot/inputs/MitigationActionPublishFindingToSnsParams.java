@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MitigationActionPublishFindingToSnsParams extends io.pulumi.r
      * The ARN of the topic to which you want to publish the findings.
      * 
      */
-    @InputImport(name="topicArn", required=true)
+    @Import(name="topicArn", required=true)
       private final String topicArn;
 
     public String getTopicArn() {

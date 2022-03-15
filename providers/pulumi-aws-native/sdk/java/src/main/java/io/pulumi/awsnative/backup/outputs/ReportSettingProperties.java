@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.backup.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReportSettingProperties {
     /**
      * The Amazon Resource Names (ARNs) of the frameworks a report covers.
@@ -22,10 +22,10 @@ public final class ReportSettingProperties {
      */
     private final String reportTemplate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReportSettingProperties(
-        @OutputCustomType.Parameter("frameworkArns") @Nullable List<String> frameworkArns,
-        @OutputCustomType.Parameter("reportTemplate") String reportTemplate) {
+        @CustomType.Parameter("frameworkArns") @Nullable List<String> frameworkArns,
+        @CustomType.Parameter("reportTemplate") String reportTemplate) {
         this.frameworkArns = frameworkArns;
         this.reportTemplate = reportTemplate;
     }

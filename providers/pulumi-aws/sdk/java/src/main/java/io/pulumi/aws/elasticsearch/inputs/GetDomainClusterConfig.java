@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.aws.elasticsearch.inputs.GetDomainClusterConfigZoneAwarenessConfig;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * Number of dedicated master nodes in the cluster.
      * 
      */
-    @InputImport(name="dedicatedMasterCount", required=true)
+    @Import(name="dedicatedMasterCount", required=true)
       private final Integer dedicatedMasterCount;
 
     public Integer getDedicatedMasterCount() {
@@ -33,7 +33,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * Indicates whether dedicated master nodes are enabled for the cluster.
      * 
      */
-    @InputImport(name="dedicatedMasterEnabled", required=true)
+    @Import(name="dedicatedMasterEnabled", required=true)
       private final Boolean dedicatedMasterEnabled;
 
     public Boolean getDedicatedMasterEnabled() {
@@ -44,7 +44,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * Instance type of the dedicated master nodes in the cluster.
      * 
      */
-    @InputImport(name="dedicatedMasterType", required=true)
+    @Import(name="dedicatedMasterType", required=true)
       private final String dedicatedMasterType;
 
     public String getDedicatedMasterType() {
@@ -55,7 +55,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * Number of instances in the cluster.
      * 
      */
-    @InputImport(name="instanceCount", required=true)
+    @Import(name="instanceCount", required=true)
       private final Integer instanceCount;
 
     public Integer getInstanceCount() {
@@ -66,7 +66,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * Instance type of data nodes in the cluster.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -77,7 +77,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * The number of warm nodes in the cluster.
      * 
      */
-    @InputImport(name="warmCount", required=true)
+    @Import(name="warmCount", required=true)
       private final Integer warmCount;
 
     public Integer getWarmCount() {
@@ -88,7 +88,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * Indicates warm storage is enabled.
      * 
      */
-    @InputImport(name="warmEnabled")
+    @Import(name="warmEnabled")
       private final @Nullable Boolean warmEnabled;
 
     public Optional<Boolean> getWarmEnabled() {
@@ -99,7 +99,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * The instance type for the Elasticsearch cluster's warm nodes.
      * 
      */
-    @InputImport(name="warmType", required=true)
+    @Import(name="warmType", required=true)
       private final String warmType;
 
     public String getWarmType() {
@@ -110,7 +110,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * Configuration block containing zone awareness settings.
      * 
      */
-    @InputImport(name="zoneAwarenessConfigs", required=true)
+    @Import(name="zoneAwarenessConfigs", required=true)
       private final List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs;
 
     public List<GetDomainClusterConfigZoneAwarenessConfig> getZoneAwarenessConfigs() {
@@ -121,7 +121,7 @@ public final class GetDomainClusterConfig extends io.pulumi.resources.InvokeArgs
      * Indicates whether zone awareness is enabled.
      * 
      */
-    @InputImport(name="zoneAwarenessEnabled", required=true)
+    @Import(name="zoneAwarenessEnabled", required=true)
       private final Boolean zoneAwarenessEnabled;
 
     public Boolean getZoneAwarenessEnabled() {

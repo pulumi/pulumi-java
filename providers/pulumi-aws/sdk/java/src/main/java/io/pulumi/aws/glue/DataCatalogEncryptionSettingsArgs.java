@@ -5,7 +5,7 @@ package io.pulumi.aws.glue;
 
 import io.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DataCatalogEncryptionSettingsArgs extends io.pulumi.resources
      * The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.
      * 
      */
-    @InputImport(name="catalogId")
+    @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
@@ -30,7 +30,7 @@ public final class DataCatalogEncryptionSettingsArgs extends io.pulumi.resources
      * The security configuration to set. see Data Catalog Encryption Settings.
      * 
      */
-    @InputImport(name="dataCatalogEncryptionSettings", required=true)
+    @Import(name="dataCatalogEncryptionSettings", required=true)
       private final Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> dataCatalogEncryptionSettings;
 
     public Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs> getDataCatalogEncryptionSettings() {

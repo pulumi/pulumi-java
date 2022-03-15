@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.WorkspaceKeyDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomerManagedKeyDetailsResponse {
     /**
      * The key object of the workspace
@@ -23,10 +23,10 @@ public final class CustomerManagedKeyDetailsResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomerManagedKeyDetailsResponse(
-        @OutputCustomType.Parameter("key") @Nullable WorkspaceKeyDetailsResponse key,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("key") @Nullable WorkspaceKeyDetailsResponse key,
+        @CustomType.Parameter("status") String status) {
         this.key = key;
         this.status = status;
     }

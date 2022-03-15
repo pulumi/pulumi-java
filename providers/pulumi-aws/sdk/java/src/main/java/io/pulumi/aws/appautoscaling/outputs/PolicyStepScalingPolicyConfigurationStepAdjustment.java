@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.appautoscaling.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyStepScalingPolicyConfigurationStepAdjustment {
     /**
      * The lower bound for the difference between the alarm threshold and the CloudWatch metric. Without a value, AWS will treat this bound as negative infinity.
@@ -28,11 +28,11 @@ public final class PolicyStepScalingPolicyConfigurationStepAdjustment {
      */
     private final Integer scalingAdjustment;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyStepScalingPolicyConfigurationStepAdjustment(
-        @OutputCustomType.Parameter("metricIntervalLowerBound") @Nullable String metricIntervalLowerBound,
-        @OutputCustomType.Parameter("metricIntervalUpperBound") @Nullable String metricIntervalUpperBound,
-        @OutputCustomType.Parameter("scalingAdjustment") Integer scalingAdjustment) {
+        @CustomType.Parameter("metricIntervalLowerBound") @Nullable String metricIntervalLowerBound,
+        @CustomType.Parameter("metricIntervalUpperBound") @Nullable String metricIntervalUpperBound,
+        @CustomType.Parameter("scalingAdjustment") Integer scalingAdjustment) {
         this.metricIntervalLowerBound = metricIntervalLowerBound;
         this.metricIntervalUpperBound = metricIntervalUpperBound;
         this.scalingAdjustment = scalingAdjustment;

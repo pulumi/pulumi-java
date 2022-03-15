@@ -6,7 +6,7 @@ package io.pulumi.azurenative.migrate.inputs;
 import io.pulumi.azurenative.migrate.enums.ProjectStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Assessment solution ARM id tracked by Microsoft.Migrate/migrateProjects.
      * 
      */
-    @InputImport(name="assessmentSolutionId")
+    @Import(name="assessmentSolutionId")
       private final @Nullable Output<String> assessmentSolutionId;
 
     public Output<String> getAssessmentSolutionId() {
@@ -35,7 +35,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
      * The ARM id of the storage account used for interactions when public access is disabled.
      * 
      */
-    @InputImport(name="customerStorageAccountArmId")
+    @Import(name="customerStorageAccountArmId")
       private final @Nullable Output<String> customerStorageAccountArmId;
 
     public Output<String> getCustomerStorageAccountArmId() {
@@ -46,7 +46,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
      * The ARM id of service map workspace created by customer.
      * 
      */
-    @InputImport(name="customerWorkspaceId")
+    @Import(name="customerWorkspaceId")
       private final @Nullable Output<String> customerWorkspaceId;
 
     public Output<String> getCustomerWorkspaceId() {
@@ -57,7 +57,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Location of service map workspace created by customer.
      * 
      */
-    @InputImport(name="customerWorkspaceLocation")
+    @Import(name="customerWorkspaceLocation")
       private final @Nullable Output<String> customerWorkspaceLocation;
 
     public Output<String> getCustomerWorkspaceLocation() {
@@ -68,7 +68,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Assessment project status.
      * 
      */
-    @InputImport(name="projectStatus")
+    @Import(name="projectStatus")
       private final @Nullable Output<Either<String,ProjectStatus>> projectStatus;
 
     public Output<Either<String,ProjectStatus>> getProjectStatus() {
@@ -79,7 +79,7 @@ public final class ProjectPropertiesArgs extends io.pulumi.resources.ResourceArg
      * This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<String> publicNetworkAccess;
 
     public Output<String> getPublicNetworkAccess() {

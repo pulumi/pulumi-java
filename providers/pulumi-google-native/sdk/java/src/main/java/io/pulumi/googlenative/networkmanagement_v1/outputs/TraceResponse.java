@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.networkmanagement_v1.outputs.EndpointInfoResponse;
 import io.pulumi.googlenative.networkmanagement_v1.outputs.StepResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TraceResponse {
     /**
      * Derived from the source and destination endpoints definition specified by user request, and validated by the data plane model. If there are multiple traces starting from different source locations, then the endpoint_info may be different between traces.
@@ -22,10 +22,10 @@ public final class TraceResponse {
      */
     private final List<StepResponse> steps;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TraceResponse(
-        @OutputCustomType.Parameter("endpointInfo") EndpointInfoResponse endpointInfo,
-        @OutputCustomType.Parameter("steps") List<StepResponse> steps) {
+        @CustomType.Parameter("endpointInfo") EndpointInfoResponse endpointInfo,
+        @CustomType.Parameter("steps") List<StepResponse> steps) {
         this.endpointInfo = endpointInfo;
         this.steps = steps;
     }

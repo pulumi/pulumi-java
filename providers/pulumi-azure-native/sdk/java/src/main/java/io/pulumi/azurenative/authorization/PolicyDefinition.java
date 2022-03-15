@@ -8,7 +8,7 @@ import io.pulumi.azurenative.authorization.PolicyDefinitionArgs;
 import io.pulumi.azurenative.authorization.outputs.ParameterDefinitionsValueResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class PolicyDefinition extends io.pulumi.resources.CustomResource {
      * The policy definition description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -51,7 +51,7 @@ public class PolicyDefinition extends io.pulumi.resources.CustomResource {
      * The display name of the policy definition.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -65,7 +65,7 @@ public class PolicyDefinition extends io.pulumi.resources.CustomResource {
      * The policy definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    @OutputExport(name="metadata", type=Object.class, parameters={})
+    @Export(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
     /**
@@ -79,7 +79,7 @@ public class PolicyDefinition extends io.pulumi.resources.CustomResource {
      * The policy definition mode. Some examples are All, Indexed, Microsoft.KeyVault.Data.
      * 
      */
-    @OutputExport(name="mode", type=String.class, parameters={})
+    @Export(name="mode", type=String.class, parameters={})
     private Output</* @Nullable */ String> mode;
 
     /**
@@ -93,7 +93,7 @@ public class PolicyDefinition extends io.pulumi.resources.CustomResource {
      * The name of the policy definition.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class PolicyDefinition extends io.pulumi.resources.CustomResource {
      * The parameter definitions for parameters used in the policy rule. The keys are the parameter names.
      * 
      */
-    @OutputExport(name="parameters", type=Map.class, parameters={String.class, ParameterDefinitionsValueResponse.class})
+    @Export(name="parameters", type=Map.class, parameters={String.class, ParameterDefinitionsValueResponse.class})
     private Output</* @Nullable */ Map<String,ParameterDefinitionsValueResponse>> parameters;
 
     /**
@@ -121,7 +121,7 @@ public class PolicyDefinition extends io.pulumi.resources.CustomResource {
      * The policy rule.
      * 
      */
-    @OutputExport(name="policyRule", type=Object.class, parameters={})
+    @Export(name="policyRule", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> policyRule;
 
     /**
@@ -135,7 +135,7 @@ public class PolicyDefinition extends io.pulumi.resources.CustomResource {
      * The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
      * 
      */
-    @OutputExport(name="policyType", type=String.class, parameters={})
+    @Export(name="policyType", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyType;
 
     /**
@@ -149,7 +149,7 @@ public class PolicyDefinition extends io.pulumi.resources.CustomResource {
      * The type of the resource (Microsoft.Authorization/policyDefinitions).
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

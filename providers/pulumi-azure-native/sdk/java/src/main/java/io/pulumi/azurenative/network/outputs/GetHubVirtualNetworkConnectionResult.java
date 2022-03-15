@@ -5,14 +5,14 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.RoutingConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHubVirtualNetworkConnectionResult {
     /**
      * Deprecated: VirtualHub to RemoteVnet transit to enabled or not.
@@ -60,17 +60,17 @@ public final class GetHubVirtualNetworkConnectionResult {
      */
     private final @Nullable RoutingConfigurationResponse routingConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHubVirtualNetworkConnectionResult(
-        @OutputCustomType.Parameter("allowHubToRemoteVnetTransit") @Nullable Boolean allowHubToRemoteVnetTransit,
-        @OutputCustomType.Parameter("allowRemoteVnetToUseHubVnetGateways") @Nullable Boolean allowRemoteVnetToUseHubVnetGateways,
-        @OutputCustomType.Parameter("enableInternetSecurity") @Nullable Boolean enableInternetSecurity,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("remoteVirtualNetwork") @Nullable SubResourceResponse remoteVirtualNetwork,
-        @OutputCustomType.Parameter("routingConfiguration") @Nullable RoutingConfigurationResponse routingConfiguration) {
+        @CustomType.Parameter("allowHubToRemoteVnetTransit") @Nullable Boolean allowHubToRemoteVnetTransit,
+        @CustomType.Parameter("allowRemoteVnetToUseHubVnetGateways") @Nullable Boolean allowRemoteVnetToUseHubVnetGateways,
+        @CustomType.Parameter("enableInternetSecurity") @Nullable Boolean enableInternetSecurity,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("remoteVirtualNetwork") @Nullable SubResourceResponse remoteVirtualNetwork,
+        @CustomType.Parameter("routingConfiguration") @Nullable RoutingConfigurationResponse routingConfiguration) {
         this.allowHubToRemoteVnetTransit = allowHubToRemoteVnetTransit;
         this.allowRemoteVnetToUseHubVnetGateways = allowRemoteVnetToUseHubVnetGateways;
         this.enableInternetSecurity = enableInternetSecurity;

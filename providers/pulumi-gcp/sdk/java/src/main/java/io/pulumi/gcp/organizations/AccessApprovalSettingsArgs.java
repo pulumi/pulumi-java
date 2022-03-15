@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.organizations.inputs.AccessApprovalSettingsEnrolledServiceArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="enrolledServices", required=true)
+    @Import(name="enrolledServices", required=true)
       private final Output<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices;
 
     public Output<List<AccessApprovalSettingsEnrolledServiceArgs>> getEnrolledServices() {
@@ -37,7 +37,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      * resources of that resource. A maximum of 50 email addresses are allowed.
      * 
      */
-    @InputImport(name="notificationEmails")
+    @Import(name="notificationEmails")
       private final @Nullable Output<List<String>> notificationEmails;
 
     public Output<List<String>> getNotificationEmails() {
@@ -48,7 +48,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
      * ID of the organization of the access approval settings.
      * 
      */
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
     public Output<String> getOrganizationId() {

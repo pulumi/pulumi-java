@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RulesEngineMatchConditionResponse {
     /**
      * Describes if this is negate condition or not
@@ -44,14 +44,14 @@ public final class RulesEngineMatchConditionResponse {
      */
     private final @Nullable List<String> transforms;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RulesEngineMatchConditionResponse(
-        @OutputCustomType.Parameter("negateCondition") @Nullable Boolean negateCondition,
-        @OutputCustomType.Parameter("rulesEngineMatchValue") List<String> rulesEngineMatchValue,
-        @OutputCustomType.Parameter("rulesEngineMatchVariable") String rulesEngineMatchVariable,
-        @OutputCustomType.Parameter("rulesEngineOperator") String rulesEngineOperator,
-        @OutputCustomType.Parameter("selector") @Nullable String selector,
-        @OutputCustomType.Parameter("transforms") @Nullable List<String> transforms) {
+        @CustomType.Parameter("negateCondition") @Nullable Boolean negateCondition,
+        @CustomType.Parameter("rulesEngineMatchValue") List<String> rulesEngineMatchValue,
+        @CustomType.Parameter("rulesEngineMatchVariable") String rulesEngineMatchVariable,
+        @CustomType.Parameter("rulesEngineOperator") String rulesEngineOperator,
+        @CustomType.Parameter("selector") @Nullable String selector,
+        @CustomType.Parameter("transforms") @Nullable List<String> transforms) {
         this.negateCondition = negateCondition;
         this.rulesEngineMatchValue = rulesEngineMatchValue;
         this.rulesEngineMatchVariable = rulesEngineMatchVariable;

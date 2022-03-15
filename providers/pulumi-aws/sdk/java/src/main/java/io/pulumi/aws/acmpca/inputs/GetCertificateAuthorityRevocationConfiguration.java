@@ -4,7 +4,7 @@
 package io.pulumi.aws.acmpca.inputs;
 
 import io.pulumi.aws.acmpca.inputs.GetCertificateAuthorityRevocationConfigurationCrlConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetCertificateAuthorityRevocationConfiguration extends io.pul
 
     public static final GetCertificateAuthorityRevocationConfiguration Empty = new GetCertificateAuthorityRevocationConfiguration();
 
-    @InputImport(name="crlConfigurations", required=true)
+    @Import(name="crlConfigurations", required=true)
       private final List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations;
 
     public List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> getCrlConfigurations() {

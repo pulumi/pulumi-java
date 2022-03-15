@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logz.inputs;
 
 import io.pulumi.azurenative.logz.inputs.FilteringTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MetricRulesArgs extends io.pulumi.resources.ResourceArgs {
      * List of filtering tags to be used for capturing metrics. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
      * 
      */
-    @InputImport(name="filteringTags")
+    @Import(name="filteringTags")
       private final @Nullable Output<List<FilteringTagArgs>> filteringTags;
 
     public Output<List<FilteringTagArgs>> getFilteringTags() {
@@ -35,7 +35,7 @@ public final class MetricRulesArgs extends io.pulumi.resources.ResourceArgs {
      * Subscription Id for which filtering tags are applicable
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {

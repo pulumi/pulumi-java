@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupRuleDefinition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupStatelessRule {
     private final Integer priority;
     private final RuleGroupRuleDefinition ruleDefinition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupStatelessRule(
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("ruleDefinition") RuleGroupRuleDefinition ruleDefinition) {
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("ruleDefinition") RuleGroupRuleDefinition ruleDefinition) {
         this.priority = priority;
         this.ruleDefinition = ruleDefinition;
     }

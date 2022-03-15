@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupImmunityTimeProperty;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupCaptchaConfig {
     private final @Nullable RuleGroupImmunityTimeProperty immunityTimeProperty;
 
-    @OutputCustomType.Constructor
-    private RuleGroupCaptchaConfig(@OutputCustomType.Parameter("immunityTimeProperty") @Nullable RuleGroupImmunityTimeProperty immunityTimeProperty) {
+    @CustomType.Constructor
+    private RuleGroupCaptchaConfig(@CustomType.Parameter("immunityTimeProperty") @Nullable RuleGroupImmunityTimeProperty immunityTimeProperty) {
         this.immunityTimeProperty = immunityTimeProperty;
     }
 

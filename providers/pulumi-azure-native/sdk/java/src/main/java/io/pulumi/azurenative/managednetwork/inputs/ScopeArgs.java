@@ -5,7 +5,7 @@ package io.pulumi.azurenative.managednetwork.inputs;
 
 import io.pulumi.azurenative.managednetwork.inputs.ResourceIdArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * The collection of management groups covered by the Managed Network
      * 
      */
-    @InputImport(name="managementGroups")
+    @Import(name="managementGroups")
       private final @Nullable Output<List<ResourceIdArgs>> managementGroups;
 
     public Output<List<ResourceIdArgs>> getManagementGroups() {
@@ -34,7 +34,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * The collection of  subnets covered by the Managed Network
      * 
      */
-    @InputImport(name="subnets")
+    @Import(name="subnets")
       private final @Nullable Output<List<ResourceIdArgs>> subnets;
 
     public Output<List<ResourceIdArgs>> getSubnets() {
@@ -45,7 +45,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * The collection of subscriptions covered by the Managed Network
      * 
      */
-    @InputImport(name="subscriptions")
+    @Import(name="subscriptions")
       private final @Nullable Output<List<ResourceIdArgs>> subscriptions;
 
     public Output<List<ResourceIdArgs>> getSubscriptions() {
@@ -56,7 +56,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
      * The collection of virtual nets covered by the Managed Network
      * 
      */
-    @InputImport(name="virtualNetworks")
+    @Import(name="virtualNetworks")
       private final @Nullable Output<List<ResourceIdArgs>> virtualNetworks;
 
     public Output<List<ResourceIdArgs>> getVirtualNetworks() {

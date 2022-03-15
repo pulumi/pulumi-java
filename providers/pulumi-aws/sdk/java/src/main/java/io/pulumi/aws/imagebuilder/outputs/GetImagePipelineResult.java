@@ -5,14 +5,14 @@ package io.pulumi.aws.imagebuilder.outputs;
 
 import io.pulumi.aws.imagebuilder.outputs.GetImagePipelineImageTestsConfiguration;
 import io.pulumi.aws.imagebuilder.outputs.GetImagePipelineSchedule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetImagePipelineResult {
     private final String arn;
     /**
@@ -96,25 +96,25 @@ public final class GetImagePipelineResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetImagePipelineResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("dateCreated") String dateCreated,
-        @OutputCustomType.Parameter("dateLastRun") String dateLastRun,
-        @OutputCustomType.Parameter("dateNextRun") String dateNextRun,
-        @OutputCustomType.Parameter("dateUpdated") String dateUpdated,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("distributionConfigurationArn") String distributionConfigurationArn,
-        @OutputCustomType.Parameter("enhancedImageMetadataEnabled") Boolean enhancedImageMetadataEnabled,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("imageRecipeArn") String imageRecipeArn,
-        @OutputCustomType.Parameter("imageTestsConfigurations") List<GetImagePipelineImageTestsConfiguration> imageTestsConfigurations,
-        @OutputCustomType.Parameter("infrastructureConfigurationArn") String infrastructureConfigurationArn,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("platform") String platform,
-        @OutputCustomType.Parameter("schedules") List<GetImagePipelineSchedule> schedules,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("dateCreated") String dateCreated,
+        @CustomType.Parameter("dateLastRun") String dateLastRun,
+        @CustomType.Parameter("dateNextRun") String dateNextRun,
+        @CustomType.Parameter("dateUpdated") String dateUpdated,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("distributionConfigurationArn") String distributionConfigurationArn,
+        @CustomType.Parameter("enhancedImageMetadataEnabled") Boolean enhancedImageMetadataEnabled,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("imageRecipeArn") String imageRecipeArn,
+        @CustomType.Parameter("imageTestsConfigurations") List<GetImagePipelineImageTestsConfiguration> imageTestsConfigurations,
+        @CustomType.Parameter("infrastructureConfigurationArn") String infrastructureConfigurationArn,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("platform") String platform,
+        @CustomType.Parameter("schedules") List<GetImagePipelineSchedule> schedules,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.dateCreated = dateCreated;
         this.dateLastRun = dateLastRun;

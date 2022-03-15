@@ -9,7 +9,7 @@ import io.pulumi.awsnative.wafv2.outputs.WebACLDefaultAction;
 import io.pulumi.awsnative.wafv2.outputs.WebACLRule;
 import io.pulumi.awsnative.wafv2.outputs.WebACLTag;
 import io.pulumi.awsnative.wafv2.outputs.WebACLVisibilityConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebACLResult {
     private final @Nullable String arn;
     private final @Nullable Integer capacity;
@@ -35,19 +35,19 @@ public final class GetWebACLResult {
     private final @Nullable List<WebACLTag> tags;
     private final @Nullable WebACLVisibilityConfig visibilityConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebACLResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
-        @OutputCustomType.Parameter("captchaConfig") @Nullable WebACLCaptchaConfig captchaConfig,
-        @OutputCustomType.Parameter("customResponseBodies") @Nullable WebACLCustomResponseBodies customResponseBodies,
-        @OutputCustomType.Parameter("defaultAction") @Nullable WebACLDefaultAction defaultAction,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("labelNamespace") @Nullable String labelNamespace,
-        @OutputCustomType.Parameter("rules") @Nullable List<WebACLRule> rules,
-        @OutputCustomType.Parameter("tags") @Nullable List<WebACLTag> tags,
-        @OutputCustomType.Parameter("visibilityConfig") @Nullable WebACLVisibilityConfig visibilityConfig) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("capacity") @Nullable Integer capacity,
+        @CustomType.Parameter("captchaConfig") @Nullable WebACLCaptchaConfig captchaConfig,
+        @CustomType.Parameter("customResponseBodies") @Nullable WebACLCustomResponseBodies customResponseBodies,
+        @CustomType.Parameter("defaultAction") @Nullable WebACLDefaultAction defaultAction,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("labelNamespace") @Nullable String labelNamespace,
+        @CustomType.Parameter("rules") @Nullable List<WebACLRule> rules,
+        @CustomType.Parameter("tags") @Nullable List<WebACLTag> tags,
+        @CustomType.Parameter("visibilityConfig") @Nullable WebACLVisibilityConfig visibilityConfig) {
         this.arn = arn;
         this.capacity = capacity;
         this.captchaConfig = captchaConfig;

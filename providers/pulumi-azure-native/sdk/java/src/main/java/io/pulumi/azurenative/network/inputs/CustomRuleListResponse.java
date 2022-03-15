@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.CustomRuleResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class CustomRuleListResponse extends io.pulumi.resources.InvokeArgs
      * List of rules
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable List<CustomRuleResponse> rules;
 
     public List<CustomRuleResponse> getRules() {

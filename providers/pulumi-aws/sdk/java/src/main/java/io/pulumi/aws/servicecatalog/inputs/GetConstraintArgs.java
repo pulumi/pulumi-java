@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetConstraintArgs extends io.pulumi.resources.InvokeArgs {
      * Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    @InputImport(name="acceptLanguage")
+    @Import(name="acceptLanguage")
       private final @Nullable String acceptLanguage;
 
     public Optional<String> getAcceptLanguage() {
@@ -29,7 +29,7 @@ public final class GetConstraintArgs extends io.pulumi.resources.InvokeArgs {
      * Description of the constraint.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -40,7 +40,7 @@ public final class GetConstraintArgs extends io.pulumi.resources.InvokeArgs {
      * Constraint identifier.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {

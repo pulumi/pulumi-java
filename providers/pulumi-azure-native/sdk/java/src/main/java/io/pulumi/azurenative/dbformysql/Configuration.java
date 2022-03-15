@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.dbformysql.ConfigurationArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * Allowed values of the configuration.
      * 
      */
-    @OutputExport(name="allowedValues", type=String.class, parameters={})
+    @Export(name="allowedValues", type=String.class, parameters={})
     private Output<String> allowedValues;
 
     /**
@@ -48,7 +48,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * Data type of the configuration.
      * 
      */
-    @OutputExport(name="dataType", type=String.class, parameters={})
+    @Export(name="dataType", type=String.class, parameters={})
     private Output<String> dataType;
 
     /**
@@ -62,7 +62,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * Default value of the configuration.
      * 
      */
-    @OutputExport(name="defaultValue", type=String.class, parameters={})
+    @Export(name="defaultValue", type=String.class, parameters={})
     private Output<String> defaultValue;
 
     /**
@@ -76,7 +76,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * Description of the configuration.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -90,7 +90,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -104,7 +104,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * Source of the configuration.
      * 
      */
-    @OutputExport(name="source", type=String.class, parameters={})
+    @Export(name="source", type=String.class, parameters={})
     private Output</* @Nullable */ String> source;
 
     /**
@@ -118,7 +118,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -132,7 +132,7 @@ public class Configuration extends io.pulumi.resources.CustomResource {
      * Value of the configuration.
      * 
      */
-    @OutputExport(name="value", type=String.class, parameters={})
+    @Export(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
     /**

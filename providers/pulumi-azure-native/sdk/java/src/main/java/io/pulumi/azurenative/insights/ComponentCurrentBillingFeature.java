@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.ComponentCurrentBillingFeatureArgs;
 import io.pulumi.azurenative.insights.outputs.ApplicationInsightsComponentDataVolumeCapResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ComponentCurrentBillingFeature extends io.pulumi.resources.CustomRe
      * Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.
      * 
      */
-    @OutputExport(name="currentBillingFeatures", type=List.class, parameters={String.class})
+    @Export(name="currentBillingFeatures", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> currentBillingFeatures;
 
     /**
@@ -49,7 +49,7 @@ public class ComponentCurrentBillingFeature extends io.pulumi.resources.CustomRe
      * An Application Insights component daily data volume cap
      * 
      */
-    @OutputExport(name="dataVolumeCap", type=ApplicationInsightsComponentDataVolumeCapResponse.class, parameters={})
+    @Export(name="dataVolumeCap", type=ApplicationInsightsComponentDataVolumeCapResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationInsightsComponentDataVolumeCapResponse> dataVolumeCap;
 
     /**

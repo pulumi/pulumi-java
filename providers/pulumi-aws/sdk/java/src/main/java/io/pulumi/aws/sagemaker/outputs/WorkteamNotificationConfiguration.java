@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkteamNotificationConfiguration {
     /**
      * The ARN for the SNS topic to which notifications should be published.
@@ -17,8 +17,8 @@ public final class WorkteamNotificationConfiguration {
      */
     private final @Nullable String notificationTopicArn;
 
-    @OutputCustomType.Constructor
-    private WorkteamNotificationConfiguration(@OutputCustomType.Parameter("notificationTopicArn") @Nullable String notificationTopicArn) {
+    @CustomType.Constructor
+    private WorkteamNotificationConfiguration(@CustomType.Parameter("notificationTopicArn") @Nullable String notificationTopicArn) {
         this.notificationTopicArn = notificationTopicArn;
     }
 

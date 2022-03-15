@@ -4,7 +4,7 @@
 package io.pulumi.aws.quicksight;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * The ID for the AWS account that the group is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.
      * 
      */
-    @InputImport(name="awsAccountId")
+    @Import(name="awsAccountId")
       private final @Nullable Output<String> awsAccountId;
 
     public Output<String> getAwsAccountId() {
@@ -29,7 +29,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the group in which the member will be added.
      * 
      */
-    @InputImport(name="groupName", required=true)
+    @Import(name="groupName", required=true)
       private final Output<String> groupName;
 
     public Output<String> getGroupName() {
@@ -40,7 +40,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the member to add to the group.
      * 
      */
-    @InputImport(name="memberName", required=true)
+    @Import(name="memberName", required=true)
       private final Output<String> memberName;
 
     public Output<String> getMemberName() {
@@ -51,7 +51,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
      * The namespace. Defaults to `default`. Currently only `default` is supported.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {

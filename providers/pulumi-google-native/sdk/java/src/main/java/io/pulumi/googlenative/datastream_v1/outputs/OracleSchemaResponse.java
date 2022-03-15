@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datastream_v1.outputs.OracleTableResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OracleSchemaResponse {
     /**
      * Tables in the schema.
@@ -22,10 +22,10 @@ public final class OracleSchemaResponse {
      */
     private final String schema;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OracleSchemaResponse(
-        @OutputCustomType.Parameter("oracleTables") List<OracleTableResponse> oracleTables,
-        @OutputCustomType.Parameter("schema") String schema) {
+        @CustomType.Parameter("oracleTables") List<OracleTableResponse> oracleTables,
+        @CustomType.Parameter("schema") String schema) {
         this.oracleTables = oracleTables;
         this.schema = schema;
     }

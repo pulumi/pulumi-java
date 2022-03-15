@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.ExpressRouteCircuitSkuFamily;
 import io.pulumi.azurenative.network.enums.ExpressRouteCircuitSkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ExpressRouteCircuitSkuArgs extends io.pulumi.resources.Resour
      * The family of the SKU.
      * 
      */
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable Output<Either<String,ExpressRouteCircuitSkuFamily>> family;
 
     public Output<Either<String,ExpressRouteCircuitSkuFamily>> getFamily() {
@@ -36,7 +36,7 @@ public final class ExpressRouteCircuitSkuArgs extends io.pulumi.resources.Resour
      * The name of the SKU.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -47,7 +47,7 @@ public final class ExpressRouteCircuitSkuArgs extends io.pulumi.resources.Resour
      * The tier of the SKU.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<Either<String,ExpressRouteCircuitSkuTier>> tier;
 
     public Output<Either<String,ExpressRouteCircuitSkuTier>> getTier() {

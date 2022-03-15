@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.X509ExtensionResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SubjectAltNamesResponse {
     /**
      * Contains additional subject alternative name values.
@@ -37,13 +37,13 @@ public final class SubjectAltNamesResponse {
      */
     private final List<String> uris;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubjectAltNamesResponse(
-        @OutputCustomType.Parameter("customSans") List<X509ExtensionResponse> customSans,
-        @OutputCustomType.Parameter("dnsNames") List<String> dnsNames,
-        @OutputCustomType.Parameter("emailAddresses") List<String> emailAddresses,
-        @OutputCustomType.Parameter("ipAddresses") List<String> ipAddresses,
-        @OutputCustomType.Parameter("uris") List<String> uris) {
+        @CustomType.Parameter("customSans") List<X509ExtensionResponse> customSans,
+        @CustomType.Parameter("dnsNames") List<String> dnsNames,
+        @CustomType.Parameter("emailAddresses") List<String> emailAddresses,
+        @CustomType.Parameter("ipAddresses") List<String> ipAddresses,
+        @CustomType.Parameter("uris") List<String> uris) {
         this.customSans = customSans;
         this.dnsNames = dnsNames;
         this.emailAddresses = emailAddresses;

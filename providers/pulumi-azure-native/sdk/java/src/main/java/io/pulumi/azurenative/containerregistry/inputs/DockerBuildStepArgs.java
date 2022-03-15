@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.ArgumentArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
      * The collection of override arguments to be used when executing this build step.
      * 
      */
-    @InputImport(name="arguments")
+    @Import(name="arguments")
       private final @Nullable Output<List<ArgumentArgs>> arguments;
 
     public Output<List<ArgumentArgs>> getArguments() {
@@ -36,7 +36,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
      * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
      * 
      */
-    @InputImport(name="contextAccessToken")
+    @Import(name="contextAccessToken")
       private final @Nullable Output<String> contextAccessToken;
 
     public Output<String> getContextAccessToken() {
@@ -47,7 +47,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
      * The URL(absolute or relative) of the source context for the task step.
      * 
      */
-    @InputImport(name="contextPath")
+    @Import(name="contextPath")
       private final @Nullable Output<String> contextPath;
 
     public Output<String> getContextPath() {
@@ -58,7 +58,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
      * The Docker file path relative to the source context.
      * 
      */
-    @InputImport(name="dockerFilePath", required=true)
+    @Import(name="dockerFilePath", required=true)
       private final Output<String> dockerFilePath;
 
     public Output<String> getDockerFilePath() {
@@ -69,7 +69,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
      * The fully qualified image names including the repository and tag.
      * 
      */
-    @InputImport(name="imageNames")
+    @Import(name="imageNames")
       private final @Nullable Output<List<String>> imageNames;
 
     public Output<List<String>> getImageNames() {
@@ -80,7 +80,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
      * The value of this property indicates whether the image built should be pushed to the registry or not.
      * 
      */
-    @InputImport(name="isPushEnabled")
+    @Import(name="isPushEnabled")
       private final @Nullable Output<Boolean> isPushEnabled;
 
     public Output<Boolean> getIsPushEnabled() {
@@ -91,7 +91,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
      * The value of this property indicates whether the image cache is enabled or not.
      * 
      */
-    @InputImport(name="noCache")
+    @Import(name="noCache")
       private final @Nullable Output<Boolean> noCache;
 
     public Output<Boolean> getNoCache() {
@@ -102,7 +102,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the target build stage for the docker build.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {
@@ -114,7 +114,7 @@ public final class DockerBuildStepArgs extends io.pulumi.resources.ResourceArgs 
      * Expected value is 'Docker'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

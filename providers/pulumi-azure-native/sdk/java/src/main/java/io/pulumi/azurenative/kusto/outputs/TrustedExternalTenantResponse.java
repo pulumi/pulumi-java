@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.kusto.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TrustedExternalTenantResponse {
     /**
      * GUID representing an external tenant.
@@ -17,8 +17,8 @@ public final class TrustedExternalTenantResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
-    private TrustedExternalTenantResponse(@OutputCustomType.Parameter("value") @Nullable String value) {
+    @CustomType.Constructor
+    private TrustedExternalTenantResponse(@CustomType.Parameter("value") @Nullable String value) {
         this.value = value;
     }
 

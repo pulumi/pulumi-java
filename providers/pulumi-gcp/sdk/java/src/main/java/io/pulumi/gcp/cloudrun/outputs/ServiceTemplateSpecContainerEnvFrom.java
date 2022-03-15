@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecContainerEnvFromConfigMapRef;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecContainerEnvFromSecretRef;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTemplateSpecContainerEnvFrom {
     /**
      * The ConfigMap to select from.
@@ -31,11 +31,11 @@ public final class ServiceTemplateSpecContainerEnvFrom {
      */
     private final @Nullable ServiceTemplateSpecContainerEnvFromSecretRef secretRef;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTemplateSpecContainerEnvFrom(
-        @OutputCustomType.Parameter("configMapRef") @Nullable ServiceTemplateSpecContainerEnvFromConfigMapRef configMapRef,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("secretRef") @Nullable ServiceTemplateSpecContainerEnvFromSecretRef secretRef) {
+        @CustomType.Parameter("configMapRef") @Nullable ServiceTemplateSpecContainerEnvFromConfigMapRef configMapRef,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("secretRef") @Nullable ServiceTemplateSpecContainerEnvFromSecretRef secretRef) {
         this.configMapRef = configMapRef;
         this.prefix = prefix;
         this.secretRef = secretRef;

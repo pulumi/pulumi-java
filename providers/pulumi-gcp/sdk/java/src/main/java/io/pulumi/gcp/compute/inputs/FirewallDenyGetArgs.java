@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FirewallDenyGetArgs extends io.pulumi.resources.ResourceArgs 
      * ["12345-12349"].
      * 
      */
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable Output<List<String>> ports;
 
     public Output<List<String>> getPorts() {
@@ -38,7 +38,7 @@ public final class FirewallDenyGetArgs extends io.pulumi.resources.ResourceArgs 
      * icmp, esp, ah, sctp, ipip, all), or the IP protocol number.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
     public Output<String> getProtocol() {

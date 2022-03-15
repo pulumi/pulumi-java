@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.workspaces.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DirectoryWorkspaceCreationProperties {
     /**
      * The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
@@ -38,13 +38,13 @@ public final class DirectoryWorkspaceCreationProperties {
      */
     private final @Nullable Boolean userEnabledAsLocalAdministrator;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DirectoryWorkspaceCreationProperties(
-        @OutputCustomType.Parameter("customSecurityGroupId") @Nullable String customSecurityGroupId,
-        @OutputCustomType.Parameter("defaultOu") @Nullable String defaultOu,
-        @OutputCustomType.Parameter("enableInternetAccess") @Nullable Boolean enableInternetAccess,
-        @OutputCustomType.Parameter("enableMaintenanceMode") @Nullable Boolean enableMaintenanceMode,
-        @OutputCustomType.Parameter("userEnabledAsLocalAdministrator") @Nullable Boolean userEnabledAsLocalAdministrator) {
+        @CustomType.Parameter("customSecurityGroupId") @Nullable String customSecurityGroupId,
+        @CustomType.Parameter("defaultOu") @Nullable String defaultOu,
+        @CustomType.Parameter("enableInternetAccess") @Nullable Boolean enableInternetAccess,
+        @CustomType.Parameter("enableMaintenanceMode") @Nullable Boolean enableMaintenanceMode,
+        @CustomType.Parameter("userEnabledAsLocalAdministrator") @Nullable Boolean userEnabledAsLocalAdministrator) {
         this.customSecurityGroupId = customSecurityGroupId;
         this.defaultOu = defaultOu;
         this.enableInternetAccess = enableInternetAccess;

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datalakestore.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirewallRuleResponse {
     /**
      * The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
@@ -35,13 +35,13 @@ public final class FirewallRuleResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallRuleResponse(
-        @OutputCustomType.Parameter("endIpAddress") String endIpAddress,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("startIpAddress") String startIpAddress,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("endIpAddress") String endIpAddress,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("startIpAddress") String startIpAddress,
+        @CustomType.Parameter("type") String type) {
         this.endIpAddress = endIpAddress;
         this.id = id;
         this.name = name;

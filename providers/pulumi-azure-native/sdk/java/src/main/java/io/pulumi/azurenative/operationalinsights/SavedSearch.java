@@ -8,7 +8,7 @@ import io.pulumi.azurenative.operationalinsights.SavedSearchArgs;
 import io.pulumi.azurenative.operationalinsights.outputs.TagResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * The category of the saved search. This helps the user to find a saved search faster.
      * 
      */
-    @OutputExport(name="category", type=String.class, parameters={})
+    @Export(name="category", type=String.class, parameters={})
     private Output<String> category;
 
     /**
@@ -50,7 +50,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * Saved search display name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -64,7 +64,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * The ETag of the saved search. To override an existing saved search, use "*" or specify the current Etag
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -78,7 +78,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * The function alias if query serves as a function.
      * 
      */
-    @OutputExport(name="functionAlias", type=String.class, parameters={})
+    @Export(name="functionAlias", type=String.class, parameters={})
     private Output</* @Nullable */ String> functionAlias;
 
     /**
@@ -92,7 +92,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * The optional function parameters if query serves as a function. Value should be in the following format: 'param-name1:type1 = default_value1, param-name2:type2 = default_value2'. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
      * 
      */
-    @OutputExport(name="functionParameters", type=String.class, parameters={})
+    @Export(name="functionParameters", type=String.class, parameters={})
     private Output</* @Nullable */ String> functionParameters;
 
     /**
@@ -106,7 +106,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * The query expression for the saved search.
      * 
      */
-    @OutputExport(name="query", type=String.class, parameters={})
+    @Export(name="query", type=String.class, parameters={})
     private Output<String> query;
 
     /**
@@ -134,7 +134,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * The tags attached to the saved search.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={TagResponse.class})
+    @Export(name="tags", type=List.class, parameters={TagResponse.class})
     private Output</* @Nullable */ List<TagResponse>> tags;
 
     /**
@@ -148,7 +148,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -162,7 +162,7 @@ public class SavedSearch extends io.pulumi.resources.CustomResource {
      * The version number of the query language. The current version is 2 and is the default.
      * 
      */
-    @OutputExport(name="version", type=Double.class, parameters={})
+    @Export(name="version", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> version;
 
     /**

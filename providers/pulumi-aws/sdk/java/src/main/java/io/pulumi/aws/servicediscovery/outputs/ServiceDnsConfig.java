@@ -4,14 +4,14 @@
 package io.pulumi.aws.servicediscovery.outputs;
 
 import io.pulumi.aws.servicediscovery.outputs.ServiceDnsConfigDnsRecord;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceDnsConfig {
     /**
      * An array that contains one DnsRecord object for each resource record set.
@@ -29,11 +29,11 @@ public final class ServiceDnsConfig {
      */
     private final @Nullable String routingPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceDnsConfig(
-        @OutputCustomType.Parameter("dnsRecords") List<ServiceDnsConfigDnsRecord> dnsRecords,
-        @OutputCustomType.Parameter("namespaceId") String namespaceId,
-        @OutputCustomType.Parameter("routingPolicy") @Nullable String routingPolicy) {
+        @CustomType.Parameter("dnsRecords") List<ServiceDnsConfigDnsRecord> dnsRecords,
+        @CustomType.Parameter("namespaceId") String namespaceId,
+        @CustomType.Parameter("routingPolicy") @Nullable String routingPolicy) {
         this.dnsRecords = dnsRecords;
         this.namespaceId = namespaceId;
         this.routingPolicy = routingPolicy;

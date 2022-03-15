@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.KerberosConfigResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HiveMetastoreConfigResponse {
     /**
      * A mapping of Hive metastore version to the auxiliary version configuration. When specified, a secondary Hive metastore service is created along with the primary service. All auxiliary versions must be less than the service's primary version. The key is the auxiliary service name and it must match the regular expression a-z?. This means that the first character must be a lowercase letter, and all the following characters must be hyphens, lowercase letters, or digits, except the last character, which cannot be a hyphen.
@@ -37,13 +37,13 @@ public final class HiveMetastoreConfigResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HiveMetastoreConfigResponse(
-        @OutputCustomType.Parameter("auxiliaryVersions") Map<String,String> auxiliaryVersions,
-        @OutputCustomType.Parameter("configOverrides") Map<String,String> configOverrides,
-        @OutputCustomType.Parameter("endpointProtocol") String endpointProtocol,
-        @OutputCustomType.Parameter("kerberosConfig") KerberosConfigResponse kerberosConfig,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("auxiliaryVersions") Map<String,String> auxiliaryVersions,
+        @CustomType.Parameter("configOverrides") Map<String,String> configOverrides,
+        @CustomType.Parameter("endpointProtocol") String endpointProtocol,
+        @CustomType.Parameter("kerberosConfig") KerberosConfigResponse kerberosConfig,
+        @CustomType.Parameter("version") String version) {
         this.auxiliaryVersions = auxiliaryVersions;
         this.configOverrides = configOverrides;
         this.endpointProtocol = endpointProtocol;

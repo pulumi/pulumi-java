@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.NetworkInterfaceIPConfigurationResp
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -38,7 +38,7 @@ public class InboundNatRule extends io.pulumi.resources.CustomResource {
      * A reference to a private IP address defined on a network interface of a VM. Traffic sent to the frontend port of each of the frontend IP configurations is forwarded to the backend IP.
      * 
      */
-    @OutputExport(name="backendIPConfiguration", type=NetworkInterfaceIPConfigurationResponse.class, parameters={})
+    @Export(name="backendIPConfiguration", type=NetworkInterfaceIPConfigurationResponse.class, parameters={})
     private Output<NetworkInterfaceIPConfigurationResponse> backendIPConfiguration;
 
     /**
@@ -52,7 +52,7 @@ public class InboundNatRule extends io.pulumi.resources.CustomResource {
      * The port used for the internal endpoint. Acceptable values range from 1 to 65535.
      * 
      */
-    @OutputExport(name="backendPort", type=Integer.class, parameters={})
+    @Export(name="backendPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> backendPort;
 
     /**
@@ -66,7 +66,7 @@ public class InboundNatRule extends io.pulumi.resources.CustomResource {
      * Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
      * 
      */
-    @OutputExport(name="enableFloatingIP", type=Boolean.class, parameters={})
+    @Export(name="enableFloatingIP", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableFloatingIP;
 
     /**
@@ -80,7 +80,7 @@ public class InboundNatRule extends io.pulumi.resources.CustomResource {
      * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
      * 
      */
-    @OutputExport(name="enableTcpReset", type=Boolean.class, parameters={})
+    @Export(name="enableTcpReset", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableTcpReset;
 
     /**
@@ -94,7 +94,7 @@ public class InboundNatRule extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -108,7 +108,7 @@ public class InboundNatRule extends io.pulumi.resources.CustomResource {
      * A reference to frontend IP addresses.
      * 
      */
-    @OutputExport(name="frontendIPConfiguration", type=SubResourceResponse.class, parameters={})
+    @Export(name="frontendIPConfiguration", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> frontendIPConfiguration;
 
     /**
@@ -122,7 +122,7 @@ public class InboundNatRule extends io.pulumi.resources.CustomResource {
      * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values range from 1 to 65534.
      * 
      */
-    @OutputExport(name="frontendPort", type=Integer.class, parameters={})
+    @Export(name="frontendPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> frontendPort;
 
     /**
@@ -136,7 +136,7 @@ public class InboundNatRule extends io.pulumi.resources.CustomResource {
      * The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
      * 
      */
-    @OutputExport(name="idleTimeoutInMinutes", type=Integer.class, parameters={})
+    @Export(name="idleTimeoutInMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> idleTimeoutInMinutes;
 
     /**
@@ -150,7 +150,7 @@ public class InboundNatRule extends io.pulumi.resources.CustomResource {
      * The name of the resource that is unique within the set of inbound NAT rules used by the load balancer. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -164,7 +164,7 @@ public class InboundNatRule extends io.pulumi.resources.CustomResource {
      * The reference to the transport protocol used by the load balancing rule.
      * 
      */
-    @OutputExport(name="protocol", type=String.class, parameters={})
+    @Export(name="protocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> protocol;
 
     /**
@@ -178,7 +178,7 @@ public class InboundNatRule extends io.pulumi.resources.CustomResource {
      * The provisioning state of the inbound NAT rule resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -192,7 +192,7 @@ public class InboundNatRule extends io.pulumi.resources.CustomResource {
      * Type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

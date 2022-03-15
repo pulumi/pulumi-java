@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetTestResultVideoDownloadURLArgs extends io.pulumi.resources
      * The resource name of the Test Base Package.
      * 
      */
-    @InputImport(name="packageName", required=true)
+    @Import(name="packageName", required=true)
       private final String packageName;
 
     public String getPackageName() {
@@ -27,7 +27,7 @@ public final class GetTestResultVideoDownloadURLArgs extends io.pulumi.resources
      * The name of the resource group that contains the resource.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetTestResultVideoDownloadURLArgs extends io.pulumi.resources
      * The resource name of the Test Base Account.
      * 
      */
-    @InputImport(name="testBaseAccountName", required=true)
+    @Import(name="testBaseAccountName", required=true)
       private final String testBaseAccountName;
 
     public String getTestBaseAccountName() {
@@ -49,7 +49,7 @@ public final class GetTestResultVideoDownloadURLArgs extends io.pulumi.resources
      * The Test Result Name. It equals to {osName}-{TestResultId} string.
      * 
      */
-    @InputImport(name="testResultName", required=true)
+    @Import(name="testResultName", required=true)
       private final String testResultName;
 
     public String getTestResultName() {

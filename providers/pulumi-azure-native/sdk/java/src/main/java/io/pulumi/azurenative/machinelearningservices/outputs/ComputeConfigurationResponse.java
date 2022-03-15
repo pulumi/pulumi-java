@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComputeConfigurationResponse {
     /**
      * Number of instances or nodes.
@@ -45,14 +45,14 @@ public final class ComputeConfigurationResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComputeConfigurationResponse(
-        @OutputCustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
-        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
-        @OutputCustomType.Parameter("isLocal") @Nullable Boolean isLocal,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("target") @Nullable String target) {
+        @CustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
+        @CustomType.Parameter("instanceType") @Nullable String instanceType,
+        @CustomType.Parameter("isLocal") @Nullable Boolean isLocal,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("target") @Nullable String target) {
         this.instanceCount = instanceCount;
         this.instanceType = instanceType;
         this.isLocal = isLocal;

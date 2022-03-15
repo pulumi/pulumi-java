@@ -11,7 +11,7 @@ import io.pulumi.awsnative.datasync.outputs.TaskOptions;
 import io.pulumi.awsnative.datasync.outputs.TaskSchedule;
 import io.pulumi.awsnative.datasync.outputs.TaskTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The ARN of the Amazon CloudWatch log group that is used to monitor and log events in the task.
      * 
      */
-    @OutputExport(name="cloudWatchLogGroupArn", type=String.class, parameters={})
+    @Export(name="cloudWatchLogGroupArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudWatchLogGroupArn;
 
     /**
@@ -43,7 +43,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The ARN of an AWS storage resource's location.
      * 
      */
-    @OutputExport(name="destinationLocationArn", type=String.class, parameters={})
+    @Export(name="destinationLocationArn", type=String.class, parameters={})
     private Output<String> destinationLocationArn;
 
     /**
@@ -53,7 +53,7 @@ public class Task extends io.pulumi.resources.CustomResource {
     public Output<String> getDestinationLocationArn() {
         return this.destinationLocationArn;
     }
-    @OutputExport(name="destinationNetworkInterfaceArns", type=List.class, parameters={String.class})
+    @Export(name="destinationNetworkInterfaceArns", type=List.class, parameters={String.class})
     private Output<List<String>> destinationNetworkInterfaceArns;
 
     public Output<List<String>> getDestinationNetworkInterfaceArns() {
@@ -63,7 +63,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * Errors that AWS DataSync encountered during execution of the task. You can use this error code to help troubleshoot issues.
      * 
      */
-    @OutputExport(name="errorCode", type=String.class, parameters={})
+    @Export(name="errorCode", type=String.class, parameters={})
     private Output<String> errorCode;
 
     /**
@@ -77,7 +77,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * Detailed description of an error that was encountered during the task execution.
      * 
      */
-    @OutputExport(name="errorDetail", type=String.class, parameters={})
+    @Export(name="errorDetail", type=String.class, parameters={})
     private Output<String> errorDetail;
 
     /**
@@ -87,13 +87,13 @@ public class Task extends io.pulumi.resources.CustomResource {
     public Output<String> getErrorDetail() {
         return this.errorDetail;
     }
-    @OutputExport(name="excludes", type=List.class, parameters={TaskFilterRule.class})
+    @Export(name="excludes", type=List.class, parameters={TaskFilterRule.class})
     private Output</* @Nullable */ List<TaskFilterRule>> excludes;
 
     public Output</* @Nullable */ List<TaskFilterRule>> getExcludes() {
         return this.excludes;
     }
-    @OutputExport(name="includes", type=List.class, parameters={TaskFilterRule.class})
+    @Export(name="includes", type=List.class, parameters={TaskFilterRule.class})
     private Output</* @Nullable */ List<TaskFilterRule>> includes;
 
     public Output</* @Nullable */ List<TaskFilterRule>> getIncludes() {
@@ -103,7 +103,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The name of a task. This value is a text reference that is used to identify the task in the console.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -113,13 +113,13 @@ public class Task extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    @OutputExport(name="options", type=TaskOptions.class, parameters={})
+    @Export(name="options", type=TaskOptions.class, parameters={})
     private Output</* @Nullable */ TaskOptions> options;
 
     public Output</* @Nullable */ TaskOptions> getOptions() {
         return this.options;
     }
-    @OutputExport(name="schedule", type=TaskSchedule.class, parameters={})
+    @Export(name="schedule", type=TaskSchedule.class, parameters={})
     private Output</* @Nullable */ TaskSchedule> schedule;
 
     public Output</* @Nullable */ TaskSchedule> getSchedule() {
@@ -129,7 +129,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The ARN of the source location for the task.
      * 
      */
-    @OutputExport(name="sourceLocationArn", type=String.class, parameters={})
+    @Export(name="sourceLocationArn", type=String.class, parameters={})
     private Output<String> sourceLocationArn;
 
     /**
@@ -139,7 +139,7 @@ public class Task extends io.pulumi.resources.CustomResource {
     public Output<String> getSourceLocationArn() {
         return this.sourceLocationArn;
     }
-    @OutputExport(name="sourceNetworkInterfaceArns", type=List.class, parameters={String.class})
+    @Export(name="sourceNetworkInterfaceArns", type=List.class, parameters={String.class})
     private Output<List<String>> sourceNetworkInterfaceArns;
 
     public Output<List<String>> getSourceNetworkInterfaceArns() {
@@ -149,7 +149,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The status of the task that was described.
      * 
      */
-    @OutputExport(name="status", type=TaskStatus.class, parameters={})
+    @Export(name="status", type=TaskStatus.class, parameters={})
     private Output<TaskStatus> status;
 
     /**
@@ -163,7 +163,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={TaskTag.class})
+    @Export(name="tags", type=List.class, parameters={TaskTag.class})
     private Output</* @Nullable */ List<TaskTag>> tags;
 
     /**
@@ -177,7 +177,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * The ARN of the task.
      * 
      */
-    @OutputExport(name="taskArn", type=String.class, parameters={})
+    @Export(name="taskArn", type=String.class, parameters={})
     private Output<String> taskArn;
 
     /**

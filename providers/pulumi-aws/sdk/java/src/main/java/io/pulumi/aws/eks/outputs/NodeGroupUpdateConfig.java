@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodeGroupUpdateConfig {
     /**
      * Desired max number of unavailable worker nodes during node group update.
@@ -22,10 +22,10 @@ public final class NodeGroupUpdateConfig {
      */
     private final @Nullable Integer maxUnavailablePercentage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeGroupUpdateConfig(
-        @OutputCustomType.Parameter("maxUnavailable") @Nullable Integer maxUnavailable,
-        @OutputCustomType.Parameter("maxUnavailablePercentage") @Nullable Integer maxUnavailablePercentage) {
+        @CustomType.Parameter("maxUnavailable") @Nullable Integer maxUnavailable,
+        @CustomType.Parameter("maxUnavailablePercentage") @Nullable Integer maxUnavailablePercentage) {
         this.maxUnavailable = maxUnavailable;
         this.maxUnavailablePercentage = maxUnavailablePercentage;
     }

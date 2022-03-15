@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSetIngestionWaitPolicy {
     /**
      * <p>The maximum time (in hours) to wait for Ingestion to complete. Default timeout is 36 hours.
@@ -25,10 +25,10 @@ public final class DataSetIngestionWaitPolicy {
      */
     private final @Nullable Boolean waitForSpiceIngestion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSetIngestionWaitPolicy(
-        @OutputCustomType.Parameter("ingestionWaitTimeInHours") @Nullable Double ingestionWaitTimeInHours,
-        @OutputCustomType.Parameter("waitForSpiceIngestion") @Nullable Boolean waitForSpiceIngestion) {
+        @CustomType.Parameter("ingestionWaitTimeInHours") @Nullable Double ingestionWaitTimeInHours,
+        @CustomType.Parameter("waitForSpiceIngestion") @Nullable Boolean waitForSpiceIngestion) {
         this.ingestionWaitTimeInHours = ingestionWaitTimeInHours;
         this.waitForSpiceIngestion = waitForSpiceIngestion;
     }

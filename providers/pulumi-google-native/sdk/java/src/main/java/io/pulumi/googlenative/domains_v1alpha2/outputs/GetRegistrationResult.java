@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1alpha2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.domains_v1alpha2.outputs.ContactSettingsResponse;
 import io.pulumi.googlenative.domains_v1alpha2.outputs.DnsSettingsResponse;
 import io.pulumi.googlenative.domains_v1alpha2.outputs.ManagementSettingsResponse;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRegistrationResult {
     /**
      * Settings for contact information linked to the `Registration`. You cannot update these with the `UpdateRegistration` method. To update these settings, use the `ConfigureContactSettings` method.
@@ -75,20 +75,20 @@ public final class GetRegistrationResult {
      */
     private final List<String> supportedPrivacy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegistrationResult(
-        @OutputCustomType.Parameter("contactSettings") ContactSettingsResponse contactSettings,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("dnsSettings") DnsSettingsResponse dnsSettings,
-        @OutputCustomType.Parameter("domainName") String domainName,
-        @OutputCustomType.Parameter("expireTime") String expireTime,
-        @OutputCustomType.Parameter("issues") List<String> issues,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("managementSettings") ManagementSettingsResponse managementSettings,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pendingContactSettings") ContactSettingsResponse pendingContactSettings,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("supportedPrivacy") List<String> supportedPrivacy) {
+        @CustomType.Parameter("contactSettings") ContactSettingsResponse contactSettings,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("dnsSettings") DnsSettingsResponse dnsSettings,
+        @CustomType.Parameter("domainName") String domainName,
+        @CustomType.Parameter("expireTime") String expireTime,
+        @CustomType.Parameter("issues") List<String> issues,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("managementSettings") ManagementSettingsResponse managementSettings,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pendingContactSettings") ContactSettingsResponse pendingContactSettings,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("supportedPrivacy") List<String> supportedPrivacy) {
         this.contactSettings = contactSettings;
         this.createTime = createTime;
         this.dnsSettings = dnsSettings;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CxAgentSpeechToTextSettingsGetArgs extends io.pulumi.resource
      * Whether to use speech adaptation for speech recognition.
      * 
      */
-    @InputImport(name="enableSpeechAdaptation")
+    @Import(name="enableSpeechAdaptation")
       private final @Nullable Output<Boolean> enableSpeechAdaptation;
 
     public Output<Boolean> getEnableSpeechAdaptation() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.KeyVaultCertificateSourceParametersResponseVault;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
      * Defines the source of the SSL certificate
      * 
      */
-    @InputImport(name="certificateSource", required=true)
+    @Import(name="certificateSource", required=true)
       private final String certificateSource;
 
     public String getCertificateSource() {
@@ -34,7 +34,7 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
      * Defines the type of the certificate used for secure connections to a frontendEndpoint
      * 
      */
-    @InputImport(name="certificateType")
+    @Import(name="certificateType")
       private final @Nullable String certificateType;
 
     public Optional<String> getCertificateType() {
@@ -45,7 +45,7 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
      * The minimum TLS version required from the clients to establish an SSL handshake with Front Door.
      * 
      */
-    @InputImport(name="minimumTlsVersion", required=true)
+    @Import(name="minimumTlsVersion", required=true)
       private final String minimumTlsVersion;
 
     public String getMinimumTlsVersion() {
@@ -56,7 +56,7 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
      * Defines the TLS extension protocol that is used for secure delivery
      * 
      */
-    @InputImport(name="protocolType", required=true)
+    @Import(name="protocolType", required=true)
       private final String protocolType;
 
     public String getProtocolType() {
@@ -67,7 +67,7 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
      * The name of the Key Vault secret representing the full certificate PFX
      * 
      */
-    @InputImport(name="secretName")
+    @Import(name="secretName")
       private final @Nullable String secretName;
 
     public Optional<String> getSecretName() {
@@ -78,7 +78,7 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
      * The version of the Key Vault secret representing the full certificate PFX
      * 
      */
-    @InputImport(name="secretVersion")
+    @Import(name="secretVersion")
       private final @Nullable String secretVersion;
 
     public Optional<String> getSecretVersion() {
@@ -89,7 +89,7 @@ public final class CustomHttpsConfigurationResponse extends io.pulumi.resources.
      * The Key Vault containing the SSL certificate
      * 
      */
-    @InputImport(name="vault")
+    @Import(name="vault")
       private final @Nullable KeyVaultCertificateSourceParametersResponseVault vault;
 
     public Optional<KeyVaultCertificateSourceParametersResponseVault> getVault() {

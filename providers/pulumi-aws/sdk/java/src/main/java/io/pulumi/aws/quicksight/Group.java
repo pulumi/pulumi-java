@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.quicksight.GroupArgs;
 import io.pulumi.aws.quicksight.inputs.GroupState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of group
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -46,7 +46,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The ID for the AWS account that the group is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.
      * 
      */
-    @OutputExport(name="awsAccountId", type=String.class, parameters={})
+    @Export(name="awsAccountId", type=String.class, parameters={})
     private Output<String> awsAccountId;
 
     /**
@@ -60,7 +60,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * A description for the group.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -74,7 +74,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * A name for the group.
      * 
      */
-    @OutputExport(name="groupName", type=String.class, parameters={})
+    @Export(name="groupName", type=String.class, parameters={})
     private Output<String> groupName;
 
     /**
@@ -88,7 +88,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The namespace. Currently, you should set this to `default`.
      * 
      */
-    @OutputExport(name="namespace", type=String.class, parameters={})
+    @Export(name="namespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> namespace;
 
     /**

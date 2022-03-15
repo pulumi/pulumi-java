@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.enums.CapacityProviderManagedScalingStatus;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,35 +19,35 @@ public final class CapacityProviderManagedScalingArgs extends io.pulumi.resource
 
     public static final CapacityProviderManagedScalingArgs Empty = new CapacityProviderManagedScalingArgs();
 
-    @InputImport(name="instanceWarmupPeriod")
+    @Import(name="instanceWarmupPeriod")
       private final @Nullable Output<Integer> instanceWarmupPeriod;
 
     public Output<Integer> getInstanceWarmupPeriod() {
         return this.instanceWarmupPeriod == null ? Output.empty() : this.instanceWarmupPeriod;
     }
 
-    @InputImport(name="maximumScalingStepSize")
+    @Import(name="maximumScalingStepSize")
       private final @Nullable Output<Integer> maximumScalingStepSize;
 
     public Output<Integer> getMaximumScalingStepSize() {
         return this.maximumScalingStepSize == null ? Output.empty() : this.maximumScalingStepSize;
     }
 
-    @InputImport(name="minimumScalingStepSize")
+    @Import(name="minimumScalingStepSize")
       private final @Nullable Output<Integer> minimumScalingStepSize;
 
     public Output<Integer> getMinimumScalingStepSize() {
         return this.minimumScalingStepSize == null ? Output.empty() : this.minimumScalingStepSize;
     }
 
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<CapacityProviderManagedScalingStatus> status;
 
     public Output<CapacityProviderManagedScalingStatus> getStatus() {
         return this.status == null ? Output.empty() : this.status;
     }
 
-    @InputImport(name="targetCapacity")
+    @Import(name="targetCapacity")
       private final @Nullable Output<Integer> targetCapacity;
 
     public Output<Integer> getTargetCapacity() {

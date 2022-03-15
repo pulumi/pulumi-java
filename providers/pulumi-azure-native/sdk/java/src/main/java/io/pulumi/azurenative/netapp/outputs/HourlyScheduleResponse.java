@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HourlyScheduleResponse {
     /**
      * Indicates which minute snapshot should be taken
@@ -28,11 +28,11 @@ public final class HourlyScheduleResponse {
      */
     private final @Nullable Double usedBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HourlyScheduleResponse(
-        @OutputCustomType.Parameter("minute") @Nullable Integer minute,
-        @OutputCustomType.Parameter("snapshotsToKeep") @Nullable Integer snapshotsToKeep,
-        @OutputCustomType.Parameter("usedBytes") @Nullable Double usedBytes) {
+        @CustomType.Parameter("minute") @Nullable Integer minute,
+        @CustomType.Parameter("snapshotsToKeep") @Nullable Integer snapshotsToKeep,
+        @CustomType.Parameter("usedBytes") @Nullable Double usedBytes) {
         this.minute = minute;
         this.snapshotsToKeep = snapshotsToKeep;
         this.usedBytes = usedBytes;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.addons.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSupportPlanTypeArgs extends io.pulumi.resources.InvokeArgs
      * The Canonical support plan type.
      * 
      */
-    @InputImport(name="planTypeName", required=true)
+    @Import(name="planTypeName", required=true)
       private final String planTypeName;
 
     public String getPlanTypeName() {
@@ -27,7 +27,7 @@ public final class GetSupportPlanTypeArgs extends io.pulumi.resources.InvokeArgs
      * The support plan type. For now the only valid type is "canonical".
      * 
      */
-    @InputImport(name="providerName", required=true)
+    @Import(name="providerName", required=true)
       private final String providerName;
 
     public String getProviderName() {

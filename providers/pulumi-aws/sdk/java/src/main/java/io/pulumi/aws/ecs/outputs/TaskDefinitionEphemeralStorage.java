@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionEphemeralStorage {
     /**
      * The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
@@ -15,8 +15,8 @@ public final class TaskDefinitionEphemeralStorage {
      */
     private final Integer sizeInGib;
 
-    @OutputCustomType.Constructor
-    private TaskDefinitionEphemeralStorage(@OutputCustomType.Parameter("sizeInGib") Integer sizeInGib) {
+    @CustomType.Constructor
+    private TaskDefinitionEphemeralStorage(@CustomType.Parameter("sizeInGib") Integer sizeInGib) {
         this.sizeInGib = sizeInGib;
     }
 

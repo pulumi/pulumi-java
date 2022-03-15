@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.retail_v2beta.outputs.GoogleCloudRetailV2betaIntervalResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2betaPriceInfoPriceRangeResponse {
     /**
      * The inclusive Product.pricing_info.original_price internal of all variant Product having the same Product.primary_product_id.
@@ -20,10 +20,10 @@ public final class GoogleCloudRetailV2betaPriceInfoPriceRangeResponse {
      */
     private final GoogleCloudRetailV2betaIntervalResponse price;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRetailV2betaPriceInfoPriceRangeResponse(
-        @OutputCustomType.Parameter("originalPrice") GoogleCloudRetailV2betaIntervalResponse originalPrice,
-        @OutputCustomType.Parameter("price") GoogleCloudRetailV2betaIntervalResponse price) {
+        @CustomType.Parameter("originalPrice") GoogleCloudRetailV2betaIntervalResponse originalPrice,
+        @CustomType.Parameter("price") GoogleCloudRetailV2betaIntervalResponse price) {
         this.originalPrice = originalPrice;
         this.price = price;
     }

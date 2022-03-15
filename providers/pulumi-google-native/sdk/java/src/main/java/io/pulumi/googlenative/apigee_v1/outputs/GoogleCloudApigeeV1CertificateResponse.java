@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1CertInfoResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1CertificateResponse {
     /**
      * Chain of certificates under this name.
@@ -16,8 +16,8 @@ public final class GoogleCloudApigeeV1CertificateResponse {
      */
     private final List<GoogleCloudApigeeV1CertInfoResponse> certInfo;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudApigeeV1CertificateResponse(@OutputCustomType.Parameter("certInfo") List<GoogleCloudApigeeV1CertInfoResponse> certInfo) {
+    @CustomType.Constructor
+    private GoogleCloudApigeeV1CertificateResponse(@CustomType.Parameter("certInfo") List<GoogleCloudApigeeV1CertInfoResponse> certInfo) {
         this.certInfo = certInfo;
     }
 

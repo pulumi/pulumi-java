@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.inspector.AssessmentTargetArgs;
 import io.pulumi.aws.inspector.inputs.AssessmentTargetState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class AssessmentTarget extends io.pulumi.resources.CustomResource {
      * The target assessment ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -46,7 +46,7 @@ public class AssessmentTarget extends io.pulumi.resources.CustomResource {
      * The name of the assessment target.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -60,7 +60,7 @@ public class AssessmentTarget extends io.pulumi.resources.CustomResource {
      * Inspector Resource Group Amazon Resource Name (ARN) stating tags for instance matching. If not specified, all EC2 instances in the current AWS account and region are included in the assessment target.
      * 
      */
-    @OutputExport(name="resourceGroupArn", type=String.class, parameters={})
+    @Export(name="resourceGroupArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceGroupArn;
 
     /**

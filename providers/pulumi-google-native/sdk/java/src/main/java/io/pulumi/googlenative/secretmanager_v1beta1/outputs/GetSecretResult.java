@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.secretmanager_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.secretmanager_v1beta1.outputs.ReplicationResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSecretResult {
     /**
      * The time at which the Secret was created.
@@ -32,12 +32,12 @@ public final class GetSecretResult {
      */
     private final ReplicationResponse replication;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSecretResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("replication") ReplicationResponse replication) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("replication") ReplicationResponse replication) {
         this.createTime = createTime;
         this.labels = labels;
         this.name = name;

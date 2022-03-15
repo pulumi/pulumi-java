@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointSpekeKeyProvider;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OriginEndpointCmafEncryption {
     /**
      * An optional 128-bit, 16-byte hex value represented by a 32-character string, used in conjunction with the key for encrypting blocks. If you don't specify a value, then MediaPackage creates the constant initialization vector (IV).
@@ -25,11 +25,11 @@ public final class OriginEndpointCmafEncryption {
     private final @Nullable Integer keyRotationIntervalSeconds;
     private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OriginEndpointCmafEncryption(
-        @OutputCustomType.Parameter("constantInitializationVector") @Nullable String constantInitializationVector,
-        @OutputCustomType.Parameter("keyRotationIntervalSeconds") @Nullable Integer keyRotationIntervalSeconds,
-        @OutputCustomType.Parameter("spekeKeyProvider") OriginEndpointSpekeKeyProvider spekeKeyProvider) {
+        @CustomType.Parameter("constantInitializationVector") @Nullable String constantInitializationVector,
+        @CustomType.Parameter("keyRotationIntervalSeconds") @Nullable Integer keyRotationIntervalSeconds,
+        @CustomType.Parameter("spekeKeyProvider") OriginEndpointSpekeKeyProvider spekeKeyProvider) {
         this.constantInitializationVector = constantInitializationVector;
         this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
         this.spekeKeyProvider = spekeKeyProvider;

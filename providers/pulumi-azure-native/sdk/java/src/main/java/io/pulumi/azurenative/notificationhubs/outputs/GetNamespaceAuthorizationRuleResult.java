@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.notificationhubs.outputs;
 
 import io.pulumi.azurenative.notificationhubs.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNamespaceAuthorizationRuleResult {
     /**
      * A string that describes the claim type
@@ -91,23 +91,23 @@ public final class GetNamespaceAuthorizationRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNamespaceAuthorizationRuleResult(
-        @OutputCustomType.Parameter("claimType") String claimType,
-        @OutputCustomType.Parameter("claimValue") String claimValue,
-        @OutputCustomType.Parameter("createdTime") String createdTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("keyName") String keyName,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("modifiedTime") String modifiedTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("primaryKey") String primaryKey,
-        @OutputCustomType.Parameter("revision") Integer revision,
-        @OutputCustomType.Parameter("rights") @Nullable List<String> rights,
-        @OutputCustomType.Parameter("secondaryKey") String secondaryKey,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("claimType") String claimType,
+        @CustomType.Parameter("claimValue") String claimValue,
+        @CustomType.Parameter("createdTime") String createdTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("keyName") String keyName,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("modifiedTime") String modifiedTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("primaryKey") String primaryKey,
+        @CustomType.Parameter("revision") Integer revision,
+        @CustomType.Parameter("rights") @Nullable List<String> rights,
+        @CustomType.Parameter("secondaryKey") String secondaryKey,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.claimType = claimType;
         this.claimValue = claimValue;
         this.createdTime = createdTime;

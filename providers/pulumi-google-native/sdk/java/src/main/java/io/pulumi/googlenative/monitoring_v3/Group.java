@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.monitoring_v3.GroupArgs;
@@ -23,7 +23,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * A user-assigned name for this group, used only for display purposes.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -37,7 +37,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The filter used to determine which monitored resources belong to this group.
      * 
      */
-    @OutputExport(name="filter", type=String.class, parameters={})
+    @Export(name="filter", type=String.class, parameters={})
     private Output<String> filter;
 
     /**
@@ -51,7 +51,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * If true, the members of this group are considered to be a cluster. The system can perform additional analysis on groups that are clusters.
      * 
      */
-    @OutputExport(name="isCluster", type=Boolean.class, parameters={})
+    @Export(name="isCluster", type=Boolean.class, parameters={})
     private Output<Boolean> isCluster;
 
     /**
@@ -65,7 +65,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The name of this group. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] When creating a group, this field is ignored and a new name is created consisting of the project specified in the call to CreateGroup and a unique [GROUP_ID] that is generated automatically.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The name of the group's parent, if it has one. The format is: projects/[PROJECT_ID_OR_NUMBER]/groups/[GROUP_ID] For groups with no parent, parent_name is the empty string, "".
      * 
      */
-    @OutputExport(name="parentName", type=String.class, parameters={})
+    @Export(name="parentName", type=String.class, parameters={})
     private Output<String> parentName;
 
     /**

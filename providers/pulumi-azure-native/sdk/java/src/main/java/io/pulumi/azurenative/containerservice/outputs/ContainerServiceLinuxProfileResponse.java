@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.ContainerServiceSshConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContainerServiceLinuxProfileResponse {
     /**
      * The administrator username to use for Linux VMs.
@@ -21,10 +21,10 @@ public final class ContainerServiceLinuxProfileResponse {
      */
     private final ContainerServiceSshConfigurationResponse ssh;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerServiceLinuxProfileResponse(
-        @OutputCustomType.Parameter("adminUsername") String adminUsername,
-        @OutputCustomType.Parameter("ssh") ContainerServiceSshConfigurationResponse ssh) {
+        @CustomType.Parameter("adminUsername") String adminUsername,
+        @CustomType.Parameter("ssh") ContainerServiceSshConfigurationResponse ssh) {
         this.adminUsername = adminUsername;
         this.ssh = ssh;
     }

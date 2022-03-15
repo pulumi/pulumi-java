@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.outputs.NatGatewayResponse;
 import io.pulumi.azurenative.network.outputs.PublicIPAddressDnsSettingsResponse;
 import io.pulumi.azurenative.network.outputs.PublicIPAddressSkuResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PublicIPAddressResponse {
     /**
      * The DDoS protection custom policy associated with the public IP address.
@@ -143,32 +143,32 @@ public final class PublicIPAddressResponse {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PublicIPAddressResponse(
-        @OutputCustomType.Parameter("ddosSettings") @Nullable DdosSettingsResponse ddosSettings,
-        @OutputCustomType.Parameter("dnsSettings") @Nullable PublicIPAddressDnsSettingsResponse dnsSettings,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("ipConfiguration") IPConfigurationResponse ipConfiguration,
-        @OutputCustomType.Parameter("ipTags") @Nullable List<IpTagResponse> ipTags,
-        @OutputCustomType.Parameter("linkedPublicIPAddress") @Nullable PublicIPAddressResponse linkedPublicIPAddress,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("migrationPhase") @Nullable String migrationPhase,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("natGateway") @Nullable NatGatewayResponse natGateway,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicIPAddressVersion") @Nullable String publicIPAddressVersion,
-        @OutputCustomType.Parameter("publicIPAllocationMethod") @Nullable String publicIPAllocationMethod,
-        @OutputCustomType.Parameter("publicIPPrefix") @Nullable SubResourceResponse publicIPPrefix,
-        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
-        @OutputCustomType.Parameter("servicePublicIPAddress") @Nullable PublicIPAddressResponse servicePublicIPAddress,
-        @OutputCustomType.Parameter("sku") @Nullable PublicIPAddressSkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("ddosSettings") @Nullable DdosSettingsResponse ddosSettings,
+        @CustomType.Parameter("dnsSettings") @Nullable PublicIPAddressDnsSettingsResponse dnsSettings,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("ipConfiguration") IPConfigurationResponse ipConfiguration,
+        @CustomType.Parameter("ipTags") @Nullable List<IpTagResponse> ipTags,
+        @CustomType.Parameter("linkedPublicIPAddress") @Nullable PublicIPAddressResponse linkedPublicIPAddress,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("migrationPhase") @Nullable String migrationPhase,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("natGateway") @Nullable NatGatewayResponse natGateway,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicIPAddressVersion") @Nullable String publicIPAddressVersion,
+        @CustomType.Parameter("publicIPAllocationMethod") @Nullable String publicIPAllocationMethod,
+        @CustomType.Parameter("publicIPPrefix") @Nullable SubResourceResponse publicIPPrefix,
+        @CustomType.Parameter("resourceGuid") String resourceGuid,
+        @CustomType.Parameter("servicePublicIPAddress") @Nullable PublicIPAddressResponse servicePublicIPAddress,
+        @CustomType.Parameter("sku") @Nullable PublicIPAddressSkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.ddosSettings = ddosSettings;
         this.dnsSettings = dnsSettings;
         this.etag = etag;

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ActionResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2BigQueryTableResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2PrivacyMetricResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse {
     /**
      * Actions to execute at the completion of the job. Are executed in the order provided.
@@ -28,11 +28,11 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse {
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse sourceTable;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2RiskAnalysisJobConfigResponse(
-        @OutputCustomType.Parameter("actions") List<GooglePrivacyDlpV2ActionResponse> actions,
-        @OutputCustomType.Parameter("privacyMetric") GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric,
-        @OutputCustomType.Parameter("sourceTable") GooglePrivacyDlpV2BigQueryTableResponse sourceTable) {
+        @CustomType.Parameter("actions") List<GooglePrivacyDlpV2ActionResponse> actions,
+        @CustomType.Parameter("privacyMetric") GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric,
+        @CustomType.Parameter("sourceTable") GooglePrivacyDlpV2BigQueryTableResponse sourceTable) {
         this.actions = actions;
         this.privacyMetric = privacyMetric;
         this.sourceTable = sourceTable;

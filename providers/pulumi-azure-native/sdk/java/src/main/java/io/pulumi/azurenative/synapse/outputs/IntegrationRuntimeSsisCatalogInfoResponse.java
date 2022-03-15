@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.SecureStringResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationRuntimeSsisCatalogInfoResponse {
     /**
      * The password of the administrator user account of the catalog database.
@@ -33,12 +33,12 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse {
      */
     private final @Nullable String catalogServerEndpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationRuntimeSsisCatalogInfoResponse(
-        @OutputCustomType.Parameter("catalogAdminPassword") @Nullable SecureStringResponse catalogAdminPassword,
-        @OutputCustomType.Parameter("catalogAdminUserName") @Nullable String catalogAdminUserName,
-        @OutputCustomType.Parameter("catalogPricingTier") @Nullable String catalogPricingTier,
-        @OutputCustomType.Parameter("catalogServerEndpoint") @Nullable String catalogServerEndpoint) {
+        @CustomType.Parameter("catalogAdminPassword") @Nullable SecureStringResponse catalogAdminPassword,
+        @CustomType.Parameter("catalogAdminUserName") @Nullable String catalogAdminUserName,
+        @CustomType.Parameter("catalogPricingTier") @Nullable String catalogPricingTier,
+        @CustomType.Parameter("catalogServerEndpoint") @Nullable String catalogServerEndpoint) {
         this.catalogAdminPassword = catalogAdminPassword;
         this.catalogAdminUserName = catalogAdminUserName;
         this.catalogPricingTier = catalogPricingTier;

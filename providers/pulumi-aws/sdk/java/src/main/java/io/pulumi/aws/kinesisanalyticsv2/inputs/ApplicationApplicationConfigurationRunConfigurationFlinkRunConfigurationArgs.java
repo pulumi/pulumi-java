@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationFlinkRunCo
      * When restoring from a snapshot, specifies whether the runtime is allowed to skip a state that cannot be mapped to the new program. Default is `false`.
      * 
      */
-    @InputImport(name="allowNonRestoredState")
+    @Import(name="allowNonRestoredState")
       private final @Nullable Output<Boolean> allowNonRestoredState;
 
     public Output<Boolean> getAllowNonRestoredState() {

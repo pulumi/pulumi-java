@@ -4,12 +4,12 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecLoggingAccessLogFile;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualGatewaySpecLoggingAccessLog {
     /**
      * The file object to send virtual gateway access logs to.
@@ -17,8 +17,8 @@ public final class VirtualGatewaySpecLoggingAccessLog {
      */
     private final @Nullable VirtualGatewaySpecLoggingAccessLogFile file;
 
-    @OutputCustomType.Constructor
-    private VirtualGatewaySpecLoggingAccessLog(@OutputCustomType.Parameter("file") @Nullable VirtualGatewaySpecLoggingAccessLogFile file) {
+    @CustomType.Constructor
+    private VirtualGatewaySpecLoggingAccessLog(@CustomType.Parameter("file") @Nullable VirtualGatewaySpecLoggingAccessLogFile file) {
         this.file = file;
     }
 

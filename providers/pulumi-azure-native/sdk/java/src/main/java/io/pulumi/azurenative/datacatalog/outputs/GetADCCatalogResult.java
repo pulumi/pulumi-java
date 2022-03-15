@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datacatalog.outputs;
 
 import io.pulumi.azurenative.datacatalog.outputs.PrincipalsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetADCCatalogResult {
     /**
      * Azure data catalog admin list.
@@ -77,20 +77,20 @@ public final class GetADCCatalogResult {
      */
     private final @Nullable List<PrincipalsResponse> users;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetADCCatalogResult(
-        @OutputCustomType.Parameter("admins") @Nullable List<PrincipalsResponse> admins,
-        @OutputCustomType.Parameter("enableAutomaticUnitAdjustment") @Nullable Boolean enableAutomaticUnitAdjustment,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sku") @Nullable String sku,
-        @OutputCustomType.Parameter("successfullyProvisioned") @Nullable Boolean successfullyProvisioned,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("units") @Nullable Integer units,
-        @OutputCustomType.Parameter("users") @Nullable List<PrincipalsResponse> users) {
+        @CustomType.Parameter("admins") @Nullable List<PrincipalsResponse> admins,
+        @CustomType.Parameter("enableAutomaticUnitAdjustment") @Nullable Boolean enableAutomaticUnitAdjustment,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sku") @Nullable String sku,
+        @CustomType.Parameter("successfullyProvisioned") @Nullable Boolean successfullyProvisioned,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("units") @Nullable Integer units,
+        @CustomType.Parameter("users") @Nullable List<PrincipalsResponse> users) {
         this.admins = admins;
         this.enableAutomaticUnitAdjustment = enableAutomaticUnitAdjustment;
         this.etag = etag;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.enums.TargetServerProtocol;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1TlsInfoArgs;
 import java.lang.Boolean;
@@ -22,14 +22,14 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. A human-readable description of this TargetServer.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="environmentId", required=true)
+    @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
@@ -40,7 +40,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * The host name this target connects to. Value must be a valid hostname as described by RFC-1123.
      * 
      */
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final Output<String> host;
 
     public Output<String> getHost() {
@@ -51,7 +51,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Enabling/disabling a TargetServer is useful when TargetServers are used in load balancing configurations, and one or more TargetServers need to taken out of rotation periodically. Defaults to true.
      * 
      */
-    @InputImport(name="isEnabled")
+    @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -62,14 +62,14 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * The resource id of this target server. Values must match the regular expression
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
     public Output<String> getOrganizationId() {
@@ -80,7 +80,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * The port number this target connects to on the given host. Value must be between 1 and 65535, inclusive.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -91,7 +91,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The protocol used by this TargetServer.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<TargetServerProtocol> protocol;
 
     public Output<TargetServerProtocol> getProtocol() {
@@ -102,7 +102,7 @@ public final class TargetServerArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Specifies TLS configuration info for this TargetServer. The JSON name is `sSLInfo` for legacy/backwards compatibility reasons -- Edge originally supported SSL, and the name is still used for TLS configuration.
      * 
      */
-    @InputImport(name="sSLInfo")
+    @Import(name="sSLInfo")
       private final @Nullable Output<GoogleCloudApigeeV1TlsInfoArgs> sSLInfo;
 
     public Output<GoogleCloudApigeeV1TlsInfoArgs> getSSLInfo() {

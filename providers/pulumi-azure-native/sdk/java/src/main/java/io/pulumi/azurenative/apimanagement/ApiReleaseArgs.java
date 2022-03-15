@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier of the API the release belongs to.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -29,7 +29,7 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Release Notes
      * 
      */
-    @InputImport(name="notes")
+    @Import(name="notes")
       private final @Nullable Output<String> notes;
 
     public Output<String> getNotes() {
@@ -40,7 +40,7 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Release identifier within an API. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="releaseId")
+    @Import(name="releaseId")
       private final @Nullable Output<String> releaseId;
 
     public Output<String> getReleaseId() {
@@ -51,7 +51,7 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -62,7 +62,7 @@ public final class ApiReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {

@@ -5,13 +5,13 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayHeaderConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayUrlConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayRewriteRuleActionSetResponse {
     /**
      * Request Header Actions in the Action Set.
@@ -29,11 +29,11 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse {
      */
     private final @Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayRewriteRuleActionSetResponse(
-        @OutputCustomType.Parameter("requestHeaderConfigurations") @Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations,
-        @OutputCustomType.Parameter("responseHeaderConfigurations") @Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations,
-        @OutputCustomType.Parameter("urlConfiguration") @Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration) {
+        @CustomType.Parameter("requestHeaderConfigurations") @Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations,
+        @CustomType.Parameter("responseHeaderConfigurations") @Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations,
+        @CustomType.Parameter("urlConfiguration") @Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration) {
         this.requestHeaderConfigurations = requestHeaderConfigurations;
         this.responseHeaderConfigurations = responseHeaderConfigurations;
         this.urlConfiguration = urlConfiguration;

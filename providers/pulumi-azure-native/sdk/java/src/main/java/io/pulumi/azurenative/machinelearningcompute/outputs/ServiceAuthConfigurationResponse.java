@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceAuthConfigurationResponse {
     /**
      * The primary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.
@@ -20,10 +20,10 @@ public final class ServiceAuthConfigurationResponse {
      */
     private final String secondaryAuthKeyHash;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceAuthConfigurationResponse(
-        @OutputCustomType.Parameter("primaryAuthKeyHash") String primaryAuthKeyHash,
-        @OutputCustomType.Parameter("secondaryAuthKeyHash") String secondaryAuthKeyHash) {
+        @CustomType.Parameter("primaryAuthKeyHash") String primaryAuthKeyHash,
+        @CustomType.Parameter("secondaryAuthKeyHash") String secondaryAuthKeyHash) {
         this.primaryAuthKeyHash = primaryAuthKeyHash;
         this.secondaryAuthKeyHash = secondaryAuthKeyHash;
     }

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ComplianceVersionResponse {
     /**
      * The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.
@@ -20,10 +20,10 @@ public final class ComplianceVersionResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComplianceVersionResponse(
-        @OutputCustomType.Parameter("cpeUri") String cpeUri,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("cpeUri") String cpeUri,
+        @CustomType.Parameter("version") String version) {
         this.cpeUri = cpeUri;
         this.version = version;
     }

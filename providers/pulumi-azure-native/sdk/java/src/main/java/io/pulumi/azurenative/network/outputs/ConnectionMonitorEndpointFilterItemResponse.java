@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionMonitorEndpointFilterItemResponse {
     /**
      * The address of the filter item.
@@ -22,10 +22,10 @@ public final class ConnectionMonitorEndpointFilterItemResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionMonitorEndpointFilterItemResponse(
-        @OutputCustomType.Parameter("address") @Nullable String address,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("address") @Nullable String address,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.address = address;
         this.type = type;
     }

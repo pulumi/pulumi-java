@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.outputs.StreamingLocatorContentKeyResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * Alternative Media ID of this Streaming Locator
      * 
      */
-    @OutputExport(name="alternativeMediaId", type=String.class, parameters={})
+    @Export(name="alternativeMediaId", type=String.class, parameters={})
     private Output</* @Nullable */ String> alternativeMediaId;
 
     /**
@@ -50,7 +50,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * Asset Name
      * 
      */
-    @OutputExport(name="assetName", type=String.class, parameters={})
+    @Export(name="assetName", type=String.class, parameters={})
     private Output<String> assetName;
 
     /**
@@ -64,7 +64,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * The ContentKeys used by this Streaming Locator.
      * 
      */
-    @OutputExport(name="contentKeys", type=List.class, parameters={StreamingLocatorContentKeyResponse.class})
+    @Export(name="contentKeys", type=List.class, parameters={StreamingLocatorContentKeyResponse.class})
     private Output</* @Nullable */ List<StreamingLocatorContentKeyResponse>> contentKeys;
 
     /**
@@ -78,7 +78,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * The creation time of the Streaming Locator.
      * 
      */
-    @OutputExport(name="created", type=String.class, parameters={})
+    @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
@@ -92,7 +92,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * Name of the default ContentKeyPolicy used by this Streaming Locator.
      * 
      */
-    @OutputExport(name="defaultContentKeyPolicyName", type=String.class, parameters={})
+    @Export(name="defaultContentKeyPolicyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultContentKeyPolicyName;
 
     /**
@@ -106,7 +106,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * The end time of the Streaming Locator.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> endTime;
 
     /**
@@ -120,7 +120,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * A list of asset or account filters which apply to this streaming locator
      * 
      */
-    @OutputExport(name="filters", type=List.class, parameters={String.class})
+    @Export(name="filters", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> filters;
 
     /**
@@ -134,7 +134,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -148,7 +148,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * The start time of the Streaming Locator.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> startTime;
 
     /**
@@ -162,7 +162,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * The StreamingLocatorId of the Streaming Locator.
      * 
      */
-    @OutputExport(name="streamingLocatorId", type=String.class, parameters={})
+    @Export(name="streamingLocatorId", type=String.class, parameters={})
     private Output</* @Nullable */ String> streamingLocatorId;
 
     /**
@@ -176,7 +176,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * Name of the Streaming Policy used by this Streaming Locator. Either specify the name of Streaming Policy you created or use one of the predefined Streaming Policies. The predefined Streaming Policies available are: 'Predefined_DownloadOnly', 'Predefined_ClearStreamingOnly', 'Predefined_DownloadAndClearStreaming', 'Predefined_ClearKey', 'Predefined_MultiDrmCencStreaming' and 'Predefined_MultiDrmStreaming'
      * 
      */
-    @OutputExport(name="streamingPolicyName", type=String.class, parameters={})
+    @Export(name="streamingPolicyName", type=String.class, parameters={})
     private Output<String> streamingPolicyName;
 
     /**
@@ -190,7 +190,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * The system metadata relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -204,7 +204,7 @@ public class StreamingLocator extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

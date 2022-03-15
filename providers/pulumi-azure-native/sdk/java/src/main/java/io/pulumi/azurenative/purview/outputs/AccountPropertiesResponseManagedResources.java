@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.purview.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AccountPropertiesResponseManagedResources {
     /**
      * Gets the managed event hub namespace resource identifier.
@@ -25,11 +25,11 @@ public final class AccountPropertiesResponseManagedResources {
      */
     private final String storageAccount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccountPropertiesResponseManagedResources(
-        @OutputCustomType.Parameter("eventHubNamespace") String eventHubNamespace,
-        @OutputCustomType.Parameter("resourceGroup") String resourceGroup,
-        @OutputCustomType.Parameter("storageAccount") String storageAccount) {
+        @CustomType.Parameter("eventHubNamespace") String eventHubNamespace,
+        @CustomType.Parameter("resourceGroup") String resourceGroup,
+        @CustomType.Parameter("storageAccount") String storageAccount) {
         this.eventHubNamespace = eventHubNamespace;
         this.resourceGroup = resourceGroup;
         this.storageAccount = storageAccount;

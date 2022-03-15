@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apikeys_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class V2ServerKeyRestrictionsResponse {
     /**
      * A list of the caller IP addresses that are allowed to make API calls with this key.
@@ -16,8 +16,8 @@ public final class V2ServerKeyRestrictionsResponse {
      */
     private final List<String> allowedIps;
 
-    @OutputCustomType.Constructor
-    private V2ServerKeyRestrictionsResponse(@OutputCustomType.Parameter("allowedIps") List<String> allowedIps) {
+    @CustomType.Constructor
+    private V2ServerKeyRestrictionsResponse(@CustomType.Parameter("allowedIps") List<String> allowedIps) {
         this.allowedIps = allowedIps;
     }
 

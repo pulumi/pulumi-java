@@ -5,7 +5,7 @@ package io.pulumi.awsnative.backup.outputs;
 
 import io.pulumi.awsnative.backup.outputs.BackupPlanCopyActionResourceType;
 import io.pulumi.awsnative.backup.outputs.BackupPlanLifecycleResourceType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackupPlanBackupRuleResourceType {
     private final @Nullable Double completionWindowMinutes;
     private final @Nullable List<BackupPlanCopyActionResourceType> copyActions;
@@ -27,17 +27,17 @@ public final class BackupPlanBackupRuleResourceType {
     private final @Nullable Double startWindowMinutes;
     private final String targetBackupVault;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackupPlanBackupRuleResourceType(
-        @OutputCustomType.Parameter("completionWindowMinutes") @Nullable Double completionWindowMinutes,
-        @OutputCustomType.Parameter("copyActions") @Nullable List<BackupPlanCopyActionResourceType> copyActions,
-        @OutputCustomType.Parameter("enableContinuousBackup") @Nullable Boolean enableContinuousBackup,
-        @OutputCustomType.Parameter("lifecycle") @Nullable BackupPlanLifecycleResourceType lifecycle,
-        @OutputCustomType.Parameter("recoveryPointTags") @Nullable Object recoveryPointTags,
-        @OutputCustomType.Parameter("ruleName") String ruleName,
-        @OutputCustomType.Parameter("scheduleExpression") @Nullable String scheduleExpression,
-        @OutputCustomType.Parameter("startWindowMinutes") @Nullable Double startWindowMinutes,
-        @OutputCustomType.Parameter("targetBackupVault") String targetBackupVault) {
+        @CustomType.Parameter("completionWindowMinutes") @Nullable Double completionWindowMinutes,
+        @CustomType.Parameter("copyActions") @Nullable List<BackupPlanCopyActionResourceType> copyActions,
+        @CustomType.Parameter("enableContinuousBackup") @Nullable Boolean enableContinuousBackup,
+        @CustomType.Parameter("lifecycle") @Nullable BackupPlanLifecycleResourceType lifecycle,
+        @CustomType.Parameter("recoveryPointTags") @Nullable Object recoveryPointTags,
+        @CustomType.Parameter("ruleName") String ruleName,
+        @CustomType.Parameter("scheduleExpression") @Nullable String scheduleExpression,
+        @CustomType.Parameter("startWindowMinutes") @Nullable Double startWindowMinutes,
+        @CustomType.Parameter("targetBackupVault") String targetBackupVault) {
         this.completionWindowMinutes = completionWindowMinutes;
         this.copyActions = copyActions;
         this.enableContinuousBackup = enableContinuousBackup;

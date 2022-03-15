@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackendServiceLogConfigResponse {
     /**
      * This field denotes whether to enable logging for the load balancer traffic served by this backend service.
@@ -21,10 +21,10 @@ public final class BackendServiceLogConfigResponse {
      */
     private final Double sampleRate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendServiceLogConfigResponse(
-        @OutputCustomType.Parameter("enable") Boolean enable,
-        @OutputCustomType.Parameter("sampleRate") Double sampleRate) {
+        @CustomType.Parameter("enable") Boolean enable,
+        @CustomType.Parameter("sampleRate") Double sampleRate) {
         this.enable = enable;
         this.sampleRate = sampleRate;
     }

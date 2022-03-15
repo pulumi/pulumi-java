@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1DtmfInputResponse {
     /**
      * The dtmf digits.
@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowCxV3beta1DtmfInputResponse {
      */
     private final String finishDigit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1DtmfInputResponse(
-        @OutputCustomType.Parameter("digits") String digits,
-        @OutputCustomType.Parameter("finishDigit") String finishDigit) {
+        @CustomType.Parameter("digits") String digits,
+        @CustomType.Parameter("finishDigit") String finishDigit) {
         this.digits = digits;
         this.finishDigit = finishDigit;
     }

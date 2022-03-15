@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LocationPreferenceResponse {
     /**
      * The App Engine application to follow, it must be in the same region as the Cloud SQL instance. WARNING: Changing this might restart the instance.
@@ -30,12 +30,12 @@ public final class LocationPreferenceResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LocationPreferenceResponse(
-        @OutputCustomType.Parameter("followGaeApplication") String followGaeApplication,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("secondaryZone") String secondaryZone,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("followGaeApplication") String followGaeApplication,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("secondaryZone") String secondaryZone,
+        @CustomType.Parameter("zone") String zone) {
         this.followGaeApplication = followGaeApplication;
         this.kind = kind;
         this.secondaryZone = secondaryZone;

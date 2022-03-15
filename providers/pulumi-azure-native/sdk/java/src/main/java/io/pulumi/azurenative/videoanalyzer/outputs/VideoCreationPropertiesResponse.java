@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VideoCreationPropertiesResponse {
     /**
      * Optional description provided by the user. Value can be up to 2048 characters long.
@@ -32,12 +32,12 @@ public final class VideoCreationPropertiesResponse {
      */
     private final @Nullable String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VideoCreationPropertiesResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("retentionPeriod") @Nullable String retentionPeriod,
-        @OutputCustomType.Parameter("segmentLength") @Nullable String segmentLength,
-        @OutputCustomType.Parameter("title") @Nullable String title) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("retentionPeriod") @Nullable String retentionPeriod,
+        @CustomType.Parameter("segmentLength") @Nullable String segmentLength,
+        @CustomType.Parameter("title") @Nullable String title) {
         this.description = description;
         this.retentionPeriod = retentionPeriod;
         this.segmentLength = segmentLength;

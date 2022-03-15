@@ -10,7 +10,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ReportFilterArgs;
 import io.pulumi.azurenative.costmanagement.inputs.ReportGroupingArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +30,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
      * 
      */
-    @InputImport(name="aggregation")
+    @Import(name="aggregation")
       private final @Nullable Output<Map<String,ReportAggregationArgs>> aggregation;
 
     public Output<Map<String,ReportAggregationArgs>> getAggregation() {
@@ -41,7 +41,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Has configuration information for the data in the report. The configuration will be ignored if aggregation and grouping are provided.
      * 
      */
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable Output<ReportDatasetConfigurationArgs> configuration;
 
     public Output<ReportDatasetConfigurationArgs> getConfiguration() {
@@ -52,7 +52,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Has filter expression to use in the report.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<ReportFilterArgs> filter;
 
     public Output<ReportFilterArgs> getFilter() {
@@ -63,7 +63,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * The granularity of rows in the report.
      * 
      */
-    @InputImport(name="granularity")
+    @Import(name="granularity")
       private final @Nullable Output<Either<String,GranularityType>> granularity;
 
     public Output<Either<String,GranularityType>> getGranularity() {
@@ -74,7 +74,7 @@ public final class ReportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Array of group by expression to use in the report. Report can have up to 2 group by clauses.
      * 
      */
-    @InputImport(name="grouping")
+    @Import(name="grouping")
       private final @Nullable Output<List<ReportGroupingArgs>> grouping;
 
     public Output<List<ReportGroupingArgs>> getGrouping() {

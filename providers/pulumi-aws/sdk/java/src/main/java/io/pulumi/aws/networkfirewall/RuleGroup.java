@@ -8,7 +8,7 @@ import io.pulumi.aws.networkfirewall.RuleGroupArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupState;
 import io.pulumi.aws.networkfirewall.outputs.RuleGroupRuleGroup;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) that identifies the rule group.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
      * 
      */
-    @OutputExport(name="capacity", type=Integer.class, parameters={})
+    @Export(name="capacity", type=Integer.class, parameters={})
     private Output<Integer> capacity;
 
     /**
@@ -63,7 +63,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * A friendly description of the rule group.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -77,7 +77,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * A friendly name of the rule group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
      * 
      */
-    @OutputExport(name="ruleGroup", type=RuleGroupRuleGroup.class, parameters={})
+    @Export(name="ruleGroup", type=RuleGroupRuleGroup.class, parameters={})
     private Output<RuleGroupRuleGroup> ruleGroup;
 
     /**
@@ -105,7 +105,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `rule_group` is specified.
      * 
      */
-    @OutputExport(name="rules", type=String.class, parameters={})
+    @Export(name="rules", type=String.class, parameters={})
     private Output</* @Nullable */ String> rules;
 
     /**
@@ -119,7 +119,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * A map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -133,7 +133,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -147,7 +147,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -161,7 +161,7 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
      * A string token used when updating the rule group.
      * 
      */
-    @OutputExport(name="updateToken", type=String.class, parameters={})
+    @Export(name="updateToken", type=String.class, parameters={})
     private Output<String> updateToken;
 
     /**

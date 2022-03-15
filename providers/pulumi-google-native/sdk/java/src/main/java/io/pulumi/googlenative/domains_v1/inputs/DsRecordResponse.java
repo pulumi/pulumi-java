@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DsRecordResponse extends io.pulumi.resources.InvokeArgs {
      * The algorithm used to generate the referenced DNSKEY.
      * 
      */
-    @InputImport(name="algorithm", required=true)
+    @Import(name="algorithm", required=true)
       private final String algorithm;
 
     public String getAlgorithm() {
@@ -32,7 +32,7 @@ public final class DsRecordResponse extends io.pulumi.resources.InvokeArgs {
      * The digest generated from the referenced DNSKEY.
      * 
      */
-    @InputImport(name="digest", required=true)
+    @Import(name="digest", required=true)
       private final String digest;
 
     public String getDigest() {
@@ -43,7 +43,7 @@ public final class DsRecordResponse extends io.pulumi.resources.InvokeArgs {
      * The hash function used to generate the digest of the referenced DNSKEY.
      * 
      */
-    @InputImport(name="digestType", required=true)
+    @Import(name="digestType", required=true)
       private final String digestType;
 
     public String getDigestType() {
@@ -54,7 +54,7 @@ public final class DsRecordResponse extends io.pulumi.resources.InvokeArgs {
      * The key tag of the record. Must be set in range 0 -- 65535.
      * 
      */
-    @InputImport(name="keyTag", required=true)
+    @Import(name="keyTag", required=true)
       private final Integer keyTag;
 
     public Integer getKeyTag() {

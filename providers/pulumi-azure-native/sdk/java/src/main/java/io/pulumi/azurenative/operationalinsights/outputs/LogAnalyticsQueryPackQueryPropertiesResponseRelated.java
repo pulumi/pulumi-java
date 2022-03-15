@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated {
     /**
      * The related categories for the function.
@@ -27,11 +27,11 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated {
      */
     private final @Nullable List<String> solutions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LogAnalyticsQueryPackQueryPropertiesResponseRelated(
-        @OutputCustomType.Parameter("categories") @Nullable List<String> categories,
-        @OutputCustomType.Parameter("resourceTypes") @Nullable List<String> resourceTypes,
-        @OutputCustomType.Parameter("solutions") @Nullable List<String> solutions) {
+        @CustomType.Parameter("categories") @Nullable List<String> categories,
+        @CustomType.Parameter("resourceTypes") @Nullable List<String> resourceTypes,
+        @CustomType.Parameter("solutions") @Nullable List<String> solutions) {
         this.categories = categories;
         this.resourceTypes = resourceTypes;
         this.solutions = solutions;

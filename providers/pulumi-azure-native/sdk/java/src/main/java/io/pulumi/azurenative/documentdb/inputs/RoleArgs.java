@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * The database name the role is applied.
      * 
      */
-    @InputImport(name="db")
+    @Import(name="db")
       private final @Nullable Output<String> db;
 
     public Output<String> getDb() {
@@ -33,7 +33,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * The role name.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

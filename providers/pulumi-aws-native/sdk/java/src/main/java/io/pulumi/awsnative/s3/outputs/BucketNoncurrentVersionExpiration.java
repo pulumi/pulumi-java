@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketNoncurrentVersionExpiration {
     /**
      * Specified the number of newer noncurrent and current versions that must exists before performing the associated action
@@ -22,10 +22,10 @@ public final class BucketNoncurrentVersionExpiration {
      */
     private final Integer noncurrentDays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketNoncurrentVersionExpiration(
-        @OutputCustomType.Parameter("newerNoncurrentVersions") @Nullable Integer newerNoncurrentVersions,
-        @OutputCustomType.Parameter("noncurrentDays") Integer noncurrentDays) {
+        @CustomType.Parameter("newerNoncurrentVersions") @Nullable Integer newerNoncurrentVersions,
+        @CustomType.Parameter("noncurrentDays") Integer noncurrentDays) {
         this.newerNoncurrentVersions = newerNoncurrentVersions;
         this.noncurrentDays = noncurrentDays;
     }

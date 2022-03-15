@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.scheduler.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageQueueMessageResponse {
     /**
      * Gets or sets the message.
@@ -32,12 +32,12 @@ public final class StorageQueueMessageResponse {
      */
     private final @Nullable String storageAccount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageQueueMessageResponse(
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("queueName") @Nullable String queueName,
-        @OutputCustomType.Parameter("sasToken") @Nullable String sasToken,
-        @OutputCustomType.Parameter("storageAccount") @Nullable String storageAccount) {
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("queueName") @Nullable String queueName,
+        @CustomType.Parameter("sasToken") @Nullable String sasToken,
+        @CustomType.Parameter("storageAccount") @Nullable String storageAccount) {
         this.message = message;
         this.queueName = queueName;
         this.sasToken = sasToken;

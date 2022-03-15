@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerTriggerScheduleGetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PreventionJobTriggerTriggerGetArgs extends io.pulumi.resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<PreventionJobTriggerTriggerScheduleGetArgs> schedule;
 
     public Output<PreventionJobTriggerTriggerScheduleGetArgs> getSchedule() {

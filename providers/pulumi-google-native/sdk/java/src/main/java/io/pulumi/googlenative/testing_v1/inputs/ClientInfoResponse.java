@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.ClientInfoDetailResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The list of detailed information about client.
      * 
      */
-    @InputImport(name="clientInfoDetails", required=true)
+    @Import(name="clientInfoDetails", required=true)
       private final List<ClientInfoDetailResponse> clientInfoDetails;
 
     public List<ClientInfoDetailResponse> getClientInfoDetails() {
@@ -33,7 +33,7 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Client name, such as gcloud.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

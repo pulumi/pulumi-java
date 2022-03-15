@@ -8,7 +8,7 @@ import io.pulumi.awsnative.resiliencehub.AppArgs;
 import io.pulumi.awsnative.resiliencehub.outputs.AppResourceMapping;
 import io.pulumi.awsnative.resiliencehub.outputs.AppTagMap;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the App.
      * 
      */
-    @OutputExport(name="appArn", type=String.class, parameters={})
+    @Export(name="appArn", type=String.class, parameters={})
     private Output<String> appArn;
 
     /**
@@ -38,7 +38,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * A string containing full ResilienceHub app template body.
      * 
      */
-    @OutputExport(name="appTemplateBody", type=String.class, parameters={})
+    @Export(name="appTemplateBody", type=String.class, parameters={})
     private Output<String> appTemplateBody;
 
     /**
@@ -52,7 +52,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * App description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -66,7 +66,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Name of the app.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the Resiliency Policy.
      * 
      */
-    @OutputExport(name="resiliencyPolicyArn", type=String.class, parameters={})
+    @Export(name="resiliencyPolicyArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> resiliencyPolicyArn;
 
     /**
@@ -94,7 +94,7 @@ public class App extends io.pulumi.resources.CustomResource {
      * An array of ResourceMapping objects.
      * 
      */
-    @OutputExport(name="resourceMappings", type=List.class, parameters={AppResourceMapping.class})
+    @Export(name="resourceMappings", type=List.class, parameters={AppResourceMapping.class})
     private Output<List<AppResourceMapping>> resourceMappings;
 
     /**
@@ -104,7 +104,7 @@ public class App extends io.pulumi.resources.CustomResource {
     public Output<List<AppResourceMapping>> getResourceMappings() {
         return this.resourceMappings;
     }
-    @OutputExport(name="tags", type=AppTagMap.class, parameters={})
+    @Export(name="tags", type=AppTagMap.class, parameters={})
     private Output</* @Nullable */ AppTagMap> tags;
 
     public Output</* @Nullable */ AppTagMap> getTags() {

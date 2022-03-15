@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apikeys_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class V2IosKeyRestrictionsArgs extends io.pulumi.resources.Resource
      * A list of bundle IDs that are allowed when making API calls with this key.
      * 
      */
-    @InputImport(name="allowedBundleIds")
+    @Import(name="allowedBundleIds")
       private final @Nullable Output<List<String>> allowedBundleIds;
 
     public Output<List<String>> getAllowedBundleIds() {

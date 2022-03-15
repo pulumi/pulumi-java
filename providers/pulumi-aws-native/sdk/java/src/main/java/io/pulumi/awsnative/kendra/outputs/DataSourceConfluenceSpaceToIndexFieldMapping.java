@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.enums.DataSourceConfluenceSpaceFieldName;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceConfluenceSpaceToIndexFieldMapping {
     private final DataSourceConfluenceSpaceFieldName dataSourceFieldName;
     private final @Nullable String dateFieldFormat;
     private final String indexFieldName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceConfluenceSpaceToIndexFieldMapping(
-        @OutputCustomType.Parameter("dataSourceFieldName") DataSourceConfluenceSpaceFieldName dataSourceFieldName,
-        @OutputCustomType.Parameter("dateFieldFormat") @Nullable String dateFieldFormat,
-        @OutputCustomType.Parameter("indexFieldName") String indexFieldName) {
+        @CustomType.Parameter("dataSourceFieldName") DataSourceConfluenceSpaceFieldName dataSourceFieldName,
+        @CustomType.Parameter("dateFieldFormat") @Nullable String dateFieldFormat,
+        @CustomType.Parameter("indexFieldName") String indexFieldName) {
         this.dataSourceFieldName = dataSourceFieldName;
         this.dateFieldFormat = dateFieldFormat;
         this.indexFieldName = indexFieldName;

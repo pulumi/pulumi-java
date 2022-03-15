@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
      * Kill chainName name
      * 
      */
-    @InputImport(name="killChainName")
+    @Import(name="killChainName")
       private final @Nullable Output<String> killChainName;
 
     public Output<String> getKillChainName() {
@@ -33,7 +33,7 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
      * Phase name
      * 
      */
-    @InputImport(name="phaseName")
+    @Import(name="phaseName")
       private final @Nullable Output<String> phaseName;
 
     public Output<String> getPhaseName() {

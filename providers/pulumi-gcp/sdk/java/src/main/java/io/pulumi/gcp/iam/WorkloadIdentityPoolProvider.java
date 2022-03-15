@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iam;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iam.WorkloadIdentityPoolProviderArgs;
@@ -61,7 +61,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      *   value of `admins`:
      * 
      */
-    @OutputExport(name="attributeCondition", type=String.class, parameters={})
+    @Export(name="attributeCondition", type=String.class, parameters={})
     private Output</* @Nullable */ String> attributeCondition;
 
     /**
@@ -122,7 +122,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      *   incoming credential to the `subject` attribute on a Google token.
      * 
      */
-    @OutputExport(name="attributeMapping", type=Map.class, parameters={String.class, String.class})
+    @Export(name="attributeMapping", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> attributeMapping;
 
     /**
@@ -173,7 +173,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="aws", type=WorkloadIdentityPoolProviderAws.class, parameters={})
+    @Export(name="aws", type=WorkloadIdentityPoolProviderAws.class, parameters={})
     private Output</* @Nullable */ WorkloadIdentityPoolProviderAws> aws;
 
     /**
@@ -188,7 +188,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * A description for the provider. Cannot exceed 256 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -203,7 +203,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * However, existing tokens still grant access.
      * 
      */
-    @OutputExport(name="disabled", type=Boolean.class, parameters={})
+    @Export(name="disabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disabled;
 
     /**
@@ -218,7 +218,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * A display name for the provider. Cannot exceed 32 characters.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -233,7 +233,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}/providers/{workload_identity_pool_provider_id}'.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -249,7 +249,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="oidc", type=WorkloadIdentityPoolProviderOidc.class, parameters={})
+    @Export(name="oidc", type=WorkloadIdentityPoolProviderOidc.class, parameters={})
     private Output</* @Nullable */ WorkloadIdentityPoolProviderOidc> oidc;
 
     /**
@@ -265,7 +265,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -283,7 +283,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * You cannot reuse the ID of a soft-deleted provider until it is permanently deleted.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -302,7 +302,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * `gcp-` is reserved for use by Google, and may not be specified.
      * 
      */
-    @OutputExport(name="workloadIdentityPoolId", type=String.class, parameters={})
+    @Export(name="workloadIdentityPoolId", type=String.class, parameters={})
     private Output<String> workloadIdentityPoolId;
 
     /**
@@ -320,7 +320,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * `gcp-` is reserved for use by Google, and may not be specified.
      * 
      */
-    @OutputExport(name="workloadIdentityPoolProviderId", type=String.class, parameters={})
+    @Export(name="workloadIdentityPoolProviderId", type=String.class, parameters={})
     private Output<String> workloadIdentityPoolProviderId;
 
     /**

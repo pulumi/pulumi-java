@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AdditionalErrorInfoResponse extends io.pulumi.resources.Invok
      * Additional error info.
      * 
      */
-    @InputImport(name="info")
+    @Import(name="info")
       private final @Nullable Object info;
 
     public Optional<Object> getInfo() {
@@ -34,7 +34,7 @@ public final class AdditionalErrorInfoResponse extends io.pulumi.resources.Invok
      * Additional error type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firestore_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.firestore_v1.enums.IndexQueryScope;
 import io.pulumi.googlenative.firestore_v1.inputs.GoogleFirestoreAdminV1IndexFieldArgs;
 import java.lang.String;
@@ -17,14 +17,14 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IndexArgs Empty = new IndexArgs();
 
-    @InputImport(name="collectionGroupId", required=true)
+    @Import(name="collectionGroupId", required=true)
       private final Output<String> collectionGroupId;
 
     public Output<String> getCollectionGroupId() {
         return this.collectionGroupId;
     }
 
-    @InputImport(name="databaseId", required=true)
+    @Import(name="databaseId", required=true)
       private final Output<String> databaseId;
 
     public Output<String> getDatabaseId() {
@@ -35,14 +35,14 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * The fields supported by this index. For composite indexes, this is always 2 or more fields. The last field entry is always for the field path `__name__`. If, on creation, `__name__` was not specified as the last field, it will be added automatically with the same direction as that of the last field defined. If the final field in a composite index is not directional, the `__name__` will be ordered ASCENDING (unless explicitly specified). For single field indexes, this will always be exactly one entry with a field path equal to the field path of the associated field.
      * 
      */
-    @InputImport(name="fields")
+    @Import(name="fields")
       private final @Nullable Output<List<GoogleFirestoreAdminV1IndexFieldArgs>> fields;
 
     public Output<List<GoogleFirestoreAdminV1IndexFieldArgs>> getFields() {
         return this.fields == null ? Output.empty() : this.fields;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -53,7 +53,7 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
      * Indexes with a collection query scope specified allow queries against a collection that is the child of a specific document, specified at query time, and that has the same collection id. Indexes with a collection group query scope specified allow queries against all collections descended from a specific document, specified at query time, and that have the same collection id as this index.
      * 
      */
-    @InputImport(name="queryScope")
+    @Import(name="queryScope")
       private final @Nullable Output<IndexQueryScope> queryScope;
 
     public Output<IndexQueryScope> getQueryScope() {

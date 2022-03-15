@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,21 +19,21 @@ public final class ClusterCapacityProviderStrategyItem extends io.pulumi.resourc
 
     public static final ClusterCapacityProviderStrategyItem Empty = new ClusterCapacityProviderStrategyItem();
 
-    @InputImport(name="base")
+    @Import(name="base")
       private final @Nullable Integer base;
 
     public Optional<Integer> getBase() {
         return this.base == null ? Optional.empty() : Optional.ofNullable(this.base);
     }
 
-    @InputImport(name="capacityProvider")
+    @Import(name="capacityProvider")
       private final @Nullable String capacityProvider;
 
     public Optional<String> getCapacityProvider() {
         return this.capacityProvider == null ? Optional.empty() : Optional.ofNullable(this.capacityProvider);
     }
 
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Integer weight;
 
     public Optional<Integer> getWeight() {

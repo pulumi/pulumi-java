@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appintegrations.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DataIntegrationTagArgs extends io.pulumi.resources.ResourceAr
      * A key to identify the tag.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -32,7 +32,7 @@ public final class DataIntegrationTagArgs extends io.pulumi.resources.ResourceAr
      * Corresponding tag value for the key.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

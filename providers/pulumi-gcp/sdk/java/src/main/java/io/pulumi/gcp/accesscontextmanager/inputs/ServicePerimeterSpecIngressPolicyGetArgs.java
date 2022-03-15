@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterSpecIngressPolicyIngressFromGetArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterSpecIngressPolicyIngressToGetArgs;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ServicePerimeterSpecIngressPolicyGetArgs extends io.pulumi.re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="ingressFrom")
+    @Import(name="ingressFrom")
       private final @Nullable Output<ServicePerimeterSpecIngressPolicyIngressFromGetArgs> ingressFrom;
 
     public Output<ServicePerimeterSpecIngressPolicyIngressFromGetArgs> getIngressFrom() {
@@ -34,7 +34,7 @@ public final class ServicePerimeterSpecIngressPolicyGetArgs extends io.pulumi.re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="ingressTo")
+    @Import(name="ingressTo")
       private final @Nullable Output<ServicePerimeterSpecIngressPolicyIngressToGetArgs> ingressTo;
 
     public Output<ServicePerimeterSpecIngressPolicyIngressToGetArgs> getIngressTo() {

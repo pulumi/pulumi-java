@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.rds.outputs;
 
 import io.pulumi.awsnative.rds.outputs.DBProxyTargetGroupConnectionPoolConfigurationInfoFormat;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDBProxyTargetGroupResult {
     private final @Nullable DBProxyTargetGroupConnectionPoolConfigurationInfoFormat connectionPoolConfigurationInfo;
     private final @Nullable List<String> dBClusterIdentifiers;
@@ -22,12 +22,12 @@ public final class GetDBProxyTargetGroupResult {
      */
     private final @Nullable String targetGroupArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDBProxyTargetGroupResult(
-        @OutputCustomType.Parameter("connectionPoolConfigurationInfo") @Nullable DBProxyTargetGroupConnectionPoolConfigurationInfoFormat connectionPoolConfigurationInfo,
-        @OutputCustomType.Parameter("dBClusterIdentifiers") @Nullable List<String> dBClusterIdentifiers,
-        @OutputCustomType.Parameter("dBInstanceIdentifiers") @Nullable List<String> dBInstanceIdentifiers,
-        @OutputCustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn) {
+        @CustomType.Parameter("connectionPoolConfigurationInfo") @Nullable DBProxyTargetGroupConnectionPoolConfigurationInfoFormat connectionPoolConfigurationInfo,
+        @CustomType.Parameter("dBClusterIdentifiers") @Nullable List<String> dBClusterIdentifiers,
+        @CustomType.Parameter("dBInstanceIdentifiers") @Nullable List<String> dBInstanceIdentifiers,
+        @CustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn) {
         this.connectionPoolConfigurationInfo = connectionPoolConfigurationInfo;
         this.dBClusterIdentifiers = dBClusterIdentifiers;
         this.dBInstanceIdentifiers = dBInstanceIdentifiers;

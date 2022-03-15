@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.ConsentStoreIamBindingArgs;
@@ -58,7 +58,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:healthcare/consentStoreIamBinding:ConsentStoreIamBinding")
 public class ConsentStoreIamBinding extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=ConsentStoreIamBindingCondition.class, parameters={})
+    @Export(name="condition", type=ConsentStoreIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ ConsentStoreIamBindingCondition> condition;
 
     public Output</* @Nullable */ ConsentStoreIamBindingCondition> getCondition() {
@@ -68,7 +68,7 @@ public class ConsentStoreIamBinding extends io.pulumi.resources.CustomResource {
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @OutputExport(name="consentStoreId", type=String.class, parameters={})
+    @Export(name="consentStoreId", type=String.class, parameters={})
     private Output<String> consentStoreId;
 
     /**
@@ -84,7 +84,7 @@ public class ConsentStoreIamBinding extends io.pulumi.resources.CustomResource {
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @OutputExport(name="dataset", type=String.class, parameters={})
+    @Export(name="dataset", type=String.class, parameters={})
     private Output<String> dataset;
 
     /**
@@ -100,7 +100,7 @@ public class ConsentStoreIamBinding extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -110,7 +110,7 @@ public class ConsentStoreIamBinding extends io.pulumi.resources.CustomResource {
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -122,7 +122,7 @@ public class ConsentStoreIamBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

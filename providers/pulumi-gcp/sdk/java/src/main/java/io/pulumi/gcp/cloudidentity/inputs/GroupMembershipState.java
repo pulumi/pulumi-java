@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudidentity.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipMemberKeyGetArgs;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipPreferredMemberKeyGetArgs;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipRoleGetArgs;
@@ -22,7 +22,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * The time when the Membership was created.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -33,7 +33,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * The name of the Group to create this membership in.
      * 
      */
-    @InputImport(name="group")
+    @Import(name="group")
       private final @Nullable Output<String> group;
 
     public Output<String> getGroup() {
@@ -45,7 +45,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="memberKey")
+    @Import(name="memberKey")
       private final @Nullable Output<GroupMembershipMemberKeyGetArgs> memberKey;
 
     public Output<GroupMembershipMemberKeyGetArgs> getMemberKey() {
@@ -57,7 +57,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * Possible values are `OWNER`, `MANAGER`, and `MEMBER`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="preferredMemberKey")
+    @Import(name="preferredMemberKey")
       private final @Nullable Output<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey;
 
     public Output<GroupMembershipPreferredMemberKeyGetArgs> getPreferredMemberKey() {
@@ -82,7 +82,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="roles")
+    @Import(name="roles")
       private final @Nullable Output<List<GroupMembershipRoleGetArgs>> roles;
 
     public Output<List<GroupMembershipRoleGetArgs>> getRoles() {
@@ -93,7 +93,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * The type of the membership.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -104,7 +104,7 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
      * The time when the Membership was last updated.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

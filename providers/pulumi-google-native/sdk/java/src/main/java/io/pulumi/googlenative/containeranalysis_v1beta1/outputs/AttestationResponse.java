@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.GenericSignedAttestationResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.PgpSignedAttestationResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AttestationResponse {
     private final GenericSignedAttestationResponse genericSignedAttestation;
     /**
@@ -17,10 +17,10 @@ public final class AttestationResponse {
      */
     private final PgpSignedAttestationResponse pgpSignedAttestation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AttestationResponse(
-        @OutputCustomType.Parameter("genericSignedAttestation") GenericSignedAttestationResponse genericSignedAttestation,
-        @OutputCustomType.Parameter("pgpSignedAttestation") PgpSignedAttestationResponse pgpSignedAttestation) {
+        @CustomType.Parameter("genericSignedAttestation") GenericSignedAttestationResponse genericSignedAttestation,
+        @CustomType.Parameter("pgpSignedAttestation") PgpSignedAttestationResponse pgpSignedAttestation) {
         this.genericSignedAttestation = genericSignedAttestation;
         this.pgpSignedAttestation = pgpSignedAttestation;
     }

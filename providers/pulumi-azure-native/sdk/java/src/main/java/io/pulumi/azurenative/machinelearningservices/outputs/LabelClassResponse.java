@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LabelClassResponse {
     /**
      * Display name of the label class.
@@ -23,10 +23,10 @@ public final class LabelClassResponse {
      */
     private final @Nullable Map<String,LabelClassResponse> subclasses;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LabelClassResponse(
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("subclasses") @Nullable Map<String,LabelClassResponse> subclasses) {
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("subclasses") @Nullable Map<String,LabelClassResponse> subclasses) {
         this.displayName = displayName;
         this.subclasses = subclasses;
     }

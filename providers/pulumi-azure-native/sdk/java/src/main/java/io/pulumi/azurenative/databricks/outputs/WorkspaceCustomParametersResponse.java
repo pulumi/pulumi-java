@@ -7,12 +7,12 @@ import io.pulumi.azurenative.databricks.outputs.WorkspaceCustomBooleanParameterR
 import io.pulumi.azurenative.databricks.outputs.WorkspaceCustomObjectParameterResponse;
 import io.pulumi.azurenative.databricks.outputs.WorkspaceCustomStringParameterResponse;
 import io.pulumi.azurenative.databricks.outputs.WorkspaceEncryptionParameterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkspaceCustomParametersResponse {
     /**
      * The ID of a Azure Machine Learning workspace to link with Databricks workspace
@@ -95,24 +95,24 @@ public final class WorkspaceCustomParametersResponse {
      */
     private final @Nullable WorkspaceCustomStringParameterResponse vnetAddressPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkspaceCustomParametersResponse(
-        @OutputCustomType.Parameter("amlWorkspaceId") @Nullable WorkspaceCustomStringParameterResponse amlWorkspaceId,
-        @OutputCustomType.Parameter("customPrivateSubnetName") @Nullable WorkspaceCustomStringParameterResponse customPrivateSubnetName,
-        @OutputCustomType.Parameter("customPublicSubnetName") @Nullable WorkspaceCustomStringParameterResponse customPublicSubnetName,
-        @OutputCustomType.Parameter("customVirtualNetworkId") @Nullable WorkspaceCustomStringParameterResponse customVirtualNetworkId,
-        @OutputCustomType.Parameter("enableNoPublicIp") @Nullable WorkspaceCustomBooleanParameterResponse enableNoPublicIp,
-        @OutputCustomType.Parameter("encryption") @Nullable WorkspaceEncryptionParameterResponse encryption,
-        @OutputCustomType.Parameter("loadBalancerBackendPoolName") @Nullable WorkspaceCustomStringParameterResponse loadBalancerBackendPoolName,
-        @OutputCustomType.Parameter("loadBalancerId") @Nullable WorkspaceCustomStringParameterResponse loadBalancerId,
-        @OutputCustomType.Parameter("natGatewayName") @Nullable WorkspaceCustomStringParameterResponse natGatewayName,
-        @OutputCustomType.Parameter("prepareEncryption") @Nullable WorkspaceCustomBooleanParameterResponse prepareEncryption,
-        @OutputCustomType.Parameter("publicIpName") @Nullable WorkspaceCustomStringParameterResponse publicIpName,
-        @OutputCustomType.Parameter("requireInfrastructureEncryption") @Nullable WorkspaceCustomBooleanParameterResponse requireInfrastructureEncryption,
-        @OutputCustomType.Parameter("resourceTags") WorkspaceCustomObjectParameterResponse resourceTags,
-        @OutputCustomType.Parameter("storageAccountName") @Nullable WorkspaceCustomStringParameterResponse storageAccountName,
-        @OutputCustomType.Parameter("storageAccountSkuName") @Nullable WorkspaceCustomStringParameterResponse storageAccountSkuName,
-        @OutputCustomType.Parameter("vnetAddressPrefix") @Nullable WorkspaceCustomStringParameterResponse vnetAddressPrefix) {
+        @CustomType.Parameter("amlWorkspaceId") @Nullable WorkspaceCustomStringParameterResponse amlWorkspaceId,
+        @CustomType.Parameter("customPrivateSubnetName") @Nullable WorkspaceCustomStringParameterResponse customPrivateSubnetName,
+        @CustomType.Parameter("customPublicSubnetName") @Nullable WorkspaceCustomStringParameterResponse customPublicSubnetName,
+        @CustomType.Parameter("customVirtualNetworkId") @Nullable WorkspaceCustomStringParameterResponse customVirtualNetworkId,
+        @CustomType.Parameter("enableNoPublicIp") @Nullable WorkspaceCustomBooleanParameterResponse enableNoPublicIp,
+        @CustomType.Parameter("encryption") @Nullable WorkspaceEncryptionParameterResponse encryption,
+        @CustomType.Parameter("loadBalancerBackendPoolName") @Nullable WorkspaceCustomStringParameterResponse loadBalancerBackendPoolName,
+        @CustomType.Parameter("loadBalancerId") @Nullable WorkspaceCustomStringParameterResponse loadBalancerId,
+        @CustomType.Parameter("natGatewayName") @Nullable WorkspaceCustomStringParameterResponse natGatewayName,
+        @CustomType.Parameter("prepareEncryption") @Nullable WorkspaceCustomBooleanParameterResponse prepareEncryption,
+        @CustomType.Parameter("publicIpName") @Nullable WorkspaceCustomStringParameterResponse publicIpName,
+        @CustomType.Parameter("requireInfrastructureEncryption") @Nullable WorkspaceCustomBooleanParameterResponse requireInfrastructureEncryption,
+        @CustomType.Parameter("resourceTags") WorkspaceCustomObjectParameterResponse resourceTags,
+        @CustomType.Parameter("storageAccountName") @Nullable WorkspaceCustomStringParameterResponse storageAccountName,
+        @CustomType.Parameter("storageAccountSkuName") @Nullable WorkspaceCustomStringParameterResponse storageAccountSkuName,
+        @CustomType.Parameter("vnetAddressPrefix") @Nullable WorkspaceCustomStringParameterResponse vnetAddressPrefix) {
         this.amlWorkspaceId = amlWorkspaceId;
         this.customPrivateSubnetName = customPrivateSubnetName;
         this.customPublicSubnetName = customPublicSubnetName;

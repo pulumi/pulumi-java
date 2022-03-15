@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.DownwardAPIVolumeFileArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DownwardAPIProjectionArgs extends io.pulumi.resources.Resourc
      * Items is a list of DownwardAPIVolume file
      * 
      */
-    @InputImport(name="items")
+    @Import(name="items")
       private final @Nullable Output<List<DownwardAPIVolumeFileArgs>> items;
 
     public Output<List<DownwardAPIVolumeFileArgs>> getItems() {

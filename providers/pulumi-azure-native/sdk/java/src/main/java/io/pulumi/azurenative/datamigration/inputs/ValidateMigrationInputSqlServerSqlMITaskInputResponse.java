@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datamigration.inputs.BlobShareResponse;
 import io.pulumi.azurenative.datamigration.inputs.FileShareResponse;
 import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlMIDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * SAS URI of Azure Storage Account Container to be used for storing backup files.
      * 
      */
-    @InputImport(name="backupBlobShare", required=true)
+    @Import(name="backupBlobShare", required=true)
       private final BlobShareResponse backupBlobShare;
 
     public BlobShareResponse getBackupBlobShare() {
@@ -38,7 +38,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * Backup file share information for all selected databases.
      * 
      */
-    @InputImport(name="backupFileShare")
+    @Import(name="backupFileShare")
       private final @Nullable FileShareResponse backupFileShare;
 
     public Optional<FileShareResponse> getBackupFileShare() {
@@ -49,7 +49,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * Backup Mode to specify whether to use existing backup or create new backup.
      * 
      */
-    @InputImport(name="backupMode")
+    @Import(name="backupMode")
       private final @Nullable String backupMode;
 
     public Optional<String> getBackupMode() {
@@ -60,7 +60,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * Databases to migrate
      * 
      */
-    @InputImport(name="selectedDatabases", required=true)
+    @Import(name="selectedDatabases", required=true)
       private final List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
 
     public List<MigrateSqlServerSqlMIDatabaseInputResponse> getSelectedDatabases() {
@@ -71,7 +71,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * Logins to migrate
      * 
      */
-    @InputImport(name="selectedLogins")
+    @Import(name="selectedLogins")
       private final @Nullable List<String> selectedLogins;
 
     public List<String> getSelectedLogins() {
@@ -82,7 +82,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * Information for connecting to source
      * 
      */
-    @InputImport(name="sourceConnectionInfo", required=true)
+    @Import(name="sourceConnectionInfo", required=true)
       private final SqlConnectionInfoResponse sourceConnectionInfo;
 
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
@@ -93,7 +93,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * Information for connecting to target
      * 
      */
-    @InputImport(name="targetConnectionInfo", required=true)
+    @Import(name="targetConnectionInfo", required=true)
       private final SqlConnectionInfoResponse targetConnectionInfo;
 
     public SqlConnectionInfoResponse getTargetConnectionInfo() {

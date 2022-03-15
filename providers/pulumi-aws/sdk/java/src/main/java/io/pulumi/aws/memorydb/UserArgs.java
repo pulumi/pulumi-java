@@ -5,7 +5,7 @@ package io.pulumi.aws.memorydb;
 
 import io.pulumi.aws.memorydb.inputs.UserAuthenticationModeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * The access permissions string used for this user.
      * 
      */
-    @InputImport(name="accessString", required=true)
+    @Import(name="accessString", required=true)
       private final Output<String> accessString;
 
     public Output<String> getAccessString() {
@@ -31,7 +31,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Denotes the user's authentication properties. Detailed below.
      * 
      */
-    @InputImport(name="authenticationMode", required=true)
+    @Import(name="authenticationMode", required=true)
       private final Output<UserAuthenticationModeArgs> authenticationMode;
 
     public Output<UserAuthenticationModeArgs> getAuthenticationMode() {
@@ -42,7 +42,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -53,7 +53,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -64,7 +64,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the MemoryDB user. Up to 40 characters.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final Output<String> userName;
 
     public Output<String> getUserName() {

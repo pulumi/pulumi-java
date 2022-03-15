@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AS2ValidationSettingsResponse {
     /**
      * The value indicating whether to check for certificate revocation list on receive.
@@ -64,18 +64,18 @@ public final class AS2ValidationSettingsResponse {
      */
     private final @Nullable String signingAlgorithm;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AS2ValidationSettingsResponse(
-        @OutputCustomType.Parameter("checkCertificateRevocationListOnReceive") Boolean checkCertificateRevocationListOnReceive,
-        @OutputCustomType.Parameter("checkCertificateRevocationListOnSend") Boolean checkCertificateRevocationListOnSend,
-        @OutputCustomType.Parameter("checkDuplicateMessage") Boolean checkDuplicateMessage,
-        @OutputCustomType.Parameter("compressMessage") Boolean compressMessage,
-        @OutputCustomType.Parameter("encryptMessage") Boolean encryptMessage,
-        @OutputCustomType.Parameter("encryptionAlgorithm") String encryptionAlgorithm,
-        @OutputCustomType.Parameter("interchangeDuplicatesValidityDays") Integer interchangeDuplicatesValidityDays,
-        @OutputCustomType.Parameter("overrideMessageProperties") Boolean overrideMessageProperties,
-        @OutputCustomType.Parameter("signMessage") Boolean signMessage,
-        @OutputCustomType.Parameter("signingAlgorithm") @Nullable String signingAlgorithm) {
+        @CustomType.Parameter("checkCertificateRevocationListOnReceive") Boolean checkCertificateRevocationListOnReceive,
+        @CustomType.Parameter("checkCertificateRevocationListOnSend") Boolean checkCertificateRevocationListOnSend,
+        @CustomType.Parameter("checkDuplicateMessage") Boolean checkDuplicateMessage,
+        @CustomType.Parameter("compressMessage") Boolean compressMessage,
+        @CustomType.Parameter("encryptMessage") Boolean encryptMessage,
+        @CustomType.Parameter("encryptionAlgorithm") String encryptionAlgorithm,
+        @CustomType.Parameter("interchangeDuplicatesValidityDays") Integer interchangeDuplicatesValidityDays,
+        @CustomType.Parameter("overrideMessageProperties") Boolean overrideMessageProperties,
+        @CustomType.Parameter("signMessage") Boolean signMessage,
+        @CustomType.Parameter("signingAlgorithm") @Nullable String signingAlgorithm) {
         this.checkCertificateRevocationListOnReceive = checkCertificateRevocationListOnReceive;
         this.checkCertificateRevocationListOnSend = checkCertificateRevocationListOnSend;
         this.checkDuplicateMessage = checkDuplicateMessage;

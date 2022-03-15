@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigqueryreservation_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetReservationResult {
     /**
      * Creation time of the reservation.
@@ -36,13 +36,13 @@ public final class GetReservationResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetReservationResult(
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("ignoreIdleSlots") Boolean ignoreIdleSlots,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("slotCapacity") String slotCapacity,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("ignoreIdleSlots") Boolean ignoreIdleSlots,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("slotCapacity") String slotCapacity,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.creationTime = creationTime;
         this.ignoreIdleSlots = ignoreIdleSlots;
         this.name = name;

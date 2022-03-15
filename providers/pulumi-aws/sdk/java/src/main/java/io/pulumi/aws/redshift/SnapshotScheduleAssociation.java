@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.redshift.SnapshotScheduleAssociationArgs;
 import io.pulumi.aws.redshift.inputs.SnapshotScheduleAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -30,7 +30,7 @@ public class SnapshotScheduleAssociation extends io.pulumi.resources.CustomResou
      * The cluster identifier.
      * 
      */
-    @OutputExport(name="clusterIdentifier", type=String.class, parameters={})
+    @Export(name="clusterIdentifier", type=String.class, parameters={})
     private Output<String> clusterIdentifier;
 
     /**
@@ -44,7 +44,7 @@ public class SnapshotScheduleAssociation extends io.pulumi.resources.CustomResou
      * The snapshot schedule identifier.
      * 
      */
-    @OutputExport(name="scheduleIdentifier", type=String.class, parameters={})
+    @Export(name="scheduleIdentifier", type=String.class, parameters={})
     private Output<String> scheduleIdentifier;
 
     /**

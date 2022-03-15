@@ -6,7 +6,7 @@ package io.pulumi.aws.route53recoveryreadiness.inputs;
 import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceGetArgs;
 import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceGetArgs ext
      * NLB resource a DNS Target Resource points to. Required if `r53_resource` is not set.
      * 
      */
-    @InputImport(name="nlbResource")
+    @Import(name="nlbResource")
       private final @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceGetArgs> nlbResource;
 
     public Output<ResourceSetResourceDnsTargetResourceTargetResourceNlbResourceGetArgs> getNlbResource() {
@@ -30,7 +30,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceGetArgs ext
      * Route53 resource a DNS Target Resource record points to.
      * 
      */
-    @InputImport(name="r53Resource")
+    @Import(name="r53Resource")
       private final @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs> r53Resource;
 
     public Output<ResourceSetResourceDnsTargetResourceTargetResourceR53ResourceGetArgs> getR53Resource() {

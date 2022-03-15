@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 import io.pulumi.azurenative.containerinstance.inputs.EnvironmentVariableResponse;
 import io.pulumi.azurenative.containerinstance.inputs.InitContainerPropertiesDefinitionResponseInstanceView;
 import io.pulumi.azurenative.containerinstance.inputs.VolumeMountResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
      * The command to execute within the init container in exec form.
      * 
      */
-    @InputImport(name="command")
+    @Import(name="command")
       private final @Nullable List<String> command;
 
     public List<String> getCommand() {
@@ -37,7 +37,7 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
      * The environment variables to set in the init container.
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
 
     public List<EnvironmentVariableResponse> getEnvironmentVariables() {
@@ -48,7 +48,7 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
      * The image of the init container.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable String image;
 
     public Optional<String> getImage() {
@@ -59,7 +59,7 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
      * The instance view of the init container. Only valid in response.
      * 
      */
-    @InputImport(name="instanceView", required=true)
+    @Import(name="instanceView", required=true)
       private final InitContainerPropertiesDefinitionResponseInstanceView instanceView;
 
     public InitContainerPropertiesDefinitionResponseInstanceView getInstanceView() {
@@ -70,7 +70,7 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
      * The name for the init container.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -81,7 +81,7 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
      * The volume mounts available to the init container.
      * 
      */
-    @InputImport(name="volumeMounts")
+    @Import(name="volumeMounts")
       private final @Nullable List<VolumeMountResponse> volumeMounts;
 
     public List<VolumeMountResponse> getVolumeMounts() {

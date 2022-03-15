@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2BigQueryOptionsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CloudStorageOptionsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2DatastoreOptionsResponse;
@@ -11,7 +11,7 @@ import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2HybridOptionsResp
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2TimespanConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2StorageConfigResponse {
     /**
      * BigQuery options.
@@ -35,13 +35,13 @@ public final class GooglePrivacyDlpV2StorageConfigResponse {
     private final GooglePrivacyDlpV2HybridOptionsResponse hybridOptions;
     private final GooglePrivacyDlpV2TimespanConfigResponse timespanConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2StorageConfigResponse(
-        @OutputCustomType.Parameter("bigQueryOptions") GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions,
-        @OutputCustomType.Parameter("cloudStorageOptions") GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions,
-        @OutputCustomType.Parameter("datastoreOptions") GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions,
-        @OutputCustomType.Parameter("hybridOptions") GooglePrivacyDlpV2HybridOptionsResponse hybridOptions,
-        @OutputCustomType.Parameter("timespanConfig") GooglePrivacyDlpV2TimespanConfigResponse timespanConfig) {
+        @CustomType.Parameter("bigQueryOptions") GooglePrivacyDlpV2BigQueryOptionsResponse bigQueryOptions,
+        @CustomType.Parameter("cloudStorageOptions") GooglePrivacyDlpV2CloudStorageOptionsResponse cloudStorageOptions,
+        @CustomType.Parameter("datastoreOptions") GooglePrivacyDlpV2DatastoreOptionsResponse datastoreOptions,
+        @CustomType.Parameter("hybridOptions") GooglePrivacyDlpV2HybridOptionsResponse hybridOptions,
+        @CustomType.Parameter("timespanConfig") GooglePrivacyDlpV2TimespanConfigResponse timespanConfig) {
         this.bigQueryOptions = bigQueryOptions;
         this.cloudStorageOptions = cloudStorageOptions;
         this.datastoreOptions = datastoreOptions;

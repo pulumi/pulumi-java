@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.SSISChildPackageArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * The package access credential.
      * 
      */
-    @InputImport(name="accessCredential")
+    @Import(name="accessCredential")
       private final @Nullable Output<SSISAccessCredentialArgs> accessCredential;
 
     public Output<SSISAccessCredentialArgs> getAccessCredential() {
@@ -41,7 +41,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * The embedded child package list.
      * 
      */
-    @InputImport(name="childPackages")
+    @Import(name="childPackages")
       private final @Nullable Output<List<SSISChildPackageArgs>> childPackages;
 
     public Output<List<SSISChildPackageArgs>> getChildPackages() {
@@ -52,7 +52,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * The configuration file access credential.
      * 
      */
-    @InputImport(name="configurationAccessCredential")
+    @Import(name="configurationAccessCredential")
       private final @Nullable Output<SSISAccessCredentialArgs> configurationAccessCredential;
 
     public Output<SSISAccessCredentialArgs> getConfigurationAccessCredential() {
@@ -63,7 +63,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * The configuration file of the package execution. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="configurationPath")
+    @Import(name="configurationPath")
       private final @Nullable Output<Object> configurationPath;
 
     public Output<Object> getConfigurationPath() {
@@ -74,7 +74,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * The embedded package content. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="packageContent")
+    @Import(name="packageContent")
       private final @Nullable Output<Object> packageContent;
 
     public Output<Object> getPackageContent() {
@@ -85,7 +85,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * The embedded package last modified date.
      * 
      */
-    @InputImport(name="packageLastModifiedDate")
+    @Import(name="packageLastModifiedDate")
       private final @Nullable Output<String> packageLastModifiedDate;
 
     public Output<String> getPackageLastModifiedDate() {
@@ -96,7 +96,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * The package name.
      * 
      */
-    @InputImport(name="packageName")
+    @Import(name="packageName")
       private final @Nullable Output<String> packageName;
 
     public Output<String> getPackageName() {
@@ -107,7 +107,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * Password of the package.
      * 
      */
-    @InputImport(name="packagePassword")
+    @Import(name="packagePassword")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> packagePassword;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPackagePassword() {
@@ -118,7 +118,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * The SSIS package path. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="packagePath")
+    @Import(name="packagePath")
       private final @Nullable Output<Object> packagePath;
 
     public Output<Object> getPackagePath() {
@@ -129,7 +129,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
      * The type of SSIS package location.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,SsisPackageLocationType>> type;
 
     public Output<Either<String,SsisPackageLocationType>> getType() {

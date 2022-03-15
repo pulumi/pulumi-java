@@ -5,7 +5,7 @@ package io.pulumi.awsnative.nimblestudio.inputs;
 
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentActiveDirectoryComputerAttributeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends io.pu
      * <p>A collection of custom attributes for an Active Directory computer.</p>
      * 
      */
-    @InputImport(name="computerAttributes")
+    @Import(name="computerAttributes")
       private final @Nullable Output<List<StudioComponentActiveDirectoryComputerAttributeArgs>> computerAttributes;
 
     public Output<List<StudioComponentActiveDirectoryComputerAttributeArgs>> getComputerAttributes() {
@@ -35,7 +35,7 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends io.pu
      * <p>The directory ID of the Directory Service for Microsoft Active Directory to access using this studio component.</p>
      * 
      */
-    @InputImport(name="directoryId")
+    @Import(name="directoryId")
       private final @Nullable Output<String> directoryId;
 
     public Output<String> getDirectoryId() {
@@ -46,7 +46,7 @@ public final class StudioComponentActiveDirectoryConfigurationArgs extends io.pu
      * <p>The distinguished name (DN) and organizational unit (OU) of an Active Directory computer.</p>
      * 
      */
-    @InputImport(name="organizationalUnitDistinguishedName")
+    @Import(name="organizationalUnitDistinguishedName")
       private final @Nullable Output<String> organizationalUnitDistinguishedName;
 
     public Output<String> getOrganizationalUnitDistinguishedName() {

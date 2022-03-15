@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PlanResponse {
     /**
      * The plan ID.
@@ -37,13 +37,13 @@ public final class PlanResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PlanResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("product") @Nullable String product,
-        @OutputCustomType.Parameter("promotionCode") @Nullable String promotionCode,
-        @OutputCustomType.Parameter("publisher") @Nullable String publisher,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("product") @Nullable String product,
+        @CustomType.Parameter("promotionCode") @Nullable String promotionCode,
+        @CustomType.Parameter("publisher") @Nullable String publisher,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.name = name;
         this.product = product;
         this.promotionCode = promotionCode;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
      * The domain's NetBIOS name
      * 
      */
-    @InputImport(name="alias")
+    @Import(name="alias")
       private final @Nullable String alias;
 
     public Optional<String> getAlias() {
@@ -33,7 +33,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
      * The base distinguished name for groups
      * 
      */
-    @InputImport(name="baseGroupDN")
+    @Import(name="baseGroupDN")
       private final @Nullable String baseGroupDN;
 
     public Optional<String> getBaseGroupDN() {
@@ -44,7 +44,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
      * The base distinguished name for users
      * 
      */
-    @InputImport(name="baseUserDN")
+    @Import(name="baseUserDN")
       private final @Nullable String baseUserDN;
 
     public Optional<String> getBaseUserDN() {
@@ -55,7 +55,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
      * The domain's dns name
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable String domain;
 
     public Optional<String> getDomain() {
@@ -66,7 +66,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
      * The name of the identity source
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -77,7 +77,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
      * The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable String password;
 
     public Optional<String> getPassword() {
@@ -88,7 +88,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
      * Primary server URL
      * 
      */
-    @InputImport(name="primaryServer")
+    @Import(name="primaryServer")
       private final @Nullable String primaryServer;
 
     public Optional<String> getPrimaryServer() {
@@ -99,7 +99,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
      * Secondary server URL
      * 
      */
-    @InputImport(name="secondaryServer")
+    @Import(name="secondaryServer")
       private final @Nullable String secondaryServer;
 
     public Optional<String> getSecondaryServer() {
@@ -110,7 +110,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
      * Protect LDAP communication using SSL certificate (LDAPS)
      * 
      */
-    @InputImport(name="ssl")
+    @Import(name="ssl")
       private final @Nullable String ssl;
 
     public Optional<String> getSsl() {
@@ -121,7 +121,7 @@ public final class IdentitySourceResponse extends io.pulumi.resources.InvokeArgs
      * The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable String username;
 
     public Optional<String> getUsername() {

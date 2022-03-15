@@ -6,7 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.enums.SkuScaleType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,28 +17,28 @@ public final class SkuSettingCapacityArgs extends io.pulumi.resources.ResourceAr
 
     public static final SkuSettingCapacityArgs Empty = new SkuSettingCapacityArgs();
 
-    @InputImport(name="default")
+    @Import(name="default")
       private final @Nullable Output<Integer> $default;
 
     public Output<Integer> get$default() {
         return this.$default == null ? Output.empty() : this.$default;
     }
 
-    @InputImport(name="maximum")
+    @Import(name="maximum")
       private final @Nullable Output<Integer> maximum;
 
     public Output<Integer> getMaximum() {
         return this.maximum == null ? Output.empty() : this.maximum;
     }
 
-    @InputImport(name="minimum", required=true)
+    @Import(name="minimum", required=true)
       private final Output<Integer> minimum;
 
     public Output<Integer> getMinimum() {
         return this.minimum;
     }
 
-    @InputImport(name="scaleType")
+    @Import(name="scaleType")
       private final @Nullable Output<Either<String,SkuScaleType>> scaleType;
 
     public Output<Either<String,SkuScaleType>> getScaleType() {

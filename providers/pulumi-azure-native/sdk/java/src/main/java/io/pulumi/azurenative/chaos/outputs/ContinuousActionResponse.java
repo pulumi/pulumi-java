@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.chaos.outputs;
 
 import io.pulumi.azurenative.chaos.outputs.KeyValuePairResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContinuousActionResponse {
     /**
      * ISO8601 formatted string that represents a duration.
@@ -38,13 +38,13 @@ public final class ContinuousActionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContinuousActionResponse(
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") List<KeyValuePairResponse> parameters,
-        @OutputCustomType.Parameter("selectorId") String selectorId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") List<KeyValuePairResponse> parameters,
+        @CustomType.Parameter("selectorId") String selectorId,
+        @CustomType.Parameter("type") String type) {
         this.duration = duration;
         this.name = name;
         this.parameters = parameters;

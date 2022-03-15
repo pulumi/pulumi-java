@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql.inputs;
 
 import io.pulumi.azurenative.sql.inputs.SyncGroupSchemaTableArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SyncGroupSchemaArgs extends io.pulumi.resources.ResourceArgs 
      * Name of master sync member where the schema is from.
      * 
      */
-    @InputImport(name="masterSyncMemberName")
+    @Import(name="masterSyncMemberName")
       private final @Nullable Output<String> masterSyncMemberName;
 
     public Output<String> getMasterSyncMemberName() {
@@ -35,7 +35,7 @@ public final class SyncGroupSchemaArgs extends io.pulumi.resources.ResourceArgs 
      * List of tables in sync group schema.
      * 
      */
-    @InputImport(name="tables")
+    @Import(name="tables")
       private final @Nullable Output<List<SyncGroupSchemaTableArgs>> tables;
 
     public Output<List<SyncGroupSchemaTableArgs>> getTables() {

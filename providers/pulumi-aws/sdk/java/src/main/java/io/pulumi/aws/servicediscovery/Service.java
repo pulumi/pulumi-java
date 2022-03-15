@@ -10,7 +10,7 @@ import io.pulumi.aws.servicediscovery.outputs.ServiceDnsConfig;
 import io.pulumi.aws.servicediscovery.outputs.ServiceHealthCheckConfig;
 import io.pulumi.aws.servicediscovery.outputs.ServiceHealthCheckCustomConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The ARN of the service.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -51,7 +51,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The description of the service.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -65,7 +65,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.
      * 
      */
-    @OutputExport(name="dnsConfig", type=ServiceDnsConfig.class, parameters={})
+    @Export(name="dnsConfig", type=ServiceDnsConfig.class, parameters={})
     private Output</* @Nullable */ ServiceDnsConfig> dnsConfig;
 
     /**
@@ -79,7 +79,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable.
      * 
      */
-    @OutputExport(name="forceDestroy", type=Boolean.class, parameters={})
+    @Export(name="forceDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDestroy;
 
     /**
@@ -93,7 +93,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * A complex type that contains settings for an optional health check. Only for Public DNS namespaces.
      * 
      */
-    @OutputExport(name="healthCheckConfig", type=ServiceHealthCheckConfig.class, parameters={})
+    @Export(name="healthCheckConfig", type=ServiceHealthCheckConfig.class, parameters={})
     private Output</* @Nullable */ ServiceHealthCheckConfig> healthCheckConfig;
 
     /**
@@ -107,7 +107,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * A complex type that contains settings for ECS managed health checks.
      * 
      */
-    @OutputExport(name="healthCheckCustomConfig", type=ServiceHealthCheckCustomConfig.class, parameters={})
+    @Export(name="healthCheckCustomConfig", type=ServiceHealthCheckCustomConfig.class, parameters={})
     private Output</* @Nullable */ ServiceHealthCheckCustomConfig> healthCheckCustomConfig;
 
     /**
@@ -121,7 +121,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The name of the service.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -135,7 +135,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The ID of the namespace to use for DNS configuration.
      * 
      */
-    @OutputExport(name="namespaceId", type=String.class, parameters={})
+    @Export(name="namespaceId", type=String.class, parameters={})
     private Output<String> namespaceId;
 
     /**
@@ -149,7 +149,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the service. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -163,7 +163,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

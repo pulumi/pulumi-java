@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
      * The issuer distinguished name in RFC 2253 format. Only present if parsed is true.
      * 
      */
-    @InputImport(name="issuer", required=true)
+    @Import(name="issuer", required=true)
       private final String issuer;
 
     public String getIssuer() {
@@ -33,7 +33,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
      * The certificate is not valid after this time. Only present if parsed is true.
      * 
      */
-    @InputImport(name="notAfterTime", required=true)
+    @Import(name="notAfterTime", required=true)
       private final String notAfterTime;
 
     public String getNotAfterTime() {
@@ -44,7 +44,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
      * The certificate is not valid before this time. Only present if parsed is true.
      * 
      */
-    @InputImport(name="notBeforeTime", required=true)
+    @Import(name="notBeforeTime", required=true)
       private final String notBeforeTime;
 
     public String getNotBeforeTime() {
@@ -55,7 +55,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
      * True if the certificate was parsed successfully.
      * 
      */
-    @InputImport(name="parsed", required=true)
+    @Import(name="parsed", required=true)
       private final Boolean parsed;
 
     public Boolean getParsed() {
@@ -66,7 +66,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
      * The raw certificate bytes in DER format.
      * 
      */
-    @InputImport(name="rawDer", required=true)
+    @Import(name="rawDer", required=true)
       private final String rawDer;
 
     public String getRawDer() {
@@ -77,7 +77,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
      * The certificate serial number as a hex string. Only present if parsed is true.
      * 
      */
-    @InputImport(name="serialNumber", required=true)
+    @Import(name="serialNumber", required=true)
       private final String serialNumber;
 
     public String getSerialNumber() {
@@ -88,7 +88,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
      * The SHA-256 certificate fingerprint as a hex string. Only present if parsed is true.
      * 
      */
-    @InputImport(name="sha256Fingerprint", required=true)
+    @Import(name="sha256Fingerprint", required=true)
       private final String sha256Fingerprint;
 
     public String getSha256Fingerprint() {
@@ -99,7 +99,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
      * The subject distinguished name in RFC 2253 format. Only present if parsed is true.
      * 
      */
-    @InputImport(name="subject", required=true)
+    @Import(name="subject", required=true)
       private final String subject;
 
     public String getSubject() {
@@ -110,7 +110,7 @@ public final class CertificateResponse extends io.pulumi.resources.InvokeArgs {
      * The subject Alternative DNS names. Only present if parsed is true.
      * 
      */
-    @InputImport(name="subjectAlternativeDnsNames", required=true)
+    @Import(name="subjectAlternativeDnsNames", required=true)
       private final List<String> subjectAlternativeDnsNames;
 
     public List<String> getSubjectAlternativeDnsNames() {

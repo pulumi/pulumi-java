@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IncidentLabelResponse {
     /**
      * The name of the label
@@ -20,10 +20,10 @@ public final class IncidentLabelResponse {
      */
     private final String labelType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IncidentLabelResponse(
-        @OutputCustomType.Parameter("labelName") String labelName,
-        @OutputCustomType.Parameter("labelType") String labelType) {
+        @CustomType.Parameter("labelName") String labelName,
+        @CustomType.Parameter("labelType") String labelType) {
         this.labelName = labelName;
         this.labelType = labelType;
     }

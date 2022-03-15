@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Any Key value pairs that can be provided to the client for additional  verbose information.
      * 
      */
-    @InputImport(name="additionalInfo")
+    @Import(name="additionalInfo")
       private final @Nullable Map<String,String> additionalInfo;
 
     public Map<String,String> getAdditionalInfo() {
@@ -34,7 +34,7 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Unique code for this error
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable String code;
 
     public Optional<String> getCode() {
@@ -45,7 +45,7 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Child Inner Error, to allow Nesting.
      * 
      */
-    @InputImport(name="embeddedInnerError")
+    @Import(name="embeddedInnerError")
       private final @Nullable InnerErrorResponse embeddedInnerError;
 
     public Optional<InnerErrorResponse> getEmbeddedInnerError() {

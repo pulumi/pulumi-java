@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse {
     /**
      * Framework on which the built-in algorithm was trained.
@@ -30,12 +30,12 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse {
      */
     private final String runtimeVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1__BuiltInAlgorithmOutputResponse(
-        @OutputCustomType.Parameter("framework") String framework,
-        @OutputCustomType.Parameter("modelPath") String modelPath,
-        @OutputCustomType.Parameter("pythonVersion") String pythonVersion,
-        @OutputCustomType.Parameter("runtimeVersion") String runtimeVersion) {
+        @CustomType.Parameter("framework") String framework,
+        @CustomType.Parameter("modelPath") String modelPath,
+        @CustomType.Parameter("pythonVersion") String pythonVersion,
+        @CustomType.Parameter("runtimeVersion") String runtimeVersion) {
         this.framework = framework;
         this.modelPath = modelPath;
         this.pythonVersion = pythonVersion;

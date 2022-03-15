@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.TlsCertificateContextResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.TlsValidationContextResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TlsContextResponse extends io.pulumi.resources.InvokeArgs {
      * Defines the mechanism to obtain the client or server certificate.
      * 
      */
-    @InputImport(name="certificateContext", required=true)
+    @Import(name="certificateContext", required=true)
       private final TlsCertificateContextResponse certificateContext;
 
     public TlsCertificateContextResponse getCertificateContext() {
@@ -32,7 +32,7 @@ public final class TlsContextResponse extends io.pulumi.resources.InvokeArgs {
      * Defines the mechanism to obtain the Certificate Authority certificate to validate the client/server certificate. If omitted, the proxy will not validate the server or client certificate.
      * 
      */
-    @InputImport(name="validationContext", required=true)
+    @Import(name="validationContext", required=true)
       private final TlsValidationContextResponse validationContext;
 
     public TlsValidationContextResponse getValidationContext() {

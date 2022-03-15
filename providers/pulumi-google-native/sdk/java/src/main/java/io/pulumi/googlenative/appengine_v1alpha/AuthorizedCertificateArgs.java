@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.appengine_v1alpha.inputs.CertificateRawDataArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
 
     public static final AuthorizedCertificateArgs Empty = new AuthorizedCertificateArgs();
 
-    @InputImport(name="appId", required=true)
+    @Import(name="appId", required=true)
       private final Output<String> appId;
 
     public Output<String> getAppId() {
@@ -26,7 +26,7 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
      * The SSL certificate serving the AuthorizedCertificate resource. This must be obtained independently from a certificate authority.
      * 
      */
-    @InputImport(name="certificateRawData")
+    @Import(name="certificateRawData")
       private final @Nullable Output<CertificateRawDataArgs> certificateRawData;
 
     public Output<CertificateRawDataArgs> getCertificateRawData() {
@@ -37,7 +37,7 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
      * The user-specified display name of the certificate. This is not guaranteed to be unique. Example: My Certificate.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {

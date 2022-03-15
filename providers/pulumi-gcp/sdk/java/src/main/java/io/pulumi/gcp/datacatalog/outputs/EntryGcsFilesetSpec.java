@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.datacatalog.outputs.EntryGcsFilesetSpecSampleGcsFileSpec;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EntryGcsFilesetSpec {
     /**
      * Patterns to identify a set of files in Google Cloud Storage.
@@ -35,10 +35,10 @@ public final class EntryGcsFilesetSpec {
      */
     private final @Nullable List<EntryGcsFilesetSpecSampleGcsFileSpec> sampleGcsFileSpecs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EntryGcsFilesetSpec(
-        @OutputCustomType.Parameter("filePatterns") List<String> filePatterns,
-        @OutputCustomType.Parameter("sampleGcsFileSpecs") @Nullable List<EntryGcsFilesetSpecSampleGcsFileSpec> sampleGcsFileSpecs) {
+        @CustomType.Parameter("filePatterns") List<String> filePatterns,
+        @CustomType.Parameter("sampleGcsFileSpecs") @Nullable List<EntryGcsFilesetSpecSampleGcsFileSpec> sampleGcsFileSpecs) {
         this.filePatterns = filePatterns;
         this.sampleGcsFileSpecs = sampleGcsFileSpecs;
     }

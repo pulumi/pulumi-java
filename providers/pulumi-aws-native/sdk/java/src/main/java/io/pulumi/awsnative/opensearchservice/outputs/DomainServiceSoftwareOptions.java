@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.opensearchservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainServiceSoftwareOptions {
     private final @Nullable String automatedUpdateDate;
     private final @Nullable Boolean cancellable;
@@ -21,16 +21,16 @@ public final class DomainServiceSoftwareOptions {
     private final @Nullable Boolean updateAvailable;
     private final @Nullable String updateStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainServiceSoftwareOptions(
-        @OutputCustomType.Parameter("automatedUpdateDate") @Nullable String automatedUpdateDate,
-        @OutputCustomType.Parameter("cancellable") @Nullable Boolean cancellable,
-        @OutputCustomType.Parameter("currentVersion") @Nullable String currentVersion,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("newVersion") @Nullable String newVersion,
-        @OutputCustomType.Parameter("optionalDeployment") @Nullable Boolean optionalDeployment,
-        @OutputCustomType.Parameter("updateAvailable") @Nullable Boolean updateAvailable,
-        @OutputCustomType.Parameter("updateStatus") @Nullable String updateStatus) {
+        @CustomType.Parameter("automatedUpdateDate") @Nullable String automatedUpdateDate,
+        @CustomType.Parameter("cancellable") @Nullable Boolean cancellable,
+        @CustomType.Parameter("currentVersion") @Nullable String currentVersion,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("newVersion") @Nullable String newVersion,
+        @CustomType.Parameter("optionalDeployment") @Nullable Boolean optionalDeployment,
+        @CustomType.Parameter("updateAvailable") @Nullable Boolean updateAvailable,
+        @CustomType.Parameter("updateStatus") @Nullable String updateStatus) {
         this.automatedUpdateDate = automatedUpdateDate;
         this.cancellable = cancellable;
         this.currentVersion = currentVersion;

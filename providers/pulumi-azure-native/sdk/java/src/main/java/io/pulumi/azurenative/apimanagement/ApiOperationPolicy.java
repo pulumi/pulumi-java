@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.ApiOperationPolicyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ApiOperationPolicy extends io.pulumi.resources.CustomResource {
      * Format of the policyContent.
      * 
      */
-    @OutputExport(name="format", type=String.class, parameters={})
+    @Export(name="format", type=String.class, parameters={})
     private Output</* @Nullable */ String> format;
 
     /**
@@ -48,7 +48,7 @@ public class ApiOperationPolicy extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -62,7 +62,7 @@ public class ApiOperationPolicy extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -76,7 +76,7 @@ public class ApiOperationPolicy extends io.pulumi.resources.CustomResource {
      * Contents of the Policy as defined by the format.
      * 
      */
-    @OutputExport(name="value", type=String.class, parameters={})
+    @Export(name="value", type=String.class, parameters={})
     private Output<String> value;
 
     /**

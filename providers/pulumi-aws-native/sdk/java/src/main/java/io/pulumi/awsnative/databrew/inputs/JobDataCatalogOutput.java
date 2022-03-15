@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.JobDatabaseTableOutputOptions;
 import io.pulumi.awsnative.databrew.inputs.JobS3TableOutputOptions;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,42 +17,42 @@ public final class JobDataCatalogOutput extends io.pulumi.resources.InvokeArgs {
 
     public static final JobDataCatalogOutput Empty = new JobDataCatalogOutput();
 
-    @InputImport(name="catalogId")
+    @Import(name="catalogId")
       private final @Nullable String catalogId;
 
     public Optional<String> getCatalogId() {
         return this.catalogId == null ? Optional.empty() : Optional.ofNullable(this.catalogId);
     }
 
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
     }
 
-    @InputImport(name="databaseOptions")
+    @Import(name="databaseOptions")
       private final @Nullable JobDatabaseTableOutputOptions databaseOptions;
 
     public Optional<JobDatabaseTableOutputOptions> getDatabaseOptions() {
         return this.databaseOptions == null ? Optional.empty() : Optional.ofNullable(this.databaseOptions);
     }
 
-    @InputImport(name="overwrite")
+    @Import(name="overwrite")
       private final @Nullable Boolean overwrite;
 
     public Optional<Boolean> getOverwrite() {
         return this.overwrite == null ? Optional.empty() : Optional.ofNullable(this.overwrite);
     }
 
-    @InputImport(name="s3Options")
+    @Import(name="s3Options")
       private final @Nullable JobS3TableOutputOptions s3Options;
 
     public Optional<JobS3TableOutputOptions> getS3Options() {
         return this.s3Options == null ? Optional.empty() : Optional.ofNullable(this.s3Options);
     }
 
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final String tableName;
 
     public String getTableName() {

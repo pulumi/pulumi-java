@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DataDiskStorageTypeInfoResponse extends io.pulumi.resources.I
      * Disk Lun
      * 
      */
-    @InputImport(name="lun")
+    @Import(name="lun")
       private final @Nullable String lun;
 
     public Optional<String> getLun() {
@@ -33,7 +33,7 @@ public final class DataDiskStorageTypeInfoResponse extends io.pulumi.resources.I
      * Disk Storage Type
      * 
      */
-    @InputImport(name="storageType")
+    @Import(name="storageType")
       private final @Nullable String storageType;
 
     public Optional<String> getStorageType() {

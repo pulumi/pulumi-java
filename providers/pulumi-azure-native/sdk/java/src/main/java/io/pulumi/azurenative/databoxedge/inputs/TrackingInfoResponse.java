@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class TrackingInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the carrier used in the delivery.
      * 
      */
-    @InputImport(name="carrierName")
+    @Import(name="carrierName")
       private final @Nullable String carrierName;
 
     public Optional<String> getCarrierName() {
@@ -33,7 +33,7 @@ public final class TrackingInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Serial number of the device being tracked.
      * 
      */
-    @InputImport(name="serialNumber")
+    @Import(name="serialNumber")
       private final @Nullable String serialNumber;
 
     public Optional<String> getSerialNumber() {
@@ -44,7 +44,7 @@ public final class TrackingInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Tracking ID of the shipment.
      * 
      */
-    @InputImport(name="trackingId")
+    @Import(name="trackingId")
       private final @Nullable String trackingId;
 
     public Optional<String> getTrackingId() {
@@ -55,7 +55,7 @@ public final class TrackingInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Tracking URL of the shipment.
      * 
      */
-    @InputImport(name="trackingUrl")
+    @Import(name="trackingUrl")
       private final @Nullable String trackingUrl;
 
     public Optional<String> getTrackingUrl() {

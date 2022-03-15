@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DatasetAccessViewGetArgs extends io.pulumi.resources.Resource
      * The ID of the dataset containing this table.
      * 
      */
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
     public Output<String> getDatasetId() {
@@ -28,7 +28,7 @@ public final class DatasetAccessViewGetArgs extends io.pulumi.resources.Resource
      * The ID of the project containing this table.
      * 
      */
-    @InputImport(name="projectId", required=true)
+    @Import(name="projectId", required=true)
       private final Output<String> projectId;
 
     public Output<String> getProjectId() {
@@ -41,7 +41,7 @@ public final class DatasetAccessViewGetArgs extends io.pulumi.resources.Resource
      * is 1,024 characters.
      * 
      */
-    @InputImport(name="tableId", required=true)
+    @Import(name="tableId", required=true)
       private final Output<String> tableId;
 
     public Output<String> getTableId() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.ssmcontacts.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetContactChannelResult {
     /**
      * The Amazon Resource Name (ARN) of the engagement to a contact channel.
@@ -33,12 +33,12 @@ public final class GetContactChannelResult {
      */
     private final @Nullable Boolean deferActivation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetContactChannelResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("channelAddress") @Nullable String channelAddress,
-        @OutputCustomType.Parameter("channelName") @Nullable String channelName,
-        @OutputCustomType.Parameter("deferActivation") @Nullable Boolean deferActivation) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("channelAddress") @Nullable String channelAddress,
+        @CustomType.Parameter("channelName") @Nullable String channelName,
+        @CustomType.Parameter("deferActivation") @Nullable Boolean deferActivation) {
         this.arn = arn;
         this.channelAddress = channelAddress;
         this.channelName = channelName;

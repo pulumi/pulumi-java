@@ -5,7 +5,7 @@ package io.pulumi.aws.codepipeline.inputs;
 
 import io.pulumi.aws.codepipeline.inputs.PipelineArtifactStoreEncryptionKeyGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PipelineArtifactStoreGetArgs extends io.pulumi.resources.Reso
      * The encryption key block AWS CodePipeline uses to encrypt the data in the artifact store, such as an AWS Key Management Service (AWS KMS) key. If you don't specify a key, AWS CodePipeline uses the default key for Amazon Simple Storage Service (Amazon S3). An `encryption_key` block is documented below.
      * 
      */
-    @InputImport(name="encryptionKey")
+    @Import(name="encryptionKey")
       private final @Nullable Output<PipelineArtifactStoreEncryptionKeyGetArgs> encryptionKey;
 
     public Output<PipelineArtifactStoreEncryptionKeyGetArgs> getEncryptionKey() {
@@ -30,7 +30,7 @@ public final class PipelineArtifactStoreGetArgs extends io.pulumi.resources.Reso
      * The location where AWS CodePipeline stores artifacts for a pipeline; currently only `S3` is supported.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -41,7 +41,7 @@ public final class PipelineArtifactStoreGetArgs extends io.pulumi.resources.Reso
      * The region where the artifact store is located. Required for a cross-region CodePipeline, do not provide for a single-region CodePipeline.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -52,7 +52,7 @@ public final class PipelineArtifactStoreGetArgs extends io.pulumi.resources.Reso
      * The type of the artifact store, such as Amazon S3
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

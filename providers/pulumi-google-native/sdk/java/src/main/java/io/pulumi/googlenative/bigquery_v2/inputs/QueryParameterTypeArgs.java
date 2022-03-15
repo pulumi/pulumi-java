@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.QueryParameterTypeStructTypesItemArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
      * [Optional] The type of the array's elements, if this is an array.
      * 
      */
-    @InputImport(name="arrayType")
+    @Import(name="arrayType")
       private final @Nullable Output<QueryParameterTypeArgs> arrayType;
 
     public Output<QueryParameterTypeArgs> getArrayType() {
@@ -31,7 +31,7 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
      * [Optional] The types of the fields of this struct, in order, if this is a struct.
      * 
      */
-    @InputImport(name="structTypes")
+    @Import(name="structTypes")
       private final @Nullable Output<List<QueryParameterTypeStructTypesItemArgs>> structTypes;
 
     public Output<List<QueryParameterTypeStructTypesItemArgs>> getStructTypes() {
@@ -42,7 +42,7 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
      * [Required] The top level type of this field.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

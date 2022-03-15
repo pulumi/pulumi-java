@@ -7,13 +7,13 @@ import io.pulumi.awsnative.kendra.enums.DataSourceServiceNowAuthenticationType;
 import io.pulumi.awsnative.kendra.enums.DataSourceServiceNowBuildVersionType;
 import io.pulumi.awsnative.kendra.outputs.DataSourceServiceNowKnowledgeArticleConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceServiceNowServiceCatalogConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceServiceNowConfiguration {
     private final @Nullable DataSourceServiceNowAuthenticationType authenticationType;
     private final String hostUrl;
@@ -22,14 +22,14 @@ public final class DataSourceServiceNowConfiguration {
     private final @Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration;
     private final DataSourceServiceNowBuildVersionType serviceNowBuildVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceServiceNowConfiguration(
-        @OutputCustomType.Parameter("authenticationType") @Nullable DataSourceServiceNowAuthenticationType authenticationType,
-        @OutputCustomType.Parameter("hostUrl") String hostUrl,
-        @OutputCustomType.Parameter("knowledgeArticleConfiguration") @Nullable DataSourceServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration,
-        @OutputCustomType.Parameter("secretArn") String secretArn,
-        @OutputCustomType.Parameter("serviceCatalogConfiguration") @Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration,
-        @OutputCustomType.Parameter("serviceNowBuildVersion") DataSourceServiceNowBuildVersionType serviceNowBuildVersion) {
+        @CustomType.Parameter("authenticationType") @Nullable DataSourceServiceNowAuthenticationType authenticationType,
+        @CustomType.Parameter("hostUrl") String hostUrl,
+        @CustomType.Parameter("knowledgeArticleConfiguration") @Nullable DataSourceServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration,
+        @CustomType.Parameter("secretArn") String secretArn,
+        @CustomType.Parameter("serviceCatalogConfiguration") @Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration,
+        @CustomType.Parameter("serviceNowBuildVersion") DataSourceServiceNowBuildVersionType serviceNowBuildVersion) {
         this.authenticationType = authenticationType;
         this.hostUrl = hostUrl;
         this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;

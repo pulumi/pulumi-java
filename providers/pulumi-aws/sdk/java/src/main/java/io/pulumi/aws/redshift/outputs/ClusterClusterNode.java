@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.redshift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClusterNode {
     /**
      * Whether the node is a leader node or a compute node
@@ -27,11 +27,11 @@ public final class ClusterClusterNode {
      */
     private final @Nullable String publicIpAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterClusterNode(
-        @OutputCustomType.Parameter("nodeRole") @Nullable String nodeRole,
-        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
-        @OutputCustomType.Parameter("publicIpAddress") @Nullable String publicIpAddress) {
+        @CustomType.Parameter("nodeRole") @Nullable String nodeRole,
+        @CustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
+        @CustomType.Parameter("publicIpAddress") @Nullable String publicIpAddress) {
         this.nodeRole = nodeRole;
         this.privateIpAddress = privateIpAddress;
         this.publicIpAddress = publicIpAddress;

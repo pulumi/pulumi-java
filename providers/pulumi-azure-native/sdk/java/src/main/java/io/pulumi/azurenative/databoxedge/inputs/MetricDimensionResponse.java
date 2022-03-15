@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArg
      * The dimension value.
      * 
      */
-    @InputImport(name="sourceName", required=true)
+    @Import(name="sourceName", required=true)
       private final String sourceName;
 
     public String getSourceName() {
@@ -31,7 +31,7 @@ public final class MetricDimensionResponse extends io.pulumi.resources.InvokeArg
      * The dimension type.
      * 
      */
-    @InputImport(name="sourceType", required=true)
+    @Import(name="sourceType", required=true)
       private final String sourceType;
 
     public String getSourceType() {

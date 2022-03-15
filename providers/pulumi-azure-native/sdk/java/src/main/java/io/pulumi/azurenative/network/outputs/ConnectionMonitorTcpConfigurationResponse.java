@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionMonitorTcpConfigurationResponse {
     /**
      * Destination port behavior.
@@ -29,11 +29,11 @@ public final class ConnectionMonitorTcpConfigurationResponse {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionMonitorTcpConfigurationResponse(
-        @OutputCustomType.Parameter("destinationPortBehavior") @Nullable String destinationPortBehavior,
-        @OutputCustomType.Parameter("disableTraceRoute") @Nullable Boolean disableTraceRoute,
-        @OutputCustomType.Parameter("port") @Nullable Integer port) {
+        @CustomType.Parameter("destinationPortBehavior") @Nullable String destinationPortBehavior,
+        @CustomType.Parameter("disableTraceRoute") @Nullable Boolean disableTraceRoute,
+        @CustomType.Parameter("port") @Nullable Integer port) {
         this.destinationPortBehavior = destinationPortBehavior;
         this.disableTraceRoute = disableTraceRoute;
         this.port = port;

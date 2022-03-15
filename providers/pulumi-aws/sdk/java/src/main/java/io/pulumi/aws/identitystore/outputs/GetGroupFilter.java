@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.identitystore.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGroupFilter {
     /**
      * The attribute path that is used to specify which attribute name to search. Currently, `DisplayName` is the only valid attribute path.
@@ -20,10 +20,10 @@ public final class GetGroupFilter {
      */
     private final String attributeValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGroupFilter(
-        @OutputCustomType.Parameter("attributePath") String attributePath,
-        @OutputCustomType.Parameter("attributeValue") String attributeValue) {
+        @CustomType.Parameter("attributePath") String attributePath,
+        @CustomType.Parameter("attributeValue") String attributeValue) {
         this.attributePath = attributePath;
         this.attributeValue = attributeValue;
     }

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CategoryResponse {
     /**
      * The identifier of the category.
@@ -20,10 +20,10 @@ public final class CategoryResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CategoryResponse(
-        @OutputCustomType.Parameter("categoryId") String categoryId,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("categoryId") String categoryId,
+        @CustomType.Parameter("name") String name) {
         this.categoryId = categoryId;
         this.name = name;
     }

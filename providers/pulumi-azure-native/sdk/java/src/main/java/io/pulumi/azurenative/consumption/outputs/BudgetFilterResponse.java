@@ -5,13 +5,13 @@ package io.pulumi.azurenative.consumption.outputs;
 
 import io.pulumi.azurenative.consumption.outputs.BudgetComparisonExpressionResponse;
 import io.pulumi.azurenative.consumption.outputs.BudgetFilterPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BudgetFilterResponse {
     /**
      * The logical "AND" expression. Must have at least 2 items.
@@ -34,12 +34,12 @@ public final class BudgetFilterResponse {
      */
     private final @Nullable BudgetComparisonExpressionResponse tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetFilterResponse(
-        @OutputCustomType.Parameter("and") @Nullable List<BudgetFilterPropertiesResponse> and,
-        @OutputCustomType.Parameter("dimensions") @Nullable BudgetComparisonExpressionResponse dimensions,
-        @OutputCustomType.Parameter("not") @Nullable BudgetFilterPropertiesResponse not,
-        @OutputCustomType.Parameter("tags") @Nullable BudgetComparisonExpressionResponse tags) {
+        @CustomType.Parameter("and") @Nullable List<BudgetFilterPropertiesResponse> and,
+        @CustomType.Parameter("dimensions") @Nullable BudgetComparisonExpressionResponse dimensions,
+        @CustomType.Parameter("not") @Nullable BudgetFilterPropertiesResponse not,
+        @CustomType.Parameter("tags") @Nullable BudgetComparisonExpressionResponse tags) {
         this.and = and;
         this.dimensions = dimensions;
         this.not = not;

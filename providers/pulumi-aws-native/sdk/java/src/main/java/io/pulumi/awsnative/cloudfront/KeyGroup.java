@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cloudfront.KeyGroupArgs;
 import io.pulumi.awsnative.cloudfront.outputs.KeyGroupConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -18,13 +18,13 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:cloudfront:KeyGroup")
 public class KeyGroup extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="keyGroupConfig", type=KeyGroupConfig.class, parameters={})
+    @Export(name="keyGroupConfig", type=KeyGroupConfig.class, parameters={})
     private Output<KeyGroupConfig> keyGroupConfig;
 
     public Output<KeyGroupConfig> getKeyGroupConfig() {
         return this.keyGroupConfig;
     }
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     public Output<String> getLastModifiedTime() {

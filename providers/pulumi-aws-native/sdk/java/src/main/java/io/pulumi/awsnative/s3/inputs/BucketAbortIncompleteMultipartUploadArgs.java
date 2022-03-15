@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BucketAbortIncompleteMultipartUploadArgs extends io.pulumi.re
      * Specifies the number of days after which Amazon S3 aborts an incomplete multipart upload.
      * 
      */
-    @InputImport(name="daysAfterInitiation", required=true)
+    @Import(name="daysAfterInitiation", required=true)
       private final Output<Integer> daysAfterInitiation;
 
     public Output<Integer> getDaysAfterInitiation() {

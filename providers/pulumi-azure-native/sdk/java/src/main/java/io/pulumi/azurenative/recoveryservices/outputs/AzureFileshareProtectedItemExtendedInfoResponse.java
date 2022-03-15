@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureFileshareProtectedItemExtendedInfoResponse {
     /**
      * The oldest backup copy available for this item in the service.
@@ -38,13 +38,13 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse {
      */
     private final String resourceStateSyncTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureFileshareProtectedItemExtendedInfoResponse(
-        @OutputCustomType.Parameter("oldestRecoveryPoint") @Nullable String oldestRecoveryPoint,
-        @OutputCustomType.Parameter("policyState") @Nullable String policyState,
-        @OutputCustomType.Parameter("recoveryPointCount") @Nullable Integer recoveryPointCount,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("resourceStateSyncTime") String resourceStateSyncTime) {
+        @CustomType.Parameter("oldestRecoveryPoint") @Nullable String oldestRecoveryPoint,
+        @CustomType.Parameter("policyState") @Nullable String policyState,
+        @CustomType.Parameter("recoveryPointCount") @Nullable Integer recoveryPointCount,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("resourceStateSyncTime") String resourceStateSyncTime) {
         this.oldestRecoveryPoint = oldestRecoveryPoint;
         this.policyState = policyState;
         this.recoveryPointCount = recoveryPointCount;

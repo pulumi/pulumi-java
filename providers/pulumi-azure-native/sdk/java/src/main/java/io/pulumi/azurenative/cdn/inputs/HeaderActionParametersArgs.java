@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.enums.HeaderAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
      * Action to perform
      * 
      */
-    @InputImport(name="headerAction", required=true)
+    @Import(name="headerAction", required=true)
       private final Output<Either<String,HeaderAction>> headerAction;
 
     public Output<Either<String,HeaderAction>> getHeaderAction() {
@@ -35,14 +35,14 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
      * Name of the header to modify
      * 
      */
-    @InputImport(name="headerName", required=true)
+    @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
     public Output<String> getHeaderName() {
         return this.headerName;
     }
 
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -53,7 +53,7 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
      * Value for the specified action
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

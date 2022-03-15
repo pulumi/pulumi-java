@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetInstanceTemplateArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetInstanceTemplateArgs Empty = new GetInstanceTemplateArgs();
 
-    @InputImport(name="instanceTemplate", required=true)
+    @Import(name="instanceTemplate", required=true)
       private final String instanceTemplate;
 
     public String getInstanceTemplate() {
         return this.instanceTemplate;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

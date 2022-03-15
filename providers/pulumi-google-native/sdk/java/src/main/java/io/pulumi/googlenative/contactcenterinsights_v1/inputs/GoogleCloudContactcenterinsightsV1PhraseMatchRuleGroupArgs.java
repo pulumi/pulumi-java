@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.contactcenterinsights_v1.enums.GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
      * A list of phase match rules that are included in this group.
      * 
      */
-    @InputImport(name="phraseMatchRules")
+    @Import(name="phraseMatchRules")
       private final @Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules;
 
     public Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> getPhraseMatchRules() {
@@ -35,7 +35,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
      * The type of this phrase match rule group.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type;
 
     public Output<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> getType() {

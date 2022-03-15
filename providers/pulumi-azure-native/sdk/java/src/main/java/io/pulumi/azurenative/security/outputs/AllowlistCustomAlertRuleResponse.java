@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AllowlistCustomAlertRuleResponse {
     /**
      * The values to allow. The format of the values depends on the rule type.
@@ -43,14 +43,14 @@ public final class AllowlistCustomAlertRuleResponse {
      */
     private final String valueType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AllowlistCustomAlertRuleResponse(
-        @OutputCustomType.Parameter("allowlistValues") List<String> allowlistValues,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("ruleType") String ruleType,
-        @OutputCustomType.Parameter("valueType") String valueType) {
+        @CustomType.Parameter("allowlistValues") List<String> allowlistValues,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("ruleType") String ruleType,
+        @CustomType.Parameter("valueType") String valueType) {
         this.allowlistValues = allowlistValues;
         this.description = description;
         this.displayName = displayName;

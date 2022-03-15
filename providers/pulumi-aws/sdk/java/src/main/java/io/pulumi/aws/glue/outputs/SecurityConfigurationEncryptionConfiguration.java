@@ -6,10 +6,10 @@ package io.pulumi.aws.glue.outputs;
 import io.pulumi.aws.glue.outputs.SecurityConfigurationEncryptionConfigurationCloudwatchEncryption;
 import io.pulumi.aws.glue.outputs.SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption;
 import io.pulumi.aws.glue.outputs.SecurityConfigurationEncryptionConfigurationS3Encryption;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityConfigurationEncryptionConfiguration {
     private final SecurityConfigurationEncryptionConfigurationCloudwatchEncryption cloudwatchEncryption;
     private final SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption jobBookmarksEncryption;
@@ -19,11 +19,11 @@ public final class SecurityConfigurationEncryptionConfiguration {
      */
     private final SecurityConfigurationEncryptionConfigurationS3Encryption s3Encryption;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityConfigurationEncryptionConfiguration(
-        @OutputCustomType.Parameter("cloudwatchEncryption") SecurityConfigurationEncryptionConfigurationCloudwatchEncryption cloudwatchEncryption,
-        @OutputCustomType.Parameter("jobBookmarksEncryption") SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption jobBookmarksEncryption,
-        @OutputCustomType.Parameter("s3Encryption") SecurityConfigurationEncryptionConfigurationS3Encryption s3Encryption) {
+        @CustomType.Parameter("cloudwatchEncryption") SecurityConfigurationEncryptionConfigurationCloudwatchEncryption cloudwatchEncryption,
+        @CustomType.Parameter("jobBookmarksEncryption") SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption jobBookmarksEncryption,
+        @CustomType.Parameter("s3Encryption") SecurityConfigurationEncryptionConfigurationS3Encryption s3Encryption) {
         this.cloudwatchEncryption = cloudwatchEncryption;
         this.jobBookmarksEncryption = jobBookmarksEncryption;
         this.s3Encryption = s3Encryption;

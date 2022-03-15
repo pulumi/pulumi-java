@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * Optional customer-defined field, used in OpenAPI imports and exports without functional impact.
      * 
      */
-    @InputImport(name="authType")
+    @Import(name="authType")
       private final @Nullable Output<String> authType;
 
     public Output<String> getAuthType() {
@@ -31,7 +31,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the required credentials as an IAM role for API Gateway to invoke the authorizer.
      * 
      */
-    @InputImport(name="authorizerCredentials")
+    @Import(name="authorizerCredentials")
       private final @Nullable Output<String> authorizerCredentials;
 
     public Output<String> getAuthorizerCredentials() {
@@ -42,7 +42,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * The TTL in seconds of cached authorizer results.
      * 
      */
-    @InputImport(name="authorizerResultTtlInSeconds")
+    @Import(name="authorizerResultTtlInSeconds")
       private final @Nullable Output<Integer> authorizerResultTtlInSeconds;
 
     public Output<Integer> getAuthorizerResultTtlInSeconds() {
@@ -53,7 +53,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the authorizer's Uniform Resource Identifier (URI).
      * 
      */
-    @InputImport(name="authorizerUri")
+    @Import(name="authorizerUri")
       private final @Nullable Output<String> authorizerUri;
 
     public Output<String> getAuthorizerUri() {
@@ -64,7 +64,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * The identity source for which authorization is requested.
      * 
      */
-    @InputImport(name="identitySource")
+    @Import(name="identitySource")
       private final @Nullable Output<String> identitySource;
 
     public Output<String> getIdentitySource() {
@@ -75,7 +75,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * A validation expression for the incoming identity token.
      * 
      */
-    @InputImport(name="identityValidationExpression")
+    @Import(name="identityValidationExpression")
       private final @Nullable Output<String> identityValidationExpression;
 
     public Output<String> getIdentityValidationExpression() {
@@ -86,7 +86,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the authorizer.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -97,7 +97,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * A list of the Amazon Cognito user pool ARNs for the COGNITO_USER_POOLS authorizer.
      * 
      */
-    @InputImport(name="providerARNs")
+    @Import(name="providerARNs")
       private final @Nullable Output<List<String>> providerARNs;
 
     public Output<List<String>> getProviderARNs() {
@@ -108,7 +108,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier of the API.
      * 
      */
-    @InputImport(name="restApiId", required=true)
+    @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
     public Output<String> getRestApiId() {
@@ -119,7 +119,7 @@ public final class AuthorizerArgs extends io.pulumi.resources.ResourceArgs {
      * The authorizer type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

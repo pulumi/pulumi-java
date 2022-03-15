@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MonitoringScheduleScheduleConfig {
     /**
      * A cron expression that describes details about the monitoring schedule.
@@ -15,8 +15,8 @@ public final class MonitoringScheduleScheduleConfig {
      */
     private final String scheduleExpression;
 
-    @OutputCustomType.Constructor
-    private MonitoringScheduleScheduleConfig(@OutputCustomType.Parameter("scheduleExpression") String scheduleExpression) {
+    @CustomType.Constructor
+    private MonitoringScheduleScheduleConfig(@CustomType.Parameter("scheduleExpression") String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
     }
 

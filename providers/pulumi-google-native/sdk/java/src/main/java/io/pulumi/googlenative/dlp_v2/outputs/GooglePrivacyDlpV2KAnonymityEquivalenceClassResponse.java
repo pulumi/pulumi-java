@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse {
     /**
      * Size of the equivalence class, for example number of rows with the above set of values.
@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse {
      */
     private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse(
-        @OutputCustomType.Parameter("equivalenceClassSize") String equivalenceClassSize,
-        @OutputCustomType.Parameter("quasiIdsValues") List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
+        @CustomType.Parameter("equivalenceClassSize") String equivalenceClassSize,
+        @CustomType.Parameter("quasiIdsValues") List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
         this.equivalenceClassSize = equivalenceClassSize;
         this.quasiIdsValues = quasiIdsValues;
     }

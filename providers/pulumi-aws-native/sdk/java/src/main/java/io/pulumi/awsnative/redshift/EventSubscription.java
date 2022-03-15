@@ -11,7 +11,7 @@ import io.pulumi.awsnative.redshift.enums.EventSubscriptionSourceType;
 import io.pulumi.awsnative.redshift.enums.EventSubscriptionStatus;
 import io.pulumi.awsnative.redshift.outputs.EventSubscriptionTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,7 +28,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * The name of the Amazon Redshift event notification subscription.
      * 
      */
-    @OutputExport(name="custSubscriptionId", type=String.class, parameters={})
+    @Export(name="custSubscriptionId", type=String.class, parameters={})
     private Output<String> custSubscriptionId;
 
     /**
@@ -42,7 +42,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * The AWS account associated with the Amazon Redshift event notification subscription.
      * 
      */
-    @OutputExport(name="customerAwsId", type=String.class, parameters={})
+    @Export(name="customerAwsId", type=String.class, parameters={})
     private Output<String> customerAwsId;
 
     /**
@@ -56,7 +56,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * A boolean value; set to true to activate the subscription, and set to false to create the subscription but not activate it.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -70,7 +70,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * Specifies the Amazon Redshift event categories to be published by the event notification subscription.
      * 
      */
-    @OutputExport(name="eventCategories", type=List.class, parameters={EventSubscriptionEventCategoriesItem.class})
+    @Export(name="eventCategories", type=List.class, parameters={EventSubscriptionEventCategoriesItem.class})
     private Output</* @Nullable */ List<EventSubscriptionEventCategoriesItem>> eventCategories;
 
     /**
@@ -84,7 +84,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * The list of Amazon Redshift event categories specified in the event notification subscription.
      * 
      */
-    @OutputExport(name="eventCategoriesList", type=List.class, parameters={String.class})
+    @Export(name="eventCategoriesList", type=List.class, parameters={String.class})
     private Output<List<String>> eventCategoriesList;
 
     /**
@@ -98,7 +98,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * Specifies the Amazon Redshift event severity to be published by the event notification subscription.
      * 
      */
-    @OutputExport(name="severity", type=EventSubscriptionSeverity.class, parameters={})
+    @Export(name="severity", type=EventSubscriptionSeverity.class, parameters={})
     private Output</* @Nullable */ EventSubscriptionSeverity> severity;
 
     /**
@@ -112,7 +112,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Amazon SNS topic used to transmit the event notifications.
      * 
      */
-    @OutputExport(name="snsTopicArn", type=String.class, parameters={})
+    @Export(name="snsTopicArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> snsTopicArn;
 
     /**
@@ -126,7 +126,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * A list of one or more identifiers of Amazon Redshift source objects.
      * 
      */
-    @OutputExport(name="sourceIds", type=List.class, parameters={String.class})
+    @Export(name="sourceIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> sourceIds;
 
     /**
@@ -140,7 +140,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * A list of the sources that publish events to the Amazon Redshift event notification subscription.
      * 
      */
-    @OutputExport(name="sourceIdsList", type=List.class, parameters={String.class})
+    @Export(name="sourceIdsList", type=List.class, parameters={String.class})
     private Output<List<String>> sourceIdsList;
 
     /**
@@ -154,7 +154,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * The type of source that will be generating the events.
      * 
      */
-    @OutputExport(name="sourceType", type=EventSubscriptionSourceType.class, parameters={})
+    @Export(name="sourceType", type=EventSubscriptionSourceType.class, parameters={})
     private Output</* @Nullable */ EventSubscriptionSourceType> sourceType;
 
     /**
@@ -168,7 +168,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * The status of the Amazon Redshift event notification subscription.
      * 
      */
-    @OutputExport(name="status", type=EventSubscriptionStatus.class, parameters={})
+    @Export(name="status", type=EventSubscriptionStatus.class, parameters={})
     private Output<EventSubscriptionStatus> status;
 
     /**
@@ -182,7 +182,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * The date and time the Amazon Redshift event notification subscription was created.
      * 
      */
-    @OutputExport(name="subscriptionCreationTime", type=String.class, parameters={})
+    @Export(name="subscriptionCreationTime", type=String.class, parameters={})
     private Output<String> subscriptionCreationTime;
 
     /**
@@ -196,7 +196,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * The name of the Amazon Redshift event notification subscription
      * 
      */
-    @OutputExport(name="subscriptionName", type=String.class, parameters={})
+    @Export(name="subscriptionName", type=String.class, parameters={})
     private Output<String> subscriptionName;
 
     /**
@@ -210,7 +210,7 @@ public class EventSubscription extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={EventSubscriptionTag.class})
+    @Export(name="tags", type=List.class, parameters={EventSubscriptionTag.class})
     private Output</* @Nullable */ List<EventSubscriptionTag>> tags;
 
     /**

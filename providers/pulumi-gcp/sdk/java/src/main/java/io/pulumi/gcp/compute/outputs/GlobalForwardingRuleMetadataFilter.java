@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GlobalForwardingRuleMetadataFilterFilterLabel;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GlobalForwardingRuleMetadataFilter {
     /**
      * The list of label value pairs that must match labels in the
@@ -31,10 +31,10 @@ public final class GlobalForwardingRuleMetadataFilter {
      */
     private final String filterMatchCriteria;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GlobalForwardingRuleMetadataFilter(
-        @OutputCustomType.Parameter("filterLabels") List<GlobalForwardingRuleMetadataFilterFilterLabel> filterLabels,
-        @OutputCustomType.Parameter("filterMatchCriteria") String filterMatchCriteria) {
+        @CustomType.Parameter("filterLabels") List<GlobalForwardingRuleMetadataFilterFilterLabel> filterLabels,
+        @CustomType.Parameter("filterMatchCriteria") String filterMatchCriteria) {
         this.filterLabels = filterLabels;
         this.filterMatchCriteria = filterMatchCriteria;
     }

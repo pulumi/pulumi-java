@@ -4,7 +4,7 @@
 package io.pulumi.aws.datasync.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class LocationHdfsQopConfigurationGetArgs extends io.pulumi.resourc
      * The data transfer protection setting configured on the HDFS cluster. This setting corresponds to your dfs.data.transfer.protection setting in the hdfs-site.xml file on your Hadoop cluster. Valid values are `DISABLED`, `AUTHENTICATION`, `INTEGRITY` and `PRIVACY`.
      * 
      */
-    @InputImport(name="dataTransferProtection")
+    @Import(name="dataTransferProtection")
       private final @Nullable Output<String> dataTransferProtection;
 
     public Output<String> getDataTransferProtection() {
@@ -29,7 +29,7 @@ public final class LocationHdfsQopConfigurationGetArgs extends io.pulumi.resourc
      * The RPC protection setting configured on the HDFS cluster. This setting corresponds to your hadoop.rpc.protection setting in your core-site.xml file on your Hadoop cluster. Valid values are `DISABLED`, `AUTHENTICATION`, `INTEGRITY` and `PRIVACY`.
      * 
      */
-    @InputImport(name="rpcProtection")
+    @Import(name="rpcProtection")
       private final @Nullable Output<String> rpcProtection;
 
     public Output<String> getRpcProtection() {

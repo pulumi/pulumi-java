@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.StorageSettingResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackupVaultResponse {
     /**
      * Provisioning state of the BackupVault resource
@@ -22,10 +22,10 @@ public final class BackupVaultResponse {
      */
     private final List<StorageSettingResponse> storageSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackupVaultResponse(
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("storageSettings") List<StorageSettingResponse> storageSettings) {
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("storageSettings") List<StorageSettingResponse> storageSettings) {
         this.provisioningState = provisioningState;
         this.storageSettings = storageSettings;
     }

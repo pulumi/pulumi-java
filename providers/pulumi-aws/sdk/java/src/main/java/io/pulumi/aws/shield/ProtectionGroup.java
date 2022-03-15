@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.shield.ProtectionGroupArgs;
 import io.pulumi.aws.shield.inputs.ProtectionGroupState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class ProtectionGroup extends io.pulumi.resources.CustomResource {
      * Defines how AWS Shield combines resource data for the group in order to detect, mitigate, and report events.
      * 
      */
-    @OutputExport(name="aggregation", type=String.class, parameters={})
+    @Export(name="aggregation", type=String.class, parameters={})
     private Output<String> aggregation;
 
     /**
@@ -50,7 +50,7 @@ public class ProtectionGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Names (ARNs) of the resources to include in the protection group. You must set this when you set `pattern` to ARBITRARY and you must not set it for any other `pattern` setting.
      * 
      */
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> members;
 
     /**
@@ -64,7 +64,7 @@ public class ProtectionGroup extends io.pulumi.resources.CustomResource {
      * The criteria to use to choose the protected resources for inclusion in the group.
      * 
      */
-    @OutputExport(name="pattern", type=String.class, parameters={})
+    @Export(name="pattern", type=String.class, parameters={})
     private Output<String> pattern;
 
     /**
@@ -78,7 +78,7 @@ public class ProtectionGroup extends io.pulumi.resources.CustomResource {
      * The ARN (Amazon Resource Name) of the protection group.
      * 
      */
-    @OutputExport(name="protectionGroupArn", type=String.class, parameters={})
+    @Export(name="protectionGroupArn", type=String.class, parameters={})
     private Output<String> protectionGroupArn;
 
     /**
@@ -92,7 +92,7 @@ public class ProtectionGroup extends io.pulumi.resources.CustomResource {
      * The name of the protection group.
      * 
      */
-    @OutputExport(name="protectionGroupId", type=String.class, parameters={})
+    @Export(name="protectionGroupId", type=String.class, parameters={})
     private Output<String> protectionGroupId;
 
     /**
@@ -106,7 +106,7 @@ public class ProtectionGroup extends io.pulumi.resources.CustomResource {
      * The resource type to include in the protection group. You must set this when you set `pattern` to BY_RESOURCE_TYPE and you must not set it for any other `pattern` setting.
      * 
      */
-    @OutputExport(name="resourceType", type=String.class, parameters={})
+    @Export(name="resourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceType;
 
     /**
@@ -120,7 +120,7 @@ public class ProtectionGroup extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -134,7 +134,7 @@ public class ProtectionGroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

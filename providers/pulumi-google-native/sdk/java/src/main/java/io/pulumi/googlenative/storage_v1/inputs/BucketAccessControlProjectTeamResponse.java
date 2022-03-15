@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class BucketAccessControlProjectTeamResponse extends io.pulumi.reso
      * The project number.
      * 
      */
-    @InputImport(name="projectNumber", required=true)
+    @Import(name="projectNumber", required=true)
       private final String projectNumber;
 
     public String getProjectNumber() {
@@ -31,7 +31,7 @@ public final class BucketAccessControlProjectTeamResponse extends io.pulumi.reso
      * The team.
      * 
      */
-    @InputImport(name="team", required=true)
+    @Import(name="team", required=true)
       private final String team;
 
     public String getTeam() {

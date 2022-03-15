@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectToTargetSqlMISyncTaskOutputResponse {
     /**
      * Target server brand version
@@ -27,11 +27,11 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectToTargetSqlMISyncTaskOutputResponse(
-        @OutputCustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
-        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion,
-        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
+        @CustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
+        @CustomType.Parameter("targetServerVersion") String targetServerVersion,
+        @CustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.targetServerBrandVersion = targetServerBrandVersion;
         this.targetServerVersion = targetServerVersion;
         this.validationErrors = validationErrors;

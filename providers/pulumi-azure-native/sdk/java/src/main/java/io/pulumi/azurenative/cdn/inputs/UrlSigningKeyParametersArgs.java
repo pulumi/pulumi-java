@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class UrlSigningKeyParametersArgs extends io.pulumi.resources.Resou
      * Defines the customer defined key Id. This id will exist in the incoming request to indicate the key used to form the hash.
      * 
      */
-    @InputImport(name="keyId", required=true)
+    @Import(name="keyId", required=true)
       private final Output<String> keyId;
 
     public Output<String> getKeyId() {
@@ -34,7 +34,7 @@ public final class UrlSigningKeyParametersArgs extends io.pulumi.resources.Resou
      * Resource reference to the KV secret
      * 
      */
-    @InputImport(name="secretSource", required=true)
+    @Import(name="secretSource", required=true)
       private final Output<ResourceReferenceArgs> secretSource;
 
     public Output<ResourceReferenceArgs> getSecretSource() {
@@ -45,7 +45,7 @@ public final class UrlSigningKeyParametersArgs extends io.pulumi.resources.Resou
      * Version of the secret to be used
      * 
      */
-    @InputImport(name="secretVersion")
+    @Import(name="secretVersion")
       private final @Nullable Output<String> secretVersion;
 
     public Output<String> getSecretVersion() {
@@ -57,7 +57,7 @@ public final class UrlSigningKeyParametersArgs extends io.pulumi.resources.Resou
      * Expected value is 'UrlSigningKey'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

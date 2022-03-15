@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * The name of the key associated with the Log Analytics cluster.
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable String keyName;
 
     public Optional<String> getKeyName() {
@@ -34,7 +34,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * Selected key minimum required size.
      * 
      */
-    @InputImport(name="keyRsaSize")
+    @Import(name="keyRsaSize")
       private final @Nullable Integer keyRsaSize;
 
     public Optional<Integer> getKeyRsaSize() {
@@ -45,7 +45,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * The Key Vault uri which holds they key associated with the Log Analytics cluster.
      * 
      */
-    @InputImport(name="keyVaultUri")
+    @Import(name="keyVaultUri")
       private final @Nullable String keyVaultUri;
 
     public Optional<String> getKeyVaultUri() {
@@ -56,7 +56,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * The version of the key associated with the Log Analytics cluster.
      * 
      */
-    @InputImport(name="keyVersion")
+    @Import(name="keyVersion")
       private final @Nullable String keyVersion;
 
     public Optional<String> getKeyVersion() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.servicebus.QueueArgs;
 import io.pulumi.azurenative.servicebus.outputs.MessageCountDetailsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -38,7 +38,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Last time a message was sent, or the last time there was a receive request to this queue.
      * 
      */
-    @OutputExport(name="accessedAt", type=String.class, parameters={})
+    @Export(name="accessedAt", type=String.class, parameters={})
     private Output<String> accessedAt;
 
     /**
@@ -52,7 +52,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * ISO 8061 timeSpan idle interval after which the queue is automatically deleted. The minimum duration is 5 minutes.
      * 
      */
-    @OutputExport(name="autoDeleteOnIdle", type=String.class, parameters={})
+    @Export(name="autoDeleteOnIdle", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoDeleteOnIdle;
 
     /**
@@ -66,7 +66,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Message Count Details.
      * 
      */
-    @OutputExport(name="countDetails", type=MessageCountDetailsResponse.class, parameters={})
+    @Export(name="countDetails", type=MessageCountDetailsResponse.class, parameters={})
     private Output<MessageCountDetailsResponse> countDetails;
 
     /**
@@ -80,7 +80,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The exact time the message was created.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -94,7 +94,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * A value that indicates whether this queue has dead letter support when a message expires.
      * 
      */
-    @OutputExport(name="deadLetteringOnMessageExpiration", type=Boolean.class, parameters={})
+    @Export(name="deadLetteringOnMessageExpiration", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deadLetteringOnMessageExpiration;
 
     /**
@@ -108,7 +108,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * ISO 8601 default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
      * 
      */
-    @OutputExport(name="defaultMessageTimeToLive", type=String.class, parameters={})
+    @Export(name="defaultMessageTimeToLive", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultMessageTimeToLive;
 
     /**
@@ -122,7 +122,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
      * 
      */
-    @OutputExport(name="duplicateDetectionHistoryTimeWindow", type=String.class, parameters={})
+    @Export(name="duplicateDetectionHistoryTimeWindow", type=String.class, parameters={})
     private Output</* @Nullable */ String> duplicateDetectionHistoryTimeWindow;
 
     /**
@@ -136,7 +136,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Value that indicates whether server-side batched operations are enabled.
      * 
      */
-    @OutputExport(name="enableBatchedOperations", type=Boolean.class, parameters={})
+    @Export(name="enableBatchedOperations", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableBatchedOperations;
 
     /**
@@ -150,7 +150,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * A value that indicates whether Express Entities are enabled. An express queue holds a message in memory temporarily before writing it to persistent storage.
      * 
      */
-    @OutputExport(name="enableExpress", type=Boolean.class, parameters={})
+    @Export(name="enableExpress", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableExpress;
 
     /**
@@ -164,7 +164,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * A value that indicates whether the queue is to be partitioned across multiple message brokers.
      * 
      */
-    @OutputExport(name="enablePartitioning", type=Boolean.class, parameters={})
+    @Export(name="enablePartitioning", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enablePartitioning;
 
     /**
@@ -178,7 +178,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Queue/Topic name to forward the Dead Letter message
      * 
      */
-    @OutputExport(name="forwardDeadLetteredMessagesTo", type=String.class, parameters={})
+    @Export(name="forwardDeadLetteredMessagesTo", type=String.class, parameters={})
     private Output</* @Nullable */ String> forwardDeadLetteredMessagesTo;
 
     /**
@@ -192,7 +192,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Queue/Topic name to forward the messages
      * 
      */
-    @OutputExport(name="forwardTo", type=String.class, parameters={})
+    @Export(name="forwardTo", type=String.class, parameters={})
     private Output</* @Nullable */ String> forwardTo;
 
     /**
@@ -206,7 +206,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * ISO 8601 timespan duration of a peek-lock; that is, the amount of time that the message is locked for other receivers. The maximum value for LockDuration is 5 minutes; the default value is 1 minute.
      * 
      */
-    @OutputExport(name="lockDuration", type=String.class, parameters={})
+    @Export(name="lockDuration", type=String.class, parameters={})
     private Output</* @Nullable */ String> lockDuration;
 
     /**
@@ -220,7 +220,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The maximum delivery count. A message is automatically deadlettered after this number of deliveries. default value is 10.
      * 
      */
-    @OutputExport(name="maxDeliveryCount", type=Integer.class, parameters={})
+    @Export(name="maxDeliveryCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxDeliveryCount;
 
     /**
@@ -234,7 +234,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The maximum size of the queue in megabytes, which is the size of memory allocated for the queue. Default is 1024.
      * 
      */
-    @OutputExport(name="maxSizeInMegabytes", type=Integer.class, parameters={})
+    @Export(name="maxSizeInMegabytes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxSizeInMegabytes;
 
     /**
@@ -248,7 +248,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The number of messages in the queue.
      * 
      */
-    @OutputExport(name="messageCount", type=Double.class, parameters={})
+    @Export(name="messageCount", type=Double.class, parameters={})
     private Output<Double> messageCount;
 
     /**
@@ -262,7 +262,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -276,7 +276,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * A value indicating if this queue requires duplicate detection.
      * 
      */
-    @OutputExport(name="requiresDuplicateDetection", type=Boolean.class, parameters={})
+    @Export(name="requiresDuplicateDetection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> requiresDuplicateDetection;
 
     /**
@@ -290,7 +290,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * A value that indicates whether the queue supports the concept of sessions.
      * 
      */
-    @OutputExport(name="requiresSession", type=Boolean.class, parameters={})
+    @Export(name="requiresSession", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> requiresSession;
 
     /**
@@ -304,7 +304,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The size of the queue, in bytes.
      * 
      */
-    @OutputExport(name="sizeInBytes", type=Double.class, parameters={})
+    @Export(name="sizeInBytes", type=Double.class, parameters={})
     private Output<Double> sizeInBytes;
 
     /**
@@ -318,7 +318,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Enumerates the possible values for the status of a messaging entity.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
@@ -332,7 +332,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -346,7 +346,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The exact time the message was updated.
      * 
      */
-    @OutputExport(name="updatedAt", type=String.class, parameters={})
+    @Export(name="updatedAt", type=String.class, parameters={})
     private Output<String> updatedAt;
 
     /**

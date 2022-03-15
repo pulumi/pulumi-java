@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HumanTaskUIUiTemplate {
     /**
      * The content of the Liquid template for the worker user interface.
@@ -27,11 +27,11 @@ public final class HumanTaskUIUiTemplate {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HumanTaskUIUiTemplate(
-        @OutputCustomType.Parameter("content") @Nullable String content,
-        @OutputCustomType.Parameter("contentSha256") @Nullable String contentSha256,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("content") @Nullable String content,
+        @CustomType.Parameter("contentSha256") @Nullable String contentSha256,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.content = content;
         this.contentSha256 = contentSha256;
         this.url = url;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualHubIdResponse {
     /**
      * The resource URI for the Virtual Hub where the ExpressRoute gateway is or will be deployed. The Virtual Hub resource and the ExpressRoute gateway resource reside in the same subscription.
@@ -17,8 +17,8 @@ public final class VirtualHubIdResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
-    private VirtualHubIdResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
+    @CustomType.Constructor
+    private VirtualHubIdResponse(@CustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

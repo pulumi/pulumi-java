@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.DaprComponentResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DaprResponse {
     /**
      * Dapr application identifier
@@ -36,12 +36,12 @@ public final class DaprResponse {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DaprResponse(
-        @OutputCustomType.Parameter("appId") @Nullable String appId,
-        @OutputCustomType.Parameter("appPort") @Nullable Integer appPort,
-        @OutputCustomType.Parameter("components") @Nullable List<DaprComponentResponse> components,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
+        @CustomType.Parameter("appId") @Nullable String appId,
+        @CustomType.Parameter("appPort") @Nullable Integer appPort,
+        @CustomType.Parameter("components") @Nullable List<DaprComponentResponse> components,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.appId = appId;
         this.appPort = appPort;
         this.components = components;

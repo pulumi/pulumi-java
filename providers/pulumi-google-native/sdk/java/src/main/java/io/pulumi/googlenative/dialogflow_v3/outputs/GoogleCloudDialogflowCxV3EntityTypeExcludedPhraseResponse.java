@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse {
     /**
      * The word or phrase to be excluded.
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse(@OutputCustomType.Parameter("value") String value) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse(@CustomType.Parameter("value") String value) {
         this.value = value;
     }
 

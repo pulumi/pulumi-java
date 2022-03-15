@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class LifecycleConfigResponse extends io.pulumi.resources.InvokeArg
      * Optional. The time when cluster will be auto-deleted (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).
      * 
      */
-    @InputImport(name="autoDeleteTime", required=true)
+    @Import(name="autoDeleteTime", required=true)
       private final String autoDeleteTime;
 
     public String getAutoDeleteTime() {
@@ -31,7 +31,7 @@ public final class LifecycleConfigResponse extends io.pulumi.resources.InvokeArg
      * Optional. The lifetime duration of cluster. The cluster will be auto-deleted at the end of this period. Minimum value is 10 minutes; maximum value is 14 days (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).
      * 
      */
-    @InputImport(name="autoDeleteTtl", required=true)
+    @Import(name="autoDeleteTtl", required=true)
       private final String autoDeleteTtl;
 
     public String getAutoDeleteTtl() {
@@ -42,7 +42,7 @@ public final class LifecycleConfigResponse extends io.pulumi.resources.InvokeArg
      * Optional. The duration to keep the cluster alive while idling (when no jobs are running). Passing this threshold will cause the cluster to be deleted. Minimum value is 5 minutes; maximum value is 14 days (see JSON representation of Duration (https://developers.google.com/protocol-buffers/docs/proto3#json)).
      * 
      */
-    @InputImport(name="idleDeleteTtl", required=true)
+    @Import(name="idleDeleteTtl", required=true)
       private final String idleDeleteTtl;
 
     public String getIdleDeleteTtl() {
@@ -53,7 +53,7 @@ public final class LifecycleConfigResponse extends io.pulumi.resources.InvokeArg
      * The time when cluster became idle (most recent job finished) and became eligible for deletion due to idleness (see JSON representation of Timestamp (https://developers.google.com/protocol-buffers/docs/proto3#json)).
      * 
      */
-    @InputImport(name="idleStartTime", required=true)
+    @Import(name="idleStartTime", required=true)
       private final String idleStartTime;
 
     public String getIdleStartTime() {

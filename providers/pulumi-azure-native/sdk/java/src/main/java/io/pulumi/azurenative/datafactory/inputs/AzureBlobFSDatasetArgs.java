@@ -13,7 +13,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParquetFormatArgs;
 import io.pulumi.azurenative.datafactory.inputs.TextFormatArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public final class AzureBlobFSDatasetArgs extends io.pulumi.resources.ResourceAr
      * List of tags that can be used for describing the Dataset.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -45,7 +45,7 @@ public final class AzureBlobFSDatasetArgs extends io.pulumi.resources.ResourceAr
      * The data compression method used for the blob storage.
      * 
      */
-    @InputImport(name="compression")
+    @Import(name="compression")
       private final @Nullable Output<DatasetCompressionArgs> compression;
 
     public Output<DatasetCompressionArgs> getCompression() {
@@ -56,7 +56,7 @@ public final class AzureBlobFSDatasetArgs extends io.pulumi.resources.ResourceAr
      * Dataset description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -67,7 +67,7 @@ public final class AzureBlobFSDatasetArgs extends io.pulumi.resources.ResourceAr
      * The name of the Azure Data Lake Storage Gen2. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="fileName")
+    @Import(name="fileName")
       private final @Nullable Output<Object> fileName;
 
     public Output<Object> getFileName() {
@@ -78,7 +78,7 @@ public final class AzureBlobFSDatasetArgs extends io.pulumi.resources.ResourceAr
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
      */
-    @InputImport(name="folder")
+    @Import(name="folder")
       private final @Nullable Output<DatasetFolderArgs> folder;
 
     public Output<DatasetFolderArgs> getFolder() {
@@ -89,7 +89,7 @@ public final class AzureBlobFSDatasetArgs extends io.pulumi.resources.ResourceAr
      * The path of the Azure Data Lake Storage Gen2 storage. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="folderPath")
+    @Import(name="folderPath")
       private final @Nullable Output<Object> folderPath;
 
     public Output<Object> getFolderPath() {
@@ -100,7 +100,7 @@ public final class AzureBlobFSDatasetArgs extends io.pulumi.resources.ResourceAr
      * The format of the Azure Data Lake Storage Gen2 storage.
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable Output<Object> format;
 
     public Output<Object> getFormat() {
@@ -111,7 +111,7 @@ public final class AzureBlobFSDatasetArgs extends io.pulumi.resources.ResourceAr
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName", required=true)
+    @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
@@ -122,7 +122,7 @@ public final class AzureBlobFSDatasetArgs extends io.pulumi.resources.ResourceAr
      * Parameters for dataset.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -133,7 +133,7 @@ public final class AzureBlobFSDatasetArgs extends io.pulumi.resources.ResourceAr
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<Object> schema;
 
     public Output<Object> getSchema() {
@@ -144,7 +144,7 @@ public final class AzureBlobFSDatasetArgs extends io.pulumi.resources.ResourceAr
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
      */
-    @InputImport(name="structure")
+    @Import(name="structure")
       private final @Nullable Output<Object> structure;
 
     public Output<Object> getStructure() {
@@ -156,7 +156,7 @@ public final class AzureBlobFSDatasetArgs extends io.pulumi.resources.ResourceAr
      * Expected value is 'AzureBlobFSFile'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

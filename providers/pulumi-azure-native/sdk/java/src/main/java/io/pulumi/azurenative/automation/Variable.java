@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.automation.VariableArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * Gets or sets the creation time.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationTime;
 
     /**
@@ -49,7 +49,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * Gets or sets the description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -63,7 +63,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * Gets or sets the encrypted flag of the variable.
      * 
      */
-    @OutputExport(name="isEncrypted", type=Boolean.class, parameters={})
+    @Export(name="isEncrypted", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isEncrypted;
 
     /**
@@ -77,7 +77,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * Gets or sets the last modified time.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
     /**
@@ -91,7 +91,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -119,7 +119,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * Gets or sets the value of the variable.
      * 
      */
-    @OutputExport(name="value", type=String.class, parameters={})
+    @Export(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
     /**

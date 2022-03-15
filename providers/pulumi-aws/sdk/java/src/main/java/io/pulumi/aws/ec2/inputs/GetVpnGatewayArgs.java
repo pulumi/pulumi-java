@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetVpnGatewayFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetVpnGatewayArgs extends io.pulumi.resources.InvokeArgs {
      * The Autonomous System Number (ASN) for the Amazon side of the specific VPN Gateway to retrieve.
      * 
      */
-    @InputImport(name="amazonSideAsn")
+    @Import(name="amazonSideAsn")
       private final @Nullable String amazonSideAsn;
 
     public Optional<String> getAmazonSideAsn() {
@@ -32,7 +32,7 @@ public final class GetVpnGatewayArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of a VPC attached to the specific VPN Gateway to retrieve.
      * 
      */
-    @InputImport(name="attachedVpcId")
+    @Import(name="attachedVpcId")
       private final @Nullable String attachedVpcId;
 
     public Optional<String> getAttachedVpcId() {
@@ -43,7 +43,7 @@ public final class GetVpnGatewayArgs extends io.pulumi.resources.InvokeArgs {
      * The Availability Zone of the specific VPN Gateway to retrieve.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable String availabilityZone;
 
     public Optional<String> getAvailabilityZone() {
@@ -54,7 +54,7 @@ public final class GetVpnGatewayArgs extends io.pulumi.resources.InvokeArgs {
      * Custom filter block as described below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetVpnGatewayFilter> filters;
 
     public List<GetVpnGatewayFilter> getFilters() {
@@ -65,7 +65,7 @@ public final class GetVpnGatewayArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the specific VPN Gateway to retrieve.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -76,7 +76,7 @@ public final class GetVpnGatewayArgs extends io.pulumi.resources.InvokeArgs {
      * The state of the specific VPN Gateway to retrieve.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {
@@ -88,7 +88,7 @@ public final class GetVpnGatewayArgs extends io.pulumi.resources.InvokeArgs {
      * a pair on the desired VPN Gateway.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

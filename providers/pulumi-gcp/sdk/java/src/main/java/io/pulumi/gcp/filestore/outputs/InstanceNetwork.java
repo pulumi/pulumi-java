@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.filestore.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceNetwork {
     /**
      * The network connect mode of the Filestore instance.
@@ -47,13 +47,13 @@ public final class InstanceNetwork {
      */
     private final @Nullable String reservedIpRange;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceNetwork(
-        @OutputCustomType.Parameter("connectMode") @Nullable String connectMode,
-        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
-        @OutputCustomType.Parameter("modes") List<String> modes,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("reservedIpRange") @Nullable String reservedIpRange) {
+        @CustomType.Parameter("connectMode") @Nullable String connectMode,
+        @CustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
+        @CustomType.Parameter("modes") List<String> modes,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("reservedIpRange") @Nullable String reservedIpRange) {
         this.connectMode = connectMode;
         this.ipAddresses = ipAddresses;
         this.modes = modes;

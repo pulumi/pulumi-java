@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ContentKeyPolicyTokenClaimArgs extends io.pulumi.resources.Re
      * Token claim type.
      * 
      */
-    @InputImport(name="claimType")
+    @Import(name="claimType")
       private final @Nullable Output<String> claimType;
 
     public Output<String> getClaimType() {
@@ -33,7 +33,7 @@ public final class ContentKeyPolicyTokenClaimArgs extends io.pulumi.resources.Re
      * Token claim value.
      * 
      */
-    @InputImport(name="claimValue")
+    @Import(name="claimValue")
       private final @Nullable Output<String> claimValue;
 
     public Output<String> getClaimValue() {

@@ -16,7 +16,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.JsonSerializationResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.PowerBIOutputDataSourceResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.ServiceBusQueueOutputDataSourceResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.ServiceBusTopicOutputDataSourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -36,7 +36,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
      * Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="datasource")
+    @Import(name="datasource")
       private final @Nullable Object datasource;
 
     public Object getDatasource() {
@@ -47,7 +47,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
      * Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
      * 
      */
-    @InputImport(name="diagnostics", required=true)
+    @Import(name="diagnostics", required=true)
       private final DiagnosticsResponse diagnostics;
 
     public DiagnosticsResponse getDiagnostics() {
@@ -58,7 +58,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
      * The current entity tag for the output. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -69,7 +69,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
      * Resource Id
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -80,7 +80,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
      * Resource name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -91,7 +91,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
      * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="serialization")
+    @Import(name="serialization")
       private final @Nullable Object serialization;
 
     public Object getSerialization() {
@@ -102,7 +102,7 @@ public final class OutputResponse extends io.pulumi.resources.InvokeArgs {
      * Resource type
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

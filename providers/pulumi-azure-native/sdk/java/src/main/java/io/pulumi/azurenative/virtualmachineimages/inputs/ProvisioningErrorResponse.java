@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ProvisioningErrorResponse extends io.pulumi.resources.InvokeA
      * Verbose error message about the provisioning failure
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
@@ -33,7 +33,7 @@ public final class ProvisioningErrorResponse extends io.pulumi.resources.InvokeA
      * Error code of the provisioning failure
      * 
      */
-    @InputImport(name="provisioningErrorCode")
+    @Import(name="provisioningErrorCode")
       private final @Nullable String provisioningErrorCode;
 
     public Optional<String> getProvisioningErrorCode() {

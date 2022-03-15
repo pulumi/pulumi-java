@@ -7,12 +7,12 @@ import io.pulumi.azurenative.devices.outputs.RoutingEventHubPropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.RoutingServiceBusQueueEndpointPropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.RoutingServiceBusTopicEndpointPropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.RoutingStorageContainerPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RoutingEndpointsResponse {
     /**
      * The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.
@@ -35,12 +35,12 @@ public final class RoutingEndpointsResponse {
      */
     private final @Nullable List<RoutingStorageContainerPropertiesResponse> storageContainers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RoutingEndpointsResponse(
-        @OutputCustomType.Parameter("eventHubs") @Nullable List<RoutingEventHubPropertiesResponse> eventHubs,
-        @OutputCustomType.Parameter("serviceBusQueues") @Nullable List<RoutingServiceBusQueueEndpointPropertiesResponse> serviceBusQueues,
-        @OutputCustomType.Parameter("serviceBusTopics") @Nullable List<RoutingServiceBusTopicEndpointPropertiesResponse> serviceBusTopics,
-        @OutputCustomType.Parameter("storageContainers") @Nullable List<RoutingStorageContainerPropertiesResponse> storageContainers) {
+        @CustomType.Parameter("eventHubs") @Nullable List<RoutingEventHubPropertiesResponse> eventHubs,
+        @CustomType.Parameter("serviceBusQueues") @Nullable List<RoutingServiceBusQueueEndpointPropertiesResponse> serviceBusQueues,
+        @CustomType.Parameter("serviceBusTopics") @Nullable List<RoutingServiceBusTopicEndpointPropertiesResponse> serviceBusTopics,
+        @CustomType.Parameter("storageContainers") @Nullable List<RoutingStorageContainerPropertiesResponse> storageContainers) {
         this.eventHubs = eventHubs;
         this.serviceBusQueues = serviceBusQueues;
         this.serviceBusTopics = serviceBusTopics;

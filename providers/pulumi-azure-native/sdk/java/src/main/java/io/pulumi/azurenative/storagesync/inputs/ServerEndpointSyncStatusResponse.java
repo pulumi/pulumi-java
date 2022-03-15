@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storagesync.inputs;
 
 import io.pulumi.azurenative.storagesync.inputs.ServerEndpointSyncActivityStatusResponse;
 import io.pulumi.azurenative.storagesync.inputs.ServerEndpointSyncSessionStatusResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
      * Combined Health Status.
      * 
      */
-    @InputImport(name="combinedHealth", required=true)
+    @Import(name="combinedHealth", required=true)
       private final String combinedHealth;
 
     public String getCombinedHealth() {
@@ -34,7 +34,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
      * Download sync activity
      * 
      */
-    @InputImport(name="downloadActivity", required=true)
+    @Import(name="downloadActivity", required=true)
       private final ServerEndpointSyncActivityStatusResponse downloadActivity;
 
     public ServerEndpointSyncActivityStatusResponse getDownloadActivity() {
@@ -45,7 +45,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
      * Download Health Status.
      * 
      */
-    @InputImport(name="downloadHealth", required=true)
+    @Import(name="downloadHealth", required=true)
       private final String downloadHealth;
 
     public String getDownloadHealth() {
@@ -56,7 +56,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
      * Download Status
      * 
      */
-    @InputImport(name="downloadStatus", required=true)
+    @Import(name="downloadStatus", required=true)
       private final ServerEndpointSyncSessionStatusResponse downloadStatus;
 
     public ServerEndpointSyncSessionStatusResponse getDownloadStatus() {
@@ -67,7 +67,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
      * Last Updated Timestamp
      * 
      */
-    @InputImport(name="lastUpdatedTimestamp", required=true)
+    @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;
 
     public String getLastUpdatedTimestamp() {
@@ -78,7 +78,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
      * Offline Data Transfer State
      * 
      */
-    @InputImport(name="offlineDataTransferStatus", required=true)
+    @Import(name="offlineDataTransferStatus", required=true)
       private final String offlineDataTransferStatus;
 
     public String getOfflineDataTransferStatus() {
@@ -89,7 +89,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
      * Sync activity
      * 
      */
-    @InputImport(name="syncActivity", required=true)
+    @Import(name="syncActivity", required=true)
       private final String syncActivity;
 
     public String getSyncActivity() {
@@ -100,7 +100,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
      * Total count of persistent files not syncing (combined upload + download).
      * 
      */
-    @InputImport(name="totalPersistentFilesNotSyncingCount", required=true)
+    @Import(name="totalPersistentFilesNotSyncingCount", required=true)
       private final Double totalPersistentFilesNotSyncingCount;
 
     public Double getTotalPersistentFilesNotSyncingCount() {
@@ -111,7 +111,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
      * Upload sync activity
      * 
      */
-    @InputImport(name="uploadActivity", required=true)
+    @Import(name="uploadActivity", required=true)
       private final ServerEndpointSyncActivityStatusResponse uploadActivity;
 
     public ServerEndpointSyncActivityStatusResponse getUploadActivity() {
@@ -122,7 +122,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
      * Upload Health Status.
      * 
      */
-    @InputImport(name="uploadHealth", required=true)
+    @Import(name="uploadHealth", required=true)
       private final String uploadHealth;
 
     public String getUploadHealth() {
@@ -133,7 +133,7 @@ public final class ServerEndpointSyncStatusResponse extends io.pulumi.resources.
      * Upload Status
      * 
      */
-    @InputImport(name="uploadStatus", required=true)
+    @Import(name="uploadStatus", required=true)
       private final ServerEndpointSyncSessionStatusResponse uploadStatus;
 
     public ServerEndpointSyncSessionStatusResponse getUploadStatus() {

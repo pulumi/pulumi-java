@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManualResolutionPropertiesResponse {
     /**
      * Gets or sets the target resource ARM ID of the dependent resource if the resource type is Manual.
@@ -17,8 +17,8 @@ public final class ManualResolutionPropertiesResponse {
      */
     private final @Nullable String targetId;
 
-    @OutputCustomType.Constructor
-    private ManualResolutionPropertiesResponse(@OutputCustomType.Parameter("targetId") @Nullable String targetId) {
+    @CustomType.Constructor
+    private ManualResolutionPropertiesResponse(@CustomType.Parameter("targetId") @Nullable String targetId) {
         this.targetId = targetId;
     }
 

@@ -13,7 +13,7 @@ import io.pulumi.azurenative.devices.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.devices.outputs.RoutingPropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.SharedAccessSignatureAuthorizationRuleResponse;
 import io.pulumi.azurenative.devices.outputs.StorageEndpointPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IotHubPropertiesResponse {
     /**
      * The shared access policies you can use to secure a connection to the IoT hub.
@@ -115,26 +115,26 @@ public final class IotHubPropertiesResponse {
      */
     private final @Nullable Map<String,StorageEndpointPropertiesResponse> storageEndpoints;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IotHubPropertiesResponse(
-        @OutputCustomType.Parameter("authorizationPolicies") @Nullable List<SharedAccessSignatureAuthorizationRuleResponse> authorizationPolicies,
-        @OutputCustomType.Parameter("cloudToDevice") @Nullable CloudToDevicePropertiesResponse cloudToDevice,
-        @OutputCustomType.Parameter("comments") @Nullable String comments,
-        @OutputCustomType.Parameter("enableFileUploadNotifications") @Nullable Boolean enableFileUploadNotifications,
-        @OutputCustomType.Parameter("eventHubEndpoints") @Nullable Map<String,EventHubPropertiesResponse> eventHubEndpoints,
-        @OutputCustomType.Parameter("features") @Nullable String features,
-        @OutputCustomType.Parameter("hostName") String hostName,
-        @OutputCustomType.Parameter("ipFilterRules") @Nullable List<IpFilterRuleResponse> ipFilterRules,
-        @OutputCustomType.Parameter("locations") List<IotHubLocationDescriptionResponse> locations,
-        @OutputCustomType.Parameter("messagingEndpoints") @Nullable Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints,
-        @OutputCustomType.Parameter("minTlsVersion") @Nullable String minTlsVersion,
-        @OutputCustomType.Parameter("networkRuleSets") @Nullable NetworkRuleSetPropertiesResponse networkRuleSets,
-        @OutputCustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
-        @OutputCustomType.Parameter("routing") @Nullable RoutingPropertiesResponse routing,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("storageEndpoints") @Nullable Map<String,StorageEndpointPropertiesResponse> storageEndpoints) {
+        @CustomType.Parameter("authorizationPolicies") @Nullable List<SharedAccessSignatureAuthorizationRuleResponse> authorizationPolicies,
+        @CustomType.Parameter("cloudToDevice") @Nullable CloudToDevicePropertiesResponse cloudToDevice,
+        @CustomType.Parameter("comments") @Nullable String comments,
+        @CustomType.Parameter("enableFileUploadNotifications") @Nullable Boolean enableFileUploadNotifications,
+        @CustomType.Parameter("eventHubEndpoints") @Nullable Map<String,EventHubPropertiesResponse> eventHubEndpoints,
+        @CustomType.Parameter("features") @Nullable String features,
+        @CustomType.Parameter("hostName") String hostName,
+        @CustomType.Parameter("ipFilterRules") @Nullable List<IpFilterRuleResponse> ipFilterRules,
+        @CustomType.Parameter("locations") List<IotHubLocationDescriptionResponse> locations,
+        @CustomType.Parameter("messagingEndpoints") @Nullable Map<String,MessagingEndpointPropertiesResponse> messagingEndpoints,
+        @CustomType.Parameter("minTlsVersion") @Nullable String minTlsVersion,
+        @CustomType.Parameter("networkRuleSets") @Nullable NetworkRuleSetPropertiesResponse networkRuleSets,
+        @CustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @CustomType.Parameter("routing") @Nullable RoutingPropertiesResponse routing,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("storageEndpoints") @Nullable Map<String,StorageEndpointPropertiesResponse> storageEndpoints) {
         this.authorizationPolicies = authorizationPolicies;
         this.cloudToDevice = cloudToDevice;
         this.comments = comments;

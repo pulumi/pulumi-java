@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.inputs.PathRecommendationArgs;
 import io.pulumi.azurenative.security.inputs.ProtectionModeArgs;
 import io.pulumi.azurenative.security.inputs.VmRecommendationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
      * The location where ASC stores the data of the subscription. can be retrieved from Get locations
      * 
      */
-    @InputImport(name="ascLocation", required=true)
+    @Import(name="ascLocation", required=true)
       private final Output<String> ascLocation;
 
     public Output<String> getAscLocation() {
@@ -33,7 +33,7 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
      * The application control policy enforcement/protection mode of the machine group
      * 
      */
-    @InputImport(name="enforcementMode")
+    @Import(name="enforcementMode")
       private final @Nullable Output<String> enforcementMode;
 
     public Output<String> getEnforcementMode() {
@@ -44,14 +44,14 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
      * Name of an application control machine group
      * 
      */
-    @InputImport(name="groupName")
+    @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
     public Output<String> getGroupName() {
         return this.groupName == null ? Output.empty() : this.groupName;
     }
 
-    @InputImport(name="pathRecommendations")
+    @Import(name="pathRecommendations")
       private final @Nullable Output<List<PathRecommendationArgs>> pathRecommendations;
 
     public Output<List<PathRecommendationArgs>> getPathRecommendations() {
@@ -62,14 +62,14 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
      * The protection mode of the collection/file types. Exe/Msi/Script are used for Windows, Executable is used for Linux.
      * 
      */
-    @InputImport(name="protectionMode")
+    @Import(name="protectionMode")
       private final @Nullable Output<ProtectionModeArgs> protectionMode;
 
     public Output<ProtectionModeArgs> getProtectionMode() {
         return this.protectionMode == null ? Output.empty() : this.protectionMode;
     }
 
-    @InputImport(name="vmRecommendations")
+    @Import(name="vmRecommendations")
       private final @Nullable Output<List<VmRecommendationArgs>> vmRecommendations;
 
     public Output<List<VmRecommendationArgs>> getVmRecommendations() {

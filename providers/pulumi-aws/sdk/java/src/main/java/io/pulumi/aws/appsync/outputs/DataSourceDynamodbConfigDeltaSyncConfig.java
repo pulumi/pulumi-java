@@ -3,24 +3,24 @@
 
 package io.pulumi.aws.appsync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceDynamodbConfigDeltaSyncConfig {
     private final @Nullable Integer baseTableTtl;
     private final String deltaSyncTableName;
     private final @Nullable Integer deltaSyncTableTtl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceDynamodbConfigDeltaSyncConfig(
-        @OutputCustomType.Parameter("baseTableTtl") @Nullable Integer baseTableTtl,
-        @OutputCustomType.Parameter("deltaSyncTableName") String deltaSyncTableName,
-        @OutputCustomType.Parameter("deltaSyncTableTtl") @Nullable Integer deltaSyncTableTtl) {
+        @CustomType.Parameter("baseTableTtl") @Nullable Integer baseTableTtl,
+        @CustomType.Parameter("deltaSyncTableName") String deltaSyncTableName,
+        @CustomType.Parameter("deltaSyncTableTtl") @Nullable Integer deltaSyncTableTtl) {
         this.baseTableTtl = baseTableTtl;
         this.deltaSyncTableName = deltaSyncTableName;
         this.deltaSyncTableTtl = deltaSyncTableTtl;

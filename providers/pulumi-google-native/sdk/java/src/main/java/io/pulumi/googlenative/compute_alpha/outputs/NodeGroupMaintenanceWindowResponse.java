@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.DurationResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeGroupMaintenanceWindowResponse {
     /**
      * [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
@@ -26,11 +26,11 @@ public final class NodeGroupMaintenanceWindowResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeGroupMaintenanceWindowResponse(
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("maintenanceDuration") DurationResponse maintenanceDuration,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("maintenanceDuration") DurationResponse maintenanceDuration,
+        @CustomType.Parameter("startTime") String startTime) {
         this.duration = duration;
         this.maintenanceDuration = maintenanceDuration;
         this.startTime = startTime;

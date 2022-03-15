@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datapipelines_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
      * Parameter to launch a job from a Flex Template.
      * 
      */
-    @InputImport(name="launchParameter", required=true)
+    @Import(name="launchParameter", required=true)
       private final Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter;
 
     public Output<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> getLaunchParameter() {
@@ -35,7 +35,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
      * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request. For example, `us-central1`, `us-west1`.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
      * The ID of the Cloud Platform project that the job belongs to.
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final Output<String> project;
 
     public Output<String> getProject() {
@@ -57,7 +57,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
      * If true, the request is validated but not actually executed. Defaults to false.
      * 
      */
-    @InputImport(name="validateOnly")
+    @Import(name="validateOnly")
       private final @Nullable Output<Boolean> validateOnly;
 
     public Output<Boolean> getValidateOnly() {

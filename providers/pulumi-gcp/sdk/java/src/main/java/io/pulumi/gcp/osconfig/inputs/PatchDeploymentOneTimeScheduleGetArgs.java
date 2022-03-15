@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class PatchDeploymentOneTimeScheduleGetArgs extends io.pulumi.resou
      * accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="executeTime", required=true)
+    @Import(name="executeTime", required=true)
       private final Output<String> executeTime;
 
     public Output<String> getExecuteTime() {

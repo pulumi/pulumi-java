@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BucketRetentionPolicyGetArgs extends io.pulumi.resources.Reso
      * If set to `true`, the bucket will be [locked](https://cloud.google.com/storage/docs/using-bucket-lock#lock-bucket) and permanently restrict edits to the bucket's retention policy.  Caution: Locking a bucket is an irreversible action.
      * 
      */
-    @InputImport(name="isLocked")
+    @Import(name="isLocked")
       private final @Nullable Output<Boolean> isLocked;
 
     public Output<Boolean> getIsLocked() {
@@ -30,7 +30,7 @@ public final class BucketRetentionPolicyGetArgs extends io.pulumi.resources.Reso
      * The period of time, in seconds, that objects in the bucket must be retained and cannot be deleted, overwritten, or archived. The value must be less than 2,147,483,647 seconds.
      * 
      */
-    @InputImport(name="retentionPeriod", required=true)
+    @Import(name="retentionPeriod", required=true)
       private final Output<Integer> retentionPeriod;
 
     public Output<Integer> getRetentionPeriod() {

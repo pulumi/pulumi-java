@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterClusterTelemetry {
     private final String type;
 
-    @OutputCustomType.Constructor
-    private GetClusterClusterTelemetry(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private GetClusterClusterTelemetry(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

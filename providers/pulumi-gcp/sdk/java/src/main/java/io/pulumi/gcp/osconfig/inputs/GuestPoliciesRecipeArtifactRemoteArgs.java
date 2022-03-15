@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class GuestPoliciesRecipeArtifactRemoteArgs extends io.pulumi.resou
      * of the steps.
      * 
      */
-    @InputImport(name="checkSum")
+    @Import(name="checkSum")
       private final @Nullable Output<String> checkSum;
 
     public Output<String> getCheckSum() {
@@ -31,7 +31,7 @@ public final class GuestPoliciesRecipeArtifactRemoteArgs extends io.pulumi.resou
      * URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

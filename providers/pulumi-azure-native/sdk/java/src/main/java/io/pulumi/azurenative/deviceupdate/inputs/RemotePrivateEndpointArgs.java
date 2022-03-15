@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deviceupdate.inputs;
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceConnectionArgs;
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceProxyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
      * Remote endpoint resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -36,7 +36,7 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
      * List of private link service connections that need manual approval.
      * 
      */
-    @InputImport(name="manualPrivateLinkServiceConnections")
+    @Import(name="manualPrivateLinkServiceConnections")
       private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> manualPrivateLinkServiceConnections;
 
     public Output<List<PrivateLinkServiceConnectionArgs>> getManualPrivateLinkServiceConnections() {
@@ -47,7 +47,7 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
      * List of automatically approved private link service connections.
      * 
      */
-    @InputImport(name="privateLinkServiceConnections")
+    @Import(name="privateLinkServiceConnections")
       private final @Nullable Output<List<PrivateLinkServiceConnectionArgs>> privateLinkServiceConnections;
 
     public Output<List<PrivateLinkServiceConnectionArgs>> getPrivateLinkServiceConnections() {
@@ -58,7 +58,7 @@ public final class RemotePrivateEndpointArgs extends io.pulumi.resources.Resourc
      * List of private link service proxies.
      * 
      */
-    @InputImport(name="privateLinkServiceProxies")
+    @Import(name="privateLinkServiceProxies")
       private final @Nullable Output<List<PrivateLinkServiceProxyArgs>> privateLinkServiceProxies;
 
     public Output<List<PrivateLinkServiceProxyArgs>> getPrivateLinkServiceProxies() {

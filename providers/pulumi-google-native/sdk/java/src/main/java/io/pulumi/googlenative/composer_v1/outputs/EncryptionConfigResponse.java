@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.composer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionConfigResponse {
     /**
      * Optional. Customer-managed Encryption Key available through Google's Key Management Service. Cannot be updated. If not specified, Google-managed key will be used.
@@ -15,8 +15,8 @@ public final class EncryptionConfigResponse {
      */
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor
-    private EncryptionConfigResponse(@OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
+    @CustomType.Constructor
+    private EncryptionConfigResponse(@CustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 

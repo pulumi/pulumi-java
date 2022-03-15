@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DatabaseInstanceRestoreBackupContextGetArgs extends io.pulumi
      * The ID of the backup run to restore from.
      * 
      */
-    @InputImport(name="backupRunId", required=true)
+    @Import(name="backupRunId", required=true)
       private final Output<Integer> backupRunId;
 
     public Output<Integer> getBackupRunId() {
@@ -31,7 +31,7 @@ public final class DatabaseInstanceRestoreBackupContextGetArgs extends io.pulumi
      * this instance's ID will be used.
      * 
      */
-    @InputImport(name="instanceId")
+    @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -42,7 +42,7 @@ public final class DatabaseInstanceRestoreBackupContextGetArgs extends io.pulumi
      * The full project ID of the source instance.`
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

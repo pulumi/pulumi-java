@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FileReferenceResponse {
     /**
      * A path to a file in Google Cloud Storage. Example: gs://build-app-1414623860166/app%40debug-unaligned.apk These paths are expected to be url encoded (percent encoding)
@@ -15,8 +15,8 @@ public final class FileReferenceResponse {
      */
     private final String gcsPath;
 
-    @OutputCustomType.Constructor
-    private FileReferenceResponse(@OutputCustomType.Parameter("gcsPath") String gcsPath) {
+    @CustomType.Constructor
+    private FileReferenceResponse(@CustomType.Parameter("gcsPath") String gcsPath) {
         this.gcsPath = gcsPath;
     }
 

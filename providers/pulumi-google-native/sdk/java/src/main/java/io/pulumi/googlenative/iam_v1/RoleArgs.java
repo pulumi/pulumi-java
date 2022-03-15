@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.iam_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.iam_v1.enums.RoleStage;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * The current deleted state of the role. This field is read only. It will be ignored in calls to CreateRole and UpdateRole.
      * 
      */
-    @InputImport(name="deleted")
+    @Import(name="deleted")
       private final @Nullable Output<Boolean> deleted;
 
     public Output<Boolean> getDeleted() {
@@ -32,7 +32,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. A human-readable description for the role.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * Used to perform a consistent read-modify-write.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -54,7 +54,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * The names of the permissions this role grants when bound in an IAM policy.
      * 
      */
-    @InputImport(name="includedPermissions")
+    @Import(name="includedPermissions")
       private final @Nullable Output<List<String>> includedPermissions;
 
     public Output<List<String>> getIncludedPermissions() {
@@ -65,14 +65,14 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the role. When Role is used in CreateRole, the role name must not be set. When Role is used in output and other input such as UpdateRole, the role name is the complete path, e.g., roles/logging.viewer for predefined roles and organizations/{ORGANIZATION_ID}/roles/logging.viewer for custom roles.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -83,7 +83,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * The role ID to use for this role. A role ID may contain alphanumeric characters, underscores (`_`), and periods (`.`). It must contain a minimum of 3 characters and a maximum of 64 characters.
      * 
      */
-    @InputImport(name="roleId")
+    @Import(name="roleId")
       private final @Nullable Output<String> roleId;
 
     public Output<String> getRoleId() {
@@ -94,7 +94,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * The current launch stage of the role. If the `ALPHA` launch stage has been selected for a role, the `stage` field will not be included in the returned definition for the role.
      * 
      */
-    @InputImport(name="stage")
+    @Import(name="stage")
       private final @Nullable Output<RoleStage> stage;
 
     public Output<RoleStage> getStage() {
@@ -105,7 +105,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. A human-readable title for the role. Typically this is limited to 100 UTF-8 bytes.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {

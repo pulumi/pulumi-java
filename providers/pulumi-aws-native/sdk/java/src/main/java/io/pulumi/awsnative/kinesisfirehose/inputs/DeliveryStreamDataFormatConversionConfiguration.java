@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamInputFormatConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamOutputFormatConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamSchemaConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,28 +17,28 @@ public final class DeliveryStreamDataFormatConversionConfiguration extends io.pu
 
     public static final DeliveryStreamDataFormatConversionConfiguration Empty = new DeliveryStreamDataFormatConversionConfiguration();
 
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
-    @InputImport(name="inputFormatConfiguration")
+    @Import(name="inputFormatConfiguration")
       private final @Nullable DeliveryStreamInputFormatConfiguration inputFormatConfiguration;
 
     public Optional<DeliveryStreamInputFormatConfiguration> getInputFormatConfiguration() {
         return this.inputFormatConfiguration == null ? Optional.empty() : Optional.ofNullable(this.inputFormatConfiguration);
     }
 
-    @InputImport(name="outputFormatConfiguration")
+    @Import(name="outputFormatConfiguration")
       private final @Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration;
 
     public Optional<DeliveryStreamOutputFormatConfiguration> getOutputFormatConfiguration() {
         return this.outputFormatConfiguration == null ? Optional.empty() : Optional.ofNullable(this.outputFormatConfiguration);
     }
 
-    @InputImport(name="schemaConfiguration")
+    @Import(name="schemaConfiguration")
       private final @Nullable DeliveryStreamSchemaConfiguration schemaConfiguration;
 
     public Optional<DeliveryStreamSchemaConfiguration> getSchemaConfiguration() {

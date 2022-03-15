@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceWebCrawlerBasicAuthentication;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceWebCrawlerAuthenticationConfiguration {
     private final @Nullable List<DataSourceWebCrawlerBasicAuthentication> basicAuthentication;
 
-    @OutputCustomType.Constructor
-    private DataSourceWebCrawlerAuthenticationConfiguration(@OutputCustomType.Parameter("basicAuthentication") @Nullable List<DataSourceWebCrawlerBasicAuthentication> basicAuthentication) {
+    @CustomType.Constructor
+    private DataSourceWebCrawlerAuthenticationConfiguration(@CustomType.Parameter("basicAuthentication") @Nullable List<DataSourceWebCrawlerBasicAuthentication> basicAuthentication) {
         this.basicAuthentication = basicAuthentication;
     }
 

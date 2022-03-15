@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStorageAccountResult {
     /**
      * BlobEndpoint of Storage Account
@@ -64,18 +64,18 @@ public final class GetStorageAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStorageAccountResult(
-        @OutputCustomType.Parameter("blobEndpoint") String blobEndpoint,
-        @OutputCustomType.Parameter("containerCount") Integer containerCount,
-        @OutputCustomType.Parameter("dataPolicy") String dataPolicy,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("storageAccountCredentialId") @Nullable String storageAccountCredentialId,
-        @OutputCustomType.Parameter("storageAccountStatus") @Nullable String storageAccountStatus,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("blobEndpoint") String blobEndpoint,
+        @CustomType.Parameter("containerCount") Integer containerCount,
+        @CustomType.Parameter("dataPolicy") String dataPolicy,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("storageAccountCredentialId") @Nullable String storageAccountCredentialId,
+        @CustomType.Parameter("storageAccountStatus") @Nullable String storageAccountStatus,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.blobEndpoint = blobEndpoint;
         this.containerCount = containerCount;
         this.dataPolicy = dataPolicy;

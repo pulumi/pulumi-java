@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class NetworkEndpointGroupCloudFunctionResponse extends io.pulumi.r
      * A user-defined name of the Cloud Function. The function name is case-sensitive and must be 1-63 characters long. Example value: "func1".
      * 
      */
-    @InputImport(name="function", required=true)
+    @Import(name="function", required=true)
       private final String function;
 
     public String getFunction() {
@@ -31,7 +31,7 @@ public final class NetworkEndpointGroupCloudFunctionResponse extends io.pulumi.r
      * A template to parse function field from a request URL. URL mask allows for routing to multiple Cloud Functions without having to create multiple Network Endpoint Groups and backend services. For example, request URLs " mydomain.com/function1" and "mydomain.com/function2" can be backed by the same Serverless NEG with URL mask "/". The URL mask will parse them to { function = "function1" } and { function = "function2" } respectively.
      * 
      */
-    @InputImport(name="urlMask", required=true)
+    @Import(name="urlMask", required=true)
       private final String urlMask;
 
     public String getUrlMask() {

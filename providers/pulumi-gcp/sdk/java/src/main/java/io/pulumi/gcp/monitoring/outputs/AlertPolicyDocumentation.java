@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AlertPolicyDocumentation {
     /**
      * The text of the documentation, interpreted according to mimeType.
@@ -26,10 +26,10 @@ public final class AlertPolicyDocumentation {
      */
     private final @Nullable String mimeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AlertPolicyDocumentation(
-        @OutputCustomType.Parameter("content") @Nullable String content,
-        @OutputCustomType.Parameter("mimeType") @Nullable String mimeType) {
+        @CustomType.Parameter("content") @Nullable String content,
+        @CustomType.Parameter("mimeType") @Nullable String mimeType) {
         this.content = content;
         this.mimeType = mimeType;
     }

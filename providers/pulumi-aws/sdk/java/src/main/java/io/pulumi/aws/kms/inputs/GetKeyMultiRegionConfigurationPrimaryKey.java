@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kms.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetKeyMultiRegionConfigurationPrimaryKey extends io.pulumi.re
 
     public static final GetKeyMultiRegionConfigurationPrimaryKey Empty = new GetKeyMultiRegionConfigurationPrimaryKey();
 
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {
         return this.arn;
     }
 
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final String region;
 
     public String getRegion() {

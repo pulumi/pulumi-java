@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.inputs.SelectAudioTrackByIdResponse;
 import io.pulumi.azurenative.media.inputs.SelectVideoTrackByAttributeResponse;
 import io.pulumi.azurenative.media.inputs.SelectVideoTrackByIdResponse;
 import io.pulumi.azurenative.media.inputs.VideoTrackDescriptorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class FromEachInputFileResponse extends io.pulumi.resources.InvokeA
      * The list of TrackDescriptors which define the metadata and selection of tracks in the input.
      * 
      */
-    @InputImport(name="includedTracks")
+    @Import(name="includedTracks")
       private final @Nullable List<Object> includedTracks;
 
     public List<Object> getIncludedTracks() {
@@ -42,7 +42,7 @@ public final class FromEachInputFileResponse extends io.pulumi.resources.InvokeA
      * Expected value is '#Microsoft.Media.FromEachInputFile'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {

@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.VMResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BastionShareableLinkResponse {
     /**
      * The unique Bastion Shareable Link to the virtual machine.
@@ -31,12 +31,12 @@ public final class BastionShareableLinkResponse {
      */
     private final VMResponse vm;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BastionShareableLinkResponse(
-        @OutputCustomType.Parameter("bsl") String bsl,
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("vm") VMResponse vm) {
+        @CustomType.Parameter("bsl") String bsl,
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("vm") VMResponse vm) {
         this.bsl = bsl;
         this.createdAt = createdAt;
         this.message = message;

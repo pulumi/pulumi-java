@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.PredictionDistributionDefinitionResponseDistributions;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PredictionDistributionDefinitionResponse {
     /**
      * Distributions of the prediction.
@@ -29,11 +29,11 @@ public final class PredictionDistributionDefinitionResponse {
      */
     private final @Nullable Double totalPositives;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PredictionDistributionDefinitionResponse(
-        @OutputCustomType.Parameter("distributions") @Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions,
-        @OutputCustomType.Parameter("totalNegatives") @Nullable Double totalNegatives,
-        @OutputCustomType.Parameter("totalPositives") @Nullable Double totalPositives) {
+        @CustomType.Parameter("distributions") @Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions,
+        @CustomType.Parameter("totalNegatives") @Nullable Double totalNegatives,
+        @CustomType.Parameter("totalPositives") @Nullable Double totalPositives) {
         this.distributions = distributions;
         this.totalNegatives = totalNegatives;
         this.totalPositives = totalPositives;

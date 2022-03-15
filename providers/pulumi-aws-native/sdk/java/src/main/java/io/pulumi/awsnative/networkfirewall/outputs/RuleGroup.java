@@ -6,22 +6,22 @@ package io.pulumi.awsnative.networkfirewall.outputs;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupRuleVariables;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupRulesSource;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupStatefulRuleOptions;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroup {
     private final @Nullable RuleGroupRuleVariables ruleVariables;
     private final RuleGroupRulesSource rulesSource;
     private final @Nullable RuleGroupStatefulRuleOptions statefulRuleOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroup(
-        @OutputCustomType.Parameter("ruleVariables") @Nullable RuleGroupRuleVariables ruleVariables,
-        @OutputCustomType.Parameter("rulesSource") RuleGroupRulesSource rulesSource,
-        @OutputCustomType.Parameter("statefulRuleOptions") @Nullable RuleGroupStatefulRuleOptions statefulRuleOptions) {
+        @CustomType.Parameter("ruleVariables") @Nullable RuleGroupRuleVariables ruleVariables,
+        @CustomType.Parameter("rulesSource") RuleGroupRulesSource rulesSource,
+        @CustomType.Parameter("statefulRuleOptions") @Nullable RuleGroupStatefulRuleOptions statefulRuleOptions) {
         this.ruleVariables = ruleVariables;
         this.rulesSource = rulesSource;
         this.statefulRuleOptions = statefulRuleOptions;

@@ -5,7 +5,7 @@ package io.pulumi.aws.appsync;
 
 import io.pulumi.aws.appsync.inputs.FunctionSyncConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the associated AppSync API.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -31,7 +31,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The Function DataSource name.
      * 
      */
-    @InputImport(name="dataSource", required=true)
+    @Import(name="dataSource", required=true)
       private final Output<String> dataSource;
 
     public Output<String> getDataSource() {
@@ -42,7 +42,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The Function description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -53,7 +53,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The version of the request mapping template. Currently the supported value is `2018-05-29`.
      * 
      */
-    @InputImport(name="functionVersion")
+    @Import(name="functionVersion")
       private final @Nullable Output<String> functionVersion;
 
     public Output<String> getFunctionVersion() {
@@ -64,7 +64,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum batching size for a resolver. Valid values are between `0` and `2000`.
      * 
      */
-    @InputImport(name="maxBatchSize")
+    @Import(name="maxBatchSize")
       private final @Nullable Output<Integer> maxBatchSize;
 
     public Output<Integer> getMaxBatchSize() {
@@ -75,7 +75,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The Function name. The function name does not have to be unique.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -86,7 +86,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.
      * 
      */
-    @InputImport(name="requestMappingTemplate", required=true)
+    @Import(name="requestMappingTemplate", required=true)
       private final Output<String> requestMappingTemplate;
 
     public Output<String> getRequestMappingTemplate() {
@@ -97,7 +97,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * The Function response mapping template.
      * 
      */
-    @InputImport(name="responseMappingTemplate", required=true)
+    @Import(name="responseMappingTemplate", required=true)
       private final Output<String> responseMappingTemplate;
 
     public Output<String> getResponseMappingTemplate() {
@@ -108,7 +108,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * Describes a Sync configuration for a resolver. See Sync Config.
      * 
      */
-    @InputImport(name="syncConfig")
+    @Import(name="syncConfig")
       private final @Nullable Output<FunctionSyncConfigArgs> syncConfig;
 
     public Output<FunctionSyncConfigArgs> getSyncConfig() {

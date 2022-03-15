@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccountAuditConfigurationAuditNotificationTarget {
     /**
      * True if notifications to the target are enabled.
@@ -28,11 +28,11 @@ public final class AccountAuditConfigurationAuditNotificationTarget {
      */
     private final @Nullable String targetArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccountAuditConfigurationAuditNotificationTarget(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("targetArn") @Nullable String targetArn) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("targetArn") @Nullable String targetArn) {
         this.enabled = enabled;
         this.roleArn = roleArn;
         this.targetArn = targetArn;

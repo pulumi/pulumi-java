@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReferencedPublicIpAddressResponse {
     /**
      * The PublicIPAddress Reference.
@@ -17,8 +17,8 @@ public final class ReferencedPublicIpAddressResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
-    private ReferencedPublicIpAddressResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
+    @CustomType.Constructor
+    private ReferencedPublicIpAddressResponse(@CustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

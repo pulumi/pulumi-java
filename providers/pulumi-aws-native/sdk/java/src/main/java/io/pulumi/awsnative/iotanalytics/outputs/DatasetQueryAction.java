@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetQueryAction {
     private final @Nullable List<DatasetFilter> filters;
     private final String sqlQuery;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetQueryAction(
-        @OutputCustomType.Parameter("filters") @Nullable List<DatasetFilter> filters,
-        @OutputCustomType.Parameter("sqlQuery") String sqlQuery) {
+        @CustomType.Parameter("filters") @Nullable List<DatasetFilter> filters,
+        @CustomType.Parameter("sqlQuery") String sqlQuery) {
         this.filters = filters;
         this.sqlQuery = sqlQuery;
     }

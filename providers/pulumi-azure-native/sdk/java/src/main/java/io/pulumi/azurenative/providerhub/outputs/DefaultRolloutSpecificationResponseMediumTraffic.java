@@ -3,22 +3,22 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DefaultRolloutSpecificationResponseMediumTraffic {
     private final @Nullable List<String> regions;
     private final @Nullable String waitDuration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DefaultRolloutSpecificationResponseMediumTraffic(
-        @OutputCustomType.Parameter("regions") @Nullable List<String> regions,
-        @OutputCustomType.Parameter("waitDuration") @Nullable String waitDuration) {
+        @CustomType.Parameter("regions") @Nullable List<String> regions,
+        @CustomType.Parameter("waitDuration") @Nullable String waitDuration) {
         this.regions = regions;
         this.waitDuration = waitDuration;
     }

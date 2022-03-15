@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
      * Azure Internal monitoring pipeline account.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable String accountName;
 
     public Optional<String> getAccountName() {
@@ -34,7 +34,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
      * Azure Internal monitoring pipeline autokey associated with the certificate.
      * 
      */
-    @InputImport(name="autoKeyConfigUrl")
+    @Import(name="autoKeyConfigUrl")
       private final @Nullable String autoKeyConfigUrl;
 
     public Optional<String> getAutoKeyConfigUrl() {
@@ -45,7 +45,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
      * A description of the sink.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -56,7 +56,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
      * Azure Internal monitoring agent fluentd configuration.
      * 
      */
-    @InputImport(name="fluentdConfigUrl")
+    @Import(name="fluentdConfigUrl")
       private final @Nullable Object fluentdConfigUrl;
 
     public Optional<Object> getFluentdConfigUrl() {
@@ -68,7 +68,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
      * Expected value is 'AzureInternalMonitoringPipeline'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -79,7 +79,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
      * Azure Internal monitoring agent configuration.
      * 
      */
-    @InputImport(name="maConfigUrl")
+    @Import(name="maConfigUrl")
       private final @Nullable String maConfigUrl;
 
     public Optional<String> getMaConfigUrl() {
@@ -90,7 +90,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
      * Name of the sink. This value is referenced by DiagnosticsReferenceDescription
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -101,7 +101,7 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse extend
      * Azure Internal monitoring pipeline account namespace.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable String namespace;
 
     public Optional<String> getNamespace() {

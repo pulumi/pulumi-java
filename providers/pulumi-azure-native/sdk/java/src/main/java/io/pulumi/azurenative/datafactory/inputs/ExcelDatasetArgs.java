@@ -21,7 +21,7 @@ import io.pulumi.azurenative.datafactory.inputs.OracleCloudStorageLocationArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SftpLocationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +42,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * List of tags that can be used for describing the Dataset.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -53,7 +53,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * The data compression method used for the json dataset.
      * 
      */
-    @InputImport(name="compression")
+    @Import(name="compression")
       private final @Nullable Output<DatasetCompressionArgs> compression;
 
     public Output<DatasetCompressionArgs> getCompression() {
@@ -64,7 +64,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Dataset description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -75,7 +75,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="firstRowAsHeader")
+    @Import(name="firstRowAsHeader")
       private final @Nullable Output<Object> firstRowAsHeader;
 
     public Output<Object> getFirstRowAsHeader() {
@@ -86,7 +86,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
      */
-    @InputImport(name="folder")
+    @Import(name="folder")
       private final @Nullable Output<DatasetFolderArgs> folder;
 
     public Output<DatasetFolderArgs> getFolder() {
@@ -97,7 +97,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName", required=true)
+    @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
@@ -108,7 +108,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the excel storage.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<Object> location;
 
     public Output<Object> getLocation() {
@@ -119,7 +119,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * The null value string. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="nullValue")
+    @Import(name="nullValue")
       private final @Nullable Output<Object> nullValue;
 
     public Output<Object> getNullValue() {
@@ -130,7 +130,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Parameters for dataset.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -141,7 +141,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * The partial data of one sheet. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="range")
+    @Import(name="range")
       private final @Nullable Output<Object> range;
 
     public Output<Object> getRange() {
@@ -152,7 +152,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<Object> schema;
 
     public Output<Object> getSchema() {
@@ -163,7 +163,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * The sheet index of excel file and default value is 0. Type: integer (or Expression with resultType integer)
      * 
      */
-    @InputImport(name="sheetIndex")
+    @Import(name="sheetIndex")
       private final @Nullable Output<Object> sheetIndex;
 
     public Output<Object> getSheetIndex() {
@@ -174,7 +174,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * The sheet name of excel file. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="sheetName")
+    @Import(name="sheetName")
       private final @Nullable Output<Object> sheetName;
 
     public Output<Object> getSheetName() {
@@ -185,7 +185,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
      */
-    @InputImport(name="structure")
+    @Import(name="structure")
       private final @Nullable Output<Object> structure;
 
     public Output<Object> getStructure() {
@@ -197,7 +197,7 @@ public final class ExcelDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'Excel'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyRuleMatcherConfigLayer4ConfigResponse {
     /**
      * The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp), or the IP protocol number.
@@ -21,10 +21,10 @@ public final class SecurityPolicyRuleMatcherConfigLayer4ConfigResponse {
      */
     private final List<String> ports;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityPolicyRuleMatcherConfigLayer4ConfigResponse(
-        @OutputCustomType.Parameter("ipProtocol") String ipProtocol,
-        @OutputCustomType.Parameter("ports") List<String> ports) {
+        @CustomType.Parameter("ipProtocol") String ipProtocol,
+        @CustomType.Parameter("ports") List<String> ports) {
         this.ipProtocol = ipProtocol;
         this.ports = ports;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.TriggerPipelineReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BlobEventsTriggerResponse {
     /**
      * List of tags that can be used for describing the trigger.
@@ -67,18 +67,18 @@ public final class BlobEventsTriggerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BlobEventsTriggerResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("blobPathBeginsWith") @Nullable String blobPathBeginsWith,
-        @OutputCustomType.Parameter("blobPathEndsWith") @Nullable String blobPathEndsWith,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("events") List<String> events,
-        @OutputCustomType.Parameter("ignoreEmptyBlobs") @Nullable Boolean ignoreEmptyBlobs,
-        @OutputCustomType.Parameter("pipelines") @Nullable List<TriggerPipelineReferenceResponse> pipelines,
-        @OutputCustomType.Parameter("runtimeState") String runtimeState,
-        @OutputCustomType.Parameter("scope") String scope,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("blobPathBeginsWith") @Nullable String blobPathBeginsWith,
+        @CustomType.Parameter("blobPathEndsWith") @Nullable String blobPathEndsWith,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("events") List<String> events,
+        @CustomType.Parameter("ignoreEmptyBlobs") @Nullable Boolean ignoreEmptyBlobs,
+        @CustomType.Parameter("pipelines") @Nullable List<TriggerPipelineReferenceResponse> pipelines,
+        @CustomType.Parameter("runtimeState") String runtimeState,
+        @CustomType.Parameter("scope") String scope,
+        @CustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.blobPathBeginsWith = blobPathBeginsWith;
         this.blobPathEndsWith = blobPathEndsWith;

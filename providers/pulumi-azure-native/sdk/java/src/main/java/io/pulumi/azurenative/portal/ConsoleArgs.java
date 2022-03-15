@@ -5,7 +5,7 @@ package io.pulumi.azurenative.portal;
 
 import io.pulumi.azurenative.portal.inputs.ConsoleCreatePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the console
      * 
      */
-    @InputImport(name="consoleName")
+    @Import(name="consoleName")
       private final @Nullable Output<String> consoleName;
 
     public Output<String> getConsoleName() {
@@ -30,7 +30,7 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
      * Cloud shell properties for creating a console.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<ConsoleCreatePropertiesArgs> properties;
 
     public Output<ConsoleCreatePropertiesArgs> getProperties() {

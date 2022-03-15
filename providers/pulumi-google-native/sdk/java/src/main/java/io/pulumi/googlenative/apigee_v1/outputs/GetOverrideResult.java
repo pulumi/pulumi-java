@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1TraceSamplingConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetOverrideResult {
     /**
      * ID of the API proxy that will have its trace configuration overridden.
@@ -26,11 +26,11 @@ public final class GetOverrideResult {
      */
     private final GoogleCloudApigeeV1TraceSamplingConfigResponse samplingConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOverrideResult(
-        @OutputCustomType.Parameter("apiProxy") String apiProxy,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("samplingConfig") GoogleCloudApigeeV1TraceSamplingConfigResponse samplingConfig) {
+        @CustomType.Parameter("apiProxy") String apiProxy,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("samplingConfig") GoogleCloudApigeeV1TraceSamplingConfigResponse samplingConfig) {
         this.apiProxy = apiProxy;
         this.name = name;
         this.samplingConfig = samplingConfig;

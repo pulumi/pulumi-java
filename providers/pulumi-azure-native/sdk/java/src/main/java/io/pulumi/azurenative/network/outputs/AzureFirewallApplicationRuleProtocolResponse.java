@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureFirewallApplicationRuleProtocolResponse {
     /**
      * Port number for the protocol, cannot be greater than 64000. This field is optional.
@@ -23,10 +23,10 @@ public final class AzureFirewallApplicationRuleProtocolResponse {
      */
     private final @Nullable String protocolType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureFirewallApplicationRuleProtocolResponse(
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("protocolType") @Nullable String protocolType) {
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("protocolType") @Nullable String protocolType) {
         this.port = port;
         this.protocolType = protocolType;
     }

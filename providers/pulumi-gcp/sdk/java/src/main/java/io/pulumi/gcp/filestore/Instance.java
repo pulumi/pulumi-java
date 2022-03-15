@@ -4,7 +4,7 @@
 package io.pulumi.gcp.filestore;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.filestore.InstanceArgs;
@@ -52,7 +52,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -66,7 +66,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * A description of the instance.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -80,7 +80,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Server-specified ETag for the instance resource to prevent simultaneous updates from overwriting each other.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -96,7 +96,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="fileShares", type=InstanceFileShares.class, parameters={})
+    @Export(name="fileShares", type=InstanceFileShares.class, parameters={})
     private Output<InstanceFileShares> fileShares;
 
     /**
@@ -112,7 +112,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Resource labels to represent user-provided metadata.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -126,7 +126,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The name of the location of the instance. This can be a region for ENTERPRISE tier instances.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -140,7 +140,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The name of the fileshare (16 characters or less)
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -156,7 +156,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="networks", type=List.class, parameters={InstanceNetwork.class})
+    @Export(name="networks", type=List.class, parameters={InstanceNetwork.class})
     private Output<List<InstanceNetwork>> networks;
 
     /**
@@ -173,7 +173,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -189,7 +189,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE (beta only)
      * 
      */
-    @OutputExport(name="tier", type=String.class, parameters={})
+    @Export(name="tier", type=String.class, parameters={})
     private Output<String> tier;
 
     /**
@@ -210,7 +210,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * 
      */
     @Deprecated /* Deprecated in favor of location. */
-    @OutputExport(name="zone", type=String.class, parameters={})
+    @Export(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
     /**

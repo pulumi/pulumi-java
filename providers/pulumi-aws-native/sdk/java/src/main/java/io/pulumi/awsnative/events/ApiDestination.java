@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.events.ApiDestinationArgs;
 import io.pulumi.awsnative.events.enums.ApiDestinationHttpMethod;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public class ApiDestination extends io.pulumi.resources.CustomResource {
      * The arn of the api destination.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -37,7 +37,7 @@ public class ApiDestination extends io.pulumi.resources.CustomResource {
      * The arn of the connection.
      * 
      */
-    @OutputExport(name="connectionArn", type=String.class, parameters={})
+    @Export(name="connectionArn", type=String.class, parameters={})
     private Output<String> connectionArn;
 
     /**
@@ -47,13 +47,13 @@ public class ApiDestination extends io.pulumi.resources.CustomResource {
     public Output<String> getConnectionArn() {
         return this.connectionArn;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="httpMethod", type=ApiDestinationHttpMethod.class, parameters={})
+    @Export(name="httpMethod", type=ApiDestinationHttpMethod.class, parameters={})
     private Output<ApiDestinationHttpMethod> httpMethod;
 
     public Output<ApiDestinationHttpMethod> getHttpMethod() {
@@ -63,7 +63,7 @@ public class ApiDestination extends io.pulumi.resources.CustomResource {
      * Url endpoint to invoke.
      * 
      */
-    @OutputExport(name="invocationEndpoint", type=String.class, parameters={})
+    @Export(name="invocationEndpoint", type=String.class, parameters={})
     private Output<String> invocationEndpoint;
 
     /**
@@ -73,7 +73,7 @@ public class ApiDestination extends io.pulumi.resources.CustomResource {
     public Output<String> getInvocationEndpoint() {
         return this.invocationEndpoint;
     }
-    @OutputExport(name="invocationRateLimitPerSecond", type=Integer.class, parameters={})
+    @Export(name="invocationRateLimitPerSecond", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> invocationRateLimitPerSecond;
 
     public Output</* @Nullable */ Integer> getInvocationRateLimitPerSecond() {
@@ -83,7 +83,7 @@ public class ApiDestination extends io.pulumi.resources.CustomResource {
      * Name of the apiDestination.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**

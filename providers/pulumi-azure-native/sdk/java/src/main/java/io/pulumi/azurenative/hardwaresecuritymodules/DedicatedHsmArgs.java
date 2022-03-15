@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hardwaresecuritymodules;
 import io.pulumi.azurenative.hardwaresecuritymodules.inputs.NetworkProfileArgs;
 import io.pulumi.azurenative.hardwaresecuritymodules.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * The supported Azure location where the dedicated HSM should be created.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -33,7 +33,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the dedicated Hsm
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the network interfaces of the dedicated hsm.
      * 
      */
-    @InputImport(name="networkProfile")
+    @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
     public Output<NetworkProfileArgs> getNetworkProfile() {
@@ -55,7 +55,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Resource Group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -66,7 +66,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * SKU details
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -77,7 +77,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * This field will be used when RP does not support Availability zones.
      * 
      */
-    @InputImport(name="stampId")
+    @Import(name="stampId")
       private final @Nullable Output<String> stampId;
 
     public Output<String> getStampId() {
@@ -88,7 +88,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -99,7 +99,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * The Dedicated Hsm zones.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {

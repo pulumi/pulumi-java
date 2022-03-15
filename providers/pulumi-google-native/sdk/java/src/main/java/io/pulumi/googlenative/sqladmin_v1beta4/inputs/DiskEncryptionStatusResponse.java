@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DiskEncryptionStatusResponse extends io.pulumi.resources.Invo
      * This is always `sql#diskEncryptionStatus`.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -31,7 +31,7 @@ public final class DiskEncryptionStatusResponse extends io.pulumi.resources.Invo
      * KMS key version used to encrypt the Cloud SQL instance resource
      * 
      */
-    @InputImport(name="kmsKeyVersionName", required=true)
+    @Import(name="kmsKeyVersionName", required=true)
       private final String kmsKeyVersionName;
 
     public String getKmsKeyVersionName() {

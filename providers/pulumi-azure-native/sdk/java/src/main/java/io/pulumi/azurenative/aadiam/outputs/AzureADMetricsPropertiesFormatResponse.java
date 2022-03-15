@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.aadiam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzureADMetricsPropertiesFormatResponse {
     /**
      * The provisioning state of the resource.
@@ -15,8 +15,8 @@ public final class AzureADMetricsPropertiesFormatResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
-    private AzureADMetricsPropertiesFormatResponse(@OutputCustomType.Parameter("provisioningState") String provisioningState) {
+    @CustomType.Constructor
+    private AzureADMetricsPropertiesFormatResponse(@CustomType.Parameter("provisioningState") String provisioningState) {
         this.provisioningState = provisioningState;
     }
 

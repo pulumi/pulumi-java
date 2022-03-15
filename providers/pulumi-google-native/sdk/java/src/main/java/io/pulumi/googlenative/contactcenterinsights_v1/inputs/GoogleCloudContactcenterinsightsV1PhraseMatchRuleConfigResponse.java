@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigRespon
      * The configuration for the exact match rule.
      * 
      */
-    @InputImport(name="exactMatchConfig", required=true)
+    @Import(name="exactMatchConfig", required=true)
       private final GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig;
 
     public GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse getExactMatchConfig() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
      * The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
      * 
      */
-    @InputImport(name="failoverPriority")
+    @Import(name="failoverPriority")
       private final @Nullable Output<Integer> failoverPriority;
 
     public Output<Integer> getFailoverPriority() {
@@ -35,7 +35,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
      * Flag to indicate whether or not this region is an AvailabilityZone region
      * 
      */
-    @InputImport(name="isZoneRedundant")
+    @Import(name="isZoneRedundant")
       private final @Nullable Output<Boolean> isZoneRedundant;
 
     public Output<Boolean> getIsZoneRedundant() {
@@ -46,7 +46,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the region.
      * 
      */
-    @InputImport(name="locationName")
+    @Import(name="locationName")
       private final @Nullable Output<String> locationName;
 
     public Output<String> getLocationName() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ApiKeyState extends io.pulumi.resources.ResourceArgs {
      * The ID of the associated AppSync API
      * 
      */
-    @InputImport(name="apiId")
+    @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -29,7 +29,7 @@ public final class ApiKeyState extends io.pulumi.resources.ResourceArgs {
      * The API key description. Defaults to "Managed by Pulumi".
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -40,7 +40,7 @@ public final class ApiKeyState extends io.pulumi.resources.ResourceArgs {
      * RFC3339 string representation of the expiry date. Rounded down to nearest hour. By default, it is 7 days from the date of creation.
      * 
      */
-    @InputImport(name="expires")
+    @Import(name="expires")
       private final @Nullable Output<String> expires;
 
     public Output<String> getExpires() {
@@ -51,7 +51,7 @@ public final class ApiKeyState extends io.pulumi.resources.ResourceArgs {
      * The API key
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {

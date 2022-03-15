@@ -5,12 +5,12 @@ package io.pulumi.aws.codebuild.outputs;
 
 import io.pulumi.aws.codebuild.outputs.ProjectLogsConfigCloudwatchLogs;
 import io.pulumi.aws.codebuild.outputs.ProjectLogsConfigS3Logs;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectLogsConfig {
     /**
      * Configuration block. Detailed below.
@@ -23,10 +23,10 @@ public final class ProjectLogsConfig {
      */
     private final @Nullable ProjectLogsConfigS3Logs s3Logs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectLogsConfig(
-        @OutputCustomType.Parameter("cloudwatchLogs") @Nullable ProjectLogsConfigCloudwatchLogs cloudwatchLogs,
-        @OutputCustomType.Parameter("s3Logs") @Nullable ProjectLogsConfigS3Logs s3Logs) {
+        @CustomType.Parameter("cloudwatchLogs") @Nullable ProjectLogsConfigCloudwatchLogs cloudwatchLogs,
+        @CustomType.Parameter("s3Logs") @Nullable ProjectLogsConfigS3Logs s3Logs) {
         this.cloudwatchLogs = cloudwatchLogs;
         this.s3Logs = s3Logs;
     }

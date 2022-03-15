@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotFulfillmentUpdatesSpecificationArgs;
 import io.pulumi.awsnative.lex.inputs.BotPostFulfillmentStatusSpecificationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,21 +20,21 @@ public final class BotFulfillmentCodeHookSettingArgs extends io.pulumi.resources
 
     public static final BotFulfillmentCodeHookSettingArgs Empty = new BotFulfillmentCodeHookSettingArgs();
 
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
-    @InputImport(name="fulfillmentUpdatesSpecification")
+    @Import(name="fulfillmentUpdatesSpecification")
       private final @Nullable Output<BotFulfillmentUpdatesSpecificationArgs> fulfillmentUpdatesSpecification;
 
     public Output<BotFulfillmentUpdatesSpecificationArgs> getFulfillmentUpdatesSpecification() {
         return this.fulfillmentUpdatesSpecification == null ? Output.empty() : this.fulfillmentUpdatesSpecification;
     }
 
-    @InputImport(name="postFulfillmentStatusSpecification")
+    @Import(name="postFulfillmentStatusSpecification")
       private final @Nullable Output<BotPostFulfillmentStatusSpecificationArgs> postFulfillmentStatusSpecification;
 
     public Output<BotPostFulfillmentStatusSpecificationArgs> getPostFulfillmentStatusSpecification() {

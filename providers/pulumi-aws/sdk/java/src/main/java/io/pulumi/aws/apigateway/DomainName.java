@@ -9,7 +9,7 @@ import io.pulumi.aws.apigateway.inputs.DomainNameState;
 import io.pulumi.aws.apigateway.outputs.DomainNameEndpointConfiguration;
 import io.pulumi.aws.apigateway.outputs.DomainNameMutualTlsAuthentication;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -60,7 +60,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN)
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -74,7 +74,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when an edge-optimized domain name is desired. Conflicts with `certificate_name`, `certificate_body`, `certificate_chain`, `certificate_private_key`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
-    @OutputExport(name="certificateArn", type=String.class, parameters={})
+    @Export(name="certificateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateArn;
 
     /**
@@ -90,7 +90,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * `regional_certificate_name`.
      * 
      */
-    @OutputExport(name="certificateBody", type=String.class, parameters={})
+    @Export(name="certificateBody", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateBody;
 
     /**
@@ -109,7 +109,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
-    @OutputExport(name="certificateChain", type=String.class, parameters={})
+    @Export(name="certificateChain", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateChain;
 
     /**
@@ -128,7 +128,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * `regional_certificate_name`. Required if `certificate_arn` is not set.
      * 
      */
-    @OutputExport(name="certificateName", type=String.class, parameters={})
+    @Export(name="certificateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateName;
 
     /**
@@ -145,7 +145,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint configuration type. Conflicts with `certificate_arn`, `regional_certificate_arn`, and `regional_certificate_name`.
      * 
      */
-    @OutputExport(name="certificatePrivateKey", type=String.class, parameters={})
+    @Export(name="certificatePrivateKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificatePrivateKey;
 
     /**
@@ -160,7 +160,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * The upload date associated with the domain certificate.
      * 
      */
-    @OutputExport(name="certificateUploadDate", type=String.class, parameters={})
+    @Export(name="certificateUploadDate", type=String.class, parameters={})
     private Output<String> certificateUploadDate;
 
     /**
@@ -175,7 +175,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * the distribution that implements this domain name mapping.
      * 
      */
-    @OutputExport(name="cloudfrontDomainName", type=String.class, parameters={})
+    @Export(name="cloudfrontDomainName", type=String.class, parameters={})
     private Output<String> cloudfrontDomainName;
 
     /**
@@ -191,7 +191,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * that can be used to create a Route53 alias record for the distribution.
      * 
      */
-    @OutputExport(name="cloudfrontZoneId", type=String.class, parameters={})
+    @Export(name="cloudfrontZoneId", type=String.class, parameters={})
     private Output<String> cloudfrontZoneId;
 
     /**
@@ -206,7 +206,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * The fully-qualified domain name to register
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -220,7 +220,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * Configuration block defining API endpoint information including type. Defined below.
      * 
      */
-    @OutputExport(name="endpointConfiguration", type=DomainNameEndpointConfiguration.class, parameters={})
+    @Export(name="endpointConfiguration", type=DomainNameEndpointConfiguration.class, parameters={})
     private Output<DomainNameEndpointConfiguration> endpointConfiguration;
 
     /**
@@ -234,7 +234,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * The mutual TLS authentication configuration for the domain name. Defined below.
      * 
      */
-    @OutputExport(name="mutualTlsAuthentication", type=DomainNameMutualTlsAuthentication.class, parameters={})
+    @Export(name="mutualTlsAuthentication", type=DomainNameMutualTlsAuthentication.class, parameters={})
     private Output</* @Nullable */ DomainNameMutualTlsAuthentication> mutualTlsAuthentication;
 
     /**
@@ -248,7 +248,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * The ARN for an AWS-managed certificate. AWS Certificate Manager is the only supported source. Used when a regional domain name is desired. Conflicts with `certificate_arn`, `certificate_name`, `certificate_body`, `certificate_chain`, and `certificate_private_key`.
      * 
      */
-    @OutputExport(name="regionalCertificateArn", type=String.class, parameters={})
+    @Export(name="regionalCertificateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> regionalCertificateArn;
 
     /**
@@ -263,7 +263,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * `certificate_private_key`.
      * 
      */
-    @OutputExport(name="regionalCertificateName", type=String.class, parameters={})
+    @Export(name="regionalCertificateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> regionalCertificateName;
 
     /**
@@ -278,7 +278,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * The hostname for the custom domain's regional endpoint.
      * 
      */
-    @OutputExport(name="regionalDomainName", type=String.class, parameters={})
+    @Export(name="regionalDomainName", type=String.class, parameters={})
     private Output<String> regionalDomainName;
 
     /**
@@ -292,7 +292,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * The hosted zone ID that can be used to create a Route53 alias record for the regional endpoint.
      * 
      */
-    @OutputExport(name="regionalZoneId", type=String.class, parameters={})
+    @Export(name="regionalZoneId", type=String.class, parameters={})
     private Output<String> regionalZoneId;
 
     /**
@@ -306,7 +306,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * The Transport Layer Security (TLS) version + cipher suite for this DomainName. The valid values are `TLS_1_0` and `TLS_1_2`. Must be configured to perform drift detection.
      * 
      */
-    @OutputExport(name="securityPolicy", type=String.class, parameters={})
+    @Export(name="securityPolicy", type=String.class, parameters={})
     private Output<String> securityPolicy;
 
     /**
@@ -320,7 +320,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -334,7 +334,7 @@ public class DomainName extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

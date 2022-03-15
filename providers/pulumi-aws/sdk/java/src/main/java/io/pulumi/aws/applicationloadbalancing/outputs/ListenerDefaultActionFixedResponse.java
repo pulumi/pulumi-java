@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.applicationloadbalancing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerDefaultActionFixedResponse {
     /**
      * Content type. Valid values are `text/plain`, `text/css`, `text/html`, `application/javascript` and `application/json`.
@@ -27,11 +27,11 @@ public final class ListenerDefaultActionFixedResponse {
      */
     private final @Nullable String statusCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerDefaultActionFixedResponse(
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("messageBody") @Nullable String messageBody,
-        @OutputCustomType.Parameter("statusCode") @Nullable String statusCode) {
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("messageBody") @Nullable String messageBody,
+        @CustomType.Parameter("statusCode") @Nullable String statusCode) {
         this.contentType = contentType;
         this.messageBody = messageBody;
         this.statusCode = statusCode;

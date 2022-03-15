@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CognitiveServicesAccountApiPropertiesResponse {
     /**
      * (Metrics Advisor Only) The Azure AD Client Id (Application Id).
@@ -63,18 +63,18 @@ public final class CognitiveServicesAccountApiPropertiesResponse {
      */
     private final @Nullable String websiteName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CognitiveServicesAccountApiPropertiesResponse(
-        @OutputCustomType.Parameter("aadClientId") @Nullable String aadClientId,
-        @OutputCustomType.Parameter("aadTenantId") @Nullable String aadTenantId,
-        @OutputCustomType.Parameter("eventHubConnectionString") @Nullable String eventHubConnectionString,
-        @OutputCustomType.Parameter("qnaAzureSearchEndpointId") @Nullable String qnaAzureSearchEndpointId,
-        @OutputCustomType.Parameter("qnaAzureSearchEndpointKey") @Nullable String qnaAzureSearchEndpointKey,
-        @OutputCustomType.Parameter("qnaRuntimeEndpoint") @Nullable String qnaRuntimeEndpoint,
-        @OutputCustomType.Parameter("statisticsEnabled") @Nullable Boolean statisticsEnabled,
-        @OutputCustomType.Parameter("storageAccountConnectionString") @Nullable String storageAccountConnectionString,
-        @OutputCustomType.Parameter("superUser") @Nullable String superUser,
-        @OutputCustomType.Parameter("websiteName") @Nullable String websiteName) {
+        @CustomType.Parameter("aadClientId") @Nullable String aadClientId,
+        @CustomType.Parameter("aadTenantId") @Nullable String aadTenantId,
+        @CustomType.Parameter("eventHubConnectionString") @Nullable String eventHubConnectionString,
+        @CustomType.Parameter("qnaAzureSearchEndpointId") @Nullable String qnaAzureSearchEndpointId,
+        @CustomType.Parameter("qnaAzureSearchEndpointKey") @Nullable String qnaAzureSearchEndpointKey,
+        @CustomType.Parameter("qnaRuntimeEndpoint") @Nullable String qnaRuntimeEndpoint,
+        @CustomType.Parameter("statisticsEnabled") @Nullable Boolean statisticsEnabled,
+        @CustomType.Parameter("storageAccountConnectionString") @Nullable String storageAccountConnectionString,
+        @CustomType.Parameter("superUser") @Nullable String superUser,
+        @CustomType.Parameter("websiteName") @Nullable String websiteName) {
         this.aadClientId = aadClientId;
         this.aadTenantId = aadTenantId;
         this.eventHubConnectionString = eventHubConnectionString;

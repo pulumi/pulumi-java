@@ -13,7 +13,7 @@ import io.pulumi.azurenative.securityinsights.outputs.MetadataSupportResponse;
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class Metadata extends io.pulumi.resources.CustomResource {
      * The creator of the content item.
      * 
      */
-    @OutputExport(name="author", type=MetadataAuthorResponse.class, parameters={})
+    @Export(name="author", type=MetadataAuthorResponse.class, parameters={})
     private Output</* @Nullable */ MetadataAuthorResponse> author;
 
     /**
@@ -54,7 +54,7 @@ public class Metadata extends io.pulumi.resources.CustomResource {
      * Categories for the solution content item
      * 
      */
-    @OutputExport(name="categories", type=MetadataCategoriesResponse.class, parameters={})
+    @Export(name="categories", type=MetadataCategoriesResponse.class, parameters={})
     private Output</* @Nullable */ MetadataCategoriesResponse> categories;
 
     /**
@@ -68,7 +68,7 @@ public class Metadata extends io.pulumi.resources.CustomResource {
      * Static ID for the content.  Used to identify dependencies and content from solutions or community.  Hard-coded/static for out of the box content and solutions. Dynamic for user-created.  This is the resource name
      * 
      */
-    @OutputExport(name="contentId", type=String.class, parameters={})
+    @Export(name="contentId", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentId;
 
     /**
@@ -82,7 +82,7 @@ public class Metadata extends io.pulumi.resources.CustomResource {
      * Dependencies for the content item, what other content items it requires to work.  Can describe more complex dependencies using a recursive/nested structure. For a single dependency an id/kind/version can be supplied or operator/criteria for complex formats.
      * 
      */
-    @OutputExport(name="dependencies", type=MetadataDependenciesResponse.class, parameters={})
+    @Export(name="dependencies", type=MetadataDependenciesResponse.class, parameters={})
     private Output</* @Nullable */ MetadataDependenciesResponse> dependencies;
 
     /**
@@ -96,7 +96,7 @@ public class Metadata extends io.pulumi.resources.CustomResource {
      * Etag of the azure resource
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -110,7 +110,7 @@ public class Metadata extends io.pulumi.resources.CustomResource {
      * first publish date solution content item
      * 
      */
-    @OutputExport(name="firstPublishDate", type=String.class, parameters={})
+    @Export(name="firstPublishDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> firstPublishDate;
 
     /**
@@ -124,7 +124,7 @@ public class Metadata extends io.pulumi.resources.CustomResource {
      * The kind of content the metadata is for.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -138,7 +138,7 @@ public class Metadata extends io.pulumi.resources.CustomResource {
      * last publish date for the solution content item
      * 
      */
-    @OutputExport(name="lastPublishDate", type=String.class, parameters={})
+    @Export(name="lastPublishDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastPublishDate;
 
     /**
@@ -152,7 +152,7 @@ public class Metadata extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -166,7 +166,7 @@ public class Metadata extends io.pulumi.resources.CustomResource {
      * Full parent resource ID of the content item the metadata is for.  This is the full resource ID including the scope (subscription and resource group)
      * 
      */
-    @OutputExport(name="parentId", type=String.class, parameters={})
+    @Export(name="parentId", type=String.class, parameters={})
     private Output<String> parentId;
 
     /**
@@ -180,7 +180,7 @@ public class Metadata extends io.pulumi.resources.CustomResource {
      * Providers for the solution content item
      * 
      */
-    @OutputExport(name="providers", type=List.class, parameters={String.class})
+    @Export(name="providers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> providers;
 
     /**
@@ -194,7 +194,7 @@ public class Metadata extends io.pulumi.resources.CustomResource {
      * Source of the content.  This is where/how it was created.
      * 
      */
-    @OutputExport(name="source", type=MetadataSourceResponse.class, parameters={})
+    @Export(name="source", type=MetadataSourceResponse.class, parameters={})
     private Output</* @Nullable */ MetadataSourceResponse> source;
 
     /**
@@ -208,7 +208,7 @@ public class Metadata extends io.pulumi.resources.CustomResource {
      * Support information for the metadata - type, name, contact information
      * 
      */
-    @OutputExport(name="support", type=MetadataSupportResponse.class, parameters={})
+    @Export(name="support", type=MetadataSupportResponse.class, parameters={})
     private Output</* @Nullable */ MetadataSupportResponse> support;
 
     /**
@@ -222,7 +222,7 @@ public class Metadata extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -236,7 +236,7 @@ public class Metadata extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -250,7 +250,7 @@ public class Metadata extends io.pulumi.resources.CustomResource {
      * Version of the content.  Default and recommended format is numeric (e.g. 1, 1.0, 1.0.0, 1.0.0.0), following ARM template best practices.  Can also be any string, but then we cannot guarantee any version checks
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**

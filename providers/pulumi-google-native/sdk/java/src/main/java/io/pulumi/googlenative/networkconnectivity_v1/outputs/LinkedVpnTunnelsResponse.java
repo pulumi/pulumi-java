@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LinkedVpnTunnelsResponse {
     /**
      * A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
@@ -22,10 +22,10 @@ public final class LinkedVpnTunnelsResponse {
      */
     private final List<String> uris;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LinkedVpnTunnelsResponse(
-        @OutputCustomType.Parameter("siteToSiteDataTransfer") Boolean siteToSiteDataTransfer,
-        @OutputCustomType.Parameter("uris") List<String> uris) {
+        @CustomType.Parameter("siteToSiteDataTransfer") Boolean siteToSiteDataTransfer,
+        @CustomType.Parameter("uris") List<String> uris) {
         this.siteToSiteDataTransfer = siteToSiteDataTransfer;
         this.uris = uris;
     }

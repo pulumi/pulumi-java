@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class HttpErrorRangeParametersResponse extends io.pulumi.resources.
      * The inclusive start of the http status code range.
      * 
      */
-    @InputImport(name="begin")
+    @Import(name="begin")
       private final @Nullable Integer begin;
 
     public Optional<Integer> getBegin() {
@@ -33,7 +33,7 @@ public final class HttpErrorRangeParametersResponse extends io.pulumi.resources.
      * The inclusive end of the http status code range.
      * 
      */
-    @InputImport(name="end")
+    @Import(name="end")
       private final @Nullable Integer end;
 
     public Optional<Integer> getEnd() {

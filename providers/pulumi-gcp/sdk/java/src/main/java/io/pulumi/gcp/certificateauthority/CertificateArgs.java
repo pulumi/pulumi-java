@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Certificate Authority name.
      * 
      */
-    @InputImport(name="certificateAuthority")
+    @Import(name="certificateAuthority")
       private final @Nullable Output<String> certificateAuthority;
 
     public Output<String> getCertificateAuthority() {
@@ -35,7 +35,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * as the Certificate.
      * 
      */
-    @InputImport(name="certificateTemplate")
+    @Import(name="certificateTemplate")
       private final @Nullable Output<String> certificateTemplate;
 
     public Output<String> getCertificateTemplate() {
@@ -47,7 +47,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Output<CertificateConfigArgs> config;
 
     public Output<CertificateConfigArgs> getConfig() {
@@ -58,7 +58,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Labels with user-defined metadata to apply to this resource.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -71,7 +71,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="lifetime")
+    @Import(name="lifetime")
       private final @Nullable Output<String> lifetime;
 
     public Output<String> getLifetime() {
@@ -83,7 +83,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * running `gcloud privateca locations list`.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -94,7 +94,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The name for this Certificate.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -105,7 +105,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. A pem-encoded X.509 certificate signing request (CSR).
      * 
      */
-    @InputImport(name="pemCsr")
+    @Import(name="pemCsr")
       private final @Nullable Output<String> pemCsr;
 
     public Output<String> getPemCsr() {
@@ -116,7 +116,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the CaPool this Certificate belongs to.
      * 
      */
-    @InputImport(name="pool", required=true)
+    @Import(name="pool", required=true)
       private final Output<String> pool;
 
     public Output<String> getPool() {
@@ -128,7 +128,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

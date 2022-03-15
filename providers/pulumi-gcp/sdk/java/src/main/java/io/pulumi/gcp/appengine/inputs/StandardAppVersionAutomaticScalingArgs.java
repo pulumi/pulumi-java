@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class StandardAppVersionAutomaticScalingArgs extends io.pulumi.reso
      * Defaults to a runtime-specific value.
      * 
      */
-    @InputImport(name="maxConcurrentRequests")
+    @Import(name="maxConcurrentRequests")
       private final @Nullable Output<Integer> maxConcurrentRequests;
 
     public Output<Integer> getMaxConcurrentRequests() {
@@ -32,7 +32,7 @@ public final class StandardAppVersionAutomaticScalingArgs extends io.pulumi.reso
      * Maximum number of idle instances that should be maintained for this version.
      * 
      */
-    @InputImport(name="maxIdleInstances")
+    @Import(name="maxIdleInstances")
       private final @Nullable Output<Integer> maxIdleInstances;
 
     public Output<Integer> getMaxIdleInstances() {
@@ -44,7 +44,7 @@ public final class StandardAppVersionAutomaticScalingArgs extends io.pulumi.reso
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="maxPendingLatency")
+    @Import(name="maxPendingLatency")
       private final @Nullable Output<String> maxPendingLatency;
 
     public Output<String> getMaxPendingLatency() {
@@ -55,7 +55,7 @@ public final class StandardAppVersionAutomaticScalingArgs extends io.pulumi.reso
      * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
      * 
      */
-    @InputImport(name="minIdleInstances")
+    @Import(name="minIdleInstances")
       private final @Nullable Output<Integer> minIdleInstances;
 
     public Output<Integer> getMinIdleInstances() {
@@ -67,7 +67,7 @@ public final class StandardAppVersionAutomaticScalingArgs extends io.pulumi.reso
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="minPendingLatency")
+    @Import(name="minPendingLatency")
       private final @Nullable Output<String> minPendingLatency;
 
     public Output<String> getMinPendingLatency() {
@@ -79,7 +79,7 @@ public final class StandardAppVersionAutomaticScalingArgs extends io.pulumi.reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="standardSchedulerSettings")
+    @Import(name="standardSchedulerSettings")
       private final @Nullable Output<StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs> standardSchedulerSettings;
 
     public Output<StandardAppVersionAutomaticScalingStandardSchedulerSettingsArgs> getStandardSchedulerSettings() {

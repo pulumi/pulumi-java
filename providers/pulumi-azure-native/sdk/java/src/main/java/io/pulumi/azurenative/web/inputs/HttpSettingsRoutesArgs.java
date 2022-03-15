@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class HttpSettingsRoutesArgs extends io.pulumi.resources.ResourceAr
      * The prefix that should precede all the authentication/authorization paths.
      * 
      */
-    @InputImport(name="apiPrefix")
+    @Import(name="apiPrefix")
       private final @Nullable Output<String> apiPrefix;
 
     public Output<String> getApiPrefix() {

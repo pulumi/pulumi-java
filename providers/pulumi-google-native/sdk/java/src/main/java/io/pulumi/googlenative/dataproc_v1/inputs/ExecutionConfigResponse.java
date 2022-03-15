@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
      * Optional. The Cloud KMS key to use for encryption.
      * 
      */
-    @InputImport(name="kmsKey", required=true)
+    @Import(name="kmsKey", required=true)
       private final String kmsKey;
 
     public String getKmsKey() {
@@ -32,7 +32,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
      * Optional. Tags used for network traffic control.
      * 
      */
-    @InputImport(name="networkTags", required=true)
+    @Import(name="networkTags", required=true)
       private final List<String> networkTags;
 
     public List<String> getNetworkTags() {
@@ -43,7 +43,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
      * Optional. Network URI to connect workload to.
      * 
      */
-    @InputImport(name="networkUri", required=true)
+    @Import(name="networkUri", required=true)
       private final String networkUri;
 
     public String getNetworkUri() {
@@ -54,7 +54,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
      * Optional. Service account that used to execute workload.
      * 
      */
-    @InputImport(name="serviceAccount", required=true)
+    @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
     public String getServiceAccount() {
@@ -65,7 +65,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
      * Optional. Subnetwork URI to connect workload to.
      * 
      */
-    @InputImport(name="subnetworkUri", required=true)
+    @Import(name="subnetworkUri", required=true)
       private final String subnetworkUri;
 
     public String getSubnetworkUri() {

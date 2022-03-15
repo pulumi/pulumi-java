@@ -5,7 +5,7 @@ package io.pulumi.awsnative.transfer.inputs;
 
 import io.pulumi.awsnative.transfer.inputs.WorkflowS3TagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.re
      * The name of the step, used as an identifier.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -35,7 +35,7 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.re
      * Array that contains from 1 to 10 key/value pairs.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<WorkflowS3TagArgs>> tags;
 
     public Output<List<WorkflowS3TagArgs>> getTags() {

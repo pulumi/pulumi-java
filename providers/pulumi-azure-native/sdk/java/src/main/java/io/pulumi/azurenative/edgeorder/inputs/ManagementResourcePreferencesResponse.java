@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ManagementResourcePreferencesResponse extends io.pulumi.resou
      * Customer preferred Management resource ARM ID
      * 
      */
-    @InputImport(name="preferredManagementResourceId")
+    @Import(name="preferredManagementResourceId")
       private final @Nullable String preferredManagementResourceId;
 
     public Optional<String> getPreferredManagementResourceId() {

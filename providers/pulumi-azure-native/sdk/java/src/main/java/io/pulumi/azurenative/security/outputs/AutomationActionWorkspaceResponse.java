@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutomationActionWorkspaceResponse {
     /**
      * The type of the action that will be triggered by the Automation
@@ -23,10 +23,10 @@ public final class AutomationActionWorkspaceResponse {
      */
     private final @Nullable String workspaceResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutomationActionWorkspaceResponse(
-        @OutputCustomType.Parameter("actionType") String actionType,
-        @OutputCustomType.Parameter("workspaceResourceId") @Nullable String workspaceResourceId) {
+        @CustomType.Parameter("actionType") String actionType,
+        @CustomType.Parameter("workspaceResourceId") @Nullable String workspaceResourceId) {
         this.actionType = actionType;
         this.workspaceResourceId = workspaceResourceId;
     }

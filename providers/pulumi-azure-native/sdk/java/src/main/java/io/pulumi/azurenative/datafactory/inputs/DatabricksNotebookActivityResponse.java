@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
      * Base parameters to be used for each run of this job.If the notebook takes a parameter that is not specified, the default value from the notebook will be used.
      * 
      */
-    @InputImport(name="baseParameters")
+    @Import(name="baseParameters")
       private final @Nullable Map<String,Object> baseParameters;
 
     public Map<String,Object> getBaseParameters() {
@@ -40,7 +40,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
@@ -51,7 +51,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -62,7 +62,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
      * A list of libraries to be installed on the cluster that will execute the job.
      * 
      */
-    @InputImport(name="libraries")
+    @Import(name="libraries")
       private final @Nullable List<Map<String,Object>> libraries;
 
     public List<Map<String,Object>> getLibraries() {
@@ -73,7 +73,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName")
+    @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
@@ -84,7 +84,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -95,7 +95,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
      * The absolute path of the notebook to be run in the Databricks Workspace. This path must begin with a slash. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="notebookPath", required=true)
+    @Import(name="notebookPath", required=true)
       private final Object notebookPath;
 
     public Object getNotebookPath() {
@@ -106,7 +106,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
      * Activity policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
@@ -118,7 +118,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
      * Expected value is 'DatabricksNotebook'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -129,7 +129,7 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {

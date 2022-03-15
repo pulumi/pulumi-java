@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.guardduty.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FilterFindingCriteriaCriterion {
     /**
      * List of string values to be evaluated.
@@ -48,15 +48,15 @@ public final class FilterFindingCriteriaCriterion {
      */
     private final @Nullable List<String> notEquals;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FilterFindingCriteriaCriterion(
-        @OutputCustomType.Parameter("equals") @Nullable List<String> equals,
-        @OutputCustomType.Parameter("field") String field,
-        @OutputCustomType.Parameter("greaterThan") @Nullable String greaterThan,
-        @OutputCustomType.Parameter("greaterThanOrEqual") @Nullable String greaterThanOrEqual,
-        @OutputCustomType.Parameter("lessThan") @Nullable String lessThan,
-        @OutputCustomType.Parameter("lessThanOrEqual") @Nullable String lessThanOrEqual,
-        @OutputCustomType.Parameter("notEquals") @Nullable List<String> notEquals) {
+        @CustomType.Parameter("equals") @Nullable List<String> equals,
+        @CustomType.Parameter("field") String field,
+        @CustomType.Parameter("greaterThan") @Nullable String greaterThan,
+        @CustomType.Parameter("greaterThanOrEqual") @Nullable String greaterThanOrEqual,
+        @CustomType.Parameter("lessThan") @Nullable String lessThan,
+        @CustomType.Parameter("lessThanOrEqual") @Nullable String lessThanOrEqual,
+        @CustomType.Parameter("notEquals") @Nullable List<String> notEquals) {
         this.equals = equals;
         this.field = field;
         this.greaterThan = greaterThan;

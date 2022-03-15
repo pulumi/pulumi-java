@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,21 +13,21 @@ public final class GetHcVpnGatewayVpnInterface extends io.pulumi.resources.Invok
 
     public static final GetHcVpnGatewayVpnInterface Empty = new GetHcVpnGatewayVpnInterface();
 
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Integer id;
 
     public Integer getId() {
         return this.id;
     }
 
-    @InputImport(name="interconnectAttachment", required=true)
+    @Import(name="interconnectAttachment", required=true)
       private final String interconnectAttachment;
 
     public String getInterconnectAttachment() {
         return this.interconnectAttachment;
     }
 
-    @InputImport(name="ipAddress", required=true)
+    @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
     public String getIpAddress() {

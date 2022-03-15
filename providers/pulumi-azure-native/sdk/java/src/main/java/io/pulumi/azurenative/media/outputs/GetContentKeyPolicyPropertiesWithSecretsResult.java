@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyOptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetContentKeyPolicyPropertiesWithSecretsResult {
     /**
      * The creation date of the Policy
@@ -39,13 +39,13 @@ public final class GetContentKeyPolicyPropertiesWithSecretsResult {
      */
     private final String policyId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetContentKeyPolicyPropertiesWithSecretsResult(
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("lastModified") String lastModified,
-        @OutputCustomType.Parameter("options") List<ContentKeyPolicyOptionResponse> options,
-        @OutputCustomType.Parameter("policyId") String policyId) {
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("lastModified") String lastModified,
+        @CustomType.Parameter("options") List<ContentKeyPolicyOptionResponse> options,
+        @CustomType.Parameter("policyId") String policyId) {
         this.created = created;
         this.description = description;
         this.lastModified = lastModified;

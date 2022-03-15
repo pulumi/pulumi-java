@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.cloudidentity.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GroupMembershipRole {
     /**
      * The name of the MembershipRole. Must be one of OWNER, MANAGER, MEMBER.
@@ -16,8 +16,8 @@ public final class GroupMembershipRole {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private GroupMembershipRole(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private GroupMembershipRole(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

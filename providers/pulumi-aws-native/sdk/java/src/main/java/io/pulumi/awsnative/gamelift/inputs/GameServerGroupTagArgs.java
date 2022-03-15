@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.gamelift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GameServerGroupTagArgs extends io.pulumi.resources.ResourceAr
      * The key for a developer-defined key:value pair for tagging an AWS resource.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -29,7 +29,7 @@ public final class GameServerGroupTagArgs extends io.pulumi.resources.ResourceAr
      * The value for a developer-defined key:value pair for tagging an AWS resource.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

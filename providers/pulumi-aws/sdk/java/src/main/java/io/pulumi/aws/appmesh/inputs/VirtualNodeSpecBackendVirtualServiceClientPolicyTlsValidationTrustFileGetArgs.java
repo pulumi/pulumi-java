@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation
      * The certificate trust chain for a certificate stored on the file system of the mesh endpoint that the proxy is running on. Must be between 1 and 255 characters in length.
      * 
      */
-    @InputImport(name="certificateChain", required=true)
+    @Import(name="certificateChain", required=true)
       private final Output<String> certificateChain;
 
     public Output<String> getCertificateChain() {

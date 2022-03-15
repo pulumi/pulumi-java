@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.timestream.outputs;
 
 import io.pulumi.awsnative.timestream.enums.ScheduledQueryEncryptionOption;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScheduledQueryS3Configuration {
     private final String bucketName;
     private final @Nullable ScheduledQueryEncryptionOption encryptionOption;
     private final @Nullable String objectKeyPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduledQueryS3Configuration(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("encryptionOption") @Nullable ScheduledQueryEncryptionOption encryptionOption,
-        @OutputCustomType.Parameter("objectKeyPrefix") @Nullable String objectKeyPrefix) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("encryptionOption") @Nullable ScheduledQueryEncryptionOption encryptionOption,
+        @CustomType.Parameter("objectKeyPrefix") @Nullable String objectKeyPrefix) {
         this.bucketName = bucketName;
         this.encryptionOption = encryptionOption;
         this.objectKeyPrefix = objectKeyPrefix;

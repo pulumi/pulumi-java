@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConfigurationServiceResourceRequestsResponse {
     /**
      * Cpu allocated to each Application Configuration Service instance
@@ -26,11 +26,11 @@ public final class ConfigurationServiceResourceRequestsResponse {
      */
     private final String memory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigurationServiceResourceRequestsResponse(
-        @OutputCustomType.Parameter("cpu") String cpu,
-        @OutputCustomType.Parameter("instanceCount") Integer instanceCount,
-        @OutputCustomType.Parameter("memory") String memory) {
+        @CustomType.Parameter("cpu") String cpu,
+        @CustomType.Parameter("instanceCount") Integer instanceCount,
+        @CustomType.Parameter("memory") String memory) {
         this.cpu = cpu;
         this.instanceCount = instanceCount;
         this.memory = memory;

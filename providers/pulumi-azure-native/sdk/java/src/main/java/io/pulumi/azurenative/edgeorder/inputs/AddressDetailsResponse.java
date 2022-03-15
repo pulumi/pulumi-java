@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.edgeorder.inputs;
 
 import io.pulumi.azurenative.edgeorder.inputs.AddressPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -20,7 +20,7 @@ public final class AddressDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Customer address and contact details. It should be address resource
      * 
      */
-    @InputImport(name="forwardAddress", required=true)
+    @Import(name="forwardAddress", required=true)
       private final AddressPropertiesResponse forwardAddress;
 
     public AddressPropertiesResponse getForwardAddress() {
@@ -31,7 +31,7 @@ public final class AddressDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Return shipping address
      * 
      */
-    @InputImport(name="returnAddress", required=true)
+    @Import(name="returnAddress", required=true)
       private final AddressPropertiesResponse returnAddress;
 
     public AddressPropertiesResponse getReturnAddress() {

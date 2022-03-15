@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 import io.pulumi.azurenative.containerservice.enums.WeekDay;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class TimeInWeekArgs extends io.pulumi.resources.ResourceArgs {
      * A day in a week.
      * 
      */
-    @InputImport(name="day")
+    @Import(name="day")
       private final @Nullable Output<Either<String,WeekDay>> day;
 
     public Output<Either<String,WeekDay>> getDay() {
@@ -37,7 +37,7 @@ public final class TimeInWeekArgs extends io.pulumi.resources.ResourceArgs {
      * hour slots in a day.
      * 
      */
-    @InputImport(name="hourSlots")
+    @Import(name="hourSlots")
       private final @Nullable Output<List<Integer>> hourSlots;
 
     public Output<List<Integer>> getHourSlots() {

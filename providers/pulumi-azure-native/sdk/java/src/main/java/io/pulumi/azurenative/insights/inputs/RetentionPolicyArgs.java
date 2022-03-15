@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * the number of days for the retention in days. A value of 0 will retain the events indefinitely.
      * 
      */
-    @InputImport(name="days", required=true)
+    @Import(name="days", required=true)
       private final Output<Integer> days;
 
     public Output<Integer> getDays() {
@@ -33,7 +33,7 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * a value indicating whether the retention policy is enabled.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {

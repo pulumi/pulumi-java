@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class DomainMasterUserOptionsArgs extends io.pulumi.resources.Resou
 
     public static final DomainMasterUserOptionsArgs Empty = new DomainMasterUserOptionsArgs();
 
-    @InputImport(name="masterUserARN")
+    @Import(name="masterUserARN")
       private final @Nullable Output<String> masterUserARN;
 
     public Output<String> getMasterUserARN() {
         return this.masterUserARN == null ? Output.empty() : this.masterUserARN;
     }
 
-    @InputImport(name="masterUserName")
+    @Import(name="masterUserName")
       private final @Nullable Output<String> masterUserName;
 
     public Output<String> getMasterUserName() {
         return this.masterUserName == null ? Output.empty() : this.masterUserName;
     }
 
-    @InputImport(name="masterUserPassword")
+    @Import(name="masterUserPassword")
       private final @Nullable Output<String> masterUserPassword;
 
     public Output<String> getMasterUserPassword() {

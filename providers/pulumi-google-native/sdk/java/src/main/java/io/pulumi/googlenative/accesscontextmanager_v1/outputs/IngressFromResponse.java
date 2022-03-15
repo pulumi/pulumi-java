@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.IngressSourceResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IngressFromResponse {
     /**
      * A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.
@@ -27,11 +27,11 @@ public final class IngressFromResponse {
      */
     private final List<IngressSourceResponse> sources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IngressFromResponse(
-        @OutputCustomType.Parameter("identities") List<String> identities,
-        @OutputCustomType.Parameter("identityType") String identityType,
-        @OutputCustomType.Parameter("sources") List<IngressSourceResponse> sources) {
+        @CustomType.Parameter("identities") List<String> identities,
+        @CustomType.Parameter("identityType") String identityType,
+        @CustomType.Parameter("sources") List<IngressSourceResponse> sources) {
         this.identities = identities;
         this.identityType = identityType;
         this.sources = sources;

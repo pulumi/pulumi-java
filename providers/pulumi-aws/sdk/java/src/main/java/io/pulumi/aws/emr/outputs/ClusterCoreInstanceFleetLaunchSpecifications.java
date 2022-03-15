@@ -5,12 +5,12 @@ package io.pulumi.aws.emr.outputs;
 
 import io.pulumi.aws.emr.outputs.ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecification;
 import io.pulumi.aws.emr.outputs.ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterCoreInstanceFleetLaunchSpecifications {
     /**
      * Configuration block for on demand instances launch specifications.
@@ -23,10 +23,10 @@ public final class ClusterCoreInstanceFleetLaunchSpecifications {
      */
     private final @Nullable List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification> spotSpecifications;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterCoreInstanceFleetLaunchSpecifications(
-        @OutputCustomType.Parameter("onDemandSpecifications") @Nullable List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecification> onDemandSpecifications,
-        @OutputCustomType.Parameter("spotSpecifications") @Nullable List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification> spotSpecifications) {
+        @CustomType.Parameter("onDemandSpecifications") @Nullable List<ClusterCoreInstanceFleetLaunchSpecificationsOnDemandSpecification> onDemandSpecifications,
+        @CustomType.Parameter("spotSpecifications") @Nullable List<ClusterCoreInstanceFleetLaunchSpecificationsSpotSpecification> spotSpecifications) {
         this.onDemandSpecifications = onDemandSpecifications;
         this.spotSpecifications = spotSpecifications;
     }

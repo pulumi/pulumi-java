@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datafusion_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VersionResponse {
     /**
      * Represents a list of available feature names for a given version.
@@ -32,12 +32,12 @@ public final class VersionResponse {
      */
     private final String versionNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VersionResponse(
-        @OutputCustomType.Parameter("availableFeatures") List<String> availableFeatures,
-        @OutputCustomType.Parameter("defaultVersion") Boolean defaultVersion,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("versionNumber") String versionNumber) {
+        @CustomType.Parameter("availableFeatures") List<String> availableFeatures,
+        @CustomType.Parameter("defaultVersion") Boolean defaultVersion,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("versionNumber") String versionNumber) {
         this.availableFeatures = availableFeatures;
         this.defaultVersion = defaultVersion;
         this.type = type;

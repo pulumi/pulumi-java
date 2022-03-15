@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.enums.MessageFilterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class EdifactMessageFilterArgs extends io.pulumi.resources.Resource
      * The message filter type.
      * 
      */
-    @InputImport(name="messageFilterType", required=true)
+    @Import(name="messageFilterType", required=true)
       private final Output<Either<String,MessageFilterType>> messageFilterType;
 
     public Output<Either<String,MessageFilterType>> getMessageFilterType() {

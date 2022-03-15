@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.PacketMirroringMirroredResourceInfoInstanceInfoResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.PacketMirroringMirroredResourceInfoSubnetInfoResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PacketMirroringMirroredResourceInfoResponse {
     /**
      * A set of virtual machine instances that are being mirrored. They must live in zones contained in the same region as this packetMirroring. Note that this config will apply only to those network interfaces of the Instances that belong to the network specified in this packetMirroring. You may specify a maximum of 50 Instances.
@@ -28,11 +28,11 @@ public final class PacketMirroringMirroredResourceInfoResponse {
      */
     private final List<String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PacketMirroringMirroredResourceInfoResponse(
-        @OutputCustomType.Parameter("instances") List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances,
-        @OutputCustomType.Parameter("subnetworks") List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks,
-        @OutputCustomType.Parameter("tags") List<String> tags) {
+        @CustomType.Parameter("instances") List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances,
+        @CustomType.Parameter("subnetworks") List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks,
+        @CustomType.Parameter("tags") List<String> tags) {
         this.instances = instances;
         this.subnetworks = subnetworks;
         this.tags = tags;

@@ -4,14 +4,14 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetInstanceTypeOfferingsFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceTypeOfferingsResult {
     private final @Nullable List<GetInstanceTypeOfferingsFilter> filters;
     /**
@@ -36,14 +36,14 @@ public final class GetInstanceTypeOfferingsResult {
      */
     private final List<String> locations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceTypeOfferingsResult(
-        @OutputCustomType.Parameter("filters") @Nullable List<GetInstanceTypeOfferingsFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceTypes") List<String> instanceTypes,
-        @OutputCustomType.Parameter("locationType") @Nullable String locationType,
-        @OutputCustomType.Parameter("locationTypes") List<String> locationTypes,
-        @OutputCustomType.Parameter("locations") List<String> locations) {
+        @CustomType.Parameter("filters") @Nullable List<GetInstanceTypeOfferingsFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceTypes") List<String> instanceTypes,
+        @CustomType.Parameter("locationType") @Nullable String locationType,
+        @CustomType.Parameter("locationTypes") List<String> locationTypes,
+        @CustomType.Parameter("locations") List<String> locations) {
         this.filters = filters;
         this.id = id;
         this.instanceTypes = instanceTypes;

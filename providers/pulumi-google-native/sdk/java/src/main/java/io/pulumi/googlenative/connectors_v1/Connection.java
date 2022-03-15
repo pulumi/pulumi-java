@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.connectors_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.connectors_v1.ConnectionArgs;
@@ -29,7 +29,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Optional. Configuration for establishing the connection's authentication with an external system.
      * 
      */
-    @OutputExport(name="authConfig", type=AuthConfigResponse.class, parameters={})
+    @Export(name="authConfig", type=AuthConfigResponse.class, parameters={})
     private Output<AuthConfigResponse> authConfig;
 
     /**
@@ -43,7 +43,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Optional. Configuration for configuring the connection with an external system.
      * 
      */
-    @OutputExport(name="configVariables", type=List.class, parameters={ConfigVariableResponse.class})
+    @Export(name="configVariables", type=List.class, parameters={ConfigVariableResponse.class})
     private Output<List<ConfigVariableResponse>> configVariables;
 
     /**
@@ -57,7 +57,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Connector version on which the connection is created. The format is: projects/*{@literal /}locations/global/providers/*{@literal /}connectors/*{@literal /}versions/*
      * 
      */
-    @OutputExport(name="connectorVersion", type=String.class, parameters={})
+    @Export(name="connectorVersion", type=String.class, parameters={})
     private Output<String> connectorVersion;
 
     /**
@@ -71,7 +71,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Created time.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -85,7 +85,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Optional. Description of the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -99,7 +99,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Outbound domains/hosts needs to be allowlisted.
      * 
      */
-    @OutputExport(name="egressBackends", type=List.class, parameters={String.class})
+    @Export(name="egressBackends", type=List.class, parameters={String.class})
     private Output<List<String>> egressBackends;
 
     /**
@@ -113,7 +113,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * GCR location where the envoy image is stored. formatted like: gcr.io/{bucketName}/{imageName}
      * 
      */
-    @OutputExport(name="envoyImageLocation", type=String.class, parameters={})
+    @Export(name="envoyImageLocation", type=String.class, parameters={})
     private Output<String> envoyImageLocation;
 
     /**
@@ -127,7 +127,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * GCR location where the runtime image is stored. formatted like: gcr.io/{bucketName}/{imageName}
      * 
      */
-    @OutputExport(name="imageLocation", type=String.class, parameters={})
+    @Export(name="imageLocation", type=String.class, parameters={})
     private Output<String> imageLocation;
 
     /**
@@ -141,7 +141,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -155,7 +155,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Optional. Configuration that indicates whether or not the Connection can be edited.
      * 
      */
-    @OutputExport(name="lockConfig", type=LockConfigResponse.class, parameters={})
+    @Export(name="lockConfig", type=LockConfigResponse.class, parameters={})
     private Output<LockConfigResponse> lockConfig;
 
     /**
@@ -169,7 +169,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Resource name of the Connection. Format: projects/{project}/locations/{location}/connections/{connection}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -183,7 +183,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Optional. Service account needed for runtime plane to access GCP resources.
      * 
      */
-    @OutputExport(name="serviceAccount", type=String.class, parameters={})
+    @Export(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
     /**
@@ -197,7 +197,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The name of the Service Directory service name. Used for Private Harpoon to resolve the ILB address. e.g. "projects/cloud-connectors-e2e-testing/locations/us-central1/namespaces/istio-system/services/istio-ingressgateway-connectors"
      * 
      */
-    @OutputExport(name="serviceDirectory", type=String.class, parameters={})
+    @Export(name="serviceDirectory", type=String.class, parameters={})
     private Output<String> serviceDirectory;
 
     /**
@@ -211,7 +211,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Current status of the connection.
      * 
      */
-    @OutputExport(name="status", type=ConnectionStatusResponse.class, parameters={})
+    @Export(name="status", type=ConnectionStatusResponse.class, parameters={})
     private Output<ConnectionStatusResponse> status;
 
     /**
@@ -225,7 +225,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Optional. Suspended indicates if a user has suspended a connection or not.
      * 
      */
-    @OutputExport(name="suspended", type=Boolean.class, parameters={})
+    @Export(name="suspended", type=Boolean.class, parameters={})
     private Output<Boolean> suspended;
 
     /**
@@ -239,7 +239,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Updated time.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

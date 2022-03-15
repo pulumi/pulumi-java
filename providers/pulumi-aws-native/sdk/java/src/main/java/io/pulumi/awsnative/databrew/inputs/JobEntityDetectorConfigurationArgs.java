@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.JobAllowedStatisticsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class JobEntityDetectorConfigurationArgs extends io.pulumi.resource
 
     public static final JobEntityDetectorConfigurationArgs Empty = new JobEntityDetectorConfigurationArgs();
 
-    @InputImport(name="allowedStatistics")
+    @Import(name="allowedStatistics")
       private final @Nullable Output<JobAllowedStatisticsArgs> allowedStatistics;
 
     public Output<JobAllowedStatisticsArgs> getAllowedStatistics() {
         return this.allowedStatistics == null ? Output.empty() : this.allowedStatistics;
     }
 
-    @InputImport(name="entityTypes", required=true)
+    @Import(name="entityTypes", required=true)
       private final Output<List<String>> entityTypes;
 
     public Output<List<String>> getEntityTypes() {

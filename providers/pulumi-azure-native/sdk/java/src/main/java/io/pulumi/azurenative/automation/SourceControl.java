@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.automation.SourceControlArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * The auto sync of the source control. Default is false.
      * 
      */
-    @OutputExport(name="autoSync", type=Boolean.class, parameters={})
+    @Export(name="autoSync", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoSync;
 
     /**
@@ -49,7 +49,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * The repo branch of the source control. Include branch as empty string for VsoTfvc.
      * 
      */
-    @OutputExport(name="branch", type=String.class, parameters={})
+    @Export(name="branch", type=String.class, parameters={})
     private Output</* @Nullable */ String> branch;
 
     /**
@@ -63,7 +63,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * The creation time.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationTime;
 
     /**
@@ -77,7 +77,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * The description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -91,7 +91,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * The folder path of the source control.
      * 
      */
-    @OutputExport(name="folderPath", type=String.class, parameters={})
+    @Export(name="folderPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> folderPath;
 
     /**
@@ -105,7 +105,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * The last modified time.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
     /**
@@ -119,7 +119,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -133,7 +133,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * The auto publish of the source control. Default is true.
      * 
      */
-    @OutputExport(name="publishRunbook", type=Boolean.class, parameters={})
+    @Export(name="publishRunbook", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> publishRunbook;
 
     /**
@@ -147,7 +147,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * The repo url of the source control.
      * 
      */
-    @OutputExport(name="repoUrl", type=String.class, parameters={})
+    @Export(name="repoUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> repoUrl;
 
     /**
@@ -161,7 +161,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * The source type. Must be one of VsoGit, VsoTfvc, GitHub.
      * 
      */
-    @OutputExport(name="sourceType", type=String.class, parameters={})
+    @Export(name="sourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceType;
 
     /**
@@ -175,7 +175,7 @@ public class SourceControl extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

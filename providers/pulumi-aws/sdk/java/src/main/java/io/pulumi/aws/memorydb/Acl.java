@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.memorydb.AclArgs;
 import io.pulumi.aws.memorydb.inputs.AclState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Acl extends io.pulumi.resources.CustomResource {
      * The ARN of the ACL.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class Acl extends io.pulumi.resources.CustomResource {
      * The minimum engine version supported by the ACL.
      * 
      */
-    @OutputExport(name="minimumEngineVersion", type=String.class, parameters={})
+    @Export(name="minimumEngineVersion", type=String.class, parameters={})
     private Output<String> minimumEngineVersion;
 
     /**
@@ -60,7 +60,7 @@ public class Acl extends io.pulumi.resources.CustomResource {
     public Output<String> getMinimumEngineVersion() {
         return this.minimumEngineVersion;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
@@ -70,7 +70,7 @@ public class Acl extends io.pulumi.resources.CustomResource {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output<String> namePrefix;
 
     /**
@@ -84,7 +84,7 @@ public class Acl extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -98,7 +98,7 @@ public class Acl extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -112,7 +112,7 @@ public class Acl extends io.pulumi.resources.CustomResource {
      * Set of MemoryDB user names to be included in this ACL.
      * 
      */
-    @OutputExport(name="userNames", type=List.class, parameters={String.class})
+    @Export(name="userNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> userNames;
 
     /**

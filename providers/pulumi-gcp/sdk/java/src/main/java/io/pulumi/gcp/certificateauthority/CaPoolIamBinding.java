@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.certificateauthority.CaPoolIamBindingArgs;
@@ -62,7 +62,7 @@ public class CaPoolIamBinding extends io.pulumi.resources.CustomResource {
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @OutputExport(name="caPool", type=String.class, parameters={})
+    @Export(name="caPool", type=String.class, parameters={})
     private Output<String> caPool;
 
     /**
@@ -72,7 +72,7 @@ public class CaPoolIamBinding extends io.pulumi.resources.CustomResource {
     public Output<String> getCaPool() {
         return this.caPool;
     }
-    @OutputExport(name="condition", type=CaPoolIamBindingCondition.class, parameters={})
+    @Export(name="condition", type=CaPoolIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ CaPoolIamBindingCondition> condition;
 
     public Output</* @Nullable */ CaPoolIamBindingCondition> getCondition() {
@@ -82,7 +82,7 @@ public class CaPoolIamBinding extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -98,7 +98,7 @@ public class CaPoolIamBinding extends io.pulumi.resources.CustomResource {
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -110,7 +110,7 @@ public class CaPoolIamBinding extends io.pulumi.resources.CustomResource {
     public Output<String> getLocation() {
         return this.location;
     }
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -121,7 +121,7 @@ public class CaPoolIamBinding extends io.pulumi.resources.CustomResource {
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -138,7 +138,7 @@ public class CaPoolIamBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

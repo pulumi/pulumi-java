@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class CxVersionNluSettingGetArgs extends io.pulumi.resources.Resour
 
     public static final CxVersionNluSettingGetArgs Empty = new CxVersionNluSettingGetArgs();
 
-    @InputImport(name="classificationThreshold")
+    @Import(name="classificationThreshold")
       private final @Nullable Output<Double> classificationThreshold;
 
     public Output<Double> getClassificationThreshold() {
         return this.classificationThreshold == null ? Output.empty() : this.classificationThreshold;
     }
 
-    @InputImport(name="modelTrainingMode")
+    @Import(name="modelTrainingMode")
       private final @Nullable Output<String> modelTrainingMode;
 
     public Output<String> getModelTrainingMode() {
         return this.modelTrainingMode == null ? Output.empty() : this.modelTrainingMode;
     }
 
-    @InputImport(name="modelType")
+    @Import(name="modelType")
       private final @Nullable Output<String> modelType;
 
     public Output<String> getModelType() {

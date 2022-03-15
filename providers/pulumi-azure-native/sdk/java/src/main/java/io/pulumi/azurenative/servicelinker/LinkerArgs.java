@@ -11,7 +11,7 @@ import io.pulumi.azurenative.servicelinker.inputs.SystemAssignedIdentityAuthInfo
 import io.pulumi.azurenative.servicelinker.inputs.UserAssignedIdentityAuthInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
      * The authentication type.
      * 
      */
-    @InputImport(name="authInfo")
+    @Import(name="authInfo")
       private final @Nullable Output<Object> authInfo;
 
     public Output<Object> getAuthInfo() {
@@ -37,7 +37,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
      * The application client type
      * 
      */
-    @InputImport(name="clientType")
+    @Import(name="clientType")
       private final @Nullable Output<Either<String,ClientType>> clientType;
 
     public Output<Either<String,ClientType>> getClientType() {
@@ -48,7 +48,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
      * The name Linker resource.
      * 
      */
-    @InputImport(name="linkerName")
+    @Import(name="linkerName")
       private final @Nullable Output<String> linkerName;
 
     public Output<String> getLinkerName() {
@@ -59,7 +59,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
      * The fully qualified Azure Resource manager identifier of the resource to be connected.
      * 
      */
-    @InputImport(name="resourceUri", required=true)
+    @Import(name="resourceUri", required=true)
       private final Output<String> resourceUri;
 
     public Output<String> getResourceUri() {
@@ -70,7 +70,7 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
      * The resource Id of target service.
      * 
      */
-    @InputImport(name="targetId")
+    @Import(name="targetId")
       private final @Nullable Output<String> targetId;
 
     public Output<String> getTargetId() {

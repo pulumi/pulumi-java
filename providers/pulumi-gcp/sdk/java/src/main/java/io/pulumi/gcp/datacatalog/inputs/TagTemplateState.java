@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.datacatalog.inputs.TagTemplateFieldGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
      * The display name for this template.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -33,7 +33,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="fields")
+    @Import(name="fields")
       private final @Nullable Output<List<TagTemplateFieldGetArgs>> fields;
 
     public Output<List<TagTemplateFieldGetArgs>> getFields() {
@@ -44,7 +44,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
      * This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template.
      * 
      */
-    @InputImport(name="forceDelete")
+    @Import(name="forceDelete")
       private final @Nullable Output<Boolean> forceDelete;
 
     public Output<Boolean> getForceDelete() {
@@ -56,7 +56,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
      * The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -68,7 +68,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -79,7 +79,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
      * Template location region.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -90,7 +90,7 @@ public final class TagTemplateState extends io.pulumi.resources.ResourceArgs {
      * The id of the tag template to create.
      * 
      */
-    @InputImport(name="tagTemplateId")
+    @Import(name="tagTemplateId")
       private final @Nullable Output<String> tagTemplateId;
 
     public Output<String> getTagTemplateId() {

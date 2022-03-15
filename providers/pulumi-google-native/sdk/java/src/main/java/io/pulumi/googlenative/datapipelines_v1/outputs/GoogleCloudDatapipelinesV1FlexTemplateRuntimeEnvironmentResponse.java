@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datapipelines_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse {
     /**
      * Additional experiment flags for the job.
@@ -94,24 +94,24 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse(
-        @OutputCustomType.Parameter("additionalExperiments") List<String> additionalExperiments,
-        @OutputCustomType.Parameter("additionalUserLabels") Map<String,String> additionalUserLabels,
-        @OutputCustomType.Parameter("enableStreamingEngine") Boolean enableStreamingEngine,
-        @OutputCustomType.Parameter("flexrsGoal") String flexrsGoal,
-        @OutputCustomType.Parameter("ipConfiguration") String ipConfiguration,
-        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("maxWorkers") Integer maxWorkers,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("numWorkers") Integer numWorkers,
-        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork,
-        @OutputCustomType.Parameter("tempLocation") String tempLocation,
-        @OutputCustomType.Parameter("workerRegion") String workerRegion,
-        @OutputCustomType.Parameter("workerZone") String workerZone,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("additionalExperiments") List<String> additionalExperiments,
+        @CustomType.Parameter("additionalUserLabels") Map<String,String> additionalUserLabels,
+        @CustomType.Parameter("enableStreamingEngine") Boolean enableStreamingEngine,
+        @CustomType.Parameter("flexrsGoal") String flexrsGoal,
+        @CustomType.Parameter("ipConfiguration") String ipConfiguration,
+        @CustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("maxWorkers") Integer maxWorkers,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("numWorkers") Integer numWorkers,
+        @CustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
+        @CustomType.Parameter("subnetwork") String subnetwork,
+        @CustomType.Parameter("tempLocation") String tempLocation,
+        @CustomType.Parameter("workerRegion") String workerRegion,
+        @CustomType.Parameter("workerZone") String workerZone,
+        @CustomType.Parameter("zone") String zone) {
         this.additionalExperiments = additionalExperiments;
         this.additionalUserLabels = additionalUserLabels;
         this.enableStreamingEngine = enableStreamingEngine;

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sagemaker.StudioLifecycleConfigArgs;
 import io.pulumi.aws.sagemaker.inputs.StudioLifecycleConfigState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class StudioLifecycleConfig extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) assigned by AWS to this Studio Lifecycle Config.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class StudioLifecycleConfig extends io.pulumi.resources.CustomResource {
      * The App type that the Lifecycle Configuration is attached to. Valid values are `JupyterServer` and `KernelGateway`.
      * 
      */
-    @OutputExport(name="studioLifecycleConfigAppType", type=String.class, parameters={})
+    @Export(name="studioLifecycleConfigAppType", type=String.class, parameters={})
     private Output<String> studioLifecycleConfigAppType;
 
     /**
@@ -61,7 +61,7 @@ public class StudioLifecycleConfig extends io.pulumi.resources.CustomResource {
      * The content of your Studio Lifecycle Configuration script. This content must be base64 encoded.
      * 
      */
-    @OutputExport(name="studioLifecycleConfigContent", type=String.class, parameters={})
+    @Export(name="studioLifecycleConfigContent", type=String.class, parameters={})
     private Output<String> studioLifecycleConfigContent;
 
     /**
@@ -75,7 +75,7 @@ public class StudioLifecycleConfig extends io.pulumi.resources.CustomResource {
      * The name of the Studio Lifecycle Configuration to create.
      * 
      */
-    @OutputExport(name="studioLifecycleConfigName", type=String.class, parameters={})
+    @Export(name="studioLifecycleConfigName", type=String.class, parameters={})
     private Output<String> studioLifecycleConfigName;
 
     /**
@@ -89,7 +89,7 @@ public class StudioLifecycleConfig extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -103,7 +103,7 @@ public class StudioLifecycleConfig extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

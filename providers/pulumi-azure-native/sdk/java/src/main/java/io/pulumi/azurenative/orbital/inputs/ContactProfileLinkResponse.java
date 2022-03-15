@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.orbital.inputs;
 
 import io.pulumi.azurenative.orbital.inputs.ContactProfileLinkChannelResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ContactProfileLinkResponse extends io.pulumi.resources.Invoke
      * Contact Profile Link Channel
      * 
      */
-    @InputImport(name="channels", required=true)
+    @Import(name="channels", required=true)
       private final List<ContactProfileLinkChannelResponse> channels;
 
     public List<ContactProfileLinkChannelResponse> getChannels() {
@@ -36,7 +36,7 @@ public final class ContactProfileLinkResponse extends io.pulumi.resources.Invoke
      * Direction (uplink or downlink)
      * 
      */
-    @InputImport(name="direction", required=true)
+    @Import(name="direction", required=true)
       private final String direction;
 
     public String getDirection() {
@@ -47,7 +47,7 @@ public final class ContactProfileLinkResponse extends io.pulumi.resources.Invoke
      * Effective Isotropic Radiated Power (EIRP) in dBW.
      * 
      */
-    @InputImport(name="eirpdBW")
+    @Import(name="eirpdBW")
       private final @Nullable Double eirpdBW;
 
     public Optional<Double> getEirpdBW() {
@@ -58,7 +58,7 @@ public final class ContactProfileLinkResponse extends io.pulumi.resources.Invoke
      * Gain To Noise Temperature in db/K.
      * 
      */
-    @InputImport(name="gainOverTemperature")
+    @Import(name="gainOverTemperature")
       private final @Nullable Double gainOverTemperature;
 
     public Optional<Double> getGainOverTemperature() {
@@ -69,7 +69,7 @@ public final class ContactProfileLinkResponse extends io.pulumi.resources.Invoke
      * polarization. eg (RHCP, LHCP)
      * 
      */
-    @InputImport(name="polarization", required=true)
+    @Import(name="polarization", required=true)
       private final String polarization;
 
     public String getPolarization() {

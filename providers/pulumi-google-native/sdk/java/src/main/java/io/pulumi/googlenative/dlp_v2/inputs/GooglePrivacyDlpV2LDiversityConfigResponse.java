@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2LDiversityConfigResponse extends io.pulumi.
      * Set of quasi-identifiers indicating how equivalence classes are defined for the l-diversity computation. When multiple fields are specified, they are considered a single composite key.
      * 
      */
-    @InputImport(name="quasiIds", required=true)
+    @Import(name="quasiIds", required=true)
       private final List<GooglePrivacyDlpV2FieldIdResponse> quasiIds;
 
     public List<GooglePrivacyDlpV2FieldIdResponse> getQuasiIds() {
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2LDiversityConfigResponse extends io.pulumi.
      * Sensitive field for computing the l-value.
      * 
      */
-    @InputImport(name="sensitiveAttribute", required=true)
+    @Import(name="sensitiveAttribute", required=true)
       private final GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute;
 
     public GooglePrivacyDlpV2FieldIdResponse getSensitiveAttribute() {

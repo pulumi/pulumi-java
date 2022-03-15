@@ -5,13 +5,13 @@ package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.DefenderForServersAwsOfferingResponseArcAutoProvisioning;
 import io.pulumi.azurenative.security.outputs.DefenderForServersAwsOfferingResponseDefenderForServers;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DefenderForServersAwsOfferingResponse {
     /**
      * The ARC autoprovisioning configuration
@@ -35,12 +35,12 @@ public final class DefenderForServersAwsOfferingResponse {
      */
     private final String offeringType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DefenderForServersAwsOfferingResponse(
-        @OutputCustomType.Parameter("arcAutoProvisioning") @Nullable DefenderForServersAwsOfferingResponseArcAutoProvisioning arcAutoProvisioning,
-        @OutputCustomType.Parameter("defenderForServers") @Nullable DefenderForServersAwsOfferingResponseDefenderForServers defenderForServers,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("offeringType") String offeringType) {
+        @CustomType.Parameter("arcAutoProvisioning") @Nullable DefenderForServersAwsOfferingResponseArcAutoProvisioning arcAutoProvisioning,
+        @CustomType.Parameter("defenderForServers") @Nullable DefenderForServersAwsOfferingResponseDefenderForServers defenderForServers,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("offeringType") String offeringType) {
         this.arcAutoProvisioning = arcAutoProvisioning;
         this.defenderForServers = defenderForServers;
         this.description = description;

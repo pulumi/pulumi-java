@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BotSSMLMessage {
     /**
      * The SSML text that defines the prompt.
@@ -15,8 +15,8 @@ public final class BotSSMLMessage {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
-    private BotSSMLMessage(@OutputCustomType.Parameter("value") String value) {
+    @CustomType.Constructor
+    private BotSSMLMessage(@CustomType.Parameter("value") String value) {
         this.value = value;
     }
 

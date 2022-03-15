@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BucketRetentionPolicyResponse extends io.pulumi.resources.Inv
      * Server-determined value that indicates the time from which policy was enforced and effective. This value is in RFC 3339 format.
      * 
      */
-    @InputImport(name="effectiveTime", required=true)
+    @Import(name="effectiveTime", required=true)
       private final String effectiveTime;
 
     public String getEffectiveTime() {
@@ -32,7 +32,7 @@ public final class BucketRetentionPolicyResponse extends io.pulumi.resources.Inv
      * Once locked, an object retention policy cannot be modified.
      * 
      */
-    @InputImport(name="isLocked", required=true)
+    @Import(name="isLocked", required=true)
       private final Boolean isLocked;
 
     public Boolean getIsLocked() {
@@ -43,7 +43,7 @@ public final class BucketRetentionPolicyResponse extends io.pulumi.resources.Inv
      * The duration in seconds that objects need to be retained. Retention duration must be greater than zero and less than 100 years. Note that enforcement of retention periods less than a day is not guaranteed. Such periods should only be used for testing purposes.
      * 
      */
-    @InputImport(name="retentionPeriod", required=true)
+    @Import(name="retentionPeriod", required=true)
       private final String retentionPeriod;
 
     public String getRetentionPeriod() {

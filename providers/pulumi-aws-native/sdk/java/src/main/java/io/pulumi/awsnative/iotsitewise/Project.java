@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.iotsitewise.ProjectArgs;
 import io.pulumi.awsnative.iotsitewise.outputs.ProjectTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The IDs of the assets to be associated to the project.
      * 
      */
-    @OutputExport(name="assetIds", type=List.class, parameters={String.class})
+    @Export(name="assetIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> assetIds;
 
     /**
@@ -37,7 +37,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The ID of the portal in which to create the project.
      * 
      */
-    @OutputExport(name="portalId", type=String.class, parameters={})
+    @Export(name="portalId", type=String.class, parameters={})
     private Output<String> portalId;
 
     /**
@@ -51,7 +51,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The ARN of the project.
      * 
      */
-    @OutputExport(name="projectArn", type=String.class, parameters={})
+    @Export(name="projectArn", type=String.class, parameters={})
     private Output<String> projectArn;
 
     /**
@@ -65,7 +65,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * A description for the project.
      * 
      */
-    @OutputExport(name="projectDescription", type=String.class, parameters={})
+    @Export(name="projectDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> projectDescription;
 
     /**
@@ -79,7 +79,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The ID of the project.
      * 
      */
-    @OutputExport(name="projectId", type=String.class, parameters={})
+    @Export(name="projectId", type=String.class, parameters={})
     private Output<String> projectId;
 
     /**
@@ -93,7 +93,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * A friendly name for the project.
      * 
      */
-    @OutputExport(name="projectName", type=String.class, parameters={})
+    @Export(name="projectName", type=String.class, parameters={})
     private Output<String> projectName;
 
     /**
@@ -107,7 +107,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * A list of key-value pairs that contain metadata for the project.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ProjectTag.class})
+    @Export(name="tags", type=List.class, parameters={ProjectTag.class})
     private Output</* @Nullable */ List<ProjectTag>> tags;
 
     /**

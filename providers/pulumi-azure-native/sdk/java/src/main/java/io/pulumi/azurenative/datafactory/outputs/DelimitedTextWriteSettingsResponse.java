@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DelimitedTextWriteSettingsResponse {
     /**
      * The file extension used to create the files. Type: string (or Expression with resultType string).
@@ -39,13 +39,13 @@ public final class DelimitedTextWriteSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DelimitedTextWriteSettingsResponse(
-        @OutputCustomType.Parameter("fileExtension") Object fileExtension,
-        @OutputCustomType.Parameter("fileNamePrefix") @Nullable Object fileNamePrefix,
-        @OutputCustomType.Parameter("maxRowsPerFile") @Nullable Object maxRowsPerFile,
-        @OutputCustomType.Parameter("quoteAllText") @Nullable Object quoteAllText,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("fileExtension") Object fileExtension,
+        @CustomType.Parameter("fileNamePrefix") @Nullable Object fileNamePrefix,
+        @CustomType.Parameter("maxRowsPerFile") @Nullable Object maxRowsPerFile,
+        @CustomType.Parameter("quoteAllText") @Nullable Object quoteAllText,
+        @CustomType.Parameter("type") String type) {
         this.fileExtension = fileExtension;
         this.fileNamePrefix = fileNamePrefix;
         this.maxRowsPerFile = maxRowsPerFile;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devops.enums.CodeRepositoryType;
 import io.pulumi.azurenative.devops.inputs.AuthorizationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * Authorization info to access the code repository.
      * 
      */
-    @InputImport(name="authorization")
+    @Import(name="authorization")
       private final @Nullable Output<AuthorizationArgs> authorization;
 
     public Output<AuthorizationArgs> getAuthorization() {
@@ -37,7 +37,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * Default branch used to configure Continuous Integration (CI) in the pipeline.
      * 
      */
-    @InputImport(name="defaultBranch", required=true)
+    @Import(name="defaultBranch", required=true)
       private final Output<String> defaultBranch;
 
     public Output<String> getDefaultBranch() {
@@ -48,7 +48,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * Unique immutable identifier of the code repository.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -59,7 +59,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * Repository-specific properties.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -70,7 +70,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * Type of code repository.
      * 
      */
-    @InputImport(name="repositoryType", required=true)
+    @Import(name="repositoryType", required=true)
       private final Output<Either<String,CodeRepositoryType>> repositoryType;
 
     public Output<Either<String,CodeRepositoryType>> getRepositoryType() {

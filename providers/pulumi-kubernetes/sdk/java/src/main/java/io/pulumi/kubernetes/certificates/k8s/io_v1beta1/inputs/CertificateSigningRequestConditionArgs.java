@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.certificates.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
      * lastTransitionTime is the time the condition last transitioned from one status to another. If unset, when a new condition type is added or an existing condition's status is changed, the server defaults this to the current time.
      * 
      */
-    @InputImport(name="lastTransitionTime")
+    @Import(name="lastTransitionTime")
       private final @Nullable Output<String> lastTransitionTime;
 
     public Output<String> getLastTransitionTime() {
@@ -29,7 +29,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
      * timestamp for the last update to this condition
      * 
      */
-    @InputImport(name="lastUpdateTime")
+    @Import(name="lastUpdateTime")
       private final @Nullable Output<String> lastUpdateTime;
 
     public Output<String> getLastUpdateTime() {
@@ -40,7 +40,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
      * human readable message with details about the request state
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
@@ -51,7 +51,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
      * brief reason for the request state
      * 
      */
-    @InputImport(name="reason")
+    @Import(name="reason")
       private final @Nullable Output<String> reason;
 
     public Output<String> getReason() {
@@ -62,7 +62,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
      * Status of the condition, one of True, False, Unknown. Approved, Denied, and Failed conditions may not be "False" or "Unknown". Defaults to "True". If unset, should be treated as "True".
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -73,7 +73,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
      * request approval state, currently Approved or Denied.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

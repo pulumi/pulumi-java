@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.ContainerResourcesArgs;
 import io.pulumi.azurenative.web.inputs.EnvironmentVarArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Container start command arguments.
      * 
      */
-    @InputImport(name="args")
+    @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
@@ -36,7 +36,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Container start command.
      * 
      */
-    @InputImport(name="command")
+    @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
     public Output<List<String>> getCommand() {
@@ -47,7 +47,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Container environment variables.
      * 
      */
-    @InputImport(name="env")
+    @Import(name="env")
       private final @Nullable Output<List<EnvironmentVarArgs>> env;
 
     public Output<List<EnvironmentVarArgs>> getEnv() {
@@ -58,7 +58,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Container image tag.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable Output<String> image;
 
     public Output<String> getImage() {
@@ -69,7 +69,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Custom container name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -80,7 +80,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * Container resource requirements.
      * 
      */
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<ContainerResourcesArgs> resources;
 
     public Output<ContainerResourcesArgs> getResources() {

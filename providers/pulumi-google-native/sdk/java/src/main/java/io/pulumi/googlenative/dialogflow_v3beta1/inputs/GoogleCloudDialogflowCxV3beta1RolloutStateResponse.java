@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateResponse extends io
      * Start time of the current step.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateResponse extends io
      * Display name of the current auto rollout step.
      * 
      */
-    @InputImport(name="step", required=true)
+    @Import(name="step", required=true)
       private final String step;
 
     public String getStep() {
@@ -43,7 +43,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutStateResponse extends io
      * Index of the current step in the auto rollout steps list.
      * 
      */
-    @InputImport(name="stepIndex", required=true)
+    @Import(name="stepIndex", required=true)
       private final Integer stepIndex;
 
     public Integer getStepIndex() {

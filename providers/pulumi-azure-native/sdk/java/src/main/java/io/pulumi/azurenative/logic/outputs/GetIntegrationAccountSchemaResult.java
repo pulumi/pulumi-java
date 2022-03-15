@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.ContentLinkResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIntegrationAccountSchemaResult {
     /**
      * The changed time.
@@ -90,23 +90,23 @@ public final class GetIntegrationAccountSchemaResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIntegrationAccountSchemaResult(
-        @OutputCustomType.Parameter("changedTime") String changedTime,
-        @OutputCustomType.Parameter("content") @Nullable String content,
-        @OutputCustomType.Parameter("contentLink") ContentLinkResponse contentLink,
-        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
-        @OutputCustomType.Parameter("createdTime") String createdTime,
-        @OutputCustomType.Parameter("documentName") @Nullable String documentName,
-        @OutputCustomType.Parameter("fileName") @Nullable String fileName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("schemaType") String schemaType,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("targetNamespace") @Nullable String targetNamespace,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("changedTime") String changedTime,
+        @CustomType.Parameter("content") @Nullable String content,
+        @CustomType.Parameter("contentLink") ContentLinkResponse contentLink,
+        @CustomType.Parameter("contentType") @Nullable String contentType,
+        @CustomType.Parameter("createdTime") String createdTime,
+        @CustomType.Parameter("documentName") @Nullable String documentName,
+        @CustomType.Parameter("fileName") @Nullable String fileName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("metadata") @Nullable Object metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("schemaType") String schemaType,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("targetNamespace") @Nullable String targetNamespace,
+        @CustomType.Parameter("type") String type) {
         this.changedTime = changedTime;
         this.content = content;
         this.contentLink = contentLink;

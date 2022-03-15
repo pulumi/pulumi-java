@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.applicationinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationCustomComponent {
     /**
      * The name of the component.
@@ -21,10 +21,10 @@ public final class ApplicationCustomComponent {
      */
     private final List<String> resourceList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationCustomComponent(
-        @OutputCustomType.Parameter("componentName") String componentName,
-        @OutputCustomType.Parameter("resourceList") List<String> resourceList) {
+        @CustomType.Parameter("componentName") String componentName,
+        @CustomType.Parameter("resourceList") List<String> resourceList) {
         this.componentName = componentName;
         this.resourceList = resourceList;
     }

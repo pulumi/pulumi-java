@@ -5,7 +5,7 @@ package io.pulumi.aws.docdb.inputs;
 
 import io.pulumi.aws.docdb.inputs.ClusterParameterGroupParameterGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ClusterParameterGroupState extends io.pulumi.resources.Resour
      * The ARN of the documentDB cluster parameter group.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class ClusterParameterGroupState extends io.pulumi.resources.Resour
      * The description of the documentDB cluster parameter group. Defaults to "Managed by Pulumi".
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class ClusterParameterGroupState extends io.pulumi.resources.Resour
      * The family of the documentDB cluster parameter group.
      * 
      */
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable Output<String> family;
 
     public Output<String> getFamily() {
@@ -54,7 +54,7 @@ public final class ClusterParameterGroupState extends io.pulumi.resources.Resour
      * The name of the documentDB parameter.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class ClusterParameterGroupState extends io.pulumi.resources.Resour
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -76,7 +76,7 @@ public final class ClusterParameterGroupState extends io.pulumi.resources.Resour
      * A list of documentDB parameters to apply. Setting parameters to system default values may show a difference on imported resources.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<ClusterParameterGroupParameterGetArgs>> parameters;
 
     public Output<List<ClusterParameterGroupParameterGetArgs>> getParameters() {
@@ -87,7 +87,7 @@ public final class ClusterParameterGroupState extends io.pulumi.resources.Resour
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -98,7 +98,7 @@ public final class ClusterParameterGroupState extends io.pulumi.resources.Resour
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

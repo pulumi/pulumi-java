@@ -8,7 +8,7 @@ import io.pulumi.azurenative.logic.IntegrationAccountPartnerArgs;
 import io.pulumi.azurenative.logic.outputs.PartnerContentResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class IntegrationAccountPartner extends io.pulumi.resources.CustomResourc
      * The changed time.
      * 
      */
-    @OutputExport(name="changedTime", type=String.class, parameters={})
+    @Export(name="changedTime", type=String.class, parameters={})
     private Output<String> changedTime;
 
     /**
@@ -51,7 +51,7 @@ public class IntegrationAccountPartner extends io.pulumi.resources.CustomResourc
      * The partner content.
      * 
      */
-    @OutputExport(name="content", type=PartnerContentResponse.class, parameters={})
+    @Export(name="content", type=PartnerContentResponse.class, parameters={})
     private Output<PartnerContentResponse> content;
 
     /**
@@ -65,7 +65,7 @@ public class IntegrationAccountPartner extends io.pulumi.resources.CustomResourc
      * The created time.
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -79,7 +79,7 @@ public class IntegrationAccountPartner extends io.pulumi.resources.CustomResourc
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -93,7 +93,7 @@ public class IntegrationAccountPartner extends io.pulumi.resources.CustomResourc
      * The metadata.
      * 
      */
-    @OutputExport(name="metadata", type=Object.class, parameters={})
+    @Export(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
     /**
@@ -107,7 +107,7 @@ public class IntegrationAccountPartner extends io.pulumi.resources.CustomResourc
      * Gets the resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class IntegrationAccountPartner extends io.pulumi.resources.CustomResourc
      * The partner type.
      * 
      */
-    @OutputExport(name="partnerType", type=String.class, parameters={})
+    @Export(name="partnerType", type=String.class, parameters={})
     private Output<String> partnerType;
 
     /**
@@ -135,7 +135,7 @@ public class IntegrationAccountPartner extends io.pulumi.resources.CustomResourc
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -149,7 +149,7 @@ public class IntegrationAccountPartner extends io.pulumi.resources.CustomResourc
      * Gets the resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

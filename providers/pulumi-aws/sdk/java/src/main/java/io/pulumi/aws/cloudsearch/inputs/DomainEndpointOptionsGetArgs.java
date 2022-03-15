@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudsearch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DomainEndpointOptionsGetArgs extends io.pulumi.resources.Reso
      * Enables or disables the requirement that all requests to the domain arrive over HTTPS.
      * 
      */
-    @InputImport(name="enforceHttps")
+    @Import(name="enforceHttps")
       private final @Nullable Output<Boolean> enforceHttps;
 
     public Output<Boolean> getEnforceHttps() {
@@ -30,7 +30,7 @@ public final class DomainEndpointOptionsGetArgs extends io.pulumi.resources.Reso
      * The minimum required TLS version. See the [AWS documentation](https://docs.aws.amazon.com/cloudsearch/latest/developerguide/API_DomainEndpointOptions.html) for valid values.
      * 
      */
-    @InputImport(name="tlsSecurityPolicy")
+    @Import(name="tlsSecurityPolicy")
       private final @Nullable Output<String> tlsSecurityPolicy;
 
     public Output<String> getTlsSecurityPolicy() {

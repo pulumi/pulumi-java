@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.HttpHeaderOptionResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpHeaderActionResponse {
     /**
      * Headers to add to a matching request before forwarding the request to the backendService.
@@ -32,12 +32,12 @@ public final class HttpHeaderActionResponse {
      */
     private final List<String> responseHeadersToRemove;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpHeaderActionResponse(
-        @OutputCustomType.Parameter("requestHeadersToAdd") List<HttpHeaderOptionResponse> requestHeadersToAdd,
-        @OutputCustomType.Parameter("requestHeadersToRemove") List<String> requestHeadersToRemove,
-        @OutputCustomType.Parameter("responseHeadersToAdd") List<HttpHeaderOptionResponse> responseHeadersToAdd,
-        @OutputCustomType.Parameter("responseHeadersToRemove") List<String> responseHeadersToRemove) {
+        @CustomType.Parameter("requestHeadersToAdd") List<HttpHeaderOptionResponse> requestHeadersToAdd,
+        @CustomType.Parameter("requestHeadersToRemove") List<String> requestHeadersToRemove,
+        @CustomType.Parameter("responseHeadersToAdd") List<HttpHeaderOptionResponse> responseHeadersToAdd,
+        @CustomType.Parameter("responseHeadersToRemove") List<String> responseHeadersToRemove) {
         this.requestHeadersToAdd = requestHeadersToAdd;
         this.requestHeadersToRemove = requestHeadersToRemove;
         this.responseHeadersToAdd = responseHeadersToAdd;

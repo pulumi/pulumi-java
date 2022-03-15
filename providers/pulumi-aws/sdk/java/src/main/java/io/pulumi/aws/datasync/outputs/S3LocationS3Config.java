@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.datasync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class S3LocationS3Config {
     /**
      * Amazon Resource Names (ARN) of the IAM Role used to connect to the S3 Bucket.
@@ -15,8 +15,8 @@ public final class S3LocationS3Config {
      */
     private final String bucketAccessRoleArn;
 
-    @OutputCustomType.Constructor
-    private S3LocationS3Config(@OutputCustomType.Parameter("bucketAccessRoleArn") String bucketAccessRoleArn) {
+    @CustomType.Constructor
+    private S3LocationS3Config(@CustomType.Parameter("bucketAccessRoleArn") String bucketAccessRoleArn) {
         this.bucketAccessRoleArn = bucketAccessRoleArn;
     }
 

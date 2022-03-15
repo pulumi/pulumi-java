@@ -7,14 +7,14 @@ import io.pulumi.awsnative.cloudfront.outputs.ResponseHeadersPolicyAccessControl
 import io.pulumi.awsnative.cloudfront.outputs.ResponseHeadersPolicyAccessControlAllowMethods;
 import io.pulumi.awsnative.cloudfront.outputs.ResponseHeadersPolicyAccessControlAllowOrigins;
 import io.pulumi.awsnative.cloudfront.outputs.ResponseHeadersPolicyAccessControlExposeHeaders;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResponseHeadersPolicyCorsConfig {
     private final Boolean accessControlAllowCredentials;
     private final ResponseHeadersPolicyAccessControlAllowHeaders accessControlAllowHeaders;
@@ -24,15 +24,15 @@ public final class ResponseHeadersPolicyCorsConfig {
     private final @Nullable Integer accessControlMaxAgeSec;
     private final Boolean originOverride;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResponseHeadersPolicyCorsConfig(
-        @OutputCustomType.Parameter("accessControlAllowCredentials") Boolean accessControlAllowCredentials,
-        @OutputCustomType.Parameter("accessControlAllowHeaders") ResponseHeadersPolicyAccessControlAllowHeaders accessControlAllowHeaders,
-        @OutputCustomType.Parameter("accessControlAllowMethods") ResponseHeadersPolicyAccessControlAllowMethods accessControlAllowMethods,
-        @OutputCustomType.Parameter("accessControlAllowOrigins") ResponseHeadersPolicyAccessControlAllowOrigins accessControlAllowOrigins,
-        @OutputCustomType.Parameter("accessControlExposeHeaders") @Nullable ResponseHeadersPolicyAccessControlExposeHeaders accessControlExposeHeaders,
-        @OutputCustomType.Parameter("accessControlMaxAgeSec") @Nullable Integer accessControlMaxAgeSec,
-        @OutputCustomType.Parameter("originOverride") Boolean originOverride) {
+        @CustomType.Parameter("accessControlAllowCredentials") Boolean accessControlAllowCredentials,
+        @CustomType.Parameter("accessControlAllowHeaders") ResponseHeadersPolicyAccessControlAllowHeaders accessControlAllowHeaders,
+        @CustomType.Parameter("accessControlAllowMethods") ResponseHeadersPolicyAccessControlAllowMethods accessControlAllowMethods,
+        @CustomType.Parameter("accessControlAllowOrigins") ResponseHeadersPolicyAccessControlAllowOrigins accessControlAllowOrigins,
+        @CustomType.Parameter("accessControlExposeHeaders") @Nullable ResponseHeadersPolicyAccessControlExposeHeaders accessControlExposeHeaders,
+        @CustomType.Parameter("accessControlMaxAgeSec") @Nullable Integer accessControlMaxAgeSec,
+        @CustomType.Parameter("originOverride") Boolean originOverride) {
         this.accessControlAllowCredentials = accessControlAllowCredentials;
         this.accessControlAllowHeaders = accessControlAllowHeaders;
         this.accessControlAllowMethods = accessControlAllowMethods;

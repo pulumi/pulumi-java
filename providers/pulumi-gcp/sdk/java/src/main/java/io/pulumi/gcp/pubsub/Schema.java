@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.SchemaArgs;
@@ -49,7 +49,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * that is a valid schema definition of the type specified in type.
      * 
      */
-    @OutputExport(name="definition", type=String.class, parameters={})
+    @Export(name="definition", type=String.class, parameters={})
     private Output</* @Nullable */ String> definition;
 
     /**
@@ -65,7 +65,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The ID to use for the schema, which will become the final component of the schema's resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -97,7 +97,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * Possible values are `TYPE_UNSPECIFIED`, `PROTOCOL_BUFFER`, and `AVRO`.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**

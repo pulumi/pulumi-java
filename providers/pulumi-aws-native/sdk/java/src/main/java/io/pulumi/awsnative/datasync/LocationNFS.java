@@ -9,7 +9,7 @@ import io.pulumi.awsnative.datasync.outputs.LocationNFSMountOptions;
 import io.pulumi.awsnative.datasync.outputs.LocationNFSOnPremConfig;
 import io.pulumi.awsnative.datasync.outputs.LocationNFSTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public class LocationNFS extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the NFS location.
      * 
      */
-    @OutputExport(name="locationArn", type=String.class, parameters={})
+    @Export(name="locationArn", type=String.class, parameters={})
     private Output<String> locationArn;
 
     /**
@@ -41,7 +41,7 @@ public class LocationNFS extends io.pulumi.resources.CustomResource {
      * The URL of the NFS location that was described.
      * 
      */
-    @OutputExport(name="locationUri", type=String.class, parameters={})
+    @Export(name="locationUri", type=String.class, parameters={})
     private Output<String> locationUri;
 
     /**
@@ -51,13 +51,13 @@ public class LocationNFS extends io.pulumi.resources.CustomResource {
     public Output<String> getLocationUri() {
         return this.locationUri;
     }
-    @OutputExport(name="mountOptions", type=LocationNFSMountOptions.class, parameters={})
+    @Export(name="mountOptions", type=LocationNFSMountOptions.class, parameters={})
     private Output</* @Nullable */ LocationNFSMountOptions> mountOptions;
 
     public Output</* @Nullable */ LocationNFSMountOptions> getMountOptions() {
         return this.mountOptions;
     }
-    @OutputExport(name="onPremConfig", type=LocationNFSOnPremConfig.class, parameters={})
+    @Export(name="onPremConfig", type=LocationNFSOnPremConfig.class, parameters={})
     private Output<LocationNFSOnPremConfig> onPremConfig;
 
     public Output<LocationNFSOnPremConfig> getOnPremConfig() {
@@ -67,7 +67,7 @@ public class LocationNFS extends io.pulumi.resources.CustomResource {
      * The name of the NFS server. This value is the IP address or DNS name of the NFS server.
      * 
      */
-    @OutputExport(name="serverHostname", type=String.class, parameters={})
+    @Export(name="serverHostname", type=String.class, parameters={})
     private Output<String> serverHostname;
 
     /**
@@ -81,7 +81,7 @@ public class LocationNFS extends io.pulumi.resources.CustomResource {
      * The subdirectory in the NFS file system that is used to read data from the NFS source location or write data to the NFS destination.
      * 
      */
-    @OutputExport(name="subdirectory", type=String.class, parameters={})
+    @Export(name="subdirectory", type=String.class, parameters={})
     private Output<String> subdirectory;
 
     /**
@@ -95,7 +95,7 @@ public class LocationNFS extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={LocationNFSTag.class})
+    @Export(name="tags", type=List.class, parameters={LocationNFSTag.class})
     private Output</* @Nullable */ List<LocationNFSTag>> tags;
 
     /**

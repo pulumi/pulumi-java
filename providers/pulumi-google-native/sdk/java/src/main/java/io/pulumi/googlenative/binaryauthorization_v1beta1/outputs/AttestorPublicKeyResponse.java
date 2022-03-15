@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.binaryauthorization_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.binaryauthorization_v1beta1.outputs.PkixPublicKeyResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AttestorPublicKeyResponse {
     /**
      * ASCII-armored representation of a PGP public key, as the entire output by the command `gpg --export --armor foo@example.com` (either LF or CRLF line endings). When using this field, `id` should be left blank. The BinAuthz API handlers will calculate the ID and fill it in automatically. BinAuthz computes this ID as the OpenPGP RFC4880 V4 fingerprint, represented as upper-case hex. If `id` is provided by the caller, it will be overwritten by the API-calculated ID.
@@ -26,11 +26,11 @@ public final class AttestorPublicKeyResponse {
      */
     private final PkixPublicKeyResponse pkixPublicKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AttestorPublicKeyResponse(
-        @OutputCustomType.Parameter("asciiArmoredPgpPublicKey") String asciiArmoredPgpPublicKey,
-        @OutputCustomType.Parameter("comment") String comment,
-        @OutputCustomType.Parameter("pkixPublicKey") PkixPublicKeyResponse pkixPublicKey) {
+        @CustomType.Parameter("asciiArmoredPgpPublicKey") String asciiArmoredPgpPublicKey,
+        @CustomType.Parameter("comment") String comment,
+        @CustomType.Parameter("pkixPublicKey") PkixPublicKeyResponse pkixPublicKey) {
         this.asciiArmoredPgpPublicKey = asciiArmoredPgpPublicKey;
         this.comment = comment;
         this.pkixPublicKey = pkixPublicKey;

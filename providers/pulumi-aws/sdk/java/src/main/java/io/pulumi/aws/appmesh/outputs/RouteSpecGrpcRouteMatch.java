@@ -4,14 +4,14 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.RouteSpecGrpcRouteMatchMetadata;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RouteSpecGrpcRouteMatch {
     /**
      * The data to match from the gRPC request.
@@ -35,12 +35,12 @@ public final class RouteSpecGrpcRouteMatch {
      */
     private final @Nullable String serviceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteSpecGrpcRouteMatch(
-        @OutputCustomType.Parameter("metadatas") @Nullable List<RouteSpecGrpcRouteMatchMetadata> metadatas,
-        @OutputCustomType.Parameter("methodName") @Nullable String methodName,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("serviceName") @Nullable String serviceName) {
+        @CustomType.Parameter("metadatas") @Nullable List<RouteSpecGrpcRouteMatchMetadata> metadatas,
+        @CustomType.Parameter("methodName") @Nullable String methodName,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("serviceName") @Nullable String serviceName) {
         this.metadatas = metadatas;
         this.methodName = methodName;
         this.prefix = prefix;

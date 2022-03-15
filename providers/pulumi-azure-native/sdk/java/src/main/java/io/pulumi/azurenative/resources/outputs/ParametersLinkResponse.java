@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ParametersLinkResponse {
     /**
      * If included, must match the ContentVersion in the template.
@@ -22,10 +22,10 @@ public final class ParametersLinkResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ParametersLinkResponse(
-        @OutputCustomType.Parameter("contentVersion") @Nullable String contentVersion,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("contentVersion") @Nullable String contentVersion,
+        @CustomType.Parameter("uri") String uri) {
         this.contentVersion = contentVersion;
         this.uri = uri;
     }

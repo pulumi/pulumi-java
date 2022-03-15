@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datadog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LinkedResourceResponse {
     /**
      * The ARM id of the linked resource.
@@ -17,8 +17,8 @@ public final class LinkedResourceResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
-    private LinkedResourceResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
+    @CustomType.Constructor
+    private LinkedResourceResponse(@CustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeArtifactArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeInstallStepArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeUpdateStepArgs;
@@ -23,7 +23,7 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="artifacts")
+    @Import(name="artifacts")
       private final @Nullable Output<List<GuestPoliciesRecipeArtifactArgs>> artifacts;
 
     public Output<List<GuestPoliciesRecipeArtifactArgs>> getArtifacts() {
@@ -40,7 +40,7 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
      * Possible values are `INSTALLED`, `UPDATED`, and `REMOVED`.
      * 
      */
-    @InputImport(name="desiredState")
+    @Import(name="desiredState")
       private final @Nullable Output<String> desiredState;
 
     public Output<String> getDesiredState() {
@@ -53,7 +53,7 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="installSteps")
+    @Import(name="installSteps")
       private final @Nullable Output<List<GuestPoliciesRecipeInstallStepArgs>> installSteps;
 
     public Output<List<GuestPoliciesRecipeInstallStepArgs>> getInstallSteps() {
@@ -67,7 +67,7 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
      * could potentially have conflicting assignments.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -80,7 +80,7 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="updateSteps")
+    @Import(name="updateSteps")
       private final @Nullable Output<List<GuestPoliciesRecipeUpdateStepArgs>> updateSteps;
 
     public Output<List<GuestPoliciesRecipeUpdateStepArgs>> getUpdateSteps() {
@@ -91,7 +91,7 @@ public final class GuestPoliciesRecipeArgs extends io.pulumi.resources.ResourceA
      * The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

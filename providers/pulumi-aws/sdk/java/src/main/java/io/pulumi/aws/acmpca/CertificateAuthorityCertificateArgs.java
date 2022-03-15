@@ -4,7 +4,7 @@
 package io.pulumi.aws.acmpca;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CertificateAuthorityCertificateArgs extends io.pulumi.resourc
      * The PEM-encoded certificate for the Certificate Authority.
      * 
      */
-    @InputImport(name="certificate", required=true)
+    @Import(name="certificate", required=true)
       private final Output<String> certificate;
 
     public Output<String> getCertificate() {
@@ -29,7 +29,7 @@ public final class CertificateAuthorityCertificateArgs extends io.pulumi.resourc
      * Amazon Resource Name (ARN) of the Certificate Authority.
      * 
      */
-    @InputImport(name="certificateAuthorityArn", required=true)
+    @Import(name="certificateAuthorityArn", required=true)
       private final Output<String> certificateAuthorityArn;
 
     public Output<String> getCertificateAuthorityArn() {
@@ -40,7 +40,7 @@ public final class CertificateAuthorityCertificateArgs extends io.pulumi.resourc
      * The PEM-encoded certificate chain that includes any intermediate certificates and chains up to root CA. Required for subordinate Certificate Authorities. Not allowed for root Certificate Authorities.
      * 
      */
-    @InputImport(name="certificateChain")
+    @Import(name="certificateChain")
       private final @Nullable Output<String> certificateChain;
 
     public Output<String> getCertificateChain() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketLifecycleRuleItemConditionResponse {
     /**
      * Age of an object (in days). This condition is satisfied when an object reaches the specified age.
@@ -63,18 +63,18 @@ public final class BucketLifecycleRuleItemConditionResponse {
      */
     private final Integer numNewerVersions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketLifecycleRuleItemConditionResponse(
-        @OutputCustomType.Parameter("age") Integer age,
-        @OutputCustomType.Parameter("createdBefore") String createdBefore,
-        @OutputCustomType.Parameter("customTimeBefore") String customTimeBefore,
-        @OutputCustomType.Parameter("daysSinceCustomTime") Integer daysSinceCustomTime,
-        @OutputCustomType.Parameter("daysSinceNoncurrentTime") Integer daysSinceNoncurrentTime,
-        @OutputCustomType.Parameter("isLive") Boolean isLive,
-        @OutputCustomType.Parameter("matchesPattern") String matchesPattern,
-        @OutputCustomType.Parameter("matchesStorageClass") List<String> matchesStorageClass,
-        @OutputCustomType.Parameter("noncurrentTimeBefore") String noncurrentTimeBefore,
-        @OutputCustomType.Parameter("numNewerVersions") Integer numNewerVersions) {
+        @CustomType.Parameter("age") Integer age,
+        @CustomType.Parameter("createdBefore") String createdBefore,
+        @CustomType.Parameter("customTimeBefore") String customTimeBefore,
+        @CustomType.Parameter("daysSinceCustomTime") Integer daysSinceCustomTime,
+        @CustomType.Parameter("daysSinceNoncurrentTime") Integer daysSinceNoncurrentTime,
+        @CustomType.Parameter("isLive") Boolean isLive,
+        @CustomType.Parameter("matchesPattern") String matchesPattern,
+        @CustomType.Parameter("matchesStorageClass") List<String> matchesStorageClass,
+        @CustomType.Parameter("noncurrentTimeBefore") String noncurrentTimeBefore,
+        @CustomType.Parameter("numNewerVersions") Integer numNewerVersions) {
         this.age = age;
         this.createdBefore = createdBefore;
         this.customTimeBefore = customTimeBefore;

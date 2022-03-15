@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GuestPoliciesRecipeArtifactGcs {
     /**
      * Bucket of the Google Cloud Storage object. Given an example URL: https://storage.googleapis.com/my-bucket/foo/bar#1234567
@@ -31,11 +31,11 @@ public final class GuestPoliciesRecipeArtifactGcs {
      */
     private final @Nullable String object;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestPoliciesRecipeArtifactGcs(
-        @OutputCustomType.Parameter("bucket") @Nullable String bucket,
-        @OutputCustomType.Parameter("generation") @Nullable Integer generation,
-        @OutputCustomType.Parameter("object") @Nullable String object) {
+        @CustomType.Parameter("bucket") @Nullable String bucket,
+        @CustomType.Parameter("generation") @Nullable Integer generation,
+        @CustomType.Parameter("object") @Nullable String object) {
         this.bucket = bucket;
         this.generation = generation;
         this.object = object;

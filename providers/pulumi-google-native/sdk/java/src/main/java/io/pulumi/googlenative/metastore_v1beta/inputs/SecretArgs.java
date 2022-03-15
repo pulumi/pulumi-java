@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * The relative resource name of a Secret Manager secret version, in the following form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
      * 
      */
-    @InputImport(name="cloudSecret")
+    @Import(name="cloudSecret")
       private final @Nullable Output<String> cloudSecret;
 
     public Output<String> getCloudSecret() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.batch.SchedulingPolicyArgs;
 import io.pulumi.awsnative.batch.outputs.SchedulingPolicyFairsharePolicy;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -19,13 +19,13 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:batch:SchedulingPolicy")
 public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="fairsharePolicy", type=SchedulingPolicyFairsharePolicy.class, parameters={})
+    @Export(name="fairsharePolicy", type=SchedulingPolicyFairsharePolicy.class, parameters={})
     private Output</* @Nullable */ SchedulingPolicyFairsharePolicy> fairsharePolicy;
 
     public Output</* @Nullable */ SchedulingPolicyFairsharePolicy> getFairsharePolicy() {
@@ -35,7 +35,7 @@ public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
      * Name of Scheduling Policy.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -49,7 +49,7 @@ public class SchedulingPolicy extends io.pulumi.resources.CustomResource {
      * A key-value pair to associate with a resource.
      * 
      */
-    @OutputExport(name="tags", type=Object.class, parameters={})
+    @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
     /**

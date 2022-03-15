@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
      * List of databases on target server
      * 
      */
-    @InputImport(name="databases", required=true)
+    @Import(name="databases", required=true)
       private final List<String> databases;
 
     public List<String> getDatabases() {
@@ -33,7 +33,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -44,7 +44,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
      * Target server brand version
      * 
      */
-    @InputImport(name="targetServerBrandVersion", required=true)
+    @Import(name="targetServerBrandVersion", required=true)
       private final String targetServerBrandVersion;
 
     public String getTargetServerBrandVersion() {
@@ -55,7 +55,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
      * Version of the target server
      * 
      */
-    @InputImport(name="targetServerVersion", required=true)
+    @Import(name="targetServerVersion", required=true)
       private final String targetServerVersion;
 
     public String getTargetServerVersion() {
@@ -66,7 +66,7 @@ public final class ConnectToTargetAzureDbForPostgreSqlSyncTaskOutputResponse ext
      * Validation errors associated with the task
      * 
      */
-    @InputImport(name="validationErrors", required=true)
+    @Import(name="validationErrors", required=true)
       private final List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> getValidationErrors() {

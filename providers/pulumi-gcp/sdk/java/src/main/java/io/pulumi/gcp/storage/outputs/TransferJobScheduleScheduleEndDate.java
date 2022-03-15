@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TransferJobScheduleScheduleEndDate {
     /**
      * Day of month. Must be from 1 to 31 and valid for the year and month.
@@ -25,11 +25,11 @@ public final class TransferJobScheduleScheduleEndDate {
      */
     private final Integer year;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TransferJobScheduleScheduleEndDate(
-        @OutputCustomType.Parameter("day") Integer day,
-        @OutputCustomType.Parameter("month") Integer month,
-        @OutputCustomType.Parameter("year") Integer year) {
+        @CustomType.Parameter("day") Integer day,
+        @CustomType.Parameter("month") Integer month,
+        @CustomType.Parameter("year") Integer year) {
         this.day = day;
         this.month = month;
         this.year = year;

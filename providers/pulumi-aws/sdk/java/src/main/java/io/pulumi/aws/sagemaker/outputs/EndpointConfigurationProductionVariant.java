@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointConfigurationProductionVariant {
     /**
      * The size of the Elastic Inference (EI) instance to use for the production variant.
@@ -44,14 +44,14 @@ public final class EndpointConfigurationProductionVariant {
      */
     private final @Nullable String variantName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointConfigurationProductionVariant(
-        @OutputCustomType.Parameter("acceleratorType") @Nullable String acceleratorType,
-        @OutputCustomType.Parameter("initialInstanceCount") Integer initialInstanceCount,
-        @OutputCustomType.Parameter("initialVariantWeight") @Nullable Double initialVariantWeight,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("modelName") String modelName,
-        @OutputCustomType.Parameter("variantName") @Nullable String variantName) {
+        @CustomType.Parameter("acceleratorType") @Nullable String acceleratorType,
+        @CustomType.Parameter("initialInstanceCount") Integer initialInstanceCount,
+        @CustomType.Parameter("initialVariantWeight") @Nullable Double initialVariantWeight,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("modelName") String modelName,
+        @CustomType.Parameter("variantName") @Nullable String variantName) {
         this.acceleratorType = acceleratorType;
         this.initialInstanceCount = initialInstanceCount;
         this.initialVariantWeight = initialVariantWeight;

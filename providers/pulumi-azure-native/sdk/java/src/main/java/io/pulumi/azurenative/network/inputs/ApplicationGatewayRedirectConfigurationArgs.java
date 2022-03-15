@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.ApplicationGatewayRedirectType;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -38,7 +38,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * Include path in the redirected url.
      * 
      */
-    @InputImport(name="includePath")
+    @Import(name="includePath")
       private final @Nullable Output<Boolean> includePath;
 
     public Output<Boolean> getIncludePath() {
@@ -49,7 +49,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * Include query string in the redirected url.
      * 
      */
-    @InputImport(name="includeQueryString")
+    @Import(name="includeQueryString")
       private final @Nullable Output<Boolean> includeQueryString;
 
     public Output<Boolean> getIncludeQueryString() {
@@ -60,7 +60,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * Name of the redirect configuration that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -71,7 +71,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * Path rules specifying redirect configuration.
      * 
      */
-    @InputImport(name="pathRules")
+    @Import(name="pathRules")
       private final @Nullable Output<List<SubResourceArgs>> pathRules;
 
     public Output<List<SubResourceArgs>> getPathRules() {
@@ -82,7 +82,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * HTTP redirection type.
      * 
      */
-    @InputImport(name="redirectType")
+    @Import(name="redirectType")
       private final @Nullable Output<Either<String,ApplicationGatewayRedirectType>> redirectType;
 
     public Output<Either<String,ApplicationGatewayRedirectType>> getRedirectType() {
@@ -93,7 +93,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * Request routing specifying redirect configuration.
      * 
      */
-    @InputImport(name="requestRoutingRules")
+    @Import(name="requestRoutingRules")
       private final @Nullable Output<List<SubResourceArgs>> requestRoutingRules;
 
     public Output<List<SubResourceArgs>> getRequestRoutingRules() {
@@ -104,7 +104,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * Reference to a listener to redirect the request to.
      * 
      */
-    @InputImport(name="targetListener")
+    @Import(name="targetListener")
       private final @Nullable Output<SubResourceArgs> targetListener;
 
     public Output<SubResourceArgs> getTargetListener() {
@@ -115,7 +115,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * Url to redirect the request to.
      * 
      */
-    @InputImport(name="targetUrl")
+    @Import(name="targetUrl")
       private final @Nullable Output<String> targetUrl;
 
     public Output<String> getTargetUrl() {
@@ -126,7 +126,7 @@ public final class ApplicationGatewayRedirectConfigurationArgs extends io.pulumi
      * Url path maps specifying default redirect configuration.
      * 
      */
-    @InputImport(name="urlPathMaps")
+    @Import(name="urlPathMaps")
       private final @Nullable Output<List<SubResourceArgs>> urlPathMaps;
 
     public Output<List<SubResourceArgs>> getUrlPathMaps() {

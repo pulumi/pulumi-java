@@ -6,7 +6,7 @@ package io.pulumi.aws.memorydb.inputs;
 import io.pulumi.aws.memorydb.inputs.ClusterClusterEndpointGetArgs;
 import io.pulumi.aws.memorydb.inputs.ClusterShardGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The name of the Access Control List to associate with the cluster.
      * 
      */
-    @InputImport(name="aclName")
+    @Import(name="aclName")
       private final @Nullable Output<String> aclName;
 
     public Output<String> getAclName() {
@@ -36,7 +36,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * * `cluster_endpoint`
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -47,21 +47,21 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * When set to `true`, the cluster will automatically receive minor engine version upgrades after launch. Defaults to `true`.
      * 
      */
-    @InputImport(name="autoMinorVersionUpgrade")
+    @Import(name="autoMinorVersionUpgrade")
       private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
     public Output<Boolean> getAutoMinorVersionUpgrade() {
         return this.autoMinorVersionUpgrade == null ? Output.empty() : this.autoMinorVersionUpgrade;
     }
 
-    @InputImport(name="clusterEndpoints")
+    @Import(name="clusterEndpoints")
       private final @Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints;
 
     public Output<List<ClusterClusterEndpointGetArgs>> getClusterEndpoints() {
         return this.clusterEndpoints == null ? Output.empty() : this.clusterEndpoints;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -72,7 +72,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Patch version number of the Redis engine used by the cluster.
      * 
      */
-    @InputImport(name="enginePatchVersion")
+    @Import(name="enginePatchVersion")
       private final @Nullable Output<String> enginePatchVersion;
 
     public Output<String> getEnginePatchVersion() {
@@ -83,7 +83,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Version number of the Redis engine to be used for the cluster. Downgrades are not supported.
      * 
      */
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
@@ -94,7 +94,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Name of the final cluster snapshot to be created when this resource is deleted. If omitted, no final snapshot will be made.
      * 
      */
-    @InputImport(name="finalSnapshotName")
+    @Import(name="finalSnapshotName")
       private final @Nullable Output<String> finalSnapshotName;
 
     public Output<String> getFinalSnapshotName() {
@@ -105,7 +105,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * ARN of the KMS key used to encrypt the cluster at rest.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -116,7 +116,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Specifies the weekly time range during which maintenance on the cluster is performed. It is specified as a range in the format `ddd:hh24:mi-ddd:hh24:mi` (24H Clock UTC). The minimum maintenance window is a 60 minute period. Example: `sun:23:00-mon:01:30`.
      * 
      */
-    @InputImport(name="maintenanceWindow")
+    @Import(name="maintenanceWindow")
       private final @Nullable Output<String> maintenanceWindow;
 
     public Output<String> getMaintenanceWindow() {
@@ -128,7 +128,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * * `endpoint`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -139,7 +139,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -150,7 +150,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The compute and memory capacity of the nodes in the cluster. See AWS documentation on [supported node types](https://docs.aws.amazon.com/memorydb/latest/devguide/nodes.supportedtypes.html) as well as [vertical scaling](https://docs.aws.amazon.com/memorydb/latest/devguide/cluster-vertical-scaling.html).
      * 
      */
-    @InputImport(name="nodeType")
+    @Import(name="nodeType")
       private final @Nullable Output<String> nodeType;
 
     public Output<String> getNodeType() {
@@ -161,7 +161,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The number of replicas to apply to each shard, up to a maximum of 5. Defaults to `1` (i.e. 2 nodes per shard).
      * 
      */
-    @InputImport(name="numReplicasPerShard")
+    @Import(name="numReplicasPerShard")
       private final @Nullable Output<Integer> numReplicasPerShard;
 
     public Output<Integer> getNumReplicasPerShard() {
@@ -172,7 +172,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The number of shards in the cluster. Defaults to `1`.
      * 
      */
-    @InputImport(name="numShards")
+    @Import(name="numShards")
       private final @Nullable Output<Integer> numShards;
 
     public Output<Integer> getNumShards() {
@@ -183,7 +183,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The name of the parameter group associated with the cluster.
      * 
      */
-    @InputImport(name="parameterGroupName")
+    @Import(name="parameterGroupName")
       private final @Nullable Output<String> parameterGroupName;
 
     public Output<String> getParameterGroupName() {
@@ -194,7 +194,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The port number on which each of the nodes accepts connections. Defaults to `6379`.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -205,7 +205,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Set of VPC Security Group ID-s to associate with this cluster.
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -216,7 +216,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Set of shards in this cluster.
      * 
      */
-    @InputImport(name="shards")
+    @Import(name="shards")
       private final @Nullable Output<List<ClusterShardGetArgs>> shards;
 
     public Output<List<ClusterShardGetArgs>> getShards() {
@@ -227,7 +227,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * List of ARN-s that uniquely identify RDB snapshot files stored in S3. The snapshot files will be used to populate the new cluster. Object names in the ARN-s cannot contain any commas.
      * 
      */
-    @InputImport(name="snapshotArns")
+    @Import(name="snapshotArns")
       private final @Nullable Output<String> snapshotArns;
 
     public Output<String> getSnapshotArns() {
@@ -238,7 +238,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The name of a snapshot from which to restore data into the new cluster.
      * 
      */
-    @InputImport(name="snapshotName")
+    @Import(name="snapshotName")
       private final @Nullable Output<String> snapshotName;
 
     public Output<String> getSnapshotName() {
@@ -249,7 +249,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The number of days for which MemoryDB retains automatic snapshots before deleting them. When set to `0`, automatic backups are disabled. Defaults to `0`.
      * 
      */
-    @InputImport(name="snapshotRetentionLimit")
+    @Import(name="snapshotRetentionLimit")
       private final @Nullable Output<Integer> snapshotRetentionLimit;
 
     public Output<Integer> getSnapshotRetentionLimit() {
@@ -260,7 +260,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The daily time range (in UTC) during which MemoryDB begins taking a daily snapshot of your shard. Example: `05:00-09:00`.
      * 
      */
-    @InputImport(name="snapshotWindow")
+    @Import(name="snapshotWindow")
       private final @Nullable Output<String> snapshotWindow;
 
     public Output<String> getSnapshotWindow() {
@@ -271,7 +271,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * ARN of the SNS topic to which cluster notifications are sent.
      * 
      */
-    @InputImport(name="snsTopicArn")
+    @Import(name="snsTopicArn")
       private final @Nullable Output<String> snsTopicArn;
 
     public Output<String> getSnsTopicArn() {
@@ -282,7 +282,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * The name of the subnet group to be used for the cluster. Defaults to a subnet group consisting of default VPC subnets.
      * 
      */
-    @InputImport(name="subnetGroupName")
+    @Import(name="subnetGroupName")
       private final @Nullable Output<String> subnetGroupName;
 
     public Output<String> getSubnetGroupName() {
@@ -293,7 +293,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -304,7 +304,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -315,7 +315,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * A flag to enable in-transit encryption on the cluster. When set to `false`, the `acl_name` must be `open-access`. Defaults to `true`.
      * 
      */
-    @InputImport(name="tlsEnabled")
+    @Import(name="tlsEnabled")
       private final @Nullable Output<Boolean> tlsEnabled;
 
     public Output<Boolean> getTlsEnabled() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class BlobLocationResponse extends io.pulumi.resources.InvokeArgs {
      * Access credentials for the blob, if applicable (e.g. blob specified by storage account connection string + blob URI)
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable String credentials;
 
     public Optional<String> getCredentials() {
@@ -33,7 +33,7 @@ public final class BlobLocationResponse extends io.pulumi.resources.InvokeArgs {
      * The URI from which the blob is accessible from. For example, aml://abc for system assets or https://xyz for user assets or payload.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

@@ -16,7 +16,7 @@ import io.pulumi.azurenative.storagecache.outputs.CacheUpgradeStatusResponse;
 import io.pulumi.azurenative.storagecache.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -45,7 +45,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * The size of this Cache, in GB.
      * 
      */
-    @OutputExport(name="cacheSizeGB", type=Integer.class, parameters={})
+    @Export(name="cacheSizeGB", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> cacheSizeGB;
 
     /**
@@ -59,7 +59,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * Specifies Directory Services settings of the cache.
      * 
      */
-    @OutputExport(name="directoryServicesSettings", type=CacheDirectorySettingsResponse.class, parameters={})
+    @Export(name="directoryServicesSettings", type=CacheDirectorySettingsResponse.class, parameters={})
     private Output</* @Nullable */ CacheDirectorySettingsResponse> directoryServicesSettings;
 
     /**
@@ -73,7 +73,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * Specifies encryption settings of the cache.
      * 
      */
-    @OutputExport(name="encryptionSettings", type=CacheEncryptionSettingsResponse.class, parameters={})
+    @Export(name="encryptionSettings", type=CacheEncryptionSettingsResponse.class, parameters={})
     private Output</* @Nullable */ CacheEncryptionSettingsResponse> encryptionSettings;
 
     /**
@@ -87,7 +87,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * Health of the Cache.
      * 
      */
-    @OutputExport(name="health", type=CacheHealthResponse.class, parameters={})
+    @Export(name="health", type=CacheHealthResponse.class, parameters={})
     private Output<CacheHealthResponse> health;
 
     /**
@@ -101,7 +101,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * The identity of the cache, if configured.
      * 
      */
-    @OutputExport(name="identity", type=CacheIdentityResponse.class, parameters={})
+    @Export(name="identity", type=CacheIdentityResponse.class, parameters={})
     private Output</* @Nullable */ CacheIdentityResponse> identity;
 
     /**
@@ -115,7 +115,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * Region name string.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -129,7 +129,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * Array of IP addresses that can be used by clients mounting this Cache.
      * 
      */
-    @OutputExport(name="mountAddresses", type=List.class, parameters={String.class})
+    @Export(name="mountAddresses", type=List.class, parameters={String.class})
     private Output<List<String>> mountAddresses;
 
     /**
@@ -143,7 +143,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * Name of Cache.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -157,7 +157,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * Specifies network settings of the cache.
      * 
      */
-    @OutputExport(name="networkSettings", type=CacheNetworkSettingsResponse.class, parameters={})
+    @Export(name="networkSettings", type=CacheNetworkSettingsResponse.class, parameters={})
     private Output</* @Nullable */ CacheNetworkSettingsResponse> networkSettings;
 
     /**
@@ -171,7 +171,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * ARM provisioning state, see https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/Addendum.md#provisioningstate-property
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -185,7 +185,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * Specifies security settings of the cache.
      * 
      */
-    @OutputExport(name="securitySettings", type=CacheSecuritySettingsResponse.class, parameters={})
+    @Export(name="securitySettings", type=CacheSecuritySettingsResponse.class, parameters={})
     private Output</* @Nullable */ CacheSecuritySettingsResponse> securitySettings;
 
     /**
@@ -199,7 +199,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * SKU for the Cache.
      * 
      */
-    @OutputExport(name="sku", type=CacheResponseSku.class, parameters={})
+    @Export(name="sku", type=CacheResponseSku.class, parameters={})
     private Output</* @Nullable */ CacheResponseSku> sku;
 
     /**
@@ -213,7 +213,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * Subnet used for the Cache.
      * 
      */
-    @OutputExport(name="subnet", type=String.class, parameters={})
+    @Export(name="subnet", type=String.class, parameters={})
     private Output</* @Nullable */ String> subnet;
 
     /**
@@ -227,7 +227,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * The system meta data relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -241,7 +241,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -255,7 +255,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * Type of the Cache; Microsoft.StorageCache/Cache
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -269,7 +269,7 @@ public class Cache extends io.pulumi.resources.CustomResource {
      * Upgrade status of the Cache.
      * 
      */
-    @OutputExport(name="upgradeStatus", type=CacheUpgradeStatusResponse.class, parameters={})
+    @Export(name="upgradeStatus", type=CacheUpgradeStatusResponse.class, parameters={})
     private Output</* @Nullable */ CacheUpgradeStatusResponse> upgradeStatus;
 
     /**

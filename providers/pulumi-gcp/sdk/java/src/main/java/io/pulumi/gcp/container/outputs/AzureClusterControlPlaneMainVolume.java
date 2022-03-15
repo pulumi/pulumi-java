@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureClusterControlPlaneMainVolume {
     /**
      * Optional. The size of the disk, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
@@ -17,8 +17,8 @@ public final class AzureClusterControlPlaneMainVolume {
      */
     private final @Nullable Integer sizeGib;
 
-    @OutputCustomType.Constructor
-    private AzureClusterControlPlaneMainVolume(@OutputCustomType.Parameter("sizeGib") @Nullable Integer sizeGib) {
+    @CustomType.Constructor
+    private AzureClusterControlPlaneMainVolume(@CustomType.Parameter("sizeGib") @Nullable Integer sizeGib) {
         this.sizeGib = sizeGib;
     }
 

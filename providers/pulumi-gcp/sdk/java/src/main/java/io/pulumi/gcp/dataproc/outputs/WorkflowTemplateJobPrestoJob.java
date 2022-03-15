@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobPrestoJobLoggingConfig;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobPrestoJobQueryList;
 import java.lang.Boolean;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplateJobPrestoJob {
     /**
      * Optional. Presto client tags to attach to this query
@@ -52,15 +52,15 @@ public final class WorkflowTemplateJobPrestoJob {
      */
     private final @Nullable WorkflowTemplateJobPrestoJobQueryList queryList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplateJobPrestoJob(
-        @OutputCustomType.Parameter("clientTags") @Nullable List<String> clientTags,
-        @OutputCustomType.Parameter("continueOnFailure") @Nullable Boolean continueOnFailure,
-        @OutputCustomType.Parameter("loggingConfig") @Nullable WorkflowTemplateJobPrestoJobLoggingConfig loggingConfig,
-        @OutputCustomType.Parameter("outputFormat") @Nullable String outputFormat,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("queryFileUri") @Nullable String queryFileUri,
-        @OutputCustomType.Parameter("queryList") @Nullable WorkflowTemplateJobPrestoJobQueryList queryList) {
+        @CustomType.Parameter("clientTags") @Nullable List<String> clientTags,
+        @CustomType.Parameter("continueOnFailure") @Nullable Boolean continueOnFailure,
+        @CustomType.Parameter("loggingConfig") @Nullable WorkflowTemplateJobPrestoJobLoggingConfig loggingConfig,
+        @CustomType.Parameter("outputFormat") @Nullable String outputFormat,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("queryFileUri") @Nullable String queryFileUri,
+        @CustomType.Parameter("queryList") @Nullable WorkflowTemplateJobPrestoJobQueryList queryList) {
         this.clientTags = clientTags;
         this.continueOnFailure = continueOnFailure;
         this.loggingConfig = loggingConfig;

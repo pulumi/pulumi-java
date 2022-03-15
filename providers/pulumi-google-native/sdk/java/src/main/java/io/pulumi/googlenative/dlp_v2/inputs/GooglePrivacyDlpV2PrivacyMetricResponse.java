@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CategoricalStatsConfigResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2KAnonymityConfigResponse;
@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends io.pulumi.res
      * Categorical stats
      * 
      */
-    @InputImport(name="categoricalStatsConfig", required=true)
+    @Import(name="categoricalStatsConfig", required=true)
       private final GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig;
 
     public GooglePrivacyDlpV2CategoricalStatsConfigResponse getCategoricalStatsConfig() {
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends io.pulumi.res
      * delta-presence
      * 
      */
-    @InputImport(name="deltaPresenceEstimationConfig", required=true)
+    @Import(name="deltaPresenceEstimationConfig", required=true)
       private final GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig;
 
     public GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse getDeltaPresenceEstimationConfig() {
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends io.pulumi.res
      * K-anonymity
      * 
      */
-    @InputImport(name="kAnonymityConfig", required=true)
+    @Import(name="kAnonymityConfig", required=true)
       private final GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig;
 
     public GooglePrivacyDlpV2KAnonymityConfigResponse getKAnonymityConfig() {
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends io.pulumi.res
      * k-map
      * 
      */
-    @InputImport(name="kMapEstimationConfig", required=true)
+    @Import(name="kMapEstimationConfig", required=true)
       private final GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig;
 
     public GooglePrivacyDlpV2KMapEstimationConfigResponse getKMapEstimationConfig() {
@@ -69,7 +69,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends io.pulumi.res
      * l-diversity
      * 
      */
-    @InputImport(name="lDiversityConfig", required=true)
+    @Import(name="lDiversityConfig", required=true)
       private final GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig;
 
     public GooglePrivacyDlpV2LDiversityConfigResponse getLDiversityConfig() {
@@ -80,7 +80,7 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse extends io.pulumi.res
      * Numerical stats
      * 
      */
-    @InputImport(name="numericalStatsConfig", required=true)
+    @Import(name="numericalStatsConfig", required=true)
       private final GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig;
 
     public GooglePrivacyDlpV2NumericalStatsConfigResponse getNumericalStatsConfig() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceSerialPortResult {
     /**
      * The output of the serial port. Serial port output is available only when the VM instance is running, and logs are limited to the most recent 1 MB of output per port.
@@ -25,14 +25,14 @@ public final class GetInstanceSerialPortResult {
     private final String project;
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceSerialPortResult(
-        @OutputCustomType.Parameter("contents") String contents,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instance") String instance,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("contents") String contents,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instance") String instance,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("zone") String zone) {
         this.contents = contents;
         this.id = id;
         this.instance = instance;

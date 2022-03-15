@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.athena.outputs;
 
 import io.pulumi.awsnative.athena.enums.WorkGroupEncryptionOption;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkGroupEncryptionConfiguration {
     private final WorkGroupEncryptionOption encryptionOption;
     private final @Nullable String kmsKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkGroupEncryptionConfiguration(
-        @OutputCustomType.Parameter("encryptionOption") WorkGroupEncryptionOption encryptionOption,
-        @OutputCustomType.Parameter("kmsKey") @Nullable String kmsKey) {
+        @CustomType.Parameter("encryptionOption") WorkGroupEncryptionOption encryptionOption,
+        @CustomType.Parameter("kmsKey") @Nullable String kmsKey) {
         this.encryptionOption = encryptionOption;
         this.kmsKey = kmsKey;
     }

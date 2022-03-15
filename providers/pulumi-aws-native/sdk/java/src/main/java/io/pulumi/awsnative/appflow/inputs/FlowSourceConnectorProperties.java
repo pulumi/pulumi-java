@@ -18,7 +18,7 @@ import io.pulumi.awsnative.appflow.inputs.FlowSlackSourceProperties;
 import io.pulumi.awsnative.appflow.inputs.FlowTrendmicroSourceProperties;
 import io.pulumi.awsnative.appflow.inputs.FlowVeevaSourceProperties;
 import io.pulumi.awsnative.appflow.inputs.FlowZendeskSourceProperties;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -32,105 +32,105 @@ public final class FlowSourceConnectorProperties extends io.pulumi.resources.Inv
 
     public static final FlowSourceConnectorProperties Empty = new FlowSourceConnectorProperties();
 
-    @InputImport(name="amplitude")
+    @Import(name="amplitude")
       private final @Nullable FlowAmplitudeSourceProperties amplitude;
 
     public Optional<FlowAmplitudeSourceProperties> getAmplitude() {
         return this.amplitude == null ? Optional.empty() : Optional.ofNullable(this.amplitude);
     }
 
-    @InputImport(name="datadog")
+    @Import(name="datadog")
       private final @Nullable FlowDatadogSourceProperties datadog;
 
     public Optional<FlowDatadogSourceProperties> getDatadog() {
         return this.datadog == null ? Optional.empty() : Optional.ofNullable(this.datadog);
     }
 
-    @InputImport(name="dynatrace")
+    @Import(name="dynatrace")
       private final @Nullable FlowDynatraceSourceProperties dynatrace;
 
     public Optional<FlowDynatraceSourceProperties> getDynatrace() {
         return this.dynatrace == null ? Optional.empty() : Optional.ofNullable(this.dynatrace);
     }
 
-    @InputImport(name="googleAnalytics")
+    @Import(name="googleAnalytics")
       private final @Nullable FlowGoogleAnalyticsSourceProperties googleAnalytics;
 
     public Optional<FlowGoogleAnalyticsSourceProperties> getGoogleAnalytics() {
         return this.googleAnalytics == null ? Optional.empty() : Optional.ofNullable(this.googleAnalytics);
     }
 
-    @InputImport(name="inforNexus")
+    @Import(name="inforNexus")
       private final @Nullable FlowInforNexusSourceProperties inforNexus;
 
     public Optional<FlowInforNexusSourceProperties> getInforNexus() {
         return this.inforNexus == null ? Optional.empty() : Optional.ofNullable(this.inforNexus);
     }
 
-    @InputImport(name="marketo")
+    @Import(name="marketo")
       private final @Nullable FlowMarketoSourceProperties marketo;
 
     public Optional<FlowMarketoSourceProperties> getMarketo() {
         return this.marketo == null ? Optional.empty() : Optional.ofNullable(this.marketo);
     }
 
-    @InputImport(name="s3")
+    @Import(name="s3")
       private final @Nullable FlowS3SourceProperties s3;
 
     public Optional<FlowS3SourceProperties> getS3() {
         return this.s3 == null ? Optional.empty() : Optional.ofNullable(this.s3);
     }
 
-    @InputImport(name="sAPOData")
+    @Import(name="sAPOData")
       private final @Nullable FlowSAPODataSourceProperties sAPOData;
 
     public Optional<FlowSAPODataSourceProperties> getSAPOData() {
         return this.sAPOData == null ? Optional.empty() : Optional.ofNullable(this.sAPOData);
     }
 
-    @InputImport(name="salesforce")
+    @Import(name="salesforce")
       private final @Nullable FlowSalesforceSourceProperties salesforce;
 
     public Optional<FlowSalesforceSourceProperties> getSalesforce() {
         return this.salesforce == null ? Optional.empty() : Optional.ofNullable(this.salesforce);
     }
 
-    @InputImport(name="serviceNow")
+    @Import(name="serviceNow")
       private final @Nullable FlowServiceNowSourceProperties serviceNow;
 
     public Optional<FlowServiceNowSourceProperties> getServiceNow() {
         return this.serviceNow == null ? Optional.empty() : Optional.ofNullable(this.serviceNow);
     }
 
-    @InputImport(name="singular")
+    @Import(name="singular")
       private final @Nullable FlowSingularSourceProperties singular;
 
     public Optional<FlowSingularSourceProperties> getSingular() {
         return this.singular == null ? Optional.empty() : Optional.ofNullable(this.singular);
     }
 
-    @InputImport(name="slack")
+    @Import(name="slack")
       private final @Nullable FlowSlackSourceProperties slack;
 
     public Optional<FlowSlackSourceProperties> getSlack() {
         return this.slack == null ? Optional.empty() : Optional.ofNullable(this.slack);
     }
 
-    @InputImport(name="trendmicro")
+    @Import(name="trendmicro")
       private final @Nullable FlowTrendmicroSourceProperties trendmicro;
 
     public Optional<FlowTrendmicroSourceProperties> getTrendmicro() {
         return this.trendmicro == null ? Optional.empty() : Optional.ofNullable(this.trendmicro);
     }
 
-    @InputImport(name="veeva")
+    @Import(name="veeva")
       private final @Nullable FlowVeevaSourceProperties veeva;
 
     public Optional<FlowVeevaSourceProperties> getVeeva() {
         return this.veeva == null ? Optional.empty() : Optional.ofNullable(this.veeva);
     }
 
-    @InputImport(name="zendesk")
+    @Import(name="zendesk")
       private final @Nullable FlowZendeskSourceProperties zendesk;
 
     public Optional<FlowZendeskSourceProperties> getZendesk() {

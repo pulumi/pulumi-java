@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.KeyVaultLastAccessStatusContractPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultContractPropertiesResponse {
     /**
      * SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
@@ -28,11 +28,11 @@ public final class KeyVaultContractPropertiesResponse {
      */
     private final @Nullable String secretIdentifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyVaultContractPropertiesResponse(
-        @OutputCustomType.Parameter("identityClientId") @Nullable String identityClientId,
-        @OutputCustomType.Parameter("lastStatus") @Nullable KeyVaultLastAccessStatusContractPropertiesResponse lastStatus,
-        @OutputCustomType.Parameter("secretIdentifier") @Nullable String secretIdentifier) {
+        @CustomType.Parameter("identityClientId") @Nullable String identityClientId,
+        @CustomType.Parameter("lastStatus") @Nullable KeyVaultLastAccessStatusContractPropertiesResponse lastStatus,
+        @CustomType.Parameter("secretIdentifier") @Nullable String secretIdentifier) {
         this.identityClientId = identityClientId;
         this.lastStatus = lastStatus;
         this.secretIdentifier = secretIdentifier;

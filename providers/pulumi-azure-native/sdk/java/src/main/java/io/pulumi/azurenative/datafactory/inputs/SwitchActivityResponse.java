@@ -44,7 +44,7 @@ import io.pulumi.azurenative.datafactory.inputs.ValidationActivityResponse;
 import io.pulumi.azurenative.datafactory.inputs.WaitActivityResponse;
 import io.pulumi.azurenative.datafactory.inputs.WebActivityResponse;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -65,7 +65,7 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
      * List of cases that correspond to expected values of the 'on' property. This is an optional property and if not provided, the activity will execute activities provided in defaultActivities.
      * 
      */
-    @InputImport(name="cases")
+    @Import(name="cases")
       private final @Nullable List<SwitchCaseResponse> cases;
 
     public List<SwitchCaseResponse> getCases() {
@@ -76,7 +76,7 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
      * List of activities to execute if no case condition is satisfied. This is an optional property and if not provided, the activity will exit without any action.
      * 
      */
-    @InputImport(name="defaultActivities")
+    @Import(name="defaultActivities")
       private final @Nullable List<Object> defaultActivities;
 
     public List<Object> getDefaultActivities() {
@@ -87,7 +87,7 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
@@ -98,7 +98,7 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -109,7 +109,7 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -120,7 +120,7 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
      * An expression that would evaluate to a string or integer. This is used to determine the block of activities in cases that will be executed.
      * 
      */
-    @InputImport(name="on", required=true)
+    @Import(name="on", required=true)
       private final ExpressionResponse on;
 
     public ExpressionResponse getOn() {
@@ -132,7 +132,7 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
      * Expected value is 'Switch'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -143,7 +143,7 @@ public final class SwitchActivityResponse extends io.pulumi.resources.InvokeArgs
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {

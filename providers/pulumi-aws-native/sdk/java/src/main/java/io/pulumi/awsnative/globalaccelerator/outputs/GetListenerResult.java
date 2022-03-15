@@ -6,14 +6,14 @@ package io.pulumi.awsnative.globalaccelerator.outputs;
 import io.pulumi.awsnative.globalaccelerator.enums.ListenerClientAffinity;
 import io.pulumi.awsnative.globalaccelerator.enums.ListenerProtocol;
 import io.pulumi.awsnative.globalaccelerator.outputs.ListenerPortRange;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetListenerResult {
     /**
      * Client affinity lets you direct all requests from a user to the same endpoint.
@@ -32,12 +32,12 @@ public final class GetListenerResult {
      */
     private final @Nullable ListenerProtocol protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetListenerResult(
-        @OutputCustomType.Parameter("clientAffinity") @Nullable ListenerClientAffinity clientAffinity,
-        @OutputCustomType.Parameter("listenerArn") @Nullable String listenerArn,
-        @OutputCustomType.Parameter("portRanges") @Nullable List<ListenerPortRange> portRanges,
-        @OutputCustomType.Parameter("protocol") @Nullable ListenerProtocol protocol) {
+        @CustomType.Parameter("clientAffinity") @Nullable ListenerClientAffinity clientAffinity,
+        @CustomType.Parameter("listenerArn") @Nullable String listenerArn,
+        @CustomType.Parameter("portRanges") @Nullable List<ListenerPortRange> portRanges,
+        @CustomType.Parameter("protocol") @Nullable ListenerProtocol protocol) {
         this.clientAffinity = clientAffinity;
         this.listenerArn = listenerArn;
         this.portRanges = portRanges;

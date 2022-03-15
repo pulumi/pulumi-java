@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.GrpcServiceConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SdsConfigResponse {
     /**
      * The configuration to access the SDS server over GRPC.
@@ -15,8 +15,8 @@ public final class SdsConfigResponse {
      */
     private final GrpcServiceConfigResponse grpcServiceConfig;
 
-    @OutputCustomType.Constructor
-    private SdsConfigResponse(@OutputCustomType.Parameter("grpcServiceConfig") GrpcServiceConfigResponse grpcServiceConfig) {
+    @CustomType.Constructor
+    private SdsConfigResponse(@CustomType.Parameter("grpcServiceConfig") GrpcServiceConfigResponse grpcServiceConfig) {
         this.grpcServiceConfig = grpcServiceConfig;
     }
 

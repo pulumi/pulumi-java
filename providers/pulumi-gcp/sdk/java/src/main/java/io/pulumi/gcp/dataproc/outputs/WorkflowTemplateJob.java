@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobHadoopJob;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobHiveJob;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobPigJob;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplateJob {
     /**
      * Optional. Job is a Hadoop job.
@@ -83,20 +83,20 @@ public final class WorkflowTemplateJob {
      */
     private final String stepId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplateJob(
-        @OutputCustomType.Parameter("hadoopJob") @Nullable WorkflowTemplateJobHadoopJob hadoopJob,
-        @OutputCustomType.Parameter("hiveJob") @Nullable WorkflowTemplateJobHiveJob hiveJob,
-        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
-        @OutputCustomType.Parameter("pigJob") @Nullable WorkflowTemplateJobPigJob pigJob,
-        @OutputCustomType.Parameter("prerequisiteStepIds") @Nullable List<String> prerequisiteStepIds,
-        @OutputCustomType.Parameter("prestoJob") @Nullable WorkflowTemplateJobPrestoJob prestoJob,
-        @OutputCustomType.Parameter("pysparkJob") @Nullable WorkflowTemplateJobPysparkJob pysparkJob,
-        @OutputCustomType.Parameter("scheduling") @Nullable WorkflowTemplateJobScheduling scheduling,
-        @OutputCustomType.Parameter("sparkJob") @Nullable WorkflowTemplateJobSparkJob sparkJob,
-        @OutputCustomType.Parameter("sparkRJob") @Nullable WorkflowTemplateJobSparkRJob sparkRJob,
-        @OutputCustomType.Parameter("sparkSqlJob") @Nullable WorkflowTemplateJobSparkSqlJob sparkSqlJob,
-        @OutputCustomType.Parameter("stepId") String stepId) {
+        @CustomType.Parameter("hadoopJob") @Nullable WorkflowTemplateJobHadoopJob hadoopJob,
+        @CustomType.Parameter("hiveJob") @Nullable WorkflowTemplateJobHiveJob hiveJob,
+        @CustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @CustomType.Parameter("pigJob") @Nullable WorkflowTemplateJobPigJob pigJob,
+        @CustomType.Parameter("prerequisiteStepIds") @Nullable List<String> prerequisiteStepIds,
+        @CustomType.Parameter("prestoJob") @Nullable WorkflowTemplateJobPrestoJob prestoJob,
+        @CustomType.Parameter("pysparkJob") @Nullable WorkflowTemplateJobPysparkJob pysparkJob,
+        @CustomType.Parameter("scheduling") @Nullable WorkflowTemplateJobScheduling scheduling,
+        @CustomType.Parameter("sparkJob") @Nullable WorkflowTemplateJobSparkJob sparkJob,
+        @CustomType.Parameter("sparkRJob") @Nullable WorkflowTemplateJobSparkRJob sparkRJob,
+        @CustomType.Parameter("sparkSqlJob") @Nullable WorkflowTemplateJobSparkSqlJob sparkSqlJob,
+        @CustomType.Parameter("stepId") String stepId) {
         this.hadoopJob = hadoopJob;
         this.hiveJob = hiveJob;
         this.labels = labels;

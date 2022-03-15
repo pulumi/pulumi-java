@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybriddata.outputs;
 
 import io.pulumi.azurenative.hybriddata.outputs.CustomerSecretResponse;
 import io.pulumi.azurenative.hybriddata.outputs.ScheduleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetJobDefinitionResult {
     /**
      * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
@@ -76,20 +76,20 @@ public final class GetJobDefinitionResult {
      */
     private final @Nullable String userConfirmation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobDefinitionResult(
-        @OutputCustomType.Parameter("customerSecrets") @Nullable List<CustomerSecretResponse> customerSecrets,
-        @OutputCustomType.Parameter("dataServiceInput") @Nullable Object dataServiceInput,
-        @OutputCustomType.Parameter("dataSinkId") String dataSinkId,
-        @OutputCustomType.Parameter("dataSourceId") String dataSourceId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("runLocation") @Nullable String runLocation,
-        @OutputCustomType.Parameter("schedules") @Nullable List<ScheduleResponse> schedules,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userConfirmation") @Nullable String userConfirmation) {
+        @CustomType.Parameter("customerSecrets") @Nullable List<CustomerSecretResponse> customerSecrets,
+        @CustomType.Parameter("dataServiceInput") @Nullable Object dataServiceInput,
+        @CustomType.Parameter("dataSinkId") String dataSinkId,
+        @CustomType.Parameter("dataSourceId") String dataSourceId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("runLocation") @Nullable String runLocation,
+        @CustomType.Parameter("schedules") @Nullable List<ScheduleResponse> schedules,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userConfirmation") @Nullable String userConfirmation) {
         this.customerSecrets = customerSecrets;
         this.dataServiceInput = dataServiceInput;
         this.dataSinkId = dataSinkId;

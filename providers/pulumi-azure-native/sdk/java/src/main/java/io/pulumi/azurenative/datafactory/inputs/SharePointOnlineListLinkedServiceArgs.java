@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -41,7 +41,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -52,7 +52,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -63,7 +63,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -74,7 +74,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -85,7 +85,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * The application (client) ID of your application registered in Azure Active Directory. Make sure to grant SharePoint site permission to this application. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalId", required=true)
+    @Import(name="servicePrincipalId", required=true)
       private final Output<Object> servicePrincipalId;
 
     public Output<Object> getServicePrincipalId() {
@@ -96,7 +96,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * The client secret of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalKey", required=true)
+    @Import(name="servicePrincipalKey", required=true)
       private final Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
@@ -107,7 +107,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * The URL of the SharePoint Online site. For example, https://contoso.sharepoint.com/sites/siteName. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="siteUrl", required=true)
+    @Import(name="siteUrl", required=true)
       private final Output<Object> siteUrl;
 
     public Output<Object> getSiteUrl() {
@@ -118,7 +118,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * The tenant ID under which your application resides. You can find it from Azure portal Active Directory overview page. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final Output<Object> tenantId;
 
     public Output<Object> getTenantId() {
@@ -130,7 +130,7 @@ public final class SharePointOnlineListLinkedServiceArgs extends io.pulumi.resou
      * Expected value is 'SharePointOnlineList'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

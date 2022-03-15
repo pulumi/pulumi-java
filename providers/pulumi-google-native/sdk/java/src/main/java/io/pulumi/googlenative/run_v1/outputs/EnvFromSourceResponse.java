@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1.outputs.ConfigMapEnvSourceResponse;
 import io.pulumi.googlenative.run_v1.outputs.SecretEnvSourceResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EnvFromSourceResponse {
     /**
      * (Optional) The ConfigMap to select from
@@ -27,11 +27,11 @@ public final class EnvFromSourceResponse {
      */
     private final SecretEnvSourceResponse secretRef;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvFromSourceResponse(
-        @OutputCustomType.Parameter("configMapRef") ConfigMapEnvSourceResponse configMapRef,
-        @OutputCustomType.Parameter("prefix") String prefix,
-        @OutputCustomType.Parameter("secretRef") SecretEnvSourceResponse secretRef) {
+        @CustomType.Parameter("configMapRef") ConfigMapEnvSourceResponse configMapRef,
+        @CustomType.Parameter("prefix") String prefix,
+        @CustomType.Parameter("secretRef") SecretEnvSourceResponse secretRef) {
         this.configMapRef = configMapRef;
         this.prefix = prefix;
         this.secretRef = secretRef;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class RestoredLogsResponse extends io.pulumi.resources.InvokeArgs {
      * The timestamp to end the restore by (UTC).
      * 
      */
-    @InputImport(name="endRestoreTime")
+    @Import(name="endRestoreTime")
       private final @Nullable String endRestoreTime;
 
     public Optional<String> getEndRestoreTime() {
@@ -33,7 +33,7 @@ public final class RestoredLogsResponse extends io.pulumi.resources.InvokeArgs {
      * The table to restore data from.
      * 
      */
-    @InputImport(name="sourceTable", required=true)
+    @Import(name="sourceTable", required=true)
       private final String sourceTable;
 
     public String getSourceTable() {
@@ -44,7 +44,7 @@ public final class RestoredLogsResponse extends io.pulumi.resources.InvokeArgs {
      * The timestamp to start the restore from (UTC).
      * 
      */
-    @InputImport(name="startRestoreTime")
+    @Import(name="startRestoreTime")
       private final @Nullable String startRestoreTime;
 
     public Optional<String> getStartRestoreTime() {

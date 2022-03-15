@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class JobEndpointResponse extends io.pulumi.resources.InvokeArgs {
      * Url for endpoint.
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable String endpoint;
 
     public Optional<String> getEndpoint() {
@@ -35,7 +35,7 @@ public final class JobEndpointResponse extends io.pulumi.resources.InvokeArgs {
      * Endpoint type.
      * 
      */
-    @InputImport(name="jobEndpointType")
+    @Import(name="jobEndpointType")
       private final @Nullable String jobEndpointType;
 
     public Optional<String> getJobEndpointType() {
@@ -46,7 +46,7 @@ public final class JobEndpointResponse extends io.pulumi.resources.InvokeArgs {
      * Port for endpoint.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
@@ -57,7 +57,7 @@ public final class JobEndpointResponse extends io.pulumi.resources.InvokeArgs {
      * Additional properties to set on the endpoint.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {

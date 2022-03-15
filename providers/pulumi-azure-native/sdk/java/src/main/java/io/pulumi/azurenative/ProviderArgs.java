@@ -4,7 +4,7 @@
 package io.pulumi.azurenative;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Any additional Tenant IDs which should be used for authentication.
      * 
      */
-    @InputImport(name="auxiliaryTenantIds", json=true)
+    @Import(name="auxiliaryTenantIds", json=true)
       private final @Nullable Output<List<String>> auxiliaryTenantIds;
 
     public Output<List<String>> getAuxiliaryTenantIds() {
@@ -31,7 +31,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The password associated with the Client Certificate. For use when authenticating as a Service Principal using a Client Certificate
      * 
      */
-    @InputImport(name="clientCertificatePassword")
+    @Import(name="clientCertificatePassword")
       private final @Nullable Output<String> clientCertificatePassword;
 
     public Output<String> getClientCertificatePassword() {
@@ -42,7 +42,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The path to the Client Certificate associated with the Service Principal for use when authenticating as a Service Principal using a Client Certificate.
      * 
      */
-    @InputImport(name="clientCertificatePath")
+    @Import(name="clientCertificatePath")
       private final @Nullable Output<String> clientCertificatePath;
 
     public Output<String> getClientCertificatePath() {
@@ -53,7 +53,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The Client ID which should be used.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -64,7 +64,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The Client Secret which should be used. For use When authenticating as a Service Principal using a Client Secret.
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
@@ -75,7 +75,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * This will disable the Pulumi Partner ID which is used if a custom `partnerId` isn't specified.
      * 
      */
-    @InputImport(name="disablePulumiPartnerId", json=true)
+    @Import(name="disablePulumiPartnerId", json=true)
       private final @Nullable Output<Boolean> disablePulumiPartnerId;
 
     public Output<Boolean> getDisablePulumiPartnerId() {
@@ -86,7 +86,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The Cloud Environment which should be used. Possible values are public, usgovernment, german, and china. Defaults to public.
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable Output<String> environment;
 
     public Output<String> getEnvironment() {
@@ -97,7 +97,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The path to a custom endpoint for Managed Service Identity - in most circumstances this should be detected automatically.
      * 
      */
-    @InputImport(name="msiEndpoint")
+    @Import(name="msiEndpoint")
       private final @Nullable Output<String> msiEndpoint;
 
     public Output<String> getMsiEndpoint() {
@@ -108,7 +108,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * A GUID/UUID that is registered with Microsoft to facilitate partner resource usage attribution.
      * 
      */
-    @InputImport(name="partnerId")
+    @Import(name="partnerId")
       private final @Nullable Output<String> partnerId;
 
     public Output<String> getPartnerId() {
@@ -119,7 +119,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The Subscription ID which should be used.
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {
@@ -130,7 +130,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The Tenant ID which should be used.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
@@ -141,7 +141,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Allowed Managed Service Identity be used for Authentication.
      * 
      */
-    @InputImport(name="useMsi", json=true)
+    @Import(name="useMsi", json=true)
       private final @Nullable Output<Boolean> useMsi;
 
     public Output<Boolean> getUseMsi() {

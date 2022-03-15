@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ConnectorScaleInPolicyArgs extends io.pulumi.resources.Resour
      * Specifies the CPU utilization percentage threshold at which connector scale in should trigger.
      * 
      */
-    @InputImport(name="cpuUtilizationPercentage", required=true)
+    @Import(name="cpuUtilizationPercentage", required=true)
       private final Output<Integer> cpuUtilizationPercentage;
 
     public Output<Integer> getCpuUtilizationPercentage() {

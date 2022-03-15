@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.DashboardSourceTemplate;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DashboardSourceEntity {
     private final @Nullable DashboardSourceTemplate sourceTemplate;
 
-    @OutputCustomType.Constructor
-    private DashboardSourceEntity(@OutputCustomType.Parameter("sourceTemplate") @Nullable DashboardSourceTemplate sourceTemplate) {
+    @CustomType.Constructor
+    private DashboardSourceEntity(@CustomType.Parameter("sourceTemplate") @Nullable DashboardSourceTemplate sourceTemplate) {
         this.sourceTemplate = sourceTemplate;
     }
 

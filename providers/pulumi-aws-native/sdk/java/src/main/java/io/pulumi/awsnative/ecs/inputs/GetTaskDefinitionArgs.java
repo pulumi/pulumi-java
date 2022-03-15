@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetTaskDefinitionArgs extends io.pulumi.resources.InvokeArgs 
      * The Amazon Resource Name (ARN) of the Amazon ECS task definition
      * 
      */
-    @InputImport(name="taskDefinitionArn", required=true)
+    @Import(name="taskDefinitionArn", required=true)
       private final String taskDefinitionArn;
 
     public String getTaskDefinitionArn() {

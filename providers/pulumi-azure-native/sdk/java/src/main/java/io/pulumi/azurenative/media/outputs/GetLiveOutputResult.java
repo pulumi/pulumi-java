@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.HlsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLiveOutputResult {
     /**
      * ISO 8601 time between 1 minute to 25 hours to indicate the maximum content length that can be archived in the asset for this live output. This also sets the maximum content length for the rewind window. For example, use PT1H30M to indicate 1 hour and 30 minutes of archive window.
@@ -79,21 +79,21 @@ public final class GetLiveOutputResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLiveOutputResult(
-        @OutputCustomType.Parameter("archiveWindowLength") String archiveWindowLength,
-        @OutputCustomType.Parameter("assetName") String assetName,
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("hls") @Nullable HlsResponse hls,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModified") String lastModified,
-        @OutputCustomType.Parameter("manifestName") @Nullable String manifestName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputSnapTime") @Nullable Double outputSnapTime,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("archiveWindowLength") String archiveWindowLength,
+        @CustomType.Parameter("assetName") String assetName,
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("hls") @Nullable HlsResponse hls,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModified") String lastModified,
+        @CustomType.Parameter("manifestName") @Nullable String manifestName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputSnapTime") @Nullable Double outputSnapTime,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("type") String type) {
         this.archiveWindowLength = archiveWindowLength;
         this.assetName = assetName;
         this.created = created;

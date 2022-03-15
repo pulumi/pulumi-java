@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class BucketReplicationConfigurationRuleDestinationAccessControlTra
      * The override value for the owner on replicated objects. Currently only `Destination` is supported.
      * 
      */
-    @InputImport(name="owner", required=true)
+    @Import(name="owner", required=true)
       private final Output<String> owner;
 
     public Output<String> getOwner() {

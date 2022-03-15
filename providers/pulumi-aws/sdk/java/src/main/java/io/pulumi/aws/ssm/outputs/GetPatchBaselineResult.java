@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ssm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPatchBaselineResult {
     private final @Nullable Boolean defaultBaseline;
     /**
@@ -32,15 +32,15 @@ public final class GetPatchBaselineResult {
     private final @Nullable String operatingSystem;
     private final String owner;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPatchBaselineResult(
-        @OutputCustomType.Parameter("defaultBaseline") @Nullable Boolean defaultBaseline,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namePrefix") @Nullable String namePrefix,
-        @OutputCustomType.Parameter("operatingSystem") @Nullable String operatingSystem,
-        @OutputCustomType.Parameter("owner") String owner) {
+        @CustomType.Parameter("defaultBaseline") @Nullable Boolean defaultBaseline,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namePrefix") @Nullable String namePrefix,
+        @CustomType.Parameter("operatingSystem") @Nullable String operatingSystem,
+        @CustomType.Parameter("owner") String owner) {
         this.defaultBaseline = defaultBaseline;
         this.description = description;
         this.id = id;

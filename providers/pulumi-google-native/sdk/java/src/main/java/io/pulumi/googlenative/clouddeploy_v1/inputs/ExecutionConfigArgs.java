@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.clouddeploy_v1.enums.ExecutionConfigUsagesItem;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.DefaultPoolArgs;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.PrivatePoolArgs;
@@ -26,7 +26,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. Cloud Storage location where execution outputs should be stored. This can either be a bucket ("gs://my-bucket") or a path within a bucket ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the same region will be used.
      * 
      */
-    @InputImport(name="artifactStorage")
+    @Import(name="artifactStorage")
       private final @Nullable Output<String> artifactStorage;
 
     public Output<String> getArtifactStorage() {
@@ -37,7 +37,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. Use default Cloud Build pool.
      * 
      */
-    @InputImport(name="defaultPool")
+    @Import(name="defaultPool")
       private final @Nullable Output<DefaultPoolArgs> defaultPool;
 
     public Output<DefaultPoolArgs> getDefaultPool() {
@@ -48,7 +48,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. Use private Cloud Build pool.
      * 
      */
-    @InputImport(name="privatePool")
+    @Import(name="privatePool")
       private final @Nullable Output<PrivatePoolArgs> privatePool;
 
     public Output<PrivatePoolArgs> getPrivatePool() {
@@ -59,7 +59,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. Google service account to use for execution. If unspecified, the project execution service account (-compute@developer.gserviceaccount.com) will be used.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
@@ -70,7 +70,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Usages when this configuration should be applied.
      * 
      */
-    @InputImport(name="usages", required=true)
+    @Import(name="usages", required=true)
       private final Output<List<ExecutionConfigUsagesItem>> usages;
 
     public Output<List<ExecutionConfigUsagesItem>> getUsages() {
@@ -81,7 +81,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. The resource name of the `WorkerPool`, with the format `projects/{project}/locations/{location}/workerPools/{worker_pool}`. If this optional field is unspecified, the default Cloud Build pool will be used.
      * 
      */
-    @InputImport(name="workerPool")
+    @Import(name="workerPool")
       private final @Nullable Output<String> workerPool;
 
     public Output<String> getWorkerPool() {

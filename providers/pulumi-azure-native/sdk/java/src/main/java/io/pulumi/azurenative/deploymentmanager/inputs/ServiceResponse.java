@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.ServiceUnitResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the service.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -35,7 +35,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * The detailed information about the units that make up the service.
      * 
      */
-    @InputImport(name="serviceUnits")
+    @Import(name="serviceUnits")
       private final @Nullable List<ServiceUnitResponse> serviceUnits;
 
     public List<ServiceUnitResponse> getServiceUnits() {
@@ -46,7 +46,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * The Azure location to which the resources in the service belong to or should be deployed to.
      * 
      */
-    @InputImport(name="targetLocation", required=true)
+    @Import(name="targetLocation", required=true)
       private final String targetLocation;
 
     public String getTargetLocation() {
@@ -57,7 +57,7 @@ public final class ServiceResponse extends io.pulumi.resources.InvokeArgs {
      * The subscription to which the resources in the service belong to or should be deployed to.
      * 
      */
-    @InputImport(name="targetSubscriptionId", required=true)
+    @Import(name="targetSubscriptionId", required=true)
       private final String targetSubscriptionId;
 
     public String getTargetSubscriptionId() {

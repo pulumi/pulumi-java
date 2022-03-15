@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -17,84 +17,84 @@ public final class ListenerRuleAuthenticateOidcConfigArgs extends io.pulumi.reso
 
     public static final ListenerRuleAuthenticateOidcConfigArgs Empty = new ListenerRuleAuthenticateOidcConfigArgs();
 
-    @InputImport(name="authenticationRequestExtraParams")
+    @Import(name="authenticationRequestExtraParams")
       private final @Nullable Output<Object> authenticationRequestExtraParams;
 
     public Output<Object> getAuthenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Output.empty() : this.authenticationRequestExtraParams;
     }
 
-    @InputImport(name="authorizationEndpoint", required=true)
+    @Import(name="authorizationEndpoint", required=true)
       private final Output<String> authorizationEndpoint;
 
     public Output<String> getAuthorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
     public Output<String> getClientId() {
         return this.clientId;
     }
 
-    @InputImport(name="clientSecret", required=true)
+    @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
         return this.clientSecret;
     }
 
-    @InputImport(name="issuer", required=true)
+    @Import(name="issuer", required=true)
       private final Output<String> issuer;
 
     public Output<String> getIssuer() {
         return this.issuer;
     }
 
-    @InputImport(name="onUnauthenticatedRequest")
+    @Import(name="onUnauthenticatedRequest")
       private final @Nullable Output<String> onUnauthenticatedRequest;
 
     public Output<String> getOnUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest == null ? Output.empty() : this.onUnauthenticatedRequest;
     }
 
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
         return this.scope == null ? Output.empty() : this.scope;
     }
 
-    @InputImport(name="sessionCookieName")
+    @Import(name="sessionCookieName")
       private final @Nullable Output<String> sessionCookieName;
 
     public Output<String> getSessionCookieName() {
         return this.sessionCookieName == null ? Output.empty() : this.sessionCookieName;
     }
 
-    @InputImport(name="sessionTimeout")
+    @Import(name="sessionTimeout")
       private final @Nullable Output<Integer> sessionTimeout;
 
     public Output<Integer> getSessionTimeout() {
         return this.sessionTimeout == null ? Output.empty() : this.sessionTimeout;
     }
 
-    @InputImport(name="tokenEndpoint", required=true)
+    @Import(name="tokenEndpoint", required=true)
       private final Output<String> tokenEndpoint;
 
     public Output<String> getTokenEndpoint() {
         return this.tokenEndpoint;
     }
 
-    @InputImport(name="useExistingClientSecret")
+    @Import(name="useExistingClientSecret")
       private final @Nullable Output<Boolean> useExistingClientSecret;
 
     public Output<Boolean> getUseExistingClientSecret() {
         return this.useExistingClientSecret == null ? Output.empty() : this.useExistingClientSecret;
     }
 
-    @InputImport(name="userInfoEndpoint", required=true)
+    @Import(name="userInfoEndpoint", required=true)
       private final Output<String> userInfoEndpoint;
 
     public Output<String> getUserInfoEndpoint() {

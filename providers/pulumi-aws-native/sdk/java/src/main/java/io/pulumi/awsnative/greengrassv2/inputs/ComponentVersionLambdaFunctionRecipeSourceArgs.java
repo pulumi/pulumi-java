@@ -6,7 +6,7 @@ package io.pulumi.awsnative.greengrassv2.inputs;
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionComponentPlatformArgs;
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaExecutionParametersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -18,42 +18,42 @@ public final class ComponentVersionLambdaFunctionRecipeSourceArgs extends io.pul
 
     public static final ComponentVersionLambdaFunctionRecipeSourceArgs Empty = new ComponentVersionLambdaFunctionRecipeSourceArgs();
 
-    @InputImport(name="componentDependencies")
+    @Import(name="componentDependencies")
       private final @Nullable Output<Object> componentDependencies;
 
     public Output<Object> getComponentDependencies() {
         return this.componentDependencies == null ? Output.empty() : this.componentDependencies;
     }
 
-    @InputImport(name="componentLambdaParameters")
+    @Import(name="componentLambdaParameters")
       private final @Nullable Output<ComponentVersionLambdaExecutionParametersArgs> componentLambdaParameters;
 
     public Output<ComponentVersionLambdaExecutionParametersArgs> getComponentLambdaParameters() {
         return this.componentLambdaParameters == null ? Output.empty() : this.componentLambdaParameters;
     }
 
-    @InputImport(name="componentName")
+    @Import(name="componentName")
       private final @Nullable Output<String> componentName;
 
     public Output<String> getComponentName() {
         return this.componentName == null ? Output.empty() : this.componentName;
     }
 
-    @InputImport(name="componentPlatforms")
+    @Import(name="componentPlatforms")
       private final @Nullable Output<List<ComponentVersionComponentPlatformArgs>> componentPlatforms;
 
     public Output<List<ComponentVersionComponentPlatformArgs>> getComponentPlatforms() {
         return this.componentPlatforms == null ? Output.empty() : this.componentPlatforms;
     }
 
-    @InputImport(name="componentVersion")
+    @Import(name="componentVersion")
       private final @Nullable Output<String> componentVersion;
 
     public Output<String> getComponentVersion() {
         return this.componentVersion == null ? Output.empty() : this.componentVersion;
     }
 
-    @InputImport(name="lambdaArn")
+    @Import(name="lambdaArn")
       private final @Nullable Output<String> lambdaArn;
 
     public Output<String> getLambdaArn() {

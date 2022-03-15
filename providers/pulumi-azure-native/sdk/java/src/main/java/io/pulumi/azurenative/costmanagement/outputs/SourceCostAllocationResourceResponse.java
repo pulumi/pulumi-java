@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SourceCostAllocationResourceResponse {
     /**
      * If resource type is dimension, this must be either ResourceGroupName or SubscriptionId. If resource type is tag, this must be a valid Azure tag
@@ -26,11 +26,11 @@ public final class SourceCostAllocationResourceResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceCostAllocationResourceResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceType") String resourceType,
-        @OutputCustomType.Parameter("values") List<String> values) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceType") String resourceType,
+        @CustomType.Parameter("values") List<String> values) {
         this.name = name;
         this.resourceType = resourceType;
         this.values = values;

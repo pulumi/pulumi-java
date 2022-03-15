@@ -13,7 +13,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.outputs.PlacementProfileResp
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ResourceStatusResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.StorageProfileResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualMachineResult {
     /**
      * Gets the name of the corresponding resource in Kubernetes.
@@ -180,39 +180,39 @@ public final class GetVirtualMachineResult {
      */
     private final String vmId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualMachineResult(
-        @OutputCustomType.Parameter("customResourceName") String customResourceName,
-        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
-        @OutputCustomType.Parameter("firmwareType") @Nullable String firmwareType,
-        @OutputCustomType.Parameter("folderPath") String folderPath,
-        @OutputCustomType.Parameter("guestAgentProfile") @Nullable GuestAgentProfileResponse guestAgentProfile,
-        @OutputCustomType.Parameter("hardwareProfile") @Nullable HardwareProfileResponse hardwareProfile,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
-        @OutputCustomType.Parameter("instanceUuid") String instanceUuid,
-        @OutputCustomType.Parameter("inventoryItemId") @Nullable String inventoryItemId,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("moName") String moName,
-        @OutputCustomType.Parameter("moRefId") @Nullable String moRefId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
-        @OutputCustomType.Parameter("osProfile") @Nullable OsProfileResponse osProfile,
-        @OutputCustomType.Parameter("placementProfile") @Nullable PlacementProfileResponse placementProfile,
-        @OutputCustomType.Parameter("powerState") String powerState,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourcePoolId") @Nullable String resourcePoolId,
-        @OutputCustomType.Parameter("smbiosUuid") @Nullable String smbiosUuid,
-        @OutputCustomType.Parameter("statuses") List<ResourceStatusResponse> statuses,
-        @OutputCustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("templateId") @Nullable String templateId,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uuid") String uuid,
-        @OutputCustomType.Parameter("vCenterId") @Nullable String vCenterId,
-        @OutputCustomType.Parameter("vmId") String vmId) {
+        @CustomType.Parameter("customResourceName") String customResourceName,
+        @CustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @CustomType.Parameter("firmwareType") @Nullable String firmwareType,
+        @CustomType.Parameter("folderPath") String folderPath,
+        @CustomType.Parameter("guestAgentProfile") @Nullable GuestAgentProfileResponse guestAgentProfile,
+        @CustomType.Parameter("hardwareProfile") @Nullable HardwareProfileResponse hardwareProfile,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @CustomType.Parameter("instanceUuid") String instanceUuid,
+        @CustomType.Parameter("inventoryItemId") @Nullable String inventoryItemId,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("moName") String moName,
+        @CustomType.Parameter("moRefId") @Nullable String moRefId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
+        @CustomType.Parameter("osProfile") @Nullable OsProfileResponse osProfile,
+        @CustomType.Parameter("placementProfile") @Nullable PlacementProfileResponse placementProfile,
+        @CustomType.Parameter("powerState") String powerState,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourcePoolId") @Nullable String resourcePoolId,
+        @CustomType.Parameter("smbiosUuid") @Nullable String smbiosUuid,
+        @CustomType.Parameter("statuses") List<ResourceStatusResponse> statuses,
+        @CustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("templateId") @Nullable String templateId,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uuid") String uuid,
+        @CustomType.Parameter("vCenterId") @Nullable String vCenterId,
+        @CustomType.Parameter("vmId") String vmId) {
         this.customResourceName = customResourceName;
         this.extendedLocation = extendedLocation;
         this.firmwareType = firmwareType;

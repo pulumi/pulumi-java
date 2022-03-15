@@ -7,7 +7,7 @@ import io.pulumi.awsnative.globalaccelerator.enums.EndpointGroupHealthCheckProto
 import io.pulumi.awsnative.globalaccelerator.inputs.EndpointGroupEndpointConfigurationArgs;
 import io.pulumi.awsnative.globalaccelerator.inputs.EndpointGroupPortOverrideArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The list of endpoint objects.
      * 
      */
-    @InputImport(name="endpointConfigurations")
+    @Import(name="endpointConfigurations")
       private final @Nullable Output<List<EndpointGroupEndpointConfigurationArgs>> endpointConfigurations;
 
     public Output<List<EndpointGroupEndpointConfigurationArgs>> getEndpointConfigurations() {
@@ -35,7 +35,7 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the AWS Region where the endpoint group is located
      * 
      */
-    @InputImport(name="endpointGroupRegion", required=true)
+    @Import(name="endpointGroupRegion", required=true)
       private final Output<String> endpointGroupRegion;
 
     public Output<String> getEndpointGroupRegion() {
@@ -46,14 +46,14 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The time in seconds between each health check for an endpoint. Must be a value of 10 or 30
      * 
      */
-    @InputImport(name="healthCheckIntervalSeconds")
+    @Import(name="healthCheckIntervalSeconds")
       private final @Nullable Output<Integer> healthCheckIntervalSeconds;
 
     public Output<Integer> getHealthCheckIntervalSeconds() {
         return this.healthCheckIntervalSeconds == null ? Output.empty() : this.healthCheckIntervalSeconds;
     }
 
-    @InputImport(name="healthCheckPath")
+    @Import(name="healthCheckPath")
       private final @Nullable Output<String> healthCheckPath;
 
     public Output<String> getHealthCheckPath() {
@@ -64,7 +64,7 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The port that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
      * 
      */
-    @InputImport(name="healthCheckPort")
+    @Import(name="healthCheckPort")
       private final @Nullable Output<Integer> healthCheckPort;
 
     public Output<Integer> getHealthCheckPort() {
@@ -75,7 +75,7 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The protocol that AWS Global Accelerator uses to check the health of endpoints in this endpoint group.
      * 
      */
-    @InputImport(name="healthCheckProtocol")
+    @Import(name="healthCheckProtocol")
       private final @Nullable Output<EndpointGroupHealthCheckProtocol> healthCheckProtocol;
 
     public Output<EndpointGroupHealthCheckProtocol> getHealthCheckProtocol() {
@@ -86,14 +86,14 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the listener
      * 
      */
-    @InputImport(name="listenerArn", required=true)
+    @Import(name="listenerArn", required=true)
       private final Output<String> listenerArn;
 
     public Output<String> getListenerArn() {
         return this.listenerArn;
     }
 
-    @InputImport(name="portOverrides")
+    @Import(name="portOverrides")
       private final @Nullable Output<List<EndpointGroupPortOverrideArgs>> portOverrides;
 
     public Output<List<EndpointGroupPortOverrideArgs>> getPortOverrides() {
@@ -104,7 +104,7 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The number of consecutive health checks required to set the state of the endpoint to unhealthy.
      * 
      */
-    @InputImport(name="thresholdCount")
+    @Import(name="thresholdCount")
       private final @Nullable Output<Integer> thresholdCount;
 
     public Output<Integer> getThresholdCount() {
@@ -115,7 +115,7 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The percentage of traffic to sent to an AWS Region
      * 
      */
-    @InputImport(name="trafficDialPercentage")
+    @Import(name="trafficDialPercentage")
       private final @Nullable Output<Double> trafficDialPercentage;
 
     public Output<Double> getTrafficDialPercentage() {

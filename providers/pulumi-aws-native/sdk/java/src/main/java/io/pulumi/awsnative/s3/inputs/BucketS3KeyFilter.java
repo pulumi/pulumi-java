@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketFilterRule;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class BucketS3KeyFilter extends io.pulumi.resources.InvokeArgs {
 
     public static final BucketS3KeyFilter Empty = new BucketS3KeyFilter();
 
-    @InputImport(name="rules", required=true)
+    @Import(name="rules", required=true)
       private final List<BucketFilterRule> rules;
 
     public List<BucketFilterRule> getRules() {

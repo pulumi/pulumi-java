@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentInstanceFilterArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentOneTimeScheduleArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigArgs;
@@ -23,7 +23,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Description of the patch deployment. Length of the description is limited to 1024 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
      * 
      */
-    @InputImport(name="duration")
+    @Import(name="duration")
       private final @Nullable Output<String> duration;
 
     public Output<String> getDuration() {
@@ -47,7 +47,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="instanceFilter", required=true)
+    @Import(name="instanceFilter", required=true)
       private final Output<PatchDeploymentInstanceFilterArgs> instanceFilter;
 
     public Output<PatchDeploymentInstanceFilterArgs> getInstanceFilter() {
@@ -59,7 +59,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="oneTimeSchedule")
+    @Import(name="oneTimeSchedule")
       private final @Nullable Output<PatchDeploymentOneTimeScheduleArgs> oneTimeSchedule;
 
     public Output<PatchDeploymentOneTimeScheduleArgs> getOneTimeSchedule() {
@@ -71,7 +71,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="patchConfig")
+    @Import(name="patchConfig")
       private final @Nullable Output<PatchDeploymentPatchConfigArgs> patchConfig;
 
     public Output<PatchDeploymentPatchConfigArgs> getPatchConfig() {
@@ -87,7 +87,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * * Must be unique within the project.
      * 
      */
-    @InputImport(name="patchDeploymentId", required=true)
+    @Import(name="patchDeploymentId", required=true)
       private final Output<String> patchDeploymentId;
 
     public Output<String> getPatchDeploymentId() {
@@ -99,7 +99,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -111,7 +111,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="recurringSchedule")
+    @Import(name="recurringSchedule")
       private final @Nullable Output<PatchDeploymentRecurringScheduleArgs> recurringSchedule;
 
     public Output<PatchDeploymentRecurringScheduleArgs> getRecurringSchedule() {
@@ -123,7 +123,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="rollout")
+    @Import(name="rollout")
       private final @Nullable Output<PatchDeploymentRolloutArgs> rollout;
 
     public Output<PatchDeploymentRolloutArgs> getRollout() {

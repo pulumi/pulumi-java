@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.TopicRulePutItemInput;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleDynamoDBv2Action {
     private final @Nullable TopicRulePutItemInput putItem;
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleDynamoDBv2Action(
-        @OutputCustomType.Parameter("putItem") @Nullable TopicRulePutItemInput putItem,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
+        @CustomType.Parameter("putItem") @Nullable TopicRulePutItemInput putItem,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.putItem = putItem;
         this.roleArn = roleArn;
     }

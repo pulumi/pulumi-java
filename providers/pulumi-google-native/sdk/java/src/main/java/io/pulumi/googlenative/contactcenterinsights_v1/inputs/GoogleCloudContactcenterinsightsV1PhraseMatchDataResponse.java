@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse ext
      * The human-readable name of the phrase matcher.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -31,7 +31,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse ext
      * The unique identifier (the resource name) of the phrase matcher.
      * 
      */
-    @InputImport(name="phraseMatcher", required=true)
+    @Import(name="phraseMatcher", required=true)
       private final String phraseMatcher;
 
     public String getPhraseMatcher() {

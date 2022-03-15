@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.EdgeUsageDataEventHubResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class EdgeUsageDataCollectionPolicyResponse extends io.pulumi.resou
      * Usage data collection frequency in ISO 8601 duration format e.g. PT10M , PT5H.
      * 
      */
-    @InputImport(name="dataCollectionFrequency")
+    @Import(name="dataCollectionFrequency")
       private final @Nullable String dataCollectionFrequency;
 
     public Optional<String> getDataCollectionFrequency() {
@@ -30,7 +30,7 @@ public final class EdgeUsageDataCollectionPolicyResponse extends io.pulumi.resou
      * Usage data reporting frequency in ISO 8601 duration format e.g. PT10M , PT5H.
      * 
      */
-    @InputImport(name="dataReportingFrequency")
+    @Import(name="dataReportingFrequency")
       private final @Nullable String dataReportingFrequency;
 
     public Optional<String> getDataReportingFrequency() {
@@ -41,7 +41,7 @@ public final class EdgeUsageDataCollectionPolicyResponse extends io.pulumi.resou
      * Details of Event Hub where the usage will be reported.
      * 
      */
-    @InputImport(name="eventHubDetails")
+    @Import(name="eventHubDetails")
       private final @Nullable EdgeUsageDataEventHubResponse eventHubDetails;
 
     public Optional<EdgeUsageDataEventHubResponse> getEventHubDetails() {
@@ -52,7 +52,7 @@ public final class EdgeUsageDataCollectionPolicyResponse extends io.pulumi.resou
      * Maximum time for which the functionality of the device will not be hampered for not reporting the usage data.
      * 
      */
-    @InputImport(name="maxAllowedUnreportedUsageDuration")
+    @Import(name="maxAllowedUnreportedUsageDuration")
       private final @Nullable String maxAllowedUnreportedUsageDuration;
 
     public Optional<String> getMaxAllowedUnreportedUsageDuration() {

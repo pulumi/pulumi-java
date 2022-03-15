@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceServiceAccount {
     /**
      * The service account e-mail address. If not given, the
@@ -28,10 +28,10 @@ public final class InstanceServiceAccount {
      */
     private final List<String> scopes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceServiceAccount(
-        @OutputCustomType.Parameter("email") @Nullable String email,
-        @OutputCustomType.Parameter("scopes") List<String> scopes) {
+        @CustomType.Parameter("email") @Nullable String email,
+        @CustomType.Parameter("scopes") List<String> scopes) {
         this.email = email;
         this.scopes = scopes;
     }

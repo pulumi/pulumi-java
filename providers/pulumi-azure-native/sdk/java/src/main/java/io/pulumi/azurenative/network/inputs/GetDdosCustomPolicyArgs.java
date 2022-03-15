@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDdosCustomPolicyArgs extends io.pulumi.resources.InvokeArg
      * The name of the DDoS custom policy.
      * 
      */
-    @InputImport(name="ddosCustomPolicyName", required=true)
+    @Import(name="ddosCustomPolicyName", required=true)
       private final String ddosCustomPolicyName;
 
     public String getDdosCustomPolicyName() {
@@ -27,7 +27,7 @@ public final class GetDdosCustomPolicyArgs extends io.pulumi.resources.InvokeArg
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

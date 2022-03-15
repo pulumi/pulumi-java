@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.ExplainQueryStepResponse;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExplainQueryStageResponse {
     /**
      * Number of parallel input segments completed.
@@ -158,37 +158,37 @@ public final class ExplainQueryStageResponse {
      */
     private final Double writeRatioMax;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExplainQueryStageResponse(
-        @OutputCustomType.Parameter("completedParallelInputs") String completedParallelInputs,
-        @OutputCustomType.Parameter("computeMsAvg") String computeMsAvg,
-        @OutputCustomType.Parameter("computeMsMax") String computeMsMax,
-        @OutputCustomType.Parameter("computeRatioAvg") Double computeRatioAvg,
-        @OutputCustomType.Parameter("computeRatioMax") Double computeRatioMax,
-        @OutputCustomType.Parameter("endMs") String endMs,
-        @OutputCustomType.Parameter("inputStages") List<String> inputStages,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parallelInputs") String parallelInputs,
-        @OutputCustomType.Parameter("readMsAvg") String readMsAvg,
-        @OutputCustomType.Parameter("readMsMax") String readMsMax,
-        @OutputCustomType.Parameter("readRatioAvg") Double readRatioAvg,
-        @OutputCustomType.Parameter("readRatioMax") Double readRatioMax,
-        @OutputCustomType.Parameter("recordsRead") String recordsRead,
-        @OutputCustomType.Parameter("recordsWritten") String recordsWritten,
-        @OutputCustomType.Parameter("shuffleOutputBytes") String shuffleOutputBytes,
-        @OutputCustomType.Parameter("shuffleOutputBytesSpilled") String shuffleOutputBytesSpilled,
-        @OutputCustomType.Parameter("slotMs") String slotMs,
-        @OutputCustomType.Parameter("startMs") String startMs,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("steps") List<ExplainQueryStepResponse> steps,
-        @OutputCustomType.Parameter("waitMsAvg") String waitMsAvg,
-        @OutputCustomType.Parameter("waitMsMax") String waitMsMax,
-        @OutputCustomType.Parameter("waitRatioAvg") Double waitRatioAvg,
-        @OutputCustomType.Parameter("waitRatioMax") Double waitRatioMax,
-        @OutputCustomType.Parameter("writeMsAvg") String writeMsAvg,
-        @OutputCustomType.Parameter("writeMsMax") String writeMsMax,
-        @OutputCustomType.Parameter("writeRatioAvg") Double writeRatioAvg,
-        @OutputCustomType.Parameter("writeRatioMax") Double writeRatioMax) {
+        @CustomType.Parameter("completedParallelInputs") String completedParallelInputs,
+        @CustomType.Parameter("computeMsAvg") String computeMsAvg,
+        @CustomType.Parameter("computeMsMax") String computeMsMax,
+        @CustomType.Parameter("computeRatioAvg") Double computeRatioAvg,
+        @CustomType.Parameter("computeRatioMax") Double computeRatioMax,
+        @CustomType.Parameter("endMs") String endMs,
+        @CustomType.Parameter("inputStages") List<String> inputStages,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parallelInputs") String parallelInputs,
+        @CustomType.Parameter("readMsAvg") String readMsAvg,
+        @CustomType.Parameter("readMsMax") String readMsMax,
+        @CustomType.Parameter("readRatioAvg") Double readRatioAvg,
+        @CustomType.Parameter("readRatioMax") Double readRatioMax,
+        @CustomType.Parameter("recordsRead") String recordsRead,
+        @CustomType.Parameter("recordsWritten") String recordsWritten,
+        @CustomType.Parameter("shuffleOutputBytes") String shuffleOutputBytes,
+        @CustomType.Parameter("shuffleOutputBytesSpilled") String shuffleOutputBytesSpilled,
+        @CustomType.Parameter("slotMs") String slotMs,
+        @CustomType.Parameter("startMs") String startMs,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("steps") List<ExplainQueryStepResponse> steps,
+        @CustomType.Parameter("waitMsAvg") String waitMsAvg,
+        @CustomType.Parameter("waitMsMax") String waitMsMax,
+        @CustomType.Parameter("waitRatioAvg") Double waitRatioAvg,
+        @CustomType.Parameter("waitRatioMax") Double waitRatioMax,
+        @CustomType.Parameter("writeMsAvg") String writeMsAvg,
+        @CustomType.Parameter("writeMsMax") String writeMsMax,
+        @CustomType.Parameter("writeRatioAvg") Double writeRatioAvg,
+        @CustomType.Parameter("writeRatioMax") Double writeRatioMax) {
         this.completedParallelInputs = completedParallelInputs;
         this.computeMsAvg = computeMsAvg;
         this.computeMsMax = computeMsMax;

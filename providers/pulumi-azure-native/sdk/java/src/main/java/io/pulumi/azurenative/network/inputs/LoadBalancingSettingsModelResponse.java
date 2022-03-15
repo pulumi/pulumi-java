@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
      * The additional latency in milliseconds for probes to fall into the lowest latency bucket
      * 
      */
-    @InputImport(name="additionalLatencyMilliseconds")
+    @Import(name="additionalLatencyMilliseconds")
       private final @Nullable Integer additionalLatencyMilliseconds;
 
     public Optional<Integer> getAdditionalLatencyMilliseconds() {
@@ -34,7 +34,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -45,7 +45,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
      * Resource name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -56,7 +56,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
      * Resource status.
      * 
      */
-    @InputImport(name="resourceState", required=true)
+    @Import(name="resourceState", required=true)
       private final String resourceState;
 
     public String getResourceState() {
@@ -67,7 +67,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
      * The number of samples to consider for load balancing decisions
      * 
      */
-    @InputImport(name="sampleSize")
+    @Import(name="sampleSize")
       private final @Nullable Integer sampleSize;
 
     public Optional<Integer> getSampleSize() {
@@ -78,7 +78,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
      * The number of samples within the sample period that must succeed
      * 
      */
-    @InputImport(name="successfulSamplesRequired")
+    @Import(name="successfulSamplesRequired")
       private final @Nullable Integer successfulSamplesRequired;
 
     public Optional<Integer> getSuccessfulSamplesRequired() {
@@ -89,7 +89,7 @@ public final class LoadBalancingSettingsModelResponse extends io.pulumi.resource
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

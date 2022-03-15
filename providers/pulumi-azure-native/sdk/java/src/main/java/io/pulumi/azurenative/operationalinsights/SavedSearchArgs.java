@@ -5,7 +5,7 @@ package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.azurenative.operationalinsights.inputs.TagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * The category of the saved search. This helps the user to find a saved search faster.
      * 
      */
-    @InputImport(name="category", required=true)
+    @Import(name="category", required=true)
       private final Output<String> category;
 
     public Output<String> getCategory() {
@@ -32,7 +32,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * Saved search display name.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -43,7 +43,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * The function alias if query serves as a function.
      * 
      */
-    @InputImport(name="functionAlias")
+    @Import(name="functionAlias")
       private final @Nullable Output<String> functionAlias;
 
     public Output<String> getFunctionAlias() {
@@ -54,7 +54,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * The optional function parameters if query serves as a function. Value should be in the following format: 'param-name1:type1 = default_value1, param-name2:type2 = default_value2'. For more examples and proper syntax please refer to https://docs.microsoft.com/en-us/azure/kusto/query/functions/user-defined-functions.
      * 
      */
-    @InputImport(name="functionParameters")
+    @Import(name="functionParameters")
       private final @Nullable Output<String> functionParameters;
 
     public Output<String> getFunctionParameters() {
@@ -65,7 +65,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * The query expression for the saved search.
      * 
      */
-    @InputImport(name="query", required=true)
+    @Import(name="query", required=true)
       private final Output<String> query;
 
     public Output<String> getQuery() {
@@ -76,7 +76,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -87,7 +87,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * The id of the saved search.
      * 
      */
-    @InputImport(name="savedSearchId")
+    @Import(name="savedSearchId")
       private final @Nullable Output<String> savedSearchId;
 
     public Output<String> getSavedSearchId() {
@@ -98,7 +98,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * The tags attached to the saved search.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<TagArgs>> tags;
 
     public Output<List<TagArgs>> getTags() {
@@ -109,7 +109,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * The version number of the query language. The current version is 2 and is the default.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<Double> version;
 
     public Output<Double> getVersion() {
@@ -120,7 +120,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

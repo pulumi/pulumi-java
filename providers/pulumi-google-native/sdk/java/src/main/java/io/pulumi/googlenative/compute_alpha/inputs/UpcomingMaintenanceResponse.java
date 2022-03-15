@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.UpcomingMaintenanceTimeWindowResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class UpcomingMaintenanceResponse extends io.pulumi.resources.Invok
      * Indicates if the maintenance can be customer triggered. From more detail, see go/sf-ctm-design.
      * 
      */
-    @InputImport(name="canReschedule", required=true)
+    @Import(name="canReschedule", required=true)
       private final Boolean canReschedule;
 
     public Boolean getCanReschedule() {
@@ -33,7 +33,7 @@ public final class UpcomingMaintenanceResponse extends io.pulumi.resources.Invok
      * The start time window of the maintenance disruption.
      * 
      */
-    @InputImport(name="startTimeWindow", required=true)
+    @Import(name="startTimeWindow", required=true)
       private final UpcomingMaintenanceTimeWindowResponse startTimeWindow;
 
     public UpcomingMaintenanceTimeWindowResponse getStartTimeWindow() {
@@ -44,7 +44,7 @@ public final class UpcomingMaintenanceResponse extends io.pulumi.resources.Invok
      * Defines the type of maintenance.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.inputs.DiskInstantiationConfigArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SourceInstanceParamsArgs extends io.pulumi.resources.Resource
      * Attached disks configuration. If not provided, defaults are applied: For boot disk and any other R/W disks, new custom images will be created from each disk. For read-only disks, they will be attached in read-only mode. Local SSD disks will be created as blank volumes.
      * 
      */
-    @InputImport(name="diskConfigs")
+    @Import(name="diskConfigs")
       private final @Nullable Output<List<DiskInstantiationConfigArgs>> diskConfigs;
 
     public Output<List<DiskInstantiationConfigArgs>> getDiskConfigs() {

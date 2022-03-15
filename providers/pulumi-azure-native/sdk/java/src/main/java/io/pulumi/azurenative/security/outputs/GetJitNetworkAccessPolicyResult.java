@@ -5,14 +5,14 @@ package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.JitNetworkAccessPolicyVirtualMachineResponse;
 import io.pulumi.azurenative.security.outputs.JitNetworkAccessRequestResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetJitNetworkAccessPolicyResult {
     /**
      * Resource Id
@@ -51,16 +51,16 @@ public final class GetJitNetworkAccessPolicyResult {
      */
     private final List<JitNetworkAccessPolicyVirtualMachineResponse> virtualMachines;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJitNetworkAccessPolicyResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("requests") @Nullable List<JitNetworkAccessRequestResponse> requests,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualMachines") List<JitNetworkAccessPolicyVirtualMachineResponse> virtualMachines) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("requests") @Nullable List<JitNetworkAccessRequestResponse> requests,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualMachines") List<JitNetworkAccessPolicyVirtualMachineResponse> virtualMachines) {
         this.id = id;
         this.kind = kind;
         this.location = location;

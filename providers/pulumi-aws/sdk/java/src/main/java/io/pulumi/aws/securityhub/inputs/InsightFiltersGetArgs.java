@@ -92,7 +92,7 @@ import io.pulumi.aws.securityhub.inputs.InsightFiltersUserDefinedValueGetArgs;
 import io.pulumi.aws.securityhub.inputs.InsightFiltersVerificationStateGetArgs;
 import io.pulumi.aws.securityhub.inputs.InsightFiltersWorkflowStatusGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -106,7 +106,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * AWS account ID that a finding is generated in. See String_Filter below for more details.
      * 
      */
-    @InputImport(name="awsAccountIds")
+    @Import(name="awsAccountIds")
       private final @Nullable Output<List<InsightFiltersAwsAccountIdGetArgs>> awsAccountIds;
 
     public Output<List<InsightFiltersAwsAccountIdGetArgs>> getAwsAccountIds() {
@@ -117,7 +117,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The name of the findings provider (company) that owns the solution (product) that generates findings. See String_Filter below for more details.
      * 
      */
-    @InputImport(name="companyNames")
+    @Import(name="companyNames")
       private final @Nullable Output<List<InsightFiltersCompanyNameGetArgs>> companyNames;
 
     public Output<List<InsightFiltersCompanyNameGetArgs>> getCompanyNames() {
@@ -128,7 +128,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * Exclusive to findings that are generated as the result of a check run against a specific rule in a supported standard, such as CIS AWS Foundations. Contains security standard-related finding details. See String Filter below for more details.
      * 
      */
-    @InputImport(name="complianceStatuses")
+    @Import(name="complianceStatuses")
       private final @Nullable Output<List<InsightFiltersComplianceStatusGetArgs>> complianceStatuses;
 
     public Output<List<InsightFiltersComplianceStatusGetArgs>> getComplianceStatuses() {
@@ -139,7 +139,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * A finding's confidence. Confidence is defined as the likelihood that a finding accurately identifies the behavior or issue that it was intended to identify. Confidence is scored on a 0-100 basis using a ratio scale, where 0 means zero percent confidence and 100 means 100 percent confidence. See Number Filter below for more details.
      * 
      */
-    @InputImport(name="confidences")
+    @Import(name="confidences")
       private final @Nullable Output<List<InsightFiltersConfidenceGetArgs>> confidences;
 
     public Output<List<InsightFiltersConfidenceGetArgs>> getConfidences() {
@@ -150,7 +150,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * An ISO8601-formatted timestamp that indicates when the security-findings provider captured the potential security issue that a finding captured. See Date Filter below for more details.
      * 
      */
-    @InputImport(name="createdAts")
+    @Import(name="createdAts")
       private final @Nullable Output<List<InsightFiltersCreatedAtGetArgs>> createdAts;
 
     public Output<List<InsightFiltersCreatedAtGetArgs>> getCreatedAts() {
@@ -161,7 +161,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The level of importance assigned to the resources associated with the finding. A score of 0 means that the underlying resources have no criticality, and a score of 100 is reserved for the most critical resources. See Number Filter below for more details.
      * 
      */
-    @InputImport(name="criticalities")
+    @Import(name="criticalities")
       private final @Nullable Output<List<InsightFiltersCriticalityGetArgs>> criticalities;
 
     public Output<List<InsightFiltersCriticalityGetArgs>> getCriticalities() {
@@ -172,7 +172,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * A finding's description. See String Filter below for more details.
      * 
      */
-    @InputImport(name="descriptions")
+    @Import(name="descriptions")
       private final @Nullable Output<List<InsightFiltersDescriptionGetArgs>> descriptions;
 
     public Output<List<InsightFiltersDescriptionGetArgs>> getDescriptions() {
@@ -183,7 +183,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The finding provider value for the finding confidence. Confidence is defined as the likelihood that a finding accurately identifies the behavior or issue that it was intended to identify. Confidence is scored on a 0-100 basis using a ratio scale, where 0 means zero percent confidence and 100 means 100 percent confidence. See Number Filter below for more details.
      * 
      */
-    @InputImport(name="findingProviderFieldsConfidences")
+    @Import(name="findingProviderFieldsConfidences")
       private final @Nullable Output<List<InsightFiltersFindingProviderFieldsConfidenceGetArgs>> findingProviderFieldsConfidences;
 
     public Output<List<InsightFiltersFindingProviderFieldsConfidenceGetArgs>> getFindingProviderFieldsConfidences() {
@@ -194,7 +194,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The finding provider value for the level of importance assigned to the resources associated with the findings. A score of 0 means that the underlying resources have no criticality, and a score of 100 is reserved for the most critical resources. See Number Filter below for more details.
      * 
      */
-    @InputImport(name="findingProviderFieldsCriticalities")
+    @Import(name="findingProviderFieldsCriticalities")
       private final @Nullable Output<List<InsightFiltersFindingProviderFieldsCriticalityGetArgs>> findingProviderFieldsCriticalities;
 
     public Output<List<InsightFiltersFindingProviderFieldsCriticalityGetArgs>> getFindingProviderFieldsCriticalities() {
@@ -205,7 +205,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The finding identifier of a related finding that is identified by the finding provider. See String Filter below for more details.
      * 
      */
-    @InputImport(name="findingProviderFieldsRelatedFindingsIds")
+    @Import(name="findingProviderFieldsRelatedFindingsIds")
       private final @Nullable Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsIdGetArgs>> findingProviderFieldsRelatedFindingsIds;
 
     public Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsIdGetArgs>> getFindingProviderFieldsRelatedFindingsIds() {
@@ -216,7 +216,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The ARN of the solution that generated a related finding that is identified by the finding provider. See String Filter below for more details.
      * 
      */
-    @InputImport(name="findingProviderFieldsRelatedFindingsProductArns")
+    @Import(name="findingProviderFieldsRelatedFindingsProductArns")
       private final @Nullable Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnGetArgs>> findingProviderFieldsRelatedFindingsProductArns;
 
     public Output<List<InsightFiltersFindingProviderFieldsRelatedFindingsProductArnGetArgs>> getFindingProviderFieldsRelatedFindingsProductArns() {
@@ -227,7 +227,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The finding provider value for the severity label. See String Filter below for more details.
      * 
      */
-    @InputImport(name="findingProviderFieldsSeverityLabels")
+    @Import(name="findingProviderFieldsSeverityLabels")
       private final @Nullable Output<List<InsightFiltersFindingProviderFieldsSeverityLabelGetArgs>> findingProviderFieldsSeverityLabels;
 
     public Output<List<InsightFiltersFindingProviderFieldsSeverityLabelGetArgs>> getFindingProviderFieldsSeverityLabels() {
@@ -238,7 +238,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The finding provider's original value for the severity. See String Filter below for more details.
      * 
      */
-    @InputImport(name="findingProviderFieldsSeverityOriginals")
+    @Import(name="findingProviderFieldsSeverityOriginals")
       private final @Nullable Output<List<InsightFiltersFindingProviderFieldsSeverityOriginalGetArgs>> findingProviderFieldsSeverityOriginals;
 
     public Output<List<InsightFiltersFindingProviderFieldsSeverityOriginalGetArgs>> getFindingProviderFieldsSeverityOriginals() {
@@ -249,7 +249,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * One or more finding types that the finding provider assigned to the finding. Uses the format of `namespace/category/classifier` that classify a finding. Valid namespace values include: `Software and Configuration Checks`, `TTPs`, `Effects`, `Unusual Behaviors`, and `Sensitive Data Identifications`. See String Filter below for more details.
      * 
      */
-    @InputImport(name="findingProviderFieldsTypes")
+    @Import(name="findingProviderFieldsTypes")
       private final @Nullable Output<List<InsightFiltersFindingProviderFieldsTypeGetArgs>> findingProviderFieldsTypes;
 
     public Output<List<InsightFiltersFindingProviderFieldsTypeGetArgs>> getFindingProviderFieldsTypes() {
@@ -260,7 +260,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * An ISO8601-formatted timestamp that indicates when the security-findings provider first observed the potential security issue that a finding captured. See Date Filter below for more details.
      * 
      */
-    @InputImport(name="firstObservedAts")
+    @Import(name="firstObservedAts")
       private final @Nullable Output<List<InsightFiltersFirstObservedAtGetArgs>> firstObservedAts;
 
     public Output<List<InsightFiltersFirstObservedAtGetArgs>> getFirstObservedAts() {
@@ -271,7 +271,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The identifier for the solution-specific component (a discrete unit of logic) that generated a finding. See String Filter below for more details.
      * 
      */
-    @InputImport(name="generatorIds")
+    @Import(name="generatorIds")
       private final @Nullable Output<List<InsightFiltersGeneratorIdGetArgs>> generatorIds;
 
     public Output<List<InsightFiltersGeneratorIdGetArgs>> getGeneratorIds() {
@@ -282,7 +282,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The security findings provider-specific identifier for a finding. See String Filter below for more details.
      * 
      */
-    @InputImport(name="ids")
+    @Import(name="ids")
       private final @Nullable Output<List<InsightFiltersIdGetArgs>> ids;
 
     public Output<List<InsightFiltersIdGetArgs>> getIds() {
@@ -293,7 +293,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * A keyword for a finding. See Keyword Filter below for more details.
      * 
      */
-    @InputImport(name="keywords")
+    @Import(name="keywords")
       private final @Nullable Output<List<InsightFiltersKeywordGetArgs>> keywords;
 
     public Output<List<InsightFiltersKeywordGetArgs>> getKeywords() {
@@ -304,7 +304,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * An ISO8601-formatted timestamp that indicates when the security-findings provider most recently observed the potential security issue that a finding captured. See Date Filter below for more details.
      * 
      */
-    @InputImport(name="lastObservedAts")
+    @Import(name="lastObservedAts")
       private final @Nullable Output<List<InsightFiltersLastObservedAtGetArgs>> lastObservedAts;
 
     public Output<List<InsightFiltersLastObservedAtGetArgs>> getLastObservedAts() {
@@ -315,7 +315,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The name of the malware that was observed. See String Filter below for more details.
      * 
      */
-    @InputImport(name="malwareNames")
+    @Import(name="malwareNames")
       private final @Nullable Output<List<InsightFiltersMalwareNameGetArgs>> malwareNames;
 
     public Output<List<InsightFiltersMalwareNameGetArgs>> getMalwareNames() {
@@ -326,7 +326,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The filesystem path of the malware that was observed. See String Filter below for more details.
      * 
      */
-    @InputImport(name="malwarePaths")
+    @Import(name="malwarePaths")
       private final @Nullable Output<List<InsightFiltersMalwarePathGetArgs>> malwarePaths;
 
     public Output<List<InsightFiltersMalwarePathGetArgs>> getMalwarePaths() {
@@ -337,7 +337,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The state of the malware that was observed. See String Filter below for more details.
      * 
      */
-    @InputImport(name="malwareStates")
+    @Import(name="malwareStates")
       private final @Nullable Output<List<InsightFiltersMalwareStateGetArgs>> malwareStates;
 
     public Output<List<InsightFiltersMalwareStateGetArgs>> getMalwareStates() {
@@ -348,7 +348,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The type of the malware that was observed. See String Filter below for more details.
      * 
      */
-    @InputImport(name="malwareTypes")
+    @Import(name="malwareTypes")
       private final @Nullable Output<List<InsightFiltersMalwareTypeGetArgs>> malwareTypes;
 
     public Output<List<InsightFiltersMalwareTypeGetArgs>> getMalwareTypes() {
@@ -359,7 +359,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The destination domain of network-related information about a finding. See String Filter below for more details.
      * 
      */
-    @InputImport(name="networkDestinationDomains")
+    @Import(name="networkDestinationDomains")
       private final @Nullable Output<List<InsightFiltersNetworkDestinationDomainGetArgs>> networkDestinationDomains;
 
     public Output<List<InsightFiltersNetworkDestinationDomainGetArgs>> getNetworkDestinationDomains() {
@@ -370,7 +370,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The destination IPv4 address of network-related information about a finding. See Ip Filter below for more details.
      * 
      */
-    @InputImport(name="networkDestinationIpv4s")
+    @Import(name="networkDestinationIpv4s")
       private final @Nullable Output<List<InsightFiltersNetworkDestinationIpv4GetArgs>> networkDestinationIpv4s;
 
     public Output<List<InsightFiltersNetworkDestinationIpv4GetArgs>> getNetworkDestinationIpv4s() {
@@ -381,7 +381,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The destination IPv6 address of network-related information about a finding. See Ip Filter below for more details.
      * 
      */
-    @InputImport(name="networkDestinationIpv6s")
+    @Import(name="networkDestinationIpv6s")
       private final @Nullable Output<List<InsightFiltersNetworkDestinationIpv6GetArgs>> networkDestinationIpv6s;
 
     public Output<List<InsightFiltersNetworkDestinationIpv6GetArgs>> getNetworkDestinationIpv6s() {
@@ -392,7 +392,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The destination port of network-related information about a finding. See Number Filter below for more details.
      * 
      */
-    @InputImport(name="networkDestinationPorts")
+    @Import(name="networkDestinationPorts")
       private final @Nullable Output<List<InsightFiltersNetworkDestinationPortGetArgs>> networkDestinationPorts;
 
     public Output<List<InsightFiltersNetworkDestinationPortGetArgs>> getNetworkDestinationPorts() {
@@ -403,7 +403,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * Indicates the direction of network traffic associated with a finding. See String Filter below for more details.
      * 
      */
-    @InputImport(name="networkDirections")
+    @Import(name="networkDirections")
       private final @Nullable Output<List<InsightFiltersNetworkDirectionGetArgs>> networkDirections;
 
     public Output<List<InsightFiltersNetworkDirectionGetArgs>> getNetworkDirections() {
@@ -414,7 +414,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The protocol of network-related information about a finding. See String Filter below for more details.
      * 
      */
-    @InputImport(name="networkProtocols")
+    @Import(name="networkProtocols")
       private final @Nullable Output<List<InsightFiltersNetworkProtocolGetArgs>> networkProtocols;
 
     public Output<List<InsightFiltersNetworkProtocolGetArgs>> getNetworkProtocols() {
@@ -425,7 +425,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The source domain of network-related information about a finding. See String Filter below for more details.
      * 
      */
-    @InputImport(name="networkSourceDomains")
+    @Import(name="networkSourceDomains")
       private final @Nullable Output<List<InsightFiltersNetworkSourceDomainGetArgs>> networkSourceDomains;
 
     public Output<List<InsightFiltersNetworkSourceDomainGetArgs>> getNetworkSourceDomains() {
@@ -436,7 +436,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The source IPv4 address of network-related information about a finding. See Ip Filter below for more details.
      * 
      */
-    @InputImport(name="networkSourceIpv4s")
+    @Import(name="networkSourceIpv4s")
       private final @Nullable Output<List<InsightFiltersNetworkSourceIpv4GetArgs>> networkSourceIpv4s;
 
     public Output<List<InsightFiltersNetworkSourceIpv4GetArgs>> getNetworkSourceIpv4s() {
@@ -447,7 +447,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The source IPv6 address of network-related information about a finding. See Ip Filter below for more details.
      * 
      */
-    @InputImport(name="networkSourceIpv6s")
+    @Import(name="networkSourceIpv6s")
       private final @Nullable Output<List<InsightFiltersNetworkSourceIpv6GetArgs>> networkSourceIpv6s;
 
     public Output<List<InsightFiltersNetworkSourceIpv6GetArgs>> getNetworkSourceIpv6s() {
@@ -458,7 +458,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The source media access control (MAC) address of network-related information about a finding. See String Filter below for more details.
      * 
      */
-    @InputImport(name="networkSourceMacs")
+    @Import(name="networkSourceMacs")
       private final @Nullable Output<List<InsightFiltersNetworkSourceMacGetArgs>> networkSourceMacs;
 
     public Output<List<InsightFiltersNetworkSourceMacGetArgs>> getNetworkSourceMacs() {
@@ -469,7 +469,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The source port of network-related information about a finding. See Number Filter below for more details.
      * 
      */
-    @InputImport(name="networkSourcePorts")
+    @Import(name="networkSourcePorts")
       private final @Nullable Output<List<InsightFiltersNetworkSourcePortGetArgs>> networkSourcePorts;
 
     public Output<List<InsightFiltersNetworkSourcePortGetArgs>> getNetworkSourcePorts() {
@@ -480,7 +480,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The text of a note. See String Filter below for more details.
      * 
      */
-    @InputImport(name="noteTexts")
+    @Import(name="noteTexts")
       private final @Nullable Output<List<InsightFiltersNoteTextGetArgs>> noteTexts;
 
     public Output<List<InsightFiltersNoteTextGetArgs>> getNoteTexts() {
@@ -491,7 +491,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The timestamp of when the note was updated. See Date Filter below for more details.
      * 
      */
-    @InputImport(name="noteUpdatedAts")
+    @Import(name="noteUpdatedAts")
       private final @Nullable Output<List<InsightFiltersNoteUpdatedAtGetArgs>> noteUpdatedAts;
 
     public Output<List<InsightFiltersNoteUpdatedAtGetArgs>> getNoteUpdatedAts() {
@@ -502,7 +502,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The principal that created a note. See String Filter below for more details.
      * 
      */
-    @InputImport(name="noteUpdatedBies")
+    @Import(name="noteUpdatedBies")
       private final @Nullable Output<List<InsightFiltersNoteUpdatedByGetArgs>> noteUpdatedBies;
 
     public Output<List<InsightFiltersNoteUpdatedByGetArgs>> getNoteUpdatedBies() {
@@ -513,7 +513,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The date/time that the process was launched. See Date Filter below for more details.
      * 
      */
-    @InputImport(name="processLaunchedAts")
+    @Import(name="processLaunchedAts")
       private final @Nullable Output<List<InsightFiltersProcessLaunchedAtGetArgs>> processLaunchedAts;
 
     public Output<List<InsightFiltersProcessLaunchedAtGetArgs>> getProcessLaunchedAts() {
@@ -524,7 +524,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The name of the process. See String Filter below for more details.
      * 
      */
-    @InputImport(name="processNames")
+    @Import(name="processNames")
       private final @Nullable Output<List<InsightFiltersProcessNameGetArgs>> processNames;
 
     public Output<List<InsightFiltersProcessNameGetArgs>> getProcessNames() {
@@ -535,7 +535,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The parent process ID. See Number Filter below for more details.
      * 
      */
-    @InputImport(name="processParentPids")
+    @Import(name="processParentPids")
       private final @Nullable Output<List<InsightFiltersProcessParentPidGetArgs>> processParentPids;
 
     public Output<List<InsightFiltersProcessParentPidGetArgs>> getProcessParentPids() {
@@ -546,7 +546,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The path to the process executable. See String Filter below for more details.
      * 
      */
-    @InputImport(name="processPaths")
+    @Import(name="processPaths")
       private final @Nullable Output<List<InsightFiltersProcessPathGetArgs>> processPaths;
 
     public Output<List<InsightFiltersProcessPathGetArgs>> getProcessPaths() {
@@ -557,7 +557,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The process ID. See Number Filter below for more details.
      * 
      */
-    @InputImport(name="processPids")
+    @Import(name="processPids")
       private final @Nullable Output<List<InsightFiltersProcessPidGetArgs>> processPids;
 
     public Output<List<InsightFiltersProcessPidGetArgs>> getProcessPids() {
@@ -568,7 +568,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The date/time that the process was terminated. See Date Filter below for more details.
      * 
      */
-    @InputImport(name="processTerminatedAts")
+    @Import(name="processTerminatedAts")
       private final @Nullable Output<List<InsightFiltersProcessTerminatedAtGetArgs>> processTerminatedAts;
 
     public Output<List<InsightFiltersProcessTerminatedAtGetArgs>> getProcessTerminatedAts() {
@@ -579,7 +579,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The ARN generated by Security Hub that uniquely identifies a third-party company (security findings provider) after this provider's product (solution that generates findings) is registered with Security Hub. See String Filter below for more details.
      * 
      */
-    @InputImport(name="productArns")
+    @Import(name="productArns")
       private final @Nullable Output<List<InsightFiltersProductArnGetArgs>> productArns;
 
     public Output<List<InsightFiltersProductArnGetArgs>> getProductArns() {
@@ -590,7 +590,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * A data type where security-findings providers can include additional solution-specific details that aren't part of the defined `AwsSecurityFinding` format. See Map Filter below for more details.
      * 
      */
-    @InputImport(name="productFields")
+    @Import(name="productFields")
       private final @Nullable Output<List<InsightFiltersProductFieldGetArgs>> productFields;
 
     public Output<List<InsightFiltersProductFieldGetArgs>> getProductFields() {
@@ -601,7 +601,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The name of the solution (product) that generates findings. See String Filter below for more details.
      * 
      */
-    @InputImport(name="productNames")
+    @Import(name="productNames")
       private final @Nullable Output<List<InsightFiltersProductNameGetArgs>> productNames;
 
     public Output<List<InsightFiltersProductNameGetArgs>> getProductNames() {
@@ -612,7 +612,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The recommendation of what to do about the issue described in a finding. See String Filter below for more details.
      * 
      */
-    @InputImport(name="recommendationTexts")
+    @Import(name="recommendationTexts")
       private final @Nullable Output<List<InsightFiltersRecommendationTextGetArgs>> recommendationTexts;
 
     public Output<List<InsightFiltersRecommendationTextGetArgs>> getRecommendationTexts() {
@@ -623,7 +623,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The updated record state for the finding. See String Filter below for more details.
      * 
      */
-    @InputImport(name="recordStates")
+    @Import(name="recordStates")
       private final @Nullable Output<List<InsightFiltersRecordStateGetArgs>> recordStates;
 
     public Output<List<InsightFiltersRecordStateGetArgs>> getRecordStates() {
@@ -634,7 +634,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The solution-generated identifier for a related finding. See String Filter below for more details.
      * 
      */
-    @InputImport(name="relatedFindingsIds")
+    @Import(name="relatedFindingsIds")
       private final @Nullable Output<List<InsightFiltersRelatedFindingsIdGetArgs>> relatedFindingsIds;
 
     public Output<List<InsightFiltersRelatedFindingsIdGetArgs>> getRelatedFindingsIds() {
@@ -645,7 +645,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The ARN of the solution that generated a related finding. See String Filter below for more details.
      * 
      */
-    @InputImport(name="relatedFindingsProductArns")
+    @Import(name="relatedFindingsProductArns")
       private final @Nullable Output<List<InsightFiltersRelatedFindingsProductArnGetArgs>> relatedFindingsProductArns;
 
     public Output<List<InsightFiltersRelatedFindingsProductArnGetArgs>> getRelatedFindingsProductArns() {
@@ -656,7 +656,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The IAM profile ARN of the instance. See String Filter below for more details.
      * 
      */
-    @InputImport(name="resourceAwsEc2InstanceIamInstanceProfileArns")
+    @Import(name="resourceAwsEc2InstanceIamInstanceProfileArns")
       private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnGetArgs>> resourceAwsEc2InstanceIamInstanceProfileArns;
 
     public Output<List<InsightFiltersResourceAwsEc2InstanceIamInstanceProfileArnGetArgs>> getResourceAwsEc2InstanceIamInstanceProfileArns() {
@@ -667,7 +667,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The Amazon Machine Image (AMI) ID of the instance. See String Filter below for more details.
      * 
      */
-    @InputImport(name="resourceAwsEc2InstanceImageIds")
+    @Import(name="resourceAwsEc2InstanceImageIds")
       private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceImageIdGetArgs>> resourceAwsEc2InstanceImageIds;
 
     public Output<List<InsightFiltersResourceAwsEc2InstanceImageIdGetArgs>> getResourceAwsEc2InstanceImageIds() {
@@ -678,7 +678,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The IPv4 addresses associated with the instance. See Ip Filter below for more details.
      * 
      */
-    @InputImport(name="resourceAwsEc2InstanceIpv4Addresses")
+    @Import(name="resourceAwsEc2InstanceIpv4Addresses")
       private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIpv4AddressGetArgs>> resourceAwsEc2InstanceIpv4Addresses;
 
     public Output<List<InsightFiltersResourceAwsEc2InstanceIpv4AddressGetArgs>> getResourceAwsEc2InstanceIpv4Addresses() {
@@ -689,7 +689,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The IPv6 addresses associated with the instance. See Ip Filter below for more details.
      * 
      */
-    @InputImport(name="resourceAwsEc2InstanceIpv6Addresses")
+    @Import(name="resourceAwsEc2InstanceIpv6Addresses")
       private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceIpv6AddressGetArgs>> resourceAwsEc2InstanceIpv6Addresses;
 
     public Output<List<InsightFiltersResourceAwsEc2InstanceIpv6AddressGetArgs>> getResourceAwsEc2InstanceIpv6Addresses() {
@@ -700,7 +700,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The key name associated with the instance. See String Filter below for more details.
      * 
      */
-    @InputImport(name="resourceAwsEc2InstanceKeyNames")
+    @Import(name="resourceAwsEc2InstanceKeyNames")
       private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceKeyNameGetArgs>> resourceAwsEc2InstanceKeyNames;
 
     public Output<List<InsightFiltersResourceAwsEc2InstanceKeyNameGetArgs>> getResourceAwsEc2InstanceKeyNames() {
@@ -711,7 +711,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The date and time the instance was launched. See Date Filter below for more details.
      * 
      */
-    @InputImport(name="resourceAwsEc2InstanceLaunchedAts")
+    @Import(name="resourceAwsEc2InstanceLaunchedAts")
       private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceLaunchedAtGetArgs>> resourceAwsEc2InstanceLaunchedAts;
 
     public Output<List<InsightFiltersResourceAwsEc2InstanceLaunchedAtGetArgs>> getResourceAwsEc2InstanceLaunchedAts() {
@@ -722,7 +722,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The identifier of the subnet that the instance was launched in. See String Filter below for more details.
      * 
      */
-    @InputImport(name="resourceAwsEc2InstanceSubnetIds")
+    @Import(name="resourceAwsEc2InstanceSubnetIds")
       private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceSubnetIdGetArgs>> resourceAwsEc2InstanceSubnetIds;
 
     public Output<List<InsightFiltersResourceAwsEc2InstanceSubnetIdGetArgs>> getResourceAwsEc2InstanceSubnetIds() {
@@ -733,7 +733,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The instance type of the instance. See String Filter below for more details.
      * 
      */
-    @InputImport(name="resourceAwsEc2InstanceTypes")
+    @Import(name="resourceAwsEc2InstanceTypes")
       private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceTypeGetArgs>> resourceAwsEc2InstanceTypes;
 
     public Output<List<InsightFiltersResourceAwsEc2InstanceTypeGetArgs>> getResourceAwsEc2InstanceTypes() {
@@ -744,7 +744,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The identifier of the VPC that the instance was launched in. See String Filter below for more details.
      * 
      */
-    @InputImport(name="resourceAwsEc2InstanceVpcIds")
+    @Import(name="resourceAwsEc2InstanceVpcIds")
       private final @Nullable Output<List<InsightFiltersResourceAwsEc2InstanceVpcIdGetArgs>> resourceAwsEc2InstanceVpcIds;
 
     public Output<List<InsightFiltersResourceAwsEc2InstanceVpcIdGetArgs>> getResourceAwsEc2InstanceVpcIds() {
@@ -755,7 +755,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The creation date/time of the IAM access key related to a finding. See Date Filter below for more details.
      * 
      */
-    @InputImport(name="resourceAwsIamAccessKeyCreatedAts")
+    @Import(name="resourceAwsIamAccessKeyCreatedAts")
       private final @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyCreatedAtGetArgs>> resourceAwsIamAccessKeyCreatedAts;
 
     public Output<List<InsightFiltersResourceAwsIamAccessKeyCreatedAtGetArgs>> getResourceAwsIamAccessKeyCreatedAts() {
@@ -766,7 +766,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The status of the IAM access key related to a finding. See String Filter below for more details.
      * 
      */
-    @InputImport(name="resourceAwsIamAccessKeyStatuses")
+    @Import(name="resourceAwsIamAccessKeyStatuses")
       private final @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyStatusGetArgs>> resourceAwsIamAccessKeyStatuses;
 
     public Output<List<InsightFiltersResourceAwsIamAccessKeyStatusGetArgs>> getResourceAwsIamAccessKeyStatuses() {
@@ -777,7 +777,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The user associated with the IAM access key related to a finding. See String Filter below for more details.
      * 
      */
-    @InputImport(name="resourceAwsIamAccessKeyUserNames")
+    @Import(name="resourceAwsIamAccessKeyUserNames")
       private final @Nullable Output<List<InsightFiltersResourceAwsIamAccessKeyUserNameGetArgs>> resourceAwsIamAccessKeyUserNames;
 
     public Output<List<InsightFiltersResourceAwsIamAccessKeyUserNameGetArgs>> getResourceAwsIamAccessKeyUserNames() {
@@ -788,7 +788,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The canonical user ID of the owner of the S3 bucket. See String Filter below for more details.
      * 
      */
-    @InputImport(name="resourceAwsS3BucketOwnerIds")
+    @Import(name="resourceAwsS3BucketOwnerIds")
       private final @Nullable Output<List<InsightFiltersResourceAwsS3BucketOwnerIdGetArgs>> resourceAwsS3BucketOwnerIds;
 
     public Output<List<InsightFiltersResourceAwsS3BucketOwnerIdGetArgs>> getResourceAwsS3BucketOwnerIds() {
@@ -799,7 +799,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The display name of the owner of the S3 bucket. See String Filter below for more details.
      * 
      */
-    @InputImport(name="resourceAwsS3BucketOwnerNames")
+    @Import(name="resourceAwsS3BucketOwnerNames")
       private final @Nullable Output<List<InsightFiltersResourceAwsS3BucketOwnerNameGetArgs>> resourceAwsS3BucketOwnerNames;
 
     public Output<List<InsightFiltersResourceAwsS3BucketOwnerNameGetArgs>> getResourceAwsS3BucketOwnerNames() {
@@ -810,7 +810,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The identifier of the image related to a finding. See String Filter below for more details.
      * 
      */
-    @InputImport(name="resourceContainerImageIds")
+    @Import(name="resourceContainerImageIds")
       private final @Nullable Output<List<InsightFiltersResourceContainerImageIdGetArgs>> resourceContainerImageIds;
 
     public Output<List<InsightFiltersResourceContainerImageIdGetArgs>> getResourceContainerImageIds() {
@@ -821,7 +821,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The name of the image related to a finding. See String Filter below for more details.
      * 
      */
-    @InputImport(name="resourceContainerImageNames")
+    @Import(name="resourceContainerImageNames")
       private final @Nullable Output<List<InsightFiltersResourceContainerImageNameGetArgs>> resourceContainerImageNames;
 
     public Output<List<InsightFiltersResourceContainerImageNameGetArgs>> getResourceContainerImageNames() {
@@ -832,7 +832,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The date/time that the container was started. See Date Filter below for more details.
      * 
      */
-    @InputImport(name="resourceContainerLaunchedAts")
+    @Import(name="resourceContainerLaunchedAts")
       private final @Nullable Output<List<InsightFiltersResourceContainerLaunchedAtGetArgs>> resourceContainerLaunchedAts;
 
     public Output<List<InsightFiltersResourceContainerLaunchedAtGetArgs>> getResourceContainerLaunchedAts() {
@@ -843,7 +843,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The name of the container related to a finding. See String Filter below for more details.
      * 
      */
-    @InputImport(name="resourceContainerNames")
+    @Import(name="resourceContainerNames")
       private final @Nullable Output<List<InsightFiltersResourceContainerNameGetArgs>> resourceContainerNames;
 
     public Output<List<InsightFiltersResourceContainerNameGetArgs>> getResourceContainerNames() {
@@ -854,7 +854,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The details of a resource that doesn't have a specific subfield for the resource type defined. See Map Filter below for more details.
      * 
      */
-    @InputImport(name="resourceDetailsOthers")
+    @Import(name="resourceDetailsOthers")
       private final @Nullable Output<List<InsightFiltersResourceDetailsOtherGetArgs>> resourceDetailsOthers;
 
     public Output<List<InsightFiltersResourceDetailsOtherGetArgs>> getResourceDetailsOthers() {
@@ -865,7 +865,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The canonical identifier for the given resource type. See String Filter below for more details.
      * 
      */
-    @InputImport(name="resourceIds")
+    @Import(name="resourceIds")
       private final @Nullable Output<List<InsightFiltersResourceIdGetArgs>> resourceIds;
 
     public Output<List<InsightFiltersResourceIdGetArgs>> getResourceIds() {
@@ -876,7 +876,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The canonical AWS partition name that the Region is assigned to. See String Filter below for more details.
      * 
      */
-    @InputImport(name="resourcePartitions")
+    @Import(name="resourcePartitions")
       private final @Nullable Output<List<InsightFiltersResourcePartitionGetArgs>> resourcePartitions;
 
     public Output<List<InsightFiltersResourcePartitionGetArgs>> getResourcePartitions() {
@@ -887,7 +887,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The canonical AWS external Region name where this resource is located. See String Filter below for more details.
      * 
      */
-    @InputImport(name="resourceRegions")
+    @Import(name="resourceRegions")
       private final @Nullable Output<List<InsightFiltersResourceRegionGetArgs>> resourceRegions;
 
     public Output<List<InsightFiltersResourceRegionGetArgs>> getResourceRegions() {
@@ -898,7 +898,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * A list of AWS tags associated with a resource at the time the finding was processed. See Map Filter below for more details.
      * 
      */
-    @InputImport(name="resourceTags")
+    @Import(name="resourceTags")
       private final @Nullable Output<List<InsightFiltersResourceTagGetArgs>> resourceTags;
 
     public Output<List<InsightFiltersResourceTagGetArgs>> getResourceTags() {
@@ -909,7 +909,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * Specifies the type of the resource that details are provided for. See String Filter below for more details.
      * 
      */
-    @InputImport(name="resourceTypes")
+    @Import(name="resourceTypes")
       private final @Nullable Output<List<InsightFiltersResourceTypeGetArgs>> resourceTypes;
 
     public Output<List<InsightFiltersResourceTypeGetArgs>> getResourceTypes() {
@@ -920,7 +920,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The label of a finding's severity. See String Filter below for more details.
      * 
      */
-    @InputImport(name="severityLabels")
+    @Import(name="severityLabels")
       private final @Nullable Output<List<InsightFiltersSeverityLabelGetArgs>> severityLabels;
 
     public Output<List<InsightFiltersSeverityLabelGetArgs>> getSeverityLabels() {
@@ -931,7 +931,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * A URL that links to a page about the current finding in the security-findings provider's solution. See String Filter below for more details.
      * 
      */
-    @InputImport(name="sourceUrls")
+    @Import(name="sourceUrls")
       private final @Nullable Output<List<InsightFiltersSourceUrlGetArgs>> sourceUrls;
 
     public Output<List<InsightFiltersSourceUrlGetArgs>> getSourceUrls() {
@@ -942,7 +942,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The category of a threat intelligence indicator. See String Filter below for more details.
      * 
      */
-    @InputImport(name="threatIntelIndicatorCategories")
+    @Import(name="threatIntelIndicatorCategories")
       private final @Nullable Output<List<InsightFiltersThreatIntelIndicatorCategoryGetArgs>> threatIntelIndicatorCategories;
 
     public Output<List<InsightFiltersThreatIntelIndicatorCategoryGetArgs>> getThreatIntelIndicatorCategories() {
@@ -953,7 +953,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The date/time of the last observation of a threat intelligence indicator. See Date Filter below for more details.
      * 
      */
-    @InputImport(name="threatIntelIndicatorLastObservedAts")
+    @Import(name="threatIntelIndicatorLastObservedAts")
       private final @Nullable Output<List<InsightFiltersThreatIntelIndicatorLastObservedAtGetArgs>> threatIntelIndicatorLastObservedAts;
 
     public Output<List<InsightFiltersThreatIntelIndicatorLastObservedAtGetArgs>> getThreatIntelIndicatorLastObservedAts() {
@@ -964,7 +964,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The URL for more details from the source of the threat intelligence. See String Filter below for more details.
      * 
      */
-    @InputImport(name="threatIntelIndicatorSourceUrls")
+    @Import(name="threatIntelIndicatorSourceUrls")
       private final @Nullable Output<List<InsightFiltersThreatIntelIndicatorSourceUrlGetArgs>> threatIntelIndicatorSourceUrls;
 
     public Output<List<InsightFiltersThreatIntelIndicatorSourceUrlGetArgs>> getThreatIntelIndicatorSourceUrls() {
@@ -975,7 +975,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The source of the threat intelligence. See String Filter below for more details.
      * 
      */
-    @InputImport(name="threatIntelIndicatorSources")
+    @Import(name="threatIntelIndicatorSources")
       private final @Nullable Output<List<InsightFiltersThreatIntelIndicatorSourceGetArgs>> threatIntelIndicatorSources;
 
     public Output<List<InsightFiltersThreatIntelIndicatorSourceGetArgs>> getThreatIntelIndicatorSources() {
@@ -986,7 +986,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The type of a threat intelligence indicator. See String Filter below for more details.
      * 
      */
-    @InputImport(name="threatIntelIndicatorTypes")
+    @Import(name="threatIntelIndicatorTypes")
       private final @Nullable Output<List<InsightFiltersThreatIntelIndicatorTypeGetArgs>> threatIntelIndicatorTypes;
 
     public Output<List<InsightFiltersThreatIntelIndicatorTypeGetArgs>> getThreatIntelIndicatorTypes() {
@@ -997,7 +997,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The value of a threat intelligence indicator. See String Filter below for more details.
      * 
      */
-    @InputImport(name="threatIntelIndicatorValues")
+    @Import(name="threatIntelIndicatorValues")
       private final @Nullable Output<List<InsightFiltersThreatIntelIndicatorValueGetArgs>> threatIntelIndicatorValues;
 
     public Output<List<InsightFiltersThreatIntelIndicatorValueGetArgs>> getThreatIntelIndicatorValues() {
@@ -1008,7 +1008,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * A finding's title. See String Filter below for more details.
      * 
      */
-    @InputImport(name="titles")
+    @Import(name="titles")
       private final @Nullable Output<List<InsightFiltersTitleGetArgs>> titles;
 
     public Output<List<InsightFiltersTitleGetArgs>> getTitles() {
@@ -1019,7 +1019,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * A finding type in the format of `namespace/category/classifier` that classifies a finding. See String Filter below for more details.
      * 
      */
-    @InputImport(name="types")
+    @Import(name="types")
       private final @Nullable Output<List<InsightFiltersTypeGetArgs>> types;
 
     public Output<List<InsightFiltersTypeGetArgs>> getTypes() {
@@ -1030,7 +1030,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * An ISO8601-formatted timestamp that indicates when the security-findings provider last updated the finding record. See Date Filter below for more details.
      * 
      */
-    @InputImport(name="updatedAts")
+    @Import(name="updatedAts")
       private final @Nullable Output<List<InsightFiltersUpdatedAtGetArgs>> updatedAts;
 
     public Output<List<InsightFiltersUpdatedAtGetArgs>> getUpdatedAts() {
@@ -1041,7 +1041,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * A list of name/value string pairs associated with the finding. These are custom, user-defined fields added to a finding. See Map Filter below for more details.
      * 
      */
-    @InputImport(name="userDefinedValues")
+    @Import(name="userDefinedValues")
       private final @Nullable Output<List<InsightFiltersUserDefinedValueGetArgs>> userDefinedValues;
 
     public Output<List<InsightFiltersUserDefinedValueGetArgs>> getUserDefinedValues() {
@@ -1052,7 +1052,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The veracity of a finding. See String Filter below for more details.
      * 
      */
-    @InputImport(name="verificationStates")
+    @Import(name="verificationStates")
       private final @Nullable Output<List<InsightFiltersVerificationStateGetArgs>> verificationStates;
 
     public Output<List<InsightFiltersVerificationStateGetArgs>> getVerificationStates() {
@@ -1063,7 +1063,7 @@ public final class InsightFiltersGetArgs extends io.pulumi.resources.ResourceArg
      * The status of the investigation into a finding. See Workflow Status Filter below for more details.
      * 
      */
-    @InputImport(name="workflowStatuses")
+    @Import(name="workflowStatuses")
       private final @Nullable Output<List<InsightFiltersWorkflowStatusGetArgs>> workflowStatuses;
 
     public Output<List<InsightFiltersWorkflowStatusGetArgs>> getWorkflowStatuses() {

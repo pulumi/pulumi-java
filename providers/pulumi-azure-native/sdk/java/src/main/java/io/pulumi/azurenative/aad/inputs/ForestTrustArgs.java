@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.aad.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
      * Friendly Name
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -33,7 +33,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
      * Remote Dns ips
      * 
      */
-    @InputImport(name="remoteDnsIps")
+    @Import(name="remoteDnsIps")
       private final @Nullable Output<String> remoteDnsIps;
 
     public Output<String> getRemoteDnsIps() {
@@ -44,7 +44,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
      * Trust Direction
      * 
      */
-    @InputImport(name="trustDirection")
+    @Import(name="trustDirection")
       private final @Nullable Output<String> trustDirection;
 
     public Output<String> getTrustDirection() {
@@ -55,7 +55,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
      * Trust Password
      * 
      */
-    @InputImport(name="trustPassword")
+    @Import(name="trustPassword")
       private final @Nullable Output<String> trustPassword;
 
     public Output<String> getTrustPassword() {
@@ -66,7 +66,7 @@ public final class ForestTrustArgs extends io.pulumi.resources.ResourceArgs {
      * Trusted Domain FQDN
      * 
      */
-    @InputImport(name="trustedDomainFqdn")
+    @Import(name="trustedDomainFqdn")
       private final @Nullable Output<String> trustedDomainFqdn;
 
     public Output<String> getTrustedDomainFqdn() {

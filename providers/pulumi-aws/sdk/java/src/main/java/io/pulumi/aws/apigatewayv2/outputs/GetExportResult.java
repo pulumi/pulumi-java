@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.apigatewayv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetExportResult {
     private final String apiId;
     /**
@@ -29,16 +29,16 @@ public final class GetExportResult {
     private final String specification;
     private final @Nullable String stageName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExportResult(
-        @OutputCustomType.Parameter("apiId") String apiId,
-        @OutputCustomType.Parameter("body") String body,
-        @OutputCustomType.Parameter("exportVersion") @Nullable String exportVersion,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("includeExtensions") @Nullable Boolean includeExtensions,
-        @OutputCustomType.Parameter("outputType") String outputType,
-        @OutputCustomType.Parameter("specification") String specification,
-        @OutputCustomType.Parameter("stageName") @Nullable String stageName) {
+        @CustomType.Parameter("apiId") String apiId,
+        @CustomType.Parameter("body") String body,
+        @CustomType.Parameter("exportVersion") @Nullable String exportVersion,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("includeExtensions") @Nullable Boolean includeExtensions,
+        @CustomType.Parameter("outputType") String outputType,
+        @CustomType.Parameter("specification") String specification,
+        @CustomType.Parameter("stageName") @Nullable String stageName) {
         this.apiId = apiId;
         this.body = body;
         this.exportVersion = exportVersion;

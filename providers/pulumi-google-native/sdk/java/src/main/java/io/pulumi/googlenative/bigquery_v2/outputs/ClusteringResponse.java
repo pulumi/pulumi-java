@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusteringResponse {
     /**
      * [Repeated] One or more fields on which data should be clustered. Only top-level, non-repeated, simple-type fields are supported. When you cluster a table using multiple columns, the order of columns you specify is important. The order of the specified columns determines the sort order of the data.
@@ -16,8 +16,8 @@ public final class ClusteringResponse {
      */
     private final List<String> fields;
 
-    @OutputCustomType.Constructor
-    private ClusteringResponse(@OutputCustomType.Parameter("fields") List<String> fields) {
+    @CustomType.Constructor
+    private ClusteringResponse(@CustomType.Parameter("fields") List<String> fields) {
         this.fields = fields;
     }
 

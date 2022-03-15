@@ -11,7 +11,7 @@ import io.pulumi.azurenative.servicefabric.outputs.ApplicationUserAssignedIdenti
 import io.pulumi.azurenative.servicefabric.outputs.ManagedIdentityResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -41,7 +41,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Azure resource etag.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -55,7 +55,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Describes the managed identities for an Azure resource.
      * 
      */
-    @OutputExport(name="identity", type=ManagedIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ManagedIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedIdentityResponse> identity;
 
     /**
@@ -69,7 +69,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * It will be deprecated in New API, resource location depends on the parent resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -83,7 +83,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * List of user assigned identities for the application, each mapped to a friendly name.
      * 
      */
-    @OutputExport(name="managedIdentities", type=List.class, parameters={ApplicationUserAssignedIdentityResponse.class})
+    @Export(name="managedIdentities", type=List.class, parameters={ApplicationUserAssignedIdentityResponse.class})
     private Output</* @Nullable */ List<ApplicationUserAssignedIdentityResponse>> managedIdentities;
 
     /**
@@ -97,7 +97,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The maximum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. By default, the value of this property is zero and it means that the services can be placed on any node.
      * 
      */
-    @OutputExport(name="maximumNodes", type=Double.class, parameters={})
+    @Export(name="maximumNodes", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> maximumNodes;
 
     /**
@@ -111,7 +111,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * List of application capacity metric description.
      * 
      */
-    @OutputExport(name="metrics", type=List.class, parameters={ApplicationMetricDescriptionResponse.class})
+    @Export(name="metrics", type=List.class, parameters={ApplicationMetricDescriptionResponse.class})
     private Output</* @Nullable */ List<ApplicationMetricDescriptionResponse>> metrics;
 
     /**
@@ -125,7 +125,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The minimum number of nodes where Service Fabric will reserve capacity for this application. Note that this does not mean that the services of this application will be placed on all of those nodes. If this property is set to zero, no capacity will be reserved. The value of this property cannot be more than the value of the MaximumNodes property.
      * 
      */
-    @OutputExport(name="minimumNodes", type=Double.class, parameters={})
+    @Export(name="minimumNodes", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> minimumNodes;
 
     /**
@@ -139,7 +139,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Azure resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -153,7 +153,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * List of application parameters with overridden values from their default values specified in the application manifest.
      * 
      */
-    @OutputExport(name="parameters", type=Map.class, parameters={String.class, String.class})
+    @Export(name="parameters", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> parameters;
 
     /**
@@ -167,7 +167,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The current deployment or provisioning state, which only appears in the response
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -181,7 +181,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Remove the current application capacity settings.
      * 
      */
-    @OutputExport(name="removeApplicationCapacity", type=Boolean.class, parameters={})
+    @Export(name="removeApplicationCapacity", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> removeApplicationCapacity;
 
     /**
@@ -195,7 +195,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Azure resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -209,7 +209,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Azure resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -223,7 +223,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The application type name as defined in the application manifest.
      * 
      */
-    @OutputExport(name="typeName", type=String.class, parameters={})
+    @Export(name="typeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeName;
 
     /**
@@ -237,7 +237,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The version of the application type as defined in the application manifest.
      * 
      */
-    @OutputExport(name="typeVersion", type=String.class, parameters={})
+    @Export(name="typeVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeVersion;
 
     /**
@@ -251,7 +251,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Describes the policy for a monitored application upgrade.
      * 
      */
-    @OutputExport(name="upgradePolicy", type=ApplicationUpgradePolicyResponse.class, parameters={})
+    @Export(name="upgradePolicy", type=ApplicationUpgradePolicyResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationUpgradePolicyResponse> upgradePolicy;
 
     /**

@@ -6,7 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
      * Internal value used by CloudFront to allow future updates to the Field Level Encryption Config.
      * 
      */
-    @InputImport(name="callerReference")
+    @Import(name="callerReference")
       private final @Nullable Output<String> callerReference;
 
     public Output<String> getCallerReference() {
@@ -31,7 +31,7 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
      * An optional comment about the Field Level Encryption Config.
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -42,7 +42,7 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
      * Content Type Profile Config specifies when to forward content if a content type isn't recognized and profiles to use as by default in a request if a query argument doesn't specify a profile to use.
      * 
      */
-    @InputImport(name="contentTypeProfileConfig")
+    @Import(name="contentTypeProfileConfig")
       private final @Nullable Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> contentTypeProfileConfig;
 
     public Output<FieldLevelEncryptionConfigContentTypeProfileConfigGetArgs> getContentTypeProfileConfig() {
@@ -53,7 +53,7 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
      * The current version of the Field Level Encryption Config. For example: `E2QWRUHAPOMQZL`.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -64,7 +64,7 @@ public final class FieldLevelEncryptionConfigState extends io.pulumi.resources.R
      * Query Arg Profile Config that specifies when to forward content if a profile isn't found and the profile that can be provided as a query argument in a request.
      * 
      */
-    @InputImport(name="queryArgProfileConfig")
+    @Import(name="queryArgProfileConfig")
       private final @Nullable Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> queryArgProfileConfig;
 
     public Output<FieldLevelEncryptionConfigQueryArgProfileConfigGetArgs> getQueryArgProfileConfig() {

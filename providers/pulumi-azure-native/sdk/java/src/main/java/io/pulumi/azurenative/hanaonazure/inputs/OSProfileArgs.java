@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hanaonazure.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the host OS name of the HANA instance.
      * 
      */
-    @InputImport(name="computerName")
+    @Import(name="computerName")
       private final @Nullable Output<String> computerName;
 
     public Output<String> getComputerName() {
@@ -33,7 +33,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the SSH public key used to access the operating system.
      * 
      */
-    @InputImport(name="sshPublicKey")
+    @Import(name="sshPublicKey")
       private final @Nullable Output<String> sshPublicKey;
 
     public Output<String> getSshPublicKey() {

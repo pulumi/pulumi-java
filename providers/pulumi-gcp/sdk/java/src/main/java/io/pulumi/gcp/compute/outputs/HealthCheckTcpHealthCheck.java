@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HealthCheckTcpHealthCheck {
     /**
      * The port number for the health check request.
@@ -64,14 +64,14 @@ public final class HealthCheckTcpHealthCheck {
      */
     private final @Nullable String response;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HealthCheckTcpHealthCheck(
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("portName") @Nullable String portName,
-        @OutputCustomType.Parameter("portSpecification") @Nullable String portSpecification,
-        @OutputCustomType.Parameter("proxyHeader") @Nullable String proxyHeader,
-        @OutputCustomType.Parameter("request") @Nullable String request,
-        @OutputCustomType.Parameter("response") @Nullable String response) {
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("portName") @Nullable String portName,
+        @CustomType.Parameter("portSpecification") @Nullable String portSpecification,
+        @CustomType.Parameter("proxyHeader") @Nullable String proxyHeader,
+        @CustomType.Parameter("request") @Nullable String request,
+        @CustomType.Parameter("response") @Nullable String response) {
         this.port = port;
         this.portName = portName;
         this.portSpecification = portSpecification;

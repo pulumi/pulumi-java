@@ -5,12 +5,12 @@ package io.pulumi.aws.sagemaker.outputs;
 
 import io.pulumi.aws.sagemaker.outputs.EndpointConfigurationAsyncInferenceConfigClientConfig;
 import io.pulumi.aws.sagemaker.outputs.EndpointConfigurationAsyncInferenceConfigOutputConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointConfigurationAsyncInferenceConfig {
     /**
      * Configures the behavior of the client used by Amazon SageMaker to interact with the model container during asynchronous inference.
@@ -23,10 +23,10 @@ public final class EndpointConfigurationAsyncInferenceConfig {
      */
     private final EndpointConfigurationAsyncInferenceConfigOutputConfig outputConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointConfigurationAsyncInferenceConfig(
-        @OutputCustomType.Parameter("clientConfig") @Nullable EndpointConfigurationAsyncInferenceConfigClientConfig clientConfig,
-        @OutputCustomType.Parameter("outputConfig") EndpointConfigurationAsyncInferenceConfigOutputConfig outputConfig) {
+        @CustomType.Parameter("clientConfig") @Nullable EndpointConfigurationAsyncInferenceConfigClientConfig clientConfig,
+        @CustomType.Parameter("outputConfig") EndpointConfigurationAsyncInferenceConfigOutputConfig outputConfig) {
         this.clientConfig = clientConfig;
         this.outputConfig = outputConfig;
     }

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.outposts.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSiteResult {
     /**
      * AWS Account identifier.
@@ -22,12 +22,12 @@ public final class GetSiteResult {
     private final String id;
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSiteResult(
-        @OutputCustomType.Parameter("accountId") String accountId,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("accountId") String accountId,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name) {
         this.accountId = accountId;
         this.description = description;
         this.id = id;

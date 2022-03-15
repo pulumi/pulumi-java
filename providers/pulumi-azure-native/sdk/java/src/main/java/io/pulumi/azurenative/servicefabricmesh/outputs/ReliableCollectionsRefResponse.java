@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReliableCollectionsRefResponse {
     /**
      * False (the default) if ReliableCollections state is persisted to disk as usual. True if you do not want to persist state, in which case replication is still enabled and you can use ReliableCollections as distributed cache.
@@ -23,10 +23,10 @@ public final class ReliableCollectionsRefResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReliableCollectionsRefResponse(
-        @OutputCustomType.Parameter("doNotPersistState") @Nullable Boolean doNotPersistState,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("doNotPersistState") @Nullable Boolean doNotPersistState,
+        @CustomType.Parameter("name") String name) {
         this.doNotPersistState = doNotPersistState;
         this.name = name;
     }

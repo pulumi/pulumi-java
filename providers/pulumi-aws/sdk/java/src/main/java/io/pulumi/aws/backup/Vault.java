@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.backup.VaultArgs;
 import io.pulumi.aws.backup.inputs.VaultState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * The ARN of the vault.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * The server-side encryption key that is used to protect your backups.
      * 
      */
-    @OutputExport(name="kmsKeyArn", type=String.class, parameters={})
+    @Export(name="kmsKeyArn", type=String.class, parameters={})
     private Output<String> kmsKeyArn;
 
     /**
@@ -62,7 +62,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * Name of the backup vault to create.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * The number of recovery points that are stored in a backup vault.
      * 
      */
-    @OutputExport(name="recoveryPoints", type=Integer.class, parameters={})
+    @Export(name="recoveryPoints", type=Integer.class, parameters={})
     private Output<Integer> recoveryPoints;
 
     /**
@@ -90,7 +90,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * Metadata that you can assign to help organize the resources that you create. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -104,7 +104,7 @@ public class Vault extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StandardAppVersionDeploymentFile {
     /**
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
@@ -27,11 +27,11 @@ public final class StandardAppVersionDeploymentFile {
      */
     private final String sourceUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StandardAppVersionDeploymentFile(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sha1Sum") @Nullable String sha1Sum,
-        @OutputCustomType.Parameter("sourceUrl") String sourceUrl) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sha1Sum") @Nullable String sha1Sum,
+        @CustomType.Parameter("sourceUrl") String sourceUrl) {
         this.name = name;
         this.sha1Sum = sha1Sum;
         this.sourceUrl = sourceUrl;

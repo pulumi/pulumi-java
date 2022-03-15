@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HealthCheckGrpcHealthCheck {
     /**
      * The gRPC service name for the health check.
@@ -50,12 +50,12 @@ public final class HealthCheckGrpcHealthCheck {
      */
     private final @Nullable String portSpecification;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HealthCheckGrpcHealthCheck(
-        @OutputCustomType.Parameter("grpcServiceName") @Nullable String grpcServiceName,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("portName") @Nullable String portName,
-        @OutputCustomType.Parameter("portSpecification") @Nullable String portSpecification) {
+        @CustomType.Parameter("grpcServiceName") @Nullable String grpcServiceName,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("portName") @Nullable String portName,
+        @CustomType.Parameter("portSpecification") @Nullable String portSpecification) {
         this.grpcServiceName = grpcServiceName;
         this.port = port;
         this.portName = portName;

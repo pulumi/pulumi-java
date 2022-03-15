@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurearcdata.inputs;
 
 import io.pulumi.azurenative.azurearcdata.inputs.BasicLoginInformationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
      * The instance admin user
      * 
      */
-    @InputImport(name="admin")
+    @Import(name="admin")
       private final @Nullable String admin;
 
     public Optional<String> getAdmin() {
@@ -35,7 +35,7 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
      * Username and password for basic authentication.
      * 
      */
-    @InputImport(name="basicLoginInformation")
+    @Import(name="basicLoginInformation")
       private final @Nullable BasicLoginInformationResponse basicLoginInformation;
 
     public Optional<BasicLoginInformationResponse> getBasicLoginInformation() {
@@ -46,7 +46,7 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
      * null
      * 
      */
-    @InputImport(name="dataControllerId")
+    @Import(name="dataControllerId")
       private final @Nullable String dataControllerId;
 
     public Optional<String> getDataControllerId() {
@@ -57,7 +57,7 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
      * The instance end time
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable String endTime;
 
     public Optional<String> getEndTime() {
@@ -68,7 +68,7 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
      * The raw kubernetes information
      * 
      */
-    @InputImport(name="k8sRaw")
+    @Import(name="k8sRaw")
       private final @Nullable Object k8sRaw;
 
     public Optional<Object> getK8sRaw() {
@@ -79,14 +79,14 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
      * Last uploaded date from Kubernetes cluster. Defaults to current date time
      * 
      */
-    @InputImport(name="lastUploadedDate")
+    @Import(name="lastUploadedDate")
       private final @Nullable String lastUploadedDate;
 
     public Optional<String> getLastUploadedDate() {
         return this.lastUploadedDate == null ? Optional.empty() : Optional.ofNullable(this.lastUploadedDate);
     }
 
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -97,7 +97,7 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
      * The instance start time
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {

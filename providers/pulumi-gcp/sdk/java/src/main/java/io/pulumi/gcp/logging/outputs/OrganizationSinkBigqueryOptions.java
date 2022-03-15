@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.logging.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OrganizationSinkBigqueryOptions {
     /**
      * Whether to use [BigQuery's partition tables](https://cloud.google.com/bigquery/docs/partitioned-tables).
@@ -18,8 +18,8 @@ public final class OrganizationSinkBigqueryOptions {
      */
     private final Boolean usePartitionedTables;
 
-    @OutputCustomType.Constructor
-    private OrganizationSinkBigqueryOptions(@OutputCustomType.Parameter("usePartitionedTables") Boolean usePartitionedTables) {
+    @CustomType.Constructor
+    private OrganizationSinkBigqueryOptions(@CustomType.Parameter("usePartitionedTables") Boolean usePartitionedTables) {
         this.usePartitionedTables = usePartitionedTables;
     }
 

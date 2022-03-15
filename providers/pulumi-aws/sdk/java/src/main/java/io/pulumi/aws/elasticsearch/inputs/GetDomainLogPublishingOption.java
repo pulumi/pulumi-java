@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticsearch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetDomainLogPublishingOption extends io.pulumi.resources.Invo
      * The CloudWatch Log Group where the logs are published.
      * 
      */
-    @InputImport(name="cloudwatchLogGroupArn", required=true)
+    @Import(name="cloudwatchLogGroupArn", required=true)
       private final String cloudwatchLogGroupArn;
 
     public String getCloudwatchLogGroupArn() {
@@ -28,7 +28,7 @@ public final class GetDomainLogPublishingOption extends io.pulumi.resources.Invo
      * Whether node to node encryption is enabled.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
@@ -39,7 +39,7 @@ public final class GetDomainLogPublishingOption extends io.pulumi.resources.Invo
      * The type of Elasticsearch log being published.
      * 
      */
-    @InputImport(name="logType", required=true)
+    @Import(name="logType", required=true)
       private final String logType;
 
     public String getLogType() {

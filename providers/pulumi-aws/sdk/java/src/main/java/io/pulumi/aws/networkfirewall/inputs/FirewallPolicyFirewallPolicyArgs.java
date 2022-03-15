@@ -8,7 +8,7 @@ import io.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyStateful
 import io.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyStatelessCustomActionArgs;
 import io.pulumi.aws.networkfirewall.inputs.FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FirewallPolicyFirewallPolicyArgs extends io.pulumi.resources.
      * Set of actions to take on a packet if it does not match any stateful rules in the policy. This can only be specified if the policy has a `stateful_engine_options` block with a `rule_order` value of `STRICT_ORDER`. You can specify one of either or neither values of `aws:drop_strict` or `aws:drop_established`, as well as any combination of `aws:alert_strict` and `aws:alert_established`.
      * 
      */
-    @InputImport(name="statefulDefaultActions")
+    @Import(name="statefulDefaultActions")
       private final @Nullable Output<List<String>> statefulDefaultActions;
 
     public Output<List<String>> getStatefulDefaultActions() {
@@ -34,7 +34,7 @@ public final class FirewallPolicyFirewallPolicyArgs extends io.pulumi.resources.
      * A configuration block that defines options on how the policy handles stateful rules. See Stateful Engine Options below for details.
      * 
      */
-    @InputImport(name="statefulEngineOptions")
+    @Import(name="statefulEngineOptions")
       private final @Nullable Output<FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs> statefulEngineOptions;
 
     public Output<FirewallPolicyFirewallPolicyStatefulEngineOptionsArgs> getStatefulEngineOptions() {
@@ -45,7 +45,7 @@ public final class FirewallPolicyFirewallPolicyArgs extends io.pulumi.resources.
      * Set of configuration blocks containing references to the stateful rule groups that are used in the policy. See Stateful Rule Group Reference below for details.
      * 
      */
-    @InputImport(name="statefulRuleGroupReferences")
+    @Import(name="statefulRuleGroupReferences")
       private final @Nullable Output<List<FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs>> statefulRuleGroupReferences;
 
     public Output<List<FirewallPolicyFirewallPolicyStatefulRuleGroupReferenceArgs>> getStatefulRuleGroupReferences() {
@@ -56,7 +56,7 @@ public final class FirewallPolicyFirewallPolicyArgs extends io.pulumi.resources.
      * Set of configuration blocks describing the custom action definitions that are available for use in the firewall policy's `stateless_default_actions`. See Stateless Custom Action below for details.
      * 
      */
-    @InputImport(name="statelessCustomActions")
+    @Import(name="statelessCustomActions")
       private final @Nullable Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionArgs>> statelessCustomActions;
 
     public Output<List<FirewallPolicyFirewallPolicyStatelessCustomActionArgs>> getStatelessCustomActions() {
@@ -68,7 +68,7 @@ public final class FirewallPolicyFirewallPolicyArgs extends io.pulumi.resources.
      * In addition, you can specify custom actions that are compatible with your standard action choice. If you want non-matching packets to be forwarded for stateful inspection, specify `aws:forward_to_sfe`.
      * 
      */
-    @InputImport(name="statelessDefaultActions", required=true)
+    @Import(name="statelessDefaultActions", required=true)
       private final Output<List<String>> statelessDefaultActions;
 
     public Output<List<String>> getStatelessDefaultActions() {
@@ -80,7 +80,7 @@ public final class FirewallPolicyFirewallPolicyArgs extends io.pulumi.resources.
      * In addition, you can specify custom actions that are compatible with your standard action choice. If you want non-matching packets to be forwarded for stateful inspection, specify `aws:forward_to_sfe`.
      * 
      */
-    @InputImport(name="statelessFragmentDefaultActions", required=true)
+    @Import(name="statelessFragmentDefaultActions", required=true)
       private final Output<List<String>> statelessFragmentDefaultActions;
 
     public Output<List<String>> getStatelessFragmentDefaultActions() {
@@ -91,7 +91,7 @@ public final class FirewallPolicyFirewallPolicyArgs extends io.pulumi.resources.
      * Set of configuration blocks containing references to the stateless rule groups that are used in the policy. See Stateless Rule Group Reference below for details.
      * 
      */
-    @InputImport(name="statelessRuleGroupReferences")
+    @Import(name="statelessRuleGroupReferences")
       private final @Nullable Output<List<FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs>> statelessRuleGroupReferences;
 
     public Output<List<FirewallPolicyFirewallPolicyStatelessRuleGroupReferenceArgs>> getStatelessRuleGroupReferences() {

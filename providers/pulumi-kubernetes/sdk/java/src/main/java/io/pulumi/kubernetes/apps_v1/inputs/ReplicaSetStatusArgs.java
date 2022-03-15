@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apps_v1.inputs.ReplicaSetConditionArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
      * The number of available replicas (ready for at least minReadySeconds) for this replica set.
      * 
      */
-    @InputImport(name="availableReplicas")
+    @Import(name="availableReplicas")
       private final @Nullable Output<Integer> availableReplicas;
 
     public Output<Integer> getAvailableReplicas() {
@@ -35,7 +35,7 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
      * Represents the latest available observations of a replica set's current state.
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<ReplicaSetConditionArgs>> conditions;
 
     public Output<List<ReplicaSetConditionArgs>> getConditions() {
@@ -46,7 +46,7 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
      * The number of pods that have labels matching the labels of the pod template of the replicaset.
      * 
      */
-    @InputImport(name="fullyLabeledReplicas")
+    @Import(name="fullyLabeledReplicas")
       private final @Nullable Output<Integer> fullyLabeledReplicas;
 
     public Output<Integer> getFullyLabeledReplicas() {
@@ -57,7 +57,7 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
      * ObservedGeneration reflects the generation of the most recently observed ReplicaSet.
      * 
      */
-    @InputImport(name="observedGeneration")
+    @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
     public Output<Integer> getObservedGeneration() {
@@ -68,7 +68,7 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
      * readyReplicas is the number of pods targeted by this ReplicaSet with a Ready Condition.
      * 
      */
-    @InputImport(name="readyReplicas")
+    @Import(name="readyReplicas")
       private final @Nullable Output<Integer> readyReplicas;
 
     public Output<Integer> getReadyReplicas() {
@@ -79,7 +79,7 @@ public final class ReplicaSetStatusArgs extends io.pulumi.resources.ResourceArgs
      * Replicas is the most recently oberved number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller/#what-is-a-replicationcontroller
      * 
      */
-    @InputImport(name="replicas", required=true)
+    @Import(name="replicas", required=true)
       private final Output<Integer> replicas;
 
     public Output<Integer> getReplicas() {

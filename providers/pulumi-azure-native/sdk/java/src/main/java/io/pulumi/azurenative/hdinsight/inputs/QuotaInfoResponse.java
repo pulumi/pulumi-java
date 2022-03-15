@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class QuotaInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The cores used by the cluster.
      * 
      */
-    @InputImport(name="coresUsed")
+    @Import(name="coresUsed")
       private final @Nullable Integer coresUsed;
 
     public Optional<Integer> getCoresUsed() {

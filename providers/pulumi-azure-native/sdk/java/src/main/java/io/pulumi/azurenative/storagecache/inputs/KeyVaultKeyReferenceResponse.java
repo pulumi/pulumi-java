@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.azurenative.storagecache.inputs.KeyVaultKeyReferenceResponseSourceVault;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class KeyVaultKeyReferenceResponse extends io.pulumi.resources.Invo
      * The URL referencing a key encryption key in Key Vault.
      * 
      */
-    @InputImport(name="keyUrl", required=true)
+    @Import(name="keyUrl", required=true)
       private final String keyUrl;
 
     public String getKeyUrl() {
@@ -32,7 +32,7 @@ public final class KeyVaultKeyReferenceResponse extends io.pulumi.resources.Invo
      * Describes a resource Id to source Key Vault.
      * 
      */
-    @InputImport(name="sourceVault", required=true)
+    @Import(name="sourceVault", required=true)
       private final KeyVaultKeyReferenceResponseSourceVault sourceVault;
 
     public KeyVaultKeyReferenceResponseSourceVault getSourceVault() {

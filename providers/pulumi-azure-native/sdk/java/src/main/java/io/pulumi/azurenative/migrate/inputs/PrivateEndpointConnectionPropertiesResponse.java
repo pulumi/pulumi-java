@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.migrate.inputs.ResourceIdResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
      * ARM id for the private endpoint resource corresponding to the connection.
      * 
      */
-    @InputImport(name="privateEndpoint", required=true)
+    @Import(name="privateEndpoint", required=true)
       private final ResourceIdResponse privateEndpoint;
 
     public ResourceIdResponse getPrivateEndpoint() {
@@ -35,7 +35,7 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
      * State of the private endpoint connection.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
@@ -46,7 +46,7 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
      * Indicates whether there is an ongoing operation on the private endpoint.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

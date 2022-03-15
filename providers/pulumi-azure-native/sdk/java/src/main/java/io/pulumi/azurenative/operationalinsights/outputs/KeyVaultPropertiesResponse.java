@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultPropertiesResponse {
     /**
      * The name of the key associated with the Log Analytics cluster.
@@ -33,12 +33,12 @@ public final class KeyVaultPropertiesResponse {
      */
     private final @Nullable String keyVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyVaultPropertiesResponse(
-        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
-        @OutputCustomType.Parameter("keyRsaSize") @Nullable Integer keyRsaSize,
-        @OutputCustomType.Parameter("keyVaultUri") @Nullable String keyVaultUri,
-        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion) {
+        @CustomType.Parameter("keyName") @Nullable String keyName,
+        @CustomType.Parameter("keyRsaSize") @Nullable Integer keyRsaSize,
+        @CustomType.Parameter("keyVaultUri") @Nullable String keyVaultUri,
+        @CustomType.Parameter("keyVersion") @Nullable String keyVersion) {
         this.keyName = keyName;
         this.keyRsaSize = keyRsaSize;
         this.keyVaultUri = keyVaultUri;

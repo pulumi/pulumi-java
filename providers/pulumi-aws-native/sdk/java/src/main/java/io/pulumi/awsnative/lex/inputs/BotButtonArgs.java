@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BotButtonArgs extends io.pulumi.resources.ResourceArgs {
      * The text that appears on the button.
      * 
      */
-    @InputImport(name="text", required=true)
+    @Import(name="text", required=true)
       private final Output<String> text;
 
     public Output<String> getText() {
@@ -32,7 +32,7 @@ public final class BotButtonArgs extends io.pulumi.resources.ResourceArgs {
      * The value returned to Amazon Lex when the user chooses this button.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

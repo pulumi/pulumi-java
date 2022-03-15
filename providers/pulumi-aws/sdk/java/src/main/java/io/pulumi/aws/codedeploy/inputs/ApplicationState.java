@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The application ID.
      * 
      */
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -31,7 +31,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the CodeDeploy application.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -42,7 +42,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The compute platform can either be `ECS`, `Lambda`, or `Server`. Default is `Server`.
      * 
      */
-    @InputImport(name="computePlatform")
+    @Import(name="computePlatform")
       private final @Nullable Output<String> computePlatform;
 
     public Output<String> getComputePlatform() {
@@ -53,7 +53,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The name for a connection to a GitHub account.
      * 
      */
-    @InputImport(name="githubAccountName")
+    @Import(name="githubAccountName")
       private final @Nullable Output<String> githubAccountName;
 
     public Output<String> getGithubAccountName() {
@@ -64,7 +64,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * Whether the user has authenticated with GitHub for the specified application.
      * 
      */
-    @InputImport(name="linkedToGithub")
+    @Import(name="linkedToGithub")
       private final @Nullable Output<Boolean> linkedToGithub;
 
     public Output<Boolean> getLinkedToGithub() {
@@ -75,7 +75,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The name of the application.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -86,7 +86,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -97,7 +97,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

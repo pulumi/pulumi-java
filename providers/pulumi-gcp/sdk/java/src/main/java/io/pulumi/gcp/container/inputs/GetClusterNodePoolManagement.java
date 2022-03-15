@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetClusterNodePoolManagement extends io.pulumi.resources.Invo
 
     public static final GetClusterNodePoolManagement Empty = new GetClusterNodePoolManagement();
 
-    @InputImport(name="autoRepair", required=true)
+    @Import(name="autoRepair", required=true)
       private final Boolean autoRepair;
 
     public Boolean getAutoRepair() {
         return this.autoRepair;
     }
 
-    @InputImport(name="autoUpgrade", required=true)
+    @Import(name="autoUpgrade", required=true)
       private final Boolean autoUpgrade;
 
     public Boolean getAutoUpgrade() {

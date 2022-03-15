@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetUptimeCheckConfigArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetUptimeCheckConfigArgs Empty = new GetUptimeCheckConfigArgs();
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="uptimeCheckConfigId", required=true)
+    @Import(name="uptimeCheckConfigId", required=true)
       private final String uptimeCheckConfigId;
 
     public String getUptimeCheckConfigId() {

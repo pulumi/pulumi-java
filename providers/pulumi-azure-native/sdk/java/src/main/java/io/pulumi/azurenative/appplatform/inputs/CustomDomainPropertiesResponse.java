@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class CustomDomainPropertiesResponse extends io.pulumi.resources.In
      * The app name of domain.
      * 
      */
-    @InputImport(name="appName", required=true)
+    @Import(name="appName", required=true)
       private final String appName;
 
     public String getAppName() {
@@ -33,7 +33,7 @@ public final class CustomDomainPropertiesResponse extends io.pulumi.resources.In
      * The bound certificate name of domain.
      * 
      */
-    @InputImport(name="certName")
+    @Import(name="certName")
       private final @Nullable String certName;
 
     public Optional<String> getCertName() {
@@ -44,7 +44,7 @@ public final class CustomDomainPropertiesResponse extends io.pulumi.resources.In
      * The thumbprint of bound certificate.
      * 
      */
-    @InputImport(name="thumbprint")
+    @Import(name="thumbprint")
       private final @Nullable String thumbprint;
 
     public Optional<String> getThumbprint() {

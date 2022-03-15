@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.serviceAccount.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class GetAccountIdTokenArgs extends io.pulumi.resources.InvokeArgs 
      * Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.   Used only when using impersonation mode.
      * 
      */
-    @InputImport(name="delegates")
+    @Import(name="delegates")
       private final @Nullable List<String> delegates;
 
     public List<String> getDelegates() {
@@ -31,7 +31,7 @@ public final class GetAccountIdTokenArgs extends io.pulumi.resources.InvokeArgs 
      * Include the verified email in the claim. Used only when using impersonation mode.
      * 
      */
-    @InputImport(name="includeEmail")
+    @Import(name="includeEmail")
       private final @Nullable Boolean includeEmail;
 
     public Optional<Boolean> getIncludeEmail() {
@@ -42,7 +42,7 @@ public final class GetAccountIdTokenArgs extends io.pulumi.resources.InvokeArgs 
      * The audience claim for the `id_token`.
      * 
      */
-    @InputImport(name="targetAudience", required=true)
+    @Import(name="targetAudience", required=true)
       private final String targetAudience;
 
     public String getTargetAudience() {
@@ -53,7 +53,7 @@ public final class GetAccountIdTokenArgs extends io.pulumi.resources.InvokeArgs 
      * The email of the service account being impersonated.  Used only when using impersonation mode.
      * 
      */
-    @InputImport(name="targetServiceAccount")
+    @Import(name="targetServiceAccount")
       private final @Nullable String targetServiceAccount;
 
     public Optional<String> getTargetServiceAccount() {

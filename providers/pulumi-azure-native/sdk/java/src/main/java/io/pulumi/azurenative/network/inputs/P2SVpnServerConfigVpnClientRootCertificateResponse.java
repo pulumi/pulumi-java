@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse extends io
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable String etag;
 
     public Optional<String> getEtag() {
@@ -33,7 +33,7 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse extends io
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -44,7 +44,7 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse extends io
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -55,7 +55,7 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse extends io
      * The provisioning state of the VPN client root certificate resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -66,7 +66,7 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse extends io
      * The certificate public data.
      * 
      */
-    @InputImport(name="publicCertData", required=true)
+    @Import(name="publicCertData", required=true)
       private final String publicCertData;
 
     public String getPublicCertData() {

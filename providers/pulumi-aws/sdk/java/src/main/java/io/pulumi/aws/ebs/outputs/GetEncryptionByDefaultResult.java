@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.ebs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEncryptionByDefaultResult {
     /**
      * Whether or not default EBS encryption is enabled. Returns as `true` or `false`.
@@ -21,10 +21,10 @@ public final class GetEncryptionByDefaultResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEncryptionByDefaultResult(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("id") String id) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("id") String id) {
         this.enabled = enabled;
         this.id = id;
     }

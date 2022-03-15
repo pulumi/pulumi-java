@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class TopicRuleErrorActionCloudwatchAlarmArgs extends io.pulumi.res
      * The CloudWatch alarm name.
      * 
      */
-    @InputImport(name="alarmName", required=true)
+    @Import(name="alarmName", required=true)
       private final Output<String> alarmName;
 
     public Output<String> getAlarmName() {
@@ -28,7 +28,7 @@ public final class TopicRuleErrorActionCloudwatchAlarmArgs extends io.pulumi.res
      * The IAM role ARN that allows access to the CloudWatch alarm.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -39,7 +39,7 @@ public final class TopicRuleErrorActionCloudwatchAlarmArgs extends io.pulumi.res
      * The reason for the alarm change.
      * 
      */
-    @InputImport(name="stateReason", required=true)
+    @Import(name="stateReason", required=true)
       private final Output<String> stateReason;
 
     public Output<String> getStateReason() {
@@ -50,7 +50,7 @@ public final class TopicRuleErrorActionCloudwatchAlarmArgs extends io.pulumi.res
      * The value of the alarm state. Acceptable values are: OK, ALARM, INSUFFICIENT_DATA.
      * 
      */
-    @InputImport(name="stateValue", required=true)
+    @Import(name="stateValue", required=true)
       private final Output<String> stateValue;
 
     public Output<String> getStateValue() {

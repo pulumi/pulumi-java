@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudiot_v1.outputs.EventNotificationConfigResponse;
 import io.pulumi.googlenative.cloudiot_v1.outputs.HttpConfigResponse;
 import io.pulumi.googlenative.cloudiot_v1.outputs.MqttConfigResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRegistryResult {
     /**
      * The credentials used to verify the device credentials. No more than 10 credentials can be bound to a single registry at a time. The verification process occurs at the time of device creation or update. If this field is empty, no verification is performed. Otherwise, the credentials of a newly created device or added credentials of an updated device should be signed with one of these registry credentials. Note, however, that existing devices will never be affected by modifications to this list of credentials: after a device has been successfully created in a registry, it should be able to connect even if its registry credentials are revoked, deleted, or modified.
@@ -51,15 +51,15 @@ public final class GetRegistryResult {
      */
     private final StateNotificationConfigResponse stateNotificationConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegistryResult(
-        @OutputCustomType.Parameter("credentials") List<RegistryCredentialResponse> credentials,
-        @OutputCustomType.Parameter("eventNotificationConfigs") List<EventNotificationConfigResponse> eventNotificationConfigs,
-        @OutputCustomType.Parameter("httpConfig") HttpConfigResponse httpConfig,
-        @OutputCustomType.Parameter("logLevel") String logLevel,
-        @OutputCustomType.Parameter("mqttConfig") MqttConfigResponse mqttConfig,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("stateNotificationConfig") StateNotificationConfigResponse stateNotificationConfig) {
+        @CustomType.Parameter("credentials") List<RegistryCredentialResponse> credentials,
+        @CustomType.Parameter("eventNotificationConfigs") List<EventNotificationConfigResponse> eventNotificationConfigs,
+        @CustomType.Parameter("httpConfig") HttpConfigResponse httpConfig,
+        @CustomType.Parameter("logLevel") String logLevel,
+        @CustomType.Parameter("mqttConfig") MqttConfigResponse mqttConfig,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("stateNotificationConfig") StateNotificationConfigResponse stateNotificationConfig) {
         this.credentials = credentials;
         this.eventNotificationConfigs = eventNotificationConfigs;
         this.httpConfig = httpConfig;

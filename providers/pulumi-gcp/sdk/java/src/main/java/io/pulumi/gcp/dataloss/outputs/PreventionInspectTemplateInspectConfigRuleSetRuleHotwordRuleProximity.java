@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity {
     /**
      * Number of characters after the finding to consider. Either this or window_before must be specified
@@ -22,10 +22,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
      */
     private final @Nullable Integer windowBefore;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity(
-        @OutputCustomType.Parameter("windowAfter") @Nullable Integer windowAfter,
-        @OutputCustomType.Parameter("windowBefore") @Nullable Integer windowBefore) {
+        @CustomType.Parameter("windowAfter") @Nullable Integer windowAfter,
+        @CustomType.Parameter("windowBefore") @Nullable Integer windowBefore) {
         this.windowAfter = windowAfter;
         this.windowBefore = windowBefore;
     }

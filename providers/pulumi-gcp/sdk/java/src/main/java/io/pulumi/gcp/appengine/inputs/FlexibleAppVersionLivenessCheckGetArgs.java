@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
      * Interval between health checks.
      * 
      */
-    @InputImport(name="checkInterval")
+    @Import(name="checkInterval")
       private final @Nullable Output<String> checkInterval;
 
     public Output<String> getCheckInterval() {
@@ -30,7 +30,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
      * Number of consecutive failed checks required before considering the VM unhealthy. Default: 4.
      * 
      */
-    @InputImport(name="failureThreshold")
+    @Import(name="failureThreshold")
       private final @Nullable Output<Double> failureThreshold;
 
     public Output<Double> getFailureThreshold() {
@@ -41,7 +41,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
      * Host header to send when performing a HTTP Readiness check. Example: "myapp.appspot.com"
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
@@ -52,7 +52,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
      * The initial delay before starting to execute the checks. Default: "300s"
      * 
      */
-    @InputImport(name="initialDelay")
+    @Import(name="initialDelay")
       private final @Nullable Output<String> initialDelay;
 
     public Output<String> getInitialDelay() {
@@ -64,7 +64,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
      * The path can refer to text matched in groupings in the URL pattern.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final Output<String> path;
 
     public Output<String> getPath() {
@@ -75,7 +75,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
      * Number of consecutive successful checks required before considering the VM healthy. Default: 2.
      * 
      */
-    @InputImport(name="successThreshold")
+    @Import(name="successThreshold")
       private final @Nullable Output<Double> successThreshold;
 
     public Output<Double> getSuccessThreshold() {
@@ -86,7 +86,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
      * Time before the check is considered failed. Default: "4s"
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {

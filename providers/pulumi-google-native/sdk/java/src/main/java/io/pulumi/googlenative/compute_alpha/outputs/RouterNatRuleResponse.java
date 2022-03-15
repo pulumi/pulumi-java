@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.RouterNatRuleActionResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouterNatRuleResponse {
     /**
      * The action to be enforced for traffic that matches this rule.
@@ -32,12 +32,12 @@ public final class RouterNatRuleResponse {
      */
     private final Integer ruleNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouterNatRuleResponse(
-        @OutputCustomType.Parameter("action") RouterNatRuleActionResponse action,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("match") String match,
-        @OutputCustomType.Parameter("ruleNumber") Integer ruleNumber) {
+        @CustomType.Parameter("action") RouterNatRuleActionResponse action,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("match") String match,
+        @CustomType.Parameter("ruleNumber") Integer ruleNumber) {
         this.action = action;
         this.description = description;
         this.match = match;

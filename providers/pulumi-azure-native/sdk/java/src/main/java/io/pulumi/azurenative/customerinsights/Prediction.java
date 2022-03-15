@@ -10,7 +10,7 @@ import io.pulumi.azurenative.customerinsights.outputs.PredictionResponseMappings
 import io.pulumi.azurenative.customerinsights.outputs.PredictionResponseSystemGeneratedEntities;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * Whether do auto analyze.
      * 
      */
-    @OutputExport(name="autoAnalyze", type=Boolean.class, parameters={})
+    @Export(name="autoAnalyze", type=Boolean.class, parameters={})
     private Output<Boolean> autoAnalyze;
 
     /**
@@ -53,7 +53,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * Description of the prediction.
      * 
      */
-    @OutputExport(name="description", type=Map.class, parameters={String.class, String.class})
+    @Export(name="description", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> description;
 
     /**
@@ -67,7 +67,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * Display name of the prediction.
      * 
      */
-    @OutputExport(name="displayName", type=Map.class, parameters={String.class, String.class})
+    @Export(name="displayName", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> displayName;
 
     /**
@@ -81,7 +81,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * The prediction grades.
      * 
      */
-    @OutputExport(name="grades", type=List.class, parameters={PredictionResponseGrades.class})
+    @Export(name="grades", type=List.class, parameters={PredictionResponseGrades.class})
     private Output</* @Nullable */ List<PredictionResponseGrades>> grades;
 
     /**
@@ -95,7 +95,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * Interaction types involved in the prediction.
      * 
      */
-    @OutputExport(name="involvedInteractionTypes", type=List.class, parameters={String.class})
+    @Export(name="involvedInteractionTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> involvedInteractionTypes;
 
     /**
@@ -109,7 +109,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * KPI types involved in the prediction.
      * 
      */
-    @OutputExport(name="involvedKpiTypes", type=List.class, parameters={String.class})
+    @Export(name="involvedKpiTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> involvedKpiTypes;
 
     /**
@@ -123,7 +123,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * Relationships involved in the prediction.
      * 
      */
-    @OutputExport(name="involvedRelationships", type=List.class, parameters={String.class})
+    @Export(name="involvedRelationships", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> involvedRelationships;
 
     /**
@@ -137,7 +137,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * Definition of the link mapping of prediction.
      * 
      */
-    @OutputExport(name="mappings", type=PredictionResponseMappings.class, parameters={})
+    @Export(name="mappings", type=PredictionResponseMappings.class, parameters={})
     private Output<PredictionResponseMappings> mappings;
 
     /**
@@ -151,7 +151,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -165,7 +165,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * Negative outcome expression.
      * 
      */
-    @OutputExport(name="negativeOutcomeExpression", type=String.class, parameters={})
+    @Export(name="negativeOutcomeExpression", type=String.class, parameters={})
     private Output<String> negativeOutcomeExpression;
 
     /**
@@ -179,7 +179,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * Positive outcome expression.
      * 
      */
-    @OutputExport(name="positiveOutcomeExpression", type=String.class, parameters={})
+    @Export(name="positiveOutcomeExpression", type=String.class, parameters={})
     private Output<String> positiveOutcomeExpression;
 
     /**
@@ -193,7 +193,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * Name of the prediction.
      * 
      */
-    @OutputExport(name="predictionName", type=String.class, parameters={})
+    @Export(name="predictionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> predictionName;
 
     /**
@@ -207,7 +207,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * Primary profile type.
      * 
      */
-    @OutputExport(name="primaryProfileType", type=String.class, parameters={})
+    @Export(name="primaryProfileType", type=String.class, parameters={})
     private Output<String> primaryProfileType;
 
     /**
@@ -221,7 +221,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * Provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -235,7 +235,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * Scope expression.
      * 
      */
-    @OutputExport(name="scopeExpression", type=String.class, parameters={})
+    @Export(name="scopeExpression", type=String.class, parameters={})
     private Output<String> scopeExpression;
 
     /**
@@ -249,7 +249,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * Score label.
      * 
      */
-    @OutputExport(name="scoreLabel", type=String.class, parameters={})
+    @Export(name="scoreLabel", type=String.class, parameters={})
     private Output<String> scoreLabel;
 
     /**
@@ -263,7 +263,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * System generated entities.
      * 
      */
-    @OutputExport(name="systemGeneratedEntities", type=PredictionResponseSystemGeneratedEntities.class, parameters={})
+    @Export(name="systemGeneratedEntities", type=PredictionResponseSystemGeneratedEntities.class, parameters={})
     private Output<PredictionResponseSystemGeneratedEntities> systemGeneratedEntities;
 
     /**
@@ -277,7 +277,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * The hub name.
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
@@ -291,7 +291,7 @@ public class Prediction extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

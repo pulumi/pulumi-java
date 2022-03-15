@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DistributionOriginS3OriginConfig {
     /**
      * The [CloudFront origin access
@@ -16,8 +16,8 @@ public final class DistributionOriginS3OriginConfig {
      */
     private final String originAccessIdentity;
 
-    @OutputCustomType.Constructor
-    private DistributionOriginS3OriginConfig(@OutputCustomType.Parameter("originAccessIdentity") String originAccessIdentity) {
+    @CustomType.Constructor
+    private DistributionOriginS3OriginConfig(@CustomType.Parameter("originAccessIdentity") String originAccessIdentity) {
         this.originAccessIdentity = originAccessIdentity;
     }
 

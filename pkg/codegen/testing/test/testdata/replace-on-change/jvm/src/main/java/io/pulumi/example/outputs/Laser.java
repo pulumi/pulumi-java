@@ -3,7 +3,7 @@
 
 package io.pulumi.example.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.example.Cat;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -11,17 +11,17 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Laser {
     private final @Nullable Cat animal;
     private final @Nullable Boolean batteries;
     private final @Nullable Double light;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Laser(
-        @OutputCustomType.Parameter("animal") @Nullable Cat animal,
-        @OutputCustomType.Parameter("batteries") @Nullable Boolean batteries,
-        @OutputCustomType.Parameter("light") @Nullable Double light) {
+        @CustomType.Parameter("animal") @Nullable Cat animal,
+        @CustomType.Parameter("batteries") @Nullable Boolean batteries,
+        @CustomType.Parameter("light") @Nullable Double light) {
         this.animal = animal;
         this.batteries = batteries;
         this.light = light;

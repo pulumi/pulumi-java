@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.MonitorConfigResponseCustomHeaders;
 import io.pulumi.azurenative.network.inputs.MonitorConfigResponseExpectedStatusCodeRanges;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
      * List of custom headers.
      * 
      */
-    @InputImport(name="customHeaders")
+    @Import(name="customHeaders")
       private final @Nullable List<MonitorConfigResponseCustomHeaders> customHeaders;
 
     public List<MonitorConfigResponseCustomHeaders> getCustomHeaders() {
@@ -37,7 +37,7 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
      * List of expected status code ranges.
      * 
      */
-    @InputImport(name="expectedStatusCodeRanges")
+    @Import(name="expectedStatusCodeRanges")
       private final @Nullable List<MonitorConfigResponseExpectedStatusCodeRanges> expectedStatusCodeRanges;
 
     public List<MonitorConfigResponseExpectedStatusCodeRanges> getExpectedStatusCodeRanges() {
@@ -48,7 +48,7 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
      * The monitor interval for endpoints in this profile. This is the interval at which Traffic Manager will check the health of each endpoint in this profile.
      * 
      */
-    @InputImport(name="intervalInSeconds")
+    @Import(name="intervalInSeconds")
       private final @Nullable Double intervalInSeconds;
 
     public Optional<Double> getIntervalInSeconds() {
@@ -59,7 +59,7 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
      * The path relative to the endpoint domain name used to probe for endpoint health.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable String path;
 
     public Optional<String> getPath() {
@@ -70,7 +70,7 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
      * The TCP port used to probe for endpoint health.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Double port;
 
     public Optional<Double> getPort() {
@@ -81,7 +81,7 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
      * The profile-level monitoring status of the Traffic Manager profile.
      * 
      */
-    @InputImport(name="profileMonitorStatus")
+    @Import(name="profileMonitorStatus")
       private final @Nullable String profileMonitorStatus;
 
     public Optional<String> getProfileMonitorStatus() {
@@ -92,7 +92,7 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
      * The protocol (HTTP, HTTPS or TCP) used to probe for endpoint health.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
@@ -103,7 +103,7 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
      * The monitor timeout for endpoints in this profile. This is the time that Traffic Manager allows endpoints in this profile to response to the health check.
      * 
      */
-    @InputImport(name="timeoutInSeconds")
+    @Import(name="timeoutInSeconds")
       private final @Nullable Double timeoutInSeconds;
 
     public Optional<Double> getTimeoutInSeconds() {
@@ -114,7 +114,7 @@ public final class MonitorConfigResponse extends io.pulumi.resources.InvokeArgs 
      * The number of consecutive failed health check that Traffic Manager tolerates before declaring an endpoint in this profile Degraded after the next failed health check.
      * 
      */
-    @InputImport(name="toleratedNumberOfFailures")
+    @Import(name="toleratedNumberOfFailures")
       private final @Nullable Double toleratedNumberOfFailures;
 
     public Optional<Double> getToleratedNumberOfFailures() {

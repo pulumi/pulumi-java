@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.VersionKind;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Used to correct mistakes in the version numbering scheme.
      * 
      */
-    @InputImport(name="epoch")
+    @Import(name="epoch")
       private final @Nullable Output<Integer> epoch;
 
     public Output<Integer> getEpoch() {
@@ -36,7 +36,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Whether this version is specifying part of an inclusive range. Grafeas does not have the capability to specify version ranges; instead we have fields that specify start version and end versions. At times this is insufficient - we also need to specify whether the version is included in the range or is excluded from the range. This boolean is expected to be set to true when the version is included in a range.
      * 
      */
-    @InputImport(name="inclusive")
+    @Import(name="inclusive")
       private final @Nullable Output<Boolean> inclusive;
 
     public Output<Boolean> getInclusive() {
@@ -47,7 +47,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Distinguishes between sentinel MIN/MAX versions and normal versions.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<VersionKind> kind;
 
     public Output<VersionKind> getKind() {
@@ -58,7 +58,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * Required only when version kind is NORMAL. The main part of the version name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
      * The iteration of the package build from the above version.
      * 
      */
-    @InputImport(name="revision")
+    @Import(name="revision")
       private final @Nullable Output<String> revision;
 
     public Output<String> getRevision() {

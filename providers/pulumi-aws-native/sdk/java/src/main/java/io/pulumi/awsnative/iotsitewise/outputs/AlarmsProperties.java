@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.iotsitewise.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AlarmsProperties {
     /**
      * The ARN of the IAM role that allows the alarm to perform actions and access AWS resources and services, such as AWS IoT Events.
@@ -22,10 +22,10 @@ public final class AlarmsProperties {
      */
     private final @Nullable String notificationLambdaArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AlarmsProperties(
-        @OutputCustomType.Parameter("alarmRoleArn") @Nullable String alarmRoleArn,
-        @OutputCustomType.Parameter("notificationLambdaArn") @Nullable String notificationLambdaArn) {
+        @CustomType.Parameter("alarmRoleArn") @Nullable String alarmRoleArn,
+        @CustomType.Parameter("notificationLambdaArn") @Nullable String notificationLambdaArn) {
         this.alarmRoleArn = alarmRoleArn;
         this.notificationLambdaArn = notificationLambdaArn;
     }

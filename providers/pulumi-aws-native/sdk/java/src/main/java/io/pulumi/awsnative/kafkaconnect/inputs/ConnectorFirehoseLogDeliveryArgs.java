@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ConnectorFirehoseLogDeliveryArgs extends io.pulumi.resources.
      * The Kinesis Data Firehose delivery stream that is the destination for log delivery.
      * 
      */
-    @InputImport(name="deliveryStream")
+    @Import(name="deliveryStream")
       private final @Nullable Output<String> deliveryStream;
 
     public Output<String> getDeliveryStream() {
@@ -34,7 +34,7 @@ public final class ConnectorFirehoseLogDeliveryArgs extends io.pulumi.resources.
      * Specifies whether the logs get sent to the specified Kinesis Data Firehose delivery stream.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {

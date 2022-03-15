@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.outputs;
 
 import io.pulumi.azurenative.servicefabric.outputs.ApplicationHealthPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterHealthPolicyResponse {
     /**
      * Defines the application health policy map used to evaluate the health of an application or one of its children entities.
@@ -42,11 +42,11 @@ public final class ClusterHealthPolicyResponse {
      */
     private final @Nullable Integer maxPercentUnhealthyNodes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterHealthPolicyResponse(
-        @OutputCustomType.Parameter("applicationHealthPolicies") @Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies,
-        @OutputCustomType.Parameter("maxPercentUnhealthyApplications") @Nullable Integer maxPercentUnhealthyApplications,
-        @OutputCustomType.Parameter("maxPercentUnhealthyNodes") @Nullable Integer maxPercentUnhealthyNodes) {
+        @CustomType.Parameter("applicationHealthPolicies") @Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies,
+        @CustomType.Parameter("maxPercentUnhealthyApplications") @Nullable Integer maxPercentUnhealthyApplications,
+        @CustomType.Parameter("maxPercentUnhealthyNodes") @Nullable Integer maxPercentUnhealthyNodes) {
         this.applicationHealthPolicies = applicationHealthPolicies;
         this.maxPercentUnhealthyApplications = maxPercentUnhealthyApplications;
         this.maxPercentUnhealthyNodes = maxPercentUnhealthyNodes;

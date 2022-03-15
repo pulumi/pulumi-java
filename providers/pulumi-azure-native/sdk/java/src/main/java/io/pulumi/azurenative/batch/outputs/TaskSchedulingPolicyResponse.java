@@ -3,16 +3,16 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TaskSchedulingPolicyResponse {
     private final String nodeFillType;
 
-    @OutputCustomType.Constructor
-    private TaskSchedulingPolicyResponse(@OutputCustomType.Parameter("nodeFillType") String nodeFillType) {
+    @CustomType.Constructor
+    private TaskSchedulingPolicyResponse(@CustomType.Parameter("nodeFillType") String nodeFillType) {
         this.nodeFillType = nodeFillType;
     }
 

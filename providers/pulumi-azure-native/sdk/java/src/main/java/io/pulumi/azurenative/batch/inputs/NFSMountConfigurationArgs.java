@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class NFSMountConfigurationArgs extends io.pulumi.resources.Resourc
      * These are 'net use' options in Windows and 'mount' options in Linux.
      * 
      */
-    @InputImport(name="mountOptions")
+    @Import(name="mountOptions")
       private final @Nullable Output<String> mountOptions;
 
     public Output<String> getMountOptions() {
@@ -29,14 +29,14 @@ public final class NFSMountConfigurationArgs extends io.pulumi.resources.Resourc
      * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
      * 
      */
-    @InputImport(name="relativeMountPath", required=true)
+    @Import(name="relativeMountPath", required=true)
       private final Output<String> relativeMountPath;
 
     public Output<String> getRelativeMountPath() {
         return this.relativeMountPath;
     }
 
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<String> source;
 
     public Output<String> getSource() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.purview.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AccountPropertiesResponseManagedResources extends io.pulumi.r
      * Gets the managed event hub namespace resource identifier.
      * 
      */
-    @InputImport(name="eventHubNamespace", required=true)
+    @Import(name="eventHubNamespace", required=true)
       private final String eventHubNamespace;
 
     public String getEventHubNamespace() {
@@ -31,7 +31,7 @@ public final class AccountPropertiesResponseManagedResources extends io.pulumi.r
      * Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.
      * 
      */
-    @InputImport(name="resourceGroup", required=true)
+    @Import(name="resourceGroup", required=true)
       private final String resourceGroup;
 
     public String getResourceGroup() {
@@ -42,7 +42,7 @@ public final class AccountPropertiesResponseManagedResources extends io.pulumi.r
      * Gets the managed storage account resource identifier.
      * 
      */
-    @InputImport(name="storageAccount", required=true)
+    @Import(name="storageAccount", required=true)
       private final String storageAccount;
 
     public String getStorageAccount() {

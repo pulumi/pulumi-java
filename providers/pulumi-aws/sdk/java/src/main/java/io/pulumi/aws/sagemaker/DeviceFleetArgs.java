@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.DeviceFleetOutputConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the fleet.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Device Fleet (must be unique).
      * 
      */
-    @InputImport(name="deviceFleetName", required=true)
+    @Import(name="deviceFleetName", required=true)
       private final Output<String> deviceFleetName;
 
     public Output<String> getDeviceFleetName() {
@@ -43,7 +43,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to create an AWS IoT Role Alias during device fleet creation. The name of the role alias generated will match this pattern: "SageMakerEdge-{DeviceFleetName}".
      * 
      */
-    @InputImport(name="enableIotRoleAlias")
+    @Import(name="enableIotRoleAlias")
       private final @Nullable Output<Boolean> enableIotRoleAlias;
 
     public Output<Boolean> getEnableIotRoleAlias() {
@@ -54,7 +54,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies details about the repository. see Output Config details below.
      * 
      */
-    @InputImport(name="outputConfig", required=true)
+    @Import(name="outputConfig", required=true)
       private final Output<DeviceFleetOutputConfigArgs> outputConfig;
 
     public Output<DeviceFleetOutputConfigArgs> getOutputConfig() {
@@ -65,7 +65,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) that has access to AWS Internet of Things (IoT).
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -76,7 +76,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

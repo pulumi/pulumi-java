@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.ManualShardingResponse;
 import io.pulumi.googlenative.testing_v1.outputs.UniformShardingResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ShardingOptionResponse {
     /**
      * Shards test cases into the specified groups of packages, classes, and/or methods.
@@ -21,10 +21,10 @@ public final class ShardingOptionResponse {
      */
     private final UniformShardingResponse uniformSharding;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ShardingOptionResponse(
-        @OutputCustomType.Parameter("manualSharding") ManualShardingResponse manualSharding,
-        @OutputCustomType.Parameter("uniformSharding") UniformShardingResponse uniformSharding) {
+        @CustomType.Parameter("manualSharding") ManualShardingResponse manualSharding,
+        @CustomType.Parameter("uniformSharding") UniformShardingResponse uniformSharding) {
         this.manualSharding = manualSharding;
         this.uniformSharding = uniformSharding;
     }

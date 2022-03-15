@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ImageDiskReferenceResponse extends io.pulumi.resources.Invoke
      * A relative uri containing either a Platform Image Repository or user image reference.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -34,7 +34,7 @@ public final class ImageDiskReferenceResponse extends io.pulumi.resources.Invoke
      * If the disk is created from an image's data disk, this is an index that indicates which of the data disks in the image to use. For OS disks, this field is null.
      * 
      */
-    @InputImport(name="lun")
+    @Import(name="lun")
       private final @Nullable Integer lun;
 
     public Optional<Integer> getLun() {

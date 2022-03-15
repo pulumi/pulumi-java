@@ -7,14 +7,14 @@ import io.pulumi.azurenative.machinelearningservices.outputs.EnvironmentImageRes
 import io.pulumi.azurenative.machinelearningservices.outputs.EnvironmentImageResponseResponseEnvironmentReference;
 import io.pulumi.azurenative.machinelearningservices.outputs.ImageAssetResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ModelResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AKSServiceResponseResponseEnvironmentImageRequest {
     /**
      * The list of assets.
@@ -47,14 +47,14 @@ public final class AKSServiceResponseResponseEnvironmentImageRequest {
      */
     private final @Nullable List<ModelResponse> models;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AKSServiceResponseResponseEnvironmentImageRequest(
-        @OutputCustomType.Parameter("assets") @Nullable List<ImageAssetResponse> assets,
-        @OutputCustomType.Parameter("driverProgram") @Nullable String driverProgram,
-        @OutputCustomType.Parameter("environment") @Nullable EnvironmentImageResponseResponseEnvironment environment,
-        @OutputCustomType.Parameter("environmentReference") @Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference,
-        @OutputCustomType.Parameter("modelIds") @Nullable List<String> modelIds,
-        @OutputCustomType.Parameter("models") @Nullable List<ModelResponse> models) {
+        @CustomType.Parameter("assets") @Nullable List<ImageAssetResponse> assets,
+        @CustomType.Parameter("driverProgram") @Nullable String driverProgram,
+        @CustomType.Parameter("environment") @Nullable EnvironmentImageResponseResponseEnvironment environment,
+        @CustomType.Parameter("environmentReference") @Nullable EnvironmentImageResponseResponseEnvironmentReference environmentReference,
+        @CustomType.Parameter("modelIds") @Nullable List<String> modelIds,
+        @CustomType.Parameter("models") @Nullable List<ModelResponse> models) {
         this.assets = assets;
         this.driverProgram = driverProgram;
         this.environment = environment;

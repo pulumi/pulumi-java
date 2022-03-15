@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iot.enums.DomainConfigurationStatus;
 import io.pulumi.awsnative.iot.inputs.DomainConfigurationAuthorizerConfigArgs;
 import io.pulumi.awsnative.iot.inputs.DomainConfigurationTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,56 +19,56 @@ public final class DomainConfigurationArgs extends io.pulumi.resources.ResourceA
 
     public static final DomainConfigurationArgs Empty = new DomainConfigurationArgs();
 
-    @InputImport(name="authorizerConfig")
+    @Import(name="authorizerConfig")
       private final @Nullable Output<DomainConfigurationAuthorizerConfigArgs> authorizerConfig;
 
     public Output<DomainConfigurationAuthorizerConfigArgs> getAuthorizerConfig() {
         return this.authorizerConfig == null ? Output.empty() : this.authorizerConfig;
     }
 
-    @InputImport(name="domainConfigurationName")
+    @Import(name="domainConfigurationName")
       private final @Nullable Output<String> domainConfigurationName;
 
     public Output<String> getDomainConfigurationName() {
         return this.domainConfigurationName == null ? Output.empty() : this.domainConfigurationName;
     }
 
-    @InputImport(name="domainConfigurationStatus")
+    @Import(name="domainConfigurationStatus")
       private final @Nullable Output<DomainConfigurationStatus> domainConfigurationStatus;
 
     public Output<DomainConfigurationStatus> getDomainConfigurationStatus() {
         return this.domainConfigurationStatus == null ? Output.empty() : this.domainConfigurationStatus;
     }
 
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
         return this.domainName == null ? Output.empty() : this.domainName;
     }
 
-    @InputImport(name="serverCertificateArns")
+    @Import(name="serverCertificateArns")
       private final @Nullable Output<List<String>> serverCertificateArns;
 
     public Output<List<String>> getServerCertificateArns() {
         return this.serverCertificateArns == null ? Output.empty() : this.serverCertificateArns;
     }
 
-    @InputImport(name="serviceType")
+    @Import(name="serviceType")
       private final @Nullable Output<DomainConfigurationServiceType> serviceType;
 
     public Output<DomainConfigurationServiceType> getServiceType() {
         return this.serviceType == null ? Output.empty() : this.serviceType;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DomainConfigurationTagArgs>> tags;
 
     public Output<List<DomainConfigurationTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="validationCertificateArn")
+    @Import(name="validationCertificateArn")
       private final @Nullable Output<String> validationCertificateArn;
 
     public Output<String> getValidationCertificateArn() {

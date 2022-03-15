@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
      * APIGroup is the group for the resource being referenced. If APIGroup is not specified, the specified Kind must be in the core API group. For any other third-party types, APIGroup is required.
      * 
      */
-    @InputImport(name="apiGroup")
+    @Import(name="apiGroup")
       private final @Nullable Output<String> apiGroup;
 
     public Output<String> getApiGroup() {
@@ -33,7 +33,7 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
      * Kind is the type of resource being referenced
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -44,7 +44,7 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
      * Name is the name of resource being referenced
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

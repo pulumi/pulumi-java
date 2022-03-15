@@ -4,7 +4,7 @@
 package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FleetRuntimeConfigurationServerProcessArgs extends io.pulumi.
      * Number of server processes using this configuration to run concurrently on an instance.
      * 
      */
-    @InputImport(name="concurrentExecutions", required=true)
+    @Import(name="concurrentExecutions", required=true)
       private final Output<Integer> concurrentExecutions;
 
     public Output<Integer> getConcurrentExecutions() {
@@ -30,7 +30,7 @@ public final class FleetRuntimeConfigurationServerProcessArgs extends io.pulumi.
      * Location of the server executable in a game build. All game builds are installed on instances at the root : for Windows instances `C:\game`, and for Linux instances `/local/game`.
      * 
      */
-    @InputImport(name="launchPath", required=true)
+    @Import(name="launchPath", required=true)
       private final Output<String> launchPath;
 
     public Output<String> getLaunchPath() {
@@ -41,7 +41,7 @@ public final class FleetRuntimeConfigurationServerProcessArgs extends io.pulumi.
      * Optional list of parameters to pass to the server executable on launch.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<String> parameters;
 
     public Output<String> getParameters() {

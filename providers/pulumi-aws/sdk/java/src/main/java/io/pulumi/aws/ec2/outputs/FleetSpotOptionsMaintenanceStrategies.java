@@ -4,12 +4,12 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.FleetSpotOptionsMaintenanceStrategiesCapacityRebalance;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FleetSpotOptionsMaintenanceStrategies {
     /**
      * Nested argument containing the capacity rebalance for your fleet request. Defined below.
@@ -17,8 +17,8 @@ public final class FleetSpotOptionsMaintenanceStrategies {
      */
     private final @Nullable FleetSpotOptionsMaintenanceStrategiesCapacityRebalance capacityRebalance;
 
-    @OutputCustomType.Constructor
-    private FleetSpotOptionsMaintenanceStrategies(@OutputCustomType.Parameter("capacityRebalance") @Nullable FleetSpotOptionsMaintenanceStrategiesCapacityRebalance capacityRebalance) {
+    @CustomType.Constructor
+    private FleetSpotOptionsMaintenanceStrategies(@CustomType.Parameter("capacityRebalance") @Nullable FleetSpotOptionsMaintenanceStrategiesCapacityRebalance capacityRebalance) {
         this.capacityRebalance = capacityRebalance;
     }
 

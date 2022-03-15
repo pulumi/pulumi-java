@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex {
     /**
      * The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
@@ -24,10 +24,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      */
     private final String pattern;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex(
-        @OutputCustomType.Parameter("groupIndexes") @Nullable List<Integer> groupIndexes,
-        @OutputCustomType.Parameter("pattern") String pattern) {
+        @CustomType.Parameter("groupIndexes") @Nullable List<Integer> groupIndexes,
+        @CustomType.Parameter("pattern") String pattern) {
         this.groupIndexes = groupIndexes;
         this.pattern = pattern;
     }

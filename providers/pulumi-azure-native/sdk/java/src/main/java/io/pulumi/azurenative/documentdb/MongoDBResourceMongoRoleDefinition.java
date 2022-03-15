@@ -9,7 +9,7 @@ import io.pulumi.azurenative.documentdb.outputs.PrivilegeResponse;
 import io.pulumi.azurenative.documentdb.outputs.RoleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class MongoDBResourceMongoRoleDefinition extends io.pulumi.resources.Cust
      * The database name for which access is being granted for this Role Definition.
      * 
      */
-    @OutputExport(name="databaseName", type=String.class, parameters={})
+    @Export(name="databaseName", type=String.class, parameters={})
     private Output</* @Nullable */ String> databaseName;
 
     /**
@@ -50,7 +50,7 @@ public class MongoDBResourceMongoRoleDefinition extends io.pulumi.resources.Cust
      * The name of the database account.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class MongoDBResourceMongoRoleDefinition extends io.pulumi.resources.Cust
      * A set of privileges contained by the Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Scopes higher than Database are not enforceable as privilege.
      * 
      */
-    @OutputExport(name="privileges", type=List.class, parameters={PrivilegeResponse.class})
+    @Export(name="privileges", type=List.class, parameters={PrivilegeResponse.class})
     private Output</* @Nullable */ List<PrivilegeResponse>> privileges;
 
     /**
@@ -78,7 +78,7 @@ public class MongoDBResourceMongoRoleDefinition extends io.pulumi.resources.Cust
      * A user-friendly name for the Role Definition. Must be unique for the database account.
      * 
      */
-    @OutputExport(name="roleName", type=String.class, parameters={})
+    @Export(name="roleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleName;
 
     /**
@@ -92,7 +92,7 @@ public class MongoDBResourceMongoRoleDefinition extends io.pulumi.resources.Cust
      * The set of roles inherited by this Role Definition.
      * 
      */
-    @OutputExport(name="roles", type=List.class, parameters={RoleResponse.class})
+    @Export(name="roles", type=List.class, parameters={RoleResponse.class})
     private Output</* @Nullable */ List<RoleResponse>> roles;
 
     /**
@@ -106,7 +106,7 @@ public class MongoDBResourceMongoRoleDefinition extends io.pulumi.resources.Cust
      * The type of Azure resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.s3objectlambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyStatusProperties {
     /**
      * Specifies whether the Object lambda Access Point Policy is Public or not. Object lambda Access Points are private by default.
@@ -17,8 +17,8 @@ public final class PolicyStatusProperties {
      */
     private final @Nullable Boolean isPublic;
 
-    @OutputCustomType.Constructor
-    private PolicyStatusProperties(@OutputCustomType.Parameter("isPublic") @Nullable Boolean isPublic) {
+    @CustomType.Constructor
+    private PolicyStatusProperties(@CustomType.Parameter("isPublic") @Nullable Boolean isPublic) {
         this.isPublic = isPublic;
     }
 

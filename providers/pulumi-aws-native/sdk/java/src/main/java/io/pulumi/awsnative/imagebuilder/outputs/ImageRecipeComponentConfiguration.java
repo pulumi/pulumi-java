@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.outputs.ImageRecipeComponentParameter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageRecipeComponentConfiguration {
     /**
      * The Amazon Resource Name (ARN) of the component.
@@ -24,10 +24,10 @@ public final class ImageRecipeComponentConfiguration {
      */
     private final @Nullable List<ImageRecipeComponentParameter> parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageRecipeComponentConfiguration(
-        @OutputCustomType.Parameter("componentArn") @Nullable String componentArn,
-        @OutputCustomType.Parameter("parameters") @Nullable List<ImageRecipeComponentParameter> parameters) {
+        @CustomType.Parameter("componentArn") @Nullable String componentArn,
+        @CustomType.Parameter("parameters") @Nullable List<ImageRecipeComponentParameter> parameters) {
         this.componentArn = componentArn;
         this.parameters = parameters;
     }

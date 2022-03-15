@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew;
 import io.pulumi.awsnative.databrew.inputs.RecipeStepArgs;
 import io.pulumi.awsnative.databrew.inputs.RecipeTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the recipe
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,21 +32,21 @@ public final class RecipeArgs extends io.pulumi.resources.ResourceArgs {
      * Recipe name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="steps", required=true)
+    @Import(name="steps", required=true)
       private final Output<List<RecipeStepArgs>> steps;
 
     public Output<List<RecipeStepArgs>> getSteps() {
         return this.steps;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<RecipeTagArgs>> tags;
 
     public Output<List<RecipeTagArgs>> getTags() {

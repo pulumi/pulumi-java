@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudhsmv2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The type of HSM module in the cluster. Currently, only `hsm1.medium` is supported.
      * 
      */
-    @InputImport(name="hsmType", required=true)
+    @Import(name="hsmType", required=true)
       private final Output<String> hsmType;
 
     public Output<String> getHsmType() {
@@ -31,7 +31,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The id of Cloud HSM v2 cluster backup to be restored.
      * 
      */
-    @InputImport(name="sourceBackupIdentifier")
+    @Import(name="sourceBackupIdentifier")
       private final @Nullable Output<String> sourceBackupIdentifier;
 
     public Output<String> getSourceBackupIdentifier() {
@@ -42,7 +42,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The IDs of subnets in which cluster will operate.
      * 
      */
-    @InputImport(name="subnetIds", required=true)
+    @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -53,7 +53,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

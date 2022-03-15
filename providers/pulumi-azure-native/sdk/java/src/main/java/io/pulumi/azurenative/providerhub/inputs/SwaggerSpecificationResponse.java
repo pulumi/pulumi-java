@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class SwaggerSpecificationResponse extends io.pulumi.resources.Invo
 
     public static final SwaggerSpecificationResponse Empty = new SwaggerSpecificationResponse();
 
-    @InputImport(name="apiVersions")
+    @Import(name="apiVersions")
       private final @Nullable List<String> apiVersions;
 
     public List<String> getApiVersions() {
         return this.apiVersions == null ? List.of() : this.apiVersions;
     }
 
-    @InputImport(name="swaggerSpecFolderUri")
+    @Import(name="swaggerSpecFolderUri")
       private final @Nullable String swaggerSpecFolderUri;
 
     public Optional<String> getSwaggerSpecFolderUri() {

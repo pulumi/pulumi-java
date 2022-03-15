@@ -4,7 +4,7 @@
 package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BrokerLogsArgs extends io.pulumi.resources.ResourceArgs {
      * Enables audit logging. Auditing is only possible for `engine_type` of `ActiveMQ`. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to `false`.
      * 
      */
-    @InputImport(name="audit")
+    @Import(name="audit")
       private final @Nullable Output<Boolean> audit;
 
     public Output<Boolean> getAudit() {
@@ -29,7 +29,7 @@ public final class BrokerLogsArgs extends io.pulumi.resources.ResourceArgs {
      * Enables general logging via CloudWatch. Defaults to `false`.
      * 
      */
-    @InputImport(name="general")
+    @Import(name="general")
       private final @Nullable Output<Boolean> general;
 
     public Output<Boolean> getGeneral() {

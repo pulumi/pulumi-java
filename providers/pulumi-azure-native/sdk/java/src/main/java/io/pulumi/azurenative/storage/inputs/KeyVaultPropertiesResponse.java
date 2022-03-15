@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * The object identifier of the current versioned Key Vault Key in use.
      * 
      */
-    @InputImport(name="currentVersionedKeyIdentifier", required=true)
+    @Import(name="currentVersionedKeyIdentifier", required=true)
       private final String currentVersionedKeyIdentifier;
 
     public String getCurrentVersionedKeyIdentifier() {
@@ -33,7 +33,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * The name of KeyVault key.
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable String keyName;
 
     public Optional<String> getKeyName() {
@@ -44,7 +44,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * The Uri of KeyVault.
      * 
      */
-    @InputImport(name="keyVaultUri")
+    @Import(name="keyVaultUri")
       private final @Nullable String keyVaultUri;
 
     public Optional<String> getKeyVaultUri() {
@@ -55,7 +55,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * The version of KeyVault key.
      * 
      */
-    @InputImport(name="keyVersion")
+    @Import(name="keyVersion")
       private final @Nullable String keyVersion;
 
     public Optional<String> getKeyVersion() {
@@ -66,7 +66,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * Timestamp of last rotation of the Key Vault Key.
      * 
      */
-    @InputImport(name="lastKeyRotationTimestamp", required=true)
+    @Import(name="lastKeyRotationTimestamp", required=true)
       private final String lastKeyRotationTimestamp;
 
     public String getLastKeyRotationTimestamp() {

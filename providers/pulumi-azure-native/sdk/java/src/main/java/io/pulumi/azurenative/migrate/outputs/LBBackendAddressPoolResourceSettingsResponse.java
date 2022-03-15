@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LBBackendAddressPoolResourceSettingsResponse {
     /**
      * Gets or sets the backend address pool name.
@@ -17,8 +17,8 @@ public final class LBBackendAddressPoolResourceSettingsResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private LBBackendAddressPoolResourceSettingsResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private LBBackendAddressPoolResourceSettingsResponse(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

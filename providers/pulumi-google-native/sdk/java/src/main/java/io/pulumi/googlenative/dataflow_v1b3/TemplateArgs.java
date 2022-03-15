@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.RuntimeEnvironmentArgs;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * The runtime environment for the job.
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable Output<RuntimeEnvironmentArgs> environment;
 
     public Output<RuntimeEnvironmentArgs> getEnvironment() {
@@ -31,7 +31,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with `gs://`.
      * 
      */
-    @InputImport(name="gcsPath", required=true)
+    @Import(name="gcsPath", required=true)
       private final Output<String> gcsPath;
 
     public Output<String> getGcsPath() {
@@ -42,7 +42,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * The job name to use for the created job.
      * 
      */
-    @InputImport(name="jobName", required=true)
+    @Import(name="jobName", required=true)
       private final Output<String> jobName;
 
     public Output<String> getJobName() {
@@ -53,7 +53,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -64,14 +64,14 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * The runtime parameters to pass to the job.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
         return this.parameters == null ? Output.empty() : this.parameters;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

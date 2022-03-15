@@ -10,7 +10,7 @@ import io.pulumi.aws.glue.outputs.JobCommand;
 import io.pulumi.aws.glue.outputs.JobExecutionProperty;
 import io.pulumi.aws.glue.outputs.JobNotificationProperty;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.Integer;
@@ -41,7 +41,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of Glue Job
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -55,7 +55,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The command of the job. Defined below.
      * 
      */
-    @OutputExport(name="command", type=JobCommand.class, parameters={})
+    @Export(name="command", type=JobCommand.class, parameters={})
     private Output<JobCommand> command;
 
     /**
@@ -69,7 +69,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The list of connections used for this job.
      * 
      */
-    @OutputExport(name="connections", type=List.class, parameters={String.class})
+    @Export(name="connections", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> connections;
 
     /**
@@ -83,7 +83,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the [Calling AWS Glue APIs in Python](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the [Special Parameters Used by AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html) topic in the developer guide.
      * 
      */
-    @OutputExport(name="defaultArguments", type=Map.class, parameters={String.class, String.class})
+    @Export(name="defaultArguments", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> defaultArguments;
 
     /**
@@ -97,7 +97,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Description of the job.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -111,7 +111,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Execution property of the job. Defined below.
      * 
      */
-    @OutputExport(name="executionProperty", type=JobExecutionProperty.class, parameters={})
+    @Export(name="executionProperty", type=JobExecutionProperty.class, parameters={})
     private Output<JobExecutionProperty> executionProperty;
 
     /**
@@ -125,7 +125,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
      * 
      */
-    @OutputExport(name="glueVersion", type=String.class, parameters={})
+    @Export(name="glueVersion", type=String.class, parameters={})
     private Output<String> glueVersion;
 
     /**
@@ -139,7 +139,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`. Use `number_of_workers` and `worker_type` arguments instead with `glue_version` `2.0` and above.
      * 
      */
-    @OutputExport(name="maxCapacity", type=Double.class, parameters={})
+    @Export(name="maxCapacity", type=Double.class, parameters={})
     private Output<Double> maxCapacity;
 
     /**
@@ -153,7 +153,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The maximum number of times to retry this job if it fails.
      * 
      */
-    @OutputExport(name="maxRetries", type=Integer.class, parameters={})
+    @Export(name="maxRetries", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxRetries;
 
     /**
@@ -167,7 +167,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The name you assign to this job. It must be unique in your account.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -181,7 +181,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Non-overridable arguments for this job, specified as name-value pairs.
      * 
      */
-    @OutputExport(name="nonOverridableArguments", type=Map.class, parameters={String.class, String.class})
+    @Export(name="nonOverridableArguments", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> nonOverridableArguments;
 
     /**
@@ -195,7 +195,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Notification property of the job. Defined below.
      * 
      */
-    @OutputExport(name="notificationProperty", type=JobNotificationProperty.class, parameters={})
+    @Export(name="notificationProperty", type=JobNotificationProperty.class, parameters={})
     private Output<JobNotificationProperty> notificationProperty;
 
     /**
@@ -209,7 +209,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The number of workers of a defined workerType that are allocated when a job runs.
      * 
      */
-    @OutputExport(name="numberOfWorkers", type=Integer.class, parameters={})
+    @Export(name="numberOfWorkers", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> numberOfWorkers;
 
     /**
@@ -223,7 +223,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The ARN of the IAM role associated with this job.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -237,7 +237,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The name of the Security Configuration to be associated with the job.
      * 
      */
-    @OutputExport(name="securityConfiguration", type=String.class, parameters={})
+    @Export(name="securityConfiguration", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityConfiguration;
 
     /**
@@ -251,7 +251,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -265,7 +265,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -279,7 +279,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The job timeout in minutes. The default is 2880 minutes (48 hours).
      * 
      */
-    @OutputExport(name="timeout", type=Integer.class, parameters={})
+    @Export(name="timeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeout;
 
     /**
@@ -293,7 +293,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.
      * 
      */
-    @OutputExport(name="workerType", type=String.class, parameters={})
+    @Export(name="workerType", type=String.class, parameters={})
     private Output</* @Nullable */ String> workerType;
 
     /**

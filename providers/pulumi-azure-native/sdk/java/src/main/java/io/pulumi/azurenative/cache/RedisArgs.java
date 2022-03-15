@@ -9,7 +9,7 @@ import io.pulumi.azurenative.cache.inputs.RedisCommonPropertiesRedisConfiguratio
 import io.pulumi.azurenative.cache.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the non-ssl Redis server port (6379) is enabled.
      * 
      */
-    @InputImport(name="enableNonSslPort")
+    @Import(name="enableNonSslPort")
       private final @Nullable Output<Boolean> enableNonSslPort;
 
     public Output<Boolean> getEnableNonSslPort() {
@@ -38,7 +38,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -49,7 +49,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * Optional: requires clients to use a specified TLS version (or higher) to connect (e,g, '1.0', '1.1', '1.2')
      * 
      */
-    @InputImport(name="minimumTlsVersion")
+    @Import(name="minimumTlsVersion")
       private final @Nullable Output<Either<String,TlsVersion>> minimumTlsVersion;
 
     public Output<Either<String,TlsVersion>> getMinimumTlsVersion() {
@@ -60,7 +60,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Redis cache.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -71,7 +71,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not public endpoint access is allowed for this cache.  Value is optional but if passed in, must be 'Enabled' or 'Disabled'. If 'Disabled', private endpoints are the exclusive access method. Default value is 'Enabled'
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
@@ -82,7 +82,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * All Redis Settings. Few possible keys: rdb-backup-enabled,rdb-storage-connection-string,rdb-backup-frequency,maxmemory-delta,maxmemory-policy,notify-keyspace-events,maxmemory-samples,slowlog-log-slower-than,slowlog-max-len,list-max-ziplist-entries,list-max-ziplist-value,hash-max-ziplist-entries,hash-max-ziplist-value,set-max-intset-entries,zset-max-ziplist-entries,zset-max-ziplist-value etc.
      * 
      */
-    @InputImport(name="redisConfiguration")
+    @Import(name="redisConfiguration")
       private final @Nullable Output<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration;
 
     public Output<RedisCommonPropertiesRedisConfigurationArgs> getRedisConfiguration() {
@@ -93,7 +93,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * The number of replicas to be created per master.
      * 
      */
-    @InputImport(name="replicasPerMaster")
+    @Import(name="replicasPerMaster")
       private final @Nullable Output<Integer> replicasPerMaster;
 
     public Output<Integer> getReplicasPerMaster() {
@@ -104,7 +104,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -115,7 +115,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * The number of shards to be created on a Premium Cluster Cache.
      * 
      */
-    @InputImport(name="shardCount")
+    @Import(name="shardCount")
       private final @Nullable Output<Integer> shardCount;
 
     public Output<Integer> getShardCount() {
@@ -126,7 +126,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU of the Redis cache to deploy.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -137,7 +137,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * Static IP address. Optionally, may be specified when deploying a Redis cache inside an existing Azure Virtual Network; auto assigned by default.
      * 
      */
-    @InputImport(name="staticIP")
+    @Import(name="staticIP")
       private final @Nullable Output<String> staticIP;
 
     public Output<String> getStaticIP() {
@@ -148,7 +148,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * The full resource ID of a subnet in a virtual network to deploy the Redis cache in. Example format: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/Microsoft.{Network|ClassicNetwork}/VirtualNetworks/vnet1/subnets/subnet1
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -159,7 +159,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -170,7 +170,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * A dictionary of tenant settings
      * 
      */
-    @InputImport(name="tenantSettings")
+    @Import(name="tenantSettings")
       private final @Nullable Output<Map<String,String>> tenantSettings;
 
     public Output<Map<String,String>> getTenantSettings() {
@@ -181,7 +181,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * A list of availability zones denoting where the resource needs to come from.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {

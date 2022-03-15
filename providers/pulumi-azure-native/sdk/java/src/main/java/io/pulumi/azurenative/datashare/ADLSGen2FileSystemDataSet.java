@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datashare.ADLSGen2FileSystemDataSetArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ADLSGen2FileSystemDataSet extends io.pulumi.resources.CustomResourc
      * Unique id for identifying a data set resource
      * 
      */
-    @OutputExport(name="dataSetId", type=String.class, parameters={})
+    @Export(name="dataSetId", type=String.class, parameters={})
     private Output<String> dataSetId;
 
     /**
@@ -49,7 +49,7 @@ public class ADLSGen2FileSystemDataSet extends io.pulumi.resources.CustomResourc
      * The file system name.
      * 
      */
-    @OutputExport(name="fileSystem", type=String.class, parameters={})
+    @Export(name="fileSystem", type=String.class, parameters={})
     private Output<String> fileSystem;
 
     /**
@@ -64,7 +64,7 @@ public class ADLSGen2FileSystemDataSet extends io.pulumi.resources.CustomResourc
      * Expected value is 'AdlsGen2FileSystem'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -79,7 +79,7 @@ public class ADLSGen2FileSystemDataSet extends io.pulumi.resources.CustomResourc
      * Name of the azure resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class ADLSGen2FileSystemDataSet extends io.pulumi.resources.CustomResourc
      * Resource group of storage account
      * 
      */
-    @OutputExport(name="resourceGroup", type=String.class, parameters={})
+    @Export(name="resourceGroup", type=String.class, parameters={})
     private Output<String> resourceGroup;
 
     /**
@@ -107,7 +107,7 @@ public class ADLSGen2FileSystemDataSet extends io.pulumi.resources.CustomResourc
      * Storage account name of the source data set
      * 
      */
-    @OutputExport(name="storageAccountName", type=String.class, parameters={})
+    @Export(name="storageAccountName", type=String.class, parameters={})
     private Output<String> storageAccountName;
 
     /**
@@ -121,7 +121,7 @@ public class ADLSGen2FileSystemDataSet extends io.pulumi.resources.CustomResourc
      * Subscription id of storage account
      * 
      */
-    @OutputExport(name="subscriptionId", type=String.class, parameters={})
+    @Export(name="subscriptionId", type=String.class, parameters={})
     private Output<String> subscriptionId;
 
     /**
@@ -135,7 +135,7 @@ public class ADLSGen2FileSystemDataSet extends io.pulumi.resources.CustomResourc
      * System Data of the Azure resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -149,7 +149,7 @@ public class ADLSGen2FileSystemDataSet extends io.pulumi.resources.CustomResourc
      * Type of the azure resource
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

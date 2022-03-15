@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.HttpHostConfigResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class HttpConfigResponse extends io.pulumi.resources.InvokeArgs {
      * description for routing.
      * 
      */
-    @InputImport(name="hosts", required=true)
+    @Import(name="hosts", required=true)
       private final List<HttpHostConfigResponse> hosts;
 
     public List<HttpHostConfigResponse> getHosts() {
@@ -34,7 +34,7 @@ public final class HttpConfigResponse extends io.pulumi.resources.InvokeArgs {
      * http gateway config name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -45,7 +45,7 @@ public final class HttpConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the port at which the service endpoint below needs to be exposed.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {

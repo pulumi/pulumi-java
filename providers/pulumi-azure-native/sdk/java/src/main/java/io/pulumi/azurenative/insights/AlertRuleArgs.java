@@ -10,7 +10,7 @@ import io.pulumi.azurenative.insights.inputs.RuleWebhookActionArgs;
 import io.pulumi.azurenative.insights.inputs.ThresholdRuleConditionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * action that is performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<Either<RuleEmailActionArgs,RuleWebhookActionArgs>> action;
 
     public Output<Either<RuleEmailActionArgs,RuleWebhookActionArgs>> getAction() {
@@ -39,7 +39,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
      */
-    @InputImport(name="actions")
+    @Import(name="actions")
       private final @Nullable Output<List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>>> actions;
 
     public Output<List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>>> getActions() {
@@ -50,7 +50,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * the condition that results in the alert rule being activated.
      * 
      */
-    @InputImport(name="condition", required=true)
+    @Import(name="condition", required=true)
       private final Output<Object> condition;
 
     public Output<Object> getCondition() {
@@ -61,7 +61,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * the description of the alert rule that will be included in the alert email.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -72,7 +72,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * the flag that indicates whether the alert rule is enabled.
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -83,7 +83,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -94,7 +94,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * the name of the alert rule.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -105,7 +105,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * the provisioning state.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
@@ -116,7 +116,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -127,7 +127,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the rule.
      * 
      */
-    @InputImport(name="ruleName")
+    @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {
@@ -138,7 +138,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

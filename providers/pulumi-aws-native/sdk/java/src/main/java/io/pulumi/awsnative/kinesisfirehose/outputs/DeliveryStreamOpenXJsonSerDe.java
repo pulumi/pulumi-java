@@ -3,24 +3,24 @@
 
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamOpenXJsonSerDe {
     private final @Nullable Boolean caseInsensitive;
     private final @Nullable Object columnToJsonKeyMappings;
     private final @Nullable Boolean convertDotsInJsonKeysToUnderscores;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamOpenXJsonSerDe(
-        @OutputCustomType.Parameter("caseInsensitive") @Nullable Boolean caseInsensitive,
-        @OutputCustomType.Parameter("columnToJsonKeyMappings") @Nullable Object columnToJsonKeyMappings,
-        @OutputCustomType.Parameter("convertDotsInJsonKeysToUnderscores") @Nullable Boolean convertDotsInJsonKeysToUnderscores) {
+        @CustomType.Parameter("caseInsensitive") @Nullable Boolean caseInsensitive,
+        @CustomType.Parameter("columnToJsonKeyMappings") @Nullable Object columnToJsonKeyMappings,
+        @CustomType.Parameter("convertDotsInJsonKeysToUnderscores") @Nullable Boolean convertDotsInJsonKeysToUnderscores) {
         this.caseInsensitive = caseInsensitive;
         this.columnToJsonKeyMappings = columnToJsonKeyMappings;
         this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;

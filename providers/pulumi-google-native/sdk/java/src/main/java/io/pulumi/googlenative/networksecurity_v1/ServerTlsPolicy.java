@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networksecurity_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networksecurity_v1.ServerTlsPolicyArgs;
@@ -25,7 +25,7 @@ public class ServerTlsPolicy extends io.pulumi.resources.CustomResource {
      *  Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.
      * 
      */
-    @OutputExport(name="allowOpen", type=Boolean.class, parameters={})
+    @Export(name="allowOpen", type=Boolean.class, parameters={})
     private Output<Boolean> allowOpen;
 
     /**
@@ -39,7 +39,7 @@ public class ServerTlsPolicy extends io.pulumi.resources.CustomResource {
      * The timestamp when the resource was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -53,7 +53,7 @@ public class ServerTlsPolicy extends io.pulumi.resources.CustomResource {
      * Free-text description of the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -67,7 +67,7 @@ public class ServerTlsPolicy extends io.pulumi.resources.CustomResource {
      * Set of label tags associated with the resource.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -81,7 +81,7 @@ public class ServerTlsPolicy extends io.pulumi.resources.CustomResource {
      *  Defines a mechanism to provision peer validation certificates for peer to peer authentication (Mutual TLS - mTLS). If not specified, client certificate will not be requested. The connection is treated as TLS and not mTLS. If `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections.
      * 
      */
-    @OutputExport(name="mtlsPolicy", type=MTLSPolicyResponse.class, parameters={})
+    @Export(name="mtlsPolicy", type=MTLSPolicyResponse.class, parameters={})
     private Output<MTLSPolicyResponse> mtlsPolicy;
 
     /**
@@ -95,7 +95,7 @@ public class ServerTlsPolicy extends io.pulumi.resources.CustomResource {
      * Name of the ServerTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/serverTlsPolicies/{server_tls_policy}`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -109,7 +109,7 @@ public class ServerTlsPolicy extends io.pulumi.resources.CustomResource {
      *  Defines a mechanism to provision server identity (public and private keys). Cannot be combined with `allow_open` as a permissive mode that allows both plain text and TLS is not supported.
      * 
      */
-    @OutputExport(name="serverCertificate", type=GoogleCloudNetworksecurityV1CertificateProviderResponse.class, parameters={})
+    @Export(name="serverCertificate", type=GoogleCloudNetworksecurityV1CertificateProviderResponse.class, parameters={})
     private Output<GoogleCloudNetworksecurityV1CertificateProviderResponse> serverCertificate;
 
     /**
@@ -123,7 +123,7 @@ public class ServerTlsPolicy extends io.pulumi.resources.CustomResource {
      * The timestamp when the resource was updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodeTemplateNodeTypeFlexibility {
     /**
      * Number of virtual CPUs to use.
@@ -28,11 +28,11 @@ public final class NodeTemplateNodeTypeFlexibility {
      */
     private final @Nullable String memory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeTemplateNodeTypeFlexibility(
-        @OutputCustomType.Parameter("cpus") @Nullable String cpus,
-        @OutputCustomType.Parameter("localSsd") @Nullable String localSsd,
-        @OutputCustomType.Parameter("memory") @Nullable String memory) {
+        @CustomType.Parameter("cpus") @Nullable String cpus,
+        @CustomType.Parameter("localSsd") @Nullable String localSsd,
+        @CustomType.Parameter("memory") @Nullable String memory) {
         this.cpus = cpus;
         this.localSsd = localSsd;
         this.memory = memory;

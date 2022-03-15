@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class ClassificationJobUserPausedDetailGetArgs extends io.pulumi.re
 
     public static final ClassificationJobUserPausedDetailGetArgs Empty = new ClassificationJobUserPausedDetailGetArgs();
 
-    @InputImport(name="jobExpiresAt")
+    @Import(name="jobExpiresAt")
       private final @Nullable Output<String> jobExpiresAt;
 
     public Output<String> getJobExpiresAt() {
         return this.jobExpiresAt == null ? Output.empty() : this.jobExpiresAt;
     }
 
-    @InputImport(name="jobImminentExpirationHealthEventArn")
+    @Import(name="jobImminentExpirationHealthEventArn")
       private final @Nullable Output<String> jobImminentExpirationHealthEventArn;
 
     public Output<String> getJobImminentExpirationHealthEventArn() {
         return this.jobImminentExpirationHealthEventArn == null ? Output.empty() : this.jobImminentExpirationHealthEventArn;
     }
 
-    @InputImport(name="jobPausedAt")
+    @Import(name="jobPausedAt")
       private final @Nullable Output<String> jobPausedAt;
 
     public Output<String> getJobPausedAt() {

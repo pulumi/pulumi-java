@@ -8,7 +8,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceS3PathArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceVpcConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,84 +24,84 @@ public final class DataSourceSharePointConfigurationArgs extends io.pulumi.resou
 
     public static final DataSourceSharePointConfigurationArgs Empty = new DataSourceSharePointConfigurationArgs();
 
-    @InputImport(name="crawlAttachments")
+    @Import(name="crawlAttachments")
       private final @Nullable Output<Boolean> crawlAttachments;
 
     public Output<Boolean> getCrawlAttachments() {
         return this.crawlAttachments == null ? Output.empty() : this.crawlAttachments;
     }
 
-    @InputImport(name="disableLocalGroups")
+    @Import(name="disableLocalGroups")
       private final @Nullable Output<Boolean> disableLocalGroups;
 
     public Output<Boolean> getDisableLocalGroups() {
         return this.disableLocalGroups == null ? Output.empty() : this.disableLocalGroups;
     }
 
-    @InputImport(name="documentTitleFieldName")
+    @Import(name="documentTitleFieldName")
       private final @Nullable Output<String> documentTitleFieldName;
 
     public Output<String> getDocumentTitleFieldName() {
         return this.documentTitleFieldName == null ? Output.empty() : this.documentTitleFieldName;
     }
 
-    @InputImport(name="exclusionPatterns")
+    @Import(name="exclusionPatterns")
       private final @Nullable Output<List<String>> exclusionPatterns;
 
     public Output<List<String>> getExclusionPatterns() {
         return this.exclusionPatterns == null ? Output.empty() : this.exclusionPatterns;
     }
 
-    @InputImport(name="fieldMappings")
+    @Import(name="fieldMappings")
       private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
         return this.fieldMappings == null ? Output.empty() : this.fieldMappings;
     }
 
-    @InputImport(name="inclusionPatterns")
+    @Import(name="inclusionPatterns")
       private final @Nullable Output<List<String>> inclusionPatterns;
 
     public Output<List<String>> getInclusionPatterns() {
         return this.inclusionPatterns == null ? Output.empty() : this.inclusionPatterns;
     }
 
-    @InputImport(name="secretArn", required=true)
+    @Import(name="secretArn", required=true)
       private final Output<String> secretArn;
 
     public Output<String> getSecretArn() {
         return this.secretArn;
     }
 
-    @InputImport(name="sharePointVersion", required=true)
+    @Import(name="sharePointVersion", required=true)
       private final Output<DataSourceSharePointConfigurationSharePointVersion> sharePointVersion;
 
     public Output<DataSourceSharePointConfigurationSharePointVersion> getSharePointVersion() {
         return this.sharePointVersion;
     }
 
-    @InputImport(name="sslCertificateS3Path")
+    @Import(name="sslCertificateS3Path")
       private final @Nullable Output<DataSourceS3PathArgs> sslCertificateS3Path;
 
     public Output<DataSourceS3PathArgs> getSslCertificateS3Path() {
         return this.sslCertificateS3Path == null ? Output.empty() : this.sslCertificateS3Path;
     }
 
-    @InputImport(name="urls", required=true)
+    @Import(name="urls", required=true)
       private final Output<List<String>> urls;
 
     public Output<List<String>> getUrls() {
         return this.urls;
     }
 
-    @InputImport(name="useChangeLog")
+    @Import(name="useChangeLog")
       private final @Nullable Output<Boolean> useChangeLog;
 
     public Output<Boolean> getUseChangeLog() {
         return this.useChangeLog == null ? Output.empty() : this.useChangeLog;
     }
 
-    @InputImport(name="vpcConfiguration")
+    @Import(name="vpcConfiguration")
       private final @Nullable Output<DataSourceVpcConfigurationArgs> vpcConfiguration;
 
     public Output<DataSourceVpcConfigurationArgs> getVpcConfiguration() {

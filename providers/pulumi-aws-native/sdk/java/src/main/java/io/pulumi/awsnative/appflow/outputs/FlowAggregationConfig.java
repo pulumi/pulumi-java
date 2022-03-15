@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowAggregationType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowAggregationConfig {
     private final @Nullable FlowAggregationType aggregationType;
 
-    @OutputCustomType.Constructor
-    private FlowAggregationConfig(@OutputCustomType.Parameter("aggregationType") @Nullable FlowAggregationType aggregationType) {
+    @CustomType.Constructor
+    private FlowAggregationConfig(@CustomType.Parameter("aggregationType") @Nullable FlowAggregationType aggregationType) {
         this.aggregationType = aggregationType;
     }
 

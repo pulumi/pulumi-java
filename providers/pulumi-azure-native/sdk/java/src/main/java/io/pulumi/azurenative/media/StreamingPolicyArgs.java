@@ -8,7 +8,7 @@ import io.pulumi.azurenative.media.inputs.CommonEncryptionCencArgs;
 import io.pulumi.azurenative.media.inputs.EnvelopeEncryptionArgs;
 import io.pulumi.azurenative.media.inputs.NoEncryptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * The Media Services account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -33,7 +33,7 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Configuration of CommonEncryptionCbcs
      * 
      */
-    @InputImport(name="commonEncryptionCbcs")
+    @Import(name="commonEncryptionCbcs")
       private final @Nullable Output<CommonEncryptionCbcsArgs> commonEncryptionCbcs;
 
     public Output<CommonEncryptionCbcsArgs> getCommonEncryptionCbcs() {
@@ -44,7 +44,7 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Configuration of CommonEncryptionCenc
      * 
      */
-    @InputImport(name="commonEncryptionCenc")
+    @Import(name="commonEncryptionCenc")
       private final @Nullable Output<CommonEncryptionCencArgs> commonEncryptionCenc;
 
     public Output<CommonEncryptionCencArgs> getCommonEncryptionCenc() {
@@ -55,7 +55,7 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Default ContentKey used by current Streaming Policy
      * 
      */
-    @InputImport(name="defaultContentKeyPolicyName")
+    @Import(name="defaultContentKeyPolicyName")
       private final @Nullable Output<String> defaultContentKeyPolicyName;
 
     public Output<String> getDefaultContentKeyPolicyName() {
@@ -66,7 +66,7 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Configuration of EnvelopeEncryption
      * 
      */
-    @InputImport(name="envelopeEncryption")
+    @Import(name="envelopeEncryption")
       private final @Nullable Output<EnvelopeEncryptionArgs> envelopeEncryption;
 
     public Output<EnvelopeEncryptionArgs> getEnvelopeEncryption() {
@@ -77,7 +77,7 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Configurations of NoEncryption
      * 
      */
-    @InputImport(name="noEncryption")
+    @Import(name="noEncryption")
       private final @Nullable Output<NoEncryptionArgs> noEncryption;
 
     public Output<NoEncryptionArgs> getNoEncryption() {
@@ -88,7 +88,7 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -99,7 +99,7 @@ public final class StreamingPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * The Streaming Policy name.
      * 
      */
-    @InputImport(name="streamingPolicyName")
+    @Import(name="streamingPolicyName")
       private final @Nullable Output<String> streamingPolicyName;
 
     public Output<String> getStreamingPolicyName() {

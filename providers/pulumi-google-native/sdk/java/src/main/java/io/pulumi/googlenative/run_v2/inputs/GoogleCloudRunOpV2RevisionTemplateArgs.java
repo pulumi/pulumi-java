@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v2.enums.GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2ContainerArgs;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2RevisionScalingArgs;
@@ -31,7 +31,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * KRM-style annotations for the resource.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
     public Output<Map<String,String>> getAnnotations() {
@@ -42,7 +42,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * Enables Confidential Cloud Run in Revisions created using this template.
      * 
      */
-    @InputImport(name="confidential")
+    @Import(name="confidential")
       private final @Nullable Output<Boolean> confidential;
 
     public Output<Boolean> getConfidential() {
@@ -53,7 +53,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * Sets the maximum number of requests that each serving instance can receive.
      * 
      */
-    @InputImport(name="containerConcurrency")
+    @Import(name="containerConcurrency")
       private final @Nullable Output<Integer> containerConcurrency;
 
     public Output<Integer> getContainerConcurrency() {
@@ -64,7 +64,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * Holds the single container that defines the unit of execution for this Revision.
      * 
      */
-    @InputImport(name="containers")
+    @Import(name="containers")
       private final @Nullable Output<List<GoogleCloudRunOpV2ContainerArgs>> containers;
 
     public Output<List<GoogleCloudRunOpV2ContainerArgs>> getContainers() {
@@ -75,7 +75,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * A reference to a customer managed encryption key (CMEK) to use to encrypt this container image. For more information, go to https://cloud.google.com/run/docs/securing/using-cmek
      * 
      */
-    @InputImport(name="encryptionKey")
+    @Import(name="encryptionKey")
       private final @Nullable Output<String> encryptionKey;
 
     public Output<String> getEncryptionKey() {
@@ -86,7 +86,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * The sandbox environment to host this Revision.
      * 
      */
-    @InputImport(name="executionEnvironment")
+    @Import(name="executionEnvironment")
       private final @Nullable Output<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> executionEnvironment;
 
     public Output<GoogleCloudRunOpV2RevisionTemplateExecutionEnvironment> getExecutionEnvironment() {
@@ -97,7 +97,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * KRM-style labels for the resource.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -108,7 +108,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * The unique name for the revision. If this field is omitted, it will be automatically generated based on the Service name.
      * 
      */
-    @InputImport(name="revision")
+    @Import(name="revision")
       private final @Nullable Output<String> revision;
 
     public Output<String> getRevision() {
@@ -119,7 +119,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * Scaling settings for this Revision.
      * 
      */
-    @InputImport(name="scaling")
+    @Import(name="scaling")
       private final @Nullable Output<GoogleCloudRunOpV2RevisionScalingArgs> scaling;
 
     public Output<GoogleCloudRunOpV2RevisionScalingArgs> getScaling() {
@@ -130,7 +130,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * Email address of the IAM service account associated with the revision of the service. The service account represents the identity of the running revision, and determines what permissions the revision has. If not provided, the revision will use the project's default service account.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
@@ -141,7 +141,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * Max allowed time for an instance to respond to a request.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {
@@ -152,7 +152,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * A list of Volumes to make available to containers.
      * 
      */
-    @InputImport(name="volumes")
+    @Import(name="volumes")
       private final @Nullable Output<List<GoogleCloudRunOpV2VolumeArgs>> volumes;
 
     public Output<List<GoogleCloudRunOpV2VolumeArgs>> getVolumes() {
@@ -163,7 +163,7 @@ public final class GoogleCloudRunOpV2RevisionTemplateArgs extends io.pulumi.reso
      * VPC Access configuration to use for this Revision. For more information, visit https://cloud.google.com/run/docs/configuring/connecting-vpc.
      * 
      */
-    @InputImport(name="vpcAccess")
+    @Import(name="vpcAccess")
       private final @Nullable Output<GoogleCloudRunOpV2VpcAccessArgs> vpcAccess;
 
     public Output<GoogleCloudRunOpV2VpcAccessArgs> getVpcAccess() {

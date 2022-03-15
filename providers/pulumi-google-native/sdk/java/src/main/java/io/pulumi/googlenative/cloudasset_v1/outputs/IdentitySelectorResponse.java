@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudasset_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IdentitySelectorResponse {
     /**
      * The identity appear in the form of principals in [IAM policy binding](https://cloud.google.com/iam/reference/rest/v1/Binding). The examples of supported forms are: "user:mike@example.com", "group:admins@example.com", "domain:google.com", "serviceAccount:my-project-id@appspot.gserviceaccount.com". Notice that wildcard characters (such as * and ?) are not supported. You must give a specific identity.
@@ -15,8 +15,8 @@ public final class IdentitySelectorResponse {
      */
     private final String identity;
 
-    @OutputCustomType.Constructor
-    private IdentitySelectorResponse(@OutputCustomType.Parameter("identity") String identity) {
+    @CustomType.Constructor
+    private IdentitySelectorResponse(@CustomType.Parameter("identity") String identity) {
         this.identity = identity;
     }
 

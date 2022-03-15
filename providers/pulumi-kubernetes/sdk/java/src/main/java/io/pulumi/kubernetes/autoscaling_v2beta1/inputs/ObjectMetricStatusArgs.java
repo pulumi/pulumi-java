@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.autoscaling_v2beta1.inputs.CrossVersionObjectReferenceArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
      * averageValue is the current value of the average of the metric across all relevant pods (as a quantity)
      * 
      */
-    @InputImport(name="averageValue")
+    @Import(name="averageValue")
       private final @Nullable Output<String> averageValue;
 
     public Output<String> getAverageValue() {
@@ -35,7 +35,7 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
      * currentValue is the current value of the metric (as a quantity).
      * 
      */
-    @InputImport(name="currentValue", required=true)
+    @Import(name="currentValue", required=true)
       private final Output<String> currentValue;
 
     public Output<String> getCurrentValue() {
@@ -46,7 +46,7 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
      * metricName is the name of the metric in question.
      * 
      */
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -57,7 +57,7 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
      * selector is the string-encoded form of a standard kubernetes label selector for the given metric When set in the ObjectMetricSource, it is passed as an additional parameter to the metrics server for more specific metrics scoping. When unset, just the metricName will be used to gather metrics.
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;
 
     public Output<LabelSelectorArgs> getSelector() {
@@ -68,7 +68,7 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
      * target is the described Kubernetes object.
      * 
      */
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final Output<CrossVersionObjectReferenceArgs> target;
 
     public Output<CrossVersionObjectReferenceArgs> getTarget() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigquery_v2.RoutineArgs;
@@ -28,7 +28,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * Optional.
      * 
      */
-    @OutputExport(name="arguments", type=List.class, parameters={ArgumentResponse.class})
+    @Export(name="arguments", type=List.class, parameters={ArgumentResponse.class})
     private Output<List<ArgumentResponse>> arguments;
 
     /**
@@ -42,7 +42,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * The time when this routine was created, in milliseconds since the epoch.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -56,7 +56,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * The body of the routine. For functions, this is the expression in the AS clause. If language=SQL, it is the substring inside (but excluding) the parentheses. For example, for the function created with the following statement: `CREATE FUNCTION JoinLines(x string, y string) as (concat(x, "\n", y))` The definition_body is `concat(x, "\n", y)` (\n is not replaced with linebreak). If language=JAVASCRIPT, it is the evaluated string in the AS clause. For example, for the function created with the following statement: `CREATE FUNCTION f() RETURNS STRING LANGUAGE js AS 'return "\n";\n'` The definition_body is `return "\n";\n` Note that both \n are replaced with linebreaks.
      * 
      */
-    @OutputExport(name="definitionBody", type=String.class, parameters={})
+    @Export(name="definitionBody", type=String.class, parameters={})
     private Output<String> definitionBody;
 
     /**
@@ -70,7 +70,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * Optional. The description of the routine, if defined.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -84,7 +84,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * Optional. The determinism level of the JavaScript UDF, if defined.
      * 
      */
-    @OutputExport(name="determinismLevel", type=String.class, parameters={})
+    @Export(name="determinismLevel", type=String.class, parameters={})
     private Output<String> determinismLevel;
 
     /**
@@ -98,7 +98,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * A hash of this resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -112,7 +112,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * Optional. If language = "JAVASCRIPT", this field stores the path of the imported JAVASCRIPT libraries.
      * 
      */
-    @OutputExport(name="importedLibraries", type=List.class, parameters={String.class})
+    @Export(name="importedLibraries", type=List.class, parameters={String.class})
     private Output<List<String>> importedLibraries;
 
     /**
@@ -126,7 +126,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * Optional. Defaults to "SQL".
      * 
      */
-    @OutputExport(name="language", type=String.class, parameters={})
+    @Export(name="language", type=String.class, parameters={})
     private Output<String> language;
 
     /**
@@ -140,7 +140,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * The time when this routine was last modified, in milliseconds since the epoch.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
@@ -154,7 +154,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * Optional. Can be set only if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return table type is inferred from definition_body at query time in each query that references this routine. If present, then the columns in the evaluated table result will be cast to match the column types specificed in return table type, at query time.
      * 
      */
-    @OutputExport(name="returnTableType", type=StandardSqlTableTypeResponse.class, parameters={})
+    @Export(name="returnTableType", type=StandardSqlTableTypeResponse.class, parameters={})
     private Output<StandardSqlTableTypeResponse> returnTableType;
 
     /**
@@ -168,7 +168,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * Optional if language = "SQL"; required otherwise. Cannot be set if routine_type = "TABLE_VALUED_FUNCTION". If absent, the return type is inferred from definition_body at query time in each query that references this routine. If present, then the evaluated result will be cast to the specified returned type at query time. For example, for the functions created with the following statements: * `CREATE FUNCTION Add(x FLOAT64, y FLOAT64) RETURNS FLOAT64 AS (x + y);` * `CREATE FUNCTION Increment(x FLOAT64) AS (Add(x, 1));` * `CREATE FUNCTION Decrement(x FLOAT64) RETURNS FLOAT64 AS (Add(x, -1));` The return_type is `{type_kind: "FLOAT64"}` for `Add` and `Decrement`, and is absent for `Increment` (inferred as FLOAT64 at query time). Suppose the function `Add` is replaced by `CREATE OR REPLACE FUNCTION Add(x INT64, y INT64) AS (x + y);` Then the inferred return type of `Increment` is automatically changed to INT64 at query time, while the return type of `Decrement` remains FLOAT64.
      * 
      */
-    @OutputExport(name="returnType", type=StandardSqlDataTypeResponse.class, parameters={})
+    @Export(name="returnType", type=StandardSqlDataTypeResponse.class, parameters={})
     private Output<StandardSqlDataTypeResponse> returnType;
 
     /**
@@ -182,7 +182,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * Reference describing the ID of this routine.
      * 
      */
-    @OutputExport(name="routineReference", type=RoutineReferenceResponse.class, parameters={})
+    @Export(name="routineReference", type=RoutineReferenceResponse.class, parameters={})
     private Output<RoutineReferenceResponse> routineReference;
 
     /**
@@ -196,7 +196,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * The type of routine.
      * 
      */
-    @OutputExport(name="routineType", type=String.class, parameters={})
+    @Export(name="routineType", type=String.class, parameters={})
     private Output<String> routineType;
 
     /**
@@ -210,7 +210,7 @@ public class Routine extends io.pulumi.resources.CustomResource {
      * Optional. Can be set for procedures only. If true (default), the definition body will be validated in the creation and the updates of the procedure. For procedures with an argument of ANY TYPE, the definition body validtion is not supported at creation/update time, and thus this field must be set to false explicitly.
      * 
      */
-    @OutputExport(name="strictMode", type=Boolean.class, parameters={})
+    @Export(name="strictMode", type=Boolean.class, parameters={})
     private Output<Boolean> strictMode;
 
     /**

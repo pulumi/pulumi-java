@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.secretsmanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSecretRotationArgs extends io.pulumi.resources.InvokeArgs 
      * Specifies the secret containing the version that you want to retrieve. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret.
      * 
      */
-    @InputImport(name="secretId", required=true)
+    @Import(name="secretId", required=true)
       private final String secretId;
 
     public String getSecretId() {

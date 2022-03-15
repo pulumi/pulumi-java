@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFile;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate {
     /**
      * Optional arguments to pass to the source during execution.
@@ -39,13 +39,13 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate {
      */
     private final @Nullable String script;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate(
-        @OutputCustomType.Parameter("args") @Nullable List<String> args,
-        @OutputCustomType.Parameter("file") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFile file,
-        @OutputCustomType.Parameter("interpreter") String interpreter,
-        @OutputCustomType.Parameter("outputFilePath") @Nullable String outputFilePath,
-        @OutputCustomType.Parameter("script") @Nullable String script) {
+        @CustomType.Parameter("args") @Nullable List<String> args,
+        @CustomType.Parameter("file") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFile file,
+        @CustomType.Parameter("interpreter") String interpreter,
+        @CustomType.Parameter("outputFilePath") @Nullable String outputFilePath,
+        @CustomType.Parameter("script") @Nullable String script) {
         this.args = args;
         this.file = file;
         this.interpreter = interpreter;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataBoxDiskCopyProgressResponse {
     /**
      * Bytes copied during the copy of disk.
@@ -32,12 +32,12 @@ public final class DataBoxDiskCopyProgressResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataBoxDiskCopyProgressResponse(
-        @OutputCustomType.Parameter("bytesCopied") Double bytesCopied,
-        @OutputCustomType.Parameter("percentComplete") Integer percentComplete,
-        @OutputCustomType.Parameter("serialNumber") String serialNumber,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("bytesCopied") Double bytesCopied,
+        @CustomType.Parameter("percentComplete") Integer percentComplete,
+        @CustomType.Parameter("serialNumber") String serialNumber,
+        @CustomType.Parameter("status") String status) {
         this.bytesCopied = bytesCopied;
         this.percentComplete = percentComplete;
         this.serialNumber = serialNumber;

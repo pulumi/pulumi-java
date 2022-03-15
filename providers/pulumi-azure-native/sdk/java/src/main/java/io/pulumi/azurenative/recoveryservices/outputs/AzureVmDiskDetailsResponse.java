@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureVmDiskDetailsResponse {
     /**
      * The DiskEncryptionSet ARM ID.
@@ -57,17 +57,17 @@ public final class AzureVmDiskDetailsResponse {
      */
     private final @Nullable String vhdType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureVmDiskDetailsResponse(
-        @OutputCustomType.Parameter("diskEncryptionSetId") @Nullable String diskEncryptionSetId,
-        @OutputCustomType.Parameter("diskId") @Nullable String diskId,
-        @OutputCustomType.Parameter("lunId") @Nullable String lunId,
-        @OutputCustomType.Parameter("maxSizeMB") @Nullable String maxSizeMB,
-        @OutputCustomType.Parameter("targetDiskLocation") @Nullable String targetDiskLocation,
-        @OutputCustomType.Parameter("targetDiskName") @Nullable String targetDiskName,
-        @OutputCustomType.Parameter("vhdId") @Nullable String vhdId,
-        @OutputCustomType.Parameter("vhdName") @Nullable String vhdName,
-        @OutputCustomType.Parameter("vhdType") @Nullable String vhdType) {
+        @CustomType.Parameter("diskEncryptionSetId") @Nullable String diskEncryptionSetId,
+        @CustomType.Parameter("diskId") @Nullable String diskId,
+        @CustomType.Parameter("lunId") @Nullable String lunId,
+        @CustomType.Parameter("maxSizeMB") @Nullable String maxSizeMB,
+        @CustomType.Parameter("targetDiskLocation") @Nullable String targetDiskLocation,
+        @CustomType.Parameter("targetDiskName") @Nullable String targetDiskName,
+        @CustomType.Parameter("vhdId") @Nullable String vhdId,
+        @CustomType.Parameter("vhdName") @Nullable String vhdName,
+        @CustomType.Parameter("vhdType") @Nullable String vhdType) {
         this.diskEncryptionSetId = diskEncryptionSetId;
         this.diskId = diskId;
         this.lunId = lunId;

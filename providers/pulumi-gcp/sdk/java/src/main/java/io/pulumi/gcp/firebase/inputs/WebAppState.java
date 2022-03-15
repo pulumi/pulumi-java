@@ -4,7 +4,7 @@
 package io.pulumi.gcp.firebase.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WebAppState extends io.pulumi.resources.ResourceArgs {
      * token, as the data format is not specified.
      * 
      */
-    @InputImport(name="appId")
+    @Import(name="appId")
       private final @Nullable Output<String> appId;
 
     public Output<String> getAppId() {
@@ -30,7 +30,7 @@ public final class WebAppState extends io.pulumi.resources.ResourceArgs {
      * The user-assigned display name of the App.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -41,7 +41,7 @@ public final class WebAppState extends io.pulumi.resources.ResourceArgs {
      * The fully qualified resource name of the App, for example: projects/projectId/webApps/appId
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class WebAppState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

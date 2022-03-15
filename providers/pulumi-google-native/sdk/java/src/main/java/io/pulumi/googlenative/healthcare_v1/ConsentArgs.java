@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1.enums.ConsentState;
 import io.pulumi.googlenative.healthcare_v1.inputs.GoogleCloudHealthcareV1ConsentPolicyArgs;
 import java.lang.String;
@@ -22,21 +22,21 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the Consent artifact that contains proof of the end user's consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`.
      * 
      */
-    @InputImport(name="consentArtifact", required=true)
+    @Import(name="consentArtifact", required=true)
       private final Output<String> consentArtifact;
 
     public Output<String> getConsentArtifact() {
         return this.consentArtifact;
     }
 
-    @InputImport(name="consentStoreId", required=true)
+    @Import(name="consentStoreId", required=true)
       private final Output<String> consentStoreId;
 
     public Output<String> getConsentStoreId() {
         return this.consentStoreId;
     }
 
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
     public Output<String> getDatasetId() {
@@ -47,14 +47,14 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
      * Timestamp in UTC of when this Consent is considered expired.
      * 
      */
-    @InputImport(name="expireTime")
+    @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
 
     public Output<String> getExpireTime() {
         return this.expireTime == null ? Output.empty() : this.expireTime;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -65,7 +65,7 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. User-supplied key-value pairs used to organize Consent resources. Metadata keys must: - be between 1 and 63 characters long - have a UTF-8 encoding of maximum 128 bytes - begin with a letter - consist of up to 63 characters including lowercase letters, numeric characters, underscores, and dashes Metadata values must be: - be between 1 and 63 characters long - have a UTF-8 encoding of maximum 128 bytes - consist of up to 63 characters including lowercase letters, numeric characters, underscores, and dashes No more than 64 metadata entries can be associated with a given consent.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -76,7 +76,7 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
      * Resource name of the Consent, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consents/{consent_id}`. Cannot be changed after creation.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -87,14 +87,14 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Represents a user's consent in terms of the resources that can be accessed and under what conditions.
      * 
      */
-    @InputImport(name="policies")
+    @Import(name="policies")
       private final @Nullable Output<List<GoogleCloudHealthcareV1ConsentPolicyArgs>> policies;
 
     public Output<List<GoogleCloudHealthcareV1ConsentPolicyArgs>> getPolicies() {
         return this.policies == null ? Output.empty() : this.policies;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -105,7 +105,7 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates the current state of this Consent.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final Output<ConsentState> state;
 
     public Output<ConsentState> getState() {
@@ -116,7 +116,7 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
      * Input only. The time to live for this Consent from when it is created.
      * 
      */
-    @InputImport(name="ttl")
+    @Import(name="ttl")
       private final @Nullable Output<String> ttl;
 
     public Output<String> getTtl() {
@@ -127,7 +127,7 @@ public final class ConsentArgs extends io.pulumi.resources.ResourceArgs {
      * User's UUID provided by the client.
      * 
      */
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final Output<String> userId;
 
     public Output<String> getUserId() {

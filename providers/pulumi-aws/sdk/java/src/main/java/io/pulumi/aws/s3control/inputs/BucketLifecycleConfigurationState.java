@@ -5,7 +5,7 @@ package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BucketLifecycleConfigurationState extends io.pulumi.resources
      * Amazon Resource Name (ARN) of the bucket.
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -31,7 +31,7 @@ public final class BucketLifecycleConfigurationState extends io.pulumi.resources
      * Configuration block(s) containing lifecycle rules for the bucket.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<BucketLifecycleConfigurationRuleGetArgs>> rules;
 
     public Output<List<BucketLifecycleConfigurationRuleGetArgs>> getRules() {

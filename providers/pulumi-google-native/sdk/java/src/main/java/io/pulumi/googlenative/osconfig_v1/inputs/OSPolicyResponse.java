@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceGroupResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class OSPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.
      * 
      */
-    @InputImport(name="allowNoResourceGroupMatch", required=true)
+    @Import(name="allowNoResourceGroupMatch", required=true)
       private final Boolean allowNoResourceGroupMatch;
 
     public Boolean getAllowNoResourceGroupMatch() {
@@ -34,7 +34,7 @@ public final class OSPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Policy description. Length of the description is limited to 1024 characters.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -45,7 +45,7 @@ public final class OSPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Policy mode
      * 
      */
-    @InputImport(name="mode", required=true)
+    @Import(name="mode", required=true)
       private final String mode;
 
     public String getMode() {
@@ -56,7 +56,7 @@ public final class OSPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * List of resource groups for the policy. For a particular VM, resource groups are evaluated in the order specified and the first resource group that is applicable is selected and the rest are ignored. If none of the resource groups are applicable for a VM, the VM is considered to be non-compliant w.r.t this policy. This behavior can be toggled by the flag `allow_no_resource_group_match`
      * 
      */
-    @InputImport(name="resourceGroups", required=true)
+    @Import(name="resourceGroups", required=true)
       private final List<OSPolicyResourceGroupResponse> resourceGroups;
 
     public List<OSPolicyResourceGroupResponse> getResourceGroups() {

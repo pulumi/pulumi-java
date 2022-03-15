@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.consumption.outputs;
 
 import io.pulumi.azurenative.consumption.outputs.BudgetComparisonExpressionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BudgetFilterPropertiesResponse {
     /**
      * Has comparison expression for a dimension
@@ -22,10 +22,10 @@ public final class BudgetFilterPropertiesResponse {
      */
     private final @Nullable BudgetComparisonExpressionResponse tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetFilterPropertiesResponse(
-        @OutputCustomType.Parameter("dimensions") @Nullable BudgetComparisonExpressionResponse dimensions,
-        @OutputCustomType.Parameter("tags") @Nullable BudgetComparisonExpressionResponse tags) {
+        @CustomType.Parameter("dimensions") @Nullable BudgetComparisonExpressionResponse dimensions,
+        @CustomType.Parameter("tags") @Nullable BudgetComparisonExpressionResponse tags) {
         this.dimensions = dimensions;
         this.tags = tags;
     }

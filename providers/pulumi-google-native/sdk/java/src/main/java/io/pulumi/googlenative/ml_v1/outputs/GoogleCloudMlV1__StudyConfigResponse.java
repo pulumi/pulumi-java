@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_StudyConfig_MetricSpecResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_StudyConfig_ParameterSpecResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__AutomatedStoppingConfigResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1__StudyConfigResponse {
     /**
      * The search algorithm specified for the study.
@@ -34,12 +34,12 @@ public final class GoogleCloudMlV1__StudyConfigResponse {
      */
     private final List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1__StudyConfigResponse(
-        @OutputCustomType.Parameter("algorithm") String algorithm,
-        @OutputCustomType.Parameter("automatedStoppingConfig") GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig,
-        @OutputCustomType.Parameter("metrics") List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics,
-        @OutputCustomType.Parameter("parameters") List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters) {
+        @CustomType.Parameter("algorithm") String algorithm,
+        @CustomType.Parameter("automatedStoppingConfig") GoogleCloudMlV1__AutomatedStoppingConfigResponse automatedStoppingConfig,
+        @CustomType.Parameter("metrics") List<GoogleCloudMlV1_StudyConfig_MetricSpecResponse> metrics,
+        @CustomType.Parameter("parameters") List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> parameters) {
         this.algorithm = algorithm;
         this.automatedStoppingConfig = automatedStoppingConfig;
         this.metrics = metrics;

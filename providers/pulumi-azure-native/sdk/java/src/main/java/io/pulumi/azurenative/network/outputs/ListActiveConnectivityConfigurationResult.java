@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ActiveConnectivityConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListActiveConnectivityConfigurationResult {
     /**
      * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
@@ -24,10 +24,10 @@ public final class ListActiveConnectivityConfigurationResult {
      */
     private final @Nullable List<ActiveConnectivityConfigurationResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListActiveConnectivityConfigurationResult(
-        @OutputCustomType.Parameter("skipToken") @Nullable String skipToken,
-        @OutputCustomType.Parameter("value") @Nullable List<ActiveConnectivityConfigurationResponse> value) {
+        @CustomType.Parameter("skipToken") @Nullable String skipToken,
+        @CustomType.Parameter("value") @Nullable List<ActiveConnectivityConfigurationResponse> value) {
         this.skipToken = skipToken;
         this.value = value;
     }

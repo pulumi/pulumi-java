@@ -6,7 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleFilterAndGetArgs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleFilterTagGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class BucketReplicationConfigRuleFilterGetArgs extends io.pulumi.re
      * A configuration block for specifying rule filters. This element is required only if you specify more than one filter. See and below for more details.
      * 
      */
-    @InputImport(name="and")
+    @Import(name="and")
       private final @Nullable Output<BucketReplicationConfigRuleFilterAndGetArgs> and;
 
     public Output<BucketReplicationConfigRuleFilterAndGetArgs> getAnd() {
@@ -31,7 +31,7 @@ public final class BucketReplicationConfigRuleFilterGetArgs extends io.pulumi.re
      * An object key name prefix that identifies subset of objects to which the rule applies. Must be less than or equal to 1024 characters in length.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
@@ -42,7 +42,7 @@ public final class BucketReplicationConfigRuleFilterGetArgs extends io.pulumi.re
      * A configuration block for specifying a tag key and value documented below.
      * 
      */
-    @InputImport(name="tag")
+    @Import(name="tag")
       private final @Nullable Output<BucketReplicationConfigRuleFilterTagGetArgs> tag;
 
     public Output<BucketReplicationConfigRuleFilterTagGetArgs> getTag() {

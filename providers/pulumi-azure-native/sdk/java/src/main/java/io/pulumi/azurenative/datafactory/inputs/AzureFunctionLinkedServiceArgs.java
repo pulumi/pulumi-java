@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -42,7 +42,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * Type of authentication (Required to specify MSI) used to connect to AzureFunction. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="authentication")
+    @Import(name="authentication")
       private final @Nullable Output<Object> authentication;
 
     public Output<Object> getAuthentication() {
@@ -53,7 +53,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -64,7 +64,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * The credential reference containing authentication information.
      * 
      */
-    @InputImport(name="credential")
+    @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
     public Output<CredentialReferenceArgs> getCredential() {
@@ -75,7 +75,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -86,7 +86,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -97,7 +97,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * The endpoint of the Azure Function App. URL will be in the format https://<accountName>.azurewebsites.net.
      * 
      */
-    @InputImport(name="functionAppUrl", required=true)
+    @Import(name="functionAppUrl", required=true)
       private final Output<Object> functionAppUrl;
 
     public Output<Object> getFunctionAppUrl() {
@@ -108,7 +108,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * Function or Host key for Azure Function App.
      * 
      */
-    @InputImport(name="functionKey")
+    @Import(name="functionKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> functionKey;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getFunctionKey() {
@@ -119,7 +119,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -130,7 +130,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * Allowed token audiences for azure function.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<Object> resourceId;
 
     public Output<Object> getResourceId() {
@@ -142,7 +142,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
      * Expected value is 'AzureFunction'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

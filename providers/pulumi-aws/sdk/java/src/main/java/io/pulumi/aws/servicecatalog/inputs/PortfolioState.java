@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class PortfolioState extends io.pulumi.resources.ResourceArgs {
 
     public static final PortfolioState Empty = new PortfolioState();
 
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn == null ? Output.empty() : this.arn;
     }
 
-    @InputImport(name="createdTime")
+    @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
@@ -33,7 +33,7 @@ public final class PortfolioState extends io.pulumi.resources.ResourceArgs {
      * Description of the portfolio
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class PortfolioState extends io.pulumi.resources.ResourceArgs {
      * The name of the portfolio.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class PortfolioState extends io.pulumi.resources.ResourceArgs {
      * Name of the person or organization who owns the portfolio.
      * 
      */
-    @InputImport(name="providerName")
+    @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
     public Output<String> getProviderName() {
@@ -66,7 +66,7 @@ public final class PortfolioState extends io.pulumi.resources.ResourceArgs {
      * Tags to apply to the connection. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -77,7 +77,7 @@ public final class PortfolioState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

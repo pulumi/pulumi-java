@@ -8,7 +8,7 @@ import io.pulumi.aws.signer.inputs.SigningJobRevocationRecordGetArgs;
 import io.pulumi.aws.signer.inputs.SigningJobSignedObjectGetArgs;
 import io.pulumi.aws.signer.inputs.SigningJobSourceGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was completed.
      * 
      */
-    @InputImport(name="completedAt")
+    @Import(name="completedAt")
       private final @Nullable Output<String> completedAt;
 
     public Output<String> getCompletedAt() {
@@ -35,7 +35,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) that the signing job was created.
      * 
      */
-    @InputImport(name="createdAt")
+    @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
@@ -46,7 +46,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * The S3 bucket in which to save your signed object. See Destination below for details.
      * 
      */
-    @InputImport(name="destination")
+    @Import(name="destination")
       private final @Nullable Output<SigningJobDestinationGetArgs> destination;
 
     public Output<SigningJobDestinationGetArgs> getDestination() {
@@ -57,7 +57,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * Set this argument to `true` to ignore signing job failures and retrieve failed status and reason. Default `false`.
      * 
      */
-    @InputImport(name="ignoreSigningJobFailure")
+    @Import(name="ignoreSigningJobFailure")
       private final @Nullable Output<Boolean> ignoreSigningJobFailure;
 
     public Output<Boolean> getIgnoreSigningJobFailure() {
@@ -68,7 +68,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * The ID of the signing job on output.
      * 
      */
-    @InputImport(name="jobId")
+    @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
     public Output<String> getJobId() {
@@ -79,7 +79,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * The IAM entity that initiated the signing job.
      * 
      */
-    @InputImport(name="jobInvoker")
+    @Import(name="jobInvoker")
       private final @Nullable Output<String> jobInvoker;
 
     public Output<String> getJobInvoker() {
@@ -90,7 +90,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * The AWS account ID of the job owner.
      * 
      */
-    @InputImport(name="jobOwner")
+    @Import(name="jobOwner")
       private final @Nullable Output<String> jobOwner;
 
     public Output<String> getJobOwner() {
@@ -101,7 +101,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * A human-readable name for the signing platform associated with the signing job.
      * 
      */
-    @InputImport(name="platformDisplayName")
+    @Import(name="platformDisplayName")
       private final @Nullable Output<String> platformDisplayName;
 
     public Output<String> getPlatformDisplayName() {
@@ -112,7 +112,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * The platform to which your signed code image will be distributed.
      * 
      */
-    @InputImport(name="platformId")
+    @Import(name="platformId")
       private final @Nullable Output<String> platformId;
 
     public Output<String> getPlatformId() {
@@ -123,7 +123,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * The name of the profile to initiate the signing operation.
      * 
      */
-    @InputImport(name="profileName")
+    @Import(name="profileName")
       private final @Nullable Output<String> profileName;
 
     public Output<String> getProfileName() {
@@ -134,7 +134,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * The version of the signing profile used to initiate the signing job.
      * 
      */
-    @InputImport(name="profileVersion")
+    @Import(name="profileVersion")
       private final @Nullable Output<String> profileVersion;
 
     public Output<String> getProfileVersion() {
@@ -145,7 +145,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * The IAM principal that requested the signing job.
      * 
      */
-    @InputImport(name="requestedBy")
+    @Import(name="requestedBy")
       private final @Nullable Output<String> requestedBy;
 
     public Output<String> getRequestedBy() {
@@ -156,7 +156,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * A revocation record if the signature generated by the signing job has been revoked. Contains a timestamp and the ID of the IAM entity that revoked the signature.
      * 
      */
-    @InputImport(name="revocationRecords")
+    @Import(name="revocationRecords")
       private final @Nullable Output<List<SigningJobRevocationRecordGetArgs>> revocationRecords;
 
     public Output<List<SigningJobRevocationRecordGetArgs>> getRevocationRecords() {
@@ -167,7 +167,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * The time when the signature of a signing job expires.
      * 
      */
-    @InputImport(name="signatureExpiresAt")
+    @Import(name="signatureExpiresAt")
       private final @Nullable Output<String> signatureExpiresAt;
 
     public Output<String> getSignatureExpiresAt() {
@@ -178,7 +178,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * Name of the S3 bucket where the signed code image is saved by code signing.
      * 
      */
-    @InputImport(name="signedObjects")
+    @Import(name="signedObjects")
       private final @Nullable Output<List<SigningJobSignedObjectGetArgs>> signedObjects;
 
     public Output<List<SigningJobSignedObjectGetArgs>> getSignedObjects() {
@@ -189,7 +189,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * The S3 bucket that contains the object to sign. See Source below for details.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<SigningJobSourceGetArgs> source;
 
     public Output<SigningJobSourceGetArgs> getSource() {
@@ -200,7 +200,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * Status of the signing job.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -211,7 +211,7 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
      * String value that contains the status reason.
      * 
      */
-    @InputImport(name="statusReason")
+    @Import(name="statusReason")
       private final @Nullable Output<String> statusReason;
 
     public Output<String> getStatusReason() {

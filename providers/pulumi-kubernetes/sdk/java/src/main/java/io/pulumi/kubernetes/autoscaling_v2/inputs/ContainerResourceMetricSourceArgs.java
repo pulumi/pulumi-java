@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.autoscaling_v2.inputs.MetricTargetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
      * container is the name of the container in the pods of the scaling target
      * 
      */
-    @InputImport(name="container", required=true)
+    @Import(name="container", required=true)
       private final Output<String> container;
 
     public Output<String> getContainer() {
@@ -33,7 +33,7 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
      * name is the name of the resource in question.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class ContainerResourceMetricSourceArgs extends io.pulumi.resources
      * target specifies the target value for the given metric
      * 
      */
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final Output<MetricTargetArgs> target;
 
     public Output<MetricTargetArgs> getTarget() {

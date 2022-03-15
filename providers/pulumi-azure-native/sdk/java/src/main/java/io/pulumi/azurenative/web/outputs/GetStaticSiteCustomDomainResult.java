@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStaticSiteCustomDomainResult {
     /**
      * The date and time on which the custom domain was created for the static site.
@@ -53,17 +53,17 @@ public final class GetStaticSiteCustomDomainResult {
      */
     private final String validationToken;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStaticSiteCustomDomainResult(
-        @OutputCustomType.Parameter("createdOn") String createdOn,
-        @OutputCustomType.Parameter("domainName") String domainName,
-        @OutputCustomType.Parameter("errorMessage") String errorMessage,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("validationToken") String validationToken) {
+        @CustomType.Parameter("createdOn") String createdOn,
+        @CustomType.Parameter("domainName") String domainName,
+        @CustomType.Parameter("errorMessage") String errorMessage,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("validationToken") String validationToken) {
         this.createdOn = createdOn;
         this.domainName = domainName;
         this.errorMessage = errorMessage;

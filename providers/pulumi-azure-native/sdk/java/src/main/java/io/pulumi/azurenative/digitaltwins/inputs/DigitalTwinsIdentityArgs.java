@@ -6,7 +6,7 @@ package io.pulumi.azurenative.digitaltwins.inputs;
 import io.pulumi.azurenative.digitaltwins.enums.DigitalTwinsIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class DigitalTwinsIdentityArgs extends io.pulumi.resources.Resource
      * The type of Managed Identity used by the DigitalTwinsInstance. Only SystemAssigned is supported.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,DigitalTwinsIdentityType>> type;
 
     public Output<Either<String,DigitalTwinsIdentityType>> getType() {

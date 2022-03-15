@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deploymentmanager;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.SasAuthenticationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The path from the location that the 'authentication' property [say, a SAS URI to the blob container] refers to, to the location of the artifacts. This can be used to differentiate different versions of the artifacts. Or, different types of artifacts like binaries or templates. The location referenced by the authentication property concatenated with this optional artifactRoot path forms the artifact source location where the artifacts are expected to be found.
      * 
      */
-    @InputImport(name="artifactRoot")
+    @Import(name="artifactRoot")
       private final @Nullable Output<String> artifactRoot;
 
     public Output<String> getArtifactRoot() {
@@ -31,7 +31,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the artifact source.
      * 
      */
-    @InputImport(name="artifactSourceName")
+    @Import(name="artifactSourceName")
       private final @Nullable Output<String> artifactSourceName;
 
     public Output<String> getArtifactSourceName() {
@@ -42,7 +42,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The authentication method to use to access the artifact source.
      * 
      */
-    @InputImport(name="authentication", required=true)
+    @Import(name="authentication", required=true)
       private final Output<SasAuthenticationArgs> authentication;
 
     public Output<SasAuthenticationArgs> getAuthentication() {
@@ -53,7 +53,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -64,7 +64,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The type of artifact source used.
      * 
      */
-    @InputImport(name="sourceType", required=true)
+    @Import(name="sourceType", required=true)
       private final Output<String> sourceType;
 
     public Output<String> getSourceType() {
@@ -86,7 +86,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -4,12 +4,12 @@
 package io.pulumi.aws.codedeploy.outputs;
 
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupEc2TagSetEc2TagFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentGroupEc2TagSet {
     /**
      * Tag filters associated with the deployment group. See the AWS docs for details.
@@ -17,8 +17,8 @@ public final class DeploymentGroupEc2TagSet {
      */
     private final @Nullable List<DeploymentGroupEc2TagSetEc2TagFilter> ec2TagFilters;
 
-    @OutputCustomType.Constructor
-    private DeploymentGroupEc2TagSet(@OutputCustomType.Parameter("ec2TagFilters") @Nullable List<DeploymentGroupEc2TagSetEc2TagFilter> ec2TagFilters) {
+    @CustomType.Constructor
+    private DeploymentGroupEc2TagSet(@CustomType.Parameter("ec2TagFilters") @Nullable List<DeploymentGroupEc2TagSetEc2TagFilter> ec2TagFilters) {
         this.ec2TagFilters = ec2TagFilters;
     }
 

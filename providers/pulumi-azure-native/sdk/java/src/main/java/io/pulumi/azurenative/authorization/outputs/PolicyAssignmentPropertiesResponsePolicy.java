@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.authorization.outputs;
 
 import io.pulumi.azurenative.authorization.outputs.PrincipalResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyAssignmentPropertiesResponsePolicy {
     /**
      * Id of the policy
@@ -28,11 +28,11 @@ public final class PolicyAssignmentPropertiesResponsePolicy {
      */
     private final @Nullable String lastModifiedDateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyAssignmentPropertiesResponsePolicy(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("lastModifiedBy") PrincipalResponse lastModifiedBy,
-        @OutputCustomType.Parameter("lastModifiedDateTime") @Nullable String lastModifiedDateTime) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("lastModifiedBy") PrincipalResponse lastModifiedBy,
+        @CustomType.Parameter("lastModifiedDateTime") @Nullable String lastModifiedDateTime) {
         this.id = id;
         this.lastModifiedBy = lastModifiedBy;
         this.lastModifiedDateTime = lastModifiedDateTime;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RelatedUrlResponse extends io.pulumi.resources.InvokeArgs {
      * Label to describe usage of the URL.
      * 
      */
-    @InputImport(name="label", required=true)
+    @Import(name="label", required=true)
       private final String label;
 
     public String getLabel() {
@@ -31,7 +31,7 @@ public final class RelatedUrlResponse extends io.pulumi.resources.InvokeArgs {
      * Specific URL associated with the resource.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {

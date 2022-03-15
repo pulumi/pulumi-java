@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs ext
      * attached, it also contains the HDFS data blocks and Hadoop working directories.
      * 
      */
-    @InputImport(name="bootDiskSizeGb")
+    @Import(name="bootDiskSizeGb")
       private final @Nullable Output<Integer> bootDiskSizeGb;
 
     public Output<Integer> getBootDiskSizeGb() {
@@ -34,7 +34,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs ext
      * One of `"pd-ssd"` or `"pd-standard"`. Defaults to `"pd-standard"`.
      * 
      */
-    @InputImport(name="bootDiskType")
+    @Import(name="bootDiskType")
       private final @Nullable Output<String> bootDiskType;
 
     public Output<String> getBootDiskType() {
@@ -46,7 +46,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs ext
      * attached to each preemptible worker node. Defaults to 0.
      * 
      */
-    @InputImport(name="numLocalSsds")
+    @Import(name="numLocalSsds")
       private final @Nullable Output<Integer> numLocalSsds;
 
     public Output<Integer> getNumLocalSsds() {

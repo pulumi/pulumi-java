@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.DatabaseTableResponse;
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class GetUserTablesSqlTaskOutputResponse extends io.pulumi.resource
      * Mapping from database name to list of tables
      * 
      */
-    @InputImport(name="databasesToTables", required=true)
+    @Import(name="databasesToTables", required=true)
       private final Map<String,List<DatabaseTableResponse>> databasesToTables;
 
     public Map<String,List<DatabaseTableResponse>> getDatabasesToTables() {
@@ -35,7 +35,7 @@ public final class GetUserTablesSqlTaskOutputResponse extends io.pulumi.resource
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -46,7 +46,7 @@ public final class GetUserTablesSqlTaskOutputResponse extends io.pulumi.resource
      * Validation errors
      * 
      */
-    @InputImport(name="validationErrors", required=true)
+    @Import(name="validationErrors", required=true)
       private final List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> getValidationErrors() {

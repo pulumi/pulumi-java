@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
      * The display name for the static site user.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -33,7 +33,7 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
      * Resource Id.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -44,7 +44,7 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable String kind;
 
     public Optional<String> getKind() {
@@ -55,7 +55,7 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
      * Resource Name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -66,7 +66,7 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
      * The identity provider for the static site user.
      * 
      */
-    @InputImport(name="provider", required=true)
+    @Import(name="provider", required=true)
       private final String provider;
 
     public String getProvider() {
@@ -77,7 +77,7 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
      * The roles for the static site user, in free-form string format
      * 
      */
-    @InputImport(name="roles")
+    @Import(name="roles")
       private final @Nullable String roles;
 
     public Optional<String> getRoles() {
@@ -88,7 +88,7 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -99,7 +99,7 @@ public final class StaticSiteUserARMResourceResponse extends io.pulumi.resources
      * The user id for the static site user.
      * 
      */
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final String userId;
 
     public String getUserId() {

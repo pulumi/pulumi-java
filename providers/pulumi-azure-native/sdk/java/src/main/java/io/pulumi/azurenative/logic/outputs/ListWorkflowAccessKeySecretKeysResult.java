@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListWorkflowAccessKeySecretKeysResult {
     /**
      * Gets the primary secret key.
@@ -20,10 +20,10 @@ public final class ListWorkflowAccessKeySecretKeysResult {
      */
     private final String secondarySecretKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListWorkflowAccessKeySecretKeysResult(
-        @OutputCustomType.Parameter("primarySecretKey") String primarySecretKey,
-        @OutputCustomType.Parameter("secondarySecretKey") String secondarySecretKey) {
+        @CustomType.Parameter("primarySecretKey") String primarySecretKey,
+        @CustomType.Parameter("secondarySecretKey") String secondarySecretKey) {
         this.primarySecretKey = primarySecretKey;
         this.secondarySecretKey = secondarySecretKey;
     }

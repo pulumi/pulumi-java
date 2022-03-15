@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.TargetSslProxyArgs;
@@ -22,7 +22,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -36,7 +36,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -50,7 +50,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * Type of the resource. Always compute#targetSslProxy for target SSL proxies.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -64,7 +64,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.
      * 
      */
-    @OutputExport(name="proxyHeader", type=String.class, parameters={})
+    @Export(name="proxyHeader", type=String.class, parameters={})
     private Output<String> proxyHeader;
 
     /**
@@ -92,7 +92,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -106,7 +106,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * URL to the BackendService resource.
      * 
      */
-    @OutputExport(name="service", type=String.class, parameters={})
+    @Export(name="service", type=String.class, parameters={})
     private Output<String> service;
 
     /**
@@ -120,7 +120,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * URLs to SslCertificate resources that are used to authenticate connections to Backends. At least one SSL certificate must be specified. Currently, you may specify up to 15 SSL certificates. sslCertificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED.
      * 
      */
-    @OutputExport(name="sslCertificates", type=List.class, parameters={String.class})
+    @Export(name="sslCertificates", type=List.class, parameters={String.class})
     private Output<List<String>> sslCertificates;
 
     /**
@@ -134,7 +134,7 @@ public class TargetSslProxy extends io.pulumi.resources.CustomResource {
      * URL of SslPolicy resource that will be associated with the TargetSslProxy resource. If not set, the TargetSslProxy resource will not have any SSL policy configured.
      * 
      */
-    @OutputExport(name="sslPolicy", type=String.class, parameters={})
+    @Export(name="sslPolicy", type=String.class, parameters={})
     private Output<String> sslPolicy;
 
     /**

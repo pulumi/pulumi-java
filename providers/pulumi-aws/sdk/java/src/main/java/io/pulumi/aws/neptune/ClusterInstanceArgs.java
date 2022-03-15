@@ -4,7 +4,7 @@
 package io.pulumi.aws.neptune;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * are applied immediately, or during the next maintenance window. Default is`false`.
      * 
      */
-    @InputImport(name="applyImmediately")
+    @Import(name="applyImmediately")
       private final @Nullable Output<Boolean> applyImmediately;
 
     public Output<Boolean> getApplyImmediately() {
@@ -33,7 +33,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Indicates that minor engine upgrades will be applied automatically to the instance during the maintenance window. Default is `true`.
      * 
      */
-    @InputImport(name="autoMinorVersionUpgrade")
+    @Import(name="autoMinorVersionUpgrade")
       private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
     public Output<Boolean> getAutoMinorVersionUpgrade() {
@@ -44,7 +44,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The EC2 Availability Zone that the neptune instance is created in.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -55,7 +55,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The identifier of the `aws.neptune.Cluster` in which to launch this instance.
      * 
      */
-    @InputImport(name="clusterIdentifier", required=true)
+    @Import(name="clusterIdentifier", required=true)
       private final Output<String> clusterIdentifier;
 
     public Output<String> getClusterIdentifier() {
@@ -66,7 +66,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the database engine to be used for the neptune instance. Defaults to `neptune`. Valid Values: `neptune`.
      * 
      */
-    @InputImport(name="engine")
+    @Import(name="engine")
       private final @Nullable Output<String> engine;
 
     public Output<String> getEngine() {
@@ -77,7 +77,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The neptune engine version.
      * 
      */
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
@@ -88,7 +88,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The identifier for the neptune instance, if omitted, this provider will assign a random, unique identifier.
      * 
      */
-    @InputImport(name="identifier")
+    @Import(name="identifier")
       private final @Nullable Output<String> identifier;
 
     public Output<String> getIdentifier() {
@@ -99,7 +99,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Creates a unique identifier beginning with the specified prefix. Conflicts with `identifier`.
      * 
      */
-    @InputImport(name="identifierPrefix")
+    @Import(name="identifierPrefix")
       private final @Nullable Output<String> identifierPrefix;
 
     public Output<String> getIdentifierPrefix() {
@@ -110,7 +110,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The instance class to use.
      * 
      */
-    @InputImport(name="instanceClass", required=true)
+    @Import(name="instanceClass", required=true)
       private final Output<String> instanceClass;
 
     public Output<String> getInstanceClass() {
@@ -121,7 +121,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the neptune parameter group to associate with this instance.
      * 
      */
-    @InputImport(name="neptuneParameterGroupName")
+    @Import(name="neptuneParameterGroupName")
       private final @Nullable Output<String> neptuneParameterGroupName;
 
     public Output<String> getNeptuneParameterGroupName() {
@@ -132,7 +132,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * A subnet group to associate with this neptune instance. **NOTE:** This must match the `neptune_subnet_group_name` of the attached `aws.neptune.Cluster`.
      * 
      */
-    @InputImport(name="neptuneSubnetGroupName")
+    @Import(name="neptuneSubnetGroupName")
       private final @Nullable Output<String> neptuneSubnetGroupName;
 
     public Output<String> getNeptuneSubnetGroupName() {
@@ -143,7 +143,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The port on which the DB accepts connections. Defaults to `8182`.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -154,7 +154,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The daily time range during which automated backups are created if automated backups are enabled. Eg: "04:00-09:00"
      * 
      */
-    @InputImport(name="preferredBackupWindow")
+    @Import(name="preferredBackupWindow")
       private final @Nullable Output<String> preferredBackupWindow;
 
     public Output<String> getPreferredBackupWindow() {
@@ -166,7 +166,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Syntax: "ddd:hh24:mi-ddd:hh24:mi". Eg: "Mon:00:00-Mon:03:00".
      * 
      */
-    @InputImport(name="preferredMaintenanceWindow")
+    @Import(name="preferredMaintenanceWindow")
       private final @Nullable Output<String> preferredMaintenanceWindow;
 
     public Output<String> getPreferredMaintenanceWindow() {
@@ -177,7 +177,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Default 0. Failover Priority setting on instance level. The reader who has lower tier has higher priority to get promoter to writer.
      * 
      */
-    @InputImport(name="promotionTier")
+    @Import(name="promotionTier")
       private final @Nullable Output<Integer> promotionTier;
 
     public Output<Integer> getPromotionTier() {
@@ -188,7 +188,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Bool to control if instance is publicly accessible. Default is `false`.
      * 
      */
-    @InputImport(name="publiclyAccessible")
+    @Import(name="publiclyAccessible")
       private final @Nullable Output<Boolean> publiclyAccessible;
 
     public Output<Boolean> getPubliclyAccessible() {
@@ -199,7 +199,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * A map of tags to assign to the instance. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

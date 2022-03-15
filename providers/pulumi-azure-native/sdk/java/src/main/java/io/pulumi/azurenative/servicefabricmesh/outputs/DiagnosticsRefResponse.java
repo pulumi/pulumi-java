@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DiagnosticsRefResponse {
     /**
      * Status of whether or not sinks are enabled.
@@ -24,10 +24,10 @@ public final class DiagnosticsRefResponse {
      */
     private final @Nullable List<String> sinkRefs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiagnosticsRefResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("sinkRefs") @Nullable List<String> sinkRefs) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("sinkRefs") @Nullable List<String> sinkRefs) {
         this.enabled = enabled;
         this.sinkRefs = sinkRefs;
     }

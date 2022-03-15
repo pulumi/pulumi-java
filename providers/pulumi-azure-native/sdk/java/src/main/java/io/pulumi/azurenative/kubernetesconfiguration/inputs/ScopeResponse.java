@@ -5,7 +5,7 @@ package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ScopeClusterResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ScopeNamespaceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ScopeResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies that the scope of the extensionInstance is Cluster
      * 
      */
-    @InputImport(name="cluster")
+    @Import(name="cluster")
       private final @Nullable ScopeClusterResponse cluster;
 
     public Optional<ScopeClusterResponse> getCluster() {
@@ -34,7 +34,7 @@ public final class ScopeResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies that the scope of the extensionInstance is Namespace
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable ScopeNamespaceResponse namespace;
 
     public Optional<ScopeNamespaceResponse> getNamespace() {

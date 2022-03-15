@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.CompositeFilterResponse;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.ValueFilterResponse;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class FilterResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final FilterResponse Empty = new FilterResponse();
 
-    @InputImport(name="compositeFilter", required=true)
+    @Import(name="compositeFilter", required=true)
       private final CompositeFilterResponse compositeFilter;
 
     public CompositeFilterResponse getCompositeFilter() {
         return this.compositeFilter;
     }
 
-    @InputImport(name="valueFilter", required=true)
+    @Import(name="valueFilter", required=true)
       private final ValueFilterResponse valueFilter;
 
     public ValueFilterResponse getValueFilter() {

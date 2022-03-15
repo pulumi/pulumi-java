@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.awsnative.evidently.enums.ExperimentMetricGoalObjectDesiredChange;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +15,7 @@ public final class ExperimentMetricGoalObject extends io.pulumi.resources.Invoke
 
     public static final ExperimentMetricGoalObject Empty = new ExperimentMetricGoalObject();
 
-    @InputImport(name="desiredChange", required=true)
+    @Import(name="desiredChange", required=true)
       private final ExperimentMetricGoalObjectDesiredChange desiredChange;
 
     public ExperimentMetricGoalObjectDesiredChange getDesiredChange() {
@@ -26,7 +26,7 @@ public final class ExperimentMetricGoalObject extends io.pulumi.resources.Invoke
      * The JSON path to reference the entity id in the event.
      * 
      */
-    @InputImport(name="entityIdKey", required=true)
+    @Import(name="entityIdKey", required=true)
       private final String entityIdKey;
 
     public String getEntityIdKey() {
@@ -37,21 +37,21 @@ public final class ExperimentMetricGoalObject extends io.pulumi.resources.Invoke
      * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn't.
      * 
      */
-    @InputImport(name="eventPattern", required=true)
+    @Import(name="eventPattern", required=true)
       private final String eventPattern;
 
     public String getEventPattern() {
         return this.eventPattern;
     }
 
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final String metricName;
 
     public String getMetricName() {
         return this.metricName;
     }
 
-    @InputImport(name="unitLabel")
+    @Import(name="unitLabel")
       private final @Nullable String unitLabel;
 
     public Optional<String> getUnitLabel() {
@@ -62,7 +62,7 @@ public final class ExperimentMetricGoalObject extends io.pulumi.resources.Invoke
      * The JSON path to reference the numerical metric value in the event.
      * 
      */
-    @InputImport(name="valueKey", required=true)
+    @Import(name="valueKey", required=true)
       private final String valueKey;
 
     public String getValueKey() {

@@ -11,7 +11,7 @@ import io.pulumi.awsnative.ec2.inputs.SpotFleetInstanceRequirementsRequest;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetMonitoring;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetSpotPlacement;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetTagSpecification;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -25,126 +25,126 @@ public final class SpotFleetLaunchSpecification extends io.pulumi.resources.Invo
 
     public static final SpotFleetLaunchSpecification Empty = new SpotFleetLaunchSpecification();
 
-    @InputImport(name="blockDeviceMappings")
+    @Import(name="blockDeviceMappings")
       private final @Nullable List<SpotFleetBlockDeviceMapping> blockDeviceMappings;
 
     public List<SpotFleetBlockDeviceMapping> getBlockDeviceMappings() {
         return this.blockDeviceMappings == null ? List.of() : this.blockDeviceMappings;
     }
 
-    @InputImport(name="ebsOptimized")
+    @Import(name="ebsOptimized")
       private final @Nullable Boolean ebsOptimized;
 
     public Optional<Boolean> getEbsOptimized() {
         return this.ebsOptimized == null ? Optional.empty() : Optional.ofNullable(this.ebsOptimized);
     }
 
-    @InputImport(name="iamInstanceProfile")
+    @Import(name="iamInstanceProfile")
       private final @Nullable SpotFleetIamInstanceProfileSpecification iamInstanceProfile;
 
     public Optional<SpotFleetIamInstanceProfileSpecification> getIamInstanceProfile() {
         return this.iamInstanceProfile == null ? Optional.empty() : Optional.ofNullable(this.iamInstanceProfile);
     }
 
-    @InputImport(name="imageId", required=true)
+    @Import(name="imageId", required=true)
       private final String imageId;
 
     public String getImageId() {
         return this.imageId;
     }
 
-    @InputImport(name="instanceRequirements")
+    @Import(name="instanceRequirements")
       private final @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements;
 
     public Optional<SpotFleetInstanceRequirementsRequest> getInstanceRequirements() {
         return this.instanceRequirements == null ? Optional.empty() : Optional.ofNullable(this.instanceRequirements);
     }
 
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable String instanceType;
 
     public Optional<String> getInstanceType() {
         return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
     }
 
-    @InputImport(name="kernelId")
+    @Import(name="kernelId")
       private final @Nullable String kernelId;
 
     public Optional<String> getKernelId() {
         return this.kernelId == null ? Optional.empty() : Optional.ofNullable(this.kernelId);
     }
 
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable String keyName;
 
     public Optional<String> getKeyName() {
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
     }
 
-    @InputImport(name="monitoring")
+    @Import(name="monitoring")
       private final @Nullable SpotFleetMonitoring monitoring;
 
     public Optional<SpotFleetMonitoring> getMonitoring() {
         return this.monitoring == null ? Optional.empty() : Optional.ofNullable(this.monitoring);
     }
 
-    @InputImport(name="networkInterfaces")
+    @Import(name="networkInterfaces")
       private final @Nullable List<SpotFleetInstanceNetworkInterfaceSpecification> networkInterfaces;
 
     public List<SpotFleetInstanceNetworkInterfaceSpecification> getNetworkInterfaces() {
         return this.networkInterfaces == null ? List.of() : this.networkInterfaces;
     }
 
-    @InputImport(name="placement")
+    @Import(name="placement")
       private final @Nullable SpotFleetSpotPlacement placement;
 
     public Optional<SpotFleetSpotPlacement> getPlacement() {
         return this.placement == null ? Optional.empty() : Optional.ofNullable(this.placement);
     }
 
-    @InputImport(name="ramdiskId")
+    @Import(name="ramdiskId")
       private final @Nullable String ramdiskId;
 
     public Optional<String> getRamdiskId() {
         return this.ramdiskId == null ? Optional.empty() : Optional.ofNullable(this.ramdiskId);
     }
 
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable List<SpotFleetGroupIdentifier> securityGroups;
 
     public List<SpotFleetGroupIdentifier> getSecurityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
 
-    @InputImport(name="spotPrice")
+    @Import(name="spotPrice")
       private final @Nullable String spotPrice;
 
     public Optional<String> getSpotPrice() {
         return this.spotPrice == null ? Optional.empty() : Optional.ofNullable(this.spotPrice);
     }
 
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable String subnetId;
 
     public Optional<String> getSubnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
     }
 
-    @InputImport(name="tagSpecifications")
+    @Import(name="tagSpecifications")
       private final @Nullable List<SpotFleetTagSpecification> tagSpecifications;
 
     public List<SpotFleetTagSpecification> getTagSpecifications() {
         return this.tagSpecifications == null ? List.of() : this.tagSpecifications;
     }
 
-    @InputImport(name="userData")
+    @Import(name="userData")
       private final @Nullable String userData;
 
     public Optional<String> getUserData() {
         return this.userData == null ? Optional.empty() : Optional.ofNullable(this.userData);
     }
 
-    @InputImport(name="weightedCapacity")
+    @Import(name="weightedCapacity")
       private final @Nullable Double weightedCapacity;
 
     public Optional<Double> getWeightedCapacity() {

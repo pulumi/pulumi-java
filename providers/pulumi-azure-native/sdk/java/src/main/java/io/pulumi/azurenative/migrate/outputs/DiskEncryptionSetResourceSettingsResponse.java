@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DiskEncryptionSetResourceSettingsResponse {
     /**
      * The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
@@ -21,10 +21,10 @@ public final class DiskEncryptionSetResourceSettingsResponse {
      */
     private final String targetResourceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiskEncryptionSetResourceSettingsResponse(
-        @OutputCustomType.Parameter("resourceType") String resourceType,
-        @OutputCustomType.Parameter("targetResourceName") String targetResourceName) {
+        @CustomType.Parameter("resourceType") String resourceType,
+        @CustomType.Parameter("targetResourceName") String targetResourceName) {
         this.resourceType = resourceType;
         this.targetResourceName = targetResourceName;
     }

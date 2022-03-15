@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.enums.RuleGroupLabelMatchScope;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class RuleGroupLabelMatchStatement extends io.pulumi.resources.Invo
 
     public static final RuleGroupLabelMatchStatement Empty = new RuleGroupLabelMatchStatement();
 
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
         return this.key;
     }
 
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final RuleGroupLabelMatchScope scope;
 
     public RuleGroupLabelMatchScope getScope() {

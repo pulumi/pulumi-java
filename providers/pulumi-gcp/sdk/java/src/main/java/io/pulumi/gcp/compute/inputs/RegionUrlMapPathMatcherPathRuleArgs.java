@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleRouteActionArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleUrlRedirectArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class RegionUrlMapPathMatcherPathRuleArgs extends io.pulumi.resourc
      * allowed here.
      * 
      */
-    @InputImport(name="paths", required=true)
+    @Import(name="paths", required=true)
       private final Output<List<String>> paths;
 
     public Output<List<String>> getPaths() {
@@ -41,7 +41,7 @@ public final class RegionUrlMapPathMatcherPathRuleArgs extends io.pulumi.resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="routeAction")
+    @Import(name="routeAction")
       private final @Nullable Output<RegionUrlMapPathMatcherPathRuleRouteActionArgs> routeAction;
 
     public Output<RegionUrlMapPathMatcherPathRuleRouteActionArgs> getRouteAction() {
@@ -52,7 +52,7 @@ public final class RegionUrlMapPathMatcherPathRuleArgs extends io.pulumi.resourc
      * A reference to expected RegionBackendService resource the given URL should be mapped to.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
@@ -66,7 +66,7 @@ public final class RegionUrlMapPathMatcherPathRuleArgs extends io.pulumi.resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="urlRedirect")
+    @Import(name="urlRedirect")
       private final @Nullable Output<RegionUrlMapPathMatcherPathRuleUrlRedirectArgs> urlRedirect;
 
     public Output<RegionUrlMapPathMatcherPathRuleUrlRedirectArgs> getUrlRedirect() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.AliasContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.RepoIdResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CloudRepoSourceContextResponse {
     /**
      * An alias, which may be a branch or tag.
@@ -27,11 +27,11 @@ public final class CloudRepoSourceContextResponse {
      */
     private final String revisionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudRepoSourceContextResponse(
-        @OutputCustomType.Parameter("aliasContext") AliasContextResponse aliasContext,
-        @OutputCustomType.Parameter("repoId") RepoIdResponse repoId,
-        @OutputCustomType.Parameter("revisionId") String revisionId) {
+        @CustomType.Parameter("aliasContext") AliasContextResponse aliasContext,
+        @CustomType.Parameter("repoId") RepoIdResponse repoId,
+        @CustomType.Parameter("revisionId") String revisionId) {
         this.aliasContext = aliasContext;
         this.repoId = repoId;
         this.revisionId = revisionId;

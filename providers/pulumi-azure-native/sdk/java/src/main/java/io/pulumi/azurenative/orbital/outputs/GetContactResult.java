@@ -5,12 +5,12 @@ package io.pulumi.azurenative.orbital.outputs;
 
 import io.pulumi.azurenative.orbital.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.orbital.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetContactResult {
     /**
      * The reference to the contact profile resource.
@@ -113,28 +113,28 @@ public final class GetContactResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetContactResult(
-        @OutputCustomType.Parameter("contactProfile") ResourceReferenceResponse contactProfile,
-        @OutputCustomType.Parameter("endAzimuthDegrees") Double endAzimuthDegrees,
-        @OutputCustomType.Parameter("endElevationDegrees") Double endElevationDegrees,
-        @OutputCustomType.Parameter("errorMessage") String errorMessage,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("groundStationName") String groundStationName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("maximumElevationDegrees") Double maximumElevationDegrees,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("reservationEndTime") String reservationEndTime,
-        @OutputCustomType.Parameter("reservationStartTime") String reservationStartTime,
-        @OutputCustomType.Parameter("rxEndTime") String rxEndTime,
-        @OutputCustomType.Parameter("rxStartTime") String rxStartTime,
-        @OutputCustomType.Parameter("startAzimuthDegrees") Double startAzimuthDegrees,
-        @OutputCustomType.Parameter("startElevationDegrees") Double startElevationDegrees,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("txEndTime") String txEndTime,
-        @OutputCustomType.Parameter("txStartTime") String txStartTime,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("contactProfile") ResourceReferenceResponse contactProfile,
+        @CustomType.Parameter("endAzimuthDegrees") Double endAzimuthDegrees,
+        @CustomType.Parameter("endElevationDegrees") Double endElevationDegrees,
+        @CustomType.Parameter("errorMessage") String errorMessage,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("groundStationName") String groundStationName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("maximumElevationDegrees") Double maximumElevationDegrees,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("reservationEndTime") String reservationEndTime,
+        @CustomType.Parameter("reservationStartTime") String reservationStartTime,
+        @CustomType.Parameter("rxEndTime") String rxEndTime,
+        @CustomType.Parameter("rxStartTime") String rxStartTime,
+        @CustomType.Parameter("startAzimuthDegrees") Double startAzimuthDegrees,
+        @CustomType.Parameter("startElevationDegrees") Double startElevationDegrees,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("txEndTime") String txEndTime,
+        @CustomType.Parameter("txStartTime") String txStartTime,
+        @CustomType.Parameter("type") String type) {
         this.contactProfile = contactProfile;
         this.endAzimuthDegrees = endAzimuthDegrees;
         this.endElevationDegrees = endElevationDegrees;

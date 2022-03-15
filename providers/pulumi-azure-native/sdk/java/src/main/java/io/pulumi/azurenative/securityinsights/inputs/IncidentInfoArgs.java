@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 import io.pulumi.azurenative.securityinsights.enums.IncidentSeverity;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Incident Id
      * 
      */
-    @InputImport(name="incidentId")
+    @Import(name="incidentId")
       private final @Nullable Output<String> incidentId;
 
     public Output<String> getIncidentId() {
@@ -35,7 +35,7 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Relation Name
      * 
      */
-    @InputImport(name="relationName")
+    @Import(name="relationName")
       private final @Nullable Output<String> relationName;
 
     public Output<String> getRelationName() {
@@ -46,7 +46,7 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
      * The severity of the incident
      * 
      */
-    @InputImport(name="severity")
+    @Import(name="severity")
       private final @Nullable Output<Either<String,IncidentSeverity>> severity;
 
     public Output<Either<String,IncidentSeverity>> getSeverity() {
@@ -57,7 +57,7 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
      * The title of the incident
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.MysqlSslConfigResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MysqlProfileResponse {
     /**
      * Hostname for the MySQL connection.
@@ -37,13 +37,13 @@ public final class MysqlProfileResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MysqlProfileResponse(
-        @OutputCustomType.Parameter("hostname") String hostname,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("sslConfig") MysqlSslConfigResponse sslConfig,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("hostname") String hostname,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("sslConfig") MysqlSslConfigResponse sslConfig,
+        @CustomType.Parameter("username") String username) {
         this.hostname = hostname;
         this.password = password;
         this.port = port;

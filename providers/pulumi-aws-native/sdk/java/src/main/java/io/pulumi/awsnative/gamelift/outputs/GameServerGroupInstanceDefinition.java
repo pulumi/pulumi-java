@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.gamelift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GameServerGroupInstanceDefinition {
     private final String instanceType;
     private final @Nullable String weightedCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GameServerGroupInstanceDefinition(
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("weightedCapacity") @Nullable String weightedCapacity) {
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("weightedCapacity") @Nullable String weightedCapacity) {
         this.instanceType = instanceType;
         this.weightedCapacity = weightedCapacity;
     }

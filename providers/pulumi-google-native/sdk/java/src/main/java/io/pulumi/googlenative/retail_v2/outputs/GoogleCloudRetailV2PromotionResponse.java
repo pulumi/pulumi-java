@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.retail_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2PromotionResponse {
     /**
      * ID of the promotion. For example, "free gift". The value must be a UTF-8 encoded string with a length limit of 128 characters, and match the pattern: `a-zA-Z*`. For example, id0LikeThis or ID_1_LIKE_THIS. Otherwise, an INVALID_ARGUMENT error is returned. Google Merchant Center property [promotion](https://support.google.com/merchants/answer/7050148).
@@ -15,8 +15,8 @@ public final class GoogleCloudRetailV2PromotionResponse {
      */
     private final String promotionId;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudRetailV2PromotionResponse(@OutputCustomType.Parameter("promotionId") String promotionId) {
+    @CustomType.Constructor
+    private GoogleCloudRetailV2PromotionResponse(@CustomType.Parameter("promotionId") String promotionId) {
         this.promotionId = promotionId;
     }
 

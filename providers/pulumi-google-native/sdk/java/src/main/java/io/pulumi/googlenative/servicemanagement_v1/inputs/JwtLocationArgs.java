@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class JwtLocationArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies HTTP header name to extract JWT token.
      * 
      */
-    @InputImport(name="header")
+    @Import(name="header")
       private final @Nullable Output<String> header;
 
     public Output<String> getHeader() {
@@ -33,7 +33,7 @@ public final class JwtLocationArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies URL query parameter name to extract JWT token.
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Output<String> query;
 
     public Output<String> getQuery() {
@@ -44,7 +44,7 @@ public final class JwtLocationArgs extends io.pulumi.resources.ResourceArgs {
      * The value prefix. The value format is "value_prefix{token}" Only applies to "in" header type. Must be empty for "in" query type. If not empty, the header value has to match (case sensitive) this prefix. If not matched, JWT will not be extracted. If matched, JWT will be extracted after the prefix is removed. For example, for "Authorization: Bearer {JWT}", value_prefix="Bearer " with a space at the end.
      * 
      */
-    @InputImport(name="valuePrefix")
+    @Import(name="valuePrefix")
       private final @Nullable Output<String> valuePrefix;
 
     public Output<String> getValuePrefix() {

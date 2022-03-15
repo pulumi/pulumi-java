@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.aws.wafregional.inputs.RegexMatchSetRegexMatchTupleGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RegexMatchSetState extends io.pulumi.resources.ResourceArgs {
      * The name or description of the Regex Match Set.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -31,7 +31,7 @@ public final class RegexMatchSetState extends io.pulumi.resources.ResourceArgs {
      * The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.
      * 
      */
-    @InputImport(name="regexMatchTuples")
+    @Import(name="regexMatchTuples")
       private final @Nullable Output<List<RegexMatchSetRegexMatchTupleGetArgs>> regexMatchTuples;
 
     public Output<List<RegexMatchSetRegexMatchTupleGetArgs>> getRegexMatchTuples() {

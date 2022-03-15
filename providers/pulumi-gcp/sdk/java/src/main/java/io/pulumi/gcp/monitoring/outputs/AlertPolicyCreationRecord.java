@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AlertPolicyCreationRecord {
     private final @Nullable String mutateTime;
     private final @Nullable String mutatedBy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AlertPolicyCreationRecord(
-        @OutputCustomType.Parameter("mutateTime") @Nullable String mutateTime,
-        @OutputCustomType.Parameter("mutatedBy") @Nullable String mutatedBy) {
+        @CustomType.Parameter("mutateTime") @Nullable String mutateTime,
+        @CustomType.Parameter("mutatedBy") @Nullable String mutatedBy) {
         this.mutateTime = mutateTime;
         this.mutatedBy = mutatedBy;
     }

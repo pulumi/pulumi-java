@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the automation account.
      * 
      */
-    @InputImport(name="automationAccountName", required=true)
+    @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
     public Output<String> getAutomationAccountName() {
@@ -30,7 +30,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the description of the variable.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -41,7 +41,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the encrypted flag of the variable.
      * 
      */
-    @InputImport(name="isEncrypted")
+    @Import(name="isEncrypted")
       private final @Nullable Output<Boolean> isEncrypted;
 
     public Output<Boolean> getIsEncrypted() {
@@ -52,7 +52,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the name of the variable.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -63,7 +63,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -74,7 +74,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the value of the variable.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
@@ -85,7 +85,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * The variable name.
      * 
      */
-    @InputImport(name="variableName")
+    @Import(name="variableName")
       private final @Nullable Output<String> variableName;
 
     public Output<String> getVariableName() {

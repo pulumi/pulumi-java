@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.ClusterMaintenancePolicyDailyMaintenanceWindow;
 import io.pulumi.gcp.container.outputs.ClusterMaintenancePolicyMaintenanceExclusion;
 import io.pulumi.gcp.container.outputs.ClusterMaintenancePolicyRecurringWindow;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterMaintenancePolicy {
     /**
      * Time window specified for daily maintenance operations.
@@ -32,11 +32,11 @@ public final class ClusterMaintenancePolicy {
      */
     private final @Nullable ClusterMaintenancePolicyRecurringWindow recurringWindow;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterMaintenancePolicy(
-        @OutputCustomType.Parameter("dailyMaintenanceWindow") @Nullable ClusterMaintenancePolicyDailyMaintenanceWindow dailyMaintenanceWindow,
-        @OutputCustomType.Parameter("maintenanceExclusions") @Nullable List<ClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions,
-        @OutputCustomType.Parameter("recurringWindow") @Nullable ClusterMaintenancePolicyRecurringWindow recurringWindow) {
+        @CustomType.Parameter("dailyMaintenanceWindow") @Nullable ClusterMaintenancePolicyDailyMaintenanceWindow dailyMaintenanceWindow,
+        @CustomType.Parameter("maintenanceExclusions") @Nullable List<ClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions,
+        @CustomType.Parameter("recurringWindow") @Nullable ClusterMaintenancePolicyRecurringWindow recurringWindow) {
         this.dailyMaintenanceWindow = dailyMaintenanceWindow;
         this.maintenanceExclusions = maintenanceExclusions;
         this.recurringWindow = recurringWindow;

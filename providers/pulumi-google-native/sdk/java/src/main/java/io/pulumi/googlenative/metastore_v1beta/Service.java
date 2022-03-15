@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.metastore_v1beta.ServiceArgs;
@@ -29,7 +29,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.
      * 
      */
-    @OutputExport(name="artifactGcsUri", type=String.class, parameters={})
+    @Export(name="artifactGcsUri", type=String.class, parameters={})
     private Output<String> artifactGcsUri;
 
     /**
@@ -43,7 +43,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The time when the metastore service was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -57,7 +57,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Immutable. The database type that the Metastore service stores its data.
      * 
      */
-    @OutputExport(name="databaseType", type=String.class, parameters={})
+    @Export(name="databaseType", type=String.class, parameters={})
     private Output<String> databaseType;
 
     /**
@@ -71,7 +71,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Immutable. Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Cannot be updated.
      * 
      */
-    @OutputExport(name="encryptionConfig", type=EncryptionConfigResponse.class, parameters={})
+    @Export(name="encryptionConfig", type=EncryptionConfigResponse.class, parameters={})
     private Output<EncryptionConfigResponse> encryptionConfig;
 
     /**
@@ -85,7 +85,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The URI of the endpoint used to access the metastore service.
      * 
      */
-    @OutputExport(name="endpointUri", type=String.class, parameters={})
+    @Export(name="endpointUri", type=String.class, parameters={})
     private Output<String> endpointUri;
 
     /**
@@ -99,7 +99,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Configuration information specific to running Hive metastore software as the metastore service.
      * 
      */
-    @OutputExport(name="hiveMetastoreConfig", type=HiveMetastoreConfigResponse.class, parameters={})
+    @Export(name="hiveMetastoreConfig", type=HiveMetastoreConfigResponse.class, parameters={})
     private Output<HiveMetastoreConfigResponse> hiveMetastoreConfig;
 
     /**
@@ -113,7 +113,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * User-defined labels for the metastore service.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -127,7 +127,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed for services with the SPANNER database type.
      * 
      */
-    @OutputExport(name="maintenanceWindow", type=MaintenanceWindowResponse.class, parameters={})
+    @Export(name="maintenanceWindow", type=MaintenanceWindowResponse.class, parameters={})
     private Output<MaintenanceWindowResponse> maintenanceWindow;
 
     /**
@@ -141,7 +141,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The setting that defines how metastore metadata should be integrated with external services and systems.
      * 
      */
-    @OutputExport(name="metadataIntegration", type=MetadataIntegrationResponse.class, parameters={})
+    @Export(name="metadataIntegration", type=MetadataIntegrationResponse.class, parameters={})
     private Output<MetadataIntegrationResponse> metadataIntegration;
 
     /**
@@ -155,7 +155,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The metadata management activities of the metastore service.
      * 
      */
-    @OutputExport(name="metadataManagementActivity", type=MetadataManagementActivityResponse.class, parameters={})
+    @Export(name="metadataManagementActivity", type=MetadataManagementActivityResponse.class, parameters={})
     private Output<MetadataManagementActivityResponse> metadataManagementActivity;
 
     /**
@@ -169,7 +169,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Immutable. The relative resource name of the metastore service, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -183,7 +183,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Immutable. The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:projects/{project_number}/global/networks/{network_id}.
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
@@ -197,7 +197,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Immutable. The configuration specifying the network settings for the Dataproc Metastore service.
      * 
      */
-    @OutputExport(name="networkConfig", type=NetworkConfigResponse.class, parameters={})
+    @Export(name="networkConfig", type=NetworkConfigResponse.class, parameters={})
     private Output<NetworkConfigResponse> networkConfig;
 
     /**
@@ -211,7 +211,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The TCP port at which the metastore service is reached. Default: 9083.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output<Integer> port;
 
     /**
@@ -225,7 +225,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Immutable. The release channel of the service. If unspecified, defaults to STABLE.
      * 
      */
-    @OutputExport(name="releaseChannel", type=String.class, parameters={})
+    @Export(name="releaseChannel", type=String.class, parameters={})
     private Output<String> releaseChannel;
 
     /**
@@ -239,7 +239,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The current state of the metastore service.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -253,7 +253,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Additional information about the current state of the metastore service, if available.
      * 
      */
-    @OutputExport(name="stateMessage", type=String.class, parameters={})
+    @Export(name="stateMessage", type=String.class, parameters={})
     private Output<String> stateMessage;
 
     /**
@@ -267,7 +267,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The tier of the service.
      * 
      */
-    @OutputExport(name="tier", type=String.class, parameters={})
+    @Export(name="tier", type=String.class, parameters={})
     private Output<String> tier;
 
     /**
@@ -281,7 +281,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The globally unique resource identifier of the metastore service.
      * 
      */
-    @OutputExport(name="uid", type=String.class, parameters={})
+    @Export(name="uid", type=String.class, parameters={})
     private Output<String> uid;
 
     /**
@@ -295,7 +295,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The time when the metastore service was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

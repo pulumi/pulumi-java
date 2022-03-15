@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kms.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAliasArgs extends io.pulumi.resources.InvokeArgs {
      * Specifies the alias name. This value must begin with alias/ followed by a name, such as alias/ExampleAlias. The alias name cannot begin with alias/aws/. The alias/aws/ prefix is reserved for AWS managed CMKs.
      * 
      */
-    @InputImport(name="aliasName", required=true)
+    @Import(name="aliasName", required=true)
       private final String aliasName;
 
     public String getAliasName() {

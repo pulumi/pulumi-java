@@ -8,7 +8,7 @@ import io.pulumi.awsnative.appstream.ApplicationArgs;
 import io.pulumi.awsnative.appstream.outputs.ApplicationS3Location;
 import io.pulumi.awsnative.appstream.outputs.ApplicationTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -20,85 +20,85 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:appstream:Application")
 public class Application extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="appBlockArn", type=String.class, parameters={})
+    @Export(name="appBlockArn", type=String.class, parameters={})
     private Output<String> appBlockArn;
 
     public Output<String> getAppBlockArn() {
         return this.appBlockArn;
     }
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="attributesToDelete", type=List.class, parameters={String.class})
+    @Export(name="attributesToDelete", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> attributesToDelete;
 
     public Output</* @Nullable */ List<String>> getAttributesToDelete() {
         return this.attributesToDelete;
     }
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     public Output</* @Nullable */ String> getDisplayName() {
         return this.displayName;
     }
-    @OutputExport(name="iconS3Location", type=ApplicationS3Location.class, parameters={})
+    @Export(name="iconS3Location", type=ApplicationS3Location.class, parameters={})
     private Output<ApplicationS3Location> iconS3Location;
 
     public Output<ApplicationS3Location> getIconS3Location() {
         return this.iconS3Location;
     }
-    @OutputExport(name="instanceFamilies", type=List.class, parameters={String.class})
+    @Export(name="instanceFamilies", type=List.class, parameters={String.class})
     private Output<List<String>> instanceFamilies;
 
     public Output<List<String>> getInstanceFamilies() {
         return this.instanceFamilies;
     }
-    @OutputExport(name="launchParameters", type=String.class, parameters={})
+    @Export(name="launchParameters", type=String.class, parameters={})
     private Output</* @Nullable */ String> launchParameters;
 
     public Output</* @Nullable */ String> getLaunchParameters() {
         return this.launchParameters;
     }
-    @OutputExport(name="launchPath", type=String.class, parameters={})
+    @Export(name="launchPath", type=String.class, parameters={})
     private Output<String> launchPath;
 
     public Output<String> getLaunchPath() {
         return this.launchPath;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="platforms", type=List.class, parameters={String.class})
+    @Export(name="platforms", type=List.class, parameters={String.class})
     private Output<List<String>> platforms;
 
     public Output<List<String>> getPlatforms() {
         return this.platforms;
     }
-    @OutputExport(name="tags", type=List.class, parameters={ApplicationTag.class})
+    @Export(name="tags", type=List.class, parameters={ApplicationTag.class})
     private Output</* @Nullable */ List<ApplicationTag>> tags;
 
     public Output</* @Nullable */ List<ApplicationTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="workingDirectory", type=String.class, parameters={})
+    @Export(name="workingDirectory", type=String.class, parameters={})
     private Output</* @Nullable */ String> workingDirectory;
 
     public Output</* @Nullable */ String> getWorkingDirectory() {

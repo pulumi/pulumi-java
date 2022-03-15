@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseInstanceClone {
     /**
      * The timestamp of the point in time that should be restored.
@@ -22,10 +22,10 @@ public final class DatabaseInstanceClone {
      */
     private final String sourceInstanceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseInstanceClone(
-        @OutputCustomType.Parameter("pointInTime") @Nullable String pointInTime,
-        @OutputCustomType.Parameter("sourceInstanceName") String sourceInstanceName) {
+        @CustomType.Parameter("pointInTime") @Nullable String pointInTime,
+        @CustomType.Parameter("sourceInstanceName") String sourceInstanceName) {
         this.pointInTime = pointInTime;
         this.sourceInstanceName = sourceInstanceName;
     }

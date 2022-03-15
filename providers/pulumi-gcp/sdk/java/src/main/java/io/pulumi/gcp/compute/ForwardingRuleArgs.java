@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Cannot be set if port or portRange are set.
      * 
      */
-    @InputImport(name="allPorts")
+    @Import(name="allPorts")
       private final @Nullable Output<Boolean> allPorts;
 
     public Output<Boolean> getAllPorts() {
@@ -39,7 +39,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Otherwise only allows from the local region the ILB is located at.
      * 
      */
-    @InputImport(name="allowGlobalAccess")
+    @Import(name="allowGlobalAccess")
       private final @Nullable Output<Boolean> allowGlobalAccess;
 
     public Output<Boolean> getAllowGlobalAccess() {
@@ -51,7 +51,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * for INTERNAL load balancing.
      * 
      */
-    @InputImport(name="backendService")
+    @Import(name="backendService")
       private final @Nullable Output<String> backendService;
 
     public Output<String> getBackendService() {
@@ -63,7 +63,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -86,7 +86,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Google APIs, IP address must be provided.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -100,7 +100,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, `ICMP`, and `L3_DEFAULT`.
      * 
      */
-    @InputImport(name="ipProtocol")
+    @Import(name="ipProtocol")
       private final @Nullable Output<String> ipProtocol;
 
     public Output<String> getIpProtocol() {
@@ -116,7 +116,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * loadBalancingScheme set to INTERNAL.
      * 
      */
-    @InputImport(name="isMirroringCollector")
+    @Import(name="isMirroringCollector")
       private final @Nullable Output<Boolean> isMirroringCollector;
 
     public Output<Boolean> getIsMirroringCollector() {
@@ -127,7 +127,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Labels to apply to this forwarding rule.  A list of key->value pairs.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -147,7 +147,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `EXTERNAL`, `EXTERNAL_MANAGED`, `INTERNAL`, and `INTERNAL_MANAGED`.
      * 
      */
-    @InputImport(name="loadBalancingScheme")
+    @Import(name="loadBalancingScheme")
       private final @Nullable Output<String> loadBalancingScheme;
 
     public Output<String> getLoadBalancingScheme() {
@@ -164,7 +164,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -178,7 +178,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * This field is only used for INTERNAL load balancing.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -191,7 +191,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `PREMIUM` and `STANDARD`.
      * 
      */
-    @InputImport(name="networkTier")
+    @Import(name="networkTier")
       private final @Nullable Output<String> networkTier;
 
     public Output<String> getNetworkTier() {
@@ -217,7 +217,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * * TargetVpnGateway: 500, 4500
      * 
      */
-    @InputImport(name="portRange")
+    @Import(name="portRange")
       private final @Nullable Output<String> portRange;
 
     public Output<String> getPortRange() {
@@ -236,7 +236,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * You may specify a maximum of up to 5 ports, which can be non-contiguous.
      * 
      */
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable Output<List<String>> ports;
 
     public Output<List<String>> getPorts() {
@@ -248,7 +248,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -260,7 +260,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * This field is not applicable to global forwarding rules.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -280,7 +280,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * This field is only used for INTERNAL load balancing.
      * 
      */
-    @InputImport(name="serviceLabel")
+    @Import(name="serviceLabel")
       private final @Nullable Output<String> serviceLabel;
 
     public Output<String> getServiceLabel() {
@@ -295,7 +295,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * subnetwork must be specified.
      * 
      */
-    @InputImport(name="subnetwork")
+    @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {
@@ -309,7 +309,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * object.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {

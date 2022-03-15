@@ -4,7 +4,7 @@
 package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DataSourceParametersRedshiftArgs extends io.pulumi.resources.
      * The ID of the cluster to which to connect.
      * 
      */
-    @InputImport(name="clusterId")
+    @Import(name="clusterId")
       private final @Nullable Output<String> clusterId;
 
     public Output<String> getClusterId() {
@@ -30,7 +30,7 @@ public final class DataSourceParametersRedshiftArgs extends io.pulumi.resources.
      * The database to which to connect.
      * 
      */
-    @InputImport(name="database", required=true)
+    @Import(name="database", required=true)
       private final Output<String> database;
 
     public Output<String> getDatabase() {
@@ -41,7 +41,7 @@ public final class DataSourceParametersRedshiftArgs extends io.pulumi.resources.
      * The host to which to connect.
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
@@ -52,7 +52,7 @@ public final class DataSourceParametersRedshiftArgs extends io.pulumi.resources.
      * The port to which to connect.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {

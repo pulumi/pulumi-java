@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.devopsguru.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class NotificationChannelSnsChannelConfigArgs extends io.pulumi.res
 
     public static final NotificationChannelSnsChannelConfigArgs Empty = new NotificationChannelSnsChannelConfigArgs();
 
-    @InputImport(name="topicArn")
+    @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
     public Output<String> getTopicArn() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicelinker.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLinkerArgs extends io.pulumi.resources.InvokeArgs {
      * The name Linker resource.
      * 
      */
-    @InputImport(name="linkerName", required=true)
+    @Import(name="linkerName", required=true)
       private final String linkerName;
 
     public String getLinkerName() {
@@ -27,7 +27,7 @@ public final class GetLinkerArgs extends io.pulumi.resources.InvokeArgs {
      * The fully qualified Azure Resource manager identifier of the resource to be connected.
      * 
      */
-    @InputImport(name="resourceUri", required=true)
+    @Import(name="resourceUri", required=true)
       private final String resourceUri;
 
     public String getResourceUri() {

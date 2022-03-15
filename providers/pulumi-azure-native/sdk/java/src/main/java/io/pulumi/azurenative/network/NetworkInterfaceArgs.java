@@ -12,7 +12,7 @@ import io.pulumi.azurenative.network.inputs.NetworkSecurityGroupArgs;
 import io.pulumi.azurenative.network.inputs.PrivateLinkServiceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * The DNS settings in network interface.
      * 
      */
-    @InputImport(name="dnsSettings")
+    @Import(name="dnsSettings")
       private final @Nullable Output<NetworkInterfaceDnsSettingsArgs> dnsSettings;
 
     public Output<NetworkInterfaceDnsSettingsArgs> getDnsSettings() {
@@ -40,7 +40,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * If the network interface is accelerated networking enabled.
      * 
      */
-    @InputImport(name="enableAcceleratedNetworking")
+    @Import(name="enableAcceleratedNetworking")
       private final @Nullable Output<Boolean> enableAcceleratedNetworking;
 
     public Output<Boolean> getEnableAcceleratedNetworking() {
@@ -51,7 +51,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * Indicates whether IP forwarding is enabled on this network interface.
      * 
      */
-    @InputImport(name="enableIPForwarding")
+    @Import(name="enableIPForwarding")
       private final @Nullable Output<Boolean> enableIPForwarding;
 
     public Output<Boolean> getEnableIPForwarding() {
@@ -62,7 +62,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * The extended location of the network interface.
      * 
      */
-    @InputImport(name="extendedLocation")
+    @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
     public Output<ExtendedLocationArgs> getExtendedLocation() {
@@ -73,7 +73,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -84,7 +84,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * A list of IPConfigurations of the network interface.
      * 
      */
-    @InputImport(name="ipConfigurations")
+    @Import(name="ipConfigurations")
       private final @Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
 
     public Output<List<NetworkInterfaceIPConfigurationArgs>> getIpConfigurations() {
@@ -95,7 +95,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -106,7 +106,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * Migration phase of Network Interface resource.
      * 
      */
-    @InputImport(name="migrationPhase")
+    @Import(name="migrationPhase")
       private final @Nullable Output<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase;
 
     public Output<Either<String,NetworkInterfaceMigrationPhase>> getMigrationPhase() {
@@ -117,7 +117,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * The name of the network interface.
      * 
      */
-    @InputImport(name="networkInterfaceName")
+    @Import(name="networkInterfaceName")
       private final @Nullable Output<String> networkInterfaceName;
 
     public Output<String> getNetworkInterfaceName() {
@@ -128,7 +128,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * The reference to the NetworkSecurityGroup resource.
      * 
      */
-    @InputImport(name="networkSecurityGroup")
+    @Import(name="networkSecurityGroup")
       private final @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup;
 
     public Output<NetworkSecurityGroupArgs> getNetworkSecurityGroup() {
@@ -139,7 +139,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * Type of Network Interface resource.
      * 
      */
-    @InputImport(name="nicType")
+    @Import(name="nicType")
       private final @Nullable Output<Either<String,NetworkInterfaceNicType>> nicType;
 
     public Output<Either<String,NetworkInterfaceNicType>> getNicType() {
@@ -150,7 +150,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * Privatelinkservice of the network interface resource.
      * 
      */
-    @InputImport(name="privateLinkService")
+    @Import(name="privateLinkService")
       private final @Nullable Output<PrivateLinkServiceArgs> privateLinkService;
 
     public Output<PrivateLinkServiceArgs> getPrivateLinkService() {
@@ -161,7 +161,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -172,7 +172,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

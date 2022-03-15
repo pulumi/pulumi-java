@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetViewResult {
     /**
      * Date time when view was last modified.
@@ -63,18 +63,18 @@ public final class GetViewResult {
      */
     private final String viewName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetViewResult(
-        @OutputCustomType.Parameter("changed") String changed,
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("definition") String definition,
-        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userId") @Nullable String userId,
-        @OutputCustomType.Parameter("viewName") String viewName) {
+        @CustomType.Parameter("changed") String changed,
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("definition") String definition,
+        @CustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userId") @Nullable String userId,
+        @CustomType.Parameter("viewName") String viewName) {
         this.changed = changed;
         this.created = created;
         this.definition = definition;

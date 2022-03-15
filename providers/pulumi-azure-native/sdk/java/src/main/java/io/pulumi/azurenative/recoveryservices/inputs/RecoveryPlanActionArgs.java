@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.PossibleOperationsDirections
 import io.pulumi.azurenative.recoveryservices.enums.ReplicationProtectedItemOperation;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
      * The action name.
      * 
      */
-    @InputImport(name="actionName", required=true)
+    @Import(name="actionName", required=true)
       private final Output<String> actionName;
 
     public Output<String> getActionName() {
@@ -36,7 +36,7 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
      * The list of failover directions.
      * 
      */
-    @InputImport(name="failoverDirections", required=true)
+    @Import(name="failoverDirections", required=true)
       private final Output<List<Either<String,PossibleOperationsDirections>>> failoverDirections;
 
     public Output<List<Either<String,PossibleOperationsDirections>>> getFailoverDirections() {
@@ -47,7 +47,7 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
      * The list of failover types.
      * 
      */
-    @InputImport(name="failoverTypes", required=true)
+    @Import(name="failoverTypes", required=true)
       private final Output<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes;
 
     public Output<List<Either<String,ReplicationProtectedItemOperation>>> getFailoverTypes() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CorrelationFilterResponse {
     /**
      * Content type of the message.
@@ -64,18 +64,18 @@ public final class CorrelationFilterResponse {
      */
     private final @Nullable String to;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CorrelationFilterResponse(
-        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
-        @OutputCustomType.Parameter("correlationId") @Nullable String correlationId,
-        @OutputCustomType.Parameter("label") @Nullable String label,
-        @OutputCustomType.Parameter("messageId") @Nullable String messageId,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("replyTo") @Nullable String replyTo,
-        @OutputCustomType.Parameter("replyToSessionId") @Nullable String replyToSessionId,
-        @OutputCustomType.Parameter("requiresPreprocessing") @Nullable Boolean requiresPreprocessing,
-        @OutputCustomType.Parameter("sessionId") @Nullable String sessionId,
-        @OutputCustomType.Parameter("to") @Nullable String to) {
+        @CustomType.Parameter("contentType") @Nullable String contentType,
+        @CustomType.Parameter("correlationId") @Nullable String correlationId,
+        @CustomType.Parameter("label") @Nullable String label,
+        @CustomType.Parameter("messageId") @Nullable String messageId,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("replyTo") @Nullable String replyTo,
+        @CustomType.Parameter("replyToSessionId") @Nullable String replyToSessionId,
+        @CustomType.Parameter("requiresPreprocessing") @Nullable Boolean requiresPreprocessing,
+        @CustomType.Parameter("sessionId") @Nullable String sessionId,
+        @CustomType.Parameter("to") @Nullable String to) {
         this.contentType = contentType;
         this.correlationId = correlationId;
         this.label = label;

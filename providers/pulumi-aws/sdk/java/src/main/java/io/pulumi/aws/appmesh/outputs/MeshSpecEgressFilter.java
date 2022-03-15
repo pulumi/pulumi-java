@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MeshSpecEgressFilter {
     /**
      * The egress filter type. By default, the type is `DROP_ALL`.
@@ -18,8 +18,8 @@ public final class MeshSpecEgressFilter {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
-    private MeshSpecEgressFilter(@OutputCustomType.Parameter("type") @Nullable String type) {
+    @CustomType.Constructor
+    private MeshSpecEgressFilter(@CustomType.Parameter("type") @Nullable String type) {
         this.type = type;
     }
 

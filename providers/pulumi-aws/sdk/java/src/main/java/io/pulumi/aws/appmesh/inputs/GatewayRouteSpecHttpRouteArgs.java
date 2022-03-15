@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecHttpRouteActionArgs;
 import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecHttpRouteMatchArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class GatewayRouteSpecHttpRouteArgs extends io.pulumi.resources.Res
      * The action to take if a match is determined.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<GatewayRouteSpecHttpRouteActionArgs> action;
 
     public Output<GatewayRouteSpecHttpRouteActionArgs> getAction() {
@@ -29,7 +29,7 @@ public final class GatewayRouteSpecHttpRouteArgs extends io.pulumi.resources.Res
      * The criteria for determining a request match.
      * 
      */
-    @InputImport(name="match", required=true)
+    @Import(name="match", required=true)
       private final Output<GatewayRouteSpecHttpRouteMatchArgs> match;
 
     public Output<GatewayRouteSpecHttpRouteMatchArgs> getMatch() {

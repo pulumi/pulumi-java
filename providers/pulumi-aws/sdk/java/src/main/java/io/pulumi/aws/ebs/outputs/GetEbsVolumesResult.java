@@ -4,14 +4,14 @@
 package io.pulumi.aws.ebs.outputs;
 
 import io.pulumi.aws.ebs.outputs.GetEbsVolumesFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEbsVolumesResult {
     private final @Nullable List<GetEbsVolumesFilter> filters;
     /**
@@ -27,12 +27,12 @@ public final class GetEbsVolumesResult {
     private final List<String> ids;
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEbsVolumesResult(
-        @OutputCustomType.Parameter("filters") @Nullable List<GetEbsVolumesFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ids") List<String> ids,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
+        @CustomType.Parameter("filters") @Nullable List<GetEbsVolumesFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ids") List<String> ids,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.filters = filters;
         this.id = id;
         this.ids = ids;

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.outputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.HTTPHeader;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HTTPGetAction {
     /**
      * Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
@@ -45,13 +45,13 @@ public final class HTTPGetAction {
      */
     private final @Nullable String scheme;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HTTPGetAction(
-        @OutputCustomType.Parameter("host") @Nullable String host,
-        @OutputCustomType.Parameter("httpHeaders") @Nullable List<HTTPHeader> httpHeaders,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("port") Either<Integer,String> port,
-        @OutputCustomType.Parameter("scheme") @Nullable String scheme) {
+        @CustomType.Parameter("host") @Nullable String host,
+        @CustomType.Parameter("httpHeaders") @Nullable List<HTTPHeader> httpHeaders,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("port") Either<Integer,String> port,
+        @CustomType.Parameter("scheme") @Nullable String scheme) {
         this.host = host;
         this.httpHeaders = httpHeaders;
         this.path = path;

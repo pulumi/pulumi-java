@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.lambda.InvocationArgs;
 import io.pulumi.aws.lambda.inputs.InvocationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +27,7 @@ public class Invocation extends io.pulumi.resources.CustomResource {
      * Name of the lambda function.
      * 
      */
-    @OutputExport(name="functionName", type=String.class, parameters={})
+    @Export(name="functionName", type=String.class, parameters={})
     private Output<String> functionName;
 
     /**
@@ -41,7 +41,7 @@ public class Invocation extends io.pulumi.resources.CustomResource {
      * JSON payload to the lambda function.
      * 
      */
-    @OutputExport(name="input", type=String.class, parameters={})
+    @Export(name="input", type=String.class, parameters={})
     private Output<String> input;
 
     /**
@@ -55,7 +55,7 @@ public class Invocation extends io.pulumi.resources.CustomResource {
      * Qualifier (i.e., version) of the lambda function. Defaults to `$LATEST`.
      * 
      */
-    @OutputExport(name="qualifier", type=String.class, parameters={})
+    @Export(name="qualifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> qualifier;
 
     /**
@@ -69,7 +69,7 @@ public class Invocation extends io.pulumi.resources.CustomResource {
      * String result of the lambda function invocation.
      * 
      */
-    @OutputExport(name="result", type=String.class, parameters={})
+    @Export(name="result", type=String.class, parameters={})
     private Output<String> result;
 
     /**
@@ -79,7 +79,7 @@ public class Invocation extends io.pulumi.resources.CustomResource {
     public Output<String> getResult() {
         return this.result;
     }
-    @OutputExport(name="triggers", type=Map.class, parameters={String.class, String.class})
+    @Export(name="triggers", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> triggers;
 
     public Output</* @Nullable */ Map<String,String>> getTriggers() {

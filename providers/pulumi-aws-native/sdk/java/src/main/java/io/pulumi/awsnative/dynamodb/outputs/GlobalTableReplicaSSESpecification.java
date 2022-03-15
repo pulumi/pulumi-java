@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GlobalTableReplicaSSESpecification {
     private final String kMSMasterKeyId;
 
-    @OutputCustomType.Constructor
-    private GlobalTableReplicaSSESpecification(@OutputCustomType.Parameter("kMSMasterKeyId") String kMSMasterKeyId) {
+    @CustomType.Constructor
+    private GlobalTableReplicaSSESpecification(@CustomType.Parameter("kMSMasterKeyId") String kMSMasterKeyId) {
         this.kMSMasterKeyId = kMSMasterKeyId;
     }
 

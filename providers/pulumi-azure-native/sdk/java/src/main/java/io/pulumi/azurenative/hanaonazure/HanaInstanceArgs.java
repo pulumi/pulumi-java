@@ -7,7 +7,7 @@ import io.pulumi.azurenative.hanaonazure.inputs.NetworkProfileArgs;
 import io.pulumi.azurenative.hanaonazure.inputs.OSProfileArgs;
 import io.pulumi.azurenative.hanaonazure.inputs.StorageProfileArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the SAP HANA on Azure instance.
      * 
      */
-    @InputImport(name="hanaInstanceName")
+    @Import(name="hanaInstanceName")
       private final @Nullable Output<String> hanaInstanceName;
 
     public Output<String> getHanaInstanceName() {
@@ -33,7 +33,7 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -44,7 +44,7 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the network settings for the HANA instance.
      * 
      */
-    @InputImport(name="networkProfile")
+    @Import(name="networkProfile")
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
     public Output<NetworkProfileArgs> getNetworkProfile() {
@@ -55,7 +55,7 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the operating system settings for the HANA instance.
      * 
      */
-    @InputImport(name="osProfile")
+    @Import(name="osProfile")
       private final @Nullable Output<OSProfileArgs> osProfile;
 
     public Output<OSProfileArgs> getOsProfile() {
@@ -66,7 +66,7 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * ARM ID of another HanaInstance that will share a network with this HanaInstance
      * 
      */
-    @InputImport(name="partnerNodeId")
+    @Import(name="partnerNodeId")
       private final @Nullable Output<String> partnerNodeId;
 
     public Output<String> getPartnerNodeId() {
@@ -77,7 +77,7 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -88,7 +88,7 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the storage settings for the HANA instance disks.
      * 
      */
-    @InputImport(name="storageProfile")
+    @Import(name="storageProfile")
       private final @Nullable Output<StorageProfileArgs> storageProfile;
 
     public Output<StorageProfileArgs> getStorageProfile() {
@@ -99,7 +99,7 @@ public final class HanaInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

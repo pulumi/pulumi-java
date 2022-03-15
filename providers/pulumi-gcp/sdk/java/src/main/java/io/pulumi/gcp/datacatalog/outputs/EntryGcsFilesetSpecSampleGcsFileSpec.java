@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EntryGcsFilesetSpecSampleGcsFileSpec {
     /**
      * - 
@@ -25,10 +25,10 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpec {
      */
     private final @Nullable Integer sizeBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EntryGcsFilesetSpecSampleGcsFileSpec(
-        @OutputCustomType.Parameter("filePath") @Nullable String filePath,
-        @OutputCustomType.Parameter("sizeBytes") @Nullable Integer sizeBytes) {
+        @CustomType.Parameter("filePath") @Nullable String filePath,
+        @CustomType.Parameter("sizeBytes") @Nullable Integer sizeBytes) {
         this.filePath = filePath;
         this.sizeBytes = sizeBytes;
     }

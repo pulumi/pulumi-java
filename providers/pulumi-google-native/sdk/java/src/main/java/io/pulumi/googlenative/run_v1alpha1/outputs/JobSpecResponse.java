@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.InstanceTemplateSpecResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobSpecResponse {
     /**
      * Optional. Not supported. Specifies the duration in seconds relative to the startTime that the job may be active before the system tries to terminate it. If set to zero, the system will never attempt to terminate the job based on time. Otherwise, the value must be positive integer. +optional
@@ -42,14 +42,14 @@ public final class JobSpecResponse {
      */
     private final Integer ttlSecondsAfterFinished;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobSpecResponse(
-        @OutputCustomType.Parameter("activeDeadlineSeconds") String activeDeadlineSeconds,
-        @OutputCustomType.Parameter("backoffLimit") Integer backoffLimit,
-        @OutputCustomType.Parameter("completions") Integer completions,
-        @OutputCustomType.Parameter("parallelism") Integer parallelism,
-        @OutputCustomType.Parameter("template") InstanceTemplateSpecResponse template,
-        @OutputCustomType.Parameter("ttlSecondsAfterFinished") Integer ttlSecondsAfterFinished) {
+        @CustomType.Parameter("activeDeadlineSeconds") String activeDeadlineSeconds,
+        @CustomType.Parameter("backoffLimit") Integer backoffLimit,
+        @CustomType.Parameter("completions") Integer completions,
+        @CustomType.Parameter("parallelism") Integer parallelism,
+        @CustomType.Parameter("template") InstanceTemplateSpecResponse template,
+        @CustomType.Parameter("ttlSecondsAfterFinished") Integer ttlSecondsAfterFinished) {
         this.activeDeadlineSeconds = activeDeadlineSeconds;
         this.backoffLimit = backoffLimit;
         this.completions = completions;

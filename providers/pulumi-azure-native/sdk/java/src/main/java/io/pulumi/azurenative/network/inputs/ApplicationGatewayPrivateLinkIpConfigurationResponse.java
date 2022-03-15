@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -35,7 +35,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -46,7 +46,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
      * The name of application gateway private link ip configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -57,7 +57,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
      * Whether the ip configuration is primary or not.
      * 
      */
-    @InputImport(name="primary")
+    @Import(name="primary")
       private final @Nullable Boolean primary;
 
     public Optional<Boolean> getPrimary() {
@@ -68,7 +68,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
      * The private IP address of the IP configuration.
      * 
      */
-    @InputImport(name="privateIPAddress")
+    @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
 
     public Optional<String> getPrivateIPAddress() {
@@ -79,7 +79,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
      * The private IP address allocation method.
      * 
      */
-    @InputImport(name="privateIPAllocationMethod")
+    @Import(name="privateIPAllocationMethod")
       private final @Nullable String privateIPAllocationMethod;
 
     public Optional<String> getPrivateIPAllocationMethod() {
@@ -90,7 +90,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
      * The provisioning state of the application gateway private link IP configuration.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -101,7 +101,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
      * Reference to the subnet resource.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable SubResourceResponse subnet;
 
     public Optional<SubResourceResponse> getSubnet() {
@@ -112,7 +112,7 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse extends 
      * The resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.waf.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupActivatedRuleAction {
     /**
      * The rule type, either `REGULAR`, `RATE_BASED`, or `GROUP`. Defaults to `REGULAR`.
@@ -15,8 +15,8 @@ public final class RuleGroupActivatedRuleAction {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private RuleGroupActivatedRuleAction(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private RuleGroupActivatedRuleAction(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

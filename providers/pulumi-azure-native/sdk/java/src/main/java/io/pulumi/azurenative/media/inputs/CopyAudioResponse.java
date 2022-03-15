@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class CopyAudioResponse extends io.pulumi.resources.InvokeArgs {
      * An optional label for the codec. The label can be used to control muxing behavior.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable String label;
 
     public Optional<String> getLabel() {
@@ -34,7 +34,7 @@ public final class CopyAudioResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is '#Microsoft.Media.CopyAudio'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {

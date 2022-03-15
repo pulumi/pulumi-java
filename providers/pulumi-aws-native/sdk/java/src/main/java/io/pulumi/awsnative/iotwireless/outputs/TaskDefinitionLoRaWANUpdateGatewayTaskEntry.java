@@ -4,20 +4,20 @@
 package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.outputs.TaskDefinitionLoRaWANGatewayVersion;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionLoRaWANUpdateGatewayTaskEntry {
     private final @Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion;
     private final @Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionLoRaWANUpdateGatewayTaskEntry(
-        @OutputCustomType.Parameter("currentVersion") @Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion,
-        @OutputCustomType.Parameter("updateVersion") @Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion) {
+        @CustomType.Parameter("currentVersion") @Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion,
+        @CustomType.Parameter("updateVersion") @Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion) {
         this.currentVersion = currentVersion;
         this.updateVersion = updateVersion;
     }

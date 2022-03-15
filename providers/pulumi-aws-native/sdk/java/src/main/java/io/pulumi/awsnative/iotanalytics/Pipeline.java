@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iotanalytics.PipelineArgs;
 import io.pulumi.awsnative.iotanalytics.outputs.PipelineActivity;
 import io.pulumi.awsnative.iotanalytics.outputs.PipelineTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -22,19 +22,19 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:iotanalytics:Pipeline")
 public class Pipeline extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="pipelineActivities", type=List.class, parameters={PipelineActivity.class})
+    @Export(name="pipelineActivities", type=List.class, parameters={PipelineActivity.class})
     private Output<List<PipelineActivity>> pipelineActivities;
 
     public Output<List<PipelineActivity>> getPipelineActivities() {
         return this.pipelineActivities;
     }
-    @OutputExport(name="pipelineName", type=String.class, parameters={})
+    @Export(name="pipelineName", type=String.class, parameters={})
     private Output</* @Nullable */ String> pipelineName;
 
     public Output</* @Nullable */ String> getPipelineName() {
         return this.pipelineName;
     }
-    @OutputExport(name="tags", type=List.class, parameters={PipelineTag.class})
+    @Export(name="tags", type=List.class, parameters={PipelineTag.class})
     private Output</* @Nullable */ List<PipelineTag>> tags;
 
     public Output</* @Nullable */ List<PipelineTag>> getTags() {

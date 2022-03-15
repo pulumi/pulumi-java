@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class NotificationEndpointArgs extends io.pulumi.resources.Resource
 
     public static final NotificationEndpointArgs Empty = new NotificationEndpointArgs();
 
-    @InputImport(name="locations")
+    @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
     public Output<List<String>> getLocations() {
         return this.locations == null ? Output.empty() : this.locations;
     }
 
-    @InputImport(name="notificationDestination")
+    @Import(name="notificationDestination")
       private final @Nullable Output<String> notificationDestination;
 
     public Output<String> getNotificationDestination() {

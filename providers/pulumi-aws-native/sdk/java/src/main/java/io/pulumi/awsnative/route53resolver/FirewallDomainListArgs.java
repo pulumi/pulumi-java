@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53resolver;
 
 import io.pulumi.awsnative.route53resolver.inputs.FirewallDomainListTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
      * S3 URL to import domains from.
      * 
      */
-    @InputImport(name="domainFileUrl")
+    @Import(name="domainFileUrl")
       private final @Nullable Output<String> domainFileUrl;
 
     public Output<String> getDomainFileUrl() {
         return this.domainFileUrl == null ? Output.empty() : this.domainFileUrl;
     }
 
-    @InputImport(name="domains")
+    @Import(name="domains")
       private final @Nullable Output<List<String>> domains;
 
     public Output<List<String>> getDomains() {
@@ -38,7 +38,7 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
      * FirewallDomainListName
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -49,7 +49,7 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
      * Tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<FirewallDomainListTagArgs>> tags;
 
     public Output<List<FirewallDomainListTagArgs>> getTags() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetHybridRunbookWorkerArgs extends io.pulumi.resources.Invoke
      * The name of the automation account.
      * 
      */
-    @InputImport(name="automationAccountName", required=true)
+    @Import(name="automationAccountName", required=true)
       private final String automationAccountName;
 
     public String getAutomationAccountName() {
@@ -27,7 +27,7 @@ public final class GetHybridRunbookWorkerArgs extends io.pulumi.resources.Invoke
      * The hybrid runbook worker group name
      * 
      */
-    @InputImport(name="hybridRunbookWorkerGroupName", required=true)
+    @Import(name="hybridRunbookWorkerGroupName", required=true)
       private final String hybridRunbookWorkerGroupName;
 
     public String getHybridRunbookWorkerGroupName() {
@@ -38,7 +38,7 @@ public final class GetHybridRunbookWorkerArgs extends io.pulumi.resources.Invoke
      * The hybrid runbook worker id
      * 
      */
-    @InputImport(name="hybridRunbookWorkerId", required=true)
+    @Import(name="hybridRunbookWorkerId", required=true)
       private final String hybridRunbookWorkerId;
 
     public String getHybridRunbookWorkerId() {
@@ -49,7 +49,7 @@ public final class GetHybridRunbookWorkerArgs extends io.pulumi.resources.Invoke
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

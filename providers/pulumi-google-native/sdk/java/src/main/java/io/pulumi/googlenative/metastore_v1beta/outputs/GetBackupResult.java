@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.metastore_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.metastore_v1beta.outputs.ServiceResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackupResult {
     /**
      * The time when the backup was started.
@@ -47,15 +47,15 @@ public final class GetBackupResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackupResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("restoringServices") List<String> restoringServices,
-        @OutputCustomType.Parameter("serviceRevision") ServiceResponse serviceRevision,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("restoringServices") List<String> restoringServices,
+        @CustomType.Parameter("serviceRevision") ServiceResponse serviceRevision,
+        @CustomType.Parameter("state") String state) {
         this.createTime = createTime;
         this.description = description;
         this.endTime = endTime;

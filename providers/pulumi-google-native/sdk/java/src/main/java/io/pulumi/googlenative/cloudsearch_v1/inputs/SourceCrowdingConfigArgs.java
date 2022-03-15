@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SourceCrowdingConfigArgs extends io.pulumi.resources.Resource
      * Maximum number of results allowed from a datasource in a result page as long as results from other sources are not exhausted. Value specified must not be negative. A default value is used if this value is equal to 0. To disable crowding, set the value greater than 100.
      * 
      */
-    @InputImport(name="numResults")
+    @Import(name="numResults")
       private final @Nullable Output<Integer> numResults;
 
     public Output<Integer> getNumResults() {
@@ -33,7 +33,7 @@ public final class SourceCrowdingConfigArgs extends io.pulumi.resources.Resource
      * Maximum number of suggestions allowed from a source. No limits will be set on results if this value is less than or equal to 0.
      * 
      */
-    @InputImport(name="numSuggestions")
+    @Import(name="numSuggestions")
       private final @Nullable Output<Integer> numSuggestions;
 
     public Output<Integer> getNumSuggestions() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1ApiCategoryDataResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetApicategoryResult {
     /**
      * Details of category.
@@ -36,13 +36,13 @@ public final class GetApicategoryResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApicategoryResult(
-        @OutputCustomType.Parameter("data") GoogleCloudApigeeV1ApiCategoryDataResponse data,
-        @OutputCustomType.Parameter("errorCode") String errorCode,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("requestId") String requestId,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("data") GoogleCloudApigeeV1ApiCategoryDataResponse data,
+        @CustomType.Parameter("errorCode") String errorCode,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("requestId") String requestId,
+        @CustomType.Parameter("status") String status) {
         this.data = data;
         this.errorCode = errorCode;
         this.message = message;

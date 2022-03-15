@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedInstancePairInfoResponse {
     /**
      * Id of Partner Managed Instance in pair.
@@ -22,10 +22,10 @@ public final class ManagedInstancePairInfoResponse {
      */
     private final @Nullable String primaryManagedInstanceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedInstancePairInfoResponse(
-        @OutputCustomType.Parameter("partnerManagedInstanceId") @Nullable String partnerManagedInstanceId,
-        @OutputCustomType.Parameter("primaryManagedInstanceId") @Nullable String primaryManagedInstanceId) {
+        @CustomType.Parameter("partnerManagedInstanceId") @Nullable String partnerManagedInstanceId,
+        @CustomType.Parameter("primaryManagedInstanceId") @Nullable String primaryManagedInstanceId) {
         this.partnerManagedInstanceId = partnerManagedInstanceId;
         this.primaryManagedInstanceId = primaryManagedInstanceId;
     }

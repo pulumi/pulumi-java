@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
      * Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    @InputImport(name="acceptLanguage")
+    @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
     public Output<String> getAcceptLanguage() {
@@ -29,7 +29,7 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
      * Portfolio identifier.
      * 
      */
-    @InputImport(name="portfolioId", required=true)
+    @Import(name="portfolioId", required=true)
       private final Output<String> portfolioId;
 
     public Output<String> getPortfolioId() {
@@ -40,7 +40,7 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
      * Product identifier.
      * 
      */
-    @InputImport(name="productId", required=true)
+    @Import(name="productId", required=true)
       private final Output<String> productId;
 
     public Output<String> getProductId() {
@@ -51,7 +51,7 @@ public final class ProductPortfolioAssociationArgs extends io.pulumi.resources.R
      * Identifier of the source portfolio.
      * 
      */
-    @InputImport(name="sourcePortfolioId")
+    @Import(name="sourcePortfolioId")
       private final @Nullable Output<String> sourcePortfolioId;
 
     public Output<String> getSourcePortfolioId() {

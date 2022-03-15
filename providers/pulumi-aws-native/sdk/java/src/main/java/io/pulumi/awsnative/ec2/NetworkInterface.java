@@ -9,7 +9,7 @@ import io.pulumi.awsnative.ec2.outputs.NetworkInterfaceInstanceIpv6Address;
 import io.pulumi.awsnative.ec2.outputs.NetworkInterfacePrivateIpAddressSpecification;
 import io.pulumi.awsnative.ec2.outputs.NetworkInterfaceTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,7 +27,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * A description for the network interface.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -41,7 +41,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * A list of security group IDs associated with this network interface.
      * 
      */
-    @OutputExport(name="groupSet", type=List.class, parameters={String.class})
+    @Export(name="groupSet", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> groupSet;
 
     /**
@@ -55,7 +55,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Indicates the type of network interface.
      * 
      */
-    @OutputExport(name="interfaceType", type=String.class, parameters={})
+    @Export(name="interfaceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> interfaceType;
 
     /**
@@ -69,7 +69,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * The number of IPv6 addresses to assign to a network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify specific IPv6 addresses, use the Ipv6Addresses property and don't specify this property.
      * 
      */
-    @OutputExport(name="ipv6AddressCount", type=Integer.class, parameters={})
+    @Export(name="ipv6AddressCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> ipv6AddressCount;
 
     /**
@@ -83,7 +83,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate with the network interface. If you're specifying a number of IPv6 addresses, use the Ipv6AddressCount property and don't specify this property.
      * 
      */
-    @OutputExport(name="ipv6Addresses", type=List.class, parameters={NetworkInterfaceInstanceIpv6Address.class})
+    @Export(name="ipv6Addresses", type=List.class, parameters={NetworkInterfaceInstanceIpv6Address.class})
     private Output</* @Nullable */ List<NetworkInterfaceInstanceIpv6Address>> ipv6Addresses;
 
     /**
@@ -97,7 +97,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Returns the primary private IP address of the network interface.
      * 
      */
-    @OutputExport(name="primaryPrivateIpAddress", type=String.class, parameters={})
+    @Export(name="primaryPrivateIpAddress", type=String.class, parameters={})
     private Output<String> primaryPrivateIpAddress;
 
     /**
@@ -111,7 +111,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Assigns a single private IP address to the network interface, which is used as the primary private IP address. If you want to specify multiple private IP address, use the PrivateIpAddresses property.
      * 
      */
-    @OutputExport(name="privateIpAddress", type=String.class, parameters={})
+    @Export(name="privateIpAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateIpAddress;
 
     /**
@@ -125,7 +125,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Assigns a list of private IP addresses to the network interface. You can specify a primary private IP address by setting the value of the Primary property to true in the PrivateIpAddressSpecification property. If you want EC2 to automatically assign private IP addresses, use the SecondaryPrivateIpAddressCount property and do not specify this property.
      * 
      */
-    @OutputExport(name="privateIpAddresses", type=List.class, parameters={NetworkInterfacePrivateIpAddressSpecification.class})
+    @Export(name="privateIpAddresses", type=List.class, parameters={NetworkInterfacePrivateIpAddressSpecification.class})
     private Output</* @Nullable */ List<NetworkInterfacePrivateIpAddressSpecification>> privateIpAddresses;
 
     /**
@@ -139,7 +139,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * The number of secondary private IPv4 addresses to assign to a network interface. When you specify a number of secondary IPv4 addresses, Amazon EC2 selects these IP addresses within the subnet's IPv4 CIDR range. You can't specify this option and specify more than one private IP address using privateIpAddresses
      * 
      */
-    @OutputExport(name="secondaryPrivateIpAddressCount", type=Integer.class, parameters={})
+    @Export(name="secondaryPrivateIpAddressCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> secondaryPrivateIpAddressCount;
 
     /**
@@ -153,7 +153,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Returns the secondary private IP addresses of the network interface.
      * 
      */
-    @OutputExport(name="secondaryPrivateIpAddresses", type=List.class, parameters={String.class})
+    @Export(name="secondaryPrivateIpAddresses", type=List.class, parameters={String.class})
     private Output<List<String>> secondaryPrivateIpAddresses;
 
     /**
@@ -167,7 +167,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Indicates whether traffic to or from the instance is validated.
      * 
      */
-    @OutputExport(name="sourceDestCheck", type=Boolean.class, parameters={})
+    @Export(name="sourceDestCheck", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> sourceDestCheck;
 
     /**
@@ -181,7 +181,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * The ID of the subnet to associate with the network interface.
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**
@@ -195,7 +195,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * An arbitrary set of tags (key-value pairs) for this network interface.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={NetworkInterfaceTag.class})
+    @Export(name="tags", type=List.class, parameters={NetworkInterfaceTag.class})
     private Output</* @Nullable */ List<NetworkInterfaceTag>> tags;
 
     /**

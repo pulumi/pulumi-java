@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.WebApplicationFirewallEnabledState;
 import io.pulumi.azurenative.network.enums.WebApplicationFirewallMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Maximum file upload size in Mb for WAF.
      * 
      */
-    @InputImport(name="fileUploadLimitInMb")
+    @Import(name="fileUploadLimitInMb")
       private final @Nullable Output<Integer> fileUploadLimitInMb;
 
     public Output<Integer> getFileUploadLimitInMb() {
@@ -38,7 +38,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Maximum request body size in Kb for WAF.
      * 
      */
-    @InputImport(name="maxRequestBodySizeInKb")
+    @Import(name="maxRequestBodySizeInKb")
       private final @Nullable Output<Integer> maxRequestBodySizeInKb;
 
     public Output<Integer> getMaxRequestBodySizeInKb() {
@@ -49,7 +49,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The mode of the policy.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<Either<String,WebApplicationFirewallMode>> mode;
 
     public Output<Either<String,WebApplicationFirewallMode>> getMode() {
@@ -60,7 +60,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to allow WAF to check request Body.
      * 
      */
-    @InputImport(name="requestBodyCheck")
+    @Import(name="requestBodyCheck")
       private final @Nullable Output<Boolean> requestBodyCheck;
 
     public Output<Boolean> getRequestBodyCheck() {
@@ -71,7 +71,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * The state of the policy.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<Either<String,WebApplicationFirewallEnabledState>> state;
 
     public Output<Either<String,WebApplicationFirewallEnabledState>> getState() {

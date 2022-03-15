@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApiResourceBackendServiceResponse extends io.pulumi.resources
      * The service URL.
      * 
      */
-    @InputImport(name="serviceUrl")
+    @Import(name="serviceUrl")
       private final @Nullable String serviceUrl;
 
     public Optional<String> getServiceUrl() {

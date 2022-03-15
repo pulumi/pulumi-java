@@ -4,10 +4,10 @@
 package io.pulumi.awsnative.lookoutmetrics.outputs;
 
 import io.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorFrequency;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnomalyDetectorConfig {
     /**
      * Frequency of anomaly detection
@@ -15,8 +15,8 @@ public final class AnomalyDetectorConfig {
      */
     private final AnomalyDetectorFrequency anomalyDetectorFrequency;
 
-    @OutputCustomType.Constructor
-    private AnomalyDetectorConfig(@OutputCustomType.Parameter("anomalyDetectorFrequency") AnomalyDetectorFrequency anomalyDetectorFrequency) {
+    @CustomType.Constructor
+    private AnomalyDetectorConfig(@CustomType.Parameter("anomalyDetectorFrequency") AnomalyDetectorFrequency anomalyDetectorFrequency) {
         this.anomalyDetectorFrequency = anomalyDetectorFrequency;
     }
 

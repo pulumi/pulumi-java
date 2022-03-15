@@ -9,7 +9,7 @@ import io.pulumi.aws.mwaa.inputs.EnvironmentLoggingConfigurationTaskLogsGetArgs;
 import io.pulumi.aws.mwaa.inputs.EnvironmentLoggingConfigurationWebserverLogsGetArgs;
 import io.pulumi.aws.mwaa.inputs.EnvironmentLoggingConfigurationWorkerLogsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class EnvironmentLoggingConfigurationGetArgs extends io.pulumi.reso
      * (Optional) Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.
      * 
      */
-    @InputImport(name="dagProcessingLogs")
+    @Import(name="dagProcessingLogs")
       private final @Nullable Output<EnvironmentLoggingConfigurationDagProcessingLogsGetArgs> dagProcessingLogs;
 
     public Output<EnvironmentLoggingConfigurationDagProcessingLogsGetArgs> getDagProcessingLogs() {
@@ -33,7 +33,7 @@ public final class EnvironmentLoggingConfigurationGetArgs extends io.pulumi.reso
      * Log configuration options for the schedulers. See Module logging configuration for more information. Disabled by default.
      * 
      */
-    @InputImport(name="schedulerLogs")
+    @Import(name="schedulerLogs")
       private final @Nullable Output<EnvironmentLoggingConfigurationSchedulerLogsGetArgs> schedulerLogs;
 
     public Output<EnvironmentLoggingConfigurationSchedulerLogsGetArgs> getSchedulerLogs() {
@@ -44,7 +44,7 @@ public final class EnvironmentLoggingConfigurationGetArgs extends io.pulumi.reso
      * Log configuration options for DAG tasks. See Module logging configuration for more information. Enabled by default with `INFO` log level.
      * 
      */
-    @InputImport(name="taskLogs")
+    @Import(name="taskLogs")
       private final @Nullable Output<EnvironmentLoggingConfigurationTaskLogsGetArgs> taskLogs;
 
     public Output<EnvironmentLoggingConfigurationTaskLogsGetArgs> getTaskLogs() {
@@ -55,7 +55,7 @@ public final class EnvironmentLoggingConfigurationGetArgs extends io.pulumi.reso
      * Log configuration options for the webservers. See Module logging configuration for more information. Disabled by default.
      * 
      */
-    @InputImport(name="webserverLogs")
+    @Import(name="webserverLogs")
       private final @Nullable Output<EnvironmentLoggingConfigurationWebserverLogsGetArgs> webserverLogs;
 
     public Output<EnvironmentLoggingConfigurationWebserverLogsGetArgs> getWebserverLogs() {
@@ -66,7 +66,7 @@ public final class EnvironmentLoggingConfigurationGetArgs extends io.pulumi.reso
      * Log configuration options for the workers. See Module logging configuration for more information. Disabled by default.
      * 
      */
-    @InputImport(name="workerLogs")
+    @Import(name="workerLogs")
       private final @Nullable Output<EnvironmentLoggingConfigurationWorkerLogsGetArgs> workerLogs;
 
     public Output<EnvironmentLoggingConfigurationWorkerLogsGetArgs> getWorkerLogs() {

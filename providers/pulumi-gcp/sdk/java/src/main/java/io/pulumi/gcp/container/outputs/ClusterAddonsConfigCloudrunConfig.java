@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterAddonsConfigCloudrunConfig {
     /**
      * The status of the Istio addon, which makes it easy to set up Istio for services in a
@@ -25,10 +25,10 @@ public final class ClusterAddonsConfigCloudrunConfig {
      */
     private final @Nullable String loadBalancerType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterAddonsConfigCloudrunConfig(
-        @OutputCustomType.Parameter("disabled") Boolean disabled,
-        @OutputCustomType.Parameter("loadBalancerType") @Nullable String loadBalancerType) {
+        @CustomType.Parameter("disabled") Boolean disabled,
+        @CustomType.Parameter("loadBalancerType") @Nullable String loadBalancerType) {
         this.disabled = disabled;
         this.loadBalancerType = loadBalancerType;
     }

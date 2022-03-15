@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UpgradeSettingsResponse {
     /**
      * The maximum number of nodes that can be created beyond the current size of the node pool during the upgrade process.
@@ -20,10 +20,10 @@ public final class UpgradeSettingsResponse {
      */
     private final Integer maxUnavailable;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UpgradeSettingsResponse(
-        @OutputCustomType.Parameter("maxSurge") Integer maxSurge,
-        @OutputCustomType.Parameter("maxUnavailable") Integer maxUnavailable) {
+        @CustomType.Parameter("maxSurge") Integer maxSurge,
+        @CustomType.Parameter("maxUnavailable") Integer maxUnavailable) {
         this.maxSurge = maxSurge;
         this.maxUnavailable = maxUnavailable;
     }

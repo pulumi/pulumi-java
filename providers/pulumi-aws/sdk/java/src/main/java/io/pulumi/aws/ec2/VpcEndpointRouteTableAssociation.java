@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.VpcEndpointRouteTableAssociationArgs;
 import io.pulumi.aws.ec2.inputs.VpcEndpointRouteTableAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class VpcEndpointRouteTableAssociation extends io.pulumi.resources.Custom
      * Identifier of the EC2 Route Table to be associated with the VPC Endpoint.
      * 
      */
-    @OutputExport(name="routeTableId", type=String.class, parameters={})
+    @Export(name="routeTableId", type=String.class, parameters={})
     private Output<String> routeTableId;
 
     /**
@@ -46,7 +46,7 @@ public class VpcEndpointRouteTableAssociation extends io.pulumi.resources.Custom
      * Identifier of the VPC Endpoint with which the EC2 Route Table will be associated.
      * 
      */
-    @OutputExport(name="vpcEndpointId", type=String.class, parameters={})
+    @Export(name="vpcEndpointId", type=String.class, parameters={})
     private Output<String> vpcEndpointId;
 
     /**

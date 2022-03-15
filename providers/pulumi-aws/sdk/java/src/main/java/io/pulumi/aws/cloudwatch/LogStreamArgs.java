@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class LogStreamArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the log group under which the log stream is to be created.
      * 
      */
-    @InputImport(name="logGroupName", required=true)
+    @Import(name="logGroupName", required=true)
       private final Output<String> logGroupName;
 
     public Output<String> getLogGroupName() {
@@ -29,7 +29,7 @@ public final class LogStreamArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the log stream. Must not be longer than 512 characters and must not contain `:`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

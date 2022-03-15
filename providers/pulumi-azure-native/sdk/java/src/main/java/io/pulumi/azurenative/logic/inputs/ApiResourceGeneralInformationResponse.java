@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
      * The description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -33,7 +33,7 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
      * The display name.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -44,7 +44,7 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
      * The icon url.
      * 
      */
-    @InputImport(name="iconUrl")
+    @Import(name="iconUrl")
       private final @Nullable String iconUrl;
 
     public Optional<String> getIconUrl() {
@@ -55,7 +55,7 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
      * The release tag.
      * 
      */
-    @InputImport(name="releaseTag")
+    @Import(name="releaseTag")
       private final @Nullable String releaseTag;
 
     public Optional<String> getReleaseTag() {
@@ -66,7 +66,7 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
      * The terms of use url.
      * 
      */
-    @InputImport(name="termsOfUseUrl")
+    @Import(name="termsOfUseUrl")
       private final @Nullable String termsOfUseUrl;
 
     public Optional<String> getTermsOfUseUrl() {
@@ -77,7 +77,7 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
      * The tier.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable String tier;
 
     public Optional<String> getTier() {

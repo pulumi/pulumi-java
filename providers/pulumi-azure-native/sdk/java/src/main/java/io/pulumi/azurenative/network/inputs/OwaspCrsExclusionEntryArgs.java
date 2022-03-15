@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.OwaspCrsExclusionEntryMatchVariable;
 import io.pulumi.azurenative.network.enums.OwaspCrsExclusionEntrySelectorMatchOperator;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class OwaspCrsExclusionEntryArgs extends io.pulumi.resources.Resour
      * The variable to be excluded.
      * 
      */
-    @InputImport(name="matchVariable", required=true)
+    @Import(name="matchVariable", required=true)
       private final Output<Either<String,OwaspCrsExclusionEntryMatchVariable>> matchVariable;
 
     public Output<Either<String,OwaspCrsExclusionEntryMatchVariable>> getMatchVariable() {
@@ -35,7 +35,7 @@ public final class OwaspCrsExclusionEntryArgs extends io.pulumi.resources.Resour
      * When matchVariable is a collection, operator used to specify which elements in the collection this exclusion applies to.
      * 
      */
-    @InputImport(name="selector", required=true)
+    @Import(name="selector", required=true)
       private final Output<String> selector;
 
     public Output<String> getSelector() {
@@ -46,7 +46,7 @@ public final class OwaspCrsExclusionEntryArgs extends io.pulumi.resources.Resour
      * When matchVariable is a collection, operate on the selector to specify which elements in the collection this exclusion applies to.
      * 
      */
-    @InputImport(name="selectorMatchOperator", required=true)
+    @Import(name="selectorMatchOperator", required=true)
       private final Output<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> selectorMatchOperator;
 
     public Output<Either<String,OwaspCrsExclusionEntrySelectorMatchOperator>> getSelectorMatchOperator() {

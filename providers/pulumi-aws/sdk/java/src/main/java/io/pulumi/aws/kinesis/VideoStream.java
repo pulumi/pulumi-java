@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.kinesis.VideoStreamArgs;
 import io.pulumi.aws.kinesis.inputs.VideoStreamState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) specifying the Stream (same as `id`)
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -52,7 +52,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * A time stamp that indicates when the stream was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -66,7 +66,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * The number of hours that you want to retain the data in the stream. Kinesis Video Streams retains the data in a data store that is associated with the stream. The default value is `0`, indicating that the stream does not persist data.
      * 
      */
-    @OutputExport(name="dataRetentionInHours", type=Integer.class, parameters={})
+    @Export(name="dataRetentionInHours", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> dataRetentionInHours;
 
     /**
@@ -80,7 +80,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * The name of the device that is writing to the stream. **In the current implementation, Kinesis Video Streams does not use this name.**
      * 
      */
-    @OutputExport(name="deviceName", type=String.class, parameters={})
+    @Export(name="deviceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> deviceName;
 
     /**
@@ -94,7 +94,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * The ID of the AWS Key Management Service (AWS KMS) key that you want Kinesis Video Streams to use to encrypt stream data. If no key ID is specified, the default, Kinesis Video-managed key (`aws/kinesisvideo`) is used.
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output<String> kmsKeyId;
 
     /**
@@ -108,7 +108,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * The media type of the stream. Consumers of the stream can use this information when processing the stream. For more information about media types, see [Media Types](http://www.iana.org/assignments/media-types/media-types.xhtml). If you choose to specify the MediaType, see [Naming Requirements](https://tools.ietf.org/html/rfc6838#section-4.2) for guidelines.
      * 
      */
-    @OutputExport(name="mediaType", type=String.class, parameters={})
+    @Export(name="mediaType", type=String.class, parameters={})
     private Output</* @Nullable */ String> mediaType;
 
     /**
@@ -123,7 +123,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * AWS account and region the Stream is created in.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -138,7 +138,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -152,7 +152,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -166,7 +166,7 @@ public class VideoStream extends io.pulumi.resources.CustomResource {
      * The version of the stream.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

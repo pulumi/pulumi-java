@@ -6,7 +6,7 @@ package io.pulumi.awsnative.athena;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.athena.PreparedStatementArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class PreparedStatement extends io.pulumi.resources.CustomResource {
      * The description of the prepared statement.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -35,7 +35,7 @@ public class PreparedStatement extends io.pulumi.resources.CustomResource {
      * The query string for the prepared statement.
      * 
      */
-    @OutputExport(name="queryStatement", type=String.class, parameters={})
+    @Export(name="queryStatement", type=String.class, parameters={})
     private Output<String> queryStatement;
 
     /**
@@ -49,7 +49,7 @@ public class PreparedStatement extends io.pulumi.resources.CustomResource {
      * The name of the prepared statement.
      * 
      */
-    @OutputExport(name="statementName", type=String.class, parameters={})
+    @Export(name="statementName", type=String.class, parameters={})
     private Output<String> statementName;
 
     /**
@@ -63,7 +63,7 @@ public class PreparedStatement extends io.pulumi.resources.CustomResource {
      * The name of the workgroup to which the prepared statement belongs.
      * 
      */
-    @OutputExport(name="workGroup", type=String.class, parameters={})
+    @Export(name="workGroup", type=String.class, parameters={})
     private Output<String> workGroup;
 
     /**

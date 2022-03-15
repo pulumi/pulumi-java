@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageImageArgs;
@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
      * Optional. List of buttons for the card.
      * 
      */
-    @InputImport(name="buttons")
+    @Import(name="buttons")
       private final @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> buttons;
 
     public Output<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> getButtons() {
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
      * Optional. Display properties for the columns in this table.
      * 
      */
-    @InputImport(name="columnProperties")
+    @Import(name="columnProperties")
       private final @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs>> columnProperties;
 
     public Output<List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs>> getColumnProperties() {
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
      * Optional. Image which should be displayed on the card.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
 
     public Output<GoogleCloudDialogflowV2IntentMessageImageArgs> getImage() {
@@ -60,7 +60,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
      * Optional. Rows in this table of data.
      * 
      */
-    @InputImport(name="rows")
+    @Import(name="rows")
       private final @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageTableCardRowArgs>> rows;
 
     public Output<List<GoogleCloudDialogflowV2IntentMessageTableCardRowArgs>> getRows() {
@@ -71,7 +71,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
      * Optional. Subtitle to the title.
      * 
      */
-    @InputImport(name="subtitle")
+    @Import(name="subtitle")
       private final @Nullable Output<String> subtitle;
 
     public Output<String> getSubtitle() {
@@ -82,7 +82,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
      * Title of the card.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final Output<String> title;
 
     public Output<String> getTitle() {

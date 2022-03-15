@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
      * The content type of the model
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -29,7 +29,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
      * The description of the model
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -40,7 +40,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
      * The name of the model
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -51,7 +51,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
      * The ID of the associated REST API
      * 
      */
-    @InputImport(name="restApi")
+    @Import(name="restApi")
       private final @Nullable Output<String> restApi;
 
     public Output<String> getRestApi() {
@@ -62,7 +62,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
      * The schema of the model in a JSON form
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<String> schema;
 
     public Output<String> getSchema() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.AuthorizationLoggingOptionsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LogConfigCloudAuditOptionsResponse {
     /**
      * This is deprecated and has no effect. Do not use.
@@ -21,10 +21,10 @@ public final class LogConfigCloudAuditOptionsResponse {
      */
     private final String logName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LogConfigCloudAuditOptionsResponse(
-        @OutputCustomType.Parameter("authorizationLoggingOptions") AuthorizationLoggingOptionsResponse authorizationLoggingOptions,
-        @OutputCustomType.Parameter("logName") String logName) {
+        @CustomType.Parameter("authorizationLoggingOptions") AuthorizationLoggingOptionsResponse authorizationLoggingOptions,
+        @CustomType.Parameter("logName") String logName) {
         this.authorizationLoggingOptions = authorizationLoggingOptions;
         this.logName = logName;
     }

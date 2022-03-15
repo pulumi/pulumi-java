@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.TopicRuleCannedAccessControlList;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,28 +15,28 @@ public final class TopicRuleS3ActionArgs extends io.pulumi.resources.ResourceArg
 
     public static final TopicRuleS3ActionArgs Empty = new TopicRuleS3ActionArgs();
 
-    @InputImport(name="bucketName", required=true)
+    @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
     public Output<String> getBucketName() {
         return this.bucketName;
     }
 
-    @InputImport(name="cannedAcl")
+    @Import(name="cannedAcl")
       private final @Nullable Output<TopicRuleCannedAccessControlList> cannedAcl;
 
     public Output<TopicRuleCannedAccessControlList> getCannedAcl() {
         return this.cannedAcl == null ? Output.empty() : this.cannedAcl;
     }
 
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
         return this.key;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

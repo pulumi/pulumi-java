@@ -8,7 +8,7 @@ import io.pulumi.awsnative.devicefarm.TestGridProjectArgs;
 import io.pulumi.awsnative.devicefarm.outputs.TestGridProjectTag;
 import io.pulumi.awsnative.devicefarm.outputs.TestGridProjectVpcConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -20,31 +20,31 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:devicefarm:TestGridProject")
 public class TestGridProject extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="tags", type=List.class, parameters={TestGridProjectTag.class})
+    @Export(name="tags", type=List.class, parameters={TestGridProjectTag.class})
     private Output</* @Nullable */ List<TestGridProjectTag>> tags;
 
     public Output</* @Nullable */ List<TestGridProjectTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="vpcConfig", type=TestGridProjectVpcConfig.class, parameters={})
+    @Export(name="vpcConfig", type=TestGridProjectVpcConfig.class, parameters={})
     private Output</* @Nullable */ TestGridProjectVpcConfig> vpcConfig;
 
     public Output</* @Nullable */ TestGridProjectVpcConfig> getVpcConfig() {

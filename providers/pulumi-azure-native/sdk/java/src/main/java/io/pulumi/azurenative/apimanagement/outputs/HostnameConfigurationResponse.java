@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.CertificateInformationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HostnameConfigurationResponse {
     /**
      * Certificate information.
@@ -59,17 +59,17 @@ public final class HostnameConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HostnameConfigurationResponse(
-        @OutputCustomType.Parameter("certificate") @Nullable CertificateInformationResponse certificate,
-        @OutputCustomType.Parameter("certificatePassword") @Nullable String certificatePassword,
-        @OutputCustomType.Parameter("defaultSslBinding") @Nullable Boolean defaultSslBinding,
-        @OutputCustomType.Parameter("encodedCertificate") @Nullable String encodedCertificate,
-        @OutputCustomType.Parameter("hostName") String hostName,
-        @OutputCustomType.Parameter("identityClientId") @Nullable String identityClientId,
-        @OutputCustomType.Parameter("keyVaultId") @Nullable String keyVaultId,
-        @OutputCustomType.Parameter("negotiateClientCertificate") @Nullable Boolean negotiateClientCertificate,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("certificate") @Nullable CertificateInformationResponse certificate,
+        @CustomType.Parameter("certificatePassword") @Nullable String certificatePassword,
+        @CustomType.Parameter("defaultSslBinding") @Nullable Boolean defaultSslBinding,
+        @CustomType.Parameter("encodedCertificate") @Nullable String encodedCertificate,
+        @CustomType.Parameter("hostName") String hostName,
+        @CustomType.Parameter("identityClientId") @Nullable String identityClientId,
+        @CustomType.Parameter("keyVaultId") @Nullable String keyVaultId,
+        @CustomType.Parameter("negotiateClientCertificate") @Nullable Boolean negotiateClientCertificate,
+        @CustomType.Parameter("type") String type) {
         this.certificate = certificate;
         this.certificatePassword = certificatePassword;
         this.defaultSslBinding = defaultSslBinding;

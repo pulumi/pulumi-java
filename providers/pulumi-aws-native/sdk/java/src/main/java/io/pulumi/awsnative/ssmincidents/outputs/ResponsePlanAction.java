@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.ssmincidents.outputs;
 
 import io.pulumi.awsnative.ssmincidents.outputs.ResponsePlanSsmAutomation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResponsePlanAction {
     private final @Nullable ResponsePlanSsmAutomation ssmAutomation;
 
-    @OutputCustomType.Constructor
-    private ResponsePlanAction(@OutputCustomType.Parameter("ssmAutomation") @Nullable ResponsePlanSsmAutomation ssmAutomation) {
+    @CustomType.Constructor
+    private ResponsePlanAction(@CustomType.Parameter("ssmAutomation") @Nullable ResponsePlanSsmAutomation ssmAutomation) {
         this.ssmAutomation = ssmAutomation;
     }
 

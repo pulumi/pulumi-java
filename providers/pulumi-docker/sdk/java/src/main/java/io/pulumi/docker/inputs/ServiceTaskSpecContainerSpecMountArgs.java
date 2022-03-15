@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecMountBindOptionsArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecMountTmpfsOptionsArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecMountVolumeOptionsArgs;
@@ -18,49 +18,49 @@ public final class ServiceTaskSpecContainerSpecMountArgs extends io.pulumi.resou
 
     public static final ServiceTaskSpecContainerSpecMountArgs Empty = new ServiceTaskSpecContainerSpecMountArgs();
 
-    @InputImport(name="bindOptions")
+    @Import(name="bindOptions")
       private final @Nullable Output<ServiceTaskSpecContainerSpecMountBindOptionsArgs> bindOptions;
 
     public Output<ServiceTaskSpecContainerSpecMountBindOptionsArgs> getBindOptions() {
         return this.bindOptions == null ? Output.empty() : this.bindOptions;
     }
 
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
         return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
         return this.source == null ? Output.empty() : this.source;
     }
 
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final Output<String> target;
 
     public Output<String> getTarget() {
         return this.target;
     }
 
-    @InputImport(name="tmpfsOptions")
+    @Import(name="tmpfsOptions")
       private final @Nullable Output<ServiceTaskSpecContainerSpecMountTmpfsOptionsArgs> tmpfsOptions;
 
     public Output<ServiceTaskSpecContainerSpecMountTmpfsOptionsArgs> getTmpfsOptions() {
         return this.tmpfsOptions == null ? Output.empty() : this.tmpfsOptions;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
         return this.type;
     }
 
-    @InputImport(name="volumeOptions")
+    @Import(name="volumeOptions")
       private final @Nullable Output<ServiceTaskSpecContainerSpecMountVolumeOptionsArgs> volumeOptions;
 
     public Output<ServiceTaskSpecContainerSpecMountVolumeOptionsArgs> getVolumeOptions() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class FlexibleAppVersionResourcesVolumeArgs extends io.pulumi.resou
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -29,7 +29,7 @@ public final class FlexibleAppVersionResourcesVolumeArgs extends io.pulumi.resou
      * Volume size in gigabytes.
      * 
      */
-    @InputImport(name="sizeGb", required=true)
+    @Import(name="sizeGb", required=true)
       private final Output<Integer> sizeGb;
 
     public Output<Integer> getSizeGb() {
@@ -40,7 +40,7 @@ public final class FlexibleAppVersionResourcesVolumeArgs extends io.pulumi.resou
      * Underlying volume type, e.g. 'tmpfs'.
      * 
      */
-    @InputImport(name="volumeType", required=true)
+    @Import(name="volumeType", required=true)
       private final Output<String> volumeType;
 
     public Output<String> getVolumeType() {

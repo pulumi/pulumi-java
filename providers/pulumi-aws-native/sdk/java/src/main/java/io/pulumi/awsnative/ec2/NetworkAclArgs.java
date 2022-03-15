@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.NetworkAclTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
      * The tags to assign to the network ACL.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<NetworkAclTagArgs>> tags;
 
     public Output<List<NetworkAclTagArgs>> getTags() {
@@ -31,7 +31,7 @@ public final class NetworkAclArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the VPC.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
     public Output<String> getVpcId() {

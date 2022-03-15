@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImagePipelineSchedule {
     /**
      * Condition when the pipeline should trigger a new image build. Valid values are `EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE` and `EXPRESSION_MATCH_ONLY`. Defaults to `EXPRESSION_MATCH_AND_DEPENDENCY_UPDATES_AVAILABLE`.
@@ -22,10 +22,10 @@ public final class ImagePipelineSchedule {
      */
     private final String scheduleExpression;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImagePipelineSchedule(
-        @OutputCustomType.Parameter("pipelineExecutionStartCondition") @Nullable String pipelineExecutionStartCondition,
-        @OutputCustomType.Parameter("scheduleExpression") String scheduleExpression) {
+        @CustomType.Parameter("pipelineExecutionStartCondition") @Nullable String pipelineExecutionStartCondition,
+        @CustomType.Parameter("scheduleExpression") String scheduleExpression) {
         this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
         this.scheduleExpression = scheduleExpression;
     }

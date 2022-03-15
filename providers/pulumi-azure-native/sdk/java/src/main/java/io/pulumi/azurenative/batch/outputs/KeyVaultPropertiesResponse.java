@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultPropertiesResponse {
     /**
      * Full path to the versioned secret. Example https://mykeyvault.vault.azure.net/keys/testkey/6e34a81fef704045975661e297a4c053. To be usable the following prerequisites must be met:
@@ -21,8 +21,8 @@ public final class KeyVaultPropertiesResponse {
      */
     private final @Nullable String keyIdentifier;
 
-    @OutputCustomType.Constructor
-    private KeyVaultPropertiesResponse(@OutputCustomType.Parameter("keyIdentifier") @Nullable String keyIdentifier) {
+    @CustomType.Constructor
+    private KeyVaultPropertiesResponse(@CustomType.Parameter("keyIdentifier") @Nullable String keyIdentifier) {
         this.keyIdentifier = keyIdentifier;
     }
 

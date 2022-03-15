@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apigateway;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.apigateway.DocumentationVersionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class DocumentationVersion extends io.pulumi.resources.CustomResource {
      * The description of the API documentation snapshot.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -35,7 +35,7 @@ public class DocumentationVersion extends io.pulumi.resources.CustomResource {
      * The version identifier of the API documentation snapshot.
      * 
      */
-    @OutputExport(name="documentationVersion", type=String.class, parameters={})
+    @Export(name="documentationVersion", type=String.class, parameters={})
     private Output<String> documentationVersion;
 
     /**
@@ -49,7 +49,7 @@ public class DocumentationVersion extends io.pulumi.resources.CustomResource {
      * The identifier of the API.
      * 
      */
-    @OutputExport(name="restApiId", type=String.class, parameters={})
+    @Export(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
     /**

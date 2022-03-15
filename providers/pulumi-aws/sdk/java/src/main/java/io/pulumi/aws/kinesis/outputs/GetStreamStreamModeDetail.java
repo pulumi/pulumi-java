@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.kinesis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetStreamStreamModeDetail {
     /**
      * The capacity mode of the stream. Either `ON_DEMAND` or `PROVISIONED`.
@@ -15,8 +15,8 @@ public final class GetStreamStreamModeDetail {
      */
     private final String streamMode;
 
-    @OutputCustomType.Constructor
-    private GetStreamStreamModeDetail(@OutputCustomType.Parameter("streamMode") String streamMode) {
+    @CustomType.Constructor
+    private GetStreamStreamModeDetail(@CustomType.Parameter("streamMode") String streamMode) {
         this.streamMode = streamMode;
     }
 

@@ -3,16 +3,16 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SinkConfigurationResponse {
     private final String kind;
 
-    @OutputCustomType.Constructor
-    private SinkConfigurationResponse(@OutputCustomType.Parameter("kind") String kind) {
+    @CustomType.Constructor
+    private SinkConfigurationResponse(@CustomType.Parameter("kind") String kind) {
         this.kind = kind;
     }
 

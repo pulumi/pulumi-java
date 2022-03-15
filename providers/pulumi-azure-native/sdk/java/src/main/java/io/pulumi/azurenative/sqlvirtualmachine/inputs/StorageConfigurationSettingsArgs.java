@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.enums.StorageWorkloadType;
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.SQLStorageSettingsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
      * Disk configuration to apply to SQL Server.
      * 
      */
-    @InputImport(name="diskConfigurationType")
+    @Import(name="diskConfigurationType")
       private final @Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType;
 
     public Output<Either<String,DiskConfigurationType>> getDiskConfigurationType() {
@@ -37,7 +37,7 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
      * SQL Server Data Storage Settings.
      * 
      */
-    @InputImport(name="sqlDataSettings")
+    @Import(name="sqlDataSettings")
       private final @Nullable Output<SQLStorageSettingsArgs> sqlDataSettings;
 
     public Output<SQLStorageSettingsArgs> getSqlDataSettings() {
@@ -48,7 +48,7 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
      * SQL Server Log Storage Settings.
      * 
      */
-    @InputImport(name="sqlLogSettings")
+    @Import(name="sqlLogSettings")
       private final @Nullable Output<SQLStorageSettingsArgs> sqlLogSettings;
 
     public Output<SQLStorageSettingsArgs> getSqlLogSettings() {
@@ -59,7 +59,7 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
      * SQL Server TempDb Storage Settings.
      * 
      */
-    @InputImport(name="sqlTempDbSettings")
+    @Import(name="sqlTempDbSettings")
       private final @Nullable Output<SQLStorageSettingsArgs> sqlTempDbSettings;
 
     public Output<SQLStorageSettingsArgs> getSqlTempDbSettings() {
@@ -70,7 +70,7 @@ public final class StorageConfigurationSettingsArgs extends io.pulumi.resources.
      * Storage workload type.
      * 
      */
-    @InputImport(name="storageWorkloadType")
+    @Import(name="storageWorkloadType")
       private final @Nullable Output<Either<String,StorageWorkloadType>> storageWorkloadType;
 
     public Output<Either<String,StorageWorkloadType>> getStorageWorkloadType() {

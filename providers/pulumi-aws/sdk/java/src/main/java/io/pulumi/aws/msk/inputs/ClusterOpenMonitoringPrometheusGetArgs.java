@@ -6,7 +6,7 @@ package io.pulumi.aws.msk.inputs;
 import io.pulumi.aws.msk.inputs.ClusterOpenMonitoringPrometheusJmxExporterGetArgs;
 import io.pulumi.aws.msk.inputs.ClusterOpenMonitoringPrometheusNodeExporterGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class ClusterOpenMonitoringPrometheusGetArgs extends io.pulumi.reso
      * Configuration block for JMX Exporter. See below.
      * 
      */
-    @InputImport(name="jmxExporter")
+    @Import(name="jmxExporter")
       private final @Nullable Output<ClusterOpenMonitoringPrometheusJmxExporterGetArgs> jmxExporter;
 
     public Output<ClusterOpenMonitoringPrometheusJmxExporterGetArgs> getJmxExporter() {
@@ -30,7 +30,7 @@ public final class ClusterOpenMonitoringPrometheusGetArgs extends io.pulumi.reso
      * Configuration block for Node Exporter. See below.
      * 
      */
-    @InputImport(name="nodeExporter")
+    @Import(name="nodeExporter")
       private final @Nullable Output<ClusterOpenMonitoringPrometheusNodeExporterGetArgs> nodeExporter;
 
     public Output<ClusterOpenMonitoringPrometheusNodeExporterGetArgs> getNodeExporter() {

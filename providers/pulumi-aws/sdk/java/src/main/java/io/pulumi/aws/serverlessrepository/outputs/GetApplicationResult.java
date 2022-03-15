@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.serverlessrepository.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetApplicationResult {
     /**
      * The ARN of the application.
@@ -42,15 +42,15 @@ public final class GetApplicationResult {
      */
     private final String templateUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApplicationResult(
-        @OutputCustomType.Parameter("applicationId") String applicationId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("requiredCapabilities") List<String> requiredCapabilities,
-        @OutputCustomType.Parameter("semanticVersion") String semanticVersion,
-        @OutputCustomType.Parameter("sourceCodeUrl") String sourceCodeUrl,
-        @OutputCustomType.Parameter("templateUrl") String templateUrl) {
+        @CustomType.Parameter("applicationId") String applicationId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("requiredCapabilities") List<String> requiredCapabilities,
+        @CustomType.Parameter("semanticVersion") String semanticVersion,
+        @CustomType.Parameter("sourceCodeUrl") String sourceCodeUrl,
+        @CustomType.Parameter("templateUrl") String templateUrl) {
         this.applicationId = applicationId;
         this.id = id;
         this.name = name;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.cloudfront.inputs.DistributionCustomOriginConfig;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionOriginCustomHeader;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionOriginShield;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionS3OriginConfig;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,63 +20,63 @@ public final class DistributionOrigin extends io.pulumi.resources.InvokeArgs {
 
     public static final DistributionOrigin Empty = new DistributionOrigin();
 
-    @InputImport(name="connectionAttempts")
+    @Import(name="connectionAttempts")
       private final @Nullable Integer connectionAttempts;
 
     public Optional<Integer> getConnectionAttempts() {
         return this.connectionAttempts == null ? Optional.empty() : Optional.ofNullable(this.connectionAttempts);
     }
 
-    @InputImport(name="connectionTimeout")
+    @Import(name="connectionTimeout")
       private final @Nullable Integer connectionTimeout;
 
     public Optional<Integer> getConnectionTimeout() {
         return this.connectionTimeout == null ? Optional.empty() : Optional.ofNullable(this.connectionTimeout);
     }
 
-    @InputImport(name="customOriginConfig")
+    @Import(name="customOriginConfig")
       private final @Nullable DistributionCustomOriginConfig customOriginConfig;
 
     public Optional<DistributionCustomOriginConfig> getCustomOriginConfig() {
         return this.customOriginConfig == null ? Optional.empty() : Optional.ofNullable(this.customOriginConfig);
     }
 
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final String domainName;
 
     public String getDomainName() {
         return this.domainName;
     }
 
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
         return this.id;
     }
 
-    @InputImport(name="originCustomHeaders")
+    @Import(name="originCustomHeaders")
       private final @Nullable List<DistributionOriginCustomHeader> originCustomHeaders;
 
     public List<DistributionOriginCustomHeader> getOriginCustomHeaders() {
         return this.originCustomHeaders == null ? List.of() : this.originCustomHeaders;
     }
 
-    @InputImport(name="originPath")
+    @Import(name="originPath")
       private final @Nullable String originPath;
 
     public Optional<String> getOriginPath() {
         return this.originPath == null ? Optional.empty() : Optional.ofNullable(this.originPath);
     }
 
-    @InputImport(name="originShield")
+    @Import(name="originShield")
       private final @Nullable DistributionOriginShield originShield;
 
     public Optional<DistributionOriginShield> getOriginShield() {
         return this.originShield == null ? Optional.empty() : Optional.ofNullable(this.originShield);
     }
 
-    @InputImport(name="s3OriginConfig")
+    @Import(name="s3OriginConfig")
       private final @Nullable DistributionS3OriginConfig s3OriginConfig;
 
     public Optional<DistributionS3OriginConfig> getS3OriginConfig() {

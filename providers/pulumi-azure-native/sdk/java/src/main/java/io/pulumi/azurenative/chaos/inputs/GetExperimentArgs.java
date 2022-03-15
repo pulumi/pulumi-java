@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.chaos.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetExperimentArgs extends io.pulumi.resources.InvokeArgs {
      * String that represents a Experiment resource name.
      * 
      */
-    @InputImport(name="experimentName", required=true)
+    @Import(name="experimentName", required=true)
       private final String experimentName;
 
     public String getExperimentName() {
@@ -27,7 +27,7 @@ public final class GetExperimentArgs extends io.pulumi.resources.InvokeArgs {
      * String that represents an Azure resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

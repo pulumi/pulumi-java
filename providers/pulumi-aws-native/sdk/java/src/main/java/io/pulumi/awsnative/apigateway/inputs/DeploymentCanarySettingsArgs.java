@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
@@ -20,7 +20,7 @@ public final class DeploymentCanarySettingsArgs extends io.pulumi.resources.Reso
      * The percentage (0-100) of traffic diverted to a canary deployment.
      * 
      */
-    @InputImport(name="percentTraffic")
+    @Import(name="percentTraffic")
       private final @Nullable Output<Double> percentTraffic;
 
     public Output<Double> getPercentTraffic() {
@@ -31,7 +31,7 @@ public final class DeploymentCanarySettingsArgs extends io.pulumi.resources.Reso
      * Stage variables overridden for a canary release deployment, including new stage variables introduced in the canary. These stage variables are represented as a string-to-string map between stage variable names and their values. Duplicates are not allowed.
      * 
      */
-    @InputImport(name="stageVariableOverrides")
+    @Import(name="stageVariableOverrides")
       private final @Nullable Output<Object> stageVariableOverrides;
 
     public Output<Object> getStageVariableOverrides() {
@@ -42,7 +42,7 @@ public final class DeploymentCanarySettingsArgs extends io.pulumi.resources.Reso
      * Whether the canary deployment uses the stage cache.
      * 
      */
-    @InputImport(name="useStageCache")
+    @Import(name="useStageCache")
       private final @Nullable Output<Boolean> useStageCache;
 
     public Output<Boolean> getUseStageCache() {

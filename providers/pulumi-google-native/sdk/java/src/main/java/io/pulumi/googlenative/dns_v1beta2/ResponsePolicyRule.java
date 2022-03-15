@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dns_v1beta2.ResponsePolicyRuleArgs;
@@ -23,7 +23,7 @@ public class ResponsePolicyRule extends io.pulumi.resources.CustomResource {
      * Answer this query with a behavior rather than DNS data.
      * 
      */
-    @OutputExport(name="behavior", type=String.class, parameters={})
+    @Export(name="behavior", type=String.class, parameters={})
     private Output<String> behavior;
 
     /**
@@ -37,7 +37,7 @@ public class ResponsePolicyRule extends io.pulumi.resources.CustomResource {
      * The DNS name (wildcard or exact) to apply this rule to. Must be unique within the Response Policy Rule.
      * 
      */
-    @OutputExport(name="dnsName", type=String.class, parameters={})
+    @Export(name="dnsName", type=String.class, parameters={})
     private Output<String> dnsName;
 
     /**
@@ -47,7 +47,7 @@ public class ResponsePolicyRule extends io.pulumi.resources.CustomResource {
     public Output<String> getDnsName() {
         return this.dnsName;
     }
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     public Output<String> getKind() {
@@ -57,7 +57,7 @@ public class ResponsePolicyRule extends io.pulumi.resources.CustomResource {
      * Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed.
      * 
      */
-    @OutputExport(name="localData", type=ResponsePolicyRuleLocalDataResponse.class, parameters={})
+    @Export(name="localData", type=ResponsePolicyRuleLocalDataResponse.class, parameters={})
     private Output<ResponsePolicyRuleLocalDataResponse> localData;
 
     /**
@@ -71,7 +71,7 @@ public class ResponsePolicyRule extends io.pulumi.resources.CustomResource {
      * An identifier for this rule. Must be unique with the ResponsePolicy.
      * 
      */
-    @OutputExport(name="ruleName", type=String.class, parameters={})
+    @Export(name="ruleName", type=String.class, parameters={})
     private Output<String> ruleName;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse {
     /**
      * The phone number to transfer the call to in [E.164 format](https://en.wikipedia.org/wiki/E.164). We currently only allow transferring to US numbers (+1xxxyyyzzzz).
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCal
      */
     private final String phoneNumber;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse(@OutputCustomType.Parameter("phoneNumber") String phoneNumber) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse(@CustomType.Parameter("phoneNumber") String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

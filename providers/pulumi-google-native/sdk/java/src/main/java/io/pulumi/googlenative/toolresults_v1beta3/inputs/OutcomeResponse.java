@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.FailureDetailResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.InconclusiveDetailResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.SkippedDetailResponse;
@@ -24,7 +24,7 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
      * More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not FAILURE. Optional
      * 
      */
-    @InputImport(name="failureDetail", required=true)
+    @Import(name="failureDetail", required=true)
       private final FailureDetailResponse failureDetail;
 
     public FailureDetailResponse getFailureDetail() {
@@ -35,7 +35,7 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
      * More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not INCONCLUSIVE. Optional
      * 
      */
-    @InputImport(name="inconclusiveDetail", required=true)
+    @Import(name="inconclusiveDetail", required=true)
       private final InconclusiveDetailResponse inconclusiveDetail;
 
     public InconclusiveDetailResponse getInconclusiveDetail() {
@@ -46,7 +46,7 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
      * More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SKIPPED. Optional
      * 
      */
-    @InputImport(name="skippedDetail", required=true)
+    @Import(name="skippedDetail", required=true)
       private final SkippedDetailResponse skippedDetail;
 
     public SkippedDetailResponse getSkippedDetail() {
@@ -57,7 +57,7 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
      * More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this field is set but the summary is not SUCCESS. Optional
      * 
      */
-    @InputImport(name="successDetail", required=true)
+    @Import(name="successDetail", required=true)
       private final SuccessDetailResponse successDetail;
 
     public SuccessDetailResponse getSuccessDetail() {
@@ -68,7 +68,7 @@ public final class OutcomeResponse extends io.pulumi.resources.InvokeArgs {
      * The simplest way to interpret a result. Required
      * 
      */
-    @InputImport(name="summary", required=true)
+    @Import(name="summary", required=true)
       private final String summary;
 
     public String getSummary() {

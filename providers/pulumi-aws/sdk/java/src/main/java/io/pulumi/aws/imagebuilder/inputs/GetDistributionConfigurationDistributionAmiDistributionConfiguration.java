@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.aws.imagebuilder.inputs.GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +19,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      * Key-value map of tags to apply to distributed AMI.
      * 
      */
-    @InputImport(name="amiTags", required=true)
+    @Import(name="amiTags", required=true)
       private final Map<String,String> amiTags;
 
     public Map<String,String> getAmiTags() {
@@ -30,7 +30,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      * Description to apply to distributed AMI.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -41,7 +41,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      * Amazon Resource Name (ARN) of Key Management Service (KMS) Key to encrypt AMI.
      * 
      */
-    @InputImport(name="kmsKeyId", required=true)
+    @Import(name="kmsKeyId", required=true)
       private final String kmsKeyId;
 
     public String getKmsKeyId() {
@@ -52,7 +52,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      * Nested list of EC2 launch permissions.
      * 
      */
-    @InputImport(name="launchPermissions", required=true)
+    @Import(name="launchPermissions", required=true)
       private final List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions;
 
     public List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> getLaunchPermissions() {
@@ -63,7 +63,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      * Name of the distribution configuration.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -74,7 +74,7 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      * Set of target AWS Account identifiers.
      * 
      */
-    @InputImport(name="targetAccountIds", required=true)
+    @Import(name="targetAccountIds", required=true)
       private final List<String> targetAccountIds;
 
     public List<String> getTargetAccountIds() {

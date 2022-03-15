@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.AclEntryResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IpConfigurationResponse {
     /**
      * The name of the allocated ip range for the private ip CloudSQL instance. For example: "google-managed-services-default". If set, the instance ip will be created in the allocated range. The range name must comply with [RFC 1035](https://tools.ietf.org/html/rfc1035). Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?.`
@@ -38,13 +38,13 @@ public final class IpConfigurationResponse {
      */
     private final Boolean requireSsl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IpConfigurationResponse(
-        @OutputCustomType.Parameter("allocatedIpRange") String allocatedIpRange,
-        @OutputCustomType.Parameter("authorizedNetworks") List<AclEntryResponse> authorizedNetworks,
-        @OutputCustomType.Parameter("ipv4Enabled") Boolean ipv4Enabled,
-        @OutputCustomType.Parameter("privateNetwork") String privateNetwork,
-        @OutputCustomType.Parameter("requireSsl") Boolean requireSsl) {
+        @CustomType.Parameter("allocatedIpRange") String allocatedIpRange,
+        @CustomType.Parameter("authorizedNetworks") List<AclEntryResponse> authorizedNetworks,
+        @CustomType.Parameter("ipv4Enabled") Boolean ipv4Enabled,
+        @CustomType.Parameter("privateNetwork") String privateNetwork,
+        @CustomType.Parameter("requireSsl") Boolean requireSsl) {
         this.allocatedIpRange = allocatedIpRange;
         this.authorizedNetworks = authorizedNetworks;
         this.ipv4Enabled = ipv4Enabled;

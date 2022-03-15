@@ -8,7 +8,7 @@ import io.pulumi.aws.glue.CatalogDatabaseArgs;
 import io.pulumi.aws.glue.inputs.CatalogDatabaseState;
 import io.pulumi.aws.glue.outputs.CatalogDatabaseTargetDatabase;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -34,7 +34,7 @@ public class CatalogDatabase extends io.pulumi.resources.CustomResource {
      * ARN of the Glue Catalog Database.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class CatalogDatabase extends io.pulumi.resources.CustomResource {
      * ID of the Data Catalog in which the database resides.
      * 
      */
-    @OutputExport(name="catalogId", type=String.class, parameters={})
+    @Export(name="catalogId", type=String.class, parameters={})
     private Output<String> catalogId;
 
     /**
@@ -62,7 +62,7 @@ public class CatalogDatabase extends io.pulumi.resources.CustomResource {
      * Description of the database.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -76,7 +76,7 @@ public class CatalogDatabase extends io.pulumi.resources.CustomResource {
      * Location of the database (for example, an HDFS path).
      * 
      */
-    @OutputExport(name="locationUri", type=String.class, parameters={})
+    @Export(name="locationUri", type=String.class, parameters={})
     private Output<String> locationUri;
 
     /**
@@ -90,7 +90,7 @@ public class CatalogDatabase extends io.pulumi.resources.CustomResource {
      * Name of the database. The acceptable characters are lowercase letters, numbers, and the underscore character.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -104,7 +104,7 @@ public class CatalogDatabase extends io.pulumi.resources.CustomResource {
      * List of key-value pairs that define parameters and properties of the database.
      * 
      */
-    @OutputExport(name="parameters", type=Map.class, parameters={String.class, String.class})
+    @Export(name="parameters", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> parameters;
 
     /**
@@ -118,7 +118,7 @@ public class CatalogDatabase extends io.pulumi.resources.CustomResource {
      * Configuration block for a target database for resource linking. See `target_database` below.
      * 
      */
-    @OutputExport(name="targetDatabase", type=CatalogDatabaseTargetDatabase.class, parameters={})
+    @Export(name="targetDatabase", type=CatalogDatabaseTargetDatabase.class, parameters={})
     private Output</* @Nullable */ CatalogDatabaseTargetDatabase> targetDatabase;
 
     /**

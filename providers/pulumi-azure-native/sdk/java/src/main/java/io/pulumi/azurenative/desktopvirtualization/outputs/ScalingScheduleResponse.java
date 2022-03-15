@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.desktopvirtualization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScalingScheduleResponse {
     /**
      * Set of days of the week on which this schedule is active.
@@ -105,26 +105,26 @@ public final class ScalingScheduleResponse {
      */
     private final @Nullable String rampUpStartTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScalingScheduleResponse(
-        @OutputCustomType.Parameter("daysOfWeek") @Nullable List<String> daysOfWeek,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("offPeakLoadBalancingAlgorithm") @Nullable String offPeakLoadBalancingAlgorithm,
-        @OutputCustomType.Parameter("offPeakStartTime") @Nullable String offPeakStartTime,
-        @OutputCustomType.Parameter("peakLoadBalancingAlgorithm") @Nullable String peakLoadBalancingAlgorithm,
-        @OutputCustomType.Parameter("peakStartTime") @Nullable String peakStartTime,
-        @OutputCustomType.Parameter("rampDownCapacityThresholdPct") @Nullable Integer rampDownCapacityThresholdPct,
-        @OutputCustomType.Parameter("rampDownForceLogoffUsers") @Nullable Boolean rampDownForceLogoffUsers,
-        @OutputCustomType.Parameter("rampDownLoadBalancingAlgorithm") @Nullable String rampDownLoadBalancingAlgorithm,
-        @OutputCustomType.Parameter("rampDownMinimumHostsPct") @Nullable Integer rampDownMinimumHostsPct,
-        @OutputCustomType.Parameter("rampDownNotificationMessage") @Nullable String rampDownNotificationMessage,
-        @OutputCustomType.Parameter("rampDownStartTime") @Nullable String rampDownStartTime,
-        @OutputCustomType.Parameter("rampDownStopHostsWhen") @Nullable String rampDownStopHostsWhen,
-        @OutputCustomType.Parameter("rampDownWaitTimeMinutes") @Nullable Integer rampDownWaitTimeMinutes,
-        @OutputCustomType.Parameter("rampUpCapacityThresholdPct") @Nullable Integer rampUpCapacityThresholdPct,
-        @OutputCustomType.Parameter("rampUpLoadBalancingAlgorithm") @Nullable String rampUpLoadBalancingAlgorithm,
-        @OutputCustomType.Parameter("rampUpMinimumHostsPct") @Nullable Integer rampUpMinimumHostsPct,
-        @OutputCustomType.Parameter("rampUpStartTime") @Nullable String rampUpStartTime) {
+        @CustomType.Parameter("daysOfWeek") @Nullable List<String> daysOfWeek,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("offPeakLoadBalancingAlgorithm") @Nullable String offPeakLoadBalancingAlgorithm,
+        @CustomType.Parameter("offPeakStartTime") @Nullable String offPeakStartTime,
+        @CustomType.Parameter("peakLoadBalancingAlgorithm") @Nullable String peakLoadBalancingAlgorithm,
+        @CustomType.Parameter("peakStartTime") @Nullable String peakStartTime,
+        @CustomType.Parameter("rampDownCapacityThresholdPct") @Nullable Integer rampDownCapacityThresholdPct,
+        @CustomType.Parameter("rampDownForceLogoffUsers") @Nullable Boolean rampDownForceLogoffUsers,
+        @CustomType.Parameter("rampDownLoadBalancingAlgorithm") @Nullable String rampDownLoadBalancingAlgorithm,
+        @CustomType.Parameter("rampDownMinimumHostsPct") @Nullable Integer rampDownMinimumHostsPct,
+        @CustomType.Parameter("rampDownNotificationMessage") @Nullable String rampDownNotificationMessage,
+        @CustomType.Parameter("rampDownStartTime") @Nullable String rampDownStartTime,
+        @CustomType.Parameter("rampDownStopHostsWhen") @Nullable String rampDownStopHostsWhen,
+        @CustomType.Parameter("rampDownWaitTimeMinutes") @Nullable Integer rampDownWaitTimeMinutes,
+        @CustomType.Parameter("rampUpCapacityThresholdPct") @Nullable Integer rampUpCapacityThresholdPct,
+        @CustomType.Parameter("rampUpLoadBalancingAlgorithm") @Nullable String rampUpLoadBalancingAlgorithm,
+        @CustomType.Parameter("rampUpMinimumHostsPct") @Nullable Integer rampUpMinimumHostsPct,
+        @CustomType.Parameter("rampUpStartTime") @Nullable String rampUpStartTime) {
         this.daysOfWeek = daysOfWeek;
         this.name = name;
         this.offPeakLoadBalancingAlgorithm = offPeakLoadBalancingAlgorithm;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetOutboundFirewallRuleArgs extends io.pulumi.resources.Invok
 
     public static final GetOutboundFirewallRuleArgs Empty = new GetOutboundFirewallRuleArgs();
 
-    @InputImport(name="outboundRuleFqdn", required=true)
+    @Import(name="outboundRuleFqdn", required=true)
       private final String outboundRuleFqdn;
 
     public String getOutboundRuleFqdn() {
@@ -23,7 +23,7 @@ public final class GetOutboundFirewallRuleArgs extends io.pulumi.resources.Invok
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -34,7 +34,7 @@ public final class GetOutboundFirewallRuleArgs extends io.pulumi.resources.Invok
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final String serverName;
 
     public String getServerName() {

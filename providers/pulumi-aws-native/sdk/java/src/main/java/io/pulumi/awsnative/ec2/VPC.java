@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.VPCArgs;
 import io.pulumi.awsnative.ec2.outputs.VPCTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public class VPC extends io.pulumi.resources.CustomResource {
      * The primary IPv4 CIDR block for the VPC.
      * 
      */
-    @OutputExport(name="cidrBlock", type=String.class, parameters={})
+    @Export(name="cidrBlock", type=String.class, parameters={})
     private Output<String> cidrBlock;
 
     /**
@@ -38,7 +38,7 @@ public class VPC extends io.pulumi.resources.CustomResource {
      * A list of IPv4 CIDR block association IDs for the VPC.
      * 
      */
-    @OutputExport(name="cidrBlockAssociations", type=List.class, parameters={String.class})
+    @Export(name="cidrBlockAssociations", type=List.class, parameters={String.class})
     private Output<List<String>> cidrBlockAssociations;
 
     /**
@@ -52,7 +52,7 @@ public class VPC extends io.pulumi.resources.CustomResource {
      * The default network ACL ID that is associated with the VPC.
      * 
      */
-    @OutputExport(name="defaultNetworkAcl", type=String.class, parameters={})
+    @Export(name="defaultNetworkAcl", type=String.class, parameters={})
     private Output<String> defaultNetworkAcl;
 
     /**
@@ -66,7 +66,7 @@ public class VPC extends io.pulumi.resources.CustomResource {
      * The default security group ID that is associated with the VPC.
      * 
      */
-    @OutputExport(name="defaultSecurityGroup", type=String.class, parameters={})
+    @Export(name="defaultSecurityGroup", type=String.class, parameters={})
     private Output<String> defaultSecurityGroup;
 
     /**
@@ -80,7 +80,7 @@ public class VPC extends io.pulumi.resources.CustomResource {
      * Indicates whether the instances launched in the VPC get DNS hostnames. If enabled, instances in the VPC get DNS hostnames; otherwise, they do not. Disabled by default for nondefault VPCs.
      * 
      */
-    @OutputExport(name="enableDnsHostnames", type=Boolean.class, parameters={})
+    @Export(name="enableDnsHostnames", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDnsHostnames;
 
     /**
@@ -94,7 +94,7 @@ public class VPC extends io.pulumi.resources.CustomResource {
      * Indicates whether the DNS resolution is supported for the VPC. If enabled, queries to the Amazon provided DNS server at the 169.254.169.253 IP address, or the reserved IP address at the base of the VPC network range "plus two" succeed. If disabled, the Amazon provided DNS service in the VPC that resolves public DNS hostnames to IP addresses is not enabled. Enabled by default.
      * 
      */
-    @OutputExport(name="enableDnsSupport", type=Boolean.class, parameters={})
+    @Export(name="enableDnsSupport", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDnsSupport;
 
     /**
@@ -114,7 +114,7 @@ public class VPC extends io.pulumi.resources.CustomResource {
      * Updating InstanceTenancy requires no replacement only if you are updating its value from "dedicated" to "default". Updating InstanceTenancy from "default" to "dedicated" requires replacement.
      * 
      */
-    @OutputExport(name="instanceTenancy", type=String.class, parameters={})
+    @Export(name="instanceTenancy", type=String.class, parameters={})
     private Output</* @Nullable */ String> instanceTenancy;
 
     /**
@@ -134,7 +134,7 @@ public class VPC extends io.pulumi.resources.CustomResource {
      * A list of IPv6 CIDR blocks that are associated with the VPC.
      * 
      */
-    @OutputExport(name="ipv6CidrBlocks", type=List.class, parameters={String.class})
+    @Export(name="ipv6CidrBlocks", type=List.class, parameters={String.class})
     private Output<List<String>> ipv6CidrBlocks;
 
     /**
@@ -148,7 +148,7 @@ public class VPC extends io.pulumi.resources.CustomResource {
      * The tags for the VPC.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={VPCTag.class})
+    @Export(name="tags", type=List.class, parameters={VPCTag.class})
     private Output</* @Nullable */ List<VPCTag>> tags;
 
     /**
@@ -162,7 +162,7 @@ public class VPC extends io.pulumi.resources.CustomResource {
      * The Id for the model.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

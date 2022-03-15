@@ -4,7 +4,7 @@
 package io.pulumi.aws.applicationloadbalancing.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * The query parameters to include in the redirect request to the authorization endpoint. Max: 10.
      * 
      */
-    @InputImport(name="authenticationRequestExtraParams")
+    @Import(name="authenticationRequestExtraParams")
       private final @Nullable Output<Map<String,String>> authenticationRequestExtraParams;
 
     public Output<Map<String,String>> getAuthenticationRequestExtraParams() {
@@ -31,7 +31,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * The authorization endpoint of the IdP.
      * 
      */
-    @InputImport(name="authorizationEndpoint", required=true)
+    @Import(name="authorizationEndpoint", required=true)
       private final Output<String> authorizationEndpoint;
 
     public Output<String> getAuthorizationEndpoint() {
@@ -42,7 +42,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * The OAuth 2.0 client identifier.
      * 
      */
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -53,7 +53,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * The OAuth 2.0 client secret.
      * 
      */
-    @InputImport(name="clientSecret", required=true)
+    @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
@@ -64,7 +64,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * The OIDC issuer identifier of the IdP.
      * 
      */
-    @InputImport(name="issuer", required=true)
+    @Import(name="issuer", required=true)
       private final Output<String> issuer;
 
     public Output<String> getIssuer() {
@@ -75,7 +75,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * The behavior if the user is not authenticated. Valid values: `deny`, `allow` and `authenticate`
      * 
      */
-    @InputImport(name="onUnauthenticatedRequest")
+    @Import(name="onUnauthenticatedRequest")
       private final @Nullable Output<String> onUnauthenticatedRequest;
 
     public Output<String> getOnUnauthenticatedRequest() {
@@ -86,7 +86,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * The set of user claims to be requested from the IdP.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
@@ -97,7 +97,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * The name of the cookie used to maintain session information.
      * 
      */
-    @InputImport(name="sessionCookieName")
+    @Import(name="sessionCookieName")
       private final @Nullable Output<String> sessionCookieName;
 
     public Output<String> getSessionCookieName() {
@@ -108,7 +108,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * The maximum duration of the authentication session, in seconds.
      * 
      */
-    @InputImport(name="sessionTimeout")
+    @Import(name="sessionTimeout")
       private final @Nullable Output<Integer> sessionTimeout;
 
     public Output<Integer> getSessionTimeout() {
@@ -119,7 +119,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * The token endpoint of the IdP.
      * 
      */
-    @InputImport(name="tokenEndpoint", required=true)
+    @Import(name="tokenEndpoint", required=true)
       private final Output<String> tokenEndpoint;
 
     public Output<String> getTokenEndpoint() {
@@ -130,7 +130,7 @@ public final class ListenerRuleActionAuthenticateOidcArgs extends io.pulumi.reso
      * The user info endpoint of the IdP.
      * 
      */
-    @InputImport(name="userInfoEndpoint", required=true)
+    @Import(name="userInfoEndpoint", required=true)
       private final Output<String> userInfoEndpoint;
 
     public Output<String> getUserInfoEndpoint() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.compute.VirtualMachineScaleSetVMExtensionArgs;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineExtensionInstanceViewResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -37,7 +37,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
      */
-    @OutputExport(name="autoUpgradeMinorVersion", type=Boolean.class, parameters={})
+    @Export(name="autoUpgradeMinorVersion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoUpgradeMinorVersion;
 
     /**
@@ -51,7 +51,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * Indicates whether the extension should be automatically upgraded by the platform if there is a newer version of the extension available.
      * 
      */
-    @OutputExport(name="enableAutomaticUpgrade", type=Boolean.class, parameters={})
+    @Export(name="enableAutomaticUpgrade", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableAutomaticUpgrade;
 
     /**
@@ -65,7 +65,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * How the extension handler should be forced to update even if the extension configuration has not changed.
      * 
      */
-    @OutputExport(name="forceUpdateTag", type=String.class, parameters={})
+    @Export(name="forceUpdateTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> forceUpdateTag;
 
     /**
@@ -79,7 +79,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * The virtual machine extension instance view.
      * 
      */
-    @OutputExport(name="instanceView", type=VirtualMachineExtensionInstanceViewResponse.class, parameters={})
+    @Export(name="instanceView", type=VirtualMachineExtensionInstanceViewResponse.class, parameters={})
     private Output</* @Nullable */ VirtualMachineExtensionInstanceViewResponse> instanceView;
 
     /**
@@ -93,7 +93,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * The name of the extension.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
      * 
      */
-    @OutputExport(name="protectedSettings", type=Object.class, parameters={})
+    @Export(name="protectedSettings", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> protectedSettings;
 
     /**
@@ -121,7 +121,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * The provisioning state, which only appears in the response.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -135,7 +135,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * The name of the extension handler publisher.
      * 
      */
-    @OutputExport(name="publisher", type=String.class, parameters={})
+    @Export(name="publisher", type=String.class, parameters={})
     private Output</* @Nullable */ String> publisher;
 
     /**
@@ -149,7 +149,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * Json formatted public settings for the extension.
      * 
      */
-    @OutputExport(name="settings", type=Object.class, parameters={})
+    @Export(name="settings", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> settings;
 
     /**
@@ -163,7 +163,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -177,7 +177,7 @@ public class VirtualMachineScaleSetVMExtension extends io.pulumi.resources.Custo
      * Specifies the version of the script handler.
      * 
      */
-    @OutputExport(name="typeHandlerVersion", type=String.class, parameters={})
+    @Export(name="typeHandlerVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeHandlerVersion;
 
     /**

@@ -8,7 +8,7 @@ import io.pulumi.aws.guardduty.OrganizationConfigurationArgs;
 import io.pulumi.aws.guardduty.inputs.OrganizationConfigurationState;
 import io.pulumi.aws.guardduty.outputs.OrganizationConfigurationDatasources;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class OrganizationConfiguration extends io.pulumi.resources.CustomResourc
      * When this setting is enabled, all new accounts that are created in, or added to, the organization are added as a member accounts of the organization’s GuardDuty delegated administrator and GuardDuty is enabled in that AWS Region.
      * 
      */
-    @OutputExport(name="autoEnable", type=Boolean.class, parameters={})
+    @Export(name="autoEnable", type=Boolean.class, parameters={})
     private Output<Boolean> autoEnable;
 
     /**
@@ -50,7 +50,7 @@ public class OrganizationConfiguration extends io.pulumi.resources.CustomResourc
      * Configuration for the collected datasources.
      * 
      */
-    @OutputExport(name="datasources", type=OrganizationConfigurationDatasources.class, parameters={})
+    @Export(name="datasources", type=OrganizationConfigurationDatasources.class, parameters={})
     private Output<OrganizationConfigurationDatasources> datasources;
 
     /**
@@ -64,7 +64,7 @@ public class OrganizationConfiguration extends io.pulumi.resources.CustomResourc
      * The detector ID of the GuardDuty account.
      * 
      */
-    @OutputExport(name="detectorId", type=String.class, parameters={})
+    @Export(name="detectorId", type=String.class, parameters={})
     private Output<String> detectorId;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class Ipv6CircuitConnectionConfigArgs extends io.pulumi.resources.R
      * /125 IP address space to carve out customer addresses for global reach.
      * 
      */
-    @InputImport(name="addressPrefix")
+    @Import(name="addressPrefix")
       private final @Nullable Output<String> addressPrefix;
 
     public Output<String> getAddressPrefix() {

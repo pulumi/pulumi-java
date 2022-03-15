@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageAccountResponse {
     /**
      * The container in the storage account, only to be specified for WASB storage accounts.
@@ -58,17 +58,17 @@ public final class StorageAccountResponse {
      */
     private final @Nullable String saskey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageAccountResponse(
-        @OutputCustomType.Parameter("container") @Nullable String container,
-        @OutputCustomType.Parameter("fileSystem") @Nullable String fileSystem,
-        @OutputCustomType.Parameter("fileshare") @Nullable String fileshare,
-        @OutputCustomType.Parameter("isDefault") @Nullable Boolean isDefault,
-        @OutputCustomType.Parameter("key") @Nullable String key,
-        @OutputCustomType.Parameter("msiResourceId") @Nullable String msiResourceId,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
-        @OutputCustomType.Parameter("saskey") @Nullable String saskey) {
+        @CustomType.Parameter("container") @Nullable String container,
+        @CustomType.Parameter("fileSystem") @Nullable String fileSystem,
+        @CustomType.Parameter("fileshare") @Nullable String fileshare,
+        @CustomType.Parameter("isDefault") @Nullable Boolean isDefault,
+        @CustomType.Parameter("key") @Nullable String key,
+        @CustomType.Parameter("msiResourceId") @Nullable String msiResourceId,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId,
+        @CustomType.Parameter("saskey") @Nullable String saskey) {
         this.container = container;
         this.fileSystem = fileSystem;
         this.fileshare = fileshare;

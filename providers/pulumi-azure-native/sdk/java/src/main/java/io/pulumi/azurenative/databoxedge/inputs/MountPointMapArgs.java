@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MountPointMapArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the share mounted to the role VM.
      * 
      */
-    @InputImport(name="shareId", required=true)
+    @Import(name="shareId", required=true)
       private final Output<String> shareId;
 
     public Output<String> getShareId() {

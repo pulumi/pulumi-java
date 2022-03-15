@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetDataSourceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDataSourceArgs Empty = new GetDataSourceArgs();
 
-    @InputImport(name="datasourceId", required=true)
+    @Import(name="datasourceId", required=true)
       private final String datasourceId;
 
     public String getDatasourceId() {
         return this.datasourceId;
     }
 
-    @InputImport(name="debugOptionsEnableDebugging")
+    @Import(name="debugOptionsEnableDebugging")
       private final @Nullable String debugOptionsEnableDebugging;
 
     public Optional<String> getDebugOptionsEnableDebugging() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dlp_v2.DeidentifyTemplateArgs;
@@ -23,7 +23,7 @@ public class DeidentifyTemplate extends io.pulumi.resources.CustomResource {
      * The creation timestamp of an inspectTemplate.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -37,7 +37,7 @@ public class DeidentifyTemplate extends io.pulumi.resources.CustomResource {
      * The core content of the template.
      * 
      */
-    @OutputExport(name="deidentifyConfig", type=GooglePrivacyDlpV2DeidentifyConfigResponse.class, parameters={})
+    @Export(name="deidentifyConfig", type=GooglePrivacyDlpV2DeidentifyConfigResponse.class, parameters={})
     private Output<GooglePrivacyDlpV2DeidentifyConfigResponse> deidentifyConfig;
 
     /**
@@ -51,7 +51,7 @@ public class DeidentifyTemplate extends io.pulumi.resources.CustomResource {
      * Short description (max 256 chars).
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -65,7 +65,7 @@ public class DeidentifyTemplate extends io.pulumi.resources.CustomResource {
      * Display name (max 256 chars).
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -79,7 +79,7 @@ public class DeidentifyTemplate extends io.pulumi.resources.CustomResource {
      * The template name. The template will have one of the following formats: `projects/PROJECT_ID/deidentifyTemplates/TEMPLATE_ID` OR `organizations/ORGANIZATION_ID/deidentifyTemplates/TEMPLATE_ID`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class DeidentifyTemplate extends io.pulumi.resources.CustomResource {
      * The last update timestamp of an inspectTemplate.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

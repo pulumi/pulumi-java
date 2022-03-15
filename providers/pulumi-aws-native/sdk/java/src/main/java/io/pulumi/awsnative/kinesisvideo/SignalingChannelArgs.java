@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kinesisvideo;
 import io.pulumi.awsnative.kinesisvideo.enums.SignalingChannelType;
 import io.pulumi.awsnative.kinesisvideo.inputs.SignalingChannelTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
      * The period of time a signaling channel retains undelivered messages before they are discarded.
      * 
      */
-    @InputImport(name="messageTtlSeconds")
+    @Import(name="messageTtlSeconds")
       private final @Nullable Output<Integer> messageTtlSeconds;
 
     public Output<Integer> getMessageTtlSeconds() {
@@ -33,7 +33,7 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
      * The name of the Kinesis Video Signaling Channel.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<SignalingChannelTagArgs>> tags;
 
     public Output<List<SignalingChannelTagArgs>> getTags() {
@@ -55,7 +55,7 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
      * The type of the Kinesis Video Signaling Channel to create. Currently, SINGLE_MASTER is the only supported channel type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<SignalingChannelType> type;
 
     public Output<SignalingChannelType> getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class RouteSpecTcpRouteActionWeightedTargetGetArgs extends io.pulum
      * The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
      * 
      */
-    @InputImport(name="virtualNode", required=true)
+    @Import(name="virtualNode", required=true)
       private final Output<String> virtualNode;
 
     public Output<String> getVirtualNode() {
@@ -29,7 +29,7 @@ public final class RouteSpecTcpRouteActionWeightedTargetGetArgs extends io.pulum
      * The relative weight of the weighted target. An integer between 0 and 100.
      * 
      */
-    @InputImport(name="weight", required=true)
+    @Import(name="weight", required=true)
       private final Output<Integer> weight;
 
     public Output<Integer> getWeight() {

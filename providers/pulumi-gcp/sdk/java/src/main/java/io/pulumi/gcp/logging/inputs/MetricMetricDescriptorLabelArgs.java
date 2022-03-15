@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class MetricMetricDescriptorLabelArgs extends io.pulumi.resources.R
      * description is 8000 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class MetricMetricDescriptorLabelArgs extends io.pulumi.resources.R
      * The label key.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -43,7 +43,7 @@ public final class MetricMetricDescriptorLabelArgs extends io.pulumi.resources.R
      * Possible values are `BOOL`, `INT64`, and `STRING`.
      * 
      */
-    @InputImport(name="valueType")
+    @Import(name="valueType")
       private final @Nullable Output<String> valueType;
 
     public Output<String> getValueType() {

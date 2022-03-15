@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.cloudtrail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TrailEventSelectorDataResource {
     /**
      * Resource type in which you want to log data events. You can specify only the following value: "AWS::S3::Object", "AWS::Lambda::Function" and "AWS::DynamoDB::Table".
@@ -21,10 +21,10 @@ public final class TrailEventSelectorDataResource {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TrailEventSelectorDataResource(
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("values") List<String> values) {
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("values") List<String> values) {
         this.type = type;
         this.values = values;
     }

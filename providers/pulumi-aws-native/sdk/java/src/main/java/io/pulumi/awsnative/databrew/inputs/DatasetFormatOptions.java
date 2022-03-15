@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.DatasetCsvOptions;
 import io.pulumi.awsnative.databrew.inputs.DatasetExcelOptions;
 import io.pulumi.awsnative.databrew.inputs.DatasetJsonOptions;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,21 +20,21 @@ public final class DatasetFormatOptions extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetFormatOptions Empty = new DatasetFormatOptions();
 
-    @InputImport(name="csv")
+    @Import(name="csv")
       private final @Nullable DatasetCsvOptions csv;
 
     public Optional<DatasetCsvOptions> getCsv() {
         return this.csv == null ? Optional.empty() : Optional.ofNullable(this.csv);
     }
 
-    @InputImport(name="excel")
+    @Import(name="excel")
       private final @Nullable DatasetExcelOptions excel;
 
     public Optional<DatasetExcelOptions> getExcel() {
         return this.excel == null ? Optional.empty() : Optional.ofNullable(this.excel);
     }
 
-    @InputImport(name="json")
+    @Import(name="json")
       private final @Nullable DatasetJsonOptions json;
 
     public Optional<DatasetJsonOptions> getJson() {

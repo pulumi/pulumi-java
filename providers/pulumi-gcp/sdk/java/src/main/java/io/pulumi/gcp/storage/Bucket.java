@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.BucketArgs;
@@ -59,7 +59,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
      * 
      */
-    @OutputExport(name="cors", type=List.class, parameters={BucketCor.class})
+    @Export(name="cors", type=List.class, parameters={BucketCor.class})
     private Output</* @Nullable */ List<BucketCor>> cors;
 
     /**
@@ -69,7 +69,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<BucketCor>> getCors() {
         return this.cors;
     }
-    @OutputExport(name="defaultEventBasedHold", type=Boolean.class, parameters={})
+    @Export(name="defaultEventBasedHold", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> defaultEventBasedHold;
 
     public Output</* @Nullable */ Boolean> getDefaultEventBasedHold() {
@@ -79,7 +79,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The bucket's encryption configuration. Structure is documented below.
      * 
      */
-    @OutputExport(name="encryption", type=BucketEncryption.class, parameters={})
+    @Export(name="encryption", type=BucketEncryption.class, parameters={})
     private Output</* @Nullable */ BucketEncryption> encryption;
 
     /**
@@ -95,7 +95,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * bucket that contains objects, the provider will fail that run.
      * 
      */
-    @OutputExport(name="forceDestroy", type=Boolean.class, parameters={})
+    @Export(name="forceDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDestroy;
 
     /**
@@ -111,7 +111,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * A map of key/value label pairs to assign to the bucket.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -125,7 +125,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
      * 
      */
-    @OutputExport(name="lifecycleRules", type=List.class, parameters={BucketLifecycleRule.class})
+    @Export(name="lifecycleRules", type=List.class, parameters={BucketLifecycleRule.class})
     private Output</* @Nullable */ List<BucketLifecycleRule>> lifecycleRules;
 
     /**
@@ -139,7 +139,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -153,7 +153,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
      * 
      */
-    @OutputExport(name="logging", type=BucketLogging.class, parameters={})
+    @Export(name="logging", type=BucketLogging.class, parameters={})
     private Output</* @Nullable */ BucketLogging> logging;
 
     /**
@@ -167,7 +167,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The name of the bucket.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -182,7 +182,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -197,7 +197,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Prevents public access to a bucket.
      * 
      */
-    @OutputExport(name="publicAccessPrevention", type=String.class, parameters={})
+    @Export(name="publicAccessPrevention", type=String.class, parameters={})
     private Output<String> publicAccessPrevention;
 
     /**
@@ -211,7 +211,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
      * 
      */
-    @OutputExport(name="requesterPays", type=Boolean.class, parameters={})
+    @Export(name="requesterPays", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> requesterPays;
 
     /**
@@ -225,7 +225,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
      * 
      */
-    @OutputExport(name="retentionPolicy", type=BucketRetentionPolicy.class, parameters={})
+    @Export(name="retentionPolicy", type=BucketRetentionPolicy.class, parameters={})
     private Output</* @Nullable */ BucketRetentionPolicy> retentionPolicy;
 
     /**
@@ -239,7 +239,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -253,7 +253,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
      * 
      */
-    @OutputExport(name="storageClass", type=String.class, parameters={})
+    @Export(name="storageClass", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageClass;
 
     /**
@@ -267,7 +267,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
      * 
      */
-    @OutputExport(name="uniformBucketLevelAccess", type=Boolean.class, parameters={})
+    @Export(name="uniformBucketLevelAccess", type=Boolean.class, parameters={})
     private Output<Boolean> uniformBucketLevelAccess;
 
     /**
@@ -281,7 +281,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The base URL of the bucket, in the format `gs://<bucket-name>`.
      * 
      */
-    @OutputExport(name="url", type=String.class, parameters={})
+    @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**
@@ -295,7 +295,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
      * 
      */
-    @OutputExport(name="versioning", type=BucketVersioning.class, parameters={})
+    @Export(name="versioning", type=BucketVersioning.class, parameters={})
     private Output</* @Nullable */ BucketVersioning> versioning;
 
     /**
@@ -309,7 +309,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Configuration if the bucket acts as a website. Structure is documented below.
      * 
      */
-    @OutputExport(name="website", type=BucketWebsite.class, parameters={})
+    @Export(name="website", type=BucketWebsite.class, parameters={})
     private Output</* @Nullable */ BucketWebsite> website;
 
     /**

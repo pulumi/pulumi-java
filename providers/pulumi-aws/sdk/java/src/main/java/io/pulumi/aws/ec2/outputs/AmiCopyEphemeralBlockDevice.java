@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AmiCopyEphemeralBlockDevice {
     /**
      * The path at which the device is exposed to created instances.
@@ -23,10 +23,10 @@ public final class AmiCopyEphemeralBlockDevice {
      */
     private final @Nullable String virtualName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AmiCopyEphemeralBlockDevice(
-        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
-        @OutputCustomType.Parameter("virtualName") @Nullable String virtualName) {
+        @CustomType.Parameter("deviceName") @Nullable String deviceName,
+        @CustomType.Parameter("virtualName") @Nullable String virtualName) {
         this.deviceName = deviceName;
         this.virtualName = virtualName;
     }

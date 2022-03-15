@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IngressTLS {
     /**
      * Hosts are a list of hosts included in the TLS certificate. The values in this list must match the name/s used in the tlsSecret. Defaults to the wildcard host setting for the loadbalancer controller fulfilling this Ingress, if left unspecified.
@@ -23,10 +23,10 @@ public final class IngressTLS {
      */
     private final @Nullable String secretName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IngressTLS(
-        @OutputCustomType.Parameter("hosts") @Nullable List<String> hosts,
-        @OutputCustomType.Parameter("secretName") @Nullable String secretName) {
+        @CustomType.Parameter("hosts") @Nullable List<String> hosts,
+        @CustomType.Parameter("secretName") @Nullable String secretName) {
         this.hosts = hosts;
         this.secretName = secretName;
     }

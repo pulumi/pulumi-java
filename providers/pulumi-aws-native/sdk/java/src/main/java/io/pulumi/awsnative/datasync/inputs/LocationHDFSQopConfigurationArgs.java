@@ -6,7 +6,7 @@ package io.pulumi.awsnative.datasync.inputs;
 import io.pulumi.awsnative.datasync.enums.LocationHDFSQopConfigurationDataTransferProtection;
 import io.pulumi.awsnative.datasync.enums.LocationHDFSQopConfigurationRpcProtection;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class LocationHDFSQopConfigurationArgs extends io.pulumi.resources.
      * Configuration for Data Transfer Protection.
      * 
      */
-    @InputImport(name="dataTransferProtection")
+    @Import(name="dataTransferProtection")
       private final @Nullable Output<LocationHDFSQopConfigurationDataTransferProtection> dataTransferProtection;
 
     public Output<LocationHDFSQopConfigurationDataTransferProtection> getDataTransferProtection() {
@@ -34,7 +34,7 @@ public final class LocationHDFSQopConfigurationArgs extends io.pulumi.resources.
      * Configuration for RPC Protection.
      * 
      */
-    @InputImport(name="rpcProtection")
+    @Import(name="rpcProtection")
       private final @Nullable Output<LocationHDFSQopConfigurationRpcProtection> rpcProtection;
 
     public Output<LocationHDFSQopConfigurationRpcProtection> getRpcProtection() {

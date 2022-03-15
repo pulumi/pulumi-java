@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cassandra.inputs;
 import io.pulumi.awsnative.cassandra.enums.TableClusteringKeyColumnOrderBy;
 import io.pulumi.awsnative.cassandra.inputs.TableColumnArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,14 +15,14 @@ public final class TableClusteringKeyColumnArgs extends io.pulumi.resources.Reso
 
     public static final TableClusteringKeyColumnArgs Empty = new TableClusteringKeyColumnArgs();
 
-    @InputImport(name="column", required=true)
+    @Import(name="column", required=true)
       private final Output<TableColumnArgs> column;
 
     public Output<TableColumnArgs> getColumn() {
         return this.column;
     }
 
-    @InputImport(name="orderBy")
+    @Import(name="orderBy")
       private final @Nullable Output<TableClusteringKeyColumnOrderBy> orderBy;
 
     public Output<TableClusteringKeyColumnOrderBy> getOrderBy() {

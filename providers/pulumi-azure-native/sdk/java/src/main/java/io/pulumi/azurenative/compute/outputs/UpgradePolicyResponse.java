@@ -5,13 +5,13 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.AutomaticOSUpgradePolicyResponse;
 import io.pulumi.azurenative.compute.outputs.RollingUpgradePolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UpgradePolicyResponse {
     /**
      * Configuration parameters used for performing automatic OS Upgrade.
@@ -29,11 +29,11 @@ public final class UpgradePolicyResponse {
      */
     private final @Nullable RollingUpgradePolicyResponse rollingUpgradePolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UpgradePolicyResponse(
-        @OutputCustomType.Parameter("automaticOSUpgradePolicy") @Nullable AutomaticOSUpgradePolicyResponse automaticOSUpgradePolicy,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("rollingUpgradePolicy") @Nullable RollingUpgradePolicyResponse rollingUpgradePolicy) {
+        @CustomType.Parameter("automaticOSUpgradePolicy") @Nullable AutomaticOSUpgradePolicyResponse automaticOSUpgradePolicy,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("rollingUpgradePolicy") @Nullable RollingUpgradePolicyResponse rollingUpgradePolicy) {
         this.automaticOSUpgradePolicy = automaticOSUpgradePolicy;
         this.mode = mode;
         this.rollingUpgradePolicy = rollingUpgradePolicy;

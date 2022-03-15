@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CloudTieringCachePerformanceResponse {
     /**
      * Count of bytes that were served from the local server
@@ -32,12 +32,12 @@ public final class CloudTieringCachePerformanceResponse {
      */
     private final String lastUpdatedTimestamp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudTieringCachePerformanceResponse(
-        @OutputCustomType.Parameter("cacheHitBytes") Double cacheHitBytes,
-        @OutputCustomType.Parameter("cacheHitBytesPercent") Integer cacheHitBytesPercent,
-        @OutputCustomType.Parameter("cacheMissBytes") Double cacheMissBytes,
-        @OutputCustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp) {
+        @CustomType.Parameter("cacheHitBytes") Double cacheHitBytes,
+        @CustomType.Parameter("cacheHitBytesPercent") Integer cacheHitBytesPercent,
+        @CustomType.Parameter("cacheMissBytes") Double cacheMissBytes,
+        @CustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp) {
         this.cacheHitBytes = cacheHitBytes;
         this.cacheHitBytesPercent = cacheHitBytesPercent;
         this.cacheMissBytes = cacheMissBytes;

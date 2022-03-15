@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.ClusterConfigResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.ClusterMetricsResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.ClusterStatusResponse;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     /**
      * The cluster name. Cluster names within a project must be unique. Names of deleted clusters can be reused.
@@ -55,16 +55,16 @@ public final class GetClusterResult {
      */
     private final List<ClusterStatusResponse> statusHistory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("clusterName") String clusterName,
-        @OutputCustomType.Parameter("clusterUuid") String clusterUuid,
-        @OutputCustomType.Parameter("config") ClusterConfigResponse config,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("metrics") ClusterMetricsResponse metrics,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("status") ClusterStatusResponse status,
-        @OutputCustomType.Parameter("statusHistory") List<ClusterStatusResponse> statusHistory) {
+        @CustomType.Parameter("clusterName") String clusterName,
+        @CustomType.Parameter("clusterUuid") String clusterUuid,
+        @CustomType.Parameter("config") ClusterConfigResponse config,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("metrics") ClusterMetricsResponse metrics,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("status") ClusterStatusResponse status,
+        @CustomType.Parameter("statusHistory") List<ClusterStatusResponse> statusHistory) {
         this.clusterName = clusterName;
         this.clusterUuid = clusterUuid;
         this.config = config;

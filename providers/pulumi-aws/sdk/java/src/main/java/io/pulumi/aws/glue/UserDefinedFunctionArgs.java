@@ -5,7 +5,7 @@ package io.pulumi.aws.glue;
 
 import io.pulumi.aws.glue.inputs.UserDefinedFunctionResourceUriArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * ID of the Glue Catalog to create the function in. If omitted, this defaults to the AWS Account ID.
      * 
      */
-    @InputImport(name="catalogId")
+    @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
@@ -31,7 +31,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * The Java class that contains the function code.
      * 
      */
-    @InputImport(name="className", required=true)
+    @Import(name="className", required=true)
       private final Output<String> className;
 
     public Output<String> getClassName() {
@@ -42,7 +42,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * The name of the Database to create the Function.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -53,7 +53,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * The name of the function.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -64,7 +64,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * The owner of the function.
      * 
      */
-    @InputImport(name="ownerName", required=true)
+    @Import(name="ownerName", required=true)
       private final Output<String> ownerName;
 
     public Output<String> getOwnerName() {
@@ -75,7 +75,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * The owner type. can be one of `USER`, `ROLE`, and `GROUP`.
      * 
      */
-    @InputImport(name="ownerType", required=true)
+    @Import(name="ownerType", required=true)
       private final Output<String> ownerType;
 
     public Output<String> getOwnerType() {
@@ -86,7 +86,7 @@ public final class UserDefinedFunctionArgs extends io.pulumi.resources.ResourceA
      * The configuration block for Resource URIs. See resource uris below for more details.
      * 
      */
-    @InputImport(name="resourceUris")
+    @Import(name="resourceUris")
       private final @Nullable Output<List<UserDefinedFunctionResourceUriArgs>> resourceUris;
 
     public Output<List<UserDefinedFunctionResourceUriArgs>> getResourceUris() {

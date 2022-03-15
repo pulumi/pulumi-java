@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AKSServiceResponseResponseDataCollection {
     /**
      * Option for enabling/disabling Event Hub.
@@ -22,10 +22,10 @@ public final class AKSServiceResponseResponseDataCollection {
      */
     private final @Nullable Boolean storageEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AKSServiceResponseResponseDataCollection(
-        @OutputCustomType.Parameter("eventHubEnabled") @Nullable Boolean eventHubEnabled,
-        @OutputCustomType.Parameter("storageEnabled") @Nullable Boolean storageEnabled) {
+        @CustomType.Parameter("eventHubEnabled") @Nullable Boolean eventHubEnabled,
+        @CustomType.Parameter("storageEnabled") @Nullable Boolean storageEnabled) {
         this.eventHubEnabled = eventHubEnabled;
         this.storageEnabled = storageEnabled;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkspaceConnectionResult {
     /**
      * Authorization type of the workspace connection.
@@ -52,16 +52,16 @@ public final class GetWorkspaceConnectionResult {
      */
     private final @Nullable String valueFormat;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkspaceConnectionResult(
-        @OutputCustomType.Parameter("authType") @Nullable String authType,
-        @OutputCustomType.Parameter("category") @Nullable String category,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("target") @Nullable String target,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") @Nullable String value,
-        @OutputCustomType.Parameter("valueFormat") @Nullable String valueFormat) {
+        @CustomType.Parameter("authType") @Nullable String authType,
+        @CustomType.Parameter("category") @Nullable String category,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("target") @Nullable String target,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") @Nullable String value,
+        @CustomType.Parameter("valueFormat") @Nullable String valueFormat) {
         this.authType = authType;
         this.category = category;
         this.id = id;

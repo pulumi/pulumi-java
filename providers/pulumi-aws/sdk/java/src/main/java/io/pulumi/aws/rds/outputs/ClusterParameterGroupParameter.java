@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.rds.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterParameterGroupParameter {
     /**
      * "immediate" (default), or "pending-reboot". Some
@@ -29,11 +29,11 @@ public final class ClusterParameterGroupParameter {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterParameterGroupParameter(
-        @OutputCustomType.Parameter("applyMethod") @Nullable String applyMethod,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("applyMethod") @Nullable String applyMethod,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("value") String value) {
         this.applyMethod = applyMethod;
         this.name = name;
         this.value = value;

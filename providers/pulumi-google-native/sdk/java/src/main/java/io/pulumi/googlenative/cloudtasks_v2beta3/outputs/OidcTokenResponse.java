@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OidcTokenResponse {
     /**
      * Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.
@@ -20,10 +20,10 @@ public final class OidcTokenResponse {
      */
     private final String serviceAccountEmail;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OidcTokenResponse(
-        @OutputCustomType.Parameter("audience") String audience,
-        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail) {
+        @CustomType.Parameter("audience") String audience,
+        @CustomType.Parameter("serviceAccountEmail") String serviceAccountEmail) {
         this.audience = audience;
         this.serviceAccountEmail = serviceAccountEmail;
     }

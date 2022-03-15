@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
      * The path to the ARM parameters file relative to the artifact source.
      * 
      */
-    @InputImport(name="parametersArtifactSourceRelativePath")
+    @Import(name="parametersArtifactSourceRelativePath")
       private final @Nullable Output<String> parametersArtifactSourceRelativePath;
 
     public Output<String> getParametersArtifactSourceRelativePath() {
@@ -33,7 +33,7 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
      * The full URI of the ARM parameters file with the SAS token.
      * 
      */
-    @InputImport(name="parametersUri")
+    @Import(name="parametersUri")
       private final @Nullable Output<String> parametersUri;
 
     public Output<String> getParametersUri() {
@@ -44,7 +44,7 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
      * The path to the ARM template file relative to the artifact source.
      * 
      */
-    @InputImport(name="templateArtifactSourceRelativePath")
+    @Import(name="templateArtifactSourceRelativePath")
       private final @Nullable Output<String> templateArtifactSourceRelativePath;
 
     public Output<String> getTemplateArtifactSourceRelativePath() {
@@ -55,7 +55,7 @@ public final class ServiceUnitArtifactsArgs extends io.pulumi.resources.Resource
      * The full URI of the ARM template file with the SAS token.
      * 
      */
-    @InputImport(name="templateUri")
+    @Import(name="templateUri")
       private final @Nullable Output<String> templateUri;
 
     public Output<String> getTemplateUri() {

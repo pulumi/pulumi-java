@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logz.inputs;
 
 import io.pulumi.azurenative.logz.inputs.FilteringTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
      * List of filtering tags to be used for capturing logs. This only takes effect if SendActivityLogs flag is enabled. If empty, all resources will be captured. If only Exclude action is specified, the rules will apply to the list of all available resources. If Include actions are specified, the rules will only include resources with the associated tags.
      * 
      */
-    @InputImport(name="filteringTags")
+    @Import(name="filteringTags")
       private final @Nullable Output<List<FilteringTagArgs>> filteringTags;
 
     public Output<List<FilteringTagArgs>> getFilteringTags() {
@@ -35,7 +35,7 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
      * Flag specifying if AAD logs should be sent for the Monitor resource.
      * 
      */
-    @InputImport(name="sendAadLogs")
+    @Import(name="sendAadLogs")
       private final @Nullable Output<Boolean> sendAadLogs;
 
     public Output<Boolean> getSendAadLogs() {
@@ -46,7 +46,7 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
      * Flag specifying if activity logs from Azure resources should be sent for the Monitor resource.
      * 
      */
-    @InputImport(name="sendActivityLogs")
+    @Import(name="sendActivityLogs")
       private final @Nullable Output<Boolean> sendActivityLogs;
 
     public Output<Boolean> getSendActivityLogs() {
@@ -57,7 +57,7 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
      * Flag specifying if subscription logs should be sent for the Monitor resource.
      * 
      */
-    @InputImport(name="sendSubscriptionLogs")
+    @Import(name="sendSubscriptionLogs")
       private final @Nullable Output<Boolean> sendSubscriptionLogs;
 
     public Output<Boolean> getSendSubscriptionLogs() {

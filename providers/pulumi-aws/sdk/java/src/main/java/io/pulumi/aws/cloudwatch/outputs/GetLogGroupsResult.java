@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLogGroupsResult {
     /**
      * Set of ARNs of the Cloudwatch log groups
@@ -27,12 +27,12 @@ public final class GetLogGroupsResult {
      */
     private final List<String> logGroupNames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLogGroupsResult(
-        @OutputCustomType.Parameter("arns") List<String> arns,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("logGroupNamePrefix") String logGroupNamePrefix,
-        @OutputCustomType.Parameter("logGroupNames") List<String> logGroupNames) {
+        @CustomType.Parameter("arns") List<String> arns,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("logGroupNamePrefix") String logGroupNamePrefix,
+        @CustomType.Parameter("logGroupNames") List<String> logGroupNames) {
         this.arns = arns;
         this.id = id;
         this.logGroupNamePrefix = logGroupNamePrefix;

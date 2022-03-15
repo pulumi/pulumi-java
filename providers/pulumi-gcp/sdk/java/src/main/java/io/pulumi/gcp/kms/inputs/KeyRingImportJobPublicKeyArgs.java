@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class KeyRingImportJobPublicKeyArgs extends io.pulumi.resources.Res
 
     public static final KeyRingImportJobPublicKeyArgs Empty = new KeyRingImportJobPublicKeyArgs();
 
-    @InputImport(name="pem")
+    @Import(name="pem")
       private final @Nullable Output<String> pem;
 
     public Output<String> getPem() {

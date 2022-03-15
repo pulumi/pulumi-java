@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.servicebus.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDisasterRecoveryConfigResult {
     /**
      * Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
@@ -53,16 +53,16 @@ public final class GetDisasterRecoveryConfigResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDisasterRecoveryConfigResult(
-        @OutputCustomType.Parameter("alternateName") @Nullable String alternateName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("partnerNamespace") @Nullable String partnerNamespace,
-        @OutputCustomType.Parameter("pendingReplicationOperationsCount") Double pendingReplicationOperationsCount,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("role") String role,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("alternateName") @Nullable String alternateName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("partnerNamespace") @Nullable String partnerNamespace,
+        @CustomType.Parameter("pendingReplicationOperationsCount") Double pendingReplicationOperationsCount,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("role") String role,
+        @CustomType.Parameter("type") String type) {
         this.alternateName = alternateName;
         this.id = id;
         this.name = name;

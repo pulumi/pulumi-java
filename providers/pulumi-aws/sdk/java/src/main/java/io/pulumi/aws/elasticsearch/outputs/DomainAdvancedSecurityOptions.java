@@ -4,13 +4,13 @@
 package io.pulumi.aws.elasticsearch.outputs;
 
 import io.pulumi.aws.elasticsearch.outputs.DomainAdvancedSecurityOptionsMasterUserOptions;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainAdvancedSecurityOptions {
     /**
      * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
@@ -28,11 +28,11 @@ public final class DomainAdvancedSecurityOptions {
      */
     private final @Nullable DomainAdvancedSecurityOptionsMasterUserOptions masterUserOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainAdvancedSecurityOptions(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("internalUserDatabaseEnabled") @Nullable Boolean internalUserDatabaseEnabled,
-        @OutputCustomType.Parameter("masterUserOptions") @Nullable DomainAdvancedSecurityOptionsMasterUserOptions masterUserOptions) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("internalUserDatabaseEnabled") @Nullable Boolean internalUserDatabaseEnabled,
+        @CustomType.Parameter("masterUserOptions") @Nullable DomainAdvancedSecurityOptionsMasterUserOptions masterUserOptions) {
         this.enabled = enabled;
         this.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
         this.masterUserOptions = masterUserOptions;

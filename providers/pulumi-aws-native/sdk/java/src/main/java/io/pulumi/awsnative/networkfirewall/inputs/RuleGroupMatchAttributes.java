@@ -6,7 +6,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupAddress;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupPortRange;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupTCPFlagField;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -18,42 +18,42 @@ public final class RuleGroupMatchAttributes extends io.pulumi.resources.InvokeAr
 
     public static final RuleGroupMatchAttributes Empty = new RuleGroupMatchAttributes();
 
-    @InputImport(name="destinationPorts")
+    @Import(name="destinationPorts")
       private final @Nullable List<RuleGroupPortRange> destinationPorts;
 
     public List<RuleGroupPortRange> getDestinationPorts() {
         return this.destinationPorts == null ? List.of() : this.destinationPorts;
     }
 
-    @InputImport(name="destinations")
+    @Import(name="destinations")
       private final @Nullable List<RuleGroupAddress> destinations;
 
     public List<RuleGroupAddress> getDestinations() {
         return this.destinations == null ? List.of() : this.destinations;
     }
 
-    @InputImport(name="protocols")
+    @Import(name="protocols")
       private final @Nullable List<Integer> protocols;
 
     public List<Integer> getProtocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
 
-    @InputImport(name="sourcePorts")
+    @Import(name="sourcePorts")
       private final @Nullable List<RuleGroupPortRange> sourcePorts;
 
     public List<RuleGroupPortRange> getSourcePorts() {
         return this.sourcePorts == null ? List.of() : this.sourcePorts;
     }
 
-    @InputImport(name="sources")
+    @Import(name="sources")
       private final @Nullable List<RuleGroupAddress> sources;
 
     public List<RuleGroupAddress> getSources() {
         return this.sources == null ? List.of() : this.sources;
     }
 
-    @InputImport(name="tCPFlags")
+    @Import(name="tCPFlags")
       private final @Nullable List<RuleGroupTCPFlagField> tCPFlags;
 
     public List<RuleGroupTCPFlagField> getTCPFlags() {

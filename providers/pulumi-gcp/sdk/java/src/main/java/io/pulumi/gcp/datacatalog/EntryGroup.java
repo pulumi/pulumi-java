@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.EntryGroupArgs;
@@ -38,7 +38,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * Entry group description, which can consist of several sentences or paragraphs that describe entry group contents.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -52,7 +52,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * A short name to identify the entry group, for example, "analytics data - jan 2011".
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -67,7 +67,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * contain only English letters, numbers and underscores, and be at most 64 characters.
      * 
      */
-    @OutputExport(name="entryGroupId", type=String.class, parameters={})
+    @Export(name="entryGroupId", type=String.class, parameters={})
     private Output<String> entryGroupId;
 
     /**
@@ -83,7 +83,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * projects/{project}/locations/{location}/entryGroups/{entryGroupId}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -99,7 +99,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -114,7 +114,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * EntryGroup location region.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**

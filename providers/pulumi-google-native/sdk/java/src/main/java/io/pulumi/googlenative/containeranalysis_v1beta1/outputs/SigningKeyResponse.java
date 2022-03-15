@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SigningKeyResponse {
     /**
      * key_id is an identifier for the signing key.
@@ -30,12 +30,12 @@ public final class SigningKeyResponse {
      */
     private final String publicKeyValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SigningKeyResponse(
-        @OutputCustomType.Parameter("keyId") String keyId,
-        @OutputCustomType.Parameter("keyScheme") String keyScheme,
-        @OutputCustomType.Parameter("keyType") String keyType,
-        @OutputCustomType.Parameter("publicKeyValue") String publicKeyValue) {
+        @CustomType.Parameter("keyId") String keyId,
+        @CustomType.Parameter("keyScheme") String keyScheme,
+        @CustomType.Parameter("keyType") String keyType,
+        @CustomType.Parameter("publicKeyValue") String publicKeyValue) {
         this.keyId = keyId;
         this.keyScheme = keyScheme;
         this.keyType = keyType;

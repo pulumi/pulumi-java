@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetScheduledAuditArgs extends io.pulumi.resources.InvokeArgs 
      * The name you want to give to the scheduled audit.
      * 
      */
-    @InputImport(name="scheduledAuditName", required=true)
+    @Import(name="scheduledAuditName", required=true)
       private final String scheduledAuditName;
 
     public String getScheduledAuditName() {

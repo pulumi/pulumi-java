@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.batch.ApplicationPackageArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ApplicationPackage extends io.pulumi.resources.CustomResource {
      * The ETag of the resource, used for concurrency statements.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -48,7 +48,7 @@ public class ApplicationPackage extends io.pulumi.resources.CustomResource {
      * The format of the application package, if the package is active.
      * 
      */
-    @OutputExport(name="format", type=String.class, parameters={})
+    @Export(name="format", type=String.class, parameters={})
     private Output<String> format;
 
     /**
@@ -62,7 +62,7 @@ public class ApplicationPackage extends io.pulumi.resources.CustomResource {
      * The time at which the package was last activated, if the package is active.
      * 
      */
-    @OutputExport(name="lastActivationTime", type=String.class, parameters={})
+    @Export(name="lastActivationTime", type=String.class, parameters={})
     private Output<String> lastActivationTime;
 
     /**
@@ -76,7 +76,7 @@ public class ApplicationPackage extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -90,7 +90,7 @@ public class ApplicationPackage extends io.pulumi.resources.CustomResource {
      * The current state of the application package.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -104,7 +104,7 @@ public class ApplicationPackage extends io.pulumi.resources.CustomResource {
      * The URL for the application package in Azure Storage.
      * 
      */
-    @OutputExport(name="storageUrl", type=String.class, parameters={})
+    @Export(name="storageUrl", type=String.class, parameters={})
     private Output<String> storageUrl;
 
     /**
@@ -118,7 +118,7 @@ public class ApplicationPackage extends io.pulumi.resources.CustomResource {
      * The UTC time at which the Azure Storage URL will expire.
      * 
      */
-    @OutputExport(name="storageUrlExpiry", type=String.class, parameters={})
+    @Export(name="storageUrlExpiry", type=String.class, parameters={})
     private Output<String> storageUrlExpiry;
 
     /**
@@ -132,7 +132,7 @@ public class ApplicationPackage extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

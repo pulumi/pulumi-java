@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.ssm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssociationS3OutputLocation {
     private final @Nullable String outputS3BucketName;
     private final @Nullable String outputS3KeyPrefix;
     private final @Nullable String outputS3Region;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssociationS3OutputLocation(
-        @OutputCustomType.Parameter("outputS3BucketName") @Nullable String outputS3BucketName,
-        @OutputCustomType.Parameter("outputS3KeyPrefix") @Nullable String outputS3KeyPrefix,
-        @OutputCustomType.Parameter("outputS3Region") @Nullable String outputS3Region) {
+        @CustomType.Parameter("outputS3BucketName") @Nullable String outputS3BucketName,
+        @CustomType.Parameter("outputS3KeyPrefix") @Nullable String outputS3KeyPrefix,
+        @CustomType.Parameter("outputS3Region") @Nullable String outputS3Region) {
         this.outputS3BucketName = outputS3BucketName;
         this.outputS3KeyPrefix = outputS3KeyPrefix;
         this.outputS3Region = outputS3Region;

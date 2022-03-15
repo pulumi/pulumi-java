@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerRuleHttpHeaderConfig {
     private final @Nullable String httpHeaderName;
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerRuleHttpHeaderConfig(
-        @OutputCustomType.Parameter("httpHeaderName") @Nullable String httpHeaderName,
-        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
+        @CustomType.Parameter("httpHeaderName") @Nullable String httpHeaderName,
+        @CustomType.Parameter("values") @Nullable List<String> values) {
         this.httpHeaderName = httpHeaderName;
         this.values = values;
     }

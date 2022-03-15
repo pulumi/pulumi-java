@@ -9,7 +9,7 @@ import io.pulumi.awsnative.apigateway.enums.MethodIntegrationPassthroughBehavior
 import io.pulumi.awsnative.apigateway.enums.MethodIntegrationType;
 import io.pulumi.awsnative.apigateway.inputs.MethodIntegrationResponseArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
      * A list of request parameters whose values API Gateway caches.
      * 
      */
-    @InputImport(name="cacheKeyParameters")
+    @Import(name="cacheKeyParameters")
       private final @Nullable Output<List<String>> cacheKeyParameters;
 
     public Output<List<String>> getCacheKeyParameters() {
@@ -37,7 +37,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
      * An API-specific tag group of related cached parameters.
      * 
      */
-    @InputImport(name="cacheNamespace")
+    @Import(name="cacheNamespace")
       private final @Nullable Output<String> cacheNamespace;
 
     public Output<String> getCacheNamespace() {
@@ -48,7 +48,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
      * The ID of the VpcLink used for the integration when connectionType=VPC_LINK, otherwise undefined.
      * 
      */
-    @InputImport(name="connectionId")
+    @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
     public Output<String> getConnectionId() {
@@ -59,7 +59,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
      * The type of the network connection to the integration endpoint.
      * 
      */
-    @InputImport(name="connectionType")
+    @Import(name="connectionType")
       private final @Nullable Output<MethodIntegrationConnectionType> connectionType;
 
     public Output<MethodIntegrationConnectionType> getConnectionType() {
@@ -70,7 +70,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
      * Specifies how to handle request payload content type conversions.
      * 
      */
-    @InputImport(name="contentHandling")
+    @Import(name="contentHandling")
       private final @Nullable Output<MethodIntegrationContentHandling> contentHandling;
 
     public Output<MethodIntegrationContentHandling> getContentHandling() {
@@ -81,7 +81,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
      * The credentials that are required for the integration.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable Output<String> credentials;
 
     public Output<String> getCredentials() {
@@ -92,7 +92,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
      * The integration's HTTP method type.
      * 
      */
-    @InputImport(name="integrationHttpMethod")
+    @Import(name="integrationHttpMethod")
       private final @Nullable Output<String> integrationHttpMethod;
 
     public Output<String> getIntegrationHttpMethod() {
@@ -103,7 +103,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
      * The response that API Gateway provides after a method's backend completes processing a request.
      * 
      */
-    @InputImport(name="integrationResponses")
+    @Import(name="integrationResponses")
       private final @Nullable Output<List<MethodIntegrationResponseArgs>> integrationResponses;
 
     public Output<List<MethodIntegrationResponseArgs>> getIntegrationResponses() {
@@ -114,7 +114,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
      * Indicates when API Gateway passes requests to the targeted backend.
      * 
      */
-    @InputImport(name="passthroughBehavior")
+    @Import(name="passthroughBehavior")
       private final @Nullable Output<MethodIntegrationPassthroughBehavior> passthroughBehavior;
 
     public Output<MethodIntegrationPassthroughBehavior> getPassthroughBehavior() {
@@ -125,7 +125,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
      * The request parameters that API Gateway sends with the backend request.
      * 
      */
-    @InputImport(name="requestParameters")
+    @Import(name="requestParameters")
       private final @Nullable Output<Object> requestParameters;
 
     public Output<Object> getRequestParameters() {
@@ -136,7 +136,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
      * A map of Apache Velocity templates that are applied on the request payload.
      * 
      */
-    @InputImport(name="requestTemplates")
+    @Import(name="requestTemplates")
       private final @Nullable Output<Object> requestTemplates;
 
     public Output<Object> getRequestTemplates() {
@@ -147,7 +147,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
      * Custom timeout between 50 and 29,000 milliseconds.
      * 
      */
-    @InputImport(name="timeoutInMillis")
+    @Import(name="timeoutInMillis")
       private final @Nullable Output<Integer> timeoutInMillis;
 
     public Output<Integer> getTimeoutInMillis() {
@@ -158,7 +158,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
      * The type of backend that your method is running.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<MethodIntegrationType> type;
 
     public Output<MethodIntegrationType> getType() {
@@ -169,7 +169,7 @@ public final class MethodIntegrationArgs extends io.pulumi.resources.ResourceArg
      * The Uniform Resource Identifier (URI) for the integration.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

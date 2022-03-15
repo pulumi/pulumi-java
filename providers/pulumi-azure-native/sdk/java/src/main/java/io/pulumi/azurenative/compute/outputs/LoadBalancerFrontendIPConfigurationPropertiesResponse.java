@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancerFrontendIPConfigurationPropertiesResponse {
     /**
      * The virtual network private IP address of the IP configuration.
@@ -28,11 +28,11 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse {
      */
     private final @Nullable SubResourceResponse subnet;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoadBalancerFrontendIPConfigurationPropertiesResponse(
-        @OutputCustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
-        @OutputCustomType.Parameter("publicIPAddress") @Nullable SubResourceResponse publicIPAddress,
-        @OutputCustomType.Parameter("subnet") @Nullable SubResourceResponse subnet) {
+        @CustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
+        @CustomType.Parameter("publicIPAddress") @Nullable SubResourceResponse publicIPAddress,
+        @CustomType.Parameter("subnet") @Nullable SubResourceResponse subnet) {
         this.privateIPAddress = privateIPAddress;
         this.publicIPAddress = publicIPAddress;
         this.subnet = subnet;

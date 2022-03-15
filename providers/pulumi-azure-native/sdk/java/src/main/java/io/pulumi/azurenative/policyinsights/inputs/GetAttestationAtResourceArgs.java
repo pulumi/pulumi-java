@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.policyinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAttestationAtResourceArgs extends io.pulumi.resources.Invo
      * The name of the attestation.
      * 
      */
-    @InputImport(name="attestationName", required=true)
+    @Import(name="attestationName", required=true)
       private final String attestationName;
 
     public String getAttestationName() {
@@ -27,7 +27,7 @@ public final class GetAttestationAtResourceArgs extends io.pulumi.resources.Invo
      * Resource ID.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final String resourceId;
 
     public String getResourceId() {

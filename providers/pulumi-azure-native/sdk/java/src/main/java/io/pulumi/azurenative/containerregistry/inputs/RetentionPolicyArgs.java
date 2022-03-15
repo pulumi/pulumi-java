@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.enums.PolicyStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * The number of days to retain an untagged manifest after which it gets purged.
      * 
      */
-    @InputImport(name="days")
+    @Import(name="days")
       private final @Nullable Output<Integer> days;
 
     public Output<Integer> getDays() {
@@ -36,7 +36,7 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * The value that indicates whether the policy is enabled or not.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,PolicyStatus>> status;
 
     public Output<Either<String,PolicyStatus>> getStatus() {

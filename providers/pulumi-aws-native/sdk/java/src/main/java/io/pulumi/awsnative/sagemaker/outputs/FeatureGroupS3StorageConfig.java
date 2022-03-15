@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FeatureGroupS3StorageConfig {
     private final @Nullable String kmsKeyId;
     private final String s3Uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FeatureGroupS3StorageConfig(
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
-        @OutputCustomType.Parameter("s3Uri") String s3Uri) {
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @CustomType.Parameter("s3Uri") String s3Uri) {
         this.kmsKeyId = kmsKeyId;
         this.s3Uri = s3Uri;
     }

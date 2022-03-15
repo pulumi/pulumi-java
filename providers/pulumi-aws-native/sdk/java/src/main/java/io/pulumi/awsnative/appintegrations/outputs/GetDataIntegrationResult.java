@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.appintegrations.outputs;
 
 import io.pulumi.awsnative.appintegrations.outputs.DataIntegrationTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDataIntegrationResult {
     /**
      * The Amazon Resource Name (ARN) of the data integration.
@@ -39,13 +39,13 @@ public final class GetDataIntegrationResult {
      */
     private final @Nullable List<DataIntegrationTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDataIntegrationResult(
-        @OutputCustomType.Parameter("dataIntegrationArn") @Nullable String dataIntegrationArn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tags") @Nullable List<DataIntegrationTag> tags) {
+        @CustomType.Parameter("dataIntegrationArn") @Nullable String dataIntegrationArn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tags") @Nullable List<DataIntegrationTag> tags) {
         this.dataIntegrationArn = dataIntegrationArn;
         this.description = description;
         this.id = id;

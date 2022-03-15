@@ -5,13 +5,13 @@ package io.pulumi.aws.cloudwatch.outputs;
 
 import io.pulumi.aws.cloudwatch.outputs.EventConnectionAuthParametersOauthClientParameters;
 import io.pulumi.aws.cloudwatch.outputs.EventConnectionAuthParametersOauthOauthHttpParameters;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventConnectionAuthParametersOauth {
     /**
      * The URL to the authorization endpoint.
@@ -34,12 +34,12 @@ public final class EventConnectionAuthParametersOauth {
      */
     private final EventConnectionAuthParametersOauthOauthHttpParameters oauthHttpParameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventConnectionAuthParametersOauth(
-        @OutputCustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
-        @OutputCustomType.Parameter("clientParameters") @Nullable EventConnectionAuthParametersOauthClientParameters clientParameters,
-        @OutputCustomType.Parameter("httpMethod") String httpMethod,
-        @OutputCustomType.Parameter("oauthHttpParameters") EventConnectionAuthParametersOauthOauthHttpParameters oauthHttpParameters) {
+        @CustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
+        @CustomType.Parameter("clientParameters") @Nullable EventConnectionAuthParametersOauthClientParameters clientParameters,
+        @CustomType.Parameter("httpMethod") String httpMethod,
+        @CustomType.Parameter("oauthHttpParameters") EventConnectionAuthParametersOauthOauthHttpParameters oauthHttpParameters) {
         this.authorizationEndpoint = authorizationEndpoint;
         this.clientParameters = clientParameters;
         this.httpMethod = httpMethod;

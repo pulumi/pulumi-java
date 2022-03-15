@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.digitaltwins.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
      * EventGrid secondary accesskey. Will be obfuscated during read.
      * 
      */
-    @InputImport(name="accessKey1", required=true)
+    @Import(name="accessKey1", required=true)
       private final String accessKey1;
 
     public String getAccessKey1() {
@@ -33,7 +33,7 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
      * EventGrid secondary accesskey. Will be obfuscated during read.
      * 
      */
-    @InputImport(name="accessKey2")
+    @Import(name="accessKey2")
       private final @Nullable String accessKey2;
 
     public Optional<String> getAccessKey2() {
@@ -44,7 +44,7 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the authentication type being used for connecting to the endpoint.
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable String authenticationType;
 
     public Optional<String> getAuthenticationType() {
@@ -55,7 +55,7 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
      * Time when the Endpoint was added to DigitalTwinsInstance.
      * 
      */
-    @InputImport(name="createdTime", required=true)
+    @Import(name="createdTime", required=true)
       private final String createdTime;
 
     public String getCreatedTime() {
@@ -66,7 +66,7 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
      * Dead letter storage secret for key-based authentication. Will be obfuscated during read.
      * 
      */
-    @InputImport(name="deadLetterSecret")
+    @Import(name="deadLetterSecret")
       private final @Nullable String deadLetterSecret;
 
     public Optional<String> getDeadLetterSecret() {
@@ -77,7 +77,7 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
      * Dead letter storage URL for identity-based authentication.
      * 
      */
-    @InputImport(name="deadLetterUri")
+    @Import(name="deadLetterUri")
       private final @Nullable String deadLetterUri;
 
     public Optional<String> getDeadLetterUri() {
@@ -89,7 +89,7 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'EventGrid'.
      * 
      */
-    @InputImport(name="endpointType", required=true)
+    @Import(name="endpointType", required=true)
       private final String endpointType;
 
     public String getEndpointType() {
@@ -100,7 +100,7 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
      * The provisioning state.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -111,7 +111,7 @@ public final class EventGridResponse extends io.pulumi.resources.InvokeArgs {
      * EventGrid Topic Endpoint
      * 
      */
-    @InputImport(name="topicEndpoint", required=true)
+    @Import(name="topicEndpoint", required=true)
       private final String topicEndpoint;
 
     public String getTopicEndpoint() {

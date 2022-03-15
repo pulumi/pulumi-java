@@ -5,12 +5,12 @@ package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.WebAclRuleOverrideActionCount;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleOverrideActionNone;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRuleOverrideAction {
     /**
      * Override the rule action setting to count (i.e., only count matches). Configured as an empty block `{}`.
@@ -23,10 +23,10 @@ public final class WebAclRuleOverrideAction {
      */
     private final @Nullable WebAclRuleOverrideActionNone none;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAclRuleOverrideAction(
-        @OutputCustomType.Parameter("count") @Nullable WebAclRuleOverrideActionCount count,
-        @OutputCustomType.Parameter("none") @Nullable WebAclRuleOverrideActionNone none) {
+        @CustomType.Parameter("count") @Nullable WebAclRuleOverrideActionCount count,
+        @CustomType.Parameter("none") @Nullable WebAclRuleOverrideActionNone none) {
         this.count = count;
         this.none = none;
     }

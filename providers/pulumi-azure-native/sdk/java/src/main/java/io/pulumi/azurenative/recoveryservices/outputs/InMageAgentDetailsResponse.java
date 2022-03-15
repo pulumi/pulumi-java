@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InMageAgentDetailsResponse {
     /**
      * Agent expiry date.
@@ -32,12 +32,12 @@ public final class InMageAgentDetailsResponse {
      */
     private final @Nullable String postUpdateRebootStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InMageAgentDetailsResponse(
-        @OutputCustomType.Parameter("agentExpiryDate") @Nullable String agentExpiryDate,
-        @OutputCustomType.Parameter("agentUpdateStatus") @Nullable String agentUpdateStatus,
-        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
-        @OutputCustomType.Parameter("postUpdateRebootStatus") @Nullable String postUpdateRebootStatus) {
+        @CustomType.Parameter("agentExpiryDate") @Nullable String agentExpiryDate,
+        @CustomType.Parameter("agentUpdateStatus") @Nullable String agentUpdateStatus,
+        @CustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @CustomType.Parameter("postUpdateRebootStatus") @Nullable String postUpdateRebootStatus) {
         this.agentExpiryDate = agentExpiryDate;
         this.agentUpdateStatus = agentUpdateStatus;
         this.agentVersion = agentVersion;

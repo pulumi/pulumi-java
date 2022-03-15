@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.firebase_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetWebAppResult {
     /**
      * Immutable. The globally unique, Firebase-assigned identifier for the `WebApp`. This identifier should be treated as an opaque token, as the data format is not specified.
@@ -41,14 +41,14 @@ public final class GetWebAppResult {
      */
     private final String webId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebAppResult(
-        @OutputCustomType.Parameter("appId") String appId,
-        @OutputCustomType.Parameter("appUrls") List<String> appUrls,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("webId") String webId) {
+        @CustomType.Parameter("appId") String appId,
+        @CustomType.Parameter("appUrls") List<String> appUrls,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("webId") String webId) {
         this.appId = appId;
         this.appUrls = appUrls;
         this.displayName = displayName;

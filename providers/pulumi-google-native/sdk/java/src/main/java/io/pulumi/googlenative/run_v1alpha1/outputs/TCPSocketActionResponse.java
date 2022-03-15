@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TCPSocketActionResponse {
     /**
      * (Optional) Optional: Host name to connect to, defaults to the pod IP.
@@ -21,10 +21,10 @@ public final class TCPSocketActionResponse {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TCPSocketActionResponse(
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("port") Integer port) {
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("port") Integer port) {
         this.host = host;
         this.port = port;
     }

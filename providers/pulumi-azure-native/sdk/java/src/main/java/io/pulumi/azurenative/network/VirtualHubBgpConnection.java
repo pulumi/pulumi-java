@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.VirtualHubBgpConnectionArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class VirtualHubBgpConnection extends io.pulumi.resources.CustomResource 
      * The current state of the VirtualHub to Peer.
      * 
      */
-    @OutputExport(name="connectionState", type=String.class, parameters={})
+    @Export(name="connectionState", type=String.class, parameters={})
     private Output<String> connectionState;
 
     /**
@@ -49,7 +49,7 @@ public class VirtualHubBgpConnection extends io.pulumi.resources.CustomResource 
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -63,7 +63,7 @@ public class VirtualHubBgpConnection extends io.pulumi.resources.CustomResource 
      * Name of the connection.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -77,7 +77,7 @@ public class VirtualHubBgpConnection extends io.pulumi.resources.CustomResource 
      * Peer ASN.
      * 
      */
-    @OutputExport(name="peerAsn", type=Double.class, parameters={})
+    @Export(name="peerAsn", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> peerAsn;
 
     /**
@@ -91,7 +91,7 @@ public class VirtualHubBgpConnection extends io.pulumi.resources.CustomResource 
      * Peer IP.
      * 
      */
-    @OutputExport(name="peerIp", type=String.class, parameters={})
+    @Export(name="peerIp", type=String.class, parameters={})
     private Output</* @Nullable */ String> peerIp;
 
     /**
@@ -105,7 +105,7 @@ public class VirtualHubBgpConnection extends io.pulumi.resources.CustomResource 
      * The provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -119,7 +119,7 @@ public class VirtualHubBgpConnection extends io.pulumi.resources.CustomResource 
      * Connection type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

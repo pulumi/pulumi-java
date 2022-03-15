@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.enums.FeatureGroupFeatureDefinitionFeatureType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FeatureGroupFeatureDefinition {
     private final String featureName;
     private final FeatureGroupFeatureDefinitionFeatureType featureType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FeatureGroupFeatureDefinition(
-        @OutputCustomType.Parameter("featureName") String featureName,
-        @OutputCustomType.Parameter("featureType") FeatureGroupFeatureDefinitionFeatureType featureType) {
+        @CustomType.Parameter("featureName") String featureName,
+        @CustomType.Parameter("featureType") FeatureGroupFeatureDefinitionFeatureType featureType) {
         this.featureName = featureName;
         this.featureType = featureType;
     }

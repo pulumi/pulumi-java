@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetInternetGatewayArgs extends io.pulumi.resources.InvokeArgs
      * ID of internet gateway.
      * 
      */
-    @InputImport(name="internetGatewayId", required=true)
+    @Import(name="internetGatewayId", required=true)
       private final String internetGatewayId;
 
     public String getInternetGatewayId() {

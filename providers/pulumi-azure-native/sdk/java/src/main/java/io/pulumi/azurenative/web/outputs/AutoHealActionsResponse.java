@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.AutoHealCustomActionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoHealActionsResponse {
     /**
      * Predefined action to be taken.
@@ -29,11 +29,11 @@ public final class AutoHealActionsResponse {
      */
     private final @Nullable String minProcessExecutionTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoHealActionsResponse(
-        @OutputCustomType.Parameter("actionType") @Nullable String actionType,
-        @OutputCustomType.Parameter("customAction") @Nullable AutoHealCustomActionResponse customAction,
-        @OutputCustomType.Parameter("minProcessExecutionTime") @Nullable String minProcessExecutionTime) {
+        @CustomType.Parameter("actionType") @Nullable String actionType,
+        @CustomType.Parameter("customAction") @Nullable AutoHealCustomActionResponse customAction,
+        @CustomType.Parameter("minProcessExecutionTime") @Nullable String minProcessExecutionTime) {
         this.actionType = actionType;
         this.customAction = customAction;
         this.minProcessExecutionTime = minProcessExecutionTime;

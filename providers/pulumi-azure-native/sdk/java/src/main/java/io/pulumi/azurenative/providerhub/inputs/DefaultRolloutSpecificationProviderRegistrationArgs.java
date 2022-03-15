@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.ProviderRegistrationPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -14,7 +14,7 @@ public final class DefaultRolloutSpecificationProviderRegistrationArgs extends i
 
     public static final DefaultRolloutSpecificationProviderRegistrationArgs Empty = new DefaultRolloutSpecificationProviderRegistrationArgs();
 
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ProviderRegistrationPropertiesArgs> properties;
 
     public Output<ProviderRegistrationPropertiesArgs> getProperties() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeSystemInfo {
     /**
      * The Architecture reported by the node
@@ -60,18 +60,18 @@ public final class NodeSystemInfo {
      */
     private final String systemUUID;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeSystemInfo(
-        @OutputCustomType.Parameter("architecture") String architecture,
-        @OutputCustomType.Parameter("bootID") String bootID,
-        @OutputCustomType.Parameter("containerRuntimeVersion") String containerRuntimeVersion,
-        @OutputCustomType.Parameter("kernelVersion") String kernelVersion,
-        @OutputCustomType.Parameter("kubeProxyVersion") String kubeProxyVersion,
-        @OutputCustomType.Parameter("kubeletVersion") String kubeletVersion,
-        @OutputCustomType.Parameter("machineID") String machineID,
-        @OutputCustomType.Parameter("operatingSystem") String operatingSystem,
-        @OutputCustomType.Parameter("osImage") String osImage,
-        @OutputCustomType.Parameter("systemUUID") String systemUUID) {
+        @CustomType.Parameter("architecture") String architecture,
+        @CustomType.Parameter("bootID") String bootID,
+        @CustomType.Parameter("containerRuntimeVersion") String containerRuntimeVersion,
+        @CustomType.Parameter("kernelVersion") String kernelVersion,
+        @CustomType.Parameter("kubeProxyVersion") String kubeProxyVersion,
+        @CustomType.Parameter("kubeletVersion") String kubeletVersion,
+        @CustomType.Parameter("machineID") String machineID,
+        @CustomType.Parameter("operatingSystem") String operatingSystem,
+        @CustomType.Parameter("osImage") String osImage,
+        @CustomType.Parameter("systemUUID") String systemUUID) {
         this.architecture = architecture;
         this.bootID = bootID;
         this.containerRuntimeVersion = containerRuntimeVersion;

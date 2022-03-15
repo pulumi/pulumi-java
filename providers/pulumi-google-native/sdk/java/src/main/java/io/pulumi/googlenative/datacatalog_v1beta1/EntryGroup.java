@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datacatalog_v1beta1.EntryGroupArgs;
@@ -22,7 +22,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * Timestamps about this EntryGroup. Default value is empty timestamps.
      * 
      */
-    @OutputExport(name="dataCatalogTimestamps", type=GoogleCloudDatacatalogV1beta1SystemTimestampsResponse.class, parameters={})
+    @Export(name="dataCatalogTimestamps", type=GoogleCloudDatacatalogV1beta1SystemTimestampsResponse.class, parameters={})
     private Output<GoogleCloudDatacatalogV1beta1SystemTimestampsResponse> dataCatalogTimestamps;
 
     /**
@@ -36,7 +36,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * Entry group description, which can consist of several sentences or paragraphs that describe entry group contents. Default value is an empty string.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -50,7 +50,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * A short name to identify the entry group, for example, "analytics data - jan 2011". Default value is an empty string.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -64,7 +64,7 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
      * The resource name of the entry group in URL format. Example: * projects/{project_id}/locations/{location}/entryGroups/{entry_group_id} Note that this EntryGroup and its child resources may not actually be stored in the location in this name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

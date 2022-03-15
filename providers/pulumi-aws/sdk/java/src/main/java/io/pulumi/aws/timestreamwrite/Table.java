@@ -9,7 +9,7 @@ import io.pulumi.aws.timestreamwrite.inputs.TableState;
 import io.pulumi.aws.timestreamwrite.outputs.TableMagneticStoreWriteProperties;
 import io.pulumi.aws.timestreamwrite.outputs.TableRetentionProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -35,7 +35,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The ARN that uniquely identifies this table.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The name of the Timestream database.
      * 
      */
-    @OutputExport(name="databaseName", type=String.class, parameters={})
+    @Export(name="databaseName", type=String.class, parameters={})
     private Output<String> databaseName;
 
     /**
@@ -63,7 +63,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Contains properties to set on the table when enabling magnetic store writes. See Magnetic Store Write Properties below for more details.
      * 
      */
-    @OutputExport(name="magneticStoreWriteProperties", type=TableMagneticStoreWriteProperties.class, parameters={})
+    @Export(name="magneticStoreWriteProperties", type=TableMagneticStoreWriteProperties.class, parameters={})
     private Output<TableMagneticStoreWriteProperties> magneticStoreWriteProperties;
 
     /**
@@ -77,7 +77,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The retention duration for the memory store and magnetic store. See Retention Properties below for more details. If not provided, `magnetic_store_retention_period_in_days` default to 73000 and `memory_store_retention_period_in_hours` defaults to 6.
      * 
      */
-    @OutputExport(name="retentionProperties", type=TableRetentionProperties.class, parameters={})
+    @Export(name="retentionProperties", type=TableRetentionProperties.class, parameters={})
     private Output<TableRetentionProperties> retentionProperties;
 
     /**
@@ -91,7 +91,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The name of the Timestream table.
      * 
      */
-    @OutputExport(name="tableName", type=String.class, parameters={})
+    @Export(name="tableName", type=String.class, parameters={})
     private Output<String> tableName;
 
     /**
@@ -105,7 +105,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Map of tags to assign to this resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -119,7 +119,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

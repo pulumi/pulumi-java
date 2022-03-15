@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.apimanagement.enums.VersioningScheme;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * Description of API Version Set.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * Name of API Version Set
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -42,7 +42,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -64,7 +64,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
      * 
      */
-    @InputImport(name="versionHeaderName")
+    @Import(name="versionHeaderName")
       private final @Nullable Output<String> versionHeaderName;
 
     public Output<String> getVersionHeaderName() {
@@ -75,7 +75,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
      * 
      */
-    @InputImport(name="versionQueryName")
+    @Import(name="versionQueryName")
       private final @Nullable Output<String> versionQueryName;
 
     public Output<String> getVersionQueryName() {
@@ -86,7 +86,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * Api Version Set identifier. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="versionSetId")
+    @Import(name="versionSetId")
       private final @Nullable Output<String> versionSetId;
 
     public Output<String> getVersionSetId() {
@@ -97,7 +97,7 @@ public final class ApiVersionSetArgs extends io.pulumi.resources.ResourceArgs {
      * An value that determines where the API Version identifier will be located in a HTTP request.
      * 
      */
-    @InputImport(name="versioningScheme", required=true)
+    @Import(name="versioningScheme", required=true)
       private final Output<Either<String,VersioningScheme>> versioningScheme;
 
     public Output<Either<String,VersioningScheme>> getVersioningScheme() {

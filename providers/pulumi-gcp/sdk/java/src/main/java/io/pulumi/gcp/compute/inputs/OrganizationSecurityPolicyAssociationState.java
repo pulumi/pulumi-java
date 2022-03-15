@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
      * The resource that the security policy is attached to.
      * 
      */
-    @InputImport(name="attachmentId")
+    @Import(name="attachmentId")
       private final @Nullable Output<String> attachmentId;
 
     public Output<String> getAttachmentId() {
@@ -29,7 +29,7 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
      * The display name of the security policy of the association.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -40,7 +40,7 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
      * The name for an association.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -51,7 +51,7 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
      * The security policy ID of the association.
      * 
      */
-    @InputImport(name="policyId")
+    @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {

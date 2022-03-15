@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.ssmincidents.outputs;
 
 import io.pulumi.awsnative.ssmincidents.outputs.ReplicationSetRegionConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReplicationSetReplicationRegion {
     private final @Nullable ReplicationSetRegionConfiguration regionConfiguration;
     private final @Nullable String regionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicationSetReplicationRegion(
-        @OutputCustomType.Parameter("regionConfiguration") @Nullable ReplicationSetRegionConfiguration regionConfiguration,
-        @OutputCustomType.Parameter("regionName") @Nullable String regionName) {
+        @CustomType.Parameter("regionConfiguration") @Nullable ReplicationSetRegionConfiguration regionConfiguration,
+        @CustomType.Parameter("regionName") @Nullable String regionName) {
         this.regionConfiguration = regionConfiguration;
         this.regionName = regionName;
     }

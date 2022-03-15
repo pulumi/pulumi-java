@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.NodeGroupAutoscalingPolicyArgs;
 import io.pulumi.gcp.compute.inputs.NodeGroupMaintenanceWindowArgs;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="autoscalingPolicy")
+    @Import(name="autoscalingPolicy")
       private final @Nullable Output<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
 
     public Output<NodeGroupAutoscalingPolicyArgs> getAutoscalingPolicy() {
@@ -34,7 +34,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * An optional textual description of the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The initial number of nodes in the node group. One of `initial_size` or `size` must be specified.
      * 
      */
-    @InputImport(name="initialSize")
+    @Import(name="initialSize")
       private final @Nullable Output<Integer> initialSize;
 
     public Output<Integer> getInitialSize() {
@@ -56,7 +56,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT.
      * 
      */
-    @InputImport(name="maintenancePolicy")
+    @Import(name="maintenancePolicy")
       private final @Nullable Output<String> maintenancePolicy;
 
     public Output<String> getMaintenancePolicy() {
@@ -68,7 +68,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="maintenanceWindow")
+    @Import(name="maintenanceWindow")
       private final @Nullable Output<NodeGroupMaintenanceWindowArgs> maintenanceWindow;
 
     public Output<NodeGroupMaintenanceWindowArgs> getMaintenanceWindow() {
@@ -79,7 +79,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -90,7 +90,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The URL of the node template to which this node group belongs.
      * 
      */
-    @InputImport(name="nodeTemplate", required=true)
+    @Import(name="nodeTemplate", required=true)
       private final Output<String> nodeTemplate;
 
     public Output<String> getNodeTemplate() {
@@ -102,7 +102,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -113,7 +113,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The total number of nodes in the node group. One of `initial_size` or `size` must be specified.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<Integer> size;
 
     public Output<Integer> getSize() {
@@ -124,7 +124,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Zone where this node group is located
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

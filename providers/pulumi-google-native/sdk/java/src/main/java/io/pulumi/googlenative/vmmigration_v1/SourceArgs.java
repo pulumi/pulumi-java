@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.vmmigration_v1.inputs.VmwareSourceDetailsArgs;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * User-provided description of the source.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,35 +31,35 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * The labels of the source.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
         return this.requestId == null ? Output.empty() : this.requestId;
     }
 
-    @InputImport(name="sourceId", required=true)
+    @Import(name="sourceId", required=true)
       private final Output<String> sourceId;
 
     public Output<String> getSourceId() {
@@ -70,7 +70,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * Vmware type source details.
      * 
      */
-    @InputImport(name="vmware")
+    @Import(name="vmware")
       private final @Nullable Output<VmwareSourceDetailsArgs> vmware;
 
     public Output<VmwareSourceDetailsArgs> getVmware() {

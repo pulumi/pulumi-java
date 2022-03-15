@@ -7,7 +7,7 @@ import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleMonitoringType;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleMonitoringJobDefinitionArgs;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleScheduleConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class MonitoringScheduleConfigArgs extends io.pulumi.resources.Reso
 
     public static final MonitoringScheduleConfigArgs Empty = new MonitoringScheduleConfigArgs();
 
-    @InputImport(name="monitoringJobDefinition")
+    @Import(name="monitoringJobDefinition")
       private final @Nullable Output<MonitoringScheduleMonitoringJobDefinitionArgs> monitoringJobDefinition;
 
     public Output<MonitoringScheduleMonitoringJobDefinitionArgs> getMonitoringJobDefinition() {
@@ -32,21 +32,21 @@ public final class MonitoringScheduleConfigArgs extends io.pulumi.resources.Reso
      * Name of the job definition
      * 
      */
-    @InputImport(name="monitoringJobDefinitionName")
+    @Import(name="monitoringJobDefinitionName")
       private final @Nullable Output<String> monitoringJobDefinitionName;
 
     public Output<String> getMonitoringJobDefinitionName() {
         return this.monitoringJobDefinitionName == null ? Output.empty() : this.monitoringJobDefinitionName;
     }
 
-    @InputImport(name="monitoringType")
+    @Import(name="monitoringType")
       private final @Nullable Output<MonitoringScheduleMonitoringType> monitoringType;
 
     public Output<MonitoringScheduleMonitoringType> getMonitoringType() {
         return this.monitoringType == null ? Output.empty() : this.monitoringType;
     }
 
-    @InputImport(name="scheduleConfig")
+    @Import(name="scheduleConfig")
       private final @Nullable Output<MonitoringScheduleScheduleConfigArgs> scheduleConfig;
 
     public Output<MonitoringScheduleScheduleConfigArgs> getScheduleConfig() {

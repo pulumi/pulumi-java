@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.ReservationShareSettingsArgs;
 import io.pulumi.gcp.compute.inputs.ReservationSpecificReservationArgs;
 import java.lang.Boolean;
@@ -21,7 +21,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -38,7 +38,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -50,7 +50,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -62,7 +62,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="shareSettings")
+    @Import(name="shareSettings")
       private final @Nullable Output<ReservationShareSettingsArgs> shareSettings;
 
     public Output<ReservationShareSettingsArgs> getShareSettings() {
@@ -74,7 +74,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="specificReservation", required=true)
+    @Import(name="specificReservation", required=true)
       private final Output<ReservationSpecificReservationArgs> specificReservation;
 
     public Output<ReservationSpecificReservationArgs> getSpecificReservation() {
@@ -87,7 +87,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * affinity for any reservation. Defaults to false.
      * 
      */
-    @InputImport(name="specificReservationRequired")
+    @Import(name="specificReservationRequired")
       private final @Nullable Output<Boolean> specificReservationRequired;
 
     public Output<Boolean> getSpecificReservationRequired() {
@@ -98,7 +98,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * The zone where the reservation is made.
      * 
      */
-    @InputImport(name="zone", required=true)
+    @Import(name="zone", required=true)
       private final Output<String> zone;
 
     public Output<String> getZone() {

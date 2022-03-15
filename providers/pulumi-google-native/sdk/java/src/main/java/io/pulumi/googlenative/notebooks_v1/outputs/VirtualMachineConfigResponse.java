@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.ContainerImageResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.EncryptionConfigResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.LocalDiskResponse;
@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineConfigResponse {
     /**
      * Optional. The Compute Engine accelerator configuration for this runtime.
@@ -93,23 +93,23 @@ public final class VirtualMachineConfigResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineConfigResponse(
-        @OutputCustomType.Parameter("acceleratorConfig") RuntimeAcceleratorConfigResponse acceleratorConfig,
-        @OutputCustomType.Parameter("containerImages") List<ContainerImageResponse> containerImages,
-        @OutputCustomType.Parameter("dataDisk") LocalDiskResponse dataDisk,
-        @OutputCustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
-        @OutputCustomType.Parameter("guestAttributes") Map<String,String> guestAttributes,
-        @OutputCustomType.Parameter("internalIpOnly") Boolean internalIpOnly,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("nicType") String nicType,
-        @OutputCustomType.Parameter("shieldedInstanceConfig") RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig,
-        @OutputCustomType.Parameter("subnet") String subnet,
-        @OutputCustomType.Parameter("tags") List<String> tags,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("acceleratorConfig") RuntimeAcceleratorConfigResponse acceleratorConfig,
+        @CustomType.Parameter("containerImages") List<ContainerImageResponse> containerImages,
+        @CustomType.Parameter("dataDisk") LocalDiskResponse dataDisk,
+        @CustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
+        @CustomType.Parameter("guestAttributes") Map<String,String> guestAttributes,
+        @CustomType.Parameter("internalIpOnly") Boolean internalIpOnly,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("nicType") String nicType,
+        @CustomType.Parameter("shieldedInstanceConfig") RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig,
+        @CustomType.Parameter("subnet") String subnet,
+        @CustomType.Parameter("tags") List<String> tags,
+        @CustomType.Parameter("zone") String zone) {
         this.acceleratorConfig = acceleratorConfig;
         this.containerImages = containerImages;
         this.dataDisk = dataDisk;

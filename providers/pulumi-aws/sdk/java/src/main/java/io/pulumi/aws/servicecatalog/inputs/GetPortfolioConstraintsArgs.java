@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.servicecatalog.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetPortfolioConstraintsArgs extends io.pulumi.resources.Invok
      * Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    @InputImport(name="acceptLanguage")
+    @Import(name="acceptLanguage")
       private final @Nullable String acceptLanguage;
 
     public Optional<String> getAcceptLanguage() {
@@ -29,7 +29,7 @@ public final class GetPortfolioConstraintsArgs extends io.pulumi.resources.Invok
      * Portfolio identifier.
      * 
      */
-    @InputImport(name="portfolioId", required=true)
+    @Import(name="portfolioId", required=true)
       private final String portfolioId;
 
     public String getPortfolioId() {
@@ -40,7 +40,7 @@ public final class GetPortfolioConstraintsArgs extends io.pulumi.resources.Invok
      * Product identifier.
      * 
      */
-    @InputImport(name="productId")
+    @Import(name="productId")
       private final @Nullable String productId;
 
     public Optional<String> getProductId() {

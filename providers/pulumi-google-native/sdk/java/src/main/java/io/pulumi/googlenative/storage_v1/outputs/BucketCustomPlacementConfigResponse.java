@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketCustomPlacementConfigResponse {
     /**
      * The list of regional locations in which data is placed.
@@ -16,8 +16,8 @@ public final class BucketCustomPlacementConfigResponse {
      */
     private final List<String> dataLocations;
 
-    @OutputCustomType.Constructor
-    private BucketCustomPlacementConfigResponse(@OutputCustomType.Parameter("dataLocations") List<String> dataLocations) {
+    @CustomType.Constructor
+    private BucketCustomPlacementConfigResponse(@CustomType.Parameter("dataLocations") List<String> dataLocations) {
         this.dataLocations = dataLocations;
     }
 

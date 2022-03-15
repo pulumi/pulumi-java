@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.identityplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TenantInboundSamlConfigIdpConfigIdpCertificate {
     /**
      * - 
@@ -18,8 +18,8 @@ public final class TenantInboundSamlConfigIdpConfigIdpCertificate {
      */
     private final @Nullable String x509Certificate;
 
-    @OutputCustomType.Constructor
-    private TenantInboundSamlConfigIdpConfigIdpCertificate(@OutputCustomType.Parameter("x509Certificate") @Nullable String x509Certificate) {
+    @CustomType.Constructor
+    private TenantInboundSamlConfigIdpConfigIdpCertificate(@CustomType.Parameter("x509Certificate") @Nullable String x509Certificate) {
         this.x509Certificate = x509Certificate;
     }
 

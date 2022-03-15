@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudMlV1__DiskConfigResponse extends io.pulumi.resourc
      * Size in GB of the boot disk (default is 100GB).
      * 
      */
-    @InputImport(name="bootDiskSizeGb", required=true)
+    @Import(name="bootDiskSizeGb", required=true)
       private final Integer bootDiskSizeGb;
 
     public Integer getBootDiskSizeGb() {
@@ -32,7 +32,7 @@ public final class GoogleCloudMlV1__DiskConfigResponse extends io.pulumi.resourc
      * Type of the boot disk (default is "pd-ssd"). Valid values: "pd-ssd" (Persistent Disk Solid State Drive) or "pd-standard" (Persistent Disk Hard Disk Drive).
      * 
      */
-    @InputImport(name="bootDiskType", required=true)
+    @Import(name="bootDiskType", required=true)
       private final String bootDiskType;
 
     public String getBootDiskType() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class QuickConnectQuickConnectConfigUserConfigArgs extends io.pulum
      * Specifies the identifier of the contact flow.
      * 
      */
-    @InputImport(name="contactFlowId", required=true)
+    @Import(name="contactFlowId", required=true)
       private final Output<String> contactFlowId;
 
     public Output<String> getContactFlowId() {
@@ -28,7 +28,7 @@ public final class QuickConnectQuickConnectConfigUserConfigArgs extends io.pulum
      * Specifies the identifier for the user.
      * 
      */
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final Output<String> userId;
 
     public Output<String> getUserId() {

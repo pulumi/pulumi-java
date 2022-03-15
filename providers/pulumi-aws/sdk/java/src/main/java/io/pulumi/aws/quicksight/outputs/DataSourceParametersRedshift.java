@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceParametersRedshift {
     /**
      * The ID of the cluster to which to connect.
@@ -33,12 +33,12 @@ public final class DataSourceParametersRedshift {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceParametersRedshift(
-        @OutputCustomType.Parameter("clusterId") @Nullable String clusterId,
-        @OutputCustomType.Parameter("database") String database,
-        @OutputCustomType.Parameter("host") @Nullable String host,
-        @OutputCustomType.Parameter("port") @Nullable Integer port) {
+        @CustomType.Parameter("clusterId") @Nullable String clusterId,
+        @CustomType.Parameter("database") String database,
+        @CustomType.Parameter("host") @Nullable String host,
+        @CustomType.Parameter("port") @Nullable Integer port) {
         this.clusterId = clusterId;
         this.database = database;
         this.host = host;

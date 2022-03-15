@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.InitializingReplicationStepResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.PostProcessingStepResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.ReplicatingStepResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CycleStepResponse {
     /**
      * The time the cycle step has ended.
@@ -38,13 +38,13 @@ public final class CycleStepResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CycleStepResponse(
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("initializingReplication") InitializingReplicationStepResponse initializingReplication,
-        @OutputCustomType.Parameter("postProcessing") PostProcessingStepResponse postProcessing,
-        @OutputCustomType.Parameter("replicating") ReplicatingStepResponse replicating,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("initializingReplication") InitializingReplicationStepResponse initializingReplication,
+        @CustomType.Parameter("postProcessing") PostProcessingStepResponse postProcessing,
+        @CustomType.Parameter("replicating") ReplicatingStepResponse replicating,
+        @CustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.initializingReplication = initializingReplication;
         this.postProcessing = postProcessing;

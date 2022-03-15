@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.groundstation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,7 +14,7 @@ public final class ConfigDecodeConfig extends io.pulumi.resources.InvokeArgs {
 
     public static final ConfigDecodeConfig Empty = new ConfigDecodeConfig();
 
-    @InputImport(name="unvalidatedJSON")
+    @Import(name="unvalidatedJSON")
       private final @Nullable String unvalidatedJSON;
 
     public Optional<String> getUnvalidatedJSON() {

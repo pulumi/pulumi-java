@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAliasResult {
     /**
      * Identifies the CMK to which the alias refers. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. You cannot specify another alias. For help finding the key ID and ARN, see Finding the Key ID and ARN in the AWS Key Management Service Developer Guide.
@@ -17,8 +17,8 @@ public final class GetAliasResult {
      */
     private final @Nullable String targetKeyId;
 
-    @OutputCustomType.Constructor
-    private GetAliasResult(@OutputCustomType.Parameter("targetKeyId") @Nullable String targetKeyId) {
+    @CustomType.Constructor
+    private GetAliasResult(@CustomType.Parameter("targetKeyId") @Nullable String targetKeyId) {
         this.targetKeyId = targetKeyId;
     }
 

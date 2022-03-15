@@ -3,17 +3,17 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dns.outputs.ManagedZonePrivateVisibilityConfigNetwork;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedZonePrivateVisibilityConfig {
     private final List<ManagedZonePrivateVisibilityConfigNetwork> networks;
 
-    @OutputCustomType.Constructor
-    private ManagedZonePrivateVisibilityConfig(@OutputCustomType.Parameter("networks") List<ManagedZonePrivateVisibilityConfigNetwork> networks) {
+    @CustomType.Constructor
+    private ManagedZonePrivateVisibilityConfig(@CustomType.Parameter("networks") List<ManagedZonePrivateVisibilityConfigNetwork> networks) {
         this.networks = networks;
     }
 

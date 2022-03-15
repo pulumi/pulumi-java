@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,28 +15,28 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
 
     public static final WebAppRelayServiceConnectionSlotArgs Empty = new WebAppRelayServiceConnectionSlotArgs();
 
-    @InputImport(name="biztalkUri")
+    @Import(name="biztalkUri")
       private final @Nullable Output<String> biztalkUri;
 
     public Output<String> getBiztalkUri() {
         return this.biztalkUri == null ? Output.empty() : this.biztalkUri;
     }
 
-    @InputImport(name="entityConnectionString")
+    @Import(name="entityConnectionString")
       private final @Nullable Output<String> entityConnectionString;
 
     public Output<String> getEntityConnectionString() {
         return this.entityConnectionString == null ? Output.empty() : this.entityConnectionString;
     }
 
-    @InputImport(name="entityName")
+    @Import(name="entityName")
       private final @Nullable Output<String> entityName;
 
     public Output<String> getEntityName() {
         return this.entityName == null ? Output.empty() : this.entityName;
     }
 
-    @InputImport(name="hostname")
+    @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
     public Output<String> getHostname() {
@@ -47,7 +47,7 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -58,21 +58,21 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
      * Name of the app.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
         return this.port == null ? Output.empty() : this.port;
     }
 
-    @InputImport(name="resourceConnectionString")
+    @Import(name="resourceConnectionString")
       private final @Nullable Output<String> resourceConnectionString;
 
     public Output<String> getResourceConnectionString() {
@@ -83,14 +83,14 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
@@ -101,7 +101,7 @@ public final class WebAppRelayServiceConnectionSlotArgs extends io.pulumi.resour
      * Name of the deployment slot. If a slot is not specified, the API will create or update a hybrid connection for the production slot.
      * 
      */
-    @InputImport(name="slot", required=true)
+    @Import(name="slot", required=true)
       private final Output<String> slot;
 
     public Output<String> getSlot() {

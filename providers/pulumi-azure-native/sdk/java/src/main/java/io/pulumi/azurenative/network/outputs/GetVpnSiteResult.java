@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.DevicePropertiesResponse;
 import io.pulumi.azurenative.network.outputs.O365PolicyPropertiesResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VpnSiteLinkResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVpnSiteResult {
     /**
      * The AddressSpace that contains an array of IP address ranges.
@@ -101,24 +101,24 @@ public final class GetVpnSiteResult {
      */
     private final @Nullable List<VpnSiteLinkResponse> vpnSiteLinks;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVpnSiteResult(
-        @OutputCustomType.Parameter("addressSpace") @Nullable AddressSpaceResponse addressSpace,
-        @OutputCustomType.Parameter("bgpProperties") @Nullable BgpSettingsResponse bgpProperties,
-        @OutputCustomType.Parameter("deviceProperties") @Nullable DevicePropertiesResponse deviceProperties,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("isSecuritySite") @Nullable Boolean isSecuritySite,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("o365Policy") @Nullable O365PolicyPropertiesResponse o365Policy,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("siteKey") @Nullable String siteKey,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualWan") @Nullable SubResourceResponse virtualWan,
-        @OutputCustomType.Parameter("vpnSiteLinks") @Nullable List<VpnSiteLinkResponse> vpnSiteLinks) {
+        @CustomType.Parameter("addressSpace") @Nullable AddressSpaceResponse addressSpace,
+        @CustomType.Parameter("bgpProperties") @Nullable BgpSettingsResponse bgpProperties,
+        @CustomType.Parameter("deviceProperties") @Nullable DevicePropertiesResponse deviceProperties,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("isSecuritySite") @Nullable Boolean isSecuritySite,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("o365Policy") @Nullable O365PolicyPropertiesResponse o365Policy,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("siteKey") @Nullable String siteKey,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualWan") @Nullable SubResourceResponse virtualWan,
+        @CustomType.Parameter("vpnSiteLinks") @Nullable List<VpnSiteLinkResponse> vpnSiteLinks) {
         this.addressSpace = addressSpace;
         this.bgpProperties = bgpProperties;
         this.deviceProperties = deviceProperties;

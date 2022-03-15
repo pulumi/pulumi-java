@@ -3,20 +3,20 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TypedErrorInfoResponse {
     private final Object info;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TypedErrorInfoResponse(
-        @OutputCustomType.Parameter("info") Object info,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("info") Object info,
+        @CustomType.Parameter("type") String type) {
         this.info = info;
         this.type = type;
     }

@@ -8,7 +8,7 @@ import io.pulumi.aws.apigateway.DocumentationPartArgs;
 import io.pulumi.aws.apigateway.inputs.DocumentationPartState;
 import io.pulumi.aws.apigateway.outputs.DocumentationPartLocation;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class DocumentationPart extends io.pulumi.resources.CustomResource {
      * The location of the targeted API entity of the to-be-created documentation part. See below.
      * 
      */
-    @OutputExport(name="location", type=DocumentationPartLocation.class, parameters={})
+    @Export(name="location", type=DocumentationPartLocation.class, parameters={})
     private Output<DocumentationPartLocation> location;
 
     /**
@@ -47,7 +47,7 @@ public class DocumentationPart extends io.pulumi.resources.CustomResource {
      * A content map of API-specific key-value pairs describing the targeted API entity. The map must be encoded as a JSON string, e.g., "{ \"description\": \"The API does ...\" }". Only Swagger-compliant key-value pairs can be exported and, hence, published.
      * 
      */
-    @OutputExport(name="properties", type=String.class, parameters={})
+    @Export(name="properties", type=String.class, parameters={})
     private Output<String> properties;
 
     /**
@@ -61,7 +61,7 @@ public class DocumentationPart extends io.pulumi.resources.CustomResource {
      * The ID of the associated Rest API
      * 
      */
-    @OutputExport(name="restApiId", type=String.class, parameters={})
+    @Export(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
     /**

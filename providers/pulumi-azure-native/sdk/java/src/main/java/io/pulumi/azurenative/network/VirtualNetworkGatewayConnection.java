@@ -13,7 +13,7 @@ import io.pulumi.azurenative.network.outputs.TunnelConnectionHealthResponse;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkGatewayResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -44,7 +44,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * The authorizationKey.
      * 
      */
-    @OutputExport(name="authorizationKey", type=String.class, parameters={})
+    @Export(name="authorizationKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizationKey;
 
     /**
@@ -58,7 +58,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * The connection mode for this connection.
      * 
      */
-    @OutputExport(name="connectionMode", type=String.class, parameters={})
+    @Export(name="connectionMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectionMode;
 
     /**
@@ -72,7 +72,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * Connection protocol used for this connection.
      * 
      */
-    @OutputExport(name="connectionProtocol", type=String.class, parameters={})
+    @Export(name="connectionProtocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectionProtocol;
 
     /**
@@ -86,7 +86,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * Virtual Network Gateway connection status.
      * 
      */
-    @OutputExport(name="connectionStatus", type=String.class, parameters={})
+    @Export(name="connectionStatus", type=String.class, parameters={})
     private Output<String> connectionStatus;
 
     /**
@@ -100,7 +100,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * Gateway connection type.
      * 
      */
-    @OutputExport(name="connectionType", type=String.class, parameters={})
+    @Export(name="connectionType", type=String.class, parameters={})
     private Output<String> connectionType;
 
     /**
@@ -114,7 +114,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * The dead peer detection timeout of this connection in seconds.
      * 
      */
-    @OutputExport(name="dpdTimeoutSeconds", type=Integer.class, parameters={})
+    @Export(name="dpdTimeoutSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> dpdTimeoutSeconds;
 
     /**
@@ -128,7 +128,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * The egress bytes transferred in this connection.
      * 
      */
-    @OutputExport(name="egressBytesTransferred", type=Double.class, parameters={})
+    @Export(name="egressBytesTransferred", type=Double.class, parameters={})
     private Output<Double> egressBytesTransferred;
 
     /**
@@ -142,7 +142,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * EnableBgp flag.
      * 
      */
-    @OutputExport(name="enableBgp", type=Boolean.class, parameters={})
+    @Export(name="enableBgp", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableBgp;
 
     /**
@@ -156,7 +156,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -170,7 +170,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * Bypass ExpressRoute Gateway for data forwarding.
      * 
      */
-    @OutputExport(name="expressRouteGatewayBypass", type=Boolean.class, parameters={})
+    @Export(name="expressRouteGatewayBypass", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> expressRouteGatewayBypass;
 
     /**
@@ -184,7 +184,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * The ingress bytes transferred in this connection.
      * 
      */
-    @OutputExport(name="ingressBytesTransferred", type=Double.class, parameters={})
+    @Export(name="ingressBytesTransferred", type=Double.class, parameters={})
     private Output<Double> ingressBytesTransferred;
 
     /**
@@ -198,7 +198,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * The IPSec Policies to be considered by this connection.
      * 
      */
-    @OutputExport(name="ipsecPolicies", type=List.class, parameters={IpsecPolicyResponse.class})
+    @Export(name="ipsecPolicies", type=List.class, parameters={IpsecPolicyResponse.class})
     private Output</* @Nullable */ List<IpsecPolicyResponse>> ipsecPolicies;
 
     /**
@@ -212,7 +212,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * The reference to local network gateway resource.
      * 
      */
-    @OutputExport(name="localNetworkGateway2", type=LocalNetworkGatewayResponse.class, parameters={})
+    @Export(name="localNetworkGateway2", type=LocalNetworkGatewayResponse.class, parameters={})
     private Output</* @Nullable */ LocalNetworkGatewayResponse> localNetworkGateway2;
 
     /**
@@ -226,7 +226,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -240,7 +240,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -254,7 +254,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * The reference to peerings resource.
      * 
      */
-    @OutputExport(name="peer", type=SubResourceResponse.class, parameters={})
+    @Export(name="peer", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> peer;
 
     /**
@@ -268,7 +268,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * The provisioning state of the virtual network gateway connection resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -282,7 +282,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * The resource GUID property of the virtual network gateway connection resource.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -296,7 +296,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * The routing weight.
      * 
      */
-    @OutputExport(name="routingWeight", type=Integer.class, parameters={})
+    @Export(name="routingWeight", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> routingWeight;
 
     /**
@@ -310,7 +310,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * The IPSec shared key.
      * 
      */
-    @OutputExport(name="sharedKey", type=String.class, parameters={})
+    @Export(name="sharedKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> sharedKey;
 
     /**
@@ -324,7 +324,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -338,7 +338,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * The Traffic Selector Policies to be considered by this connection.
      * 
      */
-    @OutputExport(name="trafficSelectorPolicies", type=List.class, parameters={TrafficSelectorPolicyResponse.class})
+    @Export(name="trafficSelectorPolicies", type=List.class, parameters={TrafficSelectorPolicyResponse.class})
     private Output</* @Nullable */ List<TrafficSelectorPolicyResponse>> trafficSelectorPolicies;
 
     /**
@@ -352,7 +352,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * Collection of all tunnels' connection health status.
      * 
      */
-    @OutputExport(name="tunnelConnectionStatus", type=List.class, parameters={TunnelConnectionHealthResponse.class})
+    @Export(name="tunnelConnectionStatus", type=List.class, parameters={TunnelConnectionHealthResponse.class})
     private Output<List<TunnelConnectionHealthResponse>> tunnelConnectionStatus;
 
     /**
@@ -366,7 +366,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -380,7 +380,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * Use private local Azure IP for the connection.
      * 
      */
-    @OutputExport(name="useLocalAzureIpAddress", type=Boolean.class, parameters={})
+    @Export(name="useLocalAzureIpAddress", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> useLocalAzureIpAddress;
 
     /**
@@ -394,7 +394,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * Enable policy-based traffic selectors.
      * 
      */
-    @OutputExport(name="usePolicyBasedTrafficSelectors", type=Boolean.class, parameters={})
+    @Export(name="usePolicyBasedTrafficSelectors", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> usePolicyBasedTrafficSelectors;
 
     /**
@@ -408,7 +408,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * The reference to virtual network gateway resource.
      * 
      */
-    @OutputExport(name="virtualNetworkGateway1", type=VirtualNetworkGatewayResponse.class, parameters={})
+    @Export(name="virtualNetworkGateway1", type=VirtualNetworkGatewayResponse.class, parameters={})
     private Output<VirtualNetworkGatewayResponse> virtualNetworkGateway1;
 
     /**
@@ -422,7 +422,7 @@ public class VirtualNetworkGatewayConnection extends io.pulumi.resources.CustomR
      * The reference to virtual network gateway resource.
      * 
      */
-    @OutputExport(name="virtualNetworkGateway2", type=VirtualNetworkGatewayResponse.class, parameters={})
+    @Export(name="virtualNetworkGateway2", type=VirtualNetworkGatewayResponse.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkGatewayResponse> virtualNetworkGateway2;
 
     /**

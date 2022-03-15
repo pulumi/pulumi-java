@@ -8,7 +8,7 @@ import io.pulumi.awsnative.networkfirewall.FirewallArgs;
 import io.pulumi.awsnative.networkfirewall.outputs.FirewallSubnetMapping;
 import io.pulumi.awsnative.networkfirewall.outputs.FirewallTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,73 +21,73 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:networkfirewall:Firewall")
 public class Firewall extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="deleteProtection", type=Boolean.class, parameters={})
+    @Export(name="deleteProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deleteProtection;
 
     public Output</* @Nullable */ Boolean> getDeleteProtection() {
         return this.deleteProtection;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="endpointIds", type=List.class, parameters={String.class})
+    @Export(name="endpointIds", type=List.class, parameters={String.class})
     private Output<List<String>> endpointIds;
 
     public Output<List<String>> getEndpointIds() {
         return this.endpointIds;
     }
-    @OutputExport(name="firewallArn", type=String.class, parameters={})
+    @Export(name="firewallArn", type=String.class, parameters={})
     private Output<String> firewallArn;
 
     public Output<String> getFirewallArn() {
         return this.firewallArn;
     }
-    @OutputExport(name="firewallId", type=String.class, parameters={})
+    @Export(name="firewallId", type=String.class, parameters={})
     private Output<String> firewallId;
 
     public Output<String> getFirewallId() {
         return this.firewallId;
     }
-    @OutputExport(name="firewallName", type=String.class, parameters={})
+    @Export(name="firewallName", type=String.class, parameters={})
     private Output<String> firewallName;
 
     public Output<String> getFirewallName() {
         return this.firewallName;
     }
-    @OutputExport(name="firewallPolicyArn", type=String.class, parameters={})
+    @Export(name="firewallPolicyArn", type=String.class, parameters={})
     private Output<String> firewallPolicyArn;
 
     public Output<String> getFirewallPolicyArn() {
         return this.firewallPolicyArn;
     }
-    @OutputExport(name="firewallPolicyChangeProtection", type=Boolean.class, parameters={})
+    @Export(name="firewallPolicyChangeProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> firewallPolicyChangeProtection;
 
     public Output</* @Nullable */ Boolean> getFirewallPolicyChangeProtection() {
         return this.firewallPolicyChangeProtection;
     }
-    @OutputExport(name="subnetChangeProtection", type=Boolean.class, parameters={})
+    @Export(name="subnetChangeProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> subnetChangeProtection;
 
     public Output</* @Nullable */ Boolean> getSubnetChangeProtection() {
         return this.subnetChangeProtection;
     }
-    @OutputExport(name="subnetMappings", type=List.class, parameters={FirewallSubnetMapping.class})
+    @Export(name="subnetMappings", type=List.class, parameters={FirewallSubnetMapping.class})
     private Output<List<FirewallSubnetMapping>> subnetMappings;
 
     public Output<List<FirewallSubnetMapping>> getSubnetMappings() {
         return this.subnetMappings;
     }
-    @OutputExport(name="tags", type=List.class, parameters={FirewallTag.class})
+    @Export(name="tags", type=List.class, parameters={FirewallTag.class})
     private Output</* @Nullable */ List<FirewallTag>> tags;
 
     public Output</* @Nullable */ List<FirewallTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     public Output<String> getVpcId() {

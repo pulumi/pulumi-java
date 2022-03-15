@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildArtifactsGetArgs;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildAvailableSecretsGetArgs;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildOptionsGetArgs;
@@ -27,7 +27,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="artifacts")
+    @Import(name="artifacts")
       private final @Nullable Output<TriggerBuildArtifactsGetArgs> artifacts;
 
     public Output<TriggerBuildArtifactsGetArgs> getArtifacts() {
@@ -39,7 +39,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="availableSecrets")
+    @Import(name="availableSecrets")
       private final @Nullable Output<TriggerBuildAvailableSecretsGetArgs> availableSecrets;
 
     public Output<TriggerBuildAvailableSecretsGetArgs> getAvailableSecrets() {
@@ -53,7 +53,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * If any of the images fail to be pushed, the build is marked FAILURE.
      * 
      */
-    @InputImport(name="images")
+    @Import(name="images")
       private final @Nullable Output<List<String>> images;
 
     public Output<List<String>> getImages() {
@@ -65,7 +65,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * Logs file names will be of the format ${logsBucket}/log-${build_id}.txt.
      * 
      */
-    @InputImport(name="logsBucket")
+    @Import(name="logsBucket")
       private final @Nullable Output<String> logsBucket;
 
     public Output<String> getLogsBucket() {
@@ -77,7 +77,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<TriggerBuildOptionsGetArgs> options;
 
     public Output<TriggerBuildOptionsGetArgs> getOptions() {
@@ -91,7 +91,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="queueTtl")
+    @Import(name="queueTtl")
       private final @Nullable Output<String> queueTtl;
 
     public Output<String> getQueueTtl() {
@@ -103,7 +103,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="secrets")
+    @Import(name="secrets")
       private final @Nullable Output<List<TriggerBuildSecretGetArgs>> secrets;
 
     public Output<List<TriggerBuildSecretGetArgs>> getSecrets() {
@@ -116,7 +116,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<TriggerBuildSourceGetArgs> source;
 
     public Output<TriggerBuildSourceGetArgs> getSource() {
@@ -128,7 +128,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="steps", required=true)
+    @Import(name="steps", required=true)
       private final Output<List<TriggerBuildStepGetArgs>> steps;
 
     public Output<List<TriggerBuildStepGetArgs>> getSteps() {
@@ -139,7 +139,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * Substitutions to use in a triggered build. Should only be used with triggers.run
      * 
      */
-    @InputImport(name="substitutions")
+    @Import(name="substitutions")
       private final @Nullable Output<Map<String,String>> substitutions;
 
     public Output<Map<String,String>> getSubstitutions() {
@@ -150,7 +150,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * Tags for annotation of a Build. These are not docker tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
@@ -164,7 +164,7 @@ public final class TriggerBuildGetArgs extends io.pulumi.resources.ResourceArgs 
      * completes or the build itself times out.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {

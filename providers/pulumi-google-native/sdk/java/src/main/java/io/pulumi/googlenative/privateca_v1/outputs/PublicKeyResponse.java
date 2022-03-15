@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PublicKeyResponse {
     /**
      * The format of the public key.
@@ -20,10 +20,10 @@ public final class PublicKeyResponse {
      */
     private final String key;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PublicKeyResponse(
-        @OutputCustomType.Parameter("format") String format,
-        @OutputCustomType.Parameter("key") String key) {
+        @CustomType.Parameter("format") String format,
+        @CustomType.Parameter("key") String key) {
         this.format = format;
         this.key = key;
     }

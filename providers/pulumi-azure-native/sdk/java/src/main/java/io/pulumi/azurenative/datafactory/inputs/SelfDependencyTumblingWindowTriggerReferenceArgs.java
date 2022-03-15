@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends io.p
      * Timespan applied to the start time of a tumbling window when evaluating dependency.
      * 
      */
-    @InputImport(name="offset", required=true)
+    @Import(name="offset", required=true)
       private final Output<String> offset;
 
     public Output<String> getOffset() {
@@ -33,7 +33,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends io.p
      * The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<String> size;
 
     public Output<String> getSize() {
@@ -45,7 +45,7 @@ public final class SelfDependencyTumblingWindowTriggerReferenceArgs extends io.p
      * Expected value is 'SelfDependencyTumblingWindowTriggerReference'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

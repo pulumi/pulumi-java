@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.HttpRedirectActionResponse;
 import io.pulumi.googlenative.compute_beta.outputs.HttpRouteActionResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PathRuleResponse {
     /**
      * The list of path patterns to match. Each must start with / and the only place a * is allowed is at the end following a /. The string fed to the path matcher does not include any text after the first ? or #, and those chars are not allowed here.
@@ -33,12 +33,12 @@ public final class PathRuleResponse {
      */
     private final HttpRedirectActionResponse urlRedirect;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PathRuleResponse(
-        @OutputCustomType.Parameter("paths") List<String> paths,
-        @OutputCustomType.Parameter("routeAction") HttpRouteActionResponse routeAction,
-        @OutputCustomType.Parameter("service") String service,
-        @OutputCustomType.Parameter("urlRedirect") HttpRedirectActionResponse urlRedirect) {
+        @CustomType.Parameter("paths") List<String> paths,
+        @CustomType.Parameter("routeAction") HttpRouteActionResponse routeAction,
+        @CustomType.Parameter("service") String service,
+        @CustomType.Parameter("urlRedirect") HttpRedirectActionResponse urlRedirect) {
         this.paths = paths;
         this.routeAction = routeAction;
         this.service = service;

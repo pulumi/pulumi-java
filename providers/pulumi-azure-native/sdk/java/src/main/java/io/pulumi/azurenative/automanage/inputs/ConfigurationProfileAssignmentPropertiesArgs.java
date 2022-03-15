@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automanage.inputs;
 import io.pulumi.azurenative.automanage.enums.ConfigurationProfile;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
      * The Automanage account ARM Resource URI
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -35,7 +35,7 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
      * A value indicating configuration profile.
      * 
      */
-    @InputImport(name="configurationProfile")
+    @Import(name="configurationProfile")
       private final @Nullable Output<Either<String,ConfigurationProfile>> configurationProfile;
 
     public Output<Either<String,ConfigurationProfile>> getConfigurationProfile() {
@@ -46,7 +46,7 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
      * The configuration profile custom preferences ARM resource URI
      * 
      */
-    @InputImport(name="configurationProfilePreferenceId")
+    @Import(name="configurationProfilePreferenceId")
       private final @Nullable Output<String> configurationProfilePreferenceId;
 
     public Output<String> getConfigurationProfilePreferenceId() {
@@ -57,7 +57,7 @@ public final class ConfigurationProfileAssignmentPropertiesArgs extends io.pulum
      * The target VM resource URI
      * 
      */
-    @InputImport(name="targetId")
+    @Import(name="targetId")
       private final @Nullable Output<String> targetId;
 
     public Output<String> getTargetId() {

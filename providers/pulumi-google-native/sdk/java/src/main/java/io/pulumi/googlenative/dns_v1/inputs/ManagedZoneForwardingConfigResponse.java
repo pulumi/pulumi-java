@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1.inputs.ManagedZoneForwardingConfigNameServerTargetResponse;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ public final class ManagedZoneForwardingConfigResponse extends io.pulumi.resourc
 
     public static final ManagedZoneForwardingConfigResponse Empty = new ManagedZoneForwardingConfigResponse();
 
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -25,7 +25,7 @@ public final class ManagedZoneForwardingConfigResponse extends io.pulumi.resourc
      * List of target name servers to forward to. Cloud DNS selects the best available name server if more than one target is given.
      * 
      */
-    @InputImport(name="targetNameServers", required=true)
+    @Import(name="targetNameServers", required=true)
       private final List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers;
 
     public List<ManagedZoneForwardingConfigNameServerTargetResponse> getTargetNameServers() {

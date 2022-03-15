@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CodeSigningConfigPolicies {
     /**
      * Code signing configuration policy for deployment validation failure. If you set the policy to Enforce, Lambda blocks the deployment request if code-signing validation checks fail. If you set the policy to Warn, Lambda allows the deployment and creates a CloudWatch log. Valid values: `Warn`, `Enforce`. Default value: `Warn`.
@@ -15,8 +15,8 @@ public final class CodeSigningConfigPolicies {
      */
     private final String untrustedArtifactOnDeployment;
 
-    @OutputCustomType.Constructor
-    private CodeSigningConfigPolicies(@OutputCustomType.Parameter("untrustedArtifactOnDeployment") String untrustedArtifactOnDeployment) {
+    @CustomType.Constructor
+    private CodeSigningConfigPolicies(@CustomType.Parameter("untrustedArtifactOnDeployment") String untrustedArtifactOnDeployment) {
         this.untrustedArtifactOnDeployment = untrustedArtifactOnDeployment;
     }
 

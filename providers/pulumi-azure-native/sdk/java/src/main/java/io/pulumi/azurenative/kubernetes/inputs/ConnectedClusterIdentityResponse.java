@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetes.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ConnectedClusterIdentityResponse extends io.pulumi.resources.
      * The principal id of connected cluster identity. This property will only be provided for a system assigned identity.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {
@@ -31,7 +31,7 @@ public final class ConnectedClusterIdentityResponse extends io.pulumi.resources.
      * The tenant id associated with the connected cluster. This property will only be provided for a system assigned identity.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {
@@ -42,7 +42,7 @@ public final class ConnectedClusterIdentityResponse extends io.pulumi.resources.
      * The type of identity used for the connected cluster. The type 'SystemAssigned, includes a system created identity. The type 'None' means no identity is assigned to the connected cluster.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

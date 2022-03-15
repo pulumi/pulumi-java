@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * Allows filtering on the metric's fields.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
@@ -34,7 +34,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the metric.
      * 
      */
-    @InputImport(name="metricName")
+    @Import(name="metricName")
       private final @Nullable Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -45,7 +45,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * May be used instead of target_utilization when an instance can handle a specific amount of work/resources and the metric value is equal to the current amount of work remaining. The autoscaler will try to keep the number of instances equal to the metric value divided by single_instance_assignment.
      * 
      */
-    @InputImport(name="singleInstanceAssignment")
+    @Import(name="singleInstanceAssignment")
       private final @Nullable Output<Double> singleInstanceAssignment;
 
     public Output<Double> getSingleInstanceAssignment() {
@@ -56,7 +56,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the metric. Must be a string representing a Stackdriver metric type e.g. GAGUE, DELTA_PER_SECOND, etc.
      * 
      */
-    @InputImport(name="targetType")
+    @Import(name="targetType")
       private final @Nullable Output<String> targetType;
 
     public Output<String> getTargetType() {
@@ -67,7 +67,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * The target value for the metric.
      * 
      */
-    @InputImport(name="targetUtilization")
+    @Import(name="targetUtilization")
       private final @Nullable Output<Double> targetUtilization;
 
     public Output<Double> getTargetUtilization() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListAssetContainerSasResult {
     /**
      * The list of Asset container SAS URLs.
@@ -17,8 +17,8 @@ public final class ListAssetContainerSasResult {
      */
     private final @Nullable List<String> assetContainerSasUrls;
 
-    @OutputCustomType.Constructor
-    private ListAssetContainerSasResult(@OutputCustomType.Parameter("assetContainerSasUrls") @Nullable List<String> assetContainerSasUrls) {
+    @CustomType.Constructor
+    private ListAssetContainerSasResult(@CustomType.Parameter("assetContainerSasUrls") @Nullable List<String> assetContainerSasUrls) {
         this.assetContainerSasUrls = assetContainerSasUrls;
     }
 

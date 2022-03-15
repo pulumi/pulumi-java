@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1alpha1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1alpha1.inputs.JobSpecArgs;
 import io.pulumi.googlenative.run_v1alpha1.inputs.JobStatusArgs;
 import io.pulumi.googlenative.run_v1alpha1.inputs.ObjectMetaArgs;
@@ -21,7 +21,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources +optional
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
@@ -32,7 +32,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds +optional
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -43,14 +43,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata +optional
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Output.empty() : this.metadata;
     }
 
-    @InputImport(name="namespaceId", required=true)
+    @Import(name="namespaceId", required=true)
       private final Output<String> namespaceId;
 
     public Output<String> getNamespaceId() {
@@ -61,7 +61,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Specification of the desired behavior of a job. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
      * 
      */
-    @InputImport(name="spec")
+    @Import(name="spec")
       private final @Nullable Output<JobSpecArgs> spec;
 
     public Output<JobSpecArgs> getSpec() {
@@ -72,7 +72,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Current status of a job. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status +optional
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<JobStatusArgs> status;
 
     public Output<JobStatusArgs> getStatus() {

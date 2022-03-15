@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MysqlSslConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Input only. PEM-encoded certificate of the CA that signed the source database server's certificate.
      * 
      */
-    @InputImport(name="caCertificate")
+    @Import(name="caCertificate")
       private final @Nullable Output<String> caCertificate;
 
     public Output<String> getCaCertificate() {
@@ -33,7 +33,7 @@ public final class MysqlSslConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Input only. PEM-encoded certificate that will be used by the replica to authenticate against the source database server. If this field is used then the 'client_key' and the 'ca_certificate' fields are mandatory.
      * 
      */
-    @InputImport(name="clientCertificate")
+    @Import(name="clientCertificate")
       private final @Nullable Output<String> clientCertificate;
 
     public Output<String> getClientCertificate() {
@@ -44,7 +44,7 @@ public final class MysqlSslConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Input only. PEM-encoded private key associated with the Client Certificate. If this field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
      * 
      */
-    @InputImport(name="clientKey")
+    @Import(name="clientKey")
       private final @Nullable Output<String> clientKey;
 
     public Output<String> getClientKey() {

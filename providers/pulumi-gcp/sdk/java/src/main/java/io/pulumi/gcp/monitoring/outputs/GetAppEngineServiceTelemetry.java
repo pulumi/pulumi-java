@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAppEngineServiceTelemetry {
     private final String resourceName;
 
-    @OutputCustomType.Constructor
-    private GetAppEngineServiceTelemetry(@OutputCustomType.Parameter("resourceName") String resourceName) {
+    @CustomType.Constructor
+    private GetAppEngineServiceTelemetry(@CustomType.Parameter("resourceName") String resourceName) {
         this.resourceName = resourceName;
     }
 

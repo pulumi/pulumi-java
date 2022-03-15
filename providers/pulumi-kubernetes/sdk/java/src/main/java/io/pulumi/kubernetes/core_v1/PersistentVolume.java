@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.core_v1.PersistentVolumeArgs;
@@ -24,7 +24,7 @@ public class PersistentVolume extends io.pulumi.resources.CustomResource {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @OutputExport(name="apiVersion", type=String.class, parameters={})
+    @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
@@ -38,7 +38,7 @@ public class PersistentVolume extends io.pulumi.resources.CustomResource {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -52,7 +52,7 @@ public class PersistentVolume extends io.pulumi.resources.CustomResource {
      * Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
+    @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
@@ -66,7 +66,7 @@ public class PersistentVolume extends io.pulumi.resources.CustomResource {
      * Spec defines a specification of a persistent volume owned by the cluster. Provisioned by an administrator. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
      * 
      */
-    @OutputExport(name="spec", type=PersistentVolumeSpec.class, parameters={})
+    @Export(name="spec", type=PersistentVolumeSpec.class, parameters={})
     private Output</* @Nullable */ PersistentVolumeSpec> spec;
 
     /**
@@ -80,7 +80,7 @@ public class PersistentVolume extends io.pulumi.resources.CustomResource {
      * Status represents the current information/status for the persistent volume. Populated by the system. Read-only. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistent-volumes
      * 
      */
-    @OutputExport(name="status", type=PersistentVolumeStatus.class, parameters={})
+    @Export(name="status", type=PersistentVolumeStatus.class, parameters={})
     private Output</* @Nullable */ PersistentVolumeStatus> status;
 
     /**

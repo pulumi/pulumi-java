@@ -8,7 +8,7 @@ import io.pulumi.awsnative.kinesisvideo.SignalingChannelArgs;
 import io.pulumi.awsnative.kinesisvideo.enums.SignalingChannelType;
 import io.pulumi.awsnative.kinesisvideo.outputs.SignalingChannelTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public class SignalingChannel extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Kinesis Video Signaling Channel.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -39,7 +39,7 @@ public class SignalingChannel extends io.pulumi.resources.CustomResource {
      * The period of time a signaling channel retains undelivered messages before they are discarded.
      * 
      */
-    @OutputExport(name="messageTtlSeconds", type=Integer.class, parameters={})
+    @Export(name="messageTtlSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> messageTtlSeconds;
 
     /**
@@ -53,7 +53,7 @@ public class SignalingChannel extends io.pulumi.resources.CustomResource {
      * The name of the Kinesis Video Signaling Channel.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -67,7 +67,7 @@ public class SignalingChannel extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={SignalingChannelTag.class})
+    @Export(name="tags", type=List.class, parameters={SignalingChannelTag.class})
     private Output</* @Nullable */ List<SignalingChannelTag>> tags;
 
     /**
@@ -81,7 +81,7 @@ public class SignalingChannel extends io.pulumi.resources.CustomResource {
      * The type of the Kinesis Video Signaling Channel to create. Currently, SINGLE_MASTER is the only supported channel type.
      * 
      */
-    @OutputExport(name="type", type=SignalingChannelType.class, parameters={})
+    @Export(name="type", type=SignalingChannelType.class, parameters={})
     private Output</* @Nullable */ SignalingChannelType> type;
 
     /**

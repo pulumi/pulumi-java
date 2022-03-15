@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1beta.enums.SoftwareRecipeDesiredState;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArtifactArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeStepArgs;
@@ -26,7 +26,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * Resources available to be used in the steps in the recipe.
      * 
      */
-    @InputImport(name="artifacts")
+    @Import(name="artifacts")
       private final @Nullable Output<List<SoftwareRecipeArtifactArgs>> artifacts;
 
     public Output<List<SoftwareRecipeArtifactArgs>> getArtifacts() {
@@ -37,7 +37,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * Default is INSTALLED. The desired state the agent should maintain for this recipe. INSTALLED: The software recipe is installed on the instance but won't be updated to new versions. UPDATED: The software recipe is installed on the instance. The recipe is updated to a higher version, if a higher version of the recipe is assigned to this instance. REMOVE: Remove is unsupported for software recipes and attempts to create or update a recipe to the REMOVE state is rejected.
      * 
      */
-    @InputImport(name="desiredState")
+    @Import(name="desiredState")
       private final @Nullable Output<SoftwareRecipeDesiredState> desiredState;
 
     public Output<SoftwareRecipeDesiredState> getDesiredState() {
@@ -48,7 +48,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * Actions to be taken for installing this recipe. On failure it stops executing steps and does not attempt another installation. Any steps taken (including partially completed steps) are not rolled back.
      * 
      */
-    @InputImport(name="installSteps")
+    @Import(name="installSteps")
       private final @Nullable Output<List<SoftwareRecipeStepArgs>> installSteps;
 
     public Output<List<SoftwareRecipeStepArgs>> getInstallSteps() {
@@ -59,7 +59,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * Unique identifier for the recipe. Only one recipe with a given name is installed on an instance. Names are also used to identify resources which helps to determine whether guest policies have conflicts. This means that requests to create multiple recipes with the same name and version are rejected since they could potentially have conflicting assignments.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -70,7 +70,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * Actions to be taken for updating this recipe. On failure it stops executing steps and does not attempt another update for this recipe. Any steps taken (including partially completed steps) are not rolled back.
      * 
      */
-    @InputImport(name="updateSteps")
+    @Import(name="updateSteps")
       private final @Nullable Output<List<SoftwareRecipeStepArgs>> updateSteps;
 
     public Output<List<SoftwareRecipeStepArgs>> getUpdateSteps() {
@@ -81,7 +81,7 @@ public final class SoftwareRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * The version of this software recipe. Version can be up to 4 period separated numbers (e.g. 12.34.56.78).
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

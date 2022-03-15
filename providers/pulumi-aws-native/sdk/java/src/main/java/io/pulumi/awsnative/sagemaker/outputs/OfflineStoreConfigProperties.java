@@ -5,23 +5,23 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.FeatureGroupDataCatalogConfig;
 import io.pulumi.awsnative.sagemaker.outputs.FeatureGroupS3StorageConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OfflineStoreConfigProperties {
     private final @Nullable FeatureGroupDataCatalogConfig dataCatalogConfig;
     private final @Nullable Boolean disableGlueTableCreation;
     private final FeatureGroupS3StorageConfig s3StorageConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OfflineStoreConfigProperties(
-        @OutputCustomType.Parameter("dataCatalogConfig") @Nullable FeatureGroupDataCatalogConfig dataCatalogConfig,
-        @OutputCustomType.Parameter("disableGlueTableCreation") @Nullable Boolean disableGlueTableCreation,
-        @OutputCustomType.Parameter("s3StorageConfig") FeatureGroupS3StorageConfig s3StorageConfig) {
+        @CustomType.Parameter("dataCatalogConfig") @Nullable FeatureGroupDataCatalogConfig dataCatalogConfig,
+        @CustomType.Parameter("disableGlueTableCreation") @Nullable Boolean disableGlueTableCreation,
+        @CustomType.Parameter("s3StorageConfig") FeatureGroupS3StorageConfig s3StorageConfig) {
         this.dataCatalogConfig = dataCatalogConfig;
         this.disableGlueTableCreation = disableGlueTableCreation;
         this.s3StorageConfig = s3StorageConfig;

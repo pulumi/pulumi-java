@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VertexResponse {
     /**
      * X coordinate.
@@ -20,10 +20,10 @@ public final class VertexResponse {
      */
     private final Double y;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VertexResponse(
-        @OutputCustomType.Parameter("x") Double x,
-        @OutputCustomType.Parameter("y") Double y) {
+        @CustomType.Parameter("x") Double x,
+        @CustomType.Parameter("y") Double y) {
         this.x = x;
         this.y = y;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.oslogin_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetSshPublicKeyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSshPublicKeyArgs Empty = new GetSshPublicKeyArgs();
 
-    @InputImport(name="sshPublicKeyId", required=true)
+    @Import(name="sshPublicKeyId", required=true)
       private final String sshPublicKeyId;
 
     public String getSshPublicKeyId() {
         return this.sshPublicKeyId;
     }
 
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final String userId;
 
     public String getUserId() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
      * The name of the column.
      * 
      */
-    @InputImport(name="columnName", required=true)
+    @Import(name="columnName", required=true)
       private final String columnName;
 
     public String getColumnName() {
@@ -27,7 +27,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
      * The name of the database.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final String databaseName;
 
     public String getDatabaseName() {
@@ -38,7 +38,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
      * The name of the managed instance.
      * 
      */
-    @InputImport(name="managedInstanceName", required=true)
+    @Import(name="managedInstanceName", required=true)
       private final String managedInstanceName;
 
     public String getManagedInstanceName() {
@@ -49,7 +49,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -60,7 +60,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
      * The name of the schema.
      * 
      */
-    @InputImport(name="schemaName", required=true)
+    @Import(name="schemaName", required=true)
       private final String schemaName;
 
     public String getSchemaName() {
@@ -71,7 +71,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
      * The source of the sensitivity label.
      * 
      */
-    @InputImport(name="sensitivityLabelSource", required=true)
+    @Import(name="sensitivityLabelSource", required=true)
       private final String sensitivityLabelSource;
 
     public String getSensitivityLabelSource() {
@@ -82,7 +82,7 @@ public final class GetManagedDatabaseSensitivityLabelArgs extends io.pulumi.reso
      * The name of the table.
      * 
      */
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final String tableName;
 
     public String getTableName() {

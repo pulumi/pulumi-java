@@ -4,7 +4,7 @@
 package io.pulumi.gcp.memcache.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.memcache.inputs.InstanceMemcacheNodeGetArgs;
 import io.pulumi.gcp.memcache.inputs.InstanceMemcacheParametersGetArgs;
 import io.pulumi.gcp.memcache.inputs.InstanceNodeConfigGetArgs;
@@ -25,7 +25,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 'default' will be used.
      * 
      */
-    @InputImport(name="authorizedNetwork")
+    @Import(name="authorizedNetwork")
       private final @Nullable Output<String> authorizedNetwork;
 
     public Output<String> getAuthorizedNetwork() {
@@ -36,7 +36,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -47,7 +47,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Endpoint for Discovery API
      * 
      */
-    @InputImport(name="discoveryEndpoint")
+    @Import(name="discoveryEndpoint")
       private final @Nullable Output<String> discoveryEndpoint;
 
     public Output<String> getDiscoveryEndpoint() {
@@ -58,7 +58,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * A user-visible name for the instance.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -69,7 +69,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Resource labels to represent user-provided metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -80,7 +80,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The full version of memcached server running on this instance.
      * 
      */
-    @InputImport(name="memcacheFullVersion")
+    @Import(name="memcacheFullVersion")
       private final @Nullable Output<String> memcacheFullVersion;
 
     public Output<String> getMemcacheFullVersion() {
@@ -91,7 +91,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Additional information about the instance state, if available.
      * 
      */
-    @InputImport(name="memcacheNodes")
+    @Import(name="memcacheNodes")
       private final @Nullable Output<List<InstanceMemcacheNodeGetArgs>> memcacheNodes;
 
     public Output<List<InstanceMemcacheNodeGetArgs>> getMemcacheNodes() {
@@ -103,7 +103,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="memcacheParameters")
+    @Import(name="memcacheParameters")
       private final @Nullable Output<InstanceMemcacheParametersGetArgs> memcacheParameters;
 
     public Output<InstanceMemcacheParametersGetArgs> getMemcacheParameters() {
@@ -118,7 +118,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `MEMCACHE_1_5`.
      * 
      */
-    @InputImport(name="memcacheVersion")
+    @Import(name="memcacheVersion")
       private final @Nullable Output<String> memcacheVersion;
 
     public Output<String> getMemcacheVersion() {
@@ -129,7 +129,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The resource name of the instance.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -141,7 +141,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="nodeConfig")
+    @Import(name="nodeConfig")
       private final @Nullable Output<InstanceNodeConfigGetArgs> nodeConfig;
 
     public Output<InstanceNodeConfigGetArgs> getNodeConfig() {
@@ -152,7 +152,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Number of nodes in the memcache instance.
      * 
      */
-    @InputImport(name="nodeCount")
+    @Import(name="nodeCount")
       private final @Nullable Output<Integer> nodeCount;
 
     public Output<Integer> getNodeCount() {
@@ -164,7 +164,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -175,7 +175,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The region of the Memcache instance. If it is not provided, the provider region is used.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -187,7 +187,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * provided, all zones will be used.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {

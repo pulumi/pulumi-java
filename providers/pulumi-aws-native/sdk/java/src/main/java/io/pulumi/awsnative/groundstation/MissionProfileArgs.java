@@ -6,7 +6,7 @@ package io.pulumi.awsnative.groundstation;
 import io.pulumi.awsnative.groundstation.inputs.MissionProfileDataflowEdgeArgs;
 import io.pulumi.awsnative.groundstation.inputs.MissionProfileTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Post-pass time needed after the contact.
      * 
      */
-    @InputImport(name="contactPostPassDurationSeconds")
+    @Import(name="contactPostPassDurationSeconds")
       private final @Nullable Output<Integer> contactPostPassDurationSeconds;
 
     public Output<Integer> getContactPostPassDurationSeconds() {
@@ -33,14 +33,14 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Pre-pass time needed before the contact.
      * 
      */
-    @InputImport(name="contactPrePassDurationSeconds")
+    @Import(name="contactPrePassDurationSeconds")
       private final @Nullable Output<Integer> contactPrePassDurationSeconds;
 
     public Output<Integer> getContactPrePassDurationSeconds() {
         return this.contactPrePassDurationSeconds == null ? Output.empty() : this.contactPrePassDurationSeconds;
     }
 
-    @InputImport(name="dataflowEdges", required=true)
+    @Import(name="dataflowEdges", required=true)
       private final Output<List<MissionProfileDataflowEdgeArgs>> dataflowEdges;
 
     public Output<List<MissionProfileDataflowEdgeArgs>> getDataflowEdges() {
@@ -51,7 +51,7 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.
      * 
      */
-    @InputImport(name="minimumViableContactDurationSeconds", required=true)
+    @Import(name="minimumViableContactDurationSeconds", required=true)
       private final Output<Integer> minimumViableContactDurationSeconds;
 
     public Output<Integer> getMinimumViableContactDurationSeconds() {
@@ -62,21 +62,21 @@ public final class MissionProfileArgs extends io.pulumi.resources.ResourceArgs {
      * A name used to identify a mission profile.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<MissionProfileTagArgs>> tags;
 
     public Output<List<MissionProfileTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="trackingConfigArn", required=true)
+    @Import(name="trackingConfigArn", required=true)
       private final Output<String> trackingConfigArn;
 
     public Output<String> getTrackingConfigArn() {

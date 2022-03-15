@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.inputs.SchedulingNodeAffinityResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted. By default, this is set to true so an instance is automatically restarted if it is terminated by Compute Engine.
      * 
      */
-    @InputImport(name="automaticRestart", required=true)
+    @Import(name="automaticRestart", required=true)
       private final Boolean automaticRestart;
 
     public Boolean getAutomaticRestart() {
@@ -35,7 +35,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * Specify the time in seconds for host error detection, the value must be within the range of [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will be used.
      * 
      */
-    @InputImport(name="hostErrorTimeoutSeconds", required=true)
+    @Import(name="hostErrorTimeoutSeconds", required=true)
       private final Integer hostErrorTimeoutSeconds;
 
     public Integer getHostErrorTimeoutSeconds() {
@@ -46,7 +46,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the termination action for the instance.
      * 
      */
-    @InputImport(name="instanceTerminationAction", required=true)
+    @Import(name="instanceTerminationAction", required=true)
       private final String instanceTerminationAction;
 
     public String getInstanceTerminationAction() {
@@ -57,7 +57,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.
      * 
      */
-    @InputImport(name="locationHint", required=true)
+    @Import(name="locationHint", required=true)
       private final String locationHint;
 
     public String getLocationHint() {
@@ -68,7 +68,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the number of hours after VM instance creation where the VM won't be scheduled for maintenance.
      * 
      */
-    @InputImport(name="maintenanceFreezeDurationHours", required=true)
+    @Import(name="maintenanceFreezeDurationHours", required=true)
       private final Integer maintenanceFreezeDurationHours;
 
     public Integer getMaintenanceFreezeDurationHours() {
@@ -79,7 +79,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * For more information about maintenance intervals, see Setting maintenance intervals.
      * 
      */
-    @InputImport(name="maintenanceInterval", required=true)
+    @Import(name="maintenanceInterval", required=true)
       private final String maintenanceInterval;
 
     public String getMaintenanceInterval() {
@@ -90,7 +90,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
      * 
      */
-    @InputImport(name="minNodeCpus", required=true)
+    @Import(name="minNodeCpus", required=true)
       private final Integer minNodeCpus;
 
     public Integer getMinNodeCpus() {
@@ -101,7 +101,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.
      * 
      */
-    @InputImport(name="nodeAffinities", required=true)
+    @Import(name="nodeAffinities", required=true)
       private final List<SchedulingNodeAffinityResponse> nodeAffinities;
 
     public List<SchedulingNodeAffinityResponse> getNodeAffinities() {
@@ -112,7 +112,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Set VM availability policies.
      * 
      */
-    @InputImport(name="onHostMaintenance", required=true)
+    @Import(name="onHostMaintenance", required=true)
       private final String onHostMaintenance;
 
     public String getOnHostMaintenance() {
@@ -123,7 +123,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
      * 
      */
-    @InputImport(name="preemptible", required=true)
+    @Import(name="preemptible", required=true)
       private final Boolean preemptible;
 
     public Boolean getPreemptible() {
@@ -134,7 +134,7 @@ public final class SchedulingResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the provisioning model of the instance.
      * 
      */
-    @InputImport(name="provisioningModel", required=true)
+    @Import(name="provisioningModel", required=true)
       private final String provisioningModel;
 
     public String getProvisioningModel() {

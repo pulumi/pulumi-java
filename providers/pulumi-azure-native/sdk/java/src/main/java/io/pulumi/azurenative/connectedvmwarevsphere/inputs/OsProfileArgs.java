@@ -6,7 +6,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 import io.pulumi.azurenative.connectedvmwarevsphere.enums.OsType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets administrator password.
      * 
      */
-    @InputImport(name="adminPassword")
+    @Import(name="adminPassword")
       private final @Nullable Output<String> adminPassword;
 
     public Output<String> getAdminPassword() {
@@ -35,7 +35,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets administrator username.
      * 
      */
-    @InputImport(name="adminUsername")
+    @Import(name="adminUsername")
       private final @Nullable Output<String> adminUsername;
 
     public Output<String> getAdminUsername() {
@@ -46,7 +46,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets computer name.
      * 
      */
-    @InputImport(name="computerName")
+    @Import(name="computerName")
       private final @Nullable Output<String> computerName;
 
     public Output<String> getComputerName() {
@@ -57,7 +57,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the type of the os.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable Output<Either<String,OsType>> osType;
 
     public Output<Either<String,OsType>> getOsType() {

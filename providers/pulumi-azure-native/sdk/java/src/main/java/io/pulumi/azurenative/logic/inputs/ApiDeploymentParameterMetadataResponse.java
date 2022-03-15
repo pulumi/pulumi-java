@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.reso
      * The description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -34,7 +34,7 @@ public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.reso
      * The display name.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -45,7 +45,7 @@ public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.reso
      * Indicates whether its required.
      * 
      */
-    @InputImport(name="isRequired")
+    @Import(name="isRequired")
       private final @Nullable Boolean isRequired;
 
     public Optional<Boolean> getIsRequired() {
@@ -56,7 +56,7 @@ public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.reso
      * The type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -67,7 +67,7 @@ public final class ApiDeploymentParameterMetadataResponse extends io.pulumi.reso
      * The visibility.
      * 
      */
-    @InputImport(name="visibility")
+    @Import(name="visibility")
       private final @Nullable String visibility;
 
     public Optional<String> getVisibility() {

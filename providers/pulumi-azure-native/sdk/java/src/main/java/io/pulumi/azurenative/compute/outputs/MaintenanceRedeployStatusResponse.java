@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MaintenanceRedeployStatusResponse {
     /**
      * True, if customer is allowed to perform Maintenance.
@@ -48,15 +48,15 @@ public final class MaintenanceRedeployStatusResponse {
      */
     private final @Nullable String preMaintenanceWindowStartTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MaintenanceRedeployStatusResponse(
-        @OutputCustomType.Parameter("isCustomerInitiatedMaintenanceAllowed") @Nullable Boolean isCustomerInitiatedMaintenanceAllowed,
-        @OutputCustomType.Parameter("lastOperationMessage") @Nullable String lastOperationMessage,
-        @OutputCustomType.Parameter("lastOperationResultCode") @Nullable String lastOperationResultCode,
-        @OutputCustomType.Parameter("maintenanceWindowEndTime") @Nullable String maintenanceWindowEndTime,
-        @OutputCustomType.Parameter("maintenanceWindowStartTime") @Nullable String maintenanceWindowStartTime,
-        @OutputCustomType.Parameter("preMaintenanceWindowEndTime") @Nullable String preMaintenanceWindowEndTime,
-        @OutputCustomType.Parameter("preMaintenanceWindowStartTime") @Nullable String preMaintenanceWindowStartTime) {
+        @CustomType.Parameter("isCustomerInitiatedMaintenanceAllowed") @Nullable Boolean isCustomerInitiatedMaintenanceAllowed,
+        @CustomType.Parameter("lastOperationMessage") @Nullable String lastOperationMessage,
+        @CustomType.Parameter("lastOperationResultCode") @Nullable String lastOperationResultCode,
+        @CustomType.Parameter("maintenanceWindowEndTime") @Nullable String maintenanceWindowEndTime,
+        @CustomType.Parameter("maintenanceWindowStartTime") @Nullable String maintenanceWindowStartTime,
+        @CustomType.Parameter("preMaintenanceWindowEndTime") @Nullable String preMaintenanceWindowEndTime,
+        @CustomType.Parameter("preMaintenanceWindowStartTime") @Nullable String preMaintenanceWindowStartTime) {
         this.isCustomerInitiatedMaintenanceAllowed = isCustomerInitiatedMaintenanceAllowed;
         this.lastOperationMessage = lastOperationMessage;
         this.lastOperationResultCode = lastOperationResultCode;

@@ -6,7 +6,7 @@ package io.pulumi.aws.fsx.inputs;
 import io.pulumi.aws.fsx.inputs.OntapFileSystemEndpointInterclusterArgs;
 import io.pulumi.aws.fsx.inputs.OntapFileSystemEndpointManagementArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class OntapFileSystemEndpointArgs extends io.pulumi.resources.Resou
      * An endpoint for managing your file system by setting up NetApp SnapMirror with other ONTAP systems. See Endpoint.
      * 
      */
-    @InputImport(name="interclusters")
+    @Import(name="interclusters")
       private final @Nullable Output<List<OntapFileSystemEndpointInterclusterArgs>> interclusters;
 
     public Output<List<OntapFileSystemEndpointInterclusterArgs>> getInterclusters() {
@@ -31,7 +31,7 @@ public final class OntapFileSystemEndpointArgs extends io.pulumi.resources.Resou
      * An endpoint for managing your file system using the NetApp ONTAP CLI and NetApp ONTAP API. See Endpoint.
      * 
      */
-    @InputImport(name="managements")
+    @Import(name="managements")
       private final @Nullable Output<List<OntapFileSystemEndpointManagementArgs>> managements;
 
     public Output<List<OntapFileSystemEndpointManagementArgs>> getManagements() {

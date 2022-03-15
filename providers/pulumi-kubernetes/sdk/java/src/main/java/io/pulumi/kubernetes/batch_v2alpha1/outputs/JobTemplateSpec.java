@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.batch_v2alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.batch_v1.outputs.JobSpec;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobTemplateSpec {
     /**
      * Standard object's metadata of the jobs created from this template. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
@@ -23,10 +23,10 @@ public final class JobTemplateSpec {
      */
     private final @Nullable JobSpec spec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobTemplateSpec(
-        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
-        @OutputCustomType.Parameter("spec") @Nullable JobSpec spec) {
+        @CustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @CustomType.Parameter("spec") @Nullable JobSpec spec) {
         this.metadata = metadata;
         this.spec = spec;
     }

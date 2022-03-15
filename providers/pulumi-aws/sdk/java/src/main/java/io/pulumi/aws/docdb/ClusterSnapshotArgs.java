@@ -4,7 +4,7 @@
 package io.pulumi.aws.docdb;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
      * The DocDB Cluster Identifier from which to take the snapshot.
      * 
      */
-    @InputImport(name="dbClusterIdentifier", required=true)
+    @Import(name="dbClusterIdentifier", required=true)
       private final Output<String> dbClusterIdentifier;
 
     public Output<String> getDbClusterIdentifier() {
@@ -28,7 +28,7 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
      * The Identifier for the snapshot.
      * 
      */
-    @InputImport(name="dbClusterSnapshotIdentifier", required=true)
+    @Import(name="dbClusterSnapshotIdentifier", required=true)
       private final Output<String> dbClusterSnapshotIdentifier;
 
     public Output<String> getDbClusterSnapshotIdentifier() {

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.GroupSubjectArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.ServiceAccountSubjectArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.UserSubjectArgs;
@@ -21,7 +21,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SubjectArgs Empty = new SubjectArgs();
 
-    @InputImport(name="group")
+    @Import(name="group")
       private final @Nullable Output<GroupSubjectArgs> group;
 
     public Output<GroupSubjectArgs> getGroup() {
@@ -32,21 +32,21 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * Required
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
         return this.kind;
     }
 
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<ServiceAccountSubjectArgs> serviceAccount;
 
     public Output<ServiceAccountSubjectArgs> getServiceAccount() {
         return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
-    @InputImport(name="user")
+    @Import(name="user")
       private final @Nullable Output<UserSubjectArgs> user;
 
     public Output<UserSubjectArgs> getUser() {

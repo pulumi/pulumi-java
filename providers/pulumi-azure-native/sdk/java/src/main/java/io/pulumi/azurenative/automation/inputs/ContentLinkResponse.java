@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.ContentHashResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the hash.
      * 
      */
-    @InputImport(name="contentHash")
+    @Import(name="contentHash")
       private final @Nullable ContentHashResponse contentHash;
 
     public Optional<ContentHashResponse> getContentHash() {
@@ -34,7 +34,7 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the uri of the runbook content.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable String uri;
 
     public Optional<String> getUri() {
@@ -45,7 +45,7 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the version of the content.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

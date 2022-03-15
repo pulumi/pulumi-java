@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1.inputs.SegmentResponse;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class ParsedDataResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final ParsedDataResponse Empty = new ParsedDataResponse();
 
-    @InputImport(name="segments", required=true)
+    @Import(name="segments", required=true)
       private final List<SegmentResponse> segments;
 
     public List<SegmentResponse> getSegments() {

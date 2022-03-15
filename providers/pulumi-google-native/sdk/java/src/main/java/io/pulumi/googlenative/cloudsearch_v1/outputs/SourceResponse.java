@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SourceResponse {
     /**
      * Source name for content indexed by the Indexing API.
@@ -20,10 +20,10 @@ public final class SourceResponse {
      */
     private final String predefinedSource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("predefinedSource") String predefinedSource) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("predefinedSource") String predefinedSource) {
         this.name = name;
         this.predefinedSource = predefinedSource;
     }

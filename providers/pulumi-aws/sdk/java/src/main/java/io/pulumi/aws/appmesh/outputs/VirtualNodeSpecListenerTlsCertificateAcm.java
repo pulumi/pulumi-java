@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecListenerTlsCertificateAcm {
     /**
      * The Amazon Resource Name (ARN) for the certificate.
@@ -15,8 +15,8 @@ public final class VirtualNodeSpecListenerTlsCertificateAcm {
      */
     private final String certificateArn;
 
-    @OutputCustomType.Constructor
-    private VirtualNodeSpecListenerTlsCertificateAcm(@OutputCustomType.Parameter("certificateArn") String certificateArn) {
+    @CustomType.Constructor
+    private VirtualNodeSpecListenerTlsCertificateAcm(@CustomType.Parameter("certificateArn") String certificateArn) {
         this.certificateArn = certificateArn;
     }
 

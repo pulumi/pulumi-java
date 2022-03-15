@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AutoScalingResourceMetricResponse {
     /**
      * Enumerates the metrics that are used for triggering auto scaling.
@@ -21,10 +21,10 @@ public final class AutoScalingResourceMetricResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoScalingResourceMetricResponse(
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name) {
         this.kind = kind;
         this.name = name;
     }

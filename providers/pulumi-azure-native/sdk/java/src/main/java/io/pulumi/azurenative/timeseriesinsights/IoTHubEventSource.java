@@ -8,7 +8,7 @@ import io.pulumi.azurenative.timeseriesinsights.IoTHubEventSourceArgs;
 import io.pulumi.azurenative.timeseriesinsights.outputs.LocalTimestampResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
      * The name of the iot hub's consumer group that holds the partitions from which events will be read.
      * 
      */
-    @OutputExport(name="consumerGroupName", type=String.class, parameters={})
+    @Export(name="consumerGroupName", type=String.class, parameters={})
     private Output<String> consumerGroupName;
 
     /**
@@ -50,7 +50,7 @@ public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
      * The time the resource was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -64,7 +64,7 @@ public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
      * The resource id of the event source in Azure Resource Manager.
      * 
      */
-    @OutputExport(name="eventSourceResourceId", type=String.class, parameters={})
+    @Export(name="eventSourceResourceId", type=String.class, parameters={})
     private Output<String> eventSourceResourceId;
 
     /**
@@ -78,7 +78,7 @@ public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
      * The name of the iot hub.
      * 
      */
-    @OutputExport(name="iotHubName", type=String.class, parameters={})
+    @Export(name="iotHubName", type=String.class, parameters={})
     private Output<String> iotHubName;
 
     /**
@@ -92,7 +92,7 @@ public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
      * The name of the Shared Access Policy key that grants the Time Series Insights service access to the iot hub. This shared access policy key must grant 'service connect' permissions to the iot hub.
      * 
      */
-    @OutputExport(name="keyName", type=String.class, parameters={})
+    @Export(name="keyName", type=String.class, parameters={})
     private Output<String> keyName;
 
     /**
@@ -107,7 +107,7 @@ public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
      * Expected value is 'Microsoft.IoTHub'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -122,7 +122,7 @@ public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
      * An object that represents the local timestamp property. It contains the format of local timestamp that needs to be used and the corresponding timezone offset information. If a value isn't specified for localTimestamp, or if null, then the local timestamp will not be ingressed with the events.
      * 
      */
-    @OutputExport(name="localTimestamp", type=LocalTimestampResponse.class, parameters={})
+    @Export(name="localTimestamp", type=LocalTimestampResponse.class, parameters={})
     private Output</* @Nullable */ LocalTimestampResponse> localTimestamp;
 
     /**
@@ -136,7 +136,7 @@ public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -150,7 +150,7 @@ public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -164,7 +164,7 @@ public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
      * Provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -178,7 +178,7 @@ public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -192,7 +192,7 @@ public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
      * ISO8601 UTC datetime with seconds precision (milliseconds are optional), specifying the date and time that will be the starting point for Events to be consumed.
      * 
      */
-    @OutputExport(name="time", type=String.class, parameters={})
+    @Export(name="time", type=String.class, parameters={})
     private Output</* @Nullable */ String> time;
 
     /**
@@ -206,7 +206,7 @@ public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
      * The event property that will be used as the event source's timestamp. If a value isn't specified for timestampPropertyName, or if null or empty-string is specified, the event creation time will be used.
      * 
      */
-    @OutputExport(name="timestampPropertyName", type=String.class, parameters={})
+    @Export(name="timestampPropertyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> timestampPropertyName;
 
     /**
@@ -220,7 +220,7 @@ public class IoTHubEventSource extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

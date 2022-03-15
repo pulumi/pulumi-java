@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PubsubDestinationResponse {
     /**
      * The name of the Pub/Sub topic to publish job completion notification to. For example: `projects/{project}/topics/{topic}`.
@@ -15,8 +15,8 @@ public final class PubsubDestinationResponse {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor
-    private PubsubDestinationResponse(@OutputCustomType.Parameter("topic") String topic) {
+    @CustomType.Constructor
+    private PubsubDestinationResponse(@CustomType.Parameter("topic") String topic) {
         this.topic = topic;
     }
 

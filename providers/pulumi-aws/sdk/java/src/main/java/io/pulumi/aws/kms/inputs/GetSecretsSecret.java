@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.kms.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class GetSecretsSecret extends io.pulumi.resources.InvokeArgs {
      * An optional mapping that makes up the Encryption Context for the secret.
      * 
      */
-    @InputImport(name="context")
+    @Import(name="context")
       private final @Nullable Map<String,String> context;
 
     public Map<String,String> getContext() {
@@ -31,7 +31,7 @@ public final class GetSecretsSecret extends io.pulumi.resources.InvokeArgs {
      * An optional list of Grant Tokens for the secret.
      * 
      */
-    @InputImport(name="grantTokens")
+    @Import(name="grantTokens")
       private final @Nullable List<String> grantTokens;
 
     public List<String> getGrantTokens() {
@@ -42,7 +42,7 @@ public final class GetSecretsSecret extends io.pulumi.resources.InvokeArgs {
      * The name to export this secret under in the attributes.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -53,7 +53,7 @@ public final class GetSecretsSecret extends io.pulumi.resources.InvokeArgs {
      * Base64 encoded payload, as returned from a KMS encrypt operation.
      * 
      */
-    @InputImport(name="payload", required=true)
+    @Import(name="payload", required=true)
       private final String payload;
 
     public String getPayload() {

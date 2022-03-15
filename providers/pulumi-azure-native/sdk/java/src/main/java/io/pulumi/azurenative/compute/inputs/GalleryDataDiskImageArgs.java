@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.HostCaching;
 import io.pulumi.azurenative.compute.inputs.GalleryArtifactVersionSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class GalleryDataDiskImageArgs extends io.pulumi.resources.Resource
      * The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'
      * 
      */
-    @InputImport(name="hostCaching")
+    @Import(name="hostCaching")
       private final @Nullable Output<HostCaching> hostCaching;
 
     public Output<HostCaching> getHostCaching() {
@@ -35,7 +35,7 @@ public final class GalleryDataDiskImageArgs extends io.pulumi.resources.Resource
      * This property specifies the logical unit number of the data disk. This value is used to identify data disks within the Virtual Machine and therefore must be unique for each data disk attached to the Virtual Machine.
      * 
      */
-    @InputImport(name="lun", required=true)
+    @Import(name="lun", required=true)
       private final Output<Integer> lun;
 
     public Output<Integer> getLun() {
@@ -46,7 +46,7 @@ public final class GalleryDataDiskImageArgs extends io.pulumi.resources.Resource
      * The gallery artifact version source.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<GalleryArtifactVersionSourceArgs> source;
 
     public Output<GalleryArtifactVersionSourceArgs> getSource() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.servicecatalog;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.servicecatalog.ServiceActionAssociationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -17,19 +17,19 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:servicecatalog:ServiceActionAssociation")
 public class ServiceActionAssociation extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="productId", type=String.class, parameters={})
+    @Export(name="productId", type=String.class, parameters={})
     private Output<String> productId;
 
     public Output<String> getProductId() {
         return this.productId;
     }
-    @OutputExport(name="provisioningArtifactId", type=String.class, parameters={})
+    @Export(name="provisioningArtifactId", type=String.class, parameters={})
     private Output<String> provisioningArtifactId;
 
     public Output<String> getProvisioningArtifactId() {
         return this.provisioningArtifactId;
     }
-    @OutputExport(name="serviceActionId", type=String.class, parameters={})
+    @Export(name="serviceActionId", type=String.class, parameters={})
     private Output<String> serviceActionId;
 
     public Output<String> getServiceActionId() {

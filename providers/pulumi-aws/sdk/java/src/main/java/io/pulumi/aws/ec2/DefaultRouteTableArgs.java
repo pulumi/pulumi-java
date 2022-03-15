@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.aws.ec2.inputs.DefaultRouteTableRouteArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class DefaultRouteTableArgs extends io.pulumi.resources.ResourceArg
      * ID of the default route table.
      * 
      */
-    @InputImport(name="defaultRouteTableId", required=true)
+    @Import(name="defaultRouteTableId", required=true)
       private final Output<String> defaultRouteTableId;
 
     public Output<String> getDefaultRouteTableId() {
@@ -32,7 +32,7 @@ public final class DefaultRouteTableArgs extends io.pulumi.resources.ResourceArg
      * List of virtual gateways for propagation.
      * 
      */
-    @InputImport(name="propagatingVgws")
+    @Import(name="propagatingVgws")
       private final @Nullable Output<List<String>> propagatingVgws;
 
     public Output<List<String>> getPropagatingVgws() {
@@ -43,7 +43,7 @@ public final class DefaultRouteTableArgs extends io.pulumi.resources.ResourceArg
      * Set of objects. Detailed below
      * 
      */
-    @InputImport(name="routes")
+    @Import(name="routes")
       private final @Nullable Output<List<DefaultRouteTableRouteArgs>> routes;
 
     public Output<List<DefaultRouteTableRouteArgs>> getRoutes() {
@@ -54,7 +54,7 @@ public final class DefaultRouteTableArgs extends io.pulumi.resources.ResourceArg
      * Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

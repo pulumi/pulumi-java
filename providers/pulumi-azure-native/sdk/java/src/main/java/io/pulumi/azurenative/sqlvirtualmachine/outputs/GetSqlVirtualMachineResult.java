@@ -10,14 +10,14 @@ import io.pulumi.azurenative.sqlvirtualmachine.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.ServerConfigurationsManagementSettingsResponse;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.StorageConfigurationSettingsResponse;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.WsfcDomainCredentialsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSqlVirtualMachineResult {
     /**
      * Auto backup settings for SQL Server.
@@ -115,27 +115,27 @@ public final class GetSqlVirtualMachineResult {
      */
     private final @Nullable WsfcDomainCredentialsResponse wsfcDomainCredentials;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSqlVirtualMachineResult(
-        @OutputCustomType.Parameter("autoBackupSettings") @Nullable AutoBackupSettingsResponse autoBackupSettings,
-        @OutputCustomType.Parameter("autoPatchingSettings") @Nullable AutoPatchingSettingsResponse autoPatchingSettings,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
-        @OutputCustomType.Parameter("keyVaultCredentialSettings") @Nullable KeyVaultCredentialSettingsResponse keyVaultCredentialSettings,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("serverConfigurationsManagementSettings") @Nullable ServerConfigurationsManagementSettingsResponse serverConfigurationsManagementSettings,
-        @OutputCustomType.Parameter("sqlImageOffer") @Nullable String sqlImageOffer,
-        @OutputCustomType.Parameter("sqlImageSku") @Nullable String sqlImageSku,
-        @OutputCustomType.Parameter("sqlManagement") @Nullable String sqlManagement,
-        @OutputCustomType.Parameter("sqlServerLicenseType") @Nullable String sqlServerLicenseType,
-        @OutputCustomType.Parameter("sqlVirtualMachineGroupResourceId") @Nullable String sqlVirtualMachineGroupResourceId,
-        @OutputCustomType.Parameter("storageConfigurationSettings") @Nullable StorageConfigurationSettingsResponse storageConfigurationSettings,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualMachineResourceId") @Nullable String virtualMachineResourceId,
-        @OutputCustomType.Parameter("wsfcDomainCredentials") @Nullable WsfcDomainCredentialsResponse wsfcDomainCredentials) {
+        @CustomType.Parameter("autoBackupSettings") @Nullable AutoBackupSettingsResponse autoBackupSettings,
+        @CustomType.Parameter("autoPatchingSettings") @Nullable AutoPatchingSettingsResponse autoPatchingSettings,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @CustomType.Parameter("keyVaultCredentialSettings") @Nullable KeyVaultCredentialSettingsResponse keyVaultCredentialSettings,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("serverConfigurationsManagementSettings") @Nullable ServerConfigurationsManagementSettingsResponse serverConfigurationsManagementSettings,
+        @CustomType.Parameter("sqlImageOffer") @Nullable String sqlImageOffer,
+        @CustomType.Parameter("sqlImageSku") @Nullable String sqlImageSku,
+        @CustomType.Parameter("sqlManagement") @Nullable String sqlManagement,
+        @CustomType.Parameter("sqlServerLicenseType") @Nullable String sqlServerLicenseType,
+        @CustomType.Parameter("sqlVirtualMachineGroupResourceId") @Nullable String sqlVirtualMachineGroupResourceId,
+        @CustomType.Parameter("storageConfigurationSettings") @Nullable StorageConfigurationSettingsResponse storageConfigurationSettings,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualMachineResourceId") @Nullable String virtualMachineResourceId,
+        @CustomType.Parameter("wsfcDomainCredentials") @Nullable WsfcDomainCredentialsResponse wsfcDomainCredentials) {
         this.autoBackupSettings = autoBackupSettings;
         this.autoPatchingSettings = autoPatchingSettings;
         this.id = id;

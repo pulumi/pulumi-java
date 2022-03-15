@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ssm.inputs;
 
 import io.pulumi.awsnative.ssm.inputs.AssociationS3OutputLocationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -14,7 +14,7 @@ public final class AssociationInstanceAssociationOutputLocationArgs extends io.p
 
     public static final AssociationInstanceAssociationOutputLocationArgs Empty = new AssociationInstanceAssociationOutputLocationArgs();
 
-    @InputImport(name="s3Location")
+    @Import(name="s3Location")
       private final @Nullable Output<AssociationS3OutputLocationArgs> s3Location;
 
     public Output<AssociationS3OutputLocationArgs> getS3Location() {

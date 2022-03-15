@@ -3,24 +3,24 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionPortMapping {
     private final @Nullable Integer containerPort;
     private final @Nullable Integer hostPort;
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionPortMapping(
-        @OutputCustomType.Parameter("containerPort") @Nullable Integer containerPort,
-        @OutputCustomType.Parameter("hostPort") @Nullable Integer hostPort,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
+        @CustomType.Parameter("containerPort") @Nullable Integer containerPort,
+        @CustomType.Parameter("hostPort") @Nullable Integer hostPort,
+        @CustomType.Parameter("protocol") @Nullable String protocol) {
         this.containerPort = containerPort;
         this.hostPort = hostPort;
         this.protocol = protocol;

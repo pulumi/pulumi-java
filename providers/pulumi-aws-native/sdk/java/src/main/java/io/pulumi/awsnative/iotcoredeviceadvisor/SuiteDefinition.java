@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iotcoredeviceadvisor.SuiteDefinitionArgs;
 import io.pulumi.awsnative.iotcoredeviceadvisor.outputs.SuiteDefinitionConfigurationProperties;
 import io.pulumi.awsnative.iotcoredeviceadvisor.outputs.SuiteDefinitionTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class SuiteDefinition extends io.pulumi.resources.CustomResource {
      * The Amazon Resource name for the suite definition.
      * 
      */
-    @OutputExport(name="suiteDefinitionArn", type=String.class, parameters={})
+    @Export(name="suiteDefinitionArn", type=String.class, parameters={})
     private Output<String> suiteDefinitionArn;
 
     /**
@@ -36,7 +36,7 @@ public class SuiteDefinition extends io.pulumi.resources.CustomResource {
     public Output<String> getSuiteDefinitionArn() {
         return this.suiteDefinitionArn;
     }
-    @OutputExport(name="suiteDefinitionConfiguration", type=SuiteDefinitionConfigurationProperties.class, parameters={})
+    @Export(name="suiteDefinitionConfiguration", type=SuiteDefinitionConfigurationProperties.class, parameters={})
     private Output<SuiteDefinitionConfigurationProperties> suiteDefinitionConfiguration;
 
     public Output<SuiteDefinitionConfigurationProperties> getSuiteDefinitionConfiguration() {
@@ -46,7 +46,7 @@ public class SuiteDefinition extends io.pulumi.resources.CustomResource {
      * The unique identifier for the suite definition.
      * 
      */
-    @OutputExport(name="suiteDefinitionId", type=String.class, parameters={})
+    @Export(name="suiteDefinitionId", type=String.class, parameters={})
     private Output<String> suiteDefinitionId;
 
     /**
@@ -60,7 +60,7 @@ public class SuiteDefinition extends io.pulumi.resources.CustomResource {
      * The suite definition version of a test suite.
      * 
      */
-    @OutputExport(name="suiteDefinitionVersion", type=String.class, parameters={})
+    @Export(name="suiteDefinitionVersion", type=String.class, parameters={})
     private Output<String> suiteDefinitionVersion;
 
     /**
@@ -74,7 +74,7 @@ public class SuiteDefinition extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={SuiteDefinitionTag.class})
+    @Export(name="tags", type=List.class, parameters={SuiteDefinitionTag.class})
     private Output</* @Nullable */ List<SuiteDefinitionTag>> tags;
 
     /**

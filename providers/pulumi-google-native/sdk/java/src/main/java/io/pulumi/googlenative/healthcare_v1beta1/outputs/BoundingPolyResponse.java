@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.VertexResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BoundingPolyResponse {
     /**
      * A description of this polygon.
@@ -22,10 +22,10 @@ public final class BoundingPolyResponse {
      */
     private final List<VertexResponse> vertices;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BoundingPolyResponse(
-        @OutputCustomType.Parameter("label") String label,
-        @OutputCustomType.Parameter("vertices") List<VertexResponse> vertices) {
+        @CustomType.Parameter("label") String label,
+        @CustomType.Parameter("vertices") List<VertexResponse> vertices) {
         this.label = label;
         this.vertices = vertices;
     }

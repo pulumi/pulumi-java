@@ -46,11 +46,11 @@ var Nullable = Ident("javax").FQN().Dot("annotation").Dot("Nullable")
 
 var Objects = JavaUtil.Dot("Objects")
 
-var OutputCustomType = PulumiAnnotations.Dot("OutputCustomType")
+var CustomType = PulumiAnnotations.Dot("CustomType")
 
-var InputImport = PulumiAnnotations.Dot("InputImport")
+var Import = PulumiAnnotations.Dot("Import")
 
-var OutputExport = PulumiAnnotations.Dot("OutputExport")
+var Export = PulumiAnnotations.Dot("Export")
 
 var EnumType = PulumiAnnotations.Dot("EnumType")
 

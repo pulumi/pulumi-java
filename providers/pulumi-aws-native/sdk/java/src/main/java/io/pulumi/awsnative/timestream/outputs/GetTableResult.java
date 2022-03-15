@@ -6,14 +6,14 @@ package io.pulumi.awsnative.timestream.outputs;
 import io.pulumi.awsnative.timestream.outputs.MagneticStoreWritePropertiesProperties;
 import io.pulumi.awsnative.timestream.outputs.RetentionPropertiesProperties;
 import io.pulumi.awsnative.timestream.outputs.TableTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTableResult {
     private final @Nullable String arn;
     /**
@@ -37,13 +37,13 @@ public final class GetTableResult {
      */
     private final @Nullable List<TableTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTableResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("magneticStoreWriteProperties") @Nullable MagneticStoreWritePropertiesProperties magneticStoreWriteProperties,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("retentionProperties") @Nullable RetentionPropertiesProperties retentionProperties,
-        @OutputCustomType.Parameter("tags") @Nullable List<TableTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("magneticStoreWriteProperties") @Nullable MagneticStoreWritePropertiesProperties magneticStoreWriteProperties,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("retentionProperties") @Nullable RetentionPropertiesProperties retentionProperties,
+        @CustomType.Parameter("tags") @Nullable List<TableTag> tags) {
         this.arn = arn;
         this.magneticStoreWriteProperties = magneticStoreWriteProperties;
         this.name = name;

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.inputs.RoutingRuleUpdateParametersWebApplic
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +30,7 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Protocol schemes to match for this rule
      * 
      */
-    @InputImport(name="acceptedProtocols")
+    @Import(name="acceptedProtocols")
       private final @Nullable Output<List<Either<String,FrontDoorProtocol>>> acceptedProtocols;
 
     public Output<List<Either<String,FrontDoorProtocol>>> getAcceptedProtocols() {
@@ -41,7 +41,7 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable Output<Either<String,RoutingRuleEnabledState>> enabledState;
 
     public Output<Either<String,RoutingRuleEnabledState>> getEnabledState() {
@@ -52,7 +52,7 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Frontend endpoints associated with this rule
      * 
      */
-    @InputImport(name="frontendEndpoints")
+    @Import(name="frontendEndpoints")
       private final @Nullable Output<List<SubResourceArgs>> frontendEndpoints;
 
     public Output<List<SubResourceArgs>> getFrontendEndpoints() {
@@ -63,7 +63,7 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -74,7 +74,7 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Resource name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -85,7 +85,7 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The route patterns of the rule.
      * 
      */
-    @InputImport(name="patternsToMatch")
+    @Import(name="patternsToMatch")
       private final @Nullable Output<List<String>> patternsToMatch;
 
     public Output<List<String>> getPatternsToMatch() {
@@ -96,7 +96,7 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to the routing configuration.
      * 
      */
-    @InputImport(name="routeConfiguration")
+    @Import(name="routeConfiguration")
       private final @Nullable Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfiguration;
 
     public Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> getRouteConfiguration() {
@@ -107,7 +107,7 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to a specific Rules Engine Configuration to apply to this route.
      * 
      */
-    @InputImport(name="rulesEngine")
+    @Import(name="rulesEngine")
       private final @Nullable Output<SubResourceArgs> rulesEngine;
 
     public Output<SubResourceArgs> getRulesEngine() {
@@ -118,7 +118,7 @@ public final class RoutingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Defines the Web Application Firewall policy for each routing rule (if applicable)
      * 
      */
-    @InputImport(name="webApplicationFirewallPolicyLink")
+    @Import(name="webApplicationFirewallPolicyLink")
       private final @Nullable Output<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 
     public Output<RoutingRuleUpdateParametersWebApplicationFirewallPolicyLinkArgs> getWebApplicationFirewallPolicyLink() {

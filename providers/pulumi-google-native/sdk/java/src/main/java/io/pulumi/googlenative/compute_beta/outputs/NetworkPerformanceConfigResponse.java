@@ -3,16 +3,16 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkPerformanceConfigResponse {
     private final String totalEgressBandwidthTier;
 
-    @OutputCustomType.Constructor
-    private NetworkPerformanceConfigResponse(@OutputCustomType.Parameter("totalEgressBandwidthTier") String totalEgressBandwidthTier) {
+    @CustomType.Constructor
+    private NetworkPerformanceConfigResponse(@CustomType.Parameter("totalEgressBandwidthTier") String totalEgressBandwidthTier) {
         this.totalEgressBandwidthTier = totalEgressBandwidthTier;
     }
 

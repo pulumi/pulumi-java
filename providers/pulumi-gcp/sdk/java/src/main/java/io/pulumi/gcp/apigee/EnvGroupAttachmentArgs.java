@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class EnvGroupAttachmentArgs extends io.pulumi.resources.ResourceAr
      * in the format `organizations/{{org_name}}/envgroups/{{envgroup_name}}`.
      * 
      */
-    @InputImport(name="envgroupId", required=true)
+    @Import(name="envgroupId", required=true)
       private final Output<String> envgroupId;
 
     public Output<String> getEnvgroupId() {
@@ -29,7 +29,7 @@ public final class EnvGroupAttachmentArgs extends io.pulumi.resources.ResourceAr
      * The resource ID of the environment.
      * 
      */
-    @InputImport(name="environment", required=true)
+    @Import(name="environment", required=true)
       private final Output<String> environment;
 
     public Output<String> getEnvironment() {

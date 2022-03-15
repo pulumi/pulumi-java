@@ -5,14 +5,14 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.OptionsProperties;
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayMulticastDomainTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTransitGatewayMulticastDomainResult {
     /**
      * The time the transit gateway multicast domain was created.
@@ -45,14 +45,14 @@ public final class GetTransitGatewayMulticastDomainResult {
      */
     private final @Nullable String transitGatewayMulticastDomainId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTransitGatewayMulticastDomainResult(
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("options") @Nullable OptionsProperties options,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("tags") @Nullable List<TransitGatewayMulticastDomainTag> tags,
-        @OutputCustomType.Parameter("transitGatewayMulticastDomainArn") @Nullable String transitGatewayMulticastDomainArn,
-        @OutputCustomType.Parameter("transitGatewayMulticastDomainId") @Nullable String transitGatewayMulticastDomainId) {
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("options") @Nullable OptionsProperties options,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("tags") @Nullable List<TransitGatewayMulticastDomainTag> tags,
+        @CustomType.Parameter("transitGatewayMulticastDomainArn") @Nullable String transitGatewayMulticastDomainArn,
+        @CustomType.Parameter("transitGatewayMulticastDomainId") @Nullable String transitGatewayMulticastDomainId) {
         this.creationTime = creationTime;
         this.options = options;
         this.state = state;

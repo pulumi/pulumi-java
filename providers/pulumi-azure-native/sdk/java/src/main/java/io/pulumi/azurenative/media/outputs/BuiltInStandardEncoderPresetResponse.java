@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BuiltInStandardEncoderPresetResponse {
     /**
      * The discriminator for derived types.
@@ -21,10 +21,10 @@ public final class BuiltInStandardEncoderPresetResponse {
      */
     private final String presetName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BuiltInStandardEncoderPresetResponse(
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("presetName") String presetName) {
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("presetName") String presetName) {
         this.odataType = odataType;
         this.presetName = presetName;
     }

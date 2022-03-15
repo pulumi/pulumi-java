@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ResourcePolicyDailyCycleArgs extends io.pulumi.resources.Reso
      * Defines a schedule with units measured in months. The value determines how many months pass between the start of each cycle.
      * 
      */
-    @InputImport(name="daysInCycle")
+    @Import(name="daysInCycle")
       private final @Nullable Output<Integer> daysInCycle;
 
     public Output<Integer> getDaysInCycle() {
@@ -34,7 +34,7 @@ public final class ResourcePolicyDailyCycleArgs extends io.pulumi.resources.Reso
      * Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {

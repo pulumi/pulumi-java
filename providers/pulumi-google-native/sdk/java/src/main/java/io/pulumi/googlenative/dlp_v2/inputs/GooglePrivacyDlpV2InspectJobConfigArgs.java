@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ActionArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectConfigArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2StorageConfigArgs;
@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
      * Actions to execute at the completion of the job.
      * 
      */
-    @InputImport(name="actions")
+    @Import(name="actions")
       private final @Nullable Output<List<GooglePrivacyDlpV2ActionArgs>> actions;
 
     public Output<List<GooglePrivacyDlpV2ActionArgs>> getActions() {
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
      * How and what to scan for.
      * 
      */
-    @InputImport(name="inspectConfig")
+    @Import(name="inspectConfig")
       private final @Nullable Output<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
 
     public Output<GooglePrivacyDlpV2InspectConfigArgs> getInspectConfig() {
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
      * If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.
      * 
      */
-    @InputImport(name="inspectTemplateName")
+    @Import(name="inspectTemplateName")
       private final @Nullable Output<String> inspectTemplateName;
 
     public Output<String> getInspectTemplateName() {
@@ -59,7 +59,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
      * The data to scan.
      * 
      */
-    @InputImport(name="storageConfig")
+    @Import(name="storageConfig")
       private final @Nullable Output<GooglePrivacyDlpV2StorageConfigArgs> storageConfig;
 
     public Output<GooglePrivacyDlpV2StorageConfigArgs> getStorageConfig() {

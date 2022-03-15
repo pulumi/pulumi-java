@@ -10,13 +10,13 @@ import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamHttpEndpointReq
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamProcessingConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamRetryOptions;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamS3DestinationConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamHttpEndpointDestinationConfiguration {
     private final @Nullable DeliveryStreamBufferingHints bufferingHints;
     private final @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions;
@@ -28,17 +28,17 @@ public final class DeliveryStreamHttpEndpointDestinationConfiguration {
     private final @Nullable String s3BackupMode;
     private final DeliveryStreamS3DestinationConfiguration s3Configuration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamHttpEndpointDestinationConfiguration(
-        @OutputCustomType.Parameter("bufferingHints") @Nullable DeliveryStreamBufferingHints bufferingHints,
-        @OutputCustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
-        @OutputCustomType.Parameter("endpointConfiguration") DeliveryStreamHttpEndpointConfiguration endpointConfiguration,
-        @OutputCustomType.Parameter("processingConfiguration") @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
-        @OutputCustomType.Parameter("requestConfiguration") @Nullable DeliveryStreamHttpEndpointRequestConfiguration requestConfiguration,
-        @OutputCustomType.Parameter("retryOptions") @Nullable DeliveryStreamRetryOptions retryOptions,
-        @OutputCustomType.Parameter("roleARN") @Nullable String roleARN,
-        @OutputCustomType.Parameter("s3BackupMode") @Nullable String s3BackupMode,
-        @OutputCustomType.Parameter("s3Configuration") DeliveryStreamS3DestinationConfiguration s3Configuration) {
+        @CustomType.Parameter("bufferingHints") @Nullable DeliveryStreamBufferingHints bufferingHints,
+        @CustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
+        @CustomType.Parameter("endpointConfiguration") DeliveryStreamHttpEndpointConfiguration endpointConfiguration,
+        @CustomType.Parameter("processingConfiguration") @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
+        @CustomType.Parameter("requestConfiguration") @Nullable DeliveryStreamHttpEndpointRequestConfiguration requestConfiguration,
+        @CustomType.Parameter("retryOptions") @Nullable DeliveryStreamRetryOptions retryOptions,
+        @CustomType.Parameter("roleARN") @Nullable String roleARN,
+        @CustomType.Parameter("s3BackupMode") @Nullable String s3BackupMode,
+        @CustomType.Parameter("s3Configuration") DeliveryStreamS3DestinationConfiguration s3Configuration) {
         this.bufferingHints = bufferingHints;
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         this.endpointConfiguration = endpointConfiguration;

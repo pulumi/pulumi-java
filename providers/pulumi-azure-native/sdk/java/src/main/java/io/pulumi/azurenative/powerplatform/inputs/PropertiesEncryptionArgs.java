@@ -7,7 +7,7 @@ import io.pulumi.azurenative.powerplatform.enums.State;
 import io.pulumi.azurenative.powerplatform.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class PropertiesEncryptionArgs extends io.pulumi.resources.Resource
      * Key vault properties.
      * 
      */
-    @InputImport(name="keyVault")
+    @Import(name="keyVault")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVault;
 
     public Output<KeyVaultPropertiesArgs> getKeyVault() {
@@ -36,7 +36,7 @@ public final class PropertiesEncryptionArgs extends io.pulumi.resources.Resource
      * The state of onboarding, which only appears in the response.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<Either<String,State>> state;
 
     public Output<Either<String,State>> getState() {

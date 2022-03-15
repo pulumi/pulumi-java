@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
      * The CSV content type headers to capture.
      * 
      */
-    @InputImport(name="csvContentTypes")
+    @Import(name="csvContentTypes")
       private final @Nullable Output<List<String>> csvContentTypes;
 
     public Output<List<String>> getCsvContentTypes() {
@@ -30,7 +30,7 @@ public final class EndpointConfigurationDataCaptureConfigCaptureContentTypeHeade
      * The JSON content type headers to capture.
      * 
      */
-    @InputImport(name="jsonContentTypes")
+    @Import(name="jsonContentTypes")
       private final @Nullable Output<List<String>> jsonContentTypes;
 
     public Output<List<String>> getJsonContentTypes() {

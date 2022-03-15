@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetArtifactSourceResult {
     /**
      * The folder containing Azure Resource Manager templates.
@@ -93,24 +93,24 @@ public final class GetArtifactSourceResult {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetArtifactSourceResult(
-        @OutputCustomType.Parameter("armTemplateFolderPath") @Nullable String armTemplateFolderPath,
-        @OutputCustomType.Parameter("branchRef") @Nullable String branchRef,
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("folderPath") @Nullable String folderPath,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("securityToken") @Nullable String securityToken,
-        @OutputCustomType.Parameter("sourceType") @Nullable String sourceType,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
-        @OutputCustomType.Parameter("uri") @Nullable String uri) {
+        @CustomType.Parameter("armTemplateFolderPath") @Nullable String armTemplateFolderPath,
+        @CustomType.Parameter("branchRef") @Nullable String branchRef,
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("folderPath") @Nullable String folderPath,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("securityToken") @Nullable String securityToken,
+        @CustomType.Parameter("sourceType") @Nullable String sourceType,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
+        @CustomType.Parameter("uri") @Nullable String uri) {
         this.armTemplateFolderPath = armTemplateFolderPath;
         this.branchRef = branchRef;
         this.createdDate = createdDate;

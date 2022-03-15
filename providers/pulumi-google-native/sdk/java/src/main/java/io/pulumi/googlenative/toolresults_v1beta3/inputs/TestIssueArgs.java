@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.TestIssueCategory;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.TestIssueSeverity;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.TestIssueType;
@@ -26,7 +26,7 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
      * Category of issue. Required.
      * 
      */
-    @InputImport(name="category")
+    @Import(name="category")
       private final @Nullable Output<TestIssueCategory> category;
 
     public Output<TestIssueCategory> getCategory() {
@@ -37,7 +37,7 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
      * A brief human-readable message describing the issue. Required.
      * 
      */
-    @InputImport(name="errorMessage")
+    @Import(name="errorMessage")
       private final @Nullable Output<String> errorMessage;
 
     public Output<String> getErrorMessage() {
@@ -48,7 +48,7 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
      * Severity of issue. Required.
      * 
      */
-    @InputImport(name="severity")
+    @Import(name="severity")
       private final @Nullable Output<TestIssueSeverity> severity;
 
     public Output<TestIssueSeverity> getSeverity() {
@@ -59,7 +59,7 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
      * Type of issue. Required.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<TestIssueType> type;
 
     public Output<TestIssueType> getType() {
@@ -70,7 +70,7 @@ public final class TestIssueArgs extends io.pulumi.resources.ResourceArgs {
      * Warning message with additional details of the issue. Should always be a message from com.google.devtools.toolresults.v1.warnings
      * 
      */
-    @InputImport(name="warning")
+    @Import(name="warning")
       private final @Nullable Output<AnyArgs> warning;
 
     public Output<AnyArgs> getWarning() {

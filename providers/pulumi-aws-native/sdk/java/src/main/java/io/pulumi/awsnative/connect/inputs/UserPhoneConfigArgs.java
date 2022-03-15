@@ -5,7 +5,7 @@ package io.pulumi.awsnative.connect.inputs;
 
 import io.pulumi.awsnative.connect.enums.UserPhoneType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,28 +21,28 @@ public final class UserPhoneConfigArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final UserPhoneConfigArgs Empty = new UserPhoneConfigArgs();
 
-    @InputImport(name="afterContactWorkTimeLimit")
+    @Import(name="afterContactWorkTimeLimit")
       private final @Nullable Output<Integer> afterContactWorkTimeLimit;
 
     public Output<Integer> getAfterContactWorkTimeLimit() {
         return this.afterContactWorkTimeLimit == null ? Output.empty() : this.afterContactWorkTimeLimit;
     }
 
-    @InputImport(name="autoAccept")
+    @Import(name="autoAccept")
       private final @Nullable Output<Boolean> autoAccept;
 
     public Output<Boolean> getAutoAccept() {
         return this.autoAccept == null ? Output.empty() : this.autoAccept;
     }
 
-    @InputImport(name="deskPhoneNumber")
+    @Import(name="deskPhoneNumber")
       private final @Nullable Output<String> deskPhoneNumber;
 
     public Output<String> getDeskPhoneNumber() {
         return this.deskPhoneNumber == null ? Output.empty() : this.deskPhoneNumber;
     }
 
-    @InputImport(name="phoneType", required=true)
+    @Import(name="phoneType", required=true)
       private final Output<UserPhoneType> phoneType;
 
     public Output<UserPhoneType> getPhoneType() {

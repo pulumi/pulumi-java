@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoscalingPolicyWorkerConfig {
     /**
      * Maximum number of instances for this group. Note that by default, clusters will not use
@@ -40,11 +40,11 @@ public final class AutoscalingPolicyWorkerConfig {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscalingPolicyWorkerConfig(
-        @OutputCustomType.Parameter("maxInstances") Integer maxInstances,
-        @OutputCustomType.Parameter("minInstances") @Nullable Integer minInstances,
-        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
+        @CustomType.Parameter("maxInstances") Integer maxInstances,
+        @CustomType.Parameter("minInstances") @Nullable Integer minInstances,
+        @CustomType.Parameter("weight") @Nullable Integer weight) {
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
         this.weight = weight;

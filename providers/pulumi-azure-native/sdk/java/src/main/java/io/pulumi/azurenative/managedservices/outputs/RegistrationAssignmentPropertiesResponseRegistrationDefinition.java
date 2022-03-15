@@ -5,13 +5,13 @@ package io.pulumi.azurenative.managedservices.outputs;
 
 import io.pulumi.azurenative.managedservices.outputs.PlanResponse;
 import io.pulumi.azurenative.managedservices.outputs.RegistrationAssignmentPropertiesResponseProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegistrationAssignmentPropertiesResponseRegistrationDefinition {
     /**
      * Fully qualified path of the registration definition.
@@ -39,13 +39,13 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegistrationAssignmentPropertiesResponseRegistrationDefinition(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("plan") @Nullable PlanResponse plan,
-        @OutputCustomType.Parameter("properties") @Nullable RegistrationAssignmentPropertiesResponseProperties properties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("plan") @Nullable PlanResponse plan,
+        @CustomType.Parameter("properties") @Nullable RegistrationAssignmentPropertiesResponseProperties properties,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.plan = plan;

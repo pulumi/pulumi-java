@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionHostVolumeProperties {
     private final @Nullable String sourcePath;
 
-    @OutputCustomType.Constructor
-    private TaskDefinitionHostVolumeProperties(@OutputCustomType.Parameter("sourcePath") @Nullable String sourcePath) {
+    @CustomType.Constructor
+    private TaskDefinitionHostVolumeProperties(@CustomType.Parameter("sourcePath") @Nullable String sourcePath) {
         this.sourcePath = sourcePath;
     }
 

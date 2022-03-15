@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class DistributionOriginGroupFailoverCriteriaArgs extends io.pulumi
      * A list of HTTP status codes for the origin group
      * 
      */
-    @InputImport(name="statusCodes", required=true)
+    @Import(name="statusCodes", required=true)
       private final Output<List<Integer>> statusCodes;
 
     public Output<List<Integer>> getStatusCodes() {

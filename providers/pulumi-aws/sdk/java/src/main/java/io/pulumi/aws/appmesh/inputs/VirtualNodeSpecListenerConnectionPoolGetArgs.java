@@ -8,7 +8,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerConnectionPoolHttp2Ge
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerConnectionPoolHttpGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerConnectionPoolTcpGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class VirtualNodeSpecListenerConnectionPoolGetArgs extends io.pulum
      * Connection pool information for gRPC listeners.
      * 
      */
-    @InputImport(name="grpc")
+    @Import(name="grpc")
       private final @Nullable Output<VirtualNodeSpecListenerConnectionPoolGrpcGetArgs> grpc;
 
     public Output<VirtualNodeSpecListenerConnectionPoolGrpcGetArgs> getGrpc() {
@@ -32,7 +32,7 @@ public final class VirtualNodeSpecListenerConnectionPoolGetArgs extends io.pulum
      * Connection pool information for HTTP listeners.
      * 
      */
-    @InputImport(name="http")
+    @Import(name="http")
       private final @Nullable Output<VirtualNodeSpecListenerConnectionPoolHttpGetArgs> http;
 
     public Output<VirtualNodeSpecListenerConnectionPoolHttpGetArgs> getHttp() {
@@ -43,7 +43,7 @@ public final class VirtualNodeSpecListenerConnectionPoolGetArgs extends io.pulum
      * Connection pool information for HTTP2 listeners.
      * 
      */
-    @InputImport(name="http2")
+    @Import(name="http2")
       private final @Nullable Output<VirtualNodeSpecListenerConnectionPoolHttp2GetArgs> http2;
 
     public Output<VirtualNodeSpecListenerConnectionPoolHttp2GetArgs> getHttp2() {
@@ -54,7 +54,7 @@ public final class VirtualNodeSpecListenerConnectionPoolGetArgs extends io.pulum
      * Connection pool information for TCP listeners.
      * 
      */
-    @InputImport(name="tcp")
+    @Import(name="tcp")
       private final @Nullable Output<VirtualNodeSpecListenerConnectionPoolTcpGetArgs> tcp;
 
     public Output<VirtualNodeSpecListenerConnectionPoolTcpGetArgs> getTcp() {

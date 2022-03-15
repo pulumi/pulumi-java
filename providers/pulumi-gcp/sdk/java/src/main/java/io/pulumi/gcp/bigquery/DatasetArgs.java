@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.DatasetAccessArgs;
 import io.pulumi.gcp.bigquery.inputs.DatasetDefaultEncryptionConfigurationArgs;
 import java.lang.Boolean;
@@ -25,7 +25,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="accesses")
+    @Import(name="accesses")
       private final @Nullable Output<List<DatasetAccessArgs>> accesses;
 
     public Output<List<DatasetAccessArgs>> getAccesses() {
@@ -36,7 +36,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the dataset containing this table.
      * 
      */
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
     public Output<String> getDatasetId() {
@@ -50,7 +50,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="defaultEncryptionConfiguration")
+    @Import(name="defaultEncryptionConfiguration")
       private final @Nullable Output<DatasetDefaultEncryptionConfigurationArgs> defaultEncryptionConfiguration;
 
     public Output<DatasetDefaultEncryptionConfigurationArgs> getDefaultEncryptionConfiguration() {
@@ -62,7 +62,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * the dataset, in milliseconds.
      * 
      */
-    @InputImport(name="defaultPartitionExpirationMs")
+    @Import(name="defaultPartitionExpirationMs")
       private final @Nullable Output<Integer> defaultPartitionExpirationMs;
 
     public Output<Integer> getDefaultPartitionExpirationMs() {
@@ -74,7 +74,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * The minimum value is 3600000 milliseconds (one hour).
      * 
      */
-    @InputImport(name="defaultTableExpirationMs")
+    @Import(name="defaultTableExpirationMs")
       private final @Nullable Output<Integer> defaultTableExpirationMs;
 
     public Output<Integer> getDefaultTableExpirationMs() {
@@ -87,7 +87,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * destroying the resource will fail if tables are present.
      * 
      */
-    @InputImport(name="deleteContentsOnDestroy")
+    @Import(name="deleteContentsOnDestroy")
       private final @Nullable Output<Boolean> deleteContentsOnDestroy;
 
     public Output<Boolean> getDeleteContentsOnDestroy() {
@@ -98,7 +98,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * A user-friendly description of the dataset
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -109,7 +109,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * A descriptive name for the dataset
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -121,7 +121,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * organize and group your datasets
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -133,7 +133,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -145,7 +145,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

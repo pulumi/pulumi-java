@@ -4,7 +4,7 @@
 package io.pulumi.gcp.spanner;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
      * 
      */
-    @InputImport(name="config", required=true)
+    @Import(name="config", required=true)
       private final Output<String> config;
 
     public Output<String> getConfig() {
@@ -38,7 +38,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * unique per project and between 4 and 30 characters in length.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -50,7 +50,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * This must be set to true if you created a backup manually in the console.
      * 
      */
-    @InputImport(name="forceDestroy")
+    @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
     public Output<Boolean> getForceDestroy() {
@@ -62,7 +62,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -75,7 +75,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -87,7 +87,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * terraform.
      * 
      */
-    @InputImport(name="numNodes")
+    @Import(name="numNodes")
       private final @Nullable Output<Integer> numNodes;
 
     public Output<Integer> getNumNodes() {
@@ -99,7 +99,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * in terraform.
      * 
      */
-    @InputImport(name="processingUnits")
+    @Import(name="processingUnits")
       private final @Nullable Output<Integer> processingUnits;
 
     public Output<Integer> getProcessingUnits() {
@@ -111,7 +111,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

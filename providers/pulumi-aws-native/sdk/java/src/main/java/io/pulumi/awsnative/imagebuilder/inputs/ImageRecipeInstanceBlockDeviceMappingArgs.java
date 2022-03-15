@@ -5,7 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeEbsInstanceBlockDeviceSpecificationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ImageRecipeInstanceBlockDeviceMappingArgs extends io.pulumi.r
      * The device to which these mappings apply.
      * 
      */
-    @InputImport(name="deviceName")
+    @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -34,7 +34,7 @@ public final class ImageRecipeInstanceBlockDeviceMappingArgs extends io.pulumi.r
      * Use to manage Amazon EBS-specific configuration for this mapping.
      * 
      */
-    @InputImport(name="ebs")
+    @Import(name="ebs")
       private final @Nullable Output<ImageRecipeEbsInstanceBlockDeviceSpecificationArgs> ebs;
 
     public Output<ImageRecipeEbsInstanceBlockDeviceSpecificationArgs> getEbs() {
@@ -45,7 +45,7 @@ public final class ImageRecipeInstanceBlockDeviceMappingArgs extends io.pulumi.r
      * Use to remove a mapping from the parent image.
      * 
      */
-    @InputImport(name="noDevice")
+    @Import(name="noDevice")
       private final @Nullable Output<String> noDevice;
 
     public Output<String> getNoDevice() {
@@ -56,7 +56,7 @@ public final class ImageRecipeInstanceBlockDeviceMappingArgs extends io.pulumi.r
      * Use to manage instance ephemeral devices.
      * 
      */
-    @InputImport(name="virtualName")
+    @Import(name="virtualName")
       private final @Nullable Output<String> virtualName;
 
     public Output<String> getVirtualName() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotFulfillmentStartResponseSpecificationArgs;
 import io.pulumi.awsnative.lex.inputs.BotFulfillmentUpdateResponseSpecificationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -25,14 +25,14 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends io.pulumi.reso
      * Determines whether fulfillment updates are sent to the user. When this field is true, updates are sent.
      * 
      */
-    @InputImport(name="active", required=true)
+    @Import(name="active", required=true)
       private final Output<Boolean> active;
 
     public Output<Boolean> getActive() {
         return this.active;
     }
 
-    @InputImport(name="startResponse")
+    @Import(name="startResponse")
       private final @Nullable Output<BotFulfillmentStartResponseSpecificationArgs> startResponse;
 
     public Output<BotFulfillmentStartResponseSpecificationArgs> getStartResponse() {
@@ -43,14 +43,14 @@ public final class BotFulfillmentUpdatesSpecificationArgs extends io.pulumi.reso
      * The length of time that the fulfillment Lambda function should run before it times out.
      * 
      */
-    @InputImport(name="timeoutInSeconds")
+    @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
 
     public Output<Integer> getTimeoutInSeconds() {
         return this.timeoutInSeconds == null ? Output.empty() : this.timeoutInSeconds;
     }
 
-    @InputImport(name="updateResponse")
+    @Import(name="updateResponse")
       private final @Nullable Output<BotFulfillmentUpdateResponseSpecificationArgs> updateResponse;
 
     public Output<BotFulfillmentUpdateResponseSpecificationArgs> getUpdateResponse() {

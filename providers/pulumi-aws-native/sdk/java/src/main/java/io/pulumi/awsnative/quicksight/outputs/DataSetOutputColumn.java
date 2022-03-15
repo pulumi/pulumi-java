@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.enums.DataSetColumnDataType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSetOutputColumn {
     /**
      * <p>A description for a column.</p>
@@ -24,11 +24,11 @@ public final class DataSetOutputColumn {
     private final @Nullable String name;
     private final @Nullable DataSetColumnDataType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSetOutputColumn(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("type") @Nullable DataSetColumnDataType type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("type") @Nullable DataSetColumnDataType type) {
         this.description = description;
         this.name = name;
         this.type = type;

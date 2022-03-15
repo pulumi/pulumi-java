@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureClusterFleet {
     /**
      * - 
@@ -23,10 +23,10 @@ public final class AzureClusterFleet {
      */
     private final @Nullable String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureClusterFleet(
-        @OutputCustomType.Parameter("membership") @Nullable String membership,
-        @OutputCustomType.Parameter("project") @Nullable String project) {
+        @CustomType.Parameter("membership") @Nullable String membership,
+        @CustomType.Parameter("project") @Nullable String project) {
         this.membership = membership;
         this.project = project;
     }

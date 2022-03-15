@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ThemeMarginStyle extends io.pulumi.resources.InvokeArgs {
      * <p>This Boolean value controls whether to display sheet margins.</p>
      * 
      */
-    @InputImport(name="show")
+    @Import(name="show")
       private final @Nullable Boolean show;
 
     public Optional<Boolean> getShow() {

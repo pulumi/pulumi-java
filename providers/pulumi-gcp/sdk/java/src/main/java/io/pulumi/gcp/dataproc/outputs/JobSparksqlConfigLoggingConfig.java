@@ -3,17 +3,17 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobSparksqlConfigLoggingConfig {
     private final Map<String,String> driverLogLevels;
 
-    @OutputCustomType.Constructor
-    private JobSparksqlConfigLoggingConfig(@OutputCustomType.Parameter("driverLogLevels") Map<String,String> driverLogLevels) {
+    @CustomType.Constructor
+    private JobSparksqlConfigLoggingConfig(@CustomType.Parameter("driverLogLevels") Map<String,String> driverLogLevels) {
         this.driverLogLevels = driverLogLevels;
     }
 

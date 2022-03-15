@@ -12,7 +12,7 @@ import io.pulumi.azurenative.web.outputs.SiteConfigResponse;
 import io.pulumi.azurenative.web.outputs.SlotSwapStatusResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -39,7 +39,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Management information availability state for the app.
      * 
      */
-    @OutputExport(name="availabilityState", type=String.class, parameters={})
+    @Export(name="availabilityState", type=String.class, parameters={})
     private Output<String> availabilityState;
 
     /**
@@ -53,7 +53,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * <code>true</code> to enable client affinity; <code>false</code> to stop sending session affinity cookies, which route client requests in the same session to the same instance. Default is <code>true</code>.
      * 
      */
-    @OutputExport(name="clientAffinityEnabled", type=Boolean.class, parameters={})
+    @Export(name="clientAffinityEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> clientAffinityEnabled;
 
     /**
@@ -67,7 +67,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * <code>true</code> to enable client certificate authentication (TLS mutual authentication); otherwise, <code>false</code>. Default is <code>false</code>.
      * 
      */
-    @OutputExport(name="clientCertEnabled", type=Boolean.class, parameters={})
+    @Export(name="clientCertEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> clientCertEnabled;
 
     /**
@@ -81,7 +81,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * client certificate authentication comma-separated exclusion paths
      * 
      */
-    @OutputExport(name="clientCertExclusionPaths", type=String.class, parameters={})
+    @Export(name="clientCertExclusionPaths", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientCertExclusionPaths;
 
     /**
@@ -98,7 +98,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * - ClientCertEnabled: true and ClientCertMode: Optional means ClientCert is optional or accepted.
      * 
      */
-    @OutputExport(name="clientCertMode", type=String.class, parameters={})
+    @Export(name="clientCertMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientCertMode;
 
     /**
@@ -115,7 +115,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Size of the function container.
      * 
      */
-    @OutputExport(name="containerSize", type=Integer.class, parameters={})
+    @Export(name="containerSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> containerSize;
 
     /**
@@ -129,7 +129,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Unique identifier that verifies the custom domains assigned to the app. Customer will add this id to a txt record for verification.
      * 
      */
-    @OutputExport(name="customDomainVerificationId", type=String.class, parameters={})
+    @Export(name="customDomainVerificationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> customDomainVerificationId;
 
     /**
@@ -143,7 +143,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Maximum allowed daily memory-time quota (applicable on dynamic apps only).
      * 
      */
-    @OutputExport(name="dailyMemoryTimeQuota", type=Integer.class, parameters={})
+    @Export(name="dailyMemoryTimeQuota", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> dailyMemoryTimeQuota;
 
     /**
@@ -157,7 +157,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Default hostname of the app. Read-only.
      * 
      */
-    @OutputExport(name="defaultHostName", type=String.class, parameters={})
+    @Export(name="defaultHostName", type=String.class, parameters={})
     private Output<String> defaultHostName;
 
     /**
@@ -171,7 +171,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * <code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline).
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -186,7 +186,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * the app is not served on those hostnames.
      * 
      */
-    @OutputExport(name="enabledHostNames", type=List.class, parameters={String.class})
+    @Export(name="enabledHostNames", type=List.class, parameters={String.class})
     private Output<List<String>> enabledHostNames;
 
     /**
@@ -201,7 +201,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Hostname SSL states are used to manage the SSL bindings for app's hostnames.
      * 
      */
-    @OutputExport(name="hostNameSslStates", type=List.class, parameters={HostNameSslStateResponse.class})
+    @Export(name="hostNameSslStates", type=List.class, parameters={HostNameSslStateResponse.class})
     private Output</* @Nullable */ List<HostNameSslStateResponse>> hostNameSslStates;
 
     /**
@@ -215,7 +215,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Hostnames associated with the app.
      * 
      */
-    @OutputExport(name="hostNames", type=List.class, parameters={String.class})
+    @Export(name="hostNames", type=List.class, parameters={String.class})
     private Output<List<String>> hostNames;
 
     /**
@@ -230,7 +230,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      *  If <code>true</code>, the app is only accessible via API management process.
      * 
      */
-    @OutputExport(name="hostNamesDisabled", type=Boolean.class, parameters={})
+    @Export(name="hostNamesDisabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> hostNamesDisabled;
 
     /**
@@ -245,7 +245,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * App Service Environment to use for the app.
      * 
      */
-    @OutputExport(name="hostingEnvironmentProfile", type=HostingEnvironmentProfileResponse.class, parameters={})
+    @Export(name="hostingEnvironmentProfile", type=HostingEnvironmentProfileResponse.class, parameters={})
     private Output</* @Nullable */ HostingEnvironmentProfileResponse> hostingEnvironmentProfile;
 
     /**
@@ -260,7 +260,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * http requests
      * 
      */
-    @OutputExport(name="httpsOnly", type=Boolean.class, parameters={})
+    @Export(name="httpsOnly", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> httpsOnly;
 
     /**
@@ -275,7 +275,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Hyper-V sandbox.
      * 
      */
-    @OutputExport(name="hyperV", type=Boolean.class, parameters={})
+    @Export(name="hyperV", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> hyperV;
 
     /**
@@ -289,7 +289,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Managed service identity.
      * 
      */
-    @OutputExport(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
     /**
@@ -303,7 +303,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Specifies an operation id if this site has a pending operation.
      * 
      */
-    @OutputExport(name="inProgressOperationId", type=String.class, parameters={})
+    @Export(name="inProgressOperationId", type=String.class, parameters={})
     private Output<String> inProgressOperationId;
 
     /**
@@ -317,7 +317,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * <code>true</code> if the app is a default container; otherwise, <code>false</code>.
      * 
      */
-    @OutputExport(name="isDefaultContainer", type=Boolean.class, parameters={})
+    @Export(name="isDefaultContainer", type=Boolean.class, parameters={})
     private Output<Boolean> isDefaultContainer;
 
     /**
@@ -331,7 +331,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Obsolete: Hyper-V sandbox.
      * 
      */
-    @OutputExport(name="isXenon", type=Boolean.class, parameters={})
+    @Export(name="isXenon", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isXenon;
 
     /**
@@ -345,7 +345,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Identity to use for Key Vault Reference authentication.
      * 
      */
-    @OutputExport(name="keyVaultReferenceIdentity", type=String.class, parameters={})
+    @Export(name="keyVaultReferenceIdentity", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyVaultReferenceIdentity;
 
     /**
@@ -359,7 +359,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -373,7 +373,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Last time the app was modified, in UTC. Read-only.
      * 
      */
-    @OutputExport(name="lastModifiedTimeUtc", type=String.class, parameters={})
+    @Export(name="lastModifiedTimeUtc", type=String.class, parameters={})
     private Output<String> lastModifiedTimeUtc;
 
     /**
@@ -387,7 +387,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Resource Location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -402,7 +402,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * This only applies to Functions container.
      * 
      */
-    @OutputExport(name="maxNumberOfWorkers", type=Integer.class, parameters={})
+    @Export(name="maxNumberOfWorkers", type=Integer.class, parameters={})
     private Output<Integer> maxNumberOfWorkers;
 
     /**
@@ -417,7 +417,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -431,7 +431,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from tenants that site can be hosted with current settings. Read-only.
      * 
      */
-    @OutputExport(name="outboundIpAddresses", type=String.class, parameters={})
+    @Export(name="outboundIpAddresses", type=String.class, parameters={})
     private Output<String> outboundIpAddresses;
 
     /**
@@ -445,7 +445,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * List of IP addresses that the app uses for outbound connections (e.g. database access). Includes VIPs from all tenants except dataComponent. Read-only.
      * 
      */
-    @OutputExport(name="possibleOutboundIpAddresses", type=String.class, parameters={})
+    @Export(name="possibleOutboundIpAddresses", type=String.class, parameters={})
     private Output<String> possibleOutboundIpAddresses;
 
     /**
@@ -459,7 +459,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Site redundancy mode
      * 
      */
-    @OutputExport(name="redundancyMode", type=String.class, parameters={})
+    @Export(name="redundancyMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> redundancyMode;
 
     /**
@@ -473,7 +473,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Name of the repository site.
      * 
      */
-    @OutputExport(name="repositorySiteName", type=String.class, parameters={})
+    @Export(name="repositorySiteName", type=String.class, parameters={})
     private Output<String> repositorySiteName;
 
     /**
@@ -487,7 +487,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * <code>true</code> if reserved; otherwise, <code>false</code>.
      * 
      */
-    @OutputExport(name="reserved", type=Boolean.class, parameters={})
+    @Export(name="reserved", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> reserved;
 
     /**
@@ -501,7 +501,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Name of the resource group the app belongs to. Read-only.
      * 
      */
-    @OutputExport(name="resourceGroup", type=String.class, parameters={})
+    @Export(name="resourceGroup", type=String.class, parameters={})
     private Output<String> resourceGroup;
 
     /**
@@ -515,7 +515,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * <code>true</code> to stop SCM (KUDU) site when the app is stopped; otherwise, <code>false</code>. The default is <code>false</code>.
      * 
      */
-    @OutputExport(name="scmSiteAlsoStopped", type=Boolean.class, parameters={})
+    @Export(name="scmSiteAlsoStopped", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> scmSiteAlsoStopped;
 
     /**
@@ -529,7 +529,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Resource ID of the associated App Service plan, formatted as: "/subscriptions/{subscriptionID}/resourceGroups/{groupName}/providers/Microsoft.Web/serverfarms/{appServicePlanName}".
      * 
      */
-    @OutputExport(name="serverFarmId", type=String.class, parameters={})
+    @Export(name="serverFarmId", type=String.class, parameters={})
     private Output</* @Nullable */ String> serverFarmId;
 
     /**
@@ -543,7 +543,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Configuration of the app.
      * 
      */
-    @OutputExport(name="siteConfig", type=SiteConfigResponse.class, parameters={})
+    @Export(name="siteConfig", type=SiteConfigResponse.class, parameters={})
     private Output</* @Nullable */ SiteConfigResponse> siteConfig;
 
     /**
@@ -557,7 +557,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Status of the last deployment slot swap operation.
      * 
      */
-    @OutputExport(name="slotSwapStatus", type=SlotSwapStatusResponse.class, parameters={})
+    @Export(name="slotSwapStatus", type=SlotSwapStatusResponse.class, parameters={})
     private Output<SlotSwapStatusResponse> slotSwapStatus;
 
     /**
@@ -571,7 +571,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Current state of the app.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -585,7 +585,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Checks if Customer provided storage account is required
      * 
      */
-    @OutputExport(name="storageAccountRequired", type=Boolean.class, parameters={})
+    @Export(name="storageAccountRequired", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> storageAccountRequired;
 
     /**
@@ -599,7 +599,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * App suspended till in case memory-time quota is exceeded.
      * 
      */
-    @OutputExport(name="suspendedTill", type=String.class, parameters={})
+    @Export(name="suspendedTill", type=String.class, parameters={})
     private Output<String> suspendedTill;
 
     /**
@@ -613,7 +613,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -627,7 +627,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Specifies which deployment slot this app will swap into. Read-only.
      * 
      */
-    @OutputExport(name="targetSwapSlot", type=String.class, parameters={})
+    @Export(name="targetSwapSlot", type=String.class, parameters={})
     private Output<String> targetSwapSlot;
 
     /**
@@ -641,7 +641,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Azure Traffic Manager hostnames associated with the app. Read-only.
      * 
      */
-    @OutputExport(name="trafficManagerHostNames", type=List.class, parameters={String.class})
+    @Export(name="trafficManagerHostNames", type=List.class, parameters={String.class})
     private Output<List<String>> trafficManagerHostNames;
 
     /**
@@ -655,7 +655,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -669,7 +669,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * State indicating whether the app has exceeded its quota usage. Read-only.
      * 
      */
-    @OutputExport(name="usageState", type=String.class, parameters={})
+    @Export(name="usageState", type=String.class, parameters={})
     private Output<String> usageState;
 
     /**
@@ -684,7 +684,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * This must be of the form /subscriptions/{subscriptionName}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{vnetName}/subnets/{subnetName}
      * 
      */
-    @OutputExport(name="virtualNetworkSubnetId", type=String.class, parameters={})
+    @Export(name="virtualNetworkSubnetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> virtualNetworkSubnetId;
 
     /**

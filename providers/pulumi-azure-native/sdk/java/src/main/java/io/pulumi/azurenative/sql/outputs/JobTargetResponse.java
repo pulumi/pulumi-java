@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobTargetResponse {
     /**
      * The target database name.
@@ -47,15 +47,15 @@ public final class JobTargetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobTargetResponse(
-        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
-        @OutputCustomType.Parameter("elasticPoolName") @Nullable String elasticPoolName,
-        @OutputCustomType.Parameter("membershipType") @Nullable String membershipType,
-        @OutputCustomType.Parameter("refreshCredential") @Nullable String refreshCredential,
-        @OutputCustomType.Parameter("serverName") @Nullable String serverName,
-        @OutputCustomType.Parameter("shardMapName") @Nullable String shardMapName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("databaseName") @Nullable String databaseName,
+        @CustomType.Parameter("elasticPoolName") @Nullable String elasticPoolName,
+        @CustomType.Parameter("membershipType") @Nullable String membershipType,
+        @CustomType.Parameter("refreshCredential") @Nullable String refreshCredential,
+        @CustomType.Parameter("serverName") @Nullable String serverName,
+        @CustomType.Parameter("shardMapName") @Nullable String shardMapName,
+        @CustomType.Parameter("type") String type) {
         this.databaseName = databaseName;
         this.elasticPoolName = elasticPoolName;
         this.membershipType = membershipType;

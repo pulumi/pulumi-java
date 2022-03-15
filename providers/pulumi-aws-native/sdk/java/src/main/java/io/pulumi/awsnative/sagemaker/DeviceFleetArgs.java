@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker;
 import io.pulumi.awsnative.sagemaker.inputs.DeviceFleetEdgeOutputConfigArgs;
 import io.pulumi.awsnative.sagemaker.inputs.DeviceFleetTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * Description for the edge device fleet
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the edge device fleet
      * 
      */
-    @InputImport(name="deviceFleetName")
+    @Import(name="deviceFleetName")
       private final @Nullable Output<String> deviceFleetName;
 
     public Output<String> getDeviceFleetName() {
@@ -43,7 +43,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * S3 bucket and an ecryption key id (if available) to store outputs for the fleet
      * 
      */
-    @InputImport(name="outputConfig", required=true)
+    @Import(name="outputConfig", required=true)
       private final Output<DeviceFleetEdgeOutputConfigArgs> outputConfig;
 
     public Output<DeviceFleetEdgeOutputConfigArgs> getOutputConfig() {
@@ -54,7 +54,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * Role associated with the device fleet
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -65,7 +65,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * Associate tags with the resource
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DeviceFleetTagArgs>> tags;
 
     public Output<List<DeviceFleetTagArgs>> getTags() {

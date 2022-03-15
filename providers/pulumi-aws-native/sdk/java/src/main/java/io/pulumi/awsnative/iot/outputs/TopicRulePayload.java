@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.TopicRuleAction;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRulePayload {
     private final List<TopicRuleAction> actions;
     private final @Nullable String awsIotSqlVersion;
@@ -21,14 +21,14 @@ public final class TopicRulePayload {
     private final @Nullable Boolean ruleDisabled;
     private final String sql;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRulePayload(
-        @OutputCustomType.Parameter("actions") List<TopicRuleAction> actions,
-        @OutputCustomType.Parameter("awsIotSqlVersion") @Nullable String awsIotSqlVersion,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("errorAction") @Nullable TopicRuleAction errorAction,
-        @OutputCustomType.Parameter("ruleDisabled") @Nullable Boolean ruleDisabled,
-        @OutputCustomType.Parameter("sql") String sql) {
+        @CustomType.Parameter("actions") List<TopicRuleAction> actions,
+        @CustomType.Parameter("awsIotSqlVersion") @Nullable String awsIotSqlVersion,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("errorAction") @Nullable TopicRuleAction errorAction,
+        @CustomType.Parameter("ruleDisabled") @Nullable Boolean ruleDisabled,
+        @CustomType.Parameter("sql") String sql) {
         this.actions = actions;
         this.awsIotSqlVersion = awsIotSqlVersion;
         this.description = description;

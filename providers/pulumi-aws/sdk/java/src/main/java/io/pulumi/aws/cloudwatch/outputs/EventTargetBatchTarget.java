@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventTargetBatchTarget {
     /**
      * The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.
@@ -33,12 +33,12 @@ public final class EventTargetBatchTarget {
      */
     private final String jobName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventTargetBatchTarget(
-        @OutputCustomType.Parameter("arraySize") @Nullable Integer arraySize,
-        @OutputCustomType.Parameter("jobAttempts") @Nullable Integer jobAttempts,
-        @OutputCustomType.Parameter("jobDefinition") String jobDefinition,
-        @OutputCustomType.Parameter("jobName") String jobName) {
+        @CustomType.Parameter("arraySize") @Nullable Integer arraySize,
+        @CustomType.Parameter("jobAttempts") @Nullable Integer jobAttempts,
+        @CustomType.Parameter("jobDefinition") String jobDefinition,
+        @CustomType.Parameter("jobName") String jobName) {
         this.arraySize = arraySize;
         this.jobAttempts = jobAttempts;
         this.jobDefinition = jobDefinition;

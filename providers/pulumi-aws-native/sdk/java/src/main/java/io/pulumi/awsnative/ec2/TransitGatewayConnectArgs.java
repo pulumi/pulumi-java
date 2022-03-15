@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.ec2.inputs.TransitGatewayConnectOptionsArgs;
 import io.pulumi.awsnative.ec2.inputs.TransitGatewayConnectTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
      * The Connect attachment options.
      * 
      */
-    @InputImport(name="options", required=true)
+    @Import(name="options", required=true)
       private final Output<TransitGatewayConnectOptionsArgs> options;
 
     public Output<TransitGatewayConnectOptionsArgs> getOptions() {
@@ -32,7 +32,7 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
      * The tags for the attachment.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<TransitGatewayConnectTagArgs>> tags;
 
     public Output<List<TransitGatewayConnectTagArgs>> getTags() {
@@ -43,7 +43,7 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
      * The ID of the attachment from which the Connect attachment was created.
      * 
      */
-    @InputImport(name="transportTransitGatewayAttachmentId", required=true)
+    @Import(name="transportTransitGatewayAttachmentId", required=true)
       private final Output<String> transportTransitGatewayAttachmentId;
 
     public Output<String> getTransportTransitGatewayAttachmentId() {

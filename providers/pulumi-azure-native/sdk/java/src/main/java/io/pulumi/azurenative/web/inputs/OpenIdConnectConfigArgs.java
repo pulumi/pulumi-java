@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
      * The endpoint to be used to make an authorization request.
      * 
      */
-    @InputImport(name="authorizationEndpoint")
+    @Import(name="authorizationEndpoint")
       private final @Nullable Output<String> authorizationEndpoint;
 
     public Output<String> getAuthorizationEndpoint() {
@@ -33,7 +33,7 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
      * The endpoint that provides the keys necessary to validate the token.
      * 
      */
-    @InputImport(name="certificationUri")
+    @Import(name="certificationUri")
       private final @Nullable Output<String> certificationUri;
 
     public Output<String> getCertificationUri() {
@@ -44,7 +44,7 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
      * The endpoint that issues the token.
      * 
      */
-    @InputImport(name="issuer")
+    @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
     public Output<String> getIssuer() {
@@ -55,7 +55,7 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
      * The endpoint to be used to request a token.
      * 
      */
-    @InputImport(name="tokenEndpoint")
+    @Import(name="tokenEndpoint")
       private final @Nullable Output<String> tokenEndpoint;
 
     public Output<String> getTokenEndpoint() {
@@ -66,7 +66,7 @@ public final class OpenIdConnectConfigArgs extends io.pulumi.resources.ResourceA
      * The endpoint that contains all the configuration endpoints for the provider.
      * 
      */
-    @InputImport(name="wellKnownOpenIdConfiguration")
+    @Import(name="wellKnownOpenIdConfiguration")
       private final @Nullable Output<String> wellKnownOpenIdConfiguration;
 
     public Output<String> getWellKnownOpenIdConfiguration() {

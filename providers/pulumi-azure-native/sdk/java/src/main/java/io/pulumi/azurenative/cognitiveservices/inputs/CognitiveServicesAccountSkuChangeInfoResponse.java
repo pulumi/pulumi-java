@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends io.pulu
      * Gets the count of downgrades.
      * 
      */
-    @InputImport(name="countOfDowngrades", required=true)
+    @Import(name="countOfDowngrades", required=true)
       private final Double countOfDowngrades;
 
     public Double getCountOfDowngrades() {
@@ -32,7 +32,7 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends io.pulu
      * Gets the count of upgrades after downgrades.
      * 
      */
-    @InputImport(name="countOfUpgradesAfterDowngrades", required=true)
+    @Import(name="countOfUpgradesAfterDowngrades", required=true)
       private final Double countOfUpgradesAfterDowngrades;
 
     public Double getCountOfUpgradesAfterDowngrades() {
@@ -43,7 +43,7 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends io.pulu
      * Gets the last change date.
      * 
      */
-    @InputImport(name="lastChangeDate", required=true)
+    @Import(name="lastChangeDate", required=true)
       private final String lastChangeDate;
 
     public String getLastChangeDate() {

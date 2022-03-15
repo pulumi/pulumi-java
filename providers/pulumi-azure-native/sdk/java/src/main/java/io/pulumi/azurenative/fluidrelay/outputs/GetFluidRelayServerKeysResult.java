@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.fluidrelay.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFluidRelayServerKeysResult {
     /**
      * The primary key for this server
@@ -20,10 +20,10 @@ public final class GetFluidRelayServerKeysResult {
      */
     private final String key2;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFluidRelayServerKeysResult(
-        @OutputCustomType.Parameter("key1") String key1,
-        @OutputCustomType.Parameter("key2") String key2) {
+        @CustomType.Parameter("key1") String key1,
+        @CustomType.Parameter("key2") String key2) {
         this.key1 = key1;
         this.key2 = key2;
     }

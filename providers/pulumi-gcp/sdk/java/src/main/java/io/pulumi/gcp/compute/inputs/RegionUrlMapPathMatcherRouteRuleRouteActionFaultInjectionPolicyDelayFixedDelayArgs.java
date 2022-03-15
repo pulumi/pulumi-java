@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
      * `nanos` field. Must be from 0 to 999,999,999 inclusive.
      * 
      */
-    @InputImport(name="nanos")
+    @Import(name="nanos")
       private final @Nullable Output<Integer> nanos;
 
     public Output<Integer> getNanos() {
@@ -33,7 +33,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
      * inclusive.
      * 
      */
-    @InputImport(name="seconds", required=true)
+    @Import(name="seconds", required=true)
       private final Output<String> seconds;
 
     public Output<String> getSeconds() {

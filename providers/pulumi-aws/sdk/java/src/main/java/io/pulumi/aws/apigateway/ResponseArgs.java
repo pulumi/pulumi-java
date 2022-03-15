@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
      * A map specifying the parameters (paths, query strings and headers) of the Gateway Response.
      * 
      */
-    @InputImport(name="responseParameters")
+    @Import(name="responseParameters")
       private final @Nullable Output<Map<String,String>> responseParameters;
 
     public Output<Map<String,String>> getResponseParameters() {
@@ -30,7 +30,7 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
      * A map specifying the templates used to transform the response body.
      * 
      */
-    @InputImport(name="responseTemplates")
+    @Import(name="responseTemplates")
       private final @Nullable Output<Map<String,String>> responseTemplates;
 
     public Output<Map<String,String>> getResponseTemplates() {
@@ -41,7 +41,7 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
      * The response type of the associated GatewayResponse.
      * 
      */
-    @InputImport(name="responseType", required=true)
+    @Import(name="responseType", required=true)
       private final Output<String> responseType;
 
     public Output<String> getResponseType() {
@@ -52,7 +52,7 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
      * The string identifier of the associated REST API.
      * 
      */
-    @InputImport(name="restApiId", required=true)
+    @Import(name="restApiId", required=true)
       private final Output<String> restApiId;
 
     public Output<String> getRestApiId() {
@@ -63,7 +63,7 @@ public final class ResponseArgs extends io.pulumi.resources.ResourceArgs {
      * The HTTP status code of the Gateway Response.
      * 
      */
-    @InputImport(name="statusCode")
+    @Import(name="statusCode")
       private final @Nullable Output<String> statusCode;
 
     public Output<String> getStatusCode() {

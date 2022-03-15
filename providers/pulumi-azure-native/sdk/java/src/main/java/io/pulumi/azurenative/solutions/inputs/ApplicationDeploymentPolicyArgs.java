@@ -6,7 +6,7 @@ package io.pulumi.azurenative.solutions.inputs;
 import io.pulumi.azurenative.solutions.enums.DeploymentMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ApplicationDeploymentPolicyArgs extends io.pulumi.resources.R
      * The managed application deployment mode.
      * 
      */
-    @InputImport(name="deploymentMode", required=true)
+    @Import(name="deploymentMode", required=true)
       private final Output<Either<String,DeploymentMode>> deploymentMode;
 
     public Output<Either<String,DeploymentMode>> getDeploymentMode() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
      * Enables the processing of files that contain only one column.
      * 
      */
-    @InputImport(name="allowSingleColumn")
+    @Import(name="allowSingleColumn")
       private final @Nullable Output<Boolean> allowSingleColumn;
 
     public Output<Boolean> getAllowSingleColumn() {
@@ -31,7 +31,7 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
      * Indicates whether the CSV file contains a header. This can be one of "ABSENT", "PRESENT", or "UNKNOWN".
      * 
      */
-    @InputImport(name="containsHeader")
+    @Import(name="containsHeader")
       private final @Nullable Output<String> containsHeader;
 
     public Output<String> getContainsHeader() {
@@ -42,7 +42,7 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
      * The delimiter used in the Csv to separate columns.
      * 
      */
-    @InputImport(name="delimiter")
+    @Import(name="delimiter")
       private final @Nullable Output<String> delimiter;
 
     public Output<String> getDelimiter() {
@@ -53,7 +53,7 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
      * Specifies whether to trim column values.
      * 
      */
-    @InputImport(name="disableValueTrimming")
+    @Import(name="disableValueTrimming")
       private final @Nullable Output<Boolean> disableValueTrimming;
 
     public Output<Boolean> getDisableValueTrimming() {
@@ -64,7 +64,7 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
      * A list of strings representing column names.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Output<List<String>> headers;
 
     public Output<List<String>> getHeaders() {
@@ -75,7 +75,7 @@ public final class ClassifierCsvClassifierArgs extends io.pulumi.resources.Resou
      * A custom symbol to denote what combines content into a single column value. It must be different from the column delimiter.
      * 
      */
-    @InputImport(name="quoteSymbol")
+    @Import(name="quoteSymbol")
       private final @Nullable Output<String> quoteSymbol;
 
     public Output<String> getQuoteSymbol() {

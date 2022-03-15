@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudscheduler.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudscheduler.inputs.JobHttpTargetOauthTokenArgs;
 import io.pulumi.gcp.cloudscheduler.inputs.JobHttpTargetOidcTokenArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * A base64-encoded string.
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<String> body;
 
     public Output<String> getBody() {
@@ -36,7 +36,7 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Repeated headers are not supported, but a header value can contain commas.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Output<Map<String,String>> headers;
 
     public Output<Map<String,String>> getHeaders() {
@@ -47,7 +47,7 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Which HTTP method to use for the request.
      * 
      */
-    @InputImport(name="httpMethod")
+    @Import(name="httpMethod")
       private final @Nullable Output<String> httpMethod;
 
     public Output<String> getHttpMethod() {
@@ -60,7 +60,7 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="oauthToken")
+    @Import(name="oauthToken")
       private final @Nullable Output<JobHttpTargetOauthTokenArgs> oauthToken;
 
     public Output<JobHttpTargetOauthTokenArgs> getOauthToken() {
@@ -73,7 +73,7 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="oidcToken")
+    @Import(name="oidcToken")
       private final @Nullable Output<JobHttpTargetOidcTokenArgs> oidcToken;
 
     public Output<JobHttpTargetOidcTokenArgs> getOidcToken() {
@@ -84,7 +84,7 @@ public final class JobHttpTargetArgs extends io.pulumi.resources.ResourceArgs {
      * The full URI path that the request will be sent to.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {

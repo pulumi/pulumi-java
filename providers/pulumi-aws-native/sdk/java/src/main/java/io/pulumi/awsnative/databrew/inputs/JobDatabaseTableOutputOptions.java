@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.JobS3Location;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class JobDatabaseTableOutputOptions extends io.pulumi.resources.Inv
 
     public static final JobDatabaseTableOutputOptions Empty = new JobDatabaseTableOutputOptions();
 
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final String tableName;
 
     public String getTableName() {
         return this.tableName;
     }
 
-    @InputImport(name="tempDirectory")
+    @Import(name="tempDirectory")
       private final @Nullable JobS3Location tempDirectory;
 
     public Optional<JobS3Location> getTempDirectory() {

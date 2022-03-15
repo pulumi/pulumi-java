@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGlobalAddressResult {
     /**
      * The static IP address represented by this resource.
@@ -103,26 +103,26 @@ public final class GetGlobalAddressResult {
      */
     private final List<String> users;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGlobalAddressResult(
-        @OutputCustomType.Parameter("address") String address,
-        @OutputCustomType.Parameter("addressType") String addressType,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("ipVersion") String ipVersion,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("networkTier") String networkTier,
-        @OutputCustomType.Parameter("prefixLength") Integer prefixLength,
-        @OutputCustomType.Parameter("purpose") String purpose,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork,
-        @OutputCustomType.Parameter("users") List<String> users) {
+        @CustomType.Parameter("address") String address,
+        @CustomType.Parameter("addressType") String addressType,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("ipVersion") String ipVersion,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("networkTier") String networkTier,
+        @CustomType.Parameter("prefixLength") Integer prefixLength,
+        @CustomType.Parameter("purpose") String purpose,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("subnetwork") String subnetwork,
+        @CustomType.Parameter("users") List<String> users) {
         this.address = address;
         this.addressType = addressType;
         this.creationTimestamp = creationTimestamp;

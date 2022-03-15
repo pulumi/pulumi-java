@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SiteConfigResponse {
     /**
      * .NET Framework version.
@@ -17,8 +17,8 @@ public final class SiteConfigResponse {
      */
     private final @Nullable String netFrameworkVersion;
 
-    @OutputCustomType.Constructor
-    private SiteConfigResponse(@OutputCustomType.Parameter("netFrameworkVersion") @Nullable String netFrameworkVersion) {
+    @CustomType.Constructor
+    private SiteConfigResponse(@CustomType.Parameter("netFrameworkVersion") @Nullable String netFrameworkVersion) {
         this.netFrameworkVersion = netFrameworkVersion;
     }
 

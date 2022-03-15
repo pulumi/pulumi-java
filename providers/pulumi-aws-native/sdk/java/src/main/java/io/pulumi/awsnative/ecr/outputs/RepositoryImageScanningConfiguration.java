@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.ecr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RepositoryImageScanningConfiguration {
     private final @Nullable Boolean scanOnPush;
 
-    @OutputCustomType.Constructor
-    private RepositoryImageScanningConfiguration(@OutputCustomType.Parameter("scanOnPush") @Nullable Boolean scanOnPush) {
+    @CustomType.Constructor
+    private RepositoryImageScanningConfiguration(@CustomType.Parameter("scanOnPush") @Nullable Boolean scanOnPush) {
         this.scanOnPush = scanOnPush;
     }
 

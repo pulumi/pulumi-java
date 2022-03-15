@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AliasPathMetadataResponse {
     /**
      * The attributes of the token that the alias path is referring to.
@@ -20,10 +20,10 @@ public final class AliasPathMetadataResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AliasPathMetadataResponse(
-        @OutputCustomType.Parameter("attributes") String attributes,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("attributes") String attributes,
+        @CustomType.Parameter("type") String type) {
         this.attributes = attributes;
         this.type = type;
     }

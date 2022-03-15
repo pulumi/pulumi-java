@@ -6,14 +6,14 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.enums.WebACLPositionalConstraint;
 import io.pulumi.awsnative.wafv2.outputs.WebACLFieldToMatch;
 import io.pulumi.awsnative.wafv2.outputs.WebACLTextTransformation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebACLByteMatchStatement {
     private final WebACLFieldToMatch fieldToMatch;
     private final WebACLPositionalConstraint positionalConstraint;
@@ -21,13 +21,13 @@ public final class WebACLByteMatchStatement {
     private final @Nullable String searchStringBase64;
     private final List<WebACLTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebACLByteMatchStatement(
-        @OutputCustomType.Parameter("fieldToMatch") WebACLFieldToMatch fieldToMatch,
-        @OutputCustomType.Parameter("positionalConstraint") WebACLPositionalConstraint positionalConstraint,
-        @OutputCustomType.Parameter("searchString") @Nullable String searchString,
-        @OutputCustomType.Parameter("searchStringBase64") @Nullable String searchStringBase64,
-        @OutputCustomType.Parameter("textTransformations") List<WebACLTextTransformation> textTransformations) {
+        @CustomType.Parameter("fieldToMatch") WebACLFieldToMatch fieldToMatch,
+        @CustomType.Parameter("positionalConstraint") WebACLPositionalConstraint positionalConstraint,
+        @CustomType.Parameter("searchString") @Nullable String searchString,
+        @CustomType.Parameter("searchStringBase64") @Nullable String searchStringBase64,
+        @CustomType.Parameter("textTransformations") List<WebACLTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.positionalConstraint = positionalConstraint;
         this.searchString = searchString;

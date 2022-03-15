@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetImageOutputResourceAmi extends io.pulumi.resources.InvokeA
      * Account identifier of the AMI.
      * 
      */
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final String accountId;
 
     public String getAccountId() {
@@ -27,7 +27,7 @@ public final class GetImageOutputResourceAmi extends io.pulumi.resources.InvokeA
      * Description of the AMI.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -38,7 +38,7 @@ public final class GetImageOutputResourceAmi extends io.pulumi.resources.InvokeA
      * Identifier of the AMI.
      * 
      */
-    @InputImport(name="image", required=true)
+    @Import(name="image", required=true)
       private final String image;
 
     public String getImage() {
@@ -49,7 +49,7 @@ public final class GetImageOutputResourceAmi extends io.pulumi.resources.InvokeA
      * Name of the AMI.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -60,7 +60,7 @@ public final class GetImageOutputResourceAmi extends io.pulumi.resources.InvokeA
      * Region of the AMI.
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final String region;
 
     public String getRegion() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceQuotaStatus {
     /**
      * Hard is the set of enforced hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
@@ -22,10 +22,10 @@ public final class ResourceQuotaStatus {
      */
     private final @Nullable Map<String,String> used;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceQuotaStatus(
-        @OutputCustomType.Parameter("hard") @Nullable Map<String,String> hard,
-        @OutputCustomType.Parameter("used") @Nullable Map<String,String> used) {
+        @CustomType.Parameter("hard") @Nullable Map<String,String> hard,
+        @CustomType.Parameter("used") @Nullable Map<String,String> used) {
         this.hard = hard;
         this.used = used;
     }

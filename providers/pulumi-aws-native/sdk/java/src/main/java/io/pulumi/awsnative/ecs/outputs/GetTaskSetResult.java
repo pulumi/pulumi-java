@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.outputs.TaskSetScale;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTaskSetResult {
     /**
      * The ID of the task set.
@@ -23,10 +23,10 @@ public final class GetTaskSetResult {
      */
     private final @Nullable TaskSetScale scale;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTaskSetResult(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("scale") @Nullable TaskSetScale scale) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("scale") @Nullable TaskSetScale scale) {
         this.id = id;
         this.scale = scale;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudasset_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudasset_v1.inputs.QueryContentArgs;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * The query content.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<QueryContentArgs> content;
 
     public Output<QueryContentArgs> getContent() {
@@ -31,7 +31,7 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * The description of this saved query. This value should be fewer than 255 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * Labels applied on the resource. This value should not contain more than 10 entries. The key and value of each entry must be non-empty and fewer than 64 characters.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -53,28 +53,28 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the saved query. The format must be: * projects/project_number/savedQueries/saved_query_id * folders/folder_number/savedQueries/saved_query_id * organizations/organization_number/savedQueries/saved_query_id
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="savedQueryId", required=true)
+    @Import(name="savedQueryId", required=true)
       private final Output<String> savedQueryId;
 
     public Output<String> getSavedQueryId() {
         return this.savedQueryId;
     }
 
-    @InputImport(name="v1Id", required=true)
+    @Import(name="v1Id", required=true)
       private final Output<String> v1Id;
 
     public Output<String> getV1Id() {
         return this.v1Id;
     }
 
-    @InputImport(name="v1Id1", required=true)
+    @Import(name="v1Id1", required=true)
       private final Output<String> v1Id1;
 
     public Output<String> getV1Id1() {

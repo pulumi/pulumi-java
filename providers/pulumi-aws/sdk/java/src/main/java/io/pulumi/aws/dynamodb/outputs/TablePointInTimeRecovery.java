@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TablePointInTimeRecovery {
     /**
      * Indicates whether ttl is enabled (true) or disabled (false).
@@ -15,8 +15,8 @@ public final class TablePointInTimeRecovery {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private TablePointInTimeRecovery(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private TablePointInTimeRecovery(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

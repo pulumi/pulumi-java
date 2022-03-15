@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.blueprint.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultReferenceResponse {
     /**
      * Azure resource ID of the Key Vault.
@@ -15,8 +15,8 @@ public final class KeyVaultReferenceResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
-    private KeyVaultReferenceResponse(@OutputCustomType.Parameter("id") String id) {
+    @CustomType.Constructor
+    private KeyVaultReferenceResponse(@CustomType.Parameter("id") String id) {
         this.id = id;
     }
 

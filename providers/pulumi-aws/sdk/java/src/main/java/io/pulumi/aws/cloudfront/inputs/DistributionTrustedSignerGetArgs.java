@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.DistributionTrustedSignerItemGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DistributionTrustedSignerGetArgs extends io.pulumi.resources.
      * A flag that specifies whether Origin Shield is enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -31,7 +31,7 @@ public final class DistributionTrustedSignerGetArgs extends io.pulumi.resources.
      * List of nested attributes for each trusted signer
      * 
      */
-    @InputImport(name="items")
+    @Import(name="items")
       private final @Nullable Output<List<DistributionTrustedSignerItemGetArgs>> items;
 
     public Output<List<DistributionTrustedSignerItemGetArgs>> getItems() {

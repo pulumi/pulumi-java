@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetManagedPrefixListFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetManagedPrefixListArgs extends io.pulumi.resources.InvokeAr
      * Configuration block(s) for filtering. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetManagedPrefixListFilter> filters;
 
     public List<GetManagedPrefixListFilter> getFilters() {
@@ -32,7 +32,7 @@ public final class GetManagedPrefixListArgs extends io.pulumi.resources.InvokeAr
      * The ID of the prefix list to select.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -43,7 +43,7 @@ public final class GetManagedPrefixListArgs extends io.pulumi.resources.InvokeAr
      * The name of the filter field. Valid values can be found in the EC2 [DescribeManagedPrefixLists](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeManagedPrefixLists.html) API Reference.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -54,7 +54,7 @@ public final class GetManagedPrefixListArgs extends io.pulumi.resources.InvokeAr
      * A map of tags assigned to the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

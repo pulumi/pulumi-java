@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DnsKeySpecResponse {
     /**
      * String mnemonic specifying the DNSSEC algorithm of this key.
@@ -27,12 +27,12 @@ public final class DnsKeySpecResponse {
     private final String keyType;
     private final String kind;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DnsKeySpecResponse(
-        @OutputCustomType.Parameter("algorithm") String algorithm,
-        @OutputCustomType.Parameter("keyLength") Integer keyLength,
-        @OutputCustomType.Parameter("keyType") String keyType,
-        @OutputCustomType.Parameter("kind") String kind) {
+        @CustomType.Parameter("algorithm") String algorithm,
+        @CustomType.Parameter("keyLength") Integer keyLength,
+        @CustomType.Parameter("keyType") String keyType,
+        @CustomType.Parameter("kind") String kind) {
         this.algorithm = algorithm;
         this.keyLength = keyLength;
         this.keyType = keyType;

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -42,7 +42,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable Output<Either<String,GoogleAdWordsAuthenticationType>> authenticationType;
 
     public Output<Either<String,GoogleAdWordsAuthenticationType>> getAuthenticationType() {
@@ -53,7 +53,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * The Client customer ID of the AdWords account that you want to fetch report data for.
      * 
      */
-    @InputImport(name="clientCustomerID")
+    @Import(name="clientCustomerID")
       private final @Nullable Output<Object> clientCustomerID;
 
     public Output<Object> getClientCustomerID() {
@@ -64,7 +64,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<Object> clientId;
 
     public Output<Object> getClientId() {
@@ -75,7 +75,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * The client secret of the google application used to acquire the refresh token.
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getClientSecret() {
@@ -86,7 +86,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -97,7 +97,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * Properties used to connect to GoogleAds. It is mutually exclusive with any other properties in the linked service. Type: object.
      * 
      */
-    @InputImport(name="connectionProperties")
+    @Import(name="connectionProperties")
       private final @Nullable Output<Object> connectionProperties;
 
     public Output<Object> getConnectionProperties() {
@@ -108,7 +108,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -119,7 +119,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * The developer token associated with the manager account that you use to grant access to the AdWords API.
      * 
      */
-    @InputImport(name="developerToken")
+    @Import(name="developerToken")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> developerToken;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getDeveloperToken() {
@@ -130,7 +130,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<Object> email;
 
     public Output<Object> getEmail() {
@@ -141,7 +141,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -152,7 +152,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR.
      * 
      */
-    @InputImport(name="keyFilePath")
+    @Import(name="keyFilePath")
       private final @Nullable Output<Object> keyFilePath;
 
     public Output<Object> getKeyFilePath() {
@@ -163,7 +163,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -174,7 +174,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.
      * 
      */
-    @InputImport(name="refreshToken")
+    @Import(name="refreshToken")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getRefreshToken() {
@@ -185,7 +185,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
      * 
      */
-    @InputImport(name="trustedCertPath")
+    @Import(name="trustedCertPath")
       private final @Nullable Output<Object> trustedCertPath;
 
     public Output<Object> getTrustedCertPath() {
@@ -197,7 +197,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * Expected value is 'GoogleAdWords'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -208,7 +208,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
      * Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
      * 
      */
-    @InputImport(name="useSystemTrustStore")
+    @Import(name="useSystemTrustStore")
       private final @Nullable Output<Object> useSystemTrustStore;
 
     public Output<Object> getUseSystemTrustStore() {

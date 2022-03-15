@@ -5,13 +5,13 @@ package io.pulumi.azurenative.containerinstance.outputs;
 
 import io.pulumi.azurenative.containerinstance.outputs.ContainerExecResponse;
 import io.pulumi.azurenative.containerinstance.outputs.ContainerHttpGetResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerProbeResponse {
     /**
      * The execution command to probe
@@ -49,15 +49,15 @@ public final class ContainerProbeResponse {
      */
     private final @Nullable Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerProbeResponse(
-        @OutputCustomType.Parameter("exec") @Nullable ContainerExecResponse exec,
-        @OutputCustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
-        @OutputCustomType.Parameter("httpGet") @Nullable ContainerHttpGetResponse httpGet,
-        @OutputCustomType.Parameter("initialDelaySeconds") @Nullable Integer initialDelaySeconds,
-        @OutputCustomType.Parameter("periodSeconds") @Nullable Integer periodSeconds,
-        @OutputCustomType.Parameter("successThreshold") @Nullable Integer successThreshold,
-        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
+        @CustomType.Parameter("exec") @Nullable ContainerExecResponse exec,
+        @CustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
+        @CustomType.Parameter("httpGet") @Nullable ContainerHttpGetResponse httpGet,
+        @CustomType.Parameter("initialDelaySeconds") @Nullable Integer initialDelaySeconds,
+        @CustomType.Parameter("periodSeconds") @Nullable Integer periodSeconds,
+        @CustomType.Parameter("successThreshold") @Nullable Integer successThreshold,
+        @CustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
         this.exec = exec;
         this.failureThreshold = failureThreshold;
         this.httpGet = httpGet;

@@ -14,7 +14,7 @@ import io.pulumi.azurenative.media.outputs.JobOutputAssetResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -43,7 +43,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Customer provided key, value pairs that will be returned in Job and JobOutput state events.
      * 
      */
-    @OutputExport(name="correlationData", type=Map.class, parameters={String.class, String.class})
+    @Export(name="correlationData", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> correlationData;
 
     /**
@@ -57,7 +57,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The UTC date and time when the customer has created the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.
      * 
      */
-    @OutputExport(name="created", type=String.class, parameters={})
+    @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
@@ -71,7 +71,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Optional customer supplied description of the Job.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -85,7 +85,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The UTC date and time at which this Job finished processing.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
@@ -99,7 +99,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The inputs for the Job.
      * 
      */
-    @OutputExport(name="input", type=Object.class, parameters={})
+    @Export(name="input", type=Object.class, parameters={})
     private Output<Object> input;
 
     /**
@@ -113,7 +113,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The UTC date and time when the customer has last updated the Job, in 'YYYY-MM-DDThh:mm:ssZ' format.
      * 
      */
-    @OutputExport(name="lastModified", type=String.class, parameters={})
+    @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
@@ -127,7 +127,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -141,7 +141,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The outputs for the Job.
      * 
      */
-    @OutputExport(name="outputs", type=List.class, parameters={JobOutputAssetResponse.class})
+    @Export(name="outputs", type=List.class, parameters={JobOutputAssetResponse.class})
     private Output<List<JobOutputAssetResponse>> outputs;
 
     /**
@@ -155,7 +155,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Priority with which the job should be processed. Higher priority jobs are processed before lower priority jobs. If not set, the default is normal.
      * 
      */
-    @OutputExport(name="priority", type=String.class, parameters={})
+    @Export(name="priority", type=String.class, parameters={})
     private Output</* @Nullable */ String> priority;
 
     /**
@@ -169,7 +169,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The UTC date and time at which this Job began processing.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
@@ -183,7 +183,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The current state of the job.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -197,7 +197,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The system metadata relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -211,7 +211,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

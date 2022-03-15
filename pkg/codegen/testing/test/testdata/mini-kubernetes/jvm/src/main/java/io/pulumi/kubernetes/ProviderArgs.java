@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.inputs.KubeClientSettingsArgs;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * If present, the name of the kubeconfig cluster to use.
      * 
      */
-    @InputImport(name="cluster")
+    @Import(name="cluster")
       private final @Nullable Output<String> cluster;
 
     public Output<String> getCluster() {
@@ -31,7 +31,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * If present, the name of the kubeconfig context to use.
      * 
      */
-    @InputImport(name="context")
+    @Import(name="context")
       private final @Nullable Output<String> context;
 
     public Output<String> getContext() {
@@ -42,7 +42,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Options for tuning the Kubernetes client used by a Provider.
      * 
      */
-    @InputImport(name="kubeClientSettings", json=true)
+    @Import(name="kubeClientSettings", json=true)
       private final @Nullable Output<KubeClientSettingsArgs> kubeClientSettings;
 
     public Output<KubeClientSettingsArgs> getKubeClientSettings() {
@@ -53,7 +53,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The contents of a kubeconfig file or the path to a kubeconfig file.
      * 
      */
-    @InputImport(name="kubeconfig")
+    @Import(name="kubeconfig")
       private final @Nullable Output<String> kubeconfig;
 
     public Output<String> getKubeconfig() {

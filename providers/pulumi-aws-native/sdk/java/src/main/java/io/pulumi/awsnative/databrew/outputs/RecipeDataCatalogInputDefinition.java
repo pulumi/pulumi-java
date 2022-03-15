@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.RecipeS3Location;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RecipeDataCatalogInputDefinition {
     /**
      * Catalog id
@@ -29,12 +29,12 @@ public final class RecipeDataCatalogInputDefinition {
     private final @Nullable String tableName;
     private final @Nullable RecipeS3Location tempDirectory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecipeDataCatalogInputDefinition(
-        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
-        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
-        @OutputCustomType.Parameter("tableName") @Nullable String tableName,
-        @OutputCustomType.Parameter("tempDirectory") @Nullable RecipeS3Location tempDirectory) {
+        @CustomType.Parameter("catalogId") @Nullable String catalogId,
+        @CustomType.Parameter("databaseName") @Nullable String databaseName,
+        @CustomType.Parameter("tableName") @Nullable String tableName,
+        @CustomType.Parameter("tempDirectory") @Nullable RecipeS3Location tempDirectory) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.tableName = tableName;

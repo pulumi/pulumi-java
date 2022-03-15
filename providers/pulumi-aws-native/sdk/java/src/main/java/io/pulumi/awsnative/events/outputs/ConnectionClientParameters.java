@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.events.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionClientParameters {
     private final String clientID;
     private final String clientSecret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionClientParameters(
-        @OutputCustomType.Parameter("clientID") String clientID,
-        @OutputCustomType.Parameter("clientSecret") String clientSecret) {
+        @CustomType.Parameter("clientID") String clientID,
+        @CustomType.Parameter("clientSecret") String clientSecret) {
         this.clientID = clientID;
         this.clientSecret = clientSecret;
     }

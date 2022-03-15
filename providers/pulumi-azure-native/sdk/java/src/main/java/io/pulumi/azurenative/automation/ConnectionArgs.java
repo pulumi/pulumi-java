@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.automation.inputs.ConnectionTypeAssociationPropertyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the automation account.
      * 
      */
-    @InputImport(name="automationAccountName", required=true)
+    @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
     public Output<String> getAutomationAccountName() {
@@ -31,7 +31,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * The parameters supplied to the create or update connection operation.
      * 
      */
-    @InputImport(name="connectionName")
+    @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
     public Output<String> getConnectionName() {
@@ -42,7 +42,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the connectionType of the connection.
      * 
      */
-    @InputImport(name="connectionType", required=true)
+    @Import(name="connectionType", required=true)
       private final Output<ConnectionTypeAssociationPropertyArgs> connectionType;
 
     public Output<ConnectionTypeAssociationPropertyArgs> getConnectionType() {
@@ -53,7 +53,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the description of the connection.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -64,7 +64,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the field definition properties of the connection.
      * 
      */
-    @InputImport(name="fieldDefinitionValues")
+    @Import(name="fieldDefinitionValues")
       private final @Nullable Output<Map<String,String>> fieldDefinitionValues;
 
     public Output<Map<String,String>> getFieldDefinitionValues() {
@@ -75,7 +75,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the name of the connection.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -86,7 +86,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProviderExtendedLocationResponse {
     /**
      * The extended locations for the azure location.
@@ -28,11 +28,11 @@ public final class ProviderExtendedLocationResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProviderExtendedLocationResponse(
-        @OutputCustomType.Parameter("extendedLocations") @Nullable List<String> extendedLocations,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("extendedLocations") @Nullable List<String> extendedLocations,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.extendedLocations = extendedLocations;
         this.location = location;
         this.type = type;

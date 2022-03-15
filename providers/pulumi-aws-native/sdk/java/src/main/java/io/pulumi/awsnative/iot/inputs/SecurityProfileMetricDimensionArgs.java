@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.SecurityProfileMetricDimensionOperator;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SecurityProfileMetricDimensionArgs extends io.pulumi.resource
      * A unique identifier for the dimension.
      * 
      */
-    @InputImport(name="dimensionName", required=true)
+    @Import(name="dimensionName", required=true)
       private final Output<String> dimensionName;
 
     public Output<String> getDimensionName() {
@@ -34,7 +34,7 @@ public final class SecurityProfileMetricDimensionArgs extends io.pulumi.resource
      * Defines how the dimensionValues of a dimension are interpreted.
      * 
      */
-    @InputImport(name="operator")
+    @Import(name="operator")
       private final @Nullable Output<SecurityProfileMetricDimensionOperator> operator;
 
     public Output<SecurityProfileMetricDimensionOperator> getOperator() {

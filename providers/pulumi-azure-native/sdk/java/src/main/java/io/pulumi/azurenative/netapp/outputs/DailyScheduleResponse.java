@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DailyScheduleResponse {
     /**
      * Indicates which hour in UTC timezone a snapshot should be taken
@@ -33,12 +33,12 @@ public final class DailyScheduleResponse {
      */
     private final @Nullable Double usedBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DailyScheduleResponse(
-        @OutputCustomType.Parameter("hour") @Nullable Integer hour,
-        @OutputCustomType.Parameter("minute") @Nullable Integer minute,
-        @OutputCustomType.Parameter("snapshotsToKeep") @Nullable Integer snapshotsToKeep,
-        @OutputCustomType.Parameter("usedBytes") @Nullable Double usedBytes) {
+        @CustomType.Parameter("hour") @Nullable Integer hour,
+        @CustomType.Parameter("minute") @Nullable Integer minute,
+        @CustomType.Parameter("snapshotsToKeep") @Nullable Integer snapshotsToKeep,
+        @CustomType.Parameter("usedBytes") @Nullable Double usedBytes) {
         this.hour = hour;
         this.minute = minute;
         this.snapshotsToKeep = snapshotsToKeep;

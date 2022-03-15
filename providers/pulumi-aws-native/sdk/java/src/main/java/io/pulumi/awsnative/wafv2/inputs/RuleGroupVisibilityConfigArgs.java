@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,21 +18,21 @@ public final class RuleGroupVisibilityConfigArgs extends io.pulumi.resources.Res
 
     public static final RuleGroupVisibilityConfigArgs Empty = new RuleGroupVisibilityConfigArgs();
 
-    @InputImport(name="cloudWatchMetricsEnabled", required=true)
+    @Import(name="cloudWatchMetricsEnabled", required=true)
       private final Output<Boolean> cloudWatchMetricsEnabled;
 
     public Output<Boolean> getCloudWatchMetricsEnabled() {
         return this.cloudWatchMetricsEnabled;
     }
 
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
     public Output<String> getMetricName() {
         return this.metricName;
     }
 
-    @InputImport(name="sampledRequestsEnabled", required=true)
+    @Import(name="sampledRequestsEnabled", required=true)
       private final Output<Boolean> sampledRequestsEnabled;
 
     public Output<Boolean> getSampledRequestsEnabled() {

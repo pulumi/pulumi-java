@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.datasync.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class LocationS3S3ConfigArgs extends io.pulumi.resources.ResourceAr
      * The ARN of the IAM role of the Amazon S3 bucket.
      * 
      */
-    @InputImport(name="bucketAccessRoleArn", required=true)
+    @Import(name="bucketAccessRoleArn", required=true)
       private final Output<String> bucketAccessRoleArn;
 
     public Output<String> getBucketAccessRoleArn() {

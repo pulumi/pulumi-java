@@ -5,7 +5,7 @@ package io.pulumi.googlenative.storage_v1;
 
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.storage_v1.inputs.BucketObjectCustomerEncryptionArgs;
 import io.pulumi.googlenative.storage_v1.inputs.BucketObjectOwnerArgs;
 import io.pulumi.googlenative.storage_v1.inputs.ObjectAccessControlArgs;
@@ -26,7 +26,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Access controls on the object.
      * 
      */
-    @InputImport(name="acl")
+    @Import(name="acl")
       private final @Nullable Output<List<ObjectAccessControlArgs>> acl;
 
     public Output<List<ObjectAccessControlArgs>> getAcl() {
@@ -37,7 +37,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the bucket containing this object.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -48,7 +48,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Cache-Control directive for the object data. If omitted, and the object is accessible to all anonymous users, the default will be public, max-age=3600.
      * 
      */
-    @InputImport(name="cacheControl")
+    @Import(name="cacheControl")
       private final @Nullable Output<String> cacheControl;
 
     public Output<String> getCacheControl() {
@@ -59,7 +59,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Number of underlying components that make up this object. Components are accumulated by compose operations.
      * 
      */
-    @InputImport(name="componentCount")
+    @Import(name="componentCount")
       private final @Nullable Output<Integer> componentCount;
 
     public Output<Integer> getComponentCount() {
@@ -70,7 +70,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Content-Disposition of the object data.
      * 
      */
-    @InputImport(name="contentDisposition")
+    @Import(name="contentDisposition")
       private final @Nullable Output<String> contentDisposition;
 
     public Output<String> getContentDisposition() {
@@ -81,7 +81,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Content-Encoding of the object data.
      * 
      */
-    @InputImport(name="contentEncoding")
+    @Import(name="contentEncoding")
       private final @Nullable Output<String> contentEncoding;
 
     public Output<String> getContentEncoding() {
@@ -92,7 +92,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Content-Language of the object data.
      * 
      */
-    @InputImport(name="contentLanguage")
+    @Import(name="contentLanguage")
       private final @Nullable Output<String> contentLanguage;
 
     public Output<String> getContentLanguage() {
@@ -103,7 +103,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Content-Type of the object data. If an object is stored without a Content-Type, it is served as application/octet-stream.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -114,7 +114,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64 in big-endian byte order. For more information about using the CRC32c checksum, see Hashes and ETags: Best Practices.
      * 
      */
-    @InputImport(name="crc32c")
+    @Import(name="crc32c")
       private final @Nullable Output<String> crc32c;
 
     public Output<String> getCrc32c() {
@@ -125,7 +125,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * A timestamp in RFC 3339 format specified by the user for an object.
      * 
      */
-    @InputImport(name="customTime")
+    @Import(name="customTime")
       private final @Nullable Output<String> customTime;
 
     public Output<String> getCustomTime() {
@@ -136,7 +136,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata of customer-supplied encryption key, if the object is encrypted by such a key.
      * 
      */
-    @InputImport(name="customerEncryption")
+    @Import(name="customerEncryption")
       private final @Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption;
 
     public Output<BucketObjectCustomerEncryptionArgs> getCustomerEncryption() {
@@ -147,7 +147,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * HTTP 1.1 Entity tag for the object.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -158,7 +158,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is signified by the hold's release (i.e. this value is set to false). After being released (set to false), such objects will be subject to bucket-level retention (if any). One sample use case of this flag is for banks to hold loan documents for at least 3 years after loan is paid in full. Here, bucket-level retention is 3 years and the event is the loan being paid in full. In this example, these objects will be held intact for any number of years until the event has occurred (event-based hold on the object is released) and then 3 more years after that. That means retention duration of the objects begins from the moment event-based hold transitioned from true to false.
      * 
      */
-    @InputImport(name="eventBasedHold")
+    @Import(name="eventBasedHold")
       private final @Nullable Output<Boolean> eventBasedHold;
 
     public Output<Boolean> getEventBasedHold() {
@@ -169,7 +169,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * The content generation of this object. Used for object versioning.
      * 
      */
-    @InputImport(name="generation")
+    @Import(name="generation")
       private final @Nullable Output<String> generation;
 
     public Output<String> getGeneration() {
@@ -180,35 +180,35 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the object, including the bucket name, object name, and generation number.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
         return this.id == null ? Output.empty() : this.id;
     }
 
-    @InputImport(name="ifGenerationMatch")
+    @Import(name="ifGenerationMatch")
       private final @Nullable Output<String> ifGenerationMatch;
 
     public Output<String> getIfGenerationMatch() {
         return this.ifGenerationMatch == null ? Output.empty() : this.ifGenerationMatch;
     }
 
-    @InputImport(name="ifGenerationNotMatch")
+    @Import(name="ifGenerationNotMatch")
       private final @Nullable Output<String> ifGenerationNotMatch;
 
     public Output<String> getIfGenerationNotMatch() {
         return this.ifGenerationNotMatch == null ? Output.empty() : this.ifGenerationNotMatch;
     }
 
-    @InputImport(name="ifMetagenerationMatch")
+    @Import(name="ifMetagenerationMatch")
       private final @Nullable Output<String> ifMetagenerationMatch;
 
     public Output<String> getIfMetagenerationMatch() {
         return this.ifMetagenerationMatch == null ? Output.empty() : this.ifMetagenerationMatch;
     }
 
-    @InputImport(name="ifMetagenerationNotMatch")
+    @Import(name="ifMetagenerationNotMatch")
       private final @Nullable Output<String> ifMetagenerationNotMatch;
 
     public Output<String> getIfMetagenerationNotMatch() {
@@ -219,7 +219,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * The kind of item this is. For objects, this is always storage#object.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -230,7 +230,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Not currently supported. Specifying the parameter causes the request to fail with status code 400 - Bad Request.
      * 
      */
-    @InputImport(name="kmsKeyName")
+    @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
@@ -241,7 +241,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * MD5 hash of the data; encoded using base64. For more information about using the MD5 hash, see Hashes and ETags: Best Practices.
      * 
      */
-    @InputImport(name="md5Hash")
+    @Import(name="md5Hash")
       private final @Nullable Output<String> md5Hash;
 
     public Output<String> getMd5Hash() {
@@ -252,7 +252,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Media download link.
      * 
      */
-    @InputImport(name="mediaLink")
+    @Import(name="mediaLink")
       private final @Nullable Output<String> mediaLink;
 
     public Output<String> getMediaLink() {
@@ -263,7 +263,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * User-provided metadata, in key/value pairs.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -274,7 +274,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * The version of the metadata for this object at this generation. Used for preconditions and for detecting changes in metadata. A metageneration number is only meaningful in the context of a particular generation of a particular object.
      * 
      */
-    @InputImport(name="metageneration")
+    @Import(name="metageneration")
       private final @Nullable Output<String> metageneration;
 
     public Output<String> getMetageneration() {
@@ -285,7 +285,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the object. Required if not specified by URL parameter.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -296,28 +296,28 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * The owner of the object. This will always be the uploader of the object.
      * 
      */
-    @InputImport(name="owner")
+    @Import(name="owner")
       private final @Nullable Output<BucketObjectOwnerArgs> owner;
 
     public Output<BucketObjectOwnerArgs> getOwner() {
         return this.owner == null ? Output.empty() : this.owner;
     }
 
-    @InputImport(name="predefinedAcl")
+    @Import(name="predefinedAcl")
       private final @Nullable Output<String> predefinedAcl;
 
     public Output<String> getPredefinedAcl() {
         return this.predefinedAcl == null ? Output.empty() : this.predefinedAcl;
     }
 
-    @InputImport(name="projection")
+    @Import(name="projection")
       private final @Nullable Output<String> projection;
 
     public Output<String> getProjection() {
         return this.projection == null ? Output.empty() : this.projection;
     }
 
-    @InputImport(name="provisionalUserProject")
+    @Import(name="provisionalUserProject")
       private final @Nullable Output<String> provisionalUserProject;
 
     public Output<String> getProvisionalUserProject() {
@@ -328,7 +328,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * A server-determined value that specifies the earliest time that the object's retention period expires. This value is in RFC 3339 format. Note 1: This field is not provided for objects with an active event-based hold, since retention expiration is unknown until the hold is removed. Note 2: This value can be provided even when temporary hold is set (so that the user can reason about policy without having to first unset the temporary hold).
      * 
      */
-    @InputImport(name="retentionExpirationTime")
+    @Import(name="retentionExpirationTime")
       private final @Nullable Output<String> retentionExpirationTime;
 
     public Output<String> getRetentionExpirationTime() {
@@ -339,7 +339,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * The link to this object.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -350,14 +350,14 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Content-Length of the data in bytes.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<String> size;
 
     public Output<String> getSize() {
         return this.size == null ? Output.empty() : this.size;
     }
 
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<AssetOrArchive> source;
 
     public Output<AssetOrArchive> getSource() {
@@ -368,7 +368,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Storage class of the object.
      * 
      */
-    @InputImport(name="storageClass")
+    @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
     public Output<String> getStorageClass() {
@@ -379,7 +379,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and overwrites. A common use case of this flag is regulatory investigations where objects need to be retained while the investigation is ongoing. Note that unlike event-based hold, temporary hold does not impact retention expiration time of an object.
      * 
      */
-    @InputImport(name="temporaryHold")
+    @Import(name="temporaryHold")
       private final @Nullable Output<Boolean> temporaryHold;
 
     public Output<Boolean> getTemporaryHold() {
@@ -390,7 +390,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * The creation time of the object in RFC 3339 format.
      * 
      */
-    @InputImport(name="timeCreated")
+    @Import(name="timeCreated")
       private final @Nullable Output<String> timeCreated;
 
     public Output<String> getTimeCreated() {
@@ -401,7 +401,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * The deletion time of the object in RFC 3339 format. Will be returned if and only if this version of the object has been deleted.
      * 
      */
-    @InputImport(name="timeDeleted")
+    @Import(name="timeDeleted")
       private final @Nullable Output<String> timeDeleted;
 
     public Output<String> getTimeDeleted() {
@@ -412,7 +412,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * The time at which the object's storage class was last changed. When the object is initially created, it will be set to timeCreated.
      * 
      */
-    @InputImport(name="timeStorageClassUpdated")
+    @Import(name="timeStorageClassUpdated")
       private final @Nullable Output<String> timeStorageClassUpdated;
 
     public Output<String> getTimeStorageClassUpdated() {
@@ -423,14 +423,14 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * The modification time of the object metadata in RFC 3339 format.
      * 
      */
-    @InputImport(name="updated")
+    @Import(name="updated")
       private final @Nullable Output<String> updated;
 
     public Output<String> getUpdated() {
         return this.updated == null ? Output.empty() : this.updated;
     }
 
-    @InputImport(name="userProject")
+    @Import(name="userProject")
       private final @Nullable Output<String> userProject;
 
     public Output<String> getUserProject() {

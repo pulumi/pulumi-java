@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
      * The description of the event associated with a prefix.
      * 
      */
-    @InputImport(name="eventDescription", required=true)
+    @Import(name="eventDescription", required=true)
       private final String eventDescription;
 
     public String getEventDescription() {
@@ -31,7 +31,7 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
      * The level of the event associated with a prefix.
      * 
      */
-    @InputImport(name="eventLevel", required=true)
+    @Import(name="eventLevel", required=true)
       private final String eventLevel;
 
     public String getEventLevel() {
@@ -42,7 +42,7 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
      * The summary of the event associated with a prefix.
      * 
      */
-    @InputImport(name="eventSummary", required=true)
+    @Import(name="eventSummary", required=true)
       private final String eventSummary;
 
     public String getEventSummary() {
@@ -53,7 +53,7 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
      * The timestamp of the event associated with a prefix.
      * 
      */
-    @InputImport(name="eventTimestamp", required=true)
+    @Import(name="eventTimestamp", required=true)
       private final String eventTimestamp;
 
     public String getEventTimestamp() {
@@ -64,7 +64,7 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
      * The type of the event associated with a prefix.
      * 
      */
-    @InputImport(name="eventType", required=true)
+    @Import(name="eventType", required=true)
       private final String eventType;
 
     public String getEventType() {

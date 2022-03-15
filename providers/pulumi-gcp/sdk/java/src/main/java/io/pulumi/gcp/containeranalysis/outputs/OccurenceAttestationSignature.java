@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.containeranalysis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OccurenceAttestationSignature {
     /**
      * The identifier for the public key that verifies this
@@ -37,10 +37,10 @@ public final class OccurenceAttestationSignature {
      */
     private final @Nullable String signature;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OccurenceAttestationSignature(
-        @OutputCustomType.Parameter("publicKeyId") String publicKeyId,
-        @OutputCustomType.Parameter("signature") @Nullable String signature) {
+        @CustomType.Parameter("publicKeyId") String publicKeyId,
+        @CustomType.Parameter("signature") @Nullable String signature) {
         this.publicKeyId = publicKeyId;
         this.signature = signature;
     }

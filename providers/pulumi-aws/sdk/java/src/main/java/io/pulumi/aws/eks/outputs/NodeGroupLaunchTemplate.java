@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodeGroupLaunchTemplate {
     /**
      * Identifier of the EC2 Launch Template. Conflicts with `name`.
@@ -27,11 +27,11 @@ public final class NodeGroupLaunchTemplate {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeGroupLaunchTemplate(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("version") String version) {
         this.id = id;
         this.name = name;
         this.version = version;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.spanner_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.spanner_v1.enums.DatabaseDatabaseDialect;
 import io.pulumi.googlenative.spanner_v1.inputs.EncryptionConfigArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * A `CREATE DATABASE` statement, which specifies the ID of the new database. The database ID must conform to the regular expression `a-z*[a-z0-9]` and be between 2 and 30 characters in length. If the database ID is a reserved word or if it contains a hyphen, the database ID must be enclosed in backticks (`` ` ``).
      * 
      */
-    @InputImport(name="createStatement", required=true)
+    @Import(name="createStatement", required=true)
       private final Output<String> createStatement;
 
     public Output<String> getCreateStatement() {
@@ -32,7 +32,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The dialect of the Cloud Spanner Database.
      * 
      */
-    @InputImport(name="databaseDialect")
+    @Import(name="databaseDialect")
       private final @Nullable Output<DatabaseDatabaseDialect> databaseDialect;
 
     public Output<DatabaseDatabaseDialect> getDatabaseDialect() {
@@ -43,7 +43,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The encryption configuration for the database. If this field is not specified, Cloud Spanner will encrypt/decrypt all data at rest using Google default encryption.
      * 
      */
-    @InputImport(name="encryptionConfig")
+    @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
     public Output<EncryptionConfigArgs> getEncryptionConfig() {
@@ -54,21 +54,21 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. A list of DDL statements to run inside the newly created database. Statements can create tables, indexes, etc. These statements execute atomically with the creation of the database: if there is an error in any statement, the database is not created.
      * 
      */
-    @InputImport(name="extraStatements")
+    @Import(name="extraStatements")
       private final @Nullable Output<List<String>> extraStatements;
 
     public Output<List<String>> getExtraStatements() {
         return this.extraStatements == null ? Output.empty() : this.extraStatements;
     }
 
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
     public Output<String> getInstanceId() {
         return this.instanceId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

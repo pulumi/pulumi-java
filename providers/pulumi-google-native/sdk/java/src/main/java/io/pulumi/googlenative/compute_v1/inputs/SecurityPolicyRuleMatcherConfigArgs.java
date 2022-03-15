@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
      * CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
      * 
      */
-    @InputImport(name="srcIpRanges")
+    @Import(name="srcIpRanges")
       private final @Nullable Output<List<String>> srcIpRanges;
 
     public Output<List<String>> getSrcIpRanges() {

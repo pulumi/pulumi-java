@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolybaseSettingsResponse {
     /**
      * Determines the number of rows to attempt to retrieve before the PolyBase recalculates the percentage of rejected rows. Type: integer (or Expression with resultType integer), minimum: 0.
@@ -33,12 +33,12 @@ public final class PolybaseSettingsResponse {
      */
     private final @Nullable Object useTypeDefault;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolybaseSettingsResponse(
-        @OutputCustomType.Parameter("rejectSampleValue") @Nullable Object rejectSampleValue,
-        @OutputCustomType.Parameter("rejectType") @Nullable String rejectType,
-        @OutputCustomType.Parameter("rejectValue") @Nullable Object rejectValue,
-        @OutputCustomType.Parameter("useTypeDefault") @Nullable Object useTypeDefault) {
+        @CustomType.Parameter("rejectSampleValue") @Nullable Object rejectSampleValue,
+        @CustomType.Parameter("rejectType") @Nullable String rejectType,
+        @CustomType.Parameter("rejectValue") @Nullable Object rejectValue,
+        @CustomType.Parameter("useTypeDefault") @Nullable Object useTypeDefault) {
         this.rejectSampleValue = rejectSampleValue;
         this.rejectType = rejectType;
         this.rejectValue = rejectValue;

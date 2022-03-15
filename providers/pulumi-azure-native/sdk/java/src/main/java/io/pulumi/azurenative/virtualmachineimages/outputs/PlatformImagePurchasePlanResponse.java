@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PlatformImagePurchasePlanResponse {
     /**
      * Name of the purchase plan.
@@ -25,11 +25,11 @@ public final class PlatformImagePurchasePlanResponse {
      */
     private final String planPublisher;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PlatformImagePurchasePlanResponse(
-        @OutputCustomType.Parameter("planName") String planName,
-        @OutputCustomType.Parameter("planProduct") String planProduct,
-        @OutputCustomType.Parameter("planPublisher") String planPublisher) {
+        @CustomType.Parameter("planName") String planName,
+        @CustomType.Parameter("planProduct") String planProduct,
+        @CustomType.Parameter("planPublisher") String planPublisher) {
         this.planName = planName;
         this.planProduct = planProduct;
         this.planPublisher = planPublisher;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.groundstation.outputs;
 
 import io.pulumi.awsnative.groundstation.outputs.MissionProfileDataflowEdge;
 import io.pulumi.awsnative.groundstation.outputs.MissionProfileTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMissionProfileResult {
     private final @Nullable String arn;
     /**
@@ -42,18 +42,18 @@ public final class GetMissionProfileResult {
     private final @Nullable List<MissionProfileTag> tags;
     private final @Nullable String trackingConfigArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMissionProfileResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("contactPostPassDurationSeconds") @Nullable Integer contactPostPassDurationSeconds,
-        @OutputCustomType.Parameter("contactPrePassDurationSeconds") @Nullable Integer contactPrePassDurationSeconds,
-        @OutputCustomType.Parameter("dataflowEdges") @Nullable List<MissionProfileDataflowEdge> dataflowEdges,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("minimumViableContactDurationSeconds") @Nullable Integer minimumViableContactDurationSeconds,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("tags") @Nullable List<MissionProfileTag> tags,
-        @OutputCustomType.Parameter("trackingConfigArn") @Nullable String trackingConfigArn) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("contactPostPassDurationSeconds") @Nullable Integer contactPostPassDurationSeconds,
+        @CustomType.Parameter("contactPrePassDurationSeconds") @Nullable Integer contactPrePassDurationSeconds,
+        @CustomType.Parameter("dataflowEdges") @Nullable List<MissionProfileDataflowEdge> dataflowEdges,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("minimumViableContactDurationSeconds") @Nullable Integer minimumViableContactDurationSeconds,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("tags") @Nullable List<MissionProfileTag> tags,
+        @CustomType.Parameter("trackingConfigArn") @Nullable String trackingConfigArn) {
         this.arn = arn;
         this.contactPostPassDurationSeconds = contactPostPassDurationSeconds;
         this.contactPrePassDurationSeconds = contactPrePassDurationSeconds;

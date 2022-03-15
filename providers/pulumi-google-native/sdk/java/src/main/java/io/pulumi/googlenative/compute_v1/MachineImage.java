@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.MachineImageArgs;
@@ -28,7 +28,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * The creation timestamp for this machine image in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -42,7 +42,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -56,7 +56,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * [Input Only] Whether to attempt an application consistent machine image by informing the OS to prepare for the snapshot process. Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
      * 
      */
-    @OutputExport(name="guestFlush", type=Boolean.class, parameters={})
+    @Export(name="guestFlush", type=Boolean.class, parameters={})
     private Output<Boolean> guestFlush;
 
     /**
@@ -70,7 +70,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * Properties of source instance
      * 
      */
-    @OutputExport(name="instanceProperties", type=InstancePropertiesResponse.class, parameters={})
+    @Export(name="instanceProperties", type=InstancePropertiesResponse.class, parameters={})
     private Output<InstancePropertiesResponse> instanceProperties;
 
     /**
@@ -84,7 +84,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * The resource type, which is always compute#machineImage for machine image.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -98,7 +98,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * Encrypts the machine image using a customer-supplied encryption key. After you encrypt a machine image using a customer-supplied key, you must provide the same key if you use the machine image later. For example, you must provide the encryption key when you create an instance from the encrypted machine image in a future request. Customer-supplied encryption keys do not protect access to metadata of the machine image. If you do not provide an encryption key when creating the machine image, then the machine image will be encrypted using an automatically generated key and you do not need to provide a key to use the machine image later.
      * 
      */
-    @OutputExport(name="machineImageEncryptionKey", type=CustomerEncryptionKeyResponse.class, parameters={})
+    @Export(name="machineImageEncryptionKey", type=CustomerEncryptionKeyResponse.class, parameters={})
     private Output<CustomerEncryptionKeyResponse> machineImageEncryptionKey;
 
     /**
@@ -112,7 +112,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -126,7 +126,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * Reserved for future use.
      * 
      */
-    @OutputExport(name="satisfiesPzs", type=Boolean.class, parameters={})
+    @Export(name="satisfiesPzs", type=Boolean.class, parameters={})
     private Output<Boolean> satisfiesPzs;
 
     /**
@@ -140,7 +140,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * An array of Machine Image specific properties for disks attached to the source instance
      * 
      */
-    @OutputExport(name="savedDisks", type=List.class, parameters={SavedDiskResponse.class})
+    @Export(name="savedDisks", type=List.class, parameters={SavedDiskResponse.class})
     private Output<List<SavedDiskResponse>> savedDisks;
 
     /**
@@ -154,7 +154,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * The URL for this machine image. The server defines this URL.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -168,7 +168,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * [Input Only] The customer-supplied encryption key of the disks attached to the source instance. Required if the source disk is protected by a customer-supplied encryption key.
      * 
      */
-    @OutputExport(name="sourceDiskEncryptionKeys", type=List.class, parameters={SourceDiskEncryptionKeyResponse.class})
+    @Export(name="sourceDiskEncryptionKeys", type=List.class, parameters={SourceDiskEncryptionKeyResponse.class})
     private Output<List<SourceDiskEncryptionKeyResponse>> sourceDiskEncryptionKeys;
 
     /**
@@ -182,7 +182,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * The source instance used to create the machine image. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instances/instance - projects/project/zones/zone/instances/instance
      * 
      */
-    @OutputExport(name="sourceInstance", type=String.class, parameters={})
+    @Export(name="sourceInstance", type=String.class, parameters={})
     private Output<String> sourceInstance;
 
     /**
@@ -196,7 +196,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * DEPRECATED: Please use instance_properties instead for source instance related properties. New properties will not be added to this field.
      * 
      */
-    @OutputExport(name="sourceInstanceProperties", type=SourceInstancePropertiesResponse.class, parameters={})
+    @Export(name="sourceInstanceProperties", type=SourceInstancePropertiesResponse.class, parameters={})
     private Output<SourceInstancePropertiesResponse> sourceInstanceProperties;
 
     /**
@@ -210,7 +210,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * The status of the machine image. One of the following values: INVALID, CREATING, READY, DELETING, and UPLOADING.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -224,7 +224,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * The regional or multi-regional Cloud Storage bucket location where the machine image is stored.
      * 
      */
-    @OutputExport(name="storageLocations", type=List.class, parameters={String.class})
+    @Export(name="storageLocations", type=List.class, parameters={String.class})
     private Output<List<String>> storageLocations;
 
     /**
@@ -238,7 +238,7 @@ public class MachineImage extends io.pulumi.resources.CustomResource {
      * Total size of the storage used by the machine image.
      * 
      */
-    @OutputExport(name="totalStorageBytes", type=String.class, parameters={})
+    @Export(name="totalStorageBytes", type=String.class, parameters={})
     private Output<String> totalStorageBytes;
 
     /**

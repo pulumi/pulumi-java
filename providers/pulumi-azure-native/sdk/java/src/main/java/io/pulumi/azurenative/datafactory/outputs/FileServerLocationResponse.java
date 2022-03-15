@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FileServerLocationResponse {
     /**
      * Specify the file name of dataset. Type: string (or Expression with resultType string).
@@ -29,11 +29,11 @@ public final class FileServerLocationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FileServerLocationResponse(
-        @OutputCustomType.Parameter("fileName") @Nullable Object fileName,
-        @OutputCustomType.Parameter("folderPath") @Nullable Object folderPath,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("fileName") @Nullable Object fileName,
+        @CustomType.Parameter("folderPath") @Nullable Object folderPath,
+        @CustomType.Parameter("type") String type) {
         this.fileName = fileName;
         this.folderPath = folderPath;
         this.type = type;

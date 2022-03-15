@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTargetVpnGatewayResult {
     /**
      * Creation timestamp in RFC3339 text format.
@@ -61,18 +61,18 @@ public final class GetTargetVpnGatewayResult {
      */
     private final List<String> tunnels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTargetVpnGatewayResult(
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("forwardingRules") List<String> forwardingRules,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("tunnels") List<String> tunnels) {
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("forwardingRules") List<String> forwardingRules,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("tunnels") List<String> tunnels) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.forwardingRules = forwardingRules;

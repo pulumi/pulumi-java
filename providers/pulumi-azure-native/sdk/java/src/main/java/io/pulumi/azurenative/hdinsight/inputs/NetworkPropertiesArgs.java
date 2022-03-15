@@ -7,7 +7,7 @@ import io.pulumi.azurenative.hdinsight.enums.PrivateLink;
 import io.pulumi.azurenative.hdinsight.enums.ResourceProviderConnection;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class NetworkPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Indicates whether or not private link is enabled.
      * 
      */
-    @InputImport(name="privateLink")
+    @Import(name="privateLink")
       private final @Nullable Output<Either<String,PrivateLink>> privateLink;
 
     public Output<Either<String,PrivateLink>> getPrivateLink() {
@@ -36,7 +36,7 @@ public final class NetworkPropertiesArgs extends io.pulumi.resources.ResourceArg
      * The direction for the resource provider connection.
      * 
      */
-    @InputImport(name="resourceProviderConnection")
+    @Import(name="resourceProviderConnection")
       private final @Nullable Output<Either<String,ResourceProviderConnection>> resourceProviderConnection;
 
     public Output<Either<String,ResourceProviderConnection>> getResourceProviderConnection() {

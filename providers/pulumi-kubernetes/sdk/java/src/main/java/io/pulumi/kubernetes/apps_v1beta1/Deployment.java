@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.apps_v1beta1;
 
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.apps_v1beta1.DeploymentArgs;
@@ -52,7 +52,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @OutputExport(name="apiVersion", type=String.class, parameters={})
+    @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
@@ -66,7 +66,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -80,7 +80,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Standard object metadata.
      * 
      */
-    @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
+    @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
@@ -94,7 +94,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Specification of the desired behavior of the Deployment.
      * 
      */
-    @OutputExport(name="spec", type=DeploymentSpec.class, parameters={})
+    @Export(name="spec", type=DeploymentSpec.class, parameters={})
     private Output</* @Nullable */ DeploymentSpec> spec;
 
     /**
@@ -108,7 +108,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Most recently observed status of the Deployment.
      * 
      */
-    @OutputExport(name="status", type=DeploymentStatus.class, parameters={})
+    @Export(name="status", type=DeploymentStatus.class, parameters={})
     private Output</* @Nullable */ DeploymentStatus> status;
 
     /**

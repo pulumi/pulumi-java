@@ -6,14 +6,14 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 import io.pulumi.azurenative.recoveryservices.outputs.DailyRetentionFormatResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RetentionDurationResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.WeeklyRetentionFormatResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MonthlyRetentionScheduleResponse {
     /**
      * Retention duration of retention Policy.
@@ -41,13 +41,13 @@ public final class MonthlyRetentionScheduleResponse {
      */
     private final @Nullable List<String> retentionTimes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MonthlyRetentionScheduleResponse(
-        @OutputCustomType.Parameter("retentionDuration") @Nullable RetentionDurationResponse retentionDuration,
-        @OutputCustomType.Parameter("retentionScheduleDaily") @Nullable DailyRetentionFormatResponse retentionScheduleDaily,
-        @OutputCustomType.Parameter("retentionScheduleFormatType") @Nullable String retentionScheduleFormatType,
-        @OutputCustomType.Parameter("retentionScheduleWeekly") @Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly,
-        @OutputCustomType.Parameter("retentionTimes") @Nullable List<String> retentionTimes) {
+        @CustomType.Parameter("retentionDuration") @Nullable RetentionDurationResponse retentionDuration,
+        @CustomType.Parameter("retentionScheduleDaily") @Nullable DailyRetentionFormatResponse retentionScheduleDaily,
+        @CustomType.Parameter("retentionScheduleFormatType") @Nullable String retentionScheduleFormatType,
+        @CustomType.Parameter("retentionScheduleWeekly") @Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly,
+        @CustomType.Parameter("retentionTimes") @Nullable List<String> retentionTimes) {
         this.retentionDuration = retentionDuration;
         this.retentionScheduleDaily = retentionScheduleDaily;
         this.retentionScheduleFormatType = retentionScheduleFormatType;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutomationScopeResponse {
     /**
      * The resources scope description.
@@ -22,10 +22,10 @@ public final class AutomationScopeResponse {
      */
     private final @Nullable String scopePath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutomationScopeResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("scopePath") @Nullable String scopePath) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("scopePath") @Nullable String scopePath) {
         this.description = description;
         this.scopePath = scopePath;
     }

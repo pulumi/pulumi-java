@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.enums.PrivateEndpointServiceConnectionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * The private link resource group id.
      * 
      */
-    @InputImport(name="groupId")
+    @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
     public Output<String> getGroupId() {
@@ -31,7 +31,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * Unique name of the private link.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * The resource id that private link links to.
      * 
      */
-    @InputImport(name="privateLinkResourceId")
+    @Import(name="privateLinkResourceId")
       private final @Nullable Output<String> privateLinkResourceId;
 
     public Output<String> getPrivateLinkResourceId() {
@@ -53,7 +53,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * Request message.
      * 
      */
-    @InputImport(name="requestMessage")
+    @Import(name="requestMessage")
       private final @Nullable Output<String> requestMessage;
 
     public Output<String> getRequestMessage() {
@@ -64,7 +64,7 @@ public final class SharedPrivateLinkResourceArgs extends io.pulumi.resources.Res
      * Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status;
 
     public Output<Either<String,PrivateEndpointServiceConnectionStatus>> getStatus() {

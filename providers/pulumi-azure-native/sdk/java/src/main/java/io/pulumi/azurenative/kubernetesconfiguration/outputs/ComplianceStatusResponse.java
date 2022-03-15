@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComplianceStatusResponse {
     /**
      * The compliance state of the configuration.
@@ -32,12 +32,12 @@ public final class ComplianceStatusResponse {
      */
     private final @Nullable String messageLevel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComplianceStatusResponse(
-        @OutputCustomType.Parameter("complianceState") String complianceState,
-        @OutputCustomType.Parameter("lastConfigApplied") @Nullable String lastConfigApplied,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("messageLevel") @Nullable String messageLevel) {
+        @CustomType.Parameter("complianceState") String complianceState,
+        @CustomType.Parameter("lastConfigApplied") @Nullable String lastConfigApplied,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("messageLevel") @Nullable String messageLevel) {
         this.complianceState = complianceState;
         this.lastConfigApplied = lastConfigApplied;
         this.message = message;

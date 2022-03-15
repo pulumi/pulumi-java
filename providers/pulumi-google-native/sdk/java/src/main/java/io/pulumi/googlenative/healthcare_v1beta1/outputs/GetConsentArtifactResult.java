@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.ImageResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.SignatureResponse;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConsentArtifactResult {
     /**
      * Optional. Screenshots, PDFs, or other binary information documenting the user's consent.
@@ -54,16 +54,16 @@ public final class GetConsentArtifactResult {
      */
     private final SignatureResponse witnessSignature;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConsentArtifactResult(
-        @OutputCustomType.Parameter("consentContentScreenshots") List<ImageResponse> consentContentScreenshots,
-        @OutputCustomType.Parameter("consentContentVersion") String consentContentVersion,
-        @OutputCustomType.Parameter("guardianSignature") SignatureResponse guardianSignature,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("userId") String userId,
-        @OutputCustomType.Parameter("userSignature") SignatureResponse userSignature,
-        @OutputCustomType.Parameter("witnessSignature") SignatureResponse witnessSignature) {
+        @CustomType.Parameter("consentContentScreenshots") List<ImageResponse> consentContentScreenshots,
+        @CustomType.Parameter("consentContentVersion") String consentContentVersion,
+        @CustomType.Parameter("guardianSignature") SignatureResponse guardianSignature,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("userId") String userId,
+        @CustomType.Parameter("userSignature") SignatureResponse userSignature,
+        @CustomType.Parameter("witnessSignature") SignatureResponse witnessSignature) {
         this.consentContentScreenshots = consentContentScreenshots;
         this.consentContentVersion = consentContentVersion;
         this.guardianSignature = guardianSignature;

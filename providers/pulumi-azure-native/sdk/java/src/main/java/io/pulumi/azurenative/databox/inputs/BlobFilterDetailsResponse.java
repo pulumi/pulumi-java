@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BlobFilterDetailsResponse extends io.pulumi.resources.InvokeA
      * List of full path of the blobs to be transferred.
      * 
      */
-    @InputImport(name="blobPathList")
+    @Import(name="blobPathList")
       private final @Nullable List<String> blobPathList;
 
     public List<String> getBlobPathList() {
@@ -34,7 +34,7 @@ public final class BlobFilterDetailsResponse extends io.pulumi.resources.InvokeA
      * Prefix list of the Azure blobs to be transferred.
      * 
      */
-    @InputImport(name="blobPrefixList")
+    @Import(name="blobPrefixList")
       private final @Nullable List<String> blobPrefixList;
 
     public List<String> getBlobPrefixList() {
@@ -45,7 +45,7 @@ public final class BlobFilterDetailsResponse extends io.pulumi.resources.InvokeA
      * List of blob containers to be transferred.
      * 
      */
-    @InputImport(name="containerList")
+    @Import(name="containerList")
       private final @Nullable List<String> containerList;
 
     public List<String> getContainerList() {

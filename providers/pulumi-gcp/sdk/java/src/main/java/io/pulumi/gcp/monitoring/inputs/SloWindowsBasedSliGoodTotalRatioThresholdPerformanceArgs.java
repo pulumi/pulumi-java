@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs exte
      * Structure is documented below.
      * 
      */
-    @InputImport(name="distributionCut")
+    @Import(name="distributionCut")
       private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs> distributionCut;
 
     public Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutArgs> getDistributionCut() {
@@ -40,7 +40,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs exte
      * Structure is documented below.
      * 
      */
-    @InputImport(name="goodTotalRatio")
+    @Import(name="goodTotalRatio")
       private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs> goodTotalRatio;
 
     public Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatioArgs> getGoodTotalRatio() {

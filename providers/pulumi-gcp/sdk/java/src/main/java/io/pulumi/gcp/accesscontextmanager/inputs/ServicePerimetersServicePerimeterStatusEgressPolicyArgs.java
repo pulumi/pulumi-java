@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyArgs exten
      * Structure is documented below.
      * 
      */
-    @InputImport(name="egressFrom")
+    @Import(name="egressFrom")
       private final @Nullable Output<ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromArgs> egressFrom;
 
     public Output<ServicePerimetersServicePerimeterStatusEgressPolicyEgressFromArgs> getEgressFrom() {
@@ -33,7 +33,7 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyArgs exten
      * Structure is documented below.
      * 
      */
-    @InputImport(name="egressTo")
+    @Import(name="egressTo")
       private final @Nullable Output<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs> egressTo;
 
     public Output<ServicePerimetersServicePerimeterStatusEgressPolicyEgressToArgs> getEgressTo() {

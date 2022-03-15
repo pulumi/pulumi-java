@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class ExtendedLocationOptionsResponse extends io.pulumi.resources.I
 
     public static final ExtendedLocationOptionsResponse Empty = new ExtendedLocationOptionsResponse();
 
-    @InputImport(name="supportedPolicy")
+    @Import(name="supportedPolicy")
       private final @Nullable String supportedPolicy;
 
     public Optional<String> getSupportedPolicy() {
         return this.supportedPolicy == null ? Optional.empty() : Optional.ofNullable(this.supportedPolicy);
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

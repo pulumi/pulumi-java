@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridcompute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
      * The status code.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -31,7 +31,7 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
      * The short localizable label for the status.
      * 
      */
-    @InputImport(name="displayStatus", required=true)
+    @Import(name="displayStatus", required=true)
       private final String displayStatus;
 
     public String getDisplayStatus() {
@@ -42,7 +42,7 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
      * The level code.
      * 
      */
-    @InputImport(name="level", required=true)
+    @Import(name="level", required=true)
       private final String level;
 
     public String getLevel() {
@@ -53,7 +53,7 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
      * The detailed status message, including for alerts and error messages.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -64,7 +64,7 @@ public final class MachineExtensionInstanceViewResponseStatus extends io.pulumi.
      * The time of the status.
      * 
      */
-    @InputImport(name="time", required=true)
+    @Import(name="time", required=true)
       private final String time;
 
     public String getTime() {

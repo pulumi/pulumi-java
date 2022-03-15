@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.keyvault.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
      * Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -34,7 +34,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
      * Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.
      * 
      */
-    @InputImport(name="ignoreMissingVnetServiceEndpoint")
+    @Import(name="ignoreMissingVnetServiceEndpoint")
       private final @Nullable Boolean ignoreMissingVnetServiceEndpoint;
 
     public Optional<Boolean> getIgnoreMissingVnetServiceEndpoint() {

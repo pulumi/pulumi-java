@@ -8,7 +8,7 @@ import io.pulumi.aws.ecrpublic.RepositoryArgs;
 import io.pulumi.aws.ecrpublic.inputs.RepositoryState;
 import io.pulumi.aws.ecrpublic.outputs.RepositoryCatalogData;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * Full ARN of the repository.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * Catalog data configuration for the repository. See below for schema.
      * 
      */
-    @OutputExport(name="catalogData", type=RepositoryCatalogData.class, parameters={})
+    @Export(name="catalogData", type=RepositoryCatalogData.class, parameters={})
     private Output</* @Nullable */ RepositoryCatalogData> catalogData;
 
     /**
@@ -60,7 +60,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ RepositoryCatalogData> getCatalogData() {
         return this.catalogData;
     }
-    @OutputExport(name="forceDestroy", type=Boolean.class, parameters={})
+    @Export(name="forceDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDestroy;
 
     public Output</* @Nullable */ Boolean> getForceDestroy() {
@@ -70,7 +70,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The registry ID where the repository was created.
      * 
      */
-    @OutputExport(name="registryId", type=String.class, parameters={})
+    @Export(name="registryId", type=String.class, parameters={})
     private Output<String> registryId;
 
     /**
@@ -84,7 +84,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * Name of the repository.
      * 
      */
-    @OutputExport(name="repositoryName", type=String.class, parameters={})
+    @Export(name="repositoryName", type=String.class, parameters={})
     private Output<String> repositoryName;
 
     /**
@@ -98,7 +98,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The URI of the repository.
      * 
      */
-    @OutputExport(name="repositoryUri", type=String.class, parameters={})
+    @Export(name="repositoryUri", type=String.class, parameters={})
     private Output<String> repositoryUri;
 
     /**

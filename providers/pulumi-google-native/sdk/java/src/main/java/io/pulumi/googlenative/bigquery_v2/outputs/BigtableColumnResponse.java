@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BigtableColumnResponse {
     /**
      * [Optional] The encoding of the values when the type is not STRING. Acceptable encoding values are: TEXT - indicates values are alphanumeric text strings. BINARY - indicates values are encoded using HBase Bytes.toBytes family of functions. 'encoding' can also be set at the column family level. However, the setting at this level takes precedence if 'encoding' is set at both levels.
@@ -37,14 +37,14 @@ public final class BigtableColumnResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BigtableColumnResponse(
-        @OutputCustomType.Parameter("encoding") String encoding,
-        @OutputCustomType.Parameter("fieldName") String fieldName,
-        @OutputCustomType.Parameter("onlyReadLatest") Boolean onlyReadLatest,
-        @OutputCustomType.Parameter("qualifierEncoded") String qualifierEncoded,
-        @OutputCustomType.Parameter("qualifierString") String qualifierString,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("encoding") String encoding,
+        @CustomType.Parameter("fieldName") String fieldName,
+        @CustomType.Parameter("onlyReadLatest") Boolean onlyReadLatest,
+        @CustomType.Parameter("qualifierEncoded") String qualifierEncoded,
+        @CustomType.Parameter("qualifierString") String qualifierString,
+        @CustomType.Parameter("type") String type) {
         this.encoding = encoding;
         this.fieldName = fieldName;
         this.onlyReadLatest = onlyReadLatest;

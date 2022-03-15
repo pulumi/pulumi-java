@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CharsToIgnoreResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2CharacterMaskConfigResponse {
     /**
      * When masking a string, items in this list will be skipped when replacing characters. For example, if the input string is `555-555-5555` and you instruct Cloud DLP to skip `-` and mask 5 characters with `*`, Cloud DLP returns `***-**5-5555`.
@@ -34,12 +34,12 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse {
      */
     private final Boolean reverseOrder;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2CharacterMaskConfigResponse(
-        @OutputCustomType.Parameter("charactersToIgnore") List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore,
-        @OutputCustomType.Parameter("maskingCharacter") String maskingCharacter,
-        @OutputCustomType.Parameter("numberToMask") Integer numberToMask,
-        @OutputCustomType.Parameter("reverseOrder") Boolean reverseOrder) {
+        @CustomType.Parameter("charactersToIgnore") List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore,
+        @CustomType.Parameter("maskingCharacter") String maskingCharacter,
+        @CustomType.Parameter("numberToMask") Integer numberToMask,
+        @CustomType.Parameter("reverseOrder") Boolean reverseOrder) {
         this.charactersToIgnore = charactersToIgnore;
         this.maskingCharacter = maskingCharacter;
         this.numberToMask = numberToMask;

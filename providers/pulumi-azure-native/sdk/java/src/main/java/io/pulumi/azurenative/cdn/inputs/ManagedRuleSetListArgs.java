@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.ManagedRuleSetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ManagedRuleSetListArgs extends io.pulumi.resources.ResourceAr
      * List of rule sets.
      * 
      */
-    @InputImport(name="managedRuleSets")
+    @Import(name="managedRuleSets")
       private final @Nullable Output<List<ManagedRuleSetArgs>> managedRuleSets;
 
     public Output<List<ManagedRuleSetArgs>> getManagedRuleSets() {

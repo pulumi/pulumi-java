@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
      * Name of the Cloud Storage bucket. Required for `gcs` target_type.
      * 
      */
-    @InputImport(name="bucketName")
+    @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
     public Output<String> getBucketName() {
@@ -33,7 +33,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
      * BigQuery dataset name Required for `bigquery` target_type.
      * 
      */
-    @InputImport(name="datasetName")
+    @Import(name="datasetName")
       private final @Nullable Output<String> datasetName;
 
     public Output<String> getDatasetName() {
@@ -44,7 +44,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
      * Path of Cloud Storage bucket Required for `gcs` target_type.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -55,7 +55,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
      * GCP project in which the datastore exists
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final Output<String> project;
 
     public Output<String> getProject() {
@@ -66,7 +66,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
      * Prefix of BigQuery table Required for `bigquery` target_type.
      * 
      */
-    @InputImport(name="tablePrefix")
+    @Import(name="tablePrefix")
       private final @Nullable Output<String> tablePrefix;
 
     public Output<String> getTablePrefix() {

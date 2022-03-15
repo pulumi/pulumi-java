@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.cloudsearch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainScalingParameters {
     /**
      * The instance type that you want to preconfigure for your domain. See the [AWS documentation](https://docs.aws.amazon.com/cloudsearch/latest/developerguide/API_ScalingParameters.html) for valid values.
@@ -28,11 +28,11 @@ public final class DomainScalingParameters {
      */
     private final @Nullable Integer desiredReplicationCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainScalingParameters(
-        @OutputCustomType.Parameter("desiredInstanceType") @Nullable String desiredInstanceType,
-        @OutputCustomType.Parameter("desiredPartitionCount") @Nullable Integer desiredPartitionCount,
-        @OutputCustomType.Parameter("desiredReplicationCount") @Nullable Integer desiredReplicationCount) {
+        @CustomType.Parameter("desiredInstanceType") @Nullable String desiredInstanceType,
+        @CustomType.Parameter("desiredPartitionCount") @Nullable Integer desiredPartitionCount,
+        @CustomType.Parameter("desiredReplicationCount") @Nullable Integer desiredReplicationCount) {
         this.desiredInstanceType = desiredInstanceType;
         this.desiredPartitionCount = desiredPartitionCount;
         this.desiredReplicationCount = desiredReplicationCount;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.refactorspaces.inputs;
 import io.pulumi.awsnative.refactorspaces.enums.RouteActivationState;
 import io.pulumi.awsnative.refactorspaces.enums.RouteMethod;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,28 +18,28 @@ public final class RouteUriPathRouteInputArgs extends io.pulumi.resources.Resour
 
     public static final RouteUriPathRouteInputArgs Empty = new RouteUriPathRouteInputArgs();
 
-    @InputImport(name="activationState", required=true)
+    @Import(name="activationState", required=true)
       private final Output<RouteActivationState> activationState;
 
     public Output<RouteActivationState> getActivationState() {
         return this.activationState;
     }
 
-    @InputImport(name="includeChildPaths")
+    @Import(name="includeChildPaths")
       private final @Nullable Output<Boolean> includeChildPaths;
 
     public Output<Boolean> getIncludeChildPaths() {
         return this.includeChildPaths == null ? Output.empty() : this.includeChildPaths;
     }
 
-    @InputImport(name="methods")
+    @Import(name="methods")
       private final @Nullable Output<List<RouteMethod>> methods;
 
     public Output<List<RouteMethod>> getMethods() {
         return this.methods == null ? Output.empty() : this.methods;
     }
 
-    @InputImport(name="sourcePath")
+    @Import(name="sourcePath")
       private final @Nullable Output<String> sourcePath;
 
     public Output<String> getSourcePath() {

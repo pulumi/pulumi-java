@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvgroupResult {
     /**
      * The time at which the environment group was created as milliseconds since epoch.
@@ -36,13 +36,13 @@ public final class GetEnvgroupResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvgroupResult(
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("hostnames") List<String> hostnames,
-        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("hostnames") List<String> hostnames,
+        @CustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state) {
         this.createdAt = createdAt;
         this.hostnames = hostnames;
         this.lastModifiedAt = lastModifiedAt;

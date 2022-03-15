@@ -7,7 +7,7 @@ import io.pulumi.azurenative.batch.outputs.EnvironmentSettingResponse;
 import io.pulumi.azurenative.batch.outputs.ResourceFileResponse;
 import io.pulumi.azurenative.batch.outputs.TaskContainerSettingsResponse;
 import io.pulumi.azurenative.batch.outputs.UserIdentityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StartTaskResponse {
     /**
      * The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using "cmd /c MyCommand" in Windows or "/bin/sh -c MyCommand" in Linux. Required if any other properties of the startTask are specified.
@@ -46,15 +46,15 @@ public final class StartTaskResponse {
      */
     private final @Nullable Boolean waitForSuccess;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StartTaskResponse(
-        @OutputCustomType.Parameter("commandLine") @Nullable String commandLine,
-        @OutputCustomType.Parameter("containerSettings") @Nullable TaskContainerSettingsResponse containerSettings,
-        @OutputCustomType.Parameter("environmentSettings") @Nullable List<EnvironmentSettingResponse> environmentSettings,
-        @OutputCustomType.Parameter("maxTaskRetryCount") @Nullable Integer maxTaskRetryCount,
-        @OutputCustomType.Parameter("resourceFiles") @Nullable List<ResourceFileResponse> resourceFiles,
-        @OutputCustomType.Parameter("userIdentity") @Nullable UserIdentityResponse userIdentity,
-        @OutputCustomType.Parameter("waitForSuccess") @Nullable Boolean waitForSuccess) {
+        @CustomType.Parameter("commandLine") @Nullable String commandLine,
+        @CustomType.Parameter("containerSettings") @Nullable TaskContainerSettingsResponse containerSettings,
+        @CustomType.Parameter("environmentSettings") @Nullable List<EnvironmentSettingResponse> environmentSettings,
+        @CustomType.Parameter("maxTaskRetryCount") @Nullable Integer maxTaskRetryCount,
+        @CustomType.Parameter("resourceFiles") @Nullable List<ResourceFileResponse> resourceFiles,
+        @CustomType.Parameter("userIdentity") @Nullable UserIdentityResponse userIdentity,
+        @CustomType.Parameter("waitForSuccess") @Nullable Boolean waitForSuccess) {
         this.commandLine = commandLine;
         this.containerSettings = containerSettings;
         this.environmentSettings = environmentSettings;

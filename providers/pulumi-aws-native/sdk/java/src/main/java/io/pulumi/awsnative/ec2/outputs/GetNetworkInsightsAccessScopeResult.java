@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAccessScopeTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNetworkInsightsAccessScopeResult {
     private final @Nullable String createdDate;
     private final @Nullable String networkInsightsAccessScopeArn;
@@ -19,13 +19,13 @@ public final class GetNetworkInsightsAccessScopeResult {
     private final @Nullable List<NetworkInsightsAccessScopeTag> tags;
     private final @Nullable String updatedDate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNetworkInsightsAccessScopeResult(
-        @OutputCustomType.Parameter("createdDate") @Nullable String createdDate,
-        @OutputCustomType.Parameter("networkInsightsAccessScopeArn") @Nullable String networkInsightsAccessScopeArn,
-        @OutputCustomType.Parameter("networkInsightsAccessScopeId") @Nullable String networkInsightsAccessScopeId,
-        @OutputCustomType.Parameter("tags") @Nullable List<NetworkInsightsAccessScopeTag> tags,
-        @OutputCustomType.Parameter("updatedDate") @Nullable String updatedDate) {
+        @CustomType.Parameter("createdDate") @Nullable String createdDate,
+        @CustomType.Parameter("networkInsightsAccessScopeArn") @Nullable String networkInsightsAccessScopeArn,
+        @CustomType.Parameter("networkInsightsAccessScopeId") @Nullable String networkInsightsAccessScopeId,
+        @CustomType.Parameter("tags") @Nullable List<NetworkInsightsAccessScopeTag> tags,
+        @CustomType.Parameter("updatedDate") @Nullable String updatedDate) {
         this.createdDate = createdDate;
         this.networkInsightsAccessScopeArn = networkInsightsAccessScopeArn;
         this.networkInsightsAccessScopeId = networkInsightsAccessScopeId;

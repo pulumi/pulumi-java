@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse {
     /**
      * List of databases on source server
@@ -37,13 +37,13 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectToSourcePostgreSqlSyncTaskOutputResponse(
-        @OutputCustomType.Parameter("databases") List<String> databases,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("sourceServerBrandVersion") String sourceServerBrandVersion,
-        @OutputCustomType.Parameter("sourceServerVersion") String sourceServerVersion,
-        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
+        @CustomType.Parameter("databases") List<String> databases,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("sourceServerBrandVersion") String sourceServerBrandVersion,
+        @CustomType.Parameter("sourceServerVersion") String sourceServerVersion,
+        @CustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.databases = databases;
         this.id = id;
         this.sourceServerBrandVersion = sourceServerBrandVersion;

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.insights.outputs.AutoscaleNotificationResponse;
 import io.pulumi.azurenative.insights.outputs.AutoscaleProfileResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class AutoscaleSetting extends io.pulumi.resources.CustomResource {
      * the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -52,7 +52,7 @@ public class AutoscaleSetting extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -66,7 +66,7 @@ public class AutoscaleSetting extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class AutoscaleSetting extends io.pulumi.resources.CustomResource {
      * the collection of notifications.
      * 
      */
-    @OutputExport(name="notifications", type=List.class, parameters={AutoscaleNotificationResponse.class})
+    @Export(name="notifications", type=List.class, parameters={AutoscaleNotificationResponse.class})
     private Output</* @Nullable */ List<AutoscaleNotificationResponse>> notifications;
 
     /**
@@ -94,7 +94,7 @@ public class AutoscaleSetting extends io.pulumi.resources.CustomResource {
      * the collection of automatic scaling profiles that specify different scaling parameters for different time periods. A maximum of 20 profiles can be specified.
      * 
      */
-    @OutputExport(name="profiles", type=List.class, parameters={AutoscaleProfileResponse.class})
+    @Export(name="profiles", type=List.class, parameters={AutoscaleProfileResponse.class})
     private Output<List<AutoscaleProfileResponse>> profiles;
 
     /**
@@ -108,7 +108,7 @@ public class AutoscaleSetting extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -122,7 +122,7 @@ public class AutoscaleSetting extends io.pulumi.resources.CustomResource {
      * the location of the resource that the autoscale setting should be added to.
      * 
      */
-    @OutputExport(name="targetResourceLocation", type=String.class, parameters={})
+    @Export(name="targetResourceLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetResourceLocation;
 
     /**
@@ -136,7 +136,7 @@ public class AutoscaleSetting extends io.pulumi.resources.CustomResource {
      * the resource identifier of the resource that the autoscale setting should be added to.
      * 
      */
-    @OutputExport(name="targetResourceUri", type=String.class, parameters={})
+    @Export(name="targetResourceUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetResourceUri;
 
     /**
@@ -150,7 +150,7 @@ public class AutoscaleSetting extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

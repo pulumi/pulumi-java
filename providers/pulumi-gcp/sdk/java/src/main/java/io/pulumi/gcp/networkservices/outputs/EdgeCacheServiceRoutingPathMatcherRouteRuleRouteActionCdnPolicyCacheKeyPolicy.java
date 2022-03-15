@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy {
     /**
      * If true, requests to different hosts will be cached separately.
@@ -56,14 +56,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      */
     private final @Nullable List<String> includedQueryParameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy(
-        @OutputCustomType.Parameter("excludeHost") @Nullable Boolean excludeHost,
-        @OutputCustomType.Parameter("excludeQueryString") @Nullable Boolean excludeQueryString,
-        @OutputCustomType.Parameter("excludedQueryParameters") @Nullable List<String> excludedQueryParameters,
-        @OutputCustomType.Parameter("includeProtocol") @Nullable Boolean includeProtocol,
-        @OutputCustomType.Parameter("includedHeaderNames") @Nullable List<String> includedHeaderNames,
-        @OutputCustomType.Parameter("includedQueryParameters") @Nullable List<String> includedQueryParameters) {
+        @CustomType.Parameter("excludeHost") @Nullable Boolean excludeHost,
+        @CustomType.Parameter("excludeQueryString") @Nullable Boolean excludeQueryString,
+        @CustomType.Parameter("excludedQueryParameters") @Nullable List<String> excludedQueryParameters,
+        @CustomType.Parameter("includeProtocol") @Nullable Boolean includeProtocol,
+        @CustomType.Parameter("includedHeaderNames") @Nullable List<String> includedHeaderNames,
+        @CustomType.Parameter("includedQueryParameters") @Nullable List<String> includedQueryParameters) {
         this.excludeHost = excludeHost;
         this.excludeQueryString = excludeQueryString;
         this.excludedQueryParameters = excludedQueryParameters;

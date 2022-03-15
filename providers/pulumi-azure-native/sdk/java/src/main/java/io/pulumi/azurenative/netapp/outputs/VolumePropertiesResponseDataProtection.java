@@ -6,12 +6,12 @@ package io.pulumi.azurenative.netapp.outputs;
 import io.pulumi.azurenative.netapp.outputs.ReplicationObjectResponse;
 import io.pulumi.azurenative.netapp.outputs.VolumeBackupPropertiesResponse;
 import io.pulumi.azurenative.netapp.outputs.VolumeSnapshotPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VolumePropertiesResponseDataProtection {
     /**
      * Backup Properties
@@ -29,11 +29,11 @@ public final class VolumePropertiesResponseDataProtection {
      */
     private final @Nullable VolumeSnapshotPropertiesResponse snapshot;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VolumePropertiesResponseDataProtection(
-        @OutputCustomType.Parameter("backup") @Nullable VolumeBackupPropertiesResponse backup,
-        @OutputCustomType.Parameter("replication") @Nullable ReplicationObjectResponse replication,
-        @OutputCustomType.Parameter("snapshot") @Nullable VolumeSnapshotPropertiesResponse snapshot) {
+        @CustomType.Parameter("backup") @Nullable VolumeBackupPropertiesResponse backup,
+        @CustomType.Parameter("replication") @Nullable ReplicationObjectResponse replication,
+        @CustomType.Parameter("snapshot") @Nullable VolumeSnapshotPropertiesResponse snapshot) {
         this.backup = backup;
         this.replication = replication;
         this.snapshot = snapshot;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1alpha1.inputs.LocalObjectReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
      * A Cloud Secret Manager secret version. Must be 'latest' for the latest version or an integer for a specific version. The key of the secret to select from. Must be a valid secret key.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -35,7 +35,7 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
      * This field should not be used directly as it is meant to be inlined directly into the message. Use the "name" field instead.
      * 
      */
-    @InputImport(name="localObjectReference")
+    @Import(name="localObjectReference")
       private final @Nullable Output<LocalObjectReferenceArgs> localObjectReference;
 
     public Output<LocalObjectReferenceArgs> getLocalObjectReference() {
@@ -46,7 +46,7 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
      * The name of the secret in Cloud Secret Manager. By default, the secret is assumed to be in the same project. If the secret is in another project, you must define an alias. An alias definition has the form: :projects//secrets/. If multiple alias definitions are needed, they must be separated by commas. The alias definitions must be set on the run.googleapis.com/secrets annotation. The name of the secret in the pod's namespace to select from.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class SecretKeySelectorArgs extends io.pulumi.resources.ResourceArg
      * (Optional) Specify whether the Secret or its key must be defined
      * 
      */
-    @InputImport(name="optional")
+    @Import(name="optional")
       private final @Nullable Output<Boolean> optional;
 
     public Output<Boolean> getOptional() {

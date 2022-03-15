@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.elasticbeanstalk.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSolutionStackResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -25,12 +25,12 @@ public final class GetSolutionStackResult {
     private final String name;
     private final String nameRegex;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSolutionStackResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nameRegex") String nameRegex) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nameRegex") String nameRegex) {
         this.id = id;
         this.mostRecent = mostRecent;
         this.name = name;

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.configuration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetConfigurationAggregatorArgs extends io.pulumi.resources.In
      * The name of the aggregator.
      * 
      */
-    @InputImport(name="configurationAggregatorName", required=true)
+    @Import(name="configurationAggregatorName", required=true)
       private final String configurationAggregatorName;
 
     public String getConfigurationAggregatorName() {

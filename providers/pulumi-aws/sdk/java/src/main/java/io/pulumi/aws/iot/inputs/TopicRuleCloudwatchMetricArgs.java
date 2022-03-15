@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
      * The CloudWatch metric name.
      * 
      */
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -29,7 +29,7 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
      * The CloudWatch metric namespace name.
      * 
      */
-    @InputImport(name="metricNamespace", required=true)
+    @Import(name="metricNamespace", required=true)
       private final Output<String> metricNamespace;
 
     public Output<String> getMetricNamespace() {
@@ -40,7 +40,7 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
      * An optional Unix timestamp (http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#about_timestamp).
      * 
      */
-    @InputImport(name="metricTimestamp")
+    @Import(name="metricTimestamp")
       private final @Nullable Output<String> metricTimestamp;
 
     public Output<String> getMetricTimestamp() {
@@ -51,7 +51,7 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
      * The metric unit (supported units can be found here: http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/cloudwatch_concepts.html#Unit)
      * 
      */
-    @InputImport(name="metricUnit", required=true)
+    @Import(name="metricUnit", required=true)
       private final Output<String> metricUnit;
 
     public Output<String> getMetricUnit() {
@@ -62,7 +62,7 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
      * The CloudWatch metric value.
      * 
      */
-    @InputImport(name="metricValue", required=true)
+    @Import(name="metricValue", required=true)
       private final Output<String> metricValue;
 
     public Output<String> getMetricValue() {
@@ -73,7 +73,7 @@ public final class TopicRuleCloudwatchMetricArgs extends io.pulumi.resources.Res
      * The IAM role ARN that allows access to the CloudWatch metric.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

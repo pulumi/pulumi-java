@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PatchSettingsResponse {
     /**
      * Specifies the mode of VM Guest patch assessment for the IaaS virtual machine.<br /><br /> Possible values are:<br /><br /> **ImageDefault** - You control the timing of patch assessments on a virtual machine.<br /><br /> **AutomaticByPlatform** - The platform will trigger periodic patch assessments. The property provisionVMAgent must be true.
@@ -28,11 +28,11 @@ public final class PatchSettingsResponse {
      */
     private final @Nullable String patchMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchSettingsResponse(
-        @OutputCustomType.Parameter("assessmentMode") @Nullable String assessmentMode,
-        @OutputCustomType.Parameter("enableHotpatching") @Nullable Boolean enableHotpatching,
-        @OutputCustomType.Parameter("patchMode") @Nullable String patchMode) {
+        @CustomType.Parameter("assessmentMode") @Nullable String assessmentMode,
+        @CustomType.Parameter("enableHotpatching") @Nullable Boolean enableHotpatching,
+        @CustomType.Parameter("patchMode") @Nullable String patchMode) {
         this.assessmentMode = assessmentMode;
         this.enableHotpatching = enableHotpatching;
         this.patchMode = patchMode;

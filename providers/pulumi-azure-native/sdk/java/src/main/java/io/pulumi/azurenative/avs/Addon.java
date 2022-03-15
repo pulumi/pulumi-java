@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.avs.AddonArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * The type of private cloud addon
      * 
      */
-    @OutputExport(name="addonType", type=String.class, parameters={})
+    @Export(name="addonType", type=String.class, parameters={})
     private Output</* @Nullable */ String> addonType;
 
     /**
@@ -48,7 +48,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * The SRM license
      * 
      */
-    @OutputExport(name="licenseKey", type=String.class, parameters={})
+    @Export(name="licenseKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> licenseKey;
 
     /**
@@ -62,7 +62,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * The state of the addon provisioning
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -90,7 +90,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

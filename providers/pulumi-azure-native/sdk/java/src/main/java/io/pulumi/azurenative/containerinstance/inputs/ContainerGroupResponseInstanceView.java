@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.EventResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ContainerGroupResponseInstanceView extends io.pulumi.resource
      * The events of this container group.
      * 
      */
-    @InputImport(name="events", required=true)
+    @Import(name="events", required=true)
       private final List<EventResponse> events;
 
     public List<EventResponse> getEvents() {
@@ -33,7 +33,7 @@ public final class ContainerGroupResponseInstanceView extends io.pulumi.resource
      * The state of the container group. Only valid in response.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {

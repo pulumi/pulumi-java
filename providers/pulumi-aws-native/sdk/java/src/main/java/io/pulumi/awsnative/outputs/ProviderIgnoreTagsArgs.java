@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.outputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProviderIgnoreTagsArgs {
     /**
      * List of exact resource tag keys to ignore across all resources handled by this provider. This configuration prevents Pulumi from returning the tag in any `tags` attributes and displaying any configuration difference for the tag value. If any resource configuration still has this tag key configured in the `tags` argument, it will display a perpetual difference until the tag is removed from the argument or `ignoreChanges` is also used.
@@ -23,10 +23,10 @@ public final class ProviderIgnoreTagsArgs {
      */
     private final @Nullable Output<List<String>> keys;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProviderIgnoreTagsArgs(
-        @OutputCustomType.Parameter("keyPrefixes") @Nullable Output<List<String>> keyPrefixes,
-        @OutputCustomType.Parameter("keys") @Nullable Output<List<String>> keys) {
+        @CustomType.Parameter("keyPrefixes") @Nullable Output<List<String>> keyPrefixes,
+        @CustomType.Parameter("keys") @Nullable Output<List<String>> keys) {
         this.keyPrefixes = keyPrefixes;
         this.keys = keys;
     }

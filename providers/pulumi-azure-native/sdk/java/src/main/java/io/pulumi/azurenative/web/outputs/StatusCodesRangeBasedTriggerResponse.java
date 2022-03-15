@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StatusCodesRangeBasedTriggerResponse {
     /**
      * Request Count.
@@ -29,12 +29,12 @@ public final class StatusCodesRangeBasedTriggerResponse {
      */
     private final @Nullable String timeInterval;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StatusCodesRangeBasedTriggerResponse(
-        @OutputCustomType.Parameter("count") @Nullable Integer count,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("statusCodes") @Nullable String statusCodes,
-        @OutputCustomType.Parameter("timeInterval") @Nullable String timeInterval) {
+        @CustomType.Parameter("count") @Nullable Integer count,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("statusCodes") @Nullable String statusCodes,
+        @CustomType.Parameter("timeInterval") @Nullable String timeInterval) {
         this.count = count;
         this.path = path;
         this.statusCodes = statusCodes;

@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.route53recoveryreadiness.outputs;
 
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.CellTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCellResult {
     /**
      * The Amazon Resource Name (ARN) of the cell.
@@ -34,12 +34,12 @@ public final class GetCellResult {
      */
     private final @Nullable List<CellTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCellResult(
-        @OutputCustomType.Parameter("cellArn") @Nullable String cellArn,
-        @OutputCustomType.Parameter("cells") @Nullable List<String> cells,
-        @OutputCustomType.Parameter("parentReadinessScopes") @Nullable List<String> parentReadinessScopes,
-        @OutputCustomType.Parameter("tags") @Nullable List<CellTag> tags) {
+        @CustomType.Parameter("cellArn") @Nullable String cellArn,
+        @CustomType.Parameter("cells") @Nullable List<String> cells,
+        @CustomType.Parameter("parentReadinessScopes") @Nullable List<String> parentReadinessScopes,
+        @CustomType.Parameter("tags") @Nullable List<CellTag> tags) {
         this.cellArn = cellArn;
         this.cells = cells;
         this.parentReadinessScopes = parentReadinessScopes;

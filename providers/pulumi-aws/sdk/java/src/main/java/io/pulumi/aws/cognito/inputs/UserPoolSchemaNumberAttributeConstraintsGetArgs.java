@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class UserPoolSchemaNumberAttributeConstraintsGetArgs extends io.pu
      * Maximum value of an attribute that is of the number data type.
      * 
      */
-    @InputImport(name="maxValue")
+    @Import(name="maxValue")
       private final @Nullable Output<String> maxValue;
 
     public Output<String> getMaxValue() {
@@ -29,7 +29,7 @@ public final class UserPoolSchemaNumberAttributeConstraintsGetArgs extends io.pu
      * Minimum value of an attribute that is of the number data type.
      * 
      */
-    @InputImport(name="minValue")
+    @Import(name="minValue")
       private final @Nullable Output<String> minValue;
 
     public Output<String> getMinValue() {

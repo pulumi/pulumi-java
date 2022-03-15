@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureSkuResponse {
     /**
      * The number of instances of the cluster.
@@ -28,11 +28,11 @@ public final class AzureSkuResponse {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureSkuResponse(
-        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tier") String tier) {
+        @CustomType.Parameter("capacity") @Nullable Integer capacity,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tier") String tier) {
         this.capacity = capacity;
         this.name = name;
         this.tier = tier;

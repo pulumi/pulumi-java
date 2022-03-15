@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.secretmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSecretRotation {
     private final String nextRotationTime;
     private final String rotationPeriod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSecretRotation(
-        @OutputCustomType.Parameter("nextRotationTime") String nextRotationTime,
-        @OutputCustomType.Parameter("rotationPeriod") String rotationPeriod) {
+        @CustomType.Parameter("nextRotationTime") String nextRotationTime,
+        @CustomType.Parameter("rotationPeriod") String rotationPeriod) {
         this.nextRotationTime = nextRotationTime;
         this.rotationPeriod = rotationPeriod;
     }

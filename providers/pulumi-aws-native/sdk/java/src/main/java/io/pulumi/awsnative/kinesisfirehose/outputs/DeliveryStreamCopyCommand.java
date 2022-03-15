@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamCopyCommand {
     private final @Nullable String copyOptions;
     private final @Nullable String dataTableColumns;
     private final String dataTableName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamCopyCommand(
-        @OutputCustomType.Parameter("copyOptions") @Nullable String copyOptions,
-        @OutputCustomType.Parameter("dataTableColumns") @Nullable String dataTableColumns,
-        @OutputCustomType.Parameter("dataTableName") String dataTableName) {
+        @CustomType.Parameter("copyOptions") @Nullable String copyOptions,
+        @CustomType.Parameter("dataTableColumns") @Nullable String dataTableColumns,
+        @CustomType.Parameter("dataTableName") String dataTableName) {
         this.copyOptions = copyOptions;
         this.dataTableColumns = dataTableColumns;
         this.dataTableName = dataTableName;

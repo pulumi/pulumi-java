@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse extends io.pulumi
      * Region to configure the Workspace.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable String region;
 
     public Optional<String> getRegion() {
@@ -34,7 +34,7 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse extends io.pulumi
      * The workspace Id for Firewall Policy Insights.
      * 
      */
-    @InputImport(name="workspaceId")
+    @Import(name="workspaceId")
       private final @Nullable SubResourceResponse workspaceId;
 
     public Optional<SubResourceResponse> getWorkspaceId() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PosixGroupResponse {
     /**
      * GID of the POSIX group.
@@ -25,11 +25,11 @@ public final class PosixGroupResponse {
      */
     private final String systemId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PosixGroupResponse(
-        @OutputCustomType.Parameter("gid") String gid,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("systemId") String systemId) {
+        @CustomType.Parameter("gid") String gid,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("systemId") String systemId) {
         this.gid = gid;
         this.name = name;
         this.systemId = systemId;

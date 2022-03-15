@@ -4,14 +4,14 @@
 package io.pulumi.aws.servicecatalog.outputs;
 
 import io.pulumi.aws.servicecatalog.outputs.GetPortfolioConstraintsDetail;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPortfolioConstraintsResult {
     private final @Nullable String acceptLanguage;
     /**
@@ -35,13 +35,13 @@ public final class GetPortfolioConstraintsResult {
      */
     private final @Nullable String productId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPortfolioConstraintsResult(
-        @OutputCustomType.Parameter("acceptLanguage") @Nullable String acceptLanguage,
-        @OutputCustomType.Parameter("details") List<GetPortfolioConstraintsDetail> details,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("portfolioId") String portfolioId,
-        @OutputCustomType.Parameter("productId") @Nullable String productId) {
+        @CustomType.Parameter("acceptLanguage") @Nullable String acceptLanguage,
+        @CustomType.Parameter("details") List<GetPortfolioConstraintsDetail> details,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("portfolioId") String portfolioId,
+        @CustomType.Parameter("productId") @Nullable String productId) {
         this.acceptLanguage = acceptLanguage;
         this.details = details;
         this.id = id;

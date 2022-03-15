@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopeAccessScopePathRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAccessScopeTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,21 +16,21 @@ public final class NetworkInsightsAccessScopeArgs extends io.pulumi.resources.Re
 
     public static final NetworkInsightsAccessScopeArgs Empty = new NetworkInsightsAccessScopeArgs();
 
-    @InputImport(name="excludePaths")
+    @Import(name="excludePaths")
       private final @Nullable Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> excludePaths;
 
     public Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> getExcludePaths() {
         return this.excludePaths == null ? Output.empty() : this.excludePaths;
     }
 
-    @InputImport(name="matchPaths")
+    @Import(name="matchPaths")
       private final @Nullable Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> matchPaths;
 
     public Output<List<NetworkInsightsAccessScopeAccessScopePathRequestArgs>> getMatchPaths() {
         return this.matchPaths == null ? Output.empty() : this.matchPaths;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<NetworkInsightsAccessScopeTagArgs>> tags;
 
     public Output<List<NetworkInsightsAccessScopeTagArgs>> getTags() {

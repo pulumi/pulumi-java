@@ -6,14 +6,14 @@ package io.pulumi.awsnative.mediapackage.outputs;
 import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashManifestManifestLayout;
 import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashManifestProfile;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationStreamSelection;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PackagingConfigurationDashManifest {
     /**
      * Determines the position of some tags in the Media Presentation Description (MPD). When set to FULL, elements like SegmentTemplate and ContentProtection are included in each Representation. When set to COMPACT, duplicate elements are combined and presented at the AdaptationSet level.
@@ -33,13 +33,13 @@ public final class PackagingConfigurationDashManifest {
     private final @Nullable PackagingConfigurationDashManifestProfile profile;
     private final @Nullable PackagingConfigurationStreamSelection streamSelection;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackagingConfigurationDashManifest(
-        @OutputCustomType.Parameter("manifestLayout") @Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout,
-        @OutputCustomType.Parameter("manifestName") @Nullable String manifestName,
-        @OutputCustomType.Parameter("minBufferTimeSeconds") @Nullable Integer minBufferTimeSeconds,
-        @OutputCustomType.Parameter("profile") @Nullable PackagingConfigurationDashManifestProfile profile,
-        @OutputCustomType.Parameter("streamSelection") @Nullable PackagingConfigurationStreamSelection streamSelection) {
+        @CustomType.Parameter("manifestLayout") @Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout,
+        @CustomType.Parameter("manifestName") @Nullable String manifestName,
+        @CustomType.Parameter("minBufferTimeSeconds") @Nullable Integer minBufferTimeSeconds,
+        @CustomType.Parameter("profile") @Nullable PackagingConfigurationDashManifestProfile profile,
+        @CustomType.Parameter("streamSelection") @Nullable PackagingConfigurationStreamSelection streamSelection) {
         this.manifestLayout = manifestLayout;
         this.manifestName = manifestName;
         this.minBufferTimeSeconds = minBufferTimeSeconds;

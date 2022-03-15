@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetUserSettingsArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the user settings
      * 
      */
-    @InputImport(name="userSettingsName", required=true)
+    @Import(name="userSettingsName", required=true)
       private final String userSettingsName;
 
     public String getUserSettingsName() {

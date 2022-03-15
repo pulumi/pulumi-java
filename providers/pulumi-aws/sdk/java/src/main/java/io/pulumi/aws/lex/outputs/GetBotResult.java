@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBotResult {
     /**
      * The ARN of the bot.
@@ -100,25 +100,25 @@ public final class GetBotResult {
      */
     private final String voiceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBotResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("checksum") String checksum,
-        @OutputCustomType.Parameter("childDirected") Boolean childDirected,
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("detectSentiment") Boolean detectSentiment,
-        @OutputCustomType.Parameter("enableModelImprovements") Boolean enableModelImprovements,
-        @OutputCustomType.Parameter("failureReason") String failureReason,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("idleSessionTtlInSeconds") Integer idleSessionTtlInSeconds,
-        @OutputCustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
-        @OutputCustomType.Parameter("locale") String locale,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nluIntentConfidenceThreshold") Double nluIntentConfidenceThreshold,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("version") @Nullable String version,
-        @OutputCustomType.Parameter("voiceId") String voiceId) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("checksum") String checksum,
+        @CustomType.Parameter("childDirected") Boolean childDirected,
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("detectSentiment") Boolean detectSentiment,
+        @CustomType.Parameter("enableModelImprovements") Boolean enableModelImprovements,
+        @CustomType.Parameter("failureReason") String failureReason,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("idleSessionTtlInSeconds") Integer idleSessionTtlInSeconds,
+        @CustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
+        @CustomType.Parameter("locale") String locale,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nluIntentConfidenceThreshold") Double nluIntentConfidenceThreshold,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("version") @Nullable String version,
+        @CustomType.Parameter("voiceId") String voiceId) {
         this.arn = arn;
         this.checksum = checksum;
         this.childDirected = childDirected;

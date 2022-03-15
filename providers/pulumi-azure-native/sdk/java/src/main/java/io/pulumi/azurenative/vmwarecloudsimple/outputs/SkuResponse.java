@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SkuResponse {
     /**
      * The capacity of the SKU
@@ -37,13 +37,13 @@ public final class SkuResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkuResponse(
-        @OutputCustomType.Parameter("capacity") @Nullable String capacity,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("family") @Nullable String family,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tier") @Nullable String tier) {
+        @CustomType.Parameter("capacity") @Nullable String capacity,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("family") @Nullable String family,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tier") @Nullable String tier) {
         this.capacity = capacity;
         this.description = description;
         this.family = family;

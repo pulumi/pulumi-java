@@ -12,7 +12,7 @@ import io.pulumi.azurenative.labservices.outputs.SupportInfoResponse;
 import io.pulumi.azurenative.labservices.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * The allowed regions for the lab creator to use when creating labs using this lab plan.
      * 
      */
-    @OutputExport(name="allowedRegions", type=List.class, parameters={String.class})
+    @Export(name="allowedRegions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> allowedRegions;
 
     /**
@@ -54,7 +54,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * The default lab shutdown profile. This can be changed on a lab resource and only provides a default profile.
      * 
      */
-    @OutputExport(name="defaultAutoShutdownProfile", type=AutoShutdownProfileResponse.class, parameters={})
+    @Export(name="defaultAutoShutdownProfile", type=AutoShutdownProfileResponse.class, parameters={})
     private Output</* @Nullable */ AutoShutdownProfileResponse> defaultAutoShutdownProfile;
 
     /**
@@ -68,7 +68,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * The default lab connection profile. This can be changed on a lab resource and only provides a default profile.
      * 
      */
-    @OutputExport(name="defaultConnectionProfile", type=ConnectionProfileResponse.class, parameters={})
+    @Export(name="defaultConnectionProfile", type=ConnectionProfileResponse.class, parameters={})
     private Output</* @Nullable */ ConnectionProfileResponse> defaultConnectionProfile;
 
     /**
@@ -82,7 +82,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * The lab plan network profile. To enforce lab network policies they must be defined here and cannot be changed when there are existing labs associated with this lab plan.
      * 
      */
-    @OutputExport(name="defaultNetworkProfile", type=LabPlanNetworkProfileResponse.class, parameters={})
+    @Export(name="defaultNetworkProfile", type=LabPlanNetworkProfileResponse.class, parameters={})
     private Output</* @Nullable */ LabPlanNetworkProfileResponse> defaultNetworkProfile;
 
     /**
@@ -96,7 +96,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * Base Url of the lms instance this lab plan can link lab rosters against.
      * 
      */
-    @OutputExport(name="linkedLmsInstance", type=String.class, parameters={})
+    @Export(name="linkedLmsInstance", type=String.class, parameters={})
     private Output</* @Nullable */ String> linkedLmsInstance;
 
     /**
@@ -110,7 +110,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -124,7 +124,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -138,7 +138,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * Current provisioning state of the lab plan.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -152,7 +152,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * Resource ID of the Shared Image Gallery attached to this lab plan. When saving a lab template virtual machine image it will be persisted in this gallery. Shared images from the gallery can be made available to use when creating new labs.
      * 
      */
-    @OutputExport(name="sharedGalleryId", type=String.class, parameters={})
+    @Export(name="sharedGalleryId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sharedGalleryId;
 
     /**
@@ -166,7 +166,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * Support contact information and instructions for users of the lab plan. This information is displayed to lab owners and virtual machine users for all labs in the lab plan.
      * 
      */
-    @OutputExport(name="supportInfo", type=SupportInfoResponse.class, parameters={})
+    @Export(name="supportInfo", type=SupportInfoResponse.class, parameters={})
     private Output</* @Nullable */ SupportInfoResponse> supportInfo;
 
     /**
@@ -180,7 +180,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the lab plan.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -194,7 +194,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -208,7 +208,7 @@ public class LabPlan extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

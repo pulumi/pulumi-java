@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.enums.DatasetResourceConfigurationComputeType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatasetResourceConfiguration {
     private final DatasetResourceConfigurationComputeType computeType;
     private final Integer volumeSizeInGB;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetResourceConfiguration(
-        @OutputCustomType.Parameter("computeType") DatasetResourceConfigurationComputeType computeType,
-        @OutputCustomType.Parameter("volumeSizeInGB") Integer volumeSizeInGB) {
+        @CustomType.Parameter("computeType") DatasetResourceConfigurationComputeType computeType,
+        @CustomType.Parameter("volumeSizeInGB") Integer volumeSizeInGB) {
         this.computeType = computeType;
         this.volumeSizeInGB = volumeSizeInGB;
     }

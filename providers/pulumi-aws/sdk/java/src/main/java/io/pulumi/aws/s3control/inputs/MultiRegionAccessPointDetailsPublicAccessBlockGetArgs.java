@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class MultiRegionAccessPointDetailsPublicAccessBlockGetArgs extends
      * * PUT Bucket calls fail if the request includes a public ACL.
      * 
      */
-    @InputImport(name="blockPublicAcls")
+    @Import(name="blockPublicAcls")
       private final @Nullable Output<Boolean> blockPublicAcls;
 
     public Output<Boolean> getBlockPublicAcls() {
@@ -33,7 +33,7 @@ public final class MultiRegionAccessPointDetailsPublicAccessBlockGetArgs extends
      * * Reject calls to PUT Bucket policy if the specified bucket policy allows public access.
      * 
      */
-    @InputImport(name="blockPublicPolicy")
+    @Import(name="blockPublicPolicy")
       private final @Nullable Output<Boolean> blockPublicPolicy;
 
     public Output<Boolean> getBlockPublicPolicy() {
@@ -45,7 +45,7 @@ public final class MultiRegionAccessPointDetailsPublicAccessBlockGetArgs extends
      * * Ignore all public ACLs on buckets in this account and any objects that they contain.
      * 
      */
-    @InputImport(name="ignorePublicAcls")
+    @Import(name="ignorePublicAcls")
       private final @Nullable Output<Boolean> ignorePublicAcls;
 
     public Output<Boolean> getIgnorePublicAcls() {
@@ -57,7 +57,7 @@ public final class MultiRegionAccessPointDetailsPublicAccessBlockGetArgs extends
      * * Only the bucket owner and AWS Services can access buckets with public policies.
      * 
      */
-    @InputImport(name="restrictPublicBuckets")
+    @Import(name="restrictPublicBuckets")
       private final @Nullable Output<Boolean> restrictPublicBuckets;
 
     public Output<Boolean> getRestrictPublicBuckets() {

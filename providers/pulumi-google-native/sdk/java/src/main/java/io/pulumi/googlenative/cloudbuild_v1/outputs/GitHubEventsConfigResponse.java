@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.PullRequestFilterResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.PushFilterResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GitHubEventsConfigResponse {
     /**
      * Optional. The resource name of the github enterprise config that should be applied to this installation. For example: "projects/{$project_id}/githubEnterpriseConfigs/{$config_id}"
@@ -42,14 +42,14 @@ public final class GitHubEventsConfigResponse {
      */
     private final PushFilterResponse push;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GitHubEventsConfigResponse(
-        @OutputCustomType.Parameter("enterpriseConfigResourceName") String enterpriseConfigResourceName,
-        @OutputCustomType.Parameter("installationId") String installationId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("owner") String owner,
-        @OutputCustomType.Parameter("pullRequest") PullRequestFilterResponse pullRequest,
-        @OutputCustomType.Parameter("push") PushFilterResponse push) {
+        @CustomType.Parameter("enterpriseConfigResourceName") String enterpriseConfigResourceName,
+        @CustomType.Parameter("installationId") String installationId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("owner") String owner,
+        @CustomType.Parameter("pullRequest") PullRequestFilterResponse pullRequest,
+        @CustomType.Parameter("push") PushFilterResponse push) {
         this.enterpriseConfigResourceName = enterpriseConfigResourceName;
         this.installationId = installationId;
         this.name = name;

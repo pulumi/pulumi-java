@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobPlacementResponse {
     /**
      * Optional. Cluster labels to identify a cluster where the job will be submitted.
@@ -26,11 +26,11 @@ public final class JobPlacementResponse {
      */
     private final String clusterUuid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobPlacementResponse(
-        @OutputCustomType.Parameter("clusterLabels") Map<String,String> clusterLabels,
-        @OutputCustomType.Parameter("clusterName") String clusterName,
-        @OutputCustomType.Parameter("clusterUuid") String clusterUuid) {
+        @CustomType.Parameter("clusterLabels") Map<String,String> clusterLabels,
+        @CustomType.Parameter("clusterName") String clusterName,
+        @CustomType.Parameter("clusterUuid") String clusterUuid) {
         this.clusterLabels = clusterLabels;
         this.clusterName = clusterName;
         this.clusterUuid = clusterUuid;

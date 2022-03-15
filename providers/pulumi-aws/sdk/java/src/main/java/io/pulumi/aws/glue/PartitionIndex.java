@@ -8,7 +8,7 @@ import io.pulumi.aws.glue.PartitionIndexArgs;
 import io.pulumi.aws.glue.inputs.PartitionIndexState;
 import io.pulumi.aws.glue.outputs.PartitionIndexPartitionIndex;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -31,7 +31,7 @@ public class PartitionIndex extends io.pulumi.resources.CustomResource {
      * The catalog ID where the table resides.
      * 
      */
-    @OutputExport(name="catalogId", type=String.class, parameters={})
+    @Export(name="catalogId", type=String.class, parameters={})
     private Output<String> catalogId;
 
     /**
@@ -45,7 +45,7 @@ public class PartitionIndex extends io.pulumi.resources.CustomResource {
      * Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
      * 
      */
-    @OutputExport(name="databaseName", type=String.class, parameters={})
+    @Export(name="databaseName", type=String.class, parameters={})
     private Output<String> databaseName;
 
     /**
@@ -59,7 +59,7 @@ public class PartitionIndex extends io.pulumi.resources.CustomResource {
      * Configuration block for a partition index. See `partition_index` below.
      * 
      */
-    @OutputExport(name="partitionIndex", type=PartitionIndexPartitionIndex.class, parameters={})
+    @Export(name="partitionIndex", type=PartitionIndexPartitionIndex.class, parameters={})
     private Output<PartitionIndexPartitionIndex> partitionIndex;
 
     /**
@@ -73,7 +73,7 @@ public class PartitionIndex extends io.pulumi.resources.CustomResource {
      * Name of the table. For Hive compatibility, this must be entirely lowercase.
      * 
      */
-    @OutputExport(name="tableName", type=String.class, parameters={})
+    @Export(name="tableName", type=String.class, parameters={})
     private Output<String> tableName;
 
     /**

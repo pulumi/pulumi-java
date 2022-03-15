@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1IssueAssignmentResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse {
     /**
      * Issue model that generates the result. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
@@ -22,10 +22,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse {
      */
     private final List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1IssueModelResultResponse(
-        @OutputCustomType.Parameter("issueModel") String issueModel,
-        @OutputCustomType.Parameter("issues") List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues) {
+        @CustomType.Parameter("issueModel") String issueModel,
+        @CustomType.Parameter("issues") List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues) {
         this.issueModel = issueModel;
         this.issues = issues;
     }

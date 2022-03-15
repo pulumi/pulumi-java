@@ -6,7 +6,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 import io.pulumi.aws.apigatewayv2.inputs.DomainNameDomainNameConfigurationGetArgs;
 import io.pulumi.aws.apigatewayv2.inputs.DomainNameMutualTlsAuthenticationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * The [API mapping selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions) for the domain name.
      * 
      */
-    @InputImport(name="apiMappingSelectionExpression")
+    @Import(name="apiMappingSelectionExpression")
       private final @Nullable Output<String> apiMappingSelectionExpression;
 
     public Output<String> getApiMappingSelectionExpression() {
@@ -32,7 +32,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the domain name.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -43,7 +43,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * The domain name. Must be between 1 and 512 characters in length.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -54,7 +54,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * The domain name configuration.
      * 
      */
-    @InputImport(name="domainNameConfiguration")
+    @Import(name="domainNameConfiguration")
       private final @Nullable Output<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration;
 
     public Output<DomainNameDomainNameConfigurationGetArgs> getDomainNameConfiguration() {
@@ -65,7 +65,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * The mutual TLS authentication configuration for the domain name.
      * 
      */
-    @InputImport(name="mutualTlsAuthentication")
+    @Import(name="mutualTlsAuthentication")
       private final @Nullable Output<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication;
 
     public Output<DomainNameMutualTlsAuthenticationGetArgs> getMutualTlsAuthentication() {
@@ -76,7 +76,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -87,7 +87,7 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

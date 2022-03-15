@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends io.pulumi.r
      * Permission group for validations
      * 
      */
-    @InputImport(name="checkPermissionsGroup")
+    @Import(name="checkPermissionsGroup")
       private final @Nullable String checkPermissionsGroup;
 
     public Optional<String> getCheckPermissionsGroup() {
@@ -35,7 +35,7 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends io.pulumi.r
      * Flag for whether to collect agent jobs from source server.
      * 
      */
-    @InputImport(name="collectAgentJobs")
+    @Import(name="collectAgentJobs")
       private final @Nullable Boolean collectAgentJobs;
 
     public Optional<Boolean> getCollectAgentJobs() {
@@ -46,7 +46,7 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends io.pulumi.r
      * Flag for whether to collect logins from source server.
      * 
      */
-    @InputImport(name="collectLogins")
+    @Import(name="collectLogins")
       private final @Nullable Boolean collectLogins;
 
     public Optional<Boolean> getCollectLogins() {
@@ -57,7 +57,7 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends io.pulumi.r
      * Connection information for Source SQL Server
      * 
      */
-    @InputImport(name="sourceConnectionInfo", required=true)
+    @Import(name="sourceConnectionInfo", required=true)
       private final SqlConnectionInfoResponse sourceConnectionInfo;
 
     public SqlConnectionInfoResponse getSourceConnectionInfo() {

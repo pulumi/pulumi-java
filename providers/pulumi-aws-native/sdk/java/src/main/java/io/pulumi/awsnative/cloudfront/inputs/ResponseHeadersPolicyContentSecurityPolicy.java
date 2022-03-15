@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -13,14 +13,14 @@ public final class ResponseHeadersPolicyContentSecurityPolicy extends io.pulumi.
 
     public static final ResponseHeadersPolicyContentSecurityPolicy Empty = new ResponseHeadersPolicyContentSecurityPolicy();
 
-    @InputImport(name="contentSecurityPolicy", required=true)
+    @Import(name="contentSecurityPolicy", required=true)
       private final String contentSecurityPolicy;
 
     public String getContentSecurityPolicy() {
         return this.contentSecurityPolicy;
     }
 
-    @InputImport(name="override", required=true)
+    @Import(name="override", required=true)
       private final Boolean override;
 
     public Boolean getOverride() {

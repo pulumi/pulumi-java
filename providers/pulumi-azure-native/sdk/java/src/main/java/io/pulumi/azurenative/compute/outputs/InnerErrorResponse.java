@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InnerErrorResponse {
     /**
      * The internal error message or exception dump.
@@ -22,10 +22,10 @@ public final class InnerErrorResponse {
      */
     private final @Nullable String exceptiontype;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InnerErrorResponse(
-        @OutputCustomType.Parameter("errordetail") @Nullable String errordetail,
-        @OutputCustomType.Parameter("exceptiontype") @Nullable String exceptiontype) {
+        @CustomType.Parameter("errordetail") @Nullable String errordetail,
+        @CustomType.Parameter("exceptiontype") @Nullable String exceptiontype) {
         this.errordetail = errordetail;
         this.exceptiontype = exceptiontype;
     }

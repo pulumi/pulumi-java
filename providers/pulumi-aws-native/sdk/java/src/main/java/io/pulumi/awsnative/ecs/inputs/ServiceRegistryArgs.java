@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,28 +15,28 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final ServiceRegistryArgs Empty = new ServiceRegistryArgs();
 
-    @InputImport(name="containerName")
+    @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
     public Output<String> getContainerName() {
         return this.containerName == null ? Output.empty() : this.containerName;
     }
 
-    @InputImport(name="containerPort")
+    @Import(name="containerPort")
       private final @Nullable Output<Integer> containerPort;
 
     public Output<Integer> getContainerPort() {
         return this.containerPort == null ? Output.empty() : this.containerPort;
     }
 
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
         return this.port == null ? Output.empty() : this.port;
     }
 
-    @InputImport(name="registryArn")
+    @Import(name="registryArn")
       private final @Nullable Output<String> registryArn;
 
     public Output<String> getRegistryArn() {

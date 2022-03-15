@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetArgs extends io.pul
      * The name of a Cloud Storage bucket. Required.
      * 
      */
-    @InputImport(name="bucketName")
+    @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
     public Output<String> getBucketName() {
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetArgs extends io.pul
      * A list of regular expressions matching file paths to exclude. All files in the bucket that match at least one of these regular expressions will be excluded from the scan. Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.
      * 
      */
-    @InputImport(name="excludeRegex")
+    @Import(name="excludeRegex")
       private final @Nullable Output<List<String>> excludeRegex;
 
     public Output<List<String>> getExcludeRegex() {
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetArgs extends io.pul
      * A list of regular expressions matching file paths to include. All files in the bucket that match at least one of these regular expressions will be included in the set of files, except for those that also match an item in `exclude_regex`. Leaving this field empty will match all files by default (this is equivalent to including `.*` in the list). Regular expressions use RE2 [syntax](https://github.com/google/re2/wiki/Syntax); a guide can be found under the google/re2 repository on GitHub.
      * 
      */
-    @InputImport(name="includeRegex")
+    @Import(name="includeRegex")
       private final @Nullable Output<List<String>> includeRegex;
 
     public Output<List<String>> getIncludeRegex() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.PeriodicModePropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class PeriodicModeBackupPolicyResponse extends io.pulumi.resources.
      * Configuration values for periodic mode backup
      * 
      */
-    @InputImport(name="periodicModeProperties")
+    @Import(name="periodicModeProperties")
       private final @Nullable PeriodicModePropertiesResponse periodicModeProperties;
 
     public Optional<PeriodicModePropertiesResponse> getPeriodicModeProperties() {
@@ -35,7 +35,7 @@ public final class PeriodicModeBackupPolicyResponse extends io.pulumi.resources.
      * Expected value is 'Periodic'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

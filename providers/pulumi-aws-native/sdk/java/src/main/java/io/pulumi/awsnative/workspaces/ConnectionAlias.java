@@ -9,7 +9,7 @@ import io.pulumi.awsnative.workspaces.enums.ConnectionAliasState;
 import io.pulumi.awsnative.workspaces.outputs.ConnectionAliasAssociation;
 import io.pulumi.awsnative.workspaces.outputs.ConnectionAliasTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -21,31 +21,31 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:workspaces:ConnectionAlias")
 public class ConnectionAlias extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="aliasId", type=String.class, parameters={})
+    @Export(name="aliasId", type=String.class, parameters={})
     private Output<String> aliasId;
 
     public Output<String> getAliasId() {
         return this.aliasId;
     }
-    @OutputExport(name="associations", type=List.class, parameters={ConnectionAliasAssociation.class})
+    @Export(name="associations", type=List.class, parameters={ConnectionAliasAssociation.class})
     private Output<List<ConnectionAliasAssociation>> associations;
 
     public Output<List<ConnectionAliasAssociation>> getAssociations() {
         return this.associations;
     }
-    @OutputExport(name="connectionAliasState", type=ConnectionAliasState.class, parameters={})
+    @Export(name="connectionAliasState", type=ConnectionAliasState.class, parameters={})
     private Output<ConnectionAliasState> connectionAliasState;
 
     public Output<ConnectionAliasState> getConnectionAliasState() {
         return this.connectionAliasState;
     }
-    @OutputExport(name="connectionString", type=String.class, parameters={})
+    @Export(name="connectionString", type=String.class, parameters={})
     private Output<String> connectionString;
 
     public Output<String> getConnectionString() {
         return this.connectionString;
     }
-    @OutputExport(name="tags", type=List.class, parameters={ConnectionAliasTag.class})
+    @Export(name="tags", type=List.class, parameters={ConnectionAliasTag.class})
     private Output</* @Nullable */ List<ConnectionAliasTag>> tags;
 
     public Output</* @Nullable */ List<ConnectionAliasTag>> getTags() {

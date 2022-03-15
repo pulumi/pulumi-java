@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class OsConstraintResponse extends io.pulumi.resources.InvokeArgs {
      * The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: `"major.minor.patch"`. Examples: `"10.5.301"`, `"9.2.1"`.
      * 
      */
-    @InputImport(name="minimumVersion", required=true)
+    @Import(name="minimumVersion", required=true)
       private final String minimumVersion;
 
     public String getMinimumVersion() {
@@ -32,7 +32,7 @@ public final class OsConstraintResponse extends io.pulumi.resources.InvokeArgs {
      * The allowed OS type.
      * 
      */
-    @InputImport(name="osType", required=true)
+    @Import(name="osType", required=true)
       private final String osType;
 
     public String getOsType() {
@@ -43,7 +43,7 @@ public final class OsConstraintResponse extends io.pulumi.resources.InvokeArgs {
      * Only allows requests from devices with a verified Chrome OS. Verifications includes requirements that the device is enterprise-managed, conformant to domain policies, and the caller has permission to call the API targeted by the request.
      * 
      */
-    @InputImport(name="requireVerifiedChromeOs", required=true)
+    @Import(name="requireVerifiedChromeOs", required=true)
       private final Boolean requireVerifiedChromeOs;
 
     public Boolean getRequireVerifiedChromeOs() {

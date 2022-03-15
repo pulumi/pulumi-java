@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.LogLevel;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
      * Log level.
      * 
      */
-    @InputImport(name="level")
+    @Import(name="level")
       private final @Nullable Output<LogLevel> level;
 
     public Output<LogLevel> getLevel() {
@@ -37,7 +37,7 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
      * 0 or lower means no retention.
      * 
      */
-    @InputImport(name="retentionInDays")
+    @Import(name="retentionInDays")
       private final @Nullable Output<Integer> retentionInDays;
 
     public Output<Integer> getRetentionInDays() {
@@ -48,7 +48,7 @@ public final class AzureBlobStorageApplicationLogsConfigArgs extends io.pulumi.r
      * SAS url to a azure blob container with read/write/list/delete permissions.
      * 
      */
-    @InputImport(name="sasUrl")
+    @Import(name="sasUrl")
       private final @Nullable Output<String> sasUrl;
 
     public Output<String> getSasUrl() {

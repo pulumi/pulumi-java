@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FailureInfoResponse {
     /**
      * Explains the failure issue in more detail using hard-coded text.
@@ -20,10 +20,10 @@ public final class FailureInfoResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FailureInfoResponse(
-        @OutputCustomType.Parameter("detail") String detail,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("detail") String detail,
+        @CustomType.Parameter("type") String type) {
         this.detail = detail;
         this.type = type;
     }

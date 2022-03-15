@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v3.inputs.LogMatchResponse;
 import io.pulumi.googlenative.monitoring_v3.inputs.MetricAbsenceResponse;
 import io.pulumi.googlenative.monitoring_v3.inputs.MetricThresholdResponse;
@@ -24,7 +24,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * A condition that checks that a time series continues to receive new data points.
      * 
      */
-    @InputImport(name="conditionAbsent", required=true)
+    @Import(name="conditionAbsent", required=true)
       private final MetricAbsenceResponse conditionAbsent;
 
     public MetricAbsenceResponse getConditionAbsent() {
@@ -35,7 +35,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * A condition that checks for log messages matching given constraints. If set, no other conditions can be present.
      * 
      */
-    @InputImport(name="conditionMatchedLog", required=true)
+    @Import(name="conditionMatchedLog", required=true)
       private final LogMatchResponse conditionMatchedLog;
 
     public LogMatchResponse getConditionMatchedLog() {
@@ -46,7 +46,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * A condition that uses the Monitoring Query Language to define alerts.
      * 
      */
-    @InputImport(name="conditionMonitoringQueryLanguage", required=true)
+    @Import(name="conditionMonitoringQueryLanguage", required=true)
       private final MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage;
 
     public MonitoringQueryLanguageConditionResponse getConditionMonitoringQueryLanguage() {
@@ -57,7 +57,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * A condition that compares a time series against a threshold.
      * 
      */
-    @InputImport(name="conditionThreshold", required=true)
+    @Import(name="conditionThreshold", required=true)
       private final MetricThresholdResponse conditionThreshold;
 
     public MetricThresholdResponse getConditionThreshold() {
@@ -68,7 +68,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * A short name or phrase used to identify the condition in dashboards, notifications, and incidents. To avoid confusion, don't use the same display name for multiple conditions in the same policy.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -79,7 +79,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * Required if the condition exists. The unique resource name for this condition. Its format is: projects/[PROJECT_ID_OR_NUMBER]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID] [CONDITION_ID] is assigned by Stackdriver Monitoring when the condition is created as part of a new or updated alerting policy.When calling the alertPolicies.create method, do not include the name field in the conditions of the requested alerting policy. Stackdriver Monitoring creates the condition identifiers and includes them in the new policy.When calling the alertPolicies.update method to update a policy, including a condition name causes the existing condition to be updated. Conditions without names are added to the updated policy. Existing conditions are deleted if they are not updated.Best practice is to preserve [CONDITION_ID] if you make only small changes, such as those to condition thresholds, durations, or trigger values. Otherwise, treat the change as a new condition and let the existing condition be deleted.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

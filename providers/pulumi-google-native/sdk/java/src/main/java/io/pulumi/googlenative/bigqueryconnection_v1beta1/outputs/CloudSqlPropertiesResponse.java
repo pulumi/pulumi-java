@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigqueryconnection_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigqueryconnection_v1beta1.outputs.CloudSqlCredentialResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CloudSqlPropertiesResponse {
     /**
      * Input only. Cloud SQL credential.
@@ -31,12 +31,12 @@ public final class CloudSqlPropertiesResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudSqlPropertiesResponse(
-        @OutputCustomType.Parameter("credential") CloudSqlCredentialResponse credential,
-        @OutputCustomType.Parameter("database") String database,
-        @OutputCustomType.Parameter("instanceId") String instanceId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("credential") CloudSqlCredentialResponse credential,
+        @CustomType.Parameter("database") String database,
+        @CustomType.Parameter("instanceId") String instanceId,
+        @CustomType.Parameter("type") String type) {
         this.credential = credential;
         this.database = database;
         this.instanceId = instanceId;

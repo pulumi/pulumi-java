@@ -13,7 +13,7 @@ import io.pulumi.azurenative.datafactory.outputs.GlobalParameterSpecificationRes
 import io.pulumi.core.Alias;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -41,7 +41,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * Time the factory was created in ISO8601 format.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -55,7 +55,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * Etag identifies change in the resource.
      * 
      */
-    @OutputExport(name="eTag", type=String.class, parameters={})
+    @Export(name="eTag", type=String.class, parameters={})
     private Output<String> eTag;
 
     /**
@@ -69,7 +69,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * Properties to enable Customer Managed Key for the factory.
      * 
      */
-    @OutputExport(name="encryption", type=EncryptionConfigurationResponse.class, parameters={})
+    @Export(name="encryption", type=EncryptionConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionConfigurationResponse> encryption;
 
     /**
@@ -83,7 +83,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * List of parameters for factory.
      * 
      */
-    @OutputExport(name="globalParameters", type=Map.class, parameters={String.class, GlobalParameterSpecificationResponse.class})
+    @Export(name="globalParameters", type=Map.class, parameters={String.class, GlobalParameterSpecificationResponse.class})
     private Output</* @Nullable */ Map<String,GlobalParameterSpecificationResponse>> globalParameters;
 
     /**
@@ -97,7 +97,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * Managed service identity of the factory.
      * 
      */
-    @OutputExport(name="identity", type=FactoryIdentityResponse.class, parameters={})
+    @Export(name="identity", type=FactoryIdentityResponse.class, parameters={})
     private Output</* @Nullable */ FactoryIdentityResponse> identity;
 
     /**
@@ -111,7 +111,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -125,7 +125,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * The resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -139,7 +139,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * Factory provisioning state, example Succeeded.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -153,7 +153,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * Whether or not public network access is allowed for the data factory.
      * 
      */
-    @OutputExport(name="publicNetworkAccess", type=String.class, parameters={})
+    @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
@@ -167,7 +167,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * Git repo information of the factory.
      * 
      */
-    @OutputExport(name="repoConfiguration", type=Either.class, parameters={FactoryGitHubConfigurationResponse.class, FactoryVSTSConfigurationResponse.class})
+    @Export(name="repoConfiguration", type=Either.class, parameters={FactoryGitHubConfigurationResponse.class, FactoryVSTSConfigurationResponse.class})
     private Output</* @Nullable */ Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse>> repoConfiguration;
 
     /**
@@ -181,7 +181,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -195,7 +195,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -209,7 +209,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * Version of the factory.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

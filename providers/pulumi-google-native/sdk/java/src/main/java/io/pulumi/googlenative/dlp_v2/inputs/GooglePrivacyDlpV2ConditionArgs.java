@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2ConditionOperator;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueArgs;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2ConditionArgs extends io.pulumi.resources.R
      * Field within the record this condition is evaluated against.
      * 
      */
-    @InputImport(name="field", required=true)
+    @Import(name="field", required=true)
       private final Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
     public Output<GooglePrivacyDlpV2FieldIdArgs> getField() {
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2ConditionArgs extends io.pulumi.resources.R
      * Operator used to compare the field or infoType to the value.
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final Output<GooglePrivacyDlpV2ConditionOperator> operator;
 
     public Output<GooglePrivacyDlpV2ConditionOperator> getOperator() {
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2ConditionArgs extends io.pulumi.resources.R
      * Value to compare against. [Mandatory, except for `EXISTS` tests.]
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<GooglePrivacyDlpV2ValueArgs> value;
 
     public Output<GooglePrivacyDlpV2ValueArgs> getValue() {

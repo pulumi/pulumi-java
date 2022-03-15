@@ -4,7 +4,7 @@
 package io.pulumi.aws.kms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
      * The Amazon Resource Name (ARN) of the replica key. The key ARNs of related multi-Region keys differ only in the Region value.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -35,7 +35,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
      * The default value is `false`.
      * 
      */
-    @InputImport(name="bypassPolicyLockoutSafetyCheck")
+    @Import(name="bypassPolicyLockoutSafetyCheck")
       private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
     public Output<Boolean> getBypassPolicyLockoutSafetyCheck() {
@@ -47,7 +47,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
      * If you specify a value, it must be between `7` and `30`, inclusive. If you do not specify a value, it defaults to `30`.
      * 
      */
-    @InputImport(name="deletionWindowInDays")
+    @Import(name="deletionWindowInDays")
       private final @Nullable Output<Integer> deletionWindowInDays;
 
     public Output<Integer> getDeletionWindowInDays() {
@@ -58,7 +58,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
      * A description of the KMS key.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -69,7 +69,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
      * Specifies whether the replica key is enabled. Disabled KMS keys cannot be used in cryptographic operations. Keys pending import can only be `false`. Imported keys default to `true` unless expired.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -80,7 +80,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
      * Whether the key material expires. Empty when pending key material import, otherwise `KEY_MATERIAL_EXPIRES` or `KEY_MATERIAL_DOES_NOT_EXPIRE`.
      * 
      */
-    @InputImport(name="expirationModel")
+    @Import(name="expirationModel")
       private final @Nullable Output<String> expirationModel;
 
     public Output<String> getExpirationModel() {
@@ -91,7 +91,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
      * The key ID of the replica key. Related multi-Region keys have the same key ID.
      * 
      */
-    @InputImport(name="keyId")
+    @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
     public Output<String> getKeyId() {
@@ -102,7 +102,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
      * Base64 encoded 256-bit symmetric encryption key material to import. The KMS key is permanently associated with this key material. The same key material can be [reimported](https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html#reimport-key-material), but you cannot import different key material.
      * 
      */
-    @InputImport(name="keyMaterialBase64")
+    @Import(name="keyMaterialBase64")
       private final @Nullable Output<String> keyMaterialBase64;
 
     public Output<String> getKeyMaterialBase64() {
@@ -113,7 +113,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
      * The state of the replica key.
      * 
      */
-    @InputImport(name="keyState")
+    @Import(name="keyState")
       private final @Nullable Output<String> keyState;
 
     public Output<String> getKeyState() {
@@ -124,14 +124,14 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
      * The [cryptographic operations](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations) for which you can use the KMS key. This is a shared property of multi-Region keys.
      * 
      */
-    @InputImport(name="keyUsage")
+    @Import(name="keyUsage")
       private final @Nullable Output<String> keyUsage;
 
     public Output<String> getKeyUsage() {
         return this.keyUsage == null ? Output.empty() : this.keyUsage;
     }
 
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -142,7 +142,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
      * The ARN of the multi-Region primary key to replicate. The primary key must be in a different AWS Region of the same AWS Partition. You can create only one replica of a given primary key in each AWS Region.
      * 
      */
-    @InputImport(name="primaryKeyArn")
+    @Import(name="primaryKeyArn")
       private final @Nullable Output<String> primaryKeyArn;
 
     public Output<String> getPrimaryKeyArn() {
@@ -153,7 +153,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
      * A map of tags to assign to the replica key. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -164,7 +164,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -175,7 +175,7 @@ public final class ReplicaExternalKeyState extends io.pulumi.resources.ResourceA
      * Time at which the imported key material expires. When the key material expires, AWS KMS deletes the key material and the key becomes unusable. If not specified, key material does not expire. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
      * 
      */
-    @InputImport(name="validTo")
+    @Import(name="validTo")
       private final @Nullable Output<String> validTo;
 
     public Output<String> getValidTo() {

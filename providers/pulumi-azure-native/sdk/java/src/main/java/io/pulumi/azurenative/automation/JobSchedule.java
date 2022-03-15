@@ -9,7 +9,7 @@ import io.pulumi.azurenative.automation.outputs.RunbookAssociationPropertyRespon
 import io.pulumi.azurenative.automation.outputs.ScheduleAssociationPropertyResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class JobSchedule extends io.pulumi.resources.CustomResource {
      * Gets or sets the id of job schedule.
      * 
      */
-    @OutputExport(name="jobScheduleId", type=String.class, parameters={})
+    @Export(name="jobScheduleId", type=String.class, parameters={})
     private Output</* @Nullable */ String> jobScheduleId;
 
     /**
@@ -51,7 +51,7 @@ public class JobSchedule extends io.pulumi.resources.CustomResource {
      * Gets the name of the variable.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class JobSchedule extends io.pulumi.resources.CustomResource {
      * Gets or sets the parameters of the job schedule.
      * 
      */
-    @OutputExport(name="parameters", type=Map.class, parameters={String.class, String.class})
+    @Export(name="parameters", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> parameters;
 
     /**
@@ -79,7 +79,7 @@ public class JobSchedule extends io.pulumi.resources.CustomResource {
      * Gets or sets the hybrid worker group that the scheduled job should run on.
      * 
      */
-    @OutputExport(name="runOn", type=String.class, parameters={})
+    @Export(name="runOn", type=String.class, parameters={})
     private Output</* @Nullable */ String> runOn;
 
     /**
@@ -93,7 +93,7 @@ public class JobSchedule extends io.pulumi.resources.CustomResource {
      * Gets or sets the runbook.
      * 
      */
-    @OutputExport(name="runbook", type=RunbookAssociationPropertyResponse.class, parameters={})
+    @Export(name="runbook", type=RunbookAssociationPropertyResponse.class, parameters={})
     private Output</* @Nullable */ RunbookAssociationPropertyResponse> runbook;
 
     /**
@@ -107,7 +107,7 @@ public class JobSchedule extends io.pulumi.resources.CustomResource {
      * Gets or sets the schedule.
      * 
      */
-    @OutputExport(name="schedule", type=ScheduleAssociationPropertyResponse.class, parameters={})
+    @Export(name="schedule", type=ScheduleAssociationPropertyResponse.class, parameters={})
     private Output</* @Nullable */ ScheduleAssociationPropertyResponse> schedule;
 
     /**
@@ -121,7 +121,7 @@ public class JobSchedule extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

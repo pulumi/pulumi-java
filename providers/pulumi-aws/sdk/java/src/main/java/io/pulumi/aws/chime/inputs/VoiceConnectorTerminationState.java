@@ -4,7 +4,7 @@
 package io.pulumi.aws.chime.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class VoiceConnectorTerminationState extends io.pulumi.resources.Re
      * The countries to which calls are allowed, in ISO 3166-1 alpha-2 format.
      * 
      */
-    @InputImport(name="callingRegions")
+    @Import(name="callingRegions")
       private final @Nullable Output<List<String>> callingRegions;
 
     public Output<List<String>> getCallingRegions() {
@@ -32,7 +32,7 @@ public final class VoiceConnectorTerminationState extends io.pulumi.resources.Re
      * The IP addresses allowed to make calls, in CIDR format.
      * 
      */
-    @InputImport(name="cidrAllowLists")
+    @Import(name="cidrAllowLists")
       private final @Nullable Output<List<String>> cidrAllowLists;
 
     public Output<List<String>> getCidrAllowLists() {
@@ -43,7 +43,7 @@ public final class VoiceConnectorTerminationState extends io.pulumi.resources.Re
      * The limit on calls per second. Max value based on account service quota. Default value of `1`.
      * 
      */
-    @InputImport(name="cpsLimit")
+    @Import(name="cpsLimit")
       private final @Nullable Output<Integer> cpsLimit;
 
     public Output<Integer> getCpsLimit() {
@@ -54,7 +54,7 @@ public final class VoiceConnectorTerminationState extends io.pulumi.resources.Re
      * The default caller ID phone number.
      * 
      */
-    @InputImport(name="defaultPhoneNumber")
+    @Import(name="defaultPhoneNumber")
       private final @Nullable Output<String> defaultPhoneNumber;
 
     public Output<String> getDefaultPhoneNumber() {
@@ -65,7 +65,7 @@ public final class VoiceConnectorTerminationState extends io.pulumi.resources.Re
      * When termination settings are disabled, outbound calls can not be made.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -76,7 +76,7 @@ public final class VoiceConnectorTerminationState extends io.pulumi.resources.Re
      * The Amazon Chime Voice Connector ID.
      * 
      */
-    @InputImport(name="voiceConnectorId")
+    @Import(name="voiceConnectorId")
       private final @Nullable Output<String> voiceConnectorId;
 
     public Output<String> getVoiceConnectorId() {

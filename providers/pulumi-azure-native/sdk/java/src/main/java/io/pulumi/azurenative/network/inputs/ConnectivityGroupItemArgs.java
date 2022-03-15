@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.enums.IsGlobal;
 import io.pulumi.azurenative.network.enums.UseHubGateway;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
      * Group connectivity type.
      * 
      */
-    @InputImport(name="groupConnectivity")
+    @Import(name="groupConnectivity")
       private final @Nullable Output<Either<String,GroupConnectivity>> groupConnectivity;
 
     public Output<Either<String,GroupConnectivity>> getGroupConnectivity() {
@@ -33,7 +33,7 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
      * Flag if global is supported.
      * 
      */
-    @InputImport(name="isGlobal")
+    @Import(name="isGlobal")
       private final @Nullable Output<Either<String,IsGlobal>> isGlobal;
 
     public Output<Either<String,IsGlobal>> getIsGlobal() {
@@ -44,7 +44,7 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
      * Network group Id.
      * 
      */
-    @InputImport(name="networkGroupId")
+    @Import(name="networkGroupId")
       private final @Nullable Output<String> networkGroupId;
 
     public Output<String> getNetworkGroupId() {
@@ -55,7 +55,7 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
      * Flag if need to use hub gateway.
      * 
      */
-    @InputImport(name="useHubGateway")
+    @Import(name="useHubGateway")
       private final @Nullable Output<Either<String,UseHubGateway>> useHubGateway;
 
     public Output<Either<String,UseHubGateway>> getUseHubGateway() {

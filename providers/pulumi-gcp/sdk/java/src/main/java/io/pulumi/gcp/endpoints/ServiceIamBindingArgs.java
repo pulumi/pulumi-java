@@ -4,7 +4,7 @@
 package io.pulumi.gcp.endpoints;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.endpoints.inputs.ServiceIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,14 +16,14 @@ public final class ServiceIamBindingArgs extends io.pulumi.resources.ResourceArg
 
     public static final ServiceIamBindingArgs Empty = new ServiceIamBindingArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<ServiceIamBindingConditionArgs> condition;
 
     public Output<ServiceIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -36,14 +36,14 @@ public final class ServiceIamBindingArgs extends io.pulumi.resources.ResourceArg
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {
         return this.role;
     }
 
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {

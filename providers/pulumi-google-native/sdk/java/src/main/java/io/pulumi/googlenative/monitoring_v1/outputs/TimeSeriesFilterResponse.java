@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.AggregationResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.PickTimeSeriesFilterResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TimeSeriesFilterResponse {
     /**
      * By default, the raw time series data is returned. Use this field to combine multiple time series for different views of the data.
@@ -32,12 +32,12 @@ public final class TimeSeriesFilterResponse {
      */
     private final AggregationResponse secondaryAggregation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TimeSeriesFilterResponse(
-        @OutputCustomType.Parameter("aggregation") AggregationResponse aggregation,
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("pickTimeSeriesFilter") PickTimeSeriesFilterResponse pickTimeSeriesFilter,
-        @OutputCustomType.Parameter("secondaryAggregation") AggregationResponse secondaryAggregation) {
+        @CustomType.Parameter("aggregation") AggregationResponse aggregation,
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("pickTimeSeriesFilter") PickTimeSeriesFilterResponse pickTimeSeriesFilter,
+        @CustomType.Parameter("secondaryAggregation") AggregationResponse secondaryAggregation) {
         this.aggregation = aggregation;
         this.filter = filter;
         this.pickTimeSeriesFilter = pickTimeSeriesFilter;

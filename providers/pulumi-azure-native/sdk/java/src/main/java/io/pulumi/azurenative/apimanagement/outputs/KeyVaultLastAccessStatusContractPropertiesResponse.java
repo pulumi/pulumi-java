@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultLastAccessStatusContractPropertiesResponse {
     /**
      * Last status code for sync and refresh of secret from key vault.
@@ -27,11 +27,11 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse {
      */
     private final @Nullable String timeStampUtc;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyVaultLastAccessStatusContractPropertiesResponse(
-        @OutputCustomType.Parameter("code") @Nullable String code,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("timeStampUtc") @Nullable String timeStampUtc) {
+        @CustomType.Parameter("code") @Nullable String code,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("timeStampUtc") @Nullable String timeStampUtc) {
         this.code = code;
         this.message = message;
         this.timeStampUtc = timeStampUtc;

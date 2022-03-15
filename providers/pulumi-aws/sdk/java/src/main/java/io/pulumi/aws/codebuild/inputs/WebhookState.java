@@ -5,7 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.aws.codebuild.inputs.WebhookFilterGroupGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * A regular expression used to determine which branches get built. Default is all branches are built. It is recommended to use `filter_group` over `branch_filter`.
      * 
      */
-    @InputImport(name="branchFilter")
+    @Import(name="branchFilter")
       private final @Nullable Output<String> branchFilter;
 
     public Output<String> getBranchFilter() {
@@ -31,7 +31,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * The type of build this webhook will trigger. Valid values for this parameter are: `BUILD`, `BUILD_BATCH`.
      * 
      */
-    @InputImport(name="buildType")
+    @Import(name="buildType")
       private final @Nullable Output<String> buildType;
 
     public Output<String> getBuildType() {
@@ -42,7 +42,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * Information about the webhook's trigger. Filter group blocks are documented below.
      * 
      */
-    @InputImport(name="filterGroups")
+    @Import(name="filterGroups")
       private final @Nullable Output<List<WebhookFilterGroupGetArgs>> filterGroups;
 
     public Output<List<WebhookFilterGroupGetArgs>> getFilterGroups() {
@@ -53,7 +53,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * The CodeBuild endpoint where webhook events are sent.
      * 
      */
-    @InputImport(name="payloadUrl")
+    @Import(name="payloadUrl")
       private final @Nullable Output<String> payloadUrl;
 
     public Output<String> getPayloadUrl() {
@@ -64,7 +64,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * The name of the build project.
      * 
      */
-    @InputImport(name="projectName")
+    @Import(name="projectName")
       private final @Nullable Output<String> projectName;
 
     public Output<String> getProjectName() {
@@ -75,7 +75,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * The secret token of the associated repository. Not returned by the CodeBuild API for all source types.
      * 
      */
-    @InputImport(name="secret")
+    @Import(name="secret")
       private final @Nullable Output<String> secret;
 
     public Output<String> getSecret() {
@@ -86,7 +86,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * The URL to the webhook.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

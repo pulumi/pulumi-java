@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TableMaterializedView {
     /**
      * Specifies whether to use BigQuery's automatic refresh for this materialized view when the base table is updated.
@@ -31,11 +31,11 @@ public final class TableMaterializedView {
      */
     private final @Nullable Integer refreshIntervalMs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableMaterializedView(
-        @OutputCustomType.Parameter("enableRefresh") @Nullable Boolean enableRefresh,
-        @OutputCustomType.Parameter("query") String query,
-        @OutputCustomType.Parameter("refreshIntervalMs") @Nullable Integer refreshIntervalMs) {
+        @CustomType.Parameter("enableRefresh") @Nullable Boolean enableRefresh,
+        @CustomType.Parameter("query") String query,
+        @CustomType.Parameter("refreshIntervalMs") @Nullable Integer refreshIntervalMs) {
         this.enableRefresh = enableRefresh;
         this.query = query;
         this.refreshIntervalMs = refreshIntervalMs;

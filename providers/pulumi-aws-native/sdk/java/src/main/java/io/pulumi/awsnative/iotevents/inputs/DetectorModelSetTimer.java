@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DetectorModelSetTimer extends io.pulumi.resources.InvokeArgs 
      * The duration of the timer, in seconds. You can use a string expression that includes numbers, variables (`$variable.<variable-name>`), and input values (`$input.<input-name>.<path-to-datum>`) as the duration. The range of the duration is `1-31622400` seconds. To ensure accuracy, the minimum duration is `60` seconds. The evaluated result of the duration is rounded down to the nearest whole number.
      * 
      */
-    @InputImport(name="durationExpression")
+    @Import(name="durationExpression")
       private final @Nullable String durationExpression;
 
     public Optional<String> getDurationExpression() {
@@ -34,7 +34,7 @@ public final class DetectorModelSetTimer extends io.pulumi.resources.InvokeArgs 
      * The number of seconds until the timer expires. The minimum value is `60` seconds to ensure accuracy. The maximum value is `31622400` seconds.
      * 
      */
-    @InputImport(name="seconds")
+    @Import(name="seconds")
       private final @Nullable Integer seconds;
 
     public Optional<Integer> getSeconds() {
@@ -45,7 +45,7 @@ public final class DetectorModelSetTimer extends io.pulumi.resources.InvokeArgs 
      * The name of the timer.
      * 
      */
-    @InputImport(name="timerName", required=true)
+    @Import(name="timerName", required=true)
       private final String timerName;
 
     public String getTimerName() {

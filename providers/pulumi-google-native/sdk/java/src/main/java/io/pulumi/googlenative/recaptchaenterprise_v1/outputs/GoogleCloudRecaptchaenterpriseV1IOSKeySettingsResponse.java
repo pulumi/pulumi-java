@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.recaptchaenterprise_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse {
     /**
      * If set to true, allowed_bundle_ids are not enforced.
@@ -22,10 +22,10 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse {
      */
     private final List<String> allowedBundleIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse(
-        @OutputCustomType.Parameter("allowAllBundleIds") Boolean allowAllBundleIds,
-        @OutputCustomType.Parameter("allowedBundleIds") List<String> allowedBundleIds) {
+        @CustomType.Parameter("allowAllBundleIds") Boolean allowAllBundleIds,
+        @CustomType.Parameter("allowedBundleIds") List<String> allowedBundleIds) {
         this.allowAllBundleIds = allowAllBundleIds;
         this.allowedBundleIds = allowedBundleIds;
     }

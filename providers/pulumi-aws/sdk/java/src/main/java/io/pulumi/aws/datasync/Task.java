@@ -10,7 +10,7 @@ import io.pulumi.aws.datasync.outputs.TaskExcludes;
 import io.pulumi.aws.datasync.outputs.TaskOptions;
 import io.pulumi.aws.datasync.outputs.TaskSchedule;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -36,7 +36,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the DataSync Task.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the CloudWatch Log Group that is used to monitor and log events in the sync task.
      * 
      */
-    @OutputExport(name="cloudwatchLogGroupArn", type=String.class, parameters={})
+    @Export(name="cloudwatchLogGroupArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudwatchLogGroupArn;
 
     /**
@@ -64,7 +64,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of destination DataSync Location.
      * 
      */
-    @OutputExport(name="destinationLocationArn", type=String.class, parameters={})
+    @Export(name="destinationLocationArn", type=String.class, parameters={})
     private Output<String> destinationLocationArn;
 
     /**
@@ -78,7 +78,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * Filter rules that determines which files to exclude from a task.
      * 
      */
-    @OutputExport(name="excludes", type=TaskExcludes.class, parameters={})
+    @Export(name="excludes", type=TaskExcludes.class, parameters={})
     private Output</* @Nullable */ TaskExcludes> excludes;
 
     /**
@@ -92,7 +92,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * Name of the DataSync Task.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -106,7 +106,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * Configuration block containing option that controls the default behavior when you start an execution of this DataSync Task. For each individual task execution, you can override these options by specifying an overriding configuration in those executions.
      * 
      */
-    @OutputExport(name="options", type=TaskOptions.class, parameters={})
+    @Export(name="options", type=TaskOptions.class, parameters={})
     private Output</* @Nullable */ TaskOptions> options;
 
     /**
@@ -120,7 +120,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * Specifies a schedule used to periodically transfer files from a source to a destination location.
      * 
      */
-    @OutputExport(name="schedule", type=TaskSchedule.class, parameters={})
+    @Export(name="schedule", type=TaskSchedule.class, parameters={})
     private Output</* @Nullable */ TaskSchedule> schedule;
 
     /**
@@ -134,7 +134,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of source DataSync Location.
      * 
      */
-    @OutputExport(name="sourceLocationArn", type=String.class, parameters={})
+    @Export(name="sourceLocationArn", type=String.class, parameters={})
     private Output<String> sourceLocationArn;
 
     /**
@@ -148,7 +148,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * Key-value pairs of resource tags to assign to the DataSync Task. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -162,7 +162,7 @@ public class Task extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

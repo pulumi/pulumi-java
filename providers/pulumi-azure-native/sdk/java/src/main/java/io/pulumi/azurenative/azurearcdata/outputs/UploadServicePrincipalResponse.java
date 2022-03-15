@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.azurearcdata.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UploadServicePrincipalResponse {
     /**
      * Authority for the service principal. Example: https://login.microsoftonline.com/
@@ -27,11 +27,11 @@ public final class UploadServicePrincipalResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UploadServicePrincipalResponse(
-        @OutputCustomType.Parameter("authority") @Nullable String authority,
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
+        @CustomType.Parameter("authority") @Nullable String authority,
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.authority = authority;
         this.clientId = clientId;
         this.tenantId = tenantId;

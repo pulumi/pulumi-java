@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2InfoTypeStatsResponse {
     /**
      * Number of findings for this infoType.
@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse {
      */
     private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2InfoTypeStatsResponse(
-        @OutputCustomType.Parameter("count") String count,
-        @OutputCustomType.Parameter("infoType") GooglePrivacyDlpV2InfoTypeResponse infoType) {
+        @CustomType.Parameter("count") String count,
+        @CustomType.Parameter("infoType") GooglePrivacyDlpV2InfoTypeResponse infoType) {
         this.count = count;
         this.infoType = infoType;
     }

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class A2APolicyDetailsResponse {
     /**
      * The app consistent snapshot frequency in minutes.
@@ -44,14 +44,14 @@ public final class A2APolicyDetailsResponse {
      */
     private final @Nullable Integer recoveryPointThresholdInMinutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private A2APolicyDetailsResponse(
-        @OutputCustomType.Parameter("appConsistentFrequencyInMinutes") @Nullable Integer appConsistentFrequencyInMinutes,
-        @OutputCustomType.Parameter("crashConsistentFrequencyInMinutes") @Nullable Integer crashConsistentFrequencyInMinutes,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("multiVmSyncStatus") @Nullable String multiVmSyncStatus,
-        @OutputCustomType.Parameter("recoveryPointHistory") @Nullable Integer recoveryPointHistory,
-        @OutputCustomType.Parameter("recoveryPointThresholdInMinutes") @Nullable Integer recoveryPointThresholdInMinutes) {
+        @CustomType.Parameter("appConsistentFrequencyInMinutes") @Nullable Integer appConsistentFrequencyInMinutes,
+        @CustomType.Parameter("crashConsistentFrequencyInMinutes") @Nullable Integer crashConsistentFrequencyInMinutes,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("multiVmSyncStatus") @Nullable String multiVmSyncStatus,
+        @CustomType.Parameter("recoveryPointHistory") @Nullable Integer recoveryPointHistory,
+        @CustomType.Parameter("recoveryPointThresholdInMinutes") @Nullable Integer recoveryPointThresholdInMinutes) {
         this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
         this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
         this.instanceType = instanceType;

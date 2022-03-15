@@ -6,7 +6,7 @@ package io.pulumi.awsnative.networkmanager;
 import io.pulumi.awsnative.networkmanager.inputs.SiteLocationArgs;
 import io.pulumi.awsnative.networkmanager.inputs.SiteTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the site.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the global network.
      * 
      */
-    @InputImport(name="globalNetworkId", required=true)
+    @Import(name="globalNetworkId", required=true)
       private final Output<String> globalNetworkId;
 
     public Output<String> getGlobalNetworkId() {
@@ -43,7 +43,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the site.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<SiteLocationArgs> location;
 
     public Output<SiteLocationArgs> getLocation() {
@@ -54,7 +54,7 @@ public final class SiteArgs extends io.pulumi.resources.ResourceArgs {
      * The tags for the site.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<SiteTagArgs>> tags;
 
     public Output<List<SiteTagArgs>> getTags() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.DisplayDataResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.ExecutionStageSummaryResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.TransformSummaryResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PipelineDescriptionResponse {
     /**
      * Pipeline level display data.
@@ -28,11 +28,11 @@ public final class PipelineDescriptionResponse {
      */
     private final List<TransformSummaryResponse> originalPipelineTransform;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineDescriptionResponse(
-        @OutputCustomType.Parameter("displayData") List<DisplayDataResponse> displayData,
-        @OutputCustomType.Parameter("executionPipelineStage") List<ExecutionStageSummaryResponse> executionPipelineStage,
-        @OutputCustomType.Parameter("originalPipelineTransform") List<TransformSummaryResponse> originalPipelineTransform) {
+        @CustomType.Parameter("displayData") List<DisplayDataResponse> displayData,
+        @CustomType.Parameter("executionPipelineStage") List<ExecutionStageSummaryResponse> executionPipelineStage,
+        @CustomType.Parameter("originalPipelineTransform") List<TransformSummaryResponse> originalPipelineTransform) {
         this.displayData = displayData;
         this.executionPipelineStage = executionPipelineStage;
         this.originalPipelineTransform = originalPipelineTransform;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.BuildpacksGroupPropertiesResponse;
 import io.pulumi.azurenative.appplatform.inputs.StackPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class BuilderPropertiesResponse extends io.pulumi.resources.InvokeA
      * Builder buildpack groups.
      * 
      */
-    @InputImport(name="buildpackGroups")
+    @Import(name="buildpackGroups")
       private final @Nullable List<BuildpacksGroupPropertiesResponse> buildpackGroups;
 
     public List<BuildpacksGroupPropertiesResponse> getBuildpackGroups() {
@@ -36,7 +36,7 @@ public final class BuilderPropertiesResponse extends io.pulumi.resources.InvokeA
      * Builder provision status.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -47,7 +47,7 @@ public final class BuilderPropertiesResponse extends io.pulumi.resources.InvokeA
      * Builder cluster stack property.
      * 
      */
-    @InputImport(name="stack")
+    @Import(name="stack")
       private final @Nullable StackPropertiesResponse stack;
 
     public Optional<StackPropertiesResponse> getStack() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.gameservices.outputs.GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GameServerDeploymentRolloutGameServerConfigOverride {
     /**
      * Version of the configuration.
@@ -24,10 +24,10 @@ public final class GameServerDeploymentRolloutGameServerConfigOverride {
      */
     private final @Nullable GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector realmsSelector;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GameServerDeploymentRolloutGameServerConfigOverride(
-        @OutputCustomType.Parameter("configVersion") @Nullable String configVersion,
-        @OutputCustomType.Parameter("realmsSelector") @Nullable GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector realmsSelector) {
+        @CustomType.Parameter("configVersion") @Nullable String configVersion,
+        @CustomType.Parameter("realmsSelector") @Nullable GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector realmsSelector) {
         this.configVersion = configVersion;
         this.realmsSelector = realmsSelector;
     }

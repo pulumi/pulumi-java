@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketLoggingConfiguration {
     /**
      * The name of an Amazon S3 bucket where Amazon S3 store server access log files. You can store log files in any bucket that you own. By default, logs are stored in the bucket where the LoggingConfiguration property is defined.
@@ -18,10 +18,10 @@ public final class BucketLoggingConfiguration {
     private final @Nullable String destinationBucketName;
     private final @Nullable String logFilePrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketLoggingConfiguration(
-        @OutputCustomType.Parameter("destinationBucketName") @Nullable String destinationBucketName,
-        @OutputCustomType.Parameter("logFilePrefix") @Nullable String logFilePrefix) {
+        @CustomType.Parameter("destinationBucketName") @Nullable String destinationBucketName,
+        @CustomType.Parameter("logFilePrefix") @Nullable String logFilePrefix) {
         this.destinationBucketName = destinationBucketName;
         this.logFilePrefix = logFilePrefix;
     }

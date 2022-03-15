@@ -5,21 +5,21 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.enums.EC2FleetTagSpecificationResourceType;
 import io.pulumi.awsnative.ec2.outputs.EC2FleetTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EC2FleetTagSpecification {
     private final @Nullable EC2FleetTagSpecificationResourceType resourceType;
     private final @Nullable List<EC2FleetTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EC2FleetTagSpecification(
-        @OutputCustomType.Parameter("resourceType") @Nullable EC2FleetTagSpecificationResourceType resourceType,
-        @OutputCustomType.Parameter("tags") @Nullable List<EC2FleetTag> tags) {
+        @CustomType.Parameter("resourceType") @Nullable EC2FleetTagSpecificationResourceType resourceType,
+        @CustomType.Parameter("tags") @Nullable List<EC2FleetTag> tags) {
         this.resourceType = resourceType;
         this.tags = tags;
     }

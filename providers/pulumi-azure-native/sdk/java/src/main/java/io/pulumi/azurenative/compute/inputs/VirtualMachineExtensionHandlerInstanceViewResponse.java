@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends io
      * The extension handler status.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable InstanceViewStatusResponse status;
 
     public Optional<InstanceViewStatusResponse> getStatus() {
@@ -34,7 +34,7 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends io
      * Specifies the type of the extension; an example is "CustomScriptExtension".
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -45,7 +45,7 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse extends io
      * Specifies the version of the script handler.
      * 
      */
-    @InputImport(name="typeHandlerVersion")
+    @Import(name="typeHandlerVersion")
       private final @Nullable String typeHandlerVersion;
 
     public Optional<String> getTypeHandlerVersion() {

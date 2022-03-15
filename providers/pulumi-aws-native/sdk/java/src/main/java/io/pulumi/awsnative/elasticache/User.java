@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.elasticache.UserArgs;
 import io.pulumi.awsnative.elasticache.enums.UserEngine;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * Access permissions string used for this user account.
      * 
      */
-    @OutputExport(name="accessString", type=String.class, parameters={})
+    @Export(name="accessString", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessString;
 
     /**
@@ -38,7 +38,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the user account.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -52,7 +52,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * Must be redis.
      * 
      */
-    @OutputExport(name="engine", type=UserEngine.class, parameters={})
+    @Export(name="engine", type=UserEngine.class, parameters={})
     private Output<UserEngine> engine;
 
     /**
@@ -66,7 +66,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * Indicates a password is not required for this user account.
      * 
      */
-    @OutputExport(name="noPasswordRequired", type=Boolean.class, parameters={})
+    @Export(name="noPasswordRequired", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> noPasswordRequired;
 
     /**
@@ -80,7 +80,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * Passwords used for this user account. You can create up to two passwords for each user.
      * 
      */
-    @OutputExport(name="passwords", type=List.class, parameters={String.class})
+    @Export(name="passwords", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> passwords;
 
     /**
@@ -94,7 +94,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * Indicates the user status. Can be "active", "modifying" or "deleting".
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -108,7 +108,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The ID of the user.
      * 
      */
-    @OutputExport(name="userId", type=String.class, parameters={})
+    @Export(name="userId", type=String.class, parameters={})
     private Output<String> userId;
 
     /**
@@ -122,7 +122,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The username of the user.
      * 
      */
-    @OutputExport(name="userName", type=String.class, parameters={})
+    @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**

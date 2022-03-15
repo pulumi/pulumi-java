@@ -3,23 +3,23 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TagTemplateIamBindingCondition {
     private final @Nullable String description;
     private final String expression;
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TagTemplateIamBindingCondition(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("expression") String expression,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("expression") String expression,
+        @CustomType.Parameter("title") String title) {
         this.description = description;
         this.expression = expression;
         this.title = title;

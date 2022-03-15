@@ -4,7 +4,7 @@
 package io.pulumi.gcp.firestore;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * The collection ID, relative to database. For example: chatrooms or chatrooms/my-document/private-messages.
      * 
      */
-    @InputImport(name="collection", required=true)
+    @Import(name="collection", required=true)
       private final Output<String> collection;
 
     public Output<String> getCollection() {
@@ -29,7 +29,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * The Firestore database id. Defaults to `"(default)"`.
      * 
      */
-    @InputImport(name="database")
+    @Import(name="database")
       private final @Nullable Output<String> database;
 
     public Output<String> getDatabase() {
@@ -40,7 +40,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * The client-assigned document ID to use for this document during creation.
      * 
      */
-    @InputImport(name="documentId", required=true)
+    @Import(name="documentId", required=true)
       private final Output<String> documentId;
 
     public Output<String> getDocumentId() {
@@ -51,7 +51,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * The document's [fields](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.documents) formated as a json string.
      * 
      */
-    @InputImport(name="fields", required=true)
+    @Import(name="fields", required=true)
       private final Output<String> fields;
 
     public Output<String> getFields() {
@@ -63,7 +63,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

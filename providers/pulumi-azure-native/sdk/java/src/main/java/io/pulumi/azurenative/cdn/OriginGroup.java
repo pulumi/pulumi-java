@@ -11,7 +11,7 @@ import io.pulumi.azurenative.cdn.outputs.ResponseBasedOriginErrorDetectionParame
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * Health probe settings to the origin that is used to determine the health of the origin.
      * 
      */
-    @OutputExport(name="healthProbeSettings", type=HealthProbeParametersResponse.class, parameters={})
+    @Export(name="healthProbeSettings", type=HealthProbeParametersResponse.class, parameters={})
     private Output</* @Nullable */ HealthProbeParametersResponse> healthProbeSettings;
 
     /**
@@ -53,7 +53,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -67,7 +67,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * The source of the content being delivered via CDN within given origin group.
      * 
      */
-    @OutputExport(name="origins", type=List.class, parameters={ResourceReferenceResponse.class})
+    @Export(name="origins", type=List.class, parameters={ResourceReferenceResponse.class})
     private Output<List<ResourceReferenceResponse>> origins;
 
     /**
@@ -81,7 +81,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * Provisioning status of the origin group.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -95,7 +95,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * Resource status of the origin group.
      * 
      */
-    @OutputExport(name="resourceState", type=String.class, parameters={})
+    @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
@@ -109,7 +109,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
      * 
      */
-    @OutputExport(name="responseBasedOriginErrorDetectionSettings", type=ResponseBasedOriginErrorDetectionParametersResponse.class, parameters={})
+    @Export(name="responseBasedOriginErrorDetectionSettings", type=ResponseBasedOriginErrorDetectionParametersResponse.class, parameters={})
     private Output</* @Nullable */ ResponseBasedOriginErrorDetectionParametersResponse> responseBasedOriginErrorDetectionSettings;
 
     /**
@@ -123,7 +123,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * Read only system data
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -137,7 +137,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
      * 
      */
-    @OutputExport(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes", type=Integer.class, parameters={})
+    @Export(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
     /**
@@ -151,7 +151,7 @@ public class OriginGroup extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

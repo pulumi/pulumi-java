@@ -6,7 +6,7 @@ package io.pulumi.azurenative.features.inputs;
 import io.pulumi.azurenative.features.enums.SubscriptionFeatureRegistrationState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
      * The feature description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
      * Key-value pairs for meta data.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -44,7 +44,7 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
      * Indicates whether feature should be displayed in Portal.
      * 
      */
-    @InputImport(name="shouldFeatureDisplayInPortal")
+    @Import(name="shouldFeatureDisplayInPortal")
       private final @Nullable Output<Boolean> shouldFeatureDisplayInPortal;
 
     public Output<Boolean> getShouldFeatureDisplayInPortal() {
@@ -55,7 +55,7 @@ public final class SubscriptionFeatureRegistrationPropertiesArgs extends io.pulu
      * The state.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<Either<String,SubscriptionFeatureRegistrationState>> state;
 
     public Output<Either<String,SubscriptionFeatureRegistrationState>> getState() {

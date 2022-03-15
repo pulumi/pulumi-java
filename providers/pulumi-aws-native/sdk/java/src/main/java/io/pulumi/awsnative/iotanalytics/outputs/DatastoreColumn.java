@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatastoreColumn {
     private final String name;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatastoreColumn(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.name = name;
         this.type = type;
     }

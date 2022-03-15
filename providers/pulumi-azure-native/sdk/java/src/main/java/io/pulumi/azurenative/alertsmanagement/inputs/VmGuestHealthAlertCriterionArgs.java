@@ -5,7 +5,7 @@ package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.azurenative.alertsmanagement.inputs.HealthStateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
      * Health states to alert on
      * 
      */
-    @InputImport(name="healthStates", required=true)
+    @Import(name="healthStates", required=true)
       private final Output<List<HealthStateArgs>> healthStates;
 
     public Output<List<HealthStateArgs>> getHealthStates() {
@@ -35,7 +35,7 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
      * Names of health monitor on which to define alert
      * 
      */
-    @InputImport(name="monitorNames")
+    @Import(name="monitorNames")
       private final @Nullable Output<List<String>> monitorNames;
 
     public Output<List<String>> getMonitorNames() {
@@ -46,7 +46,7 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
      * Names of health monitor type on which to define alert
      * 
      */
-    @InputImport(name="monitorTypes")
+    @Import(name="monitorTypes")
       private final @Nullable Output<List<String>> monitorTypes;
 
     public Output<List<String>> getMonitorTypes() {
@@ -58,7 +58,7 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
      * Expected value is 'GuestVmHealth'.
      * 
      */
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
     public Output<String> getNamespace() {

@@ -4,25 +4,25 @@
 package io.pulumi.awsnative.dynamodb.outputs;
 
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableTargetTrackingScalingPolicyConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GlobalTableCapacityAutoScalingSettings {
     private final Integer maxCapacity;
     private final Integer minCapacity;
     private final @Nullable Integer seedCapacity;
     private final GlobalTableTargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GlobalTableCapacityAutoScalingSettings(
-        @OutputCustomType.Parameter("maxCapacity") Integer maxCapacity,
-        @OutputCustomType.Parameter("minCapacity") Integer minCapacity,
-        @OutputCustomType.Parameter("seedCapacity") @Nullable Integer seedCapacity,
-        @OutputCustomType.Parameter("targetTrackingScalingPolicyConfiguration") GlobalTableTargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration) {
+        @CustomType.Parameter("maxCapacity") Integer maxCapacity,
+        @CustomType.Parameter("minCapacity") Integer minCapacity,
+        @CustomType.Parameter("seedCapacity") @Nullable Integer seedCapacity,
+        @CustomType.Parameter("targetTrackingScalingPolicyConfiguration") GlobalTableTargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration) {
         this.maxCapacity = maxCapacity;
         this.minCapacity = minCapacity;
         this.seedCapacity = seedCapacity;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.UrlSigningActionParametersResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class UrlSigningActionResponse extends io.pulumi.resources.InvokeAr
      * Expected value is 'UrlSigning'.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -33,7 +33,7 @@ public final class UrlSigningActionResponse extends io.pulumi.resources.InvokeAr
      * Defines the parameters for the action.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final UrlSigningActionParametersResponse parameters;
 
     public UrlSigningActionParametersResponse getParameters() {

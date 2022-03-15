@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse {
     /**
      * Enable entity extraction in conversation messages on [agent assist stage](https://cloud.google.com/dialogflow/priv/docs/contact-center/basics#stages). If unspecified, defaults to false. Currently, this feature is not general available, please contact Google to get access.
@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
      */
     private final Boolean enableSentimentAnalysis;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse(
-        @OutputCustomType.Parameter("enableEntityExtraction") Boolean enableEntityExtraction,
-        @OutputCustomType.Parameter("enableSentimentAnalysis") Boolean enableSentimentAnalysis) {
+        @CustomType.Parameter("enableEntityExtraction") Boolean enableEntityExtraction,
+        @CustomType.Parameter("enableSentimentAnalysis") Boolean enableSentimentAnalysis) {
         this.enableEntityExtraction = enableEntityExtraction;
         this.enableSentimentAnalysis = enableSentimentAnalysis;
     }

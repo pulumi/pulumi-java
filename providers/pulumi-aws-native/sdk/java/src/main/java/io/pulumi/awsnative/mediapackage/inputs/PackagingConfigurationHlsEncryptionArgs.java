@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationHlsEncryptionEncryptionMethod;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationSpekeKeyProviderArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.res
      * An HTTP Live Streaming (HLS) encryption configuration.
      * 
      */
-    @InputImport(name="constantInitializationVector")
+    @Import(name="constantInitializationVector")
       private final @Nullable Output<String> constantInitializationVector;
 
     public Output<String> getConstantInitializationVector() {
@@ -35,14 +35,14 @@ public final class PackagingConfigurationHlsEncryptionArgs extends io.pulumi.res
      * The encryption method to use.
      * 
      */
-    @InputImport(name="encryptionMethod")
+    @Import(name="encryptionMethod")
       private final @Nullable Output<PackagingConfigurationHlsEncryptionEncryptionMethod> encryptionMethod;
 
     public Output<PackagingConfigurationHlsEncryptionEncryptionMethod> getEncryptionMethod() {
         return this.encryptionMethod == null ? Output.empty() : this.encryptionMethod;
     }
 
-    @InputImport(name="spekeKeyProvider", required=true)
+    @Import(name="spekeKeyProvider", required=true)
       private final Output<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
 
     public Output<PackagingConfigurationSpekeKeyProviderArgs> getSpekeKeyProvider() {

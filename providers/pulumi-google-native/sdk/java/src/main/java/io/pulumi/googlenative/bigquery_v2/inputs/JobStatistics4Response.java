@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class JobStatistics4Response extends io.pulumi.resources.InvokeArgs
      * Number of files per destination URI or URI pattern specified in the extract configuration. These values will be in the same order as the URIs specified in the 'destinationUris' field.
      * 
      */
-    @InputImport(name="destinationUriFileCounts", required=true)
+    @Import(name="destinationUriFileCounts", required=true)
       private final List<String> destinationUriFileCounts;
 
     public List<String> getDestinationUriFileCounts() {
@@ -28,7 +28,7 @@ public final class JobStatistics4Response extends io.pulumi.resources.InvokeArgs
      * Number of user bytes extracted into the result. This is the byte count as computed by BigQuery for billing purposes.
      * 
      */
-    @InputImport(name="inputBytes", required=true)
+    @Import(name="inputBytes", required=true)
       private final String inputBytes;
 
     public String getInputBytes() {

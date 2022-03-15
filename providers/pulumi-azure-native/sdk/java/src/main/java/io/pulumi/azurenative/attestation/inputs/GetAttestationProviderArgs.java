@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.attestation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAttestationProviderArgs extends io.pulumi.resources.Invoke
      * Name of the attestation provider.
      * 
      */
-    @InputImport(name="providerName", required=true)
+    @Import(name="providerName", required=true)
       private final String providerName;
 
     public String getProviderName() {
@@ -27,7 +27,7 @@ public final class GetAttestationProviderArgs extends io.pulumi.resources.Invoke
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

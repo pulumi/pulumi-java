@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.DomainResourceSpec;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainJupyterServerAppSettings {
     private final @Nullable DomainResourceSpec defaultResourceSpec;
 
-    @OutputCustomType.Constructor
-    private DomainJupyterServerAppSettings(@OutputCustomType.Parameter("defaultResourceSpec") @Nullable DomainResourceSpec defaultResourceSpec) {
+    @CustomType.Constructor
+    private DomainJupyterServerAppSettings(@CustomType.Parameter("defaultResourceSpec") @Nullable DomainResourceSpec defaultResourceSpec) {
         this.defaultResourceSpec = defaultResourceSpec;
     }
 

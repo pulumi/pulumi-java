@@ -16,14 +16,14 @@ import io.pulumi.azurenative.hdinsight.outputs.NetworkPropertiesResponse;
 import io.pulumi.azurenative.hdinsight.outputs.QuotaInfoResponse;
 import io.pulumi.azurenative.hdinsight.outputs.SecurityProfileResponse;
 import io.pulumi.azurenative.hdinsight.outputs.StorageProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterGetPropertiesResponse {
     /**
      * The cluster definition.
@@ -136,30 +136,30 @@ public final class ClusterGetPropertiesResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterGetPropertiesResponse(
-        @OutputCustomType.Parameter("clusterDefinition") ClusterDefinitionResponse clusterDefinition,
-        @OutputCustomType.Parameter("clusterHdpVersion") @Nullable String clusterHdpVersion,
-        @OutputCustomType.Parameter("clusterId") @Nullable String clusterId,
-        @OutputCustomType.Parameter("clusterState") @Nullable String clusterState,
-        @OutputCustomType.Parameter("clusterVersion") @Nullable String clusterVersion,
-        @OutputCustomType.Parameter("computeIsolationProperties") @Nullable ComputeIsolationPropertiesResponse computeIsolationProperties,
-        @OutputCustomType.Parameter("computeProfile") @Nullable ComputeProfileResponse computeProfile,
-        @OutputCustomType.Parameter("connectivityEndpoints") @Nullable List<ConnectivityEndpointResponse> connectivityEndpoints,
-        @OutputCustomType.Parameter("createdDate") @Nullable String createdDate,
-        @OutputCustomType.Parameter("diskEncryptionProperties") @Nullable DiskEncryptionPropertiesResponse diskEncryptionProperties,
-        @OutputCustomType.Parameter("encryptionInTransitProperties") @Nullable EncryptionInTransitPropertiesResponse encryptionInTransitProperties,
-        @OutputCustomType.Parameter("errors") @Nullable List<ErrorsResponse> errors,
-        @OutputCustomType.Parameter("excludedServicesConfig") @Nullable ExcludedServicesConfigResponse excludedServicesConfig,
-        @OutputCustomType.Parameter("kafkaRestProperties") @Nullable KafkaRestPropertiesResponse kafkaRestProperties,
-        @OutputCustomType.Parameter("minSupportedTlsVersion") @Nullable String minSupportedTlsVersion,
-        @OutputCustomType.Parameter("networkProperties") @Nullable NetworkPropertiesResponse networkProperties,
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("quotaInfo") @Nullable QuotaInfoResponse quotaInfo,
-        @OutputCustomType.Parameter("securityProfile") @Nullable SecurityProfileResponse securityProfile,
-        @OutputCustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
-        @OutputCustomType.Parameter("tier") @Nullable String tier) {
+        @CustomType.Parameter("clusterDefinition") ClusterDefinitionResponse clusterDefinition,
+        @CustomType.Parameter("clusterHdpVersion") @Nullable String clusterHdpVersion,
+        @CustomType.Parameter("clusterId") @Nullable String clusterId,
+        @CustomType.Parameter("clusterState") @Nullable String clusterState,
+        @CustomType.Parameter("clusterVersion") @Nullable String clusterVersion,
+        @CustomType.Parameter("computeIsolationProperties") @Nullable ComputeIsolationPropertiesResponse computeIsolationProperties,
+        @CustomType.Parameter("computeProfile") @Nullable ComputeProfileResponse computeProfile,
+        @CustomType.Parameter("connectivityEndpoints") @Nullable List<ConnectivityEndpointResponse> connectivityEndpoints,
+        @CustomType.Parameter("createdDate") @Nullable String createdDate,
+        @CustomType.Parameter("diskEncryptionProperties") @Nullable DiskEncryptionPropertiesResponse diskEncryptionProperties,
+        @CustomType.Parameter("encryptionInTransitProperties") @Nullable EncryptionInTransitPropertiesResponse encryptionInTransitProperties,
+        @CustomType.Parameter("errors") @Nullable List<ErrorsResponse> errors,
+        @CustomType.Parameter("excludedServicesConfig") @Nullable ExcludedServicesConfigResponse excludedServicesConfig,
+        @CustomType.Parameter("kafkaRestProperties") @Nullable KafkaRestPropertiesResponse kafkaRestProperties,
+        @CustomType.Parameter("minSupportedTlsVersion") @Nullable String minSupportedTlsVersion,
+        @CustomType.Parameter("networkProperties") @Nullable NetworkPropertiesResponse networkProperties,
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("quotaInfo") @Nullable QuotaInfoResponse quotaInfo,
+        @CustomType.Parameter("securityProfile") @Nullable SecurityProfileResponse securityProfile,
+        @CustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
+        @CustomType.Parameter("tier") @Nullable String tier) {
         this.clusterDefinition = clusterDefinition;
         this.clusterHdpVersion = clusterHdpVersion;
         this.clusterId = clusterId;

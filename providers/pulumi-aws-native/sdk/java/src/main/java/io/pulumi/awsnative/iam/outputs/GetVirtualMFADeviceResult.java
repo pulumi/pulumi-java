@@ -4,24 +4,24 @@
 package io.pulumi.awsnative.iam.outputs;
 
 import io.pulumi.awsnative.iam.outputs.VirtualMFADeviceTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualMFADeviceResult {
     private final @Nullable String serialNumber;
     private final @Nullable List<VirtualMFADeviceTag> tags;
     private final @Nullable List<String> users;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualMFADeviceResult(
-        @OutputCustomType.Parameter("serialNumber") @Nullable String serialNumber,
-        @OutputCustomType.Parameter("tags") @Nullable List<VirtualMFADeviceTag> tags,
-        @OutputCustomType.Parameter("users") @Nullable List<String> users) {
+        @CustomType.Parameter("serialNumber") @Nullable String serialNumber,
+        @CustomType.Parameter("tags") @Nullable List<VirtualMFADeviceTag> tags,
+        @CustomType.Parameter("users") @Nullable List<String> users) {
         this.serialNumber = serialNumber;
         this.tags = tags;
         this.users = users;

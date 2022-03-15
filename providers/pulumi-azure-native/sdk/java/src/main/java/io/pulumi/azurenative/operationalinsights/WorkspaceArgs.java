@@ -10,7 +10,7 @@ import io.pulumi.azurenative.operationalinsights.inputs.WorkspaceFeaturesArgs;
 import io.pulumi.azurenative.operationalinsights.inputs.WorkspaceSkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The ETag of the workspace.
      * 
      */
-    @InputImport(name="eTag")
+    @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
     public Output<String> getETag() {
@@ -38,7 +38,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * Workspace features.
      * 
      */
-    @InputImport(name="features")
+    @Import(name="features")
       private final @Nullable Output<WorkspaceFeaturesArgs> features;
 
     public Output<WorkspaceFeaturesArgs> getFeatures() {
@@ -49,7 +49,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether customer managed storage is mandatory for query management.
      * 
      */
-    @InputImport(name="forceCmkForQuery")
+    @Import(name="forceCmkForQuery")
       private final @Nullable Output<Boolean> forceCmkForQuery;
 
     public Output<Boolean> getForceCmkForQuery() {
@@ -60,7 +60,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -71,7 +71,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The provisioning state of the workspace.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<Either<String,WorkspaceEntityStatus>> provisioningState;
 
     public Output<Either<String,WorkspaceEntityStatus>> getProvisioningState() {
@@ -82,7 +82,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The network access type for accessing Log Analytics ingestion.
      * 
      */
-    @InputImport(name="publicNetworkAccessForIngestion")
+    @Import(name="publicNetworkAccessForIngestion")
       private final @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion;
 
     public Output<Either<String,PublicNetworkAccessType>> getPublicNetworkAccessForIngestion() {
@@ -93,7 +93,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The network access type for accessing Log Analytics query.
      * 
      */
-    @InputImport(name="publicNetworkAccessForQuery")
+    @Import(name="publicNetworkAccessForQuery")
       private final @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery;
 
     public Output<Either<String,PublicNetworkAccessType>> getPublicNetworkAccessForQuery() {
@@ -104,7 +104,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -115,7 +115,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
      * 
      */
-    @InputImport(name="retentionInDays")
+    @Import(name="retentionInDays")
       private final @Nullable Output<Integer> retentionInDays;
 
     public Output<Integer> getRetentionInDays() {
@@ -126,7 +126,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU of the workspace.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<WorkspaceSkuArgs> sku;
 
     public Output<WorkspaceSkuArgs> getSku() {
@@ -137,7 +137,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -148,7 +148,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The daily volume cap for ingestion.
      * 
      */
-    @InputImport(name="workspaceCapping")
+    @Import(name="workspaceCapping")
       private final @Nullable Output<WorkspaceCappingArgs> workspaceCapping;
 
     public Output<WorkspaceCappingArgs> getWorkspaceCapping() {
@@ -159,7 +159,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName")
+    @Import(name="workspaceName")
       private final @Nullable Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

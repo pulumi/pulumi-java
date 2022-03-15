@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.MetadataExportResponse;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.RestoreResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MetadataManagementActivityResponse {
     /**
      * The latest metadata exports of the metastore service.
@@ -22,10 +22,10 @@ public final class MetadataManagementActivityResponse {
      */
     private final List<RestoreResponse> restores;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetadataManagementActivityResponse(
-        @OutputCustomType.Parameter("metadataExports") List<MetadataExportResponse> metadataExports,
-        @OutputCustomType.Parameter("restores") List<RestoreResponse> restores) {
+        @CustomType.Parameter("metadataExports") List<MetadataExportResponse> metadataExports,
+        @CustomType.Parameter("restores") List<RestoreResponse> restores) {
         this.metadataExports = metadataExports;
         this.restores = restores;
     }

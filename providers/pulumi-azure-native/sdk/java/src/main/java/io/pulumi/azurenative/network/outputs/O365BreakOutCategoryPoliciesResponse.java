@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class O365BreakOutCategoryPoliciesResponse {
     /**
      * Flag to control allow category.
@@ -27,11 +27,11 @@ public final class O365BreakOutCategoryPoliciesResponse {
      */
     private final @Nullable Boolean optimize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private O365BreakOutCategoryPoliciesResponse(
-        @OutputCustomType.Parameter("allow") @Nullable Boolean allow,
-        @OutputCustomType.Parameter("default") @Nullable Boolean $default,
-        @OutputCustomType.Parameter("optimize") @Nullable Boolean optimize) {
+        @CustomType.Parameter("allow") @Nullable Boolean allow,
+        @CustomType.Parameter("default") @Nullable Boolean $default,
+        @CustomType.Parameter("optimize") @Nullable Boolean optimize) {
         this.allow = allow;
         this.$default = $default;
         this.optimize = optimize;

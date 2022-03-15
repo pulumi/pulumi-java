@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CertificateChainsResponse extends io.pulumi.resources.InvokeA
      * Cavium certificate chain corresponding to the attestation.
      * 
      */
-    @InputImport(name="caviumCerts", required=true)
+    @Import(name="caviumCerts", required=true)
       private final List<String> caviumCerts;
 
     public List<String> getCaviumCerts() {
@@ -32,7 +32,7 @@ public final class CertificateChainsResponse extends io.pulumi.resources.InvokeA
      * Google card certificate chain corresponding to the attestation.
      * 
      */
-    @InputImport(name="googleCardCerts", required=true)
+    @Import(name="googleCardCerts", required=true)
       private final List<String> googleCardCerts;
 
     public List<String> getGoogleCardCerts() {
@@ -43,7 +43,7 @@ public final class CertificateChainsResponse extends io.pulumi.resources.InvokeA
      * Google partition certificate chain corresponding to the attestation.
      * 
      */
-    @InputImport(name="googlePartitionCerts", required=true)
+    @Import(name="googlePartitionCerts", required=true)
       private final List<String> googlePartitionCerts;
 
     public List<String> getGooglePartitionCerts() {

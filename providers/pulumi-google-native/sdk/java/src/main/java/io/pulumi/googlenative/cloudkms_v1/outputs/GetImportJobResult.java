@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudkms_v1.outputs.KeyOperationAttestationResponse;
 import io.pulumi.googlenative.cloudkms_v1.outputs.WrappingPublicKeyResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetImportJobResult {
     /**
      * Statement that was generated and signed by the key creator (for example, an HSM) at key creation time. Use this statement to verify attributes of the key as stored on the HSM, independently of Google. Only present if the chosen ImportMethod is one with a protection level of HSM.
@@ -62,18 +62,18 @@ public final class GetImportJobResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetImportJobResult(
-        @OutputCustomType.Parameter("attestation") KeyOperationAttestationResponse attestation,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("expireEventTime") String expireEventTime,
-        @OutputCustomType.Parameter("expireTime") String expireTime,
-        @OutputCustomType.Parameter("generateTime") String generateTime,
-        @OutputCustomType.Parameter("importMethod") String importMethod,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("protectionLevel") String protectionLevel,
-        @OutputCustomType.Parameter("publicKey") WrappingPublicKeyResponse publicKey,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("attestation") KeyOperationAttestationResponse attestation,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("expireEventTime") String expireEventTime,
+        @CustomType.Parameter("expireTime") String expireTime,
+        @CustomType.Parameter("generateTime") String generateTime,
+        @CustomType.Parameter("importMethod") String importMethod,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("protectionLevel") String protectionLevel,
+        @CustomType.Parameter("publicKey") WrappingPublicKeyResponse publicKey,
+        @CustomType.Parameter("state") String state) {
         this.attestation = attestation;
         this.createTime = createTime;
         this.expireEventTime = expireEventTime;

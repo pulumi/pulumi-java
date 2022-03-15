@@ -6,7 +6,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersOauthClientParametersArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersOauthOauthHttpParametersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
      * The URL to the authorization endpoint.
      * 
      */
-    @InputImport(name="authorizationEndpoint", required=true)
+    @Import(name="authorizationEndpoint", required=true)
       private final Output<String> authorizationEndpoint;
 
     public Output<String> getAuthorizationEndpoint() {
@@ -31,7 +31,7 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
      * Contains the client parameters for OAuth authorization. Contains the following two parameters.
      * 
      */
-    @InputImport(name="clientParameters")
+    @Import(name="clientParameters")
       private final @Nullable Output<EventConnectionAuthParametersOauthClientParametersArgs> clientParameters;
 
     public Output<EventConnectionAuthParametersOauthClientParametersArgs> getClientParameters() {
@@ -42,7 +42,7 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
      * A password for the authorization. Created and stored in AWS Secrets Manager.
      * 
      */
-    @InputImport(name="httpMethod", required=true)
+    @Import(name="httpMethod", required=true)
       private final Output<String> httpMethod;
 
     public Output<String> getHttpMethod() {
@@ -53,7 +53,7 @@ public final class EventConnectionAuthParametersOauthArgs extends io.pulumi.reso
      * OAuth Http Parameters are additional credentials used to sign the request to the authorization endpoint to exchange the OAuth Client information for an access token. Secret values are stored and managed by AWS Secrets Manager. A maximum of 1 are allowed. Documented below.
      * 
      */
-    @InputImport(name="oauthHttpParameters", required=true)
+    @Import(name="oauthHttpParameters", required=true)
       private final Output<EventConnectionAuthParametersOauthOauthHttpParametersArgs> oauthHttpParameters;
 
     public Output<EventConnectionAuthParametersOauthOauthHttpParametersArgs> getOauthHttpParameters() {

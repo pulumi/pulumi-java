@@ -4,7 +4,7 @@
 package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * List of a fully qualified domain name of the LDAP server and an optional failover server.
      * 
      */
-    @InputImport(name="hosts")
+    @Import(name="hosts")
       private final @Nullable Output<List<String>> hosts;
 
     public Output<List<String>> getHosts() {
@@ -31,7 +31,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * Fully qualified name of the directory to search for a user’s groups.
      * 
      */
-    @InputImport(name="roleBase")
+    @Import(name="roleBase")
       private final @Nullable Output<String> roleBase;
 
     public Output<String> getRoleBase() {
@@ -42,7 +42,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * Specifies the LDAP attribute that identifies the group name attribute in the object returned from the group membership query.
      * 
      */
-    @InputImport(name="roleName")
+    @Import(name="roleName")
       private final @Nullable Output<String> roleName;
 
     public Output<String> getRoleName() {
@@ -53,7 +53,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * Search criteria for groups.
      * 
      */
-    @InputImport(name="roleSearchMatching")
+    @Import(name="roleSearchMatching")
       private final @Nullable Output<String> roleSearchMatching;
 
     public Output<String> getRoleSearchMatching() {
@@ -64,7 +64,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * Whether the directory search scope is the entire sub-tree.
      * 
      */
-    @InputImport(name="roleSearchSubtree")
+    @Import(name="roleSearchSubtree")
       private final @Nullable Output<Boolean> roleSearchSubtree;
 
     public Output<Boolean> getRoleSearchSubtree() {
@@ -75,7 +75,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * Service account password.
      * 
      */
-    @InputImport(name="serviceAccountPassword")
+    @Import(name="serviceAccountPassword")
       private final @Nullable Output<String> serviceAccountPassword;
 
     public Output<String> getServiceAccountPassword() {
@@ -86,7 +86,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * Service account username.
      * 
      */
-    @InputImport(name="serviceAccountUsername")
+    @Import(name="serviceAccountUsername")
       private final @Nullable Output<String> serviceAccountUsername;
 
     public Output<String> getServiceAccountUsername() {
@@ -97,7 +97,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * Fully qualified name of the directory where you want to search for users.
      * 
      */
-    @InputImport(name="userBase")
+    @Import(name="userBase")
       private final @Nullable Output<String> userBase;
 
     public Output<String> getUserBase() {
@@ -108,7 +108,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * Specifies the name of the LDAP attribute for the user group membership.
      * 
      */
-    @InputImport(name="userRoleName")
+    @Import(name="userRoleName")
       private final @Nullable Output<String> userRoleName;
 
     public Output<String> getUserRoleName() {
@@ -119,7 +119,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * Search criteria for users.
      * 
      */
-    @InputImport(name="userSearchMatching")
+    @Import(name="userSearchMatching")
       private final @Nullable Output<String> userSearchMatching;
 
     public Output<String> getUserSearchMatching() {
@@ -130,7 +130,7 @@ public final class BrokerLdapServerMetadataGetArgs extends io.pulumi.resources.R
      * Whether the directory search scope is the entire sub-tree.
      * 
      */
-    @InputImport(name="userSearchSubtree")
+    @Import(name="userSearchSubtree")
       private final @Nullable Output<Boolean> userSearchSubtree;
 
     public Output<Boolean> getUserSearchSubtree() {

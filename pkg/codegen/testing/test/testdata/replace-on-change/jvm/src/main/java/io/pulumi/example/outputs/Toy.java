@@ -3,24 +3,24 @@
 
 package io.pulumi.example.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Toy {
     private final @Nullable Toy associated;
     private final @Nullable String color;
     private final @Nullable Double wear;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Toy(
-        @OutputCustomType.Parameter("associated") @Nullable Toy associated,
-        @OutputCustomType.Parameter("color") @Nullable String color,
-        @OutputCustomType.Parameter("wear") @Nullable Double wear) {
+        @CustomType.Parameter("associated") @Nullable Toy associated,
+        @CustomType.Parameter("color") @Nullable String color,
+        @CustomType.Parameter("wear") @Nullable Double wear) {
         this.associated = associated;
         this.color = color;
         this.wear = wear;

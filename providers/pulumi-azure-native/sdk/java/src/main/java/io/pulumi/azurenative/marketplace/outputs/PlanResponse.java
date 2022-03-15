@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.marketplace.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PlanResponse {
     /**
      * Plan accessibility
@@ -42,14 +42,14 @@ public final class PlanResponse {
      */
     private final String stackType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PlanResponse(
-        @OutputCustomType.Parameter("accessibility") @Nullable String accessibility,
-        @OutputCustomType.Parameter("altStackReference") String altStackReference,
-        @OutputCustomType.Parameter("planDisplayName") String planDisplayName,
-        @OutputCustomType.Parameter("planId") String planId,
-        @OutputCustomType.Parameter("skuId") String skuId,
-        @OutputCustomType.Parameter("stackType") String stackType) {
+        @CustomType.Parameter("accessibility") @Nullable String accessibility,
+        @CustomType.Parameter("altStackReference") String altStackReference,
+        @CustomType.Parameter("planDisplayName") String planDisplayName,
+        @CustomType.Parameter("planId") String planId,
+        @CustomType.Parameter("skuId") String skuId,
+        @CustomType.Parameter("stackType") String stackType) {
         this.accessibility = accessibility;
         this.altStackReference = altStackReference;
         this.planDisplayName = planDisplayName;

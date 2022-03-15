@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterEc2AttributesGetArgs extends io.pulumi.resources.Resou
      * String containing a comma separated list of additional Amazon EC2 security group IDs for the master node.
      * 
      */
-    @InputImport(name="additionalMasterSecurityGroups")
+    @Import(name="additionalMasterSecurityGroups")
       private final @Nullable Output<String> additionalMasterSecurityGroups;
 
     public Output<String> getAdditionalMasterSecurityGroups() {
@@ -30,7 +30,7 @@ public final class ClusterEc2AttributesGetArgs extends io.pulumi.resources.Resou
      * String containing a comma separated list of additional Amazon EC2 security group IDs for the slave nodes as a comma separated string.
      * 
      */
-    @InputImport(name="additionalSlaveSecurityGroups")
+    @Import(name="additionalSlaveSecurityGroups")
       private final @Nullable Output<String> additionalSlaveSecurityGroups;
 
     public Output<String> getAdditionalSlaveSecurityGroups() {
@@ -41,7 +41,7 @@ public final class ClusterEc2AttributesGetArgs extends io.pulumi.resources.Resou
      * Identifier of the Amazon EC2 EMR-Managed security group for the master node.
      * 
      */
-    @InputImport(name="emrManagedMasterSecurityGroup")
+    @Import(name="emrManagedMasterSecurityGroup")
       private final @Nullable Output<String> emrManagedMasterSecurityGroup;
 
     public Output<String> getEmrManagedMasterSecurityGroup() {
@@ -52,7 +52,7 @@ public final class ClusterEc2AttributesGetArgs extends io.pulumi.resources.Resou
      * Identifier of the Amazon EC2 EMR-Managed security group for the slave nodes.
      * 
      */
-    @InputImport(name="emrManagedSlaveSecurityGroup")
+    @Import(name="emrManagedSlaveSecurityGroup")
       private final @Nullable Output<String> emrManagedSlaveSecurityGroup;
 
     public Output<String> getEmrManagedSlaveSecurityGroup() {
@@ -63,7 +63,7 @@ public final class ClusterEc2AttributesGetArgs extends io.pulumi.resources.Resou
      * Instance Profile for EC2 instances of the cluster assume this role.
      * 
      */
-    @InputImport(name="instanceProfile", required=true)
+    @Import(name="instanceProfile", required=true)
       private final Output<String> instanceProfile;
 
     public Output<String> getInstanceProfile() {
@@ -74,7 +74,7 @@ public final class ClusterEc2AttributesGetArgs extends io.pulumi.resources.Resou
      * Amazon EC2 key pair that can be used to ssh to the master node as the user called `hadoop`.
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
@@ -85,7 +85,7 @@ public final class ClusterEc2AttributesGetArgs extends io.pulumi.resources.Resou
      * Identifier of the Amazon EC2 service-access security group - required when the cluster runs on a private subnet.
      * 
      */
-    @InputImport(name="serviceAccessSecurityGroup")
+    @Import(name="serviceAccessSecurityGroup")
       private final @Nullable Output<String> serviceAccessSecurityGroup;
 
     public Output<String> getServiceAccessSecurityGroup() {
@@ -96,7 +96,7 @@ public final class ClusterEc2AttributesGetArgs extends io.pulumi.resources.Resou
      * VPC subnet id where you want the job flow to launch. Cannot specify the `cc1.4xlarge` instance type for nodes of a job flow launched in an Amazon VPC.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -107,7 +107,7 @@ public final class ClusterEc2AttributesGetArgs extends io.pulumi.resources.Resou
      * List of VPC subnet id-s where you want the job flow to launch.  Amazon EMR identifies the best Availability Zone to launch instances according to your fleet specifications.
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {

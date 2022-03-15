@@ -5,14 +5,14 @@ package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.IncidentInfoResponse;
 import io.pulumi.azurenative.securityinsights.outputs.UserInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBookmarkResult {
     /**
      * The time the bookmark was created
@@ -100,25 +100,25 @@ public final class GetBookmarkResult {
      */
     private final @Nullable UserInfoResponse updatedBy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBookmarkResult(
-        @OutputCustomType.Parameter("created") @Nullable String created,
-        @OutputCustomType.Parameter("createdBy") @Nullable UserInfoResponse createdBy,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("eventTime") @Nullable String eventTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("incidentInfo") @Nullable IncidentInfoResponse incidentInfo,
-        @OutputCustomType.Parameter("labels") @Nullable List<String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notes") @Nullable String notes,
-        @OutputCustomType.Parameter("query") String query,
-        @OutputCustomType.Parameter("queryEndTime") @Nullable String queryEndTime,
-        @OutputCustomType.Parameter("queryResult") @Nullable String queryResult,
-        @OutputCustomType.Parameter("queryStartTime") @Nullable String queryStartTime,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updated") @Nullable String updated,
-        @OutputCustomType.Parameter("updatedBy") @Nullable UserInfoResponse updatedBy) {
+        @CustomType.Parameter("created") @Nullable String created,
+        @CustomType.Parameter("createdBy") @Nullable UserInfoResponse createdBy,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("eventTime") @Nullable String eventTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("incidentInfo") @Nullable IncidentInfoResponse incidentInfo,
+        @CustomType.Parameter("labels") @Nullable List<String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notes") @Nullable String notes,
+        @CustomType.Parameter("query") String query,
+        @CustomType.Parameter("queryEndTime") @Nullable String queryEndTime,
+        @CustomType.Parameter("queryResult") @Nullable String queryResult,
+        @CustomType.Parameter("queryStartTime") @Nullable String queryStartTime,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updated") @Nullable String updated,
+        @CustomType.Parameter("updatedBy") @Nullable UserInfoResponse updatedBy) {
         this.created = created;
         this.createdBy = createdBy;
         this.displayName = displayName;

@@ -5,12 +5,12 @@ package io.pulumi.aws.macie2.outputs;
 
 import io.pulumi.aws.macie2.outputs.ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTerm;
 import io.pulumi.aws.macie2.outputs.ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTerm;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClassificationJobS3JobDefinitionScopingIncludesAnd {
     /**
      * A property-based condition that defines a property, operator, and one or more values for including or excluding an object from the job.  (documented below)
@@ -23,10 +23,10 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAnd {
      */
     private final @Nullable ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTerm tagScopeTerm;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClassificationJobS3JobDefinitionScopingIncludesAnd(
-        @OutputCustomType.Parameter("simpleScopeTerm") @Nullable ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTerm simpleScopeTerm,
-        @OutputCustomType.Parameter("tagScopeTerm") @Nullable ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTerm tagScopeTerm) {
+        @CustomType.Parameter("simpleScopeTerm") @Nullable ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTerm simpleScopeTerm,
+        @CustomType.Parameter("tagScopeTerm") @Nullable ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTerm tagScopeTerm) {
         this.simpleScopeTerm = simpleScopeTerm;
         this.tagScopeTerm = tagScopeTerm;
     }

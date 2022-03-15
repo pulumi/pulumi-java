@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.enums.EventSource;
 import io.pulumi.azurenative.security.inputs.AutomationRuleSetArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class AutomationSourceArgs extends io.pulumi.resources.ResourceArgs
      * A valid event source type.
      * 
      */
-    @InputImport(name="eventSource")
+    @Import(name="eventSource")
       private final @Nullable Output<Either<String,EventSource>> eventSource;
 
     public Output<Either<String,EventSource>> getEventSource() {
@@ -37,7 +37,7 @@ public final class AutomationSourceArgs extends io.pulumi.resources.ResourceArgs
      * A set of rules which evaluate upon event interception. A logical disjunction is applied between defined rule sets (logical 'or').
      * 
      */
-    @InputImport(name="ruleSets")
+    @Import(name="ruleSets")
       private final @Nullable Output<List<AutomationRuleSetArgs>> ruleSets;
 
     public Output<List<AutomationRuleSetArgs>> getRuleSets() {

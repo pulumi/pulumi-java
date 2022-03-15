@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends io.pulumi.resourc
      * Dataset ID of the table.
      * 
      */
-    @InputImport(name="datasetId")
+    @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
 
     public Output<String> getDatasetId() {
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends io.pulumi.resourc
      * The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -44,7 +44,7 @@ public final class GooglePrivacyDlpV2BigQueryTableArgs extends io.pulumi.resourc
      * Name of the table.
      * 
      */
-    @InputImport(name="tableId")
+    @Import(name="tableId")
       private final @Nullable Output<String> tableId;
 
     public Output<String> getTableId() {

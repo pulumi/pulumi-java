@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StrongIdResponse {
     /**
      * Localized descriptions.
@@ -33,12 +33,12 @@ public final class StrongIdResponse {
      */
     private final String strongIdName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StrongIdResponse(
-        @OutputCustomType.Parameter("description") @Nullable Map<String,String> description,
-        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
-        @OutputCustomType.Parameter("keyPropertyNames") List<String> keyPropertyNames,
-        @OutputCustomType.Parameter("strongIdName") String strongIdName) {
+        @CustomType.Parameter("description") @Nullable Map<String,String> description,
+        @CustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @CustomType.Parameter("keyPropertyNames") List<String> keyPropertyNames,
+        @CustomType.Parameter("strongIdName") String strongIdName) {
         this.description = description;
         this.displayName = displayName;
         this.keyPropertyNames = keyPropertyNames;

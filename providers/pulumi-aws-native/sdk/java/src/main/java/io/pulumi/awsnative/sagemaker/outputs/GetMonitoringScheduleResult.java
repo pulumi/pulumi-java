@@ -7,14 +7,14 @@ import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleStatus;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleConfig;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleMonitoringExecutionSummary;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMonitoringScheduleResult {
     /**
      * The time at which the schedule was created.
@@ -54,17 +54,17 @@ public final class GetMonitoringScheduleResult {
      */
     private final @Nullable List<MonitoringScheduleTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMonitoringScheduleResult(
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("endpointName") @Nullable String endpointName,
-        @OutputCustomType.Parameter("failureReason") @Nullable String failureReason,
-        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
-        @OutputCustomType.Parameter("lastMonitoringExecutionSummary") @Nullable MonitoringScheduleMonitoringExecutionSummary lastMonitoringExecutionSummary,
-        @OutputCustomType.Parameter("monitoringScheduleArn") @Nullable String monitoringScheduleArn,
-        @OutputCustomType.Parameter("monitoringScheduleConfig") @Nullable MonitoringScheduleConfig monitoringScheduleConfig,
-        @OutputCustomType.Parameter("monitoringScheduleStatus") @Nullable MonitoringScheduleStatus monitoringScheduleStatus,
-        @OutputCustomType.Parameter("tags") @Nullable List<MonitoringScheduleTag> tags) {
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("endpointName") @Nullable String endpointName,
+        @CustomType.Parameter("failureReason") @Nullable String failureReason,
+        @CustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @CustomType.Parameter("lastMonitoringExecutionSummary") @Nullable MonitoringScheduleMonitoringExecutionSummary lastMonitoringExecutionSummary,
+        @CustomType.Parameter("monitoringScheduleArn") @Nullable String monitoringScheduleArn,
+        @CustomType.Parameter("monitoringScheduleConfig") @Nullable MonitoringScheduleConfig monitoringScheduleConfig,
+        @CustomType.Parameter("monitoringScheduleStatus") @Nullable MonitoringScheduleStatus monitoringScheduleStatus,
+        @CustomType.Parameter("tags") @Nullable List<MonitoringScheduleTag> tags) {
         this.creationTime = creationTime;
         this.endpointName = endpointName;
         this.failureReason = failureReason;

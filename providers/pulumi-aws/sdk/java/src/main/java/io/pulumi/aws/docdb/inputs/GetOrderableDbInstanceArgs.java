@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.docdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * DB engine. Default: `docdb`
      * 
      */
-    @InputImport(name="engine")
+    @Import(name="engine")
       private final @Nullable String engine;
 
     public Optional<String> getEngine() {
@@ -31,7 +31,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * Version of the DB engine.
      * 
      */
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable String engineVersion;
 
     public Optional<String> getEngineVersion() {
@@ -42,7 +42,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * DB instance class. Examples of classes are `db.r5.12xlarge`, `db.r5.24xlarge`, `db.r5.2xlarge`, `db.r5.4xlarge`, `db.r5.large`, `db.r5.xlarge`, and `db.t3.medium`. (Conflicts with `preferred_instance_classes`.)
      * 
      */
-    @InputImport(name="instanceClass")
+    @Import(name="instanceClass")
       private final @Nullable String instanceClass;
 
     public Optional<String> getInstanceClass() {
@@ -53,7 +53,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * License model. Default: `na`
      * 
      */
-    @InputImport(name="licenseModel")
+    @Import(name="licenseModel")
       private final @Nullable String licenseModel;
 
     public Optional<String> getLicenseModel() {
@@ -64,7 +64,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * Ordered list of preferred DocumentDB DB instance classes. The first match in this list will be returned. If no preferred matches are found and the original search returned more than one result, an error is returned. (Conflicts with `instance_class`.)
      * 
      */
-    @InputImport(name="preferredInstanceClasses")
+    @Import(name="preferredInstanceClasses")
       private final @Nullable List<String> preferredInstanceClasses;
 
     public List<String> getPreferredInstanceClasses() {
@@ -75,7 +75,7 @@ public final class GetOrderableDbInstanceArgs extends io.pulumi.resources.Invoke
      * Enable to show only VPC.
      * 
      */
-    @InputImport(name="vpc")
+    @Import(name="vpc")
       private final @Nullable Boolean vpc;
 
     public Optional<Boolean> getVpc() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ProgressMetricsResponse extends io.pulumi.resources.InvokeArg
      * The completed datapoint count.
      * 
      */
-    @InputImport(name="completedDatapointCount", required=true)
+    @Import(name="completedDatapointCount", required=true)
       private final Double completedDatapointCount;
 
     public Double getCompletedDatapointCount() {
@@ -32,7 +32,7 @@ public final class ProgressMetricsResponse extends io.pulumi.resources.InvokeArg
      * The time of last successful incremental dataset refresh in UTC.
      * 
      */
-    @InputImport(name="incrementalDatasetLastRefreshTime", required=true)
+    @Import(name="incrementalDatasetLastRefreshTime", required=true)
       private final String incrementalDatasetLastRefreshTime;
 
     public String getIncrementalDatasetLastRefreshTime() {
@@ -43,7 +43,7 @@ public final class ProgressMetricsResponse extends io.pulumi.resources.InvokeArg
      * The skipped datapoint count.
      * 
      */
-    @InputImport(name="skippedDatapointCount", required=true)
+    @Import(name="skippedDatapointCount", required=true)
       private final Double skippedDatapointCount;
 
     public Double getSkippedDatapointCount() {
@@ -54,7 +54,7 @@ public final class ProgressMetricsResponse extends io.pulumi.resources.InvokeArg
      * The total datapoint count.
      * 
      */
-    @InputImport(name="totalDatapointCount", required=true)
+    @Import(name="totalDatapointCount", required=true)
       private final Double totalDatapointCount;
 
     public Double getTotalDatapointCount() {

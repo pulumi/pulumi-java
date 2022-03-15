@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.guestconfiguration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConfigurationInfoResponse {
     /**
      * Name of the configuration.
@@ -20,10 +20,10 @@ public final class ConfigurationInfoResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigurationInfoResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("version") String version) {
         this.name = name;
         this.version = version;
     }

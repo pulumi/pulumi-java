@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.DeploymentResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GrafeasV1beta1DeploymentDetailsResponse {
     /**
      * Deployment history for the resource.
@@ -15,8 +15,8 @@ public final class GrafeasV1beta1DeploymentDetailsResponse {
      */
     private final DeploymentResponse deployment;
 
-    @OutputCustomType.Constructor
-    private GrafeasV1beta1DeploymentDetailsResponse(@OutputCustomType.Parameter("deployment") DeploymentResponse deployment) {
+    @CustomType.Constructor
+    private GrafeasV1beta1DeploymentDetailsResponse(@CustomType.Parameter("deployment") DeploymentResponse deployment) {
         this.deployment = deployment;
     }
 

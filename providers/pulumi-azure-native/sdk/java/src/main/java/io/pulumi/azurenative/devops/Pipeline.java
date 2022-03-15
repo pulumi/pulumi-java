@@ -9,7 +9,7 @@ import io.pulumi.azurenative.devops.outputs.BootstrapConfigurationResponse;
 import io.pulumi.azurenative.devops.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * Configuration used to bootstrap the Pipeline.
      * 
      */
-    @OutputExport(name="bootstrapConfiguration", type=BootstrapConfigurationResponse.class, parameters={})
+    @Export(name="bootstrapConfiguration", type=BootstrapConfigurationResponse.class, parameters={})
     private Output<BootstrapConfigurationResponse> bootstrapConfiguration;
 
     /**
@@ -52,7 +52,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * Resource Location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -66,7 +66,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * Resource Name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * Unique identifier of the Pipeline
      * 
      */
-    @OutputExport(name="pipelineId", type=Integer.class, parameters={})
+    @Export(name="pipelineId", type=Integer.class, parameters={})
     private Output<Integer> pipelineId;
 
     /**
@@ -94,7 +94,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
      * 
      */
-    @OutputExport(name="pipelineType", type=String.class, parameters={})
+    @Export(name="pipelineType", type=String.class, parameters={})
     private Output<String> pipelineType;
 
     /**
@@ -108,7 +108,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * The system metadata pertaining to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -122,7 +122,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * Resource Tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -136,7 +136,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * Resource Type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

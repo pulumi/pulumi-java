@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnabledConfigResponse {
     /**
      * True if configuration is enabled, false if it is disabled and null if configuration is not set.
@@ -17,8 +17,8 @@ public final class EnabledConfigResponse {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private EnabledConfigResponse(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
+    @CustomType.Constructor
+    private EnabledConfigResponse(@CustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

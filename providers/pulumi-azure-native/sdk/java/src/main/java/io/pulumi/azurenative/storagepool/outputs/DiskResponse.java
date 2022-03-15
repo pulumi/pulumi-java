@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storagepool.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DiskResponse {
     /**
      * Unique Azure Resource ID of the Managed Disk.
@@ -15,8 +15,8 @@ public final class DiskResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
-    private DiskResponse(@OutputCustomType.Parameter("id") String id) {
+    @CustomType.Constructor
+    private DiskResponse(@CustomType.Parameter("id") String id) {
         this.id = id;
     }
 

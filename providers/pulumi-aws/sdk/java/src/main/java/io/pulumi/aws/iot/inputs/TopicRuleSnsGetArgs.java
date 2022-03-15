@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TopicRuleSnsGetArgs extends io.pulumi.resources.ResourceArgs 
      * The message format of the message to publish. Accepted values are "JSON" and "RAW".
      * 
      */
-    @InputImport(name="messageFormat")
+    @Import(name="messageFormat")
       private final @Nullable Output<String> messageFormat;
 
     public Output<String> getMessageFormat() {
@@ -29,7 +29,7 @@ public final class TopicRuleSnsGetArgs extends io.pulumi.resources.ResourceArgs 
      * The ARN of the IAM role that grants access.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -40,7 +40,7 @@ public final class TopicRuleSnsGetArgs extends io.pulumi.resources.ResourceArgs 
      * The ARN of the SNS topic.
      * 
      */
-    @InputImport(name="targetArn", required=true)
+    @Import(name="targetArn", required=true)
       private final Output<String> targetArn;
 
     public Output<String> getTargetArn() {

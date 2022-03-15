@@ -13,7 +13,7 @@ import io.pulumi.azurenative.containerregistry.outputs.StatusDetailPropertiesRes
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class ConnectedRegistry extends io.pulumi.resources.CustomResource {
      * The activation properties of the connected registry.
      * 
      */
-    @OutputExport(name="activation", type=ActivationPropertiesResponse.class, parameters={})
+    @Export(name="activation", type=ActivationPropertiesResponse.class, parameters={})
     private Output<ActivationPropertiesResponse> activation;
 
     /**
@@ -54,7 +54,7 @@ public class ConnectedRegistry extends io.pulumi.resources.CustomResource {
      * The list of the ACR token resource IDs used to authenticate clients to the connected registry.
      * 
      */
-    @OutputExport(name="clientTokenIds", type=List.class, parameters={String.class})
+    @Export(name="clientTokenIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> clientTokenIds;
 
     /**
@@ -68,7 +68,7 @@ public class ConnectedRegistry extends io.pulumi.resources.CustomResource {
      * The current connection state of the connected registry.
      * 
      */
-    @OutputExport(name="connectionState", type=String.class, parameters={})
+    @Export(name="connectionState", type=String.class, parameters={})
     private Output<String> connectionState;
 
     /**
@@ -82,7 +82,7 @@ public class ConnectedRegistry extends io.pulumi.resources.CustomResource {
      * The last activity time of the connected registry.
      * 
      */
-    @OutputExport(name="lastActivityTime", type=String.class, parameters={})
+    @Export(name="lastActivityTime", type=String.class, parameters={})
     private Output<String> lastActivityTime;
 
     /**
@@ -96,7 +96,7 @@ public class ConnectedRegistry extends io.pulumi.resources.CustomResource {
      * The logging properties of the connected registry.
      * 
      */
-    @OutputExport(name="logging", type=LoggingPropertiesResponse.class, parameters={})
+    @Export(name="logging", type=LoggingPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ LoggingPropertiesResponse> logging;
 
     /**
@@ -110,7 +110,7 @@ public class ConnectedRegistry extends io.pulumi.resources.CustomResource {
      * The login server properties of the connected registry.
      * 
      */
-    @OutputExport(name="loginServer", type=LoginServerPropertiesResponse.class, parameters={})
+    @Export(name="loginServer", type=LoginServerPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ LoginServerPropertiesResponse> loginServer;
 
     /**
@@ -124,7 +124,7 @@ public class ConnectedRegistry extends io.pulumi.resources.CustomResource {
      * The mode of the connected registry resource that indicates the permissions of the registry.
      * 
      */
-    @OutputExport(name="mode", type=String.class, parameters={})
+    @Export(name="mode", type=String.class, parameters={})
     private Output<String> mode;
 
     /**
@@ -138,7 +138,7 @@ public class ConnectedRegistry extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -152,7 +152,7 @@ public class ConnectedRegistry extends io.pulumi.resources.CustomResource {
      * The parent of the connected registry.
      * 
      */
-    @OutputExport(name="parent", type=ParentPropertiesResponse.class, parameters={})
+    @Export(name="parent", type=ParentPropertiesResponse.class, parameters={})
     private Output<ParentPropertiesResponse> parent;
 
     /**
@@ -166,7 +166,7 @@ public class ConnectedRegistry extends io.pulumi.resources.CustomResource {
      * Provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -180,7 +180,7 @@ public class ConnectedRegistry extends io.pulumi.resources.CustomResource {
      * The list of current statuses of the connected registry.
      * 
      */
-    @OutputExport(name="statusDetails", type=List.class, parameters={StatusDetailPropertiesResponse.class})
+    @Export(name="statusDetails", type=List.class, parameters={StatusDetailPropertiesResponse.class})
     private Output<List<StatusDetailPropertiesResponse>> statusDetails;
 
     /**
@@ -194,7 +194,7 @@ public class ConnectedRegistry extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -208,7 +208,7 @@ public class ConnectedRegistry extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -222,7 +222,7 @@ public class ConnectedRegistry extends io.pulumi.resources.CustomResource {
      * The current version of ACR runtime on the connected registry.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

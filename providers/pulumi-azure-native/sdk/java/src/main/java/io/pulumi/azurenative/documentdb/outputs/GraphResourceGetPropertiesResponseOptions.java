@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.AutoscaleSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GraphResourceGetPropertiesResponseOptions {
     /**
      * Specifies the Autoscale settings.
@@ -23,10 +23,10 @@ public final class GraphResourceGetPropertiesResponseOptions {
      */
     private final @Nullable Integer throughput;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GraphResourceGetPropertiesResponseOptions(
-        @OutputCustomType.Parameter("autoscaleSettings") @Nullable AutoscaleSettingsResponse autoscaleSettings,
-        @OutputCustomType.Parameter("throughput") @Nullable Integer throughput) {
+        @CustomType.Parameter("autoscaleSettings") @Nullable AutoscaleSettingsResponse autoscaleSettings,
+        @CustomType.Parameter("throughput") @Nullable Integer throughput) {
         this.autoscaleSettings = autoscaleSettings;
         this.throughput = throughput;
     }

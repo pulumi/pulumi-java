@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceMoveDetailsResponse {
     /**
      * Denotes whether move operation is in progress
@@ -22,10 +22,10 @@ public final class ResourceMoveDetailsResponse {
      */
     private final @Nullable String operationInProgressLockTimeoutInUTC;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceMoveDetailsResponse(
-        @OutputCustomType.Parameter("operationInProgress") @Nullable String operationInProgress,
-        @OutputCustomType.Parameter("operationInProgressLockTimeoutInUTC") @Nullable String operationInProgressLockTimeoutInUTC) {
+        @CustomType.Parameter("operationInProgress") @Nullable String operationInProgress,
+        @CustomType.Parameter("operationInProgressLockTimeoutInUTC") @Nullable String operationInProgressLockTimeoutInUTC) {
         this.operationInProgress = operationInProgress;
         this.operationInProgressLockTimeoutInUTC = operationInProgressLockTimeoutInUTC;
     }

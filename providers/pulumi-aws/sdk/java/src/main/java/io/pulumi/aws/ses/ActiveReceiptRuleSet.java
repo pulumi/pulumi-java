@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ses.ActiveReceiptRuleSetArgs;
 import io.pulumi.aws.ses.inputs.ActiveReceiptRuleSetState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public class ActiveReceiptRuleSet extends io.pulumi.resources.CustomResource {
      * The SES receipt rule set ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -38,7 +38,7 @@ public class ActiveReceiptRuleSet extends io.pulumi.resources.CustomResource {
      * The name of the rule set
      * 
      */
-    @OutputExport(name="ruleSetName", type=String.class, parameters={})
+    @Export(name="ruleSetName", type=String.class, parameters={})
     private Output<String> ruleSetName;
 
     /**

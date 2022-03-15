@@ -9,11 +9,10 @@ import com.google.protobuf.Value;
 import io.pulumi.Log;
 import io.pulumi.Stack;
 import io.pulumi.core.Output;
-import io.pulumi.core.OutputDefault;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple4;
 import io.pulumi.core.TypeShape;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.core.internal.Maps;
 import io.pulumi.core.internal.*;
 import io.pulumi.core.internal.annotations.InternalUse;
@@ -428,10 +427,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
-            return OutputDefault.of(rawInvoke(token, targetType, args, options));
+            return new OutputInternal<>(rawInvoke(token, targetType, args, options));
         }
 
-        private <T> CompletableFuture<InputOutputData<T>> rawInvoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
+        private <T> CompletableFuture<OutputData<T>> rawInvoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
             Objects.requireNonNull(token);
             Objects.requireNonNull(targetType);
             Objects.requireNonNull(args);
@@ -504,7 +503,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                     .build(),
                             targetType
                     ))
-                    .thenApply(InputOutputData::getValueNullable);
+                    .thenApply(OutputData::getValueNullable);
         }
 
         private CompletableFuture<PropertiesSerializer.SerializationResult> invokeRawAsync(String token, InvokeArgs args, InvokeOptions options) {
@@ -625,7 +624,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         void call(String token, CallArgs args, @Nullable Resource self, CallOptions options) {
-            OutputDefault.of(callRawAsync(token, args, self, options).thenApply(unused -> null));
+            new OutputInternal<>(callRawAsync(token, args, self, options).thenApply(unused -> null));
         }
 
         <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args) {
@@ -637,10 +636,10 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, CallOptions options) {
-            return OutputDefault.of(callAsync(token, targetType, args, self, options));
+            return new OutputInternal<>(callAsync(token, targetType, args, self, options));
         }
 
-        private <T> CompletableFuture<InputOutputData<T>> callAsync(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, CallOptions options) {
+        private <T> CompletableFuture<OutputData<T>> callAsync(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, CallOptions options) {
             Objects.requireNonNull(token);
             Objects.requireNonNull(targetType);
             Objects.requireNonNull(args);
@@ -1056,7 +1055,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             //
             // IMPORTANT! We have to make sure we run 'OutputCompletionSource#initializeOutputs'
             // synchronously directly when `resource`'s constructor runs since this will set all of
-            // the `@OutputExport(...) Output<T>` properties. We need those properties assigned by the
+            // the `@Export(...) Output<T>` properties. We need those properties assigned by the
             // time the base 'Resource' constructor finishes so that both derived classes and
             // external consumers can use the Output properties of `resource`.
             var completionSources = OutputCompletionSource.from(resource);
@@ -1190,7 +1189,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
 
     // Arguments type for the `getResource` invoke.
     private static class GetResourceInvokeArgs extends InvokeArgs {
-        @InputImport(name = Constants.UrnPropertyName, required = true)
+        @Import(name = Constants.UrnPropertyName, required = true)
         @Nullable
         private final String urn;
 

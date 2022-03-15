@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ecr.enums.RepositoryImageTagMutability;
 import io.pulumi.awsnative.ecr.outputs.RepositoryImageScanningConfiguration;
 import io.pulumi.awsnative.ecr.outputs.RepositoryLifecyclePolicy;
 import io.pulumi.awsnative.ecr.outputs.RepositoryTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRepositoryResult {
     private final @Nullable String arn;
     private final @Nullable RepositoryImageScanningConfiguration imageScanningConfiguration;
@@ -37,15 +37,15 @@ public final class GetRepositoryResult {
      */
     private final @Nullable List<RepositoryTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRepositoryResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("imageScanningConfiguration") @Nullable RepositoryImageScanningConfiguration imageScanningConfiguration,
-        @OutputCustomType.Parameter("imageTagMutability") @Nullable RepositoryImageTagMutability imageTagMutability,
-        @OutputCustomType.Parameter("lifecyclePolicy") @Nullable RepositoryLifecyclePolicy lifecyclePolicy,
-        @OutputCustomType.Parameter("repositoryPolicyText") @Nullable Object repositoryPolicyText,
-        @OutputCustomType.Parameter("repositoryUri") @Nullable String repositoryUri,
-        @OutputCustomType.Parameter("tags") @Nullable List<RepositoryTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("imageScanningConfiguration") @Nullable RepositoryImageScanningConfiguration imageScanningConfiguration,
+        @CustomType.Parameter("imageTagMutability") @Nullable RepositoryImageTagMutability imageTagMutability,
+        @CustomType.Parameter("lifecyclePolicy") @Nullable RepositoryLifecyclePolicy lifecyclePolicy,
+        @CustomType.Parameter("repositoryPolicyText") @Nullable Object repositoryPolicyText,
+        @CustomType.Parameter("repositoryUri") @Nullable String repositoryUri,
+        @CustomType.Parameter("tags") @Nullable List<RepositoryTag> tags) {
         this.arn = arn;
         this.imageScanningConfiguration = imageScanningConfiguration;
         this.imageTagMutability = imageTagMutability;

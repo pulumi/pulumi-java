@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,14 +13,14 @@ public final class GetWorkloadIdentityPoolProviderOidc extends io.pulumi.resourc
 
     public static final GetWorkloadIdentityPoolProviderOidc Empty = new GetWorkloadIdentityPoolProviderOidc();
 
-    @InputImport(name="allowedAudiences", required=true)
+    @Import(name="allowedAudiences", required=true)
       private final List<String> allowedAudiences;
 
     public List<String> getAllowedAudiences() {
         return this.allowedAudiences;
     }
 
-    @InputImport(name="issuerUri", required=true)
+    @Import(name="issuerUri", required=true)
       private final String issuerUri;
 
     public String getIssuerUri() {

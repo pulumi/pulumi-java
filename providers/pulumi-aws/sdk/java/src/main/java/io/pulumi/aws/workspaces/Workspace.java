@@ -8,7 +8,7 @@ import io.pulumi.aws.workspaces.WorkspaceArgs;
 import io.pulumi.aws.workspaces.inputs.WorkspaceState;
 import io.pulumi.aws.workspaces.outputs.WorkspaceWorkspaceProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The ID of the bundle for the WorkSpace.
      * 
      */
-    @OutputExport(name="bundleId", type=String.class, parameters={})
+    @Export(name="bundleId", type=String.class, parameters={})
     private Output<String> bundleId;
 
     /**
@@ -51,7 +51,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The name of the WorkSpace, as seen by the operating system.
      * 
      */
-    @OutputExport(name="computerName", type=String.class, parameters={})
+    @Export(name="computerName", type=String.class, parameters={})
     private Output<String> computerName;
 
     /**
@@ -65,7 +65,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The ID of the directory for the WorkSpace.
      * 
      */
-    @OutputExport(name="directoryId", type=String.class, parameters={})
+    @Export(name="directoryId", type=String.class, parameters={})
     private Output<String> directoryId;
 
     /**
@@ -79,7 +79,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The IP address of the WorkSpace.
      * 
      */
-    @OutputExport(name="ipAddress", type=String.class, parameters={})
+    @Export(name="ipAddress", type=String.class, parameters={})
     private Output<String> ipAddress;
 
     /**
@@ -93,7 +93,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Indicates whether the data stored on the root volume is encrypted.
      * 
      */
-    @OutputExport(name="rootVolumeEncryptionEnabled", type=Boolean.class, parameters={})
+    @Export(name="rootVolumeEncryptionEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> rootVolumeEncryptionEnabled;
 
     /**
@@ -107,7 +107,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The operational state of the WorkSpace.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -121,7 +121,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The tags for the WorkSpace. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -135,7 +135,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -149,7 +149,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The user name of the user for the WorkSpace. This user name must exist in the directory for the WorkSpace.
      * 
      */
-    @OutputExport(name="userName", type=String.class, parameters={})
+    @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**
@@ -163,7 +163,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Indicates whether the data stored on the user volume is encrypted.
      * 
      */
-    @OutputExport(name="userVolumeEncryptionEnabled", type=Boolean.class, parameters={})
+    @Export(name="userVolumeEncryptionEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> userVolumeEncryptionEnabled;
 
     /**
@@ -177,7 +177,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The symmetric AWS KMS customer master key (CMK) used to encrypt data stored on your WorkSpace. Amazon WorkSpaces does not support asymmetric CMKs.
      * 
      */
-    @OutputExport(name="volumeEncryptionKey", type=String.class, parameters={})
+    @Export(name="volumeEncryptionKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> volumeEncryptionKey;
 
     /**
@@ -191,7 +191,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The WorkSpace properties.
      * 
      */
-    @OutputExport(name="workspaceProperties", type=WorkspaceWorkspaceProperties.class, parameters={})
+    @Export(name="workspaceProperties", type=WorkspaceWorkspaceProperties.class, parameters={})
     private Output<WorkspaceWorkspaceProperties> workspaceProperties;
 
     /**

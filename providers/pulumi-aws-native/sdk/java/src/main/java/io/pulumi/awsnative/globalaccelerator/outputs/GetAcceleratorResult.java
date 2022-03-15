@@ -5,7 +5,7 @@ package io.pulumi.awsnative.globalaccelerator.outputs;
 
 import io.pulumi.awsnative.globalaccelerator.enums.AcceleratorIpAddressType;
 import io.pulumi.awsnative.globalaccelerator.outputs.AcceleratorTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAcceleratorResult {
     /**
      * The Amazon Resource Name (ARN) of the accelerator.
@@ -47,15 +47,15 @@ public final class GetAcceleratorResult {
     private final @Nullable String name;
     private final @Nullable List<AcceleratorTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAcceleratorResult(
-        @OutputCustomType.Parameter("acceleratorArn") @Nullable String acceleratorArn,
-        @OutputCustomType.Parameter("dnsName") @Nullable String dnsName,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("ipAddressType") @Nullable AcceleratorIpAddressType ipAddressType,
-        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tags") @Nullable List<AcceleratorTag> tags) {
+        @CustomType.Parameter("acceleratorArn") @Nullable String acceleratorArn,
+        @CustomType.Parameter("dnsName") @Nullable String dnsName,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("ipAddressType") @Nullable AcceleratorIpAddressType ipAddressType,
+        @CustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tags") @Nullable List<AcceleratorTag> tags) {
         this.acceleratorArn = acceleratorArn;
         this.dnsName = dnsName;
         this.enabled = enabled;

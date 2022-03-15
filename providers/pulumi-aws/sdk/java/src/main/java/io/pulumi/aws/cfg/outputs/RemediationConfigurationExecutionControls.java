@@ -4,12 +4,12 @@
 package io.pulumi.aws.cfg.outputs;
 
 import io.pulumi.aws.cfg.outputs.RemediationConfigurationExecutionControlsSsmControls;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RemediationConfigurationExecutionControls {
     /**
      * Configuration block for SSM controls. See below.
@@ -17,8 +17,8 @@ public final class RemediationConfigurationExecutionControls {
      */
     private final @Nullable RemediationConfigurationExecutionControlsSsmControls ssmControls;
 
-    @OutputCustomType.Constructor
-    private RemediationConfigurationExecutionControls(@OutputCustomType.Parameter("ssmControls") @Nullable RemediationConfigurationExecutionControlsSsmControls ssmControls) {
+    @CustomType.Constructor
+    private RemediationConfigurationExecutionControls(@CustomType.Parameter("ssmControls") @Nullable RemediationConfigurationExecutionControlsSsmControls ssmControls) {
         this.ssmControls = ssmControls;
     }
 

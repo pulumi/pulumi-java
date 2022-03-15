@@ -20,7 +20,7 @@ import io.pulumi.azurenative.documentdb.outputs.VirtualNetworkRuleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -49,7 +49,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * API specific properties.
      * 
      */
-    @OutputExport(name="apiProperties", type=ApiPropertiesResponse.class, parameters={})
+    @Export(name="apiProperties", type=ApiPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ ApiPropertiesResponse> apiProperties;
 
     /**
@@ -63,7 +63,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * The object representing the policy for taking backups on an account.
      * 
      */
-    @OutputExport(name="backupPolicy", type=Either.class, parameters={ContinuousModeBackupPolicyResponse.class, PeriodicModeBackupPolicyResponse.class})
+    @Export(name="backupPolicy", type=Either.class, parameters={ContinuousModeBackupPolicyResponse.class, PeriodicModeBackupPolicyResponse.class})
     private Output</* @Nullable */ Either<ContinuousModeBackupPolicyResponse,PeriodicModeBackupPolicyResponse>> backupPolicy;
 
     /**
@@ -77,7 +77,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * List of Cosmos DB capabilities for the account
      * 
      */
-    @OutputExport(name="capabilities", type=List.class, parameters={CapabilityResponse.class})
+    @Export(name="capabilities", type=List.class, parameters={CapabilityResponse.class})
     private Output</* @Nullable */ List<CapabilityResponse>> capabilities;
 
     /**
@@ -91,7 +91,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * The cassandra connector offer type for the Cosmos DB database C* account.
      * 
      */
-    @OutputExport(name="connectorOffer", type=String.class, parameters={})
+    @Export(name="connectorOffer", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectorOffer;
 
     /**
@@ -105,7 +105,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * The consistency policy for the Cosmos DB database account.
      * 
      */
-    @OutputExport(name="consistencyPolicy", type=ConsistencyPolicyResponse.class, parameters={})
+    @Export(name="consistencyPolicy", type=ConsistencyPolicyResponse.class, parameters={})
     private Output</* @Nullable */ ConsistencyPolicyResponse> consistencyPolicy;
 
     /**
@@ -119,7 +119,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * The CORS policy for the Cosmos DB database account.
      * 
      */
-    @OutputExport(name="cors", type=List.class, parameters={CorsPolicyResponse.class})
+    @Export(name="cors", type=List.class, parameters={CorsPolicyResponse.class})
     private Output</* @Nullable */ List<CorsPolicyResponse>> cors;
 
     /**
@@ -133,7 +133,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * The offer type for the Cosmos DB database account. Default value: Standard.
      * 
      */
-    @OutputExport(name="databaseAccountOfferType", type=String.class, parameters={})
+    @Export(name="databaseAccountOfferType", type=String.class, parameters={})
     private Output<String> databaseAccountOfferType;
 
     /**
@@ -147,7 +147,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * The default identity for accessing key vault used in features like customer managed keys. The default identity needs to be explicitly set by the users. It can be "FirstPartyIdentity", "SystemAssignedIdentity" and more.
      * 
      */
-    @OutputExport(name="defaultIdentity", type=String.class, parameters={})
+    @Export(name="defaultIdentity", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultIdentity;
 
     /**
@@ -161,7 +161,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * Disable write operations on metadata resources (databases, containers, throughput) via account keys
      * 
      */
-    @OutputExport(name="disableKeyBasedMetadataWriteAccess", type=Boolean.class, parameters={})
+    @Export(name="disableKeyBasedMetadataWriteAccess", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableKeyBasedMetadataWriteAccess;
 
     /**
@@ -175,7 +175,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * The connection endpoint for the Cosmos DB database account.
      * 
      */
-    @OutputExport(name="documentEndpoint", type=String.class, parameters={})
+    @Export(name="documentEndpoint", type=String.class, parameters={})
     private Output<String> documentEndpoint;
 
     /**
@@ -189,7 +189,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * Flag to indicate whether to enable storage analytics.
      * 
      */
-    @OutputExport(name="enableAnalyticalStorage", type=Boolean.class, parameters={})
+    @Export(name="enableAnalyticalStorage", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableAnalyticalStorage;
 
     /**
@@ -203,7 +203,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account.
      * 
      */
-    @OutputExport(name="enableAutomaticFailover", type=Boolean.class, parameters={})
+    @Export(name="enableAutomaticFailover", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableAutomaticFailover;
 
     /**
@@ -217,7 +217,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * Enables the cassandra connector on the Cosmos DB C* account
      * 
      */
-    @OutputExport(name="enableCassandraConnector", type=Boolean.class, parameters={})
+    @Export(name="enableCassandraConnector", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableCassandraConnector;
 
     /**
@@ -231,7 +231,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * Flag to indicate whether Free Tier is enabled.
      * 
      */
-    @OutputExport(name="enableFreeTier", type=Boolean.class, parameters={})
+    @Export(name="enableFreeTier", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableFreeTier;
 
     /**
@@ -245,7 +245,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * Enables the account to write in multiple locations
      * 
      */
-    @OutputExport(name="enableMultipleWriteLocations", type=Boolean.class, parameters={})
+    @Export(name="enableMultipleWriteLocations", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableMultipleWriteLocations;
 
     /**
@@ -259,7 +259,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * An array that contains the regions ordered by their failover priorities.
      * 
      */
-    @OutputExport(name="failoverPolicies", type=List.class, parameters={FailoverPolicyResponse.class})
+    @Export(name="failoverPolicies", type=List.class, parameters={FailoverPolicyResponse.class})
     private Output<List<FailoverPolicyResponse>> failoverPolicies;
 
     /**
@@ -273,7 +273,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * Identity for the resource.
      * 
      */
-    @OutputExport(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ManagedServiceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ManagedServiceIdentityResponse> identity;
 
     /**
@@ -287,7 +287,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * List of IpRules.
      * 
      */
-    @OutputExport(name="ipRules", type=List.class, parameters={IpAddressOrRangeResponse.class})
+    @Export(name="ipRules", type=List.class, parameters={IpAddressOrRangeResponse.class})
     private Output</* @Nullable */ List<IpAddressOrRangeResponse>> ipRules;
 
     /**
@@ -301,7 +301,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * Flag to indicate whether to enable/disable Virtual Network ACL rules.
      * 
      */
-    @OutputExport(name="isVirtualNetworkFilterEnabled", type=Boolean.class, parameters={})
+    @Export(name="isVirtualNetworkFilterEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isVirtualNetworkFilterEnabled;
 
     /**
@@ -315,7 +315,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * The URI of the key vault
      * 
      */
-    @OutputExport(name="keyVaultKeyUri", type=String.class, parameters={})
+    @Export(name="keyVaultKeyUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyVaultKeyUri;
 
     /**
@@ -329,7 +329,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * Indicates the type of database account. This can only be set at database account creation.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -343,7 +343,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * The location of the resource group to which the resource belongs.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -357,7 +357,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * An array that contains all of the locations enabled for the Cosmos DB account.
      * 
      */
-    @OutputExport(name="locations", type=List.class, parameters={LocationResponse.class})
+    @Export(name="locations", type=List.class, parameters={LocationResponse.class})
     private Output<List<LocationResponse>> locations;
 
     /**
@@ -371,7 +371,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * The name of the ARM resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -385,7 +385,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * Indicates what services are allowed to bypass firewall checks.
      * 
      */
-    @OutputExport(name="networkAclBypass", type=String.class, parameters={})
+    @Export(name="networkAclBypass", type=String.class, parameters={})
     private Output</* @Nullable */ String> networkAclBypass;
 
     /**
@@ -399,7 +399,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * An array that contains the Resource Ids for Network Acl Bypass for the Cosmos DB account.
      * 
      */
-    @OutputExport(name="networkAclBypassResourceIds", type=List.class, parameters={String.class})
+    @Export(name="networkAclBypassResourceIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> networkAclBypassResourceIds;
 
     /**
@@ -413,7 +413,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * List of Private Endpoint Connections configured for the Cosmos DB account.
      * 
      */
-    @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
+    @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
@@ -427,7 +427,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * The status of the Cosmos DB account at the time the operation was called. The status can be one of following. 'Creating' – the Cosmos DB account is being created. When an account is in Creating state, only properties that are specified as input for the Create Cosmos DB account operation are returned. 'Succeeded' – the Cosmos DB account is active for use. 'Updating' – the Cosmos DB account is being updated. 'Deleting' – the Cosmos DB account is being deleted. 'Failed' – the Cosmos DB account failed creation. 'DeletionFailed' – the Cosmos DB account deletion failed.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -441,7 +441,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * Whether requests from Public Network are allowed
      * 
      */
-    @OutputExport(name="publicNetworkAccess", type=String.class, parameters={})
+    @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
@@ -455,7 +455,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * An array that contains of the read locations enabled for the Cosmos DB account.
      * 
      */
-    @OutputExport(name="readLocations", type=List.class, parameters={LocationResponse.class})
+    @Export(name="readLocations", type=List.class, parameters={LocationResponse.class})
     private Output<List<LocationResponse>> readLocations;
 
     /**
@@ -469,7 +469,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with "defaultExperience": "Cassandra". Current "defaultExperience" values also include "Table", "Graph", "DocumentDB", and "MongoDB".
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -483,7 +483,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * The type of Azure resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -497,7 +497,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * List of Virtual Network ACL rules configured for the Cosmos DB account.
      * 
      */
-    @OutputExport(name="virtualNetworkRules", type=List.class, parameters={VirtualNetworkRuleResponse.class})
+    @Export(name="virtualNetworkRules", type=List.class, parameters={VirtualNetworkRuleResponse.class})
     private Output</* @Nullable */ List<VirtualNetworkRuleResponse>> virtualNetworkRules;
 
     /**
@@ -511,7 +511,7 @@ public class DatabaseAccount extends io.pulumi.resources.CustomResource {
      * An array that contains the write location for the Cosmos DB account.
      * 
      */
-    @OutputExport(name="writeLocations", type=List.class, parameters={LocationResponse.class})
+    @Export(name="writeLocations", type=List.class, parameters={LocationResponse.class})
     private Output<List<LocationResponse>> writeLocations;
 
     /**

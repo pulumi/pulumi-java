@@ -9,14 +9,14 @@ import io.pulumi.azurenative.containerregistry.outputs.LoginServerPropertiesResp
 import io.pulumi.azurenative.containerregistry.outputs.ParentPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.StatusDetailPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectedRegistryResult {
     /**
      * The activation properties of the connected registry.
@@ -94,23 +94,23 @@ public final class GetConnectedRegistryResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectedRegistryResult(
-        @OutputCustomType.Parameter("activation") ActivationPropertiesResponse activation,
-        @OutputCustomType.Parameter("clientTokenIds") @Nullable List<String> clientTokenIds,
-        @OutputCustomType.Parameter("connectionState") String connectionState,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastActivityTime") String lastActivityTime,
-        @OutputCustomType.Parameter("logging") @Nullable LoggingPropertiesResponse logging,
-        @OutputCustomType.Parameter("loginServer") @Nullable LoginServerPropertiesResponse loginServer,
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parent") ParentPropertiesResponse parent,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("statusDetails") List<StatusDetailPropertiesResponse> statusDetails,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("activation") ActivationPropertiesResponse activation,
+        @CustomType.Parameter("clientTokenIds") @Nullable List<String> clientTokenIds,
+        @CustomType.Parameter("connectionState") String connectionState,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastActivityTime") String lastActivityTime,
+        @CustomType.Parameter("logging") @Nullable LoggingPropertiesResponse logging,
+        @CustomType.Parameter("loginServer") @Nullable LoginServerPropertiesResponse loginServer,
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parent") ParentPropertiesResponse parent,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("statusDetails") List<StatusDetailPropertiesResponse> statusDetails,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") String version) {
         this.activation = activation;
         this.clientTokenIds = clientTokenIds;
         this.connectionState = connectionState;

@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProfileMarketoConnectorProfileProperties {
     /**
      * The location of the Marketo resource
@@ -15,8 +15,8 @@ public final class ConnectorProfileMarketoConnectorProfileProperties {
      */
     private final String instanceUrl;
 
-    @OutputCustomType.Constructor
-    private ConnectorProfileMarketoConnectorProfileProperties(@OutputCustomType.Parameter("instanceUrl") String instanceUrl) {
+    @CustomType.Constructor
+    private ConnectorProfileMarketoConnectorProfileProperties(@CustomType.Parameter("instanceUrl") String instanceUrl) {
         this.instanceUrl = instanceUrl;
     }
 

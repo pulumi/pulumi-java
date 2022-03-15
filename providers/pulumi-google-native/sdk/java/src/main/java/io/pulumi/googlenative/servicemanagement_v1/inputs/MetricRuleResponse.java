@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MetricRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Metrics to update when the selected methods are called, and the associated cost applied to each metric. The key of the map is the metric name, and the values are the amount increased for the metric against which the quota limits are defined. The value must not be negative.
      * 
      */
-    @InputImport(name="metricCosts", required=true)
+    @Import(name="metricCosts", required=true)
       private final Map<String,String> metricCosts;
 
     public Map<String,String> getMetricCosts() {
@@ -32,7 +32,7 @@ public final class MetricRuleResponse extends io.pulumi.resources.InvokeArgs {
      * Selects the methods to which this rule applies. Refer to selector for syntax details.
      * 
      */
-    @InputImport(name="selector", required=true)
+    @Import(name="selector", required=true)
       private final String selector;
 
     public String getSelector() {

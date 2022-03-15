@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebAppSlotConfigurationNamesResult {
     /**
      * List of application settings names.
@@ -48,15 +48,15 @@ public final class GetWebAppSlotConfigurationNamesResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebAppSlotConfigurationNamesResult(
-        @OutputCustomType.Parameter("appSettingNames") @Nullable List<String> appSettingNames,
-        @OutputCustomType.Parameter("azureStorageConfigNames") @Nullable List<String> azureStorageConfigNames,
-        @OutputCustomType.Parameter("connectionStringNames") @Nullable List<String> connectionStringNames,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("appSettingNames") @Nullable List<String> appSettingNames,
+        @CustomType.Parameter("azureStorageConfigNames") @Nullable List<String> azureStorageConfigNames,
+        @CustomType.Parameter("connectionStringNames") @Nullable List<String> connectionStringNames,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.appSettingNames = appSettingNames;
         this.azureStorageConfigNames = azureStorageConfigNames;
         this.connectionStringNames = connectionStringNames;

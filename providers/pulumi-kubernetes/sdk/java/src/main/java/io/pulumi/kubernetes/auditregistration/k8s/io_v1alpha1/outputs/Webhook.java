@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs.WebhookClientConfig;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs.WebhookThrottleConfig;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Webhook {
     /**
      * ClientConfig holds the connection parameters for the webhook required
@@ -23,10 +23,10 @@ public final class Webhook {
      */
     private final @Nullable WebhookThrottleConfig throttle;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Webhook(
-        @OutputCustomType.Parameter("clientConfig") WebhookClientConfig clientConfig,
-        @OutputCustomType.Parameter("throttle") @Nullable WebhookThrottleConfig throttle) {
+        @CustomType.Parameter("clientConfig") WebhookClientConfig clientConfig,
+        @CustomType.Parameter("throttle") @Nullable WebhookThrottleConfig throttle) {
         this.clientConfig = clientConfig;
         this.throttle = throttle;
     }

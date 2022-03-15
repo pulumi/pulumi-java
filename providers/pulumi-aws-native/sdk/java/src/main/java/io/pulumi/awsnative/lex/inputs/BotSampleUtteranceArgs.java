@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class BotSampleUtteranceArgs extends io.pulumi.resources.ResourceAr
 
     public static final BotSampleUtteranceArgs Empty = new BotSampleUtteranceArgs();
 
-    @InputImport(name="utterance", required=true)
+    @Import(name="utterance", required=true)
       private final Output<String> utterance;
 
     public Output<String> getUtterance() {

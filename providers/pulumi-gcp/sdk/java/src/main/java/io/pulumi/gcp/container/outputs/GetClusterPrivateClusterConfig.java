@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.GetClusterPrivateClusterConfigMasterGlobalAccessConfig;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterPrivateClusterConfig {
     private final Boolean enablePrivateEndpoint;
     private final Boolean enablePrivateNodes;
@@ -20,15 +20,15 @@ public final class GetClusterPrivateClusterConfig {
     private final String privateEndpoint;
     private final String publicEndpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterPrivateClusterConfig(
-        @OutputCustomType.Parameter("enablePrivateEndpoint") Boolean enablePrivateEndpoint,
-        @OutputCustomType.Parameter("enablePrivateNodes") Boolean enablePrivateNodes,
-        @OutputCustomType.Parameter("masterGlobalAccessConfigs") List<GetClusterPrivateClusterConfigMasterGlobalAccessConfig> masterGlobalAccessConfigs,
-        @OutputCustomType.Parameter("masterIpv4CidrBlock") String masterIpv4CidrBlock,
-        @OutputCustomType.Parameter("peeringName") String peeringName,
-        @OutputCustomType.Parameter("privateEndpoint") String privateEndpoint,
-        @OutputCustomType.Parameter("publicEndpoint") String publicEndpoint) {
+        @CustomType.Parameter("enablePrivateEndpoint") Boolean enablePrivateEndpoint,
+        @CustomType.Parameter("enablePrivateNodes") Boolean enablePrivateNodes,
+        @CustomType.Parameter("masterGlobalAccessConfigs") List<GetClusterPrivateClusterConfigMasterGlobalAccessConfig> masterGlobalAccessConfigs,
+        @CustomType.Parameter("masterIpv4CidrBlock") String masterIpv4CidrBlock,
+        @CustomType.Parameter("peeringName") String peeringName,
+        @CustomType.Parameter("privateEndpoint") String privateEndpoint,
+        @CustomType.Parameter("publicEndpoint") String publicEndpoint) {
         this.enablePrivateEndpoint = enablePrivateEndpoint;
         this.enablePrivateNodes = enablePrivateNodes;
         this.masterGlobalAccessConfigs = masterGlobalAccessConfigs;

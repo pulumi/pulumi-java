@@ -4,7 +4,7 @@
 package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the vault.
      * 
      */
-    @InputImport(name="backupVaultArn")
+    @Import(name="backupVaultArn")
       private final @Nullable Output<String> backupVaultArn;
 
     public Output<String> getBackupVaultArn() {
@@ -29,7 +29,7 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
      * Name of the backup vault to add policy for.
      * 
      */
-    @InputImport(name="backupVaultName")
+    @Import(name="backupVaultName")
       private final @Nullable Output<String> backupVaultName;
 
     public Output<String> getBackupVaultName() {
@@ -40,7 +40,7 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
      * The backup vault access policy document in JSON format.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {

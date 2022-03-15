@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.AwsClusterAuthorizationGetArgs;
 import io.pulumi.gcp.container.inputs.AwsClusterControlPlaneGetArgs;
 import io.pulumi.gcp.container.inputs.AwsClusterFleetGetArgs;
@@ -26,7 +26,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
      * Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
     public Output<Map<String,String>> getAnnotations() {
@@ -37,7 +37,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
      * Required. Configuration related to the cluster RBAC settings.
      * 
      */
-    @InputImport(name="authorization")
+    @Import(name="authorization")
       private final @Nullable Output<AwsClusterAuthorizationGetArgs> authorization;
 
     public Output<AwsClusterAuthorizationGetArgs> getAuthorization() {
@@ -48,7 +48,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
      * Required. The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
      * 
      */
-    @InputImport(name="awsRegion")
+    @Import(name="awsRegion")
       private final @Nullable Output<String> awsRegion;
 
     public Output<String> getAwsRegion() {
@@ -59,7 +59,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
      * Required. Configuration related to the cluster control plane.
      * 
      */
-    @InputImport(name="controlPlane")
+    @Import(name="controlPlane")
       private final @Nullable Output<AwsClusterControlPlaneGetArgs> controlPlane;
 
     public Output<AwsClusterControlPlaneGetArgs> getControlPlane() {
@@ -70,7 +70,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
      * Output only. The time at which this cluster was created.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -81,7 +81,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
      * Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -92,7 +92,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
      * Output only. The endpoint of the cluster's API server.
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
     public Output<String> getEndpoint() {
@@ -104,7 +104,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
      * and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -115,7 +115,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
      * Fleet configuration.
      * 
      */
-    @InputImport(name="fleet")
+    @Import(name="fleet")
       private final @Nullable Output<AwsClusterFleetGetArgs> fleet;
 
     public Output<AwsClusterFleetGetArgs> getFleet() {
@@ -126,7 +126,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
      * The location for the resource
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -137,7 +137,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
      * The name of this resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -148,7 +148,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
      * Required. Cluster-wide networking configuration.
      * 
      */
-    @InputImport(name="networking")
+    @Import(name="networking")
       private final @Nullable Output<AwsClusterNetworkingGetArgs> networking;
 
     public Output<AwsClusterNetworkingGetArgs> getNetworking() {
@@ -159,7 +159,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
      * The project for the resource
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -170,7 +170,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
      * Output only. If set, there are currently changes in flight to the cluster.
      * 
      */
-    @InputImport(name="reconciling")
+    @Import(name="reconciling")
       private final @Nullable Output<Boolean> reconciling;
 
     public Output<Boolean> getReconciling() {
@@ -182,7 +182,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
      * STOPPING, ERROR, DEGRADED
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -193,7 +193,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
      * Output only. A globally unique identifier for the cluster.
      * 
      */
-    @InputImport(name="uid")
+    @Import(name="uid")
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {
@@ -204,7 +204,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
      * Output only. The time at which this cluster was last updated.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
@@ -215,7 +215,7 @@ public final class AwsClusterState extends io.pulumi.resources.ResourceArgs {
      * Output only. Workload Identity settings.
      * 
      */
-    @InputImport(name="workloadIdentityConfigs")
+    @Import(name="workloadIdentityConfigs")
       private final @Nullable Output<List<AwsClusterWorkloadIdentityConfigGetArgs>> workloadIdentityConfigs;
 
     public Output<List<AwsClusterWorkloadIdentityConfigGetArgs>> getWorkloadIdentityConfigs() {

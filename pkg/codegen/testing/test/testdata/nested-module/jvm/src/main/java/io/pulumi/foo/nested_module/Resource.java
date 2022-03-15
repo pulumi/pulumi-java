@@ -4,7 +4,7 @@
 package io.pulumi.foo.nested_module;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.foo.Utilities;
 import io.pulumi.foo.nested_module.ResourceArgs;
@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="foo:nested/module:Resource")
 public class Resource extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="bar", type=String.class, parameters={})
+    @Export(name="bar", type=String.class, parameters={})
     private Output</* @Nullable */ String> bar;
 
     public Output</* @Nullable */ String> getBar() {

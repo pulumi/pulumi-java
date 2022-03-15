@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobStepOutputResponse {
     /**
      * The resource ID of the credential to use to connect to the output destination.
@@ -52,16 +52,16 @@ public final class JobStepOutputResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStepOutputResponse(
-        @OutputCustomType.Parameter("credential") String credential,
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("resourceGroupName") @Nullable String resourceGroupName,
-        @OutputCustomType.Parameter("schemaName") @Nullable String schemaName,
-        @OutputCustomType.Parameter("serverName") String serverName,
-        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
-        @OutputCustomType.Parameter("tableName") String tableName,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("credential") String credential,
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("resourceGroupName") @Nullable String resourceGroupName,
+        @CustomType.Parameter("schemaName") @Nullable String schemaName,
+        @CustomType.Parameter("serverName") String serverName,
+        @CustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @CustomType.Parameter("tableName") String tableName,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.credential = credential;
         this.databaseName = databaseName;
         this.resourceGroupName = resourceGroupName;

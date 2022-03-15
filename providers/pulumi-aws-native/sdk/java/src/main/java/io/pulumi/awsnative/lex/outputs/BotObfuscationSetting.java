@@ -4,10 +4,10 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.enums.BotObfuscationSettingObfuscationSettingType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BotObfuscationSetting {
     /**
      * Value that determines whether Amazon Lex obscures slot values in conversation logs. The default is to obscure the values.
@@ -15,8 +15,8 @@ public final class BotObfuscationSetting {
      */
     private final BotObfuscationSettingObfuscationSettingType obfuscationSettingType;
 
-    @OutputCustomType.Constructor
-    private BotObfuscationSetting(@OutputCustomType.Parameter("obfuscationSettingType") BotObfuscationSettingObfuscationSettingType obfuscationSettingType) {
+    @CustomType.Constructor
+    private BotObfuscationSetting(@CustomType.Parameter("obfuscationSettingType") BotObfuscationSettingObfuscationSettingType obfuscationSettingType) {
         this.obfuscationSettingType = obfuscationSettingType;
     }
 

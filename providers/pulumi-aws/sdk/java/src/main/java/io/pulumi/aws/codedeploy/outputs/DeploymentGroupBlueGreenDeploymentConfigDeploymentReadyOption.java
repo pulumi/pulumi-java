@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.codedeploy.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption {
     /**
      * When to reroute traffic from an original environment to a replacement environment in a blue/green deployment.
@@ -25,10 +25,10 @@ public final class DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption
      */
     private final @Nullable Integer waitTimeInMinutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOption(
-        @OutputCustomType.Parameter("actionOnTimeout") @Nullable String actionOnTimeout,
-        @OutputCustomType.Parameter("waitTimeInMinutes") @Nullable Integer waitTimeInMinutes) {
+        @CustomType.Parameter("actionOnTimeout") @Nullable String actionOnTimeout,
+        @CustomType.Parameter("waitTimeInMinutes") @Nullable Integer waitTimeInMinutes) {
         this.actionOnTimeout = actionOnTimeout;
         this.waitTimeInMinutes = waitTimeInMinutes;
     }

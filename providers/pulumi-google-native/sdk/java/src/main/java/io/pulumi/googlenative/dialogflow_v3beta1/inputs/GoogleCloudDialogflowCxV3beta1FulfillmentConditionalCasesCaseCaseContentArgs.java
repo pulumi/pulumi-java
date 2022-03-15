@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ResponseMessageArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
      * Additional cases to be evaluated.
      * 
      */
-    @InputImport(name="additionalCases")
+    @Import(name="additionalCases")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs> additionalCases;
 
     public Output<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs> getAdditionalCases() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
      * Returned message.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs> message;
 
     public Output<GoogleCloudDialogflowCxV3beta1ResponseMessageArgs> getMessage() {

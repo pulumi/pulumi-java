@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.SpotFleetTargetGroup;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class SpotFleetTargetGroupsConfig extends io.pulumi.resources.Invok
 
     public static final SpotFleetTargetGroupsConfig Empty = new SpotFleetTargetGroupsConfig();
 
-    @InputImport(name="targetGroups", required=true)
+    @Import(name="targetGroups", required=true)
       private final List<SpotFleetTargetGroup> targetGroups;
 
     public List<SpotFleetTargetGroup> getTargetGroups() {

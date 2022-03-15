@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dataproc_v1.ClusterArgs;
@@ -27,7 +27,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The cluster name. Cluster names within a project must be unique. Names of deleted clusters can be reused.
      * 
      */
-    @OutputExport(name="clusterName", type=String.class, parameters={})
+    @Export(name="clusterName", type=String.class, parameters={})
     private Output<String> clusterName;
 
     /**
@@ -41,7 +41,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A cluster UUID (Unique Universal Identifier). Dataproc generates this value when it creates the cluster.
      * 
      */
-    @OutputExport(name="clusterUuid", type=String.class, parameters={})
+    @Export(name="clusterUuid", type=String.class, parameters={})
     private Output<String> clusterUuid;
 
     /**
@@ -55,7 +55,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Optional. The cluster config for a cluster of Compute Engine Instances. Note that Dataproc may set default values, and values may change when clusters are updated.
      * 
      */
-    @OutputExport(name="config", type=ClusterConfigResponse.class, parameters={})
+    @Export(name="config", type=ClusterConfigResponse.class, parameters={})
     private Output<ClusterConfigResponse> config;
 
     /**
@@ -69,7 +69,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Optional. The labels to associate with this cluster. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a cluster.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -83,7 +83,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Contains cluster daemon metrics such as HDFS and YARN stats.Beta Feature: This report is available for testing purposes only. It may be changed before final release.
      * 
      */
-    @OutputExport(name="metrics", type=ClusterMetricsResponse.class, parameters={})
+    @Export(name="metrics", type=ClusterMetricsResponse.class, parameters={})
     private Output<ClusterMetricsResponse> metrics;
 
     /**
@@ -97,7 +97,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The Google Cloud Platform project ID that the cluster belongs to.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -111,7 +111,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Cluster status.
      * 
      */
-    @OutputExport(name="status", type=ClusterStatusResponse.class, parameters={})
+    @Export(name="status", type=ClusterStatusResponse.class, parameters={})
     private Output<ClusterStatusResponse> status;
 
     /**
@@ -125,7 +125,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The previous cluster status.
      * 
      */
-    @OutputExport(name="statusHistory", type=List.class, parameters={ClusterStatusResponse.class})
+    @Export(name="statusHistory", type=List.class, parameters={ClusterStatusResponse.class})
     private Output<List<ClusterStatusResponse>> statusHistory;
 
     /**

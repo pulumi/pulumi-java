@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRecommendationengineV1beta1FeatureMapResponse {
     /**
      * Categorical features that can take on one of a limited number of possible values. Some examples would be the brand/maker of a product, or country of a customer. Feature names and values must be UTF-8 encoded strings. For example: `{ "colors": {"value": ["yellow", "green"]}, "sizes": {"value":["S", "M"]}`
@@ -21,10 +21,10 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapResponse {
      */
     private final Map<String,String> numericalFeatures;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRecommendationengineV1beta1FeatureMapResponse(
-        @OutputCustomType.Parameter("categoricalFeatures") Map<String,String> categoricalFeatures,
-        @OutputCustomType.Parameter("numericalFeatures") Map<String,String> numericalFeatures) {
+        @CustomType.Parameter("categoricalFeatures") Map<String,String> categoricalFeatures,
+        @CustomType.Parameter("numericalFeatures") Map<String,String> numericalFeatures) {
         this.categoricalFeatures = categoricalFeatures;
         this.numericalFeatures = numericalFeatures;
     }

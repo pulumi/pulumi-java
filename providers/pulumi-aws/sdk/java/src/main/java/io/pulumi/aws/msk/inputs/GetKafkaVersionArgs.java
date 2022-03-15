@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.msk.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetKafkaVersionArgs extends io.pulumi.resources.InvokeArgs {
      * Ordered list of preferred Kafka versions. The first match in this list will be returned. Either `preferred_versions` or `version` must be set.
      * 
      */
-    @InputImport(name="preferredVersions")
+    @Import(name="preferredVersions")
       private final @Nullable List<String> preferredVersions;
 
     public List<String> getPreferredVersions() {
@@ -30,7 +30,7 @@ public final class GetKafkaVersionArgs extends io.pulumi.resources.InvokeArgs {
      * Version of MSK Kafka. For example 2.4.1.1 or "2.2.1" etc. Either `preferred_versions` or `version` must be set.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

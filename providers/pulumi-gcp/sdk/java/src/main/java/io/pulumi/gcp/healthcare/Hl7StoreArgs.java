@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.healthcare.inputs.Hl7StoreNotificationConfigArgs;
 import io.pulumi.gcp.healthcare.inputs.Hl7StoreNotificationConfigsArgs;
 import io.pulumi.gcp.healthcare.inputs.Hl7StoreParserConfigArgs;
@@ -24,7 +24,7 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
      * 'projects/{project}/locations/{location}/datasets/{dataset}'
      * 
      */
-    @InputImport(name="dataset", required=true)
+    @Import(name="dataset", required=true)
       private final Output<String> dataset;
 
     public Output<String> getDataset() {
@@ -42,7 +42,7 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
      * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -54,7 +54,7 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
      * ** Changing this property may recreate the Hl7v2 store (removing all data) **
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -72,7 +72,7 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* This field has been replaced by notificationConfigs */
-    @InputImport(name="notificationConfig")
+    @Import(name="notificationConfig")
       private final @Nullable Output<Hl7StoreNotificationConfigArgs> notificationConfig;
 
     @Deprecated /* This field has been replaced by notificationConfigs */
@@ -87,7 +87,7 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="notificationConfigs")
+    @Import(name="notificationConfigs")
       private final @Nullable Output<List<Hl7StoreNotificationConfigsArgs>> notificationConfigs;
 
     public Output<List<Hl7StoreNotificationConfigsArgs>> getNotificationConfigs() {
@@ -99,7 +99,7 @@ public final class Hl7StoreArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="parserConfig")
+    @Import(name="parserConfig")
       private final @Nullable Output<Hl7StoreParserConfigArgs> parserConfig;
 
     public Output<Hl7StoreParserConfigArgs> getParserConfig() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig
      * Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
      * 
      */
-    @InputImport(name="gcePdKmsKeyName")
+    @Import(name="gcePdKmsKeyName")
       private final @Nullable Output<String> gcePdKmsKeyName;
 
     public Output<String> getGcePdKmsKeyName() {

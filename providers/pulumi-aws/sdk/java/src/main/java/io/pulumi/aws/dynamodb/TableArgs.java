@@ -11,7 +11,7 @@ import io.pulumi.aws.dynamodb.inputs.TableReplicaArgs;
 import io.pulumi.aws.dynamodb.inputs.TableServerSideEncryptionArgs;
 import io.pulumi.aws.dynamodb.inputs.TableTtlArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * List of nested attribute definitions. Only required for `hash_key` and `range_key` attributes. Each attribute has two properties:
      * 
      */
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable Output<List<TableAttributeArgs>> attributes;
 
     public Output<List<TableAttributeArgs>> getAttributes() {
@@ -40,7 +40,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Controls how you are charged for read and write throughput and how you manage capacity. The valid values are `PROVISIONED` and `PAY_PER_REQUEST`. Defaults to `PROVISIONED`.
      * 
      */
-    @InputImport(name="billingMode")
+    @Import(name="billingMode")
       private final @Nullable Output<String> billingMode;
 
     public Output<String> getBillingMode() {
@@ -53,7 +53,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * attributes, etc.
      * 
      */
-    @InputImport(name="globalSecondaryIndexes")
+    @Import(name="globalSecondaryIndexes")
       private final @Nullable Output<List<TableGlobalSecondaryIndexArgs>> globalSecondaryIndexes;
 
     public Output<List<TableGlobalSecondaryIndexArgs>> getGlobalSecondaryIndexes() {
@@ -65,7 +65,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * defined as an attribute in the resource.
      * 
      */
-    @InputImport(name="hashKey")
+    @Import(name="hashKey")
       private final @Nullable Output<String> hashKey;
 
     public Output<String> getHashKey() {
@@ -78,7 +78,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * definition after you have created the resource.
      * 
      */
-    @InputImport(name="localSecondaryIndexes")
+    @Import(name="localSecondaryIndexes")
       private final @Nullable Output<List<TableLocalSecondaryIndexArgs>> localSecondaryIndexes;
 
     public Output<List<TableLocalSecondaryIndexArgs>> getLocalSecondaryIndexes() {
@@ -89,7 +89,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the index
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -100,7 +100,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Enable point-in-time recovery options.
      * 
      */
-    @InputImport(name="pointInTimeRecovery")
+    @Import(name="pointInTimeRecovery")
       private final @Nullable Output<TablePointInTimeRecoveryArgs> pointInTimeRecovery;
 
     public Output<TablePointInTimeRecoveryArgs> getPointInTimeRecovery() {
@@ -111,7 +111,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the range key; must be defined
      * 
      */
-    @InputImport(name="rangeKey")
+    @Import(name="rangeKey")
       private final @Nullable Output<String> rangeKey;
 
     public Output<String> getRangeKey() {
@@ -122,7 +122,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.
      * 
      */
-    @InputImport(name="readCapacity")
+    @Import(name="readCapacity")
       private final @Nullable Output<Integer> readCapacity;
 
     public Output<Integer> getReadCapacity() {
@@ -133,7 +133,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block(s) with [DynamoDB Global Tables V2 (version 2019.11.21)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html) replication configurations. Detailed below.
      * 
      */
-    @InputImport(name="replicas")
+    @Import(name="replicas")
       private final @Nullable Output<List<TableReplicaArgs>> replicas;
 
     public Output<List<TableReplicaArgs>> getReplicas() {
@@ -144,7 +144,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The time of the point-in-time recovery point to restore.
      * 
      */
-    @InputImport(name="restoreDateTime")
+    @Import(name="restoreDateTime")
       private final @Nullable Output<String> restoreDateTime;
 
     public Output<String> getRestoreDateTime() {
@@ -155,7 +155,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the table to restore. Must match the name of an existing table.
      * 
      */
-    @InputImport(name="restoreSourceName")
+    @Import(name="restoreSourceName")
       private final @Nullable Output<String> restoreSourceName;
 
     public Output<String> getRestoreSourceName() {
@@ -166,7 +166,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * If set, restores table to the most recent point-in-time recovery point.
      * 
      */
-    @InputImport(name="restoreToLatestTime")
+    @Import(name="restoreToLatestTime")
       private final @Nullable Output<Boolean> restoreToLatestTime;
 
     public Output<Boolean> getRestoreToLatestTime() {
@@ -177,7 +177,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn't specified.
      * 
      */
-    @InputImport(name="serverSideEncryption")
+    @Import(name="serverSideEncryption")
       private final @Nullable Output<TableServerSideEncryptionArgs> serverSideEncryption;
 
     public Output<TableServerSideEncryptionArgs> getServerSideEncryption() {
@@ -188,7 +188,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether Streams are to be enabled (true) or disabled (false).
      * 
      */
-    @InputImport(name="streamEnabled")
+    @Import(name="streamEnabled")
       private final @Nullable Output<Boolean> streamEnabled;
 
     public Output<Boolean> getStreamEnabled() {
@@ -199,7 +199,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * When an item in the table is modified, StreamViewType determines what information is written to the table's stream. Valid values are `KEYS_ONLY`, `NEW_IMAGE`, `OLD_IMAGE`, `NEW_AND_OLD_IMAGES`.
      * 
      */
-    @InputImport(name="streamViewType")
+    @Import(name="streamViewType")
       private final @Nullable Output<String> streamViewType;
 
     public Output<String> getStreamViewType() {
@@ -210,7 +210,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The storage class of the table. Valid values are `STANDARD` and `STANDARD_INFREQUENT_ACCESS`.
      * 
      */
-    @InputImport(name="tableClass")
+    @Import(name="tableClass")
       private final @Nullable Output<String> tableClass;
 
     public Output<String> getTableClass() {
@@ -221,7 +221,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to populate on the created table. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -232,7 +232,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * Defines ttl, has two properties, and can only be specified once:
      * 
      */
-    @InputImport(name="ttl")
+    @Import(name="ttl")
       private final @Nullable Output<TableTtlArgs> ttl;
 
     public Output<TableTtlArgs> getTtl() {
@@ -243,7 +243,7 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
      * The number of write units for this index. Must be set if billing_mode is set to PROVISIONED.
      * 
      */
-    @InputImport(name="writeCapacity")
+    @Import(name="writeCapacity")
       private final @Nullable Output<Integer> writeCapacity;
 
     public Output<Integer> getWriteCapacity() {

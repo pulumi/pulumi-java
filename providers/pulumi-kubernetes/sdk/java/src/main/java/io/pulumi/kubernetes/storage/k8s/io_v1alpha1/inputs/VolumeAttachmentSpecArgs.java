@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.storage.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.storage.k8s.io_v1alpha1.inputs.VolumeAttachmentSourceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.Resource
      * Attacher indicates the name of the volume driver that MUST handle this request. This is the name returned by GetPluginName().
      * 
      */
-    @InputImport(name="attacher", required=true)
+    @Import(name="attacher", required=true)
       private final Output<String> attacher;
 
     public Output<String> getAttacher() {
@@ -33,7 +33,7 @@ public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.Resource
      * The node that the volume should be attached to.
      * 
      */
-    @InputImport(name="nodeName", required=true)
+    @Import(name="nodeName", required=true)
       private final Output<String> nodeName;
 
     public Output<String> getNodeName() {
@@ -44,7 +44,7 @@ public final class VolumeAttachmentSpecArgs extends io.pulumi.resources.Resource
      * Source represents the volume that should be attached.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<VolumeAttachmentSourceArgs> source;
 
     public Output<VolumeAttachmentSourceArgs> getSource() {

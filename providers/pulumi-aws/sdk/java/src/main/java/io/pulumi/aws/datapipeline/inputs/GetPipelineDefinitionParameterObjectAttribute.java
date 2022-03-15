@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.datapipeline.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPipelineDefinitionParameterObjectAttribute extends io.pulu
      * Field identifier.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -27,7 +27,7 @@ public final class GetPipelineDefinitionParameterObjectAttribute extends io.pulu
      * Field value, expressed as a String.
      * 
      */
-    @InputImport(name="stringValue", required=true)
+    @Import(name="stringValue", required=true)
       private final String stringValue;
 
     public String getStringValue() {

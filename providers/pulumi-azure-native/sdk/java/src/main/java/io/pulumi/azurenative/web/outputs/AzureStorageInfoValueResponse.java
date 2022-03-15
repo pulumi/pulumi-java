@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureStorageInfoValueResponse {
     /**
      * Access key for the storage account.
@@ -42,14 +42,14 @@ public final class AzureStorageInfoValueResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureStorageInfoValueResponse(
-        @OutputCustomType.Parameter("accessKey") @Nullable String accessKey,
-        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
-        @OutputCustomType.Parameter("mountPath") @Nullable String mountPath,
-        @OutputCustomType.Parameter("shareName") @Nullable String shareName,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("accessKey") @Nullable String accessKey,
+        @CustomType.Parameter("accountName") @Nullable String accountName,
+        @CustomType.Parameter("mountPath") @Nullable String mountPath,
+        @CustomType.Parameter("shareName") @Nullable String shareName,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.accessKey = accessKey;
         this.accountName = accountName;
         this.mountPath = mountPath;

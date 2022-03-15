@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch {
     /**
      * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
@@ -28,11 +28,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
      */
     private final @Nullable Boolean presentMatch;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch(
-        @OutputCustomType.Parameter("exactMatch") @Nullable String exactMatch,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("presentMatch") @Nullable Boolean presentMatch) {
+        @CustomType.Parameter("exactMatch") @Nullable String exactMatch,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("presentMatch") @Nullable Boolean presentMatch) {
         this.exactMatch = exactMatch;
         this.name = name;
         this.presentMatch = presentMatch;

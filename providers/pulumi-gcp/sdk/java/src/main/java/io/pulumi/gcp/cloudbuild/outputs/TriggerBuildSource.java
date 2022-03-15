@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildSourceRepoSource;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildSourceStorageSource;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerBuildSource {
     /**
      * Location of the source in a Google Cloud Source Repository.
@@ -25,10 +25,10 @@ public final class TriggerBuildSource {
      */
     private final @Nullable TriggerBuildSourceStorageSource storageSource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerBuildSource(
-        @OutputCustomType.Parameter("repoSource") @Nullable TriggerBuildSourceRepoSource repoSource,
-        @OutputCustomType.Parameter("storageSource") @Nullable TriggerBuildSourceStorageSource storageSource) {
+        @CustomType.Parameter("repoSource") @Nullable TriggerBuildSourceRepoSource repoSource,
+        @CustomType.Parameter("storageSource") @Nullable TriggerBuildSourceStorageSource storageSource) {
         this.repoSource = repoSource;
         this.storageSource = storageSource;
     }

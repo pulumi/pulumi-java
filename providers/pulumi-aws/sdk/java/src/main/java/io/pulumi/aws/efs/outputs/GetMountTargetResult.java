@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.efs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMountTargetResult {
     private final @Nullable String accessPointId;
     /**
@@ -71,22 +71,22 @@ public final class GetMountTargetResult {
      */
     private final String subnetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMountTargetResult(
-        @OutputCustomType.Parameter("accessPointId") @Nullable String accessPointId,
-        @OutputCustomType.Parameter("availabilityZoneId") String availabilityZoneId,
-        @OutputCustomType.Parameter("availabilityZoneName") String availabilityZoneName,
-        @OutputCustomType.Parameter("dnsName") String dnsName,
-        @OutputCustomType.Parameter("fileSystemArn") String fileSystemArn,
-        @OutputCustomType.Parameter("fileSystemId") String fileSystemId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ipAddress") String ipAddress,
-        @OutputCustomType.Parameter("mountTargetDnsName") String mountTargetDnsName,
-        @OutputCustomType.Parameter("mountTargetId") String mountTargetId,
-        @OutputCustomType.Parameter("networkInterfaceId") String networkInterfaceId,
-        @OutputCustomType.Parameter("ownerId") String ownerId,
-        @OutputCustomType.Parameter("securityGroups") List<String> securityGroups,
-        @OutputCustomType.Parameter("subnetId") String subnetId) {
+        @CustomType.Parameter("accessPointId") @Nullable String accessPointId,
+        @CustomType.Parameter("availabilityZoneId") String availabilityZoneId,
+        @CustomType.Parameter("availabilityZoneName") String availabilityZoneName,
+        @CustomType.Parameter("dnsName") String dnsName,
+        @CustomType.Parameter("fileSystemArn") String fileSystemArn,
+        @CustomType.Parameter("fileSystemId") String fileSystemId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ipAddress") String ipAddress,
+        @CustomType.Parameter("mountTargetDnsName") String mountTargetDnsName,
+        @CustomType.Parameter("mountTargetId") String mountTargetId,
+        @CustomType.Parameter("networkInterfaceId") String networkInterfaceId,
+        @CustomType.Parameter("ownerId") String ownerId,
+        @CustomType.Parameter("securityGroups") List<String> securityGroups,
+        @CustomType.Parameter("subnetId") String subnetId) {
         this.accessPointId = accessPointId;
         this.availabilityZoneId = availabilityZoneId;
         this.availabilityZoneName = availabilityZoneName;

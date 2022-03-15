@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.route53recoverycontrol.RoutingControlArgs;
 import io.pulumi.awsnative.route53recoverycontrol.enums.RoutingControlStatus;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * Arn associated with Control Panel
      * 
      */
-    @OutputExport(name="clusterArn", type=String.class, parameters={})
+    @Export(name="clusterArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterArn;
 
     /**
@@ -36,7 +36,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the control panel.
      * 
      */
-    @OutputExport(name="controlPanelArn", type=String.class, parameters={})
+    @Export(name="controlPanelArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> controlPanelArn;
 
     /**
@@ -50,7 +50,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * The name of the routing control. You can use any non-white space character in the name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the routing control.
      * 
      */
-    @OutputExport(name="routingControlArn", type=String.class, parameters={})
+    @Export(name="routingControlArn", type=String.class, parameters={})
     private Output<String> routingControlArn;
 
     /**
@@ -78,7 +78,7 @@ public class RoutingControl extends io.pulumi.resources.CustomResource {
      * The deployment status of the routing control. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
      * 
      */
-    @OutputExport(name="status", type=RoutingControlStatus.class, parameters={})
+    @Export(name="status", type=RoutingControlStatus.class, parameters={})
     private Output<RoutingControlStatus> status;
 
     /**

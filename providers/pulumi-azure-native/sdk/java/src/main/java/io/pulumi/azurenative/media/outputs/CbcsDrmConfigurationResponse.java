@@ -6,12 +6,12 @@ package io.pulumi.azurenative.media.outputs;
 import io.pulumi.azurenative.media.outputs.StreamingPolicyFairPlayConfigurationResponse;
 import io.pulumi.azurenative.media.outputs.StreamingPolicyPlayReadyConfigurationResponse;
 import io.pulumi.azurenative.media.outputs.StreamingPolicyWidevineConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CbcsDrmConfigurationResponse {
     /**
      * FairPlay configurations
@@ -29,11 +29,11 @@ public final class CbcsDrmConfigurationResponse {
      */
     private final @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CbcsDrmConfigurationResponse(
-        @OutputCustomType.Parameter("fairPlay") @Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay,
-        @OutputCustomType.Parameter("playReady") @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady,
-        @OutputCustomType.Parameter("widevine") @Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
+        @CustomType.Parameter("fairPlay") @Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay,
+        @CustomType.Parameter("playReady") @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady,
+        @CustomType.Parameter("widevine") @Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
         this.fairPlay = fairPlay;
         this.playReady = playReady;
         this.widevine = widevine;

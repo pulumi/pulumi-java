@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquerydatatransfer_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigquerydatatransfer_v1.TransferConfigArgs;
@@ -27,7 +27,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * The number of days to look back to automatically refresh the data. For example, if `data_refresh_window_days = 10`, then every day BigQuery reingests data for [today-10, today-1], rather than ingesting data for just [today-1]. Only valid if the data source supports the feature. Set the value to 0 to use the default value.
      * 
      */
-    @OutputExport(name="dataRefreshWindowDays", type=Integer.class, parameters={})
+    @Export(name="dataRefreshWindowDays", type=Integer.class, parameters={})
     private Output<Integer> dataRefreshWindowDays;
 
     /**
@@ -41,7 +41,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * Data source id. Cannot be changed once data transfer is created.
      * 
      */
-    @OutputExport(name="dataSourceId", type=String.class, parameters={})
+    @Export(name="dataSourceId", type=String.class, parameters={})
     private Output<String> dataSourceId;
 
     /**
@@ -55,7 +55,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * Region in which BigQuery dataset is located.
      * 
      */
-    @OutputExport(name="datasetRegion", type=String.class, parameters={})
+    @Export(name="datasetRegion", type=String.class, parameters={})
     private Output<String> datasetRegion;
 
     /**
@@ -69,7 +69,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * The BigQuery target dataset id.
      * 
      */
-    @OutputExport(name="destinationDatasetId", type=String.class, parameters={})
+    @Export(name="destinationDatasetId", type=String.class, parameters={})
     private Output<String> destinationDatasetId;
 
     /**
@@ -83,7 +83,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * Is this config disabled. When set to true, no runs are scheduled for a given transfer.
      * 
      */
-    @OutputExport(name="disabled", type=Boolean.class, parameters={})
+    @Export(name="disabled", type=Boolean.class, parameters={})
     private Output<Boolean> disabled;
 
     /**
@@ -97,7 +97,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * User specified display name for the data transfer.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -111,7 +111,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * Email notifications will be sent according to these preferences to the email address of the user who owns this transfer config.
      * 
      */
-    @OutputExport(name="emailPreferences", type=EmailPreferencesResponse.class, parameters={})
+    @Export(name="emailPreferences", type=EmailPreferencesResponse.class, parameters={})
     private Output<EmailPreferencesResponse> emailPreferences;
 
     /**
@@ -125,7 +125,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * The resource name of the transfer config. Transfer config names have the form `projects/{project_id}/locations/{region}/transferConfigs/{config_id}`. Where `config_id` is usually a uuid, even though it is not guaranteed or required. The name is ignored when creating a transfer config.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -139,7 +139,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * Next time when data transfer will run.
      * 
      */
-    @OutputExport(name="nextRunTime", type=String.class, parameters={})
+    @Export(name="nextRunTime", type=String.class, parameters={})
     private Output<String> nextRunTime;
 
     /**
@@ -153,7 +153,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * Pub/Sub topic where notifications will be sent after transfer runs associated with this transfer config finish. The format for specifying a pubsub topic is: `projects/{project}/topics/{topic}`
      * 
      */
-    @OutputExport(name="notificationPubsubTopic", type=String.class, parameters={})
+    @Export(name="notificationPubsubTopic", type=String.class, parameters={})
     private Output<String> notificationPubsubTopic;
 
     /**
@@ -167,7 +167,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * Information about the user whose credentials are used to transfer data. Populated only for `transferConfigs.get` requests. In case the user information is not available, this field will not be populated.
      * 
      */
-    @OutputExport(name="ownerInfo", type=UserInfoResponse.class, parameters={})
+    @Export(name="ownerInfo", type=UserInfoResponse.class, parameters={})
     private Output<UserInfoResponse> ownerInfo;
 
     /**
@@ -181,7 +181,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * Parameters specific to each data source. For more information see the bq tab in the 'Setting up a data transfer' section for each data source. For example the parameters for Cloud Storage transfers are listed here: https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
      * 
      */
-    @OutputExport(name="params", type=Map.class, parameters={String.class, String.class})
+    @Export(name="params", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> params;
 
     /**
@@ -195,7 +195,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * Data transfer schedule. If the data source does not support a custom schedule, this should be empty. If it is empty, the default value for the data source will be used. The specified times are in UTC. Examples of valid format: `1st,3rd monday of month 15:30`, `every wed,fri of jan,jun 13:15`, and `first sunday of quarter 00:00`. See more explanation about the format here: https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format NOTE: The minimum interval time between recurring transfers depends on the data source; refer to the documentation for your data source.
      * 
      */
-    @OutputExport(name="schedule", type=String.class, parameters={})
+    @Export(name="schedule", type=String.class, parameters={})
     private Output<String> schedule;
 
     /**
@@ -209,7 +209,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * Options customizing the data transfer schedule.
      * 
      */
-    @OutputExport(name="scheduleOptions", type=ScheduleOptionsResponse.class, parameters={})
+    @Export(name="scheduleOptions", type=ScheduleOptionsResponse.class, parameters={})
     private Output<ScheduleOptionsResponse> scheduleOptions;
 
     /**
@@ -223,7 +223,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * State of the most recently updated transfer run.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -237,7 +237,7 @@ public class TransferConfig extends io.pulumi.resources.CustomResource {
      * Data transfer modification time. Ignored by server on input.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

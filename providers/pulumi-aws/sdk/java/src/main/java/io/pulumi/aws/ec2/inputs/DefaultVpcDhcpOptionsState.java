@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,21 +20,21 @@ public final class DefaultVpcDhcpOptionsState extends io.pulumi.resources.Resour
      * The ARN of the DHCP Options Set.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn == null ? Output.empty() : this.arn;
     }
 
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
         return this.domainName == null ? Output.empty() : this.domainName;
     }
 
-    @InputImport(name="domainNameServers")
+    @Import(name="domainNameServers")
       private final @Nullable Output<String> domainNameServers;
 
     public Output<String> getDomainNameServers() {
@@ -45,7 +45,7 @@ public final class DefaultVpcDhcpOptionsState extends io.pulumi.resources.Resour
      * List of NETBIOS name servers.
      * 
      */
-    @InputImport(name="netbiosNameServers")
+    @Import(name="netbiosNameServers")
       private final @Nullable Output<List<String>> netbiosNameServers;
 
     public Output<List<String>> getNetbiosNameServers() {
@@ -56,14 +56,14 @@ public final class DefaultVpcDhcpOptionsState extends io.pulumi.resources.Resour
      * The NetBIOS node type (1, 2, 4, or 8). AWS recommends to specify 2 since broadcast and multicast are not supported in their network. For more information about these node types, see [RFC 2132](http://www.ietf.org/rfc/rfc2132.txt).
      * 
      */
-    @InputImport(name="netbiosNodeType")
+    @Import(name="netbiosNodeType")
       private final @Nullable Output<String> netbiosNodeType;
 
     public Output<String> getNetbiosNodeType() {
         return this.netbiosNodeType == null ? Output.empty() : this.netbiosNodeType;
     }
 
-    @InputImport(name="ntpServers")
+    @Import(name="ntpServers")
       private final @Nullable Output<String> ntpServers;
 
     public Output<String> getNtpServers() {
@@ -74,7 +74,7 @@ public final class DefaultVpcDhcpOptionsState extends io.pulumi.resources.Resour
      * The ID of the AWS account that owns the DHCP options set.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -85,14 +85,14 @@ public final class DefaultVpcDhcpOptionsState extends io.pulumi.resources.Resour
      * A map of tags to assign to the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

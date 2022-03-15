@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WsdlServiceResponse {
     /**
      * List of the endpoints' qualified names
@@ -22,10 +22,10 @@ public final class WsdlServiceResponse {
      */
     private final String qualifiedName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WsdlServiceResponse(
-        @OutputCustomType.Parameter("endpointQualifiedNames") @Nullable List<String> endpointQualifiedNames,
-        @OutputCustomType.Parameter("qualifiedName") String qualifiedName) {
+        @CustomType.Parameter("endpointQualifiedNames") @Nullable List<String> endpointQualifiedNames,
+        @CustomType.Parameter("qualifiedName") String qualifiedName) {
         this.endpointQualifiedNames = endpointQualifiedNames;
         this.qualifiedName = qualifiedName;
     }

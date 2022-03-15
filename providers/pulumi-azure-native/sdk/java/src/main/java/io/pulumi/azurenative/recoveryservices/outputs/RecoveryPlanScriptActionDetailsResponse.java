@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RecoveryPlanScriptActionDetailsResponse {
     /**
      * The fabric location.
@@ -33,12 +33,12 @@ public final class RecoveryPlanScriptActionDetailsResponse {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecoveryPlanScriptActionDetailsResponse(
-        @OutputCustomType.Parameter("fabricLocation") String fabricLocation,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
+        @CustomType.Parameter("fabricLocation") String fabricLocation,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("timeout") @Nullable String timeout) {
         this.fabricLocation = fabricLocation;
         this.instanceType = instanceType;
         this.path = path;

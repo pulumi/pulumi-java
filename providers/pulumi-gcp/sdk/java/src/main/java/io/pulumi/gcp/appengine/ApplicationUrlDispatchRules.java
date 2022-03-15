@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.ApplicationUrlDispatchRulesArgs;
@@ -39,7 +39,7 @@ public class ApplicationUrlDispatchRules extends io.pulumi.resources.CustomResou
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="dispatchRules", type=List.class, parameters={ApplicationUrlDispatchRulesDispatchRule.class})
+    @Export(name="dispatchRules", type=List.class, parameters={ApplicationUrlDispatchRulesDispatchRule.class})
     private Output<List<ApplicationUrlDispatchRulesDispatchRule>> dispatchRules;
 
     /**
@@ -55,7 +55,7 @@ public class ApplicationUrlDispatchRules extends io.pulumi.resources.CustomResou
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

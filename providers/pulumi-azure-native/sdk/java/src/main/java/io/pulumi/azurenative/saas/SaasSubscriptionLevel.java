@@ -8,7 +8,7 @@ import io.pulumi.azurenative.saas.SaasSubscriptionLevelArgs;
 import io.pulumi.azurenative.saas.outputs.SaasResourceResponseProperties;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class SaasSubscriptionLevel extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class SaasSubscriptionLevel extends io.pulumi.resources.CustomResource {
      * saas properties
      * 
      */
-    @OutputExport(name="properties", type=SaasResourceResponseProperties.class, parameters={})
+    @Export(name="properties", type=SaasResourceResponseProperties.class, parameters={})
     private Output<SaasResourceResponseProperties> properties;
 
     /**
@@ -64,7 +64,7 @@ public class SaasSubscriptionLevel extends io.pulumi.resources.CustomResource {
      * the resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -78,7 +78,7 @@ public class SaasSubscriptionLevel extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

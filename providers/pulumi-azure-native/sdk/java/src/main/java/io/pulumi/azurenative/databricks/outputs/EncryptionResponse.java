@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databricks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionResponse {
     /**
      * The name of KeyVault key.
@@ -32,12 +32,12 @@ public final class EncryptionResponse {
      */
     private final @Nullable String keyVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncryptionResponse(
-        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
-        @OutputCustomType.Parameter("keySource") @Nullable String keySource,
-        @OutputCustomType.Parameter("keyVaultUri") @Nullable String keyVaultUri,
-        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion) {
+        @CustomType.Parameter("keyName") @Nullable String keyName,
+        @CustomType.Parameter("keySource") @Nullable String keySource,
+        @CustomType.Parameter("keyVaultUri") @Nullable String keyVaultUri,
+        @CustomType.Parameter("keyVersion") @Nullable String keyVersion) {
         this.keyName = keyName;
         this.keySource = keySource;
         this.keyVaultUri = keyVaultUri;

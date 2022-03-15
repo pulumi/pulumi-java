@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * (Optional) The current deleted state of the role.
      * 
      */
-    @InputImport(name="deleted")
+    @Import(name="deleted")
       private final @Nullable Output<Boolean> deleted;
 
     public Output<Boolean> getDeleted() {
@@ -31,7 +31,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * A human-readable description for the role.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * The name of the role in the format `projects/{{project}}/roles/{{role_id}}`. Like `id`, this field can be used as a reference in other resources such as IAM role bindings.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<List<String>> permissions;
 
     public Output<List<String>> getPermissions() {
@@ -65,7 +65,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * Defaults to the provider project configuration.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -76,7 +76,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * The camel case role id to use for this role. Cannot contain `-` characters.
      * 
      */
-    @InputImport(name="roleId")
+    @Import(name="roleId")
       private final @Nullable Output<String> roleId;
 
     public Output<String> getRoleId() {
@@ -89,7 +89,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
      * 
      */
-    @InputImport(name="stage")
+    @Import(name="stage")
       private final @Nullable Output<String> stage;
 
     public Output<String> getStage() {
@@ -100,7 +100,7 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
      * A human-readable title for the role.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {

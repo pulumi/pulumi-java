@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storage.BlobArgs;
 import io.pulumi.azurenative.storage.enums.BlobAccessTier;
 import io.pulumi.azurenative.storage.enums.BlobType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -31,7 +31,7 @@ public class Blob extends io.pulumi.resources.CustomResource {
      * The access tier of the storage blob.
      * 
      */
-    @OutputExport(name="accessTier", type=BlobAccessTier.class, parameters={})
+    @Export(name="accessTier", type=BlobAccessTier.class, parameters={})
     private Output<BlobAccessTier> accessTier;
 
     /**
@@ -45,7 +45,7 @@ public class Blob extends io.pulumi.resources.CustomResource {
      * The MD5 sum of the blob contents.
      * 
      */
-    @OutputExport(name="contentMd5", type=String.class, parameters={})
+    @Export(name="contentMd5", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentMd5;
 
     /**
@@ -59,7 +59,7 @@ public class Blob extends io.pulumi.resources.CustomResource {
      * The content type of the storage blob.
      * 
      */
-    @OutputExport(name="contentType", type=String.class, parameters={})
+    @Export(name="contentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentType;
 
     /**
@@ -73,7 +73,7 @@ public class Blob extends io.pulumi.resources.CustomResource {
      * A map of custom blob metadata.
      * 
      */
-    @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
+    @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> metadata;
 
     /**
@@ -87,7 +87,7 @@ public class Blob extends io.pulumi.resources.CustomResource {
      * The name of the storage blob.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -101,7 +101,7 @@ public class Blob extends io.pulumi.resources.CustomResource {
      * The type of the storage blob to be created.
      * 
      */
-    @OutputExport(name="type", type=BlobType.class, parameters={})
+    @Export(name="type", type=BlobType.class, parameters={})
     private Output<BlobType> type;
 
     /**
@@ -115,7 +115,7 @@ public class Blob extends io.pulumi.resources.CustomResource {
      * The URL of the blob.
      * 
      */
-    @OutputExport(name="url", type=String.class, parameters={})
+    @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**

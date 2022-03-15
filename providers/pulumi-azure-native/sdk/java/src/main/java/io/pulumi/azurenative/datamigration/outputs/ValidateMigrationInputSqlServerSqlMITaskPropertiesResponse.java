@@ -9,14 +9,14 @@ import io.pulumi.azurenative.datamigration.outputs.ODataErrorResponse;
 import io.pulumi.azurenative.datamigration.outputs.ValidateMigrationInputSqlServerSqlMITaskInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.ValidateMigrationInputSqlServerSqlMITaskOutputResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse {
     /**
      * Array of command properties.
@@ -50,14 +50,14 @@ public final class ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse {
      */
     private final String taskType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ValidateMigrationInputSqlServerSqlMITaskPropertiesResponse(
-        @OutputCustomType.Parameter("commands") List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
-        @OutputCustomType.Parameter("errors") List<ODataErrorResponse> errors,
-        @OutputCustomType.Parameter("input") @Nullable ValidateMigrationInputSqlServerSqlMITaskInputResponse input,
-        @OutputCustomType.Parameter("output") List<ValidateMigrationInputSqlServerSqlMITaskOutputResponse> output,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("taskType") String taskType) {
+        @CustomType.Parameter("commands") List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
+        @CustomType.Parameter("errors") List<ODataErrorResponse> errors,
+        @CustomType.Parameter("input") @Nullable ValidateMigrationInputSqlServerSqlMITaskInputResponse input,
+        @CustomType.Parameter("output") List<ValidateMigrationInputSqlServerSqlMITaskOutputResponse> output,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("taskType") String taskType) {
         this.commands = commands;
         this.errors = errors;
         this.input = input;

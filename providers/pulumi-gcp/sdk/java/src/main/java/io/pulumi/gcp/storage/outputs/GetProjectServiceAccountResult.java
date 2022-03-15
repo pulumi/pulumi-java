@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProjectServiceAccountResult {
     /**
      * The email address of the service account. This value is often used to refer to the service account
@@ -25,12 +25,12 @@ public final class GetProjectServiceAccountResult {
     private final String project;
     private final @Nullable String userProject;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProjectServiceAccountResult(
-        @OutputCustomType.Parameter("emailAddress") String emailAddress,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("userProject") @Nullable String userProject) {
+        @CustomType.Parameter("emailAddress") String emailAddress,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("userProject") @Nullable String userProject) {
         this.emailAddress = emailAddress;
         this.id = id;
         this.project = project;

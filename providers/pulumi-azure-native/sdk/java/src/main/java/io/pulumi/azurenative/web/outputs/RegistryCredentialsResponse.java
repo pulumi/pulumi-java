@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegistryCredentialsResponse {
     /**
      * The name of the Secret that contains the registry login password
@@ -27,11 +27,11 @@ public final class RegistryCredentialsResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegistryCredentialsResponse(
-        @OutputCustomType.Parameter("passwordSecretRef") @Nullable String passwordSecretRef,
-        @OutputCustomType.Parameter("server") @Nullable String server,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("passwordSecretRef") @Nullable String passwordSecretRef,
+        @CustomType.Parameter("server") @Nullable String server,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.passwordSecretRef = passwordSecretRef;
         this.server = server;
         this.username = username;

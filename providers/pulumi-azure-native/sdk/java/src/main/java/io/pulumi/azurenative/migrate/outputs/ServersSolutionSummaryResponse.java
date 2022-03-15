@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServersSolutionSummaryResponse {
     /**
      * Gets or sets the count of servers assessed.
@@ -44,14 +44,14 @@ public final class ServersSolutionSummaryResponse {
      */
     private final @Nullable Integer testMigratedCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServersSolutionSummaryResponse(
-        @OutputCustomType.Parameter("assessedCount") @Nullable Integer assessedCount,
-        @OutputCustomType.Parameter("discoveredCount") @Nullable Integer discoveredCount,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("migratedCount") @Nullable Integer migratedCount,
-        @OutputCustomType.Parameter("replicatingCount") @Nullable Integer replicatingCount,
-        @OutputCustomType.Parameter("testMigratedCount") @Nullable Integer testMigratedCount) {
+        @CustomType.Parameter("assessedCount") @Nullable Integer assessedCount,
+        @CustomType.Parameter("discoveredCount") @Nullable Integer discoveredCount,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("migratedCount") @Nullable Integer migratedCount,
+        @CustomType.Parameter("replicatingCount") @Nullable Integer replicatingCount,
+        @CustomType.Parameter("testMigratedCount") @Nullable Integer testMigratedCount) {
         this.assessedCount = assessedCount;
         this.discoveredCount = discoveredCount;
         this.instanceType = instanceType;

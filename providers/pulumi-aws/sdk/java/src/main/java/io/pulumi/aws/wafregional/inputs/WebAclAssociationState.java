@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WebAclAssociationState extends io.pulumi.resources.ResourceAr
      * ARN of the resource to associate with. For example, an Application Load Balancer or API Gateway Stage.
      * 
      */
-    @InputImport(name="resourceArn")
+    @Import(name="resourceArn")
       private final @Nullable Output<String> resourceArn;
 
     public Output<String> getResourceArn() {
@@ -29,7 +29,7 @@ public final class WebAclAssociationState extends io.pulumi.resources.ResourceAr
      * The ID of the WAF Regional WebACL to create an association.
      * 
      */
-    @InputImport(name="webAclId")
+    @Import(name="webAclId")
       private final @Nullable Output<String> webAclId;
 
     public Output<String> getWebAclId() {

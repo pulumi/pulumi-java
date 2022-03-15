@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.domains_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExprResponse {
     /**
      * Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
@@ -30,12 +30,12 @@ public final class ExprResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExprResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("expression") String expression,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("expression") String expression,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("title") String title) {
         this.description = description;
         this.expression = expression;
         this.location = location;

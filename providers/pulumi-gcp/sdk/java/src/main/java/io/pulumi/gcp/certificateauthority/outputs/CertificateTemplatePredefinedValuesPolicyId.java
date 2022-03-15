@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificateTemplatePredefinedValuesPolicyId {
     /**
      * Required. The parts of an OID path. The most significant parts of the path come first.
@@ -16,8 +16,8 @@ public final class CertificateTemplatePredefinedValuesPolicyId {
      */
     private final List<Integer> objectIdPaths;
 
-    @OutputCustomType.Constructor
-    private CertificateTemplatePredefinedValuesPolicyId(@OutputCustomType.Parameter("objectIdPaths") List<Integer> objectIdPaths) {
+    @CustomType.Constructor
+    private CertificateTemplatePredefinedValuesPolicyId(@CustomType.Parameter("objectIdPaths") List<Integer> objectIdPaths) {
         this.objectIdPaths = objectIdPaths;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,42 +15,42 @@ public final class ServiceRollbackConfigArgs extends io.pulumi.resources.Resourc
 
     public static final ServiceRollbackConfigArgs Empty = new ServiceRollbackConfigArgs();
 
-    @InputImport(name="delay")
+    @Import(name="delay")
       private final @Nullable Output<String> delay;
 
     public Output<String> getDelay() {
         return this.delay == null ? Output.empty() : this.delay;
     }
 
-    @InputImport(name="failureAction")
+    @Import(name="failureAction")
       private final @Nullable Output<String> failureAction;
 
     public Output<String> getFailureAction() {
         return this.failureAction == null ? Output.empty() : this.failureAction;
     }
 
-    @InputImport(name="maxFailureRatio")
+    @Import(name="maxFailureRatio")
       private final @Nullable Output<String> maxFailureRatio;
 
     public Output<String> getMaxFailureRatio() {
         return this.maxFailureRatio == null ? Output.empty() : this.maxFailureRatio;
     }
 
-    @InputImport(name="monitor")
+    @Import(name="monitor")
       private final @Nullable Output<String> monitor;
 
     public Output<String> getMonitor() {
         return this.monitor == null ? Output.empty() : this.monitor;
     }
 
-    @InputImport(name="order")
+    @Import(name="order")
       private final @Nullable Output<String> order;
 
     public Output<String> getOrder() {
         return this.order == null ? Output.empty() : this.order;
     }
 
-    @InputImport(name="parallelism")
+    @Import(name="parallelism")
       private final @Nullable Output<Integer> parallelism;
 
     public Output<Integer> getParallelism() {

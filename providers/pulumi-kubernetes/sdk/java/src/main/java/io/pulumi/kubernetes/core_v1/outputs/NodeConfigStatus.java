@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.NodeConfigSource;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodeConfigStatus {
     /**
      * Active reports the checkpointed config the node is actively using. Active will represent either the current version of the Assigned config, or the current LastKnownGood config, depending on whether attempting to use the Assigned config results in an error.
@@ -33,12 +33,12 @@ public final class NodeConfigStatus {
      */
     private final @Nullable NodeConfigSource lastKnownGood;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeConfigStatus(
-        @OutputCustomType.Parameter("active") @Nullable NodeConfigSource active,
-        @OutputCustomType.Parameter("assigned") @Nullable NodeConfigSource assigned,
-        @OutputCustomType.Parameter("error") @Nullable String error,
-        @OutputCustomType.Parameter("lastKnownGood") @Nullable NodeConfigSource lastKnownGood) {
+        @CustomType.Parameter("active") @Nullable NodeConfigSource active,
+        @CustomType.Parameter("assigned") @Nullable NodeConfigSource assigned,
+        @CustomType.Parameter("error") @Nullable String error,
+        @CustomType.Parameter("lastKnownGood") @Nullable NodeConfigSource lastKnownGood) {
         this.active = active;
         this.assigned = assigned;
         this.error = error;

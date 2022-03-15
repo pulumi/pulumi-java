@@ -7,14 +7,14 @@ import io.pulumi.awsnative.apigateway.outputs.UsagePlanApiStage;
 import io.pulumi.awsnative.apigateway.outputs.UsagePlanQuotaSettings;
 import io.pulumi.awsnative.apigateway.outputs.UsagePlanTag;
 import io.pulumi.awsnative.apigateway.outputs.UsagePlanThrottleSettings;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetUsagePlanResult {
     /**
      * The API stages to associate with this usage plan.
@@ -52,15 +52,15 @@ public final class GetUsagePlanResult {
      */
     private final @Nullable String usagePlanName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUsagePlanResult(
-        @OutputCustomType.Parameter("apiStages") @Nullable List<UsagePlanApiStage> apiStages,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("quota") @Nullable UsagePlanQuotaSettings quota,
-        @OutputCustomType.Parameter("tags") @Nullable List<UsagePlanTag> tags,
-        @OutputCustomType.Parameter("throttle") @Nullable UsagePlanThrottleSettings throttle,
-        @OutputCustomType.Parameter("usagePlanName") @Nullable String usagePlanName) {
+        @CustomType.Parameter("apiStages") @Nullable List<UsagePlanApiStage> apiStages,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("quota") @Nullable UsagePlanQuotaSettings quota,
+        @CustomType.Parameter("tags") @Nullable List<UsagePlanTag> tags,
+        @CustomType.Parameter("throttle") @Nullable UsagePlanThrottleSettings throttle,
+        @CustomType.Parameter("usagePlanName") @Nullable String usagePlanName) {
         this.apiStages = apiStages;
         this.description = description;
         this.id = id;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigNodeConfigIpAllocationPolicyArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -18,77 +18,77 @@ public final class EnvironmentConfigNodeConfigArgs extends io.pulumi.resources.R
 
     public static final EnvironmentConfigNodeConfigArgs Empty = new EnvironmentConfigNodeConfigArgs();
 
-    @InputImport(name="diskSizeGb")
+    @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
     public Output<Integer> getDiskSizeGb() {
         return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
     }
 
-    @InputImport(name="enableIpMasqAgent")
+    @Import(name="enableIpMasqAgent")
       private final @Nullable Output<Boolean> enableIpMasqAgent;
 
     public Output<Boolean> getEnableIpMasqAgent() {
         return this.enableIpMasqAgent == null ? Output.empty() : this.enableIpMasqAgent;
     }
 
-    @InputImport(name="ipAllocationPolicy")
+    @Import(name="ipAllocationPolicy")
       private final @Nullable Output<EnvironmentConfigNodeConfigIpAllocationPolicyArgs> ipAllocationPolicy;
 
     public Output<EnvironmentConfigNodeConfigIpAllocationPolicyArgs> getIpAllocationPolicy() {
         return this.ipAllocationPolicy == null ? Output.empty() : this.ipAllocationPolicy;
     }
 
-    @InputImport(name="machineType")
+    @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
     public Output<String> getMachineType() {
         return this.machineType == null ? Output.empty() : this.machineType;
     }
 
-    @InputImport(name="maxPodsPerNode")
+    @Import(name="maxPodsPerNode")
       private final @Nullable Output<Integer> maxPodsPerNode;
 
     public Output<Integer> getMaxPodsPerNode() {
         return this.maxPodsPerNode == null ? Output.empty() : this.maxPodsPerNode;
     }
 
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
         return this.network == null ? Output.empty() : this.network;
     }
 
-    @InputImport(name="oauthScopes")
+    @Import(name="oauthScopes")
       private final @Nullable Output<List<String>> oauthScopes;
 
     public Output<List<String>> getOauthScopes() {
         return this.oauthScopes == null ? Output.empty() : this.oauthScopes;
     }
 
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
         return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
     }
 
-    @InputImport(name="subnetwork")
+    @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {
         return this.subnetwork == null ? Output.empty() : this.subnetwork;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

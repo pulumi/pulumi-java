@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.ssm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceDataSyncS3Destination {
     private final String bucketName;
     private final @Nullable String bucketPrefix;
@@ -17,13 +17,13 @@ public final class ResourceDataSyncS3Destination {
     private final @Nullable String kMSKeyArn;
     private final String syncFormat;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceDataSyncS3Destination(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
-        @OutputCustomType.Parameter("bucketRegion") String bucketRegion,
-        @OutputCustomType.Parameter("kMSKeyArn") @Nullable String kMSKeyArn,
-        @OutputCustomType.Parameter("syncFormat") String syncFormat) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
+        @CustomType.Parameter("bucketRegion") String bucketRegion,
+        @CustomType.Parameter("kMSKeyArn") @Nullable String kMSKeyArn,
+        @CustomType.Parameter("syncFormat") String syncFormat) {
         this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
         this.bucketRegion = bucketRegion;

@@ -8,7 +8,7 @@ import io.pulumi.aws.dynamodb.GlobalTableArgs;
 import io.pulumi.aws.dynamodb.inputs.GlobalTableState;
 import io.pulumi.aws.dynamodb.outputs.GlobalTableReplica;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class GlobalTable extends io.pulumi.resources.CustomResource {
      * The ARN of the DynamoDB Global Table
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -52,7 +52,7 @@ public class GlobalTable extends io.pulumi.resources.CustomResource {
      * The name of the global table. Must match underlying DynamoDB Table names in all regions.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -66,7 +66,7 @@ public class GlobalTable extends io.pulumi.resources.CustomResource {
      * Underlying DynamoDB Table. At least 1 replica must be defined. See below.
      * 
      */
-    @OutputExport(name="replicas", type=List.class, parameters={GlobalTableReplica.class})
+    @Export(name="replicas", type=List.class, parameters={GlobalTableReplica.class})
     private Output<List<GlobalTableReplica>> replicas;
 
     /**

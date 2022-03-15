@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn;
 
 import io.pulumi.azurenative.cdn.inputs.SecurityPolicyWebApplicationFirewallParametersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * object which contains security policy parameters
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<SecurityPolicyWebApplicationFirewallParametersArgs> parameters;
 
     public Output<SecurityPolicyWebApplicationFirewallParametersArgs> getParameters() {
@@ -30,7 +30,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the CDN profile which is unique within the resource group.
      * 
      */
-    @InputImport(name="profileName", required=true)
+    @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
     public Output<String> getProfileName() {
@@ -41,7 +41,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the security policy under the profile.
      * 
      */
-    @InputImport(name="securityPolicyName")
+    @Import(name="securityPolicyName")
       private final @Nullable Output<String> securityPolicyName;
 
     public Output<String> getSecurityPolicyName() {

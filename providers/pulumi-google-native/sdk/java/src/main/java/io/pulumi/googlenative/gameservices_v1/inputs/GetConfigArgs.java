@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,28 +14,28 @@ public final class GetConfigArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetConfigArgs Empty = new GetConfigArgs();
 
-    @InputImport(name="configId", required=true)
+    @Import(name="configId", required=true)
       private final String configId;
 
     public String getConfigId() {
         return this.configId;
     }
 
-    @InputImport(name="gameServerDeploymentId", required=true)
+    @Import(name="gameServerDeploymentId", required=true)
       private final String gameServerDeploymentId;
 
     public String getGameServerDeploymentId() {
         return this.gameServerDeploymentId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

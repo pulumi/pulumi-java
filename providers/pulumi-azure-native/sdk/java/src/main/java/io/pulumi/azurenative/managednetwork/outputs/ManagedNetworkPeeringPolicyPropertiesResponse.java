@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.managednetwork.outputs;
 
 import io.pulumi.azurenative.managednetwork.outputs.ResourceIdResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedNetworkPeeringPolicyPropertiesResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -44,14 +44,14 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedNetworkPeeringPolicyPropertiesResponse(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("hub") @Nullable ResourceIdResponse hub,
-        @OutputCustomType.Parameter("mesh") @Nullable List<ResourceIdResponse> mesh,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("spokes") @Nullable List<ResourceIdResponse> spokes,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("hub") @Nullable ResourceIdResponse hub,
+        @CustomType.Parameter("mesh") @Nullable List<ResourceIdResponse> mesh,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("spokes") @Nullable List<ResourceIdResponse> spokes,
+        @CustomType.Parameter("type") String type) {
         this.etag = etag;
         this.hub = hub;
         this.mesh = mesh;

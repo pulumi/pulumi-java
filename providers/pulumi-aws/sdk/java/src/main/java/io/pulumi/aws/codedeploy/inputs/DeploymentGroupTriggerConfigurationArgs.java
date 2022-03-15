@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class DeploymentGroupTriggerConfigurationArgs extends io.pulumi.res
      * The event type or types for which notifications are triggered. Some values that are supported: `DeploymentStart`, `DeploymentSuccess`, `DeploymentFailure`, `DeploymentStop`, `DeploymentRollback`, `InstanceStart`, `InstanceSuccess`, `InstanceFailure`.  See [the CodeDeploy documentation](http://docs.aws.amazon.com/codedeploy/latest/userguide/monitoring-sns-event-notifications-create-trigger.html) for all possible values.
      * 
      */
-    @InputImport(name="triggerEvents", required=true)
+    @Import(name="triggerEvents", required=true)
       private final Output<List<String>> triggerEvents;
 
     public Output<List<String>> getTriggerEvents() {
@@ -29,7 +29,7 @@ public final class DeploymentGroupTriggerConfigurationArgs extends io.pulumi.res
      * The name of the notification trigger.
      * 
      */
-    @InputImport(name="triggerName", required=true)
+    @Import(name="triggerName", required=true)
       private final Output<String> triggerName;
 
     public Output<String> getTriggerName() {
@@ -40,7 +40,7 @@ public final class DeploymentGroupTriggerConfigurationArgs extends io.pulumi.res
      * The ARN of the SNS topic through which notifications are sent.
      * 
      */
-    @InputImport(name="triggerTargetArn", required=true)
+    @Import(name="triggerTargetArn", required=true)
       private final Output<String> triggerTargetArn;
 
     public Output<String> getTriggerTargetArn() {

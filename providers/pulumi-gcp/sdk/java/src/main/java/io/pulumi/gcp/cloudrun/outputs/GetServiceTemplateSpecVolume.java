@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecVolumeSecret;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceTemplateSpecVolume {
     /**
      * The name of the Cloud Run Service.
@@ -18,10 +18,10 @@ public final class GetServiceTemplateSpecVolume {
     private final String name;
     private final List<GetServiceTemplateSpecVolumeSecret> secrets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceTemplateSpecVolume(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("secrets") List<GetServiceTemplateSpecVolumeSecret> secrets) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("secrets") List<GetServiceTemplateSpecVolumeSecret> secrets) {
         this.name = name;
         this.secrets = secrets;
     }

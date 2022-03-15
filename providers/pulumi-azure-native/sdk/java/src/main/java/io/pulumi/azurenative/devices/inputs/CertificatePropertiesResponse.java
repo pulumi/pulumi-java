@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * base-64 representation of X509 certificate .cer file or just .pem file content.
      * 
      */
-    @InputImport(name="certificate", required=true)
+    @Import(name="certificate", required=true)
       private final String certificate;
 
     public String getCertificate() {
@@ -32,7 +32,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * The certificate's creation date and time.
      * 
      */
-    @InputImport(name="created", required=true)
+    @Import(name="created", required=true)
       private final String created;
 
     public String getCreated() {
@@ -43,7 +43,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * The certificate's expiration date and time.
      * 
      */
-    @InputImport(name="expiry", required=true)
+    @Import(name="expiry", required=true)
       private final String expiry;
 
     public String getExpiry() {
@@ -54,7 +54,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * Determines whether certificate has been verified.
      * 
      */
-    @InputImport(name="isVerified", required=true)
+    @Import(name="isVerified", required=true)
       private final Boolean isVerified;
 
     public Boolean getIsVerified() {
@@ -65,7 +65,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * The certificate's subject name.
      * 
      */
-    @InputImport(name="subject", required=true)
+    @Import(name="subject", required=true)
       private final String subject;
 
     public String getSubject() {
@@ -76,7 +76,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * The certificate's thumbprint.
      * 
      */
-    @InputImport(name="thumbprint", required=true)
+    @Import(name="thumbprint", required=true)
       private final String thumbprint;
 
     public String getThumbprint() {
@@ -87,7 +87,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * The certificate's last update date and time.
      * 
      */
-    @InputImport(name="updated", required=true)
+    @Import(name="updated", required=true)
       private final String updated;
 
     public String getUpdated() {

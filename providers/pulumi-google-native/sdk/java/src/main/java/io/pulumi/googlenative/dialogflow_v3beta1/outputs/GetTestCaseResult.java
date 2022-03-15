@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ConversationTurnResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1TestCaseResultResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1TestConfigResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTestCaseResult {
     /**
      * When the test was created.
@@ -54,16 +54,16 @@ public final class GetTestCaseResult {
      */
     private final GoogleCloudDialogflowCxV3beta1TestConfigResponse testConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTestCaseResult(
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("lastTestResult") GoogleCloudDialogflowCxV3beta1TestCaseResultResponse lastTestResult,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notes") String notes,
-        @OutputCustomType.Parameter("tags") List<String> tags,
-        @OutputCustomType.Parameter("testCaseConversationTurns") List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> testCaseConversationTurns,
-        @OutputCustomType.Parameter("testConfig") GoogleCloudDialogflowCxV3beta1TestConfigResponse testConfig) {
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("lastTestResult") GoogleCloudDialogflowCxV3beta1TestCaseResultResponse lastTestResult,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notes") String notes,
+        @CustomType.Parameter("tags") List<String> tags,
+        @CustomType.Parameter("testCaseConversationTurns") List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> testCaseConversationTurns,
+        @CustomType.Parameter("testConfig") GoogleCloudDialogflowCxV3beta1TestConfigResponse testConfig) {
         this.creationTime = creationTime;
         this.displayName = displayName;
         this.lastTestResult = lastTestResult;

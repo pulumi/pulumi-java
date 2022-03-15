@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetExposureControlFeatureValueByFactoryResult {
     /**
      * The feature name.
@@ -20,10 +20,10 @@ public final class GetExposureControlFeatureValueByFactoryResult {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExposureControlFeatureValueByFactoryResult(
-        @OutputCustomType.Parameter("featureName") String featureName,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("featureName") String featureName,
+        @CustomType.Parameter("value") String value) {
         this.featureName = featureName;
         this.value = value;
     }

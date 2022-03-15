@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.kinesis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetStreamConsumerResult {
     private final String arn;
     /**
@@ -28,14 +28,14 @@ public final class GetStreamConsumerResult {
     private final String status;
     private final String streamArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStreamConsumerResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("streamArn") String streamArn) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("streamArn") String streamArn) {
         this.arn = arn;
         this.creationTimestamp = creationTimestamp;
         this.id = id;

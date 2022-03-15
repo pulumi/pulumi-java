@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
      * The name of the class.
      * 
      */
-    @InputImport(name="className")
+    @Import(name="className")
       private final @Nullable Output<String> className;
 
     public Output<String> getClassName() {
@@ -33,7 +33,7 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
      * The name of the test case. Required.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class TestCaseReferenceArgs extends io.pulumi.resources.ResourceArg
      * The name of the test suite to which this test case belongs.
      * 
      */
-    @InputImport(name="testSuiteName")
+    @Import(name="testSuiteName")
       private final @Nullable Output<String> testSuiteName;
 
     public Output<String> getTestSuiteName() {

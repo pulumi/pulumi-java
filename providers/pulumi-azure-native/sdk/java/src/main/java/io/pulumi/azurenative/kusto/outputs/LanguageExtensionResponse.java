@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.kusto.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LanguageExtensionResponse {
     /**
      * The language extension name.
@@ -17,8 +17,8 @@ public final class LanguageExtensionResponse {
      */
     private final @Nullable String languageExtensionName;
 
-    @OutputCustomType.Constructor
-    private LanguageExtensionResponse(@OutputCustomType.Parameter("languageExtensionName") @Nullable String languageExtensionName) {
+    @CustomType.Constructor
+    private LanguageExtensionResponse(@CustomType.Parameter("languageExtensionName") @Nullable String languageExtensionName) {
         this.languageExtensionName = languageExtensionName;
     }
 

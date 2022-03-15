@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DetectorModelResetTimer extends io.pulumi.resources.InvokeArg
      * The name of the timer to reset.
      * 
      */
-    @InputImport(name="timerName", required=true)
+    @Import(name="timerName", required=true)
       private final String timerName;
 
     public String getTimerName() {

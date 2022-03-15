@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.
      * Daily data volume cap in GB.
      * 
      */
-    @InputImport(name="cap")
+    @Import(name="cap")
       private final @Nullable Double cap;
 
     public Optional<Double> getCap() {
@@ -35,7 +35,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.
      * Maximum daily data volume cap that the user can set for this component.
      * 
      */
-    @InputImport(name="maxHistoryCap", required=true)
+    @Import(name="maxHistoryCap", required=true)
       private final Double maxHistoryCap;
 
     public Double getMaxHistoryCap() {
@@ -46,7 +46,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.
      * Daily data volume cap UTC reset hour.
      * 
      */
-    @InputImport(name="resetTime", required=true)
+    @Import(name="resetTime", required=true)
       private final Integer resetTime;
 
     public Integer getResetTime() {
@@ -57,7 +57,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.
      * Do not send a notification email when the daily data volume cap is met.
      * 
      */
-    @InputImport(name="stopSendNotificationWhenHitCap")
+    @Import(name="stopSendNotificationWhenHitCap")
       private final @Nullable Boolean stopSendNotificationWhenHitCap;
 
     public Optional<Boolean> getStopSendNotificationWhenHitCap() {
@@ -68,7 +68,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.
      * Reserved, not used for now.
      * 
      */
-    @InputImport(name="stopSendNotificationWhenHitThreshold")
+    @Import(name="stopSendNotificationWhenHitThreshold")
       private final @Nullable Boolean stopSendNotificationWhenHitThreshold;
 
     public Optional<Boolean> getStopSendNotificationWhenHitThreshold() {
@@ -79,7 +79,7 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse extends io.
      * Reserved, not used for now.
      * 
      */
-    @InputImport(name="warningThreshold")
+    @Import(name="warningThreshold")
       private final @Nullable Integer warningThreshold;
 
     public Optional<Integer> getWarningThreshold() {

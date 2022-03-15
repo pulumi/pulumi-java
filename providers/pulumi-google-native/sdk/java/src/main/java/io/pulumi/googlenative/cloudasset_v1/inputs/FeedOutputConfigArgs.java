@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudasset_v1.inputs.PubsubDestinationArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class FeedOutputConfigArgs extends io.pulumi.resources.ResourceArgs
      * Destination on Pub/Sub.
      * 
      */
-    @InputImport(name="pubsubDestination")
+    @Import(name="pubsubDestination")
       private final @Nullable Output<PubsubDestinationArgs> pubsubDestination;
 
     public Output<PubsubDestinationArgs> getPubsubDestination() {

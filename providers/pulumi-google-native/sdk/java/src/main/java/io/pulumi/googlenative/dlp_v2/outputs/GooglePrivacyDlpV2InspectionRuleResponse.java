@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ExclusionRuleResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2HotwordRuleResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2InspectionRuleResponse {
     /**
      * Exclusion rule.
@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse {
      */
     private final GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2InspectionRuleResponse(
-        @OutputCustomType.Parameter("exclusionRule") GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule,
-        @OutputCustomType.Parameter("hotwordRule") GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
+        @CustomType.Parameter("exclusionRule") GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule,
+        @CustomType.Parameter("hotwordRule") GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
         this.exclusionRule = exclusionRule;
         this.hotwordRule = hotwordRule;
     }

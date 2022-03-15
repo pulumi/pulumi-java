@@ -7,7 +7,7 @@ import io.pulumi.azurenative.synapse.inputs.ManagedIntegrationRuntimeArgs;
 import io.pulumi.azurenative.synapse.inputs.SelfHostedIntegrationRuntimeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * Integration runtime name
      * 
      */
-    @InputImport(name="integrationRuntimeName")
+    @Import(name="integrationRuntimeName")
       private final @Nullable Output<String> integrationRuntimeName;
 
     public Output<String> getIntegrationRuntimeName() {
@@ -32,7 +32,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * Integration runtime properties.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> properties;
 
     public Output<Either<ManagedIntegrationRuntimeArgs,SelfHostedIntegrationRuntimeArgs>> getProperties() {
@@ -43,7 +43,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -54,7 +54,7 @@ public final class IntegrationRuntimeArgs extends io.pulumi.resources.ResourceAr
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

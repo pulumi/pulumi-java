@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azuredata.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetSqlServerArgs extends io.pulumi.resources.InvokeArgs {
      * The child resources to include in the response.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -29,7 +29,7 @@ public final class GetSqlServerArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class GetSqlServerArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the SQL Server.
      * 
      */
-    @InputImport(name="sqlServerName", required=true)
+    @Import(name="sqlServerName", required=true)
       private final String sqlServerName;
 
     public String getSqlServerName() {
@@ -51,7 +51,7 @@ public final class GetSqlServerArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the SQL Server registration.
      * 
      */
-    @InputImport(name="sqlServerRegistrationName", required=true)
+    @Import(name="sqlServerRegistrationName", required=true)
       private final String sqlServerRegistrationName;
 
     public String getSqlServerRegistrationName() {

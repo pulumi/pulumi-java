@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamHttpEndpointCommonAttribute {
     private final String attributeName;
     private final String attributeValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamHttpEndpointCommonAttribute(
-        @OutputCustomType.Parameter("attributeName") String attributeName,
-        @OutputCustomType.Parameter("attributeValue") String attributeValue) {
+        @CustomType.Parameter("attributeName") String attributeName,
+        @CustomType.Parameter("attributeValue") String attributeValue) {
         this.attributeName = attributeName;
         this.attributeValue = attributeValue;
     }

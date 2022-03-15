@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="filterLabels", required=true)
+    @Import(name="filterLabels", required=true)
       private final Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs>> filterLabels;
 
     public Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs>> getFilterLabels() {
@@ -39,7 +39,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArg
      *   Possible values are `MATCH_ALL` and `MATCH_ANY`.
      * 
      */
-    @InputImport(name="filterMatchCriteria", required=true)
+    @Import(name="filterMatchCriteria", required=true)
       private final Output<String> filterMatchCriteria;
 
     public Output<String> getFilterMatchCriteria() {

@@ -3,18 +3,18 @@
 
 package io.pulumi.example.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OutputOnlyObjectType {
     private final @Nullable String foo;
 
-    @OutputCustomType.Constructor
-    private OutputOnlyObjectType(@OutputCustomType.Parameter("foo") @Nullable String foo) {
+    @CustomType.Constructor
+    private OutputOnlyObjectType(@CustomType.Parameter("foo") @Nullable String foo) {
         this.foo = foo;
     }
 

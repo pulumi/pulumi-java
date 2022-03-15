@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuntimeAccessConfig {
     /**
      * The type of access mode this instance. For valid values, see
@@ -31,11 +31,11 @@ public final class RuntimeAccessConfig {
      */
     private final @Nullable String runtimeOwner;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuntimeAccessConfig(
-        @OutputCustomType.Parameter("accessType") @Nullable String accessType,
-        @OutputCustomType.Parameter("proxyUri") @Nullable String proxyUri,
-        @OutputCustomType.Parameter("runtimeOwner") @Nullable String runtimeOwner) {
+        @CustomType.Parameter("accessType") @Nullable String accessType,
+        @CustomType.Parameter("proxyUri") @Nullable String proxyUri,
+        @CustomType.Parameter("runtimeOwner") @Nullable String runtimeOwner) {
         this.accessType = accessType;
         this.proxyUri = proxyUri;
         this.runtimeOwner = runtimeOwner;

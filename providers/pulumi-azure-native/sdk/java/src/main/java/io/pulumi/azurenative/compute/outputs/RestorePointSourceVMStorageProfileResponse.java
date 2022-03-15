@@ -5,13 +5,13 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.RestorePointSourceVMDataDiskResponse;
 import io.pulumi.azurenative.compute.outputs.RestorePointSourceVMOSDiskResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RestorePointSourceVMStorageProfileResponse {
     /**
      * Gets the data disks of the VM captured at the time of the restore point creation.
@@ -24,10 +24,10 @@ public final class RestorePointSourceVMStorageProfileResponse {
      */
     private final @Nullable RestorePointSourceVMOSDiskResponse osDisk;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RestorePointSourceVMStorageProfileResponse(
-        @OutputCustomType.Parameter("dataDisks") @Nullable List<RestorePointSourceVMDataDiskResponse> dataDisks,
-        @OutputCustomType.Parameter("osDisk") @Nullable RestorePointSourceVMOSDiskResponse osDisk) {
+        @CustomType.Parameter("dataDisks") @Nullable List<RestorePointSourceVMDataDiskResponse> dataDisks,
+        @CustomType.Parameter("osDisk") @Nullable RestorePointSourceVMOSDiskResponse osDisk) {
         this.dataDisks = dataDisks;
         this.osDisk = osDisk;
     }

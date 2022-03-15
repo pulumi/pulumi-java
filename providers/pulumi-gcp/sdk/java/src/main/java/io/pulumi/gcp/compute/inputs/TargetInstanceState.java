@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TargetInstanceState extends io.pulumi.resources.ResourceArgs 
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @InputImport(name="creationTimestamp")
+    @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
@@ -29,7 +29,7 @@ public final class TargetInstanceState extends io.pulumi.resources.ResourceArgs 
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class TargetInstanceState extends io.pulumi.resources.ResourceArgs 
      * provider-level project.
      * 
      */
-    @InputImport(name="instance")
+    @Import(name="instance")
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
@@ -62,7 +62,7 @@ public final class TargetInstanceState extends io.pulumi.resources.ResourceArgs 
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class TargetInstanceState extends io.pulumi.resources.ResourceArgs 
      * Possible values are `NO_NAT`.
      * 
      */
-    @InputImport(name="natPolicy")
+    @Import(name="natPolicy")
       private final @Nullable Output<String> natPolicy;
 
     public Output<String> getNatPolicy() {
@@ -87,7 +87,7 @@ public final class TargetInstanceState extends io.pulumi.resources.ResourceArgs 
      * The URL of the network this target instance uses to forward traffic. If not specified, the traffic will be forwarded to the network that the default network interface belongs to.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -99,7 +99,7 @@ public final class TargetInstanceState extends io.pulumi.resources.ResourceArgs 
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -110,7 +110,7 @@ public final class TargetInstanceState extends io.pulumi.resources.ResourceArgs 
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -121,7 +121,7 @@ public final class TargetInstanceState extends io.pulumi.resources.ResourceArgs 
      * URL of the zone where the target instance resides.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

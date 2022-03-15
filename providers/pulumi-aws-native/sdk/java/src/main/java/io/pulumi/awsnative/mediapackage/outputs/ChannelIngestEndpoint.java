@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.mediapackage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ChannelIngestEndpoint {
     /**
      * The system generated unique identifier for the IngestEndpoint
@@ -32,12 +32,12 @@ public final class ChannelIngestEndpoint {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ChannelIngestEndpoint(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("url") @Nullable String url,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("url") @Nullable String url,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.id = id;
         this.password = password;
         this.url = url;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SsisFolderResponse extends io.pulumi.resources.InvokeArgs {
      * Metadata description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -34,7 +34,7 @@ public final class SsisFolderResponse extends io.pulumi.resources.InvokeArgs {
      * Metadata id.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Double id;
 
     public Optional<Double> getId() {
@@ -45,7 +45,7 @@ public final class SsisFolderResponse extends io.pulumi.resources.InvokeArgs {
      * Metadata name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -57,7 +57,7 @@ public final class SsisFolderResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'Folder'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

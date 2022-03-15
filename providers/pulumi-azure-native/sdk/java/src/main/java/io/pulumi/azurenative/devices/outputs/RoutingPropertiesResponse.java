@@ -7,13 +7,13 @@ import io.pulumi.azurenative.devices.outputs.EnrichmentPropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.FallbackRoutePropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.RoutePropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.RoutingEndpointsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RoutingPropertiesResponse {
     /**
      * The properties related to the custom endpoints to which your IoT hub routes messages based on the routing rules. A maximum of 10 custom endpoints are allowed across all endpoint types for paid hubs and only 1 custom endpoint is allowed across all endpoint types for free hubs.
@@ -36,12 +36,12 @@ public final class RoutingPropertiesResponse {
      */
     private final @Nullable List<RoutePropertiesResponse> routes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RoutingPropertiesResponse(
-        @OutputCustomType.Parameter("endpoints") @Nullable RoutingEndpointsResponse endpoints,
-        @OutputCustomType.Parameter("enrichments") @Nullable List<EnrichmentPropertiesResponse> enrichments,
-        @OutputCustomType.Parameter("fallbackRoute") @Nullable FallbackRoutePropertiesResponse fallbackRoute,
-        @OutputCustomType.Parameter("routes") @Nullable List<RoutePropertiesResponse> routes) {
+        @CustomType.Parameter("endpoints") @Nullable RoutingEndpointsResponse endpoints,
+        @CustomType.Parameter("enrichments") @Nullable List<EnrichmentPropertiesResponse> enrichments,
+        @CustomType.Parameter("fallbackRoute") @Nullable FallbackRoutePropertiesResponse fallbackRoute,
+        @CustomType.Parameter("routes") @Nullable List<RoutePropertiesResponse> routes) {
         this.endpoints = endpoints;
         this.enrichments = enrichments;
         this.fallbackRoute = fallbackRoute;

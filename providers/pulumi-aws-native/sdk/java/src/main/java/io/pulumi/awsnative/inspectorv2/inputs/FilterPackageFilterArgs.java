@@ -6,7 +6,7 @@ package io.pulumi.awsnative.inspectorv2.inputs;
 import io.pulumi.awsnative.inspectorv2.inputs.FilterNumberFilterArgs;
 import io.pulumi.awsnative.inspectorv2.inputs.FilterStringFilterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,42 +15,42 @@ public final class FilterPackageFilterArgs extends io.pulumi.resources.ResourceA
 
     public static final FilterPackageFilterArgs Empty = new FilterPackageFilterArgs();
 
-    @InputImport(name="architecture")
+    @Import(name="architecture")
       private final @Nullable Output<FilterStringFilterArgs> architecture;
 
     public Output<FilterStringFilterArgs> getArchitecture() {
         return this.architecture == null ? Output.empty() : this.architecture;
     }
 
-    @InputImport(name="epoch")
+    @Import(name="epoch")
       private final @Nullable Output<FilterNumberFilterArgs> epoch;
 
     public Output<FilterNumberFilterArgs> getEpoch() {
         return this.epoch == null ? Output.empty() : this.epoch;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<FilterStringFilterArgs> name;
 
     public Output<FilterStringFilterArgs> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="release")
+    @Import(name="release")
       private final @Nullable Output<FilterStringFilterArgs> release;
 
     public Output<FilterStringFilterArgs> getRelease() {
         return this.release == null ? Output.empty() : this.release;
     }
 
-    @InputImport(name="sourceLayerHash")
+    @Import(name="sourceLayerHash")
       private final @Nullable Output<FilterStringFilterArgs> sourceLayerHash;
 
     public Output<FilterStringFilterArgs> getSourceLayerHash() {
         return this.sourceLayerHash == null ? Output.empty() : this.sourceLayerHash;
     }
 
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<FilterStringFilterArgs> version;
 
     public Output<FilterStringFilterArgs> getVersion() {

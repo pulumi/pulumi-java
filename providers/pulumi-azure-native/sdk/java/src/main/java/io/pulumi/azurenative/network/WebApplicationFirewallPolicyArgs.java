@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.ManagedRulesDefinitionArgs;
 import io.pulumi.azurenative.network.inputs.PolicySettingsArgs;
 import io.pulumi.azurenative.network.inputs.WebApplicationFirewallCustomRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * The custom rules inside the policy.
      * 
      */
-    @InputImport(name="customRules")
+    @Import(name="customRules")
       private final @Nullable Output<List<WebApplicationFirewallCustomRuleArgs>> customRules;
 
     public Output<List<WebApplicationFirewallCustomRuleArgs>> getCustomRules() {
@@ -34,7 +34,7 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -45,7 +45,7 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -56,7 +56,7 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * Describes the managedRules structure.
      * 
      */
-    @InputImport(name="managedRules", required=true)
+    @Import(name="managedRules", required=true)
       private final Output<ManagedRulesDefinitionArgs> managedRules;
 
     public Output<ManagedRulesDefinitionArgs> getManagedRules() {
@@ -67,7 +67,7 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * The name of the policy.
      * 
      */
-    @InputImport(name="policyName")
+    @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
     public Output<String> getPolicyName() {
@@ -78,7 +78,7 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * The PolicySettings for policy.
      * 
      */
-    @InputImport(name="policySettings")
+    @Import(name="policySettings")
       private final @Nullable Output<PolicySettingsArgs> policySettings;
 
     public Output<PolicySettingsArgs> getPolicySettings() {
@@ -89,7 +89,7 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -100,7 +100,7 @@ public final class WebApplicationFirewallPolicyArgs extends io.pulumi.resources.
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

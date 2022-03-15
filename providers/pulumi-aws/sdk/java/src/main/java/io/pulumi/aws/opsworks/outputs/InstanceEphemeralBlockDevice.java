@@ -3,19 +3,19 @@
 
 package io.pulumi.aws.opsworks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceEphemeralBlockDevice {
     private final String deviceName;
     private final String virtualName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceEphemeralBlockDevice(
-        @OutputCustomType.Parameter("deviceName") String deviceName,
-        @OutputCustomType.Parameter("virtualName") String virtualName) {
+        @CustomType.Parameter("deviceName") String deviceName,
+        @CustomType.Parameter("virtualName") String virtualName) {
         this.deviceName = deviceName;
         this.virtualName = virtualName;
     }

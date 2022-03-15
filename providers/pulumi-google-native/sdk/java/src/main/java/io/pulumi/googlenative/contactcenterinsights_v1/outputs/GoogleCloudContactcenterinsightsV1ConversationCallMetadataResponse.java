@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse {
     /**
      * The audio channel that contains the agent.
@@ -20,10 +20,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
      */
     private final Integer customerChannel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse(
-        @OutputCustomType.Parameter("agentChannel") Integer agentChannel,
-        @OutputCustomType.Parameter("customerChannel") Integer customerChannel) {
+        @CustomType.Parameter("agentChannel") Integer agentChannel,
+        @CustomType.Parameter("customerChannel") Integer customerChannel) {
         this.agentChannel = agentChannel;
         this.customerChannel = customerChannel;
     }

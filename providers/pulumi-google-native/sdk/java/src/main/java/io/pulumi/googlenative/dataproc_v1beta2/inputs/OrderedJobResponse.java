@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.HadoopJobResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.HiveJobResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.JobSchedulingResponse;
@@ -31,7 +31,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Job is a Hadoop job.
      * 
      */
-    @InputImport(name="hadoopJob", required=true)
+    @Import(name="hadoopJob", required=true)
       private final HadoopJobResponse hadoopJob;
 
     public HadoopJobResponse getHadoopJob() {
@@ -42,7 +42,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Job is a Hive job.
      * 
      */
-    @InputImport(name="hiveJob", required=true)
+    @Import(name="hiveJob", required=true)
       private final HiveJobResponse hiveJob;
 
     public HiveJobResponse getHiveJob() {
@@ -53,7 +53,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The labels to associate with this job.Label keys must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}{0,62}Label values must be between 1 and 63 characters long, and must conform to the following regular expression: \p{Ll}\p{Lo}\p{N}_-{0,63}No more than 32 labels can be associated with a given job.
      * 
      */
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
@@ -64,7 +64,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Job is a Pig job.
      * 
      */
-    @InputImport(name="pigJob", required=true)
+    @Import(name="pigJob", required=true)
       private final PigJobResponse pigJob;
 
     public PigJobResponse getPigJob() {
@@ -75,7 +75,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.
      * 
      */
-    @InputImport(name="prerequisiteStepIds", required=true)
+    @Import(name="prerequisiteStepIds", required=true)
       private final List<String> prerequisiteStepIds;
 
     public List<String> getPrerequisiteStepIds() {
@@ -86,7 +86,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Job is a Presto job.
      * 
      */
-    @InputImport(name="prestoJob", required=true)
+    @Import(name="prestoJob", required=true)
       private final PrestoJobResponse prestoJob;
 
     public PrestoJobResponse getPrestoJob() {
@@ -97,7 +97,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Job is a PySpark job.
      * 
      */
-    @InputImport(name="pysparkJob", required=true)
+    @Import(name="pysparkJob", required=true)
       private final PySparkJobResponse pysparkJob;
 
     public PySparkJobResponse getPysparkJob() {
@@ -108,7 +108,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Job scheduling configuration.
      * 
      */
-    @InputImport(name="scheduling", required=true)
+    @Import(name="scheduling", required=true)
       private final JobSchedulingResponse scheduling;
 
     public JobSchedulingResponse getScheduling() {
@@ -119,7 +119,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Job is a Spark job.
      * 
      */
-    @InputImport(name="sparkJob", required=true)
+    @Import(name="sparkJob", required=true)
       private final SparkJobResponse sparkJob;
 
     public SparkJobResponse getSparkJob() {
@@ -130,7 +130,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Job is a SparkR job.
      * 
      */
-    @InputImport(name="sparkRJob", required=true)
+    @Import(name="sparkRJob", required=true)
       private final SparkRJobResponse sparkRJob;
 
     public SparkRJobResponse getSparkRJob() {
@@ -141,7 +141,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Job is a SparkSql job.
      * 
      */
-    @InputImport(name="sparkSqlJob", required=true)
+    @Import(name="sparkSqlJob", required=true)
       private final SparkSqlJobResponse sparkSqlJob;
 
     public SparkSqlJobResponse getSparkSqlJob() {
@@ -152,7 +152,7 @@ public final class OrderedJobResponse extends io.pulumi.resources.InvokeArgs {
      * The step id. The id must be unique among all jobs within the template.The step id is used as prefix for job id, as job goog-dataproc-workflow-step-id label, and in prerequisiteStepIds field from other steps.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
      * 
      */
-    @InputImport(name="stepId", required=true)
+    @Import(name="stepId", required=true)
       private final String stepId;
 
     public String getStepId() {

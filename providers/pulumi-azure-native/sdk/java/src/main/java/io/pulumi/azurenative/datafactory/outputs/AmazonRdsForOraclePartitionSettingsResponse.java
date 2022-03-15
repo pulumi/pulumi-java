@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AmazonRdsForOraclePartitionSettingsResponse {
     /**
      * The name of the column in integer type that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
@@ -33,12 +33,12 @@ public final class AmazonRdsForOraclePartitionSettingsResponse {
      */
     private final @Nullable Object partitionUpperBound;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AmazonRdsForOraclePartitionSettingsResponse(
-        @OutputCustomType.Parameter("partitionColumnName") @Nullable Object partitionColumnName,
-        @OutputCustomType.Parameter("partitionLowerBound") @Nullable Object partitionLowerBound,
-        @OutputCustomType.Parameter("partitionNames") @Nullable List<Object> partitionNames,
-        @OutputCustomType.Parameter("partitionUpperBound") @Nullable Object partitionUpperBound) {
+        @CustomType.Parameter("partitionColumnName") @Nullable Object partitionColumnName,
+        @CustomType.Parameter("partitionLowerBound") @Nullable Object partitionLowerBound,
+        @CustomType.Parameter("partitionNames") @Nullable List<Object> partitionNames,
+        @CustomType.Parameter("partitionUpperBound") @Nullable Object partitionUpperBound) {
         this.partitionColumnName = partitionColumnName;
         this.partitionLowerBound = partitionLowerBound;
         this.partitionNames = partitionNames;

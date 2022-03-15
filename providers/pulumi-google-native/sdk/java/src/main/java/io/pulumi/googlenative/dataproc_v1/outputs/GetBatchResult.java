@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.EnvironmentConfigResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.PySparkBatchResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.RuntimeConfigResponse;
@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBatchResult {
     /**
      * The time when the batch was created.
@@ -105,25 +105,25 @@ public final class GetBatchResult {
      */
     private final String uuid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBatchResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("creator") String creator,
-        @OutputCustomType.Parameter("environmentConfig") EnvironmentConfigResponse environmentConfig,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operation") String operation,
-        @OutputCustomType.Parameter("pysparkBatch") PySparkBatchResponse pysparkBatch,
-        @OutputCustomType.Parameter("runtimeConfig") RuntimeConfigResponse runtimeConfig,
-        @OutputCustomType.Parameter("runtimeInfo") RuntimeInfoResponse runtimeInfo,
-        @OutputCustomType.Parameter("sparkBatch") SparkBatchResponse sparkBatch,
-        @OutputCustomType.Parameter("sparkRBatch") SparkRBatchResponse sparkRBatch,
-        @OutputCustomType.Parameter("sparkSqlBatch") SparkSqlBatchResponse sparkSqlBatch,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stateHistory") List<StateHistoryResponse> stateHistory,
-        @OutputCustomType.Parameter("stateMessage") String stateMessage,
-        @OutputCustomType.Parameter("stateTime") String stateTime,
-        @OutputCustomType.Parameter("uuid") String uuid) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("creator") String creator,
+        @CustomType.Parameter("environmentConfig") EnvironmentConfigResponse environmentConfig,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operation") String operation,
+        @CustomType.Parameter("pysparkBatch") PySparkBatchResponse pysparkBatch,
+        @CustomType.Parameter("runtimeConfig") RuntimeConfigResponse runtimeConfig,
+        @CustomType.Parameter("runtimeInfo") RuntimeInfoResponse runtimeInfo,
+        @CustomType.Parameter("sparkBatch") SparkBatchResponse sparkBatch,
+        @CustomType.Parameter("sparkRBatch") SparkRBatchResponse sparkRBatch,
+        @CustomType.Parameter("sparkSqlBatch") SparkSqlBatchResponse sparkSqlBatch,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stateHistory") List<StateHistoryResponse> stateHistory,
+        @CustomType.Parameter("stateMessage") String stateMessage,
+        @CustomType.Parameter("stateTime") String stateTime,
+        @CustomType.Parameter("uuid") String uuid) {
         this.createTime = createTime;
         this.creator = creator;
         this.environmentConfig = environmentConfig;

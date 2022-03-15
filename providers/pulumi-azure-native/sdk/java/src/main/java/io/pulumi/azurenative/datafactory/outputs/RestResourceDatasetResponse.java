@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.DatasetResponseFolder;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RestResourceDatasetResponse {
     /**
      * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
@@ -84,21 +84,21 @@ public final class RestResourceDatasetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RestResourceDatasetResponse(
-        @OutputCustomType.Parameter("additionalHeaders") @Nullable Object additionalHeaders,
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
-        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
-        @OutputCustomType.Parameter("paginationRules") @Nullable Object paginationRules,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("relativeUrl") @Nullable Object relativeUrl,
-        @OutputCustomType.Parameter("requestBody") @Nullable Object requestBody,
-        @OutputCustomType.Parameter("requestMethod") @Nullable Object requestMethod,
-        @OutputCustomType.Parameter("schema") @Nullable Object schema,
-        @OutputCustomType.Parameter("structure") @Nullable Object structure,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("additionalHeaders") @Nullable Object additionalHeaders,
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
+        @CustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @CustomType.Parameter("paginationRules") @Nullable Object paginationRules,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("relativeUrl") @Nullable Object relativeUrl,
+        @CustomType.Parameter("requestBody") @Nullable Object requestBody,
+        @CustomType.Parameter("requestMethod") @Nullable Object requestMethod,
+        @CustomType.Parameter("schema") @Nullable Object schema,
+        @CustomType.Parameter("structure") @Nullable Object structure,
+        @CustomType.Parameter("type") String type) {
         this.additionalHeaders = additionalHeaders;
         this.annotations = annotations;
         this.description = description;

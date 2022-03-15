@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigtableadmin_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigtableadmin_v2.TableArgs;
@@ -23,7 +23,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Map from cluster ID to per-cluster table state. If it could not be determined whether or not the table has data in a particular cluster (for example, if its zone is unavailable), then there will be an entry for the cluster with UNKNOWN `replication_status`. Views: `REPLICATION_VIEW`, `ENCRYPTION_VIEW`, `FULL`
      * 
      */
-    @OutputExport(name="clusterStates", type=Map.class, parameters={String.class, String.class})
+    @Export(name="clusterStates", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> clusterStates;
 
     /**
@@ -37,7 +37,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The column families configured for this table, mapped by column family ID. Views: `SCHEMA_VIEW`, `FULL`
      * 
      */
-    @OutputExport(name="columnFamilies", type=Map.class, parameters={String.class, String.class})
+    @Export(name="columnFamilies", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> columnFamilies;
 
     /**
@@ -51,7 +51,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Immutable. The granularity (i.e. `MILLIS`) at which timestamps are stored in this table. Timestamps not matching the granularity will be rejected. If unspecified at creation time, the value will be set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.
      * 
      */
-    @OutputExport(name="granularity", type=String.class, parameters={})
+    @Export(name="granularity", type=String.class, parameters={})
     private Output<String> granularity;
 
     /**
@@ -65,7 +65,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The unique name of the table. Values are of the form `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`. Views: `NAME_ONLY`, `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * If this table was restored from another data source (e.g. a backup), this field will be populated with information about the restore.
      * 
      */
-    @OutputExport(name="restoreInfo", type=RestoreInfoResponse.class, parameters={})
+    @Export(name="restoreInfo", type=RestoreInfoResponse.class, parameters={})
     private Output<RestoreInfoResponse> restoreInfo;
 
     /**

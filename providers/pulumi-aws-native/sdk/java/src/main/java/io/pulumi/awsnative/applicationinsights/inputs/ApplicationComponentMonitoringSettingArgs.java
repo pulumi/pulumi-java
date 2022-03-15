@@ -6,7 +6,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationComponentMonitoringSettingComponentConfigurationMode;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationComponentConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
      * The ARN of the compnonent.
      * 
      */
-    @InputImport(name="componentARN")
+    @Import(name="componentARN")
       private final @Nullable Output<String> componentARN;
 
     public Output<String> getComponentARN() {
@@ -35,7 +35,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
      * The component monitoring configuration mode.
      * 
      */
-    @InputImport(name="componentConfigurationMode", required=true)
+    @Import(name="componentConfigurationMode", required=true)
       private final Output<ApplicationComponentMonitoringSettingComponentConfigurationMode> componentConfigurationMode;
 
     public Output<ApplicationComponentMonitoringSettingComponentConfigurationMode> getComponentConfigurationMode() {
@@ -46,7 +46,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
      * The name of the component.
      * 
      */
-    @InputImport(name="componentName")
+    @Import(name="componentName")
       private final @Nullable Output<String> componentName;
 
     public Output<String> getComponentName() {
@@ -57,7 +57,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
      * The monitoring configuration of the component.
      * 
      */
-    @InputImport(name="customComponentConfiguration")
+    @Import(name="customComponentConfiguration")
       private final @Nullable Output<ApplicationComponentConfigurationArgs> customComponentConfiguration;
 
     public Output<ApplicationComponentConfigurationArgs> getCustomComponentConfiguration() {
@@ -68,7 +68,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
      * The overwritten settings on default component monitoring configuration.
      * 
      */
-    @InputImport(name="defaultOverwriteComponentConfiguration")
+    @Import(name="defaultOverwriteComponentConfiguration")
       private final @Nullable Output<ApplicationComponentConfigurationArgs> defaultOverwriteComponentConfiguration;
 
     public Output<ApplicationComponentConfigurationArgs> getDefaultOverwriteComponentConfiguration() {
@@ -79,7 +79,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
      * The tier of the application component.
      * 
      */
-    @InputImport(name="tier", required=true)
+    @Import(name="tier", required=true)
       private final Output<String> tier;
 
     public Output<String> getTier() {

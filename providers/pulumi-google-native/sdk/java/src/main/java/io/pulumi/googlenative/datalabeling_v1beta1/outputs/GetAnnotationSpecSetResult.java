@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1AnnotationSpecResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAnnotationSpecSetResult {
     /**
      * The array of AnnotationSpecs that you define when you create the AnnotationSpecSet. These are the possible labels for the labeling task.
@@ -37,13 +37,13 @@ public final class GetAnnotationSpecSetResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAnnotationSpecSetResult(
-        @OutputCustomType.Parameter("annotationSpecs") List<GoogleCloudDatalabelingV1beta1AnnotationSpecResponse> annotationSpecs,
-        @OutputCustomType.Parameter("blockingResources") List<String> blockingResources,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("annotationSpecs") List<GoogleCloudDatalabelingV1beta1AnnotationSpecResponse> annotationSpecs,
+        @CustomType.Parameter("blockingResources") List<String> blockingResources,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name) {
         this.annotationSpecs = annotationSpecs;
         this.blockingResources = blockingResources;
         this.description = description;

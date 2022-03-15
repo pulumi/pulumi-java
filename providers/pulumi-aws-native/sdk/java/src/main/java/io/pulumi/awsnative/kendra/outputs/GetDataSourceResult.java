@@ -5,14 +5,14 @@ package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDataSourceResult {
     private final @Nullable String arn;
     private final @Nullable DataSourceConfiguration dataSourceConfiguration;
@@ -28,17 +28,17 @@ public final class GetDataSourceResult {
      */
     private final @Nullable List<DataSourceTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDataSourceResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("dataSourceConfiguration") @Nullable DataSourceConfiguration dataSourceConfiguration,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("indexId") @Nullable String indexId,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("schedule") @Nullable String schedule,
-        @OutputCustomType.Parameter("tags") @Nullable List<DataSourceTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("dataSourceConfiguration") @Nullable DataSourceConfiguration dataSourceConfiguration,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("indexId") @Nullable String indexId,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("schedule") @Nullable String schedule,
+        @CustomType.Parameter("tags") @Nullable List<DataSourceTag> tags) {
         this.arn = arn;
         this.dataSourceConfiguration = dataSourceConfiguration;
         this.description = description;

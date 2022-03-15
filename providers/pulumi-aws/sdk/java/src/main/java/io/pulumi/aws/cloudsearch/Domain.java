@@ -10,7 +10,7 @@ import io.pulumi.aws.cloudsearch.outputs.DomainEndpointOptions;
 import io.pulumi.aws.cloudsearch.outputs.DomainIndexField;
 import io.pulumi.aws.cloudsearch.outputs.DomainScalingParameters;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The domain's ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The service endpoint for updating documents in a search domain.
      * 
      */
-    @OutputExport(name="documentServiceEndpoint", type=String.class, parameters={})
+    @Export(name="documentServiceEndpoint", type=String.class, parameters={})
     private Output<String> documentServiceEndpoint;
 
     /**
@@ -61,7 +61,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * An internally generated unique identifier for the domain.
      * 
      */
-    @OutputExport(name="domainId", type=String.class, parameters={})
+    @Export(name="domainId", type=String.class, parameters={})
     private Output<String> domainId;
 
     /**
@@ -75,7 +75,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Domain endpoint options. Documented below.
      * 
      */
-    @OutputExport(name="endpointOptions", type=DomainEndpointOptions.class, parameters={})
+    @Export(name="endpointOptions", type=DomainEndpointOptions.class, parameters={})
     private Output<DomainEndpointOptions> endpointOptions;
 
     /**
@@ -89,7 +89,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The index fields for documents added to the domain. Documented below.
      * 
      */
-    @OutputExport(name="indexFields", type=List.class, parameters={DomainIndexField.class})
+    @Export(name="indexFields", type=List.class, parameters={DomainIndexField.class})
     private Output</* @Nullable */ List<DomainIndexField>> indexFields;
 
     /**
@@ -103,7 +103,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Whether or not to maintain extra instances for the domain in a second Availability Zone to ensure high availability.
      * 
      */
-    @OutputExport(name="multiAz", type=Boolean.class, parameters={})
+    @Export(name="multiAz", type=Boolean.class, parameters={})
     private Output<Boolean> multiAz;
 
     /**
@@ -117,7 +117,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * A unique name for the field. Field names must begin with a letter and be at least 3 and no more than 64 characters long. The allowed characters are: `a`-`z` (lower-case letters), `0`-`9`, and `_` (underscore). The name `score` is reserved and cannot be used as a field name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -131,7 +131,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Domain scaling parameters. Documented below.
      * 
      */
-    @OutputExport(name="scalingParameters", type=DomainScalingParameters.class, parameters={})
+    @Export(name="scalingParameters", type=DomainScalingParameters.class, parameters={})
     private Output<DomainScalingParameters> scalingParameters;
 
     /**
@@ -145,7 +145,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The service endpoint for requesting search results from a search domain.
      * 
      */
-    @OutputExport(name="searchServiceEndpoint", type=String.class, parameters={})
+    @Export(name="searchServiceEndpoint", type=String.class, parameters={})
     private Output<String> searchServiceEndpoint;
 
     /**

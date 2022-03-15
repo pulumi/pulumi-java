@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Nfs3TargetResponse {
     /**
      * IP address or host name of an NFSv3 host (e.g., 10.0.44.44).
@@ -22,10 +22,10 @@ public final class Nfs3TargetResponse {
      */
     private final @Nullable String usageModel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Nfs3TargetResponse(
-        @OutputCustomType.Parameter("target") @Nullable String target,
-        @OutputCustomType.Parameter("usageModel") @Nullable String usageModel) {
+        @CustomType.Parameter("target") @Nullable String target,
+        @CustomType.Parameter("usageModel") @Nullable String usageModel) {
         this.target = target;
         this.usageModel = usageModel;
     }

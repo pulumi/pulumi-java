@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class BlobInventoryPolicyFilterResponse extends io.pulumi.resources
      * An array of predefined enum values. Valid values include blockBlob, appendBlob, pageBlob. Hns accounts does not support pageBlobs.
      * 
      */
-    @InputImport(name="blobTypes", required=true)
+    @Import(name="blobTypes", required=true)
       private final List<String> blobTypes;
 
     public List<String> getBlobTypes() {
@@ -35,7 +35,7 @@ public final class BlobInventoryPolicyFilterResponse extends io.pulumi.resources
      * Includes blob versions in blob inventory when value set to true.
      * 
      */
-    @InputImport(name="includeBlobVersions")
+    @Import(name="includeBlobVersions")
       private final @Nullable Boolean includeBlobVersions;
 
     public Optional<Boolean> getIncludeBlobVersions() {
@@ -46,7 +46,7 @@ public final class BlobInventoryPolicyFilterResponse extends io.pulumi.resources
      * Includes blob snapshots in blob inventory when value set to true.
      * 
      */
-    @InputImport(name="includeSnapshots")
+    @Import(name="includeSnapshots")
       private final @Nullable Boolean includeSnapshots;
 
     public Optional<Boolean> getIncludeSnapshots() {
@@ -57,7 +57,7 @@ public final class BlobInventoryPolicyFilterResponse extends io.pulumi.resources
      * An array of strings for blob prefixes to be matched.
      * 
      */
-    @InputImport(name="prefixMatch")
+    @Import(name="prefixMatch")
       private final @Nullable List<String> prefixMatch;
 
     public List<String> getPrefixMatch() {

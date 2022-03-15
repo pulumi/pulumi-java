@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCacheResult {
     /**
      * Runtime connection string to cache
@@ -47,15 +47,15 @@ public final class GetCacheResult {
      */
     private final String useFromLocation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCacheResult(
-        @OutputCustomType.Parameter("connectionString") String connectionString,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("useFromLocation") String useFromLocation) {
+        @CustomType.Parameter("connectionString") String connectionString,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("useFromLocation") String useFromLocation) {
         this.connectionString = connectionString;
         this.description = description;
         this.id = id;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.containerregistry.enums.OS;
 import io.pulumi.azurenative.containerregistry.enums.Variant;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The OS architecture.
      * 
      */
-    @InputImport(name="architecture")
+    @Import(name="architecture")
       private final @Nullable Output<Either<String,Architecture>> architecture;
 
     public Output<Either<String,Architecture>> getArchitecture() {
@@ -37,7 +37,7 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The operating system type required for the run.
      * 
      */
-    @InputImport(name="os", required=true)
+    @Import(name="os", required=true)
       private final Output<Either<String,OS>> os;
 
     public Output<Either<String,OS>> getOs() {
@@ -48,7 +48,7 @@ public final class PlatformPropertiesArgs extends io.pulumi.resources.ResourceAr
      * Variant of the CPU.
      * 
      */
-    @InputImport(name="variant")
+    @Import(name="variant")
       private final @Nullable Output<Either<String,Variant>> variant;
 
     public Output<Either<String,Variant>> getVariant() {

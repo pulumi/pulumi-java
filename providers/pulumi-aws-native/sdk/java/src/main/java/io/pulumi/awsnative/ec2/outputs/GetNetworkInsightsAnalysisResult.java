@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAlternatePathHint;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisExplanation;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisPathComponent;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNetworkInsightsAnalysisResult {
     private final @Nullable List<NetworkInsightsAnalysisAlternatePathHint> alternatePathHints;
     private final @Nullable List<NetworkInsightsAnalysisExplanation> explanations;
@@ -30,19 +30,19 @@ public final class GetNetworkInsightsAnalysisResult {
     private final @Nullable String statusMessage;
     private final @Nullable List<NetworkInsightsAnalysisTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNetworkInsightsAnalysisResult(
-        @OutputCustomType.Parameter("alternatePathHints") @Nullable List<NetworkInsightsAnalysisAlternatePathHint> alternatePathHints,
-        @OutputCustomType.Parameter("explanations") @Nullable List<NetworkInsightsAnalysisExplanation> explanations,
-        @OutputCustomType.Parameter("forwardPathComponents") @Nullable List<NetworkInsightsAnalysisPathComponent> forwardPathComponents,
-        @OutputCustomType.Parameter("networkInsightsAnalysisArn") @Nullable String networkInsightsAnalysisArn,
-        @OutputCustomType.Parameter("networkInsightsAnalysisId") @Nullable String networkInsightsAnalysisId,
-        @OutputCustomType.Parameter("networkPathFound") @Nullable Boolean networkPathFound,
-        @OutputCustomType.Parameter("returnPathComponents") @Nullable List<NetworkInsightsAnalysisPathComponent> returnPathComponents,
-        @OutputCustomType.Parameter("startDate") @Nullable String startDate,
-        @OutputCustomType.Parameter("status") @Nullable NetworkInsightsAnalysisStatus status,
-        @OutputCustomType.Parameter("statusMessage") @Nullable String statusMessage,
-        @OutputCustomType.Parameter("tags") @Nullable List<NetworkInsightsAnalysisTag> tags) {
+        @CustomType.Parameter("alternatePathHints") @Nullable List<NetworkInsightsAnalysisAlternatePathHint> alternatePathHints,
+        @CustomType.Parameter("explanations") @Nullable List<NetworkInsightsAnalysisExplanation> explanations,
+        @CustomType.Parameter("forwardPathComponents") @Nullable List<NetworkInsightsAnalysisPathComponent> forwardPathComponents,
+        @CustomType.Parameter("networkInsightsAnalysisArn") @Nullable String networkInsightsAnalysisArn,
+        @CustomType.Parameter("networkInsightsAnalysisId") @Nullable String networkInsightsAnalysisId,
+        @CustomType.Parameter("networkPathFound") @Nullable Boolean networkPathFound,
+        @CustomType.Parameter("returnPathComponents") @Nullable List<NetworkInsightsAnalysisPathComponent> returnPathComponents,
+        @CustomType.Parameter("startDate") @Nullable String startDate,
+        @CustomType.Parameter("status") @Nullable NetworkInsightsAnalysisStatus status,
+        @CustomType.Parameter("statusMessage") @Nullable String statusMessage,
+        @CustomType.Parameter("tags") @Nullable List<NetworkInsightsAnalysisTag> tags) {
         this.alternatePathHints = alternatePathHints;
         this.explanations = explanations;
         this.forwardPathComponents = forwardPathComponents;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the share account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -29,7 +29,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
      * The expiration date for the invitation and share subscription.
      * 
      */
-    @InputImport(name="expirationDate")
+    @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
     public Output<String> getExpirationDate() {
@@ -40,7 +40,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the invitation.
      * 
      */
-    @InputImport(name="invitationName")
+    @Import(name="invitationName")
       private final @Nullable Output<String> invitationName;
 
     public Output<String> getInvitationName() {
@@ -51,7 +51,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -62,7 +62,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the share to send the invitation for.
      * 
      */
-    @InputImport(name="shareName", required=true)
+    @Import(name="shareName", required=true)
       private final Output<String> shareName;
 
     public Output<String> getShareName() {
@@ -73,7 +73,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
      * The target Azure AD Id. Can't be combined with email.
      * 
      */
-    @InputImport(name="targetActiveDirectoryId")
+    @Import(name="targetActiveDirectoryId")
       private final @Nullable Output<String> targetActiveDirectoryId;
 
     public Output<String> getTargetActiveDirectoryId() {
@@ -84,7 +84,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
      * The email the invitation is directed to.
      * 
      */
-    @InputImport(name="targetEmail")
+    @Import(name="targetEmail")
       private final @Nullable Output<String> targetEmail;
 
     public Output<String> getTargetEmail() {
@@ -97,7 +97,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
      * invitations to specific users or applications in an AD tenant.
      * 
      */
-    @InputImport(name="targetObjectId")
+    @Import(name="targetObjectId")
       private final @Nullable Output<String> targetObjectId;
 
     public Output<String> getTargetObjectId() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.alb;
 import io.pulumi.aws.alb.inputs.TargetGroupHealthCheckArgs;
 import io.pulumi.aws.alb.inputs.TargetGroupStickinessArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class TargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to terminate connections at the end of the deregistration timeout on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#deregistration-delay) for more information. Default is `false`.
      * 
      */
-    @InputImport(name="connectionTermination")
+    @Import(name="connectionTermination")
       private final @Nullable Output<Boolean> connectionTermination;
 
     public Output<Boolean> getConnectionTermination() {
@@ -34,7 +34,7 @@ public final class TargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Amount time for Elastic Load Balancing to wait before changing the state of a deregistering target from draining to unused. The range is 0-3600 seconds. The default value is 300 seconds.
      * 
      */
-    @InputImport(name="deregistrationDelay")
+    @Import(name="deregistrationDelay")
       private final @Nullable Output<Integer> deregistrationDelay;
 
     public Output<Integer> getDeregistrationDelay() {
@@ -45,7 +45,7 @@ public final class TargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Health Check configuration block. Detailed below.
      * 
      */
-    @InputImport(name="healthCheck")
+    @Import(name="healthCheck")
       private final @Nullable Output<TargetGroupHealthCheckArgs> healthCheck;
 
     public Output<TargetGroupHealthCheckArgs> getHealthCheck() {
@@ -56,7 +56,7 @@ public final class TargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the request and response headers exchanged between the load balancer and the Lambda function include arrays of values or strings. Only applies when `target_type` is `lambda`. Default is `false`.
      * 
      */
-    @InputImport(name="lambdaMultiValueHeadersEnabled")
+    @Import(name="lambdaMultiValueHeadersEnabled")
       private final @Nullable Output<Boolean> lambdaMultiValueHeadersEnabled;
 
     public Output<Boolean> getLambdaMultiValueHeadersEnabled() {
@@ -67,7 +67,7 @@ public final class TargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Determines how the load balancer selects targets when routing requests. Only applicable for Application Load Balancer Target Groups. The value is `round_robin` or `least_outstanding_requests`. The default is `round_robin`.
      * 
      */
-    @InputImport(name="loadBalancingAlgorithmType")
+    @Import(name="loadBalancingAlgorithmType")
       private final @Nullable Output<String> loadBalancingAlgorithmType;
 
     public Output<String> getLoadBalancingAlgorithmType() {
@@ -78,7 +78,7 @@ public final class TargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the target group. If omitted, this provider will assign a random, unique name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -89,7 +89,7 @@ public final class TargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`. Cannot be longer than 6 characters.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -100,7 +100,7 @@ public final class TargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Port to use to connect with the target. Valid values are either ports 1-65535, or `traffic-port`. Defaults to `traffic-port`.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -111,7 +111,7 @@ public final class TargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Whether client IP preservation is enabled. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#client-ip-preservation) for more information.
      * 
      */
-    @InputImport(name="preserveClientIp")
+    @Import(name="preserveClientIp")
       private final @Nullable Output<String> preserveClientIp;
 
     public Output<String> getPreserveClientIp() {
@@ -122,7 +122,7 @@ public final class TargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Protocol to use to connect with the target. Defaults to `HTTP`. Not applicable when `target_type` is `lambda`.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
@@ -133,7 +133,7 @@ public final class TargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Only applicable when `protocol` is `HTTP` or `HTTPS`. The protocol version. Specify GRPC to send requests to targets using gRPC. Specify HTTP2 to send requests to targets using HTTP/2. The default is HTTP1, which sends requests to targets using HTTP/1.1
      * 
      */
-    @InputImport(name="protocolVersion")
+    @Import(name="protocolVersion")
       private final @Nullable Output<String> protocolVersion;
 
     public Output<String> getProtocolVersion() {
@@ -144,7 +144,7 @@ public final class TargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to enable support for proxy protocol v2 on Network Load Balancers. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/load-balancer-target-groups.html#proxy-protocol) for more information. Default is `false`.
      * 
      */
-    @InputImport(name="proxyProtocolV2")
+    @Import(name="proxyProtocolV2")
       private final @Nullable Output<Boolean> proxyProtocolV2;
 
     public Output<Boolean> getProxyProtocolV2() {
@@ -155,7 +155,7 @@ public final class TargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Amount time for targets to warm up before the load balancer sends them a full share of requests. The range is 30-900 seconds or 0 to disable. The default value is 0 seconds.
      * 
      */
-    @InputImport(name="slowStart")
+    @Import(name="slowStart")
       private final @Nullable Output<Integer> slowStart;
 
     public Output<Integer> getSlowStart() {
@@ -166,7 +166,7 @@ public final class TargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Stickiness configuration block. Detailed below.
      * 
      */
-    @InputImport(name="stickiness")
+    @Import(name="stickiness")
       private final @Nullable Output<TargetGroupStickinessArgs> stickiness;
 
     public Output<TargetGroupStickinessArgs> getStickiness() {
@@ -177,7 +177,7 @@ public final class TargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -188,7 +188,7 @@ public final class TargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Type of target that you must specify when registering targets with this target group. See [doc](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateTargetGroup.html) for supported values. The default is `instance`.
      * 
      */
-    @InputImport(name="targetType")
+    @Import(name="targetType")
       private final @Nullable Output<String> targetType;
 
     public Output<String> getTargetType() {
@@ -199,7 +199,7 @@ public final class TargetGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier of the VPC in which to create the target group. Required when `target_type` is `instance` or `ip`. Does not apply when `target_type` is `lambda`.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

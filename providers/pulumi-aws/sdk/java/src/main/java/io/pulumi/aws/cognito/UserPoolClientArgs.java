@@ -6,7 +6,7 @@ package io.pulumi.aws.cognito;
 import io.pulumi.aws.cognito.inputs.UserPoolClientAnalyticsConfigurationArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolClientTokenValidityUnitsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * Time limit, between 5 minutes and 1 day, after which the access token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
      * 
      */
-    @InputImport(name="accessTokenValidity")
+    @Import(name="accessTokenValidity")
       private final @Nullable Output<Integer> accessTokenValidity;
 
     public Output<Integer> getAccessTokenValidity() {
@@ -34,7 +34,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * List of allowed OAuth flows (code, implicit, client_credentials).
      * 
      */
-    @InputImport(name="allowedOauthFlows")
+    @Import(name="allowedOauthFlows")
       private final @Nullable Output<List<String>> allowedOauthFlows;
 
     public Output<List<String>> getAllowedOauthFlows() {
@@ -45,7 +45,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
      * 
      */
-    @InputImport(name="allowedOauthFlowsUserPoolClient")
+    @Import(name="allowedOauthFlowsUserPoolClient")
       private final @Nullable Output<Boolean> allowedOauthFlowsUserPoolClient;
 
     public Output<Boolean> getAllowedOauthFlowsUserPoolClient() {
@@ -56,7 +56,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
      * 
      */
-    @InputImport(name="allowedOauthScopes")
+    @Import(name="allowedOauthScopes")
       private final @Nullable Output<List<String>> allowedOauthScopes;
 
     public Output<List<String>> getAllowedOauthScopes() {
@@ -67,7 +67,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for Amazon Pinpoint analytics for collecting metrics for this user pool. Detailed below.
      * 
      */
-    @InputImport(name="analyticsConfiguration")
+    @Import(name="analyticsConfiguration")
       private final @Nullable Output<UserPoolClientAnalyticsConfigurationArgs> analyticsConfiguration;
 
     public Output<UserPoolClientAnalyticsConfigurationArgs> getAnalyticsConfiguration() {
@@ -78,7 +78,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * List of allowed callback URLs for the identity providers.
      * 
      */
-    @InputImport(name="callbackUrls")
+    @Import(name="callbackUrls")
       private final @Nullable Output<List<String>> callbackUrls;
 
     public Output<List<String>> getCallbackUrls() {
@@ -89,7 +89,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * Default redirect URI. Must be in the list of callback URLs.
      * 
      */
-    @InputImport(name="defaultRedirectUri")
+    @Import(name="defaultRedirectUri")
       private final @Nullable Output<String> defaultRedirectUri;
 
     public Output<String> getDefaultRedirectUri() {
@@ -100,7 +100,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * Enables or disables token revocation.
      * 
      */
-    @InputImport(name="enableTokenRevocation")
+    @Import(name="enableTokenRevocation")
       private final @Nullable Output<Boolean> enableTokenRevocation;
 
     public Output<Boolean> getEnableTokenRevocation() {
@@ -111,7 +111,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
      * 
      */
-    @InputImport(name="explicitAuthFlows")
+    @Import(name="explicitAuthFlows")
       private final @Nullable Output<List<String>> explicitAuthFlows;
 
     public Output<List<String>> getExplicitAuthFlows() {
@@ -122,7 +122,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * Should an application secret be generated.
      * 
      */
-    @InputImport(name="generateSecret")
+    @Import(name="generateSecret")
       private final @Nullable Output<Boolean> generateSecret;
 
     public Output<Boolean> getGenerateSecret() {
@@ -133,7 +133,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * Time limit, between 5 minutes and 1 day, after which the ID token is no longer valid and cannot be used. This value will be overridden if you have entered a value in `token_validity_units`.
      * 
      */
-    @InputImport(name="idTokenValidity")
+    @Import(name="idTokenValidity")
       private final @Nullable Output<Integer> idTokenValidity;
 
     public Output<Integer> getIdTokenValidity() {
@@ -144,7 +144,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * List of allowed logout URLs for the identity providers.
      * 
      */
-    @InputImport(name="logoutUrls")
+    @Import(name="logoutUrls")
       private final @Nullable Output<List<String>> logoutUrls;
 
     public Output<List<String>> getLogoutUrls() {
@@ -155,7 +155,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the application client.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -166,7 +166,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
      * 
      */
-    @InputImport(name="preventUserExistenceErrors")
+    @Import(name="preventUserExistenceErrors")
       private final @Nullable Output<String> preventUserExistenceErrors;
 
     public Output<String> getPreventUserExistenceErrors() {
@@ -177,7 +177,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * List of user pool attributes the application client can read from.
      * 
      */
-    @InputImport(name="readAttributes")
+    @Import(name="readAttributes")
       private final @Nullable Output<List<String>> readAttributes;
 
     public Output<List<String>> getReadAttributes() {
@@ -188,7 +188,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * Time limit in days refresh tokens are valid for.
      * 
      */
-    @InputImport(name="refreshTokenValidity")
+    @Import(name="refreshTokenValidity")
       private final @Nullable Output<Integer> refreshTokenValidity;
 
     public Output<Integer> getRefreshTokenValidity() {
@@ -199,7 +199,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * List of provider names for the identity providers that are supported on this client. Uses the `provider_name` attribute of `aws.cognito.IdentityProvider` resource(s), or the equivalent string(s).
      * 
      */
-    @InputImport(name="supportedIdentityProviders")
+    @Import(name="supportedIdentityProviders")
       private final @Nullable Output<List<String>> supportedIdentityProviders;
 
     public Output<List<String>> getSupportedIdentityProviders() {
@@ -210,7 +210,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for units in which the validity times are represented in. Detailed below.
      * 
      */
-    @InputImport(name="tokenValidityUnits")
+    @Import(name="tokenValidityUnits")
       private final @Nullable Output<UserPoolClientTokenValidityUnitsArgs> tokenValidityUnits;
 
     public Output<UserPoolClientTokenValidityUnitsArgs> getTokenValidityUnits() {
@@ -221,7 +221,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * User pool the client belongs to.
      * 
      */
-    @InputImport(name="userPoolId", required=true)
+    @Import(name="userPoolId", required=true)
       private final Output<String> userPoolId;
 
     public Output<String> getUserPoolId() {
@@ -232,7 +232,7 @@ public final class UserPoolClientArgs extends io.pulumi.resources.ResourceArgs {
      * List of user pool attributes the application client can write to.
      * 
      */
-    @InputImport(name="writeAttributes")
+    @Import(name="writeAttributes")
       private final @Nullable Output<List<String>> writeAttributes;
 
     public Output<List<String>> getWriteAttributes() {

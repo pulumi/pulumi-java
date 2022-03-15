@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FunctionEnvironment {
     /**
      * Environment variable key-value pairs.
@@ -17,8 +17,8 @@ public final class FunctionEnvironment {
      */
     private final @Nullable Object variables;
 
-    @OutputCustomType.Constructor
-    private FunctionEnvironment(@OutputCustomType.Parameter("variables") @Nullable Object variables) {
+    @CustomType.Constructor
+    private FunctionEnvironment(@CustomType.Parameter("variables") @Nullable Object variables) {
         this.variables = variables;
     }
 

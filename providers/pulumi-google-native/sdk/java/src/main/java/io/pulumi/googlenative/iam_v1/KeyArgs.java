@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.iam_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.iam_v1.enums.KeyKeyAlgorithm;
 import io.pulumi.googlenative.iam_v1.enums.KeyPrivateKeyType;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Which type of key and algorithm to use for the key. The default is currently a 2K RSA key. However this may change in the future.
      * 
      */
-    @InputImport(name="keyAlgorithm")
+    @Import(name="keyAlgorithm")
       private final @Nullable Output<KeyKeyAlgorithm> keyAlgorithm;
 
     public Output<KeyKeyAlgorithm> getKeyAlgorithm() {
@@ -31,21 +31,21 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * The output format of the private key. The default value is `TYPE_GOOGLE_CREDENTIALS_FILE`, which is the Google Credentials File format.
      * 
      */
-    @InputImport(name="privateKeyType")
+    @Import(name="privateKeyType")
       private final @Nullable Output<KeyPrivateKeyType> privateKeyType;
 
     public Output<KeyPrivateKeyType> getPrivateKeyType() {
         return this.privateKeyType == null ? Output.empty() : this.privateKeyType;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="serviceAccountId", required=true)
+    @Import(name="serviceAccountId", required=true)
       private final Output<String> serviceAccountId;
 
     public Output<String> getServiceAccountId() {

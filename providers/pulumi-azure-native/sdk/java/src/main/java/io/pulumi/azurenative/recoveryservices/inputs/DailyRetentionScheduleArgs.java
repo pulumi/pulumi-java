@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.RetentionDurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DailyRetentionScheduleArgs extends io.pulumi.resources.Resour
      * Retention duration of retention Policy.
      * 
      */
-    @InputImport(name="retentionDuration")
+    @Import(name="retentionDuration")
       private final @Nullable Output<RetentionDurationArgs> retentionDuration;
 
     public Output<RetentionDurationArgs> getRetentionDuration() {
@@ -35,7 +35,7 @@ public final class DailyRetentionScheduleArgs extends io.pulumi.resources.Resour
      * Retention times of retention policy.
      * 
      */
-    @InputImport(name="retentionTimes")
+    @Import(name="retentionTimes")
       private final @Nullable Output<List<String>> retentionTimes;
 
     public Output<List<String>> getRetentionTimes() {

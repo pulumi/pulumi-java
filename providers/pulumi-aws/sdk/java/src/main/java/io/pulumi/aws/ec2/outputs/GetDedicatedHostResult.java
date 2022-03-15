@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetDedicatedHostFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDedicatedHostResult {
     /**
      * The ARN of the Dedicated Host.
@@ -73,22 +73,22 @@ public final class GetDedicatedHostResult {
      */
     private final Integer totalVcpus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDedicatedHostResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("autoPlacement") String autoPlacement,
-        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
-        @OutputCustomType.Parameter("cores") Integer cores,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetDedicatedHostFilter> filters,
-        @OutputCustomType.Parameter("hostId") String hostId,
-        @OutputCustomType.Parameter("hostRecovery") String hostRecovery,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceFamily") String instanceFamily,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("ownerId") String ownerId,
-        @OutputCustomType.Parameter("sockets") Integer sockets,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("totalVcpus") Integer totalVcpus) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("autoPlacement") String autoPlacement,
+        @CustomType.Parameter("availabilityZone") String availabilityZone,
+        @CustomType.Parameter("cores") Integer cores,
+        @CustomType.Parameter("filters") @Nullable List<GetDedicatedHostFilter> filters,
+        @CustomType.Parameter("hostId") String hostId,
+        @CustomType.Parameter("hostRecovery") String hostRecovery,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceFamily") String instanceFamily,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("ownerId") String ownerId,
+        @CustomType.Parameter("sockets") Integer sockets,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("totalVcpus") Integer totalVcpus) {
         this.arn = arn;
         this.autoPlacement = autoPlacement;
         this.availabilityZone = availabilityZone;

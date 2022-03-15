@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IncidentOwnerInfoResponse {
     /**
      * The name of the user the incident is assigned to.
@@ -32,12 +32,12 @@ public final class IncidentOwnerInfoResponse {
      */
     private final @Nullable String userPrincipalName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IncidentOwnerInfoResponse(
-        @OutputCustomType.Parameter("assignedTo") @Nullable String assignedTo,
-        @OutputCustomType.Parameter("email") @Nullable String email,
-        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
-        @OutputCustomType.Parameter("userPrincipalName") @Nullable String userPrincipalName) {
+        @CustomType.Parameter("assignedTo") @Nullable String assignedTo,
+        @CustomType.Parameter("email") @Nullable String email,
+        @CustomType.Parameter("objectId") @Nullable String objectId,
+        @CustomType.Parameter("userPrincipalName") @Nullable String userPrincipalName) {
         this.assignedTo = assignedTo;
         this.email = email;
         this.objectId = objectId;

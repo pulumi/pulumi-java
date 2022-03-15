@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.billingbudgets_v1beta1.outputs.GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse;
 import io.pulumi.googlenative.billingbudgets_v1beta1.outputs.GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse;
 import io.pulumi.googlenative.billingbudgets_v1beta1.outputs.GoogleCloudBillingBudgetsV1beta1FilterResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBudgetResult {
     /**
      * Optional. Rules to apply to notifications sent based on budget spend and thresholds.
@@ -50,15 +50,15 @@ public final class GetBudgetResult {
      */
     private final List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleResponse> thresholdRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBudgetResult(
-        @OutputCustomType.Parameter("allUpdatesRule") GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse allUpdatesRule,
-        @OutputCustomType.Parameter("amount") GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse amount,
-        @OutputCustomType.Parameter("budgetFilter") GoogleCloudBillingBudgetsV1beta1FilterResponse budgetFilter,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("thresholdRules") List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleResponse> thresholdRules) {
+        @CustomType.Parameter("allUpdatesRule") GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse allUpdatesRule,
+        @CustomType.Parameter("amount") GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse amount,
+        @CustomType.Parameter("budgetFilter") GoogleCloudBillingBudgetsV1beta1FilterResponse budgetFilter,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("thresholdRules") List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleResponse> thresholdRules) {
         this.allUpdatesRule = allUpdatesRule;
         this.amount = amount;
         this.budgetFilter = budgetFilter;

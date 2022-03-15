@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointResponse {
     /**
      * The URL of the endpoint.
@@ -22,10 +22,10 @@ public final class EndpointResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointResponse(
-        @OutputCustomType.Parameter("endpointUrl") @Nullable String endpointUrl,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("endpointUrl") @Nullable String endpointUrl,
+        @CustomType.Parameter("type") String type) {
         this.endpointUrl = endpointUrl;
         this.type = type;
     }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 
 import io.pulumi.azurenative.vmwarecloudsimple.enums.DiskIndependenceMode;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Disk's Controller id
      * 
      */
-    @InputImport(name="controllerId", required=true)
+    @Import(name="controllerId", required=true)
       private final Output<String> controllerId;
 
     public Output<String> getControllerId() {
@@ -35,7 +35,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Disk's independence mode type
      * 
      */
-    @InputImport(name="independenceMode", required=true)
+    @Import(name="independenceMode", required=true)
       private final Output<DiskIndependenceMode> independenceMode;
 
     public Output<DiskIndependenceMode> getIndependenceMode() {
@@ -46,7 +46,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Disk's total size
      * 
      */
-    @InputImport(name="totalSize", required=true)
+    @Import(name="totalSize", required=true)
       private final Output<Integer> totalSize;
 
     public Output<Integer> getTotalSize() {
@@ -57,7 +57,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Disk's id
      * 
      */
-    @InputImport(name="virtualDiskId")
+    @Import(name="virtualDiskId")
       private final @Nullable Output<String> virtualDiskId;
 
     public Output<String> getVirtualDiskId() {

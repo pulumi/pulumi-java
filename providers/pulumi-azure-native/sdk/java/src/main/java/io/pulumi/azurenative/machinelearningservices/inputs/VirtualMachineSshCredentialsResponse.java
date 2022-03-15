@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class VirtualMachineSshCredentialsResponse extends io.pulumi.resour
      * Password of admin account
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable String password;
 
     public Optional<String> getPassword() {
@@ -33,7 +33,7 @@ public final class VirtualMachineSshCredentialsResponse extends io.pulumi.resour
      * Private key data
      * 
      */
-    @InputImport(name="privateKeyData")
+    @Import(name="privateKeyData")
       private final @Nullable String privateKeyData;
 
     public Optional<String> getPrivateKeyData() {
@@ -44,7 +44,7 @@ public final class VirtualMachineSshCredentialsResponse extends io.pulumi.resour
      * Public key data
      * 
      */
-    @InputImport(name="publicKeyData")
+    @Import(name="publicKeyData")
       private final @Nullable String publicKeyData;
 
     public Optional<String> getPublicKeyData() {
@@ -55,7 +55,7 @@ public final class VirtualMachineSshCredentialsResponse extends io.pulumi.resour
      * Username of admin account
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable String username;
 
     public Optional<String> getUsername() {

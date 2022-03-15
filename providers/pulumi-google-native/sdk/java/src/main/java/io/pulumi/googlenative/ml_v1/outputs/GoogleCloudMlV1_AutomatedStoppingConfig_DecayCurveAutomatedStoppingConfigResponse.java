@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse {
     /**
      * If true, measurement.elapsed_time is used as the x-axis of each Trials Decay Curve. Otherwise, Measurement.steps will be used as the x-axis.
@@ -15,8 +15,8 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedSt
      */
     private final Boolean useElapsedTime;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse(@OutputCustomType.Parameter("useElapsedTime") Boolean useElapsedTime) {
+    @CustomType.Constructor
+    private GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigResponse(@CustomType.Parameter("useElapsedTime") Boolean useElapsedTime) {
         this.useElapsedTime = useElapsedTime;
     }
 

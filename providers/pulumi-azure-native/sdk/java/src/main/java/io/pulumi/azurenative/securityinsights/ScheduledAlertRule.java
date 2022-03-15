@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.ScheduledAlertRuleArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -36,7 +36,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * The Name of the alert rule template used to create this rule.
      * 
      */
-    @OutputExport(name="alertRuleTemplateName", type=String.class, parameters={})
+    @Export(name="alertRuleTemplateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> alertRuleTemplateName;
 
     /**
@@ -50,7 +50,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * The description of the alert rule.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -64,7 +64,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * The display name for alerts created by this alert rule.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -78,7 +78,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * Determines whether this alert rule is enabled or disabled.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output<Boolean> enabled;
 
     /**
@@ -92,7 +92,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * Etag of the azure resource
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -107,7 +107,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * Expected value is 'Scheduled'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -122,7 +122,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * The last time that this alert rule has been modified.
      * 
      */
-    @OutputExport(name="lastModifiedUtc", type=String.class, parameters={})
+    @Export(name="lastModifiedUtc", type=String.class, parameters={})
     private Output<String> lastModifiedUtc;
 
     /**
@@ -136,7 +136,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -150,7 +150,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * The query that creates alerts for this rule.
      * 
      */
-    @OutputExport(name="query", type=String.class, parameters={})
+    @Export(name="query", type=String.class, parameters={})
     private Output<String> query;
 
     /**
@@ -164,7 +164,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * The frequency (in ISO 8601 duration format) for this alert rule to run.
      * 
      */
-    @OutputExport(name="queryFrequency", type=String.class, parameters={})
+    @Export(name="queryFrequency", type=String.class, parameters={})
     private Output<String> queryFrequency;
 
     /**
@@ -178,7 +178,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * The period (in ISO 8601 duration format) that this alert rule looks at.
      * 
      */
-    @OutputExport(name="queryPeriod", type=String.class, parameters={})
+    @Export(name="queryPeriod", type=String.class, parameters={})
     private Output<String> queryPeriod;
 
     /**
@@ -192,7 +192,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * The severity for alerts created by this alert rule.
      * 
      */
-    @OutputExport(name="severity", type=String.class, parameters={})
+    @Export(name="severity", type=String.class, parameters={})
     private Output<String> severity;
 
     /**
@@ -206,7 +206,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * The suppression (in ISO 8601 duration format) to wait since last time this alert rule been triggered.
      * 
      */
-    @OutputExport(name="suppressionDuration", type=String.class, parameters={})
+    @Export(name="suppressionDuration", type=String.class, parameters={})
     private Output<String> suppressionDuration;
 
     /**
@@ -220,7 +220,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * Determines whether the suppression for this alert rule is enabled or disabled.
      * 
      */
-    @OutputExport(name="suppressionEnabled", type=Boolean.class, parameters={})
+    @Export(name="suppressionEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> suppressionEnabled;
 
     /**
@@ -234,7 +234,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * The tactics of the alert rule
      * 
      */
-    @OutputExport(name="tactics", type=List.class, parameters={String.class})
+    @Export(name="tactics", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> tactics;
 
     /**
@@ -248,7 +248,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * The operation against the threshold that triggers alert rule.
      * 
      */
-    @OutputExport(name="triggerOperator", type=String.class, parameters={})
+    @Export(name="triggerOperator", type=String.class, parameters={})
     private Output<String> triggerOperator;
 
     /**
@@ -262,7 +262,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * The threshold triggers this alert rule.
      * 
      */
-    @OutputExport(name="triggerThreshold", type=Integer.class, parameters={})
+    @Export(name="triggerThreshold", type=Integer.class, parameters={})
     private Output<Integer> triggerThreshold;
 
     /**
@@ -276,7 +276,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

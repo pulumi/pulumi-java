@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.appengine_v1beta.inputs.VolumeArgs;
 import java.lang.Double;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
      * Number of CPU cores needed.
      * 
      */
-    @InputImport(name="cpu")
+    @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
 
     public Output<Double> getCpu() {
@@ -36,7 +36,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
      * Disk size (GB) needed.
      * 
      */
-    @InputImport(name="diskGb")
+    @Import(name="diskGb")
       private final @Nullable Output<Double> diskGb;
 
     public Output<Double> getDiskGb() {
@@ -47,7 +47,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the encryption key that is stored in Google Cloud KMS. Only should be used by Cloud Composer to encrypt the vm disk
      * 
      */
-    @InputImport(name="kmsKeyReference")
+    @Import(name="kmsKeyReference")
       private final @Nullable Output<String> kmsKeyReference;
 
     public Output<String> getKmsKeyReference() {
@@ -58,7 +58,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
      * Memory (GB) needed.
      * 
      */
-    @InputImport(name="memoryGb")
+    @Import(name="memoryGb")
       private final @Nullable Output<Double> memoryGb;
 
     public Output<Double> getMemoryGb() {
@@ -69,7 +69,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
      * User specified volumes.
      * 
      */
-    @InputImport(name="volumes")
+    @Import(name="volumes")
       private final @Nullable Output<List<VolumeArgs>> volumes;
 
     public Output<List<VolumeArgs>> getVolumes() {

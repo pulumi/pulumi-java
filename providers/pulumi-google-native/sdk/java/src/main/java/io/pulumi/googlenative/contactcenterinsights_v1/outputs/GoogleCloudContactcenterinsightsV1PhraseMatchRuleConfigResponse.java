@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse {
     /**
      * The configuration for the exact match rule.
@@ -15,8 +15,8 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigRespon
      */
     private final GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse(@OutputCustomType.Parameter("exactMatchConfig") GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig) {
+    @CustomType.Constructor
+    private GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse(@CustomType.Parameter("exactMatchConfig") GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse exactMatchConfig) {
         this.exactMatchConfig = exactMatchConfig;
     }
 

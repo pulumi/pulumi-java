@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetAmiProductCode extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAmiProductCode Empty = new GetAmiProductCode();
 
-    @InputImport(name="productCodeId", required=true)
+    @Import(name="productCodeId", required=true)
       private final String productCodeId;
 
     public String getProductCodeId() {
         return this.productCodeId;
     }
 
-    @InputImport(name="productCodeType", required=true)
+    @Import(name="productCodeType", required=true)
       private final String productCodeType;
 
     public String getProductCodeType() {

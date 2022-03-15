@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ses.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigurationSetDeliveryOptions {
     /**
      * Specifies whether messages that use the configuration set are required to use Transport Layer Security (TLS). If the value is `Require`, messages are only delivered if a TLS connection can be established. If the value is `Optional`, messages can be delivered in plain text if a TLS connection can't be established. Valid values: `Require` or `Optional`. Defaults to `Optional`.
@@ -17,8 +17,8 @@ public final class ConfigurationSetDeliveryOptions {
      */
     private final @Nullable String tlsPolicy;
 
-    @OutputCustomType.Constructor
-    private ConfigurationSetDeliveryOptions(@OutputCustomType.Parameter("tlsPolicy") @Nullable String tlsPolicy) {
+    @CustomType.Constructor
+    private ConfigurationSetDeliveryOptions(@CustomType.Parameter("tlsPolicy") @Nullable String tlsPolicy) {
         this.tlsPolicy = tlsPolicy;
     }
 

@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig {
     /**
      * Schema used for writing the findings for Inspect jobs. This field is only used for
@@ -31,10 +31,10 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig 
      */
     private final PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable table;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig(
-        @OutputCustomType.Parameter("outputSchema") @Nullable String outputSchema,
-        @OutputCustomType.Parameter("table") PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable table) {
+        @CustomType.Parameter("outputSchema") @Nullable String outputSchema,
+        @CustomType.Parameter("table") PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable table) {
         this.outputSchema = outputSchema;
         this.table = table;
     }

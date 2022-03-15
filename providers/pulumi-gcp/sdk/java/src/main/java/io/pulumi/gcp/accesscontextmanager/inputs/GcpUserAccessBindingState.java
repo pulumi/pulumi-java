@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
      * Required. Access level that a user must have to be granted access. Only one access level is supported, not multiple. This repeated field must have exactly one element. Example: "accessPolicies/9522/accessLevels/device_trusted"
      * 
      */
-    @InputImport(name="accessLevels")
+    @Import(name="accessLevels")
       private final @Nullable Output<String> accessLevels;
 
     public Output<String> getAccessLevels() {
@@ -29,7 +29,7 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
      * Required. Immutable. Google Group id whose members are subject to this binding's restrictions. See "id" in the G Suite Directory API's Groups resource. If a group's email address/alias is changed, this resource will continue to point at the changed group. This field does not accept group email addresses or aliases. Example: "01d520gv4vjcrht"
      * 
      */
-    @InputImport(name="groupKey")
+    @Import(name="groupKey")
       private final @Nullable Output<String> groupKey;
 
     public Output<String> getGroupKey() {
@@ -42,7 +42,7 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
      * "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
      * Required. ID of the parent organization.
      * 
      */
-    @InputImport(name="organizationId")
+    @Import(name="organizationId")
       private final @Nullable Output<String> organizationId;
 
     public Output<String> getOrganizationId() {

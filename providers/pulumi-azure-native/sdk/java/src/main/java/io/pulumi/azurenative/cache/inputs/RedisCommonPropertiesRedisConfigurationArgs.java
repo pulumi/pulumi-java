@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cache.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * First storage account connection string
      * 
      */
-    @InputImport(name="aofStorageConnectionString0")
+    @Import(name="aofStorageConnectionString0")
       private final @Nullable Output<String> aofStorageConnectionString0;
 
     public Output<String> getAofStorageConnectionString0() {
@@ -33,7 +33,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * Second storage account connection string
      * 
      */
-    @InputImport(name="aofStorageConnectionString1")
+    @Import(name="aofStorageConnectionString1")
       private final @Nullable Output<String> aofStorageConnectionString1;
 
     public Output<String> getAofStorageConnectionString1() {
@@ -44,7 +44,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * Value in megabytes reserved for fragmentation per shard
      * 
      */
-    @InputImport(name="maxfragmentationmemoryReserved")
+    @Import(name="maxfragmentationmemoryReserved")
       private final @Nullable Output<String> maxfragmentationmemoryReserved;
 
     public Output<String> getMaxfragmentationmemoryReserved() {
@@ -55,7 +55,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * Value in megabytes reserved for non-cache usage per shard e.g. failover.
      * 
      */
-    @InputImport(name="maxmemoryDelta")
+    @Import(name="maxmemoryDelta")
       private final @Nullable Output<String> maxmemoryDelta;
 
     public Output<String> getMaxmemoryDelta() {
@@ -66,7 +66,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * The eviction strategy used when your data won't fit within its memory limit.
      * 
      */
-    @InputImport(name="maxmemoryPolicy")
+    @Import(name="maxmemoryPolicy")
       private final @Nullable Output<String> maxmemoryPolicy;
 
     public Output<String> getMaxmemoryPolicy() {
@@ -77,7 +77,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * Value in megabytes reserved for non-cache usage per shard e.g. failover.
      * 
      */
-    @InputImport(name="maxmemoryReserved")
+    @Import(name="maxmemoryReserved")
       private final @Nullable Output<String> maxmemoryReserved;
 
     public Output<String> getMaxmemoryReserved() {
@@ -88,7 +88,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * Specifies whether the rdb backup is enabled
      * 
      */
-    @InputImport(name="rdbBackupEnabled")
+    @Import(name="rdbBackupEnabled")
       private final @Nullable Output<String> rdbBackupEnabled;
 
     public Output<String> getRdbBackupEnabled() {
@@ -99,7 +99,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * Specifies the frequency for creating rdb backup
      * 
      */
-    @InputImport(name="rdbBackupFrequency")
+    @Import(name="rdbBackupFrequency")
       private final @Nullable Output<String> rdbBackupFrequency;
 
     public Output<String> getRdbBackupFrequency() {
@@ -110,7 +110,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * Specifies the maximum number of snapshots for rdb backup
      * 
      */
-    @InputImport(name="rdbBackupMaxSnapshotCount")
+    @Import(name="rdbBackupMaxSnapshotCount")
       private final @Nullable Output<String> rdbBackupMaxSnapshotCount;
 
     public Output<String> getRdbBackupMaxSnapshotCount() {
@@ -121,7 +121,7 @@ public final class RedisCommonPropertiesRedisConfigurationArgs extends io.pulumi
      * The storage account connection string for storing rdb file
      * 
      */
-    @InputImport(name="rdbStorageConnectionString")
+    @Import(name="rdbStorageConnectionString")
       private final @Nullable Output<String> rdbStorageConnectionString;
 
     public Output<String> getRdbStorageConnectionString() {

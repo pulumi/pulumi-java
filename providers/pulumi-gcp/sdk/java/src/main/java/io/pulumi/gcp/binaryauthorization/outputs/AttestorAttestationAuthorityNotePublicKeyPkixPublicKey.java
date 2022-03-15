@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.binaryauthorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKey {
     /**
      * A PEM-encoded public key, as described in
@@ -27,10 +27,10 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKey {
      */
     private final @Nullable String signatureAlgorithm;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AttestorAttestationAuthorityNotePublicKeyPkixPublicKey(
-        @OutputCustomType.Parameter("publicKeyPem") @Nullable String publicKeyPem,
-        @OutputCustomType.Parameter("signatureAlgorithm") @Nullable String signatureAlgorithm) {
+        @CustomType.Parameter("publicKeyPem") @Nullable String publicKeyPem,
+        @CustomType.Parameter("signatureAlgorithm") @Nullable String signatureAlgorithm) {
         this.publicKeyPem = publicKeyPem;
         this.signatureAlgorithm = signatureAlgorithm;
     }

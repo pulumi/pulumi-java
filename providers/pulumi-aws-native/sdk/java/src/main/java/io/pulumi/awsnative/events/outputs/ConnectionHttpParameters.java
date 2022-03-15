@@ -4,22 +4,22 @@
 package io.pulumi.awsnative.events.outputs;
 
 import io.pulumi.awsnative.events.outputs.ConnectionParameter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionHttpParameters {
     private final @Nullable List<ConnectionParameter> bodyParameters;
     private final @Nullable List<ConnectionParameter> headerParameters;
     private final @Nullable List<ConnectionParameter> queryStringParameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionHttpParameters(
-        @OutputCustomType.Parameter("bodyParameters") @Nullable List<ConnectionParameter> bodyParameters,
-        @OutputCustomType.Parameter("headerParameters") @Nullable List<ConnectionParameter> headerParameters,
-        @OutputCustomType.Parameter("queryStringParameters") @Nullable List<ConnectionParameter> queryStringParameters) {
+        @CustomType.Parameter("bodyParameters") @Nullable List<ConnectionParameter> bodyParameters,
+        @CustomType.Parameter("headerParameters") @Nullable List<ConnectionParameter> headerParameters,
+        @CustomType.Parameter("queryStringParameters") @Nullable List<ConnectionParameter> queryStringParameters) {
         this.bodyParameters = bodyParameters;
         this.headerParameters = headerParameters;
         this.queryStringParameters = queryStringParameters;

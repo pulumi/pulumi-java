@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.storage.inputs.ObjectReplicationPolicyRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -31,7 +31,7 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
      * Required. Destination account name.
      * 
      */
-    @InputImport(name="destinationAccount", required=true)
+    @Import(name="destinationAccount", required=true)
       private final Output<String> destinationAccount;
 
     public Output<String> getDestinationAccount() {
@@ -42,7 +42,7 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
      * The ID of object replication policy or 'default' if the policy ID is unknown.
      * 
      */
-    @InputImport(name="objectReplicationPolicyId")
+    @Import(name="objectReplicationPolicyId")
       private final @Nullable Output<String> objectReplicationPolicyId;
 
     public Output<String> getObjectReplicationPolicyId() {
@@ -53,7 +53,7 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
      * The storage account object replication rules.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<ObjectReplicationPolicyRuleArgs>> rules;
 
     public Output<List<ObjectReplicationPolicyRuleArgs>> getRules() {
@@ -75,7 +75,7 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
      * Required. Source account name.
      * 
      */
-    @InputImport(name="sourceAccount", required=true)
+    @Import(name="sourceAccount", required=true)
       private final Output<String> sourceAccount;
 
     public Output<String> getSourceAccount() {

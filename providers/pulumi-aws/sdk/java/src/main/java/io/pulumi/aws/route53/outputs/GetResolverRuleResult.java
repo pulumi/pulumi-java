@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.route53.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResolverRuleResult {
     /**
      * The ARN (Amazon Resource Name) for the resolver rule.
@@ -42,18 +42,18 @@ public final class GetResolverRuleResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResolverRuleResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("domainName") String domainName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("ownerId") String ownerId,
-        @OutputCustomType.Parameter("resolverEndpointId") String resolverEndpointId,
-        @OutputCustomType.Parameter("resolverRuleId") String resolverRuleId,
-        @OutputCustomType.Parameter("ruleType") String ruleType,
-        @OutputCustomType.Parameter("shareStatus") String shareStatus,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("domainName") String domainName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("ownerId") String ownerId,
+        @CustomType.Parameter("resolverEndpointId") String resolverEndpointId,
+        @CustomType.Parameter("resolverRuleId") String resolverRuleId,
+        @CustomType.Parameter("ruleType") String ruleType,
+        @CustomType.Parameter("shareStatus") String shareStatus,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.domainName = domainName;
         this.id = id;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class TopicRuleErrorActionElasticsearchArgs extends io.pulumi.resou
      * The endpoint of your Elasticsearch domain.
      * 
      */
-    @InputImport(name="endpoint", required=true)
+    @Import(name="endpoint", required=true)
       private final Output<String> endpoint;
 
     public Output<String> getEndpoint() {
@@ -28,7 +28,7 @@ public final class TopicRuleErrorActionElasticsearchArgs extends io.pulumi.resou
      * The unique identifier for the document you are storing.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -39,7 +39,7 @@ public final class TopicRuleErrorActionElasticsearchArgs extends io.pulumi.resou
      * The Elasticsearch index where you want to store your data.
      * 
      */
-    @InputImport(name="index", required=true)
+    @Import(name="index", required=true)
       private final Output<String> index;
 
     public Output<String> getIndex() {
@@ -50,7 +50,7 @@ public final class TopicRuleErrorActionElasticsearchArgs extends io.pulumi.resou
      * The IAM role ARN that has access to Elasticsearch.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -61,7 +61,7 @@ public final class TopicRuleErrorActionElasticsearchArgs extends io.pulumi.resou
      * The type of document you are storing.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

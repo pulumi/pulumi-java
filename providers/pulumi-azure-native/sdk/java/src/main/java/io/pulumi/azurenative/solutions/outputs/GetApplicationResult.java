@@ -13,7 +13,7 @@ import io.pulumi.azurenative.solutions.outputs.ApplicationPackageSupportUrlsResp
 import io.pulumi.azurenative.solutions.outputs.IdentityResponse;
 import io.pulumi.azurenative.solutions.outputs.PlanResponse;
 import io.pulumi.azurenative.solutions.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApplicationResult {
     /**
      * The fully qualified path of managed application definition Id.
@@ -150,33 +150,33 @@ public final class GetApplicationResult {
      */
     private final ApplicationClientDetailsResponse updatedBy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApplicationResult(
-        @OutputCustomType.Parameter("applicationDefinitionId") @Nullable String applicationDefinitionId,
-        @OutputCustomType.Parameter("artifacts") List<ApplicationArtifactResponse> artifacts,
-        @OutputCustomType.Parameter("authorizations") List<ApplicationAuthorizationResponse> authorizations,
-        @OutputCustomType.Parameter("billingDetails") ApplicationBillingDetailsDefinitionResponse billingDetails,
-        @OutputCustomType.Parameter("createdBy") ApplicationClientDetailsResponse createdBy,
-        @OutputCustomType.Parameter("customerSupport") ApplicationPackageContactResponse customerSupport,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
-        @OutputCustomType.Parameter("jitAccessPolicy") @Nullable ApplicationJitAccessPolicyResponse jitAccessPolicy,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("managedBy") @Nullable String managedBy,
-        @OutputCustomType.Parameter("managedResourceGroupId") @Nullable String managedResourceGroupId,
-        @OutputCustomType.Parameter("managementMode") String managementMode,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputs") Object outputs,
-        @OutputCustomType.Parameter("parameters") @Nullable Object parameters,
-        @OutputCustomType.Parameter("plan") @Nullable PlanResponse plan,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publisherTenantId") String publisherTenantId,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("supportUrls") ApplicationPackageSupportUrlsResponse supportUrls,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updatedBy") ApplicationClientDetailsResponse updatedBy) {
+        @CustomType.Parameter("applicationDefinitionId") @Nullable String applicationDefinitionId,
+        @CustomType.Parameter("artifacts") List<ApplicationArtifactResponse> artifacts,
+        @CustomType.Parameter("authorizations") List<ApplicationAuthorizationResponse> authorizations,
+        @CustomType.Parameter("billingDetails") ApplicationBillingDetailsDefinitionResponse billingDetails,
+        @CustomType.Parameter("createdBy") ApplicationClientDetailsResponse createdBy,
+        @CustomType.Parameter("customerSupport") ApplicationPackageContactResponse customerSupport,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @CustomType.Parameter("jitAccessPolicy") @Nullable ApplicationJitAccessPolicyResponse jitAccessPolicy,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("managedBy") @Nullable String managedBy,
+        @CustomType.Parameter("managedResourceGroupId") @Nullable String managedResourceGroupId,
+        @CustomType.Parameter("managementMode") String managementMode,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputs") Object outputs,
+        @CustomType.Parameter("parameters") @Nullable Object parameters,
+        @CustomType.Parameter("plan") @Nullable PlanResponse plan,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publisherTenantId") String publisherTenantId,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("supportUrls") ApplicationPackageSupportUrlsResponse supportUrls,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updatedBy") ApplicationClientDetailsResponse updatedBy) {
         this.applicationDefinitionId = applicationDefinitionId;
         this.artifacts = artifacts;
         this.authorizations = authorizations;

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.route53recoverycontrol.enums.ClusterStatus;
 import io.pulumi.awsnative.route53recoverycontrol.outputs.ClusterEndpoint;
 import io.pulumi.awsnative.route53recoverycontrol.outputs.ClusterTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the cluster.
      * 
      */
-    @OutputExport(name="clusterArn", type=String.class, parameters={})
+    @Export(name="clusterArn", type=String.class, parameters={})
     private Output<String> clusterArn;
 
     /**
@@ -39,7 +39,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Endpoints for the cluster.
      * 
      */
-    @OutputExport(name="clusterEndpoints", type=List.class, parameters={ClusterEndpoint.class})
+    @Export(name="clusterEndpoints", type=List.class, parameters={ClusterEndpoint.class})
     private Output<List<ClusterEndpoint>> clusterEndpoints;
 
     /**
@@ -53,7 +53,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Name of a Cluster. You can use any non-white space character in the name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -67,7 +67,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Deployment status of a resource. Status can be one of the following: PENDING, DEPLOYED, PENDING_DELETION.
      * 
      */
-    @OutputExport(name="status", type=ClusterStatus.class, parameters={})
+    @Export(name="status", type=ClusterStatus.class, parameters={})
     private Output<ClusterStatus> status;
 
     /**
@@ -81,7 +81,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A collection of tags associated with a resource
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ClusterTag.class})
+    @Export(name="tags", type=List.class, parameters={ClusterTag.class})
     private Output</* @Nullable */ List<ClusterTag>> tags;
 
     /**

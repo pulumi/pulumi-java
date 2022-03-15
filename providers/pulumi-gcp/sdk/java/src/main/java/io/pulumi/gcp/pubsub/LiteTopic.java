@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.LiteTopicArgs;
@@ -53,7 +53,7 @@ public class LiteTopic extends io.pulumi.resources.CustomResource {
      * Name of the topic.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -68,7 +68,7 @@ public class LiteTopic extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="partitionConfig", type=LiteTopicPartitionConfig.class, parameters={})
+    @Export(name="partitionConfig", type=LiteTopicPartitionConfig.class, parameters={})
     private Output</* @Nullable */ LiteTopicPartitionConfig> partitionConfig;
 
     /**
@@ -84,7 +84,7 @@ public class LiteTopic extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -99,7 +99,7 @@ public class LiteTopic extends io.pulumi.resources.CustomResource {
      * The region of the pubsub lite topic.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output</* @Nullable */ String> region;
 
     /**
@@ -114,7 +114,7 @@ public class LiteTopic extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="reservationConfig", type=LiteTopicReservationConfig.class, parameters={})
+    @Export(name="reservationConfig", type=LiteTopicReservationConfig.class, parameters={})
     private Output</* @Nullable */ LiteTopicReservationConfig> reservationConfig;
 
     /**
@@ -130,7 +130,7 @@ public class LiteTopic extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="retentionConfig", type=LiteTopicRetentionConfig.class, parameters={})
+    @Export(name="retentionConfig", type=LiteTopicRetentionConfig.class, parameters={})
     private Output</* @Nullable */ LiteTopicRetentionConfig> retentionConfig;
 
     /**
@@ -145,7 +145,7 @@ public class LiteTopic extends io.pulumi.resources.CustomResource {
      * The zone of the pubsub lite topic.
      * 
      */
-    @OutputExport(name="zone", type=String.class, parameters={})
+    @Export(name="zone", type=String.class, parameters={})
     private Output</* @Nullable */ String> zone;
 
     /**

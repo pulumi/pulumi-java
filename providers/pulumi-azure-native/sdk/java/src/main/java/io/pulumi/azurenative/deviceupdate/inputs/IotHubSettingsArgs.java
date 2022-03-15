@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deviceupdate.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class IotHubSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * EventHub connection string.
      * 
      */
-    @InputImport(name="eventHubConnectionString")
+    @Import(name="eventHubConnectionString")
       private final @Nullable Output<String> eventHubConnectionString;
 
     public Output<String> getEventHubConnectionString() {
@@ -33,7 +33,7 @@ public final class IotHubSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * IoTHub connection string.
      * 
      */
-    @InputImport(name="ioTHubConnectionString")
+    @Import(name="ioTHubConnectionString")
       private final @Nullable Output<String> ioTHubConnectionString;
 
     public Output<String> getIoTHubConnectionString() {
@@ -44,7 +44,7 @@ public final class IotHubSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * IoTHub resource ID
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
     public Output<String> getResourceId() {

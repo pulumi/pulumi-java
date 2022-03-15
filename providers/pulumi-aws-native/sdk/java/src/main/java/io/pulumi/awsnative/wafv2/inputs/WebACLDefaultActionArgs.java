@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLAllowActionArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLBlockActionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,14 +19,14 @@ public final class WebACLDefaultActionArgs extends io.pulumi.resources.ResourceA
 
     public static final WebACLDefaultActionArgs Empty = new WebACLDefaultActionArgs();
 
-    @InputImport(name="allow")
+    @Import(name="allow")
       private final @Nullable Output<WebACLAllowActionArgs> allow;
 
     public Output<WebACLAllowActionArgs> getAllow() {
         return this.allow == null ? Output.empty() : this.allow;
     }
 
-    @InputImport(name="block")
+    @Import(name="block")
       private final @Nullable Output<WebACLBlockActionArgs> block;
 
     public Output<WebACLBlockActionArgs> getBlock() {

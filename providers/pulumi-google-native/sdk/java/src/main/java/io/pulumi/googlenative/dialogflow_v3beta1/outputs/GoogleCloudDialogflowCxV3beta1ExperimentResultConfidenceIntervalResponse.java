@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse {
     /**
      * The confidence level used to construct the interval, i.e. there is X% chance that the true value is within this interval.
@@ -30,12 +30,12 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
      */
     private final Double upperBound;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse(
-        @OutputCustomType.Parameter("confidenceLevel") Double confidenceLevel,
-        @OutputCustomType.Parameter("lowerBound") Double lowerBound,
-        @OutputCustomType.Parameter("ratio") Double ratio,
-        @OutputCustomType.Parameter("upperBound") Double upperBound) {
+        @CustomType.Parameter("confidenceLevel") Double confidenceLevel,
+        @CustomType.Parameter("lowerBound") Double lowerBound,
+        @CustomType.Parameter("ratio") Double ratio,
+        @CustomType.Parameter("upperBound") Double upperBound) {
         this.confidenceLevel = confidenceLevel;
         this.lowerBound = lowerBound;
         this.ratio = ratio;

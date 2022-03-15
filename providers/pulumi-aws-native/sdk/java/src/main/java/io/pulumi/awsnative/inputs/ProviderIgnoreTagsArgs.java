@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ProviderIgnoreTagsArgs extends io.pulumi.resources.ResourceAr
      * List of exact resource tag keys to ignore across all resources handled by this provider. This configuration prevents Pulumi from returning the tag in any `tags` attributes and displaying any configuration difference for the tag value. If any resource configuration still has this tag key configured in the `tags` argument, it will display a perpetual difference until the tag is removed from the argument or `ignoreChanges` is also used.
      * 
      */
-    @InputImport(name="keyPrefixes")
+    @Import(name="keyPrefixes")
       private final @Nullable Output<List<String>> keyPrefixes;
 
     public Output<List<String>> getKeyPrefixes() {
@@ -34,7 +34,7 @@ public final class ProviderIgnoreTagsArgs extends io.pulumi.resources.ResourceAr
      * List of resource tag key prefixes to ignore across all resources handled by this provider. This configuration prevents Pulumi from returning any tag key matching the prefixes in any `tags` attributes and displaying any configuration difference for those tag values. If any resource configuration still has a tag matching one of the prefixes configured in the `tags` argument, it will display a perpetual difference until the tag is removed from the argument or `ignoreChanges` is also used.
      * 
      */
-    @InputImport(name="keys")
+    @Import(name="keys")
       private final @Nullable Output<List<String>> keys;
 
     public Output<List<String>> getKeys() {

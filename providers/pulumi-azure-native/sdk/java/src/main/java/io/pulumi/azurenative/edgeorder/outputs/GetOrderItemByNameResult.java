@@ -6,13 +6,13 @@ package io.pulumi.azurenative.edgeorder.outputs;
 import io.pulumi.azurenative.edgeorder.outputs.AddressDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.OrderItemDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOrderItemByNameResult {
     /**
      * Represents shipping and return address for order item
@@ -65,18 +65,18 @@ public final class GetOrderItemByNameResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOrderItemByNameResult(
-        @OutputCustomType.Parameter("addressDetails") AddressDetailsResponse addressDetails,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("orderId") String orderId,
-        @OutputCustomType.Parameter("orderItemDetails") OrderItemDetailsResponse orderItemDetails,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("addressDetails") AddressDetailsResponse addressDetails,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("orderId") String orderId,
+        @CustomType.Parameter("orderItemDetails") OrderItemDetailsResponse orderItemDetails,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.addressDetails = addressDetails;
         this.id = id;
         this.location = location;

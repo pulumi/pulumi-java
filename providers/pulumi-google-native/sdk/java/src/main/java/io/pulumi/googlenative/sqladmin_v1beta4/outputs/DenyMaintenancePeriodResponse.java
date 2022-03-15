@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DenyMaintenancePeriodResponse {
     /**
      * "deny maintenance period" end date. If the year of the end date is empty, the year of the start date also must be empty. In this case, it means the deny maintenance period recurs every year. The date is in format yyyy-mm-dd i.e., 2020-11-01, or mm-dd, i.e., 11-01
@@ -25,11 +25,11 @@ public final class DenyMaintenancePeriodResponse {
      */
     private final String time;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DenyMaintenancePeriodResponse(
-        @OutputCustomType.Parameter("endDate") String endDate,
-        @OutputCustomType.Parameter("startDate") String startDate,
-        @OutputCustomType.Parameter("time") String time) {
+        @CustomType.Parameter("endDate") String endDate,
+        @CustomType.Parameter("startDate") String startDate,
+        @CustomType.Parameter("time") String time) {
         this.endDate = endDate;
         this.startDate = startDate;
         this.time = time;

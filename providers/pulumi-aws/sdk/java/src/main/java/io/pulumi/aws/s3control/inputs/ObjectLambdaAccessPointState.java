@@ -5,7 +5,7 @@ package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class ObjectLambdaAccessPointState extends io.pulumi.resources.Reso
 
     public static final ObjectLambdaAccessPointState Empty = new ObjectLambdaAccessPointState();
 
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -26,7 +26,7 @@ public final class ObjectLambdaAccessPointState extends io.pulumi.resources.Reso
      * Amazon Resource Name (ARN) of the Object Lambda Access Point.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -37,7 +37,7 @@ public final class ObjectLambdaAccessPointState extends io.pulumi.resources.Reso
      * A configuration block containing details about the Object Lambda Access Point. See Configuration below for more details.
      * 
      */
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable Output<ObjectLambdaAccessPointConfigurationGetArgs> configuration;
 
     public Output<ObjectLambdaAccessPointConfigurationGetArgs> getConfiguration() {
@@ -48,7 +48,7 @@ public final class ObjectLambdaAccessPointState extends io.pulumi.resources.Reso
      * The name for this Object Lambda Access Point.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

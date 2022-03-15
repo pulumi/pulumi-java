@@ -3,18 +3,18 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListListUpgradableVersionPostResult {
     private final @Nullable List<String> supportedPath;
 
-    @OutputCustomType.Constructor
-    private ListListUpgradableVersionPostResult(@OutputCustomType.Parameter("supportedPath") @Nullable List<String> supportedPath) {
+    @CustomType.Constructor
+    private ListListUpgradableVersionPostResult(@CustomType.Parameter("supportedPath") @Nullable List<String> supportedPath) {
         this.supportedPath = supportedPath;
     }
 

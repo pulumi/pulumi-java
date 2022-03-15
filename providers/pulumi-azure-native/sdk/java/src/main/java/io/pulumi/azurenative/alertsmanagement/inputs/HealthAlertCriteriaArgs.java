@@ -5,7 +5,7 @@ package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.azurenative.alertsmanagement.inputs.VmGuestHealthAlertCriterionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class HealthAlertCriteriaArgs extends io.pulumi.resources.ResourceA
      * The list of metric criteria for this 'all of' operation.
      * 
      */
-    @InputImport(name="allOf")
+    @Import(name="allOf")
       private final @Nullable Output<List<VmGuestHealthAlertCriterionArgs>> allOf;
 
     public Output<List<VmGuestHealthAlertCriterionArgs>> getAllOf() {

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.chaos.outputs;
 
 import io.pulumi.azurenative.chaos.outputs.KeyValuePairResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DiscreteActionResponse {
     /**
      * String that represents a Capability URN.
@@ -33,12 +33,12 @@ public final class DiscreteActionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiscreteActionResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") List<KeyValuePairResponse> parameters,
-        @OutputCustomType.Parameter("selectorId") String selectorId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") List<KeyValuePairResponse> parameters,
+        @CustomType.Parameter("selectorId") String selectorId,
+        @CustomType.Parameter("type") String type) {
         this.name = name;
         this.parameters = parameters;
         this.selectorId = selectorId;

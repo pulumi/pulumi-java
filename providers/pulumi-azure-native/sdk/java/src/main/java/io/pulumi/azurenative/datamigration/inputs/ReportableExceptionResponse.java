@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
      * Actionable steps for this exception
      * 
      */
-    @InputImport(name="actionableMessage")
+    @Import(name="actionableMessage")
       private final @Nullable String actionableMessage;
 
     public Optional<String> getActionableMessage() {
@@ -34,7 +34,7 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
      * The path to the file where exception occurred
      * 
      */
-    @InputImport(name="filePath", required=true)
+    @Import(name="filePath", required=true)
       private final String filePath;
 
     public String getFilePath() {
@@ -45,7 +45,7 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
      * Coded numerical value that is assigned to a specific exception
      * 
      */
-    @InputImport(name="hResult", required=true)
+    @Import(name="hResult", required=true)
       private final Integer hResult;
 
     public Integer getHResult() {
@@ -56,7 +56,7 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
      * The line number where exception occurred
      * 
      */
-    @InputImport(name="lineNumber", required=true)
+    @Import(name="lineNumber", required=true)
       private final String lineNumber;
 
     public String getLineNumber() {
@@ -67,7 +67,7 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
      * Error message
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -78,7 +78,7 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
      * Stack trace
      * 
      */
-    @InputImport(name="stackTrace", required=true)
+    @Import(name="stackTrace", required=true)
       private final String stackTrace;
 
     public String getStackTrace() {

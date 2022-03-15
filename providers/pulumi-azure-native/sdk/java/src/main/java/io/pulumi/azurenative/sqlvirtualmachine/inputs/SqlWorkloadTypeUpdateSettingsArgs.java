@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 import io.pulumi.azurenative.sqlvirtualmachine.enums.SqlWorkloadType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class SqlWorkloadTypeUpdateSettingsArgs extends io.pulumi.resources
      * SQL Server workload type.
      * 
      */
-    @InputImport(name="sqlWorkloadType")
+    @Import(name="sqlWorkloadType")
       private final @Nullable Output<Either<String,SqlWorkloadType>> sqlWorkloadType;
 
     public Output<Either<String,SqlWorkloadType>> getSqlWorkloadType() {

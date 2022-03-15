@@ -5,13 +5,13 @@ package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ReportDatasetResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportTimePeriodResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReportDefinitionResponse {
     /**
      * Has definition for data in this report.
@@ -34,12 +34,12 @@ public final class ReportDefinitionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReportDefinitionResponse(
-        @OutputCustomType.Parameter("dataset") @Nullable ReportDatasetResponse dataset,
-        @OutputCustomType.Parameter("timePeriod") @Nullable ReportTimePeriodResponse timePeriod,
-        @OutputCustomType.Parameter("timeframe") String timeframe,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("dataset") @Nullable ReportDatasetResponse dataset,
+        @CustomType.Parameter("timePeriod") @Nullable ReportTimePeriodResponse timePeriod,
+        @CustomType.Parameter("timeframe") String timeframe,
+        @CustomType.Parameter("type") String type) {
         this.dataset = dataset;
         this.timePeriod = timePeriod;
         this.timeframe = timeframe;

@@ -9,7 +9,7 @@ import io.pulumi.aws.fsx.inputs.OpenZfsFileSystemState;
 import io.pulumi.aws.fsx.outputs.OpenZfsFileSystemDiskIopsConfiguration;
 import io.pulumi.aws.fsx.outputs.OpenZfsFileSystemRootVolumeConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -53,7 +53,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name of the file system.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -67,7 +67,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * The number of days to retain automatic backups. Setting this to 0 disables automatic backups. You can retain automatic backups for a maximum of 90 days.
      * 
      */
-    @OutputExport(name="automaticBackupRetentionDays", type=Integer.class, parameters={})
+    @Export(name="automaticBackupRetentionDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> automaticBackupRetentionDays;
 
     /**
@@ -81,7 +81,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * The ID of the source backup to create the filesystem from.
      * 
      */
-    @OutputExport(name="backupId", type=String.class, parameters={})
+    @Export(name="backupId", type=String.class, parameters={})
     private Output</* @Nullable */ String> backupId;
 
     /**
@@ -95,7 +95,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * A boolean flag indicating whether tags for the file system should be copied to backups. The default value is false.
      * 
      */
-    @OutputExport(name="copyTagsToBackups", type=Boolean.class, parameters={})
+    @Export(name="copyTagsToBackups", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> copyTagsToBackups;
 
     /**
@@ -109,7 +109,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * A boolean flag indicating whether tags for the file system should be copied to snapshots. The default value is false.
      * 
      */
-    @OutputExport(name="copyTagsToVolumes", type=Boolean.class, parameters={})
+    @Export(name="copyTagsToVolumes", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> copyTagsToVolumes;
 
     /**
@@ -123,7 +123,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * A recurring daily time, in the format HH:MM. HH is the zero-padded hour of the day (0-23), and MM is the zero-padded minute of the hour. For example, 05:00 specifies 5 AM daily. Requires `automatic_backup_retention_days` to be set.
      * 
      */
-    @OutputExport(name="dailyAutomaticBackupStartTime", type=String.class, parameters={})
+    @Export(name="dailyAutomaticBackupStartTime", type=String.class, parameters={})
     private Output<String> dailyAutomaticBackupStartTime;
 
     /**
@@ -137,7 +137,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * - The filesystem deployment type. Only `SINGLE_AZ_1` is supported.
      * 
      */
-    @OutputExport(name="deploymentType", type=String.class, parameters={})
+    @Export(name="deploymentType", type=String.class, parameters={})
     private Output<String> deploymentType;
 
     /**
@@ -151,7 +151,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * The SSD IOPS configuration for the Amazon FSx for OpenZFS file system. See Disk Iops Configuration Below.
      * 
      */
-    @OutputExport(name="diskIopsConfiguration", type=OpenZfsFileSystemDiskIopsConfiguration.class, parameters={})
+    @Export(name="diskIopsConfiguration", type=OpenZfsFileSystemDiskIopsConfiguration.class, parameters={})
     private Output<OpenZfsFileSystemDiskIopsConfiguration> diskIopsConfiguration;
 
     /**
@@ -165,7 +165,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * DNS name for the file system, e.g., `fs-12345678.fsx.us-west-2.amazonaws.com`
      * 
      */
-    @OutputExport(name="dnsName", type=String.class, parameters={})
+    @Export(name="dnsName", type=String.class, parameters={})
     private Output<String> dnsName;
 
     /**
@@ -179,7 +179,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * ARN for the KMS Key to encrypt the file system at rest, Defaults to an AWS managed KMS Key.
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output<String> kmsKeyId;
 
     /**
@@ -193,7 +193,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * Set of Elastic Network Interface identifiers from which the file system is accessible The first network interface returned is the primary network interface.
      * 
      */
-    @OutputExport(name="networkInterfaceIds", type=List.class, parameters={String.class})
+    @Export(name="networkInterfaceIds", type=List.class, parameters={String.class})
     private Output<List<String>> networkInterfaceIds;
 
     /**
@@ -207,7 +207,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * AWS account identifier that created the file system.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -221,7 +221,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * The configuration for the root volume of the file system. All other volumes are children or the root volume. See Root Volume Configuration Below.
      * 
      */
-    @OutputExport(name="rootVolumeConfiguration", type=OpenZfsFileSystemRootVolumeConfiguration.class, parameters={})
+    @Export(name="rootVolumeConfiguration", type=OpenZfsFileSystemRootVolumeConfiguration.class, parameters={})
     private Output<OpenZfsFileSystemRootVolumeConfiguration> rootVolumeConfiguration;
 
     /**
@@ -235,7 +235,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * Identifier of the root volume, e.g., `fsvol-12345678`
      * 
      */
-    @OutputExport(name="rootVolumeId", type=String.class, parameters={})
+    @Export(name="rootVolumeId", type=String.class, parameters={})
     private Output<String> rootVolumeId;
 
     /**
@@ -249,7 +249,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
      * 
      */
-    @OutputExport(name="securityGroupIds", type=List.class, parameters={String.class})
+    @Export(name="securityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> securityGroupIds;
 
     /**
@@ -263,7 +263,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * The storage capacity (GiB) of the file system. Valid values between `64` and `524288`.
      * 
      */
-    @OutputExport(name="storageCapacity", type=Integer.class, parameters={})
+    @Export(name="storageCapacity", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> storageCapacity;
 
     /**
@@ -277,7 +277,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * The filesystem storage type. Only `SSD` is supported.
      * 
      */
-    @OutputExport(name="storageType", type=String.class, parameters={})
+    @Export(name="storageType", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageType;
 
     /**
@@ -291,7 +291,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * A list of IDs for the subnets that the file system will be accessible from. Exactly 1 subnet need to be provided.
      * 
      */
-    @OutputExport(name="subnetIds", type=String.class, parameters={})
+    @Export(name="subnetIds", type=String.class, parameters={})
     private Output<String> subnetIds;
 
     /**
@@ -305,7 +305,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the file system. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -319,7 +319,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -333,7 +333,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * Throughput (megabytes per second) of the file system in power of 2 increments. Minimum of `64` and maximum of `4096`.
      * 
      */
-    @OutputExport(name="throughputCapacity", type=Integer.class, parameters={})
+    @Export(name="throughputCapacity", type=Integer.class, parameters={})
     private Output<Integer> throughputCapacity;
 
     /**
@@ -347,7 +347,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * Identifier of the Virtual Private Cloud for the file system.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**
@@ -361,7 +361,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * The preferred start time (in `d:HH:MM` format) to perform weekly maintenance, in the UTC time zone.
      * 
      */
-    @OutputExport(name="weeklyMaintenanceStartTime", type=String.class, parameters={})
+    @Export(name="weeklyMaintenanceStartTime", type=String.class, parameters={})
     private Output<String> weeklyMaintenanceStartTime;
 
     /**

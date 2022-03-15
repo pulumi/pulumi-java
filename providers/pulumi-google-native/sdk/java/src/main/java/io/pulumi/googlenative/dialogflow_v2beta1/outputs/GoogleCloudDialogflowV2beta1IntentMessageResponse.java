@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageCardResponse;
@@ -27,7 +27,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageResponse {
     /**
      * Displays a basic card for Actions on Google.
@@ -135,29 +135,29 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse {
      */
     private final GoogleCloudDialogflowV2beta1IntentMessageTextResponse text;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageResponse(
-        @OutputCustomType.Parameter("basicCard") GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse basicCard,
-        @OutputCustomType.Parameter("browseCarouselCard") GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse browseCarouselCard,
-        @OutputCustomType.Parameter("card") GoogleCloudDialogflowV2beta1IntentMessageCardResponse card,
-        @OutputCustomType.Parameter("carouselSelect") GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse carouselSelect,
-        @OutputCustomType.Parameter("image") GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
-        @OutputCustomType.Parameter("linkOutSuggestion") GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse linkOutSuggestion,
-        @OutputCustomType.Parameter("listSelect") GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse listSelect,
-        @OutputCustomType.Parameter("mediaContent") GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse mediaContent,
-        @OutputCustomType.Parameter("payload") Map<String,String> payload,
-        @OutputCustomType.Parameter("platform") String platform,
-        @OutputCustomType.Parameter("quickReplies") GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse quickReplies,
-        @OutputCustomType.Parameter("rbmCarouselRichCard") GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse rbmCarouselRichCard,
-        @OutputCustomType.Parameter("rbmStandaloneRichCard") GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse rbmStandaloneRichCard,
-        @OutputCustomType.Parameter("rbmText") GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse rbmText,
-        @OutputCustomType.Parameter("simpleResponses") GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse simpleResponses,
-        @OutputCustomType.Parameter("suggestions") GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse suggestions,
-        @OutputCustomType.Parameter("tableCard") GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse tableCard,
-        @OutputCustomType.Parameter("telephonyPlayAudio") GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse telephonyPlayAudio,
-        @OutputCustomType.Parameter("telephonySynthesizeSpeech") GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse telephonySynthesizeSpeech,
-        @OutputCustomType.Parameter("telephonyTransferCall") GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse telephonyTransferCall,
-        @OutputCustomType.Parameter("text") GoogleCloudDialogflowV2beta1IntentMessageTextResponse text) {
+        @CustomType.Parameter("basicCard") GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse basicCard,
+        @CustomType.Parameter("browseCarouselCard") GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse browseCarouselCard,
+        @CustomType.Parameter("card") GoogleCloudDialogflowV2beta1IntentMessageCardResponse card,
+        @CustomType.Parameter("carouselSelect") GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse carouselSelect,
+        @CustomType.Parameter("image") GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
+        @CustomType.Parameter("linkOutSuggestion") GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse linkOutSuggestion,
+        @CustomType.Parameter("listSelect") GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse listSelect,
+        @CustomType.Parameter("mediaContent") GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse mediaContent,
+        @CustomType.Parameter("payload") Map<String,String> payload,
+        @CustomType.Parameter("platform") String platform,
+        @CustomType.Parameter("quickReplies") GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse quickReplies,
+        @CustomType.Parameter("rbmCarouselRichCard") GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse rbmCarouselRichCard,
+        @CustomType.Parameter("rbmStandaloneRichCard") GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse rbmStandaloneRichCard,
+        @CustomType.Parameter("rbmText") GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse rbmText,
+        @CustomType.Parameter("simpleResponses") GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse simpleResponses,
+        @CustomType.Parameter("suggestions") GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse suggestions,
+        @CustomType.Parameter("tableCard") GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse tableCard,
+        @CustomType.Parameter("telephonyPlayAudio") GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse telephonyPlayAudio,
+        @CustomType.Parameter("telephonySynthesizeSpeech") GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse telephonySynthesizeSpeech,
+        @CustomType.Parameter("telephonyTransferCall") GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse telephonyTransferCall,
+        @CustomType.Parameter("text") GoogleCloudDialogflowV2beta1IntentMessageTextResponse text) {
         this.basicCard = basicCard;
         this.browseCarouselCard = browseCarouselCard;
         this.card = card;

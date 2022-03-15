@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseBackupInfoResponse {
     /**
      * The list of backup files for the current database.
@@ -53,16 +53,16 @@ public final class DatabaseBackupInfoResponse {
      */
     private final Integer position;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseBackupInfoResponse(
-        @OutputCustomType.Parameter("backupFiles") List<String> backupFiles,
-        @OutputCustomType.Parameter("backupFinishDate") String backupFinishDate,
-        @OutputCustomType.Parameter("backupType") String backupType,
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("familyCount") Integer familyCount,
-        @OutputCustomType.Parameter("isCompressed") Boolean isCompressed,
-        @OutputCustomType.Parameter("isDamaged") Boolean isDamaged,
-        @OutputCustomType.Parameter("position") Integer position) {
+        @CustomType.Parameter("backupFiles") List<String> backupFiles,
+        @CustomType.Parameter("backupFinishDate") String backupFinishDate,
+        @CustomType.Parameter("backupType") String backupType,
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("familyCount") Integer familyCount,
+        @CustomType.Parameter("isCompressed") Boolean isCompressed,
+        @CustomType.Parameter("isDamaged") Boolean isDamaged,
+        @CustomType.Parameter("position") Integer position) {
         this.backupFiles = backupFiles;
         this.backupFinishDate = backupFinishDate;
         this.backupType = backupType;

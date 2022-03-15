@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VMwareCbtProtectedDiskDetailsResponse {
     /**
      * The disk capacity in bytes.
@@ -63,18 +63,18 @@ public final class VMwareCbtProtectedDiskDetailsResponse {
      */
     private final String targetManagedDiskId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VMwareCbtProtectedDiskDetailsResponse(
-        @OutputCustomType.Parameter("capacityInBytes") Double capacityInBytes,
-        @OutputCustomType.Parameter("diskId") String diskId,
-        @OutputCustomType.Parameter("diskName") String diskName,
-        @OutputCustomType.Parameter("diskPath") String diskPath,
-        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
-        @OutputCustomType.Parameter("isOSDisk") String isOSDisk,
-        @OutputCustomType.Parameter("logStorageAccountId") String logStorageAccountId,
-        @OutputCustomType.Parameter("logStorageAccountSasSecretName") String logStorageAccountSasSecretName,
-        @OutputCustomType.Parameter("seedManagedDiskId") String seedManagedDiskId,
-        @OutputCustomType.Parameter("targetManagedDiskId") String targetManagedDiskId) {
+        @CustomType.Parameter("capacityInBytes") Double capacityInBytes,
+        @CustomType.Parameter("diskId") String diskId,
+        @CustomType.Parameter("diskName") String diskName,
+        @CustomType.Parameter("diskPath") String diskPath,
+        @CustomType.Parameter("diskType") @Nullable String diskType,
+        @CustomType.Parameter("isOSDisk") String isOSDisk,
+        @CustomType.Parameter("logStorageAccountId") String logStorageAccountId,
+        @CustomType.Parameter("logStorageAccountSasSecretName") String logStorageAccountSasSecretName,
+        @CustomType.Parameter("seedManagedDiskId") String seedManagedDiskId,
+        @CustomType.Parameter("targetManagedDiskId") String targetManagedDiskId) {
         this.capacityInBytes = capacityInBytes;
         this.diskId = diskId;
         this.diskName = diskName;

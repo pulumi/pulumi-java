@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryOptionsArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CloudStorageOptionsArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DatastoreOptionsArgs;
@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
      * BigQuery options.
      * 
      */
-    @InputImport(name="bigQueryOptions")
+    @Import(name="bigQueryOptions")
       private final @Nullable Output<GooglePrivacyDlpV2BigQueryOptionsArgs> bigQueryOptions;
 
     public Output<GooglePrivacyDlpV2BigQueryOptionsArgs> getBigQueryOptions() {
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
      * Google Cloud Storage options.
      * 
      */
-    @InputImport(name="cloudStorageOptions")
+    @Import(name="cloudStorageOptions")
       private final @Nullable Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> cloudStorageOptions;
 
     public Output<GooglePrivacyDlpV2CloudStorageOptionsArgs> getCloudStorageOptions() {
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
      * Google Cloud Datastore options.
      * 
      */
-    @InputImport(name="datastoreOptions")
+    @Import(name="datastoreOptions")
       private final @Nullable Output<GooglePrivacyDlpV2DatastoreOptionsArgs> datastoreOptions;
 
     public Output<GooglePrivacyDlpV2DatastoreOptionsArgs> getDatastoreOptions() {
@@ -59,14 +59,14 @@ public final class GooglePrivacyDlpV2StorageConfigArgs extends io.pulumi.resourc
      * Hybrid inspection options.
      * 
      */
-    @InputImport(name="hybridOptions")
+    @Import(name="hybridOptions")
       private final @Nullable Output<GooglePrivacyDlpV2HybridOptionsArgs> hybridOptions;
 
     public Output<GooglePrivacyDlpV2HybridOptionsArgs> getHybridOptions() {
         return this.hybridOptions == null ? Output.empty() : this.hybridOptions;
     }
 
-    @InputImport(name="timespanConfig")
+    @Import(name="timespanConfig")
       private final @Nullable Output<GooglePrivacyDlpV2TimespanConfigArgs> timespanConfig;
 
     public Output<GooglePrivacyDlpV2TimespanConfigArgs> getTimespanConfig() {

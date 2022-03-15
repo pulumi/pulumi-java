@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SqlUpsertSettingsResponse {
     /**
      * Schema name for interim table. Type: string (or Expression with resultType string).
@@ -27,11 +27,11 @@ public final class SqlUpsertSettingsResponse {
      */
     private final @Nullable Object useTempDB;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlUpsertSettingsResponse(
-        @OutputCustomType.Parameter("interimSchemaName") @Nullable Object interimSchemaName,
-        @OutputCustomType.Parameter("keys") @Nullable Object keys,
-        @OutputCustomType.Parameter("useTempDB") @Nullable Object useTempDB) {
+        @CustomType.Parameter("interimSchemaName") @Nullable Object interimSchemaName,
+        @CustomType.Parameter("keys") @Nullable Object keys,
+        @CustomType.Parameter("useTempDB") @Nullable Object useTempDB) {
         this.interimSchemaName = interimSchemaName;
         this.keys = keys;
         this.useTempDB = useTempDB;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetWorkloadNetworkDhcpArgs extends io.pulumi.resources.Invoke
      * NSX DHCP identifier. Generally the same as the DHCP display name
      * 
      */
-    @InputImport(name="dhcpId", required=true)
+    @Import(name="dhcpId", required=true)
       private final String dhcpId;
 
     public String getDhcpId() {
@@ -27,7 +27,7 @@ public final class GetWorkloadNetworkDhcpArgs extends io.pulumi.resources.Invoke
      * Name of the private cloud
      * 
      */
-    @InputImport(name="privateCloudName", required=true)
+    @Import(name="privateCloudName", required=true)
       private final String privateCloudName;
 
     public String getPrivateCloudName() {
@@ -38,7 +38,7 @@ public final class GetWorkloadNetworkDhcpArgs extends io.pulumi.resources.Invoke
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

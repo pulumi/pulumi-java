@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.composer_v1beta1.outputs.DatabaseConfigResponse;
 import io.pulumi.googlenative.composer_v1beta1.outputs.EncryptionConfigResponse;
 import io.pulumi.googlenative.composer_v1beta1.outputs.MaintenanceWindowResponse;
@@ -18,7 +18,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentConfigResponse {
     /**
      * The URI of the Apache Airflow Web UI hosted within this environment (see [Airflow web interface](/composer/docs/how-to/accessing/airflow-web-interface)).
@@ -96,23 +96,23 @@ public final class EnvironmentConfigResponse {
      */
     private final WorkloadsConfigResponse workloadsConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentConfigResponse(
-        @OutputCustomType.Parameter("airflowUri") String airflowUri,
-        @OutputCustomType.Parameter("dagGcsPrefix") String dagGcsPrefix,
-        @OutputCustomType.Parameter("databaseConfig") DatabaseConfigResponse databaseConfig,
-        @OutputCustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
-        @OutputCustomType.Parameter("environmentSize") String environmentSize,
-        @OutputCustomType.Parameter("gkeCluster") String gkeCluster,
-        @OutputCustomType.Parameter("maintenanceWindow") MaintenanceWindowResponse maintenanceWindow,
-        @OutputCustomType.Parameter("masterAuthorizedNetworksConfig") MasterAuthorizedNetworksConfigResponse masterAuthorizedNetworksConfig,
-        @OutputCustomType.Parameter("nodeConfig") NodeConfigResponse nodeConfig,
-        @OutputCustomType.Parameter("nodeCount") Integer nodeCount,
-        @OutputCustomType.Parameter("privateEnvironmentConfig") PrivateEnvironmentConfigResponse privateEnvironmentConfig,
-        @OutputCustomType.Parameter("softwareConfig") SoftwareConfigResponse softwareConfig,
-        @OutputCustomType.Parameter("webServerConfig") WebServerConfigResponse webServerConfig,
-        @OutputCustomType.Parameter("webServerNetworkAccessControl") WebServerNetworkAccessControlResponse webServerNetworkAccessControl,
-        @OutputCustomType.Parameter("workloadsConfig") WorkloadsConfigResponse workloadsConfig) {
+        @CustomType.Parameter("airflowUri") String airflowUri,
+        @CustomType.Parameter("dagGcsPrefix") String dagGcsPrefix,
+        @CustomType.Parameter("databaseConfig") DatabaseConfigResponse databaseConfig,
+        @CustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
+        @CustomType.Parameter("environmentSize") String environmentSize,
+        @CustomType.Parameter("gkeCluster") String gkeCluster,
+        @CustomType.Parameter("maintenanceWindow") MaintenanceWindowResponse maintenanceWindow,
+        @CustomType.Parameter("masterAuthorizedNetworksConfig") MasterAuthorizedNetworksConfigResponse masterAuthorizedNetworksConfig,
+        @CustomType.Parameter("nodeConfig") NodeConfigResponse nodeConfig,
+        @CustomType.Parameter("nodeCount") Integer nodeCount,
+        @CustomType.Parameter("privateEnvironmentConfig") PrivateEnvironmentConfigResponse privateEnvironmentConfig,
+        @CustomType.Parameter("softwareConfig") SoftwareConfigResponse softwareConfig,
+        @CustomType.Parameter("webServerConfig") WebServerConfigResponse webServerConfig,
+        @CustomType.Parameter("webServerNetworkAccessControl") WebServerNetworkAccessControlResponse webServerNetworkAccessControl,
+        @CustomType.Parameter("workloadsConfig") WorkloadsConfigResponse workloadsConfig) {
         this.airflowUri = airflowUri;
         this.dagGcsPrefix = dagGcsPrefix;
         this.databaseConfig = databaseConfig;

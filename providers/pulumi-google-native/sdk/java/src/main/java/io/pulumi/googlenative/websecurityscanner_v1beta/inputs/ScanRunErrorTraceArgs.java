@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanRunErrorTraceCode;
 import io.pulumi.googlenative.websecurityscanner_v1beta.inputs.ScanConfigErrorArgs;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
      * Indicates the error reason code.
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable Output<ScanRunErrorTraceCode> code;
 
     public Output<ScanRunErrorTraceCode> getCode() {
@@ -35,7 +35,7 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
      * If the scan encounters TOO_MANY_HTTP_ERRORS, this field indicates the most common HTTP error code, if such is available. For example, if this code is 404, the scan has encountered too many NOT_FOUND responses.
      * 
      */
-    @InputImport(name="mostCommonHttpErrorCode")
+    @Import(name="mostCommonHttpErrorCode")
       private final @Nullable Output<Integer> mostCommonHttpErrorCode;
 
     public Output<Integer> getMostCommonHttpErrorCode() {
@@ -46,7 +46,7 @@ public final class ScanRunErrorTraceArgs extends io.pulumi.resources.ResourceArg
      * If the scan encounters SCAN_CONFIG_ISSUE error, this field has the error message encountered during scan configuration validation that is performed before each scan run.
      * 
      */
-    @InputImport(name="scanConfigError")
+    @Import(name="scanConfigError")
       private final @Nullable Output<ScanConfigErrorArgs> scanConfigError;
 
     public Output<ScanConfigErrorArgs> getScanConfigError() {

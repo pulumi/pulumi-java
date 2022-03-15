@@ -5,14 +5,14 @@ package io.pulumi.awsnative.connect.outputs;
 
 import io.pulumi.awsnative.connect.enums.ContactFlowState;
 import io.pulumi.awsnative.connect.outputs.ContactFlowTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetContactFlowResult {
     /**
      * The identifier of the contact flow (ARN).
@@ -50,15 +50,15 @@ public final class GetContactFlowResult {
      */
     private final @Nullable List<ContactFlowTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetContactFlowResult(
-        @OutputCustomType.Parameter("contactFlowArn") @Nullable String contactFlowArn,
-        @OutputCustomType.Parameter("content") @Nullable String content,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("instanceArn") @Nullable String instanceArn,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("state") @Nullable ContactFlowState state,
-        @OutputCustomType.Parameter("tags") @Nullable List<ContactFlowTag> tags) {
+        @CustomType.Parameter("contactFlowArn") @Nullable String contactFlowArn,
+        @CustomType.Parameter("content") @Nullable String content,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("instanceArn") @Nullable String instanceArn,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("state") @Nullable ContactFlowState state,
+        @CustomType.Parameter("tags") @Nullable List<ContactFlowTag> tags) {
         this.contactFlowArn = contactFlowArn;
         this.content = content;
         this.description = description;

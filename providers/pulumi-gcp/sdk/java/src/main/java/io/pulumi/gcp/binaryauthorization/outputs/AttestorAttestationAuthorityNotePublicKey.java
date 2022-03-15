@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.binaryauthorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.binaryauthorization.outputs.AttestorAttestationAuthorityNotePublicKeyPkixPublicKey;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AttestorAttestationAuthorityNotePublicKey {
     /**
      * ASCII-armored representation of a PGP public key, as the
@@ -51,12 +51,12 @@ public final class AttestorAttestationAuthorityNotePublicKey {
      */
     private final @Nullable AttestorAttestationAuthorityNotePublicKeyPkixPublicKey pkixPublicKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AttestorAttestationAuthorityNotePublicKey(
-        @OutputCustomType.Parameter("asciiArmoredPgpPublicKey") @Nullable String asciiArmoredPgpPublicKey,
-        @OutputCustomType.Parameter("comment") @Nullable String comment,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("pkixPublicKey") @Nullable AttestorAttestationAuthorityNotePublicKeyPkixPublicKey pkixPublicKey) {
+        @CustomType.Parameter("asciiArmoredPgpPublicKey") @Nullable String asciiArmoredPgpPublicKey,
+        @CustomType.Parameter("comment") @Nullable String comment,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("pkixPublicKey") @Nullable AttestorAttestationAuthorityNotePublicKeyPkixPublicKey pkixPublicKey) {
         this.asciiArmoredPgpPublicKey = asciiArmoredPgpPublicKey;
         this.comment = comment;
         this.id = id;

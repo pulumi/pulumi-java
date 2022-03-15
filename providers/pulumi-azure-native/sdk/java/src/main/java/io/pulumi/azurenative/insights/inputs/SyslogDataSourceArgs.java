@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.enums.KnownSyslogDataSourceLogLevels;
 import io.pulumi.azurenative.insights.enums.KnownSyslogDataSourceStreams;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
      * The list of facility names.
      * 
      */
-    @InputImport(name="facilityNames")
+    @Import(name="facilityNames")
       private final @Nullable Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames;
 
     public Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> getFacilityNames() {
@@ -39,7 +39,7 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
      * The log levels to collect.
      * 
      */
-    @InputImport(name="logLevels")
+    @Import(name="logLevels")
       private final @Nullable Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels;
 
     public Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> getLogLevels() {
@@ -51,7 +51,7 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
      * This name should be unique across all data sources (regardless of type) within the data collection rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -63,7 +63,7 @@ public final class SyslogDataSourceArgs extends io.pulumi.resources.ResourceArgs
      * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
      * 
      */
-    @InputImport(name="streams")
+    @Import(name="streams")
       private final @Nullable Output<List<Either<String,KnownSyslogDataSourceStreams>>> streams;
 
     public Output<List<Either<String,KnownSyslogDataSourceStreams>>> getStreams() {

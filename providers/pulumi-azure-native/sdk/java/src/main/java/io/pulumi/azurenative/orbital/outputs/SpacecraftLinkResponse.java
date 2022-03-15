@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.orbital.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SpacecraftLinkResponse {
     /**
      * Bandwidth in MHz
@@ -31,12 +31,12 @@ public final class SpacecraftLinkResponse {
      */
     private final String polarization;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SpacecraftLinkResponse(
-        @OutputCustomType.Parameter("bandwidthMHz") Double bandwidthMHz,
-        @OutputCustomType.Parameter("centerFrequencyMHz") Double centerFrequencyMHz,
-        @OutputCustomType.Parameter("direction") String direction,
-        @OutputCustomType.Parameter("polarization") String polarization) {
+        @CustomType.Parameter("bandwidthMHz") Double bandwidthMHz,
+        @CustomType.Parameter("centerFrequencyMHz") Double centerFrequencyMHz,
+        @CustomType.Parameter("direction") String direction,
+        @CustomType.Parameter("polarization") String polarization) {
         this.bandwidthMHz = bandwidthMHz;
         this.centerFrequencyMHz = centerFrequencyMHz;
         this.direction = direction;

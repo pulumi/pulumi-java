@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.TopicRuleAssetPropertyValue;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,35 +16,35 @@ public final class TopicRulePutAssetPropertyValueEntry extends io.pulumi.resourc
 
     public static final TopicRulePutAssetPropertyValueEntry Empty = new TopicRulePutAssetPropertyValueEntry();
 
-    @InputImport(name="assetId")
+    @Import(name="assetId")
       private final @Nullable String assetId;
 
     public Optional<String> getAssetId() {
         return this.assetId == null ? Optional.empty() : Optional.ofNullable(this.assetId);
     }
 
-    @InputImport(name="entryId")
+    @Import(name="entryId")
       private final @Nullable String entryId;
 
     public Optional<String> getEntryId() {
         return this.entryId == null ? Optional.empty() : Optional.ofNullable(this.entryId);
     }
 
-    @InputImport(name="propertyAlias")
+    @Import(name="propertyAlias")
       private final @Nullable String propertyAlias;
 
     public Optional<String> getPropertyAlias() {
         return this.propertyAlias == null ? Optional.empty() : Optional.ofNullable(this.propertyAlias);
     }
 
-    @InputImport(name="propertyId")
+    @Import(name="propertyId")
       private final @Nullable String propertyId;
 
     public Optional<String> getPropertyId() {
         return this.propertyId == null ? Optional.empty() : Optional.ofNullable(this.propertyId);
     }
 
-    @InputImport(name="propertyValues", required=true)
+    @Import(name="propertyValues", required=true)
       private final List<TopicRuleAssetPropertyValue> propertyValues;
 
     public List<TopicRuleAssetPropertyValue> getPropertyValues() {

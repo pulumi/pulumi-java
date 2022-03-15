@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UpgradeDetailsResponse {
     /**
      * UTC time at which the upgrade operation has ended.
@@ -55,17 +55,17 @@ public final class UpgradeDetailsResponse {
      */
     private final String upgradedResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UpgradeDetailsResponse(
-        @OutputCustomType.Parameter("endTimeUtc") String endTimeUtc,
-        @OutputCustomType.Parameter("lastUpdatedTimeUtc") String lastUpdatedTimeUtc,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("operationId") String operationId,
-        @OutputCustomType.Parameter("previousResourceId") String previousResourceId,
-        @OutputCustomType.Parameter("startTimeUtc") String startTimeUtc,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("triggerType") String triggerType,
-        @OutputCustomType.Parameter("upgradedResourceId") String upgradedResourceId) {
+        @CustomType.Parameter("endTimeUtc") String endTimeUtc,
+        @CustomType.Parameter("lastUpdatedTimeUtc") String lastUpdatedTimeUtc,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("operationId") String operationId,
+        @CustomType.Parameter("previousResourceId") String previousResourceId,
+        @CustomType.Parameter("startTimeUtc") String startTimeUtc,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("triggerType") String triggerType,
+        @CustomType.Parameter("upgradedResourceId") String upgradedResourceId) {
         this.endTimeUtc = endTimeUtc;
         this.lastUpdatedTimeUtc = lastUpdatedTimeUtc;
         this.message = message;

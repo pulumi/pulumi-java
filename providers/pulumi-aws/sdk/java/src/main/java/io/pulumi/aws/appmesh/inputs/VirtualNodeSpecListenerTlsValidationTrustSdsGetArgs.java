@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class VirtualNodeSpecListenerTlsValidationTrustSdsGetArgs extends i
      * The name of the secret for a virtual node's Transport Layer Security (TLS) Secret Discovery Service validation context trust.
      * 
      */
-    @InputImport(name="secretName", required=true)
+    @Import(name="secretName", required=true)
       private final Output<String> secretName;
 
     public Output<String> getSecretName() {

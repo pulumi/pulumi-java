@@ -8,7 +8,7 @@ import io.pulumi.awsnative.refactorspaces.inputs.ServiceLambdaEndpointInputArgs;
 import io.pulumi.awsnative.refactorspaces.inputs.ServiceTagArgs;
 import io.pulumi.awsnative.refactorspaces.inputs.ServiceUrlEndpointInputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,42 +19,42 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceArgs Empty = new ServiceArgs();
 
-    @InputImport(name="applicationIdentifier", required=true)
+    @Import(name="applicationIdentifier", required=true)
       private final Output<String> applicationIdentifier;
 
     public Output<String> getApplicationIdentifier() {
         return this.applicationIdentifier;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="endpointType")
+    @Import(name="endpointType")
       private final @Nullable Output<ServiceEndpointType> endpointType;
 
     public Output<ServiceEndpointType> getEndpointType() {
         return this.endpointType == null ? Output.empty() : this.endpointType;
     }
 
-    @InputImport(name="environmentIdentifier", required=true)
+    @Import(name="environmentIdentifier", required=true)
       private final Output<String> environmentIdentifier;
 
     public Output<String> getEnvironmentIdentifier() {
         return this.environmentIdentifier;
     }
 
-    @InputImport(name="lambdaEndpoint")
+    @Import(name="lambdaEndpoint")
       private final @Nullable Output<ServiceLambdaEndpointInputArgs> lambdaEndpoint;
 
     public Output<ServiceLambdaEndpointInputArgs> getLambdaEndpoint() {
         return this.lambdaEndpoint == null ? Output.empty() : this.lambdaEndpoint;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,21 +65,21 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ServiceTagArgs>> tags;
 
     public Output<List<ServiceTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="urlEndpoint")
+    @Import(name="urlEndpoint")
       private final @Nullable Output<ServiceUrlEndpointInputArgs> urlEndpoint;
 
     public Output<ServiceUrlEndpointInputArgs> getUrlEndpoint() {
         return this.urlEndpoint == null ? Output.empty() : this.urlEndpoint;
     }
 
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

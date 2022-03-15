@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.transfer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AccessHomeDirectoryMapping {
     /**
      * Represents an entry and a target.
@@ -20,10 +20,10 @@ public final class AccessHomeDirectoryMapping {
      */
     private final String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessHomeDirectoryMapping(
-        @OutputCustomType.Parameter("entry") String entry,
-        @OutputCustomType.Parameter("target") String target) {
+        @CustomType.Parameter("entry") String entry,
+        @CustomType.Parameter("target") String target) {
         this.entry = entry;
         this.target = target;
     }

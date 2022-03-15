@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AliasIpRangeResponse extends io.pulumi.resources.InvokeArgs {
      * The IP alias ranges to allocate for this interface. This IP CIDR range must belong to the specified subnetwork and cannot contain IP addresses reserved by system or used by other network interfaces. This range may be a single IP address (such as 10.2.3.4), a netmask (such as /24) or a CIDR-formatted string (such as 10.1.2.0/24).
      * 
      */
-    @InputImport(name="ipCidrRange", required=true)
+    @Import(name="ipCidrRange", required=true)
       private final String ipCidrRange;
 
     public String getIpCidrRange() {
@@ -31,7 +31,7 @@ public final class AliasIpRangeResponse extends io.pulumi.resources.InvokeArgs {
      * The name of a subnetwork secondary IP range from which to allocate an IP alias range. If not specified, the primary range of the subnetwork is used.
      * 
      */
-    @InputImport(name="subnetworkRangeName", required=true)
+    @Import(name="subnetworkRangeName", required=true)
       private final String subnetworkRangeName;
 
     public String getSubnetworkRangeName() {

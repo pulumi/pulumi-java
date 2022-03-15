@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyAdaptiveProtectionConfigResponse {
     /**
      * If set to true, enables Cloud Armor Machine Learning.
@@ -15,8 +15,8 @@ public final class SecurityPolicyAdaptiveProtectionConfigResponse {
      */
     private final SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig;
 
-    @OutputCustomType.Constructor
-    private SecurityPolicyAdaptiveProtectionConfigResponse(@OutputCustomType.Parameter("layer7DdosDefenseConfig") SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig) {
+    @CustomType.Constructor
+    private SecurityPolicyAdaptiveProtectionConfigResponse(@CustomType.Parameter("layer7DdosDefenseConfig") SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse layer7DdosDefenseConfig) {
         this.layer7DdosDefenseConfig = layer7DdosDefenseConfig;
     }
 

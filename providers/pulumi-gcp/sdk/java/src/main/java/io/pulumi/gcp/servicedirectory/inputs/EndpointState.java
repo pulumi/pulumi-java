@@ -4,7 +4,7 @@
 package io.pulumi.gcp.servicedirectory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * IPv4 or IPv6 address of the endpoint.
      * 
      */
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
@@ -32,7 +32,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * lowercase letters or the hyphen character.
      * 
      */
-    @InputImport(name="endpointId")
+    @Import(name="endpointId")
       private final @Nullable Output<String> endpointId;
 
     public Output<String> getEndpointId() {
@@ -46,7 +46,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * Metadata that goes beyond any these limits will be rejected.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -57,7 +57,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The resource name for the endpoint in the format 'projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*{@literal /}endpoints/*'.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -68,7 +68,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The URL to the network, such as projects/PROJECT_NUMBER/locations/global/networks/NETWORK_NAME.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -80,7 +80,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * range of [0, 65535]. If unspecified, the default is 0.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -91,7 +91,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * The resource name of the service that this endpoint provides.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {

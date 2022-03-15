@@ -6,14 +6,14 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.AddressPrefixItemResponse;
 import io.pulumi.azurenative.network.outputs.ConfigurationGroupResponse;
 import io.pulumi.azurenative.network.outputs.NetworkManagerSecurityGroupItemResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ActiveSecurityUserRuleResponse {
     /**
      * Deployment time string.
@@ -112,27 +112,27 @@ public final class ActiveSecurityUserRuleResponse {
      */
     private final @Nullable List<AddressPrefixItemResponse> sources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ActiveSecurityUserRuleResponse(
-        @OutputCustomType.Parameter("commitTime") @Nullable String commitTime,
-        @OutputCustomType.Parameter("configurationDescription") @Nullable String configurationDescription,
-        @OutputCustomType.Parameter("configurationDisplayName") @Nullable String configurationDisplayName,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("destinationPortRanges") @Nullable List<String> destinationPortRanges,
-        @OutputCustomType.Parameter("destinations") @Nullable List<AddressPrefixItemResponse> destinations,
-        @OutputCustomType.Parameter("direction") String direction,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("ruleCollectionAppliesToGroups") @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups,
-        @OutputCustomType.Parameter("ruleCollectionDescription") @Nullable String ruleCollectionDescription,
-        @OutputCustomType.Parameter("ruleCollectionDisplayName") @Nullable String ruleCollectionDisplayName,
-        @OutputCustomType.Parameter("ruleGroups") @Nullable List<ConfigurationGroupResponse> ruleGroups,
-        @OutputCustomType.Parameter("sourcePortRanges") @Nullable List<String> sourcePortRanges,
-        @OutputCustomType.Parameter("sources") @Nullable List<AddressPrefixItemResponse> sources) {
+        @CustomType.Parameter("commitTime") @Nullable String commitTime,
+        @CustomType.Parameter("configurationDescription") @Nullable String configurationDescription,
+        @CustomType.Parameter("configurationDisplayName") @Nullable String configurationDisplayName,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("destinationPortRanges") @Nullable List<String> destinationPortRanges,
+        @CustomType.Parameter("destinations") @Nullable List<AddressPrefixItemResponse> destinations,
+        @CustomType.Parameter("direction") String direction,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("ruleCollectionAppliesToGroups") @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups,
+        @CustomType.Parameter("ruleCollectionDescription") @Nullable String ruleCollectionDescription,
+        @CustomType.Parameter("ruleCollectionDisplayName") @Nullable String ruleCollectionDisplayName,
+        @CustomType.Parameter("ruleGroups") @Nullable List<ConfigurationGroupResponse> ruleGroups,
+        @CustomType.Parameter("sourcePortRanges") @Nullable List<String> sourcePortRanges,
+        @CustomType.Parameter("sources") @Nullable List<AddressPrefixItemResponse> sources) {
         this.commitTime = commitTime;
         this.configurationDescription = configurationDescription;
         this.configurationDisplayName = configurationDisplayName;

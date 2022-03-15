@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.outputs.AccountEncryptionResponse;
 import io.pulumi.azurenative.media.outputs.MediaServiceIdentityResponse;
 import io.pulumi.azurenative.media.outputs.StorageAccountResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMediaServiceResult {
     /**
      * The account encryption properties.
@@ -69,19 +69,19 @@ public final class GetMediaServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMediaServiceResult(
-        @OutputCustomType.Parameter("encryption") @Nullable AccountEncryptionResponse encryption,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable MediaServiceIdentityResponse identity,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("mediaServiceId") String mediaServiceId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("storageAccounts") @Nullable List<StorageAccountResponse> storageAccounts,
-        @OutputCustomType.Parameter("storageAuthentication") @Nullable String storageAuthentication,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("encryption") @Nullable AccountEncryptionResponse encryption,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable MediaServiceIdentityResponse identity,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("mediaServiceId") String mediaServiceId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("storageAccounts") @Nullable List<StorageAccountResponse> storageAccounts,
+        @CustomType.Parameter("storageAuthentication") @Nullable String storageAuthentication,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.encryption = encryption;
         this.id = id;
         this.identity = identity;

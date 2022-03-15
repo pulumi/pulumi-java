@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AzureTableOutputDataSourceResponse extends io.pulumi.resource
      * The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="accountKey")
+    @Import(name="accountKey")
       private final @Nullable String accountKey;
 
     public Optional<String> getAccountKey() {
@@ -35,7 +35,7 @@ public final class AzureTableOutputDataSourceResponse extends io.pulumi.resource
      * The name of the Azure Storage account. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable String accountName;
 
     public Optional<String> getAccountName() {
@@ -46,7 +46,7 @@ public final class AzureTableOutputDataSourceResponse extends io.pulumi.resource
      * The number of rows to write to the Azure Table at a time.
      * 
      */
-    @InputImport(name="batchSize")
+    @Import(name="batchSize")
       private final @Nullable Integer batchSize;
 
     public Optional<Integer> getBatchSize() {
@@ -57,7 +57,7 @@ public final class AzureTableOutputDataSourceResponse extends io.pulumi.resource
      * If specified, each item in the array is the name of a column to remove (if present) from output event entities.
      * 
      */
-    @InputImport(name="columnsToRemove")
+    @Import(name="columnsToRemove")
       private final @Nullable List<String> columnsToRemove;
 
     public List<String> getColumnsToRemove() {
@@ -68,7 +68,7 @@ public final class AzureTableOutputDataSourceResponse extends io.pulumi.resource
      * This element indicates the name of a column from the SELECT statement in the query that will be used as the partition key for the Azure Table. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="partitionKey")
+    @Import(name="partitionKey")
       private final @Nullable String partitionKey;
 
     public Optional<String> getPartitionKey() {
@@ -79,7 +79,7 @@ public final class AzureTableOutputDataSourceResponse extends io.pulumi.resource
      * This element indicates the name of a column from the SELECT statement in the query that will be used as the row key for the Azure Table. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="rowKey")
+    @Import(name="rowKey")
       private final @Nullable String rowKey;
 
     public Optional<String> getRowKey() {
@@ -90,7 +90,7 @@ public final class AzureTableOutputDataSourceResponse extends io.pulumi.resource
      * The name of the Azure Table. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="table")
+    @Import(name="table")
       private final @Nullable String table;
 
     public Optional<String> getTable() {
@@ -102,7 +102,7 @@ public final class AzureTableOutputDataSourceResponse extends io.pulumi.resource
      * Expected value is 'Microsoft.Storage/Table'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

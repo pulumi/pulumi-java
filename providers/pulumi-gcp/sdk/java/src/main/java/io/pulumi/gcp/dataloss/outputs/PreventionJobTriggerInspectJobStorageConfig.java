@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfigBigQueryOptions;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptions;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionJobTriggerInspectJobStorageConfig {
     /**
      * Options defining BigQuery table and row identifiers.
@@ -39,12 +39,12 @@ public final class PreventionJobTriggerInspectJobStorageConfig {
      */
     private final @Nullable PreventionJobTriggerInspectJobStorageConfigTimespanConfig timespanConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionJobTriggerInspectJobStorageConfig(
-        @OutputCustomType.Parameter("bigQueryOptions") @Nullable PreventionJobTriggerInspectJobStorageConfigBigQueryOptions bigQueryOptions,
-        @OutputCustomType.Parameter("cloudStorageOptions") @Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions cloudStorageOptions,
-        @OutputCustomType.Parameter("datastoreOptions") @Nullable PreventionJobTriggerInspectJobStorageConfigDatastoreOptions datastoreOptions,
-        @OutputCustomType.Parameter("timespanConfig") @Nullable PreventionJobTriggerInspectJobStorageConfigTimespanConfig timespanConfig) {
+        @CustomType.Parameter("bigQueryOptions") @Nullable PreventionJobTriggerInspectJobStorageConfigBigQueryOptions bigQueryOptions,
+        @CustomType.Parameter("cloudStorageOptions") @Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions cloudStorageOptions,
+        @CustomType.Parameter("datastoreOptions") @Nullable PreventionJobTriggerInspectJobStorageConfigDatastoreOptions datastoreOptions,
+        @CustomType.Parameter("timespanConfig") @Nullable PreventionJobTriggerInspectJobStorageConfigTimespanConfig timespanConfig) {
         this.bigQueryOptions = bigQueryOptions;
         this.cloudStorageOptions = cloudStorageOptions;
         this.datastoreOptions = datastoreOptions;

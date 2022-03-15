@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserArtifactManageResponse {
     /**
      * Required. The path and arguments to install the gallery application. This is limited to 4096 characters.
@@ -27,11 +27,11 @@ public final class UserArtifactManageResponse {
      */
     private final @Nullable String update;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserArtifactManageResponse(
-        @OutputCustomType.Parameter("install") String install,
-        @OutputCustomType.Parameter("remove") String remove,
-        @OutputCustomType.Parameter("update") @Nullable String update) {
+        @CustomType.Parameter("install") String install,
+        @CustomType.Parameter("remove") String remove,
+        @CustomType.Parameter("update") @Nullable String update) {
         this.install = install;
         this.remove = remove;
         this.update = update;

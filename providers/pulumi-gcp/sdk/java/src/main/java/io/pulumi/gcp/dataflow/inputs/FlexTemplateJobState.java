@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * Template.
      * 
      */
-    @InputImport(name="containerSpecGcsPath")
+    @Import(name="containerSpecGcsPath")
       private final @Nullable Output<String> containerSpecGcsPath;
 
     public Output<String> getContainerSpecGcsPath() {
@@ -32,7 +32,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * The unique ID of this job.
      * 
      */
-    @InputImport(name="jobId")
+    @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
     public Output<String> getJobId() {
@@ -53,7 +53,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @Deprecated /* Deprecated until the API supports this field */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,Object>> labels;
 
     @Deprecated /* Deprecated until the API supports this field */
@@ -65,7 +65,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * A unique name for the resource, required by Dataflow.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -77,7 +77,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * deletion during `pulumi destroy`.  See above note.
      * 
      */
-    @InputImport(name="onDelete")
+    @Import(name="onDelete")
       private final @Nullable Output<String> onDelete;
 
     public Output<String> getOnDelete() {
@@ -90,7 +90,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * such as `serviceAccount`, `workerMachineType`, etc can be specified here.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,Object>> parameters;
 
     public Output<Map<String,Object>> getParameters() {
@@ -102,7 +102,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -113,7 +113,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * The region in which the created job should run.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -124,7 +124,7 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
      * The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {

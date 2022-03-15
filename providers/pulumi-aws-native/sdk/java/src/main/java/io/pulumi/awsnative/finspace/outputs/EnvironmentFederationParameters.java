@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.finspace.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentFederationParameters {
     /**
      * SAML metadata URL to link with the Environment
@@ -43,14 +43,14 @@ public final class EnvironmentFederationParameters {
      */
     private final @Nullable String samlMetadataURL;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentFederationParameters(
-        @OutputCustomType.Parameter("applicationCallBackURL") @Nullable String applicationCallBackURL,
-        @OutputCustomType.Parameter("attributeMap") @Nullable Object attributeMap,
-        @OutputCustomType.Parameter("federationProviderName") @Nullable String federationProviderName,
-        @OutputCustomType.Parameter("federationURN") @Nullable String federationURN,
-        @OutputCustomType.Parameter("samlMetadataDocument") @Nullable String samlMetadataDocument,
-        @OutputCustomType.Parameter("samlMetadataURL") @Nullable String samlMetadataURL) {
+        @CustomType.Parameter("applicationCallBackURL") @Nullable String applicationCallBackURL,
+        @CustomType.Parameter("attributeMap") @Nullable Object attributeMap,
+        @CustomType.Parameter("federationProviderName") @Nullable String federationProviderName,
+        @CustomType.Parameter("federationURN") @Nullable String federationURN,
+        @CustomType.Parameter("samlMetadataDocument") @Nullable String samlMetadataDocument,
+        @CustomType.Parameter("samlMetadataURL") @Nullable String samlMetadataURL) {
         this.applicationCallBackURL = applicationCallBackURL;
         this.attributeMap = attributeMap;
         this.federationProviderName = federationProviderName;

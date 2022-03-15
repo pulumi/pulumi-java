@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGet
      * The number of hours between snapshots.
      * 
      */
-    @InputImport(name="hoursInCycle", required=true)
+    @Import(name="hoursInCycle", required=true)
       private final Output<Integer> hoursInCycle;
 
     public Output<Integer> getHoursInCycle() {
@@ -29,7 +29,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGet
      * The start time of the schedule. The timestamp is an RFC3339 string.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
     public Output<String> getStartTime() {

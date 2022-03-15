@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DnsConfigurationResponse {
     /**
      * The DNS servers for the container group.
@@ -28,11 +28,11 @@ public final class DnsConfigurationResponse {
      */
     private final @Nullable String searchDomains;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DnsConfigurationResponse(
-        @OutputCustomType.Parameter("nameServers") List<String> nameServers,
-        @OutputCustomType.Parameter("options") @Nullable String options,
-        @OutputCustomType.Parameter("searchDomains") @Nullable String searchDomains) {
+        @CustomType.Parameter("nameServers") List<String> nameServers,
+        @CustomType.Parameter("options") @Nullable String options,
+        @CustomType.Parameter("searchDomains") @Nullable String searchDomains) {
         this.nameServers = nameServers;
         this.options = options;
         this.searchDomains = searchDomains;

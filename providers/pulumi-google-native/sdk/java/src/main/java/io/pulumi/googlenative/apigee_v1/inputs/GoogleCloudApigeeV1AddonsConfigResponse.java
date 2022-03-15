@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AdvancedApiOpsConfigResponse;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1ConnectorsPlatformConfigResponse;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1IntegrationConfigResponse;
@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends io.pulumi.res
      * Configuration for the Advanced API Ops add-on.
      * 
      */
-    @InputImport(name="advancedApiOpsConfig", required=true)
+    @Import(name="advancedApiOpsConfig", required=true)
       private final GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig;
 
     public GoogleCloudApigeeV1AdvancedApiOpsConfigResponse getAdvancedApiOpsConfig() {
@@ -34,7 +34,7 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends io.pulumi.res
      * Configuration for the Connectors Platform add-on.
      * 
      */
-    @InputImport(name="connectorsPlatformConfig", required=true)
+    @Import(name="connectorsPlatformConfig", required=true)
       private final GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig;
 
     public GoogleCloudApigeeV1ConnectorsPlatformConfigResponse getConnectorsPlatformConfig() {
@@ -45,7 +45,7 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends io.pulumi.res
      * Configuration for the Integration add-on.
      * 
      */
-    @InputImport(name="integrationConfig", required=true)
+    @Import(name="integrationConfig", required=true)
       private final GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig;
 
     public GoogleCloudApigeeV1IntegrationConfigResponse getIntegrationConfig() {
@@ -56,7 +56,7 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse extends io.pulumi.res
      * Configuration for the Monetization add-on.
      * 
      */
-    @InputImport(name="monetizationConfig", required=true)
+    @Import(name="monetizationConfig", required=true)
       private final GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig;
 
     public GoogleCloudApigeeV1MonetizationConfigResponse getMonetizationConfig() {

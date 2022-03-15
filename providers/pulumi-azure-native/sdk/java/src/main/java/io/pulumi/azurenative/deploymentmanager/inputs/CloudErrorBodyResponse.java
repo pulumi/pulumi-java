@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
      * Error code string.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -34,7 +34,7 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
      * More detailed error information.
      * 
      */
-    @InputImport(name="details")
+    @Import(name="details")
       private final @Nullable List<CloudErrorBodyResponse> details;
 
     public List<CloudErrorBodyResponse> getDetails() {
@@ -45,7 +45,7 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
      * Descriptive error information.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -56,7 +56,7 @@ public final class CloudErrorBodyResponse extends io.pulumi.resources.InvokeArgs
      * Error target
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable String target;
 
     public Optional<String> getTarget() {

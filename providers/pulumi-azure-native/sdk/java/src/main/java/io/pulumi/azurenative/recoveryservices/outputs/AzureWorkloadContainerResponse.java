@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.AzureWorkloadContainerExtendedInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureWorkloadContainerResponse {
     /**
      * Type of backup management for the container.
@@ -67,18 +67,18 @@ public final class AzureWorkloadContainerResponse {
      */
     private final @Nullable String workloadType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureWorkloadContainerResponse(
-        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
-        @OutputCustomType.Parameter("containerType") String containerType,
-        @OutputCustomType.Parameter("extendedInfo") @Nullable AzureWorkloadContainerExtendedInfoResponse extendedInfo,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("healthStatus") @Nullable String healthStatus,
-        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
-        @OutputCustomType.Parameter("operationType") @Nullable String operationType,
-        @OutputCustomType.Parameter("registrationStatus") @Nullable String registrationStatus,
-        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
-        @OutputCustomType.Parameter("workloadType") @Nullable String workloadType) {
+        @CustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @CustomType.Parameter("containerType") String containerType,
+        @CustomType.Parameter("extendedInfo") @Nullable AzureWorkloadContainerExtendedInfoResponse extendedInfo,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("healthStatus") @Nullable String healthStatus,
+        @CustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @CustomType.Parameter("operationType") @Nullable String operationType,
+        @CustomType.Parameter("registrationStatus") @Nullable String registrationStatus,
+        @CustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
+        @CustomType.Parameter("workloadType") @Nullable String workloadType) {
         this.backupManagementType = backupManagementType;
         this.containerType = containerType;
         this.extendedInfo = extendedInfo;

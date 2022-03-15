@@ -4,10 +4,10 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MonitoringSubscriptionMonitoringSubscription {
     /**
      * A subscription configuration for additional CloudWatch metrics. See below.
@@ -15,8 +15,8 @@ public final class MonitoringSubscriptionMonitoringSubscription {
      */
     private final MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig realtimeMetricsSubscriptionConfig;
 
-    @OutputCustomType.Constructor
-    private MonitoringSubscriptionMonitoringSubscription(@OutputCustomType.Parameter("realtimeMetricsSubscriptionConfig") MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig realtimeMetricsSubscriptionConfig) {
+    @CustomType.Constructor
+    private MonitoringSubscriptionMonitoringSubscription(@CustomType.Parameter("realtimeMetricsSubscriptionConfig") MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig realtimeMetricsSubscriptionConfig) {
         this.realtimeMetricsSubscriptionConfig = realtimeMetricsSubscriptionConfig;
     }
 

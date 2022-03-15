@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appstream.inputs;
 
 import io.pulumi.awsnative.appstream.inputs.AppBlockS3LocationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,28 +16,28 @@ public final class AppBlockScriptDetailsArgs extends io.pulumi.resources.Resourc
 
     public static final AppBlockScriptDetailsArgs Empty = new AppBlockScriptDetailsArgs();
 
-    @InputImport(name="executableParameters")
+    @Import(name="executableParameters")
       private final @Nullable Output<String> executableParameters;
 
     public Output<String> getExecutableParameters() {
         return this.executableParameters == null ? Output.empty() : this.executableParameters;
     }
 
-    @InputImport(name="executablePath", required=true)
+    @Import(name="executablePath", required=true)
       private final Output<String> executablePath;
 
     public Output<String> getExecutablePath() {
         return this.executablePath;
     }
 
-    @InputImport(name="scriptS3Location", required=true)
+    @Import(name="scriptS3Location", required=true)
       private final Output<AppBlockS3LocationArgs> scriptS3Location;
 
     public Output<AppBlockS3LocationArgs> getScriptS3Location() {
         return this.scriptS3Location;
     }
 
-    @InputImport(name="timeoutInSeconds", required=true)
+    @Import(name="timeoutInSeconds", required=true)
       private final Output<Integer> timeoutInSeconds;
 
     public Output<Integer> getTimeoutInSeconds() {

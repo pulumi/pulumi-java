@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.DurationResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NotificationEndpointGrpcSettingsResponse {
     /**
      * Optional. If specified, this field is used to set the authority header by the sender of notifications. See https://tools.ietf.org/html/rfc7540#section-8.1.2.3
@@ -37,13 +37,13 @@ public final class NotificationEndpointGrpcSettingsResponse {
      */
     private final Integer retryDurationSec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NotificationEndpointGrpcSettingsResponse(
-        @OutputCustomType.Parameter("authority") String authority,
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("payloadName") String payloadName,
-        @OutputCustomType.Parameter("resendInterval") DurationResponse resendInterval,
-        @OutputCustomType.Parameter("retryDurationSec") Integer retryDurationSec) {
+        @CustomType.Parameter("authority") String authority,
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("payloadName") String payloadName,
+        @CustomType.Parameter("resendInterval") DurationResponse resendInterval,
+        @CustomType.Parameter("retryDurationSec") Integer retryDurationSec) {
         this.authority = authority;
         this.endpoint = endpoint;
         this.payloadName = payloadName;

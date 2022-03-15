@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DiscoveredArgs;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GrafeasV1beta1DiscoveryDetailsArgs extends io.pulumi.resource
      * Analysis status for the discovered resource.
      * 
      */
-    @InputImport(name="discovered", required=true)
+    @Import(name="discovered", required=true)
       private final Output<DiscoveredArgs> discovered;
 
     public Output<DiscoveredArgs> getDiscovered() {

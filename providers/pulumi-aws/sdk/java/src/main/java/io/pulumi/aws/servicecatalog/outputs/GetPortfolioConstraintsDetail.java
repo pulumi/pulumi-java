@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.servicecatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPortfolioConstraintsDetail {
     /**
      * Identifier of the constraint.
@@ -36,14 +36,14 @@ public final class GetPortfolioConstraintsDetail {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPortfolioConstraintsDetail(
-        @OutputCustomType.Parameter("constraintId") String constraintId,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("owner") String owner,
-        @OutputCustomType.Parameter("portfolioId") String portfolioId,
-        @OutputCustomType.Parameter("productId") String productId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("constraintId") String constraintId,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("owner") String owner,
+        @CustomType.Parameter("portfolioId") String portfolioId,
+        @CustomType.Parameter("productId") String productId,
+        @CustomType.Parameter("type") String type) {
         this.constraintId = constraintId;
         this.description = description;
         this.owner = owner;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticsearch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDomainClusterConfigZoneAwarenessConfig extends io.pulumi.r
      * Number of availability zones used.
      * 
      */
-    @InputImport(name="availabilityZoneCount", required=true)
+    @Import(name="availabilityZoneCount", required=true)
       private final Integer availabilityZoneCount;
 
     public Integer getAvailabilityZoneCount() {

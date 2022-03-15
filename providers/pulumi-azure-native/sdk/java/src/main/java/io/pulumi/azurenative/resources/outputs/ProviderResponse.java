@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.resources.outputs;
 
 import io.pulumi.azurenative.resources.outputs.ProviderResourceTypeResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProviderResponse {
     /**
      * The provider ID.
@@ -39,13 +39,13 @@ public final class ProviderResponse {
      */
     private final List<ProviderResourceTypeResponse> resourceTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProviderResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
-        @OutputCustomType.Parameter("registrationPolicy") String registrationPolicy,
-        @OutputCustomType.Parameter("registrationState") String registrationState,
-        @OutputCustomType.Parameter("resourceTypes") List<ProviderResourceTypeResponse> resourceTypes) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("namespace") @Nullable String namespace,
+        @CustomType.Parameter("registrationPolicy") String registrationPolicy,
+        @CustomType.Parameter("registrationState") String registrationState,
+        @CustomType.Parameter("resourceTypes") List<ProviderResourceTypeResponse> resourceTypes) {
         this.id = id;
         this.namespace = namespace;
         this.registrationPolicy = registrationPolicy;

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDetectorModelArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the detector model.
      * 
      */
-    @InputImport(name="detectorModelName", required=true)
+    @Import(name="detectorModelName", required=true)
       private final String detectorModelName;
 
     public String getDetectorModelName() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.iap.inputs.TunnelInstanceIAMBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class TunnelInstanceIAMBindingState extends io.pulumi.resources.Res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<TunnelInstanceIAMBindingConditionGetArgs> condition;
 
     public Output<TunnelInstanceIAMBindingConditionGetArgs> getCondition() {
@@ -32,7 +32,7 @@ public final class TunnelInstanceIAMBindingState extends io.pulumi.resources.Res
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -43,14 +43,14 @@ public final class TunnelInstanceIAMBindingState extends io.pulumi.resources.Res
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="instance")
+    @Import(name="instance")
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
         return this.instance == null ? Output.empty() : this.instance;
     }
 
-    @InputImport(name="members")
+    @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -62,7 +62,7 @@ public final class TunnelInstanceIAMBindingState extends io.pulumi.resources.Res
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -75,14 +75,14 @@ public final class TunnelInstanceIAMBindingState extends io.pulumi.resources.Res
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
         return this.role == null ? Output.empty() : this.role;
     }
 
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

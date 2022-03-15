@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -13,14 +13,14 @@ public final class ResponseHeadersPolicyReferrerPolicy extends io.pulumi.resourc
 
     public static final ResponseHeadersPolicyReferrerPolicy Empty = new ResponseHeadersPolicyReferrerPolicy();
 
-    @InputImport(name="override", required=true)
+    @Import(name="override", required=true)
       private final Boolean override;
 
     public Boolean getOverride() {
         return this.override;
     }
 
-    @InputImport(name="referrerPolicy", required=true)
+    @Import(name="referrerPolicy", required=true)
       private final String referrerPolicy;
 
     public String getReferrerPolicy() {

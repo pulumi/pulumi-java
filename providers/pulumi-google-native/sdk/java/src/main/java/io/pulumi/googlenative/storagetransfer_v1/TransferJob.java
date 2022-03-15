@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.storagetransfer_v1.TransferJobArgs;
@@ -27,7 +27,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * The time that the transfer job was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -41,7 +41,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * The time that the transfer job was deleted.
      * 
      */
-    @OutputExport(name="deletionTime", type=String.class, parameters={})
+    @Export(name="deletionTime", type=String.class, parameters={})
     private Output<String> deletionTime;
 
     /**
@@ -55,7 +55,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * A description provided by the user for the job. Its max length is 1024 bytes when Unicode-encoded.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -69,7 +69,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * The time that the transfer job was last modified.
      * 
      */
-    @OutputExport(name="lastModificationTime", type=String.class, parameters={})
+    @Export(name="lastModificationTime", type=String.class, parameters={})
     private Output<String> lastModificationTime;
 
     /**
@@ -83,7 +83,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * The name of the most recently started TransferOperation of this JobConfig. Present if a TransferOperation has been created for this JobConfig.
      * 
      */
-    @OutputExport(name="latestOperationName", type=String.class, parameters={})
+    @Export(name="latestOperationName", type=String.class, parameters={})
     private Output<String> latestOperationName;
 
     /**
@@ -97,7 +97,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * Logging configuration.
      * 
      */
-    @OutputExport(name="loggingConfig", type=LoggingConfigResponse.class, parameters={})
+    @Export(name="loggingConfig", type=LoggingConfigResponse.class, parameters={})
     private Output<LoggingConfigResponse> loggingConfig;
 
     /**
@@ -111,7 +111,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * A unique name (within the transfer project) assigned when the job is created. If this field is empty in a CreateTransferJobRequest, Storage Transfer Service assigns a unique name. Otherwise, the specified name is used as the unique name for this job. If the specified name is in use by a job, the creation request fails with an ALREADY_EXISTS error. This name must start with `"transferJobs/"` prefix and end with a letter or a number, and should be no more than 128 characters. For transfers involving PosixFilesystem, this name must start with `transferJobs/OPI` specifically. For all other transfer types, this name must not start with `transferJobs/OPI`. Non-PosixFilesystem example: `"transferJobs/^(?!OPI)[A-Za-z0-9-._~]*[A-Za-z0-9]$"` PosixFilesystem example: `"transferJobs/OPI^[A-Za-z0-9-._~]*[A-Za-z0-9]$"` Applications must not rely on the enforcement of naming requirements involving OPI. Invalid job names fail with an INVALID_ARGUMENT error.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -125,7 +125,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * Notification configuration. This is not supported for transfers involving PosixFilesystem.
      * 
      */
-    @OutputExport(name="notificationConfig", type=NotificationConfigResponse.class, parameters={})
+    @Export(name="notificationConfig", type=NotificationConfigResponse.class, parameters={})
     private Output<NotificationConfigResponse> notificationConfig;
 
     /**
@@ -139,7 +139,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * The ID of the Google Cloud project that owns the job.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -153,7 +153,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * Specifies schedule for the transfer job. This is an optional field. When the field is not set, the job never executes a transfer, unless you invoke RunTransferJob or update the job to have a non-empty schedule.
      * 
      */
-    @OutputExport(name="schedule", type=ScheduleResponse.class, parameters={})
+    @Export(name="schedule", type=ScheduleResponse.class, parameters={})
     private Output<ScheduleResponse> schedule;
 
     /**
@@ -167,7 +167,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * Status of the job. This value MUST be specified for `CreateTransferJobRequests`. **Note:** The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -181,7 +181,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * Transfer specification.
      * 
      */
-    @OutputExport(name="transferSpec", type=TransferSpecResponse.class, parameters={})
+    @Export(name="transferSpec", type=TransferSpecResponse.class, parameters={})
     private Output<TransferSpecResponse> transferSpec;
 
     /**

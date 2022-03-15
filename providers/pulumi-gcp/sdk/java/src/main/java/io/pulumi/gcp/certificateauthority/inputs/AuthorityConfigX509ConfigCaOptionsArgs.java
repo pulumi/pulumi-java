@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AuthorityConfigX509ConfigCaOptionsArgs extends io.pulumi.reso
      * When true, the "CA" in Basic Constraints extension will be set to true.
      * 
      */
-    @InputImport(name="isCa", required=true)
+    @Import(name="isCa", required=true)
       private final Output<Boolean> isCa;
 
     public Output<Boolean> getIsCa() {
@@ -31,7 +31,7 @@ public final class AuthorityConfigX509ConfigCaOptionsArgs extends io.pulumi.reso
      * subordinate CA certificates that are allowed. If this value is less than 0, the request will fail.
      * 
      */
-    @InputImport(name="maxIssuerPathLength")
+    @Import(name="maxIssuerPathLength")
       private final @Nullable Output<Integer> maxIssuerPathLength;
 
     public Output<Integer> getMaxIssuerPathLength() {
@@ -43,7 +43,7 @@ public final class AuthorityConfigX509ConfigCaOptionsArgs extends io.pulumi.reso
      * If both `is_ca` and `non_ca` are unset, the extension will be omitted from the CA certificate.
      * 
      */
-    @InputImport(name="nonCa")
+    @Import(name="nonCa")
       private final @Nullable Output<Boolean> nonCa;
 
     public Output<Boolean> getNonCa() {
@@ -56,7 +56,7 @@ public final class AuthorityConfigX509ConfigCaOptionsArgs extends io.pulumi.reso
      * the max path length will be omitted from the CA certificate.
      * 
      */
-    @InputImport(name="zeroMaxIssuerPathLength")
+    @Import(name="zeroMaxIssuerPathLength")
       private final @Nullable Output<Boolean> zeroMaxIssuerPathLength;
 
     public Output<Boolean> getZeroMaxIssuerPathLength() {

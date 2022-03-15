@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.ManagedIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The client secret URL of the identity.
      * 
      */
-    @InputImport(name="clientSecretUrl")
+    @Import(name="clientSecretUrl")
       private final @Nullable Output<String> clientSecretUrl;
 
     public Output<String> getClientSecretUrl() {
@@ -35,7 +35,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The principal id of resource identity.
      * 
      */
-    @InputImport(name="principalId")
+    @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
     public Output<String> getPrincipalId() {
@@ -46,7 +46,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * The tenant identifier of resource.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
@@ -57,7 +57,7 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
      * Managed identity.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,ManagedIdentityType>> type;
 
     public Output<Either<String,ManagedIdentityType>> getType() {

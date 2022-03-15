@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.MediaGraphUsernamePasswordCredentialsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MediaGraphClearEndpointResponse {
     /**
      * Polymorphic credentials to present to the endpoint.
@@ -29,11 +29,11 @@ public final class MediaGraphClearEndpointResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MediaGraphClearEndpointResponse(
-        @OutputCustomType.Parameter("credentials") @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("credentials") @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("url") String url) {
         this.credentials = credentials;
         this.odataType = odataType;
         this.url = url;

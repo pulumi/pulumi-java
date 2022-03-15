@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SapHanaPartitionSettingsResponse {
     /**
      * The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
@@ -17,8 +17,8 @@ public final class SapHanaPartitionSettingsResponse {
      */
     private final @Nullable Object partitionColumnName;
 
-    @OutputCustomType.Constructor
-    private SapHanaPartitionSettingsResponse(@OutputCustomType.Parameter("partitionColumnName") @Nullable Object partitionColumnName) {
+    @CustomType.Constructor
+    private SapHanaPartitionSettingsResponse(@CustomType.Parameter("partitionColumnName") @Nullable Object partitionColumnName) {
         this.partitionColumnName = partitionColumnName;
     }
 

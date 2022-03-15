@@ -7,7 +7,7 @@ import io.pulumi.azurenative.resources.inputs.AliasResponse;
 import io.pulumi.azurenative.resources.inputs.ApiProfileResponse;
 import io.pulumi.azurenative.resources.inputs.ProviderExtendedLocationResponse;
 import io.pulumi.azurenative.resources.inputs.ZoneMappingResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +28,7 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
      * The aliases that are supported by this resource type.
      * 
      */
-    @InputImport(name="aliases")
+    @Import(name="aliases")
       private final @Nullable List<AliasResponse> aliases;
 
     public List<AliasResponse> getAliases() {
@@ -39,7 +39,7 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
      * The API profiles for the resource provider.
      * 
      */
-    @InputImport(name="apiProfiles", required=true)
+    @Import(name="apiProfiles", required=true)
       private final List<ApiProfileResponse> apiProfiles;
 
     public List<ApiProfileResponse> getApiProfiles() {
@@ -50,7 +50,7 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
      * The API version.
      * 
      */
-    @InputImport(name="apiVersions")
+    @Import(name="apiVersions")
       private final @Nullable List<String> apiVersions;
 
     public List<String> getApiVersions() {
@@ -61,7 +61,7 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
      * The additional capabilities offered by this resource type.
      * 
      */
-    @InputImport(name="capabilities")
+    @Import(name="capabilities")
       private final @Nullable String capabilities;
 
     public Optional<String> getCapabilities() {
@@ -72,7 +72,7 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
      * The default API version.
      * 
      */
-    @InputImport(name="defaultApiVersion", required=true)
+    @Import(name="defaultApiVersion", required=true)
       private final String defaultApiVersion;
 
     public String getDefaultApiVersion() {
@@ -83,7 +83,7 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
      * The location mappings that are supported by this resource type.
      * 
      */
-    @InputImport(name="locationMappings")
+    @Import(name="locationMappings")
       private final @Nullable List<ProviderExtendedLocationResponse> locationMappings;
 
     public List<ProviderExtendedLocationResponse> getLocationMappings() {
@@ -94,7 +94,7 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
      * The collection of locations where this resource type can be created.
      * 
      */
-    @InputImport(name="locations")
+    @Import(name="locations")
       private final @Nullable List<String> locations;
 
     public List<String> getLocations() {
@@ -105,7 +105,7 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
      * The properties.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -116,14 +116,14 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
      * The resource type.
      * 
      */
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable String resourceType;
 
     public Optional<String> getPropResourceType() {
         return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
     }
 
-    @InputImport(name="zoneMappings")
+    @Import(name="zoneMappings")
       private final @Nullable List<ZoneMappingResponse> zoneMappings;
 
     public List<ZoneMappingResponse> getZoneMappings() {

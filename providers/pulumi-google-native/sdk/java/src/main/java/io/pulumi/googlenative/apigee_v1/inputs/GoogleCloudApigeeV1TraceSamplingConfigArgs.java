@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.enums.GoogleCloudApigeeV1TraceSamplingConfigSampler;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends io.pulumi.
      * Sampler of distributed tracing. OFF is the default value.
      * 
      */
-    @InputImport(name="sampler")
+    @Import(name="sampler")
       private final @Nullable Output<GoogleCloudApigeeV1TraceSamplingConfigSampler> sampler;
 
     public Output<GoogleCloudApigeeV1TraceSamplingConfigSampler> getSampler() {
@@ -34,7 +34,7 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigArgs extends io.pulumi.
      * Field sampling rate. This value is only applicable when using the PROBABILITY sampler. The supported values are > 0 and <= 0.5.
      * 
      */
-    @InputImport(name="samplingRate")
+    @Import(name="samplingRate")
       private final @Nullable Output<Double> samplingRate;
 
     public Output<Double> getSamplingRate() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.
      * 
      */
-    @InputImport(name="allowHostNameCNMismatch")
+    @Import(name="allowHostNameCNMismatch")
       private final @Nullable Object allowHostNameCNMismatch;
 
     public Optional<Object> getAllowHostNameCNMismatch() {
@@ -41,7 +41,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * Specifies whether to allow self-signed certificates from the server. The default value is false.
      * 
      */
-    @InputImport(name="allowSelfSignedServerCert")
+    @Import(name="allowSelfSignedServerCert")
       private final @Nullable Object allowSelfSignedServerCert;
 
     public Optional<Object> getAllowSelfSignedServerCert() {
@@ -52,7 +52,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -63,7 +63,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * The authentication mechanism used to connect to the Presto server.
      * 
      */
-    @InputImport(name="authenticationType", required=true)
+    @Import(name="authenticationType", required=true)
       private final String authenticationType;
 
     public String getAuthenticationType() {
@@ -74,7 +74,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * The catalog context for all request against the server.
      * 
      */
-    @InputImport(name="catalog", required=true)
+    @Import(name="catalog", required=true)
       private final Object catalog;
 
     public Object getCatalog() {
@@ -85,7 +85,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -96,7 +96,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -107,7 +107,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * Specifies whether the connections to the server are encrypted using SSL. The default value is false.
      * 
      */
-    @InputImport(name="enableSsl")
+    @Import(name="enableSsl")
       private final @Nullable Object enableSsl;
 
     public Optional<Object> getEnableSsl() {
@@ -118,7 +118,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -129,7 +129,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * The IP address or host name of the Presto server. (i.e. 192.168.222.160)
      * 
      */
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final Object host;
 
     public Object getHost() {
@@ -140,7 +140,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -151,7 +151,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * The password corresponding to the user name.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
@@ -162,7 +162,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * The TCP port that the Presto server uses to listen for client connections. The default value is 8080.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Object port;
 
     public Optional<Object> getPort() {
@@ -173,7 +173,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * The version of the Presto server. (i.e. 0.148-t)
      * 
      */
-    @InputImport(name="serverVersion", required=true)
+    @Import(name="serverVersion", required=true)
       private final Object serverVersion;
 
     public Object getServerVersion() {
@@ -184,7 +184,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value is the system time zone.
      * 
      */
-    @InputImport(name="timeZoneID")
+    @Import(name="timeZoneID")
       private final @Nullable Object timeZoneID;
 
     public Optional<Object> getTimeZoneID() {
@@ -195,7 +195,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
      * 
      */
-    @InputImport(name="trustedCertPath")
+    @Import(name="trustedCertPath")
       private final @Nullable Object trustedCertPath;
 
     public Optional<Object> getTrustedCertPath() {
@@ -207,7 +207,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * Expected value is 'Presto'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -218,7 +218,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
      * 
      */
-    @InputImport(name="useSystemTrustStore")
+    @Import(name="useSystemTrustStore")
       private final @Nullable Object useSystemTrustStore;
 
     public Optional<Object> getUseSystemTrustStore() {
@@ -229,7 +229,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * The user name used to connect to the Presto server.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Object username;
 
     public Optional<Object> getUsername() {

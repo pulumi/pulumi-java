@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.DocumentationRuleResponse;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.PageResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
      * The URL to the root of documentation.
      * 
      */
-    @InputImport(name="documentationRootUrl", required=true)
+    @Import(name="documentationRootUrl", required=true)
       private final String documentationRootUrl;
 
     public String getDocumentationRootUrl() {
@@ -34,7 +34,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
      * Declares a single overview page. For example: documentation: summary: ... overview: (== include overview.md ==) This is a shortcut for the following declaration (using pages style): documentation: summary: ... pages: - name: Overview content: (== include overview.md ==) Note: you cannot specify both `overview` field and `pages` field.
      * 
      */
-    @InputImport(name="overview", required=true)
+    @Import(name="overview", required=true)
       private final String overview;
 
     public String getOverview() {
@@ -45,7 +45,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
      * The top level pages for the documentation set.
      * 
      */
-    @InputImport(name="pages", required=true)
+    @Import(name="pages", required=true)
       private final List<PageResponse> pages;
 
     public List<PageResponse> getPages() {
@@ -56,7 +56,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
      * A list of documentation rules that apply to individual API elements. **NOTE:** All service configuration rules follow "last one wins" order.
      * 
      */
-    @InputImport(name="rules", required=true)
+    @Import(name="rules", required=true)
       private final List<DocumentationRuleResponse> rules;
 
     public List<DocumentationRuleResponse> getRules() {
@@ -67,7 +67,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
      * Specifies the service root url if the default one (the service name from the yaml file) is not suitable. This can be seen in any fully specified service urls as well as sections that show a base that other urls are relative to.
      * 
      */
-    @InputImport(name="serviceRootUrl", required=true)
+    @Import(name="serviceRootUrl", required=true)
       private final String serviceRootUrl;
 
     public String getServiceRootUrl() {
@@ -78,7 +78,7 @@ public final class DocumentationResponse extends io.pulumi.resources.InvokeArgs 
      * A short description of what the service does. The summary must be plain text. It becomes the overview of the service displayed in Google Cloud Console. NOTE: This field is equivalent to the standard field `description`.
      * 
      */
-    @InputImport(name="summary", required=true)
+    @Import(name="summary", required=true)
       private final String summary;
 
     public String getSummary() {

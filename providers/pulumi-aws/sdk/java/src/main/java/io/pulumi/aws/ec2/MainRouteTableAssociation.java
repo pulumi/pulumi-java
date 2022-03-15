@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.MainRouteTableAssociationArgs;
 import io.pulumi.aws.ec2.inputs.MainRouteTableAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public class MainRouteTableAssociation extends io.pulumi.resources.CustomResourc
      * Used internally, see __Notes__ below
      * 
      */
-    @OutputExport(name="originalRouteTableId", type=String.class, parameters={})
+    @Export(name="originalRouteTableId", type=String.class, parameters={})
     private Output<String> originalRouteTableId;
 
     /**
@@ -33,7 +33,7 @@ public class MainRouteTableAssociation extends io.pulumi.resources.CustomResourc
      * main route table for the target VPC
      * 
      */
-    @OutputExport(name="routeTableId", type=String.class, parameters={})
+    @Export(name="routeTableId", type=String.class, parameters={})
     private Output<String> routeTableId;
 
     /**
@@ -48,7 +48,7 @@ public class MainRouteTableAssociation extends io.pulumi.resources.CustomResourc
      * The ID of the VPC whose main route table should be set
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

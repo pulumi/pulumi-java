@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VolumeResponse {
     /**
      * Unique name for the volume.
@@ -26,11 +26,11 @@ public final class VolumeResponse {
      */
     private final String volumeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VolumeResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sizeGb") Double sizeGb,
-        @OutputCustomType.Parameter("volumeType") String volumeType) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sizeGb") Double sizeGb,
+        @CustomType.Parameter("volumeType") String volumeType) {
         this.name = name;
         this.sizeGb = sizeGb;
         this.volumeType = volumeType;

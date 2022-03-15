@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse extends io.p
      * Expected value is 'Key'.
      * 
      */
-    @InputImport(name="authorizationType", required=true)
+    @Import(name="authorizationType", required=true)
       private final String authorizationType;
 
     public String getAuthorizationType() {
@@ -33,7 +33,7 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse extends io.p
      * The key used for authorization.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final SecureStringResponse key;
 
     public SecureStringResponse getKey() {

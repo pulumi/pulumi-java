@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.inputs.PipelineReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
@@ -40,7 +40,7 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -51,7 +51,7 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -62,7 +62,7 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
      * Pipeline parameters.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,Object> parameters;
 
     public Map<String,Object> getParameters() {
@@ -73,7 +73,7 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
      * Pipeline reference.
      * 
      */
-    @InputImport(name="pipeline", required=true)
+    @Import(name="pipeline", required=true)
       private final PipelineReferenceResponse pipeline;
 
     public PipelineReferenceResponse getPipeline() {
@@ -85,7 +85,7 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
      * Expected value is 'ExecutePipeline'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -96,7 +96,7 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
@@ -107,7 +107,7 @@ public final class ExecutePipelineActivityResponse extends io.pulumi.resources.I
      * Defines whether activity execution will wait for the dependent pipeline execution to finish. Default is false.
      * 
      */
-    @InputImport(name="waitOnCompletion")
+    @Import(name="waitOnCompletion")
       private final @Nullable Boolean waitOnCompletion;
 
     public Optional<Boolean> getWaitOnCompletion() {

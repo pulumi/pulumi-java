@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigFrameOption exte
      * The value of the X-Frame-Options HTTP response header. Valid values: `DENY` | `SAMEORIGIN`
      * 
      */
-    @InputImport(name="frameOption", required=true)
+    @Import(name="frameOption", required=true)
       private final String frameOption;
 
     public String getFrameOption() {
@@ -28,7 +28,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigFrameOption exte
      * A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
      * 
      */
-    @InputImport(name="override", required=true)
+    @Import(name="override", required=true)
       private final Boolean override;
 
     public Boolean getOverride() {

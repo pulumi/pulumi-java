@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.TransitGatewayMulticastGroupSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public class TransitGatewayMulticastGroupSource extends io.pulumi.resources.Cust
      * The IP address assigned to the transit gateway multicast group.
      * 
      */
-    @OutputExport(name="groupIpAddress", type=String.class, parameters={})
+    @Export(name="groupIpAddress", type=String.class, parameters={})
     private Output<String> groupIpAddress;
 
     /**
@@ -36,7 +36,7 @@ public class TransitGatewayMulticastGroupSource extends io.pulumi.resources.Cust
      * Indicates that the resource is a transit gateway multicast group member.
      * 
      */
-    @OutputExport(name="groupMember", type=Boolean.class, parameters={})
+    @Export(name="groupMember", type=Boolean.class, parameters={})
     private Output<Boolean> groupMember;
 
     /**
@@ -50,7 +50,7 @@ public class TransitGatewayMulticastGroupSource extends io.pulumi.resources.Cust
      * Indicates that the resource is a transit gateway multicast group member.
      * 
      */
-    @OutputExport(name="groupSource", type=Boolean.class, parameters={})
+    @Export(name="groupSource", type=Boolean.class, parameters={})
     private Output<Boolean> groupSource;
 
     /**
@@ -64,7 +64,7 @@ public class TransitGatewayMulticastGroupSource extends io.pulumi.resources.Cust
      * The member type (for example, static).
      * 
      */
-    @OutputExport(name="memberType", type=String.class, parameters={})
+    @Export(name="memberType", type=String.class, parameters={})
     private Output<String> memberType;
 
     /**
@@ -78,7 +78,7 @@ public class TransitGatewayMulticastGroupSource extends io.pulumi.resources.Cust
      * The ID of the transit gateway attachment.
      * 
      */
-    @OutputExport(name="networkInterfaceId", type=String.class, parameters={})
+    @Export(name="networkInterfaceId", type=String.class, parameters={})
     private Output<String> networkInterfaceId;
 
     /**
@@ -92,7 +92,7 @@ public class TransitGatewayMulticastGroupSource extends io.pulumi.resources.Cust
      * The ID of the resource.
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
@@ -106,7 +106,7 @@ public class TransitGatewayMulticastGroupSource extends io.pulumi.resources.Cust
      * The type of resource, for example a VPC attachment.
      * 
      */
-    @OutputExport(name="resourceType", type=String.class, parameters={})
+    @Export(name="resourceType", type=String.class, parameters={})
     private Output<String> resourceType;
 
     /**
@@ -120,7 +120,7 @@ public class TransitGatewayMulticastGroupSource extends io.pulumi.resources.Cust
      * The source type.
      * 
      */
-    @OutputExport(name="sourceType", type=String.class, parameters={})
+    @Export(name="sourceType", type=String.class, parameters={})
     private Output<String> sourceType;
 
     /**
@@ -134,7 +134,7 @@ public class TransitGatewayMulticastGroupSource extends io.pulumi.resources.Cust
      * The ID of the subnet.
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**
@@ -148,7 +148,7 @@ public class TransitGatewayMulticastGroupSource extends io.pulumi.resources.Cust
      * The ID of the transit gateway attachment.
      * 
      */
-    @OutputExport(name="transitGatewayAttachmentId", type=String.class, parameters={})
+    @Export(name="transitGatewayAttachmentId", type=String.class, parameters={})
     private Output<String> transitGatewayAttachmentId;
 
     /**
@@ -162,7 +162,7 @@ public class TransitGatewayMulticastGroupSource extends io.pulumi.resources.Cust
      * The ID of the transit gateway multicast domain.
      * 
      */
-    @OutputExport(name="transitGatewayMulticastDomainId", type=String.class, parameters={})
+    @Export(name="transitGatewayMulticastDomainId", type=String.class, parameters={})
     private Output<String> transitGatewayMulticastDomainId;
 
     /**

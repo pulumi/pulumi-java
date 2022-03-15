@@ -4,11 +4,11 @@
 package io.pulumi.aws.s3.outputs;
 
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigRuleDestinationReplicationTimeTime;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationConfigRuleDestinationReplicationTime {
     /**
      * The status of the Replication Time Control. Either `"Enabled"` or `"Disabled"`.
@@ -21,10 +21,10 @@ public final class BucketReplicationConfigRuleDestinationReplicationTime {
      */
     private final BucketReplicationConfigRuleDestinationReplicationTimeTime time;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketReplicationConfigRuleDestinationReplicationTime(
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("time") BucketReplicationConfigRuleDestinationReplicationTimeTime time) {
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("time") BucketReplicationConfigRuleDestinationReplicationTimeTime time) {
         this.status = status;
         this.time = time;
     }

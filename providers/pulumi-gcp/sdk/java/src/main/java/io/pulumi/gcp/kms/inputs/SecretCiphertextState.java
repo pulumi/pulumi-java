@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @InputImport(name="additionalAuthenticatedData")
+    @Import(name="additionalAuthenticatedData")
       private final @Nullable Output<String> additionalAuthenticatedData;
 
     public Output<String> getAdditionalAuthenticatedData() {
@@ -30,7 +30,7 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
      * Contains the result of encrypting the provided plaintext, encoded in base64.
      * 
      */
-    @InputImport(name="ciphertext")
+    @Import(name="ciphertext")
       private final @Nullable Output<String> ciphertext;
 
     public Output<String> getCiphertext() {
@@ -42,7 +42,7 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
      * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
      * 
      */
-    @InputImport(name="cryptoKey")
+    @Import(name="cryptoKey")
       private final @Nullable Output<String> cryptoKey;
 
     public Output<String> getCryptoKey() {
@@ -54,7 +54,7 @@ public final class SecretCiphertextState extends io.pulumi.resources.ResourceArg
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @InputImport(name="plaintext")
+    @Import(name="plaintext")
       private final @Nullable Output<String> plaintext;
 
     public Output<String> getPlaintext() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.pubsub.outputs.GetTopicMessageStoragePolicy;
 import io.pulumi.gcp.pubsub.outputs.GetTopicSchemaSetting;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTopicResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -28,16 +28,16 @@ public final class GetTopicResult {
     private final @Nullable String project;
     private final List<GetTopicSchemaSetting> schemaSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTopicResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("messageRetentionDuration") String messageRetentionDuration,
-        @OutputCustomType.Parameter("messageStoragePolicies") List<GetTopicMessageStoragePolicy> messageStoragePolicies,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("schemaSettings") List<GetTopicSchemaSetting> schemaSettings) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("messageRetentionDuration") String messageRetentionDuration,
+        @CustomType.Parameter("messageStoragePolicies") List<GetTopicMessageStoragePolicy> messageStoragePolicies,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("schemaSettings") List<GetTopicSchemaSetting> schemaSettings) {
         this.id = id;
         this.kmsKeyName = kmsKeyName;
         this.labels = labels;

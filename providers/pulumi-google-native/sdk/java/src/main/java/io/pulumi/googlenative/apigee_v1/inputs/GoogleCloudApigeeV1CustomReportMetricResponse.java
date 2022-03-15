@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse extends io.pulu
      * aggregate function
      * 
      */
-    @InputImport(name="function", required=true)
+    @Import(name="function", required=true)
       private final String function;
 
     public String getFunction() {
@@ -31,7 +31,7 @@ public final class GoogleCloudApigeeV1CustomReportMetricResponse extends io.pulu
      * name of the metric
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

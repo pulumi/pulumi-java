@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v3.inputs.MetricRangeArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.PerformanceThresholdArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries with ValueType = BOOL. The window is good if any true values appear in the window.
      * 
      */
-    @InputImport(name="goodBadMetricFilter")
+    @Import(name="goodBadMetricFilter")
       private final @Nullable Output<String> goodBadMetricFilter;
 
     public Output<String> getGoodBadMetricFilter() {
@@ -35,7 +35,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
      * A window is good if its performance is high enough.
      * 
      */
-    @InputImport(name="goodTotalRatioThreshold")
+    @Import(name="goodTotalRatioThreshold")
       private final @Nullable Output<PerformanceThresholdArgs> goodTotalRatioThreshold;
 
     public Output<PerformanceThresholdArgs> getGoodTotalRatioThreshold() {
@@ -46,7 +46,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
      * A window is good if the metric's value is in a good range, averaged across returned streams.
      * 
      */
-    @InputImport(name="metricMeanInRange")
+    @Import(name="metricMeanInRange")
       private final @Nullable Output<MetricRangeArgs> metricMeanInRange;
 
     public Output<MetricRangeArgs> getMetricMeanInRange() {
@@ -57,7 +57,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
      * A window is good if the metric's value is in a good range, summed across returned streams.
      * 
      */
-    @InputImport(name="metricSumInRange")
+    @Import(name="metricSumInRange")
       private final @Nullable Output<MetricRangeArgs> metricSumInRange;
 
     public Output<MetricRangeArgs> getMetricSumInRange() {
@@ -68,7 +68,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
      * Duration over which window quality is evaluated. Must be an integer fraction of a day and at least 60s.
      * 
      */
-    @InputImport(name="windowPeriod")
+    @Import(name="windowPeriod")
       private final @Nullable Output<String> windowPeriod;
 
     public Output<String> getWindowPeriod() {

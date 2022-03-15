@@ -6,7 +6,7 @@ package io.pulumi.azurenative.migrate;
 import io.pulumi.azurenative.migrate.inputs.MigrateProjectPropertiesArgs;
 import io.pulumi.azurenative.migrate.inputs.MigrateProjectTagsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the eTag for concurrency control.
      * 
      */
-    @InputImport(name="eTag")
+    @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
     public Output<String> getETag() {
@@ -31,7 +31,7 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the Azure location in which migrate project is created.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -42,7 +42,7 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Azure Migrate project.
      * 
      */
-    @InputImport(name="migrateProjectName")
+    @Import(name="migrateProjectName")
       private final @Nullable Output<String> migrateProjectName;
 
     public Output<String> getMigrateProjectName() {
@@ -53,7 +53,7 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the nested properties.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<MigrateProjectPropertiesArgs> properties;
 
     public Output<MigrateProjectPropertiesArgs> getProperties() {
@@ -64,7 +64,7 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Azure Resource Group that migrate project is part of.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class MigrateProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<MigrateProjectTagsArgs> tags;
 
     public Output<MigrateProjectTagsArgs> getTags() {

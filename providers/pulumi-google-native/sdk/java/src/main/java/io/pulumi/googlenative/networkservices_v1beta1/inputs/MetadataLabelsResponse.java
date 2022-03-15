@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkservices_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MetadataLabelsResponse extends io.pulumi.resources.InvokeArgs
      * Label name presented as key in xDS Node Metadata.
      * 
      */
-    @InputImport(name="labelName", required=true)
+    @Import(name="labelName", required=true)
       private final String labelName;
 
     public String getLabelName() {
@@ -31,7 +31,7 @@ public final class MetadataLabelsResponse extends io.pulumi.resources.InvokeArgs
      * Label value presented as value corresponding to the above key, in xDS Node Metadata.
      * 
      */
-    @InputImport(name="labelValue", required=true)
+    @Import(name="labelValue", required=true)
       private final String labelValue;
 
     public String getLabelValue() {

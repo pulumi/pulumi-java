@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.secretmanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.secretmanager_v1.outputs.AutomaticResponse;
 import io.pulumi.googlenative.secretmanager_v1.outputs.UserManagedResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReplicationResponse {
     /**
      * The Secret will automatically be replicated without any restrictions.
@@ -21,10 +21,10 @@ public final class ReplicationResponse {
      */
     private final UserManagedResponse userManaged;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicationResponse(
-        @OutputCustomType.Parameter("automatic") AutomaticResponse automatic,
-        @OutputCustomType.Parameter("userManaged") UserManagedResponse userManaged) {
+        @CustomType.Parameter("automatic") AutomaticResponse automatic,
+        @CustomType.Parameter("userManaged") UserManagedResponse userManaged) {
         this.automatic = automatic;
         this.userManaged = userManaged;
     }

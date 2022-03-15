@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.RestorePointSourceVMDataDiskResponse;
 import io.pulumi.azurenative.compute.inputs.RestorePointSourceVMOSDiskResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class RestorePointSourceVMStorageProfileResponse extends io.pulumi.
      * Gets the data disks of the VM captured at the time of the restore point creation.
      * 
      */
-    @InputImport(name="dataDisks")
+    @Import(name="dataDisks")
       private final @Nullable List<RestorePointSourceVMDataDiskResponse> dataDisks;
 
     public List<RestorePointSourceVMDataDiskResponse> getDataDisks() {
@@ -35,7 +35,7 @@ public final class RestorePointSourceVMStorageProfileResponse extends io.pulumi.
      * Gets the OS disk of the VM captured at the time of the restore point creation.
      * 
      */
-    @InputImport(name="osDisk")
+    @Import(name="osDisk")
       private final @Nullable RestorePointSourceVMOSDiskResponse osDisk;
 
     public Optional<RestorePointSourceVMOSDiskResponse> getOsDisk() {

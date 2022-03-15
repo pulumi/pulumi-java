@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.EgressFromResponse;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.EgressToResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EgressPolicyResponse {
     /**
      * Defines conditions on the source of a request causing this EgressPolicy to apply.
@@ -21,10 +21,10 @@ public final class EgressPolicyResponse {
      */
     private final EgressToResponse egressTo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EgressPolicyResponse(
-        @OutputCustomType.Parameter("egressFrom") EgressFromResponse egressFrom,
-        @OutputCustomType.Parameter("egressTo") EgressToResponse egressTo) {
+        @CustomType.Parameter("egressFrom") EgressFromResponse egressFrom,
+        @CustomType.Parameter("egressTo") EgressToResponse egressTo) {
         this.egressFrom = egressFrom;
         this.egressTo = egressTo;
     }

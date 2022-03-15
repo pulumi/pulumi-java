@@ -5,14 +5,14 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.CapacityReservationGroupInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceReadOnlyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCapacityReservationGroupResult {
     /**
      * A list of all capacity reservation resource ids that belong to capacity reservation group.
@@ -60,17 +60,17 @@ public final class GetCapacityReservationGroupResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCapacityReservationGroupResult(
-        @OutputCustomType.Parameter("capacityReservations") List<SubResourceReadOnlyResponse> capacityReservations,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceView") CapacityReservationGroupInstanceViewResponse instanceView,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualMachinesAssociated") List<SubResourceReadOnlyResponse> virtualMachinesAssociated,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("capacityReservations") List<SubResourceReadOnlyResponse> capacityReservations,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceView") CapacityReservationGroupInstanceViewResponse instanceView,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualMachinesAssociated") List<SubResourceReadOnlyResponse> virtualMachinesAssociated,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.capacityReservations = capacityReservations;
         this.id = id;
         this.instanceView = instanceView;

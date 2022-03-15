@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityAssessmentMetadataPartnerDataResponse {
     /**
      * Name of the company of the partner
@@ -27,11 +27,11 @@ public final class SecurityAssessmentMetadataPartnerDataResponse {
      */
     private final String secret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityAssessmentMetadataPartnerDataResponse(
-        @OutputCustomType.Parameter("partnerName") String partnerName,
-        @OutputCustomType.Parameter("productName") @Nullable String productName,
-        @OutputCustomType.Parameter("secret") String secret) {
+        @CustomType.Parameter("partnerName") String partnerName,
+        @CustomType.Parameter("productName") @Nullable String productName,
+        @CustomType.Parameter("secret") String secret) {
         this.partnerName = partnerName;
         this.productName = productName;
         this.secret = secret;

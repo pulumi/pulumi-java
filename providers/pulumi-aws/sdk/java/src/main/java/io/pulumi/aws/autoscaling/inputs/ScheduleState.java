@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
      * The ARN assigned by AWS to the autoscaling schedule.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
      * The name or Amazon Resource Name (ARN) of the Auto Scaling group.
      * 
      */
-    @InputImport(name="autoscalingGroupName")
+    @Import(name="autoscalingGroupName")
       private final @Nullable Output<String> autoscalingGroupName;
 
     public Output<String> getAutoscalingGroupName() {
@@ -41,7 +41,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
      * The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don't want to change the desired capacity at the scheduled time.
      * 
      */
-    @InputImport(name="desiredCapacity")
+    @Import(name="desiredCapacity")
       private final @Nullable Output<Integer> desiredCapacity;
 
     public Output<Integer> getDesiredCapacity() {
@@ -53,7 +53,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
      * If you try to schedule your action in the past, Auto Scaling returns an error message.
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -65,7 +65,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
      * Set to -1 if you don't want to change the maximum size at the scheduled time.
      * 
      */
-    @InputImport(name="maxSize")
+    @Import(name="maxSize")
       private final @Nullable Output<Integer> maxSize;
 
     public Output<Integer> getMaxSize() {
@@ -77,7 +77,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
      * Set to -1 if you don't want to change the minimum size at the scheduled time.
      * 
      */
-    @InputImport(name="minSize")
+    @Import(name="minSize")
       private final @Nullable Output<Integer> minSize;
 
     public Output<Integer> getMinSize() {
@@ -88,7 +88,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
      * The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.
      * 
      */
-    @InputImport(name="recurrence")
+    @Import(name="recurrence")
       private final @Nullable Output<String> recurrence;
 
     public Output<String> getRecurrence() {
@@ -99,7 +99,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
      * The name of this scaling action.
      * 
      */
-    @InputImport(name="scheduledActionName")
+    @Import(name="scheduledActionName")
       private final @Nullable Output<String> scheduledActionName;
 
     public Output<String> getScheduledActionName() {
@@ -111,7 +111,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
      * If you try to schedule your action in the past, Auto Scaling returns an error message.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -122,7 +122,7 @@ public final class ScheduleState extends io.pulumi.resources.ResourceArgs {
      * The timezone for the cron expression. Valid values are the canonical names of the IANA time zones (such as Etc/GMT+9 or Pacific/Tahiti).
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {

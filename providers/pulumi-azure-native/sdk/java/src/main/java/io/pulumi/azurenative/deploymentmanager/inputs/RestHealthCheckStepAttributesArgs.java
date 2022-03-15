@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.RestHealthCheckArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
      * The list of checks that form the health check step.
      * 
      */
-    @InputImport(name="healthChecks", required=true)
+    @Import(name="healthChecks", required=true)
       private final Output<List<RestHealthCheckArgs>> healthChecks;
 
     public Output<List<RestHealthCheckArgs>> getHealthChecks() {
@@ -35,7 +35,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
      * The duration in ISO 8601 format for which the resource is expected to be continuously healthy. If maxElasticDuration is specified, healthy state duration is enforced after the detection of first healthy signal.
      * 
      */
-    @InputImport(name="healthyStateDuration", required=true)
+    @Import(name="healthyStateDuration", required=true)
       private final Output<String> healthyStateDuration;
 
     public Output<String> getHealthyStateDuration() {
@@ -46,7 +46,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
      * The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn't. Health check starts to enforce healthyStateDuration once resource becomes healthy.
      * 
      */
-    @InputImport(name="maxElasticDuration")
+    @Import(name="maxElasticDuration")
       private final @Nullable Output<String> maxElasticDuration;
 
     public Output<String> getMaxElasticDuration() {
@@ -58,7 +58,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
      * Expected value is 'REST'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -69,7 +69,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
      * The duration in ISO 8601 format for which health check waits idly without any checks.
      * 
      */
-    @InputImport(name="waitDuration")
+    @Import(name="waitDuration")
       private final @Nullable Output<String> waitDuration;
 
     public Output<String> getWaitDuration() {

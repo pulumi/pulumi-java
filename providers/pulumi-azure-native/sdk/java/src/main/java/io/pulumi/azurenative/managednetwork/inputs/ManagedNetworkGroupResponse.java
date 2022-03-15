@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managednetwork.inputs;
 
 import io.pulumi.azurenative.managednetwork.inputs.ResourceIdResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -35,7 +35,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -46,7 +46,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * Responsibility role under which this Managed Network Group will be created
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable String kind;
 
     public Optional<String> getKind() {
@@ -57,7 +57,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -68,7 +68,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * The collection of management groups covered by the Managed Network
      * 
      */
-    @InputImport(name="managementGroups")
+    @Import(name="managementGroups")
       private final @Nullable List<ResourceIdResponse> managementGroups;
 
     public List<ResourceIdResponse> getManagementGroups() {
@@ -79,7 +79,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * The name of the resource
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -90,7 +90,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * Provisioning state of the ManagedNetwork resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -101,7 +101,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * The collection of  subnets covered by the Managed Network
      * 
      */
-    @InputImport(name="subnets")
+    @Import(name="subnets")
       private final @Nullable List<ResourceIdResponse> subnets;
 
     public List<ResourceIdResponse> getSubnets() {
@@ -112,7 +112,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * The collection of subscriptions covered by the Managed Network
      * 
      */
-    @InputImport(name="subscriptions")
+    @Import(name="subscriptions")
       private final @Nullable List<ResourceIdResponse> subscriptions;
 
     public List<ResourceIdResponse> getSubscriptions() {
@@ -123,7 +123,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -134,7 +134,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * The collection of virtual nets covered by the Managed Network
      * 
      */
-    @InputImport(name="virtualNetworks")
+    @Import(name="virtualNetworks")
       private final @Nullable List<ResourceIdResponse> virtualNetworks;
 
     public List<ResourceIdResponse> getVirtualNetworks() {

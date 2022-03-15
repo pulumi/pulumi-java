@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.LiteSubscriptionArgs;
@@ -53,7 +53,7 @@ public class LiteSubscription extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="deliveryConfig", type=LiteSubscriptionDeliveryConfig.class, parameters={})
+    @Export(name="deliveryConfig", type=LiteSubscriptionDeliveryConfig.class, parameters={})
     private Output</* @Nullable */ LiteSubscriptionDeliveryConfig> deliveryConfig;
 
     /**
@@ -68,7 +68,7 @@ public class LiteSubscription extends io.pulumi.resources.CustomResource {
      * Name of the subscription.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -83,7 +83,7 @@ public class LiteSubscription extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -98,7 +98,7 @@ public class LiteSubscription extends io.pulumi.resources.CustomResource {
      * The region of the pubsub lite topic.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output</* @Nullable */ String> region;
 
     /**
@@ -112,7 +112,7 @@ public class LiteSubscription extends io.pulumi.resources.CustomResource {
      * A reference to a Topic resource.
      * 
      */
-    @OutputExport(name="topic", type=String.class, parameters={})
+    @Export(name="topic", type=String.class, parameters={})
     private Output<String> topic;
 
     /**
@@ -126,7 +126,7 @@ public class LiteSubscription extends io.pulumi.resources.CustomResource {
      * The zone of the pubsub lite topic.
      * 
      */
-    @OutputExport(name="zone", type=String.class, parameters={})
+    @Export(name="zone", type=String.class, parameters={})
     private Output</* @Nullable */ String> zone;
 
     /**

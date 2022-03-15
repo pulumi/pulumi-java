@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventhub.outputs;
 
 import io.pulumi.azurenative.eventhub.outputs.DestinationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CaptureDescriptionResponse {
     /**
      * Properties of Destination where capture will be stored. (Storage Account, Blob Names)
@@ -45,14 +45,14 @@ public final class CaptureDescriptionResponse {
      */
     private final @Nullable Boolean skipEmptyArchives;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CaptureDescriptionResponse(
-        @OutputCustomType.Parameter("destination") @Nullable DestinationResponse destination,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("encoding") @Nullable String encoding,
-        @OutputCustomType.Parameter("intervalInSeconds") @Nullable Integer intervalInSeconds,
-        @OutputCustomType.Parameter("sizeLimitInBytes") @Nullable Integer sizeLimitInBytes,
-        @OutputCustomType.Parameter("skipEmptyArchives") @Nullable Boolean skipEmptyArchives) {
+        @CustomType.Parameter("destination") @Nullable DestinationResponse destination,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("encoding") @Nullable String encoding,
+        @CustomType.Parameter("intervalInSeconds") @Nullable Integer intervalInSeconds,
+        @CustomType.Parameter("sizeLimitInBytes") @Nullable Integer sizeLimitInBytes,
+        @CustomType.Parameter("skipEmptyArchives") @Nullable Boolean skipEmptyArchives) {
         this.destination = destination;
         this.enabled = enabled;
         this.encoding = encoding;

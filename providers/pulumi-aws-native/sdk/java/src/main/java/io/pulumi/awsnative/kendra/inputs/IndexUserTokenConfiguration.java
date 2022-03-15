@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.IndexJsonTokenTypeConfiguration;
 import io.pulumi.awsnative.kendra.inputs.IndexJwtTokenTypeConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class IndexUserTokenConfiguration extends io.pulumi.resources.Invok
 
     public static final IndexUserTokenConfiguration Empty = new IndexUserTokenConfiguration();
 
-    @InputImport(name="jsonTokenTypeConfiguration")
+    @Import(name="jsonTokenTypeConfiguration")
       private final @Nullable IndexJsonTokenTypeConfiguration jsonTokenTypeConfiguration;
 
     public Optional<IndexJsonTokenTypeConfiguration> getJsonTokenTypeConfiguration() {
         return this.jsonTokenTypeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.jsonTokenTypeConfiguration);
     }
 
-    @InputImport(name="jwtTokenTypeConfiguration")
+    @Import(name="jwtTokenTypeConfiguration")
       private final @Nullable IndexJwtTokenTypeConfiguration jwtTokenTypeConfiguration;
 
     public Optional<IndexJwtTokenTypeConfiguration> getJwtTokenTypeConfiguration() {

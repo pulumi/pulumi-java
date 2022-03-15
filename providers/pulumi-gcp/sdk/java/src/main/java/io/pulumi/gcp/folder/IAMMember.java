@@ -4,7 +4,7 @@
 package io.pulumi.gcp.folder;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.folder.IAMMemberArgs;
@@ -15,31 +15,31 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:folder/iAMMember:IAMMember")
 public class IAMMember extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=IAMMemberCondition.class, parameters={})
+    @Export(name="condition", type=IAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ IAMMemberCondition> condition;
 
     public Output</* @Nullable */ IAMMemberCondition> getCondition() {
         return this.condition;
     }
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="folder", type=String.class, parameters={})
+    @Export(name="folder", type=String.class, parameters={})
     private Output<String> folder;
 
     public Output<String> getFolder() {
         return this.folder;
     }
-    @OutputExport(name="member", type=String.class, parameters={})
+    @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
     public Output<String> getMember() {
         return this.member;
     }
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     public Output<String> getRole() {

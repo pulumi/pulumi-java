@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DomainMappingSpecGetArgs extends io.pulumi.resources.Resource
      * Possible values are `NONE` and `AUTOMATIC`.
      * 
      */
-    @InputImport(name="certificateMode")
+    @Import(name="certificateMode")
       private final @Nullable Output<String> certificateMode;
 
     public Output<String> getCertificateMode() {
@@ -35,7 +35,7 @@ public final class DomainMappingSpecGetArgs extends io.pulumi.resources.Resource
      * has given such a warning.
      * 
      */
-    @InputImport(name="forceOverride")
+    @Import(name="forceOverride")
       private final @Nullable Output<Boolean> forceOverride;
 
     public Output<Boolean> getForceOverride() {
@@ -47,7 +47,7 @@ public final class DomainMappingSpecGetArgs extends io.pulumi.resources.Resource
      * The route must exist.
      * 
      */
-    @InputImport(name="routeName", required=true)
+    @Import(name="routeName", required=true)
       private final Output<String> routeName;
 
     public Output<String> getRouteName() {

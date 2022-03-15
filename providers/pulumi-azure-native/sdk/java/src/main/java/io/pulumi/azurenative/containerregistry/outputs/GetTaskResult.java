@@ -12,7 +12,7 @@ import io.pulumi.azurenative.containerregistry.outputs.IdentityPropertiesRespons
 import io.pulumi.azurenative.containerregistry.outputs.PlatformPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TriggerPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -22,7 +22,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTaskResult {
     /**
      * The machine configuration of the run agent.
@@ -120,27 +120,27 @@ public final class GetTaskResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTaskResult(
-        @OutputCustomType.Parameter("agentConfiguration") @Nullable AgentPropertiesResponse agentConfiguration,
-        @OutputCustomType.Parameter("agentPoolName") @Nullable String agentPoolName,
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("credentials") @Nullable CredentialsResponse credentials,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable IdentityPropertiesResponse identity,
-        @OutputCustomType.Parameter("isSystemTask") @Nullable Boolean isSystemTask,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("logTemplate") @Nullable String logTemplate,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("platform") @Nullable PlatformPropertiesResponse platform,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("step") @Nullable Object step,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
-        @OutputCustomType.Parameter("trigger") @Nullable TriggerPropertiesResponse trigger,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("agentConfiguration") @Nullable AgentPropertiesResponse agentConfiguration,
+        @CustomType.Parameter("agentPoolName") @Nullable String agentPoolName,
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("credentials") @Nullable CredentialsResponse credentials,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable IdentityPropertiesResponse identity,
+        @CustomType.Parameter("isSystemTask") @Nullable Boolean isSystemTask,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("logTemplate") @Nullable String logTemplate,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("platform") @Nullable PlatformPropertiesResponse platform,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("step") @Nullable Object step,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("timeout") @Nullable Integer timeout,
+        @CustomType.Parameter("trigger") @Nullable TriggerPropertiesResponse trigger,
+        @CustomType.Parameter("type") String type) {
         this.agentConfiguration = agentConfiguration;
         this.agentPoolName = agentPoolName;
         this.creationDate = creationDate;

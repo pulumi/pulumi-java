@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DisplayDeviceArgs extends io.pulumi.resources.ResourceArgs {
      * Defines whether the instance has Display enabled.
      * 
      */
-    @InputImport(name="enableDisplay")
+    @Import(name="enableDisplay")
       private final @Nullable Output<Boolean> enableDisplay;
 
     public Output<Boolean> getEnableDisplay() {

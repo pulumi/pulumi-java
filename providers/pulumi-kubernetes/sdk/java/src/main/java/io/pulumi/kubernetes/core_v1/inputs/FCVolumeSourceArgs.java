@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.
      * 
      */
-    @InputImport(name="fsType")
+    @Import(name="fsType")
       private final @Nullable Output<String> fsType;
 
     public Output<String> getFsType() {
@@ -36,7 +36,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional: FC target lun number
      * 
      */
-    @InputImport(name="lun")
+    @Import(name="lun")
       private final @Nullable Output<Integer> lun;
 
     public Output<Integer> getLun() {
@@ -47,7 +47,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
@@ -58,7 +58,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional: FC target worldwide names (WWNs)
      * 
      */
-    @InputImport(name="targetWWNs")
+    @Import(name="targetWWNs")
       private final @Nullable Output<List<String>> targetWWNs;
 
     public Output<List<String>> getTargetWWNs() {
@@ -69,7 +69,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.
      * 
      */
-    @InputImport(name="wwids")
+    @Import(name="wwids")
       private final @Nullable Output<List<String>> wwids;
 
     public Output<List<String>> getWwids() {

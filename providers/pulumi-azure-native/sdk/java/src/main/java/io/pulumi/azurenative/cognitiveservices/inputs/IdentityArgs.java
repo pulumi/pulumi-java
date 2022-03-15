@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cognitiveservices.inputs;
 import io.pulumi.azurenative.cognitiveservices.enums.IdentityType;
 import io.pulumi.azurenative.cognitiveservices.inputs.UserAssignedIdentityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * Type of managed service identity.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<IdentityType> type;
 
     public Output<IdentityType> getType() {
@@ -36,7 +36,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
      * The list of user assigned identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,UserAssignedIdentityArgs>> userAssignedIdentities;
 
     public Output<Map<String,UserAssignedIdentityArgs>> getUserAssignedIdentities() {

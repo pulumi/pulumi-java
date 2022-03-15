@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.redhatopenshift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConsoleProfileResponse {
     /**
      * The URL to access the cluster console (immutable).
@@ -17,8 +17,8 @@ public final class ConsoleProfileResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
-    private ConsoleProfileResponse(@OutputCustomType.Parameter("url") @Nullable String url) {
+    @CustomType.Constructor
+    private ConsoleProfileResponse(@CustomType.Parameter("url") @Nullable String url) {
         this.url = url;
     }
 

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.robomaker.inputs;
 
 import io.pulumi.awsnative.robomaker.enums.SimulationApplicationSourceConfigArchitecture;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class SimulationApplicationSourceConfigArgs extends io.pulumi.resou
      * The target processor architecture for the application.
      * 
      */
-    @InputImport(name="architecture", required=true)
+    @Import(name="architecture", required=true)
       private final Output<SimulationApplicationSourceConfigArchitecture> architecture;
 
     public Output<SimulationApplicationSourceConfigArchitecture> getArchitecture() {
@@ -33,7 +33,7 @@ public final class SimulationApplicationSourceConfigArgs extends io.pulumi.resou
      * The Amazon S3 bucket name.
      * 
      */
-    @InputImport(name="s3Bucket", required=true)
+    @Import(name="s3Bucket", required=true)
       private final Output<String> s3Bucket;
 
     public Output<String> getS3Bucket() {
@@ -44,7 +44,7 @@ public final class SimulationApplicationSourceConfigArgs extends io.pulumi.resou
      * The s3 object key.
      * 
      */
-    @InputImport(name="s3Key", required=true)
+    @Import(name="s3Key", required=true)
       private final Output<String> s3Key;
 
     public Output<String> getS3Key() {

@@ -6,14 +6,14 @@ package io.pulumi.azurenative.guestconfiguration.outputs;
 import io.pulumi.azurenative.guestconfiguration.outputs.AssignmentInfoResponse;
 import io.pulumi.azurenative.guestconfiguration.outputs.AssignmentReportResourceResponse;
 import io.pulumi.azurenative.guestconfiguration.outputs.VMInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssignmentReportResponse {
     /**
      * Configuration details of the guest configuration assignment.
@@ -61,17 +61,17 @@ public final class AssignmentReportResponse {
      */
     private final @Nullable VMInfoResponse vm;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssignmentReportResponse(
-        @OutputCustomType.Parameter("assignment") @Nullable AssignmentInfoResponse assignment,
-        @OutputCustomType.Parameter("complianceStatus") String complianceStatus,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("operationType") String operationType,
-        @OutputCustomType.Parameter("reportId") String reportId,
-        @OutputCustomType.Parameter("resources") @Nullable List<AssignmentReportResourceResponse> resources,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("vm") @Nullable VMInfoResponse vm) {
+        @CustomType.Parameter("assignment") @Nullable AssignmentInfoResponse assignment,
+        @CustomType.Parameter("complianceStatus") String complianceStatus,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("operationType") String operationType,
+        @CustomType.Parameter("reportId") String reportId,
+        @CustomType.Parameter("resources") @Nullable List<AssignmentReportResourceResponse> resources,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("vm") @Nullable VMInfoResponse vm) {
         this.assignment = assignment;
         this.complianceStatus = complianceStatus;
         this.endTime = endTime;

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.node.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.node.k8s.io_v1beta1.outputs.Overhead;
 import io.pulumi.kubernetes.node.k8s.io_v1beta1.outputs.Scheduling;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuntimeClass {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
@@ -45,14 +45,14 @@ public final class RuntimeClass {
      */
     private final @Nullable Scheduling scheduling;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuntimeClass(
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("handler") String handler,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
-        @OutputCustomType.Parameter("overhead") @Nullable Overhead overhead,
-        @OutputCustomType.Parameter("scheduling") @Nullable Scheduling scheduling) {
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("handler") String handler,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @CustomType.Parameter("overhead") @Nullable Overhead overhead,
+        @CustomType.Parameter("scheduling") @Nullable Scheduling scheduling) {
         this.apiVersion = apiVersion;
         this.handler = handler;
         this.kind = kind;

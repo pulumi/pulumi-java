@@ -4,24 +4,24 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.ResourceGuardOperationDetailResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceGuardProxyBaseResponse {
     private final @Nullable String lastUpdatedTime;
     private final @Nullable List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails;
     private final @Nullable String resourceGuardResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceGuardProxyBaseResponse(
-        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
-        @OutputCustomType.Parameter("resourceGuardOperationDetails") @Nullable List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails,
-        @OutputCustomType.Parameter("resourceGuardResourceId") @Nullable String resourceGuardResourceId) {
+        @CustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @CustomType.Parameter("resourceGuardOperationDetails") @Nullable List<ResourceGuardOperationDetailResponse> resourceGuardOperationDetails,
+        @CustomType.Parameter("resourceGuardResourceId") @Nullable String resourceGuardResourceId) {
         this.lastUpdatedTime = lastUpdatedTime;
         this.resourceGuardOperationDetails = resourceGuardOperationDetails;
         this.resourceGuardResourceId = resourceGuardResourceId;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.eventhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DestinationResponse {
     /**
      * Blob naming convention for archive, e.g. {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters (Namespace,EventHub .. etc) are mandatory irrespective of order
@@ -32,12 +32,12 @@ public final class DestinationResponse {
      */
     private final @Nullable String storageAccountResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DestinationResponse(
-        @OutputCustomType.Parameter("archiveNameFormat") @Nullable String archiveNameFormat,
-        @OutputCustomType.Parameter("blobContainer") @Nullable String blobContainer,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("storageAccountResourceId") @Nullable String storageAccountResourceId) {
+        @CustomType.Parameter("archiveNameFormat") @Nullable String archiveNameFormat,
+        @CustomType.Parameter("blobContainer") @Nullable String blobContainer,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("storageAccountResourceId") @Nullable String storageAccountResourceId) {
         this.archiveNameFormat = archiveNameFormat;
         this.blobContainer = blobContainer;
         this.name = name;

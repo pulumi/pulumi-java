@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.gamelift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GameServerGroupLaunchTemplate {
     private final @Nullable String launchTemplateId;
     private final @Nullable String launchTemplateName;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GameServerGroupLaunchTemplate(
-        @OutputCustomType.Parameter("launchTemplateId") @Nullable String launchTemplateId,
-        @OutputCustomType.Parameter("launchTemplateName") @Nullable String launchTemplateName,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("launchTemplateId") @Nullable String launchTemplateId,
+        @CustomType.Parameter("launchTemplateName") @Nullable String launchTemplateName,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.launchTemplateId = launchTemplateId;
         this.launchTemplateName = launchTemplateName;
         this.version = version;

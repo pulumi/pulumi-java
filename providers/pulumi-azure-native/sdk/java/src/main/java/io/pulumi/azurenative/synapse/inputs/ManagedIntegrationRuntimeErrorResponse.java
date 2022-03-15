@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ManagedIntegrationRuntimeErrorResponse extends io.pulumi.reso
      * Error code.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -32,7 +32,7 @@ public final class ManagedIntegrationRuntimeErrorResponse extends io.pulumi.reso
      * Error message.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -43,7 +43,7 @@ public final class ManagedIntegrationRuntimeErrorResponse extends io.pulumi.reso
      * Managed integration runtime error parameters.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final List<String> parameters;
 
     public List<String> getParameters() {
@@ -54,7 +54,7 @@ public final class ManagedIntegrationRuntimeErrorResponse extends io.pulumi.reso
      * The time when the error occurred.
      * 
      */
-    @InputImport(name="time", required=true)
+    @Import(name="time", required=true)
       private final String time;
 
     public String getTime() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfigGetArgs e
      * value 2. The maximum depth allowed is 5.
      * 
      */
-    @InputImport(name="recursiveStructureDepth", required=true)
+    @Import(name="recursiveStructureDepth", required=true)
       private final Output<Integer> recursiveStructureDepth;
 
     public Output<Integer> getRecursiveStructureDepth() {
@@ -37,7 +37,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfigGetArgs e
      *   Possible values are `ANALYTICS`.
      * 
      */
-    @InputImport(name="schemaType")
+    @Import(name="schemaType")
       private final @Nullable Output<String> schemaType;
 
     public Output<String> getSchemaType() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.NotificationArgs;
@@ -49,7 +49,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * The name of the bucket.
      * 
      */
-    @OutputExport(name="bucket", type=String.class, parameters={})
+    @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
@@ -63,7 +63,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
      * 
      */
-    @OutputExport(name="customAttributes", type=Map.class, parameters={String.class, String.class})
+    @Export(name="customAttributes", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> customAttributes;
 
     /**
@@ -77,7 +77,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
      * 
      */
-    @OutputExport(name="eventTypes", type=List.class, parameters={String.class})
+    @Export(name="eventTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> eventTypes;
 
     /**
@@ -91,7 +91,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * The ID of the created notification.
      * 
      */
-    @OutputExport(name="notificationId", type=String.class, parameters={})
+    @Export(name="notificationId", type=String.class, parameters={})
     private Output<String> notificationId;
 
     /**
@@ -105,7 +105,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
      * 
      */
-    @OutputExport(name="objectNamePrefix", type=String.class, parameters={})
+    @Export(name="objectNamePrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> objectNamePrefix;
 
     /**
@@ -119,7 +119,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
      * 
      */
-    @OutputExport(name="payloadFormat", type=String.class, parameters={})
+    @Export(name="payloadFormat", type=String.class, parameters={})
     private Output<String> payloadFormat;
 
     /**
@@ -133,7 +133,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -150,7 +150,7 @@ public class Notification extends io.pulumi.resources.CustomResource {
      * you will need to use the project-level name.
      * 
      */
-    @OutputExport(name="topic", type=String.class, parameters={})
+    @Export(name="topic", type=String.class, parameters={})
     private Output<String> topic;
 
     /**

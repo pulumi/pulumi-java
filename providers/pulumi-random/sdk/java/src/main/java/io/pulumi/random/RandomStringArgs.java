@@ -4,7 +4,7 @@
 package io.pulumi.random;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -22,7 +22,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    @InputImport(name="keepers")
+    @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
     public Output<Map<String,Object>> getKeepers() {
@@ -33,7 +33,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * The length of the string desired.
      * 
      */
-    @InputImport(name="length", required=true)
+    @Import(name="length", required=true)
       private final Output<Integer> length;
 
     public Output<Integer> getLength() {
@@ -44,7 +44,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * Include lowercase alphabet characters in the result.
      * 
      */
-    @InputImport(name="lower")
+    @Import(name="lower")
       private final @Nullable Output<Boolean> lower;
 
     public Output<Boolean> getLower() {
@@ -55,7 +55,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * Minimum number of lowercase alphabet characters in the result.
      * 
      */
-    @InputImport(name="minLower")
+    @Import(name="minLower")
       private final @Nullable Output<Integer> minLower;
 
     public Output<Integer> getMinLower() {
@@ -66,7 +66,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * Minimum number of numeric characters in the result.
      * 
      */
-    @InputImport(name="minNumeric")
+    @Import(name="minNumeric")
       private final @Nullable Output<Integer> minNumeric;
 
     public Output<Integer> getMinNumeric() {
@@ -77,7 +77,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * Minimum number of special characters in the result.
      * 
      */
-    @InputImport(name="minSpecial")
+    @Import(name="minSpecial")
       private final @Nullable Output<Integer> minSpecial;
 
     public Output<Integer> getMinSpecial() {
@@ -88,7 +88,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * Minimum number of uppercase alphabet characters in the result.
      * 
      */
-    @InputImport(name="minUpper")
+    @Import(name="minUpper")
       private final @Nullable Output<Integer> minUpper;
 
     public Output<Integer> getMinUpper() {
@@ -99,7 +99,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * Include numeric characters in the result.
      * 
      */
-    @InputImport(name="number")
+    @Import(name="number")
       private final @Nullable Output<Boolean> number;
 
     public Output<Boolean> getNumber() {
@@ -110,7 +110,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * Supply your own list of special characters to use for string generation.  This overrides the default character list in the special argument.  The `special` argument must still be set to true for any overwritten characters to be used in generation.
      * 
      */
-    @InputImport(name="overrideSpecial")
+    @Import(name="overrideSpecial")
       private final @Nullable Output<String> overrideSpecial;
 
     public Output<String> getOverrideSpecial() {
@@ -121,7 +121,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * Include special characters in the result. These are `!@#$%&*()-_=+[]{}<>:?`
      * 
      */
-    @InputImport(name="special")
+    @Import(name="special")
       private final @Nullable Output<Boolean> special;
 
     public Output<Boolean> getSpecial() {
@@ -132,7 +132,7 @@ public final class RandomStringArgs extends io.pulumi.resources.ResourceArgs {
      * Include uppercase alphabet characters in the result.
      * 
      */
-    @InputImport(name="upper")
+    @Import(name="upper")
       private final @Nullable Output<Boolean> upper;
 
     public Output<Boolean> getUpper() {

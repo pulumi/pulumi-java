@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.CidrBlockResponse;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MasterAuthorizedNetworksConfigResponse {
     /**
      * cidr_blocks define up to 10 external networks that could access Kubernetes master through HTTPS.
@@ -22,10 +22,10 @@ public final class MasterAuthorizedNetworksConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MasterAuthorizedNetworksConfigResponse(
-        @OutputCustomType.Parameter("cidrBlocks") List<CidrBlockResponse> cidrBlocks,
-        @OutputCustomType.Parameter("enabled") Boolean enabled) {
+        @CustomType.Parameter("cidrBlocks") List<CidrBlockResponse> cidrBlocks,
+        @CustomType.Parameter("enabled") Boolean enabled) {
         this.cidrBlocks = cidrBlocks;
         this.enabled = enabled;
     }

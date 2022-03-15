@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyCorsConfig;
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyCustomHeadersConfig;
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicySecurityHeadersConfig;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,35 +17,35 @@ public final class ResponseHeadersPolicyConfig extends io.pulumi.resources.Invok
 
     public static final ResponseHeadersPolicyConfig Empty = new ResponseHeadersPolicyConfig();
 
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable String comment;
 
     public Optional<String> getComment() {
         return this.comment == null ? Optional.empty() : Optional.ofNullable(this.comment);
     }
 
-    @InputImport(name="corsConfig")
+    @Import(name="corsConfig")
       private final @Nullable ResponseHeadersPolicyCorsConfig corsConfig;
 
     public Optional<ResponseHeadersPolicyCorsConfig> getCorsConfig() {
         return this.corsConfig == null ? Optional.empty() : Optional.ofNullable(this.corsConfig);
     }
 
-    @InputImport(name="customHeadersConfig")
+    @Import(name="customHeadersConfig")
       private final @Nullable ResponseHeadersPolicyCustomHeadersConfig customHeadersConfig;
 
     public Optional<ResponseHeadersPolicyCustomHeadersConfig> getCustomHeadersConfig() {
         return this.customHeadersConfig == null ? Optional.empty() : Optional.ofNullable(this.customHeadersConfig);
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="securityHeadersConfig")
+    @Import(name="securityHeadersConfig")
       private final @Nullable ResponseHeadersPolicySecurityHeadersConfig securityHeadersConfig;
 
     public Optional<ResponseHeadersPolicySecurityHeadersConfig> getSecurityHeadersConfig() {

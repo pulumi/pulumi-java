@@ -8,14 +8,14 @@ import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationDashPackag
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationHlsPackage;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationMssPackage;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPackagingConfigurationResult {
     /**
      * The ARN of the PackagingConfiguration.
@@ -53,15 +53,15 @@ public final class GetPackagingConfigurationResult {
      */
     private final @Nullable List<PackagingConfigurationTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPackagingConfigurationResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("cmafPackage") @Nullable PackagingConfigurationCmafPackage cmafPackage,
-        @OutputCustomType.Parameter("dashPackage") @Nullable PackagingConfigurationDashPackage dashPackage,
-        @OutputCustomType.Parameter("hlsPackage") @Nullable PackagingConfigurationHlsPackage hlsPackage,
-        @OutputCustomType.Parameter("mssPackage") @Nullable PackagingConfigurationMssPackage mssPackage,
-        @OutputCustomType.Parameter("packagingGroupId") @Nullable String packagingGroupId,
-        @OutputCustomType.Parameter("tags") @Nullable List<PackagingConfigurationTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("cmafPackage") @Nullable PackagingConfigurationCmafPackage cmafPackage,
+        @CustomType.Parameter("dashPackage") @Nullable PackagingConfigurationDashPackage dashPackage,
+        @CustomType.Parameter("hlsPackage") @Nullable PackagingConfigurationHlsPackage hlsPackage,
+        @CustomType.Parameter("mssPackage") @Nullable PackagingConfigurationMssPackage mssPackage,
+        @CustomType.Parameter("packagingGroupId") @Nullable String packagingGroupId,
+        @CustomType.Parameter("tags") @Nullable List<PackagingConfigurationTag> tags) {
         this.arn = arn;
         this.cmafPackage = cmafPackage;
         this.dashPackage = dashPackage;

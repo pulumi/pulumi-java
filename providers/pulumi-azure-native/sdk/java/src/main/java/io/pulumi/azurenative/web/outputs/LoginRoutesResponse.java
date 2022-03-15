@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoginRoutesResponse {
     /**
      * The endpoint at which a logout request should be made.
@@ -17,8 +17,8 @@ public final class LoginRoutesResponse {
      */
     private final @Nullable String logoutEndpoint;
 
-    @OutputCustomType.Constructor
-    private LoginRoutesResponse(@OutputCustomType.Parameter("logoutEndpoint") @Nullable String logoutEndpoint) {
+    @CustomType.Constructor
+    private LoginRoutesResponse(@CustomType.Parameter("logoutEndpoint") @Nullable String logoutEndpoint) {
         this.logoutEndpoint = logoutEndpoint;
     }
 

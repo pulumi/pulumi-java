@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * Structure is documented below.
      * 
      */
-    @InputImport(name="cacheKeyPolicy")
+    @Import(name="cacheKeyPolicy")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs> cacheKeyPolicy;
 
     public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicyArgs> getCacheKeyPolicy() {
@@ -35,7 +35,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * Possible values are `CACHE_ALL_STATIC`, `USE_ORIGIN_HEADERS`, `FORCE_CACHE_ALL`, and `BYPASS_CACHE`.
      * 
      */
-    @InputImport(name="cacheMode")
+    @Import(name="cacheMode")
       private final @Nullable Output<String> cacheMode;
 
     public Output<String> getCacheMode() {
@@ -52,7 +52,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="clientTtl")
+    @Import(name="clientTtl")
       private final @Nullable Output<String> clientTtl;
 
     public Output<String> getClientTtl() {
@@ -72,7 +72,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="defaultTtl")
+    @Import(name="defaultTtl")
       private final @Nullable Output<String> defaultTtl;
 
     public Output<String> getDefaultTtl() {
@@ -91,7 +91,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="maxTtl")
+    @Import(name="maxTtl")
       private final @Nullable Output<String> maxTtl;
 
     public Output<String> getMaxTtl() {
@@ -107,7 +107,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      *   These defaults can be overridden in negativeCachingPolicy
      * 
      */
-    @InputImport(name="negativeCaching")
+    @Import(name="negativeCaching")
       private final @Nullable Output<Boolean> negativeCaching;
 
     public Output<Boolean> getNegativeCaching() {
@@ -121,7 +121,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      *   Note that when specifying an explicit negativeCachingPolicy, you should take care to specify a cache TTL for all response codes that you wish to cache. The CDNPolicy will not apply any default negative caching when a policy exists.
      * 
      */
-    @InputImport(name="negativeCachingPolicy")
+    @Import(name="negativeCachingPolicy")
       private final @Nullable Output<Map<String,String>> negativeCachingPolicy;
 
     public Output<Map<String,String>> getNegativeCachingPolicy() {
@@ -132,7 +132,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * The EdgeCacheKeyset containing the set of public keys used to validate signed requests at the edge.
      * 
      */
-    @InputImport(name="signedRequestKeyset")
+    @Import(name="signedRequestKeyset")
       private final @Nullable Output<String> signedRequestKeyset;
 
     public Output<String> getSignedRequestKeyset() {
@@ -146,7 +146,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * Possible values are `DISABLED` and `REQUIRE_SIGNATURES`.
      * 
      */
-    @InputImport(name="signedRequestMode")
+    @Import(name="signedRequestMode")
       private final @Nullable Output<String> signedRequestMode;
 
     public Output<String> getSignedRequestMode() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.dbforpostgresql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageProfileResponse {
     /**
      * Backup retention days for the server.
@@ -33,12 +33,12 @@ public final class StorageProfileResponse {
      */
     private final @Nullable Integer storageMB;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageProfileResponse(
-        @OutputCustomType.Parameter("backupRetentionDays") @Nullable Integer backupRetentionDays,
-        @OutputCustomType.Parameter("geoRedundantBackup") @Nullable String geoRedundantBackup,
-        @OutputCustomType.Parameter("storageAutogrow") @Nullable String storageAutogrow,
-        @OutputCustomType.Parameter("storageMB") @Nullable Integer storageMB) {
+        @CustomType.Parameter("backupRetentionDays") @Nullable Integer backupRetentionDays,
+        @CustomType.Parameter("geoRedundantBackup") @Nullable String geoRedundantBackup,
+        @CustomType.Parameter("storageAutogrow") @Nullable String storageAutogrow,
+        @CustomType.Parameter("storageMB") @Nullable Integer storageMB) {
         this.backupRetentionDays = backupRetentionDays;
         this.geoRedundantBackup = geoRedundantBackup;
         this.storageAutogrow = storageAutogrow;

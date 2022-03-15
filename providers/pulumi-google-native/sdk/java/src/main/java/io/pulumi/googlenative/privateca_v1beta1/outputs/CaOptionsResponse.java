@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CaOptionsResponse {
     /**
      * Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.
@@ -21,10 +21,10 @@ public final class CaOptionsResponse {
      */
     private final Integer maxIssuerPathLength;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CaOptionsResponse(
-        @OutputCustomType.Parameter("isCa") Boolean isCa,
-        @OutputCustomType.Parameter("maxIssuerPathLength") Integer maxIssuerPathLength) {
+        @CustomType.Parameter("isCa") Boolean isCa,
+        @CustomType.Parameter("maxIssuerPathLength") Integer maxIssuerPathLength) {
         this.isCa = isCa;
         this.maxIssuerPathLength = maxIssuerPathLength;
     }

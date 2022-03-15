@@ -6,7 +6,7 @@ package io.pulumi.awsnative.robomaker;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.robomaker.RobotApplicationVersionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -17,19 +17,19 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:robomaker:RobotApplicationVersion")
 public class RobotApplicationVersion extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="application", type=String.class, parameters={})
+    @Export(name="application", type=String.class, parameters={})
     private Output<String> application;
 
     public Output<String> getApplication() {
         return this.application;
     }
-    @OutputExport(name="applicationVersion", type=String.class, parameters={})
+    @Export(name="applicationVersion", type=String.class, parameters={})
     private Output<String> applicationVersion;
 
     public Output<String> getApplicationVersion() {
         return this.applicationVersion;
     }
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -39,7 +39,7 @@ public class RobotApplicationVersion extends io.pulumi.resources.CustomResource 
      * The revision ID of robot application.
      * 
      */
-    @OutputExport(name="currentRevisionId", type=String.class, parameters={})
+    @Export(name="currentRevisionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> currentRevisionId;
 
     /**

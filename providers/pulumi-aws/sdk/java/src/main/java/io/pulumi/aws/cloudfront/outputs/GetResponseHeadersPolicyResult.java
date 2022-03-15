@@ -6,12 +6,12 @@ package io.pulumi.aws.cloudfront.outputs;
 import io.pulumi.aws.cloudfront.outputs.GetResponseHeadersPolicyCorsConfig;
 import io.pulumi.aws.cloudfront.outputs.GetResponseHeadersPolicyCustomHeadersConfig;
 import io.pulumi.aws.cloudfront.outputs.GetResponseHeadersPolicySecurityHeadersConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResponseHeadersPolicyResult {
     /**
      * A comment to describe the response headers policy. The comment cannot be longer than 128 characters.
@@ -41,15 +41,15 @@ public final class GetResponseHeadersPolicyResult {
      */
     private final List<GetResponseHeadersPolicySecurityHeadersConfig> securityHeadersConfigs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResponseHeadersPolicyResult(
-        @OutputCustomType.Parameter("comment") String comment,
-        @OutputCustomType.Parameter("corsConfigs") List<GetResponseHeadersPolicyCorsConfig> corsConfigs,
-        @OutputCustomType.Parameter("customHeadersConfigs") List<GetResponseHeadersPolicyCustomHeadersConfig> customHeadersConfigs,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("securityHeadersConfigs") List<GetResponseHeadersPolicySecurityHeadersConfig> securityHeadersConfigs) {
+        @CustomType.Parameter("comment") String comment,
+        @CustomType.Parameter("corsConfigs") List<GetResponseHeadersPolicyCorsConfig> corsConfigs,
+        @CustomType.Parameter("customHeadersConfigs") List<GetResponseHeadersPolicyCustomHeadersConfig> customHeadersConfigs,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("securityHeadersConfigs") List<GetResponseHeadersPolicySecurityHeadersConfig> securityHeadersConfigs) {
         this.comment = comment;
         this.corsConfigs = corsConfigs;
         this.customHeadersConfigs = customHeadersConfigs;

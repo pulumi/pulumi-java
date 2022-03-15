@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AudioResponse extends io.pulumi.resources.InvokeArgs {
      * The bitrate, in bits per second, of the output encoded audio.
      * 
      */
-    @InputImport(name="bitrate")
+    @Import(name="bitrate")
       private final @Nullable Integer bitrate;
 
     public Optional<Integer> getBitrate() {
@@ -34,7 +34,7 @@ public final class AudioResponse extends io.pulumi.resources.InvokeArgs {
      * The number of channels in the audio.
      * 
      */
-    @InputImport(name="channels")
+    @Import(name="channels")
       private final @Nullable Integer channels;
 
     public Optional<Integer> getChannels() {
@@ -45,7 +45,7 @@ public final class AudioResponse extends io.pulumi.resources.InvokeArgs {
      * An optional label for the codec. The label can be used to control muxing behavior.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable String label;
 
     public Optional<String> getLabel() {
@@ -57,7 +57,7 @@ public final class AudioResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is '#Microsoft.Media.Audio'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -68,7 +68,7 @@ public final class AudioResponse extends io.pulumi.resources.InvokeArgs {
      * The sampling rate to use for encoding in hertz.
      * 
      */
-    @InputImport(name="samplingRate")
+    @Import(name="samplingRate")
       private final @Nullable Integer samplingRate;
 
     public Optional<Integer> getSamplingRate() {

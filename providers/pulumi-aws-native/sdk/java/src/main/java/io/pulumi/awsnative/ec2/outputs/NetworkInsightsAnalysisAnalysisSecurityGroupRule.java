@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisPortRange;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInsightsAnalysisAnalysisSecurityGroupRule {
     private final @Nullable String cidr;
     private final @Nullable String direction;
@@ -19,14 +19,14 @@ public final class NetworkInsightsAnalysisAnalysisSecurityGroupRule {
     private final @Nullable String protocol;
     private final @Nullable String securityGroupId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInsightsAnalysisAnalysisSecurityGroupRule(
-        @OutputCustomType.Parameter("cidr") @Nullable String cidr,
-        @OutputCustomType.Parameter("direction") @Nullable String direction,
-        @OutputCustomType.Parameter("portRange") @Nullable NetworkInsightsAnalysisPortRange portRange,
-        @OutputCustomType.Parameter("prefixListId") @Nullable String prefixListId,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("securityGroupId") @Nullable String securityGroupId) {
+        @CustomType.Parameter("cidr") @Nullable String cidr,
+        @CustomType.Parameter("direction") @Nullable String direction,
+        @CustomType.Parameter("portRange") @Nullable NetworkInsightsAnalysisPortRange portRange,
+        @CustomType.Parameter("prefixListId") @Nullable String prefixListId,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("securityGroupId") @Nullable String securityGroupId) {
         this.cidr = cidr;
         this.direction = direction;
         this.portRange = portRange;

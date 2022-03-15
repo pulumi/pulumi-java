@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.FeatureGroupOnlineStoreSecurityConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OnlineStoreConfigProperties {
     private final @Nullable Boolean enableOnlineStore;
     private final @Nullable FeatureGroupOnlineStoreSecurityConfig securityConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OnlineStoreConfigProperties(
-        @OutputCustomType.Parameter("enableOnlineStore") @Nullable Boolean enableOnlineStore,
-        @OutputCustomType.Parameter("securityConfig") @Nullable FeatureGroupOnlineStoreSecurityConfig securityConfig) {
+        @CustomType.Parameter("enableOnlineStore") @Nullable Boolean enableOnlineStore,
+        @CustomType.Parameter("securityConfig") @Nullable FeatureGroupOnlineStoreSecurityConfig securityConfig) {
         this.enableOnlineStore = enableOnlineStore;
         this.securityConfig = securityConfig;
     }

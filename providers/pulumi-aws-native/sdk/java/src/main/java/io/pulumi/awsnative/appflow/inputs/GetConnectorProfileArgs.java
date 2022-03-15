@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetConnectorProfileArgs extends io.pulumi.resources.InvokeArg
      * The maximum number of items to retrieve in a single batch.
      * 
      */
-    @InputImport(name="connectorProfileName", required=true)
+    @Import(name="connectorProfileName", required=true)
       private final String connectorProfileName;
 
     public String getConnectorProfileName() {

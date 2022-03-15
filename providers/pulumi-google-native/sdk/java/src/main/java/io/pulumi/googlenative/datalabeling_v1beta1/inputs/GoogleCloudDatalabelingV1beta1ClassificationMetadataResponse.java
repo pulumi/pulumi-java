@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse 
      * Whether the classification task is multi-label or not.
      * 
      */
-    @InputImport(name="isMultiLabel", required=true)
+    @Import(name="isMultiLabel", required=true)
       private final Boolean isMultiLabel;
 
     public Boolean getIsMultiLabel() {

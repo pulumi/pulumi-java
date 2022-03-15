@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
      * The maximum number of requests that users can make within the specified time period.
      * 
      */
-    @InputImport(name="limit")
+    @Import(name="limit")
       private final @Nullable Output<Integer> limit;
 
     public Output<Integer> getLimit() {
@@ -30,7 +30,7 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
      * For the initial time period, the number of requests to subtract from the specified limit. When you first implement a usage plan, the plan might start in the middle of the week or month. With this property, you can decrease the limit for this initial time period.
      * 
      */
-    @InputImport(name="offset")
+    @Import(name="offset")
       private final @Nullable Output<Integer> offset;
 
     public Output<Integer> getOffset() {
@@ -41,7 +41,7 @@ public final class UsagePlanQuotaSettingsArgs extends io.pulumi.resources.Resour
      * The time period for which the maximum limit of requests applies, such as DAY or WEEK. For valid values, see the period property for the UsagePlan resource in the Amazon API Gateway REST API Reference.
      * 
      */
-    @InputImport(name="period")
+    @Import(name="period")
       private final @Nullable Output<String> period;
 
     public Output<String> getPeriod() {

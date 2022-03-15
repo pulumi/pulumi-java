@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetVpcCidrBlockAssociation;
 import io.pulumi.aws.ec2.outputs.GetVpcFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVpcResult {
     /**
      * Amazon Resource Name (ARN) of VPC
@@ -73,24 +73,24 @@ public final class GetVpcResult {
     private final String state;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVpcResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
-        @OutputCustomType.Parameter("cidrBlockAssociations") List<GetVpcCidrBlockAssociation> cidrBlockAssociations,
-        @OutputCustomType.Parameter("default") Boolean $default,
-        @OutputCustomType.Parameter("dhcpOptionsId") String dhcpOptionsId,
-        @OutputCustomType.Parameter("enableDnsHostnames") Boolean enableDnsHostnames,
-        @OutputCustomType.Parameter("enableDnsSupport") Boolean enableDnsSupport,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceTenancy") String instanceTenancy,
-        @OutputCustomType.Parameter("ipv6AssociationId") String ipv6AssociationId,
-        @OutputCustomType.Parameter("ipv6CidrBlock") String ipv6CidrBlock,
-        @OutputCustomType.Parameter("mainRouteTableId") String mainRouteTableId,
-        @OutputCustomType.Parameter("ownerId") String ownerId,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("cidrBlock") String cidrBlock,
+        @CustomType.Parameter("cidrBlockAssociations") List<GetVpcCidrBlockAssociation> cidrBlockAssociations,
+        @CustomType.Parameter("default") Boolean $default,
+        @CustomType.Parameter("dhcpOptionsId") String dhcpOptionsId,
+        @CustomType.Parameter("enableDnsHostnames") Boolean enableDnsHostnames,
+        @CustomType.Parameter("enableDnsSupport") Boolean enableDnsSupport,
+        @CustomType.Parameter("filters") @Nullable List<GetVpcFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceTenancy") String instanceTenancy,
+        @CustomType.Parameter("ipv6AssociationId") String ipv6AssociationId,
+        @CustomType.Parameter("ipv6CidrBlock") String ipv6CidrBlock,
+        @CustomType.Parameter("mainRouteTableId") String mainRouteTableId,
+        @CustomType.Parameter("ownerId") String ownerId,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.cidrBlock = cidrBlock;
         this.cidrBlockAssociations = cidrBlockAssociations;

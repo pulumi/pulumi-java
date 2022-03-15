@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class StageSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Dataflow service generated name for this source.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class StageSourceArgs extends io.pulumi.resources.ResourceArgs {
      * User name for the original user transform or collection with which this source is most closely associated.
      * 
      */
-    @InputImport(name="originalTransformOrCollection")
+    @Import(name="originalTransformOrCollection")
       private final @Nullable Output<String> originalTransformOrCollection;
 
     public Output<String> getOriginalTransformOrCollection() {
@@ -44,7 +44,7 @@ public final class StageSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Size of the source, if measurable.
      * 
      */
-    @InputImport(name="sizeBytes")
+    @Import(name="sizeBytes")
       private final @Nullable Output<String> sizeBytes;
 
     public Output<String> getSizeBytes() {
@@ -55,7 +55,7 @@ public final class StageSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Human-readable name for this source; may be user or system generated.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {

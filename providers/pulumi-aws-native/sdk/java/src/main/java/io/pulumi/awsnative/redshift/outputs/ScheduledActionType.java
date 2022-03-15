@@ -6,22 +6,22 @@ package io.pulumi.awsnative.redshift.outputs;
 import io.pulumi.awsnative.redshift.outputs.ScheduledActionPauseClusterMessage;
 import io.pulumi.awsnative.redshift.outputs.ScheduledActionResizeClusterMessage;
 import io.pulumi.awsnative.redshift.outputs.ScheduledActionResumeClusterMessage;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScheduledActionType {
     private final @Nullable ScheduledActionPauseClusterMessage pauseCluster;
     private final @Nullable ScheduledActionResizeClusterMessage resizeCluster;
     private final @Nullable ScheduledActionResumeClusterMessage resumeCluster;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduledActionType(
-        @OutputCustomType.Parameter("pauseCluster") @Nullable ScheduledActionPauseClusterMessage pauseCluster,
-        @OutputCustomType.Parameter("resizeCluster") @Nullable ScheduledActionResizeClusterMessage resizeCluster,
-        @OutputCustomType.Parameter("resumeCluster") @Nullable ScheduledActionResumeClusterMessage resumeCluster) {
+        @CustomType.Parameter("pauseCluster") @Nullable ScheduledActionPauseClusterMessage pauseCluster,
+        @CustomType.Parameter("resizeCluster") @Nullable ScheduledActionResizeClusterMessage resizeCluster,
+        @CustomType.Parameter("resumeCluster") @Nullable ScheduledActionResumeClusterMessage resumeCluster) {
         this.pauseCluster = pauseCluster;
         this.resizeCluster = resizeCluster;
         this.resumeCluster = resumeCluster;

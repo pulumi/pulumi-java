@@ -6,22 +6,22 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.enums.WebACLBodyParsingFallbackBehavior;
 import io.pulumi.awsnative.wafv2.enums.WebACLJsonMatchScope;
 import io.pulumi.awsnative.wafv2.outputs.WebACLJsonMatchPattern;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebACLJsonBody {
     private final @Nullable WebACLBodyParsingFallbackBehavior invalidFallbackBehavior;
     private final WebACLJsonMatchPattern matchPattern;
     private final WebACLJsonMatchScope matchScope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebACLJsonBody(
-        @OutputCustomType.Parameter("invalidFallbackBehavior") @Nullable WebACLBodyParsingFallbackBehavior invalidFallbackBehavior,
-        @OutputCustomType.Parameter("matchPattern") WebACLJsonMatchPattern matchPattern,
-        @OutputCustomType.Parameter("matchScope") WebACLJsonMatchScope matchScope) {
+        @CustomType.Parameter("invalidFallbackBehavior") @Nullable WebACLBodyParsingFallbackBehavior invalidFallbackBehavior,
+        @CustomType.Parameter("matchPattern") WebACLJsonMatchPattern matchPattern,
+        @CustomType.Parameter("matchScope") WebACLJsonMatchScope matchScope) {
         this.invalidFallbackBehavior = invalidFallbackBehavior;
         this.matchPattern = matchPattern;
         this.matchScope = matchScope;

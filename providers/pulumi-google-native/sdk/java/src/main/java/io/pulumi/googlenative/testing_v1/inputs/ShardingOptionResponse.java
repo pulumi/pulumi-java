@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.ManualShardingResponse;
 import io.pulumi.googlenative.testing_v1.inputs.UniformShardingResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ShardingOptionResponse extends io.pulumi.resources.InvokeArgs
      * Shards test cases into the specified groups of packages, classes, and/or methods.
      * 
      */
-    @InputImport(name="manualSharding", required=true)
+    @Import(name="manualSharding", required=true)
       private final ManualShardingResponse manualSharding;
 
     public ManualShardingResponse getManualSharding() {
@@ -32,7 +32,7 @@ public final class ShardingOptionResponse extends io.pulumi.resources.InvokeArgs
      * Uniformly shards test cases given a total number of shards.
      * 
      */
-    @InputImport(name="uniformSharding", required=true)
+    @Import(name="uniformSharding", required=true)
       private final UniformShardingResponse uniformSharding;
 
     public UniformShardingResponse getUniformSharding() {

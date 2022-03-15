@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.inputs.AzNsActionGroupArgs;
 import io.pulumi.azurenative.insights.inputs.TriggerConditionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
      * Azure action group reference.
      * 
      */
-    @InputImport(name="aznsAction")
+    @Import(name="aznsAction")
       private final @Nullable Output<AzNsActionGroupArgs> aznsAction;
 
     public Output<AzNsActionGroupArgs> getAznsAction() {
@@ -39,7 +39,7 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'Microsoft.WindowsAzure.Management.Monitoring.Alerts.Models.Microsoft.AppInsights.Nexus.DataContracts.Resources.ScheduledQueryRules.AlertingAction'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -50,7 +50,7 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
      * Severity of the alert
      * 
      */
-    @InputImport(name="severity", required=true)
+    @Import(name="severity", required=true)
       private final Output<Either<String,AlertSeverity>> severity;
 
     public Output<Either<String,AlertSeverity>> getSeverity() {
@@ -61,7 +61,7 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
      * time (in minutes) for which Alerts should be throttled or suppressed.
      * 
      */
-    @InputImport(name="throttlingInMin")
+    @Import(name="throttlingInMin")
       private final @Nullable Output<Integer> throttlingInMin;
 
     public Output<Integer> getThrottlingInMin() {
@@ -72,7 +72,7 @@ public final class AlertingActionArgs extends io.pulumi.resources.ResourceArgs {
      * The trigger condition that results in the alert rule being.
      * 
      */
-    @InputImport(name="trigger", required=true)
+    @Import(name="trigger", required=true)
       private final Output<TriggerConditionArgs> trigger;
 
     public Output<TriggerConditionArgs> getTrigger() {

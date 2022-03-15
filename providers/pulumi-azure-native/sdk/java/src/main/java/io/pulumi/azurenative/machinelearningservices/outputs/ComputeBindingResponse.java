@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComputeBindingResponse {
     /**
      * ID of the compute resource.
@@ -23,10 +23,10 @@ public final class ComputeBindingResponse {
      */
     private final @Nullable Integer nodeCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComputeBindingResponse(
-        @OutputCustomType.Parameter("computeId") @Nullable String computeId,
-        @OutputCustomType.Parameter("nodeCount") @Nullable Integer nodeCount) {
+        @CustomType.Parameter("computeId") @Nullable String computeId,
+        @CustomType.Parameter("nodeCount") @Nullable Integer nodeCount) {
         this.computeId = computeId;
         this.nodeCount = nodeCount;
     }

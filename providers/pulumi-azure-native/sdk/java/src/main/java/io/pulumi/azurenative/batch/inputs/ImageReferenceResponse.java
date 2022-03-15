@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
      * This property is mutually exclusive with other properties. The Shared Image Gallery image must have replicas in the same region as the Azure Batch account. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -29,7 +29,7 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
      * For example, UbuntuServer or WindowsServer.
      * 
      */
-    @InputImport(name="offer")
+    @Import(name="offer")
       private final @Nullable String offer;
 
     public Optional<String> getOffer() {
@@ -40,7 +40,7 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
      * For example, Canonical or MicrosoftWindowsServer.
      * 
      */
-    @InputImport(name="publisher")
+    @Import(name="publisher")
       private final @Nullable String publisher;
 
     public Optional<String> getPublisher() {
@@ -51,7 +51,7 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
      * For example, 18.04-LTS or 2019-Datacenter.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable String sku;
 
     public Optional<String> getSku() {
@@ -62,7 +62,7 @@ public final class ImageReferenceResponse extends io.pulumi.resources.InvokeArgs
      * A value of 'latest' can be specified to select the latest version of an image. If omitted, the default is 'latest'.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

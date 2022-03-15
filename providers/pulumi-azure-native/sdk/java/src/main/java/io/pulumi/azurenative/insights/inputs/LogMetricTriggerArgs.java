@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.enums.ConditionalOperator;
 import io.pulumi.azurenative.insights.enums.MetricTriggerType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
      * Evaluation of metric on a particular column
      * 
      */
-    @InputImport(name="metricColumn")
+    @Import(name="metricColumn")
       private final @Nullable Output<String> metricColumn;
 
     public Output<String> getMetricColumn() {
@@ -37,7 +37,7 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
      * Metric Trigger Type - 'Consecutive' or 'Total'
      * 
      */
-    @InputImport(name="metricTriggerType")
+    @Import(name="metricTriggerType")
       private final @Nullable Output<Either<String,MetricTriggerType>> metricTriggerType;
 
     public Output<Either<String,MetricTriggerType>> getMetricTriggerType() {
@@ -48,7 +48,7 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
      * The threshold of the metric trigger.
      * 
      */
-    @InputImport(name="threshold")
+    @Import(name="threshold")
       private final @Nullable Output<Double> threshold;
 
     public Output<Double> getThreshold() {
@@ -59,7 +59,7 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
      * Evaluation operation for Metric -'GreaterThan' or 'LessThan' or 'Equal'.
      * 
      */
-    @InputImport(name="thresholdOperator")
+    @Import(name="thresholdOperator")
       private final @Nullable Output<Either<String,ConditionalOperator>> thresholdOperator;
 
     public Output<Either<String,ConditionalOperator>> getThresholdOperator() {

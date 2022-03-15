@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class DenylistCustomAlertRuleArgs extends io.pulumi.resources.Resou
      * The values to deny. The format of the values depends on the rule type.
      * 
      */
-    @InputImport(name="denylistValues", required=true)
+    @Import(name="denylistValues", required=true)
       private final Output<List<String>> denylistValues;
 
     public Output<List<String>> getDenylistValues() {
@@ -34,7 +34,7 @@ public final class DenylistCustomAlertRuleArgs extends io.pulumi.resources.Resou
      * Status of the custom alert.
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -46,7 +46,7 @@ public final class DenylistCustomAlertRuleArgs extends io.pulumi.resources.Resou
      * Expected value is 'DenylistCustomAlertRule'.
      * 
      */
-    @InputImport(name="ruleType", required=true)
+    @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
 
     public Output<String> getRuleType() {

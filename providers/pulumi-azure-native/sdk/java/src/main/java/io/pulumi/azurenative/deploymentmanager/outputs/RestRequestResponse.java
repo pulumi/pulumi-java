@@ -6,11 +6,11 @@ package io.pulumi.azurenative.deploymentmanager.outputs;
 import io.pulumi.azurenative.deploymentmanager.outputs.ApiKeyAuthenticationResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.RolloutIdentityAuthenticationResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RestRequestResponse {
     /**
      * The authentication information required in the request to the health provider.
@@ -28,11 +28,11 @@ public final class RestRequestResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RestRequestResponse(
-        @OutputCustomType.Parameter("authentication") Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication,
-        @OutputCustomType.Parameter("method") String method,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("authentication") Either<ApiKeyAuthenticationResponse,RolloutIdentityAuthenticationResponse> authentication,
+        @CustomType.Parameter("method") String method,
+        @CustomType.Parameter("uri") String uri) {
         this.authentication = authentication;
         this.method = method;
         this.uri = uri;

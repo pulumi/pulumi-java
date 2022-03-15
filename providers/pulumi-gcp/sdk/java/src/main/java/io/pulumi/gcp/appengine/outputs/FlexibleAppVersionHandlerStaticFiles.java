@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlexibleAppVersionHandlerStaticFiles {
     /**
      * Whether files should also be uploaded as code data. By default, files declared in static file handlers are
@@ -56,15 +56,15 @@ public final class FlexibleAppVersionHandlerStaticFiles {
      */
     private final @Nullable String uploadPathRegex;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlexibleAppVersionHandlerStaticFiles(
-        @OutputCustomType.Parameter("applicationReadable") @Nullable Boolean applicationReadable,
-        @OutputCustomType.Parameter("expiration") @Nullable String expiration,
-        @OutputCustomType.Parameter("httpHeaders") @Nullable Map<String,String> httpHeaders,
-        @OutputCustomType.Parameter("mimeType") @Nullable String mimeType,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("requireMatchingFile") @Nullable Boolean requireMatchingFile,
-        @OutputCustomType.Parameter("uploadPathRegex") @Nullable String uploadPathRegex) {
+        @CustomType.Parameter("applicationReadable") @Nullable Boolean applicationReadable,
+        @CustomType.Parameter("expiration") @Nullable String expiration,
+        @CustomType.Parameter("httpHeaders") @Nullable Map<String,String> httpHeaders,
+        @CustomType.Parameter("mimeType") @Nullable String mimeType,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("requireMatchingFile") @Nullable Boolean requireMatchingFile,
+        @CustomType.Parameter("uploadPathRegex") @Nullable String uploadPathRegex) {
         this.applicationReadable = applicationReadable;
         this.expiration = expiration;
         this.httpHeaders = httpHeaders;

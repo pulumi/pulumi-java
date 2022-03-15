@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetIotEventsDestinationConfigurationArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetS3DestinationConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,14 +15,14 @@ public final class DatasetContentDeliveryRuleDestinationArgs extends io.pulumi.r
 
     public static final DatasetContentDeliveryRuleDestinationArgs Empty = new DatasetContentDeliveryRuleDestinationArgs();
 
-    @InputImport(name="iotEventsDestinationConfiguration")
+    @Import(name="iotEventsDestinationConfiguration")
       private final @Nullable Output<DatasetIotEventsDestinationConfigurationArgs> iotEventsDestinationConfiguration;
 
     public Output<DatasetIotEventsDestinationConfigurationArgs> getIotEventsDestinationConfiguration() {
         return this.iotEventsDestinationConfiguration == null ? Output.empty() : this.iotEventsDestinationConfiguration;
     }
 
-    @InputImport(name="s3DestinationConfiguration")
+    @Import(name="s3DestinationConfiguration")
       private final @Nullable Output<DatasetS3DestinationConfigurationArgs> s3DestinationConfiguration;
 
     public Output<DatasetS3DestinationConfigurationArgs> getS3DestinationConfiguration() {

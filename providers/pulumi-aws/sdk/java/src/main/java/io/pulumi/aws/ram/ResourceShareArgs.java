@@ -4,7 +4,7 @@
 package io.pulumi.aws.ram;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ResourceShareArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether principals outside your organization can be associated with a resource share.
      * 
      */
-    @InputImport(name="allowExternalPrincipals")
+    @Import(name="allowExternalPrincipals")
       private final @Nullable Output<Boolean> allowExternalPrincipals;
 
     public Output<Boolean> getAllowExternalPrincipals() {
@@ -31,7 +31,7 @@ public final class ResourceShareArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource share.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class ResourceShareArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource share. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

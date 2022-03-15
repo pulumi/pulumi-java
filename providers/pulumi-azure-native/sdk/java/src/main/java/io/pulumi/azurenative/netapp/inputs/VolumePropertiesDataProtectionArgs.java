@@ -7,7 +7,7 @@ import io.pulumi.azurenative.netapp.inputs.ReplicationObjectArgs;
 import io.pulumi.azurenative.netapp.inputs.VolumeBackupPropertiesArgs;
 import io.pulumi.azurenative.netapp.inputs.VolumeSnapshotPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
      * Backup Properties
      * 
      */
-    @InputImport(name="backup")
+    @Import(name="backup")
       private final @Nullable Output<VolumeBackupPropertiesArgs> backup;
 
     public Output<VolumeBackupPropertiesArgs> getBackup() {
@@ -35,7 +35,7 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
      * Replication properties
      * 
      */
-    @InputImport(name="replication")
+    @Import(name="replication")
       private final @Nullable Output<ReplicationObjectArgs> replication;
 
     public Output<ReplicationObjectArgs> getReplication() {
@@ -46,7 +46,7 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
      * Snapshot properties.
      * 
      */
-    @InputImport(name="snapshot")
+    @Import(name="snapshot")
       private final @Nullable Output<VolumeSnapshotPropertiesArgs> snapshot;
 
     public Output<VolumeSnapshotPropertiesArgs> getSnapshot() {

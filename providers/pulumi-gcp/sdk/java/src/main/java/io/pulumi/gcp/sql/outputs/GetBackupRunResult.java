@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBackupRunResult {
     private final Integer backupId;
     /**
@@ -38,15 +38,15 @@ public final class GetBackupRunResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackupRunResult(
-        @OutputCustomType.Parameter("backupId") Integer backupId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instance") String instance,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("backupId") Integer backupId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instance") String instance,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("status") String status) {
         this.backupId = backupId;
         this.id = id;
         this.instance = instance;

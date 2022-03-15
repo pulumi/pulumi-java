@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.enums.X12DateFormat;
 import io.pulumi.azurenative.logic.enums.X12TimeFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * The date format.
      * 
      */
-    @InputImport(name="dateFormat", required=true)
+    @Import(name="dateFormat", required=true)
       private final Output<Either<String,X12DateFormat>> dateFormat;
 
     public Output<Either<String,X12DateFormat>> getDateFormat() {
@@ -36,7 +36,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * The functional identifier code.
      * 
      */
-    @InputImport(name="functionalIdentifierCode")
+    @Import(name="functionalIdentifierCode")
       private final @Nullable Output<String> functionalIdentifierCode;
 
     public Output<String> getFunctionalIdentifierCode() {
@@ -47,7 +47,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * The header version.
      * 
      */
-    @InputImport(name="headerVersion", required=true)
+    @Import(name="headerVersion", required=true)
       private final Output<String> headerVersion;
 
     public Output<String> getHeaderVersion() {
@@ -58,7 +58,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * The message id on which this envelope settings has to be applied.
      * 
      */
-    @InputImport(name="messageId", required=true)
+    @Import(name="messageId", required=true)
       private final Output<String> messageId;
 
     public Output<String> getMessageId() {
@@ -69,7 +69,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * The protocol version on which this envelope settings has to be applied.
      * 
      */
-    @InputImport(name="protocolVersion", required=true)
+    @Import(name="protocolVersion", required=true)
       private final Output<String> protocolVersion;
 
     public Output<String> getProtocolVersion() {
@@ -80,7 +80,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * The receiver application id.
      * 
      */
-    @InputImport(name="receiverApplicationId", required=true)
+    @Import(name="receiverApplicationId", required=true)
       private final Output<String> receiverApplicationId;
 
     public Output<String> getReceiverApplicationId() {
@@ -91,7 +91,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * The responsible agency code.
      * 
      */
-    @InputImport(name="responsibleAgencyCode", required=true)
+    @Import(name="responsibleAgencyCode", required=true)
       private final Output<String> responsibleAgencyCode;
 
     public Output<String> getResponsibleAgencyCode() {
@@ -102,7 +102,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * The sender application id.
      * 
      */
-    @InputImport(name="senderApplicationId", required=true)
+    @Import(name="senderApplicationId", required=true)
       private final Output<String> senderApplicationId;
 
     public Output<String> getSenderApplicationId() {
@@ -113,7 +113,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * The target namespace on which this envelope settings has to be applied.
      * 
      */
-    @InputImport(name="targetNamespace", required=true)
+    @Import(name="targetNamespace", required=true)
       private final Output<String> targetNamespace;
 
     public Output<String> getTargetNamespace() {
@@ -124,7 +124,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * The time format.
      * 
      */
-    @InputImport(name="timeFormat", required=true)
+    @Import(name="timeFormat", required=true)
       private final Output<Either<String,X12TimeFormat>> timeFormat;
 
     public Output<Either<String,X12TimeFormat>> getTimeFormat() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServerEndpointRecallErrorResponse {
     /**
      * Count of occurences of the error
@@ -21,10 +21,10 @@ public final class ServerEndpointRecallErrorResponse {
      */
     private final Integer errorCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServerEndpointRecallErrorResponse(
-        @OutputCustomType.Parameter("count") Double count,
-        @OutputCustomType.Parameter("errorCode") Integer errorCode) {
+        @CustomType.Parameter("count") Double count,
+        @CustomType.Parameter("errorCode") Integer errorCode) {
         this.count = count;
         this.errorCode = errorCode;
     }

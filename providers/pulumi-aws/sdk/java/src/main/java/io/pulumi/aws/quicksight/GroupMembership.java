@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.quicksight.GroupMembershipArgs;
 import io.pulumi.aws.quicksight.inputs.GroupMembershipState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws:quicksight/groupMembership:GroupMembership")
 public class GroupMembership extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -38,7 +38,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * The ID for the AWS account that the group is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.
      * 
      */
-    @OutputExport(name="awsAccountId", type=String.class, parameters={})
+    @Export(name="awsAccountId", type=String.class, parameters={})
     private Output<String> awsAccountId;
 
     /**
@@ -52,7 +52,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * The name of the group in which the member will be added.
      * 
      */
-    @OutputExport(name="groupName", type=String.class, parameters={})
+    @Export(name="groupName", type=String.class, parameters={})
     private Output<String> groupName;
 
     /**
@@ -66,7 +66,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * The name of the member to add to the group.
      * 
      */
-    @OutputExport(name="memberName", type=String.class, parameters={})
+    @Export(name="memberName", type=String.class, parameters={})
     private Output<String> memberName;
 
     /**
@@ -80,7 +80,7 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
      * The namespace. Defaults to `default`. Currently only `default` is supported.
      * 
      */
-    @OutputExport(name="namespace", type=String.class, parameters={})
+    @Export(name="namespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> namespace;
 
     /**

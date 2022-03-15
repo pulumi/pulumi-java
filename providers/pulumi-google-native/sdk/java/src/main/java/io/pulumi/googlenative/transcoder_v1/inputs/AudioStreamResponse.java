@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.transcoder_v1.inputs.AudioMappingResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
      * Audio bitrate in bits per second. Must be between 1 and 10,000,000.
      * 
      */
-    @InputImport(name="bitrateBps", required=true)
+    @Import(name="bitrateBps", required=true)
       private final Integer bitrateBps;
 
     public Integer getBitrateBps() {
@@ -34,7 +34,7 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
      * Number of audio channels. Must be between 1 and 6. The default is 2.
      * 
      */
-    @InputImport(name="channelCount", required=true)
+    @Import(name="channelCount", required=true)
       private final Integer channelCount;
 
     public Integer getChannelCount() {
@@ -45,7 +45,7 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
      * A list of channel names specifying layout of the audio channels. This only affects the metadata embedded in the container headers, if supported by the specified format. The default is `["fl", "fr"]`. Supported channel names: - `fl` - Front left channel - `fr` - Front right channel - `sl` - Side left channel - `sr` - Side right channel - `fc` - Front center channel - `lfe` - Low frequency
      * 
      */
-    @InputImport(name="channelLayout", required=true)
+    @Import(name="channelLayout", required=true)
       private final List<String> channelLayout;
 
     public List<String> getChannelLayout() {
@@ -56,7 +56,7 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
      * The codec for this audio stream. The default is `aac`. Supported audio codecs: - `aac` - `aac-he` - `aac-he-v2` - `mp3` - `ac3` - `eac3`
      * 
      */
-    @InputImport(name="codec", required=true)
+    @Import(name="codec", required=true)
       private final String codec;
 
     public String getCodec() {
@@ -67,7 +67,7 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
      * The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
      * 
      */
-    @InputImport(name="mapping", required=true)
+    @Import(name="mapping", required=true)
       private final List<AudioMappingResponse> mapping;
 
     public List<AudioMappingResponse> getMapping() {
@@ -78,7 +78,7 @@ public final class AudioStreamResponse extends io.pulumi.resources.InvokeArgs {
      * The audio sample rate in Hertz. The default is 48000 Hertz.
      * 
      */
-    @InputImport(name="sampleRateHertz", required=true)
+    @Import(name="sampleRateHertz", required=true)
       private final Integer sampleRateHertz;
 
     public Integer getSampleRateHertz() {

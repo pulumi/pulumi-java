@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SqlUpsertSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.StoredProcedureParameterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SqlServerSinkResponse {
     /**
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
@@ -97,24 +97,24 @@ public final class SqlServerSinkResponse {
      */
     private final @Nullable Object writeBehavior;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlServerSinkResponse(
-        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
-        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
-        @OutputCustomType.Parameter("preCopyScript") @Nullable Object preCopyScript,
-        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
-        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
-        @OutputCustomType.Parameter("sqlWriterStoredProcedureName") @Nullable Object sqlWriterStoredProcedureName,
-        @OutputCustomType.Parameter("sqlWriterTableType") @Nullable Object sqlWriterTableType,
-        @OutputCustomType.Parameter("sqlWriterUseTableLock") @Nullable Object sqlWriterUseTableLock,
-        @OutputCustomType.Parameter("storedProcedureParameters") @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters,
-        @OutputCustomType.Parameter("storedProcedureTableTypeParameterName") @Nullable Object storedProcedureTableTypeParameterName,
-        @OutputCustomType.Parameter("tableOption") @Nullable Object tableOption,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("upsertSettings") @Nullable SqlUpsertSettingsResponse upsertSettings,
-        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
-        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout,
-        @OutputCustomType.Parameter("writeBehavior") @Nullable Object writeBehavior) {
+        @CustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @CustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @CustomType.Parameter("preCopyScript") @Nullable Object preCopyScript,
+        @CustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @CustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @CustomType.Parameter("sqlWriterStoredProcedureName") @Nullable Object sqlWriterStoredProcedureName,
+        @CustomType.Parameter("sqlWriterTableType") @Nullable Object sqlWriterTableType,
+        @CustomType.Parameter("sqlWriterUseTableLock") @Nullable Object sqlWriterUseTableLock,
+        @CustomType.Parameter("storedProcedureParameters") @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters,
+        @CustomType.Parameter("storedProcedureTableTypeParameterName") @Nullable Object storedProcedureTableTypeParameterName,
+        @CustomType.Parameter("tableOption") @Nullable Object tableOption,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("upsertSettings") @Nullable SqlUpsertSettingsResponse upsertSettings,
+        @CustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @CustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout,
+        @CustomType.Parameter("writeBehavior") @Nullable Object writeBehavior) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;
         this.preCopyScript = preCopyScript;

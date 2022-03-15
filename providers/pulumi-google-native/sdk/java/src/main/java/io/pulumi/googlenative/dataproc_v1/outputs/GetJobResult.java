@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.HadoopJobResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.HiveJobResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.JobPlacementResponse;
@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetJobResult {
     /**
      * Indicates whether the job is completed. If the value is false, the job is still in progress. If true, the job is completed, and status.state field will indicate if it was successful, failed, or cancelled.
@@ -121,27 +121,27 @@ public final class GetJobResult {
      */
     private final List<YarnApplicationResponse> yarnApplications;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobResult(
-        @OutputCustomType.Parameter("done") Boolean done,
-        @OutputCustomType.Parameter("driverControlFilesUri") String driverControlFilesUri,
-        @OutputCustomType.Parameter("driverOutputResourceUri") String driverOutputResourceUri,
-        @OutputCustomType.Parameter("hadoopJob") HadoopJobResponse hadoopJob,
-        @OutputCustomType.Parameter("hiveJob") HiveJobResponse hiveJob,
-        @OutputCustomType.Parameter("jobUuid") String jobUuid,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("pigJob") PigJobResponse pigJob,
-        @OutputCustomType.Parameter("placement") JobPlacementResponse placement,
-        @OutputCustomType.Parameter("prestoJob") PrestoJobResponse prestoJob,
-        @OutputCustomType.Parameter("pysparkJob") PySparkJobResponse pysparkJob,
-        @OutputCustomType.Parameter("reference") JobReferenceResponse reference,
-        @OutputCustomType.Parameter("scheduling") JobSchedulingResponse scheduling,
-        @OutputCustomType.Parameter("sparkJob") SparkJobResponse sparkJob,
-        @OutputCustomType.Parameter("sparkRJob") SparkRJobResponse sparkRJob,
-        @OutputCustomType.Parameter("sparkSqlJob") SparkSqlJobResponse sparkSqlJob,
-        @OutputCustomType.Parameter("status") JobStatusResponse status,
-        @OutputCustomType.Parameter("statusHistory") List<JobStatusResponse> statusHistory,
-        @OutputCustomType.Parameter("yarnApplications") List<YarnApplicationResponse> yarnApplications) {
+        @CustomType.Parameter("done") Boolean done,
+        @CustomType.Parameter("driverControlFilesUri") String driverControlFilesUri,
+        @CustomType.Parameter("driverOutputResourceUri") String driverOutputResourceUri,
+        @CustomType.Parameter("hadoopJob") HadoopJobResponse hadoopJob,
+        @CustomType.Parameter("hiveJob") HiveJobResponse hiveJob,
+        @CustomType.Parameter("jobUuid") String jobUuid,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("pigJob") PigJobResponse pigJob,
+        @CustomType.Parameter("placement") JobPlacementResponse placement,
+        @CustomType.Parameter("prestoJob") PrestoJobResponse prestoJob,
+        @CustomType.Parameter("pysparkJob") PySparkJobResponse pysparkJob,
+        @CustomType.Parameter("reference") JobReferenceResponse reference,
+        @CustomType.Parameter("scheduling") JobSchedulingResponse scheduling,
+        @CustomType.Parameter("sparkJob") SparkJobResponse sparkJob,
+        @CustomType.Parameter("sparkRJob") SparkRJobResponse sparkRJob,
+        @CustomType.Parameter("sparkSqlJob") SparkSqlJobResponse sparkSqlJob,
+        @CustomType.Parameter("status") JobStatusResponse status,
+        @CustomType.Parameter("statusHistory") List<JobStatusResponse> statusHistory,
+        @CustomType.Parameter("yarnApplications") List<YarnApplicationResponse> yarnApplications) {
         this.done = done;
         this.driverControlFilesUri = driverControlFilesUri;
         this.driverOutputResourceUri = driverOutputResourceUri;

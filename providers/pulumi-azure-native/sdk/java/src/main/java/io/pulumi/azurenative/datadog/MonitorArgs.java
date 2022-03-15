@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datadog.inputs.IdentityPropertiesArgs;
 import io.pulumi.azurenative.datadog.inputs.MonitorPropertiesArgs;
 import io.pulumi.azurenative.datadog.inputs.ResourceSkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,14 +18,14 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final MonitorArgs Empty = new MonitorArgs();
 
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<IdentityPropertiesArgs> identity;
 
     public Output<IdentityPropertiesArgs> getIdentity() {
         return this.identity == null ? Output.empty() : this.identity;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -36,7 +36,7 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
      * Monitor resource name
      * 
      */
-    @InputImport(name="monitorName")
+    @Import(name="monitorName")
       private final @Nullable Output<String> monitorName;
 
     public Output<String> getMonitorName() {
@@ -47,7 +47,7 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
      * Properties specific to the monitor resource.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<MonitorPropertiesArgs> properties;
 
     public Output<MonitorPropertiesArgs> getProperties() {
@@ -58,21 +58,21 @@ public final class MonitorArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<ResourceSkuArgs> sku;
 
     public Output<ResourceSkuArgs> getSku() {
         return this.sku == null ? Output.empty() : this.sku;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

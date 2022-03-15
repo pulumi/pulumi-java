@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.fsx.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WindowsFileSystemSelfManagedActiveDirectory {
     /**
      * A list of up to two IP addresses of DNS servers or domain controllers in the self-managed AD directory. The IP addresses need to be either in the same VPC CIDR range as the file system or in the private IP version 4 (IPv4) address ranges as specified in [RFC 1918](https://tools.ietf.org/html/rfc1918).
@@ -43,14 +43,14 @@ public final class WindowsFileSystemSelfManagedActiveDirectory {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WindowsFileSystemSelfManagedActiveDirectory(
-        @OutputCustomType.Parameter("dnsIps") List<String> dnsIps,
-        @OutputCustomType.Parameter("domainName") String domainName,
-        @OutputCustomType.Parameter("fileSystemAdministratorsGroup") @Nullable String fileSystemAdministratorsGroup,
-        @OutputCustomType.Parameter("organizationalUnitDistinguishedName") @Nullable String organizationalUnitDistinguishedName,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("dnsIps") List<String> dnsIps,
+        @CustomType.Parameter("domainName") String domainName,
+        @CustomType.Parameter("fileSystemAdministratorsGroup") @Nullable String fileSystemAdministratorsGroup,
+        @CustomType.Parameter("organizationalUnitDistinguishedName") @Nullable String organizationalUnitDistinguishedName,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("username") String username) {
         this.dnsIps = dnsIps;
         this.domainName = domainName;
         this.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;

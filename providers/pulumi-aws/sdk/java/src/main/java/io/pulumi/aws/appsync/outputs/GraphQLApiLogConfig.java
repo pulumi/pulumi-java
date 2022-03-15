@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.appsync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GraphQLApiLogConfig {
     /**
      * Amazon Resource Name of the service role that AWS AppSync will assume to publish to Amazon CloudWatch logs in your account.
@@ -28,11 +28,11 @@ public final class GraphQLApiLogConfig {
      */
     private final String fieldLogLevel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GraphQLApiLogConfig(
-        @OutputCustomType.Parameter("cloudwatchLogsRoleArn") String cloudwatchLogsRoleArn,
-        @OutputCustomType.Parameter("excludeVerboseContent") @Nullable Boolean excludeVerboseContent,
-        @OutputCustomType.Parameter("fieldLogLevel") String fieldLogLevel) {
+        @CustomType.Parameter("cloudwatchLogsRoleArn") String cloudwatchLogsRoleArn,
+        @CustomType.Parameter("excludeVerboseContent") @Nullable Boolean excludeVerboseContent,
+        @CustomType.Parameter("fieldLogLevel") String fieldLogLevel) {
         this.cloudwatchLogsRoleArn = cloudwatchLogsRoleArn;
         this.excludeVerboseContent = excludeVerboseContent;
         this.fieldLogLevel = fieldLogLevel;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.KubernetesRoleStorageClassInfoResponse;
 import io.pulumi.azurenative.databoxedge.inputs.MountPointMapResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class KubernetesRoleStorageResponse extends io.pulumi.resources.Inv
      * Mount points of shares in role(s).
      * 
      */
-    @InputImport(name="endpoints")
+    @Import(name="endpoints")
       private final @Nullable List<MountPointMapResponse> endpoints;
 
     public List<MountPointMapResponse> getEndpoints() {
@@ -35,7 +35,7 @@ public final class KubernetesRoleStorageResponse extends io.pulumi.resources.Inv
      * Kubernetes storage class info.
      * 
      */
-    @InputImport(name="storageClasses", required=true)
+    @Import(name="storageClasses", required=true)
       private final List<KubernetesRoleStorageClassInfoResponse> storageClasses;
 
     public List<KubernetesRoleStorageClassInfoResponse> getStorageClasses() {

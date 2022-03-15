@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class WebACLVisibilityConfig extends io.pulumi.resources.InvokeArgs
 
     public static final WebACLVisibilityConfig Empty = new WebACLVisibilityConfig();
 
-    @InputImport(name="cloudWatchMetricsEnabled", required=true)
+    @Import(name="cloudWatchMetricsEnabled", required=true)
       private final Boolean cloudWatchMetricsEnabled;
 
     public Boolean getCloudWatchMetricsEnabled() {
         return this.cloudWatchMetricsEnabled;
     }
 
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final String metricName;
 
     public String getMetricName() {
         return this.metricName;
     }
 
-    @InputImport(name="sampledRequestsEnabled", required=true)
+    @Import(name="sampledRequestsEnabled", required=true)
       private final Boolean sampledRequestsEnabled;
 
     public Boolean getSampledRequestsEnabled() {

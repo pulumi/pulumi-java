@@ -11,7 +11,7 @@ import io.pulumi.awsnative.ecs.outputs.TaskSetNetworkConfiguration;
 import io.pulumi.awsnative.ecs.outputs.TaskSetScale;
 import io.pulumi.awsnative.ecs.outputs.TaskSetServiceRegistry;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
      * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to create the task set in.
      * 
      */
-    @OutputExport(name="cluster", type=String.class, parameters={})
+    @Export(name="cluster", type=String.class, parameters={})
     private Output<String> cluster;
 
     /**
@@ -41,7 +41,7 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
      * An optional non-unique tag that identifies this task set in external systems. If the task set is associated with a service discovery registry, the tasks in this task set will have the ECS_TASK_SET_EXTERNAL_ID AWS Cloud Map attribute set to the provided value.
      * 
      */
-    @OutputExport(name="externalId", type=String.class, parameters={})
+    @Export(name="externalId", type=String.class, parameters={})
     private Output</* @Nullable */ String> externalId;
 
     /**
@@ -55,7 +55,7 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
      * The launch type that new tasks in the task set will use. For more information, see https://docs.aws.amazon.com/AmazonECS/latest/developerguide/launch_types.html in the Amazon Elastic Container Service Developer Guide.
      * 
      */
-    @OutputExport(name="launchType", type=TaskSetLaunchType.class, parameters={})
+    @Export(name="launchType", type=TaskSetLaunchType.class, parameters={})
     private Output</* @Nullable */ TaskSetLaunchType> launchType;
 
     /**
@@ -65,13 +65,13 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ TaskSetLaunchType> getLaunchType() {
         return this.launchType;
     }
-    @OutputExport(name="loadBalancers", type=List.class, parameters={TaskSetLoadBalancer.class})
+    @Export(name="loadBalancers", type=List.class, parameters={TaskSetLoadBalancer.class})
     private Output</* @Nullable */ List<TaskSetLoadBalancer>> loadBalancers;
 
     public Output</* @Nullable */ List<TaskSetLoadBalancer>> getLoadBalancers() {
         return this.loadBalancers;
     }
-    @OutputExport(name="networkConfiguration", type=TaskSetNetworkConfiguration.class, parameters={})
+    @Export(name="networkConfiguration", type=TaskSetNetworkConfiguration.class, parameters={})
     private Output</* @Nullable */ TaskSetNetworkConfiguration> networkConfiguration;
 
     public Output</* @Nullable */ TaskSetNetworkConfiguration> getNetworkConfiguration() {
@@ -81,7 +81,7 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
      * The platform version that the tasks in the task set should use. A platform version is specified only for tasks using the Fargate launch type. If one isn't specified, the LATEST platform version is used by default.
      * 
      */
-    @OutputExport(name="platformVersion", type=String.class, parameters={})
+    @Export(name="platformVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> platformVersion;
 
     /**
@@ -95,7 +95,7 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
      * A floating-point percentage of the desired number of tasks to place and keep running in the task set.
      * 
      */
-    @OutputExport(name="scale", type=TaskSetScale.class, parameters={})
+    @Export(name="scale", type=TaskSetScale.class, parameters={})
     private Output</* @Nullable */ TaskSetScale> scale;
 
     /**
@@ -109,7 +109,7 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
      * The short name or full Amazon Resource Name (ARN) of the service to create the task set in.
      * 
      */
-    @OutputExport(name="service", type=String.class, parameters={})
+    @Export(name="service", type=String.class, parameters={})
     private Output<String> service;
 
     /**
@@ -123,7 +123,7 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
      * The details of the service discovery registries to assign to this task set. For more information, see https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html.
      * 
      */
-    @OutputExport(name="serviceRegistries", type=List.class, parameters={TaskSetServiceRegistry.class})
+    @Export(name="serviceRegistries", type=List.class, parameters={TaskSetServiceRegistry.class})
     private Output</* @Nullable */ List<TaskSetServiceRegistry>> serviceRegistries;
 
     /**
@@ -137,7 +137,7 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
      * The short name or full Amazon Resource Name (ARN) of the task definition for the tasks in the task set to use.
      * 
      */
-    @OutputExport(name="taskDefinition", type=String.class, parameters={})
+    @Export(name="taskDefinition", type=String.class, parameters={})
     private Output<String> taskDefinition;
 
     /**

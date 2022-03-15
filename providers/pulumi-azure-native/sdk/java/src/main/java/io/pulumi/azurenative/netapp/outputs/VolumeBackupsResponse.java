@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VolumeBackupsResponse {
     /**
      * Total count of backups for volume
@@ -29,11 +29,11 @@ public final class VolumeBackupsResponse {
      */
     private final @Nullable String volumeName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VolumeBackupsResponse(
-        @OutputCustomType.Parameter("backupsCount") @Nullable Integer backupsCount,
-        @OutputCustomType.Parameter("policyEnabled") @Nullable Boolean policyEnabled,
-        @OutputCustomType.Parameter("volumeName") @Nullable String volumeName) {
+        @CustomType.Parameter("backupsCount") @Nullable Integer backupsCount,
+        @CustomType.Parameter("policyEnabled") @Nullable Boolean policyEnabled,
+        @CustomType.Parameter("volumeName") @Nullable String volumeName) {
         this.backupsCount = backupsCount;
         this.policyEnabled = policyEnabled;
         this.volumeName = volumeName;

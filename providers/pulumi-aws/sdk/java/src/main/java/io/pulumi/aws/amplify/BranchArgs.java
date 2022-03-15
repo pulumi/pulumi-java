@@ -4,7 +4,7 @@
 package io.pulumi.aws.amplify;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * The unique ID for an Amplify app.
      * 
      */
-    @InputImport(name="appId", required=true)
+    @Import(name="appId", required=true)
       private final Output<String> appId;
 
     public Output<String> getAppId() {
@@ -31,7 +31,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
      * 
      */
-    @InputImport(name="backendEnvironmentArn")
+    @Import(name="backendEnvironmentArn")
       private final @Nullable Output<String> backendEnvironmentArn;
 
     public Output<String> getBackendEnvironmentArn() {
@@ -42,7 +42,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * The basic authorization credentials for the branch.
      * 
      */
-    @InputImport(name="basicAuthCredentials")
+    @Import(name="basicAuthCredentials")
       private final @Nullable Output<String> basicAuthCredentials;
 
     public Output<String> getBasicAuthCredentials() {
@@ -53,7 +53,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * The name for the branch.
      * 
      */
-    @InputImport(name="branchName", required=true)
+    @Import(name="branchName", required=true)
       private final Output<String> branchName;
 
     public Output<String> getBranchName() {
@@ -64,7 +64,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * The description for the branch.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -75,7 +75,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * The display name for a branch. This is used as the default domain prefix.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -86,7 +86,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * Enables auto building for the branch.
      * 
      */
-    @InputImport(name="enableAutoBuild")
+    @Import(name="enableAutoBuild")
       private final @Nullable Output<Boolean> enableAutoBuild;
 
     public Output<Boolean> getEnableAutoBuild() {
@@ -97,7 +97,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * Enables basic authorization for the branch.
      * 
      */
-    @InputImport(name="enableBasicAuth")
+    @Import(name="enableBasicAuth")
       private final @Nullable Output<Boolean> enableBasicAuth;
 
     public Output<Boolean> getEnableBasicAuth() {
@@ -108,7 +108,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * Enables notifications for the branch.
      * 
      */
-    @InputImport(name="enableNotification")
+    @Import(name="enableNotification")
       private final @Nullable Output<Boolean> enableNotification;
 
     public Output<Boolean> getEnableNotification() {
@@ -119,7 +119,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * Enables performance mode for the branch.
      * 
      */
-    @InputImport(name="enablePerformanceMode")
+    @Import(name="enablePerformanceMode")
       private final @Nullable Output<Boolean> enablePerformanceMode;
 
     public Output<Boolean> getEnablePerformanceMode() {
@@ -130,7 +130,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * Enables pull request previews for this branch.
      * 
      */
-    @InputImport(name="enablePullRequestPreview")
+    @Import(name="enablePullRequestPreview")
       private final @Nullable Output<Boolean> enablePullRequestPreview;
 
     public Output<Boolean> getEnablePullRequestPreview() {
@@ -141,7 +141,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * The environment variables for the branch.
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
     public Output<Map<String,String>> getEnvironmentVariables() {
@@ -152,7 +152,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * The framework for the branch.
      * 
      */
-    @InputImport(name="framework")
+    @Import(name="framework")
       private final @Nullable Output<String> framework;
 
     public Output<String> getFramework() {
@@ -163,7 +163,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * The Amplify environment name for the pull request.
      * 
      */
-    @InputImport(name="pullRequestEnvironmentName")
+    @Import(name="pullRequestEnvironmentName")
       private final @Nullable Output<String> pullRequestEnvironmentName;
 
     public Output<String> getPullRequestEnvironmentName() {
@@ -174,7 +174,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * Describes the current stage for the branch. Valid values: `PRODUCTION`, `BETA`, `DEVELOPMENT`, `EXPERIMENTAL`, `PULL_REQUEST`.
      * 
      */
-    @InputImport(name="stage")
+    @Import(name="stage")
       private final @Nullable Output<String> stage;
 
     public Output<String> getStage() {
@@ -185,7 +185,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -196,7 +196,7 @@ public final class BranchArgs extends io.pulumi.resources.ResourceArgs {
      * The content Time To Live (TTL) for the website in seconds.
      * 
      */
-    @InputImport(name="ttl")
+    @Import(name="ttl")
       private final @Nullable Output<String> ttl;
 
     public Output<String> getTtl() {

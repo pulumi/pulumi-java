@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * Container's ID in the format 'docker://<container_id>'
      * 
      */
-    @InputImport(name="containerID")
+    @Import(name="containerID")
       private final @Nullable Output<String> containerID;
 
     public Output<String> getContainerID() {
@@ -34,7 +34,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * Exit status from the last termination of the container
      * 
      */
-    @InputImport(name="exitCode", required=true)
+    @Import(name="exitCode", required=true)
       private final Output<Integer> exitCode;
 
     public Output<Integer> getExitCode() {
@@ -45,7 +45,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * Time at which the container last terminated
      * 
      */
-    @InputImport(name="finishedAt")
+    @Import(name="finishedAt")
       private final @Nullable Output<String> finishedAt;
 
     public Output<String> getFinishedAt() {
@@ -56,7 +56,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * Message regarding the last termination of the container
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
@@ -67,7 +67,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * (brief) reason from the last termination of the container
      * 
      */
-    @InputImport(name="reason")
+    @Import(name="reason")
       private final @Nullable Output<String> reason;
 
     public Output<String> getReason() {
@@ -78,7 +78,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * Signal from the last termination of the container
      * 
      */
-    @InputImport(name="signal")
+    @Import(name="signal")
       private final @Nullable Output<Integer> signal;
 
     public Output<Integer> getSignal() {
@@ -89,7 +89,7 @@ public final class ContainerStateTerminatedArgs extends io.pulumi.resources.Reso
      * Time at which previous execution of the container started
      * 
      */
-    @InputImport(name="startedAt")
+    @Import(name="startedAt")
       private final @Nullable Output<String> startedAt;
 
     public Output<String> getStartedAt() {

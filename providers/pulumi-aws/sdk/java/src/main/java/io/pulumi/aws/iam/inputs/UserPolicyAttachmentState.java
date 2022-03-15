@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class UserPolicyAttachmentState extends io.pulumi.resources.Resourc
      * The ARN of the policy you want to apply
      * 
      */
-    @InputImport(name="policyArn")
+    @Import(name="policyArn")
       private final @Nullable Output<String> policyArn;
 
     public Output<String> getPolicyArn() {
@@ -29,7 +29,7 @@ public final class UserPolicyAttachmentState extends io.pulumi.resources.Resourc
      * The user the policy should be applied to
      * 
      */
-    @InputImport(name="user")
+    @Import(name="user")
       private final @Nullable Output<String> user;
 
     public Output<String> getUser() {

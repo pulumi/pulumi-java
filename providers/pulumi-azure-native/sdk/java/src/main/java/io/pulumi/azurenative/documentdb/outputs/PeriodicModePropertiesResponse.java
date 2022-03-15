@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PeriodicModePropertiesResponse {
     /**
      * An integer representing the interval in minutes between two backups
@@ -22,10 +22,10 @@ public final class PeriodicModePropertiesResponse {
      */
     private final @Nullable Integer backupRetentionIntervalInHours;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PeriodicModePropertiesResponse(
-        @OutputCustomType.Parameter("backupIntervalInMinutes") @Nullable Integer backupIntervalInMinutes,
-        @OutputCustomType.Parameter("backupRetentionIntervalInHours") @Nullable Integer backupRetentionIntervalInHours) {
+        @CustomType.Parameter("backupIntervalInMinutes") @Nullable Integer backupIntervalInMinutes,
+        @CustomType.Parameter("backupRetentionIntervalInHours") @Nullable Integer backupRetentionIntervalInHours) {
         this.backupIntervalInMinutes = backupIntervalInMinutes;
         this.backupRetentionIntervalInHours = backupRetentionIntervalInHours;
     }

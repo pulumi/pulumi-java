@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.PermissionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSqlResourceSqlRoleDefinitionResult {
     /**
      * A set of fully qualified Scopes at or below which Role Assignments may be created using this Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Must have at least one element. Scopes higher than Database account are not enforceable as assignable Scopes. Note that resources referenced in assignable Scopes need not exist.
@@ -44,14 +44,14 @@ public final class GetSqlResourceSqlRoleDefinitionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSqlResourceSqlRoleDefinitionResult(
-        @OutputCustomType.Parameter("assignableScopes") @Nullable List<String> assignableScopes,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("permissions") @Nullable List<PermissionResponse> permissions,
-        @OutputCustomType.Parameter("roleName") @Nullable String roleName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("assignableScopes") @Nullable List<String> assignableScopes,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("permissions") @Nullable List<PermissionResponse> permissions,
+        @CustomType.Parameter("roleName") @Nullable String roleName,
+        @CustomType.Parameter("type") String type) {
         this.assignableScopes = assignableScopes;
         this.id = id;
         this.name = name;

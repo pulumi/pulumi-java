@@ -8,7 +8,7 @@ import io.pulumi.azurenative.hdinsight.inputs.ApplicationGetHttpsEndpointRespons
 import io.pulumi.azurenative.hdinsight.inputs.ComputeProfileResponse;
 import io.pulumi.azurenative.hdinsight.inputs.ErrorsResponse;
 import io.pulumi.azurenative.hdinsight.inputs.RuntimeScriptActionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * The application state.
      * 
      */
-    @InputImport(name="applicationState", required=true)
+    @Import(name="applicationState", required=true)
       private final String applicationState;
 
     public String getApplicationState() {
@@ -39,7 +39,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * The application type.
      * 
      */
-    @InputImport(name="applicationType")
+    @Import(name="applicationType")
       private final @Nullable String applicationType;
 
     public Optional<String> getApplicationType() {
@@ -50,7 +50,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * The list of roles in the cluster.
      * 
      */
-    @InputImport(name="computeProfile")
+    @Import(name="computeProfile")
       private final @Nullable ComputeProfileResponse computeProfile;
 
     public Optional<ComputeProfileResponse> getComputeProfile() {
@@ -61,7 +61,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * The application create date time.
      * 
      */
-    @InputImport(name="createdDate", required=true)
+    @Import(name="createdDate", required=true)
       private final String createdDate;
 
     public String getCreatedDate() {
@@ -72,7 +72,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * The list of errors.
      * 
      */
-    @InputImport(name="errors")
+    @Import(name="errors")
       private final @Nullable List<ErrorsResponse> errors;
 
     public List<ErrorsResponse> getErrors() {
@@ -83,7 +83,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * The list of application HTTPS endpoints.
      * 
      */
-    @InputImport(name="httpsEndpoints")
+    @Import(name="httpsEndpoints")
       private final @Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints;
 
     public List<ApplicationGetHttpsEndpointResponse> getHttpsEndpoints() {
@@ -94,7 +94,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * The list of install script actions.
      * 
      */
-    @InputImport(name="installScriptActions")
+    @Import(name="installScriptActions")
       private final @Nullable List<RuntimeScriptActionResponse> installScriptActions;
 
     public List<RuntimeScriptActionResponse> getInstallScriptActions() {
@@ -105,7 +105,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * The marketplace identifier.
      * 
      */
-    @InputImport(name="marketplaceIdentifier", required=true)
+    @Import(name="marketplaceIdentifier", required=true)
       private final String marketplaceIdentifier;
 
     public String getMarketplaceIdentifier() {
@@ -116,7 +116,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * The provisioning state of the application.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -127,7 +127,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * The list of application SSH endpoints.
      * 
      */
-    @InputImport(name="sshEndpoints")
+    @Import(name="sshEndpoints")
       private final @Nullable List<ApplicationGetEndpointResponse> sshEndpoints;
 
     public List<ApplicationGetEndpointResponse> getSshEndpoints() {
@@ -138,7 +138,7 @@ public final class ApplicationPropertiesResponse extends io.pulumi.resources.Inv
      * The list of uninstall script actions.
      * 
      */
-    @InputImport(name="uninstallScriptActions")
+    @Import(name="uninstallScriptActions")
       private final @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions;
 
     public List<RuntimeScriptActionResponse> getUninstallScriptActions() {

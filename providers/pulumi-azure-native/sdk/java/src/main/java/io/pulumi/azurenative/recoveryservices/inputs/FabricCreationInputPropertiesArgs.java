@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.AzureFabricCreationInputArg
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmFabricCreationInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareV2FabricCreationInputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class FabricCreationInputPropertiesArgs extends io.pulumi.resources
      * Fabric provider specific creation input.
      * 
      */
-    @InputImport(name="customDetails")
+    @Import(name="customDetails")
       private final @Nullable Output<Object> customDetails;
 
     public Output<Object> getCustomDetails() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.aad.inputs;
 
 import io.pulumi.azurenative.aad.inputs.HealthAlertResponse;
 import io.pulumi.azurenative.aad.inputs.HealthMonitorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * List of Domain Controller IP Address
      * 
      */
-    @InputImport(name="domainControllerIpAddress", required=true)
+    @Import(name="domainControllerIpAddress", required=true)
       private final List<String> domainControllerIpAddress;
 
     public List<String> getDomainControllerIpAddress() {
@@ -36,7 +36,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * External access ip address.
      * 
      */
-    @InputImport(name="externalAccessIpAddress", required=true)
+    @Import(name="externalAccessIpAddress", required=true)
       private final String externalAccessIpAddress;
 
     public String getExternalAccessIpAddress() {
@@ -47,7 +47,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * List of Domain Health Alerts
      * 
      */
-    @InputImport(name="healthAlerts", required=true)
+    @Import(name="healthAlerts", required=true)
       private final List<HealthAlertResponse> healthAlerts;
 
     public List<HealthAlertResponse> getHealthAlerts() {
@@ -58,7 +58,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * Last domain evaluation run DateTime
      * 
      */
-    @InputImport(name="healthLastEvaluated", required=true)
+    @Import(name="healthLastEvaluated", required=true)
       private final String healthLastEvaluated;
 
     public String getHealthLastEvaluated() {
@@ -69,7 +69,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * List of Domain Health Monitors
      * 
      */
-    @InputImport(name="healthMonitors", required=true)
+    @Import(name="healthMonitors", required=true)
       private final List<HealthMonitorResponse> healthMonitors;
 
     public List<HealthMonitorResponse> getHealthMonitors() {
@@ -80,7 +80,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * Virtual network location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -91,7 +91,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * ReplicaSet Id
      * 
      */
-    @InputImport(name="replicaSetId", required=true)
+    @Import(name="replicaSetId", required=true)
       private final String replicaSetId;
 
     public String getReplicaSetId() {
@@ -102,7 +102,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * Status of Domain Service instance
      * 
      */
-    @InputImport(name="serviceStatus", required=true)
+    @Import(name="serviceStatus", required=true)
       private final String serviceStatus;
 
     public String getServiceStatus() {
@@ -113,7 +113,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the virtual network that Domain Services will be deployed on. The id of the subnet that Domain Services will be deployed on. /virtualNetwork/vnetName/subnets/subnetName.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable String subnetId;
 
     public Optional<String> getSubnetId() {
@@ -124,7 +124,7 @@ public final class ReplicaSetResponse extends io.pulumi.resources.InvokeArgs {
      * Virtual network site id
      * 
      */
-    @InputImport(name="vnetSiteId", required=true)
+    @Import(name="vnetSiteId", required=true)
       private final String vnetSiteId;
 
     public String getVnetSiteId() {

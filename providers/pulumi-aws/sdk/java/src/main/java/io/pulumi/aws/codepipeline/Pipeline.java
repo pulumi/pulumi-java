@@ -9,7 +9,7 @@ import io.pulumi.aws.codepipeline.inputs.PipelineState;
 import io.pulumi.aws.codepipeline.outputs.PipelineArtifactStore;
 import io.pulumi.aws.codepipeline.outputs.PipelineStage;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * The codepipeline ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * One or more artifact_store blocks. Artifact stores are documented below.
      * 
      */
-    @OutputExport(name="artifactStore", type=PipelineArtifactStore.class, parameters={})
+    @Export(name="artifactStore", type=PipelineArtifactStore.class, parameters={})
     private Output<PipelineArtifactStore> artifactStore;
 
     /**
@@ -64,7 +64,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * The name of the pipeline.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * A service role Amazon Resource Name (ARN) that grants AWS CodePipeline permission to make calls to AWS services on your behalf.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -92,7 +92,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * A stage block. Stages are documented below.
      * 
      */
-    @OutputExport(name="stages", type=List.class, parameters={PipelineStage.class})
+    @Export(name="stages", type=List.class, parameters={PipelineStage.class})
     private Output<List<PipelineStage>> stages;
 
     /**
@@ -106,7 +106,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -120,7 +120,7 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

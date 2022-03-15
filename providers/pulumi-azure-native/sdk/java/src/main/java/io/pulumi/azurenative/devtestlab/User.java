@@ -9,7 +9,7 @@ import io.pulumi.azurenative.devtestlab.outputs.UserIdentityResponse;
 import io.pulumi.azurenative.devtestlab.outputs.UserSecretStoreResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The creation date of the user profile.
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
@@ -51,7 +51,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The identity of the user.
      * 
      */
-    @OutputExport(name="identity", type=UserIdentityResponse.class, parameters={})
+    @Export(name="identity", type=UserIdentityResponse.class, parameters={})
     private Output</* @Nullable */ UserIdentityResponse> identity;
 
     /**
@@ -65,7 +65,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -79,7 +79,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The provisioning status of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -107,7 +107,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The secret store of the user.
      * 
      */
-    @OutputExport(name="secretStore", type=UserSecretStoreResponse.class, parameters={})
+    @Export(name="secretStore", type=UserSecretStoreResponse.class, parameters={})
     private Output</* @Nullable */ UserSecretStoreResponse> secretStore;
 
     /**
@@ -121,7 +121,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -135,7 +135,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -149,7 +149,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The unique immutable identifier of a resource (Guid).
      * 
      */
-    @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
+    @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**

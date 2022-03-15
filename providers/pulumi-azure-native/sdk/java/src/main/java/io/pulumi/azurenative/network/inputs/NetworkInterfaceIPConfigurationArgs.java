@@ -14,7 +14,7 @@ import io.pulumi.azurenative.network.inputs.SubnetArgs;
 import io.pulumi.azurenative.network.inputs.VirtualNetworkTapArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * The reference to ApplicationGatewayBackendAddressPool resource.
      * 
      */
-    @InputImport(name="applicationGatewayBackendAddressPools")
+    @Import(name="applicationGatewayBackendAddressPools")
       private final @Nullable Output<List<ApplicationGatewayBackendAddressPoolArgs>> applicationGatewayBackendAddressPools;
 
     public Output<List<ApplicationGatewayBackendAddressPoolArgs>> getApplicationGatewayBackendAddressPools() {
@@ -45,7 +45,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * Application security groups in which the IP configuration is included.
      * 
      */
-    @InputImport(name="applicationSecurityGroups")
+    @Import(name="applicationSecurityGroups")
       private final @Nullable Output<List<ApplicationSecurityGroupArgs>> applicationSecurityGroups;
 
     public Output<List<ApplicationSecurityGroupArgs>> getApplicationSecurityGroups() {
@@ -56,7 +56,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -67,7 +67,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * The reference to LoadBalancerBackendAddressPool resource.
      * 
      */
-    @InputImport(name="loadBalancerBackendAddressPools")
+    @Import(name="loadBalancerBackendAddressPools")
       private final @Nullable Output<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools;
 
     public Output<List<BackendAddressPoolArgs>> getLoadBalancerBackendAddressPools() {
@@ -78,7 +78,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * A list of references of LoadBalancerInboundNatRules.
      * 
      */
-    @InputImport(name="loadBalancerInboundNatRules")
+    @Import(name="loadBalancerInboundNatRules")
       private final @Nullable Output<List<InboundNatRuleArgs>> loadBalancerInboundNatRules;
 
     public Output<List<InboundNatRuleArgs>> getLoadBalancerInboundNatRules() {
@@ -89,7 +89,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -100,7 +100,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * Whether this is a primary customer address on the network interface.
      * 
      */
-    @InputImport(name="primary")
+    @Import(name="primary")
       private final @Nullable Output<Boolean> primary;
 
     public Output<Boolean> getPrimary() {
@@ -111,7 +111,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * Private IP address of the IP configuration.
      * 
      */
-    @InputImport(name="privateIPAddress")
+    @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
 
     public Output<String> getPrivateIPAddress() {
@@ -122,7 +122,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
      * 
      */
-    @InputImport(name="privateIPAddressVersion")
+    @Import(name="privateIPAddressVersion")
       private final @Nullable Output<Either<String,IPVersion>> privateIPAddressVersion;
 
     public Output<Either<String,IPVersion>> getPrivateIPAddressVersion() {
@@ -133,7 +133,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * The private IP address allocation method.
      * 
      */
-    @InputImport(name="privateIPAllocationMethod")
+    @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
     public Output<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
@@ -144,7 +144,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * Public IP address bound to the IP configuration.
      * 
      */
-    @InputImport(name="publicIPAddress")
+    @Import(name="publicIPAddress")
       private final @Nullable Output<PublicIPAddressArgs> publicIPAddress;
 
     public Output<PublicIPAddressArgs> getPublicIPAddress() {
@@ -155,7 +155,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * Subnet bound to the IP configuration.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<SubnetArgs> subnet;
 
     public Output<SubnetArgs> getSubnet() {
@@ -166,7 +166,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * Resource type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -177,7 +177,7 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
      * The reference to Virtual Network Taps.
      * 
      */
-    @InputImport(name="virtualNetworkTaps")
+    @Import(name="virtualNetworkTaps")
       private final @Nullable Output<List<VirtualNetworkTapArgs>> virtualNetworkTaps;
 
     public Output<List<VirtualNetworkTapArgs>> getVirtualNetworkTaps() {

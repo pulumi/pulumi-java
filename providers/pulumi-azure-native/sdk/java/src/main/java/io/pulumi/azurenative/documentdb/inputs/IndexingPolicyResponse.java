@@ -7,7 +7,7 @@ import io.pulumi.azurenative.documentdb.inputs.CompositePathResponse;
 import io.pulumi.azurenative.documentdb.inputs.ExcludedPathResponse;
 import io.pulumi.azurenative.documentdb.inputs.IncludedPathResponse;
 import io.pulumi.azurenative.documentdb.inputs.SpatialSpecResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
      * Indicates if the indexing policy is automatic
      * 
      */
-    @InputImport(name="automatic")
+    @Import(name="automatic")
       private final @Nullable Boolean automatic;
 
     public Optional<Boolean> getAutomatic() {
@@ -39,7 +39,7 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
      * List of composite path list
      * 
      */
-    @InputImport(name="compositeIndexes")
+    @Import(name="compositeIndexes")
       private final @Nullable List<List<CompositePathResponse>> compositeIndexes;
 
     public List<List<CompositePathResponse>> getCompositeIndexes() {
@@ -50,7 +50,7 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
      * List of paths to exclude from indexing
      * 
      */
-    @InputImport(name="excludedPaths")
+    @Import(name="excludedPaths")
       private final @Nullable List<ExcludedPathResponse> excludedPaths;
 
     public List<ExcludedPathResponse> getExcludedPaths() {
@@ -61,7 +61,7 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
      * List of paths to include in the indexing
      * 
      */
-    @InputImport(name="includedPaths")
+    @Import(name="includedPaths")
       private final @Nullable List<IncludedPathResponse> includedPaths;
 
     public List<IncludedPathResponse> getIncludedPaths() {
@@ -72,7 +72,7 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
      * Indicates the indexing mode.
      * 
      */
-    @InputImport(name="indexingMode")
+    @Import(name="indexingMode")
       private final @Nullable String indexingMode;
 
     public Optional<String> getIndexingMode() {
@@ -83,7 +83,7 @@ public final class IndexingPolicyResponse extends io.pulumi.resources.InvokeArgs
      * List of spatial specifics
      * 
      */
-    @InputImport(name="spatialIndexes")
+    @Import(name="spatialIndexes")
       private final @Nullable List<SpatialSpecResponse> spatialIndexes;
 
     public List<SpatialSpecResponse> getSpatialIndexes() {

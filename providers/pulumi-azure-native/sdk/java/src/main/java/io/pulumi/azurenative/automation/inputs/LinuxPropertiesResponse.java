@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LinuxPropertiesResponse extends io.pulumi.resources.InvokeArg
      * packages excluded from the software update configuration.
      * 
      */
-    @InputImport(name="excludedPackageNameMasks")
+    @Import(name="excludedPackageNameMasks")
       private final @Nullable List<String> excludedPackageNameMasks;
 
     public List<String> getExcludedPackageNameMasks() {
@@ -34,7 +34,7 @@ public final class LinuxPropertiesResponse extends io.pulumi.resources.InvokeArg
      * Update classifications included in the software update configuration.
      * 
      */
-    @InputImport(name="includedPackageClassifications")
+    @Import(name="includedPackageClassifications")
       private final @Nullable String includedPackageClassifications;
 
     public Optional<String> getIncludedPackageClassifications() {
@@ -45,7 +45,7 @@ public final class LinuxPropertiesResponse extends io.pulumi.resources.InvokeArg
      * packages included from the software update configuration.
      * 
      */
-    @InputImport(name="includedPackageNameMasks")
+    @Import(name="includedPackageNameMasks")
       private final @Nullable List<String> includedPackageNameMasks;
 
     public List<String> getIncludedPackageNameMasks() {
@@ -56,7 +56,7 @@ public final class LinuxPropertiesResponse extends io.pulumi.resources.InvokeArg
      * Reboot setting for the software update configuration.
      * 
      */
-    @InputImport(name="rebootSetting")
+    @Import(name="rebootSetting")
       private final @Nullable String rebootSetting;
 
     public Optional<String> getRebootSetting() {

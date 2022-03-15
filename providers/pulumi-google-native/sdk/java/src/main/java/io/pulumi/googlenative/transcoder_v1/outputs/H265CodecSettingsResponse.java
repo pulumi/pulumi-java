@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class H265CodecSettingsResponse {
     /**
      * Specifies whether an open Group of Pictures (GOP) structure should be allowed or not. The default is `false`.
@@ -108,27 +108,27 @@ public final class H265CodecSettingsResponse {
      */
     private final Integer widthPixels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private H265CodecSettingsResponse(
-        @OutputCustomType.Parameter("allowOpenGop") Boolean allowOpenGop,
-        @OutputCustomType.Parameter("aqStrength") Double aqStrength,
-        @OutputCustomType.Parameter("bFrameCount") Integer bFrameCount,
-        @OutputCustomType.Parameter("bPyramid") Boolean bPyramid,
-        @OutputCustomType.Parameter("bitrateBps") Integer bitrateBps,
-        @OutputCustomType.Parameter("crfLevel") Integer crfLevel,
-        @OutputCustomType.Parameter("enableTwoPass") Boolean enableTwoPass,
-        @OutputCustomType.Parameter("frameRate") Double frameRate,
-        @OutputCustomType.Parameter("gopDuration") String gopDuration,
-        @OutputCustomType.Parameter("gopFrameCount") Integer gopFrameCount,
-        @OutputCustomType.Parameter("heightPixels") Integer heightPixels,
-        @OutputCustomType.Parameter("pixelFormat") String pixelFormat,
-        @OutputCustomType.Parameter("preset") String preset,
-        @OutputCustomType.Parameter("profile") String profile,
-        @OutputCustomType.Parameter("rateControlMode") String rateControlMode,
-        @OutputCustomType.Parameter("tune") String tune,
-        @OutputCustomType.Parameter("vbvFullnessBits") Integer vbvFullnessBits,
-        @OutputCustomType.Parameter("vbvSizeBits") Integer vbvSizeBits,
-        @OutputCustomType.Parameter("widthPixels") Integer widthPixels) {
+        @CustomType.Parameter("allowOpenGop") Boolean allowOpenGop,
+        @CustomType.Parameter("aqStrength") Double aqStrength,
+        @CustomType.Parameter("bFrameCount") Integer bFrameCount,
+        @CustomType.Parameter("bPyramid") Boolean bPyramid,
+        @CustomType.Parameter("bitrateBps") Integer bitrateBps,
+        @CustomType.Parameter("crfLevel") Integer crfLevel,
+        @CustomType.Parameter("enableTwoPass") Boolean enableTwoPass,
+        @CustomType.Parameter("frameRate") Double frameRate,
+        @CustomType.Parameter("gopDuration") String gopDuration,
+        @CustomType.Parameter("gopFrameCount") Integer gopFrameCount,
+        @CustomType.Parameter("heightPixels") Integer heightPixels,
+        @CustomType.Parameter("pixelFormat") String pixelFormat,
+        @CustomType.Parameter("preset") String preset,
+        @CustomType.Parameter("profile") String profile,
+        @CustomType.Parameter("rateControlMode") String rateControlMode,
+        @CustomType.Parameter("tune") String tune,
+        @CustomType.Parameter("vbvFullnessBits") Integer vbvFullnessBits,
+        @CustomType.Parameter("vbvSizeBits") Integer vbvSizeBits,
+        @CustomType.Parameter("widthPixels") Integer widthPixels) {
         this.allowOpenGop = allowOpenGop;
         this.aqStrength = aqStrength;
         this.bFrameCount = bFrameCount;

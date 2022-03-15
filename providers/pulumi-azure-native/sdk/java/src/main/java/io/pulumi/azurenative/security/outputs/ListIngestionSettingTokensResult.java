@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListIngestionSettingTokensResult {
     /**
      * The token is used for correlating security data and logs with the resources in the subscription.
@@ -15,8 +15,8 @@ public final class ListIngestionSettingTokensResult {
      */
     private final String token;
 
-    @OutputCustomType.Constructor
-    private ListIngestionSettingTokensResult(@OutputCustomType.Parameter("token") String token) {
+    @CustomType.Constructor
+    private ListIngestionSettingTokensResult(@CustomType.Parameter("token") String token) {
         this.token = token;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.DatasetParameter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,14 +17,14 @@ public final class DatasetPathParameter extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetPathParameter Empty = new DatasetPathParameter();
 
-    @InputImport(name="datasetParameter", required=true)
+    @Import(name="datasetParameter", required=true)
       private final DatasetParameter datasetParameter;
 
     public DatasetParameter getDatasetParameter() {
         return this.datasetParameter;
     }
 
-    @InputImport(name="pathParameterName", required=true)
+    @Import(name="pathParameterName", required=true)
       private final String pathParameterName;
 
     public String getPathParameterName() {

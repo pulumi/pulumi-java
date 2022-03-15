@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.NormalizedCoordinateResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnimationFadeResponse {
     /**
      * The time to end the fade animation, in seconds. Default: `start_time_offset` + 1s
@@ -31,12 +31,12 @@ public final class AnimationFadeResponse {
      */
     private final NormalizedCoordinateResponse xy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnimationFadeResponse(
-        @OutputCustomType.Parameter("endTimeOffset") String endTimeOffset,
-        @OutputCustomType.Parameter("fadeType") String fadeType,
-        @OutputCustomType.Parameter("startTimeOffset") String startTimeOffset,
-        @OutputCustomType.Parameter("xy") NormalizedCoordinateResponse xy) {
+        @CustomType.Parameter("endTimeOffset") String endTimeOffset,
+        @CustomType.Parameter("fadeType") String fadeType,
+        @CustomType.Parameter("startTimeOffset") String startTimeOffset,
+        @CustomType.Parameter("xy") NormalizedCoordinateResponse xy) {
         this.endTimeOffset = endTimeOffset;
         this.fadeType = fadeType;
         this.startTimeOffset = startTimeOffset;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.retail_v2alpha.ControlArgs;
@@ -25,7 +25,7 @@ public class Control extends io.pulumi.resources.CustomResource {
      * List of serving configuration ids that that are associated with this control. Note the association is managed via the ServingConfig, this is an output only denormalizeed view. Assumed to be in the same catalog.
      * 
      */
-    @OutputExport(name="associatedServingConfigIds", type=List.class, parameters={String.class})
+    @Export(name="associatedServingConfigIds", type=List.class, parameters={String.class})
     private Output<List<String>> associatedServingConfigIds;
 
     /**
@@ -39,7 +39,7 @@ public class Control extends io.pulumi.resources.CustomResource {
      * The human readable control display name. Used in Retail UI. This field must be a UTF-8 encoded string with a length limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is thrown.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -53,7 +53,7 @@ public class Control extends io.pulumi.resources.CustomResource {
      * A facet specification to perform faceted search.
      * 
      */
-    @OutputExport(name="facetSpec", type=GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse.class, parameters={})
+    @Export(name="facetSpec", type=GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse.class, parameters={})
     private Output<GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse> facetSpec;
 
     /**
@@ -67,7 +67,7 @@ public class Control extends io.pulumi.resources.CustomResource {
      * Immutable. Fully qualified name projects/*{@literal /}locations/global/catalogs/*{@literal /}controls/*
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -81,7 +81,7 @@ public class Control extends io.pulumi.resources.CustomResource {
      * A rule control - a condition-action pair. Enacts a set action when the condition is triggered. For example: Boost "gShoe" when query full matches "Running Shoes".
      * 
      */
-    @OutputExport(name="rule", type=GoogleCloudRetailV2alphaRuleResponse.class, parameters={})
+    @Export(name="rule", type=GoogleCloudRetailV2alphaRuleResponse.class, parameters={})
     private Output<GoogleCloudRetailV2alphaRuleResponse> rule;
 
     /**
@@ -95,7 +95,7 @@ public class Control extends io.pulumi.resources.CustomResource {
      * Immutable. The solution types that the serving config is used for. Currently we support setting only one type of solution at creation time. Only `SOLUTION_TYPE_SEARCH` value is supported at the moment.
      * 
      */
-    @OutputExport(name="solutionTypes", type=List.class, parameters={String.class})
+    @Export(name="solutionTypes", type=List.class, parameters={String.class})
     private Output<List<String>> solutionTypes;
 
     /**

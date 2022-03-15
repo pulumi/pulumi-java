@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.ContentHashResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
      * The content hash.
      * 
      */
-    @InputImport(name="contentHash", required=true)
+    @Import(name="contentHash", required=true)
       private final ContentHashResponse contentHash;
 
     public ContentHashResponse getContentHash() {
@@ -36,7 +36,7 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
      * The content size.
      * 
      */
-    @InputImport(name="contentSize", required=true)
+    @Import(name="contentSize", required=true)
       private final Double contentSize;
 
     public Double getContentSize() {
@@ -47,7 +47,7 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
      * The content version.
      * 
      */
-    @InputImport(name="contentVersion", required=true)
+    @Import(name="contentVersion", required=true)
       private final String contentVersion;
 
     public String getContentVersion() {
@@ -58,7 +58,7 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
      * The metadata.
      * 
      */
-    @InputImport(name="metadata", required=true)
+    @Import(name="metadata", required=true)
       private final Object metadata;
 
     public Object getMetadata() {
@@ -69,7 +69,7 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
      * The content link URI.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable String uri;
 
     public Optional<String> getUri() {

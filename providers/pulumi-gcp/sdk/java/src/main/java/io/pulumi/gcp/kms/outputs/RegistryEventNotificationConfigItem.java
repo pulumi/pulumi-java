@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegistryEventNotificationConfigItem {
     private final String pubsubTopicName;
     private final @Nullable String subfolderMatches;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegistryEventNotificationConfigItem(
-        @OutputCustomType.Parameter("pubsubTopicName") String pubsubTopicName,
-        @OutputCustomType.Parameter("subfolderMatches") @Nullable String subfolderMatches) {
+        @CustomType.Parameter("pubsubTopicName") String pubsubTopicName,
+        @CustomType.Parameter("subfolderMatches") @Nullable String subfolderMatches) {
         this.pubsubTopicName = pubsubTopicName;
         this.subfolderMatches = subfolderMatches;
     }

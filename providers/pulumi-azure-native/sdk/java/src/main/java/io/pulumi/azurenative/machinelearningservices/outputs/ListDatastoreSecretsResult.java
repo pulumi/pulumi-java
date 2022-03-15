@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListDatastoreSecretsResult {
     /**
      * Credential type used to authentication with storage.
@@ -15,8 +15,8 @@ public final class ListDatastoreSecretsResult {
      */
     private final String secretsType;
 
-    @OutputCustomType.Constructor
-    private ListDatastoreSecretsResult(@OutputCustomType.Parameter("secretsType") String secretsType) {
+    @CustomType.Constructor
+    private ListDatastoreSecretsResult(@CustomType.Parameter("secretsType") String secretsType) {
         this.secretsType = secretsType;
     }
 

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityCrlConfiguration;
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityOcspConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class CertificateAuthorityRevocationConfiguration extends io.pulumi
 
     public static final CertificateAuthorityRevocationConfiguration Empty = new CertificateAuthorityRevocationConfiguration();
 
-    @InputImport(name="crlConfiguration")
+    @Import(name="crlConfiguration")
       private final @Nullable CertificateAuthorityCrlConfiguration crlConfiguration;
 
     public Optional<CertificateAuthorityCrlConfiguration> getCrlConfiguration() {
         return this.crlConfiguration == null ? Optional.empty() : Optional.ofNullable(this.crlConfiguration);
     }
 
-    @InputImport(name="ocspConfiguration")
+    @Import(name="ocspConfiguration")
       private final @Nullable CertificateAuthorityOcspConfiguration ocspConfiguration;
 
     public Optional<CertificateAuthorityOcspConfiguration> getOcspConfiguration() {

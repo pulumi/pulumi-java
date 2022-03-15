@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.glue.SchemaArgs;
 import io.pulumi.aws.glue.inputs.SchemaState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the schema.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The compatibility mode of the schema. Values values are: `NONE`, `DISABLED`, `BACKWARD`, `BACKWARD_ALL`, `FORWARD`, `FORWARD_ALL`, `FULL`, and `FULL_ALL`.
      * 
      */
-    @OutputExport(name="compatibility", type=String.class, parameters={})
+    @Export(name="compatibility", type=String.class, parameters={})
     private Output<String> compatibility;
 
     /**
@@ -62,7 +62,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The data format of the schema definition. Valid values are `AVRO` and `JSON`.
      * 
      */
-    @OutputExport(name="dataFormat", type=String.class, parameters={})
+    @Export(name="dataFormat", type=String.class, parameters={})
     private Output<String> dataFormat;
 
     /**
@@ -76,7 +76,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * A description of the schema.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -90,7 +90,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The latest version of the schema associated with the returned schema definition.
      * 
      */
-    @OutputExport(name="latestSchemaVersion", type=Integer.class, parameters={})
+    @Export(name="latestSchemaVersion", type=Integer.class, parameters={})
     private Output<Integer> latestSchemaVersion;
 
     /**
@@ -104,7 +104,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The next version of the schema associated with the returned schema definition.
      * 
      */
-    @OutputExport(name="nextSchemaVersion", type=Integer.class, parameters={})
+    @Export(name="nextSchemaVersion", type=Integer.class, parameters={})
     private Output<Integer> nextSchemaVersion;
 
     /**
@@ -118,7 +118,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The ARN of the Glue Registry to create the schema in.
      * 
      */
-    @OutputExport(name="registryArn", type=String.class, parameters={})
+    @Export(name="registryArn", type=String.class, parameters={})
     private Output<String> registryArn;
 
     /**
@@ -132,7 +132,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The name of the Glue Registry.
      * 
      */
-    @OutputExport(name="registryName", type=String.class, parameters={})
+    @Export(name="registryName", type=String.class, parameters={})
     private Output<String> registryName;
 
     /**
@@ -146,7 +146,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The version number of the checkpoint (the last time the compatibility mode was changed).
      * 
      */
-    @OutputExport(name="schemaCheckpoint", type=Integer.class, parameters={})
+    @Export(name="schemaCheckpoint", type=Integer.class, parameters={})
     private Output<Integer> schemaCheckpoint;
 
     /**
@@ -160,7 +160,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The schema definition using the `data_format` setting for `schema_name`.
      * 
      */
-    @OutputExport(name="schemaDefinition", type=String.class, parameters={})
+    @Export(name="schemaDefinition", type=String.class, parameters={})
     private Output<String> schemaDefinition;
 
     /**
@@ -174,7 +174,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * The Name of the schema.
      * 
      */
-    @OutputExport(name="schemaName", type=String.class, parameters={})
+    @Export(name="schemaName", type=String.class, parameters={})
     private Output<String> schemaName;
 
     /**
@@ -188,7 +188,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -202,7 +202,7 @@ public class Schema extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.ExtensionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CloudServiceExtensionProfileResponse {
     /**
      * List of extensions for the cloud service.
@@ -17,8 +17,8 @@ public final class CloudServiceExtensionProfileResponse {
      */
     private final @Nullable List<ExtensionResponse> extensions;
 
-    @OutputCustomType.Constructor
-    private CloudServiceExtensionProfileResponse(@OutputCustomType.Parameter("extensions") @Nullable List<ExtensionResponse> extensions) {
+    @CustomType.Constructor
+    private CloudServiceExtensionProfileResponse(@CustomType.Parameter("extensions") @Nullable List<ExtensionResponse> extensions) {
         this.extensions = extensions;
     }
 

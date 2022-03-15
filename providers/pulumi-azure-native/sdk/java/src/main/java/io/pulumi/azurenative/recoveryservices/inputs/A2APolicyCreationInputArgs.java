@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.enums.SetMultiVmSyncStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
      * The app consistent snapshot frequency (in minutes).
      * 
      */
-    @InputImport(name="appConsistentFrequencyInMinutes")
+    @Import(name="appConsistentFrequencyInMinutes")
       private final @Nullable Output<Integer> appConsistentFrequencyInMinutes;
 
     public Output<Integer> getAppConsistentFrequencyInMinutes() {
@@ -36,7 +36,7 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
      * The crash consistent snapshot frequency (in minutes).
      * 
      */
-    @InputImport(name="crashConsistentFrequencyInMinutes")
+    @Import(name="crashConsistentFrequencyInMinutes")
       private final @Nullable Output<Integer> crashConsistentFrequencyInMinutes;
 
     public Output<Integer> getCrashConsistentFrequencyInMinutes() {
@@ -48,7 +48,7 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
      * Expected value is 'A2A'.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -59,7 +59,7 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
      * A value indicating whether multi-VM sync has to be enabled. Value should be 'Enabled' or 'Disabled'.
      * 
      */
-    @InputImport(name="multiVmSyncStatus", required=true)
+    @Import(name="multiVmSyncStatus", required=true)
       private final Output<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
 
     public Output<Either<String,SetMultiVmSyncStatus>> getMultiVmSyncStatus() {
@@ -70,7 +70,7 @@ public final class A2APolicyCreationInputArgs extends io.pulumi.resources.Resour
      * The duration in minutes until which the recovery points need to be stored.
      * 
      */
-    @InputImport(name="recoveryPointHistory")
+    @Import(name="recoveryPointHistory")
       private final @Nullable Output<Integer> recoveryPointHistory;
 
     public Output<Integer> getRecoveryPointHistory() {

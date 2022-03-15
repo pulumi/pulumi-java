@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.ServiceMeshAnalysisMessageBaseResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceMeshAnalysisMessageResponse {
     /**
      * A UI can combine these args with a template (based on message_base.type) to produce an internationalized message.
@@ -33,12 +33,12 @@ public final class ServiceMeshAnalysisMessageResponse {
      */
     private final List<String> resourcePaths;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceMeshAnalysisMessageResponse(
-        @OutputCustomType.Parameter("args") Map<String,String> args,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("messageBase") ServiceMeshAnalysisMessageBaseResponse messageBase,
-        @OutputCustomType.Parameter("resourcePaths") List<String> resourcePaths) {
+        @CustomType.Parameter("args") Map<String,String> args,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("messageBase") ServiceMeshAnalysisMessageBaseResponse messageBase,
+        @CustomType.Parameter("resourcePaths") List<String> resourcePaths) {
         this.args = args;
         this.description = description;
         this.messageBase = messageBase;

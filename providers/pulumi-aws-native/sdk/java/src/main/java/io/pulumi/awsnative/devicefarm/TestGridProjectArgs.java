@@ -6,7 +6,7 @@ package io.pulumi.awsnative.devicefarm;
 import io.pulumi.awsnative.devicefarm.inputs.TestGridProjectTagArgs;
 import io.pulumi.awsnative.devicefarm.inputs.TestGridProjectVpcConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,28 +17,28 @@ public final class TestGridProjectArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final TestGridProjectArgs Empty = new TestGridProjectArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<TestGridProjectTagArgs>> tags;
 
     public Output<List<TestGridProjectTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="vpcConfig")
+    @Import(name="vpcConfig")
       private final @Nullable Output<TestGridProjectVpcConfigArgs> vpcConfig;
 
     public Output<TestGridProjectVpcConfigArgs> getVpcConfig() {

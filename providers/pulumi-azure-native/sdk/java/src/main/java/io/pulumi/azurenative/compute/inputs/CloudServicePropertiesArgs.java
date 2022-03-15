@@ -10,7 +10,7 @@ import io.pulumi.azurenative.compute.inputs.CloudServiceOsProfileArgs;
 import io.pulumi.azurenative.compute.inputs.CloudServiceRoleProfileArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +30,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * The default value is `false`.
      * 
      */
-    @InputImport(name="allowModelOverride")
+    @Import(name="allowModelOverride")
       private final @Nullable Output<Boolean> allowModelOverride;
 
     public Output<Boolean> getAllowModelOverride() {
@@ -41,7 +41,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * Specifies the XML service configuration (.cscfg) for the cloud service.
      * 
      */
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable Output<String> configuration;
 
     public Output<String> getConfiguration() {
@@ -53,7 +53,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * This is a write-only property and is not returned in GET calls.
      * 
      */
-    @InputImport(name="configurationUrl")
+    @Import(name="configurationUrl")
       private final @Nullable Output<String> configurationUrl;
 
     public Output<String> getConfigurationUrl() {
@@ -64,7 +64,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * Describes a cloud service extension profile.
      * 
      */
-    @InputImport(name="extensionProfile")
+    @Import(name="extensionProfile")
       private final @Nullable Output<CloudServiceExtensionProfileArgs> extensionProfile;
 
     public Output<CloudServiceExtensionProfileArgs> getExtensionProfile() {
@@ -75,7 +75,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * Network Profile for the cloud service.
      * 
      */
-    @InputImport(name="networkProfile")
+    @Import(name="networkProfile")
       private final @Nullable Output<CloudServiceNetworkProfileArgs> networkProfile;
 
     public Output<CloudServiceNetworkProfileArgs> getNetworkProfile() {
@@ -86,7 +86,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * Describes the OS profile for the cloud service.
      * 
      */
-    @InputImport(name="osProfile")
+    @Import(name="osProfile")
       private final @Nullable Output<CloudServiceOsProfileArgs> osProfile;
 
     public Output<CloudServiceOsProfileArgs> getOsProfile() {
@@ -98,7 +98,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * This is a write-only property and is not returned in GET calls.
      * 
      */
-    @InputImport(name="packageUrl")
+    @Import(name="packageUrl")
       private final @Nullable Output<String> packageUrl;
 
     public Output<String> getPackageUrl() {
@@ -109,7 +109,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * Describes the role profile for the cloud service.
      * 
      */
-    @InputImport(name="roleProfile")
+    @Import(name="roleProfile")
       private final @Nullable Output<CloudServiceRoleProfileArgs> roleProfile;
 
     public Output<CloudServiceRoleProfileArgs> getRoleProfile() {
@@ -121,7 +121,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.
      * 
      */
-    @InputImport(name="startCloudService")
+    @Import(name="startCloudService")
       private final @Nullable Output<Boolean> startCloudService;
 
     public Output<Boolean> getStartCloudService() {
@@ -134,7 +134,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain must be called to apply the update. If set to Auto, the update is automatically applied to each update domain in sequence.
      * 
      */
-    @InputImport(name="upgradeMode")
+    @Import(name="upgradeMode")
       private final @Nullable Output<Either<String,CloudServiceUpgradeMode>> upgradeMode;
 
     public Output<Either<String,CloudServiceUpgradeMode>> getUpgradeMode() {

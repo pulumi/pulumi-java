@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.managedidentities_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,28 +14,28 @@ public final class GetDomainBackupIamPolicyArgs extends io.pulumi.resources.Invo
 
     public static final GetDomainBackupIamPolicyArgs Empty = new GetDomainBackupIamPolicyArgs();
 
-    @InputImport(name="backupId", required=true)
+    @Import(name="backupId", required=true)
       private final String backupId;
 
     public String getBackupId() {
         return this.backupId;
     }
 
-    @InputImport(name="domainId", required=true)
+    @Import(name="domainId", required=true)
       private final String domainId;
 
     public String getDomainId() {
         return this.domainId;
     }
 
-    @InputImport(name="optionsRequestedPolicyVersion")
+    @Import(name="optionsRequestedPolicyVersion")
       private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

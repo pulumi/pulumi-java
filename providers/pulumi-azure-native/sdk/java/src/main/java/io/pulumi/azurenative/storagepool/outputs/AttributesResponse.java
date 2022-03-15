@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storagepool.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AttributesResponse {
     /**
      * Indicates whether or not authentication is enabled on the ACL.
@@ -20,10 +20,10 @@ public final class AttributesResponse {
      */
     private final Boolean prodModeWriteProtect;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AttributesResponse(
-        @OutputCustomType.Parameter("authentication") Boolean authentication,
-        @OutputCustomType.Parameter("prodModeWriteProtect") Boolean prodModeWriteProtect) {
+        @CustomType.Parameter("authentication") Boolean authentication,
+        @CustomType.Parameter("prodModeWriteProtect") Boolean prodModeWriteProtect) {
         this.authentication = authentication;
         this.prodModeWriteProtect = prodModeWriteProtect;
     }

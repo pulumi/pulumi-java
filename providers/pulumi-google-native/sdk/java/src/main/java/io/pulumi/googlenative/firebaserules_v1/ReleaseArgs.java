@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebaserules_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +18,14 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Format: `projects/{project_id}/releases/{release_id}`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -36,7 +36,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the `Ruleset` referred to by this `Release`. The `Ruleset` must exist the `Release` to be created.
      * 
      */
-    @InputImport(name="rulesetName")
+    @Import(name="rulesetName")
       private final @Nullable Output<String> rulesetName;
 
     public Output<String> getRulesetName() {

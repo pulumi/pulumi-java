@@ -15,7 +15,7 @@ import io.pulumi.aws.codebuild.inputs.ProjectSecondarySourceVersionGetArgs;
 import io.pulumi.aws.codebuild.inputs.ProjectSourceGetArgs;
 import io.pulumi.aws.codebuild.inputs.ProjectVpcConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +33,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * ARN of the CodeBuild project.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -44,7 +44,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="artifacts")
+    @Import(name="artifacts")
       private final @Nullable Output<ProjectArtifactsGetArgs> artifacts;
 
     public Output<ProjectArtifactsGetArgs> getArtifacts() {
@@ -55,7 +55,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * Generates a publicly-accessible URL for the projects build badge. Available as `badge_url` attribute when enabled.
      * 
      */
-    @InputImport(name="badgeEnabled")
+    @Import(name="badgeEnabled")
       private final @Nullable Output<Boolean> badgeEnabled;
 
     public Output<Boolean> getBadgeEnabled() {
@@ -66,7 +66,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * URL of the build badge when `badge_enabled` is enabled.
      * 
      */
-    @InputImport(name="badgeUrl")
+    @Import(name="badgeUrl")
       private final @Nullable Output<String> badgeUrl;
 
     public Output<String> getBadgeUrl() {
@@ -77,7 +77,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * Defines the batch build options for the project.
      * 
      */
-    @InputImport(name="buildBatchConfig")
+    @Import(name="buildBatchConfig")
       private final @Nullable Output<ProjectBuildBatchConfigGetArgs> buildBatchConfig;
 
     public Output<ProjectBuildBatchConfigGetArgs> getBuildBatchConfig() {
@@ -88,7 +88,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * Number of minutes, from 5 to 480 (8 hours), for AWS CodeBuild to wait until timing out any related build that does not get marked as completed. The default is 60 minutes.
      * 
      */
-    @InputImport(name="buildTimeout")
+    @Import(name="buildTimeout")
       private final @Nullable Output<Integer> buildTimeout;
 
     public Output<Integer> getBuildTimeout() {
@@ -99,7 +99,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="cache")
+    @Import(name="cache")
       private final @Nullable Output<ProjectCacheGetArgs> cache;
 
     public Output<ProjectCacheGetArgs> getCache() {
@@ -110,7 +110,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * Specify a maximum number of concurrent builds for the project. The value specified must be greater than 0 and less than the account concurrent running builds limit.
      * 
      */
-    @InputImport(name="concurrentBuildLimit")
+    @Import(name="concurrentBuildLimit")
       private final @Nullable Output<Integer> concurrentBuildLimit;
 
     public Output<Integer> getConcurrentBuildLimit() {
@@ -121,7 +121,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * Short description of the project.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -132,7 +132,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts.
      * 
      */
-    @InputImport(name="encryptionKey")
+    @Import(name="encryptionKey")
       private final @Nullable Output<String> encryptionKey;
 
     public Output<String> getEncryptionKey() {
@@ -143,7 +143,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable Output<ProjectEnvironmentGetArgs> environment;
 
     public Output<ProjectEnvironmentGetArgs> getEnvironment() {
@@ -154,7 +154,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * A set of file system locations to to mount inside the build. File system locations are documented below.
      * 
      */
-    @InputImport(name="fileSystemLocations")
+    @Import(name="fileSystemLocations")
       private final @Nullable Output<List<ProjectFileSystemLocationGetArgs>> fileSystemLocations;
 
     public Output<List<ProjectFileSystemLocationGetArgs>> getFileSystemLocations() {
@@ -165,7 +165,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="logsConfig")
+    @Import(name="logsConfig")
       private final @Nullable Output<ProjectLogsConfigGetArgs> logsConfig;
 
     public Output<ProjectLogsConfigGetArgs> getLogsConfig() {
@@ -176,7 +176,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * Name of the project. If `type` is set to `S3`, this is the name of the output artifact object
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -187,7 +187,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * Specifies the visibility of the project's builds. Possible values are: `PUBLIC_READ` and `PRIVATE`. Default value is `PRIVATE`.
      * 
      */
-    @InputImport(name="projectVisibility")
+    @Import(name="projectVisibility")
       private final @Nullable Output<String> projectVisibility;
 
     public Output<String> getProjectVisibility() {
@@ -198,7 +198,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * The project identifier used with the public build APIs.
      * 
      */
-    @InputImport(name="publicProjectAlias")
+    @Import(name="publicProjectAlias")
       private final @Nullable Output<String> publicProjectAlias;
 
     public Output<String> getPublicProjectAlias() {
@@ -209,7 +209,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * Number of minutes, from 5 to 480 (8 hours), a build is allowed to be queued before it times out. The default is 8 hours.
      * 
      */
-    @InputImport(name="queuedTimeout")
+    @Import(name="queuedTimeout")
       private final @Nullable Output<Integer> queuedTimeout;
 
     public Output<Integer> getQueuedTimeout() {
@@ -220,7 +220,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the IAM role that enables CodeBuild to access the CloudWatch Logs and Amazon S3 artifacts for the project's builds.
      * 
      */
-    @InputImport(name="resourceAccessRole")
+    @Import(name="resourceAccessRole")
       private final @Nullable Output<String> resourceAccessRole;
 
     public Output<String> getResourceAccessRole() {
@@ -231,7 +231,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="secondaryArtifacts")
+    @Import(name="secondaryArtifacts")
       private final @Nullable Output<List<ProjectSecondaryArtifactGetArgs>> secondaryArtifacts;
 
     public Output<List<ProjectSecondaryArtifactGetArgs>> getSecondaryArtifacts() {
@@ -242,7 +242,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="secondarySourceVersions")
+    @Import(name="secondarySourceVersions")
       private final @Nullable Output<List<ProjectSecondarySourceVersionGetArgs>> secondarySourceVersions;
 
     public Output<List<ProjectSecondarySourceVersionGetArgs>> getSecondarySourceVersions() {
@@ -253,7 +253,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="secondarySources")
+    @Import(name="secondarySources")
       private final @Nullable Output<List<ProjectSecondarySourceGetArgs>> secondarySources;
 
     public Output<List<ProjectSecondarySourceGetArgs>> getSecondarySources() {
@@ -264,7 +264,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * Specifies the service role ARN for the batch build project.
      * 
      */
-    @InputImport(name="serviceRole")
+    @Import(name="serviceRole")
       private final @Nullable Output<String> serviceRole;
 
     public Output<String> getServiceRole() {
@@ -275,7 +275,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<ProjectSourceGetArgs> source;
 
     public Output<ProjectSourceGetArgs> getSource() {
@@ -286,7 +286,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * The source version for the corresponding source identifier. See [AWS docs](https://docs.aws.amazon.com/codebuild/latest/APIReference/API_ProjectSourceVersion.html#CodeBuild-Type-ProjectSourceVersion-sourceVersion) for more details.
      * 
      */
-    @InputImport(name="sourceVersion")
+    @Import(name="sourceVersion")
       private final @Nullable Output<String> sourceVersion;
 
     public Output<String> getSourceVersion() {
@@ -297,7 +297,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -308,7 +308,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -319,7 +319,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="vpcConfig")
+    @Import(name="vpcConfig")
       private final @Nullable Output<ProjectVpcConfigGetArgs> vpcConfig;
 
     public Output<ProjectVpcConfigGetArgs> getVpcConfig() {

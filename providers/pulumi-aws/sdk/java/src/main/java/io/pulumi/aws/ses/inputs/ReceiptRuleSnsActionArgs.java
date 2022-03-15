@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ReceiptRuleSnsActionArgs extends io.pulumi.resources.Resource
      * The encoding to use for the email within the Amazon SNS notification. Default value is `UTF-8`.
      * 
      */
-    @InputImport(name="encoding")
+    @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
     public Output<String> getEncoding() {
@@ -30,7 +30,7 @@ public final class ReceiptRuleSnsActionArgs extends io.pulumi.resources.Resource
      * The position of the action in the receipt rule
      * 
      */
-    @InputImport(name="position", required=true)
+    @Import(name="position", required=true)
       private final Output<Integer> position;
 
     public Output<Integer> getPosition() {
@@ -41,7 +41,7 @@ public final class ReceiptRuleSnsActionArgs extends io.pulumi.resources.Resource
      * The ARN of an SNS topic to notify
      * 
      */
-    @InputImport(name="topicArn", required=true)
+    @Import(name="topicArn", required=true)
       private final Output<String> topicArn;
 
     public Output<String> getTopicArn() {

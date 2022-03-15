@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.elasticache.SecurityGroupArgs;
 import io.pulumi.aws.elasticache.inputs.SecurityGroupState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * description for the cache security group. Defaults to "Managed by Pulumi".
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -52,7 +52,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * Name for the cache security group. This value is stored as a lowercase string.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -67,7 +67,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * authorized for ingress to the cache security group
      * 
      */
-    @OutputExport(name="securityGroupNames", type=List.class, parameters={String.class})
+    @Export(name="securityGroupNames", type=List.class, parameters={String.class})
     private Output<List<String>> securityGroupNames;
 
     /**

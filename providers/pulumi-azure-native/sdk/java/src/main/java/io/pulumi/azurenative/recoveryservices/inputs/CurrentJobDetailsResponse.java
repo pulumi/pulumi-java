@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class CurrentJobDetailsResponse extends io.pulumi.resources.InvokeA
      * The ARM Id of the job being executed.
      * 
      */
-    @InputImport(name="jobId")
+    @Import(name="jobId")
       private final @Nullable String jobId;
 
     public Optional<String> getJobId() {
@@ -33,7 +33,7 @@ public final class CurrentJobDetailsResponse extends io.pulumi.resources.InvokeA
      * The job name.
      * 
      */
-    @InputImport(name="jobName")
+    @Import(name="jobName")
       private final @Nullable String jobName;
 
     public Optional<String> getJobName() {
@@ -44,7 +44,7 @@ public final class CurrentJobDetailsResponse extends io.pulumi.resources.InvokeA
      * The start time of the job.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {

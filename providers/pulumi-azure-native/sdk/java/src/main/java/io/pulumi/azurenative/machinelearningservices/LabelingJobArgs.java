@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.LabelingJobPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
      * Name and identifier for LabelingJob.
      * 
      */
-    @InputImport(name="labelingJobId")
+    @Import(name="labelingJobId")
       private final @Nullable Output<String> labelingJobId;
 
     public Output<String> getLabelingJobId() {
@@ -30,7 +30,7 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
      * Definition of a labeling job.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<LabelingJobPropertiesArgs> properties;
 
     public Output<LabelingJobPropertiesArgs> getProperties() {
@@ -41,7 +41,7 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group in which workspace is located.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class LabelingJobArgs extends io.pulumi.resources.ResourceArgs {
      * Name of Azure Machine Learning workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

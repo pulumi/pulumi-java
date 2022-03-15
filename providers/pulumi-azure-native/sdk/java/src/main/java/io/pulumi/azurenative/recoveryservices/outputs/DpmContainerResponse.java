@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.DPMContainerExtendedInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DpmContainerResponse {
     /**
      * Type of backup management for the container.
@@ -85,21 +85,21 @@ public final class DpmContainerResponse {
      */
     private final @Nullable Boolean upgradeAvailable;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DpmContainerResponse(
-        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
-        @OutputCustomType.Parameter("canReRegister") @Nullable Boolean canReRegister,
-        @OutputCustomType.Parameter("containerId") @Nullable String containerId,
-        @OutputCustomType.Parameter("containerType") String containerType,
-        @OutputCustomType.Parameter("dpmAgentVersion") @Nullable String dpmAgentVersion,
-        @OutputCustomType.Parameter("dpmServers") @Nullable List<String> dpmServers,
-        @OutputCustomType.Parameter("extendedInfo") @Nullable DPMContainerExtendedInfoResponse extendedInfo,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("healthStatus") @Nullable String healthStatus,
-        @OutputCustomType.Parameter("protectedItemCount") @Nullable Double protectedItemCount,
-        @OutputCustomType.Parameter("protectionStatus") @Nullable String protectionStatus,
-        @OutputCustomType.Parameter("registrationStatus") @Nullable String registrationStatus,
-        @OutputCustomType.Parameter("upgradeAvailable") @Nullable Boolean upgradeAvailable) {
+        @CustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @CustomType.Parameter("canReRegister") @Nullable Boolean canReRegister,
+        @CustomType.Parameter("containerId") @Nullable String containerId,
+        @CustomType.Parameter("containerType") String containerType,
+        @CustomType.Parameter("dpmAgentVersion") @Nullable String dpmAgentVersion,
+        @CustomType.Parameter("dpmServers") @Nullable List<String> dpmServers,
+        @CustomType.Parameter("extendedInfo") @Nullable DPMContainerExtendedInfoResponse extendedInfo,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("healthStatus") @Nullable String healthStatus,
+        @CustomType.Parameter("protectedItemCount") @Nullable Double protectedItemCount,
+        @CustomType.Parameter("protectionStatus") @Nullable String protectionStatus,
+        @CustomType.Parameter("registrationStatus") @Nullable String registrationStatus,
+        @CustomType.Parameter("upgradeAvailable") @Nullable Boolean upgradeAvailable) {
         this.backupManagementType = backupManagementType;
         this.canReRegister = canReRegister;
         this.containerId = containerId;

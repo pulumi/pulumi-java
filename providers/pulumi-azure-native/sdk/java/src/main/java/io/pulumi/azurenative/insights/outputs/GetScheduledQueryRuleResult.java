@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.outputs.LogToMetricActionResponse;
 import io.pulumi.azurenative.insights.outputs.ScheduleResponse;
 import io.pulumi.azurenative.insights.outputs.SourceResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetScheduledQueryRuleResult {
     /**
      * Action needs to be taken on rule execution.
@@ -109,26 +109,26 @@ public final class GetScheduledQueryRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetScheduledQueryRuleResult(
-        @OutputCustomType.Parameter("action") Either<AlertingActionResponse,LogToMetricActionResponse> action,
-        @OutputCustomType.Parameter("autoMitigate") @Nullable Boolean autoMitigate,
-        @OutputCustomType.Parameter("createdWithApiVersion") String createdWithApiVersion,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("enabled") @Nullable String enabled,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isLegacyLogAnalyticsRule") Boolean isLegacyLogAnalyticsRule,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("schedule") @Nullable ScheduleResponse schedule,
-        @OutputCustomType.Parameter("source") SourceResponse source,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("action") Either<AlertingActionResponse,LogToMetricActionResponse> action,
+        @CustomType.Parameter("autoMitigate") @Nullable Boolean autoMitigate,
+        @CustomType.Parameter("createdWithApiVersion") String createdWithApiVersion,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("enabled") @Nullable String enabled,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isLegacyLogAnalyticsRule") Boolean isLegacyLogAnalyticsRule,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("schedule") @Nullable ScheduleResponse schedule,
+        @CustomType.Parameter("source") SourceResponse source,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.action = action;
         this.autoMitigate = autoMitigate;
         this.createdWithApiVersion = createdWithApiVersion;

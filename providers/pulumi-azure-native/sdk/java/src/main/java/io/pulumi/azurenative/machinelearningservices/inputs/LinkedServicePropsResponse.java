@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class LinkedServicePropsResponse extends io.pulumi.resources.Invoke
      * The creation time of the linked service.
      * 
      */
-    @InputImport(name="createdTime")
+    @Import(name="createdTime")
       private final @Nullable String createdTime;
 
     public Optional<String> getCreatedTime() {
@@ -33,7 +33,7 @@ public final class LinkedServicePropsResponse extends io.pulumi.resources.Invoke
      * Type of the link target.
      * 
      */
-    @InputImport(name="linkType")
+    @Import(name="linkType")
       private final @Nullable String linkType;
 
     public Optional<String> getLinkType() {
@@ -44,7 +44,7 @@ public final class LinkedServicePropsResponse extends io.pulumi.resources.Invoke
      * ResourceId of the link target of the linked service.
      * 
      */
-    @InputImport(name="linkedServiceResourceId", required=true)
+    @Import(name="linkedServiceResourceId", required=true)
       private final String linkedServiceResourceId;
 
     public String getLinkedServiceResourceId() {
@@ -55,7 +55,7 @@ public final class LinkedServicePropsResponse extends io.pulumi.resources.Invoke
      * The last modified time of the linked service.
      * 
      */
-    @InputImport(name="modifiedTime")
+    @Import(name="modifiedTime")
       private final @Nullable String modifiedTime;
 
     public Optional<String> getModifiedTime() {

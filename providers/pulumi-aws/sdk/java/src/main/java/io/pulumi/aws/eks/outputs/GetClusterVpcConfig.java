@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterVpcConfig {
     /**
      * The cluster security group that was created by Amazon EKS for the cluster.
@@ -47,15 +47,15 @@ public final class GetClusterVpcConfig {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterVpcConfig(
-        @OutputCustomType.Parameter("clusterSecurityGroupId") String clusterSecurityGroupId,
-        @OutputCustomType.Parameter("endpointPrivateAccess") Boolean endpointPrivateAccess,
-        @OutputCustomType.Parameter("endpointPublicAccess") Boolean endpointPublicAccess,
-        @OutputCustomType.Parameter("publicAccessCidrs") List<String> publicAccessCidrs,
-        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("clusterSecurityGroupId") String clusterSecurityGroupId,
+        @CustomType.Parameter("endpointPrivateAccess") Boolean endpointPrivateAccess,
+        @CustomType.Parameter("endpointPublicAccess") Boolean endpointPublicAccess,
+        @CustomType.Parameter("publicAccessCidrs") List<String> publicAccessCidrs,
+        @CustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.clusterSecurityGroupId = clusterSecurityGroupId;
         this.endpointPrivateAccess = endpointPrivateAccess;
         this.endpointPublicAccess = endpointPublicAccess;

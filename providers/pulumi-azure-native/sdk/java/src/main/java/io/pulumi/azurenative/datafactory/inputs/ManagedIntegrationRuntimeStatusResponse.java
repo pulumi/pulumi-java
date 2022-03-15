@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.ManagedIntegrationRuntimeErrorResponse;
 import io.pulumi.azurenative.datafactory.inputs.ManagedIntegrationRuntimeNodeResponse;
 import io.pulumi.azurenative.datafactory.inputs.ManagedIntegrationRuntimeOperationResultResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
      * The time at which the integration runtime was created, in ISO8601 format.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -35,7 +35,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
      * The data factory name which the integration runtime belong to.
      * 
      */
-    @InputImport(name="dataFactoryName", required=true)
+    @Import(name="dataFactoryName", required=true)
       private final String dataFactoryName;
 
     public String getDataFactoryName() {
@@ -46,7 +46,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
      * The last operation result that occurred on this integration runtime.
      * 
      */
-    @InputImport(name="lastOperation", required=true)
+    @Import(name="lastOperation", required=true)
       private final ManagedIntegrationRuntimeOperationResultResponse lastOperation;
 
     public ManagedIntegrationRuntimeOperationResultResponse getLastOperation() {
@@ -57,7 +57,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
      * The list of nodes for managed integration runtime.
      * 
      */
-    @InputImport(name="nodes", required=true)
+    @Import(name="nodes", required=true)
       private final List<ManagedIntegrationRuntimeNodeResponse> nodes;
 
     public List<ManagedIntegrationRuntimeNodeResponse> getNodes() {
@@ -68,7 +68,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
      * The errors that occurred on this integration runtime.
      * 
      */
-    @InputImport(name="otherErrors", required=true)
+    @Import(name="otherErrors", required=true)
       private final List<ManagedIntegrationRuntimeErrorResponse> otherErrors;
 
     public List<ManagedIntegrationRuntimeErrorResponse> getOtherErrors() {
@@ -79,7 +79,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
      * The state of integration runtime.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -91,7 +91,7 @@ public final class ManagedIntegrationRuntimeStatusResponse extends io.pulumi.res
      * Expected value is 'Managed'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

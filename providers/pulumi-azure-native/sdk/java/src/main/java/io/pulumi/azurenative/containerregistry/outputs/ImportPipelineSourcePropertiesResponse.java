@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImportPipelineSourcePropertiesResponse {
     /**
      * They key vault secret uri to obtain the source storage SAS token.
@@ -29,11 +29,11 @@ public final class ImportPipelineSourcePropertiesResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImportPipelineSourcePropertiesResponse(
-        @OutputCustomType.Parameter("keyVaultUri") String keyVaultUri,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("uri") @Nullable String uri) {
+        @CustomType.Parameter("keyVaultUri") String keyVaultUri,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("uri") @Nullable String uri) {
         this.keyVaultUri = keyVaultUri;
         this.type = type;
         this.uri = uri;

@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
      * The Amazon Resource Name (ARN) of the connection.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
      * Parameters used for authorization. A maximum of 1 are allowed. Documented below.
      * 
      */
-    @InputImport(name="authParameters")
+    @Import(name="authParameters")
       private final @Nullable Output<EventConnectionAuthParametersGetArgs> authParameters;
 
     public Output<EventConnectionAuthParametersGetArgs> getAuthParameters() {
@@ -41,7 +41,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
      * Choose the type of authorization to use for the connection. One of `API_KEY`,`BASIC`,`OAUTH_CLIENT_CREDENTIALS`.
      * 
      */
-    @InputImport(name="authorizationType")
+    @Import(name="authorizationType")
       private final @Nullable Output<String> authorizationType;
 
     public Output<String> getAuthorizationType() {
@@ -52,7 +52,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
      * Enter a description for the connection. Maximum of 512 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -63,7 +63,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
      * The name of the new connection. Maximum of 64 characters consisting of numbers, lower/upper case letters, .,-,_.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -74,7 +74,7 @@ public final class EventConnectionState extends io.pulumi.resources.ResourceArgs
      * The Amazon Resource Name (ARN) of the secret created from the authorization parameters specified for the connection.
      * 
      */
-    @InputImport(name="secretArn")
+    @Import(name="secretArn")
       private final @Nullable Output<String> secretArn;
 
     public Output<String> getSecretArn() {

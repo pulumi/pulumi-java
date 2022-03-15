@@ -11,12 +11,12 @@ import io.pulumi.awsnative.appflow.outputs.FlowSalesforceDestinationProperties;
 import io.pulumi.awsnative.appflow.outputs.FlowSnowflakeDestinationProperties;
 import io.pulumi.awsnative.appflow.outputs.FlowUpsolverDestinationProperties;
 import io.pulumi.awsnative.appflow.outputs.FlowZendeskDestinationProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowDestinationConnectorProperties {
     private final @Nullable FlowEventBridgeDestinationProperties eventBridge;
     private final @Nullable FlowLookoutMetricsDestinationProperties lookoutMetrics;
@@ -27,16 +27,16 @@ public final class FlowDestinationConnectorProperties {
     private final @Nullable FlowUpsolverDestinationProperties upsolver;
     private final @Nullable FlowZendeskDestinationProperties zendesk;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowDestinationConnectorProperties(
-        @OutputCustomType.Parameter("eventBridge") @Nullable FlowEventBridgeDestinationProperties eventBridge,
-        @OutputCustomType.Parameter("lookoutMetrics") @Nullable FlowLookoutMetricsDestinationProperties lookoutMetrics,
-        @OutputCustomType.Parameter("redshift") @Nullable FlowRedshiftDestinationProperties redshift,
-        @OutputCustomType.Parameter("s3") @Nullable FlowS3DestinationProperties s3,
-        @OutputCustomType.Parameter("salesforce") @Nullable FlowSalesforceDestinationProperties salesforce,
-        @OutputCustomType.Parameter("snowflake") @Nullable FlowSnowflakeDestinationProperties snowflake,
-        @OutputCustomType.Parameter("upsolver") @Nullable FlowUpsolverDestinationProperties upsolver,
-        @OutputCustomType.Parameter("zendesk") @Nullable FlowZendeskDestinationProperties zendesk) {
+        @CustomType.Parameter("eventBridge") @Nullable FlowEventBridgeDestinationProperties eventBridge,
+        @CustomType.Parameter("lookoutMetrics") @Nullable FlowLookoutMetricsDestinationProperties lookoutMetrics,
+        @CustomType.Parameter("redshift") @Nullable FlowRedshiftDestinationProperties redshift,
+        @CustomType.Parameter("s3") @Nullable FlowS3DestinationProperties s3,
+        @CustomType.Parameter("salesforce") @Nullable FlowSalesforceDestinationProperties salesforce,
+        @CustomType.Parameter("snowflake") @Nullable FlowSnowflakeDestinationProperties snowflake,
+        @CustomType.Parameter("upsolver") @Nullable FlowUpsolverDestinationProperties upsolver,
+        @CustomType.Parameter("zendesk") @Nullable FlowZendeskDestinationProperties zendesk) {
         this.eventBridge = eventBridge;
         this.lookoutMetrics = lookoutMetrics;
         this.redshift = redshift;

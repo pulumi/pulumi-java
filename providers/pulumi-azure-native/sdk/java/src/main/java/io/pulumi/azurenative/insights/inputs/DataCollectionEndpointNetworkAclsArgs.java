@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.enums.KnownPublicNetworkAccessOptions;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class DataCollectionEndpointNetworkAclsArgs extends io.pulumi.resou
      * The configuration to set whether network access from public internet to the endpoints are allowed.
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess;
 
     public Output<Either<String,KnownPublicNetworkAccessOptions>> getPublicNetworkAccess() {

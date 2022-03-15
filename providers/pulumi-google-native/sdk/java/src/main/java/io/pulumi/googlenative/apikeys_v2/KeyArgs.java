@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apikeys_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apikeys_v2.inputs.V2RestrictionsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,28 +19,28 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Human-readable display name of this key that you can modify. The maximum length is 63 characters.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName == null ? Output.empty() : this.displayName;
     }
 
-    @InputImport(name="keyId")
+    @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
     public Output<String> getKeyId() {
         return this.keyId == null ? Output.empty() : this.keyId;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -51,7 +51,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Key restrictions.
      * 
      */
-    @InputImport(name="restrictions")
+    @Import(name="restrictions")
       private final @Nullable Output<V2RestrictionsArgs> restrictions;
 
     public Output<V2RestrictionsArgs> getRestrictions() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SloRequestBasedSliGoodTotalRatioGetArgs extends io.pulumi.res
      * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
      */
-    @InputImport(name="badServiceFilter")
+    @Import(name="badServiceFilter")
       private final @Nullable Output<String> badServiceFilter;
 
     public Output<String> getBadServiceFilter() {
@@ -41,7 +41,7 @@ public final class SloRequestBasedSliGoodTotalRatioGetArgs extends io.pulumi.res
      * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
      */
-    @InputImport(name="goodServiceFilter")
+    @Import(name="goodServiceFilter")
       private final @Nullable Output<String> goodServiceFilter;
 
     public Output<String> getGoodServiceFilter() {
@@ -57,7 +57,7 @@ public final class SloRequestBasedSliGoodTotalRatioGetArgs extends io.pulumi.res
      * must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
      */
-    @InputImport(name="totalServiceFilter")
+    @Import(name="totalServiceFilter")
       private final @Nullable Output<String> totalServiceFilter;
 
     public Output<String> getTotalServiceFilter() {

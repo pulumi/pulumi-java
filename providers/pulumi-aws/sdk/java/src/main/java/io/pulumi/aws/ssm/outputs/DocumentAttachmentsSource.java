@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ssm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DocumentAttachmentsSource {
     /**
      * The key describing the location of an attachment to a document. Valid key types include: `SourceUrl` and `S3FileUrl`
@@ -28,11 +28,11 @@ public final class DocumentAttachmentsSource {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DocumentAttachmentsSource(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("values") List<String> values) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("values") List<String> values) {
         this.key = key;
         this.name = name;
         this.values = values;

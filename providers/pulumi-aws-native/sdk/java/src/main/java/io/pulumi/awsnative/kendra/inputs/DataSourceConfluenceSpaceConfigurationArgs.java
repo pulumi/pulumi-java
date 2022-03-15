@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceConfluenceSpaceToIndexFieldMappingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,35 +17,35 @@ public final class DataSourceConfluenceSpaceConfigurationArgs extends io.pulumi.
 
     public static final DataSourceConfluenceSpaceConfigurationArgs Empty = new DataSourceConfluenceSpaceConfigurationArgs();
 
-    @InputImport(name="crawlArchivedSpaces")
+    @Import(name="crawlArchivedSpaces")
       private final @Nullable Output<Boolean> crawlArchivedSpaces;
 
     public Output<Boolean> getCrawlArchivedSpaces() {
         return this.crawlArchivedSpaces == null ? Output.empty() : this.crawlArchivedSpaces;
     }
 
-    @InputImport(name="crawlPersonalSpaces")
+    @Import(name="crawlPersonalSpaces")
       private final @Nullable Output<Boolean> crawlPersonalSpaces;
 
     public Output<Boolean> getCrawlPersonalSpaces() {
         return this.crawlPersonalSpaces == null ? Output.empty() : this.crawlPersonalSpaces;
     }
 
-    @InputImport(name="excludeSpaces")
+    @Import(name="excludeSpaces")
       private final @Nullable Output<List<String>> excludeSpaces;
 
     public Output<List<String>> getExcludeSpaces() {
         return this.excludeSpaces == null ? Output.empty() : this.excludeSpaces;
     }
 
-    @InputImport(name="includeSpaces")
+    @Import(name="includeSpaces")
       private final @Nullable Output<List<String>> includeSpaces;
 
     public Output<List<String>> getIncludeSpaces() {
         return this.includeSpaces == null ? Output.empty() : this.includeSpaces;
     }
 
-    @InputImport(name="spaceFieldMappings")
+    @Import(name="spaceFieldMappings")
       private final @Nullable Output<List<DataSourceConfluenceSpaceToIndexFieldMappingArgs>> spaceFieldMappings;
 
     public Output<List<DataSourceConfluenceSpaceToIndexFieldMappingArgs>> getSpaceFieldMappings() {

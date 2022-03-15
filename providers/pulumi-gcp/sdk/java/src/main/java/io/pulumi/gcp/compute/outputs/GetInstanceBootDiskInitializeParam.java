@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceBootDiskInitializeParam {
     /**
      * The image from which this disk was initialised.
@@ -33,12 +33,12 @@ public final class GetInstanceBootDiskInitializeParam {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceBootDiskInitializeParam(
-        @OutputCustomType.Parameter("image") String image,
-        @OutputCustomType.Parameter("labels") Map<String,Object> labels,
-        @OutputCustomType.Parameter("size") Integer size,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("image") String image,
+        @CustomType.Parameter("labels") Map<String,Object> labels,
+        @CustomType.Parameter("size") Integer size,
+        @CustomType.Parameter("type") String type) {
         this.image = image;
         this.labels = labels;
         this.size = size;

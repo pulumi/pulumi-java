@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.EncryptionConfigResponse;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.HiveMetastoreConfigResponse;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.MaintenanceWindowResponse;
@@ -15,7 +15,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceResponse {
     /**
      * A Cloud Storage URI (starting with gs://) that specifies where artifacts related to the metastore service are stored.
@@ -118,28 +118,28 @@ public final class ServiceResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceResponse(
-        @OutputCustomType.Parameter("artifactGcsUri") String artifactGcsUri,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("databaseType") String databaseType,
-        @OutputCustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
-        @OutputCustomType.Parameter("endpointUri") String endpointUri,
-        @OutputCustomType.Parameter("hiveMetastoreConfig") HiveMetastoreConfigResponse hiveMetastoreConfig,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("maintenanceWindow") MaintenanceWindowResponse maintenanceWindow,
-        @OutputCustomType.Parameter("metadataIntegration") MetadataIntegrationResponse metadataIntegration,
-        @OutputCustomType.Parameter("metadataManagementActivity") MetadataManagementActivityResponse metadataManagementActivity,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("releaseChannel") String releaseChannel,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stateMessage") String stateMessage,
-        @OutputCustomType.Parameter("tier") String tier,
-        @OutputCustomType.Parameter("uid") String uid,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("artifactGcsUri") String artifactGcsUri,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("databaseType") String databaseType,
+        @CustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
+        @CustomType.Parameter("endpointUri") String endpointUri,
+        @CustomType.Parameter("hiveMetastoreConfig") HiveMetastoreConfigResponse hiveMetastoreConfig,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("maintenanceWindow") MaintenanceWindowResponse maintenanceWindow,
+        @CustomType.Parameter("metadataIntegration") MetadataIntegrationResponse metadataIntegration,
+        @CustomType.Parameter("metadataManagementActivity") MetadataManagementActivityResponse metadataManagementActivity,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("releaseChannel") String releaseChannel,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stateMessage") String stateMessage,
+        @CustomType.Parameter("tier") String tier,
+        @CustomType.Parameter("uid") String uid,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.artifactGcsUri = artifactGcsUri;
         this.createTime = createTime;
         this.databaseType = databaseType;

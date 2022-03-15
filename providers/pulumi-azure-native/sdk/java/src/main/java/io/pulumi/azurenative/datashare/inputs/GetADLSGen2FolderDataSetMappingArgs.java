@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetADLSGen2FolderDataSetMappingArgs extends io.pulumi.resourc
      * The name of the share account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -27,7 +27,7 @@ public final class GetADLSGen2FolderDataSetMappingArgs extends io.pulumi.resourc
      * The name of the dataSetMapping.
      * 
      */
-    @InputImport(name="dataSetMappingName", required=true)
+    @Import(name="dataSetMappingName", required=true)
       private final String dataSetMappingName;
 
     public String getDataSetMappingName() {
@@ -38,7 +38,7 @@ public final class GetADLSGen2FolderDataSetMappingArgs extends io.pulumi.resourc
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class GetADLSGen2FolderDataSetMappingArgs extends io.pulumi.resourc
      * The name of the shareSubscription.
      * 
      */
-    @InputImport(name="shareSubscriptionName", required=true)
+    @Import(name="shareSubscriptionName", required=true)
       private final String shareSubscriptionName;
 
     public String getShareSubscriptionName() {

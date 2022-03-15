@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.HTTPHeaderResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionMonitorHttpConfigurationResponse {
     /**
      * The HTTP method to use.
@@ -46,14 +46,14 @@ public final class ConnectionMonitorHttpConfigurationResponse {
      */
     private final @Nullable List<String> validStatusCodeRanges;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionMonitorHttpConfigurationResponse(
-        @OutputCustomType.Parameter("method") @Nullable String method,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("preferHTTPS") @Nullable Boolean preferHTTPS,
-        @OutputCustomType.Parameter("requestHeaders") @Nullable List<HTTPHeaderResponse> requestHeaders,
-        @OutputCustomType.Parameter("validStatusCodeRanges") @Nullable List<String> validStatusCodeRanges) {
+        @CustomType.Parameter("method") @Nullable String method,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("preferHTTPS") @Nullable Boolean preferHTTPS,
+        @CustomType.Parameter("requestHeaders") @Nullable List<HTTPHeaderResponse> requestHeaders,
+        @CustomType.Parameter("validStatusCodeRanges") @Nullable List<String> validStatusCodeRanges) {
         this.method = method;
         this.path = path;
         this.port = port;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.FirewallPolicyArgs;
@@ -41,7 +41,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -55,7 +55,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -69,7 +69,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * Fingerprint of the resource. This field is used internally during updates of this resource.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -83,7 +83,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * The unique identifier for the resource. This identifier is defined by the server.
      * 
      */
-    @OutputExport(name="firewallPolicyId", type=String.class, parameters={})
+    @Export(name="firewallPolicyId", type=String.class, parameters={})
     private Output<String> firewallPolicyId;
 
     /**
@@ -97,7 +97,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * Name of the resource. It is a numeric ID allocated by GCP which uniquely identifies the Firewall Policy.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -111,7 +111,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * The parent of the firewall policy.
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -125,7 +125,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * Total count of all firewall policy rule tuples. A firewall policy can not exceed a set number of tuples.
      * 
      */
-    @OutputExport(name="ruleTupleCount", type=Integer.class, parameters={})
+    @Export(name="ruleTupleCount", type=Integer.class, parameters={})
     private Output<Integer> ruleTupleCount;
 
     /**
@@ -139,7 +139,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -153,7 +153,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * Server-defined URL for this resource with the resource id.
      * 
      */
-    @OutputExport(name="selfLinkWithId", type=String.class, parameters={})
+    @Export(name="selfLinkWithId", type=String.class, parameters={})
     private Output<String> selfLinkWithId;
 
     /**
@@ -167,7 +167,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * User-provided name of the Organization firewall policy. The name should be unique in the organization in which the firewall policy is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression a-z? which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="shortName", type=String.class, parameters={})
+    @Export(name="shortName", type=String.class, parameters={})
     private Output<String> shortName;
 
     /**

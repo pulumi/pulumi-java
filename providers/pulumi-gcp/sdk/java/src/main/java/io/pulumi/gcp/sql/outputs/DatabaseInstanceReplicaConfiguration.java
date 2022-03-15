@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseInstanceReplicaConfiguration {
     /**
      * PEM representation of the trusted CA's x509
@@ -75,19 +75,19 @@ public final class DatabaseInstanceReplicaConfiguration {
      */
     private final @Nullable Boolean verifyServerCertificate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseInstanceReplicaConfiguration(
-        @OutputCustomType.Parameter("caCertificate") @Nullable String caCertificate,
-        @OutputCustomType.Parameter("clientCertificate") @Nullable String clientCertificate,
-        @OutputCustomType.Parameter("clientKey") @Nullable String clientKey,
-        @OutputCustomType.Parameter("connectRetryInterval") @Nullable Integer connectRetryInterval,
-        @OutputCustomType.Parameter("dumpFilePath") @Nullable String dumpFilePath,
-        @OutputCustomType.Parameter("failoverTarget") @Nullable Boolean failoverTarget,
-        @OutputCustomType.Parameter("masterHeartbeatPeriod") @Nullable Integer masterHeartbeatPeriod,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("sslCipher") @Nullable String sslCipher,
-        @OutputCustomType.Parameter("username") @Nullable String username,
-        @OutputCustomType.Parameter("verifyServerCertificate") @Nullable Boolean verifyServerCertificate) {
+        @CustomType.Parameter("caCertificate") @Nullable String caCertificate,
+        @CustomType.Parameter("clientCertificate") @Nullable String clientCertificate,
+        @CustomType.Parameter("clientKey") @Nullable String clientKey,
+        @CustomType.Parameter("connectRetryInterval") @Nullable Integer connectRetryInterval,
+        @CustomType.Parameter("dumpFilePath") @Nullable String dumpFilePath,
+        @CustomType.Parameter("failoverTarget") @Nullable Boolean failoverTarget,
+        @CustomType.Parameter("masterHeartbeatPeriod") @Nullable Integer masterHeartbeatPeriod,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("sslCipher") @Nullable String sslCipher,
+        @CustomType.Parameter("username") @Nullable String username,
+        @CustomType.Parameter("verifyServerCertificate") @Nullable Boolean verifyServerCertificate) {
         this.caCertificate = caCertificate;
         this.clientCertificate = clientCertificate;
         this.clientKey = clientKey;

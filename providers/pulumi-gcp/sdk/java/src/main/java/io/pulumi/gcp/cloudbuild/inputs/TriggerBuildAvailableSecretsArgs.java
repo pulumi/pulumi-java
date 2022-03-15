@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildAvailableSecretsSecretManagerArgs;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TriggerBuildAvailableSecretsArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="secretManagers", required=true)
+    @Import(name="secretManagers", required=true)
       private final Output<List<TriggerBuildAvailableSecretsSecretManagerArgs>> secretManagers;
 
     public Output<List<TriggerBuildAvailableSecretsSecretManagerArgs>> getSecretManagers() {

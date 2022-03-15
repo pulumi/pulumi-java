@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,35 +15,35 @@ public final class ContainerVolumeGetArgs extends io.pulumi.resources.ResourceAr
 
     public static final ContainerVolumeGetArgs Empty = new ContainerVolumeGetArgs();
 
-    @InputImport(name="containerPath")
+    @Import(name="containerPath")
       private final @Nullable Output<String> containerPath;
 
     public Output<String> getContainerPath() {
         return this.containerPath == null ? Output.empty() : this.containerPath;
     }
 
-    @InputImport(name="fromContainer")
+    @Import(name="fromContainer")
       private final @Nullable Output<String> fromContainer;
 
     public Output<String> getFromContainer() {
         return this.fromContainer == null ? Output.empty() : this.fromContainer;
     }
 
-    @InputImport(name="hostPath")
+    @Import(name="hostPath")
       private final @Nullable Output<String> hostPath;
 
     public Output<String> getHostPath() {
         return this.hostPath == null ? Output.empty() : this.hostPath;
     }
 
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
         return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
-    @InputImport(name="volumeName")
+    @Import(name="volumeName")
       private final @Nullable Output<String> volumeName;
 
     public Output<String> getVolumeName() {

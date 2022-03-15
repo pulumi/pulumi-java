@@ -14,7 +14,7 @@ import io.pulumi.azurenative.servicefabricmesh.inputs.ResourceRequirementsArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.SettingArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.VolumeReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,7 +33,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * Command array to execute within the container in exec form.
      * 
      */
-    @InputImport(name="commands")
+    @Import(name="commands")
       private final @Nullable Output<List<String>> commands;
 
     public Output<List<String>> getCommands() {
@@ -44,7 +44,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * Reference to sinks in DiagnosticsDescription.
      * 
      */
-    @InputImport(name="diagnostics")
+    @Import(name="diagnostics")
       private final @Nullable Output<DiagnosticsRefArgs> diagnostics;
 
     public Output<DiagnosticsRefArgs> getDiagnostics() {
@@ -55,7 +55,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * The endpoints exposed by this container.
      * 
      */
-    @InputImport(name="endpoints")
+    @Import(name="endpoints")
       private final @Nullable Output<List<EndpointPropertiesArgs>> endpoints;
 
     public Output<List<EndpointPropertiesArgs>> getEndpoints() {
@@ -66,7 +66,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * Override for the default entry point in the container.
      * 
      */
-    @InputImport(name="entrypoint")
+    @Import(name="entrypoint")
       private final @Nullable Output<String> entrypoint;
 
     public Output<String> getEntrypoint() {
@@ -77,7 +77,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * The environment variables to set in this container
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
     public Output<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
@@ -88,7 +88,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * The Container image to use.
      * 
      */
-    @InputImport(name="image", required=true)
+    @Import(name="image", required=true)
       private final Output<String> image;
 
     public Output<String> getImage() {
@@ -99,7 +99,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * Image registry credential.
      * 
      */
-    @InputImport(name="imageRegistryCredential")
+    @Import(name="imageRegistryCredential")
       private final @Nullable Output<ImageRegistryCredentialArgs> imageRegistryCredential;
 
     public Output<ImageRegistryCredentialArgs> getImageRegistryCredential() {
@@ -110,7 +110,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * The labels to set in this container.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<ContainerLabelArgs>> labels;
 
     public Output<List<ContainerLabelArgs>> getLabels() {
@@ -121,7 +121,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * The name of the code package.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -132,7 +132,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * A list of ReliableCollection resources used by this particular code package. Please refer to ReliableCollectionsRef for more details.
      * 
      */
-    @InputImport(name="reliableCollectionsRefs")
+    @Import(name="reliableCollectionsRefs")
       private final @Nullable Output<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs;
 
     public Output<List<ReliableCollectionsRefArgs>> getReliableCollectionsRefs() {
@@ -143,7 +143,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * The resources required by this container.
      * 
      */
-    @InputImport(name="resources", required=true)
+    @Import(name="resources", required=true)
       private final Output<ResourceRequirementsArgs> resources;
 
     public Output<ResourceRequirementsArgs> getResources() {
@@ -154,7 +154,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * The settings to set in this container. The setting file path can be fetched from environment variable "Fabric_SettingPath". The path for Windows container is "C:\\secrets". The path for Linux container is "/var/secrets".
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable Output<List<SettingArgs>> settings;
 
     public Output<List<SettingArgs>> getSettings() {
@@ -165,7 +165,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * Volumes to be attached to the container. The lifetime of these volumes is independent of the application's lifetime.
      * 
      */
-    @InputImport(name="volumeRefs")
+    @Import(name="volumeRefs")
       private final @Nullable Output<List<VolumeReferenceArgs>> volumeRefs;
 
     public Output<List<VolumeReferenceArgs>> getVolumeRefs() {
@@ -176,7 +176,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
      * Volumes to be attached to the container. The lifetime of these volumes is scoped to the application's lifetime.
      * 
      */
-    @InputImport(name="volumes")
+    @Import(name="volumes")
       private final @Nullable Output<List<ApplicationScopedVolumeArgs>> volumes;
 
     public Output<List<ApplicationScopedVolumeArgs>> getVolumes() {

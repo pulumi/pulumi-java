@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.eventhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNamespaceIpFilterRuleResult {
     /**
      * The IP Filter Action
@@ -42,14 +42,14 @@ public final class GetNamespaceIpFilterRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNamespaceIpFilterRuleResult(
-        @OutputCustomType.Parameter("action") @Nullable String action,
-        @OutputCustomType.Parameter("filterName") @Nullable String filterName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ipMask") @Nullable String ipMask,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("action") @Nullable String action,
+        @CustomType.Parameter("filterName") @Nullable String filterName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ipMask") @Nullable String ipMask,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.action = action;
         this.filterName = filterName;
         this.id = id;

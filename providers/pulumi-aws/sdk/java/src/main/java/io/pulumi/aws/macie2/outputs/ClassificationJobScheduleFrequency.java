@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.macie2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClassificationJobScheduleFrequency {
     /**
      * Specifies a daily recurrence pattern for running the job.
@@ -29,11 +29,11 @@ public final class ClassificationJobScheduleFrequency {
      */
     private final @Nullable String weeklySchedule;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClassificationJobScheduleFrequency(
-        @OutputCustomType.Parameter("dailySchedule") @Nullable Boolean dailySchedule,
-        @OutputCustomType.Parameter("monthlySchedule") @Nullable Integer monthlySchedule,
-        @OutputCustomType.Parameter("weeklySchedule") @Nullable String weeklySchedule) {
+        @CustomType.Parameter("dailySchedule") @Nullable Boolean dailySchedule,
+        @CustomType.Parameter("monthlySchedule") @Nullable Integer monthlySchedule,
+        @CustomType.Parameter("weeklySchedule") @Nullable String weeklySchedule) {
         this.dailySchedule = dailySchedule;
         this.monthlySchedule = monthlySchedule;
         this.weeklySchedule = weeklySchedule;

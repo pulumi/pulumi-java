@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.storage.k8s.io_v1beta1.outputs.VolumeNodeResources;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CSINodeDriver {
     /**
      * allocatable represents the volume resources of a node that are available for scheduling.
@@ -34,12 +34,12 @@ public final class CSINodeDriver {
      */
     private final @Nullable List<String> topologyKeys;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CSINodeDriver(
-        @OutputCustomType.Parameter("allocatable") @Nullable VolumeNodeResources allocatable,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nodeID") String nodeID,
-        @OutputCustomType.Parameter("topologyKeys") @Nullable List<String> topologyKeys) {
+        @CustomType.Parameter("allocatable") @Nullable VolumeNodeResources allocatable,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nodeID") String nodeID,
+        @CustomType.Parameter("topologyKeys") @Nullable List<String> topologyKeys) {
         this.allocatable = allocatable;
         this.name = name;
         this.nodeID = nodeID;

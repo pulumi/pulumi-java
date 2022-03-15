@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.gamelift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GameServerGroupTargetTrackingConfiguration {
     private final Double targetValue;
 
-    @OutputCustomType.Constructor
-    private GameServerGroupTargetTrackingConfiguration(@OutputCustomType.Parameter("targetValue") Double targetValue) {
+    @CustomType.Constructor
+    private GameServerGroupTargetTrackingConfiguration(@CustomType.Parameter("targetValue") Double targetValue) {
         this.targetValue = targetValue;
     }
 

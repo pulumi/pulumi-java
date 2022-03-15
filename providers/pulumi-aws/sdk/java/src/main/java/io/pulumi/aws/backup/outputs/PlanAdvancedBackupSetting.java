@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.backup.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PlanAdvancedBackupSetting {
     /**
      * Specifies the backup option for a selected resource. This option is only available for Windows VSS backup jobs. Set to `{ WindowsVSS = "enabled" }` to enable Windows VSS backup option and create a VSS Windows backup.
@@ -21,10 +21,10 @@ public final class PlanAdvancedBackupSetting {
      */
     private final String resourceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PlanAdvancedBackupSetting(
-        @OutputCustomType.Parameter("backupOptions") Map<String,String> backupOptions,
-        @OutputCustomType.Parameter("resourceType") String resourceType) {
+        @CustomType.Parameter("backupOptions") Map<String,String> backupOptions,
+        @CustomType.Parameter("resourceType") String resourceType) {
         this.backupOptions = backupOptions;
         this.resourceType = resourceType;
     }

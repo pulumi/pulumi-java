@@ -6,7 +6,7 @@ package io.pulumi.azurenative.keyvault;
 import io.pulumi.azurenative.keyvault.inputs.ManagedHsmPropertiesArgs;
 import io.pulumi.azurenative.keyvault.inputs.ManagedHsmSkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * The supported Azure location where the managed HSM Pool should be created.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -32,7 +32,7 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the managed HSM Pool
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of the managed HSM
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ManagedHsmPropertiesArgs> properties;
 
     public Output<ManagedHsmPropertiesArgs> getProperties() {
@@ -54,7 +54,7 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group that contains the managed HSM pool.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * SKU details
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<ManagedHsmSkuArgs> sku;
 
     public Output<ManagedHsmSkuArgs> getSku() {
@@ -76,7 +76,7 @@ public final class ManagedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

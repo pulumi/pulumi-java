@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.appengine_v1alpha.inputs.SslSettingsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DomainMappingArgs Empty = new DomainMappingArgs();
 
-    @InputImport(name="appId", required=true)
+    @Import(name="appId", required=true)
       private final Output<String> appId;
 
     public Output<String> getAppId() {
@@ -26,21 +26,21 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * Relative name of the domain serving the application. Example: example.com.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
         return this.id == null ? Output.empty() : this.id;
     }
 
-    @InputImport(name="noManagedCertificate")
+    @Import(name="noManagedCertificate")
       private final @Nullable Output<String> noManagedCertificate;
 
     public Output<String> getNoManagedCertificate() {
         return this.noManagedCertificate == null ? Output.empty() : this.noManagedCertificate;
     }
 
-    @InputImport(name="overrideStrategy")
+    @Import(name="overrideStrategy")
       private final @Nullable Output<String> overrideStrategy;
 
     public Output<String> getOverrideStrategy() {
@@ -51,7 +51,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.
      * 
      */
-    @InputImport(name="sslSettings")
+    @Import(name="sslSettings")
       private final @Nullable Output<SslSettingsArgs> sslSettings;
 
     public Output<SslSettingsArgs> getSslSettings() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ApiProfileResponse extends io.pulumi.resources.InvokeArgs {
      * The API version.
      * 
      */
-    @InputImport(name="apiVersion", required=true)
+    @Import(name="apiVersion", required=true)
       private final String apiVersion;
 
     public String getApiVersion() {
@@ -27,7 +27,7 @@ public final class ApiProfileResponse extends io.pulumi.resources.InvokeArgs {
      * The profile version.
      * 
      */
-    @InputImport(name="profileVersion", required=true)
+    @Import(name="profileVersion", required=true)
       private final String profileVersion;
 
     public String getProfileVersion() {

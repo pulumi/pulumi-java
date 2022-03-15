@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.wisdom.outputs;
 
 import io.pulumi.awsnative.wisdom.outputs.KnowledgeBaseAppIntegrationsConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KnowledgeBaseSourceConfiguration {
     private final @Nullable KnowledgeBaseAppIntegrationsConfiguration appIntegrations;
 
-    @OutputCustomType.Constructor
-    private KnowledgeBaseSourceConfiguration(@OutputCustomType.Parameter("appIntegrations") @Nullable KnowledgeBaseAppIntegrationsConfiguration appIntegrations) {
+    @CustomType.Constructor
+    private KnowledgeBaseSourceConfiguration(@CustomType.Parameter("appIntegrations") @Nullable KnowledgeBaseAppIntegrationsConfiguration appIntegrations) {
         this.appIntegrations = appIntegrations;
     }
 

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.edgeorder.inputs;
 import io.pulumi.azurenative.edgeorder.inputs.DeviceDetailsResponse;
 import io.pulumi.azurenative.edgeorder.inputs.DisplayInfoResponse;
 import io.pulumi.azurenative.edgeorder.inputs.HierarchyInformationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Quantity of the product
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Integer count;
 
     public Integer getCount() {
@@ -38,7 +38,7 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
      * list of device details
      * 
      */
-    @InputImport(name="deviceDetails", required=true)
+    @Import(name="deviceDetails", required=true)
       private final List<DeviceDetailsResponse> deviceDetails;
 
     public List<DeviceDetailsResponse> getDeviceDetails() {
@@ -49,7 +49,7 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Display details of the product
      * 
      */
-    @InputImport(name="displayInfo")
+    @Import(name="displayInfo")
       private final @Nullable DisplayInfoResponse displayInfo;
 
     public Optional<DisplayInfoResponse> getDisplayInfo() {
@@ -60,7 +60,7 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Hierarchy of the product which uniquely identifies the product
      * 
      */
-    @InputImport(name="hierarchyInformation", required=true)
+    @Import(name="hierarchyInformation", required=true)
       private final HierarchyInformationResponse hierarchyInformation;
 
     public HierarchyInformationResponse getHierarchyInformation() {
@@ -71,7 +71,7 @@ public final class ProductDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Double encryption status of the configuration. Read-only field.
      * 
      */
-    @InputImport(name="productDoubleEncryptionStatus", required=true)
+    @Import(name="productDoubleEncryptionStatus", required=true)
       private final String productDoubleEncryptionStatus;
 
     public String getProductDoubleEncryptionStatus() {

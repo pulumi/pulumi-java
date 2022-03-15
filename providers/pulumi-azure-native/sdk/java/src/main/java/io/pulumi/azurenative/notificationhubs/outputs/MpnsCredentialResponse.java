@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.notificationhubs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MpnsCredentialResponse {
     /**
      * The certificate key for this credential.
@@ -27,11 +27,11 @@ public final class MpnsCredentialResponse {
      */
     private final @Nullable String thumbprint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MpnsCredentialResponse(
-        @OutputCustomType.Parameter("certificateKey") @Nullable String certificateKey,
-        @OutputCustomType.Parameter("mpnsCertificate") @Nullable String mpnsCertificate,
-        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint) {
+        @CustomType.Parameter("certificateKey") @Nullable String certificateKey,
+        @CustomType.Parameter("mpnsCertificate") @Nullable String mpnsCertificate,
+        @CustomType.Parameter("thumbprint") @Nullable String thumbprint) {
         this.certificateKey = certificateKey;
         this.mpnsCertificate = mpnsCertificate;
         this.thumbprint = thumbprint;

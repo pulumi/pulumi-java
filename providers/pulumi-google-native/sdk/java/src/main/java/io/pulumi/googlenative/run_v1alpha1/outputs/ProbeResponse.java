@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.ExecActionResponse;
 import io.pulumi.googlenative.run_v1alpha1.outputs.HTTPGetActionResponse;
 import io.pulumi.googlenative.run_v1alpha1.outputs.TCPSocketActionResponse;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ProbeResponse {
     /**
      * (Optional) One and only one of the following should be specified. Exec specifies the action to take. A field inlined from the Handler message.
@@ -53,16 +53,16 @@ public final class ProbeResponse {
      */
     private final Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProbeResponse(
-        @OutputCustomType.Parameter("exec") ExecActionResponse exec,
-        @OutputCustomType.Parameter("failureThreshold") Integer failureThreshold,
-        @OutputCustomType.Parameter("httpGet") HTTPGetActionResponse httpGet,
-        @OutputCustomType.Parameter("initialDelaySeconds") Integer initialDelaySeconds,
-        @OutputCustomType.Parameter("periodSeconds") Integer periodSeconds,
-        @OutputCustomType.Parameter("successThreshold") Integer successThreshold,
-        @OutputCustomType.Parameter("tcpSocket") TCPSocketActionResponse tcpSocket,
-        @OutputCustomType.Parameter("timeoutSeconds") Integer timeoutSeconds) {
+        @CustomType.Parameter("exec") ExecActionResponse exec,
+        @CustomType.Parameter("failureThreshold") Integer failureThreshold,
+        @CustomType.Parameter("httpGet") HTTPGetActionResponse httpGet,
+        @CustomType.Parameter("initialDelaySeconds") Integer initialDelaySeconds,
+        @CustomType.Parameter("periodSeconds") Integer periodSeconds,
+        @CustomType.Parameter("successThreshold") Integer successThreshold,
+        @CustomType.Parameter("tcpSocket") TCPSocketActionResponse tcpSocket,
+        @CustomType.Parameter("timeoutSeconds") Integer timeoutSeconds) {
         this.exec = exec;
         this.failureThreshold = failureThreshold;
         this.httpGet = httpGet;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the custom domain name assigned to the storage account. Name is the CNAME source.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether indirect CName validation is enabled. Default value is false. This should only be set on updates.
      * 
      */
-    @InputImport(name="useSubDomainName")
+    @Import(name="useSubDomainName")
       private final @Nullable Output<Boolean> useSubDomainName;
 
     public Output<Boolean> getUseSubDomainName() {

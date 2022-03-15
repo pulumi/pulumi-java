@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectionRuleArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends io.pulumi.res
      * List of infoTypes this rule set is applied to.
      * 
      */
-    @InputImport(name="infoTypes")
+    @Import(name="infoTypes")
       private final @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
 
     public Output<List<GooglePrivacyDlpV2InfoTypeArgs>> getInfoTypes() {
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2InspectionRuleSetArgs extends io.pulumi.res
      * Set of rules to be applied to infoTypes. The rules are applied in order.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<GooglePrivacyDlpV2InspectionRuleArgs>> rules;
 
     public Output<List<GooglePrivacyDlpV2InspectionRuleArgs>> getRules() {

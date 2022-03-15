@@ -9,7 +9,7 @@ import io.pulumi.azurenative.automation.outputs.ContentLinkResponse;
 import io.pulumi.azurenative.automation.outputs.ModuleErrorInfoResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -40,7 +40,7 @@ public class Module extends io.pulumi.resources.CustomResource {
      * Gets or sets the activity count of the module.
      * 
      */
-    @OutputExport(name="activityCount", type=Integer.class, parameters={})
+    @Export(name="activityCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> activityCount;
 
     /**
@@ -54,7 +54,7 @@ public class Module extends io.pulumi.resources.CustomResource {
      * Gets or sets the contentLink of the module.
      * 
      */
-    @OutputExport(name="contentLink", type=ContentLinkResponse.class, parameters={})
+    @Export(name="contentLink", type=ContentLinkResponse.class, parameters={})
     private Output</* @Nullable */ ContentLinkResponse> contentLink;
 
     /**
@@ -68,7 +68,7 @@ public class Module extends io.pulumi.resources.CustomResource {
      * Gets or sets the creation time.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationTime;
 
     /**
@@ -82,7 +82,7 @@ public class Module extends io.pulumi.resources.CustomResource {
      * Gets or sets the description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -96,7 +96,7 @@ public class Module extends io.pulumi.resources.CustomResource {
      * Gets or sets the error info of the module.
      * 
      */
-    @OutputExport(name="error", type=ModuleErrorInfoResponse.class, parameters={})
+    @Export(name="error", type=ModuleErrorInfoResponse.class, parameters={})
     private Output</* @Nullable */ ModuleErrorInfoResponse> error;
 
     /**
@@ -110,7 +110,7 @@ public class Module extends io.pulumi.resources.CustomResource {
      * Gets or sets the etag of the resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -124,7 +124,7 @@ public class Module extends io.pulumi.resources.CustomResource {
      * Gets or sets type of module, if its composite or not.
      * 
      */
-    @OutputExport(name="isComposite", type=Boolean.class, parameters={})
+    @Export(name="isComposite", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isComposite;
 
     /**
@@ -138,7 +138,7 @@ public class Module extends io.pulumi.resources.CustomResource {
      * Gets or sets the isGlobal flag of the module.
      * 
      */
-    @OutputExport(name="isGlobal", type=Boolean.class, parameters={})
+    @Export(name="isGlobal", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isGlobal;
 
     /**
@@ -152,7 +152,7 @@ public class Module extends io.pulumi.resources.CustomResource {
      * Gets or sets the last modified time.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
     /**
@@ -166,7 +166,7 @@ public class Module extends io.pulumi.resources.CustomResource {
      * The Azure Region where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -180,7 +180,7 @@ public class Module extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -194,7 +194,7 @@ public class Module extends io.pulumi.resources.CustomResource {
      * Gets or sets the provisioning state of the module.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -208,7 +208,7 @@ public class Module extends io.pulumi.resources.CustomResource {
      * Gets or sets the size in bytes of the module.
      * 
      */
-    @OutputExport(name="sizeInBytes", type=Double.class, parameters={})
+    @Export(name="sizeInBytes", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> sizeInBytes;
 
     /**
@@ -222,7 +222,7 @@ public class Module extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -236,7 +236,7 @@ public class Module extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -250,7 +250,7 @@ public class Module extends io.pulumi.resources.CustomResource {
      * Gets or sets the version of the module.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**

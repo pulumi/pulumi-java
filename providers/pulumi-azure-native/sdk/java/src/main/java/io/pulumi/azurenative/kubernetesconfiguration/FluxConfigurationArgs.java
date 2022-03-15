@@ -9,7 +9,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.inputs.GitRepositoryDefinit
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.KustomizationDefinitionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * The name of the kubernetes cluster.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -36,7 +36,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
      * 
      */
-    @InputImport(name="clusterResourceName", required=true)
+    @Import(name="clusterResourceName", required=true)
       private final Output<String> clusterResourceName;
 
     public Output<String> getClusterResourceName() {
@@ -47,7 +47,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
      * 
      */
-    @InputImport(name="clusterRp", required=true)
+    @Import(name="clusterRp", required=true)
       private final Output<String> clusterRp;
 
     public Output<String> getClusterRp() {
@@ -58,7 +58,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * Key-value pairs of protected configuration settings for the configuration
      * 
      */
-    @InputImport(name="configurationProtectedSettings")
+    @Import(name="configurationProtectedSettings")
       private final @Nullable Output<Map<String,String>> configurationProtectedSettings;
 
     public Output<Map<String,String>> getConfigurationProtectedSettings() {
@@ -69,7 +69,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * Name of the Flux Configuration.
      * 
      */
-    @InputImport(name="fluxConfigurationName")
+    @Import(name="fluxConfigurationName")
       private final @Nullable Output<String> fluxConfigurationName;
 
     public Output<String> getFluxConfigurationName() {
@@ -80,7 +80,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * Parameters to reconcile to the GitRepository source kind type.
      * 
      */
-    @InputImport(name="gitRepository")
+    @Import(name="gitRepository")
       private final @Nullable Output<GitRepositoryDefinitionArgs> gitRepository;
 
     public Output<GitRepositoryDefinitionArgs> getGitRepository() {
@@ -91,7 +91,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.
      * 
      */
-    @InputImport(name="kustomizations")
+    @Import(name="kustomizations")
       private final @Nullable Output<Map<String,KustomizationDefinitionArgs>> kustomizations;
 
     public Output<Map<String,KustomizationDefinitionArgs>> getKustomizations() {
@@ -102,7 +102,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -113,7 +113,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -124,7 +124,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * Scope at which the operator will be installed.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<Either<String,ScopeType>> scope;
 
     public Output<Either<String,ScopeType>> getScope() {
@@ -135,7 +135,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * Source Kind to pull the configuration data from.
      * 
      */
-    @InputImport(name="sourceKind")
+    @Import(name="sourceKind")
       private final @Nullable Output<Either<String,SourceKindType>> sourceKind;
 
     public Output<Either<String,SourceKindType>> getSourceKind() {
@@ -146,7 +146,7 @@ public final class FluxConfigurationArgs extends io.pulumi.resources.ResourceArg
      * Whether this configuration should suspend its reconciliation of its kustomizations and sources.
      * 
      */
-    @InputImport(name="suspend")
+    @Import(name="suspend")
       private final @Nullable Output<Boolean> suspend;
 
     public Output<Boolean> getSuspend() {

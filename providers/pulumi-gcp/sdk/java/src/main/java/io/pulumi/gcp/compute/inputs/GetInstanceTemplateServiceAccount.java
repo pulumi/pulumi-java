@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetInstanceTemplateServiceAccount extends io.pulumi.resources
      * default Google Compute Engine service account is used.
      * 
      */
-    @InputImport(name="email", required=true)
+    @Import(name="email", required=true)
       private final String email;
 
     public String getEmail() {
@@ -31,7 +31,7 @@ public final class GetInstanceTemplateServiceAccount extends io.pulumi.resources
      * `cloud-platform` scope. See a complete list of scopes [here](https://cloud.google.com/sdk/gcloud/reference/alpha/compute/instances/set-scopes#--scopes).
      * 
      */
-    @InputImport(name="scopes", required=true)
+    @Import(name="scopes", required=true)
       private final List<String> scopes;
 
     public List<String> getScopes() {

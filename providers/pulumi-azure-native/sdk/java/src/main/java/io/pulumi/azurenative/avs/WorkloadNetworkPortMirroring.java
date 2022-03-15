@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.avs.WorkloadNetworkPortMirroringArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
      * Destination VM Group.
      * 
      */
-    @OutputExport(name="destination", type=String.class, parameters={})
+    @Export(name="destination", type=String.class, parameters={})
     private Output</* @Nullable */ String> destination;
 
     /**
@@ -49,7 +49,7 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
      * Direction of port mirroring profile.
      * 
      */
-    @OutputExport(name="direction", type=String.class, parameters={})
+    @Export(name="direction", type=String.class, parameters={})
     private Output</* @Nullable */ String> direction;
 
     /**
@@ -63,7 +63,7 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
      * Display name of the port mirroring profile.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -77,7 +77,7 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
      * The provisioning state
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -105,7 +105,7 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
      * NSX revision number.
      * 
      */
-    @OutputExport(name="revision", type=Double.class, parameters={})
+    @Export(name="revision", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> revision;
 
     /**
@@ -119,7 +119,7 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
      * Source VM Group.
      * 
      */
-    @OutputExport(name="source", type=String.class, parameters={})
+    @Export(name="source", type=String.class, parameters={})
     private Output</* @Nullable */ String> source;
 
     /**
@@ -133,7 +133,7 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
      * Port Mirroring Status.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -147,7 +147,7 @@ public class WorkloadNetworkPortMirroring extends io.pulumi.resources.CustomReso
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

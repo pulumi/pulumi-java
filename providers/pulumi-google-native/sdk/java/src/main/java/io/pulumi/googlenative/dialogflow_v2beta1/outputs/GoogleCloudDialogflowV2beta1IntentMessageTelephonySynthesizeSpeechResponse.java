@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse {
     /**
      * The SSML to be synthesized. For more information, see [SSML](https://developers.google.com/actions/reference/ssml).
@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
      */
     private final String text;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse(
-        @OutputCustomType.Parameter("ssml") String ssml,
-        @OutputCustomType.Parameter("text") String text) {
+        @CustomType.Parameter("ssml") String ssml,
+        @CustomType.Parameter("text") String text) {
         this.ssml = ssml;
         this.text = text;
     }

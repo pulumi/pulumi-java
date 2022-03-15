@@ -17,14 +17,14 @@ import io.pulumi.azurenative.storage.inputs.SkuArgs;
 import io.pulumi.core.Asset;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 
 public final class MyStack extends Stack {
 
-    @OutputExport(type = String.class)
+    @Export(type = String.class)
     private Output<String> staticEndpoint;
 
-    @OutputExport(type = String.class)
+    @Export(type = String.class)
     private Output<String> cdnEndpoint;
 
     public MyStack() {

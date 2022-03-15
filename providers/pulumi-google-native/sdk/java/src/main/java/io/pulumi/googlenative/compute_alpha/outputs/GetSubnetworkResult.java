@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.SubnetworkLogConfigResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.SubnetworkSecondaryRangeResponse;
 import java.lang.Boolean;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSubnetworkResult {
     /**
      * Can only be specified if VPC flow logging for this subnetwork is enabled. Sets the aggregation interval for collecting flow logs. Increasing the interval time reduces the amount of generated flow logs for long-lasting connections. Default is an interval of 5 seconds per connection. Valid values: INTERVAL_5_SEC, INTERVAL_30_SEC, INTERVAL_1_MIN, INTERVAL_5_MIN, INTERVAL_10_MIN, INTERVAL_15_MIN.
@@ -166,38 +166,38 @@ public final class GetSubnetworkResult {
      */
     private final List<Integer> vlans;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSubnetworkResult(
-        @OutputCustomType.Parameter("aggregationInterval") String aggregationInterval,
-        @OutputCustomType.Parameter("allowSubnetCidrRoutesOverlap") Boolean allowSubnetCidrRoutesOverlap,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("enableFlowLogs") Boolean enableFlowLogs,
-        @OutputCustomType.Parameter("enableL2") Boolean enableL2,
-        @OutputCustomType.Parameter("externalIpv6Prefix") String externalIpv6Prefix,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("flowSampling") Double flowSampling,
-        @OutputCustomType.Parameter("gatewayAddress") String gatewayAddress,
-        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
-        @OutputCustomType.Parameter("ipv6AccessType") String ipv6AccessType,
-        @OutputCustomType.Parameter("ipv6CidrRange") String ipv6CidrRange,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("logConfig") SubnetworkLogConfigResponse logConfig,
-        @OutputCustomType.Parameter("metadata") String metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("privateIpGoogleAccess") Boolean privateIpGoogleAccess,
-        @OutputCustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
-        @OutputCustomType.Parameter("purpose") String purpose,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("reservedInternalRange") String reservedInternalRange,
-        @OutputCustomType.Parameter("role") String role,
-        @OutputCustomType.Parameter("secondaryIpRanges") List<SubnetworkSecondaryRangeResponse> secondaryIpRanges,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("stackType") String stackType,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("vlans") List<Integer> vlans) {
+        @CustomType.Parameter("aggregationInterval") String aggregationInterval,
+        @CustomType.Parameter("allowSubnetCidrRoutesOverlap") Boolean allowSubnetCidrRoutesOverlap,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("enableFlowLogs") Boolean enableFlowLogs,
+        @CustomType.Parameter("enableL2") Boolean enableL2,
+        @CustomType.Parameter("externalIpv6Prefix") String externalIpv6Prefix,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("flowSampling") Double flowSampling,
+        @CustomType.Parameter("gatewayAddress") String gatewayAddress,
+        @CustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @CustomType.Parameter("ipv6AccessType") String ipv6AccessType,
+        @CustomType.Parameter("ipv6CidrRange") String ipv6CidrRange,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("logConfig") SubnetworkLogConfigResponse logConfig,
+        @CustomType.Parameter("metadata") String metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("privateIpGoogleAccess") Boolean privateIpGoogleAccess,
+        @CustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
+        @CustomType.Parameter("purpose") String purpose,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("reservedInternalRange") String reservedInternalRange,
+        @CustomType.Parameter("role") String role,
+        @CustomType.Parameter("secondaryIpRanges") List<SubnetworkSecondaryRangeResponse> secondaryIpRanges,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("stackType") String stackType,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("vlans") List<Integer> vlans) {
         this.aggregationInterval = aggregationInterval;
         this.allowSubnetCidrRoutesOverlap = allowSubnetCidrRoutesOverlap;
         this.creationTimestamp = creationTimestamp;

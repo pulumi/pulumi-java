@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.metastore_v1beta.enums.DatabaseDumpDatabaseType;
 import io.pulumi.googlenative.metastore_v1beta.enums.DatabaseDumpType;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the database.
      * 
      */
-    @InputImport(name="databaseType")
+    @Import(name="databaseType")
       private final @Nullable Output<DatabaseDumpDatabaseType> databaseType;
 
     public Output<DatabaseDumpDatabaseType> getDatabaseType() {
@@ -35,7 +35,7 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
      * A Cloud Storage object or folder URI that specifies the source from which to import metadata. It must begin with gs://.
      * 
      */
-    @InputImport(name="gcsUri")
+    @Import(name="gcsUri")
       private final @Nullable Output<String> gcsUri;
 
     public Output<String> getGcsUri() {
@@ -46,7 +46,7 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the source database.
      * 
      */
-    @InputImport(name="sourceDatabase")
+    @Import(name="sourceDatabase")
       private final @Nullable Output<String> sourceDatabase;
 
     public Output<String> getSourceDatabase() {
@@ -57,7 +57,7 @@ public final class DatabaseDumpArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The type of the database dump. If unspecified, defaults to MYSQL.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<DatabaseDumpType> type;
 
     public Output<DatabaseDumpType> getType() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.RulesEngineRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Front Door which is globally unique.
      * 
      */
-    @InputImport(name="frontDoorName", required=true)
+    @Import(name="frontDoorName", required=true)
       private final Output<String> frontDoorName;
 
     public Output<String> getFrontDoorName() {
@@ -31,7 +31,7 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -42,7 +42,7 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
      * A list of rules that define a particular Rules Engine Configuration.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<RulesEngineRuleArgs>> rules;
 
     public Output<List<RulesEngineRuleArgs>> getRules() {
@@ -53,7 +53,7 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Rules Engine which is unique within the Front Door.
      * 
      */
-    @InputImport(name="rulesEngineName")
+    @Import(name="rulesEngineName")
       private final @Nullable Output<String> rulesEngineName;
 
     public Output<String> getRulesEngineName() {

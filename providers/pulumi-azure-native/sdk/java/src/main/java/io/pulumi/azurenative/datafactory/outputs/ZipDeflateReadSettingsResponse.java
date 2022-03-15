@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ZipDeflateReadSettingsResponse {
     /**
      * Preserve the zip file name as folder path. Type: boolean (or Expression with resultType boolean).
@@ -24,10 +24,10 @@ public final class ZipDeflateReadSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ZipDeflateReadSettingsResponse(
-        @OutputCustomType.Parameter("preserveZipFileNameAsFolder") @Nullable Object preserveZipFileNameAsFolder,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("preserveZipFileNameAsFolder") @Nullable Object preserveZipFileNameAsFolder,
+        @CustomType.Parameter("type") String type) {
         this.preserveZipFileNameAsFolder = preserveZipFileNameAsFolder;
         this.type = type;
     }

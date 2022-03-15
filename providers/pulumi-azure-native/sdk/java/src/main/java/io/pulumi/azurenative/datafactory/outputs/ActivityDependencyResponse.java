@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ActivityDependencyResponse {
     /**
      * Activity name.
@@ -21,10 +21,10 @@ public final class ActivityDependencyResponse {
      */
     private final List<String> dependencyConditions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ActivityDependencyResponse(
-        @OutputCustomType.Parameter("activity") String activity,
-        @OutputCustomType.Parameter("dependencyConditions") List<String> dependencyConditions) {
+        @CustomType.Parameter("activity") String activity,
+        @CustomType.Parameter("dependencyConditions") List<String> dependencyConditions) {
         this.activity = activity;
         this.dependencyConditions = dependencyConditions;
     }

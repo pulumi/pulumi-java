@@ -4,22 +4,22 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.WebACLForwardedIPConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebACLGeoMatchStatement {
     private final @Nullable List<String> countryCodes;
     private final @Nullable WebACLForwardedIPConfiguration forwardedIPConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebACLGeoMatchStatement(
-        @OutputCustomType.Parameter("countryCodes") @Nullable List<String> countryCodes,
-        @OutputCustomType.Parameter("forwardedIPConfig") @Nullable WebACLForwardedIPConfiguration forwardedIPConfig) {
+        @CustomType.Parameter("countryCodes") @Nullable List<String> countryCodes,
+        @CustomType.Parameter("forwardedIPConfig") @Nullable WebACLForwardedIPConfiguration forwardedIPConfig) {
         this.countryCodes = countryCodes;
         this.forwardedIPConfig = forwardedIPConfig;
     }

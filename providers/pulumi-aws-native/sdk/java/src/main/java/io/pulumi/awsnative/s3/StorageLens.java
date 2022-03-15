@@ -8,7 +8,7 @@ import io.pulumi.awsnative.s3.StorageLensArgs;
 import io.pulumi.awsnative.s3.outputs.StorageLensConfiguration;
 import io.pulumi.awsnative.s3.outputs.StorageLensTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:s3:StorageLens")
 public class StorageLens extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="storageLensConfiguration", type=StorageLensConfiguration.class, parameters={})
+    @Export(name="storageLensConfiguration", type=StorageLensConfiguration.class, parameters={})
     private Output<StorageLensConfiguration> storageLensConfiguration;
 
     public Output<StorageLensConfiguration> getStorageLensConfiguration() {
@@ -29,7 +29,7 @@ public class StorageLens extends io.pulumi.resources.CustomResource {
      * A set of tags (key-value pairs) for this Amazon S3 Storage Lens configuration.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={StorageLensTag.class})
+    @Export(name="tags", type=List.class, parameters={StorageLensTag.class})
     private Output</* @Nullable */ List<StorageLensTag>> tags;
 
     /**

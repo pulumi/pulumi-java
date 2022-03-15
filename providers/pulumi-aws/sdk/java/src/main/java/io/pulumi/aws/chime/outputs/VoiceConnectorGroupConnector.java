@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.chime.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VoiceConnectorGroupConnector {
     /**
      * The priority associated with the Amazon Chime Voice Connector, with 1 being the highest priority. Higher priority Amazon Chime Voice Connectors are attempted first.
@@ -21,10 +21,10 @@ public final class VoiceConnectorGroupConnector {
      */
     private final String voiceConnectorId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VoiceConnectorGroupConnector(
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("voiceConnectorId") String voiceConnectorId) {
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("voiceConnectorId") String voiceConnectorId) {
         this.priority = priority;
         this.voiceConnectorId = voiceConnectorId;
     }

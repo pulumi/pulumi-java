@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class P2SVpnServerConfigRadiusClientRootCertificateArgs extends io.
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -33,7 +33,7 @@ public final class P2SVpnServerConfigRadiusClientRootCertificateArgs extends io.
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -44,7 +44,7 @@ public final class P2SVpnServerConfigRadiusClientRootCertificateArgs extends io.
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class P2SVpnServerConfigRadiusClientRootCertificateArgs extends io.
      * The Radius client root certificate thumbprint.
      * 
      */
-    @InputImport(name="thumbprint")
+    @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
     public Output<String> getThumbprint() {

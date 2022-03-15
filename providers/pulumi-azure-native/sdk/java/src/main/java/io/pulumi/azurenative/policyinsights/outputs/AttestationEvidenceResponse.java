@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.policyinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AttestationEvidenceResponse {
     /**
      * The description for this piece of evidence.
@@ -22,10 +22,10 @@ public final class AttestationEvidenceResponse {
      */
     private final @Nullable String sourceUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AttestationEvidenceResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("sourceUri") @Nullable String sourceUri) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("sourceUri") @Nullable String sourceUri) {
         this.description = description;
         this.sourceUri = sourceUri;
     }

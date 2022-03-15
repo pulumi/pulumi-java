@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionInspectTemplateInspectConfigRuleSetRule {
     /**
      * The rule that specifies conditions when findings of infoTypes specified in InspectionRuleSet are removed from results.
@@ -25,10 +25,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRule {
      */
     private final @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule hotwordRule;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionInspectTemplateInspectConfigRuleSetRule(
-        @OutputCustomType.Parameter("exclusionRule") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule exclusionRule,
-        @OutputCustomType.Parameter("hotwordRule") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule hotwordRule) {
+        @CustomType.Parameter("exclusionRule") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule exclusionRule,
+        @CustomType.Parameter("hotwordRule") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule hotwordRule) {
         this.exclusionRule = exclusionRule;
         this.hotwordRule = hotwordRule;
     }

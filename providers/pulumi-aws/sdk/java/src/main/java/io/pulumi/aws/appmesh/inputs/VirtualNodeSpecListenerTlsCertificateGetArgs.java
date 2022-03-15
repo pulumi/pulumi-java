@@ -7,7 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsCertificateAcmGetA
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsCertificateFileGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsCertificateSdsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class VirtualNodeSpecListenerTlsCertificateGetArgs extends io.pulum
      * An AWS Certificate Manager (ACM) certificate.
      * 
      */
-    @InputImport(name="acm")
+    @Import(name="acm")
       private final @Nullable Output<VirtualNodeSpecListenerTlsCertificateAcmGetArgs> acm;
 
     public Output<VirtualNodeSpecListenerTlsCertificateAcmGetArgs> getAcm() {
@@ -31,7 +31,7 @@ public final class VirtualNodeSpecListenerTlsCertificateGetArgs extends io.pulum
      * A local file certificate.
      * 
      */
-    @InputImport(name="file")
+    @Import(name="file")
       private final @Nullable Output<VirtualNodeSpecListenerTlsCertificateFileGetArgs> file;
 
     public Output<VirtualNodeSpecListenerTlsCertificateFileGetArgs> getFile() {
@@ -42,7 +42,7 @@ public final class VirtualNodeSpecListenerTlsCertificateGetArgs extends io.pulum
      * A [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
      * 
      */
-    @InputImport(name="sds")
+    @Import(name="sds")
       private final @Nullable Output<VirtualNodeSpecListenerTlsCertificateSdsGetArgs> sds;
 
     public Output<VirtualNodeSpecListenerTlsCertificateSdsGetArgs> getSds() {

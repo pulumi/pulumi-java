@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.timestream.outputs;
 
 import io.pulumi.awsnative.timestream.enums.ScheduledQueryDimensionValueType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScheduledQueryDimensionMapping {
     private final ScheduledQueryDimensionValueType dimensionValueType;
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduledQueryDimensionMapping(
-        @OutputCustomType.Parameter("dimensionValueType") ScheduledQueryDimensionValueType dimensionValueType,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("dimensionValueType") ScheduledQueryDimensionValueType dimensionValueType,
+        @CustomType.Parameter("name") String name) {
         this.dimensionValueType = dimensionValueType;
         this.name = name;
     }

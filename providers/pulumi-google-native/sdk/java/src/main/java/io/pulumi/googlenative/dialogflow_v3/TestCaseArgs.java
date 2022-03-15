@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ConversationTurnArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3TestCaseResultArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3TestConfigArgs;
@@ -18,7 +18,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TestCaseArgs Empty = new TestCaseArgs();
 
-    @InputImport(name="agentId", required=true)
+    @Import(name="agentId", required=true)
       private final Output<String> agentId;
 
     public Output<String> getAgentId() {
@@ -29,7 +29,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * The human-readable name of the test case, unique within the agent. Limit of 200 characters.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -40,14 +40,14 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * The latest test result.
      * 
      */
-    @InputImport(name="lastTestResult")
+    @Import(name="lastTestResult")
       private final @Nullable Output<GoogleCloudDialogflowCxV3TestCaseResultArgs> lastTestResult;
 
     public Output<GoogleCloudDialogflowCxV3TestCaseResultArgs> getLastTestResult() {
         return this.lastTestResult == null ? Output.empty() : this.lastTestResult;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -58,7 +58,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * The unique identifier of the test case. TestCases.CreateTestCase will populate the name automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -69,14 +69,14 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * Additional freeform notes about the test case. Limit of 400 characters.
      * 
      */
-    @InputImport(name="notes")
+    @Import(name="notes")
       private final @Nullable Output<String> notes;
 
     public Output<String> getNotes() {
         return this.notes == null ? Output.empty() : this.notes;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -87,7 +87,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * Tags are short descriptions that users may apply to test cases for organizational and filtering purposes. Each tag should start with "#" and has a limit of 30 characters.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
@@ -98,7 +98,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * The conversation turns uttered when the test case was created, in chronological order. These include the canonical set of agent utterances that should occur when the agent is working properly.
      * 
      */
-    @InputImport(name="testCaseConversationTurns")
+    @Import(name="testCaseConversationTurns")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> testCaseConversationTurns;
 
     public Output<List<GoogleCloudDialogflowCxV3ConversationTurnArgs>> getTestCaseConversationTurns() {
@@ -109,7 +109,7 @@ public final class TestCaseArgs extends io.pulumi.resources.ResourceArgs {
      * Config for the test case.
      * 
      */
-    @InputImport(name="testConfig")
+    @Import(name="testConfig")
       private final @Nullable Output<GoogleCloudDialogflowCxV3TestConfigArgs> testConfig;
 
     public Output<GoogleCloudDialogflowCxV3TestConfigArgs> getTestConfig() {

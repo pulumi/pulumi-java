@@ -9,7 +9,7 @@ import io.pulumi.awsnative.apprunner.inputs.ServiceInstanceConfigurationArgs;
 import io.pulumi.awsnative.apprunner.inputs.ServiceSourceConfigurationArgs;
 import io.pulumi.awsnative.apprunner.inputs.ServiceTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,28 +24,28 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Autoscaling configuration ARN
      * 
      */
-    @InputImport(name="autoScalingConfigurationArn")
+    @Import(name="autoScalingConfigurationArn")
       private final @Nullable Output<String> autoScalingConfigurationArn;
 
     public Output<String> getAutoScalingConfigurationArn() {
         return this.autoScalingConfigurationArn == null ? Output.empty() : this.autoScalingConfigurationArn;
     }
 
-    @InputImport(name="encryptionConfiguration")
+    @Import(name="encryptionConfiguration")
       private final @Nullable Output<ServiceEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Output<ServiceEncryptionConfigurationArgs> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Output.empty() : this.encryptionConfiguration;
     }
 
-    @InputImport(name="healthCheckConfiguration")
+    @Import(name="healthCheckConfiguration")
       private final @Nullable Output<ServiceHealthCheckConfigurationArgs> healthCheckConfiguration;
 
     public Output<ServiceHealthCheckConfigurationArgs> getHealthCheckConfiguration() {
         return this.healthCheckConfiguration == null ? Output.empty() : this.healthCheckConfiguration;
     }
 
-    @InputImport(name="instanceConfiguration")
+    @Import(name="instanceConfiguration")
       private final @Nullable Output<ServiceInstanceConfigurationArgs> instanceConfiguration;
 
     public Output<ServiceInstanceConfigurationArgs> getInstanceConfiguration() {
@@ -56,21 +56,21 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The AppRunner Service Name.
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
         return this.serviceName == null ? Output.empty() : this.serviceName;
     }
 
-    @InputImport(name="sourceConfiguration", required=true)
+    @Import(name="sourceConfiguration", required=true)
       private final Output<ServiceSourceConfigurationArgs> sourceConfiguration;
 
     public Output<ServiceSourceConfigurationArgs> getSourceConfiguration() {
         return this.sourceConfiguration;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ServiceTagArgs>> tags;
 
     public Output<List<ServiceTagArgs>> getTags() {

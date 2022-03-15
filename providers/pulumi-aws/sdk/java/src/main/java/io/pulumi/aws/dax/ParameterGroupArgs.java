@@ -5,7 +5,7 @@ package io.pulumi.aws.dax;
 
 import io.pulumi.aws.dax.inputs.ParameterGroupParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the parameter group.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the parameter group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class ParameterGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The parameters of the parameter group.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<ParameterGroupParameterArgs>> parameters;
 
     public Output<List<ParameterGroupParameterArgs>> getParameters() {

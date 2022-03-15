@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RequestUtilizationResponse extends io.pulumi.resources.Invoke
      * Target number of concurrent requests.
      * 
      */
-    @InputImport(name="targetConcurrentRequests", required=true)
+    @Import(name="targetConcurrentRequests", required=true)
       private final Integer targetConcurrentRequests;
 
     public Integer getTargetConcurrentRequests() {
@@ -31,7 +31,7 @@ public final class RequestUtilizationResponse extends io.pulumi.resources.Invoke
      * Target requests per second.
      * 
      */
-    @InputImport(name="targetRequestCountPerSecond", required=true)
+    @Import(name="targetRequestCountPerSecond", required=true)
       private final Integer targetRequestCountPerSecond;
 
     public Integer getTargetRequestCountPerSecond() {

@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.PowerQuerySinkMappingResponse;
 import io.pulumi.azurenative.datafactory.outputs.PowerQuerySinkResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExecuteWranglingDataflowActivityResponse {
     /**
      * Compute properties for data flow activity.
@@ -100,23 +100,23 @@ public final class ExecuteWranglingDataflowActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExecuteWranglingDataflowActivityResponse(
-        @OutputCustomType.Parameter("compute") @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute,
-        @OutputCustomType.Parameter("continueOnError") @Nullable Object continueOnError,
-        @OutputCustomType.Parameter("dataFlow") DataFlowReferenceResponse dataFlow,
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("integrationRuntime") @Nullable IntegrationRuntimeReferenceResponse integrationRuntime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
-        @OutputCustomType.Parameter("queries") @Nullable List<PowerQuerySinkMappingResponse> queries,
-        @OutputCustomType.Parameter("runConcurrently") @Nullable Object runConcurrently,
-        @OutputCustomType.Parameter("sinks") @Nullable Map<String,PowerQuerySinkResponse> sinks,
-        @OutputCustomType.Parameter("staging") @Nullable DataFlowStagingInfoResponse staging,
-        @OutputCustomType.Parameter("traceLevel") @Nullable Object traceLevel,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
+        @CustomType.Parameter("compute") @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute,
+        @CustomType.Parameter("continueOnError") @Nullable Object continueOnError,
+        @CustomType.Parameter("dataFlow") DataFlowReferenceResponse dataFlow,
+        @CustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("integrationRuntime") @Nullable IntegrationRuntimeReferenceResponse integrationRuntime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @CustomType.Parameter("queries") @Nullable List<PowerQuerySinkMappingResponse> queries,
+        @CustomType.Parameter("runConcurrently") @Nullable Object runConcurrently,
+        @CustomType.Parameter("sinks") @Nullable Map<String,PowerQuerySinkResponse> sinks,
+        @CustomType.Parameter("staging") @Nullable DataFlowStagingInfoResponse staging,
+        @CustomType.Parameter("traceLevel") @Nullable Object traceLevel,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.compute = compute;
         this.continueOnError = continueOnError;
         this.dataFlow = dataFlow;

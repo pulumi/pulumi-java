@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GeoReplicationStatsResponse {
     /**
      * A boolean flag which indicates whether or not account failover is supported for the account.
@@ -26,11 +26,11 @@ public final class GeoReplicationStatsResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GeoReplicationStatsResponse(
-        @OutputCustomType.Parameter("canFailover") Boolean canFailover,
-        @OutputCustomType.Parameter("lastSyncTime") String lastSyncTime,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("canFailover") Boolean canFailover,
+        @CustomType.Parameter("lastSyncTime") String lastSyncTime,
+        @CustomType.Parameter("status") String status) {
         this.canFailover = canFailover;
         this.lastSyncTime = lastSyncTime;
         this.status = status;

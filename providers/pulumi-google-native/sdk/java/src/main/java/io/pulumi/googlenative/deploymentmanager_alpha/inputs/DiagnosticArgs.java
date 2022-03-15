@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.deploymentmanager_alpha.enums.DiagnosticLevel;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
      * JsonPath expression on the resource that if non empty, indicates that this field needs to be extracted as a diagnostic.
      * 
      */
-    @InputImport(name="field")
+    @Import(name="field")
       private final @Nullable Output<String> field;
 
     public Output<String> getField() {
@@ -30,7 +30,7 @@ public final class DiagnosticArgs extends io.pulumi.resources.ResourceArgs {
      * Level to record this diagnostic.
      * 
      */
-    @InputImport(name="level")
+    @Import(name="level")
       private final @Nullable Output<DiagnosticLevel> level;
 
     public Output<DiagnosticLevel> getLevel() {

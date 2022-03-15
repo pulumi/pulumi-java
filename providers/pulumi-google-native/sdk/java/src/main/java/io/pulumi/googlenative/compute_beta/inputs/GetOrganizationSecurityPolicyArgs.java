@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetOrganizationSecurityPolicyArgs extends io.pulumi.resources
 
     public static final GetOrganizationSecurityPolicyArgs Empty = new GetOrganizationSecurityPolicyArgs();
 
-    @InputImport(name="securityPolicy", required=true)
+    @Import(name="securityPolicy", required=true)
       private final String securityPolicy;
 
     public String getSecurityPolicy() {

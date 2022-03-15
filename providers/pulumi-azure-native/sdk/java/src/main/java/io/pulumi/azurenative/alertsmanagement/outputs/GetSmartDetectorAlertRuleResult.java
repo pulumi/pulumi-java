@@ -6,7 +6,7 @@ package io.pulumi.azurenative.alertsmanagement.outputs;
 import io.pulumi.azurenative.alertsmanagement.outputs.ActionGroupsInformationResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.DetectorResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.ThrottlingInformationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSmartDetectorAlertRuleResult {
     /**
      * The alert rule actions.
@@ -82,21 +82,21 @@ public final class GetSmartDetectorAlertRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSmartDetectorAlertRuleResult(
-        @OutputCustomType.Parameter("actionGroups") ActionGroupsInformationResponse actionGroups,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("detector") DetectorResponse detector,
-        @OutputCustomType.Parameter("frequency") String frequency,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("scope") List<String> scope,
-        @OutputCustomType.Parameter("severity") String severity,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("throttling") @Nullable ThrottlingInformationResponse throttling,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("actionGroups") ActionGroupsInformationResponse actionGroups,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("detector") DetectorResponse detector,
+        @CustomType.Parameter("frequency") String frequency,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("scope") List<String> scope,
+        @CustomType.Parameter("severity") String severity,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("throttling") @Nullable ThrottlingInformationResponse throttling,
+        @CustomType.Parameter("type") String type) {
         this.actionGroups = actionGroups;
         this.description = description;
         this.detector = detector;

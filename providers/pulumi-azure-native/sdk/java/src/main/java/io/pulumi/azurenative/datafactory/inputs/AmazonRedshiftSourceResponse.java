@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.RedshiftUnloadSettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AmazonRedshiftSourceResponse extends io.pulumi.resources.Invo
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
      */
-    @InputImport(name="additionalColumns")
+    @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
 
     public Optional<Object> getAdditionalColumns() {
@@ -35,7 +35,7 @@ public final class AmazonRedshiftSourceResponse extends io.pulumi.resources.Invo
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
@@ -46,7 +46,7 @@ public final class AmazonRedshiftSourceResponse extends io.pulumi.resources.Invo
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
@@ -57,7 +57,7 @@ public final class AmazonRedshiftSourceResponse extends io.pulumi.resources.Invo
      * Database query. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Object query;
 
     public Optional<Object> getQuery() {
@@ -68,7 +68,7 @@ public final class AmazonRedshiftSourceResponse extends io.pulumi.resources.Invo
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="queryTimeout")
+    @Import(name="queryTimeout")
       private final @Nullable Object queryTimeout;
 
     public Optional<Object> getQueryTimeout() {
@@ -79,7 +79,7 @@ public final class AmazonRedshiftSourceResponse extends io.pulumi.resources.Invo
      * The Amazon S3 settings needed for the interim Amazon S3 when copying from Amazon Redshift with unload. With this, data from Amazon Redshift source will be unloaded into S3 first and then copied into the targeted sink from the interim S3.
      * 
      */
-    @InputImport(name="redshiftUnloadSettings")
+    @Import(name="redshiftUnloadSettings")
       private final @Nullable RedshiftUnloadSettingsResponse redshiftUnloadSettings;
 
     public Optional<RedshiftUnloadSettingsResponse> getRedshiftUnloadSettings() {
@@ -90,7 +90,7 @@ public final class AmazonRedshiftSourceResponse extends io.pulumi.resources.Invo
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="sourceRetryCount")
+    @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
 
     public Optional<Object> getSourceRetryCount() {
@@ -101,7 +101,7 @@ public final class AmazonRedshiftSourceResponse extends io.pulumi.resources.Invo
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="sourceRetryWait")
+    @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
 
     public Optional<Object> getSourceRetryWait() {
@@ -113,7 +113,7 @@ public final class AmazonRedshiftSourceResponse extends io.pulumi.resources.Invo
      * Expected value is 'AmazonRedshiftSource'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

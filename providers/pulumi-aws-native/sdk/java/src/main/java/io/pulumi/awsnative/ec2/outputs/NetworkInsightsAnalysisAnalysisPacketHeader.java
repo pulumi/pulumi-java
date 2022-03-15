@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisPortRange;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInsightsAnalysisAnalysisPacketHeader {
     private final @Nullable List<String> destinationAddresses;
     private final @Nullable List<NetworkInsightsAnalysisPortRange> destinationPortRanges;
@@ -19,13 +19,13 @@ public final class NetworkInsightsAnalysisAnalysisPacketHeader {
     private final @Nullable List<String> sourceAddresses;
     private final @Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInsightsAnalysisAnalysisPacketHeader(
-        @OutputCustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
-        @OutputCustomType.Parameter("destinationPortRanges") @Nullable List<NetworkInsightsAnalysisPortRange> destinationPortRanges,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
-        @OutputCustomType.Parameter("sourcePortRanges") @Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges) {
+        @CustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
+        @CustomType.Parameter("destinationPortRanges") @Nullable List<NetworkInsightsAnalysisPortRange> destinationPortRanges,
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @CustomType.Parameter("sourcePortRanges") @Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges) {
         this.destinationAddresses = destinationAddresses;
         this.destinationPortRanges = destinationPortRanges;
         this.protocol = protocol;

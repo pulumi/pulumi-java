@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1AssociationInfoResponse;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1CommitmentSettingsResponse;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1ParameterResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEntitlementResult {
     /**
      * Association information to other entitlements.
@@ -76,20 +76,20 @@ public final class GetEntitlementResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEntitlementResult(
-        @OutputCustomType.Parameter("associationInfo") GoogleCloudChannelV1AssociationInfoResponse associationInfo,
-        @OutputCustomType.Parameter("commitmentSettings") GoogleCloudChannelV1CommitmentSettingsResponse commitmentSettings,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("offer") String offer,
-        @OutputCustomType.Parameter("parameters") List<GoogleCloudChannelV1ParameterResponse> parameters,
-        @OutputCustomType.Parameter("provisionedService") GoogleCloudChannelV1ProvisionedServiceResponse provisionedService,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("purchaseOrderId") String purchaseOrderId,
-        @OutputCustomType.Parameter("suspensionReasons") List<String> suspensionReasons,
-        @OutputCustomType.Parameter("trialSettings") GoogleCloudChannelV1TrialSettingsResponse trialSettings,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("associationInfo") GoogleCloudChannelV1AssociationInfoResponse associationInfo,
+        @CustomType.Parameter("commitmentSettings") GoogleCloudChannelV1CommitmentSettingsResponse commitmentSettings,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("offer") String offer,
+        @CustomType.Parameter("parameters") List<GoogleCloudChannelV1ParameterResponse> parameters,
+        @CustomType.Parameter("provisionedService") GoogleCloudChannelV1ProvisionedServiceResponse provisionedService,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("purchaseOrderId") String purchaseOrderId,
+        @CustomType.Parameter("suspensionReasons") List<String> suspensionReasons,
+        @CustomType.Parameter("trialSettings") GoogleCloudChannelV1TrialSettingsResponse trialSettings,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.associationInfo = associationInfo;
         this.commitmentSettings = commitmentSettings;
         this.createTime = createTime;

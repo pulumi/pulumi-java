@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetLocalGatewayVirtualInterfaceGroupFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetLocalGatewayVirtualInterfaceGroupArgs extends io.pulumi.re
      * One or more configuration blocks containing name-values filters. See the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeLocalGatewayVirtualInterfaceGroups.html) for supported filters. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetLocalGatewayVirtualInterfaceGroupFilter> filters;
 
     public List<GetLocalGatewayVirtualInterfaceGroupFilter> getFilters() {
@@ -32,7 +32,7 @@ public final class GetLocalGatewayVirtualInterfaceGroupArgs extends io.pulumi.re
      * Identifier of EC2 Local Gateway Virtual Interface Group.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -43,7 +43,7 @@ public final class GetLocalGatewayVirtualInterfaceGroupArgs extends io.pulumi.re
      * Identifier of EC2 Local Gateway.
      * 
      */
-    @InputImport(name="localGatewayId")
+    @Import(name="localGatewayId")
       private final @Nullable String localGatewayId;
 
     public Optional<String> getLocalGatewayId() {
@@ -54,7 +54,7 @@ public final class GetLocalGatewayVirtualInterfaceGroupArgs extends io.pulumi.re
      * Key-value map of resource tags, each pair of which must exactly match a pair on the desired local gateway route table.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

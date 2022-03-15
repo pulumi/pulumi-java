@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CloudServiceVaultCertificateResponse {
     /**
      * This is the URL of a certificate that has been uploaded to Key Vault as a secret.
@@ -17,8 +17,8 @@ public final class CloudServiceVaultCertificateResponse {
      */
     private final @Nullable String certificateUrl;
 
-    @OutputCustomType.Constructor
-    private CloudServiceVaultCertificateResponse(@OutputCustomType.Parameter("certificateUrl") @Nullable String certificateUrl) {
+    @CustomType.Constructor
+    private CloudServiceVaultCertificateResponse(@CustomType.Parameter("certificateUrl") @Nullable String certificateUrl) {
         this.certificateUrl = certificateUrl;
     }
 

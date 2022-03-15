@@ -6,7 +6,7 @@ package io.pulumi.aws.cloudfront;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigContentTypeProfileConfigArgs;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionConfigQueryArgProfileConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class FieldLevelEncryptionConfigArgs extends io.pulumi.resources.Re
      * An optional comment about the Field Level Encryption Config.
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -31,7 +31,7 @@ public final class FieldLevelEncryptionConfigArgs extends io.pulumi.resources.Re
      * Content Type Profile Config specifies when to forward content if a content type isn't recognized and profiles to use as by default in a request if a query argument doesn't specify a profile to use.
      * 
      */
-    @InputImport(name="contentTypeProfileConfig", required=true)
+    @Import(name="contentTypeProfileConfig", required=true)
       private final Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig;
 
     public Output<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> getContentTypeProfileConfig() {
@@ -42,7 +42,7 @@ public final class FieldLevelEncryptionConfigArgs extends io.pulumi.resources.Re
      * Query Arg Profile Config that specifies when to forward content if a profile isn't found and the profile that can be provided as a query argument in a request.
      * 
      */
-    @InputImport(name="queryArgProfileConfig", required=true)
+    @Import(name="queryArgProfileConfig", required=true)
       private final Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig;
 
     public Output<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> getQueryArgProfileConfig() {

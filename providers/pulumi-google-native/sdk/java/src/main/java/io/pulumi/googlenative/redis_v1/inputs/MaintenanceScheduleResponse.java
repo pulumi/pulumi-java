@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.redis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MaintenanceScheduleResponse extends io.pulumi.resources.Invok
      * If the scheduled maintenance can be rescheduled, default is true.
      * 
      */
-    @InputImport(name="canReschedule", required=true)
+    @Import(name="canReschedule", required=true)
       private final Boolean canReschedule;
 
     public Boolean getCanReschedule() {
@@ -32,7 +32,7 @@ public final class MaintenanceScheduleResponse extends io.pulumi.resources.Invok
      * The end time of any upcoming scheduled maintenance for this instance.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
@@ -43,7 +43,7 @@ public final class MaintenanceScheduleResponse extends io.pulumi.resources.Invok
      * The deadline that the maintenance schedule start time can not go beyond, including reschedule.
      * 
      */
-    @InputImport(name="scheduleDeadlineTime", required=true)
+    @Import(name="scheduleDeadlineTime", required=true)
       private final String scheduleDeadlineTime;
 
     public String getScheduleDeadlineTime() {
@@ -54,7 +54,7 @@ public final class MaintenanceScheduleResponse extends io.pulumi.resources.Invok
      * The start time of any upcoming scheduled maintenance for this instance.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {

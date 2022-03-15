@@ -9,7 +9,7 @@ import io.pulumi.awsnative.refactorspaces.enums.RouteType;
 import io.pulumi.awsnative.refactorspaces.outputs.RouteTag;
 import io.pulumi.awsnative.refactorspaces.outputs.RouteUriPathRouteInput;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -21,43 +21,43 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:refactorspaces:Route")
 public class Route extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="applicationIdentifier", type=String.class, parameters={})
+    @Export(name="applicationIdentifier", type=String.class, parameters={})
     private Output<String> applicationIdentifier;
 
     public Output<String> getApplicationIdentifier() {
         return this.applicationIdentifier;
     }
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="environmentIdentifier", type=String.class, parameters={})
+    @Export(name="environmentIdentifier", type=String.class, parameters={})
     private Output<String> environmentIdentifier;
 
     public Output<String> getEnvironmentIdentifier() {
         return this.environmentIdentifier;
     }
-    @OutputExport(name="pathResourceToId", type=String.class, parameters={})
+    @Export(name="pathResourceToId", type=String.class, parameters={})
     private Output<String> pathResourceToId;
 
     public Output<String> getPathResourceToId() {
         return this.pathResourceToId;
     }
-    @OutputExport(name="routeIdentifier", type=String.class, parameters={})
+    @Export(name="routeIdentifier", type=String.class, parameters={})
     private Output<String> routeIdentifier;
 
     public Output<String> getRouteIdentifier() {
         return this.routeIdentifier;
     }
-    @OutputExport(name="routeType", type=RouteType.class, parameters={})
+    @Export(name="routeType", type=RouteType.class, parameters={})
     private Output</* @Nullable */ RouteType> routeType;
 
     public Output</* @Nullable */ RouteType> getRouteType() {
         return this.routeType;
     }
-    @OutputExport(name="serviceIdentifier", type=String.class, parameters={})
+    @Export(name="serviceIdentifier", type=String.class, parameters={})
     private Output<String> serviceIdentifier;
 
     public Output<String> getServiceIdentifier() {
@@ -67,7 +67,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={RouteTag.class})
+    @Export(name="tags", type=List.class, parameters={RouteTag.class})
     private Output</* @Nullable */ List<RouteTag>> tags;
 
     /**
@@ -77,7 +77,7 @@ public class Route extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<RouteTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="uriPathRoute", type=RouteUriPathRouteInput.class, parameters={})
+    @Export(name="uriPathRoute", type=RouteUriPathRouteInput.class, parameters={})
     private Output</* @Nullable */ RouteUriPathRouteInput> uriPathRoute;
 
     public Output</* @Nullable */ RouteUriPathRouteInput> getUriPathRoute() {

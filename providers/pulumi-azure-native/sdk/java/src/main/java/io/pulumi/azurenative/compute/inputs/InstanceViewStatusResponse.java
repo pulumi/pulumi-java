@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class InstanceViewStatusResponse extends io.pulumi.resources.Invoke
      * The status code.
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable String code;
 
     public Optional<String> getCode() {
@@ -33,7 +33,7 @@ public final class InstanceViewStatusResponse extends io.pulumi.resources.Invoke
      * The short localizable label for the status.
      * 
      */
-    @InputImport(name="displayStatus")
+    @Import(name="displayStatus")
       private final @Nullable String displayStatus;
 
     public Optional<String> getDisplayStatus() {
@@ -44,7 +44,7 @@ public final class InstanceViewStatusResponse extends io.pulumi.resources.Invoke
      * The level code.
      * 
      */
-    @InputImport(name="level")
+    @Import(name="level")
       private final @Nullable String level;
 
     public Optional<String> getLevel() {
@@ -55,7 +55,7 @@ public final class InstanceViewStatusResponse extends io.pulumi.resources.Invoke
      * The detailed status message, including for alerts and error messages.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
@@ -66,7 +66,7 @@ public final class InstanceViewStatusResponse extends io.pulumi.resources.Invoke
      * The time of the status.
      * 
      */
-    @InputImport(name="time")
+    @Import(name="time")
       private final @Nullable String time;
 
     public Optional<String> getTime() {

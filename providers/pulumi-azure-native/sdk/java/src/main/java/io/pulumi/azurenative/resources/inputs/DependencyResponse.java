@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.azurenative.resources.inputs.BasicDependencyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DependencyResponse extends io.pulumi.resources.InvokeArgs {
      * The list of dependencies.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<BasicDependencyResponse> dependsOn;
 
     public List<BasicDependencyResponse> getDependsOn() {
@@ -35,7 +35,7 @@ public final class DependencyResponse extends io.pulumi.resources.InvokeArgs {
      * The ID of the dependency.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -46,7 +46,7 @@ public final class DependencyResponse extends io.pulumi.resources.InvokeArgs {
      * The dependency resource name.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable String resourceName;
 
     public Optional<String> getPropResourceName() {
@@ -57,7 +57,7 @@ public final class DependencyResponse extends io.pulumi.resources.InvokeArgs {
      * The dependency resource type.
      * 
      */
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable String resourceType;
 
     public Optional<String> getPropResourceType() {

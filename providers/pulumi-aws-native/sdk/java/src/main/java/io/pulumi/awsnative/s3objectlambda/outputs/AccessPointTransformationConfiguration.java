@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.s3objectlambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AccessPointTransformationConfiguration {
     private final List<String> actions;
     private final Object contentTransformation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessPointTransformationConfiguration(
-        @OutputCustomType.Parameter("actions") List<String> actions,
-        @OutputCustomType.Parameter("contentTransformation") Object contentTransformation) {
+        @CustomType.Parameter("actions") List<String> actions,
+        @CustomType.Parameter("contentTransformation") Object contentTransformation) {
         this.actions = actions;
         this.contentTransformation = contentTransformation;
     }

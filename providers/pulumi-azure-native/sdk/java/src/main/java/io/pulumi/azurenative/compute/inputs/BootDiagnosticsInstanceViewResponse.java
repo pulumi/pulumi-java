@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BootDiagnosticsInstanceViewResponse extends io.pulumi.resourc
      * The console screenshot blob URI. <br><br>NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
      * 
      */
-    @InputImport(name="consoleScreenshotBlobUri", required=true)
+    @Import(name="consoleScreenshotBlobUri", required=true)
       private final String consoleScreenshotBlobUri;
 
     public String getConsoleScreenshotBlobUri() {
@@ -32,7 +32,7 @@ public final class BootDiagnosticsInstanceViewResponse extends io.pulumi.resourc
      * The serial console log blob Uri. <br><br>NOTE: This will **not** be set if boot diagnostics is currently enabled with managed storage.
      * 
      */
-    @InputImport(name="serialConsoleLogBlobUri", required=true)
+    @Import(name="serialConsoleLogBlobUri", required=true)
       private final String serialConsoleLogBlobUri;
 
     public String getSerialConsoleLogBlobUri() {
@@ -43,7 +43,7 @@ public final class BootDiagnosticsInstanceViewResponse extends io.pulumi.resourc
      * The boot diagnostics status information for the VM. <br><br> NOTE: It will be set only if there are errors encountered in enabling boot diagnostics.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final InstanceViewStatusResponse status;
 
     public InstanceViewStatusResponse getStatus() {

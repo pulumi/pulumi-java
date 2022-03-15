@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.autoscaling.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class WarmPoolInstanceReusePolicyArgs extends io.pulumi.resources.R
 
     public static final WarmPoolInstanceReusePolicyArgs Empty = new WarmPoolInstanceReusePolicyArgs();
 
-    @InputImport(name="reuseOnScaleIn")
+    @Import(name="reuseOnScaleIn")
       private final @Nullable Output<Boolean> reuseOnScaleIn;
 
     public Output<Boolean> getReuseOnScaleIn() {

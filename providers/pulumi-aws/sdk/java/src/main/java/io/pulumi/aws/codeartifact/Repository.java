@@ -9,7 +9,7 @@ import io.pulumi.aws.codeartifact.inputs.RepositoryState;
 import io.pulumi.aws.codeartifact.outputs.RepositoryExternalConnections;
 import io.pulumi.aws.codeartifact.outputs.RepositoryUpstream;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The account number of the AWS account that manages the repository.
      * 
      */
-    @OutputExport(name="administratorAccount", type=String.class, parameters={})
+    @Export(name="administratorAccount", type=String.class, parameters={})
     private Output<String> administratorAccount;
 
     /**
@@ -50,7 +50,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The ARN of the repository.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -64,7 +64,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The description of the repository.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -78,7 +78,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The domain that contains the created repository.
      * 
      */
-    @OutputExport(name="domain", type=String.class, parameters={})
+    @Export(name="domain", type=String.class, parameters={})
     private Output<String> domain;
 
     /**
@@ -92,7 +92,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The account number of the AWS account that owns the domain.
      * 
      */
-    @OutputExport(name="domainOwner", type=String.class, parameters={})
+    @Export(name="domainOwner", type=String.class, parameters={})
     private Output<String> domainOwner;
 
     /**
@@ -106,7 +106,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.
      * 
      */
-    @OutputExport(name="externalConnections", type=RepositoryExternalConnections.class, parameters={})
+    @Export(name="externalConnections", type=RepositoryExternalConnections.class, parameters={})
     private Output</* @Nullable */ RepositoryExternalConnections> externalConnections;
 
     /**
@@ -120,7 +120,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * The name of the repository to create.
      * 
      */
-    @OutputExport(name="repository", type=String.class, parameters={})
+    @Export(name="repository", type=String.class, parameters={})
     private Output<String> repository;
 
     /**
@@ -134,7 +134,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -148,7 +148,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -162,7 +162,7 @@ public class Repository extends io.pulumi.resources.CustomResource {
      * A list of upstream repositories to associate with the repository. The order of the upstream repositories in the list determines their priority order when AWS CodeArtifact looks for a requested package version. see Upstream
      * 
      */
-    @OutputExport(name="upstreams", type=List.class, parameters={RepositoryUpstream.class})
+    @Export(name="upstreams", type=List.class, parameters={RepositoryUpstream.class})
     private Output</* @Nullable */ List<RepositoryUpstream>> upstreams;
 
     /**

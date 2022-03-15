@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * The access key identifier of the Amazon S3 Compatible Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="accessKeyId")
+    @Import(name="accessKeyId")
       private final @Nullable Output<Object> accessKeyId;
 
     public Output<Object> getAccessKeyId() {
@@ -41,7 +41,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -52,7 +52,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -63,7 +63,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -74,7 +74,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -85,7 +85,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * If true, use S3 path-style access instead of virtual hosted-style access. Default value is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="forcePathStyle")
+    @Import(name="forcePathStyle")
       private final @Nullable Output<Object> forcePathStyle;
 
     public Output<Object> getForcePathStyle() {
@@ -96,7 +96,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -107,7 +107,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * The secret access key of the Amazon S3 Compatible Identity and Access Management (IAM) user.
      * 
      */
-    @InputImport(name="secretAccessKey")
+    @Import(name="secretAccessKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretAccessKey;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getSecretAccessKey() {
@@ -118,7 +118,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * This value specifies the endpoint to access with the Amazon S3 Compatible Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="serviceUrl")
+    @Import(name="serviceUrl")
       private final @Nullable Output<Object> serviceUrl;
 
     public Output<Object> getServiceUrl() {
@@ -130,7 +130,7 @@ public final class AmazonS3CompatibleLinkedServiceArgs extends io.pulumi.resourc
      * Expected value is 'AmazonS3Compatible'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

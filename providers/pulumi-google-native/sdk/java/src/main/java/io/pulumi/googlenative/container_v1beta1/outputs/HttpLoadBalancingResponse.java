@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpLoadBalancingResponse {
     /**
      * Whether the HTTP Load Balancing controller is enabled in the cluster. When enabled, it runs a small pod in the cluster that manages the load balancers.
@@ -15,8 +15,8 @@ public final class HttpLoadBalancingResponse {
      */
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor
-    private HttpLoadBalancingResponse(@OutputCustomType.Parameter("disabled") Boolean disabled) {
+    @CustomType.Constructor
+    private HttpLoadBalancingResponse(@CustomType.Parameter("disabled") Boolean disabled) {
         this.disabled = disabled;
     }
 

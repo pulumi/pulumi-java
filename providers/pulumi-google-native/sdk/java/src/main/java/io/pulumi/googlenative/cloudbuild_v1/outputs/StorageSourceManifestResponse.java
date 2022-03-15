@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StorageSourceManifestResponse {
     /**
      * Google Cloud Storage bucket containing the source manifest (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
@@ -25,11 +25,11 @@ public final class StorageSourceManifestResponse {
      */
     private final String object;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageSourceManifestResponse(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("generation") String generation,
-        @OutputCustomType.Parameter("object") String object) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("generation") String generation,
+        @CustomType.Parameter("object") String object) {
         this.bucket = bucket;
         this.generation = generation;
         this.object = object;

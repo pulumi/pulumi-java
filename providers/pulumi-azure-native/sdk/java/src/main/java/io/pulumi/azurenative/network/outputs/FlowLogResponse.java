@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.FlowLogFormatParametersResponse;
 import io.pulumi.azurenative.network.outputs.RetentionPolicyParametersResponse;
 import io.pulumi.azurenative.network.outputs.TrafficAnalyticsPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowLogResponse {
     /**
      * Flag to enable/disable flow logging.
@@ -87,22 +87,22 @@ public final class FlowLogResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowLogResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("flowAnalyticsConfiguration") @Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration,
-        @OutputCustomType.Parameter("format") @Nullable FlowLogFormatParametersResponse format,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("retentionPolicy") @Nullable RetentionPolicyParametersResponse retentionPolicy,
-        @OutputCustomType.Parameter("storageId") String storageId,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("targetResourceGuid") String targetResourceGuid,
-        @OutputCustomType.Parameter("targetResourceId") String targetResourceId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("flowAnalyticsConfiguration") @Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration,
+        @CustomType.Parameter("format") @Nullable FlowLogFormatParametersResponse format,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("retentionPolicy") @Nullable RetentionPolicyParametersResponse retentionPolicy,
+        @CustomType.Parameter("storageId") String storageId,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("targetResourceGuid") String targetResourceGuid,
+        @CustomType.Parameter("targetResourceId") String targetResourceId,
+        @CustomType.Parameter("type") String type) {
         this.enabled = enabled;
         this.etag = etag;
         this.flowAnalyticsConfiguration = flowAnalyticsConfiguration;

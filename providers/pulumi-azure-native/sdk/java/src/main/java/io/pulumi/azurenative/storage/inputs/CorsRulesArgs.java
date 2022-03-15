@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.CorsRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CorsRulesArgs extends io.pulumi.resources.ResourceArgs {
      * The List of CORS rules. You can include up to five CorsRule elements in the request.
      * 
      */
-    @InputImport(name="corsRules")
+    @Import(name="corsRules")
       private final @Nullable Output<List<CorsRuleArgs>> corsRules;
 
     public Output<List<CorsRuleArgs>> getCorsRules() {

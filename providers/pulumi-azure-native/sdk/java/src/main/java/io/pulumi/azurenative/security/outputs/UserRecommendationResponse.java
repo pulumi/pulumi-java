@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserRecommendationResponse {
     /**
      * The recommendation action of the machine or rule
@@ -22,10 +22,10 @@ public final class UserRecommendationResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserRecommendationResponse(
-        @OutputCustomType.Parameter("recommendationAction") @Nullable String recommendationAction,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("recommendationAction") @Nullable String recommendationAction,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.recommendationAction = recommendationAction;
         this.username = username;
     }

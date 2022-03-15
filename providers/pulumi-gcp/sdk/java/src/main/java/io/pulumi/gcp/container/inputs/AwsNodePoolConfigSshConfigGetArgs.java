@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AwsNodePoolConfigSshConfigGetArgs extends io.pulumi.resources
      * Required. The name of the EC2 key pair used to login into cluster machines.
      * 
      */
-    @InputImport(name="ec2KeyPair", required=true)
+    @Import(name="ec2KeyPair", required=true)
       private final Output<String> ec2KeyPair;
 
     public Output<String> getEc2KeyPair() {

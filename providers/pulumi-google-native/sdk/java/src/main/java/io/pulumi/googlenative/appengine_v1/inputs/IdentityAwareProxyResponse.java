@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class IdentityAwareProxyResponse extends io.pulumi.resources.Invoke
      * Whether the serving infrastructure will authenticate and authorize all incoming requests.If true, the oauth2_client_id and oauth2_client_secret fields must be non-empty.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
@@ -32,7 +32,7 @@ public final class IdentityAwareProxyResponse extends io.pulumi.resources.Invoke
      * OAuth2 client ID to use for the authentication flow.
      * 
      */
-    @InputImport(name="oauth2ClientId", required=true)
+    @Import(name="oauth2ClientId", required=true)
       private final String oauth2ClientId;
 
     public String getOauth2ClientId() {
@@ -43,7 +43,7 @@ public final class IdentityAwareProxyResponse extends io.pulumi.resources.Invoke
      * OAuth2 client secret to use for the authentication flow.For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2_client_secret_sha256 field.@InputOnly
      * 
      */
-    @InputImport(name="oauth2ClientSecret", required=true)
+    @Import(name="oauth2ClientSecret", required=true)
       private final String oauth2ClientSecret;
 
     public String getOauth2ClientSecret() {
@@ -54,7 +54,7 @@ public final class IdentityAwareProxyResponse extends io.pulumi.resources.Invoke
      * Hex-encoded SHA-256 hash of the client secret.
      * 
      */
-    @InputImport(name="oauth2ClientSecretSha256", required=true)
+    @Import(name="oauth2ClientSecretSha256", required=true)
       private final String oauth2ClientSecretSha256;
 
     public String getOauth2ClientSecretSha256() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceShieldedInstanceConfig {
     /**
      * -- Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
@@ -30,11 +30,11 @@ public final class InstanceShieldedInstanceConfig {
      */
     private final @Nullable Boolean enableVtpm;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceShieldedInstanceConfig(
-        @OutputCustomType.Parameter("enableIntegrityMonitoring") @Nullable Boolean enableIntegrityMonitoring,
-        @OutputCustomType.Parameter("enableSecureBoot") @Nullable Boolean enableSecureBoot,
-        @OutputCustomType.Parameter("enableVtpm") @Nullable Boolean enableVtpm) {
+        @CustomType.Parameter("enableIntegrityMonitoring") @Nullable Boolean enableIntegrityMonitoring,
+        @CustomType.Parameter("enableSecureBoot") @Nullable Boolean enableSecureBoot,
+        @CustomType.Parameter("enableVtpm") @Nullable Boolean enableVtpm) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         this.enableSecureBoot = enableSecureBoot;
         this.enableVtpm = enableVtpm;

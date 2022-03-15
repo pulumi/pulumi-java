@@ -6,12 +6,12 @@ package io.pulumi.aws.networkfirewall.outputs;
 import io.pulumi.aws.networkfirewall.outputs.RuleGroupRuleGroupRuleVariables;
 import io.pulumi.aws.networkfirewall.outputs.RuleGroupRuleGroupRulesSource;
 import io.pulumi.aws.networkfirewall.outputs.RuleGroupRuleGroupStatefulRuleOptions;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleGroup {
     /**
      * A configuration block that defines additional settings available to use in the rules defined in the rule group. Can only be specified for **stateful** rule groups. See Rule Variables below for details.
@@ -29,11 +29,11 @@ public final class RuleGroupRuleGroup {
      */
     private final @Nullable RuleGroupRuleGroupStatefulRuleOptions statefulRuleOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleGroup(
-        @OutputCustomType.Parameter("ruleVariables") @Nullable RuleGroupRuleGroupRuleVariables ruleVariables,
-        @OutputCustomType.Parameter("rulesSource") RuleGroupRuleGroupRulesSource rulesSource,
-        @OutputCustomType.Parameter("statefulRuleOptions") @Nullable RuleGroupRuleGroupStatefulRuleOptions statefulRuleOptions) {
+        @CustomType.Parameter("ruleVariables") @Nullable RuleGroupRuleGroupRuleVariables ruleVariables,
+        @CustomType.Parameter("rulesSource") RuleGroupRuleGroupRulesSource rulesSource,
+        @CustomType.Parameter("statefulRuleOptions") @Nullable RuleGroupRuleGroupStatefulRuleOptions statefulRuleOptions) {
         this.ruleVariables = ruleVariables;
         this.rulesSource = rulesSource;
         this.statefulRuleOptions = statefulRuleOptions;

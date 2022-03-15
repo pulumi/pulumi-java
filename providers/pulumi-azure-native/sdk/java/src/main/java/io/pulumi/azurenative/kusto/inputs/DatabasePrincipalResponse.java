@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
      * Application id - relevant only for application principal type.
      * 
      */
-    @InputImport(name="appId")
+    @Import(name="appId")
       private final @Nullable String appId;
 
     public Optional<String> getAppId() {
@@ -33,7 +33,7 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
      * Database principal email if exists.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable String email;
 
     public Optional<String> getEmail() {
@@ -44,7 +44,7 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
      * Database principal fully qualified name.
      * 
      */
-    @InputImport(name="fqn")
+    @Import(name="fqn")
       private final @Nullable String fqn;
 
     public Optional<String> getFqn() {
@@ -55,7 +55,7 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
      * Database principal name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -66,7 +66,7 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
      * Database principal role.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final String role;
 
     public String getRole() {
@@ -77,7 +77,7 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
      * The tenant name of the principal
      * 
      */
-    @InputImport(name="tenantName", required=true)
+    @Import(name="tenantName", required=true)
       private final String tenantName;
 
     public String getTenantName() {
@@ -88,7 +88,7 @@ public final class DatabasePrincipalResponse extends io.pulumi.resources.InvokeA
      * Database principal type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

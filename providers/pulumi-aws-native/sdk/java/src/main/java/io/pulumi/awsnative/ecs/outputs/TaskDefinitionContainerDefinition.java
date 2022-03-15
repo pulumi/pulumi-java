@@ -19,7 +19,7 @@ import io.pulumi.awsnative.ecs.outputs.TaskDefinitionSecret;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionSystemControl;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionUlimit;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionVolumeFrom;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -29,7 +29,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionContainerDefinition {
     private final @Nullable List<String> command;
     private final @Nullable Integer cpu;
@@ -95,47 +95,47 @@ public final class TaskDefinitionContainerDefinition {
     private final @Nullable List<TaskDefinitionVolumeFrom> volumesFrom;
     private final @Nullable String workingDirectory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionContainerDefinition(
-        @OutputCustomType.Parameter("command") @Nullable List<String> command,
-        @OutputCustomType.Parameter("cpu") @Nullable Integer cpu,
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<TaskDefinitionContainerDependency> dependsOn,
-        @OutputCustomType.Parameter("disableNetworking") @Nullable Boolean disableNetworking,
-        @OutputCustomType.Parameter("dnsSearchDomains") @Nullable List<String> dnsSearchDomains,
-        @OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
-        @OutputCustomType.Parameter("dockerLabels") @Nullable Object dockerLabels,
-        @OutputCustomType.Parameter("dockerSecurityOptions") @Nullable List<String> dockerSecurityOptions,
-        @OutputCustomType.Parameter("entryPoint") @Nullable List<String> entryPoint,
-        @OutputCustomType.Parameter("environment") @Nullable List<TaskDefinitionKeyValuePair> environment,
-        @OutputCustomType.Parameter("environmentFiles") @Nullable List<TaskDefinitionEnvironmentFile> environmentFiles,
-        @OutputCustomType.Parameter("essential") @Nullable Boolean essential,
-        @OutputCustomType.Parameter("extraHosts") @Nullable List<TaskDefinitionHostEntry> extraHosts,
-        @OutputCustomType.Parameter("firelensConfiguration") @Nullable TaskDefinitionFirelensConfiguration firelensConfiguration,
-        @OutputCustomType.Parameter("healthCheck") @Nullable TaskDefinitionHealthCheck healthCheck,
-        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
-        @OutputCustomType.Parameter("image") @Nullable String image,
-        @OutputCustomType.Parameter("interactive") @Nullable Boolean interactive,
-        @OutputCustomType.Parameter("links") @Nullable List<String> links,
-        @OutputCustomType.Parameter("linuxParameters") @Nullable TaskDefinitionLinuxParameters linuxParameters,
-        @OutputCustomType.Parameter("logConfiguration") @Nullable TaskDefinitionLogConfiguration logConfiguration,
-        @OutputCustomType.Parameter("memory") @Nullable Integer memory,
-        @OutputCustomType.Parameter("memoryReservation") @Nullable Integer memoryReservation,
-        @OutputCustomType.Parameter("mountPoints") @Nullable List<TaskDefinitionMountPoint> mountPoints,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("portMappings") @Nullable List<TaskDefinitionPortMapping> portMappings,
-        @OutputCustomType.Parameter("privileged") @Nullable Boolean privileged,
-        @OutputCustomType.Parameter("pseudoTerminal") @Nullable Boolean pseudoTerminal,
-        @OutputCustomType.Parameter("readonlyRootFilesystem") @Nullable Boolean readonlyRootFilesystem,
-        @OutputCustomType.Parameter("repositoryCredentials") @Nullable TaskDefinitionRepositoryCredentials repositoryCredentials,
-        @OutputCustomType.Parameter("resourceRequirements") @Nullable List<TaskDefinitionResourceRequirement> resourceRequirements,
-        @OutputCustomType.Parameter("secrets") @Nullable List<TaskDefinitionSecret> secrets,
-        @OutputCustomType.Parameter("startTimeout") @Nullable Integer startTimeout,
-        @OutputCustomType.Parameter("stopTimeout") @Nullable Integer stopTimeout,
-        @OutputCustomType.Parameter("systemControls") @Nullable List<TaskDefinitionSystemControl> systemControls,
-        @OutputCustomType.Parameter("ulimits") @Nullable List<TaskDefinitionUlimit> ulimits,
-        @OutputCustomType.Parameter("user") @Nullable String user,
-        @OutputCustomType.Parameter("volumesFrom") @Nullable List<TaskDefinitionVolumeFrom> volumesFrom,
-        @OutputCustomType.Parameter("workingDirectory") @Nullable String workingDirectory) {
+        @CustomType.Parameter("command") @Nullable List<String> command,
+        @CustomType.Parameter("cpu") @Nullable Integer cpu,
+        @CustomType.Parameter("dependsOn") @Nullable List<TaskDefinitionContainerDependency> dependsOn,
+        @CustomType.Parameter("disableNetworking") @Nullable Boolean disableNetworking,
+        @CustomType.Parameter("dnsSearchDomains") @Nullable List<String> dnsSearchDomains,
+        @CustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
+        @CustomType.Parameter("dockerLabels") @Nullable Object dockerLabels,
+        @CustomType.Parameter("dockerSecurityOptions") @Nullable List<String> dockerSecurityOptions,
+        @CustomType.Parameter("entryPoint") @Nullable List<String> entryPoint,
+        @CustomType.Parameter("environment") @Nullable List<TaskDefinitionKeyValuePair> environment,
+        @CustomType.Parameter("environmentFiles") @Nullable List<TaskDefinitionEnvironmentFile> environmentFiles,
+        @CustomType.Parameter("essential") @Nullable Boolean essential,
+        @CustomType.Parameter("extraHosts") @Nullable List<TaskDefinitionHostEntry> extraHosts,
+        @CustomType.Parameter("firelensConfiguration") @Nullable TaskDefinitionFirelensConfiguration firelensConfiguration,
+        @CustomType.Parameter("healthCheck") @Nullable TaskDefinitionHealthCheck healthCheck,
+        @CustomType.Parameter("hostname") @Nullable String hostname,
+        @CustomType.Parameter("image") @Nullable String image,
+        @CustomType.Parameter("interactive") @Nullable Boolean interactive,
+        @CustomType.Parameter("links") @Nullable List<String> links,
+        @CustomType.Parameter("linuxParameters") @Nullable TaskDefinitionLinuxParameters linuxParameters,
+        @CustomType.Parameter("logConfiguration") @Nullable TaskDefinitionLogConfiguration logConfiguration,
+        @CustomType.Parameter("memory") @Nullable Integer memory,
+        @CustomType.Parameter("memoryReservation") @Nullable Integer memoryReservation,
+        @CustomType.Parameter("mountPoints") @Nullable List<TaskDefinitionMountPoint> mountPoints,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("portMappings") @Nullable List<TaskDefinitionPortMapping> portMappings,
+        @CustomType.Parameter("privileged") @Nullable Boolean privileged,
+        @CustomType.Parameter("pseudoTerminal") @Nullable Boolean pseudoTerminal,
+        @CustomType.Parameter("readonlyRootFilesystem") @Nullable Boolean readonlyRootFilesystem,
+        @CustomType.Parameter("repositoryCredentials") @Nullable TaskDefinitionRepositoryCredentials repositoryCredentials,
+        @CustomType.Parameter("resourceRequirements") @Nullable List<TaskDefinitionResourceRequirement> resourceRequirements,
+        @CustomType.Parameter("secrets") @Nullable List<TaskDefinitionSecret> secrets,
+        @CustomType.Parameter("startTimeout") @Nullable Integer startTimeout,
+        @CustomType.Parameter("stopTimeout") @Nullable Integer stopTimeout,
+        @CustomType.Parameter("systemControls") @Nullable List<TaskDefinitionSystemControl> systemControls,
+        @CustomType.Parameter("ulimits") @Nullable List<TaskDefinitionUlimit> ulimits,
+        @CustomType.Parameter("user") @Nullable String user,
+        @CustomType.Parameter("volumesFrom") @Nullable List<TaskDefinitionVolumeFrom> volumesFrom,
+        @CustomType.Parameter("workingDirectory") @Nullable String workingDirectory) {
         this.command = command;
         this.cpu = cpu;
         this.dependsOn = dependsOn;

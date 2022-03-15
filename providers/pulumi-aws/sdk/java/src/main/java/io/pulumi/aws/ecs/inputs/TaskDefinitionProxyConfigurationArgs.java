@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TaskDefinitionProxyConfigurationArgs extends io.pulumi.resour
      * Name of the container that will serve as the App Mesh proxy.
      * 
      */
-    @InputImport(name="containerName", required=true)
+    @Import(name="containerName", required=true)
       private final Output<String> containerName;
 
     public Output<String> getContainerName() {
@@ -30,7 +30,7 @@ public final class TaskDefinitionProxyConfigurationArgs extends io.pulumi.resour
      * Set of network configuration parameters to provide the Container Network Interface (CNI) plugin, specified a key-value mapping.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -41,7 +41,7 @@ public final class TaskDefinitionProxyConfigurationArgs extends io.pulumi.resour
      * Proxy type. The default value is `APPMESH`. The only supported value is `APPMESH`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

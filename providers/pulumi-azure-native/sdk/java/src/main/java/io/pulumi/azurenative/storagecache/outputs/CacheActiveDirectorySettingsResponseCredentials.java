@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CacheActiveDirectorySettingsResponseCredentials {
     /**
      * Plain text password of the Active Directory domain administrator. This value is stored encrypted and not returned on response.
@@ -20,10 +20,10 @@ public final class CacheActiveDirectorySettingsResponseCredentials {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CacheActiveDirectorySettingsResponseCredentials(
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("username") String username) {
         this.password = password;
         this.username = username;
     }

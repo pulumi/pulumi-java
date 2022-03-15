@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterMasterAuthClientCertificateConfig {
     private final Boolean issueClientCertificate;
 
-    @OutputCustomType.Constructor
-    private ClusterMasterAuthClientCertificateConfig(@OutputCustomType.Parameter("issueClientCertificate") Boolean issueClientCertificate) {
+    @CustomType.Constructor
+    private ClusterMasterAuthClientCertificateConfig(@CustomType.Parameter("issueClientCertificate") Boolean issueClientCertificate) {
         this.issueClientCertificate = issueClientCertificate;
     }
 

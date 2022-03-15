@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AutomationActionEventHubResponse extends io.pulumi.resources.
      * Expected value is 'EventHub'.
      * 
      */
-    @InputImport(name="actionType", required=true)
+    @Import(name="actionType", required=true)
       private final String actionType;
 
     public String getActionType() {
@@ -34,7 +34,7 @@ public final class AutomationActionEventHubResponse extends io.pulumi.resources.
      * The target Event Hub connection string (it will not be included in any response).
      * 
      */
-    @InputImport(name="connectionString")
+    @Import(name="connectionString")
       private final @Nullable String connectionString;
 
     public Optional<String> getConnectionString() {
@@ -45,7 +45,7 @@ public final class AutomationActionEventHubResponse extends io.pulumi.resources.
      * The target Event Hub Azure Resource ID.
      * 
      */
-    @InputImport(name="eventHubResourceId")
+    @Import(name="eventHubResourceId")
       private final @Nullable String eventHubResourceId;
 
     public Optional<String> getEventHubResourceId() {
@@ -56,7 +56,7 @@ public final class AutomationActionEventHubResponse extends io.pulumi.resources.
      * The target Event Hub SAS policy name.
      * 
      */
-    @InputImport(name="sasPolicyName", required=true)
+    @Import(name="sasPolicyName", required=true)
       private final String sasPolicyName;
 
     public String getSasPolicyName() {

@@ -4,13 +4,13 @@
 package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationApplicationCodeConfiguration {
     /**
      * The location and type of the application code.
@@ -23,10 +23,10 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      */
     private final String codeContentType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationApplicationConfigurationApplicationCodeConfiguration(
-        @OutputCustomType.Parameter("codeContent") @Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent codeContent,
-        @OutputCustomType.Parameter("codeContentType") String codeContentType) {
+        @CustomType.Parameter("codeContent") @Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent codeContent,
+        @CustomType.Parameter("codeContentType") String codeContentType) {
         this.codeContent = codeContent;
         this.codeContentType = codeContentType;
     }

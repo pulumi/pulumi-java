@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.GRPCHealthCheckResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.HTTP2HealthCheckResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.HTTPHealthCheckResponse;
@@ -16,7 +16,7 @@ import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetHealthCheckResult {
     /**
      * How often (in seconds) to send a health check. The default value is 5 seconds.
@@ -91,28 +91,28 @@ public final class GetHealthCheckResult {
      */
     private final Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHealthCheckResult(
-        @OutputCustomType.Parameter("checkIntervalSec") Integer checkIntervalSec,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("grpcHealthCheck") GRPCHealthCheckResponse grpcHealthCheck,
-        @OutputCustomType.Parameter("healthyThreshold") Integer healthyThreshold,
-        @OutputCustomType.Parameter("http2HealthCheck") HTTP2HealthCheckResponse http2HealthCheck,
-        @OutputCustomType.Parameter("httpHealthCheck") HTTPHealthCheckResponse httpHealthCheck,
-        @OutputCustomType.Parameter("httpsHealthCheck") HTTPSHealthCheckResponse httpsHealthCheck,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("logConfig") HealthCheckLogConfigResponse logConfig,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("sslHealthCheck") SSLHealthCheckResponse sslHealthCheck,
-        @OutputCustomType.Parameter("tcpHealthCheck") TCPHealthCheckResponse tcpHealthCheck,
-        @OutputCustomType.Parameter("timeoutSec") Integer timeoutSec,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("udpHealthCheck") UDPHealthCheckResponse udpHealthCheck,
-        @OutputCustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
+        @CustomType.Parameter("checkIntervalSec") Integer checkIntervalSec,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("grpcHealthCheck") GRPCHealthCheckResponse grpcHealthCheck,
+        @CustomType.Parameter("healthyThreshold") Integer healthyThreshold,
+        @CustomType.Parameter("http2HealthCheck") HTTP2HealthCheckResponse http2HealthCheck,
+        @CustomType.Parameter("httpHealthCheck") HTTPHealthCheckResponse httpHealthCheck,
+        @CustomType.Parameter("httpsHealthCheck") HTTPSHealthCheckResponse httpsHealthCheck,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("logConfig") HealthCheckLogConfigResponse logConfig,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("sslHealthCheck") SSLHealthCheckResponse sslHealthCheck,
+        @CustomType.Parameter("tcpHealthCheck") TCPHealthCheckResponse tcpHealthCheck,
+        @CustomType.Parameter("timeoutSec") Integer timeoutSec,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("udpHealthCheck") UDPHealthCheckResponse udpHealthCheck,
+        @CustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
         this.checkIntervalSec = checkIntervalSec;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

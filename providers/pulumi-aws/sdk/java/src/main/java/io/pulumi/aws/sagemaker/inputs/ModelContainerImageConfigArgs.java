@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ModelContainerImageConfigArgs extends io.pulumi.resources.Res
      * Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). Allowed values are: `Platform` and `Vpc`.
      * 
      */
-    @InputImport(name="repositoryAccessMode", required=true)
+    @Import(name="repositoryAccessMode", required=true)
       private final Output<String> repositoryAccessMode;
 
     public Output<String> getRepositoryAccessMode() {

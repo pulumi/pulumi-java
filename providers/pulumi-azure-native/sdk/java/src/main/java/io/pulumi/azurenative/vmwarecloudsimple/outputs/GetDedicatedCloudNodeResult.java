@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.vmwarecloudsimple.outputs;
 
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDedicatedCloudNodeResult {
     /**
      * Availability Zone id, e.g. "az1"
@@ -110,27 +110,27 @@ public final class GetDedicatedCloudNodeResult {
      */
     private final String vmwareClusterName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDedicatedCloudNodeResult(
-        @OutputCustomType.Parameter("availabilityZoneId") String availabilityZoneId,
-        @OutputCustomType.Parameter("availabilityZoneName") String availabilityZoneName,
-        @OutputCustomType.Parameter("cloudRackName") String cloudRackName,
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nodesCount") Integer nodesCount,
-        @OutputCustomType.Parameter("placementGroupId") String placementGroupId,
-        @OutputCustomType.Parameter("placementGroupName") String placementGroupName,
-        @OutputCustomType.Parameter("privateCloudId") String privateCloudId,
-        @OutputCustomType.Parameter("privateCloudName") String privateCloudName,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("purchaseId") String purchaseId,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vmwareClusterName") String vmwareClusterName) {
+        @CustomType.Parameter("availabilityZoneId") String availabilityZoneId,
+        @CustomType.Parameter("availabilityZoneName") String availabilityZoneName,
+        @CustomType.Parameter("cloudRackName") String cloudRackName,
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nodesCount") Integer nodesCount,
+        @CustomType.Parameter("placementGroupId") String placementGroupId,
+        @CustomType.Parameter("placementGroupName") String placementGroupName,
+        @CustomType.Parameter("privateCloudId") String privateCloudId,
+        @CustomType.Parameter("privateCloudName") String privateCloudName,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("purchaseId") String purchaseId,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vmwareClusterName") String vmwareClusterName) {
         this.availabilityZoneId = availabilityZoneId;
         this.availabilityZoneName = availabilityZoneName;
         this.cloudRackName = cloudRackName;

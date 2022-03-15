@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BqmlIterationResultResponse {
     /**
      * [Output-only, Beta] Time taken to run the training iteration in milliseconds.
@@ -37,13 +37,13 @@ public final class BqmlIterationResultResponse {
      */
     private final Double trainingLoss;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BqmlIterationResultResponse(
-        @OutputCustomType.Parameter("durationMs") String durationMs,
-        @OutputCustomType.Parameter("evalLoss") Double evalLoss,
-        @OutputCustomType.Parameter("index") Integer index,
-        @OutputCustomType.Parameter("learnRate") Double learnRate,
-        @OutputCustomType.Parameter("trainingLoss") Double trainingLoss) {
+        @CustomType.Parameter("durationMs") String durationMs,
+        @CustomType.Parameter("evalLoss") Double evalLoss,
+        @CustomType.Parameter("index") Integer index,
+        @CustomType.Parameter("learnRate") Double learnRate,
+        @CustomType.Parameter("trainingLoss") Double trainingLoss) {
         this.durationMs = durationMs;
         this.evalLoss = evalLoss;
         this.index = index;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.resourceconnector.inputs.AppliancePropertiesInfrast
 import io.pulumi.azurenative.resourceconnector.inputs.IdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
      * Represents a supported Fabric/Infra. (AKSEdge etc...).
      * 
      */
-    @InputImport(name="distro")
+    @Import(name="distro")
       private final @Nullable Output<Either<String,Distro>> distro;
 
     public Output<Either<String,Distro>> getDistro() {
@@ -34,7 +34,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
      * Identity for the resource.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
@@ -45,7 +45,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
      * Contains infrastructure information about the Appliance
      * 
      */
-    @InputImport(name="infrastructureConfig")
+    @Import(name="infrastructureConfig")
       private final @Nullable Output<AppliancePropertiesInfrastructureConfigArgs> infrastructureConfig;
 
     public Output<AppliancePropertiesInfrastructureConfigArgs> getInfrastructureConfig() {
@@ -56,7 +56,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -67,7 +67,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
      * Certificates pair used to download MSI certificate from HIS
      * 
      */
-    @InputImport(name="publicKey")
+    @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
     public Output<String> getPublicKey() {
@@ -78,7 +78,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -89,7 +89,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
      * Appliances name.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -100,7 +100,7 @@ public final class ApplianceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

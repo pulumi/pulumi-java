@@ -11,7 +11,7 @@ import io.pulumi.azurenative.edgeorder.inputs.HierarchyInformationResponse;
 import io.pulumi.azurenative.edgeorder.inputs.ImageInformationResponse;
 import io.pulumi.azurenative.edgeorder.inputs.ProductLineResponse;
 import io.pulumi.azurenative.edgeorder.inputs.ResourceProviderDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class ProductFamilyResponse extends io.pulumi.resources.InvokeArgs 
      * Availability information of the product system.
      * 
      */
-    @InputImport(name="availabilityInformation", required=true)
+    @Import(name="availabilityInformation", required=true)
       private final AvailabilityInformationResponse availabilityInformation;
 
     public AvailabilityInformationResponse getAvailabilityInformation() {
@@ -42,7 +42,7 @@ public final class ProductFamilyResponse extends io.pulumi.resources.InvokeArgs 
      * Cost information for the product system.
      * 
      */
-    @InputImport(name="costInformation", required=true)
+    @Import(name="costInformation", required=true)
       private final CostInformationResponse costInformation;
 
     public CostInformationResponse getCostInformation() {
@@ -53,7 +53,7 @@ public final class ProductFamilyResponse extends io.pulumi.resources.InvokeArgs 
      * Description related to the product system.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final DescriptionResponse description;
 
     public DescriptionResponse getDescription() {
@@ -64,7 +64,7 @@ public final class ProductFamilyResponse extends io.pulumi.resources.InvokeArgs 
      * Display Name for the product system.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -75,7 +75,7 @@ public final class ProductFamilyResponse extends io.pulumi.resources.InvokeArgs 
      * list of filters supported for a product
      * 
      */
-    @InputImport(name="filterableProperties", required=true)
+    @Import(name="filterableProperties", required=true)
       private final List<FilterablePropertyResponse> filterableProperties;
 
     public List<FilterablePropertyResponse> getFilterableProperties() {
@@ -86,7 +86,7 @@ public final class ProductFamilyResponse extends io.pulumi.resources.InvokeArgs 
      * Hierarchy information of a product.
      * 
      */
-    @InputImport(name="hierarchyInformation", required=true)
+    @Import(name="hierarchyInformation", required=true)
       private final HierarchyInformationResponse hierarchyInformation;
 
     public HierarchyInformationResponse getHierarchyInformation() {
@@ -97,7 +97,7 @@ public final class ProductFamilyResponse extends io.pulumi.resources.InvokeArgs 
      * Image information for the product system.
      * 
      */
-    @InputImport(name="imageInformation", required=true)
+    @Import(name="imageInformation", required=true)
       private final List<ImageInformationResponse> imageInformation;
 
     public List<ImageInformationResponse> getImageInformation() {
@@ -108,7 +108,7 @@ public final class ProductFamilyResponse extends io.pulumi.resources.InvokeArgs 
      * List of product lines supported in the product family
      * 
      */
-    @InputImport(name="productLines", required=true)
+    @Import(name="productLines", required=true)
       private final List<ProductLineResponse> productLines;
 
     public List<ProductLineResponse> getProductLines() {
@@ -119,7 +119,7 @@ public final class ProductFamilyResponse extends io.pulumi.resources.InvokeArgs 
      * Contains details related to resource provider
      * 
      */
-    @InputImport(name="resourceProviderDetails")
+    @Import(name="resourceProviderDetails")
       private final @Nullable List<ResourceProviderDetailsResponse> resourceProviderDetails;
 
     public List<ResourceProviderDetailsResponse> getResourceProviderDetails() {

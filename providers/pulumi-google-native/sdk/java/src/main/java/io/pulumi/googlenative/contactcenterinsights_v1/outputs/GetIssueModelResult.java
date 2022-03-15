@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetIssueModelResult {
     /**
      * The time at which this issue model was created.
@@ -47,15 +47,15 @@ public final class GetIssueModelResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIssueModelResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("inputDataConfig") GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse inputDataConfig,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("trainingStats") GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse trainingStats,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("inputDataConfig") GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse inputDataConfig,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("trainingStats") GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse trainingStats,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.inputDataConfig = inputDataConfig;

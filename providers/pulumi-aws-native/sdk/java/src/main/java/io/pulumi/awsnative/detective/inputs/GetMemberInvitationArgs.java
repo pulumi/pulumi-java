@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.detective.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetMemberInvitationArgs extends io.pulumi.resources.InvokeArg
      * The ARN of the graph to which the member account will be invited
      * 
      */
-    @InputImport(name="graphArn", required=true)
+    @Import(name="graphArn", required=true)
       private final String graphArn;
 
     public String getGraphArn() {
@@ -27,7 +27,7 @@ public final class GetMemberInvitationArgs extends io.pulumi.resources.InvokeArg
      * The AWS account ID to be invited to join the graph as a member
      * 
      */
-    @InputImport(name="memberId", required=true)
+    @Import(name="memberId", required=true)
       private final String memberId;
 
     public String getMemberId() {

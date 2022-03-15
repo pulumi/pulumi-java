@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetMetadata {
     /**
      * Arn of the source of the dataset. For e.g.: AppFlow Flow ARN.
@@ -17,8 +17,8 @@ public final class DatasetMetadata {
      */
     private final @Nullable String sourceArn;
 
-    @OutputCustomType.Constructor
-    private DatasetMetadata(@OutputCustomType.Parameter("sourceArn") @Nullable String sourceArn) {
+    @CustomType.Constructor
+    private DatasetMetadata(@CustomType.Parameter("sourceArn") @Nullable String sourceArn) {
         this.sourceArn = sourceArn;
     }
 

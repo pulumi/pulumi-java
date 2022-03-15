@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleCloudwatchAlarmAction {
     private final String alarmName;
     private final String roleArn;
     private final String stateReason;
     private final String stateValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleCloudwatchAlarmAction(
-        @OutputCustomType.Parameter("alarmName") String alarmName,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("stateReason") String stateReason,
-        @OutputCustomType.Parameter("stateValue") String stateValue) {
+        @CustomType.Parameter("alarmName") String alarmName,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("stateReason") String stateReason,
+        @CustomType.Parameter("stateValue") String stateValue) {
         this.alarmName = alarmName;
         this.roleArn = roleArn;
         this.stateReason = stateReason;

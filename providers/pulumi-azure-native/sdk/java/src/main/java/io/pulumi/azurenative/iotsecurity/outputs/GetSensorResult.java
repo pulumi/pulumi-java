@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.iotsecurity.outputs;
 
 import io.pulumi.azurenative.iotsecurity.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSensorResult {
     /**
      * Last connectivity time of the IoT sensor
@@ -84,22 +84,22 @@ public final class GetSensorResult {
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSensorResult(
-        @OutputCustomType.Parameter("connectivityTime") String connectivityTime,
-        @OutputCustomType.Parameter("dynamicLearning") Boolean dynamicLearning,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("learningMode") Boolean learningMode,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sensorStatus") String sensorStatus,
-        @OutputCustomType.Parameter("sensorType") @Nullable String sensorType,
-        @OutputCustomType.Parameter("sensorVersion") String sensorVersion,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tiAutomaticUpdates") @Nullable Boolean tiAutomaticUpdates,
-        @OutputCustomType.Parameter("tiStatus") String tiStatus,
-        @OutputCustomType.Parameter("tiVersion") String tiVersion,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("zone") @Nullable String zone) {
+        @CustomType.Parameter("connectivityTime") String connectivityTime,
+        @CustomType.Parameter("dynamicLearning") Boolean dynamicLearning,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("learningMode") Boolean learningMode,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sensorStatus") String sensorStatus,
+        @CustomType.Parameter("sensorType") @Nullable String sensorType,
+        @CustomType.Parameter("sensorVersion") String sensorVersion,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tiAutomaticUpdates") @Nullable Boolean tiAutomaticUpdates,
+        @CustomType.Parameter("tiStatus") String tiStatus,
+        @CustomType.Parameter("tiVersion") String tiVersion,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("zone") @Nullable String zone) {
         this.connectivityTime = connectivityTime;
         this.dynamicLearning = dynamicLearning;
         this.id = id;

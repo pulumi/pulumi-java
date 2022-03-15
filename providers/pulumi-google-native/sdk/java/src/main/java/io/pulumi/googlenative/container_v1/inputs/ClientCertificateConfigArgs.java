@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ClientCertificateConfigArgs extends io.pulumi.resources.Resou
      * Issue a client certificate.
      * 
      */
-    @InputImport(name="issueClientCertificate")
+    @Import(name="issueClientCertificate")
       private final @Nullable Output<Boolean> issueClientCertificate;
 
     public Output<Boolean> getIssueClientCertificate() {

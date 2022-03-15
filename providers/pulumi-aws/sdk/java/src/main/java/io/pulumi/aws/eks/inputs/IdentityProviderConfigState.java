@@ -5,7 +5,7 @@ package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.aws.eks.inputs.IdentityProviderConfigOidcGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
      * Amazon Resource Name (ARN) of the EKS Identity Provider Configuration.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
      * Name of the EKS Cluster.
      * 
      */
-    @InputImport(name="clusterName")
+    @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -42,7 +42,7 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
      * Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
      * 
      */
-    @InputImport(name="oidc")
+    @Import(name="oidc")
       private final @Nullable Output<IdentityProviderConfigOidcGetArgs> oidc;
 
     public Output<IdentityProviderConfigOidcGetArgs> getOidc() {
@@ -53,7 +53,7 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
      * Status of the EKS Identity Provider Configuration.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -64,7 +64,7 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -75,7 +75,7 @@ public final class IdentityProviderConfigState extends io.pulumi.resources.Resou
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

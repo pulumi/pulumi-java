@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceResult {
     /**
      * The ARN of the ECS Service
@@ -43,16 +43,16 @@ public final class GetServiceResult {
      */
     private final String taskDefinition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("clusterArn") String clusterArn,
-        @OutputCustomType.Parameter("desiredCount") Integer desiredCount,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("launchType") String launchType,
-        @OutputCustomType.Parameter("schedulingStrategy") String schedulingStrategy,
-        @OutputCustomType.Parameter("serviceName") String serviceName,
-        @OutputCustomType.Parameter("taskDefinition") String taskDefinition) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("clusterArn") String clusterArn,
+        @CustomType.Parameter("desiredCount") Integer desiredCount,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("launchType") String launchType,
+        @CustomType.Parameter("schedulingStrategy") String schedulingStrategy,
+        @CustomType.Parameter("serviceName") String serviceName,
+        @CustomType.Parameter("taskDefinition") String taskDefinition) {
         this.arn = arn;
         this.clusterArn = clusterArn;
         this.desiredCount = desiredCount;

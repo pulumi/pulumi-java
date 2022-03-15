@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1EntityMetadataResponse {
     /**
      * Time at which the API proxy was created, in milliseconds since epoch.
@@ -25,11 +25,11 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse {
      */
     private final String subType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1EntityMetadataResponse(
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
-        @OutputCustomType.Parameter("subType") String subType) {
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @CustomType.Parameter("subType") String subType) {
         this.createdAt = createdAt;
         this.lastModifiedAt = lastModifiedAt;
         this.subType = subType;

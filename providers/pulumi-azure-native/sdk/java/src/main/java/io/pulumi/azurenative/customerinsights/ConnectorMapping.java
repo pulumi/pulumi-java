@@ -8,7 +8,7 @@ import io.pulumi.azurenative.customerinsights.ConnectorMappingArgs;
 import io.pulumi.azurenative.customerinsights.outputs.ConnectorMappingPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * The connector mapping name
      * 
      */
-    @OutputExport(name="connectorMappingName", type=String.class, parameters={})
+    @Export(name="connectorMappingName", type=String.class, parameters={})
     private Output<String> connectorMappingName;
 
     /**
@@ -49,7 +49,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * The connector name.
      * 
      */
-    @OutputExport(name="connectorName", type=String.class, parameters={})
+    @Export(name="connectorName", type=String.class, parameters={})
     private Output<String> connectorName;
 
     /**
@@ -63,7 +63,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * Type of connector.
      * 
      */
-    @OutputExport(name="connectorType", type=String.class, parameters={})
+    @Export(name="connectorType", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectorType;
 
     /**
@@ -77,7 +77,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * The created time.
      * 
      */
-    @OutputExport(name="created", type=String.class, parameters={})
+    @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
@@ -91,7 +91,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * The DataFormat ID.
      * 
      */
-    @OutputExport(name="dataFormatId", type=String.class, parameters={})
+    @Export(name="dataFormatId", type=String.class, parameters={})
     private Output<String> dataFormatId;
 
     /**
@@ -105,7 +105,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * The description of the connector mapping.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -119,7 +119,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * Display name for the connector mapping.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -133,7 +133,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * Defines which entity type the file should map to.
      * 
      */
-    @OutputExport(name="entityType", type=String.class, parameters={})
+    @Export(name="entityType", type=String.class, parameters={})
     private Output<String> entityType;
 
     /**
@@ -147,7 +147,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * The mapping entity name.
      * 
      */
-    @OutputExport(name="entityTypeName", type=String.class, parameters={})
+    @Export(name="entityTypeName", type=String.class, parameters={})
     private Output<String> entityTypeName;
 
     /**
@@ -161,7 +161,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * The last modified time.
      * 
      */
-    @OutputExport(name="lastModified", type=String.class, parameters={})
+    @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
@@ -175,7 +175,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * The properties of the mapping.
      * 
      */
-    @OutputExport(name="mappingProperties", type=ConnectorMappingPropertiesResponse.class, parameters={})
+    @Export(name="mappingProperties", type=ConnectorMappingPropertiesResponse.class, parameters={})
     private Output<ConnectorMappingPropertiesResponse> mappingProperties;
 
     /**
@@ -189,7 +189,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -203,7 +203,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * The next run time based on customer's settings.
      * 
      */
-    @OutputExport(name="nextRunTime", type=String.class, parameters={})
+    @Export(name="nextRunTime", type=String.class, parameters={})
     private Output<String> nextRunTime;
 
     /**
@@ -217,7 +217,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * The RunId.
      * 
      */
-    @OutputExport(name="runId", type=String.class, parameters={})
+    @Export(name="runId", type=String.class, parameters={})
     private Output<String> runId;
 
     /**
@@ -231,7 +231,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * State of connector mapping.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -245,7 +245,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * The hub name.
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
@@ -259,7 +259,7 @@ public class ConnectorMapping extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

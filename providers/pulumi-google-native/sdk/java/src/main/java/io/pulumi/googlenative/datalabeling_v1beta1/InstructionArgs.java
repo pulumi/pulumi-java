@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datalabeling_v1beta1.enums.InstructionDataType;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1PdfInstructionArgs;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
      * The data type of this instruction.
      * 
      */
-    @InputImport(name="dataType", required=true)
+    @Import(name="dataType", required=true)
       private final Output<InstructionDataType> dataType;
 
     public Output<InstructionDataType> getDataType() {
@@ -31,7 +31,7 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. User-provided description of the instruction. The description can be up to 10000 characters long.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
      * The display name of the instruction. Maximum of 64 characters.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -53,14 +53,14 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
      * Instruction from a PDF document. The PDF should be in a Cloud Storage bucket.
      * 
      */
-    @InputImport(name="pdfInstruction")
+    @Import(name="pdfInstruction")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> pdfInstruction;
 
     public Output<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> getPdfInstruction() {
         return this.pdfInstruction == null ? Output.empty() : this.pdfInstruction;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

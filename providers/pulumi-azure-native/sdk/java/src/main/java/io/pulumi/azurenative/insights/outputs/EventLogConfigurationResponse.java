@@ -3,21 +3,21 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventLogConfigurationResponse {
     private final @Nullable String filter;
     private final String logName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventLogConfigurationResponse(
-        @OutputCustomType.Parameter("filter") @Nullable String filter,
-        @OutputCustomType.Parameter("logName") String logName) {
+        @CustomType.Parameter("filter") @Nullable String filter,
+        @CustomType.Parameter("logName") String logName) {
         this.filter = filter;
         this.logName = logName;
     }

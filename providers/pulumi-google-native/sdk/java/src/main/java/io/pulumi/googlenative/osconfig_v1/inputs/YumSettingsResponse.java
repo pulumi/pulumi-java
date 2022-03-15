@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class YumSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * List of packages to exclude from update. These packages are excluded by using the yum `--exclude` flag.
      * 
      */
-    @InputImport(name="excludes", required=true)
+    @Import(name="excludes", required=true)
       private final List<String> excludes;
 
     public List<String> getExcludes() {
@@ -33,7 +33,7 @@ public final class YumSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * An exclusive list of packages to be updated. These are the only packages that will be updated. If these packages are not installed, they will be ignored. This field must not be specified with any other patch configuration fields.
      * 
      */
-    @InputImport(name="exclusivePackages", required=true)
+    @Import(name="exclusivePackages", required=true)
       private final List<String> exclusivePackages;
 
     public List<String> getExclusivePackages() {
@@ -44,7 +44,7 @@ public final class YumSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * Will cause patch to run `yum update-minimal` instead.
      * 
      */
-    @InputImport(name="minimal", required=true)
+    @Import(name="minimal", required=true)
       private final Boolean minimal;
 
     public Boolean getMinimal() {
@@ -55,7 +55,7 @@ public final class YumSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * Adds the `--security` flag to `yum update`. Not supported on all platforms.
      * 
      */
-    @InputImport(name="security", required=true)
+    @Import(name="security", required=true)
       private final Boolean security;
 
     public Boolean getSecurity() {

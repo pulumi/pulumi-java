@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.appengine.inputs.DomainMappingSslSettingsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * Relative name of the domain serving the application. Example: example.com.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -33,7 +33,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `STRICT` and `OVERRIDE`.
      * 
      */
-    @InputImport(name="overrideStrategy")
+    @Import(name="overrideStrategy")
       private final @Nullable Output<String> overrideStrategy;
 
     public Output<String> getOverrideStrategy() {
@@ -45,7 +45,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -57,7 +57,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="sslSettings")
+    @Import(name="sslSettings")
       private final @Nullable Output<DomainMappingSslSettingsArgs> sslSettings;
 
     public Output<DomainMappingSslSettingsArgs> getSslSettings() {

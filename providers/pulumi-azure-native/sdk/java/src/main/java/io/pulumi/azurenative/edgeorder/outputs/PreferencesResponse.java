@@ -7,13 +7,13 @@ import io.pulumi.azurenative.edgeorder.outputs.EncryptionPreferencesResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ManagementResourcePreferencesResponse;
 import io.pulumi.azurenative.edgeorder.outputs.NotificationPreferenceResponse;
 import io.pulumi.azurenative.edgeorder.outputs.TransportPreferencesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreferencesResponse {
     /**
      * Preferences related to the Encryption.
@@ -36,12 +36,12 @@ public final class PreferencesResponse {
      */
     private final @Nullable TransportPreferencesResponse transportPreferences;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreferencesResponse(
-        @OutputCustomType.Parameter("encryptionPreferences") @Nullable EncryptionPreferencesResponse encryptionPreferences,
-        @OutputCustomType.Parameter("managementResourcePreferences") @Nullable ManagementResourcePreferencesResponse managementResourcePreferences,
-        @OutputCustomType.Parameter("notificationPreferences") @Nullable List<NotificationPreferenceResponse> notificationPreferences,
-        @OutputCustomType.Parameter("transportPreferences") @Nullable TransportPreferencesResponse transportPreferences) {
+        @CustomType.Parameter("encryptionPreferences") @Nullable EncryptionPreferencesResponse encryptionPreferences,
+        @CustomType.Parameter("managementResourcePreferences") @Nullable ManagementResourcePreferencesResponse managementResourcePreferences,
+        @CustomType.Parameter("notificationPreferences") @Nullable List<NotificationPreferenceResponse> notificationPreferences,
+        @CustomType.Parameter("transportPreferences") @Nullable TransportPreferencesResponse transportPreferences) {
         this.encryptionPreferences = encryptionPreferences;
         this.managementResourcePreferences = managementResourcePreferences;
         this.notificationPreferences = notificationPreferences;

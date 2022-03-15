@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotwireless;
 import io.pulumi.awsnative.iotwireless.inputs.FuotaTaskLoRaWANArgs;
 import io.pulumi.awsnative.iotwireless.inputs.FuotaTaskTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * Multicast group to associate. Only for update request.
      * 
      */
-    @InputImport(name="associateMulticastGroup")
+    @Import(name="associateMulticastGroup")
       private final @Nullable Output<String> associateMulticastGroup;
 
     public Output<String> getAssociateMulticastGroup() {
@@ -32,7 +32,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * Wireless device to associate. Only for update request.
      * 
      */
-    @InputImport(name="associateWirelessDevice")
+    @Import(name="associateWirelessDevice")
       private final @Nullable Output<String> associateWirelessDevice;
 
     public Output<String> getAssociateWirelessDevice() {
@@ -43,7 +43,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * FUOTA task description
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -54,7 +54,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * Multicast group to disassociate. Only for update request.
      * 
      */
-    @InputImport(name="disassociateMulticastGroup")
+    @Import(name="disassociateMulticastGroup")
       private final @Nullable Output<String> disassociateMulticastGroup;
 
     public Output<String> getDisassociateMulticastGroup() {
@@ -65,7 +65,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * Wireless device to disassociate. Only for update request.
      * 
      */
-    @InputImport(name="disassociateWirelessDevice")
+    @Import(name="disassociateWirelessDevice")
       private final @Nullable Output<String> disassociateWirelessDevice;
 
     public Output<String> getDisassociateWirelessDevice() {
@@ -76,7 +76,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * FUOTA task firmware update image binary S3 link
      * 
      */
-    @InputImport(name="firmwareUpdateImage", required=true)
+    @Import(name="firmwareUpdateImage", required=true)
       private final Output<String> firmwareUpdateImage;
 
     public Output<String> getFirmwareUpdateImage() {
@@ -87,7 +87,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * FUOTA task firmware IAM role for reading S3
      * 
      */
-    @InputImport(name="firmwareUpdateRole", required=true)
+    @Import(name="firmwareUpdateRole", required=true)
       private final Output<String> firmwareUpdateRole;
 
     public Output<String> getFirmwareUpdateRole() {
@@ -98,7 +98,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * FUOTA task LoRaWAN
      * 
      */
-    @InputImport(name="loRaWAN", required=true)
+    @Import(name="loRaWAN", required=true)
       private final Output<FuotaTaskLoRaWANArgs> loRaWAN;
 
     public Output<FuotaTaskLoRaWANArgs> getLoRaWAN() {
@@ -109,7 +109,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * Name of FUOTA task
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -120,7 +120,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * A list of key-value pairs that contain metadata for the FUOTA task.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<FuotaTaskTagArgs>> tags;
 
     public Output<List<FuotaTaskTagArgs>> getTags() {

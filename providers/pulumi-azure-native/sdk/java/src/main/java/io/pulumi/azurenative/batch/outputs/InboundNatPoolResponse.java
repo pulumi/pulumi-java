@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.NetworkSecurityGroupRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InboundNatPoolResponse {
     /**
      * This must be unique within a Batch pool. Acceptable values are between 1 and 65535 except for 22, 3389, 29876 and 29877 as these are reserved. If any reserved values are provided the request fails with HTTP status code 400.
@@ -40,14 +40,14 @@ public final class InboundNatPoolResponse {
     private final @Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules;
     private final String protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InboundNatPoolResponse(
-        @OutputCustomType.Parameter("backendPort") Integer backendPort,
-        @OutputCustomType.Parameter("frontendPortRangeEnd") Integer frontendPortRangeEnd,
-        @OutputCustomType.Parameter("frontendPortRangeStart") Integer frontendPortRangeStart,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkSecurityGroupRules") @Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules,
-        @OutputCustomType.Parameter("protocol") String protocol) {
+        @CustomType.Parameter("backendPort") Integer backendPort,
+        @CustomType.Parameter("frontendPortRangeEnd") Integer frontendPortRangeEnd,
+        @CustomType.Parameter("frontendPortRangeStart") Integer frontendPortRangeStart,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkSecurityGroupRules") @Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules,
+        @CustomType.Parameter("protocol") String protocol) {
         this.backendPort = backendPort;
         this.frontendPortRangeEnd = frontendPortRangeEnd;
         this.frontendPortRangeStart = frontendPortRangeStart;

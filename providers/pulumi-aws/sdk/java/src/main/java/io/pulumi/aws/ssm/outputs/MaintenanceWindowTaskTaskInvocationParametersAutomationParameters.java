@@ -4,14 +4,14 @@
 package io.pulumi.aws.ssm.outputs;
 
 import io.pulumi.aws.ssm.outputs.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParameters {
     /**
      * The version of an Automation document to use during task execution.
@@ -24,10 +24,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
      */
     private final @Nullable List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter> parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MaintenanceWindowTaskTaskInvocationParametersAutomationParameters(
-        @OutputCustomType.Parameter("documentVersion") @Nullable String documentVersion,
-        @OutputCustomType.Parameter("parameters") @Nullable List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter> parameters) {
+        @CustomType.Parameter("documentVersion") @Nullable String documentVersion,
+        @CustomType.Parameter("parameters") @Nullable List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter> parameters) {
         this.documentVersion = documentVersion;
         this.parameters = parameters;
     }

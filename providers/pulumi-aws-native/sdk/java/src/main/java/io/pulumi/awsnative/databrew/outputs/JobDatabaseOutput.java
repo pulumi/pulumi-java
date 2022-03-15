@@ -5,13 +5,13 @@ package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.enums.JobDatabaseOutputDatabaseOutputMode;
 import io.pulumi.awsnative.databrew.outputs.JobDatabaseTableOutputOptions;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobDatabaseOutput {
     private final JobDatabaseTableOutputOptions databaseOptions;
     /**
@@ -25,11 +25,11 @@ public final class JobDatabaseOutput {
      */
     private final String glueConnectionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobDatabaseOutput(
-        @OutputCustomType.Parameter("databaseOptions") JobDatabaseTableOutputOptions databaseOptions,
-        @OutputCustomType.Parameter("databaseOutputMode") @Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode,
-        @OutputCustomType.Parameter("glueConnectionName") String glueConnectionName) {
+        @CustomType.Parameter("databaseOptions") JobDatabaseTableOutputOptions databaseOptions,
+        @CustomType.Parameter("databaseOutputMode") @Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode,
+        @CustomType.Parameter("glueConnectionName") String glueConnectionName) {
         this.databaseOptions = databaseOptions;
         this.databaseOutputMode = databaseOutputMode;
         this.glueConnectionName = glueConnectionName;

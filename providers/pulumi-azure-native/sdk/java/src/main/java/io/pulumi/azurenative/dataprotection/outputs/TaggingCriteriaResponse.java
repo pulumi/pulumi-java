@@ -5,14 +5,14 @@ package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.RetentionTagResponse;
 import io.pulumi.azurenative.dataprotection.outputs.ScheduleBasedBackupCriteriaResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaggingCriteriaResponse {
     /**
      * Criteria which decides whether the tag can be applied to a triggered backup.
@@ -35,12 +35,12 @@ public final class TaggingCriteriaResponse {
      */
     private final Double taggingPriority;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaggingCriteriaResponse(
-        @OutputCustomType.Parameter("criteria") @Nullable List<ScheduleBasedBackupCriteriaResponse> criteria,
-        @OutputCustomType.Parameter("isDefault") Boolean isDefault,
-        @OutputCustomType.Parameter("tagInfo") RetentionTagResponse tagInfo,
-        @OutputCustomType.Parameter("taggingPriority") Double taggingPriority) {
+        @CustomType.Parameter("criteria") @Nullable List<ScheduleBasedBackupCriteriaResponse> criteria,
+        @CustomType.Parameter("isDefault") Boolean isDefault,
+        @CustomType.Parameter("tagInfo") RetentionTagResponse tagInfo,
+        @CustomType.Parameter("taggingPriority") Double taggingPriority) {
         this.criteria = criteria;
         this.isDefault = isDefault;
         this.tagInfo = tagInfo;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.EncoderCustomPresetResponse;
 import io.pulumi.azurenative.videoanalyzer.inputs.EncoderSystemPresetResponse;
 import io.pulumi.azurenative.videoanalyzer.inputs.NodeInputResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class EncoderProcessorResponse extends io.pulumi.resources.InvokeAr
      * An array of upstream node references within the topology to be used as inputs for this node.
      * 
      */
-    @InputImport(name="inputs", required=true)
+    @Import(name="inputs", required=true)
       private final List<NodeInputResponse> inputs;
 
     public List<NodeInputResponse> getInputs() {
@@ -36,7 +36,7 @@ public final class EncoderProcessorResponse extends io.pulumi.resources.InvokeAr
      * Node name. Must be unique within the topology.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -47,7 +47,7 @@ public final class EncoderProcessorResponse extends io.pulumi.resources.InvokeAr
      * The encoder preset, which defines the recipe or instructions on how the input content should be processed.
      * 
      */
-    @InputImport(name="preset", required=true)
+    @Import(name="preset", required=true)
       private final Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset;
 
     public Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> getPreset() {
@@ -59,7 +59,7 @@ public final class EncoderProcessorResponse extends io.pulumi.resources.InvokeAr
      * Expected value is '#Microsoft.VideoAnalyzer.EncoderProcessor'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gameservices;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.gameservices.inputs.GameServerClusterConnectionInfoArgs;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * Required. The resource name of the game server cluster
      * 
      */
-    @InputImport(name="clusterId", required=true)
+    @Import(name="clusterId", required=true)
       private final Output<String> clusterId;
 
     public Output<String> getClusterId() {
@@ -33,7 +33,7 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="connectionInfo", required=true)
+    @Import(name="connectionInfo", required=true)
       private final Output<GameServerClusterConnectionInfoArgs> connectionInfo;
 
     public Output<GameServerClusterConnectionInfoArgs> getConnectionInfo() {
@@ -44,7 +44,7 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * Human readable description of the cluster.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -56,7 +56,7 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * key-value pair.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -67,7 +67,7 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * Location of the Cluster.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -79,7 +79,7 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -90,7 +90,7 @@ public final class GameServerClusterArgs extends io.pulumi.resources.ResourceArg
      * The realm id of the game server realm.
      * 
      */
-    @InputImport(name="realmId", required=true)
+    @Import(name="realmId", required=true)
       private final Output<String> realmId;
 
     public Output<String> getRealmId() {

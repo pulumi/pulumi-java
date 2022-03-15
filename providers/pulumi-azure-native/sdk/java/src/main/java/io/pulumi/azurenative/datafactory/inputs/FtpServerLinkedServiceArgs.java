@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -42,7 +42,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * The authentication type to be used to connect to the FTP server.
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable Output<Either<String,FtpAuthenticationType>> authenticationType;
 
     public Output<Either<String,FtpAuthenticationType>> getAuthenticationType() {
@@ -53,7 +53,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -64,7 +64,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -75,7 +75,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * If true, validate the FTP server SSL certificate when connect over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="enableServerCertificateValidation")
+    @Import(name="enableServerCertificateValidation")
       private final @Nullable Output<Object> enableServerCertificateValidation;
 
     public Output<Object> getEnableServerCertificateValidation() {
@@ -86,7 +86,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * If true, connect to the FTP server over SSL/TLS channel. Default value is true. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="enableSsl")
+    @Import(name="enableSsl")
       private final @Nullable Output<Object> enableSsl;
 
     public Output<Object> getEnableSsl() {
@@ -97,7 +97,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -108,7 +108,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * Host name of the FTP server. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final Output<Object> host;
 
     public Output<Object> getHost() {
@@ -119,7 +119,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -130,7 +130,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * Password to logon the FTP server.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
@@ -141,7 +141,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * The TCP port number that the FTP server uses to listen for client connections. Default value is 21. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Object> port;
 
     public Output<Object> getPort() {
@@ -153,7 +153,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * Expected value is 'FtpServer'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -164,7 +164,7 @@ public final class FtpServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * Username to logon the FTP server. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<Object> userName;
 
     public Output<Object> getUserName() {

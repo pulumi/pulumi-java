@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class VpnGatewayVpnGatewayInterfaceArgs extends io.pulumi.resources
      * URL of the VLAN attachment (interconnectAttachment) resource for this VPN gateway interface. When the value of this field is present, the VPN gateway is used for IPsec-encrypted Cloud Interconnect; all egress or ingress traffic for this VPN gateway interface goes through the specified VLAN attachment resource. Not currently available publicly.
      * 
      */
-    @InputImport(name="interconnectAttachment")
+    @Import(name="interconnectAttachment")
       private final @Nullable Output<String> interconnectAttachment;
 
     public Output<String> getInterconnectAttachment() {

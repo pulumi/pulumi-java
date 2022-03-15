@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.memcache_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Number of cpus per Memcached node.
      * 
      */
-    @InputImport(name="cpuCount", required=true)
+    @Import(name="cpuCount", required=true)
       private final Output<Integer> cpuCount;
 
     public Output<Integer> getCpuCount() {
@@ -32,7 +32,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Memory size in MiB for each Memcached node.
      * 
      */
-    @InputImport(name="memorySizeMb", required=true)
+    @Import(name="memorySizeMb", required=true)
       private final Output<Integer> memorySizeMb;
 
     public Output<Integer> getMemorySizeMb() {

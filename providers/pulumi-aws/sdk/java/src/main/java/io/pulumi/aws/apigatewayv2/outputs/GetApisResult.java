@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigatewayv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApisResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -27,13 +27,13 @@ public final class GetApisResult {
     private final @Nullable String protocolType;
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApisResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ids") List<String> ids,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("protocolType") @Nullable String protocolType,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ids") List<String> ids,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("protocolType") @Nullable String protocolType,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.id = id;
         this.ids = ids;
         this.name = name;

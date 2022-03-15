@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AnalyticsApplicationInputsStartingPositionConfigurationArgs e
      * The starting position on the stream. Valid values: `LAST_STOPPED_POINT`, `NOW`, `TRIM_HORIZON`.
      * 
      */
-    @InputImport(name="startingPosition")
+    @Import(name="startingPosition")
       private final @Nullable Output<String> startingPosition;
 
     public Output<String> getStartingPosition() {

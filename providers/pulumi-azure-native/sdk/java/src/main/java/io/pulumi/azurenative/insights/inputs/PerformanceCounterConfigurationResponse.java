@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class PerformanceCounterConfigurationResponse extends io.pulumi.res
 
     public static final PerformanceCounterConfigurationResponse Empty = new PerformanceCounterConfigurationResponse();
 
-    @InputImport(name="instance")
+    @Import(name="instance")
       private final @Nullable String instance;
 
     public Optional<String> getInstance() {
         return this.instance == null ? Optional.empty() : Optional.ofNullable(this.instance);
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="samplingPeriod", required=true)
+    @Import(name="samplingPeriod", required=true)
       private final String samplingPeriod;
 
     public String getSamplingPeriod() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuntimeMetricsResponse {
     /**
      * The system metrics.
@@ -16,8 +16,8 @@ public final class RuntimeMetricsResponse {
      */
     private final Map<String,String> systemMetrics;
 
-    @OutputCustomType.Constructor
-    private RuntimeMetricsResponse(@OutputCustomType.Parameter("systemMetrics") Map<String,String> systemMetrics) {
+    @CustomType.Constructor
+    private RuntimeMetricsResponse(@CustomType.Parameter("systemMetrics") Map<String,String> systemMetrics) {
         this.systemMetrics = systemMetrics;
     }
 

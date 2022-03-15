@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ServiceTypeDeltaHealthPolicyArgs extends io.pulumi.resources.
      * The check is performed after every upgrade domain upgrade completion to make sure the global state of the cluster is within tolerated limits.
      * 
      */
-    @InputImport(name="maxPercentDeltaUnhealthyServices")
+    @Import(name="maxPercentDeltaUnhealthyServices")
       private final @Nullable Output<Integer> maxPercentDeltaUnhealthyServices;
 
     public Output<Integer> getMaxPercentDeltaUnhealthyServices() {

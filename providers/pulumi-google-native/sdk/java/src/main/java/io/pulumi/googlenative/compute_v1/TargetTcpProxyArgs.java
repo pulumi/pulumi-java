@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.enums.TargetTcpProxyProxyHeader;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class TargetTcpProxyArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,14 +31,14 @@ public final class TargetTcpProxyArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -49,7 +49,7 @@ public final class TargetTcpProxyArgs extends io.pulumi.resources.ResourceArgs {
      * This field only applies when the forwarding rule that references this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED. When this field is set to true, Envoy proxies set up inbound traffic interception and bind to the IP address and port specified in the forwarding rule. This is generally useful when using Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar proxy). The Envoy proxy listens for inbound requests and handles requests when it receives them. The default is false.
      * 
      */
-    @InputImport(name="proxyBind")
+    @Import(name="proxyBind")
       private final @Nullable Output<Boolean> proxyBind;
 
     public Output<Boolean> getProxyBind() {
@@ -60,14 +60,14 @@ public final class TargetTcpProxyArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.
      * 
      */
-    @InputImport(name="proxyHeader")
+    @Import(name="proxyHeader")
       private final @Nullable Output<TargetTcpProxyProxyHeader> proxyHeader;
 
     public Output<TargetTcpProxyProxyHeader> getProxyHeader() {
         return this.proxyHeader == null ? Output.empty() : this.proxyHeader;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -78,7 +78,7 @@ public final class TargetTcpProxyArgs extends io.pulumi.resources.ResourceArgs {
      * URL to the BackendService resource.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {

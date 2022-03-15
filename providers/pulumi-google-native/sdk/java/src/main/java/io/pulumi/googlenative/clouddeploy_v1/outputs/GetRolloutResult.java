@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRolloutResult {
     /**
      * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
@@ -96,25 +96,25 @@ public final class GetRolloutResult {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRolloutResult(
-        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
-        @OutputCustomType.Parameter("approvalState") String approvalState,
-        @OutputCustomType.Parameter("approveTime") String approveTime,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("deployEndTime") String deployEndTime,
-        @OutputCustomType.Parameter("deployFailureCause") String deployFailureCause,
-        @OutputCustomType.Parameter("deployStartTime") String deployStartTime,
-        @OutputCustomType.Parameter("deployingBuild") String deployingBuild,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("enqueueTime") String enqueueTime,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("failureReason") String failureReason,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("targetId") String targetId,
-        @OutputCustomType.Parameter("uid") String uid) {
+        @CustomType.Parameter("annotations") Map<String,String> annotations,
+        @CustomType.Parameter("approvalState") String approvalState,
+        @CustomType.Parameter("approveTime") String approveTime,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("deployEndTime") String deployEndTime,
+        @CustomType.Parameter("deployFailureCause") String deployFailureCause,
+        @CustomType.Parameter("deployStartTime") String deployStartTime,
+        @CustomType.Parameter("deployingBuild") String deployingBuild,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("enqueueTime") String enqueueTime,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("failureReason") String failureReason,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("targetId") String targetId,
+        @CustomType.Parameter("uid") String uid) {
         this.annotations = annotations;
         this.approvalState = approvalState;
         this.approveTime = approveTime;

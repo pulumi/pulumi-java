@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MySqlConnectionInfoResponse {
     /**
      * Password credential.
@@ -39,13 +39,13 @@ public final class MySqlConnectionInfoResponse {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MySqlConnectionInfoResponse(
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("serverName") String serverName,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userName") @Nullable String userName) {
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("serverName") String serverName,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userName") @Nullable String userName) {
         this.password = password;
         this.port = port;
         this.serverName = serverName;

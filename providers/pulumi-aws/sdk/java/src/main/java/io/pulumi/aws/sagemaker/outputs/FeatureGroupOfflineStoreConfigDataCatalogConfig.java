@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FeatureGroupOfflineStoreConfigDataCatalogConfig {
     /**
      * The name of the Glue table catalog.
@@ -27,11 +27,11 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfig {
      */
     private final @Nullable String tableName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FeatureGroupOfflineStoreConfigDataCatalogConfig(
-        @OutputCustomType.Parameter("catalog") @Nullable String catalog,
-        @OutputCustomType.Parameter("database") @Nullable String database,
-        @OutputCustomType.Parameter("tableName") @Nullable String tableName) {
+        @CustomType.Parameter("catalog") @Nullable String catalog,
+        @CustomType.Parameter("database") @Nullable String database,
+        @CustomType.Parameter("tableName") @Nullable String tableName) {
         this.catalog = catalog;
         this.database = database;
         this.tableName = tableName;

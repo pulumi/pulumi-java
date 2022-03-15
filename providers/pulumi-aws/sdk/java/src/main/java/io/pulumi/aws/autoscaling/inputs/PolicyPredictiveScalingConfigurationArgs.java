@@ -5,7 +5,7 @@ package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.aws.autoscaling.inputs.PolicyPredictiveScalingConfigurationMetricSpecificationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PolicyPredictiveScalingConfigurationArgs extends io.pulumi.re
      * Defines the behavior that should be applied if the forecast capacity approaches or exceeds the maximum capacity of the Auto Scaling group. Valid values are `HonorMaxCapacity` or `IncreaseMaxCapacity`. Default is `HonorMaxCapacity`.
      * 
      */
-    @InputImport(name="maxCapacityBreachBehavior")
+    @Import(name="maxCapacityBreachBehavior")
       private final @Nullable Output<String> maxCapacityBreachBehavior;
 
     public Output<String> getMaxCapacityBreachBehavior() {
@@ -30,7 +30,7 @@ public final class PolicyPredictiveScalingConfigurationArgs extends io.pulumi.re
      * The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity. Valid range is `0` to `100`. If set to `0`, Amazon EC2 Auto Scaling may scale capacity higher than the maximum capacity to equal but not exceed forecast capacity.
      * 
      */
-    @InputImport(name="maxCapacityBuffer")
+    @Import(name="maxCapacityBuffer")
       private final @Nullable Output<String> maxCapacityBuffer;
 
     public Output<String> getMaxCapacityBuffer() {
@@ -41,7 +41,7 @@ public final class PolicyPredictiveScalingConfigurationArgs extends io.pulumi.re
      * This structure includes the metrics and target utilization to use for predictive scaling.
      * 
      */
-    @InputImport(name="metricSpecification", required=true)
+    @Import(name="metricSpecification", required=true)
       private final Output<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> metricSpecification;
 
     public Output<PolicyPredictiveScalingConfigurationMetricSpecificationArgs> getMetricSpecification() {
@@ -52,7 +52,7 @@ public final class PolicyPredictiveScalingConfigurationArgs extends io.pulumi.re
      * The predictive scaling mode. Valid values are `ForecastAndScale` and `ForecastOnly`. Default is `ForecastOnly`.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
@@ -63,7 +63,7 @@ public final class PolicyPredictiveScalingConfigurationArgs extends io.pulumi.re
      * The amount of time, in seconds, by which the instance launch time can be advanced. Minimum is `0`.
      * 
      */
-    @InputImport(name="schedulingBufferTime")
+    @Import(name="schedulingBufferTime")
       private final @Nullable Output<String> schedulingBufferTime;
 
     public Output<String> getSchedulingBufferTime() {

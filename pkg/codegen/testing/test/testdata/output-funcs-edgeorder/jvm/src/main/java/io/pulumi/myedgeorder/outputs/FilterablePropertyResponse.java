@@ -3,12 +3,12 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FilterablePropertyResponse {
     /**
      * Values to be filtered.
@@ -21,10 +21,10 @@ public final class FilterablePropertyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FilterablePropertyResponse(
-        @OutputCustomType.Parameter("supportedValues") List<String> supportedValues,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("supportedValues") List<String> supportedValues,
+        @CustomType.Parameter("type") String type) {
         this.supportedValues = supportedValues;
         this.type = type;
     }

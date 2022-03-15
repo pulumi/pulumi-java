@@ -10,7 +10,7 @@ import io.pulumi.awsnative.amplify.outputs.BranchBasicAuthConfig;
 import io.pulumi.awsnative.amplify.outputs.BranchEnvironmentVariable;
 import io.pulumi.awsnative.amplify.outputs.BranchTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,79 +23,79 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:amplify:Branch")
 public class Branch extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="appId", type=String.class, parameters={})
+    @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
     public Output<String> getAppId() {
         return this.appId;
     }
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="basicAuthConfig", type=BranchBasicAuthConfig.class, parameters={})
+    @Export(name="basicAuthConfig", type=BranchBasicAuthConfig.class, parameters={})
     private Output</* @Nullable */ BranchBasicAuthConfig> basicAuthConfig;
 
     public Output</* @Nullable */ BranchBasicAuthConfig> getBasicAuthConfig() {
         return this.basicAuthConfig;
     }
-    @OutputExport(name="branchName", type=String.class, parameters={})
+    @Export(name="branchName", type=String.class, parameters={})
     private Output<String> branchName;
 
     public Output<String> getBranchName() {
         return this.branchName;
     }
-    @OutputExport(name="buildSpec", type=String.class, parameters={})
+    @Export(name="buildSpec", type=String.class, parameters={})
     private Output</* @Nullable */ String> buildSpec;
 
     public Output</* @Nullable */ String> getBuildSpec() {
         return this.buildSpec;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="enableAutoBuild", type=Boolean.class, parameters={})
+    @Export(name="enableAutoBuild", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableAutoBuild;
 
     public Output</* @Nullable */ Boolean> getEnableAutoBuild() {
         return this.enableAutoBuild;
     }
-    @OutputExport(name="enablePerformanceMode", type=Boolean.class, parameters={})
+    @Export(name="enablePerformanceMode", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enablePerformanceMode;
 
     public Output</* @Nullable */ Boolean> getEnablePerformanceMode() {
         return this.enablePerformanceMode;
     }
-    @OutputExport(name="enablePullRequestPreview", type=Boolean.class, parameters={})
+    @Export(name="enablePullRequestPreview", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enablePullRequestPreview;
 
     public Output</* @Nullable */ Boolean> getEnablePullRequestPreview() {
         return this.enablePullRequestPreview;
     }
-    @OutputExport(name="environmentVariables", type=List.class, parameters={BranchEnvironmentVariable.class})
+    @Export(name="environmentVariables", type=List.class, parameters={BranchEnvironmentVariable.class})
     private Output</* @Nullable */ List<BranchEnvironmentVariable>> environmentVariables;
 
     public Output</* @Nullable */ List<BranchEnvironmentVariable>> getEnvironmentVariables() {
         return this.environmentVariables;
     }
-    @OutputExport(name="pullRequestEnvironmentName", type=String.class, parameters={})
+    @Export(name="pullRequestEnvironmentName", type=String.class, parameters={})
     private Output</* @Nullable */ String> pullRequestEnvironmentName;
 
     public Output</* @Nullable */ String> getPullRequestEnvironmentName() {
         return this.pullRequestEnvironmentName;
     }
-    @OutputExport(name="stage", type=BranchStage.class, parameters={})
+    @Export(name="stage", type=BranchStage.class, parameters={})
     private Output</* @Nullable */ BranchStage> stage;
 
     public Output</* @Nullable */ BranchStage> getStage() {
         return this.stage;
     }
-    @OutputExport(name="tags", type=List.class, parameters={BranchTag.class})
+    @Export(name="tags", type=List.class, parameters={BranchTag.class})
     private Output</* @Nullable */ List<BranchTag>> tags;
 
     public Output</* @Nullable */ List<BranchTag>> getTags() {

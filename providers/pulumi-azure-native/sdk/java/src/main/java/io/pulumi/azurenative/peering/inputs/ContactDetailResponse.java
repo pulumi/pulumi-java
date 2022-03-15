@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ContactDetailResponse extends io.pulumi.resources.InvokeArgs 
      * The e-mail address of the contact.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable String email;
 
     public Optional<String> getEmail() {
@@ -33,7 +33,7 @@ public final class ContactDetailResponse extends io.pulumi.resources.InvokeArgs 
      * The phone number of the contact.
      * 
      */
-    @InputImport(name="phone")
+    @Import(name="phone")
       private final @Nullable String phone;
 
     public Optional<String> getPhone() {
@@ -44,7 +44,7 @@ public final class ContactDetailResponse extends io.pulumi.resources.InvokeArgs 
      * The role of the contact.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable String role;
 
     public Optional<String> getRole() {

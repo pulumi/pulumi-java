@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.DataprocParametersResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.SchedulerAcceleratorConfigResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.VertexAIParametersResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExecutionTemplateResponse {
     /**
      * Configuration (count and accelerator type) for hardware running notebook execution.
@@ -79,21 +79,21 @@ public final class ExecutionTemplateResponse {
      */
     private final VertexAIParametersResponse vertexAiParameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExecutionTemplateResponse(
-        @OutputCustomType.Parameter("acceleratorConfig") SchedulerAcceleratorConfigResponse acceleratorConfig,
-        @OutputCustomType.Parameter("containerImageUri") String containerImageUri,
-        @OutputCustomType.Parameter("dataprocParameters") DataprocParametersResponse dataprocParameters,
-        @OutputCustomType.Parameter("inputNotebookFile") String inputNotebookFile,
-        @OutputCustomType.Parameter("jobType") String jobType,
-        @OutputCustomType.Parameter("kernelSpec") String kernelSpec,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("masterType") String masterType,
-        @OutputCustomType.Parameter("outputNotebookFolder") String outputNotebookFolder,
-        @OutputCustomType.Parameter("parameters") String parameters,
-        @OutputCustomType.Parameter("paramsYamlFile") String paramsYamlFile,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("vertexAiParameters") VertexAIParametersResponse vertexAiParameters) {
+        @CustomType.Parameter("acceleratorConfig") SchedulerAcceleratorConfigResponse acceleratorConfig,
+        @CustomType.Parameter("containerImageUri") String containerImageUri,
+        @CustomType.Parameter("dataprocParameters") DataprocParametersResponse dataprocParameters,
+        @CustomType.Parameter("inputNotebookFile") String inputNotebookFile,
+        @CustomType.Parameter("jobType") String jobType,
+        @CustomType.Parameter("kernelSpec") String kernelSpec,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("masterType") String masterType,
+        @CustomType.Parameter("outputNotebookFolder") String outputNotebookFolder,
+        @CustomType.Parameter("parameters") String parameters,
+        @CustomType.Parameter("paramsYamlFile") String paramsYamlFile,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("vertexAiParameters") VertexAIParametersResponse vertexAiParameters) {
         this.acceleratorConfig = acceleratorConfig;
         this.containerImageUri = containerImageUri;
         this.dataprocParameters = dataprocParameters;

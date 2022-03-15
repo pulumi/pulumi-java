@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
      * Gets or sets the target fault domain.
      * 
      */
-    @InputImport(name="faultDomain")
+    @Import(name="faultDomain")
       private final @Nullable Output<Integer> faultDomain;
 
     public Output<Integer> getFaultDomain() {
@@ -35,7 +35,7 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
      * Expected value is 'Microsoft.Compute/availabilitySets'.
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
@@ -46,7 +46,7 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
      * Gets or sets the target Resource name.
      * 
      */
-    @InputImport(name="targetResourceName", required=true)
+    @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
 
     public Output<String> getTargetResourceName() {
@@ -57,7 +57,7 @@ public final class AvailabilitySetResourceSettingsArgs extends io.pulumi.resourc
      * Gets or sets the target update domain.
      * 
      */
-    @InputImport(name="updateDomain")
+    @Import(name="updateDomain")
       private final @Nullable Output<Integer> updateDomain;
 
     public Output<Integer> getUpdateDomain() {

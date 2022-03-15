@@ -8,7 +8,7 @@ import io.pulumi.awsnative.redshift.enums.EventSubscriptionSeverity;
 import io.pulumi.awsnative.redshift.enums.EventSubscriptionSourceType;
 import io.pulumi.awsnative.redshift.inputs.EventSubscriptionTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * A boolean value; set to true to activate the subscription, and set to false to create the subscription but not activate it.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -35,7 +35,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * Specifies the Amazon Redshift event categories to be published by the event notification subscription.
      * 
      */
-    @InputImport(name="eventCategories")
+    @Import(name="eventCategories")
       private final @Nullable Output<List<EventSubscriptionEventCategoriesItem>> eventCategories;
 
     public Output<List<EventSubscriptionEventCategoriesItem>> getEventCategories() {
@@ -46,7 +46,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * Specifies the Amazon Redshift event severity to be published by the event notification subscription.
      * 
      */
-    @InputImport(name="severity")
+    @Import(name="severity")
       private final @Nullable Output<EventSubscriptionSeverity> severity;
 
     public Output<EventSubscriptionSeverity> getSeverity() {
@@ -57,7 +57,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * The Amazon Resource Name (ARN) of the Amazon SNS topic used to transmit the event notifications.
      * 
      */
-    @InputImport(name="snsTopicArn")
+    @Import(name="snsTopicArn")
       private final @Nullable Output<String> snsTopicArn;
 
     public Output<String> getSnsTopicArn() {
@@ -68,7 +68,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * A list of one or more identifiers of Amazon Redshift source objects.
      * 
      */
-    @InputImport(name="sourceIds")
+    @Import(name="sourceIds")
       private final @Nullable Output<List<String>> sourceIds;
 
     public Output<List<String>> getSourceIds() {
@@ -79,7 +79,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * The type of source that will be generating the events.
      * 
      */
-    @InputImport(name="sourceType")
+    @Import(name="sourceType")
       private final @Nullable Output<EventSubscriptionSourceType> sourceType;
 
     public Output<EventSubscriptionSourceType> getSourceType() {
@@ -90,7 +90,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * The name of the Amazon Redshift event notification subscription
      * 
      */
-    @InputImport(name="subscriptionName", required=true)
+    @Import(name="subscriptionName", required=true)
       private final Output<String> subscriptionName;
 
     public Output<String> getSubscriptionName() {
@@ -101,7 +101,7 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<EventSubscriptionTagArgs>> tags;
 
     public Output<List<EventSubscriptionTagArgs>> getTags() {

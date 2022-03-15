@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionCookies {
     private final String forward;
     private final @Nullable List<String> whitelistedNames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionCookies(
-        @OutputCustomType.Parameter("forward") String forward,
-        @OutputCustomType.Parameter("whitelistedNames") @Nullable List<String> whitelistedNames) {
+        @CustomType.Parameter("forward") String forward,
+        @CustomType.Parameter("whitelistedNames") @Nullable List<String> whitelistedNames) {
         this.forward = forward;
         this.whitelistedNames = whitelistedNames;
     }

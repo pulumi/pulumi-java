@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.ConfigurationGroupResponse;
 import io.pulumi.azurenative.network.inputs.ConnectivityGroupItemResponse;
 import io.pulumi.azurenative.network.inputs.HubResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * Groups for configuration
      * 
      */
-    @InputImport(name="appliesToGroups")
+    @Import(name="appliesToGroups")
       private final @Nullable List<ConnectivityGroupItemResponse> appliesToGroups;
 
     public List<ConnectivityGroupItemResponse> getAppliesToGroups() {
@@ -37,7 +37,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * Effective configuration groups.
      * 
      */
-    @InputImport(name="configurationGroups")
+    @Import(name="configurationGroups")
       private final @Nullable List<ConfigurationGroupResponse> configurationGroups;
 
     public List<ConfigurationGroupResponse> getConfigurationGroups() {
@@ -48,7 +48,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * Connectivity topology type.
      * 
      */
-    @InputImport(name="connectivityTopology", required=true)
+    @Import(name="connectivityTopology", required=true)
       private final String connectivityTopology;
 
     public String getConnectivityTopology() {
@@ -59,7 +59,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * Flag if need to remove current existing peerings.
      * 
      */
-    @InputImport(name="deleteExistingPeering")
+    @Import(name="deleteExistingPeering")
       private final @Nullable String deleteExistingPeering;
 
     public Optional<String> getDeleteExistingPeering() {
@@ -70,7 +70,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * A description of the connectivity configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -81,7 +81,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * A friendly name for the resource.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -92,7 +92,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * List of hubItems
      * 
      */
-    @InputImport(name="hubs")
+    @Import(name="hubs")
       private final @Nullable List<HubResponse> hubs;
 
     public List<HubResponse> getHubs() {
@@ -103,7 +103,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -114,7 +114,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * Flag if global mesh is supported.
      * 
      */
-    @InputImport(name="isGlobal")
+    @Import(name="isGlobal")
       private final @Nullable String isGlobal;
 
     public Optional<String> getIsGlobal() {
@@ -125,7 +125,7 @@ public final class EffectiveConnectivityConfigurationResponse extends io.pulumi.
      * The provisioning state of the connectivity configuration resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

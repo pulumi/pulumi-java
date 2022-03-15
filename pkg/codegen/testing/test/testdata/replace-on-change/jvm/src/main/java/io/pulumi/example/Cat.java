@@ -4,7 +4,7 @@
 package io.pulumi.example;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.example.CatArgs;
 import io.pulumi.example.God;
@@ -17,31 +17,31 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::Cat")
 public class Cat extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="foes", type=Map.class, parameters={String.class, Toy.class})
+    @Export(name="foes", type=Map.class, parameters={String.class, Toy.class})
     private Output</* @Nullable */ Map<String,Toy>> foes;
 
     public Output</* @Nullable */ Map<String,Toy>> getFoes() {
         return this.foes;
     }
-    @OutputExport(name="friends", type=List.class, parameters={Toy.class})
+    @Export(name="friends", type=List.class, parameters={Toy.class})
     private Output</* @Nullable */ List<Toy>> friends;
 
     public Output</* @Nullable */ List<Toy>> getFriends() {
         return this.friends;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    @OutputExport(name="other", type=God.class, parameters={})
+    @Export(name="other", type=God.class, parameters={})
     private Output</* @Nullable */ God> other;
 
     public Output</* @Nullable */ God> getOther() {
         return this.other;
     }
-    @OutputExport(name="toy", type=Toy.class, parameters={})
+    @Export(name="toy", type=Toy.class, parameters={})
     private Output</* @Nullable */ Toy> toy;
 
     public Output</* @Nullable */ Toy> getToy() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PreventionInspectTemplateInspectConfigRuleSetInfoType {
     /**
      * Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
@@ -16,8 +16,8 @@ public final class PreventionInspectTemplateInspectConfigRuleSetInfoType {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private PreventionInspectTemplateInspectConfigRuleSetInfoType(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private PreventionInspectTemplateInspectConfigRuleSetInfoType(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

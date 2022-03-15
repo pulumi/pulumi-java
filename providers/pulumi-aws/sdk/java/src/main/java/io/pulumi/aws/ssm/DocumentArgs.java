@@ -5,7 +5,7 @@ package io.pulumi.aws.ssm;
 
 import io.pulumi.aws.ssm.inputs.DocumentAttachmentsSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * One or more configuration blocks describing attachments sources to a version of a document. Defined below.
      * 
      */
-    @InputImport(name="attachmentsSources")
+    @Import(name="attachmentsSources")
       private final @Nullable Output<List<DocumentAttachmentsSourceArgs>> attachmentsSources;
 
     public Output<List<DocumentAttachmentsSourceArgs>> getAttachmentsSources() {
@@ -32,7 +32,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * The JSON or YAML content of the document.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final Output<String> content;
 
     public Output<String> getContent() {
@@ -43,7 +43,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * The format of the document. Valid document types include: `JSON` and `YAML`
      * 
      */
-    @InputImport(name="documentFormat")
+    @Import(name="documentFormat")
       private final @Nullable Output<String> documentFormat;
 
     public Output<String> getDocumentFormat() {
@@ -54,7 +54,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
      * 
      */
-    @InputImport(name="documentType", required=true)
+    @Import(name="documentType", required=true)
       private final Output<String> documentType;
 
     public Output<String> getDocumentType() {
@@ -65,7 +65,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the document.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * Additional Permissions to attach to the document. See Permissions below for details.
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<Map<String,String>> permissions;
 
     public Output<Map<String,String>> getPermissions() {
@@ -87,7 +87,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -98,7 +98,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
      * 
      */
-    @InputImport(name="targetType")
+    @Import(name="targetType")
       private final @Nullable Output<String> targetType;
 
     public Output<String> getTargetType() {
@@ -109,7 +109,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * A field specifying the version of the artifact you are creating with the document. For example, "Release 12, Update 6". This value is unique across all versions of a document and cannot be changed for an existing document version.
      * 
      */
-    @InputImport(name="versionName")
+    @Import(name="versionName")
       private final @Nullable Output<String> versionName;
 
     public Output<String> getVersionName() {

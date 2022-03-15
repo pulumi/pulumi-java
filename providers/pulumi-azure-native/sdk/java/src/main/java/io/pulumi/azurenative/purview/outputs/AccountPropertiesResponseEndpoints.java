@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.purview.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AccountPropertiesResponseEndpoints {
     /**
      * Gets the catalog endpoint.
@@ -25,11 +25,11 @@ public final class AccountPropertiesResponseEndpoints {
      */
     private final String scan;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccountPropertiesResponseEndpoints(
-        @OutputCustomType.Parameter("catalog") String catalog,
-        @OutputCustomType.Parameter("guardian") String guardian,
-        @OutputCustomType.Parameter("scan") String scan) {
+        @CustomType.Parameter("catalog") String catalog,
+        @CustomType.Parameter("guardian") String guardian,
+        @CustomType.Parameter("scan") String scan) {
         this.catalog = catalog;
         this.guardian = guardian;
         this.scan = scan;

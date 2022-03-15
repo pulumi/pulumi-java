@@ -22,7 +22,7 @@ import io.pulumi.awsnative.s3.inputs.BucketTagArgs;
 import io.pulumi.awsnative.s3.inputs.BucketVersioningConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.BucketWebsiteConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for the transfer acceleration state.
      * 
      */
-    @InputImport(name="accelerateConfiguration")
+    @Import(name="accelerateConfiguration")
       private final @Nullable Output<BucketAccelerateConfigurationArgs> accelerateConfiguration;
 
     public Output<BucketAccelerateConfigurationArgs> getAccelerateConfiguration() {
@@ -49,7 +49,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * A canned access control list (ACL) that grants predefined permissions to the bucket.
      * 
      */
-    @InputImport(name="accessControl")
+    @Import(name="accessControl")
       private final @Nullable Output<BucketAccessControl> accessControl;
 
     public Output<BucketAccessControl> getAccessControl() {
@@ -60,14 +60,14 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration and any analyses for the analytics filter of an Amazon S3 bucket.
      * 
      */
-    @InputImport(name="analyticsConfigurations")
+    @Import(name="analyticsConfigurations")
       private final @Nullable Output<List<BucketAnalyticsConfigurationArgs>> analyticsConfigurations;
 
     public Output<List<BucketAnalyticsConfigurationArgs>> getAnalyticsConfigurations() {
         return this.analyticsConfigurations == null ? Output.empty() : this.analyticsConfigurations;
     }
 
-    @InputImport(name="bucketEncryption")
+    @Import(name="bucketEncryption")
       private final @Nullable Output<BucketEncryptionArgs> bucketEncryption;
 
     public Output<BucketEncryptionArgs> getBucketEncryption() {
@@ -78,7 +78,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * A name for the bucket. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.
      * 
      */
-    @InputImport(name="bucketName")
+    @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
     public Output<String> getBucketName() {
@@ -89,7 +89,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * Rules that define cross-origin resource sharing of objects in this bucket.
      * 
      */
-    @InputImport(name="corsConfiguration")
+    @Import(name="corsConfiguration")
       private final @Nullable Output<BucketCorsConfigurationArgs> corsConfiguration;
 
     public Output<BucketCorsConfigurationArgs> getCorsConfiguration() {
@@ -100,7 +100,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the S3 Intelligent-Tiering configuration for an Amazon S3 bucket.
      * 
      */
-    @InputImport(name="intelligentTieringConfigurations")
+    @Import(name="intelligentTieringConfigurations")
       private final @Nullable Output<List<BucketIntelligentTieringConfigurationArgs>> intelligentTieringConfigurations;
 
     public Output<List<BucketIntelligentTieringConfigurationArgs>> getIntelligentTieringConfigurations() {
@@ -111,7 +111,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * The inventory configuration for an Amazon S3 bucket.
      * 
      */
-    @InputImport(name="inventoryConfigurations")
+    @Import(name="inventoryConfigurations")
       private final @Nullable Output<List<BucketInventoryConfigurationArgs>> inventoryConfigurations;
 
     public Output<List<BucketInventoryConfigurationArgs>> getInventoryConfigurations() {
@@ -122,7 +122,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * Rules that define how Amazon S3 manages objects during their lifetime.
      * 
      */
-    @InputImport(name="lifecycleConfiguration")
+    @Import(name="lifecycleConfiguration")
       private final @Nullable Output<BucketLifecycleConfigurationArgs> lifecycleConfiguration;
 
     public Output<BucketLifecycleConfigurationArgs> getLifecycleConfiguration() {
@@ -133,7 +133,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * Settings that define where logs are stored.
      * 
      */
-    @InputImport(name="loggingConfiguration")
+    @Import(name="loggingConfiguration")
       private final @Nullable Output<BucketLoggingConfigurationArgs> loggingConfiguration;
 
     public Output<BucketLoggingConfigurationArgs> getLoggingConfiguration() {
@@ -144,7 +144,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * Settings that define a metrics configuration for the CloudWatch request metrics from the bucket.
      * 
      */
-    @InputImport(name="metricsConfigurations")
+    @Import(name="metricsConfigurations")
       private final @Nullable Output<List<BucketMetricsConfigurationArgs>> metricsConfigurations;
 
     public Output<List<BucketMetricsConfigurationArgs>> getMetricsConfigurations() {
@@ -155,7 +155,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration that defines how Amazon S3 handles bucket notifications.
      * 
      */
-    @InputImport(name="notificationConfiguration")
+    @Import(name="notificationConfiguration")
       private final @Nullable Output<BucketNotificationConfigurationArgs> notificationConfiguration;
 
     public Output<BucketNotificationConfigurationArgs> getNotificationConfiguration() {
@@ -166,7 +166,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * Places an Object Lock configuration on the specified bucket.
      * 
      */
-    @InputImport(name="objectLockConfiguration")
+    @Import(name="objectLockConfiguration")
       private final @Nullable Output<BucketObjectLockConfigurationArgs> objectLockConfiguration;
 
     public Output<BucketObjectLockConfigurationArgs> getObjectLockConfiguration() {
@@ -177,7 +177,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether this bucket has an Object Lock configuration enabled.
      * 
      */
-    @InputImport(name="objectLockEnabled")
+    @Import(name="objectLockEnabled")
       private final @Nullable Output<Boolean> objectLockEnabled;
 
     public Output<Boolean> getObjectLockEnabled() {
@@ -188,14 +188,14 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the container element for object ownership rules.
      * 
      */
-    @InputImport(name="ownershipControls")
+    @Import(name="ownershipControls")
       private final @Nullable Output<BucketOwnershipControlsArgs> ownershipControls;
 
     public Output<BucketOwnershipControlsArgs> getOwnershipControls() {
         return this.ownershipControls == null ? Output.empty() : this.ownershipControls;
     }
 
-    @InputImport(name="publicAccessBlockConfiguration")
+    @Import(name="publicAccessBlockConfiguration")
       private final @Nullable Output<BucketPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
 
     public Output<BucketPublicAccessBlockConfigurationArgs> getPublicAccessBlockConfiguration() {
@@ -206,7 +206,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for replicating objects in an S3 bucket.
      * 
      */
-    @InputImport(name="replicationConfiguration")
+    @Import(name="replicationConfiguration")
       private final @Nullable Output<BucketReplicationConfigurationArgs> replicationConfiguration;
 
     public Output<BucketReplicationConfigurationArgs> getReplicationConfiguration() {
@@ -217,21 +217,21 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * An arbitrary set of tags (key-value pairs) for this S3 bucket.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<BucketTagArgs>> tags;
 
     public Output<List<BucketTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="versioningConfiguration")
+    @Import(name="versioningConfiguration")
       private final @Nullable Output<BucketVersioningConfigurationArgs> versioningConfiguration;
 
     public Output<BucketVersioningConfigurationArgs> getVersioningConfiguration() {
         return this.versioningConfiguration == null ? Output.empty() : this.versioningConfiguration;
     }
 
-    @InputImport(name="websiteConfiguration")
+    @Import(name="websiteConfiguration")
       private final @Nullable Output<BucketWebsiteConfigurationArgs> websiteConfiguration;
 
     public Output<BucketWebsiteConfigurationArgs> getWebsiteConfiguration() {

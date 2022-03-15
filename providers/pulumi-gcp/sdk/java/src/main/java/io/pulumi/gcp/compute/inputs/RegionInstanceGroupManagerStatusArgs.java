@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatusStatefulArgs;
 import io.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatusVersionTargetArgs;
 import java.lang.Boolean;
@@ -21,7 +21,7 @@ public final class RegionInstanceGroupManagerStatusArgs extends io.pulumi.resour
      * A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
      * 
      */
-    @InputImport(name="isStable")
+    @Import(name="isStable")
       private final @Nullable Output<Boolean> isStable;
 
     public Output<Boolean> getIsStable() {
@@ -32,7 +32,7 @@ public final class RegionInstanceGroupManagerStatusArgs extends io.pulumi.resour
      * Stateful status of the given Instance Group Manager.
      * 
      */
-    @InputImport(name="statefuls")
+    @Import(name="statefuls")
       private final @Nullable Output<List<RegionInstanceGroupManagerStatusStatefulArgs>> statefuls;
 
     public Output<List<RegionInstanceGroupManagerStatusStatefulArgs>> getStatefuls() {
@@ -43,7 +43,7 @@ public final class RegionInstanceGroupManagerStatusArgs extends io.pulumi.resour
      * A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.
      * 
      */
-    @InputImport(name="versionTargets")
+    @Import(name="versionTargets")
       private final @Nullable Output<List<RegionInstanceGroupManagerStatusVersionTargetArgs>> versionTargets;
 
     public Output<List<RegionInstanceGroupManagerStatusVersionTargetArgs>> getVersionTargets() {

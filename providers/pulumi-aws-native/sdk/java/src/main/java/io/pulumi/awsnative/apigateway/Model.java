@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apigateway;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.apigateway.ModelArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -22,7 +22,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * The content type for the model.
      * 
      */
-    @OutputExport(name="contentType", type=String.class, parameters={})
+    @Export(name="contentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentType;
 
     /**
@@ -36,7 +36,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * A description that identifies this model.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -50,7 +50,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * A name for the model. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the model name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -64,7 +64,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * The ID of a REST API with which to associate this model.
      * 
      */
-    @OutputExport(name="restApiId", type=String.class, parameters={})
+    @Export(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
     /**
@@ -78,7 +78,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * The schema to use to transform data to one or more output formats. Specify null ({}) if you don't want to specify a schema.
      * 
      */
-    @OutputExport(name="schema", type=Object.class, parameters={})
+    @Export(name="schema", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> schema;
 
     /**

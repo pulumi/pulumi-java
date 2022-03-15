@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53recoveryreadiness.ReadinessCheckArgs;
 import io.pulumi.aws.route53recoveryreadiness.inputs.ReadinessCheckState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * ARN of the readiness_check
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * Unique name describing the readiness check.
      * 
      */
-    @OutputExport(name="readinessCheckName", type=String.class, parameters={})
+    @Export(name="readinessCheckName", type=String.class, parameters={})
     private Output<String> readinessCheckName;
 
     /**
@@ -61,7 +61,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * Name describing the resource set that will be monitored for readiness.
      * 
      */
-    @OutputExport(name="resourceSetName", type=String.class, parameters={})
+    @Export(name="resourceSetName", type=String.class, parameters={})
     private Output<String> resourceSetName;
 
     /**
@@ -75,7 +75,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -89,7 +89,7 @@ public class ReadinessCheck extends io.pulumi.resources.CustomResource {
      * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

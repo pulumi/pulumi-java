@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ManagedRuleGroupOverrideResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedRuleSetResponse {
     /**
      * Defines the rule group overrides to apply to the rule set.
@@ -28,11 +28,11 @@ public final class ManagedRuleSetResponse {
      */
     private final String ruleSetVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedRuleSetResponse(
-        @OutputCustomType.Parameter("ruleGroupOverrides") @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides,
-        @OutputCustomType.Parameter("ruleSetType") String ruleSetType,
-        @OutputCustomType.Parameter("ruleSetVersion") String ruleSetVersion) {
+        @CustomType.Parameter("ruleGroupOverrides") @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides,
+        @CustomType.Parameter("ruleSetType") String ruleSetType,
+        @CustomType.Parameter("ruleSetVersion") String ruleSetVersion) {
         this.ruleGroupOverrides = ruleGroupOverrides;
         this.ruleSetType = ruleSetType;
         this.ruleSetVersion = ruleSetVersion;

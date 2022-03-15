@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicelinker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'secret'.
      * 
      */
-    @InputImport(name="authType", required=true)
+    @Import(name="authType", required=true)
       private final Output<String> authType;
 
     public Output<String> getAuthType() {
@@ -34,7 +34,7 @@ public final class SecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Username or account name for secret auth.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -45,7 +45,7 @@ public final class SecretAuthInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Password or account key for secret auth.
      * 
      */
-    @InputImport(name="secret")
+    @Import(name="secret")
       private final @Nullable Output<String> secret;
 
     public Output<String> getSecret() {

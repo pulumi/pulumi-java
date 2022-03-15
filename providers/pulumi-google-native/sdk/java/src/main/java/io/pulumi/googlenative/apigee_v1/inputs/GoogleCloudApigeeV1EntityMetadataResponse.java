@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends io.pulumi.r
      * Time at which the API proxy was created, in milliseconds since epoch.
      * 
      */
-    @InputImport(name="createdAt", required=true)
+    @Import(name="createdAt", required=true)
       private final String createdAt;
 
     public String getCreatedAt() {
@@ -31,7 +31,7 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends io.pulumi.r
      * Time at which the API proxy was most recently modified, in milliseconds since epoch.
      * 
      */
-    @InputImport(name="lastModifiedAt", required=true)
+    @Import(name="lastModifiedAt", required=true)
       private final String lastModifiedAt;
 
     public String getLastModifiedAt() {
@@ -42,7 +42,7 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends io.pulumi.r
      * The type of entity described
      * 
      */
-    @InputImport(name="subType", required=true)
+    @Import(name="subType", required=true)
       private final String subType;
 
     public String getSubType() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ApplicationUrlDispatchRulesDispatchRuleArgs extends io.pulumi
      * Defaults to matching all domains: "*".
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
@@ -31,7 +31,7 @@ public final class ApplicationUrlDispatchRulesDispatchRuleArgs extends io.pulumi
      * The sum of the lengths of the domain and path may not exceed 100 characters.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final Output<String> path;
 
     public Output<String> getPath() {
@@ -43,7 +43,7 @@ public final class ApplicationUrlDispatchRulesDispatchRuleArgs extends io.pulumi
      * The sum of the lengths of the domain and path may not exceed 100 characters.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final Output<String> service;
 
     public Output<String> getService() {

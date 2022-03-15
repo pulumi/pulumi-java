@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1DatastoreConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * Datastore Configurations.
      * 
      */
-    @InputImport(name="datastoreConfig")
+    @Import(name="datastoreConfig")
       private final @Nullable Output<GoogleCloudApigeeV1DatastoreConfigArgs> datastoreConfig;
 
     public Output<GoogleCloudApigeeV1DatastoreConfigArgs> getDatastoreConfig() {
@@ -30,14 +30,14 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * Display name in UI
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
     public Output<String> getOrganizationId() {
@@ -48,7 +48,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
      * Destination storage type. Supported types `gcs` or `bigquery`.
      * 
      */
-    @InputImport(name="targetType")
+    @Import(name="targetType")
       private final @Nullable Output<String> targetType;
 
     public Output<String> getTargetType() {

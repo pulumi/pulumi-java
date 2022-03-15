@@ -7,7 +7,7 @@ import io.pulumi.awsnative.servicecatalog.enums.CloudFormationProvisionedProduct
 import io.pulumi.awsnative.servicecatalog.outputs.CloudFormationProvisionedProductProvisioningParameter;
 import io.pulumi.awsnative.servicecatalog.outputs.CloudFormationProvisionedProductProvisioningPreferences;
 import io.pulumi.awsnative.servicecatalog.outputs.CloudFormationProvisionedProductTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCloudFormationProvisionedProductResult {
     private final @Nullable CloudFormationProvisionedProductAcceptLanguage acceptLanguage;
     private final @Nullable String cloudformationStackArn;
@@ -36,22 +36,22 @@ public final class GetCloudFormationProvisionedProductResult {
     private final @Nullable String recordId;
     private final @Nullable List<CloudFormationProvisionedProductTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCloudFormationProvisionedProductResult(
-        @OutputCustomType.Parameter("acceptLanguage") @Nullable CloudFormationProvisionedProductAcceptLanguage acceptLanguage,
-        @OutputCustomType.Parameter("cloudformationStackArn") @Nullable String cloudformationStackArn,
-        @OutputCustomType.Parameter("outputs") @Nullable Object outputs,
-        @OutputCustomType.Parameter("pathId") @Nullable String pathId,
-        @OutputCustomType.Parameter("pathName") @Nullable String pathName,
-        @OutputCustomType.Parameter("productId") @Nullable String productId,
-        @OutputCustomType.Parameter("productName") @Nullable String productName,
-        @OutputCustomType.Parameter("provisionedProductId") @Nullable String provisionedProductId,
-        @OutputCustomType.Parameter("provisioningArtifactId") @Nullable String provisioningArtifactId,
-        @OutputCustomType.Parameter("provisioningArtifactName") @Nullable String provisioningArtifactName,
-        @OutputCustomType.Parameter("provisioningParameters") @Nullable List<CloudFormationProvisionedProductProvisioningParameter> provisioningParameters,
-        @OutputCustomType.Parameter("provisioningPreferences") @Nullable CloudFormationProvisionedProductProvisioningPreferences provisioningPreferences,
-        @OutputCustomType.Parameter("recordId") @Nullable String recordId,
-        @OutputCustomType.Parameter("tags") @Nullable List<CloudFormationProvisionedProductTag> tags) {
+        @CustomType.Parameter("acceptLanguage") @Nullable CloudFormationProvisionedProductAcceptLanguage acceptLanguage,
+        @CustomType.Parameter("cloudformationStackArn") @Nullable String cloudformationStackArn,
+        @CustomType.Parameter("outputs") @Nullable Object outputs,
+        @CustomType.Parameter("pathId") @Nullable String pathId,
+        @CustomType.Parameter("pathName") @Nullable String pathName,
+        @CustomType.Parameter("productId") @Nullable String productId,
+        @CustomType.Parameter("productName") @Nullable String productName,
+        @CustomType.Parameter("provisionedProductId") @Nullable String provisionedProductId,
+        @CustomType.Parameter("provisioningArtifactId") @Nullable String provisioningArtifactId,
+        @CustomType.Parameter("provisioningArtifactName") @Nullable String provisioningArtifactName,
+        @CustomType.Parameter("provisioningParameters") @Nullable List<CloudFormationProvisionedProductProvisioningParameter> provisioningParameters,
+        @CustomType.Parameter("provisioningPreferences") @Nullable CloudFormationProvisionedProductProvisioningPreferences provisioningPreferences,
+        @CustomType.Parameter("recordId") @Nullable String recordId,
+        @CustomType.Parameter("tags") @Nullable List<CloudFormationProvisionedProductTag> tags) {
         this.acceptLanguage = acceptLanguage;
         this.cloudformationStackArn = cloudformationStackArn;
         this.outputs = outputs;

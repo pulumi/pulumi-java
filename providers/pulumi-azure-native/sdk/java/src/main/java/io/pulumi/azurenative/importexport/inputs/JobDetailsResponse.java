@@ -11,7 +11,7 @@ import io.pulumi.azurenative.importexport.inputs.PackageInformationResponse;
 import io.pulumi.azurenative.importexport.inputs.ReturnAddressResponse;
 import io.pulumi.azurenative.importexport.inputs.ReturnShippingResponse;
 import io.pulumi.azurenative.importexport.inputs.ShippingInformationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +33,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.
      * 
      */
-    @InputImport(name="backupDriveManifest")
+    @Import(name="backupDriveManifest")
       private final @Nullable Boolean backupDriveManifest;
 
     public Optional<Boolean> getBackupDriveManifest() {
@@ -44,7 +44,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * Indicates whether a request has been submitted to cancel the job.
      * 
      */
-    @InputImport(name="cancelRequested")
+    @Import(name="cancelRequested")
       private final @Nullable Boolean cancelRequested;
 
     public Optional<Boolean> getCancelRequested() {
@@ -55,7 +55,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * Contains information about the package being shipped by the customer to the Microsoft data center.
      * 
      */
-    @InputImport(name="deliveryPackage")
+    @Import(name="deliveryPackage")
       private final @Nullable DeliveryPackageInformationResponse deliveryPackage;
 
     public Optional<DeliveryPackageInformationResponse> getDeliveryPackage() {
@@ -66,7 +66,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.
      * 
      */
-    @InputImport(name="diagnosticsPath")
+    @Import(name="diagnosticsPath")
       private final @Nullable String diagnosticsPath;
 
     public Optional<String> getDiagnosticsPath() {
@@ -77,7 +77,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.
      * 
      */
-    @InputImport(name="driveList")
+    @Import(name="driveList")
       private final @Nullable List<DriveStatusResponse> driveList;
 
     public List<DriveStatusResponse> getDriveList() {
@@ -88,7 +88,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * Contains information about the encryption key.
      * 
      */
-    @InputImport(name="encryptionKey")
+    @Import(name="encryptionKey")
       private final @Nullable EncryptionKeyDetailsResponse encryptionKey;
 
     public Optional<EncryptionKeyDetailsResponse> getEncryptionKey() {
@@ -99,7 +99,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.
      * 
      */
-    @InputImport(name="export")
+    @Import(name="export")
       private final @Nullable ExportResponse export;
 
     public Optional<ExportResponse> getExport() {
@@ -110,7 +110,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.
      * 
      */
-    @InputImport(name="incompleteBlobListUri")
+    @Import(name="incompleteBlobListUri")
       private final @Nullable String incompleteBlobListUri;
 
     public Optional<String> getIncompleteBlobListUri() {
@@ -121,7 +121,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * The type of job
      * 
      */
-    @InputImport(name="jobType")
+    @Import(name="jobType")
       private final @Nullable String jobType;
 
     public Optional<String> getJobType() {
@@ -132,7 +132,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * Default value is Error. Indicates whether error logging or verbose logging will be enabled.
      * 
      */
-    @InputImport(name="logLevel")
+    @Import(name="logLevel")
       private final @Nullable String logLevel;
 
     public Optional<String> getLogLevel() {
@@ -143,7 +143,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * Overall percentage completed for the job.
      * 
      */
-    @InputImport(name="percentComplete")
+    @Import(name="percentComplete")
       private final @Nullable Integer percentComplete;
 
     public Optional<Integer> getPercentComplete() {
@@ -154,7 +154,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the provisioning state of the job.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
@@ -165,7 +165,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the return address information for the job.
      * 
      */
-    @InputImport(name="returnAddress")
+    @Import(name="returnAddress")
       private final @Nullable ReturnAddressResponse returnAddress;
 
     public Optional<ReturnAddressResponse> getReturnAddress() {
@@ -176,7 +176,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned.
      * 
      */
-    @InputImport(name="returnPackage")
+    @Import(name="returnPackage")
       private final @Nullable PackageInformationResponse returnPackage;
 
     public Optional<PackageInformationResponse> getReturnPackage() {
@@ -187,7 +187,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the return carrier and customer's account with the carrier.
      * 
      */
-    @InputImport(name="returnShipping")
+    @Import(name="returnShipping")
       private final @Nullable ReturnShippingResponse returnShipping;
 
     public Optional<ReturnShippingResponse> getReturnShipping() {
@@ -198,7 +198,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * Contains information about the Microsoft datacenter to which the drives should be shipped.
      * 
      */
-    @InputImport(name="shippingInformation")
+    @Import(name="shippingInformation")
       private final @Nullable ShippingInformationResponse shippingInformation;
 
     public Optional<ShippingInformationResponse> getShippingInformation() {
@@ -209,7 +209,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * Current state of the job.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {
@@ -220,7 +220,7 @@ public final class JobDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * The resource identifier of the storage account where data will be imported to or exported from.
      * 
      */
-    @InputImport(name="storageAccountId")
+    @Import(name="storageAccountId")
       private final @Nullable String storageAccountId;
 
     public Optional<String> getStorageAccountId() {

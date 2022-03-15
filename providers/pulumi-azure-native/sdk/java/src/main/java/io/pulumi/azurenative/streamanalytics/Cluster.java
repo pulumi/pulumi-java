@@ -9,7 +9,7 @@ import io.pulumi.azurenative.streamanalytics.outputs.ClusterPropertiesResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.ClusterSkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The current entity tag for the cluster. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -51,7 +51,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -65,7 +65,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The properties associated with a Stream Analytics cluster.
      * 
      */
-    @OutputExport(name="properties", type=ClusterPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=ClusterPropertiesResponse.class, parameters={})
     private Output<ClusterPropertiesResponse> properties;
 
     /**
@@ -93,7 +93,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The SKU of the cluster. This determines the size/capacity of the cluster. Required on PUT (CreateOrUpdate) requests.
      * 
      */
-    @OutputExport(name="sku", type=ClusterSkuResponse.class, parameters={})
+    @Export(name="sku", type=ClusterSkuResponse.class, parameters={})
     private Output</* @Nullable */ ClusterSkuResponse> sku;
 
     /**
@@ -107,7 +107,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -121,7 +121,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

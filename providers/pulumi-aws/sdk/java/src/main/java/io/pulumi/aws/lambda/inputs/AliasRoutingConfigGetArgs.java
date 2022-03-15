@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class AliasRoutingConfigGetArgs extends io.pulumi.resources.Resourc
      * A map that defines the proportion of events that should be sent to different versions of a lambda function.
      * 
      */
-    @InputImport(name="additionalVersionWeights")
+    @Import(name="additionalVersionWeights")
       private final @Nullable Output<Map<String,Double>> additionalVersionWeights;
 
     public Output<Map<String,Double>> getAdditionalVersionWeights() {

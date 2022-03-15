@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloud9;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class EnvironmentMembershipArgs extends io.pulumi.resources.Resourc
      * The ID of the environment that contains the environment member you want to add.
      * 
      */
-    @InputImport(name="environmentId", required=true)
+    @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
@@ -28,7 +28,7 @@ public final class EnvironmentMembershipArgs extends io.pulumi.resources.Resourc
      * The type of environment member permissions you want to associate with this environment member. Allowed values are `read-only` and `read-write` .
      * 
      */
-    @InputImport(name="permissions", required=true)
+    @Import(name="permissions", required=true)
       private final Output<String> permissions;
 
     public Output<String> getPermissions() {
@@ -39,7 +39,7 @@ public final class EnvironmentMembershipArgs extends io.pulumi.resources.Resourc
      * The Amazon Resource Name (ARN) of the environment member you want to add.
      * 
      */
-    @InputImport(name="userArn", required=true)
+    @Import(name="userArn", required=true)
       private final Output<String> userArn;
 
     public Output<String> getUserArn() {

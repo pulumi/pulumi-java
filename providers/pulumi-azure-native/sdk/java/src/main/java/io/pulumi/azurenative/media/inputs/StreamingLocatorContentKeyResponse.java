@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.TrackSelectionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
      * ID of Content Key
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -35,7 +35,7 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
      * Label of Content Key as specified in the Streaming Policy
      * 
      */
-    @InputImport(name="labelReferenceInStreamingPolicy")
+    @Import(name="labelReferenceInStreamingPolicy")
       private final @Nullable String labelReferenceInStreamingPolicy;
 
     public Optional<String> getLabelReferenceInStreamingPolicy() {
@@ -46,7 +46,7 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
      * ContentKeyPolicy used by Content Key
      * 
      */
-    @InputImport(name="policyName", required=true)
+    @Import(name="policyName", required=true)
       private final String policyName;
 
     public String getPolicyName() {
@@ -57,7 +57,7 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
      * Tracks which use this Content Key
      * 
      */
-    @InputImport(name="tracks", required=true)
+    @Import(name="tracks", required=true)
       private final List<TrackSelectionResponse> tracks;
 
     public List<TrackSelectionResponse> getTracks() {
@@ -68,7 +68,7 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
      * Encryption type of Content Key
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -79,7 +79,7 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
      * Value of Content Key
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

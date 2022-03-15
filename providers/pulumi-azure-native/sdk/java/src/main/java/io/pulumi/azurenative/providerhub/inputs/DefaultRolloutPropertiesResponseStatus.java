@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.ExtendedErrorInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -17,35 +17,35 @@ public final class DefaultRolloutPropertiesResponseStatus extends io.pulumi.reso
 
     public static final DefaultRolloutPropertiesResponseStatus Empty = new DefaultRolloutPropertiesResponseStatus();
 
-    @InputImport(name="completedRegions")
+    @Import(name="completedRegions")
       private final @Nullable List<String> completedRegions;
 
     public List<String> getCompletedRegions() {
         return this.completedRegions == null ? List.of() : this.completedRegions;
     }
 
-    @InputImport(name="failedOrSkippedRegions")
+    @Import(name="failedOrSkippedRegions")
       private final @Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions;
 
     public Map<String,ExtendedErrorInfoResponse> getFailedOrSkippedRegions() {
         return this.failedOrSkippedRegions == null ? Map.of() : this.failedOrSkippedRegions;
     }
 
-    @InputImport(name="nextTrafficRegion")
+    @Import(name="nextTrafficRegion")
       private final @Nullable String nextTrafficRegion;
 
     public Optional<String> getNextTrafficRegion() {
         return this.nextTrafficRegion == null ? Optional.empty() : Optional.ofNullable(this.nextTrafficRegion);
     }
 
-    @InputImport(name="nextTrafficRegionScheduledTime")
+    @Import(name="nextTrafficRegionScheduledTime")
       private final @Nullable String nextTrafficRegionScheduledTime;
 
     public Optional<String> getNextTrafficRegionScheduledTime() {
         return this.nextTrafficRegionScheduledTime == null ? Optional.empty() : Optional.ofNullable(this.nextTrafficRegionScheduledTime);
     }
 
-    @InputImport(name="subscriptionReregistrationResult")
+    @Import(name="subscriptionReregistrationResult")
       private final @Nullable String subscriptionReregistrationResult;
 
     public Optional<String> getSubscriptionReregistrationResult() {

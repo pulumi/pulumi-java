@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.SlsaCompletenessArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class SlsaMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * The timestamp of when the build completed.
      * 
      */
-    @InputImport(name="buildFinishedOn")
+    @Import(name="buildFinishedOn")
       private final @Nullable Output<String> buildFinishedOn;
 
     public Output<String> getBuildFinishedOn() {
@@ -35,7 +35,7 @@ public final class SlsaMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * Identifies the particular build invocation, which can be useful for finding associated logs or other ad-hoc analysis. The value SHOULD be globally unique, per in-toto Provenance spec.
      * 
      */
-    @InputImport(name="buildInvocationId")
+    @Import(name="buildInvocationId")
       private final @Nullable Output<String> buildInvocationId;
 
     public Output<String> getBuildInvocationId() {
@@ -46,7 +46,7 @@ public final class SlsaMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * The timestamp of when the build started.
      * 
      */
-    @InputImport(name="buildStartedOn")
+    @Import(name="buildStartedOn")
       private final @Nullable Output<String> buildStartedOn;
 
     public Output<String> getBuildStartedOn() {
@@ -57,7 +57,7 @@ public final class SlsaMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates that the builder claims certain fields in this message to be complete.
      * 
      */
-    @InputImport(name="completeness")
+    @Import(name="completeness")
       private final @Nullable Output<SlsaCompletenessArgs> completeness;
 
     public Output<SlsaCompletenessArgs> getCompleteness() {
@@ -68,7 +68,7 @@ public final class SlsaMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * If true, the builder claims that running the recipe on materials will produce bit-for-bit identical output.
      * 
      */
-    @InputImport(name="reproducible")
+    @Import(name="reproducible")
       private final @Nullable Output<Boolean> reproducible;
 
     public Output<Boolean> getReproducible() {

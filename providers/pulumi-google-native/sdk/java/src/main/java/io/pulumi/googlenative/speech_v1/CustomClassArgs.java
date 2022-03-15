@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.speech_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.speech_v1.inputs.ClassItemArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class CustomClassArgs extends io.pulumi.resources.ResourceArgs {
      * The ID to use for the custom class, which will become the final component of the custom class' resource name. This value should be 4-63 characters, and valid characters are /a-z-/.
      * 
      */
-    @InputImport(name="customClassId", required=true)
+    @Import(name="customClassId", required=true)
       private final Output<String> customClassId;
 
     public Output<String> getCustomClassId() {
@@ -31,14 +31,14 @@ public final class CustomClassArgs extends io.pulumi.resources.ResourceArgs {
      * A collection of class items.
      * 
      */
-    @InputImport(name="items")
+    @Import(name="items")
       private final @Nullable Output<List<ClassItemArgs>> items;
 
     public Output<List<ClassItemArgs>> getItems() {
         return this.items == null ? Output.empty() : this.items;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -49,14 +49,14 @@ public final class CustomClassArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the custom class.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

@@ -17,7 +17,7 @@ import io.pulumi.azurenative.virtualmachineimages.inputs.ImageTemplateVhdDistrib
 import io.pulumi.azurenative.virtualmachineimages.inputs.ImageTemplateVmProfileArgs;
 import io.pulumi.azurenative.virtualmachineimages.inputs.ImageTemplateWindowsUpdateCustomizerArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -35,7 +35,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
      * 
      */
-    @InputImport(name="buildTimeoutInMinutes")
+    @Import(name="buildTimeoutInMinutes")
       private final @Nullable Output<Integer> buildTimeoutInMinutes;
 
     public Output<Integer> getBuildTimeoutInMinutes() {
@@ -46,7 +46,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * Specifies the properties used to describe the customization steps of the image, like Image source etc
      * 
      */
-    @InputImport(name="customize")
+    @Import(name="customize")
       private final @Nullable Output<List<Object>> customize;
 
     public Output<List<Object>> getCustomize() {
@@ -57,7 +57,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * The distribution targets where the image output needs to go to.
      * 
      */
-    @InputImport(name="distribute", required=true)
+    @Import(name="distribute", required=true)
       private final Output<List<Object>> distribute;
 
     public Output<List<Object>> getDistribute() {
@@ -68,7 +68,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * The identity of the image template, if configured.
      * 
      */
-    @InputImport(name="identity", required=true)
+    @Import(name="identity", required=true)
       private final Output<ImageTemplateIdentityArgs> identity;
 
     public Output<ImageTemplateIdentityArgs> getIdentity() {
@@ -79,7 +79,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * The name of the image Template
      * 
      */
-    @InputImport(name="imageTemplateName")
+    @Import(name="imageTemplateName")
       private final @Nullable Output<String> imageTemplateName;
 
     public Output<String> getImageTemplateName() {
@@ -90,7 +90,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -101,7 +101,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -112,7 +112,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * Specifies the properties used to describe the source image.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<Object> source;
 
     public Output<Object> getSource() {
@@ -123,7 +123,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -134,7 +134,7 @@ public final class VirtualMachineImageTemplateArgs extends io.pulumi.resources.R
      * Describes how virtual machine is set up to build images
      * 
      */
-    @InputImport(name="vmProfile")
+    @Import(name="vmProfile")
       private final @Nullable Output<ImageTemplateVmProfileArgs> vmProfile;
 
     public Output<ImageTemplateVmProfileArgs> getVmProfile() {

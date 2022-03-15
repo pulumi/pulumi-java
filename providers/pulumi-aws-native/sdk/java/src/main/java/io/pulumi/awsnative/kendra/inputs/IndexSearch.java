@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,28 +14,28 @@ public final class IndexSearch extends io.pulumi.resources.InvokeArgs {
 
     public static final IndexSearch Empty = new IndexSearch();
 
-    @InputImport(name="displayable")
+    @Import(name="displayable")
       private final @Nullable Boolean displayable;
 
     public Optional<Boolean> getDisplayable() {
         return this.displayable == null ? Optional.empty() : Optional.ofNullable(this.displayable);
     }
 
-    @InputImport(name="facetable")
+    @Import(name="facetable")
       private final @Nullable Boolean facetable;
 
     public Optional<Boolean> getFacetable() {
         return this.facetable == null ? Optional.empty() : Optional.ofNullable(this.facetable);
     }
 
-    @InputImport(name="searchable")
+    @Import(name="searchable")
       private final @Nullable Boolean searchable;
 
     public Optional<Boolean> getSearchable() {
         return this.searchable == null ? Optional.empty() : Optional.ofNullable(this.searchable);
     }
 
-    @InputImport(name="sortable")
+    @Import(name="sortable")
       private final @Nullable Boolean sortable;
 
     public Optional<Boolean> getSortable() {

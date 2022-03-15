@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.ClientInfoDetailResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClientInfoResponse {
     /**
      * The list of detailed information about client.
@@ -22,10 +22,10 @@ public final class ClientInfoResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClientInfoResponse(
-        @OutputCustomType.Parameter("clientInfoDetails") List<ClientInfoDetailResponse> clientInfoDetails,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("clientInfoDetails") List<ClientInfoDetailResponse> clientInfoDetails,
+        @CustomType.Parameter("name") String name) {
         this.clientInfoDetails = clientInfoDetails;
         this.name = name;
     }

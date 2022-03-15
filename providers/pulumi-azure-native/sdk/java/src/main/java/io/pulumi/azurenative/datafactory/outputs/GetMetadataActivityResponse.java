@@ -25,7 +25,7 @@ import io.pulumi.azurenative.datafactory.outputs.OracleCloudStorageReadSettingsR
 import io.pulumi.azurenative.datafactory.outputs.SftpReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
 import io.pulumi.azurenative.datafactory.outputs.XmlReadSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMetadataActivityResponse {
     /**
      * GetMetadata activity dataset reference.
@@ -92,19 +92,19 @@ public final class GetMetadataActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMetadataActivityResponse(
-        @OutputCustomType.Parameter("dataset") DatasetReferenceResponse dataset,
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("fieldList") @Nullable List<Object> fieldList,
-        @OutputCustomType.Parameter("formatSettings") @Nullable Object formatSettings,
-        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
-        @OutputCustomType.Parameter("storeSettings") @Nullable Object storeSettings,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
+        @CustomType.Parameter("dataset") DatasetReferenceResponse dataset,
+        @CustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("fieldList") @Nullable List<Object> fieldList,
+        @CustomType.Parameter("formatSettings") @Nullable Object formatSettings,
+        @CustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @CustomType.Parameter("storeSettings") @Nullable Object storeSettings,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.dataset = dataset;
         this.dependsOn = dependsOn;
         this.description = description;

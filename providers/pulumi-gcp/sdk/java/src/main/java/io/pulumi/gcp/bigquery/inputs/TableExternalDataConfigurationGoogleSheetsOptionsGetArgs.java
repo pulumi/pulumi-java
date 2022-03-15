@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsGetArgs exte
      * Structure is documented below.
      * 
      */
-    @InputImport(name="range")
+    @Import(name="range")
       private final @Nullable Output<String> range;
 
     public Output<String> getRange() {
@@ -33,7 +33,7 @@ public final class TableExternalDataConfigurationGoogleSheetsOptionsGetArgs exte
      * `skip_leading_rows` must be set.
      * 
      */
-    @InputImport(name="skipLeadingRows")
+    @Import(name="skipLeadingRows")
       private final @Nullable Output<Integer> skipLeadingRows;
 
     public Output<Integer> getSkipLeadingRows() {

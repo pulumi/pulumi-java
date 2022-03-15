@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datadog.inputs;
 
 import io.pulumi.azurenative.datadog.inputs.DatadogInstallMethodResponse;
 import io.pulumi.azurenative.datadog.inputs.DatadogLogsAgentResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,21 +20,21 @@ public final class DatadogHostMetadataResponse extends io.pulumi.resources.Invok
      * The agent version.
      * 
      */
-    @InputImport(name="agentVersion")
+    @Import(name="agentVersion")
       private final @Nullable String agentVersion;
 
     public Optional<String> getAgentVersion() {
         return this.agentVersion == null ? Optional.empty() : Optional.ofNullable(this.agentVersion);
     }
 
-    @InputImport(name="installMethod")
+    @Import(name="installMethod")
       private final @Nullable DatadogInstallMethodResponse installMethod;
 
     public Optional<DatadogInstallMethodResponse> getInstallMethod() {
         return this.installMethod == null ? Optional.empty() : Optional.ofNullable(this.installMethod);
     }
 
-    @InputImport(name="logsAgent")
+    @Import(name="logsAgent")
       private final @Nullable DatadogLogsAgentResponse logsAgent;
 
     public Optional<DatadogLogsAgentResponse> getLogsAgent() {

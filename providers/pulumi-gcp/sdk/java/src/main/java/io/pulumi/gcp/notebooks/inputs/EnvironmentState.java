@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.notebooks.inputs.EnvironmentContainerImageGetArgs;
 import io.pulumi.gcp.notebooks.inputs.EnvironmentVmImageGetArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="containerImage")
+    @Import(name="containerImage")
       private final @Nullable Output<EnvironmentContainerImageGetArgs> containerImage;
 
     public Output<EnvironmentContainerImageGetArgs> getContainerImage() {
@@ -32,7 +32,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * Instance creation time
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -43,7 +43,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * A brief description of this environment.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -54,7 +54,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * Display name of this environment for the UI.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -65,7 +65,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * A reference to the zone where the machine resides.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -77,7 +77,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * Format: projects/{project_id}/locations/{location}/environments/{environmentId}
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -89,7 +89,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * The path must be a URL or Cloud Storage path. Example: "gs://path-to-file/file-name"
      * 
      */
-    @InputImport(name="postStartupScript")
+    @Import(name="postStartupScript")
       private final @Nullable Output<String> postStartupScript;
 
     public Output<String> getPostStartupScript() {
@@ -101,7 +101,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * Format: projects/{project_id}
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -113,7 +113,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="vmImage")
+    @Import(name="vmImage")
       private final @Nullable Output<EnvironmentVmImageGetArgs> vmImage;
 
     public Output<EnvironmentVmImageGetArgs> getVmImage() {

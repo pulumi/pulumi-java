@@ -3,12 +3,12 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DimensionsResponse {
     /**
      * Depth of the device.
@@ -46,15 +46,15 @@ public final class DimensionsResponse {
      */
     private final Double width;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DimensionsResponse(
-        @OutputCustomType.Parameter("depth") Double depth,
-        @OutputCustomType.Parameter("height") Double height,
-        @OutputCustomType.Parameter("length") Double length,
-        @OutputCustomType.Parameter("lengthHeightUnit") String lengthHeightUnit,
-        @OutputCustomType.Parameter("weight") Double weight,
-        @OutputCustomType.Parameter("weightUnit") String weightUnit,
-        @OutputCustomType.Parameter("width") Double width) {
+        @CustomType.Parameter("depth") Double depth,
+        @CustomType.Parameter("height") Double height,
+        @CustomType.Parameter("length") Double length,
+        @CustomType.Parameter("lengthHeightUnit") String lengthHeightUnit,
+        @CustomType.Parameter("weight") Double weight,
+        @CustomType.Parameter("weightUnit") String weightUnit,
+        @CustomType.Parameter("width") Double width) {
         this.depth = depth;
         this.height = height;
         this.length = length;

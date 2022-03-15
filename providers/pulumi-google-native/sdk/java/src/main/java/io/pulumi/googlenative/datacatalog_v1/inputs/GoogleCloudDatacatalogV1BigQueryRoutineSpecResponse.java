@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse extends i
      * Paths of the imported libraries.
      * 
      */
-    @InputImport(name="importedLibraries", required=true)
+    @Import(name="importedLibraries", required=true)
       private final List<String> importedLibraries;
 
     public List<String> getImportedLibraries() {

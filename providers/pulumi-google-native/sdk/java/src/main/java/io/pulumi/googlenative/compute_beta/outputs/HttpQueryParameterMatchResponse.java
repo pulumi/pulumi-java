@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpQueryParameterMatchResponse {
     /**
      * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch, or regexMatch must be set.
@@ -31,12 +31,12 @@ public final class HttpQueryParameterMatchResponse {
      */
     private final String regexMatch;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpQueryParameterMatchResponse(
-        @OutputCustomType.Parameter("exactMatch") String exactMatch,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("presentMatch") Boolean presentMatch,
-        @OutputCustomType.Parameter("regexMatch") String regexMatch) {
+        @CustomType.Parameter("exactMatch") String exactMatch,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("presentMatch") Boolean presentMatch,
+        @CustomType.Parameter("regexMatch") String regexMatch) {
         this.exactMatch = exactMatch;
         this.name = name;
         this.presentMatch = presentMatch;

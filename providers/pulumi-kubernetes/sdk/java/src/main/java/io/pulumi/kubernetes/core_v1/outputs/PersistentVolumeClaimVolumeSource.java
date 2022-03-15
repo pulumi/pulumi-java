@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PersistentVolumeClaimVolumeSource {
     /**
      * ClaimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
@@ -23,10 +23,10 @@ public final class PersistentVolumeClaimVolumeSource {
      */
     private final @Nullable Boolean readOnly;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PersistentVolumeClaimVolumeSource(
-        @OutputCustomType.Parameter("claimName") String claimName,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
+        @CustomType.Parameter("claimName") String claimName,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
         this.claimName = claimName;
         this.readOnly = readOnly;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.UpgradeDistributionResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.VersionResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.WindowsUpdateResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UpgradeNoteResponse {
     /**
      * Metadata about the upgrade for each specific operating system.
@@ -34,12 +34,12 @@ public final class UpgradeNoteResponse {
      */
     private final WindowsUpdateResponse windowsUpdate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UpgradeNoteResponse(
-        @OutputCustomType.Parameter("distributions") List<UpgradeDistributionResponse> distributions,
-        @OutputCustomType.Parameter("package") String $package,
-        @OutputCustomType.Parameter("version") VersionResponse version,
-        @OutputCustomType.Parameter("windowsUpdate") WindowsUpdateResponse windowsUpdate) {
+        @CustomType.Parameter("distributions") List<UpgradeDistributionResponse> distributions,
+        @CustomType.Parameter("package") String $package,
+        @CustomType.Parameter("version") VersionResponse version,
+        @CustomType.Parameter("windowsUpdate") WindowsUpdateResponse windowsUpdate) {
         this.distributions = distributions;
         this.$package = $package;
         this.version = version;

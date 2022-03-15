@@ -15,7 +15,7 @@ import io.pulumi.azurenative.videoanalyzer.outputs.VideoSourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -47,7 +47,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * An optional description of the pipeline topology. It is recommended that the expected use of the topology to be described here.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -61,7 +61,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * Topology kind.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -75,7 +75,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -89,7 +89,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * List of the topology parameter declarations. Parameters declared here can be referenced throughout the topology nodes through the use of "${PARAMETER_NAME}" string pattern. Parameters can have optional default values and can later be defined in individual instances of the pipeline.
      * 
      */
-    @OutputExport(name="parameters", type=List.class, parameters={ParameterDeclarationResponse.class})
+    @Export(name="parameters", type=List.class, parameters={ParameterDeclarationResponse.class})
     private Output</* @Nullable */ List<ParameterDeclarationResponse>> parameters;
 
     /**
@@ -103,7 +103,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * List of the topology processor nodes. Processor nodes enable pipeline data to be analyzed, processed or transformed.
      * 
      */
-    @OutputExport(name="processors", type=List.class, parameters={EncoderProcessorResponse.class})
+    @Export(name="processors", type=List.class, parameters={EncoderProcessorResponse.class})
     private Output</* @Nullable */ List<EncoderProcessorResponse>> processors;
 
     /**
@@ -117,7 +117,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * List of the topology sink nodes. Sink nodes allow pipeline data to be stored or exported.
      * 
      */
-    @OutputExport(name="sinks", type=List.class, parameters={VideoSinkResponse.class})
+    @Export(name="sinks", type=List.class, parameters={VideoSinkResponse.class})
     private Output<List<VideoSinkResponse>> sinks;
 
     /**
@@ -131,7 +131,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * Describes the properties of a SKU.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
@@ -145,7 +145,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * List of the topology source nodes. Source nodes enable external data to be ingested by the pipeline.
      * 
      */
-    @OutputExport(name="sources", type=List.class, parameters={Either.class})
+    @Export(name="sources", type=List.class, parameters={Either.class})
     private Output<List<Either<RtspSourceResponse,VideoSourceResponse>>> sources;
 
     /**
@@ -159,7 +159,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -173,7 +173,7 @@ public class PipelineTopology extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

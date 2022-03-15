@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.SignatureResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GenericSignedAttestationResponse extends io.pulumi.resources.
      * Type (for example schema) of the attestation payload that was signed. The verifier must ensure that the provided type is one that the verifier supports, and that the attestation payload is a valid instantiation of that type (for example by validating a JSON schema).
      * 
      */
-    @InputImport(name="contentType", required=true)
+    @Import(name="contentType", required=true)
       private final String contentType;
 
     public String getContentType() {
@@ -33,7 +33,7 @@ public final class GenericSignedAttestationResponse extends io.pulumi.resources.
      * The serialized payload that is verified by one or more `signatures`. The encoding and semantic meaning of this payload must match what is set in `content_type`.
      * 
      */
-    @InputImport(name="serializedPayload", required=true)
+    @Import(name="serializedPayload", required=true)
       private final String serializedPayload;
 
     public String getSerializedPayload() {
@@ -44,7 +44,7 @@ public final class GenericSignedAttestationResponse extends io.pulumi.resources.
      * One or more signatures over `serialized_payload`. Verifier implementations should consider this attestation message verified if at least one `signature` verifies `serialized_payload`. See `Signature` in common.proto for more details on signature structure and verification.
      * 
      */
-    @InputImport(name="signatures", required=true)
+    @Import(name="signatures", required=true)
       private final List<SignatureResponse> signatures;
 
     public List<SignatureResponse> getSignatures() {

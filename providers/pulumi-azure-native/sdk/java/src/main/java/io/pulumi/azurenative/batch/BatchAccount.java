@@ -13,7 +13,7 @@ import io.pulumi.azurenative.batch.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.batch.outputs.VirtualMachineFamilyCoreQuotaResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -43,7 +43,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
      * The account endpoint used to interact with the Batch service.
      * 
      */
-    @OutputExport(name="accountEndpoint", type=String.class, parameters={})
+    @Export(name="accountEndpoint", type=String.class, parameters={})
     private Output<String> accountEndpoint;
 
     /**
@@ -53,7 +53,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
     public Output<String> getAccountEndpoint() {
         return this.accountEndpoint;
     }
-    @OutputExport(name="activeJobAndJobScheduleQuota", type=Integer.class, parameters={})
+    @Export(name="activeJobAndJobScheduleQuota", type=Integer.class, parameters={})
     private Output<Integer> activeJobAndJobScheduleQuota;
 
     public Output<Integer> getActiveJobAndJobScheduleQuota() {
@@ -63,7 +63,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
      * Contains information about the auto-storage account associated with a Batch account.
      * 
      */
-    @OutputExport(name="autoStorage", type=AutoStoragePropertiesResponse.class, parameters={})
+    @Export(name="autoStorage", type=AutoStoragePropertiesResponse.class, parameters={})
     private Output<AutoStoragePropertiesResponse> autoStorage;
 
     /**
@@ -77,7 +77,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
      * For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
      * 
      */
-    @OutputExport(name="dedicatedCoreQuota", type=Integer.class, parameters={})
+    @Export(name="dedicatedCoreQuota", type=Integer.class, parameters={})
     private Output<Integer> dedicatedCoreQuota;
 
     /**
@@ -91,7 +91,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
      * A list of the dedicated core quota per Virtual Machine family for the Batch account. For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
      * 
      */
-    @OutputExport(name="dedicatedCoreQuotaPerVMFamily", type=List.class, parameters={VirtualMachineFamilyCoreQuotaResponse.class})
+    @Export(name="dedicatedCoreQuotaPerVMFamily", type=List.class, parameters={VirtualMachineFamilyCoreQuotaResponse.class})
     private Output<List<VirtualMachineFamilyCoreQuotaResponse>> dedicatedCoreQuotaPerVMFamily;
 
     /**
@@ -105,7 +105,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
      * Batch is transitioning its core quota system for dedicated cores to be enforced per Virtual Machine family. During this transitional phase, the dedicated core quota per Virtual Machine family may not yet be enforced. If this flag is false, dedicated core quota is enforced via the old dedicatedCoreQuota property on the account and does not consider Virtual Machine family. If this flag is true, dedicated core quota is enforced via the dedicatedCoreQuotaPerVMFamily property on the account, and the old dedicatedCoreQuota does not apply.
      * 
      */
-    @OutputExport(name="dedicatedCoreQuotaPerVMFamilyEnforced", type=Boolean.class, parameters={})
+    @Export(name="dedicatedCoreQuotaPerVMFamilyEnforced", type=Boolean.class, parameters={})
     private Output<Boolean> dedicatedCoreQuotaPerVMFamilyEnforced;
 
     /**
@@ -119,7 +119,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
      * Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.
      * 
      */
-    @OutputExport(name="encryption", type=EncryptionPropertiesResponse.class, parameters={})
+    @Export(name="encryption", type=EncryptionPropertiesResponse.class, parameters={})
     private Output<EncryptionPropertiesResponse> encryption;
 
     /**
@@ -133,7 +133,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
      * The identity of the Batch account.
      * 
      */
-    @OutputExport(name="identity", type=BatchAccountIdentityResponse.class, parameters={})
+    @Export(name="identity", type=BatchAccountIdentityResponse.class, parameters={})
     private Output</* @Nullable */ BatchAccountIdentityResponse> identity;
 
     /**
@@ -147,7 +147,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
      * Identifies the Azure key vault associated with a Batch account.
      * 
      */
-    @OutputExport(name="keyVaultReference", type=KeyVaultReferenceResponse.class, parameters={})
+    @Export(name="keyVaultReference", type=KeyVaultReferenceResponse.class, parameters={})
     private Output<KeyVaultReferenceResponse> keyVaultReference;
 
     /**
@@ -161,7 +161,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
      * The location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -175,7 +175,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
      * For accounts with PoolAllocationMode set to UserSubscription, quota is managed on the subscription so this value is not returned.
      * 
      */
-    @OutputExport(name="lowPriorityCoreQuota", type=Integer.class, parameters={})
+    @Export(name="lowPriorityCoreQuota", type=Integer.class, parameters={})
     private Output<Integer> lowPriorityCoreQuota;
 
     /**
@@ -189,7 +189,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -203,7 +203,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
      * The allocation mode for creating pools in the Batch account.
      * 
      */
-    @OutputExport(name="poolAllocationMode", type=String.class, parameters={})
+    @Export(name="poolAllocationMode", type=String.class, parameters={})
     private Output<String> poolAllocationMode;
 
     /**
@@ -213,7 +213,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
     public Output<String> getPoolAllocationMode() {
         return this.poolAllocationMode;
     }
-    @OutputExport(name="poolQuota", type=Integer.class, parameters={})
+    @Export(name="poolQuota", type=Integer.class, parameters={})
     private Output<Integer> poolQuota;
 
     public Output<Integer> getPoolQuota() {
@@ -223,7 +223,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
      * List of private endpoint connections associated with the Batch account
      * 
      */
-    @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
+    @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
@@ -237,7 +237,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
      * The provisioned state of the resource
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -251,7 +251,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
      * If not specified, the default value is 'enabled'.
      * 
      */
-    @OutputExport(name="publicNetworkAccess", type=String.class, parameters={})
+    @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output<String> publicNetworkAccess;
 
     /**
@@ -265,7 +265,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tags;
 
     /**
@@ -279,7 +279,7 @@ public class BatchAccount extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

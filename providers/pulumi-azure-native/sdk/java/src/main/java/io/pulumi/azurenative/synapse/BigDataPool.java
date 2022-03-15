@@ -12,7 +12,7 @@ import io.pulumi.azurenative.synapse.outputs.LibraryInfoResponse;
 import io.pulumi.azurenative.synapse.outputs.LibraryRequirementsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -42,7 +42,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * Auto-pausing properties
      * 
      */
-    @OutputExport(name="autoPause", type=AutoPausePropertiesResponse.class, parameters={})
+    @Export(name="autoPause", type=AutoPausePropertiesResponse.class, parameters={})
     private Output</* @Nullable */ AutoPausePropertiesResponse> autoPause;
 
     /**
@@ -56,7 +56,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * Auto-scaling properties
      * 
      */
-    @OutputExport(name="autoScale", type=AutoScalePropertiesResponse.class, parameters={})
+    @Export(name="autoScale", type=AutoScalePropertiesResponse.class, parameters={})
     private Output</* @Nullable */ AutoScalePropertiesResponse> autoScale;
 
     /**
@@ -70,7 +70,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * The cache size
      * 
      */
-    @OutputExport(name="cacheSize", type=Integer.class, parameters={})
+    @Export(name="cacheSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> cacheSize;
 
     /**
@@ -84,7 +84,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * The time when the Big Data pool was created.
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationDate;
 
     /**
@@ -98,7 +98,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * List of custom libraries/packages associated with the spark pool.
      * 
      */
-    @OutputExport(name="customLibraries", type=List.class, parameters={LibraryInfoResponse.class})
+    @Export(name="customLibraries", type=List.class, parameters={LibraryInfoResponse.class})
     private Output</* @Nullable */ List<LibraryInfoResponse>> customLibraries;
 
     /**
@@ -112,7 +112,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * The default folder where Spark logs will be written.
      * 
      */
-    @OutputExport(name="defaultSparkLogFolder", type=String.class, parameters={})
+    @Export(name="defaultSparkLogFolder", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultSparkLogFolder;
 
     /**
@@ -126,7 +126,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * Dynamic Executor Allocation
      * 
      */
-    @OutputExport(name="dynamicExecutorAllocation", type=DynamicExecutorAllocationResponse.class, parameters={})
+    @Export(name="dynamicExecutorAllocation", type=DynamicExecutorAllocationResponse.class, parameters={})
     private Output</* @Nullable */ DynamicExecutorAllocationResponse> dynamicExecutorAllocation;
 
     /**
@@ -140,7 +140,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * Whether compute isolation is required or not.
      * 
      */
-    @OutputExport(name="isComputeIsolationEnabled", type=Boolean.class, parameters={})
+    @Export(name="isComputeIsolationEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isComputeIsolationEnabled;
 
     /**
@@ -154,7 +154,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * The time when the Big Data pool was updated successfully.
      * 
      */
-    @OutputExport(name="lastSucceededTimestamp", type=String.class, parameters={})
+    @Export(name="lastSucceededTimestamp", type=String.class, parameters={})
     private Output<String> lastSucceededTimestamp;
 
     /**
@@ -168,7 +168,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * Library version requirements
      * 
      */
-    @OutputExport(name="libraryRequirements", type=LibraryRequirementsResponse.class, parameters={})
+    @Export(name="libraryRequirements", type=LibraryRequirementsResponse.class, parameters={})
     private Output</* @Nullable */ LibraryRequirementsResponse> libraryRequirements;
 
     /**
@@ -182,7 +182,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -196,7 +196,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -210,7 +210,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * The number of nodes in the Big Data pool.
      * 
      */
-    @OutputExport(name="nodeCount", type=Integer.class, parameters={})
+    @Export(name="nodeCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> nodeCount;
 
     /**
@@ -224,7 +224,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * The level of compute power that each node in the Big Data pool has.
      * 
      */
-    @OutputExport(name="nodeSize", type=String.class, parameters={})
+    @Export(name="nodeSize", type=String.class, parameters={})
     private Output</* @Nullable */ String> nodeSize;
 
     /**
@@ -238,7 +238,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * The kind of nodes that the Big Data pool provides.
      * 
      */
-    @OutputExport(name="nodeSizeFamily", type=String.class, parameters={})
+    @Export(name="nodeSizeFamily", type=String.class, parameters={})
     private Output</* @Nullable */ String> nodeSizeFamily;
 
     /**
@@ -252,7 +252,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * The state of the Big Data pool.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -266,7 +266,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * Whether session level packages enabled.
      * 
      */
-    @OutputExport(name="sessionLevelPackagesEnabled", type=Boolean.class, parameters={})
+    @Export(name="sessionLevelPackagesEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> sessionLevelPackagesEnabled;
 
     /**
@@ -280,7 +280,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * Spark configuration file to specify additional properties
      * 
      */
-    @OutputExport(name="sparkConfigProperties", type=LibraryRequirementsResponse.class, parameters={})
+    @Export(name="sparkConfigProperties", type=LibraryRequirementsResponse.class, parameters={})
     private Output</* @Nullable */ LibraryRequirementsResponse> sparkConfigProperties;
 
     /**
@@ -294,7 +294,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * The Spark events folder
      * 
      */
-    @OutputExport(name="sparkEventsFolder", type=String.class, parameters={})
+    @Export(name="sparkEventsFolder", type=String.class, parameters={})
     private Output</* @Nullable */ String> sparkEventsFolder;
 
     /**
@@ -308,7 +308,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * The Apache Spark version.
      * 
      */
-    @OutputExport(name="sparkVersion", type=String.class, parameters={})
+    @Export(name="sparkVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> sparkVersion;
 
     /**
@@ -322,7 +322,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -336,7 +336,7 @@ public class BigDataPool extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

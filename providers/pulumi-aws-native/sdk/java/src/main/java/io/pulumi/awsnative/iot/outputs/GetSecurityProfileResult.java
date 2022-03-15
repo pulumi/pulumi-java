@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot.outputs;
 import io.pulumi.awsnative.iot.outputs.SecurityProfileBehavior;
 import io.pulumi.awsnative.iot.outputs.SecurityProfileMetricToRetain;
 import io.pulumi.awsnative.iot.outputs.SecurityProfileTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSecurityProfileResult {
     /**
      * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.
@@ -52,15 +52,15 @@ public final class GetSecurityProfileResult {
      */
     private final @Nullable List<String> targetArns;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSecurityProfileResult(
-        @OutputCustomType.Parameter("additionalMetricsToRetainV2") @Nullable List<SecurityProfileMetricToRetain> additionalMetricsToRetainV2,
-        @OutputCustomType.Parameter("alertTargets") @Nullable Object alertTargets,
-        @OutputCustomType.Parameter("behaviors") @Nullable List<SecurityProfileBehavior> behaviors,
-        @OutputCustomType.Parameter("securityProfileArn") @Nullable String securityProfileArn,
-        @OutputCustomType.Parameter("securityProfileDescription") @Nullable String securityProfileDescription,
-        @OutputCustomType.Parameter("tags") @Nullable List<SecurityProfileTag> tags,
-        @OutputCustomType.Parameter("targetArns") @Nullable List<String> targetArns) {
+        @CustomType.Parameter("additionalMetricsToRetainV2") @Nullable List<SecurityProfileMetricToRetain> additionalMetricsToRetainV2,
+        @CustomType.Parameter("alertTargets") @Nullable Object alertTargets,
+        @CustomType.Parameter("behaviors") @Nullable List<SecurityProfileBehavior> behaviors,
+        @CustomType.Parameter("securityProfileArn") @Nullable String securityProfileArn,
+        @CustomType.Parameter("securityProfileDescription") @Nullable String securityProfileDescription,
+        @CustomType.Parameter("tags") @Nullable List<SecurityProfileTag> tags,
+        @CustomType.Parameter("targetArns") @Nullable List<String> targetArns) {
         this.additionalMetricsToRetainV2 = additionalMetricsToRetainV2;
         this.alertTargets = alertTargets;
         this.behaviors = behaviors;

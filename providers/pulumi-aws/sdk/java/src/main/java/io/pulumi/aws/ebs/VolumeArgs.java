@@ -4,7 +4,7 @@
 package io.pulumi.aws.ebs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The AZ where the EBS volume will exist.
      * 
      */
-    @InputImport(name="availabilityZone", required=true)
+    @Import(name="availabilityZone", required=true)
       private final Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -32,7 +32,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * If true, the disk will be encrypted.
      * 
      */
-    @InputImport(name="encrypted")
+    @Import(name="encrypted")
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
@@ -43,14 +43,14 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The amount of IOPS to provision for the disk. Only valid for `type` of `io1`, `io2` or `gp3`.
      * 
      */
-    @InputImport(name="iops")
+    @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
         return this.iops == null ? Output.empty() : this.iops;
     }
 
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -61,7 +61,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether to enable Amazon EBS Multi-Attach. Multi-Attach is supported exclusively on `io1` volumes.
      * 
      */
-    @InputImport(name="multiAttachEnabled")
+    @Import(name="multiAttachEnabled")
       private final @Nullable Output<Boolean> multiAttachEnabled;
 
     public Output<Boolean> getMultiAttachEnabled() {
@@ -72,7 +72,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the Outpost.
      * 
      */
-    @InputImport(name="outpostArn")
+    @Import(name="outpostArn")
       private final @Nullable Output<String> outpostArn;
 
     public Output<String> getOutpostArn() {
@@ -83,7 +83,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The size of the drive in GiBs.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<Integer> size;
 
     public Output<Integer> getSize() {
@@ -94,7 +94,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * A snapshot to base the EBS volume off of.
      * 
      */
-    @InputImport(name="snapshotId")
+    @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
 
     public Output<String> getSnapshotId() {
@@ -105,7 +105,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -116,7 +116,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The throughput that the volume supports, in MiB/s. Only valid for `type` of `gp3`.
      * 
      */
-    @InputImport(name="throughput")
+    @Import(name="throughput")
       private final @Nullable Output<Integer> throughput;
 
     public Output<Integer> getThroughput() {
@@ -127,7 +127,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * The type of EBS volume. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `gp2`).
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
      * The address line1.
      * 
      */
-    @InputImport(name="addressLine1")
+    @Import(name="addressLine1")
       private final @Nullable Output<String> addressLine1;
 
     public Output<String> getAddressLine1() {
@@ -33,7 +33,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
      * The address line2.
      * 
      */
-    @InputImport(name="addressLine2")
+    @Import(name="addressLine2")
       private final @Nullable Output<String> addressLine2;
 
     public Output<String> getAddressLine2() {
@@ -44,7 +44,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
      * The address line3.
      * 
      */
-    @InputImport(name="addressLine3")
+    @Import(name="addressLine3")
       private final @Nullable Output<String> addressLine3;
 
     public Output<String> getAddressLine3() {
@@ -55,7 +55,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
      * The city name.
      * 
      */
-    @InputImport(name="city")
+    @Import(name="city")
       private final @Nullable Output<String> city;
 
     public Output<String> getCity() {
@@ -66,7 +66,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
      * The country name.
      * 
      */
-    @InputImport(name="country", required=true)
+    @Import(name="country", required=true)
       private final Output<String> country;
 
     public Output<String> getCountry() {
@@ -77,7 +77,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
      * The postal code.
      * 
      */
-    @InputImport(name="postalCode")
+    @Import(name="postalCode")
       private final @Nullable Output<String> postalCode;
 
     public Output<String> getPostalCode() {
@@ -88,7 +88,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
      * The state name.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {

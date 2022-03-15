@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.retail_v2.outputs.GoogleCloudRetailV2AudienceResponse;
 import io.pulumi.googlenative.retail_v2.outputs.GoogleCloudRetailV2ColorInfoResponse;
 import io.pulumi.googlenative.retail_v2.outputs.GoogleCloudRetailV2FulfillmentInfoResponse;
@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetProductResult {
     /**
      * Highly encouraged. Extra product attributes to be included. For example, for products, this could include the store name, vendor, style, color, etc. These are very strong signals for recommendation model, thus we highly recommend providing the attributes here. Features that can take on one of a limited number of possible values. Two types of features can be set are: Textual features. some examples would be the brand/maker of a product, or country of a customer. Numerical features. Some examples would be the height/weight of a product, or age of a customer. For example: `{ "vendor": {"text": ["vendor123", "vendor456"]}, "lengths_cm": {"numbers":[2.3, 15.4]}, "heights_cm": {"numbers":[8.1, 6.4]} }`. This field needs to pass all below criteria, otherwise an INVALID_ARGUMENT error is returned: * Max entries count: 200. * The key must be a UTF-8 encoded string with a length limit of 128 characters. * For indexable attribute, the key must match the pattern: `a-zA-Z0-9*`. For example, `key0LikeThis` or `KEY_1_LIKE_THIS`. * For text attributes, at most 400 values are allowed. Empty values are not allowed. Each value must be a UTF-8 encoded string with a length limit of 256 characters. * For number attributes, at most 400 values are allowed.
@@ -181,40 +181,40 @@ public final class GetProductResult {
      */
     private final List<GoogleCloudRetailV2ProductResponse> variants;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProductResult(
-        @OutputCustomType.Parameter("attributes") Map<String,String> attributes,
-        @OutputCustomType.Parameter("audience") GoogleCloudRetailV2AudienceResponse audience,
-        @OutputCustomType.Parameter("availability") String availability,
-        @OutputCustomType.Parameter("availableQuantity") Integer availableQuantity,
-        @OutputCustomType.Parameter("availableTime") String availableTime,
-        @OutputCustomType.Parameter("brands") List<String> brands,
-        @OutputCustomType.Parameter("categories") List<String> categories,
-        @OutputCustomType.Parameter("collectionMemberIds") List<String> collectionMemberIds,
-        @OutputCustomType.Parameter("colorInfo") GoogleCloudRetailV2ColorInfoResponse colorInfo,
-        @OutputCustomType.Parameter("conditions") List<String> conditions,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("expireTime") String expireTime,
-        @OutputCustomType.Parameter("fulfillmentInfo") List<GoogleCloudRetailV2FulfillmentInfoResponse> fulfillmentInfo,
-        @OutputCustomType.Parameter("gtin") String gtin,
-        @OutputCustomType.Parameter("images") List<GoogleCloudRetailV2ImageResponse> images,
-        @OutputCustomType.Parameter("languageCode") String languageCode,
-        @OutputCustomType.Parameter("materials") List<String> materials,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("patterns") List<String> patterns,
-        @OutputCustomType.Parameter("priceInfo") GoogleCloudRetailV2PriceInfoResponse priceInfo,
-        @OutputCustomType.Parameter("primaryProductId") String primaryProductId,
-        @OutputCustomType.Parameter("promotions") List<GoogleCloudRetailV2PromotionResponse> promotions,
-        @OutputCustomType.Parameter("publishTime") String publishTime,
-        @OutputCustomType.Parameter("rating") GoogleCloudRetailV2RatingResponse rating,
-        @OutputCustomType.Parameter("retrievableFields") String retrievableFields,
-        @OutputCustomType.Parameter("sizes") List<String> sizes,
-        @OutputCustomType.Parameter("tags") List<String> tags,
-        @OutputCustomType.Parameter("title") String title,
-        @OutputCustomType.Parameter("ttl") String ttl,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uri") String uri,
-        @OutputCustomType.Parameter("variants") List<GoogleCloudRetailV2ProductResponse> variants) {
+        @CustomType.Parameter("attributes") Map<String,String> attributes,
+        @CustomType.Parameter("audience") GoogleCloudRetailV2AudienceResponse audience,
+        @CustomType.Parameter("availability") String availability,
+        @CustomType.Parameter("availableQuantity") Integer availableQuantity,
+        @CustomType.Parameter("availableTime") String availableTime,
+        @CustomType.Parameter("brands") List<String> brands,
+        @CustomType.Parameter("categories") List<String> categories,
+        @CustomType.Parameter("collectionMemberIds") List<String> collectionMemberIds,
+        @CustomType.Parameter("colorInfo") GoogleCloudRetailV2ColorInfoResponse colorInfo,
+        @CustomType.Parameter("conditions") List<String> conditions,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("expireTime") String expireTime,
+        @CustomType.Parameter("fulfillmentInfo") List<GoogleCloudRetailV2FulfillmentInfoResponse> fulfillmentInfo,
+        @CustomType.Parameter("gtin") String gtin,
+        @CustomType.Parameter("images") List<GoogleCloudRetailV2ImageResponse> images,
+        @CustomType.Parameter("languageCode") String languageCode,
+        @CustomType.Parameter("materials") List<String> materials,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("patterns") List<String> patterns,
+        @CustomType.Parameter("priceInfo") GoogleCloudRetailV2PriceInfoResponse priceInfo,
+        @CustomType.Parameter("primaryProductId") String primaryProductId,
+        @CustomType.Parameter("promotions") List<GoogleCloudRetailV2PromotionResponse> promotions,
+        @CustomType.Parameter("publishTime") String publishTime,
+        @CustomType.Parameter("rating") GoogleCloudRetailV2RatingResponse rating,
+        @CustomType.Parameter("retrievableFields") String retrievableFields,
+        @CustomType.Parameter("sizes") List<String> sizes,
+        @CustomType.Parameter("tags") List<String> tags,
+        @CustomType.Parameter("title") String title,
+        @CustomType.Parameter("ttl") String ttl,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uri") String uri,
+        @CustomType.Parameter("variants") List<GoogleCloudRetailV2ProductResponse> variants) {
         this.attributes = attributes;
         this.audience = audience;
         this.availability = availability;

@@ -8,7 +8,7 @@ import io.pulumi.aws.secretsmanager.SecretRotationArgs;
 import io.pulumi.aws.secretsmanager.inputs.SecretRotationState;
 import io.pulumi.aws.secretsmanager.outputs.SecretRotationRotationRules;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -42,7 +42,7 @@ public class SecretRotation extends io.pulumi.resources.CustomResource {
      * Specifies whether automatic rotation is enabled for this secret.
      * 
      */
-    @OutputExport(name="rotationEnabled", type=Boolean.class, parameters={})
+    @Export(name="rotationEnabled", type=Boolean.class, parameters={})
     private Output<Boolean> rotationEnabled;
 
     /**
@@ -56,7 +56,7 @@ public class SecretRotation extends io.pulumi.resources.CustomResource {
      * Specifies the ARN of the Lambda function that can rotate the secret.
      * 
      */
-    @OutputExport(name="rotationLambdaArn", type=String.class, parameters={})
+    @Export(name="rotationLambdaArn", type=String.class, parameters={})
     private Output<String> rotationLambdaArn;
 
     /**
@@ -70,7 +70,7 @@ public class SecretRotation extends io.pulumi.resources.CustomResource {
      * A structure that defines the rotation configuration for this secret. Defined below.
      * 
      */
-    @OutputExport(name="rotationRules", type=SecretRotationRotationRules.class, parameters={})
+    @Export(name="rotationRules", type=SecretRotationRotationRules.class, parameters={})
     private Output<SecretRotationRotationRules> rotationRules;
 
     /**
@@ -84,7 +84,7 @@ public class SecretRotation extends io.pulumi.resources.CustomResource {
      * Specifies the secret to which you want to add a new version. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret. The secret must already exist.
      * 
      */
-    @OutputExport(name="secretId", type=String.class, parameters={})
+    @Export(name="secretId", type=String.class, parameters={})
     private Output<String> secretId;
 
     /**
@@ -94,7 +94,7 @@ public class SecretRotation extends io.pulumi.resources.CustomResource {
     public Output<String> getSecretId() {
         return this.secretId;
     }
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     public Output</* @Nullable */ Map<String,String>> getTags() {

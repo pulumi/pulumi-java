@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.config.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
      * Number of seconds to restrict the assume role session duration.
      * 
      */
-    @InputImport(name="durationSeconds")
+    @Import(name="durationSeconds")
       private final @Nullable Integer durationSeconds;
 
     public Optional<Integer> getDurationSeconds() {
@@ -36,7 +36,7 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
      * External identifier to use when assuming the role.
      * 
      */
-    @InputImport(name="externalId")
+    @Import(name="externalId")
       private final @Nullable String externalId;
 
     public Optional<String> getExternalId() {
@@ -47,7 +47,7 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
      * IAM Policy JSON describing further restricting permissions for the IAM Role being assumed.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable String policy;
 
     public Optional<String> getPolicy() {
@@ -58,7 +58,7 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
      * Set of Amazon Resource Names (ARNs) of IAM Policies describing further restricting permissions for the role.
      * 
      */
-    @InputImport(name="policyArns")
+    @Import(name="policyArns")
       private final @Nullable List<String> policyArns;
 
     public List<String> getPolicyArns() {
@@ -69,7 +69,7 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
      * Amazon Resource Name (ARN) of the IAM Role to assume.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable String roleArn;
 
     public Optional<String> getRoleArn() {
@@ -80,7 +80,7 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
      * Session name to use when assuming the role.
      * 
      */
-    @InputImport(name="sessionName")
+    @Import(name="sessionName")
       private final @Nullable String sessionName;
 
     public Optional<String> getSessionName() {
@@ -91,7 +91,7 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
      * Map of assume role session tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -102,7 +102,7 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
      * A list of keys for session tags that you want to set as transitive. If you set a tag key as transitive, the corresponding key and value passes to subsequent sessions in a role chain.
      * 
      */
-    @InputImport(name="transitiveTagKeys")
+    @Import(name="transitiveTagKeys")
       private final @Nullable List<String> transitiveTagKeys;
 
     public List<String> getTransitiveTagKeys() {

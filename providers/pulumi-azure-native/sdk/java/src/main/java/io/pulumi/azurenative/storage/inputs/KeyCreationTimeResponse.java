@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,14 +18,14 @@ public final class KeyCreationTimeResponse extends io.pulumi.resources.InvokeArg
 
     public static final KeyCreationTimeResponse Empty = new KeyCreationTimeResponse();
 
-    @InputImport(name="key1")
+    @Import(name="key1")
       private final @Nullable String key1;
 
     public Optional<String> getKey1() {
         return this.key1 == null ? Optional.empty() : Optional.ofNullable(this.key1);
     }
 
-    @InputImport(name="key2")
+    @Import(name="key2")
       private final @Nullable String key2;
 
     public Optional<String> getKey2() {

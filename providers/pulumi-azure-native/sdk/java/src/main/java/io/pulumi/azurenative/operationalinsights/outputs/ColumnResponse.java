@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ColumnResponse {
     /**
      * Column data type logical hint.
@@ -48,15 +48,15 @@ public final class ColumnResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ColumnResponse(
-        @OutputCustomType.Parameter("dataTypeHint") @Nullable String dataTypeHint,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("isDefaultDisplay") Boolean isDefaultDisplay,
-        @OutputCustomType.Parameter("isHidden") Boolean isHidden,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("dataTypeHint") @Nullable String dataTypeHint,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("isDefaultDisplay") Boolean isDefaultDisplay,
+        @CustomType.Parameter("isHidden") Boolean isHidden,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.dataTypeHint = dataTypeHint;
         this.description = description;
         this.displayName = displayName;

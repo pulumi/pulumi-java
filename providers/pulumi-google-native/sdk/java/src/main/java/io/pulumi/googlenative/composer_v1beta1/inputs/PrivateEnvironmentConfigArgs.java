@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.composer_v1beta1.inputs.PrivateClusterConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
      * Optional. When specified, the environment will use Private Service Connect instead of VPC peerings to connect to Cloud SQL in the Tenant Project, and the PSC endpoint in the Customer Project will use an IP address from this subnetwork.
      * 
      */
-    @InputImport(name="cloudComposerConnectionSubnetwork")
+    @Import(name="cloudComposerConnectionSubnetwork")
       private final @Nullable Output<String> cloudComposerConnectionSubnetwork;
 
     public Output<String> getCloudComposerConnectionSubnetwork() {
@@ -35,7 +35,7 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
      * Optional. The CIDR block from which IP range for Cloud Composer Network in tenant project will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
      * 
      */
-    @InputImport(name="cloudComposerNetworkIpv4CidrBlock")
+    @Import(name="cloudComposerNetworkIpv4CidrBlock")
       private final @Nullable Output<String> cloudComposerNetworkIpv4CidrBlock;
 
     public Output<String> getCloudComposerNetworkIpv4CidrBlock() {
@@ -46,7 +46,7 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
      * Optional. The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from web_server_ipv4_cidr_block
      * 
      */
-    @InputImport(name="cloudSqlIpv4CidrBlock")
+    @Import(name="cloudSqlIpv4CidrBlock")
       private final @Nullable Output<String> cloudSqlIpv4CidrBlock;
 
     public Output<String> getCloudSqlIpv4CidrBlock() {
@@ -57,7 +57,7 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
      * Optional. If `true`, a Private IP Cloud Composer environment is created. If this field is set to true, `IPAllocationPolicy.use_ip_aliases` must be set to true for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
      */
-    @InputImport(name="enablePrivateEnvironment")
+    @Import(name="enablePrivateEnvironment")
       private final @Nullable Output<Boolean> enablePrivateEnvironment;
 
     public Output<Boolean> getEnablePrivateEnvironment() {
@@ -68,7 +68,7 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
      * Optional. When enabled, IPs from public (non-RFC1918) ranges can be used for `IPAllocationPolicy.cluster_ipv4_cidr_block` and `IPAllocationPolicy.service_ipv4_cidr_block`.
      * 
      */
-    @InputImport(name="enablePrivatelyUsedPublicIps")
+    @Import(name="enablePrivatelyUsedPublicIps")
       private final @Nullable Output<Boolean> enablePrivatelyUsedPublicIps;
 
     public Output<Boolean> getEnablePrivatelyUsedPublicIps() {
@@ -79,7 +79,7 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
      * Optional. Configuration for the private GKE cluster for a Private IP Cloud Composer environment.
      * 
      */
-    @InputImport(name="privateClusterConfig")
+    @Import(name="privateClusterConfig")
       private final @Nullable Output<PrivateClusterConfigArgs> privateClusterConfig;
 
     public Output<PrivateClusterConfigArgs> getPrivateClusterConfig() {
@@ -90,7 +90,7 @@ public final class PrivateEnvironmentConfigArgs extends io.pulumi.resources.Reso
      * Optional. The CIDR block from which IP range for web server will be reserved. Needs to be disjoint from private_cluster_config.master_ipv4_cidr_block and cloud_sql_ipv4_cidr_block. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
      */
-    @InputImport(name="webServerIpv4CidrBlock")
+    @Import(name="webServerIpv4CidrBlock")
       private final @Nullable Output<String> webServerIpv4CidrBlock;
 
     public Output<String> getWebServerIpv4CidrBlock() {

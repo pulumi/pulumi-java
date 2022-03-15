@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.inputs.WidgetArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
      * The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
      * 
      */
-    @InputImport(name="height")
+    @Import(name="height")
       private final @Nullable Output<Integer> height;
 
     public Output<Integer> getHeight() {
@@ -34,7 +34,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
      * The informational widget contained in the tile. For example an XyChart.
      * 
      */
-    @InputImport(name="widget")
+    @Import(name="widget")
       private final @Nullable Output<WidgetArgs> widget;
 
     public Output<WidgetArgs> getWidget() {
@@ -45,7 +45,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
      * The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.
      * 
      */
-    @InputImport(name="width")
+    @Import(name="width")
       private final @Nullable Output<Integer> width;
 
     public Output<Integer> getWidth() {
@@ -56,7 +56,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
      * The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.
      * 
      */
-    @InputImport(name="xPos")
+    @Import(name="xPos")
       private final @Nullable Output<Integer> xPos;
 
     public Output<Integer> getXPos() {
@@ -67,7 +67,7 @@ public final class TileArgs extends io.pulumi.resources.ResourceArgs {
      * The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.
      * 
      */
-    @InputImport(name="yPos")
+    @Import(name="yPos")
       private final @Nullable Output<Integer> yPos;
 
     public Output<Integer> getYPos() {

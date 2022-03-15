@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -16,42 +16,42 @@ public final class EnvironmentConfigSoftwareConfigGetArgs extends io.pulumi.reso
 
     public static final EnvironmentConfigSoftwareConfigGetArgs Empty = new EnvironmentConfigSoftwareConfigGetArgs();
 
-    @InputImport(name="airflowConfigOverrides")
+    @Import(name="airflowConfigOverrides")
       private final @Nullable Output<Map<String,String>> airflowConfigOverrides;
 
     public Output<Map<String,String>> getAirflowConfigOverrides() {
         return this.airflowConfigOverrides == null ? Output.empty() : this.airflowConfigOverrides;
     }
 
-    @InputImport(name="envVariables")
+    @Import(name="envVariables")
       private final @Nullable Output<Map<String,String>> envVariables;
 
     public Output<Map<String,String>> getEnvVariables() {
         return this.envVariables == null ? Output.empty() : this.envVariables;
     }
 
-    @InputImport(name="imageVersion")
+    @Import(name="imageVersion")
       private final @Nullable Output<String> imageVersion;
 
     public Output<String> getImageVersion() {
         return this.imageVersion == null ? Output.empty() : this.imageVersion;
     }
 
-    @InputImport(name="pypiPackages")
+    @Import(name="pypiPackages")
       private final @Nullable Output<Map<String,String>> pypiPackages;
 
     public Output<Map<String,String>> getPypiPackages() {
         return this.pypiPackages == null ? Output.empty() : this.pypiPackages;
     }
 
-    @InputImport(name="pythonVersion")
+    @Import(name="pythonVersion")
       private final @Nullable Output<String> pythonVersion;
 
     public Output<String> getPythonVersion() {
         return this.pythonVersion == null ? Output.empty() : this.pythonVersion;
     }
 
-    @InputImport(name="schedulerCount")
+    @Import(name="schedulerCount")
       private final @Nullable Output<Integer> schedulerCount;
 
     public Output<Integer> getSchedulerCount() {

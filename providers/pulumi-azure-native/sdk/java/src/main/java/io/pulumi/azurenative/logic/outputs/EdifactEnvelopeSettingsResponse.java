@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdifactEnvelopeSettingsResponse {
     /**
      * The application reference id.
@@ -219,49 +219,49 @@ public final class EdifactEnvelopeSettingsResponse {
      */
     private final Double transactionSetControlNumberUpperBound;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdifactEnvelopeSettingsResponse(
-        @OutputCustomType.Parameter("applicationReferenceId") @Nullable String applicationReferenceId,
-        @OutputCustomType.Parameter("applyDelimiterStringAdvice") Boolean applyDelimiterStringAdvice,
-        @OutputCustomType.Parameter("communicationAgreementId") @Nullable String communicationAgreementId,
-        @OutputCustomType.Parameter("createGroupingSegments") Boolean createGroupingSegments,
-        @OutputCustomType.Parameter("enableDefaultGroupHeaders") Boolean enableDefaultGroupHeaders,
-        @OutputCustomType.Parameter("functionalGroupId") @Nullable String functionalGroupId,
-        @OutputCustomType.Parameter("groupApplicationPassword") @Nullable String groupApplicationPassword,
-        @OutputCustomType.Parameter("groupApplicationReceiverId") @Nullable String groupApplicationReceiverId,
-        @OutputCustomType.Parameter("groupApplicationReceiverQualifier") @Nullable String groupApplicationReceiverQualifier,
-        @OutputCustomType.Parameter("groupApplicationSenderId") @Nullable String groupApplicationSenderId,
-        @OutputCustomType.Parameter("groupApplicationSenderQualifier") @Nullable String groupApplicationSenderQualifier,
-        @OutputCustomType.Parameter("groupAssociationAssignedCode") @Nullable String groupAssociationAssignedCode,
-        @OutputCustomType.Parameter("groupControlNumberLowerBound") Double groupControlNumberLowerBound,
-        @OutputCustomType.Parameter("groupControlNumberPrefix") @Nullable String groupControlNumberPrefix,
-        @OutputCustomType.Parameter("groupControlNumberSuffix") @Nullable String groupControlNumberSuffix,
-        @OutputCustomType.Parameter("groupControlNumberUpperBound") Double groupControlNumberUpperBound,
-        @OutputCustomType.Parameter("groupControllingAgencyCode") @Nullable String groupControllingAgencyCode,
-        @OutputCustomType.Parameter("groupMessageRelease") @Nullable String groupMessageRelease,
-        @OutputCustomType.Parameter("groupMessageVersion") @Nullable String groupMessageVersion,
-        @OutputCustomType.Parameter("interchangeControlNumberLowerBound") Double interchangeControlNumberLowerBound,
-        @OutputCustomType.Parameter("interchangeControlNumberPrefix") @Nullable String interchangeControlNumberPrefix,
-        @OutputCustomType.Parameter("interchangeControlNumberSuffix") @Nullable String interchangeControlNumberSuffix,
-        @OutputCustomType.Parameter("interchangeControlNumberUpperBound") Double interchangeControlNumberUpperBound,
-        @OutputCustomType.Parameter("isTestInterchange") Boolean isTestInterchange,
-        @OutputCustomType.Parameter("overwriteExistingTransactionSetControlNumber") Boolean overwriteExistingTransactionSetControlNumber,
-        @OutputCustomType.Parameter("processingPriorityCode") @Nullable String processingPriorityCode,
-        @OutputCustomType.Parameter("receiverInternalIdentification") @Nullable String receiverInternalIdentification,
-        @OutputCustomType.Parameter("receiverInternalSubIdentification") @Nullable String receiverInternalSubIdentification,
-        @OutputCustomType.Parameter("receiverReverseRoutingAddress") @Nullable String receiverReverseRoutingAddress,
-        @OutputCustomType.Parameter("recipientReferencePasswordQualifier") @Nullable String recipientReferencePasswordQualifier,
-        @OutputCustomType.Parameter("recipientReferencePasswordValue") @Nullable String recipientReferencePasswordValue,
-        @OutputCustomType.Parameter("rolloverGroupControlNumber") Boolean rolloverGroupControlNumber,
-        @OutputCustomType.Parameter("rolloverInterchangeControlNumber") Boolean rolloverInterchangeControlNumber,
-        @OutputCustomType.Parameter("rolloverTransactionSetControlNumber") Boolean rolloverTransactionSetControlNumber,
-        @OutputCustomType.Parameter("senderInternalIdentification") @Nullable String senderInternalIdentification,
-        @OutputCustomType.Parameter("senderInternalSubIdentification") @Nullable String senderInternalSubIdentification,
-        @OutputCustomType.Parameter("senderReverseRoutingAddress") @Nullable String senderReverseRoutingAddress,
-        @OutputCustomType.Parameter("transactionSetControlNumberLowerBound") Double transactionSetControlNumberLowerBound,
-        @OutputCustomType.Parameter("transactionSetControlNumberPrefix") @Nullable String transactionSetControlNumberPrefix,
-        @OutputCustomType.Parameter("transactionSetControlNumberSuffix") @Nullable String transactionSetControlNumberSuffix,
-        @OutputCustomType.Parameter("transactionSetControlNumberUpperBound") Double transactionSetControlNumberUpperBound) {
+        @CustomType.Parameter("applicationReferenceId") @Nullable String applicationReferenceId,
+        @CustomType.Parameter("applyDelimiterStringAdvice") Boolean applyDelimiterStringAdvice,
+        @CustomType.Parameter("communicationAgreementId") @Nullable String communicationAgreementId,
+        @CustomType.Parameter("createGroupingSegments") Boolean createGroupingSegments,
+        @CustomType.Parameter("enableDefaultGroupHeaders") Boolean enableDefaultGroupHeaders,
+        @CustomType.Parameter("functionalGroupId") @Nullable String functionalGroupId,
+        @CustomType.Parameter("groupApplicationPassword") @Nullable String groupApplicationPassword,
+        @CustomType.Parameter("groupApplicationReceiverId") @Nullable String groupApplicationReceiverId,
+        @CustomType.Parameter("groupApplicationReceiverQualifier") @Nullable String groupApplicationReceiverQualifier,
+        @CustomType.Parameter("groupApplicationSenderId") @Nullable String groupApplicationSenderId,
+        @CustomType.Parameter("groupApplicationSenderQualifier") @Nullable String groupApplicationSenderQualifier,
+        @CustomType.Parameter("groupAssociationAssignedCode") @Nullable String groupAssociationAssignedCode,
+        @CustomType.Parameter("groupControlNumberLowerBound") Double groupControlNumberLowerBound,
+        @CustomType.Parameter("groupControlNumberPrefix") @Nullable String groupControlNumberPrefix,
+        @CustomType.Parameter("groupControlNumberSuffix") @Nullable String groupControlNumberSuffix,
+        @CustomType.Parameter("groupControlNumberUpperBound") Double groupControlNumberUpperBound,
+        @CustomType.Parameter("groupControllingAgencyCode") @Nullable String groupControllingAgencyCode,
+        @CustomType.Parameter("groupMessageRelease") @Nullable String groupMessageRelease,
+        @CustomType.Parameter("groupMessageVersion") @Nullable String groupMessageVersion,
+        @CustomType.Parameter("interchangeControlNumberLowerBound") Double interchangeControlNumberLowerBound,
+        @CustomType.Parameter("interchangeControlNumberPrefix") @Nullable String interchangeControlNumberPrefix,
+        @CustomType.Parameter("interchangeControlNumberSuffix") @Nullable String interchangeControlNumberSuffix,
+        @CustomType.Parameter("interchangeControlNumberUpperBound") Double interchangeControlNumberUpperBound,
+        @CustomType.Parameter("isTestInterchange") Boolean isTestInterchange,
+        @CustomType.Parameter("overwriteExistingTransactionSetControlNumber") Boolean overwriteExistingTransactionSetControlNumber,
+        @CustomType.Parameter("processingPriorityCode") @Nullable String processingPriorityCode,
+        @CustomType.Parameter("receiverInternalIdentification") @Nullable String receiverInternalIdentification,
+        @CustomType.Parameter("receiverInternalSubIdentification") @Nullable String receiverInternalSubIdentification,
+        @CustomType.Parameter("receiverReverseRoutingAddress") @Nullable String receiverReverseRoutingAddress,
+        @CustomType.Parameter("recipientReferencePasswordQualifier") @Nullable String recipientReferencePasswordQualifier,
+        @CustomType.Parameter("recipientReferencePasswordValue") @Nullable String recipientReferencePasswordValue,
+        @CustomType.Parameter("rolloverGroupControlNumber") Boolean rolloverGroupControlNumber,
+        @CustomType.Parameter("rolloverInterchangeControlNumber") Boolean rolloverInterchangeControlNumber,
+        @CustomType.Parameter("rolloverTransactionSetControlNumber") Boolean rolloverTransactionSetControlNumber,
+        @CustomType.Parameter("senderInternalIdentification") @Nullable String senderInternalIdentification,
+        @CustomType.Parameter("senderInternalSubIdentification") @Nullable String senderInternalSubIdentification,
+        @CustomType.Parameter("senderReverseRoutingAddress") @Nullable String senderReverseRoutingAddress,
+        @CustomType.Parameter("transactionSetControlNumberLowerBound") Double transactionSetControlNumberLowerBound,
+        @CustomType.Parameter("transactionSetControlNumberPrefix") @Nullable String transactionSetControlNumberPrefix,
+        @CustomType.Parameter("transactionSetControlNumberSuffix") @Nullable String transactionSetControlNumberSuffix,
+        @CustomType.Parameter("transactionSetControlNumberUpperBound") Double transactionSetControlNumberUpperBound) {
         this.applicationReferenceId = applicationReferenceId;
         this.applyDelimiterStringAdvice = applyDelimiterStringAdvice;
         this.communicationAgreementId = communicationAgreementId;

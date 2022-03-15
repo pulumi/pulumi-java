@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse extends
      * The virtual network private IP address of the IP configuration.
      * 
      */
-    @InputImport(name="privateIPAddress")
+    @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
 
     public Optional<String> getPrivateIPAddress() {
@@ -34,7 +34,7 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse extends
      * The reference to the public ip address resource.
      * 
      */
-    @InputImport(name="publicIPAddress")
+    @Import(name="publicIPAddress")
       private final @Nullable SubResourceResponse publicIPAddress;
 
     public Optional<SubResourceResponse> getPublicIPAddress() {
@@ -45,7 +45,7 @@ public final class LoadBalancerFrontendIPConfigurationPropertiesResponse extends
      * The reference to the virtual network subnet resource.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable SubResourceResponse subnet;
 
     public Optional<SubResourceResponse> getSubnet() {

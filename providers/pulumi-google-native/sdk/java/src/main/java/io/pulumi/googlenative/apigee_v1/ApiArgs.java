@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApiArgs Empty = new ApiArgs();
 
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {
@@ -27,7 +27,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * The HTTP Content-Type header value specifying the content type of the body.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -38,7 +38,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * The HTTP request/response body as raw binary.
      * 
      */
-    @InputImport(name="data")
+    @Import(name="data")
       private final @Nullable Output<String> data;
 
     public Output<String> getData() {
@@ -49,28 +49,28 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * Application specific response metadata. Must be set in the first response for streaming APIs.
      * 
      */
-    @InputImport(name="extensions")
+    @Import(name="extensions")
       private final @Nullable Output<List<Map<String,String>>> extensions;
 
     public Output<List<Map<String,String>>> getExtensions() {
         return this.extensions == null ? Output.empty() : this.extensions;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
     public Output<String> getOrganizationId() {
         return this.organizationId;
     }
 
-    @InputImport(name="validate")
+    @Import(name="validate")
       private final @Nullable Output<String> validate;
 
     public Output<String> getValidate() {

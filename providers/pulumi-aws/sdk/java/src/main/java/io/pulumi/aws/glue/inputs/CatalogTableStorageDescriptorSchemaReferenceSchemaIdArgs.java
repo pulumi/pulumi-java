@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CatalogTableStorageDescriptorSchemaReferenceSchemaIdArgs exte
      * Name of the schema registry that contains the schema. Must be provided when `schema_name` is specified and conflicts with `schema_arn`.
      * 
      */
-    @InputImport(name="registryName")
+    @Import(name="registryName")
       private final @Nullable Output<String> registryName;
 
     public Output<String> getRegistryName() {
@@ -29,7 +29,7 @@ public final class CatalogTableStorageDescriptorSchemaReferenceSchemaIdArgs exte
      * ARN of the schema. One of `schema_arn` or `schema_name` has to be provided.
      * 
      */
-    @InputImport(name="schemaArn")
+    @Import(name="schemaArn")
       private final @Nullable Output<String> schemaArn;
 
     public Output<String> getSchemaArn() {
@@ -40,7 +40,7 @@ public final class CatalogTableStorageDescriptorSchemaReferenceSchemaIdArgs exte
      * Name of the schema. One of `schema_arn` or `schema_name` has to be provided.
      * 
      */
-    @InputImport(name="schemaName")
+    @Import(name="schemaName")
       private final @Nullable Output<String> schemaName;
 
     public Output<String> getSchemaName() {

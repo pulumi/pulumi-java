@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AvroSerializationResponse {
     /**
      * Indicates the type of serialization that the input or output uses. Required on PUT (CreateOrReplace) requests.
@@ -16,8 +16,8 @@ public final class AvroSerializationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private AvroSerializationResponse(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private AvroSerializationResponse(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

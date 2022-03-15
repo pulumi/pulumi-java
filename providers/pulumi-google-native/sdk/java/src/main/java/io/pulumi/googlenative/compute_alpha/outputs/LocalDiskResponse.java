@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LocalDiskResponse {
     /**
      * Specifies the number of such disks.
@@ -26,11 +26,11 @@ public final class LocalDiskResponse {
      */
     private final String diskType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LocalDiskResponse(
-        @OutputCustomType.Parameter("diskCount") Integer diskCount,
-        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
-        @OutputCustomType.Parameter("diskType") String diskType) {
+        @CustomType.Parameter("diskCount") Integer diskCount,
+        @CustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @CustomType.Parameter("diskType") String diskType) {
         this.diskCount = diskCount;
         this.diskSizeGb = diskSizeGb;
         this.diskType = diskType;

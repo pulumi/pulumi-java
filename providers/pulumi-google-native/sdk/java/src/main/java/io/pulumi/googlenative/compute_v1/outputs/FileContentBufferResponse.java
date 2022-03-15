@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FileContentBufferResponse {
     /**
      * The raw content in the secure keys file.
@@ -20,10 +20,10 @@ public final class FileContentBufferResponse {
      */
     private final String fileType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FileContentBufferResponse(
-        @OutputCustomType.Parameter("content") String content,
-        @OutputCustomType.Parameter("fileType") String fileType) {
+        @CustomType.Parameter("content") String content,
+        @CustomType.Parameter("fileType") String fileType) {
         this.content = content;
         this.fileType = fileType;
     }

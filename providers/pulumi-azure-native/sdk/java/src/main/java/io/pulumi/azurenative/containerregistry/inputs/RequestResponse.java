@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
      * The IP or hostname and possibly port of the client connection that initiated the event. This is the RemoteAddr from the standard http request.
      * 
      */
-    @InputImport(name="addr")
+    @Import(name="addr")
       private final @Nullable String addr;
 
     public Optional<String> getAddr() {
@@ -33,7 +33,7 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
      * The externally accessible hostname of the registry instance, as specified by the http host header on incoming requests.
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable String host;
 
     public Optional<String> getHost() {
@@ -44,7 +44,7 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
      * The ID of the request that initiated the event.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -55,7 +55,7 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
      * The request method that generated the event.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable String method;
 
     public Optional<String> getMethod() {
@@ -66,7 +66,7 @@ public final class RequestResponse extends io.pulumi.resources.InvokeArgs {
      * The user agent header of the request.
      * 
      */
-    @InputImport(name="useragent")
+    @Import(name="useragent")
       private final @Nullable String useragent;
 
     public Optional<String> getUseragent() {

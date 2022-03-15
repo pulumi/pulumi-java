@@ -4,12 +4,12 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualGatewaySpecBackendDefaultsClientPolicyTls;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualGatewaySpecBackendDefaultsClientPolicy {
     /**
      * The Transport Layer Security (TLS) client policy.
@@ -17,8 +17,8 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicy {
      */
     private final @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTls tls;
 
-    @OutputCustomType.Constructor
-    private VirtualGatewaySpecBackendDefaultsClientPolicy(@OutputCustomType.Parameter("tls") @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTls tls) {
+    @CustomType.Constructor
+    private VirtualGatewaySpecBackendDefaultsClientPolicy(@CustomType.Parameter("tls") @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTls tls) {
         this.tls = tls;
     }
 

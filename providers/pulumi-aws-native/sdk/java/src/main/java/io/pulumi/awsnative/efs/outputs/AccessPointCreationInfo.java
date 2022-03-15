@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.efs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AccessPointCreationInfo {
     /**
      * Specifies the POSIX group ID to apply to the RootDirectory. Accepts values from 0 to 2^32 (4294967295).
@@ -25,11 +25,11 @@ public final class AccessPointCreationInfo {
      */
     private final String permissions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessPointCreationInfo(
-        @OutputCustomType.Parameter("ownerGid") String ownerGid,
-        @OutputCustomType.Parameter("ownerUid") String ownerUid,
-        @OutputCustomType.Parameter("permissions") String permissions) {
+        @CustomType.Parameter("ownerGid") String ownerGid,
+        @CustomType.Parameter("ownerUid") String ownerUid,
+        @CustomType.Parameter("permissions") String permissions) {
         this.ownerGid = ownerGid;
         this.ownerUid = ownerUid;
         this.permissions = permissions;

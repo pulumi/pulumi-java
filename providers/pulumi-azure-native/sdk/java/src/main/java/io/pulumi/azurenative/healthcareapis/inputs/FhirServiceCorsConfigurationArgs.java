@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.healthcareapis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class FhirServiceCorsConfigurationArgs extends io.pulumi.resources.
      * If credentials are allowed via CORS.
      * 
      */
-    @InputImport(name="allowCredentials")
+    @Import(name="allowCredentials")
       private final @Nullable Output<Boolean> allowCredentials;
 
     public Output<Boolean> getAllowCredentials() {
@@ -36,7 +36,7 @@ public final class FhirServiceCorsConfigurationArgs extends io.pulumi.resources.
      * The headers to be allowed via CORS.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Output<List<String>> headers;
 
     public Output<List<String>> getHeaders() {
@@ -47,7 +47,7 @@ public final class FhirServiceCorsConfigurationArgs extends io.pulumi.resources.
      * The max age to be allowed via CORS.
      * 
      */
-    @InputImport(name="maxAge")
+    @Import(name="maxAge")
       private final @Nullable Output<Integer> maxAge;
 
     public Output<Integer> getMaxAge() {
@@ -58,7 +58,7 @@ public final class FhirServiceCorsConfigurationArgs extends io.pulumi.resources.
      * The methods to be allowed via CORS.
      * 
      */
-    @InputImport(name="methods")
+    @Import(name="methods")
       private final @Nullable Output<List<String>> methods;
 
     public Output<List<String>> getMethods() {
@@ -69,7 +69,7 @@ public final class FhirServiceCorsConfigurationArgs extends io.pulumi.resources.
      * The origins to be allowed via CORS.
      * 
      */
-    @InputImport(name="origins")
+    @Import(name="origins")
       private final @Nullable Output<List<String>> origins;
 
     public Output<List<String>> getOrigins() {

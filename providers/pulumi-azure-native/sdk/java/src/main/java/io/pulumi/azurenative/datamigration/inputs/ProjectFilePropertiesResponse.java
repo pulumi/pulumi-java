@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
      * Optional File extension. If submitted it should not have a leading period and must match the extension from filePath.
      * 
      */
-    @InputImport(name="extension")
+    @Import(name="extension")
       private final @Nullable String extension;
 
     public Optional<String> getExtension() {
@@ -34,7 +34,7 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
      * Relative path of this file resource. This property can be set when creating or updating the file resource.
      * 
      */
-    @InputImport(name="filePath")
+    @Import(name="filePath")
       private final @Nullable String filePath;
 
     public Optional<String> getFilePath() {
@@ -45,7 +45,7 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
      * Modification DateTime.
      * 
      */
-    @InputImport(name="lastModified", required=true)
+    @Import(name="lastModified", required=true)
       private final String lastModified;
 
     public String getLastModified() {
@@ -56,7 +56,7 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
      * File content type. This property can be modified to reflect the file content type.
      * 
      */
-    @InputImport(name="mediaType")
+    @Import(name="mediaType")
       private final @Nullable String mediaType;
 
     public Optional<String> getMediaType() {
@@ -67,7 +67,7 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
      * File size.
      * 
      */
-    @InputImport(name="size", required=true)
+    @Import(name="size", required=true)
       private final Double size;
 
     public Double getSize() {

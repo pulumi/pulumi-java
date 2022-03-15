@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
      * The URL for the health check that signals autohealing.
      * 
      */
-    @InputImport(name="healthCheck", required=true)
+    @Import(name="healthCheck", required=true)
       private final String healthCheck;
 
     public String getHealthCheck() {
@@ -28,7 +28,7 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
      * The number of seconds that the managed instance group waits before it applies autohealing policies to new instances or recently recreated instances. This initial delay allows instances to initialize and run their startup scripts before the instance group determines that they are UNHEALTHY. This prevents the managed instance group from recreating its instances prematurely. This value must be from range [0, 3600].
      * 
      */
-    @InputImport(name="initialDelaySec", required=true)
+    @Import(name="initialDelaySec", required=true)
       private final Integer initialDelaySec;
 
     public Integer getInitialDelaySec() {

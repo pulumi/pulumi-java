@@ -16,13 +16,13 @@ import io.pulumi.awsnative.datasync.enums.TaskOptionsTaskQueueing;
 import io.pulumi.awsnative.datasync.enums.TaskOptionsTransferMode;
 import io.pulumi.awsnative.datasync.enums.TaskOptionsUid;
 import io.pulumi.awsnative.datasync.enums.TaskOptionsVerifyMode;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskOptions {
     /**
      * A file metadata value that shows the last time a file was accessed (that is, when the file was read or written to).
@@ -95,22 +95,22 @@ public final class TaskOptions {
      */
     private final @Nullable TaskOptionsVerifyMode verifyMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskOptions(
-        @OutputCustomType.Parameter("atime") @Nullable TaskOptionsAtime atime,
-        @OutputCustomType.Parameter("bytesPerSecond") @Nullable Integer bytesPerSecond,
-        @OutputCustomType.Parameter("gid") @Nullable TaskOptionsGid gid,
-        @OutputCustomType.Parameter("logLevel") @Nullable TaskOptionsLogLevel logLevel,
-        @OutputCustomType.Parameter("mtime") @Nullable TaskOptionsMtime mtime,
-        @OutputCustomType.Parameter("overwriteMode") @Nullable TaskOptionsOverwriteMode overwriteMode,
-        @OutputCustomType.Parameter("posixPermissions") @Nullable TaskOptionsPosixPermissions posixPermissions,
-        @OutputCustomType.Parameter("preserveDeletedFiles") @Nullable TaskOptionsPreserveDeletedFiles preserveDeletedFiles,
-        @OutputCustomType.Parameter("preserveDevices") @Nullable TaskOptionsPreserveDevices preserveDevices,
-        @OutputCustomType.Parameter("securityDescriptorCopyFlags") @Nullable TaskOptionsSecurityDescriptorCopyFlags securityDescriptorCopyFlags,
-        @OutputCustomType.Parameter("taskQueueing") @Nullable TaskOptionsTaskQueueing taskQueueing,
-        @OutputCustomType.Parameter("transferMode") @Nullable TaskOptionsTransferMode transferMode,
-        @OutputCustomType.Parameter("uid") @Nullable TaskOptionsUid uid,
-        @OutputCustomType.Parameter("verifyMode") @Nullable TaskOptionsVerifyMode verifyMode) {
+        @CustomType.Parameter("atime") @Nullable TaskOptionsAtime atime,
+        @CustomType.Parameter("bytesPerSecond") @Nullable Integer bytesPerSecond,
+        @CustomType.Parameter("gid") @Nullable TaskOptionsGid gid,
+        @CustomType.Parameter("logLevel") @Nullable TaskOptionsLogLevel logLevel,
+        @CustomType.Parameter("mtime") @Nullable TaskOptionsMtime mtime,
+        @CustomType.Parameter("overwriteMode") @Nullable TaskOptionsOverwriteMode overwriteMode,
+        @CustomType.Parameter("posixPermissions") @Nullable TaskOptionsPosixPermissions posixPermissions,
+        @CustomType.Parameter("preserveDeletedFiles") @Nullable TaskOptionsPreserveDeletedFiles preserveDeletedFiles,
+        @CustomType.Parameter("preserveDevices") @Nullable TaskOptionsPreserveDevices preserveDevices,
+        @CustomType.Parameter("securityDescriptorCopyFlags") @Nullable TaskOptionsSecurityDescriptorCopyFlags securityDescriptorCopyFlags,
+        @CustomType.Parameter("taskQueueing") @Nullable TaskOptionsTaskQueueing taskQueueing,
+        @CustomType.Parameter("transferMode") @Nullable TaskOptionsTransferMode transferMode,
+        @CustomType.Parameter("uid") @Nullable TaskOptionsUid uid,
+        @CustomType.Parameter("verifyMode") @Nullable TaskOptionsVerifyMode verifyMode) {
         this.atime = atime;
         this.bytesPerSecond = bytesPerSecond;
         this.gid = gid;

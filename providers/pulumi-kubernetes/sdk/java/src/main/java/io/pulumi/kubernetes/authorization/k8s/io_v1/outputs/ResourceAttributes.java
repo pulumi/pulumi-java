@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceAttributes {
     /**
      * Group is the API Group of the Resource.  "*" means all.
@@ -47,15 +47,15 @@ public final class ResourceAttributes {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceAttributes(
-        @OutputCustomType.Parameter("group") @Nullable String group,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
-        @OutputCustomType.Parameter("resource") @Nullable String resource,
-        @OutputCustomType.Parameter("subresource") @Nullable String subresource,
-        @OutputCustomType.Parameter("verb") @Nullable String verb,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("group") @Nullable String group,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("namespace") @Nullable String namespace,
+        @CustomType.Parameter("resource") @Nullable String resource,
+        @CustomType.Parameter("subresource") @Nullable String subresource,
+        @CustomType.Parameter("verb") @Nullable String verb,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.group = group;
         this.name = name;
         this.namespace = namespace;

@@ -6,7 +6,7 @@ package io.pulumi.aws.cloudwatch;
 import io.pulumi.aws.cloudwatch.inputs.MetricStreamExcludeFilterArgs;
 import io.pulumi.aws.cloudwatch.inputs.MetricStreamIncludeFilterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * List of exclusive metric filters. If you specify this parameter, the stream sends metrics from all metric namespaces except for the namespaces that you specify here. Conflicts with `include_filter`.
      * 
      */
-    @InputImport(name="excludeFilters")
+    @Import(name="excludeFilters")
       private final @Nullable Output<List<MetricStreamExcludeFilterArgs>> excludeFilters;
 
     public Output<List<MetricStreamExcludeFilterArgs>> getExcludeFilters() {
@@ -33,7 +33,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of the Amazon Kinesis Firehose delivery stream to use for this metric stream.
      * 
      */
-    @InputImport(name="firehoseArn", required=true)
+    @Import(name="firehoseArn", required=true)
       private final Output<String> firehoseArn;
 
     public Output<String> getFirehoseArn() {
@@ -44,14 +44,14 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * List of inclusive metric filters. If you specify this parameter, the stream sends only the metrics from the metric namespaces that you specify here. Conflicts with `exclude_filter`.
      * 
      */
-    @InputImport(name="includeFilters")
+    @Import(name="includeFilters")
       private final @Nullable Output<List<MetricStreamIncludeFilterArgs>> includeFilters;
 
     public Output<List<MetricStreamIncludeFilterArgs>> getIncludeFilters() {
         return this.includeFilters == null ? Output.empty() : this.includeFilters;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -62,7 +62,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * Creates a unique friendly name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -73,7 +73,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * Output format for the stream. Possible values are `json` and `opentelemetry0.7`. For more information about output formats, see [Metric streams output formats](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats.html).
      * 
      */
-    @InputImport(name="outputFormat", required=true)
+    @Import(name="outputFormat", required=true)
       private final Output<String> outputFormat;
 
     public Output<String> getOutputFormat() {
@@ -84,7 +84,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of the IAM role that this metric stream will use to access Amazon Kinesis Firehose resources. For more information about role permissions, see [Trust between CloudWatch and Kinesis Data Firehose](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-trustpolicy.html).
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -95,7 +95,7 @@ public final class MetricStreamArgs extends io.pulumi.resources.ResourceArgs {
      * Map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

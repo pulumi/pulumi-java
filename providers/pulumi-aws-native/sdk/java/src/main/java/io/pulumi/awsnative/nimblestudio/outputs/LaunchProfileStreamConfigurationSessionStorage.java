@@ -5,13 +5,13 @@ package io.pulumi.awsnative.nimblestudio.outputs;
 
 import io.pulumi.awsnative.nimblestudio.enums.LaunchProfileStreamingSessionStorageMode;
 import io.pulumi.awsnative.nimblestudio.outputs.LaunchProfileStreamingSessionStorageRoot;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LaunchProfileStreamConfigurationSessionStorage {
     /**
      * <p>Allows artists to upload files to their workstations. The only valid option is
@@ -21,10 +21,10 @@ public final class LaunchProfileStreamConfigurationSessionStorage {
     private final @Nullable List<LaunchProfileStreamingSessionStorageMode> mode;
     private final @Nullable LaunchProfileStreamingSessionStorageRoot root;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LaunchProfileStreamConfigurationSessionStorage(
-        @OutputCustomType.Parameter("mode") @Nullable List<LaunchProfileStreamingSessionStorageMode> mode,
-        @OutputCustomType.Parameter("root") @Nullable LaunchProfileStreamingSessionStorageRoot root) {
+        @CustomType.Parameter("mode") @Nullable List<LaunchProfileStreamingSessionStorageMode> mode,
+        @CustomType.Parameter("root") @Nullable LaunchProfileStreamingSessionStorageRoot root) {
         this.mode = mode;
         this.root = root;
     }

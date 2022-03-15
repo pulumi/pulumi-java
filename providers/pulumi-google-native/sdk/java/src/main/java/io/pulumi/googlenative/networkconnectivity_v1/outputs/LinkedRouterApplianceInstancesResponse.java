@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.networkconnectivity_v1.outputs.RouterApplianceInstanceResponse;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LinkedRouterApplianceInstancesResponse {
     /**
      * The list of router appliance instances.
@@ -22,10 +22,10 @@ public final class LinkedRouterApplianceInstancesResponse {
      */
     private final Boolean siteToSiteDataTransfer;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LinkedRouterApplianceInstancesResponse(
-        @OutputCustomType.Parameter("instances") List<RouterApplianceInstanceResponse> instances,
-        @OutputCustomType.Parameter("siteToSiteDataTransfer") Boolean siteToSiteDataTransfer) {
+        @CustomType.Parameter("instances") List<RouterApplianceInstanceResponse> instances,
+        @CustomType.Parameter("siteToSiteDataTransfer") Boolean siteToSiteDataTransfer) {
         this.instances = instances;
         this.siteToSiteDataTransfer = siteToSiteDataTransfer;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.HealthErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
      * The health of the reprotect agent.
      * 
      */
-    @InputImport(name="health", required=true)
+    @Import(name="health", required=true)
       private final String health;
 
     public String getHealth() {
@@ -33,7 +33,7 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
      * The health errors.
      * 
      */
-    @InputImport(name="healthErrors", required=true)
+    @Import(name="healthErrors", required=true)
       private final List<HealthErrorResponse> healthErrors;
 
     public List<HealthErrorResponse> getHealthErrors() {
@@ -44,7 +44,7 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
      * The reprotect agent Id.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -55,7 +55,7 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
      * The last heartbeat received from the reprotect agent.
      * 
      */
-    @InputImport(name="lastHeartbeatUtc", required=true)
+    @Import(name="lastHeartbeatUtc", required=true)
       private final String lastHeartbeatUtc;
 
     public String getLastHeartbeatUtc() {
@@ -66,7 +66,7 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
      * The reprotect agent name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -77,7 +77,7 @@ public final class ReprotectAgentDetailsResponse extends io.pulumi.resources.Inv
      * The version.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

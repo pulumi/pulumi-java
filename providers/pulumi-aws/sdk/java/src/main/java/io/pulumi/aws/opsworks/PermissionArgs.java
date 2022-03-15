@@ -4,7 +4,7 @@
 package io.pulumi.aws.opsworks;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the user is allowed to use SSH to communicate with the instance
      * 
      */
-    @InputImport(name="allowSsh")
+    @Import(name="allowSsh")
       private final @Nullable Output<Boolean> allowSsh;
 
     public Output<Boolean> getAllowSsh() {
@@ -30,7 +30,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the user is allowed to use sudo to elevate privileges
      * 
      */
-    @InputImport(name="allowSudo")
+    @Import(name="allowSudo")
       private final @Nullable Output<Boolean> allowSudo;
 
     public Output<Boolean> getAllowSudo() {
@@ -41,7 +41,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * The users permission level. Mus be one of `deny`, `show`, `deploy`, `manage`, `iam_only`
      * 
      */
-    @InputImport(name="level")
+    @Import(name="level")
       private final @Nullable Output<String> level;
 
     public Output<String> getLevel() {
@@ -52,7 +52,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * The stack to set the permissions for
      * 
      */
-    @InputImport(name="stackId")
+    @Import(name="stackId")
       private final @Nullable Output<String> stackId;
 
     public Output<String> getStackId() {
@@ -63,7 +63,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * The user's IAM ARN to set permissions for
      * 
      */
-    @InputImport(name="userArn", required=true)
+    @Import(name="userArn", required=true)
       private final Output<String> userArn;
 
     public Output<String> getUserArn() {

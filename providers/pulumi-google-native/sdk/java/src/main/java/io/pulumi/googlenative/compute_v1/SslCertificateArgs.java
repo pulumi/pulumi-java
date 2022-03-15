@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.enums.SslCertificateType;
 import io.pulumi.googlenative.compute_v1.inputs.SslCertificateManagedSslCertificateArgs;
 import io.pulumi.googlenative.compute_v1.inputs.SslCertificateSelfManagedSslCertificateArgs;
@@ -21,7 +21,7 @@ public final class SslCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * A value read into memory from a certificate file. The certificate file must be in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.
      * 
      */
-    @InputImport(name="certificate")
+    @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
     public Output<String> getCertificate() {
@@ -32,7 +32,7 @@ public final class SslCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class SslCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration and status of a managed SSL certificate.
      * 
      */
-    @InputImport(name="managed")
+    @Import(name="managed")
       private final @Nullable Output<SslCertificateManagedSslCertificateArgs> managed;
 
     public Output<SslCertificateManagedSslCertificateArgs> getManaged() {
@@ -54,7 +54,7 @@ public final class SslCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,21 +65,21 @@ public final class SslCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * A value read into memory from a write-only private key file. The private key file must be in PEM format. For security, only insert requests include this field.
      * 
      */
-    @InputImport(name="privateKey")
+    @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
     public Output<String> getPrivateKey() {
         return this.privateKey == null ? Output.empty() : this.privateKey;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -90,7 +90,7 @@ public final class SslCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration and status of a self-managed SSL certificate.
      * 
      */
-    @InputImport(name="selfManaged")
+    @Import(name="selfManaged")
       private final @Nullable Output<SslCertificateSelfManagedSslCertificateArgs> selfManaged;
 
     public Output<SslCertificateSelfManagedSslCertificateArgs> getSelfManaged() {
@@ -101,7 +101,7 @@ public final class SslCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not specified, the certificate is self-managed and the fields certificate and private_key are used.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<SslCertificateType> type;
 
     public Output<SslCertificateType> getType() {

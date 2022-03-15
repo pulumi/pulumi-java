@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VolumeMountResponse {
     /**
      * The path within the container where the volume should be mounted. Must not contain colon (:).
@@ -28,11 +28,11 @@ public final class VolumeMountResponse {
      */
     private final @Nullable Boolean readOnly;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VolumeMountResponse(
-        @OutputCustomType.Parameter("mountPath") String mountPath,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
+        @CustomType.Parameter("mountPath") String mountPath,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
         this.mountPath = mountPath;
         this.name = name;
         this.readOnly = readOnly;

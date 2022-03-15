@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataloss.PreventionInspectTemplateArgs;
@@ -43,7 +43,7 @@ public class PreventionInspectTemplate extends io.pulumi.resources.CustomResourc
      * A description of the inspect template.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -57,7 +57,7 @@ public class PreventionInspectTemplate extends io.pulumi.resources.CustomResourc
      * User set display name of the inspect template.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -72,7 +72,7 @@ public class PreventionInspectTemplate extends io.pulumi.resources.CustomResourc
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="inspectConfig", type=PreventionInspectTemplateInspectConfig.class, parameters={})
+    @Export(name="inspectConfig", type=PreventionInspectTemplateInspectConfig.class, parameters={})
     private Output</* @Nullable */ PreventionInspectTemplateInspectConfig> inspectConfig;
 
     /**
@@ -88,7 +88,7 @@ public class PreventionInspectTemplate extends io.pulumi.resources.CustomResourc
      * or `projects/project-id/storedInfoTypes/432452342`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class PreventionInspectTemplate extends io.pulumi.resources.CustomResourc
      * * `organizations/{{organization_id}}/locations/{{location}}`
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**

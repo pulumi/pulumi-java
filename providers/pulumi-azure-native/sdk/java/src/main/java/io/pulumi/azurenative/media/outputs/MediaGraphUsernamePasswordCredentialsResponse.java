@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MediaGraphUsernamePasswordCredentialsResponse {
     /**
      * The discriminator for derived types.
@@ -26,11 +26,11 @@ public final class MediaGraphUsernamePasswordCredentialsResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MediaGraphUsernamePasswordCredentialsResponse(
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("username") String username) {
         this.odataType = odataType;
         this.password = password;
         this.username = username;

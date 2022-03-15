@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.DockerImagePlatformArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
      * <seealso href="https://docs.microsoft.com/en-us/azure/machine-learning/how-to-deploy-custom-docker-image#use-a-custom-base-image" />
      * 
      */
-    @InputImport(name="dockerImageUri", required=true)
+    @Import(name="dockerImageUri", required=true)
       private final Output<String> dockerImageUri;
 
     public Output<String> getDockerImageUri() {
@@ -36,7 +36,7 @@ public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'Image'.
      * 
      */
-    @InputImport(name="dockerSpecificationType", required=true)
+    @Import(name="dockerSpecificationType", required=true)
       private final Output<String> dockerSpecificationType;
 
     public Output<String> getDockerSpecificationType() {
@@ -47,7 +47,7 @@ public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
      * The platform information of the docker image.
      * 
      */
-    @InputImport(name="platform")
+    @Import(name="platform")
       private final @Nullable Output<DockerImagePlatformArgs> platform;
 
     public Output<DockerImagePlatformArgs> getPlatform() {

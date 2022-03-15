@@ -5,7 +5,7 @@ package io.pulumi.azurenative.azurearcdata.inputs;
 
 import io.pulumi.azurenative.azurearcdata.enums.PostgresInstanceSkuTier;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class PostgresInstanceSkuArgs extends io.pulumi.resources.ResourceA
      * If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
@@ -36,7 +36,7 @@ public final class PostgresInstanceSkuArgs extends io.pulumi.resources.ResourceA
      * Whether dev/test is enabled. When the dev field is set to true, the resource is used for dev/test purpose.
      * 
      */
-    @InputImport(name="dev")
+    @Import(name="dev")
       private final @Nullable Output<Boolean> dev;
 
     public Output<Boolean> getDev() {
@@ -47,7 +47,7 @@ public final class PostgresInstanceSkuArgs extends io.pulumi.resources.ResourceA
      * If the service has different generations of hardware, for the same SKU, then that can be captured here.
      * 
      */
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable Output<String> family;
 
     public Output<String> getFamily() {
@@ -58,7 +58,7 @@ public final class PostgresInstanceSkuArgs extends io.pulumi.resources.ResourceA
      * The name of the SKU.  It is typically a letter+number code
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class PostgresInstanceSkuArgs extends io.pulumi.resources.ResourceA
      * The SKU size. When the name field is the combination of tier and some other value, this would be the standalone code.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<String> size;
 
     public Output<String> getSize() {
@@ -80,7 +80,7 @@ public final class PostgresInstanceSkuArgs extends io.pulumi.resources.ResourceA
      * This field is required to be implemented by the Resource Provider if the service has more than one tier.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<PostgresInstanceSkuTier> tier;
 
     public Output<PostgresInstanceSkuTier> getTier() {

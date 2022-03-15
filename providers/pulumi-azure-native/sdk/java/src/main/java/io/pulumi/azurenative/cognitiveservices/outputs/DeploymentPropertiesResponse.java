@@ -5,13 +5,13 @@ package io.pulumi.azurenative.cognitiveservices.outputs;
 
 import io.pulumi.azurenative.cognitiveservices.outputs.DeploymentModelResponse;
 import io.pulumi.azurenative.cognitiveservices.outputs.DeploymentScaleSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentPropertiesResponse {
     /**
      * Properties of Cognitive Services account deployment model.
@@ -29,11 +29,11 @@ public final class DeploymentPropertiesResponse {
      */
     private final @Nullable DeploymentScaleSettingsResponse scaleSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentPropertiesResponse(
-        @OutputCustomType.Parameter("model") @Nullable DeploymentModelResponse model,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("scaleSettings") @Nullable DeploymentScaleSettingsResponse scaleSettings) {
+        @CustomType.Parameter("model") @Nullable DeploymentModelResponse model,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("scaleSettings") @Nullable DeploymentScaleSettingsResponse scaleSettings) {
         this.model = model;
         this.provisioningState = provisioningState;
         this.scaleSettings = scaleSettings;

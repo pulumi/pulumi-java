@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve {
     /**
      * The algorithm used.
@@ -16,8 +16,8 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve {
      */
     private final String signatureAlgorithm;
 
-    @OutputCustomType.Constructor
-    private CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve(@OutputCustomType.Parameter("signatureAlgorithm") String signatureAlgorithm) {
+    @CustomType.Constructor
+    private CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve(@CustomType.Parameter("signatureAlgorithm") String signatureAlgorithm) {
         this.signatureAlgorithm = signatureAlgorithm;
     }
 

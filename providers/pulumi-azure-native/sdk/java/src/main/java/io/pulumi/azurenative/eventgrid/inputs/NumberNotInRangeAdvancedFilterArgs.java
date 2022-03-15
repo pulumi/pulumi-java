@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class NumberNotInRangeAdvancedFilterArgs extends io.pulumi.resource
      * The field/property in the event based on which you want to filter.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -36,7 +36,7 @@ public final class NumberNotInRangeAdvancedFilterArgs extends io.pulumi.resource
      * Expected value is 'NumberNotInRange'.
      * 
      */
-    @InputImport(name="operatorType", required=true)
+    @Import(name="operatorType", required=true)
       private final Output<String> operatorType;
 
     public Output<String> getOperatorType() {
@@ -47,7 +47,7 @@ public final class NumberNotInRangeAdvancedFilterArgs extends io.pulumi.resource
      * The set of filter values.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<List<Double>>> values;
 
     public Output<List<List<Double>>> getValues() {

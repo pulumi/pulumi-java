@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class UniformShardingResponse extends io.pulumi.resources.InvokeArg
      * Total number of shards. When any physical devices are selected, the number must be >= 1 and <= 50. When no physical devices are selected, the number must be >= 1 and <= 500.
      * 
      */
-    @InputImport(name="numShards", required=true)
+    @Import(name="numShards", required=true)
       private final Integer numShards;
 
     public Integer getNumShards() {

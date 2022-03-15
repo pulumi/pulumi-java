@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.ivs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PlaybackKeyPairTag {
     private final String key;
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PlaybackKeyPairTag(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("value") String value) {
         this.key = key;
         this.value = value;
     }

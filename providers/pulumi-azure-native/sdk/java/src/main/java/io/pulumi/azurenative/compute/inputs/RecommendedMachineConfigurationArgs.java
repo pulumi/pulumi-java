@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.ResourceRangeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class RecommendedMachineConfigurationArgs extends io.pulumi.resourc
      * Describes the resource range.
      * 
      */
-    @InputImport(name="memory")
+    @Import(name="memory")
       private final @Nullable Output<ResourceRangeArgs> memory;
 
     public Output<ResourceRangeArgs> getMemory() {
@@ -33,7 +33,7 @@ public final class RecommendedMachineConfigurationArgs extends io.pulumi.resourc
      * Describes the resource range.
      * 
      */
-    @InputImport(name="vCPUs")
+    @Import(name="vCPUs")
       private final @Nullable Output<ResourceRangeArgs> vCPUs;
 
     public Output<ResourceRangeArgs> getVCPUs() {

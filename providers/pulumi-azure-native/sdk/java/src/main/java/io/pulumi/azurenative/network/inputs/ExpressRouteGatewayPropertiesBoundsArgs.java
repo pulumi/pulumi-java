@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ExpressRouteGatewayPropertiesBoundsArgs extends io.pulumi.res
      * Maximum number of scale units deployed for ExpressRoute gateway.
      * 
      */
-    @InputImport(name="max")
+    @Import(name="max")
       private final @Nullable Output<Integer> max;
 
     public Output<Integer> getMax() {
@@ -33,7 +33,7 @@ public final class ExpressRouteGatewayPropertiesBoundsArgs extends io.pulumi.res
      * Minimum number of scale units deployed for ExpressRoute gateway.
      * 
      */
-    @InputImport(name="min")
+    @Import(name="min")
       private final @Nullable Output<Integer> min;
 
     public Output<Integer> getMin() {

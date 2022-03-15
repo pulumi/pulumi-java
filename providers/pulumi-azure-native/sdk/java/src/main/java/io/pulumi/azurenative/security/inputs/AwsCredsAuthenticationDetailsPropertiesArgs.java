@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends io.pulumi
      * Expected value is 'awsCreds'.
      * 
      */
-    @InputImport(name="authenticationType", required=true)
+    @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
     public Output<String> getAuthenticationType() {
@@ -33,7 +33,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends io.pulumi
      * Public key element of the AWS credential object (write only)
      * 
      */
-    @InputImport(name="awsAccessKeyId", required=true)
+    @Import(name="awsAccessKeyId", required=true)
       private final Output<String> awsAccessKeyId;
 
     public Output<String> getAwsAccessKeyId() {
@@ -44,7 +44,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends io.pulumi
      * Secret key element of the AWS credential object (write only)
      * 
      */
-    @InputImport(name="awsSecretAccessKey", required=true)
+    @Import(name="awsSecretAccessKey", required=true)
       private final Output<String> awsSecretAccessKey;
 
     public Output<String> getAwsSecretAccessKey() {

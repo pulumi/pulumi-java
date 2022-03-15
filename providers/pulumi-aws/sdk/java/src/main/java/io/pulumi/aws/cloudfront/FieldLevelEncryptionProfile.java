@@ -8,7 +8,7 @@ import io.pulumi.aws.cloudfront.FieldLevelEncryptionProfileArgs;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileState;
 import io.pulumi.aws.cloudfront.outputs.FieldLevelEncryptionProfileEncryptionEntities;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class FieldLevelEncryptionProfile extends io.pulumi.resources.CustomResou
      * Internal value used by CloudFront to allow future updates to the Field Level Encryption Profile.
      * 
      */
-    @OutputExport(name="callerReference", type=String.class, parameters={})
+    @Export(name="callerReference", type=String.class, parameters={})
     private Output<String> callerReference;
 
     /**
@@ -47,7 +47,7 @@ public class FieldLevelEncryptionProfile extends io.pulumi.resources.CustomResou
      * An optional comment about the Field Level Encryption Profile.
      * 
      */
-    @OutputExport(name="comment", type=String.class, parameters={})
+    @Export(name="comment", type=String.class, parameters={})
     private Output</* @Nullable */ String> comment;
 
     /**
@@ -61,7 +61,7 @@ public class FieldLevelEncryptionProfile extends io.pulumi.resources.CustomResou
      * The encryption entities config block for field-level encryption profiles that contains an attribute `items` which includes the encryption key and field pattern specifications.
      * 
      */
-    @OutputExport(name="encryptionEntities", type=FieldLevelEncryptionProfileEncryptionEntities.class, parameters={})
+    @Export(name="encryptionEntities", type=FieldLevelEncryptionProfileEncryptionEntities.class, parameters={})
     private Output<FieldLevelEncryptionProfileEncryptionEntities> encryptionEntities;
 
     /**
@@ -75,7 +75,7 @@ public class FieldLevelEncryptionProfile extends io.pulumi.resources.CustomResou
      * The current version of the Field Level Encryption Profile. For example: `E2QWRUHAPOMQZL`.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -89,7 +89,7 @@ public class FieldLevelEncryptionProfile extends io.pulumi.resources.CustomResou
      * The name of the Field Level Encryption Profile.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

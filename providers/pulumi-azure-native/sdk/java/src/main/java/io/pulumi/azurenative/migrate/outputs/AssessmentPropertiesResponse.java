@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.VmUptimeResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AssessmentPropertiesResponse {
     /**
      * Storage type selected for this disk.
@@ -164,38 +164,38 @@ public final class AssessmentPropertiesResponse {
      */
     private final VmUptimeResponse vmUptime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssessmentPropertiesResponse(
-        @OutputCustomType.Parameter("azureDiskType") String azureDiskType,
-        @OutputCustomType.Parameter("azureHybridUseBenefit") String azureHybridUseBenefit,
-        @OutputCustomType.Parameter("azureLocation") String azureLocation,
-        @OutputCustomType.Parameter("azureOfferCode") String azureOfferCode,
-        @OutputCustomType.Parameter("azurePricingTier") String azurePricingTier,
-        @OutputCustomType.Parameter("azureStorageRedundancy") String azureStorageRedundancy,
-        @OutputCustomType.Parameter("azureVmFamilies") List<String> azureVmFamilies,
-        @OutputCustomType.Parameter("confidenceRatingInPercentage") Double confidenceRatingInPercentage,
-        @OutputCustomType.Parameter("createdTimestamp") String createdTimestamp,
-        @OutputCustomType.Parameter("currency") String currency,
-        @OutputCustomType.Parameter("discountPercentage") Double discountPercentage,
-        @OutputCustomType.Parameter("eaSubscriptionId") String eaSubscriptionId,
-        @OutputCustomType.Parameter("monthlyBandwidthCost") Double monthlyBandwidthCost,
-        @OutputCustomType.Parameter("monthlyComputeCost") Double monthlyComputeCost,
-        @OutputCustomType.Parameter("monthlyPremiumStorageCost") Double monthlyPremiumStorageCost,
-        @OutputCustomType.Parameter("monthlyStandardSSDStorageCost") Double monthlyStandardSSDStorageCost,
-        @OutputCustomType.Parameter("monthlyStorageCost") Double monthlyStorageCost,
-        @OutputCustomType.Parameter("numberOfMachines") Integer numberOfMachines,
-        @OutputCustomType.Parameter("percentile") String percentile,
-        @OutputCustomType.Parameter("perfDataEndTime") String perfDataEndTime,
-        @OutputCustomType.Parameter("perfDataStartTime") String perfDataStartTime,
-        @OutputCustomType.Parameter("pricesTimestamp") String pricesTimestamp,
-        @OutputCustomType.Parameter("reservedInstance") String reservedInstance,
-        @OutputCustomType.Parameter("scalingFactor") Double scalingFactor,
-        @OutputCustomType.Parameter("sizingCriterion") String sizingCriterion,
-        @OutputCustomType.Parameter("stage") String stage,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("timeRange") String timeRange,
-        @OutputCustomType.Parameter("updatedTimestamp") String updatedTimestamp,
-        @OutputCustomType.Parameter("vmUptime") VmUptimeResponse vmUptime) {
+        @CustomType.Parameter("azureDiskType") String azureDiskType,
+        @CustomType.Parameter("azureHybridUseBenefit") String azureHybridUseBenefit,
+        @CustomType.Parameter("azureLocation") String azureLocation,
+        @CustomType.Parameter("azureOfferCode") String azureOfferCode,
+        @CustomType.Parameter("azurePricingTier") String azurePricingTier,
+        @CustomType.Parameter("azureStorageRedundancy") String azureStorageRedundancy,
+        @CustomType.Parameter("azureVmFamilies") List<String> azureVmFamilies,
+        @CustomType.Parameter("confidenceRatingInPercentage") Double confidenceRatingInPercentage,
+        @CustomType.Parameter("createdTimestamp") String createdTimestamp,
+        @CustomType.Parameter("currency") String currency,
+        @CustomType.Parameter("discountPercentage") Double discountPercentage,
+        @CustomType.Parameter("eaSubscriptionId") String eaSubscriptionId,
+        @CustomType.Parameter("monthlyBandwidthCost") Double monthlyBandwidthCost,
+        @CustomType.Parameter("monthlyComputeCost") Double monthlyComputeCost,
+        @CustomType.Parameter("monthlyPremiumStorageCost") Double monthlyPremiumStorageCost,
+        @CustomType.Parameter("monthlyStandardSSDStorageCost") Double monthlyStandardSSDStorageCost,
+        @CustomType.Parameter("monthlyStorageCost") Double monthlyStorageCost,
+        @CustomType.Parameter("numberOfMachines") Integer numberOfMachines,
+        @CustomType.Parameter("percentile") String percentile,
+        @CustomType.Parameter("perfDataEndTime") String perfDataEndTime,
+        @CustomType.Parameter("perfDataStartTime") String perfDataStartTime,
+        @CustomType.Parameter("pricesTimestamp") String pricesTimestamp,
+        @CustomType.Parameter("reservedInstance") String reservedInstance,
+        @CustomType.Parameter("scalingFactor") Double scalingFactor,
+        @CustomType.Parameter("sizingCriterion") String sizingCriterion,
+        @CustomType.Parameter("stage") String stage,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("timeRange") String timeRange,
+        @CustomType.Parameter("updatedTimestamp") String updatedTimestamp,
+        @CustomType.Parameter("vmUptime") VmUptimeResponse vmUptime) {
         this.azureDiskType = azureDiskType;
         this.azureHybridUseBenefit = azureHybridUseBenefit;
         this.azureLocation = azureLocation;

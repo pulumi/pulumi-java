@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.WebACLIPSetForwardedIPConfigurationFallbackBehavior;
 import io.pulumi.awsnative.wafv2.enums.WebACLIPSetForwardedIPConfigurationPosition;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,21 +15,21 @@ public final class WebACLIPSetForwardedIPConfigurationArgs extends io.pulumi.res
 
     public static final WebACLIPSetForwardedIPConfigurationArgs Empty = new WebACLIPSetForwardedIPConfigurationArgs();
 
-    @InputImport(name="fallbackBehavior", required=true)
+    @Import(name="fallbackBehavior", required=true)
       private final Output<WebACLIPSetForwardedIPConfigurationFallbackBehavior> fallbackBehavior;
 
     public Output<WebACLIPSetForwardedIPConfigurationFallbackBehavior> getFallbackBehavior() {
         return this.fallbackBehavior;
     }
 
-    @InputImport(name="headerName", required=true)
+    @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
     public Output<String> getHeaderName() {
         return this.headerName;
     }
 
-    @InputImport(name="position", required=true)
+    @Import(name="position", required=true)
       private final Output<WebACLIPSetForwardedIPConfigurationPosition> position;
 
     public Output<WebACLIPSetForwardedIPConfigurationPosition> getPosition() {

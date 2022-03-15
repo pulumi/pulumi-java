@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModelQualityJobDefinitionClusterConfig {
     /**
      * The number of ML compute instances to use in the model monitoring job. For distributed processing jobs, specify a value greater than 1. The default value is 1.
@@ -33,12 +33,12 @@ public final class ModelQualityJobDefinitionClusterConfig {
      */
     private final Integer volumeSizeInGB;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelQualityJobDefinitionClusterConfig(
-        @OutputCustomType.Parameter("instanceCount") Integer instanceCount,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("volumeKmsKeyId") @Nullable String volumeKmsKeyId,
-        @OutputCustomType.Parameter("volumeSizeInGB") Integer volumeSizeInGB) {
+        @CustomType.Parameter("instanceCount") Integer instanceCount,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("volumeKmsKeyId") @Nullable String volumeKmsKeyId,
+        @CustomType.Parameter("volumeSizeInGB") Integer volumeSizeInGB) {
         this.instanceCount = instanceCount;
         this.instanceType = instanceType;
         this.volumeKmsKeyId = volumeKmsKeyId;

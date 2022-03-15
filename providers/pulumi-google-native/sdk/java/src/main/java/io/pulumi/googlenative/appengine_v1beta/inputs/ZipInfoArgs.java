@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ZipInfoArgs extends io.pulumi.resources.ResourceArgs {
      * An estimate of the number of files in a zip for a zip deployment. If set, must be greater than or equal to the actual number of files. Used for optimizing performance; if not provided, deployment may be slow.
      * 
      */
-    @InputImport(name="filesCount")
+    @Import(name="filesCount")
       private final @Nullable Output<Integer> filesCount;
 
     public Output<Integer> getFilesCount() {
@@ -34,7 +34,7 @@ public final class ZipInfoArgs extends io.pulumi.resources.ResourceArgs {
      * URL of the zip file to deploy from. Must be a URL to a resource in Google Cloud Storage in the form 'http(s)://storage.googleapis.com//'.
      * 
      */
-    @InputImport(name="sourceUrl")
+    @Import(name="sourceUrl")
       private final @Nullable Output<String> sourceUrl;
 
     public Output<String> getSourceUrl() {

@@ -3,17 +3,17 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ArtifactRuleResponse {
     private final List<String> artifactRule;
 
-    @OutputCustomType.Constructor
-    private ArtifactRuleResponse(@OutputCustomType.Parameter("artifactRule") List<String> artifactRule) {
+    @CustomType.Constructor
+    private ArtifactRuleResponse(@CustomType.Parameter("artifactRule") List<String> artifactRule) {
         this.artifactRule = artifactRule;
     }
 

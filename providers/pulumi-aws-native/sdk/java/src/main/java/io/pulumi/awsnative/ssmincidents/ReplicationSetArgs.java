@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ssmincidents;
 
 import io.pulumi.awsnative.ssmincidents.inputs.ReplicationSetReplicationRegionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class ReplicationSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReplicationSetArgs Empty = new ReplicationSetArgs();
 
-    @InputImport(name="deletionProtected")
+    @Import(name="deletionProtected")
       private final @Nullable Output<Boolean> deletionProtected;
 
     public Output<Boolean> getDeletionProtected() {
@@ -27,7 +27,7 @@ public final class ReplicationSetArgs extends io.pulumi.resources.ResourceArgs {
      * The ReplicationSet configuration.
      * 
      */
-    @InputImport(name="regions", required=true)
+    @Import(name="regions", required=true)
       private final Output<List<ReplicationSetReplicationRegionArgs>> regions;
 
     public Output<List<ReplicationSetReplicationRegionArgs>> getRegions() {

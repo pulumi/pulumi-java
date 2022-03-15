@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wisdom.enums.AssistantType;
 import io.pulumi.awsnative.wisdom.inputs.AssistantServerSideEncryptionConfigurationArgs;
 import io.pulumi.awsnative.wisdom.inputs.AssistantTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,35 +18,35 @@ public final class AssistantArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssistantArgs Empty = new AssistantArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="serverSideEncryptionConfiguration")
+    @Import(name="serverSideEncryptionConfiguration")
       private final @Nullable Output<AssistantServerSideEncryptionConfigurationArgs> serverSideEncryptionConfiguration;
 
     public Output<AssistantServerSideEncryptionConfigurationArgs> getServerSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration == null ? Output.empty() : this.serverSideEncryptionConfiguration;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<AssistantTagArgs>> tags;
 
     public Output<List<AssistantTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<AssistantType> type;
 
     public Output<AssistantType> getType() {

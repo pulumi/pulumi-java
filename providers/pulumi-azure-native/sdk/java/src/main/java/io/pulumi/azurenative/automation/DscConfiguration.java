@@ -9,7 +9,7 @@ import io.pulumi.azurenative.automation.outputs.ContentSourceResponse;
 import io.pulumi.azurenative.automation.outputs.DscConfigurationParameterResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -39,7 +39,7 @@ public class DscConfiguration extends io.pulumi.resources.CustomResource {
      * Gets or sets the creation time.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationTime;
 
     /**
@@ -53,7 +53,7 @@ public class DscConfiguration extends io.pulumi.resources.CustomResource {
      * Gets or sets the description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -67,7 +67,7 @@ public class DscConfiguration extends io.pulumi.resources.CustomResource {
      * Gets or sets the etag of the resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -81,7 +81,7 @@ public class DscConfiguration extends io.pulumi.resources.CustomResource {
      * Gets or sets the job count of the configuration.
      * 
      */
-    @OutputExport(name="jobCount", type=Integer.class, parameters={})
+    @Export(name="jobCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> jobCount;
 
     /**
@@ -95,7 +95,7 @@ public class DscConfiguration extends io.pulumi.resources.CustomResource {
      * Gets or sets the last modified time.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
     /**
@@ -109,7 +109,7 @@ public class DscConfiguration extends io.pulumi.resources.CustomResource {
      * The Azure Region where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -123,7 +123,7 @@ public class DscConfiguration extends io.pulumi.resources.CustomResource {
      * Gets or sets verbose log option.
      * 
      */
-    @OutputExport(name="logVerbose", type=Boolean.class, parameters={})
+    @Export(name="logVerbose", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> logVerbose;
 
     /**
@@ -137,7 +137,7 @@ public class DscConfiguration extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -151,7 +151,7 @@ public class DscConfiguration extends io.pulumi.resources.CustomResource {
      * Gets the number of compiled node configurations.
      * 
      */
-    @OutputExport(name="nodeConfigurationCount", type=Integer.class, parameters={})
+    @Export(name="nodeConfigurationCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> nodeConfigurationCount;
 
     /**
@@ -165,7 +165,7 @@ public class DscConfiguration extends io.pulumi.resources.CustomResource {
      * Gets or sets the configuration parameters.
      * 
      */
-    @OutputExport(name="parameters", type=Map.class, parameters={String.class, DscConfigurationParameterResponse.class})
+    @Export(name="parameters", type=Map.class, parameters={String.class, DscConfigurationParameterResponse.class})
     private Output</* @Nullable */ Map<String,DscConfigurationParameterResponse>> parameters;
 
     /**
@@ -179,7 +179,7 @@ public class DscConfiguration extends io.pulumi.resources.CustomResource {
      * Gets or sets the provisioning state of the configuration.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -193,7 +193,7 @@ public class DscConfiguration extends io.pulumi.resources.CustomResource {
      * Gets or sets the source.
      * 
      */
-    @OutputExport(name="source", type=ContentSourceResponse.class, parameters={})
+    @Export(name="source", type=ContentSourceResponse.class, parameters={})
     private Output</* @Nullable */ ContentSourceResponse> source;
 
     /**
@@ -207,7 +207,7 @@ public class DscConfiguration extends io.pulumi.resources.CustomResource {
      * Gets or sets the state of the configuration.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
@@ -221,7 +221,7 @@ public class DscConfiguration extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -235,7 +235,7 @@ public class DscConfiguration extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

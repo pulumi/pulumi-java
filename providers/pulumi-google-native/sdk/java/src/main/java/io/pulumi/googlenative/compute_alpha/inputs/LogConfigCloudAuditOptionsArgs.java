@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.LogConfigCloudAuditOptionsLogName;
 import io.pulumi.googlenative.compute_alpha.inputs.AuthorizationLoggingOptionsArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LogConfigCloudAuditOptionsArgs extends io.pulumi.resources.Re
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="authorizationLoggingOptions")
+    @Import(name="authorizationLoggingOptions")
       private final @Nullable Output<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions;
 
     public Output<AuthorizationLoggingOptionsArgs> getAuthorizationLoggingOptions() {
@@ -34,7 +34,7 @@ public final class LogConfigCloudAuditOptionsArgs extends io.pulumi.resources.Re
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="logName")
+    @Import(name="logName")
       private final @Nullable Output<LogConfigCloudAuditOptionsLogName> logName;
 
     public Output<LogConfigCloudAuditOptionsLogName> getLogName() {

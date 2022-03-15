@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse {
     /**
      * Number of applied changes
@@ -98,25 +98,25 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse {
      */
     private final String startedOn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse(
-        @OutputCustomType.Parameter("appliedChanges") Double appliedChanges,
-        @OutputCustomType.Parameter("cdcDeleteCounter") Double cdcDeleteCounter,
-        @OutputCustomType.Parameter("cdcInsertCounter") Double cdcInsertCounter,
-        @OutputCustomType.Parameter("cdcUpdateCounter") Double cdcUpdateCounter,
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("endedOn") String endedOn,
-        @OutputCustomType.Parameter("fullLoadCompletedTables") Double fullLoadCompletedTables,
-        @OutputCustomType.Parameter("fullLoadErroredTables") Double fullLoadErroredTables,
-        @OutputCustomType.Parameter("fullLoadLoadingTables") Double fullLoadLoadingTables,
-        @OutputCustomType.Parameter("fullLoadQueuedTables") Double fullLoadQueuedTables,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("incomingChanges") Double incomingChanges,
-        @OutputCustomType.Parameter("initializationCompleted") Boolean initializationCompleted,
-        @OutputCustomType.Parameter("latency") Double latency,
-        @OutputCustomType.Parameter("migrationState") String migrationState,
-        @OutputCustomType.Parameter("resultType") String resultType,
-        @OutputCustomType.Parameter("startedOn") String startedOn) {
+        @CustomType.Parameter("appliedChanges") Double appliedChanges,
+        @CustomType.Parameter("cdcDeleteCounter") Double cdcDeleteCounter,
+        @CustomType.Parameter("cdcInsertCounter") Double cdcInsertCounter,
+        @CustomType.Parameter("cdcUpdateCounter") Double cdcUpdateCounter,
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("endedOn") String endedOn,
+        @CustomType.Parameter("fullLoadCompletedTables") Double fullLoadCompletedTables,
+        @CustomType.Parameter("fullLoadErroredTables") Double fullLoadErroredTables,
+        @CustomType.Parameter("fullLoadLoadingTables") Double fullLoadLoadingTables,
+        @CustomType.Parameter("fullLoadQueuedTables") Double fullLoadQueuedTables,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("incomingChanges") Double incomingChanges,
+        @CustomType.Parameter("initializationCompleted") Boolean initializationCompleted,
+        @CustomType.Parameter("latency") Double latency,
+        @CustomType.Parameter("migrationState") String migrationState,
+        @CustomType.Parameter("resultType") String resultType,
+        @CustomType.Parameter("startedOn") String startedOn) {
         this.appliedChanges = appliedChanges;
         this.cdcDeleteCounter = cdcDeleteCounter;
         this.cdcInsertCounter = cdcInsertCounter;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.SchedulingNodeAffinityResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SchedulingResponse {
     /**
      * Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted. By default, this is set to true so an instance is automatically restarted if it is terminated by Compute Engine.
@@ -69,19 +69,19 @@ public final class SchedulingResponse {
      */
     private final String provisioningModel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SchedulingResponse(
-        @OutputCustomType.Parameter("automaticRestart") Boolean automaticRestart,
-        @OutputCustomType.Parameter("hostErrorTimeoutSeconds") Integer hostErrorTimeoutSeconds,
-        @OutputCustomType.Parameter("instanceTerminationAction") String instanceTerminationAction,
-        @OutputCustomType.Parameter("locationHint") String locationHint,
-        @OutputCustomType.Parameter("maintenanceFreezeDurationHours") Integer maintenanceFreezeDurationHours,
-        @OutputCustomType.Parameter("maintenanceInterval") String maintenanceInterval,
-        @OutputCustomType.Parameter("minNodeCpus") Integer minNodeCpus,
-        @OutputCustomType.Parameter("nodeAffinities") List<SchedulingNodeAffinityResponse> nodeAffinities,
-        @OutputCustomType.Parameter("onHostMaintenance") String onHostMaintenance,
-        @OutputCustomType.Parameter("preemptible") Boolean preemptible,
-        @OutputCustomType.Parameter("provisioningModel") String provisioningModel) {
+        @CustomType.Parameter("automaticRestart") Boolean automaticRestart,
+        @CustomType.Parameter("hostErrorTimeoutSeconds") Integer hostErrorTimeoutSeconds,
+        @CustomType.Parameter("instanceTerminationAction") String instanceTerminationAction,
+        @CustomType.Parameter("locationHint") String locationHint,
+        @CustomType.Parameter("maintenanceFreezeDurationHours") Integer maintenanceFreezeDurationHours,
+        @CustomType.Parameter("maintenanceInterval") String maintenanceInterval,
+        @CustomType.Parameter("minNodeCpus") Integer minNodeCpus,
+        @CustomType.Parameter("nodeAffinities") List<SchedulingNodeAffinityResponse> nodeAffinities,
+        @CustomType.Parameter("onHostMaintenance") String onHostMaintenance,
+        @CustomType.Parameter("preemptible") Boolean preemptible,
+        @CustomType.Parameter("provisioningModel") String provisioningModel) {
         this.automaticRestart = automaticRestart;
         this.hostErrorTimeoutSeconds = hostErrorTimeoutSeconds;
         this.instanceTerminationAction = instanceTerminationAction;

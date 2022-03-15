@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.ApplicationGatewayRequestRoutingRuleT
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * Backend address pool resource of the application gateway.
      * 
      */
-    @InputImport(name="backendAddressPool")
+    @Import(name="backendAddressPool")
       private final @Nullable Output<SubResourceArgs> backendAddressPool;
 
     public Output<SubResourceArgs> getBackendAddressPool() {
@@ -37,7 +37,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * Backend http settings resource of the application gateway.
      * 
      */
-    @InputImport(name="backendHttpSettings")
+    @Import(name="backendHttpSettings")
       private final @Nullable Output<SubResourceArgs> backendHttpSettings;
 
     public Output<SubResourceArgs> getBackendHttpSettings() {
@@ -48,7 +48,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * Http listener resource of the application gateway.
      * 
      */
-    @InputImport(name="httpListener")
+    @Import(name="httpListener")
       private final @Nullable Output<SubResourceArgs> httpListener;
 
     public Output<SubResourceArgs> getHttpListener() {
@@ -59,7 +59,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -70,7 +70,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * Name of the request routing rule that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -81,7 +81,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * Priority of the request routing rule.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -92,7 +92,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * Redirect configuration resource of the application gateway.
      * 
      */
-    @InputImport(name="redirectConfiguration")
+    @Import(name="redirectConfiguration")
       private final @Nullable Output<SubResourceArgs> redirectConfiguration;
 
     public Output<SubResourceArgs> getRedirectConfiguration() {
@@ -103,7 +103,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * Rewrite Rule Set resource in Basic rule of the application gateway.
      * 
      */
-    @InputImport(name="rewriteRuleSet")
+    @Import(name="rewriteRuleSet")
       private final @Nullable Output<SubResourceArgs> rewriteRuleSet;
 
     public Output<SubResourceArgs> getRewriteRuleSet() {
@@ -114,7 +114,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * Rule type.
      * 
      */
-    @InputImport(name="ruleType")
+    @Import(name="ruleType")
       private final @Nullable Output<Either<String,ApplicationGatewayRequestRoutingRuleType>> ruleType;
 
     public Output<Either<String,ApplicationGatewayRequestRoutingRuleType>> getRuleType() {
@@ -125,7 +125,7 @@ public final class ApplicationGatewayRequestRoutingRuleArgs extends io.pulumi.re
      * URL path map resource of the application gateway.
      * 
      */
-    @InputImport(name="urlPathMap")
+    @Import(name="urlPathMap")
       private final @Nullable Output<SubResourceArgs> urlPathMap;
 
     public Output<SubResourceArgs> getUrlPathMap() {

@@ -5,14 +5,14 @@ package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.IncidentLabelResponse;
 import io.pulumi.azurenative.securityinsights.outputs.IncidentOwnerInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutomationRuleModifyPropertiesActionResponseActionConfiguration {
     /**
      * The reason the incident was closed
@@ -50,15 +50,15 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutomationRuleModifyPropertiesActionResponseActionConfiguration(
-        @OutputCustomType.Parameter("classification") @Nullable String classification,
-        @OutputCustomType.Parameter("classificationComment") @Nullable String classificationComment,
-        @OutputCustomType.Parameter("classificationReason") @Nullable String classificationReason,
-        @OutputCustomType.Parameter("labels") @Nullable List<IncidentLabelResponse> labels,
-        @OutputCustomType.Parameter("owner") @Nullable IncidentOwnerInfoResponse owner,
-        @OutputCustomType.Parameter("severity") @Nullable String severity,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("classification") @Nullable String classification,
+        @CustomType.Parameter("classificationComment") @Nullable String classificationComment,
+        @CustomType.Parameter("classificationReason") @Nullable String classificationReason,
+        @CustomType.Parameter("labels") @Nullable List<IncidentLabelResponse> labels,
+        @CustomType.Parameter("owner") @Nullable IncidentOwnerInfoResponse owner,
+        @CustomType.Parameter("severity") @Nullable String severity,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.classification = classification;
         this.classificationComment = classificationComment;
         this.classificationReason = classificationReason;

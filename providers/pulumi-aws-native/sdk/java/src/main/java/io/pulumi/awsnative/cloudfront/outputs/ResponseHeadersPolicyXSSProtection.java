@@ -3,26 +3,26 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResponseHeadersPolicyXSSProtection {
     private final @Nullable Boolean modeBlock;
     private final Boolean override;
     private final Boolean protection;
     private final @Nullable String reportUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResponseHeadersPolicyXSSProtection(
-        @OutputCustomType.Parameter("modeBlock") @Nullable Boolean modeBlock,
-        @OutputCustomType.Parameter("override") Boolean override,
-        @OutputCustomType.Parameter("protection") Boolean protection,
-        @OutputCustomType.Parameter("reportUri") @Nullable String reportUri) {
+        @CustomType.Parameter("modeBlock") @Nullable Boolean modeBlock,
+        @CustomType.Parameter("override") Boolean override,
+        @CustomType.Parameter("protection") Boolean protection,
+        @CustomType.Parameter("reportUri") @Nullable String reportUri) {
         this.modeBlock = modeBlock;
         this.override = override;
         this.protection = protection;

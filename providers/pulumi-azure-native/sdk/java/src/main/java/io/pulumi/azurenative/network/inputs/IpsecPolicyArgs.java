@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.enums.IpsecIntegrity;
 import io.pulumi.azurenative.network.enums.PfsGroup;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The DH Group used in IKE Phase 1 for initial SA.
      * 
      */
-    @InputImport(name="dhGroup", required=true)
+    @Import(name="dhGroup", required=true)
       private final Output<Either<String,DhGroup>> dhGroup;
 
     public Output<Either<String,DhGroup>> getDhGroup() {
@@ -40,7 +40,7 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The IKE encryption algorithm (IKE phase 2).
      * 
      */
-    @InputImport(name="ikeEncryption", required=true)
+    @Import(name="ikeEncryption", required=true)
       private final Output<Either<String,IkeEncryption>> ikeEncryption;
 
     public Output<Either<String,IkeEncryption>> getIkeEncryption() {
@@ -51,7 +51,7 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The IKE integrity algorithm (IKE phase 2).
      * 
      */
-    @InputImport(name="ikeIntegrity", required=true)
+    @Import(name="ikeIntegrity", required=true)
       private final Output<Either<String,IkeIntegrity>> ikeIntegrity;
 
     public Output<Either<String,IkeIntegrity>> getIkeIntegrity() {
@@ -62,7 +62,7 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The IPSec encryption algorithm (IKE phase 1).
      * 
      */
-    @InputImport(name="ipsecEncryption", required=true)
+    @Import(name="ipsecEncryption", required=true)
       private final Output<Either<String,IpsecEncryption>> ipsecEncryption;
 
     public Output<Either<String,IpsecEncryption>> getIpsecEncryption() {
@@ -73,7 +73,7 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The IPSec integrity algorithm (IKE phase 1).
      * 
      */
-    @InputImport(name="ipsecIntegrity", required=true)
+    @Import(name="ipsecIntegrity", required=true)
       private final Output<Either<String,IpsecIntegrity>> ipsecIntegrity;
 
     public Output<Either<String,IpsecIntegrity>> getIpsecIntegrity() {
@@ -84,7 +84,7 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The Pfs Group used in IKE Phase 2 for new child SA.
      * 
      */
-    @InputImport(name="pfsGroup", required=true)
+    @Import(name="pfsGroup", required=true)
       private final Output<Either<String,PfsGroup>> pfsGroup;
 
     public Output<Either<String,PfsGroup>> getPfsGroup() {
@@ -95,7 +95,7 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The IPSec Security Association (also called Quick Mode or Phase 2 SA) payload size in KB for a site to site VPN tunnel.
      * 
      */
-    @InputImport(name="saDataSizeKilobytes", required=true)
+    @Import(name="saDataSizeKilobytes", required=true)
       private final Output<Integer> saDataSizeKilobytes;
 
     public Output<Integer> getSaDataSizeKilobytes() {
@@ -106,7 +106,7 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The IPSec Security Association (also called Quick Mode or Phase 2 SA) lifetime in seconds for a site to site VPN tunnel.
      * 
      */
-    @InputImport(name="saLifeTimeSeconds", required=true)
+    @Import(name="saLifeTimeSeconds", required=true)
       private final Output<Integer> saLifeTimeSeconds;
 
     public Output<Integer> getSaLifeTimeSeconds() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.ApiDeploymentParameterMetadataResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ApiDeploymentParameterMetadataSetResponse extends io.pulumi.r
      * The package content link parameter.
      * 
      */
-    @InputImport(name="packageContentLink")
+    @Import(name="packageContentLink")
       private final @Nullable ApiDeploymentParameterMetadataResponse packageContentLink;
 
     public Optional<ApiDeploymentParameterMetadataResponse> getPackageContentLink() {
@@ -33,7 +33,7 @@ public final class ApiDeploymentParameterMetadataSetResponse extends io.pulumi.r
      * The package content link parameter.
      * 
      */
-    @InputImport(name="redisCacheConnectionString")
+    @Import(name="redisCacheConnectionString")
       private final @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString;
 
     public Optional<ApiDeploymentParameterMetadataResponse> getRedisCacheConnectionString() {

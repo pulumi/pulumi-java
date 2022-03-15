@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.AnalyticsItemArgs;
 import io.pulumi.azurenative.insights.outputs.ApplicationInsightsComponentAnalyticsItemPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class AnalyticsItem extends io.pulumi.resources.CustomResource {
      * The content of this item
      * 
      */
-    @OutputExport(name="content", type=String.class, parameters={})
+    @Export(name="content", type=String.class, parameters={})
     private Output</* @Nullable */ String> content;
 
     /**
@@ -49,7 +49,7 @@ public class AnalyticsItem extends io.pulumi.resources.CustomResource {
      * The user-defined name of the item.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -63,7 +63,7 @@ public class AnalyticsItem extends io.pulumi.resources.CustomResource {
      * A set of properties that can be defined in the context of a specific item type. Each type may have its own properties.
      * 
      */
-    @OutputExport(name="properties", type=ApplicationInsightsComponentAnalyticsItemPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=ApplicationInsightsComponentAnalyticsItemPropertiesResponse.class, parameters={})
     private Output<ApplicationInsightsComponentAnalyticsItemPropertiesResponse> properties;
 
     /**
@@ -77,7 +77,7 @@ public class AnalyticsItem extends io.pulumi.resources.CustomResource {
      * Enum indicating if this item definition is owned by a specific user or is shared between all users with access to the Application Insights component.
      * 
      */
-    @OutputExport(name="scope", type=String.class, parameters={})
+    @Export(name="scope", type=String.class, parameters={})
     private Output</* @Nullable */ String> scope;
 
     /**
@@ -91,7 +91,7 @@ public class AnalyticsItem extends io.pulumi.resources.CustomResource {
      * Date and time in UTC when this item was created.
      * 
      */
-    @OutputExport(name="timeCreated", type=String.class, parameters={})
+    @Export(name="timeCreated", type=String.class, parameters={})
     private Output<String> timeCreated;
 
     /**
@@ -105,7 +105,7 @@ public class AnalyticsItem extends io.pulumi.resources.CustomResource {
      * Date and time in UTC of the last modification that was made to this item.
      * 
      */
-    @OutputExport(name="timeModified", type=String.class, parameters={})
+    @Export(name="timeModified", type=String.class, parameters={})
     private Output<String> timeModified;
 
     /**
@@ -119,7 +119,7 @@ public class AnalyticsItem extends io.pulumi.resources.CustomResource {
      * Enum indicating the type of the Analytics item.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**
@@ -133,7 +133,7 @@ public class AnalyticsItem extends io.pulumi.resources.CustomResource {
      * This instance's version of the data model. This can change as new features are added.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

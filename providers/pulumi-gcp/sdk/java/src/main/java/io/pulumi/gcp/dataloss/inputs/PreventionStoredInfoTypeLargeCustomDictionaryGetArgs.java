@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryOutputPathGetArgs;
@@ -21,7 +21,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryGetArgs extends 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="bigQueryField")
+    @Import(name="bigQueryField")
       private final @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs> bigQueryField;
 
     public Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGetArgs> getBigQueryField() {
@@ -33,7 +33,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryGetArgs extends 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="cloudStorageFileSet")
+    @Import(name="cloudStorageFileSet")
       private final @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetGetArgs> cloudStorageFileSet;
 
     public Output<PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetGetArgs> getCloudStorageFileSet() {
@@ -46,7 +46,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryGetArgs extends 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="outputPath", required=true)
+    @Import(name="outputPath", required=true)
       private final Output<PreventionStoredInfoTypeLargeCustomDictionaryOutputPathGetArgs> outputPath;
 
     public Output<PreventionStoredInfoTypeLargeCustomDictionaryOutputPathGetArgs> getOutputPath() {

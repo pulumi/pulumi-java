@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
 
     public static final SqlScheduledMaintenanceArgs Empty = new SqlScheduledMaintenanceArgs();
 
-    @InputImport(name="canDefer")
+    @Import(name="canDefer")
       private final @Nullable Output<Boolean> canDefer;
 
     public Output<Boolean> getCanDefer() {
@@ -30,7 +30,7 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
      * If the scheduled maintenance can be rescheduled.
      * 
      */
-    @InputImport(name="canReschedule")
+    @Import(name="canReschedule")
       private final @Nullable Output<Boolean> canReschedule;
 
     public Output<Boolean> getCanReschedule() {
@@ -41,7 +41,7 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
      * Maintenance cannot be rescheduled to start beyond this deadline.
      * 
      */
-    @InputImport(name="scheduleDeadlineTime")
+    @Import(name="scheduleDeadlineTime")
       private final @Nullable Output<String> scheduleDeadlineTime;
 
     public Output<String> getScheduleDeadlineTime() {
@@ -52,7 +52,7 @@ public final class SqlScheduledMaintenanceArgs extends io.pulumi.resources.Resou
      * The start time of any upcoming scheduled maintenance for this instance.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {

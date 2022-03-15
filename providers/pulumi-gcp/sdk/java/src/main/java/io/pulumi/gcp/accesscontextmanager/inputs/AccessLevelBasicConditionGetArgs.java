@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelBasicConditionDevicePolicyGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class AccessLevelBasicConditionGetArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="devicePolicy")
+    @Import(name="devicePolicy")
       private final @Nullable Output<AccessLevelBasicConditionDevicePolicyGetArgs> devicePolicy;
 
     public Output<AccessLevelBasicConditionDevicePolicyGetArgs> getDevicePolicy() {
@@ -44,7 +44,7 @@ public final class AccessLevelBasicConditionGetArgs extends io.pulumi.resources.
      * If empty, all IP addresses are allowed.
      * 
      */
-    @InputImport(name="ipSubnetworks")
+    @Import(name="ipSubnetworks")
       private final @Nullable Output<List<String>> ipSubnetworks;
 
     public Output<List<String>> getIpSubnetworks() {
@@ -61,7 +61,7 @@ public final class AccessLevelBasicConditionGetArgs extends io.pulumi.resources.
      * Formats: `user:{emailid}`, `serviceAccount:{emailid}`
      * 
      */
-    @InputImport(name="members")
+    @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -74,7 +74,7 @@ public final class AccessLevelBasicConditionGetArgs extends io.pulumi.resources.
      * the Condition overall to be satisfied. Defaults to false.
      * 
      */
-    @InputImport(name="negate")
+    @Import(name="negate")
       private final @Nullable Output<Boolean> negate;
 
     public Output<Boolean> getNegate() {
@@ -87,7 +87,7 @@ public final class AccessLevelBasicConditionGetArgs extends io.pulumi.resources.
      * Format: A valid ISO 3166-1 alpha-2 code.
      * 
      */
-    @InputImport(name="regions")
+    @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
     public Output<List<String>> getRegions() {
@@ -102,7 +102,7 @@ public final class AccessLevelBasicConditionGetArgs extends io.pulumi.resources.
      * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
      * 
      */
-    @InputImport(name="requiredAccessLevels")
+    @Import(name="requiredAccessLevels")
       private final @Nullable Output<List<String>> requiredAccessLevels;
 
     public Output<List<String>> getRequiredAccessLevels() {

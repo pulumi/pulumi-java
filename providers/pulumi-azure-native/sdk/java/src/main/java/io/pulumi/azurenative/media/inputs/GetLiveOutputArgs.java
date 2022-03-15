@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLiveOutputArgs extends io.pulumi.resources.InvokeArgs {
      * The Media Services account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -27,7 +27,7 @@ public final class GetLiveOutputArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the live event, maximum length is 32.
      * 
      */
-    @InputImport(name="liveEventName", required=true)
+    @Import(name="liveEventName", required=true)
       private final String liveEventName;
 
     public String getLiveEventName() {
@@ -38,7 +38,7 @@ public final class GetLiveOutputArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the live output.
      * 
      */
-    @InputImport(name="liveOutputName", required=true)
+    @Import(name="liveOutputName", required=true)
       private final String liveOutputName;
 
     public String getLiveOutputName() {
@@ -49,7 +49,7 @@ public final class GetLiveOutputArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

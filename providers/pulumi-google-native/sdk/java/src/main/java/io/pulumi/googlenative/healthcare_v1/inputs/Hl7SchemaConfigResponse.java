@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1.inputs.VersionSourceResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class Hl7SchemaConfigResponse extends io.pulumi.resources.InvokeArg
      * Map from each HL7v2 message type and trigger event pair, such as ADT_A04, to its schema configuration root group.
      * 
      */
-    @InputImport(name="messageSchemaConfigs", required=true)
+    @Import(name="messageSchemaConfigs", required=true)
       private final Map<String,String> messageSchemaConfigs;
 
     public Map<String,String> getMessageSchemaConfigs() {
@@ -34,7 +34,7 @@ public final class Hl7SchemaConfigResponse extends io.pulumi.resources.InvokeArg
      * Each VersionSource is tested and only if they all match is the schema used for the message.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final List<VersionSourceResponse> version;
 
     public List<VersionSourceResponse> getVersion() {

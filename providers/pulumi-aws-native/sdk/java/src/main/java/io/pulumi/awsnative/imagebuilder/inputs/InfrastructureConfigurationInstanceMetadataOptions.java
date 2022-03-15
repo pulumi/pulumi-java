@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.enums.InfrastructureConfigurationInstanceMetadataOptionsHttpTokens;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class InfrastructureConfigurationInstanceMetadataOptions extends io
      * Limit the number of hops that an instance metadata request can traverse to reach its destination.
      * 
      */
-    @InputImport(name="httpPutResponseHopLimit")
+    @Import(name="httpPutResponseHopLimit")
       private final @Nullable Integer httpPutResponseHopLimit;
 
     public Optional<Integer> getHttpPutResponseHopLimit() {
@@ -34,7 +34,7 @@ public final class InfrastructureConfigurationInstanceMetadataOptions extends io
      * Indicates whether a signed token header is required for instance metadata retrieval requests. The values affect the response as follows:
      * 
      */
-    @InputImport(name="httpTokens")
+    @Import(name="httpTokens")
       private final @Nullable InfrastructureConfigurationInstanceMetadataOptionsHttpTokens httpTokens;
 
     public Optional<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> getHttpTokens() {

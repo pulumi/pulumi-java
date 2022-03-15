@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * The Azure Video Analyzer account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -29,7 +29,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * Optional video description provided by the user. Value can be up to 2048 characters long.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -40,7 +40,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * Optional video title provided by the user. Value can be up to 256 characters long.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
@@ -62,7 +62,7 @@ public final class VideoArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the video to create or update.
      * 
      */
-    @InputImport(name="videoName")
+    @Import(name="videoName")
       private final @Nullable Output<String> videoName;
 
     public Output<String> getVideoName() {

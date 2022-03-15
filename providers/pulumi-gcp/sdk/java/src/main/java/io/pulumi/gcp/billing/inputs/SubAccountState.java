@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
      * The billing account id.
      * 
      */
-    @InputImport(name="billingAccountId")
+    @Import(name="billingAccountId")
       private final @Nullable Output<String> billingAccountId;
 
     public Output<String> getBillingAccountId() {
@@ -32,7 +32,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
      * Default is "".
      * 
      */
-    @InputImport(name="deletionPolicy")
+    @Import(name="deletionPolicy")
       private final @Nullable Output<String> deletionPolicy;
 
     public Output<String> getDeletionPolicy() {
@@ -43,7 +43,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
      * The display name of the billing account.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -55,7 +55,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
      * will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
      * 
      */
-    @InputImport(name="masterBillingAccount")
+    @Import(name="masterBillingAccount")
       private final @Nullable Output<String> masterBillingAccount;
 
     public Output<String> getMasterBillingAccount() {
@@ -66,7 +66,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
      * The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -77,7 +77,7 @@ public final class SubAccountState extends io.pulumi.resources.ResourceArgs {
      * `true` if the billing account is open, `false` if the billing account is closed.
      * 
      */
-    @InputImport(name="open")
+    @Import(name="open")
       private final @Nullable Output<Boolean> open;
 
     public Output<Boolean> getOpen() {

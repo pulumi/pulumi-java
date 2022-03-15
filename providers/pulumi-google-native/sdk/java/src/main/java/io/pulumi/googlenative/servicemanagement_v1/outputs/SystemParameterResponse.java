@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SystemParameterResponse {
     /**
      * Define the HTTP header name to use for the parameter. It is case insensitive.
@@ -25,11 +25,11 @@ public final class SystemParameterResponse {
      */
     private final String urlQueryParameter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SystemParameterResponse(
-        @OutputCustomType.Parameter("httpHeader") String httpHeader,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("urlQueryParameter") String urlQueryParameter) {
+        @CustomType.Parameter("httpHeader") String httpHeader,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("urlQueryParameter") String urlQueryParameter) {
         this.httpHeader = httpHeader;
         this.name = name;
         this.urlQueryParameter = urlQueryParameter;

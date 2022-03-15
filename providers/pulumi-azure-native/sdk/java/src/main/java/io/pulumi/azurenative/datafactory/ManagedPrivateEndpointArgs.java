@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * The factory name.
      * 
      */
-    @InputImport(name="factoryName", required=true)
+    @Import(name="factoryName", required=true)
       private final Output<String> factoryName;
 
     public Output<String> getFactoryName() {
@@ -29,7 +29,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * Managed private endpoint name
      * 
      */
-    @InputImport(name="managedPrivateEndpointName")
+    @Import(name="managedPrivateEndpointName")
       private final @Nullable Output<String> managedPrivateEndpointName;
 
     public Output<String> getManagedPrivateEndpointName() {
@@ -40,7 +40,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * Managed virtual network name
      * 
      */
-    @InputImport(name="managedVirtualNetworkName", required=true)
+    @Import(name="managedVirtualNetworkName", required=true)
       private final Output<String> managedVirtualNetworkName;
 
     public Output<String> getManagedVirtualNetworkName() {
@@ -51,7 +51,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * Managed private endpoint properties.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> properties;
 
     public Output<io.pulumi.azurenative.datafactory.inputs.ManagedPrivateEndpointArgs> getProperties() {
@@ -62,7 +62,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

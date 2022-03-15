@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.codecommit.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRepositoryResult {
     /**
      * The ARN of the repository
@@ -36,14 +36,14 @@ public final class GetRepositoryResult {
     private final String repositoryId;
     private final String repositoryName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRepositoryResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("cloneUrlHttp") String cloneUrlHttp,
-        @OutputCustomType.Parameter("cloneUrlSsh") String cloneUrlSsh,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("repositoryId") String repositoryId,
-        @OutputCustomType.Parameter("repositoryName") String repositoryName) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("cloneUrlHttp") String cloneUrlHttp,
+        @CustomType.Parameter("cloneUrlSsh") String cloneUrlSsh,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("repositoryId") String repositoryId,
+        @CustomType.Parameter("repositoryName") String repositoryName) {
         this.arn = arn;
         this.cloneUrlHttp = cloneUrlHttp;
         this.cloneUrlSsh = cloneUrlSsh;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blueprint.inputs;
 
 import io.pulumi.azurenative.blueprint.inputs.SecretValueReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ParameterValueResponse extends io.pulumi.resources.InvokeArgs
      * Parameter value as reference type.
      * 
      */
-    @InputImport(name="reference")
+    @Import(name="reference")
       private final @Nullable SecretValueReferenceResponse reference;
 
     public Optional<SecretValueReferenceResponse> getReference() {
@@ -34,7 +34,7 @@ public final class ParameterValueResponse extends io.pulumi.resources.InvokeArgs
      * Parameter value. Any valid JSON value is allowed including objects, arrays, strings, numbers and booleans.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Object value;
 
     public Optional<Object> getValue() {

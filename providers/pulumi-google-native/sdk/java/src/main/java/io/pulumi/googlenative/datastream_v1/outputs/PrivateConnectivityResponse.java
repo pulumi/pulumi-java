@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PrivateConnectivityResponse {
     /**
      * A reference to a private connection resource. Format: `projects/{project}/locations/{location}/privateConnections/{name}`
@@ -15,8 +15,8 @@ public final class PrivateConnectivityResponse {
      */
     private final String privateConnection;
 
-    @OutputCustomType.Constructor
-    private PrivateConnectivityResponse(@OutputCustomType.Parameter("privateConnection") String privateConnection) {
+    @CustomType.Constructor
+    private PrivateConnectivityResponse(@CustomType.Parameter("privateConnection") String privateConnection) {
         this.privateConnection = privateConnection;
     }
 

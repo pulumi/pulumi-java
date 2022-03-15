@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
      * The action identifier for the create method to be used for this collection
      * 
      */
-    @InputImport(name="create")
+    @Import(name="create")
       private final @Nullable Output<String> create;
 
     public Output<String> getCreate() {
@@ -33,7 +33,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
      * The action identifier for the delete method to be used for this collection
      * 
      */
-    @InputImport(name="delete")
+    @Import(name="delete")
       private final @Nullable Output<String> delete;
 
     public Output<String> getDelete() {
@@ -44,7 +44,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
      * The action identifier for the get method to be used for this collection
      * 
      */
-    @InputImport(name="get")
+    @Import(name="get")
       private final @Nullable Output<String> get;
 
     public Output<String> getGet() {
@@ -55,7 +55,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
      * The action identifier for the setIamPolicy method to be used for this collection
      * 
      */
-    @InputImport(name="setIamPolicy")
+    @Import(name="setIamPolicy")
       private final @Nullable Output<String> setIamPolicy;
 
     public Output<String> getSetIamPolicy() {
@@ -66,7 +66,7 @@ public final class MethodMapArgs extends io.pulumi.resources.ResourceArgs {
      * The action identifier for the update method to be used for this collection
      * 
      */
-    @InputImport(name="update")
+    @Import(name="update")
       private final @Nullable Output<String> update;
 
     public Output<String> getUpdate() {

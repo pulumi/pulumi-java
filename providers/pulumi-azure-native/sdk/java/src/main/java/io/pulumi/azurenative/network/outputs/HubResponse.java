@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HubResponse {
     /**
      * Resource Id.
@@ -22,10 +22,10 @@ public final class HubResponse {
      */
     private final @Nullable String resourceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HubResponse(
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
-        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType) {
+        @CustomType.Parameter("resourceId") @Nullable String resourceId,
+        @CustomType.Parameter("resourceType") @Nullable String resourceType) {
         this.resourceId = resourceId;
         this.resourceType = resourceType;
     }

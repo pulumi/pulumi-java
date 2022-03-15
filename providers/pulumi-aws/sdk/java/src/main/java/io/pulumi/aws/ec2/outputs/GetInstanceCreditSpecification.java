@@ -3,16 +3,16 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceCreditSpecification {
     private final String cpuCredits;
 
-    @OutputCustomType.Constructor
-    private GetInstanceCreditSpecification(@OutputCustomType.Parameter("cpuCredits") String cpuCredits) {
+    @CustomType.Constructor
+    private GetInstanceCreditSpecification(@CustomType.Parameter("cpuCredits") String cpuCredits) {
         this.cpuCredits = cpuCredits;
     }
 

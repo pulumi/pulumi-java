@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationalinsights.outputs;
 
 import io.pulumi.azurenative.operationalinsights.outputs.MachineReferenceWithHintsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMachineGroupResult {
     /**
      * Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.
@@ -61,17 +61,17 @@ public final class GetMachineGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMachineGroupResult(
-        @OutputCustomType.Parameter("count") @Nullable Integer count,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("groupType") @Nullable String groupType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("machines") @Nullable List<MachineReferenceWithHintsResponse> machines,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("count") @Nullable Integer count,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("groupType") @Nullable String groupType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("machines") @Nullable List<MachineReferenceWithHintsResponse> machines,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.count = count;
         this.displayName = displayName;
         this.etag = etag;

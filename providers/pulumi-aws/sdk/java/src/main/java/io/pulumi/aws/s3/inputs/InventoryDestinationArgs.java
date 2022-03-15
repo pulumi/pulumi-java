@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.InventoryDestinationBucketArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class InventoryDestinationArgs extends io.pulumi.resources.Resource
      * The S3 bucket configuration where inventory results are published (documented below).
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<InventoryDestinationBucketArgs> bucket;
 
     public Output<InventoryDestinationBucketArgs> getBucket() {

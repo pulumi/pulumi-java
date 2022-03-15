@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProgressPropertiesResponse {
     /**
      * The percentage complete of the copy operation.
@@ -17,8 +17,8 @@ public final class ProgressPropertiesResponse {
      */
     private final @Nullable String percentage;
 
-    @OutputCustomType.Constructor
-    private ProgressPropertiesResponse(@OutputCustomType.Parameter("percentage") @Nullable String percentage) {
+    @CustomType.Constructor
+    private ProgressPropertiesResponse(@CustomType.Parameter("percentage") @Nullable String percentage) {
         this.percentage = percentage;
     }
 

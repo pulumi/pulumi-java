@@ -6,7 +6,7 @@ package io.pulumi.aws.servicecatalog.inputs;
 import io.pulumi.aws.servicecatalog.inputs.ProvisionedProductProvisioningParameterGetArgs;
 import io.pulumi.aws.servicecatalog.inputs.ProvisionedProductStackSetProvisioningPreferencesGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    @InputImport(name="acceptLanguage")
+    @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
     public Output<String> getAcceptLanguage() {
@@ -34,7 +34,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * ARN of the provisioned product.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -45,7 +45,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Set of CloudWatch dashboards that were created when provisioning the product.
      * 
      */
-    @InputImport(name="cloudwatchDashboardNames")
+    @Import(name="cloudwatchDashboardNames")
       private final @Nullable Output<List<String>> cloudwatchDashboardNames;
 
     public Output<List<String>> getCloudwatchDashboardNames() {
@@ -56,7 +56,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Time when the provisioned product was created.
      * 
      */
-    @InputImport(name="createdTime")
+    @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
@@ -67,7 +67,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * _Only applies to deleting._ If set to `true`, AWS Service Catalog stops managing the specified provisioned product even if it cannot delete the underlying resources. The default value is `false`.
      * 
      */
-    @InputImport(name="ignoreErrors")
+    @Import(name="ignoreErrors")
       private final @Nullable Output<Boolean> ignoreErrors;
 
     public Output<Boolean> getIgnoreErrors() {
@@ -78,7 +78,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Record identifier of the last request performed on this provisioned product of the following types: `ProvisionedProduct`, `UpdateProvisionedProduct`, `ExecuteProvisionedProductPlan`, `TerminateProvisionedProduct`.
      * 
      */
-    @InputImport(name="lastProvisioningRecordId")
+    @Import(name="lastProvisioningRecordId")
       private final @Nullable Output<String> lastProvisioningRecordId;
 
     public Output<String> getLastProvisioningRecordId() {
@@ -89,7 +89,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Record identifier of the last request performed on this provisioned product.
      * 
      */
-    @InputImport(name="lastRecordId")
+    @Import(name="lastRecordId")
       private final @Nullable Output<String> lastRecordId;
 
     public Output<String> getLastRecordId() {
@@ -100,7 +100,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Record identifier of the last successful request performed on this provisioned product of the following types: `ProvisionedProduct`, `UpdateProvisionedProduct`, `ExecuteProvisionedProductPlan`, `TerminateProvisionedProduct`.
      * 
      */
-    @InputImport(name="lastSuccessfulProvisioningRecordId")
+    @Import(name="lastSuccessfulProvisioningRecordId")
       private final @Nullable Output<String> lastSuccessfulProvisioningRecordId;
 
     public Output<String> getLastSuccessfulProvisioningRecordId() {
@@ -111,7 +111,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * ARN of the launch role associated with the provisioned product.
      * 
      */
-    @InputImport(name="launchRoleArn")
+    @Import(name="launchRoleArn")
       private final @Nullable Output<String> launchRoleArn;
 
     public Output<String> getLaunchRoleArn() {
@@ -122,7 +122,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * User-friendly name of the provisioned product.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -133,7 +133,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Passed to CloudFormation. The SNS topic ARNs to which to publish stack-related events.
      * 
      */
-    @InputImport(name="notificationArns")
+    @Import(name="notificationArns")
       private final @Nullable Output<List<String>> notificationArns;
 
     public Output<List<String>> getNotificationArns() {
@@ -144,7 +144,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Path identifier of the product. This value is optional if the product has a default path, and required if the product has more than one path. To list the paths for a product, use `aws.servicecatalog.getLaunchPaths`. When required, you must provide `path_id` or `path_name`, but not both.
      * 
      */
-    @InputImport(name="pathId")
+    @Import(name="pathId")
       private final @Nullable Output<String> pathId;
 
     public Output<String> getPathId() {
@@ -155,7 +155,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Name of the path. You must provide `path_id` or `path_name`, but not both.
      * 
      */
-    @InputImport(name="pathName")
+    @Import(name="pathName")
       private final @Nullable Output<String> pathName;
 
     public Output<String> getPathName() {
@@ -166,7 +166,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Product identifier. For example, `prod-abcdzk7xy33qa`. You must provide `product_id` or `product_name`, but not both.
      * 
      */
-    @InputImport(name="productId")
+    @Import(name="productId")
       private final @Nullable Output<String> productId;
 
     public Output<String> getProductId() {
@@ -177,7 +177,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Name of the product. You must provide `product_id` or `product_name`, but not both.
      * 
      */
-    @InputImport(name="productName")
+    @Import(name="productName")
       private final @Nullable Output<String> productName;
 
     public Output<String> getProductName() {
@@ -188,7 +188,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Identifier of the provisioning artifact. For example, `pa-4abcdjnxjj6ne`. You must provide the `provisioning_artifact_id` or `provisioning_artifact_name`, but not both.
      * 
      */
-    @InputImport(name="provisioningArtifactId")
+    @Import(name="provisioningArtifactId")
       private final @Nullable Output<String> provisioningArtifactId;
 
     public Output<String> getProvisioningArtifactId() {
@@ -199,7 +199,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Name of the provisioning artifact. You must provide the `provisioning_artifact_id` or `provisioning_artifact_name`, but not both.
      * 
      */
-    @InputImport(name="provisioningArtifactName")
+    @Import(name="provisioningArtifactName")
       private final @Nullable Output<String> provisioningArtifactName;
 
     public Output<String> getProvisioningArtifactName() {
@@ -210,7 +210,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Configuration block with parameters specified by the administrator that are required for provisioning the product. See details below.
      * 
      */
-    @InputImport(name="provisioningParameters")
+    @Import(name="provisioningParameters")
       private final @Nullable Output<List<ProvisionedProductProvisioningParameterGetArgs>> provisioningParameters;
 
     public Output<List<ProvisionedProductProvisioningParameterGetArgs>> getProvisioningParameters() {
@@ -221,7 +221,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * _Only applies to deleting._ Whether to delete the Service Catalog provisioned product but leave the CloudFormation stack, stack set, or the underlying resources of the deleted provisioned product. The default value is `false`.
      * 
      */
-    @InputImport(name="retainPhysicalResources")
+    @Import(name="retainPhysicalResources")
       private final @Nullable Output<Boolean> retainPhysicalResources;
 
     public Output<Boolean> getRetainPhysicalResources() {
@@ -232,7 +232,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Configuration block with information about the provisioning preferences for a stack set. See details below.
      * 
      */
-    @InputImport(name="stackSetProvisioningPreferences")
+    @Import(name="stackSetProvisioningPreferences")
       private final @Nullable Output<ProvisionedProductStackSetProvisioningPreferencesGetArgs> stackSetProvisioningPreferences;
 
     public Output<ProvisionedProductStackSetProvisioningPreferencesGetArgs> getStackSetProvisioningPreferences() {
@@ -243,7 +243,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Current status of the provisioned product. See meanings below.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -254,7 +254,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Current status message of the provisioned product.
      * 
      */
-    @InputImport(name="statusMessage")
+    @Import(name="statusMessage")
       private final @Nullable Output<String> statusMessage;
 
     public Output<String> getStatusMessage() {
@@ -265,7 +265,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Tags to apply to the provisioned product. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -276,7 +276,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -287,7 +287,7 @@ public final class ProvisionedProductState extends io.pulumi.resources.ResourceA
      * Type of provisioned product. Valid values are `CFN_STACK` and `CFN_STACKSET`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

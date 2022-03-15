@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagementLockOwnerResponse {
     /**
      * The application ID of the lock owner.
@@ -17,8 +17,8 @@ public final class ManagementLockOwnerResponse {
      */
     private final @Nullable String applicationId;
 
-    @OutputCustomType.Constructor
-    private ManagementLockOwnerResponse(@OutputCustomType.Parameter("applicationId") @Nullable String applicationId) {
+    @CustomType.Constructor
+    private ManagementLockOwnerResponse(@CustomType.Parameter("applicationId") @Nullable String applicationId) {
         this.applicationId = applicationId;
     }
 

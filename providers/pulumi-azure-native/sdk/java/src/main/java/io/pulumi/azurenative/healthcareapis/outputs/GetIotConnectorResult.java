@@ -7,14 +7,14 @@ import io.pulumi.azurenative.healthcareapis.outputs.IotEventHubIngestionEndpoint
 import io.pulumi.azurenative.healthcareapis.outputs.IotMappingPropertiesResponse;
 import io.pulumi.azurenative.healthcareapis.outputs.ServiceManagedIdentityResponseIdentity;
 import io.pulumi.azurenative.healthcareapis.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIotConnectorResult {
     /**
      * Device Mappings.
@@ -72,19 +72,19 @@ public final class GetIotConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIotConnectorResult(
-        @OutputCustomType.Parameter("deviceMapping") @Nullable IotMappingPropertiesResponse deviceMapping,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ServiceManagedIdentityResponseIdentity identity,
-        @OutputCustomType.Parameter("ingestionEndpointConfiguration") @Nullable IotEventHubIngestionEndpointConfigurationResponse ingestionEndpointConfiguration,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("deviceMapping") @Nullable IotMappingPropertiesResponse deviceMapping,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ServiceManagedIdentityResponseIdentity identity,
+        @CustomType.Parameter("ingestionEndpointConfiguration") @Nullable IotEventHubIngestionEndpointConfigurationResponse ingestionEndpointConfiguration,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.deviceMapping = deviceMapping;
         this.etag = etag;
         this.id = id;

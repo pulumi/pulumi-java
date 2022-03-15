@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetKMSSecretAsymmetricResult {
     private final String ciphertext;
     /**
@@ -29,13 +29,13 @@ public final class GetKMSSecretAsymmetricResult {
      */
     private final String plaintext;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKMSSecretAsymmetricResult(
-        @OutputCustomType.Parameter("ciphertext") String ciphertext,
-        @OutputCustomType.Parameter("crc32") @Nullable String crc32,
-        @OutputCustomType.Parameter("cryptoKeyVersion") String cryptoKeyVersion,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("plaintext") String plaintext) {
+        @CustomType.Parameter("ciphertext") String ciphertext,
+        @CustomType.Parameter("crc32") @Nullable String crc32,
+        @CustomType.Parameter("cryptoKeyVersion") String cryptoKeyVersion,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("plaintext") String plaintext) {
         this.ciphertext = ciphertext;
         this.crc32 = crc32;
         this.cryptoKeyVersion = cryptoKeyVersion;

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1RoutineSpecArgumentResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatacatalogV1RoutineSpecResponse {
     /**
      * Fields specific for BigQuery routines.
@@ -43,14 +43,14 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse {
      */
     private final String routineType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatacatalogV1RoutineSpecResponse(
-        @OutputCustomType.Parameter("bigqueryRoutineSpec") GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec,
-        @OutputCustomType.Parameter("definitionBody") String definitionBody,
-        @OutputCustomType.Parameter("language") String language,
-        @OutputCustomType.Parameter("returnType") String returnType,
-        @OutputCustomType.Parameter("routineArguments") List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments,
-        @OutputCustomType.Parameter("routineType") String routineType) {
+        @CustomType.Parameter("bigqueryRoutineSpec") GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec,
+        @CustomType.Parameter("definitionBody") String definitionBody,
+        @CustomType.Parameter("language") String language,
+        @CustomType.Parameter("returnType") String returnType,
+        @CustomType.Parameter("routineArguments") List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments,
+        @CustomType.Parameter("routineType") String routineType) {
         this.bigqueryRoutineSpec = bigqueryRoutineSpec;
         this.definitionBody = definitionBody;
         this.language = language;

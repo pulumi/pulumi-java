@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ImportFileResponse {
     /**
      * The contents of the file.
@@ -20,10 +20,10 @@ public final class ImportFileResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImportFileResponse(
-        @OutputCustomType.Parameter("content") String content,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("content") String content,
+        @CustomType.Parameter("name") String name) {
         this.content = content;
         this.name = name;
     }

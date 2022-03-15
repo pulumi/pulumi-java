@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.RecommendedActionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDatabaseAdvisorResult {
     /**
      * Gets the status of availability of this advisor to customers. Possible values are 'GA', 'PublicPreview', 'LimitedPublicPreview' and 'PrivatePreview'.
@@ -67,19 +67,19 @@ public final class GetDatabaseAdvisorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatabaseAdvisorResult(
-        @OutputCustomType.Parameter("advisorStatus") String advisorStatus,
-        @OutputCustomType.Parameter("autoExecuteStatus") String autoExecuteStatus,
-        @OutputCustomType.Parameter("autoExecuteStatusInheritedFrom") String autoExecuteStatusInheritedFrom,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("lastChecked") String lastChecked,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("recommendationsStatus") String recommendationsStatus,
-        @OutputCustomType.Parameter("recommendedActions") List<RecommendedActionResponse> recommendedActions,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("advisorStatus") String advisorStatus,
+        @CustomType.Parameter("autoExecuteStatus") String autoExecuteStatus,
+        @CustomType.Parameter("autoExecuteStatusInheritedFrom") String autoExecuteStatusInheritedFrom,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("lastChecked") String lastChecked,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("recommendationsStatus") String recommendationsStatus,
+        @CustomType.Parameter("recommendedActions") List<RecommendedActionResponse> recommendedActions,
+        @CustomType.Parameter("type") String type) {
         this.advisorStatus = advisorStatus;
         this.autoExecuteStatus = autoExecuteStatus;
         this.autoExecuteStatusInheritedFrom = autoExecuteStatusInheritedFrom;

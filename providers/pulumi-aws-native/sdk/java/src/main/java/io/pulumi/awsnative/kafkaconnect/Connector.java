@@ -13,7 +13,7 @@ import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorLogDelivery;
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorPlugin;
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorWorkerConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -26,7 +26,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:kafkaconnect:Connector")
 public class Connector extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="capacity", type=ConnectorCapacity.class, parameters={})
+    @Export(name="capacity", type=ConnectorCapacity.class, parameters={})
     private Output<ConnectorCapacity> capacity;
 
     public Output<ConnectorCapacity> getCapacity() {
@@ -36,7 +36,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name for the created Connector.
      * 
      */
-    @OutputExport(name="connectorArn", type=String.class, parameters={})
+    @Export(name="connectorArn", type=String.class, parameters={})
     private Output<String> connectorArn;
 
     /**
@@ -50,7 +50,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * The configuration for the connector.
      * 
      */
-    @OutputExport(name="connectorConfiguration", type=Object.class, parameters={})
+    @Export(name="connectorConfiguration", type=Object.class, parameters={})
     private Output<Object> connectorConfiguration;
 
     /**
@@ -64,7 +64,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * A summary description of the connector.
      * 
      */
-    @OutputExport(name="connectorDescription", type=String.class, parameters={})
+    @Export(name="connectorDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectorDescription;
 
     /**
@@ -78,7 +78,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * The name of the connector.
      * 
      */
-    @OutputExport(name="connectorName", type=String.class, parameters={})
+    @Export(name="connectorName", type=String.class, parameters={})
     private Output<String> connectorName;
 
     /**
@@ -88,19 +88,19 @@ public class Connector extends io.pulumi.resources.CustomResource {
     public Output<String> getConnectorName() {
         return this.connectorName;
     }
-    @OutputExport(name="kafkaCluster", type=ConnectorKafkaCluster.class, parameters={})
+    @Export(name="kafkaCluster", type=ConnectorKafkaCluster.class, parameters={})
     private Output<ConnectorKafkaCluster> kafkaCluster;
 
     public Output<ConnectorKafkaCluster> getKafkaCluster() {
         return this.kafkaCluster;
     }
-    @OutputExport(name="kafkaClusterClientAuthentication", type=ConnectorKafkaClusterClientAuthentication.class, parameters={})
+    @Export(name="kafkaClusterClientAuthentication", type=ConnectorKafkaClusterClientAuthentication.class, parameters={})
     private Output<ConnectorKafkaClusterClientAuthentication> kafkaClusterClientAuthentication;
 
     public Output<ConnectorKafkaClusterClientAuthentication> getKafkaClusterClientAuthentication() {
         return this.kafkaClusterClientAuthentication;
     }
-    @OutputExport(name="kafkaClusterEncryptionInTransit", type=ConnectorKafkaClusterEncryptionInTransit.class, parameters={})
+    @Export(name="kafkaClusterEncryptionInTransit", type=ConnectorKafkaClusterEncryptionInTransit.class, parameters={})
     private Output<ConnectorKafkaClusterEncryptionInTransit> kafkaClusterEncryptionInTransit;
 
     public Output<ConnectorKafkaClusterEncryptionInTransit> getKafkaClusterEncryptionInTransit() {
@@ -110,7 +110,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * The version of Kafka Connect. It has to be compatible with both the Kafka cluster's version and the plugins.
      * 
      */
-    @OutputExport(name="kafkaConnectVersion", type=String.class, parameters={})
+    @Export(name="kafkaConnectVersion", type=String.class, parameters={})
     private Output<String> kafkaConnectVersion;
 
     /**
@@ -120,7 +120,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
     public Output<String> getKafkaConnectVersion() {
         return this.kafkaConnectVersion;
     }
-    @OutputExport(name="logDelivery", type=ConnectorLogDelivery.class, parameters={})
+    @Export(name="logDelivery", type=ConnectorLogDelivery.class, parameters={})
     private Output</* @Nullable */ ConnectorLogDelivery> logDelivery;
 
     public Output</* @Nullable */ ConnectorLogDelivery> getLogDelivery() {
@@ -130,7 +130,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * List of plugins to use with the connector.
      * 
      */
-    @OutputExport(name="plugins", type=List.class, parameters={ConnectorPlugin.class})
+    @Export(name="plugins", type=List.class, parameters={ConnectorPlugin.class})
     private Output<List<ConnectorPlugin>> plugins;
 
     /**
@@ -144,7 +144,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the IAM role used by the connector to access Amazon S3 objects and other external resources.
      * 
      */
-    @OutputExport(name="serviceExecutionRoleArn", type=String.class, parameters={})
+    @Export(name="serviceExecutionRoleArn", type=String.class, parameters={})
     private Output<String> serviceExecutionRoleArn;
 
     /**
@@ -154,7 +154,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
     public Output<String> getServiceExecutionRoleArn() {
         return this.serviceExecutionRoleArn;
     }
-    @OutputExport(name="workerConfiguration", type=ConnectorWorkerConfiguration.class, parameters={})
+    @Export(name="workerConfiguration", type=ConnectorWorkerConfiguration.class, parameters={})
     private Output</* @Nullable */ ConnectorWorkerConfiguration> workerConfiguration;
 
     public Output</* @Nullable */ ConnectorWorkerConfiguration> getWorkerConfiguration() {

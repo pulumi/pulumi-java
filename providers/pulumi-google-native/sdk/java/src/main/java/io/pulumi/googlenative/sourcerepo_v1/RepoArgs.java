@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sourcerepo_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.sourcerepo_v1.inputs.MirrorConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
      * How this repository mirrors a repository managed by another service. Read-only field.
      * 
      */
-    @InputImport(name="mirrorConfig")
+    @Import(name="mirrorConfig")
       private final @Nullable Output<MirrorConfigArgs> mirrorConfig;
 
     public Output<MirrorConfigArgs> getMirrorConfig() {
@@ -31,14 +31,14 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
      * Resource name of the repository, of the form `projects//repos/`. The repo name may contain slashes. eg, `projects/myproject/repos/name/with/slash`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -49,7 +49,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
      * How this repository publishes a change in the repository through Cloud Pub/Sub. Keyed by the topic names.
      * 
      */
-    @InputImport(name="pubsubConfigs")
+    @Import(name="pubsubConfigs")
       private final @Nullable Output<Map<String,String>> pubsubConfigs;
 
     public Output<Map<String,String>> getPubsubConfigs() {
@@ -60,7 +60,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
      * The disk usage of the repo, in bytes. Read-only field. Size is only returned by GetRepo.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<String> size;
 
     public Output<String> getSize() {
@@ -71,7 +71,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
      * URL to clone the repository from Google Cloud Source Repositories. Read-only field.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gameservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.gameservices.inputs.GameServerClusterConnectionInfoGetArgs;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
      * Required. The resource name of the game server cluster
      * 
      */
-    @InputImport(name="clusterId")
+    @Import(name="clusterId")
       private final @Nullable Output<String> clusterId;
 
     public Output<String> getClusterId() {
@@ -33,7 +33,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="connectionInfo")
+    @Import(name="connectionInfo")
       private final @Nullable Output<GameServerClusterConnectionInfoGetArgs> connectionInfo;
 
     public Output<GameServerClusterConnectionInfoGetArgs> getConnectionInfo() {
@@ -44,7 +44,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
      * Human readable description of the cluster.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -56,7 +56,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
      * key-value pair.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -67,7 +67,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
      * Location of the Cluster.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -80,7 +80,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
      * 'projects/my-project/locations/{location}/realms/zanzibar/gameServerClusters/my-onprem-cluster'.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -92,7 +92,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -103,7 +103,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
      * The realm id of the game server realm.
      * 
      */
-    @InputImport(name="realmId")
+    @Import(name="realmId")
       private final @Nullable Output<String> realmId;
 
     public Output<String> getRealmId() {

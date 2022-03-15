@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.ServiceReference;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebhookClientConfig {
     /**
      * caBundle is a PEM encoded CA bundle which will be used to validate the webhook's server certificate. If unspecified, system trust roots on the apiserver are used.
@@ -40,11 +40,11 @@ public final class WebhookClientConfig {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebhookClientConfig(
-        @OutputCustomType.Parameter("caBundle") @Nullable String caBundle,
-        @OutputCustomType.Parameter("service") @Nullable ServiceReference service,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("caBundle") @Nullable String caBundle,
+        @CustomType.Parameter("service") @Nullable ServiceReference service,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.caBundle = caBundle;
         this.service = service;
         this.url = url;

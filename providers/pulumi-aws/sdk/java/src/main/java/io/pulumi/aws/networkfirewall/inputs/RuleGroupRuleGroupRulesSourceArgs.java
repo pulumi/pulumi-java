@@ -7,7 +7,7 @@ import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceRulesSo
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatefulRuleArgs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RuleGroupRuleGroupRulesSourceArgs extends io.pulumi.resources
      * A configuration block containing **stateful** inspection criteria for a domain list rule group. See Rules Source List below for details.
      * 
      */
-    @InputImport(name="rulesSourceList")
+    @Import(name="rulesSourceList")
       private final @Nullable Output<RuleGroupRuleGroupRulesSourceRulesSourceListArgs> rulesSourceList;
 
     public Output<RuleGroupRuleGroupRulesSourceRulesSourceListArgs> getRulesSourceList() {
@@ -33,7 +33,7 @@ public final class RuleGroupRuleGroupRulesSourceArgs extends io.pulumi.resources
      * The fully qualified name of a file in an S3 bucket that contains Suricata compatible intrusion preventions system (IPS) rules or the Suricata rules as a string. These rules contain **stateful** inspection criteria and the action to take for traffic that matches the criteria.
      * 
      */
-    @InputImport(name="rulesString")
+    @Import(name="rulesString")
       private final @Nullable Output<String> rulesString;
 
     public Output<String> getRulesString() {
@@ -44,7 +44,7 @@ public final class RuleGroupRuleGroupRulesSourceArgs extends io.pulumi.resources
      * Set of configuration blocks containing **stateful** inspection criteria for 5-tuple rules to be used together in a rule group. See Stateful Rule below for details.
      * 
      */
-    @InputImport(name="statefulRules")
+    @Import(name="statefulRules")
       private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs>> statefulRules;
 
     public Output<List<RuleGroupRuleGroupRulesSourceStatefulRuleArgs>> getStatefulRules() {
@@ -55,7 +55,7 @@ public final class RuleGroupRuleGroupRulesSourceArgs extends io.pulumi.resources
      * A configuration block containing **stateless** inspection criteria for a stateless rule group. See Stateless Rules and Custom Actions below for details.
      * 
      */
-    @InputImport(name="statelessRulesAndCustomActions")
+    @Import(name="statelessRulesAndCustomActions")
       private final @Nullable Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs> statelessRulesAndCustomActions;
 
     public Output<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsArgs> getStatelessRulesAndCustomActions() {

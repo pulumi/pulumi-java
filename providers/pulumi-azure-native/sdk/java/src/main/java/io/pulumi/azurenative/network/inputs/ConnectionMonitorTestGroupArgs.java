@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
      * List of destination endpoint names.
      * 
      */
-    @InputImport(name="destinations", required=true)
+    @Import(name="destinations", required=true)
       private final Output<List<String>> destinations;
 
     public Output<List<String>> getDestinations() {
@@ -35,7 +35,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
      * Value indicating whether test group is disabled.
      * 
      */
-    @InputImport(name="disable")
+    @Import(name="disable")
       private final @Nullable Output<Boolean> disable;
 
     public Output<Boolean> getDisable() {
@@ -46,7 +46,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
      * The name of the connection monitor test group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
      * List of source endpoint names.
      * 
      */
-    @InputImport(name="sources", required=true)
+    @Import(name="sources", required=true)
       private final Output<List<String>> sources;
 
     public Output<List<String>> getSources() {
@@ -68,7 +68,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
      * List of test configuration names.
      * 
      */
-    @InputImport(name="testConfigurations", required=true)
+    @Import(name="testConfigurations", required=true)
       private final Output<List<String>> testConfigurations;
 
     public Output<List<String>> getTestConfigurations() {

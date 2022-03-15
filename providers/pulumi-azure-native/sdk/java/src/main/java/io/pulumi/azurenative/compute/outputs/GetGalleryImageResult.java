@@ -8,7 +8,7 @@ import io.pulumi.azurenative.compute.outputs.GalleryImageFeatureResponse;
 import io.pulumi.azurenative.compute.outputs.GalleryImageIdentifierResponse;
 import io.pulumi.azurenative.compute.outputs.ImagePurchasePlanResponse;
 import io.pulumi.azurenative.compute.outputs.RecommendedMachineConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGalleryImageResult {
     /**
      * The description of this gallery image definition resource. This property is updatable.
@@ -114,27 +114,27 @@ public final class GetGalleryImageResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGalleryImageResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("disallowed") @Nullable DisallowedResponse disallowed,
-        @OutputCustomType.Parameter("endOfLifeDate") @Nullable String endOfLifeDate,
-        @OutputCustomType.Parameter("eula") @Nullable String eula,
-        @OutputCustomType.Parameter("features") @Nullable List<GalleryImageFeatureResponse> features,
-        @OutputCustomType.Parameter("hyperVGeneration") @Nullable String hyperVGeneration,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identifier") GalleryImageIdentifierResponse identifier,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("osState") String osState,
-        @OutputCustomType.Parameter("osType") String osType,
-        @OutputCustomType.Parameter("privacyStatementUri") @Nullable String privacyStatementUri,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("purchasePlan") @Nullable ImagePurchasePlanResponse purchasePlan,
-        @OutputCustomType.Parameter("recommended") @Nullable RecommendedMachineConfigurationResponse recommended,
-        @OutputCustomType.Parameter("releaseNoteUri") @Nullable String releaseNoteUri,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("disallowed") @Nullable DisallowedResponse disallowed,
+        @CustomType.Parameter("endOfLifeDate") @Nullable String endOfLifeDate,
+        @CustomType.Parameter("eula") @Nullable String eula,
+        @CustomType.Parameter("features") @Nullable List<GalleryImageFeatureResponse> features,
+        @CustomType.Parameter("hyperVGeneration") @Nullable String hyperVGeneration,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identifier") GalleryImageIdentifierResponse identifier,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("osState") String osState,
+        @CustomType.Parameter("osType") String osType,
+        @CustomType.Parameter("privacyStatementUri") @Nullable String privacyStatementUri,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("purchasePlan") @Nullable ImagePurchasePlanResponse purchasePlan,
+        @CustomType.Parameter("recommended") @Nullable RecommendedMachineConfigurationResponse recommended,
+        @CustomType.Parameter("releaseNoteUri") @Nullable String releaseNoteUri,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.disallowed = disallowed;
         this.endOfLifeDate = endOfLifeDate;

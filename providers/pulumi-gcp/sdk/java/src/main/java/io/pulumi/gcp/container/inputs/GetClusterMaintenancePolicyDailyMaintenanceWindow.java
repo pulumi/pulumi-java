@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetClusterMaintenancePolicyDailyMaintenanceWindow extends io.
 
     public static final GetClusterMaintenancePolicyDailyMaintenanceWindow Empty = new GetClusterMaintenancePolicyDailyMaintenanceWindow();
 
-    @InputImport(name="duration", required=true)
+    @Import(name="duration", required=true)
       private final String duration;
 
     public String getDuration() {
         return this.duration;
     }
 
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExecutionConfigResponse {
     /**
      * Optional. The Cloud KMS key to use for encryption.
@@ -36,13 +36,13 @@ public final class ExecutionConfigResponse {
      */
     private final String subnetworkUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExecutionConfigResponse(
-        @OutputCustomType.Parameter("kmsKey") String kmsKey,
-        @OutputCustomType.Parameter("networkTags") List<String> networkTags,
-        @OutputCustomType.Parameter("networkUri") String networkUri,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("subnetworkUri") String subnetworkUri) {
+        @CustomType.Parameter("kmsKey") String kmsKey,
+        @CustomType.Parameter("networkTags") List<String> networkTags,
+        @CustomType.Parameter("networkUri") String networkUri,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("subnetworkUri") String subnetworkUri) {
         this.kmsKey = kmsKey;
         this.networkTags = networkTags;
         this.networkUri = networkUri;

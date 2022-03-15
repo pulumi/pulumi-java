@@ -5,7 +5,7 @@ package io.pulumi.aws.rds;
 
 import io.pulumi.aws.rds.inputs.ProxyAuthArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block(s) with authorization mechanisms to connect to the associated instances or clusters. Described below.
      * 
      */
-    @InputImport(name="auths", required=true)
+    @Import(name="auths", required=true)
       private final Output<List<ProxyAuthArgs>> auths;
 
     public Output<List<ProxyAuthArgs>> getAuths() {
@@ -34,7 +34,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the proxy includes detailed information about SQL statements in its logs. This information helps you to debug issues involving SQL behavior or the performance and scalability of the proxy connections. The debug information includes the text of SQL statements that you submit through the proxy. Thus, only enable this setting when needed for debugging, and only when you have security measures in place to safeguard any sensitive information that appears in the logs.
      * 
      */
-    @InputImport(name="debugLogging")
+    @Import(name="debugLogging")
       private final @Nullable Output<Boolean> debugLogging;
 
     public Output<Boolean> getDebugLogging() {
@@ -45,7 +45,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * The kinds of databases that the proxy can connect to. This value determines which database network protocol the proxy recognizes when it interprets network traffic to and from the database. The engine family applies to MySQL and PostgreSQL for both RDS and Aurora. Valid values are `MYSQL` and `POSTGRESQL`.
      * 
      */
-    @InputImport(name="engineFamily", required=true)
+    @Import(name="engineFamily", required=true)
       private final Output<String> engineFamily;
 
     public Output<String> getEngineFamily() {
@@ -56,7 +56,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it. You can set this value higher or lower than the connection timeout limit for the associated database.
      * 
      */
-    @InputImport(name="idleClientTimeout")
+    @Import(name="idleClientTimeout")
       private final @Nullable Output<Integer> idleClientTimeout;
 
     public Output<Integer> getIdleClientTimeout() {
@@ -67,7 +67,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region. An identifier must begin with a letter and must contain only ASCII letters, digits, and hyphens; it can't end with a hyphen or contain two consecutive hyphens.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -78,7 +78,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy. By enabling this setting, you can enforce encrypted TLS connections to the proxy.
      * 
      */
-    @InputImport(name="requireTls")
+    @Import(name="requireTls")
       private final @Nullable Output<Boolean> requireTls;
 
     public Output<Boolean> getRequireTls() {
@@ -89,7 +89,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -100,7 +100,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * A mapping of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -111,7 +111,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * One or more VPC security group IDs to associate with the new proxy.
      * 
      */
-    @InputImport(name="vpcSecurityGroupIds")
+    @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
     public Output<List<String>> getVpcSecurityGroupIds() {
@@ -122,7 +122,7 @@ public final class ProxyArgs extends io.pulumi.resources.ResourceArgs {
      * One or more VPC subnet IDs to associate with the new proxy.
      * 
      */
-    @InputImport(name="vpcSubnetIds", required=true)
+    @Import(name="vpcSubnetIds", required=true)
       private final Output<List<String>> vpcSubnetIds;
 
     public Output<List<String>> getVpcSubnetIds() {

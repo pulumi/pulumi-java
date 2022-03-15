@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OnPremiseResourceDetailsResponse {
     /**
      * The name of the machine
@@ -36,13 +36,13 @@ public final class OnPremiseResourceDetailsResponse {
      */
     private final String workspaceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OnPremiseResourceDetailsResponse(
-        @OutputCustomType.Parameter("machineName") String machineName,
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("sourceComputerId") String sourceComputerId,
-        @OutputCustomType.Parameter("vmuuid") String vmuuid,
-        @OutputCustomType.Parameter("workspaceId") String workspaceId) {
+        @CustomType.Parameter("machineName") String machineName,
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("sourceComputerId") String sourceComputerId,
+        @CustomType.Parameter("vmuuid") String vmuuid,
+        @CustomType.Parameter("workspaceId") String workspaceId) {
         this.machineName = machineName;
         this.source = source;
         this.sourceComputerId = sourceComputerId;

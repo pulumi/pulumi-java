@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.CosmosDbSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceManagedResourcesSettingsResponse {
     /**
      * The settings for the service managed cosmosdb account.
@@ -17,8 +17,8 @@ public final class ServiceManagedResourcesSettingsResponse {
      */
     private final @Nullable CosmosDbSettingsResponse cosmosDb;
 
-    @OutputCustomType.Constructor
-    private ServiceManagedResourcesSettingsResponse(@OutputCustomType.Parameter("cosmosDb") @Nullable CosmosDbSettingsResponse cosmosDb) {
+    @CustomType.Constructor
+    private ServiceManagedResourcesSettingsResponse(@CustomType.Parameter("cosmosDb") @Nullable CosmosDbSettingsResponse cosmosDb) {
         this.cosmosDb = cosmosDb;
     }
 

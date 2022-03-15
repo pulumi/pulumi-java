@@ -5,7 +5,7 @@ package io.pulumi.awsnative.devicefarm;
 
 import io.pulumi.awsnative.devicefarm.inputs.InstanceProfileTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,42 +17,42 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final InstanceProfileArgs Empty = new InstanceProfileArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="excludeAppPackagesFromCleanup")
+    @Import(name="excludeAppPackagesFromCleanup")
       private final @Nullable Output<List<String>> excludeAppPackagesFromCleanup;
 
     public Output<List<String>> getExcludeAppPackagesFromCleanup() {
         return this.excludeAppPackagesFromCleanup == null ? Output.empty() : this.excludeAppPackagesFromCleanup;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="packageCleanup")
+    @Import(name="packageCleanup")
       private final @Nullable Output<Boolean> packageCleanup;
 
     public Output<Boolean> getPackageCleanup() {
         return this.packageCleanup == null ? Output.empty() : this.packageCleanup;
     }
 
-    @InputImport(name="rebootAfterUse")
+    @Import(name="rebootAfterUse")
       private final @Nullable Output<Boolean> rebootAfterUse;
 
     public Output<Boolean> getRebootAfterUse() {
         return this.rebootAfterUse == null ? Output.empty() : this.rebootAfterUse;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<InstanceProfileTagArgs>> tags;
 
     public Output<List<InstanceProfileTagArgs>> getTags() {

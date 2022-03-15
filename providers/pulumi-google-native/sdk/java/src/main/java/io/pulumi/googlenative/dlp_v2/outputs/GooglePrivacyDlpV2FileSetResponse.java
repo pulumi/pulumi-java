@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CloudStorageRegexFileSetResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2FileSetResponse {
     /**
      * The regex-filtered set of files to scan. Exactly one of `url` or `regex_file_set` must be set.
@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2FileSetResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2FileSetResponse(
-        @OutputCustomType.Parameter("regexFileSet") GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("regexFileSet") GooglePrivacyDlpV2CloudStorageRegexFileSetResponse regexFileSet,
+        @CustomType.Parameter("url") String url) {
         this.regexFileSet = regexFileSet;
         this.url = url;
     }

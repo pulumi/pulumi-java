@@ -14,7 +14,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.ObjectiveResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.TrialComponentResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.TruncationSelectionPolicyResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -23,7 +23,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SweepJobResponse {
     /**
      * Type of the hyperparameter sampling algorithms
@@ -130,28 +130,28 @@ public final class SweepJobResponse {
      */
     private final @Nullable TrialComponentResponse trial;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SweepJobResponse(
-        @OutputCustomType.Parameter("algorithm") String algorithm,
-        @OutputCustomType.Parameter("compute") ComputeConfigurationResponse compute,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("earlyTermination") @Nullable Object earlyTermination,
-        @OutputCustomType.Parameter("experimentName") @Nullable String experimentName,
-        @OutputCustomType.Parameter("identity") @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity,
-        @OutputCustomType.Parameter("interactionEndpoints") Map<String,JobEndpointResponse> interactionEndpoints,
-        @OutputCustomType.Parameter("jobType") String jobType,
-        @OutputCustomType.Parameter("maxConcurrentTrials") @Nullable Integer maxConcurrentTrials,
-        @OutputCustomType.Parameter("maxTotalTrials") @Nullable Integer maxTotalTrials,
-        @OutputCustomType.Parameter("objective") ObjectiveResponse objective,
-        @OutputCustomType.Parameter("output") JobOutputResponse output,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("searchSpace") Map<String,Object> searchSpace,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("timeout") @Nullable String timeout,
-        @OutputCustomType.Parameter("trial") @Nullable TrialComponentResponse trial) {
+        @CustomType.Parameter("algorithm") String algorithm,
+        @CustomType.Parameter("compute") ComputeConfigurationResponse compute,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("earlyTermination") @Nullable Object earlyTermination,
+        @CustomType.Parameter("experimentName") @Nullable String experimentName,
+        @CustomType.Parameter("identity") @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity,
+        @CustomType.Parameter("interactionEndpoints") Map<String,JobEndpointResponse> interactionEndpoints,
+        @CustomType.Parameter("jobType") String jobType,
+        @CustomType.Parameter("maxConcurrentTrials") @Nullable Integer maxConcurrentTrials,
+        @CustomType.Parameter("maxTotalTrials") @Nullable Integer maxTotalTrials,
+        @CustomType.Parameter("objective") ObjectiveResponse objective,
+        @CustomType.Parameter("output") JobOutputResponse output,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("searchSpace") Map<String,Object> searchSpace,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("timeout") @Nullable String timeout,
+        @CustomType.Parameter("trial") @Nullable TrialComponentResponse trial) {
         this.algorithm = algorithm;
         this.compute = compute;
         this.description = description;

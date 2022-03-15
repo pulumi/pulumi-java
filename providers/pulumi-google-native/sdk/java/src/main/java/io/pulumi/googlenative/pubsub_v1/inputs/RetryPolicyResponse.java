@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
      * 
      */
-    @InputImport(name="maximumBackoff", required=true)
+    @Import(name="maximumBackoff", required=true)
       private final String maximumBackoff;
 
     public String getMaximumBackoff() {
@@ -31,7 +31,7 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * The minimum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 10 seconds.
      * 
      */
-    @InputImport(name="minimumBackoff", required=true)
+    @Import(name="minimumBackoff", required=true)
       private final String minimumBackoff;
 
     public String getMinimumBackoff() {

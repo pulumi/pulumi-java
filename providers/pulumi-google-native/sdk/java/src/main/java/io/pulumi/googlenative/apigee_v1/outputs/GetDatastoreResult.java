@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1DatastoreConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDatastoreResult {
     /**
      * Datastore create time, in milliseconds since the epoch of 1970-01-01T00:00:00Z
@@ -46,15 +46,15 @@ public final class GetDatastoreResult {
      */
     private final String targetType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatastoreResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("datastoreConfig") GoogleCloudApigeeV1DatastoreConfigResponse datastoreConfig,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("lastUpdateTime") String lastUpdateTime,
-        @OutputCustomType.Parameter("org") String org,
-        @OutputCustomType.Parameter("self") String self,
-        @OutputCustomType.Parameter("targetType") String targetType) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("datastoreConfig") GoogleCloudApigeeV1DatastoreConfigResponse datastoreConfig,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("lastUpdateTime") String lastUpdateTime,
+        @CustomType.Parameter("org") String org,
+        @CustomType.Parameter("self") String self,
+        @CustomType.Parameter("targetType") String targetType) {
         this.createTime = createTime;
         this.datastoreConfig = datastoreConfig;
         this.displayName = displayName;

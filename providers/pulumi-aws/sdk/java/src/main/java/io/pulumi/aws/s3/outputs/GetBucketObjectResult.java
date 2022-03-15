@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketObjectResult {
     /**
      * Object data (see **limitations above** to understand cases in which this field is actually available)
@@ -133,34 +133,34 @@ public final class GetBucketObjectResult {
      */
     private final String websiteRedirectLocation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBucketObjectResult(
-        @OutputCustomType.Parameter("body") String body,
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("bucketKeyEnabled") Boolean bucketKeyEnabled,
-        @OutputCustomType.Parameter("cacheControl") String cacheControl,
-        @OutputCustomType.Parameter("contentDisposition") String contentDisposition,
-        @OutputCustomType.Parameter("contentEncoding") String contentEncoding,
-        @OutputCustomType.Parameter("contentLanguage") String contentLanguage,
-        @OutputCustomType.Parameter("contentLength") Integer contentLength,
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("expiration") String expiration,
-        @OutputCustomType.Parameter("expires") String expires,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("lastModified") String lastModified,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("objectLockLegalHoldStatus") String objectLockLegalHoldStatus,
-        @OutputCustomType.Parameter("objectLockMode") String objectLockMode,
-        @OutputCustomType.Parameter("objectLockRetainUntilDate") String objectLockRetainUntilDate,
-        @OutputCustomType.Parameter("range") @Nullable String range,
-        @OutputCustomType.Parameter("serverSideEncryption") String serverSideEncryption,
-        @OutputCustomType.Parameter("sseKmsKeyId") String sseKmsKeyId,
-        @OutputCustomType.Parameter("storageClass") String storageClass,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("versionId") String versionId,
-        @OutputCustomType.Parameter("websiteRedirectLocation") String websiteRedirectLocation) {
+        @CustomType.Parameter("body") String body,
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("bucketKeyEnabled") Boolean bucketKeyEnabled,
+        @CustomType.Parameter("cacheControl") String cacheControl,
+        @CustomType.Parameter("contentDisposition") String contentDisposition,
+        @CustomType.Parameter("contentEncoding") String contentEncoding,
+        @CustomType.Parameter("contentLanguage") String contentLanguage,
+        @CustomType.Parameter("contentLength") Integer contentLength,
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("expiration") String expiration,
+        @CustomType.Parameter("expires") String expires,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("lastModified") String lastModified,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("objectLockLegalHoldStatus") String objectLockLegalHoldStatus,
+        @CustomType.Parameter("objectLockMode") String objectLockMode,
+        @CustomType.Parameter("objectLockRetainUntilDate") String objectLockRetainUntilDate,
+        @CustomType.Parameter("range") @Nullable String range,
+        @CustomType.Parameter("serverSideEncryption") String serverSideEncryption,
+        @CustomType.Parameter("sseKmsKeyId") String sseKmsKeyId,
+        @CustomType.Parameter("storageClass") String storageClass,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("versionId") String versionId,
+        @CustomType.Parameter("websiteRedirectLocation") String websiteRedirectLocation) {
         this.body = body;
         this.bucket = bucket;
         this.bucketKeyEnabled = bucketKeyEnabled;

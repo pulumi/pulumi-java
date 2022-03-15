@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.maintenance.outputs;
 
 import io.pulumi.azurenative.maintenance.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConfigurationAssignmentResult {
     /**
      * Fully qualified identifier of the resource
@@ -48,15 +48,15 @@ public final class GetConfigurationAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConfigurationAssignmentResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("maintenanceConfigurationId") @Nullable String maintenanceConfigurationId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("maintenanceConfigurationId") @Nullable String maintenanceConfigurationId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.maintenanceConfigurationId = maintenanceConfigurationId;

@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GlobalTableStreamSpecification {
     private final String streamViewType;
 
-    @OutputCustomType.Constructor
-    private GlobalTableStreamSpecification(@OutputCustomType.Parameter("streamViewType") String streamViewType) {
+    @CustomType.Constructor
+    private GlobalTableStreamSpecification(@CustomType.Parameter("streamViewType") String streamViewType) {
         this.streamViewType = streamViewType;
     }
 

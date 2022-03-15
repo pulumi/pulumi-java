@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListWorkspaceKeysResult {
     /**
      * Primary authorization key for this workspace.
@@ -22,10 +22,10 @@ public final class ListWorkspaceKeysResult {
      */
     private final @Nullable String secondaryToken;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListWorkspaceKeysResult(
-        @OutputCustomType.Parameter("primaryToken") @Nullable String primaryToken,
-        @OutputCustomType.Parameter("secondaryToken") @Nullable String secondaryToken) {
+        @CustomType.Parameter("primaryToken") @Nullable String primaryToken,
+        @CustomType.Parameter("secondaryToken") @Nullable String secondaryToken) {
         this.primaryToken = primaryToken;
         this.secondaryToken = secondaryToken;
     }

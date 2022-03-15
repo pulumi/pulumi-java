@@ -5,13 +5,13 @@ package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ExportDatasetResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ExportTimePeriodResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExportDefinitionResponse {
     /**
      * The definition for data in the export.
@@ -34,12 +34,12 @@ public final class ExportDefinitionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExportDefinitionResponse(
-        @OutputCustomType.Parameter("dataSet") @Nullable ExportDatasetResponse dataSet,
-        @OutputCustomType.Parameter("timePeriod") @Nullable ExportTimePeriodResponse timePeriod,
-        @OutputCustomType.Parameter("timeframe") String timeframe,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("dataSet") @Nullable ExportDatasetResponse dataSet,
+        @CustomType.Parameter("timePeriod") @Nullable ExportTimePeriodResponse timePeriod,
+        @CustomType.Parameter("timeframe") String timeframe,
+        @CustomType.Parameter("type") String type) {
         this.dataSet = dataSet;
         this.timePeriod = timePeriod;
         this.timeframe = timeframe;

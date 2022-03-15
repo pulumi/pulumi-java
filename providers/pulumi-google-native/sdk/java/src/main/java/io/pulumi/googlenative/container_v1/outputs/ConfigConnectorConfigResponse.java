@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConfigConnectorConfigResponse {
     /**
      * Whether Cloud Connector is enabled for this cluster.
@@ -15,8 +15,8 @@ public final class ConfigConnectorConfigResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private ConfigConnectorConfigResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private ConfigConnectorConfigResponse(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

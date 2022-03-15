@@ -6,7 +6,7 @@ package io.pulumi.aws.codebuild.inputs;
 import io.pulumi.aws.codebuild.inputs.ProjectEnvironmentEnvironmentVariableGetArgs;
 import io.pulumi.aws.codebuild.inputs.ProjectEnvironmentRegistryCredentialGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
      * ARN of the S3 bucket, path prefix and object key that contains the PEM-encoded certificate.
      * 
      */
-    @InputImport(name="certificate")
+    @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
     public Output<String> getCertificate() {
@@ -33,7 +33,7 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
      * Information about the compute resources the build project will use. Valid values: `BUILD_GENERAL1_SMALL`, `BUILD_GENERAL1_MEDIUM`, `BUILD_GENERAL1_LARGE`, `BUILD_GENERAL1_2XLARGE`. `BUILD_GENERAL1_SMALL` is only valid if `type` is set to `LINUX_CONTAINER`. When `type` is set to `LINUX_GPU_CONTAINER`, `compute_type` must be `BUILD_GENERAL1_LARGE`.
      * 
      */
-    @InputImport(name="computeType", required=true)
+    @Import(name="computeType", required=true)
       private final Output<String> computeType;
 
     public Output<String> getComputeType() {
@@ -44,7 +44,7 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Output<List<ProjectEnvironmentEnvironmentVariableGetArgs>> environmentVariables;
 
     public Output<List<ProjectEnvironmentEnvironmentVariableGetArgs>> getEnvironmentVariables() {
@@ -55,7 +55,7 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
      * Docker image to use for this build project. Valid values include [Docker images provided by CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html) (e.g `aws/codebuild/standard:2.0`), [Docker Hub images](https://hub.docker.com/) (e.g., `nginx/nginx:latest`), and full Docker repository URIs such as those for ECR (e.g., `137112412989.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:latest`).
      * 
      */
-    @InputImport(name="image", required=true)
+    @Import(name="image", required=true)
       private final Output<String> image;
 
     public Output<String> getImage() {
@@ -66,7 +66,7 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
      * Type of credentials AWS CodeBuild uses to pull images in your build. Valid values: `CODEBUILD`, `SERVICE_ROLE`. When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an AWS CodeBuild curated image, you must use CodeBuild credentials. Defaults to `CODEBUILD`.
      * 
      */
-    @InputImport(name="imagePullCredentialsType")
+    @Import(name="imagePullCredentialsType")
       private final @Nullable Output<String> imagePullCredentialsType;
 
     public Output<String> getImagePullCredentialsType() {
@@ -77,7 +77,7 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
      * Whether to enable running the Docker daemon inside a Docker container. Defaults to `false`.
      * 
      */
-    @InputImport(name="privilegedMode")
+    @Import(name="privilegedMode")
       private final @Nullable Output<Boolean> privilegedMode;
 
     public Output<Boolean> getPrivilegedMode() {
@@ -88,7 +88,7 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="registryCredential")
+    @Import(name="registryCredential")
       private final @Nullable Output<ProjectEnvironmentRegistryCredentialGetArgs> registryCredential;
 
     public Output<ProjectEnvironmentRegistryCredentialGetArgs> getRegistryCredential() {
@@ -99,7 +99,7 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
      * Type of repository that contains the source code to be built. Valid values: `CODECOMMIT`, `CODEPIPELINE`, `GITHUB`, `GITHUB_ENTERPRISE`, `BITBUCKET`, `S3`, `NO_SOURCE`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

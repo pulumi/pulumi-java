@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.FirewallPolicyFilterRuleArgs;
 import io.pulumi.azurenative.network.inputs.FirewallPolicyNatRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
      * The name of the Firewall Policy.
      * 
      */
-    @InputImport(name="firewallPolicyName", required=true)
+    @Import(name="firewallPolicyName", required=true)
       private final Output<String> firewallPolicyName;
 
     public Output<String> getFirewallPolicyName() {
@@ -34,7 +34,7 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -45,7 +45,7 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -56,7 +56,7 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
      * Priority of the Firewall Policy Rule Group resource.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -67,7 +67,7 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -78,7 +78,7 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
      * The name of the FirewallPolicyRuleGroup.
      * 
      */
-    @InputImport(name="ruleGroupName")
+    @Import(name="ruleGroupName")
       private final @Nullable Output<String> ruleGroupName;
 
     public Output<String> getRuleGroupName() {
@@ -89,7 +89,7 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
      * Group of Firewall Policy rules.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<Either<FirewallPolicyFilterRuleArgs,FirewallPolicyNatRuleArgs>>> rules;
 
     public Output<List<Either<FirewallPolicyFilterRuleArgs,FirewallPolicyNatRuleArgs>>> getRules() {

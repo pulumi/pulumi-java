@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPartitionResult {
     /**
      * Base DNS domain name for the current partition (e.g., `amazonaws.com` in AWS Commercial, `amazonaws.com.cn` in AWS China).
@@ -30,12 +30,12 @@ public final class GetPartitionResult {
      */
     private final String reverseDnsPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPartitionResult(
-        @OutputCustomType.Parameter("dnsSuffix") String dnsSuffix,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("partition") String partition,
-        @OutputCustomType.Parameter("reverseDnsPrefix") String reverseDnsPrefix) {
+        @CustomType.Parameter("dnsSuffix") String dnsSuffix,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("partition") String partition,
+        @CustomType.Parameter("reverseDnsPrefix") String reverseDnsPrefix) {
         this.dnsSuffix = dnsSuffix;
         this.id = id;
         this.partition = partition;

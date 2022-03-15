@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2.enums.SessionEntityTypeEntityOverrideMode;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2EntityTypeEntityArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
      * The collection of entities associated with this session entity type.
      * 
      */
-    @InputImport(name="entities", required=true)
+    @Import(name="entities", required=true)
       private final Output<List<GoogleCloudDialogflowV2EntityTypeEntityArgs>> entities;
 
     public Output<List<GoogleCloudDialogflowV2EntityTypeEntityArgs>> getEntities() {
@@ -32,21 +32,21 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
      * Indicates whether the additional data should override or supplement the custom entity type definition.
      * 
      */
-    @InputImport(name="entityOverrideMode", required=true)
+    @Import(name="entityOverrideMode", required=true)
       private final Output<SessionEntityTypeEntityOverrideMode> entityOverrideMode;
 
     public Output<SessionEntityTypeEntityOverrideMode> getEntityOverrideMode() {
         return this.entityOverrideMode;
     }
 
-    @InputImport(name="environmentId", required=true)
+    @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
         return this.environmentId;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -57,28 +57,28 @@ public final class SessionEntityTypeArgs extends io.pulumi.resources.ResourceArg
      * The unique identifier of this session entity type. Format: `projects//agent/sessions//entityTypes/`, or `projects//agent/environments//users//sessions//entityTypes/`. If `Environment ID` is not specified, we assume default 'draft' environment. If `User ID` is not specified, we assume default '-' user. `` must be the display name of an existing entity type in the same agent that will be overridden or supplemented.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="sessionId", required=true)
+    @Import(name="sessionId", required=true)
       private final Output<String> sessionId;
 
     public Output<String> getSessionId() {
         return this.sessionId;
     }
 
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final Output<String> userId;
 
     public Output<String> getUserId() {

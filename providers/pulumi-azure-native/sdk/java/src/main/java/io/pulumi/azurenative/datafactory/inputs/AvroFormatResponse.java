@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AvroFormatResponse extends io.pulumi.resources.InvokeArgs {
      * Deserializer. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="deserializer")
+    @Import(name="deserializer")
       private final @Nullable Object deserializer;
 
     public Optional<Object> getDeserializer() {
@@ -34,7 +34,7 @@ public final class AvroFormatResponse extends io.pulumi.resources.InvokeArgs {
      * Serializer. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="serializer")
+    @Import(name="serializer")
       private final @Nullable Object serializer;
 
     public Optional<Object> getSerializer() {
@@ -46,7 +46,7 @@ public final class AvroFormatResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'AvroFormat'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

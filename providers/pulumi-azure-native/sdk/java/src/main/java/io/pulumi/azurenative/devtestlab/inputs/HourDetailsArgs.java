@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class HourDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * Minutes of the hour the schedule will run.
      * 
      */
-    @InputImport(name="minute")
+    @Import(name="minute")
       private final @Nullable Output<Integer> minute;
 
     public Output<Integer> getMinute() {

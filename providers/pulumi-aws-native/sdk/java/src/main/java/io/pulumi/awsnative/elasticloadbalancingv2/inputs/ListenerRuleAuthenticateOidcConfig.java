@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -17,84 +17,84 @@ public final class ListenerRuleAuthenticateOidcConfig extends io.pulumi.resource
 
     public static final ListenerRuleAuthenticateOidcConfig Empty = new ListenerRuleAuthenticateOidcConfig();
 
-    @InputImport(name="authenticationRequestExtraParams")
+    @Import(name="authenticationRequestExtraParams")
       private final @Nullable Object authenticationRequestExtraParams;
 
     public Optional<Object> getAuthenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Optional.empty() : Optional.ofNullable(this.authenticationRequestExtraParams);
     }
 
-    @InputImport(name="authorizationEndpoint", required=true)
+    @Import(name="authorizationEndpoint", required=true)
       private final String authorizationEndpoint;
 
     public String getAuthorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final String clientId;
 
     public String getClientId() {
         return this.clientId;
     }
 
-    @InputImport(name="clientSecret", required=true)
+    @Import(name="clientSecret", required=true)
       private final String clientSecret;
 
     public String getClientSecret() {
         return this.clientSecret;
     }
 
-    @InputImport(name="issuer", required=true)
+    @Import(name="issuer", required=true)
       private final String issuer;
 
     public String getIssuer() {
         return this.issuer;
     }
 
-    @InputImport(name="onUnauthenticatedRequest")
+    @Import(name="onUnauthenticatedRequest")
       private final @Nullable String onUnauthenticatedRequest;
 
     public Optional<String> getOnUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest == null ? Optional.empty() : Optional.ofNullable(this.onUnauthenticatedRequest);
     }
 
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable String scope;
 
     public Optional<String> getScope() {
         return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
     }
 
-    @InputImport(name="sessionCookieName")
+    @Import(name="sessionCookieName")
       private final @Nullable String sessionCookieName;
 
     public Optional<String> getSessionCookieName() {
         return this.sessionCookieName == null ? Optional.empty() : Optional.ofNullable(this.sessionCookieName);
     }
 
-    @InputImport(name="sessionTimeout")
+    @Import(name="sessionTimeout")
       private final @Nullable Integer sessionTimeout;
 
     public Optional<Integer> getSessionTimeout() {
         return this.sessionTimeout == null ? Optional.empty() : Optional.ofNullable(this.sessionTimeout);
     }
 
-    @InputImport(name="tokenEndpoint", required=true)
+    @Import(name="tokenEndpoint", required=true)
       private final String tokenEndpoint;
 
     public String getTokenEndpoint() {
         return this.tokenEndpoint;
     }
 
-    @InputImport(name="useExistingClientSecret")
+    @Import(name="useExistingClientSecret")
       private final @Nullable Boolean useExistingClientSecret;
 
     public Optional<Boolean> getUseExistingClientSecret() {
         return this.useExistingClientSecret == null ? Optional.empty() : Optional.ofNullable(this.useExistingClientSecret);
     }
 
-    @InputImport(name="userInfoEndpoint", required=true)
+    @Import(name="userInfoEndpoint", required=true)
       private final String userInfoEndpoint;
 
     public String getUserInfoEndpoint() {

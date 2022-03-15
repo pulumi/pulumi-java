@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of VPC
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
      * block with a /56 prefix length for the VPC was assigned
      * 
      */
-    @InputImport(name="assignGeneratedIpv6CidrBlock")
+    @Import(name="assignGeneratedIpv6CidrBlock")
       private final @Nullable Output<Boolean> assignGeneratedIpv6CidrBlock;
 
     public Output<Boolean> getAssignGeneratedIpv6CidrBlock() {
@@ -44,7 +44,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
      * The CIDR block of the VPC
      * 
      */
-    @InputImport(name="cidrBlock")
+    @Import(name="cidrBlock")
       private final @Nullable Output<String> cidrBlock;
 
     public Output<String> getCidrBlock() {
@@ -55,7 +55,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
      * The ID of the network ACL created by default on VPC creation
      * 
      */
-    @InputImport(name="defaultNetworkAclId")
+    @Import(name="defaultNetworkAclId")
       private final @Nullable Output<String> defaultNetworkAclId;
 
     public Output<String> getDefaultNetworkAclId() {
@@ -66,7 +66,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
      * The ID of the route table created by default on VPC creation
      * 
      */
-    @InputImport(name="defaultRouteTableId")
+    @Import(name="defaultRouteTableId")
       private final @Nullable Output<String> defaultRouteTableId;
 
     public Output<String> getDefaultRouteTableId() {
@@ -77,14 +77,14 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
      * The ID of the security group created by default on VPC creation
      * 
      */
-    @InputImport(name="defaultSecurityGroupId")
+    @Import(name="defaultSecurityGroupId")
       private final @Nullable Output<String> defaultSecurityGroupId;
 
     public Output<String> getDefaultSecurityGroupId() {
         return this.defaultSecurityGroupId == null ? Output.empty() : this.defaultSecurityGroupId;
     }
 
-    @InputImport(name="dhcpOptionsId")
+    @Import(name="dhcpOptionsId")
       private final @Nullable Output<String> dhcpOptionsId;
 
     public Output<String> getDhcpOptionsId() {
@@ -97,14 +97,14 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
      * See the [ClassicLink documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/vpc-classiclink.html) for more information. Defaults false.
      * 
      */
-    @InputImport(name="enableClassiclink")
+    @Import(name="enableClassiclink")
       private final @Nullable Output<Boolean> enableClassiclink;
 
     public Output<Boolean> getEnableClassiclink() {
         return this.enableClassiclink == null ? Output.empty() : this.enableClassiclink;
     }
 
-    @InputImport(name="enableClassiclinkDnsSupport")
+    @Import(name="enableClassiclinkDnsSupport")
       private final @Nullable Output<Boolean> enableClassiclinkDnsSupport;
 
     public Output<Boolean> getEnableClassiclinkDnsSupport() {
@@ -115,7 +115,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
      * A boolean flag to enable/disable DNS hostnames in the VPC. Defaults false.
      * 
      */
-    @InputImport(name="enableDnsHostnames")
+    @Import(name="enableDnsHostnames")
       private final @Nullable Output<Boolean> enableDnsHostnames;
 
     public Output<Boolean> getEnableDnsHostnames() {
@@ -126,7 +126,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
      * A boolean flag to enable/disable DNS support in the VPC. Defaults true.
      * 
      */
-    @InputImport(name="enableDnsSupport")
+    @Import(name="enableDnsSupport")
       private final @Nullable Output<Boolean> enableDnsSupport;
 
     public Output<Boolean> getEnableDnsSupport() {
@@ -137,21 +137,21 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
      * Tenancy of instances spin up within VPC.
      * 
      */
-    @InputImport(name="instanceTenancy")
+    @Import(name="instanceTenancy")
       private final @Nullable Output<String> instanceTenancy;
 
     public Output<String> getInstanceTenancy() {
         return this.instanceTenancy == null ? Output.empty() : this.instanceTenancy;
     }
 
-    @InputImport(name="ipv4IpamPoolId")
+    @Import(name="ipv4IpamPoolId")
       private final @Nullable Output<String> ipv4IpamPoolId;
 
     public Output<String> getIpv4IpamPoolId() {
         return this.ipv4IpamPoolId == null ? Output.empty() : this.ipv4IpamPoolId;
     }
 
-    @InputImport(name="ipv4NetmaskLength")
+    @Import(name="ipv4NetmaskLength")
       private final @Nullable Output<Integer> ipv4NetmaskLength;
 
     public Output<Integer> getIpv4NetmaskLength() {
@@ -162,7 +162,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
      * The association ID for the IPv6 CIDR block of the VPC
      * 
      */
-    @InputImport(name="ipv6AssociationId")
+    @Import(name="ipv6AssociationId")
       private final @Nullable Output<String> ipv6AssociationId;
 
     public Output<String> getIpv6AssociationId() {
@@ -173,28 +173,28 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
      * The IPv6 CIDR block of the VPC
      * 
      */
-    @InputImport(name="ipv6CidrBlock")
+    @Import(name="ipv6CidrBlock")
       private final @Nullable Output<String> ipv6CidrBlock;
 
     public Output<String> getIpv6CidrBlock() {
         return this.ipv6CidrBlock == null ? Output.empty() : this.ipv6CidrBlock;
     }
 
-    @InputImport(name="ipv6CidrBlockNetworkBorderGroup")
+    @Import(name="ipv6CidrBlockNetworkBorderGroup")
       private final @Nullable Output<String> ipv6CidrBlockNetworkBorderGroup;
 
     public Output<String> getIpv6CidrBlockNetworkBorderGroup() {
         return this.ipv6CidrBlockNetworkBorderGroup == null ? Output.empty() : this.ipv6CidrBlockNetworkBorderGroup;
     }
 
-    @InputImport(name="ipv6IpamPoolId")
+    @Import(name="ipv6IpamPoolId")
       private final @Nullable Output<String> ipv6IpamPoolId;
 
     public Output<String> getIpv6IpamPoolId() {
         return this.ipv6IpamPoolId == null ? Output.empty() : this.ipv6IpamPoolId;
     }
 
-    @InputImport(name="ipv6NetmaskLength")
+    @Import(name="ipv6NetmaskLength")
       private final @Nullable Output<Integer> ipv6NetmaskLength;
 
     public Output<Integer> getIpv6NetmaskLength() {
@@ -207,7 +207,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
      * `aws.ec2.MainRouteTableAssociation`
      * 
      */
-    @InputImport(name="mainRouteTableId")
+    @Import(name="mainRouteTableId")
       private final @Nullable Output<String> mainRouteTableId;
 
     public Output<String> getMainRouteTableId() {
@@ -218,7 +218,7 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
      * The ID of the AWS account that owns the VPC.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -229,14 +229,14 @@ public final class DefaultVpcState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

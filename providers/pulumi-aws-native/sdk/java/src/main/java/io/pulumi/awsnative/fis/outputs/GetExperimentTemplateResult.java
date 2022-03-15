@@ -6,14 +6,14 @@ package io.pulumi.awsnative.fis.outputs;
 import io.pulumi.awsnative.fis.outputs.ExperimentTemplateActionMap;
 import io.pulumi.awsnative.fis.outputs.ExperimentTemplateStopCondition;
 import io.pulumi.awsnative.fis.outputs.ExperimentTemplateTargetMap;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetExperimentTemplateResult {
     private final @Nullable ExperimentTemplateActionMap actions;
     private final @Nullable String description;
@@ -22,14 +22,14 @@ public final class GetExperimentTemplateResult {
     private final @Nullable List<ExperimentTemplateStopCondition> stopConditions;
     private final @Nullable ExperimentTemplateTargetMap targets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExperimentTemplateResult(
-        @OutputCustomType.Parameter("actions") @Nullable ExperimentTemplateActionMap actions,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("stopConditions") @Nullable List<ExperimentTemplateStopCondition> stopConditions,
-        @OutputCustomType.Parameter("targets") @Nullable ExperimentTemplateTargetMap targets) {
+        @CustomType.Parameter("actions") @Nullable ExperimentTemplateActionMap actions,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("stopConditions") @Nullable List<ExperimentTemplateStopCondition> stopConditions,
+        @CustomType.Parameter("targets") @Nullable ExperimentTemplateTargetMap targets) {
         this.actions = actions;
         this.description = description;
         this.id = id;

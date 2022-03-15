@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.apprunner.VpcConnectorArgs;
 import io.pulumi.awsnative.apprunner.outputs.VpcConnectorTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public class VpcConnector extends io.pulumi.resources.CustomResource {
      * A list of IDs of security groups that App Runner should use for access to AWS resources under the specified subnets. If not specified, App Runner uses the default security group of the Amazon VPC. The default security group allows all outbound traffic.
      * 
      */
-    @OutputExport(name="securityGroups", type=List.class, parameters={String.class})
+    @Export(name="securityGroups", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> securityGroups;
 
     /**
@@ -38,7 +38,7 @@ public class VpcConnector extends io.pulumi.resources.CustomResource {
      * A list of IDs of subnets that App Runner should use when it associates your service with a custom Amazon VPC. Specify IDs of subnets of a single Amazon VPC. App Runner determines the Amazon VPC from the subnets you specify.
      * 
      */
-    @OutputExport(name="subnets", type=List.class, parameters={String.class})
+    @Export(name="subnets", type=List.class, parameters={String.class})
     private Output<List<String>> subnets;
 
     /**
@@ -52,7 +52,7 @@ public class VpcConnector extends io.pulumi.resources.CustomResource {
      * A list of metadata items that you can associate with your VPC connector resource. A tag is a key-value pair.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={VpcConnectorTag.class})
+    @Export(name="tags", type=List.class, parameters={VpcConnectorTag.class})
     private Output</* @Nullable */ List<VpcConnectorTag>> tags;
 
     /**
@@ -66,7 +66,7 @@ public class VpcConnector extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of this VPC connector.
      * 
      */
-    @OutputExport(name="vpcConnectorArn", type=String.class, parameters={})
+    @Export(name="vpcConnectorArn", type=String.class, parameters={})
     private Output<String> vpcConnectorArn;
 
     /**
@@ -80,7 +80,7 @@ public class VpcConnector extends io.pulumi.resources.CustomResource {
      * A name for the VPC connector. If you don't specify a name, AWS CloudFormation generates a name for your VPC connector.
      * 
      */
-    @OutputExport(name="vpcConnectorName", type=String.class, parameters={})
+    @Export(name="vpcConnectorName", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpcConnectorName;
 
     /**
@@ -94,7 +94,7 @@ public class VpcConnector extends io.pulumi.resources.CustomResource {
      * The revision of this VPC connector. It's unique among all the active connectors ("Status": "ACTIVE") that share the same Name.
      * 
      */
-    @OutputExport(name="vpcConnectorRevision", type=Integer.class, parameters={})
+    @Export(name="vpcConnectorRevision", type=Integer.class, parameters={})
     private Output<Integer> vpcConnectorRevision;
 
     /**

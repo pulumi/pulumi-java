@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class EntryBigqueryDateShardedSpecGetArgs extends io.pulumi.resourc
 
     public static final EntryBigqueryDateShardedSpecGetArgs Empty = new EntryBigqueryDateShardedSpecGetArgs();
 
-    @InputImport(name="dataset")
+    @Import(name="dataset")
       private final @Nullable Output<String> dataset;
 
     public Output<String> getDataset() {
         return this.dataset == null ? Output.empty() : this.dataset;
     }
 
-    @InputImport(name="shardCount")
+    @Import(name="shardCount")
       private final @Nullable Output<Integer> shardCount;
 
     public Output<Integer> getShardCount() {
         return this.shardCount == null ? Output.empty() : this.shardCount;
     }
 
-    @InputImport(name="tablePrefix")
+    @Import(name="tablePrefix")
       private final @Nullable Output<String> tablePrefix;
 
     public Output<String> getTablePrefix() {

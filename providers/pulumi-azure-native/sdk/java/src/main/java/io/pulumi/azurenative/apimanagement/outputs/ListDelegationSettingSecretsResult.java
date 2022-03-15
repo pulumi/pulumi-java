@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListDelegationSettingSecretsResult {
     /**
      * This is secret value of the validation key in portal settings.
@@ -17,8 +17,8 @@ public final class ListDelegationSettingSecretsResult {
      */
     private final @Nullable String validationKey;
 
-    @OutputCustomType.Constructor
-    private ListDelegationSettingSecretsResult(@OutputCustomType.Parameter("validationKey") @Nullable String validationKey) {
+    @CustomType.Constructor
+    private ListDelegationSettingSecretsResult(@CustomType.Parameter("validationKey") @Nullable String validationKey) {
         this.validationKey = validationKey;
     }
 

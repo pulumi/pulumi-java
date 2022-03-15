@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ecs.outputs;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionDevice;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionKernelCapabilities;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionTmpfs;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionLinuxParameters {
     private final @Nullable TaskDefinitionKernelCapabilities capabilities;
     private final @Nullable List<TaskDefinitionDevice> devices;
@@ -24,15 +24,15 @@ public final class TaskDefinitionLinuxParameters {
     private final @Nullable Integer swappiness;
     private final @Nullable List<TaskDefinitionTmpfs> tmpfs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionLinuxParameters(
-        @OutputCustomType.Parameter("capabilities") @Nullable TaskDefinitionKernelCapabilities capabilities,
-        @OutputCustomType.Parameter("devices") @Nullable List<TaskDefinitionDevice> devices,
-        @OutputCustomType.Parameter("initProcessEnabled") @Nullable Boolean initProcessEnabled,
-        @OutputCustomType.Parameter("maxSwap") @Nullable Integer maxSwap,
-        @OutputCustomType.Parameter("sharedMemorySize") @Nullable Integer sharedMemorySize,
-        @OutputCustomType.Parameter("swappiness") @Nullable Integer swappiness,
-        @OutputCustomType.Parameter("tmpfs") @Nullable List<TaskDefinitionTmpfs> tmpfs) {
+        @CustomType.Parameter("capabilities") @Nullable TaskDefinitionKernelCapabilities capabilities,
+        @CustomType.Parameter("devices") @Nullable List<TaskDefinitionDevice> devices,
+        @CustomType.Parameter("initProcessEnabled") @Nullable Boolean initProcessEnabled,
+        @CustomType.Parameter("maxSwap") @Nullable Integer maxSwap,
+        @CustomType.Parameter("sharedMemorySize") @Nullable Integer sharedMemorySize,
+        @CustomType.Parameter("swappiness") @Nullable Integer swappiness,
+        @CustomType.Parameter("tmpfs") @Nullable List<TaskDefinitionTmpfs> tmpfs) {
         this.capabilities = capabilities;
         this.devices = devices;
         this.initProcessEnabled = initProcessEnabled;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudresourcemanager_v3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudresourcemanager_v3.TagKeyArgs;
@@ -21,7 +21,7 @@ public class TagKey extends io.pulumi.resources.CustomResource {
      * Creation time.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -35,7 +35,7 @@ public class TagKey extends io.pulumi.resources.CustomResource {
      * Optional. User-assigned description of the TagKey. Must not exceed 256 characters. Read-write.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -49,7 +49,7 @@ public class TagKey extends io.pulumi.resources.CustomResource {
      * Optional. Entity tag which users can pass to prevent race conditions. This field is always set in server responses. See UpdateTagKeyRequest for details.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -63,7 +63,7 @@ public class TagKey extends io.pulumi.resources.CustomResource {
      * Immutable. The resource name for a TagKey. Must be in the format `tagKeys/{tag_key_id}`, where `tag_key_id` is the generated numeric id for the TagKey.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class TagKey extends io.pulumi.resources.CustomResource {
      * Immutable. Namespaced name of the TagKey.
      * 
      */
-    @OutputExport(name="namespacedName", type=String.class, parameters={})
+    @Export(name="namespacedName", type=String.class, parameters={})
     private Output<String> namespacedName;
 
     /**
@@ -91,7 +91,7 @@ public class TagKey extends io.pulumi.resources.CustomResource {
      * Immutable. The resource name of the new TagKey's parent. Must be of the form `organizations/{org_id}`.
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -105,7 +105,7 @@ public class TagKey extends io.pulumi.resources.CustomResource {
      * Immutable. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace. The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
      */
-    @OutputExport(name="shortName", type=String.class, parameters={})
+    @Export(name="shortName", type=String.class, parameters={})
     private Output<String> shortName;
 
     /**
@@ -119,7 +119,7 @@ public class TagKey extends io.pulumi.resources.CustomResource {
      * Update time.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ClusterKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Cosmos DB Cassandra table cluster key
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class ClusterKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Order of the Cosmos DB Cassandra table cluster key, only support "Asc" and "Desc"
      * 
      */
-    @InputImport(name="orderBy")
+    @Import(name="orderBy")
       private final @Nullable Output<String> orderBy;
 
     public Output<String> getOrderBy() {

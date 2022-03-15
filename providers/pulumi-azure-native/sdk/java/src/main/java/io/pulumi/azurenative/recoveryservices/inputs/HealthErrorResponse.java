@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.InnerHealthErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Error creation time (UTC)
      * 
      */
-    @InputImport(name="creationTimeUtc")
+    @Import(name="creationTimeUtc")
       private final @Nullable String creationTimeUtc;
 
     public Optional<String> getCreationTimeUtc() {
@@ -35,7 +35,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Value indicating whether the health error is customer resolvable.
      * 
      */
-    @InputImport(name="customerResolvability")
+    @Import(name="customerResolvability")
       private final @Nullable String customerResolvability;
 
     public Optional<String> getCustomerResolvability() {
@@ -46,7 +46,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * ID of the entity.
      * 
      */
-    @InputImport(name="entityId")
+    @Import(name="entityId")
       private final @Nullable String entityId;
 
     public Optional<String> getEntityId() {
@@ -57,7 +57,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Category of error.
      * 
      */
-    @InputImport(name="errorCategory")
+    @Import(name="errorCategory")
       private final @Nullable String errorCategory;
 
     public Optional<String> getErrorCategory() {
@@ -68,7 +68,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Error code.
      * 
      */
-    @InputImport(name="errorCode")
+    @Import(name="errorCode")
       private final @Nullable String errorCode;
 
     public Optional<String> getErrorCode() {
@@ -79,7 +79,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * The health error unique id.
      * 
      */
-    @InputImport(name="errorId")
+    @Import(name="errorId")
       private final @Nullable String errorId;
 
     public Optional<String> getErrorId() {
@@ -90,7 +90,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Level of error.
      * 
      */
-    @InputImport(name="errorLevel")
+    @Import(name="errorLevel")
       private final @Nullable String errorLevel;
 
     public Optional<String> getErrorLevel() {
@@ -101,7 +101,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Error message.
      * 
      */
-    @InputImport(name="errorMessage")
+    @Import(name="errorMessage")
       private final @Nullable String errorMessage;
 
     public Optional<String> getErrorMessage() {
@@ -112,7 +112,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Source of error.
      * 
      */
-    @InputImport(name="errorSource")
+    @Import(name="errorSource")
       private final @Nullable String errorSource;
 
     public Optional<String> getErrorSource() {
@@ -123,7 +123,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Type of error.
      * 
      */
-    @InputImport(name="errorType")
+    @Import(name="errorType")
       private final @Nullable String errorType;
 
     public Optional<String> getErrorType() {
@@ -134,7 +134,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * The inner health errors. HealthError having a list of HealthError as child errors is problematic. InnerHealthError is used because this will prevent an infinite loop of structures when Hydra tries to auto-generate the contract. We are exposing the related health errors as inner health errors and all API consumers can utilize this in the same fashion as Exception -&gt; InnerException.
      * 
      */
-    @InputImport(name="innerHealthErrors")
+    @Import(name="innerHealthErrors")
       private final @Nullable List<InnerHealthErrorResponse> innerHealthErrors;
 
     public List<InnerHealthErrorResponse> getInnerHealthErrors() {
@@ -145,7 +145,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Possible causes of error.
      * 
      */
-    @InputImport(name="possibleCauses")
+    @Import(name="possibleCauses")
       private final @Nullable String possibleCauses;
 
     public Optional<String> getPossibleCauses() {
@@ -156,7 +156,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Recommended action to resolve error.
      * 
      */
-    @InputImport(name="recommendedAction")
+    @Import(name="recommendedAction")
       private final @Nullable String recommendedAction;
 
     public Optional<String> getRecommendedAction() {
@@ -167,7 +167,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * DRA error message.
      * 
      */
-    @InputImport(name="recoveryProviderErrorMessage")
+    @Import(name="recoveryProviderErrorMessage")
       private final @Nullable String recoveryProviderErrorMessage;
 
     public Optional<String> getRecoveryProviderErrorMessage() {
@@ -178,7 +178,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Summary message of the entity.
      * 
      */
-    @InputImport(name="summaryMessage")
+    @Import(name="summaryMessage")
       private final @Nullable String summaryMessage;
 
     public Optional<String> getSummaryMessage() {

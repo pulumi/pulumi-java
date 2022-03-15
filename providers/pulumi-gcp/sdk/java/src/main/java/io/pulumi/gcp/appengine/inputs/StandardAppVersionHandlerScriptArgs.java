@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class StandardAppVersionHandlerScriptArgs extends io.pulumi.resourc
      * Path to the script from the application root directory.
      * 
      */
-    @InputImport(name="scriptPath", required=true)
+    @Import(name="scriptPath", required=true)
       private final Output<String> scriptPath;
 
     public Output<String> getScriptPath() {

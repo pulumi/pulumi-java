@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntentFollowupIntentInfo {
     private final @Nullable String followupIntentName;
     /**
@@ -19,10 +19,10 @@ public final class IntentFollowupIntentInfo {
      */
     private final @Nullable String parentFollowupIntentName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntentFollowupIntentInfo(
-        @OutputCustomType.Parameter("followupIntentName") @Nullable String followupIntentName,
-        @OutputCustomType.Parameter("parentFollowupIntentName") @Nullable String parentFollowupIntentName) {
+        @CustomType.Parameter("followupIntentName") @Nullable String followupIntentName,
+        @CustomType.Parameter("parentFollowupIntentName") @Nullable String parentFollowupIntentName) {
         this.followupIntentName = followupIntentName;
         this.parentFollowupIntentName = parentFollowupIntentName;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudidentity.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudidentity.outputs.GetGroupMembershipsMembershipMemberKey;
 import io.pulumi.gcp.cloudidentity.outputs.GetGroupMembershipsMembershipPreferredMemberKey;
 import io.pulumi.gcp.cloudidentity.outputs.GetGroupMembershipsMembershipRole;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGroupMembershipsMembership {
     private final String createTime;
     /**
@@ -34,16 +34,16 @@ public final class GetGroupMembershipsMembership {
     private final String type;
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGroupMembershipsMembership(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("group") String group,
-        @OutputCustomType.Parameter("memberKeys") List<GetGroupMembershipsMembershipMemberKey> memberKeys,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("preferredMemberKeys") List<GetGroupMembershipsMembershipPreferredMemberKey> preferredMemberKeys,
-        @OutputCustomType.Parameter("roles") List<GetGroupMembershipsMembershipRole> roles,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("group") String group,
+        @CustomType.Parameter("memberKeys") List<GetGroupMembershipsMembershipMemberKey> memberKeys,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("preferredMemberKeys") List<GetGroupMembershipsMembershipPreferredMemberKey> preferredMemberKeys,
+        @CustomType.Parameter("roles") List<GetGroupMembershipsMembershipRole> roles,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.group = group;
         this.memberKeys = memberKeys;

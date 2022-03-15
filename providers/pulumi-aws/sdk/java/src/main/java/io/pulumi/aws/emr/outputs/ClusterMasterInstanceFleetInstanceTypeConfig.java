@@ -5,7 +5,7 @@ package io.pulumi.aws.emr.outputs;
 
 import io.pulumi.aws.emr.outputs.ClusterMasterInstanceFleetInstanceTypeConfigConfiguration;
 import io.pulumi.aws.emr.outputs.ClusterMasterInstanceFleetInstanceTypeConfigEbsConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterMasterInstanceFleetInstanceTypeConfig {
     /**
      * Bid price for each EC2 instance in the instance group, expressed in USD. By setting this attribute, the instance group is being declared as a Spot Instance, and will implicitly create a Spot request. Leave this blank to use On-Demand Instances.
@@ -47,14 +47,14 @@ public final class ClusterMasterInstanceFleetInstanceTypeConfig {
      */
     private final @Nullable Integer weightedCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterMasterInstanceFleetInstanceTypeConfig(
-        @OutputCustomType.Parameter("bidPrice") @Nullable String bidPrice,
-        @OutputCustomType.Parameter("bidPriceAsPercentageOfOnDemandPrice") @Nullable Double bidPriceAsPercentageOfOnDemandPrice,
-        @OutputCustomType.Parameter("configurations") @Nullable List<ClusterMasterInstanceFleetInstanceTypeConfigConfiguration> configurations,
-        @OutputCustomType.Parameter("ebsConfigs") @Nullable List<ClusterMasterInstanceFleetInstanceTypeConfigEbsConfig> ebsConfigs,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("weightedCapacity") @Nullable Integer weightedCapacity) {
+        @CustomType.Parameter("bidPrice") @Nullable String bidPrice,
+        @CustomType.Parameter("bidPriceAsPercentageOfOnDemandPrice") @Nullable Double bidPriceAsPercentageOfOnDemandPrice,
+        @CustomType.Parameter("configurations") @Nullable List<ClusterMasterInstanceFleetInstanceTypeConfigConfiguration> configurations,
+        @CustomType.Parameter("ebsConfigs") @Nullable List<ClusterMasterInstanceFleetInstanceTypeConfigEbsConfig> ebsConfigs,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("weightedCapacity") @Nullable Integer weightedCapacity) {
         this.bidPrice = bidPrice;
         this.bidPriceAsPercentageOfOnDemandPrice = bidPriceAsPercentageOfOnDemandPrice;
         this.configurations = configurations;

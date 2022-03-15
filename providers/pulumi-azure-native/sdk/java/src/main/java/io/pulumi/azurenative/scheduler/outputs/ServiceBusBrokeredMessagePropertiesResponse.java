@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.scheduler.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceBusBrokeredMessagePropertiesResponse {
     /**
      * Gets or sets the content type.
@@ -78,21 +78,21 @@ public final class ServiceBusBrokeredMessagePropertiesResponse {
      */
     private final @Nullable String viaPartitionKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceBusBrokeredMessagePropertiesResponse(
-        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
-        @OutputCustomType.Parameter("correlationId") @Nullable String correlationId,
-        @OutputCustomType.Parameter("forcePersistence") @Nullable Boolean forcePersistence,
-        @OutputCustomType.Parameter("label") @Nullable String label,
-        @OutputCustomType.Parameter("messageId") @Nullable String messageId,
-        @OutputCustomType.Parameter("partitionKey") @Nullable String partitionKey,
-        @OutputCustomType.Parameter("replyTo") @Nullable String replyTo,
-        @OutputCustomType.Parameter("replyToSessionId") @Nullable String replyToSessionId,
-        @OutputCustomType.Parameter("scheduledEnqueueTimeUtc") @Nullable String scheduledEnqueueTimeUtc,
-        @OutputCustomType.Parameter("sessionId") @Nullable String sessionId,
-        @OutputCustomType.Parameter("timeToLive") @Nullable String timeToLive,
-        @OutputCustomType.Parameter("to") @Nullable String to,
-        @OutputCustomType.Parameter("viaPartitionKey") @Nullable String viaPartitionKey) {
+        @CustomType.Parameter("contentType") @Nullable String contentType,
+        @CustomType.Parameter("correlationId") @Nullable String correlationId,
+        @CustomType.Parameter("forcePersistence") @Nullable Boolean forcePersistence,
+        @CustomType.Parameter("label") @Nullable String label,
+        @CustomType.Parameter("messageId") @Nullable String messageId,
+        @CustomType.Parameter("partitionKey") @Nullable String partitionKey,
+        @CustomType.Parameter("replyTo") @Nullable String replyTo,
+        @CustomType.Parameter("replyToSessionId") @Nullable String replyToSessionId,
+        @CustomType.Parameter("scheduledEnqueueTimeUtc") @Nullable String scheduledEnqueueTimeUtc,
+        @CustomType.Parameter("sessionId") @Nullable String sessionId,
+        @CustomType.Parameter("timeToLive") @Nullable String timeToLive,
+        @CustomType.Parameter("to") @Nullable String to,
+        @CustomType.Parameter("viaPartitionKey") @Nullable String viaPartitionKey) {
         this.contentType = contentType;
         this.correlationId = correlationId;
         this.forcePersistence = forcePersistence;

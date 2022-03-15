@@ -9,7 +9,7 @@ import io.pulumi.azurenative.confluent.outputs.OrganizationResourcePropertiesRes
 import io.pulumi.azurenative.confluent.outputs.OrganizationResourcePropertiesResponseUserDetail;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * The creation time of the resource.
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -51,7 +51,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Location of Organization resource
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -65,7 +65,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Confluent offer detail
      * 
      */
-    @OutputExport(name="offerDetail", type=OrganizationResourcePropertiesResponseOfferDetail.class, parameters={})
+    @Export(name="offerDetail", type=OrganizationResourcePropertiesResponseOfferDetail.class, parameters={})
     private Output</* @Nullable */ OrganizationResourcePropertiesResponseOfferDetail> offerDetail;
 
     /**
@@ -93,7 +93,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Id of the Confluent organization.
      * 
      */
-    @OutputExport(name="organizationId", type=String.class, parameters={})
+    @Export(name="organizationId", type=String.class, parameters={})
     private Output<String> organizationId;
 
     /**
@@ -107,7 +107,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Provision states for confluent RP
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -121,7 +121,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * SSO url for the Confluent organization.
      * 
      */
-    @OutputExport(name="ssoUrl", type=String.class, parameters={})
+    @Export(name="ssoUrl", type=String.class, parameters={})
     private Output<String> ssoUrl;
 
     /**
@@ -135,7 +135,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Organization resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -149,7 +149,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -163,7 +163,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Subscriber detail
      * 
      */
-    @OutputExport(name="userDetail", type=OrganizationResourcePropertiesResponseUserDetail.class, parameters={})
+    @Export(name="userDetail", type=OrganizationResourcePropertiesResponseUserDetail.class, parameters={})
     private Output</* @Nullable */ OrganizationResourcePropertiesResponseUserDetail> userDetail;
 
     /**

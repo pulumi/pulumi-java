@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datalakeanalytics;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Data Lake Analytics account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -29,7 +29,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
      * 
      */
-    @InputImport(name="endIpAddress", required=true)
+    @Import(name="endIpAddress", required=true)
       private final Output<String> endIpAddress;
 
     public Output<String> getEndIpAddress() {
@@ -40,7 +40,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the firewall rule to create or update.
      * 
      */
-    @InputImport(name="firewallRuleName")
+    @Import(name="firewallRuleName")
       private final @Nullable Output<String> firewallRuleName;
 
     public Output<String> getFirewallRuleName() {
@@ -51,7 +51,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Azure resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -62,7 +62,7 @@ public final class FirewallRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
      * 
      */
-    @InputImport(name="startIpAddress", required=true)
+    @Import(name="startIpAddress", required=true)
       private final Output<String> startIpAddress;
 
     public Output<String> getStartIpAddress() {

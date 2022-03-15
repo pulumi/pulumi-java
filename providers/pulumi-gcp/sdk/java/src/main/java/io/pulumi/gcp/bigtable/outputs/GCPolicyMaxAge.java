@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.bigtable.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GCPolicyMaxAge {
     /**
      * Number of days before applying GC policy.
@@ -27,10 +27,10 @@ public final class GCPolicyMaxAge {
      */
     private final @Nullable String duration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GCPolicyMaxAge(
-        @OutputCustomType.Parameter("days") @Nullable Integer days,
-        @OutputCustomType.Parameter("duration") @Nullable String duration) {
+        @CustomType.Parameter("days") @Nullable Integer days,
+        @CustomType.Parameter("duration") @Nullable String duration) {
         this.days = days;
         this.duration = duration;
     }

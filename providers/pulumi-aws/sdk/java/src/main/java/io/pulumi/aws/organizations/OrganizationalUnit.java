@@ -8,7 +8,7 @@ import io.pulumi.aws.organizations.OrganizationalUnitArgs;
 import io.pulumi.aws.organizations.inputs.OrganizationalUnitState;
 import io.pulumi.aws.organizations.outputs.OrganizationalUnitAccount;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class OrganizationalUnit extends io.pulumi.resources.CustomResource {
      * List of child accounts for this Organizational Unit. Does not return account information for child Organizational Units. All elements have these attributes:
      * 
      */
-    @OutputExport(name="accounts", type=List.class, parameters={OrganizationalUnitAccount.class})
+    @Export(name="accounts", type=List.class, parameters={OrganizationalUnitAccount.class})
     private Output<List<OrganizationalUnitAccount>> accounts;
 
     /**
@@ -49,7 +49,7 @@ public class OrganizationalUnit extends io.pulumi.resources.CustomResource {
      * ARN of the organizational unit
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -63,7 +63,7 @@ public class OrganizationalUnit extends io.pulumi.resources.CustomResource {
      * The name for the organizational unit
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class OrganizationalUnit extends io.pulumi.resources.CustomResource {
      * ID of the parent organizational unit, which may be the root
      * 
      */
-    @OutputExport(name="parentId", type=String.class, parameters={})
+    @Export(name="parentId", type=String.class, parameters={})
     private Output<String> parentId;
 
     /**
@@ -91,7 +91,7 @@ public class OrganizationalUnit extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -105,7 +105,7 @@ public class OrganizationalUnit extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

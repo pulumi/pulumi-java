@@ -7,7 +7,7 @@ import io.pulumi.awsnative.frauddetector.enums.EventTypeEventVariableDataSource;
 import io.pulumi.awsnative.frauddetector.enums.EventTypeEventVariableDataType;
 import io.pulumi.awsnative.frauddetector.enums.EventTypeEventVariableVariableType;
 import io.pulumi.awsnative.frauddetector.outputs.EventTypeTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventTypeEventVariable {
     private final @Nullable String arn;
     /**
@@ -45,19 +45,19 @@ public final class EventTypeEventVariable {
     private final @Nullable List<EventTypeTag> tags;
     private final @Nullable EventTypeEventVariableVariableType variableType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventTypeEventVariable(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("dataSource") @Nullable EventTypeEventVariableDataSource dataSource,
-        @OutputCustomType.Parameter("dataType") @Nullable EventTypeEventVariableDataType dataType,
-        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("inline") @Nullable Boolean inline,
-        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tags") @Nullable List<EventTypeTag> tags,
-        @OutputCustomType.Parameter("variableType") @Nullable EventTypeEventVariableVariableType variableType) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("dataSource") @Nullable EventTypeEventVariableDataSource dataSource,
+        @CustomType.Parameter("dataType") @Nullable EventTypeEventVariableDataType dataType,
+        @CustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("inline") @Nullable Boolean inline,
+        @CustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tags") @Nullable List<EventTypeTag> tags,
+        @CustomType.Parameter("variableType") @Nullable EventTypeEventVariableVariableType variableType) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.dataSource = dataSource;

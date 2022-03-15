@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagesync.inputs;
 
 import io.pulumi.azurenative.storagesync.inputs.FilesNotTieringErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class CloudTieringFilesNotTieringResponse extends io.pulumi.resourc
      * Array of tiering errors
      * 
      */
-    @InputImport(name="errors", required=true)
+    @Import(name="errors", required=true)
       private final List<FilesNotTieringErrorResponse> errors;
 
     public List<FilesNotTieringErrorResponse> getErrors() {
@@ -34,7 +34,7 @@ public final class CloudTieringFilesNotTieringResponse extends io.pulumi.resourc
      * Last updated timestamp
      * 
      */
-    @InputImport(name="lastUpdatedTimestamp", required=true)
+    @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;
 
     public String getLastUpdatedTimestamp() {
@@ -45,7 +45,7 @@ public final class CloudTieringFilesNotTieringResponse extends io.pulumi.resourc
      * Last cloud tiering result (HResult)
      * 
      */
-    @InputImport(name="totalFileCount", required=true)
+    @Import(name="totalFileCount", required=true)
       private final Double totalFileCount;
 
     public Double getTotalFileCount() {

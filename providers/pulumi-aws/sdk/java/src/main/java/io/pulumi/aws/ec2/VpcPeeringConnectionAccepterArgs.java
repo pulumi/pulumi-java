@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.VpcPeeringConnectionAccepterAccepterArgs;
 import io.pulumi.aws.ec2.inputs.VpcPeeringConnectionAccepterRequesterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class VpcPeeringConnectionAccepterArgs extends io.pulumi.resources.
      * (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the accepter VPC.
      * 
      */
-    @InputImport(name="accepter")
+    @Import(name="accepter")
       private final @Nullable Output<VpcPeeringConnectionAccepterAccepterArgs> accepter;
 
     public Output<VpcPeeringConnectionAccepterAccepterArgs> getAccepter() {
@@ -34,7 +34,7 @@ public final class VpcPeeringConnectionAccepterArgs extends io.pulumi.resources.
      * Whether or not to accept the peering request. Defaults to `false`.
      * 
      */
-    @InputImport(name="autoAccept")
+    @Import(name="autoAccept")
       private final @Nullable Output<Boolean> autoAccept;
 
     public Output<Boolean> getAutoAccept() {
@@ -46,7 +46,7 @@ public final class VpcPeeringConnectionAccepterArgs extends io.pulumi.resources.
      * (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the requester VPC.
      * 
      */
-    @InputImport(name="requester")
+    @Import(name="requester")
       private final @Nullable Output<VpcPeeringConnectionAccepterRequesterArgs> requester;
 
     public Output<VpcPeeringConnectionAccepterRequesterArgs> getRequester() {
@@ -57,7 +57,7 @@ public final class VpcPeeringConnectionAccepterArgs extends io.pulumi.resources.
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -68,7 +68,7 @@ public final class VpcPeeringConnectionAccepterArgs extends io.pulumi.resources.
      * The VPC Peering Connection ID to manage.
      * 
      */
-    @InputImport(name="vpcPeeringConnectionId", required=true)
+    @Import(name="vpcPeeringConnectionId", required=true)
       private final Output<String> vpcPeeringConnectionId;
 
     public Output<String> getVpcPeeringConnectionId() {

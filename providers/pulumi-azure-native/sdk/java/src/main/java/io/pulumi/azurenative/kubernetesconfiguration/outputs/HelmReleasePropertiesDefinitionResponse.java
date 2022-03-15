@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ObjectReferenceDefinitionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HelmReleasePropertiesDefinitionResponse {
     /**
      * Total number of times that the HelmRelease failed to install or upgrade
@@ -38,13 +38,13 @@ public final class HelmReleasePropertiesDefinitionResponse {
      */
     private final @Nullable Double upgradeFailureCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HelmReleasePropertiesDefinitionResponse(
-        @OutputCustomType.Parameter("failureCount") @Nullable Double failureCount,
-        @OutputCustomType.Parameter("helmChartRef") @Nullable ObjectReferenceDefinitionResponse helmChartRef,
-        @OutputCustomType.Parameter("installFailureCount") @Nullable Double installFailureCount,
-        @OutputCustomType.Parameter("lastRevisionApplied") @Nullable Double lastRevisionApplied,
-        @OutputCustomType.Parameter("upgradeFailureCount") @Nullable Double upgradeFailureCount) {
+        @CustomType.Parameter("failureCount") @Nullable Double failureCount,
+        @CustomType.Parameter("helmChartRef") @Nullable ObjectReferenceDefinitionResponse helmChartRef,
+        @CustomType.Parameter("installFailureCount") @Nullable Double installFailureCount,
+        @CustomType.Parameter("lastRevisionApplied") @Nullable Double lastRevisionApplied,
+        @CustomType.Parameter("upgradeFailureCount") @Nullable Double upgradeFailureCount) {
         this.failureCount = failureCount;
         this.helmChartRef = helmChartRef;
         this.installFailureCount = installFailureCount;

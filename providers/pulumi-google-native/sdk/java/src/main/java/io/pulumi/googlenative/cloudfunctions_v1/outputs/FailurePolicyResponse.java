@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.RetryResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FailurePolicyResponse {
     /**
      * If specified, then the function will be retried in case of a failure.
@@ -15,8 +15,8 @@ public final class FailurePolicyResponse {
      */
     private final RetryResponse retry;
 
-    @OutputCustomType.Constructor
-    private FailurePolicyResponse(@OutputCustomType.Parameter("retry") RetryResponse retry) {
+    @CustomType.Constructor
+    private FailurePolicyResponse(@CustomType.Parameter("retry") RetryResponse retry) {
         this.retry = retry;
     }
 

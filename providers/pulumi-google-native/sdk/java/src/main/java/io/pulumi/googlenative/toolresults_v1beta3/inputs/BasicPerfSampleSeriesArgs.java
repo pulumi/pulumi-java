@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.BasicPerfSampleSeriesPerfMetricType;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.BasicPerfSampleSeriesPerfUnit;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.BasicPerfSampleSeriesSampleSeriesLabel;
@@ -20,21 +20,21 @@ public final class BasicPerfSampleSeriesArgs extends io.pulumi.resources.Resourc
 
     public static final BasicPerfSampleSeriesArgs Empty = new BasicPerfSampleSeriesArgs();
 
-    @InputImport(name="perfMetricType")
+    @Import(name="perfMetricType")
       private final @Nullable Output<BasicPerfSampleSeriesPerfMetricType> perfMetricType;
 
     public Output<BasicPerfSampleSeriesPerfMetricType> getPerfMetricType() {
         return this.perfMetricType == null ? Output.empty() : this.perfMetricType;
     }
 
-    @InputImport(name="perfUnit")
+    @Import(name="perfUnit")
       private final @Nullable Output<BasicPerfSampleSeriesPerfUnit> perfUnit;
 
     public Output<BasicPerfSampleSeriesPerfUnit> getPerfUnit() {
         return this.perfUnit == null ? Output.empty() : this.perfUnit;
     }
 
-    @InputImport(name="sampleSeriesLabel")
+    @Import(name="sampleSeriesLabel")
       private final @Nullable Output<BasicPerfSampleSeriesSampleSeriesLabel> sampleSeriesLabel;
 
     public Output<BasicPerfSampleSeriesSampleSeriesLabel> getSampleSeriesLabel() {

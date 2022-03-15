@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.SharedflowArgs;
@@ -23,7 +23,7 @@ public class Sharedflow extends io.pulumi.resources.CustomResource {
      * The id of the most recently created revision for this shared flow.
      * 
      */
-    @OutputExport(name="latestRevisionId", type=String.class, parameters={})
+    @Export(name="latestRevisionId", type=String.class, parameters={})
     private Output<String> latestRevisionId;
 
     /**
@@ -37,7 +37,7 @@ public class Sharedflow extends io.pulumi.resources.CustomResource {
      * Metadata describing the shared flow.
      * 
      */
-    @OutputExport(name="metaData", type=GoogleCloudApigeeV1EntityMetadataResponse.class, parameters={})
+    @Export(name="metaData", type=GoogleCloudApigeeV1EntityMetadataResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1EntityMetadataResponse> metaData;
 
     /**
@@ -51,7 +51,7 @@ public class Sharedflow extends io.pulumi.resources.CustomResource {
      * The ID of the shared flow.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class Sharedflow extends io.pulumi.resources.CustomResource {
      * A list of revisions of this shared flow.
      * 
      */
-    @OutputExport(name="revision", type=List.class, parameters={String.class})
+    @Export(name="revision", type=List.class, parameters={String.class})
     private Output<List<String>> revision;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.synthetics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CanaryRunConfigGetArgs extends io.pulumi.resources.ResourceAr
      * Whether this canary is to use active AWS X-Ray tracing when it runs. You can enable active tracing only for canaries that use version syn-nodejs-2.0 or later for their canary runtime.
      * 
      */
-    @InputImport(name="activeTracing")
+    @Import(name="activeTracing")
       private final @Nullable Output<Boolean> activeTracing;
 
     public Output<Boolean> getActiveTracing() {
@@ -30,7 +30,7 @@ public final class CanaryRunConfigGetArgs extends io.pulumi.resources.ResourceAr
      * Maximum amount of memory available to the canary while it is running, in MB. The value you specify must be a multiple of 64.
      * 
      */
-    @InputImport(name="memoryInMb")
+    @Import(name="memoryInMb")
       private final @Nullable Output<Integer> memoryInMb;
 
     public Output<Integer> getMemoryInMb() {
@@ -41,7 +41,7 @@ public final class CanaryRunConfigGetArgs extends io.pulumi.resources.ResourceAr
      * Number of seconds the canary is allowed to run before it must stop. If you omit this field, the frequency of the canary is used, up to a maximum of 840 (14 minutes).
      * 
      */
-    @InputImport(name="timeoutInSeconds")
+    @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
 
     public Output<Integer> getTimeoutInSeconds() {

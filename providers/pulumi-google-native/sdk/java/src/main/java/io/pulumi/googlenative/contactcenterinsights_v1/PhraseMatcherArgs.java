@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.contactcenterinsights_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.contactcenterinsights_v1.enums.PhraseMatcherRoleMatch;
 import io.pulumi.googlenative.contactcenterinsights_v1.enums.PhraseMatcherType;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs;
@@ -23,7 +23,7 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * Applies the phrase matcher only when it is active.
      * 
      */
-    @InputImport(name="active")
+    @Import(name="active")
       private final @Nullable Output<Boolean> active;
 
     public Output<Boolean> getActive() {
@@ -34,14 +34,14 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * The human-readable name of the phrase matcher.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName == null ? Output.empty() : this.displayName;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -52,7 +52,7 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the phrase matcher. Format: projects/{project}/locations/{location}/phraseMatchers/{phrase_matcher}
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -63,14 +63,14 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * A list of phase match rule groups that are included in this matcher.
      * 
      */
-    @InputImport(name="phraseMatchRuleGroups")
+    @Import(name="phraseMatchRuleGroups")
       private final @Nullable Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups;
 
     public Output<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> getPhraseMatchRuleGroups() {
         return this.phraseMatchRuleGroups == null ? Output.empty() : this.phraseMatchRuleGroups;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -81,7 +81,7 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * The role whose utterances the phrase matcher should be matched against. If the role is ROLE_UNSPECIFIED it will be matched against any utterances in the transcript.
      * 
      */
-    @InputImport(name="roleMatch")
+    @Import(name="roleMatch")
       private final @Nullable Output<PhraseMatcherRoleMatch> roleMatch;
 
     public Output<PhraseMatcherRoleMatch> getRoleMatch() {
@@ -92,7 +92,7 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * The type of this phrase matcher.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<PhraseMatcherType> type;
 
     public Output<PhraseMatcherType> getType() {
@@ -103,7 +103,7 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * The customized version tag to use for the phrase matcher. If not specified, it will default to `revision_id`.
      * 
      */
-    @InputImport(name="versionTag")
+    @Import(name="versionTag")
       private final @Nullable Output<String> versionTag;
 
     public Output<String> getVersionTag() {

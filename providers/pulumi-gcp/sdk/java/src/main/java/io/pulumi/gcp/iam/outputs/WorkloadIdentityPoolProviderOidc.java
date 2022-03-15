@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkloadIdentityPoolProviderOidc {
     /**
      * Acceptable values for the `aud` field (audience) in the OIDC token. Token exchange
@@ -28,10 +28,10 @@ public final class WorkloadIdentityPoolProviderOidc {
      */
     private final String issuerUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkloadIdentityPoolProviderOidc(
-        @OutputCustomType.Parameter("allowedAudiences") @Nullable List<String> allowedAudiences,
-        @OutputCustomType.Parameter("issuerUri") String issuerUri) {
+        @CustomType.Parameter("allowedAudiences") @Nullable List<String> allowedAudiences,
+        @CustomType.Parameter("issuerUri") String issuerUri) {
         this.allowedAudiences = allowedAudiences;
         this.issuerUri = issuerUri;
     }

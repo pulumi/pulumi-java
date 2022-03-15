@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,28 +15,28 @@ public final class TopicRuleIotEventsActionArgs extends io.pulumi.resources.Reso
 
     public static final TopicRuleIotEventsActionArgs Empty = new TopicRuleIotEventsActionArgs();
 
-    @InputImport(name="batchMode")
+    @Import(name="batchMode")
       private final @Nullable Output<Boolean> batchMode;
 
     public Output<Boolean> getBatchMode() {
         return this.batchMode == null ? Output.empty() : this.batchMode;
     }
 
-    @InputImport(name="inputName", required=true)
+    @Import(name="inputName", required=true)
       private final Output<String> inputName;
 
     public Output<String> getInputName() {
         return this.inputName;
     }
 
-    @InputImport(name="messageId")
+    @Import(name="messageId")
       private final @Nullable Output<String> messageId;
 
     public Output<String> getMessageId() {
         return this.messageId == null ? Output.empty() : this.messageId;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

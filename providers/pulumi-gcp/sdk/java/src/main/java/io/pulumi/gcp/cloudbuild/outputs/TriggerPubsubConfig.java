@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerPubsubConfig {
     /**
      * Service account that will make the push request.
@@ -35,12 +35,12 @@ public final class TriggerPubsubConfig {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerPubsubConfig(
-        @OutputCustomType.Parameter("serviceAccountEmail") @Nullable String serviceAccountEmail,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("subscription") @Nullable String subscription,
-        @OutputCustomType.Parameter("topic") String topic) {
+        @CustomType.Parameter("serviceAccountEmail") @Nullable String serviceAccountEmail,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("subscription") @Nullable String subscription,
+        @CustomType.Parameter("topic") String topic) {
         this.serviceAccountEmail = serviceAccountEmail;
         this.state = state;
         this.subscription = subscription;

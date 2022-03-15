@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudwatch.QueryDefinitionArgs;
 import io.pulumi.aws.cloudwatch.inputs.QueryDefinitionState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * Specific log groups to use with the query.
      * 
      */
-    @OutputExport(name="logGroupNames", type=List.class, parameters={String.class})
+    @Export(name="logGroupNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> logGroupNames;
 
     /**
@@ -47,7 +47,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * The name of the query.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -61,7 +61,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * The query definition ID.
      * 
      */
-    @OutputExport(name="queryDefinitionId", type=String.class, parameters={})
+    @Export(name="queryDefinitionId", type=String.class, parameters={})
     private Output<String> queryDefinitionId;
 
     /**
@@ -75,7 +75,7 @@ public class QueryDefinition extends io.pulumi.resources.CustomResource {
      * The query to save. You can read more about CloudWatch Logs Query Syntax in the [documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_QuerySyntax.html).
      * 
      */
-    @OutputExport(name="queryString", type=String.class, parameters={})
+    @Export(name="queryString", type=String.class, parameters={})
     private Output<String> queryString;
 
     /**

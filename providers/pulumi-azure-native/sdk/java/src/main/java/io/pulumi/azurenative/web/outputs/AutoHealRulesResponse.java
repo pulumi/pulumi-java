@@ -5,12 +5,12 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.AutoHealActionsResponse;
 import io.pulumi.azurenative.web.outputs.AutoHealTriggersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoHealRulesResponse {
     /**
      * Actions to be executed when a rule is triggered.
@@ -23,10 +23,10 @@ public final class AutoHealRulesResponse {
      */
     private final @Nullable AutoHealTriggersResponse triggers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoHealRulesResponse(
-        @OutputCustomType.Parameter("actions") @Nullable AutoHealActionsResponse actions,
-        @OutputCustomType.Parameter("triggers") @Nullable AutoHealTriggersResponse triggers) {
+        @CustomType.Parameter("actions") @Nullable AutoHealActionsResponse actions,
+        @CustomType.Parameter("triggers") @Nullable AutoHealTriggersResponse triggers) {
         this.actions = actions;
         this.triggers = triggers;
     }

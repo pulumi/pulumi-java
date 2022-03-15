@@ -4,12 +4,12 @@
 package io.pulumi.aws.imagebuilder.outputs;
 
 import io.pulumi.aws.imagebuilder.outputs.GetDistributionConfigurationDistributionAmiDistributionConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDistributionConfigurationDistribution {
     /**
      * Nested list of AMI distribution configuration.
@@ -27,11 +27,11 @@ public final class GetDistributionConfigurationDistribution {
      */
     private final String region;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDistributionConfigurationDistribution(
-        @OutputCustomType.Parameter("amiDistributionConfigurations") List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations,
-        @OutputCustomType.Parameter("licenseConfigurationArns") List<String> licenseConfigurationArns,
-        @OutputCustomType.Parameter("region") String region) {
+        @CustomType.Parameter("amiDistributionConfigurations") List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations,
+        @CustomType.Parameter("licenseConfigurationArns") List<String> licenseConfigurationArns,
+        @CustomType.Parameter("region") String region) {
         this.amiDistributionConfigurations = amiDistributionConfigurations;
         this.licenseConfigurationArns = licenseConfigurationArns;
         this.region = region;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteArgs;
@@ -21,7 +21,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs ex
      * Structure is documented below.
      * 
      */
-    @InputImport(name="cdnPolicy")
+    @Import(name="cdnPolicy")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyArgs> cdnPolicy;
 
     public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyArgs> getCdnPolicy() {
@@ -33,7 +33,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs ex
      * Structure is documented below.
      * 
      */
-    @InputImport(name="corsPolicy")
+    @Import(name="corsPolicy")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs> corsPolicy;
 
     public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicyArgs> getCorsPolicy() {
@@ -45,7 +45,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionArgs ex
      * Structure is documented below.
      * 
      */
-    @InputImport(name="urlRewrite")
+    @Import(name="urlRewrite")
       private final @Nullable Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteArgs> urlRewrite;
 
     public Output<EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewriteArgs> getUrlRewrite() {

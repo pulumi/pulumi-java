@@ -7,7 +7,7 @@ import io.pulumi.awsnative.groundstation.inputs.ConfigDecodeConfigArgs;
 import io.pulumi.awsnative.groundstation.inputs.ConfigDemodulationConfigArgs;
 import io.pulumi.awsnative.groundstation.inputs.ConfigSpectrumConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -16,21 +16,21 @@ public final class ConfigAntennaDownlinkDemodDecodeConfigArgs extends io.pulumi.
 
     public static final ConfigAntennaDownlinkDemodDecodeConfigArgs Empty = new ConfigAntennaDownlinkDemodDecodeConfigArgs();
 
-    @InputImport(name="decodeConfig")
+    @Import(name="decodeConfig")
       private final @Nullable Output<ConfigDecodeConfigArgs> decodeConfig;
 
     public Output<ConfigDecodeConfigArgs> getDecodeConfig() {
         return this.decodeConfig == null ? Output.empty() : this.decodeConfig;
     }
 
-    @InputImport(name="demodulationConfig")
+    @Import(name="demodulationConfig")
       private final @Nullable Output<ConfigDemodulationConfigArgs> demodulationConfig;
 
     public Output<ConfigDemodulationConfigArgs> getDemodulationConfig() {
         return this.demodulationConfig == null ? Output.empty() : this.demodulationConfig;
     }
 
-    @InputImport(name="spectrumConfig")
+    @Import(name="spectrumConfig")
       private final @Nullable Output<ConfigSpectrumConfigArgs> spectrumConfig;
 
     public Output<ConfigSpectrumConfigArgs> getSpectrumConfig() {

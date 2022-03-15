@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1.inputs.RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse;
 import java.lang.String;
 import java.util.List;
@@ -18,14 +18,14 @@ public final class RRSetRoutingPolicyWrrPolicyResponse extends io.pulumi.resourc
 
     public static final RRSetRoutingPolicyWrrPolicyResponse Empty = new RRSetRoutingPolicyWrrPolicyResponse();
 
-    @InputImport(name="items", required=true)
+    @Import(name="items", required=true)
       private final List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> items;
 
     public List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse> getItems() {
         return this.items;
     }
 
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {

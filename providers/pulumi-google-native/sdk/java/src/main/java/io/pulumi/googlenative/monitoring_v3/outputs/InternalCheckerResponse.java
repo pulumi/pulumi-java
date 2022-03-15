@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InternalCheckerResponse {
     /**
      * The checker's human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
@@ -40,14 +40,14 @@ public final class InternalCheckerResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InternalCheckerResponse(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("gcpZone") String gcpZone,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("peerProjectId") String peerProjectId,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("gcpZone") String gcpZone,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("peerProjectId") String peerProjectId,
+        @CustomType.Parameter("state") String state) {
         this.displayName = displayName;
         this.gcpZone = gcpZone;
         this.name = name;

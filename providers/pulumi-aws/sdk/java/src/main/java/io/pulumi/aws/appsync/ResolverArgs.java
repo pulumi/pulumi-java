@@ -7,7 +7,7 @@ import io.pulumi.aws.appsync.inputs.ResolverCachingConfigArgs;
 import io.pulumi.aws.appsync.inputs.ResolverPipelineConfigArgs;
 import io.pulumi.aws.appsync.inputs.ResolverSyncConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * The API ID for the GraphQL API.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -33,7 +33,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * The CachingConfig.
      * 
      */
-    @InputImport(name="cachingConfig")
+    @Import(name="cachingConfig")
       private final @Nullable Output<ResolverCachingConfigArgs> cachingConfig;
 
     public Output<ResolverCachingConfigArgs> getCachingConfig() {
@@ -44,7 +44,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * The DataSource name.
      * 
      */
-    @InputImport(name="dataSource")
+    @Import(name="dataSource")
       private final @Nullable Output<String> dataSource;
 
     public Output<String> getDataSource() {
@@ -55,7 +55,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * The field name from the schema defined in the GraphQL API.
      * 
      */
-    @InputImport(name="field", required=true)
+    @Import(name="field", required=true)
       private final Output<String> field;
 
     public Output<String> getField() {
@@ -66,7 +66,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * The resolver type. Valid values are `UNIT` and `PIPELINE`.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -77,7 +77,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum batching size for a resolver. Valid values are between `0` and `2000`.
      * 
      */
-    @InputImport(name="maxBatchSize")
+    @Import(name="maxBatchSize")
       private final @Nullable Output<Integer> maxBatchSize;
 
     public Output<Integer> getMaxBatchSize() {
@@ -88,7 +88,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * The PipelineConfig.
      * 
      */
-    @InputImport(name="pipelineConfig")
+    @Import(name="pipelineConfig")
       private final @Nullable Output<ResolverPipelineConfigArgs> pipelineConfig;
 
     public Output<ResolverPipelineConfigArgs> getPipelineConfig() {
@@ -99,7 +99,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * The request mapping template for UNIT resolver or 'before mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
      * 
      */
-    @InputImport(name="requestTemplate")
+    @Import(name="requestTemplate")
       private final @Nullable Output<String> requestTemplate;
 
     public Output<String> getRequestTemplate() {
@@ -110,7 +110,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * The response mapping template for UNIT resolver or 'after mapping template' for PIPELINE resolver. Required for non-Lambda resolvers.
      * 
      */
-    @InputImport(name="responseTemplate")
+    @Import(name="responseTemplate")
       private final @Nullable Output<String> responseTemplate;
 
     public Output<String> getResponseTemplate() {
@@ -121,7 +121,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * Describes a Sync configuration for a resolver. See Sync Config.
      * 
      */
-    @InputImport(name="syncConfig")
+    @Import(name="syncConfig")
       private final @Nullable Output<ResolverSyncConfigArgs> syncConfig;
 
     public Output<ResolverSyncConfigArgs> getSyncConfig() {
@@ -132,7 +132,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
      * The type name from the schema defined in the GraphQL API.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetExtendedServerBlobAuditingPolicyResult {
     /**
      * Specifies the Actions-Groups and Actions to audit.
@@ -156,21 +156,21 @@ public final class GetExtendedServerBlobAuditingPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExtendedServerBlobAuditingPolicyResult(
-        @OutputCustomType.Parameter("auditActionsAndGroups") @Nullable List<String> auditActionsAndGroups,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isAzureMonitorTargetEnabled") @Nullable Boolean isAzureMonitorTargetEnabled,
-        @OutputCustomType.Parameter("isDevopsAuditEnabled") @Nullable Boolean isDevopsAuditEnabled,
-        @OutputCustomType.Parameter("isStorageSecondaryKeyInUse") @Nullable Boolean isStorageSecondaryKeyInUse,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("predicateExpression") @Nullable String predicateExpression,
-        @OutputCustomType.Parameter("queueDelayMs") @Nullable Integer queueDelayMs,
-        @OutputCustomType.Parameter("retentionDays") @Nullable Integer retentionDays,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("storageAccountSubscriptionId") @Nullable String storageAccountSubscriptionId,
-        @OutputCustomType.Parameter("storageEndpoint") @Nullable String storageEndpoint,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("auditActionsAndGroups") @Nullable List<String> auditActionsAndGroups,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isAzureMonitorTargetEnabled") @Nullable Boolean isAzureMonitorTargetEnabled,
+        @CustomType.Parameter("isDevopsAuditEnabled") @Nullable Boolean isDevopsAuditEnabled,
+        @CustomType.Parameter("isStorageSecondaryKeyInUse") @Nullable Boolean isStorageSecondaryKeyInUse,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("predicateExpression") @Nullable String predicateExpression,
+        @CustomType.Parameter("queueDelayMs") @Nullable Integer queueDelayMs,
+        @CustomType.Parameter("retentionDays") @Nullable Integer retentionDays,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("storageAccountSubscriptionId") @Nullable String storageAccountSubscriptionId,
+        @CustomType.Parameter("storageEndpoint") @Nullable String storageEndpoint,
+        @CustomType.Parameter("type") String type) {
         this.auditActionsAndGroups = auditActionsAndGroups;
         this.id = id;
         this.isAzureMonitorTargetEnabled = isAzureMonitorTargetEnabled;

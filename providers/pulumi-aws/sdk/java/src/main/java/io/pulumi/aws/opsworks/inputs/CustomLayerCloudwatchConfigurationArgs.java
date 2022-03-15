@@ -5,7 +5,7 @@ package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.aws.opsworks.inputs.CustomLayerCloudwatchConfigurationLogStreamArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class CustomLayerCloudwatchConfigurationArgs extends io.pulumi.reso
 
     public static final CustomLayerCloudwatchConfigurationArgs Empty = new CustomLayerCloudwatchConfigurationArgs();
 
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -27,7 +27,7 @@ public final class CustomLayerCloudwatchConfigurationArgs extends io.pulumi.reso
      * A block the specifies how an opsworks logs look like. See Log Streams.
      * 
      */
-    @InputImport(name="logStreams")
+    @Import(name="logStreams")
       private final @Nullable Output<List<CustomLayerCloudwatchConfigurationLogStreamArgs>> logStreams;
 
     public Output<List<CustomLayerCloudwatchConfigurationLogStreamArgs>> getLogStreams() {

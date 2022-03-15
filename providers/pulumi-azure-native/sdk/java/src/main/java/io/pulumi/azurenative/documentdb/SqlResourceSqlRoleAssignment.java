@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.documentdb.SqlResourceSqlRoleAssignmentArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class SqlResourceSqlRoleAssignment extends io.pulumi.resources.CustomReso
      * The name of the database account.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -48,7 +48,7 @@ public class SqlResourceSqlRoleAssignment extends io.pulumi.resources.CustomReso
      * The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.
      * 
      */
-    @OutputExport(name="principalId", type=String.class, parameters={})
+    @Export(name="principalId", type=String.class, parameters={})
     private Output</* @Nullable */ String> principalId;
 
     /**
@@ -62,7 +62,7 @@ public class SqlResourceSqlRoleAssignment extends io.pulumi.resources.CustomReso
      * The unique identifier for the associated Role Definition.
      * 
      */
-    @OutputExport(name="roleDefinitionId", type=String.class, parameters={})
+    @Export(name="roleDefinitionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleDefinitionId;
 
     /**
@@ -76,7 +76,7 @@ public class SqlResourceSqlRoleAssignment extends io.pulumi.resources.CustomReso
      * The data plane resource path for which access is being granted through this Role Assignment.
      * 
      */
-    @OutputExport(name="scope", type=String.class, parameters={})
+    @Export(name="scope", type=String.class, parameters={})
     private Output</* @Nullable */ String> scope;
 
     /**
@@ -90,7 +90,7 @@ public class SqlResourceSqlRoleAssignment extends io.pulumi.resources.CustomReso
      * The type of Azure resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

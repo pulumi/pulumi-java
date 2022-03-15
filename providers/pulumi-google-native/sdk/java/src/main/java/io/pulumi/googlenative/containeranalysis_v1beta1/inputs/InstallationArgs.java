@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.LocationArgs;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class InstallationArgs extends io.pulumi.resources.ResourceArgs {
      * All of the places within the filesystem versions of this package have been found.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<List<LocationArgs>> location;
 
     public Output<List<LocationArgs>> getLocation() {

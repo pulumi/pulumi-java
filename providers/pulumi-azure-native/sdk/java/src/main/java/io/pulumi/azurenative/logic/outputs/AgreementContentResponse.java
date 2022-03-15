@@ -6,12 +6,12 @@ package io.pulumi.azurenative.logic.outputs;
 import io.pulumi.azurenative.logic.outputs.AS2AgreementContentResponse;
 import io.pulumi.azurenative.logic.outputs.EdifactAgreementContentResponse;
 import io.pulumi.azurenative.logic.outputs.X12AgreementContentResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AgreementContentResponse {
     /**
      * The AS2 agreement content.
@@ -29,11 +29,11 @@ public final class AgreementContentResponse {
      */
     private final @Nullable X12AgreementContentResponse x12;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AgreementContentResponse(
-        @OutputCustomType.Parameter("aS2") @Nullable AS2AgreementContentResponse aS2,
-        @OutputCustomType.Parameter("edifact") @Nullable EdifactAgreementContentResponse edifact,
-        @OutputCustomType.Parameter("x12") @Nullable X12AgreementContentResponse x12) {
+        @CustomType.Parameter("aS2") @Nullable AS2AgreementContentResponse aS2,
+        @CustomType.Parameter("edifact") @Nullable EdifactAgreementContentResponse edifact,
+        @CustomType.Parameter("x12") @Nullable X12AgreementContentResponse x12) {
         this.aS2 = aS2;
         this.edifact = edifact;
         this.x12 = x12;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.inputs.ResizeErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ResizeOperationStatusResponse extends io.pulumi.resources.Inv
      * This property is set only if an error occurred during the last pool resize, and only when the pool allocationState is Steady.
      * 
      */
-    @InputImport(name="errors")
+    @Import(name="errors")
       private final @Nullable List<ResizeErrorResponse> errors;
 
     public List<ResizeErrorResponse> getErrors() {
@@ -36,7 +36,7 @@ public final class ResizeOperationStatusResponse extends io.pulumi.resources.Inv
      * The default value is requeue.
      * 
      */
-    @InputImport(name="nodeDeallocationOption")
+    @Import(name="nodeDeallocationOption")
       private final @Nullable String nodeDeallocationOption;
 
     public Optional<String> getNodeDeallocationOption() {
@@ -47,28 +47,28 @@ public final class ResizeOperationStatusResponse extends io.pulumi.resources.Inv
      * The default value is 15 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service returns an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
      * 
      */
-    @InputImport(name="resizeTimeout")
+    @Import(name="resizeTimeout")
       private final @Nullable String resizeTimeout;
 
     public Optional<String> getResizeTimeout() {
         return this.resizeTimeout == null ? Optional.empty() : Optional.ofNullable(this.resizeTimeout);
     }
 
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
     }
 
-    @InputImport(name="targetDedicatedNodes")
+    @Import(name="targetDedicatedNodes")
       private final @Nullable Integer targetDedicatedNodes;
 
     public Optional<Integer> getTargetDedicatedNodes() {
         return this.targetDedicatedNodes == null ? Optional.empty() : Optional.ofNullable(this.targetDedicatedNodes);
     }
 
-    @InputImport(name="targetLowPriorityNodes")
+    @Import(name="targetLowPriorityNodes")
       private final @Nullable Integer targetLowPriorityNodes;
 
     public Optional<Integer> getTargetLowPriorityNodes() {

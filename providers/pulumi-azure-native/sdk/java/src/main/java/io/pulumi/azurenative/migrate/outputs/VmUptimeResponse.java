@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VmUptimeResponse {
     /**
      * Number of days in a month for VM uptime.
@@ -22,10 +22,10 @@ public final class VmUptimeResponse {
      */
     private final @Nullable Double hoursPerDay;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VmUptimeResponse(
-        @OutputCustomType.Parameter("daysPerMonth") @Nullable Double daysPerMonth,
-        @OutputCustomType.Parameter("hoursPerDay") @Nullable Double hoursPerDay) {
+        @CustomType.Parameter("daysPerMonth") @Nullable Double daysPerMonth,
+        @CustomType.Parameter("hoursPerDay") @Nullable Double hoursPerDay) {
         this.daysPerMonth = daysPerMonth;
         this.hoursPerDay = hoursPerDay;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventhub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetEventHubAuthorizationRuleArgs extends io.pulumi.resources.
      * The authorization rule name.
      * 
      */
-    @InputImport(name="authorizationRuleName", required=true)
+    @Import(name="authorizationRuleName", required=true)
       private final String authorizationRuleName;
 
     public String getAuthorizationRuleName() {
@@ -27,7 +27,7 @@ public final class GetEventHubAuthorizationRuleArgs extends io.pulumi.resources.
      * The Event Hub name
      * 
      */
-    @InputImport(name="eventHubName", required=true)
+    @Import(name="eventHubName", required=true)
       private final String eventHubName;
 
     public String getEventHubName() {
@@ -38,7 +38,7 @@ public final class GetEventHubAuthorizationRuleArgs extends io.pulumi.resources.
      * The Namespace name
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final String namespaceName;
 
     public String getNamespaceName() {
@@ -49,7 +49,7 @@ public final class GetEventHubAuthorizationRuleArgs extends io.pulumi.resources.
      * Name of the resource group within the azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

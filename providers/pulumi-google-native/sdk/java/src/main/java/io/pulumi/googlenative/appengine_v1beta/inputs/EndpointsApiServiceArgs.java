@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.appengine_v1beta.enums.EndpointsApiServiceRolloutStrategy;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
      * Endpoints service configuration ID as specified by the Service Management API. For example "2016-09-19r1".By default, the rollout strategy for Endpoints is RolloutStrategy.FIXED. This means that Endpoints starts up with a particular configuration ID. When a new configuration is rolled out, Endpoints must be given the new configuration ID. The config_id field is used to give the configuration ID and is required in this case.Endpoints also has a rollout strategy called RolloutStrategy.MANAGED. When using this, Endpoints fetches the latest configuration and does not need the configuration ID. In this case, config_id must be omitted.
      * 
      */
-    @InputImport(name="configId")
+    @Import(name="configId")
       private final @Nullable Output<String> configId;
 
     public Output<String> getConfigId() {
@@ -35,7 +35,7 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
      * Enable or disable trace sampling. By default, this is set to false for enabled.
      * 
      */
-    @InputImport(name="disableTraceSampling")
+    @Import(name="disableTraceSampling")
       private final @Nullable Output<Boolean> disableTraceSampling;
 
     public Output<Boolean> getDisableTraceSampling() {
@@ -46,7 +46,7 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
      * Endpoints service name which is the name of the "service" resource in the Service Management API. For example "myapi.endpoints.myproject.cloud.goog"
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class EndpointsApiServiceArgs extends io.pulumi.resources.ResourceA
      * Endpoints rollout strategy. If FIXED, config_id must be specified. If MANAGED, config_id must be omitted.
      * 
      */
-    @InputImport(name="rolloutStrategy")
+    @Import(name="rolloutStrategy")
       private final @Nullable Output<EndpointsApiServiceRolloutStrategy> rolloutStrategy;
 
     public Output<EndpointsApiServiceRolloutStrategy> getRolloutStrategy() {

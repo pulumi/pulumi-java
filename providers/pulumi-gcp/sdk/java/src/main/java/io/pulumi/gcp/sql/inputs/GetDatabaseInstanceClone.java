@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetDatabaseInstanceClone extends io.pulumi.resources.InvokeAr
 
     public static final GetDatabaseInstanceClone Empty = new GetDatabaseInstanceClone();
 
-    @InputImport(name="pointInTime", required=true)
+    @Import(name="pointInTime", required=true)
       private final String pointInTime;
 
     public String getPointInTime() {
         return this.pointInTime;
     }
 
-    @InputImport(name="sourceInstanceName", required=true)
+    @Import(name="sourceInstanceName", required=true)
       private final String sourceInstanceName;
 
     public String getSourceInstanceName() {

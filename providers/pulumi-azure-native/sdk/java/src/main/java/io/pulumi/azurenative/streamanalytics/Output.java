@@ -19,7 +19,7 @@ import io.pulumi.azurenative.streamanalytics.outputs.PowerBIOutputDataSourceResp
 import io.pulumi.azurenative.streamanalytics.outputs.ServiceBusQueueOutputDataSourceResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.ServiceBusTopicOutputDataSourceResponse;
 import io.pulumi.core.Alias;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -47,7 +47,7 @@ public class Output extends io.pulumi.resources.CustomResource {
      * Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @OutputExport(name="datasource", type=Object.class, parameters={})
+    @Export(name="datasource", type=Object.class, parameters={})
     private io.pulumi.core.Output</* @Nullable */ Object> datasource;
 
     /**
@@ -61,7 +61,7 @@ public class Output extends io.pulumi.resources.CustomResource {
      * Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
      * 
      */
-    @OutputExport(name="diagnostics", type=DiagnosticsResponse.class, parameters={})
+    @Export(name="diagnostics", type=DiagnosticsResponse.class, parameters={})
     private io.pulumi.core.Output<DiagnosticsResponse> diagnostics;
 
     /**
@@ -75,7 +75,7 @@ public class Output extends io.pulumi.resources.CustomResource {
      * The current entity tag for the output. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private io.pulumi.core.Output<String> etag;
 
     /**
@@ -89,7 +89,7 @@ public class Output extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private io.pulumi.core.Output</* @Nullable */ String> name;
 
     /**
@@ -103,7 +103,7 @@ public class Output extends io.pulumi.resources.CustomResource {
      * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @OutputExport(name="serialization", type=Object.class, parameters={})
+    @Export(name="serialization", type=Object.class, parameters={})
     private io.pulumi.core.Output</* @Nullable */ Object> serialization;
 
     /**
@@ -117,7 +117,7 @@ public class Output extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private io.pulumi.core.Output<String> type;
 
     /**

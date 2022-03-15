@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends io.pulumi.
      * The total count of the artifacts that were successfully applied.
      * 
      */
-    @InputImport(name="artifactsApplied")
+    @Import(name="artifactsApplied")
       private final @Nullable Integer artifactsApplied;
 
     public Optional<Integer> getArtifactsApplied() {
@@ -34,7 +34,7 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends io.pulumi.
      * The deployment status of the artifact.
      * 
      */
-    @InputImport(name="deploymentStatus")
+    @Import(name="deploymentStatus")
       private final @Nullable String deploymentStatus;
 
     public Optional<String> getDeploymentStatus() {
@@ -45,7 +45,7 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends io.pulumi.
      * The total count of the artifacts that were tentatively applied.
      * 
      */
-    @InputImport(name="totalArtifacts")
+    @Import(name="totalArtifacts")
       private final @Nullable Integer totalArtifacts;
 
     public Optional<Integer> getTotalArtifacts() {

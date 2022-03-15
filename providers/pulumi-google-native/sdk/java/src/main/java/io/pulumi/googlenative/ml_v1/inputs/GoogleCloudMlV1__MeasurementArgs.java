@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_Measurement_MetricArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1__MeasurementArgs extends io.pulumi.resources.
      * Provides a list of metrics that act as inputs into the objective function.
      * 
      */
-    @InputImport(name="metrics")
+    @Import(name="metrics")
       private final @Nullable Output<List<GoogleCloudMlV1_Measurement_MetricArgs>> metrics;
 
     public Output<List<GoogleCloudMlV1_Measurement_MetricArgs>> getMetrics() {
@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1__MeasurementArgs extends io.pulumi.resources.
      * The number of steps a machine learning model has been trained for. Must be non-negative.
      * 
      */
-    @InputImport(name="stepCount")
+    @Import(name="stepCount")
       private final @Nullable Output<String> stepCount;
 
     public Output<String> getStepCount() {

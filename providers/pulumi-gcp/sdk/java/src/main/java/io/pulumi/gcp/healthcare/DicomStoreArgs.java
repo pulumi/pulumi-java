@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreNotificationConfigArgs;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreStreamConfigArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * 'projects/{project}/locations/{location}/datasets/{dataset}'
      * 
      */
-    @InputImport(name="dataset", required=true)
+    @Import(name="dataset", required=true)
       private final Output<String> dataset;
 
     public Output<String> getDataset() {
@@ -41,7 +41,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -53,7 +53,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * ** Changing this property may recreate the Dicom store (removing all data) **
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="notificationConfig")
+    @Import(name="notificationConfig")
       private final @Nullable Output<DicomStoreNotificationConfigArgs> notificationConfig;
 
     public Output<DicomStoreNotificationConfigArgs> getNotificationConfig() {
@@ -78,7 +78,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="streamConfigs")
+    @Import(name="streamConfigs")
       private final @Nullable Output<List<DicomStoreStreamConfigArgs>> streamConfigs;
 
     public Output<List<DicomStoreStreamConfigArgs>> getStreamConfigs() {

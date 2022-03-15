@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AS2AcknowledgementConnectionSettingsResponse extends io.pulum
      * Indicates whether to ignore mismatch in certificate name.
      * 
      */
-    @InputImport(name="ignoreCertificateNameMismatch", required=true)
+    @Import(name="ignoreCertificateNameMismatch", required=true)
       private final Boolean ignoreCertificateNameMismatch;
 
     public Boolean getIgnoreCertificateNameMismatch() {
@@ -31,7 +31,7 @@ public final class AS2AcknowledgementConnectionSettingsResponse extends io.pulum
      * Indicates whether to keep the connection alive.
      * 
      */
-    @InputImport(name="keepHttpConnectionAlive", required=true)
+    @Import(name="keepHttpConnectionAlive", required=true)
       private final Boolean keepHttpConnectionAlive;
 
     public Boolean getKeepHttpConnectionAlive() {
@@ -42,7 +42,7 @@ public final class AS2AcknowledgementConnectionSettingsResponse extends io.pulum
      * Indicates whether to support HTTP status code 'CONTINUE'.
      * 
      */
-    @InputImport(name="supportHttpStatusCodeContinue", required=true)
+    @Import(name="supportHttpStatusCodeContinue", required=true)
       private final Boolean supportHttpStatusCodeContinue;
 
     public Boolean getSupportHttpStatusCodeContinue() {
@@ -53,7 +53,7 @@ public final class AS2AcknowledgementConnectionSettingsResponse extends io.pulum
      * Indicates whether to unfold the HTTP headers.
      * 
      */
-    @InputImport(name="unfoldHttpHeaders", required=true)
+    @Import(name="unfoldHttpHeaders", required=true)
       private final Boolean unfoldHttpHeaders;
 
     public Boolean getUnfoldHttpHeaders() {

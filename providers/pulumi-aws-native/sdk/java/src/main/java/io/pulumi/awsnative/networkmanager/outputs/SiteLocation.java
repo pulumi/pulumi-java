@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.networkmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SiteLocation {
     /**
      * The physical address.
@@ -27,11 +27,11 @@ public final class SiteLocation {
      */
     private final @Nullable String longitude;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SiteLocation(
-        @OutputCustomType.Parameter("address") @Nullable String address,
-        @OutputCustomType.Parameter("latitude") @Nullable String latitude,
-        @OutputCustomType.Parameter("longitude") @Nullable String longitude) {
+        @CustomType.Parameter("address") @Nullable String address,
+        @CustomType.Parameter("latitude") @Nullable String latitude,
+        @CustomType.Parameter("longitude") @Nullable String longitude) {
         this.address = address;
         this.latitude = latitude;
         this.longitude = longitude;

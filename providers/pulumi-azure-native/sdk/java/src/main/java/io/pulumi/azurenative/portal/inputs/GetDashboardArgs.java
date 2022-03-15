@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDashboardArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the dashboard.
      * 
      */
-    @InputImport(name="dashboardName", required=true)
+    @Import(name="dashboardName", required=true)
       private final String dashboardName;
 
     public String getDashboardName() {
@@ -27,7 +27,7 @@ public final class GetDashboardArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

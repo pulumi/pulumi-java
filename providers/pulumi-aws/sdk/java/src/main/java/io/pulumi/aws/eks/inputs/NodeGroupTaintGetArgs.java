@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class NodeGroupTaintGetArgs extends io.pulumi.resources.ResourceArg
      * The effect of the taint. Valid values: `NO_SCHEDULE`, `NO_EXECUTE`, `PREFER_NO_SCHEDULE`.
      * 
      */
-    @InputImport(name="effect", required=true)
+    @Import(name="effect", required=true)
       private final Output<String> effect;
 
     public Output<String> getEffect() {
@@ -29,7 +29,7 @@ public final class NodeGroupTaintGetArgs extends io.pulumi.resources.ResourceArg
      * The key of the taint. Maximum length of 63.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -40,7 +40,7 @@ public final class NodeGroupTaintGetArgs extends io.pulumi.resources.ResourceArg
      * The value of the taint. Maximum length of 63.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

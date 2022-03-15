@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultPropertiesResponse {
     /**
      * The object identifier of the current versioned Key Vault Key in use.
@@ -37,13 +37,13 @@ public final class KeyVaultPropertiesResponse {
      */
     private final String lastKeyRotationTimestamp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyVaultPropertiesResponse(
-        @OutputCustomType.Parameter("currentVersionedKeyIdentifier") String currentVersionedKeyIdentifier,
-        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
-        @OutputCustomType.Parameter("keyVaultUri") @Nullable String keyVaultUri,
-        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion,
-        @OutputCustomType.Parameter("lastKeyRotationTimestamp") String lastKeyRotationTimestamp) {
+        @CustomType.Parameter("currentVersionedKeyIdentifier") String currentVersionedKeyIdentifier,
+        @CustomType.Parameter("keyName") @Nullable String keyName,
+        @CustomType.Parameter("keyVaultUri") @Nullable String keyVaultUri,
+        @CustomType.Parameter("keyVersion") @Nullable String keyVersion,
+        @CustomType.Parameter("lastKeyRotationTimestamp") String lastKeyRotationTimestamp) {
         this.currentVersionedKeyIdentifier = currentVersionedKeyIdentifier;
         this.keyName = keyName;
         this.keyVaultUri = keyVaultUri;

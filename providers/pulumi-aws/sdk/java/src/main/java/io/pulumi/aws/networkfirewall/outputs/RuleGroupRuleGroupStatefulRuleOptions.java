@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleGroupStatefulRuleOptions {
     /**
      * Indicates how to manage the order of the rule evaluation for the rule group. Default value: `DEFAULT_ACTION_ORDER`. Valid values: `DEFAULT_ACTION_ORDER`, `STRICT_ORDER`.
@@ -15,8 +15,8 @@ public final class RuleGroupRuleGroupStatefulRuleOptions {
      */
     private final String ruleOrder;
 
-    @OutputCustomType.Constructor
-    private RuleGroupRuleGroupStatefulRuleOptions(@OutputCustomType.Parameter("ruleOrder") String ruleOrder) {
+    @CustomType.Constructor
+    private RuleGroupRuleGroupStatefulRuleOptions(@CustomType.Parameter("ruleOrder") String ruleOrder) {
         this.ruleOrder = ruleOrder;
     }
 

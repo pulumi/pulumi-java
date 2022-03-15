@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.aws.ec2.inputs.ManagedPrefixListEntryArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
      * Address family (`IPv4` or `IPv6`) of this prefix list.
      * 
      */
-    @InputImport(name="addressFamily", required=true)
+    @Import(name="addressFamily", required=true)
       private final Output<String> addressFamily;
 
     public Output<String> getAddressFamily() {
@@ -33,7 +33,7 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
      * Configuration block for prefix list entry. Detailed below. Different entries may have overlapping CIDR blocks, but a particular CIDR should not be duplicated.
      * 
      */
-    @InputImport(name="entries")
+    @Import(name="entries")
       private final @Nullable Output<List<ManagedPrefixListEntryArgs>> entries;
 
     public Output<List<ManagedPrefixListEntryArgs>> getEntries() {
@@ -44,7 +44,7 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
      * Maximum number of entries that this prefix list can contain.
      * 
      */
-    @InputImport(name="maxEntries", required=true)
+    @Import(name="maxEntries", required=true)
       private final Output<Integer> maxEntries;
 
     public Output<Integer> getMaxEntries() {
@@ -55,7 +55,7 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
      * Name of this resource. The name must not start with `com.amazonaws`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -66,7 +66,7 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
      * Map of tags to assign to this resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

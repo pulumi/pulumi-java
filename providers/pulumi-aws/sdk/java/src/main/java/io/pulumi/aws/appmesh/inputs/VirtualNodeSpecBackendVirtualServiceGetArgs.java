@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class VirtualNodeSpecBackendVirtualServiceGetArgs extends io.pulumi
      * The client policy for the backend.
      * 
      */
-    @InputImport(name="clientPolicy")
+    @Import(name="clientPolicy")
       private final @Nullable Output<VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs> clientPolicy;
 
     public Output<VirtualNodeSpecBackendVirtualServiceClientPolicyGetArgs> getClientPolicy() {
@@ -30,7 +30,7 @@ public final class VirtualNodeSpecBackendVirtualServiceGetArgs extends io.pulumi
      * The name of the virtual service that is acting as a virtual node backend. Must be between 1 and 255 characters in length.
      * 
      */
-    @InputImport(name="virtualServiceName", required=true)
+    @Import(name="virtualServiceName", required=true)
       private final Output<String> virtualServiceName;
 
     public Output<String> getVirtualServiceName() {

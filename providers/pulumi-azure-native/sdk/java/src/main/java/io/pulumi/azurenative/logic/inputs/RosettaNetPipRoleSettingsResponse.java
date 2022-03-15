@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.RosettaNetPipBusinessDocumentResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
      * The action name.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final String action;
 
     public String getAction() {
@@ -34,7 +34,7 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
      * The RosettaNet ProcessConfiguration business document.
      * 
      */
-    @InputImport(name="businessDocument", required=true)
+    @Import(name="businessDocument", required=true)
       private final RosettaNetPipBusinessDocumentResponse businessDocument;
 
     public RosettaNetPipBusinessDocumentResponse getBusinessDocument() {
@@ -45,7 +45,7 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
      * The description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -56,7 +56,7 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
      * The role name.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final String role;
 
     public String getRole() {
@@ -67,7 +67,7 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
      * The RosettaNet ProcessConfiguration role type.
      * 
      */
-    @InputImport(name="roleType", required=true)
+    @Import(name="roleType", required=true)
       private final String roleType;
 
     public String getRoleType() {
@@ -78,7 +78,7 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
      * The service name.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final String service;
 
     public String getService() {
@@ -89,7 +89,7 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
      * The service classification name.
      * 
      */
-    @InputImport(name="serviceClassification", required=true)
+    @Import(name="serviceClassification", required=true)
       private final String serviceClassification;
 
     public String getServiceClassification() {

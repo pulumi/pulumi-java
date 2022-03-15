@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.
      * Delimiter to divide S3 key into hierarchy of prefixes.
      * 
      */
-    @InputImport(name="delimiter")
+    @Import(name="delimiter")
       private final @Nullable Output<String> delimiter;
 
     public Output<String> getDelimiter() {
@@ -35,7 +35,7 @@ public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.
      * Max depth of prefixes of S3 key that Amazon S3 Storage Lens will analyze.
      * 
      */
-    @InputImport(name="maxDepth")
+    @Import(name="maxDepth")
       private final @Nullable Output<Integer> maxDepth;
 
     public Output<Integer> getMaxDepth() {
@@ -46,7 +46,7 @@ public final class StorageLensSelectionCriteriaArgs extends io.pulumi.resources.
      * The minimum storage bytes threshold for the prefixes to be included in the analysis.
      * 
      */
-    @InputImport(name="minStorageBytesPercentage")
+    @Import(name="minStorageBytesPercentage")
       private final @Nullable Output<Double> minStorageBytesPercentage;
 
     public Output<Double> getMinStorageBytesPercentage() {

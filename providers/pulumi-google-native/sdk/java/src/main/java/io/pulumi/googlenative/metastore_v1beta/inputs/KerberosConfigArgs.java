@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.metastore_v1beta.inputs.SecretArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key Distribution Center (KDC).
      * 
      */
-    @InputImport(name="keytab")
+    @Import(name="keytab")
       private final @Nullable Output<SecretArgs> keytab;
 
     public Output<SecretArgs> getKeytab() {
@@ -34,7 +34,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.
      * 
      */
-    @InputImport(name="krb5ConfigGcsUri")
+    @Import(name="krb5ConfigGcsUri")
       private final @Nullable Output<String> krb5ConfigGcsUri;
 
     public Output<String> getKrb5ConfigGcsUri() {
@@ -45,7 +45,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form primary/instance@REALM, but there is no exact format.
      * 
      */
-    @InputImport(name="principal")
+    @Import(name="principal")
       private final @Nullable Output<String> principal;
 
     public Output<String> getPrincipal() {

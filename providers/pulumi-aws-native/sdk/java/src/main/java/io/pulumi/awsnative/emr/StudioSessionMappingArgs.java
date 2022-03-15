@@ -5,7 +5,7 @@ package io.pulumi.awsnative.emr;
 
 import io.pulumi.awsnative.emr.enums.StudioSessionMappingIdentityType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
      * The name of the user or group. For more information, see UserName and DisplayName in the AWS SSO Identity Store API Reference. Either IdentityName or IdentityId must be specified.
      * 
      */
-    @InputImport(name="identityName", required=true)
+    @Import(name="identityName", required=true)
       private final Output<String> identityName;
 
     public Output<String> getIdentityName() {
@@ -29,7 +29,7 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
      * Specifies whether the identity to map to the Studio is a user or a group.
      * 
      */
-    @InputImport(name="identityType", required=true)
+    @Import(name="identityType", required=true)
       private final Output<StudioSessionMappingIdentityType> identityType;
 
     public Output<StudioSessionMappingIdentityType> getIdentityType() {
@@ -40,7 +40,7 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
      * The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session policies refine Studio user permissions without the need to use multiple IAM user roles.
      * 
      */
-    @InputImport(name="sessionPolicyArn", required=true)
+    @Import(name="sessionPolicyArn", required=true)
       private final Output<String> sessionPolicyArn;
 
     public Output<String> getSessionPolicyArn() {
@@ -51,7 +51,7 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
      * The ID of the Amazon EMR Studio to which the user or group will be mapped.
      * 
      */
-    @InputImport(name="studioId", required=true)
+    @Import(name="studioId", required=true)
       private final Output<String> studioId;
 
     public Output<String> getStudioId() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.pricing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetProductFilter {
     /**
      * The product attribute name that you want to filter on.
@@ -20,10 +20,10 @@ public final class GetProductFilter {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProductFilter(
-        @OutputCustomType.Parameter("field") String field,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("field") String field,
+        @CustomType.Parameter("value") String value) {
         this.field = field;
         this.value = value;
     }

@@ -5,7 +5,7 @@ package io.pulumi.aws.servicecatalog.inputs;
 
 import io.pulumi.aws.servicecatalog.inputs.ServiceActionDefinitionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ServiceActionState extends io.pulumi.resources.ResourceArgs {
      * Language code. Valid values are `en` (English), `jp` (Japanese), and `zh` (Chinese). Default is `en`.
      * 
      */
-    @InputImport(name="acceptLanguage")
+    @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
     public Output<String> getAcceptLanguage() {
@@ -30,7 +30,7 @@ public final class ServiceActionState extends io.pulumi.resources.ResourceArgs {
      * Self-service action definition configuration block. Detailed below.
      * 
      */
-    @InputImport(name="definition")
+    @Import(name="definition")
       private final @Nullable Output<ServiceActionDefinitionGetArgs> definition;
 
     public Output<ServiceActionDefinitionGetArgs> getDefinition() {
@@ -41,7 +41,7 @@ public final class ServiceActionState extends io.pulumi.resources.ResourceArgs {
      * Self-service action description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -52,7 +52,7 @@ public final class ServiceActionState extends io.pulumi.resources.ResourceArgs {
      * Self-service action name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

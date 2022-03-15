@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1.outputs.CloudRunConfigResponse;
 import io.pulumi.googlenative.container_v1.outputs.ConfigConnectorConfigResponse;
 import io.pulumi.googlenative.container_v1.outputs.DnsCacheConfigResponse;
@@ -15,7 +15,7 @@ import io.pulumi.googlenative.container_v1.outputs.KubernetesDashboardResponse;
 import io.pulumi.googlenative.container_v1.outputs.NetworkPolicyConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AddonsConfigResponse {
     /**
      * Configuration for the Cloud Run addon, which allows the user to use a managed Knative service.
@@ -63,17 +63,17 @@ public final class AddonsConfigResponse {
      */
     private final NetworkPolicyConfigResponse networkPolicyConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AddonsConfigResponse(
-        @OutputCustomType.Parameter("cloudRunConfig") CloudRunConfigResponse cloudRunConfig,
-        @OutputCustomType.Parameter("configConnectorConfig") ConfigConnectorConfigResponse configConnectorConfig,
-        @OutputCustomType.Parameter("dnsCacheConfig") DnsCacheConfigResponse dnsCacheConfig,
-        @OutputCustomType.Parameter("gcePersistentDiskCsiDriverConfig") GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig,
-        @OutputCustomType.Parameter("gcpFilestoreCsiDriverConfig") GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig,
-        @OutputCustomType.Parameter("horizontalPodAutoscaling") HorizontalPodAutoscalingResponse horizontalPodAutoscaling,
-        @OutputCustomType.Parameter("httpLoadBalancing") HttpLoadBalancingResponse httpLoadBalancing,
-        @OutputCustomType.Parameter("kubernetesDashboard") KubernetesDashboardResponse kubernetesDashboard,
-        @OutputCustomType.Parameter("networkPolicyConfig") NetworkPolicyConfigResponse networkPolicyConfig) {
+        @CustomType.Parameter("cloudRunConfig") CloudRunConfigResponse cloudRunConfig,
+        @CustomType.Parameter("configConnectorConfig") ConfigConnectorConfigResponse configConnectorConfig,
+        @CustomType.Parameter("dnsCacheConfig") DnsCacheConfigResponse dnsCacheConfig,
+        @CustomType.Parameter("gcePersistentDiskCsiDriverConfig") GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig,
+        @CustomType.Parameter("gcpFilestoreCsiDriverConfig") GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig,
+        @CustomType.Parameter("horizontalPodAutoscaling") HorizontalPodAutoscalingResponse horizontalPodAutoscaling,
+        @CustomType.Parameter("httpLoadBalancing") HttpLoadBalancingResponse httpLoadBalancing,
+        @CustomType.Parameter("kubernetesDashboard") KubernetesDashboardResponse kubernetesDashboard,
+        @CustomType.Parameter("networkPolicyConfig") NetworkPolicyConfigResponse networkPolicyConfig) {
         this.cloudRunConfig = cloudRunConfig;
         this.configConnectorConfig = configConnectorConfig;
         this.dnsCacheConfig = dnsCacheConfig;

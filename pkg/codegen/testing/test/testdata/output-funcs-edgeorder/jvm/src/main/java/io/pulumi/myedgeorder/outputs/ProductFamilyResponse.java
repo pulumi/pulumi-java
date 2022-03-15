@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.myedgeorder.outputs.AvailabilityInformationResponse;
 import io.pulumi.myedgeorder.outputs.CostInformationResponse;
 import io.pulumi.myedgeorder.outputs.DescriptionResponse;
@@ -15,7 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ProductFamilyResponse {
     /**
      * Availability information of the product system.
@@ -58,16 +58,16 @@ public final class ProductFamilyResponse {
      */
     private final List<ProductLineResponse> productLines;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProductFamilyResponse(
-        @OutputCustomType.Parameter("availabilityInformation") AvailabilityInformationResponse availabilityInformation,
-        @OutputCustomType.Parameter("costInformation") CostInformationResponse costInformation,
-        @OutputCustomType.Parameter("description") DescriptionResponse description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("filterableProperties") List<FilterablePropertyResponse> filterableProperties,
-        @OutputCustomType.Parameter("hierarchyInformation") HierarchyInformationResponse hierarchyInformation,
-        @OutputCustomType.Parameter("imageInformation") List<ImageInformationResponse> imageInformation,
-        @OutputCustomType.Parameter("productLines") List<ProductLineResponse> productLines) {
+        @CustomType.Parameter("availabilityInformation") AvailabilityInformationResponse availabilityInformation,
+        @CustomType.Parameter("costInformation") CostInformationResponse costInformation,
+        @CustomType.Parameter("description") DescriptionResponse description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("filterableProperties") List<FilterablePropertyResponse> filterableProperties,
+        @CustomType.Parameter("hierarchyInformation") HierarchyInformationResponse hierarchyInformation,
+        @CustomType.Parameter("imageInformation") List<ImageInformationResponse> imageInformation,
+        @CustomType.Parameter("productLines") List<ProductLineResponse> productLines) {
         this.availabilityInformation = availabilityInformation;
         this.costInformation = costInformation;
         this.description = description;

@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPartitionResult {
     private final String partition;
 
-    @OutputCustomType.Constructor
-    private GetPartitionResult(@OutputCustomType.Parameter("partition") String partition) {
+    @CustomType.Constructor
+    private GetPartitionResult(@CustomType.Parameter("partition") String partition) {
         this.partition = partition;
     }
 

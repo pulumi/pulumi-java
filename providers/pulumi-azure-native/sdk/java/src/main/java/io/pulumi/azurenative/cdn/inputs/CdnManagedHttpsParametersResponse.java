@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.CdnCertificateSourceParametersResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class CdnManagedHttpsParametersResponse extends io.pulumi.resources
      * Expected value is 'Cdn'.
      * 
      */
-    @InputImport(name="certificateSource", required=true)
+    @Import(name="certificateSource", required=true)
       private final String certificateSource;
 
     public String getCertificateSource() {
@@ -35,7 +35,7 @@ public final class CdnManagedHttpsParametersResponse extends io.pulumi.resources
      * Defines the certificate source parameters using CDN managed certificate for enabling SSL.
      * 
      */
-    @InputImport(name="certificateSourceParameters", required=true)
+    @Import(name="certificateSourceParameters", required=true)
       private final CdnCertificateSourceParametersResponse certificateSourceParameters;
 
     public CdnCertificateSourceParametersResponse getCertificateSourceParameters() {
@@ -46,7 +46,7 @@ public final class CdnManagedHttpsParametersResponse extends io.pulumi.resources
      * TLS protocol version that will be used for Https
      * 
      */
-    @InputImport(name="minimumTlsVersion")
+    @Import(name="minimumTlsVersion")
       private final @Nullable String minimumTlsVersion;
 
     public Optional<String> getMinimumTlsVersion() {
@@ -57,7 +57,7 @@ public final class CdnManagedHttpsParametersResponse extends io.pulumi.resources
      * Defines the TLS extension protocol that is used for secure delivery.
      * 
      */
-    @InputImport(name="protocolType", required=true)
+    @Import(name="protocolType", required=true)
       private final String protocolType;
 
     public String getProtocolType() {

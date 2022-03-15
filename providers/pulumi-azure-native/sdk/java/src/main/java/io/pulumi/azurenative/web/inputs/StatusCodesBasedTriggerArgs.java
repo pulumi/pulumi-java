@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
      * Request Count.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {
@@ -34,7 +34,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
      * Request Path
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -45,7 +45,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
      * HTTP status code.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Integer> status;
 
     public Output<Integer> getStatus() {
@@ -56,7 +56,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
      * Request Sub Status.
      * 
      */
-    @InputImport(name="subStatus")
+    @Import(name="subStatus")
       private final @Nullable Output<Integer> subStatus;
 
     public Output<Integer> getSubStatus() {
@@ -67,7 +67,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
      * Time interval.
      * 
      */
-    @InputImport(name="timeInterval")
+    @Import(name="timeInterval")
       private final @Nullable Output<String> timeInterval;
 
     public Output<String> getTimeInterval() {
@@ -78,7 +78,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
      * Win32 error code.
      * 
      */
-    @InputImport(name="win32Status")
+    @Import(name="win32Status")
       private final @Nullable Output<Integer> win32Status;
 
     public Output<Integer> getWin32Status() {

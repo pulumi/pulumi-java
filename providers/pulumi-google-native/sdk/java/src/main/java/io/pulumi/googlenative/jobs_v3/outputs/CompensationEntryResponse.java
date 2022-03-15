@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.jobs_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.jobs_v3.outputs.CompensationRangeResponse;
 import io.pulumi.googlenative.jobs_v3.outputs.MoneyResponse;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CompensationEntryResponse {
     /**
      * Optional. Compensation amount.
@@ -43,14 +43,14 @@ public final class CompensationEntryResponse {
      */
     private final String unit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CompensationEntryResponse(
-        @OutputCustomType.Parameter("amount") MoneyResponse amount,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("expectedUnitsPerYear") Double expectedUnitsPerYear,
-        @OutputCustomType.Parameter("range") CompensationRangeResponse range,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("unit") String unit) {
+        @CustomType.Parameter("amount") MoneyResponse amount,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("expectedUnitsPerYear") Double expectedUnitsPerYear,
+        @CustomType.Parameter("range") CompensationRangeResponse range,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("unit") String unit) {
         this.amount = amount;
         this.description = description;
         this.expectedUnitsPerYear = expectedUnitsPerYear;

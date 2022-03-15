@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.ClusterAutoscalingConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterConfigResponse {
     /**
      * Autoscaling configuration for this cluster.
@@ -15,8 +15,8 @@ public final class ClusterConfigResponse {
      */
     private final ClusterAutoscalingConfigResponse clusterAutoscalingConfig;
 
-    @OutputCustomType.Constructor
-    private ClusterConfigResponse(@OutputCustomType.Parameter("clusterAutoscalingConfig") ClusterAutoscalingConfigResponse clusterAutoscalingConfig) {
+    @CustomType.Constructor
+    private ClusterConfigResponse(@CustomType.Parameter("clusterAutoscalingConfig") ClusterAutoscalingConfigResponse clusterAutoscalingConfig) {
         this.clusterAutoscalingConfig = clusterAutoscalingConfig;
     }
 

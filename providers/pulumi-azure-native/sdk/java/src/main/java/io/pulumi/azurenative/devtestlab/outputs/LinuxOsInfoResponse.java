@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LinuxOsInfoResponse {
     /**
      * The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
@@ -17,8 +17,8 @@ public final class LinuxOsInfoResponse {
      */
     private final @Nullable String linuxOsState;
 
-    @OutputCustomType.Constructor
-    private LinuxOsInfoResponse(@OutputCustomType.Parameter("linuxOsState") @Nullable String linuxOsState) {
+    @CustomType.Constructor
+    private LinuxOsInfoResponse(@CustomType.Parameter("linuxOsState") @Nullable String linuxOsState) {
         this.linuxOsState = linuxOsState;
     }
 

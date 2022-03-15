@@ -4,7 +4,7 @@
 package io.pulumi.aws.storagegateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class UploadBufferState extends io.pulumi.resources.ResourceArgs {
      * Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
      * 
      */
-    @InputImport(name="diskId")
+    @Import(name="diskId")
       private final @Nullable Output<String> diskId;
 
     public Output<String> getDiskId() {
@@ -29,7 +29,7 @@ public final class UploadBufferState extends io.pulumi.resources.ResourceArgs {
      * Local disk path. For example, `/dev/nvme1n1`.
      * 
      */
-    @InputImport(name="diskPath")
+    @Import(name="diskPath")
       private final @Nullable Output<String> diskPath;
 
     public Output<String> getDiskPath() {
@@ -40,7 +40,7 @@ public final class UploadBufferState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the gateway.
      * 
      */
-    @InputImport(name="gatewayArn")
+    @Import(name="gatewayArn")
       private final @Nullable Output<String> gatewayArn;
 
     public Output<String> getGatewayArn() {

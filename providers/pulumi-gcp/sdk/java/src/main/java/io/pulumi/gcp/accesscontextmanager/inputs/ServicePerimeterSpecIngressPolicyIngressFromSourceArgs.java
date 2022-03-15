@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromSourceArgs extend
      * If * is specified, then all IngressSources will be allowed.
      * 
      */
-    @InputImport(name="accessLevel")
+    @Import(name="accessLevel")
       private final @Nullable Output<String> accessLevel;
 
     public Output<String> getAccessLevel() {
@@ -41,7 +41,7 @@ public final class ServicePerimeterSpecIngressPolicyIngressFromSourceArgs extend
      * of allowing all Google Cloud resources only is not supported.
      * 
      */
-    @InputImport(name="resource")
+    @Import(name="resource")
       private final @Nullable Output<String> resource;
 
     public Output<String> getResource() {

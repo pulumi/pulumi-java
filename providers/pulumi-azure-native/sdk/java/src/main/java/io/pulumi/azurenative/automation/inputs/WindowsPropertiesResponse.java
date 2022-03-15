@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WindowsPropertiesResponse extends io.pulumi.resources.InvokeA
      * KB numbers excluded from the software update configuration.
      * 
      */
-    @InputImport(name="excludedKbNumbers")
+    @Import(name="excludedKbNumbers")
       private final @Nullable List<String> excludedKbNumbers;
 
     public List<String> getExcludedKbNumbers() {
@@ -34,7 +34,7 @@ public final class WindowsPropertiesResponse extends io.pulumi.resources.InvokeA
      * KB numbers included from the software update configuration.
      * 
      */
-    @InputImport(name="includedKbNumbers")
+    @Import(name="includedKbNumbers")
       private final @Nullable List<String> includedKbNumbers;
 
     public List<String> getIncludedKbNumbers() {
@@ -45,7 +45,7 @@ public final class WindowsPropertiesResponse extends io.pulumi.resources.InvokeA
      * Update classification included in the software update configuration. A comma separated string with required values
      * 
      */
-    @InputImport(name="includedUpdateClassifications")
+    @Import(name="includedUpdateClassifications")
       private final @Nullable String includedUpdateClassifications;
 
     public Optional<String> getIncludedUpdateClassifications() {
@@ -56,7 +56,7 @@ public final class WindowsPropertiesResponse extends io.pulumi.resources.InvokeA
      * Reboot setting for the software update configuration.
      * 
      */
-    @InputImport(name="rebootSetting")
+    @Import(name="rebootSetting")
       private final @Nullable String rebootSetting;
 
     public Optional<String> getRebootSetting() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1AudioInputResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1DtmfInputResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1EventInputResponse;
@@ -12,7 +12,7 @@ import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCx
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse {
     /**
      * The natural language speech audio to be processed.
@@ -45,14 +45,14 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse {
      */
     private final GoogleCloudDialogflowCxV3beta1TextInputResponse text;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1QueryInputResponse(
-        @OutputCustomType.Parameter("audio") GoogleCloudDialogflowCxV3beta1AudioInputResponse audio,
-        @OutputCustomType.Parameter("dtmf") GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf,
-        @OutputCustomType.Parameter("event") GoogleCloudDialogflowCxV3beta1EventInputResponse event,
-        @OutputCustomType.Parameter("intent") GoogleCloudDialogflowCxV3beta1IntentInputResponse intent,
-        @OutputCustomType.Parameter("languageCode") String languageCode,
-        @OutputCustomType.Parameter("text") GoogleCloudDialogflowCxV3beta1TextInputResponse text) {
+        @CustomType.Parameter("audio") GoogleCloudDialogflowCxV3beta1AudioInputResponse audio,
+        @CustomType.Parameter("dtmf") GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf,
+        @CustomType.Parameter("event") GoogleCloudDialogflowCxV3beta1EventInputResponse event,
+        @CustomType.Parameter("intent") GoogleCloudDialogflowCxV3beta1IntentInputResponse intent,
+        @CustomType.Parameter("languageCode") String languageCode,
+        @CustomType.Parameter("text") GoogleCloudDialogflowCxV3beta1TextInputResponse text) {
         this.audio = audio;
         this.dtmf = dtmf;
         this.event = event;

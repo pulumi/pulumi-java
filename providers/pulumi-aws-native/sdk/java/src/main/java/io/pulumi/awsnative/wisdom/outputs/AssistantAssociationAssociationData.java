@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.wisdom.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AssistantAssociationAssociationData {
     private final String knowledgeBaseId;
 
-    @OutputCustomType.Constructor
-    private AssistantAssociationAssociationData(@OutputCustomType.Parameter("knowledgeBaseId") String knowledgeBaseId) {
+    @CustomType.Constructor
+    private AssistantAssociationAssociationData(@CustomType.Parameter("knowledgeBaseId") String knowledgeBaseId) {
         this.knowledgeBaseId = knowledgeBaseId;
     }
 

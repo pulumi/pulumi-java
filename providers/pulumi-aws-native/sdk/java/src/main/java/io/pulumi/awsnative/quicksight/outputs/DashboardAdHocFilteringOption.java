@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.enums.DashboardBehavior;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DashboardAdHocFilteringOption {
     private final @Nullable DashboardBehavior availabilityStatus;
 
-    @OutputCustomType.Constructor
-    private DashboardAdHocFilteringOption(@OutputCustomType.Parameter("availabilityStatus") @Nullable DashboardBehavior availabilityStatus) {
+    @CustomType.Constructor
+    private DashboardAdHocFilteringOption(@CustomType.Parameter("availabilityStatus") @Nullable DashboardBehavior availabilityStatus) {
         this.availabilityStatus = availabilityStatus;
     }
 

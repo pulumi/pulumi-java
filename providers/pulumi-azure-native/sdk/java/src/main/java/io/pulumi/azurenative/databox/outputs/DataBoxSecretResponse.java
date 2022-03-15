@@ -5,12 +5,12 @@ package io.pulumi.azurenative.databox.outputs;
 
 import io.pulumi.azurenative.databox.outputs.AccountCredentialDetailsResponse;
 import io.pulumi.azurenative.databox.outputs.ApplianceNetworkConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataBoxSecretResponse {
     /**
      * Per account level access credentials.
@@ -38,13 +38,13 @@ public final class DataBoxSecretResponse {
      */
     private final List<ApplianceNetworkConfigurationResponse> networkConfigurations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataBoxSecretResponse(
-        @OutputCustomType.Parameter("accountCredentialDetails") List<AccountCredentialDetailsResponse> accountCredentialDetails,
-        @OutputCustomType.Parameter("devicePassword") String devicePassword,
-        @OutputCustomType.Parameter("deviceSerialNumber") String deviceSerialNumber,
-        @OutputCustomType.Parameter("encodedValidationCertPubKey") String encodedValidationCertPubKey,
-        @OutputCustomType.Parameter("networkConfigurations") List<ApplianceNetworkConfigurationResponse> networkConfigurations) {
+        @CustomType.Parameter("accountCredentialDetails") List<AccountCredentialDetailsResponse> accountCredentialDetails,
+        @CustomType.Parameter("devicePassword") String devicePassword,
+        @CustomType.Parameter("deviceSerialNumber") String deviceSerialNumber,
+        @CustomType.Parameter("encodedValidationCertPubKey") String encodedValidationCertPubKey,
+        @CustomType.Parameter("networkConfigurations") List<ApplianceNetworkConfigurationResponse> networkConfigurations) {
         this.accountCredentialDetails = accountCredentialDetails;
         this.devicePassword = devicePassword;
         this.deviceSerialNumber = deviceSerialNumber;

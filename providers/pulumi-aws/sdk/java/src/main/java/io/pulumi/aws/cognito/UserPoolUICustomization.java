@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cognito.UserPoolUICustomizationArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolUICustomizationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class UserPoolUICustomization extends io.pulumi.resources.CustomResource 
      * The client ID for the client app. Defaults to `ALL`. If `ALL` is specified, the `css` and/or `image_file` settings will be used for every client that has no UI customization set previously.
      * 
      */
-    @OutputExport(name="clientId", type=String.class, parameters={})
+    @Export(name="clientId", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientId;
 
     /**
@@ -48,7 +48,7 @@ public class UserPoolUICustomization extends io.pulumi.resources.CustomResource 
      * The creation date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -62,7 +62,7 @@ public class UserPoolUICustomization extends io.pulumi.resources.CustomResource 
      * The CSS values in the UI customization, provided as a String. At least one of `css` or `image_file` is required.
      * 
      */
-    @OutputExport(name="css", type=String.class, parameters={})
+    @Export(name="css", type=String.class, parameters={})
     private Output</* @Nullable */ String> css;
 
     /**
@@ -76,7 +76,7 @@ public class UserPoolUICustomization extends io.pulumi.resources.CustomResource 
      * The CSS version number.
      * 
      */
-    @OutputExport(name="cssVersion", type=String.class, parameters={})
+    @Export(name="cssVersion", type=String.class, parameters={})
     private Output<String> cssVersion;
 
     /**
@@ -90,7 +90,7 @@ public class UserPoolUICustomization extends io.pulumi.resources.CustomResource 
      * The uploaded logo image for the UI customization, provided as a base64-encoded String. Drift detection is not possible for this argument. At least one of `css` or `image_file` is required.
      * 
      */
-    @OutputExport(name="imageFile", type=String.class, parameters={})
+    @Export(name="imageFile", type=String.class, parameters={})
     private Output</* @Nullable */ String> imageFile;
 
     /**
@@ -104,7 +104,7 @@ public class UserPoolUICustomization extends io.pulumi.resources.CustomResource 
      * The logo image URL for the UI customization.
      * 
      */
-    @OutputExport(name="imageUrl", type=String.class, parameters={})
+    @Export(name="imageUrl", type=String.class, parameters={})
     private Output<String> imageUrl;
 
     /**
@@ -118,7 +118,7 @@ public class UserPoolUICustomization extends io.pulumi.resources.CustomResource 
      * The last-modified date in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) for the UI customization.
      * 
      */
-    @OutputExport(name="lastModifiedDate", type=String.class, parameters={})
+    @Export(name="lastModifiedDate", type=String.class, parameters={})
     private Output<String> lastModifiedDate;
 
     /**
@@ -132,7 +132,7 @@ public class UserPoolUICustomization extends io.pulumi.resources.CustomResource 
      * The user pool ID for the user pool.
      * 
      */
-    @OutputExport(name="userPoolId", type=String.class, parameters={})
+    @Export(name="userPoolId", type=String.class, parameters={})
     private Output<String> userPoolId;
 
     /**

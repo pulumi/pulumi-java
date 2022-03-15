@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class LastAccessTimeTrackingPolicyResponse extends io.pulumi.resour
      * An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently read only
      * 
      */
-    @InputImport(name="blobType")
+    @Import(name="blobType")
       private final @Nullable List<String> blobType;
 
     public List<String> getBlobType() {
@@ -36,7 +36,7 @@ public final class LastAccessTimeTrackingPolicyResponse extends io.pulumi.resour
      * When set to true last access time based tracking is enabled.
      * 
      */
-    @InputImport(name="enable", required=true)
+    @Import(name="enable", required=true)
       private final Boolean enable;
 
     public Boolean getEnable() {
@@ -47,7 +47,7 @@ public final class LastAccessTimeTrackingPolicyResponse extends io.pulumi.resour
      * Name of the policy. The valid value is AccessTimeTracking. This field is currently read only
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -58,7 +58,7 @@ public final class LastAccessTimeTrackingPolicyResponse extends io.pulumi.resour
      * The field specifies blob object tracking granularity in days, typically how often the blob object should be tracked.This field is currently read only with value as 1
      * 
      */
-    @InputImport(name="trackingGranularityInDays")
+    @Import(name="trackingGranularityInDays")
       private final @Nullable Integer trackingGranularityInDays;
 
     public Optional<Integer> getTrackingGranularityInDays() {

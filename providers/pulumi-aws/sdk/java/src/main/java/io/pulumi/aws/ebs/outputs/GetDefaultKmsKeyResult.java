@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ebs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDefaultKmsKeyResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -20,10 +20,10 @@ public final class GetDefaultKmsKeyResult {
      */
     private final String keyArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDefaultKmsKeyResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("keyArn") String keyArn) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("keyArn") String keyArn) {
         this.id = id;
         this.keyArn = keyArn;
     }

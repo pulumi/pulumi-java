@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetJobArgs Empty = new GetJobArgs();
 
-    @InputImport(name="jobId", required=true)
+    @Import(name="jobId", required=true)
       private final String jobId;
 
     public String getJobId() {
         return this.jobId;
     }
 
-    @InputImport(name="namespaceId", required=true)
+    @Import(name="namespaceId", required=true)
       private final String namespaceId;
 
     public String getNamespaceId() {

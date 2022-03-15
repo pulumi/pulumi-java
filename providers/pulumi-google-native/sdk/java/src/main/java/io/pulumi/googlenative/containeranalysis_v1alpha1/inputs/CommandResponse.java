@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * Command-line arguments used when executing this Command.
      * 
      */
-    @InputImport(name="args", required=true)
+    @Import(name="args", required=true)
       private final List<String> args;
 
     public List<String> getArgs() {
@@ -32,7 +32,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * Working directory (relative to project source root) used when running this Command.
      * 
      */
-    @InputImport(name="dir", required=true)
+    @Import(name="dir", required=true)
       private final String dir;
 
     public String getDir() {
@@ -43,7 +43,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * Environment variables set before running this Command.
      * 
      */
-    @InputImport(name="env", required=true)
+    @Import(name="env", required=true)
       private final List<String> env;
 
     public List<String> getEnv() {
@@ -54,7 +54,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the command, as presented on the command line, or if the command is packaged as a Docker container, as presented to `docker pull`.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -65,7 +65,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * The ID(s) of the Command(s) that this Command depends on.
      * 
      */
-    @InputImport(name="waitFor", required=true)
+    @Import(name="waitFor", required=true)
       private final List<String> waitFor;
 
     public List<String> getWaitFor() {

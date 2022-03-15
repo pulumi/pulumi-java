@@ -8,7 +8,7 @@ import io.pulumi.aws.ec2.inputs.LaunchConfigurationEphemeralBlockDeviceGetArgs;
 import io.pulumi.aws.ec2.inputs.LaunchConfigurationMetadataOptionsGetArgs;
 import io.pulumi.aws.ec2.inputs.LaunchConfigurationRootBlockDeviceGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * The Amazon Resource Name of the launch configuration.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -35,7 +35,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * Associate a public ip address with an instance in a VPC.
      * 
      */
-    @InputImport(name="associatePublicIpAddress")
+    @Import(name="associatePublicIpAddress")
       private final @Nullable Output<Boolean> associatePublicIpAddress;
 
     public Output<Boolean> getAssociatePublicIpAddress() {
@@ -47,7 +47,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * instance.  See Block Devices below for details.
      * 
      */
-    @InputImport(name="ebsBlockDevices")
+    @Import(name="ebsBlockDevices")
       private final @Nullable Output<List<LaunchConfigurationEbsBlockDeviceGetArgs>> ebsBlockDevices;
 
     public Output<List<LaunchConfigurationEbsBlockDeviceGetArgs>> getEbsBlockDevices() {
@@ -58,7 +58,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * If true, the launched EC2 instance will be EBS-optimized.
      * 
      */
-    @InputImport(name="ebsOptimized")
+    @Import(name="ebsOptimized")
       private final @Nullable Output<Boolean> ebsOptimized;
 
     public Output<Boolean> getEbsOptimized() {
@@ -69,7 +69,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * Enables/disables detailed monitoring. This is enabled by default.
      * 
      */
-    @InputImport(name="enableMonitoring")
+    @Import(name="enableMonitoring")
       private final @Nullable Output<Boolean> enableMonitoring;
 
     public Output<Boolean> getEnableMonitoring() {
@@ -81,7 +81,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * "Instance Store") volumes on the instance. See Block Devices below for details.
      * 
      */
-    @InputImport(name="ephemeralBlockDevices")
+    @Import(name="ephemeralBlockDevices")
       private final @Nullable Output<List<LaunchConfigurationEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
 
     public Output<List<LaunchConfigurationEphemeralBlockDeviceGetArgs>> getEphemeralBlockDevices() {
@@ -93,7 +93,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * with launched instances.
      * 
      */
-    @InputImport(name="iamInstanceProfile")
+    @Import(name="iamInstanceProfile")
       private final @Nullable Output<String> iamInstanceProfile;
 
     public Output<String> getIamInstanceProfile() {
@@ -104,7 +104,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * The EC2 image ID to launch.
      * 
      */
-    @InputImport(name="imageId")
+    @Import(name="imageId")
       private final @Nullable Output<String> imageId;
 
     public Output<String> getImageId() {
@@ -115,7 +115,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * The size of instance to launch.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -126,7 +126,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * The key name that should be used for the instance.
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
@@ -137,7 +137,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * The metadata options for the instance.
      * 
      */
-    @InputImport(name="metadataOptions")
+    @Import(name="metadataOptions")
       private final @Nullable Output<LaunchConfigurationMetadataOptionsGetArgs> metadataOptions;
 
     public Output<LaunchConfigurationMetadataOptionsGetArgs> getMetadataOptions() {
@@ -149,7 +149,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * this blank, this provider will auto-generate a unique name. Conflicts with `name_prefix`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -161,7 +161,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -174,7 +174,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * for more details
      * 
      */
-    @InputImport(name="placementTenancy")
+    @Import(name="placementTenancy")
       private final @Nullable Output<String> placementTenancy;
 
     public Output<String> getPlacementTenancy() {
@@ -186,7 +186,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * device of the instance. See Block Devices below for details.
      * 
      */
-    @InputImport(name="rootBlockDevice")
+    @Import(name="rootBlockDevice")
       private final @Nullable Output<LaunchConfigurationRootBlockDeviceGetArgs> rootBlockDevice;
 
     public Output<LaunchConfigurationRootBlockDeviceGetArgs> getRootBlockDevice() {
@@ -197,7 +197,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * A list of associated security group IDS.
      * 
      */
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
@@ -208,7 +208,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * The maximum price to use for reserving spot instances.
      * 
      */
-    @InputImport(name="spotPrice")
+    @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
 
     public Output<String> getSpotPrice() {
@@ -219,7 +219,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
      * 
      */
-    @InputImport(name="userData")
+    @Import(name="userData")
       private final @Nullable Output<String> userData;
 
     public Output<String> getUserData() {
@@ -230,7 +230,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
      * 
      */
-    @InputImport(name="userDataBase64")
+    @Import(name="userDataBase64")
       private final @Nullable Output<String> userDataBase64;
 
     public Output<String> getUserDataBase64() {
@@ -241,7 +241,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * The ID of a ClassicLink-enabled VPC. Only applies to EC2-Classic instances. (eg. `vpc-2730681a`)
      * 
      */
-    @InputImport(name="vpcClassicLinkId")
+    @Import(name="vpcClassicLinkId")
       private final @Nullable Output<String> vpcClassicLinkId;
 
     public Output<String> getVpcClassicLinkId() {
@@ -252,7 +252,7 @@ public final class LaunchConfigurationState extends io.pulumi.resources.Resource
      * The IDs of one or more security groups for the specified ClassicLink-enabled VPC (eg. `sg-46ae3d11`).
      * 
      */
-    @InputImport(name="vpcClassicLinkSecurityGroups")
+    @Import(name="vpcClassicLinkSecurityGroups")
       private final @Nullable Output<List<String>> vpcClassicLinkSecurityGroups;
 
     public Output<List<String>> getVpcClassicLinkSecurityGroups() {

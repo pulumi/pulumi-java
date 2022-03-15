@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquerydatatransfer_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class EmailPreferencesResponse extends io.pulumi.resources.InvokeAr
      * If true, email notifications will be sent on transfer run failures.
      * 
      */
-    @InputImport(name="enableFailureEmail", required=true)
+    @Import(name="enableFailureEmail", required=true)
       private final Boolean enableFailureEmail;
 
     public Boolean getEnableFailureEmail() {

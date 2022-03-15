@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CloudStoragePathResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2WordListResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2DictionaryResponse {
     /**
      * Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2DictionaryResponse {
      */
     private final GooglePrivacyDlpV2WordListResponse wordList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2DictionaryResponse(
-        @OutputCustomType.Parameter("cloudStoragePath") GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath,
-        @OutputCustomType.Parameter("wordList") GooglePrivacyDlpV2WordListResponse wordList) {
+        @CustomType.Parameter("cloudStoragePath") GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath,
+        @CustomType.Parameter("wordList") GooglePrivacyDlpV2WordListResponse wordList) {
         this.cloudStoragePath = cloudStoragePath;
         this.wordList = wordList;
     }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.iotcentral.inputs;
 import io.pulumi.azurenative.iotcentral.enums.AppSku;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class AppSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the SKU.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<Either<String,AppSku>> name;
 
     public Output<Either<String,AppSku>> getName() {

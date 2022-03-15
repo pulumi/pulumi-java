@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificateInformationResponse {
     /**
      * Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
@@ -25,11 +25,11 @@ public final class CertificateInformationResponse {
      */
     private final String thumbprint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateInformationResponse(
-        @OutputCustomType.Parameter("expiry") String expiry,
-        @OutputCustomType.Parameter("subject") String subject,
-        @OutputCustomType.Parameter("thumbprint") String thumbprint) {
+        @CustomType.Parameter("expiry") String expiry,
+        @CustomType.Parameter("subject") String subject,
+        @CustomType.Parameter("thumbprint") String thumbprint) {
         this.expiry = expiry;
         this.subject = subject;
         this.thumbprint = thumbprint;

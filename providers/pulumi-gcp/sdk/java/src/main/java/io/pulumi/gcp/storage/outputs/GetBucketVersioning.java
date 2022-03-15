@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketVersioning {
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private GetBucketVersioning(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private GetBucketVersioning(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

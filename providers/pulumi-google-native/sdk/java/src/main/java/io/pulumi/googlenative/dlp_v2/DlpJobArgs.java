@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectJobConfigArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RiskAnalysisJobConfigArgs;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class DlpJobArgs extends io.pulumi.resources.ResourceArgs {
      * An inspection job scans a storage repository for InfoTypes.
      * 
      */
-    @InputImport(name="inspectJob")
+    @Import(name="inspectJob")
       private final @Nullable Output<GooglePrivacyDlpV2InspectJobConfigArgs> inspectJob;
 
     public Output<GooglePrivacyDlpV2InspectJobConfigArgs> getInspectJob() {
@@ -31,21 +31,21 @@ public final class DlpJobArgs extends io.pulumi.resources.ResourceArgs {
      * The job id can contain uppercase and lowercase letters, numbers, and hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`. The maximum length is 100 characters. Can be empty to allow the system to generate one.
      * 
      */
-    @InputImport(name="jobId")
+    @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
     public Output<String> getJobId() {
         return this.jobId == null ? Output.empty() : this.jobId;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -56,7 +56,7 @@ public final class DlpJobArgs extends io.pulumi.resources.ResourceArgs {
      * A risk analysis job calculates re-identification risk metrics for a BigQuery table.
      * 
      */
-    @InputImport(name="riskJob")
+    @Import(name="riskJob")
       private final @Nullable Output<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> riskJob;
 
     public Output<GooglePrivacyDlpV2RiskAnalysisJobConfigArgs> getRiskJob() {

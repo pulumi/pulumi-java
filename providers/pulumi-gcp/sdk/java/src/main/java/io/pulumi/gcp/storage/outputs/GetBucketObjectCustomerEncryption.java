@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketObjectCustomerEncryption {
     private final String encryptionAlgorithm;
     private final String encryptionKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBucketObjectCustomerEncryption(
-        @OutputCustomType.Parameter("encryptionAlgorithm") String encryptionAlgorithm,
-        @OutputCustomType.Parameter("encryptionKey") String encryptionKey) {
+        @CustomType.Parameter("encryptionAlgorithm") String encryptionAlgorithm,
+        @CustomType.Parameter("encryptionKey") String encryptionKey) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         this.encryptionKey = encryptionKey;
     }

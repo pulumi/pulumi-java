@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServiceServiceRegistriesArgs extends io.pulumi.resources.Reso
      * Container name value, already specified in the task definition, to be used for your service discovery service.
      * 
      */
-    @InputImport(name="containerName")
+    @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
     public Output<String> getContainerName() {
@@ -30,7 +30,7 @@ public final class ServiceServiceRegistriesArgs extends io.pulumi.resources.Reso
      * Port value, already specified in the task definition, to be used for your service discovery service.
      * 
      */
-    @InputImport(name="containerPort")
+    @Import(name="containerPort")
       private final @Nullable Output<Integer> containerPort;
 
     public Output<Integer> getContainerPort() {
@@ -41,7 +41,7 @@ public final class ServiceServiceRegistriesArgs extends io.pulumi.resources.Reso
      * Port value used if your Service Discovery service specified an SRV record.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -52,7 +52,7 @@ public final class ServiceServiceRegistriesArgs extends io.pulumi.resources.Reso
      * ARN of the Service Registry. The currently supported service registry is Amazon Route 53 Auto Naming Service(`aws.servicediscovery.Service`). For more information, see [Service](https://docs.aws.amazon.com/Route53/latest/APIReference/API_autonaming_Service.html)
      * 
      */
-    @InputImport(name="registryArn", required=true)
+    @Import(name="registryArn", required=true)
       private final Output<String> registryArn;
 
     public Output<String> getRegistryArn() {

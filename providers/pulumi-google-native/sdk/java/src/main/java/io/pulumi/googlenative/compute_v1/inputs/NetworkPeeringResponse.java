@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * This field will be deprecated soon. Use the exchange_subnet_routes field instead. Indicates whether full mesh connectivity is created and managed automatically between peered networks. Currently this field should always be true since Google Compute Engine will automatically create and manage subnetwork routes between two networks when peering state is ACTIVE.
      * 
      */
-    @InputImport(name="autoCreateRoutes", required=true)
+    @Import(name="autoCreateRoutes", required=true)
       private final Boolean autoCreateRoutes;
 
     public Boolean getAutoCreateRoutes() {
@@ -33,7 +33,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * Indicates whether full mesh connectivity is created and managed automatically between peered networks. Currently this field should always be true since Google Compute Engine will automatically create and manage subnetwork routes between two networks when peering state is ACTIVE.
      * 
      */
-    @InputImport(name="exchangeSubnetRoutes", required=true)
+    @Import(name="exchangeSubnetRoutes", required=true)
       private final Boolean exchangeSubnetRoutes;
 
     public Boolean getExchangeSubnetRoutes() {
@@ -44,7 +44,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * Whether to export the custom routes to peer network. The default value is false.
      * 
      */
-    @InputImport(name="exportCustomRoutes", required=true)
+    @Import(name="exportCustomRoutes", required=true)
       private final Boolean exportCustomRoutes;
 
     public Boolean getExportCustomRoutes() {
@@ -55,7 +55,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. IPv4 special-use ranges are always exported to peers and are not controlled by this field.
      * 
      */
-    @InputImport(name="exportSubnetRoutesWithPublicIp", required=true)
+    @Import(name="exportSubnetRoutesWithPublicIp", required=true)
       private final Boolean exportSubnetRoutesWithPublicIp;
 
     public Boolean getExportSubnetRoutesWithPublicIp() {
@@ -66,7 +66,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * Whether to import the custom routes from peer network. The default value is false.
      * 
      */
-    @InputImport(name="importCustomRoutes", required=true)
+    @Import(name="importCustomRoutes", required=true)
       private final Boolean importCustomRoutes;
 
     public Boolean getImportCustomRoutes() {
@@ -77,7 +77,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * Whether subnet routes with public IP range are imported. The default value is false. IPv4 special-use ranges are always imported from peers and are not controlled by this field.
      * 
      */
-    @InputImport(name="importSubnetRoutesWithPublicIp", required=true)
+    @Import(name="importSubnetRoutesWithPublicIp", required=true)
       private final Boolean importSubnetRoutesWithPublicIp;
 
     public Boolean getImportSubnetRoutesWithPublicIp() {
@@ -88,7 +88,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * Name of this peering. Provided by the client when the peering is created. The name must comply with RFC1035. Specifically, the name must be 1-63 characters long and match regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all the following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -99,7 +99,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * The URL of the peer network. It can be either full URL or partial URL. The peer network may belong to a different project. If the partial URL does not contain project, it is assumed that the peer network is in the same project as the current network.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final String network;
 
     public String getNetwork() {
@@ -110,7 +110,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * Maximum Transmission Unit in bytes.
      * 
      */
-    @InputImport(name="peerMtu", required=true)
+    @Import(name="peerMtu", required=true)
       private final Integer peerMtu;
 
     public Integer getPeerMtu() {
@@ -121,7 +121,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * State for the peering, either `ACTIVE` or `INACTIVE`. The peering is `ACTIVE` when there's a matching configuration in the peer network.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -132,7 +132,7 @@ public final class NetworkPeeringResponse extends io.pulumi.resources.InvokeArgs
      * Details about the current state of the peering.
      * 
      */
-    @InputImport(name="stateDetails", required=true)
+    @Import(name="stateDetails", required=true)
       private final String stateDetails;
 
     public String getStateDetails() {

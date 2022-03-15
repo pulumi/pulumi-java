@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class X12ProcessingSettingsResponse extends io.pulumi.resources.Inv
      * The value indicating whether to convert numerical type to implied decimal.
      * 
      */
-    @InputImport(name="convertImpliedDecimal", required=true)
+    @Import(name="convertImpliedDecimal", required=true)
       private final Boolean convertImpliedDecimal;
 
     public Boolean getConvertImpliedDecimal() {
@@ -31,7 +31,7 @@ public final class X12ProcessingSettingsResponse extends io.pulumi.resources.Inv
      * The value indicating whether to create empty xml tags for trailing separators.
      * 
      */
-    @InputImport(name="createEmptyXmlTagsForTrailingSeparators", required=true)
+    @Import(name="createEmptyXmlTagsForTrailingSeparators", required=true)
       private final Boolean createEmptyXmlTagsForTrailingSeparators;
 
     public Boolean getCreateEmptyXmlTagsForTrailingSeparators() {
@@ -42,7 +42,7 @@ public final class X12ProcessingSettingsResponse extends io.pulumi.resources.Inv
      * The value indicating whether to mask security information.
      * 
      */
-    @InputImport(name="maskSecurityInfo", required=true)
+    @Import(name="maskSecurityInfo", required=true)
       private final Boolean maskSecurityInfo;
 
     public Boolean getMaskSecurityInfo() {
@@ -53,7 +53,7 @@ public final class X12ProcessingSettingsResponse extends io.pulumi.resources.Inv
      * The value indicating whether to preserve interchange.
      * 
      */
-    @InputImport(name="preserveInterchange", required=true)
+    @Import(name="preserveInterchange", required=true)
       private final Boolean preserveInterchange;
 
     public Boolean getPreserveInterchange() {
@@ -64,7 +64,7 @@ public final class X12ProcessingSettingsResponse extends io.pulumi.resources.Inv
      * The value indicating whether to suspend interchange on error.
      * 
      */
-    @InputImport(name="suspendInterchangeOnError", required=true)
+    @Import(name="suspendInterchangeOnError", required=true)
       private final Boolean suspendInterchangeOnError;
 
     public Boolean getSuspendInterchangeOnError() {
@@ -75,7 +75,7 @@ public final class X12ProcessingSettingsResponse extends io.pulumi.resources.Inv
      * The value indicating whether to use dot as decimal separator.
      * 
      */
-    @InputImport(name="useDotAsDecimalSeparator", required=true)
+    @Import(name="useDotAsDecimalSeparator", required=true)
       private final Boolean useDotAsDecimalSeparator;
 
     public Boolean getUseDotAsDecimalSeparator() {

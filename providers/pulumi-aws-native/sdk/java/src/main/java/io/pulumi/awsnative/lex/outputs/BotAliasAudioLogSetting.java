@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotAliasAudioLogDestination;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BotAliasAudioLogSetting {
     private final BotAliasAudioLogDestination destination;
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotAliasAudioLogSetting(
-        @OutputCustomType.Parameter("destination") BotAliasAudioLogDestination destination,
-        @OutputCustomType.Parameter("enabled") Boolean enabled) {
+        @CustomType.Parameter("destination") BotAliasAudioLogDestination destination,
+        @CustomType.Parameter("enabled") Boolean enabled) {
         this.destination = destination;
         this.enabled = enabled;
     }

@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.msk.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterLoggingInfoBrokerLogsFirehose {
     /**
      * Name of the Kinesis Data Firehose delivery stream to deliver logs to.
@@ -23,10 +23,10 @@ public final class ClusterLoggingInfoBrokerLogsFirehose {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterLoggingInfoBrokerLogsFirehose(
-        @OutputCustomType.Parameter("deliveryStream") @Nullable String deliveryStream,
-        @OutputCustomType.Parameter("enabled") Boolean enabled) {
+        @CustomType.Parameter("deliveryStream") @Nullable String deliveryStream,
+        @CustomType.Parameter("enabled") Boolean enabled) {
         this.deliveryStream = deliveryStream;
         this.enabled = enabled;
     }

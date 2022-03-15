@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GroupPropertiesResponse {
     /**
      * If the assessments are in running state.
@@ -50,15 +50,15 @@ public final class GroupPropertiesResponse {
      */
     private final String updatedTimestamp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GroupPropertiesResponse(
-        @OutputCustomType.Parameter("areAssessmentsRunning") Boolean areAssessmentsRunning,
-        @OutputCustomType.Parameter("assessments") List<String> assessments,
-        @OutputCustomType.Parameter("createdTimestamp") String createdTimestamp,
-        @OutputCustomType.Parameter("groupStatus") String groupStatus,
-        @OutputCustomType.Parameter("groupType") @Nullable String groupType,
-        @OutputCustomType.Parameter("machineCount") Integer machineCount,
-        @OutputCustomType.Parameter("updatedTimestamp") String updatedTimestamp) {
+        @CustomType.Parameter("areAssessmentsRunning") Boolean areAssessmentsRunning,
+        @CustomType.Parameter("assessments") List<String> assessments,
+        @CustomType.Parameter("createdTimestamp") String createdTimestamp,
+        @CustomType.Parameter("groupStatus") String groupStatus,
+        @CustomType.Parameter("groupType") @Nullable String groupType,
+        @CustomType.Parameter("machineCount") Integer machineCount,
+        @CustomType.Parameter("updatedTimestamp") String updatedTimestamp) {
         this.areAssessmentsRunning = areAssessmentsRunning;
         this.assessments = assessments;
         this.createdTimestamp = createdTimestamp;

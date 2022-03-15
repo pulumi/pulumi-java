@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionLoggingConfig {
     /**
      * The Amazon S3 bucket to store the access logs in, for
@@ -31,11 +31,11 @@ public final class DistributionLoggingConfig {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionLoggingConfig(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("includeCookies") @Nullable Boolean includeCookies,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("includeCookies") @Nullable Boolean includeCookies,
+        @CustomType.Parameter("prefix") @Nullable String prefix) {
         this.bucket = bucket;
         this.includeCookies = includeCookies;
         this.prefix = prefix;

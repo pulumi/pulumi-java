@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningexperimentation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StorageAccountPropertiesResponse {
     /**
      * The access key to the storage account.
@@ -20,10 +20,10 @@ public final class StorageAccountPropertiesResponse {
      */
     private final String storageAccountId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageAccountPropertiesResponse(
-        @OutputCustomType.Parameter("accessKey") String accessKey,
-        @OutputCustomType.Parameter("storageAccountId") String storageAccountId) {
+        @CustomType.Parameter("accessKey") String accessKey,
+        @CustomType.Parameter("storageAccountId") String storageAccountId) {
         this.accessKey = accessKey;
         this.storageAccountId = storageAccountId;
     }

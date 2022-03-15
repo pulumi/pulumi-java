@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2ValueFrequencyResponse {
     /**
      * How many times the value is contained in the field.
@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse {
      */
     private final GooglePrivacyDlpV2ValueResponse value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2ValueFrequencyResponse(
-        @OutputCustomType.Parameter("count") String count,
-        @OutputCustomType.Parameter("value") GooglePrivacyDlpV2ValueResponse value) {
+        @CustomType.Parameter("count") String count,
+        @CustomType.Parameter("value") GooglePrivacyDlpV2ValueResponse value) {
         this.count = count;
         this.value = value;
     }

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.backup.FrameworkArgs;
 import io.pulumi.awsnative.backup.outputs.FrameworkControl;
 import io.pulumi.awsnative.backup.outputs.FrameworkTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -25,7 +25,7 @@ public class Framework extends io.pulumi.resources.CustomResource {
      * The date and time that a framework is created, in Unix format and Coordinated Universal Time (UTC). The value of `CreationTime` is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
      * 
      */
-    @OutputExport(name="creationTime", type=Double.class, parameters={})
+    @Export(name="creationTime", type=Double.class, parameters={})
     private Output<Double> creationTime;
 
     /**
@@ -39,7 +39,7 @@ public class Framework extends io.pulumi.resources.CustomResource {
      * The deployment status of a framework. The statuses are: `CREATE_IN_PROGRESS | UPDATE_IN_PROGRESS | DELETE_IN_PROGRESS | COMPLETED | FAILED`
      * 
      */
-    @OutputExport(name="deploymentStatus", type=String.class, parameters={})
+    @Export(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
 
     /**
@@ -53,7 +53,7 @@ public class Framework extends io.pulumi.resources.CustomResource {
      * An Amazon Resource Name (ARN) that uniquely identifies Framework as a resource
      * 
      */
-    @OutputExport(name="frameworkArn", type=String.class, parameters={})
+    @Export(name="frameworkArn", type=String.class, parameters={})
     private Output<String> frameworkArn;
 
     /**
@@ -67,7 +67,7 @@ public class Framework extends io.pulumi.resources.CustomResource {
      * Contains detailed information about all of the controls of a framework. Each framework must contain at least one control.
      * 
      */
-    @OutputExport(name="frameworkControls", type=List.class, parameters={FrameworkControl.class})
+    @Export(name="frameworkControls", type=List.class, parameters={FrameworkControl.class})
     private Output<List<FrameworkControl>> frameworkControls;
 
     /**
@@ -81,7 +81,7 @@ public class Framework extends io.pulumi.resources.CustomResource {
      * An optional description of the framework with a maximum 1,024 characters.
      * 
      */
-    @OutputExport(name="frameworkDescription", type=String.class, parameters={})
+    @Export(name="frameworkDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> frameworkDescription;
 
     /**
@@ -95,7 +95,7 @@ public class Framework extends io.pulumi.resources.CustomResource {
      * The unique name of a framework. This name is between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).
      * 
      */
-    @OutputExport(name="frameworkName", type=String.class, parameters={})
+    @Export(name="frameworkName", type=String.class, parameters={})
     private Output</* @Nullable */ String> frameworkName;
 
     /**
@@ -117,7 +117,7 @@ public class Framework extends io.pulumi.resources.CustomResource {
      * `UNAVAILABLE` when AWS Backup is unable to validate recording status at this time.
      * 
      */
-    @OutputExport(name="frameworkStatus", type=String.class, parameters={})
+    @Export(name="frameworkStatus", type=String.class, parameters={})
     private Output<String> frameworkStatus;
 
     /**
@@ -139,7 +139,7 @@ public class Framework extends io.pulumi.resources.CustomResource {
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    @OutputExport(name="frameworkTags", type=List.class, parameters={FrameworkTag.class})
+    @Export(name="frameworkTags", type=List.class, parameters={FrameworkTag.class})
     private Output</* @Nullable */ List<FrameworkTag>> frameworkTags;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzureActiveDirectoryAppResponse {
     /**
      * Key used to authenticate to the Azure Active Directory Application
@@ -25,11 +25,11 @@ public final class AzureActiveDirectoryAppResponse {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureActiveDirectoryAppResponse(
-        @OutputCustomType.Parameter("appKey") String appKey,
-        @OutputCustomType.Parameter("applicationId") String applicationId,
-        @OutputCustomType.Parameter("tenantId") String tenantId) {
+        @CustomType.Parameter("appKey") String appKey,
+        @CustomType.Parameter("applicationId") String applicationId,
+        @CustomType.Parameter("tenantId") String tenantId) {
         this.appKey = appKey;
         this.applicationId = applicationId;
         this.tenantId = tenantId;

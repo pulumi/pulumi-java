@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.SubnetResourceSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
      * Gets or sets the address prefixes for the virtual network.
      * 
      */
-    @InputImport(name="addressSpace")
+    @Import(name="addressSpace")
       private final @Nullable Output<List<String>> addressSpace;
 
     public Output<List<String>> getAddressSpace() {
@@ -37,7 +37,7 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
      * deployed in the virtual network.
      * 
      */
-    @InputImport(name="dnsServers")
+    @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
     public Output<List<String>> getDnsServers() {
@@ -49,7 +49,7 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
      * DDOS protection should be switched on.
      * 
      */
-    @InputImport(name="enableDdosProtection")
+    @Import(name="enableDdosProtection")
       private final @Nullable Output<Boolean> enableDdosProtection;
 
     public Output<Boolean> getEnableDdosProtection() {
@@ -61,7 +61,7 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
      * Expected value is 'Microsoft.Network/virtualNetworks'.
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
@@ -72,7 +72,7 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
      * Gets or sets List of subnets in a VirtualNetwork.
      * 
      */
-    @InputImport(name="subnets")
+    @Import(name="subnets")
       private final @Nullable Output<List<SubnetResourceSettingsArgs>> subnets;
 
     public Output<List<SubnetResourceSettingsArgs>> getSubnets() {
@@ -83,7 +83,7 @@ public final class VirtualNetworkResourceSettingsArgs extends io.pulumi.resource
      * Gets or sets the target Resource name.
      * 
      */
-    @InputImport(name="targetResourceName", required=true)
+    @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
 
     public Output<String> getTargetResourceName() {

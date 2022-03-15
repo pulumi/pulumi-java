@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabricksResponseProperties {
     /**
      * Databricks access token
@@ -22,10 +22,10 @@ public final class DatabricksResponseProperties {
      */
     private final @Nullable String workspaceUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabricksResponseProperties(
-        @OutputCustomType.Parameter("databricksAccessToken") @Nullable String databricksAccessToken,
-        @OutputCustomType.Parameter("workspaceUrl") @Nullable String workspaceUrl) {
+        @CustomType.Parameter("databricksAccessToken") @Nullable String databricksAccessToken,
+        @CustomType.Parameter("workspaceUrl") @Nullable String workspaceUrl) {
         this.databricksAccessToken = databricksAccessToken;
         this.workspaceUrl = workspaceUrl;
     }

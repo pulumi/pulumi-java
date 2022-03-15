@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission {
     /**
      * Set of EC2 launch permission user groups to assign. Use `all` to distribute a public AMI.
@@ -22,10 +22,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      */
     private final @Nullable List<String> userIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission(
-        @OutputCustomType.Parameter("userGroups") @Nullable List<String> userGroups,
-        @OutputCustomType.Parameter("userIds") @Nullable List<String> userIds) {
+        @CustomType.Parameter("userGroups") @Nullable List<String> userGroups,
+        @CustomType.Parameter("userIds") @Nullable List<String> userIds) {
         this.userGroups = userGroups;
         this.userIds = userIds;
     }

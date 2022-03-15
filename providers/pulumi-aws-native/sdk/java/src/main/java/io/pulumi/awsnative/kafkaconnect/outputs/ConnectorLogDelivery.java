@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.kafkaconnect.outputs;
 
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorWorkerLogDelivery;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorLogDelivery {
     private final ConnectorWorkerLogDelivery workerLogDelivery;
 
-    @OutputCustomType.Constructor
-    private ConnectorLogDelivery(@OutputCustomType.Parameter("workerLogDelivery") ConnectorWorkerLogDelivery workerLogDelivery) {
+    @CustomType.Constructor
+    private ConnectorLogDelivery(@CustomType.Parameter("workerLogDelivery") ConnectorWorkerLogDelivery workerLogDelivery) {
         this.workerLogDelivery = workerLogDelivery;
     }
 

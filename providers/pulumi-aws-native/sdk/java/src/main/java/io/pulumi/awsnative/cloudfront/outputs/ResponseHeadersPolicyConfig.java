@@ -6,13 +6,13 @@ package io.pulumi.awsnative.cloudfront.outputs;
 import io.pulumi.awsnative.cloudfront.outputs.ResponseHeadersPolicyCorsConfig;
 import io.pulumi.awsnative.cloudfront.outputs.ResponseHeadersPolicyCustomHeadersConfig;
 import io.pulumi.awsnative.cloudfront.outputs.ResponseHeadersPolicySecurityHeadersConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResponseHeadersPolicyConfig {
     private final @Nullable String comment;
     private final @Nullable ResponseHeadersPolicyCorsConfig corsConfig;
@@ -20,13 +20,13 @@ public final class ResponseHeadersPolicyConfig {
     private final String name;
     private final @Nullable ResponseHeadersPolicySecurityHeadersConfig securityHeadersConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResponseHeadersPolicyConfig(
-        @OutputCustomType.Parameter("comment") @Nullable String comment,
-        @OutputCustomType.Parameter("corsConfig") @Nullable ResponseHeadersPolicyCorsConfig corsConfig,
-        @OutputCustomType.Parameter("customHeadersConfig") @Nullable ResponseHeadersPolicyCustomHeadersConfig customHeadersConfig,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("securityHeadersConfig") @Nullable ResponseHeadersPolicySecurityHeadersConfig securityHeadersConfig) {
+        @CustomType.Parameter("comment") @Nullable String comment,
+        @CustomType.Parameter("corsConfig") @Nullable ResponseHeadersPolicyCorsConfig corsConfig,
+        @CustomType.Parameter("customHeadersConfig") @Nullable ResponseHeadersPolicyCustomHeadersConfig customHeadersConfig,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("securityHeadersConfig") @Nullable ResponseHeadersPolicySecurityHeadersConfig securityHeadersConfig) {
         this.comment = comment;
         this.corsConfig = corsConfig;
         this.customHeadersConfig = customHeadersConfig;

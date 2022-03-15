@@ -4,7 +4,7 @@
 package io.pulumi.aws.lightsail.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the Lightsail instance (matches `id`).
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -35,7 +35,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * instance (see list below)
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -46,7 +46,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The ID for a virtual private server image. A list of available blueprint IDs can be obtained using the AWS CLI command: `aws lightsail get-blueprints`
      * 
      */
-    @InputImport(name="blueprintId")
+    @Import(name="blueprintId")
       private final @Nullable Output<String> blueprintId;
 
     public Output<String> getBlueprintId() {
@@ -57,7 +57,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The bundle of specification information (see list below)
      * 
      */
-    @InputImport(name="bundleId")
+    @Import(name="bundleId")
       private final @Nullable Output<String> bundleId;
 
     public Output<String> getBundleId() {
@@ -68,7 +68,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The number of vCPUs the instance has.
      * 
      */
-    @InputImport(name="cpuCount")
+    @Import(name="cpuCount")
       private final @Nullable Output<Integer> cpuCount;
 
     public Output<Integer> getCpuCount() {
@@ -79,7 +79,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The timestamp when the instance was created.
      * 
      */
-    @InputImport(name="createdAt")
+    @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
@@ -94,7 +94,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* use `ipv6_addresses` attribute instead */
-    @InputImport(name="ipv6Address")
+    @Import(name="ipv6Address")
       private final @Nullable Output<String> ipv6Address;
 
     @Deprecated /* use `ipv6_addresses` attribute instead */
@@ -106,7 +106,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * List of IPv6 addresses for the Lightsail instance.
      * 
      */
-    @InputImport(name="ipv6Addresses")
+    @Import(name="ipv6Addresses")
       private final @Nullable Output<List<String>> ipv6Addresses;
 
     public Output<List<String>> getIpv6Addresses() {
@@ -117,7 +117,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * A Boolean value indicating whether this instance has a static IP assigned to it.
      * 
      */
-    @InputImport(name="isStaticIp")
+    @Import(name="isStaticIp")
       private final @Nullable Output<Boolean> isStaticIp;
 
     public Output<Boolean> getIsStaticIp() {
@@ -129,7 +129,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * Lightsail console (cannot use `aws.ec2.KeyPair` at this time)
      * 
      */
-    @InputImport(name="keyPairName")
+    @Import(name="keyPairName")
       private final @Nullable Output<String> keyPairName;
 
     public Output<String> getKeyPairName() {
@@ -140,7 +140,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The name of the Lightsail Instance. Names be unique within each AWS Region in your Lightsail account.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -151,7 +151,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The private IP address of the instance.
      * 
      */
-    @InputImport(name="privateIpAddress")
+    @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
     public Output<String> getPrivateIpAddress() {
@@ -162,7 +162,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The public IP address of the instance.
      * 
      */
-    @InputImport(name="publicIpAddress")
+    @Import(name="publicIpAddress")
       private final @Nullable Output<String> publicIpAddress;
 
     public Output<String> getPublicIpAddress() {
@@ -173,7 +173,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The amount of RAM in GB on the instance (e.g., 1.0).
      * 
      */
-    @InputImport(name="ramSize")
+    @Import(name="ramSize")
       private final @Nullable Output<Double> ramSize;
 
     public Output<Double> getRamSize() {
@@ -184,7 +184,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. To create a key-only tag, use an empty string as the value. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -195,7 +195,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -206,7 +206,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * launch script to configure server with additional user data
      * 
      */
-    @InputImport(name="userData")
+    @Import(name="userData")
       private final @Nullable Output<String> userData;
 
     public Output<String> getUserData() {
@@ -217,7 +217,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * The user name for connecting to the instance (e.g., ec2-user).
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

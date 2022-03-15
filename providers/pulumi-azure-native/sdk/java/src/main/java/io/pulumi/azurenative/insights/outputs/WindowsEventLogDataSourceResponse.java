@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WindowsEventLogDataSourceResponse {
     /**
      * A friendly name for the data source.
@@ -30,11 +30,11 @@ public final class WindowsEventLogDataSourceResponse {
      */
     private final @Nullable List<String> xPathQueries;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WindowsEventLogDataSourceResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("streams") @Nullable List<String> streams,
-        @OutputCustomType.Parameter("xPathQueries") @Nullable List<String> xPathQueries) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("streams") @Nullable List<String> streams,
+        @CustomType.Parameter("xPathQueries") @Nullable List<String> xPathQueries) {
         this.name = name;
         this.streams = streams;
         this.xPathQueries = xPathQueries;

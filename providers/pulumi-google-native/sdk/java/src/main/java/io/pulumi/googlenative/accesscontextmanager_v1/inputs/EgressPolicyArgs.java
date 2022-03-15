@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.EgressFromArgs;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.EgressToArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EgressPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Defines conditions on the source of a request causing this EgressPolicy to apply.
      * 
      */
-    @InputImport(name="egressFrom")
+    @Import(name="egressFrom")
       private final @Nullable Output<EgressFromArgs> egressFrom;
 
     public Output<EgressFromArgs> getEgressFrom() {
@@ -34,7 +34,7 @@ public final class EgressPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Defines the conditions on the ApiOperation and destination resources that cause this EgressPolicy to apply.
      * 
      */
-    @InputImport(name="egressTo")
+    @Import(name="egressTo")
       private final @Nullable Output<EgressToArgs> egressTo;
 
     public Output<EgressToArgs> getEgressTo() {

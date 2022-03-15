@@ -9,7 +9,7 @@ import io.pulumi.azurenative.synapse.outputs.EnvironmentVariableSetupResponse;
 import io.pulumi.azurenative.synapse.outputs.IntegrationRuntimeCustomSetupScriptPropertiesResponse;
 import io.pulumi.azurenative.synapse.outputs.IntegrationRuntimeDataProxyPropertiesResponse;
 import io.pulumi.azurenative.synapse.outputs.IntegrationRuntimeSsisCatalogInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationRuntimeSsisPropertiesResponse {
     /**
      * Catalog information for managed dedicated integration runtime.
@@ -50,14 +50,14 @@ public final class IntegrationRuntimeSsisPropertiesResponse {
      */
     private final @Nullable String licenseType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationRuntimeSsisPropertiesResponse(
-        @OutputCustomType.Parameter("catalogInfo") @Nullable IntegrationRuntimeSsisCatalogInfoResponse catalogInfo,
-        @OutputCustomType.Parameter("customSetupScriptProperties") @Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties,
-        @OutputCustomType.Parameter("dataProxyProperties") @Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties,
-        @OutputCustomType.Parameter("edition") @Nullable String edition,
-        @OutputCustomType.Parameter("expressCustomSetupProperties") @Nullable List<Object> expressCustomSetupProperties,
-        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType) {
+        @CustomType.Parameter("catalogInfo") @Nullable IntegrationRuntimeSsisCatalogInfoResponse catalogInfo,
+        @CustomType.Parameter("customSetupScriptProperties") @Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties,
+        @CustomType.Parameter("dataProxyProperties") @Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties,
+        @CustomType.Parameter("edition") @Nullable String edition,
+        @CustomType.Parameter("expressCustomSetupProperties") @Nullable List<Object> expressCustomSetupProperties,
+        @CustomType.Parameter("licenseType") @Nullable String licenseType) {
         this.catalogInfo = catalogInfo;
         this.customSetupScriptProperties = customSetupScriptProperties;
         this.dataProxyProperties = dataProxyProperties;

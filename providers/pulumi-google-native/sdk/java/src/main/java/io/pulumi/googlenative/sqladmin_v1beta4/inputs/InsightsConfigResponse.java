@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class InsightsConfigResponse extends io.pulumi.resources.InvokeArgs
      * Whether Query Insights feature is enabled.
      * 
      */
-    @InputImport(name="queryInsightsEnabled", required=true)
+    @Import(name="queryInsightsEnabled", required=true)
       private final Boolean queryInsightsEnabled;
 
     public Boolean getQueryInsightsEnabled() {
@@ -32,7 +32,7 @@ public final class InsightsConfigResponse extends io.pulumi.resources.InvokeArgs
      * Number of query execution plans captured by Insights per minute for all queries combined. Default is 5.
      * 
      */
-    @InputImport(name="queryPlansPerMinute", required=true)
+    @Import(name="queryPlansPerMinute", required=true)
       private final Integer queryPlansPerMinute;
 
     public Integer getQueryPlansPerMinute() {
@@ -43,7 +43,7 @@ public final class InsightsConfigResponse extends io.pulumi.resources.InvokeArgs
      * Maximum query length stored in bytes. Default value: 1024 bytes. Range: 256-4500 bytes. Query length more than this field value will be truncated to this value. When unset, query length will be the default value. Changing query length will restart the database.
      * 
      */
-    @InputImport(name="queryStringLength", required=true)
+    @Import(name="queryStringLength", required=true)
       private final Integer queryStringLength;
 
     public Integer getQueryStringLength() {
@@ -54,7 +54,7 @@ public final class InsightsConfigResponse extends io.pulumi.resources.InvokeArgs
      * Whether Query Insights will record application tags from query when enabled.
      * 
      */
-    @InputImport(name="recordApplicationTags", required=true)
+    @Import(name="recordApplicationTags", required=true)
       private final Boolean recordApplicationTags;
 
     public Boolean getRecordApplicationTags() {
@@ -65,7 +65,7 @@ public final class InsightsConfigResponse extends io.pulumi.resources.InvokeArgs
      * Whether Query Insights will record client address when enabled.
      * 
      */
-    @InputImport(name="recordClientAddress", required=true)
+    @Import(name="recordClientAddress", required=true)
       private final Boolean recordClientAddress;
 
     public Boolean getRecordClientAddress() {

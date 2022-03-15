@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudtrace_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudtrace_v2beta1.outputs.OutputConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTraceSinkResult {
     /**
      * The canonical sink resource name, unique within the project. Must be of the form: project/[PROJECT_NUMBER]/traceSinks/[SINK_ID]. E.g.: `"projects/12345/traceSinks/my-project-trace-sink"`. Sink identifiers are limited to 256 characters and can include only the following characters: upper and lower-case alphanumeric characters, underscores, hyphens, and periods.
@@ -26,11 +26,11 @@ public final class GetTraceSinkResult {
      */
     private final String writerIdentity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTraceSinkResult(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputConfig") OutputConfigResponse outputConfig,
-        @OutputCustomType.Parameter("writerIdentity") String writerIdentity) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputConfig") OutputConfigResponse outputConfig,
+        @CustomType.Parameter("writerIdentity") String writerIdentity) {
         this.name = name;
         this.outputConfig = outputConfig;
         this.writerIdentity = writerIdentity;

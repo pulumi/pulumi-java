@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SeedNodeResponse {
     /**
      * IP address of this seed node.
@@ -17,8 +17,8 @@ public final class SeedNodeResponse {
      */
     private final @Nullable String ipAddress;
 
-    @OutputCustomType.Constructor
-    private SeedNodeResponse(@OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress) {
+    @CustomType.Constructor
+    private SeedNodeResponse(@CustomType.Parameter("ipAddress") @Nullable String ipAddress) {
         this.ipAddress = ipAddress;
     }
 

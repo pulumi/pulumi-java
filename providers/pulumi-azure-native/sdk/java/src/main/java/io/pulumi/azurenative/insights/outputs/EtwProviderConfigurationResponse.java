@@ -4,20 +4,20 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.EtwEventConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EtwProviderConfigurationResponse {
     private final List<EtwEventConfigurationResponse> events;
     private final String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EtwProviderConfigurationResponse(
-        @OutputCustomType.Parameter("events") List<EtwEventConfigurationResponse> events,
-        @OutputCustomType.Parameter("id") String id) {
+        @CustomType.Parameter("events") List<EtwEventConfigurationResponse> events,
+        @CustomType.Parameter("id") String id) {
         this.events = events;
         this.id = id;
     }

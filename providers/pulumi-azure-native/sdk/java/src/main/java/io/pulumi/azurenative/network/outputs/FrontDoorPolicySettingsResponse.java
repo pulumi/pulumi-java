@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FrontDoorPolicySettingsResponse {
     /**
      * If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
@@ -43,14 +43,14 @@ public final class FrontDoorPolicySettingsResponse {
      */
     private final @Nullable String requestBodyCheck;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FrontDoorPolicySettingsResponse(
-        @OutputCustomType.Parameter("customBlockResponseBody") @Nullable String customBlockResponseBody,
-        @OutputCustomType.Parameter("customBlockResponseStatusCode") @Nullable Integer customBlockResponseStatusCode,
-        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("redirectUrl") @Nullable String redirectUrl,
-        @OutputCustomType.Parameter("requestBodyCheck") @Nullable String requestBodyCheck) {
+        @CustomType.Parameter("customBlockResponseBody") @Nullable String customBlockResponseBody,
+        @CustomType.Parameter("customBlockResponseStatusCode") @Nullable Integer customBlockResponseStatusCode,
+        @CustomType.Parameter("enabledState") @Nullable String enabledState,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("redirectUrl") @Nullable String redirectUrl,
+        @CustomType.Parameter("requestBodyCheck") @Nullable String requestBodyCheck) {
         this.customBlockResponseBody = customBlockResponseBody;
         this.customBlockResponseStatusCode = customBlockResponseStatusCode;
         this.enabledState = enabledState;

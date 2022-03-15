@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.jobs_v3.inputs.LocationResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CompanyDerivedInfoResponse extends io.pulumi.resources.Invoke
      * A structured headquarters location of the company, resolved from Company.hq_location if provided.
      * 
      */
-    @InputImport(name="headquartersLocation", required=true)
+    @Import(name="headquartersLocation", required=true)
       private final LocationResponse headquartersLocation;
 
     public LocationResponse getHeadquartersLocation() {

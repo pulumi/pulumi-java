@@ -7,24 +7,24 @@ import io.pulumi.awsnative.connect.enums.QuickConnectType;
 import io.pulumi.awsnative.connect.outputs.QuickConnectPhoneNumberQuickConnectConfig;
 import io.pulumi.awsnative.connect.outputs.QuickConnectQueueQuickConnectConfig;
 import io.pulumi.awsnative.connect.outputs.QuickConnectUserQuickConnectConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class QuickConnectConfig {
     private final @Nullable QuickConnectPhoneNumberQuickConnectConfig phoneConfig;
     private final @Nullable QuickConnectQueueQuickConnectConfig queueConfig;
     private final QuickConnectType quickConnectType;
     private final @Nullable QuickConnectUserQuickConnectConfig userConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QuickConnectConfig(
-        @OutputCustomType.Parameter("phoneConfig") @Nullable QuickConnectPhoneNumberQuickConnectConfig phoneConfig,
-        @OutputCustomType.Parameter("queueConfig") @Nullable QuickConnectQueueQuickConnectConfig queueConfig,
-        @OutputCustomType.Parameter("quickConnectType") QuickConnectType quickConnectType,
-        @OutputCustomType.Parameter("userConfig") @Nullable QuickConnectUserQuickConnectConfig userConfig) {
+        @CustomType.Parameter("phoneConfig") @Nullable QuickConnectPhoneNumberQuickConnectConfig phoneConfig,
+        @CustomType.Parameter("queueConfig") @Nullable QuickConnectQueueQuickConnectConfig queueConfig,
+        @CustomType.Parameter("quickConnectType") QuickConnectType quickConnectType,
+        @CustomType.Parameter("userConfig") @Nullable QuickConnectUserQuickConnectConfig userConfig) {
         this.phoneConfig = phoneConfig;
         this.queueConfig = queueConfig;
         this.quickConnectType = quickConnectType;

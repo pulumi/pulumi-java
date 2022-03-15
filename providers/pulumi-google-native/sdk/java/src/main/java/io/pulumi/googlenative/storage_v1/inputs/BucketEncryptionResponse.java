@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class BucketEncryptionResponse extends io.pulumi.resources.InvokeAr
      * A Cloud KMS key that will be used to encrypt objects inserted into this bucket, if no encryption method is specified.
      * 
      */
-    @InputImport(name="defaultKmsKeyName", required=true)
+    @Import(name="defaultKmsKeyName", required=true)
       private final String defaultKmsKeyName;
 
     public String getDefaultKmsKeyName() {

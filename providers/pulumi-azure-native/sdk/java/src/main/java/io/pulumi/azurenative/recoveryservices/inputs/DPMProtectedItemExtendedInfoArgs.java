@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * Used Disk storage in bytes.
      * 
      */
-    @InputImport(name="diskStorageUsedInBytes")
+    @Import(name="diskStorageUsedInBytes")
       private final @Nullable Output<String> diskStorageUsedInBytes;
 
     public Output<String> getDiskStorageUsedInBytes() {
@@ -36,7 +36,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * To check if backup item is collocated.
      * 
      */
-    @InputImport(name="isCollocated")
+    @Import(name="isCollocated")
       private final @Nullable Output<Boolean> isCollocated;
 
     public Output<Boolean> getIsCollocated() {
@@ -47,7 +47,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * To check if backup item is cloud protected.
      * 
      */
-    @InputImport(name="isPresentOnCloud")
+    @Import(name="isPresentOnCloud")
       private final @Nullable Output<Boolean> isPresentOnCloud;
 
     public Output<Boolean> getIsPresentOnCloud() {
@@ -58,7 +58,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * Last backup status information on backup item.
      * 
      */
-    @InputImport(name="lastBackupStatus")
+    @Import(name="lastBackupStatus")
       private final @Nullable Output<String> lastBackupStatus;
 
     public Output<String> getLastBackupStatus() {
@@ -69,7 +69,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * Last refresh time on backup item.
      * 
      */
-    @InputImport(name="lastRefreshedAt")
+    @Import(name="lastRefreshedAt")
       private final @Nullable Output<String> lastRefreshedAt;
 
     public Output<String> getLastRefreshedAt() {
@@ -80,7 +80,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * Oldest cloud recovery point time.
      * 
      */
-    @InputImport(name="oldestRecoveryPoint")
+    @Import(name="oldestRecoveryPoint")
       private final @Nullable Output<String> oldestRecoveryPoint;
 
     public Output<String> getOldestRecoveryPoint() {
@@ -91,7 +91,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * latest disk recovery point time.
      * 
      */
-    @InputImport(name="onPremiseLatestRecoveryPoint")
+    @Import(name="onPremiseLatestRecoveryPoint")
       private final @Nullable Output<String> onPremiseLatestRecoveryPoint;
 
     public Output<String> getOnPremiseLatestRecoveryPoint() {
@@ -102,7 +102,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * Oldest disk recovery point time.
      * 
      */
-    @InputImport(name="onPremiseOldestRecoveryPoint")
+    @Import(name="onPremiseOldestRecoveryPoint")
       private final @Nullable Output<String> onPremiseOldestRecoveryPoint;
 
     public Output<String> getOnPremiseOldestRecoveryPoint() {
@@ -113,7 +113,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * disk recovery point count.
      * 
      */
-    @InputImport(name="onPremiseRecoveryPointCount")
+    @Import(name="onPremiseRecoveryPointCount")
       private final @Nullable Output<Integer> onPremiseRecoveryPointCount;
 
     public Output<Integer> getOnPremiseRecoveryPointCount() {
@@ -124,7 +124,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * Attribute to provide information on various DBs.
      * 
      */
-    @InputImport(name="protectableObjectLoadPath")
+    @Import(name="protectableObjectLoadPath")
       private final @Nullable Output<Map<String,String>> protectableObjectLoadPath;
 
     public Output<Map<String,String>> getProtectableObjectLoadPath() {
@@ -135,7 +135,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * To check if backup item is disk protected.
      * 
      */
-    @InputImport(name="protected")
+    @Import(name="protected")
       private final @Nullable Output<Boolean> $protected;
 
     public Output<Boolean> get$protected() {
@@ -146,7 +146,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * Protection group name of the backup item.
      * 
      */
-    @InputImport(name="protectionGroupName")
+    @Import(name="protectionGroupName")
       private final @Nullable Output<String> protectionGroupName;
 
     public Output<String> getProtectionGroupName() {
@@ -157,7 +157,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * cloud recovery point count.
      * 
      */
-    @InputImport(name="recoveryPointCount")
+    @Import(name="recoveryPointCount")
       private final @Nullable Output<Integer> recoveryPointCount;
 
     public Output<Integer> getRecoveryPointCount() {
@@ -168,7 +168,7 @@ public final class DPMProtectedItemExtendedInfoArgs extends io.pulumi.resources.
      * total Disk storage in bytes.
      * 
      */
-    @InputImport(name="totalDiskStorageSizeInBytes")
+    @Import(name="totalDiskStorageSizeInBytes")
       private final @Nullable Output<String> totalDiskStorageSizeInBytes;
 
     public Output<String> getTotalDiskStorageSizeInBytes() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.cloudfront.inputs.DistributionOrderedCacheBehaviorForwarded
 import io.pulumi.aws.cloudfront.inputs.DistributionOrderedCacheBehaviorFunctionAssociationGetArgs;
 import io.pulumi.aws.cloudfront.inputs.DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * processes and forwards to your Amazon S3 bucket or your custom origin.
      * 
      */
-    @InputImport(name="allowedMethods", required=true)
+    @Import(name="allowedMethods", required=true)
       private final Output<List<String>> allowedMethods;
 
     public Output<List<String>> getAllowedMethods() {
@@ -37,7 +37,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * is attached to the cache behavior.
      * 
      */
-    @InputImport(name="cachePolicyId")
+    @Import(name="cachePolicyId")
       private final @Nullable Output<String> cachePolicyId;
 
     public Output<String> getCachePolicyId() {
@@ -49,7 +49,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * response to requests using the specified HTTP methods.
      * 
      */
-    @InputImport(name="cachedMethods", required=true)
+    @Import(name="cachedMethods", required=true)
       private final Output<List<String>> cachedMethods;
 
     public Output<List<String>> getCachedMethods() {
@@ -62,7 +62,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * the request header (default: `false`).
      * 
      */
-    @InputImport(name="compress")
+    @Import(name="compress")
       private final @Nullable Output<Boolean> compress;
 
     public Output<Boolean> getCompress() {
@@ -75,7 +75,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * in the absence of an `Cache-Control max-age` or `Expires` header.
      * 
      */
-    @InputImport(name="defaultTtl")
+    @Import(name="defaultTtl")
       private final @Nullable Output<Integer> defaultTtl;
 
     public Output<Integer> getDefaultTtl() {
@@ -86,7 +86,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * Field level encryption configuration ID
      * 
      */
-    @InputImport(name="fieldLevelEncryptionId")
+    @Import(name="fieldLevelEncryptionId")
       private final @Nullable Output<String> fieldLevelEncryptionId;
 
     public Output<String> getFieldLevelEncryptionId() {
@@ -98,7 +98,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * handles query strings, cookies and headers (maximum one).
      * 
      */
-    @InputImport(name="forwardedValues")
+    @Import(name="forwardedValues")
       private final @Nullable Output<DistributionOrderedCacheBehaviorForwardedValuesGetArgs> forwardedValues;
 
     public Output<DistributionOrderedCacheBehaviorForwardedValuesGetArgs> getForwardedValues() {
@@ -110,7 +110,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * function with specific actions (maximum 2).
      * 
      */
-    @InputImport(name="functionAssociations")
+    @Import(name="functionAssociations")
       private final @Nullable Output<List<DistributionOrderedCacheBehaviorFunctionAssociationGetArgs>> functionAssociations;
 
     public Output<List<DistributionOrderedCacheBehaviorFunctionAssociationGetArgs>> getFunctionAssociations() {
@@ -122,7 +122,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * function with specific actions (maximum 4).
      * 
      */
-    @InputImport(name="lambdaFunctionAssociations")
+    @Import(name="lambdaFunctionAssociations")
       private final @Nullable Output<List<DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetArgs>> lambdaFunctionAssociations;
 
     public Output<List<DistributionOrderedCacheBehaviorLambdaFunctionAssociationGetArgs>> getLambdaFunctionAssociations() {
@@ -137,7 +137,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * s-maxage`, and `Expires` headers.
      * 
      */
-    @InputImport(name="maxTtl")
+    @Import(name="maxTtl")
       private final @Nullable Output<Integer> maxTtl;
 
     public Output<Integer> getMaxTtl() {
@@ -150,7 +150,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * whether the object has been updated. Defaults to 0 seconds.
      * 
      */
-    @InputImport(name="minTtl")
+    @Import(name="minTtl")
       private final @Nullable Output<Integer> minTtl;
 
     public Output<Integer> getMinTtl() {
@@ -162,7 +162,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * that is attached to the behavior.
      * 
      */
-    @InputImport(name="originRequestPolicyId")
+    @Import(name="originRequestPolicyId")
       private final @Nullable Output<String> originRequestPolicyId;
 
     public Output<String> getOriginRequestPolicyId() {
@@ -174,7 +174,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * specifies which requests you want this cache behavior to apply to.
      * 
      */
-    @InputImport(name="pathPattern", required=true)
+    @Import(name="pathPattern", required=true)
       private final Output<String> pathPattern;
 
     public Output<String> getPathPattern() {
@@ -186,7 +186,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * that is attached to this cache behavior.
      * 
      */
-    @InputImport(name="realtimeLogConfigArn")
+    @Import(name="realtimeLogConfigArn")
       private final @Nullable Output<String> realtimeLogConfigArn;
 
     public Output<String> getRealtimeLogConfigArn() {
@@ -197,7 +197,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * The identifier for a response headers policy.
      * 
      */
-    @InputImport(name="responseHeadersPolicyId")
+    @Import(name="responseHeadersPolicyId")
       private final @Nullable Output<String> responseHeadersPolicyId;
 
     public Output<String> getResponseHeadersPolicyId() {
@@ -210,7 +210,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * associated with this cache behavior.
      * 
      */
-    @InputImport(name="smoothStreaming")
+    @Import(name="smoothStreaming")
       private final @Nullable Output<Boolean> smoothStreaming;
 
     public Output<Boolean> getSmoothStreaming() {
@@ -223,7 +223,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * either for a cache behavior or for the default cache behavior.
      * 
      */
-    @InputImport(name="targetOriginId", required=true)
+    @Import(name="targetOriginId", required=true)
       private final Output<String> targetOriginId;
 
     public Output<String> getTargetOriginId() {
@@ -235,7 +235,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
      * 
      */
-    @InputImport(name="trustedKeyGroups")
+    @Import(name="trustedKeyGroups")
       private final @Nullable Output<List<String>> trustedKeyGroups;
 
     public Output<List<String>> getTrustedKeyGroups() {
@@ -247,7 +247,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * See the [CloudFront User Guide](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-trusted-signers.html) for more information about this feature.
      * 
      */
-    @InputImport(name="trustedSigners")
+    @Import(name="trustedSigners")
       private final @Nullable Output<List<String>> trustedSigners;
 
     public Output<List<String>> getTrustedSigners() {
@@ -261,7 +261,7 @@ public final class DistributionOrderedCacheBehaviorGetArgs extends io.pulumi.res
      * of `allow-all`, `https-only`, or `redirect-to-https`.
      * 
      */
-    @InputImport(name="viewerProtocolPolicy", required=true)
+    @Import(name="viewerProtocolPolicy", required=true)
       private final Output<String> viewerProtocolPolicy;
 
     public Output<String> getViewerProtocolPolicy() {

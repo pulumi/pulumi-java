@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCertificateResult {
     private final String certificate;
     private final Integer certificateId;
@@ -27,18 +27,18 @@ public final class GetCertificateResult {
     private final @Nullable String project;
     private final String selfLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCertificateResult(
-        @OutputCustomType.Parameter("certificate") String certificate,
-        @OutputCustomType.Parameter("certificateId") Integer certificateId,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namePrefix") String namePrefix,
-        @OutputCustomType.Parameter("privateKey") String privateKey,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("selfLink") String selfLink) {
+        @CustomType.Parameter("certificate") String certificate,
+        @CustomType.Parameter("certificateId") Integer certificateId,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namePrefix") String namePrefix,
+        @CustomType.Parameter("privateKey") String privateKey,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("selfLink") String selfLink) {
         this.certificate = certificate;
         this.certificateId = certificateId;
         this.creationTimestamp = creationTimestamp;

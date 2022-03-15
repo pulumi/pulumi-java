@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appflow.inputs;
 import io.pulumi.awsnative.appflow.enums.FlowTaskType;
 import io.pulumi.awsnative.appflow.inputs.FlowConnectorOperator;
 import io.pulumi.awsnative.appflow.inputs.FlowTaskPropertiesObject;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class FlowTask extends io.pulumi.resources.InvokeArgs {
      * Operation to be performed on provided source fields
      * 
      */
-    @InputImport(name="connectorOperator")
+    @Import(name="connectorOperator")
       private final @Nullable FlowConnectorOperator connectorOperator;
 
     public Optional<FlowConnectorOperator> getConnectorOperator() {
@@ -33,7 +33,7 @@ public final class FlowTask extends io.pulumi.resources.InvokeArgs {
      * A field value on which source field should be validated
      * 
      */
-    @InputImport(name="destinationField")
+    @Import(name="destinationField")
       private final @Nullable String destinationField;
 
     public Optional<String> getDestinationField() {
@@ -44,7 +44,7 @@ public final class FlowTask extends io.pulumi.resources.InvokeArgs {
      * Source fields on which particular task will be applied
      * 
      */
-    @InputImport(name="sourceFields", required=true)
+    @Import(name="sourceFields", required=true)
       private final List<String> sourceFields;
 
     public List<String> getSourceFields() {
@@ -55,7 +55,7 @@ public final class FlowTask extends io.pulumi.resources.InvokeArgs {
      * A Map used to store task related info
      * 
      */
-    @InputImport(name="taskProperties")
+    @Import(name="taskProperties")
       private final @Nullable List<FlowTaskPropertiesObject> taskProperties;
 
     public List<FlowTaskPropertiesObject> getTaskProperties() {
@@ -66,7 +66,7 @@ public final class FlowTask extends io.pulumi.resources.InvokeArgs {
      * Type of task
      * 
      */
-    @InputImport(name="taskType", required=true)
+    @Import(name="taskType", required=true)
       private final FlowTaskType taskType;
 
     public FlowTaskType getTaskType() {

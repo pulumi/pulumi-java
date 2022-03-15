@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.aadiam;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * Flag indicating whether all tenants are allowed
      * 
      */
-    @InputImport(name="allTenants")
+    @Import(name="allTenants")
       private final @Nullable Output<Boolean> allTenants;
 
     public Output<Boolean> getAllTenants() {
@@ -32,7 +32,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * Name of this resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * Guid of the owner tenant
      * 
      */
-    @InputImport(name="ownerTenantId")
+    @Import(name="ownerTenantId")
       private final @Nullable Output<String> ownerTenantId;
 
     public Output<String> getOwnerTenantId() {
@@ -54,7 +54,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * The name of the private link policy in Azure AD.
      * 
      */
-    @InputImport(name="policyName")
+    @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
     public Output<String> getPolicyName() {
@@ -65,7 +65,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * Name of the resource group
      * 
      */
-    @InputImport(name="resourceGroup")
+    @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
 
     public Output<String> getResourceGroup() {
@@ -76,7 +76,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * Name of an Azure resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -87,7 +87,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * Name of the private link policy resource
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -98,7 +98,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * Subscription Identifier
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {
@@ -109,7 +109,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -120,7 +120,7 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
      * The list of tenantIds.
      * 
      */
-    @InputImport(name="tenants")
+    @Import(name="tenants")
       private final @Nullable Output<List<String>> tenants;
 
     public Output<List<String>> getTenants() {

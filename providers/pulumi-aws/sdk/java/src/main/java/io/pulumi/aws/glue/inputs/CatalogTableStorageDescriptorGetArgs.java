@@ -9,7 +9,7 @@ import io.pulumi.aws.glue.inputs.CatalogTableStorageDescriptorSerDeInfoGetArgs;
 import io.pulumi.aws.glue.inputs.CatalogTableStorageDescriptorSkewedInfoGetArgs;
 import io.pulumi.aws.glue.inputs.CatalogTableStorageDescriptorSortColumnGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * List of reducer grouping columns, clustering columns, and bucketing columns in the table.
      * 
      */
-    @InputImport(name="bucketColumns")
+    @Import(name="bucketColumns")
       private final @Nullable Output<List<String>> bucketColumns;
 
     public Output<List<String>> getBucketColumns() {
@@ -38,7 +38,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * Configuration block for columns in the table. See `columns` below.
      * 
      */
-    @InputImport(name="columns")
+    @Import(name="columns")
       private final @Nullable Output<List<CatalogTableStorageDescriptorColumnGetArgs>> columns;
 
     public Output<List<CatalogTableStorageDescriptorColumnGetArgs>> getColumns() {
@@ -49,7 +49,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * Whether the data in the table is compressed.
      * 
      */
-    @InputImport(name="compressed")
+    @Import(name="compressed")
       private final @Nullable Output<Boolean> compressed;
 
     public Output<Boolean> getCompressed() {
@@ -60,7 +60,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * Input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
      * 
      */
-    @InputImport(name="inputFormat")
+    @Import(name="inputFormat")
       private final @Nullable Output<String> inputFormat;
 
     public Output<String> getInputFormat() {
@@ -71,7 +71,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * Physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -82,7 +82,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * Must be specified if the table contains any dimension columns.
      * 
      */
-    @InputImport(name="numberOfBuckets")
+    @Import(name="numberOfBuckets")
       private final @Nullable Output<Integer> numberOfBuckets;
 
     public Output<Integer> getNumberOfBuckets() {
@@ -93,7 +93,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * Output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
      * 
      */
-    @InputImport(name="outputFormat")
+    @Import(name="outputFormat")
       private final @Nullable Output<String> outputFormat;
 
     public Output<String> getOutputFormat() {
@@ -104,7 +104,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * Map of initialization parameters for the SerDe, in key-value form.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
@@ -115,7 +115,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * Object that references a schema stored in the AWS Glue Schema Registry. When creating a table, you can pass an empty list of columns for the schema, and instead use a schema reference. See Schema Reference below.
      * 
      */
-    @InputImport(name="schemaReference")
+    @Import(name="schemaReference")
       private final @Nullable Output<CatalogTableStorageDescriptorSchemaReferenceGetArgs> schemaReference;
 
     public Output<CatalogTableStorageDescriptorSchemaReferenceGetArgs> getSchemaReference() {
@@ -126,7 +126,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * Configuration block for serialization and deserialization ("SerDe") information. See `ser_de_info` below.
      * 
      */
-    @InputImport(name="serDeInfo")
+    @Import(name="serDeInfo")
       private final @Nullable Output<CatalogTableStorageDescriptorSerDeInfoGetArgs> serDeInfo;
 
     public Output<CatalogTableStorageDescriptorSerDeInfoGetArgs> getSerDeInfo() {
@@ -137,7 +137,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * Configuration block with information about values that appear very frequently in a column (skewed values). See `skewed_info` below.
      * 
      */
-    @InputImport(name="skewedInfo")
+    @Import(name="skewedInfo")
       private final @Nullable Output<CatalogTableStorageDescriptorSkewedInfoGetArgs> skewedInfo;
 
     public Output<CatalogTableStorageDescriptorSkewedInfoGetArgs> getSkewedInfo() {
@@ -148,7 +148,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * Configuration block for the sort order of each bucket in the table. See `sort_columns` below.
      * 
      */
-    @InputImport(name="sortColumns")
+    @Import(name="sortColumns")
       private final @Nullable Output<List<CatalogTableStorageDescriptorSortColumnGetArgs>> sortColumns;
 
     public Output<List<CatalogTableStorageDescriptorSortColumnGetArgs>> getSortColumns() {
@@ -159,7 +159,7 @@ public final class CatalogTableStorageDescriptorGetArgs extends io.pulumi.resour
      * Whether the table data is stored in subdirectories.
      * 
      */
-    @InputImport(name="storedAsSubDirectories")
+    @Import(name="storedAsSubDirectories")
       private final @Nullable Output<Boolean> storedAsSubDirectories;
 
     public Output<Boolean> getStoredAsSubDirectories() {

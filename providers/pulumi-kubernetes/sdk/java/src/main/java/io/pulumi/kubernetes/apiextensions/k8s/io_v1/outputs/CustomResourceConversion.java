@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.WebhookConversion;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomResourceConversion {
     /**
      * strategy specifies how custom resources are converted between versions. Allowed values are: - `None`: The converter only change the apiVersion and would not touch any other field in the custom resource. - `Webhook`: API Server will call to an external webhook to do the conversion. Additional information
@@ -24,10 +24,10 @@ public final class CustomResourceConversion {
      */
     private final @Nullable WebhookConversion webhook;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomResourceConversion(
-        @OutputCustomType.Parameter("strategy") String strategy,
-        @OutputCustomType.Parameter("webhook") @Nullable WebhookConversion webhook) {
+        @CustomType.Parameter("strategy") String strategy,
+        @CustomType.Parameter("webhook") @Nullable WebhookConversion webhook) {
         this.strategy = strategy;
         this.webhook = webhook;
     }

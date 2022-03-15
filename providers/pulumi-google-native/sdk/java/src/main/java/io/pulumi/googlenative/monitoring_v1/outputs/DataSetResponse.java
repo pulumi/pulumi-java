@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.TimeSeriesQueryResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSetResponse {
     /**
      * A template string for naming TimeSeries in the resulting data set. This should be a string with interpolations of the form ${label_name}, which will resolve to the label's value.
@@ -36,13 +36,13 @@ public final class DataSetResponse {
      */
     private final TimeSeriesQueryResponse timeSeriesQuery;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSetResponse(
-        @OutputCustomType.Parameter("legendTemplate") String legendTemplate,
-        @OutputCustomType.Parameter("minAlignmentPeriod") String minAlignmentPeriod,
-        @OutputCustomType.Parameter("plotType") String plotType,
-        @OutputCustomType.Parameter("targetAxis") String targetAxis,
-        @OutputCustomType.Parameter("timeSeriesQuery") TimeSeriesQueryResponse timeSeriesQuery) {
+        @CustomType.Parameter("legendTemplate") String legendTemplate,
+        @CustomType.Parameter("minAlignmentPeriod") String minAlignmentPeriod,
+        @CustomType.Parameter("plotType") String plotType,
+        @CustomType.Parameter("targetAxis") String targetAxis,
+        @CustomType.Parameter("timeSeriesQuery") TimeSeriesQueryResponse timeSeriesQuery) {
         this.legendTemplate = legendTemplate;
         this.minAlignmentPeriod = minAlignmentPeriod;
         this.plotType = plotType;

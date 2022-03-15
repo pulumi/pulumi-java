@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetBackendServiceCircuitBreakerConnectTimeout;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackendServiceCircuitBreaker {
     private final List<GetBackendServiceCircuitBreakerConnectTimeout> connectTimeouts;
     private final Integer maxConnections;
@@ -18,14 +18,14 @@ public final class GetBackendServiceCircuitBreaker {
     private final Integer maxRequestsPerConnection;
     private final Integer maxRetries;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackendServiceCircuitBreaker(
-        @OutputCustomType.Parameter("connectTimeouts") List<GetBackendServiceCircuitBreakerConnectTimeout> connectTimeouts,
-        @OutputCustomType.Parameter("maxConnections") Integer maxConnections,
-        @OutputCustomType.Parameter("maxPendingRequests") Integer maxPendingRequests,
-        @OutputCustomType.Parameter("maxRequests") Integer maxRequests,
-        @OutputCustomType.Parameter("maxRequestsPerConnection") Integer maxRequestsPerConnection,
-        @OutputCustomType.Parameter("maxRetries") Integer maxRetries) {
+        @CustomType.Parameter("connectTimeouts") List<GetBackendServiceCircuitBreakerConnectTimeout> connectTimeouts,
+        @CustomType.Parameter("maxConnections") Integer maxConnections,
+        @CustomType.Parameter("maxPendingRequests") Integer maxPendingRequests,
+        @CustomType.Parameter("maxRequests") Integer maxRequests,
+        @CustomType.Parameter("maxRequestsPerConnection") Integer maxRequestsPerConnection,
+        @CustomType.Parameter("maxRetries") Integer maxRetries) {
         this.connectTimeouts = connectTimeouts;
         this.maxConnections = maxConnections;
         this.maxPendingRequests = maxPendingRequests;

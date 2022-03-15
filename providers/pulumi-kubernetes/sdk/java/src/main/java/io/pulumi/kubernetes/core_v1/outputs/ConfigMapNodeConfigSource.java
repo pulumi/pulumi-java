@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigMapNodeConfigSource {
     /**
      * KubeletConfigKey declares which key of the referenced ConfigMap corresponds to the KubeletConfiguration structure This field is required in all cases.
@@ -37,13 +37,13 @@ public final class ConfigMapNodeConfigSource {
      */
     private final @Nullable String uid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigMapNodeConfigSource(
-        @OutputCustomType.Parameter("kubeletConfigKey") String kubeletConfigKey,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namespace") String namespace,
-        @OutputCustomType.Parameter("resourceVersion") @Nullable String resourceVersion,
-        @OutputCustomType.Parameter("uid") @Nullable String uid) {
+        @CustomType.Parameter("kubeletConfigKey") String kubeletConfigKey,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namespace") String namespace,
+        @CustomType.Parameter("resourceVersion") @Nullable String resourceVersion,
+        @CustomType.Parameter("uid") @Nullable String uid) {
         this.kubeletConfigKey = kubeletConfigKey;
         this.name = name;
         this.namespace = namespace;

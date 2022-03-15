@@ -4,21 +4,21 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.OriginRequestPolicyHeadersConfigHeaders;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OriginRequestPolicyHeadersConfig {
     private final @Nullable String headerBehavior;
     private final @Nullable OriginRequestPolicyHeadersConfigHeaders headers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OriginRequestPolicyHeadersConfig(
-        @OutputCustomType.Parameter("headerBehavior") @Nullable String headerBehavior,
-        @OutputCustomType.Parameter("headers") @Nullable OriginRequestPolicyHeadersConfigHeaders headers) {
+        @CustomType.Parameter("headerBehavior") @Nullable String headerBehavior,
+        @CustomType.Parameter("headers") @Nullable OriginRequestPolicyHeadersConfigHeaders headers) {
         this.headerBehavior = headerBehavior;
         this.headers = headers;
     }

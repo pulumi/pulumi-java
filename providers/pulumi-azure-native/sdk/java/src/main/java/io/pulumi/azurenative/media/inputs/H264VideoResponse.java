@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.H264LayerResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class H264VideoResponse extends io.pulumi.resources.InvokeArgs {
      * Tells the encoder how to choose its encoding settings. The default value is Balanced.
      * 
      */
-    @InputImport(name="complexity")
+    @Import(name="complexity")
       private final @Nullable String complexity;
 
     public Optional<String> getComplexity() {
@@ -36,7 +36,7 @@ public final class H264VideoResponse extends io.pulumi.resources.InvokeArgs {
      * The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
      * 
      */
-    @InputImport(name="keyFrameInterval")
+    @Import(name="keyFrameInterval")
       private final @Nullable String keyFrameInterval;
 
     public Optional<String> getKeyFrameInterval() {
@@ -47,7 +47,7 @@ public final class H264VideoResponse extends io.pulumi.resources.InvokeArgs {
      * An optional label for the codec. The label can be used to control muxing behavior.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable String label;
 
     public Optional<String> getLabel() {
@@ -58,7 +58,7 @@ public final class H264VideoResponse extends io.pulumi.resources.InvokeArgs {
      * The collection of output H.264 layers to be produced by the encoder.
      * 
      */
-    @InputImport(name="layers")
+    @Import(name="layers")
       private final @Nullable List<H264LayerResponse> layers;
 
     public List<H264LayerResponse> getLayers() {
@@ -70,7 +70,7 @@ public final class H264VideoResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is '#Microsoft.Media.H264Video'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -81,7 +81,7 @@ public final class H264VideoResponse extends io.pulumi.resources.InvokeArgs {
      * Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.
      * 
      */
-    @InputImport(name="sceneChangeDetection")
+    @Import(name="sceneChangeDetection")
       private final @Nullable Boolean sceneChangeDetection;
 
     public Optional<Boolean> getSceneChangeDetection() {
@@ -92,7 +92,7 @@ public final class H264VideoResponse extends io.pulumi.resources.InvokeArgs {
      * The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
      * 
      */
-    @InputImport(name="stretchMode")
+    @Import(name="stretchMode")
       private final @Nullable String stretchMode;
 
     public Optional<String> getStretchMode() {
@@ -103,7 +103,7 @@ public final class H264VideoResponse extends io.pulumi.resources.InvokeArgs {
      * The Video Sync Mode
      * 
      */
-    @InputImport(name="syncMode")
+    @Import(name="syncMode")
       private final @Nullable String syncMode;
 
     public Optional<String> getSyncMode() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HaVpnGatewayVpnInterface {
     /**
      * The numeric ID of this VPN gateway interface.
@@ -34,11 +34,11 @@ public final class HaVpnGatewayVpnInterface {
      */
     private final @Nullable String ipAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HaVpnGatewayVpnInterface(
-        @OutputCustomType.Parameter("id") @Nullable Integer id,
-        @OutputCustomType.Parameter("interconnectAttachment") @Nullable String interconnectAttachment,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress) {
+        @CustomType.Parameter("id") @Nullable Integer id,
+        @CustomType.Parameter("interconnectAttachment") @Nullable String interconnectAttachment,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress) {
         this.id = id;
         this.interconnectAttachment = interconnectAttachment;
         this.ipAddress = ipAddress;

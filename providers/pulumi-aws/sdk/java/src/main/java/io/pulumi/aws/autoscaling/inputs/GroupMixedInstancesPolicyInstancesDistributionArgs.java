@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
      * Strategy to use when launching on-demand instances. Valid values: `prioritized`. Default: `prioritized`.
      * 
      */
-    @InputImport(name="onDemandAllocationStrategy")
+    @Import(name="onDemandAllocationStrategy")
       private final @Nullable Output<String> onDemandAllocationStrategy;
 
     public Output<String> getOnDemandAllocationStrategy() {
@@ -30,7 +30,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
      * Absolute minimum amount of desired capacity that must be fulfilled by on-demand instances. Default: `0`.
      * 
      */
-    @InputImport(name="onDemandBaseCapacity")
+    @Import(name="onDemandBaseCapacity")
       private final @Nullable Output<Integer> onDemandBaseCapacity;
 
     public Output<Integer> getOnDemandBaseCapacity() {
@@ -41,7 +41,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
      * Percentage split between on-demand and Spot instances above the base on-demand capacity. Default: `100`.
      * 
      */
-    @InputImport(name="onDemandPercentageAboveBaseCapacity")
+    @Import(name="onDemandPercentageAboveBaseCapacity")
       private final @Nullable Output<Integer> onDemandPercentageAboveBaseCapacity;
 
     public Output<Integer> getOnDemandPercentageAboveBaseCapacity() {
@@ -52,7 +52,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
      * How to allocate capacity across the Spot pools. Valid values: `lowest-price`, `capacity-optimized`, `capacity-optimized-prioritized`. Default: `lowest-price`.
      * 
      */
-    @InputImport(name="spotAllocationStrategy")
+    @Import(name="spotAllocationStrategy")
       private final @Nullable Output<String> spotAllocationStrategy;
 
     public Output<String> getSpotAllocationStrategy() {
@@ -63,7 +63,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
      * Number of Spot pools per availability zone to allocate capacity. EC2 Auto Scaling selects the cheapest Spot pools and evenly allocates Spot capacity across the number of Spot pools that you specify. Only available with `spot_allocation_strategy` set to `lowest-price`. Otherwise it must be set to `0`, if it has been defined before. Default: `2`.
      * 
      */
-    @InputImport(name="spotInstancePools")
+    @Import(name="spotInstancePools")
       private final @Nullable Output<Integer> spotInstancePools;
 
     public Output<Integer> getSpotInstancePools() {
@@ -74,7 +74,7 @@ public final class GroupMixedInstancesPolicyInstancesDistributionArgs extends io
      * Maximum price per unit hour that the user is willing to pay for the Spot instances. Default: an empty string which means the on-demand price.
      * 
      */
-    @InputImport(name="spotMaxPrice")
+    @Import(name="spotMaxPrice")
       private final @Nullable Output<String> spotMaxPrice;
 
     public Output<String> getSpotMaxPrice() {

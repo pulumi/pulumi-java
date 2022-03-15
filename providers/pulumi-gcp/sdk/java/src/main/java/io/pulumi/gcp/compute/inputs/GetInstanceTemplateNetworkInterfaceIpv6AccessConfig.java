@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetInstanceTemplateNetworkInterfaceIpv6AccessConfig extends i
 
     public static final GetInstanceTemplateNetworkInterfaceIpv6AccessConfig Empty = new GetInstanceTemplateNetworkInterfaceIpv6AccessConfig();
 
-    @InputImport(name="externalIpv6", required=true)
+    @Import(name="externalIpv6", required=true)
       private final String externalIpv6;
 
     public String getExternalIpv6() {
         return this.externalIpv6;
     }
 
-    @InputImport(name="externalIpv6PrefixLength", required=true)
+    @Import(name="externalIpv6PrefixLength", required=true)
       private final String externalIpv6PrefixLength;
 
     public String getExternalIpv6PrefixLength() {
@@ -32,14 +32,14 @@ public final class GetInstanceTemplateNetworkInterfaceIpv6AccessConfig extends i
      * STANDARD. If this field is not specified, it is assumed to be PREMIUM.
      * 
      */
-    @InputImport(name="networkTier", required=true)
+    @Import(name="networkTier", required=true)
       private final String networkTier;
 
     public String getNetworkTier() {
         return this.networkTier;
     }
 
-    @InputImport(name="publicPtrDomainName", required=true)
+    @Import(name="publicPtrDomainName", required=true)
       private final String publicPtrDomainName;
 
     public String getPublicPtrDomainName() {

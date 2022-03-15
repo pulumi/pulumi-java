@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AutoscaleCapacityArgs extends io.pulumi.resources.ResourceArg
      * The maximum instance count of the cluster
      * 
      */
-    @InputImport(name="maxInstanceCount")
+    @Import(name="maxInstanceCount")
       private final @Nullable Output<Integer> maxInstanceCount;
 
     public Output<Integer> getMaxInstanceCount() {
@@ -33,7 +33,7 @@ public final class AutoscaleCapacityArgs extends io.pulumi.resources.ResourceArg
      * The minimum instance count of the cluster
      * 
      */
-    @InputImport(name="minInstanceCount")
+    @Import(name="minInstanceCount")
       private final @Nullable Output<Integer> minInstanceCount;
 
     public Output<Integer> getMinInstanceCount() {

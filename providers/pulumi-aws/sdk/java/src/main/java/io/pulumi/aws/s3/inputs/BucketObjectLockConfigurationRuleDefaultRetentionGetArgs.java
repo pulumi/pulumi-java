@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BucketObjectLockConfigurationRuleDefaultRetentionGetArgs exte
      * The number of days that you want to specify for the default retention period.
      * 
      */
-    @InputImport(name="days")
+    @Import(name="days")
       private final @Nullable Output<Integer> days;
 
     public Output<Integer> getDays() {
@@ -30,7 +30,7 @@ public final class BucketObjectLockConfigurationRuleDefaultRetentionGetArgs exte
      * The default Object Lock retention mode you want to apply to new objects placed in this bucket. Valid values are `GOVERNANCE` and `COMPLIANCE`.
      * 
      */
-    @InputImport(name="mode", required=true)
+    @Import(name="mode", required=true)
       private final Output<String> mode;
 
     public Output<String> getMode() {
@@ -41,7 +41,7 @@ public final class BucketObjectLockConfigurationRuleDefaultRetentionGetArgs exte
      * The number of years that you want to specify for the default retention period.
      * 
      */
-    @InputImport(name="years")
+    @Import(name="years")
       private final @Nullable Output<Integer> years;
 
     public Output<Integer> getYears() {

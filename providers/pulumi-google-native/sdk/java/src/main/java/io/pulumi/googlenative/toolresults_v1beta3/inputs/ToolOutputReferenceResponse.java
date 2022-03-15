@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.FileReferenceResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.TestCaseReferenceResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.TimestampResponse;
@@ -22,7 +22,7 @@ public final class ToolOutputReferenceResponse extends io.pulumi.resources.Invok
      * The creation time of the file. - In response: present if set by create/update request - In create/update request: optional
      * 
      */
-    @InputImport(name="creationTime", required=true)
+    @Import(name="creationTime", required=true)
       private final TimestampResponse creationTime;
 
     public TimestampResponse getCreationTime() {
@@ -33,7 +33,7 @@ public final class ToolOutputReferenceResponse extends io.pulumi.resources.Invok
      * A FileReference to an output file. - In response: always set - In create/update request: always set
      * 
      */
-    @InputImport(name="output", required=true)
+    @Import(name="output", required=true)
       private final FileReferenceResponse output;
 
     public FileReferenceResponse getOutput() {
@@ -44,7 +44,7 @@ public final class ToolOutputReferenceResponse extends io.pulumi.resources.Invok
      * The test case to which this output file belongs. - In response: present if set by create/update request - In create/update request: optional
      * 
      */
-    @InputImport(name="testCase", required=true)
+    @Import(name="testCase", required=true)
       private final TestCaseReferenceResponse testCase;
 
     public TestCaseReferenceResponse getTestCase() {

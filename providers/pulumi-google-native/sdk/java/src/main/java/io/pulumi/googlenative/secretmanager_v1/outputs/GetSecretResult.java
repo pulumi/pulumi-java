@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.secretmanager_v1.outputs.ReplicationResponse;
 import io.pulumi.googlenative.secretmanager_v1.outputs.RotationResponse;
 import io.pulumi.googlenative.secretmanager_v1.outputs.TopicResponse;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSecretResult {
     /**
      * The time at which the Secret was created.
@@ -60,17 +60,17 @@ public final class GetSecretResult {
      */
     private final String ttl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSecretResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("expireTime") String expireTime,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("replication") ReplicationResponse replication,
-        @OutputCustomType.Parameter("rotation") RotationResponse rotation,
-        @OutputCustomType.Parameter("topics") List<TopicResponse> topics,
-        @OutputCustomType.Parameter("ttl") String ttl) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("expireTime") String expireTime,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("replication") ReplicationResponse replication,
+        @CustomType.Parameter("rotation") RotationResponse rotation,
+        @CustomType.Parameter("topics") List<TopicResponse> topics,
+        @CustomType.Parameter("ttl") String ttl) {
         this.createTime = createTime;
         this.etag = etag;
         this.expireTime = expireTime;

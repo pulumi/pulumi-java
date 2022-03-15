@@ -4,10 +4,10 @@
 package io.pulumi.awsnative.healthlake.outputs;
 
 import io.pulumi.awsnative.healthlake.enums.FHIRDatastorePreloadDataConfigPreloadDataType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FHIRDatastorePreloadDataConfig {
     /**
      * The type of preloaded data. Only Synthea preloaded data is supported.
@@ -15,8 +15,8 @@ public final class FHIRDatastorePreloadDataConfig {
      */
     private final FHIRDatastorePreloadDataConfigPreloadDataType preloadDataType;
 
-    @OutputCustomType.Constructor
-    private FHIRDatastorePreloadDataConfig(@OutputCustomType.Parameter("preloadDataType") FHIRDatastorePreloadDataConfigPreloadDataType preloadDataType) {
+    @CustomType.Constructor
+    private FHIRDatastorePreloadDataConfig(@CustomType.Parameter("preloadDataType") FHIRDatastorePreloadDataConfigPreloadDataType preloadDataType) {
         this.preloadDataType = preloadDataType;
     }
 

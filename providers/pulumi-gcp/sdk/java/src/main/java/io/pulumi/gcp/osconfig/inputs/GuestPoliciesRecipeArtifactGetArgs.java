@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeArtifactGcsGetArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeArtifactRemoteGetArgs;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class GuestPoliciesRecipeArtifactGetArgs extends io.pulumi.resource
      * GCS: An object generation number must be specified.
      * 
      */
-    @InputImport(name="allowInsecure")
+    @Import(name="allowInsecure")
       private final @Nullable Output<Boolean> allowInsecure;
 
     public Output<Boolean> getAllowInsecure() {
@@ -35,7 +35,7 @@ public final class GuestPoliciesRecipeArtifactGetArgs extends io.pulumi.resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="gcs")
+    @Import(name="gcs")
       private final @Nullable Output<GuestPoliciesRecipeArtifactGcsGetArgs> gcs;
 
     public Output<GuestPoliciesRecipeArtifactGcsGetArgs> getGcs() {
@@ -47,7 +47,7 @@ public final class GuestPoliciesRecipeArtifactGetArgs extends io.pulumi.resource
      * Artifacts in a recipe cannot have the same id.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -59,7 +59,7 @@ public final class GuestPoliciesRecipeArtifactGetArgs extends io.pulumi.resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="remote")
+    @Import(name="remote")
       private final @Nullable Output<GuestPoliciesRecipeArtifactRemoteGetArgs> remote;
 
     public Output<GuestPoliciesRecipeArtifactRemoteGetArgs> getRemote() {

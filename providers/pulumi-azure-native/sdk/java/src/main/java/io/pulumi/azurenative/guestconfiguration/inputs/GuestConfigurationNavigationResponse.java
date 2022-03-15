@@ -5,7 +5,7 @@ package io.pulumi.azurenative.guestconfiguration.inputs;
 
 import io.pulumi.azurenative.guestconfiguration.inputs.ConfigurationParameterResponse;
 import io.pulumi.azurenative.guestconfiguration.inputs.ConfigurationSettingResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
      * 
      */
-    @InputImport(name="assignmentType")
+    @Import(name="assignmentType")
       private final @Nullable String assignmentType;
 
     public Optional<String> getAssignmentType() {
@@ -36,7 +36,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * The configuration parameters for the guest configuration.
      * 
      */
-    @InputImport(name="configurationParameter")
+    @Import(name="configurationParameter")
       private final @Nullable List<ConfigurationParameterResponse> configurationParameter;
 
     public List<ConfigurationParameterResponse> getConfigurationParameter() {
@@ -47,7 +47,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * The protected configuration parameters for the guest configuration.
      * 
      */
-    @InputImport(name="configurationProtectedParameter")
+    @Import(name="configurationProtectedParameter")
       private final @Nullable List<ConfigurationParameterResponse> configurationProtectedParameter;
 
     public List<ConfigurationParameterResponse> getConfigurationProtectedParameter() {
@@ -58,7 +58,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * The configuration setting for the guest configuration.
      * 
      */
-    @InputImport(name="configurationSetting")
+    @Import(name="configurationSetting")
       private final @Nullable ConfigurationSettingResponse configurationSetting;
 
     public Optional<ConfigurationSettingResponse> getConfigurationSetting() {
@@ -69,7 +69,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * Combined hash of the guest configuration package and configuration parameters.
      * 
      */
-    @InputImport(name="contentHash")
+    @Import(name="contentHash")
       private final @Nullable String contentHash;
 
     public Optional<String> getContentHash() {
@@ -80,7 +80,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * Specifies the content type of the configuration. Possible values could be Builtin or Custom.
      * 
      */
-    @InputImport(name="contentType", required=true)
+    @Import(name="contentType", required=true)
       private final String contentType;
 
     public String getContentType() {
@@ -91,7 +91,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * Uri of the storage where guest configuration package is uploaded.
      * 
      */
-    @InputImport(name="contentUri")
+    @Import(name="contentUri")
       private final @Nullable String contentUri;
 
     public Optional<String> getContentUri() {
@@ -102,7 +102,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * Kind of the guest configuration. For example:DSC
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable String kind;
 
     public Optional<String> getKind() {
@@ -113,7 +113,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * Name of the guest configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -124,7 +124,7 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
      * Version of the guest configuration.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

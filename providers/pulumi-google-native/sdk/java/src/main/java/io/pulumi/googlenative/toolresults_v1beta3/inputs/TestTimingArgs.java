@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class TestTimingArgs extends io.pulumi.resources.ResourceArgs {
      * How long it took to run the test process. - In response: present if previously set. - In create/update request: optional
      * 
      */
-    @InputImport(name="testProcessDuration")
+    @Import(name="testProcessDuration")
       private final @Nullable Output<DurationArgs> testProcessDuration;
 
     public Output<DurationArgs> getTestProcessDuration() {

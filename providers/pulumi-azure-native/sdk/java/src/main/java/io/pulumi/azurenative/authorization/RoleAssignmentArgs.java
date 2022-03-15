@@ -6,7 +6,7 @@ package io.pulumi.azurenative.authorization;
 import io.pulumi.azurenative.authorization.enums.PrincipalType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The conditions on the role assignment. This limits the resources it can be assigned to. e.g.: @Resource[Microsoft.Storage/storageAccounts/blobServices/containers:ContainerName] StringEqualsIgnoreCase 'foo_storage_container'
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<String> condition;
 
     public Output<String> getCondition() {
@@ -31,7 +31,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Version of the condition. Currently accepted value is '2.0'
      * 
      */
-    @InputImport(name="conditionVersion")
+    @Import(name="conditionVersion")
       private final @Nullable Output<String> conditionVersion;
 
     public Output<String> getConditionVersion() {
@@ -42,7 +42,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Id of the delegated managed identity resource
      * 
      */
-    @InputImport(name="delegatedManagedIdentityResourceId")
+    @Import(name="delegatedManagedIdentityResourceId")
       private final @Nullable Output<String> delegatedManagedIdentityResourceId;
 
     public Output<String> getDelegatedManagedIdentityResourceId() {
@@ -53,7 +53,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Description of role assignment
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -64,7 +64,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The principal ID.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
     public Output<String> getPrincipalId() {
@@ -75,7 +75,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The principal type of the assigned principal ID.
      * 
      */
-    @InputImport(name="principalType")
+    @Import(name="principalType")
       private final @Nullable Output<Either<String,PrincipalType>> principalType;
 
     public Output<Either<String,PrincipalType>> getPrincipalType() {
@@ -86,7 +86,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the role assignment. It can be any valid GUID.
      * 
      */
-    @InputImport(name="roleAssignmentName")
+    @Import(name="roleAssignmentName")
       private final @Nullable Output<String> roleAssignmentName;
 
     public Output<String> getRoleAssignmentName() {
@@ -97,7 +97,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The role definition ID.
      * 
      */
-    @InputImport(name="roleDefinitionId", required=true)
+    @Import(name="roleDefinitionId", required=true)
       private final Output<String> roleDefinitionId;
 
     public Output<String> getRoleDefinitionId() {
@@ -108,7 +108,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The scope of the operation or resource. Valid scopes are: subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {

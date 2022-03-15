@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackendRuleResponse {
     /**
      * The address of the API backend. The scheme is used to determine the backend protocol and security. The following schemes are accepted: SCHEME PROTOCOL SECURITY http:// HTTP None https:// HTTP TLS grpc:// gRPC None grpcs:// gRPC TLS It is recommended to explicitly include a scheme. Leaving out the scheme may cause constrasting behaviors across platforms. If the port is unspecified, the default is: - 80 for schemes without TLS - 443 for schemes with TLS For HTTP backends, use protocol to specify the protocol version.
@@ -48,16 +48,16 @@ public final class BackendRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendRuleResponse(
-        @OutputCustomType.Parameter("address") String address,
-        @OutputCustomType.Parameter("deadline") Double deadline,
-        @OutputCustomType.Parameter("disableAuth") Boolean disableAuth,
-        @OutputCustomType.Parameter("jwtAudience") String jwtAudience,
-        @OutputCustomType.Parameter("operationDeadline") Double operationDeadline,
-        @OutputCustomType.Parameter("pathTranslation") String pathTranslation,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("selector") String selector) {
+        @CustomType.Parameter("address") String address,
+        @CustomType.Parameter("deadline") Double deadline,
+        @CustomType.Parameter("disableAuth") Boolean disableAuth,
+        @CustomType.Parameter("jwtAudience") String jwtAudience,
+        @CustomType.Parameter("operationDeadline") Double operationDeadline,
+        @CustomType.Parameter("pathTranslation") String pathTranslation,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("selector") String selector) {
         this.address = address;
         this.deadline = deadline;
         this.disableAuth = disableAuth;

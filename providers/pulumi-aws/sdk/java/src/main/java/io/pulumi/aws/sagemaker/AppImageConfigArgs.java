@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker;
 
 import io.pulumi.aws.sagemaker.inputs.AppImageConfigKernelGatewayImageConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the App Image Config.
      * 
      */
-    @InputImport(name="appImageConfigName", required=true)
+    @Import(name="appImageConfigName", required=true)
       private final Output<String> appImageConfigName;
 
     public Output<String> getAppImageConfigName() {
@@ -31,7 +31,7 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration for the file system and kernels in a SageMaker image running as a KernelGateway app. See Kernel Gateway Image Config details below.
      * 
      */
-    @InputImport(name="kernelGatewayImageConfig")
+    @Import(name="kernelGatewayImageConfig")
       private final @Nullable Output<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig;
 
     public Output<AppImageConfigKernelGatewayImageConfigArgs> getKernelGatewayImageConfig() {
@@ -42,7 +42,7 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

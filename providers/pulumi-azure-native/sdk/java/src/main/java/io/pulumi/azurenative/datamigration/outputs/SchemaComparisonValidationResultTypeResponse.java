@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SchemaComparisonValidationResultTypeResponse {
     /**
      * Name of the object that has the difference
@@ -25,11 +25,11 @@ public final class SchemaComparisonValidationResultTypeResponse {
      */
     private final String updateAction;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SchemaComparisonValidationResultTypeResponse(
-        @OutputCustomType.Parameter("objectName") String objectName,
-        @OutputCustomType.Parameter("objectType") String objectType,
-        @OutputCustomType.Parameter("updateAction") String updateAction) {
+        @CustomType.Parameter("objectName") String objectName,
+        @CustomType.Parameter("objectType") String objectType,
+        @CustomType.Parameter("updateAction") String updateAction) {
         this.objectName = objectName;
         this.objectType = objectType;
         this.updateAction = updateAction;

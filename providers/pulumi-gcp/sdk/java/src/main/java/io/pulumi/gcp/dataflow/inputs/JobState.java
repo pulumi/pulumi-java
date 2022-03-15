@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -23,7 +23,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * List of experiments that should be used by the job. An example value is `["enable_stackdriver_agent_metrics"]`.
      * 
      */
-    @InputImport(name="additionalExperiments")
+    @Import(name="additionalExperiments")
       private final @Nullable Output<List<String>> additionalExperiments;
 
     public Output<List<String>> getAdditionalExperiments() {
@@ -34,7 +34,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * Enable/disable the use of [Streaming Engine](https://cloud.google.com/dataflow/docs/guides/deploying-a-pipeline#streaming-engine) for the job. Note that Streaming Engine is enabled by default for pipelines developed against the Beam SDK for Python v2.21.0 or later when using Python 3.
      * 
      */
-    @InputImport(name="enableStreamingEngine")
+    @Import(name="enableStreamingEngine")
       private final @Nullable Output<Boolean> enableStreamingEngine;
 
     public Output<Boolean> getEnableStreamingEngine() {
@@ -45,7 +45,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The configuration for VM IPs.  Options are `"WORKER_IP_PUBLIC"` or `"WORKER_IP_PRIVATE"`.
      * 
      */
-    @InputImport(name="ipConfiguration")
+    @Import(name="ipConfiguration")
       private final @Nullable Output<String> ipConfiguration;
 
     public Output<String> getIpConfiguration() {
@@ -56,7 +56,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The unique ID of this job.
      * 
      */
-    @InputImport(name="jobId")
+    @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
     public Output<String> getJobId() {
@@ -67,7 +67,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The name for the Cloud KMS key for the job. Key format is: `projects/PROJECT_ID/locations/LOCATION/keyRings/KEY_RING/cryptoKeys/KEY`
      * 
      */
-    @InputImport(name="kmsKeyName")
+    @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
@@ -82,7 +82,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * <<<<<<< HEAD
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,Object>> labels;
 
     public Output<Map<String,Object>> getLabels() {
@@ -93,7 +93,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The machine type to use for the job.
      * 
      */
-    @InputImport(name="machineType")
+    @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
     public Output<String> getMachineType() {
@@ -104,7 +104,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The number of workers permitted to work on the job.  More workers may improve processing speed at additional cost.
      * 
      */
-    @InputImport(name="maxWorkers")
+    @Import(name="maxWorkers")
       private final @Nullable Output<Integer> maxWorkers;
 
     public Output<Integer> getMaxWorkers() {
@@ -115,7 +115,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * A unique name for the resource, required by Dataflow.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -126,7 +126,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The network to which VMs will be assigned. If it is not provided, "default" will be used.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -137,7 +137,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * One of "drain" or "cancel".  Specifies behavior of deletion during `pulumi destroy`.  See above note.
      * 
      */
-    @InputImport(name="onDelete")
+    @Import(name="onDelete")
       private final @Nullable Output<String> onDelete;
 
     public Output<String> getOnDelete() {
@@ -148,7 +148,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * Key/Value pairs to be passed to the Dataflow job (as used in the template).
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,Object>> parameters;
 
     public Output<Map<String,Object>> getParameters() {
@@ -159,7 +159,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The project in which the resource belongs. If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -170,7 +170,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The region in which the created job should run.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -181,7 +181,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The Service Account email used to create the job.
      * 
      */
-    @InputImport(name="serviceAccountEmail")
+    @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
     public Output<String> getServiceAccountEmail() {
@@ -192,7 +192,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The current state of the resource, selected from the [JobState enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobState)
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -203,7 +203,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The subnetwork to which VMs will be assigned. Should be of the form "regions/REGION/subnetworks/SUBNETWORK". If the [subnetwork is located in a Shared VPC network](https://cloud.google.com/dataflow/docs/guides/specifying-networks#shared), you must use the complete URL. For example `"googleapis.com/compute/v1/projects/PROJECT_ID/regions/REGION/subnetworks/SUBNET_NAME"`
      * 
      */
-    @InputImport(name="subnetwork")
+    @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {
@@ -214,7 +214,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * A writeable location on GCS for the Dataflow job to dump its temporary data.
      * 
      */
-    @InputImport(name="tempGcsLocation")
+    @Import(name="tempGcsLocation")
       private final @Nullable Output<String> tempGcsLocation;
 
     public Output<String> getTempGcsLocation() {
@@ -225,7 +225,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The GCS path to the Dataflow job template.
      * 
      */
-    @InputImport(name="templateGcsPath")
+    @Import(name="templateGcsPath")
       private final @Nullable Output<String> templateGcsPath;
 
     public Output<String> getTemplateGcsPath() {
@@ -237,7 +237,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * > > > > > > > v4.1.0
      * 
      */
-    @InputImport(name="transformNameMapping")
+    @Import(name="transformNameMapping")
       private final @Nullable Output<Map<String,Object>> transformNameMapping;
 
     public Output<Map<String,Object>> getTransformNameMapping() {
@@ -248,7 +248,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The type of this job, selected from the [JobType enum](https://cloud.google.com/dataflow/docs/reference/rest/v1b3/projects.jobs#Job.JobType)
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -259,7 +259,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The zone in which the created job should run. If it is not provided, the provider zone is used.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

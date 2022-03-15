@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NamespaceSpec {
     /**
      * Finalizers is an opaque list of values that must be empty to permanently remove object from storage. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
@@ -17,8 +17,8 @@ public final class NamespaceSpec {
      */
     private final @Nullable List<String> finalizers;
 
-    @OutputCustomType.Constructor
-    private NamespaceSpec(@OutputCustomType.Parameter("finalizers") @Nullable List<String> finalizers) {
+    @CustomType.Constructor
+    private NamespaceSpec(@CustomType.Parameter("finalizers") @Nullable List<String> finalizers) {
         this.finalizers = finalizers;
     }
 

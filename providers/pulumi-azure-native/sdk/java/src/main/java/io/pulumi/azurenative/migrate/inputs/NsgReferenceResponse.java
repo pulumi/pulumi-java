@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class NsgReferenceResponse extends io.pulumi.resources.InvokeArgs {
      * Gets the ARM resource ID of the tracked resource being referenced.
      * 
      */
-    @InputImport(name="sourceArmResourceId", required=true)
+    @Import(name="sourceArmResourceId", required=true)
       private final String sourceArmResourceId;
 
     public String getSourceArmResourceId() {

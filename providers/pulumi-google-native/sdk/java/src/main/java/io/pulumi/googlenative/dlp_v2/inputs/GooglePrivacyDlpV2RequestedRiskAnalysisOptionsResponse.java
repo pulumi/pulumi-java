@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RiskAnalysisJobConfigResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse extend
      * The job config for the risk job.
      * 
      */
-    @InputImport(name="jobConfig", required=true)
+    @Import(name="jobConfig", required=true)
       private final GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig;
 
     public GooglePrivacyDlpV2RiskAnalysisJobConfigResponse getJobConfig() {

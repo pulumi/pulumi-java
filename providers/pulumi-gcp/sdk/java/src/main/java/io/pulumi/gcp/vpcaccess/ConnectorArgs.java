@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vpcaccess;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.vpcaccess.inputs.ConnectorSubnetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * The range of internal addresses that follows RFC 4632 notation. Example: `10.132.0.0/28`.
      * 
      */
-    @InputImport(name="ipCidrRange")
+    @Import(name="ipCidrRange")
       private final @Nullable Output<String> ipCidrRange;
 
     public Output<String> getIpCidrRange() {
@@ -31,7 +31,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Machine type of VM Instance underlying connector. Default is e2-micro
      * 
      */
-    @InputImport(name="machineType")
+    @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
     public Output<String> getMachineType() {
@@ -42,7 +42,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Maximum value of instances in autoscaling group underlying the connector.
      * 
      */
-    @InputImport(name="maxInstances")
+    @Import(name="maxInstances")
       private final @Nullable Output<Integer> maxInstances;
 
     public Output<Integer> getMaxInstances() {
@@ -53,7 +53,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Maximum throughput of the connector in Mbps, must be greater than `min_throughput`. Default is 300.
      * 
      */
-    @InputImport(name="maxThroughput")
+    @Import(name="maxThroughput")
       private final @Nullable Output<Integer> maxThroughput;
 
     public Output<Integer> getMaxThroughput() {
@@ -64,7 +64,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Minimum value of instances in autoscaling group underlying the connector.
      * 
      */
-    @InputImport(name="minInstances")
+    @Import(name="minInstances")
       private final @Nullable Output<Integer> minInstances;
 
     public Output<Integer> getMinInstances() {
@@ -75,7 +75,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Minimum throughput of the connector in Mbps. Default and min is 200.
      * 
      */
-    @InputImport(name="minThroughput")
+    @Import(name="minThroughput")
       private final @Nullable Output<Integer> minThroughput;
 
     public Output<Integer> getMinThroughput() {
@@ -87,7 +87,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -98,7 +98,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Name or self_link of the VPC network. Required if `ip_cidr_range` is set.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -110,7 +110,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -121,7 +121,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Region where the VPC Access connector resides. If it is not provided, the provider region is used.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -133,7 +133,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<ConnectorSubnetArgs> subnet;
 
     public Output<ConnectorSubnetArgs> getSubnet() {

@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamHttpEndpointConfiguration {
     private final @Nullable String accessKey;
     private final @Nullable String name;
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamHttpEndpointConfiguration(
-        @OutputCustomType.Parameter("accessKey") @Nullable String accessKey,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("accessKey") @Nullable String accessKey,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("url") String url) {
         this.accessKey = accessKey;
         this.name = name;
         this.url = url;

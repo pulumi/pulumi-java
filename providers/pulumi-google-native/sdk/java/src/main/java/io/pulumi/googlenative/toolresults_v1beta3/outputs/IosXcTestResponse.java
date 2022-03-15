@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IosXcTestResponse {
     /**
      * Bundle ID of the app.
@@ -20,10 +20,10 @@ public final class IosXcTestResponse {
      */
     private final String xcodeVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IosXcTestResponse(
-        @OutputCustomType.Parameter("bundleId") String bundleId,
-        @OutputCustomType.Parameter("xcodeVersion") String xcodeVersion) {
+        @CustomType.Parameter("bundleId") String bundleId,
+        @CustomType.Parameter("xcodeVersion") String xcodeVersion) {
         this.bundleId = bundleId;
         this.xcodeVersion = xcodeVersion;
     }

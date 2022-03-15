@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.PipelineConditionResponse;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.SerialPipelineResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
      * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
      */
-    @InputImport(name="annotations", required=true)
+    @Import(name="annotations", required=true)
       private final Map<String,String> annotations;
 
     public Map<String,String> getAnnotations() {
@@ -34,7 +34,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
      * Information around the state of the Delivery Pipeline.
      * 
      */
-    @InputImport(name="condition", required=true)
+    @Import(name="condition", required=true)
       private final PipelineConditionResponse condition;
 
     public PipelineConditionResponse getCondition() {
@@ -45,7 +45,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
      * Time at which the pipeline was created.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -56,7 +56,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
      * Description of the `DeliveryPipeline`. Max length is 255 characters.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -67,7 +67,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
      * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -78,7 +78,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
      * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
      * 
      */
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
@@ -89,7 +89,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
      * Optional. Name of the `DeliveryPipeline`. Format is projects/{project}/ locations/{location}/deliveryPipelines/a-z{0,62}.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -100,7 +100,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
      * SerialPipeline defines a sequential set of stages for a `DeliveryPipeline`.
      * 
      */
-    @InputImport(name="serialPipeline", required=true)
+    @Import(name="serialPipeline", required=true)
       private final SerialPipelineResponse serialPipeline;
 
     public SerialPipelineResponse getSerialPipeline() {
@@ -111,7 +111,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
      * Unique identifier of the `DeliveryPipeline`.
      * 
      */
-    @InputImport(name="uid", required=true)
+    @Import(name="uid", required=true)
       private final String uid;
 
     public String getUid() {
@@ -122,7 +122,7 @@ public final class DeliveryPipelineResponse extends io.pulumi.resources.InvokeAr
      * Most recent time at which the pipeline was updated.
      * 
      */
-    @InputImport(name="updateTime", required=true)
+    @Import(name="updateTime", required=true)
       private final String updateTime;
 
     public String getUpdateTime() {

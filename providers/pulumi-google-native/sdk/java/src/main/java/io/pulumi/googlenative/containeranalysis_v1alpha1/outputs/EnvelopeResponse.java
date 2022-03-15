@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.EnvelopeSignatureResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EnvelopeResponse {
     /**
      * The bytes being signed
@@ -27,11 +27,11 @@ public final class EnvelopeResponse {
      */
     private final List<EnvelopeSignatureResponse> signatures;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvelopeResponse(
-        @OutputCustomType.Parameter("payload") String payload,
-        @OutputCustomType.Parameter("payloadType") String payloadType,
-        @OutputCustomType.Parameter("signatures") List<EnvelopeSignatureResponse> signatures) {
+        @CustomType.Parameter("payload") String payload,
+        @CustomType.Parameter("payloadType") String payloadType,
+        @CustomType.Parameter("signatures") List<EnvelopeSignatureResponse> signatures) {
         this.payload = payload;
         this.payloadType = payloadType;
         this.signatures = signatures;

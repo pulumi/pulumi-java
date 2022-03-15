@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.MoveResourceErrorBodyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MoveResourcePropertiesResponseErrors {
     /**
      * The move resource error body.
@@ -17,8 +17,8 @@ public final class MoveResourcePropertiesResponseErrors {
      */
     private final @Nullable MoveResourceErrorBodyResponse properties;
 
-    @OutputCustomType.Constructor
-    private MoveResourcePropertiesResponseErrors(@OutputCustomType.Parameter("properties") @Nullable MoveResourceErrorBodyResponse properties) {
+    @CustomType.Constructor
+    private MoveResourcePropertiesResponseErrors(@CustomType.Parameter("properties") @Nullable MoveResourceErrorBodyResponse properties) {
         this.properties = properties;
     }
 

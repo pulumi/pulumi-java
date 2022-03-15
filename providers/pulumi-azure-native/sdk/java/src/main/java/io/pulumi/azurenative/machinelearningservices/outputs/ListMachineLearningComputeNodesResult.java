@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.AmlComputeNodeInformationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListMachineLearningComputeNodesResult {
     /**
      * The type of compute
@@ -28,11 +28,11 @@ public final class ListMachineLearningComputeNodesResult {
      */
     private final List<AmlComputeNodeInformationResponse> nodes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListMachineLearningComputeNodesResult(
-        @OutputCustomType.Parameter("computeType") String computeType,
-        @OutputCustomType.Parameter("nextLink") String nextLink,
-        @OutputCustomType.Parameter("nodes") List<AmlComputeNodeInformationResponse> nodes) {
+        @CustomType.Parameter("computeType") String computeType,
+        @CustomType.Parameter("nextLink") String nextLink,
+        @CustomType.Parameter("nodes") List<AmlComputeNodeInformationResponse> nodes) {
         this.computeType = computeType;
         this.nextLink = nextLink;
         this.nodes = nodes;

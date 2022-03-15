@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ErrorAdditionalInfoResponse {
     /**
      * The additional info.
@@ -21,10 +21,10 @@ public final class ErrorAdditionalInfoResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ErrorAdditionalInfoResponse(
-        @OutputCustomType.Parameter("info") Object info,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("info") Object info,
+        @CustomType.Parameter("type") String type) {
         this.info = info;
         this.type = type;
     }

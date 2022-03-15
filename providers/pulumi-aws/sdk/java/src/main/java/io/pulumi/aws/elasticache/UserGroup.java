@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.elasticache.UserGroupArgs;
 import io.pulumi.aws.elasticache.inputs.UserGroupState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws:elasticache/userGroup:UserGroup")
 public class UserGroup extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -40,7 +40,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * The current supported value is `REDIS`.
      * 
      */
-    @OutputExport(name="engine", type=String.class, parameters={})
+    @Export(name="engine", type=String.class, parameters={})
     private Output<String> engine;
 
     /**
@@ -50,13 +50,13 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
     public Output<String> getEngine() {
         return this.engine;
     }
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -66,7 +66,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * The ID of the user group.
      * 
      */
-    @OutputExport(name="userGroupId", type=String.class, parameters={})
+    @Export(name="userGroupId", type=String.class, parameters={})
     private Output<String> userGroupId;
 
     /**
@@ -80,7 +80,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * The list of user IDs that belong to the user group.
      * 
      */
-    @OutputExport(name="userIds", type=List.class, parameters={String.class})
+    @Export(name="userIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> userIds;
 
     /**

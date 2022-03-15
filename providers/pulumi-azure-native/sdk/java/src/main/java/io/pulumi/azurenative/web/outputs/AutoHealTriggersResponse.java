@@ -7,14 +7,14 @@ import io.pulumi.azurenative.web.outputs.RequestsBasedTriggerResponse;
 import io.pulumi.azurenative.web.outputs.SlowRequestsBasedTriggerResponse;
 import io.pulumi.azurenative.web.outputs.StatusCodesBasedTriggerResponse;
 import io.pulumi.azurenative.web.outputs.StatusCodesRangeBasedTriggerResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoHealTriggersResponse {
     /**
      * A rule based on private bytes.
@@ -47,14 +47,14 @@ public final class AutoHealTriggersResponse {
      */
     private final @Nullable List<StatusCodesRangeBasedTriggerResponse> statusCodesRange;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoHealTriggersResponse(
-        @OutputCustomType.Parameter("privateBytesInKB") @Nullable Integer privateBytesInKB,
-        @OutputCustomType.Parameter("requests") @Nullable RequestsBasedTriggerResponse requests,
-        @OutputCustomType.Parameter("slowRequests") @Nullable SlowRequestsBasedTriggerResponse slowRequests,
-        @OutputCustomType.Parameter("slowRequestsWithPath") @Nullable List<SlowRequestsBasedTriggerResponse> slowRequestsWithPath,
-        @OutputCustomType.Parameter("statusCodes") @Nullable List<StatusCodesBasedTriggerResponse> statusCodes,
-        @OutputCustomType.Parameter("statusCodesRange") @Nullable List<StatusCodesRangeBasedTriggerResponse> statusCodesRange) {
+        @CustomType.Parameter("privateBytesInKB") @Nullable Integer privateBytesInKB,
+        @CustomType.Parameter("requests") @Nullable RequestsBasedTriggerResponse requests,
+        @CustomType.Parameter("slowRequests") @Nullable SlowRequestsBasedTriggerResponse slowRequests,
+        @CustomType.Parameter("slowRequestsWithPath") @Nullable List<SlowRequestsBasedTriggerResponse> slowRequestsWithPath,
+        @CustomType.Parameter("statusCodes") @Nullable List<StatusCodesBasedTriggerResponse> statusCodes,
+        @CustomType.Parameter("statusCodesRange") @Nullable List<StatusCodesRangeBasedTriggerResponse> statusCodesRange) {
         this.privateBytesInKB = privateBytesInKB;
         this.requests = requests;
         this.slowRequests = slowRequests;

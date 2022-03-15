@@ -8,7 +8,7 @@ import io.pulumi.awsnative.lightsail.DatabaseArgs;
 import io.pulumi.awsnative.lightsail.outputs.DatabaseRelationalDatabaseParameter;
 import io.pulumi.awsnative.lightsail.outputs.DatabaseTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The Availability Zone in which to create your new database. Use the us-east-2a case-sensitive format.
      * 
      */
-    @OutputExport(name="availabilityZone", type=String.class, parameters={})
+    @Export(name="availabilityZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilityZone;
 
     /**
@@ -39,7 +39,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * When true, enables automated backup retention for your database. Updates are applied during the next maintenance window because this can result in an outage.
      * 
      */
-    @OutputExport(name="backupRetention", type=Boolean.class, parameters={})
+    @Export(name="backupRetention", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> backupRetention;
 
     /**
@@ -53,7 +53,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Indicates the certificate that needs to be associated with the database.
      * 
      */
-    @OutputExport(name="caCertificateIdentifier", type=String.class, parameters={})
+    @Export(name="caCertificateIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> caCertificateIdentifier;
 
     /**
@@ -63,7 +63,7 @@ public class Database extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getCaCertificateIdentifier() {
         return this.caCertificateIdentifier;
     }
-    @OutputExport(name="databaseArn", type=String.class, parameters={})
+    @Export(name="databaseArn", type=String.class, parameters={})
     private Output<String> databaseArn;
 
     public Output<String> getDatabaseArn() {
@@ -73,7 +73,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The name of the database to create when the Lightsail database resource is created. For MySQL, if this parameter isn't specified, no database is created in the database resource. For PostgreSQL, if this parameter isn't specified, a database named postgres is created in the database resource.
      * 
      */
-    @OutputExport(name="masterDatabaseName", type=String.class, parameters={})
+    @Export(name="masterDatabaseName", type=String.class, parameters={})
     private Output<String> masterDatabaseName;
 
     /**
@@ -87,7 +87,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The password for the master user. The password can include any printable ASCII character except "/", """, or "@". It cannot contain spaces.
      * 
      */
-    @OutputExport(name="masterUserPassword", type=String.class, parameters={})
+    @Export(name="masterUserPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> masterUserPassword;
 
     /**
@@ -101,7 +101,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The name for the master user.
      * 
      */
-    @OutputExport(name="masterUsername", type=String.class, parameters={})
+    @Export(name="masterUsername", type=String.class, parameters={})
     private Output<String> masterUsername;
 
     /**
@@ -115,7 +115,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The daily time range during which automated backups are created for your new database if automated backups are enabled.
      * 
      */
-    @OutputExport(name="preferredBackupWindow", type=String.class, parameters={})
+    @Export(name="preferredBackupWindow", type=String.class, parameters={})
     private Output</* @Nullable */ String> preferredBackupWindow;
 
     /**
@@ -129,7 +129,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The weekly time range during which system maintenance can occur on your new database.
      * 
      */
-    @OutputExport(name="preferredMaintenanceWindow", type=String.class, parameters={})
+    @Export(name="preferredMaintenanceWindow", type=String.class, parameters={})
     private Output</* @Nullable */ String> preferredMaintenanceWindow;
 
     /**
@@ -143,7 +143,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Specifies the accessibility options for your new database. A value of true specifies a database that is available to resources outside of your Lightsail account. A value of false specifies a database that is available only to your Lightsail resources in the same region as your database.
      * 
      */
-    @OutputExport(name="publiclyAccessible", type=Boolean.class, parameters={})
+    @Export(name="publiclyAccessible", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> publiclyAccessible;
 
     /**
@@ -157,7 +157,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The blueprint ID for your new database. A blueprint describes the major engine version of a database.
      * 
      */
-    @OutputExport(name="relationalDatabaseBlueprintId", type=String.class, parameters={})
+    @Export(name="relationalDatabaseBlueprintId", type=String.class, parameters={})
     private Output<String> relationalDatabaseBlueprintId;
 
     /**
@@ -171,7 +171,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The bundle ID for your new database. A bundle describes the performance specifications for your database.
      * 
      */
-    @OutputExport(name="relationalDatabaseBundleId", type=String.class, parameters={})
+    @Export(name="relationalDatabaseBundleId", type=String.class, parameters={})
     private Output<String> relationalDatabaseBundleId;
 
     /**
@@ -185,7 +185,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The name to use for your new Lightsail database resource.
      * 
      */
-    @OutputExport(name="relationalDatabaseName", type=String.class, parameters={})
+    @Export(name="relationalDatabaseName", type=String.class, parameters={})
     private Output<String> relationalDatabaseName;
 
     /**
@@ -199,7 +199,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * Update one or more parameters of the relational database.
      * 
      */
-    @OutputExport(name="relationalDatabaseParameters", type=List.class, parameters={DatabaseRelationalDatabaseParameter.class})
+    @Export(name="relationalDatabaseParameters", type=List.class, parameters={DatabaseRelationalDatabaseParameter.class})
     private Output</* @Nullable */ List<DatabaseRelationalDatabaseParameter>> relationalDatabaseParameters;
 
     /**
@@ -213,7 +213,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * When true, the master user password is changed to a new strong password generated by Lightsail. Use the get relational database master user password operation to get the new password.
      * 
      */
-    @OutputExport(name="rotateMasterUserPassword", type=Boolean.class, parameters={})
+    @Export(name="rotateMasterUserPassword", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> rotateMasterUserPassword;
 
     /**
@@ -227,7 +227,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DatabaseTag.class})
+    @Export(name="tags", type=List.class, parameters={DatabaseTag.class})
     private Output</* @Nullable */ List<DatabaseTag>> tags;
 
     /**

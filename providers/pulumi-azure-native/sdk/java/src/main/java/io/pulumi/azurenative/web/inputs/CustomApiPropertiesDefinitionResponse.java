@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.inputs.ApiResourceBackendServiceResponse;
 import io.pulumi.azurenative.web.inputs.ApiResourceDefinitionsResponse;
 import io.pulumi.azurenative.web.inputs.ConnectionParameterResponse;
 import io.pulumi.azurenative.web.inputs.WsdlDefinitionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * API Definitions
      * 
      */
-    @InputImport(name="apiDefinitions")
+    @Import(name="apiDefinitions")
       private final @Nullable ApiResourceDefinitionsResponse apiDefinitions;
 
     public Optional<ApiResourceDefinitionsResponse> getApiDefinitions() {
@@ -40,7 +40,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * The API type
      * 
      */
-    @InputImport(name="apiType")
+    @Import(name="apiType")
       private final @Nullable String apiType;
 
     public Optional<String> getApiType() {
@@ -51,7 +51,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * The API backend service
      * 
      */
-    @InputImport(name="backendService")
+    @Import(name="backendService")
       private final @Nullable ApiResourceBackendServiceResponse backendService;
 
     public Optional<ApiResourceBackendServiceResponse> getBackendService() {
@@ -62,7 +62,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * Brand color
      * 
      */
-    @InputImport(name="brandColor")
+    @Import(name="brandColor")
       private final @Nullable String brandColor;
 
     public Optional<String> getBrandColor() {
@@ -73,7 +73,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * The custom API capabilities
      * 
      */
-    @InputImport(name="capabilities")
+    @Import(name="capabilities")
       private final @Nullable List<String> capabilities;
 
     public List<String> getCapabilities() {
@@ -84,7 +84,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * Connection parameters
      * 
      */
-    @InputImport(name="connectionParameters")
+    @Import(name="connectionParameters")
       private final @Nullable Map<String,ConnectionParameterResponse> connectionParameters;
 
     public Map<String,ConnectionParameterResponse> getConnectionParameters() {
@@ -95,7 +95,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * The custom API description
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -106,7 +106,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * The display name
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -117,7 +117,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * The icon URI
      * 
      */
-    @InputImport(name="iconUri")
+    @Import(name="iconUri")
       private final @Nullable String iconUri;
 
     public Optional<String> getIconUri() {
@@ -128,7 +128,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * Runtime URLs
      * 
      */
-    @InputImport(name="runtimeUrls")
+    @Import(name="runtimeUrls")
       private final @Nullable List<String> runtimeUrls;
 
     public List<String> getRuntimeUrls() {
@@ -139,7 +139,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * The JSON representation of the swagger
      * 
      */
-    @InputImport(name="swagger")
+    @Import(name="swagger")
       private final @Nullable Object swagger;
 
     public Optional<Object> getSwagger() {
@@ -150,7 +150,7 @@ public final class CustomApiPropertiesDefinitionResponse extends io.pulumi.resou
      * The WSDL definition
      * 
      */
-    @InputImport(name="wsdlDefinition")
+    @Import(name="wsdlDefinition")
       private final @Nullable WsdlDefinitionResponse wsdlDefinition;
 
     public Optional<WsdlDefinitionResponse> getWsdlDefinition() {

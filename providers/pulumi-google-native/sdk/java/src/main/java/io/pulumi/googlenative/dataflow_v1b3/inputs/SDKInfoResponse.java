@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SDKInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The SDK Language.
      * 
      */
-    @InputImport(name="language", required=true)
+    @Import(name="language", required=true)
       private final String language;
 
     public String getLanguage() {
@@ -31,7 +31,7 @@ public final class SDKInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. The SDK version.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

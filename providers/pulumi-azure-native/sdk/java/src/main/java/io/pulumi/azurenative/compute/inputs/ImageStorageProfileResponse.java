@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.ImageDataDiskResponse;
 import io.pulumi.azurenative.compute.inputs.ImageOSDiskResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ImageStorageProfileResponse extends io.pulumi.resources.Invok
      * Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
      * 
      */
-    @InputImport(name="dataDisks")
+    @Import(name="dataDisks")
       private final @Nullable List<ImageDataDiskResponse> dataDisks;
 
     public List<ImageDataDiskResponse> getDataDisks() {
@@ -36,7 +36,7 @@ public final class ImageStorageProfileResponse extends io.pulumi.resources.Invok
      * Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
      * 
      */
-    @InputImport(name="osDisk")
+    @Import(name="osDisk")
       private final @Nullable ImageOSDiskResponse osDisk;
 
     public Optional<ImageOSDiskResponse> getOsDisk() {
@@ -47,7 +47,7 @@ public final class ImageStorageProfileResponse extends io.pulumi.resources.Invok
      * Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).
      * 
      */
-    @InputImport(name="zoneResilient")
+    @Import(name="zoneResilient")
       private final @Nullable Boolean zoneResilient;
 
     public Optional<Boolean> getZoneResilient() {

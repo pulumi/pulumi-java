@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MiSqlConnectionInfoResponse {
     /**
      * Resource id for Azure SQL database Managed instance
@@ -33,12 +33,12 @@ public final class MiSqlConnectionInfoResponse {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MiSqlConnectionInfoResponse(
-        @OutputCustomType.Parameter("managedInstanceResourceId") String managedInstanceResourceId,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userName") @Nullable String userName) {
+        @CustomType.Parameter("managedInstanceResourceId") String managedInstanceResourceId,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userName") @Nullable String userName) {
         this.managedInstanceResourceId = managedInstanceResourceId;
         this.password = password;
         this.type = type;

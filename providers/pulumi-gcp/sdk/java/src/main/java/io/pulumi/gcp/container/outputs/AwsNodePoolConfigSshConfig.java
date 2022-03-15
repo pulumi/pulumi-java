@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AwsNodePoolConfigSshConfig {
     /**
      * Required. The name of the EC2 key pair used to login into cluster machines.
@@ -15,8 +15,8 @@ public final class AwsNodePoolConfigSshConfig {
      */
     private final String ec2KeyPair;
 
-    @OutputCustomType.Constructor
-    private AwsNodePoolConfigSshConfig(@OutputCustomType.Parameter("ec2KeyPair") String ec2KeyPair) {
+    @CustomType.Constructor
+    private AwsNodePoolConfigSshConfig(@CustomType.Parameter("ec2KeyPair") String ec2KeyPair) {
         this.ec2KeyPair = ec2KeyPair;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class VolumeProviderParametersAzureFileResponse extends io.pulumi.r
      * Access key of the Azure storage account for the File Share.
      * 
      */
-    @InputImport(name="accountKey")
+    @Import(name="accountKey")
       private final @Nullable String accountKey;
 
     public Optional<String> getAccountKey() {
@@ -33,7 +33,7 @@ public final class VolumeProviderParametersAzureFileResponse extends io.pulumi.r
      * Name of the Azure storage account for the File Share.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -44,7 +44,7 @@ public final class VolumeProviderParametersAzureFileResponse extends io.pulumi.r
      * Name of the Azure Files file share that provides storage for the volume.
      * 
      */
-    @InputImport(name="shareName", required=true)
+    @Import(name="shareName", required=true)
       private final String shareName;
 
     public String getShareName() {

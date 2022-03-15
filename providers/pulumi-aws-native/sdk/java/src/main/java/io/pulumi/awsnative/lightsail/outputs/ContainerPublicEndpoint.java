@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.lightsail.outputs;
 
 import io.pulumi.awsnative.lightsail.outputs.ContainerHealthCheckConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerPublicEndpoint {
     /**
      * The name of the container for the endpoint.
@@ -29,11 +29,11 @@ public final class ContainerPublicEndpoint {
      */
     private final @Nullable ContainerHealthCheckConfig healthCheckConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerPublicEndpoint(
-        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
-        @OutputCustomType.Parameter("containerPort") @Nullable Integer containerPort,
-        @OutputCustomType.Parameter("healthCheckConfig") @Nullable ContainerHealthCheckConfig healthCheckConfig) {
+        @CustomType.Parameter("containerName") @Nullable String containerName,
+        @CustomType.Parameter("containerPort") @Nullable Integer containerPort,
+        @CustomType.Parameter("healthCheckConfig") @Nullable ContainerHealthCheckConfig healthCheckConfig) {
         this.containerName = containerName;
         this.containerPort = containerPort;
         this.healthCheckConfig = healthCheckConfig;

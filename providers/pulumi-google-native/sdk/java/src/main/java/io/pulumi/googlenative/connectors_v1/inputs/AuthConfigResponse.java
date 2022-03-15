@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.connectors_v1.inputs.ConfigVariableResponse;
 import io.pulumi.googlenative.connectors_v1.inputs.Oauth2ClientCredentialsResponse;
 import io.pulumi.googlenative.connectors_v1.inputs.Oauth2JwtBearerResponse;
@@ -25,7 +25,7 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
      * List containing additional auth configs.
      * 
      */
-    @InputImport(name="additionalVariables", required=true)
+    @Import(name="additionalVariables", required=true)
       private final List<ConfigVariableResponse> additionalVariables;
 
     public List<ConfigVariableResponse> getAdditionalVariables() {
@@ -36,7 +36,7 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The type of authentication configured.
      * 
      */
-    @InputImport(name="authType", required=true)
+    @Import(name="authType", required=true)
       private final String authType;
 
     public String getAuthType() {
@@ -47,7 +47,7 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Oauth2ClientCredentials.
      * 
      */
-    @InputImport(name="oauth2ClientCredentials", required=true)
+    @Import(name="oauth2ClientCredentials", required=true)
       private final Oauth2ClientCredentialsResponse oauth2ClientCredentials;
 
     public Oauth2ClientCredentialsResponse getOauth2ClientCredentials() {
@@ -58,7 +58,7 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Oauth2JwtBearer.
      * 
      */
-    @InputImport(name="oauth2JwtBearer", required=true)
+    @Import(name="oauth2JwtBearer", required=true)
       private final Oauth2JwtBearerResponse oauth2JwtBearer;
 
     public Oauth2JwtBearerResponse getOauth2JwtBearer() {
@@ -69,7 +69,7 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
      * UserPassword.
      * 
      */
-    @InputImport(name="userPassword", required=true)
+    @Import(name="userPassword", required=true)
       private final UserPasswordResponse userPassword;
 
     public UserPasswordResponse getUserPassword() {

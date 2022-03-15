@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorCloudWatchLogsLogDeliver
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorFirehoseLogDeliveryArgs;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorS3LogDeliveryArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,21 +20,21 @@ public final class ConnectorWorkerLogDeliveryArgs extends io.pulumi.resources.Re
 
     public static final ConnectorWorkerLogDeliveryArgs Empty = new ConnectorWorkerLogDeliveryArgs();
 
-    @InputImport(name="cloudWatchLogs")
+    @Import(name="cloudWatchLogs")
       private final @Nullable Output<ConnectorCloudWatchLogsLogDeliveryArgs> cloudWatchLogs;
 
     public Output<ConnectorCloudWatchLogsLogDeliveryArgs> getCloudWatchLogs() {
         return this.cloudWatchLogs == null ? Output.empty() : this.cloudWatchLogs;
     }
 
-    @InputImport(name="firehose")
+    @Import(name="firehose")
       private final @Nullable Output<ConnectorFirehoseLogDeliveryArgs> firehose;
 
     public Output<ConnectorFirehoseLogDeliveryArgs> getFirehose() {
         return this.firehose == null ? Output.empty() : this.firehose;
     }
 
-    @InputImport(name="s3")
+    @Import(name="s3")
       private final @Nullable Output<ConnectorS3LogDeliveryArgs> s3;
 
     public Output<ConnectorS3LogDeliveryArgs> getS3() {

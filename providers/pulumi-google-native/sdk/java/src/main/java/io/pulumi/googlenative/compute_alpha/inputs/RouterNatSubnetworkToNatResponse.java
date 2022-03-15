@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RouterNatSubnetworkToNatResponse extends io.pulumi.resources.
      * URL for the subnetwork resource that will use NAT.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -32,7 +32,7 @@ public final class RouterNatSubnetworkToNatResponse extends io.pulumi.resources.
      * A list of the secondary ranges of the Subnetwork that are allowed to use NAT. This can be populated only if "LIST_OF_SECONDARY_IP_RANGES" is one of the values in source_ip_ranges_to_nat.
      * 
      */
-    @InputImport(name="secondaryIpRangeNames", required=true)
+    @Import(name="secondaryIpRangeNames", required=true)
       private final List<String> secondaryIpRangeNames;
 
     public List<String> getSecondaryIpRangeNames() {
@@ -43,7 +43,7 @@ public final class RouterNatSubnetworkToNatResponse extends io.pulumi.resources.
      * Specify the options for NAT ranges in the Subnetwork. All options of a single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only valid option with multiple values is: ["PRIMARY_IP_RANGE", "LIST_OF_SECONDARY_IP_RANGES"] Default: [ALL_IP_RANGES]
      * 
      */
-    @InputImport(name="sourceIpRangesToNat", required=true)
+    @Import(name="sourceIpRangesToNat", required=true)
       private final List<String> sourceIpRangesToNat;
 
     public List<String> getSourceIpRangesToNat() {

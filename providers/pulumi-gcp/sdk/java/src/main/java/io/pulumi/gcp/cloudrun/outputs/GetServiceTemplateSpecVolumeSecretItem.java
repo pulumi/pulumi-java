@@ -3,22 +3,22 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceTemplateSpecVolumeSecretItem {
     private final String key;
     private final Integer mode;
     private final String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceTemplateSpecVolumeSecretItem(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("mode") Integer mode,
-        @OutputCustomType.Parameter("path") String path) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("mode") Integer mode,
+        @CustomType.Parameter("path") String path) {
         this.key = key;
         this.mode = mode;
         this.path = path;

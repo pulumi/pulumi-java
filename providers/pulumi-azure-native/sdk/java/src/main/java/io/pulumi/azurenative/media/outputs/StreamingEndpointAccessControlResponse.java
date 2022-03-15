@@ -5,12 +5,12 @@ package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.AkamaiAccessControlResponse;
 import io.pulumi.azurenative.media.outputs.IPAccessControlResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StreamingEndpointAccessControlResponse {
     /**
      * The access control of Akamai
@@ -23,10 +23,10 @@ public final class StreamingEndpointAccessControlResponse {
      */
     private final @Nullable IPAccessControlResponse ip;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StreamingEndpointAccessControlResponse(
-        @OutputCustomType.Parameter("akamai") @Nullable AkamaiAccessControlResponse akamai,
-        @OutputCustomType.Parameter("ip") @Nullable IPAccessControlResponse ip) {
+        @CustomType.Parameter("akamai") @Nullable AkamaiAccessControlResponse akamai,
+        @CustomType.Parameter("ip") @Nullable IPAccessControlResponse ip) {
         this.akamai = akamai;
         this.ip = ip;
     }

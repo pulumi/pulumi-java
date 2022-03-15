@@ -4,7 +4,7 @@
 package io.pulumi.aws.serverlessrepository.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
      * The ARN of the application from the Serverless Application Repository.
      * 
      */
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -31,7 +31,7 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
      * A list of capabilities. Valid values are `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, `CAPABILITY_RESOURCE_POLICY`, or `CAPABILITY_AUTO_EXPAND`
      * 
      */
-    @InputImport(name="capabilities")
+    @Import(name="capabilities")
       private final @Nullable Output<List<String>> capabilities;
 
     public Output<List<String>> getCapabilities() {
@@ -42,7 +42,7 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
      * The name of the stack to create. The resource deployed in AWS will be prefixed with `serverlessrepo-`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
      * A map of outputs from the stack.
      * 
      */
-    @InputImport(name="outputs")
+    @Import(name="outputs")
       private final @Nullable Output<Map<String,String>> outputs;
 
     public Output<Map<String,String>> getOutputs() {
@@ -64,7 +64,7 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
      * A map of Parameter structures that specify input parameters for the stack.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
@@ -75,7 +75,7 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
      * The version of the application to deploy. If not supplied, deploys the latest version.
      * 
      */
-    @InputImport(name="semanticVersion")
+    @Import(name="semanticVersion")
       private final @Nullable Output<String> semanticVersion;
 
     public Output<String> getSemanticVersion() {
@@ -86,7 +86,7 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
      * A list of tags to associate with this stack. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -97,7 +97,7 @@ public final class CloudFormationStackState extends io.pulumi.resources.Resource
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

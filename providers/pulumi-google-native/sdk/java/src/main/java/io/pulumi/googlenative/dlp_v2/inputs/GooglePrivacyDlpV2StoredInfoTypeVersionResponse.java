@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ErrorResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2StoredInfoTypeConfigResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2StoredInfoTypeStatsResponse;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
      * StoredInfoType configuration.
      * 
      */
-    @InputImport(name="config", required=true)
+    @Import(name="config", required=true)
       private final GooglePrivacyDlpV2StoredInfoTypeConfigResponse config;
 
     public GooglePrivacyDlpV2StoredInfoTypeConfigResponse getConfig() {
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
      * Create timestamp of the version. Read-only, determined by the system when the version is created.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
      * Errors that occurred when creating this storedInfoType version, or anomalies detected in the storedInfoType data that render it unusable. Only the five most recent errors will be displayed, with the most recent error appearing first. For example, some of the data for stored custom dictionaries is put in the user's Google Cloud Storage bucket, and if this data is modified or deleted by the user or another system, the dictionary becomes invalid. If any errors occur, fix the problem indicated by the error message and use the UpdateStoredInfoType API method to create another version of the storedInfoType to continue using it, reusing the same `config` if it was not the source of the error.
      * 
      */
-    @InputImport(name="errors", required=true)
+    @Import(name="errors", required=true)
       private final List<GooglePrivacyDlpV2ErrorResponse> errors;
 
     public List<GooglePrivacyDlpV2ErrorResponse> getErrors() {
@@ -57,7 +57,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
      * Stored info type version state. Read-only, updated by the system during dictionary creation.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -68,7 +68,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse extends io.pu
      * Statistics about this storedInfoType version.
      * 
      */
-    @InputImport(name="stats", required=true)
+    @Import(name="stats", required=true)
       private final GooglePrivacyDlpV2StoredInfoTypeStatsResponse stats;
 
     public GooglePrivacyDlpV2StoredInfoTypeStatsResponse getStats() {

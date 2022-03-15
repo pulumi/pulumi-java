@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SiteResponse {
     /**
      * Entity Tag
@@ -79,21 +79,21 @@ public final class SiteResponse {
      */
     private final @Nullable List<String> trustedOrigins;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SiteResponse(
-        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
-        @OutputCustomType.Parameter("isBlockUserUploadEnabled") @Nullable Boolean isBlockUserUploadEnabled,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("isSecureSiteEnabled") @Nullable Boolean isSecureSiteEnabled,
-        @OutputCustomType.Parameter("isTokenEnabled") @Nullable Boolean isTokenEnabled,
-        @OutputCustomType.Parameter("isV1Enabled") Boolean isV1Enabled,
-        @OutputCustomType.Parameter("isV3Enabled") Boolean isV3Enabled,
-        @OutputCustomType.Parameter("isWebchatPreviewEnabled") Boolean isWebchatPreviewEnabled,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("key2") String key2,
-        @OutputCustomType.Parameter("siteId") String siteId,
-        @OutputCustomType.Parameter("siteName") String siteName,
-        @OutputCustomType.Parameter("trustedOrigins") @Nullable List<String> trustedOrigins) {
+        @CustomType.Parameter("eTag") @Nullable String eTag,
+        @CustomType.Parameter("isBlockUserUploadEnabled") @Nullable Boolean isBlockUserUploadEnabled,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("isSecureSiteEnabled") @Nullable Boolean isSecureSiteEnabled,
+        @CustomType.Parameter("isTokenEnabled") @Nullable Boolean isTokenEnabled,
+        @CustomType.Parameter("isV1Enabled") Boolean isV1Enabled,
+        @CustomType.Parameter("isV3Enabled") Boolean isV3Enabled,
+        @CustomType.Parameter("isWebchatPreviewEnabled") Boolean isWebchatPreviewEnabled,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("key2") String key2,
+        @CustomType.Parameter("siteId") String siteId,
+        @CustomType.Parameter("siteName") String siteName,
+        @CustomType.Parameter("trustedOrigins") @Nullable List<String> trustedOrigins) {
         this.eTag = eTag;
         this.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
         this.isEnabled = isEnabled;

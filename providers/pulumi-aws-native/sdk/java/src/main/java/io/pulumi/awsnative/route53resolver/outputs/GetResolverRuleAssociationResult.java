@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.route53resolver.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResolverRuleAssociationResult {
     /**
      * Primary Identifier for Resolver Rule Association
@@ -17,8 +17,8 @@ public final class GetResolverRuleAssociationResult {
      */
     private final @Nullable String resolverRuleAssociationId;
 
-    @OutputCustomType.Constructor
-    private GetResolverRuleAssociationResult(@OutputCustomType.Parameter("resolverRuleAssociationId") @Nullable String resolverRuleAssociationId) {
+    @CustomType.Constructor
+    private GetResolverRuleAssociationResult(@CustomType.Parameter("resolverRuleAssociationId") @Nullable String resolverRuleAssociationId) {
         this.resolverRuleAssociationId = resolverRuleAssociationId;
     }
 

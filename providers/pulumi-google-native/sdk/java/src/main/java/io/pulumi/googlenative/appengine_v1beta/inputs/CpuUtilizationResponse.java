@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CpuUtilizationResponse extends io.pulumi.resources.InvokeArgs
      * Period of time over which CPU utilization is calculated.
      * 
      */
-    @InputImport(name="aggregationWindowLength", required=true)
+    @Import(name="aggregationWindowLength", required=true)
       private final String aggregationWindowLength;
 
     public String getAggregationWindowLength() {
@@ -32,7 +32,7 @@ public final class CpuUtilizationResponse extends io.pulumi.resources.InvokeArgs
      * Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
      * 
      */
-    @InputImport(name="targetUtilization", required=true)
+    @Import(name="targetUtilization", required=true)
       private final Double targetUtilization;
 
     public Double getTargetUtilization() {

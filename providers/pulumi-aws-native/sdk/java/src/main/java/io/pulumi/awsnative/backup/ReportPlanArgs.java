@@ -7,7 +7,7 @@ import io.pulumi.awsnative.backup.inputs.ReportDeliveryChannelPropertiesArgs;
 import io.pulumi.awsnative.backup.inputs.ReportPlanTagArgs;
 import io.pulumi.awsnative.backup.inputs.ReportSettingPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
      * A structure that contains information about where and how to deliver your reports, specifically your Amazon S3 bucket name, S3 key prefix, and the formats of your reports.
      * 
      */
-    @InputImport(name="reportDeliveryChannel", required=true)
+    @Import(name="reportDeliveryChannel", required=true)
       private final Output<ReportDeliveryChannelPropertiesArgs> reportDeliveryChannel;
 
     public Output<ReportDeliveryChannelPropertiesArgs> getReportDeliveryChannel() {
@@ -33,7 +33,7 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of the report plan with a maximum of 1,024 characters.
      * 
      */
-    @InputImport(name="reportPlanDescription")
+    @Import(name="reportPlanDescription")
       private final @Nullable Output<String> reportPlanDescription;
 
     public Output<String> getReportPlanDescription() {
@@ -44,7 +44,7 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
      * The unique name of the report plan. The name must be between 1 and 256 characters, starting with a letter, and consisting of letters (a-z, A-Z), numbers (0-9), and underscores (_).
      * 
      */
-    @InputImport(name="reportPlanName")
+    @Import(name="reportPlanName")
       private final @Nullable Output<String> reportPlanName;
 
     public Output<String> getReportPlanName() {
@@ -55,7 +55,7 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata that you can assign to help organize the report plans that you create. Each tag is a key-value pair.
      * 
      */
-    @InputImport(name="reportPlanTags")
+    @Import(name="reportPlanTags")
       private final @Nullable Output<List<ReportPlanTagArgs>> reportPlanTags;
 
     public Output<List<ReportPlanTagArgs>> getReportPlanTags() {
@@ -66,7 +66,7 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
      * Identifies the report template for the report. Reports are built using a report template.
      * 
      */
-    @InputImport(name="reportSetting", required=true)
+    @Import(name="reportSetting", required=true)
       private final Output<ReportSettingPropertiesArgs> reportSetting;
 
     public Output<ReportSettingPropertiesArgs> getReportSetting() {

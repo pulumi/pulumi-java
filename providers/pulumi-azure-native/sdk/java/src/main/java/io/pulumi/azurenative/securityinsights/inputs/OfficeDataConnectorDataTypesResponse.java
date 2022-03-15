@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 import io.pulumi.azurenative.securityinsights.inputs.OfficeDataConnectorDataTypesResponseExchange;
 import io.pulumi.azurenative.securityinsights.inputs.OfficeDataConnectorDataTypesResponseSharePoint;
 import io.pulumi.azurenative.securityinsights.inputs.OfficeDataConnectorDataTypesResponseTeams;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class OfficeDataConnectorDataTypesResponse extends io.pulumi.resour
      * Exchange data type connection.
      * 
      */
-    @InputImport(name="exchange")
+    @Import(name="exchange")
       private final @Nullable OfficeDataConnectorDataTypesResponseExchange exchange;
 
     public Optional<OfficeDataConnectorDataTypesResponseExchange> getExchange() {
@@ -35,7 +35,7 @@ public final class OfficeDataConnectorDataTypesResponse extends io.pulumi.resour
      * SharePoint data type connection.
      * 
      */
-    @InputImport(name="sharePoint")
+    @Import(name="sharePoint")
       private final @Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint;
 
     public Optional<OfficeDataConnectorDataTypesResponseSharePoint> getSharePoint() {
@@ -46,7 +46,7 @@ public final class OfficeDataConnectorDataTypesResponse extends io.pulumi.resour
      * Teams data type connection.
      * 
      */
-    @InputImport(name="teams")
+    @Import(name="teams")
       private final @Nullable OfficeDataConnectorDataTypesResponseTeams teams;
 
     public Optional<OfficeDataConnectorDataTypesResponseTeams> getTeams() {

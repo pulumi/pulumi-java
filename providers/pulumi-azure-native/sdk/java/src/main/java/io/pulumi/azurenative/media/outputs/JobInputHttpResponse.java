@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.outputs.FromEachInputFileResponse;
 import io.pulumi.azurenative.media.outputs.InputFileResponse;
 import io.pulumi.azurenative.media.outputs.UtcClipTimeResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobInputHttpResponse {
     /**
      * Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.
@@ -56,15 +56,15 @@ public final class JobInputHttpResponse {
      */
     private final @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobInputHttpResponse(
-        @OutputCustomType.Parameter("baseUri") @Nullable String baseUri,
-        @OutputCustomType.Parameter("end") @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end,
-        @OutputCustomType.Parameter("files") @Nullable List<String> files,
-        @OutputCustomType.Parameter("inputDefinitions") @Nullable List<Object> inputDefinitions,
-        @OutputCustomType.Parameter("label") @Nullable String label,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("start") @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
+        @CustomType.Parameter("baseUri") @Nullable String baseUri,
+        @CustomType.Parameter("end") @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end,
+        @CustomType.Parameter("files") @Nullable List<String> files,
+        @CustomType.Parameter("inputDefinitions") @Nullable List<Object> inputDefinitions,
+        @CustomType.Parameter("label") @Nullable String label,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("start") @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
         this.baseUri = baseUri;
         this.end = end;
         this.files = files;

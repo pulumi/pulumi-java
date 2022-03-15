@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.alb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLoadBalancerSubnetMapping {
     private final String allocationId;
     private final String ipv6Address;
@@ -15,13 +15,13 @@ public final class GetLoadBalancerSubnetMapping {
     private final String privateIpv4Address;
     private final String subnetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLoadBalancerSubnetMapping(
-        @OutputCustomType.Parameter("allocationId") String allocationId,
-        @OutputCustomType.Parameter("ipv6Address") String ipv6Address,
-        @OutputCustomType.Parameter("outpostId") String outpostId,
-        @OutputCustomType.Parameter("privateIpv4Address") String privateIpv4Address,
-        @OutputCustomType.Parameter("subnetId") String subnetId) {
+        @CustomType.Parameter("allocationId") String allocationId,
+        @CustomType.Parameter("ipv6Address") String ipv6Address,
+        @CustomType.Parameter("outpostId") String outpostId,
+        @CustomType.Parameter("privateIpv4Address") String privateIpv4Address,
+        @CustomType.Parameter("subnetId") String subnetId) {
         this.allocationId = allocationId;
         this.ipv6Address = ipv6Address;
         this.outpostId = outpostId;

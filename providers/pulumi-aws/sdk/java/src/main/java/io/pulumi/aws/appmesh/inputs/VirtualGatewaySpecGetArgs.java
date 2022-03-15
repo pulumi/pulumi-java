@@ -7,7 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecLoggingGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class VirtualGatewaySpecGetArgs extends io.pulumi.resources.Resourc
      * The defaults for backends.
      * 
      */
-    @InputImport(name="backendDefaults")
+    @Import(name="backendDefaults")
       private final @Nullable Output<VirtualGatewaySpecBackendDefaultsGetArgs> backendDefaults;
 
     public Output<VirtualGatewaySpecBackendDefaultsGetArgs> getBackendDefaults() {
@@ -31,7 +31,7 @@ public final class VirtualGatewaySpecGetArgs extends io.pulumi.resources.Resourc
      * The listeners that the mesh endpoint is expected to receive inbound traffic from. You can specify one listener.
      * 
      */
-    @InputImport(name="listener", required=true)
+    @Import(name="listener", required=true)
       private final Output<VirtualGatewaySpecListenerGetArgs> listener;
 
     public Output<VirtualGatewaySpecListenerGetArgs> getListener() {
@@ -42,7 +42,7 @@ public final class VirtualGatewaySpecGetArgs extends io.pulumi.resources.Resourc
      * The inbound and outbound access logging information for the virtual gateway.
      * 
      */
-    @InputImport(name="logging")
+    @Import(name="logging")
       private final @Nullable Output<VirtualGatewaySpecLoggingGetArgs> logging;
 
     public Output<VirtualGatewaySpecLoggingGetArgs> getLogging() {

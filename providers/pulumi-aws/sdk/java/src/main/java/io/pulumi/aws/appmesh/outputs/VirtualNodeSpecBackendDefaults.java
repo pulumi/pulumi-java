@@ -4,12 +4,12 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecBackendDefaultsClientPolicy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecBackendDefaults {
     /**
      * The default client policy for virtual service backends. See above for details.
@@ -17,8 +17,8 @@ public final class VirtualNodeSpecBackendDefaults {
      */
     private final @Nullable VirtualNodeSpecBackendDefaultsClientPolicy clientPolicy;
 
-    @OutputCustomType.Constructor
-    private VirtualNodeSpecBackendDefaults(@OutputCustomType.Parameter("clientPolicy") @Nullable VirtualNodeSpecBackendDefaultsClientPolicy clientPolicy) {
+    @CustomType.Constructor
+    private VirtualNodeSpecBackendDefaults(@CustomType.Parameter("clientPolicy") @Nullable VirtualNodeSpecBackendDefaultsClientPolicy clientPolicy) {
         this.clientPolicy = clientPolicy;
     }
 

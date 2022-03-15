@@ -4,7 +4,7 @@
 package io.pulumi.gcp.endpoints.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.endpoints.inputs.ServiceApiMethodArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,28 +16,28 @@ public final class ServiceApiArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceApiArgs Empty = new ServiceApiArgs();
 
-    @InputImport(name="methods")
+    @Import(name="methods")
       private final @Nullable Output<List<ServiceApiMethodArgs>> methods;
 
     public Output<List<ServiceApiMethodArgs>> getMethods() {
         return this.methods == null ? Output.empty() : this.methods;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="syntax")
+    @Import(name="syntax")
       private final @Nullable Output<String> syntax;
 
     public Output<String> getSyntax() {
         return this.syntax == null ? Output.empty() : this.syntax;
     }
 
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.MethodMapResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.OptionsResponse;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class CollectionOverrideResponse extends io.pulumi.resources.Invoke
      * The collection that identifies this resource within its service.
      * 
      */
-    @InputImport(name="collection", required=true)
+    @Import(name="collection", required=true)
       private final String collection;
 
     public String getCollection() {
@@ -33,7 +33,7 @@ public final class CollectionOverrideResponse extends io.pulumi.resources.Invoke
      * Custom verb method mappings to support unordered list API mappings.
      * 
      */
-    @InputImport(name="methodMap", required=true)
+    @Import(name="methodMap", required=true)
       private final MethodMapResponse methodMap;
 
     public MethodMapResponse getMethodMap() {
@@ -44,7 +44,7 @@ public final class CollectionOverrideResponse extends io.pulumi.resources.Invoke
      * The options to apply to this resource-level override
      * 
      */
-    @InputImport(name="options", required=true)
+    @Import(name="options", required=true)
       private final OptionsResponse options;
 
     public OptionsResponse getOptions() {

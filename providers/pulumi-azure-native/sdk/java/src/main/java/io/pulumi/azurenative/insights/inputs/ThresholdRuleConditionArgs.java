@@ -9,7 +9,7 @@ import io.pulumi.azurenative.insights.inputs.RuleManagementEventDataSourceArgs;
 import io.pulumi.azurenative.insights.inputs.RuleMetricDataSourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
      * the resource from which the rule collects its data. For this type dataSource will always be of type RuleMetricDataSource.
      * 
      */
-    @InputImport(name="dataSource")
+    @Import(name="dataSource")
       private final @Nullable Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
 
     public Output<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> getDataSource() {
@@ -40,7 +40,7 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.ThresholdRuleCondition'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -51,7 +51,7 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
      * the operator used to compare the data and the threshold.
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final Output<ConditionOperator> operator;
 
     public Output<ConditionOperator> getOperator() {
@@ -62,7 +62,7 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
      * the threshold value that activates the alert.
      * 
      */
-    @InputImport(name="threshold", required=true)
+    @Import(name="threshold", required=true)
       private final Output<Double> threshold;
 
     public Output<Double> getThreshold() {
@@ -73,7 +73,7 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
      * the time aggregation operator. How the data that are collected should be combined over time. The default value is the PrimaryAggregationType of the Metric.
      * 
      */
-    @InputImport(name="timeAggregation")
+    @Import(name="timeAggregation")
       private final @Nullable Output<TimeAggregationOperator> timeAggregation;
 
     public Output<TimeAggregationOperator> getTimeAggregation() {
@@ -84,7 +84,7 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
      * the period of time (in ISO 8601 duration format) that is used to monitor alert activity based on the threshold. If specified then it must be between 5 minutes and 1 day.
      * 
      */
-    @InputImport(name="windowSize")
+    @Import(name="windowSize")
       private final @Nullable Output<String> windowSize;
 
     public Output<String> getWindowSize() {

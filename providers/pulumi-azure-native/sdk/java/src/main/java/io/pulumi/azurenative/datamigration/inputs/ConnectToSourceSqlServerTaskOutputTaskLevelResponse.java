@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
      * Source agent jobs as a map from agent job name to id.
      * 
      */
-    @InputImport(name="agentJobs", required=true)
+    @Import(name="agentJobs", required=true)
       private final Map<String,String> agentJobs;
 
     public Map<String,String> getAgentJobs() {
@@ -34,7 +34,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
      * Source databases as a map from database name to database id
      * 
      */
-    @InputImport(name="databases", required=true)
+    @Import(name="databases", required=true)
       private final Map<String,String> databases;
 
     public Map<String,String> getDatabases() {
@@ -45,7 +45,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -56,7 +56,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
      * Source logins as a map from login name to login id.
      * 
      */
-    @InputImport(name="logins", required=true)
+    @Import(name="logins", required=true)
       private final Map<String,String> logins;
 
     public Map<String,String> getLogins() {
@@ -68,7 +68,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
      * Expected value is 'TaskLevelOutput'.
      * 
      */
-    @InputImport(name="resultType", required=true)
+    @Import(name="resultType", required=true)
       private final String resultType;
 
     public String getResultType() {
@@ -79,7 +79,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
      * Source server brand version
      * 
      */
-    @InputImport(name="sourceServerBrandVersion", required=true)
+    @Import(name="sourceServerBrandVersion", required=true)
       private final String sourceServerBrandVersion;
 
     public String getSourceServerBrandVersion() {
@@ -90,7 +90,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
      * Source server version
      * 
      */
-    @InputImport(name="sourceServerVersion", required=true)
+    @Import(name="sourceServerVersion", required=true)
       private final String sourceServerVersion;
 
     public String getSourceServerVersion() {
@@ -101,7 +101,7 @@ public final class ConnectToSourceSqlServerTaskOutputTaskLevelResponse extends i
      * Validation errors
      * 
      */
-    @InputImport(name="validationErrors", required=true)
+    @Import(name="validationErrors", required=true)
       private final List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> getValidationErrors() {

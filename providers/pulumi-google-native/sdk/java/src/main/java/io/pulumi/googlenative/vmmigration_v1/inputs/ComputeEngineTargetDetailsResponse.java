@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.vmmigration_v1.inputs.AppliedLicenseResponse;
 import io.pulumi.googlenative.vmmigration_v1.inputs.ComputeSchedulingResponse;
 import io.pulumi.googlenative.vmmigration_v1.inputs.NetworkInterfaceResponse;
@@ -26,7 +26,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * Additional licenses to assign to the VM.
      * 
      */
-    @InputImport(name="additionalLicenses", required=true)
+    @Import(name="additionalLicenses", required=true)
       private final List<String> additionalLicenses;
 
     public List<String> getAdditionalLicenses() {
@@ -37,7 +37,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * The OS license returned from the adaptation module report.
      * 
      */
-    @InputImport(name="appliedLicense", required=true)
+    @Import(name="appliedLicense", required=true)
       private final AppliedLicenseResponse appliedLicense;
 
     public AppliedLicenseResponse getAppliedLicense() {
@@ -48,7 +48,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * The VM Boot Option, as set in the source vm.
      * 
      */
-    @InputImport(name="bootOption", required=true)
+    @Import(name="bootOption", required=true)
       private final String bootOption;
 
     public String getBootOption() {
@@ -59,7 +59,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * Compute instance scheduling information (if empty default is used).
      * 
      */
-    @InputImport(name="computeScheduling", required=true)
+    @Import(name="computeScheduling", required=true)
       private final ComputeSchedulingResponse computeScheduling;
 
     public ComputeSchedulingResponse getComputeScheduling() {
@@ -70,7 +70,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * The disk type to use in the VM.
      * 
      */
-    @InputImport(name="diskType", required=true)
+    @Import(name="diskType", required=true)
       private final String diskType;
 
     public String getDiskType() {
@@ -81,7 +81,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * A map of labels to associate with the VM.
      * 
      */
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
@@ -92,7 +92,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * The license type to use in OS adaptation.
      * 
      */
-    @InputImport(name="licenseType", required=true)
+    @Import(name="licenseType", required=true)
       private final String licenseType;
 
     public String getLicenseType() {
@@ -103,7 +103,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * The machine type to create the VM with.
      * 
      */
-    @InputImport(name="machineType", required=true)
+    @Import(name="machineType", required=true)
       private final String machineType;
 
     public String getMachineType() {
@@ -114,7 +114,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * The machine type series to create the VM with.
      * 
      */
-    @InputImport(name="machineTypeSeries", required=true)
+    @Import(name="machineTypeSeries", required=true)
       private final String machineTypeSeries;
 
     public String getMachineTypeSeries() {
@@ -125,7 +125,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * The metadata key/value pairs to assign to the VM.
      * 
      */
-    @InputImport(name="metadata", required=true)
+    @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
@@ -136,7 +136,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * List of NICs connected to this VM.
      * 
      */
-    @InputImport(name="networkInterfaces", required=true)
+    @Import(name="networkInterfaces", required=true)
       private final List<NetworkInterfaceResponse> networkInterfaces;
 
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
@@ -147,7 +147,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * A map of network tags to associate with the VM.
      * 
      */
-    @InputImport(name="networkTags", required=true)
+    @Import(name="networkTags", required=true)
       private final List<String> networkTags;
 
     public List<String> getNetworkTags() {
@@ -158,7 +158,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * The GCP target project ID or project name.
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final String project;
 
     public String getProject() {
@@ -169,7 +169,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * Defines whether the instance has Secure Boot enabled. This can be set to true only if the vm boot option is EFI.
      * 
      */
-    @InputImport(name="secureBoot", required=true)
+    @Import(name="secureBoot", required=true)
       private final Boolean secureBoot;
 
     public Boolean getSecureBoot() {
@@ -180,7 +180,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * The service account to associate the VM with.
      * 
      */
-    @InputImport(name="serviceAccount", required=true)
+    @Import(name="serviceAccount", required=true)
       private final String serviceAccount;
 
     public String getServiceAccount() {
@@ -191,7 +191,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * The name of the VM to create.
      * 
      */
-    @InputImport(name="vmName", required=true)
+    @Import(name="vmName", required=true)
       private final String vmName;
 
     public String getVmName() {
@@ -202,7 +202,7 @@ public final class ComputeEngineTargetDetailsResponse extends io.pulumi.resource
      * The zone in which to create the VM.
      * 
      */
-    @InputImport(name="zone", required=true)
+    @Import(name="zone", required=true)
       private final String zone;
 
     public String getZone() {

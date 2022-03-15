@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudChannelV1TrialSettingsResponse {
     /**
      * Date when the trial ends. The value is in milliseconds using the UNIX Epoch format. See an example [Epoch converter](https://www.epochconverter.com).
@@ -21,10 +21,10 @@ public final class GoogleCloudChannelV1TrialSettingsResponse {
      */
     private final Boolean trial;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudChannelV1TrialSettingsResponse(
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("trial") Boolean trial) {
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("trial") Boolean trial) {
         this.endTime = endTime;
         this.trial = trial;
     }

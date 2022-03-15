@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.RelationshipTypeFieldMappingResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RelationshipTypeMappingResponse {
     /**
      * Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.
@@ -16,8 +16,8 @@ public final class RelationshipTypeMappingResponse {
      */
     private final List<RelationshipTypeFieldMappingResponse> fieldMappings;
 
-    @OutputCustomType.Constructor
-    private RelationshipTypeMappingResponse(@OutputCustomType.Parameter("fieldMappings") List<RelationshipTypeFieldMappingResponse> fieldMappings) {
+    @CustomType.Constructor
+    private RelationshipTypeMappingResponse(@CustomType.Parameter("fieldMappings") List<RelationshipTypeFieldMappingResponse> fieldMappings) {
         this.fieldMappings = fieldMappings;
     }
 

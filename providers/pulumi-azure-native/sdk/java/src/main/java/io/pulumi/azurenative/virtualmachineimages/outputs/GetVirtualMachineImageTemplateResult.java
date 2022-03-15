@@ -18,7 +18,7 @@ import io.pulumi.azurenative.virtualmachineimages.outputs.ImageTemplateVhdDistri
 import io.pulumi.azurenative.virtualmachineimages.outputs.ImageTemplateVmProfileResponse;
 import io.pulumi.azurenative.virtualmachineimages.outputs.ImageTemplateWindowsUpdateCustomizerResponse;
 import io.pulumi.azurenative.virtualmachineimages.outputs.ProvisioningErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -28,7 +28,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualMachineImageTemplateResult {
     /**
      * Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
@@ -101,22 +101,22 @@ public final class GetVirtualMachineImageTemplateResult {
      */
     private final @Nullable ImageTemplateVmProfileResponse vmProfile;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualMachineImageTemplateResult(
-        @OutputCustomType.Parameter("buildTimeoutInMinutes") @Nullable Integer buildTimeoutInMinutes,
-        @OutputCustomType.Parameter("customize") @Nullable List<Object> customize,
-        @OutputCustomType.Parameter("distribute") List<Object> distribute,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") ImageTemplateIdentityResponse identity,
-        @OutputCustomType.Parameter("lastRunStatus") ImageTemplateLastRunStatusResponse lastRunStatus,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningError") ProvisioningErrorResponse provisioningError,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("source") Object source,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vmProfile") @Nullable ImageTemplateVmProfileResponse vmProfile) {
+        @CustomType.Parameter("buildTimeoutInMinutes") @Nullable Integer buildTimeoutInMinutes,
+        @CustomType.Parameter("customize") @Nullable List<Object> customize,
+        @CustomType.Parameter("distribute") List<Object> distribute,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") ImageTemplateIdentityResponse identity,
+        @CustomType.Parameter("lastRunStatus") ImageTemplateLastRunStatusResponse lastRunStatus,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningError") ProvisioningErrorResponse provisioningError,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("source") Object source,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vmProfile") @Nullable ImageTemplateVmProfileResponse vmProfile) {
         this.buildTimeoutInMinutes = buildTimeoutInMinutes;
         this.customize = customize;
         this.distribute = distribute;

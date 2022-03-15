@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apigateway;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.apigateway.AuthorizerArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * Optional customer-defined field, used in OpenAPI imports and exports without functional impact.
      * 
      */
-    @OutputExport(name="authType", type=String.class, parameters={})
+    @Export(name="authType", type=String.class, parameters={})
     private Output</* @Nullable */ String> authType;
 
     /**
@@ -37,7 +37,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * Specifies the required credentials as an IAM role for API Gateway to invoke the authorizer.
      * 
      */
-    @OutputExport(name="authorizerCredentials", type=String.class, parameters={})
+    @Export(name="authorizerCredentials", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizerCredentials;
 
     /**
@@ -47,7 +47,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getAuthorizerCredentials() {
         return this.authorizerCredentials;
     }
-    @OutputExport(name="authorizerId", type=String.class, parameters={})
+    @Export(name="authorizerId", type=String.class, parameters={})
     private Output<String> authorizerId;
 
     public Output<String> getAuthorizerId() {
@@ -57,7 +57,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * The TTL in seconds of cached authorizer results.
      * 
      */
-    @OutputExport(name="authorizerResultTtlInSeconds", type=Integer.class, parameters={})
+    @Export(name="authorizerResultTtlInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> authorizerResultTtlInSeconds;
 
     /**
@@ -71,7 +71,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * Specifies the authorizer's Uniform Resource Identifier (URI).
      * 
      */
-    @OutputExport(name="authorizerUri", type=String.class, parameters={})
+    @Export(name="authorizerUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizerUri;
 
     /**
@@ -85,7 +85,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * The identity source for which authorization is requested.
      * 
      */
-    @OutputExport(name="identitySource", type=String.class, parameters={})
+    @Export(name="identitySource", type=String.class, parameters={})
     private Output</* @Nullable */ String> identitySource;
 
     /**
@@ -99,7 +99,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * A validation expression for the incoming identity token.
      * 
      */
-    @OutputExport(name="identityValidationExpression", type=String.class, parameters={})
+    @Export(name="identityValidationExpression", type=String.class, parameters={})
     private Output</* @Nullable */ String> identityValidationExpression;
 
     /**
@@ -113,7 +113,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * The name of the authorizer.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -127,7 +127,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * A list of the Amazon Cognito user pool ARNs for the COGNITO_USER_POOLS authorizer.
      * 
      */
-    @OutputExport(name="providerARNs", type=List.class, parameters={String.class})
+    @Export(name="providerARNs", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> providerARNs;
 
     /**
@@ -141,7 +141,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * The identifier of the API.
      * 
      */
-    @OutputExport(name="restApiId", type=String.class, parameters={})
+    @Export(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
     /**
@@ -155,7 +155,7 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
      * The authorizer type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

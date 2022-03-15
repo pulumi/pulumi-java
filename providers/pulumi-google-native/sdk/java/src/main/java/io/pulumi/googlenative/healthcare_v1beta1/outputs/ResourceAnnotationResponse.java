@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceAnnotationResponse {
     /**
      * A description of the annotation record.
@@ -15,8 +15,8 @@ public final class ResourceAnnotationResponse {
      */
     private final String label;
 
-    @OutputCustomType.Constructor
-    private ResourceAnnotationResponse(@OutputCustomType.Parameter("label") String label) {
+    @CustomType.Constructor
+    private ResourceAnnotationResponse(@CustomType.Parameter("label") String label) {
         this.label = label;
     }
 

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.logic.inputs.IntegrationAccountSkuArgs;
 import io.pulumi.azurenative.logic.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * The integration account name.
      * 
      */
-    @InputImport(name="integrationAccountName")
+    @Import(name="integrationAccountName")
       private final @Nullable Output<String> integrationAccountName;
 
     public Output<String> getIntegrationAccountName() {
@@ -34,7 +34,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * The integration service environment.
      * 
      */
-    @InputImport(name="integrationServiceEnvironment")
+    @Import(name="integrationServiceEnvironment")
       private final @Nullable Output<ResourceReferenceArgs> integrationServiceEnvironment;
 
     public Output<ResourceReferenceArgs> getIntegrationServiceEnvironment() {
@@ -45,7 +45,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -56,7 +56,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -67,7 +67,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * The sku.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<IntegrationAccountSkuArgs> sku;
 
     public Output<IntegrationAccountSkuArgs> getSku() {
@@ -78,7 +78,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * The workflow state.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<Either<String,WorkflowState>> state;
 
     public Output<Either<String,WorkflowState>> getState() {
@@ -89,7 +89,7 @@ public final class IntegrationAccountArgs extends io.pulumi.resources.ResourceAr
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

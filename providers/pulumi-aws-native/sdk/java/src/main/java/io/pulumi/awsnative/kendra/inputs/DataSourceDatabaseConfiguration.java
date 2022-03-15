@@ -9,7 +9,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceColumnConfiguration;
 import io.pulumi.awsnative.kendra.inputs.DataSourceConnectionConfiguration;
 import io.pulumi.awsnative.kendra.inputs.DataSourceSqlConfiguration;
 import io.pulumi.awsnative.kendra.inputs.DataSourceVpcConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,42 +19,42 @@ public final class DataSourceDatabaseConfiguration extends io.pulumi.resources.I
 
     public static final DataSourceDatabaseConfiguration Empty = new DataSourceDatabaseConfiguration();
 
-    @InputImport(name="aclConfiguration")
+    @Import(name="aclConfiguration")
       private final @Nullable DataSourceAclConfiguration aclConfiguration;
 
     public Optional<DataSourceAclConfiguration> getAclConfiguration() {
         return this.aclConfiguration == null ? Optional.empty() : Optional.ofNullable(this.aclConfiguration);
     }
 
-    @InputImport(name="columnConfiguration", required=true)
+    @Import(name="columnConfiguration", required=true)
       private final DataSourceColumnConfiguration columnConfiguration;
 
     public DataSourceColumnConfiguration getColumnConfiguration() {
         return this.columnConfiguration;
     }
 
-    @InputImport(name="connectionConfiguration", required=true)
+    @Import(name="connectionConfiguration", required=true)
       private final DataSourceConnectionConfiguration connectionConfiguration;
 
     public DataSourceConnectionConfiguration getConnectionConfiguration() {
         return this.connectionConfiguration;
     }
 
-    @InputImport(name="databaseEngineType", required=true)
+    @Import(name="databaseEngineType", required=true)
       private final DataSourceDatabaseEngineType databaseEngineType;
 
     public DataSourceDatabaseEngineType getDatabaseEngineType() {
         return this.databaseEngineType;
     }
 
-    @InputImport(name="sqlConfiguration")
+    @Import(name="sqlConfiguration")
       private final @Nullable DataSourceSqlConfiguration sqlConfiguration;
 
     public Optional<DataSourceSqlConfiguration> getSqlConfiguration() {
         return this.sqlConfiguration == null ? Optional.empty() : Optional.ofNullable(this.sqlConfiguration);
     }
 
-    @InputImport(name="vpcConfiguration")
+    @Import(name="vpcConfiguration")
       private final @Nullable DataSourceVpcConfiguration vpcConfiguration;
 
     public Optional<DataSourceVpcConfiguration> getVpcConfiguration() {

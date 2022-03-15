@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.bigquery.outputs.JobCopyDestinationEncryptionConfiguration;
 import io.pulumi.gcp.bigquery.outputs.JobCopyDestinationTable;
 import io.pulumi.gcp.bigquery.outputs.JobCopySourceTable;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobCopy {
     /**
      * Specifies whether the job is allowed to create new tables. The following values are supported:
@@ -56,13 +56,13 @@ public final class JobCopy {
      */
     private final @Nullable String writeDisposition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobCopy(
-        @OutputCustomType.Parameter("createDisposition") @Nullable String createDisposition,
-        @OutputCustomType.Parameter("destinationEncryptionConfiguration") @Nullable JobCopyDestinationEncryptionConfiguration destinationEncryptionConfiguration,
-        @OutputCustomType.Parameter("destinationTable") @Nullable JobCopyDestinationTable destinationTable,
-        @OutputCustomType.Parameter("sourceTables") List<JobCopySourceTable> sourceTables,
-        @OutputCustomType.Parameter("writeDisposition") @Nullable String writeDisposition) {
+        @CustomType.Parameter("createDisposition") @Nullable String createDisposition,
+        @CustomType.Parameter("destinationEncryptionConfiguration") @Nullable JobCopyDestinationEncryptionConfiguration destinationEncryptionConfiguration,
+        @CustomType.Parameter("destinationTable") @Nullable JobCopyDestinationTable destinationTable,
+        @CustomType.Parameter("sourceTables") List<JobCopySourceTable> sourceTables,
+        @CustomType.Parameter("writeDisposition") @Nullable String writeDisposition) {
         this.createDisposition = createDisposition;
         this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
         this.destinationTable = destinationTable;

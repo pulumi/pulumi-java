@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticbeanstalk.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ApplicationVersionState extends io.pulumi.resources.ResourceA
      * Name of the Beanstalk Application the version is associated with.
      * 
      */
-    @InputImport(name="application")
+    @Import(name="application")
       private final @Nullable Output<String> application;
 
     public Output<String> getApplication() {
@@ -31,7 +31,7 @@ public final class ApplicationVersionState extends io.pulumi.resources.ResourceA
      * ARN assigned by AWS for this Elastic Beanstalk Application.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -42,7 +42,7 @@ public final class ApplicationVersionState extends io.pulumi.resources.ResourceA
      * S3 bucket that contains the Application Version source bundle.
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -53,7 +53,7 @@ public final class ApplicationVersionState extends io.pulumi.resources.ResourceA
      * Short description of the Application Version.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -64,7 +64,7 @@ public final class ApplicationVersionState extends io.pulumi.resources.ResourceA
      * On delete, force an Application Version to be deleted when it may be in use by multiple Elastic Beanstalk Environments.
      * 
      */
-    @InputImport(name="forceDelete")
+    @Import(name="forceDelete")
       private final @Nullable Output<Boolean> forceDelete;
 
     public Output<Boolean> getForceDelete() {
@@ -75,7 +75,7 @@ public final class ApplicationVersionState extends io.pulumi.resources.ResourceA
      * S3 object that is the Application Version source bundle.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -86,7 +86,7 @@ public final class ApplicationVersionState extends io.pulumi.resources.ResourceA
      * Unique name for the this Application Version.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -97,14 +97,14 @@ public final class ApplicationVersionState extends io.pulumi.resources.ResourceA
      * Key-value map of tags for the Elastic Beanstalk Application Version. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

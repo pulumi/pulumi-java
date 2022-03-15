@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.SecurityPolicyDdosProtectionConfigDdosProtection;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class SecurityPolicyDdosProtectionConfigArgs extends io.pulumi.reso
 
     public static final SecurityPolicyDdosProtectionConfigArgs Empty = new SecurityPolicyDdosProtectionConfigArgs();
 
-    @InputImport(name="ddosProtection")
+    @Import(name="ddosProtection")
       private final @Nullable Output<SecurityPolicyDdosProtectionConfigDdosProtection> ddosProtection;
 
     public Output<SecurityPolicyDdosProtectionConfigDdosProtection> getDdosProtection() {

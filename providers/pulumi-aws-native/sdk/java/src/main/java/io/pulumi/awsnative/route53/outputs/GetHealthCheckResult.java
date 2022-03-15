@@ -5,14 +5,14 @@ package io.pulumi.awsnative.route53.outputs;
 
 import io.pulumi.awsnative.route53.outputs.HealthCheckConfigProperties;
 import io.pulumi.awsnative.route53.outputs.HealthCheckTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHealthCheckResult {
     /**
      * A complex type that contains information about the health check.
@@ -26,11 +26,11 @@ public final class GetHealthCheckResult {
      */
     private final @Nullable List<HealthCheckTag> healthCheckTags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHealthCheckResult(
-        @OutputCustomType.Parameter("healthCheckConfig") @Nullable HealthCheckConfigProperties healthCheckConfig,
-        @OutputCustomType.Parameter("healthCheckId") @Nullable String healthCheckId,
-        @OutputCustomType.Parameter("healthCheckTags") @Nullable List<HealthCheckTag> healthCheckTags) {
+        @CustomType.Parameter("healthCheckConfig") @Nullable HealthCheckConfigProperties healthCheckConfig,
+        @CustomType.Parameter("healthCheckId") @Nullable String healthCheckId,
+        @CustomType.Parameter("healthCheckTags") @Nullable List<HealthCheckTag> healthCheckTags) {
         this.healthCheckConfig = healthCheckConfig;
         this.healthCheckId = healthCheckId;
         this.healthCheckTags = healthCheckTags;

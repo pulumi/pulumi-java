@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1.enums.WorkloadMetadataConfigMode;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class WorkloadMetadataConfigArgs extends io.pulumi.resources.Resour
      * Mode is the configuration for how to expose metadata to workloads running on the node pool.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<WorkloadMetadataConfigMode> mode;
 
     public Output<WorkloadMetadataConfigMode> getMode() {

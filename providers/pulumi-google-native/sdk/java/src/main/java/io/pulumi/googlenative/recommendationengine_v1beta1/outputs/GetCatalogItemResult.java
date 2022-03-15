@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.recommendationengine_v1beta1.outputs.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse;
 import io.pulumi.googlenative.recommendationengine_v1beta1.outputs.GoogleCloudRecommendationengineV1beta1FeatureMapResponse;
 import io.pulumi.googlenative.recommendationengine_v1beta1.outputs.GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCatalogItemResult {
     /**
      * Catalog item categories. This field is repeated for supporting one catalog item belonging to several parallel category hierarchies. For example, if a shoes product belongs to both ["Shoes & Accessories" -> "Shoes"] and ["Sports & Fitness" -> "Athletic Clothing" -> "Shoes"], it could be represented as: "categoryHierarchies": [ { "categories": ["Shoes & Accessories", "Shoes"]}, { "categories": ["Sports & Fitness", "Athletic Clothing", "Shoes"] } ]
@@ -49,15 +49,15 @@ public final class GetCatalogItemResult {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCatalogItemResult(
-        @OutputCustomType.Parameter("categoryHierarchies") List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse> categoryHierarchies,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("itemAttributes") GoogleCloudRecommendationengineV1beta1FeatureMapResponse itemAttributes,
-        @OutputCustomType.Parameter("itemGroupId") String itemGroupId,
-        @OutputCustomType.Parameter("productMetadata") GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse productMetadata,
-        @OutputCustomType.Parameter("tags") List<String> tags,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("categoryHierarchies") List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse> categoryHierarchies,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("itemAttributes") GoogleCloudRecommendationengineV1beta1FeatureMapResponse itemAttributes,
+        @CustomType.Parameter("itemGroupId") String itemGroupId,
+        @CustomType.Parameter("productMetadata") GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse productMetadata,
+        @CustomType.Parameter("tags") List<String> tags,
+        @CustomType.Parameter("title") String title) {
         this.categoryHierarchies = categoryHierarchies;
         this.description = description;
         this.itemAttributes = itemAttributes;

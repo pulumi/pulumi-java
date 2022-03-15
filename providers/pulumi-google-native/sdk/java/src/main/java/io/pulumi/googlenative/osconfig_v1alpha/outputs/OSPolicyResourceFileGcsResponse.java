@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OSPolicyResourceFileGcsResponse {
     /**
      * Bucket of the Cloud Storage object.
@@ -25,11 +25,11 @@ public final class OSPolicyResourceFileGcsResponse {
      */
     private final String object;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OSPolicyResourceFileGcsResponse(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("generation") String generation,
-        @OutputCustomType.Parameter("object") String object) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("generation") String generation,
+        @CustomType.Parameter("object") String object) {
         this.bucket = bucket;
         this.generation = generation;
         this.object = object;

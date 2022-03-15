@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.datacatalog.inputs.EntryGcsFilesetSpecSampleGcsFileSpecArgs;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class EntryGcsFilesetSpecArgs extends io.pulumi.resources.ResourceA
      * * gs://another_bucket/a.txt: matches gs://another_bucket/a.txt
      * 
      */
-    @InputImport(name="filePatterns", required=true)
+    @Import(name="filePatterns", required=true)
       private final Output<List<String>> filePatterns;
 
     public Output<List<String>> getFilePatterns() {
@@ -43,7 +43,7 @@ public final class EntryGcsFilesetSpecArgs extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="sampleGcsFileSpecs")
+    @Import(name="sampleGcsFileSpecs")
       private final @Nullable Output<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> sampleGcsFileSpecs;
 
     public Output<List<EntryGcsFilesetSpecSampleGcsFileSpecArgs>> getSampleGcsFileSpecs() {

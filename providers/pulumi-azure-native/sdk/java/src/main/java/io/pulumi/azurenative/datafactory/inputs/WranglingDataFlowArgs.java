@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.DataFlowFolderArgs;
 import io.pulumi.azurenative.datafactory.inputs.PowerQuerySourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
      * List of tags that can be used for describing the data flow.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -37,7 +37,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
      * The description of the data flow.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -48,7 +48,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
      * Locale of the Power query mashup document.
      * 
      */
-    @InputImport(name="documentLocale")
+    @Import(name="documentLocale")
       private final @Nullable Output<String> documentLocale;
 
     public Output<String> getDocumentLocale() {
@@ -59,7 +59,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
      * The folder that this data flow is in. If not specified, Data flow will appear at the root level.
      * 
      */
-    @InputImport(name="folder")
+    @Import(name="folder")
       private final @Nullable Output<DataFlowFolderArgs> folder;
 
     public Output<DataFlowFolderArgs> getFolder() {
@@ -70,7 +70,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
      * Power query mashup script.
      * 
      */
-    @InputImport(name="script")
+    @Import(name="script")
       private final @Nullable Output<String> script;
 
     public Output<String> getScript() {
@@ -81,7 +81,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
      * List of sources in Power Query.
      * 
      */
-    @InputImport(name="sources")
+    @Import(name="sources")
       private final @Nullable Output<List<PowerQuerySourceArgs>> sources;
 
     public Output<List<PowerQuerySourceArgs>> getSources() {
@@ -93,7 +93,7 @@ public final class WranglingDataFlowArgs extends io.pulumi.resources.ResourceArg
      * Expected value is 'WranglingDataFlow'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

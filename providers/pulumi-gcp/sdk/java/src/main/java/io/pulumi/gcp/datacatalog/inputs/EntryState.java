@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.datacatalog.inputs.EntryBigqueryDateShardedSpecGetArgs;
 import io.pulumi.gcp.datacatalog.inputs.EntryBigqueryTableSpecGetArgs;
 import io.pulumi.gcp.datacatalog.inputs.EntryGcsFilesetSpecGetArgs;
@@ -23,7 +23,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
      * 
      */
-    @InputImport(name="bigqueryDateShardedSpecs")
+    @Import(name="bigqueryDateShardedSpecs")
       private final @Nullable Output<List<EntryBigqueryDateShardedSpecGetArgs>> bigqueryDateShardedSpecs;
 
     public Output<List<EntryBigqueryDateShardedSpecGetArgs>> getBigqueryDateShardedSpecs() {
@@ -34,7 +34,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
      * 
      */
-    @InputImport(name="bigqueryTableSpecs")
+    @Import(name="bigqueryTableSpecs")
       private final @Nullable Output<List<EntryBigqueryTableSpecGetArgs>> bigqueryTableSpecs;
 
     public Output<List<EntryBigqueryTableSpecGetArgs>> getBigqueryTableSpecs() {
@@ -45,7 +45,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * Entry description, which can consist of several sentences or paragraphs that describe entry contents.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -57,7 +57,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * for example, "Analytics Data - Jan 2011".
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -68,7 +68,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * The name of the entry group this entry is in.
      * 
      */
-    @InputImport(name="entryGroup")
+    @Import(name="entryGroup")
       private final @Nullable Output<String> entryGroup;
 
     public Output<String> getEntryGroup() {
@@ -79,7 +79,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * The id of the entry to create.
      * 
      */
-    @InputImport(name="entryId")
+    @Import(name="entryId")
       private final @Nullable Output<String> entryId;
 
     public Output<String> getEntryId() {
@@ -91,7 +91,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="gcsFilesetSpec")
+    @Import(name="gcsFilesetSpec")
       private final @Nullable Output<EntryGcsFilesetSpecGetArgs> gcsFilesetSpec;
 
     public Output<EntryGcsFilesetSpecGetArgs> getGcsFilesetSpec() {
@@ -102,7 +102,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
      * 
      */
-    @InputImport(name="integratedSystem")
+    @Import(name="integratedSystem")
       private final @Nullable Output<String> integratedSystem;
 
     public Output<String> getIntegratedSystem() {
@@ -118,7 +118,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * this field is optional and defaults to an empty string.
      * 
      */
-    @InputImport(name="linkedResource")
+    @Import(name="linkedResource")
       private final @Nullable Output<String> linkedResource;
 
     public Output<String> getLinkedResource() {
@@ -131,7 +131,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * child resources may not actually be stored in the location in this name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -145,7 +145,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * for what fields this schema can contain.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<String> schema;
 
     public Output<String> getSchema() {
@@ -158,7 +158,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `FILESET`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -171,7 +171,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
      */
-    @InputImport(name="userSpecifiedSystem")
+    @Import(name="userSpecifiedSystem")
       private final @Nullable Output<String> userSpecifiedSystem;
 
     public Output<String> getUserSpecifiedSystem() {
@@ -186,7 +186,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
      */
-    @InputImport(name="userSpecifiedType")
+    @Import(name="userSpecifiedType")
       private final @Nullable Output<String> userSpecifiedType;
 
     public Output<String> getUserSpecifiedType() {

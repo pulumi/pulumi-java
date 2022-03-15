@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ssmcontacts.inputs;
 import io.pulumi.awsnative.ssmcontacts.inputs.ContactChannelTargetInfoArgs;
 import io.pulumi.awsnative.ssmcontacts.inputs.ContactTargetInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,14 +19,14 @@ public final class ContactTargetsArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContactTargetsArgs Empty = new ContactTargetsArgs();
 
-    @InputImport(name="channelTargetInfo")
+    @Import(name="channelTargetInfo")
       private final @Nullable Output<ContactChannelTargetInfoArgs> channelTargetInfo;
 
     public Output<ContactChannelTargetInfoArgs> getChannelTargetInfo() {
         return this.channelTargetInfo == null ? Output.empty() : this.channelTargetInfo;
     }
 
-    @InputImport(name="contactTargetInfo")
+    @Import(name="contactTargetInfo")
       private final @Nullable Output<ContactTargetInfoArgs> contactTargetInfo;
 
     public Output<ContactTargetInfoArgs> getContactTargetInfo() {

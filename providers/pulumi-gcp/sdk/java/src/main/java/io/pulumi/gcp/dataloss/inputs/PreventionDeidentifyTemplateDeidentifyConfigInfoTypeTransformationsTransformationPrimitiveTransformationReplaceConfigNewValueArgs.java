@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValueArgs;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * A boolean value.
      * 
      */
-    @InputImport(name="booleanValue")
+    @Import(name="booleanValue")
       private final @Nullable Output<Boolean> booleanValue;
 
     public Output<Boolean> getBooleanValue() {
@@ -35,7 +35,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
      */
-    @InputImport(name="dateValue")
+    @Import(name="dateValue")
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueArgs> dateValue;
 
     public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueArgs> getDateValue() {
@@ -47,7 +47,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
      */
-    @InputImport(name="dayOfWeekValue")
+    @Import(name="dayOfWeekValue")
       private final @Nullable Output<String> dayOfWeekValue;
 
     public Output<String> getDayOfWeekValue() {
@@ -58,7 +58,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * A float value.
      * 
      */
-    @InputImport(name="floatValue")
+    @Import(name="floatValue")
       private final @Nullable Output<Double> floatValue;
 
     public Output<Double> getFloatValue() {
@@ -69,7 +69,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * An integer value.
      * 
      */
-    @InputImport(name="integerValue")
+    @Import(name="integerValue")
       private final @Nullable Output<Integer> integerValue;
 
     public Output<Integer> getIntegerValue() {
@@ -80,7 +80,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * A string value.
      * 
      */
-    @InputImport(name="stringValue")
+    @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
     public Output<String> getStringValue() {
@@ -92,7 +92,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Structure is documented below.
      * 
      */
-    @InputImport(name="timeValue")
+    @Import(name="timeValue")
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValueArgs> timeValue;
 
     public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValueArgs> getTimeValue() {
@@ -104,7 +104,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="timestampValue")
+    @Import(name="timestampValue")
       private final @Nullable Output<String> timestampValue;
 
     public Output<String> getTimestampValue() {

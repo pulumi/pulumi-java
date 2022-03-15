@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class Pav2MeterDetailsResponse {
     /**
      * Represents billing type.
@@ -32,12 +32,12 @@ public final class Pav2MeterDetailsResponse {
      */
     private final Double multiplier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Pav2MeterDetailsResponse(
-        @OutputCustomType.Parameter("billingType") String billingType,
-        @OutputCustomType.Parameter("chargingType") String chargingType,
-        @OutputCustomType.Parameter("meterGuid") String meterGuid,
-        @OutputCustomType.Parameter("multiplier") Double multiplier) {
+        @CustomType.Parameter("billingType") String billingType,
+        @CustomType.Parameter("chargingType") String chargingType,
+        @CustomType.Parameter("meterGuid") String meterGuid,
+        @CustomType.Parameter("multiplier") Double multiplier) {
         this.billingType = billingType;
         this.chargingType = chargingType;
         this.meterGuid = meterGuid;

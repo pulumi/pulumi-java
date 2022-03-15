@@ -7,7 +7,7 @@ import io.pulumi.azurenative.alertsmanagement.inputs.ActionGroupArgs;
 import io.pulumi.azurenative.alertsmanagement.inputs.DiagnosticsArgs;
 import io.pulumi.azurenative.alertsmanagement.inputs.SuppressionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
      * The name of action rule that needs to be created/updated
      * 
      */
-    @InputImport(name="actionRuleName")
+    @Import(name="actionRuleName")
       private final @Nullable Output<String> actionRuleName;
 
     public Output<String> getActionRuleName() {
@@ -34,7 +34,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -45,7 +45,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
      * action rule properties
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Object> properties;
 
     public Output<Object> getProperties() {
@@ -56,7 +56,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
      * Resource group name where the resource is created.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -67,7 +67,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

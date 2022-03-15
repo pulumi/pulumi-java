@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.AksNetworkingConfigu
 import io.pulumi.azurenative.machinelearningservices.inputs.SslConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * Number of agents
      * 
      */
-    @InputImport(name="agentCount")
+    @Import(name="agentCount")
       private final @Nullable Output<Integer> agentCount;
 
     public Output<Integer> getAgentCount() {
@@ -38,7 +38,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * Agent virtual machine size
      * 
      */
-    @InputImport(name="agentVmSize")
+    @Import(name="agentVmSize")
       private final @Nullable Output<String> agentVmSize;
 
     public Output<String> getAgentVmSize() {
@@ -49,7 +49,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * AKS networking configuration for vnet
      * 
      */
-    @InputImport(name="aksNetworkingConfiguration")
+    @Import(name="aksNetworkingConfiguration")
       private final @Nullable Output<AksNetworkingConfigurationArgs> aksNetworkingConfiguration;
 
     public Output<AksNetworkingConfigurationArgs> getAksNetworkingConfiguration() {
@@ -60,7 +60,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * Cluster full qualified domain name
      * 
      */
-    @InputImport(name="clusterFqdn")
+    @Import(name="clusterFqdn")
       private final @Nullable Output<String> clusterFqdn;
 
     public Output<String> getClusterFqdn() {
@@ -71,7 +71,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * Intended usage of the cluster
      * 
      */
-    @InputImport(name="clusterPurpose")
+    @Import(name="clusterPurpose")
       private final @Nullable Output<Either<String,ClusterPurpose>> clusterPurpose;
 
     public Output<Either<String,ClusterPurpose>> getClusterPurpose() {
@@ -82,7 +82,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * SSL configuration
      * 
      */
-    @InputImport(name="sslConfiguration")
+    @Import(name="sslConfiguration")
       private final @Nullable Output<SslConfigurationArgs> sslConfiguration;
 
     public Output<SslConfigurationArgs> getSslConfiguration() {

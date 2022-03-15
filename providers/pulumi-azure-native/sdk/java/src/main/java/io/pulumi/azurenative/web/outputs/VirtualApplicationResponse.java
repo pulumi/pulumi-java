@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.VirtualDirectoryResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualApplicationResponse {
     /**
      * Physical path.
@@ -35,12 +35,12 @@ public final class VirtualApplicationResponse {
      */
     private final @Nullable String virtualPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualApplicationResponse(
-        @OutputCustomType.Parameter("physicalPath") @Nullable String physicalPath,
-        @OutputCustomType.Parameter("preloadEnabled") @Nullable Boolean preloadEnabled,
-        @OutputCustomType.Parameter("virtualDirectories") @Nullable List<VirtualDirectoryResponse> virtualDirectories,
-        @OutputCustomType.Parameter("virtualPath") @Nullable String virtualPath) {
+        @CustomType.Parameter("physicalPath") @Nullable String physicalPath,
+        @CustomType.Parameter("preloadEnabled") @Nullable Boolean preloadEnabled,
+        @CustomType.Parameter("virtualDirectories") @Nullable List<VirtualDirectoryResponse> virtualDirectories,
+        @CustomType.Parameter("virtualPath") @Nullable String virtualPath) {
         this.physicalPath = physicalPath;
         this.preloadEnabled = preloadEnabled;
         this.virtualDirectories = virtualDirectories;

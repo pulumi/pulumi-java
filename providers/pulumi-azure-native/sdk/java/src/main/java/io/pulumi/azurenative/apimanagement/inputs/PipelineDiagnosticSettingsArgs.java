@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.HttpMessageDiagnosticArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class PipelineDiagnosticSettingsArgs extends io.pulumi.resources.Re
      * Diagnostic settings for request.
      * 
      */
-    @InputImport(name="request")
+    @Import(name="request")
       private final @Nullable Output<HttpMessageDiagnosticArgs> request;
 
     public Output<HttpMessageDiagnosticArgs> getRequest() {
@@ -33,7 +33,7 @@ public final class PipelineDiagnosticSettingsArgs extends io.pulumi.resources.Re
      * Diagnostic settings for response.
      * 
      */
-    @InputImport(name="response")
+    @Import(name="response")
       private final @Nullable Output<HttpMessageDiagnosticArgs> response;
 
     public Output<HttpMessageDiagnosticArgs> getResponse() {

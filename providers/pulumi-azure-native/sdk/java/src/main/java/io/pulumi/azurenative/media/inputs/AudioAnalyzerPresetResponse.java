@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AudioAnalyzerPresetResponse extends io.pulumi.resources.Invok
      * The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463
      * 
      */
-    @InputImport(name="audioLanguage")
+    @Import(name="audioLanguage")
       private final @Nullable String audioLanguage;
 
     public Optional<String> getAudioLanguage() {
@@ -34,7 +34,7 @@ public final class AudioAnalyzerPresetResponse extends io.pulumi.resources.Invok
      * Dictionary containing key value pairs for parameters not exposed in the preset itself
      * 
      */
-    @InputImport(name="experimentalOptions")
+    @Import(name="experimentalOptions")
       private final @Nullable Map<String,String> experimentalOptions;
 
     public Map<String,String> getExperimentalOptions() {
@@ -45,7 +45,7 @@ public final class AudioAnalyzerPresetResponse extends io.pulumi.resources.Invok
      * Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable String mode;
 
     public Optional<String> getMode() {
@@ -57,7 +57,7 @@ public final class AudioAnalyzerPresetResponse extends io.pulumi.resources.Invok
      * Expected value is '#Microsoft.Media.AudioAnalyzerPreset'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {

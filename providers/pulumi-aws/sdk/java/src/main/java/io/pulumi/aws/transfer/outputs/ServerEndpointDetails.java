@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.transfer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServerEndpointDetails {
     /**
      * A list of address allocation IDs that are required to attach an Elastic IP address to your SFTP server's endpoint. This property can only be used when `endpoint_type` is set to `VPC`.
@@ -38,13 +38,13 @@ public final class ServerEndpointDetails {
      */
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServerEndpointDetails(
-        @OutputCustomType.Parameter("addressAllocationIds") @Nullable List<String> addressAllocationIds,
-        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
-        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds,
-        @OutputCustomType.Parameter("vpcEndpointId") @Nullable String vpcEndpointId,
-        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
+        @CustomType.Parameter("addressAllocationIds") @Nullable List<String> addressAllocationIds,
+        @CustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @CustomType.Parameter("subnetIds") @Nullable List<String> subnetIds,
+        @CustomType.Parameter("vpcEndpointId") @Nullable String vpcEndpointId,
+        @CustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.addressAllocationIds = addressAllocationIds;
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;

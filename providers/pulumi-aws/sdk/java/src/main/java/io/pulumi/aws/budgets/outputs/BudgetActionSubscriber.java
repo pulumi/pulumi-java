@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.budgets.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BudgetActionSubscriber {
     /**
      * The address that AWS sends budget notifications to, either an SNS topic or an email.
@@ -20,10 +20,10 @@ public final class BudgetActionSubscriber {
      */
     private final String subscriptionType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetActionSubscriber(
-        @OutputCustomType.Parameter("address") String address,
-        @OutputCustomType.Parameter("subscriptionType") String subscriptionType) {
+        @CustomType.Parameter("address") String address,
+        @CustomType.Parameter("subscriptionType") String subscriptionType) {
         this.address = address;
         this.subscriptionType = subscriptionType;
     }

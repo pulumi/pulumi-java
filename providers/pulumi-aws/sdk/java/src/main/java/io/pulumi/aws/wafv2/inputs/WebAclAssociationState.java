@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WebAclAssociationState extends io.pulumi.resources.ResourceAr
      * The Amazon Resource Name (ARN) of the resource to associate with the web ACL. This must be an ARN of an Application Load Balancer or an Amazon API Gateway stage.
      * 
      */
-    @InputImport(name="resourceArn")
+    @Import(name="resourceArn")
       private final @Nullable Output<String> resourceArn;
 
     public Output<String> getResourceArn() {
@@ -29,7 +29,7 @@ public final class WebAclAssociationState extends io.pulumi.resources.ResourceAr
      * The Amazon Resource Name (ARN) of the Web ACL that you want to associate with the resource.
      * 
      */
-    @InputImport(name="webAclArn")
+    @Import(name="webAclArn")
       private final @Nullable Output<String> webAclArn;
 
     public Output<String> getWebAclArn() {

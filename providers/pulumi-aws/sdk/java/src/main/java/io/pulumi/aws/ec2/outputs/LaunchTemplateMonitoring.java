@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LaunchTemplateMonitoring {
     /**
      * If `true`, the launched EC2 instance will have detailed monitoring enabled.
@@ -17,8 +17,8 @@ public final class LaunchTemplateMonitoring {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private LaunchTemplateMonitoring(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
+    @CustomType.Constructor
+    private LaunchTemplateMonitoring(@CustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

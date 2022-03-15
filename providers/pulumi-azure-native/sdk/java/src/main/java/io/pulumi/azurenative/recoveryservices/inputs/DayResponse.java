@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DayResponse extends io.pulumi.resources.InvokeArgs {
      * Date of the month
      * 
      */
-    @InputImport(name="date")
+    @Import(name="date")
       private final @Nullable Integer date;
 
     public Optional<Integer> getDate() {
@@ -34,7 +34,7 @@ public final class DayResponse extends io.pulumi.resources.InvokeArgs {
      * Whether Date is last date of month
      * 
      */
-    @InputImport(name="isLast")
+    @Import(name="isLast")
       private final @Nullable Boolean isLast;
 
     public Optional<Boolean> getIsLast() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.VpnNatRuleMappingResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualNetworkGatewayNatRuleResult {
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -59,17 +59,17 @@ public final class GetVirtualNetworkGatewayNatRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualNetworkGatewayNatRuleResult(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("externalMappings") @Nullable List<VpnNatRuleMappingResponse> externalMappings,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("internalMappings") @Nullable List<VpnNatRuleMappingResponse> internalMappings,
-        @OutputCustomType.Parameter("ipConfigurationId") @Nullable String ipConfigurationId,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("externalMappings") @Nullable List<VpnNatRuleMappingResponse> externalMappings,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("internalMappings") @Nullable List<VpnNatRuleMappingResponse> internalMappings,
+        @CustomType.Parameter("ipConfigurationId") @Nullable String ipConfigurationId,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.etag = etag;
         this.externalMappings = externalMappings;
         this.id = id;

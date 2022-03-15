@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.CurrentScenarioDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.RecoveryPlanA2ADetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.RecoveryPlanGroupResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
      * The list of allowed operations.
      * 
      */
-    @InputImport(name="allowedOperations")
+    @Import(name="allowedOperations")
       private final @Nullable List<String> allowedOperations;
 
     public List<String> getAllowedOperations() {
@@ -37,7 +37,7 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
      * The current scenario details.
      * 
      */
-    @InputImport(name="currentScenario")
+    @Import(name="currentScenario")
       private final @Nullable CurrentScenarioDetailsResponse currentScenario;
 
     public Optional<CurrentScenarioDetailsResponse> getCurrentScenario() {
@@ -48,7 +48,7 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
      * The recovery plan status.
      * 
      */
-    @InputImport(name="currentScenarioStatus")
+    @Import(name="currentScenarioStatus")
       private final @Nullable String currentScenarioStatus;
 
     public Optional<String> getCurrentScenarioStatus() {
@@ -59,7 +59,7 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
      * The recovery plan status description.
      * 
      */
-    @InputImport(name="currentScenarioStatusDescription")
+    @Import(name="currentScenarioStatusDescription")
       private final @Nullable String currentScenarioStatusDescription;
 
     public Optional<String> getCurrentScenarioStatusDescription() {
@@ -70,7 +70,7 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
      * The failover deployment model.
      * 
      */
-    @InputImport(name="failoverDeploymentModel")
+    @Import(name="failoverDeploymentModel")
       private final @Nullable String failoverDeploymentModel;
 
     public Optional<String> getFailoverDeploymentModel() {
@@ -81,7 +81,7 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
      * The friendly name.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
@@ -92,7 +92,7 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
      * The recovery plan groups.
      * 
      */
-    @InputImport(name="groups")
+    @Import(name="groups")
       private final @Nullable List<RecoveryPlanGroupResponse> groups;
 
     public List<RecoveryPlanGroupResponse> getGroups() {
@@ -103,7 +103,7 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
      * The start time of the last planned failover.
      * 
      */
-    @InputImport(name="lastPlannedFailoverTime")
+    @Import(name="lastPlannedFailoverTime")
       private final @Nullable String lastPlannedFailoverTime;
 
     public Optional<String> getLastPlannedFailoverTime() {
@@ -114,7 +114,7 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
      * The start time of the last test failover.
      * 
      */
-    @InputImport(name="lastTestFailoverTime")
+    @Import(name="lastTestFailoverTime")
       private final @Nullable String lastTestFailoverTime;
 
     public Optional<String> getLastTestFailoverTime() {
@@ -125,7 +125,7 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
      * The start time of the last unplanned failover.
      * 
      */
-    @InputImport(name="lastUnplannedFailoverTime")
+    @Import(name="lastUnplannedFailoverTime")
       private final @Nullable String lastUnplannedFailoverTime;
 
     public Optional<String> getLastUnplannedFailoverTime() {
@@ -136,7 +136,7 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
      * The primary fabric friendly name.
      * 
      */
-    @InputImport(name="primaryFabricFriendlyName")
+    @Import(name="primaryFabricFriendlyName")
       private final @Nullable String primaryFabricFriendlyName;
 
     public Optional<String> getPrimaryFabricFriendlyName() {
@@ -147,7 +147,7 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
      * The primary fabric Id.
      * 
      */
-    @InputImport(name="primaryFabricId")
+    @Import(name="primaryFabricId")
       private final @Nullable String primaryFabricId;
 
     public Optional<String> getPrimaryFabricId() {
@@ -158,7 +158,7 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
      * The provider id and provider specific details.
      * 
      */
-    @InputImport(name="providerSpecificDetails", required=true)
+    @Import(name="providerSpecificDetails", required=true)
       private final List<RecoveryPlanA2ADetailsResponse> providerSpecificDetails;
 
     public List<RecoveryPlanA2ADetailsResponse> getProviderSpecificDetails() {
@@ -169,7 +169,7 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
      * The recovery fabric friendly name.
      * 
      */
-    @InputImport(name="recoveryFabricFriendlyName")
+    @Import(name="recoveryFabricFriendlyName")
       private final @Nullable String recoveryFabricFriendlyName;
 
     public Optional<String> getRecoveryFabricFriendlyName() {
@@ -180,7 +180,7 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
      * The recovery fabric Id.
      * 
      */
-    @InputImport(name="recoveryFabricId")
+    @Import(name="recoveryFabricId")
       private final @Nullable String recoveryFabricId;
 
     public Optional<String> getRecoveryFabricId() {
@@ -191,7 +191,7 @@ public final class RecoveryPlanPropertiesResponse extends io.pulumi.resources.In
      * The list of replication providers.
      * 
      */
-    @InputImport(name="replicationProviders")
+    @Import(name="replicationProviders")
       private final @Nullable List<String> replicationProviders;
 
     public List<String> getReplicationProviders() {

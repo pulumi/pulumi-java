@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInterfaceIPConfigurationResponse {
     /**
      * The list of DNS servers IP addresses.
@@ -43,14 +43,14 @@ public final class NetworkInterfaceIPConfigurationResponse {
      */
     private final @Nullable String subnet;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInterfaceIPConfigurationResponse(
-        @OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
-        @OutputCustomType.Parameter("gateway") @Nullable String gateway,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("ipAllocationMethod") @Nullable String ipAllocationMethod,
-        @OutputCustomType.Parameter("ipVersion") @Nullable String ipVersion,
-        @OutputCustomType.Parameter("subnet") @Nullable String subnet) {
+        @CustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
+        @CustomType.Parameter("gateway") @Nullable String gateway,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("ipAllocationMethod") @Nullable String ipAllocationMethod,
+        @CustomType.Parameter("ipVersion") @Nullable String ipVersion,
+        @CustomType.Parameter("subnet") @Nullable String subnet) {
         this.dnsServers = dnsServers;
         this.gateway = gateway;
         this.ipAddress = ipAddress;

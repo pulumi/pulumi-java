@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleMonthlyArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleTimeOfDayArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleTimeZoneArgs;
@@ -23,7 +23,7 @@ public final class PatchDeploymentRecurringScheduleArgs extends io.pulumi.resour
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -36,7 +36,7 @@ public final class PatchDeploymentRecurringScheduleArgs extends io.pulumi.resour
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="lastExecuteTime")
+    @Import(name="lastExecuteTime")
       private final @Nullable Output<String> lastExecuteTime;
 
     public Output<String> getLastExecuteTime() {
@@ -48,7 +48,7 @@ public final class PatchDeploymentRecurringScheduleArgs extends io.pulumi.resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="monthly")
+    @Import(name="monthly")
       private final @Nullable Output<PatchDeploymentRecurringScheduleMonthlyArgs> monthly;
 
     public Output<PatchDeploymentRecurringScheduleMonthlyArgs> getMonthly() {
@@ -61,7 +61,7 @@ public final class PatchDeploymentRecurringScheduleArgs extends io.pulumi.resour
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="nextExecuteTime")
+    @Import(name="nextExecuteTime")
       private final @Nullable Output<String> nextExecuteTime;
 
     public Output<String> getNextExecuteTime() {
@@ -73,7 +73,7 @@ public final class PatchDeploymentRecurringScheduleArgs extends io.pulumi.resour
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -85,7 +85,7 @@ public final class PatchDeploymentRecurringScheduleArgs extends io.pulumi.resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="timeOfDay", required=true)
+    @Import(name="timeOfDay", required=true)
       private final Output<PatchDeploymentRecurringScheduleTimeOfDayArgs> timeOfDay;
 
     public Output<PatchDeploymentRecurringScheduleTimeOfDayArgs> getTimeOfDay() {
@@ -98,7 +98,7 @@ public final class PatchDeploymentRecurringScheduleArgs extends io.pulumi.resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="timeZone", required=true)
+    @Import(name="timeZone", required=true)
       private final Output<PatchDeploymentRecurringScheduleTimeZoneArgs> timeZone;
 
     public Output<PatchDeploymentRecurringScheduleTimeZoneArgs> getTimeZone() {
@@ -110,7 +110,7 @@ public final class PatchDeploymentRecurringScheduleArgs extends io.pulumi.resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="weekly")
+    @Import(name="weekly")
       private final @Nullable Output<PatchDeploymentRecurringScheduleWeeklyArgs> weekly;
 
     public Output<PatchDeploymentRecurringScheduleWeeklyArgs> getWeekly() {

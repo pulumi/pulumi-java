@@ -9,7 +9,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.outputs.IdentityResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class HybridIdentityMetadatum extends io.pulumi.resources.CustomResource 
      * The identity of the resource.
      * 
      */
-    @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
+    @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output<IdentityResponse> identity;
 
     /**
@@ -50,7 +50,7 @@ public class HybridIdentityMetadatum extends io.pulumi.resources.CustomResource 
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class HybridIdentityMetadatum extends io.pulumi.resources.CustomResource 
      * Gets or sets the provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -78,7 +78,7 @@ public class HybridIdentityMetadatum extends io.pulumi.resources.CustomResource 
      * Gets or sets the Public Key.
      * 
      */
-    @OutputExport(name="publicKey", type=String.class, parameters={})
+    @Export(name="publicKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicKey;
 
     /**
@@ -92,7 +92,7 @@ public class HybridIdentityMetadatum extends io.pulumi.resources.CustomResource 
      * The system data.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -106,7 +106,7 @@ public class HybridIdentityMetadatum extends io.pulumi.resources.CustomResource 
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -120,7 +120,7 @@ public class HybridIdentityMetadatum extends io.pulumi.resources.CustomResource 
      * Gets or sets the Vm Id.
      * 
      */
-    @OutputExport(name="vmId", type=String.class, parameters={})
+    @Export(name="vmId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vmId;
 
     /**

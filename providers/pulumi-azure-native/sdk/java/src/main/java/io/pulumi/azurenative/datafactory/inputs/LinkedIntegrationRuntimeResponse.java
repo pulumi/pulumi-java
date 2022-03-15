@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class LinkedIntegrationRuntimeResponse extends io.pulumi.resources.
      * The creating time of the linked integration runtime.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -31,7 +31,7 @@ public final class LinkedIntegrationRuntimeResponse extends io.pulumi.resources.
      * The location of the data factory for which the linked integration runtime belong to.
      * 
      */
-    @InputImport(name="dataFactoryLocation", required=true)
+    @Import(name="dataFactoryLocation", required=true)
       private final String dataFactoryLocation;
 
     public String getDataFactoryLocation() {
@@ -42,7 +42,7 @@ public final class LinkedIntegrationRuntimeResponse extends io.pulumi.resources.
      * The name of the data factory for which the linked integration runtime belong to.
      * 
      */
-    @InputImport(name="dataFactoryName", required=true)
+    @Import(name="dataFactoryName", required=true)
       private final String dataFactoryName;
 
     public String getDataFactoryName() {
@@ -53,7 +53,7 @@ public final class LinkedIntegrationRuntimeResponse extends io.pulumi.resources.
      * The name of the linked integration runtime.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -64,7 +64,7 @@ public final class LinkedIntegrationRuntimeResponse extends io.pulumi.resources.
      * The subscription ID for which the linked integration runtime belong to.
      * 
      */
-    @InputImport(name="subscriptionId", required=true)
+    @Import(name="subscriptionId", required=true)
       private final String subscriptionId;
 
     public String getSubscriptionId() {

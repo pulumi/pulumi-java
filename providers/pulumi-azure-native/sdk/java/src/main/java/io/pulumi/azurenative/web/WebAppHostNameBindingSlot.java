@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppHostNameBindingSlotArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public class WebAppHostNameBindingSlot extends io.pulumi.resources.CustomResourc
      * Azure resource name.
      * 
      */
-    @OutputExport(name="azureResourceName", type=String.class, parameters={})
+    @Export(name="azureResourceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> azureResourceName;
 
     /**
@@ -45,7 +45,7 @@ public class WebAppHostNameBindingSlot extends io.pulumi.resources.CustomResourc
      * Azure resource type.
      * 
      */
-    @OutputExport(name="azureResourceType", type=String.class, parameters={})
+    @Export(name="azureResourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> azureResourceType;
 
     /**
@@ -59,7 +59,7 @@ public class WebAppHostNameBindingSlot extends io.pulumi.resources.CustomResourc
      * Custom DNS record type.
      * 
      */
-    @OutputExport(name="customHostNameDnsRecordType", type=String.class, parameters={})
+    @Export(name="customHostNameDnsRecordType", type=String.class, parameters={})
     private Output</* @Nullable */ String> customHostNameDnsRecordType;
 
     /**
@@ -73,7 +73,7 @@ public class WebAppHostNameBindingSlot extends io.pulumi.resources.CustomResourc
      * Fully qualified ARM domain resource URI.
      * 
      */
-    @OutputExport(name="domainId", type=String.class, parameters={})
+    @Export(name="domainId", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainId;
 
     /**
@@ -87,7 +87,7 @@ public class WebAppHostNameBindingSlot extends io.pulumi.resources.CustomResourc
      * Hostname type.
      * 
      */
-    @OutputExport(name="hostNameType", type=String.class, parameters={})
+    @Export(name="hostNameType", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostNameType;
 
     /**
@@ -101,7 +101,7 @@ public class WebAppHostNameBindingSlot extends io.pulumi.resources.CustomResourc
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -115,7 +115,7 @@ public class WebAppHostNameBindingSlot extends io.pulumi.resources.CustomResourc
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -129,7 +129,7 @@ public class WebAppHostNameBindingSlot extends io.pulumi.resources.CustomResourc
      * App Service app name.
      * 
      */
-    @OutputExport(name="siteName", type=String.class, parameters={})
+    @Export(name="siteName", type=String.class, parameters={})
     private Output</* @Nullable */ String> siteName;
 
     /**
@@ -143,7 +143,7 @@ public class WebAppHostNameBindingSlot extends io.pulumi.resources.CustomResourc
      * SSL type
      * 
      */
-    @OutputExport(name="sslState", type=String.class, parameters={})
+    @Export(name="sslState", type=String.class, parameters={})
     private Output</* @Nullable */ String> sslState;
 
     /**
@@ -157,7 +157,7 @@ public class WebAppHostNameBindingSlot extends io.pulumi.resources.CustomResourc
      * SSL certificate thumbprint
      * 
      */
-    @OutputExport(name="thumbprint", type=String.class, parameters={})
+    @Export(name="thumbprint", type=String.class, parameters={})
     private Output</* @Nullable */ String> thumbprint;
 
     /**
@@ -171,7 +171,7 @@ public class WebAppHostNameBindingSlot extends io.pulumi.resources.CustomResourc
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -185,7 +185,7 @@ public class WebAppHostNameBindingSlot extends io.pulumi.resources.CustomResourc
      * Virtual IP address assigned to the hostname if IP based SSL is enabled.
      * 
      */
-    @OutputExport(name="virtualIP", type=String.class, parameters={})
+    @Export(name="virtualIP", type=String.class, parameters={})
     private Output<String> virtualIP;
 
     /**

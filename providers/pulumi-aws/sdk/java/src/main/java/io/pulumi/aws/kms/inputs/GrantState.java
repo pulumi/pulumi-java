@@ -5,7 +5,7 @@ package io.pulumi.aws.kms.inputs;
 
 import io.pulumi.aws.kms.inputs.GrantConstraintGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
      * 
      */
-    @InputImport(name="constraints")
+    @Import(name="constraints")
       private final @Nullable Output<List<GrantConstraintGetArgs>> constraints;
 
     public Output<List<GrantConstraintGetArgs>> getConstraints() {
@@ -32,7 +32,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * A list of grant tokens to be used when creating the grant. See [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token) for more information about grant tokens.
      * 
      */
-    @InputImport(name="grantCreationTokens")
+    @Import(name="grantCreationTokens")
       private final @Nullable Output<List<String>> grantCreationTokens;
 
     public Output<List<String>> getGrantCreationTokens() {
@@ -43,7 +43,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * The unique identifier for the grant.
      * 
      */
-    @InputImport(name="grantId")
+    @Import(name="grantId")
       private final @Nullable Output<String> grantId;
 
     public Output<String> getGrantId() {
@@ -54,7 +54,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * The grant token for the created grant. For more information, see [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token).
      * 
      */
-    @InputImport(name="grantToken")
+    @Import(name="grantToken")
       private final @Nullable Output<String> grantToken;
 
     public Output<String> getGrantToken() {
@@ -65,7 +65,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
      * 
      */
-    @InputImport(name="granteePrincipal")
+    @Import(name="granteePrincipal")
       private final @Nullable Output<String> granteePrincipal;
 
     public Output<String> getGranteePrincipal() {
@@ -76,7 +76,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
      * 
      */
-    @InputImport(name="keyId")
+    @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
     public Output<String> getKeyId() {
@@ -87,7 +87,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * A friendly name for identifying the grant.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -98,7 +98,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * A list of operations that the grant permits. The permitted values are: `Decrypt`, `Encrypt`, `GenerateDataKey`, `GenerateDataKeyWithoutPlaintext`, `ReEncryptFrom`, `ReEncryptTo`, `Sign`, `Verify`, `GetPublicKey`, `CreateGrant`, `RetireGrant`, `DescribeKey`, `GenerateDataKeyPair`, or `GenerateDataKeyPairWithoutPlaintext`.
      * 
      */
-    @InputImport(name="operations")
+    @Import(name="operations")
       private final @Nullable Output<List<String>> operations;
 
     public Output<List<String>> getOperations() {
@@ -110,7 +110,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html) for more information.
      * 
      */
-    @InputImport(name="retireOnDelete")
+    @Import(name="retireOnDelete")
       private final @Nullable Output<Boolean> retireOnDelete;
 
     public Output<Boolean> getRetireOnDelete() {
@@ -121,7 +121,7 @@ public final class GrantState extends io.pulumi.resources.ResourceArgs {
      * The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
      * 
      */
-    @InputImport(name="retiringPrincipal")
+    @Import(name="retiringPrincipal")
       private final @Nullable Output<String> retiringPrincipal;
 
     public Output<String> getRetiringPrincipal() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.containerregistry.inputs.ImportPipelineSourceProper
 import io.pulumi.azurenative.containerregistry.inputs.PipelineTriggerPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The identity of the import pipeline.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<IdentityPropertiesArgs> identity;
 
     public Output<IdentityPropertiesArgs> getIdentity() {
@@ -35,7 +35,7 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the import pipeline.
      * 
      */
-    @InputImport(name="importPipelineName")
+    @Import(name="importPipelineName")
       private final @Nullable Output<String> importPipelineName;
 
     public Output<String> getImportPipelineName() {
@@ -46,7 +46,7 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the import pipeline.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -57,7 +57,7 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The list of all options configured for the pipeline.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<List<Either<String,PipelineOptions>>> options;
 
     public Output<List<Either<String,PipelineOptions>>> getOptions() {
@@ -68,7 +68,7 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the container registry.
      * 
      */
-    @InputImport(name="registryName", required=true)
+    @Import(name="registryName", required=true)
       private final Output<String> registryName;
 
     public Output<String> getRegistryName() {
@@ -79,7 +79,7 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group to which the container registry belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -90,7 +90,7 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The source properties of the import pipeline.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<ImportPipelineSourcePropertiesArgs> source;
 
     public Output<ImportPipelineSourcePropertiesArgs> getSource() {
@@ -101,7 +101,7 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The properties that describe the trigger of the import pipeline.
      * 
      */
-    @InputImport(name="trigger")
+    @Import(name="trigger")
       private final @Nullable Output<PipelineTriggerPropertiesArgs> trigger;
 
     public Output<PipelineTriggerPropertiesArgs> getTrigger() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class UtcClipTimeArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is '#Microsoft.Media.UtcClipTime'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -33,7 +33,7 @@ public final class UtcClipTimeArgs extends io.pulumi.resources.ResourceArgs {
      * The time position on the timeline of the input media based on Utc time.
      * 
      */
-    @InputImport(name="time", required=true)
+    @Import(name="time", required=true)
       private final Output<String> time;
 
     public Output<String> getTime() {

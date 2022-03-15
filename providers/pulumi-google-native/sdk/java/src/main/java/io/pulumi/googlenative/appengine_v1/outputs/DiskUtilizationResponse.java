@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DiskUtilizationResponse {
     /**
      * Target bytes read per second.
@@ -30,12 +30,12 @@ public final class DiskUtilizationResponse {
      */
     private final Integer targetWriteOpsPerSecond;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiskUtilizationResponse(
-        @OutputCustomType.Parameter("targetReadBytesPerSecond") Integer targetReadBytesPerSecond,
-        @OutputCustomType.Parameter("targetReadOpsPerSecond") Integer targetReadOpsPerSecond,
-        @OutputCustomType.Parameter("targetWriteBytesPerSecond") Integer targetWriteBytesPerSecond,
-        @OutputCustomType.Parameter("targetWriteOpsPerSecond") Integer targetWriteOpsPerSecond) {
+        @CustomType.Parameter("targetReadBytesPerSecond") Integer targetReadBytesPerSecond,
+        @CustomType.Parameter("targetReadOpsPerSecond") Integer targetReadOpsPerSecond,
+        @CustomType.Parameter("targetWriteBytesPerSecond") Integer targetWriteBytesPerSecond,
+        @CustomType.Parameter("targetWriteOpsPerSecond") Integer targetWriteOpsPerSecond) {
         this.targetReadBytesPerSecond = targetReadBytesPerSecond;
         this.targetReadOpsPerSecond = targetReadOpsPerSecond;
         this.targetWriteBytesPerSecond = targetWriteBytesPerSecond;

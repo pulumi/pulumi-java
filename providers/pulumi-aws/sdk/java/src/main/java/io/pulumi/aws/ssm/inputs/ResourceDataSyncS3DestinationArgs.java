@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
      * Name of S3 bucket where the aggregated data is stored.
      * 
      */
-    @InputImport(name="bucketName", required=true)
+    @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
     public Output<String> getBucketName() {
@@ -29,7 +29,7 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
      * ARN of an encryption key for a destination in Amazon S3.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -40,7 +40,7 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
      * Prefix for the bucket.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
@@ -51,7 +51,7 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
      * Region with the bucket targeted by the Resource Data Sync.
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {
@@ -62,7 +62,7 @@ public final class ResourceDataSyncS3DestinationArgs extends io.pulumi.resources
      * A supported sync format. Only JsonSerDe is currently supported. Defaults to JsonSerDe.
      * 
      */
-    @InputImport(name="syncFormat")
+    @Import(name="syncFormat")
       private final @Nullable Output<String> syncFormat;
 
     public Output<String> getSyncFormat() {

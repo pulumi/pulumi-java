@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.storage.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.String;
@@ -32,7 +32,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
@@ -45,7 +45,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
      * The semantic is currently (CSI spec 1.2) defined as: The available capacity, in bytes, of the storage that can be used to provision volumes. If not set, that information is currently unavailable and treated like zero capacity.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<String> capacity;
 
     public Output<String> getCapacity() {
@@ -56,7 +56,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -69,7 +69,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
      * This is defined since CSI spec 1.4.0 as the largest size that may be used in a CreateVolumeRequest.capacity_range.required_bytes field to create a volume with the same parameters as those in GetCapacityRequest. The corresponding value in the Kubernetes API is ResourceRequirements.Requests in a volume claim.
      * 
      */
-    @InputImport(name="maximumVolumeSize")
+    @Import(name="maximumVolumeSize")
       private final @Nullable Output<String> maximumVolumeSize;
 
     public Output<String> getMaximumVolumeSize() {
@@ -84,7 +84,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
      * More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
@@ -95,7 +95,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
      * NodeTopology defines which nodes have access to the storage for which capacity was reported. If not set, the storage is not accessible from any node in the cluster. If empty, the storage is accessible from all nodes. This field is immutable.
      * 
      */
-    @InputImport(name="nodeTopology")
+    @Import(name="nodeTopology")
       private final @Nullable Output<LabelSelectorArgs> nodeTopology;
 
     public Output<LabelSelectorArgs> getNodeTopology() {
@@ -106,7 +106,7 @@ public final class CSIStorageCapacityArgs extends io.pulumi.resources.ResourceAr
      * The name of the StorageClass that the reported capacity applies to. It must meet the same requirements as the name of a StorageClass object (non-empty, DNS subdomain). If that object no longer exists, the CSIStorageCapacity object is obsolete and should be removed by its creator. This field is immutable.
      * 
      */
-    @InputImport(name="storageClassName", required=true)
+    @Import(name="storageClassName", required=true)
       private final Output<String> storageClassName;
 
     public Output<String> getStorageClassName() {

@@ -14,7 +14,7 @@ import io.pulumi.azurenative.kusto.outputs.TrustedExternalTenantResponse;
 import io.pulumi.azurenative.kusto.outputs.VirtualNetworkConfigurationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -43,7 +43,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The cluster data ingestion URI.
      * 
      */
-    @OutputExport(name="dataIngestionUri", type=String.class, parameters={})
+    @Export(name="dataIngestionUri", type=String.class, parameters={})
     private Output<String> dataIngestionUri;
 
     /**
@@ -57,7 +57,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A boolean value that indicates if the cluster's disks are encrypted.
      * 
      */
-    @OutputExport(name="enableDiskEncryption", type=Boolean.class, parameters={})
+    @Export(name="enableDiskEncryption", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDiskEncryption;
 
     /**
@@ -71,7 +71,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A boolean value that indicates if double encryption is enabled.
      * 
      */
-    @OutputExport(name="enableDoubleEncryption", type=Boolean.class, parameters={})
+    @Export(name="enableDoubleEncryption", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDoubleEncryption;
 
     /**
@@ -85,7 +85,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A boolean value that indicates if the purge operations are enabled.
      * 
      */
-    @OutputExport(name="enablePurge", type=Boolean.class, parameters={})
+    @Export(name="enablePurge", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enablePurge;
 
     /**
@@ -99,7 +99,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A boolean value that indicates if the streaming ingest is enabled.
      * 
      */
-    @OutputExport(name="enableStreamingIngest", type=Boolean.class, parameters={})
+    @Export(name="enableStreamingIngest", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableStreamingIngest;
 
     /**
@@ -113,7 +113,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The engine type
      * 
      */
-    @OutputExport(name="engineType", type=String.class, parameters={})
+    @Export(name="engineType", type=String.class, parameters={})
     private Output</* @Nullable */ String> engineType;
 
     /**
@@ -127,7 +127,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -141,7 +141,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The identity of the cluster, if configured.
      * 
      */
-    @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
+    @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
@@ -155,7 +155,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * KeyVault properties for the cluster encryption.
      * 
      */
-    @OutputExport(name="keyVaultProperties", type=KeyVaultPropertiesResponse.class, parameters={})
+    @Export(name="keyVaultProperties", type=KeyVaultPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ KeyVaultPropertiesResponse> keyVaultProperties;
 
     /**
@@ -169,7 +169,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * List of the cluster's language extensions.
      * 
      */
-    @OutputExport(name="languageExtensions", type=LanguageExtensionsListResponse.class, parameters={})
+    @Export(name="languageExtensions", type=LanguageExtensionsListResponse.class, parameters={})
     private Output<LanguageExtensionsListResponse> languageExtensions;
 
     /**
@@ -183,7 +183,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -197,7 +197,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -211,7 +211,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Optimized auto scale definition.
      * 
      */
-    @OutputExport(name="optimizedAutoscale", type=OptimizedAutoscaleResponse.class, parameters={})
+    @Export(name="optimizedAutoscale", type=OptimizedAutoscaleResponse.class, parameters={})
     private Output</* @Nullable */ OptimizedAutoscaleResponse> optimizedAutoscale;
 
     /**
@@ -225,7 +225,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The provisioned state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -239,7 +239,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The SKU of the cluster.
      * 
      */
-    @OutputExport(name="sku", type=AzureSkuResponse.class, parameters={})
+    @Export(name="sku", type=AzureSkuResponse.class, parameters={})
     private Output<AzureSkuResponse> sku;
 
     /**
@@ -253,7 +253,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The state of the resource.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -267,7 +267,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The reason for the cluster's current state.
      * 
      */
-    @OutputExport(name="stateReason", type=String.class, parameters={})
+    @Export(name="stateReason", type=String.class, parameters={})
     private Output<String> stateReason;
 
     /**
@@ -281,7 +281,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -295,7 +295,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The cluster's external tenants.
      * 
      */
-    @OutputExport(name="trustedExternalTenants", type=List.class, parameters={TrustedExternalTenantResponse.class})
+    @Export(name="trustedExternalTenants", type=List.class, parameters={TrustedExternalTenantResponse.class})
     private Output</* @Nullable */ List<TrustedExternalTenantResponse>> trustedExternalTenants;
 
     /**
@@ -309,7 +309,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -323,7 +323,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The cluster URI.
      * 
      */
-    @OutputExport(name="uri", type=String.class, parameters={})
+    @Export(name="uri", type=String.class, parameters={})
     private Output<String> uri;
 
     /**
@@ -337,7 +337,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Virtual network definition.
      * 
      */
-    @OutputExport(name="virtualNetworkConfiguration", type=VirtualNetworkConfigurationResponse.class, parameters={})
+    @Export(name="virtualNetworkConfiguration", type=VirtualNetworkConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkConfigurationResponse> virtualNetworkConfiguration;
 
     /**
@@ -351,7 +351,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The availability zones of the cluster.
      * 
      */
-    @OutputExport(name="zones", type=List.class, parameters={String.class})
+    @Export(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
     /**

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.BookmarkRelationArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class BookmarkRelation extends io.pulumi.resources.CustomResource {
      * Etag of the azure resource
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -48,7 +48,7 @@ public class BookmarkRelation extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -62,7 +62,7 @@ public class BookmarkRelation extends io.pulumi.resources.CustomResource {
      * The resource ID of the related resource
      * 
      */
-    @OutputExport(name="relatedResourceId", type=String.class, parameters={})
+    @Export(name="relatedResourceId", type=String.class, parameters={})
     private Output<String> relatedResourceId;
 
     /**
@@ -76,7 +76,7 @@ public class BookmarkRelation extends io.pulumi.resources.CustomResource {
      * The resource kind of the related resource
      * 
      */
-    @OutputExport(name="relatedResourceKind", type=String.class, parameters={})
+    @Export(name="relatedResourceKind", type=String.class, parameters={})
     private Output<String> relatedResourceKind;
 
     /**
@@ -90,7 +90,7 @@ public class BookmarkRelation extends io.pulumi.resources.CustomResource {
      * The name of the related resource
      * 
      */
-    @OutputExport(name="relatedResourceName", type=String.class, parameters={})
+    @Export(name="relatedResourceName", type=String.class, parameters={})
     private Output<String> relatedResourceName;
 
     /**
@@ -104,7 +104,7 @@ public class BookmarkRelation extends io.pulumi.resources.CustomResource {
      * The resource type of the related resource
      * 
      */
-    @OutputExport(name="relatedResourceType", type=String.class, parameters={})
+    @Export(name="relatedResourceType", type=String.class, parameters={})
     private Output<String> relatedResourceType;
 
     /**
@@ -118,7 +118,7 @@ public class BookmarkRelation extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

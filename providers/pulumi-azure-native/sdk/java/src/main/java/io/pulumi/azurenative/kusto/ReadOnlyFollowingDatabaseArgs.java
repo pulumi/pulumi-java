@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kusto;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
      * The name of the Kusto cluster.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -29,7 +29,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
      * The name of the database in the Kusto cluster.
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -40,7 +40,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
      * The time the data should be kept in cache for fast queries in TimeSpan.
      * 
      */
-    @InputImport(name="hotCachePeriod")
+    @Import(name="hotCachePeriod")
       private final @Nullable Output<String> hotCachePeriod;
 
     public Output<String> getHotCachePeriod() {
@@ -52,7 +52,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
      * Expected value is 'ReadOnlyFollowing'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -63,7 +63,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -74,7 +74,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
      * The name of the resource group containing the Kusto cluster.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

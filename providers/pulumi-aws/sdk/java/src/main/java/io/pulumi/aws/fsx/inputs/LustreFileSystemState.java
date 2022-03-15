@@ -4,7 +4,7 @@
 package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * Amazon Resource Name of the file system.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * How Amazon FSx keeps your file and directory listings up to date as you add or modify objects in your linked S3 bucket. see [Auto Import Data Repo](https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html) for more details. Only supported on `PERSISTENT_1` deployment types.
      * 
      */
-    @InputImport(name="autoImportPolicy")
+    @Import(name="autoImportPolicy")
       private final @Nullable Output<String> autoImportPolicy;
 
     public Output<String> getAutoImportPolicy() {
@@ -44,7 +44,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * The number of days to retain automatic backups. Setting this to 0 disables automatic backups. You can retain automatic backups for a maximum of 90 days. only valid for `PERSISTENT_1` and `PERSISTENT_2` deployment_type.
      * 
      */
-    @InputImport(name="automaticBackupRetentionDays")
+    @Import(name="automaticBackupRetentionDays")
       private final @Nullable Output<Integer> automaticBackupRetentionDays;
 
     public Output<Integer> getAutomaticBackupRetentionDays() {
@@ -55,7 +55,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * The ID of the source backup to create the filesystem from.
      * 
      */
-    @InputImport(name="backupId")
+    @Import(name="backupId")
       private final @Nullable Output<String> backupId;
 
     public Output<String> getBackupId() {
@@ -66,7 +66,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * A boolean flag indicating whether tags for the file system should be copied to backups. Applicable for `PERSISTENT_1` and `PERSISTENT_2` deployment_type. The default value is false.
      * 
      */
-    @InputImport(name="copyTagsToBackups")
+    @Import(name="copyTagsToBackups")
       private final @Nullable Output<Boolean> copyTagsToBackups;
 
     public Output<Boolean> getCopyTagsToBackups() {
@@ -77,7 +77,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * A recurring daily time, in the format HH:MM. HH is the zero-padded hour of the day (0-23), and MM is the zero-padded minute of the hour. For example, 05:00 specifies 5 AM daily. only valid for `PERSISTENT_1` and `PERSISTENT_2` deployment_type. Requires `automatic_backup_retention_days` to be set.
      * 
      */
-    @InputImport(name="dailyAutomaticBackupStartTime")
+    @Import(name="dailyAutomaticBackupStartTime")
       private final @Nullable Output<String> dailyAutomaticBackupStartTime;
 
     public Output<String> getDailyAutomaticBackupStartTime() {
@@ -88,7 +88,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * Sets the data compression configuration for the file system. Valid values are `LZ4` and `NONE`. Default value is `NONE`. Unsetting this value reverts the compression type back to `NONE`.
      * 
      */
-    @InputImport(name="dataCompressionType")
+    @Import(name="dataCompressionType")
       private final @Nullable Output<String> dataCompressionType;
 
     public Output<String> getDataCompressionType() {
@@ -99,7 +99,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * - The filesystem deployment type. One of: `SCRATCH_1`, `SCRATCH_2`, `PERSISTENT_1`, `PERSISTENT_2`.
      * 
      */
-    @InputImport(name="deploymentType")
+    @Import(name="deploymentType")
       private final @Nullable Output<String> deploymentType;
 
     public Output<String> getDeploymentType() {
@@ -110,7 +110,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * DNS name for the file system, e.g., `fs-12345678.fsx.us-west-2.amazonaws.com`
      * 
      */
-    @InputImport(name="dnsName")
+    @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
@@ -121,7 +121,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * - The type of drive cache used by `PERSISTENT_1` filesystems that are provisioned with `HDD` storage_type. Required for `HDD` storage_type, set to either `READ` or `NONE`.
      * 
      */
-    @InputImport(name="driveCacheType")
+    @Import(name="driveCacheType")
       private final @Nullable Output<String> driveCacheType;
 
     public Output<String> getDriveCacheType() {
@@ -132,7 +132,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * S3 URI (with optional prefix) where the root of your Amazon FSx file system is exported. Can only be specified with `import_path` argument and the path must use the same Amazon S3 bucket as specified in `import_path`. Set equal to `import_path` to overwrite files on export. Defaults to `s3://{IMPORT BUCKET}/FSxLustre{CREATION TIMESTAMP}`. Only supported on `PERSISTENT_1` deployment types.
      * 
      */
-    @InputImport(name="exportPath")
+    @Import(name="exportPath")
       private final @Nullable Output<String> exportPath;
 
     public Output<String> getExportPath() {
@@ -143,7 +143,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * Sets the Lustre version for the file system that you're creating. Valid values are 2.10 for `SCRATCH_1`, `SCRATCH_2` and `PERSISTENT_1` deployment types. Valid values for 2.12 include all deployment types.
      * 
      */
-    @InputImport(name="fileSystemTypeVersion")
+    @Import(name="fileSystemTypeVersion")
       private final @Nullable Output<String> fileSystemTypeVersion;
 
     public Output<String> getFileSystemTypeVersion() {
@@ -154,7 +154,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * S3 URI (with optional prefix) that you're using as the data repository for your FSx for Lustre file system. For example, `s3://example-bucket/optional-prefix/`. Only supported on `PERSISTENT_1` deployment types.
      * 
      */
-    @InputImport(name="importPath")
+    @Import(name="importPath")
       private final @Nullable Output<String> importPath;
 
     public Output<String> getImportPath() {
@@ -165,7 +165,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * For files imported from a data repository, this value determines the stripe count and maximum amount of data per file (in MiB) stored on a single physical disk. Can only be specified with `import_path` argument. Defaults to `1024`. Minimum of `1` and maximum of `512000`. Only supported on `PERSISTENT_1` deployment types.
      * 
      */
-    @InputImport(name="importedFileChunkSize")
+    @Import(name="importedFileChunkSize")
       private final @Nullable Output<Integer> importedFileChunkSize;
 
     public Output<Integer> getImportedFileChunkSize() {
@@ -176,7 +176,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * ARN for the KMS Key to encrypt the file system at rest, applicable for `PERSISTENT_1` and `PERSISTENT_2` deployment_type. Defaults to an AWS managed KMS Key.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -187,7 +187,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * The value to be used when mounting the filesystem.
      * 
      */
-    @InputImport(name="mountName")
+    @Import(name="mountName")
       private final @Nullable Output<String> mountName;
 
     public Output<String> getMountName() {
@@ -198,7 +198,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * Set of Elastic Network Interface identifiers from which the file system is accessible. As explained in the [documentation](https://docs.aws.amazon.com/fsx/latest/LustreGuide/mounting-on-premises.html), the first network interface returned is the primary network interface.
      * 
      */
-    @InputImport(name="networkInterfaceIds")
+    @Import(name="networkInterfaceIds")
       private final @Nullable Output<List<String>> networkInterfaceIds;
 
     public Output<List<String>> getNetworkInterfaceIds() {
@@ -209,7 +209,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * AWS account identifier that created the file system.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -220,7 +220,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * - Describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB, required for the `PERSISTENT_1` and `PERSISTENT_2` deployment_type. Valid values for `PERSISTENT_1` deployment_type and `SSD` storage_type are 50, 100, 200. Valid values for `PERSISTENT_1` deployment_type and `HDD` storage_type are 12, 40. Valid values for `PERSISTENT_2` deployment_type and `  SSD ` storage_type are 125, 250, 500, 1000.
      * 
      */
-    @InputImport(name="perUnitStorageThroughput")
+    @Import(name="perUnitStorageThroughput")
       private final @Nullable Output<Integer> perUnitStorageThroughput;
 
     public Output<Integer> getPerUnitStorageThroughput() {
@@ -231,7 +231,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * A list of IDs for the security groups that apply to the specified network interfaces created for file system access. These security groups will apply to all network interfaces.
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -242,7 +242,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * The storage capacity (GiB) of the file system. Minimum of `1200`. See more details at [Allowed values for Fsx storage capacity](https://docs.aws.amazon.com/fsx/latest/APIReference/API_CreateFileSystem.html#FSx-CreateFileSystem-request-StorageCapacity). Update is allowed only for `SCRATCH_2`, `PERSISTENT_1` and `PERSISTENT_2` deployment types, See more details at [Fsx Storage Capacity Update](https://docs.aws.amazon.com/fsx/latest/APIReference/API_UpdateFileSystem.html#FSx-UpdateFileSystem-request-StorageCapacity). Required when not creating filesystem for a backup.
      * 
      */
-    @InputImport(name="storageCapacity")
+    @Import(name="storageCapacity")
       private final @Nullable Output<Integer> storageCapacity;
 
     public Output<Integer> getStorageCapacity() {
@@ -253,7 +253,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * - The filesystem storage type. Either `SSD` or `HDD`, defaults to `SSD`. `HDD` is only supported on `PERSISTENT_1` deployment types.
      * 
      */
-    @InputImport(name="storageType")
+    @Import(name="storageType")
       private final @Nullable Output<String> storageType;
 
     public Output<String> getStorageType() {
@@ -264,7 +264,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * A list of IDs for the subnets that the file system will be accessible from. File systems currently support only one subnet. The file server is also launched in that subnet's Availability Zone.
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<String> subnetIds;
 
     public Output<String> getSubnetIds() {
@@ -275,7 +275,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * A map of tags to assign to the file system. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -286,7 +286,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -297,7 +297,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * Identifier of the Virtual Private Cloud for the file system.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
@@ -308,7 +308,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
      * The preferred start time (in `d:HH:MM` format) to perform weekly maintenance, in the UTC time zone.
      * 
      */
-    @InputImport(name="weeklyMaintenanceStartTime")
+    @Import(name="weeklyMaintenanceStartTime")
       private final @Nullable Output<String> weeklyMaintenanceStartTime;
 
     public Output<String> getWeeklyMaintenanceStartTime() {

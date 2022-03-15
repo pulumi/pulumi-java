@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.networksecurity_v1beta1.outputs.GoogleCloudNetworksecurityV1beta1CertificateProviderResponse;
 import io.pulumi.googlenative.networksecurity_v1beta1.outputs.MTLSPolicyResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServerTlsPolicyResult {
     /**
      *  Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility.
@@ -54,16 +54,16 @@ public final class GetServerTlsPolicyResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServerTlsPolicyResult(
-        @OutputCustomType.Parameter("allowOpen") Boolean allowOpen,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("mtlsPolicy") MTLSPolicyResponse mtlsPolicy,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("serverCertificate") GoogleCloudNetworksecurityV1beta1CertificateProviderResponse serverCertificate,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("allowOpen") Boolean allowOpen,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("mtlsPolicy") MTLSPolicyResponse mtlsPolicy,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("serverCertificate") GoogleCloudNetworksecurityV1beta1CertificateProviderResponse serverCertificate,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.allowOpen = allowOpen;
         this.createTime = createTime;
         this.description = description;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetStandardArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetStandardArgs extends io.pulumi.resources.InvokeArgs {
      * The Security Standard key - unique key for the standard type
      * 
      */
-    @InputImport(name="standardId", required=true)
+    @Import(name="standardId", required=true)
       private final String standardId;
 
     public String getStandardId() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.opsworks.RdsDbInstanceArgs;
 import io.pulumi.aws.opsworks.inputs.RdsDbInstanceState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public class RdsDbInstance extends io.pulumi.resources.CustomResource {
      * A db password
      * 
      */
-    @OutputExport(name="dbPassword", type=String.class, parameters={})
+    @Export(name="dbPassword", type=String.class, parameters={})
     private Output<String> dbPassword;
 
     /**
@@ -38,7 +38,7 @@ public class RdsDbInstance extends io.pulumi.resources.CustomResource {
      * A db username
      * 
      */
-    @OutputExport(name="dbUser", type=String.class, parameters={})
+    @Export(name="dbUser", type=String.class, parameters={})
     private Output<String> dbUser;
 
     /**
@@ -52,7 +52,7 @@ public class RdsDbInstance extends io.pulumi.resources.CustomResource {
      * The db instance to register for this stack. Changing this will force a new resource.
      * 
      */
-    @OutputExport(name="rdsDbInstanceArn", type=String.class, parameters={})
+    @Export(name="rdsDbInstanceArn", type=String.class, parameters={})
     private Output<String> rdsDbInstanceArn;
 
     /**
@@ -66,7 +66,7 @@ public class RdsDbInstance extends io.pulumi.resources.CustomResource {
      * The stack to register a db instance for. Changing this will force a new resource.
      * 
      */
-    @OutputExport(name="stackId", type=String.class, parameters={})
+    @Export(name="stackId", type=String.class, parameters={})
     private Output<String> stackId;
 
     /**

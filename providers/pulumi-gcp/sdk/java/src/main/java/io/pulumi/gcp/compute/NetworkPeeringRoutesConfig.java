@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.NetworkPeeringRoutesConfigArgs;
@@ -50,7 +50,7 @@ public class NetworkPeeringRoutesConfig extends io.pulumi.resources.CustomResour
      * Whether to export the custom routes to the peer network.
      * 
      */
-    @OutputExport(name="exportCustomRoutes", type=Boolean.class, parameters={})
+    @Export(name="exportCustomRoutes", type=Boolean.class, parameters={})
     private Output<Boolean> exportCustomRoutes;
 
     /**
@@ -64,7 +64,7 @@ public class NetworkPeeringRoutesConfig extends io.pulumi.resources.CustomResour
      * Whether to import the custom routes to the peer network.
      * 
      */
-    @OutputExport(name="importCustomRoutes", type=Boolean.class, parameters={})
+    @Export(name="importCustomRoutes", type=Boolean.class, parameters={})
     private Output<Boolean> importCustomRoutes;
 
     /**
@@ -78,7 +78,7 @@ public class NetworkPeeringRoutesConfig extends io.pulumi.resources.CustomResour
      * The name of the primary network for the peering.
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
@@ -92,7 +92,7 @@ public class NetworkPeeringRoutesConfig extends io.pulumi.resources.CustomResour
      * Name of the peering.
      * 
      */
-    @OutputExport(name="peering", type=String.class, parameters={})
+    @Export(name="peering", type=String.class, parameters={})
     private Output<String> peering;
 
     /**
@@ -107,7 +107,7 @@ public class NetworkPeeringRoutesConfig extends io.pulumi.resources.CustomResour
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

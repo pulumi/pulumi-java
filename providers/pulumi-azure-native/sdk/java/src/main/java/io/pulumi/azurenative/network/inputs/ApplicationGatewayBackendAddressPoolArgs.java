@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayBackendAddressArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends io.pulumi.re
      * Backend addresses.
      * 
      */
-    @InputImport(name="backendAddresses")
+    @Import(name="backendAddresses")
       private final @Nullable Output<List<ApplicationGatewayBackendAddressArgs>> backendAddresses;
 
     public Output<List<ApplicationGatewayBackendAddressArgs>> getBackendAddresses() {
@@ -35,7 +35,7 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends io.pulumi.re
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -46,7 +46,7 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends io.pulumi.re
      * Name of the backend address pool that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

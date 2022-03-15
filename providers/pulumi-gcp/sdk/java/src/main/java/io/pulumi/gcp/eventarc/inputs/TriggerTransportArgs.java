@@ -4,7 +4,7 @@
 package io.pulumi.gcp.eventarc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.eventarc.inputs.TriggerTransportPubsubArgs;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TriggerTransportArgs extends io.pulumi.resources.ResourceArgs
      * The Pub/Sub topic and subscription used by Eventarc as delivery intermediary.
      * 
      */
-    @InputImport(name="pubsubs")
+    @Import(name="pubsubs")
       private final @Nullable Output<List<TriggerTransportPubsubArgs>> pubsubs;
 
     public Output<List<TriggerTransportPubsubArgs>> getPubsubs() {

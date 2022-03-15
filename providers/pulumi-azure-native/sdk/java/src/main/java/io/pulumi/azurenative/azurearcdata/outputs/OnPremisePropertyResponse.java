@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.azurearcdata.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OnPremisePropertyResponse {
     /**
      * A globally unique ID identifying the associated Kubernetes cluster
@@ -27,11 +27,11 @@ public final class OnPremisePropertyResponse {
      */
     private final @Nullable String signingCertificateThumbprint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OnPremisePropertyResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("publicSigningKey") String publicSigningKey,
-        @OutputCustomType.Parameter("signingCertificateThumbprint") @Nullable String signingCertificateThumbprint) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("publicSigningKey") String publicSigningKey,
+        @CustomType.Parameter("signingCertificateThumbprint") @Nullable String signingCertificateThumbprint) {
         this.id = id;
         this.publicSigningKey = publicSigningKey;
         this.signingCertificateThumbprint = signingCertificateThumbprint;

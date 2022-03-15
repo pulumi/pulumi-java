@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeTransformationsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2PrimitiveTransformationResponse;
@@ -11,7 +11,7 @@ import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2RecordConditionRe
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2FieldTransformationResponse {
     /**
      * Only apply the transformation if the condition evaluates to true for the given `RecordCondition`. The conditions are allowed to reference fields that are not used in the actual transformation. Example Use Cases: - Apply a different bucket transformation to an age column if the zip code column for the same record is within a specific range. - Redact a field if the date of birth field is greater than 85.
@@ -34,12 +34,12 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse {
      */
     private final GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2FieldTransformationResponse(
-        @OutputCustomType.Parameter("condition") GooglePrivacyDlpV2RecordConditionResponse condition,
-        @OutputCustomType.Parameter("fields") List<GooglePrivacyDlpV2FieldIdResponse> fields,
-        @OutputCustomType.Parameter("infoTypeTransformations") GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations,
-        @OutputCustomType.Parameter("primitiveTransformation") GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
+        @CustomType.Parameter("condition") GooglePrivacyDlpV2RecordConditionResponse condition,
+        @CustomType.Parameter("fields") List<GooglePrivacyDlpV2FieldIdResponse> fields,
+        @CustomType.Parameter("infoTypeTransformations") GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations,
+        @CustomType.Parameter("primitiveTransformation") GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
         this.condition = condition;
         this.fields = fields;
         this.infoTypeTransformations = infoTypeTransformations;

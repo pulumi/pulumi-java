@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RecurrenceScheduleOccurrenceResponse {
     /**
      * The day of the week.
@@ -23,10 +23,10 @@ public final class RecurrenceScheduleOccurrenceResponse {
      */
     private final @Nullable Integer occurrence;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecurrenceScheduleOccurrenceResponse(
-        @OutputCustomType.Parameter("day") @Nullable String day,
-        @OutputCustomType.Parameter("occurrence") @Nullable Integer occurrence) {
+        @CustomType.Parameter("day") @Nullable String day,
+        @CustomType.Parameter("occurrence") @Nullable Integer occurrence) {
         this.day = day;
         this.occurrence = occurrence;
     }

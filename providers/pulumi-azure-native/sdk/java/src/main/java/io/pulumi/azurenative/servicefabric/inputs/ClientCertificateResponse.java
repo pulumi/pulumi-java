@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ClientCertificateResponse extends io.pulumi.resources.InvokeA
      * Certificate Common name.
      * 
      */
-    @InputImport(name="commonName")
+    @Import(name="commonName")
       private final @Nullable String commonName;
 
     public Optional<String> getCommonName() {
@@ -34,7 +34,7 @@ public final class ClientCertificateResponse extends io.pulumi.resources.InvokeA
      * Whether the certificate is admin or not.
      * 
      */
-    @InputImport(name="isAdmin", required=true)
+    @Import(name="isAdmin", required=true)
       private final Boolean isAdmin;
 
     public Boolean getIsAdmin() {
@@ -45,7 +45,7 @@ public final class ClientCertificateResponse extends io.pulumi.resources.InvokeA
      * Issuer thumbprint for the certificate. Only used together with CommonName.
      * 
      */
-    @InputImport(name="issuerThumbprint")
+    @Import(name="issuerThumbprint")
       private final @Nullable String issuerThumbprint;
 
     public Optional<String> getIssuerThumbprint() {
@@ -56,7 +56,7 @@ public final class ClientCertificateResponse extends io.pulumi.resources.InvokeA
      * Certificate Thumbprint.
      * 
      */
-    @InputImport(name="thumbprint")
+    @Import(name="thumbprint")
       private final @Nullable String thumbprint;
 
     public Optional<String> getThumbprint() {

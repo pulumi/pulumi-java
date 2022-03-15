@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.MysqlColumnResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MysqlTableResponse {
     /**
      * MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
@@ -22,10 +22,10 @@ public final class MysqlTableResponse {
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MysqlTableResponse(
-        @OutputCustomType.Parameter("mysqlColumns") List<MysqlColumnResponse> mysqlColumns,
-        @OutputCustomType.Parameter("tableName") String tableName) {
+        @CustomType.Parameter("mysqlColumns") List<MysqlColumnResponse> mysqlColumns,
+        @CustomType.Parameter("tableName") String tableName) {
         this.mysqlColumns = mysqlColumns;
         this.tableName = tableName;
     }

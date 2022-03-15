@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.LoadBalancerConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAvailabilityGroupListenerResult {
     /**
      * Name of the availability group.
@@ -56,16 +56,16 @@ public final class GetAvailabilityGroupListenerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAvailabilityGroupListenerResult(
-        @OutputCustomType.Parameter("availabilityGroupName") @Nullable String availabilityGroupName,
-        @OutputCustomType.Parameter("createDefaultAvailabilityGroupIfNotExist") @Nullable Boolean createDefaultAvailabilityGroupIfNotExist,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("loadBalancerConfigurations") @Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("availabilityGroupName") @Nullable String availabilityGroupName,
+        @CustomType.Parameter("createDefaultAvailabilityGroupIfNotExist") @Nullable Boolean createDefaultAvailabilityGroupIfNotExist,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("loadBalancerConfigurations") @Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.availabilityGroupName = availabilityGroupName;
         this.createDefaultAvailabilityGroupIfNotExist = createDefaultAvailabilityGroupIfNotExist;
         this.id = id;

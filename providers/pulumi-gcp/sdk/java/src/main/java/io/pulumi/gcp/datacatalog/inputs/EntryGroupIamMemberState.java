@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.datacatalog.inputs.EntryGroupIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class EntryGroupIamMemberState extends io.pulumi.resources.Resource
 
     public static final EntryGroupIamMemberState Empty = new EntryGroupIamMemberState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<EntryGroupIamMemberConditionGetArgs> condition;
 
     public Output<EntryGroupIamMemberConditionGetArgs> getCondition() {
@@ -26,7 +26,7 @@ public final class EntryGroupIamMemberState extends io.pulumi.resources.Resource
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="entryGroup")
+    @Import(name="entryGroup")
       private final @Nullable Output<String> entryGroup;
 
     public Output<String> getEntryGroup() {
@@ -37,14 +37,14 @@ public final class EntryGroupIamMemberState extends io.pulumi.resources.Resource
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="member")
+    @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
@@ -56,14 +56,14 @@ public final class EntryGroupIamMemberState extends io.pulumi.resources.Resource
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -76,7 +76,7 @@ public final class EntryGroupIamMemberState extends io.pulumi.resources.Resource
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

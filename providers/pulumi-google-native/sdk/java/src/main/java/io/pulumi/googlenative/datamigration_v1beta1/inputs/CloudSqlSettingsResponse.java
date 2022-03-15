@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datamigration_v1beta1.inputs.SqlIpConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * The activation policy specifies when the instance is activated; it is applicable only when the instance state is 'RUNNABLE'. Valid values: 'ALWAYS': The instance is on, and remains so even in the absence of connection requests. `NEVER`: The instance is off; it is not activated, even if a connection request arrives.
      * 
      */
-    @InputImport(name="activationPolicy", required=true)
+    @Import(name="activationPolicy", required=true)
       private final String activationPolicy;
 
     public String getActivationPolicy() {
@@ -34,7 +34,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * [default: ON] If you enable this setting, Cloud SQL checks your available storage every 30 seconds. If the available storage falls below a threshold size, Cloud SQL automatically adds additional storage capacity. If the available storage repeatedly falls below the threshold size, Cloud SQL continues to add storage until it reaches the maximum of 30 TB.
      * 
      */
-    @InputImport(name="autoStorageIncrease", required=true)
+    @Import(name="autoStorageIncrease", required=true)
       private final Boolean autoStorageIncrease;
 
     public Boolean getAutoStorageIncrease() {
@@ -45,7 +45,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * The storage capacity available to the database, in GB. The minimum (and default) size is 10GB.
      * 
      */
-    @InputImport(name="dataDiskSizeGb", required=true)
+    @Import(name="dataDiskSizeGb", required=true)
       private final String dataDiskSizeGb;
 
     public String getDataDiskSizeGb() {
@@ -56,7 +56,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * The type of storage: `PD_SSD` (default) or `PD_HDD`.
      * 
      */
-    @InputImport(name="dataDiskType", required=true)
+    @Import(name="dataDiskType", required=true)
       private final String dataDiskType;
 
     public String getDataDiskType() {
@@ -67,7 +67,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * The database flags passed to the Cloud SQL instance at startup. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    @InputImport(name="databaseFlags", required=true)
+    @Import(name="databaseFlags", required=true)
       private final Map<String,String> databaseFlags;
 
     public Map<String,String> getDatabaseFlags() {
@@ -78,7 +78,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * The database engine type and version.
      * 
      */
-    @InputImport(name="databaseVersion", required=true)
+    @Import(name="databaseVersion", required=true)
       private final String databaseVersion;
 
     public String getDatabaseVersion() {
@@ -89,7 +89,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled.
      * 
      */
-    @InputImport(name="ipConfig", required=true)
+    @Import(name="ipConfig", required=true)
       private final SqlIpConfigResponse ipConfig;
 
     public SqlIpConfigResponse getIpConfig() {
@@ -100,7 +100,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * Input only. Initial root password.
      * 
      */
-    @InputImport(name="rootPassword", required=true)
+    @Import(name="rootPassword", required=true)
       private final String rootPassword;
 
     public String getRootPassword() {
@@ -111,7 +111,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * Indicates If this connection profile root password is stored.
      * 
      */
-    @InputImport(name="rootPasswordSet", required=true)
+    @Import(name="rootPasswordSet", required=true)
       private final Boolean rootPasswordSet;
 
     public Boolean getRootPasswordSet() {
@@ -122,7 +122,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * The Database Migration Service source connection profile ID, in the format: `projects/my_project_name/locations/us-central1/connectionProfiles/connection_profile_ID`
      * 
      */
-    @InputImport(name="sourceId", required=true)
+    @Import(name="sourceId", required=true)
       private final String sourceId;
 
     public String getSourceId() {
@@ -133,7 +133,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.
      * 
      */
-    @InputImport(name="storageAutoResizeLimit", required=true)
+    @Import(name="storageAutoResizeLimit", required=true)
       private final String storageAutoResizeLimit;
 
     public String getStorageAutoResizeLimit() {
@@ -144,7 +144,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * The tier (or machine type) for this instance, for example: `db-n1-standard-1` (MySQL instances). For more information, see [Cloud SQL Instance Settings](https://cloud.google.com/sql/docs/mysql/instance-settings).
      * 
      */
-    @InputImport(name="tier", required=true)
+    @Import(name="tier", required=true)
       private final String tier;
 
     public String getTier() {
@@ -155,7 +155,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * The resource labels for a Cloud SQL instance to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "18kg", "count": "3" }`.
      * 
      */
-    @InputImport(name="userLabels", required=true)
+    @Import(name="userLabels", required=true)
       private final Map<String,String> userLabels;
 
     public Map<String,String> getUserLabels() {
@@ -166,7 +166,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * The Google Cloud Platform zone where your Cloud SQL datdabse instance is located.
      * 
      */
-    @InputImport(name="zone", required=true)
+    @Import(name="zone", required=true)
       private final String zone;
 
     public String getZone() {

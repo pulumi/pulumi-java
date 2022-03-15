@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NonceArgs extends io.pulumi.resources.ResourceArgs {
      * The time after the request is made when the nonce should expire.
      * 
      */
-    @InputImport(name="nonceExpirationInterval")
+    @Import(name="nonceExpirationInterval")
       private final @Nullable Output<String> nonceExpirationInterval;
 
     public Output<String> getNonceExpirationInterval() {
@@ -34,7 +34,7 @@ public final class NonceArgs extends io.pulumi.resources.ResourceArgs {
      * <code>false</code> if the nonce should not be validated while completing the login flow; otherwise, <code>true</code>.
      * 
      */
-    @InputImport(name="validateNonce")
+    @Import(name="validateNonce")
       private final @Nullable Output<Boolean> validateNonce;
 
     public Output<Boolean> getValidateNonce() {

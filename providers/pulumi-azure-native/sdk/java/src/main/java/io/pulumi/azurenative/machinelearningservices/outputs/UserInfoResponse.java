@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserInfoResponse {
     /**
      * A user alternate sec id. This represents the user in a different identity provider system Eg.1:live.com:puid
@@ -47,15 +47,15 @@ public final class UserInfoResponse {
      */
     private final @Nullable String userTenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserInfoResponse(
-        @OutputCustomType.Parameter("userAltSecId") @Nullable String userAltSecId,
-        @OutputCustomType.Parameter("userIdp") @Nullable String userIdp,
-        @OutputCustomType.Parameter("userIss") @Nullable String userIss,
-        @OutputCustomType.Parameter("userName") @Nullable String userName,
-        @OutputCustomType.Parameter("userObjectId") @Nullable String userObjectId,
-        @OutputCustomType.Parameter("userPuId") @Nullable String userPuId,
-        @OutputCustomType.Parameter("userTenantId") @Nullable String userTenantId) {
+        @CustomType.Parameter("userAltSecId") @Nullable String userAltSecId,
+        @CustomType.Parameter("userIdp") @Nullable String userIdp,
+        @CustomType.Parameter("userIss") @Nullable String userIss,
+        @CustomType.Parameter("userName") @Nullable String userName,
+        @CustomType.Parameter("userObjectId") @Nullable String userObjectId,
+        @CustomType.Parameter("userPuId") @Nullable String userPuId,
+        @CustomType.Parameter("userTenantId") @Nullable String userTenantId) {
         this.userAltSecId = userAltSecId;
         this.userIdp = userIdp;
         this.userIss = userIss;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Connection string attributes
      * 
      */
-    @InputImport(name="connectionAttributes")
+    @Import(name="connectionAttributes")
       private final @Nullable Output<Map<String,String>> connectionAttributes;
 
     public Output<Map<String,String>> getConnectionAttributes() {
@@ -35,7 +35,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Database for the Oracle connection.
      * 
      */
-    @InputImport(name="databaseService", required=true)
+    @Import(name="databaseService", required=true)
       private final Output<String> databaseService;
 
     public Output<String> getDatabaseService() {
@@ -46,7 +46,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Hostname for the Oracle connection.
      * 
      */
-    @InputImport(name="hostname", required=true)
+    @Import(name="hostname", required=true)
       private final Output<String> hostname;
 
     public Output<String> getHostname() {
@@ -57,7 +57,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Password for the Oracle connection.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<String> password;
 
     public Output<String> getPassword() {
@@ -68,7 +68,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Port for the Oracle connection, default value is 1521.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -79,7 +79,7 @@ public final class OracleProfileArgs extends io.pulumi.resources.ResourceArgs {
      * Username for the Oracle connection.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final Output<String> username;
 
     public Output<String> getUsername() {

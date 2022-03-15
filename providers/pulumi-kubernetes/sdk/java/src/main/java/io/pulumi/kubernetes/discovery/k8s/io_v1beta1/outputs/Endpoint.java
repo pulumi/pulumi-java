@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.discovery.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ObjectReference;
 import io.pulumi.kubernetes.discovery.k8s.io_v1beta1.outputs.EndpointConditions;
 import io.pulumi.kubernetes.discovery.k8s.io_v1beta1.outputs.EndpointHints;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Endpoint {
     /**
      * addresses of this endpoint. The contents of this field are interpreted according to the corresponding EndpointSlice addressType field. Consumers must handle different types of addresses in the context of their own capabilities. This must contain at least one address but no more than 100.
@@ -59,15 +59,15 @@ public final class Endpoint {
      */
     private final @Nullable Map<String,String> topology;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Endpoint(
-        @OutputCustomType.Parameter("addresses") List<String> addresses,
-        @OutputCustomType.Parameter("conditions") @Nullable EndpointConditions conditions,
-        @OutputCustomType.Parameter("hints") @Nullable EndpointHints hints,
-        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
-        @OutputCustomType.Parameter("nodeName") @Nullable String nodeName,
-        @OutputCustomType.Parameter("targetRef") @Nullable ObjectReference targetRef,
-        @OutputCustomType.Parameter("topology") @Nullable Map<String,String> topology) {
+        @CustomType.Parameter("addresses") List<String> addresses,
+        @CustomType.Parameter("conditions") @Nullable EndpointConditions conditions,
+        @CustomType.Parameter("hints") @Nullable EndpointHints hints,
+        @CustomType.Parameter("hostname") @Nullable String hostname,
+        @CustomType.Parameter("nodeName") @Nullable String nodeName,
+        @CustomType.Parameter("targetRef") @Nullable ObjectReference targetRef,
+        @CustomType.Parameter("topology") @Nullable Map<String,String> topology) {
         this.addresses = addresses;
         this.conditions = conditions;
         this.hints = hints;

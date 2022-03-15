@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.inputs;
 import io.pulumi.azurenative.databox.inputs.AzureFileFilterDetailsResponse;
 import io.pulumi.azurenative.databox.inputs.BlobFilterDetailsResponse;
 import io.pulumi.azurenative.databox.inputs.FilterFileDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class TransferFilterDetailsResponse extends io.pulumi.resources.Inv
      * Filter details to transfer Azure files.
      * 
      */
-    @InputImport(name="azureFileFilterDetails")
+    @Import(name="azureFileFilterDetails")
       private final @Nullable AzureFileFilterDetailsResponse azureFileFilterDetails;
 
     public Optional<AzureFileFilterDetailsResponse> getAzureFileFilterDetails() {
@@ -37,7 +37,7 @@ public final class TransferFilterDetailsResponse extends io.pulumi.resources.Inv
      * Filter details to transfer blobs.
      * 
      */
-    @InputImport(name="blobFilterDetails")
+    @Import(name="blobFilterDetails")
       private final @Nullable BlobFilterDetailsResponse blobFilterDetails;
 
     public Optional<BlobFilterDetailsResponse> getBlobFilterDetails() {
@@ -48,7 +48,7 @@ public final class TransferFilterDetailsResponse extends io.pulumi.resources.Inv
      * Type of the account of data.
      * 
      */
-    @InputImport(name="dataAccountType", required=true)
+    @Import(name="dataAccountType", required=true)
       private final String dataAccountType;
 
     public String getDataAccountType() {
@@ -59,7 +59,7 @@ public final class TransferFilterDetailsResponse extends io.pulumi.resources.Inv
      * Details of the filter files to be used for data transfer.
      * 
      */
-    @InputImport(name="filterFileDetails")
+    @Import(name="filterFileDetails")
       private final @Nullable List<FilterFileDetailsResponse> filterFileDetails;
 
     public List<FilterFileDetailsResponse> getFilterFileDetails() {

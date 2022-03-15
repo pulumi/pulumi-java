@@ -5,7 +5,7 @@ package io.pulumi.awsnative.frauddetector;
 
 import io.pulumi.awsnative.frauddetector.inputs.LabelTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LabelArgs extends io.pulumi.resources.ResourceArgs {
      * The label description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class LabelArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the label.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class LabelArgs extends io.pulumi.resources.ResourceArgs {
      * Tags associated with this label.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<LabelTagArgs>> tags;
 
     public Output<List<LabelTagArgs>> getTags() {

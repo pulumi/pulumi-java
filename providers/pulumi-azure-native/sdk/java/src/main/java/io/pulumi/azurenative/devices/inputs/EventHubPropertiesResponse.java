@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
      * The Event Hub-compatible endpoint.
      * 
      */
-    @InputImport(name="endpoint", required=true)
+    @Import(name="endpoint", required=true)
       private final String endpoint;
 
     public String getEndpoint() {
@@ -36,7 +36,7 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
      * The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.
      * 
      */
-    @InputImport(name="partitionCount")
+    @Import(name="partitionCount")
       private final @Nullable Integer partitionCount;
 
     public Optional<Integer> getPartitionCount() {
@@ -47,7 +47,7 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
      * The partition ids in the Event Hub-compatible endpoint.
      * 
      */
-    @InputImport(name="partitionIds", required=true)
+    @Import(name="partitionIds", required=true)
       private final List<String> partitionIds;
 
     public List<String> getPartitionIds() {
@@ -58,7 +58,7 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
      * The Event Hub-compatible name.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {
@@ -69,7 +69,7 @@ public final class EventHubPropertiesResponse extends io.pulumi.resources.Invoke
      * The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
      * 
      */
-    @InputImport(name="retentionTimeInDays")
+    @Import(name="retentionTimeInDays")
       private final @Nullable Double retentionTimeInDays;
 
     public Optional<Double> getRetentionTimeInDays() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteTimeoutIdleGetArgs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecGrpcRouteTimeoutPerRequestGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class RouteSpecGrpcRouteTimeoutGetArgs extends io.pulumi.resources.
      * The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
      * 
      */
-    @InputImport(name="idle")
+    @Import(name="idle")
       private final @Nullable Output<RouteSpecGrpcRouteTimeoutIdleGetArgs> idle;
 
     public Output<RouteSpecGrpcRouteTimeoutIdleGetArgs> getIdle() {
@@ -30,7 +30,7 @@ public final class RouteSpecGrpcRouteTimeoutGetArgs extends io.pulumi.resources.
      * The per request timeout.
      * 
      */
-    @InputImport(name="perRequest")
+    @Import(name="perRequest")
       private final @Nullable Output<RouteSpecGrpcRouteTimeoutPerRequestGetArgs> perRequest;
 
     public Output<RouteSpecGrpcRouteTimeoutPerRequestGetArgs> getPerRequest() {

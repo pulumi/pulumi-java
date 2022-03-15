@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DistributionCustomErrorResponseGetArgs extends io.pulumi.reso
      * origin to see whether the object has been updated.
      * 
      */
-    @InputImport(name="errorCachingMinTtl")
+    @Import(name="errorCachingMinTtl")
       private final @Nullable Output<Integer> errorCachingMinTtl;
 
     public Output<Integer> getErrorCachingMinTtl() {
@@ -33,7 +33,7 @@ public final class DistributionCustomErrorResponseGetArgs extends io.pulumi.reso
      * customize.
      * 
      */
-    @InputImport(name="errorCode", required=true)
+    @Import(name="errorCode", required=true)
       private final Output<Integer> errorCode;
 
     public Output<Integer> getErrorCode() {
@@ -45,7 +45,7 @@ public final class DistributionCustomErrorResponseGetArgs extends io.pulumi.reso
      * to return with the custom error page to the viewer.
      * 
      */
-    @InputImport(name="responseCode")
+    @Import(name="responseCode")
       private final @Nullable Output<Integer> responseCode;
 
     public Output<Integer> getResponseCode() {
@@ -57,7 +57,7 @@ public final class DistributionCustomErrorResponseGetArgs extends io.pulumi.reso
      * example, `/custom_404.html`).
      * 
      */
-    @InputImport(name="responsePagePath")
+    @Import(name="responsePagePath")
       private final @Nullable Output<String> responsePagePath;
 
     public Output<String> getResponsePagePath() {

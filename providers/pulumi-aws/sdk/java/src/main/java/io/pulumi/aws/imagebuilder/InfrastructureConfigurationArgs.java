@@ -5,7 +5,7 @@ package io.pulumi.aws.imagebuilder;
 
 import io.pulumi.aws.imagebuilder.inputs.InfrastructureConfigurationLoggingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * Description for the configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * Name of IAM Instance Profile.
      * 
      */
-    @InputImport(name="instanceProfileName", required=true)
+    @Import(name="instanceProfileName", required=true)
       private final Output<String> instanceProfileName;
 
     public Output<String> getInstanceProfileName() {
@@ -44,7 +44,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * Set of EC2 Instance Types.
      * 
      */
-    @InputImport(name="instanceTypes")
+    @Import(name="instanceTypes")
       private final @Nullable Output<List<String>> instanceTypes;
 
     public Output<List<String>> getInstanceTypes() {
@@ -55,7 +55,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * Name of EC2 Key Pair.
      * 
      */
-    @InputImport(name="keyPair")
+    @Import(name="keyPair")
       private final @Nullable Output<String> keyPair;
 
     public Output<String> getKeyPair() {
@@ -66,7 +66,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * Configuration block with logging settings. Detailed below.
      * 
      */
-    @InputImport(name="logging")
+    @Import(name="logging")
       private final @Nullable Output<InfrastructureConfigurationLoggingArgs> logging;
 
     public Output<InfrastructureConfigurationLoggingArgs> getLogging() {
@@ -77,7 +77,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * Name for the configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -88,7 +88,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * Key-value map of resource tags to assign to infrastructure created by the configuration.
      * 
      */
-    @InputImport(name="resourceTags")
+    @Import(name="resourceTags")
       private final @Nullable Output<Map<String,String>> resourceTags;
 
     public Output<Map<String,String>> getResourceTags() {
@@ -99,7 +99,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * Set of EC2 Security Group identifiers.
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -110,7 +110,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * Amazon Resource Name (ARN) of SNS Topic.
      * 
      */
-    @InputImport(name="snsTopicArn")
+    @Import(name="snsTopicArn")
       private final @Nullable Output<String> snsTopicArn;
 
     public Output<String> getSnsTopicArn() {
@@ -121,7 +121,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * EC2 Subnet identifier. Also requires `security_group_ids` argument.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -132,7 +132,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * Key-value map of resource tags to assign to the configuration. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -143,7 +143,7 @@ public final class InfrastructureConfigurationArgs extends io.pulumi.resources.R
      * Enable if the instance should be terminated when the pipeline fails. Defaults to `false`.
      * 
      */
-    @InputImport(name="terminateInstanceOnFailure")
+    @Import(name="terminateInstanceOnFailure")
       private final @Nullable Output<Boolean> terminateInstanceOnFailure;
 
     public Output<Boolean> getTerminateInstanceOnFailure() {

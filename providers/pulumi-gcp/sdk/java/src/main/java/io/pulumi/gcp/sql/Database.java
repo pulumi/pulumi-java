@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.sql.DatabaseArgs;
@@ -53,7 +53,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * a value of `UTF8` at creation time.
      * 
      */
-    @OutputExport(name="charset", type=String.class, parameters={})
+    @Export(name="charset", type=String.class, parameters={})
     private Output<String> charset;
 
     /**
@@ -75,7 +75,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * a value of `en_US.UTF8` at creation time.
      * 
      */
-    @OutputExport(name="collation", type=String.class, parameters={})
+    @Export(name="collation", type=String.class, parameters={})
     private Output<String> collation;
 
     /**
@@ -94,7 +94,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * ID.
      * 
      */
-    @OutputExport(name="instance", type=String.class, parameters={})
+    @Export(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
     /**
@@ -110,7 +110,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * This does not include the project ID or instance name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -126,7 +126,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -141,7 +141,7 @@ public class Database extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**

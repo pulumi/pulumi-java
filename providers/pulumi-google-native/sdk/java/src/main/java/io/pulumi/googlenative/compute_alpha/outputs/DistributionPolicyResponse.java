@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.DistributionPolicyZoneConfigurationResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DistributionPolicyResponse {
     /**
      * The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).
@@ -22,10 +22,10 @@ public final class DistributionPolicyResponse {
      */
     private final List<DistributionPolicyZoneConfigurationResponse> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionPolicyResponse(
-        @OutputCustomType.Parameter("targetShape") String targetShape,
-        @OutputCustomType.Parameter("zones") List<DistributionPolicyZoneConfigurationResponse> zones) {
+        @CustomType.Parameter("targetShape") String targetShape,
+        @CustomType.Parameter("zones") List<DistributionPolicyZoneConfigurationResponse> zones) {
         this.targetShape = targetShape;
         this.zones = zones;
     }

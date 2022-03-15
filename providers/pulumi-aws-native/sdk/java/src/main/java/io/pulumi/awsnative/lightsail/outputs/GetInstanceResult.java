@@ -9,7 +9,7 @@ import io.pulumi.awsnative.lightsail.outputs.InstanceLocation;
 import io.pulumi.awsnative.lightsail.outputs.InstanceNetworking;
 import io.pulumi.awsnative.lightsail.outputs.InstanceState;
 import io.pulumi.awsnative.lightsail.outputs.InstanceTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceResult {
     /**
      * An array of objects representing the add-ons to enable for the new instance.
@@ -80,24 +80,24 @@ public final class GetInstanceResult {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceResult(
-        @OutputCustomType.Parameter("addOns") @Nullable List<InstanceAddOn> addOns,
-        @OutputCustomType.Parameter("hardware") @Nullable InstanceHardware hardware,
-        @OutputCustomType.Parameter("instanceArn") @Nullable String instanceArn,
-        @OutputCustomType.Parameter("isStaticIp") @Nullable Boolean isStaticIp,
-        @OutputCustomType.Parameter("keyPairName") @Nullable String keyPairName,
-        @OutputCustomType.Parameter("location") @Nullable InstanceLocation location,
-        @OutputCustomType.Parameter("networking") @Nullable InstanceNetworking networking,
-        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
-        @OutputCustomType.Parameter("publicIpAddress") @Nullable String publicIpAddress,
-        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
-        @OutputCustomType.Parameter("sshKeyName") @Nullable String sshKeyName,
-        @OutputCustomType.Parameter("state") @Nullable InstanceState state,
-        @OutputCustomType.Parameter("supportCode") @Nullable String supportCode,
-        @OutputCustomType.Parameter("tags") @Nullable List<InstanceTag> tags,
-        @OutputCustomType.Parameter("userData") @Nullable String userData,
-        @OutputCustomType.Parameter("userName") @Nullable String userName) {
+        @CustomType.Parameter("addOns") @Nullable List<InstanceAddOn> addOns,
+        @CustomType.Parameter("hardware") @Nullable InstanceHardware hardware,
+        @CustomType.Parameter("instanceArn") @Nullable String instanceArn,
+        @CustomType.Parameter("isStaticIp") @Nullable Boolean isStaticIp,
+        @CustomType.Parameter("keyPairName") @Nullable String keyPairName,
+        @CustomType.Parameter("location") @Nullable InstanceLocation location,
+        @CustomType.Parameter("networking") @Nullable InstanceNetworking networking,
+        @CustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
+        @CustomType.Parameter("publicIpAddress") @Nullable String publicIpAddress,
+        @CustomType.Parameter("resourceType") @Nullable String resourceType,
+        @CustomType.Parameter("sshKeyName") @Nullable String sshKeyName,
+        @CustomType.Parameter("state") @Nullable InstanceState state,
+        @CustomType.Parameter("supportCode") @Nullable String supportCode,
+        @CustomType.Parameter("tags") @Nullable List<InstanceTag> tags,
+        @CustomType.Parameter("userData") @Nullable String userData,
+        @CustomType.Parameter("userName") @Nullable String userName) {
         this.addOns = addOns;
         this.hardware = hardware;
         this.instanceArn = instanceArn;

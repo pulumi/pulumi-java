@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureFileShareConfigurationResponse {
     private final String accountKey;
     private final String accountName;
@@ -29,13 +29,13 @@ public final class AzureFileShareConfigurationResponse {
      */
     private final String relativeMountPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureFileShareConfigurationResponse(
-        @OutputCustomType.Parameter("accountKey") String accountKey,
-        @OutputCustomType.Parameter("accountName") String accountName,
-        @OutputCustomType.Parameter("azureFileUrl") String azureFileUrl,
-        @OutputCustomType.Parameter("mountOptions") @Nullable String mountOptions,
-        @OutputCustomType.Parameter("relativeMountPath") String relativeMountPath) {
+        @CustomType.Parameter("accountKey") String accountKey,
+        @CustomType.Parameter("accountName") String accountName,
+        @CustomType.Parameter("azureFileUrl") String azureFileUrl,
+        @CustomType.Parameter("mountOptions") @Nullable String mountOptions,
+        @CustomType.Parameter("relativeMountPath") String relativeMountPath) {
         this.accountKey = accountKey;
         this.accountName = accountName;
         this.azureFileUrl = azureFileUrl;

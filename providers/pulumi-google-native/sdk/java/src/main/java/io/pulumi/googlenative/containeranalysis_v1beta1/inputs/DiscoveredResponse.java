@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.StatusResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
      * The status of discovery for the resource.
      * 
      */
-    @InputImport(name="analysisStatus", required=true)
+    @Import(name="analysisStatus", required=true)
       private final String analysisStatus;
 
     public String getAnalysisStatus() {
@@ -32,7 +32,7 @@ public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
      * When an error is encountered this will contain a LocalizedMessage under details to show to the user. The LocalizedMessage is output only and populated by the API.
      * 
      */
-    @InputImport(name="analysisStatusError", required=true)
+    @Import(name="analysisStatusError", required=true)
       private final StatusResponse analysisStatusError;
 
     public StatusResponse getAnalysisStatusError() {
@@ -43,7 +43,7 @@ public final class DiscoveredResponse extends io.pulumi.resources.InvokeArgs {
      * Whether the resource is continuously analyzed.
      * 
      */
-    @InputImport(name="continuousAnalysis", required=true)
+    @Import(name="continuousAnalysis", required=true)
       private final String continuousAnalysis;
 
     public String getContinuousAnalysis() {

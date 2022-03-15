@@ -5,23 +5,23 @@ package io.pulumi.azurenative.providerhub.outputs;
 
 import io.pulumi.azurenative.providerhub.outputs.DefaultRolloutPropertiesResponseSpecification;
 import io.pulumi.azurenative.providerhub.outputs.DefaultRolloutPropertiesResponseStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DefaultRolloutResponseProperties {
     private final @Nullable String provisioningState;
     private final @Nullable DefaultRolloutPropertiesResponseSpecification specification;
     private final @Nullable DefaultRolloutPropertiesResponseStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DefaultRolloutResponseProperties(
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("specification") @Nullable DefaultRolloutPropertiesResponseSpecification specification,
-        @OutputCustomType.Parameter("status") @Nullable DefaultRolloutPropertiesResponseStatus status) {
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("specification") @Nullable DefaultRolloutPropertiesResponseSpecification specification,
+        @CustomType.Parameter("status") @Nullable DefaultRolloutPropertiesResponseStatus status) {
         this.provisioningState = provisioningState;
         this.specification = specification;
         this.status = status;

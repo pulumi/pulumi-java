@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.TableDisplayOptionsResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.TimeSeriesQueryResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TableDataSetResponse {
     /**
      * Optional. The lower bound on data point frequency for this data set, implemented by specifying the minimum alignment period to use in a time series query For example, if the data is published once every 10 minutes, the min_alignment_period should be at least 10 minutes. It would not make sense to fetch and align data at one minute intervals.
@@ -32,12 +32,12 @@ public final class TableDataSetResponse {
      */
     private final TimeSeriesQueryResponse timeSeriesQuery;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableDataSetResponse(
-        @OutputCustomType.Parameter("minAlignmentPeriod") String minAlignmentPeriod,
-        @OutputCustomType.Parameter("tableDisplayOptions") TableDisplayOptionsResponse tableDisplayOptions,
-        @OutputCustomType.Parameter("tableTemplate") String tableTemplate,
-        @OutputCustomType.Parameter("timeSeriesQuery") TimeSeriesQueryResponse timeSeriesQuery) {
+        @CustomType.Parameter("minAlignmentPeriod") String minAlignmentPeriod,
+        @CustomType.Parameter("tableDisplayOptions") TableDisplayOptionsResponse tableDisplayOptions,
+        @CustomType.Parameter("tableTemplate") String tableTemplate,
+        @CustomType.Parameter("timeSeriesQuery") TimeSeriesQueryResponse timeSeriesQuery) {
         this.minAlignmentPeriod = minAlignmentPeriod;
         this.tableDisplayOptions = tableDisplayOptions;
         this.tableTemplate = tableTemplate;

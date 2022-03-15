@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThemeUIColorPalette {
     /**
      * <p>This color is that applies to selected states and buttons.</p>
@@ -102,24 +102,24 @@ public final class ThemeUIColorPalette {
      */
     private final @Nullable String warningForeground;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ThemeUIColorPalette(
-        @OutputCustomType.Parameter("accent") @Nullable String accent,
-        @OutputCustomType.Parameter("accentForeground") @Nullable String accentForeground,
-        @OutputCustomType.Parameter("danger") @Nullable String danger,
-        @OutputCustomType.Parameter("dangerForeground") @Nullable String dangerForeground,
-        @OutputCustomType.Parameter("dimension") @Nullable String dimension,
-        @OutputCustomType.Parameter("dimensionForeground") @Nullable String dimensionForeground,
-        @OutputCustomType.Parameter("measure") @Nullable String measure,
-        @OutputCustomType.Parameter("measureForeground") @Nullable String measureForeground,
-        @OutputCustomType.Parameter("primaryBackground") @Nullable String primaryBackground,
-        @OutputCustomType.Parameter("primaryForeground") @Nullable String primaryForeground,
-        @OutputCustomType.Parameter("secondaryBackground") @Nullable String secondaryBackground,
-        @OutputCustomType.Parameter("secondaryForeground") @Nullable String secondaryForeground,
-        @OutputCustomType.Parameter("success") @Nullable String success,
-        @OutputCustomType.Parameter("successForeground") @Nullable String successForeground,
-        @OutputCustomType.Parameter("warning") @Nullable String warning,
-        @OutputCustomType.Parameter("warningForeground") @Nullable String warningForeground) {
+        @CustomType.Parameter("accent") @Nullable String accent,
+        @CustomType.Parameter("accentForeground") @Nullable String accentForeground,
+        @CustomType.Parameter("danger") @Nullable String danger,
+        @CustomType.Parameter("dangerForeground") @Nullable String dangerForeground,
+        @CustomType.Parameter("dimension") @Nullable String dimension,
+        @CustomType.Parameter("dimensionForeground") @Nullable String dimensionForeground,
+        @CustomType.Parameter("measure") @Nullable String measure,
+        @CustomType.Parameter("measureForeground") @Nullable String measureForeground,
+        @CustomType.Parameter("primaryBackground") @Nullable String primaryBackground,
+        @CustomType.Parameter("primaryForeground") @Nullable String primaryForeground,
+        @CustomType.Parameter("secondaryBackground") @Nullable String secondaryBackground,
+        @CustomType.Parameter("secondaryForeground") @Nullable String secondaryForeground,
+        @CustomType.Parameter("success") @Nullable String success,
+        @CustomType.Parameter("successForeground") @Nullable String successForeground,
+        @CustomType.Parameter("warning") @Nullable String warning,
+        @CustomType.Parameter("warningForeground") @Nullable String warningForeground) {
         this.accent = accent;
         this.accentForeground = accentForeground;
         this.danger = danger;

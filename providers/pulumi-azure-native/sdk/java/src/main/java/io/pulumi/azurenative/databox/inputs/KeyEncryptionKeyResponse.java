@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.inputs.IdentityPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class KeyEncryptionKeyResponse extends io.pulumi.resources.InvokeAr
      * Managed identity properties used for key encryption.
      * 
      */
-    @InputImport(name="identityProperties")
+    @Import(name="identityProperties")
       private final @Nullable IdentityPropertiesResponse identityProperties;
 
     public Optional<IdentityPropertiesResponse> getIdentityProperties() {
@@ -34,7 +34,7 @@ public final class KeyEncryptionKeyResponse extends io.pulumi.resources.InvokeAr
      * Type of encryption key used for key encryption.
      * 
      */
-    @InputImport(name="kekType", required=true)
+    @Import(name="kekType", required=true)
       private final String kekType;
 
     public String getKekType() {
@@ -45,7 +45,7 @@ public final class KeyEncryptionKeyResponse extends io.pulumi.resources.InvokeAr
      * Key encryption key. It is required in case of Customer managed KekType.
      * 
      */
-    @InputImport(name="kekUrl")
+    @Import(name="kekUrl")
       private final @Nullable String kekUrl;
 
     public Optional<String> getKekUrl() {
@@ -56,7 +56,7 @@ public final class KeyEncryptionKeyResponse extends io.pulumi.resources.InvokeAr
      * Kek vault resource id. It is required in case of Customer managed KekType.
      * 
      */
-    @InputImport(name="kekVaultResourceID")
+    @Import(name="kekVaultResourceID")
       private final @Nullable String kekVaultResourceID;
 
     public Optional<String> getKekVaultResourceID() {

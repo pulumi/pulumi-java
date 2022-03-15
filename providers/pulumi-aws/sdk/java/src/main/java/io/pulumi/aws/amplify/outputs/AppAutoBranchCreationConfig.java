@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.amplify.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppAutoBranchCreationConfig {
     /**
      * The basic authorization credentials for the autocreated branch.
@@ -64,18 +64,18 @@ public final class AppAutoBranchCreationConfig {
      */
     private final @Nullable String stage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppAutoBranchCreationConfig(
-        @OutputCustomType.Parameter("basicAuthCredentials") @Nullable String basicAuthCredentials,
-        @OutputCustomType.Parameter("buildSpec") @Nullable String buildSpec,
-        @OutputCustomType.Parameter("enableAutoBuild") @Nullable Boolean enableAutoBuild,
-        @OutputCustomType.Parameter("enableBasicAuth") @Nullable Boolean enableBasicAuth,
-        @OutputCustomType.Parameter("enablePerformanceMode") @Nullable Boolean enablePerformanceMode,
-        @OutputCustomType.Parameter("enablePullRequestPreview") @Nullable Boolean enablePullRequestPreview,
-        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
-        @OutputCustomType.Parameter("framework") @Nullable String framework,
-        @OutputCustomType.Parameter("pullRequestEnvironmentName") @Nullable String pullRequestEnvironmentName,
-        @OutputCustomType.Parameter("stage") @Nullable String stage) {
+        @CustomType.Parameter("basicAuthCredentials") @Nullable String basicAuthCredentials,
+        @CustomType.Parameter("buildSpec") @Nullable String buildSpec,
+        @CustomType.Parameter("enableAutoBuild") @Nullable Boolean enableAutoBuild,
+        @CustomType.Parameter("enableBasicAuth") @Nullable Boolean enableBasicAuth,
+        @CustomType.Parameter("enablePerformanceMode") @Nullable Boolean enablePerformanceMode,
+        @CustomType.Parameter("enablePullRequestPreview") @Nullable Boolean enablePullRequestPreview,
+        @CustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @CustomType.Parameter("framework") @Nullable String framework,
+        @CustomType.Parameter("pullRequestEnvironmentName") @Nullable String pullRequestEnvironmentName,
+        @CustomType.Parameter("stage") @Nullable String stage) {
         this.basicAuthCredentials = basicAuthCredentials;
         this.buildSpec = buildSpec;
         this.enableAutoBuild = enableAutoBuild;

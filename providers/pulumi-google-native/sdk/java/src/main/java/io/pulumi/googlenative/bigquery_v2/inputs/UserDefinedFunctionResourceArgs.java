@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class UserDefinedFunctionResourceArgs extends io.pulumi.resources.R
      * [Pick one] An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
      * 
      */
-    @InputImport(name="inlineCode")
+    @Import(name="inlineCode")
       private final @Nullable Output<String> inlineCode;
 
     public Output<String> getInlineCode() {
@@ -33,7 +33,7 @@ public final class UserDefinedFunctionResourceArgs extends io.pulumi.resources.R
      * [Pick one] A code resource to load from a Google Cloud Storage URI (gs://bucket/path).
      * 
      */
-    @InputImport(name="resourceUri")
+    @Import(name="resourceUri")
       private final @Nullable Output<String> resourceUri;
 
     public Output<String> getResourceUri() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NsgSecurityRuleResponse extends io.pulumi.resources.InvokeArg
      * Possible values are “Allow” and “Deny”.
      * 
      */
-    @InputImport(name="access")
+    @Import(name="access")
       private final @Nullable String access;
 
     public Optional<String> getAccess() {
@@ -35,7 +35,7 @@ public final class NsgSecurityRuleResponse extends io.pulumi.resources.InvokeArg
      * Gets or sets a description for this rule. Restricted to 140 chars.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -48,7 +48,7 @@ public final class NsgSecurityRuleResponse extends io.pulumi.resources.InvokeArg
      * as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used.
      * 
      */
-    @InputImport(name="destinationAddressPrefix")
+    @Import(name="destinationAddressPrefix")
       private final @Nullable String destinationAddressPrefix;
 
     public Optional<String> getDestinationAddressPrefix() {
@@ -60,7 +60,7 @@ public final class NsgSecurityRuleResponse extends io.pulumi.resources.InvokeArg
      * 0 and 65535. A “*” can also be used to match all ports.
      * 
      */
-    @InputImport(name="destinationPortRange")
+    @Import(name="destinationPortRange")
       private final @Nullable String destinationPortRange;
 
     public Optional<String> getDestinationPortRange() {
@@ -72,7 +72,7 @@ public final class NsgSecurityRuleResponse extends io.pulumi.resources.InvokeArg
      * direction specifies if rule will be evaluated on incoming or outgoing traffic.
      * 
      */
-    @InputImport(name="direction")
+    @Import(name="direction")
       private final @Nullable String direction;
 
     public Optional<String> getDirection() {
@@ -83,7 +83,7 @@ public final class NsgSecurityRuleResponse extends io.pulumi.resources.InvokeArg
      * Gets or sets the Security rule name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -96,7 +96,7 @@ public final class NsgSecurityRuleResponse extends io.pulumi.resources.InvokeArg
      * The lower the priority number, the higher the priority of the rule.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
@@ -107,7 +107,7 @@ public final class NsgSecurityRuleResponse extends io.pulumi.resources.InvokeArg
      * Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*).
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
@@ -121,7 +121,7 @@ public final class NsgSecurityRuleResponse extends io.pulumi.resources.InvokeArg
      * rule, specifies where network traffic originates from.
      * 
      */
-    @InputImport(name="sourceAddressPrefix")
+    @Import(name="sourceAddressPrefix")
       private final @Nullable String sourceAddressPrefix;
 
     public Optional<String> getSourceAddressPrefix() {
@@ -133,7 +133,7 @@ public final class NsgSecurityRuleResponse extends io.pulumi.resources.InvokeArg
      * 65535. A “*” can also be used to match all ports.
      * 
      */
-    @InputImport(name="sourcePortRange")
+    @Import(name="sourcePortRange")
       private final @Nullable String sourcePortRange;
 
     public Optional<String> getSourcePortRange() {

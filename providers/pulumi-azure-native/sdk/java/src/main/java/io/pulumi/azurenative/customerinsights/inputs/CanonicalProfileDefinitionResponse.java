@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.azurenative.customerinsights.inputs.CanonicalProfileDefinitionResponseProperties;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CanonicalProfileDefinitionResponse extends io.pulumi.resource
      * Canonical profile ID.
      * 
      */
-    @InputImport(name="canonicalProfileId")
+    @Import(name="canonicalProfileId")
       private final @Nullable Integer canonicalProfileId;
 
     public Optional<Integer> getCanonicalProfileId() {
@@ -35,7 +35,7 @@ public final class CanonicalProfileDefinitionResponse extends io.pulumi.resource
      * Properties of the canonical profile.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable List<CanonicalProfileDefinitionResponseProperties> properties;
 
     public List<CanonicalProfileDefinitionResponseProperties> getProperties() {

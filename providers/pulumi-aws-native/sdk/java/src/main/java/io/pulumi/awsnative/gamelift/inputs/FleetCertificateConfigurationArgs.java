@@ -5,7 +5,7 @@ package io.pulumi.awsnative.gamelift.inputs;
 
 import io.pulumi.awsnative.gamelift.enums.FleetCertificateConfigurationCertificateType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class FleetCertificateConfigurationArgs extends io.pulumi.resources
 
     public static final FleetCertificateConfigurationArgs Empty = new FleetCertificateConfigurationArgs();
 
-    @InputImport(name="certificateType", required=true)
+    @Import(name="certificateType", required=true)
       private final Output<FleetCertificateConfigurationCertificateType> certificateType;
 
     public Output<FleetCertificateConfigurationCertificateType> getCertificateType() {

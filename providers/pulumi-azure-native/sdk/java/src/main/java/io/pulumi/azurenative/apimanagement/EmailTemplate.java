@@ -8,7 +8,7 @@ import io.pulumi.azurenative.apimanagement.EmailTemplateArgs;
 import io.pulumi.azurenative.apimanagement.outputs.EmailTemplateParametersContractPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class EmailTemplate extends io.pulumi.resources.CustomResource {
      * Email Template Body. This should be a valid XDocument
      * 
      */
-    @OutputExport(name="body", type=String.class, parameters={})
+    @Export(name="body", type=String.class, parameters={})
     private Output<String> body;
 
     /**
@@ -50,7 +50,7 @@ public class EmailTemplate extends io.pulumi.resources.CustomResource {
      * Description of the Email Template.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -64,7 +64,7 @@ public class EmailTemplate extends io.pulumi.resources.CustomResource {
      * Whether the template is the default template provided by Api Management or has been edited.
      * 
      */
-    @OutputExport(name="isDefault", type=Boolean.class, parameters={})
+    @Export(name="isDefault", type=Boolean.class, parameters={})
     private Output<Boolean> isDefault;
 
     /**
@@ -78,7 +78,7 @@ public class EmailTemplate extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class EmailTemplate extends io.pulumi.resources.CustomResource {
      * Email Template Parameter values.
      * 
      */
-    @OutputExport(name="parameters", type=List.class, parameters={EmailTemplateParametersContractPropertiesResponse.class})
+    @Export(name="parameters", type=List.class, parameters={EmailTemplateParametersContractPropertiesResponse.class})
     private Output</* @Nullable */ List<EmailTemplateParametersContractPropertiesResponse>> parameters;
 
     /**
@@ -106,7 +106,7 @@ public class EmailTemplate extends io.pulumi.resources.CustomResource {
      * Subject of the Template.
      * 
      */
-    @OutputExport(name="subject", type=String.class, parameters={})
+    @Export(name="subject", type=String.class, parameters={})
     private Output<String> subject;
 
     /**
@@ -120,7 +120,7 @@ public class EmailTemplate extends io.pulumi.resources.CustomResource {
      * Title of the Template.
      * 
      */
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output</* @Nullable */ String> title;
 
     /**
@@ -134,7 +134,7 @@ public class EmailTemplate extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkspaceCappingResponse {
     /**
      * The workspace daily quota for ingestion.
@@ -28,11 +28,11 @@ public final class WorkspaceCappingResponse {
      */
     private final String quotaNextResetTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkspaceCappingResponse(
-        @OutputCustomType.Parameter("dailyQuotaGb") @Nullable Double dailyQuotaGb,
-        @OutputCustomType.Parameter("dataIngestionStatus") String dataIngestionStatus,
-        @OutputCustomType.Parameter("quotaNextResetTime") String quotaNextResetTime) {
+        @CustomType.Parameter("dailyQuotaGb") @Nullable Double dailyQuotaGb,
+        @CustomType.Parameter("dataIngestionStatus") String dataIngestionStatus,
+        @CustomType.Parameter("quotaNextResetTime") String quotaNextResetTime) {
         this.dailyQuotaGb = dailyQuotaGb;
         this.dataIngestionStatus = dataIngestionStatus;
         this.quotaNextResetTime = quotaNextResetTime;

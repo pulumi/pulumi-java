@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetKeyPairFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetKeyPairArgs extends io.pulumi.resources.InvokeArgs {
      * Custom filter block as described below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetKeyPairFilter> filters;
 
     public List<GetKeyPairFilter> getFilters() {
@@ -32,14 +32,14 @@ public final class GetKeyPairArgs extends io.pulumi.resources.InvokeArgs {
      * The Key Pair name.
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable String keyName;
 
     public Optional<String> getKeyName() {
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
     }
 
-    @InputImport(name="keyPairId")
+    @Import(name="keyPairId")
       private final @Nullable String keyPairId;
 
     public Optional<String> getKeyPairId() {
@@ -50,7 +50,7 @@ public final class GetKeyPairArgs extends io.pulumi.resources.InvokeArgs {
      * Any tags assigned to the Key Pair.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

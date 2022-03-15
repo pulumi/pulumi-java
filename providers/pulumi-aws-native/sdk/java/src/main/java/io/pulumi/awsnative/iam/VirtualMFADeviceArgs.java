@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iam;
 
 import io.pulumi.awsnative.iam.inputs.VirtualMFADeviceTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,28 +16,28 @@ public final class VirtualMFADeviceArgs extends io.pulumi.resources.ResourceArgs
 
     public static final VirtualMFADeviceArgs Empty = new VirtualMFADeviceArgs();
 
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
         return this.path == null ? Output.empty() : this.path;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<VirtualMFADeviceTagArgs>> tags;
 
     public Output<List<VirtualMFADeviceTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="users", required=true)
+    @Import(name="users", required=true)
       private final Output<List<String>> users;
 
     public Output<List<String>> getUsers() {
         return this.users;
     }
 
-    @InputImport(name="virtualMfaDeviceName")
+    @Import(name="virtualMfaDeviceName")
       private final @Nullable Output<String> virtualMfaDeviceName;
 
     public Output<String> getVirtualMfaDeviceName() {

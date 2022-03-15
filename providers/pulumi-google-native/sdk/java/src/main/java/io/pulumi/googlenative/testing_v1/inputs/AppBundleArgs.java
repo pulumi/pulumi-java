@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AppBundleArgs extends io.pulumi.resources.ResourceArgs {
      * .aab file representing the app bundle under test.
      * 
      */
-    @InputImport(name="bundleLocation")
+    @Import(name="bundleLocation")
       private final @Nullable Output<FileReferenceArgs> bundleLocation;
 
     public Output<FileReferenceArgs> getBundleLocation() {

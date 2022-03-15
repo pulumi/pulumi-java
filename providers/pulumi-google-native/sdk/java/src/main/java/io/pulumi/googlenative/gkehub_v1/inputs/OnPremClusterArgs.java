@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. Whether the cluster is an admin cluster.
      * 
      */
-    @InputImport(name="adminCluster")
+    @Import(name="adminCluster")
       private final @Nullable Output<Boolean> adminCluster;
 
     public Output<Boolean> getAdminCluster() {
@@ -34,7 +34,7 @@ public final class OnPremClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. Self-link of the GCP resource for the GKE On-Prem cluster. For example: //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/vmwareClusters/my-cluster //gkeonprem.googleapis.com/projects/my-project/locations/us-west1-a/bareMetalClusters/my-cluster
      * 
      */
-    @InputImport(name="resourceLink")
+    @Import(name="resourceLink")
       private final @Nullable Output<String> resourceLink;
 
     public Output<String> getResourceLink() {

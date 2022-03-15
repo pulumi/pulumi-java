@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContentKeyPolicyRsaTokenKeyResponse {
     /**
      * The RSA Parameter exponent
@@ -26,11 +26,11 @@ public final class ContentKeyPolicyRsaTokenKeyResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContentKeyPolicyRsaTokenKeyResponse(
-        @OutputCustomType.Parameter("exponent") String exponent,
-        @OutputCustomType.Parameter("modulus") String modulus,
-        @OutputCustomType.Parameter("odataType") String odataType) {
+        @CustomType.Parameter("exponent") String exponent,
+        @CustomType.Parameter("modulus") String modulus,
+        @CustomType.Parameter("odataType") String odataType) {
         this.exponent = exponent;
         this.modulus = modulus;
         this.odataType = odataType;

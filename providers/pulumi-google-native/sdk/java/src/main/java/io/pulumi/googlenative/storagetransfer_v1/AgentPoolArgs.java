@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.BandwidthLimitArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AgentPoolArgs Empty = new AgentPoolArgs();
 
-    @InputImport(name="agentPoolId", required=true)
+    @Import(name="agentPoolId", required=true)
       private final Output<String> agentPoolId;
 
     public Output<String> getAgentPoolId() {
@@ -26,7 +26,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the bandwidth limit details. If this field is unspecified, the default value is set as 'No Limit'.
      * 
      */
-    @InputImport(name="bandwidthLimit")
+    @Import(name="bandwidthLimit")
       private final @Nullable Output<BandwidthLimitArgs> bandwidthLimit;
 
     public Output<BandwidthLimitArgs> getBandwidthLimit() {
@@ -37,7 +37,7 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the client-specified AgentPool description.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -48,14 +48,14 @@ public final class AgentPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies a unique string that identifies the agent pool. Format: `projects/{project_id}/agentPools/{agent_pool_id}`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

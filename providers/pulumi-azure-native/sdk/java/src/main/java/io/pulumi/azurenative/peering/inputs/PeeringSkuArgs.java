@@ -8,7 +8,7 @@ import io.pulumi.azurenative.peering.enums.Size;
 import io.pulumi.azurenative.peering.enums.Tier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
      * The family of the peering SKU.
      * 
      */
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable Output<Either<String,Family>> family;
 
     public Output<Either<String,Family>> getFamily() {
@@ -37,7 +37,7 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the peering SKU.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -48,7 +48,7 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
      * The size of the peering SKU.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<Either<String,Size>> size;
 
     public Output<Either<String,Size>> getSize() {
@@ -59,7 +59,7 @@ public final class PeeringSkuArgs extends io.pulumi.resources.ResourceArgs {
      * The tier of the peering SKU.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<Either<String,Tier>> tier;
 
     public Output<Either<String,Tier>> getTier() {

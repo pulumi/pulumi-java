@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.wafv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupLabel {
     private final String name;
 
-    @OutputCustomType.Constructor
-    private RuleGroupLabel(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private RuleGroupLabel(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

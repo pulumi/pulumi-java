@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementAndStatementStatementAndStatementStatementGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementA
      * The statements to combine with `AND` logic. You can use any statements that can be nested. See Statement above for details.
      * 
      */
-    @InputImport(name="statements", required=true)
+    @Import(name="statements", required=true)
       private final Output<List<WebAclRuleStatementOrStatementStatementAndStatementStatementAndStatementStatementGetArgs>> statements;
 
     public Output<List<WebAclRuleStatementOrStatementStatementAndStatementStatementAndStatementStatementGetArgs>> getStatements() {

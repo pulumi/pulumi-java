@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AccountEncryptionResponse extends io.pulumi.resources.InvokeA
      * Encryption Key Source. Possible values are: 'Microsoft.NetApp'.
      * 
      */
-    @InputImport(name="keySource")
+    @Import(name="keySource")
       private final @Nullable String keySource;
 
     public Optional<String> getKeySource() {

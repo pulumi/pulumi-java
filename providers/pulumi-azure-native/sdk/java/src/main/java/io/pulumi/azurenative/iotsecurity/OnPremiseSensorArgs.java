@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.iotsecurity;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class OnPremiseSensorArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the on-premise IoT sensor
      * 
      */
-    @InputImport(name="onPremiseSensorName")
+    @Import(name="onPremiseSensorName")
       private final @Nullable Output<String> onPremiseSensorName;
 
     public Output<String> getOnPremiseSensorName() {

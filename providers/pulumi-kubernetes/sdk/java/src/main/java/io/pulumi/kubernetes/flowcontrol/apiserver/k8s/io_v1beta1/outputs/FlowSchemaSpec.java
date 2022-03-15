@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs.FlowDistinguisherMethod;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs.PolicyRulesWithSubjects;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs.PriorityLevelConfigurationReference;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowSchemaSpec {
     /**
      * `distinguisherMethod` defines how to compute the flow distinguisher for requests that match this schema. `nil` specifies that the distinguisher is disabled and thus will always be the empty string.
@@ -36,12 +36,12 @@ public final class FlowSchemaSpec {
      */
     private final @Nullable List<PolicyRulesWithSubjects> rules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowSchemaSpec(
-        @OutputCustomType.Parameter("distinguisherMethod") @Nullable FlowDistinguisherMethod distinguisherMethod,
-        @OutputCustomType.Parameter("matchingPrecedence") @Nullable Integer matchingPrecedence,
-        @OutputCustomType.Parameter("priorityLevelConfiguration") PriorityLevelConfigurationReference priorityLevelConfiguration,
-        @OutputCustomType.Parameter("rules") @Nullable List<PolicyRulesWithSubjects> rules) {
+        @CustomType.Parameter("distinguisherMethod") @Nullable FlowDistinguisherMethod distinguisherMethod,
+        @CustomType.Parameter("matchingPrecedence") @Nullable Integer matchingPrecedence,
+        @CustomType.Parameter("priorityLevelConfiguration") PriorityLevelConfigurationReference priorityLevelConfiguration,
+        @CustomType.Parameter("rules") @Nullable List<PolicyRulesWithSubjects> rules) {
         this.distinguisherMethod = distinguisherMethod;
         this.matchingPrecedence = matchingPrecedence;
         this.priorityLevelConfiguration = priorityLevelConfiguration;

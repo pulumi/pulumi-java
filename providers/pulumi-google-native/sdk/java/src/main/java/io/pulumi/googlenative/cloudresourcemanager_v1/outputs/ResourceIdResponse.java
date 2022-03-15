@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceIdResponse {
     /**
      * The resource type this id is for. At present, the valid types are: "organization", "folder", and "project".
@@ -15,8 +15,8 @@ public final class ResourceIdResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private ResourceIdResponse(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private ResourceIdResponse(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

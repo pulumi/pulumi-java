@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetVpcEndpointServiceFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVpcEndpointServiceResult {
     /**
      * Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
@@ -75,23 +75,23 @@ public final class GetVpcEndpointServiceResult {
      */
     private final Boolean vpcEndpointPolicySupported;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVpcEndpointServiceResult(
-        @OutputCustomType.Parameter("acceptanceRequired") Boolean acceptanceRequired,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
-        @OutputCustomType.Parameter("baseEndpointDnsNames") List<String> baseEndpointDnsNames,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcEndpointServiceFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("managesVpcEndpoints") Boolean managesVpcEndpoints,
-        @OutputCustomType.Parameter("owner") String owner,
-        @OutputCustomType.Parameter("privateDnsName") String privateDnsName,
-        @OutputCustomType.Parameter("service") @Nullable String service,
-        @OutputCustomType.Parameter("serviceId") String serviceId,
-        @OutputCustomType.Parameter("serviceName") String serviceName,
-        @OutputCustomType.Parameter("serviceType") String serviceType,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("vpcEndpointPolicySupported") Boolean vpcEndpointPolicySupported) {
+        @CustomType.Parameter("acceptanceRequired") Boolean acceptanceRequired,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @CustomType.Parameter("baseEndpointDnsNames") List<String> baseEndpointDnsNames,
+        @CustomType.Parameter("filters") @Nullable List<GetVpcEndpointServiceFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("managesVpcEndpoints") Boolean managesVpcEndpoints,
+        @CustomType.Parameter("owner") String owner,
+        @CustomType.Parameter("privateDnsName") String privateDnsName,
+        @CustomType.Parameter("service") @Nullable String service,
+        @CustomType.Parameter("serviceId") String serviceId,
+        @CustomType.Parameter("serviceName") String serviceName,
+        @CustomType.Parameter("serviceType") String serviceType,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("vpcEndpointPolicySupported") Boolean vpcEndpointPolicySupported) {
         this.acceptanceRequired = acceptanceRequired;
         this.arn = arn;
         this.availabilityZones = availabilityZones;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationalinsights.outputs;
 
 import io.pulumi.azurenative.operationalinsights.outputs.TagResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSavedSearchResult {
     /**
      * The category of the saved search. This helps the user to find a saved search faster.
@@ -70,19 +70,19 @@ public final class GetSavedSearchResult {
      */
     private final @Nullable Double version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSavedSearchResult(
-        @OutputCustomType.Parameter("category") String category,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("functionAlias") @Nullable String functionAlias,
-        @OutputCustomType.Parameter("functionParameters") @Nullable String functionParameters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("query") String query,
-        @OutputCustomType.Parameter("tags") @Nullable List<TagResponse> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") @Nullable Double version) {
+        @CustomType.Parameter("category") String category,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("functionAlias") @Nullable String functionAlias,
+        @CustomType.Parameter("functionParameters") @Nullable String functionParameters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("query") String query,
+        @CustomType.Parameter("tags") @Nullable List<TagResponse> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") @Nullable Double version) {
         this.category = category;
         this.displayName = displayName;
         this.etag = etag;

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ArmRoleReceiverResponse {
     /**
      * The name of the arm role receiver. Names must be unique across all receivers within an action group.
@@ -28,11 +28,11 @@ public final class ArmRoleReceiverResponse {
      */
     private final @Nullable Boolean useCommonAlertSchema;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ArmRoleReceiverResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("roleId") String roleId,
-        @OutputCustomType.Parameter("useCommonAlertSchema") @Nullable Boolean useCommonAlertSchema) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("roleId") String roleId,
+        @CustomType.Parameter("useCommonAlertSchema") @Nullable Boolean useCommonAlertSchema) {
         this.name = name;
         this.roleId = roleId;
         this.useCommonAlertSchema = useCommonAlertSchema;

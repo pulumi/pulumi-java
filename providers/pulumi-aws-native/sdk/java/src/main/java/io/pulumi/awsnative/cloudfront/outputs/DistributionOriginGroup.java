@@ -5,21 +5,21 @@ package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.DistributionOriginGroupFailoverCriteria;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionOriginGroupMembers;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DistributionOriginGroup {
     private final DistributionOriginGroupFailoverCriteria failoverCriteria;
     private final String id;
     private final DistributionOriginGroupMembers members;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionOriginGroup(
-        @OutputCustomType.Parameter("failoverCriteria") DistributionOriginGroupFailoverCriteria failoverCriteria,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("members") DistributionOriginGroupMembers members) {
+        @CustomType.Parameter("failoverCriteria") DistributionOriginGroupFailoverCriteria failoverCriteria,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("members") DistributionOriginGroupMembers members) {
         this.failoverCriteria = failoverCriteria;
         this.id = id;
         this.members = members;

@@ -20,7 +20,7 @@ import io.pulumi.awsnative.ec2.outputs.EC2FleetMemoryMiBRequest;
 import io.pulumi.awsnative.ec2.outputs.EC2FleetNetworkInterfaceCountRequest;
 import io.pulumi.awsnative.ec2.outputs.EC2FleetTotalLocalStorageGBRequest;
 import io.pulumi.awsnative.ec2.outputs.EC2FleetVCpuCountRangeRequest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EC2FleetInstanceRequirementsRequest {
     private final @Nullable EC2FleetAcceleratorCountRequest acceleratorCount;
     private final @Nullable List<EC2FleetInstanceRequirementsRequestAcceleratorManufacturersItem> acceleratorManufacturers;
@@ -53,29 +53,29 @@ public final class EC2FleetInstanceRequirementsRequest {
     private final @Nullable EC2FleetTotalLocalStorageGBRequest totalLocalStorageGB;
     private final @Nullable EC2FleetVCpuCountRangeRequest vCpuCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EC2FleetInstanceRequirementsRequest(
-        @OutputCustomType.Parameter("acceleratorCount") @Nullable EC2FleetAcceleratorCountRequest acceleratorCount,
-        @OutputCustomType.Parameter("acceleratorManufacturers") @Nullable List<EC2FleetInstanceRequirementsRequestAcceleratorManufacturersItem> acceleratorManufacturers,
-        @OutputCustomType.Parameter("acceleratorNames") @Nullable List<EC2FleetInstanceRequirementsRequestAcceleratorNamesItem> acceleratorNames,
-        @OutputCustomType.Parameter("acceleratorTotalMemoryMiB") @Nullable EC2FleetAcceleratorTotalMemoryMiBRequest acceleratorTotalMemoryMiB,
-        @OutputCustomType.Parameter("acceleratorTypes") @Nullable List<EC2FleetInstanceRequirementsRequestAcceleratorTypesItem> acceleratorTypes,
-        @OutputCustomType.Parameter("bareMetal") @Nullable EC2FleetInstanceRequirementsRequestBareMetal bareMetal,
-        @OutputCustomType.Parameter("baselineEbsBandwidthMbps") @Nullable EC2FleetBaselineEbsBandwidthMbpsRequest baselineEbsBandwidthMbps,
-        @OutputCustomType.Parameter("burstablePerformance") @Nullable EC2FleetInstanceRequirementsRequestBurstablePerformance burstablePerformance,
-        @OutputCustomType.Parameter("cpuManufacturers") @Nullable List<EC2FleetInstanceRequirementsRequestCpuManufacturersItem> cpuManufacturers,
-        @OutputCustomType.Parameter("excludedInstanceTypes") @Nullable List<String> excludedInstanceTypes,
-        @OutputCustomType.Parameter("instanceGenerations") @Nullable List<EC2FleetInstanceRequirementsRequestInstanceGenerationsItem> instanceGenerations,
-        @OutputCustomType.Parameter("localStorage") @Nullable EC2FleetInstanceRequirementsRequestLocalStorage localStorage,
-        @OutputCustomType.Parameter("localStorageTypes") @Nullable List<EC2FleetInstanceRequirementsRequestLocalStorageTypesItem> localStorageTypes,
-        @OutputCustomType.Parameter("memoryGiBPerVCpu") @Nullable EC2FleetMemoryGiBPerVCpuRequest memoryGiBPerVCpu,
-        @OutputCustomType.Parameter("memoryMiB") @Nullable EC2FleetMemoryMiBRequest memoryMiB,
-        @OutputCustomType.Parameter("networkInterfaceCount") @Nullable EC2FleetNetworkInterfaceCountRequest networkInterfaceCount,
-        @OutputCustomType.Parameter("onDemandMaxPricePercentageOverLowestPrice") @Nullable Integer onDemandMaxPricePercentageOverLowestPrice,
-        @OutputCustomType.Parameter("requireHibernateSupport") @Nullable Boolean requireHibernateSupport,
-        @OutputCustomType.Parameter("spotMaxPricePercentageOverLowestPrice") @Nullable Integer spotMaxPricePercentageOverLowestPrice,
-        @OutputCustomType.Parameter("totalLocalStorageGB") @Nullable EC2FleetTotalLocalStorageGBRequest totalLocalStorageGB,
-        @OutputCustomType.Parameter("vCpuCount") @Nullable EC2FleetVCpuCountRangeRequest vCpuCount) {
+        @CustomType.Parameter("acceleratorCount") @Nullable EC2FleetAcceleratorCountRequest acceleratorCount,
+        @CustomType.Parameter("acceleratorManufacturers") @Nullable List<EC2FleetInstanceRequirementsRequestAcceleratorManufacturersItem> acceleratorManufacturers,
+        @CustomType.Parameter("acceleratorNames") @Nullable List<EC2FleetInstanceRequirementsRequestAcceleratorNamesItem> acceleratorNames,
+        @CustomType.Parameter("acceleratorTotalMemoryMiB") @Nullable EC2FleetAcceleratorTotalMemoryMiBRequest acceleratorTotalMemoryMiB,
+        @CustomType.Parameter("acceleratorTypes") @Nullable List<EC2FleetInstanceRequirementsRequestAcceleratorTypesItem> acceleratorTypes,
+        @CustomType.Parameter("bareMetal") @Nullable EC2FleetInstanceRequirementsRequestBareMetal bareMetal,
+        @CustomType.Parameter("baselineEbsBandwidthMbps") @Nullable EC2FleetBaselineEbsBandwidthMbpsRequest baselineEbsBandwidthMbps,
+        @CustomType.Parameter("burstablePerformance") @Nullable EC2FleetInstanceRequirementsRequestBurstablePerformance burstablePerformance,
+        @CustomType.Parameter("cpuManufacturers") @Nullable List<EC2FleetInstanceRequirementsRequestCpuManufacturersItem> cpuManufacturers,
+        @CustomType.Parameter("excludedInstanceTypes") @Nullable List<String> excludedInstanceTypes,
+        @CustomType.Parameter("instanceGenerations") @Nullable List<EC2FleetInstanceRequirementsRequestInstanceGenerationsItem> instanceGenerations,
+        @CustomType.Parameter("localStorage") @Nullable EC2FleetInstanceRequirementsRequestLocalStorage localStorage,
+        @CustomType.Parameter("localStorageTypes") @Nullable List<EC2FleetInstanceRequirementsRequestLocalStorageTypesItem> localStorageTypes,
+        @CustomType.Parameter("memoryGiBPerVCpu") @Nullable EC2FleetMemoryGiBPerVCpuRequest memoryGiBPerVCpu,
+        @CustomType.Parameter("memoryMiB") @Nullable EC2FleetMemoryMiBRequest memoryMiB,
+        @CustomType.Parameter("networkInterfaceCount") @Nullable EC2FleetNetworkInterfaceCountRequest networkInterfaceCount,
+        @CustomType.Parameter("onDemandMaxPricePercentageOverLowestPrice") @Nullable Integer onDemandMaxPricePercentageOverLowestPrice,
+        @CustomType.Parameter("requireHibernateSupport") @Nullable Boolean requireHibernateSupport,
+        @CustomType.Parameter("spotMaxPricePercentageOverLowestPrice") @Nullable Integer spotMaxPricePercentageOverLowestPrice,
+        @CustomType.Parameter("totalLocalStorageGB") @Nullable EC2FleetTotalLocalStorageGBRequest totalLocalStorageGB,
+        @CustomType.Parameter("vCpuCount") @Nullable EC2FleetVCpuCountRangeRequest vCpuCount) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorManufacturers = acceleratorManufacturers;
         this.acceleratorNames = acceleratorNames;

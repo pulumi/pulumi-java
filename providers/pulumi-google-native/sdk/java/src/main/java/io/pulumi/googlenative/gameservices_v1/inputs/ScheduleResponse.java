@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * The duration for the cron job event. The duration of the event is effective after the cron job's start time.
      * 
      */
-    @InputImport(name="cronJobDuration", required=true)
+    @Import(name="cronJobDuration", required=true)
       private final String cronJobDuration;
 
     public String getCronJobDuration() {
@@ -31,7 +31,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * The cron definition of the scheduled event. See https://en.wikipedia.org/wiki/Cron. Cron spec specifies the local time as defined by the realm.
      * 
      */
-    @InputImport(name="cronSpec", required=true)
+    @Import(name="cronSpec", required=true)
       private final String cronSpec;
 
     public String getCronSpec() {
@@ -42,7 +42,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * The end time of the event.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
@@ -53,7 +53,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * The start time of the event.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {

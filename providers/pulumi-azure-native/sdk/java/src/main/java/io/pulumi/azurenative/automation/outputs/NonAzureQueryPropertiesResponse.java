@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NonAzureQueryPropertiesResponse {
     /**
      * Log Analytics Saved Search name.
@@ -22,10 +22,10 @@ public final class NonAzureQueryPropertiesResponse {
      */
     private final @Nullable String workspaceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NonAzureQueryPropertiesResponse(
-        @OutputCustomType.Parameter("functionAlias") @Nullable String functionAlias,
-        @OutputCustomType.Parameter("workspaceId") @Nullable String workspaceId) {
+        @CustomType.Parameter("functionAlias") @Nullable String functionAlias,
+        @CustomType.Parameter("workspaceId") @Nullable String workspaceId) {
         this.functionAlias = functionAlias;
         this.workspaceId = workspaceId;
     }

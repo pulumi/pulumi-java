@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.FirewallPolicyAssociationResponse;
 import io.pulumi.googlenative.compute_beta.outputs.FirewallPolicyRuleResponse;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFirewallPolicyResult {
     /**
      * A list of associations that belong to this firewall policy.
@@ -74,20 +74,20 @@ public final class GetFirewallPolicyResult {
      */
     private final String shortName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFirewallPolicyResult(
-        @OutputCustomType.Parameter("associations") List<FirewallPolicyAssociationResponse> associations,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parent") String parent,
-        @OutputCustomType.Parameter("ruleTupleCount") Integer ruleTupleCount,
-        @OutputCustomType.Parameter("rules") List<FirewallPolicyRuleResponse> rules,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("shortName") String shortName) {
+        @CustomType.Parameter("associations") List<FirewallPolicyAssociationResponse> associations,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parent") String parent,
+        @CustomType.Parameter("ruleTupleCount") Integer ruleTupleCount,
+        @CustomType.Parameter("rules") List<FirewallPolicyRuleResponse> rules,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("shortName") String shortName) {
         this.associations = associations;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

@@ -4,7 +4,7 @@
 package io.pulumi.random.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
      * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    @InputImport(name="keepers")
+    @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
     public Output<Map<String,Object>> getKeepers() {
@@ -32,7 +32,7 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
      * The length (in words) of the pet name.
      * 
      */
-    @InputImport(name="length")
+    @Import(name="length")
       private final @Nullable Output<Integer> length;
 
     public Output<Integer> getLength() {
@@ -43,7 +43,7 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
      * A string to prefix the name with.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
@@ -54,7 +54,7 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
      * The character to separate words in the pet name.
      * 
      */
-    @InputImport(name="separator")
+    @Import(name="separator")
       private final @Nullable Output<String> separator;
 
     public Output<String> getSeparator() {

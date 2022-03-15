@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CassandraPartitionKeyResponse {
     /**
      * Name of the Cosmos DB Cassandra table partition key
@@ -17,8 +17,8 @@ public final class CassandraPartitionKeyResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private CassandraPartitionKeyResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private CassandraPartitionKeyResponse(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
      * Body of the User Defined Function
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable String body;
 
     public Optional<String> getBody() {
@@ -30,7 +30,7 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
      * A system generated property representing the resource etag required for optimistic concurrency control.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -41,7 +41,7 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
      * Name of the Cosmos DB SQL userDefinedFunction
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -52,7 +52,7 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
      * A system generated property. A unique identifier.
      * 
      */
-    @InputImport(name="rid", required=true)
+    @Import(name="rid", required=true)
       private final String rid;
 
     public String getRid() {
@@ -63,7 +63,7 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
      * A system generated property that denotes the last updated timestamp of the resource.
      * 
      */
-    @InputImport(name="ts", required=true)
+    @Import(name="ts", required=true)
       private final Double ts;
 
     public Double getTs() {

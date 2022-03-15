@@ -5,7 +5,7 @@ package io.pulumi.awsnative.nimblestudio;
 
 import io.pulumi.awsnative.nimblestudio.inputs.StreamingImageTagsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
      * <p>A human-readable description of the streaming image.</p>
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
      * <p>The ID of an EC2 machine image with which to create this streaming image.</p>
      * 
      */
-    @InputImport(name="ec2ImageId", required=true)
+    @Import(name="ec2ImageId", required=true)
       private final Output<String> ec2ImageId;
 
     public Output<String> getEc2ImageId() {
@@ -41,7 +41,7 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
      * <p>A friendly name for a streaming image resource.</p>
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,14 +52,14 @@ public final class StreamingImageArgs extends io.pulumi.resources.ResourceArgs {
      * <p>The studioId. </p>
      * 
      */
-    @InputImport(name="studioId", required=true)
+    @Import(name="studioId", required=true)
       private final Output<String> studioId;
 
     public Output<String> getStudioId() {
         return this.studioId;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<StreamingImageTagsArgs> tags;
 
     public Output<StreamingImageTagsArgs> getTags() {

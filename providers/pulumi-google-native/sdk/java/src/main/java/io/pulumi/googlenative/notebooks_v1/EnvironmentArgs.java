@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.notebooks_v1.inputs.ContainerImageArgs;
 import io.pulumi.googlenative.notebooks_v1.inputs.VmImageArgs;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Use a container image to start the notebook instance.
      * 
      */
-    @InputImport(name="containerImage")
+    @Import(name="containerImage")
       private final @Nullable Output<ContainerImageArgs> containerImage;
 
     public Output<ContainerImageArgs> getContainerImage() {
@@ -31,7 +31,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * A brief description of this environment.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,21 +42,21 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Display name of this environment for the UI.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName == null ? Output.empty() : this.displayName;
     }
 
-    @InputImport(name="environmentId", required=true)
+    @Import(name="environmentId", required=true)
       private final Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
         return this.environmentId;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -67,14 +67,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Path to a Bash script that automatically runs after a notebook instance fully boots up. The path must be a URL or Cloud Storage path. Example: `"gs://path-to-file/file-name"`
      * 
      */
-    @InputImport(name="postStartupScript")
+    @Import(name="postStartupScript")
       private final @Nullable Output<String> postStartupScript;
 
     public Output<String> getPostStartupScript() {
         return this.postStartupScript == null ? Output.empty() : this.postStartupScript;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -85,7 +85,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Use a Compute Engine VM image to start the notebook instance.
      * 
      */
-    @InputImport(name="vmImage")
+    @Import(name="vmImage")
       private final @Nullable Output<VmImageArgs> vmImage;
 
     public Output<VmImageArgs> getVmImage() {

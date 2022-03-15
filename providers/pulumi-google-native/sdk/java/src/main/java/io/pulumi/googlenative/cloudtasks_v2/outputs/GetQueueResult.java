@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudtasks_v2.outputs.AppEngineRoutingResponse;
 import io.pulumi.googlenative.cloudtasks_v2.outputs.RateLimitsResponse;
 import io.pulumi.googlenative.cloudtasks_v2.outputs.RetryConfigResponse;
@@ -11,7 +11,7 @@ import io.pulumi.googlenative.cloudtasks_v2.outputs.StackdriverLoggingConfigResp
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetQueueResult {
     /**
      * Overrides for task-level app_engine_routing. These settings apply only to App Engine tasks in this queue. Http tasks are not affected. If set, `app_engine_routing_override` is used for all App Engine tasks in the queue, no matter what the setting is for the task-level app_engine_routing.
@@ -49,15 +49,15 @@ public final class GetQueueResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetQueueResult(
-        @OutputCustomType.Parameter("appEngineRoutingOverride") AppEngineRoutingResponse appEngineRoutingOverride,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("purgeTime") String purgeTime,
-        @OutputCustomType.Parameter("rateLimits") RateLimitsResponse rateLimits,
-        @OutputCustomType.Parameter("retryConfig") RetryConfigResponse retryConfig,
-        @OutputCustomType.Parameter("stackdriverLoggingConfig") StackdriverLoggingConfigResponse stackdriverLoggingConfig,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("appEngineRoutingOverride") AppEngineRoutingResponse appEngineRoutingOverride,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("purgeTime") String purgeTime,
+        @CustomType.Parameter("rateLimits") RateLimitsResponse rateLimits,
+        @CustomType.Parameter("retryConfig") RetryConfigResponse retryConfig,
+        @CustomType.Parameter("stackdriverLoggingConfig") StackdriverLoggingConfigResponse stackdriverLoggingConfig,
+        @CustomType.Parameter("state") String state) {
         this.appEngineRoutingOverride = appEngineRoutingOverride;
         this.name = name;
         this.purgeTime = purgeTime;

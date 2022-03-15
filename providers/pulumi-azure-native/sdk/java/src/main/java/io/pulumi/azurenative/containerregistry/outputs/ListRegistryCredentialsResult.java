@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.RegistryPasswordResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListRegistryCredentialsResult {
     /**
      * The list of passwords for a container registry.
@@ -24,10 +24,10 @@ public final class ListRegistryCredentialsResult {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListRegistryCredentialsResult(
-        @OutputCustomType.Parameter("passwords") @Nullable List<RegistryPasswordResponse> passwords,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("passwords") @Nullable List<RegistryPasswordResponse> passwords,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.passwords = passwords;
         this.username = username;
     }

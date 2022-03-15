@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.spanner_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.spanner_v1.outputs.EncryptionConfigResponse;
 import io.pulumi.googlenative.spanner_v1.outputs.EncryptionInfoResponse;
 import io.pulumi.googlenative.spanner_v1.outputs.RestoreInfoResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDatabaseResult {
     /**
      * If exists, the time at which the database creation started.
@@ -64,18 +64,18 @@ public final class GetDatabaseResult {
      */
     private final String versionRetentionPeriod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatabaseResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("databaseDialect") String databaseDialect,
-        @OutputCustomType.Parameter("defaultLeader") String defaultLeader,
-        @OutputCustomType.Parameter("earliestVersionTime") String earliestVersionTime,
-        @OutputCustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
-        @OutputCustomType.Parameter("encryptionInfo") List<EncryptionInfoResponse> encryptionInfo,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("restoreInfo") RestoreInfoResponse restoreInfo,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("versionRetentionPeriod") String versionRetentionPeriod) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("databaseDialect") String databaseDialect,
+        @CustomType.Parameter("defaultLeader") String defaultLeader,
+        @CustomType.Parameter("earliestVersionTime") String earliestVersionTime,
+        @CustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
+        @CustomType.Parameter("encryptionInfo") List<EncryptionInfoResponse> encryptionInfo,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("restoreInfo") RestoreInfoResponse restoreInfo,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("versionRetentionPeriod") String versionRetentionPeriod) {
         this.createTime = createTime;
         this.databaseDialect = databaseDialect;
         this.defaultLeader = defaultLeader;

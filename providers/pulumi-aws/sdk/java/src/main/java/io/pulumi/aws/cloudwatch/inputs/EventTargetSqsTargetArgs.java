@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class EventTargetSqsTargetArgs extends io.pulumi.resources.Resource
      * The FIFO message group ID to use as the target.
      * 
      */
-    @InputImport(name="messageGroupId")
+    @Import(name="messageGroupId")
       private final @Nullable Output<String> messageGroupId;
 
     public Output<String> getMessageGroupId() {

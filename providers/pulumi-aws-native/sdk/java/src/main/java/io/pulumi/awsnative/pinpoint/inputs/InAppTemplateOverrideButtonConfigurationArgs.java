@@ -5,7 +5,7 @@ package io.pulumi.awsnative.pinpoint.inputs;
 
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateButtonAction;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class InAppTemplateOverrideButtonConfigurationArgs extends io.pulum
 
     public static final InAppTemplateOverrideButtonConfigurationArgs Empty = new InAppTemplateOverrideButtonConfigurationArgs();
 
-    @InputImport(name="buttonAction")
+    @Import(name="buttonAction")
       private final @Nullable Output<InAppTemplateButtonAction> buttonAction;
 
     public Output<InAppTemplateButtonAction> getButtonAction() {
         return this.buttonAction == null ? Output.empty() : this.buttonAction;
     }
 
-    @InputImport(name="link")
+    @Import(name="link")
       private final @Nullable Output<String> link;
 
     public Output<String> getLink() {

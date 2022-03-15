@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deviceupdate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
      * Group ID.
      * 
      */
-    @InputImport(name="groupId", required=true)
+    @Import(name="groupId", required=true)
       private final String groupId;
 
     public String getGroupId() {
@@ -31,7 +31,7 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
      * Connection details ID.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -42,7 +42,7 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
      * Link ID.
      * 
      */
-    @InputImport(name="linkIdentifier", required=true)
+    @Import(name="linkIdentifier", required=true)
       private final String linkIdentifier;
 
     public String getLinkIdentifier() {
@@ -53,7 +53,7 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
      * Member name.
      * 
      */
-    @InputImport(name="memberName", required=true)
+    @Import(name="memberName", required=true)
       private final String memberName;
 
     public String getMemberName() {
@@ -64,7 +64,7 @@ public final class ConnectionDetailsResponse extends io.pulumi.resources.InvokeA
      * Private IP address.
      * 
      */
-    @InputImport(name="privateIpAddress", required=true)
+    @Import(name="privateIpAddress", required=true)
       private final String privateIpAddress;
 
     public String getPrivateIpAddress() {

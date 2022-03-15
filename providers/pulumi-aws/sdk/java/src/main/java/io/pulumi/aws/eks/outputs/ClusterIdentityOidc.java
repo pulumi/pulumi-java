@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterIdentityOidc {
     /**
      * Issuer URL for the OpenID Connect identity provider.
@@ -17,8 +17,8 @@ public final class ClusterIdentityOidc {
      */
     private final @Nullable String issuer;
 
-    @OutputCustomType.Constructor
-    private ClusterIdentityOidc(@OutputCustomType.Parameter("issuer") @Nullable String issuer) {
+    @CustomType.Constructor
+    private ClusterIdentityOidc(@CustomType.Parameter("issuer") @Nullable String issuer) {
         this.issuer = issuer;
     }
 

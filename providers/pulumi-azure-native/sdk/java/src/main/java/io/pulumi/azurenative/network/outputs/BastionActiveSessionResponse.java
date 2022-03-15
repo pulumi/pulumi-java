@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BastionActiveSessionResponse {
     /**
      * The protocol used to connect to the target.
@@ -67,19 +67,19 @@ public final class BastionActiveSessionResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BastionActiveSessionResponse(
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("resourceType") String resourceType,
-        @OutputCustomType.Parameter("sessionDurationInMins") Double sessionDurationInMins,
-        @OutputCustomType.Parameter("sessionId") String sessionId,
-        @OutputCustomType.Parameter("startTime") Object startTime,
-        @OutputCustomType.Parameter("targetHostName") String targetHostName,
-        @OutputCustomType.Parameter("targetIpAddress") String targetIpAddress,
-        @OutputCustomType.Parameter("targetResourceGroup") String targetResourceGroup,
-        @OutputCustomType.Parameter("targetResourceId") String targetResourceId,
-        @OutputCustomType.Parameter("targetSubscriptionId") String targetSubscriptionId,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("resourceType") String resourceType,
+        @CustomType.Parameter("sessionDurationInMins") Double sessionDurationInMins,
+        @CustomType.Parameter("sessionId") String sessionId,
+        @CustomType.Parameter("startTime") Object startTime,
+        @CustomType.Parameter("targetHostName") String targetHostName,
+        @CustomType.Parameter("targetIpAddress") String targetIpAddress,
+        @CustomType.Parameter("targetResourceGroup") String targetResourceGroup,
+        @CustomType.Parameter("targetResourceId") String targetResourceId,
+        @CustomType.Parameter("targetSubscriptionId") String targetSubscriptionId,
+        @CustomType.Parameter("userName") String userName) {
         this.protocol = protocol;
         this.resourceType = resourceType;
         this.sessionDurationInMins = sessionDurationInMins;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
      * Additional information about the error.
      * 
      */
-    @InputImport(name="details", required=true)
+    @Import(name="details", required=true)
       private final Map<String,String> details;
 
     public Map<String,String> getDetails() {
@@ -32,7 +32,7 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
      * The time when the error occurred.
      * 
      */
-    @InputImport(name="errorTime", required=true)
+    @Import(name="errorTime", required=true)
       private final String errorTime;
 
     public String getErrorTime() {
@@ -43,7 +43,7 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
      * A unique identifier for this specific error, allowing it to be traced throughout the system in logs and API responses.
      * 
      */
-    @InputImport(name="errorUuid", required=true)
+    @Import(name="errorUuid", required=true)
       private final String errorUuid;
 
     public String getErrorUuid() {
@@ -54,7 +54,7 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
      * A message containing more information about the error that occurred.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -65,7 +65,7 @@ public final class ErrorResponse extends io.pulumi.resources.InvokeArgs {
      * A title that explains the reason for the error.
      * 
      */
-    @InputImport(name="reason", required=true)
+    @Import(name="reason", required=true)
       private final String reason;
 
     public String getReason() {

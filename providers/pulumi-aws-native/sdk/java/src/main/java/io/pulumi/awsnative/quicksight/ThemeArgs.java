@@ -7,7 +7,7 @@ import io.pulumi.awsnative.quicksight.inputs.ThemeConfigurationArgs;
 import io.pulumi.awsnative.quicksight.inputs.ThemeResourcePermissionArgs;
 import io.pulumi.awsnative.quicksight.inputs.ThemeTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ThemeArgs Empty = new ThemeArgs();
 
-    @InputImport(name="awsAccountId", required=true)
+    @Import(name="awsAccountId", required=true)
       private final Output<String> awsAccountId;
 
     public Output<String> getAwsAccountId() {
@@ -32,14 +32,14 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
      * 			within a QuickSight analysis. </p>
      * 
      */
-    @InputImport(name="baseThemeId")
+    @Import(name="baseThemeId")
       private final @Nullable Output<String> baseThemeId;
 
     public Output<String> getBaseThemeId() {
         return this.baseThemeId == null ? Output.empty() : this.baseThemeId;
     }
 
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable Output<ThemeConfigurationArgs> configuration;
 
     public Output<ThemeConfigurationArgs> getConfiguration() {
@@ -50,7 +50,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
      * <p>A display name for the theme.</p>
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -62,7 +62,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
      * 			</p>
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<List<ThemeResourcePermissionArgs>> permissions;
 
     public Output<List<ThemeResourcePermissionArgs>> getPermissions() {
@@ -74,14 +74,14 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
      * 			resource.</p>
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ThemeTagArgs>> tags;
 
     public Output<List<ThemeTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="themeId", required=true)
+    @Import(name="themeId", required=true)
       private final Output<String> themeId;
 
     public Output<String> getThemeId() {
@@ -95,7 +95,7 @@ public final class ThemeArgs extends io.pulumi.resources.ResourceArgs {
      * 			field.</p>
      * 
      */
-    @InputImport(name="versionDescription")
+    @Import(name="versionDescription")
       private final @Nullable Output<String> versionDescription;
 
     public Output<String> getVersionDescription() {

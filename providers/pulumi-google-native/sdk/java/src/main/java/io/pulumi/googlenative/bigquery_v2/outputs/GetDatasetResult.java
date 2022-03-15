@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.DatasetAccessItemResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.DatasetReferenceResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.DatasetTagsItemResponse;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDatasetResult {
     /**
      * [Optional] An array of objects that define dataset access for one or more entities. You can set this property when inserting or updating a dataset in order to control who is allowed to access the data. If unspecified at dataset creation time, BigQuery adds default dataset access for the following entities: access.specialGroup: projectReaders; access.role: READER; access.specialGroup: projectWriters; access.role: WRITER; access.specialGroup: projectOwners; access.role: OWNER; access.userByEmail: [dataset creator email]; access.role: OWNER;
@@ -103,26 +103,26 @@ public final class GetDatasetResult {
      */
     private final List<DatasetTagsItemResponse> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatasetResult(
-        @OutputCustomType.Parameter("access") List<DatasetAccessItemResponse> access,
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("datasetReference") DatasetReferenceResponse datasetReference,
-        @OutputCustomType.Parameter("defaultCollation") String defaultCollation,
-        @OutputCustomType.Parameter("defaultEncryptionConfiguration") EncryptionConfigurationResponse defaultEncryptionConfiguration,
-        @OutputCustomType.Parameter("defaultPartitionExpirationMs") String defaultPartitionExpirationMs,
-        @OutputCustomType.Parameter("defaultTableExpirationMs") String defaultTableExpirationMs,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("friendlyName") String friendlyName,
-        @OutputCustomType.Parameter("isCaseInsensitive") Boolean isCaseInsensitive,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("satisfiesPZS") Boolean satisfiesPZS,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("tags") List<DatasetTagsItemResponse> tags) {
+        @CustomType.Parameter("access") List<DatasetAccessItemResponse> access,
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("datasetReference") DatasetReferenceResponse datasetReference,
+        @CustomType.Parameter("defaultCollation") String defaultCollation,
+        @CustomType.Parameter("defaultEncryptionConfiguration") EncryptionConfigurationResponse defaultEncryptionConfiguration,
+        @CustomType.Parameter("defaultPartitionExpirationMs") String defaultPartitionExpirationMs,
+        @CustomType.Parameter("defaultTableExpirationMs") String defaultTableExpirationMs,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("friendlyName") String friendlyName,
+        @CustomType.Parameter("isCaseInsensitive") Boolean isCaseInsensitive,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("satisfiesPZS") Boolean satisfiesPZS,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("tags") List<DatasetTagsItemResponse> tags) {
         this.access = access;
         this.creationTime = creationTime;
         this.datasetReference = datasetReference;

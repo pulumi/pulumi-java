@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplateIdentityConstraintsCelExpressionArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CertificateTemplateIdentityConstraintsArgs extends io.pulumi.
      * Required. If this is true, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.
      * 
      */
-    @InputImport(name="allowSubjectAltNamesPassthrough", required=true)
+    @Import(name="allowSubjectAltNamesPassthrough", required=true)
       private final Output<Boolean> allowSubjectAltNamesPassthrough;
 
     public Output<Boolean> getAllowSubjectAltNamesPassthrough() {
@@ -30,7 +30,7 @@ public final class CertificateTemplateIdentityConstraintsArgs extends io.pulumi.
      * Required. If this is true, the Subject field may be copied from a certificate request into the signed certificate. Otherwise, the requested Subject will be discarded.
      * 
      */
-    @InputImport(name="allowSubjectPassthrough", required=true)
+    @Import(name="allowSubjectPassthrough", required=true)
       private final Output<Boolean> allowSubjectPassthrough;
 
     public Output<Boolean> getAllowSubjectPassthrough() {
@@ -41,7 +41,7 @@ public final class CertificateTemplateIdentityConstraintsArgs extends io.pulumi.
      * Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
      * 
      */
-    @InputImport(name="celExpression")
+    @Import(name="celExpression")
       private final @Nullable Output<CertificateTemplateIdentityConstraintsCelExpressionArgs> celExpression;
 
     public Output<CertificateTemplateIdentityConstraintsCelExpressionArgs> getCelExpression() {

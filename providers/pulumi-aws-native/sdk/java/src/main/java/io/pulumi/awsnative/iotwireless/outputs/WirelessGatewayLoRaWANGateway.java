@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.iotwireless.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WirelessGatewayLoRaWANGateway {
     private final String gatewayEui;
     private final String rfRegion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WirelessGatewayLoRaWANGateway(
-        @OutputCustomType.Parameter("gatewayEui") String gatewayEui,
-        @OutputCustomType.Parameter("rfRegion") String rfRegion) {
+        @CustomType.Parameter("gatewayEui") String gatewayEui,
+        @CustomType.Parameter("rfRegion") String rfRegion) {
         this.gatewayEui = gatewayEui;
         this.rfRegion = rfRegion;
     }

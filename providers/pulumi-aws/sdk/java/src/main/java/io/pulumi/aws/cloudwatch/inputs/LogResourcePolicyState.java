@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class LogResourcePolicyState extends io.pulumi.resources.ResourceAr
      * Details of the resource policy, including the identity of the principal that is enabled to put logs to this account. This is formatted as a JSON string. Maximum length of 5120 characters.
      * 
      */
-    @InputImport(name="policyDocument")
+    @Import(name="policyDocument")
       private final @Nullable Output<String> policyDocument;
 
     public Output<String> getPolicyDocument() {
@@ -29,7 +29,7 @@ public final class LogResourcePolicyState extends io.pulumi.resources.ResourceAr
      * Name of the resource policy.
      * 
      */
-    @InputImport(name="policyName")
+    @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
     public Output<String> getPolicyName() {

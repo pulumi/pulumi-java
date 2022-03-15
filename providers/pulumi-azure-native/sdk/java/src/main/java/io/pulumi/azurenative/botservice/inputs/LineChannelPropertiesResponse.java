@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.LineRegistrationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class LineChannelPropertiesResponse extends io.pulumi.resources.Inv
      * Callback Url to enter in line registration.
      * 
      */
-    @InputImport(name="callbackUrl", required=true)
+    @Import(name="callbackUrl", required=true)
       private final String callbackUrl;
 
     public String getCallbackUrl() {
@@ -34,7 +34,7 @@ public final class LineChannelPropertiesResponse extends io.pulumi.resources.Inv
      * Whether this channel is validated for the bot
      * 
      */
-    @InputImport(name="isValidated", required=true)
+    @Import(name="isValidated", required=true)
       private final Boolean isValidated;
 
     public Boolean getIsValidated() {
@@ -45,7 +45,7 @@ public final class LineChannelPropertiesResponse extends io.pulumi.resources.Inv
      * The list of line channel registrations
      * 
      */
-    @InputImport(name="lineRegistrations", required=true)
+    @Import(name="lineRegistrations", required=true)
       private final List<LineRegistrationResponse> lineRegistrations;
 
     public List<LineRegistrationResponse> getLineRegistrations() {

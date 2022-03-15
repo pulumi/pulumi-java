@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ExecutionStatisticsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class QueryExecutionResultResponse extends io.pulumi.resources.Invo
      * Query text retrieved from the source server
      * 
      */
-    @InputImport(name="queryText", required=true)
+    @Import(name="queryText", required=true)
       private final String queryText;
 
     public String getQueryText() {
@@ -33,7 +33,7 @@ public final class QueryExecutionResultResponse extends io.pulumi.resources.Invo
      * Query analysis result from the source
      * 
      */
-    @InputImport(name="sourceResult", required=true)
+    @Import(name="sourceResult", required=true)
       private final ExecutionStatisticsResponse sourceResult;
 
     public ExecutionStatisticsResponse getSourceResult() {
@@ -44,7 +44,7 @@ public final class QueryExecutionResultResponse extends io.pulumi.resources.Invo
      * Total no. of statements in the batch
      * 
      */
-    @InputImport(name="statementsInBatch", required=true)
+    @Import(name="statementsInBatch", required=true)
       private final Double statementsInBatch;
 
     public Double getStatementsInBatch() {
@@ -55,7 +55,7 @@ public final class QueryExecutionResultResponse extends io.pulumi.resources.Invo
      * Query analysis result from the target
      * 
      */
-    @InputImport(name="targetResult", required=true)
+    @Import(name="targetResult", required=true)
       private final ExecutionStatisticsResponse targetResult;
 
     public ExecutionStatisticsResponse getTargetResult() {

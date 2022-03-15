@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.FacebookPageResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
      * Facebook application id
      * 
      */
-    @InputImport(name="appId", required=true)
+    @Import(name="appId", required=true)
       private final String appId;
 
     public String getAppId() {
@@ -36,7 +36,7 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
      * Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
-    @InputImport(name="appSecret")
+    @Import(name="appSecret")
       private final @Nullable String appSecret;
 
     public Optional<String> getAppSecret() {
@@ -47,7 +47,7 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
      * Callback Url
      * 
      */
-    @InputImport(name="callbackUrl", required=true)
+    @Import(name="callbackUrl", required=true)
       private final String callbackUrl;
 
     public String getCallbackUrl() {
@@ -58,7 +58,7 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
      * Whether this channel is enabled for the bot
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
@@ -69,7 +69,7 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
      * The list of Facebook pages
      * 
      */
-    @InputImport(name="pages")
+    @Import(name="pages")
       private final @Nullable List<FacebookPageResponse> pages;
 
     public List<FacebookPageResponse> getPages() {
@@ -80,7 +80,7 @@ public final class FacebookChannelPropertiesResponse extends io.pulumi.resources
      * Verify token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
-    @InputImport(name="verifyToken", required=true)
+    @Import(name="verifyToken", required=true)
       private final String verifyToken;
 
     public String getVerifyToken() {

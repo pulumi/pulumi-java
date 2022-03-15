@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.enums.RuleState;
 import io.pulumi.azurenative.security.inputs.SuppressionAlertsScopeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * Type of the alert to automatically suppress. For all alert types, use '*'
      * 
      */
-    @InputImport(name="alertType", required=true)
+    @Import(name="alertType", required=true)
       private final Output<String> alertType;
 
     public Output<String> getAlertType() {
@@ -32,7 +32,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * The unique name of the suppression alert rule
      * 
      */
-    @InputImport(name="alertsSuppressionRuleName")
+    @Import(name="alertsSuppressionRuleName")
       private final @Nullable Output<String> alertsSuppressionRuleName;
 
     public Output<String> getAlertsSuppressionRuleName() {
@@ -43,7 +43,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * Any comment regarding the rule
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -54,7 +54,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * Expiration date of the rule, if value is not provided or provided as null this field will default to the maximum allowed expiration date.
      * 
      */
-    @InputImport(name="expirationDateUtc")
+    @Import(name="expirationDateUtc")
       private final @Nullable Output<String> expirationDateUtc;
 
     public Output<String> getExpirationDateUtc() {
@@ -65,7 +65,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * The reason for dismissing the alert
      * 
      */
-    @InputImport(name="reason", required=true)
+    @Import(name="reason", required=true)
       private final Output<String> reason;
 
     public Output<String> getReason() {
@@ -76,7 +76,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * Possible states of the rule
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final Output<Either<String,RuleState>> state;
 
     public Output<Either<String,RuleState>> getState() {
@@ -87,7 +87,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * The suppression conditions
      * 
      */
-    @InputImport(name="suppressionAlertsScope")
+    @Import(name="suppressionAlertsScope")
       private final @Nullable Output<SuppressionAlertsScopeArgs> suppressionAlertsScope;
 
     public Output<SuppressionAlertsScopeArgs> getSuppressionAlertsScope() {

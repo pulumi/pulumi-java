@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RetentionPolicyParametersResponse extends io.pulumi.resources
      * Number of days to retain flow log records.
      * 
      */
-    @InputImport(name="days")
+    @Import(name="days")
       private final @Nullable Integer days;
 
     public Optional<Integer> getDays() {
@@ -34,7 +34,7 @@ public final class RetentionPolicyParametersResponse extends io.pulumi.resources
      * Flag to enable/disable retention.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {

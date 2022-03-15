@@ -5,14 +5,14 @@ package io.pulumi.awsnative.customerprofiles.outputs;
 
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationObjectTypeMapping;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIntegrationResult {
     /**
      * The time of this integration got created
@@ -40,13 +40,13 @@ public final class GetIntegrationResult {
      */
     private final @Nullable List<IntegrationTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIntegrationResult(
-        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
-        @OutputCustomType.Parameter("lastUpdatedAt") @Nullable String lastUpdatedAt,
-        @OutputCustomType.Parameter("objectTypeName") @Nullable String objectTypeName,
-        @OutputCustomType.Parameter("objectTypeNames") @Nullable List<IntegrationObjectTypeMapping> objectTypeNames,
-        @OutputCustomType.Parameter("tags") @Nullable List<IntegrationTag> tags) {
+        @CustomType.Parameter("createdAt") @Nullable String createdAt,
+        @CustomType.Parameter("lastUpdatedAt") @Nullable String lastUpdatedAt,
+        @CustomType.Parameter("objectTypeName") @Nullable String objectTypeName,
+        @CustomType.Parameter("objectTypeNames") @Nullable List<IntegrationObjectTypeMapping> objectTypeNames,
+        @CustomType.Parameter("tags") @Nullable List<IntegrationTag> tags) {
         this.createdAt = createdAt;
         this.lastUpdatedAt = lastUpdatedAt;
         this.objectTypeName = objectTypeName;

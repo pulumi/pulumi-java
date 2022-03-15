@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GitFileSourceResponse {
     /**
      * The path of the file, with the repo root as the root of the path.
@@ -30,12 +30,12 @@ public final class GitFileSourceResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GitFileSourceResponse(
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("repoType") String repoType,
-        @OutputCustomType.Parameter("revision") String revision,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("repoType") String repoType,
+        @CustomType.Parameter("revision") String revision,
+        @CustomType.Parameter("uri") String uri) {
         this.path = path;
         this.repoType = repoType;
         this.revision = revision;

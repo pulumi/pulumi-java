@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetContentVersionValueArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetOutputFileUriValueArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -17,35 +17,35 @@ public final class DatasetVariableArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final DatasetVariableArgs Empty = new DatasetVariableArgs();
 
-    @InputImport(name="datasetContentVersionValue")
+    @Import(name="datasetContentVersionValue")
       private final @Nullable Output<DatasetContentVersionValueArgs> datasetContentVersionValue;
 
     public Output<DatasetContentVersionValueArgs> getDatasetContentVersionValue() {
         return this.datasetContentVersionValue == null ? Output.empty() : this.datasetContentVersionValue;
     }
 
-    @InputImport(name="doubleValue")
+    @Import(name="doubleValue")
       private final @Nullable Output<Double> doubleValue;
 
     public Output<Double> getDoubleValue() {
         return this.doubleValue == null ? Output.empty() : this.doubleValue;
     }
 
-    @InputImport(name="outputFileUriValue")
+    @Import(name="outputFileUriValue")
       private final @Nullable Output<DatasetOutputFileUriValueArgs> outputFileUriValue;
 
     public Output<DatasetOutputFileUriValueArgs> getOutputFileUriValue() {
         return this.outputFileUriValue == null ? Output.empty() : this.outputFileUriValue;
     }
 
-    @InputImport(name="stringValue")
+    @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
     public Output<String> getStringValue() {
         return this.stringValue == null ? Output.empty() : this.stringValue;
     }
 
-    @InputImport(name="variableName", required=true)
+    @Import(name="variableName", required=true)
       private final Output<String> variableName;
 
     public Output<String> getVariableName() {

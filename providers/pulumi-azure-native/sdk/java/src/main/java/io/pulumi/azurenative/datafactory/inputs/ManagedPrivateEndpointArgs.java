@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * Fully qualified domain names
      * 
      */
-    @InputImport(name="fqdns")
+    @Import(name="fqdns")
       private final @Nullable Output<List<String>> fqdns;
 
     public Output<List<String>> getFqdns() {
@@ -34,7 +34,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * The groupId to which the managed private endpoint is created
      * 
      */
-    @InputImport(name="groupId")
+    @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
     public Output<String> getGroupId() {
@@ -45,7 +45,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * The ARM resource ID of the resource to which the managed private endpoint is created
      * 
      */
-    @InputImport(name="privateLinkResourceId")
+    @Import(name="privateLinkResourceId")
       private final @Nullable Output<String> privateLinkResourceId;
 
     public Output<String> getPrivateLinkResourceId() {

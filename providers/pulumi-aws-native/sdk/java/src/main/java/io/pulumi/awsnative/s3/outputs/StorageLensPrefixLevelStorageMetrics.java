@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.StorageLensSelectionCriteria;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageLensPrefixLevelStorageMetrics {
     /**
      * Specifies whether prefix-level storage metrics are enabled or disabled.
@@ -19,10 +19,10 @@ public final class StorageLensPrefixLevelStorageMetrics {
     private final @Nullable Boolean isEnabled;
     private final @Nullable StorageLensSelectionCriteria selectionCriteria;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageLensPrefixLevelStorageMetrics(
-        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
-        @OutputCustomType.Parameter("selectionCriteria") @Nullable StorageLensSelectionCriteria selectionCriteria) {
+        @CustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
+        @CustomType.Parameter("selectionCriteria") @Nullable StorageLensSelectionCriteria selectionCriteria) {
         this.isEnabled = isEnabled;
         this.selectionCriteria = selectionCriteria;
     }

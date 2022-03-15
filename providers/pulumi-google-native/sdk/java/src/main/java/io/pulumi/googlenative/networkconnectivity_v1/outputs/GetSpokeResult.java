@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.networkconnectivity_v1.outputs.LinkedInterconnectAttachmentsResponse;
 import io.pulumi.googlenative.networkconnectivity_v1.outputs.LinkedRouterApplianceInstancesResponse;
 import io.pulumi.googlenative.networkconnectivity_v1.outputs.LinkedVpnTunnelsResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSpokeResult {
     /**
      * The time the spoke was created.
@@ -69,19 +69,19 @@ public final class GetSpokeResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSpokeResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("hub") String hub,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("linkedInterconnectAttachments") LinkedInterconnectAttachmentsResponse linkedInterconnectAttachments,
-        @OutputCustomType.Parameter("linkedRouterApplianceInstances") LinkedRouterApplianceInstancesResponse linkedRouterApplianceInstances,
-        @OutputCustomType.Parameter("linkedVpnTunnels") LinkedVpnTunnelsResponse linkedVpnTunnels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("uniqueId") String uniqueId,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("hub") String hub,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("linkedInterconnectAttachments") LinkedInterconnectAttachmentsResponse linkedInterconnectAttachments,
+        @CustomType.Parameter("linkedRouterApplianceInstances") LinkedRouterApplianceInstancesResponse linkedRouterApplianceInstances,
+        @CustomType.Parameter("linkedVpnTunnels") LinkedVpnTunnelsResponse linkedVpnTunnels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("uniqueId") String uniqueId,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.hub = hub;

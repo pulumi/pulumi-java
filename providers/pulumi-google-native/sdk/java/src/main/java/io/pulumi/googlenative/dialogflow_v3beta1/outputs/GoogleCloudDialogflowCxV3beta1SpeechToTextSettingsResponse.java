@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse {
     /**
      * Whether to use speech adaptation for speech recognition.
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse {
      */
     private final Boolean enableSpeechAdaptation;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse(@OutputCustomType.Parameter("enableSpeechAdaptation") Boolean enableSpeechAdaptation) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse(@CustomType.Parameter("enableSpeechAdaptation") Boolean enableSpeechAdaptation) {
         this.enableSpeechAdaptation = enableSpeechAdaptation;
     }
 

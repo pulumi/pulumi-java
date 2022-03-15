@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.monitoring.CustomServiceArgs;
@@ -43,7 +43,7 @@ public class CustomService extends io.pulumi.resources.CustomResource {
      * Name used for UI elements listing this Service.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -57,7 +57,7 @@ public class CustomService extends io.pulumi.resources.CustomResource {
      * The full resource name for this service. The syntax is: projects/[PROJECT_ID]/services/[SERVICE_ID].
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -72,7 +72,7 @@ public class CustomService extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -88,7 +88,7 @@ public class CustomService extends io.pulumi.resources.CustomResource {
      * service ID.
      * 
      */
-    @OutputExport(name="serviceId", type=String.class, parameters={})
+    @Export(name="serviceId", type=String.class, parameters={})
     private Output<String> serviceId;
 
     /**
@@ -104,7 +104,7 @@ public class CustomService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="telemetry", type=CustomServiceTelemetry.class, parameters={})
+    @Export(name="telemetry", type=CustomServiceTelemetry.class, parameters={})
     private Output</* @Nullable */ CustomServiceTelemetry> telemetry;
 
     /**

@@ -9,12 +9,12 @@ import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerOutlierDetection;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerPortMapping;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTimeout;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTls;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecListener {
     /**
      * The connection pool information for the listener.
@@ -47,14 +47,14 @@ public final class VirtualNodeSpecListener {
      */
     private final @Nullable VirtualNodeSpecListenerTls tls;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNodeSpecListener(
-        @OutputCustomType.Parameter("connectionPool") @Nullable VirtualNodeSpecListenerConnectionPool connectionPool,
-        @OutputCustomType.Parameter("healthCheck") @Nullable VirtualNodeSpecListenerHealthCheck healthCheck,
-        @OutputCustomType.Parameter("outlierDetection") @Nullable VirtualNodeSpecListenerOutlierDetection outlierDetection,
-        @OutputCustomType.Parameter("portMapping") VirtualNodeSpecListenerPortMapping portMapping,
-        @OutputCustomType.Parameter("timeout") @Nullable VirtualNodeSpecListenerTimeout timeout,
-        @OutputCustomType.Parameter("tls") @Nullable VirtualNodeSpecListenerTls tls) {
+        @CustomType.Parameter("connectionPool") @Nullable VirtualNodeSpecListenerConnectionPool connectionPool,
+        @CustomType.Parameter("healthCheck") @Nullable VirtualNodeSpecListenerHealthCheck healthCheck,
+        @CustomType.Parameter("outlierDetection") @Nullable VirtualNodeSpecListenerOutlierDetection outlierDetection,
+        @CustomType.Parameter("portMapping") VirtualNodeSpecListenerPortMapping portMapping,
+        @CustomType.Parameter("timeout") @Nullable VirtualNodeSpecListenerTimeout timeout,
+        @CustomType.Parameter("tls") @Nullable VirtualNodeSpecListenerTls tls) {
         this.connectionPool = connectionPool;
         this.healthCheck = healthCheck;
         this.outlierDetection = outlierDetection;

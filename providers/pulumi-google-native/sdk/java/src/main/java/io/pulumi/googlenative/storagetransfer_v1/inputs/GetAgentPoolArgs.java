@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetAgentPoolArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAgentPoolArgs Empty = new GetAgentPoolArgs();
 
-    @InputImport(name="agentPoolId", required=true)
+    @Import(name="agentPoolId", required=true)
       private final String agentPoolId;
 
     public String getAgentPoolId() {
         return this.agentPoolId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

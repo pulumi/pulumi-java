@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HourDetailsResponse {
     /**
      * Minutes of the hour the schedule will run.
@@ -17,8 +17,8 @@ public final class HourDetailsResponse {
      */
     private final @Nullable Integer minute;
 
-    @OutputCustomType.Constructor
-    private HourDetailsResponse(@OutputCustomType.Parameter("minute") @Nullable Integer minute) {
+    @CustomType.Constructor
+    private HourDetailsResponse(@CustomType.Parameter("minute") @Nullable Integer minute) {
         this.minute = minute;
     }
 

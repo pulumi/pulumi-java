@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.codebuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ProjectSourceGitSubmodulesConfig {
     /**
      * Whether to fetch Git submodules for the AWS CodeBuild build project.
@@ -15,8 +15,8 @@ public final class ProjectSourceGitSubmodulesConfig {
      */
     private final Boolean fetchSubmodules;
 
-    @OutputCustomType.Constructor
-    private ProjectSourceGitSubmodulesConfig(@OutputCustomType.Parameter("fetchSubmodules") Boolean fetchSubmodules) {
+    @CustomType.Constructor
+    private ProjectSourceGitSubmodulesConfig(@CustomType.Parameter("fetchSubmodules") Boolean fetchSubmodules) {
         this.fetchSubmodules = fetchSubmodules;
     }
 

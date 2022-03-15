@@ -6,7 +6,7 @@ package io.pulumi.azurenative.importexport.inputs;
 import io.pulumi.azurenative.importexport.enums.EncryptionKekType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.Resource
      * The type of kek encryption key
      * 
      */
-    @InputImport(name="kekType")
+    @Import(name="kekType")
       private final @Nullable Output<Either<String,EncryptionKekType>> kekType;
 
     public Output<Either<String,EncryptionKekType>> getKekType() {
@@ -35,7 +35,7 @@ public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.Resource
      * Specifies the url for kek encryption key.
      * 
      */
-    @InputImport(name="kekUrl")
+    @Import(name="kekUrl")
       private final @Nullable Output<String> kekUrl;
 
     public Output<String> getKekUrl() {
@@ -46,7 +46,7 @@ public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.Resource
      * Specifies the keyvault resource id for kek encryption key.
      * 
      */
-    @InputImport(name="kekVaultResourceID")
+    @Import(name="kekVaultResourceID")
       private final @Nullable Output<String> kekVaultResourceID;
 
     public Output<String> getKekVaultResourceID() {

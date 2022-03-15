@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class StorageBlobDeadLetterDestinationArgs extends io.pulumi.resour
      * The name of the Storage blob container that is the destination of the deadletter events
      * 
      */
-    @InputImport(name="blobContainerName")
+    @Import(name="blobContainerName")
       private final @Nullable Output<String> blobContainerName;
 
     public Output<String> getBlobContainerName() {
@@ -34,7 +34,7 @@ public final class StorageBlobDeadLetterDestinationArgs extends io.pulumi.resour
      * Expected value is 'StorageBlob'.
      * 
      */
-    @InputImport(name="endpointType", required=true)
+    @Import(name="endpointType", required=true)
       private final Output<String> endpointType;
 
     public Output<String> getEndpointType() {
@@ -45,7 +45,7 @@ public final class StorageBlobDeadLetterDestinationArgs extends io.pulumi.resour
      * The Azure Resource ID of the storage account that is the destination of the deadletter events
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {

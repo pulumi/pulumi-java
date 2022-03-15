@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.auditmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssessmentAWSService {
     private final @Nullable String serviceName;
 
-    @OutputCustomType.Constructor
-    private AssessmentAWSService(@OutputCustomType.Parameter("serviceName") @Nullable String serviceName) {
+    @CustomType.Constructor
+    private AssessmentAWSService(@CustomType.Parameter("serviceName") @Nullable String serviceName) {
         this.serviceName = serviceName;
     }
 

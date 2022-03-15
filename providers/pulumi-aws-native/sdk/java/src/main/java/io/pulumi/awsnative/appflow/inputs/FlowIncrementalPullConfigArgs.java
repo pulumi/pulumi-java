@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FlowIncrementalPullConfigArgs extends io.pulumi.resources.Res
 
     public static final FlowIncrementalPullConfigArgs Empty = new FlowIncrementalPullConfigArgs();
 
-    @InputImport(name="datetimeTypeFieldName")
+    @Import(name="datetimeTypeFieldName")
       private final @Nullable Output<String> datetimeTypeFieldName;
 
     public Output<String> getDatetimeTypeFieldName() {

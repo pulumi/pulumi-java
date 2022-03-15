@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
      * The grouping bucket end time.
      * 
      */
-    @InputImport(name="bucketEndTimeUTC", required=true)
+    @Import(name="bucketEndTimeUTC", required=true)
       private final String bucketEndTimeUTC;
 
     public String getBucketEndTimeUTC() {
@@ -31,7 +31,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
      * The grouping bucket start time.
      * 
      */
-    @InputImport(name="bucketStartTimeUTC", required=true)
+    @Import(name="bucketStartTimeUTC", required=true)
       private final String bucketStartTimeUTC;
 
     public String getBucketStartTimeUTC() {
@@ -42,7 +42,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
      * The activity timeline content.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final String content;
 
     public String getContent() {
@@ -53,7 +53,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
      * The time of the first activity in the grouping bucket.
      * 
      */
-    @InputImport(name="firstActivityTimeUTC", required=true)
+    @Import(name="firstActivityTimeUTC", required=true)
       private final String firstActivityTimeUTC;
 
     public String getFirstActivityTimeUTC() {
@@ -65,7 +65,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
      * Expected value is 'Activity'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -76,7 +76,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
      * The time of the last activity in the grouping bucket.
      * 
      */
-    @InputImport(name="lastActivityTimeUTC", required=true)
+    @Import(name="lastActivityTimeUTC", required=true)
       private final String lastActivityTimeUTC;
 
     public String getLastActivityTimeUTC() {
@@ -87,7 +87,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
      * The activity query id.
      * 
      */
-    @InputImport(name="queryId", required=true)
+    @Import(name="queryId", required=true)
       private final String queryId;
 
     public String getQueryId() {
@@ -98,7 +98,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
      * The activity timeline title.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final String title;
 
     public String getTitle() {

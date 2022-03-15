@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GCEPersistentDiskVolumeSource {
     /**
      * Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk
@@ -34,12 +34,12 @@ public final class GCEPersistentDiskVolumeSource {
      */
     private final @Nullable Boolean readOnly;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GCEPersistentDiskVolumeSource(
-        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
-        @OutputCustomType.Parameter("partition") @Nullable Integer partition,
-        @OutputCustomType.Parameter("pdName") String pdName,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
+        @CustomType.Parameter("fsType") @Nullable String fsType,
+        @CustomType.Parameter("partition") @Nullable Integer partition,
+        @CustomType.Parameter("pdName") String pdName,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
         this.fsType = fsType;
         this.partition = partition;
         this.pdName = pdName;

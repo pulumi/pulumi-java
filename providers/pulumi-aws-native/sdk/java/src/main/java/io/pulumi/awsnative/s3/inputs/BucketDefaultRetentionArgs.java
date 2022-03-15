@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketDefaultRetentionMode;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,21 +19,21 @@ public final class BucketDefaultRetentionArgs extends io.pulumi.resources.Resour
 
     public static final BucketDefaultRetentionArgs Empty = new BucketDefaultRetentionArgs();
 
-    @InputImport(name="days")
+    @Import(name="days")
       private final @Nullable Output<Integer> days;
 
     public Output<Integer> getDays() {
         return this.days == null ? Output.empty() : this.days;
     }
 
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<BucketDefaultRetentionMode> mode;
 
     public Output<BucketDefaultRetentionMode> getMode() {
         return this.mode == null ? Output.empty() : this.mode;
     }
 
-    @InputImport(name="years")
+    @Import(name="years")
       private final @Nullable Output<Integer> years;
 
     public Output<Integer> getYears() {

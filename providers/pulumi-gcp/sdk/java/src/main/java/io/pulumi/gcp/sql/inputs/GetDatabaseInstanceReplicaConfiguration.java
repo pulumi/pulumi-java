@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,77 +14,77 @@ public final class GetDatabaseInstanceReplicaConfiguration extends io.pulumi.res
 
     public static final GetDatabaseInstanceReplicaConfiguration Empty = new GetDatabaseInstanceReplicaConfiguration();
 
-    @InputImport(name="caCertificate", required=true)
+    @Import(name="caCertificate", required=true)
       private final String caCertificate;
 
     public String getCaCertificate() {
         return this.caCertificate;
     }
 
-    @InputImport(name="clientCertificate", required=true)
+    @Import(name="clientCertificate", required=true)
       private final String clientCertificate;
 
     public String getClientCertificate() {
         return this.clientCertificate;
     }
 
-    @InputImport(name="clientKey", required=true)
+    @Import(name="clientKey", required=true)
       private final String clientKey;
 
     public String getClientKey() {
         return this.clientKey;
     }
 
-    @InputImport(name="connectRetryInterval", required=true)
+    @Import(name="connectRetryInterval", required=true)
       private final Integer connectRetryInterval;
 
     public Integer getConnectRetryInterval() {
         return this.connectRetryInterval;
     }
 
-    @InputImport(name="dumpFilePath", required=true)
+    @Import(name="dumpFilePath", required=true)
       private final String dumpFilePath;
 
     public String getDumpFilePath() {
         return this.dumpFilePath;
     }
 
-    @InputImport(name="failoverTarget", required=true)
+    @Import(name="failoverTarget", required=true)
       private final Boolean failoverTarget;
 
     public Boolean getFailoverTarget() {
         return this.failoverTarget;
     }
 
-    @InputImport(name="masterHeartbeatPeriod", required=true)
+    @Import(name="masterHeartbeatPeriod", required=true)
       private final Integer masterHeartbeatPeriod;
 
     public Integer getMasterHeartbeatPeriod() {
         return this.masterHeartbeatPeriod;
     }
 
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final String password;
 
     public String getPassword() {
         return this.password;
     }
 
-    @InputImport(name="sslCipher", required=true)
+    @Import(name="sslCipher", required=true)
       private final String sslCipher;
 
     public String getSslCipher() {
         return this.sslCipher;
     }
 
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final String username;
 
     public String getUsername() {
         return this.username;
     }
 
-    @InputImport(name="verifyServerCertificate", required=true)
+    @Import(name="verifyServerCertificate", required=true)
       private final Boolean verifyServerCertificate;
 
     public Boolean getVerifyServerCertificate() {

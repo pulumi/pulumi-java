@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.devopsguru.inputs;
 
 import io.pulumi.awsnative.devopsguru.enums.ResourceCollectionType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -16,7 +16,7 @@ public final class GetResourceCollectionArgs extends io.pulumi.resources.InvokeA
      * The type of ResourceCollection
      * 
      */
-    @InputImport(name="resourceCollectionType", required=true)
+    @Import(name="resourceCollectionType", required=true)
       private final ResourceCollectionType resourceCollectionType;
 
     public ResourceCollectionType getResourceCollectionType() {

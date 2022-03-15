@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1beta1.AnnotationArgs;
@@ -26,7 +26,7 @@ public class Annotation extends io.pulumi.resources.CustomResource {
      * Details of the source.
      * 
      */
-    @OutputExport(name="annotationSource", type=AnnotationSourceResponse.class, parameters={})
+    @Export(name="annotationSource", type=AnnotationSourceResponse.class, parameters={})
     private Output<AnnotationSourceResponse> annotationSource;
 
     /**
@@ -40,7 +40,7 @@ public class Annotation extends io.pulumi.resources.CustomResource {
      * Additional information for this annotation record, such as annotator and verifier information or study campaign.
      * 
      */
-    @OutputExport(name="customData", type=Map.class, parameters={String.class, String.class})
+    @Export(name="customData", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> customData;
 
     /**
@@ -54,7 +54,7 @@ public class Annotation extends io.pulumi.resources.CustomResource {
      * Annotations for images. For example, bounding polygons.
      * 
      */
-    @OutputExport(name="imageAnnotation", type=ImageAnnotationResponse.class, parameters={})
+    @Export(name="imageAnnotation", type=ImageAnnotationResponse.class, parameters={})
     private Output<ImageAnnotationResponse> imageAnnotation;
 
     /**
@@ -68,7 +68,7 @@ public class Annotation extends io.pulumi.resources.CustomResource {
      * Resource name of the Annotation, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/annotationStores/{annotation_store_id}/annotations/{annotation_id}`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -82,7 +82,7 @@ public class Annotation extends io.pulumi.resources.CustomResource {
      * Annotations for resource. For example, classification tags.
      * 
      */
-    @OutputExport(name="resourceAnnotation", type=ResourceAnnotationResponse.class, parameters={})
+    @Export(name="resourceAnnotation", type=ResourceAnnotationResponse.class, parameters={})
     private Output<ResourceAnnotationResponse> resourceAnnotation;
 
     /**
@@ -96,7 +96,7 @@ public class Annotation extends io.pulumi.resources.CustomResource {
      * Annotations for sensitive texts. For example, a range that describes the location of sensitive text.
      * 
      */
-    @OutputExport(name="textAnnotation", type=SensitiveTextAnnotationResponse.class, parameters={})
+    @Export(name="textAnnotation", type=SensitiveTextAnnotationResponse.class, parameters={})
     private Output<SensitiveTextAnnotationResponse> textAnnotation;
 
     /**

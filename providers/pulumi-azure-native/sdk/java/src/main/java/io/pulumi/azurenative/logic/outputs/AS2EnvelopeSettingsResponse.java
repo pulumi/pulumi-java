@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AS2EnvelopeSettingsResponse {
     /**
      * The value indicating whether to auto generate file name.
@@ -36,13 +36,13 @@ public final class AS2EnvelopeSettingsResponse {
      */
     private final Boolean transmitFileNameInMimeHeader;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AS2EnvelopeSettingsResponse(
-        @OutputCustomType.Parameter("autogenerateFileName") Boolean autogenerateFileName,
-        @OutputCustomType.Parameter("fileNameTemplate") String fileNameTemplate,
-        @OutputCustomType.Parameter("messageContentType") String messageContentType,
-        @OutputCustomType.Parameter("suspendMessageOnFileNameGenerationError") Boolean suspendMessageOnFileNameGenerationError,
-        @OutputCustomType.Parameter("transmitFileNameInMimeHeader") Boolean transmitFileNameInMimeHeader) {
+        @CustomType.Parameter("autogenerateFileName") Boolean autogenerateFileName,
+        @CustomType.Parameter("fileNameTemplate") String fileNameTemplate,
+        @CustomType.Parameter("messageContentType") String messageContentType,
+        @CustomType.Parameter("suspendMessageOnFileNameGenerationError") Boolean suspendMessageOnFileNameGenerationError,
+        @CustomType.Parameter("transmitFileNameInMimeHeader") Boolean transmitFileNameInMimeHeader) {
         this.autogenerateFileName = autogenerateFileName;
         this.fileNameTemplate = fileNameTemplate;
         this.messageContentType = messageContentType;

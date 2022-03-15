@@ -7,7 +7,7 @@ import io.pulumi.azurenative.costmanagement.outputs.ReportAggregationResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportDatasetConfigurationResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportFilterResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportGroupingResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReportDatasetResponse {
     /**
      * Dictionary of aggregation expression to use in the report. The key of each item in the dictionary is the alias for the aggregated column. Report can have up to 2 aggregation clauses.
@@ -43,13 +43,13 @@ public final class ReportDatasetResponse {
      */
     private final @Nullable List<ReportGroupingResponse> grouping;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReportDatasetResponse(
-        @OutputCustomType.Parameter("aggregation") @Nullable Map<String,ReportAggregationResponse> aggregation,
-        @OutputCustomType.Parameter("configuration") @Nullable ReportDatasetConfigurationResponse configuration,
-        @OutputCustomType.Parameter("filter") @Nullable ReportFilterResponse filter,
-        @OutputCustomType.Parameter("granularity") @Nullable String granularity,
-        @OutputCustomType.Parameter("grouping") @Nullable List<ReportGroupingResponse> grouping) {
+        @CustomType.Parameter("aggregation") @Nullable Map<String,ReportAggregationResponse> aggregation,
+        @CustomType.Parameter("configuration") @Nullable ReportDatasetConfigurationResponse configuration,
+        @CustomType.Parameter("filter") @Nullable ReportFilterResponse filter,
+        @CustomType.Parameter("granularity") @Nullable String granularity,
+        @CustomType.Parameter("grouping") @Nullable List<ReportGroupingResponse> grouping) {
         this.aggregation = aggregation;
         this.configuration = configuration;
         this.filter = filter;

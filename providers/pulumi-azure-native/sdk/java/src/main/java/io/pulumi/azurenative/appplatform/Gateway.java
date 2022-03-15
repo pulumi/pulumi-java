@@ -10,7 +10,7 @@ import io.pulumi.azurenative.appplatform.outputs.SkuResponse;
 import io.pulumi.azurenative.appplatform.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -51,7 +51,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Spring Cloud Gateway properties payload
      * 
      */
-    @OutputExport(name="properties", type=GatewayPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=GatewayPropertiesResponse.class, parameters={})
     private Output<GatewayPropertiesResponse> properties;
 
     /**
@@ -65,7 +65,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Sku of the Spring Cloud Gateway resource
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -79,7 +79,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -93,7 +93,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

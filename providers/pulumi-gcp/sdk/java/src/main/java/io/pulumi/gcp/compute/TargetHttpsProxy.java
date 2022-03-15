@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.TargetHttpsProxyArgs;
@@ -50,7 +50,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -64,7 +64,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * An optional description of this resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -84,7 +84,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -121,7 +121,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
      * 
      */
-    @OutputExport(name="proxyBind", type=Boolean.class, parameters={})
+    @Export(name="proxyBind", type=Boolean.class, parameters={})
     private Output<Boolean> proxyBind;
 
     /**
@@ -136,7 +136,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * The unique identifier for the resource.
      * 
      */
-    @OutputExport(name="proxyId", type=Integer.class, parameters={})
+    @Export(name="proxyId", type=Integer.class, parameters={})
     private Output<Integer> proxyId;
 
     /**
@@ -156,7 +156,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * Possible values are `NONE`, `ENABLE`, and `DISABLE`.
      * 
      */
-    @OutputExport(name="quicOverride", type=String.class, parameters={})
+    @Export(name="quicOverride", type=String.class, parameters={})
     private Output</* @Nullable */ String> quicOverride;
 
     /**
@@ -176,7 +176,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -192,7 +192,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * certificate must be specified.
      * 
      */
-    @OutputExport(name="sslCertificates", type=List.class, parameters={String.class})
+    @Export(name="sslCertificates", type=List.class, parameters={String.class})
     private Output<List<String>> sslCertificates;
 
     /**
@@ -210,7 +210,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * resource will not have any SSL policy configured.
      * 
      */
-    @OutputExport(name="sslPolicy", type=String.class, parameters={})
+    @Export(name="sslPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> sslPolicy;
 
     /**
@@ -227,7 +227,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * to the BackendService.
      * 
      */
-    @OutputExport(name="urlMap", type=String.class, parameters={})
+    @Export(name="urlMap", type=String.class, parameters={})
     private Output<String> urlMap;
 
     /**

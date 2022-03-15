@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.finspace.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetEnvironmentArgs extends io.pulumi.resources.InvokeArgs {
      * Unique identifier for representing FinSpace Environment
      * 
      */
-    @InputImport(name="environmentId", required=true)
+    @Import(name="environmentId", required=true)
       private final String environmentId;
 
     public String getEnvironmentId() {

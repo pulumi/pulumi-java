@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.FingerprintArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.LayerArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
      * The fingerprint of the derived image.
      * 
      */
-    @InputImport(name="fingerprint")
+    @Import(name="fingerprint")
       private final @Nullable Output<FingerprintArgs> fingerprint;
 
     public Output<FingerprintArgs> getFingerprint() {
@@ -35,7 +35,7 @@ public final class DerivedArgs extends io.pulumi.resources.ResourceArgs {
      * This contains layer-specific metadata, if populated it has length "distance" and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
      * 
      */
-    @InputImport(name="layerInfo")
+    @Import(name="layerInfo")
       private final @Nullable Output<List<LayerArgs>> layerInfo;
 
     public Output<List<LayerArgs>> getLayerInfo() {

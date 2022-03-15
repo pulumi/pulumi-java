@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.inputs.WidgetResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
      * The height of the tile, measured in grid blocks. Tiles must have a minimum height of 1.
      * 
      */
-    @InputImport(name="height", required=true)
+    @Import(name="height", required=true)
       private final Integer height;
 
     public Integer getHeight() {
@@ -32,7 +32,7 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
      * The informational widget contained in the tile. For example an XyChart.
      * 
      */
-    @InputImport(name="widget", required=true)
+    @Import(name="widget", required=true)
       private final WidgetResponse widget;
 
     public WidgetResponse getWidget() {
@@ -43,7 +43,7 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
      * The width of the tile, measured in grid blocks. Tiles must have a minimum width of 1.
      * 
      */
-    @InputImport(name="width", required=true)
+    @Import(name="width", required=true)
       private final Integer width;
 
     public Integer getWidth() {
@@ -54,7 +54,7 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
      * The zero-indexed position of the tile in grid blocks relative to the left edge of the grid. Tiles must be contained within the specified number of columns. x_pos cannot be negative.
      * 
      */
-    @InputImport(name="xPos", required=true)
+    @Import(name="xPos", required=true)
       private final Integer xPos;
 
     public Integer getXPos() {
@@ -65,7 +65,7 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
      * The zero-indexed position of the tile in grid blocks relative to the top edge of the grid. y_pos cannot be negative.
      * 
      */
-    @InputImport(name="yPos", required=true)
+    @Import(name="yPos", required=true)
       private final Integer yPos;
 
     public Integer getYPos() {

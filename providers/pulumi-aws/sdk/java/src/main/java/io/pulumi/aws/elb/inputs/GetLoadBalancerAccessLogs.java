@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,28 +14,28 @@ public final class GetLoadBalancerAccessLogs extends io.pulumi.resources.InvokeA
 
     public static final GetLoadBalancerAccessLogs Empty = new GetLoadBalancerAccessLogs();
 
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final String bucket;
 
     public String getBucket() {
         return this.bucket;
     }
 
-    @InputImport(name="bucketPrefix", required=true)
+    @Import(name="bucketPrefix", required=true)
       private final String bucketPrefix;
 
     public String getBucketPrefix() {
         return this.bucketPrefix;
     }
 
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
     }
 
-    @InputImport(name="interval", required=true)
+    @Import(name="interval", required=true)
       private final Integer interval;
 
     public Integer getInterval() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSubscriptionResult {
     /**
      * Name of the API product for which the developer is purchasing a subscription.
@@ -40,14 +40,14 @@ public final class GetSubscriptionResult {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSubscriptionResult(
-        @OutputCustomType.Parameter("apiproduct") String apiproduct,
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("apiproduct") String apiproduct,
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("startTime") String startTime) {
         this.apiproduct = apiproduct;
         this.createdAt = createdAt;
         this.endTime = endTime;

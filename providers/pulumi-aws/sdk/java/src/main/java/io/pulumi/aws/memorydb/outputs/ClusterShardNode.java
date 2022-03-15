@@ -4,14 +4,14 @@
 package io.pulumi.aws.memorydb.outputs;
 
 import io.pulumi.aws.memorydb.outputs.ClusterShardNodeEndpoint;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterShardNode {
     /**
      * The Availability Zone in which the node resides.
@@ -31,12 +31,12 @@ public final class ClusterShardNode {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterShardNode(
-        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
-        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
-        @OutputCustomType.Parameter("endpoints") @Nullable List<ClusterShardNodeEndpoint> endpoints,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @CustomType.Parameter("createTime") @Nullable String createTime,
+        @CustomType.Parameter("endpoints") @Nullable List<ClusterShardNodeEndpoint> endpoints,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.availabilityZone = availabilityZone;
         this.createTime = createTime;
         this.endpoints = endpoints;

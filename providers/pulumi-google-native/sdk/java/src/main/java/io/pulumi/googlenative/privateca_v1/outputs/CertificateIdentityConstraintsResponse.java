@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.ExprResponse;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificateIdentityConstraintsResponse {
     /**
      * If this is true, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.
@@ -26,11 +26,11 @@ public final class CertificateIdentityConstraintsResponse {
      */
     private final ExprResponse celExpression;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateIdentityConstraintsResponse(
-        @OutputCustomType.Parameter("allowSubjectAltNamesPassthrough") Boolean allowSubjectAltNamesPassthrough,
-        @OutputCustomType.Parameter("allowSubjectPassthrough") Boolean allowSubjectPassthrough,
-        @OutputCustomType.Parameter("celExpression") ExprResponse celExpression) {
+        @CustomType.Parameter("allowSubjectAltNamesPassthrough") Boolean allowSubjectAltNamesPassthrough,
+        @CustomType.Parameter("allowSubjectPassthrough") Boolean allowSubjectPassthrough,
+        @CustomType.Parameter("celExpression") ExprResponse celExpression) {
         this.allowSubjectAltNamesPassthrough = allowSubjectAltNamesPassthrough;
         this.allowSubjectPassthrough = allowSubjectPassthrough;
         this.celExpression = celExpression;

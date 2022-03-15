@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends i
      * The workflow action name.
      * 
      */
-    @InputImport(name="actionName", required=true)
+    @Import(name="actionName", required=true)
       private final String actionName;
 
     public String getActionName() {
@@ -27,7 +27,7 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends i
      * The workflow repetition.
      * 
      */
-    @InputImport(name="repetitionName", required=true)
+    @Import(name="repetitionName", required=true)
       private final String repetitionName;
 
     public String getRepetitionName() {
@@ -38,7 +38,7 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends i
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends i
      * The workflow run name.
      * 
      */
-    @InputImport(name="runName", required=true)
+    @Import(name="runName", required=true)
       private final String runName;
 
     public String getRunName() {
@@ -60,7 +60,7 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends i
      * The workflow name.
      * 
      */
-    @InputImport(name="workflowName", required=true)
+    @Import(name="workflowName", required=true)
       private final String workflowName;
 
     public String getWorkflowName() {

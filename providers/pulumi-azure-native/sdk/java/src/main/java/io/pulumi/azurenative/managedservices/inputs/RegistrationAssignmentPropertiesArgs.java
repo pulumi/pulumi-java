@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managedservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class RegistrationAssignmentPropertiesArgs extends io.pulumi.resour
      * Fully qualified path of the registration definition.
      * 
      */
-    @InputImport(name="registrationDefinitionId", required=true)
+    @Import(name="registrationDefinitionId", required=true)
       private final Output<String> registrationDefinitionId;
 
     public Output<String> getRegistrationDefinitionId() {

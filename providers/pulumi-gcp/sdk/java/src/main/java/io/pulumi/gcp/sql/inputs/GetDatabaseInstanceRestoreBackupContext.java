@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,14 +13,14 @@ public final class GetDatabaseInstanceRestoreBackupContext extends io.pulumi.res
 
     public static final GetDatabaseInstanceRestoreBackupContext Empty = new GetDatabaseInstanceRestoreBackupContext();
 
-    @InputImport(name="backupRunId", required=true)
+    @Import(name="backupRunId", required=true)
       private final Integer backupRunId;
 
     public Integer getBackupRunId() {
         return this.backupRunId;
     }
 
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final String instanceId;
 
     public String getInstanceId() {
@@ -31,7 +31,7 @@ public final class GetDatabaseInstanceRestoreBackupContext extends io.pulumi.res
      * The ID of the project in which the resource belongs.
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final String project;
 
     public String getProject() {

@@ -5,14 +5,14 @@ package io.pulumi.azurenative.keyvault.outputs;
 
 import io.pulumi.azurenative.keyvault.outputs.MHSMIPRuleResponse;
 import io.pulumi.azurenative.keyvault.outputs.MHSMVirtualNetworkRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MHSMNetworkRuleSetResponse {
     /**
      * Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.
@@ -35,12 +35,12 @@ public final class MHSMNetworkRuleSetResponse {
      */
     private final @Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MHSMNetworkRuleSetResponse(
-        @OutputCustomType.Parameter("bypass") @Nullable String bypass,
-        @OutputCustomType.Parameter("defaultAction") @Nullable String defaultAction,
-        @OutputCustomType.Parameter("ipRules") @Nullable List<MHSMIPRuleResponse> ipRules,
-        @OutputCustomType.Parameter("virtualNetworkRules") @Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules) {
+        @CustomType.Parameter("bypass") @Nullable String bypass,
+        @CustomType.Parameter("defaultAction") @Nullable String defaultAction,
+        @CustomType.Parameter("ipRules") @Nullable List<MHSMIPRuleResponse> ipRules,
+        @CustomType.Parameter("virtualNetworkRules") @Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules) {
         this.bypass = bypass;
         this.defaultAction = defaultAction;
         this.ipRules = ipRules;

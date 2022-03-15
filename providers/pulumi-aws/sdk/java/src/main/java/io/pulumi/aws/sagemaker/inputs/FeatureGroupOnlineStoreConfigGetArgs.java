@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.FeatureGroupOnlineStoreConfigSecurityConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FeatureGroupOnlineStoreConfigGetArgs extends io.pulumi.resour
      * Set to `true` to disable the automatic creation of an AWS Glue table when configuring an OfflineStore.
      * 
      */
-    @InputImport(name="enableOnlineStore")
+    @Import(name="enableOnlineStore")
       private final @Nullable Output<Boolean> enableOnlineStore;
 
     public Output<Boolean> getEnableOnlineStore() {
@@ -30,7 +30,7 @@ public final class FeatureGroupOnlineStoreConfigGetArgs extends io.pulumi.resour
      * Security config for at-rest encryption of your OnlineStore. See Security Config Below.
      * 
      */
-    @InputImport(name="securityConfig")
+    @Import(name="securityConfig")
       private final @Nullable Output<FeatureGroupOnlineStoreConfigSecurityConfigGetArgs> securityConfig;
 
     public Output<FeatureGroupOnlineStoreConfigSecurityConfigGetArgs> getSecurityConfig() {

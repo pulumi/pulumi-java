@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurearcdata.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPostgresInstanceArgs extends io.pulumi.resources.InvokeArg
      * Name of Postgres Instance
      * 
      */
-    @InputImport(name="postgresInstanceName", required=true)
+    @Import(name="postgresInstanceName", required=true)
       private final String postgresInstanceName;
 
     public String getPostgresInstanceName() {
@@ -27,7 +27,7 @@ public final class GetPostgresInstanceArgs extends io.pulumi.resources.InvokeArg
      * The name of the Azure resource group
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.firestore.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class IndexFieldArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `CONTAINS`.
      * 
      */
-    @InputImport(name="arrayConfig")
+    @Import(name="arrayConfig")
       private final @Nullable Output<String> arrayConfig;
 
     public Output<String> getArrayConfig() {
@@ -31,7 +31,7 @@ public final class IndexFieldArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the field.
      * 
      */
-    @InputImport(name="fieldPath")
+    @Import(name="fieldPath")
       private final @Nullable Output<String> fieldPath;
 
     public Output<String> getFieldPath() {
@@ -44,7 +44,7 @@ public final class IndexFieldArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `ASCENDING` and `DESCENDING`.
      * 
      */
-    @InputImport(name="order")
+    @Import(name="order")
       private final @Nullable Output<String> order;
 
     public Output<String> getOrder() {

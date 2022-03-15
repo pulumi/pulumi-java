@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.ec2_getAmi.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAmiResult {
     /**
      * The kernel associated with the image, if any. Only applicable
@@ -16,8 +16,8 @@ public final class GetAmiResult {
      */
     private final String kernelId;
 
-    @OutputCustomType.Constructor
-    private GetAmiResult(@OutputCustomType.Parameter("kernelId") String kernelId) {
+    @CustomType.Constructor
+    private GetAmiResult(@CustomType.Parameter("kernelId") String kernelId) {
         this.kernelId = kernelId;
     }
 

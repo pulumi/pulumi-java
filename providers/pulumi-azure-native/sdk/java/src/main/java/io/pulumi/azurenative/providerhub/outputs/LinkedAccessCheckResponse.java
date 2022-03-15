@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LinkedAccessCheckResponse {
     private final @Nullable String actionName;
     private final @Nullable String linkedAction;
@@ -17,13 +17,13 @@ public final class LinkedAccessCheckResponse {
     private final @Nullable String linkedProperty;
     private final @Nullable String linkedType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LinkedAccessCheckResponse(
-        @OutputCustomType.Parameter("actionName") @Nullable String actionName,
-        @OutputCustomType.Parameter("linkedAction") @Nullable String linkedAction,
-        @OutputCustomType.Parameter("linkedActionVerb") @Nullable String linkedActionVerb,
-        @OutputCustomType.Parameter("linkedProperty") @Nullable String linkedProperty,
-        @OutputCustomType.Parameter("linkedType") @Nullable String linkedType) {
+        @CustomType.Parameter("actionName") @Nullable String actionName,
+        @CustomType.Parameter("linkedAction") @Nullable String linkedAction,
+        @CustomType.Parameter("linkedActionVerb") @Nullable String linkedActionVerb,
+        @CustomType.Parameter("linkedProperty") @Nullable String linkedProperty,
+        @CustomType.Parameter("linkedType") @Nullable String linkedType) {
         this.actionName = actionName;
         this.linkedAction = linkedAction;
         this.linkedActionVerb = linkedActionVerb;

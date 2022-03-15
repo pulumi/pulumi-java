@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.outputs.InfrastructureConfigurationS3Logs;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InfrastructureConfigurationLogging {
     private final @Nullable InfrastructureConfigurationS3Logs s3Logs;
 
-    @OutputCustomType.Constructor
-    private InfrastructureConfigurationLogging(@OutputCustomType.Parameter("s3Logs") @Nullable InfrastructureConfigurationS3Logs s3Logs) {
+    @CustomType.Constructor
+    private InfrastructureConfigurationLogging(@CustomType.Parameter("s3Logs") @Nullable InfrastructureConfigurationS3Logs s3Logs) {
         this.s3Logs = s3Logs;
     }
 

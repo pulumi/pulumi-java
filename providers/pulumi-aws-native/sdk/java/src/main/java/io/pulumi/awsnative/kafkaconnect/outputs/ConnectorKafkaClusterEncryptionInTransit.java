@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.kafkaconnect.outputs;
 
 import io.pulumi.awsnative.kafkaconnect.enums.ConnectorKafkaClusterEncryptionInTransitType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorKafkaClusterEncryptionInTransit {
     private final ConnectorKafkaClusterEncryptionInTransitType encryptionType;
 
-    @OutputCustomType.Constructor
-    private ConnectorKafkaClusterEncryptionInTransit(@OutputCustomType.Parameter("encryptionType") ConnectorKafkaClusterEncryptionInTransitType encryptionType) {
+    @CustomType.Constructor
+    private ConnectorKafkaClusterEncryptionInTransit(@CustomType.Parameter("encryptionType") ConnectorKafkaClusterEncryptionInTransitType encryptionType) {
         this.encryptionType = encryptionType;
     }
 

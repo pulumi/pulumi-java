@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PartnerInfoResponse {
     /**
      * Resource identifier of the partner server.
@@ -25,11 +25,11 @@ public final class PartnerInfoResponse {
      */
     private final String replicationRole;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PartnerInfoResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("replicationRole") String replicationRole) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("replicationRole") String replicationRole) {
         this.id = id;
         this.location = location;
         this.replicationRole = replicationRole;

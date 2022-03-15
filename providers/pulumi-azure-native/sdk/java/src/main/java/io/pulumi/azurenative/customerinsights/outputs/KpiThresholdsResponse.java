@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KpiThresholdsResponse {
     /**
      * Whether or not the KPI is an increasing KPI.
@@ -26,11 +26,11 @@ public final class KpiThresholdsResponse {
      */
     private final Double upperLimit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KpiThresholdsResponse(
-        @OutputCustomType.Parameter("increasingKpi") Boolean increasingKpi,
-        @OutputCustomType.Parameter("lowerLimit") Double lowerLimit,
-        @OutputCustomType.Parameter("upperLimit") Double upperLimit) {
+        @CustomType.Parameter("increasingKpi") Boolean increasingKpi,
+        @CustomType.Parameter("lowerLimit") Double lowerLimit,
+        @CustomType.Parameter("upperLimit") Double upperLimit) {
         this.increasingKpi = increasingKpi;
         this.lowerLimit = lowerLimit;
         this.upperLimit = upperLimit;

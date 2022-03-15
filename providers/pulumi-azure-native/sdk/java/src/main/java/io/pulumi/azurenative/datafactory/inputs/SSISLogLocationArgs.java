@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.enums.SsisLogLocationType;
 import io.pulumi.azurenative.datafactory.inputs.SSISAccessCredentialArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
      * The package execution log access credential.
      * 
      */
-    @InputImport(name="accessCredential")
+    @Import(name="accessCredential")
       private final @Nullable Output<SSISAccessCredentialArgs> accessCredential;
 
     public Output<SSISAccessCredentialArgs> getAccessCredential() {
@@ -37,7 +37,7 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
      * The SSIS package execution log path. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="logPath", required=true)
+    @Import(name="logPath", required=true)
       private final Output<Object> logPath;
 
     public Output<Object> getLogPath() {
@@ -48,7 +48,7 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies the interval to refresh log. The default interval is 5 minutes. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="logRefreshInterval")
+    @Import(name="logRefreshInterval")
       private final @Nullable Output<Object> logRefreshInterval;
 
     public Output<Object> getLogRefreshInterval() {
@@ -59,7 +59,7 @@ public final class SSISLogLocationArgs extends io.pulumi.resources.ResourceArgs 
      * The type of SSIS log location.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,SsisLogLocationType>> type;
 
     public Output<Either<String,SsisLogLocationType>> getType() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExternalRefResponse {
     /**
      * An External Reference allows a Package to reference an external source of additional information, metadata, enumerations, asset identifiers, or downloadable content believed to be relevant to the Package
@@ -30,12 +30,12 @@ public final class ExternalRefResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExternalRefResponse(
-        @OutputCustomType.Parameter("category") String category,
-        @OutputCustomType.Parameter("comment") String comment,
-        @OutputCustomType.Parameter("locator") String locator,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("category") String category,
+        @CustomType.Parameter("comment") String comment,
+        @CustomType.Parameter("locator") String locator,
+        @CustomType.Parameter("type") String type) {
         this.category = category;
         this.comment = comment;
         this.locator = locator;

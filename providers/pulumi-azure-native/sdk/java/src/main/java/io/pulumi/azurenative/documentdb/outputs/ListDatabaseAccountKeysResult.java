@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListDatabaseAccountKeysResult {
     /**
      * Base 64 encoded value of the primary read-write key.
@@ -30,12 +30,12 @@ public final class ListDatabaseAccountKeysResult {
      */
     private final String secondaryReadonlyMasterKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListDatabaseAccountKeysResult(
-        @OutputCustomType.Parameter("primaryMasterKey") String primaryMasterKey,
-        @OutputCustomType.Parameter("primaryReadonlyMasterKey") String primaryReadonlyMasterKey,
-        @OutputCustomType.Parameter("secondaryMasterKey") String secondaryMasterKey,
-        @OutputCustomType.Parameter("secondaryReadonlyMasterKey") String secondaryReadonlyMasterKey) {
+        @CustomType.Parameter("primaryMasterKey") String primaryMasterKey,
+        @CustomType.Parameter("primaryReadonlyMasterKey") String primaryReadonlyMasterKey,
+        @CustomType.Parameter("secondaryMasterKey") String secondaryMasterKey,
+        @CustomType.Parameter("secondaryReadonlyMasterKey") String secondaryReadonlyMasterKey) {
         this.primaryMasterKey = primaryMasterKey;
         this.primaryReadonlyMasterKey = primaryReadonlyMasterKey;
         this.secondaryMasterKey = secondaryMasterKey;

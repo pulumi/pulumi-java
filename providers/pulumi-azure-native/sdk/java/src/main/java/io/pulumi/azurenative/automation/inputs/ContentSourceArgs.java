@@ -7,7 +7,7 @@ import io.pulumi.azurenative.automation.enums.ContentSourceType;
 import io.pulumi.azurenative.automation.inputs.ContentHashArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the hash.
      * 
      */
-    @InputImport(name="hash")
+    @Import(name="hash")
       private final @Nullable Output<ContentHashArgs> hash;
 
     public Output<ContentHashArgs> getHash() {
@@ -36,7 +36,7 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the content source type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,ContentSourceType>> type;
 
     public Output<Either<String,ContentSourceType>> getType() {
@@ -47,7 +47,7 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the value of the content. This is based on the content source type.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
@@ -58,7 +58,7 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the version of the content.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

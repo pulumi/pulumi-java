@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ContainerState;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerStatus {
     /**
      * Container's ID in the format 'docker://<container_id>'.
@@ -60,17 +60,17 @@ public final class ContainerStatus {
      */
     private final @Nullable ContainerState state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerStatus(
-        @OutputCustomType.Parameter("containerID") @Nullable String containerID,
-        @OutputCustomType.Parameter("image") String image,
-        @OutputCustomType.Parameter("imageID") String imageID,
-        @OutputCustomType.Parameter("lastState") @Nullable ContainerState lastState,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("ready") Boolean ready,
-        @OutputCustomType.Parameter("restartCount") Integer restartCount,
-        @OutputCustomType.Parameter("started") @Nullable Boolean started,
-        @OutputCustomType.Parameter("state") @Nullable ContainerState state) {
+        @CustomType.Parameter("containerID") @Nullable String containerID,
+        @CustomType.Parameter("image") String image,
+        @CustomType.Parameter("imageID") String imageID,
+        @CustomType.Parameter("lastState") @Nullable ContainerState lastState,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("ready") Boolean ready,
+        @CustomType.Parameter("restartCount") Integer restartCount,
+        @CustomType.Parameter("started") @Nullable Boolean started,
+        @CustomType.Parameter("state") @Nullable ContainerState state) {
         this.containerID = containerID;
         this.image = image;
         this.imageID = imageID;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BackendServiceFailoverPolicyResponse extends io.pulumi.resour
      * This can be set to true only if the protocol is TCP. The default is false.
      * 
      */
-    @InputImport(name="disableConnectionDrainOnFailover", required=true)
+    @Import(name="disableConnectionDrainOnFailover", required=true)
       private final Boolean disableConnectionDrainOnFailover;
 
     public Boolean getDisableConnectionDrainOnFailover() {
@@ -32,7 +32,7 @@ public final class BackendServiceFailoverPolicyResponse extends io.pulumi.resour
      * If set to true, connections to the load balancer are dropped when all primary and all backup backend VMs are unhealthy.If set to false, connections are distributed among all primary VMs when all primary and all backup backend VMs are unhealthy. For load balancers that have configurable failover: [Internal TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and [external TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/network/networklb-failover-overview). The default is false.
      * 
      */
-    @InputImport(name="dropTrafficIfUnhealthy", required=true)
+    @Import(name="dropTrafficIfUnhealthy", required=true)
       private final Boolean dropTrafficIfUnhealthy;
 
     public Boolean getDropTrafficIfUnhealthy() {
@@ -43,7 +43,7 @@ public final class BackendServiceFailoverPolicyResponse extends io.pulumi.resour
      * The value of the field must be in the range [0, 1]. If the value is 0, the load balancer performs a failover when the number of healthy primary VMs equals zero. For all other values, the load balancer performs a failover when the total number of healthy primary VMs is less than this ratio. For load balancers that have configurable failover: [Internal TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and [external TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/network/networklb-failover-overview).
      * 
      */
-    @InputImport(name="failoverRatio", required=true)
+    @Import(name="failoverRatio", required=true)
       private final Double failoverRatio;
 
     public Double getFailoverRatio() {

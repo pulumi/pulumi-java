@@ -4,7 +4,7 @@
 package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PlanRuleLifecycleGetArgs extends io.pulumi.resources.Resource
      * Specifies the number of days after creation that a recovery point is moved to cold storage.
      * 
      */
-    @InputImport(name="coldStorageAfter")
+    @Import(name="coldStorageAfter")
       private final @Nullable Output<Integer> coldStorageAfter;
 
     public Output<Integer> getColdStorageAfter() {
@@ -29,7 +29,7 @@ public final class PlanRuleLifecycleGetArgs extends io.pulumi.resources.Resource
      * Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than `cold_storage_after`.
      * 
      */
-    @InputImport(name="deleteAfter")
+    @Import(name="deleteAfter")
       private final @Nullable Output<Integer> deleteAfter;
 
     public Output<Integer> getDeleteAfter() {

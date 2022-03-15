@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.timeseriesinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * The capacity of the sku. For Gen1 environments, this value can be changed to support scale out of environments after they have been created.
      * 
      */
-    @InputImport(name="capacity", required=true)
+    @Import(name="capacity", required=true)
       private final Integer capacity;
 
     public Integer getCapacity() {
@@ -32,7 +32,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * The name of this SKU.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

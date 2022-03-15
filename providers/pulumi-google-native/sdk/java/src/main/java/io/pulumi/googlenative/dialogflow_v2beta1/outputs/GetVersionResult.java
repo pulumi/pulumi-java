@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetVersionResult {
     /**
      * The creation time of this version. This field is read-only, i.e., it cannot be set by create and update methods.
@@ -36,13 +36,13 @@ public final class GetVersionResult {
      */
     private final Integer versionNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVersionResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("versionNumber") Integer versionNumber) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("versionNumber") Integer versionNumber) {
         this.createTime = createTime;
         this.description = description;
         this.name = name;

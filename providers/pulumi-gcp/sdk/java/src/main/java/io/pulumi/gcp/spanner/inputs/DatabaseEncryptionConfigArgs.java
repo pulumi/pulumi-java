@@ -4,7 +4,7 @@
 package io.pulumi.gcp.spanner.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DatabaseEncryptionConfigArgs extends io.pulumi.resources.Reso
      * in the same location as the Spanner Database.
      * 
      */
-    @InputImport(name="kmsKeyName", required=true)
+    @Import(name="kmsKeyName", required=true)
       private final Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {

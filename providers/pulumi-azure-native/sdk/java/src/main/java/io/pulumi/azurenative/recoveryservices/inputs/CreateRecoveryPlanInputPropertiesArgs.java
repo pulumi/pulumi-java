@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.RecoveryPlanA2AInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.RecoveryPlanGroupArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
      * The failover deployment model.
      * 
      */
-    @InputImport(name="failoverDeploymentModel")
+    @Import(name="failoverDeploymentModel")
       private final @Nullable Output<Either<String,FailoverDeploymentModel>> failoverDeploymentModel;
 
     public Output<Either<String,FailoverDeploymentModel>> getFailoverDeploymentModel() {
@@ -38,7 +38,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
      * The recovery plan groups.
      * 
      */
-    @InputImport(name="groups", required=true)
+    @Import(name="groups", required=true)
       private final Output<List<RecoveryPlanGroupArgs>> groups;
 
     public Output<List<RecoveryPlanGroupArgs>> getGroups() {
@@ -49,7 +49,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
      * The primary fabric Id.
      * 
      */
-    @InputImport(name="primaryFabricId", required=true)
+    @Import(name="primaryFabricId", required=true)
       private final Output<String> primaryFabricId;
 
     public Output<String> getPrimaryFabricId() {
@@ -60,7 +60,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
      * The provider specific input.
      * 
      */
-    @InputImport(name="providerSpecificInput")
+    @Import(name="providerSpecificInput")
       private final @Nullable Output<List<RecoveryPlanA2AInputArgs>> providerSpecificInput;
 
     public Output<List<RecoveryPlanA2AInputArgs>> getProviderSpecificInput() {
@@ -71,7 +71,7 @@ public final class CreateRecoveryPlanInputPropertiesArgs extends io.pulumi.resou
      * The recovery fabric Id.
      * 
      */
-    @InputImport(name="recoveryFabricId", required=true)
+    @Import(name="recoveryFabricId", required=true)
       private final Output<String> recoveryFabricId;
 
     public Output<String> getRecoveryFabricId() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApiConfigGatewayConfigBackendConfig {
     /**
      * Google Cloud IAM service account used to sign OIDC tokens for backends that have authentication configured
@@ -16,8 +16,8 @@ public final class ApiConfigGatewayConfigBackendConfig {
      */
     private final String googleServiceAccount;
 
-    @OutputCustomType.Constructor
-    private ApiConfigGatewayConfigBackendConfig(@OutputCustomType.Parameter("googleServiceAccount") String googleServiceAccount) {
+    @CustomType.Constructor
+    private ApiConfigGatewayConfigBackendConfig(@CustomType.Parameter("googleServiceAccount") String googleServiceAccount) {
         this.googleServiceAccount = googleServiceAccount;
     }
 

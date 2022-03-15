@@ -5,7 +5,7 @@ package io.pulumi.azurenative.keyvault.inputs;
 
 import io.pulumi.azurenative.keyvault.inputs.PermissionsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
      *  Application ID of the client making request on behalf of a principal
      * 
      */
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -34,7 +34,7 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
      * The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.
      * 
      */
-    @InputImport(name="objectId", required=true)
+    @Import(name="objectId", required=true)
       private final Output<String> objectId;
 
     public Output<String> getObjectId() {
@@ -45,7 +45,7 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
      * Permissions the identity has for keys, secrets and certificates.
      * 
      */
-    @InputImport(name="permissions", required=true)
+    @Import(name="permissions", required=true)
       private final Output<PermissionsArgs> permissions;
 
     public Output<PermissionsArgs> getPermissions() {
@@ -56,7 +56,7 @@ public final class AccessPolicyEntryArgs extends io.pulumi.resources.ResourceArg
      * The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final Output<String> tenantId;
 
     public Output<String> getTenantId() {

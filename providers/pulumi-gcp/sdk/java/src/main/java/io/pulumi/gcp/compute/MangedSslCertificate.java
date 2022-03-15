@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.MangedSslCertificateArgs;
@@ -27,7 +27,7 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
      * The unique identifier for the resource.
      * 
      */
-    @OutputExport(name="certificateId", type=Integer.class, parameters={})
+    @Export(name="certificateId", type=Integer.class, parameters={})
     private Output<Integer> certificateId;
 
     /**
@@ -41,7 +41,7 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -55,7 +55,7 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
      * An optional description of this resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -69,7 +69,7 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
      * Expire time of the certificate.
      * 
      */
-    @OutputExport(name="expireTime", type=String.class, parameters={})
+    @Export(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
     /**
@@ -84,7 +84,7 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
      * of 'MANAGED' in 'type').
      * 
      */
-    @OutputExport(name="managed", type=MangedSslCertificateManaged.class, parameters={})
+    @Export(name="managed", type=MangedSslCertificateManaged.class, parameters={})
     private Output</* @Nullable */ MangedSslCertificateManaged> managed;
 
     /**
@@ -103,7 +103,7 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
      * namespace as the managed SSL certificates.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -117,13 +117,13 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     public Output<String> getProject() {
         return this.project;
     }
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -133,7 +133,7 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
      * Domains associated with the certificate via Subject Alternative Name.
      * 
      */
-    @OutputExport(name="subjectAlternativeNames", type=List.class, parameters={String.class})
+    @Export(name="subjectAlternativeNames", type=List.class, parameters={String.class})
     private Output<List<String>> subjectAlternativeNames;
 
     /**
@@ -148,7 +148,7 @@ public class MangedSslCertificate extends io.pulumi.resources.CustomResource {
      * Possible values: ["MANAGED"]
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**

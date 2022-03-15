@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.enums.ImagePipelineSchedulePipelineExecutionStartCondition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImagePipelineSchedule {
     /**
      * The condition configures when the pipeline should trigger a new image build.
@@ -23,10 +23,10 @@ public final class ImagePipelineSchedule {
      */
     private final @Nullable String scheduleExpression;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImagePipelineSchedule(
-        @OutputCustomType.Parameter("pipelineExecutionStartCondition") @Nullable ImagePipelineSchedulePipelineExecutionStartCondition pipelineExecutionStartCondition,
-        @OutputCustomType.Parameter("scheduleExpression") @Nullable String scheduleExpression) {
+        @CustomType.Parameter("pipelineExecutionStartCondition") @Nullable ImagePipelineSchedulePipelineExecutionStartCondition pipelineExecutionStartCondition,
+        @CustomType.Parameter("scheduleExpression") @Nullable String scheduleExpression) {
         this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
         this.scheduleExpression = scheduleExpression;
     }

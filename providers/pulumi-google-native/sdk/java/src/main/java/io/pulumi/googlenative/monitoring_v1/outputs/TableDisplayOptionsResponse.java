@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TableDisplayOptionsResponse {
     /**
      * Optional. Columns to display in the table. Leave empty to display all available columns. Note: This field is for future features and is not currently used.
@@ -16,8 +16,8 @@ public final class TableDisplayOptionsResponse {
      */
     private final List<String> shownColumns;
 
-    @OutputCustomType.Constructor
-    private TableDisplayOptionsResponse(@OutputCustomType.Parameter("shownColumns") List<String> shownColumns) {
+    @CustomType.Constructor
+    private TableDisplayOptionsResponse(@CustomType.Parameter("shownColumns") List<String> shownColumns) {
         this.shownColumns = shownColumns;
     }
 

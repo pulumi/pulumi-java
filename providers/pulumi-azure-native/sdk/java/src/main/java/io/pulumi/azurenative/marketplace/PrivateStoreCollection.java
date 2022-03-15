@@ -8,7 +8,7 @@ import io.pulumi.azurenative.marketplace.PrivateStoreCollectionArgs;
 import io.pulumi.azurenative.marketplace.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -37,7 +37,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * Indicating whether all subscriptions are selected (=true) or not (=false).
      * 
      */
-    @OutputExport(name="allSubscriptions", type=Boolean.class, parameters={})
+    @Export(name="allSubscriptions", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allSubscriptions;
 
     /**
@@ -51,7 +51,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * Gets or sets the association with Commercial's Billing Account.
      * 
      */
-    @OutputExport(name="claim", type=String.class, parameters={})
+    @Export(name="claim", type=String.class, parameters={})
     private Output</* @Nullable */ String> claim;
 
     /**
@@ -65,7 +65,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * Gets collection Id.
      * 
      */
-    @OutputExport(name="collectionId", type=String.class, parameters={})
+    @Export(name="collectionId", type=String.class, parameters={})
     private Output<String> collectionId;
 
     /**
@@ -79,7 +79,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * Gets or sets collection name.
      * 
      */
-    @OutputExport(name="collectionName", type=String.class, parameters={})
+    @Export(name="collectionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> collectionName;
 
     /**
@@ -93,7 +93,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * Indicating whether the collection is enabled or disabled.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -107,7 +107,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * Gets the number of offers associated with the collection.
      * 
      */
-    @OutputExport(name="numberOfOffers", type=Double.class, parameters={})
+    @Export(name="numberOfOffers", type=Double.class, parameters={})
     private Output<Double> numberOfOffers;
 
     /**
@@ -135,7 +135,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * Gets or sets subscription ids list. Empty list indicates all subscriptions are selected, null indicates no update is done, explicit list indicates the explicit selected subscriptions. On insert, null is considered as bad request
      * 
      */
-    @OutputExport(name="subscriptionsList", type=List.class, parameters={String.class})
+    @Export(name="subscriptionsList", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> subscriptionsList;
 
     /**
@@ -149,7 +149,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -163,7 +163,7 @@ public class PrivateStoreCollection extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

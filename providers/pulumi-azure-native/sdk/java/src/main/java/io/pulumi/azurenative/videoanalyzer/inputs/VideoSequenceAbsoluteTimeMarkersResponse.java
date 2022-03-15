@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse extends io.pulumi.re
      * The sequence of datetime ranges. Example: '[["2021-10-05T03:30:00Z", "2021-10-05T03:40:00Z"]]'.
      * 
      */
-    @InputImport(name="ranges", required=true)
+    @Import(name="ranges", required=true)
       private final String ranges;
 
     public String getRanges() {
@@ -32,7 +32,7 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse extends io.pulumi.re
      * Expected value is '#Microsoft.VideoAnalyzer.VideoSequenceAbsoluteTimeMarkers'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

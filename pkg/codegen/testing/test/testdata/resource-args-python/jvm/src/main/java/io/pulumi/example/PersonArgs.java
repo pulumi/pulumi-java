@@ -4,7 +4,7 @@
 package io.pulumi.example;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.example.inputs.PetArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,14 +16,14 @@ public final class PersonArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PersonArgs Empty = new PersonArgs();
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="pets")
+    @Import(name="pets")
       private final @Nullable Output<List<PetArgs>> pets;
 
     public Output<List<PetArgs>> getPets() {

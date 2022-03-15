@@ -7,14 +7,14 @@ import io.pulumi.awsnative.frauddetector.enums.VariableDataSource;
 import io.pulumi.awsnative.frauddetector.enums.VariableDataType;
 import io.pulumi.awsnative.frauddetector.enums.VariableType;
 import io.pulumi.awsnative.frauddetector.outputs.VariableTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVariableResult {
     /**
      * The ARN of the variable.
@@ -62,17 +62,17 @@ public final class GetVariableResult {
      */
     private final @Nullable VariableType variableType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVariableResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("dataSource") @Nullable VariableDataSource dataSource,
-        @OutputCustomType.Parameter("dataType") @Nullable VariableDataType dataType,
-        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
-        @OutputCustomType.Parameter("tags") @Nullable List<VariableTag> tags,
-        @OutputCustomType.Parameter("variableType") @Nullable VariableType variableType) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("dataSource") @Nullable VariableDataSource dataSource,
+        @CustomType.Parameter("dataType") @Nullable VariableDataType dataType,
+        @CustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @CustomType.Parameter("tags") @Nullable List<VariableTag> tags,
+        @CustomType.Parameter("variableType") @Nullable VariableType variableType) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.dataSource = dataSource;

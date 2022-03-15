@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.DurationResponse;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CircuitBreakersResponse {
     /**
      * The timeout for new network connections to hosts.
@@ -41,14 +41,14 @@ public final class CircuitBreakersResponse {
      */
     private final Integer maxRetries;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CircuitBreakersResponse(
-        @OutputCustomType.Parameter("connectTimeout") DurationResponse connectTimeout,
-        @OutputCustomType.Parameter("maxConnections") Integer maxConnections,
-        @OutputCustomType.Parameter("maxPendingRequests") Integer maxPendingRequests,
-        @OutputCustomType.Parameter("maxRequests") Integer maxRequests,
-        @OutputCustomType.Parameter("maxRequestsPerConnection") Integer maxRequestsPerConnection,
-        @OutputCustomType.Parameter("maxRetries") Integer maxRetries) {
+        @CustomType.Parameter("connectTimeout") DurationResponse connectTimeout,
+        @CustomType.Parameter("maxConnections") Integer maxConnections,
+        @CustomType.Parameter("maxPendingRequests") Integer maxPendingRequests,
+        @CustomType.Parameter("maxRequests") Integer maxRequests,
+        @CustomType.Parameter("maxRequestsPerConnection") Integer maxRequestsPerConnection,
+        @CustomType.Parameter("maxRetries") Integer maxRetries) {
         this.connectTimeout = connectTimeout;
         this.maxConnections = maxConnections;
         this.maxPendingRequests = maxPendingRequests;

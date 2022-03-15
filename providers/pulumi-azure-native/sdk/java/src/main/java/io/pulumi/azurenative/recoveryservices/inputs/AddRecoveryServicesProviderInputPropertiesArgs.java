@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.IdentityProviderInputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
      * The identity provider input for DRA authentication.
      * 
      */
-    @InputImport(name="authenticationIdentityInput", required=true)
+    @Import(name="authenticationIdentityInput", required=true)
       private final Output<IdentityProviderInputArgs> authenticationIdentityInput;
 
     public Output<IdentityProviderInputArgs> getAuthenticationIdentityInput() {
@@ -34,7 +34,7 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
      * The identity provider input for data plane authentication.
      * 
      */
-    @InputImport(name="dataPlaneAuthenticationIdentityInput")
+    @Import(name="dataPlaneAuthenticationIdentityInput")
       private final @Nullable Output<IdentityProviderInputArgs> dataPlaneAuthenticationIdentityInput;
 
     public Output<IdentityProviderInputArgs> getDataPlaneAuthenticationIdentityInput() {
@@ -45,7 +45,7 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
      * The Id of the machine where the provider is getting added.
      * 
      */
-    @InputImport(name="machineId")
+    @Import(name="machineId")
       private final @Nullable Output<String> machineId;
 
     public Output<String> getMachineId() {
@@ -56,7 +56,7 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
      * The name of the machine where the provider is getting added.
      * 
      */
-    @InputImport(name="machineName", required=true)
+    @Import(name="machineName", required=true)
       private final Output<String> machineName;
 
     public Output<String> getMachineName() {
@@ -67,7 +67,7 @@ public final class AddRecoveryServicesProviderInputPropertiesArgs extends io.pul
      * The identity provider input for resource access.
      * 
      */
-    @InputImport(name="resourceAccessIdentityInput", required=true)
+    @Import(name="resourceAccessIdentityInput", required=true)
       private final Output<IdentityProviderInputArgs> resourceAccessIdentityInput;
 
     public Output<IdentityProviderInputArgs> getResourceAccessIdentityInput() {

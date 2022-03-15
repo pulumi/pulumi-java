@@ -4,12 +4,12 @@
 package io.pulumi.aws.pricing.outputs;
 
 import io.pulumi.aws.pricing.outputs.GetProductFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetProductResult {
     private final List<GetProductFilter> filters;
     /**
@@ -24,12 +24,12 @@ public final class GetProductResult {
     private final String result;
     private final String serviceCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProductResult(
-        @OutputCustomType.Parameter("filters") List<GetProductFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("result") String result,
-        @OutputCustomType.Parameter("serviceCode") String serviceCode) {
+        @CustomType.Parameter("filters") List<GetProductFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("result") String result,
+        @CustomType.Parameter("serviceCode") String serviceCode) {
         this.filters = filters;
         this.id = id;
         this.result = result;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.configuration.inputs.ConfigurationAggregatorAccountAg
 import io.pulumi.awsnative.configuration.inputs.ConfigurationAggregatorOrganizationAggregationSourceArgs;
 import io.pulumi.awsnative.configuration.inputs.ConfigurationAggregatorTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
 
     public static final ConfigurationAggregatorArgs Empty = new ConfigurationAggregatorArgs();
 
-    @InputImport(name="accountAggregationSources")
+    @Import(name="accountAggregationSources")
       private final @Nullable Output<List<ConfigurationAggregatorAccountAggregationSourceArgs>> accountAggregationSources;
 
     public Output<List<ConfigurationAggregatorAccountAggregationSourceArgs>> getAccountAggregationSources() {
@@ -29,14 +29,14 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
      * The name of the aggregator.
      * 
      */
-    @InputImport(name="configurationAggregatorName")
+    @Import(name="configurationAggregatorName")
       private final @Nullable Output<String> configurationAggregatorName;
 
     public Output<String> getConfigurationAggregatorName() {
         return this.configurationAggregatorName == null ? Output.empty() : this.configurationAggregatorName;
     }
 
-    @InputImport(name="organizationAggregationSource")
+    @Import(name="organizationAggregationSource")
       private final @Nullable Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> organizationAggregationSource;
 
     public Output<ConfigurationAggregatorOrganizationAggregationSourceArgs> getOrganizationAggregationSource() {
@@ -47,7 +47,7 @@ public final class ConfigurationAggregatorArgs extends io.pulumi.resources.Resou
      * The tags for the configuration aggregator.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ConfigurationAggregatorTagArgs>> tags;
 
     public Output<List<ConfigurationAggregatorTagArgs>> getTags() {

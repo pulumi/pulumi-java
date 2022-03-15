@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.PrivateEndpointConnectionPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * For optimistic concurrency control.
      * 
      */
-    @InputImport(name="eTag")
+    @Import(name="eTag")
       private final @Nullable String eTag;
 
     public Optional<String> getETag() {
@@ -34,7 +34,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Path reference to this private endpoint endpoint connection. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/privateEndpointConnections/{privateEndpointConnectionName}
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -45,7 +45,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Name of the private endpoint endpoint connection.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -56,7 +56,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Properties of the private endpoint endpoint connection.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final PrivateEndpointConnectionPropertiesResponse properties;
 
     public PrivateEndpointConnectionPropertiesResponse getProperties() {
@@ -67,7 +67,7 @@ public final class PrivateEndpointConnectionResponse extends io.pulumi.resources
      * Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

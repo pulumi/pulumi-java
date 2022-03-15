@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class MediaGraphUsernamePasswordCredentialsArgs extends io.pulumi.r
      * Expected value is '#Microsoft.Media.MediaGraphUsernamePasswordCredentials'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -33,7 +33,7 @@ public final class MediaGraphUsernamePasswordCredentialsArgs extends io.pulumi.r
      * Password for a username/password pair.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<String> password;
 
     public Output<String> getPassword() {
@@ -44,7 +44,7 @@ public final class MediaGraphUsernamePasswordCredentialsArgs extends io.pulumi.r
      * Username for a username/password pair.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final Output<String> username;
 
     public Output<String> getUsername() {

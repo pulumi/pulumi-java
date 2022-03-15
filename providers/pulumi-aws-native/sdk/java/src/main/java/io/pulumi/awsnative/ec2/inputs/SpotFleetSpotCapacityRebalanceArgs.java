@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.enums.SpotFleetSpotCapacityRebalanceReplacementStrategy;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class SpotFleetSpotCapacityRebalanceArgs extends io.pulumi.resource
 
     public static final SpotFleetSpotCapacityRebalanceArgs Empty = new SpotFleetSpotCapacityRebalanceArgs();
 
-    @InputImport(name="replacementStrategy")
+    @Import(name="replacementStrategy")
       private final @Nullable Output<SpotFleetSpotCapacityRebalanceReplacementStrategy> replacementStrategy;
 
     public Output<SpotFleetSpotCapacityRebalanceReplacementStrategy> getReplacementStrategy() {
         return this.replacementStrategy == null ? Output.empty() : this.replacementStrategy;
     }
 
-    @InputImport(name="terminationDelay")
+    @Import(name="terminationDelay")
       private final @Nullable Output<Integer> terminationDelay;
 
     public Output<Integer> getTerminationDelay() {

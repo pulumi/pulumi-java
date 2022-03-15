@@ -5,7 +5,7 @@ package io.pulumi.plant.tree_v1;
 
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.plant.inputs.ContainerArgs;
 import io.pulumi.plant.tree_v1.enums.Diameter;
 import io.pulumi.plant.tree_v1.enums.Farm;
@@ -20,35 +20,35 @@ public final class RubberTreeArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RubberTreeArgs Empty = new RubberTreeArgs();
 
-    @InputImport(name="container")
+    @Import(name="container")
       private final @Nullable Output<ContainerArgs> container;
 
     public Output<ContainerArgs> getContainer() {
         return this.container == null ? Output.empty() : this.container;
     }
 
-    @InputImport(name="diameter", required=true)
+    @Import(name="diameter", required=true)
       private final Output<Diameter> diameter;
 
     public Output<Diameter> getDiameter() {
         return this.diameter;
     }
 
-    @InputImport(name="farm")
+    @Import(name="farm")
       private final @Nullable Output<Either<Farm,String>> farm;
 
     public Output<Either<Farm,String>> getFarm() {
         return this.farm == null ? Output.empty() : this.farm;
     }
 
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<TreeSize> size;
 
     public Output<TreeSize> getSize() {
         return this.size == null ? Output.empty() : this.size;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<RubberTreeVariety> type;
 
     public Output<RubberTreeVariety> getType() {

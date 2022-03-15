@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sourcerepo.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.sourcerepo.outputs.GetRepositoryPubsubConfig;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRepositoryResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -25,14 +25,14 @@ public final class GetRepositoryResult {
     private final Integer size;
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRepositoryResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("pubsubConfigs") List<GetRepositoryPubsubConfig> pubsubConfigs,
-        @OutputCustomType.Parameter("size") Integer size,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("pubsubConfigs") List<GetRepositoryPubsubConfig> pubsubConfigs,
+        @CustomType.Parameter("size") Integer size,
+        @CustomType.Parameter("url") String url) {
         this.id = id;
         this.name = name;
         this.project = project;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
      * Account name
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable String accountName;
 
     public Optional<String> getAccountName() {
@@ -33,7 +33,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
      * Collaboration branch
      * 
      */
-    @InputImport(name="collaborationBranch")
+    @Import(name="collaborationBranch")
       private final @Nullable String collaborationBranch;
 
     public Optional<String> getCollaborationBranch() {
@@ -44,7 +44,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
      * GitHub Enterprise host name. For example: https://github.mydomain.com
      * 
      */
-    @InputImport(name="hostName")
+    @Import(name="hostName")
       private final @Nullable String hostName;
 
     public Optional<String> getHostName() {
@@ -55,7 +55,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
      * The last commit ID
      * 
      */
-    @InputImport(name="lastCommitId")
+    @Import(name="lastCommitId")
       private final @Nullable String lastCommitId;
 
     public Optional<String> getLastCommitId() {
@@ -66,7 +66,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
      * VSTS project name
      * 
      */
-    @InputImport(name="projectName")
+    @Import(name="projectName")
       private final @Nullable String projectName;
 
     public Optional<String> getProjectName() {
@@ -77,7 +77,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
      * Repository name
      * 
      */
-    @InputImport(name="repositoryName")
+    @Import(name="repositoryName")
       private final @Nullable String repositoryName;
 
     public Optional<String> getRepositoryName() {
@@ -88,7 +88,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
      * Root folder to use in the repository
      * 
      */
-    @InputImport(name="rootFolder")
+    @Import(name="rootFolder")
       private final @Nullable String rootFolder;
 
     public Optional<String> getRootFolder() {
@@ -99,7 +99,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
      * The VSTS tenant ID
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
@@ -110,7 +110,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
      * Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

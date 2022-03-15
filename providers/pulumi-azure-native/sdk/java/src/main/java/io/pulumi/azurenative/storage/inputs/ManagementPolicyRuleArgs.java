@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storage.enums.RuleType;
 import io.pulumi.azurenative.storage.inputs.ManagementPolicyDefinitionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
      * An object that defines the Lifecycle rule.
      * 
      */
-    @InputImport(name="definition", required=true)
+    @Import(name="definition", required=true)
       private final Output<ManagementPolicyDefinitionArgs> definition;
 
     public Output<ManagementPolicyDefinitionArgs> getDefinition() {
@@ -37,7 +37,7 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
      * Rule is enabled if set to true.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -48,7 +48,7 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
      * A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -59,7 +59,7 @@ public final class ManagementPolicyRuleArgs extends io.pulumi.resources.Resource
      * The valid value is Lifecycle
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,RuleType>> type;
 
     public Output<Either<String,RuleType>> getType() {

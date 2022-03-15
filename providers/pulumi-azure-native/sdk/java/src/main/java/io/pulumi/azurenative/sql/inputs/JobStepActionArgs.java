@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sql.enums.JobStepActionSource;
 import io.pulumi.azurenative.sql.enums.JobStepActionType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
      * The source of the action to execute.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<Either<String,JobStepActionSource>> source;
 
     public Output<Either<String,JobStepActionSource>> getSource() {
@@ -36,7 +36,7 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
      * Type of action being executed by the job step.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,JobStepActionType>> type;
 
     public Output<Either<String,JobStepActionType>> getType() {
@@ -47,7 +47,7 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
      * The action value, for example the text of the T-SQL script to execute.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

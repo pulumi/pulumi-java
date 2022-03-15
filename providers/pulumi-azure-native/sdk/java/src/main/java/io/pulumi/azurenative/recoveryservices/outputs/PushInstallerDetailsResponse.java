@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.HealthErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PushInstallerDetailsResponse {
     /**
      * The health of the push installer.
@@ -42,14 +42,14 @@ public final class PushInstallerDetailsResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PushInstallerDetailsResponse(
-        @OutputCustomType.Parameter("health") String health,
-        @OutputCustomType.Parameter("healthErrors") List<HealthErrorResponse> healthErrors,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastHeartbeatUtc") String lastHeartbeatUtc,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("health") String health,
+        @CustomType.Parameter("healthErrors") List<HealthErrorResponse> healthErrors,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastHeartbeatUtc") String lastHeartbeatUtc,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("version") String version) {
         this.health = health;
         this.healthErrors = healthErrors;
         this.id = id;

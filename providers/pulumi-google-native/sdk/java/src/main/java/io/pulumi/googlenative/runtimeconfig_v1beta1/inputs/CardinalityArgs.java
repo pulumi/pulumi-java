@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.runtimeconfig_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CardinalityArgs extends io.pulumi.resources.ResourceArgs {
      * The number variables under the `path` that must exist to meet this condition. Defaults to 1 if not specified.
      * 
      */
-    @InputImport(name="number")
+    @Import(name="number")
       private final @Nullable Output<Integer> number;
 
     public Output<Integer> getNumber() {
@@ -34,7 +34,7 @@ public final class CardinalityArgs extends io.pulumi.resources.ResourceArgs {
      * The root of the variable subtree to monitor. For example, `/foo`.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlColumnArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class MysqlTableArgs extends io.pulumi.resources.ResourceArgs {
      * MySQL columns in the database. When unspecified as part of include/exclude lists, includes/excludes everything.
      * 
      */
-    @InputImport(name="mysqlColumns")
+    @Import(name="mysqlColumns")
       private final @Nullable Output<List<MysqlColumnArgs>> mysqlColumns;
 
     public Output<List<MysqlColumnArgs>> getMysqlColumns() {
@@ -35,7 +35,7 @@ public final class MysqlTableArgs extends io.pulumi.resources.ResourceArgs {
      * Table name.
      * 
      */
-    @InputImport(name="tableName")
+    @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
     public Output<String> getTableName() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionBackendServiceArgs;
@@ -70,7 +70,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * When the load balancing scheme is INTERNAL, this field is not used.
      * 
      */
-    @OutputExport(name="affinityCookieTtlSec", type=Integer.class, parameters={})
+    @Export(name="affinityCookieTtlSec", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> affinityCookieTtlSec;
 
     /**
@@ -89,7 +89,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="backends", type=List.class, parameters={RegionBackendServiceBackend.class})
+    @Export(name="backends", type=List.class, parameters={RegionBackendServiceBackend.class})
     private Output</* @Nullable */ List<RegionBackendServiceBackend>> backends;
 
     /**
@@ -105,7 +105,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="cdnPolicy", type=RegionBackendServiceCdnPolicy.class, parameters={})
+    @Export(name="cdnPolicy", type=RegionBackendServiceCdnPolicy.class, parameters={})
     private Output<RegionBackendServiceCdnPolicy> cdnPolicy;
 
     /**
@@ -123,7 +123,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="circuitBreakers", type=RegionBackendServiceCircuitBreakers.class, parameters={})
+    @Export(name="circuitBreakers", type=RegionBackendServiceCircuitBreakers.class, parameters={})
     private Output</* @Nullable */ RegionBackendServiceCircuitBreakers> circuitBreakers;
 
     /**
@@ -141,7 +141,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * connections, but still work to finish started).
      * 
      */
-    @OutputExport(name="connectionDrainingTimeoutSec", type=Integer.class, parameters={})
+    @Export(name="connectionDrainingTimeoutSec", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> connectionDrainingTimeoutSec;
 
     /**
@@ -159,7 +159,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="connectionTrackingPolicy", type=RegionBackendServiceConnectionTrackingPolicy.class, parameters={})
+    @Export(name="connectionTrackingPolicy", type=RegionBackendServiceConnectionTrackingPolicy.class, parameters={})
     private Output</* @Nullable */ RegionBackendServiceConnectionTrackingPolicy> connectionTrackingPolicy;
 
     /**
@@ -182,7 +182,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * This field only applies when all of the following are true -
      * 
      */
-    @OutputExport(name="consistentHash", type=RegionBackendServiceConsistentHash.class, parameters={})
+    @Export(name="consistentHash", type=RegionBackendServiceConsistentHash.class, parameters={})
     private Output</* @Nullable */ RegionBackendServiceConsistentHash> consistentHash;
 
     /**
@@ -202,7 +202,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -217,7 +217,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -232,7 +232,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * If true, enable Cloud CDN for this RegionBackendService.
      * 
      */
-    @OutputExport(name="enableCdn", type=Boolean.class, parameters={})
+    @Export(name="enableCdn", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableCdn;
 
     /**
@@ -247,7 +247,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="failoverPolicy", type=RegionBackendServiceFailoverPolicy.class, parameters={})
+    @Export(name="failoverPolicy", type=RegionBackendServiceFailoverPolicy.class, parameters={})
     private Output</* @Nullable */ RegionBackendServiceFailoverPolicy> failoverPolicy;
 
     /**
@@ -262,7 +262,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -280,7 +280,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * or serverless NEG as a backend.
      * 
      */
-    @OutputExport(name="healthChecks", type=String.class, parameters={})
+    @Export(name="healthChecks", type=String.class, parameters={})
     private Output</* @Nullable */ String> healthChecks;
 
     /**
@@ -299,7 +299,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="iap", type=RegionBackendServiceIap.class, parameters={})
+    @Export(name="iap", type=RegionBackendServiceIap.class, parameters={})
     private Output</* @Nullable */ RegionBackendServiceIap> iap;
 
     /**
@@ -319,7 +319,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Possible values are `EXTERNAL`, `EXTERNAL_MANAGED`, `INTERNAL`, and `INTERNAL_MANAGED`.
      * 
      */
-    @OutputExport(name="loadBalancingScheme", type=String.class, parameters={})
+    @Export(name="loadBalancingScheme", type=String.class, parameters={})
     private Output</* @Nullable */ String> loadBalancingScheme;
 
     /**
@@ -357,7 +357,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      *   Maglev, refer to https://ai.google/research/pubs/pub44824
      * 
      */
-    @OutputExport(name="localityLbPolicy", type=String.class, parameters={})
+    @Export(name="localityLbPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> localityLbPolicy;
 
     /**
@@ -392,7 +392,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="logConfig", type=RegionBackendServiceLogConfig.class, parameters={})
+    @Export(name="logConfig", type=RegionBackendServiceLogConfig.class, parameters={})
     private Output<RegionBackendServiceLogConfig> logConfig;
 
     /**
@@ -408,7 +408,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Name of the cookie.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -423,7 +423,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * This field can only be specified when the load balancing scheme is set to INTERNAL.
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output</* @Nullable */ String> network;
 
     /**
@@ -441,7 +441,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="outlierDetection", type=RegionBackendServiceOutlierDetection.class, parameters={})
+    @Export(name="outlierDetection", type=RegionBackendServiceOutlierDetection.class, parameters={})
     private Output</* @Nullable */ RegionBackendServiceOutlierDetection> outlierDetection;
 
     /**
@@ -464,7 +464,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
      * 
      */
-    @OutputExport(name="portName", type=String.class, parameters={})
+    @Export(name="portName", type=String.class, parameters={})
     private Output<String> portName;
 
     /**
@@ -485,7 +485,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -503,7 +503,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Possible values are `HTTP`, `HTTPS`, `HTTP2`, `SSL`, `TCP`, `UDP`, `GRPC`, and `UNSPECIFIED`.
      * 
      */
-    @OutputExport(name="protocol", type=String.class, parameters={})
+    @Export(name="protocol", type=String.class, parameters={})
     private Output<String> protocol;
 
     /**
@@ -521,7 +521,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider region is used.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -536,7 +536,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -552,7 +552,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, `HTTP_COOKIE`, and `CLIENT_IP_NO_DESTINATION`.
      * 
      */
-    @OutputExport(name="sessionAffinity", type=String.class, parameters={})
+    @Export(name="sessionAffinity", type=String.class, parameters={})
     private Output<String> sessionAffinity;
 
     /**
@@ -569,7 +569,7 @@ public class RegionBackendService extends io.pulumi.resources.CustomResource {
      * failed request. Default is 30 seconds. Valid range is [1, 86400].
      * 
      */
-    @OutputExport(name="timeoutSec", type=Integer.class, parameters={})
+    @Export(name="timeoutSec", type=Integer.class, parameters={})
     private Output<Integer> timeoutSec;
 
     /**

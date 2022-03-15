@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FixedScaleSettingsResponse extends io.pulumi.resources.Invoke
      * If omitted, the default value is Requeue.
      * 
      */
-    @InputImport(name="nodeDeallocationOption")
+    @Import(name="nodeDeallocationOption")
       private final @Nullable String nodeDeallocationOption;
 
     public Optional<String> getNodeDeallocationOption() {
@@ -30,7 +30,7 @@ public final class FixedScaleSettingsResponse extends io.pulumi.resources.Invoke
      * The default value is 15 minutes. Timeout values use ISO 8601 format. For example, use PT10M for 10 minutes. The minimum value is 5 minutes. If you specify a value less than 5 minutes, the Batch service rejects the request with an error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request).
      * 
      */
-    @InputImport(name="resizeTimeout")
+    @Import(name="resizeTimeout")
       private final @Nullable String resizeTimeout;
 
     public Optional<String> getResizeTimeout() {
@@ -41,7 +41,7 @@ public final class FixedScaleSettingsResponse extends io.pulumi.resources.Invoke
      * At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
      * 
      */
-    @InputImport(name="targetDedicatedNodes")
+    @Import(name="targetDedicatedNodes")
       private final @Nullable Integer targetDedicatedNodes;
 
     public Optional<Integer> getTargetDedicatedNodes() {
@@ -52,7 +52,7 @@ public final class FixedScaleSettingsResponse extends io.pulumi.resources.Invoke
      * At least one of targetDedicatedNodes, targetLowPriorityNodes must be set.
      * 
      */
-    @InputImport(name="targetLowPriorityNodes")
+    @Import(name="targetLowPriorityNodes")
       private final @Nullable Integer targetLowPriorityNodes;
 
     public Optional<Integer> getTargetLowPriorityNodes() {

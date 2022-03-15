@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.ApprovalConfigResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.ApprovalResultResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BuildApprovalResponse {
     /**
      * Configuration for manual approval of this build.
@@ -27,11 +27,11 @@ public final class BuildApprovalResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BuildApprovalResponse(
-        @OutputCustomType.Parameter("config") ApprovalConfigResponse config,
-        @OutputCustomType.Parameter("result") ApprovalResultResponse result,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("config") ApprovalConfigResponse config,
+        @CustomType.Parameter("result") ApprovalResultResponse result,
+        @CustomType.Parameter("state") String state) {
         this.config = config;
         this.result = result;
         this.state = state;

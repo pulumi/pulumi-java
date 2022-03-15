@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.spanner.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceResult {
     private final @Nullable String config;
     private final @Nullable String displayName;
@@ -29,18 +29,18 @@ public final class GetInstanceResult {
     private final @Nullable String project;
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceResult(
-        @OutputCustomType.Parameter("config") @Nullable String config,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("forceDestroy") Boolean forceDestroy,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("numNodes") Integer numNodes,
-        @OutputCustomType.Parameter("processingUnits") Integer processingUnits,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("config") @Nullable String config,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("forceDestroy") Boolean forceDestroy,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("numNodes") Integer numNodes,
+        @CustomType.Parameter("processingUnits") Integer processingUnits,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("state") String state) {
         this.config = config;
         this.displayName = displayName;
         this.forceDestroy = forceDestroy;

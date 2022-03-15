@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DictionaryResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RegexResponse;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
      * Description of the StoredInfoType (max 256 characters).
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
      * Store dictionary-based CustomInfoType.
      * 
      */
-    @InputImport(name="dictionary", required=true)
+    @Import(name="dictionary", required=true)
       private final GooglePrivacyDlpV2DictionaryResponse dictionary;
 
     public GooglePrivacyDlpV2DictionaryResponse getDictionary() {
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
      * Display name of the StoredInfoType (max 256 characters).
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
      * StoredInfoType where findings are defined by a dictionary of phrases.
      * 
      */
-    @InputImport(name="largeCustomDictionary", required=true)
+    @Import(name="largeCustomDictionary", required=true)
       private final GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary;
 
     public GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse getLargeCustomDictionary() {
@@ -67,7 +67,7 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse extends io.pul
      * Store regular expression-based StoredInfoType.
      * 
      */
-    @InputImport(name="regex", required=true)
+    @Import(name="regex", required=true)
       private final GooglePrivacyDlpV2RegexResponse regex;
 
     public GooglePrivacyDlpV2RegexResponse getRegex() {

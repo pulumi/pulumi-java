@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.ClusteringResponse;
 import io.pulumi.googlenative.bigquery_v2.inputs.ConnectionPropertyResponse;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetReferenceResponse;
@@ -29,7 +29,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * [Optional] If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance. Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed. However, you must still set destinationTable when result size exceeds the allowed maximum response size.
      * 
      */
-    @InputImport(name="allowLargeResults", required=true)
+    @Import(name="allowLargeResults", required=true)
       private final Boolean allowLargeResults;
 
     public Boolean getAllowLargeResults() {
@@ -40,7 +40,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * [Beta] Clustering specification for the destination table. Must be specified with time-based partitioning, data in the table will be first partitioned and subsequently clustered.
      * 
      */
-    @InputImport(name="clustering", required=true)
+    @Import(name="clustering", required=true)
       private final ClusteringResponse clustering;
 
     public ClusteringResponse getClustering() {
@@ -51,7 +51,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * Connection properties.
      * 
      */
-    @InputImport(name="connectionProperties", required=true)
+    @Import(name="connectionProperties", required=true)
       private final List<ConnectionPropertyResponse> connectionProperties;
 
     public List<ConnectionPropertyResponse> getConnectionProperties() {
@@ -62,7 +62,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * [Optional] Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. The default value is CREATE_IF_NEEDED. Creation, truncation and append actions occur as one atomic update upon job completion.
      * 
      */
-    @InputImport(name="createDisposition", required=true)
+    @Import(name="createDisposition", required=true)
       private final String createDisposition;
 
     public String getCreateDisposition() {
@@ -73,7 +73,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * If true, creates a new session, where session id will be a server generated random id. If false, runs query with an existing session_id passed in ConnectionProperty, otherwise runs query in non-session mode.
      * 
      */
-    @InputImport(name="createSession", required=true)
+    @Import(name="createSession", required=true)
       private final Boolean createSession;
 
     public Boolean getCreateSession() {
@@ -84,7 +84,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * [Optional] Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.
      * 
      */
-    @InputImport(name="defaultDataset", required=true)
+    @Import(name="defaultDataset", required=true)
       private final DatasetReferenceResponse defaultDataset;
 
     public DatasetReferenceResponse getDefaultDataset() {
@@ -95,7 +95,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * Custom encryption configuration (e.g., Cloud KMS keys).
      * 
      */
-    @InputImport(name="destinationEncryptionConfiguration", required=true)
+    @Import(name="destinationEncryptionConfiguration", required=true)
       private final EncryptionConfigurationResponse destinationEncryptionConfiguration;
 
     public EncryptionConfigurationResponse getDestinationEncryptionConfiguration() {
@@ -106,7 +106,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * [Optional] Describes the table where the query results should be stored. If not present, a new table will be created to store the results. This property must be set for large results that exceed the maximum response size.
      * 
      */
-    @InputImport(name="destinationTable", required=true)
+    @Import(name="destinationTable", required=true)
       private final TableReferenceResponse destinationTable;
 
     public TableReferenceResponse getDestinationTable() {
@@ -117,7 +117,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * [Optional] If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results. allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.
      * 
      */
-    @InputImport(name="flattenResults", required=true)
+    @Import(name="flattenResults", required=true)
       private final Boolean flattenResults;
 
     public Boolean getFlattenResults() {
@@ -128,7 +128,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * [Optional] Limits the billing tier for this job. Queries that have resource usage beyond this tier will fail (without incurring a charge). If unspecified, this will be set to your project default.
      * 
      */
-    @InputImport(name="maximumBillingTier", required=true)
+    @Import(name="maximumBillingTier", required=true)
       private final Integer maximumBillingTier;
 
     public Integer getMaximumBillingTier() {
@@ -139,7 +139,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * [Optional] Limits the bytes billed for this job. Queries that will have bytes billed beyond this limit will fail (without incurring a charge). If unspecified, this will be set to your project default.
      * 
      */
-    @InputImport(name="maximumBytesBilled", required=true)
+    @Import(name="maximumBytesBilled", required=true)
       private final String maximumBytesBilled;
 
     public String getMaximumBytesBilled() {
@@ -150,7 +150,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * Standard SQL only. Set to POSITIONAL to use positional (?) query parameters or to NAMED to use named (@myparam) query parameters in this query.
      * 
      */
-    @InputImport(name="parameterMode", required=true)
+    @Import(name="parameterMode", required=true)
       private final String parameterMode;
 
     public String getParameterMode() {
@@ -161,7 +161,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * [Optional] Specifies a priority for the query. Possible values include INTERACTIVE and BATCH. The default value is INTERACTIVE.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final String priority;
 
     public String getPriority() {
@@ -172,7 +172,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * [Required] SQL query text to execute. The useLegacySql field can be used to indicate whether the query uses legacy SQL or standard SQL.
      * 
      */
-    @InputImport(name="query", required=true)
+    @Import(name="query", required=true)
       private final String query;
 
     public String getQuery() {
@@ -183,7 +183,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * Query parameters for standard SQL queries.
      * 
      */
-    @InputImport(name="queryParameters", required=true)
+    @Import(name="queryParameters", required=true)
       private final List<QueryParameterResponse> queryParameters;
 
     public List<QueryParameterResponse> getQueryParameters() {
@@ -194,7 +194,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * [TrustedTester] Range partitioning specification for this table. Only one of timePartitioning and rangePartitioning should be specified.
      * 
      */
-    @InputImport(name="rangePartitioning", required=true)
+    @Import(name="rangePartitioning", required=true)
       private final RangePartitioningResponse rangePartitioning;
 
     public RangePartitioningResponse getRangePartitioning() {
@@ -205,7 +205,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * Allows the schema of the destination table to be updated as a side effect of the query job. Schema update options are supported in two cases: when writeDisposition is WRITE_APPEND; when writeDisposition is WRITE_TRUNCATE and the destination table is a partition of a table, specified by partition decorators. For normal tables, WRITE_TRUNCATE will always overwrite the schema. One or more of the following values are specified: ALLOW_FIELD_ADDITION: allow adding a nullable field to the schema. ALLOW_FIELD_RELAXATION: allow relaxing a required field in the original schema to nullable.
      * 
      */
-    @InputImport(name="schemaUpdateOptions", required=true)
+    @Import(name="schemaUpdateOptions", required=true)
       private final List<String> schemaUpdateOptions;
 
     public List<String> getSchemaUpdateOptions() {
@@ -216,7 +216,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * [Optional] If querying an external data source outside of BigQuery, describes the data format, location and other properties of the data source. By defining these properties, the data source can then be queried as if it were a standard BigQuery table.
      * 
      */
-    @InputImport(name="tableDefinitions", required=true)
+    @Import(name="tableDefinitions", required=true)
       private final Map<String,String> tableDefinitions;
 
     public Map<String,String> getTableDefinitions() {
@@ -227,7 +227,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * Time-based partitioning specification for the destination table. Only one of timePartitioning and rangePartitioning should be specified.
      * 
      */
-    @InputImport(name="timePartitioning", required=true)
+    @Import(name="timePartitioning", required=true)
       private final TimePartitioningResponse timePartitioning;
 
     public TimePartitioningResponse getTimePartitioning() {
@@ -238,7 +238,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is true. If set to false, the query will use BigQuery's standard SQL: https://cloud.google.com/bigquery/sql-reference/ When useLegacySql is set to false, the value of flattenResults is ignored; query will be run as if flattenResults is false.
      * 
      */
-    @InputImport(name="useLegacySql", required=true)
+    @Import(name="useLegacySql", required=true)
       private final Boolean useLegacySql;
 
     public Boolean getUseLegacySql() {
@@ -249,7 +249,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * [Optional] Whether to look for the result in the query cache. The query cache is a best-effort cache that will be flushed whenever tables in the query are modified. Moreover, the query cache is only available when a query does not have a destination table specified. The default value is true.
      * 
      */
-    @InputImport(name="useQueryCache", required=true)
+    @Import(name="useQueryCache", required=true)
       private final Boolean useQueryCache;
 
     public Boolean getUseQueryCache() {
@@ -260,7 +260,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * Describes user-defined function resources used in the query.
      * 
      */
-    @InputImport(name="userDefinedFunctionResources", required=true)
+    @Import(name="userDefinedFunctionResources", required=true)
       private final List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources;
 
     public List<UserDefinedFunctionResourceResponse> getUserDefinedFunctionResources() {
@@ -271,7 +271,7 @@ public final class JobConfigurationQueryResponse extends io.pulumi.resources.Inv
      * [Optional] Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. The default value is WRITE_EMPTY. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion.
      * 
      */
-    @InputImport(name="writeDisposition", required=true)
+    @Import(name="writeDisposition", required=true)
       private final String writeDisposition;
 
     public String getWriteDisposition() {

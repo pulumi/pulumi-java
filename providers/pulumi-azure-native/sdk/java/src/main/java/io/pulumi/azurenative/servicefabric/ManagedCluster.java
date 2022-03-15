@@ -12,7 +12,7 @@ import io.pulumi.azurenative.servicefabric.outputs.SettingsSectionDescriptionRes
 import io.pulumi.azurenative.servicefabric.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -42,7 +42,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * client certificates for the cluster.
      * 
      */
-    @OutputExport(name="addonFeatures", type=List.class, parameters={String.class})
+    @Export(name="addonFeatures", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> addonFeatures;
 
     /**
@@ -56,7 +56,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * vm admin user password.
      * 
      */
-    @OutputExport(name="adminPassword", type=String.class, parameters={})
+    @Export(name="adminPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> adminPassword;
 
     /**
@@ -70,7 +70,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * vm admin user name.
      * 
      */
-    @OutputExport(name="adminUserName", type=String.class, parameters={})
+    @Export(name="adminUserName", type=String.class, parameters={})
     private Output<String> adminUserName;
 
     /**
@@ -84,7 +84,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Azure active directory.
      * 
      */
-    @OutputExport(name="azureActiveDirectory", type=AzureActiveDirectoryResponse.class, parameters={})
+    @Export(name="azureActiveDirectory", type=AzureActiveDirectoryResponse.class, parameters={})
     private Output</* @Nullable */ AzureActiveDirectoryResponse> azureActiveDirectory;
 
     /**
@@ -98,7 +98,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * The port used for client connections to the cluster.
      * 
      */
-    @OutputExport(name="clientConnectionPort", type=Integer.class, parameters={})
+    @Export(name="clientConnectionPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> clientConnectionPort;
 
     /**
@@ -112,7 +112,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * client certificates for the cluster.
      * 
      */
-    @OutputExport(name="clients", type=List.class, parameters={ClientCertificateResponse.class})
+    @Export(name="clients", type=List.class, parameters={ClientCertificateResponse.class})
     private Output</* @Nullable */ List<ClientCertificateResponse>> clients;
 
     /**
@@ -126,7 +126,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * The cluster certificate thumbprint used node to node communication.
      * 
      */
-    @OutputExport(name="clusterCertificateThumbprint", type=String.class, parameters={})
+    @Export(name="clusterCertificateThumbprint", type=String.class, parameters={})
     private Output<String> clusterCertificateThumbprint;
 
     /**
@@ -140,7 +140,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
      * 
      */
-    @OutputExport(name="clusterCodeVersion", type=String.class, parameters={})
+    @Export(name="clusterCodeVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> clusterCodeVersion;
 
     /**
@@ -154,7 +154,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * A service generated unique identifier for the cluster resource.
      * 
      */
-    @OutputExport(name="clusterId", type=String.class, parameters={})
+    @Export(name="clusterId", type=String.class, parameters={})
     private Output<String> clusterId;
 
     /**
@@ -168,7 +168,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * The current state of the cluster.
      * 
      */
-    @OutputExport(name="clusterState", type=String.class, parameters={})
+    @Export(name="clusterState", type=String.class, parameters={})
     private Output<String> clusterState;
 
     /**
@@ -182,7 +182,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * The cluster dns name.
      * 
      */
-    @OutputExport(name="dnsName", type=String.class, parameters={})
+    @Export(name="dnsName", type=String.class, parameters={})
     private Output<String> dnsName;
 
     /**
@@ -196,7 +196,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Azure resource etag.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -210,7 +210,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * The list of custom fabric settings to configure the cluster.
      * 
      */
-    @OutputExport(name="fabricSettings", type=List.class, parameters={SettingsSectionDescriptionResponse.class})
+    @Export(name="fabricSettings", type=List.class, parameters={SettingsSectionDescriptionResponse.class})
     private Output</* @Nullable */ List<SettingsSectionDescriptionResponse>> fabricSettings;
 
     /**
@@ -224,7 +224,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * the cluster Fully qualified domain name.
      * 
      */
-    @OutputExport(name="fqdn", type=String.class, parameters={})
+    @Export(name="fqdn", type=String.class, parameters={})
     private Output<String> fqdn;
 
     /**
@@ -238,7 +238,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * The port used for http connections to the cluster.
      * 
      */
-    @OutputExport(name="httpGatewayConnectionPort", type=Integer.class, parameters={})
+    @Export(name="httpGatewayConnectionPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> httpGatewayConnectionPort;
 
     /**
@@ -252,7 +252,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Describes load balancing rules.
      * 
      */
-    @OutputExport(name="loadBalancingRules", type=List.class, parameters={LoadBalancingRuleResponse.class})
+    @Export(name="loadBalancingRules", type=List.class, parameters={LoadBalancingRuleResponse.class})
     private Output</* @Nullable */ List<LoadBalancingRuleResponse>> loadBalancingRules;
 
     /**
@@ -266,7 +266,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Azure resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -280,7 +280,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Azure resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -294,7 +294,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * The provisioning state of the managed cluster resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -308,7 +308,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * The sku of the managed cluster
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -322,7 +322,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Azure resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -336,7 +336,7 @@ public class ManagedCluster extends io.pulumi.resources.CustomResource {
      * Azure resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

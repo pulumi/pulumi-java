@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.memcache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceNodeConfig {
     /**
      * Number of CPUs per node.
@@ -20,10 +20,10 @@ public final class InstanceNodeConfig {
      */
     private final Integer memorySizeMb;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceNodeConfig(
-        @OutputCustomType.Parameter("cpuCount") Integer cpuCount,
-        @OutputCustomType.Parameter("memorySizeMb") Integer memorySizeMb) {
+        @CustomType.Parameter("cpuCount") Integer cpuCount,
+        @CustomType.Parameter("memorySizeMb") Integer memorySizeMb) {
         this.cpuCount = cpuCount;
         this.memorySizeMb = memorySizeMb;
     }

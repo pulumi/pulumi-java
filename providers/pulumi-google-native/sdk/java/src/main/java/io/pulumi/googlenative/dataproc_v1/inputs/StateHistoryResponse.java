@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class StateHistoryResponse extends io.pulumi.resources.InvokeArgs {
      * The state of the batch at this point in history.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -31,7 +31,7 @@ public final class StateHistoryResponse extends io.pulumi.resources.InvokeArgs {
      * Details about the state at this point in history.
      * 
      */
-    @InputImport(name="stateMessage", required=true)
+    @Import(name="stateMessage", required=true)
       private final String stateMessage;
 
     public String getStateMessage() {
@@ -42,7 +42,7 @@ public final class StateHistoryResponse extends io.pulumi.resources.InvokeArgs {
      * The time when the batch entered the historical state.
      * 
      */
-    @InputImport(name="stateStartTime", required=true)
+    @Import(name="stateStartTime", required=true)
       private final String stateStartTime;
 
     public String getStateStartTime() {

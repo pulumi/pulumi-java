@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.identityplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.identityplatform.outputs.TenantInboundSamlConfigIdpConfigIdpCertificate;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TenantInboundSamlConfigIdpConfig {
     /**
      * The IDP's certificate data to verify the signature in the SAMLResponse issued by the IDP.
@@ -36,12 +36,12 @@ public final class TenantInboundSamlConfigIdpConfig {
      */
     private final String ssoUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TenantInboundSamlConfigIdpConfig(
-        @OutputCustomType.Parameter("idpCertificates") List<TenantInboundSamlConfigIdpConfigIdpCertificate> idpCertificates,
-        @OutputCustomType.Parameter("idpEntityId") String idpEntityId,
-        @OutputCustomType.Parameter("signRequest") @Nullable Boolean signRequest,
-        @OutputCustomType.Parameter("ssoUrl") String ssoUrl) {
+        @CustomType.Parameter("idpCertificates") List<TenantInboundSamlConfigIdpConfigIdpCertificate> idpCertificates,
+        @CustomType.Parameter("idpEntityId") String idpEntityId,
+        @CustomType.Parameter("signRequest") @Nullable Boolean signRequest,
+        @CustomType.Parameter("ssoUrl") String ssoUrl) {
         this.idpCertificates = idpCertificates;
         this.idpEntityId = idpEntityId;
         this.signRequest = signRequest;

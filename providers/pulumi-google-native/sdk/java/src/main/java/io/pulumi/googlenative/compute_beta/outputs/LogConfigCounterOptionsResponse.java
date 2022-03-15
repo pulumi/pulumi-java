@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.LogConfigCounterOptionsCustomFieldResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LogConfigCounterOptionsResponse {
     /**
      * This is deprecated and has no effect. Do not use.
@@ -27,11 +27,11 @@ public final class LogConfigCounterOptionsResponse {
      */
     private final String metric;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LogConfigCounterOptionsResponse(
-        @OutputCustomType.Parameter("customFields") List<LogConfigCounterOptionsCustomFieldResponse> customFields,
-        @OutputCustomType.Parameter("field") String field,
-        @OutputCustomType.Parameter("metric") String metric) {
+        @CustomType.Parameter("customFields") List<LogConfigCounterOptionsCustomFieldResponse> customFields,
+        @CustomType.Parameter("field") String field,
+        @CustomType.Parameter("metric") String metric) {
         this.customFields = customFields;
         this.field = field;
         this.metric = metric;

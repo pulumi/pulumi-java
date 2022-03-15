@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class PrivateConnectivityResponse extends io.pulumi.resources.Invok
      * A reference to a private connection resource. Format: `projects/{project}/locations/{location}/privateConnections/{name}`
      * 
      */
-    @InputImport(name="privateConnection", required=true)
+    @Import(name="privateConnection", required=true)
       private final String privateConnection;
 
     public String getPrivateConnection() {

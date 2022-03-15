@@ -8,7 +8,7 @@ import io.pulumi.awsnative.panorama.inputs.ApplicationInstanceManifestOverridesP
 import io.pulumi.awsnative.panorama.inputs.ApplicationInstanceManifestPayloadArgs;
 import io.pulumi.awsnative.panorama.inputs.ApplicationInstanceTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,70 +19,70 @@ public final class ApplicationInstanceArgs extends io.pulumi.resources.ResourceA
 
     public static final ApplicationInstanceArgs Empty = new ApplicationInstanceArgs();
 
-    @InputImport(name="applicationInstanceIdToReplace")
+    @Import(name="applicationInstanceIdToReplace")
       private final @Nullable Output<String> applicationInstanceIdToReplace;
 
     public Output<String> getApplicationInstanceIdToReplace() {
         return this.applicationInstanceIdToReplace == null ? Output.empty() : this.applicationInstanceIdToReplace;
     }
 
-    @InputImport(name="defaultRuntimeContextDevice", required=true)
+    @Import(name="defaultRuntimeContextDevice", required=true)
       private final Output<String> defaultRuntimeContextDevice;
 
     public Output<String> getDefaultRuntimeContextDevice() {
         return this.defaultRuntimeContextDevice;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="deviceId")
+    @Import(name="deviceId")
       private final @Nullable Output<String> deviceId;
 
     public Output<String> getDeviceId() {
         return this.deviceId == null ? Output.empty() : this.deviceId;
     }
 
-    @InputImport(name="manifestOverridesPayload")
+    @Import(name="manifestOverridesPayload")
       private final @Nullable Output<ApplicationInstanceManifestOverridesPayloadArgs> manifestOverridesPayload;
 
     public Output<ApplicationInstanceManifestOverridesPayloadArgs> getManifestOverridesPayload() {
         return this.manifestOverridesPayload == null ? Output.empty() : this.manifestOverridesPayload;
     }
 
-    @InputImport(name="manifestPayload", required=true)
+    @Import(name="manifestPayload", required=true)
       private final Output<ApplicationInstanceManifestPayloadArgs> manifestPayload;
 
     public Output<ApplicationInstanceManifestPayloadArgs> getManifestPayload() {
         return this.manifestPayload;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="runtimeRoleArn")
+    @Import(name="runtimeRoleArn")
       private final @Nullable Output<String> runtimeRoleArn;
 
     public Output<String> getRuntimeRoleArn() {
         return this.runtimeRoleArn == null ? Output.empty() : this.runtimeRoleArn;
     }
 
-    @InputImport(name="statusFilter")
+    @Import(name="statusFilter")
       private final @Nullable Output<ApplicationInstanceStatusFilter> statusFilter;
 
     public Output<ApplicationInstanceStatusFilter> getStatusFilter() {
         return this.statusFilter == null ? Output.empty() : this.statusFilter;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ApplicationInstanceTagArgs>> tags;
 
     public Output<List<ApplicationInstanceTagArgs>> getTags() {

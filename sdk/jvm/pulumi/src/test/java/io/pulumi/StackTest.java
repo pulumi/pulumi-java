@@ -4,7 +4,7 @@ import io.pulumi.core.Output;
 import io.pulumi.core.OutputTests;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple2;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.TestOptions;
@@ -30,10 +30,10 @@ class StackTest {
 
     private static class ValidStack extends Stack {
 
-        @OutputExport(name = "foo", type = String.class)
+        @Export(name = "foo", type = String.class)
         private final Output<String> explicitName;
 
-        @OutputExport(type = String.class)
+        @Export(type = String.class)
         private final Output<String> implicitName;
 
         public ValidStack() {
@@ -73,7 +73,7 @@ class StackTest {
 
     private static class NullOutputStack extends Stack {
         @SuppressWarnings("unused")
-        @OutputExport(name = "foo", type = String.class)
+        @Export(name = "foo", type = String.class)
         public Output<String> foo = null;
     }
 
@@ -85,7 +85,7 @@ class StackTest {
     }
 
     private static class InvalidOutputTypeStack extends Stack {
-        @OutputExport(name = "foo", type = String.class)
+        @Export(name = "foo", type = String.class)
         public String foo;
 
         public InvalidOutputTypeStack() {

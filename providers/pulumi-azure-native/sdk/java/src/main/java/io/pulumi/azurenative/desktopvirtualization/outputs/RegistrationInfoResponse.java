@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.desktopvirtualization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegistrationInfoResponse {
     /**
      * Expiration time of registration token.
@@ -27,11 +27,11 @@ public final class RegistrationInfoResponse {
      */
     private final @Nullable String token;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegistrationInfoResponse(
-        @OutputCustomType.Parameter("expirationTime") @Nullable String expirationTime,
-        @OutputCustomType.Parameter("registrationTokenOperation") @Nullable String registrationTokenOperation,
-        @OutputCustomType.Parameter("token") @Nullable String token) {
+        @CustomType.Parameter("expirationTime") @Nullable String expirationTime,
+        @CustomType.Parameter("registrationTokenOperation") @Nullable String registrationTokenOperation,
+        @CustomType.Parameter("token") @Nullable String token) {
         this.expirationTime = expirationTime;
         this.registrationTokenOperation = registrationTokenOperation;
         this.token = token;

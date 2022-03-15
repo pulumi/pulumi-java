@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.worklink.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FleetIdentityProvider {
     /**
      * The SAML metadata document provided by the customer’s identity provider.
@@ -20,10 +20,10 @@ public final class FleetIdentityProvider {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FleetIdentityProvider(
-        @OutputCustomType.Parameter("samlMetadata") String samlMetadata,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("samlMetadata") String samlMetadata,
+        @CustomType.Parameter("type") String type) {
         this.samlMetadata = samlMetadata;
         this.type = type;
     }

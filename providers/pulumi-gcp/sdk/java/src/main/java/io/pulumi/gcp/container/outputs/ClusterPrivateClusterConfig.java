@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.ClusterPrivateClusterConfigMasterGlobalAccessConfig;
 import java.lang.Boolean;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterPrivateClusterConfig {
     /**
      * When `true`, the cluster's private
@@ -63,15 +63,15 @@ public final class ClusterPrivateClusterConfig {
      */
     private final @Nullable String publicEndpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterPrivateClusterConfig(
-        @OutputCustomType.Parameter("enablePrivateEndpoint") Boolean enablePrivateEndpoint,
-        @OutputCustomType.Parameter("enablePrivateNodes") @Nullable Boolean enablePrivateNodes,
-        @OutputCustomType.Parameter("masterGlobalAccessConfig") @Nullable ClusterPrivateClusterConfigMasterGlobalAccessConfig masterGlobalAccessConfig,
-        @OutputCustomType.Parameter("masterIpv4CidrBlock") @Nullable String masterIpv4CidrBlock,
-        @OutputCustomType.Parameter("peeringName") @Nullable String peeringName,
-        @OutputCustomType.Parameter("privateEndpoint") @Nullable String privateEndpoint,
-        @OutputCustomType.Parameter("publicEndpoint") @Nullable String publicEndpoint) {
+        @CustomType.Parameter("enablePrivateEndpoint") Boolean enablePrivateEndpoint,
+        @CustomType.Parameter("enablePrivateNodes") @Nullable Boolean enablePrivateNodes,
+        @CustomType.Parameter("masterGlobalAccessConfig") @Nullable ClusterPrivateClusterConfigMasterGlobalAccessConfig masterGlobalAccessConfig,
+        @CustomType.Parameter("masterIpv4CidrBlock") @Nullable String masterIpv4CidrBlock,
+        @CustomType.Parameter("peeringName") @Nullable String peeringName,
+        @CustomType.Parameter("privateEndpoint") @Nullable String privateEndpoint,
+        @CustomType.Parameter("publicEndpoint") @Nullable String publicEndpoint) {
         this.enablePrivateEndpoint = enablePrivateEndpoint;
         this.enablePrivateNodes = enablePrivateNodes;
         this.masterGlobalAccessConfig = masterGlobalAccessConfig;

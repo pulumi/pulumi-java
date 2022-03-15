@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.EntityReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse extends io.pulu
      * The self-hosted integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable EntityReferenceResponse connectVia;
 
     public Optional<EntityReferenceResponse> getConnectVia() {
@@ -34,7 +34,7 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse extends io.pulu
      * The path to contain the staged data in the Blob storage.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable String path;
 
     public Optional<String> getPath() {
@@ -45,7 +45,7 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse extends io.pulu
      * The staging linked service reference.
      * 
      */
-    @InputImport(name="stagingLinkedService")
+    @Import(name="stagingLinkedService")
       private final @Nullable EntityReferenceResponse stagingLinkedService;
 
     public Optional<EntityReferenceResponse> getStagingLinkedService() {

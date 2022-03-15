@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProtocolCustomSettingsFormatResponse {
     /**
      * The protocol for which the DDoS protection policy is being customized.
@@ -32,12 +32,12 @@ public final class ProtocolCustomSettingsFormatResponse {
      */
     private final @Nullable String triggerSensitivityOverride;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProtocolCustomSettingsFormatResponse(
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
-        @OutputCustomType.Parameter("sourceRateOverride") @Nullable String sourceRateOverride,
-        @OutputCustomType.Parameter("triggerRateOverride") @Nullable String triggerRateOverride,
-        @OutputCustomType.Parameter("triggerSensitivityOverride") @Nullable String triggerSensitivityOverride) {
+        @CustomType.Parameter("protocol") @Nullable String protocol,
+        @CustomType.Parameter("sourceRateOverride") @Nullable String sourceRateOverride,
+        @CustomType.Parameter("triggerRateOverride") @Nullable String triggerRateOverride,
+        @CustomType.Parameter("triggerSensitivityOverride") @Nullable String triggerSensitivityOverride) {
         this.protocol = protocol;
         this.sourceRateOverride = sourceRateOverride;
         this.triggerRateOverride = triggerRateOverride;

@@ -5,7 +5,7 @@ package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.aws.servicecatalog.inputs.ProductProvisioningArtifactParametersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    @InputImport(name="acceptLanguage")
+    @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
     public Output<String> getAcceptLanguage() {
@@ -31,7 +31,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the provisioning artifact (i.e., version), including how it differs from the previous provisioning artifact.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * Distributor (i.e., vendor) of the product.
      * 
      */
-    @InputImport(name="distributor")
+    @Import(name="distributor")
       private final @Nullable Output<String> distributor;
 
     public Output<String> getDistributor() {
@@ -53,7 +53,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the provisioning artifact (for example, `v1`, `v2beta`). No spaces are allowed.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -64,7 +64,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * Owner of the product.
      * 
      */
-    @InputImport(name="owner", required=true)
+    @Import(name="owner", required=true)
       private final Output<String> owner;
 
     public Output<String> getOwner() {
@@ -75,7 +75,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for provisioning artifact (i.e., version) parameters. Detailed below.
      * 
      */
-    @InputImport(name="provisioningArtifactParameters", required=true)
+    @Import(name="provisioningArtifactParameters", required=true)
       private final Output<ProductProvisioningArtifactParametersArgs> provisioningArtifactParameters;
 
     public Output<ProductProvisioningArtifactParametersArgs> getProvisioningArtifactParameters() {
@@ -86,7 +86,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * Support information about the product.
      * 
      */
-    @InputImport(name="supportDescription")
+    @Import(name="supportDescription")
       private final @Nullable Output<String> supportDescription;
 
     public Output<String> getSupportDescription() {
@@ -97,7 +97,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * Contact email for product support.
      * 
      */
-    @InputImport(name="supportEmail")
+    @Import(name="supportEmail")
       private final @Nullable Output<String> supportEmail;
 
     public Output<String> getSupportEmail() {
@@ -108,7 +108,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * Contact URL for product support.
      * 
      */
-    @InputImport(name="supportUrl")
+    @Import(name="supportUrl")
       private final @Nullable Output<String> supportUrl;
 
     public Output<String> getSupportUrl() {
@@ -119,7 +119,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * Tags to apply to the product. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -130,7 +130,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * Type of provisioning artifact. Valid values: `CLOUD_FORMATION_TEMPLATE`, `MARKETPLACE_AMI`, `MARKETPLACE_CAR` (Marketplace Clusters and AWS Resources).
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class IdentityPoolCognitoIdentityProviderGetArgs extends io.pulumi.
      * The client ID for the Amazon Cognito Identity User Pool.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -30,7 +30,7 @@ public final class IdentityPoolCognitoIdentityProviderGetArgs extends io.pulumi.
      * The provider name for an Amazon Cognito Identity User Pool.
      * 
      */
-    @InputImport(name="providerName")
+    @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
     public Output<String> getProviderName() {
@@ -41,7 +41,7 @@ public final class IdentityPoolCognitoIdentityProviderGetArgs extends io.pulumi.
      * Whether server-side token validation is enabled for the identity provider’s token or not.
      * 
      */
-    @InputImport(name="serverSideTokenCheck")
+    @Import(name="serverSideTokenCheck")
       private final @Nullable Output<Boolean> serverSideTokenCheck;
 
     public Output<Boolean> getServerSideTokenCheck() {

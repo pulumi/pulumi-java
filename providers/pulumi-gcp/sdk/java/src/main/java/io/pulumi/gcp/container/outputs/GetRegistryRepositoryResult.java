@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRegistryRepositoryResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -20,12 +20,12 @@ public final class GetRegistryRepositoryResult {
     private final @Nullable String region;
     private final String repositoryUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegistryRepositoryResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("repositoryUrl") String repositoryUrl) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("repositoryUrl") String repositoryUrl) {
         this.id = id;
         this.project = project;
         this.region = region;

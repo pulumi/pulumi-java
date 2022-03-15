@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.eventarc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.eventarc_v1.outputs.CloudRunResponse;
 import io.pulumi.googlenative.eventarc_v1.outputs.GKEResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DestinationResponse {
     /**
      * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
@@ -27,11 +27,11 @@ public final class DestinationResponse {
      */
     private final GKEResponse gke;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DestinationResponse(
-        @OutputCustomType.Parameter("cloudFunction") String cloudFunction,
-        @OutputCustomType.Parameter("cloudRun") CloudRunResponse cloudRun,
-        @OutputCustomType.Parameter("gke") GKEResponse gke) {
+        @CustomType.Parameter("cloudFunction") String cloudFunction,
+        @CustomType.Parameter("cloudRun") CloudRunResponse cloudRun,
+        @CustomType.Parameter("gke") GKEResponse gke) {
         this.cloudFunction = cloudFunction;
         this.cloudRun = cloudRun;
         this.gke = gke;

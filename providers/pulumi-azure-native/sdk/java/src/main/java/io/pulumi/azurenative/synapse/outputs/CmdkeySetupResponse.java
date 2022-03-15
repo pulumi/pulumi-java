@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.SecureStringResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CmdkeySetupResponse {
     /**
      * The password of data source access.
@@ -33,12 +33,12 @@ public final class CmdkeySetupResponse {
      */
     private final Object userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CmdkeySetupResponse(
-        @OutputCustomType.Parameter("password") SecureStringResponse password,
-        @OutputCustomType.Parameter("targetName") Object targetName,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userName") Object userName) {
+        @CustomType.Parameter("password") SecureStringResponse password,
+        @CustomType.Parameter("targetName") Object targetName,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userName") Object userName) {
         this.password = password;
         this.targetName = targetName;
         this.type = type;

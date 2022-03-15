@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse {
     /**
      * Number of HTTP(S) requests for calculating the threshold.
@@ -20,10 +20,10 @@ public final class SecurityPolicyRuleRateLimitOptionsThresholdResponse {
      */
     private final Integer intervalSec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityPolicyRuleRateLimitOptionsThresholdResponse(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("intervalSec") Integer intervalSec) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("intervalSec") Integer intervalSec) {
         this.count = count;
         this.intervalSec = intervalSec;
     }

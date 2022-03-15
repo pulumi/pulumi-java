@@ -4,16 +4,16 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupAndStatement {
     private final List<RuleGroupStatement> statements;
 
-    @OutputCustomType.Constructor
-    private RuleGroupAndStatement(@OutputCustomType.Parameter("statements") List<RuleGroupStatement> statements) {
+    @CustomType.Constructor
+    private RuleGroupAndStatement(@CustomType.Parameter("statements") List<RuleGroupStatement> statements) {
         this.statements = statements;
     }
 

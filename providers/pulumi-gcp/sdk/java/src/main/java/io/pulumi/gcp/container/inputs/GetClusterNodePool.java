@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.GetClusterNodePoolAutoscaling;
 import io.pulumi.gcp.container.inputs.GetClusterNodePoolManagement;
 import io.pulumi.gcp.container.inputs.GetClusterNodePoolNetworkConfig;
@@ -19,42 +19,42 @@ public final class GetClusterNodePool extends io.pulumi.resources.InvokeArgs {
 
     public static final GetClusterNodePool Empty = new GetClusterNodePool();
 
-    @InputImport(name="autoscalings", required=true)
+    @Import(name="autoscalings", required=true)
       private final List<GetClusterNodePoolAutoscaling> autoscalings;
 
     public List<GetClusterNodePoolAutoscaling> getAutoscalings() {
         return this.autoscalings;
     }
 
-    @InputImport(name="initialNodeCount", required=true)
+    @Import(name="initialNodeCount", required=true)
       private final Integer initialNodeCount;
 
     public Integer getInitialNodeCount() {
         return this.initialNodeCount;
     }
 
-    @InputImport(name="instanceGroupUrls", required=true)
+    @Import(name="instanceGroupUrls", required=true)
       private final List<String> instanceGroupUrls;
 
     public List<String> getInstanceGroupUrls() {
         return this.instanceGroupUrls;
     }
 
-    @InputImport(name="managedInstanceGroupUrls", required=true)
+    @Import(name="managedInstanceGroupUrls", required=true)
       private final List<String> managedInstanceGroupUrls;
 
     public List<String> getManagedInstanceGroupUrls() {
         return this.managedInstanceGroupUrls;
     }
 
-    @InputImport(name="managements", required=true)
+    @Import(name="managements", required=true)
       private final List<GetClusterNodePoolManagement> managements;
 
     public List<GetClusterNodePoolManagement> getManagements() {
         return this.managements;
     }
 
-    @InputImport(name="maxPodsPerNode", required=true)
+    @Import(name="maxPodsPerNode", required=true)
       private final Integer maxPodsPerNode;
 
     public Integer getMaxPodsPerNode() {
@@ -65,56 +65,56 @@ public final class GetClusterNodePool extends io.pulumi.resources.InvokeArgs {
      * The name of the cluster.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="namePrefix", required=true)
+    @Import(name="namePrefix", required=true)
       private final String namePrefix;
 
     public String getNamePrefix() {
         return this.namePrefix;
     }
 
-    @InputImport(name="networkConfigs", required=true)
+    @Import(name="networkConfigs", required=true)
       private final List<GetClusterNodePoolNetworkConfig> networkConfigs;
 
     public List<GetClusterNodePoolNetworkConfig> getNetworkConfigs() {
         return this.networkConfigs;
     }
 
-    @InputImport(name="nodeConfigs", required=true)
+    @Import(name="nodeConfigs", required=true)
       private final List<GetClusterNodePoolNodeConfig> nodeConfigs;
 
     public List<GetClusterNodePoolNodeConfig> getNodeConfigs() {
         return this.nodeConfigs;
     }
 
-    @InputImport(name="nodeCount", required=true)
+    @Import(name="nodeCount", required=true)
       private final Integer nodeCount;
 
     public Integer getNodeCount() {
         return this.nodeCount;
     }
 
-    @InputImport(name="nodeLocations", required=true)
+    @Import(name="nodeLocations", required=true)
       private final List<String> nodeLocations;
 
     public List<String> getNodeLocations() {
         return this.nodeLocations;
     }
 
-    @InputImport(name="upgradeSettings", required=true)
+    @Import(name="upgradeSettings", required=true)
       private final List<GetClusterNodePoolUpgradeSetting> upgradeSettings;
 
     public List<GetClusterNodePoolUpgradeSetting> getUpgradeSettings() {
         return this.upgradeSettings;
     }
 
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

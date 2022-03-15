@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class EcKeyTypeResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. A signature algorithm that must be used. If this is omitted, any EC-based signature algorithm will be allowed.
      * 
      */
-    @InputImport(name="signatureAlgorithm", required=true)
+    @Import(name="signatureAlgorithm", required=true)
       private final String signatureAlgorithm;
 
     public String getSignatureAlgorithm() {

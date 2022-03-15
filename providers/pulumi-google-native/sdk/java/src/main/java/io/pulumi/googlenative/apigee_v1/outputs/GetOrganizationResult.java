@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AddonsConfigResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1PropertiesResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetOrganizationResult {
     /**
      * Addon configurations of the Apigee organization.
@@ -119,29 +119,29 @@ public final class GetOrganizationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOrganizationResult(
-        @OutputCustomType.Parameter("addonsConfig") GoogleCloudApigeeV1AddonsConfigResponse addonsConfig,
-        @OutputCustomType.Parameter("analyticsRegion") String analyticsRegion,
-        @OutputCustomType.Parameter("attributes") List<String> attributes,
-        @OutputCustomType.Parameter("authorizedNetwork") String authorizedNetwork,
-        @OutputCustomType.Parameter("billingType") String billingType,
-        @OutputCustomType.Parameter("caCertificate") String caCertificate,
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("customerName") String customerName,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("environments") List<String> environments,
-        @OutputCustomType.Parameter("expiresAt") String expiresAt,
-        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("portalDisabled") Boolean portalDisabled,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("properties") GoogleCloudApigeeV1PropertiesResponse properties,
-        @OutputCustomType.Parameter("runtimeDatabaseEncryptionKeyName") String runtimeDatabaseEncryptionKeyName,
-        @OutputCustomType.Parameter("runtimeType") String runtimeType,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("addonsConfig") GoogleCloudApigeeV1AddonsConfigResponse addonsConfig,
+        @CustomType.Parameter("analyticsRegion") String analyticsRegion,
+        @CustomType.Parameter("attributes") List<String> attributes,
+        @CustomType.Parameter("authorizedNetwork") String authorizedNetwork,
+        @CustomType.Parameter("billingType") String billingType,
+        @CustomType.Parameter("caCertificate") String caCertificate,
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("customerName") String customerName,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("environments") List<String> environments,
+        @CustomType.Parameter("expiresAt") String expiresAt,
+        @CustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("portalDisabled") Boolean portalDisabled,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("properties") GoogleCloudApigeeV1PropertiesResponse properties,
+        @CustomType.Parameter("runtimeDatabaseEncryptionKeyName") String runtimeDatabaseEncryptionKeyName,
+        @CustomType.Parameter("runtimeType") String runtimeType,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("type") String type) {
         this.addonsConfig = addonsConfig;
         this.analyticsRegion = analyticsRegion;
         this.attributes = attributes;

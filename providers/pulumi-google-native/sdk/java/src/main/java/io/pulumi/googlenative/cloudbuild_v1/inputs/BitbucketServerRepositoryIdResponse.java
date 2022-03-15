@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BitbucketServerRepositoryIdResponse extends io.pulumi.resourc
      * Identifier for the project storing the repository.
      * 
      */
-    @InputImport(name="projectKey", required=true)
+    @Import(name="projectKey", required=true)
       private final String projectKey;
 
     public String getProjectKey() {
@@ -32,7 +32,7 @@ public final class BitbucketServerRepositoryIdResponse extends io.pulumi.resourc
      * Identifier for the repository.
      * 
      */
-    @InputImport(name="repoSlug", required=true)
+    @Import(name="repoSlug", required=true)
       private final String repoSlug;
 
     public String getRepoSlug() {
@@ -43,7 +43,7 @@ public final class BitbucketServerRepositoryIdResponse extends io.pulumi.resourc
      * The ID of the webhook that was created for receiving events from this repo. We only create and manage a single webhook for each repo.
      * 
      */
-    @InputImport(name="webhookId", required=true)
+    @Import(name="webhookId", required=true)
       private final Integer webhookId;
 
     public Integer getWebhookId() {

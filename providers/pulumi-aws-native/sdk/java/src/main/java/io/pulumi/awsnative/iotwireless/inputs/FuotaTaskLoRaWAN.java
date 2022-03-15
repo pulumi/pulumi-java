@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotwireless.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class FuotaTaskLoRaWAN extends io.pulumi.resources.InvokeArgs {
      * FUOTA task LoRaWAN RF region
      * 
      */
-    @InputImport(name="rfRegion", required=true)
+    @Import(name="rfRegion", required=true)
       private final String rfRegion;
 
     public String getRfRegion() {
@@ -29,7 +29,7 @@ public final class FuotaTaskLoRaWAN extends io.pulumi.resources.InvokeArgs {
      * FUOTA task LoRaWAN start time
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {

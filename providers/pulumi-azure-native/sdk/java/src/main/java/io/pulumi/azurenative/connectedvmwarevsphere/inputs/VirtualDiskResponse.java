@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the controller id.
      * 
      */
-    @InputImport(name="controllerKey")
+    @Import(name="controllerKey")
       private final @Nullable Integer controllerKey;
 
     public Optional<Integer> getControllerKey() {
@@ -34,7 +34,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the device key value.
      * 
      */
-    @InputImport(name="deviceKey")
+    @Import(name="deviceKey")
       private final @Nullable Integer deviceKey;
 
     public Optional<Integer> getDeviceKey() {
@@ -45,7 +45,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the device name.
      * 
      */
-    @InputImport(name="deviceName")
+    @Import(name="deviceName")
       private final @Nullable String deviceName;
 
     public Optional<String> getDeviceName() {
@@ -56,7 +56,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the disk mode.
      * 
      */
-    @InputImport(name="diskMode")
+    @Import(name="diskMode")
       private final @Nullable String diskMode;
 
     public Optional<String> getDiskMode() {
@@ -67,7 +67,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the disk object id.
      * 
      */
-    @InputImport(name="diskObjectId", required=true)
+    @Import(name="diskObjectId", required=true)
       private final String diskObjectId;
 
     public String getDiskObjectId() {
@@ -78,7 +78,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the disk total size.
      * 
      */
-    @InputImport(name="diskSizeGB")
+    @Import(name="diskSizeGB")
       private final @Nullable Integer diskSizeGB;
 
     public Optional<Integer> getDiskSizeGB() {
@@ -89,7 +89,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the disk backing type.
      * 
      */
-    @InputImport(name="diskType")
+    @Import(name="diskType")
       private final @Nullable String diskType;
 
     public Optional<String> getDiskType() {
@@ -100,7 +100,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the label of the virtual disk in vCenter.
      * 
      */
-    @InputImport(name="label", required=true)
+    @Import(name="label", required=true)
       private final String label;
 
     public String getLabel() {
@@ -111,7 +111,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the name of the virtual disk.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -122,7 +122,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the unit number of the disk on the controller.
      * 
      */
-    @InputImport(name="unitNumber")
+    @Import(name="unitNumber")
       private final @Nullable Integer unitNumber;
 
     public Optional<Integer> getUnitNumber() {

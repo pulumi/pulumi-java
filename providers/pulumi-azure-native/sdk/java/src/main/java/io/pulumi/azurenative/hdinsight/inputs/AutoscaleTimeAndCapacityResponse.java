@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AutoscaleTimeAndCapacityResponse extends io.pulumi.resources.
      * The maximum instance count of the cluster
      * 
      */
-    @InputImport(name="maxInstanceCount")
+    @Import(name="maxInstanceCount")
       private final @Nullable Integer maxInstanceCount;
 
     public Optional<Integer> getMaxInstanceCount() {
@@ -34,7 +34,7 @@ public final class AutoscaleTimeAndCapacityResponse extends io.pulumi.resources.
      * The minimum instance count of the cluster
      * 
      */
-    @InputImport(name="minInstanceCount")
+    @Import(name="minInstanceCount")
       private final @Nullable Integer minInstanceCount;
 
     public Optional<Integer> getMinInstanceCount() {
@@ -45,7 +45,7 @@ public final class AutoscaleTimeAndCapacityResponse extends io.pulumi.resources.
      * 24-hour time in the form xx:xx
      * 
      */
-    @InputImport(name="time")
+    @Import(name="time")
       private final @Nullable String time;
 
     public Optional<String> getTime() {

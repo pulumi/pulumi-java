@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.amplify.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppProductionBranch {
     /**
      * The branch name for the production branch.
@@ -32,12 +32,12 @@ public final class AppProductionBranch {
      */
     private final @Nullable String thumbnailUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppProductionBranch(
-        @OutputCustomType.Parameter("branchName") @Nullable String branchName,
-        @OutputCustomType.Parameter("lastDeployTime") @Nullable String lastDeployTime,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("thumbnailUrl") @Nullable String thumbnailUrl) {
+        @CustomType.Parameter("branchName") @Nullable String branchName,
+        @CustomType.Parameter("lastDeployTime") @Nullable String lastDeployTime,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("thumbnailUrl") @Nullable String thumbnailUrl) {
         this.branchName = branchName;
         this.lastDeployTime = lastDeployTime;
         this.status = status;

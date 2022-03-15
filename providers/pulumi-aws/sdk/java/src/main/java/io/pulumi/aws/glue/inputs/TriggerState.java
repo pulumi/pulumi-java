@@ -6,7 +6,7 @@ package io.pulumi.aws.glue.inputs;
 import io.pulumi.aws.glue.inputs.TriggerActionGetArgs;
 import io.pulumi.aws.glue.inputs.TriggerPredicateGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * List of actions initiated by this trigger when it fires. See Actions Below.
      * 
      */
-    @InputImport(name="actions")
+    @Import(name="actions")
       private final @Nullable Output<List<TriggerActionGetArgs>> actions;
 
     public Output<List<TriggerActionGetArgs>> getActions() {
@@ -34,7 +34,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of Glue Trigger
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -45,7 +45,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * A description of the new trigger.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -56,7 +56,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * Start the trigger. Defaults to `true`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -67,7 +67,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * The name of the trigger.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -78,7 +78,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. See Predicate Below.
      * 
      */
-    @InputImport(name="predicate")
+    @Import(name="predicate")
       private final @Nullable Output<TriggerPredicateGetArgs> predicate;
 
     public Output<TriggerPredicateGetArgs> getPredicate() {
@@ -89,7 +89,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
     public Output<String> getSchedule() {
@@ -100,7 +100,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * Set to true to start `SCHEDULED` and `CONDITIONAL` triggers when created. True is not supported for `ON_DEMAND` triggers.
      * 
      */
-    @InputImport(name="startOnCreation")
+    @Import(name="startOnCreation")
       private final @Nullable Output<Boolean> startOnCreation;
 
     public Output<Boolean> getStartOnCreation() {
@@ -111,7 +111,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -122,7 +122,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -133,7 +133,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -144,7 +144,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * The type of trigger. Valid values are `CONDITIONAL`, `ON_DEMAND`, and `SCHEDULED`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -155,7 +155,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (`ON_DEMAND` or `SCHEDULED` type) and can contain multiple additional `CONDITIONAL` triggers.
      * 
      */
-    @InputImport(name="workflowName")
+    @Import(name="workflowName")
       private final @Nullable Output<String> workflowName;
 
     public Output<String> getWorkflowName() {

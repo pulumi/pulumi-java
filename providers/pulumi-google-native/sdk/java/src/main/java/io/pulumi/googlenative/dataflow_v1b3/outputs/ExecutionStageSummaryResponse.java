@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.ComponentSourceResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.ComponentTransformResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.StageSourceResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExecutionStageSummaryResponse {
     /**
      * Collections produced and consumed by component transforms of this stage.
@@ -49,15 +49,15 @@ public final class ExecutionStageSummaryResponse {
      */
     private final List<String> prerequisiteStage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExecutionStageSummaryResponse(
-        @OutputCustomType.Parameter("componentSource") List<ComponentSourceResponse> componentSource,
-        @OutputCustomType.Parameter("componentTransform") List<ComponentTransformResponse> componentTransform,
-        @OutputCustomType.Parameter("inputSource") List<StageSourceResponse> inputSource,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputSource") List<StageSourceResponse> outputSource,
-        @OutputCustomType.Parameter("prerequisiteStage") List<String> prerequisiteStage) {
+        @CustomType.Parameter("componentSource") List<ComponentSourceResponse> componentSource,
+        @CustomType.Parameter("componentTransform") List<ComponentTransformResponse> componentTransform,
+        @CustomType.Parameter("inputSource") List<StageSourceResponse> inputSource,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputSource") List<StageSourceResponse> outputSource,
+        @CustomType.Parameter("prerequisiteStage") List<String> prerequisiteStage) {
         this.componentSource = componentSource;
         this.componentTransform = componentTransform;
         this.inputSource = inputSource;

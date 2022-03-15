@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.gamelift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FleetResourceCreationLimitPolicy {
     /**
      * Maximum number of game sessions that an individual can create during the policy period.
@@ -22,10 +22,10 @@ public final class FleetResourceCreationLimitPolicy {
      */
     private final @Nullable Integer policyPeriodInMinutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FleetResourceCreationLimitPolicy(
-        @OutputCustomType.Parameter("newGameSessionsPerCreator") @Nullable Integer newGameSessionsPerCreator,
-        @OutputCustomType.Parameter("policyPeriodInMinutes") @Nullable Integer policyPeriodInMinutes) {
+        @CustomType.Parameter("newGameSessionsPerCreator") @Nullable Integer newGameSessionsPerCreator,
+        @CustomType.Parameter("policyPeriodInMinutes") @Nullable Integer policyPeriodInMinutes) {
         this.newGameSessionsPerCreator = newGameSessionsPerCreator;
         this.policyPeriodInMinutes = policyPeriodInMinutes;
     }

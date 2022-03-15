@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IotHubLocationDescriptionResponse {
     /**
      * The name of the Azure region
@@ -22,10 +22,10 @@ public final class IotHubLocationDescriptionResponse {
      */
     private final @Nullable String role;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IotHubLocationDescriptionResponse(
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("role") @Nullable String role) {
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("role") @Nullable String role) {
         this.location = location;
         this.role = role;
     }

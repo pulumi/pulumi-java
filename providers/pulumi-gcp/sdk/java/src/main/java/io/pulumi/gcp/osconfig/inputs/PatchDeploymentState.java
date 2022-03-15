@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentInstanceFilterGetArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentOneTimeScheduleGetArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigGetArgs;
@@ -24,7 +24,7 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
      * accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -35,7 +35,7 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
      * Description of the patch deployment. Length of the description is limited to 1024 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -47,7 +47,7 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
      * 
      */
-    @InputImport(name="duration")
+    @Import(name="duration")
       private final @Nullable Output<String> duration;
 
     public Output<String> getDuration() {
@@ -59,7 +59,7 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="instanceFilter")
+    @Import(name="instanceFilter")
       private final @Nullable Output<PatchDeploymentInstanceFilterGetArgs> instanceFilter;
 
     public Output<PatchDeploymentInstanceFilterGetArgs> getInstanceFilter() {
@@ -72,7 +72,7 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
      * A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="lastExecuteTime")
+    @Import(name="lastExecuteTime")
       private final @Nullable Output<String> lastExecuteTime;
 
     public Output<String> getLastExecuteTime() {
@@ -84,7 +84,7 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
      * projects/{project_id}/patchDeployments/{patchDeploymentId}.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -96,7 +96,7 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="oneTimeSchedule")
+    @Import(name="oneTimeSchedule")
       private final @Nullable Output<PatchDeploymentOneTimeScheduleGetArgs> oneTimeSchedule;
 
     public Output<PatchDeploymentOneTimeScheduleGetArgs> getOneTimeSchedule() {
@@ -108,7 +108,7 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="patchConfig")
+    @Import(name="patchConfig")
       private final @Nullable Output<PatchDeploymentPatchConfigGetArgs> patchConfig;
 
     public Output<PatchDeploymentPatchConfigGetArgs> getPatchConfig() {
@@ -124,7 +124,7 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
      * * Must be unique within the project.
      * 
      */
-    @InputImport(name="patchDeploymentId")
+    @Import(name="patchDeploymentId")
       private final @Nullable Output<String> patchDeploymentId;
 
     public Output<String> getPatchDeploymentId() {
@@ -136,7 +136,7 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -148,7 +148,7 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="recurringSchedule")
+    @Import(name="recurringSchedule")
       private final @Nullable Output<PatchDeploymentRecurringScheduleGetArgs> recurringSchedule;
 
     public Output<PatchDeploymentRecurringScheduleGetArgs> getRecurringSchedule() {
@@ -160,7 +160,7 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="rollout")
+    @Import(name="rollout")
       private final @Nullable Output<PatchDeploymentRolloutGetArgs> rollout;
 
     public Output<PatchDeploymentRolloutGetArgs> getRollout() {
@@ -172,7 +172,7 @@ public final class PatchDeploymentState extends io.pulumi.resources.ResourceArgs
      * format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

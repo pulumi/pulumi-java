@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class NetworkPerformanceConfigResponse extends io.pulumi.resources.
 
     public static final NetworkPerformanceConfigResponse Empty = new NetworkPerformanceConfigResponse();
 
-    @InputImport(name="totalEgressBandwidthTier", required=true)
+    @Import(name="totalEgressBandwidthTier", required=true)
       private final String totalEgressBandwidthTier;
 
     public String getTotalEgressBandwidthTier() {

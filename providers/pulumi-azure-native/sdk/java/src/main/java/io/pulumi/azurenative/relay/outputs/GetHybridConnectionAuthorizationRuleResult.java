@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.relay.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetHybridConnectionAuthorizationRuleResult {
     /**
      * Resource ID.
@@ -31,12 +31,12 @@ public final class GetHybridConnectionAuthorizationRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHybridConnectionAuthorizationRuleResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("rights") List<String> rights,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("rights") List<String> rights,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.rights = rights;

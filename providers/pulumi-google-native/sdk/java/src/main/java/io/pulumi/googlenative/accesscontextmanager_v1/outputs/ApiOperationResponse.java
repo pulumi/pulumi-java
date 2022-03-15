@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.MethodSelectorResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApiOperationResponse {
     /**
      * API methods or permissions to allow. Method or permission must belong to the service specified by `service_name` field. A single MethodSelector entry with `*` specified for the `method` field will allow all methods AND permissions for the service specified in `service_name`.
@@ -22,10 +22,10 @@ public final class ApiOperationResponse {
      */
     private final String serviceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiOperationResponse(
-        @OutputCustomType.Parameter("methodSelectors") List<MethodSelectorResponse> methodSelectors,
-        @OutputCustomType.Parameter("serviceName") String serviceName) {
+        @CustomType.Parameter("methodSelectors") List<MethodSelectorResponse> methodSelectors,
+        @CustomType.Parameter("serviceName") String serviceName) {
         this.methodSelectors = methodSelectors;
         this.serviceName = serviceName;
     }

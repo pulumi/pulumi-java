@@ -9,7 +9,7 @@ import io.pulumi.azurenative.containerinstance.inputs.EnvironmentVariableArgs;
 import io.pulumi.azurenative.containerinstance.inputs.ResourceRequirementsArgs;
 import io.pulumi.azurenative.containerinstance.inputs.VolumeMountArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The commands to execute within the container instance in exec form.
      * 
      */
-    @InputImport(name="command")
+    @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
     public Output<List<String>> getCommand() {
@@ -39,7 +39,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The environment variables to set in the container instance.
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
     public Output<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
@@ -50,7 +50,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the image used to create the container instance.
      * 
      */
-    @InputImport(name="image", required=true)
+    @Import(name="image", required=true)
       private final Output<String> image;
 
     public Output<String> getImage() {
@@ -61,7 +61,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The liveness probe.
      * 
      */
-    @InputImport(name="livenessProbe")
+    @Import(name="livenessProbe")
       private final @Nullable Output<ContainerProbeArgs> livenessProbe;
 
     public Output<ContainerProbeArgs> getLivenessProbe() {
@@ -72,7 +72,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The user-provided name of the container instance.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -83,7 +83,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The exposed ports on the container instance.
      * 
      */
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable Output<List<ContainerPortArgs>> ports;
 
     public Output<List<ContainerPortArgs>> getPorts() {
@@ -94,7 +94,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The readiness probe.
      * 
      */
-    @InputImport(name="readinessProbe")
+    @Import(name="readinessProbe")
       private final @Nullable Output<ContainerProbeArgs> readinessProbe;
 
     public Output<ContainerProbeArgs> getReadinessProbe() {
@@ -105,7 +105,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The resource requirements of the container instance.
      * 
      */
-    @InputImport(name="resources", required=true)
+    @Import(name="resources", required=true)
       private final Output<ResourceRequirementsArgs> resources;
 
     public Output<ResourceRequirementsArgs> getResources() {
@@ -116,7 +116,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The volume mounts available to the container instance.
      * 
      */
-    @InputImport(name="volumeMounts")
+    @Import(name="volumeMounts")
       private final @Nullable Output<List<VolumeMountArgs>> volumeMounts;
 
     public Output<List<VolumeMountArgs>> getVolumeMounts() {

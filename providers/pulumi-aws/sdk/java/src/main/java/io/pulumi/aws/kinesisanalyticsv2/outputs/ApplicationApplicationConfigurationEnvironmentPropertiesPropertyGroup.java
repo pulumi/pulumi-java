@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup {
     /**
      * The key of the application execution property key-value map.
@@ -21,10 +21,10 @@ public final class ApplicationApplicationConfigurationEnvironmentPropertiesPrope
      */
     private final Map<String,String> propertyMap;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup(
-        @OutputCustomType.Parameter("propertyGroupId") String propertyGroupId,
-        @OutputCustomType.Parameter("propertyMap") Map<String,String> propertyMap) {
+        @CustomType.Parameter("propertyGroupId") String propertyGroupId,
+        @CustomType.Parameter("propertyMap") Map<String,String> propertyMap) {
         this.propertyGroupId = propertyGroupId;
         this.propertyMap = propertyMap;
     }

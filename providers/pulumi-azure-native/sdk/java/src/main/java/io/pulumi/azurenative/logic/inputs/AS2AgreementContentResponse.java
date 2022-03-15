@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.AS2OneWayAgreementResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -20,7 +20,7 @@ public final class AS2AgreementContentResponse extends io.pulumi.resources.Invok
      * The AS2 one-way receive agreement.
      * 
      */
-    @InputImport(name="receiveAgreement", required=true)
+    @Import(name="receiveAgreement", required=true)
       private final AS2OneWayAgreementResponse receiveAgreement;
 
     public AS2OneWayAgreementResponse getReceiveAgreement() {
@@ -31,7 +31,7 @@ public final class AS2AgreementContentResponse extends io.pulumi.resources.Invok
      * The AS2 one-way send agreement.
      * 
      */
-    @InputImport(name="sendAgreement", required=true)
+    @Import(name="sendAgreement", required=true)
       private final AS2OneWayAgreementResponse sendAgreement;
 
     public AS2OneWayAgreementResponse getSendAgreement() {

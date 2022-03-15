@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GraphParameterLinkResponse {
     /**
      * The graph node's identifier
@@ -20,10 +20,10 @@ public final class GraphParameterLinkResponse {
      */
     private final String parameterKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GraphParameterLinkResponse(
-        @OutputCustomType.Parameter("nodeId") String nodeId,
-        @OutputCustomType.Parameter("parameterKey") String parameterKey) {
+        @CustomType.Parameter("nodeId") String nodeId,
+        @CustomType.Parameter("parameterKey") String parameterKey) {
         this.nodeId = nodeId;
         this.parameterKey = parameterKey;
     }

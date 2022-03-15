@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.ServiceResponseBaseResponseError;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * Expected value is 'Custom'.
      * 
      */
-    @InputImport(name="computeType", required=true)
+    @Import(name="computeType", required=true)
       private final String computeType;
 
     public String getComputeType() {
@@ -38,7 +38,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * The deployment type for the service.
      * 
      */
-    @InputImport(name="deploymentType")
+    @Import(name="deploymentType")
       private final @Nullable String deploymentType;
 
     public Optional<String> getDeploymentType() {
@@ -49,7 +49,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * The service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -60,7 +60,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * The error details.
      * 
      */
-    @InputImport(name="error", required=true)
+    @Import(name="error", required=true)
       private final ServiceResponseBaseResponseError error;
 
     public ServiceResponseBaseResponseError getError() {
@@ -71,7 +71,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * Is this the default variant.
      * 
      */
-    @InputImport(name="isDefault")
+    @Import(name="isDefault")
       private final @Nullable Boolean isDefault;
 
     public Optional<Boolean> getIsDefault() {
@@ -82,7 +82,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * The service tag dictionary. Tags are mutable.
      * 
      */
-    @InputImport(name="kvTags")
+    @Import(name="kvTags")
       private final @Nullable Map<String,String> kvTags;
 
     public Map<String,String> getKvTags() {
@@ -93,7 +93,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * The service property dictionary. Properties are immutable.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -104,7 +104,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * The current state of the service.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -115,7 +115,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * The amount of traffic variant receives.
      * 
      */
-    @InputImport(name="trafficPercentile")
+    @Import(name="trafficPercentile")
       private final @Nullable Double trafficPercentile;
 
     public Optional<Double> getTrafficPercentile() {
@@ -126,7 +126,7 @@ public final class AKSVariantResponseResponse extends io.pulumi.resources.Invoke
      * The type of the variant.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

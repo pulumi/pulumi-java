@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketLifecycleRuleItemActionResponse {
     /**
      * Target storage class. Required iff the type of the action is SetStorageClass.
@@ -20,10 +20,10 @@ public final class BucketLifecycleRuleItemActionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketLifecycleRuleItemActionResponse(
-        @OutputCustomType.Parameter("storageClass") String storageClass,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("storageClass") String storageClass,
+        @CustomType.Parameter("type") String type) {
         this.storageClass = storageClass;
         this.type = type;
     }

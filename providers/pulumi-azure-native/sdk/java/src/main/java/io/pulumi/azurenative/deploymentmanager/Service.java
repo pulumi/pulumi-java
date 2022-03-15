@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.deploymentmanager.ServiceArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -49,7 +49,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -77,7 +77,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The Azure location to which the resources in the service belong to or should be deployed to.
      * 
      */
-    @OutputExport(name="targetLocation", type=String.class, parameters={})
+    @Export(name="targetLocation", type=String.class, parameters={})
     private Output<String> targetLocation;
 
     /**
@@ -91,7 +91,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The subscription to which the resources in the service belong to or should be deployed to.
      * 
      */
-    @OutputExport(name="targetSubscriptionId", type=String.class, parameters={})
+    @Export(name="targetSubscriptionId", type=String.class, parameters={})
     private Output<String> targetSubscriptionId;
 
     /**
@@ -105,7 +105,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

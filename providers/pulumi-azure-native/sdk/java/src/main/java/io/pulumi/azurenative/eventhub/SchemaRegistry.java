@@ -8,7 +8,7 @@ import io.pulumi.azurenative.eventhub.SchemaRegistryArgs;
 import io.pulumi.azurenative.eventhub.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class SchemaRegistry extends io.pulumi.resources.CustomResource {
      * Exact time the Schema Group was created.
      * 
      */
-    @OutputExport(name="createdAtUtc", type=String.class, parameters={})
+    @Export(name="createdAtUtc", type=String.class, parameters={})
     private Output<String> createdAtUtc;
 
     /**
@@ -50,7 +50,7 @@ public class SchemaRegistry extends io.pulumi.resources.CustomResource {
      * The ETag value.
      * 
      */
-    @OutputExport(name="eTag", type=String.class, parameters={})
+    @Export(name="eTag", type=String.class, parameters={})
     private Output<String> eTag;
 
     /**
@@ -64,7 +64,7 @@ public class SchemaRegistry extends io.pulumi.resources.CustomResource {
      * dictionary object for SchemaGroup group properties
      * 
      */
-    @OutputExport(name="groupProperties", type=Map.class, parameters={String.class, String.class})
+    @Export(name="groupProperties", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> groupProperties;
 
     /**
@@ -78,7 +78,7 @@ public class SchemaRegistry extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -92,7 +92,7 @@ public class SchemaRegistry extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -102,13 +102,13 @@ public class SchemaRegistry extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="schemaCompatibility", type=String.class, parameters={})
+    @Export(name="schemaCompatibility", type=String.class, parameters={})
     private Output</* @Nullable */ String> schemaCompatibility;
 
     public Output</* @Nullable */ String> getSchemaCompatibility() {
         return this.schemaCompatibility;
     }
-    @OutputExport(name="schemaType", type=String.class, parameters={})
+    @Export(name="schemaType", type=String.class, parameters={})
     private Output</* @Nullable */ String> schemaType;
 
     public Output</* @Nullable */ String> getSchemaType() {
@@ -118,7 +118,7 @@ public class SchemaRegistry extends io.pulumi.resources.CustomResource {
      * The system meta data relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -132,7 +132,7 @@ public class SchemaRegistry extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.EventHub/Namespaces" or "Microsoft.EventHub/Namespaces/EventHubs"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -146,7 +146,7 @@ public class SchemaRegistry extends io.pulumi.resources.CustomResource {
      * Exact time the Schema Group was updated
      * 
      */
-    @OutputExport(name="updatedAtUtc", type=String.class, parameters={})
+    @Export(name="updatedAtUtc", type=String.class, parameters={})
     private Output<String> updatedAtUtc;
 
     /**

@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek {
     private final String day;
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek(
-        @OutputCustomType.Parameter("day") String day,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("day") String day,
+        @CustomType.Parameter("startTime") String startTime) {
         this.day = day;
         this.startTime = startTime;
     }

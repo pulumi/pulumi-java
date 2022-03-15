@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.enums.AnalysisErrorType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnalysisError {
     /**
      * <p>The message associated with the analysis error.</p>
@@ -19,10 +19,10 @@ public final class AnalysisError {
     private final @Nullable String message;
     private final @Nullable AnalysisErrorType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalysisError(
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("type") @Nullable AnalysisErrorType type) {
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("type") @Nullable AnalysisErrorType type) {
         this.message = message;
         this.type = type;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.ConfigMapProjectionArgs;
 import io.pulumi.kubernetes.core_v1.inputs.DownwardAPIProjectionArgs;
 import io.pulumi.kubernetes.core_v1.inputs.SecretProjectionArgs;
@@ -25,7 +25,7 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
      * information about the configMap data to project
      * 
      */
-    @InputImport(name="configMap")
+    @Import(name="configMap")
       private final @Nullable Output<ConfigMapProjectionArgs> configMap;
 
     public Output<ConfigMapProjectionArgs> getConfigMap() {
@@ -36,7 +36,7 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
      * information about the downwardAPI data to project
      * 
      */
-    @InputImport(name="downwardAPI")
+    @Import(name="downwardAPI")
       private final @Nullable Output<DownwardAPIProjectionArgs> downwardAPI;
 
     public Output<DownwardAPIProjectionArgs> getDownwardAPI() {
@@ -47,7 +47,7 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
      * information about the secret data to project
      * 
      */
-    @InputImport(name="secret")
+    @Import(name="secret")
       private final @Nullable Output<SecretProjectionArgs> secret;
 
     public Output<SecretProjectionArgs> getSecret() {
@@ -58,7 +58,7 @@ public final class VolumeProjectionArgs extends io.pulumi.resources.ResourceArgs
      * information about the serviceAccountToken data to project
      * 
      */
-    @InputImport(name="serviceAccountToken")
+    @Import(name="serviceAccountToken")
       private final @Nullable Output<ServiceAccountTokenProjectionArgs> serviceAccountToken;
 
     public Output<ServiceAccountTokenProjectionArgs> getServiceAccountToken() {

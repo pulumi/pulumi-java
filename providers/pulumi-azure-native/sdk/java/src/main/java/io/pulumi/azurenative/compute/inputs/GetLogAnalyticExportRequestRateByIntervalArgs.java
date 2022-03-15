@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.enums.IntervalInMins;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
      * SAS Uri of the logging blob container to which LogAnalytics Api writes output logs to.
      * 
      */
-    @InputImport(name="blobContainerSasUri", required=true)
+    @Import(name="blobContainerSasUri", required=true)
       private final String blobContainerSasUri;
 
     public String getBlobContainerSasUri() {
@@ -31,7 +31,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
      * From time of the query
      * 
      */
-    @InputImport(name="fromTime", required=true)
+    @Import(name="fromTime", required=true)
       private final String fromTime;
 
     public String getFromTime() {
@@ -42,7 +42,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
      * Group query result by Client Application ID.
      * 
      */
-    @InputImport(name="groupByClientApplicationId")
+    @Import(name="groupByClientApplicationId")
       private final @Nullable Boolean groupByClientApplicationId;
 
     public Optional<Boolean> getGroupByClientApplicationId() {
@@ -53,7 +53,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
      * Group query result by Operation Name.
      * 
      */
-    @InputImport(name="groupByOperationName")
+    @Import(name="groupByOperationName")
       private final @Nullable Boolean groupByOperationName;
 
     public Optional<Boolean> getGroupByOperationName() {
@@ -64,7 +64,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
      * Group query result by Resource Name.
      * 
      */
-    @InputImport(name="groupByResourceName")
+    @Import(name="groupByResourceName")
       private final @Nullable Boolean groupByResourceName;
 
     public Optional<Boolean> getGroupByResourceName() {
@@ -75,7 +75,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
      * Group query result by Throttle Policy applied.
      * 
      */
-    @InputImport(name="groupByThrottlePolicy")
+    @Import(name="groupByThrottlePolicy")
       private final @Nullable Boolean groupByThrottlePolicy;
 
     public Optional<Boolean> getGroupByThrottlePolicy() {
@@ -86,7 +86,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
      * Group query result by User Agent.
      * 
      */
-    @InputImport(name="groupByUserAgent")
+    @Import(name="groupByUserAgent")
       private final @Nullable Boolean groupByUserAgent;
 
     public Optional<Boolean> getGroupByUserAgent() {
@@ -97,7 +97,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
      * Interval value in minutes used to create LogAnalytics call rate logs.
      * 
      */
-    @InputImport(name="intervalLength", required=true)
+    @Import(name="intervalLength", required=true)
       private final IntervalInMins intervalLength;
 
     public IntervalInMins getIntervalLength() {
@@ -108,7 +108,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
      * The location upon which virtual-machine-sizes is queried.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -119,7 +119,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalArgs extends io.pulu
      * To time of the query
      * 
      */
-    @InputImport(name="toTime", required=true)
+    @Import(name="toTime", required=true)
       private final String toTime;
 
     public String getToTime() {

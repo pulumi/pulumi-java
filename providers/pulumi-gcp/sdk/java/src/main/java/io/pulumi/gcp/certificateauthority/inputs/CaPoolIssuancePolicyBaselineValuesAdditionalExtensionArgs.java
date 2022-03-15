@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs ext
      * handle this extension, the client should consider this to be an error).
      * 
      */
-    @InputImport(name="critical", required=true)
+    @Import(name="critical", required=true)
       private final Output<Boolean> critical;
 
     public Output<Boolean> getCritical() {
@@ -32,7 +32,7 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs ext
      * Structure is documented below.
      * 
      */
-    @InputImport(name="objectId", required=true)
+    @Import(name="objectId", required=true)
       private final Output<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs> objectId;
 
     public Output<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs> getObjectId() {
@@ -43,7 +43,7 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs ext
      * The value of this X.509 extension. A base64-encoded string.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

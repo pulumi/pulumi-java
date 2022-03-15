@@ -11,7 +11,7 @@ import io.pulumi.aws.apprunner.outputs.ServiceHealthCheckConfiguration;
 import io.pulumi.aws.apprunner.outputs.ServiceInstanceConfiguration;
 import io.pulumi.aws.apprunner.outputs.ServiceSourceConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -37,7 +37,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * ARN of the App Runner service.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -51,7 +51,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * ARN of an App Runner automatic scaling configuration resource that you want to associate with your service. If not provided, App Runner associates the latest revision of a default auto scaling configuration.
      * 
      */
-    @OutputExport(name="autoScalingConfigurationArn", type=String.class, parameters={})
+    @Export(name="autoScalingConfigurationArn", type=String.class, parameters={})
     private Output<String> autoScalingConfigurationArn;
 
     /**
@@ -65,7 +65,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * An optional custom encryption key that App Runner uses to encrypt the copy of your source repository that it maintains and your service logs. By default, App Runner uses an AWS managed CMK. See Encryption Configuration below for more details.
      * 
      */
-    @OutputExport(name="encryptionConfiguration", type=ServiceEncryptionConfiguration.class, parameters={})
+    @Export(name="encryptionConfiguration", type=ServiceEncryptionConfiguration.class, parameters={})
     private Output</* @Nullable */ ServiceEncryptionConfiguration> encryptionConfiguration;
 
     /**
@@ -79,7 +79,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Settings of the health check that AWS App Runner performs to monitor the health of your service. See Health Check Configuration below for more details.
      * 
      */
-    @OutputExport(name="healthCheckConfiguration", type=ServiceHealthCheckConfiguration.class, parameters={})
+    @Export(name="healthCheckConfiguration", type=ServiceHealthCheckConfiguration.class, parameters={})
     private Output<ServiceHealthCheckConfiguration> healthCheckConfiguration;
 
     /**
@@ -93,7 +93,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The runtime configuration of instances (scaling units) of the App Runner service. See Instance Configuration below for more details.
      * 
      */
-    @OutputExport(name="instanceConfiguration", type=ServiceInstanceConfiguration.class, parameters={})
+    @Export(name="instanceConfiguration", type=ServiceInstanceConfiguration.class, parameters={})
     private Output<ServiceInstanceConfiguration> instanceConfiguration;
 
     /**
@@ -107,7 +107,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * An alphanumeric ID that App Runner generated for this service. Unique within the AWS Region.
      * 
      */
-    @OutputExport(name="serviceId", type=String.class, parameters={})
+    @Export(name="serviceId", type=String.class, parameters={})
     private Output<String> serviceId;
 
     /**
@@ -121,7 +121,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Name of the service.
      * 
      */
-    @OutputExport(name="serviceName", type=String.class, parameters={})
+    @Export(name="serviceName", type=String.class, parameters={})
     private Output<String> serviceName;
 
     /**
@@ -135,7 +135,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * A subdomain URL that App Runner generated for this service. You can use this URL to access your service web application.
      * 
      */
-    @OutputExport(name="serviceUrl", type=String.class, parameters={})
+    @Export(name="serviceUrl", type=String.class, parameters={})
     private Output<String> serviceUrl;
 
     /**
@@ -149,7 +149,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The source to deploy to the App Runner service. Can be a code or an image repository. See Source Configuration below for more details.
      * 
      */
-    @OutputExport(name="sourceConfiguration", type=ServiceSourceConfiguration.class, parameters={})
+    @Export(name="sourceConfiguration", type=ServiceSourceConfiguration.class, parameters={})
     private Output<ServiceSourceConfiguration> sourceConfiguration;
 
     /**
@@ -163,7 +163,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The current state of the App Runner service.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -177,7 +177,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -191,7 +191,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

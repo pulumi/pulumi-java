@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.iam_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.iam_v1.OrganizationRoleArgs;
@@ -23,7 +23,7 @@ public class OrganizationRole extends io.pulumi.resources.CustomResource {
      * The current deleted state of the role. This field is read only. It will be ignored in calls to CreateRole and UpdateRole.
      * 
      */
-    @OutputExport(name="deleted", type=Boolean.class, parameters={})
+    @Export(name="deleted", type=Boolean.class, parameters={})
     private Output<Boolean> deleted;
 
     /**
@@ -37,7 +37,7 @@ public class OrganizationRole extends io.pulumi.resources.CustomResource {
      * Optional. A human-readable description for the role.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -51,7 +51,7 @@ public class OrganizationRole extends io.pulumi.resources.CustomResource {
      * Used to perform a consistent read-modify-write.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -65,7 +65,7 @@ public class OrganizationRole extends io.pulumi.resources.CustomResource {
      * The names of the permissions this role grants when bound in an IAM policy.
      * 
      */
-    @OutputExport(name="includedPermissions", type=List.class, parameters={String.class})
+    @Export(name="includedPermissions", type=List.class, parameters={String.class})
     private Output<List<String>> includedPermissions;
 
     /**
@@ -79,7 +79,7 @@ public class OrganizationRole extends io.pulumi.resources.CustomResource {
      * The name of the role. When Role is used in CreateRole, the role name must not be set. When Role is used in output and other input such as UpdateRole, the role name is the complete path, e.g., roles/logging.viewer for predefined roles and organizations/{ORGANIZATION_ID}/roles/logging.viewer for custom roles.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class OrganizationRole extends io.pulumi.resources.CustomResource {
      * The current launch stage of the role. If the `ALPHA` launch stage has been selected for a role, the `stage` field will not be included in the returned definition for the role.
      * 
      */
-    @OutputExport(name="stage", type=String.class, parameters={})
+    @Export(name="stage", type=String.class, parameters={})
     private Output<String> stage;
 
     /**
@@ -107,7 +107,7 @@ public class OrganizationRole extends io.pulumi.resources.CustomResource {
      * Optional. A human-readable title for the role. Typically this is limited to 100 UTF-8 bytes.
      * 
      */
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output<String> title;
 
     /**

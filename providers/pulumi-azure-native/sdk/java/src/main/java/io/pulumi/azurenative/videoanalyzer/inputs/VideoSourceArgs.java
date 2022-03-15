@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoSequenceAbsoluteTimeMarkersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class VideoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Node name. Must be unique within the topology.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class VideoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Describes a sequence of datetime ranges. The video source only picks up recorded media within these ranges.
      * 
      */
-    @InputImport(name="timeSequences", required=true)
+    @Import(name="timeSequences", required=true)
       private final Output<VideoSequenceAbsoluteTimeMarkersArgs> timeSequences;
 
     public Output<VideoSequenceAbsoluteTimeMarkersArgs> getTimeSequences() {
@@ -45,7 +45,7 @@ public final class VideoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is '#Microsoft.VideoAnalyzer.VideoSource'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -56,7 +56,7 @@ public final class VideoSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Video Analyzer video resource to be used as the source.
      * 
      */
-    @InputImport(name="videoName", required=true)
+    @Import(name="videoName", required=true)
       private final Output<String> videoName;
 
     public Output<String> getVideoName() {

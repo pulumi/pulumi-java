@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2TimePartConfigResponse {
     /**
      * The part of the time to keep.
@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2TimePartConfigResponse {
      */
     private final String partToExtract;
 
-    @OutputCustomType.Constructor
-    private GooglePrivacyDlpV2TimePartConfigResponse(@OutputCustomType.Parameter("partToExtract") String partToExtract) {
+    @CustomType.Constructor
+    private GooglePrivacyDlpV2TimePartConfigResponse(@CustomType.Parameter("partToExtract") String partToExtract) {
         this.partToExtract = partToExtract;
     }
 

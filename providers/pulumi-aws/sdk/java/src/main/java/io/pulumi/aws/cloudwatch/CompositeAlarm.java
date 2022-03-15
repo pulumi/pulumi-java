@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudwatch.CompositeAlarmArgs;
 import io.pulumi.aws.cloudwatch.inputs.CompositeAlarmState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * Indicates whether actions should be executed during any changes to the alarm state of the composite alarm. Defaults to `true`.
      * 
      */
-    @OutputExport(name="actionsEnabled", type=Boolean.class, parameters={})
+    @Export(name="actionsEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> actionsEnabled;
 
     /**
@@ -51,7 +51,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * The set of actions to execute when this alarm transitions to the `ALARM` state from any other state. Each action is specified as an ARN. Up to 5 actions are allowed.
      * 
      */
-    @OutputExport(name="alarmActions", type=List.class, parameters={String.class})
+    @Export(name="alarmActions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> alarmActions;
 
     /**
@@ -65,7 +65,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * The description for the composite alarm.
      * 
      */
-    @OutputExport(name="alarmDescription", type=String.class, parameters={})
+    @Export(name="alarmDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> alarmDescription;
 
     /**
@@ -79,7 +79,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * The name for the composite alarm. This name must be unique within the region.
      * 
      */
-    @OutputExport(name="alarmName", type=String.class, parameters={})
+    @Export(name="alarmName", type=String.class, parameters={})
     private Output<String> alarmName;
 
     /**
@@ -93,7 +93,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * An expression that specifies which other alarms are to be evaluated to determine this composite alarm's state. For syntax, see [Creating a Composite Alarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Create_Composite_Alarm.html). The maximum length is 10240 characters.
      * 
      */
-    @OutputExport(name="alarmRule", type=String.class, parameters={})
+    @Export(name="alarmRule", type=String.class, parameters={})
     private Output<String> alarmRule;
 
     /**
@@ -107,7 +107,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * The ARN of the composite alarm.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -121,7 +121,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * The set of actions to execute when this alarm transitions to the `INSUFFICIENT_DATA` state from any other state. Each action is specified as an ARN. Up to 5 actions are allowed.
      * 
      */
-    @OutputExport(name="insufficientDataActions", type=List.class, parameters={String.class})
+    @Export(name="insufficientDataActions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> insufficientDataActions;
 
     /**
@@ -135,7 +135,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * The set of actions to execute when this alarm transitions to an `OK` state from any other state. Each action is specified as an ARN. Up to 5 actions are allowed.
      * 
      */
-    @OutputExport(name="okActions", type=List.class, parameters={String.class})
+    @Export(name="okActions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> okActions;
 
     /**
@@ -149,7 +149,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * A map of tags to associate with the alarm. Up to 50 tags are allowed. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -163,7 +163,7 @@ public class CompositeAlarm extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

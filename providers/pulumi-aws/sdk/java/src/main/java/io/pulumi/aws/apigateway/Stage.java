@@ -8,7 +8,7 @@ import io.pulumi.aws.apigateway.StageArgs;
 import io.pulumi.aws.apigateway.inputs.StageState;
 import io.pulumi.aws.apigateway.outputs.StageAccessLogSettings;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * Enables access logs for the API stage. Detailed below.
      * 
      */
-    @OutputExport(name="accessLogSettings", type=StageAccessLogSettings.class, parameters={})
+    @Export(name="accessLogSettings", type=StageAccessLogSettings.class, parameters={})
     private Output</* @Nullable */ StageAccessLogSettings> accessLogSettings;
 
     /**
@@ -49,7 +49,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN)
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -63,7 +63,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * Specifies whether a cache cluster is enabled for the stage
      * 
      */
-    @OutputExport(name="cacheClusterEnabled", type=Boolean.class, parameters={})
+    @Export(name="cacheClusterEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> cacheClusterEnabled;
 
     /**
@@ -77,7 +77,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * The size of the cache cluster for the stage, if enabled. Allowed values include `0.5`, `1.6`, `6.1`, `13.5`, `28.4`, `58.2`, `118` and `237`.
      * 
      */
-    @OutputExport(name="cacheClusterSize", type=String.class, parameters={})
+    @Export(name="cacheClusterSize", type=String.class, parameters={})
     private Output</* @Nullable */ String> cacheClusterSize;
 
     /**
@@ -91,7 +91,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * The identifier of a client certificate for the stage.
      * 
      */
-    @OutputExport(name="clientCertificateId", type=String.class, parameters={})
+    @Export(name="clientCertificateId", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientCertificateId;
 
     /**
@@ -105,7 +105,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * The ID of the deployment that the stage points to
      * 
      */
-    @OutputExport(name="deployment", type=String.class, parameters={})
+    @Export(name="deployment", type=String.class, parameters={})
     private Output<String> deployment;
 
     /**
@@ -119,7 +119,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * The description of the stage
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -133,7 +133,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * The version of the associated API documentation
      * 
      */
-    @OutputExport(name="documentationVersion", type=String.class, parameters={})
+    @Export(name="documentationVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> documentationVersion;
 
     /**
@@ -149,7 +149,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
      * 
      */
-    @OutputExport(name="executionArn", type=String.class, parameters={})
+    @Export(name="executionArn", type=String.class, parameters={})
     private Output<String> executionArn;
 
     /**
@@ -166,7 +166,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * e.g., `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
      * 
      */
-    @OutputExport(name="invokeUrl", type=String.class, parameters={})
+    @Export(name="invokeUrl", type=String.class, parameters={})
     private Output<String> invokeUrl;
 
     /**
@@ -181,7 +181,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * The ID of the associated REST API
      * 
      */
-    @OutputExport(name="restApi", type=String.class, parameters={})
+    @Export(name="restApi", type=String.class, parameters={})
     private Output<String> restApi;
 
     /**
@@ -195,7 +195,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * The name of the stage
      * 
      */
-    @OutputExport(name="stageName", type=String.class, parameters={})
+    @Export(name="stageName", type=String.class, parameters={})
     private Output<String> stageName;
 
     /**
@@ -209,7 +209,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -223,7 +223,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -237,7 +237,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * A map that defines the stage variables
      * 
      */
-    @OutputExport(name="variables", type=Map.class, parameters={String.class, String.class})
+    @Export(name="variables", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> variables;
 
     /**
@@ -251,7 +251,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * The ARN of the WebAcl associated with the Stage.
      * 
      */
-    @OutputExport(name="webAclArn", type=String.class, parameters={})
+    @Export(name="webAclArn", type=String.class, parameters={})
     private Output<String> webAclArn;
 
     /**
@@ -265,7 +265,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * Whether active tracing with X-ray is enabled. Defaults to `false`.
      * 
      */
-    @OutputExport(name="xrayTracingEnabled", type=Boolean.class, parameters={})
+    @Export(name="xrayTracingEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> xrayTracingEnabled;
 
     /**

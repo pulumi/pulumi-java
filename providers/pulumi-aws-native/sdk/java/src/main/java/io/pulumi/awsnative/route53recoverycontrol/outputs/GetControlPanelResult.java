@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53recoverycontrol.outputs;
 
 import io.pulumi.awsnative.route53recoverycontrol.enums.ControlPanelStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetControlPanelResult {
     /**
      * The Amazon Resource Name (ARN) of the cluster.
@@ -40,13 +40,13 @@ public final class GetControlPanelResult {
      */
     private final @Nullable ControlPanelStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetControlPanelResult(
-        @OutputCustomType.Parameter("controlPanelArn") @Nullable String controlPanelArn,
-        @OutputCustomType.Parameter("defaultControlPanel") @Nullable Boolean defaultControlPanel,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("routingControlCount") @Nullable Integer routingControlCount,
-        @OutputCustomType.Parameter("status") @Nullable ControlPanelStatus status) {
+        @CustomType.Parameter("controlPanelArn") @Nullable String controlPanelArn,
+        @CustomType.Parameter("defaultControlPanel") @Nullable Boolean defaultControlPanel,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("routingControlCount") @Nullable Integer routingControlCount,
+        @CustomType.Parameter("status") @Nullable ControlPanelStatus status) {
         this.controlPanelArn = controlPanelArn;
         this.defaultControlPanel = defaultControlPanel;
         this.name = name;

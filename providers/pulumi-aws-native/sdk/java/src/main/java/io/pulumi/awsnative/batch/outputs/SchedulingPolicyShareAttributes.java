@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SchedulingPolicyShareAttributes {
     private final @Nullable String shareIdentifier;
     private final @Nullable Double weightFactor;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SchedulingPolicyShareAttributes(
-        @OutputCustomType.Parameter("shareIdentifier") @Nullable String shareIdentifier,
-        @OutputCustomType.Parameter("weightFactor") @Nullable Double weightFactor) {
+        @CustomType.Parameter("shareIdentifier") @Nullable String shareIdentifier,
+        @CustomType.Parameter("weightFactor") @Nullable Double weightFactor) {
         this.shareIdentifier = shareIdentifier;
         this.weightFactor = weightFactor;
     }

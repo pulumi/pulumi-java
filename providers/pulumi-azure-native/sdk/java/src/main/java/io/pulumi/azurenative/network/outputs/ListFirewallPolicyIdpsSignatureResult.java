@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SingleQueryResultResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListFirewallPolicyIdpsSignatureResult {
     /**
      * Number of total records matching the query.
@@ -24,10 +24,10 @@ public final class ListFirewallPolicyIdpsSignatureResult {
      */
     private final @Nullable List<SingleQueryResultResponse> signatures;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListFirewallPolicyIdpsSignatureResult(
-        @OutputCustomType.Parameter("matchingRecordsCount") @Nullable Double matchingRecordsCount,
-        @OutputCustomType.Parameter("signatures") @Nullable List<SingleQueryResultResponse> signatures) {
+        @CustomType.Parameter("matchingRecordsCount") @Nullable Double matchingRecordsCount,
+        @CustomType.Parameter("signatures") @Nullable List<SingleQueryResultResponse> signatures) {
         this.matchingRecordsCount = matchingRecordsCount;
         this.signatures = signatures;
     }

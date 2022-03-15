@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileBehaviorCriteriaArgs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileMetricDimensionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
 
     public static final SecurityProfileBehaviorArgs Empty = new SecurityProfileBehaviorArgs();
 
-    @InputImport(name="criteria")
+    @Import(name="criteria")
       private final @Nullable Output<SecurityProfileBehaviorCriteriaArgs> criteria;
 
     public Output<SecurityProfileBehaviorCriteriaArgs> getCriteria() {
@@ -32,14 +32,14 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
      * What is measured by the behavior.
      * 
      */
-    @InputImport(name="metric")
+    @Import(name="metric")
       private final @Nullable Output<String> metric;
 
     public Output<String> getMetric() {
         return this.metric == null ? Output.empty() : this.metric;
     }
 
-    @InputImport(name="metricDimension")
+    @Import(name="metricDimension")
       private final @Nullable Output<SecurityProfileMetricDimensionArgs> metricDimension;
 
     public Output<SecurityProfileMetricDimensionArgs> getMetricDimension() {
@@ -50,7 +50,7 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
      * The name for the behavior.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -61,7 +61,7 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
      * Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn't be forwarded for SNS notification.
      * 
      */
-    @InputImport(name="suppressAlerts")
+    @Import(name="suppressAlerts")
       private final @Nullable Output<Boolean> suppressAlerts;
 
     public Output<Boolean> getSuppressAlerts() {

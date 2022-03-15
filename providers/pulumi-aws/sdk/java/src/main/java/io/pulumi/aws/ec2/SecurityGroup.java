@@ -9,7 +9,7 @@ import io.pulumi.aws.ec2.inputs.SecurityGroupState;
 import io.pulumi.aws.ec2.outputs.SecurityGroupEgress;
 import io.pulumi.aws.ec2.outputs.SecurityGroupIngress;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -48,7 +48,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * ARN of the security group.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -62,7 +62,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * Description of this egress rule.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -76,7 +76,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * Configuration block for egress rules. Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
      * 
      */
-    @OutputExport(name="egress", type=List.class, parameters={SecurityGroupEgress.class})
+    @Export(name="egress", type=List.class, parameters={SecurityGroupEgress.class})
     private Output<List<SecurityGroupEgress>> egress;
 
     /**
@@ -90,7 +90,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * Configuration block for egress rules. Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
      * 
      */
-    @OutputExport(name="ingress", type=List.class, parameters={SecurityGroupIngress.class})
+    @Export(name="ingress", type=List.class, parameters={SecurityGroupIngress.class})
     private Output<List<SecurityGroupIngress>> ingress;
 
     /**
@@ -104,7 +104,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * Name of the security group. If omitted, this provider will assign a random, unique name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -118,7 +118,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output<String> namePrefix;
 
     /**
@@ -132,7 +132,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * Owner ID.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -146,7 +146,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * Instruct this provider to revoke all of the Security Groups attached ingress and egress rules before deleting the rule itself. This is normally not needed, however certain AWS services such as Elastic Map Reduce may automatically add required rules to security groups used with the service, and those rules may contain a cyclic dependency that prevent the security groups from being destroyed without removing the dependency first. Default `false`.
      * 
      */
-    @OutputExport(name="revokeRulesOnDelete", type=Boolean.class, parameters={})
+    @Export(name="revokeRulesOnDelete", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> revokeRulesOnDelete;
 
     /**
@@ -160,7 +160,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * Map of tags to assign to the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -174,7 +174,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -188,7 +188,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * VPC ID.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

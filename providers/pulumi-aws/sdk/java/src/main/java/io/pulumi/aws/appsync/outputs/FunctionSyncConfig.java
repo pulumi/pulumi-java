@@ -4,13 +4,13 @@
 package io.pulumi.aws.appsync.outputs;
 
 import io.pulumi.aws.appsync.outputs.FunctionSyncConfigLambdaConflictHandlerConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FunctionSyncConfig {
     /**
      * The Conflict Detection strategy to use. Valid values are `NONE` and `VERSION`.
@@ -28,11 +28,11 @@ public final class FunctionSyncConfig {
      */
     private final @Nullable FunctionSyncConfigLambdaConflictHandlerConfig lambdaConflictHandlerConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FunctionSyncConfig(
-        @OutputCustomType.Parameter("conflictDetection") @Nullable String conflictDetection,
-        @OutputCustomType.Parameter("conflictHandler") @Nullable String conflictHandler,
-        @OutputCustomType.Parameter("lambdaConflictHandlerConfig") @Nullable FunctionSyncConfigLambdaConflictHandlerConfig lambdaConflictHandlerConfig) {
+        @CustomType.Parameter("conflictDetection") @Nullable String conflictDetection,
+        @CustomType.Parameter("conflictHandler") @Nullable String conflictHandler,
+        @CustomType.Parameter("lambdaConflictHandlerConfig") @Nullable FunctionSyncConfigLambdaConflictHandlerConfig lambdaConflictHandlerConfig) {
         this.conflictDetection = conflictDetection;
         this.conflictHandler = conflictHandler;
         this.lambdaConflictHandlerConfig = lambdaConflictHandlerConfig;

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.workspaces.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DirectoryWorkspaceAccessProperties {
     /**
      * Indicates whether users can use Android devices to access their WorkSpaces.
@@ -52,16 +52,16 @@ public final class DirectoryWorkspaceAccessProperties {
      */
     private final @Nullable String deviceTypeZeroclient;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DirectoryWorkspaceAccessProperties(
-        @OutputCustomType.Parameter("deviceTypeAndroid") @Nullable String deviceTypeAndroid,
-        @OutputCustomType.Parameter("deviceTypeChromeos") @Nullable String deviceTypeChromeos,
-        @OutputCustomType.Parameter("deviceTypeIos") @Nullable String deviceTypeIos,
-        @OutputCustomType.Parameter("deviceTypeLinux") @Nullable String deviceTypeLinux,
-        @OutputCustomType.Parameter("deviceTypeOsx") @Nullable String deviceTypeOsx,
-        @OutputCustomType.Parameter("deviceTypeWeb") @Nullable String deviceTypeWeb,
-        @OutputCustomType.Parameter("deviceTypeWindows") @Nullable String deviceTypeWindows,
-        @OutputCustomType.Parameter("deviceTypeZeroclient") @Nullable String deviceTypeZeroclient) {
+        @CustomType.Parameter("deviceTypeAndroid") @Nullable String deviceTypeAndroid,
+        @CustomType.Parameter("deviceTypeChromeos") @Nullable String deviceTypeChromeos,
+        @CustomType.Parameter("deviceTypeIos") @Nullable String deviceTypeIos,
+        @CustomType.Parameter("deviceTypeLinux") @Nullable String deviceTypeLinux,
+        @CustomType.Parameter("deviceTypeOsx") @Nullable String deviceTypeOsx,
+        @CustomType.Parameter("deviceTypeWeb") @Nullable String deviceTypeWeb,
+        @CustomType.Parameter("deviceTypeWindows") @Nullable String deviceTypeWindows,
+        @CustomType.Parameter("deviceTypeZeroclient") @Nullable String deviceTypeZeroclient) {
         this.deviceTypeAndroid = deviceTypeAndroid;
         this.deviceTypeChromeos = deviceTypeChromeos;
         this.deviceTypeIos = deviceTypeIos;

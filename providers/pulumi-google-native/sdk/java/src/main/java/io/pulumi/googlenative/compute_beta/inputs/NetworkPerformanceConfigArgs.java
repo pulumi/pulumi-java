@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.enums.NetworkPerformanceConfigTotalEgressBandwidthTier;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class NetworkPerformanceConfigArgs extends io.pulumi.resources.Reso
 
     public static final NetworkPerformanceConfigArgs Empty = new NetworkPerformanceConfigArgs();
 
-    @InputImport(name="totalEgressBandwidthTier")
+    @Import(name="totalEgressBandwidthTier")
       private final @Nullable Output<NetworkPerformanceConfigTotalEgressBandwidthTier> totalEgressBandwidthTier;
 
     public Output<NetworkPerformanceConfigTotalEgressBandwidthTier> getTotalEgressBandwidthTier() {

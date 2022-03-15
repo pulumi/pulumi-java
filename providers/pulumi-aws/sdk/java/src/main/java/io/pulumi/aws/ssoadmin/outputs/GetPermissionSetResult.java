@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.ssoadmin.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPermissionSetResult {
     private final String arn;
     private final String createdDate;
@@ -40,17 +40,17 @@ public final class GetPermissionSetResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPermissionSetResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceArn") String instanceArn,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("relayState") String relayState,
-        @OutputCustomType.Parameter("sessionDuration") String sessionDuration,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceArn") String instanceArn,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("relayState") String relayState,
+        @CustomType.Parameter("sessionDuration") String sessionDuration,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.createdDate = createdDate;
         this.description = description;

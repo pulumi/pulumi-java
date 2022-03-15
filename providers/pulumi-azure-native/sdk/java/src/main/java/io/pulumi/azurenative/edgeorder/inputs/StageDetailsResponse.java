@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class StageDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * Display name of the resource stage.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -31,7 +31,7 @@ public final class StageDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * Stage name
      * 
      */
-    @InputImport(name="stageName", required=true)
+    @Import(name="stageName", required=true)
       private final String stageName;
 
     public String getStageName() {
@@ -42,7 +42,7 @@ public final class StageDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * Stage status.
      * 
      */
-    @InputImport(name="stageStatus", required=true)
+    @Import(name="stageStatus", required=true)
       private final String stageStatus;
 
     public String getStageStatus() {
@@ -53,7 +53,7 @@ public final class StageDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * Stage start time
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {

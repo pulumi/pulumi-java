@@ -4,7 +4,7 @@
 package io.pulumi.gcp.memcache;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.memcache.inputs.InstanceMemcacheParametersArgs;
 import io.pulumi.gcp.memcache.inputs.InstanceNodeConfigArgs;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 'default' will be used.
      * 
      */
-    @InputImport(name="authorizedNetwork")
+    @Import(name="authorizedNetwork")
       private final @Nullable Output<String> authorizedNetwork;
 
     public Output<String> getAuthorizedNetwork() {
@@ -35,7 +35,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * A user-visible name for the instance.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -46,7 +46,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource labels to represent user-provided metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -58,7 +58,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="memcacheParameters")
+    @Import(name="memcacheParameters")
       private final @Nullable Output<InstanceMemcacheParametersArgs> memcacheParameters;
 
     public Output<InstanceMemcacheParametersArgs> getMemcacheParameters() {
@@ -73,7 +73,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `MEMCACHE_1_5`.
      * 
      */
-    @InputImport(name="memcacheVersion")
+    @Import(name="memcacheVersion")
       private final @Nullable Output<String> memcacheVersion;
 
     public Output<String> getMemcacheVersion() {
@@ -84,7 +84,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the instance.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -96,7 +96,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="nodeConfig", required=true)
+    @Import(name="nodeConfig", required=true)
       private final Output<InstanceNodeConfigArgs> nodeConfig;
 
     public Output<InstanceNodeConfigArgs> getNodeConfig() {
@@ -107,7 +107,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Number of nodes in the memcache instance.
      * 
      */
-    @InputImport(name="nodeCount", required=true)
+    @Import(name="nodeCount", required=true)
       private final Output<Integer> nodeCount;
 
     public Output<Integer> getNodeCount() {
@@ -119,7 +119,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -130,7 +130,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The region of the Memcache instance. If it is not provided, the provider region is used.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -142,7 +142,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * provided, all zones will be used.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {

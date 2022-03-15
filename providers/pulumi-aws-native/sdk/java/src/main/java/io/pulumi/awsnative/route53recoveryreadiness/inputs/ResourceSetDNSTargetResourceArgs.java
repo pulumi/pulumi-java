@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetTargetResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
      * The domain name that acts as an ingress point to a portion of the customer application.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -34,7 +34,7 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
      * The hosted zone Amazon Resource Name (ARN) that contains the DNS record with the provided name of the target resource.
      * 
      */
-    @InputImport(name="hostedZoneArn")
+    @Import(name="hostedZoneArn")
       private final @Nullable Output<String> hostedZoneArn;
 
     public Output<String> getHostedZoneArn() {
@@ -45,7 +45,7 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
      * The Route 53 record set ID that will uniquely identify a DNS record, given a name and a type.
      * 
      */
-    @InputImport(name="recordSetId")
+    @Import(name="recordSetId")
       private final @Nullable Output<String> recordSetId;
 
     public Output<String> getRecordSetId() {
@@ -56,14 +56,14 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
      * The type of DNS record of the target resource.
      * 
      */
-    @InputImport(name="recordType")
+    @Import(name="recordType")
       private final @Nullable Output<String> recordType;
 
     public Output<String> getRecordType() {
         return this.recordType == null ? Output.empty() : this.recordType;
     }
 
-    @InputImport(name="targetResource")
+    @Import(name="targetResource")
       private final @Nullable Output<ResourceSetTargetResourceArgs> targetResource;
 
     public Output<ResourceSetTargetResourceArgs> getTargetResource() {

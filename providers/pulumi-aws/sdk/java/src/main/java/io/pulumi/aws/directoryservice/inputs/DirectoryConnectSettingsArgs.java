@@ -4,7 +4,7 @@
 package io.pulumi.aws.directoryservice.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
 
     public static final DirectoryConnectSettingsArgs Empty = new DirectoryConnectSettingsArgs();
 
-    @InputImport(name="availabilityZones")
+    @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
     public Output<List<String>> getAvailabilityZones() {
@@ -26,7 +26,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
      * The IP addresses of the AD Connector servers.
      * 
      */
-    @InputImport(name="connectIps")
+    @Import(name="connectIps")
       private final @Nullable Output<List<String>> connectIps;
 
     public Output<List<String>> getConnectIps() {
@@ -37,7 +37,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
      * The DNS IP addresses of the domain to connect to.
      * 
      */
-    @InputImport(name="customerDnsIps", required=true)
+    @Import(name="customerDnsIps", required=true)
       private final Output<List<String>> customerDnsIps;
 
     public Output<List<String>> getCustomerDnsIps() {
@@ -48,7 +48,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
      * The username corresponding to the password provided.
      * 
      */
-    @InputImport(name="customerUsername", required=true)
+    @Import(name="customerUsername", required=true)
       private final Output<String> customerUsername;
 
     public Output<String> getCustomerUsername() {
@@ -59,7 +59,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
      * The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
      * 
      */
-    @InputImport(name="subnetIds", required=true)
+    @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -70,7 +70,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
      * The identifier of the VPC that the directory is in.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
     public Output<String> getVpcId() {

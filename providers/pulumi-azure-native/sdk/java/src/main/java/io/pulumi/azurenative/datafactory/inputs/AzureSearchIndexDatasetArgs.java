@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.DatasetFolderArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class AzureSearchIndexDatasetArgs extends io.pulumi.resources.Resou
      * List of tags that can be used for describing the Dataset.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -39,7 +39,7 @@ public final class AzureSearchIndexDatasetArgs extends io.pulumi.resources.Resou
      * Dataset description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -50,7 +50,7 @@ public final class AzureSearchIndexDatasetArgs extends io.pulumi.resources.Resou
      * The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
      * 
      */
-    @InputImport(name="folder")
+    @Import(name="folder")
       private final @Nullable Output<DatasetFolderArgs> folder;
 
     public Output<DatasetFolderArgs> getFolder() {
@@ -61,7 +61,7 @@ public final class AzureSearchIndexDatasetArgs extends io.pulumi.resources.Resou
      * The name of the Azure Search Index. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="indexName", required=true)
+    @Import(name="indexName", required=true)
       private final Output<Object> indexName;
 
     public Output<Object> getIndexName() {
@@ -72,7 +72,7 @@ public final class AzureSearchIndexDatasetArgs extends io.pulumi.resources.Resou
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName", required=true)
+    @Import(name="linkedServiceName", required=true)
       private final Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
@@ -83,7 +83,7 @@ public final class AzureSearchIndexDatasetArgs extends io.pulumi.resources.Resou
      * Parameters for dataset.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -94,7 +94,7 @@ public final class AzureSearchIndexDatasetArgs extends io.pulumi.resources.Resou
      * Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<Object> schema;
 
     public Output<Object> getSchema() {
@@ -105,7 +105,7 @@ public final class AzureSearchIndexDatasetArgs extends io.pulumi.resources.Resou
      * Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
      * 
      */
-    @InputImport(name="structure")
+    @Import(name="structure")
       private final @Nullable Output<Object> structure;
 
     public Output<Object> getStructure() {
@@ -117,7 +117,7 @@ public final class AzureSearchIndexDatasetArgs extends io.pulumi.resources.Resou
      * Expected value is 'AzureSearchIndex'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.ServiceEndpointPolicyDefinitionArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ServiceEndpointPolicyDefinition extends io.pulumi.resources.CustomR
      * A description for this rule. Restricted to 140 chars.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -48,7 +48,7 @@ public class ServiceEndpointPolicyDefinition extends io.pulumi.resources.CustomR
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -62,7 +62,7 @@ public class ServiceEndpointPolicyDefinition extends io.pulumi.resources.CustomR
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -76,7 +76,7 @@ public class ServiceEndpointPolicyDefinition extends io.pulumi.resources.CustomR
      * The provisioning state of the service endpoint policy definition resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -90,7 +90,7 @@ public class ServiceEndpointPolicyDefinition extends io.pulumi.resources.CustomR
      * Service endpoint name.
      * 
      */
-    @OutputExport(name="service", type=String.class, parameters={})
+    @Export(name="service", type=String.class, parameters={})
     private Output</* @Nullable */ String> service;
 
     /**
@@ -104,7 +104,7 @@ public class ServiceEndpointPolicyDefinition extends io.pulumi.resources.CustomR
      * A list of service resources.
      * 
      */
-    @OutputExport(name="serviceResources", type=List.class, parameters={String.class})
+    @Export(name="serviceResources", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> serviceResources;
 
     /**

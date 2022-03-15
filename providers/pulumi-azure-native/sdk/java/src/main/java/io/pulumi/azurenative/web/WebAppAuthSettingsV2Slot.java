@@ -12,7 +12,7 @@ import io.pulumi.azurenative.web.outputs.IdentityProvidersResponse;
 import io.pulumi.azurenative.web.outputs.LoginResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class WebAppAuthSettingsV2Slot extends io.pulumi.resources.CustomResource
      * The configuration settings that determines the validation flow of users using App Service Authentication/Authorization.
      * 
      */
-    @OutputExport(name="globalValidation", type=GlobalValidationResponse.class, parameters={})
+    @Export(name="globalValidation", type=GlobalValidationResponse.class, parameters={})
     private Output</* @Nullable */ GlobalValidationResponse> globalValidation;
 
     /**
@@ -50,7 +50,7 @@ public class WebAppAuthSettingsV2Slot extends io.pulumi.resources.CustomResource
      * The configuration settings of the HTTP requests for authentication and authorization requests made against App Service Authentication/Authorization.
      * 
      */
-    @OutputExport(name="httpSettings", type=HttpSettingsResponse.class, parameters={})
+    @Export(name="httpSettings", type=HttpSettingsResponse.class, parameters={})
     private Output</* @Nullable */ HttpSettingsResponse> httpSettings;
 
     /**
@@ -64,7 +64,7 @@ public class WebAppAuthSettingsV2Slot extends io.pulumi.resources.CustomResource
      * The configuration settings of each of the identity providers used to configure App Service Authentication/Authorization.
      * 
      */
-    @OutputExport(name="identityProviders", type=IdentityProvidersResponse.class, parameters={})
+    @Export(name="identityProviders", type=IdentityProvidersResponse.class, parameters={})
     private Output</* @Nullable */ IdentityProvidersResponse> identityProviders;
 
     /**
@@ -78,7 +78,7 @@ public class WebAppAuthSettingsV2Slot extends io.pulumi.resources.CustomResource
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -92,7 +92,7 @@ public class WebAppAuthSettingsV2Slot extends io.pulumi.resources.CustomResource
      * The configuration settings of the login flow of users using App Service Authentication/Authorization.
      * 
      */
-    @OutputExport(name="login", type=LoginResponse.class, parameters={})
+    @Export(name="login", type=LoginResponse.class, parameters={})
     private Output</* @Nullable */ LoginResponse> login;
 
     /**
@@ -106,7 +106,7 @@ public class WebAppAuthSettingsV2Slot extends io.pulumi.resources.CustomResource
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class WebAppAuthSettingsV2Slot extends io.pulumi.resources.CustomResource
      * The configuration settings of the platform of App Service Authentication/Authorization.
      * 
      */
-    @OutputExport(name="platform", type=AuthPlatformResponse.class, parameters={})
+    @Export(name="platform", type=AuthPlatformResponse.class, parameters={})
     private Output</* @Nullable */ AuthPlatformResponse> platform;
 
     /**
@@ -134,7 +134,7 @@ public class WebAppAuthSettingsV2Slot extends io.pulumi.resources.CustomResource
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

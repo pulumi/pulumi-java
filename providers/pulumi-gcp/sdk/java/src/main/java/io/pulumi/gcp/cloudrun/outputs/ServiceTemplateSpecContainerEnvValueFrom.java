@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecContainerEnvValueFromSecretKeyRef;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTemplateSpecContainerEnvValueFrom {
     /**
      * Selects a key (version) of a secret in Secret Manager.
@@ -16,8 +16,8 @@ public final class ServiceTemplateSpecContainerEnvValueFrom {
      */
     private final ServiceTemplateSpecContainerEnvValueFromSecretKeyRef secretKeyRef;
 
-    @OutputCustomType.Constructor
-    private ServiceTemplateSpecContainerEnvValueFrom(@OutputCustomType.Parameter("secretKeyRef") ServiceTemplateSpecContainerEnvValueFromSecretKeyRef secretKeyRef) {
+    @CustomType.Constructor
+    private ServiceTemplateSpecContainerEnvValueFrom(@CustomType.Parameter("secretKeyRef") ServiceTemplateSpecContainerEnvValueFromSecretKeyRef secretKeyRef) {
         this.secretKeyRef = secretKeyRef;
     }
 

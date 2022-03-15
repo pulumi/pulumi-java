@@ -3,19 +3,19 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTaskSpecContainerSpecMountVolumeOptionsLabel {
     private final String label;
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTaskSpecContainerSpecMountVolumeOptionsLabel(
-        @OutputCustomType.Parameter("label") String label,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("label") String label,
+        @CustomType.Parameter("value") String value) {
         this.label = label;
         this.value = value;
     }

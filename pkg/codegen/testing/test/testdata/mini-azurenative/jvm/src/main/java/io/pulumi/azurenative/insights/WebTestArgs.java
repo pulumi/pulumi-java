@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.insights.enums.WebTestKind;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * Purpose/user defined descriptive test for this WebTest.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * Is the test actively being monitored.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -44,7 +44,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * Interval in seconds between test runs for this WebTest. Default value is 300.
      * 
      */
-    @InputImport(name="frequency")
+    @Import(name="frequency")
       private final @Nullable Output<Integer> frequency;
 
     public Output<Integer> getFrequency() {
@@ -55,7 +55,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * The kind of web test that this web test watches. Choices are ping and multistep.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<WebTestKind> kind;
 
     public Output<WebTestKind> getKind() {
@@ -66,7 +66,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -77,7 +77,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -88,7 +88,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * Allow for retries should this WebTest fail.
      * 
      */
-    @InputImport(name="retryEnabled")
+    @Import(name="retryEnabled")
       private final @Nullable Output<Boolean> retryEnabled;
 
     public Output<Boolean> getRetryEnabled() {
@@ -99,7 +99,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * Unique ID of this WebTest. This is typically the same value as the Name field.
      * 
      */
-    @InputImport(name="syntheticMonitorId", required=true)
+    @Import(name="syntheticMonitorId", required=true)
       private final Output<String> syntheticMonitorId;
 
     public Output<String> getSyntheticMonitorId() {
@@ -110,7 +110,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -121,7 +121,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * Seconds until this WebTest will timeout and fail. Default value is 30.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
     public Output<Integer> getTimeout() {
@@ -132,7 +132,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * The kind of web test this is, valid choices are ping and multistep.
      * 
      */
-    @InputImport(name="webTestKind", required=true)
+    @Import(name="webTestKind", required=true)
       private final Output<WebTestKind> webTestKind;
 
     public Output<WebTestKind> getWebTestKind() {
@@ -143,7 +143,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * User defined name if this WebTest.
      * 
      */
-    @InputImport(name="webTestName")
+    @Import(name="webTestName")
       private final @Nullable Output<String> webTestName;
 
     public Output<String> getWebTestName() {

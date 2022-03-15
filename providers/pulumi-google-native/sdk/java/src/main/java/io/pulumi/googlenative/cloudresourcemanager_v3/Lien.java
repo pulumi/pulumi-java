@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudresourcemanager_v3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudresourcemanager_v3.LienArgs;
@@ -22,7 +22,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * The creation time of this Lien.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -36,7 +36,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * A system-generated unique identifier for this Lien. Example: `liens/1234abcd`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically. Maximum length of 200 characters. Example: 'compute.googleapis.com'
      * 
      */
-    @OutputExport(name="origin", type=String.class, parameters={})
+    @Export(name="origin", type=String.class, parameters={})
     private Output<String> origin;
 
     /**
@@ -64,7 +64,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * A reference to the resource this Lien is attached to. The server will validate the parent against those for which Liens are supported. Example: `projects/1234`
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -78,7 +78,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200 characters. Example: 'Holds production API key'
      * 
      */
-    @OutputExport(name="reason", type=String.class, parameters={})
+    @Export(name="reason", type=String.class, parameters={})
     private Output<String> reason;
 
     /**
@@ -92,7 +92,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * The types of operations which should be blocked as a result of this Lien. Each value should correspond to an IAM permission. The server will validate the permissions against those for which Liens are supported. An empty list is meaningless and will be rejected. Example: ['resourcemanager.projects.delete']
      * 
      */
-    @OutputExport(name="restrictions", type=List.class, parameters={String.class})
+    @Export(name="restrictions", type=List.class, parameters={String.class})
     private Output<List<String>> restrictions;
 
     /**

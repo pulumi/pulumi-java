@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.peering.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PeeringServiceSkuResponse {
     /**
      * The name of the peering service SKU.
@@ -17,8 +17,8 @@ public final class PeeringServiceSkuResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private PeeringServiceSkuResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private PeeringServiceSkuResponse(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

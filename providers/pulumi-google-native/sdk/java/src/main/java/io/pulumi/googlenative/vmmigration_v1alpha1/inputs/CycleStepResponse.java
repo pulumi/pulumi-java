@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.InitializingReplicationStepResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.PostProcessingStepResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.ReplicatingStepResponse;
@@ -23,7 +23,7 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
      * The time the cycle step has ended.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
@@ -34,7 +34,7 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
      * Initializing replication step.
      * 
      */
-    @InputImport(name="initializingReplication", required=true)
+    @Import(name="initializingReplication", required=true)
       private final InitializingReplicationStepResponse initializingReplication;
 
     public InitializingReplicationStepResponse getInitializingReplication() {
@@ -45,7 +45,7 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
      * Post processing step.
      * 
      */
-    @InputImport(name="postProcessing", required=true)
+    @Import(name="postProcessing", required=true)
       private final PostProcessingStepResponse postProcessing;
 
     public PostProcessingStepResponse getPostProcessing() {
@@ -56,7 +56,7 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
      * Replicating step.
      * 
      */
-    @InputImport(name="replicating", required=true)
+    @Import(name="replicating", required=true)
       private final ReplicatingStepResponse replicating;
 
     public ReplicatingStepResponse getReplicating() {
@@ -67,7 +67,7 @@ public final class CycleStepResponse extends io.pulumi.resources.InvokeArgs {
      * The time the cycle step has started.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.config.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,56 +17,56 @@ public final class AssumeRole extends io.pulumi.resources.InvokeArgs {
 
     public static final AssumeRole Empty = new AssumeRole();
 
-    @InputImport(name="durationSeconds")
+    @Import(name="durationSeconds")
       private final @Nullable Integer durationSeconds;
 
     public Optional<Integer> getDurationSeconds() {
         return this.durationSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationSeconds);
     }
 
-    @InputImport(name="externalId")
+    @Import(name="externalId")
       private final @Nullable String externalId;
 
     public Optional<String> getExternalId() {
         return this.externalId == null ? Optional.empty() : Optional.ofNullable(this.externalId);
     }
 
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable String policy;
 
     public Optional<String> getPolicy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
     }
 
-    @InputImport(name="policyArns")
+    @Import(name="policyArns")
       private final @Nullable List<String> policyArns;
 
     public List<String> getPolicyArns() {
         return this.policyArns == null ? List.of() : this.policyArns;
     }
 
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable String roleArn;
 
     public Optional<String> getRoleArn() {
         return this.roleArn == null ? Optional.empty() : Optional.ofNullable(this.roleArn);
     }
 
-    @InputImport(name="sessionName")
+    @Import(name="sessionName")
       private final @Nullable String sessionName;
 
     public Optional<String> getSessionName() {
         return this.sessionName == null ? Optional.empty() : Optional.ofNullable(this.sessionName);
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
     }
 
-    @InputImport(name="transitiveTagKeys")
+    @Import(name="transitiveTagKeys")
       private final @Nullable List<String> transitiveTagKeys;
 
     public List<String> getTransitiveTagKeys() {

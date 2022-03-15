@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mq.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,77 +14,77 @@ public final class GetBrokerLdapServerMetadata extends io.pulumi.resources.Invok
 
     public static final GetBrokerLdapServerMetadata Empty = new GetBrokerLdapServerMetadata();
 
-    @InputImport(name="hosts", required=true)
+    @Import(name="hosts", required=true)
       private final List<String> hosts;
 
     public List<String> getHosts() {
         return this.hosts;
     }
 
-    @InputImport(name="roleBase", required=true)
+    @Import(name="roleBase", required=true)
       private final String roleBase;
 
     public String getRoleBase() {
         return this.roleBase;
     }
 
-    @InputImport(name="roleName", required=true)
+    @Import(name="roleName", required=true)
       private final String roleName;
 
     public String getRoleName() {
         return this.roleName;
     }
 
-    @InputImport(name="roleSearchMatching", required=true)
+    @Import(name="roleSearchMatching", required=true)
       private final String roleSearchMatching;
 
     public String getRoleSearchMatching() {
         return this.roleSearchMatching;
     }
 
-    @InputImport(name="roleSearchSubtree", required=true)
+    @Import(name="roleSearchSubtree", required=true)
       private final Boolean roleSearchSubtree;
 
     public Boolean getRoleSearchSubtree() {
         return this.roleSearchSubtree;
     }
 
-    @InputImport(name="serviceAccountPassword", required=true)
+    @Import(name="serviceAccountPassword", required=true)
       private final String serviceAccountPassword;
 
     public String getServiceAccountPassword() {
         return this.serviceAccountPassword;
     }
 
-    @InputImport(name="serviceAccountUsername", required=true)
+    @Import(name="serviceAccountUsername", required=true)
       private final String serviceAccountUsername;
 
     public String getServiceAccountUsername() {
         return this.serviceAccountUsername;
     }
 
-    @InputImport(name="userBase", required=true)
+    @Import(name="userBase", required=true)
       private final String userBase;
 
     public String getUserBase() {
         return this.userBase;
     }
 
-    @InputImport(name="userRoleName", required=true)
+    @Import(name="userRoleName", required=true)
       private final String userRoleName;
 
     public String getUserRoleName() {
         return this.userRoleName;
     }
 
-    @InputImport(name="userSearchMatching", required=true)
+    @Import(name="userSearchMatching", required=true)
       private final String userSearchMatching;
 
     public String getUserSearchMatching() {
         return this.userSearchMatching;
     }
 
-    @InputImport(name="userSearchSubtree", required=true)
+    @Import(name="userSearchSubtree", required=true)
       private final Boolean userSearchSubtree;
 
     public Boolean getUserSearchSubtree() {

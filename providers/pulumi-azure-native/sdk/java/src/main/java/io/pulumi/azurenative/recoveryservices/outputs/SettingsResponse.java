@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SettingsResponse {
     /**
      * Workload compression flag. This has been added so that 'isSqlCompression'
@@ -29,11 +29,11 @@ public final class SettingsResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SettingsResponse(
-        @OutputCustomType.Parameter("isCompression") @Nullable Boolean isCompression,
-        @OutputCustomType.Parameter("issqlcompression") @Nullable Boolean issqlcompression,
-        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
+        @CustomType.Parameter("isCompression") @Nullable Boolean isCompression,
+        @CustomType.Parameter("issqlcompression") @Nullable Boolean issqlcompression,
+        @CustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.isCompression = isCompression;
         this.issqlcompression = issqlcompression;
         this.timeZone = timeZone;

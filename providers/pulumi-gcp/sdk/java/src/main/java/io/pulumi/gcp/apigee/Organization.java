@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigee.OrganizationArgs;
@@ -42,7 +42,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
      * 
      */
-    @OutputExport(name="analyticsRegion", type=String.class, parameters={})
+    @Export(name="analyticsRegion", type=String.class, parameters={})
     private Output</* @Nullable */ String> analyticsRegion;
 
     /**
@@ -58,7 +58,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
      * 
      */
-    @OutputExport(name="authorizedNetwork", type=String.class, parameters={})
+    @Export(name="authorizedNetwork", type=String.class, parameters={})
     private Output</* @Nullable */ String> authorizedNetwork;
 
     /**
@@ -75,7 +75,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * is CLOUD. A base64-encoded string.
      * 
      */
-    @OutputExport(name="caCertificate", type=String.class, parameters={})
+    @Export(name="caCertificate", type=String.class, parameters={})
     private Output<String> caCertificate;
 
     /**
@@ -90,7 +90,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Description of the Apigee organization.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -104,7 +104,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * The display name of the Apigee organization.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -118,7 +118,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Output only. Name of the Apigee organization.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -132,7 +132,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * The project ID associated with the Apigee organization.
      * 
      */
-    @OutputExport(name="projectId", type=String.class, parameters={})
+    @Export(name="projectId", type=String.class, parameters={})
     private Output<String> projectId;
 
     /**
@@ -149,7 +149,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/keyRings/bar/cryptoKeys/baz`.
      * 
      */
-    @OutputExport(name="runtimeDatabaseEncryptionKeyName", type=String.class, parameters={})
+    @Export(name="runtimeDatabaseEncryptionKeyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> runtimeDatabaseEncryptionKeyName;
 
     /**
@@ -168,7 +168,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * Possible values are `CLOUD` and `HYBRID`.
      * 
      */
-    @OutputExport(name="runtimeType", type=String.class, parameters={})
+    @Export(name="runtimeType", type=String.class, parameters={})
     private Output</* @Nullable */ String> runtimeType;
 
     /**
@@ -185,7 +185,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * purposes only) or paid (full subscription has been purchased).
      * 
      */
-    @OutputExport(name="subscriptionType", type=String.class, parameters={})
+    @Export(name="subscriptionType", type=String.class, parameters={})
     private Output<String> subscriptionType;
 
     /**

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.LongTermSchedulePolicyResp
 import io.pulumi.azurenative.recoveryservices.outputs.SimpleRetentionPolicyResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.SimpleSchedulePolicyResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureIaaSVMProtectionPolicyResponse {
     /**
      * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
@@ -53,15 +53,15 @@ public final class AzureIaaSVMProtectionPolicyResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureIaaSVMProtectionPolicyResponse(
-        @OutputCustomType.Parameter("backupManagementType") String backupManagementType,
-        @OutputCustomType.Parameter("instantRPDetails") @Nullable InstantRPAdditionalDetailsResponse instantRPDetails,
-        @OutputCustomType.Parameter("instantRpRetentionRangeInDays") @Nullable Integer instantRpRetentionRangeInDays,
-        @OutputCustomType.Parameter("protectedItemsCount") @Nullable Integer protectedItemsCount,
-        @OutputCustomType.Parameter("retentionPolicy") @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
-        @OutputCustomType.Parameter("schedulePolicy") @Nullable Object schedulePolicy,
-        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
+        @CustomType.Parameter("backupManagementType") String backupManagementType,
+        @CustomType.Parameter("instantRPDetails") @Nullable InstantRPAdditionalDetailsResponse instantRPDetails,
+        @CustomType.Parameter("instantRpRetentionRangeInDays") @Nullable Integer instantRpRetentionRangeInDays,
+        @CustomType.Parameter("protectedItemsCount") @Nullable Integer protectedItemsCount,
+        @CustomType.Parameter("retentionPolicy") @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
+        @CustomType.Parameter("schedulePolicy") @Nullable Object schedulePolicy,
+        @CustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.backupManagementType = backupManagementType;
         this.instantRPDetails = instantRPDetails;
         this.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;

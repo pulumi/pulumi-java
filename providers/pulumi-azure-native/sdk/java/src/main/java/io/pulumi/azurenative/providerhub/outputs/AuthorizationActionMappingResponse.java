@@ -3,21 +3,21 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AuthorizationActionMappingResponse {
     private final @Nullable String desired;
     private final @Nullable String original;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuthorizationActionMappingResponse(
-        @OutputCustomType.Parameter("desired") @Nullable String desired,
-        @OutputCustomType.Parameter("original") @Nullable String original) {
+        @CustomType.Parameter("desired") @Nullable String desired,
+        @CustomType.Parameter("original") @Nullable String original) {
         this.desired = desired;
         this.original = original;
     }

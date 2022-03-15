@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1.outputs.MaintenanceExclusionOptionsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TimeWindowResponse {
     /**
      * The time that the window ends. The end time should take place after the start time.
@@ -26,11 +26,11 @@ public final class TimeWindowResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TimeWindowResponse(
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("maintenanceExclusionOptions") MaintenanceExclusionOptionsResponse maintenanceExclusionOptions,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("maintenanceExclusionOptions") MaintenanceExclusionOptionsResponse maintenanceExclusionOptions,
+        @CustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.maintenanceExclusionOptions = maintenanceExclusionOptions;
         this.startTime = startTime;

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class HostedZoneVPC extends io.pulumi.resources.InvokeArgs {
      * The ID of an Amazon VPC.
      * 
      */
-    @InputImport(name="vPCId", required=true)
+    @Import(name="vPCId", required=true)
       private final String vPCId;
 
     public String getVPCId() {
@@ -31,7 +31,7 @@ public final class HostedZoneVPC extends io.pulumi.resources.InvokeArgs {
      * The region that an Amazon VPC was created in. See https://docs.aws.amazon.com/general/latest/gr/rande.html for a list of up to date regions.
      * 
      */
-    @InputImport(name="vPCRegion", required=true)
+    @Import(name="vPCRegion", required=true)
       private final String vPCRegion;
 
     public String getVPCRegion() {

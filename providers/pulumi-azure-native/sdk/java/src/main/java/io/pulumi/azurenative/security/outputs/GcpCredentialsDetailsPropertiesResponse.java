@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GcpCredentialsDetailsPropertiesResponse {
     /**
      * Auth provider x509 certificate URL field of the API key (write only)
@@ -82,22 +82,22 @@ public final class GcpCredentialsDetailsPropertiesResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GcpCredentialsDetailsPropertiesResponse(
-        @OutputCustomType.Parameter("authProviderX509CertUrl") String authProviderX509CertUrl,
-        @OutputCustomType.Parameter("authUri") String authUri,
-        @OutputCustomType.Parameter("authenticationProvisioningState") String authenticationProvisioningState,
-        @OutputCustomType.Parameter("authenticationType") String authenticationType,
-        @OutputCustomType.Parameter("clientEmail") String clientEmail,
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("clientX509CertUrl") String clientX509CertUrl,
-        @OutputCustomType.Parameter("grantedPermissions") List<String> grantedPermissions,
-        @OutputCustomType.Parameter("organizationId") String organizationId,
-        @OutputCustomType.Parameter("privateKey") String privateKey,
-        @OutputCustomType.Parameter("privateKeyId") String privateKeyId,
-        @OutputCustomType.Parameter("projectId") String projectId,
-        @OutputCustomType.Parameter("tokenUri") String tokenUri,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("authProviderX509CertUrl") String authProviderX509CertUrl,
+        @CustomType.Parameter("authUri") String authUri,
+        @CustomType.Parameter("authenticationProvisioningState") String authenticationProvisioningState,
+        @CustomType.Parameter("authenticationType") String authenticationType,
+        @CustomType.Parameter("clientEmail") String clientEmail,
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("clientX509CertUrl") String clientX509CertUrl,
+        @CustomType.Parameter("grantedPermissions") List<String> grantedPermissions,
+        @CustomType.Parameter("organizationId") String organizationId,
+        @CustomType.Parameter("privateKey") String privateKey,
+        @CustomType.Parameter("privateKeyId") String privateKeyId,
+        @CustomType.Parameter("projectId") String projectId,
+        @CustomType.Parameter("tokenUri") String tokenUri,
+        @CustomType.Parameter("type") String type) {
         this.authProviderX509CertUrl = authProviderX509CertUrl;
         this.authUri = authUri;
         this.authenticationProvisioningState = authenticationProvisioningState;

@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.DistributionOrderedCacheBehaviorForwardedValuesCookiesGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesGetArgs extend
      * that specifies how CloudFront handles cookies (maximum one).
      * 
      */
-    @InputImport(name="cookies", required=true)
+    @Import(name="cookies", required=true)
       private final Output<DistributionOrderedCacheBehaviorForwardedValuesCookiesGetArgs> cookies;
 
     public Output<DistributionOrderedCacheBehaviorForwardedValuesCookiesGetArgs> getCookies() {
@@ -35,7 +35,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesGetArgs extend
      * headers.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Output<List<String>> headers;
 
     public Output<List<String>> getHeaders() {
@@ -47,7 +47,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesGetArgs extend
      * query strings to the origin that is associated with this cache behavior.
      * 
      */
-    @InputImport(name="queryString", required=true)
+    @Import(name="queryString", required=true)
       private final Output<Boolean> queryString;
 
     public Output<Boolean> getQueryString() {
@@ -61,7 +61,7 @@ public final class DistributionOrderedCacheBehaviorForwardedValuesGetArgs extend
      * value of `true` for `query_string`, all query string keys are cached.
      * 
      */
-    @InputImport(name="queryStringCacheKeys")
+    @Import(name="queryStringCacheKeys")
       private final @Nullable Output<List<String>> queryStringCacheKeys;
 
     public Output<List<String>> getQueryStringCacheKeys() {

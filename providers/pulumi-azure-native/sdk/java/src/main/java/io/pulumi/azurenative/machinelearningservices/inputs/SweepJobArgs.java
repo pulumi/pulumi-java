@@ -14,7 +14,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.TrialComponentArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.TruncationSelectionPolicyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -35,7 +35,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * Type of the hyperparameter sampling algorithms
      * 
      */
-    @InputImport(name="algorithm", required=true)
+    @Import(name="algorithm", required=true)
       private final Output<Either<String,SamplingAlgorithm>> algorithm;
 
     public Output<Either<String,SamplingAlgorithm>> getAlgorithm() {
@@ -46,7 +46,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * Compute binding for the job.
      * 
      */
-    @InputImport(name="compute", required=true)
+    @Import(name="compute", required=true)
       private final Output<ComputeConfigurationArgs> compute;
 
     public Output<ComputeConfigurationArgs> getCompute() {
@@ -57,7 +57,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * The asset description text.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -68,7 +68,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * Early termination policies enable canceling poor-performing runs before they complete.
      * 
      */
-    @InputImport(name="earlyTermination")
+    @Import(name="earlyTermination")
       private final @Nullable Output<Object> earlyTermination;
 
     public Output<Object> getEarlyTermination() {
@@ -79,7 +79,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
      * 
      */
-    @InputImport(name="experimentName")
+    @Import(name="experimentName")
       private final @Nullable Output<String> experimentName;
 
     public Output<String> getExperimentName() {
@@ -91,7 +91,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * Defaults to AmlToken if null.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity;
 
     public Output<Either<AmlTokenArgs,ManagedIdentityArgs>> getIdentity() {
@@ -103,7 +103,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'Sweep'.
      * 
      */
-    @InputImport(name="jobType", required=true)
+    @Import(name="jobType", required=true)
       private final Output<String> jobType;
 
     public Output<String> getJobType() {
@@ -114,7 +114,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * An upper bound on the number of trials performed in parallel.
      * 
      */
-    @InputImport(name="maxConcurrentTrials")
+    @Import(name="maxConcurrentTrials")
       private final @Nullable Output<Integer> maxConcurrentTrials;
 
     public Output<Integer> getMaxConcurrentTrials() {
@@ -125,7 +125,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * An upper bound on the number of trials to perform.
      * 
      */
-    @InputImport(name="maxTotalTrials")
+    @Import(name="maxTotalTrials")
       private final @Nullable Output<Integer> maxTotalTrials;
 
     public Output<Integer> getMaxTotalTrials() {
@@ -136,7 +136,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * Optimization objective.
      * 
      */
-    @InputImport(name="objective", required=true)
+    @Import(name="objective", required=true)
       private final Output<ObjectiveArgs> objective;
 
     public Output<ObjectiveArgs> getObjective() {
@@ -148,7 +148,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * Private preview feature and only available to users on the allow list.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -159,7 +159,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * The asset property dictionary.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -170,7 +170,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * A dictionary containing each parameter and its distribution. The dictionary key is the name of the parameter
      * 
      */
-    @InputImport(name="searchSpace", required=true)
+    @Import(name="searchSpace", required=true)
       private final Output<Map<String,Object>> searchSpace;
 
     public Output<Map<String,Object>> getSearchSpace() {
@@ -181,7 +181,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * Tag dictionary. Tags can be added, removed, and updated.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -192,7 +192,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * The total timeout in ISO 8601 format. Only supports duration with precision as low as Minutes.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {
@@ -203,7 +203,7 @@ public final class SweepJobArgs extends io.pulumi.resources.ResourceArgs {
      * Trial component definition.
      * 
      */
-    @InputImport(name="trial")
+    @Import(name="trial")
       private final @Nullable Output<TrialComponentArgs> trial;
 
     public Output<TrialComponentArgs> getTrial() {

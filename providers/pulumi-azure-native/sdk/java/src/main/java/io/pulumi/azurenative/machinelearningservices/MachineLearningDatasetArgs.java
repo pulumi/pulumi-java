@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.DatasetCreateRequest
 import io.pulumi.azurenative.machinelearningservices.inputs.DatasetCreateRequestTimeSeriesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
      * The Dataset name.
      * 
      */
-    @InputImport(name="datasetName")
+    @Import(name="datasetName")
       private final @Nullable Output<String> datasetName;
 
     public Output<String> getDatasetName() {
@@ -35,21 +35,21 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
      * Specifies dataset type.
      * 
      */
-    @InputImport(name="datasetType", required=true)
+    @Import(name="datasetType", required=true)
       private final Output<Either<String,DatasetType>> datasetType;
 
     public Output<Either<String,DatasetType>> getDatasetType() {
         return this.datasetType;
     }
 
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final Output<DatasetCreateRequestParametersArgs> parameters;
 
     public Output<DatasetCreateRequestParametersArgs> getParameters() {
         return this.parameters;
     }
 
-    @InputImport(name="registration", required=true)
+    @Import(name="registration", required=true)
       private final Output<DatasetCreateRequestRegistrationArgs> registration;
 
     public Output<DatasetCreateRequestRegistrationArgs> getRegistration() {
@@ -60,7 +60,7 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
      * Name of the resource group in which workspace is located.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -71,14 +71,14 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
      * Skip validation that ensures data can be loaded from the dataset before registration.
      * 
      */
-    @InputImport(name="skipValidation")
+    @Import(name="skipValidation")
       private final @Nullable Output<Boolean> skipValidation;
 
     public Output<Boolean> getSkipValidation() {
         return this.skipValidation == null ? Output.empty() : this.skipValidation;
     }
 
-    @InputImport(name="timeSeries")
+    @Import(name="timeSeries")
       private final @Nullable Output<DatasetCreateRequestTimeSeriesArgs> timeSeries;
 
     public Output<DatasetCreateRequestTimeSeriesArgs> getTimeSeries() {
@@ -89,7 +89,7 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
      * Name of Azure Machine Learning workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

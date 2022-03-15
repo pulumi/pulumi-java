@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApplicationClientDetailsResponse extends io.pulumi.resources.
      * The client application Id.
      * 
      */
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable String applicationId;
 
     public Optional<String> getApplicationId() {
@@ -33,7 +33,7 @@ public final class ApplicationClientDetailsResponse extends io.pulumi.resources.
      * The client Oid.
      * 
      */
-    @InputImport(name="oid")
+    @Import(name="oid")
       private final @Nullable String oid;
 
     public Optional<String> getOid() {
@@ -44,7 +44,7 @@ public final class ApplicationClientDetailsResponse extends io.pulumi.resources.
      * The client Puid
      * 
      */
-    @InputImport(name="puid")
+    @Import(name="puid")
       private final @Nullable String puid;
 
     public Optional<String> getPuid() {

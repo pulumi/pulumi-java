@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MonitoringScheduleVpcConfig extends io.pulumi.resources.Invok
      * The VPC security group IDs, in the form sg-xxxxxxxx. Specify the security groups for the VPC that is specified in the Subnets field.
      * 
      */
-    @InputImport(name="securityGroupIds", required=true)
+    @Import(name="securityGroupIds", required=true)
       private final List<String> securityGroupIds;
 
     public List<String> getSecurityGroupIds() {
@@ -32,7 +32,7 @@ public final class MonitoringScheduleVpcConfig extends io.pulumi.resources.Invok
      * The ID of the subnets in the VPC to which you want to connect to your monitoring jobs.
      * 
      */
-    @InputImport(name="subnets", required=true)
+    @Import(name="subnets", required=true)
       private final List<String> subnets;
 
     public List<String> getSubnets() {

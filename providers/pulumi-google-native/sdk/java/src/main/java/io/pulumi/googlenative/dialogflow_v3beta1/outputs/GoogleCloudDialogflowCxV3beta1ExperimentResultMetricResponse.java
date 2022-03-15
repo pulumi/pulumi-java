@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse {
     /**
      * The probability that the treatment is better than all other treatments in the experiment
@@ -37,13 +37,13 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse 
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse(
-        @OutputCustomType.Parameter("confidenceInterval") GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse confidenceInterval,
-        @OutputCustomType.Parameter("count") Double count,
-        @OutputCustomType.Parameter("countType") String countType,
-        @OutputCustomType.Parameter("ratio") Double ratio,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("confidenceInterval") GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse confidenceInterval,
+        @CustomType.Parameter("count") Double count,
+        @CustomType.Parameter("countType") String countType,
+        @CustomType.Parameter("ratio") Double ratio,
+        @CustomType.Parameter("type") String type) {
         this.confidenceInterval = confidenceInterval;
         this.count = count;
         this.countType = countType;

@@ -7,7 +7,7 @@ import io.pulumi.aws.codedeploy.inputs.DeploymentGroupBlueGreenDeploymentConfigD
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigArgs extends io.pulum
      * Information about the action to take when newly provisioned instances are ready to receive traffic in a blue/green deployment (documented below).
      * 
      */
-    @InputImport(name="deploymentReadyOption")
+    @Import(name="deploymentReadyOption")
       private final @Nullable Output<DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs> deploymentReadyOption;
 
     public Output<DeploymentGroupBlueGreenDeploymentConfigDeploymentReadyOptionArgs> getDeploymentReadyOption() {
@@ -31,7 +31,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigArgs extends io.pulum
      * Information about how instances are provisioned for a replacement environment in a blue/green deployment (documented below).
      * 
      */
-    @InputImport(name="greenFleetProvisioningOption")
+    @Import(name="greenFleetProvisioningOption")
       private final @Nullable Output<DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs> greenFleetProvisioningOption;
 
     public Output<DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOptionArgs> getGreenFleetProvisioningOption() {
@@ -42,7 +42,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigArgs extends io.pulum
      * Information about whether to terminate instances in the original fleet during a blue/green deployment (documented below).
      * 
      */
-    @InputImport(name="terminateBlueInstancesOnDeploymentSuccess")
+    @Import(name="terminateBlueInstancesOnDeploymentSuccess")
       private final @Nullable Output<DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs> terminateBlueInstancesOnDeploymentSuccess;
 
     public Output<DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccessArgs> getTerminateBlueInstancesOnDeploymentSuccess() {

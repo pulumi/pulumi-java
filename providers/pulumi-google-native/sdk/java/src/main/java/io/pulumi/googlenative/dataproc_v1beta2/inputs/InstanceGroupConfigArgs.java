@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1beta2.enums.InstanceGroupConfigPreemptibility;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.AcceleratorConfigArgs;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.DiskConfigArgs;
@@ -27,7 +27,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * Optional. The Compute Engine accelerator configuration for these instances.
      * 
      */
-    @InputImport(name="accelerators")
+    @Import(name="accelerators")
       private final @Nullable Output<List<AcceleratorConfigArgs>> accelerators;
 
     public Output<List<AcceleratorConfigArgs>> getAccelerators() {
@@ -38,7 +38,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * Optional. Disk option config settings.
      * 
      */
-    @InputImport(name="diskConfig")
+    @Import(name="diskConfig")
       private final @Nullable Output<DiskConfigArgs> diskConfig;
 
     public Output<DiskConfigArgs> getDiskConfig() {
@@ -49,7 +49,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * Optional. The Compute Engine image resource used for cluster instances.The URI can represent an image or image family.Image examples: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/[image-id] projects/[project_id]/global/images/[image-id] image-idImage family examples. Dataproc will use the most recent image from the family: https://www.googleapis.com/compute/beta/projects/[project_id]/global/images/family/[custom-image-family-name] projects/[project_id]/global/images/family/[custom-image-family-name]If the URI is unspecified, it will be inferred from SoftwareConfig.image_version or the system default.
      * 
      */
-    @InputImport(name="imageUri")
+    @Import(name="imageUri")
       private final @Nullable Output<String> imageUri;
 
     public Output<String> getImageUri() {
@@ -60,7 +60,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * Optional. The Compute Engine machine type used for cluster instances.A full URL, partial URI, or short name are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 projects/[project_id]/zones/us-east1-a/machineTypes/n1-standard-2 n1-standard-2Auto Zone Exception: If you are using the Dataproc Auto Zone Placement (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/auto-zone#using_auto_zone_placement) feature, you must use the short name of the machine type resource, for example, n1-standard-2.
      * 
      */
-    @InputImport(name="machineTypeUri")
+    @Import(name="machineTypeUri")
       private final @Nullable Output<String> machineTypeUri;
 
     public Output<String> getMachineTypeUri() {
@@ -71,7 +71,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * Specifies the minimum cpu platform for the Instance Group. See Dataproc -> Minimum CPU Platform (https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
      * 
      */
-    @InputImport(name="minCpuPlatform")
+    @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
     public Output<String> getMinCpuPlatform() {
@@ -82,7 +82,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * Optional. The number of VM instances in the instance group. For HA cluster master_config groups, must be set to 3. For standard cluster master_config groups, must be set to 1.
      * 
      */
-    @InputImport(name="numInstances")
+    @Import(name="numInstances")
       private final @Nullable Output<Integer> numInstances;
 
     public Output<Integer> getNumInstances() {
@@ -93,7 +93,7 @@ public final class InstanceGroupConfigArgs extends io.pulumi.resources.ResourceA
      * Optional. Specifies the preemptibility of the instance group.The default value for master and worker groups is NON_PREEMPTIBLE. This default cannot be changed.The default value for secondary instances is PREEMPTIBLE.
      * 
      */
-    @InputImport(name="preemptibility")
+    @Import(name="preemptibility")
       private final @Nullable Output<InstanceGroupConfigPreemptibility> preemptibility;
 
     public Output<InstanceGroupConfigPreemptibility> getPreemptibility() {

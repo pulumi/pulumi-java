@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FirewallPolicyIntrusionDetectionConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class FirewallPolicyIntrusionDetectionResponse extends io.pulumi.re
      * Intrusion detection configuration properties.
      * 
      */
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable FirewallPolicyIntrusionDetectionConfigurationResponse configuration;
 
     public Optional<FirewallPolicyIntrusionDetectionConfigurationResponse> getConfiguration() {
@@ -34,7 +34,7 @@ public final class FirewallPolicyIntrusionDetectionResponse extends io.pulumi.re
      * Intrusion detection general state.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable String mode;
 
     public Optional<String> getMode() {

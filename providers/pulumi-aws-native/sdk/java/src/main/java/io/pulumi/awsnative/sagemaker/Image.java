@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.sagemaker.ImageArgs;
 import io.pulumi.awsnative.sagemaker.outputs.ImageTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -19,31 +19,31 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:sagemaker:Image")
 public class Image extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="imageArn", type=String.class, parameters={})
+    @Export(name="imageArn", type=String.class, parameters={})
     private Output<String> imageArn;
 
     public Output<String> getImageArn() {
         return this.imageArn;
     }
-    @OutputExport(name="imageDescription", type=String.class, parameters={})
+    @Export(name="imageDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> imageDescription;
 
     public Output</* @Nullable */ String> getImageDescription() {
         return this.imageDescription;
     }
-    @OutputExport(name="imageDisplayName", type=String.class, parameters={})
+    @Export(name="imageDisplayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> imageDisplayName;
 
     public Output</* @Nullable */ String> getImageDisplayName() {
         return this.imageDisplayName;
     }
-    @OutputExport(name="imageName", type=String.class, parameters={})
+    @Export(name="imageName", type=String.class, parameters={})
     private Output<String> imageName;
 
     public Output<String> getImageName() {
         return this.imageName;
     }
-    @OutputExport(name="imageRoleArn", type=String.class, parameters={})
+    @Export(name="imageRoleArn", type=String.class, parameters={})
     private Output<String> imageRoleArn;
 
     public Output<String> getImageRoleArn() {
@@ -53,7 +53,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ImageTag.class})
+    @Export(name="tags", type=List.class, parameters={ImageTag.class})
     private Output</* @Nullable */ List<ImageTag>> tags;
 
     /**

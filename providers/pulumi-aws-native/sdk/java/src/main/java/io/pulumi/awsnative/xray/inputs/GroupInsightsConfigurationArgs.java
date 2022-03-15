@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.xray.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GroupInsightsConfigurationArgs extends io.pulumi.resources.Re
      * Set the InsightsEnabled value to true to enable insights or false to disable insights.
      * 
      */
-    @InputImport(name="insightsEnabled")
+    @Import(name="insightsEnabled")
       private final @Nullable Output<Boolean> insightsEnabled;
 
     public Output<Boolean> getInsightsEnabled() {
@@ -29,7 +29,7 @@ public final class GroupInsightsConfigurationArgs extends io.pulumi.resources.Re
      * Set the NotificationsEnabled value to true to enable insights notifications. Notifications can only be enabled on a group with InsightsEnabled set to true.
      * 
      */
-    @InputImport(name="notificationsEnabled")
+    @Import(name="notificationsEnabled")
       private final @Nullable Output<Boolean> notificationsEnabled;
 
     public Output<Boolean> getNotificationsEnabled() {

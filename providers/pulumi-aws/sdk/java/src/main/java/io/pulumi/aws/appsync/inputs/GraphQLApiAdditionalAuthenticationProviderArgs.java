@@ -7,7 +7,7 @@ import io.pulumi.aws.appsync.inputs.GraphQLApiAdditionalAuthenticationProviderLa
 import io.pulumi.aws.appsync.inputs.GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigArgs;
 import io.pulumi.aws.appsync.inputs.GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderArgs extends io.pul
      * The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`, `AWS_LAMBDA`
      * 
      */
-    @InputImport(name="authenticationType", required=true)
+    @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
     public Output<String> getAuthenticationType() {
@@ -32,7 +32,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderArgs extends io.pul
      * Nested argument containing Lambda authorizer configuration. Defined below.
      * 
      */
-    @InputImport(name="lambdaAuthorizerConfig")
+    @Import(name="lambdaAuthorizerConfig")
       private final @Nullable Output<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigArgs> lambdaAuthorizerConfig;
 
     public Output<GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfigArgs> getLambdaAuthorizerConfig() {
@@ -43,7 +43,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderArgs extends io.pul
      * Nested argument containing OpenID Connect configuration. Defined below.
      * 
      */
-    @InputImport(name="openidConnectConfig")
+    @Import(name="openidConnectConfig")
       private final @Nullable Output<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigArgs> openidConnectConfig;
 
     public Output<GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfigArgs> getOpenidConnectConfig() {
@@ -54,7 +54,7 @@ public final class GraphQLApiAdditionalAuthenticationProviderArgs extends io.pul
      * The Amazon Cognito User Pool configuration. Defined below.
      * 
      */
-    @InputImport(name="userPoolConfig")
+    @Import(name="userPoolConfig")
       private final @Nullable Output<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs> userPoolConfig;
 
     public Output<GraphQLApiAdditionalAuthenticationProviderUserPoolConfigArgs> getUserPoolConfig() {

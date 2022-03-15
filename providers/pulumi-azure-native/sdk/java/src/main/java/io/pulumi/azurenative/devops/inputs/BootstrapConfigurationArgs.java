@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devops.inputs;
 import io.pulumi.azurenative.devops.inputs.CodeRepositoryArgs;
 import io.pulumi.azurenative.devops.inputs.PipelineTemplateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class BootstrapConfigurationArgs extends io.pulumi.resources.Resour
      * Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.
      * 
      */
-    @InputImport(name="sourceRepository")
+    @Import(name="sourceRepository")
       private final @Nullable Output<CodeRepositoryArgs> sourceRepository;
 
     public Output<CodeRepositoryArgs> getSourceRepository() {
@@ -34,7 +34,7 @@ public final class BootstrapConfigurationArgs extends io.pulumi.resources.Resour
      * Template used to bootstrap the pipeline.
      * 
      */
-    @InputImport(name="template", required=true)
+    @Import(name="template", required=true)
       private final Output<PipelineTemplateArgs> template;
 
     public Output<PipelineTemplateArgs> getTemplate() {

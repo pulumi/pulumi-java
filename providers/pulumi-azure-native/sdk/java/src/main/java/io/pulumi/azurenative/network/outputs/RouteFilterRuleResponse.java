@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RouteFilterRuleResponse {
     /**
      * The access type of the rule.
@@ -53,16 +53,16 @@ public final class RouteFilterRuleResponse {
      */
     private final String routeFilterRuleType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteFilterRuleResponse(
-        @OutputCustomType.Parameter("access") String access,
-        @OutputCustomType.Parameter("communities") List<String> communities,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("routeFilterRuleType") String routeFilterRuleType) {
+        @CustomType.Parameter("access") String access,
+        @CustomType.Parameter("communities") List<String> communities,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("routeFilterRuleType") String routeFilterRuleType) {
         this.access = access;
         this.communities = communities;
         this.etag = etag;

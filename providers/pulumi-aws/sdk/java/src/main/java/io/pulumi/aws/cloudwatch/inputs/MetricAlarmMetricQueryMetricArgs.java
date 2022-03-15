@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class MetricAlarmMetricQueryMetricArgs extends io.pulumi.resources.
      * The dimensions for this metric.  For the list of available dimensions see the AWS documentation [here](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
      */
-    @InputImport(name="dimensions")
+    @Import(name="dimensions")
       private final @Nullable Output<Map<String,String>> dimensions;
 
     public Output<Map<String,String>> getDimensions() {
@@ -32,7 +32,7 @@ public final class MetricAlarmMetricQueryMetricArgs extends io.pulumi.resources.
      * See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
      */
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -44,7 +44,7 @@ public final class MetricAlarmMetricQueryMetricArgs extends io.pulumi.resources.
      * See docs for [supported metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/CW_Support_For_AWS.html).
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -55,7 +55,7 @@ public final class MetricAlarmMetricQueryMetricArgs extends io.pulumi.resources.
      * The period in seconds over which the specified `stat` is applied.
      * 
      */
-    @InputImport(name="period", required=true)
+    @Import(name="period", required=true)
       private final Output<Integer> period;
 
     public Output<Integer> getPeriod() {
@@ -67,7 +67,7 @@ public final class MetricAlarmMetricQueryMetricArgs extends io.pulumi.resources.
      * See docs for [supported statistics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html).
      * 
      */
-    @InputImport(name="stat", required=true)
+    @Import(name="stat", required=true)
       private final Output<String> stat;
 
     public Output<String> getStat() {
@@ -78,7 +78,7 @@ public final class MetricAlarmMetricQueryMetricArgs extends io.pulumi.resources.
      * The unit for this metric.
      * 
      */
-    @InputImport(name="unit")
+    @Import(name="unit")
       private final @Nullable Output<String> unit;
 
     public Output<String> getUnit() {

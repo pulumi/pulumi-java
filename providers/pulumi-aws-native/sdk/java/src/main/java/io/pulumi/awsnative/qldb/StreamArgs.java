@@ -6,7 +6,7 @@ package io.pulumi.awsnative.qldb;
 import io.pulumi.awsnative.qldb.inputs.StreamKinesisConfigurationArgs;
 import io.pulumi.awsnative.qldb.inputs.StreamTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,42 +17,42 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StreamArgs Empty = new StreamArgs();
 
-    @InputImport(name="exclusiveEndTime")
+    @Import(name="exclusiveEndTime")
       private final @Nullable Output<String> exclusiveEndTime;
 
     public Output<String> getExclusiveEndTime() {
         return this.exclusiveEndTime == null ? Output.empty() : this.exclusiveEndTime;
     }
 
-    @InputImport(name="inclusiveStartTime", required=true)
+    @Import(name="inclusiveStartTime", required=true)
       private final Output<String> inclusiveStartTime;
 
     public Output<String> getInclusiveStartTime() {
         return this.inclusiveStartTime;
     }
 
-    @InputImport(name="kinesisConfiguration", required=true)
+    @Import(name="kinesisConfiguration", required=true)
       private final Output<StreamKinesisConfigurationArgs> kinesisConfiguration;
 
     public Output<StreamKinesisConfigurationArgs> getKinesisConfiguration() {
         return this.kinesisConfiguration;
     }
 
-    @InputImport(name="ledgerName", required=true)
+    @Import(name="ledgerName", required=true)
       private final Output<String> ledgerName;
 
     public Output<String> getLedgerName() {
         return this.ledgerName;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="streamName")
+    @Import(name="streamName")
       private final @Nullable Output<String> streamName;
 
     public Output<String> getStreamName() {
@@ -63,7 +63,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<StreamTagArgs>> tags;
 
     public Output<List<StreamTagArgs>> getTags() {

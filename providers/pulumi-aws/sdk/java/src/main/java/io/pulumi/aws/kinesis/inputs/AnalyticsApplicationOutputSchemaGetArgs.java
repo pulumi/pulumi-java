@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AnalyticsApplicationOutputSchemaGetArgs extends io.pulumi.res
      * The Format Type of the records on the output stream. Can be `CSV` or `JSON`.
      * 
      */
-    @InputImport(name="recordFormatType", required=true)
+    @Import(name="recordFormatType", required=true)
       private final Output<String> recordFormatType;
 
     public Output<String> getRecordFormatType() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.powerbidedicated.outputs;
 
 import io.pulumi.azurenative.powerbidedicated.outputs.AutoScaleVCoreSkuResponse;
 import io.pulumi.azurenative.powerbidedicated.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAutoScaleVCoreResult {
     /**
      * The maximum capacity of an auto scale v-core resource.
@@ -66,18 +66,18 @@ public final class GetAutoScaleVCoreResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAutoScaleVCoreResult(
-        @OutputCustomType.Parameter("capacityLimit") @Nullable Integer capacityLimit,
-        @OutputCustomType.Parameter("capacityObjectId") @Nullable String capacityObjectId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sku") AutoScaleVCoreSkuResponse sku,
-        @OutputCustomType.Parameter("systemData") @Nullable SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("capacityLimit") @Nullable Integer capacityLimit,
+        @CustomType.Parameter("capacityObjectId") @Nullable String capacityObjectId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sku") AutoScaleVCoreSkuResponse sku,
+        @CustomType.Parameter("systemData") @Nullable SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.capacityLimit = capacityLimit;
         this.capacityObjectId = capacityObjectId;
         this.id = id;

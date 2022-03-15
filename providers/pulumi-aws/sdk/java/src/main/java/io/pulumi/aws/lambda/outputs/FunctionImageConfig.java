@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FunctionImageConfig {
     /**
      * Parameters that you want to pass in with `entry_point`.
@@ -28,11 +28,11 @@ public final class FunctionImageConfig {
      */
     private final @Nullable String workingDirectory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FunctionImageConfig(
-        @OutputCustomType.Parameter("commands") @Nullable List<String> commands,
-        @OutputCustomType.Parameter("entryPoints") @Nullable List<String> entryPoints,
-        @OutputCustomType.Parameter("workingDirectory") @Nullable String workingDirectory) {
+        @CustomType.Parameter("commands") @Nullable List<String> commands,
+        @CustomType.Parameter("entryPoints") @Nullable List<String> entryPoints,
+        @CustomType.Parameter("workingDirectory") @Nullable String workingDirectory) {
         this.commands = commands;
         this.entryPoints = entryPoints;
         this.workingDirectory = workingDirectory;

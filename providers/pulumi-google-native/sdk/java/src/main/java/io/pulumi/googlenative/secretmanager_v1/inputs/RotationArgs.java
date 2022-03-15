@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.secretmanager_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RotationArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Timestamp in UTC at which the Secret is scheduled to rotate. Cannot be set to less than 300s (5 min) in the future and at most 3153600000s (100 years). next_rotation_time MUST be set if rotation_period is set.
      * 
      */
-    @InputImport(name="nextRotationTime")
+    @Import(name="nextRotationTime")
       private final @Nullable Output<String> nextRotationTime;
 
     public Output<String> getNextRotationTime() {
@@ -33,7 +33,7 @@ public final class RotationArgs extends io.pulumi.resources.ResourceArgs {
      * Input only. The Duration between rotation notifications. Must be in seconds and at least 3600s (1h) and at most 3153600000s (100 years). If rotation_period is set, next_rotation_time must be set. next_rotation_time will be advanced by this period when the service automatically sends rotation notifications.
      * 
      */
-    @InputImport(name="rotationPeriod")
+    @Import(name="rotationPeriod")
       private final @Nullable Output<String> rotationPeriod;
 
     public Output<String> getRotationPeriod() {

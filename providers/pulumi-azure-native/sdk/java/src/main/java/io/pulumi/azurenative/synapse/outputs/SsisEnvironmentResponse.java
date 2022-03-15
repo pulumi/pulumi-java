@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.SsisVariableResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SsisEnvironmentResponse {
     /**
      * Metadata description.
@@ -46,14 +46,14 @@ public final class SsisEnvironmentResponse {
      */
     private final @Nullable List<SsisVariableResponse> variables;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SsisEnvironmentResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("folderId") @Nullable Double folderId,
-        @OutputCustomType.Parameter("id") @Nullable Double id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("variables") @Nullable List<SsisVariableResponse> variables) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("folderId") @Nullable Double folderId,
+        @CustomType.Parameter("id") @Nullable Double id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("variables") @Nullable List<SsisVariableResponse> variables) {
         this.description = description;
         this.folderId = folderId;
         this.id = id;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
      * The Assessment Key - Unique key for the assessment type
      * 
      */
-    @InputImport(name="assessmentName", required=true)
+    @Import(name="assessmentName", required=true)
       private final String assessmentName;
 
     public String getAssessmentName() {
@@ -29,7 +29,7 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
      * OData expand. Optional.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -40,7 +40,7 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
      * The identifier of the resource.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final String resourceId;
 
     public String getResourceId() {

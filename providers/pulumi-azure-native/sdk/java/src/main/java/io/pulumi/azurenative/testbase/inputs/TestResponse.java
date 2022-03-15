@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.testbase.inputs;
 
 import io.pulumi.azurenative.testbase.inputs.CommandResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class TestResponse extends io.pulumi.resources.InvokeArgs {
      * The commands used in the test.
      * 
      */
-    @InputImport(name="commands", required=true)
+    @Import(name="commands", required=true)
       private final List<CommandResponse> commands;
 
     public List<CommandResponse> getCommands() {
@@ -36,7 +36,7 @@ public final class TestResponse extends io.pulumi.resources.InvokeArgs {
      * Indicates if this test is active.It doesn't schedule test for not active Test.
      * 
      */
-    @InputImport(name="isActive")
+    @Import(name="isActive")
       private final @Nullable Boolean isActive;
 
     public Optional<Boolean> getIsActive() {
@@ -47,7 +47,7 @@ public final class TestResponse extends io.pulumi.resources.InvokeArgs {
      * The type of the test.
      * 
      */
-    @InputImport(name="testType", required=true)
+    @Import(name="testType", required=true)
       private final String testType;
 
     public String getTestType() {
@@ -58,7 +58,7 @@ public final class TestResponse extends io.pulumi.resources.InvokeArgs {
      * The status of the validation run of the package.
      * 
      */
-    @InputImport(name="validationRunStatus", required=true)
+    @Import(name="validationRunStatus", required=true)
       private final String validationRunStatus;
 
     public String getValidationRunStatus() {

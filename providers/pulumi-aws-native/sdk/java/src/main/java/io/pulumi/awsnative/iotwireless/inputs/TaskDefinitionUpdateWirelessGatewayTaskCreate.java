@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotwireless.inputs;
 
 import io.pulumi.awsnative.iotwireless.inputs.TaskDefinitionLoRaWANUpdateGatewayTaskCreate;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreate extends io.pulu
 
     public static final TaskDefinitionUpdateWirelessGatewayTaskCreate Empty = new TaskDefinitionUpdateWirelessGatewayTaskCreate();
 
-    @InputImport(name="loRaWAN")
+    @Import(name="loRaWAN")
       private final @Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreate loRaWAN;
 
     public Optional<TaskDefinitionLoRaWANUpdateGatewayTaskCreate> getLoRaWAN() {
         return this.loRaWAN == null ? Optional.empty() : Optional.ofNullable(this.loRaWAN);
     }
 
-    @InputImport(name="updateDataRole")
+    @Import(name="updateDataRole")
       private final @Nullable String updateDataRole;
 
     public Optional<String> getUpdateDataRole() {
         return this.updateDataRole == null ? Optional.empty() : Optional.ofNullable(this.updateDataRole);
     }
 
-    @InputImport(name="updateDataSource")
+    @Import(name="updateDataSource")
       private final @Nullable String updateDataSource;
 
     public Optional<String> getUpdateDataSource() {

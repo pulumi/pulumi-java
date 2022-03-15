@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.iam_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRoleResult {
     /**
      * The current deleted state of the role. This field is read only. It will be ignored in calls to CreateRole and UpdateRole.
@@ -47,15 +47,15 @@ public final class GetRoleResult {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRoleResult(
-        @OutputCustomType.Parameter("deleted") Boolean deleted,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("includedPermissions") List<String> includedPermissions,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("stage") String stage,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("deleted") Boolean deleted,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("includedPermissions") List<String> includedPermissions,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("stage") String stage,
+        @CustomType.Parameter("title") String title) {
         this.deleted = deleted;
         this.description = description;
         this.etag = etag;

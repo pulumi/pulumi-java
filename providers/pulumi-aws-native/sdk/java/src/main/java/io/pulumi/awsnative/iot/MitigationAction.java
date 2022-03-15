@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iot.MitigationActionArgs;
 import io.pulumi.awsnative.iot.outputs.MitigationActionActionParams;
 import io.pulumi.awsnative.iot.outputs.MitigationActionTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class MitigationAction extends io.pulumi.resources.CustomResource {
      * A unique identifier for the mitigation action.
      * 
      */
-    @OutputExport(name="actionName", type=String.class, parameters={})
+    @Export(name="actionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> actionName;
 
     /**
@@ -36,25 +36,25 @@ public class MitigationAction extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getActionName() {
         return this.actionName;
     }
-    @OutputExport(name="actionParams", type=MitigationActionActionParams.class, parameters={})
+    @Export(name="actionParams", type=MitigationActionActionParams.class, parameters={})
     private Output<MitigationActionActionParams> actionParams;
 
     public Output<MitigationActionActionParams> getActionParams() {
         return this.actionParams;
     }
-    @OutputExport(name="mitigationActionArn", type=String.class, parameters={})
+    @Export(name="mitigationActionArn", type=String.class, parameters={})
     private Output<String> mitigationActionArn;
 
     public Output<String> getMitigationActionArn() {
         return this.mitigationActionArn;
     }
-    @OutputExport(name="mitigationActionId", type=String.class, parameters={})
+    @Export(name="mitigationActionId", type=String.class, parameters={})
     private Output<String> mitigationActionId;
 
     public Output<String> getMitigationActionId() {
         return this.mitigationActionId;
     }
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -64,7 +64,7 @@ public class MitigationAction extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={MitigationActionTag.class})
+    @Export(name="tags", type=List.class, parameters={MitigationActionTag.class})
     private Output</* @Nullable */ List<MitigationActionTag>> tags;
 
     /**

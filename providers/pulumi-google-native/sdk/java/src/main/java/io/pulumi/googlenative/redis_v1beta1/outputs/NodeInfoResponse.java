@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.redis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeInfoResponse {
     /**
      * Location of the node.
@@ -15,8 +15,8 @@ public final class NodeInfoResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
-    private NodeInfoResponse(@OutputCustomType.Parameter("zone") String zone) {
+    @CustomType.Constructor
+    private NodeInfoResponse(@CustomType.Parameter("zone") String zone) {
         this.zone = zone;
     }
 

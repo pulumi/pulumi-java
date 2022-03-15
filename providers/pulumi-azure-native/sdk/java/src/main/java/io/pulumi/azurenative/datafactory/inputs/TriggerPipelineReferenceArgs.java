@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.PipelineReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class TriggerPipelineReferenceArgs extends io.pulumi.resources.Reso
      * Pipeline parameters.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,Object>> parameters;
 
     public Output<Map<String,Object>> getParameters() {
@@ -36,7 +36,7 @@ public final class TriggerPipelineReferenceArgs extends io.pulumi.resources.Reso
      * Pipeline reference.
      * 
      */
-    @InputImport(name="pipelineReference")
+    @Import(name="pipelineReference")
       private final @Nullable Output<PipelineReferenceArgs> pipelineReference;
 
     public Output<PipelineReferenceArgs> getPipelineReference() {

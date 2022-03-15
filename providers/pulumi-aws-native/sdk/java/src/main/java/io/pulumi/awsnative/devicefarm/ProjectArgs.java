@@ -5,7 +5,7 @@ package io.pulumi.awsnative.devicefarm;
 
 import io.pulumi.awsnative.devicefarm.inputs.ProjectTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,21 +17,21 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProjectArgs Empty = new ProjectArgs();
 
-    @InputImport(name="defaultJobTimeoutMinutes")
+    @Import(name="defaultJobTimeoutMinutes")
       private final @Nullable Output<Integer> defaultJobTimeoutMinutes;
 
     public Output<Integer> getDefaultJobTimeoutMinutes() {
         return this.defaultJobTimeoutMinutes == null ? Output.empty() : this.defaultJobTimeoutMinutes;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ProjectTagArgs>> tags;
 
     public Output<List<ProjectTagArgs>> getTags() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class YumSettingsResponse {
     /**
      * List of packages to exclude from update. These packages are excluded by using the yum `--exclude` flag.
@@ -32,12 +32,12 @@ public final class YumSettingsResponse {
      */
     private final Boolean security;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private YumSettingsResponse(
-        @OutputCustomType.Parameter("excludes") List<String> excludes,
-        @OutputCustomType.Parameter("exclusivePackages") List<String> exclusivePackages,
-        @OutputCustomType.Parameter("minimal") Boolean minimal,
-        @OutputCustomType.Parameter("security") Boolean security) {
+        @CustomType.Parameter("excludes") List<String> excludes,
+        @CustomType.Parameter("exclusivePackages") List<String> exclusivePackages,
+        @CustomType.Parameter("minimal") Boolean minimal,
+        @CustomType.Parameter("security") Boolean security) {
         this.excludes = excludes;
         this.exclusivePackages = exclusivePackages;
         this.minimal = minimal;

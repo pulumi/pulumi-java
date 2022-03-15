@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DiagnosticsStorageAccountConfigResponse {
     /**
      * The blob endpoint of the azure storage account.
@@ -42,14 +42,14 @@ public final class DiagnosticsStorageAccountConfigResponse {
      */
     private final String tableEndpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiagnosticsStorageAccountConfigResponse(
-        @OutputCustomType.Parameter("blobEndpoint") String blobEndpoint,
-        @OutputCustomType.Parameter("protectedAccountKeyName") String protectedAccountKeyName,
-        @OutputCustomType.Parameter("protectedAccountKeyName2") @Nullable String protectedAccountKeyName2,
-        @OutputCustomType.Parameter("queueEndpoint") String queueEndpoint,
-        @OutputCustomType.Parameter("storageAccountName") String storageAccountName,
-        @OutputCustomType.Parameter("tableEndpoint") String tableEndpoint) {
+        @CustomType.Parameter("blobEndpoint") String blobEndpoint,
+        @CustomType.Parameter("protectedAccountKeyName") String protectedAccountKeyName,
+        @CustomType.Parameter("protectedAccountKeyName2") @Nullable String protectedAccountKeyName2,
+        @CustomType.Parameter("queueEndpoint") String queueEndpoint,
+        @CustomType.Parameter("storageAccountName") String storageAccountName,
+        @CustomType.Parameter("tableEndpoint") String tableEndpoint) {
         this.blobEndpoint = blobEndpoint;
         this.protectedAccountKeyName = protectedAccountKeyName;
         this.protectedAccountKeyName2 = protectedAccountKeyName2;

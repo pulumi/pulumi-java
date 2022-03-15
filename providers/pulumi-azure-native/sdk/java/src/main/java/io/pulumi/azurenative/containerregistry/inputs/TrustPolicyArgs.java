@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.PolicyStatus;
 import io.pulumi.azurenative.containerregistry.enums.TrustPolicyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class TrustPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The value that indicates whether the policy is enabled or not.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,PolicyStatus>> status;
 
     public Output<Either<String,PolicyStatus>> getStatus() {
@@ -36,7 +36,7 @@ public final class TrustPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The type of trust policy.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,TrustPolicyType>> type;
 
     public Output<Either<String,TrustPolicyType>> getType() {

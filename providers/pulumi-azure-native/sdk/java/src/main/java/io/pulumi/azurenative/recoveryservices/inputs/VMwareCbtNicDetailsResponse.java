@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class VMwareCbtNicDetailsResponse extends io.pulumi.resources.Invok
      * A value indicating whether this is the primary NIC.
      * 
      */
-    @InputImport(name="isPrimaryNic")
+    @Import(name="isPrimaryNic")
       private final @Nullable String isPrimaryNic;
 
     public Optional<String> getIsPrimaryNic() {
@@ -33,7 +33,7 @@ public final class VMwareCbtNicDetailsResponse extends io.pulumi.resources.Invok
      * A value indicating whether this NIC is selected for migration.
      * 
      */
-    @InputImport(name="isSelectedForMigration")
+    @Import(name="isSelectedForMigration")
       private final @Nullable String isSelectedForMigration;
 
     public Optional<String> getIsSelectedForMigration() {
@@ -44,7 +44,7 @@ public final class VMwareCbtNicDetailsResponse extends io.pulumi.resources.Invok
      * The NIC Id.
      * 
      */
-    @InputImport(name="nicId", required=true)
+    @Import(name="nicId", required=true)
       private final String nicId;
 
     public String getNicId() {
@@ -55,7 +55,7 @@ public final class VMwareCbtNicDetailsResponse extends io.pulumi.resources.Invok
      * The source IP address.
      * 
      */
-    @InputImport(name="sourceIPAddress", required=true)
+    @Import(name="sourceIPAddress", required=true)
       private final String sourceIPAddress;
 
     public String getSourceIPAddress() {
@@ -66,7 +66,7 @@ public final class VMwareCbtNicDetailsResponse extends io.pulumi.resources.Invok
      * The source IP address type.
      * 
      */
-    @InputImport(name="sourceIPAddressType", required=true)
+    @Import(name="sourceIPAddressType", required=true)
       private final String sourceIPAddressType;
 
     public String getSourceIPAddressType() {
@@ -77,7 +77,7 @@ public final class VMwareCbtNicDetailsResponse extends io.pulumi.resources.Invok
      * Source network Id.
      * 
      */
-    @InputImport(name="sourceNetworkId", required=true)
+    @Import(name="sourceNetworkId", required=true)
       private final String sourceNetworkId;
 
     public String getSourceNetworkId() {
@@ -88,7 +88,7 @@ public final class VMwareCbtNicDetailsResponse extends io.pulumi.resources.Invok
      * The target IP address.
      * 
      */
-    @InputImport(name="targetIPAddress")
+    @Import(name="targetIPAddress")
       private final @Nullable String targetIPAddress;
 
     public Optional<String> getTargetIPAddress() {
@@ -99,7 +99,7 @@ public final class VMwareCbtNicDetailsResponse extends io.pulumi.resources.Invok
      * The target IP address type.
      * 
      */
-    @InputImport(name="targetIPAddressType")
+    @Import(name="targetIPAddressType")
       private final @Nullable String targetIPAddressType;
 
     public Optional<String> getTargetIPAddressType() {
@@ -110,7 +110,7 @@ public final class VMwareCbtNicDetailsResponse extends io.pulumi.resources.Invok
      * Target subnet name.
      * 
      */
-    @InputImport(name="targetSubnetName")
+    @Import(name="targetSubnetName")
       private final @Nullable String targetSubnetName;
 
     public Optional<String> getTargetSubnetName() {

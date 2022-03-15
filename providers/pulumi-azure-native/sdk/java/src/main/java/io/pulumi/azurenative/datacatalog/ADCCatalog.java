@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datacatalog.ADCCatalogArgs;
 import io.pulumi.azurenative.datacatalog.outputs.PrincipalsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -38,7 +38,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * Azure data catalog admin list.
      * 
      */
-    @OutputExport(name="admins", type=List.class, parameters={PrincipalsResponse.class})
+    @Export(name="admins", type=List.class, parameters={PrincipalsResponse.class})
     private Output</* @Nullable */ List<PrincipalsResponse>> admins;
 
     /**
@@ -52,7 +52,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * Automatic unit adjustment enabled or not.
      * 
      */
-    @OutputExport(name="enableAutomaticUnitAdjustment", type=Boolean.class, parameters={})
+    @Export(name="enableAutomaticUnitAdjustment", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableAutomaticUnitAdjustment;
 
     /**
@@ -66,7 +66,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * Resource etag
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -80,7 +80,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -94,7 +94,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * Azure data catalog SKU.
      * 
      */
-    @OutputExport(name="sku", type=String.class, parameters={})
+    @Export(name="sku", type=String.class, parameters={})
     private Output</* @Nullable */ String> sku;
 
     /**
@@ -122,7 +122,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * Azure data catalog provision status.
      * 
      */
-    @OutputExport(name="successfullyProvisioned", type=Boolean.class, parameters={})
+    @Export(name="successfullyProvisioned", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> successfullyProvisioned;
 
     /**
@@ -136,7 +136,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -150,7 +150,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -164,7 +164,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * Azure data catalog units.
      * 
      */
-    @OutputExport(name="units", type=Integer.class, parameters={})
+    @Export(name="units", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> units;
 
     /**
@@ -178,7 +178,7 @@ public class ADCCatalog extends io.pulumi.resources.CustomResource {
      * Azure data catalog user list.
      * 
      */
-    @OutputExport(name="users", type=List.class, parameters={PrincipalsResponse.class})
+    @Export(name="users", type=List.class, parameters={PrincipalsResponse.class})
     private Output</* @Nullable */ List<PrincipalsResponse>> users;
 
     /**

@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImportValueResult {
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor
-    private ImportValueResult(@OutputCustomType.Parameter("value") @Nullable Object value) {
+    @CustomType.Constructor
+    private ImportValueResult(@CustomType.Parameter("value") @Nullable Object value) {
         this.value = value;
     }
 

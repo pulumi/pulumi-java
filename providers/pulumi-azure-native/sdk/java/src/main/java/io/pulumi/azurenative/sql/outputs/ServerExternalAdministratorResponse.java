@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServerExternalAdministratorResponse {
     /**
      * Type of the sever administrator.
@@ -43,14 +43,14 @@ public final class ServerExternalAdministratorResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServerExternalAdministratorResponse(
-        @OutputCustomType.Parameter("administratorType") @Nullable String administratorType,
-        @OutputCustomType.Parameter("azureADOnlyAuthentication") @Nullable Boolean azureADOnlyAuthentication,
-        @OutputCustomType.Parameter("login") @Nullable String login,
-        @OutputCustomType.Parameter("principalType") @Nullable String principalType,
-        @OutputCustomType.Parameter("sid") @Nullable String sid,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
+        @CustomType.Parameter("administratorType") @Nullable String administratorType,
+        @CustomType.Parameter("azureADOnlyAuthentication") @Nullable Boolean azureADOnlyAuthentication,
+        @CustomType.Parameter("login") @Nullable String login,
+        @CustomType.Parameter("principalType") @Nullable String principalType,
+        @CustomType.Parameter("sid") @Nullable String sid,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.administratorType = administratorType;
         this.azureADOnlyAuthentication = azureADOnlyAuthentication;
         this.login = login;

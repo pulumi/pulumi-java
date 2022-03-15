@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ZypperRepositoryResponse extends io.pulumi.resources.InvokeAr
      * The location of the repository directory.
      * 
      */
-    @InputImport(name="baseUrl", required=true)
+    @Import(name="baseUrl", required=true)
       private final String baseUrl;
 
     public String getBaseUrl() {
@@ -32,7 +32,7 @@ public final class ZypperRepositoryResponse extends io.pulumi.resources.InvokeAr
      * The display name of the repository.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -43,7 +43,7 @@ public final class ZypperRepositoryResponse extends io.pulumi.resources.InvokeAr
      * URIs of GPG keys.
      * 
      */
-    @InputImport(name="gpgKeys", required=true)
+    @Import(name="gpgKeys", required=true)
       private final List<String> gpgKeys;
 
     public List<String> getGpgKeys() {

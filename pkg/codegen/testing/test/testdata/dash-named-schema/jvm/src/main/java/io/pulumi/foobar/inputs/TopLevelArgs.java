@@ -4,7 +4,7 @@
 package io.pulumi.foobar.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class TopLevelArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TopLevelArgs Empty = new TopLevelArgs();
 
-    @InputImport(name="buzz")
+    @Import(name="buzz")
       private final @Nullable Output<String> buzz;
 
     public Output<String> getBuzz() {

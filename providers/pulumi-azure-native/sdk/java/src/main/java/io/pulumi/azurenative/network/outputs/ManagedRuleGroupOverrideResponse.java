@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ManagedRuleOverrideResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedRuleGroupOverrideResponse {
     /**
      * The managed rule group to override.
@@ -23,10 +23,10 @@ public final class ManagedRuleGroupOverrideResponse {
      */
     private final @Nullable List<ManagedRuleOverrideResponse> rules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedRuleGroupOverrideResponse(
-        @OutputCustomType.Parameter("ruleGroupName") String ruleGroupName,
-        @OutputCustomType.Parameter("rules") @Nullable List<ManagedRuleOverrideResponse> rules) {
+        @CustomType.Parameter("ruleGroupName") String ruleGroupName,
+        @CustomType.Parameter("rules") @Nullable List<ManagedRuleOverrideResponse> rules) {
         this.ruleGroupName = ruleGroupName;
         this.rules = rules;
     }

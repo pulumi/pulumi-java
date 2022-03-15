@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.SecurityProfileBehaviorCriteria;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileMetricDimension;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SecurityProfileBehavior extends io.pulumi.resources.InvokeArg
 
     public static final SecurityProfileBehavior Empty = new SecurityProfileBehavior();
 
-    @InputImport(name="criteria")
+    @Import(name="criteria")
       private final @Nullable SecurityProfileBehaviorCriteria criteria;
 
     public Optional<SecurityProfileBehaviorCriteria> getCriteria() {
@@ -32,14 +32,14 @@ public final class SecurityProfileBehavior extends io.pulumi.resources.InvokeArg
      * What is measured by the behavior.
      * 
      */
-    @InputImport(name="metric")
+    @Import(name="metric")
       private final @Nullable String metric;
 
     public Optional<String> getMetric() {
         return this.metric == null ? Optional.empty() : Optional.ofNullable(this.metric);
     }
 
-    @InputImport(name="metricDimension")
+    @Import(name="metricDimension")
       private final @Nullable SecurityProfileMetricDimension metricDimension;
 
     public Optional<SecurityProfileMetricDimension> getMetricDimension() {
@@ -50,7 +50,7 @@ public final class SecurityProfileBehavior extends io.pulumi.resources.InvokeArg
      * The name for the behavior.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -61,7 +61,7 @@ public final class SecurityProfileBehavior extends io.pulumi.resources.InvokeArg
      * Manage Detect alarm SNS notifications by setting behavior notification to on or suppressed. Detect will continue to performing device behavior evaluations. However, suppressed alarms wouldn't be forwarded for SNS notification.
      * 
      */
-    @InputImport(name="suppressAlerts")
+    @Import(name="suppressAlerts")
       private final @Nullable Boolean suppressAlerts;
 
     public Optional<Boolean> getSuppressAlerts() {

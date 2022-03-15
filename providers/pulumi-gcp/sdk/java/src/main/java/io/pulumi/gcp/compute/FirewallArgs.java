@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.FirewallAllowArgs;
 import io.pulumi.gcp.compute.inputs.FirewallDenyArgs;
 import io.pulumi.gcp.compute.inputs.FirewallLogConfigArgs;
@@ -27,7 +27,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="allows")
+    @Import(name="allows")
       private final @Nullable Output<List<FirewallAllowArgs>> allows;
 
     public Output<List<FirewallAllowArgs>> getAllows() {
@@ -40,7 +40,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="denies")
+    @Import(name="denies")
       private final @Nullable Output<List<FirewallDenyArgs>> denies;
 
     public Output<List<FirewallDenyArgs>> getDenies() {
@@ -52,7 +52,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -65,7 +65,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * must be expressed in CIDR format. Only IPv4 is supported.
      * 
      */
-    @InputImport(name="destinationRanges")
+    @Import(name="destinationRanges")
       private final @Nullable Output<List<String>> destinationRanges;
 
     public Output<List<String>> getDestinationRanges() {
@@ -81,7 +81,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `INGRESS` and `EGRESS`.
      * 
      */
-    @InputImport(name="direction")
+    @Import(name="direction")
       private final @Nullable Output<String> direction;
 
     public Output<String> getDirection() {
@@ -95,7 +95,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * is unspecified, the firewall rule will be enabled.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -111,7 +111,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* Deprecated in favor of log_config */
-    @InputImport(name="enableLogging")
+    @Import(name="enableLogging")
       private final @Nullable Output<Boolean> enableLogging;
 
     @Deprecated /* Deprecated in favor of log_config */
@@ -125,7 +125,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="logConfig")
+    @Import(name="logConfig")
       private final @Nullable Output<FirewallLogConfigArgs> logConfig;
 
     public Output<FirewallLogConfigArgs> getLogConfig() {
@@ -142,7 +142,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -153,7 +153,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * The name or self_link of the network to attach this firewall to.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final Output<String> network;
 
     public Output<String> getNetwork() {
@@ -169,7 +169,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * precedence over ALLOW rules having equal priority.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -181,7 +181,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -200,7 +200,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * `source_tags` or `source_service_accounts` is required.
      * 
      */
-    @InputImport(name="sourceRanges")
+    @Import(name="sourceRanges")
       private final @Nullable Output<List<String>> sourceRanges;
 
     public Output<List<String>> getSourceRanges() {
@@ -222,7 +222,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * one of `source_ranges`, `source_tags` or `source_service_accounts` is required.
      * 
      */
-    @InputImport(name="sourceServiceAccounts")
+    @Import(name="sourceServiceAccounts")
       private final @Nullable Output<List<String>> sourceServiceAccounts;
 
     public Output<List<String>> getSourceServiceAccounts() {
@@ -242,7 +242,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * one of `source_ranges`, `source_tags` or `source_service_accounts` is required.
      * 
      */
-    @InputImport(name="sourceTags")
+    @Import(name="sourceTags")
       private final @Nullable Output<List<String>> sourceTags;
 
     public Output<List<String>> getSourceTags() {
@@ -258,7 +258,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * network.
      * 
      */
-    @InputImport(name="targetServiceAccounts")
+    @Import(name="targetServiceAccounts")
       private final @Nullable Output<List<String>> targetServiceAccounts;
 
     public Output<List<String>> getTargetServiceAccounts() {
@@ -272,7 +272,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * instances on the specified network.
      * 
      */
-    @InputImport(name="targetTags")
+    @Import(name="targetTags")
       private final @Nullable Output<List<String>> targetTags;
 
     public Output<List<String>> getTargetTags() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurearcdata.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PostgresInstanceSkuResponse {
     /**
      * If the SKU supports scale out/in then the capacity integer should be included. If scale out/in is not possible for the resource this may be omitted.
@@ -44,14 +44,14 @@ public final class PostgresInstanceSkuResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PostgresInstanceSkuResponse(
-        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
-        @OutputCustomType.Parameter("dev") @Nullable Boolean dev,
-        @OutputCustomType.Parameter("family") @Nullable String family,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("size") @Nullable String size,
-        @OutputCustomType.Parameter("tier") @Nullable String tier) {
+        @CustomType.Parameter("capacity") @Nullable Integer capacity,
+        @CustomType.Parameter("dev") @Nullable Boolean dev,
+        @CustomType.Parameter("family") @Nullable String family,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("size") @Nullable String size,
+        @CustomType.Parameter("tier") @Nullable String tier) {
         this.capacity = capacity;
         this.dev = dev;
         this.family = family;

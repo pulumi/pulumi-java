@@ -4,7 +4,7 @@
 package io.pulumi.aws.kms;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CiphertextArgs extends io.pulumi.resources.ResourceArgs {
      * An optional mapping that makes up the encryption context.
      * 
      */
-    @InputImport(name="context")
+    @Import(name="context")
       private final @Nullable Output<Map<String,String>> context;
 
     public Output<Map<String,String>> getContext() {
@@ -30,7 +30,7 @@ public final class CiphertextArgs extends io.pulumi.resources.ResourceArgs {
      * Globally unique key ID for the customer master key.
      * 
      */
-    @InputImport(name="keyId", required=true)
+    @Import(name="keyId", required=true)
       private final Output<String> keyId;
 
     public Output<String> getKeyId() {
@@ -41,7 +41,7 @@ public final class CiphertextArgs extends io.pulumi.resources.ResourceArgs {
      * Data to be encrypted. Note that this may show up in logs, and it will be stored in the state file.
      * 
      */
-    @InputImport(name="plaintext", required=true)
+    @Import(name="plaintext", required=true)
       private final Output<String> plaintext;
 
     public Output<String> getPlaintext() {

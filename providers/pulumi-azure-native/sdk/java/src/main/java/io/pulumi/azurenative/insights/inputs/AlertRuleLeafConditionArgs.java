@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AlertRuleLeafConditionArgs extends io.pulumi.resources.Resour
      * The value of the event's field will be compared to the values in this array (case-insensitive) to determine if the condition is met.
      * 
      */
-    @InputImport(name="containsAny")
+    @Import(name="containsAny")
       private final @Nullable Output<List<String>> containsAny;
 
     public Output<List<String>> getContainsAny() {
@@ -35,7 +35,7 @@ public final class AlertRuleLeafConditionArgs extends io.pulumi.resources.Resour
      * The value of the event's field will be compared to this value (case-insensitive) to determine if the condition is met.
      * 
      */
-    @InputImport(name="equals")
+    @Import(name="equals")
       private final @Nullable Output<String> equals;
 
     public Output<String> getEquals() {
@@ -47,7 +47,7 @@ public final class AlertRuleLeafConditionArgs extends io.pulumi.resources.Resour
      * The possible values for this field are (case-insensitive): 'resourceId', 'category', 'caller', 'level', 'operationName', 'resourceGroup', 'resourceProvider', 'status', 'subStatus', 'resourceType', or anything beginning with 'properties'.
      * 
      */
-    @InputImport(name="field")
+    @Import(name="field")
       private final @Nullable Output<String> field;
 
     public Output<String> getField() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetWebhookResult {
     /**
      * Indicates whether the webhook is disabled.
@@ -43,14 +43,14 @@ public final class GetWebhookResult {
      */
     private final String timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebhookResult(
-        @OutputCustomType.Parameter("disabled") Boolean disabled,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("genericWebService") GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse genericWebService,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("serviceDirectory") GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse serviceDirectory,
-        @OutputCustomType.Parameter("timeout") String timeout) {
+        @CustomType.Parameter("disabled") Boolean disabled,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("genericWebService") GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse genericWebService,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("serviceDirectory") GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse serviceDirectory,
+        @CustomType.Parameter("timeout") String timeout) {
         this.disabled = disabled;
         this.displayName = displayName;
         this.genericWebService = genericWebService;

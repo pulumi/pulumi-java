@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ConfigurationServiceResourceRequestsResponse extends io.pulum
      * Cpu allocated to each Application Configuration Service instance
      * 
      */
-    @InputImport(name="cpu", required=true)
+    @Import(name="cpu", required=true)
       private final String cpu;
 
     public String getCpu() {
@@ -32,7 +32,7 @@ public final class ConfigurationServiceResourceRequestsResponse extends io.pulum
      * Instance count of the Application Configuration Service
      * 
      */
-    @InputImport(name="instanceCount", required=true)
+    @Import(name="instanceCount", required=true)
       private final Integer instanceCount;
 
     public Integer getInstanceCount() {
@@ -43,7 +43,7 @@ public final class ConfigurationServiceResourceRequestsResponse extends io.pulum
      * Memory allocated to each Application Configuration Service instance
      * 
      */
-    @InputImport(name="memory", required=true)
+    @Import(name="memory", required=true)
       private final String memory;
 
     public String getMemory() {

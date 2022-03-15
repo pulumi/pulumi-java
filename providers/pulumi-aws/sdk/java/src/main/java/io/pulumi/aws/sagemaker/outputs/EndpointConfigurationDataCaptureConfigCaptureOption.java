@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EndpointConfigurationDataCaptureConfigCaptureOption {
     /**
      * Specifies the data to be captured. Should be one of `Input` or `Output`.
@@ -15,8 +15,8 @@ public final class EndpointConfigurationDataCaptureConfigCaptureOption {
      */
     private final String captureMode;
 
-    @OutputCustomType.Constructor
-    private EndpointConfigurationDataCaptureConfigCaptureOption(@OutputCustomType.Parameter("captureMode") String captureMode) {
+    @CustomType.Constructor
+    private EndpointConfigurationDataCaptureConfigCaptureOption(@CustomType.Parameter("captureMode") String captureMode) {
         this.captureMode = captureMode;
     }
 

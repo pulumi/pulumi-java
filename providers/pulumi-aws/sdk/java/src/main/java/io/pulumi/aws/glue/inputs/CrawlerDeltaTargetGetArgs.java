@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class CrawlerDeltaTargetGetArgs extends io.pulumi.resources.Resourc
      * The name of the connection to use to connect to the Delta table target.
      * 
      */
-    @InputImport(name="connectionName", required=true)
+    @Import(name="connectionName", required=true)
       private final Output<String> connectionName;
 
     public Output<String> getConnectionName() {
@@ -30,7 +30,7 @@ public final class CrawlerDeltaTargetGetArgs extends io.pulumi.resources.Resourc
      * A list of the Amazon S3 paths to the Delta tables.
      * 
      */
-    @InputImport(name="deltaTables", required=true)
+    @Import(name="deltaTables", required=true)
       private final Output<List<String>> deltaTables;
 
     public Output<List<String>> getDeltaTables() {
@@ -41,7 +41,7 @@ public final class CrawlerDeltaTargetGetArgs extends io.pulumi.resources.Resourc
      * Specifies whether to write the manifest files to the Delta table path.
      * 
      */
-    @InputImport(name="writeManifest", required=true)
+    @Import(name="writeManifest", required=true)
       private final Output<Boolean> writeManifest;
 
     public Output<Boolean> getWriteManifest() {

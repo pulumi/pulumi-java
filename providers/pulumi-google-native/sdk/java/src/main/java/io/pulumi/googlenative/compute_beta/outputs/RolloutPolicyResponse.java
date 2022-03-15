@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RolloutPolicyResponse {
     /**
      * An optional RFC3339 timestamp on or after which the update is considered rolled out to any zone that is not explicitly stated.
@@ -21,10 +21,10 @@ public final class RolloutPolicyResponse {
      */
     private final Map<String,String> locationRolloutPolicies;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RolloutPolicyResponse(
-        @OutputCustomType.Parameter("defaultRolloutTime") String defaultRolloutTime,
-        @OutputCustomType.Parameter("locationRolloutPolicies") Map<String,String> locationRolloutPolicies) {
+        @CustomType.Parameter("defaultRolloutTime") String defaultRolloutTime,
+        @CustomType.Parameter("locationRolloutPolicies") Map<String,String> locationRolloutPolicies) {
         this.defaultRolloutTime = defaultRolloutTime;
         this.locationRolloutPolicies = locationRolloutPolicies;
     }

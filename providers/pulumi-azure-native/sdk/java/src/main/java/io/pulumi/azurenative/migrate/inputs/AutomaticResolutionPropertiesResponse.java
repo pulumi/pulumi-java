@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AutomaticResolutionPropertiesResponse extends io.pulumi.resou
      * the dependent resource if the resolution type is Automatic.
      * 
      */
-    @InputImport(name="moveResourceId")
+    @Import(name="moveResourceId")
       private final @Nullable String moveResourceId;
 
     public Optional<String> getMoveResourceId() {

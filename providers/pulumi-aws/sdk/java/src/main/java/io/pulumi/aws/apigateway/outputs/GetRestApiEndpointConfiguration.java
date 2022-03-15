@@ -3,20 +3,20 @@
 
 package io.pulumi.aws.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRestApiEndpointConfiguration {
     private final List<String> types;
     private final List<String> vpcEndpointIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRestApiEndpointConfiguration(
-        @OutputCustomType.Parameter("types") List<String> types,
-        @OutputCustomType.Parameter("vpcEndpointIds") List<String> vpcEndpointIds) {
+        @CustomType.Parameter("types") List<String> types,
+        @CustomType.Parameter("vpcEndpointIds") List<String> vpcEndpointIds) {
         this.types = types;
         this.vpcEndpointIds = vpcEndpointIds;
     }

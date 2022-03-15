@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSubscriptionResult {
     /**
      * Determines whether tracing is enabled
@@ -93,24 +93,24 @@ public final class GetSubscriptionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSubscriptionResult(
-        @OutputCustomType.Parameter("allowTracing") @Nullable Boolean allowTracing,
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("endDate") @Nullable String endDate,
-        @OutputCustomType.Parameter("expirationDate") @Nullable String expirationDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notificationDate") @Nullable String notificationDate,
-        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId,
-        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
-        @OutputCustomType.Parameter("scope") String scope,
-        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey,
-        @OutputCustomType.Parameter("startDate") @Nullable String startDate,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stateComment") @Nullable String stateComment,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("allowTracing") @Nullable Boolean allowTracing,
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("endDate") @Nullable String endDate,
+        @CustomType.Parameter("expirationDate") @Nullable String expirationDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notificationDate") @Nullable String notificationDate,
+        @CustomType.Parameter("ownerId") @Nullable String ownerId,
+        @CustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @CustomType.Parameter("scope") String scope,
+        @CustomType.Parameter("secondaryKey") @Nullable String secondaryKey,
+        @CustomType.Parameter("startDate") @Nullable String startDate,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stateComment") @Nullable String stateComment,
+        @CustomType.Parameter("type") String type) {
         this.allowTracing = allowTracing;
         this.createdDate = createdDate;
         this.displayName = displayName;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sourcerepo;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.sourcerepo.inputs.RepositoryPubsubConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The repo name may contain slashes. eg, `name/with/slash`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -46,7 +46,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="pubsubConfigs")
+    @Import(name="pubsubConfigs")
       private final @Nullable Output<List<RepositoryPubsubConfigArgs>> pubsubConfigs;
 
     public Output<List<RepositoryPubsubConfigArgs>> getPubsubConfigs() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceExecResourceResponse;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileResourceResponse;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourcePackageResourceResponse;
@@ -23,7 +23,7 @@ public final class OSPolicyResourceResponse extends io.pulumi.resources.InvokeAr
      * Exec resource
      * 
      */
-    @InputImport(name="exec", required=true)
+    @Import(name="exec", required=true)
       private final OSPolicyResourceExecResourceResponse exec;
 
     public OSPolicyResourceExecResourceResponse getExec() {
@@ -34,7 +34,7 @@ public final class OSPolicyResourceResponse extends io.pulumi.resources.InvokeAr
      * File resource
      * 
      */
-    @InputImport(name="file", required=true)
+    @Import(name="file", required=true)
       private final OSPolicyResourceFileResourceResponse file;
 
     public OSPolicyResourceFileResourceResponse getFile() {
@@ -45,7 +45,7 @@ public final class OSPolicyResourceResponse extends io.pulumi.resources.InvokeAr
      * Package resource
      * 
      */
-    @InputImport(name="pkg", required=true)
+    @Import(name="pkg", required=true)
       private final OSPolicyResourcePackageResourceResponse pkg;
 
     public OSPolicyResourcePackageResourceResponse getPkg() {
@@ -56,7 +56,7 @@ public final class OSPolicyResourceResponse extends io.pulumi.resources.InvokeAr
      * Package repository resource
      * 
      */
-    @InputImport(name="repository", required=true)
+    @Import(name="repository", required=true)
       private final OSPolicyResourceRepositoryResourceResponse repository;
 
     public OSPolicyResourceRepositoryResourceResponse getRepository() {

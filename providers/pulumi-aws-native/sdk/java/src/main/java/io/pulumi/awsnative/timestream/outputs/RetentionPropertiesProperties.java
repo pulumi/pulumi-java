@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.timestream.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RetentionPropertiesProperties {
     /**
      * The duration for which data must be stored in the magnetic store.
@@ -22,10 +22,10 @@ public final class RetentionPropertiesProperties {
      */
     private final @Nullable String memoryStoreRetentionPeriodInHours;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RetentionPropertiesProperties(
-        @OutputCustomType.Parameter("magneticStoreRetentionPeriodInDays") @Nullable String magneticStoreRetentionPeriodInDays,
-        @OutputCustomType.Parameter("memoryStoreRetentionPeriodInHours") @Nullable String memoryStoreRetentionPeriodInHours) {
+        @CustomType.Parameter("magneticStoreRetentionPeriodInDays") @Nullable String magneticStoreRetentionPeriodInDays,
+        @CustomType.Parameter("memoryStoreRetentionPeriodInHours") @Nullable String memoryStoreRetentionPeriodInHours) {
         this.magneticStoreRetentionPeriodInDays = magneticStoreRetentionPeriodInDays;
         this.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
     }

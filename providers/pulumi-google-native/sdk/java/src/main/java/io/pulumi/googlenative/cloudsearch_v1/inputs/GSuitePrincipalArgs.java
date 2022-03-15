@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
      * This principal represents all users of the G Suite domain of the customer.
      * 
      */
-    @InputImport(name="gsuiteDomain")
+    @Import(name="gsuiteDomain")
       private final @Nullable Output<Boolean> gsuiteDomain;
 
     public Output<Boolean> getGsuiteDomain() {
@@ -30,7 +30,7 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
      * This principal references a G Suite group account
      * 
      */
-    @InputImport(name="gsuiteGroupEmail")
+    @Import(name="gsuiteGroupEmail")
       private final @Nullable Output<String> gsuiteGroupEmail;
 
     public Output<String> getGsuiteGroupEmail() {
@@ -41,7 +41,7 @@ public final class GSuitePrincipalArgs extends io.pulumi.resources.ResourceArgs 
      * This principal references a G Suite user account
      * 
      */
-    @InputImport(name="gsuiteUserEmail")
+    @Import(name="gsuiteUserEmail")
       private final @Nullable Output<String> gsuiteUserEmail;
 
     public Output<String> getGsuiteUserEmail() {

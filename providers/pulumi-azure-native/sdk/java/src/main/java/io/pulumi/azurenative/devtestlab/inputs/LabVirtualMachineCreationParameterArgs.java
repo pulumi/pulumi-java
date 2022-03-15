@@ -10,7 +10,7 @@ import io.pulumi.azurenative.devtestlab.inputs.GalleryImageReferenceArgs;
 import io.pulumi.azurenative.devtestlab.inputs.NetworkInterfacePropertiesArgs;
 import io.pulumi.azurenative.devtestlab.inputs.ScheduleCreationParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * Indicates whether another user can take ownership of the virtual machine
      * 
      */
-    @InputImport(name="allowClaim")
+    @Import(name="allowClaim")
       private final @Nullable Output<Boolean> allowClaim;
 
     public Output<Boolean> getAllowClaim() {
@@ -42,7 +42,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The artifacts to be installed on the virtual machine.
      * 
      */
-    @InputImport(name="artifacts")
+    @Import(name="artifacts")
       private final @Nullable Output<List<ArtifactInstallPropertiesArgs>> artifacts;
 
     public Output<List<ArtifactInstallPropertiesArgs>> getArtifacts() {
@@ -53,7 +53,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The number of virtual machine instances to create.
      * 
      */
-    @InputImport(name="bulkCreationParameters")
+    @Import(name="bulkCreationParameters")
       private final @Nullable Output<BulkCreationParametersArgs> bulkCreationParameters;
 
     public Output<BulkCreationParametersArgs> getBulkCreationParameters() {
@@ -64,7 +64,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The creation date of the virtual machine.
      * 
      */
-    @InputImport(name="createdDate")
+    @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
     public Output<String> getCreatedDate() {
@@ -75,7 +75,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The custom image identifier of the virtual machine.
      * 
      */
-    @InputImport(name="customImageId")
+    @Import(name="customImageId")
       private final @Nullable Output<String> customImageId;
 
     public Output<String> getCustomImageId() {
@@ -86,7 +86,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * New or existing data disks to attach to the virtual machine after creation
      * 
      */
-    @InputImport(name="dataDiskParameters")
+    @Import(name="dataDiskParameters")
       private final @Nullable Output<List<DataDiskPropertiesArgs>> dataDiskParameters;
 
     public Output<List<DataDiskPropertiesArgs>> getDataDiskParameters() {
@@ -97,7 +97,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * Indicates whether the virtual machine is to be created without a public IP address.
      * 
      */
-    @InputImport(name="disallowPublicIpAddress")
+    @Import(name="disallowPublicIpAddress")
       private final @Nullable Output<Boolean> disallowPublicIpAddress;
 
     public Output<Boolean> getDisallowPublicIpAddress() {
@@ -108,7 +108,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The resource ID of the environment that contains this virtual machine, if any.
      * 
      */
-    @InputImport(name="environmentId")
+    @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
@@ -119,7 +119,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The expiration date for VM.
      * 
      */
-    @InputImport(name="expirationDate")
+    @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
     public Output<String> getExpirationDate() {
@@ -130,7 +130,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The Microsoft Azure Marketplace image reference of the virtual machine.
      * 
      */
-    @InputImport(name="galleryImageReference")
+    @Import(name="galleryImageReference")
       private final @Nullable Output<GalleryImageReferenceArgs> galleryImageReference;
 
     public Output<GalleryImageReferenceArgs> getGalleryImageReference() {
@@ -141,7 +141,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * Indicates whether this virtual machine uses an SSH key for authentication.
      * 
      */
-    @InputImport(name="isAuthenticationWithSshKey")
+    @Import(name="isAuthenticationWithSshKey")
       private final @Nullable Output<Boolean> isAuthenticationWithSshKey;
 
     public Output<Boolean> getIsAuthenticationWithSshKey() {
@@ -152,7 +152,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The lab subnet name of the virtual machine.
      * 
      */
-    @InputImport(name="labSubnetName")
+    @Import(name="labSubnetName")
       private final @Nullable Output<String> labSubnetName;
 
     public Output<String> getLabSubnetName() {
@@ -163,7 +163,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The lab virtual network identifier of the virtual machine.
      * 
      */
-    @InputImport(name="labVirtualNetworkId")
+    @Import(name="labVirtualNetworkId")
       private final @Nullable Output<String> labVirtualNetworkId;
 
     public Output<String> getLabVirtualNetworkId() {
@@ -174,7 +174,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The location of the new virtual machine or environment
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -185,7 +185,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The name of the virtual machine or environment
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -196,7 +196,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The network interface properties.
      * 
      */
-    @InputImport(name="networkInterface")
+    @Import(name="networkInterface")
       private final @Nullable Output<NetworkInterfacePropertiesArgs> networkInterface;
 
     public Output<NetworkInterfacePropertiesArgs> getNetworkInterface() {
@@ -207,7 +207,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The notes of the virtual machine.
      * 
      */
-    @InputImport(name="notes")
+    @Import(name="notes")
       private final @Nullable Output<String> notes;
 
     public Output<String> getNotes() {
@@ -218,7 +218,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The object identifier of the owner of the virtual machine.
      * 
      */
-    @InputImport(name="ownerObjectId")
+    @Import(name="ownerObjectId")
       private final @Nullable Output<String> ownerObjectId;
 
     public Output<String> getOwnerObjectId() {
@@ -229,7 +229,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The user principal name of the virtual machine owner.
      * 
      */
-    @InputImport(name="ownerUserPrincipalName")
+    @Import(name="ownerUserPrincipalName")
       private final @Nullable Output<String> ownerUserPrincipalName;
 
     public Output<String> getOwnerUserPrincipalName() {
@@ -240,7 +240,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The password of the virtual machine administrator.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -251,7 +251,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The id of the plan associated with the virtual machine image
      * 
      */
-    @InputImport(name="planId")
+    @Import(name="planId")
       private final @Nullable Output<String> planId;
 
     public Output<String> getPlanId() {
@@ -262,7 +262,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * Virtual Machine schedules to be created
      * 
      */
-    @InputImport(name="scheduleParameters")
+    @Import(name="scheduleParameters")
       private final @Nullable Output<List<ScheduleCreationParameterArgs>> scheduleParameters;
 
     public Output<List<ScheduleCreationParameterArgs>> getScheduleParameters() {
@@ -273,7 +273,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The size of the virtual machine.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<String> size;
 
     public Output<String> getSize() {
@@ -284,7 +284,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The SSH key of the virtual machine administrator.
      * 
      */
-    @InputImport(name="sshKey")
+    @Import(name="sshKey")
       private final @Nullable Output<String> sshKey;
 
     public Output<String> getSshKey() {
@@ -295,7 +295,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * Storage type to use for virtual machine (i.e. Standard, Premium).
      * 
      */
-    @InputImport(name="storageType")
+    @Import(name="storageType")
       private final @Nullable Output<String> storageType;
 
     public Output<String> getStorageType() {
@@ -306,7 +306,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -317,7 +317,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * The user name of the virtual machine.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {

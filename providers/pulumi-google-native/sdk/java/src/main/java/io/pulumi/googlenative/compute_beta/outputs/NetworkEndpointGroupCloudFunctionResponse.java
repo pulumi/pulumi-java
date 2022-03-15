@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkEndpointGroupCloudFunctionResponse {
     /**
      * A user-defined name of the Cloud Function. The function name is case-sensitive and must be 1-63 characters long. Example value: "func1".
@@ -20,10 +20,10 @@ public final class NetworkEndpointGroupCloudFunctionResponse {
      */
     private final String urlMask;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkEndpointGroupCloudFunctionResponse(
-        @OutputCustomType.Parameter("function") String function,
-        @OutputCustomType.Parameter("urlMask") String urlMask) {
+        @CustomType.Parameter("function") String function,
+        @CustomType.Parameter("urlMask") String urlMask) {
         this.function = function;
         this.urlMask = urlMask;
     }

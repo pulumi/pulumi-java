@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
      * Incident comment ID
      * 
      */
-    @InputImport(name="incidentCommentId")
+    @Import(name="incidentCommentId")
       private final @Nullable Output<String> incidentCommentId;
 
     public Output<String> getIncidentCommentId() {
@@ -29,7 +29,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
      * Incident ID
      * 
      */
-    @InputImport(name="incidentId", required=true)
+    @Import(name="incidentId", required=true)
       private final Output<String> incidentId;
 
     public Output<String> getIncidentId() {
@@ -40,7 +40,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
      * The comment message
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final Output<String> message;
 
     public Output<String> getMessage() {
@@ -51,7 +51,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
      * 
      */
-    @InputImport(name="operationalInsightsResourceProvider", required=true)
+    @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
     public Output<String> getOperationalInsightsResourceProvider() {
@@ -62,7 +62,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -73,7 +73,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

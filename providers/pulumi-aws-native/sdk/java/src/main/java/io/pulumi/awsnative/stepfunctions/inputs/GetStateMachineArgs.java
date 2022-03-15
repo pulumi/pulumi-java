@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.stepfunctions.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetStateMachineArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetStateMachineArgs Empty = new GetStateMachineArgs();
 
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {

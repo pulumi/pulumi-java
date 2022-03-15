@@ -5,7 +5,7 @@ package io.pulumi.awsnative.batch.inputs;
 
 import io.pulumi.awsnative.batch.inputs.SchedulingPolicyShareAttributesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class SchedulingPolicyFairsharePolicyArgs extends io.pulumi.resourc
 
     public static final SchedulingPolicyFairsharePolicyArgs Empty = new SchedulingPolicyFairsharePolicyArgs();
 
-    @InputImport(name="computeReservation")
+    @Import(name="computeReservation")
       private final @Nullable Output<Double> computeReservation;
 
     public Output<Double> getComputeReservation() {
         return this.computeReservation == null ? Output.empty() : this.computeReservation;
     }
 
-    @InputImport(name="shareDecaySeconds")
+    @Import(name="shareDecaySeconds")
       private final @Nullable Output<Double> shareDecaySeconds;
 
     public Output<Double> getShareDecaySeconds() {
@@ -38,7 +38,7 @@ public final class SchedulingPolicyFairsharePolicyArgs extends io.pulumi.resourc
      * List of Share Attributes
      * 
      */
-    @InputImport(name="shareDistribution")
+    @Import(name="shareDistribution")
       private final @Nullable Output<List<SchedulingPolicyShareAttributesArgs>> shareDistribution;
 
     public Output<List<SchedulingPolicyShareAttributesArgs>> getShareDistribution() {

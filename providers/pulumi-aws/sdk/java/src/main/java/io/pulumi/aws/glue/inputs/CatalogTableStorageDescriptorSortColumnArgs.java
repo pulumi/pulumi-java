@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class CatalogTableStorageDescriptorSortColumnArgs extends io.pulumi
      * Name of the column.
      * 
      */
-    @InputImport(name="column", required=true)
+    @Import(name="column", required=true)
       private final Output<String> column;
 
     public Output<String> getColumn() {
@@ -29,7 +29,7 @@ public final class CatalogTableStorageDescriptorSortColumnArgs extends io.pulumi
      * Whether the column is sorted in ascending (`1`) or descending order (`0`).
      * 
      */
-    @InputImport(name="sortOrder", required=true)
+    @Import(name="sortOrder", required=true)
       private final Output<Integer> sortOrder;
 
     public Output<Integer> getSortOrder() {

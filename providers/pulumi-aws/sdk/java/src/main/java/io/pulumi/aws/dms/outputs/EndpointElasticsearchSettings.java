@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.dms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointElasticsearchSettings {
     /**
      * Endpoint for the Elasticsearch cluster.
@@ -33,12 +33,12 @@ public final class EndpointElasticsearchSettings {
      */
     private final String serviceAccessRoleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointElasticsearchSettings(
-        @OutputCustomType.Parameter("endpointUri") String endpointUri,
-        @OutputCustomType.Parameter("errorRetryDuration") @Nullable Integer errorRetryDuration,
-        @OutputCustomType.Parameter("fullLoadErrorPercentage") @Nullable Integer fullLoadErrorPercentage,
-        @OutputCustomType.Parameter("serviceAccessRoleArn") String serviceAccessRoleArn) {
+        @CustomType.Parameter("endpointUri") String endpointUri,
+        @CustomType.Parameter("errorRetryDuration") @Nullable Integer errorRetryDuration,
+        @CustomType.Parameter("fullLoadErrorPercentage") @Nullable Integer fullLoadErrorPercentage,
+        @CustomType.Parameter("serviceAccessRoleArn") String serviceAccessRoleArn) {
         this.endpointUri = endpointUri;
         this.errorRetryDuration = errorRetryDuration;
         this.fullLoadErrorPercentage = fullLoadErrorPercentage;

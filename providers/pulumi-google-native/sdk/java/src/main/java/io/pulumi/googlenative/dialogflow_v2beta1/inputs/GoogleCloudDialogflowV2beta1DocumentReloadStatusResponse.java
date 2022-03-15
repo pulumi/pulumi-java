@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleRpcStatusResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse exte
      * The status of a reload attempt or the initial load.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final GoogleRpcStatusResponse status;
 
     public GoogleRpcStatusResponse getStatus() {
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2beta1DocumentReloadStatusResponse exte
      * The time of a reload attempt. This reload may have been triggered automatically or manually and may not have succeeded.
      * 
      */
-    @InputImport(name="time", required=true)
+    @Import(name="time", required=true)
       private final String time;
 
     public String getTime() {

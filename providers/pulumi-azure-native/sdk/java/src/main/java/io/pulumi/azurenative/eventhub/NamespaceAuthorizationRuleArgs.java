@@ -6,7 +6,7 @@ package io.pulumi.azurenative.eventhub;
 import io.pulumi.azurenative.eventhub.enums.AccessRights;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
      * The authorization rule name.
      * 
      */
-    @InputImport(name="authorizationRuleName")
+    @Import(name="authorizationRuleName")
       private final @Nullable Output<String> authorizationRuleName;
 
     public Output<String> getAuthorizationRuleName() {
@@ -32,7 +32,7 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
      * The Namespace name
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
@@ -43,7 +43,7 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
      * Name of the resource group within the azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -54,7 +54,7 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
      * The rights associated with the rule.
      * 
      */
-    @InputImport(name="rights", required=true)
+    @Import(name="rights", required=true)
       private final Output<List<Either<String,AccessRights>>> rights;
 
     public Output<List<Either<String,AccessRights>>> getRights() {

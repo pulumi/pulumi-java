@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.config.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,35 +14,35 @@ public final class RegistryAuth extends io.pulumi.resources.InvokeArgs {
 
     public static final RegistryAuth Empty = new RegistryAuth();
 
-    @InputImport(name="address", required=true)
+    @Import(name="address", required=true)
       private final String address;
 
     public String getAddress() {
         return this.address;
     }
 
-    @InputImport(name="configFile")
+    @Import(name="configFile")
       private final @Nullable String configFile;
 
     public Optional<String> getConfigFile() {
         return this.configFile == null ? Optional.empty() : Optional.ofNullable(this.configFile);
     }
 
-    @InputImport(name="configFileContent")
+    @Import(name="configFileContent")
       private final @Nullable String configFileContent;
 
     public Optional<String> getConfigFileContent() {
         return this.configFileContent == null ? Optional.empty() : Optional.ofNullable(this.configFileContent);
     }
 
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable String password;
 
     public Optional<String> getPassword() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
     }
 
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable String username;
 
     public Optional<String> getUsername() {

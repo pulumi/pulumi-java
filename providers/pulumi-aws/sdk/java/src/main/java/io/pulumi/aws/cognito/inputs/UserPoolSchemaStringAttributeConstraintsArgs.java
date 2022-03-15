@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class UserPoolSchemaStringAttributeConstraintsArgs extends io.pulum
      * Maximum length of an attribute value of the string type.
      * 
      */
-    @InputImport(name="maxLength")
+    @Import(name="maxLength")
       private final @Nullable Output<String> maxLength;
 
     public Output<String> getMaxLength() {
@@ -29,7 +29,7 @@ public final class UserPoolSchemaStringAttributeConstraintsArgs extends io.pulum
      * Minimum length of an attribute value of the string type.
      * 
      */
-    @InputImport(name="minLength")
+    @Import(name="minLength")
       private final @Nullable Output<String> minLength;
 
     public Output<String> getMinLength() {

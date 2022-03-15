@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TxtRecordResponse extends io.pulumi.resources.InvokeArgs {
      * The text value of this TXT record.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable List<String> value;
 
     public List<String> getValue() {

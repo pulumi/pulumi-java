@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionIAMMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class SubscriptionIAMMemberState extends io.pulumi.resources.Resour
 
     public static final SubscriptionIAMMemberState Empty = new SubscriptionIAMMemberState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<SubscriptionIAMMemberConditionGetArgs> condition;
 
     public Output<SubscriptionIAMMemberConditionGetArgs> getCondition() {
@@ -26,14 +26,14 @@ public final class SubscriptionIAMMemberState extends io.pulumi.resources.Resour
      * (Computed) The etag of the subscription's IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="member")
+    @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
@@ -45,7 +45,7 @@ public final class SubscriptionIAMMemberState extends io.pulumi.resources.Resour
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -58,7 +58,7 @@ public final class SubscriptionIAMMemberState extends io.pulumi.resources.Resour
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
@@ -69,7 +69,7 @@ public final class SubscriptionIAMMemberState extends io.pulumi.resources.Resour
      * The subscription name or id to bind to attach IAM policy to.
      * 
      */
-    @InputImport(name="subscription")
+    @Import(name="subscription")
       private final @Nullable Output<String> subscription;
 
     public Output<String> getSubscription() {

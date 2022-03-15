@@ -8,7 +8,7 @@ import io.pulumi.awsnative.networkmanager.SiteArgs;
 import io.pulumi.awsnative.networkmanager.outputs.SiteLocation;
 import io.pulumi.awsnative.networkmanager.outputs.SiteTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * The description of the site.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -38,7 +38,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * The ID of the global network.
      * 
      */
-    @OutputExport(name="globalNetworkId", type=String.class, parameters={})
+    @Export(name="globalNetworkId", type=String.class, parameters={})
     private Output<String> globalNetworkId;
 
     /**
@@ -52,7 +52,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * The location of the site.
      * 
      */
-    @OutputExport(name="location", type=SiteLocation.class, parameters={})
+    @Export(name="location", type=SiteLocation.class, parameters={})
     private Output</* @Nullable */ SiteLocation> location;
 
     /**
@@ -66,7 +66,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the site.
      * 
      */
-    @OutputExport(name="siteArn", type=String.class, parameters={})
+    @Export(name="siteArn", type=String.class, parameters={})
     private Output<String> siteArn;
 
     /**
@@ -80,7 +80,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * The ID of the site.
      * 
      */
-    @OutputExport(name="siteId", type=String.class, parameters={})
+    @Export(name="siteId", type=String.class, parameters={})
     private Output<String> siteId;
 
     /**
@@ -94,7 +94,7 @@ public class Site extends io.pulumi.resources.CustomResource {
      * The tags for the site.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={SiteTag.class})
+    @Export(name="tags", type=List.class, parameters={SiteTag.class})
     private Output</* @Nullable */ List<SiteTag>> tags;
 
     /**

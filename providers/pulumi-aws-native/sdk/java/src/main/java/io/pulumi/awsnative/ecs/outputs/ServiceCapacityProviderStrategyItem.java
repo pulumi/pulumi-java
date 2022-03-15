@@ -3,24 +3,24 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceCapacityProviderStrategyItem {
     private final @Nullable Integer base;
     private final @Nullable String capacityProvider;
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceCapacityProviderStrategyItem(
-        @OutputCustomType.Parameter("base") @Nullable Integer base,
-        @OutputCustomType.Parameter("capacityProvider") @Nullable String capacityProvider,
-        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
+        @CustomType.Parameter("base") @Nullable Integer base,
+        @CustomType.Parameter("capacityProvider") @Nullable String capacityProvider,
+        @CustomType.Parameter("weight") @Nullable Integer weight) {
         this.base = base;
         this.capacityProvider = capacityProvider;
         this.weight = weight;

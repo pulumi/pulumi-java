@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appconfiguration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetKeyValueResult {
     /**
      * The content type of the key-value's value.
@@ -73,19 +73,19 @@ public final class GetKeyValueResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKeyValueResult(
-        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
-        @OutputCustomType.Parameter("eTag") String eTag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("label") String label,
-        @OutputCustomType.Parameter("lastModified") String lastModified,
-        @OutputCustomType.Parameter("locked") Boolean locked,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("contentType") @Nullable String contentType,
+        @CustomType.Parameter("eTag") String eTag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("label") String label,
+        @CustomType.Parameter("lastModified") String lastModified,
+        @CustomType.Parameter("locked") Boolean locked,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.contentType = contentType;
         this.eTag = eTag;
         this.id = id;

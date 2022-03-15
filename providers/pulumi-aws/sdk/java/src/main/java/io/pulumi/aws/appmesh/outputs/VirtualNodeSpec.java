@@ -8,13 +8,13 @@ import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecBackendDefaults;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListener;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecLogging;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecServiceDiscovery;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpec {
     /**
      * The defaults for backends.
@@ -42,13 +42,13 @@ public final class VirtualNodeSpec {
      */
     private final @Nullable VirtualNodeSpecServiceDiscovery serviceDiscovery;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNodeSpec(
-        @OutputCustomType.Parameter("backendDefaults") @Nullable VirtualNodeSpecBackendDefaults backendDefaults,
-        @OutputCustomType.Parameter("backends") @Nullable List<VirtualNodeSpecBackend> backends,
-        @OutputCustomType.Parameter("listener") @Nullable VirtualNodeSpecListener listener,
-        @OutputCustomType.Parameter("logging") @Nullable VirtualNodeSpecLogging logging,
-        @OutputCustomType.Parameter("serviceDiscovery") @Nullable VirtualNodeSpecServiceDiscovery serviceDiscovery) {
+        @CustomType.Parameter("backendDefaults") @Nullable VirtualNodeSpecBackendDefaults backendDefaults,
+        @CustomType.Parameter("backends") @Nullable List<VirtualNodeSpecBackend> backends,
+        @CustomType.Parameter("listener") @Nullable VirtualNodeSpecListener listener,
+        @CustomType.Parameter("logging") @Nullable VirtualNodeSpecLogging logging,
+        @CustomType.Parameter("serviceDiscovery") @Nullable VirtualNodeSpecServiceDiscovery serviceDiscovery) {
         this.backendDefaults = backendDefaults;
         this.backends = backends;
         this.listener = listener;

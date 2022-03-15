@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.PollingOptionsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AsyncOptionsResponse {
     /**
      * Method regex where this policy will apply.
@@ -21,10 +21,10 @@ public final class AsyncOptionsResponse {
      */
     private final PollingOptionsResponse pollingOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AsyncOptionsResponse(
-        @OutputCustomType.Parameter("methodMatch") String methodMatch,
-        @OutputCustomType.Parameter("pollingOptions") PollingOptionsResponse pollingOptions) {
+        @CustomType.Parameter("methodMatch") String methodMatch,
+        @CustomType.Parameter("pollingOptions") PollingOptionsResponse pollingOptions) {
         this.methodMatch = methodMatch;
         this.pollingOptions = pollingOptions;
     }

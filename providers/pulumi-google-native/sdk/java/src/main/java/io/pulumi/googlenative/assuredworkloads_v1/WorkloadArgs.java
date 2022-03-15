@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.assuredworkloads_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.assuredworkloads_v1.enums.WorkloadComplianceRegime;
 import io.pulumi.googlenative.assuredworkloads_v1.inputs.GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs;
 import io.pulumi.googlenative.assuredworkloads_v1.inputs.GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs;
@@ -24,7 +24,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The billing account used for the resources which are direct children of workload. This billing account is initially associated with the resources created as part of Workload creation. After the initial creation of these resources, the customer can change the assigned billing account. The resource name has the form `billingAccounts/{billing_account_id}`. For example, `billingAccounts/012345-567890-ABCDEF`.
      * 
      */
-    @InputImport(name="billingAccount")
+    @Import(name="billingAccount")
       private final @Nullable Output<String> billingAccount;
 
     public Output<String> getBillingAccount() {
@@ -35,7 +35,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. Compliance Regime associated with this workload.
      * 
      */
-    @InputImport(name="complianceRegime", required=true)
+    @Import(name="complianceRegime", required=true)
       private final Output<WorkloadComplianceRegime> complianceRegime;
 
     public Output<WorkloadComplianceRegime> getComplianceRegime() {
@@ -46,7 +46,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * The user-assigned display name of the Workload. When present it must be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters, numbers, hyphen, and spaces. Example: My Workload
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -57,7 +57,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Indicates the sovereignty status of the given workload. Currently meant to be used by Europe/Canada customers.
      * 
      */
-    @InputImport(name="enableSovereignControls")
+    @Import(name="enableSovereignControls")
       private final @Nullable Output<Boolean> enableSovereignControls;
 
     public Output<Boolean> getEnableSovereignControls() {
@@ -68,14 +68,14 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. ETag of the workload, it is calculated on the basis of the Workload contents. It will be used in Update & Delete operations.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="externalId")
+    @Import(name="externalId")
       private final @Nullable Output<String> externalId;
 
     public Output<String> getExternalId() {
@@ -86,7 +86,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * Input only. Settings used to create a CMEK crypto key. When set a project with a KMS CMEK key is provisioned. This field is mandatory for a subset of Compliance Regimes.
      * 
      */
-    @InputImport(name="kmsSettings")
+    @Import(name="kmsSettings")
       private final @Nullable Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> kmsSettings;
 
     public Output<GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsArgs> getKmsSettings() {
@@ -97,14 +97,14 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Labels applied to the workload.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -115,14 +115,14 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The resource name of the workload. Format: organizations/{organization}/locations/{location}/workloads/{workload} Read-only.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
     public Output<String> getOrganizationId() {
@@ -133,7 +133,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * Input only. The parent resource for the resources managed by this Assured Workload. May be either empty or a folder resource which is a child of the Workload parent. If not specified all resources are created under the parent organization. Format: folders/{folder_id}
      * 
      */
-    @InputImport(name="provisionedResourcesParent")
+    @Import(name="provisionedResourcesParent")
       private final @Nullable Output<String> provisionedResourcesParent;
 
     public Output<String> getProvisionedResourcesParent() {
@@ -144,7 +144,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
      * Input only. Resource properties that are used to customize workload resources. These properties (such as custom project id) will be used to create workload resources if possible. This field is optional.
      * 
      */
-    @InputImport(name="resourceSettings")
+    @Import(name="resourceSettings")
       private final @Nullable Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> resourceSettings;
 
     public Output<List<GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsArgs>> getResourceSettings() {

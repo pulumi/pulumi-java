@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
      * Basic error code.
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable String code;
 
     public Optional<String> getCode() {
@@ -34,7 +34,7 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
      * Type of error.
      * 
      */
-    @InputImport(name="extendedCode")
+    @Import(name="extendedCode")
       private final @Nullable String extendedCode;
 
     public Optional<String> getExtendedCode() {
@@ -45,7 +45,7 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
      * Inner errors.
      * 
      */
-    @InputImport(name="innerErrors")
+    @Import(name="innerErrors")
       private final @Nullable List<ErrorEntityResponse> innerErrors;
 
     public List<ErrorEntityResponse> getInnerErrors() {
@@ -56,7 +56,7 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
      * Any details of the error.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
@@ -67,7 +67,7 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
      * Message template.
      * 
      */
-    @InputImport(name="messageTemplate")
+    @Import(name="messageTemplate")
       private final @Nullable String messageTemplate;
 
     public Optional<String> getMessageTemplate() {
@@ -78,7 +78,7 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
      * Parameters for the template.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable List<String> parameters;
 
     public List<String> getParameters() {

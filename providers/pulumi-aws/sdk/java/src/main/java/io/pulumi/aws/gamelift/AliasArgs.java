@@ -5,7 +5,7 @@ package io.pulumi.aws.gamelift;
 
 import io.pulumi.aws.gamelift.inputs.AliasRoutingStrategyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the alias.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the alias.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the fleet and/or routing type to use for the alias.
      * 
      */
-    @InputImport(name="routingStrategy", required=true)
+    @Import(name="routingStrategy", required=true)
       private final Output<AliasRoutingStrategyArgs> routingStrategy;
 
     public Output<AliasRoutingStrategyArgs> getRoutingStrategy() {
@@ -53,7 +53,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

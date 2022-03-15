@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.IPAMIpamOperatingRegion;
 import io.pulumi.awsnative.ec2.outputs.IPAMTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIPAMResult {
     /**
      * The Amazon Resource Name (ARN) of the IPAM.
@@ -52,16 +52,16 @@ public final class GetIPAMResult {
      */
     private final @Nullable List<IPAMTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIPAMResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("ipamId") @Nullable String ipamId,
-        @OutputCustomType.Parameter("operatingRegions") @Nullable List<IPAMIpamOperatingRegion> operatingRegions,
-        @OutputCustomType.Parameter("privateDefaultScopeId") @Nullable String privateDefaultScopeId,
-        @OutputCustomType.Parameter("publicDefaultScopeId") @Nullable String publicDefaultScopeId,
-        @OutputCustomType.Parameter("scopeCount") @Nullable Integer scopeCount,
-        @OutputCustomType.Parameter("tags") @Nullable List<IPAMTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("ipamId") @Nullable String ipamId,
+        @CustomType.Parameter("operatingRegions") @Nullable List<IPAMIpamOperatingRegion> operatingRegions,
+        @CustomType.Parameter("privateDefaultScopeId") @Nullable String privateDefaultScopeId,
+        @CustomType.Parameter("publicDefaultScopeId") @Nullable String publicDefaultScopeId,
+        @CustomType.Parameter("scopeCount") @Nullable Integer scopeCount,
+        @CustomType.Parameter("tags") @Nullable List<IPAMTag> tags) {
         this.arn = arn;
         this.description = description;
         this.ipamId = ipamId;

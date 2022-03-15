@@ -4,15 +4,15 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.DistributionRestrictionsGeoRestriction;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DistributionRestrictions {
     private final DistributionRestrictionsGeoRestriction geoRestriction;
 
-    @OutputCustomType.Constructor
-    private DistributionRestrictions(@OutputCustomType.Parameter("geoRestriction") DistributionRestrictionsGeoRestriction geoRestriction) {
+    @CustomType.Constructor
+    private DistributionRestrictions(@CustomType.Parameter("geoRestriction") DistributionRestrictionsGeoRestriction geoRestriction) {
         this.geoRestriction = geoRestriction;
     }
 

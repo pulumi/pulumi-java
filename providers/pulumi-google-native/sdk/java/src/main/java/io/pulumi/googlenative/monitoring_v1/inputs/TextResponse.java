@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class TextResponse extends io.pulumi.resources.InvokeArgs {
      * The text content to be displayed.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final String content;
 
     public String getContent() {
@@ -31,7 +31,7 @@ public final class TextResponse extends io.pulumi.resources.InvokeArgs {
      * How the text content is formatted.
      * 
      */
-    @InputImport(name="format", required=true)
+    @Import(name="format", required=true)
       private final String format;
 
     public String getFormat() {

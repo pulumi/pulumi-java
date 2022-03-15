@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscalingplans.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPrede
      * The metric type. Valid values: `ALBRequestCountPerTarget`, `ASGAverageCPUUtilization`, `ASGAverageNetworkIn`, `ASGAverageNetworkOut`, `DynamoDBReadCapacityUtilization`, `DynamoDBWriteCapacityUtilization`, `ECSServiceAverageCPUUtilization`, `ECSServiceAverageMemoryUtilization`, `EC2SpotFleetRequestAverageCPUUtilization`, `EC2SpotFleetRequestAverageNetworkIn`, `EC2SpotFleetRequestAverageNetworkOut`, `RDSReaderAverageCPUUtilization`, `RDSReaderAverageDatabaseConnections`.
      * 
      */
-    @InputImport(name="predefinedScalingMetricType", required=true)
+    @Import(name="predefinedScalingMetricType", required=true)
       private final Output<String> predefinedScalingMetricType;
 
     public Output<String> getPredefinedScalingMetricType() {
@@ -29,7 +29,7 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPrede
      * Identifies the resource associated with the metric type.
      * 
      */
-    @InputImport(name="resourceLabel")
+    @Import(name="resourceLabel")
       private final @Nullable Output<String> resourceLabel;
 
     public Output<String> getResourceLabel() {

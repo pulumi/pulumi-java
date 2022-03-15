@@ -6,7 +6,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 import io.pulumi.azurenative.streamanalytics.inputs.ReferenceInputPropertiesResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.StreamInputPropertiesResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
      * Resource Id
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -36,7 +36,7 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
      * Resource name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -47,7 +47,7 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
      * The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties;
 
     public Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> getProperties() {
@@ -58,7 +58,7 @@ public final class InputResponse extends io.pulumi.resources.InvokeArgs {
      * Resource type
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

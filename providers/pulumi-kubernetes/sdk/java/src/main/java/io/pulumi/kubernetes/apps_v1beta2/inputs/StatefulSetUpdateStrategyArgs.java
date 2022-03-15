@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apps_v1beta2.inputs.RollingUpdateStatefulSetStrategyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StatefulSetUpdateStrategyArgs extends io.pulumi.resources.Res
      * RollingUpdate is used to communicate parameters when Type is RollingUpdateStatefulSetStrategyType.
      * 
      */
-    @InputImport(name="rollingUpdate")
+    @Import(name="rollingUpdate")
       private final @Nullable Output<RollingUpdateStatefulSetStrategyArgs> rollingUpdate;
 
     public Output<RollingUpdateStatefulSetStrategyArgs> getRollingUpdate() {
@@ -34,7 +34,7 @@ public final class StatefulSetUpdateStrategyArgs extends io.pulumi.resources.Res
      * Type indicates the type of the StatefulSetUpdateStrategy. Default is RollingUpdate.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

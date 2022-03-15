@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MembershipStateResponse {
     /**
      * The current state of the Membership resource.
@@ -15,8 +15,8 @@ public final class MembershipStateResponse {
      */
     private final String code;
 
-    @OutputCustomType.Constructor
-    private MembershipStateResponse(@OutputCustomType.Parameter("code") String code) {
+    @CustomType.Constructor
+    private MembershipStateResponse(@CustomType.Parameter("code") String code) {
         this.code = code;
     }
 

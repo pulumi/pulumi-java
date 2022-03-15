@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDpsCertificateArgs extends io.pulumi.resources.InvokeArgs 
      * Name of the certificate to retrieve.
      * 
      */
-    @InputImport(name="certificateName", required=true)
+    @Import(name="certificateName", required=true)
       private final String certificateName;
 
     public String getCertificateName() {
@@ -27,7 +27,7 @@ public final class GetDpsCertificateArgs extends io.pulumi.resources.InvokeArgs 
      * Name of the provisioning service the certificate is associated with.
      * 
      */
-    @InputImport(name="provisioningServiceName", required=true)
+    @Import(name="provisioningServiceName", required=true)
       private final String provisioningServiceName;
 
     public String getProvisioningServiceName() {
@@ -38,7 +38,7 @@ public final class GetDpsCertificateArgs extends io.pulumi.resources.InvokeArgs 
      * Resource group identifier.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

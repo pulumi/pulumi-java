@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,35 +15,35 @@ public final class DomainEndpointOptionsArgs extends io.pulumi.resources.Resourc
 
     public static final DomainEndpointOptionsArgs Empty = new DomainEndpointOptionsArgs();
 
-    @InputImport(name="customEndpoint")
+    @Import(name="customEndpoint")
       private final @Nullable Output<String> customEndpoint;
 
     public Output<String> getCustomEndpoint() {
         return this.customEndpoint == null ? Output.empty() : this.customEndpoint;
     }
 
-    @InputImport(name="customEndpointCertificateArn")
+    @Import(name="customEndpointCertificateArn")
       private final @Nullable Output<String> customEndpointCertificateArn;
 
     public Output<String> getCustomEndpointCertificateArn() {
         return this.customEndpointCertificateArn == null ? Output.empty() : this.customEndpointCertificateArn;
     }
 
-    @InputImport(name="customEndpointEnabled")
+    @Import(name="customEndpointEnabled")
       private final @Nullable Output<Boolean> customEndpointEnabled;
 
     public Output<Boolean> getCustomEndpointEnabled() {
         return this.customEndpointEnabled == null ? Output.empty() : this.customEndpointEnabled;
     }
 
-    @InputImport(name="enforceHTTPS")
+    @Import(name="enforceHTTPS")
       private final @Nullable Output<Boolean> enforceHTTPS;
 
     public Output<Boolean> getEnforceHTTPS() {
         return this.enforceHTTPS == null ? Output.empty() : this.enforceHTTPS;
     }
 
-    @InputImport(name="tLSSecurityPolicy")
+    @Import(name="tLSSecurityPolicy")
       private final @Nullable Output<String> tLSSecurityPolicy;
 
     public Output<String> getTLSSecurityPolicy() {

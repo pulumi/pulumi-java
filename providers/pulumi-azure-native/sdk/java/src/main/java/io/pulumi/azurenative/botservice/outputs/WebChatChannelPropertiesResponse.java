@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.WebChatSiteResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebChatChannelPropertiesResponse {
     /**
      * The list of Web Chat sites
@@ -23,10 +23,10 @@ public final class WebChatChannelPropertiesResponse {
      */
     private final String webChatEmbedCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebChatChannelPropertiesResponse(
-        @OutputCustomType.Parameter("sites") @Nullable List<WebChatSiteResponse> sites,
-        @OutputCustomType.Parameter("webChatEmbedCode") String webChatEmbedCode) {
+        @CustomType.Parameter("sites") @Nullable List<WebChatSiteResponse> sites,
+        @CustomType.Parameter("webChatEmbedCode") String webChatEmbedCode) {
         this.sites = sites;
         this.webChatEmbedCode = webChatEmbedCode;
     }

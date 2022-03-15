@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerinstance.enums.ContainerGroupIpAddressType
 import io.pulumi.azurenative.containerinstance.inputs.PortArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
      * The Dns name label for the IP.
      * 
      */
-    @InputImport(name="dnsNameLabel")
+    @Import(name="dnsNameLabel")
       private final @Nullable Output<String> dnsNameLabel;
 
     public Output<String> getDnsNameLabel() {
@@ -37,7 +37,7 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
      * The IP exposed to the public internet.
      * 
      */
-    @InputImport(name="ip")
+    @Import(name="ip")
       private final @Nullable Output<String> ip;
 
     public Output<String> getIp() {
@@ -48,7 +48,7 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
      * The list of ports exposed on the container group.
      * 
      */
-    @InputImport(name="ports", required=true)
+    @Import(name="ports", required=true)
       private final Output<List<PortArgs>> ports;
 
     public Output<List<PortArgs>> getPorts() {
@@ -59,7 +59,7 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies if the IP is exposed to the public internet or private VNET.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,ContainerGroupIpAddressType>> type;
 
     public Output<Either<String,ContainerGroupIpAddressType>> getType() {

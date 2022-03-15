@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse {
     /**
      * Settings for logging. Settings for Dialogflow History, Contact Center messages, StackDriver logs, and speech logging. Exposed at the following levels: - Agent level.
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse {
      */
     private final GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse(@OutputCustomType.Parameter("loggingSettings") GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse(@CustomType.Parameter("loggingSettings") GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse loggingSettings) {
         this.loggingSettings = loggingSettings;
     }
 

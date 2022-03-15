@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storagepool;
 
 import io.pulumi.azurenative.storagepool.inputs.TargetPortalGroupCreateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Disk pool.
      * 
      */
-    @InputImport(name="diskPoolName", required=true)
+    @Import(name="diskPoolName", required=true)
       private final Output<String> diskPoolName;
 
     public Output<String> getDiskPoolName() {
@@ -31,7 +31,7 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the iSCSI target.
      * 
      */
-    @InputImport(name="iscsiTargetName")
+    @Import(name="iscsiTargetName")
       private final @Nullable Output<String> iscsiTargetName;
 
     public Output<String> getIscsiTargetName() {
@@ -42,7 +42,7 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
      * iSCSI target IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:server".
      * 
      */
-    @InputImport(name="targetIqn")
+    @Import(name="targetIqn")
       private final @Nullable Output<String> targetIqn;
 
     public Output<String> getTargetIqn() {
@@ -64,7 +64,7 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
      * List of iSCSI target portal groups. Can have 1 portal group at most.
      * 
      */
-    @InputImport(name="tpgs", required=true)
+    @Import(name="tpgs", required=true)
       private final Output<List<TargetPortalGroupCreateArgs>> tpgs;
 
     public Output<List<TargetPortalGroupCreateArgs>> getTpgs() {

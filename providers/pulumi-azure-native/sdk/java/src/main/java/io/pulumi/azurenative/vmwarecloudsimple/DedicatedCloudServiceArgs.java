@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.vmwarecloudsimple;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
      * dedicated cloud Service name
      * 
      */
-    @InputImport(name="dedicatedCloudServiceName")
+    @Import(name="dedicatedCloudServiceName")
       private final @Nullable Output<String> dedicatedCloudServiceName;
 
     public Output<String> getDedicatedCloudServiceName() {
@@ -30,7 +30,7 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
      * gateway Subnet for the account. It will collect the subnet address and always treat it as /28
      * 
      */
-    @InputImport(name="gatewaySubnet", required=true)
+    @Import(name="gatewaySubnet", required=true)
       private final Output<String> gatewaySubnet;
 
     public Output<String> getGatewaySubnet() {
@@ -41,7 +41,7 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
      * Azure region
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -52,7 +52,7 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
      * The name of the resource group
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
      * The list of tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -16,35 +16,35 @@ public final class FeatureVariationObjectArgs extends io.pulumi.resources.Resour
 
     public static final FeatureVariationObjectArgs Empty = new FeatureVariationObjectArgs();
 
-    @InputImport(name="booleanValue")
+    @Import(name="booleanValue")
       private final @Nullable Output<Boolean> booleanValue;
 
     public Output<Boolean> getBooleanValue() {
         return this.booleanValue == null ? Output.empty() : this.booleanValue;
     }
 
-    @InputImport(name="doubleValue")
+    @Import(name="doubleValue")
       private final @Nullable Output<Double> doubleValue;
 
     public Output<Double> getDoubleValue() {
         return this.doubleValue == null ? Output.empty() : this.doubleValue;
     }
 
-    @InputImport(name="longValue")
+    @Import(name="longValue")
       private final @Nullable Output<Double> longValue;
 
     public Output<Double> getLongValue() {
         return this.longValue == null ? Output.empty() : this.longValue;
     }
 
-    @InputImport(name="stringValue")
+    @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
     public Output<String> getStringValue() {
         return this.stringValue == null ? Output.empty() : this.stringValue;
     }
 
-    @InputImport(name="variationName")
+    @Import(name="variationName")
       private final @Nullable Output<String> variationName;
 
     public Output<String> getVariationName() {

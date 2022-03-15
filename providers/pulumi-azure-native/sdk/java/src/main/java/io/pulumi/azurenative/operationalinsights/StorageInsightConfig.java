@@ -9,7 +9,7 @@ import io.pulumi.azurenative.operationalinsights.outputs.StorageAccountResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.StorageInsightStatusResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class StorageInsightConfig extends io.pulumi.resources.CustomResource {
      * The names of the blob containers that the workspace should read
      * 
      */
-    @OutputExport(name="containers", type=List.class, parameters={String.class})
+    @Export(name="containers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> containers;
 
     /**
@@ -51,7 +51,7 @@ public class StorageInsightConfig extends io.pulumi.resources.CustomResource {
      * The ETag of the storage insight.
      * 
      */
-    @OutputExport(name="eTag", type=String.class, parameters={})
+    @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
@@ -65,7 +65,7 @@ public class StorageInsightConfig extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class StorageInsightConfig extends io.pulumi.resources.CustomResource {
      * The status of the storage insight
      * 
      */
-    @OutputExport(name="status", type=StorageInsightStatusResponse.class, parameters={})
+    @Export(name="status", type=StorageInsightStatusResponse.class, parameters={})
     private Output<StorageInsightStatusResponse> status;
 
     /**
@@ -93,7 +93,7 @@ public class StorageInsightConfig extends io.pulumi.resources.CustomResource {
      * The storage account connection details
      * 
      */
-    @OutputExport(name="storageAccount", type=StorageAccountResponse.class, parameters={})
+    @Export(name="storageAccount", type=StorageAccountResponse.class, parameters={})
     private Output<StorageAccountResponse> storageAccount;
 
     /**
@@ -107,7 +107,7 @@ public class StorageInsightConfig extends io.pulumi.resources.CustomResource {
      * The names of the Azure tables that the workspace should read
      * 
      */
-    @OutputExport(name="tables", type=List.class, parameters={String.class})
+    @Export(name="tables", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> tables;
 
     /**
@@ -121,7 +121,7 @@ public class StorageInsightConfig extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -135,7 +135,7 @@ public class StorageInsightConfig extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

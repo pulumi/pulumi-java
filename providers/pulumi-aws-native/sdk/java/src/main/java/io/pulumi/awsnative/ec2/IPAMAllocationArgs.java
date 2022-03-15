@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class IPAMAllocationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IPAMAllocationArgs Empty = new IPAMAllocationArgs();
 
-    @InputImport(name="cidr")
+    @Import(name="cidr")
       private final @Nullable Output<String> cidr;
 
     public Output<String> getCidr() {
         return this.cidr == null ? Output.empty() : this.cidr;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class IPAMAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * Id of the IPAM Pool.
      * 
      */
-    @InputImport(name="ipamPoolId", required=true)
+    @Import(name="ipamPoolId", required=true)
       private final Output<String> ipamPoolId;
 
     public Output<String> getIpamPoolId() {
@@ -44,7 +44,7 @@ public final class IPAMAllocationArgs extends io.pulumi.resources.ResourceArgs {
      * The desired netmask length of the allocation. If set, IPAM will choose a block of free space with this size and return the CIDR representing it.
      * 
      */
-    @InputImport(name="netmaskLength")
+    @Import(name="netmaskLength")
       private final @Nullable Output<Integer> netmaskLength;
 
     public Output<Integer> getNetmaskLength() {

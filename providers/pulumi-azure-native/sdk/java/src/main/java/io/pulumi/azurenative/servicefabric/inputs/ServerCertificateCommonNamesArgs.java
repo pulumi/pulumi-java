@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.ServerCertificateCommonNameArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ServerCertificateCommonNamesArgs extends io.pulumi.resources.
      * The list of server certificates referenced by common name that are used to secure the cluster.
      * 
      */
-    @InputImport(name="commonNames")
+    @Import(name="commonNames")
       private final @Nullable Output<List<ServerCertificateCommonNameArgs>> commonNames;
 
     public Output<List<ServerCertificateCommonNameArgs>> getCommonNames() {
@@ -35,7 +35,7 @@ public final class ServerCertificateCommonNamesArgs extends io.pulumi.resources.
      * The local certificate store location.
      * 
      */
-    @InputImport(name="x509StoreName")
+    @Import(name="x509StoreName")
       private final @Nullable Output<String> x509StoreName;
 
     public Output<String> getX509StoreName() {

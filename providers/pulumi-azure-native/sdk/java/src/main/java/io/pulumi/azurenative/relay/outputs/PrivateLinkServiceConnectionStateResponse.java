@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.relay.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateLinkServiceConnectionStateResponse {
     /**
      * A message indicating if changes on the service provider require any updates on the consumer.
@@ -27,11 +27,11 @@ public final class PrivateLinkServiceConnectionStateResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateLinkServiceConnectionStateResponse(
-        @OutputCustomType.Parameter("actionRequired") @Nullable String actionRequired,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("actionRequired") @Nullable String actionRequired,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.actionRequired = actionRequired;
         this.description = description;
         this.status = status;

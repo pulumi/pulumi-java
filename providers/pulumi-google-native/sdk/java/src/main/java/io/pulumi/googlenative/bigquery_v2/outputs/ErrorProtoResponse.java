@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ErrorProtoResponse {
     /**
      * Debugging information. This property is internal to Google and should not be used.
@@ -30,12 +30,12 @@ public final class ErrorProtoResponse {
      */
     private final String reason;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ErrorProtoResponse(
-        @OutputCustomType.Parameter("debugInfo") String debugInfo,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("reason") String reason) {
+        @CustomType.Parameter("debugInfo") String debugInfo,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("reason") String reason) {
         this.debugInfo = debugInfo;
         this.location = location;
         this.message = message;

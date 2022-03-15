@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ApiDiagnosticLoggerArgs extends io.pulumi.resources.ResourceA
      * API identifier. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -29,7 +29,7 @@ public final class ApiDiagnosticLoggerArgs extends io.pulumi.resources.ResourceA
      * Diagnostic identifier. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="diagnosticId", required=true)
+    @Import(name="diagnosticId", required=true)
       private final Output<String> diagnosticId;
 
     public Output<String> getDiagnosticId() {
@@ -40,7 +40,7 @@ public final class ApiDiagnosticLoggerArgs extends io.pulumi.resources.ResourceA
      * Logger identifier. Must be unique in the API Management service instance.
      * 
      */
-    @InputImport(name="loggerid")
+    @Import(name="loggerid")
       private final @Nullable Output<String> loggerid;
 
     public Output<String> getLoggerid() {
@@ -51,7 +51,7 @@ public final class ApiDiagnosticLoggerArgs extends io.pulumi.resources.ResourceA
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -62,7 +62,7 @@ public final class ApiDiagnosticLoggerArgs extends io.pulumi.resources.ResourceA
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {

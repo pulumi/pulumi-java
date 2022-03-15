@@ -9,7 +9,7 @@ import io.pulumi.azurenative.eventgrid.inputs.InboundIpRuleArgs;
 import io.pulumi.azurenative.eventgrid.inputs.JsonInputSchemaMappingArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
      * 
      */
-    @InputImport(name="inboundIpRules")
+    @Import(name="inboundIpRules")
       private final @Nullable Output<List<InboundIpRuleArgs>> inboundIpRules;
 
     public Output<List<InboundIpRuleArgs>> getInboundIpRules() {
@@ -36,7 +36,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * This determines the format that Event Grid should expect for incoming events published to the topic.
      * 
      */
-    @InputImport(name="inputSchema")
+    @Import(name="inputSchema")
       private final @Nullable Output<Either<String,InputSchema>> inputSchema;
 
     public Output<Either<String,InputSchema>> getInputSchema() {
@@ -47,7 +47,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * This enables publishing using custom event schemas. An InputSchemaMapping can be specified to map various properties of a source schema to various required properties of the EventGridEvent schema.
      * 
      */
-    @InputImport(name="inputSchemaMapping")
+    @Import(name="inputSchemaMapping")
       private final @Nullable Output<JsonInputSchemaMappingArgs> inputSchemaMapping;
 
     public Output<JsonInputSchemaMappingArgs> getInputSchemaMapping() {
@@ -58,7 +58,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * Location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -70,7 +70,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * You can further restrict to specific IPs by configuring <seealso cref="P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.TopicProperties.InboundIpRules" />
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
@@ -81,7 +81,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the user's subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -92,7 +92,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * Tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -103,7 +103,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the topic.
      * 
      */
-    @InputImport(name="topicName")
+    @Import(name="topicName")
       private final @Nullable Output<String> topicName;
 
     public Output<String> getTopicName() {

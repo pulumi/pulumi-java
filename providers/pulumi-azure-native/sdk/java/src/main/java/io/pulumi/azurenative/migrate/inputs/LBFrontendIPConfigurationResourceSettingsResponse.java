@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.SubnetReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends io.
      * Gets or sets the frontend IP configuration name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -35,7 +35,7 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends io.
      * private IP address shall be allocated from the subnet specified in subnetRef.
      * 
      */
-    @InputImport(name="privateIpAddress")
+    @Import(name="privateIpAddress")
       private final @Nullable String privateIpAddress;
 
     public Optional<String> getPrivateIpAddress() {
@@ -46,7 +46,7 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends io.
      * Gets or sets PrivateIP allocation method (Static/Dynamic).
      * 
      */
-    @InputImport(name="privateIpAllocationMethod")
+    @Import(name="privateIpAllocationMethod")
       private final @Nullable String privateIpAllocationMethod;
 
     public Optional<String> getPrivateIpAllocationMethod() {
@@ -57,7 +57,7 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends io.
      * Defines reference to subnet.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable SubnetReferenceResponse subnet;
 
     public Optional<SubnetReferenceResponse> getSubnet() {
@@ -68,7 +68,7 @@ public final class LBFrontendIPConfigurationResourceSettingsResponse extends io.
      * Gets or sets the csv list of zones.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable String zones;
 
     public Optional<String> getZones() {

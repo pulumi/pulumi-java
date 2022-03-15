@@ -6,13 +6,13 @@ package io.pulumi.azurenative.chaos.outputs;
 import io.pulumi.azurenative.chaos.outputs.ContinuousActionResponse;
 import io.pulumi.azurenative.chaos.outputs.DelayActionResponse;
 import io.pulumi.azurenative.chaos.outputs.DiscreteActionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BranchResponse {
     /**
      * List of actions.
@@ -25,10 +25,10 @@ public final class BranchResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BranchResponse(
-        @OutputCustomType.Parameter("actions") List<Object> actions,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("actions") List<Object> actions,
+        @CustomType.Parameter("name") String name) {
         this.actions = actions;
         this.name = name;
     }

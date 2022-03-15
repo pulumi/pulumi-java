@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.AlertRuleAnyOfOrLeafConditionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class AlertRuleAllOfConditionArgs extends io.pulumi.resources.Resou
      * The list of Activity Log Alert rule conditions.
      * 
      */
-    @InputImport(name="allOf", required=true)
+    @Import(name="allOf", required=true)
       private final Output<List<AlertRuleAnyOfOrLeafConditionArgs>> allOf;
 
     public Output<List<AlertRuleAnyOfOrLeafConditionArgs>> getAllOf() {

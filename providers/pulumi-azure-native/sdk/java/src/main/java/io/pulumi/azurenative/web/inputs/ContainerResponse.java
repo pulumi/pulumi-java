@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ContainerResourcesResponse;
 import io.pulumi.azurenative.web.inputs.EnvironmentVarResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * Container start command arguments.
      * 
      */
-    @InputImport(name="args")
+    @Import(name="args")
       private final @Nullable List<String> args;
 
     public List<String> getArgs() {
@@ -36,7 +36,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * Container start command.
      * 
      */
-    @InputImport(name="command")
+    @Import(name="command")
       private final @Nullable List<String> command;
 
     public List<String> getCommand() {
@@ -47,7 +47,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * Container environment variables.
      * 
      */
-    @InputImport(name="env")
+    @Import(name="env")
       private final @Nullable List<EnvironmentVarResponse> env;
 
     public List<EnvironmentVarResponse> getEnv() {
@@ -58,7 +58,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * Container image tag.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable String image;
 
     public Optional<String> getImage() {
@@ -69,7 +69,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * Custom container name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -80,7 +80,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * Container resource requirements.
      * 
      */
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable ContainerResourcesResponse resources;
 
     public Optional<ContainerResourcesResponse> getResources() {

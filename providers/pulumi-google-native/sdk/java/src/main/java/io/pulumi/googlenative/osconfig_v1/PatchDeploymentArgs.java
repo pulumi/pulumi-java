@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1.inputs.OneTimeScheduleArgs;
 import io.pulumi.googlenative.osconfig_v1.inputs.PatchConfigArgs;
 import io.pulumi.googlenative.osconfig_v1.inputs.PatchInstanceFilterArgs;
@@ -23,7 +23,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. Description of the patch deployment. Length of the description is limited to 1024 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -34,7 +34,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. Duration of the patch. After the duration ends, the patch times out.
      * 
      */
-    @InputImport(name="duration")
+    @Import(name="duration")
       private final @Nullable Output<String> duration;
 
     public Output<String> getDuration() {
@@ -45,7 +45,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * VM instances to patch.
      * 
      */
-    @InputImport(name="instanceFilter", required=true)
+    @Import(name="instanceFilter", required=true)
       private final Output<PatchInstanceFilterArgs> instanceFilter;
 
     public Output<PatchInstanceFilterArgs> getInstanceFilter() {
@@ -56,7 +56,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Unique name for the patch deployment resource in a project. The patch deployment name is in the form: `projects/{project_id}/patchDeployments/{patch_deployment_id}`. This field is ignored when you create a new patch deployment.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -67,7 +67,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Schedule a one-time execution.
      * 
      */
-    @InputImport(name="oneTimeSchedule", required=true)
+    @Import(name="oneTimeSchedule", required=true)
       private final Output<OneTimeScheduleArgs> oneTimeSchedule;
 
     public Output<OneTimeScheduleArgs> getOneTimeSchedule() {
@@ -78,21 +78,21 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. Patch configuration that is applied.
      * 
      */
-    @InputImport(name="patchConfig")
+    @Import(name="patchConfig")
       private final @Nullable Output<PatchConfigArgs> patchConfig;
 
     public Output<PatchConfigArgs> getPatchConfig() {
         return this.patchConfig == null ? Output.empty() : this.patchConfig;
     }
 
-    @InputImport(name="patchDeploymentId", required=true)
+    @Import(name="patchDeploymentId", required=true)
       private final Output<String> patchDeploymentId;
 
     public Output<String> getPatchDeploymentId() {
         return this.patchDeploymentId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -103,7 +103,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Schedule recurring executions.
      * 
      */
-    @InputImport(name="recurringSchedule", required=true)
+    @Import(name="recurringSchedule", required=true)
       private final Output<RecurringScheduleArgs> recurringSchedule;
 
     public Output<RecurringScheduleArgs> getRecurringSchedule() {
@@ -114,7 +114,7 @@ public final class PatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. Rollout strategy of the patch job.
      * 
      */
-    @InputImport(name="rollout")
+    @Import(name="rollout")
       private final @Nullable Output<PatchRolloutArgs> rollout;
 
     public Output<PatchRolloutArgs> getRollout() {

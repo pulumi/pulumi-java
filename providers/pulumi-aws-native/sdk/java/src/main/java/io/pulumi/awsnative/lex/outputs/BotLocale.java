@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lex.outputs;
 import io.pulumi.awsnative.lex.outputs.BotIntent;
 import io.pulumi.awsnative.lex.outputs.BotSlotType;
 import io.pulumi.awsnative.lex.outputs.BotVoiceSettings;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotLocale {
     private final @Nullable String description;
     /**
@@ -31,14 +31,14 @@ public final class BotLocale {
     private final @Nullable List<BotSlotType> slotTypes;
     private final @Nullable BotVoiceSettings voiceSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotLocale(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("intents") @Nullable List<BotIntent> intents,
-        @OutputCustomType.Parameter("localeId") String localeId,
-        @OutputCustomType.Parameter("nluConfidenceThreshold") Double nluConfidenceThreshold,
-        @OutputCustomType.Parameter("slotTypes") @Nullable List<BotSlotType> slotTypes,
-        @OutputCustomType.Parameter("voiceSettings") @Nullable BotVoiceSettings voiceSettings) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("intents") @Nullable List<BotIntent> intents,
+        @CustomType.Parameter("localeId") String localeId,
+        @CustomType.Parameter("nluConfidenceThreshold") Double nluConfidenceThreshold,
+        @CustomType.Parameter("slotTypes") @Nullable List<BotSlotType> slotTypes,
+        @CustomType.Parameter("voiceSettings") @Nullable BotVoiceSettings voiceSettings) {
         this.description = description;
         this.intents = intents;
         this.localeId = localeId;

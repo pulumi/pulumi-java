@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceAccessRuleResponse {
     /**
      * Resource Id
@@ -22,10 +22,10 @@ public final class ResourceAccessRuleResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceAccessRuleResponse(
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
+        @CustomType.Parameter("resourceId") @Nullable String resourceId,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.resourceId = resourceId;
         this.tenantId = tenantId;
     }

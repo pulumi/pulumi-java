@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.ConsistentHashLoadBalancerSettingsHttpCookieResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConsistentHashLoadBalancerSettingsResponse {
     /**
      * Hash is based on HTTP Cookie. This field describes a HTTP cookie that will be used as the hash key for the consistent hash load balancer. If the cookie is not present, it will be generated. This field is applicable if the sessionAffinity is set to HTTP_COOKIE. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
@@ -26,11 +26,11 @@ public final class ConsistentHashLoadBalancerSettingsResponse {
      */
     private final String minimumRingSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConsistentHashLoadBalancerSettingsResponse(
-        @OutputCustomType.Parameter("httpCookie") ConsistentHashLoadBalancerSettingsHttpCookieResponse httpCookie,
-        @OutputCustomType.Parameter("httpHeaderName") String httpHeaderName,
-        @OutputCustomType.Parameter("minimumRingSize") String minimumRingSize) {
+        @CustomType.Parameter("httpCookie") ConsistentHashLoadBalancerSettingsHttpCookieResponse httpCookie,
+        @CustomType.Parameter("httpHeaderName") String httpHeaderName,
+        @CustomType.Parameter("minimumRingSize") String minimumRingSize) {
         this.httpCookie = httpCookie;
         this.httpHeaderName = httpHeaderName;
         this.minimumRingSize = minimumRingSize;

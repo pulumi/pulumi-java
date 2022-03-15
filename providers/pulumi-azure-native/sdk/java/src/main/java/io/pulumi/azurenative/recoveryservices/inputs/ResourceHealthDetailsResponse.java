@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ResourceHealthDetailsResponse extends io.pulumi.resources.Inv
      * Health Code
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final Integer code;
 
     public Integer getCode() {
@@ -33,7 +33,7 @@ public final class ResourceHealthDetailsResponse extends io.pulumi.resources.Inv
      * Health Message
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -44,7 +44,7 @@ public final class ResourceHealthDetailsResponse extends io.pulumi.resources.Inv
      * Health Recommended Actions
      * 
      */
-    @InputImport(name="recommendations", required=true)
+    @Import(name="recommendations", required=true)
       private final List<String> recommendations;
 
     public List<String> getRecommendations() {
@@ -55,7 +55,7 @@ public final class ResourceHealthDetailsResponse extends io.pulumi.resources.Inv
      * Health Title
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final String title;
 
     public String getTitle() {

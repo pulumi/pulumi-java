@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.projects.AccessApprovalSettingsArgs;
@@ -44,7 +44,7 @@ public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {
      * of the Project.
      * 
      */
-    @OutputExport(name="enrolledAncestor", type=Boolean.class, parameters={})
+    @Export(name="enrolledAncestor", type=Boolean.class, parameters={})
     private Output<Boolean> enrolledAncestor;
 
     /**
@@ -63,7 +63,7 @@ public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="enrolledServices", type=List.class, parameters={AccessApprovalSettingsEnrolledService.class})
+    @Export(name="enrolledServices", type=List.class, parameters={AccessApprovalSettingsEnrolledService.class})
     private Output<List<AccessApprovalSettingsEnrolledService>> enrolledServices;
 
     /**
@@ -81,7 +81,7 @@ public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {
      * The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -97,7 +97,7 @@ public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {
      * resources of that resource. A maximum of 50 email addresses are allowed.
      * 
      */
-    @OutputExport(name="notificationEmails", type=List.class, parameters={String.class})
+    @Export(name="notificationEmails", type=List.class, parameters={String.class})
     private Output<List<String>> notificationEmails;
 
     /**
@@ -119,7 +119,7 @@ public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {
      * 
      */
     @Deprecated /* Deprecated in favor of `project_id` */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output</* @Nullable */ String> project;
 
     /**
@@ -135,7 +135,7 @@ public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {
      * ID of the project of the access approval settings.
      * 
      */
-    @OutputExport(name="projectId", type=String.class, parameters={})
+    @Export(name="projectId", type=String.class, parameters={})
     private Output<String> projectId;
 
     /**

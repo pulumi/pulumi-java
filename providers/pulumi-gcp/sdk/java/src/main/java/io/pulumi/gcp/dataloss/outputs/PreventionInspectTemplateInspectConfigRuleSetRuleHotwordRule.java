@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule {
     /**
      * Regular expression pattern defining what qualifies as a hotword.
@@ -34,11 +34,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule 
      */
     private final PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity proximity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule(
-        @OutputCustomType.Parameter("hotwordRegex") PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex hotwordRegex,
-        @OutputCustomType.Parameter("likelihoodAdjustment") PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment likelihoodAdjustment,
-        @OutputCustomType.Parameter("proximity") PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity proximity) {
+        @CustomType.Parameter("hotwordRegex") PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex hotwordRegex,
+        @CustomType.Parameter("likelihoodAdjustment") PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment likelihoodAdjustment,
+        @CustomType.Parameter("proximity") PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity proximity) {
         this.hotwordRegex = hotwordRegex;
         this.likelihoodAdjustment = likelihoodAdjustment;
         this.proximity = proximity;

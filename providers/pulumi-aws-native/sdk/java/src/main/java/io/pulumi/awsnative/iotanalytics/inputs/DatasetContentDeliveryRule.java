@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetContentDeliveryRuleDestination;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class DatasetContentDeliveryRule extends io.pulumi.resources.Invoke
 
     public static final DatasetContentDeliveryRule Empty = new DatasetContentDeliveryRule();
 
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final DatasetContentDeliveryRuleDestination destination;
 
     public DatasetContentDeliveryRuleDestination getDestination() {
         return this.destination;
     }
 
-    @InputImport(name="entryName")
+    @Import(name="entryName")
       private final @Nullable String entryName;
 
     public Optional<String> getEntryName() {

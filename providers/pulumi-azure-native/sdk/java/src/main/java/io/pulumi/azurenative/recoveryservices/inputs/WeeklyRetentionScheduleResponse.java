@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.RetentionDurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WeeklyRetentionScheduleResponse extends io.pulumi.resources.I
      * List of days of week for weekly retention policy.
      * 
      */
-    @InputImport(name="daysOfTheWeek")
+    @Import(name="daysOfTheWeek")
       private final @Nullable List<String> daysOfTheWeek;
 
     public List<String> getDaysOfTheWeek() {
@@ -35,7 +35,7 @@ public final class WeeklyRetentionScheduleResponse extends io.pulumi.resources.I
      * Retention duration of retention Policy.
      * 
      */
-    @InputImport(name="retentionDuration")
+    @Import(name="retentionDuration")
       private final @Nullable RetentionDurationResponse retentionDuration;
 
     public Optional<RetentionDurationResponse> getRetentionDuration() {
@@ -46,7 +46,7 @@ public final class WeeklyRetentionScheduleResponse extends io.pulumi.resources.I
      * Retention times of retention policy.
      * 
      */
-    @InputImport(name="retentionTimes")
+    @Import(name="retentionTimes")
       private final @Nullable List<String> retentionTimes;
 
     public List<String> getRetentionTimes() {

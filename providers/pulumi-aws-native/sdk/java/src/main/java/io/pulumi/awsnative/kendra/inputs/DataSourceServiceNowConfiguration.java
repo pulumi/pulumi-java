@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kendra.enums.DataSourceServiceNowAuthenticationType;
 import io.pulumi.awsnative.kendra.enums.DataSourceServiceNowBuildVersionType;
 import io.pulumi.awsnative.kendra.inputs.DataSourceServiceNowKnowledgeArticleConfiguration;
 import io.pulumi.awsnative.kendra.inputs.DataSourceServiceNowServiceCatalogConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,42 +18,42 @@ public final class DataSourceServiceNowConfiguration extends io.pulumi.resources
 
     public static final DataSourceServiceNowConfiguration Empty = new DataSourceServiceNowConfiguration();
 
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable DataSourceServiceNowAuthenticationType authenticationType;
 
     public Optional<DataSourceServiceNowAuthenticationType> getAuthenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
     }
 
-    @InputImport(name="hostUrl", required=true)
+    @Import(name="hostUrl", required=true)
       private final String hostUrl;
 
     public String getHostUrl() {
         return this.hostUrl;
     }
 
-    @InputImport(name="knowledgeArticleConfiguration")
+    @Import(name="knowledgeArticleConfiguration")
       private final @Nullable DataSourceServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration;
 
     public Optional<DataSourceServiceNowKnowledgeArticleConfiguration> getKnowledgeArticleConfiguration() {
         return this.knowledgeArticleConfiguration == null ? Optional.empty() : Optional.ofNullable(this.knowledgeArticleConfiguration);
     }
 
-    @InputImport(name="secretArn", required=true)
+    @Import(name="secretArn", required=true)
       private final String secretArn;
 
     public String getSecretArn() {
         return this.secretArn;
     }
 
-    @InputImport(name="serviceCatalogConfiguration")
+    @Import(name="serviceCatalogConfiguration")
       private final @Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration;
 
     public Optional<DataSourceServiceNowServiceCatalogConfiguration> getServiceCatalogConfiguration() {
         return this.serviceCatalogConfiguration == null ? Optional.empty() : Optional.ofNullable(this.serviceCatalogConfiguration);
     }
 
-    @InputImport(name="serviceNowBuildVersion", required=true)
+    @Import(name="serviceNowBuildVersion", required=true)
       private final DataSourceServiceNowBuildVersionType serviceNowBuildVersion;
 
     public DataSourceServiceNowBuildVersionType getServiceNowBuildVersion() {

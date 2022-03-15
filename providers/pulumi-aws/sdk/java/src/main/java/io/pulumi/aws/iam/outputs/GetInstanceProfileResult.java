@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceProfileResult {
     /**
      * The Amazon Resource Name (ARN) specifying the instance profile.
@@ -47,16 +47,16 @@ public final class GetInstanceProfileResult {
      */
     private final String roleName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceProfileResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("createDate") String createDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("roleId") String roleId,
-        @OutputCustomType.Parameter("roleName") String roleName) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("createDate") String createDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("roleId") String roleId,
+        @CustomType.Parameter("roleName") String roleName) {
         this.arn = arn;
         this.createDate = createDate;
         this.id = id;

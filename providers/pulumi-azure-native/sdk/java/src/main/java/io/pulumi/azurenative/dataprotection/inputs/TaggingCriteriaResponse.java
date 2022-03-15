@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.RetentionTagResponse;
 import io.pulumi.azurenative.dataprotection.inputs.ScheduleBasedBackupCriteriaResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class TaggingCriteriaResponse extends io.pulumi.resources.InvokeArg
      * Criteria which decides whether the tag can be applied to a triggered backup.
      * 
      */
-    @InputImport(name="criteria")
+    @Import(name="criteria")
       private final @Nullable List<ScheduleBasedBackupCriteriaResponse> criteria;
 
     public List<ScheduleBasedBackupCriteriaResponse> getCriteria() {
@@ -37,7 +37,7 @@ public final class TaggingCriteriaResponse extends io.pulumi.resources.InvokeArg
      * Specifies if tag is default.
      * 
      */
-    @InputImport(name="isDefault", required=true)
+    @Import(name="isDefault", required=true)
       private final Boolean isDefault;
 
     public Boolean getIsDefault() {
@@ -48,7 +48,7 @@ public final class TaggingCriteriaResponse extends io.pulumi.resources.InvokeArg
      * Retention tag information
      * 
      */
-    @InputImport(name="tagInfo", required=true)
+    @Import(name="tagInfo", required=true)
       private final RetentionTagResponse tagInfo;
 
     public RetentionTagResponse getTagInfo() {
@@ -59,7 +59,7 @@ public final class TaggingCriteriaResponse extends io.pulumi.resources.InvokeArg
      * Retention Tag priority.
      * 
      */
-    @InputImport(name="taggingPriority", required=true)
+    @Import(name="taggingPriority", required=true)
       private final Double taggingPriority;
 
     public Double getTaggingPriority() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SqlPartitionSettingsResponse extends io.pulumi.resources.Invo
      * The name of the column in integer or datetime type that will be used for proceeding partitioning. If not specified, the primary key of the table is auto-detected and used as the partition column. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="partitionColumnName")
+    @Import(name="partitionColumnName")
       private final @Nullable Object partitionColumnName;
 
     public Optional<Object> getPartitionColumnName() {
@@ -33,7 +33,7 @@ public final class SqlPartitionSettingsResponse extends io.pulumi.resources.Invo
      * The minimum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="partitionLowerBound")
+    @Import(name="partitionLowerBound")
       private final @Nullable Object partitionLowerBound;
 
     public Optional<Object> getPartitionLowerBound() {
@@ -44,7 +44,7 @@ public final class SqlPartitionSettingsResponse extends io.pulumi.resources.Invo
      * The maximum value of the partition column for partition range splitting. This value is used to decide the partition stride, not for filtering the rows in table. All rows in the table or query result will be partitioned and copied. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="partitionUpperBound")
+    @Import(name="partitionUpperBound")
       private final @Nullable Object partitionUpperBound;
 
     public Optional<Object> getPartitionUpperBound() {

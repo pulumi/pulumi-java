@@ -5,7 +5,7 @@ package io.pulumi.awsnative.devicefarm;
 
 import io.pulumi.awsnative.devicefarm.inputs.VPCEConfigurationTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,35 +16,35 @@ public final class VPCEConfigurationArgs extends io.pulumi.resources.ResourceArg
 
     public static final VPCEConfigurationArgs Empty = new VPCEConfigurationArgs();
 
-    @InputImport(name="serviceDnsName", required=true)
+    @Import(name="serviceDnsName", required=true)
       private final Output<String> serviceDnsName;
 
     public Output<String> getServiceDnsName() {
         return this.serviceDnsName;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<VPCEConfigurationTagArgs>> tags;
 
     public Output<List<VPCEConfigurationTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="vpceConfigurationDescription")
+    @Import(name="vpceConfigurationDescription")
       private final @Nullable Output<String> vpceConfigurationDescription;
 
     public Output<String> getVpceConfigurationDescription() {
         return this.vpceConfigurationDescription == null ? Output.empty() : this.vpceConfigurationDescription;
     }
 
-    @InputImport(name="vpceConfigurationName", required=true)
+    @Import(name="vpceConfigurationName", required=true)
       private final Output<String> vpceConfigurationName;
 
     public Output<String> getVpceConfigurationName() {
         return this.vpceConfigurationName;
     }
 
-    @InputImport(name="vpceServiceName", required=true)
+    @Import(name="vpceServiceName", required=true)
       private final Output<String> vpceServiceName;
 
     public Output<String> getVpceServiceName() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,14 +17,14 @@ public final class EnvironmentIamPolicyArgs extends io.pulumi.resources.Resource
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="envId", required=true)
+    @Import(name="envId", required=true)
       private final Output<String> envId;
 
     public Output<String> getEnvId() {
         return this.envId;
     }
 
-    @InputImport(name="orgId", required=true)
+    @Import(name="orgId", required=true)
       private final Output<String> orgId;
 
     public Output<String> getOrgId() {
@@ -36,7 +36,7 @@ public final class EnvironmentIamPolicyArgs extends io.pulumi.resources.Resource
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @InputImport(name="policyData", required=true)
+    @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
     public Output<String> getPolicyData() {

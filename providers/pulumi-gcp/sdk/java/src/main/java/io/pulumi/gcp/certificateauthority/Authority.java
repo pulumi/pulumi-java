@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.certificateauthority.AuthorityArgs;
@@ -53,7 +53,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * URLs for accessing content published by this CA, such as the CA certificate and CRLs.
      * 
      */
-    @OutputExport(name="accessUrls", type=List.class, parameters={AuthorityAccessUrl.class})
+    @Export(name="accessUrls", type=List.class, parameters={AuthorityAccessUrl.class})
     private Output<List<AuthorityAccessUrl>> accessUrls;
 
     /**
@@ -67,7 +67,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * The user provided Resource ID for this Certificate Authority.
      * 
      */
-    @OutputExport(name="certificateAuthorityId", type=String.class, parameters={})
+    @Export(name="certificateAuthorityId", type=String.class, parameters={})
     private Output<String> certificateAuthorityId;
 
     /**
@@ -82,7 +82,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="config", type=AuthorityConfig.class, parameters={})
+    @Export(name="config", type=AuthorityConfig.class, parameters={})
     private Output<AuthorityConfig> config;
 
     /**
@@ -98,7 +98,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -117,7 +117,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * created.
      * 
      */
-    @OutputExport(name="gcsBucket", type=String.class, parameters={})
+    @Export(name="gcsBucket", type=String.class, parameters={})
     private Output</* @Nullable */ String> gcsBucket;
 
     /**
@@ -136,7 +136,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * Use with care. Defaults to `false`.
      * 
      */
-    @OutputExport(name="ignoreActiveCertificatesOnDeletion", type=Boolean.class, parameters={})
+    @Export(name="ignoreActiveCertificatesOnDeletion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ignoreActiveCertificatesOnDeletion;
 
     /**
@@ -154,7 +154,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="keySpec", type=AuthorityKeySpec.class, parameters={})
+    @Export(name="keySpec", type=AuthorityKeySpec.class, parameters={})
     private Output<AuthorityKeySpec> keySpec;
 
     /**
@@ -173,7 +173,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * "1.3kg", "count": "3" }.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -191,7 +191,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @OutputExport(name="lifetime", type=String.class, parameters={})
+    @Export(name="lifetime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lifetime;
 
     /**
@@ -208,7 +208,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * running `gcloud privateca locations list`.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -223,7 +223,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * The resource name for this CertificateAuthority in the format projects/*{@literal /}locations/*{@literal /}certificateAuthorities/*.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -239,7 +239,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * current CertificateAuthority's certificate.
      * 
      */
-    @OutputExport(name="pemCaCertificates", type=List.class, parameters={String.class})
+    @Export(name="pemCaCertificates", type=List.class, parameters={String.class})
     private Output<List<String>> pemCaCertificates;
 
     /**
@@ -255,7 +255,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * The name of the CaPool this Certificate Authority belongs to.
      * 
      */
-    @OutputExport(name="pool", type=String.class, parameters={})
+    @Export(name="pool", type=String.class, parameters={})
     private Output<String> pool;
 
     /**
@@ -270,7 +270,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -285,7 +285,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * The State for this CertificateAuthority.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -304,7 +304,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * Possible values are `SELF_SIGNED` and `SUBORDINATE`.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**
@@ -324,7 +324,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

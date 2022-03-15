@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MigrationValidationDatabaseSummaryResultResponse {
     /**
      * Validation end time
@@ -45,15 +45,15 @@ public final class MigrationValidationDatabaseSummaryResultResponse {
      */
     private final String targetDatabaseName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrationValidationDatabaseSummaryResultResponse(
-        @OutputCustomType.Parameter("endedOn") String endedOn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("migrationId") String migrationId,
-        @OutputCustomType.Parameter("sourceDatabaseName") String sourceDatabaseName,
-        @OutputCustomType.Parameter("startedOn") String startedOn,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("targetDatabaseName") String targetDatabaseName) {
+        @CustomType.Parameter("endedOn") String endedOn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("migrationId") String migrationId,
+        @CustomType.Parameter("sourceDatabaseName") String sourceDatabaseName,
+        @CustomType.Parameter("startedOn") String startedOn,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("targetDatabaseName") String targetDatabaseName) {
         this.endedOn = endedOn;
         this.id = id;
         this.migrationId = migrationId;

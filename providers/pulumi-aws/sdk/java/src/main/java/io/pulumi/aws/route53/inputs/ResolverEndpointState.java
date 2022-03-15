@@ -5,7 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.aws.route53.inputs.ResolverEndpointIpAddressGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * The ARN of the Route 53 Resolver endpoint.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -34,7 +34,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to your network or another VPC).
      * 
      */
-    @InputImport(name="direction")
+    @Import(name="direction")
       private final @Nullable Output<String> direction;
 
     public Output<String> getDirection() {
@@ -45,7 +45,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * The ID of the VPC that you want to create the resolver endpoint in.
      * 
      */
-    @InputImport(name="hostVpcId")
+    @Import(name="hostVpcId")
       private final @Nullable Output<String> hostVpcId;
 
     public Output<String> getHostVpcId() {
@@ -57,7 +57,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
      * 
      */
-    @InputImport(name="ipAddresses")
+    @Import(name="ipAddresses")
       private final @Nullable Output<List<ResolverEndpointIpAddressGetArgs>> ipAddresses;
 
     public Output<List<ResolverEndpointIpAddressGetArgs>> getIpAddresses() {
@@ -68,7 +68,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * The friendly name of the Route 53 Resolver endpoint.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -79,7 +79,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * The ID of one or more security groups that you want to use to control access to this VPC.
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -90,7 +90,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -101,7 +101,7 @@ public final class ResolverEndpointState extends io.pulumi.resources.ResourceArg
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

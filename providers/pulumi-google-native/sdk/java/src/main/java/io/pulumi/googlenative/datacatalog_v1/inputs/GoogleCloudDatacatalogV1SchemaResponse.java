@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1ColumnSchemaResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1SchemaResponse extends io.pulumi.reso
      * The unified GoogleSQL-like schema of columns. The overall maximum number of columns and nested columns is 10,000. The maximum nested depth is 15 levels.
      * 
      */
-    @InputImport(name="columns", required=true)
+    @Import(name="columns", required=true)
       private final List<GoogleCloudDatacatalogV1ColumnSchemaResponse> columns;
 
     public List<GoogleCloudDatacatalogV1ColumnSchemaResponse> getColumns() {

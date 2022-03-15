@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.iotsitewise.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GatewayGreengrassV2 {
     /**
      * The name of the CoreDevice in GreenGrass V2.
@@ -15,8 +15,8 @@ public final class GatewayGreengrassV2 {
      */
     private final String coreDeviceThingName;
 
-    @OutputCustomType.Constructor
-    private GatewayGreengrassV2(@OutputCustomType.Parameter("coreDeviceThingName") String coreDeviceThingName) {
+    @CustomType.Constructor
+    private GatewayGreengrassV2(@CustomType.Parameter("coreDeviceThingName") String coreDeviceThingName) {
         this.coreDeviceThingName = coreDeviceThingName;
     }
 

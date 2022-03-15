@@ -8,7 +8,7 @@ import io.pulumi.awsnative.s3.inputs.BucketLambdaConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.BucketQueueConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.BucketTopicConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,28 +22,28 @@ public final class BucketNotificationConfigurationArgs extends io.pulumi.resourc
 
     public static final BucketNotificationConfigurationArgs Empty = new BucketNotificationConfigurationArgs();
 
-    @InputImport(name="eventBridgeConfiguration")
+    @Import(name="eventBridgeConfiguration")
       private final @Nullable Output<BucketEventBridgeConfigurationArgs> eventBridgeConfiguration;
 
     public Output<BucketEventBridgeConfigurationArgs> getEventBridgeConfiguration() {
         return this.eventBridgeConfiguration == null ? Output.empty() : this.eventBridgeConfiguration;
     }
 
-    @InputImport(name="lambdaConfigurations")
+    @Import(name="lambdaConfigurations")
       private final @Nullable Output<List<BucketLambdaConfigurationArgs>> lambdaConfigurations;
 
     public Output<List<BucketLambdaConfigurationArgs>> getLambdaConfigurations() {
         return this.lambdaConfigurations == null ? Output.empty() : this.lambdaConfigurations;
     }
 
-    @InputImport(name="queueConfigurations")
+    @Import(name="queueConfigurations")
       private final @Nullable Output<List<BucketQueueConfigurationArgs>> queueConfigurations;
 
     public Output<List<BucketQueueConfigurationArgs>> getQueueConfigurations() {
         return this.queueConfigurations == null ? Output.empty() : this.queueConfigurations;
     }
 
-    @InputImport(name="topicConfigurations")
+    @Import(name="topicConfigurations")
       private final @Nullable Output<List<BucketTopicConfigurationArgs>> topicConfigurations;
 
     public Output<List<BucketTopicConfigurationArgs>> getTopicConfigurations() {

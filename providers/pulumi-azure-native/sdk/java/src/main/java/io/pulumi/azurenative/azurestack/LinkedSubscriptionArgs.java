@@ -6,7 +6,7 @@ package io.pulumi.azurenative.azurestack;
 import io.pulumi.azurenative.azurestack.enums.Location;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
      * The identifier associated with the device subscription.
      * 
      */
-    @InputImport(name="linkedSubscriptionId", required=true)
+    @Import(name="linkedSubscriptionId", required=true)
       private final Output<String> linkedSubscriptionId;
 
     public Output<String> getLinkedSubscriptionId() {
@@ -31,7 +31,7 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
      * Name of the Linked Subscription resource.
      * 
      */
-    @InputImport(name="linkedSubscriptionName")
+    @Import(name="linkedSubscriptionName")
       private final @Nullable Output<String> linkedSubscriptionName;
 
     public Output<String> getLinkedSubscriptionName() {
@@ -42,7 +42,7 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
      * Location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<Either<String,Location>> location;
 
     public Output<Either<String,Location>> getLocation() {
@@ -53,7 +53,7 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
      * The identifier associated with the device registration.
      * 
      */
-    @InputImport(name="registrationResourceId", required=true)
+    @Import(name="registrationResourceId", required=true)
       private final Output<String> registrationResourceId;
 
     public Output<String> getRegistrationResourceId() {
@@ -64,7 +64,7 @@ public final class LinkedSubscriptionArgs extends io.pulumi.resources.ResourceAr
      * Name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroup", required=true)
+    @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
     public Output<String> getResourceGroup() {

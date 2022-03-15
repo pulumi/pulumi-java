@@ -5,7 +5,7 @@ package io.pulumi.awsnative.codestarconnections;
 
 import io.pulumi.awsnative.codestarconnections.inputs.ConnectionTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the connection. Connection names must be unique in an AWS user account.
      * 
      */
-    @InputImport(name="connectionName")
+    @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
     public Output<String> getConnectionName() {
@@ -31,7 +31,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * The host arn configured to represent the infrastructure where your third-party provider is installed. You must specify either a ProviderType or a HostArn.
      * 
      */
-    @InputImport(name="hostArn")
+    @Import(name="hostArn")
       private final @Nullable Output<String> hostArn;
 
     public Output<String> getHostArn() {
@@ -42,7 +42,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the external provider where your third-party code repository is configured. You must specify either a ProviderType or a HostArn.
      * 
      */
-    @InputImport(name="providerType")
+    @Import(name="providerType")
       private final @Nullable Output<String> providerType;
 
     public Output<String> getProviderType() {
@@ -53,7 +53,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the tags applied to a connection.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ConnectionTagArgs>> tags;
 
     public Output<List<ConnectionTagArgs>> getTags() {

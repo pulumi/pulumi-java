@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class QueuingConfiguration {
     /**
      * `handSize` is a small positive number that configures the shuffle sharding of requests into queues.  When enqueuing a request at this priority level the request's flow identifier (a string pair) is hashed and the hash value is used to shuffle the list of queues and deal a hand of the size specified here.  The request is put into one of the shortest queues in that hand. `handSize` must be no larger than `queues`, and should be significantly smaller (so that a few heavy flows do not saturate most of the queues).  See the user-facing documentation for more extensive guidance on setting this field.  This field has a default value of 8.
@@ -27,11 +27,11 @@ public final class QueuingConfiguration {
      */
     private final @Nullable Integer queues;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QueuingConfiguration(
-        @OutputCustomType.Parameter("handSize") @Nullable Integer handSize,
-        @OutputCustomType.Parameter("queueLengthLimit") @Nullable Integer queueLengthLimit,
-        @OutputCustomType.Parameter("queues") @Nullable Integer queues) {
+        @CustomType.Parameter("handSize") @Nullable Integer handSize,
+        @CustomType.Parameter("queueLengthLimit") @Nullable Integer queueLengthLimit,
+        @CustomType.Parameter("queues") @Nullable Integer queues) {
         this.handSize = handSize;
         this.queueLengthLimit = queueLengthLimit;
         this.queues = queues;

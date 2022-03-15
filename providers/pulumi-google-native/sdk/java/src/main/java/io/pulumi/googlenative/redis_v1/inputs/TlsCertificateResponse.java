@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.redis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
      * PEM representation.
      * 
      */
-    @InputImport(name="cert", required=true)
+    @Import(name="cert", required=true)
       private final String cert;
 
     public String getCert() {
@@ -31,7 +31,7 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
      * The time when the certificate was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -42,7 +42,7 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
      * The time when the certificate expires in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2020-05-18T00:00:00.094Z`.
      * 
      */
-    @InputImport(name="expireTime", required=true)
+    @Import(name="expireTime", required=true)
       private final String expireTime;
 
     public String getExpireTime() {
@@ -53,7 +53,7 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
      * Serial number, as extracted from the certificate.
      * 
      */
-    @InputImport(name="serialNumber", required=true)
+    @Import(name="serialNumber", required=true)
       private final String serialNumber;
 
     public String getSerialNumber() {
@@ -64,7 +64,7 @@ public final class TlsCertificateResponse extends io.pulumi.resources.InvokeArgs
      * Sha1 Fingerprint of the certificate.
      * 
      */
-    @InputImport(name="sha1Fingerprint", required=true)
+    @Import(name="sha1Fingerprint", required=true)
       private final String sha1Fingerprint;
 
     public String getSha1Fingerprint() {

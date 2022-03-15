@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.inputs.SecurityPolicyWebApplicationFirewallAssociationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
      * Waf associations
      * 
      */
-    @InputImport(name="associations")
+    @Import(name="associations")
       private final @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations;
 
     public List<SecurityPolicyWebApplicationFirewallAssociationResponse> getAssociations() {
@@ -37,7 +37,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
      * Expected value is 'WebApplicationFirewall'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -48,7 +48,7 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse extend
      * Resource ID.
      * 
      */
-    @InputImport(name="wafPolicy")
+    @Import(name="wafPolicy")
       private final @Nullable ResourceReferenceResponse wafPolicy;
 
     public Optional<ResourceReferenceResponse> getWafPolicy() {

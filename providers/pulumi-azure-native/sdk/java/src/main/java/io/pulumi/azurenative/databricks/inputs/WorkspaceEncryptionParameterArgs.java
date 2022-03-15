@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databricks.inputs;
 
 import io.pulumi.azurenative.databricks.inputs.EncryptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class WorkspaceEncryptionParameterArgs extends io.pulumi.resources.
      * The value which should be used for this field.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<EncryptionArgs> value;
 
     public Output<EncryptionArgs> getValue() {

@@ -6,13 +6,13 @@ package io.pulumi.azurenative.databox.outputs;
 import io.pulumi.azurenative.databox.outputs.CloudErrorResponse;
 import io.pulumi.azurenative.databox.outputs.DcAccessSecurityCodeResponse;
 import io.pulumi.azurenative.databox.outputs.DiskSecretResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataBoxDiskJobSecretsResponse {
     /**
      * Dc Access Security Code for Customer Managed Shipping
@@ -46,14 +46,14 @@ public final class DataBoxDiskJobSecretsResponse {
      */
     private final String passKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataBoxDiskJobSecretsResponse(
-        @OutputCustomType.Parameter("dcAccessSecurityCode") DcAccessSecurityCodeResponse dcAccessSecurityCode,
-        @OutputCustomType.Parameter("diskSecrets") List<DiskSecretResponse> diskSecrets,
-        @OutputCustomType.Parameter("error") CloudErrorResponse error,
-        @OutputCustomType.Parameter("isPasskeyUserDefined") Boolean isPasskeyUserDefined,
-        @OutputCustomType.Parameter("jobSecretsType") String jobSecretsType,
-        @OutputCustomType.Parameter("passKey") String passKey) {
+        @CustomType.Parameter("dcAccessSecurityCode") DcAccessSecurityCodeResponse dcAccessSecurityCode,
+        @CustomType.Parameter("diskSecrets") List<DiskSecretResponse> diskSecrets,
+        @CustomType.Parameter("error") CloudErrorResponse error,
+        @CustomType.Parameter("isPasskeyUserDefined") Boolean isPasskeyUserDefined,
+        @CustomType.Parameter("jobSecretsType") String jobSecretsType,
+        @CustomType.Parameter("passKey") String passKey) {
         this.dcAccessSecurityCode = dcAccessSecurityCode;
         this.diskSecrets = diskSecrets;
         this.error = error;

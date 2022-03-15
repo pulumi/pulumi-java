@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.transfer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServerResult {
     /**
      * Amazon Resource Name (ARN) of Transfer Server.
@@ -72,21 +72,21 @@ public final class GetServerResult {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServerResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("certificate") String certificate,
-        @OutputCustomType.Parameter("domain") String domain,
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("endpointType") String endpointType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identityProviderType") String identityProviderType,
-        @OutputCustomType.Parameter("invocationRole") String invocationRole,
-        @OutputCustomType.Parameter("loggingRole") String loggingRole,
-        @OutputCustomType.Parameter("protocols") List<String> protocols,
-        @OutputCustomType.Parameter("securityPolicyName") String securityPolicyName,
-        @OutputCustomType.Parameter("serverId") String serverId,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("certificate") String certificate,
+        @CustomType.Parameter("domain") String domain,
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("endpointType") String endpointType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identityProviderType") String identityProviderType,
+        @CustomType.Parameter("invocationRole") String invocationRole,
+        @CustomType.Parameter("loggingRole") String loggingRole,
+        @CustomType.Parameter("protocols") List<String> protocols,
+        @CustomType.Parameter("securityPolicyName") String securityPolicyName,
+        @CustomType.Parameter("serverId") String serverId,
+        @CustomType.Parameter("url") String url) {
         this.arn = arn;
         this.certificate = certificate;
         this.domain = domain;

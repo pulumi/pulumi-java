@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.licensemanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class LicenseValidityDateFormatArgs extends io.pulumi.resources.Res
      * Validity begin date for the license.
      * 
      */
-    @InputImport(name="begin", required=true)
+    @Import(name="begin", required=true)
       private final Output<String> begin;
 
     public Output<String> getBegin() {
@@ -28,7 +28,7 @@ public final class LicenseValidityDateFormatArgs extends io.pulumi.resources.Res
      * Validity begin date for the license.
      * 
      */
-    @InputImport(name="end", required=true)
+    @Import(name="end", required=true)
       private final Output<String> end;
 
     public Output<String> getEnd() {

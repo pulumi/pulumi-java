@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.RetentionDurationArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.WeeklyRetentionFormatArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class MonthlyRetentionScheduleArgs extends io.pulumi.resources.Reso
      * Retention duration of retention Policy.
      * 
      */
-    @InputImport(name="retentionDuration")
+    @Import(name="retentionDuration")
       private final @Nullable Output<RetentionDurationArgs> retentionDuration;
 
     public Output<RetentionDurationArgs> getRetentionDuration() {
@@ -39,7 +39,7 @@ public final class MonthlyRetentionScheduleArgs extends io.pulumi.resources.Reso
      * Daily retention format for monthly retention policy.
      * 
      */
-    @InputImport(name="retentionScheduleDaily")
+    @Import(name="retentionScheduleDaily")
       private final @Nullable Output<DailyRetentionFormatArgs> retentionScheduleDaily;
 
     public Output<DailyRetentionFormatArgs> getRetentionScheduleDaily() {
@@ -50,7 +50,7 @@ public final class MonthlyRetentionScheduleArgs extends io.pulumi.resources.Reso
      * Retention schedule format type for monthly retention policy.
      * 
      */
-    @InputImport(name="retentionScheduleFormatType")
+    @Import(name="retentionScheduleFormatType")
       private final @Nullable Output<Either<String,RetentionScheduleFormat>> retentionScheduleFormatType;
 
     public Output<Either<String,RetentionScheduleFormat>> getRetentionScheduleFormatType() {
@@ -61,7 +61,7 @@ public final class MonthlyRetentionScheduleArgs extends io.pulumi.resources.Reso
      * Weekly retention format for monthly retention policy.
      * 
      */
-    @InputImport(name="retentionScheduleWeekly")
+    @Import(name="retentionScheduleWeekly")
       private final @Nullable Output<WeeklyRetentionFormatArgs> retentionScheduleWeekly;
 
     public Output<WeeklyRetentionFormatArgs> getRetentionScheduleWeekly() {
@@ -72,7 +72,7 @@ public final class MonthlyRetentionScheduleArgs extends io.pulumi.resources.Reso
      * Retention times of retention policy.
      * 
      */
-    @InputImport(name="retentionTimes")
+    @Import(name="retentionTimes")
       private final @Nullable Output<List<String>> retentionTimes;
 
     public Output<List<String>> getRetentionTimes() {

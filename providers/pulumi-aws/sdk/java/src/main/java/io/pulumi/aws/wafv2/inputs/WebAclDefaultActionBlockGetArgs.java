@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclDefaultActionBlockCustomResponseGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class WebAclDefaultActionBlockGetArgs extends io.pulumi.resources.R
      * Defines a custom response for the web request. See Custom Response below for details.
      * 
      */
-    @InputImport(name="customResponse")
+    @Import(name="customResponse")
       private final @Nullable Output<WebAclDefaultActionBlockCustomResponseGetArgs> customResponse;
 
     public Output<WebAclDefaultActionBlockCustomResponseGetArgs> getCustomResponse() {

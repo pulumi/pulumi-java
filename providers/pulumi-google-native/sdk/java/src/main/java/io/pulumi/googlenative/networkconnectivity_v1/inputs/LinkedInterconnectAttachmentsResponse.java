@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class LinkedInterconnectAttachmentsResponse extends io.pulumi.resou
      * A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
      * 
      */
-    @InputImport(name="siteToSiteDataTransfer", required=true)
+    @Import(name="siteToSiteDataTransfer", required=true)
       private final Boolean siteToSiteDataTransfer;
 
     public Boolean getSiteToSiteDataTransfer() {
@@ -33,7 +33,7 @@ public final class LinkedInterconnectAttachmentsResponse extends io.pulumi.resou
      * The URIs of linked interconnect attachment resources
      * 
      */
-    @InputImport(name="uris", required=true)
+    @Import(name="uris", required=true)
       private final List<String> uris;
 
     public List<String> getUris() {

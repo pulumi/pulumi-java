@@ -24,7 +24,7 @@ import io.pulumi.awsnative.s3.outputs.BucketTag;
 import io.pulumi.awsnative.s3.outputs.BucketVersioningConfiguration;
 import io.pulumi.awsnative.s3.outputs.BucketWebsiteConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -43,7 +43,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Configuration for the transfer acceleration state.
      * 
      */
-    @OutputExport(name="accelerateConfiguration", type=BucketAccelerateConfiguration.class, parameters={})
+    @Export(name="accelerateConfiguration", type=BucketAccelerateConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketAccelerateConfiguration> accelerateConfiguration;
 
     /**
@@ -57,7 +57,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * A canned access control list (ACL) that grants predefined permissions to the bucket.
      * 
      */
-    @OutputExport(name="accessControl", type=BucketAccessControl.class, parameters={})
+    @Export(name="accessControl", type=BucketAccessControl.class, parameters={})
     private Output</* @Nullable */ BucketAccessControl> accessControl;
 
     /**
@@ -71,7 +71,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The configuration and any analyses for the analytics filter of an Amazon S3 bucket.
      * 
      */
-    @OutputExport(name="analyticsConfigurations", type=List.class, parameters={BucketAnalyticsConfiguration.class})
+    @Export(name="analyticsConfigurations", type=List.class, parameters={BucketAnalyticsConfiguration.class})
     private Output</* @Nullable */ List<BucketAnalyticsConfiguration>> analyticsConfigurations;
 
     /**
@@ -85,7 +85,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the specified bucket.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -95,7 +95,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="bucketEncryption", type=BucketEncryption.class, parameters={})
+    @Export(name="bucketEncryption", type=BucketEncryption.class, parameters={})
     private Output</* @Nullable */ BucketEncryption> bucketEncryption;
 
     public Output</* @Nullable */ BucketEncryption> getBucketEncryption() {
@@ -105,7 +105,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * A name for the bucket. If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that ID for the bucket name.
      * 
      */
-    @OutputExport(name="bucketName", type=String.class, parameters={})
+    @Export(name="bucketName", type=String.class, parameters={})
     private Output</* @Nullable */ String> bucketName;
 
     /**
@@ -119,7 +119,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Rules that define cross-origin resource sharing of objects in this bucket.
      * 
      */
-    @OutputExport(name="corsConfiguration", type=BucketCorsConfiguration.class, parameters={})
+    @Export(name="corsConfiguration", type=BucketCorsConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketCorsConfiguration> corsConfiguration;
 
     /**
@@ -133,7 +133,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The IPv4 DNS name of the specified bucket.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -147,7 +147,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The IPv6 DNS name of the specified bucket. For more information about dual-stack endpoints, see [Using Amazon S3 Dual-Stack Endpoints](https://docs.aws.amazon.com/AmazonS3/latest/dev/dual-stack-endpoints.html).
      * 
      */
-    @OutputExport(name="dualStackDomainName", type=String.class, parameters={})
+    @Export(name="dualStackDomainName", type=String.class, parameters={})
     private Output<String> dualStackDomainName;
 
     /**
@@ -161,7 +161,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Specifies the S3 Intelligent-Tiering configuration for an Amazon S3 bucket.
      * 
      */
-    @OutputExport(name="intelligentTieringConfigurations", type=List.class, parameters={BucketIntelligentTieringConfiguration.class})
+    @Export(name="intelligentTieringConfigurations", type=List.class, parameters={BucketIntelligentTieringConfiguration.class})
     private Output</* @Nullable */ List<BucketIntelligentTieringConfiguration>> intelligentTieringConfigurations;
 
     /**
@@ -175,7 +175,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The inventory configuration for an Amazon S3 bucket.
      * 
      */
-    @OutputExport(name="inventoryConfigurations", type=List.class, parameters={BucketInventoryConfiguration.class})
+    @Export(name="inventoryConfigurations", type=List.class, parameters={BucketInventoryConfiguration.class})
     private Output</* @Nullable */ List<BucketInventoryConfiguration>> inventoryConfigurations;
 
     /**
@@ -189,7 +189,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Rules that define how Amazon S3 manages objects during their lifetime.
      * 
      */
-    @OutputExport(name="lifecycleConfiguration", type=BucketLifecycleConfiguration.class, parameters={})
+    @Export(name="lifecycleConfiguration", type=BucketLifecycleConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketLifecycleConfiguration> lifecycleConfiguration;
 
     /**
@@ -203,7 +203,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Settings that define where logs are stored.
      * 
      */
-    @OutputExport(name="loggingConfiguration", type=BucketLoggingConfiguration.class, parameters={})
+    @Export(name="loggingConfiguration", type=BucketLoggingConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketLoggingConfiguration> loggingConfiguration;
 
     /**
@@ -217,7 +217,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Settings that define a metrics configuration for the CloudWatch request metrics from the bucket.
      * 
      */
-    @OutputExport(name="metricsConfigurations", type=List.class, parameters={BucketMetricsConfiguration.class})
+    @Export(name="metricsConfigurations", type=List.class, parameters={BucketMetricsConfiguration.class})
     private Output</* @Nullable */ List<BucketMetricsConfiguration>> metricsConfigurations;
 
     /**
@@ -231,7 +231,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Configuration that defines how Amazon S3 handles bucket notifications.
      * 
      */
-    @OutputExport(name="notificationConfiguration", type=BucketNotificationConfiguration.class, parameters={})
+    @Export(name="notificationConfiguration", type=BucketNotificationConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketNotificationConfiguration> notificationConfiguration;
 
     /**
@@ -245,7 +245,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Places an Object Lock configuration on the specified bucket.
      * 
      */
-    @OutputExport(name="objectLockConfiguration", type=BucketObjectLockConfiguration.class, parameters={})
+    @Export(name="objectLockConfiguration", type=BucketObjectLockConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketObjectLockConfiguration> objectLockConfiguration;
 
     /**
@@ -259,7 +259,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Indicates whether this bucket has an Object Lock configuration enabled.
      * 
      */
-    @OutputExport(name="objectLockEnabled", type=Boolean.class, parameters={})
+    @Export(name="objectLockEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> objectLockEnabled;
 
     /**
@@ -273,7 +273,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Specifies the container element for object ownership rules.
      * 
      */
-    @OutputExport(name="ownershipControls", type=BucketOwnershipControls.class, parameters={})
+    @Export(name="ownershipControls", type=BucketOwnershipControls.class, parameters={})
     private Output</* @Nullable */ BucketOwnershipControls> ownershipControls;
 
     /**
@@ -283,7 +283,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ BucketOwnershipControls> getOwnershipControls() {
         return this.ownershipControls;
     }
-    @OutputExport(name="publicAccessBlockConfiguration", type=BucketPublicAccessBlockConfiguration.class, parameters={})
+    @Export(name="publicAccessBlockConfiguration", type=BucketPublicAccessBlockConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketPublicAccessBlockConfiguration> publicAccessBlockConfiguration;
 
     public Output</* @Nullable */ BucketPublicAccessBlockConfiguration> getPublicAccessBlockConfiguration() {
@@ -293,7 +293,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Returns the regional domain name of the specified bucket.
      * 
      */
-    @OutputExport(name="regionalDomainName", type=String.class, parameters={})
+    @Export(name="regionalDomainName", type=String.class, parameters={})
     private Output<String> regionalDomainName;
 
     /**
@@ -307,7 +307,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * Configuration for replicating objects in an S3 bucket.
      * 
      */
-    @OutputExport(name="replicationConfiguration", type=BucketReplicationConfiguration.class, parameters={})
+    @Export(name="replicationConfiguration", type=BucketReplicationConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketReplicationConfiguration> replicationConfiguration;
 
     /**
@@ -321,7 +321,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * An arbitrary set of tags (key-value pairs) for this S3 bucket.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={BucketTag.class})
+    @Export(name="tags", type=List.class, parameters={BucketTag.class})
     private Output</* @Nullable */ List<BucketTag>> tags;
 
     /**
@@ -331,13 +331,13 @@ public class Bucket extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<BucketTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="versioningConfiguration", type=BucketVersioningConfiguration.class, parameters={})
+    @Export(name="versioningConfiguration", type=BucketVersioningConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketVersioningConfiguration> versioningConfiguration;
 
     public Output</* @Nullable */ BucketVersioningConfiguration> getVersioningConfiguration() {
         return this.versioningConfiguration;
     }
-    @OutputExport(name="websiteConfiguration", type=BucketWebsiteConfiguration.class, parameters={})
+    @Export(name="websiteConfiguration", type=BucketWebsiteConfiguration.class, parameters={})
     private Output</* @Nullable */ BucketWebsiteConfiguration> websiteConfiguration;
 
     public Output</* @Nullable */ BucketWebsiteConfiguration> getWebsiteConfiguration() {
@@ -347,7 +347,7 @@ public class Bucket extends io.pulumi.resources.CustomResource {
      * The Amazon S3 website endpoint for the specified bucket.
      * 
      */
-    @OutputExport(name="websiteURL", type=String.class, parameters={})
+    @Export(name="websiteURL", type=String.class, parameters={})
     private Output<String> websiteURL;
 
     /**

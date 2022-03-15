@@ -4,13 +4,13 @@
 package io.pulumi.aws.resourcegroupstaggingapi.outputs;
 
 import io.pulumi.aws.resourcegroupstaggingapi.outputs.GetResourcesResourceTagMappingListComplianceDetail;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResourcesResourceTagMappingList {
     /**
      * List of objects with information that shows whether a resource is compliant with the effective tag policy, including details on any noncompliant tag keys.
@@ -28,11 +28,11 @@ public final class GetResourcesResourceTagMappingList {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourcesResourceTagMappingList(
-        @OutputCustomType.Parameter("complianceDetails") List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails,
-        @OutputCustomType.Parameter("resourceArn") String resourceArn,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("complianceDetails") List<GetResourcesResourceTagMappingListComplianceDetail> complianceDetails,
+        @CustomType.Parameter("resourceArn") String resourceArn,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.complianceDetails = complianceDetails;
         this.resourceArn = resourceArn;
         this.tags = tags;

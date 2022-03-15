@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1.inputs.OracleSchemaResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class OracleRdbmsResponse extends io.pulumi.resources.InvokeArgs {
      * Oracle schemas/databases in the database server.
      * 
      */
-    @InputImport(name="oracleSchemas", required=true)
+    @Import(name="oracleSchemas", required=true)
       private final List<OracleSchemaResponse> oracleSchemas;
 
     public List<OracleSchemaResponse> getOracleSchemas() {

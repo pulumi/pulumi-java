@@ -9,7 +9,7 @@ import io.pulumi.azurenative.dataprotection.inputs.DataStoreInfoBaseArgs;
 import io.pulumi.azurenative.dataprotection.inputs.ScheduleBasedTriggerContextArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
      * BackupParameters base
      * 
      */
-    @InputImport(name="backupParameters")
+    @Import(name="backupParameters")
       private final @Nullable Output<AzureBackupParamsArgs> backupParameters;
 
     public Output<AzureBackupParamsArgs> getBackupParameters() {
@@ -38,14 +38,14 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
      * DataStoreInfo base
      * 
      */
-    @InputImport(name="dataStore", required=true)
+    @Import(name="dataStore", required=true)
       private final Output<DataStoreInfoBaseArgs> dataStore;
 
     public Output<DataStoreInfoBaseArgs> getDataStore() {
         return this.dataStore;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -56,7 +56,7 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
      * Expected value is 'AzureBackupRule'.
      * 
      */
-    @InputImport(name="objectType", required=true)
+    @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
     public Output<String> getObjectType() {
@@ -67,7 +67,7 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
      * Trigger context
      * 
      */
-    @InputImport(name="trigger", required=true)
+    @Import(name="trigger", required=true)
       private final Output<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger;
 
     public Output<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> getTrigger() {

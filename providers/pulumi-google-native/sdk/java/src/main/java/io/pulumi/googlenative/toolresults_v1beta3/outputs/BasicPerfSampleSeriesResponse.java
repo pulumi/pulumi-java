@@ -3,21 +3,21 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BasicPerfSampleSeriesResponse {
     private final String perfMetricType;
     private final String perfUnit;
     private final String sampleSeriesLabel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BasicPerfSampleSeriesResponse(
-        @OutputCustomType.Parameter("perfMetricType") String perfMetricType,
-        @OutputCustomType.Parameter("perfUnit") String perfUnit,
-        @OutputCustomType.Parameter("sampleSeriesLabel") String sampleSeriesLabel) {
+        @CustomType.Parameter("perfMetricType") String perfMetricType,
+        @CustomType.Parameter("perfUnit") String perfUnit,
+        @CustomType.Parameter("sampleSeriesLabel") String sampleSeriesLabel) {
         this.perfMetricType = perfMetricType;
         this.perfUnit = perfUnit;
         this.sampleSeriesLabel = sampleSeriesLabel;

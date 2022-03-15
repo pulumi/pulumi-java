@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.cloudtasks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class QueueRetryConfig {
     /**
      * Number of attempts per task.
@@ -56,13 +56,13 @@ public final class QueueRetryConfig {
      */
     private final @Nullable String minBackoff;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QueueRetryConfig(
-        @OutputCustomType.Parameter("maxAttempts") @Nullable Integer maxAttempts,
-        @OutputCustomType.Parameter("maxBackoff") @Nullable String maxBackoff,
-        @OutputCustomType.Parameter("maxDoublings") @Nullable Integer maxDoublings,
-        @OutputCustomType.Parameter("maxRetryDuration") @Nullable String maxRetryDuration,
-        @OutputCustomType.Parameter("minBackoff") @Nullable String minBackoff) {
+        @CustomType.Parameter("maxAttempts") @Nullable Integer maxAttempts,
+        @CustomType.Parameter("maxBackoff") @Nullable String maxBackoff,
+        @CustomType.Parameter("maxDoublings") @Nullable Integer maxDoublings,
+        @CustomType.Parameter("maxRetryDuration") @Nullable String maxRetryDuration,
+        @CustomType.Parameter("minBackoff") @Nullable String minBackoff) {
         this.maxAttempts = maxAttempts;
         this.maxBackoff = maxBackoff;
         this.maxDoublings = maxDoublings;

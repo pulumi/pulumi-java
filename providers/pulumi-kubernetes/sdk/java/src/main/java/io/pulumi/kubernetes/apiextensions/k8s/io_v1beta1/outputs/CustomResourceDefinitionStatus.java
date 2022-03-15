@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs.CustomResourceDefinitionCondition;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs.CustomResourceDefinitionNames;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomResourceDefinitionStatus {
     /**
      * acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in spec.
@@ -29,11 +29,11 @@ public final class CustomResourceDefinitionStatus {
      */
     private final List<String> storedVersions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomResourceDefinitionStatus(
-        @OutputCustomType.Parameter("acceptedNames") CustomResourceDefinitionNames acceptedNames,
-        @OutputCustomType.Parameter("conditions") @Nullable List<CustomResourceDefinitionCondition> conditions,
-        @OutputCustomType.Parameter("storedVersions") List<String> storedVersions) {
+        @CustomType.Parameter("acceptedNames") CustomResourceDefinitionNames acceptedNames,
+        @CustomType.Parameter("conditions") @Nullable List<CustomResourceDefinitionCondition> conditions,
+        @CustomType.Parameter("storedVersions") List<String> storedVersions) {
         this.acceptedNames = acceptedNames;
         this.conditions = conditions;
         this.storedVersions = storedVersions;

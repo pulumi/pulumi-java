@@ -4,14 +4,14 @@
 package io.pulumi.aws.imagebuilder.outputs;
 
 import io.pulumi.aws.imagebuilder.outputs.GetComponentsFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetComponentsResult {
     /**
      * Set of ARNs of the matched Image Builder Components.
@@ -31,13 +31,13 @@ public final class GetComponentsResult {
     private final List<String> names;
     private final @Nullable String owner;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetComponentsResult(
-        @OutputCustomType.Parameter("arns") List<String> arns,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetComponentsFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("names") List<String> names,
-        @OutputCustomType.Parameter("owner") @Nullable String owner) {
+        @CustomType.Parameter("arns") List<String> arns,
+        @CustomType.Parameter("filters") @Nullable List<GetComponentsFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("names") List<String> names,
+        @CustomType.Parameter("owner") @Nullable String owner) {
         this.arns = arns;
         this.filters = filters;
         this.id = id;

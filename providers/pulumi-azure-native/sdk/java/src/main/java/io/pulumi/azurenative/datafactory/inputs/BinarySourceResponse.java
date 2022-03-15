@@ -17,7 +17,7 @@ import io.pulumi.azurenative.datafactory.inputs.HdfsReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.inputs.HttpReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.inputs.OracleCloudStorageReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.inputs.SftpReadSettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -37,7 +37,7 @@ public final class BinarySourceResponse extends io.pulumi.resources.InvokeArgs {
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
@@ -48,7 +48,7 @@ public final class BinarySourceResponse extends io.pulumi.resources.InvokeArgs {
      * Binary format settings.
      * 
      */
-    @InputImport(name="formatSettings")
+    @Import(name="formatSettings")
       private final @Nullable BinaryReadSettingsResponse formatSettings;
 
     public Optional<BinaryReadSettingsResponse> getFormatSettings() {
@@ -59,7 +59,7 @@ public final class BinarySourceResponse extends io.pulumi.resources.InvokeArgs {
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
@@ -70,7 +70,7 @@ public final class BinarySourceResponse extends io.pulumi.resources.InvokeArgs {
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="sourceRetryCount")
+    @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
 
     public Optional<Object> getSourceRetryCount() {
@@ -81,7 +81,7 @@ public final class BinarySourceResponse extends io.pulumi.resources.InvokeArgs {
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="sourceRetryWait")
+    @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
 
     public Optional<Object> getSourceRetryWait() {
@@ -92,7 +92,7 @@ public final class BinarySourceResponse extends io.pulumi.resources.InvokeArgs {
      * Binary store settings.
      * 
      */
-    @InputImport(name="storeSettings")
+    @Import(name="storeSettings")
       private final @Nullable Object storeSettings;
 
     public Object getStoreSettings() {
@@ -104,7 +104,7 @@ public final class BinarySourceResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'BinarySource'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

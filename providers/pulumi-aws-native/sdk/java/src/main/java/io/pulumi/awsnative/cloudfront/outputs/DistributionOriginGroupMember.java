@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DistributionOriginGroupMember {
     private final String originId;
 
-    @OutputCustomType.Constructor
-    private DistributionOriginGroupMember(@OutputCustomType.Parameter("originId") String originId) {
+    @CustomType.Constructor
+    private DistributionOriginGroupMember(@CustomType.Parameter("originId") String originId) {
         this.originId = originId;
     }
 

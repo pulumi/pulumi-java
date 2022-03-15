@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.redshift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScheduledActionTargetActionResizeCluster {
     /**
      * A boolean value indicating whether the resize operation is using the classic resize process. Default: `false`.
@@ -39,13 +39,13 @@ public final class ScheduledActionTargetActionResizeCluster {
      */
     private final @Nullable Integer numberOfNodes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduledActionTargetActionResizeCluster(
-        @OutputCustomType.Parameter("classic") @Nullable Boolean classic,
-        @OutputCustomType.Parameter("clusterIdentifier") String clusterIdentifier,
-        @OutputCustomType.Parameter("clusterType") @Nullable String clusterType,
-        @OutputCustomType.Parameter("nodeType") @Nullable String nodeType,
-        @OutputCustomType.Parameter("numberOfNodes") @Nullable Integer numberOfNodes) {
+        @CustomType.Parameter("classic") @Nullable Boolean classic,
+        @CustomType.Parameter("clusterIdentifier") String clusterIdentifier,
+        @CustomType.Parameter("clusterType") @Nullable String clusterType,
+        @CustomType.Parameter("nodeType") @Nullable String nodeType,
+        @CustomType.Parameter("numberOfNodes") @Nullable Integer numberOfNodes) {
         this.classic = classic;
         this.clusterIdentifier = clusterIdentifier;
         this.clusterType = clusterType;

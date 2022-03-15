@@ -7,7 +7,7 @@ import io.pulumi.azurenative.operationalinsights.enums.MachineGroupType;
 import io.pulumi.azurenative.operationalinsights.inputs.MachineReferenceWithHintsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {
@@ -34,7 +34,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
      * User defined name for the group
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -45,7 +45,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Type of the machine group
      * 
      */
-    @InputImport(name="groupType")
+    @Import(name="groupType")
       private final @Nullable Output<Either<String,MachineGroupType>> groupType;
 
     public Output<Either<String,MachineGroupType>> getGroupType() {
@@ -57,7 +57,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'machineGroup'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -68,7 +68,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Machine Group resource name.
      * 
      */
-    @InputImport(name="machineGroupName")
+    @Import(name="machineGroupName")
       private final @Nullable Output<String> machineGroupName;
 
     public Output<String> getMachineGroupName() {
@@ -79,7 +79,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
      * References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.
      * 
      */
-    @InputImport(name="machines")
+    @Import(name="machines")
       private final @Nullable Output<List<MachineReferenceWithHintsArgs>> machines;
 
     public Output<List<MachineReferenceWithHintsArgs>> getMachines() {
@@ -90,7 +90,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Resource group name within the specified subscriptionId.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -101,7 +101,7 @@ public final class MachineGroupArgs extends io.pulumi.resources.ResourceArgs {
      * OMS workspace containing the resources of interest.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

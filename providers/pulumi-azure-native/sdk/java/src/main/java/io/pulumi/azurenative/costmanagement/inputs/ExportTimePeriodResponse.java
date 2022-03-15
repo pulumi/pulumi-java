@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ExportTimePeriodResponse extends io.pulumi.resources.InvokeAr
      * The start date for export data.
      * 
      */
-    @InputImport(name="from", required=true)
+    @Import(name="from", required=true)
       private final String from;
 
     public String getFrom() {
@@ -31,7 +31,7 @@ public final class ExportTimePeriodResponse extends io.pulumi.resources.InvokeAr
      * The end date for export data.
      * 
      */
-    @InputImport(name="to", required=true)
+    @Import(name="to", required=true)
       private final String to;
 
     public String getTo() {

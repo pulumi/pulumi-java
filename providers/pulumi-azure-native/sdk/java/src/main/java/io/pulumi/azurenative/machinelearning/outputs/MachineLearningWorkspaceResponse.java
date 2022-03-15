@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MachineLearningWorkspaceResponse {
     /**
      * Specifies the workspace ID of the machine learning workspace associated with the web service
@@ -15,8 +15,8 @@ public final class MachineLearningWorkspaceResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
-    private MachineLearningWorkspaceResponse(@OutputCustomType.Parameter("id") String id) {
+    @CustomType.Constructor
+    private MachineLearningWorkspaceResponse(@CustomType.Parameter("id") String id) {
         this.id = id;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class WorkloadMetadataConfigResponse extends io.pulumi.resources.In
      * Mode is the configuration for how to expose metadata to workloads running on the node pool.
      * 
      */
-    @InputImport(name="mode", required=true)
+    @Import(name="mode", required=true)
       private final String mode;
 
     public String getMode() {
@@ -31,7 +31,7 @@ public final class WorkloadMetadataConfigResponse extends io.pulumi.resources.In
      * NodeMetadata is the configuration for how to expose metadata to the workloads running on the node.
      * 
      */
-    @InputImport(name="nodeMetadata", required=true)
+    @Import(name="nodeMetadata", required=true)
       private final String nodeMetadata;
 
     public String getNodeMetadata() {

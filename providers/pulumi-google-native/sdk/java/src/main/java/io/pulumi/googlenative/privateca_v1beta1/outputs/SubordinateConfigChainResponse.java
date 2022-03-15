@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SubordinateConfigChainResponse {
     /**
      * Expected to be in leaf-to-root order according to RFC 5246.
@@ -16,8 +16,8 @@ public final class SubordinateConfigChainResponse {
      */
     private final List<String> pemCertificates;
 
-    @OutputCustomType.Constructor
-    private SubordinateConfigChainResponse(@OutputCustomType.Parameter("pemCertificates") List<String> pemCertificates) {
+    @CustomType.Constructor
+    private SubordinateConfigChainResponse(@CustomType.Parameter("pemCertificates") List<String> pemCertificates) {
         this.pemCertificates = pemCertificates;
     }
 

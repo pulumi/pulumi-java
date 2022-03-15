@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.PipelineRunSourcePropertiesResponse;
 import io.pulumi.azurenative.containerregistry.inputs.PipelineRunTargetPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
      * Specify an image by sha256-based manifest digest ('hello-world@sha256:abc123').
      * 
      */
-    @InputImport(name="artifacts")
+    @Import(name="artifacts")
       private final @Nullable List<String> artifacts;
 
     public List<String> getArtifacts() {
@@ -39,7 +39,7 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
      * The digest of the tar used to transfer the artifacts.
      * 
      */
-    @InputImport(name="catalogDigest")
+    @Import(name="catalogDigest")
       private final @Nullable String catalogDigest;
 
     public Optional<String> getCatalogDigest() {
@@ -50,7 +50,7 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
      * The resource ID of the pipeline to run.
      * 
      */
-    @InputImport(name="pipelineResourceId")
+    @Import(name="pipelineResourceId")
       private final @Nullable String pipelineResourceId;
 
     public Optional<String> getPipelineResourceId() {
@@ -61,7 +61,7 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
      * The source properties of the pipeline run.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable PipelineRunSourcePropertiesResponse source;
 
     public Optional<PipelineRunSourcePropertiesResponse> getSource() {
@@ -72,7 +72,7 @@ public final class PipelineRunRequestResponse extends io.pulumi.resources.Invoke
      * The target properties of the pipeline run.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable PipelineRunTargetPropertiesResponse target;
 
     public Optional<PipelineRunTargetPropertiesResponse> getTarget() {

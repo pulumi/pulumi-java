@@ -15,14 +15,14 @@ import io.pulumi.azurenative.network.outputs.ServiceAssociationLinkResponse;
 import io.pulumi.azurenative.network.outputs.ServiceEndpointPolicyResponse;
 import io.pulumi.azurenative.network.outputs.ServiceEndpointPropertiesFormatResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubnetResponse {
     /**
      * The address prefix for the subnet.
@@ -140,31 +140,31 @@ public final class SubnetResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubnetResponse(
-        @OutputCustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
-        @OutputCustomType.Parameter("addressPrefixes") @Nullable List<String> addressPrefixes,
-        @OutputCustomType.Parameter("applicationGatewayIpConfigurations") @Nullable List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations,
-        @OutputCustomType.Parameter("delegations") @Nullable List<DelegationResponse> delegations,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ipAllocations") @Nullable List<SubResourceResponse> ipAllocations,
-        @OutputCustomType.Parameter("ipConfigurationProfiles") List<IPConfigurationProfileResponse> ipConfigurationProfiles,
-        @OutputCustomType.Parameter("ipConfigurations") List<IPConfigurationResponse> ipConfigurations,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("natGateway") @Nullable SubResourceResponse natGateway,
-        @OutputCustomType.Parameter("networkSecurityGroup") @Nullable NetworkSecurityGroupResponse networkSecurityGroup,
-        @OutputCustomType.Parameter("privateEndpointNetworkPolicies") @Nullable String privateEndpointNetworkPolicies,
-        @OutputCustomType.Parameter("privateEndpoints") List<PrivateEndpointResponse> privateEndpoints,
-        @OutputCustomType.Parameter("privateLinkServiceNetworkPolicies") @Nullable String privateLinkServiceNetworkPolicies,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("purpose") String purpose,
-        @OutputCustomType.Parameter("resourceNavigationLinks") List<ResourceNavigationLinkResponse> resourceNavigationLinks,
-        @OutputCustomType.Parameter("routeTable") @Nullable RouteTableResponse routeTable,
-        @OutputCustomType.Parameter("serviceAssociationLinks") List<ServiceAssociationLinkResponse> serviceAssociationLinks,
-        @OutputCustomType.Parameter("serviceEndpointPolicies") @Nullable List<ServiceEndpointPolicyResponse> serviceEndpointPolicies,
-        @OutputCustomType.Parameter("serviceEndpoints") @Nullable List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
+        @CustomType.Parameter("addressPrefixes") @Nullable List<String> addressPrefixes,
+        @CustomType.Parameter("applicationGatewayIpConfigurations") @Nullable List<ApplicationGatewayIPConfigurationResponse> applicationGatewayIpConfigurations,
+        @CustomType.Parameter("delegations") @Nullable List<DelegationResponse> delegations,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ipAllocations") @Nullable List<SubResourceResponse> ipAllocations,
+        @CustomType.Parameter("ipConfigurationProfiles") List<IPConfigurationProfileResponse> ipConfigurationProfiles,
+        @CustomType.Parameter("ipConfigurations") List<IPConfigurationResponse> ipConfigurations,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("natGateway") @Nullable SubResourceResponse natGateway,
+        @CustomType.Parameter("networkSecurityGroup") @Nullable NetworkSecurityGroupResponse networkSecurityGroup,
+        @CustomType.Parameter("privateEndpointNetworkPolicies") @Nullable String privateEndpointNetworkPolicies,
+        @CustomType.Parameter("privateEndpoints") List<PrivateEndpointResponse> privateEndpoints,
+        @CustomType.Parameter("privateLinkServiceNetworkPolicies") @Nullable String privateLinkServiceNetworkPolicies,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("purpose") String purpose,
+        @CustomType.Parameter("resourceNavigationLinks") List<ResourceNavigationLinkResponse> resourceNavigationLinks,
+        @CustomType.Parameter("routeTable") @Nullable RouteTableResponse routeTable,
+        @CustomType.Parameter("serviceAssociationLinks") List<ServiceAssociationLinkResponse> serviceAssociationLinks,
+        @CustomType.Parameter("serviceEndpointPolicies") @Nullable List<ServiceEndpointPolicyResponse> serviceEndpointPolicies,
+        @CustomType.Parameter("serviceEndpoints") @Nullable List<ServiceEndpointPropertiesFormatResponse> serviceEndpoints,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.addressPrefix = addressPrefix;
         this.addressPrefixes = addressPrefixes;
         this.applicationGatewayIpConfigurations = applicationGatewayIpConfigurations;

@@ -3,25 +3,25 @@
 
 package io.pulumi.awsnative.budgets.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BudgetsActionIamActionDefinition {
     private final @Nullable List<String> groups;
     private final String policyArn;
     private final @Nullable List<String> roles;
     private final @Nullable List<String> users;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetsActionIamActionDefinition(
-        @OutputCustomType.Parameter("groups") @Nullable List<String> groups,
-        @OutputCustomType.Parameter("policyArn") String policyArn,
-        @OutputCustomType.Parameter("roles") @Nullable List<String> roles,
-        @OutputCustomType.Parameter("users") @Nullable List<String> users) {
+        @CustomType.Parameter("groups") @Nullable List<String> groups,
+        @CustomType.Parameter("policyArn") String policyArn,
+        @CustomType.Parameter("roles") @Nullable List<String> roles,
+        @CustomType.Parameter("users") @Nullable List<String> users) {
         this.groups = groups;
         this.policyArn = policyArn;
         this.roles = roles;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StreamingPathResponse {
     /**
      * Encryption scheme
@@ -27,11 +27,11 @@ public final class StreamingPathResponse {
      */
     private final String streamingProtocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StreamingPathResponse(
-        @OutputCustomType.Parameter("encryptionScheme") String encryptionScheme,
-        @OutputCustomType.Parameter("paths") @Nullable List<String> paths,
-        @OutputCustomType.Parameter("streamingProtocol") String streamingProtocol) {
+        @CustomType.Parameter("encryptionScheme") String encryptionScheme,
+        @CustomType.Parameter("paths") @Nullable List<String> paths,
+        @CustomType.Parameter("streamingProtocol") String streamingProtocol) {
         this.encryptionScheme = encryptionScheme;
         this.paths = paths;
         this.streamingProtocol = streamingProtocol;

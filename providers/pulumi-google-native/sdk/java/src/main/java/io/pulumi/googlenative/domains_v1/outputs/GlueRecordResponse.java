@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.domains_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GlueRecordResponse {
     /**
      * Domain name of the host in Punycode format.
@@ -26,11 +26,11 @@ public final class GlueRecordResponse {
      */
     private final List<String> ipv6Addresses;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GlueRecordResponse(
-        @OutputCustomType.Parameter("hostName") String hostName,
-        @OutputCustomType.Parameter("ipv4Addresses") List<String> ipv4Addresses,
-        @OutputCustomType.Parameter("ipv6Addresses") List<String> ipv6Addresses) {
+        @CustomType.Parameter("hostName") String hostName,
+        @CustomType.Parameter("ipv4Addresses") List<String> ipv4Addresses,
+        @CustomType.Parameter("ipv6Addresses") List<String> ipv6Addresses) {
         this.hostName = hostName;
         this.ipv4Addresses = ipv4Addresses;
         this.ipv6Addresses = ipv6Addresses;

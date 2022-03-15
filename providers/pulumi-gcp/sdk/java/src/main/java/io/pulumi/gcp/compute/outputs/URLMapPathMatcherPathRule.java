@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherPathRuleRouteAction;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherPathRuleUrlRedirect;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class URLMapPathMatcherPathRule {
     /**
      * The list of path patterns to match. Each must start with / and the only place a
@@ -47,12 +47,12 @@ public final class URLMapPathMatcherPathRule {
      */
     private final @Nullable URLMapPathMatcherPathRuleUrlRedirect urlRedirect;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private URLMapPathMatcherPathRule(
-        @OutputCustomType.Parameter("paths") List<String> paths,
-        @OutputCustomType.Parameter("routeAction") @Nullable URLMapPathMatcherPathRuleRouteAction routeAction,
-        @OutputCustomType.Parameter("service") @Nullable String service,
-        @OutputCustomType.Parameter("urlRedirect") @Nullable URLMapPathMatcherPathRuleUrlRedirect urlRedirect) {
+        @CustomType.Parameter("paths") List<String> paths,
+        @CustomType.Parameter("routeAction") @Nullable URLMapPathMatcherPathRuleRouteAction routeAction,
+        @CustomType.Parameter("service") @Nullable String service,
+        @CustomType.Parameter("urlRedirect") @Nullable URLMapPathMatcherPathRuleUrlRedirect urlRedirect) {
         this.paths = paths;
         this.routeAction = routeAction;
         this.service = service;

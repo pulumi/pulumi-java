@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.enums.AgentAutoUpdateStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
      * A value indicating whether the auto update is enabled.
      * 
      */
-    @InputImport(name="agentAutoUpdateStatus")
+    @Import(name="agentAutoUpdateStatus")
       private final @Nullable Output<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus;
 
     public Output<Either<String,AgentAutoUpdateStatus>> getAgentAutoUpdateStatus() {
@@ -35,7 +35,7 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
      * The automation account arm id.
      * 
      */
-    @InputImport(name="automationAccountArmId")
+    @Import(name="automationAccountArmId")
       private final @Nullable Output<String> automationAccountArmId;
 
     public Output<String> getAutomationAccountArmId() {
@@ -47,7 +47,7 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
      * Expected value is 'A2A'.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {

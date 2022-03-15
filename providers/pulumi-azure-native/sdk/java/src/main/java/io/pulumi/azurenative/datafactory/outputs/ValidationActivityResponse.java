@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.DatasetReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ValidationActivityResponse {
     /**
      * Can be used if dataset points to a folder. If set to true, the folder must have at least one file. If set to false, the folder must be empty. Type: boolean (or Expression with resultType boolean).
@@ -68,18 +68,18 @@ public final class ValidationActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ValidationActivityResponse(
-        @OutputCustomType.Parameter("childItems") @Nullable Object childItems,
-        @OutputCustomType.Parameter("dataset") DatasetReferenceResponse dataset,
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("minimumSize") @Nullable Object minimumSize,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sleep") @Nullable Object sleep,
-        @OutputCustomType.Parameter("timeout") @Nullable Object timeout,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
+        @CustomType.Parameter("childItems") @Nullable Object childItems,
+        @CustomType.Parameter("dataset") DatasetReferenceResponse dataset,
+        @CustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("minimumSize") @Nullable Object minimumSize,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sleep") @Nullable Object sleep,
+        @CustomType.Parameter("timeout") @Nullable Object timeout,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.childItems = childItems;
         this.dataset = dataset;
         this.dependsOn = dependsOn;

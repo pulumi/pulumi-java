@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.connectors_v1.inputs.SecretResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
      * Value is a bool.
      * 
      */
-    @InputImport(name="boolValue", required=true)
+    @Import(name="boolValue", required=true)
       private final Boolean boolValue;
 
     public Boolean getBoolValue() {
@@ -33,7 +33,7 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
      * Value is an integer
      * 
      */
-    @InputImport(name="intValue", required=true)
+    @Import(name="intValue", required=true)
       private final String intValue;
 
     public String getIntValue() {
@@ -44,7 +44,7 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
      * Key of the config variable.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -55,7 +55,7 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
      * Value is a secret.
      * 
      */
-    @InputImport(name="secretValue", required=true)
+    @Import(name="secretValue", required=true)
       private final SecretResponse secretValue;
 
     public SecretResponse getSecretValue() {
@@ -66,7 +66,7 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
      * Value is a string.
      * 
      */
-    @InputImport(name="stringValue", required=true)
+    @Import(name="stringValue", required=true)
       private final String stringValue;
 
     public String getStringValue() {

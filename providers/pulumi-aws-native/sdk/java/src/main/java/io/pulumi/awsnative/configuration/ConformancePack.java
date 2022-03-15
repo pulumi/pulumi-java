@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.configuration.ConformancePackArgs;
 import io.pulumi.awsnative.configuration.outputs.ConformancePackInputParameter;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * A list of ConformancePackInputParameter objects.
      * 
      */
-    @OutputExport(name="conformancePackInputParameters", type=List.class, parameters={ConformancePackInputParameter.class})
+    @Export(name="conformancePackInputParameters", type=List.class, parameters={ConformancePackInputParameter.class})
     private Output</* @Nullable */ List<ConformancePackInputParameter>> conformancePackInputParameters;
 
     /**
@@ -39,7 +39,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * Name of the conformance pack which will be assigned as the unique identifier.
      * 
      */
-    @OutputExport(name="conformancePackName", type=String.class, parameters={})
+    @Export(name="conformancePackName", type=String.class, parameters={})
     private Output<String> conformancePackName;
 
     /**
@@ -53,7 +53,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * AWS Config stores intermediate files while processing conformance pack template.
      * 
      */
-    @OutputExport(name="deliveryS3Bucket", type=String.class, parameters={})
+    @Export(name="deliveryS3Bucket", type=String.class, parameters={})
     private Output</* @Nullable */ String> deliveryS3Bucket;
 
     /**
@@ -67,7 +67,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * The prefix for delivery S3 bucket.
      * 
      */
-    @OutputExport(name="deliveryS3KeyPrefix", type=String.class, parameters={})
+    @Export(name="deliveryS3KeyPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> deliveryS3KeyPrefix;
 
     /**
@@ -81,7 +81,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * A string containing full conformance pack template body. You can only specify one of the template body or template S3Uri fields.
      * 
      */
-    @OutputExport(name="templateBody", type=String.class, parameters={})
+    @Export(name="templateBody", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateBody;
 
     /**
@@ -95,7 +95,7 @@ public class ConformancePack extends io.pulumi.resources.CustomResource {
      * Location of file containing the template body which points to the conformance pack template that is located in an Amazon S3 bucket. You can only specify one of the template body or template S3Uri fields.
      * 
      */
-    @OutputExport(name="templateS3Uri", type=String.class, parameters={})
+    @Export(name="templateS3Uri", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateS3Uri;
 
     /**

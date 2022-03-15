@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ClusterClusterConfigMetastoreConfigArgs extends io.pulumi.res
      * Resource name of an existing Dataproc Metastore service.
      * 
      */
-    @InputImport(name="dataprocMetastoreService", required=true)
+    @Import(name="dataprocMetastoreService", required=true)
       private final Output<String> dataprocMetastoreService;
 
     public Output<String> getDataprocMetastoreService() {

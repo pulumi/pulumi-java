@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appstream;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.appstream.ApplicationEntitlementAssociationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -17,19 +17,19 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:appstream:ApplicationEntitlementAssociation")
 public class ApplicationEntitlementAssociation extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="applicationIdentifier", type=String.class, parameters={})
+    @Export(name="applicationIdentifier", type=String.class, parameters={})
     private Output<String> applicationIdentifier;
 
     public Output<String> getApplicationIdentifier() {
         return this.applicationIdentifier;
     }
-    @OutputExport(name="entitlementName", type=String.class, parameters={})
+    @Export(name="entitlementName", type=String.class, parameters={})
     private Output<String> entitlementName;
 
     public Output<String> getEntitlementName() {
         return this.entitlementName;
     }
-    @OutputExport(name="stackName", type=String.class, parameters={})
+    @Export(name="stackName", type=String.class, parameters={})
     private Output<String> stackName;
 
     public Output<String> getStackName() {

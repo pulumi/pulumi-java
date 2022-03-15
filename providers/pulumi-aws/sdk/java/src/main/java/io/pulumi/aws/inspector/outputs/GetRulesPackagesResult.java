@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.inspector.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRulesPackagesResult {
     /**
      * A list of the AWS Inspector Rules Packages arns available in the AWS region.
@@ -21,10 +21,10 @@ public final class GetRulesPackagesResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRulesPackagesResult(
-        @OutputCustomType.Parameter("arns") List<String> arns,
-        @OutputCustomType.Parameter("id") String id) {
+        @CustomType.Parameter("arns") List<String> arns,
+        @CustomType.Parameter("id") String id) {
         this.arns = arns;
         this.id = id;
     }

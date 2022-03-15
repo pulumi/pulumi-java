@@ -4,7 +4,7 @@
 package io.pulumi.gcp.artifactregistry.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The time when the repository was created.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -30,7 +30,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The user-provided description of the repository.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -49,7 +49,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * - HELM ([alpha](https://cloud.google.com/products#product-launch-stages))
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable Output<String> format;
 
     public Output<String> getFormat() {
@@ -63,7 +63,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * This value may not be changed after the Repository has been created.
      * 
      */
-    @InputImport(name="kmsKeyName")
+    @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
@@ -78,7 +78,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * and dashes.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -89,7 +89,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The name of the location this repository is located in.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -100,7 +100,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The name of the repository, for example: "projects/p1/locations/us-central1/repositories/repo1"
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -112,7 +112,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -124,7 +124,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * "repo1"
      * 
      */
-    @InputImport(name="repositoryId")
+    @Import(name="repositoryId")
       private final @Nullable Output<String> repositoryId;
 
     public Output<String> getRepositoryId() {
@@ -135,7 +135,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The time when the repository was last updated.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

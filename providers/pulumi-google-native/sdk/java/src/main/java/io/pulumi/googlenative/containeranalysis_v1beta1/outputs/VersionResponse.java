@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VersionResponse {
     /**
      * Used to correct mistakes in the version numbering scheme.
@@ -37,13 +37,13 @@ public final class VersionResponse {
      */
     private final String revision;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VersionResponse(
-        @OutputCustomType.Parameter("epoch") Integer epoch,
-        @OutputCustomType.Parameter("inclusive") Boolean inclusive,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("revision") String revision) {
+        @CustomType.Parameter("epoch") Integer epoch,
+        @CustomType.Parameter("inclusive") Boolean inclusive,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("revision") String revision) {
         this.epoch = epoch;
         this.inclusive = inclusive;
         this.kind = kind;

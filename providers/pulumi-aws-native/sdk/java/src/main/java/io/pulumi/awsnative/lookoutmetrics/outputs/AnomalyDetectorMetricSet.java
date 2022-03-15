@@ -7,7 +7,7 @@ import io.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorMetricSetMetricSe
 import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorMetric;
 import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorMetricSource;
 import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorTimestampColumn;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnomalyDetectorMetricSet {
     /**
      * Dimensions for this MetricSet.
@@ -51,17 +51,17 @@ public final class AnomalyDetectorMetricSet {
     private final @Nullable AnomalyDetectorTimestampColumn timestampColumn;
     private final @Nullable String timezone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnomalyDetectorMetricSet(
-        @OutputCustomType.Parameter("dimensionList") @Nullable List<String> dimensionList,
-        @OutputCustomType.Parameter("metricList") List<AnomalyDetectorMetric> metricList,
-        @OutputCustomType.Parameter("metricSetDescription") @Nullable String metricSetDescription,
-        @OutputCustomType.Parameter("metricSetFrequency") @Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency,
-        @OutputCustomType.Parameter("metricSetName") String metricSetName,
-        @OutputCustomType.Parameter("metricSource") AnomalyDetectorMetricSource metricSource,
-        @OutputCustomType.Parameter("offset") @Nullable Integer offset,
-        @OutputCustomType.Parameter("timestampColumn") @Nullable AnomalyDetectorTimestampColumn timestampColumn,
-        @OutputCustomType.Parameter("timezone") @Nullable String timezone) {
+        @CustomType.Parameter("dimensionList") @Nullable List<String> dimensionList,
+        @CustomType.Parameter("metricList") List<AnomalyDetectorMetric> metricList,
+        @CustomType.Parameter("metricSetDescription") @Nullable String metricSetDescription,
+        @CustomType.Parameter("metricSetFrequency") @Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency,
+        @CustomType.Parameter("metricSetName") String metricSetName,
+        @CustomType.Parameter("metricSource") AnomalyDetectorMetricSource metricSource,
+        @CustomType.Parameter("offset") @Nullable Integer offset,
+        @CustomType.Parameter("timestampColumn") @Nullable AnomalyDetectorTimestampColumn timestampColumn,
+        @CustomType.Parameter("timezone") @Nullable String timezone) {
         this.dimensionList = dimensionList;
         this.metricList = metricList;
         this.metricSetDescription = metricSetDescription;

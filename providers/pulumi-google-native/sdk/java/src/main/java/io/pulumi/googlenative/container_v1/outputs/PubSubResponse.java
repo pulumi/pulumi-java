@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1.outputs.FilterResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PubSubResponse {
     /**
      * Enable notifications for Pub/Sub.
@@ -27,11 +27,11 @@ public final class PubSubResponse {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PubSubResponse(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("filter") FilterResponse filter,
-        @OutputCustomType.Parameter("topic") String topic) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("filter") FilterResponse filter,
+        @CustomType.Parameter("topic") String topic) {
         this.enabled = enabled;
         this.filter = filter;
         this.topic = topic;

@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceLocation {
     /**
      * The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
@@ -22,10 +22,10 @@ public final class InstanceLocation {
      */
     private final @Nullable String regionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceLocation(
-        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
-        @OutputCustomType.Parameter("regionName") @Nullable String regionName) {
+        @CustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @CustomType.Parameter("regionName") @Nullable String regionName) {
         this.availabilityZone = availabilityZone;
         this.regionName = regionName;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GatewayRouteSpecGrpcRouteActionTargetVirtualServiceGetArgs ex
      * The name of the virtual service that traffic is routed to. Must be between 1 and 255 characters in length.
      * 
      */
-    @InputImport(name="virtualServiceName", required=true)
+    @Import(name="virtualServiceName", required=true)
       private final Output<String> virtualServiceName;
 
     public Output<String> getVirtualServiceName() {

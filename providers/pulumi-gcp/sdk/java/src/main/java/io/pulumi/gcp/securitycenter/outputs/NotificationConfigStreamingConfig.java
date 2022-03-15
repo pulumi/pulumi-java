@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.securitycenter.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NotificationConfigStreamingConfig {
     /**
      * Expression that defines the filter to apply across create/update
@@ -33,8 +33,8 @@ public final class NotificationConfigStreamingConfig {
      */
     private final String filter;
 
-    @OutputCustomType.Constructor
-    private NotificationConfigStreamingConfig(@OutputCustomType.Parameter("filter") String filter) {
+    @CustomType.Constructor
+    private NotificationConfigStreamingConfig(@CustomType.Parameter("filter") String filter) {
         this.filter = filter;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
      * 
      */
-    @InputImport(name="defaultCustomBlockResponseBody")
+    @Import(name="defaultCustomBlockResponseBody")
       private final @Nullable String defaultCustomBlockResponseBody;
 
     public Optional<String> getDefaultCustomBlockResponseBody() {
@@ -34,7 +34,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * If the action type is block, this field defines the default customer overridable http response status code.
      * 
      */
-    @InputImport(name="defaultCustomBlockResponseStatusCode")
+    @Import(name="defaultCustomBlockResponseStatusCode")
       private final @Nullable Integer defaultCustomBlockResponseStatusCode;
 
     public Optional<Integer> getDefaultCustomBlockResponseStatusCode() {
@@ -45,7 +45,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * If action type is redirect, this field represents the default redirect URL for the client.
      * 
      */
-    @InputImport(name="defaultRedirectUrl")
+    @Import(name="defaultRedirectUrl")
       private final @Nullable String defaultRedirectUrl;
 
     public Optional<String> getDefaultRedirectUrl() {
@@ -56,7 +56,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * describes if the policy is in enabled state or disabled state
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable String enabledState;
 
     public Optional<String> getEnabledState() {
@@ -67,7 +67,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * Describes if it is in detection mode or prevention mode at policy level.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable String mode;
 
     public Optional<String> getMode() {

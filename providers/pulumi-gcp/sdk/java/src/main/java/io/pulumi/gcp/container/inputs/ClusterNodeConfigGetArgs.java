@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.ClusterNodeConfigEphemeralStorageConfigGetArgs;
 import io.pulumi.gcp.container.inputs.ClusterNodeConfigGcfsConfigGetArgs;
 import io.pulumi.gcp.container.inputs.ClusterNodeConfigGuestAcceleratorGetArgs;
@@ -31,7 +31,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: <https://cloud.google.com/compute/docs/disks/customer-managed-encryption>
      * 
      */
-    @InputImport(name="bootDiskKmsKey")
+    @Import(name="bootDiskKmsKey")
       private final @Nullable Output<String> bootDiskKmsKey;
 
     public Output<String> getBootDiskKmsKey() {
@@ -43,7 +43,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
      * 
      */
-    @InputImport(name="diskSizeGb")
+    @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
     public Output<Integer> getDiskSizeGb() {
@@ -55,7 +55,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * (e.g. 'pd-standard', 'pd-balanced' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'
      * 
      */
-    @InputImport(name="diskType")
+    @Import(name="diskType")
       private final @Nullable Output<String> diskType;
 
     public Output<String> getDiskType() {
@@ -66,7 +66,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * Parameters for the ephemeral storage filesystem. If unspecified, ephemeral storage is backed by the boot disk. Structure is documented below.
      * 
      */
-    @InputImport(name="ephemeralStorageConfig")
+    @Import(name="ephemeralStorageConfig")
       private final @Nullable Output<ClusterNodeConfigEphemeralStorageConfigGetArgs> ephemeralStorageConfig;
 
     public Output<ClusterNodeConfigEphemeralStorageConfigGetArgs> getEphemeralStorageConfig() {
@@ -82,7 +82,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="gcfsConfig")
+    @Import(name="gcfsConfig")
       private final @Nullable Output<ClusterNodeConfigGcfsConfigGetArgs> gcfsConfig;
 
     public Output<ClusterNodeConfigGcfsConfigGetArgs> getGcfsConfig() {
@@ -94,7 +94,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * Structure documented below.
      * 
      */
-    @InputImport(name="guestAccelerators")
+    @Import(name="guestAccelerators")
       private final @Nullable Output<List<ClusterNodeConfigGuestAcceleratorGetArgs>> guestAccelerators;
 
     public Output<List<ClusterNodeConfigGuestAcceleratorGetArgs>> getGuestAccelerators() {
@@ -106,7 +106,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * will delete and recreate all nodes in the node pool.
      * 
      */
-    @InputImport(name="imageType")
+    @Import(name="imageType")
       private final @Nullable Output<String> imageType;
 
     public Output<String> getImageType() {
@@ -118,7 +118,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="kubeletConfig")
+    @Import(name="kubeletConfig")
       private final @Nullable Output<ClusterNodeConfigKubeletConfigGetArgs> kubeletConfig;
 
     public Output<ClusterNodeConfigKubeletConfigGetArgs> getKubeletConfig() {
@@ -130,7 +130,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * reserved by Kubernetes Core components and cannot be specified.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -143,7 +143,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="linuxNodeConfig")
+    @Import(name="linuxNodeConfig")
       private final @Nullable Output<ClusterNodeConfigLinuxNodeConfigGetArgs> linuxNodeConfig;
 
     public Output<ClusterNodeConfigLinuxNodeConfigGetArgs> getLinuxNodeConfig() {
@@ -154,7 +154,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. Each local SSD is 375 GB in size. If zero, it means to disable using local SSDs as ephemeral storage.
      * 
      */
-    @InputImport(name="localSsdCount")
+    @Import(name="localSsdCount")
       private final @Nullable Output<Integer> localSsdCount;
 
     public Output<Integer> getLocalSsdCount() {
@@ -167,7 +167,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * [here](https://cloud.google.com/compute/docs/reference/latest/instances#machineType).
      * 
      */
-    @InputImport(name="machineType")
+    @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
     public Output<String> getMachineType() {
@@ -182,7 +182,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * value in your config.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -197,7 +197,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * for more information.
      * 
      */
-    @InputImport(name="minCpuPlatform")
+    @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
     public Output<String> getMinCpuPlatform() {
@@ -208,7 +208,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * Setting this field will assign instances of this pool to run on the specified node group. This is useful for running workloads on [sole tenant nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
      * 
      */
-    @InputImport(name="nodeGroup")
+    @Import(name="nodeGroup")
       private final @Nullable Output<String> nodeGroup;
 
     public Output<String> getNodeGroup() {
@@ -221,7 +221,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * Use the "https://www.googleapis.com/auth/cloud-platform" scope to grant access to all APIs. It is recommended that you set `service_account` to a non-default service account and grant IAM roles to that service account for only the resources that it needs.
      * 
      */
-    @InputImport(name="oauthScopes")
+    @Import(name="oauthScopes")
       private final @Nullable Output<List<String>> oauthScopes;
 
     public Output<List<String>> getOauthScopes() {
@@ -234,7 +234,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * for more information. Defaults to false.
      * 
      */
-    @InputImport(name="preemptible")
+    @Import(name="preemptible")
       private final @Nullable Output<Boolean> preemptible;
 
     public Output<Boolean> getPreemptible() {
@@ -246,7 +246,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="sandboxConfig")
+    @Import(name="sandboxConfig")
       private final @Nullable Output<ClusterNodeConfigSandboxConfigGetArgs> sandboxConfig;
 
     public Output<ClusterNodeConfigSandboxConfigGetArgs> getSandboxConfig() {
@@ -258,7 +258,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * If not specified, the "default" service account is used.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
@@ -269,7 +269,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * Shielded Instance options. Structure is documented below.
      * 
      */
-    @InputImport(name="shieldedInstanceConfig")
+    @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<ClusterNodeConfigShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
 
     public Output<ClusterNodeConfigShieldedInstanceConfigGetArgs> getShieldedInstanceConfig() {
@@ -282,7 +282,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * for more information. Defaults to false.
      * 
      */
-    @InputImport(name="spot")
+    @Import(name="spot")
       private final @Nullable Output<Boolean> spot;
 
     public Output<Boolean> getSpot() {
@@ -294,7 +294,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * valid sources or targets for network firewalls.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
@@ -312,7 +312,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * recommended. Structure is documented below.
      * 
      */
-    @InputImport(name="taints")
+    @Import(name="taints")
       private final @Nullable Output<List<ClusterNodeConfigTaintGetArgs>> taints;
 
     public Output<List<ClusterNodeConfigTaintGetArgs>> getTaints() {
@@ -324,7 +324,7 @@ public final class ClusterNodeConfigGetArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="workloadMetadataConfig")
+    @Import(name="workloadMetadataConfig")
       private final @Nullable Output<ClusterNodeConfigWorkloadMetadataConfigGetArgs> workloadMetadataConfig;
 
     public Output<ClusterNodeConfigWorkloadMetadataConfigGetArgs> getWorkloadMetadataConfig() {

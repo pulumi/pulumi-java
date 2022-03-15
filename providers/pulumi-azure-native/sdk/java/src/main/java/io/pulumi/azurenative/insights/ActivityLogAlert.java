@@ -9,7 +9,7 @@ import io.pulumi.azurenative.insights.outputs.ActionListResponse;
 import io.pulumi.azurenative.insights.outputs.AlertRuleAllOfConditionResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
      * The actions that will activate when the condition is met.
      * 
      */
-    @OutputExport(name="actions", type=ActionListResponse.class, parameters={})
+    @Export(name="actions", type=ActionListResponse.class, parameters={})
     private Output<ActionListResponse> actions;
 
     /**
@@ -52,7 +52,7 @@ public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
      * The condition that will cause this alert to activate.
      * 
      */
-    @OutputExport(name="condition", type=AlertRuleAllOfConditionResponse.class, parameters={})
+    @Export(name="condition", type=AlertRuleAllOfConditionResponse.class, parameters={})
     private Output<AlertRuleAllOfConditionResponse> condition;
 
     /**
@@ -66,7 +66,7 @@ public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
      * A description of this Activity Log Alert rule.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -80,7 +80,7 @@ public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
      * Indicates whether this Activity Log Alert rule is enabled. If an Activity Log Alert rule is not enabled, then none of its actions will be activated.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -94,7 +94,7 @@ public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
      * The location of the resource. Since Azure Activity Log Alerts is a global service, the location of the rules should always be 'global'.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -108,7 +108,7 @@ public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -122,7 +122,7 @@ public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
      * A list of resource IDs that will be used as prefixes. The alert will only apply to Activity Log events with resource IDs that fall under one of these prefixes. This list must include at least one item.
      * 
      */
-    @OutputExport(name="scopes", type=List.class, parameters={String.class})
+    @Export(name="scopes", type=List.class, parameters={String.class})
     private Output<List<String>> scopes;
 
     /**
@@ -136,7 +136,7 @@ public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -150,7 +150,7 @@ public class ActivityLogAlert extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

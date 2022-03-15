@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.advisor;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the suppression.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -29,7 +29,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * The recommendation ID.
      * 
      */
-    @InputImport(name="recommendationId", required=true)
+    @Import(name="recommendationId", required=true)
       private final Output<String> recommendationId;
 
     public Output<String> getRecommendationId() {
@@ -40,7 +40,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * The fully qualified Azure Resource Manager identifier of the resource to which the recommendation applies.
      * 
      */
-    @InputImport(name="resourceUri", required=true)
+    @Import(name="resourceUri", required=true)
       private final Output<String> resourceUri;
 
     public Output<String> getResourceUri() {
@@ -51,7 +51,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * The GUID of the suppression.
      * 
      */
-    @InputImport(name="suppressionId")
+    @Import(name="suppressionId")
       private final @Nullable Output<String> suppressionId;
 
     public Output<String> getSuppressionId() {
@@ -62,7 +62,7 @@ public final class SuppressionArgs extends io.pulumi.resources.ResourceArgs {
      * The duration for which the suppression is valid.
      * 
      */
-    @InputImport(name="ttl")
+    @Import(name="ttl")
       private final @Nullable Output<String> ttl;
 
     public Output<String> getTtl() {

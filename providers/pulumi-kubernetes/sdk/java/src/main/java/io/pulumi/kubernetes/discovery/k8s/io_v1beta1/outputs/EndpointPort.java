@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.discovery.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointPort {
     /**
      * The application protocol for this port. This field follows standard Kubernetes label syntax. Un-prefixed names are reserved for IANA standard service names (as per RFC-6335 and http://www.iana.org/assignments/service-names). Non-standard protocols should use prefixed names such as mycompany.com/my-custom-protocol.
@@ -33,12 +33,12 @@ public final class EndpointPort {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointPort(
-        @OutputCustomType.Parameter("appProtocol") @Nullable String appProtocol,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
+        @CustomType.Parameter("appProtocol") @Nullable String appProtocol,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("protocol") @Nullable String protocol) {
         this.appProtocol = appProtocol;
         this.name = name;
         this.port = port;

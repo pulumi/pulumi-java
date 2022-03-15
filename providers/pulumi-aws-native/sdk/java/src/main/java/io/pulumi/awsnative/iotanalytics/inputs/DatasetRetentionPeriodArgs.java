@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class DatasetRetentionPeriodArgs extends io.pulumi.resources.Resour
 
     public static final DatasetRetentionPeriodArgs Empty = new DatasetRetentionPeriodArgs();
 
-    @InputImport(name="numberOfDays", required=true)
+    @Import(name="numberOfDays", required=true)
       private final Output<Integer> numberOfDays;
 
     public Output<Integer> getNumberOfDays() {
         return this.numberOfDays;
     }
 
-    @InputImport(name="unlimited", required=true)
+    @Import(name="unlimited", required=true)
       private final Output<Boolean> unlimited;
 
     public Output<Boolean> getUnlimited() {

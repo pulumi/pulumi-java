@@ -5,7 +5,7 @@ package io.pulumi.aws.cognito;
 
 import io.pulumi.aws.cognito.inputs.IdentityPoolCognitoIdentityProviderArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class IdentityPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Enables or disables the classic / basic authentication flow. Default is `false`.
      * 
      */
-    @InputImport(name="allowClassicFlow")
+    @Import(name="allowClassicFlow")
       private final @Nullable Output<Boolean> allowClassicFlow;
 
     public Output<Boolean> getAllowClassicFlow() {
@@ -33,7 +33,7 @@ public final class IdentityPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the identity pool supports unauthenticated logins or not.
      * 
      */
-    @InputImport(name="allowUnauthenticatedIdentities")
+    @Import(name="allowUnauthenticatedIdentities")
       private final @Nullable Output<Boolean> allowUnauthenticatedIdentities;
 
     public Output<Boolean> getAllowUnauthenticatedIdentities() {
@@ -44,7 +44,7 @@ public final class IdentityPoolArgs extends io.pulumi.resources.ResourceArgs {
      * An array of Amazon Cognito Identity user pools and their client IDs.
      * 
      */
-    @InputImport(name="cognitoIdentityProviders")
+    @Import(name="cognitoIdentityProviders")
       private final @Nullable Output<List<IdentityPoolCognitoIdentityProviderArgs>> cognitoIdentityProviders;
 
     public Output<List<IdentityPoolCognitoIdentityProviderArgs>> getCognitoIdentityProviders() {
@@ -56,7 +56,7 @@ public final class IdentityPoolArgs extends io.pulumi.resources.ResourceArgs {
      * backend and the Cognito service to communicate about the developer provider.
      * 
      */
-    @InputImport(name="developerProviderName")
+    @Import(name="developerProviderName")
       private final @Nullable Output<String> developerProviderName;
 
     public Output<String> getDeveloperProviderName() {
@@ -67,7 +67,7 @@ public final class IdentityPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The Cognito Identity Pool name.
      * 
      */
-    @InputImport(name="identityPoolName", required=true)
+    @Import(name="identityPoolName", required=true)
       private final Output<String> identityPoolName;
 
     public Output<String> getIdentityPoolName() {
@@ -78,7 +78,7 @@ public final class IdentityPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Set of OpendID Connect provider ARNs.
      * 
      */
-    @InputImport(name="openidConnectProviderArns")
+    @Import(name="openidConnectProviderArns")
       private final @Nullable Output<List<String>> openidConnectProviderArns;
 
     public Output<List<String>> getOpenidConnectProviderArns() {
@@ -89,7 +89,7 @@ public final class IdentityPoolArgs extends io.pulumi.resources.ResourceArgs {
      * An array of Amazon Resource Names (ARNs) of the SAML provider for your identity.
      * 
      */
-    @InputImport(name="samlProviderArns")
+    @Import(name="samlProviderArns")
       private final @Nullable Output<List<String>> samlProviderArns;
 
     public Output<List<String>> getSamlProviderArns() {
@@ -100,7 +100,7 @@ public final class IdentityPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Key-Value pairs mapping provider names to provider app IDs.
      * 
      */
-    @InputImport(name="supportedLoginProviders")
+    @Import(name="supportedLoginProviders")
       private final @Nullable Output<Map<String,String>> supportedLoginProviders;
 
     public Output<Map<String,String>> getSupportedLoginProviders() {
@@ -111,7 +111,7 @@ public final class IdentityPoolArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the Identity Pool. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

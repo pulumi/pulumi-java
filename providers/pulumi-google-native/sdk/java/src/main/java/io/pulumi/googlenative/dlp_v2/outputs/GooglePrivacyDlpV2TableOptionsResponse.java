@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2TableOptionsResponse {
     /**
      * The columns that are the primary keys for table objects included in ContentItem. A copy of this cell's value will stored alongside alongside each finding so that the finding can be traced to the specific row it came from. No more than 3 may be provided.
@@ -16,8 +16,8 @@ public final class GooglePrivacyDlpV2TableOptionsResponse {
      */
     private final List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields;
 
-    @OutputCustomType.Constructor
-    private GooglePrivacyDlpV2TableOptionsResponse(@OutputCustomType.Parameter("identifyingFields") List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields) {
+    @CustomType.Constructor
+    private GooglePrivacyDlpV2TableOptionsResponse(@CustomType.Parameter("identifyingFields") List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields) {
         this.identifyingFields = identifyingFields;
     }
 

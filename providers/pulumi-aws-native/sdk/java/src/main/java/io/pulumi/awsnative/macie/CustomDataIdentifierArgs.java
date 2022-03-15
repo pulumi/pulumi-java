@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.macie;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
      * Description of custom data identifier.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
      * Words to be ignored.
      * 
      */
-    @InputImport(name="ignoreWords")
+    @Import(name="ignoreWords")
       private final @Nullable Output<List<String>> ignoreWords;
 
     public Output<List<String>> getIgnoreWords() {
@@ -42,7 +42,7 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
      * Keywords to be matched against.
      * 
      */
-    @InputImport(name="keywords")
+    @Import(name="keywords")
       private final @Nullable Output<List<String>> keywords;
 
     public Output<List<String>> getKeywords() {
@@ -53,7 +53,7 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
      * Maximum match distance.
      * 
      */
-    @InputImport(name="maximumMatchDistance")
+    @Import(name="maximumMatchDistance")
       private final @Nullable Output<Integer> maximumMatchDistance;
 
     public Output<Integer> getMaximumMatchDistance() {
@@ -64,7 +64,7 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
      * Name of custom data identifier.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -75,7 +75,7 @@ public final class CustomDataIdentifierArgs extends io.pulumi.resources.Resource
      * Regular expression for custom data identifier.
      * 
      */
-    @InputImport(name="regex", required=true)
+    @Import(name="regex", required=true)
       private final Output<String> regex;
 
     public Output<String> getRegex() {

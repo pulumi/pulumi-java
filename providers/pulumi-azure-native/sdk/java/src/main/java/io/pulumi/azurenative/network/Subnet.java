@@ -19,7 +19,7 @@ import io.pulumi.azurenative.network.outputs.ServiceEndpointPropertiesFormatResp
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +46,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * The address prefix for the subnet.
      * 
      */
-    @OutputExport(name="addressPrefix", type=String.class, parameters={})
+    @Export(name="addressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> addressPrefix;
 
     /**
@@ -60,7 +60,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * List of address prefixes for the subnet.
      * 
      */
-    @OutputExport(name="addressPrefixes", type=List.class, parameters={String.class})
+    @Export(name="addressPrefixes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> addressPrefixes;
 
     /**
@@ -74,7 +74,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * Application gateway IP configurations of virtual network resource.
      * 
      */
-    @OutputExport(name="applicationGatewayIpConfigurations", type=List.class, parameters={ApplicationGatewayIPConfigurationResponse.class})
+    @Export(name="applicationGatewayIpConfigurations", type=List.class, parameters={ApplicationGatewayIPConfigurationResponse.class})
     private Output</* @Nullable */ List<ApplicationGatewayIPConfigurationResponse>> applicationGatewayIpConfigurations;
 
     /**
@@ -88,7 +88,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * An array of references to the delegations on the subnet.
      * 
      */
-    @OutputExport(name="delegations", type=List.class, parameters={DelegationResponse.class})
+    @Export(name="delegations", type=List.class, parameters={DelegationResponse.class})
     private Output</* @Nullable */ List<DelegationResponse>> delegations;
 
     /**
@@ -102,7 +102,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -116,7 +116,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * Array of IpAllocation which reference this subnet.
      * 
      */
-    @OutputExport(name="ipAllocations", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="ipAllocations", type=List.class, parameters={SubResourceResponse.class})
     private Output</* @Nullable */ List<SubResourceResponse>> ipAllocations;
 
     /**
@@ -130,7 +130,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * Array of IP configuration profiles which reference this subnet.
      * 
      */
-    @OutputExport(name="ipConfigurationProfiles", type=List.class, parameters={IPConfigurationProfileResponse.class})
+    @Export(name="ipConfigurationProfiles", type=List.class, parameters={IPConfigurationProfileResponse.class})
     private Output<List<IPConfigurationProfileResponse>> ipConfigurationProfiles;
 
     /**
@@ -144,7 +144,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * An array of references to the network interface IP configurations using subnet.
      * 
      */
-    @OutputExport(name="ipConfigurations", type=List.class, parameters={IPConfigurationResponse.class})
+    @Export(name="ipConfigurations", type=List.class, parameters={IPConfigurationResponse.class})
     private Output<List<IPConfigurationResponse>> ipConfigurations;
 
     /**
@@ -158,7 +158,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -172,7 +172,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * Nat gateway associated with this subnet.
      * 
      */
-    @OutputExport(name="natGateway", type=SubResourceResponse.class, parameters={})
+    @Export(name="natGateway", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> natGateway;
 
     /**
@@ -186,7 +186,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * The reference to the NetworkSecurityGroup resource.
      * 
      */
-    @OutputExport(name="networkSecurityGroup", type=NetworkSecurityGroupResponse.class, parameters={})
+    @Export(name="networkSecurityGroup", type=NetworkSecurityGroupResponse.class, parameters={})
     private Output</* @Nullable */ NetworkSecurityGroupResponse> networkSecurityGroup;
 
     /**
@@ -200,7 +200,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * Enable or Disable apply network policies on private end point in the subnet.
      * 
      */
-    @OutputExport(name="privateEndpointNetworkPolicies", type=String.class, parameters={})
+    @Export(name="privateEndpointNetworkPolicies", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateEndpointNetworkPolicies;
 
     /**
@@ -214,7 +214,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * An array of references to private endpoints.
      * 
      */
-    @OutputExport(name="privateEndpoints", type=List.class, parameters={PrivateEndpointResponse.class})
+    @Export(name="privateEndpoints", type=List.class, parameters={PrivateEndpointResponse.class})
     private Output<List<PrivateEndpointResponse>> privateEndpoints;
 
     /**
@@ -228,7 +228,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * Enable or Disable apply network policies on private link service in the subnet.
      * 
      */
-    @OutputExport(name="privateLinkServiceNetworkPolicies", type=String.class, parameters={})
+    @Export(name="privateLinkServiceNetworkPolicies", type=String.class, parameters={})
     private Output</* @Nullable */ String> privateLinkServiceNetworkPolicies;
 
     /**
@@ -242,7 +242,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * The provisioning state of the subnet resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -256,7 +256,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * A read-only string identifying the intention of use for this subnet based on delegations and other user-defined properties.
      * 
      */
-    @OutputExport(name="purpose", type=String.class, parameters={})
+    @Export(name="purpose", type=String.class, parameters={})
     private Output<String> purpose;
 
     /**
@@ -270,7 +270,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * An array of references to the external resources using subnet.
      * 
      */
-    @OutputExport(name="resourceNavigationLinks", type=List.class, parameters={ResourceNavigationLinkResponse.class})
+    @Export(name="resourceNavigationLinks", type=List.class, parameters={ResourceNavigationLinkResponse.class})
     private Output<List<ResourceNavigationLinkResponse>> resourceNavigationLinks;
 
     /**
@@ -284,7 +284,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * The reference to the RouteTable resource.
      * 
      */
-    @OutputExport(name="routeTable", type=RouteTableResponse.class, parameters={})
+    @Export(name="routeTable", type=RouteTableResponse.class, parameters={})
     private Output</* @Nullable */ RouteTableResponse> routeTable;
 
     /**
@@ -298,7 +298,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * An array of references to services injecting into this subnet.
      * 
      */
-    @OutputExport(name="serviceAssociationLinks", type=List.class, parameters={ServiceAssociationLinkResponse.class})
+    @Export(name="serviceAssociationLinks", type=List.class, parameters={ServiceAssociationLinkResponse.class})
     private Output<List<ServiceAssociationLinkResponse>> serviceAssociationLinks;
 
     /**
@@ -312,7 +312,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * An array of service endpoint policies.
      * 
      */
-    @OutputExport(name="serviceEndpointPolicies", type=List.class, parameters={ServiceEndpointPolicyResponse.class})
+    @Export(name="serviceEndpointPolicies", type=List.class, parameters={ServiceEndpointPolicyResponse.class})
     private Output</* @Nullable */ List<ServiceEndpointPolicyResponse>> serviceEndpointPolicies;
 
     /**
@@ -326,7 +326,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * An array of service endpoints.
      * 
      */
-    @OutputExport(name="serviceEndpoints", type=List.class, parameters={ServiceEndpointPropertiesFormatResponse.class})
+    @Export(name="serviceEndpoints", type=List.class, parameters={ServiceEndpointPropertiesFormatResponse.class})
     private Output</* @Nullable */ List<ServiceEndpointPropertiesFormatResponse>> serviceEndpoints;
 
     /**
@@ -340,7 +340,7 @@ public class Subnet extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**

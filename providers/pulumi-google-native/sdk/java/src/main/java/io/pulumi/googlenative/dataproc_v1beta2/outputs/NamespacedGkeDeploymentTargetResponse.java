@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NamespacedGkeDeploymentTargetResponse {
     /**
      * Optional. A namespace within the GKE cluster to deploy into.
@@ -20,10 +20,10 @@ public final class NamespacedGkeDeploymentTargetResponse {
      */
     private final String targetGkeCluster;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NamespacedGkeDeploymentTargetResponse(
-        @OutputCustomType.Parameter("clusterNamespace") String clusterNamespace,
-        @OutputCustomType.Parameter("targetGkeCluster") String targetGkeCluster) {
+        @CustomType.Parameter("clusterNamespace") String clusterNamespace,
+        @CustomType.Parameter("targetGkeCluster") String targetGkeCluster) {
         this.clusterNamespace = clusterNamespace;
         this.targetGkeCluster = targetGkeCluster;
     }

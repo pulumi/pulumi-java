@@ -4,12 +4,12 @@
 package io.pulumi.aws.codepipeline.outputs;
 
 import io.pulumi.aws.codepipeline.outputs.PipelineStageAction;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PipelineStage {
     /**
      * The action(s) to include in the stage. Defined as an `action` block below
@@ -22,10 +22,10 @@ public final class PipelineStage {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineStage(
-        @OutputCustomType.Parameter("actions") List<PipelineStageAction> actions,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("actions") List<PipelineStageAction> actions,
+        @CustomType.Parameter("name") String name) {
         this.actions = actions;
         this.name = name;
     }

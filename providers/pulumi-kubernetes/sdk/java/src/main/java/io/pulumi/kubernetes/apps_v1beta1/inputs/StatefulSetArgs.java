@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apps_v1beta1.inputs.StatefulSetSpecArgs;
 import io.pulumi.kubernetes.apps_v1beta1.inputs.StatefulSetStatusArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
@@ -41,7 +41,7 @@ public final class StatefulSetArgs extends io.pulumi.resources.ResourceArgs {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
@@ -52,14 +52,14 @@ public final class StatefulSetArgs extends io.pulumi.resources.ResourceArgs {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
         return this.kind == null ? Output.empty() : this.kind;
     }
 
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
@@ -70,7 +70,7 @@ public final class StatefulSetArgs extends io.pulumi.resources.ResourceArgs {
      * Spec defines the desired identities of pods in this set.
      * 
      */
-    @InputImport(name="spec")
+    @Import(name="spec")
       private final @Nullable Output<StatefulSetSpecArgs> spec;
 
     public Output<StatefulSetSpecArgs> getSpec() {
@@ -81,7 +81,7 @@ public final class StatefulSetArgs extends io.pulumi.resources.ResourceArgs {
      * Status is the current status of Pods in this StatefulSet. This data may be out of date by some window of time.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<StatefulSetStatusArgs> status;
 
     public Output<StatefulSetStatusArgs> getStatus() {

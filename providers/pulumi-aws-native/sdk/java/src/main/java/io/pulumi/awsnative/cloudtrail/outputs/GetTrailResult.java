@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudtrail.outputs;
 import io.pulumi.awsnative.cloudtrail.outputs.TrailEventSelector;
 import io.pulumi.awsnative.cloudtrail.outputs.TrailInsightSelector;
 import io.pulumi.awsnative.cloudtrail.outputs.TrailTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTrailResult {
     private final @Nullable String arn;
     /**
@@ -85,24 +85,24 @@ public final class GetTrailResult {
     private final @Nullable String snsTopicName;
     private final @Nullable List<TrailTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTrailResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("cloudWatchLogsLogGroupArn") @Nullable String cloudWatchLogsLogGroupArn,
-        @OutputCustomType.Parameter("cloudWatchLogsRoleArn") @Nullable String cloudWatchLogsRoleArn,
-        @OutputCustomType.Parameter("enableLogFileValidation") @Nullable Boolean enableLogFileValidation,
-        @OutputCustomType.Parameter("eventSelectors") @Nullable List<TrailEventSelector> eventSelectors,
-        @OutputCustomType.Parameter("includeGlobalServiceEvents") @Nullable Boolean includeGlobalServiceEvents,
-        @OutputCustomType.Parameter("insightSelectors") @Nullable List<TrailInsightSelector> insightSelectors,
-        @OutputCustomType.Parameter("isLogging") @Nullable Boolean isLogging,
-        @OutputCustomType.Parameter("isMultiRegionTrail") @Nullable Boolean isMultiRegionTrail,
-        @OutputCustomType.Parameter("isOrganizationTrail") @Nullable Boolean isOrganizationTrail,
-        @OutputCustomType.Parameter("kMSKeyId") @Nullable String kMSKeyId,
-        @OutputCustomType.Parameter("s3BucketName") @Nullable String s3BucketName,
-        @OutputCustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix,
-        @OutputCustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn,
-        @OutputCustomType.Parameter("snsTopicName") @Nullable String snsTopicName,
-        @OutputCustomType.Parameter("tags") @Nullable List<TrailTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("cloudWatchLogsLogGroupArn") @Nullable String cloudWatchLogsLogGroupArn,
+        @CustomType.Parameter("cloudWatchLogsRoleArn") @Nullable String cloudWatchLogsRoleArn,
+        @CustomType.Parameter("enableLogFileValidation") @Nullable Boolean enableLogFileValidation,
+        @CustomType.Parameter("eventSelectors") @Nullable List<TrailEventSelector> eventSelectors,
+        @CustomType.Parameter("includeGlobalServiceEvents") @Nullable Boolean includeGlobalServiceEvents,
+        @CustomType.Parameter("insightSelectors") @Nullable List<TrailInsightSelector> insightSelectors,
+        @CustomType.Parameter("isLogging") @Nullable Boolean isLogging,
+        @CustomType.Parameter("isMultiRegionTrail") @Nullable Boolean isMultiRegionTrail,
+        @CustomType.Parameter("isOrganizationTrail") @Nullable Boolean isOrganizationTrail,
+        @CustomType.Parameter("kMSKeyId") @Nullable String kMSKeyId,
+        @CustomType.Parameter("s3BucketName") @Nullable String s3BucketName,
+        @CustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix,
+        @CustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn,
+        @CustomType.Parameter("snsTopicName") @Nullable String snsTopicName,
+        @CustomType.Parameter("tags") @Nullable List<TrailTag> tags) {
         this.arn = arn;
         this.cloudWatchLogsLogGroupArn = cloudWatchLogsLogGroupArn;
         this.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;

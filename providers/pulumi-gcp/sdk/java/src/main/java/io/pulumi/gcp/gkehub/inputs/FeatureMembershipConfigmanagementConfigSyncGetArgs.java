@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementConfigSyncGitGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGetArgs extends io
      * (Optional) Structure is documented below.
      * 
      */
-    @InputImport(name="git")
+    @Import(name="git")
       private final @Nullable Output<FeatureMembershipConfigmanagementConfigSyncGitGetArgs> git;
 
     public Output<FeatureMembershipConfigmanagementConfigSyncGitGetArgs> getGit() {
@@ -31,7 +31,7 @@ public final class FeatureMembershipConfigmanagementConfigSyncGetArgs extends io
      * Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.
      * 
      */
-    @InputImport(name="sourceFormat")
+    @Import(name="sourceFormat")
       private final @Nullable Output<String> sourceFormat;
 
     public Output<String> getSourceFormat() {

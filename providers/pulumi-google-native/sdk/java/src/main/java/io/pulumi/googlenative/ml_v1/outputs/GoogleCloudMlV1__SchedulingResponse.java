@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1__SchedulingResponse {
     /**
      * Optional. The maximum job running time, expressed in seconds. The field can contain up to nine fractional digits, terminated by `s`. If not specified, this field defaults to `604800s` (seven days). If the training job is still running after this duration, AI Platform Training cancels it. The duration is measured from when the job enters the `RUNNING` state; therefore it does not overlap with the duration limited by Scheduling.max_wait_time. For example, if you want to ensure your job runs for no more than 2 hours, set this field to `7200s` (2 hours * 60 minutes / hour * 60 seconds / minute). If you submit your training job using the `gcloud` tool, you can [specify this field in a `config.yaml` file](/ai-platform/training/docs/training-jobs#formatting_your_configuration_parameters). For example: ``` yaml trainingInput: scheduling: maxRunningTime: 7200s  ```
@@ -26,11 +26,11 @@ public final class GoogleCloudMlV1__SchedulingResponse {
      */
     private final Integer priority;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1__SchedulingResponse(
-        @OutputCustomType.Parameter("maxRunningTime") String maxRunningTime,
-        @OutputCustomType.Parameter("maxWaitTime") String maxWaitTime,
-        @OutputCustomType.Parameter("priority") Integer priority) {
+        @CustomType.Parameter("maxRunningTime") String maxRunningTime,
+        @CustomType.Parameter("maxWaitTime") String maxWaitTime,
+        @CustomType.Parameter("priority") Integer priority) {
         this.maxRunningTime = maxRunningTime;
         this.maxWaitTime = maxWaitTime;
         this.priority = priority;

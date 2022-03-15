@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsublite_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic's partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of `period`.
      * 
      */
-    @InputImport(name="perPartitionBytes")
+    @Import(name="perPartitionBytes")
       private final @Nullable Output<String> perPartitionBytes;
 
     public Output<String> getPerPartitionBytes() {
@@ -33,7 +33,7 @@ public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs 
      * How long a published message is retained. If unset, messages will be retained as long as the bytes retained for each partition is below `per_partition_bytes`.
      * 
      */
-    @InputImport(name="period")
+    @Import(name="period")
       private final @Nullable Output<String> period;
 
     public Output<String> getPeriod() {

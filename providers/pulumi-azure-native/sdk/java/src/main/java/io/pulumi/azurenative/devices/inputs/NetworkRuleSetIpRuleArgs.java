@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devices.inputs;
 import io.pulumi.azurenative.devices.enums.NetworkRuleIPAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
      * IP Filter Action
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<Either<String,NetworkRuleIPAction>> action;
 
     public Output<Either<String,NetworkRuleIPAction>> getAction() {
@@ -35,7 +35,7 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
      * Name of the IP filter rule.
      * 
      */
-    @InputImport(name="filterName", required=true)
+    @Import(name="filterName", required=true)
       private final Output<String> filterName;
 
     public Output<String> getFilterName() {
@@ -46,7 +46,7 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
      * A string that contains the IP address range in CIDR notation for the rule.
      * 
      */
-    @InputImport(name="ipMask", required=true)
+    @Import(name="ipMask", required=true)
       private final Output<String> ipMask;
 
     public Output<String> getIpMask() {

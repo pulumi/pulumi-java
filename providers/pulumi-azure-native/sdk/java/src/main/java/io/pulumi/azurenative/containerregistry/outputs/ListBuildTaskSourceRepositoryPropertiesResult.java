@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.SourceControlAuthInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListBuildTaskSourceRepositoryPropertiesResult {
     /**
      * The value of this property indicates whether the source control commit trigger is enabled or not.
@@ -34,12 +34,12 @@ public final class ListBuildTaskSourceRepositoryPropertiesResult {
      */
     private final String sourceControlType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListBuildTaskSourceRepositoryPropertiesResult(
-        @OutputCustomType.Parameter("isCommitTriggerEnabled") @Nullable Boolean isCommitTriggerEnabled,
-        @OutputCustomType.Parameter("repositoryUrl") String repositoryUrl,
-        @OutputCustomType.Parameter("sourceControlAuthProperties") @Nullable SourceControlAuthInfoResponse sourceControlAuthProperties,
-        @OutputCustomType.Parameter("sourceControlType") String sourceControlType) {
+        @CustomType.Parameter("isCommitTriggerEnabled") @Nullable Boolean isCommitTriggerEnabled,
+        @CustomType.Parameter("repositoryUrl") String repositoryUrl,
+        @CustomType.Parameter("sourceControlAuthProperties") @Nullable SourceControlAuthInfoResponse sourceControlAuthProperties,
+        @CustomType.Parameter("sourceControlType") String sourceControlType) {
         this.isCommitTriggerEnabled = isCommitTriggerEnabled;
         this.repositoryUrl = repositoryUrl;
         this.sourceControlAuthProperties = sourceControlAuthProperties;

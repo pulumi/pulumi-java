@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAliasResult {
     /**
      * The Amazon Resource Name (ARN) identifying the Lambda function alias.
@@ -37,15 +37,15 @@ public final class GetAliasResult {
     private final String invokeArn;
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAliasResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("functionName") String functionName,
-        @OutputCustomType.Parameter("functionVersion") String functionVersion,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("invokeArn") String invokeArn,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("functionName") String functionName,
+        @CustomType.Parameter("functionVersion") String functionVersion,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("invokeArn") String invokeArn,
+        @CustomType.Parameter("name") String name) {
         this.arn = arn;
         this.description = description;
         this.functionName = functionName;

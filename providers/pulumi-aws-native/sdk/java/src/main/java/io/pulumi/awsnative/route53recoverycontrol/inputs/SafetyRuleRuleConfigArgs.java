@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53recoverycontrol.inputs;
 
 import io.pulumi.awsnative.route53recoverycontrol.enums.SafetyRuleRuleType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
      * Logical negation of the rule. If the rule would usually evaluate true, it's evaluated as false, and vice versa.
      * 
      */
-    @InputImport(name="inverted", required=true)
+    @Import(name="inverted", required=true)
       private final Output<Boolean> inverted;
 
     public Output<Boolean> getInverted() {
@@ -34,14 +34,14 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
      * The value of N, when you specify an ATLEAST rule type. That is, Threshold is the number of controls that must be set when you specify an ATLEAST type.
      * 
      */
-    @InputImport(name="threshold", required=true)
+    @Import(name="threshold", required=true)
       private final Output<Integer> threshold;
 
     public Output<Integer> getThreshold() {
         return this.threshold;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<SafetyRuleRuleType> type;
 
     public Output<SafetyRuleRuleType> getType() {

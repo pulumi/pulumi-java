@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCloudEndpointResult {
     /**
      * Azure file share name
@@ -72,20 +72,20 @@ public final class GetCloudEndpointResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCloudEndpointResult(
-        @OutputCustomType.Parameter("azureFileShareName") @Nullable String azureFileShareName,
-        @OutputCustomType.Parameter("backupEnabled") String backupEnabled,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastOperationName") @Nullable String lastOperationName,
-        @OutputCustomType.Parameter("lastWorkflowId") @Nullable String lastWorkflowId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("partnershipId") @Nullable String partnershipId,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("storageAccountResourceId") @Nullable String storageAccountResourceId,
-        @OutputCustomType.Parameter("storageAccountTenantId") @Nullable String storageAccountTenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("azureFileShareName") @Nullable String azureFileShareName,
+        @CustomType.Parameter("backupEnabled") String backupEnabled,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastOperationName") @Nullable String lastOperationName,
+        @CustomType.Parameter("lastWorkflowId") @Nullable String lastWorkflowId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("partnershipId") @Nullable String partnershipId,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("storageAccountResourceId") @Nullable String storageAccountResourceId,
+        @CustomType.Parameter("storageAccountTenantId") @Nullable String storageAccountTenantId,
+        @CustomType.Parameter("type") String type) {
         this.azureFileShareName = azureFileShareName;
         this.backupEnabled = backupEnabled;
         this.friendlyName = friendlyName;

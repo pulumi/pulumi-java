@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OpenIdAuthenticationSettingsContractResponse {
     /**
      * How to send token to the server.
@@ -23,10 +23,10 @@ public final class OpenIdAuthenticationSettingsContractResponse {
      */
     private final @Nullable String openidProviderId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OpenIdAuthenticationSettingsContractResponse(
-        @OutputCustomType.Parameter("bearerTokenSendingMethods") @Nullable List<String> bearerTokenSendingMethods,
-        @OutputCustomType.Parameter("openidProviderId") @Nullable String openidProviderId) {
+        @CustomType.Parameter("bearerTokenSendingMethods") @Nullable List<String> bearerTokenSendingMethods,
+        @CustomType.Parameter("openidProviderId") @Nullable String openidProviderId) {
         this.bearerTokenSendingMethods = bearerTokenSendingMethods;
         this.openidProviderId = openidProviderId;
     }

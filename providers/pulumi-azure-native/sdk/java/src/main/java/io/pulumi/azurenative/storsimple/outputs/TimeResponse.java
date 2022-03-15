@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TimeResponse {
     /**
      * The hour.
@@ -25,11 +25,11 @@ public final class TimeResponse {
      */
     private final Integer seconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TimeResponse(
-        @OutputCustomType.Parameter("hours") Integer hours,
-        @OutputCustomType.Parameter("minutes") Integer minutes,
-        @OutputCustomType.Parameter("seconds") Integer seconds) {
+        @CustomType.Parameter("hours") Integer hours,
+        @CustomType.Parameter("minutes") Integer minutes,
+        @CustomType.Parameter("seconds") Integer seconds) {
         this.hours = hours;
         this.minutes = minutes;
         this.seconds = seconds;

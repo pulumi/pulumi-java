@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class InternalCheckerResponse extends io.pulumi.resources.InvokeArg
      * The checker's human-readable name. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -31,7 +31,7 @@ public final class InternalCheckerResponse extends io.pulumi.resources.InvokeArg
      * The GCP zone the Uptime check should egress from. Only respected for internal Uptime checks, where internal_network is specified.
      * 
      */
-    @InputImport(name="gcpZone", required=true)
+    @Import(name="gcpZone", required=true)
       private final String gcpZone;
 
     public String getGcpZone() {
@@ -42,7 +42,7 @@ public final class InternalCheckerResponse extends io.pulumi.resources.InvokeArg
      * A unique resource name for this InternalChecker. The format is: projects/[PROJECT_ID_OR_NUMBER]/internalCheckers/[INTERNAL_CHECKER_ID] [PROJECT_ID_OR_NUMBER] is the Stackdriver Workspace project for the Uptime check config associated with the internal checker.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -53,7 +53,7 @@ public final class InternalCheckerResponse extends io.pulumi.resources.InvokeArg
      * The GCP VPC network (https://cloud.google.com/vpc/docs/vpc) where the internal resource lives (ex: "default").
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final String network;
 
     public String getNetwork() {
@@ -64,7 +64,7 @@ public final class InternalCheckerResponse extends io.pulumi.resources.InvokeArg
      * The GCP project ID where the internal checker lives. Not necessary the same as the Workspace project.
      * 
      */
-    @InputImport(name="peerProjectId", required=true)
+    @Import(name="peerProjectId", required=true)
       private final String peerProjectId;
 
     public String getPeerProjectId() {
@@ -75,7 +75,7 @@ public final class InternalCheckerResponse extends io.pulumi.resources.InvokeArg
      * The current operational state of the internal checker.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {

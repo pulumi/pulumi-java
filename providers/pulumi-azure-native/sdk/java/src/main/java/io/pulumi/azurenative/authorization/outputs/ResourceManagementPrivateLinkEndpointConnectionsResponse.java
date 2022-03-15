@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceManagementPrivateLinkEndpointConnectionsResponse {
     /**
      * The private endpoint connections.
@@ -17,8 +17,8 @@ public final class ResourceManagementPrivateLinkEndpointConnectionsResponse {
      */
     private final @Nullable List<String> privateEndpointConnections;
 
-    @OutputCustomType.Constructor
-    private ResourceManagementPrivateLinkEndpointConnectionsResponse(@OutputCustomType.Parameter("privateEndpointConnections") @Nullable List<String> privateEndpointConnections) {
+    @CustomType.Constructor
+    private ResourceManagementPrivateLinkEndpointConnectionsResponse(@CustomType.Parameter("privateEndpointConnections") @Nullable List<String> privateEndpointConnections) {
         this.privateEndpointConnections = privateEndpointConnections;
     }
 

@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.AlarmsProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPortalResult {
     /**
      * Contains the configuration information of an alarm created in an AWS IoT SiteWise Monitor portal. You can use the alarm to monitor an asset property and get notified when the asset property value is outside a specified range.
@@ -63,18 +63,18 @@ public final class GetPortalResult {
      */
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPortalResult(
-        @OutputCustomType.Parameter("alarms") @Nullable AlarmsProperties alarms,
-        @OutputCustomType.Parameter("notificationSenderEmail") @Nullable String notificationSenderEmail,
-        @OutputCustomType.Parameter("portalArn") @Nullable String portalArn,
-        @OutputCustomType.Parameter("portalClientId") @Nullable String portalClientId,
-        @OutputCustomType.Parameter("portalContactEmail") @Nullable String portalContactEmail,
-        @OutputCustomType.Parameter("portalDescription") @Nullable String portalDescription,
-        @OutputCustomType.Parameter("portalId") @Nullable String portalId,
-        @OutputCustomType.Parameter("portalName") @Nullable String portalName,
-        @OutputCustomType.Parameter("portalStartUrl") @Nullable String portalStartUrl,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
+        @CustomType.Parameter("alarms") @Nullable AlarmsProperties alarms,
+        @CustomType.Parameter("notificationSenderEmail") @Nullable String notificationSenderEmail,
+        @CustomType.Parameter("portalArn") @Nullable String portalArn,
+        @CustomType.Parameter("portalClientId") @Nullable String portalClientId,
+        @CustomType.Parameter("portalContactEmail") @Nullable String portalContactEmail,
+        @CustomType.Parameter("portalDescription") @Nullable String portalDescription,
+        @CustomType.Parameter("portalId") @Nullable String portalId,
+        @CustomType.Parameter("portalName") @Nullable String portalName,
+        @CustomType.Parameter("portalStartUrl") @Nullable String portalStartUrl,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.alarms = alarms;
         this.notificationSenderEmail = notificationSenderEmail;
         this.portalArn = portalArn;

@@ -7,12 +7,12 @@ import io.pulumi.awsnative.databrew.enums.DatasetFormat;
 import io.pulumi.awsnative.databrew.outputs.DatasetFormatOptions;
 import io.pulumi.awsnative.databrew.outputs.DatasetInput;
 import io.pulumi.awsnative.databrew.outputs.DatasetPathOptions;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDatasetResult {
     /**
      * Dataset format
@@ -35,12 +35,12 @@ public final class GetDatasetResult {
      */
     private final @Nullable DatasetPathOptions pathOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatasetResult(
-        @OutputCustomType.Parameter("format") @Nullable DatasetFormat format,
-        @OutputCustomType.Parameter("formatOptions") @Nullable DatasetFormatOptions formatOptions,
-        @OutputCustomType.Parameter("input") @Nullable DatasetInput input,
-        @OutputCustomType.Parameter("pathOptions") @Nullable DatasetPathOptions pathOptions) {
+        @CustomType.Parameter("format") @Nullable DatasetFormat format,
+        @CustomType.Parameter("formatOptions") @Nullable DatasetFormatOptions formatOptions,
+        @CustomType.Parameter("input") @Nullable DatasetInput input,
+        @CustomType.Parameter("pathOptions") @Nullable DatasetPathOptions pathOptions) {
         this.format = format;
         this.formatOptions = formatOptions;
         this.input = input;

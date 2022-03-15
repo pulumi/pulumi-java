@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.outputs.ClusterCapacityProviderAssociationsCapacityProviderStrategy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterCapacityProviderAssociationsResult {
     private final @Nullable List<String> capacityProviders;
     private final @Nullable List<ClusterCapacityProviderAssociationsCapacityProviderStrategy> defaultCapacityProviderStrategy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterCapacityProviderAssociationsResult(
-        @OutputCustomType.Parameter("capacityProviders") @Nullable List<String> capacityProviders,
-        @OutputCustomType.Parameter("defaultCapacityProviderStrategy") @Nullable List<ClusterCapacityProviderAssociationsCapacityProviderStrategy> defaultCapacityProviderStrategy) {
+        @CustomType.Parameter("capacityProviders") @Nullable List<String> capacityProviders,
+        @CustomType.Parameter("defaultCapacityProviderStrategy") @Nullable List<ClusterCapacityProviderAssociationsCapacityProviderStrategy> defaultCapacityProviderStrategy) {
         this.capacityProviders = capacityProviders;
         this.defaultCapacityProviderStrategy = defaultCapacityProviderStrategy;
     }

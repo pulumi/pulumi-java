@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.eventarc_v1.outputs.DestinationResponse;
 import io.pulumi.googlenative.eventarc_v1.outputs.EventFilterResponse;
 import io.pulumi.googlenative.eventarc_v1.outputs.TransportResponse;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTriggerResult {
     /**
      * The creation time.
@@ -65,18 +65,18 @@ public final class GetTriggerResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTriggerResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("destination") DestinationResponse destination,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("eventFilters") List<EventFilterResponse> eventFilters,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("transport") TransportResponse transport,
-        @OutputCustomType.Parameter("uid") String uid,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("destination") DestinationResponse destination,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("eventFilters") List<EventFilterResponse> eventFilters,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("transport") TransportResponse transport,
+        @CustomType.Parameter("uid") String uid,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.destination = destination;
         this.etag = etag;

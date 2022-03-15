@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iot.FleetMetricArgs;
 import io.pulumi.awsnative.iot.outputs.FleetMetricAggregationType;
 import io.pulumi.awsnative.iot.outputs.FleetMetricTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.Integer;
@@ -26,7 +26,7 @@ public class FleetMetric extends io.pulumi.resources.CustomResource {
      * The aggregation field to perform aggregation and metric emission
      * 
      */
-    @OutputExport(name="aggregationField", type=String.class, parameters={})
+    @Export(name="aggregationField", type=String.class, parameters={})
     private Output</* @Nullable */ String> aggregationField;
 
     /**
@@ -36,7 +36,7 @@ public class FleetMetric extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getAggregationField() {
         return this.aggregationField;
     }
-    @OutputExport(name="aggregationType", type=FleetMetricAggregationType.class, parameters={})
+    @Export(name="aggregationType", type=FleetMetricAggregationType.class, parameters={})
     private Output</* @Nullable */ FleetMetricAggregationType> aggregationType;
 
     public Output</* @Nullable */ FleetMetricAggregationType> getAggregationType() {
@@ -46,7 +46,7 @@ public class FleetMetric extends io.pulumi.resources.CustomResource {
      * The creation date of a fleet metric
      * 
      */
-    @OutputExport(name="creationDate", type=Double.class, parameters={})
+    @Export(name="creationDate", type=Double.class, parameters={})
     private Output<Double> creationDate;
 
     /**
@@ -60,7 +60,7 @@ public class FleetMetric extends io.pulumi.resources.CustomResource {
      * The description of a fleet metric
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -74,7 +74,7 @@ public class FleetMetric extends io.pulumi.resources.CustomResource {
      * The index name of a fleet metric
      * 
      */
-    @OutputExport(name="indexName", type=String.class, parameters={})
+    @Export(name="indexName", type=String.class, parameters={})
     private Output</* @Nullable */ String> indexName;
 
     /**
@@ -88,7 +88,7 @@ public class FleetMetric extends io.pulumi.resources.CustomResource {
      * The last modified date of a fleet metric
      * 
      */
-    @OutputExport(name="lastModifiedDate", type=Double.class, parameters={})
+    @Export(name="lastModifiedDate", type=Double.class, parameters={})
     private Output<Double> lastModifiedDate;
 
     /**
@@ -102,7 +102,7 @@ public class FleetMetric extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Number (ARN) of a fleet metric metric
      * 
      */
-    @OutputExport(name="metricArn", type=String.class, parameters={})
+    @Export(name="metricArn", type=String.class, parameters={})
     private Output<String> metricArn;
 
     /**
@@ -116,7 +116,7 @@ public class FleetMetric extends io.pulumi.resources.CustomResource {
      * The name of the fleet metric
      * 
      */
-    @OutputExport(name="metricName", type=String.class, parameters={})
+    @Export(name="metricName", type=String.class, parameters={})
     private Output<String> metricName;
 
     /**
@@ -130,7 +130,7 @@ public class FleetMetric extends io.pulumi.resources.CustomResource {
      * The period of metric emission in seconds
      * 
      */
-    @OutputExport(name="period", type=Integer.class, parameters={})
+    @Export(name="period", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> period;
 
     /**
@@ -144,7 +144,7 @@ public class FleetMetric extends io.pulumi.resources.CustomResource {
      * The Fleet Indexing query used by a fleet metric
      * 
      */
-    @OutputExport(name="queryString", type=String.class, parameters={})
+    @Export(name="queryString", type=String.class, parameters={})
     private Output</* @Nullable */ String> queryString;
 
     /**
@@ -158,7 +158,7 @@ public class FleetMetric extends io.pulumi.resources.CustomResource {
      * The version of a Fleet Indexing query used by a fleet metric
      * 
      */
-    @OutputExport(name="queryVersion", type=String.class, parameters={})
+    @Export(name="queryVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> queryVersion;
 
     /**
@@ -172,7 +172,7 @@ public class FleetMetric extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={FleetMetricTag.class})
+    @Export(name="tags", type=List.class, parameters={FleetMetricTag.class})
     private Output</* @Nullable */ List<FleetMetricTag>> tags;
 
     /**
@@ -186,7 +186,7 @@ public class FleetMetric extends io.pulumi.resources.CustomResource {
      * The unit of data points emitted by a fleet metric
      * 
      */
-    @OutputExport(name="unit", type=String.class, parameters={})
+    @Export(name="unit", type=String.class, parameters={})
     private Output</* @Nullable */ String> unit;
 
     /**
@@ -200,7 +200,7 @@ public class FleetMetric extends io.pulumi.resources.CustomResource {
      * The version of a fleet metric
      * 
      */
-    @OutputExport(name="version", type=Double.class, parameters={})
+    @Export(name="version", type=Double.class, parameters={})
     private Output<Double> version;
 
     /**

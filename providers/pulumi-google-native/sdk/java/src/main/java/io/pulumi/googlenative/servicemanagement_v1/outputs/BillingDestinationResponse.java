@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BillingDestinationResponse {
     /**
      * Names of the metrics to report to this billing destination. Each name must be defined in Service.metrics section.
@@ -21,10 +21,10 @@ public final class BillingDestinationResponse {
      */
     private final String monitoredResource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BillingDestinationResponse(
-        @OutputCustomType.Parameter("metrics") List<String> metrics,
-        @OutputCustomType.Parameter("monitoredResource") String monitoredResource) {
+        @CustomType.Parameter("metrics") List<String> metrics,
+        @CustomType.Parameter("monitoredResource") String monitoredResource) {
         this.metrics = metrics;
         this.monitoredResource = monitoredResource;
     }

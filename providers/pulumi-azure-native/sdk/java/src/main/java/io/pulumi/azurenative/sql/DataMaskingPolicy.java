@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.DataMaskingPolicyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class DataMaskingPolicy extends io.pulumi.resources.CustomResource {
      * The list of the application principals. This is a legacy parameter and is no longer used.
      * 
      */
-    @OutputExport(name="applicationPrincipals", type=String.class, parameters={})
+    @Export(name="applicationPrincipals", type=String.class, parameters={})
     private Output<String> applicationPrincipals;
 
     /**
@@ -48,7 +48,7 @@ public class DataMaskingPolicy extends io.pulumi.resources.CustomResource {
      * The state of the data masking policy.
      * 
      */
-    @OutputExport(name="dataMaskingState", type=String.class, parameters={})
+    @Export(name="dataMaskingState", type=String.class, parameters={})
     private Output<String> dataMaskingState;
 
     /**
@@ -62,7 +62,7 @@ public class DataMaskingPolicy extends io.pulumi.resources.CustomResource {
      * The list of the exempt principals. Specifies the semicolon-separated list of database users for which the data masking policy does not apply. The specified users receive data results without masking for all of the database queries.
      * 
      */
-    @OutputExport(name="exemptPrincipals", type=String.class, parameters={})
+    @Export(name="exemptPrincipals", type=String.class, parameters={})
     private Output</* @Nullable */ String> exemptPrincipals;
 
     /**
@@ -76,7 +76,7 @@ public class DataMaskingPolicy extends io.pulumi.resources.CustomResource {
      * The kind of data masking policy. Metadata, used for Azure portal.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -90,7 +90,7 @@ public class DataMaskingPolicy extends io.pulumi.resources.CustomResource {
      * The location of the data masking policy.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -104,7 +104,7 @@ public class DataMaskingPolicy extends io.pulumi.resources.CustomResource {
      * The masking level. This is a legacy parameter and is no longer used.
      * 
      */
-    @OutputExport(name="maskingLevel", type=String.class, parameters={})
+    @Export(name="maskingLevel", type=String.class, parameters={})
     private Output<String> maskingLevel;
 
     /**
@@ -118,7 +118,7 @@ public class DataMaskingPolicy extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -132,7 +132,7 @@ public class DataMaskingPolicy extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

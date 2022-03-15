@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.RecurrenceScheduleResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ScheduleTriggerRecurrenceResponse extends io.pulumi.resources
      * The end time.
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable String endTime;
 
     public Optional<String> getEndTime() {
@@ -35,7 +35,7 @@ public final class ScheduleTriggerRecurrenceResponse extends io.pulumi.resources
      * The frequency.
      * 
      */
-    @InputImport(name="frequency")
+    @Import(name="frequency")
       private final @Nullable String frequency;
 
     public Optional<String> getFrequency() {
@@ -46,7 +46,7 @@ public final class ScheduleTriggerRecurrenceResponse extends io.pulumi.resources
      * The interval.
      * 
      */
-    @InputImport(name="interval")
+    @Import(name="interval")
       private final @Nullable Integer interval;
 
     public Optional<Integer> getInterval() {
@@ -57,7 +57,7 @@ public final class ScheduleTriggerRecurrenceResponse extends io.pulumi.resources
      * The recurrence schedule.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable RecurrenceScheduleResponse schedule;
 
     public Optional<RecurrenceScheduleResponse> getSchedule() {
@@ -68,7 +68,7 @@ public final class ScheduleTriggerRecurrenceResponse extends io.pulumi.resources
      * The start time.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
@@ -79,7 +79,7 @@ public final class ScheduleTriggerRecurrenceResponse extends io.pulumi.resources
      * The time zone.
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable String timeZone;
 
     public Optional<String> getTimeZone() {

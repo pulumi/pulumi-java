@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.runtimeconfig_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetWaiterArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetWaiterArgs Empty = new GetWaiterArgs();
 
-    @InputImport(name="configId", required=true)
+    @Import(name="configId", required=true)
       private final String configId;
 
     public String getConfigId() {
         return this.configId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="waiterId", required=true)
+    @Import(name="waiterId", required=true)
       private final String waiterId;
 
     public String getWaiterId() {

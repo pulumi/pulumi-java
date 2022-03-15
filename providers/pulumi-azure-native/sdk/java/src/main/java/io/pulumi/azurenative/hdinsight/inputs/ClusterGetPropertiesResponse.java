@@ -16,7 +16,7 @@ import io.pulumi.azurenative.hdinsight.inputs.NetworkPropertiesResponse;
 import io.pulumi.azurenative.hdinsight.inputs.QuotaInfoResponse;
 import io.pulumi.azurenative.hdinsight.inputs.SecurityProfileResponse;
 import io.pulumi.azurenative.hdinsight.inputs.StorageProfileResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,7 +36,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The cluster definition.
      * 
      */
-    @InputImport(name="clusterDefinition", required=true)
+    @Import(name="clusterDefinition", required=true)
       private final ClusterDefinitionResponse clusterDefinition;
 
     public ClusterDefinitionResponse getClusterDefinition() {
@@ -47,7 +47,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The hdp version of the cluster.
      * 
      */
-    @InputImport(name="clusterHdpVersion")
+    @Import(name="clusterHdpVersion")
       private final @Nullable String clusterHdpVersion;
 
     public Optional<String> getClusterHdpVersion() {
@@ -58,7 +58,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The cluster id.
      * 
      */
-    @InputImport(name="clusterId")
+    @Import(name="clusterId")
       private final @Nullable String clusterId;
 
     public Optional<String> getClusterId() {
@@ -69,7 +69,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The state of the cluster.
      * 
      */
-    @InputImport(name="clusterState")
+    @Import(name="clusterState")
       private final @Nullable String clusterState;
 
     public Optional<String> getClusterState() {
@@ -80,7 +80,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The version of the cluster.
      * 
      */
-    @InputImport(name="clusterVersion")
+    @Import(name="clusterVersion")
       private final @Nullable String clusterVersion;
 
     public Optional<String> getClusterVersion() {
@@ -91,7 +91,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The compute isolation properties.
      * 
      */
-    @InputImport(name="computeIsolationProperties")
+    @Import(name="computeIsolationProperties")
       private final @Nullable ComputeIsolationPropertiesResponse computeIsolationProperties;
 
     public Optional<ComputeIsolationPropertiesResponse> getComputeIsolationProperties() {
@@ -102,7 +102,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The compute profile.
      * 
      */
-    @InputImport(name="computeProfile")
+    @Import(name="computeProfile")
       private final @Nullable ComputeProfileResponse computeProfile;
 
     public Optional<ComputeProfileResponse> getComputeProfile() {
@@ -113,7 +113,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The list of connectivity endpoints.
      * 
      */
-    @InputImport(name="connectivityEndpoints")
+    @Import(name="connectivityEndpoints")
       private final @Nullable List<ConnectivityEndpointResponse> connectivityEndpoints;
 
     public List<ConnectivityEndpointResponse> getConnectivityEndpoints() {
@@ -124,7 +124,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The date on which the cluster was created.
      * 
      */
-    @InputImport(name="createdDate")
+    @Import(name="createdDate")
       private final @Nullable String createdDate;
 
     public Optional<String> getCreatedDate() {
@@ -135,7 +135,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The disk encryption properties.
      * 
      */
-    @InputImport(name="diskEncryptionProperties")
+    @Import(name="diskEncryptionProperties")
       private final @Nullable DiskEncryptionPropertiesResponse diskEncryptionProperties;
 
     public Optional<DiskEncryptionPropertiesResponse> getDiskEncryptionProperties() {
@@ -146,7 +146,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The encryption-in-transit properties.
      * 
      */
-    @InputImport(name="encryptionInTransitProperties")
+    @Import(name="encryptionInTransitProperties")
       private final @Nullable EncryptionInTransitPropertiesResponse encryptionInTransitProperties;
 
     public Optional<EncryptionInTransitPropertiesResponse> getEncryptionInTransitProperties() {
@@ -157,7 +157,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The list of errors.
      * 
      */
-    @InputImport(name="errors")
+    @Import(name="errors")
       private final @Nullable List<ErrorsResponse> errors;
 
     public List<ErrorsResponse> getErrors() {
@@ -168,7 +168,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The excluded services config.
      * 
      */
-    @InputImport(name="excludedServicesConfig")
+    @Import(name="excludedServicesConfig")
       private final @Nullable ExcludedServicesConfigResponse excludedServicesConfig;
 
     public Optional<ExcludedServicesConfigResponse> getExcludedServicesConfig() {
@@ -179,7 +179,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The cluster kafka rest proxy configuration.
      * 
      */
-    @InputImport(name="kafkaRestProperties")
+    @Import(name="kafkaRestProperties")
       private final @Nullable KafkaRestPropertiesResponse kafkaRestProperties;
 
     public Optional<KafkaRestPropertiesResponse> getKafkaRestProperties() {
@@ -190,7 +190,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The minimal supported tls version.
      * 
      */
-    @InputImport(name="minSupportedTlsVersion")
+    @Import(name="minSupportedTlsVersion")
       private final @Nullable String minSupportedTlsVersion;
 
     public Optional<String> getMinSupportedTlsVersion() {
@@ -201,7 +201,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The network properties.
      * 
      */
-    @InputImport(name="networkProperties")
+    @Import(name="networkProperties")
       private final @Nullable NetworkPropertiesResponse networkProperties;
 
     public Optional<NetworkPropertiesResponse> getNetworkProperties() {
@@ -212,7 +212,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The type of operating system.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable String osType;
 
     public Optional<String> getOsType() {
@@ -223,7 +223,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The provisioning state, which only appears in the response.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
@@ -234,7 +234,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The quota information.
      * 
      */
-    @InputImport(name="quotaInfo")
+    @Import(name="quotaInfo")
       private final @Nullable QuotaInfoResponse quotaInfo;
 
     public Optional<QuotaInfoResponse> getQuotaInfo() {
@@ -245,7 +245,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The security profile.
      * 
      */
-    @InputImport(name="securityProfile")
+    @Import(name="securityProfile")
       private final @Nullable SecurityProfileResponse securityProfile;
 
     public Optional<SecurityProfileResponse> getSecurityProfile() {
@@ -256,7 +256,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The storage profile.
      * 
      */
-    @InputImport(name="storageProfile")
+    @Import(name="storageProfile")
       private final @Nullable StorageProfileResponse storageProfile;
 
     public Optional<StorageProfileResponse> getStorageProfile() {
@@ -267,7 +267,7 @@ public final class ClusterGetPropertiesResponse extends io.pulumi.resources.Invo
      * The cluster tier.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable String tier;
 
     public Optional<String> getTier() {

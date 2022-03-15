@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.outputs.AgentPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.ArgumentResponse;
 import io.pulumi.azurenative.containerregistry.outputs.CredentialsResponse;
 import io.pulumi.azurenative.containerregistry.outputs.PlatformPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DockerBuildRequestResponse {
     /**
      * The machine configuration of the run agent.
@@ -96,23 +96,23 @@ public final class DockerBuildRequestResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DockerBuildRequestResponse(
-        @OutputCustomType.Parameter("agentConfiguration") @Nullable AgentPropertiesResponse agentConfiguration,
-        @OutputCustomType.Parameter("agentPoolName") @Nullable String agentPoolName,
-        @OutputCustomType.Parameter("arguments") @Nullable List<ArgumentResponse> arguments,
-        @OutputCustomType.Parameter("credentials") @Nullable CredentialsResponse credentials,
-        @OutputCustomType.Parameter("dockerFilePath") String dockerFilePath,
-        @OutputCustomType.Parameter("imageNames") @Nullable List<String> imageNames,
-        @OutputCustomType.Parameter("isArchiveEnabled") @Nullable Boolean isArchiveEnabled,
-        @OutputCustomType.Parameter("isPushEnabled") @Nullable Boolean isPushEnabled,
-        @OutputCustomType.Parameter("logTemplate") @Nullable String logTemplate,
-        @OutputCustomType.Parameter("noCache") @Nullable Boolean noCache,
-        @OutputCustomType.Parameter("platform") PlatformPropertiesResponse platform,
-        @OutputCustomType.Parameter("sourceLocation") @Nullable String sourceLocation,
-        @OutputCustomType.Parameter("target") @Nullable String target,
-        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("agentConfiguration") @Nullable AgentPropertiesResponse agentConfiguration,
+        @CustomType.Parameter("agentPoolName") @Nullable String agentPoolName,
+        @CustomType.Parameter("arguments") @Nullable List<ArgumentResponse> arguments,
+        @CustomType.Parameter("credentials") @Nullable CredentialsResponse credentials,
+        @CustomType.Parameter("dockerFilePath") String dockerFilePath,
+        @CustomType.Parameter("imageNames") @Nullable List<String> imageNames,
+        @CustomType.Parameter("isArchiveEnabled") @Nullable Boolean isArchiveEnabled,
+        @CustomType.Parameter("isPushEnabled") @Nullable Boolean isPushEnabled,
+        @CustomType.Parameter("logTemplate") @Nullable String logTemplate,
+        @CustomType.Parameter("noCache") @Nullable Boolean noCache,
+        @CustomType.Parameter("platform") PlatformPropertiesResponse platform,
+        @CustomType.Parameter("sourceLocation") @Nullable String sourceLocation,
+        @CustomType.Parameter("target") @Nullable String target,
+        @CustomType.Parameter("timeout") @Nullable Integer timeout,
+        @CustomType.Parameter("type") String type) {
         this.agentConfiguration = agentConfiguration;
         this.agentPoolName = agentPoolName;
         this.arguments = arguments;

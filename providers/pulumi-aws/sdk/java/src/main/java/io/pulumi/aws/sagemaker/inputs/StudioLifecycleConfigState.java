@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
      * The Amazon Resource Name (ARN) assigned by AWS to this Studio Lifecycle Config.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
      * The App type that the Lifecycle Configuration is attached to. Valid values are `JupyterServer` and `KernelGateway`.
      * 
      */
-    @InputImport(name="studioLifecycleConfigAppType")
+    @Import(name="studioLifecycleConfigAppType")
       private final @Nullable Output<String> studioLifecycleConfigAppType;
 
     public Output<String> getStudioLifecycleConfigAppType() {
@@ -41,7 +41,7 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
      * The content of your Studio Lifecycle Configuration script. This content must be base64 encoded.
      * 
      */
-    @InputImport(name="studioLifecycleConfigContent")
+    @Import(name="studioLifecycleConfigContent")
       private final @Nullable Output<String> studioLifecycleConfigContent;
 
     public Output<String> getStudioLifecycleConfigContent() {
@@ -52,7 +52,7 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
      * The name of the Studio Lifecycle Configuration to create.
      * 
      */
-    @InputImport(name="studioLifecycleConfigName")
+    @Import(name="studioLifecycleConfigName")
       private final @Nullable Output<String> studioLifecycleConfigName;
 
     public Output<String> getStudioLifecycleConfigName() {
@@ -63,7 +63,7 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -74,7 +74,7 @@ public final class StudioLifecycleConfigState extends io.pulumi.resources.Resour
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

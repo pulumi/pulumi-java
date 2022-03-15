@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
     /**
      * Name of the database
@@ -64,18 +64,18 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse(
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("endedOn") String endedOn,
-        @OutputCustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("resultType") String resultType,
-        @OutputCustomType.Parameter("sizeMB") Double sizeMB,
-        @OutputCustomType.Parameter("stage") String stage,
-        @OutputCustomType.Parameter("startedOn") String startedOn,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("endedOn") String endedOn,
+        @CustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("resultType") String resultType,
+        @CustomType.Parameter("sizeMB") Double sizeMB,
+        @CustomType.Parameter("stage") String stage,
+        @CustomType.Parameter("startedOn") String startedOn,
+        @CustomType.Parameter("state") String state) {
         this.databaseName = databaseName;
         this.endedOn = endedOn;
         this.exceptionsAndWarnings = exceptionsAndWarnings;

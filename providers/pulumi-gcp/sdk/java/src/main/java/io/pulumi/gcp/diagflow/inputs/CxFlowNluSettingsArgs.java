@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CxFlowNluSettingsArgs extends io.pulumi.resources.ResourceArg
      * If the returned score value is less than the threshold value, then a no-match event will be triggered. The score values range from 0.0 (completely uncertain) to 1.0 (completely certain). If set to 0.0, the default of 0.3 is used.
      * 
      */
-    @InputImport(name="classificationThreshold")
+    @Import(name="classificationThreshold")
       private final @Nullable Output<Double> classificationThreshold;
 
     public Output<Double> getClassificationThreshold() {
@@ -34,7 +34,7 @@ public final class CxFlowNluSettingsArgs extends io.pulumi.resources.ResourceArg
      *   Possible values are `MODEL_TRAINING_MODE_AUTOMATIC` and `MODEL_TRAINING_MODE_MANUAL`.
      * 
      */
-    @InputImport(name="modelTrainingMode")
+    @Import(name="modelTrainingMode")
       private final @Nullable Output<String> modelTrainingMode;
 
     public Output<String> getModelTrainingMode() {
@@ -48,7 +48,7 @@ public final class CxFlowNluSettingsArgs extends io.pulumi.resources.ResourceArg
      *   Possible values are `MODEL_TYPE_STANDARD` and `MODEL_TYPE_ADVANCED`.
      * 
      */
-    @InputImport(name="modelType")
+    @Import(name="modelType")
       private final @Nullable Output<String> modelType;
 
     public Output<String> getModelType() {

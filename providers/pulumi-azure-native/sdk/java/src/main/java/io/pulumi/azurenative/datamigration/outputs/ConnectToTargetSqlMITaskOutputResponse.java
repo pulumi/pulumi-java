@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectToTargetSqlMITaskOutputResponse {
     /**
      * List of agent jobs on the target server.
@@ -42,14 +42,14 @@ public final class ConnectToTargetSqlMITaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectToTargetSqlMITaskOutputResponse(
-        @OutputCustomType.Parameter("agentJobs") List<String> agentJobs,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("logins") List<String> logins,
-        @OutputCustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
-        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion,
-        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
+        @CustomType.Parameter("agentJobs") List<String> agentJobs,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("logins") List<String> logins,
+        @CustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
+        @CustomType.Parameter("targetServerVersion") String targetServerVersion,
+        @CustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.agentJobs = agentJobs;
         this.id = id;
         this.logins = logins;

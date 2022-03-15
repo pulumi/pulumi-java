@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FeatureMembershipConfigmanagementPolicyController {
     /**
      * Sets the interval for Policy Controller Audit Scans (in seconds). When set to 0, this disables audit functionality altogether.
@@ -44,14 +44,14 @@ public final class FeatureMembershipConfigmanagementPolicyController {
      */
     private final @Nullable Boolean templateLibraryInstalled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FeatureMembershipConfigmanagementPolicyController(
-        @OutputCustomType.Parameter("auditIntervalSeconds") @Nullable String auditIntervalSeconds,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("exemptableNamespaces") @Nullable List<String> exemptableNamespaces,
-        @OutputCustomType.Parameter("logDeniesEnabled") @Nullable Boolean logDeniesEnabled,
-        @OutputCustomType.Parameter("referentialRulesEnabled") @Nullable Boolean referentialRulesEnabled,
-        @OutputCustomType.Parameter("templateLibraryInstalled") @Nullable Boolean templateLibraryInstalled) {
+        @CustomType.Parameter("auditIntervalSeconds") @Nullable String auditIntervalSeconds,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("exemptableNamespaces") @Nullable List<String> exemptableNamespaces,
+        @CustomType.Parameter("logDeniesEnabled") @Nullable Boolean logDeniesEnabled,
+        @CustomType.Parameter("referentialRulesEnabled") @Nullable Boolean referentialRulesEnabled,
+        @CustomType.Parameter("templateLibraryInstalled") @Nullable Boolean templateLibraryInstalled) {
         this.auditIntervalSeconds = auditIntervalSeconds;
         this.enabled = enabled;
         this.exemptableNamespaces = exemptableNamespaces;

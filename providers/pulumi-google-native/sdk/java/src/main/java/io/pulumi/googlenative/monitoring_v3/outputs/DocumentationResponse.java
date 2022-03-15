@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DocumentationResponse {
     /**
      * The text of the documentation, interpreted according to mime_type. The content may not exceed 8,192 Unicode characters and may not exceed more than 10,240 bytes when encoded in UTF-8 format, whichever is smaller.
@@ -20,10 +20,10 @@ public final class DocumentationResponse {
      */
     private final String mimeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DocumentationResponse(
-        @OutputCustomType.Parameter("content") String content,
-        @OutputCustomType.Parameter("mimeType") String mimeType) {
+        @CustomType.Parameter("content") String content,
+        @CustomType.Parameter("mimeType") String mimeType) {
         this.content = content;
         this.mimeType = mimeType;
     }

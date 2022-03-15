@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudkms_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudkms_v1.EkmConnectionArgs;
@@ -26,7 +26,7 @@ public class EkmConnection extends io.pulumi.resources.CustomResource {
      * The time at which the EkmConnection was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -40,7 +40,7 @@ public class EkmConnection extends io.pulumi.resources.CustomResource {
      * This checksum is computed by the server based on the value of other fields, and may be sent on update requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -54,7 +54,7 @@ public class EkmConnection extends io.pulumi.resources.CustomResource {
      * The resource name for the EkmConnection in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -68,7 +68,7 @@ public class EkmConnection extends io.pulumi.resources.CustomResource {
      * A list of ServiceResolvers where the EKM can be reached. There should be one ServiceResolver per EKM replica. Currently, only a single ServiceResolver is supported.
      * 
      */
-    @OutputExport(name="serviceResolvers", type=List.class, parameters={ServiceResolverResponse.class})
+    @Export(name="serviceResolvers", type=List.class, parameters={ServiceResolverResponse.class})
     private Output<List<ServiceResolverResponse>> serviceResolvers;
 
     /**

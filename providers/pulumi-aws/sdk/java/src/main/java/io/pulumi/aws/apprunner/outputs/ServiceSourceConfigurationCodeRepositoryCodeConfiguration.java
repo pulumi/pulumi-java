@@ -4,13 +4,13 @@
 package io.pulumi.aws.apprunner.outputs;
 
 import io.pulumi.aws.apprunner.outputs.ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceSourceConfigurationCodeRepositoryCodeConfiguration {
     /**
      * Basic configuration for building and running the App Runner service. Use this parameter to quickly launch an App Runner service without providing an apprunner.yaml file in the source code repository (or ignoring the file if it exists). See Code Configuration Values below for more details.
@@ -23,10 +23,10 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfiguration {
      */
     private final String configurationSource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceSourceConfigurationCodeRepositoryCodeConfiguration(
-        @OutputCustomType.Parameter("codeConfigurationValues") @Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues codeConfigurationValues,
-        @OutputCustomType.Parameter("configurationSource") String configurationSource) {
+        @CustomType.Parameter("codeConfigurationValues") @Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues codeConfigurationValues,
+        @CustomType.Parameter("configurationSource") String configurationSource) {
         this.codeConfigurationValues = codeConfigurationValues;
         this.configurationSource = configurationSource;
     }

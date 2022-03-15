@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.automation.inputs.ContentLinkArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the automation account.
      * 
      */
-    @InputImport(name="automationAccountName", required=true)
+    @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
     public Output<String> getAutomationAccountName() {
@@ -31,7 +31,7 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the module content link.
      * 
      */
-    @InputImport(name="contentLink", required=true)
+    @Import(name="contentLink", required=true)
       private final Output<ContentLinkArgs> contentLink;
 
     public Output<ContentLinkArgs> getContentLink() {
@@ -42,7 +42,7 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
      * The name of python package.
      * 
      */
-    @InputImport(name="packageName")
+    @Import(name="packageName")
       private final @Nullable Output<String> packageName;
 
     public Output<String> getPackageName() {
@@ -53,7 +53,7 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the tags attached to the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

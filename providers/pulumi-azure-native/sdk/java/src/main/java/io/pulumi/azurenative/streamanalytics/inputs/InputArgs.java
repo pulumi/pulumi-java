@@ -7,7 +7,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.ReferenceInputPropertiesArgs
 import io.pulumi.azurenative.streamanalytics.inputs.StreamInputPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * Resource name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -36,7 +36,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
      * The properties that are associated with an input. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> properties;
 
     public Output<Either<ReferenceInputPropertiesArgs,StreamInputPropertiesArgs>> getProperties() {

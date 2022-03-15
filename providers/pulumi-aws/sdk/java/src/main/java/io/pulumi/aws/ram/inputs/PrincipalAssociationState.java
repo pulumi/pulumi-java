@@ -4,7 +4,7 @@
 package io.pulumi.aws.ram.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PrincipalAssociationState extends io.pulumi.resources.Resourc
      * The principal to associate with the resource share. Possible values are an AWS account ID, an AWS Organizations Organization ARN, or an AWS Organizations Organization Unit ARN.
      * 
      */
-    @InputImport(name="principal")
+    @Import(name="principal")
       private final @Nullable Output<String> principal;
 
     public Output<String> getPrincipal() {
@@ -29,7 +29,7 @@ public final class PrincipalAssociationState extends io.pulumi.resources.Resourc
      * The Amazon Resource Name (ARN) of the resource share.
      * 
      */
-    @InputImport(name="resourceShareArn")
+    @Import(name="resourceShareArn")
       private final @Nullable Output<String> resourceShareArn;
 
     public Output<String> getResourceShareArn() {

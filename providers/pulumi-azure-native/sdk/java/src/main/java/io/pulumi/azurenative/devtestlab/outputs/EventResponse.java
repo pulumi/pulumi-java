@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventResponse {
     /**
      * The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
@@ -17,8 +17,8 @@ public final class EventResponse {
      */
     private final @Nullable String eventName;
 
-    @OutputCustomType.Constructor
-    private EventResponse(@OutputCustomType.Parameter("eventName") @Nullable String eventName) {
+    @CustomType.Constructor
+    private EventResponse(@CustomType.Parameter("eventName") @Nullable String eventName) {
         this.eventName = eventName;
     }
 

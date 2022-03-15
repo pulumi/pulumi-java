@@ -4,7 +4,7 @@
 package io.pulumi.gcp.securitycenter.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.securitycenter.inputs.NotificationConfigStreamingConfigGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
      * This must be unique within the organization.
      * 
      */
-    @InputImport(name="configId")
+    @Import(name="configId")
       private final @Nullable Output<String> configId;
 
     public Output<String> getConfigId() {
@@ -30,7 +30,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
      * The description of the notification config (max of 1024 characters).
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
      * 'organizations/{{organization}}/notificationConfigs/{{config_id}}'.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
      * Config lives in.
      * 
      */
-    @InputImport(name="organization")
+    @Import(name="organization")
       private final @Nullable Output<String> organization;
 
     public Output<String> getOrganization() {
@@ -66,7 +66,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
      * "projects/[project_id]/topics/[topic]".
      * 
      */
-    @InputImport(name="pubsubTopic")
+    @Import(name="pubsubTopic")
       private final @Nullable Output<String> pubsubTopic;
 
     public Output<String> getPubsubTopic() {
@@ -77,7 +77,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
      * The service account that needs "pubsub.topics.publish" permission to publish to the Pub/Sub topic.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
@@ -89,7 +89,7 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="streamingConfig")
+    @Import(name="streamingConfig")
       private final @Nullable Output<NotificationConfigStreamingConfigGetArgs> streamingConfig;
 
     public Output<NotificationConfigStreamingConfigGetArgs> getStreamingConfig() {

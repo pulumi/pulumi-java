@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicedirectory_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,35 +14,35 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEndpointArgs Empty = new GetEndpointArgs();
 
-    @InputImport(name="endpointId", required=true)
+    @Import(name="endpointId", required=true)
       private final String endpointId;
 
     public String getEndpointId() {
         return this.endpointId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="namespaceId", required=true)
+    @Import(name="namespaceId", required=true)
       private final String namespaceId;
 
     public String getNamespaceId() {
         return this.namespaceId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="serviceId", required=true)
+    @Import(name="serviceId", required=true)
       private final String serviceId;
 
     public String getServiceId() {

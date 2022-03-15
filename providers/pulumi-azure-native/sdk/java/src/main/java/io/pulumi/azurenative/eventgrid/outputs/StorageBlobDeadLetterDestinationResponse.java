@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageBlobDeadLetterDestinationResponse {
     /**
      * The name of the Storage blob container that is the destination of the deadletter events
@@ -28,11 +28,11 @@ public final class StorageBlobDeadLetterDestinationResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageBlobDeadLetterDestinationResponse(
-        @OutputCustomType.Parameter("blobContainerName") @Nullable String blobContainerName,
-        @OutputCustomType.Parameter("endpointType") String endpointType,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
+        @CustomType.Parameter("blobContainerName") @Nullable String blobContainerName,
+        @CustomType.Parameter("endpointType") String endpointType,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.blobContainerName = blobContainerName;
         this.endpointType = endpointType;
         this.resourceId = resourceId;

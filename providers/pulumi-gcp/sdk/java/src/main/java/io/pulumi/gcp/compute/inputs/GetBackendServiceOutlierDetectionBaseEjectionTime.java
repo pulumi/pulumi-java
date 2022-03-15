@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetBackendServiceOutlierDetectionBaseEjectionTime extends io.
 
     public static final GetBackendServiceOutlierDetectionBaseEjectionTime Empty = new GetBackendServiceOutlierDetectionBaseEjectionTime();
 
-    @InputImport(name="nanos", required=true)
+    @Import(name="nanos", required=true)
       private final Integer nanos;
 
     public Integer getNanos() {
         return this.nanos;
     }
 
-    @InputImport(name="seconds", required=true)
+    @Import(name="seconds", required=true)
       private final Integer seconds;
 
     public Integer getSeconds() {

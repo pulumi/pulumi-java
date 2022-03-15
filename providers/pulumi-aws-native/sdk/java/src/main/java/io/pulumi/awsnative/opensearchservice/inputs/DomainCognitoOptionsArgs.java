@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,28 +15,28 @@ public final class DomainCognitoOptionsArgs extends io.pulumi.resources.Resource
 
     public static final DomainCognitoOptionsArgs Empty = new DomainCognitoOptionsArgs();
 
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
         return this.enabled == null ? Output.empty() : this.enabled;
     }
 
-    @InputImport(name="identityPoolId")
+    @Import(name="identityPoolId")
       private final @Nullable Output<String> identityPoolId;
 
     public Output<String> getIdentityPoolId() {
         return this.identityPoolId == null ? Output.empty() : this.identityPoolId;
     }
 
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn == null ? Output.empty() : this.roleArn;
     }
 
-    @InputImport(name="userPoolId")
+    @Import(name="userPoolId")
       private final @Nullable Output<String> userPoolId;
 
     public Output<String> getUserPoolId() {

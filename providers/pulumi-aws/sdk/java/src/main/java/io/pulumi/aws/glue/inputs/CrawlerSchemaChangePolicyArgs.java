@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CrawlerSchemaChangePolicyArgs extends io.pulumi.resources.Res
      * The deletion behavior when the crawler finds a deleted object. Valid values: `LOG`, `DELETE_FROM_DATABASE`, or `DEPRECATE_IN_DATABASE`. Defaults to `DEPRECATE_IN_DATABASE`.
      * 
      */
-    @InputImport(name="deleteBehavior")
+    @Import(name="deleteBehavior")
       private final @Nullable Output<String> deleteBehavior;
 
     public Output<String> getDeleteBehavior() {
@@ -29,7 +29,7 @@ public final class CrawlerSchemaChangePolicyArgs extends io.pulumi.resources.Res
      * The update behavior when the crawler finds a changed schema. Valid values: `LOG` or `UPDATE_IN_DATABASE`. Defaults to `UPDATE_IN_DATABASE`.
      * 
      */
-    @InputImport(name="updateBehavior")
+    @Import(name="updateBehavior")
       private final @Nullable Output<String> updateBehavior;
 
     public Output<String> getUpdateBehavior() {

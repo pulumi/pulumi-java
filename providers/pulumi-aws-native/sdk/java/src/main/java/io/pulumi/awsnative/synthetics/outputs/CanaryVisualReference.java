@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.synthetics.outputs;
 
 import io.pulumi.awsnative.synthetics.outputs.CanaryBaseScreenshot;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CanaryVisualReference {
     /**
      * Canary run id to be used as base reference for visual testing
@@ -23,10 +23,10 @@ public final class CanaryVisualReference {
      */
     private final @Nullable List<CanaryBaseScreenshot> baseScreenshots;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CanaryVisualReference(
-        @OutputCustomType.Parameter("baseCanaryRunId") String baseCanaryRunId,
-        @OutputCustomType.Parameter("baseScreenshots") @Nullable List<CanaryBaseScreenshot> baseScreenshots) {
+        @CustomType.Parameter("baseCanaryRunId") String baseCanaryRunId,
+        @CustomType.Parameter("baseScreenshots") @Nullable List<CanaryBaseScreenshot> baseScreenshots) {
         this.baseCanaryRunId = baseCanaryRunId;
         this.baseScreenshots = baseScreenshots;
     }

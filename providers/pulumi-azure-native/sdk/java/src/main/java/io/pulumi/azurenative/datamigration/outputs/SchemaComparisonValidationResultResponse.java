@@ -5,14 +5,14 @@ package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.SchemaComparisonValidationResultTypeResponse;
 import io.pulumi.azurenative.datamigration.outputs.ValidationErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SchemaComparisonValidationResultResponse {
     /**
      * List of schema differences between the source and target databases
@@ -35,12 +35,12 @@ public final class SchemaComparisonValidationResultResponse {
      */
     private final ValidationErrorResponse validationErrors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SchemaComparisonValidationResultResponse(
-        @OutputCustomType.Parameter("schemaDifferences") SchemaComparisonValidationResultTypeResponse schemaDifferences,
-        @OutputCustomType.Parameter("sourceDatabaseObjectCount") @Nullable Map<String,Double> sourceDatabaseObjectCount,
-        @OutputCustomType.Parameter("targetDatabaseObjectCount") @Nullable Map<String,Double> targetDatabaseObjectCount,
-        @OutputCustomType.Parameter("validationErrors") ValidationErrorResponse validationErrors) {
+        @CustomType.Parameter("schemaDifferences") SchemaComparisonValidationResultTypeResponse schemaDifferences,
+        @CustomType.Parameter("sourceDatabaseObjectCount") @Nullable Map<String,Double> sourceDatabaseObjectCount,
+        @CustomType.Parameter("targetDatabaseObjectCount") @Nullable Map<String,Double> targetDatabaseObjectCount,
+        @CustomType.Parameter("validationErrors") ValidationErrorResponse validationErrors) {
         this.schemaDifferences = schemaDifferences;
         this.sourceDatabaseObjectCount = sourceDatabaseObjectCount;
         this.targetDatabaseObjectCount = targetDatabaseObjectCount;

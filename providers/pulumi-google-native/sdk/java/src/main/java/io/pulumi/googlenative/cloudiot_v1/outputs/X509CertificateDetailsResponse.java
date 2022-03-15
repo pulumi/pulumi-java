@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudiot_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class X509CertificateDetailsResponse {
     /**
      * The time the certificate becomes invalid.
@@ -40,14 +40,14 @@ public final class X509CertificateDetailsResponse {
      */
     private final String subject;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private X509CertificateDetailsResponse(
-        @OutputCustomType.Parameter("expiryTime") String expiryTime,
-        @OutputCustomType.Parameter("issuer") String issuer,
-        @OutputCustomType.Parameter("publicKeyType") String publicKeyType,
-        @OutputCustomType.Parameter("signatureAlgorithm") String signatureAlgorithm,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("subject") String subject) {
+        @CustomType.Parameter("expiryTime") String expiryTime,
+        @CustomType.Parameter("issuer") String issuer,
+        @CustomType.Parameter("publicKeyType") String publicKeyType,
+        @CustomType.Parameter("signatureAlgorithm") String signatureAlgorithm,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("subject") String subject) {
         this.expiryTime = expiryTime;
         this.issuer = issuer;
         this.publicKeyType = publicKeyType;

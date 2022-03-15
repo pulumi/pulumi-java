@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BuilderConfigResponse {
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BuilderConfigResponse() {
     }
 

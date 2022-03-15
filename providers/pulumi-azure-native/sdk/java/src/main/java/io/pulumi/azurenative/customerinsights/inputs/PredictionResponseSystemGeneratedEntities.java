@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class PredictionResponseSystemGeneratedEntities extends io.pulumi.r
      * Generated interaction types.
      * 
      */
-    @InputImport(name="generatedInteractionTypes")
+    @Import(name="generatedInteractionTypes")
       private final @Nullable List<String> generatedInteractionTypes;
 
     public List<String> getGeneratedInteractionTypes() {
@@ -35,7 +35,7 @@ public final class PredictionResponseSystemGeneratedEntities extends io.pulumi.r
      * Generated KPIs.
      * 
      */
-    @InputImport(name="generatedKpis")
+    @Import(name="generatedKpis")
       private final @Nullable Map<String,String> generatedKpis;
 
     public Map<String,String> getGeneratedKpis() {
@@ -46,7 +46,7 @@ public final class PredictionResponseSystemGeneratedEntities extends io.pulumi.r
      * Generated links.
      * 
      */
-    @InputImport(name="generatedLinks")
+    @Import(name="generatedLinks")
       private final @Nullable List<String> generatedLinks;
 
     public List<String> getGeneratedLinks() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.outputs.DiffDiskSettingsResponse;
 import io.pulumi.azurenative.compute.outputs.DiskEncryptionSettingsResponse;
 import io.pulumi.azurenative.compute.outputs.ManagedDiskParametersResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualHardDiskResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OSDiskResponse {
     /**
      * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None** for Standard storage. **ReadOnly** for Premium storage.
@@ -78,20 +78,20 @@ public final class OSDiskResponse {
      */
     private final @Nullable Boolean writeAcceleratorEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OSDiskResponse(
-        @OutputCustomType.Parameter("caching") @Nullable String caching,
-        @OutputCustomType.Parameter("createOption") String createOption,
-        @OutputCustomType.Parameter("deleteOption") @Nullable String deleteOption,
-        @OutputCustomType.Parameter("diffDiskSettings") @Nullable DiffDiskSettingsResponse diffDiskSettings,
-        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
-        @OutputCustomType.Parameter("encryptionSettings") @Nullable DiskEncryptionSettingsResponse encryptionSettings,
-        @OutputCustomType.Parameter("image") @Nullable VirtualHardDiskResponse image,
-        @OutputCustomType.Parameter("managedDisk") @Nullable ManagedDiskParametersResponse managedDisk,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("vhd") @Nullable VirtualHardDiskResponse vhd,
-        @OutputCustomType.Parameter("writeAcceleratorEnabled") @Nullable Boolean writeAcceleratorEnabled) {
+        @CustomType.Parameter("caching") @Nullable String caching,
+        @CustomType.Parameter("createOption") String createOption,
+        @CustomType.Parameter("deleteOption") @Nullable String deleteOption,
+        @CustomType.Parameter("diffDiskSettings") @Nullable DiffDiskSettingsResponse diffDiskSettings,
+        @CustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @CustomType.Parameter("encryptionSettings") @Nullable DiskEncryptionSettingsResponse encryptionSettings,
+        @CustomType.Parameter("image") @Nullable VirtualHardDiskResponse image,
+        @CustomType.Parameter("managedDisk") @Nullable ManagedDiskParametersResponse managedDisk,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("vhd") @Nullable VirtualHardDiskResponse vhd,
+        @CustomType.Parameter("writeAcceleratorEnabled") @Nullable Boolean writeAcceleratorEnabled) {
         this.caching = caching;
         this.createOption = createOption;
         this.deleteOption = deleteOption;

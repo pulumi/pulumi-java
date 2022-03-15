@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.iam.outputs;
 
 import io.pulumi.awsnative.iam.outputs.SAMLProviderTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSAMLProviderResult {
     /**
      * Amazon Resource Name (ARN) of the SAML provider
@@ -21,11 +21,11 @@ public final class GetSAMLProviderResult {
     private final @Nullable String samlMetadataDocument;
     private final @Nullable List<SAMLProviderTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSAMLProviderResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("samlMetadataDocument") @Nullable String samlMetadataDocument,
-        @OutputCustomType.Parameter("tags") @Nullable List<SAMLProviderTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("samlMetadataDocument") @Nullable String samlMetadataDocument,
+        @CustomType.Parameter("tags") @Nullable List<SAMLProviderTag> tags) {
         this.arn = arn;
         this.samlMetadataDocument = samlMetadataDocument;
         this.tags = tags;

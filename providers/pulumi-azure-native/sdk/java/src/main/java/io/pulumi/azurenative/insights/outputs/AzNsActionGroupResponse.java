@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzNsActionGroupResponse {
     /**
      * Azure Action Group reference.
@@ -28,11 +28,11 @@ public final class AzNsActionGroupResponse {
      */
     private final @Nullable String emailSubject;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzNsActionGroupResponse(
-        @OutputCustomType.Parameter("actionGroup") @Nullable List<String> actionGroup,
-        @OutputCustomType.Parameter("customWebhookPayload") @Nullable String customWebhookPayload,
-        @OutputCustomType.Parameter("emailSubject") @Nullable String emailSubject) {
+        @CustomType.Parameter("actionGroup") @Nullable List<String> actionGroup,
+        @CustomType.Parameter("customWebhookPayload") @Nullable String customWebhookPayload,
+        @CustomType.Parameter("emailSubject") @Nullable String emailSubject) {
         this.actionGroup = actionGroup;
         this.customWebhookPayload = customWebhookPayload;
         this.emailSubject = emailSubject;

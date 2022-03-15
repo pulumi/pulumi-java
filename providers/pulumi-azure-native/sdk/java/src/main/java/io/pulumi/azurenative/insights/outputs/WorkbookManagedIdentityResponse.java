@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.WorkbookUserAssignedIdentitiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkbookManagedIdentityResponse {
     /**
      * The identity type.
@@ -23,10 +23,10 @@ public final class WorkbookManagedIdentityResponse {
      */
     private final @Nullable WorkbookUserAssignedIdentitiesResponse userAssignedIdentities;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkbookManagedIdentityResponse(
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable WorkbookUserAssignedIdentitiesResponse userAssignedIdentities) {
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("userAssignedIdentities") @Nullable WorkbookUserAssignedIdentitiesResponse userAssignedIdentities) {
         this.type = type;
         this.userAssignedIdentities = userAssignedIdentities;
     }

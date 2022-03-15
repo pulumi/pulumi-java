@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.elastic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ElasticCloudDeploymentResponse {
     /**
      * Associated Azure subscription Id for the elastic deployment.
@@ -45,15 +45,15 @@ public final class ElasticCloudDeploymentResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ElasticCloudDeploymentResponse(
-        @OutputCustomType.Parameter("azureSubscriptionId") String azureSubscriptionId,
-        @OutputCustomType.Parameter("deploymentId") String deploymentId,
-        @OutputCustomType.Parameter("elasticsearchRegion") String elasticsearchRegion,
-        @OutputCustomType.Parameter("elasticsearchServiceUrl") String elasticsearchServiceUrl,
-        @OutputCustomType.Parameter("kibanaServiceUrl") String kibanaServiceUrl,
-        @OutputCustomType.Parameter("kibanaSsoUrl") String kibanaSsoUrl,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("azureSubscriptionId") String azureSubscriptionId,
+        @CustomType.Parameter("deploymentId") String deploymentId,
+        @CustomType.Parameter("elasticsearchRegion") String elasticsearchRegion,
+        @CustomType.Parameter("elasticsearchServiceUrl") String elasticsearchServiceUrl,
+        @CustomType.Parameter("kibanaServiceUrl") String kibanaServiceUrl,
+        @CustomType.Parameter("kibanaSsoUrl") String kibanaSsoUrl,
+        @CustomType.Parameter("name") String name) {
         this.azureSubscriptionId = azureSubscriptionId;
         this.deploymentId = deploymentId;
         this.elasticsearchRegion = elasticsearchRegion;

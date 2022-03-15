@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.CustomRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomRuleListResponse {
     /**
      * List of rules
@@ -17,8 +17,8 @@ public final class CustomRuleListResponse {
      */
     private final @Nullable List<CustomRuleResponse> rules;
 
-    @OutputCustomType.Constructor
-    private CustomRuleListResponse(@OutputCustomType.Parameter("rules") @Nullable List<CustomRuleResponse> rules) {
+    @CustomType.Constructor
+    private CustomRuleListResponse(@CustomType.Parameter("rules") @Nullable List<CustomRuleResponse> rules) {
         this.rules = rules;
     }
 

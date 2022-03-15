@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigCustomInfoType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigInfoType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigLimits;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionInspectTemplateInspectConfig {
     /**
      * List of options defining data content to scan. If empty, text, images, and other content will be included.
@@ -67,16 +67,16 @@ public final class PreventionInspectTemplateInspectConfig {
      */
     private final @Nullable List<PreventionInspectTemplateInspectConfigRuleSet> ruleSets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionInspectTemplateInspectConfig(
-        @OutputCustomType.Parameter("contentOptions") @Nullable List<String> contentOptions,
-        @OutputCustomType.Parameter("customInfoTypes") @Nullable List<PreventionInspectTemplateInspectConfigCustomInfoType> customInfoTypes,
-        @OutputCustomType.Parameter("excludeInfoTypes") @Nullable Boolean excludeInfoTypes,
-        @OutputCustomType.Parameter("includeQuote") @Nullable Boolean includeQuote,
-        @OutputCustomType.Parameter("infoTypes") @Nullable List<PreventionInspectTemplateInspectConfigInfoType> infoTypes,
-        @OutputCustomType.Parameter("limits") @Nullable PreventionInspectTemplateInspectConfigLimits limits,
-        @OutputCustomType.Parameter("minLikelihood") @Nullable String minLikelihood,
-        @OutputCustomType.Parameter("ruleSets") @Nullable List<PreventionInspectTemplateInspectConfigRuleSet> ruleSets) {
+        @CustomType.Parameter("contentOptions") @Nullable List<String> contentOptions,
+        @CustomType.Parameter("customInfoTypes") @Nullable List<PreventionInspectTemplateInspectConfigCustomInfoType> customInfoTypes,
+        @CustomType.Parameter("excludeInfoTypes") @Nullable Boolean excludeInfoTypes,
+        @CustomType.Parameter("includeQuote") @Nullable Boolean includeQuote,
+        @CustomType.Parameter("infoTypes") @Nullable List<PreventionInspectTemplateInspectConfigInfoType> infoTypes,
+        @CustomType.Parameter("limits") @Nullable PreventionInspectTemplateInspectConfigLimits limits,
+        @CustomType.Parameter("minLikelihood") @Nullable String minLikelihood,
+        @CustomType.Parameter("ruleSets") @Nullable List<PreventionInspectTemplateInspectConfigRuleSet> ruleSets) {
         this.contentOptions = contentOptions;
         this.customInfoTypes = customInfoTypes;
         this.excludeInfoTypes = excludeInfoTypes;

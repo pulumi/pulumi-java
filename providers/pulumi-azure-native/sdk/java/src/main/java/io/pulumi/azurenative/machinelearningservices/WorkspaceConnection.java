@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.machinelearningservices.WorkspaceConnectionArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class WorkspaceConnection extends io.pulumi.resources.CustomResource {
      * Authorization type of the workspace connection.
      * 
      */
-    @OutputExport(name="authType", type=String.class, parameters={})
+    @Export(name="authType", type=String.class, parameters={})
     private Output</* @Nullable */ String> authType;
 
     /**
@@ -48,7 +48,7 @@ public class WorkspaceConnection extends io.pulumi.resources.CustomResource {
      * Category of the workspace connection.
      * 
      */
-    @OutputExport(name="category", type=String.class, parameters={})
+    @Export(name="category", type=String.class, parameters={})
     private Output</* @Nullable */ String> category;
 
     /**
@@ -62,7 +62,7 @@ public class WorkspaceConnection extends io.pulumi.resources.CustomResource {
      * Friendly name of the workspace connection.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class WorkspaceConnection extends io.pulumi.resources.CustomResource {
      * Target of the workspace connection.
      * 
      */
-    @OutputExport(name="target", type=String.class, parameters={})
+    @Export(name="target", type=String.class, parameters={})
     private Output</* @Nullable */ String> target;
 
     /**
@@ -90,7 +90,7 @@ public class WorkspaceConnection extends io.pulumi.resources.CustomResource {
      * Resource type of workspace connection.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -104,7 +104,7 @@ public class WorkspaceConnection extends io.pulumi.resources.CustomResource {
      * Value details of the workspace connection.
      * 
      */
-    @OutputExport(name="value", type=String.class, parameters={})
+    @Export(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
     /**
@@ -118,7 +118,7 @@ public class WorkspaceConnection extends io.pulumi.resources.CustomResource {
      * format for the workspace connection value
      * 
      */
-    @OutputExport(name="valueFormat", type=String.class, parameters={})
+    @Export(name="valueFormat", type=String.class, parameters={})
     private Output</* @Nullable */ String> valueFormat;
 
     /**

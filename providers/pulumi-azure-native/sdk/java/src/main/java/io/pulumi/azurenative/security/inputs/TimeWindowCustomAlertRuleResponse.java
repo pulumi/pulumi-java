@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
      * The description of the custom alert.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -33,7 +33,7 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
      * The display name of the custom alert.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -44,7 +44,7 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
      * Status of the custom alert.
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
@@ -55,7 +55,7 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
      * The maximum threshold.
      * 
      */
-    @InputImport(name="maxThreshold", required=true)
+    @Import(name="maxThreshold", required=true)
       private final Integer maxThreshold;
 
     public Integer getMaxThreshold() {
@@ -66,7 +66,7 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
      * The minimum threshold.
      * 
      */
-    @InputImport(name="minThreshold", required=true)
+    @Import(name="minThreshold", required=true)
       private final Integer minThreshold;
 
     public Integer getMinThreshold() {
@@ -78,7 +78,7 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
      * Expected value is 'TimeWindowCustomAlertRule'.
      * 
      */
-    @InputImport(name="ruleType", required=true)
+    @Import(name="ruleType", required=true)
       private final String ruleType;
 
     public String getRuleType() {
@@ -89,7 +89,7 @@ public final class TimeWindowCustomAlertRuleResponse extends io.pulumi.resources
      * The time window size in iso8601 format.
      * 
      */
-    @InputImport(name="timeWindowSize", required=true)
+    @Import(name="timeWindowSize", required=true)
       private final String timeWindowSize;
 
     public String getTimeWindowSize() {

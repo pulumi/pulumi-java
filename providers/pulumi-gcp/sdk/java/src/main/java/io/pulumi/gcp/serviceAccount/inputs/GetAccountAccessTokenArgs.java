@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.serviceAccount.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetAccountAccessTokenArgs extends io.pulumi.resources.InvokeA
      * Delegate chain of approvals needed to perform full impersonation. Specify the fully qualified service account name.  (e.g. `["projects/-/serviceAccounts/delegate-svc-account@project-id.iam.gserviceaccount.com"]`)
      * 
      */
-    @InputImport(name="delegates")
+    @Import(name="delegates")
       private final @Nullable List<String> delegates;
 
     public List<String> getDelegates() {
@@ -30,7 +30,7 @@ public final class GetAccountAccessTokenArgs extends io.pulumi.resources.InvokeA
      * Lifetime of the impersonated token (defaults to its max: `3600s`).
      * 
      */
-    @InputImport(name="lifetime")
+    @Import(name="lifetime")
       private final @Nullable String lifetime;
 
     public Optional<String> getLifetime() {
@@ -41,7 +41,7 @@ public final class GetAccountAccessTokenArgs extends io.pulumi.resources.InvokeA
      * The scopes the new credential should have (e.g. `["cloud-platform"]`)
      * 
      */
-    @InputImport(name="scopes", required=true)
+    @Import(name="scopes", required=true)
       private final List<String> scopes;
 
     public List<String> getScopes() {
@@ -52,7 +52,7 @@ public final class GetAccountAccessTokenArgs extends io.pulumi.resources.InvokeA
      * The service account _to_ impersonate (e.g. `service_B@your-project-id.iam.gserviceaccount.com`)
      * 
      */
-    @InputImport(name="targetServiceAccount", required=true)
+    @Import(name="targetServiceAccount", required=true)
       private final String targetServiceAccount;
 
     public String getTargetServiceAccount() {

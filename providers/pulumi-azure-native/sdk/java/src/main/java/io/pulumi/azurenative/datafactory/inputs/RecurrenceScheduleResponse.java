@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.RecurrenceScheduleOccurrenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class RecurrenceScheduleResponse extends io.pulumi.resources.Invoke
      * The hours.
      * 
      */
-    @InputImport(name="hours")
+    @Import(name="hours")
       private final @Nullable List<Integer> hours;
 
     public List<Integer> getHours() {
@@ -36,7 +36,7 @@ public final class RecurrenceScheduleResponse extends io.pulumi.resources.Invoke
      * The minutes.
      * 
      */
-    @InputImport(name="minutes")
+    @Import(name="minutes")
       private final @Nullable List<Integer> minutes;
 
     public List<Integer> getMinutes() {
@@ -47,7 +47,7 @@ public final class RecurrenceScheduleResponse extends io.pulumi.resources.Invoke
      * The month days.
      * 
      */
-    @InputImport(name="monthDays")
+    @Import(name="monthDays")
       private final @Nullable List<Integer> monthDays;
 
     public List<Integer> getMonthDays() {
@@ -58,7 +58,7 @@ public final class RecurrenceScheduleResponse extends io.pulumi.resources.Invoke
      * The monthly occurrences.
      * 
      */
-    @InputImport(name="monthlyOccurrences")
+    @Import(name="monthlyOccurrences")
       private final @Nullable List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences;
 
     public List<RecurrenceScheduleOccurrenceResponse> getMonthlyOccurrences() {
@@ -69,7 +69,7 @@ public final class RecurrenceScheduleResponse extends io.pulumi.resources.Invoke
      * The days of the week.
      * 
      */
-    @InputImport(name="weekDays")
+    @Import(name="weekDays")
       private final @Nullable List<String> weekDays;
 
     public List<String> getWeekDays() {

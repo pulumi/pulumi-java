@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterDefinitionResponse {
     /**
      * The link to the blueprint.
@@ -34,12 +34,12 @@ public final class ClusterDefinitionResponse {
      */
     private final @Nullable String kind;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterDefinitionResponse(
-        @OutputCustomType.Parameter("blueprint") @Nullable String blueprint,
-        @OutputCustomType.Parameter("componentVersion") @Nullable Map<String,String> componentVersion,
-        @OutputCustomType.Parameter("configurations") @Nullable Object configurations,
-        @OutputCustomType.Parameter("kind") @Nullable String kind) {
+        @CustomType.Parameter("blueprint") @Nullable String blueprint,
+        @CustomType.Parameter("componentVersion") @Nullable Map<String,String> componentVersion,
+        @CustomType.Parameter("configurations") @Nullable Object configurations,
+        @CustomType.Parameter("kind") @Nullable String kind) {
         this.blueprint = blueprint;
         this.componentVersion = componentVersion;
         this.configurations = configurations;

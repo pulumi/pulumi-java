@@ -5,14 +5,14 @@ package io.pulumi.awsnative.auditmanager.outputs;
 
 import io.pulumi.awsnative.auditmanager.enums.AssessmentDelegationStatus;
 import io.pulumi.awsnative.auditmanager.enums.AssessmentRoleType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssessmentDelegation {
     private final @Nullable String assessmentId;
     private final @Nullable String assessmentName;
@@ -26,19 +26,19 @@ public final class AssessmentDelegation {
     private final @Nullable AssessmentRoleType roleType;
     private final @Nullable AssessmentDelegationStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssessmentDelegation(
-        @OutputCustomType.Parameter("assessmentId") @Nullable String assessmentId,
-        @OutputCustomType.Parameter("assessmentName") @Nullable String assessmentName,
-        @OutputCustomType.Parameter("comment") @Nullable String comment,
-        @OutputCustomType.Parameter("controlSetId") @Nullable String controlSetId,
-        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
-        @OutputCustomType.Parameter("creationTime") @Nullable Double creationTime,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("lastUpdated") @Nullable Double lastUpdated,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("roleType") @Nullable AssessmentRoleType roleType,
-        @OutputCustomType.Parameter("status") @Nullable AssessmentDelegationStatus status) {
+        @CustomType.Parameter("assessmentId") @Nullable String assessmentId,
+        @CustomType.Parameter("assessmentName") @Nullable String assessmentName,
+        @CustomType.Parameter("comment") @Nullable String comment,
+        @CustomType.Parameter("controlSetId") @Nullable String controlSetId,
+        @CustomType.Parameter("createdBy") @Nullable String createdBy,
+        @CustomType.Parameter("creationTime") @Nullable Double creationTime,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("lastUpdated") @Nullable Double lastUpdated,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("roleType") @Nullable AssessmentRoleType roleType,
+        @CustomType.Parameter("status") @Nullable AssessmentDelegationStatus status) {
         this.assessmentId = assessmentId;
         this.assessmentName = assessmentName;
         this.comment = comment;

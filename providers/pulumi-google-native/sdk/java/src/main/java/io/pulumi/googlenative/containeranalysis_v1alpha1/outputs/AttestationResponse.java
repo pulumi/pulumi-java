@@ -3,16 +3,16 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.PgpSignedAttestationResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AttestationResponse {
     private final PgpSignedAttestationResponse pgpSignedAttestation;
 
-    @OutputCustomType.Constructor
-    private AttestationResponse(@OutputCustomType.Parameter("pgpSignedAttestation") PgpSignedAttestationResponse pgpSignedAttestation) {
+    @CustomType.Constructor
+    private AttestationResponse(@CustomType.Parameter("pgpSignedAttestation") PgpSignedAttestationResponse pgpSignedAttestation) {
         this.pgpSignedAttestation = pgpSignedAttestation;
     }
 

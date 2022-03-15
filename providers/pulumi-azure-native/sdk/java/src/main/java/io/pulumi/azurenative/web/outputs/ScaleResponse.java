@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ScaleRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScaleResponse {
     /**
      * Optional. Maximum number of container replicas. Defaults to 10 if not set.
@@ -29,11 +29,11 @@ public final class ScaleResponse {
      */
     private final @Nullable List<ScaleRuleResponse> rules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScaleResponse(
-        @OutputCustomType.Parameter("maxReplicas") @Nullable Integer maxReplicas,
-        @OutputCustomType.Parameter("minReplicas") @Nullable Integer minReplicas,
-        @OutputCustomType.Parameter("rules") @Nullable List<ScaleRuleResponse> rules) {
+        @CustomType.Parameter("maxReplicas") @Nullable Integer maxReplicas,
+        @CustomType.Parameter("minReplicas") @Nullable Integer minReplicas,
+        @CustomType.Parameter("rules") @Nullable List<ScaleRuleResponse> rules) {
         this.maxReplicas = maxReplicas;
         this.minReplicas = minReplicas;
         this.rules = rules;

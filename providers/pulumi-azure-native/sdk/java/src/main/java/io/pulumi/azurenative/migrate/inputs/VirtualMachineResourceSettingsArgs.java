@@ -6,7 +6,7 @@ package io.pulumi.azurenative.migrate.inputs;
 import io.pulumi.azurenative.migrate.enums.TargetAvailabilityZone;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
      * Expected value is 'Microsoft.Compute/virtualMachines'.
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
@@ -36,7 +36,7 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
      * Gets or sets the target availability set id for virtual machines not in an availability set at source.
      * 
      */
-    @InputImport(name="targetAvailabilitySetId")
+    @Import(name="targetAvailabilitySetId")
       private final @Nullable Output<String> targetAvailabilitySetId;
 
     public Output<String> getTargetAvailabilitySetId() {
@@ -47,7 +47,7 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
      * Gets or sets the target availability zone.
      * 
      */
-    @InputImport(name="targetAvailabilityZone")
+    @Import(name="targetAvailabilityZone")
       private final @Nullable Output<Either<String,TargetAvailabilityZone>> targetAvailabilityZone;
 
     public Output<Either<String,TargetAvailabilityZone>> getTargetAvailabilityZone() {
@@ -58,7 +58,7 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
      * Gets or sets the target Resource name.
      * 
      */
-    @InputImport(name="targetResourceName", required=true)
+    @Import(name="targetResourceName", required=true)
       private final Output<String> targetResourceName;
 
     public Output<String> getTargetResourceName() {
@@ -69,7 +69,7 @@ public final class VirtualMachineResourceSettingsArgs extends io.pulumi.resource
      * Gets or sets the target virtual machine size.
      * 
      */
-    @InputImport(name="targetVmSize")
+    @Import(name="targetVmSize")
       private final @Nullable Output<String> targetVmSize;
 
     public Output<String> getTargetVmSize() {

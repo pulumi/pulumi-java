@@ -9,7 +9,7 @@ import io.pulumi.azurenative.botservice.outputs.EnterpriseChannelPropertiesRespo
 import io.pulumi.azurenative.botservice.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * Entity Tag
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -51,7 +51,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * Required. Gets or sets the Kind of the resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -65,7 +65,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * Specifies the location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -79,7 +79,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * Specifies the name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * The set of properties specific to an Enterprise Channel resource.
      * 
      */
-    @OutputExport(name="properties", type=EnterpriseChannelPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=EnterpriseChannelPropertiesResponse.class, parameters={})
     private Output<EnterpriseChannelPropertiesResponse> properties;
 
     /**
@@ -107,7 +107,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * Gets or sets the SKU of the resource.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -121,7 +121,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * Contains resource tags defined as key/value pairs.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -135,7 +135,7 @@ public class EnterpriseChannel extends io.pulumi.resources.CustomResource {
      * Specifies the type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

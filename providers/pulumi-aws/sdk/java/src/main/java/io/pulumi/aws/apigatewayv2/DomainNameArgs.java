@@ -6,7 +6,7 @@ package io.pulumi.aws.apigatewayv2;
 import io.pulumi.aws.apigatewayv2.inputs.DomainNameDomainNameConfigurationArgs;
 import io.pulumi.aws.apigatewayv2.inputs.DomainNameMutualTlsAuthenticationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * The domain name. Must be between 1 and 512 characters in length.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -32,7 +32,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * The domain name configuration.
      * 
      */
-    @InputImport(name="domainNameConfiguration", required=true)
+    @Import(name="domainNameConfiguration", required=true)
       private final Output<DomainNameDomainNameConfigurationArgs> domainNameConfiguration;
 
     public Output<DomainNameDomainNameConfigurationArgs> getDomainNameConfiguration() {
@@ -43,7 +43,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * The mutual TLS authentication configuration for the domain name.
      * 
      */
-    @InputImport(name="mutualTlsAuthentication")
+    @Import(name="mutualTlsAuthentication")
       private final @Nullable Output<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication;
 
     public Output<DomainNameMutualTlsAuthenticationArgs> getMutualTlsAuthentication() {
@@ -54,7 +54,7 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the domain name. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ArtifactResponse {
     /**
      * Hash or checksum value of a binary, or Docker Registry 2.0 digest of a container.
@@ -21,10 +21,10 @@ public final class ArtifactResponse {
      */
     private final List<String> names;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ArtifactResponse(
-        @OutputCustomType.Parameter("checksum") String checksum,
-        @OutputCustomType.Parameter("names") List<String> names) {
+        @CustomType.Parameter("checksum") String checksum,
+        @CustomType.Parameter("names") List<String> names) {
         this.checksum = checksum;
         this.names = names;
     }

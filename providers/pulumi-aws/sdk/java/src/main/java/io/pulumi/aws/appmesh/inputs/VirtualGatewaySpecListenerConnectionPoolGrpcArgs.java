@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class VirtualGatewaySpecListenerConnectionPoolGrpcArgs extends io.p
      * Maximum number of inflight requests Envoy can concurrently support across hosts in upstream cluster. Minimum value of `1`.
      * 
      */
-    @InputImport(name="maxRequests", required=true)
+    @Import(name="maxRequests", required=true)
       private final Output<Integer> maxRequests;
 
     public Output<Integer> getMaxRequests() {

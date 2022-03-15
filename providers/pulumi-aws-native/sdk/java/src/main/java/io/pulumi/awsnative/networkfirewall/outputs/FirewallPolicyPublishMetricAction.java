@@ -4,16 +4,16 @@
 package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.outputs.FirewallPolicyDimension;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyPublishMetricAction {
     private final List<FirewallPolicyDimension> dimensions;
 
-    @OutputCustomType.Constructor
-    private FirewallPolicyPublishMetricAction(@OutputCustomType.Parameter("dimensions") List<FirewallPolicyDimension> dimensions) {
+    @CustomType.Constructor
+    private FirewallPolicyPublishMetricAction(@CustomType.Parameter("dimensions") List<FirewallPolicyDimension> dimensions) {
         this.dimensions = dimensions;
     }
 

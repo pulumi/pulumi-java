@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationPackageLockingPolicyDefinitionResponse {
     /**
      * The deny assignment excluded actions.
@@ -22,10 +22,10 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse {
      */
     private final @Nullable List<String> allowedDataActions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationPackageLockingPolicyDefinitionResponse(
-        @OutputCustomType.Parameter("allowedActions") @Nullable List<String> allowedActions,
-        @OutputCustomType.Parameter("allowedDataActions") @Nullable List<String> allowedDataActions) {
+        @CustomType.Parameter("allowedActions") @Nullable List<String> allowedActions,
+        @CustomType.Parameter("allowedDataActions") @Nullable List<String> allowedDataActions) {
         this.allowedActions = allowedActions;
         this.allowedDataActions = allowedDataActions;
     }

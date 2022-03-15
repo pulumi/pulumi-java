@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.GlobalForwardingRuleMetadataFilterArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * Google APIs, IP address must be provided.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -60,7 +60,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
      * 
      */
-    @InputImport(name="ipProtocol")
+    @Import(name="ipProtocol")
       private final @Nullable Output<String> ipProtocol;
 
     public Output<String> getIpProtocol() {
@@ -72,7 +72,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * Possible values are `IPV4` and `IPV6`.
      * 
      */
-    @InputImport(name="ipVersion")
+    @Import(name="ipVersion")
       private final @Nullable Output<String> ipVersion;
 
     public Output<String> getIpVersion() {
@@ -83,7 +83,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * Labels to apply to this forwarding rule.  A list of key->value pairs.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -105,7 +105,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * Possible values are `EXTERNAL`, `EXTERNAL_MANAGED`, and `INTERNAL_SELF_MANAGED`.
      * 
      */
-    @InputImport(name="loadBalancingScheme")
+    @Import(name="loadBalancingScheme")
       private final @Nullable Output<String> loadBalancingScheme;
 
     public Output<String> getLoadBalancingScheme() {
@@ -130,7 +130,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="metadataFilters")
+    @Import(name="metadataFilters")
       private final @Nullable Output<List<GlobalForwardingRuleMetadataFilterArgs>> metadataFilters;
 
     public Output<List<GlobalForwardingRuleMetadataFilterArgs>> getMetadataFilters() {
@@ -142,7 +142,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * 1 and 1024 characters, inclusive.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -157,7 +157,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * the default network will be used.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -183,7 +183,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * * TargetVpnGateway: 500, 4500
      * 
      */
-    @InputImport(name="portRange")
+    @Import(name="portRange")
       private final @Nullable Output<String> portRange;
 
     public Output<String> getPortRange() {
@@ -195,7 +195,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -211,7 +211,7 @@ public final class GlobalForwardingRuleArgs extends io.pulumi.resources.Resource
      * addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
      * 
      */
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final Output<String> target;
 
     public Output<String> getTarget() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RecommendedActionMetricInfoResponse extends io.pulumi.resourc
      * Gets the name of the metric. e.g., CPU, Number of Queries.
      * 
      */
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final String metricName;
 
     public String getMetricName() {
@@ -32,7 +32,7 @@ public final class RecommendedActionMetricInfoResponse extends io.pulumi.resourc
      * Gets the start time of time interval given by this MetricInfo.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -43,7 +43,7 @@ public final class RecommendedActionMetricInfoResponse extends io.pulumi.resourc
      * Gets the duration of time interval for the value given by this MetricInfo. e.g., PT1H (1 hour)
      * 
      */
-    @InputImport(name="timeGrain", required=true)
+    @Import(name="timeGrain", required=true)
       private final String timeGrain;
 
     public String getTimeGrain() {
@@ -54,7 +54,7 @@ public final class RecommendedActionMetricInfoResponse extends io.pulumi.resourc
      * Gets the unit in which metric is measured. e.g., DTU, Frequency
      * 
      */
-    @InputImport(name="unit", required=true)
+    @Import(name="unit", required=true)
       private final String unit;
 
     public String getUnit() {
@@ -65,7 +65,7 @@ public final class RecommendedActionMetricInfoResponse extends io.pulumi.resourc
      * Gets the value of the metric in the time interval given by this MetricInfo.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Double value;
 
     public Double getValue() {

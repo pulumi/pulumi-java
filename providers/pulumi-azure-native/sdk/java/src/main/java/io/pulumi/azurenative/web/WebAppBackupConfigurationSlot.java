@@ -9,7 +9,7 @@ import io.pulumi.azurenative.web.outputs.BackupScheduleResponse;
 import io.pulumi.azurenative.web.outputs.DatabaseBackupSettingResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class WebAppBackupConfigurationSlot extends io.pulumi.resources.CustomRes
      * Name of the backup.
      * 
      */
-    @OutputExport(name="backupName", type=String.class, parameters={})
+    @Export(name="backupName", type=String.class, parameters={})
     private Output</* @Nullable */ String> backupName;
 
     /**
@@ -48,7 +48,7 @@ public class WebAppBackupConfigurationSlot extends io.pulumi.resources.CustomRes
      * Schedule for the backup if it is executed periodically.
      * 
      */
-    @OutputExport(name="backupSchedule", type=BackupScheduleResponse.class, parameters={})
+    @Export(name="backupSchedule", type=BackupScheduleResponse.class, parameters={})
     private Output</* @Nullable */ BackupScheduleResponse> backupSchedule;
 
     /**
@@ -62,7 +62,7 @@ public class WebAppBackupConfigurationSlot extends io.pulumi.resources.CustomRes
      * Databases included in the backup.
      * 
      */
-    @OutputExport(name="databases", type=List.class, parameters={DatabaseBackupSettingResponse.class})
+    @Export(name="databases", type=List.class, parameters={DatabaseBackupSettingResponse.class})
     private Output</* @Nullable */ List<DatabaseBackupSettingResponse>> databases;
 
     /**
@@ -76,7 +76,7 @@ public class WebAppBackupConfigurationSlot extends io.pulumi.resources.CustomRes
      * True if the backup schedule is enabled (must be included in that case), false if the backup schedule should be disabled.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -90,7 +90,7 @@ public class WebAppBackupConfigurationSlot extends io.pulumi.resources.CustomRes
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -104,7 +104,7 @@ public class WebAppBackupConfigurationSlot extends io.pulumi.resources.CustomRes
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -118,7 +118,7 @@ public class WebAppBackupConfigurationSlot extends io.pulumi.resources.CustomRes
      * SAS URL to the container.
      * 
      */
-    @OutputExport(name="storageAccountUrl", type=String.class, parameters={})
+    @Export(name="storageAccountUrl", type=String.class, parameters={})
     private Output<String> storageAccountUrl;
 
     /**
@@ -132,7 +132,7 @@ public class WebAppBackupConfigurationSlot extends io.pulumi.resources.CustomRes
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

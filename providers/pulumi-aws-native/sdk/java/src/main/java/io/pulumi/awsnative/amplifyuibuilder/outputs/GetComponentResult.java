@@ -9,14 +9,14 @@ import io.pulumi.awsnative.amplifyuibuilder.outputs.ComponentCollectionPropertie
 import io.pulumi.awsnative.amplifyuibuilder.outputs.ComponentOverrides;
 import io.pulumi.awsnative.amplifyuibuilder.outputs.ComponentProperties;
 import io.pulumi.awsnative.amplifyuibuilder.outputs.ComponentVariant;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetComponentResult {
     private final @Nullable String appId;
     private final @Nullable ComponentBindingProperties bindingProperties;
@@ -33,22 +33,22 @@ public final class GetComponentResult {
     private final @Nullable String sourceId;
     private final @Nullable List<ComponentVariant> variants;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetComponentResult(
-        @OutputCustomType.Parameter("appId") @Nullable String appId,
-        @OutputCustomType.Parameter("bindingProperties") @Nullable ComponentBindingProperties bindingProperties,
-        @OutputCustomType.Parameter("children") @Nullable List<ComponentChild> children,
-        @OutputCustomType.Parameter("collectionProperties") @Nullable ComponentCollectionProperties collectionProperties,
-        @OutputCustomType.Parameter("componentType") @Nullable String componentType,
-        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
-        @OutputCustomType.Parameter("environmentName") @Nullable String environmentName,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("modifiedAt") @Nullable String modifiedAt,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("overrides") @Nullable ComponentOverrides overrides,
-        @OutputCustomType.Parameter("properties") @Nullable ComponentProperties properties,
-        @OutputCustomType.Parameter("sourceId") @Nullable String sourceId,
-        @OutputCustomType.Parameter("variants") @Nullable List<ComponentVariant> variants) {
+        @CustomType.Parameter("appId") @Nullable String appId,
+        @CustomType.Parameter("bindingProperties") @Nullable ComponentBindingProperties bindingProperties,
+        @CustomType.Parameter("children") @Nullable List<ComponentChild> children,
+        @CustomType.Parameter("collectionProperties") @Nullable ComponentCollectionProperties collectionProperties,
+        @CustomType.Parameter("componentType") @Nullable String componentType,
+        @CustomType.Parameter("createdAt") @Nullable String createdAt,
+        @CustomType.Parameter("environmentName") @Nullable String environmentName,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("modifiedAt") @Nullable String modifiedAt,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("overrides") @Nullable ComponentOverrides overrides,
+        @CustomType.Parameter("properties") @Nullable ComponentProperties properties,
+        @CustomType.Parameter("sourceId") @Nullable String sourceId,
+        @CustomType.Parameter("variants") @Nullable List<ComponentVariant> variants) {
         this.appId = appId;
         this.bindingProperties = bindingProperties;
         this.children = children;

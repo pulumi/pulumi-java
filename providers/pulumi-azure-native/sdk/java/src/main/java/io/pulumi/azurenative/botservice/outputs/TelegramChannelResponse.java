@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.TelegramChannelPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TelegramChannelResponse {
     /**
      * The channel name
@@ -39,13 +39,13 @@ public final class TelegramChannelResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TelegramChannelResponse(
-        @OutputCustomType.Parameter("channelName") String channelName,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("properties") @Nullable TelegramChannelPropertiesResponse properties,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
+        @CustomType.Parameter("channelName") String channelName,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("properties") @Nullable TelegramChannelPropertiesResponse properties,
+        @CustomType.Parameter("provisioningState") String provisioningState) {
         this.channelName = channelName;
         this.etag = etag;
         this.location = location;

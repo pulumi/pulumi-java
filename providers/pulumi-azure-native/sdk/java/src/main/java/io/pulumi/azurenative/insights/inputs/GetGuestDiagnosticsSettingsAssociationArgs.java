@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends io.pulumi.
      * The name of the diagnostic settings association.
      * 
      */
-    @InputImport(name="associationName", required=true)
+    @Import(name="associationName", required=true)
       private final String associationName;
 
     public String getAssociationName() {
@@ -27,7 +27,7 @@ public final class GetGuestDiagnosticsSettingsAssociationArgs extends io.pulumi.
      * The fully qualified ID of the resource, including the resource name and resource type.
      * 
      */
-    @InputImport(name="resourceUri", required=true)
+    @Import(name="resourceUri", required=true)
       private final String resourceUri;
 
     public String getResourceUri() {

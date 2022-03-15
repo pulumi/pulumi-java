@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ecs.enums.ClusterCapacityProviderAssociationsCapacity
 import io.pulumi.awsnative.ecs.inputs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class ClusterCapacityProviderAssociationsArgs extends io.pulumi.res
 
     public static final ClusterCapacityProviderAssociationsArgs Empty = new ClusterCapacityProviderAssociationsArgs();
 
-    @InputImport(name="capacityProviders", required=true)
+    @Import(name="capacityProviders", required=true)
       private final Output<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> capacityProviders;
 
     public Output<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> getCapacityProviders() {
         return this.capacityProviders;
     }
 
-    @InputImport(name="cluster", required=true)
+    @Import(name="cluster", required=true)
       private final Output<String> cluster;
 
     public Output<String> getCluster() {
         return this.cluster;
     }
 
-    @InputImport(name="defaultCapacityProviderStrategy", required=true)
+    @Import(name="defaultCapacityProviderStrategy", required=true)
       private final Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> defaultCapacityProviderStrategy;
 
     public Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> getDefaultCapacityProviderStrategy() {

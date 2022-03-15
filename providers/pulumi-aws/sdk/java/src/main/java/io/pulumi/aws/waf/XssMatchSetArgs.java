@@ -5,7 +5,7 @@ package io.pulumi.aws.waf;
 
 import io.pulumi.aws.waf.inputs.XssMatchSetXssMatchTupleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class XssMatchSetArgs extends io.pulumi.resources.ResourceArgs {
      * The name or description of the SizeConstraintSet.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -31,7 +31,7 @@ public final class XssMatchSetArgs extends io.pulumi.resources.ResourceArgs {
      * The parts of web requests that you want to inspect for cross-site scripting attacks.
      * 
      */
-    @InputImport(name="xssMatchTuples")
+    @Import(name="xssMatchTuples")
       private final @Nullable Output<List<XssMatchSetXssMatchTupleArgs>> xssMatchTuples;
 
     public Output<List<XssMatchSetXssMatchTupleArgs>> getXssMatchTuples() {

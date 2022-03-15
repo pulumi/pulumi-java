@@ -5,7 +5,7 @@ package io.pulumi.azurenative.healthbot.inputs;
 
 import io.pulumi.azurenative.healthbot.enums.SkuName;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the HealthBot SKU
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<SkuName> name;
 
     public Output<SkuName> getName() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.AssignmentArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.PackageArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.PackageRepositoryArgs;
@@ -23,7 +23,7 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the VM instances that are assigned to this policy. This allows you to target sets or groups of VM instances by different parameters such as labels, names, OS, or zones. If left empty, all VM instances underneath this policy are targeted. At the same level in the resource hierarchy (that is within a project), the service prevents the creation of multiple policies that conflict with each other. For more information, see how the service [handles assignment conflicts](/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
      * 
      */
-    @InputImport(name="assignment", required=true)
+    @Import(name="assignment", required=true)
       private final Output<AssignmentArgs> assignment;
 
     public Output<AssignmentArgs> getAssignment() {
@@ -34,7 +34,7 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the guest policy. Length of the description is limited to 1024 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,14 +45,14 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The etag for this guest policy. If this is provided on update, it must match the server's etag.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="guestPolicyId", required=true)
+    @Import(name="guestPolicyId", required=true)
       private final Output<String> guestPolicyId;
 
     public Output<String> getGuestPolicyId() {
@@ -63,7 +63,7 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Unique name of the resource in this project using one of the following forms: `projects/{project_number}/guestPolicies/{guest_policy_id}`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -74,7 +74,7 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * A list of package repositories to configure on the VM instance. This is done before any other configs are applied so they can use these repos. Package repositories are only configured if the corresponding package manager(s) are available.
      * 
      */
-    @InputImport(name="packageRepositories")
+    @Import(name="packageRepositories")
       private final @Nullable Output<List<PackageRepositoryArgs>> packageRepositories;
 
     public Output<List<PackageRepositoryArgs>> getPackageRepositories() {
@@ -85,14 +85,14 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The software packages to be managed by this policy.
      * 
      */
-    @InputImport(name="packages")
+    @Import(name="packages")
       private final @Nullable Output<List<PackageArgs>> packages;
 
     public Output<List<PackageArgs>> getPackages() {
         return this.packages == null ? Output.empty() : this.packages;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -103,7 +103,7 @@ public final class GuestPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * A list of Recipes to install on the VM instance.
      * 
      */
-    @InputImport(name="recipes")
+    @Import(name="recipes")
       private final @Nullable Output<List<SoftwareRecipeArgs>> recipes;
 
     public Output<List<SoftwareRecipeArgs>> getRecipes() {

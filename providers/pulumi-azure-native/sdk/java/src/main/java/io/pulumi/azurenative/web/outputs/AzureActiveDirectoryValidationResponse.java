@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.JwtClaimChecksResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureActiveDirectoryValidationResponse {
     /**
      * The list of audiences that can make successful authentication/authorization requests.
@@ -24,10 +24,10 @@ public final class AzureActiveDirectoryValidationResponse {
      */
     private final @Nullable JwtClaimChecksResponse jwtClaimChecks;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureActiveDirectoryValidationResponse(
-        @OutputCustomType.Parameter("allowedAudiences") @Nullable List<String> allowedAudiences,
-        @OutputCustomType.Parameter("jwtClaimChecks") @Nullable JwtClaimChecksResponse jwtClaimChecks) {
+        @CustomType.Parameter("allowedAudiences") @Nullable List<String> allowedAudiences,
+        @CustomType.Parameter("jwtClaimChecks") @Nullable JwtClaimChecksResponse jwtClaimChecks) {
         this.allowedAudiences = allowedAudiences;
         this.jwtClaimChecks = jwtClaimChecks;
     }

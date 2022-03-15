@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class WorkloadIdentityConfigResponse extends io.pulumi.resources.In
      * The workload pool to attach all Kubernetes service accounts to.
      * 
      */
-    @InputImport(name="workloadPool", required=true)
+    @Import(name="workloadPool", required=true)
       private final String workloadPool;
 
     public String getWorkloadPool() {

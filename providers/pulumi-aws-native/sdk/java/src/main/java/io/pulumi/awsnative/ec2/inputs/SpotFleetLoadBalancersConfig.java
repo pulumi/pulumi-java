@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.SpotFleetClassicLoadBalancersConfig;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetTargetGroupsConfig;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class SpotFleetLoadBalancersConfig extends io.pulumi.resources.Invo
 
     public static final SpotFleetLoadBalancersConfig Empty = new SpotFleetLoadBalancersConfig();
 
-    @InputImport(name="classicLoadBalancersConfig")
+    @Import(name="classicLoadBalancersConfig")
       private final @Nullable SpotFleetClassicLoadBalancersConfig classicLoadBalancersConfig;
 
     public Optional<SpotFleetClassicLoadBalancersConfig> getClassicLoadBalancersConfig() {
         return this.classicLoadBalancersConfig == null ? Optional.empty() : Optional.ofNullable(this.classicLoadBalancersConfig);
     }
 
-    @InputImport(name="targetGroupsConfig")
+    @Import(name="targetGroupsConfig")
       private final @Nullable SpotFleetTargetGroupsConfig targetGroupsConfig;
 
     public Optional<SpotFleetTargetGroupsConfig> getTargetGroupsConfig() {

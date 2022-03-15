@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListWebAppSyncFunctionTriggersResult {
     /**
      * Secret key.
@@ -22,10 +22,10 @@ public final class ListWebAppSyncFunctionTriggersResult {
      */
     private final @Nullable String triggerUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListWebAppSyncFunctionTriggersResult(
-        @OutputCustomType.Parameter("key") @Nullable String key,
-        @OutputCustomType.Parameter("triggerUrl") @Nullable String triggerUrl) {
+        @CustomType.Parameter("key") @Nullable String key,
+        @CustomType.Parameter("triggerUrl") @Nullable String triggerUrl) {
         this.key = key;
         this.triggerUrl = triggerUrl;
     }

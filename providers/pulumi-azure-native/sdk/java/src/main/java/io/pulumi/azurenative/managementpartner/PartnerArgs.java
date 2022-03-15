@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managementpartner;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PartnerArgs extends io.pulumi.resources.ResourceArgs {
      * Id of the Partner
      * 
      */
-    @InputImport(name="partnerId")
+    @Import(name="partnerId")
       private final @Nullable Output<String> partnerId;
 
     public Output<String> getPartnerId() {

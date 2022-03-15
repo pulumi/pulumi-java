@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AcceleratorConfigResponse {
     /**
      * The number of the accelerator cards of this type exposed to this instance.
@@ -21,10 +21,10 @@ public final class AcceleratorConfigResponse {
      */
     private final String acceleratorTypeUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AcceleratorConfigResponse(
-        @OutputCustomType.Parameter("acceleratorCount") Integer acceleratorCount,
-        @OutputCustomType.Parameter("acceleratorTypeUri") String acceleratorTypeUri) {
+        @CustomType.Parameter("acceleratorCount") Integer acceleratorCount,
+        @CustomType.Parameter("acceleratorTypeUri") String acceleratorTypeUri) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorTypeUri = acceleratorTypeUri;
     }

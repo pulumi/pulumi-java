@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.scheduler.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RetryPolicyResponse {
     /**
      * Gets or sets the number of times a retry should be attempted.
@@ -28,11 +28,11 @@ public final class RetryPolicyResponse {
      */
     private final @Nullable String retryType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RetryPolicyResponse(
-        @OutputCustomType.Parameter("retryCount") @Nullable Integer retryCount,
-        @OutputCustomType.Parameter("retryInterval") @Nullable String retryInterval,
-        @OutputCustomType.Parameter("retryType") @Nullable String retryType) {
+        @CustomType.Parameter("retryCount") @Nullable Integer retryCount,
+        @CustomType.Parameter("retryInterval") @Nullable String retryInterval,
+        @CustomType.Parameter("retryType") @Nullable String retryType) {
         this.retryCount = retryCount;
         this.retryInterval = retryInterval;
         this.retryType = retryType;

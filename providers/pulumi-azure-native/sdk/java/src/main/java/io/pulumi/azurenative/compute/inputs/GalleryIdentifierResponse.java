@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GalleryIdentifierResponse extends io.pulumi.resources.InvokeA
      * The unique name of the Shared Image Gallery. This name is generated automatically by Azure.
      * 
      */
-    @InputImport(name="uniqueName", required=true)
+    @Import(name="uniqueName", required=true)
       private final String uniqueName;
 
     public String getUniqueName() {

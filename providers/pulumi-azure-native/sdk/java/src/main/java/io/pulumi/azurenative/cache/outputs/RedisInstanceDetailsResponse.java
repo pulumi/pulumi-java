@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.cache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RedisInstanceDetailsResponse {
     /**
      * Specifies whether the instance is a master node.
@@ -37,13 +37,13 @@ public final class RedisInstanceDetailsResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RedisInstanceDetailsResponse(
-        @OutputCustomType.Parameter("isMaster") Boolean isMaster,
-        @OutputCustomType.Parameter("nonSslPort") Integer nonSslPort,
-        @OutputCustomType.Parameter("shardId") Integer shardId,
-        @OutputCustomType.Parameter("sslPort") Integer sslPort,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("isMaster") Boolean isMaster,
+        @CustomType.Parameter("nonSslPort") Integer nonSslPort,
+        @CustomType.Parameter("shardId") Integer shardId,
+        @CustomType.Parameter("sslPort") Integer sslPort,
+        @CustomType.Parameter("zone") String zone) {
         this.isMaster = isMaster;
         this.nonSslPort = nonSslPort;
         this.shardId = shardId;

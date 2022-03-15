@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupGetArgs extends io.pul
      * List of inventory filters for the resource group. The resources in this resource group are applied to the target VM if it satisfies at least one of the following inventory filters. For example, to apply this resource group to VMs running either `RHEL` or `CentOS` operating systems, specify 2 items for the list with following values: inventory_filters[0].os_short_name='rhel' and inventory_filters[1].os_short_name='centos' If the list is empty, this resource group will be applied to the target VM unconditionally.
      * 
      */
-    @InputImport(name="inventoryFilters")
+    @Import(name="inventoryFilters")
       private final @Nullable Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> inventoryFilters;
 
     public Output<List<OsPolicyAssignmentOsPolicyResourceGroupInventoryFilterGetArgs>> getInventoryFilters() {
@@ -31,7 +31,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupGetArgs extends io.pul
      * Required. List of resources configured for this resource group. The resources are executed in the exact order specified here.
      * 
      */
-    @InputImport(name="resources", required=true)
+    @Import(name="resources", required=true)
       private final Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> resources;
 
     public Output<List<OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs>> getResources() {

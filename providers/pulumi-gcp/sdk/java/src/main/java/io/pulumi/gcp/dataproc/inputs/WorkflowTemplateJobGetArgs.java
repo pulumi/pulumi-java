@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobHadoopJobGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobHiveJobGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobPigJobGetArgs;
@@ -29,7 +29,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * Optional. Job is a Hadoop job.
      * 
      */
-    @InputImport(name="hadoopJob")
+    @Import(name="hadoopJob")
       private final @Nullable Output<WorkflowTemplateJobHadoopJobGetArgs> hadoopJob;
 
     public Output<WorkflowTemplateJobHadoopJobGetArgs> getHadoopJob() {
@@ -40,7 +40,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * Optional. Job is a Hive job.
      * 
      */
-    @InputImport(name="hiveJob")
+    @Import(name="hiveJob")
       private final @Nullable Output<WorkflowTemplateJobHiveJobGetArgs> hiveJob;
 
     public Output<WorkflowTemplateJobHiveJobGetArgs> getHiveJob() {
@@ -51,7 +51,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -62,7 +62,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * Optional. Job is a Pig job.
      * 
      */
-    @InputImport(name="pigJob")
+    @Import(name="pigJob")
       private final @Nullable Output<WorkflowTemplateJobPigJobGetArgs> pigJob;
 
     public Output<WorkflowTemplateJobPigJobGetArgs> getPigJob() {
@@ -73,7 +73,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * Optional. The optional list of prerequisite job step_ids. If not specified, the job will start at the beginning of workflow.
      * 
      */
-    @InputImport(name="prerequisiteStepIds")
+    @Import(name="prerequisiteStepIds")
       private final @Nullable Output<List<String>> prerequisiteStepIds;
 
     public Output<List<String>> getPrerequisiteStepIds() {
@@ -84,7 +84,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * Optional. Job is a Presto job.
      * 
      */
-    @InputImport(name="prestoJob")
+    @Import(name="prestoJob")
       private final @Nullable Output<WorkflowTemplateJobPrestoJobGetArgs> prestoJob;
 
     public Output<WorkflowTemplateJobPrestoJobGetArgs> getPrestoJob() {
@@ -95,7 +95,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * Optional. Job is a PySpark job.
      * 
      */
-    @InputImport(name="pysparkJob")
+    @Import(name="pysparkJob")
       private final @Nullable Output<WorkflowTemplateJobPysparkJobGetArgs> pysparkJob;
 
     public Output<WorkflowTemplateJobPysparkJobGetArgs> getPysparkJob() {
@@ -106,7 +106,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * Optional. Job scheduling configuration.
      * 
      */
-    @InputImport(name="scheduling")
+    @Import(name="scheduling")
       private final @Nullable Output<WorkflowTemplateJobSchedulingGetArgs> scheduling;
 
     public Output<WorkflowTemplateJobSchedulingGetArgs> getScheduling() {
@@ -117,7 +117,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * Optional. Job is a Spark job.
      * 
      */
-    @InputImport(name="sparkJob")
+    @Import(name="sparkJob")
       private final @Nullable Output<WorkflowTemplateJobSparkJobGetArgs> sparkJob;
 
     public Output<WorkflowTemplateJobSparkJobGetArgs> getSparkJob() {
@@ -128,7 +128,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * Optional. Job is a SparkR job.
      * 
      */
-    @InputImport(name="sparkRJob")
+    @Import(name="sparkRJob")
       private final @Nullable Output<WorkflowTemplateJobSparkRJobGetArgs> sparkRJob;
 
     public Output<WorkflowTemplateJobSparkRJobGetArgs> getSparkRJob() {
@@ -139,7 +139,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * Optional. Job is a SparkSql job.
      * 
      */
-    @InputImport(name="sparkSqlJob")
+    @Import(name="sparkSqlJob")
       private final @Nullable Output<WorkflowTemplateJobSparkSqlJobGetArgs> sparkSqlJob;
 
     public Output<WorkflowTemplateJobSparkSqlJobGetArgs> getSparkSqlJob() {
@@ -150,7 +150,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * Required. The step id. The id must be unique among all jobs within the template. The step id is used as prefix for job id, as job `goog-dataproc-workflow-step-id` label, and in field from other steps. The id must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3 and 50 characters.
      * 
      */
-    @InputImport(name="stepId", required=true)
+    @Import(name="stepId", required=true)
       private final Output<String> stepId;
 
     public Output<String> getStepId() {

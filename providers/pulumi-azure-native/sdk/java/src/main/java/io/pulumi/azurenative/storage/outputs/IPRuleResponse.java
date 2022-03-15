@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IPRuleResponse {
     /**
      * The action of IP ACL rule.
@@ -22,10 +22,10 @@ public final class IPRuleResponse {
      */
     private final String iPAddressOrRange;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IPRuleResponse(
-        @OutputCustomType.Parameter("action") @Nullable String action,
-        @OutputCustomType.Parameter("iPAddressOrRange") String iPAddressOrRange) {
+        @CustomType.Parameter("action") @Nullable String action,
+        @CustomType.Parameter("iPAddressOrRange") String iPAddressOrRange) {
         this.action = action;
         this.iPAddressOrRange = iPAddressOrRange;
     }

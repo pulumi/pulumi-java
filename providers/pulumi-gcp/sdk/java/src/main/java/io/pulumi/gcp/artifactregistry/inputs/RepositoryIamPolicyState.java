@@ -4,7 +4,7 @@
 package io.pulumi.gcp.artifactregistry.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RepositoryIamPolicyState extends io.pulumi.resources.Resource
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -30,7 +30,7 @@ public final class RepositoryIamPolicyState extends io.pulumi.resources.Resource
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -42,7 +42,7 @@ public final class RepositoryIamPolicyState extends io.pulumi.resources.Resource
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @InputImport(name="policyData")
+    @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
     public Output<String> getPolicyData() {
@@ -54,7 +54,7 @@ public final class RepositoryIamPolicyState extends io.pulumi.resources.Resource
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -65,7 +65,7 @@ public final class RepositoryIamPolicyState extends io.pulumi.resources.Resource
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="repository")
+    @Import(name="repository")
       private final @Nullable Output<String> repository;
 
     public Output<String> getRepository() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1alpha2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. The Connect agent version to use for connect_resources. Defaults to the latest GKE Connect version. The version must be a currently supported version, obsolete versions will be rejected.
      * 
      */
-    @InputImport(name="connectVersion")
+    @Import(name="connectVersion")
       private final @Nullable Output<String> connectVersion;
 
     public Output<String> getConnectVersion() {
@@ -34,7 +34,7 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. Major version of the Kubernetes cluster. This is only used to determine which version to use for the CustomResourceDefinition resources, `apiextensions/v1beta1` or`apiextensions/v1`.
      * 
      */
-    @InputImport(name="k8sVersion")
+    @Import(name="k8sVersion")
       private final @Nullable Output<String> k8sVersion;
 
     public Output<String> getK8sVersion() {
@@ -45,7 +45,7 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for CustomResourceDefinition resources. This option should be set for clusters with Kubernetes apiserver versions <1.16.
      * 
      */
-    @InputImport(name="v1beta1Crd")
+    @Import(name="v1beta1Crd")
       private final @Nullable Output<Boolean> v1beta1Crd;
 
     public Output<Boolean> getV1beta1Crd() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ProtectionModeResponse extends io.pulumi.resources.InvokeArgs
      * The application control policy enforcement/protection mode of the machine group
      * 
      */
-    @InputImport(name="exe")
+    @Import(name="exe")
       private final @Nullable String exe;
 
     public Optional<String> getExe() {
@@ -33,7 +33,7 @@ public final class ProtectionModeResponse extends io.pulumi.resources.InvokeArgs
      * The application control policy enforcement/protection mode of the machine group
      * 
      */
-    @InputImport(name="executable")
+    @Import(name="executable")
       private final @Nullable String executable;
 
     public Optional<String> getExecutable() {
@@ -44,7 +44,7 @@ public final class ProtectionModeResponse extends io.pulumi.resources.InvokeArgs
      * The application control policy enforcement/protection mode of the machine group
      * 
      */
-    @InputImport(name="msi")
+    @Import(name="msi")
       private final @Nullable String msi;
 
     public Optional<String> getMsi() {
@@ -55,7 +55,7 @@ public final class ProtectionModeResponse extends io.pulumi.resources.InvokeArgs
      * The application control policy enforcement/protection mode of the machine group
      * 
      */
-    @InputImport(name="script")
+    @Import(name="script")
       private final @Nullable String script;
 
     public Optional<String> getScript() {

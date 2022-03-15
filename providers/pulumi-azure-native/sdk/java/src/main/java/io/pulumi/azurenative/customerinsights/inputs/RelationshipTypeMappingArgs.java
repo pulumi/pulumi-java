@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.azurenative.customerinsights.inputs.RelationshipTypeFieldMappingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class RelationshipTypeMappingArgs extends io.pulumi.resources.Resou
      * Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.
      * 
      */
-    @InputImport(name="fieldMappings", required=true)
+    @Import(name="fieldMappings", required=true)
       private final Output<List<RelationshipTypeFieldMappingArgs>> fieldMappings;
 
     public Output<List<RelationshipTypeFieldMappingArgs>> getFieldMappings() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iam.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
      * A description of the pool. Cannot exceed 256 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
      * access again.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -43,7 +43,7 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
      * A display name for the pool. Cannot exceed 32 characters.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -55,7 +55,7 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
      * 'projects/{project_number}/locations/global/workloadIdentityPools/{workload_identity_pool_id}'.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -67,7 +67,7 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -82,7 +82,7 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
      * tokens to access resources. If the pool is undeleted, existing tokens grant access again.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -95,7 +95,7 @@ public final class WorkloadIdentityPoolState extends io.pulumi.resources.Resourc
      * `gcp-` is reserved for use by Google, and may not be specified.
      * 
      */
-    @InputImport(name="workloadIdentityPoolId")
+    @Import(name="workloadIdentityPoolId")
       private final @Nullable Output<String> workloadIdentityPoolId;
 
     public Output<String> getWorkloadIdentityPoolId() {

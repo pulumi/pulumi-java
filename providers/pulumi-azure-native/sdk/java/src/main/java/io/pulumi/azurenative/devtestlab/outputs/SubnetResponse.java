@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubnetResponse {
     /**
      * The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
@@ -27,11 +27,11 @@ public final class SubnetResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubnetResponse(
-        @OutputCustomType.Parameter("allowPublicIp") @Nullable String allowPublicIp,
-        @OutputCustomType.Parameter("labSubnetName") @Nullable String labSubnetName,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
+        @CustomType.Parameter("allowPublicIp") @Nullable String allowPublicIp,
+        @CustomType.Parameter("labSubnetName") @Nullable String labSubnetName,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.allowPublicIp = allowPublicIp;
         this.labSubnetName = labSubnetName;
         this.resourceId = resourceId;

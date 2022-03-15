@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetHttpsHealthCheckArgs extends io.pulumi.resources.InvokeArg
 
     public static final GetHttpsHealthCheckArgs Empty = new GetHttpsHealthCheckArgs();
 
-    @InputImport(name="httpsHealthCheck", required=true)
+    @Import(name="httpsHealthCheck", required=true)
       private final String httpsHealthCheck;
 
     public String getHttpsHealthCheck() {
         return this.httpsHealthCheck;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

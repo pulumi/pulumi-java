@@ -9,7 +9,7 @@ import io.pulumi.azurenative.hardwaresecuritymodules.outputs.NetworkProfileRespo
 import io.pulumi.azurenative.hardwaresecuritymodules.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * The supported Azure location where the dedicated HSM should be created.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -51,7 +51,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * The name of the dedicated HSM.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * Specifies the network interfaces of the dedicated hsm.
      * 
      */
-    @OutputExport(name="networkProfile", type=NetworkProfileResponse.class, parameters={})
+    @Export(name="networkProfile", type=NetworkProfileResponse.class, parameters={})
     private Output</* @Nullable */ NetworkProfileResponse> networkProfile;
 
     /**
@@ -79,7 +79,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * Provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -93,7 +93,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * SKU details
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
@@ -107,7 +107,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * This field will be used when RP does not support Availability zones.
      * 
      */
-    @OutputExport(name="stampId", type=String.class, parameters={})
+    @Export(name="stampId", type=String.class, parameters={})
     private Output</* @Nullable */ String> stampId;
 
     /**
@@ -121,7 +121,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * Resource Status Message.
      * 
      */
-    @OutputExport(name="statusMessage", type=String.class, parameters={})
+    @Export(name="statusMessage", type=String.class, parameters={})
     private Output<String> statusMessage;
 
     /**
@@ -135,7 +135,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -149,7 +149,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * The resource type of the dedicated HSM.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -163,7 +163,7 @@ public class DedicatedHsm extends io.pulumi.resources.CustomResource {
      * The Dedicated Hsm zones.
      * 
      */
-    @OutputExport(name="zones", type=List.class, parameters={String.class})
+    @Export(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
     /**

@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.amplify.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainAssociationSubDomain {
     /**
      * The branch name setting for the subdomain.
@@ -33,12 +33,12 @@ public final class DomainAssociationSubDomain {
      */
     private final @Nullable Boolean verified;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainAssociationSubDomain(
-        @OutputCustomType.Parameter("branchName") String branchName,
-        @OutputCustomType.Parameter("dnsRecord") @Nullable String dnsRecord,
-        @OutputCustomType.Parameter("prefix") String prefix,
-        @OutputCustomType.Parameter("verified") @Nullable Boolean verified) {
+        @CustomType.Parameter("branchName") String branchName,
+        @CustomType.Parameter("dnsRecord") @Nullable String dnsRecord,
+        @CustomType.Parameter("prefix") String prefix,
+        @CustomType.Parameter("verified") @Nullable Boolean verified) {
         this.branchName = branchName;
         this.dnsRecord = dnsRecord;
         this.prefix = prefix;

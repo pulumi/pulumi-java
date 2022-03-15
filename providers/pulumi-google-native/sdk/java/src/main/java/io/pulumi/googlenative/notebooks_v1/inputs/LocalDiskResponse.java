@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.notebooks_v1.inputs.LocalDiskInitializeParamsResponse;
 import io.pulumi.googlenative.notebooks_v1.inputs.RuntimeGuestOsFeatureResponse;
 import java.lang.Boolean;
@@ -25,7 +25,7 @@ public final class LocalDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Output only. Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
      * 
      */
-    @InputImport(name="autoDelete", required=true)
+    @Import(name="autoDelete", required=true)
       private final Boolean autoDelete;
 
     public Boolean getAutoDelete() {
@@ -36,7 +36,7 @@ public final class LocalDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Output only. Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
      * 
      */
-    @InputImport(name="boot", required=true)
+    @Import(name="boot", required=true)
       private final Boolean boot;
 
     public Boolean getBoot() {
@@ -47,7 +47,7 @@ public final class LocalDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Output only. Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance. If not specified, the server chooses a default device name to apply to this disk, in the form persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only applicable for persistent disks.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final String deviceName;
 
     public String getDeviceName() {
@@ -58,7 +58,7 @@ public final class LocalDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Indicates a list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
      * 
      */
-    @InputImport(name="guestOsFeatures", required=true)
+    @Import(name="guestOsFeatures", required=true)
       private final List<RuntimeGuestOsFeatureResponse> guestOsFeatures;
 
     public List<RuntimeGuestOsFeatureResponse> getGuestOsFeatures() {
@@ -69,7 +69,7 @@ public final class LocalDiskResponse extends io.pulumi.resources.InvokeArgs {
      * A zero-based index to this disk, where 0 is reserved for the boot disk. If you have many disks attached to an instance, each disk would have a unique index number.
      * 
      */
-    @InputImport(name="index", required=true)
+    @Import(name="index", required=true)
       private final Integer index;
 
     public Integer getIndex() {
@@ -80,7 +80,7 @@ public final class LocalDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Input only. Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both.
      * 
      */
-    @InputImport(name="initializeParams", required=true)
+    @Import(name="initializeParams", required=true)
       private final LocalDiskInitializeParamsResponse initializeParams;
 
     public LocalDiskInitializeParamsResponse getInitializeParams() {
@@ -91,7 +91,7 @@ public final class LocalDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI and the request will fail if you attempt to attach a persistent disk in any other format than SCSI. Local SSDs can use either NVME or SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance. Valid values: * NVME * SCSI
      * 
      */
-    @InputImport(name="interface", required=true)
+    @Import(name="interface", required=true)
       private final String $interface;
 
     public String get$interface() {
@@ -102,7 +102,7 @@ public final class LocalDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Type of the resource. Always compute#attachedDisk for attached disks.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -113,7 +113,7 @@ public final class LocalDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Any valid publicly visible licenses.
      * 
      */
-    @InputImport(name="licenses", required=true)
+    @Import(name="licenses", required=true)
       private final List<String> licenses;
 
     public List<String> getLicenses() {
@@ -124,7 +124,7 @@ public final class LocalDiskResponse extends io.pulumi.resources.InvokeArgs {
      * The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode. Valid values: * READ_ONLY * READ_WRITE
      * 
      */
-    @InputImport(name="mode", required=true)
+    @Import(name="mode", required=true)
       private final String mode;
 
     public String getMode() {
@@ -135,7 +135,7 @@ public final class LocalDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies a valid partial or full URL to an existing Persistent Disk resource.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final String source;
 
     public String getSource() {
@@ -146,7 +146,7 @@ public final class LocalDiskResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT. Valid values: * PERSISTENT * SCRATCH
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.edgeorder;
 import io.pulumi.azurenative.edgeorder.inputs.AddressDetailsArgs;
 import io.pulumi.azurenative.edgeorder.inputs.OrderItemDetailsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
      * Represents shipping and return address for order item
      * 
      */
-    @InputImport(name="addressDetails", required=true)
+    @Import(name="addressDetails", required=true)
       private final Output<AddressDetailsArgs> addressDetails;
 
     public Output<AddressDetailsArgs> getAddressDetails() {
@@ -32,7 +32,7 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -43,7 +43,7 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
      * Id of the order to which order item belongs to
      * 
      */
-    @InputImport(name="orderId", required=true)
+    @Import(name="orderId", required=true)
       private final Output<String> orderId;
 
     public Output<String> getOrderId() {
@@ -54,7 +54,7 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
      * Represents order item details.
      * 
      */
-    @InputImport(name="orderItemDetails", required=true)
+    @Import(name="orderItemDetails", required=true)
       private final Output<OrderItemDetailsArgs> orderItemDetails;
 
     public Output<OrderItemDetailsArgs> getOrderItemDetails() {
@@ -65,7 +65,7 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the order item
      * 
      */
-    @InputImport(name="orderItemName")
+    @Import(name="orderItemName")
       private final @Nullable Output<String> orderItemName;
 
     public Output<String> getOrderItemName() {
@@ -76,7 +76,7 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -87,7 +87,7 @@ public final class OrderItemByNameArgs extends io.pulumi.resources.ResourceArgs 
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

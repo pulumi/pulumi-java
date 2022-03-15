@@ -4,7 +4,7 @@
 package io.pulumi.random;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
      * The number of random bytes to produce. The minimum value is 1, which produces eight bits of randomness.
      * 
      */
-    @InputImport(name="byteLength", required=true)
+    @Import(name="byteLength", required=true)
       private final Output<Integer> byteLength;
 
     public Output<Integer> getByteLength() {
@@ -32,7 +32,7 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
      * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    @InputImport(name="keepers")
+    @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
     public Output<Map<String,Object>> getKeepers() {
@@ -43,7 +43,7 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
      * Arbitrary string to prefix the output value with. This string is supplied as-is, meaning it is not guaranteed to be URL-safe or base64 encoded.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {

@@ -4,11 +4,11 @@
 package io.pulumi.aws.emr.outputs;
 
 import io.pulumi.aws.emr.outputs.ClusterStepHadoopJarStep;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterStep {
     /**
      * Action to take if the step fails. Valid values: `TERMINATE_JOB_FLOW`, `TERMINATE_CLUSTER`, `CANCEL_AND_WAIT`, and `CONTINUE`
@@ -26,11 +26,11 @@ public final class ClusterStep {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterStep(
-        @OutputCustomType.Parameter("actionOnFailure") String actionOnFailure,
-        @OutputCustomType.Parameter("hadoopJarStep") ClusterStepHadoopJarStep hadoopJarStep,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("actionOnFailure") String actionOnFailure,
+        @CustomType.Parameter("hadoopJarStep") ClusterStepHadoopJarStep hadoopJarStep,
+        @CustomType.Parameter("name") String name) {
         this.actionOnFailure = actionOnFailure;
         this.hadoopJarStep = hadoopJarStep;
         this.name = name;

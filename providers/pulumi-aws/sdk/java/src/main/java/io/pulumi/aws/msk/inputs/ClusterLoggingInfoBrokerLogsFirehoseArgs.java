@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterLoggingInfoBrokerLogsFirehoseArgs extends io.pulumi.re
      * Name of the Kinesis Data Firehose delivery stream to deliver logs to.
      * 
      */
-    @InputImport(name="deliveryStream")
+    @Import(name="deliveryStream")
       private final @Nullable Output<String> deliveryStream;
 
     public Output<String> getDeliveryStream() {
@@ -30,7 +30,7 @@ public final class ClusterLoggingInfoBrokerLogsFirehoseArgs extends io.pulumi.re
      * Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {

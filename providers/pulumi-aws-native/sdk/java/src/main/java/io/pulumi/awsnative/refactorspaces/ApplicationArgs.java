@@ -7,7 +7,7 @@ import io.pulumi.awsnative.refactorspaces.enums.ApplicationProxyType;
 import io.pulumi.awsnative.refactorspaces.inputs.ApplicationApiGatewayProxyInputArgs;
 import io.pulumi.awsnative.refactorspaces.inputs.ApplicationTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,28 +18,28 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
-    @InputImport(name="apiGatewayProxy")
+    @Import(name="apiGatewayProxy")
       private final @Nullable Output<ApplicationApiGatewayProxyInputArgs> apiGatewayProxy;
 
     public Output<ApplicationApiGatewayProxyInputArgs> getApiGatewayProxy() {
         return this.apiGatewayProxy == null ? Output.empty() : this.apiGatewayProxy;
     }
 
-    @InputImport(name="environmentIdentifier")
+    @Import(name="environmentIdentifier")
       private final @Nullable Output<String> environmentIdentifier;
 
     public Output<String> getEnvironmentIdentifier() {
         return this.environmentIdentifier == null ? Output.empty() : this.environmentIdentifier;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="proxyType")
+    @Import(name="proxyType")
       private final @Nullable Output<ApplicationProxyType> proxyType;
 
     public Output<ApplicationProxyType> getProxyType() {
@@ -50,14 +50,14 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ApplicationTagArgs>> tags;
 
     public Output<List<ApplicationTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

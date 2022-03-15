@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.DeleteExistingNSGs;
 import io.pulumi.azurenative.network.enums.SecurityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
      * The name of the network manager security Configuration.
      * 
      */
-    @InputImport(name="configurationName")
+    @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
 
     public Output<String> getConfigurationName() {
@@ -32,7 +32,7 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
      * Flag if need to delete existing network security groups.
      * 
      */
-    @InputImport(name="deleteExistingNSGs")
+    @Import(name="deleteExistingNSGs")
       private final @Nullable Output<Either<String,DeleteExistingNSGs>> deleteExistingNSGs;
 
     public Output<Either<String,DeleteExistingNSGs>> getDeleteExistingNSGs() {
@@ -43,7 +43,7 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
      * A description of the security configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -54,7 +54,7 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
      * A display name of the security configuration.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -65,7 +65,7 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
      * The name of the network manager.
      * 
      */
-    @InputImport(name="networkManagerName", required=true)
+    @Import(name="networkManagerName", required=true)
       private final Output<String> networkManagerName;
 
     public Output<String> getNetworkManagerName() {
@@ -76,7 +76,7 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -87,7 +87,7 @@ public final class SecurityAdminConfigurationArgs extends io.pulumi.resources.Re
      * Security Type.
      * 
      */
-    @InputImport(name="securityType")
+    @Import(name="securityType")
       private final @Nullable Output<Either<String,SecurityType>> securityType;
 
     public Output<Either<String,SecurityType>> getSecurityType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class HttpRouteMatchPathResponse extends io.pulumi.resources.Invoke
      * replacement string for matched part of the Uri.
      * 
      */
-    @InputImport(name="rewrite")
+    @Import(name="rewrite")
       private final @Nullable String rewrite;
 
     public Optional<String> getRewrite() {
@@ -33,7 +33,7 @@ public final class HttpRouteMatchPathResponse extends io.pulumi.resources.Invoke
      * how to match value in the Uri
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -44,7 +44,7 @@ public final class HttpRouteMatchPathResponse extends io.pulumi.resources.Invoke
      * Uri path to match for request.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

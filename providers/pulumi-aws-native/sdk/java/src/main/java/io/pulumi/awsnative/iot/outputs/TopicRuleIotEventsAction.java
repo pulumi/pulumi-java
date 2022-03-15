@@ -3,26 +3,26 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleIotEventsAction {
     private final @Nullable Boolean batchMode;
     private final String inputName;
     private final @Nullable String messageId;
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleIotEventsAction(
-        @OutputCustomType.Parameter("batchMode") @Nullable Boolean batchMode,
-        @OutputCustomType.Parameter("inputName") String inputName,
-        @OutputCustomType.Parameter("messageId") @Nullable String messageId,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("batchMode") @Nullable Boolean batchMode,
+        @CustomType.Parameter("inputName") String inputName,
+        @CustomType.Parameter("messageId") @Nullable String messageId,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.batchMode = batchMode;
         this.inputName = inputName;
         this.messageId = messageId;

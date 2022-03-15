@@ -17,7 +17,7 @@ import io.pulumi.awsnative.wafv2.inputs.RuleGroupSizeConstraintStatementArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupSqliMatchStatementArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupXssMatchStatementArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -30,91 +30,91 @@ public final class RuleGroupStatementArgs extends io.pulumi.resources.ResourceAr
 
     public static final RuleGroupStatementArgs Empty = new RuleGroupStatementArgs();
 
-    @InputImport(name="andStatement")
+    @Import(name="andStatement")
       private final @Nullable Output<RuleGroupAndStatementArgs> andStatement;
 
     public Output<RuleGroupAndStatementArgs> getAndStatement() {
         return this.andStatement == null ? Output.empty() : this.andStatement;
     }
 
-    @InputImport(name="byteMatchStatement")
+    @Import(name="byteMatchStatement")
       private final @Nullable Output<RuleGroupByteMatchStatementArgs> byteMatchStatement;
 
     public Output<RuleGroupByteMatchStatementArgs> getByteMatchStatement() {
         return this.byteMatchStatement == null ? Output.empty() : this.byteMatchStatement;
     }
 
-    @InputImport(name="geoMatchStatement")
+    @Import(name="geoMatchStatement")
       private final @Nullable Output<RuleGroupGeoMatchStatementArgs> geoMatchStatement;
 
     public Output<RuleGroupGeoMatchStatementArgs> getGeoMatchStatement() {
         return this.geoMatchStatement == null ? Output.empty() : this.geoMatchStatement;
     }
 
-    @InputImport(name="iPSetReferenceStatement")
+    @Import(name="iPSetReferenceStatement")
       private final @Nullable Output<RuleGroupIPSetReferenceStatementArgs> iPSetReferenceStatement;
 
     public Output<RuleGroupIPSetReferenceStatementArgs> getIPSetReferenceStatement() {
         return this.iPSetReferenceStatement == null ? Output.empty() : this.iPSetReferenceStatement;
     }
 
-    @InputImport(name="labelMatchStatement")
+    @Import(name="labelMatchStatement")
       private final @Nullable Output<RuleGroupLabelMatchStatementArgs> labelMatchStatement;
 
     public Output<RuleGroupLabelMatchStatementArgs> getLabelMatchStatement() {
         return this.labelMatchStatement == null ? Output.empty() : this.labelMatchStatement;
     }
 
-    @InputImport(name="notStatement")
+    @Import(name="notStatement")
       private final @Nullable Output<RuleGroupNotStatementArgs> notStatement;
 
     public Output<RuleGroupNotStatementArgs> getNotStatement() {
         return this.notStatement == null ? Output.empty() : this.notStatement;
     }
 
-    @InputImport(name="orStatement")
+    @Import(name="orStatement")
       private final @Nullable Output<RuleGroupOrStatementArgs> orStatement;
 
     public Output<RuleGroupOrStatementArgs> getOrStatement() {
         return this.orStatement == null ? Output.empty() : this.orStatement;
     }
 
-    @InputImport(name="rateBasedStatement")
+    @Import(name="rateBasedStatement")
       private final @Nullable Output<RuleGroupRateBasedStatementArgs> rateBasedStatement;
 
     public Output<RuleGroupRateBasedStatementArgs> getRateBasedStatement() {
         return this.rateBasedStatement == null ? Output.empty() : this.rateBasedStatement;
     }
 
-    @InputImport(name="regexMatchStatement")
+    @Import(name="regexMatchStatement")
       private final @Nullable Output<RuleGroupRegexMatchStatementArgs> regexMatchStatement;
 
     public Output<RuleGroupRegexMatchStatementArgs> getRegexMatchStatement() {
         return this.regexMatchStatement == null ? Output.empty() : this.regexMatchStatement;
     }
 
-    @InputImport(name="regexPatternSetReferenceStatement")
+    @Import(name="regexPatternSetReferenceStatement")
       private final @Nullable Output<RuleGroupRegexPatternSetReferenceStatementArgs> regexPatternSetReferenceStatement;
 
     public Output<RuleGroupRegexPatternSetReferenceStatementArgs> getRegexPatternSetReferenceStatement() {
         return this.regexPatternSetReferenceStatement == null ? Output.empty() : this.regexPatternSetReferenceStatement;
     }
 
-    @InputImport(name="sizeConstraintStatement")
+    @Import(name="sizeConstraintStatement")
       private final @Nullable Output<RuleGroupSizeConstraintStatementArgs> sizeConstraintStatement;
 
     public Output<RuleGroupSizeConstraintStatementArgs> getSizeConstraintStatement() {
         return this.sizeConstraintStatement == null ? Output.empty() : this.sizeConstraintStatement;
     }
 
-    @InputImport(name="sqliMatchStatement")
+    @Import(name="sqliMatchStatement")
       private final @Nullable Output<RuleGroupSqliMatchStatementArgs> sqliMatchStatement;
 
     public Output<RuleGroupSqliMatchStatementArgs> getSqliMatchStatement() {
         return this.sqliMatchStatement == null ? Output.empty() : this.sqliMatchStatement;
     }
 
-    @InputImport(name="xssMatchStatement")
+    @Import(name="xssMatchStatement")
       private final @Nullable Output<RuleGroupXssMatchStatementArgs> xssMatchStatement;
 
     public Output<RuleGroupXssMatchStatementArgs> getXssMatchStatement() {

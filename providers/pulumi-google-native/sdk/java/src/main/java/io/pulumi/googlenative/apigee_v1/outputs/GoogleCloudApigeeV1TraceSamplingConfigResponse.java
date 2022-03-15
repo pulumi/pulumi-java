@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1TraceSamplingConfigResponse {
     /**
      * Sampler of distributed tracing. OFF is the default value.
@@ -21,10 +21,10 @@ public final class GoogleCloudApigeeV1TraceSamplingConfigResponse {
      */
     private final Double samplingRate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1TraceSamplingConfigResponse(
-        @OutputCustomType.Parameter("sampler") String sampler,
-        @OutputCustomType.Parameter("samplingRate") Double samplingRate) {
+        @CustomType.Parameter("sampler") String sampler,
+        @CustomType.Parameter("samplingRate") Double samplingRate) {
         this.sampler = sampler;
         this.samplingRate = samplingRate;
     }

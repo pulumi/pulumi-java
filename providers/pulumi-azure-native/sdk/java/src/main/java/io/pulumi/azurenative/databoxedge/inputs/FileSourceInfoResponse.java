@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class FileSourceInfoResponse extends io.pulumi.resources.InvokeArgs
      * File share ID.
      * 
      */
-    @InputImport(name="shareId", required=true)
+    @Import(name="shareId", required=true)
       private final String shareId;
 
     public String getShareId() {

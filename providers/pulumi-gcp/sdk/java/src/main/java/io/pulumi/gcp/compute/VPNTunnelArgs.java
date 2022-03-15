@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -34,7 +34,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * Acceptable IKE versions are 1 or 2. Default version is 2.
      * 
      */
-    @InputImport(name="ikeVersion")
+    @Import(name="ikeVersion")
       private final @Nullable Output<Integer> ikeVersion;
 
     public Output<Integer> getIkeVersion() {
@@ -45,7 +45,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * Labels to apply to this VpnTunnel.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -59,7 +59,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * Only IPv4 is supported.
      * 
      */
-    @InputImport(name="localTrafficSelectors")
+    @Import(name="localTrafficSelectors")
       private final @Nullable Output<List<String>> localTrafficSelectors;
 
     public Output<List<String>> getLocalTrafficSelectors() {
@@ -76,7 +76,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -87,7 +87,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * URL of the peer side external VPN gateway to which this VPN tunnel is connected.
      * 
      */
-    @InputImport(name="peerExternalGateway")
+    @Import(name="peerExternalGateway")
       private final @Nullable Output<String> peerExternalGateway;
 
     public Output<String> getPeerExternalGateway() {
@@ -98,7 +98,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * The interface ID of the external VPN gateway to which this VPN tunnel is connected.
      * 
      */
-    @InputImport(name="peerExternalGatewayInterface")
+    @Import(name="peerExternalGatewayInterface")
       private final @Nullable Output<Integer> peerExternalGatewayInterface;
 
     public Output<Integer> getPeerExternalGatewayInterface() {
@@ -112,7 +112,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * This field must reference a `gcp.compute.HaVpnGateway` resource.
      * 
      */
-    @InputImport(name="peerGcpGateway")
+    @Import(name="peerGcpGateway")
       private final @Nullable Output<String> peerGcpGateway;
 
     public Output<String> getPeerGcpGateway() {
@@ -123,7 +123,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * IP address of the peer VPN gateway. Only IPv4 is supported.
      * 
      */
-    @InputImport(name="peerIp")
+    @Import(name="peerIp")
       private final @Nullable Output<String> peerIp;
 
     public Output<String> getPeerIp() {
@@ -135,7 +135,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -146,7 +146,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * The region where the tunnel is located. If unset, is set to the region of `target_vpn_gateway`.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -160,7 +160,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * Only IPv4 is supported.
      * 
      */
-    @InputImport(name="remoteTrafficSelectors")
+    @Import(name="remoteTrafficSelectors")
       private final @Nullable Output<List<String>> remoteTrafficSelectors;
 
     public Output<List<String>> getRemoteTrafficSelectors() {
@@ -171,7 +171,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * URL of router resource to be used for dynamic routing.
      * 
      */
-    @InputImport(name="router")
+    @Import(name="router")
       private final @Nullable Output<String> router;
 
     public Output<String> getRouter() {
@@ -184,7 +184,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @InputImport(name="sharedSecret", required=true)
+    @Import(name="sharedSecret", required=true)
       private final Output<String> sharedSecret;
 
     public Output<String> getSharedSecret() {
@@ -196,7 +196,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * associated.
      * 
      */
-    @InputImport(name="targetVpnGateway")
+    @Import(name="targetVpnGateway")
       private final @Nullable Output<String> targetVpnGateway;
 
     public Output<String> getTargetVpnGateway() {
@@ -209,7 +209,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * This field must reference a `gcp.compute.HaVpnGateway` resource.
      * 
      */
-    @InputImport(name="vpnGateway")
+    @Import(name="vpnGateway")
       private final @Nullable Output<String> vpnGateway;
 
     public Output<String> getVpnGateway() {
@@ -220,7 +220,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * The interface ID of the VPN gateway with which this VPN tunnel is associated.
      * 
      */
-    @InputImport(name="vpnGatewayInterface")
+    @Import(name="vpnGatewayInterface")
       private final @Nullable Output<Integer> vpnGatewayInterface;
 
     public Output<Integer> getVpnGatewayInterface() {

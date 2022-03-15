@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.RouterNatNatIpAllocateOption;
 import io.pulumi.googlenative.compute_alpha.enums.RouterNatSourceSubnetworkIpRangesToNat;
 import io.pulumi.googlenative.compute_alpha.enums.RouterNatType;
@@ -31,7 +31,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.
      * 
      */
-    @InputImport(name="drainNatIps")
+    @Import(name="drainNatIps")
       private final @Nullable Output<List<String>> drainNatIps;
 
     public Output<List<String>> getDrainNatIps() {
@@ -42,14 +42,14 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Enable Dynamic Port Allocation. If not specified, it is disabled by default. If set to true, - Dynamic Port Allocation will be enabled on this NAT config. - enableEndpointIndependentMapping cannot be set to true. - If minPorts is set, minPortsPerVm must be set to a power of two greater than or equal to 32. If minPortsPerVm is not set, a minimum of 32 ports will be allocated to a VM from this NAT config.
      * 
      */
-    @InputImport(name="enableDynamicPortAllocation")
+    @Import(name="enableDynamicPortAllocation")
       private final @Nullable Output<Boolean> enableDynamicPortAllocation;
 
     public Output<Boolean> getEnableDynamicPortAllocation() {
         return this.enableDynamicPortAllocation == null ? Output.empty() : this.enableDynamicPortAllocation;
     }
 
-    @InputImport(name="enableEndpointIndependentMapping")
+    @Import(name="enableEndpointIndependentMapping")
       private final @Nullable Output<Boolean> enableEndpointIndependentMapping;
 
     public Output<Boolean> getEnableEndpointIndependentMapping() {
@@ -60,7 +60,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
      * 
      */
-    @InputImport(name="icmpIdleTimeoutSec")
+    @Import(name="icmpIdleTimeoutSec")
       private final @Nullable Output<Integer> icmpIdleTimeoutSec;
 
     public Output<Integer> getIcmpIdleTimeoutSec() {
@@ -71,7 +71,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Configure logging on this NAT.
      * 
      */
-    @InputImport(name="logConfig")
+    @Import(name="logConfig")
       private final @Nullable Output<RouterNatLogConfigArgs> logConfig;
 
     public Output<RouterNatLogConfigArgs> getLogConfig() {
@@ -82,7 +82,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Maximum number of ports allocated to a VM from this NAT config when Dynamic Port Allocation is enabled. If Dynamic Port Allocation is not enabled, this field has no effect. If Dynamic Port Allocation is enabled, and this field is set, it must be set to a power of two greater than minPortsPerVm, or 64 if minPortsPerVm is not set. If Dynamic Port Allocation is enabled and this field is not set, a maximum of 65536 ports will be allocated to a VM from this NAT config.
      * 
      */
-    @InputImport(name="maxPortsPerVm")
+    @Import(name="maxPortsPerVm")
       private final @Nullable Output<Integer> maxPortsPerVm;
 
     public Output<Integer> getMaxPortsPerVm() {
@@ -93,7 +93,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Minimum number of ports allocated to a VM from this NAT config. If not set, a default number of ports is allocated to a VM. This is rounded up to the nearest power of 2. For example, if the value of this field is 50, at least 64 ports are allocated to a VM.
      * 
      */
-    @InputImport(name="minPortsPerVm")
+    @Import(name="minPortsPerVm")
       private final @Nullable Output<Integer> minPortsPerVm;
 
     public Output<Integer> getMinPortsPerVm() {
@@ -104,7 +104,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Unique name of this Nat service. The name must be 1-63 characters long and comply with RFC1035.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -115,7 +115,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Specify the NatIpAllocateOption, which can take one of the following values: - MANUAL_ONLY: Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs, the Nat service fails for new VMs. - AUTO_ONLY: Nat IPs are allocated by Google Cloud Platform; customers can't specify any Nat IPs. When choosing AUTO_ONLY, then nat_ip should be empty.
      * 
      */
-    @InputImport(name="natIpAllocateOption")
+    @Import(name="natIpAllocateOption")
       private final @Nullable Output<RouterNatNatIpAllocateOption> natIpAllocateOption;
 
     public Output<RouterNatNatIpAllocateOption> getNatIpAllocateOption() {
@@ -126,7 +126,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * A list of URLs of the IP resources used for this Nat service. These IP addresses must be valid static external IP addresses assigned to the project.
      * 
      */
-    @InputImport(name="natIps")
+    @Import(name="natIps")
       private final @Nullable Output<List<String>> natIps;
 
     public Output<List<String>> getNatIps() {
@@ -137,7 +137,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * A list of rules associated with this NAT.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<RouterNatRuleArgs>> rules;
 
     public Output<List<RouterNatRuleArgs>> getRules() {
@@ -148,7 +148,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Specify the Nat option, which can take one of the following values: - ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. - ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES: All of the primary IP ranges in every Subnetwork are allowed to Nat. - LIST_OF_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in the field subnetwork below) The default is SUBNETWORK_IP_RANGE_TO_NAT_OPTION_UNSPECIFIED. Note that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES or ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES, then there should not be any other Router.Nat section in any Router for this network in this region.
      * 
      */
-    @InputImport(name="sourceSubnetworkIpRangesToNat")
+    @Import(name="sourceSubnetworkIpRangesToNat")
       private final @Nullable Output<RouterNatSourceSubnetworkIpRangesToNat> sourceSubnetworkIpRangesToNat;
 
     public Output<RouterNatSourceSubnetworkIpRangesToNat> getSourceSubnetworkIpRangesToNat() {
@@ -159,7 +159,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * A list of Subnetwork resources whose traffic should be translated by NAT Gateway. It is used only when LIST_OF_SUBNETWORKS is selected for the SubnetworkIpRangeToNatOption above.
      * 
      */
-    @InputImport(name="subnetworks")
+    @Import(name="subnetworks")
       private final @Nullable Output<List<RouterNatSubnetworkToNatArgs>> subnetworks;
 
     public Output<List<RouterNatSubnetworkToNatArgs>> getSubnetworks() {
@@ -170,7 +170,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set.
      * 
      */
-    @InputImport(name="tcpEstablishedIdleTimeoutSec")
+    @Import(name="tcpEstablishedIdleTimeoutSec")
       private final @Nullable Output<Integer> tcpEstablishedIdleTimeoutSec;
 
     public Output<Integer> getTcpEstablishedIdleTimeoutSec() {
@@ -181,7 +181,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Timeout (in seconds) for TCP connections that are in TIME_WAIT state. Defaults to 120s if not set.
      * 
      */
-    @InputImport(name="tcpTimeWaitTimeoutSec")
+    @Import(name="tcpTimeWaitTimeoutSec")
       private final @Nullable Output<Integer> tcpTimeWaitTimeoutSec;
 
     public Output<Integer> getTcpTimeWaitTimeoutSec() {
@@ -192,7 +192,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.
      * 
      */
-    @InputImport(name="tcpTransitoryIdleTimeoutSec")
+    @Import(name="tcpTransitoryIdleTimeoutSec")
       private final @Nullable Output<Integer> tcpTransitoryIdleTimeoutSec;
 
     public Output<Integer> getTcpTransitoryIdleTimeoutSec() {
@@ -203,7 +203,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether this NAT is used for public or private IP translation. If unspecified, it defaults to PUBLIC.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<RouterNatType> type;
 
     public Output<RouterNatType> getType() {
@@ -214,7 +214,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
      * 
      */
-    @InputImport(name="udpIdleTimeoutSec")
+    @Import(name="udpIdleTimeoutSec")
       private final @Nullable Output<Integer> udpIdleTimeoutSec;
 
     public Output<Integer> getUdpIdleTimeoutSec() {

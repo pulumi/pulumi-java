@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoScaleSettingsResponse {
     /**
      * If omitted, the default value is 15 minutes (PT15M).
@@ -18,10 +18,10 @@ public final class AutoScaleSettingsResponse {
     private final @Nullable String evaluationInterval;
     private final String formula;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoScaleSettingsResponse(
-        @OutputCustomType.Parameter("evaluationInterval") @Nullable String evaluationInterval,
-        @OutputCustomType.Parameter("formula") String formula) {
+        @CustomType.Parameter("evaluationInterval") @Nullable String evaluationInterval,
+        @CustomType.Parameter("formula") String formula) {
         this.evaluationInterval = evaluationInterval;
         this.formula = formula;
     }

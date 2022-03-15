@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThemeDataColorPalette {
     /**
      * <p>The hexadecimal codes for the colors.</p>
@@ -29,11 +29,11 @@ public final class ThemeDataColorPalette {
      */
     private final @Nullable List<String> minMaxGradient;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ThemeDataColorPalette(
-        @OutputCustomType.Parameter("colors") @Nullable List<String> colors,
-        @OutputCustomType.Parameter("emptyFillColor") @Nullable String emptyFillColor,
-        @OutputCustomType.Parameter("minMaxGradient") @Nullable List<String> minMaxGradient) {
+        @CustomType.Parameter("colors") @Nullable List<String> colors,
+        @CustomType.Parameter("emptyFillColor") @Nullable String emptyFillColor,
+        @CustomType.Parameter("minMaxGradient") @Nullable List<String> minMaxGradient) {
         this.colors = colors;
         this.emptyFillColor = emptyFillColor;
         this.minMaxGradient = minMaxGradient;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkservices_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetEndpointPolicyArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetEndpointPolicyArgs Empty = new GetEndpointPolicyArgs();
 
-    @InputImport(name="endpointPolicyId", required=true)
+    @Import(name="endpointPolicyId", required=true)
       private final String endpointPolicyId;
 
     public String getEndpointPolicyId() {
         return this.endpointPolicyId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

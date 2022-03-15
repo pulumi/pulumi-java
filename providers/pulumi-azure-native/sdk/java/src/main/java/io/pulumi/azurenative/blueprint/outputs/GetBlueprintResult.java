@@ -6,7 +6,7 @@ package io.pulumi.azurenative.blueprint.outputs;
 import io.pulumi.azurenative.blueprint.outputs.BlueprintStatusResponse;
 import io.pulumi.azurenative.blueprint.outputs.ParameterDefinitionResponse;
 import io.pulumi.azurenative.blueprint.outputs.ResourceGroupDefinitionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBlueprintResult {
     /**
      * Multi-line explain this resource.
@@ -72,19 +72,19 @@ public final class GetBlueprintResult {
      */
     private final @Nullable Object versions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBlueprintResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("layout") Object layout,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterDefinitionResponse> parameters,
-        @OutputCustomType.Parameter("resourceGroups") @Nullable Map<String,ResourceGroupDefinitionResponse> resourceGroups,
-        @OutputCustomType.Parameter("status") BlueprintStatusResponse status,
-        @OutputCustomType.Parameter("targetScope") String targetScope,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("versions") @Nullable Object versions) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("layout") Object layout,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterDefinitionResponse> parameters,
+        @CustomType.Parameter("resourceGroups") @Nullable Map<String,ResourceGroupDefinitionResponse> resourceGroups,
+        @CustomType.Parameter("status") BlueprintStatusResponse status,
+        @CustomType.Parameter("targetScope") String targetScope,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("versions") @Nullable Object versions) {
         this.description = description;
         this.displayName = displayName;
         this.id = id;

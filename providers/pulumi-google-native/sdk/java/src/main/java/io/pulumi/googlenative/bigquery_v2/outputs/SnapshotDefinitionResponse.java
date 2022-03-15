@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.TableReferenceResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SnapshotDefinitionResponse {
     /**
      * [Required] Reference describing the ID of the table that was snapshot.
@@ -21,10 +21,10 @@ public final class SnapshotDefinitionResponse {
      */
     private final String snapshotTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SnapshotDefinitionResponse(
-        @OutputCustomType.Parameter("baseTableReference") TableReferenceResponse baseTableReference,
-        @OutputCustomType.Parameter("snapshotTime") String snapshotTime) {
+        @CustomType.Parameter("baseTableReference") TableReferenceResponse baseTableReference,
+        @CustomType.Parameter("snapshotTime") String snapshotTime) {
         this.baseTableReference = baseTableReference;
         this.snapshotTime = snapshotTime;
     }

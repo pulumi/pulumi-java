@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse ex
      * Cloud Storage URI that points to a file that contains the conversation audio.
      * 
      */
-    @InputImport(name="audioUri", required=true)
+    @Import(name="audioUri", required=true)
       private final String audioUri;
 
     public String getAudioUri() {
@@ -31,7 +31,7 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse ex
      * The name of the Dialogflow conversation that this conversation resource is derived from. Format: projects/{project}/locations/{location}/conversations/{conversation}
      * 
      */
-    @InputImport(name="dialogflowConversation", required=true)
+    @Import(name="dialogflowConversation", required=true)
       private final String dialogflowConversation;
 
     public String getDialogflowConversation() {

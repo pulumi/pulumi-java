@@ -6,14 +6,14 @@ package io.pulumi.azurenative.costmanagement.outputs;
 import io.pulumi.azurenative.costmanagement.outputs.ReportDefinitionResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportDeliveryInfoResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportScheduleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetReportByBillingAccountResult {
     /**
      * Has definition for the report.
@@ -56,16 +56,16 @@ public final class GetReportByBillingAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetReportByBillingAccountResult(
-        @OutputCustomType.Parameter("definition") ReportDefinitionResponse definition,
-        @OutputCustomType.Parameter("deliveryInfo") ReportDeliveryInfoResponse deliveryInfo,
-        @OutputCustomType.Parameter("format") @Nullable String format,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("schedule") @Nullable ReportScheduleResponse schedule,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("definition") ReportDefinitionResponse definition,
+        @CustomType.Parameter("deliveryInfo") ReportDeliveryInfoResponse deliveryInfo,
+        @CustomType.Parameter("format") @Nullable String format,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("schedule") @Nullable ReportScheduleResponse schedule,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.definition = definition;
         this.deliveryInfo = deliveryInfo;
         this.format = format;

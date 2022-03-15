@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WaitStatisticsResponse {
     /**
      * Total no. of waits
@@ -26,11 +26,11 @@ public final class WaitStatisticsResponse {
      */
     private final String waitType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WaitStatisticsResponse(
-        @OutputCustomType.Parameter("waitCount") Double waitCount,
-        @OutputCustomType.Parameter("waitTimeMs") Double waitTimeMs,
-        @OutputCustomType.Parameter("waitType") String waitType) {
+        @CustomType.Parameter("waitCount") Double waitCount,
+        @CustomType.Parameter("waitTimeMs") Double waitTimeMs,
+        @CustomType.Parameter("waitType") String waitType) {
         this.waitCount = waitCount;
         this.waitTimeMs = waitTimeMs;
         this.waitType = waitType;

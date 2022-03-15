@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.ResourceOptionsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class KubernetesResourceArgs extends io.pulumi.resources.ResourceAr
      * Input only. The YAML representation of the Membership CR. This field is ignored for GKE clusters where Hub can read the CR directly. Callers should provide the CR that is currently present in the cluster during CreateMembership or UpdateMembership, or leave this field empty if none exists. The CR manifest is used to validate the cluster has not been registered with another Membership.
      * 
      */
-    @InputImport(name="membershipCrManifest")
+    @Import(name="membershipCrManifest")
       private final @Nullable Output<String> membershipCrManifest;
 
     public Output<String> getMembershipCrManifest() {
@@ -34,7 +34,7 @@ public final class KubernetesResourceArgs extends io.pulumi.resources.ResourceAr
      * Optional. Options for Kubernetes resource generation.
      * 
      */
-    @InputImport(name="resourceOptions")
+    @Import(name="resourceOptions")
       private final @Nullable Output<ResourceOptionsArgs> resourceOptions;
 
     public Output<ResourceOptionsArgs> getResourceOptions() {

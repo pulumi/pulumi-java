@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BotClarificationPromptMessageGetArgs extends io.pulumi.resour
      * The text of the message.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final Output<String> content;
 
     public Output<String> getContent() {
@@ -30,7 +30,7 @@ public final class BotClarificationPromptMessageGetArgs extends io.pulumi.resour
      * The content type of the message string.
      * 
      */
-    @InputImport(name="contentType", required=true)
+    @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -42,7 +42,7 @@ public final class BotClarificationPromptMessageGetArgs extends io.pulumi.resour
      * is assigned to a message, Amazon Lex returns one message from each group in the response.
      * 
      */
-    @InputImport(name="groupNumber")
+    @Import(name="groupNumber")
       private final @Nullable Output<Integer> groupNumber;
 
     public Output<Integer> getGroupNumber() {

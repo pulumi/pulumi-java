@@ -6,7 +6,7 @@ package io.pulumi.awsnative.datasync;
 import io.pulumi.awsnative.datasync.inputs.LocationEFSEc2ConfigArgs;
 import io.pulumi.awsnative.datasync.inputs.LocationEFSTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class LocationEFSArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final LocationEFSArgs Empty = new LocationEFSArgs();
 
-    @InputImport(name="ec2Config", required=true)
+    @Import(name="ec2Config", required=true)
       private final Output<LocationEFSEc2ConfigArgs> ec2Config;
 
     public Output<LocationEFSEc2ConfigArgs> getEc2Config() {
@@ -28,7 +28,7 @@ public final class LocationEFSArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) for the Amazon EFS file system.
      * 
      */
-    @InputImport(name="efsFilesystemArn", required=true)
+    @Import(name="efsFilesystemArn", required=true)
       private final Output<String> efsFilesystemArn;
 
     public Output<String> getEfsFilesystemArn() {
@@ -39,7 +39,7 @@ public final class LocationEFSArgs extends io.pulumi.resources.ResourceArgs {
      * A subdirectory in the location's path. This subdirectory in the EFS file system is used to read data from the EFS source location or write data to the EFS destination.
      * 
      */
-    @InputImport(name="subdirectory")
+    @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
@@ -50,7 +50,7 @@ public final class LocationEFSArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<LocationEFSTagArgs>> tags;
 
     public Output<List<LocationEFSTagArgs>> getTags() {

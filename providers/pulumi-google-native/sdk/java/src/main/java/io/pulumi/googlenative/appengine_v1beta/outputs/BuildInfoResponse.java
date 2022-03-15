@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BuildInfoResponse {
     /**
      * The Google Cloud Build id. Example: "f966068f-08b2-42c8-bdfe-74137dff2bf9"
@@ -15,8 +15,8 @@ public final class BuildInfoResponse {
      */
     private final String cloudBuildId;
 
-    @OutputCustomType.Constructor
-    private BuildInfoResponse(@OutputCustomType.Parameter("cloudBuildId") String cloudBuildId) {
+    @CustomType.Constructor
+    private BuildInfoResponse(@CustomType.Parameter("cloudBuildId") String cloudBuildId) {
         this.cloudBuildId = cloudBuildId;
     }
 

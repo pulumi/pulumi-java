@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RequestValidatorState extends io.pulumi.resources.ResourceArg
      * The name of the request validator
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -30,7 +30,7 @@ public final class RequestValidatorState extends io.pulumi.resources.ResourceArg
      * The ID of the associated Rest API
      * 
      */
-    @InputImport(name="restApi")
+    @Import(name="restApi")
       private final @Nullable Output<String> restApi;
 
     public Output<String> getRestApi() {
@@ -41,7 +41,7 @@ public final class RequestValidatorState extends io.pulumi.resources.ResourceArg
      * Boolean whether to validate request body. Defaults to `false`.
      * 
      */
-    @InputImport(name="validateRequestBody")
+    @Import(name="validateRequestBody")
       private final @Nullable Output<Boolean> validateRequestBody;
 
     public Output<Boolean> getValidateRequestBody() {
@@ -52,7 +52,7 @@ public final class RequestValidatorState extends io.pulumi.resources.ResourceArg
      * Boolean whether to validate request parameters. Defaults to `false`.
      * 
      */
-    @InputImport(name="validateRequestParameters")
+    @Import(name="validateRequestParameters")
       private final @Nullable Output<Boolean> validateRequestParameters;
 
     public Output<Boolean> getValidateRequestParameters() {

@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentConfigWebServerConfig {
     private final String machineType;
 
-    @OutputCustomType.Constructor
-    private EnvironmentConfigWebServerConfig(@OutputCustomType.Parameter("machineType") String machineType) {
+    @CustomType.Constructor
+    private EnvironmentConfigWebServerConfig(@CustomType.Parameter("machineType") String machineType) {
         this.machineType = machineType;
     }
 

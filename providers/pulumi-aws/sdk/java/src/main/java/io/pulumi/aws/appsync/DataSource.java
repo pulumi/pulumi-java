@@ -12,7 +12,7 @@ import io.pulumi.aws.appsync.outputs.DataSourceHttpConfig;
 import io.pulumi.aws.appsync.outputs.DataSourceLambdaConfig;
 import io.pulumi.aws.appsync.outputs.DataSourceRelationalDatabaseConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -37,7 +37,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * The API ID for the GraphQL API for the DataSource.
      * 
      */
-    @OutputExport(name="apiId", type=String.class, parameters={})
+    @Export(name="apiId", type=String.class, parameters={})
     private Output<String> apiId;
 
     /**
@@ -51,7 +51,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * The ARN
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -65,7 +65,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * A description of the DataSource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -79,7 +79,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * DynamoDB settings. See below
      * 
      */
-    @OutputExport(name="dynamodbConfig", type=DataSourceDynamodbConfig.class, parameters={})
+    @Export(name="dynamodbConfig", type=DataSourceDynamodbConfig.class, parameters={})
     private Output</* @Nullable */ DataSourceDynamodbConfig> dynamodbConfig;
 
     /**
@@ -93,7 +93,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * Amazon Elasticsearch settings. See below
      * 
      */
-    @OutputExport(name="elasticsearchConfig", type=DataSourceElasticsearchConfig.class, parameters={})
+    @Export(name="elasticsearchConfig", type=DataSourceElasticsearchConfig.class, parameters={})
     private Output</* @Nullable */ DataSourceElasticsearchConfig> elasticsearchConfig;
 
     /**
@@ -107,7 +107,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * HTTP settings. See below
      * 
      */
-    @OutputExport(name="httpConfig", type=DataSourceHttpConfig.class, parameters={})
+    @Export(name="httpConfig", type=DataSourceHttpConfig.class, parameters={})
     private Output</* @Nullable */ DataSourceHttpConfig> httpConfig;
 
     /**
@@ -121,7 +121,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * AWS Lambda settings. See below
      * 
      */
-    @OutputExport(name="lambdaConfig", type=DataSourceLambdaConfig.class, parameters={})
+    @Export(name="lambdaConfig", type=DataSourceLambdaConfig.class, parameters={})
     private Output</* @Nullable */ DataSourceLambdaConfig> lambdaConfig;
 
     /**
@@ -135,7 +135,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * A user-supplied name for the DataSource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -149,7 +149,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * AWS RDS settings. See Relational Database Config
      * 
      */
-    @OutputExport(name="relationalDatabaseConfig", type=DataSourceRelationalDatabaseConfig.class, parameters={})
+    @Export(name="relationalDatabaseConfig", type=DataSourceRelationalDatabaseConfig.class, parameters={})
     private Output</* @Nullable */ DataSourceRelationalDatabaseConfig> relationalDatabaseConfig;
 
     /**
@@ -163,7 +163,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * The IAM service role ARN for the data source.
      * 
      */
-    @OutputExport(name="serviceRoleArn", type=String.class, parameters={})
+    @Export(name="serviceRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceRoleArn;
 
     /**
@@ -177,7 +177,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * The type of the DataSource. Valid values: `AWS_LAMBDA`, `AMAZON_DYNAMODB`, `AMAZON_ELASTICSEARCH`, `HTTP`, `NONE`, `RELATIONAL_DATABASE`.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

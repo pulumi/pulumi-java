@@ -5,14 +5,14 @@ package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.outputs.MulticastGroupLoRaWAN;
 import io.pulumi.awsnative.iotwireless.outputs.MulticastGroupTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMulticastGroupResult {
     /**
      * Multicast group arn. Returned after successful create.
@@ -60,17 +60,17 @@ public final class GetMulticastGroupResult {
      */
     private final @Nullable List<MulticastGroupTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMulticastGroupResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("associateWirelessDevice") @Nullable String associateWirelessDevice,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("disassociateWirelessDevice") @Nullable String disassociateWirelessDevice,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("loRaWAN") @Nullable MulticastGroupLoRaWAN loRaWAN,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("tags") @Nullable List<MulticastGroupTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("associateWirelessDevice") @Nullable String associateWirelessDevice,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("disassociateWirelessDevice") @Nullable String disassociateWirelessDevice,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("loRaWAN") @Nullable MulticastGroupLoRaWAN loRaWAN,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("tags") @Nullable List<MulticastGroupTag> tags) {
         this.arn = arn;
         this.associateWirelessDevice = associateWirelessDevice;
         this.description = description;

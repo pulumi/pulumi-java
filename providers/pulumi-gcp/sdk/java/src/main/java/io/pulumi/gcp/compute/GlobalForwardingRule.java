@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.GlobalForwardingRuleArgs;
@@ -50,7 +50,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -77,7 +77,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * Google APIs, IP address must be provided.
      * 
      */
-    @OutputExport(name="ipAddress", type=String.class, parameters={})
+    @Export(name="ipAddress", type=String.class, parameters={})
     private Output<String> ipAddress;
 
     /**
@@ -107,7 +107,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * Possible values are `TCP`, `UDP`, `ESP`, `AH`, `SCTP`, and `ICMP`.
      * 
      */
-    @OutputExport(name="ipProtocol", type=String.class, parameters={})
+    @Export(name="ipProtocol", type=String.class, parameters={})
     private Output<String> ipProtocol;
 
     /**
@@ -126,7 +126,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * Possible values are `IPV4` and `IPV6`.
      * 
      */
-    @OutputExport(name="ipVersion", type=String.class, parameters={})
+    @Export(name="ipVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipVersion;
 
     /**
@@ -141,7 +141,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * Used internally during label updates.
      * 
      */
-    @OutputExport(name="labelFingerprint", type=String.class, parameters={})
+    @Export(name="labelFingerprint", type=String.class, parameters={})
     private Output<String> labelFingerprint;
 
     /**
@@ -155,7 +155,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * Labels to apply to this forwarding rule.  A list of key->value pairs.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -180,7 +180,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * Possible values are `EXTERNAL`, `EXTERNAL_MANAGED`, and `INTERNAL_SELF_MANAGED`.
      * 
      */
-    @OutputExport(name="loadBalancingScheme", type=String.class, parameters={})
+    @Export(name="loadBalancingScheme", type=String.class, parameters={})
     private Output</* @Nullable */ String> loadBalancingScheme;
 
     /**
@@ -219,7 +219,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="metadataFilters", type=List.class, parameters={GlobalForwardingRuleMetadataFilter.class})
+    @Export(name="metadataFilters", type=List.class, parameters={GlobalForwardingRuleMetadataFilter.class})
     private Output</* @Nullable */ List<GlobalForwardingRuleMetadataFilter>> metadataFilters;
 
     /**
@@ -248,7 +248,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * 1 and 1024 characters, inclusive.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -267,7 +267,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * the default network will be used.
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
@@ -300,7 +300,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * * TargetVpnGateway: 500, 4500
      * 
      */
-    @OutputExport(name="portRange", type=String.class, parameters={})
+    @Export(name="portRange", type=String.class, parameters={})
     private Output</* @Nullable */ String> portRange;
 
     /**
@@ -330,7 +330,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -345,7 +345,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -364,7 +364,7 @@ public class GlobalForwardingRule extends io.pulumi.resources.CustomResource {
      * addressType of INTERNAL, only "all-apis" and "vpc-sc" are valid.
      * 
      */
-    @OutputExport(name="target", type=String.class, parameters={})
+    @Export(name="target", type=String.class, parameters={})
     private Output<String> target;
 
     /**

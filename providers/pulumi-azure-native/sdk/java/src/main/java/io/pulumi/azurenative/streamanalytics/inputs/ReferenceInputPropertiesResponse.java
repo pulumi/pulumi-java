@@ -8,7 +8,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.BlobReferenceInputDataSource
 import io.pulumi.azurenative.streamanalytics.inputs.CsvSerializationResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.DiagnosticsResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.JsonSerializationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class ReferenceInputPropertiesResponse extends io.pulumi.resources.
      * Describes an input data source that contains reference data. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="datasource")
+    @Import(name="datasource")
       private final @Nullable BlobReferenceInputDataSourceResponse datasource;
 
     public Optional<BlobReferenceInputDataSourceResponse> getDatasource() {
@@ -39,7 +39,7 @@ public final class ReferenceInputPropertiesResponse extends io.pulumi.resources.
      * Describes conditions applicable to the Input, Output, or the job overall, that warrant customer attention.
      * 
      */
-    @InputImport(name="diagnostics", required=true)
+    @Import(name="diagnostics", required=true)
       private final DiagnosticsResponse diagnostics;
 
     public DiagnosticsResponse getDiagnostics() {
@@ -50,7 +50,7 @@ public final class ReferenceInputPropertiesResponse extends io.pulumi.resources.
      * The current entity tag for the input. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -61,7 +61,7 @@ public final class ReferenceInputPropertiesResponse extends io.pulumi.resources.
      * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="serialization")
+    @Import(name="serialization")
       private final @Nullable Object serialization;
 
     public Object getSerialization() {
@@ -73,7 +73,7 @@ public final class ReferenceInputPropertiesResponse extends io.pulumi.resources.
      * Expected value is 'Reference'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

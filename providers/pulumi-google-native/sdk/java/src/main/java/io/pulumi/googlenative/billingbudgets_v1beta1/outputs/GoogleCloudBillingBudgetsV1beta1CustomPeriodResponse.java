@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.billingbudgets_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.billingbudgets_v1beta1.outputs.GoogleTypeDateResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse {
     /**
      * Optional. The end date of the time period. Budgets with elapsed end date won't be processed. If unset, specifies to track all usage incurred since the start_date.
@@ -20,10 +20,10 @@ public final class GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse {
      */
     private final GoogleTypeDateResponse startDate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse(
-        @OutputCustomType.Parameter("endDate") GoogleTypeDateResponse endDate,
-        @OutputCustomType.Parameter("startDate") GoogleTypeDateResponse startDate) {
+        @CustomType.Parameter("endDate") GoogleTypeDateResponse endDate,
+        @CustomType.Parameter("startDate") GoogleTypeDateResponse startDate) {
         this.endDate = endDate;
         this.startDate = startDate;
     }

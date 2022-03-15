@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.DatasetStateResponseDeprecatedBy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetStateResponse {
     /**
      * Reference to better Dataset or a Definition
@@ -28,11 +28,11 @@ public final class DatasetStateResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetStateResponse(
-        @OutputCustomType.Parameter("deprecatedBy") @Nullable DatasetStateResponseDeprecatedBy deprecatedBy,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("deprecatedBy") @Nullable DatasetStateResponseDeprecatedBy deprecatedBy,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.deprecatedBy = deprecatedBy;
         this.etag = etag;
         this.state = state;

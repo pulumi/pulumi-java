@@ -5,7 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.aws.apigateway.inputs.AccountThrottleSettingsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * The ARN of an IAM role for CloudWatch (to allow logging & monitoring). See more [in AWS Docs](https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-stage-settings.html#how-to-stage-settings-console). Logging & monitoring can be enabled/disabled and otherwise tuned on the API Gateway Stage level.
      * 
      */
-    @InputImport(name="cloudwatchRoleArn")
+    @Import(name="cloudwatchRoleArn")
       private final @Nullable Output<String> cloudwatchRoleArn;
 
     public Output<String> getCloudwatchRoleArn() {
@@ -30,7 +30,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * Account-Level throttle settings. See exported fields below.
      * 
      */
-    @InputImport(name="throttleSettings")
+    @Import(name="throttleSettings")
       private final @Nullable Output<AccountThrottleSettingsGetArgs> throttleSettings;
 
     public Output<AccountThrottleSettingsGetArgs> getThrottleSettings() {

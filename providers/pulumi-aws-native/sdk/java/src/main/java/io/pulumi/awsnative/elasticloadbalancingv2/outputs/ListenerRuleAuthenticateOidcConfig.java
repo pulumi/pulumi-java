@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerRuleAuthenticateOidcConfig {
     private final @Nullable Object authenticationRequestExtraParams;
     private final String authorizationEndpoint;
@@ -27,20 +27,20 @@ public final class ListenerRuleAuthenticateOidcConfig {
     private final @Nullable Boolean useExistingClientSecret;
     private final String userInfoEndpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerRuleAuthenticateOidcConfig(
-        @OutputCustomType.Parameter("authenticationRequestExtraParams") @Nullable Object authenticationRequestExtraParams,
-        @OutputCustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("clientSecret") String clientSecret,
-        @OutputCustomType.Parameter("issuer") String issuer,
-        @OutputCustomType.Parameter("onUnauthenticatedRequest") @Nullable String onUnauthenticatedRequest,
-        @OutputCustomType.Parameter("scope") @Nullable String scope,
-        @OutputCustomType.Parameter("sessionCookieName") @Nullable String sessionCookieName,
-        @OutputCustomType.Parameter("sessionTimeout") @Nullable Integer sessionTimeout,
-        @OutputCustomType.Parameter("tokenEndpoint") String tokenEndpoint,
-        @OutputCustomType.Parameter("useExistingClientSecret") @Nullable Boolean useExistingClientSecret,
-        @OutputCustomType.Parameter("userInfoEndpoint") String userInfoEndpoint) {
+        @CustomType.Parameter("authenticationRequestExtraParams") @Nullable Object authenticationRequestExtraParams,
+        @CustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("clientSecret") String clientSecret,
+        @CustomType.Parameter("issuer") String issuer,
+        @CustomType.Parameter("onUnauthenticatedRequest") @Nullable String onUnauthenticatedRequest,
+        @CustomType.Parameter("scope") @Nullable String scope,
+        @CustomType.Parameter("sessionCookieName") @Nullable String sessionCookieName,
+        @CustomType.Parameter("sessionTimeout") @Nullable Integer sessionTimeout,
+        @CustomType.Parameter("tokenEndpoint") String tokenEndpoint,
+        @CustomType.Parameter("useExistingClientSecret") @Nullable Boolean useExistingClientSecret,
+        @CustomType.Parameter("userInfoEndpoint") String userInfoEndpoint) {
         this.authenticationRequestExtraParams = authenticationRequestExtraParams;
         this.authorizationEndpoint = authorizationEndpoint;
         this.clientId = clientId;

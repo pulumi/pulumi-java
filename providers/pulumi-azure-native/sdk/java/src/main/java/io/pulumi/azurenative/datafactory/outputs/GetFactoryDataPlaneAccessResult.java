@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.UserAccessPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFactoryDataPlaneAccessResult {
     /**
      * Data Plane read only access token.
@@ -28,11 +28,11 @@ public final class GetFactoryDataPlaneAccessResult {
      */
     private final @Nullable UserAccessPolicyResponse policy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFactoryDataPlaneAccessResult(
-        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
-        @OutputCustomType.Parameter("dataPlaneUrl") @Nullable String dataPlaneUrl,
-        @OutputCustomType.Parameter("policy") @Nullable UserAccessPolicyResponse policy) {
+        @CustomType.Parameter("accessToken") @Nullable String accessToken,
+        @CustomType.Parameter("dataPlaneUrl") @Nullable String dataPlaneUrl,
+        @CustomType.Parameter("policy") @Nullable UserAccessPolicyResponse policy) {
         this.accessToken = accessToken;
         this.dataPlaneUrl = dataPlaneUrl;
         this.policy = policy;

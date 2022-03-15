@@ -5,7 +5,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.azurenative.scheduler.enums.ServiceBusAuthenticationType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ServiceBusAuthenticationArgs extends io.pulumi.resources.Reso
      * Gets or sets the SAS key.
      * 
      */
-    @InputImport(name="sasKey")
+    @Import(name="sasKey")
       private final @Nullable Output<String> sasKey;
 
     public Output<String> getSasKey() {
@@ -30,7 +30,7 @@ public final class ServiceBusAuthenticationArgs extends io.pulumi.resources.Reso
      * Gets or sets the SAS key name.
      * 
      */
-    @InputImport(name="sasKeyName")
+    @Import(name="sasKeyName")
       private final @Nullable Output<String> sasKeyName;
 
     public Output<String> getSasKeyName() {
@@ -41,7 +41,7 @@ public final class ServiceBusAuthenticationArgs extends io.pulumi.resources.Reso
      * Gets or sets the authentication type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<ServiceBusAuthenticationType> type;
 
     public Output<ServiceBusAuthenticationType> getType() {

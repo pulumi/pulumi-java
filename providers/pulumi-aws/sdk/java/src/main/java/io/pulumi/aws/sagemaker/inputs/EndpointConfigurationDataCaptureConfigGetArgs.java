@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs;
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
      * The content type headers to capture. Fields are documented below.
      * 
      */
-    @InputImport(name="captureContentTypeHeader")
+    @Import(name="captureContentTypeHeader")
       private final @Nullable Output<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs> captureContentTypeHeader;
 
     public Output<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs> getCaptureContentTypeHeader() {
@@ -34,7 +34,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
      * Specifies what data to capture. Fields are documented below.
      * 
      */
-    @InputImport(name="captureOptions", required=true)
+    @Import(name="captureOptions", required=true)
       private final Output<List<EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs>> captureOptions;
 
     public Output<List<EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs>> getCaptureOptions() {
@@ -45,7 +45,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
      * The URL for S3 location where the captured data is stored.
      * 
      */
-    @InputImport(name="destinationS3Uri", required=true)
+    @Import(name="destinationS3Uri", required=true)
       private final Output<String> destinationS3Uri;
 
     public Output<String> getDestinationS3Uri() {
@@ -56,7 +56,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
      * Flag to enable data capture. Defaults to `false`.
      * 
      */
-    @InputImport(name="enableCapture")
+    @Import(name="enableCapture")
       private final @Nullable Output<Boolean> enableCapture;
 
     public Output<Boolean> getEnableCapture() {
@@ -67,7 +67,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
      * Portion of data to capture. Should be between 0 and 100.
      * 
      */
-    @InputImport(name="initialSamplingPercentage", required=true)
+    @Import(name="initialSamplingPercentage", required=true)
       private final Output<Integer> initialSamplingPercentage;
 
     public Output<Integer> getInitialSamplingPercentage() {
@@ -78,7 +78,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
      * The Amazon Web Services Key Management Service (Amazon Web Services KMS) key that Amazon SageMaker uses to encrypt the asynchronous inference output in Amazon S3.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {

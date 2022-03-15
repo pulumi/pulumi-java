@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.peering.outputs;
 
 import io.pulumi.azurenative.peering.outputs.BgpSessionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExchangeConnectionResponse {
     /**
      * The BGP session associated with the connection.
@@ -39,13 +39,13 @@ public final class ExchangeConnectionResponse {
      */
     private final @Nullable Integer peeringDBFacilityId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExchangeConnectionResponse(
-        @OutputCustomType.Parameter("bgpSession") @Nullable BgpSessionResponse bgpSession,
-        @OutputCustomType.Parameter("connectionIdentifier") @Nullable String connectionIdentifier,
-        @OutputCustomType.Parameter("connectionState") String connectionState,
-        @OutputCustomType.Parameter("errorMessage") String errorMessage,
-        @OutputCustomType.Parameter("peeringDBFacilityId") @Nullable Integer peeringDBFacilityId) {
+        @CustomType.Parameter("bgpSession") @Nullable BgpSessionResponse bgpSession,
+        @CustomType.Parameter("connectionIdentifier") @Nullable String connectionIdentifier,
+        @CustomType.Parameter("connectionState") String connectionState,
+        @CustomType.Parameter("errorMessage") String errorMessage,
+        @CustomType.Parameter("peeringDBFacilityId") @Nullable Integer peeringDBFacilityId) {
         this.bgpSession = bgpSession;
         this.connectionIdentifier = connectionIdentifier;
         this.connectionState = connectionState;

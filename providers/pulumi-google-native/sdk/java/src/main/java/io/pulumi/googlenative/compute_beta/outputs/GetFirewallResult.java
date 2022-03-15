@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.FirewallAllowedItemResponse;
 import io.pulumi.googlenative.compute_beta.outputs.FirewallDeniedItemResponse;
 import io.pulumi.googlenative.compute_beta.outputs.FirewallLogConfigResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFirewallResult {
     /**
      * The list of ALLOW rules specified by this firewall. Each rule specifies a protocol and port-range tuple that describes a permitted connection.
@@ -106,26 +106,26 @@ public final class GetFirewallResult {
      */
     private final List<String> targetTags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFirewallResult(
-        @OutputCustomType.Parameter("allowed") List<FirewallAllowedItemResponse> allowed,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("denied") List<FirewallDeniedItemResponse> denied,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("destinationRanges") List<String> destinationRanges,
-        @OutputCustomType.Parameter("direction") String direction,
-        @OutputCustomType.Parameter("disabled") Boolean disabled,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("logConfig") FirewallLogConfigResponse logConfig,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("sourceRanges") List<String> sourceRanges,
-        @OutputCustomType.Parameter("sourceServiceAccounts") List<String> sourceServiceAccounts,
-        @OutputCustomType.Parameter("sourceTags") List<String> sourceTags,
-        @OutputCustomType.Parameter("targetServiceAccounts") List<String> targetServiceAccounts,
-        @OutputCustomType.Parameter("targetTags") List<String> targetTags) {
+        @CustomType.Parameter("allowed") List<FirewallAllowedItemResponse> allowed,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("denied") List<FirewallDeniedItemResponse> denied,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("destinationRanges") List<String> destinationRanges,
+        @CustomType.Parameter("direction") String direction,
+        @CustomType.Parameter("disabled") Boolean disabled,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("logConfig") FirewallLogConfigResponse logConfig,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("sourceRanges") List<String> sourceRanges,
+        @CustomType.Parameter("sourceServiceAccounts") List<String> sourceServiceAccounts,
+        @CustomType.Parameter("sourceTags") List<String> sourceTags,
+        @CustomType.Parameter("targetServiceAccounts") List<String> targetServiceAccounts,
+        @CustomType.Parameter("targetTags") List<String> targetTags) {
         this.allowed = allowed;
         this.creationTimestamp = creationTimestamp;
         this.denied = denied;

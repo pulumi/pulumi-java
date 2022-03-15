@@ -4,7 +4,7 @@
 package io.pulumi.aws.organizations.inputs;
 
 import io.pulumi.aws.organizations.inputs.GetOrganizationRootPolicyType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetOrganizationRoot extends io.pulumi.resources.InvokeArgs {
      * ARN of the root
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {
@@ -29,7 +29,7 @@ public final class GetOrganizationRoot extends io.pulumi.resources.InvokeArgs {
      * Identifier of the root
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -40,7 +40,7 @@ public final class GetOrganizationRoot extends io.pulumi.resources.InvokeArgs {
      * The name of the policy type
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -51,7 +51,7 @@ public final class GetOrganizationRoot extends io.pulumi.resources.InvokeArgs {
      * List of policy types enabled for this root. All elements have these attributes:
      * 
      */
-    @InputImport(name="policyTypes", required=true)
+    @Import(name="policyTypes", required=true)
       private final List<GetOrganizationRootPolicyType> policyTypes;
 
     public List<GetOrganizationRootPolicyType> getPolicyTypes() {

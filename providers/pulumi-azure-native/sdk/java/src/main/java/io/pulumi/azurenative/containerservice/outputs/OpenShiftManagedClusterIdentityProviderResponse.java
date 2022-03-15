@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.OpenShiftManagedClusterAADIdentityProviderResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OpenShiftManagedClusterIdentityProviderResponse {
     /**
      * Name of the provider.
@@ -23,10 +23,10 @@ public final class OpenShiftManagedClusterIdentityProviderResponse {
      */
     private final @Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OpenShiftManagedClusterIdentityProviderResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provider") @Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provider") @Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider) {
         this.name = name;
         this.provider = provider;
     }

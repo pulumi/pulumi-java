@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouterNatSubnetworkToNatResponse {
     /**
      * URL for the subnetwork resource that will use NAT.
@@ -26,11 +26,11 @@ public final class RouterNatSubnetworkToNatResponse {
      */
     private final List<String> sourceIpRangesToNat;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouterNatSubnetworkToNatResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("secondaryIpRangeNames") List<String> secondaryIpRangeNames,
-        @OutputCustomType.Parameter("sourceIpRangesToNat") List<String> sourceIpRangesToNat) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("secondaryIpRangeNames") List<String> secondaryIpRangeNames,
+        @CustomType.Parameter("sourceIpRangesToNat") List<String> sourceIpRangesToNat) {
         this.name = name;
         this.secondaryIpRangeNames = secondaryIpRangeNames;
         this.sourceIpRangesToNat = sourceIpRangesToNat;

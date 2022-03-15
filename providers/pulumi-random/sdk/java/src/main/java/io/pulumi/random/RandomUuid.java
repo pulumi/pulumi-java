@@ -4,7 +4,7 @@
 package io.pulumi.random;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.random.RandomUuidArgs;
 import io.pulumi.random.Utilities;
@@ -36,7 +36,7 @@ public class RandomUuid extends io.pulumi.resources.CustomResource {
      * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    @OutputExport(name="keepers", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="keepers", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> keepers;
 
     /**
@@ -50,7 +50,7 @@ public class RandomUuid extends io.pulumi.resources.CustomResource {
      * The generated uuid presented in string format.
      * 
      */
-    @OutputExport(name="result", type=String.class, parameters={})
+    @Export(name="result", type=String.class, parameters={})
     private Output<String> result;
 
     /**

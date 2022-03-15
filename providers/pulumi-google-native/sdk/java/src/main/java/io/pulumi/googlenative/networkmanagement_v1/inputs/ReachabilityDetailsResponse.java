@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.networkmanagement_v1.inputs.StatusResponse;
 import io.pulumi.googlenative.networkmanagement_v1.inputs.TraceResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ReachabilityDetailsResponse extends io.pulumi.resources.Invok
      * The details of a failure or a cancellation of reachability analysis.
      * 
      */
-    @InputImport(name="error", required=true)
+    @Import(name="error", required=true)
       private final StatusResponse error;
 
     public StatusResponse getError() {
@@ -34,7 +34,7 @@ public final class ReachabilityDetailsResponse extends io.pulumi.resources.Invok
      * The overall result of the test's configuration analysis.
      * 
      */
-    @InputImport(name="result", required=true)
+    @Import(name="result", required=true)
       private final String result;
 
     public String getResult() {
@@ -45,7 +45,7 @@ public final class ReachabilityDetailsResponse extends io.pulumi.resources.Invok
      * Result may contain a list of traces if a test has multiple possible paths in the network, such as when destination endpoint is a load balancer with multiple backends.
      * 
      */
-    @InputImport(name="traces", required=true)
+    @Import(name="traces", required=true)
       private final List<TraceResponse> traces;
 
     public List<TraceResponse> getTraces() {
@@ -56,7 +56,7 @@ public final class ReachabilityDetailsResponse extends io.pulumi.resources.Invok
      * The time of the configuration analysis.
      * 
      */
-    @InputImport(name="verifyTime", required=true)
+    @Import(name="verifyTime", required=true)
       private final String verifyTime;
 
     public String getVerifyTime() {

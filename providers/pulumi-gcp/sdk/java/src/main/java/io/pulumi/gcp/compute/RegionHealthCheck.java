@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionHealthCheckArgs;
@@ -69,7 +69,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * seconds.
      * 
      */
-    @OutputExport(name="checkIntervalSec", type=Integer.class, parameters={})
+    @Export(name="checkIntervalSec", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> checkIntervalSec;
 
     /**
@@ -84,7 +84,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -99,7 +99,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -115,7 +115,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="grpcHealthCheck", type=RegionHealthCheckGrpcHealthCheck.class, parameters={})
+    @Export(name="grpcHealthCheck", type=RegionHealthCheckGrpcHealthCheck.class, parameters={})
     private Output</* @Nullable */ RegionHealthCheckGrpcHealthCheck> grpcHealthCheck;
 
     /**
@@ -131,7 +131,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * consecutive successes. The default value is 2.
      * 
      */
-    @OutputExport(name="healthyThreshold", type=Integer.class, parameters={})
+    @Export(name="healthyThreshold", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> healthyThreshold;
 
     /**
@@ -147,7 +147,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="http2HealthCheck", type=RegionHealthCheckHttp2HealthCheck.class, parameters={})
+    @Export(name="http2HealthCheck", type=RegionHealthCheckHttp2HealthCheck.class, parameters={})
     private Output</* @Nullable */ RegionHealthCheckHttp2HealthCheck> http2HealthCheck;
 
     /**
@@ -163,7 +163,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="httpHealthCheck", type=RegionHealthCheckHttpHealthCheck.class, parameters={})
+    @Export(name="httpHealthCheck", type=RegionHealthCheckHttpHealthCheck.class, parameters={})
     private Output</* @Nullable */ RegionHealthCheckHttpHealthCheck> httpHealthCheck;
 
     /**
@@ -179,7 +179,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="httpsHealthCheck", type=RegionHealthCheckHttpsHealthCheck.class, parameters={})
+    @Export(name="httpsHealthCheck", type=RegionHealthCheckHttpsHealthCheck.class, parameters={})
     private Output</* @Nullable */ RegionHealthCheckHttpsHealthCheck> httpsHealthCheck;
 
     /**
@@ -195,7 +195,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="logConfig", type=RegionHealthCheckLogConfig.class, parameters={})
+    @Export(name="logConfig", type=RegionHealthCheckLogConfig.class, parameters={})
     private Output<RegionHealthCheckLogConfig> logConfig;
 
     /**
@@ -216,7 +216,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -237,7 +237,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -253,7 +253,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider region is used.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -268,7 +268,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -283,7 +283,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="sslHealthCheck", type=RegionHealthCheckSslHealthCheck.class, parameters={})
+    @Export(name="sslHealthCheck", type=RegionHealthCheckSslHealthCheck.class, parameters={})
     private Output</* @Nullable */ RegionHealthCheckSslHealthCheck> sslHealthCheck;
 
     /**
@@ -299,7 +299,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="tcpHealthCheck", type=RegionHealthCheckTcpHealthCheck.class, parameters={})
+    @Export(name="tcpHealthCheck", type=RegionHealthCheckTcpHealthCheck.class, parameters={})
     private Output</* @Nullable */ RegionHealthCheckTcpHealthCheck> tcpHealthCheck;
 
     /**
@@ -316,7 +316,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * greater value than checkIntervalSec.
      * 
      */
-    @OutputExport(name="timeoutSec", type=Integer.class, parameters={})
+    @Export(name="timeoutSec", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> timeoutSec;
 
     /**
@@ -332,7 +332,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * The type of the health check. One of HTTP, HTTP2, HTTPS, TCP, or SSL.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -347,7 +347,7 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
      * consecutive failures. The default value is 2.
      * 
      */
-    @OutputExport(name="unhealthyThreshold", type=Integer.class, parameters={})
+    @Export(name="unhealthyThreshold", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> unhealthyThreshold;
 
     /**

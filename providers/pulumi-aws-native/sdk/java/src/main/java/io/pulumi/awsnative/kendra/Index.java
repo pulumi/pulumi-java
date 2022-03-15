@@ -13,7 +13,7 @@ import io.pulumi.awsnative.kendra.outputs.IndexServerSideEncryptionConfiguration
 import io.pulumi.awsnative.kendra.outputs.IndexTag;
 import io.pulumi.awsnative.kendra.outputs.IndexUserTokenConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:kendra:Index")
 public class Index extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -35,7 +35,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * Capacity units
      * 
      */
-    @OutputExport(name="capacityUnits", type=IndexCapacityUnitsConfiguration.class, parameters={})
+    @Export(name="capacityUnits", type=IndexCapacityUnitsConfiguration.class, parameters={})
     private Output</* @Nullable */ IndexCapacityUnitsConfiguration> capacityUnits;
 
     /**
@@ -49,7 +49,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * A description for the index
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -63,7 +63,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * Document metadata configurations
      * 
      */
-    @OutputExport(name="documentMetadataConfigurations", type=List.class, parameters={IndexDocumentMetadataConfiguration.class})
+    @Export(name="documentMetadataConfigurations", type=List.class, parameters={IndexDocumentMetadataConfiguration.class})
     private Output</* @Nullable */ List<IndexDocumentMetadataConfiguration>> documentMetadataConfigurations;
 
     /**
@@ -73,19 +73,19 @@ public class Index extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<IndexDocumentMetadataConfiguration>> getDocumentMetadataConfigurations() {
         return this.documentMetadataConfigurations;
     }
-    @OutputExport(name="edition", type=IndexEdition.class, parameters={})
+    @Export(name="edition", type=IndexEdition.class, parameters={})
     private Output<IndexEdition> edition;
 
     public Output<IndexEdition> getEdition() {
         return this.edition;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -95,7 +95,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * Server side encryption configuration
      * 
      */
-    @OutputExport(name="serverSideEncryptionConfiguration", type=IndexServerSideEncryptionConfiguration.class, parameters={})
+    @Export(name="serverSideEncryptionConfiguration", type=IndexServerSideEncryptionConfiguration.class, parameters={})
     private Output</* @Nullable */ IndexServerSideEncryptionConfiguration> serverSideEncryptionConfiguration;
 
     /**
@@ -109,7 +109,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * Tags for labeling the index
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={IndexTag.class})
+    @Export(name="tags", type=List.class, parameters={IndexTag.class})
     private Output</* @Nullable */ List<IndexTag>> tags;
 
     /**
@@ -119,13 +119,13 @@ public class Index extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<IndexTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="userContextPolicy", type=IndexUserContextPolicy.class, parameters={})
+    @Export(name="userContextPolicy", type=IndexUserContextPolicy.class, parameters={})
     private Output</* @Nullable */ IndexUserContextPolicy> userContextPolicy;
 
     public Output</* @Nullable */ IndexUserContextPolicy> getUserContextPolicy() {
         return this.userContextPolicy;
     }
-    @OutputExport(name="userTokenConfigurations", type=List.class, parameters={IndexUserTokenConfiguration.class})
+    @Export(name="userTokenConfigurations", type=List.class, parameters={IndexUserTokenConfiguration.class})
     private Output</* @Nullable */ List<IndexUserTokenConfiguration>> userTokenConfigurations;
 
     public Output</* @Nullable */ List<IndexUserTokenConfiguration>> getUserTokenConfigurations() {

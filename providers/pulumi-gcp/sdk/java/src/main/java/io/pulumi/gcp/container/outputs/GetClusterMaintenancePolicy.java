@@ -3,24 +3,24 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.GetClusterMaintenancePolicyDailyMaintenanceWindow;
 import io.pulumi.gcp.container.outputs.GetClusterMaintenancePolicyMaintenanceExclusion;
 import io.pulumi.gcp.container.outputs.GetClusterMaintenancePolicyRecurringWindow;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterMaintenancePolicy {
     private final List<GetClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindows;
     private final List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions;
     private final List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterMaintenancePolicy(
-        @OutputCustomType.Parameter("dailyMaintenanceWindows") List<GetClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindows,
-        @OutputCustomType.Parameter("maintenanceExclusions") List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions,
-        @OutputCustomType.Parameter("recurringWindows") List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows) {
+        @CustomType.Parameter("dailyMaintenanceWindows") List<GetClusterMaintenancePolicyDailyMaintenanceWindow> dailyMaintenanceWindows,
+        @CustomType.Parameter("maintenanceExclusions") List<GetClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions,
+        @CustomType.Parameter("recurringWindows") List<GetClusterMaintenancePolicyRecurringWindow> recurringWindows) {
         this.dailyMaintenanceWindows = dailyMaintenanceWindows;
         this.maintenanceExclusions = maintenanceExclusions;
         this.recurringWindows = recurringWindows;

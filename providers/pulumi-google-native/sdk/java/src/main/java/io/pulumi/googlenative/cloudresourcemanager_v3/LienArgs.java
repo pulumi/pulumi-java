@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudresourcemanager_v3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * The creation time of this Lien.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -30,7 +30,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * A system-generated unique identifier for this Lien. Example: `liens/1234abcd`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically. Maximum length of 200 characters. Example: 'compute.googleapis.com'
      * 
      */
-    @InputImport(name="origin")
+    @Import(name="origin")
       private final @Nullable Output<String> origin;
 
     public Output<String> getOrigin() {
@@ -52,7 +52,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to the resource this Lien is attached to. The server will validate the parent against those for which Liens are supported. Example: `projects/1234`
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -63,7 +63,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200 characters. Example: 'Holds production API key'
      * 
      */
-    @InputImport(name="reason")
+    @Import(name="reason")
       private final @Nullable Output<String> reason;
 
     public Output<String> getReason() {
@@ -74,7 +74,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * The types of operations which should be blocked as a result of this Lien. Each value should correspond to an IAM permission. The server will validate the permissions against those for which Liens are supported. An empty list is meaningless and will be rejected. Example: ['resourcemanager.projects.delete']
      * 
      */
-    @InputImport(name="restrictions")
+    @Import(name="restrictions")
       private final @Nullable Output<List<String>> restrictions;
 
     public Output<List<String>> getRestrictions() {

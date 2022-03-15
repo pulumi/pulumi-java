@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntentFollowUpPromptRejectionStatementMessage {
     /**
      * The text of the message. Must be less than or equal to 1000 characters in length.
@@ -29,11 +29,11 @@ public final class IntentFollowUpPromptRejectionStatementMessage {
      */
     private final @Nullable Integer groupNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntentFollowUpPromptRejectionStatementMessage(
-        @OutputCustomType.Parameter("content") String content,
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("groupNumber") @Nullable Integer groupNumber) {
+        @CustomType.Parameter("content") String content,
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("groupNumber") @Nullable Integer groupNumber) {
         this.content = content;
         this.contentType = contentType;
         this.groupNumber = groupNumber;

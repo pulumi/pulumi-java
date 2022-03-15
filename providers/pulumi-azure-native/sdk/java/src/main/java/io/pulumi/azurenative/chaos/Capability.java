@@ -9,7 +9,7 @@ import io.pulumi.azurenative.chaos.outputs.CapabilityPropertiesResponse;
 import io.pulumi.azurenative.chaos.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Capability extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class Capability extends io.pulumi.resources.CustomResource {
      * The properties of a capability resource.
      * 
      */
-    @OutputExport(name="properties", type=CapabilityPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=CapabilityPropertiesResponse.class, parameters={})
     private Output<CapabilityPropertiesResponse> properties;
 
     /**
@@ -64,7 +64,7 @@ public class Capability extends io.pulumi.resources.CustomResource {
      * The standard system metadata of a resource type.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -78,7 +78,7 @@ public class Capability extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

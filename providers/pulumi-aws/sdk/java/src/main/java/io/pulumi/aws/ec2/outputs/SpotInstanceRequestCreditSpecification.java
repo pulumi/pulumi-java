@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SpotInstanceRequestCreditSpecification {
     /**
      * Credit option for CPU usage. Valid values include `standard` or `unlimited`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
@@ -17,8 +17,8 @@ public final class SpotInstanceRequestCreditSpecification {
      */
     private final @Nullable String cpuCredits;
 
-    @OutputCustomType.Constructor
-    private SpotInstanceRequestCreditSpecification(@OutputCustomType.Parameter("cpuCredits") @Nullable String cpuCredits) {
+    @CustomType.Constructor
+    private SpotInstanceRequestCreditSpecification(@CustomType.Parameter("cpuCredits") @Nullable String cpuCredits) {
         this.cpuCredits = cpuCredits;
     }
 

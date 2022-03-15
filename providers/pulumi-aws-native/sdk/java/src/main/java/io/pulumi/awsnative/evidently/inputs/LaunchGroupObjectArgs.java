@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,28 +14,28 @@ public final class LaunchGroupObjectArgs extends io.pulumi.resources.ResourceArg
 
     public static final LaunchGroupObjectArgs Empty = new LaunchGroupObjectArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="feature", required=true)
+    @Import(name="feature", required=true)
       private final Output<String> feature;
 
     public Output<String> getFeature() {
         return this.feature;
     }
 
-    @InputImport(name="groupName", required=true)
+    @Import(name="groupName", required=true)
       private final Output<String> groupName;
 
     public Output<String> getGroupName() {
         return this.groupName;
     }
 
-    @InputImport(name="variation", required=true)
+    @Import(name="variation", required=true)
       private final Output<String> variation;
 
     public Output<String> getVariation() {

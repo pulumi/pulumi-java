@@ -5,12 +5,12 @@ package io.pulumi.aws.sagemaker.outputs;
 
 import io.pulumi.aws.sagemaker.outputs.EndpointDeploymentConfigAutoRollbackConfiguration;
 import io.pulumi.aws.sagemaker.outputs.EndpointDeploymentConfigBlueGreenUpdatePolicy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointDeploymentConfig {
     /**
      * Automatic rollback configuration for handling endpoint deployment failures and recovery. See Auto Rollback Configuration.
@@ -23,10 +23,10 @@ public final class EndpointDeploymentConfig {
      */
     private final EndpointDeploymentConfigBlueGreenUpdatePolicy blueGreenUpdatePolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointDeploymentConfig(
-        @OutputCustomType.Parameter("autoRollbackConfiguration") @Nullable EndpointDeploymentConfigAutoRollbackConfiguration autoRollbackConfiguration,
-        @OutputCustomType.Parameter("blueGreenUpdatePolicy") EndpointDeploymentConfigBlueGreenUpdatePolicy blueGreenUpdatePolicy) {
+        @CustomType.Parameter("autoRollbackConfiguration") @Nullable EndpointDeploymentConfigAutoRollbackConfiguration autoRollbackConfiguration,
+        @CustomType.Parameter("blueGreenUpdatePolicy") EndpointDeploymentConfigBlueGreenUpdatePolicy blueGreenUpdatePolicy) {
         this.autoRollbackConfiguration = autoRollbackConfiguration;
         this.blueGreenUpdatePolicy = blueGreenUpdatePolicy;
     }

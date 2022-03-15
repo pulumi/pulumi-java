@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleS3 {
     /**
      * The Amazon S3 bucket name.
@@ -25,11 +25,11 @@ public final class TopicRuleS3 {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleS3(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.bucketName = bucketName;
         this.key = key;
         this.roleArn = roleArn;

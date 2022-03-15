@@ -10,7 +10,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.InMageEnableProtectionInput
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmEnableProtectionInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.SanEnableProtectionInputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
      * The Policy Id.
      * 
      */
-    @InputImport(name="policyId")
+    @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {
@@ -40,7 +40,7 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
      * The protectable item Id.
      * 
      */
-    @InputImport(name="protectableItemId")
+    @Import(name="protectableItemId")
       private final @Nullable Output<String> protectableItemId;
 
     public Output<String> getProtectableItemId() {
@@ -51,7 +51,7 @@ public final class EnableProtectionInputPropertiesArgs extends io.pulumi.resourc
      * The ReplicationProviderInput. For HyperVReplicaAzure provider, it will be AzureEnableProtectionInput object. For San provider, it will be SanEnableProtectionInput object. For HyperVReplicaAzure provider, it can be null.
      * 
      */
-    @InputImport(name="providerSpecificDetails")
+    @Import(name="providerSpecificDetails")
       private final @Nullable Output<Object> providerSpecificDetails;
 
     public Output<Object> getProviderSpecificDetails() {

@@ -4,24 +4,24 @@
 package io.pulumi.awsnative.groundstation.outputs;
 
 import io.pulumi.awsnative.groundstation.outputs.DataflowEndpointGroupSocketAddress;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataflowEndpointGroupDataflowEndpoint {
     private final @Nullable DataflowEndpointGroupSocketAddress address;
     private final @Nullable Integer mtu;
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataflowEndpointGroupDataflowEndpoint(
-        @OutputCustomType.Parameter("address") @Nullable DataflowEndpointGroupSocketAddress address,
-        @OutputCustomType.Parameter("mtu") @Nullable Integer mtu,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("address") @Nullable DataflowEndpointGroupSocketAddress address,
+        @CustomType.Parameter("mtu") @Nullable Integer mtu,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.address = address;
         this.mtu = mtu;
         this.name = name;

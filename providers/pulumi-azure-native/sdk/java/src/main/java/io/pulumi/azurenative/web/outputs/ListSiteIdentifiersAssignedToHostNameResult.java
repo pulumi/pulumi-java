@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.IdentifierResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListSiteIdentifiersAssignedToHostNameResult {
     /**
      * Link to next page of resources.
@@ -22,10 +22,10 @@ public final class ListSiteIdentifiersAssignedToHostNameResult {
      */
     private final List<IdentifierResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListSiteIdentifiersAssignedToHostNameResult(
-        @OutputCustomType.Parameter("nextLink") String nextLink,
-        @OutputCustomType.Parameter("value") List<IdentifierResponse> value) {
+        @CustomType.Parameter("nextLink") String nextLink,
+        @CustomType.Parameter("value") List<IdentifierResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

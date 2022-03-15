@@ -508,7 +508,7 @@ func (pt *plainType) genInputProperty(ctx *classFileContext, prop *schema.Proper
 		propertyModifiers = append(propertyModifiers, "final")
 	}
 	printObsoleteAttribute(ctx, prop.DeprecationMessage, indent)
-	fprintf(w, "    @%s(name=\"%s\"%s)\n", ctx.ref(names.InputImport), wireName, attributeArgs)
+	fprintf(w, "    @%s(name=\"%s\"%s)\n", ctx.ref(names.Import), wireName, attributeArgs)
 	fprintf(w, "    %s %s %s;\n\n",
 		strings.Join(propertyModifiers, " "), propertyType.ToCode(ctx.imports), propertyName)
 
@@ -929,7 +929,7 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 	props := pt.properties
 
 	// Open the class and annotate it appropriately.
-	fprintf(w, "@%s\n", ctx.ref(names.OutputCustomType))
+	fprintf(w, "@%s\n", ctx.ref(names.CustomType))
 	fprintf(w, "public final class %s {\n", pt.name)
 
 	// Generate each output field.
@@ -977,7 +977,7 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 	paramNamesStringBuilder.WriteString("}")
 
 	// Generate an appropriately-attributed constructor that will set this types' fields.
-	fprintf(w, "    @%s.Constructor\n", ctx.ref(names.OutputCustomType))
+	fprintf(w, "    @%s.Constructor\n", ctx.ref(names.CustomType))
 	// Generate empty constructor, not that the instance created
 	// with this constructor may not be valid if there are 'required' fields.
 	if len(props) > 0 {
@@ -1128,7 +1128,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 	props := pt.properties
 
 	// Open the class and annotate it appropriately.
-	fprintf(w, "@%s\n", ctx.ref(names.OutputCustomType))
+	fprintf(w, "@%s\n", ctx.ref(names.CustomType))
 	fprintf(w, "public final class %s {\n", pt.name)
 
 	// Generate each output field.
@@ -1164,7 +1164,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 	}
 
 	// Generate an appropriately-attributed constructor that will set this types' fields.
-	fprintf(w, "    @%s.Constructor\n", ctx.ref(names.OutputCustomType))
+	fprintf(w, "    @%s.Constructor\n", ctx.ref(names.CustomType))
 	fprintf(w, "    private %s(", pt.name)
 
 	// Generate the constructor parameters.
@@ -1192,7 +1192,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 		}
 
 		paramDef := fmt.Sprintf("%s %s %s%s",
-			fmt.Sprintf("@%s.Parameter(\"%s\")", ctx.ref(names.OutputCustomType), prop.Name),
+			fmt.Sprintf("@%s.Parameter(\"%s\")", ctx.ref(names.CustomType), prop.Name),
 			paramType.ToCode(ctx.imports), paramName, terminator)
 		if len(props) > 1 {
 			paramDef = fmt.Sprintf("        %s", paramDef)
@@ -1555,7 +1555,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		printObsoleteAttribute(ctx, prop.DeprecationMessage, "    ")
 		fprintf(w,
 			"    @%s(name=\"%s\", type=%s, parameters={%s})\n",
-			ctx.ref(names.OutputExport), wireName, outputExportType, outputExportParameters)
+			ctx.ref(names.Export), wireName, outputExportType, outputExportParameters)
 		fprintf(w,
 			"    private %s<%s> %s;\n", ctx.imports.Ref(names.Output), outputParameterType, propertyName)
 		fprintf(w, "\n")

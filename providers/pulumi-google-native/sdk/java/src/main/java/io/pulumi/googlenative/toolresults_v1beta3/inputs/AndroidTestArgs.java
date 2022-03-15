@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidAppInfoArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidInstrumentationTestArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.AndroidRoboTestArgs;
@@ -26,7 +26,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
      * Information about the application under test.
      * 
      */
-    @InputImport(name="androidAppInfo")
+    @Import(name="androidAppInfo")
       private final @Nullable Output<AndroidAppInfoArgs> androidAppInfo;
 
     public Output<AndroidAppInfoArgs> getAndroidAppInfo() {
@@ -37,7 +37,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
      * An Android instrumentation test.
      * 
      */
-    @InputImport(name="androidInstrumentationTest")
+    @Import(name="androidInstrumentationTest")
       private final @Nullable Output<AndroidInstrumentationTestArgs> androidInstrumentationTest;
 
     public Output<AndroidInstrumentationTestArgs> getAndroidInstrumentationTest() {
@@ -48,7 +48,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
      * An Android robo test.
      * 
      */
-    @InputImport(name="androidRoboTest")
+    @Import(name="androidRoboTest")
       private final @Nullable Output<AndroidRoboTestArgs> androidRoboTest;
 
     public Output<AndroidRoboTestArgs> getAndroidRoboTest() {
@@ -59,7 +59,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
      * An Android test loop.
      * 
      */
-    @InputImport(name="androidTestLoop")
+    @Import(name="androidTestLoop")
       private final @Nullable Output<AndroidTestLoopArgs> androidTestLoop;
 
     public Output<AndroidTestLoopArgs> getAndroidTestLoop() {
@@ -70,7 +70,7 @@ public final class AndroidTestArgs extends io.pulumi.resources.ResourceArgs {
      * Max time a test is allowed to run before it is automatically cancelled.
      * 
      */
-    @InputImport(name="testTimeout")
+    @Import(name="testTimeout")
       private final @Nullable Output<DurationArgs> testTimeout;
 
     public Output<DurationArgs> getTestTimeout() {

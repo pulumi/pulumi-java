@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * The time of the day the schedule will occur.
      * 
      */
-    @InputImport(name="time")
+    @Import(name="time")
       private final @Nullable Output<String> time;
 
     public Output<String> getTime() {
@@ -34,7 +34,7 @@ public final class WeekDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * The days of the week for which the schedule is set (e.g. Sunday, Monday, Tuesday, etc.).
      * 
      */
-    @InputImport(name="weekdays")
+    @Import(name="weekdays")
       private final @Nullable Output<List<String>> weekdays;
 
     public Output<List<String>> getWeekdays() {

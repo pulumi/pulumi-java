@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SysctlConfigResponse {
     /**
      * Sysctl setting fs.aio-max-nr.
@@ -154,36 +154,36 @@ public final class SysctlConfigResponse {
      */
     private final @Nullable Integer vmVfsCachePressure;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SysctlConfigResponse(
-        @OutputCustomType.Parameter("fsAioMaxNr") @Nullable Integer fsAioMaxNr,
-        @OutputCustomType.Parameter("fsFileMax") @Nullable Integer fsFileMax,
-        @OutputCustomType.Parameter("fsInotifyMaxUserWatches") @Nullable Integer fsInotifyMaxUserWatches,
-        @OutputCustomType.Parameter("fsNrOpen") @Nullable Integer fsNrOpen,
-        @OutputCustomType.Parameter("kernelThreadsMax") @Nullable Integer kernelThreadsMax,
-        @OutputCustomType.Parameter("netCoreNetdevMaxBacklog") @Nullable Integer netCoreNetdevMaxBacklog,
-        @OutputCustomType.Parameter("netCoreOptmemMax") @Nullable Integer netCoreOptmemMax,
-        @OutputCustomType.Parameter("netCoreRmemDefault") @Nullable Integer netCoreRmemDefault,
-        @OutputCustomType.Parameter("netCoreRmemMax") @Nullable Integer netCoreRmemMax,
-        @OutputCustomType.Parameter("netCoreSomaxconn") @Nullable Integer netCoreSomaxconn,
-        @OutputCustomType.Parameter("netCoreWmemDefault") @Nullable Integer netCoreWmemDefault,
-        @OutputCustomType.Parameter("netCoreWmemMax") @Nullable Integer netCoreWmemMax,
-        @OutputCustomType.Parameter("netIpv4IpLocalPortRange") @Nullable String netIpv4IpLocalPortRange,
-        @OutputCustomType.Parameter("netIpv4NeighDefaultGcThresh1") @Nullable Integer netIpv4NeighDefaultGcThresh1,
-        @OutputCustomType.Parameter("netIpv4NeighDefaultGcThresh2") @Nullable Integer netIpv4NeighDefaultGcThresh2,
-        @OutputCustomType.Parameter("netIpv4NeighDefaultGcThresh3") @Nullable Integer netIpv4NeighDefaultGcThresh3,
-        @OutputCustomType.Parameter("netIpv4TcpFinTimeout") @Nullable Integer netIpv4TcpFinTimeout,
-        @OutputCustomType.Parameter("netIpv4TcpKeepaliveProbes") @Nullable Integer netIpv4TcpKeepaliveProbes,
-        @OutputCustomType.Parameter("netIpv4TcpKeepaliveTime") @Nullable Integer netIpv4TcpKeepaliveTime,
-        @OutputCustomType.Parameter("netIpv4TcpMaxSynBacklog") @Nullable Integer netIpv4TcpMaxSynBacklog,
-        @OutputCustomType.Parameter("netIpv4TcpMaxTwBuckets") @Nullable Integer netIpv4TcpMaxTwBuckets,
-        @OutputCustomType.Parameter("netIpv4TcpTwReuse") @Nullable Boolean netIpv4TcpTwReuse,
-        @OutputCustomType.Parameter("netIpv4TcpkeepaliveIntvl") @Nullable Integer netIpv4TcpkeepaliveIntvl,
-        @OutputCustomType.Parameter("netNetfilterNfConntrackBuckets") @Nullable Integer netNetfilterNfConntrackBuckets,
-        @OutputCustomType.Parameter("netNetfilterNfConntrackMax") @Nullable Integer netNetfilterNfConntrackMax,
-        @OutputCustomType.Parameter("vmMaxMapCount") @Nullable Integer vmMaxMapCount,
-        @OutputCustomType.Parameter("vmSwappiness") @Nullable Integer vmSwappiness,
-        @OutputCustomType.Parameter("vmVfsCachePressure") @Nullable Integer vmVfsCachePressure) {
+        @CustomType.Parameter("fsAioMaxNr") @Nullable Integer fsAioMaxNr,
+        @CustomType.Parameter("fsFileMax") @Nullable Integer fsFileMax,
+        @CustomType.Parameter("fsInotifyMaxUserWatches") @Nullable Integer fsInotifyMaxUserWatches,
+        @CustomType.Parameter("fsNrOpen") @Nullable Integer fsNrOpen,
+        @CustomType.Parameter("kernelThreadsMax") @Nullable Integer kernelThreadsMax,
+        @CustomType.Parameter("netCoreNetdevMaxBacklog") @Nullable Integer netCoreNetdevMaxBacklog,
+        @CustomType.Parameter("netCoreOptmemMax") @Nullable Integer netCoreOptmemMax,
+        @CustomType.Parameter("netCoreRmemDefault") @Nullable Integer netCoreRmemDefault,
+        @CustomType.Parameter("netCoreRmemMax") @Nullable Integer netCoreRmemMax,
+        @CustomType.Parameter("netCoreSomaxconn") @Nullable Integer netCoreSomaxconn,
+        @CustomType.Parameter("netCoreWmemDefault") @Nullable Integer netCoreWmemDefault,
+        @CustomType.Parameter("netCoreWmemMax") @Nullable Integer netCoreWmemMax,
+        @CustomType.Parameter("netIpv4IpLocalPortRange") @Nullable String netIpv4IpLocalPortRange,
+        @CustomType.Parameter("netIpv4NeighDefaultGcThresh1") @Nullable Integer netIpv4NeighDefaultGcThresh1,
+        @CustomType.Parameter("netIpv4NeighDefaultGcThresh2") @Nullable Integer netIpv4NeighDefaultGcThresh2,
+        @CustomType.Parameter("netIpv4NeighDefaultGcThresh3") @Nullable Integer netIpv4NeighDefaultGcThresh3,
+        @CustomType.Parameter("netIpv4TcpFinTimeout") @Nullable Integer netIpv4TcpFinTimeout,
+        @CustomType.Parameter("netIpv4TcpKeepaliveProbes") @Nullable Integer netIpv4TcpKeepaliveProbes,
+        @CustomType.Parameter("netIpv4TcpKeepaliveTime") @Nullable Integer netIpv4TcpKeepaliveTime,
+        @CustomType.Parameter("netIpv4TcpMaxSynBacklog") @Nullable Integer netIpv4TcpMaxSynBacklog,
+        @CustomType.Parameter("netIpv4TcpMaxTwBuckets") @Nullable Integer netIpv4TcpMaxTwBuckets,
+        @CustomType.Parameter("netIpv4TcpTwReuse") @Nullable Boolean netIpv4TcpTwReuse,
+        @CustomType.Parameter("netIpv4TcpkeepaliveIntvl") @Nullable Integer netIpv4TcpkeepaliveIntvl,
+        @CustomType.Parameter("netNetfilterNfConntrackBuckets") @Nullable Integer netNetfilterNfConntrackBuckets,
+        @CustomType.Parameter("netNetfilterNfConntrackMax") @Nullable Integer netNetfilterNfConntrackMax,
+        @CustomType.Parameter("vmMaxMapCount") @Nullable Integer vmMaxMapCount,
+        @CustomType.Parameter("vmSwappiness") @Nullable Integer vmSwappiness,
+        @CustomType.Parameter("vmVfsCachePressure") @Nullable Integer vmVfsCachePressure) {
         this.fsAioMaxNr = fsAioMaxNr;
         this.fsFileMax = fsFileMax;
         this.fsInotifyMaxUserWatches = fsInotifyMaxUserWatches;

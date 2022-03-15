@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetRegionHealthCheckServiceArgs extends io.pulumi.resources.I
 
     public static final GetRegionHealthCheckServiceArgs Empty = new GetRegionHealthCheckServiceArgs();
 
-    @InputImport(name="healthCheckService", required=true)
+    @Import(name="healthCheckService", required=true)
       private final String healthCheckService;
 
     public String getHealthCheckService() {
         return this.healthCheckService;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final String region;
 
     public String getRegion() {

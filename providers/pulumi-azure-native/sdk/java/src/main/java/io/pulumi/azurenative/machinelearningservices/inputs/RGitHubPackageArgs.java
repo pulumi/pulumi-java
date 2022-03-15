@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RGitHubPackageArgs extends io.pulumi.resources.ResourceArgs {
      * Personal access token to install from a private repo
      * 
      */
-    @InputImport(name="authToken")
+    @Import(name="authToken")
       private final @Nullable Output<String> authToken;
 
     public Output<String> getAuthToken() {
@@ -29,7 +29,7 @@ public final class RGitHubPackageArgs extends io.pulumi.resources.ResourceArgs {
      * Repository address in the format username/repo[/subdir][@ref|#pull].
      * 
      */
-    @InputImport(name="repository")
+    @Import(name="repository")
       private final @Nullable Output<String> repository;
 
     public Output<String> getRepository() {

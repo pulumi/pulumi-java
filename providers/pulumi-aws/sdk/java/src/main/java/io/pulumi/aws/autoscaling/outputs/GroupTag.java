@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.autoscaling.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GroupTag {
     /**
      * Key
@@ -27,11 +27,11 @@ public final class GroupTag {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GroupTag(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("propagateAtLaunch") Boolean propagateAtLaunch,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("propagateAtLaunch") Boolean propagateAtLaunch,
+        @CustomType.Parameter("value") String value) {
         this.key = key;
         this.propagateAtLaunch = propagateAtLaunch;
         this.value = value;

@@ -8,7 +8,7 @@ import io.pulumi.aws.iot.ThingTypeArgs;
 import io.pulumi.aws.iot.inputs.ThingTypeState;
 import io.pulumi.aws.iot.outputs.ThingTypeProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class ThingType extends io.pulumi.resources.CustomResource {
      * The ARN of the created AWS IoT Thing Type.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class ThingType extends io.pulumi.resources.CustomResource {
      * Whether the thing type is deprecated. If true, no new things could be associated with this type.
      * 
      */
-    @OutputExport(name="deprecated", type=Boolean.class, parameters={})
+    @Export(name="deprecated", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deprecated;
 
     /**
@@ -63,7 +63,7 @@ public class ThingType extends io.pulumi.resources.CustomResource {
      * The name of the thing type.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class ThingType extends io.pulumi.resources.CustomResource {
      * , Configuration block that can contain the following properties of the thing type:
      * 
      */
-    @OutputExport(name="properties", type=ThingTypeProperties.class, parameters={})
+    @Export(name="properties", type=ThingTypeProperties.class, parameters={})
     private Output</* @Nullable */ ThingTypeProperties> properties;
 
     /**
@@ -91,7 +91,7 @@ public class ThingType extends io.pulumi.resources.CustomResource {
      * Key-value mapping of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -105,7 +105,7 @@ public class ThingType extends io.pulumi.resources.CustomResource {
      * Map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

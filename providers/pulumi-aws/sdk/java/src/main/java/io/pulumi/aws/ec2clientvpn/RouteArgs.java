@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2clientvpn;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the Client VPN endpoint.
      * 
      */
-    @InputImport(name="clientVpnEndpointId", required=true)
+    @Import(name="clientVpnEndpointId", required=true)
       private final Output<String> clientVpnEndpointId;
 
     public Output<String> getClientVpnEndpointId() {
@@ -29,7 +29,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * A brief description of the authorization rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -40,7 +40,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * The IPv4 address range, in CIDR notation, of the route destination.
      * 
      */
-    @InputImport(name="destinationCidrBlock", required=true)
+    @Import(name="destinationCidrBlock", required=true)
       private final Output<String> destinationCidrBlock;
 
     public Output<String> getDestinationCidrBlock() {
@@ -51,7 +51,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the Subnet to route the traffic through. It must already be attached to the Client VPN.
      * 
      */
-    @InputImport(name="targetVpcSubnetId", required=true)
+    @Import(name="targetVpcSubnetId", required=true)
       private final Output<String> targetVpcSubnetId;
 
     public Output<String> getTargetVpcSubnetId() {

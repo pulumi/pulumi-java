@@ -9,7 +9,7 @@ import io.pulumi.awsnative.cloudtrail.outputs.TrailEventSelector;
 import io.pulumi.awsnative.cloudtrail.outputs.TrailInsightSelector;
 import io.pulumi.awsnative.cloudtrail.outputs.TrailTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:cloudtrail:Trail")
 public class Trail extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * Specifies a log group name using an Amazon Resource Name (ARN), a unique identifier that represents the log group to which CloudTrail logs will be delivered. Not required unless you specify CloudWatchLogsRoleArn.
      * 
      */
-    @OutputExport(name="cloudWatchLogsLogGroupArn", type=String.class, parameters={})
+    @Export(name="cloudWatchLogsLogGroupArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudWatchLogsLogGroupArn;
 
     /**
@@ -46,7 +46,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * Specifies the role for the CloudWatch Logs endpoint to assume to write to a user's log group.
      * 
      */
-    @OutputExport(name="cloudWatchLogsRoleArn", type=String.class, parameters={})
+    @Export(name="cloudWatchLogsRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudWatchLogsRoleArn;
 
     /**
@@ -60,7 +60,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * Specifies whether log file validation is enabled. The default is false.
      * 
      */
-    @OutputExport(name="enableLogFileValidation", type=Boolean.class, parameters={})
+    @Export(name="enableLogFileValidation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableLogFileValidation;
 
     /**
@@ -74,7 +74,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * Use event selectors to further specify the management and data event settings for your trail. By default, trails created without specific event selectors will be configured to log all read and write management events, and no data events. When an event occurs in your account, CloudTrail evaluates the event selector for all trails. For each trail, if the event matches any event selector, the trail processes and logs the event. If the event doesn't match any event selector, the trail doesn't log the event. You can configure up to five event selectors for a trail.
      * 
      */
-    @OutputExport(name="eventSelectors", type=List.class, parameters={TrailEventSelector.class})
+    @Export(name="eventSelectors", type=List.class, parameters={TrailEventSelector.class})
     private Output</* @Nullable */ List<TrailEventSelector>> eventSelectors;
 
     /**
@@ -88,7 +88,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * Specifies whether the trail is publishing events from global services such as IAM to the log files.
      * 
      */
-    @OutputExport(name="includeGlobalServiceEvents", type=Boolean.class, parameters={})
+    @Export(name="includeGlobalServiceEvents", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> includeGlobalServiceEvents;
 
     /**
@@ -102,7 +102,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * Lets you enable Insights event logging by specifying the Insights selectors that you want to enable on an existing trail.
      * 
      */
-    @OutputExport(name="insightSelectors", type=List.class, parameters={TrailInsightSelector.class})
+    @Export(name="insightSelectors", type=List.class, parameters={TrailInsightSelector.class})
     private Output</* @Nullable */ List<TrailInsightSelector>> insightSelectors;
 
     /**
@@ -116,7 +116,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * Whether the CloudTrail is currently logging AWS API calls.
      * 
      */
-    @OutputExport(name="isLogging", type=Boolean.class, parameters={})
+    @Export(name="isLogging", type=Boolean.class, parameters={})
     private Output<Boolean> isLogging;
 
     /**
@@ -130,7 +130,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * Specifies whether the trail applies only to the current region or to all regions. The default is false. If the trail exists only in the current region and this value is set to true, shadow trails (replications of the trail) will be created in the other regions. If the trail exists in all regions and this value is set to false, the trail will remain in the region where it was created, and its shadow trails in other regions will be deleted. As a best practice, consider using trails that log events in all regions.
      * 
      */
-    @OutputExport(name="isMultiRegionTrail", type=Boolean.class, parameters={})
+    @Export(name="isMultiRegionTrail", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isMultiRegionTrail;
 
     /**
@@ -144,7 +144,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * Specifies whether the trail is created for all accounts in an organization in AWS Organizations, or only for the current AWS account. The default is false, and cannot be true unless the call is made on behalf of an AWS account that is the master account for an organization in AWS Organizations.
      * 
      */
-    @OutputExport(name="isOrganizationTrail", type=Boolean.class, parameters={})
+    @Export(name="isOrganizationTrail", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isOrganizationTrail;
 
     /**
@@ -158,7 +158,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * Specifies the KMS key ID to use to encrypt the logs delivered by CloudTrail. The value can be an alias name prefixed by 'alias/', a fully specified ARN to an alias, a fully specified ARN to a key, or a globally unique identifier.
      * 
      */
-    @OutputExport(name="kMSKeyId", type=String.class, parameters={})
+    @Export(name="kMSKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kMSKeyId;
 
     /**
@@ -172,7 +172,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * Specifies the name of the Amazon S3 bucket designated for publishing log files. See Amazon S3 Bucket Naming Requirements.
      * 
      */
-    @OutputExport(name="s3BucketName", type=String.class, parameters={})
+    @Export(name="s3BucketName", type=String.class, parameters={})
     private Output<String> s3BucketName;
 
     /**
@@ -186,7 +186,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * Specifies the Amazon S3 key prefix that comes after the name of the bucket you have designated for log file delivery. For more information, see Finding Your CloudTrail Log Files. The maximum length is 200 characters.
      * 
      */
-    @OutputExport(name="s3KeyPrefix", type=String.class, parameters={})
+    @Export(name="s3KeyPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> s3KeyPrefix;
 
     /**
@@ -196,7 +196,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getS3KeyPrefix() {
         return this.s3KeyPrefix;
     }
-    @OutputExport(name="snsTopicArn", type=String.class, parameters={})
+    @Export(name="snsTopicArn", type=String.class, parameters={})
     private Output<String> snsTopicArn;
 
     public Output<String> getSnsTopicArn() {
@@ -206,7 +206,7 @@ public class Trail extends io.pulumi.resources.CustomResource {
      * Specifies the name of the Amazon SNS topic defined for notification of log file delivery. The maximum length is 256 characters.
      * 
      */
-    @OutputExport(name="snsTopicName", type=String.class, parameters={})
+    @Export(name="snsTopicName", type=String.class, parameters={})
     private Output</* @Nullable */ String> snsTopicName;
 
     /**
@@ -216,13 +216,13 @@ public class Trail extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getSnsTopicName() {
         return this.snsTopicName;
     }
-    @OutputExport(name="tags", type=List.class, parameters={TrailTag.class})
+    @Export(name="tags", type=List.class, parameters={TrailTag.class})
     private Output</* @Nullable */ List<TrailTag>> tags;
 
     public Output</* @Nullable */ List<TrailTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="trailName", type=String.class, parameters={})
+    @Export(name="trailName", type=String.class, parameters={})
     private Output</* @Nullable */ String> trailName;
 
     public Output</* @Nullable */ String> getTrailName() {

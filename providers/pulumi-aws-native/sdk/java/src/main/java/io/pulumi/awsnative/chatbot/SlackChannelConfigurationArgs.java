@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.chatbot;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
      * The name of the configuration
      * 
      */
-    @InputImport(name="configurationName", required=true)
+    @Import(name="configurationName", required=true)
       private final Output<String> configurationName;
 
     public Output<String> getConfigurationName() {
@@ -31,7 +31,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
      * The list of IAM policy ARNs that are applied as channel guardrails. The AWS managed 'AdministratorAccess' policy is applied as a default if this is not set.
      * 
      */
-    @InputImport(name="guardrailPolicies")
+    @Import(name="guardrailPolicies")
       private final @Nullable Output<List<String>> guardrailPolicies;
 
     public Output<List<String>> getGuardrailPolicies() {
@@ -42,7 +42,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
      * The ARN of the IAM role that defines the permissions for AWS Chatbot
      * 
      */
-    @InputImport(name="iamRoleArn", required=true)
+    @Import(name="iamRoleArn", required=true)
       private final Output<String> iamRoleArn;
 
     public Output<String> getIamRoleArn() {
@@ -53,7 +53,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
      * Specifies the logging level for this configuration:ERROR,INFO or NONE. This property affects the log entries pushed to Amazon CloudWatch logs
      * 
      */
-    @InputImport(name="loggingLevel")
+    @Import(name="loggingLevel")
       private final @Nullable Output<String> loggingLevel;
 
     public Output<String> getLoggingLevel() {
@@ -64,7 +64,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
      * The id of the Slack channel
      * 
      */
-    @InputImport(name="slackChannelId", required=true)
+    @Import(name="slackChannelId", required=true)
       private final Output<String> slackChannelId;
 
     public Output<String> getSlackChannelId() {
@@ -75,7 +75,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
      * The id of the Slack workspace
      * 
      */
-    @InputImport(name="slackWorkspaceId", required=true)
+    @Import(name="slackWorkspaceId", required=true)
       private final Output<String> slackWorkspaceId;
 
     public Output<String> getSlackWorkspaceId() {
@@ -86,7 +86,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
      * ARNs of SNS topics which delivers notifications to AWS Chatbot, for example CloudWatch alarm notifications.
      * 
      */
-    @InputImport(name="snsTopicArns")
+    @Import(name="snsTopicArns")
       private final @Nullable Output<List<String>> snsTopicArns;
 
     public Output<List<String>> getSnsTopicArns() {
@@ -97,7 +97,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
      * Enables use of a user role requirement in your chat configuration
      * 
      */
-    @InputImport(name="userRoleRequired")
+    @Import(name="userRoleRequired")
       private final @Nullable Output<Boolean> userRoleRequired;
 
     public Output<Boolean> getUserRoleRequired() {

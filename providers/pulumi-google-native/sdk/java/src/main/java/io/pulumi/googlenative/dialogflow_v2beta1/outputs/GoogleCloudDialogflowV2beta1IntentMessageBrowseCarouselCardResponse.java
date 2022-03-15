@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse {
     /**
      * Optional. Settings for displaying the image. Applies to every image in items.
@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardRe
      */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse(
-        @OutputCustomType.Parameter("imageDisplayOptions") String imageDisplayOptions,
-        @OutputCustomType.Parameter("items") List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items) {
+        @CustomType.Parameter("imageDisplayOptions") String imageDisplayOptions,
+        @CustomType.Parameter("items") List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items) {
         this.imageDisplayOptions = imageDisplayOptions;
         this.items = items;
     }

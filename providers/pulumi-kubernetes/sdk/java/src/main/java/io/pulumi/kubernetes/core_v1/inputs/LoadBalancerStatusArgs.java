@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.LoadBalancerIngressArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LoadBalancerStatusArgs extends io.pulumi.resources.ResourceAr
      * Ingress is a list containing ingress points for the load-balancer. Traffic intended for the service should be sent to these ingress points.
      * 
      */
-    @InputImport(name="ingress")
+    @Import(name="ingress")
       private final @Nullable Output<List<LoadBalancerIngressArgs>> ingress;
 
     public Output<List<LoadBalancerIngressArgs>> getIngress() {

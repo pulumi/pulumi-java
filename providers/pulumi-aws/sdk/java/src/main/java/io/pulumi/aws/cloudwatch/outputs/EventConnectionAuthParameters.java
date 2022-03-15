@@ -7,12 +7,12 @@ import io.pulumi.aws.cloudwatch.outputs.EventConnectionAuthParametersApiKey;
 import io.pulumi.aws.cloudwatch.outputs.EventConnectionAuthParametersBasic;
 import io.pulumi.aws.cloudwatch.outputs.EventConnectionAuthParametersInvocationHttpParameters;
 import io.pulumi.aws.cloudwatch.outputs.EventConnectionAuthParametersOauth;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventConnectionAuthParameters {
     /**
      * Parameters used for API_KEY authorization. An API key to include in the header for each authentication request. A maximum of 1 are allowed. Conflicts with `basic` and `oauth`. Documented below.
@@ -35,12 +35,12 @@ public final class EventConnectionAuthParameters {
      */
     private final @Nullable EventConnectionAuthParametersOauth oauth;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventConnectionAuthParameters(
-        @OutputCustomType.Parameter("apiKey") @Nullable EventConnectionAuthParametersApiKey apiKey,
-        @OutputCustomType.Parameter("basic") @Nullable EventConnectionAuthParametersBasic basic,
-        @OutputCustomType.Parameter("invocationHttpParameters") @Nullable EventConnectionAuthParametersInvocationHttpParameters invocationHttpParameters,
-        @OutputCustomType.Parameter("oauth") @Nullable EventConnectionAuthParametersOauth oauth) {
+        @CustomType.Parameter("apiKey") @Nullable EventConnectionAuthParametersApiKey apiKey,
+        @CustomType.Parameter("basic") @Nullable EventConnectionAuthParametersBasic basic,
+        @CustomType.Parameter("invocationHttpParameters") @Nullable EventConnectionAuthParametersInvocationHttpParameters invocationHttpParameters,
+        @CustomType.Parameter("oauth") @Nullable EventConnectionAuthParametersOauth oauth) {
         this.apiKey = apiKey;
         this.basic = basic;
         this.invocationHttpParameters = invocationHttpParameters;

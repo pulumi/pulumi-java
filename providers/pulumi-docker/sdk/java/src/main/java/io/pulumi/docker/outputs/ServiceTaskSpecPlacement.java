@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.docker.outputs.ServiceTaskSpecPlacementPlatform;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,19 +12,19 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTaskSpecPlacement {
     private final @Nullable List<String> constraints;
     private final @Nullable Integer maxReplicas;
     private final @Nullable List<ServiceTaskSpecPlacementPlatform> platforms;
     private final @Nullable List<String> prefs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTaskSpecPlacement(
-        @OutputCustomType.Parameter("constraints") @Nullable List<String> constraints,
-        @OutputCustomType.Parameter("maxReplicas") @Nullable Integer maxReplicas,
-        @OutputCustomType.Parameter("platforms") @Nullable List<ServiceTaskSpecPlacementPlatform> platforms,
-        @OutputCustomType.Parameter("prefs") @Nullable List<String> prefs) {
+        @CustomType.Parameter("constraints") @Nullable List<String> constraints,
+        @CustomType.Parameter("maxReplicas") @Nullable Integer maxReplicas,
+        @CustomType.Parameter("platforms") @Nullable List<ServiceTaskSpecPlacementPlatform> platforms,
+        @CustomType.Parameter("prefs") @Nullable List<String> prefs) {
         this.constraints = constraints;
         this.maxReplicas = maxReplicas;
         this.platforms = platforms;

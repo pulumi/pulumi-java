@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EnvGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Hostnames of the environment group.
      * 
      */
-    @InputImport(name="hostnames")
+    @Import(name="hostnames")
       private final @Nullable Output<List<String>> hostnames;
 
     public Output<List<String>> getHostnames() {
@@ -30,7 +30,7 @@ public final class EnvGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The resource ID of the environment group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -42,7 +42,7 @@ public final class EnvGroupArgs extends io.pulumi.resources.ResourceArgs {
      * in the format `organizations/{{org_name}}`.
      * 
      */
-    @InputImport(name="orgId", required=true)
+    @Import(name="orgId", required=true)
       private final Output<String> orgId;
 
     public Output<String> getOrgId() {

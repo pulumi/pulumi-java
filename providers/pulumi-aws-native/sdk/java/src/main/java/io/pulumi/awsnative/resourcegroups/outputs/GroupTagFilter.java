@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.resourcegroups.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GroupTagFilter {
     private final @Nullable String key;
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GroupTagFilter(
-        @OutputCustomType.Parameter("key") @Nullable String key,
-        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
+        @CustomType.Parameter("key") @Nullable String key,
+        @CustomType.Parameter("values") @Nullable List<String> values) {
         this.key = key;
         this.values = values;
     }

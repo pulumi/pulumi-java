@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1PeriodResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse extends io.pulumi
      * If false, the plan will be completed at the end date.
      * 
      */
-    @InputImport(name="enableRenewal", required=true)
+    @Import(name="enableRenewal", required=true)
       private final Boolean enableRenewal;
 
     public Boolean getEnableRenewal() {
@@ -33,7 +33,7 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse extends io.pulumi
      * Describes how frequently the reseller will be billed, such as once per month.
      * 
      */
-    @InputImport(name="paymentCycle", required=true)
+    @Import(name="paymentCycle", required=true)
       private final GoogleCloudChannelV1PeriodResponse paymentCycle;
 
     public GoogleCloudChannelV1PeriodResponse getPaymentCycle() {
@@ -44,7 +44,7 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse extends io.pulumi
      * Describes how a reseller will be billed.
      * 
      */
-    @InputImport(name="paymentPlan", required=true)
+    @Import(name="paymentPlan", required=true)
       private final String paymentPlan;
 
     public String getPaymentPlan() {
@@ -55,7 +55,7 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse extends io.pulumi
      * If true and enable_renewal = true, the unit (for example seats or licenses) will be set to the number of active units at renewal time.
      * 
      */
-    @InputImport(name="resizeUnitCount", required=true)
+    @Import(name="resizeUnitCount", required=true)
       private final Boolean resizeUnitCount;
 
     public Boolean getResizeUnitCount() {

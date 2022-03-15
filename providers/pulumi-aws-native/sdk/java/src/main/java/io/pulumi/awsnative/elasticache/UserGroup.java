@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.elasticache.UserGroupArgs;
 import io.pulumi.awsnative.elasticache.enums.UserGroupEngine;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the user account.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -37,7 +37,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * Must be redis.
      * 
      */
-    @OutputExport(name="engine", type=UserGroupEngine.class, parameters={})
+    @Export(name="engine", type=UserGroupEngine.class, parameters={})
     private Output<UserGroupEngine> engine;
 
     /**
@@ -51,7 +51,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * Indicates user group status. Can be "creating", "active", "modifying", "deleting".
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -65,7 +65,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * The ID of the user group.
      * 
      */
-    @OutputExport(name="userGroupId", type=String.class, parameters={})
+    @Export(name="userGroupId", type=String.class, parameters={})
     private Output<String> userGroupId;
 
     /**
@@ -79,7 +79,7 @@ public class UserGroup extends io.pulumi.resources.CustomResource {
      * List of users associated to this user group.
      * 
      */
-    @OutputExport(name="userIds", type=List.class, parameters={String.class})
+    @Export(name="userIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> userIds;
 
     /**

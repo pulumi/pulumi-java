@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.PublicDelegatedPrefixArgs;
@@ -24,7 +24,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -38,7 +38,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -52,7 +52,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a new PublicDelegatedPrefix. An up-to-date fingerprint must be provided in order to update the PublicDelegatedPrefix, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve a PublicDelegatedPrefix.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -66,7 +66,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * The IPv4 address range, in CIDR format, represented by this public delegated prefix.
      * 
      */
-    @OutputExport(name="ipCidrRange", type=String.class, parameters={})
+    @Export(name="ipCidrRange", type=String.class, parameters={})
     private Output<String> ipCidrRange;
 
     /**
@@ -80,7 +80,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * If true, the prefix will be live migrated.
      * 
      */
-    @OutputExport(name="isLiveMigration", type=Boolean.class, parameters={})
+    @Export(name="isLiveMigration", type=Boolean.class, parameters={})
     private Output<Boolean> isLiveMigration;
 
     /**
@@ -94,7 +94,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * Type of the resource. Always compute#publicDelegatedPrefix for public delegated prefixes.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -108,7 +108,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -122,7 +122,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * The URL of parent prefix. Either PublicAdvertisedPrefix or PublicDelegatedPrefix.
      * 
      */
-    @OutputExport(name="parentPrefix", type=String.class, parameters={})
+    @Export(name="parentPrefix", type=String.class, parameters={})
     private Output<String> parentPrefix;
 
     /**
@@ -136,7 +136,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * The list of sub public delegated prefixes that exist for this public delegated prefix.
      * 
      */
-    @OutputExport(name="publicDelegatedSubPrefixs", type=List.class, parameters={PublicDelegatedPrefixPublicDelegatedSubPrefixResponse.class})
+    @Export(name="publicDelegatedSubPrefixs", type=List.class, parameters={PublicDelegatedPrefixPublicDelegatedSubPrefixResponse.class})
     private Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixResponse>> publicDelegatedSubPrefixs;
 
     /**
@@ -150,7 +150,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * URL of the region where the public delegated prefix resides. This field applies only to the region resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -164,7 +164,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -178,7 +178,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * The status of the public delegated prefix, which can be one of following values: - `INITIALIZING` The public delegated prefix is being initialized and addresses cannot be created yet. - `READY_TO_ANNOUNCE` The public delegated prefix is a live migration prefix and is active. - `ANNOUNCED` The public delegated prefix is active. - `DELETING` The public delegated prefix is being deprovsioned.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ses.IdentityPolicyArgs;
 import io.pulumi.aws.ses.inputs.IdentityPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class IdentityPolicy extends io.pulumi.resources.CustomResource {
      * Name or Amazon Resource Name (ARN) of the SES Identity.
      * 
      */
-    @OutputExport(name="identity", type=String.class, parameters={})
+    @Export(name="identity", type=String.class, parameters={})
     private Output<String> identity;
 
     /**
@@ -46,7 +46,7 @@ public class IdentityPolicy extends io.pulumi.resources.CustomResource {
      * Name of the policy.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -60,7 +60,7 @@ public class IdentityPolicy extends io.pulumi.resources.CustomResource {
      * JSON string of the policy.
      * 
      */
-    @OutputExport(name="policy", type=String.class, parameters={})
+    @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
     /**

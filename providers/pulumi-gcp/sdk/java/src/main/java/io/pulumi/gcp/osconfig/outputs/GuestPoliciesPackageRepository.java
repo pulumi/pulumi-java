@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesPackageRepositoryApt;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesPackageRepositoryGoo;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesPackageRepositoryYum;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GuestPoliciesPackageRepository {
     /**
      * An Apt Repository.
@@ -39,12 +39,12 @@ public final class GuestPoliciesPackageRepository {
      */
     private final @Nullable GuestPoliciesPackageRepositoryZypper zypper;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestPoliciesPackageRepository(
-        @OutputCustomType.Parameter("apt") @Nullable GuestPoliciesPackageRepositoryApt apt,
-        @OutputCustomType.Parameter("goo") @Nullable GuestPoliciesPackageRepositoryGoo goo,
-        @OutputCustomType.Parameter("yum") @Nullable GuestPoliciesPackageRepositoryYum yum,
-        @OutputCustomType.Parameter("zypper") @Nullable GuestPoliciesPackageRepositoryZypper zypper) {
+        @CustomType.Parameter("apt") @Nullable GuestPoliciesPackageRepositoryApt apt,
+        @CustomType.Parameter("goo") @Nullable GuestPoliciesPackageRepositoryGoo goo,
+        @CustomType.Parameter("yum") @Nullable GuestPoliciesPackageRepositoryYum yum,
+        @CustomType.Parameter("zypper") @Nullable GuestPoliciesPackageRepositoryZypper zypper) {
         this.apt = apt;
         this.goo = goo;
         this.yum = yum;

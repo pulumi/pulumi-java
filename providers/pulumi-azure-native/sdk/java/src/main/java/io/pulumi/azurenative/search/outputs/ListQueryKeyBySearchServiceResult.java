@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.search.outputs;
 
 import io.pulumi.azurenative.search.outputs.QueryKeyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListQueryKeyBySearchServiceResult {
     /**
      * Request URL that can be used to query next page of query keys. Returned when the total number of requested query keys exceed maximum page size.
@@ -22,10 +22,10 @@ public final class ListQueryKeyBySearchServiceResult {
      */
     private final List<QueryKeyResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListQueryKeyBySearchServiceResult(
-        @OutputCustomType.Parameter("nextLink") String nextLink,
-        @OutputCustomType.Parameter("value") List<QueryKeyResponse> value) {
+        @CustomType.Parameter("nextLink") String nextLink,
+        @CustomType.Parameter("value") List<QueryKeyResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

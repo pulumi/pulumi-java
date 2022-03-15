@@ -4,7 +4,7 @@
 package io.pulumi.gcp.activedirectory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
      * https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
@@ -33,7 +33,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -44,7 +44,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
      * Whether the trusted side has forest/domain wide access or selective access to an approved set of resources.
      * 
      */
-    @InputImport(name="selectiveAuthentication")
+    @Import(name="selectiveAuthentication")
       private final @Nullable Output<Boolean> selectiveAuthentication;
 
     public Output<Boolean> getSelectiveAuthentication() {
@@ -55,7 +55,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
      * The target DNS server IP addresses which can resolve the remote domain involved in the trust.
      * 
      */
-    @InputImport(name="targetDnsIpAddresses")
+    @Import(name="targetDnsIpAddresses")
       private final @Nullable Output<List<String>> targetDnsIpAddresses;
 
     public Output<List<String>> getTargetDnsIpAddresses() {
@@ -66,7 +66,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
      * The fully qualified target domain name which will be in trust with the current domain.
      * 
      */
-    @InputImport(name="targetDomainName")
+    @Import(name="targetDomainName")
       private final @Nullable Output<String> targetDomainName;
 
     public Output<String> getTargetDomainName() {
@@ -78,7 +78,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `INBOUND`, `OUTBOUND`, and `BIDIRECTIONAL`.
      * 
      */
-    @InputImport(name="trustDirection")
+    @Import(name="trustDirection")
       private final @Nullable Output<String> trustDirection;
 
     public Output<String> getTrustDirection() {
@@ -90,7 +90,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @InputImport(name="trustHandshakeSecret")
+    @Import(name="trustHandshakeSecret")
       private final @Nullable Output<String> trustHandshakeSecret;
 
     public Output<String> getTrustHandshakeSecret() {
@@ -102,7 +102,7 @@ public final class DomainTrustState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `FOREST` and `EXTERNAL`.
      * 
      */
-    @InputImport(name="trustType")
+    @Import(name="trustType")
       private final @Nullable Output<String> trustType;
 
     public Output<String> getTrustType() {

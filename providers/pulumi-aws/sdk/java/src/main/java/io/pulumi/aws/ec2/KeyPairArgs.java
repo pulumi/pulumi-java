@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
      * The name for the key pair.
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
@@ -30,7 +30,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `key_name`.
      * 
      */
-    @InputImport(name="keyNamePrefix")
+    @Import(name="keyNamePrefix")
       private final @Nullable Output<String> keyNamePrefix;
 
     public Output<String> getKeyNamePrefix() {
@@ -41,7 +41,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
      * The public key material.
      * 
      */
-    @InputImport(name="publicKey", required=true)
+    @Import(name="publicKey", required=true)
       private final Output<String> publicKey;
 
     public Output<String> getPublicKey() {
@@ -52,7 +52,7 @@ public final class KeyPairArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.storage.k8s.io_v1.inputs.CSINodeDriverArgs;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class CSINodeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * drivers is a list of information of all CSI Drivers existing on a node. If all drivers in the list are uninstalled, this can become empty.
      * 
      */
-    @InputImport(name="drivers", required=true)
+    @Import(name="drivers", required=true)
       private final Output<List<CSINodeDriverArgs>> drivers;
 
     public Output<List<CSINodeDriverArgs>> getDrivers() {

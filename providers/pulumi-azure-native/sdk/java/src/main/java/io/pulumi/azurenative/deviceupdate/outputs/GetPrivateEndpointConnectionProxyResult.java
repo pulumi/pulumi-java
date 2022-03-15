@@ -5,13 +5,13 @@ package io.pulumi.azurenative.deviceupdate.outputs;
 
 import io.pulumi.azurenative.deviceupdate.outputs.RemotePrivateEndpointResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPrivateEndpointConnectionProxyResult {
     /**
      * ETag from NRP.
@@ -54,16 +54,16 @@ public final class GetPrivateEndpointConnectionProxyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPrivateEndpointConnectionProxyResult(
-        @OutputCustomType.Parameter("eTag") String eTag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("remotePrivateEndpoint") @Nullable RemotePrivateEndpointResponse remotePrivateEndpoint,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("eTag") String eTag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("remotePrivateEndpoint") @Nullable RemotePrivateEndpointResponse remotePrivateEndpoint,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.eTag = eTag;
         this.id = id;
         this.name = name;

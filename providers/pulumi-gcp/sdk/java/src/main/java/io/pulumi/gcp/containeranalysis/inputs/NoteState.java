@@ -4,7 +4,7 @@
 package io.pulumi.gcp.containeranalysis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.containeranalysis.inputs.NoteAttestationAuthorityGetArgs;
 import io.pulumi.gcp.containeranalysis.inputs.NoteRelatedUrlGetArgs;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="attestationAuthority")
+    @Import(name="attestationAuthority")
       private final @Nullable Output<NoteAttestationAuthorityGetArgs> attestationAuthority;
 
     public Output<NoteAttestationAuthorityGetArgs> getAttestationAuthority() {
@@ -41,7 +41,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * The time this note was created.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -52,7 +52,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * Time of expiration for this note. Leave empty if note does not expire.
      * 
      */
-    @InputImport(name="expirationTime")
+    @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
     public Output<String> getExpirationTime() {
@@ -63,7 +63,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * The type of analysis this note describes
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -74,7 +74,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * A detailed description of the note
      * 
      */
-    @InputImport(name="longDescription")
+    @Import(name="longDescription")
       private final @Nullable Output<String> longDescription;
 
     public Output<String> getLongDescription() {
@@ -85,7 +85,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * The name of the note.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -97,7 +97,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -108,7 +108,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * Names of other notes related to this note.
      * 
      */
-    @InputImport(name="relatedNoteNames")
+    @Import(name="relatedNoteNames")
       private final @Nullable Output<List<String>> relatedNoteNames;
 
     public Output<List<String>> getRelatedNoteNames() {
@@ -120,7 +120,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="relatedUrls")
+    @Import(name="relatedUrls")
       private final @Nullable Output<List<NoteRelatedUrlGetArgs>> relatedUrls;
 
     public Output<List<NoteRelatedUrlGetArgs>> getRelatedUrls() {
@@ -131,7 +131,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * A one sentence description of the note.
      * 
      */
-    @InputImport(name="shortDescription")
+    @Import(name="shortDescription")
       private final @Nullable Output<String> shortDescription;
 
     public Output<String> getShortDescription() {
@@ -142,7 +142,7 @@ public final class NoteState extends io.pulumi.resources.ResourceArgs {
      * The time this note was last updated.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

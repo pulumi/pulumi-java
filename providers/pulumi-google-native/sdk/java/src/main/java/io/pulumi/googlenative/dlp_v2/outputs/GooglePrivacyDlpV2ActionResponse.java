@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2JobNotificationEmailsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2PublishSummaryToCsccResponse;
@@ -12,7 +12,7 @@ import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2PublishToStackdri
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2SaveFindingsResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2ActionResponse {
     /**
      * Enable email notification for project owners and editors on job's completion/failure.
@@ -45,14 +45,14 @@ public final class GooglePrivacyDlpV2ActionResponse {
      */
     private final GooglePrivacyDlpV2SaveFindingsResponse saveFindings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2ActionResponse(
-        @OutputCustomType.Parameter("jobNotificationEmails") GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails,
-        @OutputCustomType.Parameter("pubSub") GooglePrivacyDlpV2PublishToPubSubResponse pubSub,
-        @OutputCustomType.Parameter("publishFindingsToCloudDataCatalog") GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog,
-        @OutputCustomType.Parameter("publishSummaryToCscc") GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc,
-        @OutputCustomType.Parameter("publishToStackdriver") GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver,
-        @OutputCustomType.Parameter("saveFindings") GooglePrivacyDlpV2SaveFindingsResponse saveFindings) {
+        @CustomType.Parameter("jobNotificationEmails") GooglePrivacyDlpV2JobNotificationEmailsResponse jobNotificationEmails,
+        @CustomType.Parameter("pubSub") GooglePrivacyDlpV2PublishToPubSubResponse pubSub,
+        @CustomType.Parameter("publishFindingsToCloudDataCatalog") GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse publishFindingsToCloudDataCatalog,
+        @CustomType.Parameter("publishSummaryToCscc") GooglePrivacyDlpV2PublishSummaryToCsccResponse publishSummaryToCscc,
+        @CustomType.Parameter("publishToStackdriver") GooglePrivacyDlpV2PublishToStackdriverResponse publishToStackdriver,
+        @CustomType.Parameter("saveFindings") GooglePrivacyDlpV2SaveFindingsResponse saveFindings) {
         this.jobNotificationEmails = jobNotificationEmails;
         this.pubSub = pubSub;
         this.publishFindingsToCloudDataCatalog = publishFindingsToCloudDataCatalog;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.notificationhubs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class WnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * The package ID for this credential.
      * 
      */
-    @InputImport(name="packageSid")
+    @Import(name="packageSid")
       private final @Nullable Output<String> packageSid;
 
     public Output<String> getPackageSid() {
@@ -33,7 +33,7 @@ public final class WnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * The secret key.
      * 
      */
-    @InputImport(name="secretKey")
+    @Import(name="secretKey")
       private final @Nullable Output<String> secretKey;
 
     public Output<String> getSecretKey() {
@@ -44,7 +44,7 @@ public final class WnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * The Windows Live endpoint.
      * 
      */
-    @InputImport(name="windowsLiveEndpoint")
+    @Import(name="windowsLiveEndpoint")
       private final @Nullable Output<String> windowsLiveEndpoint;
 
     public Output<String> getWindowsLiveEndpoint() {

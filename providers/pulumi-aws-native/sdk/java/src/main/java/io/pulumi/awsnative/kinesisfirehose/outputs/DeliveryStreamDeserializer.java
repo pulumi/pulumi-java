@@ -5,20 +5,20 @@ package io.pulumi.awsnative.kinesisfirehose.outputs;
 
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamHiveJsonSerDe;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamOpenXJsonSerDe;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamDeserializer {
     private final @Nullable DeliveryStreamHiveJsonSerDe hiveJsonSerDe;
     private final @Nullable DeliveryStreamOpenXJsonSerDe openXJsonSerDe;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamDeserializer(
-        @OutputCustomType.Parameter("hiveJsonSerDe") @Nullable DeliveryStreamHiveJsonSerDe hiveJsonSerDe,
-        @OutputCustomType.Parameter("openXJsonSerDe") @Nullable DeliveryStreamOpenXJsonSerDe openXJsonSerDe) {
+        @CustomType.Parameter("hiveJsonSerDe") @Nullable DeliveryStreamHiveJsonSerDe hiveJsonSerDe,
+        @CustomType.Parameter("openXJsonSerDe") @Nullable DeliveryStreamOpenXJsonSerDe openXJsonSerDe) {
         this.hiveJsonSerDe = hiveJsonSerDe;
         this.openXJsonSerDe = openXJsonSerDe;
     }

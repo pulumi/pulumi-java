@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetCaCertsCert extends io.pulumi.resources.InvokeArgs {
      * The CA certificate used to connect to the SQL instance via SSL.
      * 
      */
-    @InputImport(name="cert", required=true)
+    @Import(name="cert", required=true)
       private final String cert;
 
     public String getCert() {
@@ -27,7 +27,7 @@ public final class GetCaCertsCert extends io.pulumi.resources.InvokeArgs {
      * The CN valid for the CA cert.
      * 
      */
-    @InputImport(name="commonName", required=true)
+    @Import(name="commonName", required=true)
       private final String commonName;
 
     public String getCommonName() {
@@ -38,7 +38,7 @@ public final class GetCaCertsCert extends io.pulumi.resources.InvokeArgs {
      * Creation time of the CA cert.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -49,7 +49,7 @@ public final class GetCaCertsCert extends io.pulumi.resources.InvokeArgs {
      * Expiration time of the CA cert.
      * 
      */
-    @InputImport(name="expirationTime", required=true)
+    @Import(name="expirationTime", required=true)
       private final String expirationTime;
 
     public String getExpirationTime() {
@@ -60,7 +60,7 @@ public final class GetCaCertsCert extends io.pulumi.resources.InvokeArgs {
      * SHA1 fingerprint of the CA cert.
      * 
      */
-    @InputImport(name="sha1Fingerprint", required=true)
+    @Import(name="sha1Fingerprint", required=true)
       private final String sha1Fingerprint;
 
     public String getSha1Fingerprint() {

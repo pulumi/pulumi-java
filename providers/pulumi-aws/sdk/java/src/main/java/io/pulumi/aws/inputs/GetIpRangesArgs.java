@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GetIpRangesArgs extends io.pulumi.resources.InvokeArgs {
      * (e.g., `eu-central-1`)
      * 
      */
-    @InputImport(name="regions")
+    @Import(name="regions")
       private final @Nullable List<String> regions;
 
     public List<String> getRegions() {
@@ -36,7 +36,7 @@ public final class GetIpRangesArgs extends io.pulumi.resources.InvokeArgs {
      * [`service` attribute][2] documentation for other possible values.
      * 
      */
-    @InputImport(name="services", required=true)
+    @Import(name="services", required=true)
       private final List<String> services;
 
     public List<String> getServices() {
@@ -47,7 +47,7 @@ public final class GetIpRangesArgs extends io.pulumi.resources.InvokeArgs {
      * Custom URL for source JSON file. Syntax must match [AWS IP Address Ranges documentation](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html). Defaults to `https://ip-ranges.amazonaws.com/ip-ranges.json`.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable String url;
 
     public Optional<String> getUrl() {

@@ -5,12 +5,12 @@ package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecServiceDiscoveryAwsCloudMap;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecServiceDiscoveryDns;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecServiceDiscovery {
     /**
      * Specifies any AWS Cloud Map information for the virtual node.
@@ -23,10 +23,10 @@ public final class VirtualNodeSpecServiceDiscovery {
      */
     private final @Nullable VirtualNodeSpecServiceDiscoveryDns dns;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNodeSpecServiceDiscovery(
-        @OutputCustomType.Parameter("awsCloudMap") @Nullable VirtualNodeSpecServiceDiscoveryAwsCloudMap awsCloudMap,
-        @OutputCustomType.Parameter("dns") @Nullable VirtualNodeSpecServiceDiscoveryDns dns) {
+        @CustomType.Parameter("awsCloudMap") @Nullable VirtualNodeSpecServiceDiscoveryAwsCloudMap awsCloudMap,
+        @CustomType.Parameter("dns") @Nullable VirtualNodeSpecServiceDiscoveryDns dns) {
         this.awsCloudMap = awsCloudMap;
         this.dns = dns;
     }

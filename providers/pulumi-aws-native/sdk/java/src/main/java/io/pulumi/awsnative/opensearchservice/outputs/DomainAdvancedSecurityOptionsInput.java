@@ -4,23 +4,23 @@
 package io.pulumi.awsnative.opensearchservice.outputs;
 
 import io.pulumi.awsnative.opensearchservice.outputs.DomainMasterUserOptions;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainAdvancedSecurityOptionsInput {
     private final @Nullable Boolean enabled;
     private final @Nullable Boolean internalUserDatabaseEnabled;
     private final @Nullable DomainMasterUserOptions masterUserOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainAdvancedSecurityOptionsInput(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("internalUserDatabaseEnabled") @Nullable Boolean internalUserDatabaseEnabled,
-        @OutputCustomType.Parameter("masterUserOptions") @Nullable DomainMasterUserOptions masterUserOptions) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("internalUserDatabaseEnabled") @Nullable Boolean internalUserDatabaseEnabled,
+        @CustomType.Parameter("masterUserOptions") @Nullable DomainMasterUserOptions masterUserOptions) {
         this.enabled = enabled;
         this.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
         this.masterUserOptions = masterUserOptions;

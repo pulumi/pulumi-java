@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.KeyPairArgs;
 import io.pulumi.aws.ec2.inputs.KeyPairState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -41,7 +41,7 @@ public class KeyPair extends io.pulumi.resources.CustomResource {
      * The key pair ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -55,7 +55,7 @@ public class KeyPair extends io.pulumi.resources.CustomResource {
      * The MD5 public key fingerprint as specified in section 4 of RFC 4716.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -69,7 +69,7 @@ public class KeyPair extends io.pulumi.resources.CustomResource {
      * The name for the key pair.
      * 
      */
-    @OutputExport(name="keyName", type=String.class, parameters={})
+    @Export(name="keyName", type=String.class, parameters={})
     private Output<String> keyName;
 
     /**
@@ -83,7 +83,7 @@ public class KeyPair extends io.pulumi.resources.CustomResource {
      * Creates a unique name beginning with the specified prefix. Conflicts with `key_name`.
      * 
      */
-    @OutputExport(name="keyNamePrefix", type=String.class, parameters={})
+    @Export(name="keyNamePrefix", type=String.class, parameters={})
     private Output<String> keyNamePrefix;
 
     /**
@@ -97,7 +97,7 @@ public class KeyPair extends io.pulumi.resources.CustomResource {
      * The key pair ID.
      * 
      */
-    @OutputExport(name="keyPairId", type=String.class, parameters={})
+    @Export(name="keyPairId", type=String.class, parameters={})
     private Output<String> keyPairId;
 
     /**
@@ -111,7 +111,7 @@ public class KeyPair extends io.pulumi.resources.CustomResource {
      * The public key material.
      * 
      */
-    @OutputExport(name="publicKey", type=String.class, parameters={})
+    @Export(name="publicKey", type=String.class, parameters={})
     private Output<String> publicKey;
 
     /**
@@ -125,7 +125,7 @@ public class KeyPair extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -139,7 +139,7 @@ public class KeyPair extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

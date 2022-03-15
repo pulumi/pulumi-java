@@ -7,13 +7,13 @@ import io.pulumi.azurenative.recoveryservices.outputs.DailyRetentionScheduleResp
 import io.pulumi.azurenative.recoveryservices.outputs.MonthlyRetentionScheduleResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.WeeklyRetentionScheduleResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.YearlyRetentionScheduleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LongTermRetentionPolicyResponse {
     /**
      * Daily retention schedule of the protection policy.
@@ -42,13 +42,13 @@ public final class LongTermRetentionPolicyResponse {
      */
     private final @Nullable YearlyRetentionScheduleResponse yearlySchedule;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LongTermRetentionPolicyResponse(
-        @OutputCustomType.Parameter("dailySchedule") @Nullable DailyRetentionScheduleResponse dailySchedule,
-        @OutputCustomType.Parameter("monthlySchedule") @Nullable MonthlyRetentionScheduleResponse monthlySchedule,
-        @OutputCustomType.Parameter("retentionPolicyType") String retentionPolicyType,
-        @OutputCustomType.Parameter("weeklySchedule") @Nullable WeeklyRetentionScheduleResponse weeklySchedule,
-        @OutputCustomType.Parameter("yearlySchedule") @Nullable YearlyRetentionScheduleResponse yearlySchedule) {
+        @CustomType.Parameter("dailySchedule") @Nullable DailyRetentionScheduleResponse dailySchedule,
+        @CustomType.Parameter("monthlySchedule") @Nullable MonthlyRetentionScheduleResponse monthlySchedule,
+        @CustomType.Parameter("retentionPolicyType") String retentionPolicyType,
+        @CustomType.Parameter("weeklySchedule") @Nullable WeeklyRetentionScheduleResponse weeklySchedule,
+        @CustomType.Parameter("yearlySchedule") @Nullable YearlyRetentionScheduleResponse yearlySchedule) {
         this.dailySchedule = dailySchedule;
         this.monthlySchedule = monthlySchedule;
         this.retentionPolicyType = retentionPolicyType;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.ReportDatasetResponse;
 import io.pulumi.azurenative.costmanagement.inputs.ReportTimePeriodResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ReportDefinitionResponse extends io.pulumi.resources.InvokeAr
      * Has definition for data in this report.
      * 
      */
-    @InputImport(name="dataset")
+    @Import(name="dataset")
       private final @Nullable ReportDatasetResponse dataset;
 
     public Optional<ReportDatasetResponse> getDataset() {
@@ -35,7 +35,7 @@ public final class ReportDefinitionResponse extends io.pulumi.resources.InvokeAr
      * Has time period for pulling data for the report.
      * 
      */
-    @InputImport(name="timePeriod")
+    @Import(name="timePeriod")
       private final @Nullable ReportTimePeriodResponse timePeriod;
 
     public Optional<ReportTimePeriodResponse> getTimePeriod() {
@@ -46,7 +46,7 @@ public final class ReportDefinitionResponse extends io.pulumi.resources.InvokeAr
      * The time frame for pulling data for the report. If custom, then a specific time period must be provided.
      * 
      */
-    @InputImport(name="timeframe", required=true)
+    @Import(name="timeframe", required=true)
       private final String timeframe;
 
     public String getTimeframe() {
@@ -57,7 +57,7 @@ public final class ReportDefinitionResponse extends io.pulumi.resources.InvokeAr
      * The type of the report.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

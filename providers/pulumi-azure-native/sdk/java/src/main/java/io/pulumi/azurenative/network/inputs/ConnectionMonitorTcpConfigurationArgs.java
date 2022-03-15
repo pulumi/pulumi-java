@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.DestinationPortBehavior;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class ConnectionMonitorTcpConfigurationArgs extends io.pulumi.resou
      * Destination port behavior.
      * 
      */
-    @InputImport(name="destinationPortBehavior")
+    @Import(name="destinationPortBehavior")
       private final @Nullable Output<Either<String,DestinationPortBehavior>> destinationPortBehavior;
 
     public Output<Either<String,DestinationPortBehavior>> getDestinationPortBehavior() {
@@ -37,7 +37,7 @@ public final class ConnectionMonitorTcpConfigurationArgs extends io.pulumi.resou
      * Value indicating whether path evaluation with trace route should be disabled.
      * 
      */
-    @InputImport(name="disableTraceRoute")
+    @Import(name="disableTraceRoute")
       private final @Nullable Output<Boolean> disableTraceRoute;
 
     public Output<Boolean> getDisableTraceRoute() {
@@ -48,7 +48,7 @@ public final class ConnectionMonitorTcpConfigurationArgs extends io.pulumi.resou
      * The port to connect to.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {

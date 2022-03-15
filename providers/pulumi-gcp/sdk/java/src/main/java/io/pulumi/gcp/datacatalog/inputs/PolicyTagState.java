@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
      * Resource names of child policy tags of this policy tag.
      * 
      */
-    @InputImport(name="childPolicyTags")
+    @Import(name="childPolicyTags")
       private final @Nullable Output<List<String>> childPolicyTags;
 
     public Output<List<String>> getChildPolicyTags() {
@@ -33,7 +33,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
      * If not set, defaults to an empty description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
      * not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -58,7 +58,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
      * "projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}"
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -71,7 +71,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
      * If not set, defaults to an empty string.
      * 
      */
-    @InputImport(name="parentPolicyTag")
+    @Import(name="parentPolicyTag")
       private final @Nullable Output<String> parentPolicyTag;
 
     public Output<String> getParentPolicyTag() {
@@ -82,7 +82,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
      * Taxonomy the policy tag is associated with
      * 
      */
-    @InputImport(name="taxonomy")
+    @Import(name="taxonomy")
       private final @Nullable Output<String> taxonomy;
 
     public Output<String> getTaxonomy() {

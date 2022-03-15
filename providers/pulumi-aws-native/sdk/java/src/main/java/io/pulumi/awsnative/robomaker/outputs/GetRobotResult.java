@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.robomaker.outputs;
 
 import io.pulumi.awsnative.robomaker.outputs.RobotTags;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRobotResult {
     private final @Nullable String arn;
     private final @Nullable RobotTags tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRobotResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("tags") @Nullable RobotTags tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("tags") @Nullable RobotTags tags) {
         this.arn = arn;
         this.tags = tags;
     }

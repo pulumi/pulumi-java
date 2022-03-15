@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datashare.ShareArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * Time at which the share was created.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -49,7 +49,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * Share description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -63,7 +63,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * Name of the azure resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * Gets or sets the provisioning state
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -91,7 +91,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * Share kind.
      * 
      */
-    @OutputExport(name="shareKind", type=String.class, parameters={})
+    @Export(name="shareKind", type=String.class, parameters={})
     private Output</* @Nullable */ String> shareKind;
 
     /**
@@ -105,7 +105,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * System Data of the Azure resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -119,7 +119,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * Share terms.
      * 
      */
-    @OutputExport(name="terms", type=String.class, parameters={})
+    @Export(name="terms", type=String.class, parameters={})
     private Output</* @Nullable */ String> terms;
 
     /**
@@ -133,7 +133,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * Type of the azure resource
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -147,7 +147,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * Email of the user who created the resource
      * 
      */
-    @OutputExport(name="userEmail", type=String.class, parameters={})
+    @Export(name="userEmail", type=String.class, parameters={})
     private Output<String> userEmail;
 
     /**
@@ -161,7 +161,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * Name of the user who created the resource
      * 
      */
-    @OutputExport(name="userName", type=String.class, parameters={})
+    @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**

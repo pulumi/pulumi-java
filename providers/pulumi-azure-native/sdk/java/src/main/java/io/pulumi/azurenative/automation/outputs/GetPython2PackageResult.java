@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.ContentLinkResponse;
 import io.pulumi.azurenative.automation.outputs.ModuleErrorInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPython2PackageResult {
     /**
      * Gets or sets the activity count of the module.
@@ -103,25 +103,25 @@ public final class GetPython2PackageResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPython2PackageResult(
-        @OutputCustomType.Parameter("activityCount") @Nullable Integer activityCount,
-        @OutputCustomType.Parameter("contentLink") @Nullable ContentLinkResponse contentLink,
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("error") @Nullable ModuleErrorInfoResponse error,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isComposite") @Nullable Boolean isComposite,
-        @OutputCustomType.Parameter("isGlobal") @Nullable Boolean isGlobal,
-        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("sizeInBytes") @Nullable Double sizeInBytes,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("activityCount") @Nullable Integer activityCount,
+        @CustomType.Parameter("contentLink") @Nullable ContentLinkResponse contentLink,
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("error") @Nullable ModuleErrorInfoResponse error,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isComposite") @Nullable Boolean isComposite,
+        @CustomType.Parameter("isGlobal") @Nullable Boolean isGlobal,
+        @CustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("sizeInBytes") @Nullable Double sizeInBytes,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.activityCount = activityCount;
         this.contentLink = contentLink;
         this.creationTime = creationTime;

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomServiceTelemetry {
     /**
      * The full name of the resource that defines this service.
@@ -19,8 +19,8 @@ public final class CustomServiceTelemetry {
      */
     private final @Nullable String resourceName;
 
-    @OutputCustomType.Constructor
-    private CustomServiceTelemetry(@OutputCustomType.Parameter("resourceName") @Nullable String resourceName) {
+    @CustomType.Constructor
+    private CustomServiceTelemetry(@CustomType.Parameter("resourceName") @Nullable String resourceName) {
         this.resourceName = resourceName;
     }
 

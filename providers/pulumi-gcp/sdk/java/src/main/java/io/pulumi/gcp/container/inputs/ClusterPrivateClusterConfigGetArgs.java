@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.ClusterPrivateClusterConfigMasterGlobalAccessConfigGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ClusterPrivateClusterConfigGetArgs extends io.pulumi.resource
      * to private clusters, when `enable_private_nodes` is `true`.
      * 
      */
-    @InputImport(name="enablePrivateEndpoint", required=true)
+    @Import(name="enablePrivateEndpoint", required=true)
       private final Output<Boolean> enablePrivateEndpoint;
 
     public Output<Boolean> getEnablePrivateEndpoint() {
@@ -37,7 +37,7 @@ public final class ClusterPrivateClusterConfigGetArgs extends io.pulumi.resource
      * endpoint via private networking.
      * 
      */
-    @InputImport(name="enablePrivateNodes")
+    @Import(name="enablePrivateNodes")
       private final @Nullable Output<Boolean> enablePrivateNodes;
 
     public Output<Boolean> getEnablePrivateNodes() {
@@ -50,7 +50,7 @@ public final class ClusterPrivateClusterConfigGetArgs extends io.pulumi.resource
      * not modify the previously-set value. Structure is documented below.
      * 
      */
-    @InputImport(name="masterGlobalAccessConfig")
+    @Import(name="masterGlobalAccessConfig")
       private final @Nullable Output<ClusterPrivateClusterConfigMasterGlobalAccessConfigGetArgs> masterGlobalAccessConfig;
 
     public Output<ClusterPrivateClusterConfigMasterGlobalAccessConfigGetArgs> getMasterGlobalAccessConfig() {
@@ -67,7 +67,7 @@ public final class ClusterPrivateClusterConfigGetArgs extends io.pulumi.resource
      * `enable_private_nodes` is `true`.
      * 
      */
-    @InputImport(name="masterIpv4CidrBlock")
+    @Import(name="masterIpv4CidrBlock")
       private final @Nullable Output<String> masterIpv4CidrBlock;
 
     public Output<String> getMasterIpv4CidrBlock() {
@@ -78,7 +78,7 @@ public final class ClusterPrivateClusterConfigGetArgs extends io.pulumi.resource
      * The name of the peering between this cluster and the Google owned VPC.
      * 
      */
-    @InputImport(name="peeringName")
+    @Import(name="peeringName")
       private final @Nullable Output<String> peeringName;
 
     public Output<String> getPeeringName() {
@@ -89,7 +89,7 @@ public final class ClusterPrivateClusterConfigGetArgs extends io.pulumi.resource
      * The internal IP address of this cluster's master endpoint.
      * 
      */
-    @InputImport(name="privateEndpoint")
+    @Import(name="privateEndpoint")
       private final @Nullable Output<String> privateEndpoint;
 
     public Output<String> getPrivateEndpoint() {
@@ -100,7 +100,7 @@ public final class ClusterPrivateClusterConfigGetArgs extends io.pulumi.resource
      * The external IP address of this cluster's master endpoint.
      * 
      */
-    @InputImport(name="publicEndpoint")
+    @Import(name="publicEndpoint")
       private final @Nullable Output<String> publicEndpoint;
 
     public Output<String> getPublicEndpoint() {

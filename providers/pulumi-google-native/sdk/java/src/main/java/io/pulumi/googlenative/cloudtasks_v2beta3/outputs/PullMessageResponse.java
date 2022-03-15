@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PullMessageResponse {
     /**
      * A data payload consumed by the worker to execute the task.
@@ -20,10 +20,10 @@ public final class PullMessageResponse {
      */
     private final String tag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PullMessageResponse(
-        @OutputCustomType.Parameter("payload") String payload,
-        @OutputCustomType.Parameter("tag") String tag) {
+        @CustomType.Parameter("payload") String payload,
+        @CustomType.Parameter("tag") String tag) {
         this.payload = payload;
         this.tag = tag;
     }

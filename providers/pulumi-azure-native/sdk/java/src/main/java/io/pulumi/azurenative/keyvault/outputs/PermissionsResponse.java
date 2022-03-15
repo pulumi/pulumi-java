@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.keyvault.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PermissionsResponse {
     /**
      * Permissions to certificates
@@ -32,12 +32,12 @@ public final class PermissionsResponse {
      */
     private final @Nullable List<String> storage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PermissionsResponse(
-        @OutputCustomType.Parameter("certificates") @Nullable List<String> certificates,
-        @OutputCustomType.Parameter("keys") @Nullable List<String> keys,
-        @OutputCustomType.Parameter("secrets") @Nullable List<String> secrets,
-        @OutputCustomType.Parameter("storage") @Nullable List<String> storage) {
+        @CustomType.Parameter("certificates") @Nullable List<String> certificates,
+        @CustomType.Parameter("keys") @Nullable List<String> keys,
+        @CustomType.Parameter("secrets") @Nullable List<String> secrets,
+        @CustomType.Parameter("storage") @Nullable List<String> storage) {
         this.certificates = certificates;
         this.keys = keys;
         this.secrets = secrets;

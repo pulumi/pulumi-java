@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceGroupManagerStatusStatefulPerInstanceConfig {
     /**
      * A bit indicating if all of the group's per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status `EFFECTIVE` or there are no per-instance-configs.
@@ -17,8 +17,8 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfig {
      */
     private final @Nullable Boolean allEffective;
 
-    @OutputCustomType.Constructor
-    private InstanceGroupManagerStatusStatefulPerInstanceConfig(@OutputCustomType.Parameter("allEffective") @Nullable Boolean allEffective) {
+    @CustomType.Constructor
+    private InstanceGroupManagerStatusStatefulPerInstanceConfig(@CustomType.Parameter("allEffective") @Nullable Boolean allEffective) {
         this.allEffective = allEffective;
     }
 

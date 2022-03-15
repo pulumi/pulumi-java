@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArg
      * "projects/{projectNumber}/secrets/{secret_id}/versions/{version_id}".
      * 
      */
-    @InputImport(name="cloudSecret", required=true)
+    @Import(name="cloudSecret", required=true)
       private final Output<String> cloudSecret;
 
     public Output<String> getCloudSecret() {

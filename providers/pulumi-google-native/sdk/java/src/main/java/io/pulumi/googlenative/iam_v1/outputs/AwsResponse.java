@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.iam_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AwsResponse {
     /**
      * The AWS account ID.
@@ -15,8 +15,8 @@ public final class AwsResponse {
      */
     private final String accountId;
 
-    @OutputCustomType.Constructor
-    private AwsResponse(@OutputCustomType.Parameter("accountId") String accountId) {
+    @CustomType.Constructor
+    private AwsResponse(@CustomType.Parameter("accountId") String accountId) {
         this.accountId = accountId;
     }
 

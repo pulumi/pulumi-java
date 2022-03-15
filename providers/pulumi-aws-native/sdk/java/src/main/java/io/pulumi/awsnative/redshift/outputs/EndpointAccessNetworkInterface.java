@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.redshift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointAccessNetworkInterface {
     /**
      * The Availability Zone.
@@ -32,12 +32,12 @@ public final class EndpointAccessNetworkInterface {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointAccessNetworkInterface(
-        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
-        @OutputCustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
-        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
+        @CustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @CustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
+        @CustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.availabilityZone = availabilityZone;
         this.networkInterfaceId = networkInterfaceId;
         this.privateIpAddress = privateIpAddress;

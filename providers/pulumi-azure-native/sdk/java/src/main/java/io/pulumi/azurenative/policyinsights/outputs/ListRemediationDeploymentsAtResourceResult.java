@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.policyinsights.outputs;
 
 import io.pulumi.azurenative.policyinsights.outputs.RemediationDeploymentResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListRemediationDeploymentsAtResourceResult {
     /**
      * The URL to get the next set of results.
@@ -22,10 +22,10 @@ public final class ListRemediationDeploymentsAtResourceResult {
      */
     private final List<RemediationDeploymentResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListRemediationDeploymentsAtResourceResult(
-        @OutputCustomType.Parameter("nextLink") String nextLink,
-        @OutputCustomType.Parameter("value") List<RemediationDeploymentResponse> value) {
+        @CustomType.Parameter("nextLink") String nextLink,
+        @CustomType.Parameter("value") List<RemediationDeploymentResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

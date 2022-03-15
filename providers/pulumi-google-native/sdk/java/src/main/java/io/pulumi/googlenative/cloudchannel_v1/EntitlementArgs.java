@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudchannel_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1AssociationInfoArgs;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1CommitmentSettingsArgs;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1ParameterArgs;
@@ -18,7 +18,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EntitlementArgs Empty = new EntitlementArgs();
 
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -29,7 +29,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
      * Association information to other entitlements.
      * 
      */
-    @InputImport(name="associationInfo")
+    @Import(name="associationInfo")
       private final @Nullable Output<GoogleCloudChannelV1AssociationInfoArgs> associationInfo;
 
     public Output<GoogleCloudChannelV1AssociationInfoArgs> getAssociationInfo() {
@@ -40,14 +40,14 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
      * Commitment settings for a commitment-based Offer. Required for commitment based offers.
      * 
      */
-    @InputImport(name="commitmentSettings")
+    @Import(name="commitmentSettings")
       private final @Nullable Output<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings;
 
     public Output<GoogleCloudChannelV1CommitmentSettingsArgs> getCommitmentSettings() {
         return this.commitmentSettings == null ? Output.empty() : this.commitmentSettings;
     }
 
-    @InputImport(name="customerId", required=true)
+    @Import(name="customerId", required=true)
       private final Output<String> customerId;
 
     public Output<String> getCustomerId() {
@@ -58,7 +58,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
      * The offer resource name for which the entitlement is to be created. Takes the form: accounts/{account_id}/offers/{offer_id}.
      * 
      */
-    @InputImport(name="offer", required=true)
+    @Import(name="offer", required=true)
       private final Output<String> offer;
 
     public Output<String> getOffer() {
@@ -69,7 +69,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
      * Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. The response may include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. - max_units: The maximum assignable units for a flexible offer. - num_units: The total commitment for commitment-based offers.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<GoogleCloudChannelV1ParameterArgs>> parameters;
 
     public Output<List<GoogleCloudChannelV1ParameterArgs>> getParameters() {
@@ -80,7 +80,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters.
      * 
      */
-    @InputImport(name="purchaseOrderId")
+    @Import(name="purchaseOrderId")
       private final @Nullable Output<String> purchaseOrderId;
 
     public Output<String> getPurchaseOrderId() {
@@ -91,7 +91,7 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. You can specify an optional unique request ID, and if you need to retry your request, the server will know to ignore the request if it's complete. For example, you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if it received the original operation with the same request ID. If it did, it will ignore the second request. The request ID must be a valid [UUID](https://tools.ietf.org/html/rfc4122) with the exception that zero UUID is not supported (`00000000-0000-0000-0000-000000000000`).
      * 
      */
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {

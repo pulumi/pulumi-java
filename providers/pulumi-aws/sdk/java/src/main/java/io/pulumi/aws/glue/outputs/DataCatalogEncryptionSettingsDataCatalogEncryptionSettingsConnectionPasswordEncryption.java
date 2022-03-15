@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryption {
     /**
      * A KMS key ARN that is used to encrypt the connection password. If connection password protection is enabled, the caller of CreateConnection and UpdateConnection needs at least `kms:Encrypt` permission on the specified AWS KMS key, to encrypt passwords before storing them in the Data Catalog.
@@ -23,10 +23,10 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsCon
      */
     private final Boolean returnConnectionPasswordEncrypted;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryption(
-        @OutputCustomType.Parameter("awsKmsKeyId") @Nullable String awsKmsKeyId,
-        @OutputCustomType.Parameter("returnConnectionPasswordEncrypted") Boolean returnConnectionPasswordEncrypted) {
+        @CustomType.Parameter("awsKmsKeyId") @Nullable String awsKmsKeyId,
+        @CustomType.Parameter("returnConnectionPasswordEncrypted") Boolean returnConnectionPasswordEncrypted) {
         this.awsKmsKeyId = awsKmsKeyId;
         this.returnConnectionPasswordEncrypted = returnConnectionPasswordEncrypted;
     }

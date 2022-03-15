@@ -10,7 +10,7 @@ import io.pulumi.awsnative.sagemaker.outputs.ProjectTag;
 import io.pulumi.awsnative.sagemaker.outputs.ServiceCatalogProvisionedProductDetailsProperties;
 import io.pulumi.awsnative.sagemaker.outputs.ServiceCatalogProvisioningDetailsProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The time at which the project was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -38,25 +38,25 @@ public class Project extends io.pulumi.resources.CustomResource {
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
-    @OutputExport(name="projectArn", type=String.class, parameters={})
+    @Export(name="projectArn", type=String.class, parameters={})
     private Output<String> projectArn;
 
     public Output<String> getProjectArn() {
         return this.projectArn;
     }
-    @OutputExport(name="projectDescription", type=String.class, parameters={})
+    @Export(name="projectDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> projectDescription;
 
     public Output</* @Nullable */ String> getProjectDescription() {
         return this.projectDescription;
     }
-    @OutputExport(name="projectId", type=String.class, parameters={})
+    @Export(name="projectId", type=String.class, parameters={})
     private Output<String> projectId;
 
     public Output<String> getProjectId() {
         return this.projectId;
     }
-    @OutputExport(name="projectName", type=String.class, parameters={})
+    @Export(name="projectName", type=String.class, parameters={})
     private Output<String> projectName;
 
     public Output<String> getProjectName() {
@@ -66,7 +66,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The status of a project.
      * 
      */
-    @OutputExport(name="projectStatus", type=ProjectStatus.class, parameters={})
+    @Export(name="projectStatus", type=ProjectStatus.class, parameters={})
     private Output<ProjectStatus> projectStatus;
 
     /**
@@ -80,7 +80,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Provisioned ServiceCatalog  Details
      * 
      */
-    @OutputExport(name="serviceCatalogProvisionedProductDetails", type=ServiceCatalogProvisionedProductDetailsProperties.class, parameters={})
+    @Export(name="serviceCatalogProvisionedProductDetails", type=ServiceCatalogProvisionedProductDetailsProperties.class, parameters={})
     private Output<ServiceCatalogProvisionedProductDetailsProperties> serviceCatalogProvisionedProductDetails;
 
     /**
@@ -94,7 +94,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Input ServiceCatalog Provisioning Details
      * 
      */
-    @OutputExport(name="serviceCatalogProvisioningDetails", type=ServiceCatalogProvisioningDetailsProperties.class, parameters={})
+    @Export(name="serviceCatalogProvisioningDetails", type=ServiceCatalogProvisioningDetailsProperties.class, parameters={})
     private Output<ServiceCatalogProvisioningDetailsProperties> serviceCatalogProvisioningDetails;
 
     /**
@@ -108,7 +108,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ProjectTag.class})
+    @Export(name="tags", type=List.class, parameters={ProjectTag.class})
     private Output</* @Nullable */ List<ProjectTag>> tags;
 
     /**

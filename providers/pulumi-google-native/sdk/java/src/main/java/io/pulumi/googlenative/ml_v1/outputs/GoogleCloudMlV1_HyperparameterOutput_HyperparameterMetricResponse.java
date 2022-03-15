@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse {
     /**
      * The objective value at this training step.
@@ -21,10 +21,10 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
      */
     private final String trainingStep;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse(
-        @OutputCustomType.Parameter("objectiveValue") Double objectiveValue,
-        @OutputCustomType.Parameter("trainingStep") String trainingStep) {
+        @CustomType.Parameter("objectiveValue") Double objectiveValue,
+        @CustomType.Parameter("trainingStep") String trainingStep) {
         this.objectiveValue = objectiveValue;
         this.trainingStep = trainingStep;
     }

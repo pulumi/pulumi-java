@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v3.inputs.AvailabilityCriteriaResponse;
 import io.pulumi.googlenative.monitoring_v3.inputs.LatencyCriteriaResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class BasicSliResponse extends io.pulumi.resources.InvokeArgs {
      * Good service is defined to be the count of requests made to this service that return successfully.
      * 
      */
-    @InputImport(name="availability", required=true)
+    @Import(name="availability", required=true)
       private final AvailabilityCriteriaResponse availability;
 
     public AvailabilityCriteriaResponse getAvailability() {
@@ -34,7 +34,7 @@ public final class BasicSliResponse extends io.pulumi.resources.InvokeArgs {
      * Good service is defined to be the count of requests made to this service that are fast enough with respect to latency.threshold.
      * 
      */
-    @InputImport(name="latency", required=true)
+    @Import(name="latency", required=true)
       private final LatencyCriteriaResponse latency;
 
     public LatencyCriteriaResponse getLatency() {
@@ -45,7 +45,7 @@ public final class BasicSliResponse extends io.pulumi.resources.InvokeArgs {
      * OPTIONAL: The set of locations to which this SLI is relevant. Telemetry from other locations will not be used to calculate performance for this SLI. If omitted, this SLI applies to all locations in which the Service has activity. For service types that don't support breaking down by location, setting this field will result in an error.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final List<String> location;
 
     public List<String> getLocation() {
@@ -56,7 +56,7 @@ public final class BasicSliResponse extends io.pulumi.resources.InvokeArgs {
      * OPTIONAL: The set of RPCs to which this SLI is relevant. Telemetry from other methods will not be used to calculate performance for this SLI. If omitted, this SLI applies to all the Service's methods. For service types that don't support breaking down by method, setting this field will result in an error.
      * 
      */
-    @InputImport(name="method", required=true)
+    @Import(name="method", required=true)
       private final List<String> method;
 
     public List<String> getMethod() {
@@ -67,7 +67,7 @@ public final class BasicSliResponse extends io.pulumi.resources.InvokeArgs {
      * OPTIONAL: The set of API versions to which this SLI is relevant. Telemetry from other API versions will not be used to calculate performance for this SLI. If omitted, this SLI applies to all API versions. For service types that don't support breaking down by version, setting this field will result in an error.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final List<String> version;
 
     public List<String> getVersion() {

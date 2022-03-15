@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AutomationActionWorkspaceResponse extends io.pulumi.resources
      * Expected value is 'Workspace'.
      * 
      */
-    @InputImport(name="actionType", required=true)
+    @Import(name="actionType", required=true)
       private final String actionType;
 
     public String getActionType() {
@@ -34,7 +34,7 @@ public final class AutomationActionWorkspaceResponse extends io.pulumi.resources
      * The fully qualified Log Analytics Workspace Azure Resource ID.
      * 
      */
-    @InputImport(name="workspaceResourceId")
+    @Import(name="workspaceResourceId")
       private final @Nullable String workspaceResourceId;
 
     public Optional<String> getWorkspaceResourceId() {

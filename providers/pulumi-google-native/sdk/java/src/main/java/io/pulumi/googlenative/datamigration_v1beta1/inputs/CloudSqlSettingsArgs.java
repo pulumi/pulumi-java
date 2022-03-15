@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datamigration_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datamigration_v1beta1.enums.CloudSqlSettingsActivationPolicy;
 import io.pulumi.googlenative.datamigration_v1beta1.enums.CloudSqlSettingsDataDiskType;
 import io.pulumi.googlenative.datamigration_v1beta1.enums.CloudSqlSettingsDatabaseVersion;
@@ -28,7 +28,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The activation policy specifies when the instance is activated; it is applicable only when the instance state is 'RUNNABLE'. Valid values: 'ALWAYS': The instance is on, and remains so even in the absence of connection requests. `NEVER`: The instance is off; it is not activated, even if a connection request arrives.
      * 
      */
-    @InputImport(name="activationPolicy")
+    @Import(name="activationPolicy")
       private final @Nullable Output<CloudSqlSettingsActivationPolicy> activationPolicy;
 
     public Output<CloudSqlSettingsActivationPolicy> getActivationPolicy() {
@@ -39,7 +39,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * [default: ON] If you enable this setting, Cloud SQL checks your available storage every 30 seconds. If the available storage falls below a threshold size, Cloud SQL automatically adds additional storage capacity. If the available storage repeatedly falls below the threshold size, Cloud SQL continues to add storage until it reaches the maximum of 30 TB.
      * 
      */
-    @InputImport(name="autoStorageIncrease")
+    @Import(name="autoStorageIncrease")
       private final @Nullable Output<Boolean> autoStorageIncrease;
 
     public Output<Boolean> getAutoStorageIncrease() {
@@ -50,7 +50,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The storage capacity available to the database, in GB. The minimum (and default) size is 10GB.
      * 
      */
-    @InputImport(name="dataDiskSizeGb")
+    @Import(name="dataDiskSizeGb")
       private final @Nullable Output<String> dataDiskSizeGb;
 
     public Output<String> getDataDiskSizeGb() {
@@ -61,7 +61,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The type of storage: `PD_SSD` (default) or `PD_HDD`.
      * 
      */
-    @InputImport(name="dataDiskType")
+    @Import(name="dataDiskType")
       private final @Nullable Output<CloudSqlSettingsDataDiskType> dataDiskType;
 
     public Output<CloudSqlSettingsDataDiskType> getDataDiskType() {
@@ -72,7 +72,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The database flags passed to the Cloud SQL instance at startup. An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    @InputImport(name="databaseFlags")
+    @Import(name="databaseFlags")
       private final @Nullable Output<Map<String,String>> databaseFlags;
 
     public Output<Map<String,String>> getDatabaseFlags() {
@@ -83,7 +83,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The database engine type and version.
      * 
      */
-    @InputImport(name="databaseVersion")
+    @Import(name="databaseVersion")
       private final @Nullable Output<CloudSqlSettingsDatabaseVersion> databaseVersion;
 
     public Output<CloudSqlSettingsDatabaseVersion> getDatabaseVersion() {
@@ -94,7 +94,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The settings for IP Management. This allows to enable or disable the instance IP and manage which external networks can connect to the instance. The IPv4 address cannot be disabled.
      * 
      */
-    @InputImport(name="ipConfig")
+    @Import(name="ipConfig")
       private final @Nullable Output<SqlIpConfigArgs> ipConfig;
 
     public Output<SqlIpConfigArgs> getIpConfig() {
@@ -105,7 +105,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Input only. Initial root password.
      * 
      */
-    @InputImport(name="rootPassword")
+    @Import(name="rootPassword")
       private final @Nullable Output<String> rootPassword;
 
     public Output<String> getRootPassword() {
@@ -116,7 +116,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The Database Migration Service source connection profile ID, in the format: `projects/my_project_name/locations/us-central1/connectionProfiles/connection_profile_ID`
      * 
      */
-    @InputImport(name="sourceId")
+    @Import(name="sourceId")
       private final @Nullable Output<String> sourceId;
 
     public Output<String> getSourceId() {
@@ -127,7 +127,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The maximum size to which storage capacity can be automatically increased. The default value is 0, which specifies that there is no limit.
      * 
      */
-    @InputImport(name="storageAutoResizeLimit")
+    @Import(name="storageAutoResizeLimit")
       private final @Nullable Output<String> storageAutoResizeLimit;
 
     public Output<String> getStorageAutoResizeLimit() {
@@ -138,7 +138,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The tier (or machine type) for this instance, for example: `db-n1-standard-1` (MySQL instances). For more information, see [Cloud SQL Instance Settings](https://cloud.google.com/sql/docs/mysql/instance-settings).
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {
@@ -149,7 +149,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The resource labels for a Cloud SQL instance to use to annotate any related underlying resources such as Compute Engine VMs. An object containing a list of "key": "value" pairs. Example: `{ "name": "wrench", "mass": "18kg", "count": "3" }`.
      * 
      */
-    @InputImport(name="userLabels")
+    @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;
 
     public Output<Map<String,String>> getUserLabels() {
@@ -160,7 +160,7 @@ public final class CloudSqlSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The Google Cloud Platform zone where your Cloud SQL datdabse instance is located.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

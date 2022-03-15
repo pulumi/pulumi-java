@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.appsync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResolverPipelineConfig {
     /**
      * The list of Function ID.
@@ -17,8 +17,8 @@ public final class ResolverPipelineConfig {
      */
     private final @Nullable List<String> functions;
 
-    @OutputCustomType.Constructor
-    private ResolverPipelineConfig(@OutputCustomType.Parameter("functions") @Nullable List<String> functions) {
+    @CustomType.Constructor
+    private ResolverPipelineConfig(@CustomType.Parameter("functions") @Nullable List<String> functions) {
         this.functions = functions;
     }
 

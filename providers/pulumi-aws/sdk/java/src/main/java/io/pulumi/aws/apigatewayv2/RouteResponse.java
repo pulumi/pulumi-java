@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.apigatewayv2.RouteResponseArgs;
 import io.pulumi.aws.apigatewayv2.inputs.RouteResponseState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -34,7 +34,7 @@ public class RouteResponse extends io.pulumi.resources.CustomResource {
      * The API identifier.
      * 
      */
-    @OutputExport(name="apiId", type=String.class, parameters={})
+    @Export(name="apiId", type=String.class, parameters={})
     private Output<String> apiId;
 
     /**
@@ -48,7 +48,7 @@ public class RouteResponse extends io.pulumi.resources.CustomResource {
      * The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route response.
      * 
      */
-    @OutputExport(name="modelSelectionExpression", type=String.class, parameters={})
+    @Export(name="modelSelectionExpression", type=String.class, parameters={})
     private Output</* @Nullable */ String> modelSelectionExpression;
 
     /**
@@ -62,7 +62,7 @@ public class RouteResponse extends io.pulumi.resources.CustomResource {
      * The response models for the route response.
      * 
      */
-    @OutputExport(name="responseModels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="responseModels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> responseModels;
 
     /**
@@ -76,7 +76,7 @@ public class RouteResponse extends io.pulumi.resources.CustomResource {
      * The identifier of the `aws.apigatewayv2.Route`.
      * 
      */
-    @OutputExport(name="routeId", type=String.class, parameters={})
+    @Export(name="routeId", type=String.class, parameters={})
     private Output<String> routeId;
 
     /**
@@ -90,7 +90,7 @@ public class RouteResponse extends io.pulumi.resources.CustomResource {
      * The route response key.
      * 
      */
-    @OutputExport(name="routeResponseKey", type=String.class, parameters={})
+    @Export(name="routeResponseKey", type=String.class, parameters={})
     private Output<String> routeResponseKey;
 
     /**

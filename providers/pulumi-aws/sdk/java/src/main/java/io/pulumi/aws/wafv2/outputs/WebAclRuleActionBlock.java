@@ -4,12 +4,12 @@
 package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.WebAclRuleActionBlockCustomResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRuleActionBlock {
     /**
      * Defines a custom response for the web request. See Custom Response below for details.
@@ -17,8 +17,8 @@ public final class WebAclRuleActionBlock {
      */
     private final @Nullable WebAclRuleActionBlockCustomResponse customResponse;
 
-    @OutputCustomType.Constructor
-    private WebAclRuleActionBlock(@OutputCustomType.Parameter("customResponse") @Nullable WebAclRuleActionBlockCustomResponse customResponse) {
+    @CustomType.Constructor
+    private WebAclRuleActionBlock(@CustomType.Parameter("customResponse") @Nullable WebAclRuleActionBlockCustomResponse customResponse) {
         this.customResponse = customResponse;
     }
 

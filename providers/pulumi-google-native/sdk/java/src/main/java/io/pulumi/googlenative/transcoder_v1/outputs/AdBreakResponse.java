@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AdBreakResponse {
     /**
      * Start time in seconds for the ad break, relative to the output file timeline. The default is `0s`.
@@ -15,8 +15,8 @@ public final class AdBreakResponse {
      */
     private final String startTimeOffset;
 
-    @OutputCustomType.Constructor
-    private AdBreakResponse(@OutputCustomType.Parameter("startTimeOffset") String startTimeOffset) {
+    @CustomType.Constructor
+    private AdBreakResponse(@CustomType.Parameter("startTimeOffset") String startTimeOffset) {
         this.startTimeOffset = startTimeOffset;
     }
 

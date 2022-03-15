@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudcontrol.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
      * Identifier of the CloudFormation resource type. For example, `vpc-12345678`.
      * 
      */
-    @InputImport(name="identifier", required=true)
+    @Import(name="identifier", required=true)
       private final String identifier;
 
     public String getIdentifier() {
@@ -29,7 +29,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
      * Amazon Resource Name (ARN) of the IAM Role to assume for operations.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable String roleArn;
 
     public Optional<String> getRoleArn() {
@@ -40,7 +40,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
      * CloudFormation resource type name. For example, `AWS::EC2::VPC`.
      * 
      */
-    @InputImport(name="typeName", required=true)
+    @Import(name="typeName", required=true)
       private final String typeName;
 
     public String getTypeName() {
@@ -51,7 +51,7 @@ public final class GetResourceArgs extends io.pulumi.resources.InvokeArgs {
      * Identifier of the CloudFormation resource type version.
      * 
      */
-    @InputImport(name="typeVersionId")
+    @Import(name="typeVersionId")
       private final @Nullable String typeVersionId;
 
     public Optional<String> getTypeVersionId() {

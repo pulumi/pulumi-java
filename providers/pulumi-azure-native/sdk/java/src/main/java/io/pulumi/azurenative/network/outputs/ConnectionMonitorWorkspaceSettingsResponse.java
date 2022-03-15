@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionMonitorWorkspaceSettingsResponse {
     /**
      * Log analytics workspace resource ID.
@@ -17,8 +17,8 @@ public final class ConnectionMonitorWorkspaceSettingsResponse {
      */
     private final @Nullable String workspaceResourceId;
 
-    @OutputCustomType.Constructor
-    private ConnectionMonitorWorkspaceSettingsResponse(@OutputCustomType.Parameter("workspaceResourceId") @Nullable String workspaceResourceId) {
+    @CustomType.Constructor
+    private ConnectionMonitorWorkspaceSettingsResponse(@CustomType.Parameter("workspaceResourceId") @Nullable String workspaceResourceId) {
         this.workspaceResourceId = workspaceResourceId;
     }
 

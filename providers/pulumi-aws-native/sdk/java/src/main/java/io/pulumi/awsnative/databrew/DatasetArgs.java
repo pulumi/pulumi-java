@@ -9,7 +9,7 @@ import io.pulumi.awsnative.databrew.inputs.DatasetInputArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetPathOptionsArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Dataset format
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable Output<DatasetFormat> format;
 
     public Output<DatasetFormat> getFormat() {
@@ -35,7 +35,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Format options for dataset
      * 
      */
-    @InputImport(name="formatOptions")
+    @Import(name="formatOptions")
       private final @Nullable Output<DatasetFormatOptionsArgs> formatOptions;
 
     public Output<DatasetFormatOptionsArgs> getFormatOptions() {
@@ -46,7 +46,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Input
      * 
      */
-    @InputImport(name="input", required=true)
+    @Import(name="input", required=true)
       private final Output<DatasetInputArgs> input;
 
     public Output<DatasetInputArgs> getInput() {
@@ -57,7 +57,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * Dataset name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -68,14 +68,14 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * PathOptions
      * 
      */
-    @InputImport(name="pathOptions")
+    @Import(name="pathOptions")
       private final @Nullable Output<DatasetPathOptionsArgs> pathOptions;
 
     public Output<DatasetPathOptionsArgs> getPathOptions() {
         return this.pathOptions == null ? Output.empty() : this.pathOptions;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DatasetTagArgs>> tags;
 
     public Output<List<DatasetTagArgs>> getTags() {

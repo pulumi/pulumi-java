@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
      * The name of the connection.
      * 
      */
-    @InputImport(name="connectionName")
+    @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
     public Output<String> getConnectionName() {
@@ -30,7 +30,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -41,7 +41,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
      * Name of the connection.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
      * Peer ASN.
      * 
      */
-    @InputImport(name="peerAsn")
+    @Import(name="peerAsn")
       private final @Nullable Output<Double> peerAsn;
 
     public Output<Double> getPeerAsn() {
@@ -63,7 +63,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
      * Peer IP.
      * 
      */
-    @InputImport(name="peerIp")
+    @Import(name="peerIp")
       private final @Nullable Output<String> peerIp;
 
     public Output<String> getPeerIp() {
@@ -74,7 +74,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
      * The resource group name of the VirtualHub.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -85,7 +85,7 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
      * The name of the VirtualHub.
      * 
      */
-    @InputImport(name="virtualHubName", required=true)
+    @Import(name="virtualHubName", required=true)
       private final Output<String> virtualHubName;
 
     public Output<String> getVirtualHubName() {

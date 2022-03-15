@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * The AWS account ID for the account.
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -31,7 +31,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * The AWS account ID for the administrator account.
      * 
      */
-    @InputImport(name="administratorAccountId")
+    @Import(name="administratorAccountId")
       private final @Nullable Output<String> administratorAccountId;
 
     public Output<String> getAdministratorAccountId() {
@@ -42,7 +42,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the account.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -53,7 +53,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * The email address for the account.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
@@ -64,7 +64,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether to send an email notification to the root user of each account that the invitation will be sent to. This notification is in addition to an alert that the root user receives in AWS Personal Health Dashboard. To send an email notification to the root user of each account, set this value to `true`.
      * 
      */
-    @InputImport(name="invitationDisableEmailNotification")
+    @Import(name="invitationDisableEmailNotification")
       private final @Nullable Output<String> invitationDisableEmailNotification;
 
     public Output<String> getInvitationDisableEmailNotification() {
@@ -75,7 +75,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * A custom message to include in the invitation. Amazon Macie adds this message to the standard content that it sends for an invitation.
      * 
      */
-    @InputImport(name="invitationMessage")
+    @Import(name="invitationMessage")
       private final @Nullable Output<String> invitationMessage;
 
     public Output<String> getInvitationMessage() {
@@ -86,7 +86,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * Send an invitation to a member
      * 
      */
-    @InputImport(name="invite")
+    @Import(name="invite")
       private final @Nullable Output<Boolean> invite;
 
     public Output<Boolean> getInvite() {
@@ -97,14 +97,14 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * The date and time, in UTC and extended RFC 3339 format, when an Amazon Macie membership invitation was last sent to the account. This value is null if a Macie invitation hasn't been sent to the account.
      * 
      */
-    @InputImport(name="invitedAt")
+    @Import(name="invitedAt")
       private final @Nullable Output<String> invitedAt;
 
     public Output<String> getInvitedAt() {
         return this.invitedAt == null ? Output.empty() : this.invitedAt;
     }
 
-    @InputImport(name="masterAccountId")
+    @Import(name="masterAccountId")
       private final @Nullable Output<String> masterAccountId;
 
     public Output<String> getMasterAccountId() {
@@ -115,7 +115,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * The current status of the relationship between the account and the administrator account.
      * 
      */
-    @InputImport(name="relationshipStatus")
+    @Import(name="relationshipStatus")
       private final @Nullable Output<String> relationshipStatus;
 
     public Output<String> getRelationshipStatus() {
@@ -126,7 +126,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * Specifies the status for the account. To enable Amazon Macie and start all Macie activities for the account, set this value to `ENABLED`. Valid values are `ENABLED` or `PAUSED`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -137,14 +137,14 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * A map of key-value pairs that specifies the tags to associate with the account in Amazon Macie.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -155,7 +155,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
      * The date and time, in UTC and extended RFC 3339 format, of the most recent change to the status of the relationship between the account and the administrator account.
      * 
      */
-    @InputImport(name="updatedAt")
+    @Import(name="updatedAt")
       private final @Nullable Output<String> updatedAt;
 
     public Output<String> getUpdatedAt() {

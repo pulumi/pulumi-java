@@ -4,12 +4,12 @@
 package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.GetRegexPatternSetRegularExpression;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRegexPatternSetResult {
     /**
      * The Amazon Resource Name (ARN) of the entity.
@@ -34,14 +34,14 @@ public final class GetRegexPatternSetResult {
     private final List<GetRegexPatternSetRegularExpression> regularExpressions;
     private final String scope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegexPatternSetResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("regularExpressions") List<GetRegexPatternSetRegularExpression> regularExpressions,
-        @OutputCustomType.Parameter("scope") String scope) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("regularExpressions") List<GetRegexPatternSetRegularExpression> regularExpressions,
+        @CustomType.Parameter("scope") String scope) {
         this.arn = arn;
         this.description = description;
         this.id = id;

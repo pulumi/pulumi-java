@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.solutions.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU capacity.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
@@ -34,7 +34,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU family.
      * 
      */
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable Output<String> family;
 
     public Output<String> getFamily() {
@@ -45,7 +45,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU model.
      * 
      */
-    @InputImport(name="model")
+    @Import(name="model")
       private final @Nullable Output<String> model;
 
     public Output<String> getModel() {
@@ -56,7 +56,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -67,7 +67,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU size.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<String> size;
 
     public Output<String> getSize() {
@@ -78,7 +78,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU tier.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {

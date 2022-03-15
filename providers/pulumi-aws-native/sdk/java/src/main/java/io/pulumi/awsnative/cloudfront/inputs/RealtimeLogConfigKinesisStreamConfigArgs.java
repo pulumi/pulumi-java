@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class RealtimeLogConfigKinesisStreamConfigArgs extends io.pulumi.re
 
     public static final RealtimeLogConfigKinesisStreamConfigArgs Empty = new RealtimeLogConfigKinesisStreamConfigArgs();
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="streamArn", required=true)
+    @Import(name="streamArn", required=true)
       private final Output<String> streamArn;
 
     public Output<String> getStreamArn() {

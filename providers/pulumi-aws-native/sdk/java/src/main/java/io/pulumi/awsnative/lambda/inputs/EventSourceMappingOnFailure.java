@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EventSourceMappingOnFailure extends io.pulumi.resources.Invok
      * The Amazon Resource Name (ARN) of the destination resource.
      * 
      */
-    @InputImport(name="destination")
+    @Import(name="destination")
       private final @Nullable String destination;
 
     public Optional<String> getDestination() {

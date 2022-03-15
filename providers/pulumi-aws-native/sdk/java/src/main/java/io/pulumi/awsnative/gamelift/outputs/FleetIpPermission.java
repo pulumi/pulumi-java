@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.gamelift.outputs;
 
 import io.pulumi.awsnative.gamelift.enums.FleetIpPermissionProtocol;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FleetIpPermission {
     /**
      * A starting value for a range of allowed port numbers.
@@ -32,12 +32,12 @@ public final class FleetIpPermission {
      */
     private final Integer toPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FleetIpPermission(
-        @OutputCustomType.Parameter("fromPort") Integer fromPort,
-        @OutputCustomType.Parameter("ipRange") String ipRange,
-        @OutputCustomType.Parameter("protocol") FleetIpPermissionProtocol protocol,
-        @OutputCustomType.Parameter("toPort") Integer toPort) {
+        @CustomType.Parameter("fromPort") Integer fromPort,
+        @CustomType.Parameter("ipRange") String ipRange,
+        @CustomType.Parameter("protocol") FleetIpPermissionProtocol protocol,
+        @CustomType.Parameter("toPort") Integer toPort) {
         this.fromPort = fromPort;
         this.ipRange = ipRange;
         this.protocol = protocol;

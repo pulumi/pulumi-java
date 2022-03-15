@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ParallelismConfigurationPropertiesArgs extends io.pulumi.reso
      * Maximum parallel execution steps
      * 
      */
-    @InputImport(name="maxParallelExecutionSteps", required=true)
+    @Import(name="maxParallelExecutionSteps", required=true)
       private final Output<Integer> maxParallelExecutionSteps;
 
     public Output<Integer> getMaxParallelExecutionSteps() {

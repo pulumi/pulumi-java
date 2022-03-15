@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.enums.DashboardErrorType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DashboardError {
     /**
      * <p>Message.</p>
@@ -19,10 +19,10 @@ public final class DashboardError {
     private final @Nullable String message;
     private final @Nullable DashboardErrorType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DashboardError(
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("type") @Nullable DashboardErrorType type) {
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("type") @Nullable DashboardErrorType type) {
         this.message = message;
         this.type = type;
     }

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
      * Resource reference to the Azure DNS zone
      * 
      */
-    @OutputExport(name="azureDnsZone", type=ResourceReferenceResponse.class, parameters={})
+    @Export(name="azureDnsZone", type=ResourceReferenceResponse.class, parameters={})
     private Output</* @Nullable */ ResourceReferenceResponse> azureDnsZone;
 
     /**
@@ -48,7 +48,7 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ ResourceReferenceResponse> getAzureDnsZone() {
         return this.azureDnsZone;
     }
-    @OutputExport(name="deploymentStatus", type=String.class, parameters={})
+    @Export(name="deploymentStatus", type=String.class, parameters={})
     private Output<String> deploymentStatus;
 
     public Output<String> getDeploymentStatus() {
@@ -58,7 +58,7 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
      * Provisioning substate shows the progress of custom HTTPS enabling/disabling process step by step. DCV stands for DomainControlValidation.
      * 
      */
-    @OutputExport(name="domainValidationState", type=String.class, parameters={})
+    @Export(name="domainValidationState", type=String.class, parameters={})
     private Output<String> domainValidationState;
 
     /**
@@ -72,7 +72,7 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
      * The host name of the domain. Must be a domain name.
      * 
      */
-    @OutputExport(name="hostName", type=String.class, parameters={})
+    @Export(name="hostName", type=String.class, parameters={})
     private Output<String> hostName;
 
     /**
@@ -86,7 +86,7 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -100,7 +100,7 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
      * Provisioning status
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -114,7 +114,7 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
      * Read only system data
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -128,7 +128,7 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
      * The configuration specifying how to enable HTTPS for the domain - using AzureFrontDoor managed certificate or user's own certificate. If not specified, enabling ssl uses AzureFrontDoor managed certificate by default.
      * 
      */
-    @OutputExport(name="tlsSettings", type=AFDDomainHttpsParametersResponse.class, parameters={})
+    @Export(name="tlsSettings", type=AFDDomainHttpsParametersResponse.class, parameters={})
     private Output</* @Nullable */ AFDDomainHttpsParametersResponse> tlsSettings;
 
     /**
@@ -142,7 +142,7 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -156,7 +156,7 @@ public class AFDCustomDomain extends io.pulumi.resources.CustomResource {
      * Values the customer needs to validate domain ownership
      * 
      */
-    @OutputExport(name="validationProperties", type=DomainValidationPropertiesResponse.class, parameters={})
+    @Export(name="validationProperties", type=DomainValidationPropertiesResponse.class, parameters={})
     private Output<DomainValidationPropertiesResponse> validationProperties;
 
     /**

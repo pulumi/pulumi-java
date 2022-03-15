@@ -3,25 +3,25 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketCor {
     private final Integer maxAgeSeconds;
     private final List<String> methods;
     private final List<String> origins;
     private final List<String> responseHeaders;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBucketCor(
-        @OutputCustomType.Parameter("maxAgeSeconds") Integer maxAgeSeconds,
-        @OutputCustomType.Parameter("methods") List<String> methods,
-        @OutputCustomType.Parameter("origins") List<String> origins,
-        @OutputCustomType.Parameter("responseHeaders") List<String> responseHeaders) {
+        @CustomType.Parameter("maxAgeSeconds") Integer maxAgeSeconds,
+        @CustomType.Parameter("methods") List<String> methods,
+        @CustomType.Parameter("origins") List<String> origins,
+        @CustomType.Parameter("responseHeaders") List<String> responseHeaders) {
         this.maxAgeSeconds = maxAgeSeconds;
         this.methods = methods;
         this.origins = origins;

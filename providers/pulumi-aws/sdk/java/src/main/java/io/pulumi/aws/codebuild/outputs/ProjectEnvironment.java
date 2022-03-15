@@ -5,7 +5,7 @@ package io.pulumi.aws.codebuild.outputs;
 
 import io.pulumi.aws.codebuild.outputs.ProjectEnvironmentEnvironmentVariable;
 import io.pulumi.aws.codebuild.outputs.ProjectEnvironmentRegistryCredential;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectEnvironment {
     /**
      * ARN of the S3 bucket, path prefix and object key that contains the PEM-encoded certificate.
@@ -56,16 +56,16 @@ public final class ProjectEnvironment {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectEnvironment(
-        @OutputCustomType.Parameter("certificate") @Nullable String certificate,
-        @OutputCustomType.Parameter("computeType") String computeType,
-        @OutputCustomType.Parameter("environmentVariables") @Nullable List<ProjectEnvironmentEnvironmentVariable> environmentVariables,
-        @OutputCustomType.Parameter("image") String image,
-        @OutputCustomType.Parameter("imagePullCredentialsType") @Nullable String imagePullCredentialsType,
-        @OutputCustomType.Parameter("privilegedMode") @Nullable Boolean privilegedMode,
-        @OutputCustomType.Parameter("registryCredential") @Nullable ProjectEnvironmentRegistryCredential registryCredential,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("certificate") @Nullable String certificate,
+        @CustomType.Parameter("computeType") String computeType,
+        @CustomType.Parameter("environmentVariables") @Nullable List<ProjectEnvironmentEnvironmentVariable> environmentVariables,
+        @CustomType.Parameter("image") String image,
+        @CustomType.Parameter("imagePullCredentialsType") @Nullable String imagePullCredentialsType,
+        @CustomType.Parameter("privilegedMode") @Nullable Boolean privilegedMode,
+        @CustomType.Parameter("registryCredential") @Nullable ProjectEnvironmentRegistryCredential registryCredential,
+        @CustomType.Parameter("type") String type) {
         this.certificate = certificate;
         this.computeType = computeType;
         this.environmentVariables = environmentVariables;

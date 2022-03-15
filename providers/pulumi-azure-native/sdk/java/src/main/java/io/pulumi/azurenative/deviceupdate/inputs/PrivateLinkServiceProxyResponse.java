@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deviceupdate.inputs;
 import io.pulumi.azurenative.deviceupdate.inputs.GroupConnectivityInformationResponse;
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class PrivateLinkServiceProxyResponse extends io.pulumi.resources.I
      * Group connectivity information.
      * 
      */
-    @InputImport(name="groupConnectivityInformation")
+    @Import(name="groupConnectivityInformation")
       private final @Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation;
 
     public List<GroupConnectivityInformationResponse> getGroupConnectivityInformation() {
@@ -37,7 +37,7 @@ public final class PrivateLinkServiceProxyResponse extends io.pulumi.resources.I
      * NRP resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -48,7 +48,7 @@ public final class PrivateLinkServiceProxyResponse extends io.pulumi.resources.I
      * Remote private endpoint connection details.
      * 
      */
-    @InputImport(name="remotePrivateEndpointConnection")
+    @Import(name="remotePrivateEndpointConnection")
       private final @Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection;
 
     public Optional<PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection> getRemotePrivateEndpointConnection() {
@@ -59,7 +59,7 @@ public final class PrivateLinkServiceProxyResponse extends io.pulumi.resources.I
      * Remote private link service connection state
      * 
      */
-    @InputImport(name="remotePrivateLinkServiceConnectionState")
+    @Import(name="remotePrivateLinkServiceConnectionState")
       private final @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> getRemotePrivateLinkServiceConnectionState() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.osconfig_v1alpha.OsPolicyAssignmentArgs;
@@ -26,7 +26,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * Indicates that this revision has been successfully rolled out in this zone and new VMs will be assigned OS policies from this revision. For a given OS policy assignment, there is only one revision with a value of `true` for this field.
      * 
      */
-    @OutputExport(name="baseline", type=Boolean.class, parameters={})
+    @Export(name="baseline", type=Boolean.class, parameters={})
     private Output<Boolean> baseline;
 
     /**
@@ -40,7 +40,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * Indicates that this revision deletes the OS policy assignment.
      * 
      */
-    @OutputExport(name="deleted", type=Boolean.class, parameters={})
+    @Export(name="deleted", type=Boolean.class, parameters={})
     private Output<Boolean> deleted;
 
     /**
@@ -54,7 +54,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * OS policy assignment description. Length of the description is limited to 1024 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -68,7 +68,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * The etag for this OS policy assignment. If this is provided on update, it must match the server's etag.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -82,7 +82,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * Filter to select VMs.
      * 
      */
-    @OutputExport(name="instanceFilter", type=OSPolicyAssignmentInstanceFilterResponse.class, parameters={})
+    @Export(name="instanceFilter", type=OSPolicyAssignmentInstanceFilterResponse.class, parameters={})
     private Output<OSPolicyAssignmentInstanceFilterResponse> instanceFilter;
 
     /**
@@ -96,7 +96,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * Resource name. Format: `projects/{project_number}/locations/{location}/osPolicyAssignments/{os_policy_assignment_id}` This field is ignored when you create an OS policy assignment.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * List of OS policies to be applied to the VMs.
      * 
      */
-    @OutputExport(name="osPolicies", type=List.class, parameters={OSPolicyResponse.class})
+    @Export(name="osPolicies", type=List.class, parameters={OSPolicyResponse.class})
     private Output<List<OSPolicyResponse>> osPolicies;
 
     /**
@@ -124,7 +124,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * Indicates that reconciliation is in progress for the revision. This value is `true` when the `rollout_state` is one of: * IN_PROGRESS * CANCELLING
      * 
      */
-    @OutputExport(name="reconciling", type=Boolean.class, parameters={})
+    @Export(name="reconciling", type=Boolean.class, parameters={})
     private Output<Boolean> reconciling;
 
     /**
@@ -138,7 +138,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * The timestamp that the revision was created.
      * 
      */
-    @OutputExport(name="revisionCreateTime", type=String.class, parameters={})
+    @Export(name="revisionCreateTime", type=String.class, parameters={})
     private Output<String> revisionCreateTime;
 
     /**
@@ -152,7 +152,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * The assignment revision ID A new revision is committed whenever a rollout is triggered for a OS policy assignment
      * 
      */
-    @OutputExport(name="revisionId", type=String.class, parameters={})
+    @Export(name="revisionId", type=String.class, parameters={})
     private Output<String> revisionId;
 
     /**
@@ -166,7 +166,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
      * 
      */
-    @OutputExport(name="rollout", type=OSPolicyAssignmentRolloutResponse.class, parameters={})
+    @Export(name="rollout", type=OSPolicyAssignmentRolloutResponse.class, parameters={})
     private Output<OSPolicyAssignmentRolloutResponse> rollout;
 
     /**
@@ -180,7 +180,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * OS policy assignment rollout state
      * 
      */
-    @OutputExport(name="rolloutState", type=String.class, parameters={})
+    @Export(name="rolloutState", type=String.class, parameters={})
     private Output<String> rolloutState;
 
     /**
@@ -194,7 +194,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * Server generated unique id for the OS policy assignment resource.
      * 
      */
-    @OutputExport(name="uid", type=String.class, parameters={})
+    @Export(name="uid", type=String.class, parameters={})
     private Output<String> uid;
 
     /**

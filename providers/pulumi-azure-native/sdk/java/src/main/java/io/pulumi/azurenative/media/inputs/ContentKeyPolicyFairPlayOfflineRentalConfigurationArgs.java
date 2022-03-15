@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
      * Playback duration
      * 
      */
-    @InputImport(name="playbackDurationSeconds", required=true)
+    @Import(name="playbackDurationSeconds", required=true)
       private final Output<Double> playbackDurationSeconds;
 
     public Output<Double> getPlaybackDurationSeconds() {
@@ -28,7 +28,7 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
      * Storage duration
      * 
      */
-    @InputImport(name="storageDurationSeconds", required=true)
+    @Import(name="storageDurationSeconds", required=true)
       private final Output<Double> storageDurationSeconds;
 
     public Output<Double> getStorageDurationSeconds() {

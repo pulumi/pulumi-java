@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VolumeBackupPropertiesResponse {
     /**
      * Backup Enabled
@@ -33,12 +33,12 @@ public final class VolumeBackupPropertiesResponse {
      */
     private final @Nullable String vaultId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VolumeBackupPropertiesResponse(
-        @OutputCustomType.Parameter("backupEnabled") @Nullable Boolean backupEnabled,
-        @OutputCustomType.Parameter("backupPolicyId") @Nullable String backupPolicyId,
-        @OutputCustomType.Parameter("policyEnforced") @Nullable Boolean policyEnforced,
-        @OutputCustomType.Parameter("vaultId") @Nullable String vaultId) {
+        @CustomType.Parameter("backupEnabled") @Nullable Boolean backupEnabled,
+        @CustomType.Parameter("backupPolicyId") @Nullable String backupPolicyId,
+        @CustomType.Parameter("policyEnforced") @Nullable Boolean policyEnforced,
+        @CustomType.Parameter("vaultId") @Nullable String vaultId) {
         this.backupEnabled = backupEnabled;
         this.backupPolicyId = backupPolicyId;
         this.policyEnforced = policyEnforced;

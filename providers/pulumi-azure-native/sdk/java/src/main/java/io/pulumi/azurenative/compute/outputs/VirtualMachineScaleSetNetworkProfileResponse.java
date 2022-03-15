@@ -5,14 +5,14 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.ApiEntityReferenceResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetNetworkConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineScaleSetNetworkProfileResponse {
     /**
      * A reference to a load balancer probe used to determine the health of an instance in the virtual machine scale set. The reference will be in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/loadBalancers/{loadBalancerName}/probes/{probeName}'.
@@ -30,11 +30,11 @@ public final class VirtualMachineScaleSetNetworkProfileResponse {
      */
     private final @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineScaleSetNetworkProfileResponse(
-        @OutputCustomType.Parameter("healthProbe") @Nullable ApiEntityReferenceResponse healthProbe,
-        @OutputCustomType.Parameter("networkApiVersion") @Nullable String networkApiVersion,
-        @OutputCustomType.Parameter("networkInterfaceConfigurations") @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
+        @CustomType.Parameter("healthProbe") @Nullable ApiEntityReferenceResponse healthProbe,
+        @CustomType.Parameter("networkApiVersion") @Nullable String networkApiVersion,
+        @CustomType.Parameter("networkInterfaceConfigurations") @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
         this.healthProbe = healthProbe;
         this.networkApiVersion = networkApiVersion;
         this.networkInterfaceConfigurations = networkInterfaceConfigurations;

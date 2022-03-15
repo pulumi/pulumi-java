@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.enums.ManagedInstanceAdministratorType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
 
     public static final ManagedInstanceAdministratorArgs Empty = new ManagedInstanceAdministratorArgs();
 
-    @InputImport(name="administratorName")
+    @Import(name="administratorName")
       private final @Nullable Output<String> administratorName;
 
     public Output<String> getAdministratorName() {
@@ -27,7 +27,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
      * Type of the managed instance administrator.
      * 
      */
-    @InputImport(name="administratorType", required=true)
+    @Import(name="administratorType", required=true)
       private final Output<Either<String,ManagedInstanceAdministratorType>> administratorType;
 
     public Output<Either<String,ManagedInstanceAdministratorType>> getAdministratorType() {
@@ -38,7 +38,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
      * Login name of the managed instance administrator.
      * 
      */
-    @InputImport(name="login", required=true)
+    @Import(name="login", required=true)
       private final Output<String> login;
 
     public Output<String> getLogin() {
@@ -49,7 +49,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
      * The name of the managed instance.
      * 
      */
-    @InputImport(name="managedInstanceName", required=true)
+    @Import(name="managedInstanceName", required=true)
       private final Output<String> managedInstanceName;
 
     public Output<String> getManagedInstanceName() {
@@ -60,7 +60,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -71,7 +71,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
      * SID (object ID) of the managed instance administrator.
      * 
      */
-    @InputImport(name="sid", required=true)
+    @Import(name="sid", required=true)
       private final Output<String> sid;
 
     public Output<String> getSid() {
@@ -82,7 +82,7 @@ public final class ManagedInstanceAdministratorArgs extends io.pulumi.resources.
      * Tenant ID of the managed instance administrator.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {

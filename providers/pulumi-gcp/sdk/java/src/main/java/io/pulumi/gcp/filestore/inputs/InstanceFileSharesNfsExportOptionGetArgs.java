@@ -4,7 +4,7 @@
 package io.pulumi.gcp.filestore.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class InstanceFileSharesNfsExportOptionGetArgs extends io.pulumi.re
      * Possible values are `READ_ONLY` and `READ_WRITE`.
      * 
      */
-    @InputImport(name="accessMode")
+    @Import(name="accessMode")
       private final @Nullable Output<String> accessMode;
 
     public Output<String> getAccessMode() {
@@ -36,7 +36,7 @@ public final class InstanceFileSharesNfsExportOptionGetArgs extends io.pulumi.re
      * if this field is specified for other squashMode settings.
      * 
      */
-    @InputImport(name="anonGid")
+    @Import(name="anonGid")
       private final @Nullable Output<Integer> anonGid;
 
     public Output<Integer> getAnonGid() {
@@ -49,7 +49,7 @@ public final class InstanceFileSharesNfsExportOptionGetArgs extends io.pulumi.re
      * if this field is specified for other squashMode settings.
      * 
      */
-    @InputImport(name="anonUid")
+    @Import(name="anonUid")
       private final @Nullable Output<Integer> anonUid;
 
     public Output<Integer> getAnonUid() {
@@ -62,7 +62,7 @@ public final class InstanceFileSharesNfsExportOptionGetArgs extends io.pulumi.re
      * The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
      * 
      */
-    @InputImport(name="ipRanges")
+    @Import(name="ipRanges")
       private final @Nullable Output<List<String>> ipRanges;
 
     public Output<List<String>> getIpRanges() {
@@ -76,7 +76,7 @@ public final class InstanceFileSharesNfsExportOptionGetArgs extends io.pulumi.re
      * Possible values are `NO_ROOT_SQUASH` and `ROOT_SQUASH`.
      * 
      */
-    @InputImport(name="squashMode")
+    @Import(name="squashMode")
       private final @Nullable Output<String> squashMode;
 
     public Output<String> getSquashMode() {

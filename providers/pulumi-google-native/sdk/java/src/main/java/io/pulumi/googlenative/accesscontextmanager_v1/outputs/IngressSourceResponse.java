@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IngressSourceResponse {
     /**
      * An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter. Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed, resources within the perimeter can only be accessed via Google Cloud calls with request origins within the perimeter. Example: `accessPolicies/MY_POLICY/accessLevels/MY_LEVEL`. If a single `*` is specified for `access_level`, then all IngressSources will be allowed.
@@ -20,10 +20,10 @@ public final class IngressSourceResponse {
      */
     private final String resource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IngressSourceResponse(
-        @OutputCustomType.Parameter("accessLevel") String accessLevel,
-        @OutputCustomType.Parameter("resource") String resource) {
+        @CustomType.Parameter("accessLevel") String accessLevel,
+        @CustomType.Parameter("resource") String resource) {
         this.accessLevel = accessLevel;
         this.resource = resource;
     }

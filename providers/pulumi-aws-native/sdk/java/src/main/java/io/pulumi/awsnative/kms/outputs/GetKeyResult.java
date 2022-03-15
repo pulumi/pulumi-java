@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kms.outputs;
 import io.pulumi.awsnative.kms.enums.KeySpec;
 import io.pulumi.awsnative.kms.enums.KeyUsage;
 import io.pulumi.awsnative.kms.outputs.KeyTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetKeyResult {
     private final @Nullable String arn;
     /**
@@ -60,18 +60,18 @@ public final class GetKeyResult {
      */
     private final @Nullable List<KeyTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKeyResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("enableKeyRotation") @Nullable Boolean enableKeyRotation,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("keyId") @Nullable String keyId,
-        @OutputCustomType.Parameter("keyPolicy") @Nullable Object keyPolicy,
-        @OutputCustomType.Parameter("keySpec") @Nullable KeySpec keySpec,
-        @OutputCustomType.Parameter("keyUsage") @Nullable KeyUsage keyUsage,
-        @OutputCustomType.Parameter("multiRegion") @Nullable Boolean multiRegion,
-        @OutputCustomType.Parameter("tags") @Nullable List<KeyTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("enableKeyRotation") @Nullable Boolean enableKeyRotation,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("keyId") @Nullable String keyId,
+        @CustomType.Parameter("keyPolicy") @Nullable Object keyPolicy,
+        @CustomType.Parameter("keySpec") @Nullable KeySpec keySpec,
+        @CustomType.Parameter("keyUsage") @Nullable KeyUsage keyUsage,
+        @CustomType.Parameter("multiRegion") @Nullable Boolean multiRegion,
+        @CustomType.Parameter("tags") @Nullable List<KeyTag> tags) {
         this.arn = arn;
         this.description = description;
         this.enableKeyRotation = enableKeyRotation;

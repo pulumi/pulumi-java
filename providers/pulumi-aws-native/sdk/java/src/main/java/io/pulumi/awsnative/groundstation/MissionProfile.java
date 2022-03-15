@@ -8,7 +8,7 @@ import io.pulumi.awsnative.groundstation.MissionProfileArgs;
 import io.pulumi.awsnative.groundstation.outputs.MissionProfileDataflowEdge;
 import io.pulumi.awsnative.groundstation.outputs.MissionProfileTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:groundstation:MissionProfile")
 public class MissionProfile extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
      * Post-pass time needed after the contact.
      * 
      */
-    @OutputExport(name="contactPostPassDurationSeconds", type=Integer.class, parameters={})
+    @Export(name="contactPostPassDurationSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> contactPostPassDurationSeconds;
 
     /**
@@ -47,7 +47,7 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
      * Pre-pass time needed before the contact.
      * 
      */
-    @OutputExport(name="contactPrePassDurationSeconds", type=Integer.class, parameters={})
+    @Export(name="contactPrePassDurationSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> contactPrePassDurationSeconds;
 
     /**
@@ -57,7 +57,7 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Integer> getContactPrePassDurationSeconds() {
         return this.contactPrePassDurationSeconds;
     }
-    @OutputExport(name="dataflowEdges", type=List.class, parameters={MissionProfileDataflowEdge.class})
+    @Export(name="dataflowEdges", type=List.class, parameters={MissionProfileDataflowEdge.class})
     private Output<List<MissionProfileDataflowEdge>> dataflowEdges;
 
     public Output<List<MissionProfileDataflowEdge>> getDataflowEdges() {
@@ -67,7 +67,7 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
      * Visibilities with shorter duration than the specified minimum viable contact duration will be ignored when searching for available contacts.
      * 
      */
-    @OutputExport(name="minimumViableContactDurationSeconds", type=Integer.class, parameters={})
+    @Export(name="minimumViableContactDurationSeconds", type=Integer.class, parameters={})
     private Output<Integer> minimumViableContactDurationSeconds;
 
     /**
@@ -81,7 +81,7 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
      * A name used to identify a mission profile.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,19 +91,19 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     public Output<String> getRegion() {
         return this.region;
     }
-    @OutputExport(name="tags", type=List.class, parameters={MissionProfileTag.class})
+    @Export(name="tags", type=List.class, parameters={MissionProfileTag.class})
     private Output</* @Nullable */ List<MissionProfileTag>> tags;
 
     public Output</* @Nullable */ List<MissionProfileTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="trackingConfigArn", type=String.class, parameters={})
+    @Export(name="trackingConfigArn", type=String.class, parameters={})
     private Output<String> trackingConfigArn;
 
     public Output<String> getTrackingConfigArn() {

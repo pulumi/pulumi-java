@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AlertPolicyConditionConditionAbsentTrigger {
     /**
      * The absolute number of time series
@@ -27,10 +27,10 @@ public final class AlertPolicyConditionConditionAbsentTrigger {
      */
     private final @Nullable Double percent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AlertPolicyConditionConditionAbsentTrigger(
-        @OutputCustomType.Parameter("count") @Nullable Integer count,
-        @OutputCustomType.Parameter("percent") @Nullable Double percent) {
+        @CustomType.Parameter("count") @Nullable Integer count,
+        @CustomType.Parameter("percent") @Nullable Double percent) {
         this.count = count;
         this.percent = percent;
     }

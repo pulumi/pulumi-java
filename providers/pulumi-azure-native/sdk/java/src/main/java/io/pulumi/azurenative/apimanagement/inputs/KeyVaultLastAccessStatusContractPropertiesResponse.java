@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends io
      * Last status code for sync and refresh of secret from key vault.
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable String code;
 
     public Optional<String> getCode() {
@@ -33,7 +33,7 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends io
      * Details of the error else empty.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
@@ -44,7 +44,7 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends io
      * Last time secret was accessed. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    @InputImport(name="timeStampUtc")
+    @Import(name="timeStampUtc")
       private final @Nullable String timeStampUtc;
 
     public Optional<String> getTimeStampUtc() {

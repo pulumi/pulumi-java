@@ -5,7 +5,7 @@ package io.pulumi.aws.route53recoverycontrol.inputs;
 
 import io.pulumi.aws.route53recoverycontrol.inputs.ClusterClusterEndpointGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * ARN of the cluster
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * List of 5 endpoints in 5 regions that can be used to talk to the cluster. See below.
      * 
      */
-    @InputImport(name="clusterEndpoints")
+    @Import(name="clusterEndpoints")
       private final @Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints;
 
     public Output<List<ClusterClusterEndpointGetArgs>> getClusterEndpoints() {
@@ -42,7 +42,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Unique name describing the cluster.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
      * Status of cluster. `PENDING` when it is being created, `PENDING_DELETION` when it is being deleted and `DEPLOYED` otherwise.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

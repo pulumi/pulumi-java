@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.CredentialReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
      * Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="alwaysEncryptedAkvAuthType", required=true)
+    @Import(name="alwaysEncryptedAkvAuthType", required=true)
       private final Output<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType;
 
     public Output<Either<String,SqlAlwaysEncryptedAkvAuthType>> getAlwaysEncryptedAkvAuthType() {
@@ -39,7 +39,7 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
      * The credential reference containing authentication information.
      * 
      */
-    @InputImport(name="credential")
+    @Import(name="credential")
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
     public Output<CredentialReferenceArgs> getCredential() {
@@ -50,7 +50,7 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
      * The client ID of the application in Azure Active Directory used for Azure Key Vault authentication. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalId")
+    @Import(name="servicePrincipalId")
       private final @Nullable Output<Object> servicePrincipalId;
 
     public Output<Object> getServicePrincipalId() {
@@ -61,7 +61,7 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
      * The key of the service principal used to authenticate against Azure Key Vault.
      * 
      */
-    @InputImport(name="servicePrincipalKey")
+    @Import(name="servicePrincipalKey")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1.outputs.OneTimeScheduleResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.PatchConfigResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.PatchInstanceFilterResponse;
@@ -12,7 +12,7 @@ import io.pulumi.googlenative.osconfig_v1.outputs.RecurringScheduleResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPatchDeploymentResult {
     /**
      * Time the patch deployment was created. Timestamp is in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
@@ -75,20 +75,20 @@ public final class GetPatchDeploymentResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPatchDeploymentResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("instanceFilter") PatchInstanceFilterResponse instanceFilter,
-        @OutputCustomType.Parameter("lastExecuteTime") String lastExecuteTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("oneTimeSchedule") OneTimeScheduleResponse oneTimeSchedule,
-        @OutputCustomType.Parameter("patchConfig") PatchConfigResponse patchConfig,
-        @OutputCustomType.Parameter("recurringSchedule") RecurringScheduleResponse recurringSchedule,
-        @OutputCustomType.Parameter("rollout") PatchRolloutResponse rollout,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("instanceFilter") PatchInstanceFilterResponse instanceFilter,
+        @CustomType.Parameter("lastExecuteTime") String lastExecuteTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("oneTimeSchedule") OneTimeScheduleResponse oneTimeSchedule,
+        @CustomType.Parameter("patchConfig") PatchConfigResponse patchConfig,
+        @CustomType.Parameter("recurringSchedule") RecurringScheduleResponse recurringSchedule,
+        @CustomType.Parameter("rollout") PatchRolloutResponse rollout,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.duration = duration;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends io.pulumi.re
      * against both your code and static data storage resource quotas.
      * 
      */
-    @InputImport(name="applicationReadable")
+    @Import(name="applicationReadable")
       private final @Nullable Output<Boolean> applicationReadable;
 
     public Output<Boolean> getApplicationReadable() {
@@ -34,7 +34,7 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends io.pulumi.re
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
      * 
      */
-    @InputImport(name="expiration")
+    @Import(name="expiration")
       private final @Nullable Output<String> expiration;
 
     public Output<String> getExpiration() {
@@ -46,7 +46,7 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends io.pulumi.re
      * An object containing a list of "key:value" value pairs.".
      * 
      */
-    @InputImport(name="httpHeaders")
+    @Import(name="httpHeaders")
       private final @Nullable Output<Map<String,String>> httpHeaders;
 
     public Output<Map<String,String>> getHttpHeaders() {
@@ -58,7 +58,7 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends io.pulumi.re
      * Defaults to file-specific MIME types, which are derived from each file's filename extension.
      * 
      */
-    @InputImport(name="mimeType")
+    @Import(name="mimeType")
       private final @Nullable Output<String> mimeType;
 
     public Output<String> getMimeType() {
@@ -69,7 +69,7 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends io.pulumi.re
      * Path to the static files matched by the URL pattern, from the application root directory. The path can refer to text matched in groupings in the URL pattern.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -80,7 +80,7 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends io.pulumi.re
      * Whether this handler should match the request if the file referenced by the handler does not exist.
      * 
      */
-    @InputImport(name="requireMatchingFile")
+    @Import(name="requireMatchingFile")
       private final @Nullable Output<Boolean> requireMatchingFile;
 
     public Output<Boolean> getRequireMatchingFile() {
@@ -91,7 +91,7 @@ public final class StandardAppVersionHandlerStaticFilesArgs extends io.pulumi.re
      * Regular expression that matches the file paths for all files that should be referenced by this handler.
      * 
      */
-    @InputImport(name="uploadPathRegex")
+    @Import(name="uploadPathRegex")
       private final @Nullable Output<String> uploadPathRegex;
 
     public Output<String> getUploadPathRegex() {

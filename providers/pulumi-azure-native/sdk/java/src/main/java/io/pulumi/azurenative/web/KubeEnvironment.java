@@ -10,7 +10,7 @@ import io.pulumi.azurenative.web.outputs.ArcConfigurationResponse;
 import io.pulumi.azurenative.web.outputs.ExtendedLocationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="azure-native:web:KubeEnvironment")
 public class KubeEnvironment extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="aksResourceID", type=String.class, parameters={})
+    @Export(name="aksResourceID", type=String.class, parameters={})
     private Output</* @Nullable */ String> aksResourceID;
 
     public Output</* @Nullable */ String> getAksResourceID() {
@@ -47,7 +47,7 @@ public class KubeEnvironment extends io.pulumi.resources.CustomResource {
      * supported
      * 
      */
-    @OutputExport(name="appLogsConfiguration", type=AppLogsConfigurationResponse.class, parameters={})
+    @Export(name="appLogsConfiguration", type=AppLogsConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ AppLogsConfigurationResponse> appLogsConfiguration;
 
     /**
@@ -65,7 +65,7 @@ public class KubeEnvironment extends io.pulumi.resources.CustomResource {
      * FrontEnd Service ArtifactsStorageType etc.
      * 
      */
-    @OutputExport(name="arcConfiguration", type=ArcConfigurationResponse.class, parameters={})
+    @Export(name="arcConfiguration", type=ArcConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ ArcConfigurationResponse> arcConfiguration;
 
     /**
@@ -81,7 +81,7 @@ public class KubeEnvironment extends io.pulumi.resources.CustomResource {
      * Default Domain Name for the cluster
      * 
      */
-    @OutputExport(name="defaultDomain", type=String.class, parameters={})
+    @Export(name="defaultDomain", type=String.class, parameters={})
     private Output<String> defaultDomain;
 
     /**
@@ -95,7 +95,7 @@ public class KubeEnvironment extends io.pulumi.resources.CustomResource {
      * Any errors that occurred during deployment or deployment validation
      * 
      */
-    @OutputExport(name="deploymentErrors", type=String.class, parameters={})
+    @Export(name="deploymentErrors", type=String.class, parameters={})
     private Output<String> deploymentErrors;
 
     /**
@@ -109,7 +109,7 @@ public class KubeEnvironment extends io.pulumi.resources.CustomResource {
      * Extended Location.
      * 
      */
-    @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
+    @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
@@ -123,7 +123,7 @@ public class KubeEnvironment extends io.pulumi.resources.CustomResource {
      * Only visible within Vnet/Subnet
      * 
      */
-    @OutputExport(name="internalLoadBalancerEnabled", type=Boolean.class, parameters={})
+    @Export(name="internalLoadBalancerEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> internalLoadBalancerEnabled;
 
     /**
@@ -137,7 +137,7 @@ public class KubeEnvironment extends io.pulumi.resources.CustomResource {
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -151,7 +151,7 @@ public class KubeEnvironment extends io.pulumi.resources.CustomResource {
      * Resource Location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -165,7 +165,7 @@ public class KubeEnvironment extends io.pulumi.resources.CustomResource {
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -179,7 +179,7 @@ public class KubeEnvironment extends io.pulumi.resources.CustomResource {
      * Provisioning state of the Kubernetes Environment.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -193,7 +193,7 @@ public class KubeEnvironment extends io.pulumi.resources.CustomResource {
      * Static IP of the KubeEnvironment
      * 
      */
-    @OutputExport(name="staticIp", type=String.class, parameters={})
+    @Export(name="staticIp", type=String.class, parameters={})
     private Output</* @Nullable */ String> staticIp;
 
     /**
@@ -207,7 +207,7 @@ public class KubeEnvironment extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -221,7 +221,7 @@ public class KubeEnvironment extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

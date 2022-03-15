@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2WordListResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigResponse extends io.
      * A list of words to select from for random replacement. The [limits](https://cloud.google.com/dlp/limits) page contains details about the size limits of dictionaries.
      * 
      */
-    @InputImport(name="wordList", required=true)
+    @Import(name="wordList", required=true)
       private final GooglePrivacyDlpV2WordListResponse wordList;
 
     public GooglePrivacyDlpV2WordListResponse getWordList() {

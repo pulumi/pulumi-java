@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceVpcConnectionProperties {
     /**
      * <p>The Amazon Resource Name (ARN) for the VPC connection.</p>
@@ -15,8 +15,8 @@ public final class DataSourceVpcConnectionProperties {
      */
     private final String vpcConnectionArn;
 
-    @OutputCustomType.Constructor
-    private DataSourceVpcConnectionProperties(@OutputCustomType.Parameter("vpcConnectionArn") String vpcConnectionArn) {
+    @CustomType.Constructor
+    private DataSourceVpcConnectionProperties(@CustomType.Parameter("vpcConnectionArn") String vpcConnectionArn) {
         this.vpcConnectionArn = vpcConnectionArn;
     }
 

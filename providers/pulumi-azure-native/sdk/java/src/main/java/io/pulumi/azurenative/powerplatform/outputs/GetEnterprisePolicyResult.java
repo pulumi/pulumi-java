@@ -8,14 +8,14 @@ import io.pulumi.azurenative.powerplatform.outputs.PropertiesResponseEncryption;
 import io.pulumi.azurenative.powerplatform.outputs.PropertiesResponseLockbox;
 import io.pulumi.azurenative.powerplatform.outputs.PropertiesResponseNetworkInjection;
 import io.pulumi.azurenative.powerplatform.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEnterprisePolicyResult {
     /**
      * The encryption settings for a configuration store.
@@ -73,19 +73,19 @@ public final class GetEnterprisePolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnterprisePolicyResult(
-        @OutputCustomType.Parameter("encryption") @Nullable PropertiesResponseEncryption encryption,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable EnterprisePolicyIdentityResponse identity,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("lockbox") @Nullable PropertiesResponseLockbox lockbox,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkInjection") @Nullable PropertiesResponseNetworkInjection networkInjection,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("encryption") @Nullable PropertiesResponseEncryption encryption,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable EnterprisePolicyIdentityResponse identity,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("lockbox") @Nullable PropertiesResponseLockbox lockbox,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkInjection") @Nullable PropertiesResponseNetworkInjection networkInjection,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.encryption = encryption;
         this.id = id;
         this.identity = identity;

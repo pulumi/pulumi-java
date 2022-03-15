@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.domainregistration;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
      * Name of domain.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -29,7 +29,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -40,7 +40,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
      * Name of identifier.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -51,7 +51,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
      * Ownership Id.
      * 
      */
-    @InputImport(name="ownershipId")
+    @Import(name="ownershipId")
       private final @Nullable Output<String> ownershipId;
 
     public Output<String> getOwnershipId() {
@@ -62,7 +62,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

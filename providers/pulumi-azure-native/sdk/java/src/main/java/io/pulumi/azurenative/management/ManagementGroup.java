@@ -9,7 +9,7 @@ import io.pulumi.azurenative.management.outputs.ManagementGroupChildInfoResponse
 import io.pulumi.azurenative.management.outputs.ManagementGroupDetailsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class ManagementGroup extends io.pulumi.resources.CustomResource {
      * The list of children.
      * 
      */
-    @OutputExport(name="children", type=List.class, parameters={ManagementGroupChildInfoResponse.class})
+    @Export(name="children", type=List.class, parameters={ManagementGroupChildInfoResponse.class})
     private Output</* @Nullable */ List<ManagementGroupChildInfoResponse>> children;
 
     /**
@@ -50,7 +50,7 @@ public class ManagementGroup extends io.pulumi.resources.CustomResource {
      * The details of a management group.
      * 
      */
-    @OutputExport(name="details", type=ManagementGroupDetailsResponse.class, parameters={})
+    @Export(name="details", type=ManagementGroupDetailsResponse.class, parameters={})
     private Output</* @Nullable */ ManagementGroupDetailsResponse> details;
 
     /**
@@ -64,7 +64,7 @@ public class ManagementGroup extends io.pulumi.resources.CustomResource {
      * The friendly name of the management group.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -78,7 +78,7 @@ public class ManagementGroup extends io.pulumi.resources.CustomResource {
      * The name of the management group. For example, 00000000-0000-0000-0000-000000000000
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class ManagementGroup extends io.pulumi.resources.CustomResource {
      * The AAD Tenant ID associated with the management group. For example, 00000000-0000-0000-0000-000000000000
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
@@ -106,7 +106,7 @@ public class ManagementGroup extends io.pulumi.resources.CustomResource {
      * The type of the resource.  For example, Microsoft.Management/managementGroups
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

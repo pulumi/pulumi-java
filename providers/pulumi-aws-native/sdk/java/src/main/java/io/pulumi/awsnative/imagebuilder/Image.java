@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.imagebuilder.ImageArgs;
 import io.pulumi.awsnative.imagebuilder.outputs.ImageTestsConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -24,7 +24,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the image.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -38,7 +38,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the container recipe that defines how images are configured and tested.
      * 
      */
-    @OutputExport(name="containerRecipeArn", type=String.class, parameters={})
+    @Export(name="containerRecipeArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> containerRecipeArn;
 
     /**
@@ -52,7 +52,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the distribution configuration.
      * 
      */
-    @OutputExport(name="distributionConfigurationArn", type=String.class, parameters={})
+    @Export(name="distributionConfigurationArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> distributionConfigurationArn;
 
     /**
@@ -66,7 +66,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * Collects additional information about the image being created, including the operating system (OS) version and package list.
      * 
      */
-    @OutputExport(name="enhancedImageMetadataEnabled", type=Boolean.class, parameters={})
+    @Export(name="enhancedImageMetadataEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enhancedImageMetadataEnabled;
 
     /**
@@ -80,7 +80,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * The AMI ID of the EC2 AMI in current region.
      * 
      */
-    @OutputExport(name="imageId", type=String.class, parameters={})
+    @Export(name="imageId", type=String.class, parameters={})
     private Output<String> imageId;
 
     /**
@@ -94,7 +94,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
      * 
      */
-    @OutputExport(name="imageRecipeArn", type=String.class, parameters={})
+    @Export(name="imageRecipeArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> imageRecipeArn;
 
     /**
@@ -108,7 +108,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * The image tests configuration used when creating this image.
      * 
      */
-    @OutputExport(name="imageTestsConfiguration", type=ImageTestsConfiguration.class, parameters={})
+    @Export(name="imageTestsConfiguration", type=ImageTestsConfiguration.class, parameters={})
     private Output</* @Nullable */ ImageTestsConfiguration> imageTestsConfiguration;
 
     /**
@@ -122,7 +122,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the infrastructure configuration.
      * 
      */
-    @OutputExport(name="infrastructureConfigurationArn", type=String.class, parameters={})
+    @Export(name="infrastructureConfigurationArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> infrastructureConfigurationArn;
 
     /**
@@ -136,7 +136,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * The name of the image.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -150,7 +150,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * The tags associated with the image.
      * 
      */
-    @OutputExport(name="tags", type=Object.class, parameters={})
+    @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
     /**

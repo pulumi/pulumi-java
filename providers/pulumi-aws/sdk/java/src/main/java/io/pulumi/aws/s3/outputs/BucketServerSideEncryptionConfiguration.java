@@ -4,10 +4,10 @@
 package io.pulumi.aws.s3.outputs;
 
 import io.pulumi.aws.s3.outputs.BucketServerSideEncryptionConfigurationRule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketServerSideEncryptionConfiguration {
     /**
      * A single object for server-side encryption by default configuration. (documented below)
@@ -15,8 +15,8 @@ public final class BucketServerSideEncryptionConfiguration {
      */
     private final BucketServerSideEncryptionConfigurationRule rule;
 
-    @OutputCustomType.Constructor
-    private BucketServerSideEncryptionConfiguration(@OutputCustomType.Parameter("rule") BucketServerSideEncryptionConfigurationRule rule) {
+    @CustomType.Constructor
+    private BucketServerSideEncryptionConfiguration(@CustomType.Parameter("rule") BucketServerSideEncryptionConfigurationRule rule) {
         this.rule = rule;
     }
 

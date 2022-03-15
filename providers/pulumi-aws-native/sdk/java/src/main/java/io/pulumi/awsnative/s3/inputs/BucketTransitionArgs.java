@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketTransitionStorageClass;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,21 +20,21 @@ public final class BucketTransitionArgs extends io.pulumi.resources.ResourceArgs
 
     public static final BucketTransitionArgs Empty = new BucketTransitionArgs();
 
-    @InputImport(name="storageClass", required=true)
+    @Import(name="storageClass", required=true)
       private final Output<BucketTransitionStorageClass> storageClass;
 
     public Output<BucketTransitionStorageClass> getStorageClass() {
         return this.storageClass;
     }
 
-    @InputImport(name="transitionDate")
+    @Import(name="transitionDate")
       private final @Nullable Output<String> transitionDate;
 
     public Output<String> getTransitionDate() {
         return this.transitionDate == null ? Output.empty() : this.transitionDate;
     }
 
-    @InputImport(name="transitionInDays")
+    @Import(name="transitionInDays")
       private final @Nullable Output<Integer> transitionInDays;
 
     public Output<Integer> getTransitionInDays() {

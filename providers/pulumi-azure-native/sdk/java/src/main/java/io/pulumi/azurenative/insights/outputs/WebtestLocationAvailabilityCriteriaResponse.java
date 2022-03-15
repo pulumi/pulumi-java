@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebtestLocationAvailabilityCriteriaResponse {
     /**
      * The Application Insights resource Id.
@@ -32,12 +32,12 @@ public final class WebtestLocationAvailabilityCriteriaResponse {
      */
     private final String webTestId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebtestLocationAvailabilityCriteriaResponse(
-        @OutputCustomType.Parameter("componentId") String componentId,
-        @OutputCustomType.Parameter("failedLocationCount") Double failedLocationCount,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("webTestId") String webTestId) {
+        @CustomType.Parameter("componentId") String componentId,
+        @CustomType.Parameter("failedLocationCount") Double failedLocationCount,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("webTestId") String webTestId) {
         this.componentId = componentId;
         this.failedLocationCount = failedLocationCount;
         this.odataType = odataType;

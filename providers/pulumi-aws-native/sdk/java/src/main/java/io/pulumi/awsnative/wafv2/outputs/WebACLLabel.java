@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.wafv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebACLLabel {
     private final String name;
 
-    @OutputCustomType.Constructor
-    private WebACLLabel(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private WebACLLabel(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

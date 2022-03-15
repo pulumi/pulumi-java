@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.ArtifactsArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.BuildOptionsArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.BuildStepArgs;
@@ -26,7 +26,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * Artifacts produced by the build that should be uploaded upon successful completion of all build steps.
      * 
      */
-    @InputImport(name="artifacts")
+    @Import(name="artifacts")
       private final @Nullable Output<ArtifactsArgs> artifacts;
 
     public Output<ArtifactsArgs> getArtifacts() {
@@ -37,7 +37,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * Secrets and secret environment variables.
      * 
      */
-    @InputImport(name="availableSecrets")
+    @Import(name="availableSecrets")
       private final @Nullable Output<SecretsArgs> availableSecrets;
 
     public Output<SecretsArgs> getAvailableSecrets() {
@@ -48,14 +48,14 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * A list of images to be pushed upon the successful completion of all build steps. The images are pushed using the builder service account's credentials. The digests of the pushed images will be stored in the `Build` resource's results field. If any of the images fail to be pushed, the build status is marked `FAILURE`.
      * 
      */
-    @InputImport(name="images")
+    @Import(name="images")
       private final @Nullable Output<List<String>> images;
 
     public Output<List<String>> getImages() {
         return this.images == null ? Output.empty() : this.images;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -66,7 +66,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * Google Cloud Storage bucket where logs should be written (see [Bucket Name Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)). Logs file names will be of the format `${logs_bucket}/log-${build_id}.txt`.
      * 
      */
-    @InputImport(name="logsBucket")
+    @Import(name="logsBucket")
       private final @Nullable Output<String> logsBucket;
 
     public Output<String> getLogsBucket() {
@@ -77,21 +77,21 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * Special options for this build.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<BuildOptionsArgs> options;
 
     public Output<BuildOptionsArgs> getOptions() {
         return this.options == null ? Output.empty() : this.options;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="projectId", required=true)
+    @Import(name="projectId", required=true)
       private final Output<String> projectId;
 
     public Output<String> getProjectId() {
@@ -102,7 +102,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * TTL in queue for this build. If provided and the build is enqueued longer than this value, the build will expire and the build status will be `EXPIRED`. The TTL starts ticking from create_time.
      * 
      */
-    @InputImport(name="queueTtl")
+    @Import(name="queueTtl")
       private final @Nullable Output<String> queueTtl;
 
     public Output<String> getQueueTtl() {
@@ -113,7 +113,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * Secrets to decrypt using Cloud Key Management Service. Note: Secret Manager is the recommended technique for managing sensitive data with Cloud Build. Use `available_secrets` to configure builds to access secrets from Secret Manager. For instructions, see: https://cloud.google.com/cloud-build/docs/securing-builds/use-secrets
      * 
      */
-    @InputImport(name="secrets")
+    @Import(name="secrets")
       private final @Nullable Output<List<SecretArgs>> secrets;
 
     public Output<List<SecretArgs>> getSecrets() {
@@ -124,7 +124,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * IAM service account whose credentials will be used at build runtime. Must be of the format `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. ACCOUNT can be email address or uniqueId of the service account.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
@@ -135,7 +135,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the source files to build.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<SourceArgs> source;
 
     public Output<SourceArgs> getSource() {
@@ -146,7 +146,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * The operations to be performed on the workspace.
      * 
      */
-    @InputImport(name="steps", required=true)
+    @Import(name="steps", required=true)
       private final Output<List<BuildStepArgs>> steps;
 
     public Output<List<BuildStepArgs>> getSteps() {
@@ -157,7 +157,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * Substitutions data for `Build` resource.
      * 
      */
-    @InputImport(name="substitutions")
+    @Import(name="substitutions")
       private final @Nullable Output<Map<String,String>> substitutions;
 
     public Output<Map<String,String>> getSubstitutions() {
@@ -168,7 +168,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * Tags for annotation of a `Build`. These are not docker tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
@@ -179,7 +179,7 @@ public final class BuildArgs extends io.pulumi.resources.ResourceArgs {
      * Amount of time that this build should be allowed to run, to second granularity. If this amount of time elapses, work on the build will cease and the build status will be `TIMEOUT`. `timeout` starts ticking from `startTime`. Default time is ten minutes.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {

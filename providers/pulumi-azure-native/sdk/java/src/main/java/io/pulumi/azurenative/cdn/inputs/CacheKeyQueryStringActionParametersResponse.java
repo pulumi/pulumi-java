@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class CacheKeyQueryStringActionParametersResponse extends io.pulumi
 
     public static final CacheKeyQueryStringActionParametersResponse Empty = new CacheKeyQueryStringActionParametersResponse();
 
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -29,7 +29,7 @@ public final class CacheKeyQueryStringActionParametersResponse extends io.pulumi
      * query parameters to include or exclude (comma separated).
      * 
      */
-    @InputImport(name="queryParameters")
+    @Import(name="queryParameters")
       private final @Nullable String queryParameters;
 
     public Optional<String> getQueryParameters() {
@@ -40,7 +40,7 @@ public final class CacheKeyQueryStringActionParametersResponse extends io.pulumi
      * Caching behavior for the requests
      * 
      */
-    @InputImport(name="queryStringBehavior", required=true)
+    @Import(name="queryStringBehavior", required=true)
       private final String queryStringBehavior;
 
     public String getQueryStringBehavior() {

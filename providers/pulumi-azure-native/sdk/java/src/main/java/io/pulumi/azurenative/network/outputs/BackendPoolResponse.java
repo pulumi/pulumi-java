@@ -5,14 +5,14 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.BackendResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackendPoolResponse {
     /**
      * The set of backends for this pool
@@ -50,15 +50,15 @@ public final class BackendPoolResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendPoolResponse(
-        @OutputCustomType.Parameter("backends") @Nullable List<BackendResponse> backends,
-        @OutputCustomType.Parameter("healthProbeSettings") @Nullable SubResourceResponse healthProbeSettings,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("loadBalancingSettings") @Nullable SubResourceResponse loadBalancingSettings,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("backends") @Nullable List<BackendResponse> backends,
+        @CustomType.Parameter("healthProbeSettings") @Nullable SubResourceResponse healthProbeSettings,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("loadBalancingSettings") @Nullable SubResourceResponse loadBalancingSettings,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("type") String type) {
         this.backends = backends;
         this.healthProbeSettings = healthProbeSettings;
         this.id = id;

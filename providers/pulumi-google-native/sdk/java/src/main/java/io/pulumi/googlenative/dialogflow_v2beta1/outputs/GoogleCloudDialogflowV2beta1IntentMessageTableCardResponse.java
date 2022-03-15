@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageImageResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse {
     /**
      * Optional. List of buttons for the card.
@@ -45,14 +45,14 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse(
-        @OutputCustomType.Parameter("buttons") List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons,
-        @OutputCustomType.Parameter("columnProperties") List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse> columnProperties,
-        @OutputCustomType.Parameter("image") GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
-        @OutputCustomType.Parameter("rows") List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse> rows,
-        @OutputCustomType.Parameter("subtitle") String subtitle,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("buttons") List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons,
+        @CustomType.Parameter("columnProperties") List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse> columnProperties,
+        @CustomType.Parameter("image") GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
+        @CustomType.Parameter("rows") List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse> rows,
+        @CustomType.Parameter("subtitle") String subtitle,
+        @CustomType.Parameter("title") String title) {
         this.buttons = buttons;
         this.columnProperties = columnProperties;
         this.image = image;

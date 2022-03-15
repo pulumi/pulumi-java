@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ConnectorCollectionErrorInfoResponse extends io.pulumi.resour
      * Short error code
      * 
      */
-    @InputImport(name="errorCode", required=true)
+    @Import(name="errorCode", required=true)
       private final String errorCode;
 
     public String getErrorCode() {
@@ -31,7 +31,7 @@ public final class ConnectorCollectionErrorInfoResponse extends io.pulumi.resour
      * External Provider error message
      * 
      */
-    @InputImport(name="errorInnerMessage", required=true)
+    @Import(name="errorInnerMessage", required=true)
       private final String errorInnerMessage;
 
     public String getErrorInnerMessage() {
@@ -42,7 +42,7 @@ public final class ConnectorCollectionErrorInfoResponse extends io.pulumi.resour
      * Detailed error message
      * 
      */
-    @InputImport(name="errorMessage", required=true)
+    @Import(name="errorMessage", required=true)
       private final String errorMessage;
 
     public String getErrorMessage() {
@@ -53,7 +53,7 @@ public final class ConnectorCollectionErrorInfoResponse extends io.pulumi.resour
      * Time the error started occurring (Last time error occurred in lastChecked)
      * 
      */
-    @InputImport(name="errorStartTime", required=true)
+    @Import(name="errorStartTime", required=true)
       private final String errorStartTime;
 
     public String getErrorStartTime() {

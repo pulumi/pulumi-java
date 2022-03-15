@@ -4,7 +4,7 @@
 package io.pulumi.random;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
      * The list of strings to shuffle.
      * 
      */
-    @InputImport(name="inputs", required=true)
+    @Import(name="inputs", required=true)
       private final Output<List<String>> inputs;
 
     public Output<List<String>> getInputs() {
@@ -33,7 +33,7 @@ public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
      * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    @InputImport(name="keepers")
+    @Import(name="keepers")
       private final @Nullable Output<Map<String,Object>> keepers;
 
     public Output<Map<String,Object>> getKeepers() {
@@ -44,7 +44,7 @@ public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
      * The number of results to return. Defaults to the number of items in the `input` list. If fewer items are requested, some elements will be excluded from the result. If more items are requested, items will be repeated in the result but not more frequently than the number of items in the input list.
      * 
      */
-    @InputImport(name="resultCount")
+    @Import(name="resultCount")
       private final @Nullable Output<Integer> resultCount;
 
     public Output<Integer> getResultCount() {
@@ -55,7 +55,7 @@ public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
      * Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the list.
      * 
      */
-    @InputImport(name="seed")
+    @Import(name="seed")
       private final @Nullable Output<String> seed;
 
     public Output<String> getSeed() {

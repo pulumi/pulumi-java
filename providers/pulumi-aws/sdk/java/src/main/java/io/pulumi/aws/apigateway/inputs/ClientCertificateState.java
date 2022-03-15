@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * Amazon Resource Name (ARN)
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * The date when the client certificate was created.
      * 
      */
-    @InputImport(name="createdDate")
+    @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
     public Output<String> getCreatedDate() {
@@ -41,7 +41,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * The description of the client certificate.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -52,7 +52,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * The date when the client certificate will expire.
      * 
      */
-    @InputImport(name="expirationDate")
+    @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
     public Output<String> getExpirationDate() {
@@ -63,7 +63,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * The PEM-encoded public key of the client certificate.
      * 
      */
-    @InputImport(name="pemEncodedCertificate")
+    @Import(name="pemEncodedCertificate")
       private final @Nullable Output<String> pemEncodedCertificate;
 
     public Output<String> getPemEncodedCertificate() {
@@ -74,7 +74,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -85,7 +85,7 @@ public final class ClientCertificateState extends io.pulumi.resources.ResourceAr
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

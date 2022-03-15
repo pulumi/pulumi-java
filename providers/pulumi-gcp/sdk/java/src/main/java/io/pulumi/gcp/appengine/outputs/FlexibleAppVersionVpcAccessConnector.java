@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FlexibleAppVersionVpcAccessConnector {
     /**
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
@@ -15,8 +15,8 @@ public final class FlexibleAppVersionVpcAccessConnector {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private FlexibleAppVersionVpcAccessConnector(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private FlexibleAppVersionVpcAccessConnector(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

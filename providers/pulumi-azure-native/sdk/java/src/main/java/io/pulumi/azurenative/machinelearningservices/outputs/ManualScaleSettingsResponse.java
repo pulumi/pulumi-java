@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManualScaleSettingsResponse {
     /**
      * Fixed number of instances for this deployment.
@@ -33,12 +33,12 @@ public final class ManualScaleSettingsResponse {
      */
     private final String scaleType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManualScaleSettingsResponse(
-        @OutputCustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
-        @OutputCustomType.Parameter("maxInstances") @Nullable Integer maxInstances,
-        @OutputCustomType.Parameter("minInstances") @Nullable Integer minInstances,
-        @OutputCustomType.Parameter("scaleType") String scaleType) {
+        @CustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
+        @CustomType.Parameter("maxInstances") @Nullable Integer maxInstances,
+        @CustomType.Parameter("minInstances") @Nullable Integer minInstances,
+        @CustomType.Parameter("scaleType") String scaleType) {
         this.instanceCount = instanceCount;
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;

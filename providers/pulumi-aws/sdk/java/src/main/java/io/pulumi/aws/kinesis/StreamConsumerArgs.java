@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class StreamConsumerArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the stream consumer.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -29,7 +29,7 @@ public final class StreamConsumerArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the data stream the consumer is registered with.
      * 
      */
-    @InputImport(name="streamArn", required=true)
+    @Import(name="streamArn", required=true)
       private final Output<String> streamArn;
 
     public Output<String> getStreamArn() {

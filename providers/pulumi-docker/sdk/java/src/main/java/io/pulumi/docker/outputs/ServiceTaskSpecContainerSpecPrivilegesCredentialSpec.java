@@ -3,21 +3,21 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTaskSpecContainerSpecPrivilegesCredentialSpec {
     private final @Nullable String file;
     private final @Nullable String registry;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTaskSpecContainerSpecPrivilegesCredentialSpec(
-        @OutputCustomType.Parameter("file") @Nullable String file,
-        @OutputCustomType.Parameter("registry") @Nullable String registry) {
+        @CustomType.Parameter("file") @Nullable String file,
+        @CustomType.Parameter("registry") @Nullable String registry) {
         this.file = file;
         this.registry = registry;
     }

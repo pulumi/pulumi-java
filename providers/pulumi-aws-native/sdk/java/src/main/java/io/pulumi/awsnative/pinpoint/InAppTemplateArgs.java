@@ -6,7 +6,7 @@ package io.pulumi.awsnative.pinpoint;
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateLayout;
 import io.pulumi.awsnative.pinpoint.inputs.InAppTemplateInAppMessageContentArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -18,42 +18,42 @@ public final class InAppTemplateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InAppTemplateArgs Empty = new InAppTemplateArgs();
 
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<List<InAppTemplateInAppMessageContentArgs>> content;
 
     public Output<List<InAppTemplateInAppMessageContentArgs>> getContent() {
         return this.content == null ? Output.empty() : this.content;
     }
 
-    @InputImport(name="customConfig")
+    @Import(name="customConfig")
       private final @Nullable Output<Object> customConfig;
 
     public Output<Object> getCustomConfig() {
         return this.customConfig == null ? Output.empty() : this.customConfig;
     }
 
-    @InputImport(name="layout")
+    @Import(name="layout")
       private final @Nullable Output<InAppTemplateLayout> layout;
 
     public Output<InAppTemplateLayout> getLayout() {
         return this.layout == null ? Output.empty() : this.layout;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
     public Output<Object> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="templateDescription")
+    @Import(name="templateDescription")
       private final @Nullable Output<String> templateDescription;
 
     public Output<String> getTemplateDescription() {
         return this.templateDescription == null ? Output.empty() : this.templateDescription;
     }
 
-    @InputImport(name="templateName", required=true)
+    @Import(name="templateName", required=true)
       private final Output<String> templateName;
 
     public Output<String> getTemplateName() {

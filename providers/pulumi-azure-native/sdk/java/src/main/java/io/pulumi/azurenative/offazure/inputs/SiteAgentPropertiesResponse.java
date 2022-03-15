@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.offazure.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SiteAgentPropertiesResponse extends io.pulumi.resources.Invok
      * ID of the agent.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -33,7 +33,7 @@ public final class SiteAgentPropertiesResponse extends io.pulumi.resources.Invok
      * Key vault ARM Id.
      * 
      */
-    @InputImport(name="keyVaultId")
+    @Import(name="keyVaultId")
       private final @Nullable String keyVaultId;
 
     public Optional<String> getKeyVaultId() {
@@ -44,7 +44,7 @@ public final class SiteAgentPropertiesResponse extends io.pulumi.resources.Invok
      * Key vault URI.
      * 
      */
-    @InputImport(name="keyVaultUri")
+    @Import(name="keyVaultUri")
       private final @Nullable String keyVaultUri;
 
     public Optional<String> getKeyVaultUri() {
@@ -55,7 +55,7 @@ public final class SiteAgentPropertiesResponse extends io.pulumi.resources.Invok
      * Last heartbeat time of the agent in UTC.
      * 
      */
-    @InputImport(name="lastHeartBeatUtc", required=true)
+    @Import(name="lastHeartBeatUtc", required=true)
       private final String lastHeartBeatUtc;
 
     public String getLastHeartBeatUtc() {
@@ -66,7 +66,7 @@ public final class SiteAgentPropertiesResponse extends io.pulumi.resources.Invok
      * Version of the agent.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

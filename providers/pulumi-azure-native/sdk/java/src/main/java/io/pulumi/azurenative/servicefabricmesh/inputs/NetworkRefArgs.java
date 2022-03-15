@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.EndpointRefArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NetworkRefArgs extends io.pulumi.resources.ResourceArgs {
      * A list of endpoints that are exposed on this network.
      * 
      */
-    @InputImport(name="endpointRefs")
+    @Import(name="endpointRefs")
       private final @Nullable Output<List<EndpointRefArgs>> endpointRefs;
 
     public Output<List<EndpointRefArgs>> getEndpointRefs() {
@@ -35,7 +35,7 @@ public final class NetworkRefArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the network
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

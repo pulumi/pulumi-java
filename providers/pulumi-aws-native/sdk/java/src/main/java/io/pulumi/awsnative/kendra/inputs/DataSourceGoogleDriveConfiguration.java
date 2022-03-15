@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMapping;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,49 +16,49 @@ public final class DataSourceGoogleDriveConfiguration extends io.pulumi.resource
 
     public static final DataSourceGoogleDriveConfiguration Empty = new DataSourceGoogleDriveConfiguration();
 
-    @InputImport(name="excludeMimeTypes")
+    @Import(name="excludeMimeTypes")
       private final @Nullable List<String> excludeMimeTypes;
 
     public List<String> getExcludeMimeTypes() {
         return this.excludeMimeTypes == null ? List.of() : this.excludeMimeTypes;
     }
 
-    @InputImport(name="excludeSharedDrives")
+    @Import(name="excludeSharedDrives")
       private final @Nullable List<String> excludeSharedDrives;
 
     public List<String> getExcludeSharedDrives() {
         return this.excludeSharedDrives == null ? List.of() : this.excludeSharedDrives;
     }
 
-    @InputImport(name="excludeUserAccounts")
+    @Import(name="excludeUserAccounts")
       private final @Nullable List<String> excludeUserAccounts;
 
     public List<String> getExcludeUserAccounts() {
         return this.excludeUserAccounts == null ? List.of() : this.excludeUserAccounts;
     }
 
-    @InputImport(name="exclusionPatterns")
+    @Import(name="exclusionPatterns")
       private final @Nullable List<String> exclusionPatterns;
 
     public List<String> getExclusionPatterns() {
         return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
     }
 
-    @InputImport(name="fieldMappings")
+    @Import(name="fieldMappings")
       private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
     public List<DataSourceToIndexFieldMapping> getFieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
 
-    @InputImport(name="inclusionPatterns")
+    @Import(name="inclusionPatterns")
       private final @Nullable List<String> inclusionPatterns;
 
     public List<String> getInclusionPatterns() {
         return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
     }
 
-    @InputImport(name="secretArn", required=true)
+    @Import(name="secretArn", required=true)
       private final String secretArn;
 
     public String getSecretArn() {

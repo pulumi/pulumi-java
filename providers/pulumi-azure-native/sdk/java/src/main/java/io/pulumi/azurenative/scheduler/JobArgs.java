@@ -5,7 +5,7 @@ package io.pulumi.azurenative.scheduler;
 
 import io.pulumi.azurenative.scheduler.inputs.JobPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The job collection name.
      * 
      */
-    @InputImport(name="jobCollectionName", required=true)
+    @Import(name="jobCollectionName", required=true)
       private final Output<String> jobCollectionName;
 
     public Output<String> getJobCollectionName() {
@@ -30,7 +30,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The job name.
      * 
      */
-    @InputImport(name="jobName")
+    @Import(name="jobName")
       private final @Nullable Output<String> jobName;
 
     public Output<String> getJobName() {
@@ -41,7 +41,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the job properties.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<JobPropertiesArgs> properties;
 
     public Output<JobPropertiesArgs> getProperties() {
@@ -52,7 +52,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

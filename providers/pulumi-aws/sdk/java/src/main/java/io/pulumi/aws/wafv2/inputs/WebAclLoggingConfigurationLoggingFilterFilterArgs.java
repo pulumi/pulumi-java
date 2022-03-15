@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterArgs extends io.
      * How to handle logs that satisfy the filter's conditions and requirement. Valid values: `KEEP` or `DROP`.
      * 
      */
-    @InputImport(name="behavior", required=true)
+    @Import(name="behavior", required=true)
       private final Output<String> behavior;
 
     public Output<String> getBehavior() {
@@ -30,7 +30,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterArgs extends io.
      * Match condition(s) for the filter. See Condition below for more details.
      * 
      */
-    @InputImport(name="conditions", required=true)
+    @Import(name="conditions", required=true)
       private final Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionArgs>> conditions;
 
     public Output<List<WebAclLoggingConfigurationLoggingFilterFilterConditionArgs>> getConditions() {
@@ -41,7 +41,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterArgs extends io.
      * Logic to apply to the filtering conditions. You can specify that, in order to satisfy the filter, a log must match all conditions or must match at least one condition. Valid values: `MEETS_ALL` or `MEETS_ANY`.
      * 
      */
-    @InputImport(name="requirement", required=true)
+    @Import(name="requirement", required=true)
       private final Output<String> requirement;
 
     public Output<String> getRequirement() {

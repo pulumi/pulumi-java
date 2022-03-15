@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.backup.VaultLockConfigurationArgs;
 import io.pulumi.aws.backup.inputs.VaultLockConfigurationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class VaultLockConfiguration extends io.pulumi.resources.CustomResource {
      * The ARN of the vault.
      * 
      */
-    @OutputExport(name="backupVaultArn", type=String.class, parameters={})
+    @Export(name="backupVaultArn", type=String.class, parameters={})
     private Output<String> backupVaultArn;
 
     /**
@@ -47,7 +47,7 @@ public class VaultLockConfiguration extends io.pulumi.resources.CustomResource {
      * Name of the backup vault to add a lock configuration for.
      * 
      */
-    @OutputExport(name="backupVaultName", type=String.class, parameters={})
+    @Export(name="backupVaultName", type=String.class, parameters={})
     private Output<String> backupVaultName;
 
     /**
@@ -61,7 +61,7 @@ public class VaultLockConfiguration extends io.pulumi.resources.CustomResource {
      * The number of days before the lock date.
      * 
      */
-    @OutputExport(name="changeableForDays", type=Integer.class, parameters={})
+    @Export(name="changeableForDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> changeableForDays;
 
     /**
@@ -75,7 +75,7 @@ public class VaultLockConfiguration extends io.pulumi.resources.CustomResource {
      * The maximum retention period that the vault retains its recovery points.
      * 
      */
-    @OutputExport(name="maxRetentionDays", type=Integer.class, parameters={})
+    @Export(name="maxRetentionDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxRetentionDays;
 
     /**
@@ -89,7 +89,7 @@ public class VaultLockConfiguration extends io.pulumi.resources.CustomResource {
      * The minimum retention period that the vault retains its recovery points.
      * 
      */
-    @OutputExport(name="minRetentionDays", type=Integer.class, parameters={})
+    @Export(name="minRetentionDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minRetentionDays;
 
     /**

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.mq.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBrokerLdapServerMetadata {
     private final List<String> hosts;
     private final String roleBase;
@@ -23,19 +23,19 @@ public final class GetBrokerLdapServerMetadata {
     private final String userSearchMatching;
     private final Boolean userSearchSubtree;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBrokerLdapServerMetadata(
-        @OutputCustomType.Parameter("hosts") List<String> hosts,
-        @OutputCustomType.Parameter("roleBase") String roleBase,
-        @OutputCustomType.Parameter("roleName") String roleName,
-        @OutputCustomType.Parameter("roleSearchMatching") String roleSearchMatching,
-        @OutputCustomType.Parameter("roleSearchSubtree") Boolean roleSearchSubtree,
-        @OutputCustomType.Parameter("serviceAccountPassword") String serviceAccountPassword,
-        @OutputCustomType.Parameter("serviceAccountUsername") String serviceAccountUsername,
-        @OutputCustomType.Parameter("userBase") String userBase,
-        @OutputCustomType.Parameter("userRoleName") String userRoleName,
-        @OutputCustomType.Parameter("userSearchMatching") String userSearchMatching,
-        @OutputCustomType.Parameter("userSearchSubtree") Boolean userSearchSubtree) {
+        @CustomType.Parameter("hosts") List<String> hosts,
+        @CustomType.Parameter("roleBase") String roleBase,
+        @CustomType.Parameter("roleName") String roleName,
+        @CustomType.Parameter("roleSearchMatching") String roleSearchMatching,
+        @CustomType.Parameter("roleSearchSubtree") Boolean roleSearchSubtree,
+        @CustomType.Parameter("serviceAccountPassword") String serviceAccountPassword,
+        @CustomType.Parameter("serviceAccountUsername") String serviceAccountUsername,
+        @CustomType.Parameter("userBase") String userBase,
+        @CustomType.Parameter("userRoleName") String userRoleName,
+        @CustomType.Parameter("userSearchMatching") String userSearchMatching,
+        @CustomType.Parameter("userSearchSubtree") Boolean userSearchSubtree) {
         this.hosts = hosts;
         this.roleBase = roleBase;
         this.roleName = roleName;

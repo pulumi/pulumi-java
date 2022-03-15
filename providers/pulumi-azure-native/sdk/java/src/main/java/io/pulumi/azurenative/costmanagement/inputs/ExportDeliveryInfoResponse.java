@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.ExportDeliveryDestinationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -20,7 +20,7 @@ public final class ExportDeliveryInfoResponse extends io.pulumi.resources.Invoke
      * Has destination for the export being delivered.
      * 
      */
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final ExportDeliveryDestinationResponse destination;
 
     public ExportDeliveryDestinationResponse getDestination() {

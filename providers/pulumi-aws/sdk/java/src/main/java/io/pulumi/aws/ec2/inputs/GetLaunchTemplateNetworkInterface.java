@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,21 +17,21 @@ public final class GetLaunchTemplateNetworkInterface extends io.pulumi.resources
 
     public static final GetLaunchTemplateNetworkInterface Empty = new GetLaunchTemplateNetworkInterface();
 
-    @InputImport(name="associateCarrierIpAddress", required=true)
+    @Import(name="associateCarrierIpAddress", required=true)
       private final String associateCarrierIpAddress;
 
     public String getAssociateCarrierIpAddress() {
         return this.associateCarrierIpAddress;
     }
 
-    @InputImport(name="associatePublicIpAddress")
+    @Import(name="associatePublicIpAddress")
       private final @Nullable Boolean associatePublicIpAddress;
 
     public Optional<Boolean> getAssociatePublicIpAddress() {
         return this.associatePublicIpAddress == null ? Optional.empty() : Optional.ofNullable(this.associatePublicIpAddress);
     }
 
-    @InputImport(name="deleteOnTermination")
+    @Import(name="deleteOnTermination")
       private final @Nullable Boolean deleteOnTermination;
 
     public Optional<Boolean> getDeleteOnTermination() {
@@ -42,84 +42,84 @@ public final class GetLaunchTemplateNetworkInterface extends io.pulumi.resources
      * Description of the launch template.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
         return this.description;
     }
 
-    @InputImport(name="deviceIndex", required=true)
+    @Import(name="deviceIndex", required=true)
       private final Integer deviceIndex;
 
     public Integer getDeviceIndex() {
         return this.deviceIndex;
     }
 
-    @InputImport(name="interfaceType", required=true)
+    @Import(name="interfaceType", required=true)
       private final String interfaceType;
 
     public String getInterfaceType() {
         return this.interfaceType;
     }
 
-    @InputImport(name="ipv4AddressCount", required=true)
+    @Import(name="ipv4AddressCount", required=true)
       private final Integer ipv4AddressCount;
 
     public Integer getIpv4AddressCount() {
         return this.ipv4AddressCount;
     }
 
-    @InputImport(name="ipv4Addresses", required=true)
+    @Import(name="ipv4Addresses", required=true)
       private final List<String> ipv4Addresses;
 
     public List<String> getIpv4Addresses() {
         return this.ipv4Addresses;
     }
 
-    @InputImport(name="ipv6AddressCount", required=true)
+    @Import(name="ipv6AddressCount", required=true)
       private final Integer ipv6AddressCount;
 
     public Integer getIpv6AddressCount() {
         return this.ipv6AddressCount;
     }
 
-    @InputImport(name="ipv6Addresses", required=true)
+    @Import(name="ipv6Addresses", required=true)
       private final List<String> ipv6Addresses;
 
     public List<String> getIpv6Addresses() {
         return this.ipv6Addresses;
     }
 
-    @InputImport(name="networkCardIndex")
+    @Import(name="networkCardIndex")
       private final @Nullable Integer networkCardIndex;
 
     public Optional<Integer> getNetworkCardIndex() {
         return this.networkCardIndex == null ? Optional.empty() : Optional.ofNullable(this.networkCardIndex);
     }
 
-    @InputImport(name="networkInterfaceId", required=true)
+    @Import(name="networkInterfaceId", required=true)
       private final String networkInterfaceId;
 
     public String getNetworkInterfaceId() {
         return this.networkInterfaceId;
     }
 
-    @InputImport(name="privateIpAddress", required=true)
+    @Import(name="privateIpAddress", required=true)
       private final String privateIpAddress;
 
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
     }
 
-    @InputImport(name="securityGroups", required=true)
+    @Import(name="securityGroups", required=true)
       private final List<String> securityGroups;
 
     public List<String> getSecurityGroups() {
         return this.securityGroups;
     }
 
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final String subnetId;
 
     public String getSubnetId() {

@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.enums.JobSampleMode;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobSample {
     private final @Nullable JobSampleMode mode;
     private final @Nullable Integer size;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobSample(
-        @OutputCustomType.Parameter("mode") @Nullable JobSampleMode mode,
-        @OutputCustomType.Parameter("size") @Nullable Integer size) {
+        @CustomType.Parameter("mode") @Nullable JobSampleMode mode,
+        @CustomType.Parameter("size") @Nullable Integer size) {
         this.mode = mode;
         this.size = size;
     }

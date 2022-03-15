@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.jobs_v3.inputs.CompensationRangeResponse;
 import io.pulumi.googlenative.jobs_v3.inputs.MoneyResponse;
 import java.lang.Double;
@@ -23,7 +23,7 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
      * Optional. Compensation amount.
      * 
      */
-    @InputImport(name="amount", required=true)
+    @Import(name="amount", required=true)
       private final MoneyResponse amount;
 
     public MoneyResponse getAmount() {
@@ -34,7 +34,7 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
      * Optional. Compensation description. For example, could indicate equity terms or provide additional context to an estimated bonus.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -45,7 +45,7 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
      * Optional. Expected number of units paid each year. If not specified, when Job.employment_types is FULLTIME, a default value is inferred based on unit. Default values: - HOURLY: 2080 - DAILY: 260 - WEEKLY: 52 - MONTHLY: 12 - ANNUAL: 1
      * 
      */
-    @InputImport(name="expectedUnitsPerYear", required=true)
+    @Import(name="expectedUnitsPerYear", required=true)
       private final Double expectedUnitsPerYear;
 
     public Double getExpectedUnitsPerYear() {
@@ -56,7 +56,7 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
      * Optional. Compensation range.
      * 
      */
-    @InputImport(name="range", required=true)
+    @Import(name="range", required=true)
       private final CompensationRangeResponse range;
 
     public CompensationRangeResponse getRange() {
@@ -67,7 +67,7 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
      * Optional. Compensation type. Default is CompensationUnit.COMPENSATION_TYPE_UNSPECIFIED.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -78,7 +78,7 @@ public final class CompensationEntryResponse extends io.pulumi.resources.InvokeA
      * Optional. Frequency of the specified amount. Default is CompensationUnit.COMPENSATION_UNIT_UNSPECIFIED.
      * 
      */
-    @InputImport(name="unit", required=true)
+    @Import(name="unit", required=true)
       private final String unit;
 
     public String getUnit() {

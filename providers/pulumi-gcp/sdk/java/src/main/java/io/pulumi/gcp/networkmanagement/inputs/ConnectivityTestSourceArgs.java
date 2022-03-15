@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkmanagement.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
      * A Compute Engine instance URI.
      * 
      */
-    @InputImport(name="instance")
+    @Import(name="instance")
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
@@ -32,7 +32,7 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
      * destination is a global load balancer VIP.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -43,7 +43,7 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
      * A Compute Engine network URI.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -55,7 +55,7 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
      * Possible values are `GCP_NETWORK` and `NON_GCP_NETWORK`.
      * 
      */
-    @InputImport(name="networkType")
+    @Import(name="networkType")
       private final @Nullable Output<String> networkType;
 
     public Output<String> getNetworkType() {
@@ -67,7 +67,7 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
      * protocol is TCP or UDP.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -85,7 +85,7 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
      *    project.
      * 
      */
-    @InputImport(name="projectId")
+    @Import(name="projectId")
       private final @Nullable Output<String> projectId;
 
     public Output<String> getProjectId() {

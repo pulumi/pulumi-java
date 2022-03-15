@@ -6,7 +6,7 @@ package io.pulumi.azurenative.security;
 import io.pulumi.azurenative.security.inputs.JitNetworkAccessPolicyVirtualMachineArgs;
 import io.pulumi.azurenative.security.inputs.JitNetworkAccessRequestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
      * The location where ASC stores the data of the subscription. can be retrieved from Get locations
      * 
      */
-    @InputImport(name="ascLocation", required=true)
+    @Import(name="ascLocation", required=true)
       private final Output<String> ascLocation;
 
     public Output<String> getAscLocation() {
@@ -32,7 +32,7 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
      * Name of a Just-in-Time access configuration policy.
      * 
      */
-    @InputImport(name="jitNetworkAccessPolicyName")
+    @Import(name="jitNetworkAccessPolicyName")
       private final @Nullable Output<String> jitNetworkAccessPolicyName;
 
     public Output<String> getJitNetworkAccessPolicyName() {
@@ -43,14 +43,14 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
      * Kind of the resource
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
         return this.kind == null ? Output.empty() : this.kind;
     }
 
-    @InputImport(name="requests")
+    @Import(name="requests")
       private final @Nullable Output<List<JitNetworkAccessRequestArgs>> requests;
 
     public Output<List<JitNetworkAccessRequestArgs>> getRequests() {
@@ -61,7 +61,7 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -72,7 +72,7 @@ public final class JitNetworkAccessPolicyArgs extends io.pulumi.resources.Resour
      * Configurations for Microsoft.Compute/virtualMachines resource type.
      * 
      */
-    @InputImport(name="virtualMachines", required=true)
+    @Import(name="virtualMachines", required=true)
       private final Output<List<JitNetworkAccessPolicyVirtualMachineArgs>> virtualMachines;
 
     public Output<List<JitNetworkAccessPolicyVirtualMachineArgs>> getVirtualMachines() {

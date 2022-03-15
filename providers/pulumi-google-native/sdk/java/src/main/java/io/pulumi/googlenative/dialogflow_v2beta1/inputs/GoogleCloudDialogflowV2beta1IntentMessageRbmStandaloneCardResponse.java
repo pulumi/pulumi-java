@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
      * Card content.
      * 
      */
-    @InputImport(name="cardContent", required=true)
+    @Import(name="cardContent", required=true)
       private final GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse getCardContent() {
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
      * Orientation of the card.
      * 
      */
-    @InputImport(name="cardOrientation", required=true)
+    @Import(name="cardOrientation", required=true)
       private final String cardOrientation;
 
     public String getCardOrientation() {
@@ -43,7 +43,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
      * Required if orientation is horizontal. Image preview alignment for standalone cards with horizontal layout.
      * 
      */
-    @InputImport(name="thumbnailImageAlignment", required=true)
+    @Import(name="thumbnailImageAlignment", required=true)
       private final String thumbnailImageAlignment;
 
     public String getThumbnailImageAlignment() {

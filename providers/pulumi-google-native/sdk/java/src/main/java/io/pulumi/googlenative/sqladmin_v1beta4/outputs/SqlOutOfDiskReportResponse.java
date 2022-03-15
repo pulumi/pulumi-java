@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SqlOutOfDiskReportResponse {
     /**
      * The minimum recommended increase size in GigaBytes This field is consumed by the frontend * Writers: * the proactive database wellness job for OOD. * Readers:
@@ -21,10 +21,10 @@ public final class SqlOutOfDiskReportResponse {
      */
     private final String sqlOutOfDiskState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlOutOfDiskReportResponse(
-        @OutputCustomType.Parameter("sqlMinRecommendedIncreaseSizeGb") Integer sqlMinRecommendedIncreaseSizeGb,
-        @OutputCustomType.Parameter("sqlOutOfDiskState") String sqlOutOfDiskState) {
+        @CustomType.Parameter("sqlMinRecommendedIncreaseSizeGb") Integer sqlMinRecommendedIncreaseSizeGb,
+        @CustomType.Parameter("sqlOutOfDiskState") String sqlOutOfDiskState) {
         this.sqlMinRecommendedIncreaseSizeGb = sqlMinRecommendedIncreaseSizeGb;
         this.sqlOutOfDiskState = sqlOutOfDiskState;
     }

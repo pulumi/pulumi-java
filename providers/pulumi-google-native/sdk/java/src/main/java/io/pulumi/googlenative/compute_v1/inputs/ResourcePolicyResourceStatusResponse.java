@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.inputs.ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ResourcePolicyResourceStatusResponse extends io.pulumi.resour
      * Specifies a set of output values reffering to the instance_schedule_policy system status. This field should have the same name as corresponding policy field.
      * 
      */
-    @InputImport(name="instanceSchedulePolicy", required=true)
+    @Import(name="instanceSchedulePolicy", required=true)
       private final ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy;
 
     public ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse getInstanceSchedulePolicy() {

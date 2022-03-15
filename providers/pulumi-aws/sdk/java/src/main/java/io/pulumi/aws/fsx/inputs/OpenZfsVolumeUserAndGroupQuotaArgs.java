@@ -4,7 +4,7 @@
 package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class OpenZfsVolumeUserAndGroupQuotaArgs extends io.pulumi.resource
      * - The ID of the user or group. Valid values between `0` and `2147483647`
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<Integer> id;
 
     public Output<Integer> getId() {
@@ -29,14 +29,14 @@ public final class OpenZfsVolumeUserAndGroupQuotaArgs extends io.pulumi.resource
      * - The amount of storage that the user or group can use in gibibytes (GiB). Valid values between `0` and `2147483647`
      * 
      */
-    @InputImport(name="storageCapacityQuotaGib", required=true)
+    @Import(name="storageCapacityQuotaGib", required=true)
       private final Output<Integer> storageCapacityQuotaGib;
 
     public Output<Integer> getStorageCapacityQuotaGib() {
         return this.storageCapacityQuotaGib;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

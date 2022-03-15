@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.insights.inputs.ApplicationInsightsComponentDataVolumeCapArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
      * Current enabled pricing plan. When the component is in the Enterprise plan, this will list both 'Basic' and 'Application Insights Enterprise'.
      * 
      */
-    @InputImport(name="currentBillingFeatures")
+    @Import(name="currentBillingFeatures")
       private final @Nullable Output<List<String>> currentBillingFeatures;
 
     public Output<List<String>> getCurrentBillingFeatures() {
@@ -31,7 +31,7 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
      * An Application Insights component daily data volume cap
      * 
      */
-    @InputImport(name="dataVolumeCap")
+    @Import(name="dataVolumeCap")
       private final @Nullable Output<ApplicationInsightsComponentDataVolumeCapArgs> dataVolumeCap;
 
     public Output<ApplicationInsightsComponentDataVolumeCapArgs> getDataVolumeCap() {
@@ -42,7 +42,7 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
      * The name of the Application Insights component resource.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {

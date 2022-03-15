@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.azurenative.cognitiveservices.inputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
      * Enumerates the possible value of keySource for Encryption
      * 
      */
-    @InputImport(name="keySource")
+    @Import(name="keySource")
       private final @Nullable String keySource;
 
     public Optional<String> getKeySource() {
@@ -34,7 +34,7 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
      * Properties of KeyVault
      * 
      */
-    @InputImport(name="keyVaultProperties")
+    @Import(name="keyVaultProperties")
       private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {

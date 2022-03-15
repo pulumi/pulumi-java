@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The email of the client.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable String email;
 
     public Optional<String> getEmail() {
@@ -33,7 +33,7 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the client.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -44,7 +44,7 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The object id of the client.
      * 
      */
-    @InputImport(name="objectId")
+    @Import(name="objectId")
       private final @Nullable String objectId;
 
     public Optional<String> getObjectId() {
@@ -55,7 +55,7 @@ public final class ClientInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The user principal name of the client.
      * 
      */
-    @InputImport(name="userPrincipalName")
+    @Import(name="userPrincipalName")
       private final @Nullable String userPrincipalName;
 
     public Optional<String> getUserPrincipalName() {

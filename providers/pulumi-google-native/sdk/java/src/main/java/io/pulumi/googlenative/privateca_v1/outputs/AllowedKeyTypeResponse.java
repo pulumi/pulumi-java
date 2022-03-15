@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.EcKeyTypeResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.RsaKeyTypeResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AllowedKeyTypeResponse {
     /**
      * Represents an allowed Elliptic Curve key type.
@@ -21,10 +21,10 @@ public final class AllowedKeyTypeResponse {
      */
     private final RsaKeyTypeResponse rsa;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AllowedKeyTypeResponse(
-        @OutputCustomType.Parameter("ellipticCurve") EcKeyTypeResponse ellipticCurve,
-        @OutputCustomType.Parameter("rsa") RsaKeyTypeResponse rsa) {
+        @CustomType.Parameter("ellipticCurve") EcKeyTypeResponse ellipticCurve,
+        @CustomType.Parameter("rsa") RsaKeyTypeResponse rsa) {
         this.ellipticCurve = ellipticCurve;
         this.rsa = rsa;
     }

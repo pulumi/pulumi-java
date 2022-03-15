@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.codedeploy.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentGroupLoadBalancerInfoTargetGroupInfo {
     /**
      * The name of the target group that instances in the original environment are deregistered from, and instances in the replacement environment registered with. For in-place deployments, the name of the target group that instances are deregistered from, so they are not serving traffic during a deployment, and then re-registered with after the deployment completes.
@@ -17,8 +17,8 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupInfo {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private DeploymentGroupLoadBalancerInfoTargetGroupInfo(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private DeploymentGroupLoadBalancerInfoTargetGroupInfo(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

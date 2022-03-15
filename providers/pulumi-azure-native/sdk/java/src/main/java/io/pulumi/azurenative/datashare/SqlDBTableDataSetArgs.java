@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SqlDBTableDataSetArgs extends io.pulumi.resources.ResourceArg
      * The name of the share account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -29,7 +29,7 @@ public final class SqlDBTableDataSetArgs extends io.pulumi.resources.ResourceArg
      * The name of the dataSet.
      * 
      */
-    @InputImport(name="dataSetName")
+    @Import(name="dataSetName")
       private final @Nullable Output<String> dataSetName;
 
     public Output<String> getDataSetName() {
@@ -40,7 +40,7 @@ public final class SqlDBTableDataSetArgs extends io.pulumi.resources.ResourceArg
      * Database name of the source data set
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -52,7 +52,7 @@ public final class SqlDBTableDataSetArgs extends io.pulumi.resources.ResourceArg
      * Expected value is 'SqlDBTable'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -63,7 +63,7 @@ public final class SqlDBTableDataSetArgs extends io.pulumi.resources.ResourceArg
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -74,7 +74,7 @@ public final class SqlDBTableDataSetArgs extends io.pulumi.resources.ResourceArg
      * Schema of the table. Default value is dbo.
      * 
      */
-    @InputImport(name="schemaName", required=true)
+    @Import(name="schemaName", required=true)
       private final Output<String> schemaName;
 
     public Output<String> getSchemaName() {
@@ -85,7 +85,7 @@ public final class SqlDBTableDataSetArgs extends io.pulumi.resources.ResourceArg
      * The name of the share to add the data set to.
      * 
      */
-    @InputImport(name="shareName", required=true)
+    @Import(name="shareName", required=true)
       private final Output<String> shareName;
 
     public Output<String> getShareName() {
@@ -96,7 +96,7 @@ public final class SqlDBTableDataSetArgs extends io.pulumi.resources.ResourceArg
      * Resource id of SQL server
      * 
      */
-    @InputImport(name="sqlServerResourceId", required=true)
+    @Import(name="sqlServerResourceId", required=true)
       private final Output<String> sqlServerResourceId;
 
     public Output<String> getSqlServerResourceId() {
@@ -107,7 +107,7 @@ public final class SqlDBTableDataSetArgs extends io.pulumi.resources.ResourceArg
      * SQL DB table name.
      * 
      */
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
     public Output<String> getTableName() {

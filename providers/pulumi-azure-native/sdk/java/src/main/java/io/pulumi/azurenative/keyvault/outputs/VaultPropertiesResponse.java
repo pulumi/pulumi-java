@@ -7,7 +7,7 @@ import io.pulumi.azurenative.keyvault.outputs.AccessPolicyEntryResponse;
 import io.pulumi.azurenative.keyvault.outputs.NetworkRuleSetResponse;
 import io.pulumi.azurenative.keyvault.outputs.PrivateEndpointConnectionItemResponse;
 import io.pulumi.azurenative.keyvault.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VaultPropertiesResponse {
     /**
      * An array of 0 to 1024 identities that have access to the key vault. All identities in the array must use the same tenant ID as the key vault's tenant ID. When `createMode` is set to `recover`, access policies are not required. Otherwise, access policies are required.
@@ -94,23 +94,23 @@ public final class VaultPropertiesResponse {
      */
     private final @Nullable String vaultUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VaultPropertiesResponse(
-        @OutputCustomType.Parameter("accessPolicies") @Nullable List<AccessPolicyEntryResponse> accessPolicies,
-        @OutputCustomType.Parameter("enablePurgeProtection") @Nullable Boolean enablePurgeProtection,
-        @OutputCustomType.Parameter("enableRbacAuthorization") @Nullable Boolean enableRbacAuthorization,
-        @OutputCustomType.Parameter("enableSoftDelete") @Nullable Boolean enableSoftDelete,
-        @OutputCustomType.Parameter("enabledForDeployment") @Nullable Boolean enabledForDeployment,
-        @OutputCustomType.Parameter("enabledForDiskEncryption") @Nullable Boolean enabledForDiskEncryption,
-        @OutputCustomType.Parameter("enabledForTemplateDeployment") @Nullable Boolean enabledForTemplateDeployment,
-        @OutputCustomType.Parameter("hsmPoolResourceId") String hsmPoolResourceId,
-        @OutputCustomType.Parameter("networkAcls") @Nullable NetworkRuleSetResponse networkAcls,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionItemResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("sku") SkuResponse sku,
-        @OutputCustomType.Parameter("softDeleteRetentionInDays") @Nullable Integer softDeleteRetentionInDays,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("vaultUri") @Nullable String vaultUri) {
+        @CustomType.Parameter("accessPolicies") @Nullable List<AccessPolicyEntryResponse> accessPolicies,
+        @CustomType.Parameter("enablePurgeProtection") @Nullable Boolean enablePurgeProtection,
+        @CustomType.Parameter("enableRbacAuthorization") @Nullable Boolean enableRbacAuthorization,
+        @CustomType.Parameter("enableSoftDelete") @Nullable Boolean enableSoftDelete,
+        @CustomType.Parameter("enabledForDeployment") @Nullable Boolean enabledForDeployment,
+        @CustomType.Parameter("enabledForDiskEncryption") @Nullable Boolean enabledForDiskEncryption,
+        @CustomType.Parameter("enabledForTemplateDeployment") @Nullable Boolean enabledForTemplateDeployment,
+        @CustomType.Parameter("hsmPoolResourceId") String hsmPoolResourceId,
+        @CustomType.Parameter("networkAcls") @Nullable NetworkRuleSetResponse networkAcls,
+        @CustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionItemResponse> privateEndpointConnections,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("sku") SkuResponse sku,
+        @CustomType.Parameter("softDeleteRetentionInDays") @Nullable Integer softDeleteRetentionInDays,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("vaultUri") @Nullable String vaultUri) {
         this.accessPolicies = accessPolicies;
         this.enablePurgeProtection = enablePurgeProtection;
         this.enableRbacAuthorization = enableRbacAuthorization;

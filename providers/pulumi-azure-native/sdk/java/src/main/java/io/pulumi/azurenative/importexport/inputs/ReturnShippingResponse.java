@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ReturnShippingResponse extends io.pulumi.resources.InvokeArgs
      * The customer's account number with the carrier.
      * 
      */
-    @InputImport(name="carrierAccountNumber", required=true)
+    @Import(name="carrierAccountNumber", required=true)
       private final String carrierAccountNumber;
 
     public String getCarrierAccountNumber() {
@@ -31,7 +31,7 @@ public final class ReturnShippingResponse extends io.pulumi.resources.InvokeArgs
      * The carrier's name.
      * 
      */
-    @InputImport(name="carrierName", required=true)
+    @Import(name="carrierName", required=true)
       private final String carrierName;
 
     public String getCarrierName() {

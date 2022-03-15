@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourcePermission {
     /**
      * Set of IAM actions to grant or revoke permissions on. Max of 16 items.
@@ -21,10 +21,10 @@ public final class DataSourcePermission {
      */
     private final String principal;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourcePermission(
-        @OutputCustomType.Parameter("actions") List<String> actions,
-        @OutputCustomType.Parameter("principal") String principal) {
+        @CustomType.Parameter("actions") List<String> actions,
+        @CustomType.Parameter("principal") String principal) {
         this.actions = actions;
         this.principal = principal;
     }

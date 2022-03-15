@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybriddata.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetJobDefinitionArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
      * 
      */
-    @InputImport(name="dataManagerName", required=true)
+    @Import(name="dataManagerName", required=true)
       private final String dataManagerName;
 
     public String getDataManagerName() {
@@ -27,7 +27,7 @@ public final class GetJobDefinitionArgs extends io.pulumi.resources.InvokeArgs {
      * The data service name of the job definition
      * 
      */
-    @InputImport(name="dataServiceName", required=true)
+    @Import(name="dataServiceName", required=true)
       private final String dataServiceName;
 
     public String getDataServiceName() {
@@ -38,7 +38,7 @@ public final class GetJobDefinitionArgs extends io.pulumi.resources.InvokeArgs {
      * The job definition name that is being queried.
      * 
      */
-    @InputImport(name="jobDefinitionName", required=true)
+    @Import(name="jobDefinitionName", required=true)
       private final String jobDefinitionName;
 
     public String getJobDefinitionName() {
@@ -49,7 +49,7 @@ public final class GetJobDefinitionArgs extends io.pulumi.resources.InvokeArgs {
      * The Resource Group Name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

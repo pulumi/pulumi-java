@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse {
     /**
      * Configuration of different suggestion features. One feature can have only one config.
@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      */
     private final Boolean groupSuggestionResponses;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfigResponse(
-        @OutputCustomType.Parameter("featureConfigs") List<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs,
-        @OutputCustomType.Parameter("groupSuggestionResponses") Boolean groupSuggestionResponses) {
+        @CustomType.Parameter("featureConfigs") List<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs,
+        @CustomType.Parameter("groupSuggestionResponses") Boolean groupSuggestionResponses) {
         this.featureConfigs = featureConfigs;
         this.groupSuggestionResponses = groupSuggestionResponses;
     }

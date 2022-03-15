@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class ServiceConvergeConfigGetArgs extends io.pulumi.resources.Reso
 
     public static final ServiceConvergeConfigGetArgs Empty = new ServiceConvergeConfigGetArgs();
 
-    @InputImport(name="delay")
+    @Import(name="delay")
       private final @Nullable Output<String> delay;
 
     public Output<String> getDelay() {
         return this.delay == null ? Output.empty() : this.delay;
     }
 
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {

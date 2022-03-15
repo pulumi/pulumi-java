@@ -6,7 +6,7 @@ package io.pulumi.aws.dlm.outputs;
 import io.pulumi.aws.dlm.outputs.LifecyclePolicyPolicyDetailsScheduleCreateRule;
 import io.pulumi.aws.dlm.outputs.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule;
 import io.pulumi.aws.dlm.outputs.LifecyclePolicyPolicyDetailsScheduleRetainRule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LifecyclePolicyPolicyDetailsSchedule {
     /**
      * Whether to copy all user-defined tags from the source snapshot to the cross-region snapshot copy.
@@ -48,14 +48,14 @@ public final class LifecyclePolicyPolicyDetailsSchedule {
      */
     private final @Nullable Map<String,String> tagsToAdd;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LifecyclePolicyPolicyDetailsSchedule(
-        @OutputCustomType.Parameter("copyTags") @Nullable Boolean copyTags,
-        @OutputCustomType.Parameter("createRule") LifecyclePolicyPolicyDetailsScheduleCreateRule createRule,
-        @OutputCustomType.Parameter("crossRegionCopyRules") @Nullable List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule> crossRegionCopyRules,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("retainRule") LifecyclePolicyPolicyDetailsScheduleRetainRule retainRule,
-        @OutputCustomType.Parameter("tagsToAdd") @Nullable Map<String,String> tagsToAdd) {
+        @CustomType.Parameter("copyTags") @Nullable Boolean copyTags,
+        @CustomType.Parameter("createRule") LifecyclePolicyPolicyDetailsScheduleCreateRule createRule,
+        @CustomType.Parameter("crossRegionCopyRules") @Nullable List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule> crossRegionCopyRules,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("retainRule") LifecyclePolicyPolicyDetailsScheduleRetainRule retainRule,
+        @CustomType.Parameter("tagsToAdd") @Nullable Map<String,String> tagsToAdd) {
         this.copyTags = copyTags;
         this.createRule = createRule;
         this.crossRegionCopyRules = crossRegionCopyRules;

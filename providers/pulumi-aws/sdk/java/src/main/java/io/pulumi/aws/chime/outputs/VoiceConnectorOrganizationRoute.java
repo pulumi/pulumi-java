@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.chime.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VoiceConnectorOrganizationRoute {
     /**
      * The FQDN or IP address to contact for origination traffic.
@@ -38,13 +38,13 @@ public final class VoiceConnectorOrganizationRoute {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VoiceConnectorOrganizationRoute(
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("weight") Integer weight) {
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("weight") Integer weight) {
         this.host = host;
         this.port = port;
         this.priority = priority;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetApiIssueArgs extends io.pulumi.resources.InvokeArgs {
      * API identifier. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final String apiId;
 
     public String getApiId() {
@@ -30,7 +30,7 @@ public final class GetApiIssueArgs extends io.pulumi.resources.InvokeArgs {
      * Expand the comment attachments.
      * 
      */
-    @InputImport(name="expandCommentsAttachments")
+    @Import(name="expandCommentsAttachments")
       private final @Nullable Boolean expandCommentsAttachments;
 
     public Optional<Boolean> getExpandCommentsAttachments() {
@@ -41,7 +41,7 @@ public final class GetApiIssueArgs extends io.pulumi.resources.InvokeArgs {
      * Issue identifier. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="issueId", required=true)
+    @Import(name="issueId", required=true)
       private final String issueId;
 
     public String getIssueId() {
@@ -52,7 +52,7 @@ public final class GetApiIssueArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class GetApiIssueArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final String serviceName;
 
     public String getServiceName() {

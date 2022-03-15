@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deviceupdate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
      * List of customer visible FQDNs.
      * 
      */
-    @InputImport(name="customerVisibleFqdns")
+    @Import(name="customerVisibleFqdns")
       private final @Nullable List<String> customerVisibleFqdns;
 
     public List<String> getCustomerVisibleFqdns() {
@@ -34,7 +34,7 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
      * Group ID.
      * 
      */
-    @InputImport(name="groupId", required=true)
+    @Import(name="groupId", required=true)
       private final String groupId;
 
     public String getGroupId() {
@@ -45,7 +45,7 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
      * Internal FQDN.
      * 
      */
-    @InputImport(name="internalFqdn", required=true)
+    @Import(name="internalFqdn", required=true)
       private final String internalFqdn;
 
     public String getInternalFqdn() {
@@ -56,7 +56,7 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
      * Member name.
      * 
      */
-    @InputImport(name="memberName", required=true)
+    @Import(name="memberName", required=true)
       private final String memberName;
 
     public String getMemberName() {
@@ -67,7 +67,7 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
      * PrivateLinkService ARM region.
      * 
      */
-    @InputImport(name="privateLinkServiceArmRegion")
+    @Import(name="privateLinkServiceArmRegion")
       private final @Nullable String privateLinkServiceArmRegion;
 
     public Optional<String> getPrivateLinkServiceArmRegion() {
@@ -78,7 +78,7 @@ public final class GroupConnectivityInformationResponse extends io.pulumi.resour
      * Redirect map ID.
      * 
      */
-    @InputImport(name="redirectMapId")
+    @Import(name="redirectMapId")
       private final @Nullable String redirectMapId;
 
     public Optional<String> getRedirectMapId() {

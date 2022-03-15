@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.elasticloadbalancingv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTargetGroupHealthCheck {
     private final Boolean enabled;
     private final Integer healthyThreshold;
@@ -21,17 +21,17 @@ public final class GetTargetGroupHealthCheck {
     private final Integer timeout;
     private final Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTargetGroupHealthCheck(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("healthyThreshold") Integer healthyThreshold,
-        @OutputCustomType.Parameter("interval") Integer interval,
-        @OutputCustomType.Parameter("matcher") String matcher,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("port") String port,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("timeout") Integer timeout,
-        @OutputCustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("healthyThreshold") Integer healthyThreshold,
+        @CustomType.Parameter("interval") Integer interval,
+        @CustomType.Parameter("matcher") String matcher,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("port") String port,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("timeout") Integer timeout,
+        @CustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
         this.enabled = enabled;
         this.healthyThreshold = healthyThreshold;
         this.interval = interval;

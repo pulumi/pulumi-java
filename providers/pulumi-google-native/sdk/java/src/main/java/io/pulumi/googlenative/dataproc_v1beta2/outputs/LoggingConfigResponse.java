@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LoggingConfigResponse {
     /**
      * The per-package log levels for the driver. This may include "root" package name to configure rootLogger. Examples: 'com.google = FATAL', 'root = INFO', 'org.apache = DEBUG'
@@ -16,8 +16,8 @@ public final class LoggingConfigResponse {
      */
     private final Map<String,String> driverLogLevels;
 
-    @OutputCustomType.Constructor
-    private LoggingConfigResponse(@OutputCustomType.Parameter("driverLogLevels") Map<String,String> driverLogLevels) {
+    @CustomType.Constructor
+    private LoggingConfigResponse(@CustomType.Parameter("driverLogLevels") Map<String,String> driverLogLevels) {
         this.driverLogLevels = driverLogLevels;
     }
 

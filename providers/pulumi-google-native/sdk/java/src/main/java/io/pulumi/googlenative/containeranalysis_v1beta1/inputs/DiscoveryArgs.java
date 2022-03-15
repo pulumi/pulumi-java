@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.DiscoveryAnalysisKind;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The kind of analysis that is handled by this discovery.
      * 
      */
-    @InputImport(name="analysisKind", required=true)
+    @Import(name="analysisKind", required=true)
       private final Output<DiscoveryAnalysisKind> analysisKind;
 
     public Output<DiscoveryAnalysisKind> getAnalysisKind() {

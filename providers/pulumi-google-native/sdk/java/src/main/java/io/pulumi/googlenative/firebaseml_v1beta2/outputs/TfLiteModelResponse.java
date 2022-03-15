@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.firebaseml_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TfLiteModelResponse {
     /**
      * The AutoML model id referencing a model you created with the AutoML API. The name should have format 'projects//locations//models/' (This is the model resource name returned from the AutoML API)
@@ -25,11 +25,11 @@ public final class TfLiteModelResponse {
      */
     private final String sizeBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TfLiteModelResponse(
-        @OutputCustomType.Parameter("automlModel") String automlModel,
-        @OutputCustomType.Parameter("gcsTfliteUri") String gcsTfliteUri,
-        @OutputCustomType.Parameter("sizeBytes") String sizeBytes) {
+        @CustomType.Parameter("automlModel") String automlModel,
+        @CustomType.Parameter("gcsTfliteUri") String gcsTfliteUri,
+        @CustomType.Parameter("sizeBytes") String sizeBytes) {
         this.automlModel = automlModel;
         this.gcsTfliteUri = gcsTfliteUri;
         this.sizeBytes = sizeBytes;

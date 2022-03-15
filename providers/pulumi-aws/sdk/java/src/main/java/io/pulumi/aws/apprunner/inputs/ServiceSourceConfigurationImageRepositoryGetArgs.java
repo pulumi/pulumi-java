@@ -5,7 +5,7 @@ package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.aws.apprunner.inputs.ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ServiceSourceConfigurationImageRepositoryGetArgs extends io.p
      * Configuration for running the identified image. See Image Configuration below for more details.
      * 
      */
-    @InputImport(name="imageConfiguration")
+    @Import(name="imageConfiguration")
       private final @Nullable Output<ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs> imageConfiguration;
 
     public Output<ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs> getImageConfiguration() {
@@ -31,7 +31,7 @@ public final class ServiceSourceConfigurationImageRepositoryGetArgs extends io.p
      * image name format, see Pulling an image in the Amazon ECR User Guide.
      * 
      */
-    @InputImport(name="imageIdentifier", required=true)
+    @Import(name="imageIdentifier", required=true)
       private final Output<String> imageIdentifier;
 
     public Output<String> getImageIdentifier() {
@@ -42,7 +42,7 @@ public final class ServiceSourceConfigurationImageRepositoryGetArgs extends io.p
      * The type of the image repository. This reflects the repository provider and whether the repository is private or public. Valid values: `ECR` , `ECR_PUBLIC`.
      * 
      */
-    @InputImport(name="imageRepositoryType", required=true)
+    @Import(name="imageRepositoryType", required=true)
       private final Output<String> imageRepositoryType;
 
     public Output<String> getImageRepositoryType() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticache;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final UserGroupArgs Empty = new UserGroupArgs();
 
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -27,14 +27,14 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The current supported value is `REDIS`.
      * 
      */
-    @InputImport(name="engine", required=true)
+    @Import(name="engine", required=true)
       private final Output<String> engine;
 
     public Output<String> getEngine() {
         return this.engine;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -45,7 +45,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the user group.
      * 
      */
-    @InputImport(name="userGroupId", required=true)
+    @Import(name="userGroupId", required=true)
       private final Output<String> userGroupId;
 
     public Output<String> getUserGroupId() {
@@ -56,7 +56,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The list of user IDs that belong to the user group.
      * 
      */
-    @InputImport(name="userIds")
+    @Import(name="userIds")
       private final @Nullable Output<List<String>> userIds;
 
     public Output<List<String>> getUserIds() {

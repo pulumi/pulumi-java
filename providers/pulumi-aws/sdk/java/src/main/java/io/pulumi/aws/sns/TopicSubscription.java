@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sns.TopicSubscriptionArgs;
 import io.pulumi.aws.sns.inputs.TopicSubscriptionState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -44,7 +44,7 @@ public class TopicSubscription extends io.pulumi.resources.CustomResource {
      * ARN of the subscription.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -58,7 +58,7 @@ public class TopicSubscription extends io.pulumi.resources.CustomResource {
      * Integer indicating number of minutes to wait in retrying mode for fetching subscription arn before marking it as failure. Only applicable for http and https protocols. Default is `1`.
      * 
      */
-    @OutputExport(name="confirmationTimeoutInMinutes", type=Integer.class, parameters={})
+    @Export(name="confirmationTimeoutInMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> confirmationTimeoutInMinutes;
 
     /**
@@ -72,7 +72,7 @@ public class TopicSubscription extends io.pulumi.resources.CustomResource {
      * Whether the subscription confirmation request was authenticated.
      * 
      */
-    @OutputExport(name="confirmationWasAuthenticated", type=Boolean.class, parameters={})
+    @Export(name="confirmationWasAuthenticated", type=Boolean.class, parameters={})
     private Output<Boolean> confirmationWasAuthenticated;
 
     /**
@@ -86,7 +86,7 @@ public class TopicSubscription extends io.pulumi.resources.CustomResource {
      * JSON String with the delivery policy (retries, backoff, etc.) that will be used in the subscription - this only applies to HTTP/S subscriptions. Refer to the [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html) for more details.
      * 
      */
-    @OutputExport(name="deliveryPolicy", type=String.class, parameters={})
+    @Export(name="deliveryPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> deliveryPolicy;
 
     /**
@@ -100,7 +100,7 @@ public class TopicSubscription extends io.pulumi.resources.CustomResource {
      * Endpoint to send data to. The contents vary with the protocol. See details below.
      * 
      */
-    @OutputExport(name="endpoint", type=String.class, parameters={})
+    @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
@@ -114,7 +114,7 @@ public class TopicSubscription extends io.pulumi.resources.CustomResource {
      * Whether the endpoint is capable of [auto confirming subscription](http://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.html#SendMessageToHttp.prepare) (e.g., PagerDuty). Default is `false`.
      * 
      */
-    @OutputExport(name="endpointAutoConfirms", type=Boolean.class, parameters={})
+    @Export(name="endpointAutoConfirms", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> endpointAutoConfirms;
 
     /**
@@ -128,7 +128,7 @@ public class TopicSubscription extends io.pulumi.resources.CustomResource {
      * JSON String with the filter policy that will be used in the subscription to filter messages seen by the target resource. Refer to the [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/message-filtering.html) for more details.
      * 
      */
-    @OutputExport(name="filterPolicy", type=String.class, parameters={})
+    @Export(name="filterPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> filterPolicy;
 
     /**
@@ -142,7 +142,7 @@ public class TopicSubscription extends io.pulumi.resources.CustomResource {
      * AWS account ID of the subscription's owner.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -156,7 +156,7 @@ public class TopicSubscription extends io.pulumi.resources.CustomResource {
      * Whether the subscription has not been confirmed.
      * 
      */
-    @OutputExport(name="pendingConfirmation", type=Boolean.class, parameters={})
+    @Export(name="pendingConfirmation", type=Boolean.class, parameters={})
     private Output<Boolean> pendingConfirmation;
 
     /**
@@ -170,7 +170,7 @@ public class TopicSubscription extends io.pulumi.resources.CustomResource {
      * Protocol to use. Valid values are: `sqs`, `sms`, `lambda`, `firehose`, and `application`. Protocols `email`, `email-json`, `http` and `https` are also valid but partially supported. See details below.
      * 
      */
-    @OutputExport(name="protocol", type=String.class, parameters={})
+    @Export(name="protocol", type=String.class, parameters={})
     private Output<String> protocol;
 
     /**
@@ -184,7 +184,7 @@ public class TopicSubscription extends io.pulumi.resources.CustomResource {
      * Whether to enable raw message delivery (the original message is directly passed, not wrapped in JSON with the original message in the message property). Default is `false`.
      * 
      */
-    @OutputExport(name="rawMessageDelivery", type=Boolean.class, parameters={})
+    @Export(name="rawMessageDelivery", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> rawMessageDelivery;
 
     /**
@@ -198,7 +198,7 @@ public class TopicSubscription extends io.pulumi.resources.CustomResource {
      * JSON String with the redrive policy that will be used in the subscription. Refer to the [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/sns-dead-letter-queues.html#how-messages-moved-into-dead-letter-queue) for more details.
      * 
      */
-    @OutputExport(name="redrivePolicy", type=String.class, parameters={})
+    @Export(name="redrivePolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> redrivePolicy;
 
     /**
@@ -212,7 +212,7 @@ public class TopicSubscription extends io.pulumi.resources.CustomResource {
      * ARN of the IAM role to publish to Kinesis Data Firehose delivery stream. Refer to [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html).
      * 
      */
-    @OutputExport(name="subscriptionRoleArn", type=String.class, parameters={})
+    @Export(name="subscriptionRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> subscriptionRoleArn;
 
     /**
@@ -226,7 +226,7 @@ public class TopicSubscription extends io.pulumi.resources.CustomResource {
      * ARN of the SNS topic to subscribe to.
      * 
      */
-    @OutputExport(name="topic", type=String.class, parameters={})
+    @Export(name="topic", type=String.class, parameters={})
     private Output<String> topic;
 
     /**

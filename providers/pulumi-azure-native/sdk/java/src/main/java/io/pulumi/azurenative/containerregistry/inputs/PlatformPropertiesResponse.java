@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PlatformPropertiesResponse extends io.pulumi.resources.Invoke
      * The OS architecture.
      * 
      */
-    @InputImport(name="architecture")
+    @Import(name="architecture")
       private final @Nullable String architecture;
 
     public Optional<String> getArchitecture() {
@@ -33,7 +33,7 @@ public final class PlatformPropertiesResponse extends io.pulumi.resources.Invoke
      * The operating system type required for the run.
      * 
      */
-    @InputImport(name="os", required=true)
+    @Import(name="os", required=true)
       private final String os;
 
     public String getOs() {
@@ -44,7 +44,7 @@ public final class PlatformPropertiesResponse extends io.pulumi.resources.Invoke
      * Variant of the CPU.
      * 
      */
-    @InputImport(name="variant")
+    @Import(name="variant")
       private final @Nullable String variant;
 
     public Optional<String> getVariant() {

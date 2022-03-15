@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sso.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetInstanceAccessControlAttributeConfigurationArgs extends io
      * The ARN of the AWS SSO instance under which the operation will be executed.
      * 
      */
-    @InputImport(name="instanceArn", required=true)
+    @Import(name="instanceArn", required=true)
       private final String instanceArn;
 
     public String getInstanceArn() {

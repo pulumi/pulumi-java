@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AdditionalWorkspacesPropertiesResponse extends io.pulumi.reso
      * List of data types sent to workspace
      * 
      */
-    @InputImport(name="dataTypes")
+    @Import(name="dataTypes")
       private final @Nullable List<String> dataTypes;
 
     public List<String> getDataTypes() {
@@ -34,7 +34,7 @@ public final class AdditionalWorkspacesPropertiesResponse extends io.pulumi.reso
      * Workspace type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -45,7 +45,7 @@ public final class AdditionalWorkspacesPropertiesResponse extends io.pulumi.reso
      * Workspace resource id
      * 
      */
-    @InputImport(name="workspace")
+    @Import(name="workspace")
       private final @Nullable String workspace;
 
     public Optional<String> getWorkspace() {

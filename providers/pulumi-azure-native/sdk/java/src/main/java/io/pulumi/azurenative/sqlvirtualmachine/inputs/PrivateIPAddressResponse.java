@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PrivateIPAddressResponse extends io.pulumi.resources.InvokeAr
      * Private IP address bound to the availability group listener.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
@@ -33,7 +33,7 @@ public final class PrivateIPAddressResponse extends io.pulumi.resources.InvokeAr
      * Subnet used to include private IP.
      * 
      */
-    @InputImport(name="subnetResourceId")
+    @Import(name="subnetResourceId")
       private final @Nullable String subnetResourceId;
 
     public Optional<String> getSubnetResourceId() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IotEventHubIngestionEndpointConfigurationResponse {
     /**
      * Consumer group of the event hub to connected to.
@@ -27,11 +27,11 @@ public final class IotEventHubIngestionEndpointConfigurationResponse {
      */
     private final @Nullable String fullyQualifiedEventHubNamespace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IotEventHubIngestionEndpointConfigurationResponse(
-        @OutputCustomType.Parameter("consumerGroup") @Nullable String consumerGroup,
-        @OutputCustomType.Parameter("eventHubName") @Nullable String eventHubName,
-        @OutputCustomType.Parameter("fullyQualifiedEventHubNamespace") @Nullable String fullyQualifiedEventHubNamespace) {
+        @CustomType.Parameter("consumerGroup") @Nullable String consumerGroup,
+        @CustomType.Parameter("eventHubName") @Nullable String eventHubName,
+        @CustomType.Parameter("fullyQualifiedEventHubNamespace") @Nullable String fullyQualifiedEventHubNamespace) {
         this.consumerGroup = consumerGroup;
         this.eventHubName = eventHubName;
         this.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;

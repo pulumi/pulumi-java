@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CloudBuildOptionsResponse {
     /**
      * Path to the yaml file used in deployment, used to determine runtime configuration details.Required for flexible environment builds.See https://cloud.google.com/appengine/docs/standard/python/config/appref for more details.
@@ -20,10 +20,10 @@ public final class CloudBuildOptionsResponse {
      */
     private final String cloudBuildTimeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudBuildOptionsResponse(
-        @OutputCustomType.Parameter("appYamlPath") String appYamlPath,
-        @OutputCustomType.Parameter("cloudBuildTimeout") String cloudBuildTimeout) {
+        @CustomType.Parameter("appYamlPath") String appYamlPath,
+        @CustomType.Parameter("cloudBuildTimeout") String cloudBuildTimeout) {
         this.appYamlPath = appYamlPath;
         this.cloudBuildTimeout = cloudBuildTimeout;
     }

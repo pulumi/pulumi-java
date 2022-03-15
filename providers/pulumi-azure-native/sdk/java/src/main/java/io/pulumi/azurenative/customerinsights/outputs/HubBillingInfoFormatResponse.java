@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HubBillingInfoFormatResponse {
     /**
      * The maximum number of units can be used.  One unit is 10,000 Profiles and 100,000 Interactions.
@@ -28,11 +28,11 @@ public final class HubBillingInfoFormatResponse {
      */
     private final @Nullable String skuName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HubBillingInfoFormatResponse(
-        @OutputCustomType.Parameter("maxUnits") @Nullable Integer maxUnits,
-        @OutputCustomType.Parameter("minUnits") @Nullable Integer minUnits,
-        @OutputCustomType.Parameter("skuName") @Nullable String skuName) {
+        @CustomType.Parameter("maxUnits") @Nullable Integer maxUnits,
+        @CustomType.Parameter("minUnits") @Nullable Integer minUnits,
+        @CustomType.Parameter("skuName") @Nullable String skuName) {
         this.maxUnits = maxUnits;
         this.minUnits = minUnits;
         this.skuName = skuName;

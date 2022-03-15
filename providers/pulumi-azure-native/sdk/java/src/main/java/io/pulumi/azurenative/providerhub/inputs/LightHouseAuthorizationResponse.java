@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class LightHouseAuthorizationResponse extends io.pulumi.resources.I
 
     public static final LightHouseAuthorizationResponse Empty = new LightHouseAuthorizationResponse();
 
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
     }
 
-    @InputImport(name="roleDefinitionId", required=true)
+    @Import(name="roleDefinitionId", required=true)
       private final String roleDefinitionId;
 
     public String getRoleDefinitionId() {

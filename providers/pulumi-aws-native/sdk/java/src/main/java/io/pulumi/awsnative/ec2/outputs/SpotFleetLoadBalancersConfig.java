@@ -5,20 +5,20 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.SpotFleetClassicLoadBalancersConfig;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetTargetGroupsConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SpotFleetLoadBalancersConfig {
     private final @Nullable SpotFleetClassicLoadBalancersConfig classicLoadBalancersConfig;
     private final @Nullable SpotFleetTargetGroupsConfig targetGroupsConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SpotFleetLoadBalancersConfig(
-        @OutputCustomType.Parameter("classicLoadBalancersConfig") @Nullable SpotFleetClassicLoadBalancersConfig classicLoadBalancersConfig,
-        @OutputCustomType.Parameter("targetGroupsConfig") @Nullable SpotFleetTargetGroupsConfig targetGroupsConfig) {
+        @CustomType.Parameter("classicLoadBalancersConfig") @Nullable SpotFleetClassicLoadBalancersConfig classicLoadBalancersConfig,
+        @CustomType.Parameter("targetGroupsConfig") @Nullable SpotFleetTargetGroupsConfig targetGroupsConfig) {
         this.classicLoadBalancersConfig = classicLoadBalancersConfig;
         this.targetGroupsConfig = targetGroupsConfig;
     }

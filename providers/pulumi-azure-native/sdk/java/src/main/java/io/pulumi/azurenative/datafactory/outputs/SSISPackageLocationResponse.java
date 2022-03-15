@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.SSISAccessCredentialResponse;
 import io.pulumi.azurenative.datafactory.outputs.SSISChildPackageResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SSISPackageLocationResponse {
     /**
      * The package access credential.
@@ -69,18 +69,18 @@ public final class SSISPackageLocationResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SSISPackageLocationResponse(
-        @OutputCustomType.Parameter("accessCredential") @Nullable SSISAccessCredentialResponse accessCredential,
-        @OutputCustomType.Parameter("childPackages") @Nullable List<SSISChildPackageResponse> childPackages,
-        @OutputCustomType.Parameter("configurationAccessCredential") @Nullable SSISAccessCredentialResponse configurationAccessCredential,
-        @OutputCustomType.Parameter("configurationPath") @Nullable Object configurationPath,
-        @OutputCustomType.Parameter("packageContent") @Nullable Object packageContent,
-        @OutputCustomType.Parameter("packageLastModifiedDate") @Nullable String packageLastModifiedDate,
-        @OutputCustomType.Parameter("packageName") @Nullable String packageName,
-        @OutputCustomType.Parameter("packagePassword") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword,
-        @OutputCustomType.Parameter("packagePath") @Nullable Object packagePath,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("accessCredential") @Nullable SSISAccessCredentialResponse accessCredential,
+        @CustomType.Parameter("childPackages") @Nullable List<SSISChildPackageResponse> childPackages,
+        @CustomType.Parameter("configurationAccessCredential") @Nullable SSISAccessCredentialResponse configurationAccessCredential,
+        @CustomType.Parameter("configurationPath") @Nullable Object configurationPath,
+        @CustomType.Parameter("packageContent") @Nullable Object packageContent,
+        @CustomType.Parameter("packageLastModifiedDate") @Nullable String packageLastModifiedDate,
+        @CustomType.Parameter("packageName") @Nullable String packageName,
+        @CustomType.Parameter("packagePassword") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword,
+        @CustomType.Parameter("packagePath") @Nullable Object packagePath,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.accessCredential = accessCredential;
         this.childPackages = childPackages;
         this.configurationAccessCredential = configurationAccessCredential;

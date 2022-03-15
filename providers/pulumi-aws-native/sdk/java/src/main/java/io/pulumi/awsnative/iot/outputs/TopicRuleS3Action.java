@@ -4,25 +4,25 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.TopicRuleCannedAccessControlList;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleS3Action {
     private final String bucketName;
     private final @Nullable TopicRuleCannedAccessControlList cannedAcl;
     private final String key;
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleS3Action(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("cannedAcl") @Nullable TopicRuleCannedAccessControlList cannedAcl,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("cannedAcl") @Nullable TopicRuleCannedAccessControlList cannedAcl,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.bucketName = bucketName;
         this.cannedAcl = cannedAcl;
         this.key = key;

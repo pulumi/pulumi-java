@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PushFilterArgs extends io.pulumi.resources.ResourceArgs {
      * Regexes matching branches to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
      * 
      */
-    @InputImport(name="branch")
+    @Import(name="branch")
       private final @Nullable Output<String> branch;
 
     public Output<String> getBranch() {
@@ -34,7 +34,7 @@ public final class PushFilterArgs extends io.pulumi.resources.ResourceArgs {
      * When true, only trigger a build if the revision regex does NOT match the git_ref regex.
      * 
      */
-    @InputImport(name="invertRegex")
+    @Import(name="invertRegex")
       private final @Nullable Output<Boolean> invertRegex;
 
     public Output<Boolean> getInvertRegex() {
@@ -45,7 +45,7 @@ public final class PushFilterArgs extends io.pulumi.resources.ResourceArgs {
      * Regexes matching tags to build. The syntax of the regular expressions accepted is the syntax accepted by RE2 and described at https://github.com/google/re2/wiki/Syntax
      * 
      */
-    @InputImport(name="tag")
+    @Import(name="tag")
       private final @Nullable Output<String> tag;
 
     public Output<String> getTag() {

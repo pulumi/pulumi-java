@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ElasticPoolPerDatabaseSettingsResponse extends io.pulumi.reso
      * The maximum capacity any one database can consume.
      * 
      */
-    @InputImport(name="maxCapacity")
+    @Import(name="maxCapacity")
       private final @Nullable Double maxCapacity;
 
     public Optional<Double> getMaxCapacity() {
@@ -33,7 +33,7 @@ public final class ElasticPoolPerDatabaseSettingsResponse extends io.pulumi.reso
      * The minimum capacity all databases are guaranteed.
      * 
      */
-    @InputImport(name="minCapacity")
+    @Import(name="minCapacity")
       private final @Nullable Double minCapacity;
 
     public Optional<Double> getMinCapacity() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,28 +14,28 @@ public final class GetBucketCor extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBucketCor Empty = new GetBucketCor();
 
-    @InputImport(name="maxAgeSeconds", required=true)
+    @Import(name="maxAgeSeconds", required=true)
       private final Integer maxAgeSeconds;
 
     public Integer getMaxAgeSeconds() {
         return this.maxAgeSeconds;
     }
 
-    @InputImport(name="methods", required=true)
+    @Import(name="methods", required=true)
       private final List<String> methods;
 
     public List<String> getMethods() {
         return this.methods;
     }
 
-    @InputImport(name="origins", required=true)
+    @Import(name="origins", required=true)
       private final List<String> origins;
 
     public List<String> getOrigins() {
         return this.origins;
     }
 
-    @InputImport(name="responseHeaders", required=true)
+    @Import(name="responseHeaders", required=true)
       private final List<String> responseHeaders;
 
     public List<String> getResponseHeaders() {

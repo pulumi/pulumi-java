@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.KeyVaultKeyReferenceResponseKeyVault;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultKeyReferenceResponse {
     /**
      * The private key name in key vault.
@@ -28,11 +28,11 @@ public final class KeyVaultKeyReferenceResponse {
      */
     private final @Nullable String keyVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyVaultKeyReferenceResponse(
-        @OutputCustomType.Parameter("keyName") String keyName,
-        @OutputCustomType.Parameter("keyVault") KeyVaultKeyReferenceResponseKeyVault keyVault,
-        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion) {
+        @CustomType.Parameter("keyName") String keyName,
+        @CustomType.Parameter("keyVault") KeyVaultKeyReferenceResponseKeyVault keyVault,
+        @CustomType.Parameter("keyVersion") @Nullable String keyVersion) {
         this.keyName = keyName;
         this.keyVault = keyVault;
         this.keyVersion = keyVersion;

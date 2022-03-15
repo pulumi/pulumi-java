@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
      * The size of the array, if this is an array batch job. Valid values are integers between 2 and 10,000.
      * 
      */
-    @InputImport(name="arraySize")
+    @Import(name="arraySize")
       private final @Nullable Output<Integer> arraySize;
 
     public Output<Integer> getArraySize() {
@@ -30,7 +30,7 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
      * The number of times to attempt to retry, if the job fails. Valid values are 1 to 10.
      * 
      */
-    @InputImport(name="jobAttempts")
+    @Import(name="jobAttempts")
       private final @Nullable Output<Integer> jobAttempts;
 
     public Output<Integer> getJobAttempts() {
@@ -41,7 +41,7 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
      * The ARN or name of the job definition to use if the event target is an AWS Batch job. This job definition must already exist.
      * 
      */
-    @InputImport(name="jobDefinition", required=true)
+    @Import(name="jobDefinition", required=true)
       private final Output<String> jobDefinition;
 
     public Output<String> getJobDefinition() {
@@ -52,7 +52,7 @@ public final class EventTargetBatchTargetGetArgs extends io.pulumi.resources.Res
      * The name to use for this execution of the job, if the target is an AWS Batch job.
      * 
      */
-    @InputImport(name="jobName", required=true)
+    @Import(name="jobName", required=true)
       private final Output<String> jobName;
 
     public Output<String> getJobName() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DNSConfigResponse {
     /**
      * cluster_dns indicates which in-cluster DNS provider should be used.
@@ -25,11 +25,11 @@ public final class DNSConfigResponse {
      */
     private final String clusterDnsScope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DNSConfigResponse(
-        @OutputCustomType.Parameter("clusterDns") String clusterDns,
-        @OutputCustomType.Parameter("clusterDnsDomain") String clusterDnsDomain,
-        @OutputCustomType.Parameter("clusterDnsScope") String clusterDnsScope) {
+        @CustomType.Parameter("clusterDns") String clusterDns,
+        @CustomType.Parameter("clusterDnsDomain") String clusterDnsDomain,
+        @CustomType.Parameter("clusterDnsScope") String clusterDnsScope) {
         this.clusterDns = clusterDns;
         this.clusterDnsDomain = clusterDnsDomain;
         this.clusterDnsScope = clusterDnsScope;

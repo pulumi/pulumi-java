@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.FilterTrackPropertyConditionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FilterTrackSelectionResponse {
     /**
      * The track selections.
@@ -16,8 +16,8 @@ public final class FilterTrackSelectionResponse {
      */
     private final List<FilterTrackPropertyConditionResponse> trackSelections;
 
-    @OutputCustomType.Constructor
-    private FilterTrackSelectionResponse(@OutputCustomType.Parameter("trackSelections") List<FilterTrackPropertyConditionResponse> trackSelections) {
+    @CustomType.Constructor
+    private FilterTrackSelectionResponse(@CustomType.Parameter("trackSelections") List<FilterTrackPropertyConditionResponse> trackSelections) {
         this.trackSelections = trackSelections;
     }
 

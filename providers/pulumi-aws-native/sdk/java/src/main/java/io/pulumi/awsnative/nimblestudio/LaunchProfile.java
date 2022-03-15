@@ -8,7 +8,7 @@ import io.pulumi.awsnative.nimblestudio.LaunchProfileArgs;
 import io.pulumi.awsnative.nimblestudio.outputs.LaunchProfileStreamConfiguration;
 import io.pulumi.awsnative.nimblestudio.outputs.LaunchProfileTags;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
      * <p>The description.</p>
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -39,7 +39,7 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
      *             These subnets must support the specified instance types. </p>
      * 
      */
-    @OutputExport(name="ec2SubnetIds", type=List.class, parameters={String.class})
+    @Export(name="ec2SubnetIds", type=List.class, parameters={String.class})
     private Output<List<String>> ec2SubnetIds;
 
     /**
@@ -50,7 +50,7 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
     public Output<List<String>> getEc2SubnetIds() {
         return this.ec2SubnetIds;
     }
-    @OutputExport(name="launchProfileId", type=String.class, parameters={})
+    @Export(name="launchProfileId", type=String.class, parameters={})
     private Output<String> launchProfileId;
 
     public Output<String> getLaunchProfileId() {
@@ -61,7 +61,7 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
      *             version is "2021-03-31".</p>
      * 
      */
-    @OutputExport(name="launchProfileProtocolVersions", type=List.class, parameters={String.class})
+    @Export(name="launchProfileProtocolVersions", type=List.class, parameters={String.class})
     private Output<List<String>> launchProfileProtocolVersions;
 
     /**
@@ -76,7 +76,7 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
      * <p>The name for the launch profile.</p>
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -86,7 +86,7 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="streamConfiguration", type=LaunchProfileStreamConfiguration.class, parameters={})
+    @Export(name="streamConfiguration", type=LaunchProfileStreamConfiguration.class, parameters={})
     private Output<LaunchProfileStreamConfiguration> streamConfiguration;
 
     public Output<LaunchProfileStreamConfiguration> getStreamConfiguration() {
@@ -97,7 +97,7 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
      *             launch profile.</p>
      * 
      */
-    @OutputExport(name="studioComponentIds", type=List.class, parameters={String.class})
+    @Export(name="studioComponentIds", type=List.class, parameters={String.class})
     private Output<List<String>> studioComponentIds;
 
     /**
@@ -112,7 +112,7 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
      * <p>The studio ID. </p>
      * 
      */
-    @OutputExport(name="studioId", type=String.class, parameters={})
+    @Export(name="studioId", type=String.class, parameters={})
     private Output<String> studioId;
 
     /**
@@ -122,7 +122,7 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
     public Output<String> getStudioId() {
         return this.studioId;
     }
-    @OutputExport(name="tags", type=LaunchProfileTags.class, parameters={})
+    @Export(name="tags", type=LaunchProfileTags.class, parameters={})
     private Output</* @Nullable */ LaunchProfileTags> tags;
 
     public Output</* @Nullable */ LaunchProfileTags> getTags() {

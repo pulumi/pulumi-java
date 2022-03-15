@@ -6,14 +6,14 @@ package io.pulumi.azurenative.storage.outputs;
 import io.pulumi.azurenative.storage.outputs.EncryptionIdentityResponse;
 import io.pulumi.azurenative.storage.outputs.EncryptionServicesResponse;
 import io.pulumi.azurenative.storage.outputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionResponse {
     /**
      * The identity to be used with service-side encryption at rest.
@@ -41,13 +41,13 @@ public final class EncryptionResponse {
      */
     private final @Nullable EncryptionServicesResponse services;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncryptionResponse(
-        @OutputCustomType.Parameter("encryptionIdentity") @Nullable EncryptionIdentityResponse encryptionIdentity,
-        @OutputCustomType.Parameter("keySource") String keySource,
-        @OutputCustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties,
-        @OutputCustomType.Parameter("requireInfrastructureEncryption") @Nullable Boolean requireInfrastructureEncryption,
-        @OutputCustomType.Parameter("services") @Nullable EncryptionServicesResponse services) {
+        @CustomType.Parameter("encryptionIdentity") @Nullable EncryptionIdentityResponse encryptionIdentity,
+        @CustomType.Parameter("keySource") String keySource,
+        @CustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties,
+        @CustomType.Parameter("requireInfrastructureEncryption") @Nullable Boolean requireInfrastructureEncryption,
+        @CustomType.Parameter("services") @Nullable EncryptionServicesResponse services) {
         this.encryptionIdentity = encryptionIdentity;
         this.keySource = keySource;
         this.keyVaultProperties = keyVaultProperties;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.orbital;
 
 import io.pulumi.azurenative.orbital.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * Contact Name
      * 
      */
-    @InputImport(name="contactName")
+    @Import(name="contactName")
       private final @Nullable Output<String> contactName;
 
     public Output<String> getContactName() {
@@ -30,7 +30,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * The reference to the contact profile resource.
      * 
      */
-    @InputImport(name="contactProfile", required=true)
+    @Import(name="contactProfile", required=true)
       private final Output<ResourceReferenceArgs> contactProfile;
 
     public Output<ResourceReferenceArgs> getContactProfile() {
@@ -41,7 +41,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * Azure Ground Station name.
      * 
      */
-    @InputImport(name="groundStationName", required=true)
+    @Import(name="groundStationName", required=true)
       private final Output<String> groundStationName;
 
     public Output<String> getGroundStationName() {
@@ -52,7 +52,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * Reservation end time of a contact.
      * 
      */
-    @InputImport(name="reservationEndTime", required=true)
+    @Import(name="reservationEndTime", required=true)
       private final Output<String> reservationEndTime;
 
     public Output<String> getReservationEndTime() {
@@ -63,7 +63,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * Reservation start time of a contact.
      * 
      */
-    @InputImport(name="reservationStartTime", required=true)
+    @Import(name="reservationStartTime", required=true)
       private final Output<String> reservationStartTime;
 
     public Output<String> getReservationStartTime() {
@@ -74,7 +74,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -85,7 +85,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * Spacecraft ID
      * 
      */
-    @InputImport(name="spacecraftName", required=true)
+    @Import(name="spacecraftName", required=true)
       private final Output<String> spacecraftName;
 
     public Output<String> getSpacecraftName() {

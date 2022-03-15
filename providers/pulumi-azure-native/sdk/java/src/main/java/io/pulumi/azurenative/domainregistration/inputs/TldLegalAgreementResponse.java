@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.domainregistration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class TldLegalAgreementResponse extends io.pulumi.resources.InvokeA
      * Unique identifier for the agreement.
      * 
      */
-    @InputImport(name="agreementKey", required=true)
+    @Import(name="agreementKey", required=true)
       private final String agreementKey;
 
     public String getAgreementKey() {
@@ -33,7 +33,7 @@ public final class TldLegalAgreementResponse extends io.pulumi.resources.InvokeA
      * Agreement details.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final String content;
 
     public String getContent() {
@@ -44,7 +44,7 @@ public final class TldLegalAgreementResponse extends io.pulumi.resources.InvokeA
      * Agreement title.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final String title;
 
     public String getTitle() {
@@ -55,7 +55,7 @@ public final class TldLegalAgreementResponse extends io.pulumi.resources.InvokeA
      * URL where a copy of the agreement details is hosted.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable String url;
 
     public Optional<String> getUrl() {

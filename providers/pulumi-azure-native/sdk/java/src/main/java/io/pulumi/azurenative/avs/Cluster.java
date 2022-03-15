@@ -8,7 +8,7 @@ import io.pulumi.azurenative.avs.ClusterArgs;
 import io.pulumi.azurenative.avs.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The identity
      * 
      */
-    @OutputExport(name="clusterId", type=Integer.class, parameters={})
+    @Export(name="clusterId", type=Integer.class, parameters={})
     private Output<Integer> clusterId;
 
     /**
@@ -50,7 +50,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The cluster size
      * 
      */
-    @OutputExport(name="clusterSize", type=Integer.class, parameters={})
+    @Export(name="clusterSize", type=Integer.class, parameters={})
     private Output<Integer> clusterSize;
 
     /**
@@ -64,7 +64,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The hosts
      * 
      */
-    @OutputExport(name="hosts", type=List.class, parameters={String.class})
+    @Export(name="hosts", type=List.class, parameters={String.class})
     private Output<List<String>> hosts;
 
     /**
@@ -78,7 +78,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The state of the cluster provisioning
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -106,7 +106,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The cluster SKU
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
@@ -120,7 +120,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

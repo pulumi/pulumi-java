@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices;
 import io.pulumi.azurenative.machinelearningservices.enums.DatastoreTypeArm;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * Account Key of storage account.
      * 
      */
-    @InputImport(name="accountKey")
+    @Import(name="accountKey")
       private final @Nullable Output<String> accountKey;
 
     public Output<String> getAccountKey() {
@@ -32,7 +32,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The name of the storage account.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -43,7 +43,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The resource group the ADLS store belongs to. Defaults to selected resource group.
      * 
      */
-    @InputImport(name="adlsResourceGroup")
+    @Import(name="adlsResourceGroup")
       private final @Nullable Output<String> adlsResourceGroup;
 
     public Output<String> getAdlsResourceGroup() {
@@ -54,7 +54,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The ID of the subscription the ADLS store belongs to. Defaults to selected subscription.
      * 
      */
-    @InputImport(name="adlsSubscriptionId")
+    @Import(name="adlsSubscriptionId")
       private final @Nullable Output<String> adlsSubscriptionId;
 
     public Output<String> getAdlsSubscriptionId() {
@@ -65,7 +65,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * Authority url used to authenticate the user.
      * 
      */
-    @InputImport(name="authorityUrl")
+    @Import(name="authorityUrl")
       private final @Nullable Output<String> authorityUrl;
 
     public Output<String> getAuthorityUrl() {
@@ -76,7 +76,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The service principal's client/application ID.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -87,7 +87,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The service principal's secret.
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
@@ -98,7 +98,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The name of the azure blob container.
      * 
      */
-    @InputImport(name="containerName")
+    @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
     public Output<String> getContainerName() {
@@ -109,7 +109,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * Specifies datastore type.
      * 
      */
-    @InputImport(name="dataStoreType", required=true)
+    @Import(name="dataStoreType", required=true)
       private final Output<Either<String,DatastoreTypeArm>> dataStoreType;
 
     public Output<Either<String,DatastoreTypeArm>> getDataStoreType() {
@@ -120,7 +120,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The database name.
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -131,7 +131,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The Datastore name.
      * 
      */
-    @InputImport(name="datastoreName")
+    @Import(name="datastoreName")
       private final @Nullable Output<String> datastoreName;
 
     public Output<String> getDatastoreName() {
@@ -142,7 +142,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The description of the datastore.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -153,7 +153,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The endpoint of the server.
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
     public Output<String> getEndpoint() {
@@ -164,7 +164,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * This sets the ssl value of the server. Defaults to true if not set.
      * 
      */
-    @InputImport(name="enforceSSL")
+    @Import(name="enforceSSL")
       private final @Nullable Output<Boolean> enforceSSL;
 
     public Output<Boolean> getEnforceSSL() {
@@ -175,7 +175,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The file system name of the ADLS Gen2.
      * 
      */
-    @InputImport(name="fileSystem")
+    @Import(name="fileSystem")
       private final @Nullable Output<String> fileSystem;
 
     public Output<String> getFileSystem() {
@@ -186,7 +186,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * Include datastore secret in response.
      * 
      */
-    @InputImport(name="includeSecret")
+    @Import(name="includeSecret")
       private final @Nullable Output<Boolean> includeSecret;
 
     public Output<Boolean> getIncludeSecret() {
@@ -197,7 +197,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The name of the datastore.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -208,7 +208,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The password.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -219,7 +219,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The port number.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<String> port;
 
     public Output<String> getPort() {
@@ -230,7 +230,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The protocol to be used
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
@@ -241,7 +241,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * Name of the resource group in which workspace is located.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -252,7 +252,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * Determines what operations will be performed.
      * 
      */
-    @InputImport(name="resourceUrl")
+    @Import(name="resourceUrl")
       private final @Nullable Output<String> resourceUrl;
 
     public Output<String> getResourceUrl() {
@@ -263,7 +263,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * Sas Token of storage account.
      * 
      */
-    @InputImport(name="sasToken")
+    @Import(name="sasToken")
       private final @Nullable Output<String> sasToken;
 
     public Output<String> getSasToken() {
@@ -274,7 +274,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The SQL/MySQL/PostgreSQL server name
      * 
      */
-    @InputImport(name="serverName")
+    @Import(name="serverName")
       private final @Nullable Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -285,7 +285,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The name of the file share.
      * 
      */
-    @InputImport(name="shareName")
+    @Import(name="shareName")
       private final @Nullable Output<String> shareName;
 
     public Output<String> getShareName() {
@@ -296,7 +296,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * Skip validation that ensures data can be loaded from the dataset before registration.
      * 
      */
-    @InputImport(name="skipValidation")
+    @Import(name="skipValidation")
       private final @Nullable Output<Boolean> skipValidation;
 
     public Output<Boolean> getSkipValidation() {
@@ -307,7 +307,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The resource group of the storage account. Defaults to selected resource group
      * 
      */
-    @InputImport(name="storageAccountResourceGroup")
+    @Import(name="storageAccountResourceGroup")
       private final @Nullable Output<String> storageAccountResourceGroup;
 
     public Output<String> getStorageAccountResourceGroup() {
@@ -318,7 +318,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The subscription ID of the storage account. Defaults to selected subscription
      * 
      */
-    @InputImport(name="storageAccountSubscriptionId")
+    @Import(name="storageAccountSubscriptionId")
       private final @Nullable Output<String> storageAccountSubscriptionId;
 
     public Output<String> getStorageAccountSubscriptionId() {
@@ -329,7 +329,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The ADLS store name.
      * 
      */
-    @InputImport(name="storeName")
+    @Import(name="storeName")
       private final @Nullable Output<String> storeName;
 
     public Output<String> getStoreName() {
@@ -340,7 +340,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The service principal Tenant ID.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
@@ -351,7 +351,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The user ID.
      * 
      */
-    @InputImport(name="userId")
+    @Import(name="userId")
       private final @Nullable Output<String> userId;
 
     public Output<String> getUserId() {
@@ -362,7 +362,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * The username of the database user.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {
@@ -373,7 +373,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * Name of Azure Machine Learning workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {
@@ -384,7 +384,7 @@ public final class MachineLearningDatastoreArgs extends io.pulumi.resources.Reso
      * If set to true, datastore support data access authenticated with Workspace MSI.
      * 
      */
-    @InputImport(name="workspaceSystemAssignedIdentity")
+    @Import(name="workspaceSystemAssignedIdentity")
       private final @Nullable Output<Boolean> workspaceSystemAssignedIdentity;
 
     public Output<Boolean> getWorkspaceSystemAssignedIdentity() {

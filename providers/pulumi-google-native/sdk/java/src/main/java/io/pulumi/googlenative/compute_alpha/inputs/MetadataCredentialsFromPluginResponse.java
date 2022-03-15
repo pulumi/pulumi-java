@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MetadataCredentialsFromPluginResponse extends io.pulumi.resou
      * Plugin name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -31,7 +31,7 @@ public final class MetadataCredentialsFromPluginResponse extends io.pulumi.resou
      * A text proto that conforms to a Struct type definition interpreted by the plugin.
      * 
      */
-    @InputImport(name="structConfig", required=true)
+    @Import(name="structConfig", required=true)
       private final String structConfig;
 
     public String getStructConfig() {

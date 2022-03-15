@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.inputs.CbcsDrmConfigurationResponse;
 import io.pulumi.azurenative.media.inputs.EnabledProtocolsResponse;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyContentKeysResponse;
 import io.pulumi.azurenative.media.inputs.TrackSelectionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class CommonEncryptionCbcsResponse extends io.pulumi.resources.Invo
      * Representing which tracks should not be encrypted
      * 
      */
-    @InputImport(name="clearTracks")
+    @Import(name="clearTracks")
       private final @Nullable List<TrackSelectionResponse> clearTracks;
 
     public List<TrackSelectionResponse> getClearTracks() {
@@ -37,7 +37,7 @@ public final class CommonEncryptionCbcsResponse extends io.pulumi.resources.Invo
      * Representing default content key for each encryption scheme and separate content keys for specific tracks
      * 
      */
-    @InputImport(name="contentKeys")
+    @Import(name="contentKeys")
       private final @Nullable StreamingPolicyContentKeysResponse contentKeys;
 
     public Optional<StreamingPolicyContentKeysResponse> getContentKeys() {
@@ -48,7 +48,7 @@ public final class CommonEncryptionCbcsResponse extends io.pulumi.resources.Invo
      * Configuration of DRMs for current encryption scheme
      * 
      */
-    @InputImport(name="drm")
+    @Import(name="drm")
       private final @Nullable CbcsDrmConfigurationResponse drm;
 
     public Optional<CbcsDrmConfigurationResponse> getDrm() {
@@ -59,7 +59,7 @@ public final class CommonEncryptionCbcsResponse extends io.pulumi.resources.Invo
      * Representing supported protocols
      * 
      */
-    @InputImport(name="enabledProtocols")
+    @Import(name="enabledProtocols")
       private final @Nullable EnabledProtocolsResponse enabledProtocols;
 
     public Optional<EnabledProtocolsResponse> getEnabledProtocols() {

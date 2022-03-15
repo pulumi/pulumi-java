@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessResponse {
     /**
      * Custom metadata. Dialogflow doesn't impose any structure on this.
@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessRe
      */
     private final Map<String,String> metadata;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessResponse(@OutputCustomType.Parameter("metadata") Map<String,String> metadata) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessResponse(@CustomType.Parameter("metadata") Map<String,String> metadata) {
         this.metadata = metadata;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs exte
 
     public static final InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs Empty = new InstanceFromMachineImageNetworkInterfaceAliasIpRangeArgs();
 
-    @InputImport(name="ipCidrRange", required=true)
+    @Import(name="ipCidrRange", required=true)
       private final Output<String> ipCidrRange;
 
     public Output<String> getIpCidrRange() {
         return this.ipCidrRange;
     }
 
-    @InputImport(name="subnetworkRangeName")
+    @Import(name="subnetworkRangeName")
       private final @Nullable Output<String> subnetworkRangeName;
 
     public Output<String> getSubnetworkRangeName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,14 +18,14 @@ public final class CIFSMountConfigurationResponse extends io.pulumi.resources.In
      * These are 'net use' options in Windows and 'mount' options in Linux.
      * 
      */
-    @InputImport(name="mountOptions")
+    @Import(name="mountOptions")
       private final @Nullable String mountOptions;
 
     public Optional<String> getMountOptions() {
         return this.mountOptions == null ? Optional.empty() : Optional.ofNullable(this.mountOptions);
     }
 
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final String password;
 
     public String getPassword() {
@@ -36,21 +36,21 @@ public final class CIFSMountConfigurationResponse extends io.pulumi.resources.In
      * All file systems are mounted relative to the Batch mounts directory, accessible via the AZ_BATCH_NODE_MOUNTS_DIR environment variable.
      * 
      */
-    @InputImport(name="relativeMountPath", required=true)
+    @Import(name="relativeMountPath", required=true)
       private final String relativeMountPath;
 
     public String getRelativeMountPath() {
         return this.relativeMountPath;
     }
 
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final String source;
 
     public String getSource() {
         return this.source;
     }
 
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final String username;
 
     public String getUsername() {

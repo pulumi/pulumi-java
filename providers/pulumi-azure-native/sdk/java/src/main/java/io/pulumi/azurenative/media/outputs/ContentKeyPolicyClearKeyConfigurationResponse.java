@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContentKeyPolicyClearKeyConfigurationResponse {
     /**
      * The discriminator for derived types.
@@ -16,8 +16,8 @@ public final class ContentKeyPolicyClearKeyConfigurationResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor
-    private ContentKeyPolicyClearKeyConfigurationResponse(@OutputCustomType.Parameter("odataType") String odataType) {
+    @CustomType.Constructor
+    private ContentKeyPolicyClearKeyConfigurationResponse(@CustomType.Parameter("odataType") String odataType) {
         this.odataType = odataType;
     }
 

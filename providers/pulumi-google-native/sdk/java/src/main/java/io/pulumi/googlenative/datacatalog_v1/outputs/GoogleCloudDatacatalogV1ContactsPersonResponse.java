@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatacatalogV1ContactsPersonResponse {
     /**
      * Designation of the person, for example, Data Steward.
@@ -20,10 +20,10 @@ public final class GoogleCloudDatacatalogV1ContactsPersonResponse {
      */
     private final String email;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatacatalogV1ContactsPersonResponse(
-        @OutputCustomType.Parameter("designation") String designation,
-        @OutputCustomType.Parameter("email") String email) {
+        @CustomType.Parameter("designation") String designation,
+        @CustomType.Parameter("email") String email) {
         this.designation = designation;
         this.email = email;
     }

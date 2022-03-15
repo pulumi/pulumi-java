@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.apps_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StatefulSetPersistentVolumeClaimRetentionPolicy {
     /**
      * WhenDeleted specifies what happens to PVCs created from StatefulSet VolumeClaimTemplates when the StatefulSet is deleted. The default policy of `Retain` causes PVCs to not be affected by StatefulSet deletion. The `Delete` policy causes those PVCs to be deleted.
@@ -22,10 +22,10 @@ public final class StatefulSetPersistentVolumeClaimRetentionPolicy {
      */
     private final @Nullable String whenScaled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StatefulSetPersistentVolumeClaimRetentionPolicy(
-        @OutputCustomType.Parameter("whenDeleted") @Nullable String whenDeleted,
-        @OutputCustomType.Parameter("whenScaled") @Nullable String whenScaled) {
+        @CustomType.Parameter("whenDeleted") @Nullable String whenDeleted,
+        @CustomType.Parameter("whenScaled") @Nullable String whenScaled) {
         this.whenDeleted = whenDeleted;
         this.whenScaled = whenScaled;
     }

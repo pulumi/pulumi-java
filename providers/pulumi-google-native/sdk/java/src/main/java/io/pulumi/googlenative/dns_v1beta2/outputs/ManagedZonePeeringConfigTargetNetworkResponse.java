@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dns_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedZonePeeringConfigTargetNetworkResponse {
     /**
      * The time at which the zone was deactivated, in RFC 3339 date-time format. An empty string indicates that the peering connection is active. The producer network can deactivate a zone. The zone is automatically deactivated if the producer network that the zone targeted is deleted. Output only.
@@ -21,11 +21,11 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse {
      */
     private final String networkUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedZonePeeringConfigTargetNetworkResponse(
-        @OutputCustomType.Parameter("deactivateTime") String deactivateTime,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("networkUrl") String networkUrl) {
+        @CustomType.Parameter("deactivateTime") String deactivateTime,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("networkUrl") String networkUrl) {
         this.deactivateTime = deactivateTime;
         this.kind = kind;
         this.networkUrl = networkUrl;

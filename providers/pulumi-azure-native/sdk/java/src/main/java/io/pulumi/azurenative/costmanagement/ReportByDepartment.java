@@ -10,7 +10,7 @@ import io.pulumi.azurenative.costmanagement.outputs.ReportDeliveryInfoResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportScheduleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public class ReportByDepartment extends io.pulumi.resources.CustomResource {
      * Has definition for the report.
      * 
      */
-    @OutputExport(name="definition", type=ReportDefinitionResponse.class, parameters={})
+    @Export(name="definition", type=ReportDefinitionResponse.class, parameters={})
     private Output<ReportDefinitionResponse> definition;
 
     /**
@@ -42,7 +42,7 @@ public class ReportByDepartment extends io.pulumi.resources.CustomResource {
      * Has delivery information for the report.
      * 
      */
-    @OutputExport(name="deliveryInfo", type=ReportDeliveryInfoResponse.class, parameters={})
+    @Export(name="deliveryInfo", type=ReportDeliveryInfoResponse.class, parameters={})
     private Output<ReportDeliveryInfoResponse> deliveryInfo;
 
     /**
@@ -56,7 +56,7 @@ public class ReportByDepartment extends io.pulumi.resources.CustomResource {
      * The format of the report being delivered.
      * 
      */
-    @OutputExport(name="format", type=String.class, parameters={})
+    @Export(name="format", type=String.class, parameters={})
     private Output</* @Nullable */ String> format;
 
     /**
@@ -70,7 +70,7 @@ public class ReportByDepartment extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -84,7 +84,7 @@ public class ReportByDepartment extends io.pulumi.resources.CustomResource {
      * Has schedule information for the report.
      * 
      */
-    @OutputExport(name="schedule", type=ReportScheduleResponse.class, parameters={})
+    @Export(name="schedule", type=ReportScheduleResponse.class, parameters={})
     private Output</* @Nullable */ ReportScheduleResponse> schedule;
 
     /**
@@ -98,7 +98,7 @@ public class ReportByDepartment extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tags;
 
     /**
@@ -112,7 +112,7 @@ public class ReportByDepartment extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigItemGetArgs extends i
      * The HTTP response header name.
      * 
      */
-    @InputImport(name="header", required=true)
+    @Import(name="header", required=true)
       private final Output<String> header;
 
     public Output<String> getHeader() {
@@ -29,7 +29,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigItemGetArgs extends i
      * A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
      * 
      */
-    @InputImport(name="override", required=true)
+    @Import(name="override", required=true)
       private final Output<Boolean> override;
 
     public Output<Boolean> getOverride() {
@@ -40,7 +40,7 @@ public final class ResponseHeadersPolicyCustomHeadersConfigItemGetArgs extends i
      * The value for the HTTP response header.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

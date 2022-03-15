@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.SpotFleetInstanceIpv6Address;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetPrivateIpAddressSpecification;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SpotFleetInstanceNetworkInterfaceSpecification {
     private final @Nullable Boolean associatePublicIpAddress;
     private final @Nullable Boolean deleteOnTermination;
@@ -28,19 +28,19 @@ public final class SpotFleetInstanceNetworkInterfaceSpecification {
     private final @Nullable Integer secondaryPrivateIpAddressCount;
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SpotFleetInstanceNetworkInterfaceSpecification(
-        @OutputCustomType.Parameter("associatePublicIpAddress") @Nullable Boolean associatePublicIpAddress,
-        @OutputCustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("deviceIndex") @Nullable Integer deviceIndex,
-        @OutputCustomType.Parameter("groups") @Nullable List<String> groups,
-        @OutputCustomType.Parameter("ipv6AddressCount") @Nullable Integer ipv6AddressCount,
-        @OutputCustomType.Parameter("ipv6Addresses") @Nullable List<SpotFleetInstanceIpv6Address> ipv6Addresses,
-        @OutputCustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
-        @OutputCustomType.Parameter("privateIpAddresses") @Nullable List<SpotFleetPrivateIpAddressSpecification> privateIpAddresses,
-        @OutputCustomType.Parameter("secondaryPrivateIpAddressCount") @Nullable Integer secondaryPrivateIpAddressCount,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
+        @CustomType.Parameter("associatePublicIpAddress") @Nullable Boolean associatePublicIpAddress,
+        @CustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("deviceIndex") @Nullable Integer deviceIndex,
+        @CustomType.Parameter("groups") @Nullable List<String> groups,
+        @CustomType.Parameter("ipv6AddressCount") @Nullable Integer ipv6AddressCount,
+        @CustomType.Parameter("ipv6Addresses") @Nullable List<SpotFleetInstanceIpv6Address> ipv6Addresses,
+        @CustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
+        @CustomType.Parameter("privateIpAddresses") @Nullable List<SpotFleetPrivateIpAddressSpecification> privateIpAddresses,
+        @CustomType.Parameter("secondaryPrivateIpAddressCount") @Nullable Integer secondaryPrivateIpAddressCount,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.associatePublicIpAddress = associatePublicIpAddress;
         this.deleteOnTermination = deleteOnTermination;
         this.description = description;

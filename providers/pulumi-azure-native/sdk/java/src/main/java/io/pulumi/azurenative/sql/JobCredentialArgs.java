@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the credential.
      * 
      */
-    @InputImport(name="credentialName")
+    @Import(name="credentialName")
       private final @Nullable Output<String> credentialName;
 
     public Output<String> getCredentialName() {
@@ -29,7 +29,7 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the job agent.
      * 
      */
-    @InputImport(name="jobAgentName", required=true)
+    @Import(name="jobAgentName", required=true)
       private final Output<String> jobAgentName;
 
     public Output<String> getJobAgentName() {
@@ -40,7 +40,7 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * The credential password.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<String> password;
 
     public Output<String> getPassword() {
@@ -51,7 +51,7 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -62,7 +62,7 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -73,7 +73,7 @@ public final class JobCredentialArgs extends io.pulumi.resources.ResourceArgs {
      * The credential user name.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final Output<String> username;
 
     public Output<String> getUsername() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetBackendBucketArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBackendBucketArgs Empty = new GetBackendBucketArgs();
 
-    @InputImport(name="backendBucket", required=true)
+    @Import(name="backendBucket", required=true)
       private final String backendBucket;
 
     public String getBackendBucket() {
         return this.backendBucket;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

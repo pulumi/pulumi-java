@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelPayload;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorModelFirehose {
     /**
      * The name of the Kinesis Data Firehose delivery stream where the data is written.
@@ -24,11 +24,11 @@ public final class DetectorModelFirehose {
      */
     private final @Nullable String separator;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorModelFirehose(
-        @OutputCustomType.Parameter("deliveryStreamName") String deliveryStreamName,
-        @OutputCustomType.Parameter("payload") @Nullable DetectorModelPayload payload,
-        @OutputCustomType.Parameter("separator") @Nullable String separator) {
+        @CustomType.Parameter("deliveryStreamName") String deliveryStreamName,
+        @CustomType.Parameter("payload") @Nullable DetectorModelPayload payload,
+        @CustomType.Parameter("separator") @Nullable String separator) {
         this.deliveryStreamName = deliveryStreamName;
         this.payload = payload;
         this.separator = separator;

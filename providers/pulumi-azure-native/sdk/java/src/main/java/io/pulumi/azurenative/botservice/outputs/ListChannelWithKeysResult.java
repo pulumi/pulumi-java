@@ -18,7 +18,7 @@ import io.pulumi.azurenative.botservice.outputs.SlackChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.SmsChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.TelegramChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.WebChatChannelResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListChannelWithKeysResult {
     /**
      * Changed time of the resource
@@ -105,23 +105,23 @@ public final class ListChannelWithKeysResult {
      */
     private final List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListChannelWithKeysResult(
-        @OutputCustomType.Parameter("changedTime") @Nullable String changedTime,
-        @OutputCustomType.Parameter("entityTag") @Nullable String entityTag,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") Object properties,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("resource") @Nullable Object resource,
-        @OutputCustomType.Parameter("setting") @Nullable ChannelSettingsResponse setting,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("zones") List<String> zones) {
+        @CustomType.Parameter("changedTime") @Nullable String changedTime,
+        @CustomType.Parameter("entityTag") @Nullable String entityTag,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") Object properties,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("resource") @Nullable Object resource,
+        @CustomType.Parameter("setting") @Nullable ChannelSettingsResponse setting,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("zones") List<String> zones) {
         this.changedTime = changedTime;
         this.entityTag = entityTag;
         this.etag = etag;

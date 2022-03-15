@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudtrail.inputs;
 
 import io.pulumi.aws.cloudtrail.inputs.TrailEventSelectorDataResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class TrailEventSelectorArgs extends io.pulumi.resources.ResourceAr
      * Configuration block for data events. See details below.
      * 
      */
-    @InputImport(name="dataResources")
+    @Import(name="dataResources")
       private final @Nullable Output<List<TrailEventSelectorDataResourceArgs>> dataResources;
 
     public Output<List<TrailEventSelectorDataResourceArgs>> getDataResources() {
@@ -32,7 +32,7 @@ public final class TrailEventSelectorArgs extends io.pulumi.resources.ResourceAr
      * A set of event sources to exclude. Valid values include: `kms.amazonaws.com` and `rdsdata.amazonaws.com`. `include_management_events` must be set to`true` to allow this.
      * 
      */
-    @InputImport(name="excludeManagementEventSources")
+    @Import(name="excludeManagementEventSources")
       private final @Nullable Output<List<String>> excludeManagementEventSources;
 
     public Output<List<String>> getExcludeManagementEventSources() {
@@ -43,7 +43,7 @@ public final class TrailEventSelectorArgs extends io.pulumi.resources.ResourceAr
      * Whether to include management events for your trail. Defaults to `true`.
      * 
      */
-    @InputImport(name="includeManagementEvents")
+    @Import(name="includeManagementEvents")
       private final @Nullable Output<Boolean> includeManagementEvents;
 
     public Output<Boolean> getIncludeManagementEvents() {
@@ -54,7 +54,7 @@ public final class TrailEventSelectorArgs extends io.pulumi.resources.ResourceAr
      * Type of events to log. Valid values are `ReadOnly`, `WriteOnly`, `All`. Default value is `All`.
      * 
      */
-    @InputImport(name="readWriteType")
+    @Import(name="readWriteType")
       private final @Nullable Output<String> readWriteType;
 
     public Output<String> getReadWriteType() {

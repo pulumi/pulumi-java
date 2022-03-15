@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.domainregistration.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
      * First line of an Address.
      * 
      */
-    @InputImport(name="address1", required=true)
+    @Import(name="address1", required=true)
       private final Output<String> address1;
 
     public Output<String> getAddress1() {
@@ -33,7 +33,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
      * The second line of the Address. Optional.
      * 
      */
-    @InputImport(name="address2")
+    @Import(name="address2")
       private final @Nullable Output<String> address2;
 
     public Output<String> getAddress2() {
@@ -44,7 +44,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
      * The city for the address.
      * 
      */
-    @InputImport(name="city", required=true)
+    @Import(name="city", required=true)
       private final Output<String> city;
 
     public Output<String> getCity() {
@@ -55,7 +55,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
      * The country for the address.
      * 
      */
-    @InputImport(name="country", required=true)
+    @Import(name="country", required=true)
       private final Output<String> country;
 
     public Output<String> getCountry() {
@@ -66,7 +66,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
      * The postal code for the address.
      * 
      */
-    @InputImport(name="postalCode", required=true)
+    @Import(name="postalCode", required=true)
       private final Output<String> postalCode;
 
     public Output<String> getPostalCode() {
@@ -77,7 +77,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
      * The state or province for the address.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final Output<String> state;
 
     public Output<String> getState() {

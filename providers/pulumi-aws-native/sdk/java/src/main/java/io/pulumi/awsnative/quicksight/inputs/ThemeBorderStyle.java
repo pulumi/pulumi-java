@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ThemeBorderStyle extends io.pulumi.resources.InvokeArgs {
      * <p>The option to enable display of borders for visuals.</p>
      * 
      */
-    @InputImport(name="show")
+    @Import(name="show")
       private final @Nullable Boolean show;
 
     public Optional<Boolean> getShow() {

@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.autoscaling.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WarmPoolInstanceReusePolicy {
     private final @Nullable Boolean reuseOnScaleIn;
 
-    @OutputCustomType.Constructor
-    private WarmPoolInstanceReusePolicy(@OutputCustomType.Parameter("reuseOnScaleIn") @Nullable Boolean reuseOnScaleIn) {
+    @CustomType.Constructor
+    private WarmPoolInstanceReusePolicy(@CustomType.Parameter("reuseOnScaleIn") @Nullable Boolean reuseOnScaleIn) {
         this.reuseOnScaleIn = reuseOnScaleIn;
     }
 

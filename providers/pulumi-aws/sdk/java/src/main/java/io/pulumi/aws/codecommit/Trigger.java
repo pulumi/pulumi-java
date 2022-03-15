@@ -8,7 +8,7 @@ import io.pulumi.aws.codecommit.TriggerArgs;
 import io.pulumi.aws.codecommit.inputs.TriggerState;
 import io.pulumi.aws.codecommit.outputs.TriggerTrigger;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * System-generated unique identifier.
      * 
      */
-    @OutputExport(name="configurationId", type=String.class, parameters={})
+    @Export(name="configurationId", type=String.class, parameters={})
     private Output<String> configurationId;
 
     /**
@@ -34,7 +34,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * The name for the repository. This needs to be less than 100 characters.
      * 
      */
-    @OutputExport(name="repositoryName", type=String.class, parameters={})
+    @Export(name="repositoryName", type=String.class, parameters={})
     private Output<String> repositoryName;
 
     /**
@@ -44,7 +44,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
     public Output<String> getRepositoryName() {
         return this.repositoryName;
     }
-    @OutputExport(name="triggers", type=List.class, parameters={TriggerTrigger.class})
+    @Export(name="triggers", type=List.class, parameters={TriggerTrigger.class})
     private Output<List<TriggerTrigger>> triggers;
 
     public Output<List<TriggerTrigger>> getTriggers() {

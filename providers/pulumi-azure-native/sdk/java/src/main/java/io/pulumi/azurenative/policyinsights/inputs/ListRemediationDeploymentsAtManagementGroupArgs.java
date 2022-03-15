@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.policyinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends io.pu
      * Management group ID.
      * 
      */
-    @InputImport(name="managementGroupId", required=true)
+    @Import(name="managementGroupId", required=true)
       private final String managementGroupId;
 
     public String getManagementGroupId() {
@@ -30,7 +30,7 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends io.pu
      * The namespace for Microsoft Management RP; only "Microsoft.Management" is allowed.
      * 
      */
-    @InputImport(name="managementGroupsNamespace", required=true)
+    @Import(name="managementGroupsNamespace", required=true)
       private final String managementGroupsNamespace;
 
     public String getManagementGroupsNamespace() {
@@ -41,7 +41,7 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends io.pu
      * The name of the remediation.
      * 
      */
-    @InputImport(name="remediationName", required=true)
+    @Import(name="remediationName", required=true)
       private final String remediationName;
 
     public String getRemediationName() {
@@ -52,7 +52,7 @@ public final class ListRemediationDeploymentsAtManagementGroupArgs extends io.pu
      * Maximum number of records to return.
      * 
      */
-    @InputImport(name="top")
+    @Import(name="top")
       private final @Nullable Integer top;
 
     public Optional<Integer> getTop() {

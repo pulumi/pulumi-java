@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.ec2.inputs.TransitGatewayPeeringAttachmentOptionsArgs;
 import io.pulumi.awsnative.ec2.inputs.TransitGatewayPeeringAttachmentTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
      * Options for transit gateway peering attachment
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<TransitGatewayPeeringAttachmentOptionsArgs> options;
 
     public Output<TransitGatewayPeeringAttachmentOptionsArgs> getOptions() {
@@ -32,7 +32,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
      * The ID of the peer account
      * 
      */
-    @InputImport(name="peerAccountId", required=true)
+    @Import(name="peerAccountId", required=true)
       private final Output<String> peerAccountId;
 
     public Output<String> getPeerAccountId() {
@@ -43,7 +43,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
      * Peer Region
      * 
      */
-    @InputImport(name="peerRegion", required=true)
+    @Import(name="peerRegion", required=true)
       private final Output<String> peerRegion;
 
     public Output<String> getPeerRegion() {
@@ -54,7 +54,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
      * The ID of the peer transit gateway.
      * 
      */
-    @InputImport(name="peerTransitGatewayId", required=true)
+    @Import(name="peerTransitGatewayId", required=true)
       private final Output<String> peerTransitGatewayId;
 
     public Output<String> getPeerTransitGatewayId() {
@@ -65,7 +65,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
      * The tags for the transit gateway peering attachment.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<TransitGatewayPeeringAttachmentTagArgs>> tags;
 
     public Output<List<TransitGatewayPeeringAttachmentTagArgs>> getTags() {
@@ -76,7 +76,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
      * The ID of the transit gateway.
      * 
      */
-    @InputImport(name="transitGatewayId", required=true)
+    @Import(name="transitGatewayId", required=true)
       private final Output<String> transitGatewayId;
 
     public Output<String> getTransitGatewayId() {

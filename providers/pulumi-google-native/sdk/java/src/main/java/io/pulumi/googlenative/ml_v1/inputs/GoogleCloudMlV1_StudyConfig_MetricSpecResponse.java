@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse extends io.pul
      * The optimization goal of the metric.
      * 
      */
-    @InputImport(name="goal", required=true)
+    @Import(name="goal", required=true)
       private final String goal;
 
     public String getGoal() {
@@ -31,7 +31,7 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse extends io.pul
      * The name of the metric.
      * 
      */
-    @InputImport(name="metric", required=true)
+    @Import(name="metric", required=true)
       private final String metric;
 
     public String getMetric() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.VirtualMachineSshCredentialsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VirtualMachinePropertiesArgs extends io.pulumi.resources.Reso
      * Public IP address of the virtual machine.
      * 
      */
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
@@ -31,7 +31,7 @@ public final class VirtualMachinePropertiesArgs extends io.pulumi.resources.Reso
      * Admin credentials for virtual machine
      * 
      */
-    @InputImport(name="administratorAccount")
+    @Import(name="administratorAccount")
       private final @Nullable Output<VirtualMachineSshCredentialsArgs> administratorAccount;
 
     public Output<VirtualMachineSshCredentialsArgs> getAdministratorAccount() {
@@ -42,7 +42,7 @@ public final class VirtualMachinePropertiesArgs extends io.pulumi.resources.Reso
      * Port open for ssh connections.
      * 
      */
-    @InputImport(name="sshPort")
+    @Import(name="sshPort")
       private final @Nullable Output<Integer> sshPort;
 
     public Output<Integer> getSshPort() {
@@ -53,7 +53,7 @@ public final class VirtualMachinePropertiesArgs extends io.pulumi.resources.Reso
      * Virtual Machine size
      * 
      */
-    @InputImport(name="virtualMachineSize")
+    @Import(name="virtualMachineSize")
       private final @Nullable Output<String> virtualMachineSize;
 
     public Output<String> getVirtualMachineSize() {

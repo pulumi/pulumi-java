@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 import io.pulumi.azurenative.documentdb.enums.CompositePathSortOrder;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class CompositePathArgs extends io.pulumi.resources.ResourceArgs {
      * Sort order for composite paths.
      * 
      */
-    @InputImport(name="order")
+    @Import(name="order")
       private final @Nullable Output<Either<String,CompositePathSortOrder>> order;
 
     public Output<Either<String,CompositePathSortOrder>> getOrder() {
@@ -31,7 +31,7 @@ public final class CompositePathArgs extends io.pulumi.resources.ResourceArgs {
      * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {

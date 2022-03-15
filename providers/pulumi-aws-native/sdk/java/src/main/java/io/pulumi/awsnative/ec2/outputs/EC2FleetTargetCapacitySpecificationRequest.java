@@ -5,13 +5,13 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.enums.EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType;
 import io.pulumi.awsnative.ec2.enums.EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EC2FleetTargetCapacitySpecificationRequest {
     private final @Nullable EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType defaultTargetCapacityType;
     private final @Nullable Integer onDemandTargetCapacity;
@@ -19,13 +19,13 @@ public final class EC2FleetTargetCapacitySpecificationRequest {
     private final @Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType;
     private final Integer totalTargetCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EC2FleetTargetCapacitySpecificationRequest(
-        @OutputCustomType.Parameter("defaultTargetCapacityType") @Nullable EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType defaultTargetCapacityType,
-        @OutputCustomType.Parameter("onDemandTargetCapacity") @Nullable Integer onDemandTargetCapacity,
-        @OutputCustomType.Parameter("spotTargetCapacity") @Nullable Integer spotTargetCapacity,
-        @OutputCustomType.Parameter("targetCapacityUnitType") @Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType,
-        @OutputCustomType.Parameter("totalTargetCapacity") Integer totalTargetCapacity) {
+        @CustomType.Parameter("defaultTargetCapacityType") @Nullable EC2FleetTargetCapacitySpecificationRequestDefaultTargetCapacityType defaultTargetCapacityType,
+        @CustomType.Parameter("onDemandTargetCapacity") @Nullable Integer onDemandTargetCapacity,
+        @CustomType.Parameter("spotTargetCapacity") @Nullable Integer spotTargetCapacity,
+        @CustomType.Parameter("targetCapacityUnitType") @Nullable EC2FleetTargetCapacitySpecificationRequestTargetCapacityUnitType targetCapacityUnitType,
+        @CustomType.Parameter("totalTargetCapacity") Integer totalTargetCapacity) {
         this.defaultTargetCapacityType = defaultTargetCapacityType;
         this.onDemandTargetCapacity = onDemandTargetCapacity;
         this.spotTargetCapacity = spotTargetCapacity;

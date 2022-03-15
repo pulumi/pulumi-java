@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
      * A control command, according to the Azure Data Explorer command syntax. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="command", required=true)
+    @Import(name="command", required=true)
       private final Object command;
 
     public Object getCommand() {
@@ -39,7 +39,7 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
      * Control command timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9]))..)
      * 
      */
-    @InputImport(name="commandTimeout")
+    @Import(name="commandTimeout")
       private final @Nullable Object commandTimeout;
 
     public Optional<Object> getCommandTimeout() {
@@ -50,7 +50,7 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
@@ -61,7 +61,7 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -72,7 +72,7 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName")
+    @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
@@ -83,7 +83,7 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -94,7 +94,7 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
      * Activity policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
@@ -106,7 +106,7 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
      * Expected value is 'AzureDataExplorerCommand'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -117,7 +117,7 @@ public final class AzureDataExplorerCommandActivityResponse extends io.pulumi.re
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {

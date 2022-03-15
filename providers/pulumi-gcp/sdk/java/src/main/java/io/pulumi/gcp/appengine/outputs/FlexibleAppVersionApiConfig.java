@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlexibleAppVersionApiConfig {
     /**
      * Action to take when users access resources that require authentication.
@@ -42,13 +42,13 @@ public final class FlexibleAppVersionApiConfig {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlexibleAppVersionApiConfig(
-        @OutputCustomType.Parameter("authFailAction") @Nullable String authFailAction,
-        @OutputCustomType.Parameter("login") @Nullable String login,
-        @OutputCustomType.Parameter("script") String script,
-        @OutputCustomType.Parameter("securityLevel") @Nullable String securityLevel,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("authFailAction") @Nullable String authFailAction,
+        @CustomType.Parameter("login") @Nullable String login,
+        @CustomType.Parameter("script") String script,
+        @CustomType.Parameter("securityLevel") @Nullable String securityLevel,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.authFailAction = authFailAction;
         this.login = login;
         this.script = script;

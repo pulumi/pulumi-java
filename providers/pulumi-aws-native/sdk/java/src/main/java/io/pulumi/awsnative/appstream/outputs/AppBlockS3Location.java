@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.appstream.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AppBlockS3Location {
     private final String s3Bucket;
     private final String s3Key;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppBlockS3Location(
-        @OutputCustomType.Parameter("s3Bucket") String s3Bucket,
-        @OutputCustomType.Parameter("s3Key") String s3Key) {
+        @CustomType.Parameter("s3Bucket") String s3Bucket,
+        @CustomType.Parameter("s3Key") String s3Key) {
         this.s3Bucket = s3Bucket;
         this.s3Key = s3Key;
     }

@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationConfigurationRuleDestinationMetrics {
     /**
      * Threshold within which objects are to be replicated. The only valid value is `15`.
@@ -23,10 +23,10 @@ public final class BucketReplicationConfigurationRuleDestinationMetrics {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketReplicationConfigurationRuleDestinationMetrics(
-        @OutputCustomType.Parameter("minutes") @Nullable Integer minutes,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("minutes") @Nullable Integer minutes,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.minutes = minutes;
         this.status = status;
     }

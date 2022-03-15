@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devices;
 import io.pulumi.azurenative.devices.inputs.IotHubPropertiesArgs;
 import io.pulumi.azurenative.devices.inputs.IotHubSkuInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -32,7 +32,7 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
      * IotHub properties
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<IotHubPropertiesArgs> properties;
 
     public Output<IotHubPropertiesArgs> getProperties() {
@@ -43,7 +43,7 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the IoT hub.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -54,7 +54,7 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the IoT hub.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -65,7 +65,7 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
      * IotHub SKU info
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<IotHubSkuInfoArgs> sku;
 
     public Output<IotHubSkuInfoArgs> getSku() {
@@ -76,7 +76,7 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

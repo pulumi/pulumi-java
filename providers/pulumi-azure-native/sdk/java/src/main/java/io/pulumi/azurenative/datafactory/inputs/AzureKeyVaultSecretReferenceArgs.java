@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
      * The name of the secret in Azure Key Vault. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="secretName", required=true)
+    @Import(name="secretName", required=true)
       private final Output<Object> secretName;
 
     public Output<Object> getSecretName() {
@@ -35,7 +35,7 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
      * The version of the secret in Azure Key Vault. The default value is the latest version of the secret. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="secretVersion")
+    @Import(name="secretVersion")
       private final @Nullable Output<Object> secretVersion;
 
     public Output<Object> getSecretVersion() {
@@ -46,7 +46,7 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
      * The Azure Key Vault linked service reference.
      * 
      */
-    @InputImport(name="store", required=true)
+    @Import(name="store", required=true)
       private final Output<LinkedServiceReferenceArgs> store;
 
     public Output<LinkedServiceReferenceArgs> getStore() {
@@ -58,7 +58,7 @@ public final class AzureKeyVaultSecretReferenceArgs extends io.pulumi.resources.
      * Expected value is 'AzureKeyVaultSecret'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

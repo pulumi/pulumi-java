@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ManagedRuleOverrideArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ManagedRuleGroupOverrideArgs extends io.pulumi.resources.Reso
      * The managed rule group to override.
      * 
      */
-    @InputImport(name="ruleGroupName", required=true)
+    @Import(name="ruleGroupName", required=true)
       private final Output<String> ruleGroupName;
 
     public Output<String> getRuleGroupName() {
@@ -35,7 +35,7 @@ public final class ManagedRuleGroupOverrideArgs extends io.pulumi.resources.Reso
      * List of rules that will be disabled. If none specified, all rules in the group will be disabled.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<ManagedRuleOverrideArgs>> rules;
 
     public Output<List<ManagedRuleOverrideArgs>> getRules() {

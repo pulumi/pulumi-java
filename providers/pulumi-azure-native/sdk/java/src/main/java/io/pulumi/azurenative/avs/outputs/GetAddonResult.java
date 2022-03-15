@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAddonResult {
     /**
      * The type of private cloud addon
@@ -42,14 +42,14 @@ public final class GetAddonResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAddonResult(
-        @OutputCustomType.Parameter("addonType") @Nullable String addonType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("licenseKey") @Nullable String licenseKey,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("addonType") @Nullable String addonType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("licenseKey") @Nullable String licenseKey,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.addonType = addonType;
         this.id = id;
         this.licenseKey = licenseKey;

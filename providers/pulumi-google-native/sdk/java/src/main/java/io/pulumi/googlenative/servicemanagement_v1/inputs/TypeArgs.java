@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.enums.TypeSyntax;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.FieldArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
@@ -27,7 +27,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * The list of fields.
      * 
      */
-    @InputImport(name="fields")
+    @Import(name="fields")
       private final @Nullable Output<List<FieldArgs>> fields;
 
     public Output<List<FieldArgs>> getFields() {
@@ -38,7 +38,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * The fully qualified message name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -49,7 +49,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * The list of types appearing in `oneof` definitions in this type.
      * 
      */
-    @InputImport(name="oneofs")
+    @Import(name="oneofs")
       private final @Nullable Output<List<String>> oneofs;
 
     public Output<List<String>> getOneofs() {
@@ -60,7 +60,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * The protocol buffer options.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<List<OptionArgs>> options;
 
     public Output<List<OptionArgs>> getOptions() {
@@ -71,7 +71,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * The source context.
      * 
      */
-    @InputImport(name="sourceContext")
+    @Import(name="sourceContext")
       private final @Nullable Output<SourceContextArgs> sourceContext;
 
     public Output<SourceContextArgs> getSourceContext() {
@@ -82,7 +82,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
      * The source syntax.
      * 
      */
-    @InputImport(name="syntax")
+    @Import(name="syntax")
       private final @Nullable Output<TypeSyntax> syntax;
 
     public Output<TypeSyntax> getSyntax() {

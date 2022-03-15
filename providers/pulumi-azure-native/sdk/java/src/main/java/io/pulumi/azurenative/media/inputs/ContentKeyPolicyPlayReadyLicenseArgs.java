@@ -10,7 +10,7 @@ import io.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyContentEncryp
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyPlayRightArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * A flag indicating whether test devices can use the license.
      * 
      */
-    @InputImport(name="allowTestDevices", required=true)
+    @Import(name="allowTestDevices", required=true)
       private final Output<Boolean> allowTestDevices;
 
     public Output<Boolean> getAllowTestDevices() {
@@ -40,7 +40,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * The begin date of license
      * 
      */
-    @InputImport(name="beginDate")
+    @Import(name="beginDate")
       private final @Nullable Output<String> beginDate;
 
     public Output<String> getBeginDate() {
@@ -51,7 +51,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * The content key location.
      * 
      */
-    @InputImport(name="contentKeyLocation", required=true)
+    @Import(name="contentKeyLocation", required=true)
       private final Output<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> contentKeyLocation;
 
     public Output<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> getContentKeyLocation() {
@@ -62,7 +62,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * The PlayReady content type.
      * 
      */
-    @InputImport(name="contentType", required=true)
+    @Import(name="contentType", required=true)
       private final Output<Either<String,ContentKeyPolicyPlayReadyContentType>> contentType;
 
     public Output<Either<String,ContentKeyPolicyPlayReadyContentType>> getContentType() {
@@ -73,7 +73,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * The expiration date of license.
      * 
      */
-    @InputImport(name="expirationDate")
+    @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
     public Output<String> getExpirationDate() {
@@ -84,7 +84,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * The grace period of license.
      * 
      */
-    @InputImport(name="gracePeriod")
+    @Import(name="gracePeriod")
       private final @Nullable Output<String> gracePeriod;
 
     public Output<String> getGracePeriod() {
@@ -95,7 +95,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * The license type.
      * 
      */
-    @InputImport(name="licenseType", required=true)
+    @Import(name="licenseType", required=true)
       private final Output<Either<String,ContentKeyPolicyPlayReadyLicenseType>> licenseType;
 
     public Output<Either<String,ContentKeyPolicyPlayReadyLicenseType>> getLicenseType() {
@@ -106,7 +106,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * The license PlayRight
      * 
      */
-    @InputImport(name="playRight")
+    @Import(name="playRight")
       private final @Nullable Output<ContentKeyPolicyPlayReadyPlayRightArgs> playRight;
 
     public Output<ContentKeyPolicyPlayReadyPlayRightArgs> getPlayRight() {
@@ -117,7 +117,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * The relative begin date of license.
      * 
      */
-    @InputImport(name="relativeBeginDate")
+    @Import(name="relativeBeginDate")
       private final @Nullable Output<String> relativeBeginDate;
 
     public Output<String> getRelativeBeginDate() {
@@ -128,7 +128,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
      * The relative expiration date of license.
      * 
      */
-    @InputImport(name="relativeExpirationDate")
+    @Import(name="relativeExpirationDate")
       private final @Nullable Output<String> relativeExpirationDate;
 
     public Output<String> getRelativeExpirationDate() {

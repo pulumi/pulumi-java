@@ -9,7 +9,7 @@ import io.pulumi.awsnative.kendra.enums.FaqFileFormat;
 import io.pulumi.awsnative.kendra.outputs.FaqS3Path;
 import io.pulumi.awsnative.kendra.outputs.FaqTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:kendra:Faq")
 public class Faq extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public class Faq extends io.pulumi.resources.CustomResource {
      * FAQ description
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -45,7 +45,7 @@ public class Faq extends io.pulumi.resources.CustomResource {
      * FAQ file format
      * 
      */
-    @OutputExport(name="fileFormat", type=FaqFileFormat.class, parameters={})
+    @Export(name="fileFormat", type=FaqFileFormat.class, parameters={})
     private Output</* @Nullable */ FaqFileFormat> fileFormat;
 
     /**
@@ -59,7 +59,7 @@ public class Faq extends io.pulumi.resources.CustomResource {
      * Index ID
      * 
      */
-    @OutputExport(name="indexId", type=String.class, parameters={})
+    @Export(name="indexId", type=String.class, parameters={})
     private Output<String> indexId;
 
     /**
@@ -73,7 +73,7 @@ public class Faq extends io.pulumi.resources.CustomResource {
      * FAQ name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -87,7 +87,7 @@ public class Faq extends io.pulumi.resources.CustomResource {
      * FAQ role ARN
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -101,7 +101,7 @@ public class Faq extends io.pulumi.resources.CustomResource {
      * FAQ S3 path
      * 
      */
-    @OutputExport(name="s3Path", type=FaqS3Path.class, parameters={})
+    @Export(name="s3Path", type=FaqS3Path.class, parameters={})
     private Output<FaqS3Path> s3Path;
 
     /**
@@ -115,7 +115,7 @@ public class Faq extends io.pulumi.resources.CustomResource {
      * Tags for labeling the FAQ
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={FaqTag.class})
+    @Export(name="tags", type=List.class, parameters={FaqTag.class})
     private Output</* @Nullable */ List<FaqTag>> tags;
 
     /**

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtension {
     /**
      * Indicates whether or not this extension is critical (i.e., if the client does not know how to
@@ -29,11 +29,11 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtension {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CaPoolIssuancePolicyBaselineValuesAdditionalExtension(
-        @OutputCustomType.Parameter("critical") Boolean critical,
-        @OutputCustomType.Parameter("objectId") CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId objectId,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("critical") Boolean critical,
+        @CustomType.Parameter("objectId") CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId objectId,
+        @CustomType.Parameter("value") String value) {
         this.critical = critical;
         this.objectId = objectId;
         this.value = value;

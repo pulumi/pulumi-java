@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ScopeSelector;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceQuotaSpec {
     /**
      * hard is the set of desired hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
@@ -30,11 +30,11 @@ public final class ResourceQuotaSpec {
      */
     private final @Nullable List<String> scopes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceQuotaSpec(
-        @OutputCustomType.Parameter("hard") @Nullable Map<String,String> hard,
-        @OutputCustomType.Parameter("scopeSelector") @Nullable ScopeSelector scopeSelector,
-        @OutputCustomType.Parameter("scopes") @Nullable List<String> scopes) {
+        @CustomType.Parameter("hard") @Nullable Map<String,String> hard,
+        @CustomType.Parameter("scopeSelector") @Nullable ScopeSelector scopeSelector,
+        @CustomType.Parameter("scopes") @Nullable List<String> scopes) {
         this.hard = hard;
         this.scopeSelector = scopeSelector;
         this.scopes = scopes;

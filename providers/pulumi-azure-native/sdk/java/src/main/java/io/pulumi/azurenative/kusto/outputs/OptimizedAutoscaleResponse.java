@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.kusto.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OptimizedAutoscaleResponse {
     /**
      * A boolean value that indicate if the optimized autoscale feature is enabled or not.
@@ -31,12 +31,12 @@ public final class OptimizedAutoscaleResponse {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OptimizedAutoscaleResponse(
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("maximum") Integer maximum,
-        @OutputCustomType.Parameter("minimum") Integer minimum,
-        @OutputCustomType.Parameter("version") Integer version) {
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("maximum") Integer maximum,
+        @CustomType.Parameter("minimum") Integer minimum,
+        @CustomType.Parameter("version") Integer version) {
         this.isEnabled = isEnabled;
         this.maximum = maximum;
         this.minimum = minimum;

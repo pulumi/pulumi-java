@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetActiveSessionsArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the Bastion Host.
      * 
      */
-    @InputImport(name="bastionHostName", required=true)
+    @Import(name="bastionHostName", required=true)
       private final String bastionHostName;
 
     public String getBastionHostName() {
@@ -27,7 +27,7 @@ public final class GetActiveSessionsArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

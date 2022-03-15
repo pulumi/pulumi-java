@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OnErrorDeploymentExtendedResponse {
     /**
      * The deployment to be used on error case.
@@ -27,11 +27,11 @@ public final class OnErrorDeploymentExtendedResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OnErrorDeploymentExtendedResponse(
-        @OutputCustomType.Parameter("deploymentName") @Nullable String deploymentName,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("deploymentName") @Nullable String deploymentName,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.deploymentName = deploymentName;
         this.provisioningState = provisioningState;
         this.type = type;

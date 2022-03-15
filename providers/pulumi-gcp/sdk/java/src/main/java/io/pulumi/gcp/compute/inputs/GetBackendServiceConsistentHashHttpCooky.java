@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.GetBackendServiceConsistentHashHttpCookyTtl;
 import java.lang.String;
 import java.util.List;
@@ -18,21 +18,21 @@ public final class GetBackendServiceConsistentHashHttpCooky extends io.pulumi.re
      * The name of the Backend Service.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {
         return this.path;
     }
 
-    @InputImport(name="ttls", required=true)
+    @Import(name="ttls", required=true)
       private final List<GetBackendServiceConsistentHashHttpCookyTtl> ttls;
 
     public List<GetBackendServiceConsistentHashHttpCookyTtl> getTtls() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigtableadmin_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigtableadmin_v2.ClusterArgs;
@@ -24,7 +24,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Configuration for this cluster.
      * 
      */
-    @OutputExport(name="clusterConfig", type=ClusterConfigResponse.class, parameters={})
+    @Export(name="clusterConfig", type=ClusterConfigResponse.class, parameters={})
     private Output<ClusterConfigResponse> clusterConfig;
 
     /**
@@ -38,7 +38,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.
      * 
      */
-    @OutputExport(name="defaultStorageType", type=String.class, parameters={})
+    @Export(name="defaultStorageType", type=String.class, parameters={})
     private Output<String> defaultStorageType;
 
     /**
@@ -52,7 +52,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Immutable. The encryption configuration for CMEK-protected clusters.
      * 
      */
-    @OutputExport(name="encryptionConfig", type=EncryptionConfigResponse.class, parameters={})
+    @Export(name="encryptionConfig", type=EncryptionConfigResponse.class, parameters={})
     private Output<EncryptionConfigResponse> encryptionConfig;
 
     /**
@@ -66,7 +66,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Immutable. The location where this cluster's nodes and storage reside. For best performance, clients should be located as close as possible to this cluster. Currently only zones are supported, so values should be of the form `projects/{project}/locations/{zone}`.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -80,7 +80,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The unique name of the cluster. Values are of the form `projects/{project}/instances/{instance}/clusters/a-z*`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The number of nodes allocated to this cluster. More nodes enable higher throughput and more consistent performance.
      * 
      */
-    @OutputExport(name="serveNodes", type=Integer.class, parameters={})
+    @Export(name="serveNodes", type=Integer.class, parameters={})
     private Output<Integer> serveNodes;
 
     /**
@@ -108,7 +108,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The current state of the cluster.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

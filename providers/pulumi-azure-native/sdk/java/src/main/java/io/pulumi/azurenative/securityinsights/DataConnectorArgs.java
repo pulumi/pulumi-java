@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.securityinsights.enums.DataConnectorKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Connector ID
      * 
      */
-    @InputImport(name="dataConnectorId")
+    @Import(name="dataConnectorId")
       private final @Nullable Output<String> dataConnectorId;
 
     public Output<String> getDataConnectorId() {
@@ -31,7 +31,7 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * The data connector kind
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<Either<String,DataConnectorKind>> kind;
 
     public Output<Either<String,DataConnectorKind>> getKind() {
@@ -42,7 +42,7 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class DataConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

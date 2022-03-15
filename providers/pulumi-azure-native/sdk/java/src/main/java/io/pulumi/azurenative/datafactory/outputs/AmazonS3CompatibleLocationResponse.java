@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AmazonS3CompatibleLocationResponse {
     /**
      * Specify the bucketName of Amazon S3 Compatible. Type: string (or Expression with resultType string)
@@ -39,13 +39,13 @@ public final class AmazonS3CompatibleLocationResponse {
      */
     private final @Nullable Object version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AmazonS3CompatibleLocationResponse(
-        @OutputCustomType.Parameter("bucketName") @Nullable Object bucketName,
-        @OutputCustomType.Parameter("fileName") @Nullable Object fileName,
-        @OutputCustomType.Parameter("folderPath") @Nullable Object folderPath,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") @Nullable Object version) {
+        @CustomType.Parameter("bucketName") @Nullable Object bucketName,
+        @CustomType.Parameter("fileName") @Nullable Object fileName,
+        @CustomType.Parameter("folderPath") @Nullable Object folderPath,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") @Nullable Object version) {
         this.bucketName = bucketName;
         this.fileName = fileName;
         this.folderPath = folderPath;

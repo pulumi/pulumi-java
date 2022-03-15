@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionArgs extends io.
      * Terms from the search query. Will be replaced by replacement term. Can specify up to 100 terms.
      * 
      */
-    @InputImport(name="queryTerms")
+    @Import(name="queryTerms")
       private final @Nullable Output<List<String>> queryTerms;
 
     public Output<List<String>> getQueryTerms() {
@@ -34,7 +34,7 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionArgs extends io.
      * Term that will be used for replacement.
      * 
      */
-    @InputImport(name="replacementTerm")
+    @Import(name="replacementTerm")
       private final @Nullable Output<String> replacementTerm;
 
     public Output<String> getReplacementTerm() {
@@ -45,7 +45,7 @@ public final class GoogleCloudRetailV2alphaRuleReplacementActionArgs extends io.
      * Will be [deprecated = true] post migration;
      * 
      */
-    @InputImport(name="term")
+    @Import(name="term")
       private final @Nullable Output<String> term;
 
     public Output<String> getTerm() {

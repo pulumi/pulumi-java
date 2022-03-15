@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NatGatewaySkuResponse {
     /**
      * Name of Nat Gateway SKU.
@@ -17,8 +17,8 @@ public final class NatGatewaySkuResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private NatGatewaySkuResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private NatGatewaySkuResponse(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

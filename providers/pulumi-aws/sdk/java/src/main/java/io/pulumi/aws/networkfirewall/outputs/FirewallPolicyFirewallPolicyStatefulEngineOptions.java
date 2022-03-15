@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyFirewallPolicyStatefulEngineOptions {
     /**
      * Indicates how to manage the order of stateful rule evaluation for the policy. Default value: `DEFAULT_ACTION_ORDER`. Valid values: `DEFAULT_ACTION_ORDER`, `STRICT_ORDER`.
@@ -15,8 +15,8 @@ public final class FirewallPolicyFirewallPolicyStatefulEngineOptions {
      */
     private final String ruleOrder;
 
-    @OutputCustomType.Constructor
-    private FirewallPolicyFirewallPolicyStatefulEngineOptions(@OutputCustomType.Parameter("ruleOrder") String ruleOrder) {
+    @CustomType.Constructor
+    private FirewallPolicyFirewallPolicyStatefulEngineOptions(@CustomType.Parameter("ruleOrder") String ruleOrder) {
         this.ruleOrder = ruleOrder;
     }
 

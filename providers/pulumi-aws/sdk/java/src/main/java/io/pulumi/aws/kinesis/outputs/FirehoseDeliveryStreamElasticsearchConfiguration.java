@@ -6,14 +6,14 @@ package io.pulumi.aws.kinesis.outputs;
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions;
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration;
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirehoseDeliveryStreamElasticsearchConfiguration {
     /**
      * Buffer incoming data for the specified period of time, in seconds between 60 to 900, before delivering it to the destination.  The default value is 300s.
@@ -81,21 +81,21 @@ public final class FirehoseDeliveryStreamElasticsearchConfiguration {
      */
     private final @Nullable FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig vpcConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirehoseDeliveryStreamElasticsearchConfiguration(
-        @OutputCustomType.Parameter("bufferingInterval") @Nullable Integer bufferingInterval,
-        @OutputCustomType.Parameter("bufferingSize") @Nullable Integer bufferingSize,
-        @OutputCustomType.Parameter("cloudwatchLoggingOptions") @Nullable FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
-        @OutputCustomType.Parameter("clusterEndpoint") @Nullable String clusterEndpoint,
-        @OutputCustomType.Parameter("domainArn") @Nullable String domainArn,
-        @OutputCustomType.Parameter("indexName") String indexName,
-        @OutputCustomType.Parameter("indexRotationPeriod") @Nullable String indexRotationPeriod,
-        @OutputCustomType.Parameter("processingConfiguration") @Nullable FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration processingConfiguration,
-        @OutputCustomType.Parameter("retryDuration") @Nullable Integer retryDuration,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("s3BackupMode") @Nullable String s3BackupMode,
-        @OutputCustomType.Parameter("typeName") @Nullable String typeName,
-        @OutputCustomType.Parameter("vpcConfig") @Nullable FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig vpcConfig) {
+        @CustomType.Parameter("bufferingInterval") @Nullable Integer bufferingInterval,
+        @CustomType.Parameter("bufferingSize") @Nullable Integer bufferingSize,
+        @CustomType.Parameter("cloudwatchLoggingOptions") @Nullable FirehoseDeliveryStreamElasticsearchConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
+        @CustomType.Parameter("clusterEndpoint") @Nullable String clusterEndpoint,
+        @CustomType.Parameter("domainArn") @Nullable String domainArn,
+        @CustomType.Parameter("indexName") String indexName,
+        @CustomType.Parameter("indexRotationPeriod") @Nullable String indexRotationPeriod,
+        @CustomType.Parameter("processingConfiguration") @Nullable FirehoseDeliveryStreamElasticsearchConfigurationProcessingConfiguration processingConfiguration,
+        @CustomType.Parameter("retryDuration") @Nullable Integer retryDuration,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("s3BackupMode") @Nullable String s3BackupMode,
+        @CustomType.Parameter("typeName") @Nullable String typeName,
+        @CustomType.Parameter("vpcConfig") @Nullable FirehoseDeliveryStreamElasticsearchConfigurationVpcConfig vpcConfig) {
         this.bufferingInterval = bufferingInterval;
         this.bufferingSize = bufferingSize;
         this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;

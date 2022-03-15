@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.DataSourceRestrictionArgs;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.FacetOptionsArgs;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.QueryInterpretationConfigArgs;
@@ -26,7 +26,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * Retrictions applied to the configurations. The maximum number of elements is 10.
      * 
      */
-    @InputImport(name="dataSourceRestrictions")
+    @Import(name="dataSourceRestrictions")
       private final @Nullable Output<List<DataSourceRestrictionArgs>> dataSourceRestrictions;
 
     public Output<List<DataSourceRestrictionArgs>> getDataSourceRestrictions() {
@@ -37,7 +37,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * The default fields for returning facet results. The sources specified here also have been included in data_source_restrictions above.
      * 
      */
-    @InputImport(name="defaultFacetOptions")
+    @Import(name="defaultFacetOptions")
       private final @Nullable Output<List<FacetOptionsArgs>> defaultFacetOptions;
 
     public Output<List<FacetOptionsArgs>> getDefaultFacetOptions() {
@@ -48,7 +48,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * The default options for sorting the search results
      * 
      */
-    @InputImport(name="defaultSortOptions")
+    @Import(name="defaultSortOptions")
       private final @Nullable Output<SortOptionsArgs> defaultSortOptions;
 
     public Output<SortOptionsArgs> getDefaultSortOptions() {
@@ -59,7 +59,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * Display name of the Search Application. The maximum length is 300 characters.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -70,7 +70,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * Indicates whether audit logging is on/off for requests made for the search application in query APIs.
      * 
      */
-    @InputImport(name="enableAuditLog")
+    @Import(name="enableAuditLog")
       private final @Nullable Output<Boolean> enableAuditLog;
 
     public Output<Boolean> getEnableAuditLog() {
@@ -81,7 +81,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * Name of the Search Application. Format: searchapplications/{application_id}.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -92,7 +92,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * The default options for query interpretation
      * 
      */
-    @InputImport(name="queryInterpretationConfig")
+    @Import(name="queryInterpretationConfig")
       private final @Nullable Output<QueryInterpretationConfigArgs> queryInterpretationConfig;
 
     public Output<QueryInterpretationConfigArgs> getQueryInterpretationConfig() {
@@ -103,7 +103,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * With each result we should return the URI for its thumbnail (when applicable)
      * 
      */
-    @InputImport(name="returnResultThumbnailUrls")
+    @Import(name="returnResultThumbnailUrls")
       private final @Nullable Output<Boolean> returnResultThumbnailUrls;
 
     public Output<Boolean> getReturnResultThumbnailUrls() {
@@ -114,7 +114,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * Configuration for ranking results.
      * 
      */
-    @InputImport(name="scoringConfig")
+    @Import(name="scoringConfig")
       private final @Nullable Output<ScoringConfigArgs> scoringConfig;
 
     public Output<ScoringConfigArgs> getScoringConfig() {
@@ -125,7 +125,7 @@ public final class SearchApplicationArgs extends io.pulumi.resources.ResourceArg
      * Configuration for a sources specified in data_source_restrictions.
      * 
      */
-    @InputImport(name="sourceConfig")
+    @Import(name="sourceConfig")
       private final @Nullable Output<List<SourceConfigArgs>> sourceConfig;
 
     public Output<List<SourceConfigArgs>> getSourceConfig() {

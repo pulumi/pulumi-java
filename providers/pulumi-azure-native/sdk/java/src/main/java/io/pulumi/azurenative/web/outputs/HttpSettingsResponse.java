@@ -5,13 +5,13 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ForwardProxyResponse;
 import io.pulumi.azurenative.web.outputs.HttpSettingsRoutesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HttpSettingsResponse {
     /**
      * The configuration settings of a forward proxy used to make the requests.
@@ -29,11 +29,11 @@ public final class HttpSettingsResponse {
      */
     private final @Nullable HttpSettingsRoutesResponse routes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpSettingsResponse(
-        @OutputCustomType.Parameter("forwardProxy") @Nullable ForwardProxyResponse forwardProxy,
-        @OutputCustomType.Parameter("requireHttps") @Nullable Boolean requireHttps,
-        @OutputCustomType.Parameter("routes") @Nullable HttpSettingsRoutesResponse routes) {
+        @CustomType.Parameter("forwardProxy") @Nullable ForwardProxyResponse forwardProxy,
+        @CustomType.Parameter("requireHttps") @Nullable Boolean requireHttps,
+        @CustomType.Parameter("routes") @Nullable HttpSettingsRoutesResponse routes) {
         this.forwardProxy = forwardProxy;
         this.requireHttps = requireHttps;
         this.routes = routes;

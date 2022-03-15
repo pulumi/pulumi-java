@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.directconnect.LinkAggregationGroupArgs;
 import io.pulumi.aws.directconnect.inputs.LinkAggregationGroupState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class LinkAggregationGroup extends io.pulumi.resources.CustomResource {
      * The ARN of the LAG.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class LinkAggregationGroup extends io.pulumi.resources.CustomResource {
      * The ID of an existing dedicated connection to migrate to the LAG.
      * 
      */
-    @OutputExport(name="connectionId", type=String.class, parameters={})
+    @Export(name="connectionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectionId;
 
     /**
@@ -64,7 +64,7 @@ public class LinkAggregationGroup extends io.pulumi.resources.CustomResource {
      * The bandwidth of the individual physical connections bundled by the LAG. Valid values: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, 10Gbps and 100Gbps. Case sensitive.
      * 
      */
-    @OutputExport(name="connectionsBandwidth", type=String.class, parameters={})
+    @Export(name="connectionsBandwidth", type=String.class, parameters={})
     private Output<String> connectionsBandwidth;
 
     /**
@@ -78,7 +78,7 @@ public class LinkAggregationGroup extends io.pulumi.resources.CustomResource {
      * A boolean that indicates all connections associated with the LAG should be deleted so that the LAG can be destroyed without error. These objects are *not* recoverable.
      * 
      */
-    @OutputExport(name="forceDestroy", type=Boolean.class, parameters={})
+    @Export(name="forceDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDestroy;
 
     /**
@@ -92,7 +92,7 @@ public class LinkAggregationGroup extends io.pulumi.resources.CustomResource {
      * Indicates whether the LAG supports a secondary BGP peer in the same address family (IPv4/IPv6).
      * 
      */
-    @OutputExport(name="hasLogicalRedundancy", type=String.class, parameters={})
+    @Export(name="hasLogicalRedundancy", type=String.class, parameters={})
     private Output<String> hasLogicalRedundancy;
 
     /**
@@ -102,7 +102,7 @@ public class LinkAggregationGroup extends io.pulumi.resources.CustomResource {
     public Output<String> getHasLogicalRedundancy() {
         return this.hasLogicalRedundancy;
     }
-    @OutputExport(name="jumboFrameCapable", type=Boolean.class, parameters={})
+    @Export(name="jumboFrameCapable", type=Boolean.class, parameters={})
     private Output<Boolean> jumboFrameCapable;
 
     public Output<Boolean> getJumboFrameCapable() {
@@ -112,7 +112,7 @@ public class LinkAggregationGroup extends io.pulumi.resources.CustomResource {
      * The AWS Direct Connect location in which the LAG should be allocated. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -126,7 +126,7 @@ public class LinkAggregationGroup extends io.pulumi.resources.CustomResource {
      * The name of the LAG.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -140,7 +140,7 @@ public class LinkAggregationGroup extends io.pulumi.resources.CustomResource {
      * The ID of the AWS account that owns the LAG.
      * 
      */
-    @OutputExport(name="ownerAccountId", type=String.class, parameters={})
+    @Export(name="ownerAccountId", type=String.class, parameters={})
     private Output<String> ownerAccountId;
 
     /**
@@ -154,7 +154,7 @@ public class LinkAggregationGroup extends io.pulumi.resources.CustomResource {
      * The name of the service provider associated with the LAG.
      * 
      */
-    @OutputExport(name="providerName", type=String.class, parameters={})
+    @Export(name="providerName", type=String.class, parameters={})
     private Output<String> providerName;
 
     /**
@@ -168,7 +168,7 @@ public class LinkAggregationGroup extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -182,7 +182,7 @@ public class LinkAggregationGroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

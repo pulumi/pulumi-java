@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DomainSamlOptionsSamlOptionsIdpGetArgs extends io.pulumi.reso
      * The unique Entity ID of the application in SAML Identity Provider.
      * 
      */
-    @InputImport(name="entityId", required=true)
+    @Import(name="entityId", required=true)
       private final Output<String> entityId;
 
     public Output<String> getEntityId() {
@@ -28,7 +28,7 @@ public final class DomainSamlOptionsSamlOptionsIdpGetArgs extends io.pulumi.reso
      * The Metadata of the SAML application in xml format.
      * 
      */
-    @InputImport(name="metadataContent", required=true)
+    @Import(name="metadataContent", required=true)
       private final Output<String> metadataContent;
 
     public Output<String> getMetadataContent() {

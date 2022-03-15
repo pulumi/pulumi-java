@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.qldb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLedgerResult {
     private final String arn;
     private final Boolean deletionProtection;
@@ -20,13 +20,13 @@ public final class GetLedgerResult {
     private final String name;
     private final String permissionsMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLedgerResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("deletionProtection") Boolean deletionProtection,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("permissionsMode") String permissionsMode) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("deletionProtection") Boolean deletionProtection,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("permissionsMode") String permissionsMode) {
         this.arn = arn;
         this.deletionProtection = deletionProtection;
         this.id = id;

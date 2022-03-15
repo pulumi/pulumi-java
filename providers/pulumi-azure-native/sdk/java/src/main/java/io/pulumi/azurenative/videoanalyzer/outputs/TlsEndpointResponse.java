@@ -7,13 +7,13 @@ import io.pulumi.azurenative.videoanalyzer.outputs.PemCertificateListResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.SecureIotDeviceRemoteTunnelResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.TlsValidationOptionsResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.UsernamePasswordCredentialsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TlsEndpointResponse {
     /**
      * Credentials to be presented to the endpoint.
@@ -47,14 +47,14 @@ public final class TlsEndpointResponse {
      */
     private final @Nullable TlsValidationOptionsResponse validationOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TlsEndpointResponse(
-        @OutputCustomType.Parameter("credentials") UsernamePasswordCredentialsResponse credentials,
-        @OutputCustomType.Parameter("trustedCertificates") @Nullable PemCertificateListResponse trustedCertificates,
-        @OutputCustomType.Parameter("tunnel") @Nullable SecureIotDeviceRemoteTunnelResponse tunnel,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("url") String url,
-        @OutputCustomType.Parameter("validationOptions") @Nullable TlsValidationOptionsResponse validationOptions) {
+        @CustomType.Parameter("credentials") UsernamePasswordCredentialsResponse credentials,
+        @CustomType.Parameter("trustedCertificates") @Nullable PemCertificateListResponse trustedCertificates,
+        @CustomType.Parameter("tunnel") @Nullable SecureIotDeviceRemoteTunnelResponse tunnel,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("url") String url,
+        @CustomType.Parameter("validationOptions") @Nullable TlsValidationOptionsResponse validationOptions) {
         this.credentials = credentials;
         this.trustedCertificates = trustedCertificates;
         this.tunnel = tunnel;

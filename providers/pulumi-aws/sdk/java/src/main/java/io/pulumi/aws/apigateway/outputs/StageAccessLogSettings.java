@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StageAccessLogSettings {
     /**
      * The Amazon Resource Name (ARN) of the CloudWatch Logs log group or Kinesis Data Firehose delivery stream to receive access logs. If you specify a Kinesis Data Firehose delivery stream, the stream name must begin with `amazon-apigateway-`. Automatically removes trailing `:*` if present.
@@ -21,10 +21,10 @@ public final class StageAccessLogSettings {
      */
     private final String format;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StageAccessLogSettings(
-        @OutputCustomType.Parameter("destinationArn") String destinationArn,
-        @OutputCustomType.Parameter("format") String format) {
+        @CustomType.Parameter("destinationArn") String destinationArn,
+        @CustomType.Parameter("format") String format) {
         this.destinationArn = destinationArn;
         this.format = format;
     }

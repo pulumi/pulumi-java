@@ -8,7 +8,7 @@ import io.pulumi.awsnative.route53recoveryreadiness.ResourceSetArgs;
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.ResourceSetResource;
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.ResourceSetTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the resource set.
      * 
      */
-    @OutputExport(name="resourceSetArn", type=String.class, parameters={})
+    @Export(name="resourceSetArn", type=String.class, parameters={})
     private Output<String> resourceSetArn;
 
     /**
@@ -38,7 +38,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * The name of the resource set to create.
      * 
      */
-    @OutputExport(name="resourceSetName", type=String.class, parameters={})
+    @Export(name="resourceSetName", type=String.class, parameters={})
     private Output<String> resourceSetName;
 
     /**
@@ -54,7 +54,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * AWS: :AutoScaling: :AutoScalingGroup, AWS: :CloudWatch: :Alarm, AWS: :EC2: :CustomerGateway, AWS: :DynamoDB: :Table, AWS: :EC2: :Volume, AWS: :ElasticLoadBalancing: :LoadBalancer, AWS: :ElasticLoadBalancingV2: :LoadBalancer, AWS: :MSK: :Cluster, AWS: :RDS: :DBCluster, AWS: :Route53: :HealthCheck, AWS: :SQS: :Queue, AWS: :SNS: :Topic, AWS: :SNS: :Subscription, AWS: :EC2: :VPC, AWS: :EC2: :VPNConnection, AWS: :EC2: :VPNGateway, AWS::Route53RecoveryReadiness::DNSTargetResource
      * 
      */
-    @OutputExport(name="resourceSetType", type=String.class, parameters={})
+    @Export(name="resourceSetType", type=String.class, parameters={})
     private Output<String> resourceSetType;
 
     /**
@@ -70,7 +70,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * A list of resource objects in the resource set.
      * 
      */
-    @OutputExport(name="resources", type=List.class, parameters={ResourceSetResource.class})
+    @Export(name="resources", type=List.class, parameters={ResourceSetResource.class})
     private Output<List<ResourceSetResource>> resources;
 
     /**
@@ -84,7 +84,7 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
      * A tag to associate with the parameters for a resource set.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ResourceSetTag.class})
+    @Export(name="tags", type=List.class, parameters={ResourceSetTag.class})
     private Output</* @Nullable */ List<ResourceSetTag>> tags;
 
     /**

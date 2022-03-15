@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReplicationObjectResponse {
     /**
      * Indicates whether the local volume is the source or destination for the Volume Replication
@@ -37,13 +37,13 @@ public final class ReplicationObjectResponse {
      */
     private final String replicationSchedule;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicationObjectResponse(
-        @OutputCustomType.Parameter("endpointType") @Nullable String endpointType,
-        @OutputCustomType.Parameter("remoteVolumeRegion") @Nullable String remoteVolumeRegion,
-        @OutputCustomType.Parameter("remoteVolumeResourceId") String remoteVolumeResourceId,
-        @OutputCustomType.Parameter("replicationId") @Nullable String replicationId,
-        @OutputCustomType.Parameter("replicationSchedule") String replicationSchedule) {
+        @CustomType.Parameter("endpointType") @Nullable String endpointType,
+        @CustomType.Parameter("remoteVolumeRegion") @Nullable String remoteVolumeRegion,
+        @CustomType.Parameter("remoteVolumeResourceId") String remoteVolumeResourceId,
+        @CustomType.Parameter("replicationId") @Nullable String replicationId,
+        @CustomType.Parameter("replicationSchedule") String replicationSchedule) {
         this.endpointType = endpointType;
         this.remoteVolumeRegion = remoteVolumeRegion;
         this.remoteVolumeResourceId = remoteVolumeResourceId;

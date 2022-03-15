@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaArgs extends io.pulumi.r
      * service will not enforce an explicit upper bound on RSA modulus sizes.
      * 
      */
-    @InputImport(name="maxModulusSize")
+    @Import(name="maxModulusSize")
       private final @Nullable Output<String> maxModulusSize;
 
     public Output<String> getMaxModulusSize() {
@@ -31,7 +31,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaArgs extends io.pulumi.r
      * service-level min RSA modulus size will continue to apply.
      * 
      */
-    @InputImport(name="minModulusSize")
+    @Import(name="minModulusSize")
       private final @Nullable Output<String> minModulusSize;
 
     public Output<String> getMinModulusSize() {

@@ -12,7 +12,7 @@ import io.pulumi.aws.elastictranscoder.outputs.PresetThumbnails;
 import io.pulumi.aws.elastictranscoder.outputs.PresetVideo;
 import io.pulumi.aws.elastictranscoder.outputs.PresetVideoWatermark;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public class Preset extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the Elastic Transcoder Preset.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -53,7 +53,7 @@ public class Preset extends io.pulumi.resources.CustomResource {
      * Audio parameters object (documented below).
      * 
      */
-    @OutputExport(name="audio", type=PresetAudio.class, parameters={})
+    @Export(name="audio", type=PresetAudio.class, parameters={})
     private Output</* @Nullable */ PresetAudio> audio;
 
     /**
@@ -67,7 +67,7 @@ public class Preset extends io.pulumi.resources.CustomResource {
      * Codec options for the audio parameters (documented below)
      * 
      */
-    @OutputExport(name="audioCodecOptions", type=PresetAudioCodecOptions.class, parameters={})
+    @Export(name="audioCodecOptions", type=PresetAudioCodecOptions.class, parameters={})
     private Output</* @Nullable */ PresetAudioCodecOptions> audioCodecOptions;
 
     /**
@@ -81,7 +81,7 @@ public class Preset extends io.pulumi.resources.CustomResource {
      * The container type for the output file. Valid values are `flac`, `flv`, `fmp4`, `gif`, `mp3`, `mp4`, `mpg`, `mxf`, `oga`, `ogg`, `ts`, and `webm`.
      * 
      */
-    @OutputExport(name="container", type=String.class, parameters={})
+    @Export(name="container", type=String.class, parameters={})
     private Output<String> container;
 
     /**
@@ -95,7 +95,7 @@ public class Preset extends io.pulumi.resources.CustomResource {
      * A description of the preset (maximum 255 characters)
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -109,7 +109,7 @@ public class Preset extends io.pulumi.resources.CustomResource {
      * The name of the preset. (maximum 40 characters)
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -123,7 +123,7 @@ public class Preset extends io.pulumi.resources.CustomResource {
      * Thumbnail parameters object (documented below)
      * 
      */
-    @OutputExport(name="thumbnails", type=PresetThumbnails.class, parameters={})
+    @Export(name="thumbnails", type=PresetThumbnails.class, parameters={})
     private Output</* @Nullable */ PresetThumbnails> thumbnails;
 
     /**
@@ -133,7 +133,7 @@ public class Preset extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ PresetThumbnails> getThumbnails() {
         return this.thumbnails;
     }
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     public Output<String> getType() {
@@ -143,7 +143,7 @@ public class Preset extends io.pulumi.resources.CustomResource {
      * Video parameters object (documented below)
      * 
      */
-    @OutputExport(name="video", type=PresetVideo.class, parameters={})
+    @Export(name="video", type=PresetVideo.class, parameters={})
     private Output</* @Nullable */ PresetVideo> video;
 
     /**
@@ -157,7 +157,7 @@ public class Preset extends io.pulumi.resources.CustomResource {
      * Codec options for the video parameters
      * 
      */
-    @OutputExport(name="videoCodecOptions", type=Map.class, parameters={String.class, String.class})
+    @Export(name="videoCodecOptions", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> videoCodecOptions;
 
     /**
@@ -171,7 +171,7 @@ public class Preset extends io.pulumi.resources.CustomResource {
      * Watermark parameters for the video parameters (documented below)
      * 
      */
-    @OutputExport(name="videoWatermarks", type=List.class, parameters={PresetVideoWatermark.class})
+    @Export(name="videoWatermarks", type=List.class, parameters={PresetVideoWatermark.class})
     private Output</* @Nullable */ List<PresetVideoWatermark>> videoWatermarks;
 
     /**

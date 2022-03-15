@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkloadIdentityConfigResponse {
     /**
      * The workload pool to attach all Kubernetes service accounts to.
@@ -15,8 +15,8 @@ public final class WorkloadIdentityConfigResponse {
      */
     private final String workloadPool;
 
-    @OutputCustomType.Constructor
-    private WorkloadIdentityConfigResponse(@OutputCustomType.Parameter("workloadPool") String workloadPool) {
+    @CustomType.Constructor
+    private WorkloadIdentityConfigResponse(@CustomType.Parameter("workloadPool") String workloadPool) {
         this.workloadPool = workloadPool;
     }
 

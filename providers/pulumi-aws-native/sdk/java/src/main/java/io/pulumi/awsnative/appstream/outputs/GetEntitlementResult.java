@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.appstream.outputs;
 
 import io.pulumi.awsnative.appstream.outputs.EntitlementAttribute;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEntitlementResult {
     private final @Nullable String appVisibility;
     private final @Nullable List<EntitlementAttribute> attributes;
@@ -19,13 +19,13 @@ public final class GetEntitlementResult {
     private final @Nullable String description;
     private final @Nullable String lastModifiedTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEntitlementResult(
-        @OutputCustomType.Parameter("appVisibility") @Nullable String appVisibility,
-        @OutputCustomType.Parameter("attributes") @Nullable List<EntitlementAttribute> attributes,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime) {
+        @CustomType.Parameter("appVisibility") @Nullable String appVisibility,
+        @CustomType.Parameter("attributes") @Nullable List<EntitlementAttribute> attributes,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime) {
         this.appVisibility = appVisibility;
         this.attributes = attributes;
         this.createdTime = createdTime;

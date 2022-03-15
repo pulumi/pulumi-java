@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.NotificationConfigResponse;
 import io.pulumi.googlenative.healthcare_v1.outputs.StreamConfigResponse;
 import io.pulumi.googlenative.healthcare_v1.outputs.ValidationConfigResponse;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFhirStoreResult {
     /**
      * If true, overrides the default search behavior for this FHIR store to `handling=strict` which returns an error for unrecognized search parameters. If false, uses the FHIR specification default `handling=lenient` which ignores unrecognized search parameters. The handling can always be changed from the default on an individual API call by setting the HTTP header `Prefer: handling=strict` or `Prefer: handling=lenient`.
@@ -66,18 +66,18 @@ public final class GetFhirStoreResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFhirStoreResult(
-        @OutputCustomType.Parameter("defaultSearchHandlingStrict") Boolean defaultSearchHandlingStrict,
-        @OutputCustomType.Parameter("disableReferentialIntegrity") Boolean disableReferentialIntegrity,
-        @OutputCustomType.Parameter("disableResourceVersioning") Boolean disableResourceVersioning,
-        @OutputCustomType.Parameter("enableUpdateCreate") Boolean enableUpdateCreate,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notificationConfig") NotificationConfigResponse notificationConfig,
-        @OutputCustomType.Parameter("streamConfigs") List<StreamConfigResponse> streamConfigs,
-        @OutputCustomType.Parameter("validationConfig") ValidationConfigResponse validationConfig,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("defaultSearchHandlingStrict") Boolean defaultSearchHandlingStrict,
+        @CustomType.Parameter("disableReferentialIntegrity") Boolean disableReferentialIntegrity,
+        @CustomType.Parameter("disableResourceVersioning") Boolean disableResourceVersioning,
+        @CustomType.Parameter("enableUpdateCreate") Boolean enableUpdateCreate,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notificationConfig") NotificationConfigResponse notificationConfig,
+        @CustomType.Parameter("streamConfigs") List<StreamConfigResponse> streamConfigs,
+        @CustomType.Parameter("validationConfig") ValidationConfigResponse validationConfig,
+        @CustomType.Parameter("version") String version) {
         this.defaultSearchHandlingStrict = defaultSearchHandlingStrict;
         this.disableReferentialIntegrity = disableReferentialIntegrity;
         this.disableResourceVersioning = disableResourceVersioning;

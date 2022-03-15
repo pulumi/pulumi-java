@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.windowsiot.ServiceArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Windows IoT Device Service OEM AAD domain
      * 
      */
-    @OutputExport(name="adminDomainName", type=String.class, parameters={})
+    @Export(name="adminDomainName", type=String.class, parameters={})
     private Output</* @Nullable */ String> adminDomainName;
 
     /**
@@ -50,7 +50,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Windows IoT Device Service ODM AAD domain
      * 
      */
-    @OutputExport(name="billingDomainName", type=String.class, parameters={})
+    @Export(name="billingDomainName", type=String.class, parameters={})
     private Output</* @Nullable */ String> billingDomainName;
 
     /**
@@ -64,7 +64,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The Etag field is *not* required. If it is provided in the response body, it must also be provided as a header per the normal ETag convention.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -78,7 +78,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The Azure Region where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -92,7 +92,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -106,7 +106,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Windows IoT Device Service notes.
      * 
      */
-    @OutputExport(name="notes", type=String.class, parameters={})
+    @Export(name="notes", type=String.class, parameters={})
     private Output</* @Nullable */ String> notes;
 
     /**
@@ -120,7 +120,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Windows IoT Device Service device allocation,
      * 
      */
-    @OutputExport(name="quantity", type=Double.class, parameters={})
+    @Export(name="quantity", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> quantity;
 
     /**
@@ -134,7 +134,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Windows IoT Device Service start date,
      * 
      */
-    @OutputExport(name="startDate", type=String.class, parameters={})
+    @Export(name="startDate", type=String.class, parameters={})
     private Output<String> startDate;
 
     /**
@@ -148,7 +148,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -162,7 +162,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

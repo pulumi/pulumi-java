@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PickTimeSeriesFilterResponse extends io.pulumi.resources.Invo
      * How to use the ranking to select time series that pass through the filter.
      * 
      */
-    @InputImport(name="direction", required=true)
+    @Import(name="direction", required=true)
       private final String direction;
 
     public String getDirection() {
@@ -32,7 +32,7 @@ public final class PickTimeSeriesFilterResponse extends io.pulumi.resources.Invo
      * How many time series to allow to pass through the filter.
      * 
      */
-    @InputImport(name="numTimeSeries", required=true)
+    @Import(name="numTimeSeries", required=true)
       private final Integer numTimeSeries;
 
     public Integer getNumTimeSeries() {
@@ -43,7 +43,7 @@ public final class PickTimeSeriesFilterResponse extends io.pulumi.resources.Invo
      * ranking_method is applied to each time series independently to produce the value which will be used to compare the time series to other time series.
      * 
      */
-    @InputImport(name="rankingMethod", required=true)
+    @Import(name="rankingMethod", required=true)
       private final String rankingMethod;
 
     public String getRankingMethod() {

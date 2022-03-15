@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * IP address from an EC2 BYOIP pool. This option is only available for VPC EIPs.
      * 
      */
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
@@ -31,7 +31,7 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * User-specified primary or secondary private IP address to associate with the Elastic IP address. If no private IP address is specified, the Elastic IP address is associated with the primary private IP address.
      * 
      */
-    @InputImport(name="associateWithPrivateIp")
+    @Import(name="associateWithPrivateIp")
       private final @Nullable Output<String> associateWithPrivateIp;
 
     public Output<String> getAssociateWithPrivateIp() {
@@ -42,7 +42,7 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * ID  of a customer-owned address pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing).
      * 
      */
-    @InputImport(name="customerOwnedIpv4Pool")
+    @Import(name="customerOwnedIpv4Pool")
       private final @Nullable Output<String> customerOwnedIpv4Pool;
 
     public Output<String> getCustomerOwnedIpv4Pool() {
@@ -53,7 +53,7 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * EC2 instance ID.
      * 
      */
-    @InputImport(name="instance")
+    @Import(name="instance")
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
@@ -64,7 +64,7 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * Location from which the IP address is advertised. Use this parameter to limit the address to this location.
      * 
      */
-    @InputImport(name="networkBorderGroup")
+    @Import(name="networkBorderGroup")
       private final @Nullable Output<String> networkBorderGroup;
 
     public Output<String> getNetworkBorderGroup() {
@@ -75,7 +75,7 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * Network interface ID to associate with.
      * 
      */
-    @InputImport(name="networkInterface")
+    @Import(name="networkInterface")
       private final @Nullable Output<String> networkInterface;
 
     public Output<String> getNetworkInterface() {
@@ -86,7 +86,7 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
      * 
      */
-    @InputImport(name="publicIpv4Pool")
+    @Import(name="publicIpv4Pool")
       private final @Nullable Output<String> publicIpv4Pool;
 
     public Output<String> getPublicIpv4Pool() {
@@ -97,7 +97,7 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * Map of tags to assign to the resource. Tags can only be applied to EIPs in a VPC. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -108,7 +108,7 @@ public final class EipArgs extends io.pulumi.resources.ResourceArgs {
      * Boolean if the EIP is in a VPC or not.
      * 
      */
-    @InputImport(name="vpc")
+    @Import(name="vpc")
       private final @Nullable Output<Boolean> vpc;
 
     public Output<Boolean> getVpc() {

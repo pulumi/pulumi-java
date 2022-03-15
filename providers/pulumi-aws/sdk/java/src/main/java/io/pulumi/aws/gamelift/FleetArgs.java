@@ -7,7 +7,7 @@ import io.pulumi.aws.gamelift.inputs.FleetEc2InboundPermissionArgs;
 import io.pulumi.aws.gamelift.inputs.FleetResourceCreationLimitPolicyArgs;
 import io.pulumi.aws.gamelift.inputs.FleetRuntimeConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the Gamelift Build to be deployed on the fleet.
      * 
      */
-    @InputImport(name="buildId", required=true)
+    @Import(name="buildId", required=true)
       private final Output<String> buildId;
 
     public Output<String> getBuildId() {
@@ -34,7 +34,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Human-readable description of the fleet.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Range of IP addresses and port settings that permit inbound traffic to access server processes running on the fleet. See below.
      * 
      */
-    @InputImport(name="ec2InboundPermissions")
+    @Import(name="ec2InboundPermissions")
       private final @Nullable Output<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions;
 
     public Output<List<FleetEc2InboundPermissionArgs>> getEc2InboundPermissions() {
@@ -56,7 +56,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an EC2 instance typeE.g., `t2.micro`
      * 
      */
-    @InputImport(name="ec2InstanceType", required=true)
+    @Import(name="ec2InstanceType", required=true)
       private final Output<String> ec2InstanceType;
 
     public Output<String> getEc2InstanceType() {
@@ -67,7 +67,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Type of fleet. This value must be `ON_DEMAND` or `SPOT`. Defaults to `ON_DEMAND`.
      * 
      */
-    @InputImport(name="fleetType")
+    @Import(name="fleetType")
       private final @Nullable Output<String> fleetType;
 
     public Output<String> getFleetType() {
@@ -78,7 +78,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of an IAM role that instances in the fleet can assume.
      * 
      */
-    @InputImport(name="instanceRoleArn")
+    @Import(name="instanceRoleArn")
       private final @Nullable Output<String> instanceRoleArn;
 
     public Output<String> getInstanceRoleArn() {
@@ -89,7 +89,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * List of names of metric groups to add this fleet to. A metric group tracks metrics across all fleets in the group. Defaults to `default`.
      * 
      */
-    @InputImport(name="metricGroups")
+    @Import(name="metricGroups")
       private final @Nullable Output<List<String>> metricGroups;
 
     public Output<List<String>> getMetricGroups() {
@@ -100,7 +100,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the fleet.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -111,7 +111,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Game session protection policy to apply to all instances in this fleetE.g., `FullProtection`. Defaults to `NoProtection`.
      * 
      */
-    @InputImport(name="newGameSessionProtectionPolicy")
+    @Import(name="newGameSessionProtectionPolicy")
       private final @Nullable Output<String> newGameSessionProtectionPolicy;
 
     public Output<String> getNewGameSessionProtectionPolicy() {
@@ -122,7 +122,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Policy that limits the number of game sessions an individual player can create over a span of time for this fleet. See below.
      * 
      */
-    @InputImport(name="resourceCreationLimitPolicy")
+    @Import(name="resourceCreationLimitPolicy")
       private final @Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy;
 
     public Output<FleetResourceCreationLimitPolicyArgs> getResourceCreationLimitPolicy() {
@@ -133,7 +133,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Instructions for launching server processes on each instance in the fleet. See below.
      * 
      */
-    @InputImport(name="runtimeConfiguration")
+    @Import(name="runtimeConfiguration")
       private final @Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration;
 
     public Output<FleetRuntimeConfigurationArgs> getRuntimeConfiguration() {
@@ -144,7 +144,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

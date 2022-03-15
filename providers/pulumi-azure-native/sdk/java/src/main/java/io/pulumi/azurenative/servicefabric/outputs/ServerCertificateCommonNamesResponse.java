@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.servicefabric.outputs;
 
 import io.pulumi.azurenative.servicefabric.outputs.ServerCertificateCommonNameResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServerCertificateCommonNamesResponse {
     /**
      * The list of server certificates referenced by common name that are used to secure the cluster.
@@ -24,10 +24,10 @@ public final class ServerCertificateCommonNamesResponse {
      */
     private final @Nullable String x509StoreName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServerCertificateCommonNamesResponse(
-        @OutputCustomType.Parameter("commonNames") @Nullable List<ServerCertificateCommonNameResponse> commonNames,
-        @OutputCustomType.Parameter("x509StoreName") @Nullable String x509StoreName) {
+        @CustomType.Parameter("commonNames") @Nullable List<ServerCertificateCommonNameResponse> commonNames,
+        @CustomType.Parameter("x509StoreName") @Nullable String x509StoreName) {
         this.commonNames = commonNames;
         this.x509StoreName = x509StoreName;
     }

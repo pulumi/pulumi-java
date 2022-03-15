@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.maintenance.MaintenanceConfigurationArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * Gets or sets extensionProperties of the maintenanceConfiguration. This is for future use only and would be a set of key value pairs for additional information e.g. whether to follow SDP etc.
      * 
      */
-    @OutputExport(name="extensionProperties", type=Map.class, parameters={String.class, String.class})
+    @Export(name="extensionProperties", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> extensionProperties;
 
     /**
@@ -49,7 +49,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * Gets or sets location of the resource
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -63,7 +63,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * Gets or sets maintenanceScope of the configuration. It represent the impact area of the maintenance
      * 
      */
-    @OutputExport(name="maintenanceScope", type=String.class, parameters={})
+    @Export(name="maintenanceScope", type=String.class, parameters={})
     private Output</* @Nullable */ String> maintenanceScope;
 
     /**
@@ -77,7 +77,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * Name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * Gets or sets namespace of the resource e.g. Microsoft.Maintenance or Microsoft.Sql
      * 
      */
-    @OutputExport(name="namespace", type=String.class, parameters={})
+    @Export(name="namespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> namespace;
 
     /**
@@ -105,7 +105,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * Gets or sets tags of the resource
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -119,7 +119,7 @@ public class MaintenanceConfiguration extends io.pulumi.resources.CustomResource
      * Type of the resource
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

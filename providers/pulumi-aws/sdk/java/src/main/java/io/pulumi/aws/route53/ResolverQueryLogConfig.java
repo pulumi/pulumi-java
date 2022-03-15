@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53.ResolverQueryLogConfigArgs;
 import io.pulumi.aws.route53.inputs.ResolverQueryLogConfigState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class ResolverQueryLogConfig extends io.pulumi.resources.CustomResource {
      * The ARN (Amazon Resource Name) of the Route 53 Resolver query logging configuration.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class ResolverQueryLogConfig extends io.pulumi.resources.CustomResource {
      * You can send query logs to an S3 bucket, a CloudWatch Logs log group, or a Kinesis Data Firehose delivery stream.
      * 
      */
-    @OutputExport(name="destinationArn", type=String.class, parameters={})
+    @Export(name="destinationArn", type=String.class, parameters={})
     private Output<String> destinationArn;
 
     /**
@@ -63,7 +63,7 @@ public class ResolverQueryLogConfig extends io.pulumi.resources.CustomResource {
      * The name of the Route 53 Resolver query logging configuration.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class ResolverQueryLogConfig extends io.pulumi.resources.CustomResource {
      * The AWS account ID of the account that created the query logging configuration.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -93,7 +93,7 @@ public class ResolverQueryLogConfig extends io.pulumi.resources.CustomResource {
      * Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
      * 
      */
-    @OutputExport(name="shareStatus", type=String.class, parameters={})
+    @Export(name="shareStatus", type=String.class, parameters={})
     private Output<String> shareStatus;
 
     /**
@@ -109,7 +109,7 @@ public class ResolverQueryLogConfig extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -123,7 +123,7 @@ public class ResolverQueryLogConfig extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

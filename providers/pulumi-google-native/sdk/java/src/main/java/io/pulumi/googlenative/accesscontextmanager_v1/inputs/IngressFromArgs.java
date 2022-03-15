@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.accesscontextmanager_v1.enums.IngressFromIdentityType;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.IngressSourceArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
      * A list of identities that are allowed access through this ingress policy. Should be in the format of email address. The email address should represent individual user or service account only.
      * 
      */
-    @InputImport(name="identities")
+    @Import(name="identities")
       private final @Nullable Output<List<String>> identities;
 
     public Output<List<String>> getIdentities() {
@@ -36,7 +36,7 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the type of identities that are allowed access from outside the perimeter. If left unspecified, then members of `identities` field will be allowed access.
      * 
      */
-    @InputImport(name="identityType")
+    @Import(name="identityType")
       private final @Nullable Output<IngressFromIdentityType> identityType;
 
     public Output<IngressFromIdentityType> getIdentityType() {
@@ -47,7 +47,7 @@ public final class IngressFromArgs extends io.pulumi.resources.ResourceArgs {
      * Sources that this IngressPolicy authorizes access from.
      * 
      */
-    @InputImport(name="sources")
+    @Import(name="sources")
       private final @Nullable Output<List<IngressSourceArgs>> sources;
 
     public Output<List<IngressSourceArgs>> getSources() {

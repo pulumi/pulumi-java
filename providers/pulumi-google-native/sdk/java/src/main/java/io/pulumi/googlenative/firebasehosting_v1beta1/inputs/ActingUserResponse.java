@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ActingUserResponse extends io.pulumi.resources.InvokeArgs {
      * The email address of the user when the user performed the action.
      * 
      */
-    @InputImport(name="email", required=true)
+    @Import(name="email", required=true)
       private final String email;
 
     public String getEmail() {
@@ -31,7 +31,7 @@ public final class ActingUserResponse extends io.pulumi.resources.InvokeArgs {
      * A profile image URL for the user. May not be present if the user has changed their email address or deleted their account.
      * 
      */
-    @InputImport(name="imageUrl", required=true)
+    @Import(name="imageUrl", required=true)
       private final String imageUrl;
 
     public String getImageUrl() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaserules_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MetadataResponse extends io.pulumi.resources.InvokeArgs {
      * Services that this ruleset has declarations for (e.g., "cloud.firestore"). There may be 0+ of these.
      * 
      */
-    @InputImport(name="services", required=true)
+    @Import(name="services", required=true)
       private final List<String> services;
 
     public List<String> getServices() {

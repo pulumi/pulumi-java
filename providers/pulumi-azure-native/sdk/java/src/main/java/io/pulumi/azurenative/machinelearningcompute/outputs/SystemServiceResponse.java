@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SystemServiceResponse {
     /**
      * The public IP address of the system service
@@ -25,11 +25,11 @@ public final class SystemServiceResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SystemServiceResponse(
-        @OutputCustomType.Parameter("publicIpAddress") String publicIpAddress,
-        @OutputCustomType.Parameter("systemServiceType") String systemServiceType,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("publicIpAddress") String publicIpAddress,
+        @CustomType.Parameter("systemServiceType") String systemServiceType,
+        @CustomType.Parameter("version") String version) {
         this.publicIpAddress = publicIpAddress;
         this.systemServiceType = systemServiceType;
         this.version = version;

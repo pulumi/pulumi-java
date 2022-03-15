@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.PipelineSourceTriggerDescriptorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineTriggerDescriptorResponse {
     /**
      * The source trigger that caused the pipeline run.
@@ -17,8 +17,8 @@ public final class PipelineTriggerDescriptorResponse {
      */
     private final @Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger;
 
-    @OutputCustomType.Constructor
-    private PipelineTriggerDescriptorResponse(@OutputCustomType.Parameter("sourceTrigger") @Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger) {
+    @CustomType.Constructor
+    private PipelineTriggerDescriptorResponse(@CustomType.Parameter("sourceTrigger") @Nullable PipelineSourceTriggerDescriptorResponse sourceTrigger) {
         this.sourceTrigger = sourceTrigger;
     }
 

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.enums.SubscriptionState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class SubscriptionStateRuleArgs extends io.pulumi.resources.Resourc
 
     public static final SubscriptionStateRuleArgs Empty = new SubscriptionStateRuleArgs();
 
-    @InputImport(name="allowedActions")
+    @Import(name="allowedActions")
       private final @Nullable Output<List<String>> allowedActions;
 
     public Output<List<String>> getAllowedActions() {
         return this.allowedActions == null ? Output.empty() : this.allowedActions;
     }
 
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<Either<String,SubscriptionState>> state;
 
     public Output<Either<String,SubscriptionState>> getState() {

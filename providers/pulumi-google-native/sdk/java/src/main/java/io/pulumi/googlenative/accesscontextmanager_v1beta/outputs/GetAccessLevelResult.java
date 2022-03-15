@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.outputs.BasicLevelResponse;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.outputs.CustomLevelResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAccessLevelResult {
     /**
      * A `BasicLevel` composed of `Conditions`.
@@ -37,13 +37,13 @@ public final class GetAccessLevelResult {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccessLevelResult(
-        @OutputCustomType.Parameter("basic") BasicLevelResponse basic,
-        @OutputCustomType.Parameter("custom") CustomLevelResponse custom,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("basic") BasicLevelResponse basic,
+        @CustomType.Parameter("custom") CustomLevelResponse custom,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("title") String title) {
         this.basic = basic;
         this.custom = custom;
         this.description = description;

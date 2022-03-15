@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceFileResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class OSPolicyResourcePackageResourceMSIResponse extends io.pulumi.
      * Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final List<String> properties;
 
     public List<String> getProperties() {
@@ -33,7 +33,7 @@ public final class OSPolicyResourcePackageResourceMSIResponse extends io.pulumi.
      * The MSI package.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final OSPolicyResourceFileResponse source;
 
     public OSPolicyResourceFileResponse getSource() {

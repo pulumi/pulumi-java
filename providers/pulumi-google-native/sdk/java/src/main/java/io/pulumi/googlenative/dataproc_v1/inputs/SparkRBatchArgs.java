@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
      * 
      */
-    @InputImport(name="archiveUris")
+    @Import(name="archiveUris")
       private final @Nullable Output<List<String>> archiveUris;
 
     public Output<List<String>> getArchiveUris() {
@@ -34,7 +34,7 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The arguments to pass to the Spark driver. Do not include arguments that can be set as batch properties, such as --conf, since a collision can occur that causes an incorrect batch submission.
      * 
      */
-    @InputImport(name="args")
+    @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
@@ -45,7 +45,7 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. HCFS URIs of files to be placed in the working directory of each executor.
      * 
      */
-    @InputImport(name="fileUris")
+    @Import(name="fileUris")
       private final @Nullable Output<List<String>> fileUris;
 
     public Output<List<String>> getFileUris() {
@@ -56,7 +56,7 @@ public final class SparkRBatchArgs extends io.pulumi.resources.ResourceArgs {
      * The HCFS URI of the main R file to use as the driver. Must be a .R or .r file.
      * 
      */
-    @InputImport(name="mainRFileUri", required=true)
+    @Import(name="mainRFileUri", required=true)
       private final Output<String> mainRFileUri;
 
     public Output<String> getMainRFileUri() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
      * Array of shell commands to execute
      * 
      */
-    @InputImport(name="inline")
+    @Import(name="inline")
       private final @Nullable Output<List<String>> inline;
 
     public Output<List<String>> getInline() {
@@ -34,7 +34,7 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
      * Friendly Name to provide context on what this customization step does
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -45,7 +45,7 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
      * URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
      * 
      */
-    @InputImport(name="scriptUri")
+    @Import(name="scriptUri")
       private final @Nullable Output<String> scriptUri;
 
     public Output<String> getScriptUri() {
@@ -56,7 +56,7 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
      * SHA256 checksum of the shell script provided in the scriptUri field
      * 
      */
-    @InputImport(name="sha256Checksum")
+    @Import(name="sha256Checksum")
       private final @Nullable Output<String> sha256Checksum;
 
     public Output<String> getSha256Checksum() {
@@ -68,7 +68,7 @@ public final class ImageTemplateShellCustomizerArgs extends io.pulumi.resources.
      * Expected value is 'Shell'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

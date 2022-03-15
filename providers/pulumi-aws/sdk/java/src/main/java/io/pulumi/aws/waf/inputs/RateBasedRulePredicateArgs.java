@@ -4,7 +4,7 @@
 package io.pulumi.aws.waf.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class RateBasedRulePredicateArgs extends io.pulumi.resources.Resour
      * A unique identifier for a predicate in the rule, such as Byte Match Set ID or IPSet ID.
      * 
      */
-    @InputImport(name="dataId", required=true)
+    @Import(name="dataId", required=true)
       private final Output<String> dataId;
 
     public Output<String> getDataId() {
@@ -32,7 +32,7 @@ public final class RateBasedRulePredicateArgs extends io.pulumi.resources.Resour
      * If set to `true`, AWS WAF will allow, block, or count requests based on all IP addresses _except_ `192.0.2.44`.
      * 
      */
-    @InputImport(name="negated", required=true)
+    @Import(name="negated", required=true)
       private final Output<Boolean> negated;
 
     public Output<Boolean> getNegated() {
@@ -43,7 +43,7 @@ public final class RateBasedRulePredicateArgs extends io.pulumi.resources.Resour
      * The type of predicate in a rule. Valid values: `ByteMatch`, `GeoMatch`, `IPMatch`, `RegexMatch`, `SizeConstraint`, `SqlInjectionMatch`, or `XssMatch`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

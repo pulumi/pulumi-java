@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RedirectResponse {
     /**
      * The user-supplied [glob](https://firebase.google.com/docs/hosting/full-config#glob_pattern_matching) to match against the request URL path.
@@ -31,12 +31,12 @@ public final class RedirectResponse {
      */
     private final Integer statusCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RedirectResponse(
-        @OutputCustomType.Parameter("glob") String glob,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("regex") String regex,
-        @OutputCustomType.Parameter("statusCode") Integer statusCode) {
+        @CustomType.Parameter("glob") String glob,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("regex") String regex,
+        @CustomType.Parameter("statusCode") Integer statusCode) {
         this.glob = glob;
         this.location = location;
         this.regex = regex;

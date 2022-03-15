@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesAssignmentGroupLabelGetArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesAssignmentOsTypeGetArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="groupLabels")
+    @Import(name="groupLabels")
       private final @Nullable Output<List<GuestPoliciesAssignmentGroupLabelGetArgs>> groupLabels;
 
     public Output<List<GuestPoliciesAssignmentGroupLabelGetArgs>> getGroupLabels() {
@@ -37,7 +37,7 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
      * Only supported for project-level policies.
      * 
      */
-    @InputImport(name="instanceNamePrefixes")
+    @Import(name="instanceNamePrefixes")
       private final @Nullable Output<List<String>> instanceNamePrefixes;
 
     public Output<List<String>> getInstanceNamePrefixes() {
@@ -52,7 +52,7 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
      * Only supported for project-level policies and must reference instances within this project.
      * 
      */
-    @InputImport(name="instances")
+    @Import(name="instances")
       private final @Nullable Output<List<String>> instances;
 
     public Output<List<String>> getInstances() {
@@ -65,7 +65,7 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="osTypes")
+    @Import(name="osTypes")
       private final @Nullable Output<List<GuestPoliciesAssignmentOsTypeGetArgs>> osTypes;
 
     public Output<List<GuestPoliciesAssignmentOsTypeGetArgs>> getOsTypes() {
@@ -77,7 +77,7 @@ public final class GuestPoliciesAssignmentGetArgs extends io.pulumi.resources.Re
      * Zonal targeting is uncommon and is supported to facilitate the management of changes by zone.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {

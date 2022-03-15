@@ -5,7 +5,7 @@ package io.pulumi.awsnative.timestream.inputs;
 
 import io.pulumi.awsnative.timestream.inputs.MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class MagneticStoreWritePropertiesPropertiesArgs extends io.pulumi.
      * Boolean flag indicating whether magnetic store writes are enabled.
      * 
      */
-    @InputImport(name="enableMagneticStoreWrites", required=true)
+    @Import(name="enableMagneticStoreWrites", required=true)
       private final Output<Boolean> enableMagneticStoreWrites;
 
     public Output<Boolean> getEnableMagneticStoreWrites() {
@@ -34,7 +34,7 @@ public final class MagneticStoreWritePropertiesPropertiesArgs extends io.pulumi.
      * Location to store information about records that were asynchronously rejected during magnetic store writes.
      * 
      */
-    @InputImport(name="magneticStoreRejectedDataLocation")
+    @Import(name="magneticStoreRejectedDataLocation")
       private final @Nullable Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> magneticStoreRejectedDataLocation;
 
     public Output<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> getMagneticStoreRejectedDataLocation() {

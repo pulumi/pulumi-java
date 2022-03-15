@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DataDisksGroupsResponse extends io.pulumi.resources.InvokeArg
      * ReadOnly. The DiskSize in GB. Do not set this value.
      * 
      */
-    @InputImport(name="diskSizeGB", required=true)
+    @Import(name="diskSizeGB", required=true)
       private final Integer diskSizeGB;
 
     public Integer getDiskSizeGB() {
@@ -34,7 +34,7 @@ public final class DataDisksGroupsResponse extends io.pulumi.resources.InvokeArg
      * The number of disks per node.
      * 
      */
-    @InputImport(name="disksPerNode")
+    @Import(name="disksPerNode")
       private final @Nullable Integer disksPerNode;
 
     public Optional<Integer> getDisksPerNode() {
@@ -45,7 +45,7 @@ public final class DataDisksGroupsResponse extends io.pulumi.resources.InvokeArg
      * ReadOnly. The storage account type. Do not set this value.
      * 
      */
-    @InputImport(name="storageAccountType", required=true)
+    @Import(name="storageAccountType", required=true)
       private final String storageAccountType;
 
     public String getStorageAccountType() {

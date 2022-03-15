@@ -8,7 +8,7 @@ import io.pulumi.aws.eks.IdentityProviderConfigArgs;
 import io.pulumi.aws.eks.inputs.IdentityProviderConfigState;
 import io.pulumi.aws.eks.outputs.IdentityProviderConfigOidc;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -34,7 +34,7 @@ public class IdentityProviderConfig extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the EKS Identity Provider Configuration.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class IdentityProviderConfig extends io.pulumi.resources.CustomResource {
      * Name of the EKS Cluster.
      * 
      */
-    @OutputExport(name="clusterName", type=String.class, parameters={})
+    @Export(name="clusterName", type=String.class, parameters={})
     private Output<String> clusterName;
 
     /**
@@ -62,7 +62,7 @@ public class IdentityProviderConfig extends io.pulumi.resources.CustomResource {
      * Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
      * 
      */
-    @OutputExport(name="oidc", type=IdentityProviderConfigOidc.class, parameters={})
+    @Export(name="oidc", type=IdentityProviderConfigOidc.class, parameters={})
     private Output<IdentityProviderConfigOidc> oidc;
 
     /**
@@ -76,7 +76,7 @@ public class IdentityProviderConfig extends io.pulumi.resources.CustomResource {
      * Status of the EKS Identity Provider Configuration.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -90,7 +90,7 @@ public class IdentityProviderConfig extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -104,7 +104,7 @@ public class IdentityProviderConfig extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

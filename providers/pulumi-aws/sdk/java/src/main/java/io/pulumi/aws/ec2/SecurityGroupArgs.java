@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.SecurityGroupEgressArgs;
 import io.pulumi.aws.ec2.inputs.SecurityGroupIngressArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Description of this egress rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -34,7 +34,7 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for egress rules. Can be specified multiple times for each egress rule. Each egress block supports fields documented below.
      * 
      */
-    @InputImport(name="egress")
+    @Import(name="egress")
       private final @Nullable Output<List<SecurityGroupEgressArgs>> egress;
 
     public Output<List<SecurityGroupEgressArgs>> getEgress() {
@@ -45,7 +45,7 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for egress rules. Can be specified multiple times for each ingress rule. Each ingress block supports fields documented below.
      * 
      */
-    @InputImport(name="ingress")
+    @Import(name="ingress")
       private final @Nullable Output<List<SecurityGroupIngressArgs>> ingress;
 
     public Output<List<SecurityGroupIngressArgs>> getIngress() {
@@ -56,7 +56,7 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the security group. If omitted, this provider will assign a random, unique name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -67,7 +67,7 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -78,7 +78,7 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Instruct this provider to revoke all of the Security Groups attached ingress and egress rules before deleting the rule itself. This is normally not needed, however certain AWS services such as Elastic Map Reduce may automatically add required rules to security groups used with the service, and those rules may contain a cyclic dependency that prevent the security groups from being destroyed without removing the dependency first. Default `false`.
      * 
      */
-    @InputImport(name="revokeRulesOnDelete")
+    @Import(name="revokeRulesOnDelete")
       private final @Nullable Output<Boolean> revokeRulesOnDelete;
 
     public Output<Boolean> getRevokeRulesOnDelete() {
@@ -89,7 +89,7 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Map of tags to assign to the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -100,7 +100,7 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
      * VPC ID.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

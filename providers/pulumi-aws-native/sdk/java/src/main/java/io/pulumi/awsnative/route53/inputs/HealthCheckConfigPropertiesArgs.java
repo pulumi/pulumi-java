@@ -7,7 +7,7 @@ import io.pulumi.awsnative.route53.enums.HealthCheckConfigPropertiesInsufficient
 import io.pulumi.awsnative.route53.enums.HealthCheckConfigPropertiesType;
 import io.pulumi.awsnative.route53.inputs.HealthCheckAlarmIdentifierArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,119 +24,119 @@ public final class HealthCheckConfigPropertiesArgs extends io.pulumi.resources.R
 
     public static final HealthCheckConfigPropertiesArgs Empty = new HealthCheckConfigPropertiesArgs();
 
-    @InputImport(name="alarmIdentifier")
+    @Import(name="alarmIdentifier")
       private final @Nullable Output<HealthCheckAlarmIdentifierArgs> alarmIdentifier;
 
     public Output<HealthCheckAlarmIdentifierArgs> getAlarmIdentifier() {
         return this.alarmIdentifier == null ? Output.empty() : this.alarmIdentifier;
     }
 
-    @InputImport(name="childHealthChecks")
+    @Import(name="childHealthChecks")
       private final @Nullable Output<List<String>> childHealthChecks;
 
     public Output<List<String>> getChildHealthChecks() {
         return this.childHealthChecks == null ? Output.empty() : this.childHealthChecks;
     }
 
-    @InputImport(name="enableSNI")
+    @Import(name="enableSNI")
       private final @Nullable Output<Boolean> enableSNI;
 
     public Output<Boolean> getEnableSNI() {
         return this.enableSNI == null ? Output.empty() : this.enableSNI;
     }
 
-    @InputImport(name="failureThreshold")
+    @Import(name="failureThreshold")
       private final @Nullable Output<Integer> failureThreshold;
 
     public Output<Integer> getFailureThreshold() {
         return this.failureThreshold == null ? Output.empty() : this.failureThreshold;
     }
 
-    @InputImport(name="fullyQualifiedDomainName")
+    @Import(name="fullyQualifiedDomainName")
       private final @Nullable Output<String> fullyQualifiedDomainName;
 
     public Output<String> getFullyQualifiedDomainName() {
         return this.fullyQualifiedDomainName == null ? Output.empty() : this.fullyQualifiedDomainName;
     }
 
-    @InputImport(name="healthThreshold")
+    @Import(name="healthThreshold")
       private final @Nullable Output<Integer> healthThreshold;
 
     public Output<Integer> getHealthThreshold() {
         return this.healthThreshold == null ? Output.empty() : this.healthThreshold;
     }
 
-    @InputImport(name="iPAddress")
+    @Import(name="iPAddress")
       private final @Nullable Output<String> iPAddress;
 
     public Output<String> getIPAddress() {
         return this.iPAddress == null ? Output.empty() : this.iPAddress;
     }
 
-    @InputImport(name="insufficientDataHealthStatus")
+    @Import(name="insufficientDataHealthStatus")
       private final @Nullable Output<HealthCheckConfigPropertiesInsufficientDataHealthStatus> insufficientDataHealthStatus;
 
     public Output<HealthCheckConfigPropertiesInsufficientDataHealthStatus> getInsufficientDataHealthStatus() {
         return this.insufficientDataHealthStatus == null ? Output.empty() : this.insufficientDataHealthStatus;
     }
 
-    @InputImport(name="inverted")
+    @Import(name="inverted")
       private final @Nullable Output<Boolean> inverted;
 
     public Output<Boolean> getInverted() {
         return this.inverted == null ? Output.empty() : this.inverted;
     }
 
-    @InputImport(name="measureLatency")
+    @Import(name="measureLatency")
       private final @Nullable Output<Boolean> measureLatency;
 
     public Output<Boolean> getMeasureLatency() {
         return this.measureLatency == null ? Output.empty() : this.measureLatency;
     }
 
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
         return this.port == null ? Output.empty() : this.port;
     }
 
-    @InputImport(name="regions")
+    @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
     public Output<List<String>> getRegions() {
         return this.regions == null ? Output.empty() : this.regions;
     }
 
-    @InputImport(name="requestInterval")
+    @Import(name="requestInterval")
       private final @Nullable Output<Integer> requestInterval;
 
     public Output<Integer> getRequestInterval() {
         return this.requestInterval == null ? Output.empty() : this.requestInterval;
     }
 
-    @InputImport(name="resourcePath")
+    @Import(name="resourcePath")
       private final @Nullable Output<String> resourcePath;
 
     public Output<String> getResourcePath() {
         return this.resourcePath == null ? Output.empty() : this.resourcePath;
     }
 
-    @InputImport(name="routingControlArn")
+    @Import(name="routingControlArn")
       private final @Nullable Output<String> routingControlArn;
 
     public Output<String> getRoutingControlArn() {
         return this.routingControlArn == null ? Output.empty() : this.routingControlArn;
     }
 
-    @InputImport(name="searchString")
+    @Import(name="searchString")
       private final @Nullable Output<String> searchString;
 
     public Output<String> getSearchString() {
         return this.searchString == null ? Output.empty() : this.searchString;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<HealthCheckConfigPropertiesType> type;
 
     public Output<HealthCheckConfigPropertiesType> getType() {

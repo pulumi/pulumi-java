@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.ContentLinkArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersAr
      * The integration service environment managed api content link for deployment.
      * 
      */
-    @InputImport(name="contentLinkDefinition")
+    @Import(name="contentLinkDefinition")
       private final @Nullable Output<ContentLinkArgs> contentLinkDefinition;
 
     public Output<ContentLinkArgs> getContentLinkDefinition() {

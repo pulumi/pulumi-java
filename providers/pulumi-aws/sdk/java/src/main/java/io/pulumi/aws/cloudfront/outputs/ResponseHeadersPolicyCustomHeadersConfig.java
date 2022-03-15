@@ -4,17 +4,17 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.ResponseHeadersPolicyCustomHeadersConfigItem;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResponseHeadersPolicyCustomHeadersConfig {
     private final @Nullable List<ResponseHeadersPolicyCustomHeadersConfigItem> items;
 
-    @OutputCustomType.Constructor
-    private ResponseHeadersPolicyCustomHeadersConfig(@OutputCustomType.Parameter("items") @Nullable List<ResponseHeadersPolicyCustomHeadersConfigItem> items) {
+    @CustomType.Constructor
+    private ResponseHeadersPolicyCustomHeadersConfig(@CustomType.Parameter("items") @Nullable List<ResponseHeadersPolicyCustomHeadersConfigItem> items) {
         this.items = items;
     }
 

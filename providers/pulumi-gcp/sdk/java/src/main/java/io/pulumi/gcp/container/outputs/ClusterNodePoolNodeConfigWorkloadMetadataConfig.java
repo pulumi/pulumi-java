@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterNodePoolNodeConfigWorkloadMetadataConfig {
     /**
      * How to expose the node metadata to the workload running on the node.
@@ -19,8 +19,8 @@ public final class ClusterNodePoolNodeConfigWorkloadMetadataConfig {
      */
     private final String mode;
 
-    @OutputCustomType.Constructor
-    private ClusterNodePoolNodeConfigWorkloadMetadataConfig(@OutputCustomType.Parameter("mode") String mode) {
+    @CustomType.Constructor
+    private ClusterNodePoolNodeConfigWorkloadMetadataConfig(@CustomType.Parameter("mode") String mode) {
         this.mode = mode;
     }
 

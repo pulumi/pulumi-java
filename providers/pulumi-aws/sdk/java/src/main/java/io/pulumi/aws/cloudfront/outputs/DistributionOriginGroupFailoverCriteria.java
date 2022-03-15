@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DistributionOriginGroupFailoverCriteria {
     /**
      * A list of HTTP status codes for the origin group
@@ -16,8 +16,8 @@ public final class DistributionOriginGroupFailoverCriteria {
      */
     private final List<Integer> statusCodes;
 
-    @OutputCustomType.Constructor
-    private DistributionOriginGroupFailoverCriteria(@OutputCustomType.Parameter("statusCodes") List<Integer> statusCodes) {
+    @CustomType.Constructor
+    private DistributionOriginGroupFailoverCriteria(@CustomType.Parameter("statusCodes") List<Integer> statusCodes) {
         this.statusCodes = statusCodes;
     }
 

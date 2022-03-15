@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.reso
      * Name of the pod identity exception.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -29,7 +29,7 @@ public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.reso
      * Namespace of the pod identity exception.
      * 
      */
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -40,7 +40,7 @@ public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.reso
      * Pod labels to match.
      * 
      */
-    @InputImport(name="podLabels", required=true)
+    @Import(name="podLabels", required=true)
       private final Output<Map<String,String>> podLabels;
 
     public Output<Map<String,String>> getPodLabels() {

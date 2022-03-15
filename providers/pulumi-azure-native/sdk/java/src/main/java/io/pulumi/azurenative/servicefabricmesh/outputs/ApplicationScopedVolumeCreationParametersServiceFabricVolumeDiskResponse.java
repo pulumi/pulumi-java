@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse {
     /**
      * User readable description of the volume.
@@ -28,11 +28,11 @@ public final class ApplicationScopedVolumeCreationParametersServiceFabricVolumeD
      */
     private final String sizeDisk;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("sizeDisk") String sizeDisk) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("sizeDisk") String sizeDisk) {
         this.description = description;
         this.kind = kind;
         this.sizeDisk = sizeDisk;

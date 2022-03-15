@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dns_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ResponsePolicyGKEClusterResponse;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ResponsePolicyNetworkResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResponsePolicyResult {
     /**
      * User-provided description for this Response Policy.
@@ -34,13 +34,13 @@ public final class GetResponsePolicyResult {
      */
     private final String responsePolicyName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResponsePolicyResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("gkeClusters") List<ResponsePolicyGKEClusterResponse> gkeClusters,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("networks") List<ResponsePolicyNetworkResponse> networks,
-        @OutputCustomType.Parameter("responsePolicyName") String responsePolicyName) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("gkeClusters") List<ResponsePolicyGKEClusterResponse> gkeClusters,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("networks") List<ResponsePolicyNetworkResponse> networks,
+        @CustomType.Parameter("responsePolicyName") String responsePolicyName) {
         this.description = description;
         this.gkeClusters = gkeClusters;
         this.kind = kind;

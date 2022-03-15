@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.kafkaconnect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorCloudWatchLogsLogDelivery {
     /**
      * Specifies whether the logs get sent to the specified CloudWatch Logs destination.
@@ -23,10 +23,10 @@ public final class ConnectorCloudWatchLogsLogDelivery {
      */
     private final @Nullable String logGroup;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorCloudWatchLogsLogDelivery(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("logGroup") @Nullable String logGroup) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("logGroup") @Nullable String logGroup) {
         this.enabled = enabled;
         this.logGroup = logGroup;
     }

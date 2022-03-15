@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiDeploymentParameterMetadataResponse {
     /**
      * The description.
@@ -38,13 +38,13 @@ public final class ApiDeploymentParameterMetadataResponse {
      */
     private final @Nullable String visibility;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiDeploymentParameterMetadataResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("isRequired") @Nullable Boolean isRequired,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("visibility") @Nullable String visibility) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("isRequired") @Nullable Boolean isRequired,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("visibility") @Nullable String visibility) {
         this.description = description;
         this.displayName = displayName;
         this.isRequired = isRequired;

@@ -5,7 +5,7 @@ package io.pulumi.aws.emr.outputs;
 
 import io.pulumi.aws.emr.outputs.ClusterMasterInstanceFleetInstanceTypeConfig;
 import io.pulumi.aws.emr.outputs.ClusterMasterInstanceFleetLaunchSpecifications;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterMasterInstanceFleet {
     /**
      * ID of the cluster.
@@ -48,16 +48,16 @@ public final class ClusterMasterInstanceFleet {
      */
     private final @Nullable Integer targetSpotCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterMasterInstanceFleet(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("instanceTypeConfigs") @Nullable List<ClusterMasterInstanceFleetInstanceTypeConfig> instanceTypeConfigs,
-        @OutputCustomType.Parameter("launchSpecifications") @Nullable ClusterMasterInstanceFleetLaunchSpecifications launchSpecifications,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisionedOnDemandCapacity") @Nullable Integer provisionedOnDemandCapacity,
-        @OutputCustomType.Parameter("provisionedSpotCapacity") @Nullable Integer provisionedSpotCapacity,
-        @OutputCustomType.Parameter("targetOnDemandCapacity") @Nullable Integer targetOnDemandCapacity,
-        @OutputCustomType.Parameter("targetSpotCapacity") @Nullable Integer targetSpotCapacity) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("instanceTypeConfigs") @Nullable List<ClusterMasterInstanceFleetInstanceTypeConfig> instanceTypeConfigs,
+        @CustomType.Parameter("launchSpecifications") @Nullable ClusterMasterInstanceFleetLaunchSpecifications launchSpecifications,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisionedOnDemandCapacity") @Nullable Integer provisionedOnDemandCapacity,
+        @CustomType.Parameter("provisionedSpotCapacity") @Nullable Integer provisionedSpotCapacity,
+        @CustomType.Parameter("targetOnDemandCapacity") @Nullable Integer targetOnDemandCapacity,
+        @CustomType.Parameter("targetSpotCapacity") @Nullable Integer targetSpotCapacity) {
         this.id = id;
         this.instanceTypeConfigs = instanceTypeConfigs;
         this.launchSpecifications = launchSpecifications;

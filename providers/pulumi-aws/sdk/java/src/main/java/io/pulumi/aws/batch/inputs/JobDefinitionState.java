@@ -6,7 +6,7 @@ package io.pulumi.aws.batch.inputs;
 import io.pulumi.aws.batch.inputs.JobDefinitionRetryStrategyGetArgs;
 import io.pulumi.aws.batch.inputs.JobDefinitionTimeoutGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name of the job definition.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -36,7 +36,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * provided as a single valid JSON document. This parameter is required if the `type` parameter is `container`.
      * 
      */
-    @InputImport(name="containerProperties")
+    @Import(name="containerProperties")
       private final @Nullable Output<String> containerProperties;
 
     public Output<String> getContainerProperties() {
@@ -47,7 +47,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * Specifies the name of the job definition.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -58,7 +58,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * Specifies the parameter substitution placeholders to set in the job definition.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
@@ -69,7 +69,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * The platform capabilities required by the job definition. If no value is specified, it defaults to `EC2`. To run the job on Fargate resources, specify `FARGATE`.
      * 
      */
-    @InputImport(name="platformCapabilities")
+    @Import(name="platformCapabilities")
       private final @Nullable Output<List<String>> platformCapabilities;
 
     public Output<List<String>> getPlatformCapabilities() {
@@ -80,7 +80,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether to propagate the tags from the job definition to the corresponding Amazon ECS task. Default is `false`.
      * 
      */
-    @InputImport(name="propagateTags")
+    @Import(name="propagateTags")
       private final @Nullable Output<Boolean> propagateTags;
 
     public Output<Boolean> getPropagateTags() {
@@ -92,7 +92,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * Maximum number of `retry_strategy` is `1`.  Defined below.
      * 
      */
-    @InputImport(name="retryStrategy")
+    @Import(name="retryStrategy")
       private final @Nullable Output<JobDefinitionRetryStrategyGetArgs> retryStrategy;
 
     public Output<JobDefinitionRetryStrategyGetArgs> getRetryStrategy() {
@@ -103,7 +103,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * The revision of the job definition.
      * 
      */
-    @InputImport(name="revision")
+    @Import(name="revision")
       private final @Nullable Output<Integer> revision;
 
     public Output<Integer> getRevision() {
@@ -114,7 +114,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -125,7 +125,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -136,7 +136,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of `timeout` is `1`. Defined below.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<JobDefinitionTimeoutGetArgs> timeout;
 
     public Output<JobDefinitionTimeoutGetArgs> getTimeout() {
@@ -147,7 +147,7 @@ public final class JobDefinitionState extends io.pulumi.resources.ResourceArgs {
      * The type of job definition.  Must be `container`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53resolver.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class ResolverRuleTargetAddress extends io.pulumi.resources.InvokeA
      * One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.
      * 
      */
-    @InputImport(name="ip", required=true)
+    @Import(name="ip", required=true)
       private final String ip;
 
     public String getIp() {
@@ -29,7 +29,7 @@ public final class ResolverRuleTargetAddress extends io.pulumi.resources.InvokeA
      * The port at Ip that you want to forward DNS queries to.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable String port;
 
     public Optional<String> getPort() {

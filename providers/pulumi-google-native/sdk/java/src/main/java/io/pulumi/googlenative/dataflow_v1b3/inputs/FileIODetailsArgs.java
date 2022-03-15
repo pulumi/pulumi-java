@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class FileIODetailsArgs extends io.pulumi.resources.ResourceArgs {
      * File Pattern used to access files by the connector.
      * 
      */
-    @InputImport(name="filePattern")
+    @Import(name="filePattern")
       private final @Nullable Output<String> filePattern;
 
     public Output<String> getFilePattern() {

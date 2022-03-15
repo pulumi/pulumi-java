@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -42,7 +42,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -53,7 +53,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * The credential reference containing authentication information.
      * 
      */
-    @InputImport(name="credential")
+    @Import(name="credential")
       private final @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> getCredential() {
@@ -64,7 +64,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * Database name for connection. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="database", required=true)
+    @Import(name="database", required=true)
       private final Object database;
 
     public Object getDatabase() {
@@ -75,7 +75,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -86,7 +86,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * The endpoint of Azure Data Explorer (the engine's endpoint). URL will be in the format https://<clusterName>.<regionName>.kusto.windows.net. Type: string (or Expression with resultType string)
      * 
      */
-    @InputImport(name="endpoint", required=true)
+    @Import(name="endpoint", required=true)
       private final Object endpoint;
 
     public Object getEndpoint() {
@@ -97,7 +97,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -108,7 +108,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * The ID of the service principal used to authenticate against Azure Data Explorer. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="servicePrincipalId")
+    @Import(name="servicePrincipalId")
       private final @Nullable Object servicePrincipalId;
 
     public Optional<Object> getServicePrincipalId() {
@@ -119,7 +119,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * The key of the service principal used to authenticate against Kusto.
      * 
      */
-    @InputImport(name="servicePrincipalKey")
+    @Import(name="servicePrincipalKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
@@ -130,7 +130,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="tenant")
+    @Import(name="tenant")
       private final @Nullable Object tenant;
 
     public Optional<Object> getTenant() {
@@ -142,7 +142,7 @@ public final class AzureDataExplorerLinkedServiceResponse extends io.pulumi.reso
      * Expected value is 'AzureDataExplorer'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

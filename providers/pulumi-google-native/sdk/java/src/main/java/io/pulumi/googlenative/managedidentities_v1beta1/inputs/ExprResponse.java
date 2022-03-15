@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.managedidentities_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ExprResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -31,7 +31,7 @@ public final class ExprResponse extends io.pulumi.resources.InvokeArgs {
      * Textual representation of an expression in Common Expression Language syntax.
      * 
      */
-    @InputImport(name="expression", required=true)
+    @Import(name="expression", required=true)
       private final String expression;
 
     public String getExpression() {
@@ -42,7 +42,7 @@ public final class ExprResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -53,7 +53,7 @@ public final class ExprResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Title for the expression, i.e. a short string describing its purpose. This can be used e.g. in UIs which allow to enter the expression.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final String title;
 
     public String getTitle() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.backup;
 import io.pulumi.aws.backup.inputs.PlanAdvancedBackupSettingArgs;
 import io.pulumi.aws.backup.inputs.PlanRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * An object that specifies backup options for each resource type.
      * 
      */
-    @InputImport(name="advancedBackupSettings")
+    @Import(name="advancedBackupSettings")
       private final @Nullable Output<List<PlanAdvancedBackupSettingArgs>> advancedBackupSettings;
 
     public Output<List<PlanAdvancedBackupSettingArgs>> getAdvancedBackupSettings() {
@@ -33,7 +33,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * The display name of a backup plan.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * A rule object that specifies a scheduled task that is used to back up a selection of resources.
      * 
      */
-    @InputImport(name="rules", required=true)
+    @Import(name="rules", required=true)
       private final Output<List<PlanRuleArgs>> rules;
 
     public Output<List<PlanRuleArgs>> getRules() {
@@ -55,7 +55,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata that you can assign to help organize the plans you create. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

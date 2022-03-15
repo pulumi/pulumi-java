@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkconnectivity_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,14 +22,14 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
      * The IP address of the network interface to use for peering.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
         return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
-    @InputImport(name="networkInterface")
+    @Import(name="networkInterface")
       private final @Nullable Output<String> networkInterface;
 
     public Output<String> getNetworkInterface() {
@@ -40,7 +40,7 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
      * The URI of the virtual machine resource
      * 
      */
-    @InputImport(name="virtualMachine")
+    @Import(name="virtualMachine")
       private final @Nullable Output<String> virtualMachine;
 
     public Output<String> getVirtualMachine() {

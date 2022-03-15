@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.jobs_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationInfoResponse {
     /**
      * Optional but at least one of uris, emails or instruction must be specified. Use this field to specify email address(es) to which resumes or applications can be sent. The maximum number of allowed characters for each entry is 255.
@@ -26,11 +26,11 @@ public final class ApplicationInfoResponse {
      */
     private final List<String> uris;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationInfoResponse(
-        @OutputCustomType.Parameter("emails") List<String> emails,
-        @OutputCustomType.Parameter("instruction") String instruction,
-        @OutputCustomType.Parameter("uris") List<String> uris) {
+        @CustomType.Parameter("emails") List<String> emails,
+        @CustomType.Parameter("instruction") String instruction,
+        @CustomType.Parameter("uris") List<String> uris) {
         this.emails = emails;
         this.instruction = instruction;
         this.uris = uris;

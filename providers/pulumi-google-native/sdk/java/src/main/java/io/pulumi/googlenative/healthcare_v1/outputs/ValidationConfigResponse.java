@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ValidationConfigResponse {
     /**
      * Whether to disable FHIRPath validation for incoming resources. Set this to true to disable checking incoming resources for conformance against FHIRPath requirement defined in the FHIR specification. This property only affects resource types that do not have profiles configured for them, any rules in enabled implementation guides will still be enforced.
@@ -37,13 +37,13 @@ public final class ValidationConfigResponse {
      */
     private final List<String> enabledImplementationGuides;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ValidationConfigResponse(
-        @OutputCustomType.Parameter("disableFhirpathValidation") Boolean disableFhirpathValidation,
-        @OutputCustomType.Parameter("disableProfileValidation") Boolean disableProfileValidation,
-        @OutputCustomType.Parameter("disableReferenceTypeValidation") Boolean disableReferenceTypeValidation,
-        @OutputCustomType.Parameter("disableRequiredFieldValidation") Boolean disableRequiredFieldValidation,
-        @OutputCustomType.Parameter("enabledImplementationGuides") List<String> enabledImplementationGuides) {
+        @CustomType.Parameter("disableFhirpathValidation") Boolean disableFhirpathValidation,
+        @CustomType.Parameter("disableProfileValidation") Boolean disableProfileValidation,
+        @CustomType.Parameter("disableReferenceTypeValidation") Boolean disableReferenceTypeValidation,
+        @CustomType.Parameter("disableRequiredFieldValidation") Boolean disableRequiredFieldValidation,
+        @CustomType.Parameter("enabledImplementationGuides") List<String> enabledImplementationGuides) {
         this.disableFhirpathValidation = disableFhirpathValidation;
         this.disableProfileValidation = disableProfileValidation;
         this.disableReferenceTypeValidation = disableReferenceTypeValidation;

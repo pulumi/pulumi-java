@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybriddata.outputs;
 
 import io.pulumi.azurenative.hybriddata.outputs.CustomerSecretResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDataStoreResult {
     /**
      * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
@@ -55,16 +55,16 @@ public final class GetDataStoreResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDataStoreResult(
-        @OutputCustomType.Parameter("customerSecrets") @Nullable List<CustomerSecretResponse> customerSecrets,
-        @OutputCustomType.Parameter("dataStoreTypeId") String dataStoreTypeId,
-        @OutputCustomType.Parameter("extendedProperties") @Nullable Object extendedProperties,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("repositoryId") @Nullable String repositoryId,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("customerSecrets") @Nullable List<CustomerSecretResponse> customerSecrets,
+        @CustomType.Parameter("dataStoreTypeId") String dataStoreTypeId,
+        @CustomType.Parameter("extendedProperties") @Nullable Object extendedProperties,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("repositoryId") @Nullable String repositoryId,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("type") String type) {
         this.customerSecrets = customerSecrets;
         this.dataStoreTypeId = dataStoreTypeId;
         this.extendedProperties = extendedProperties;

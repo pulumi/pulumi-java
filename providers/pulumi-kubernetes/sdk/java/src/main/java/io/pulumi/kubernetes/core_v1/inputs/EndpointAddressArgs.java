@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
      * The Hostname of this endpoint
      * 
      */
-    @InputImport(name="hostname")
+    @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
     public Output<String> getHostname() {
@@ -34,7 +34,7 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
      * The IP of this endpoint. May not be loopback (127.0.0.0/8), link-local (169.254.0.0/16), or link-local multicast ((224.0.0.0/24). IPv6 is also accepted but not fully supported on all platforms. Also, certain kubernetes components, like kube-proxy, are not IPv6 ready.
      * 
      */
-    @InputImport(name="ip", required=true)
+    @Import(name="ip", required=true)
       private final Output<String> ip;
 
     public Output<String> getIp() {
@@ -45,7 +45,7 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
      * Optional: Node hosting this endpoint. This can be used to determine endpoints local to a node.
      * 
      */
-    @InputImport(name="nodeName")
+    @Import(name="nodeName")
       private final @Nullable Output<String> nodeName;
 
     public Output<String> getNodeName() {
@@ -56,7 +56,7 @@ public final class EndpointAddressArgs extends io.pulumi.resources.ResourceArgs 
      * Reference to object providing the endpoint.
      * 
      */
-    @InputImport(name="targetRef")
+    @Import(name="targetRef")
       private final @Nullable Output<ObjectReferenceArgs> targetRef;
 
     public Output<ObjectReferenceArgs> getTargetRef() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.azurenative.videoanalyzer.inputs.UserAssignedManagedIdentityResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VideoAnalyzerIdentityResponse extends io.pulumi.resources.Inv
      * The identity type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -35,7 +35,7 @@ public final class VideoAnalyzerIdentityResponse extends io.pulumi.resources.Inv
      * The User Assigned Managed Identities.
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Map<String,UserAssignedManagedIdentityResponse> userAssignedIdentities;
 
     public Map<String,UserAssignedManagedIdentityResponse> getUserAssignedIdentities() {

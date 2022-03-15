@@ -4,7 +4,7 @@
 package io.pulumi.gcp.secretmanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.secretmanager.inputs.SecretReplicationArgs;
 import io.pulumi.gcp.secretmanager.inputs.SecretRotationArgs;
 import io.pulumi.gcp.secretmanager.inputs.SecretTopicArgs;
@@ -24,7 +24,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="expireTime")
+    @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
 
     public Output<String> getExpireTime() {
@@ -42,7 +42,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -54,7 +54,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -67,7 +67,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="replication", required=true)
+    @Import(name="replication", required=true)
       private final Output<SecretReplicationArgs> replication;
 
     public Output<SecretReplicationArgs> getReplication() {
@@ -79,7 +79,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="rotation")
+    @Import(name="rotation")
       private final @Nullable Output<SecretRotationArgs> rotation;
 
     public Output<SecretRotationArgs> getRotation() {
@@ -90,7 +90,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * This must be unique within the project.
      * 
      */
-    @InputImport(name="secretId", required=true)
+    @Import(name="secretId", required=true)
       private final Output<String> secretId;
 
     public Output<String> getSecretId() {
@@ -102,7 +102,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="topics")
+    @Import(name="topics")
       private final @Nullable Output<List<SecretTopicArgs>> topics;
 
     public Output<List<SecretTopicArgs>> getTopics() {
@@ -114,7 +114,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="ttl")
+    @Import(name="ttl")
       private final @Nullable Output<String> ttl;
 
     public Output<String> getTtl() {

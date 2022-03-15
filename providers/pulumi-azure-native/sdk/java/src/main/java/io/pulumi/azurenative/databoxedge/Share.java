@@ -13,7 +13,7 @@ import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.azurenative.databoxedge.outputs.UserAccessRightResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * Access protocol to be used by the share.
      * 
      */
-    @OutputExport(name="accessProtocol", type=String.class, parameters={})
+    @Export(name="accessProtocol", type=String.class, parameters={})
     private Output<String> accessProtocol;
 
     /**
@@ -54,7 +54,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * Azure container mapping for the share.
      * 
      */
-    @OutputExport(name="azureContainerInfo", type=AzureContainerInfoResponse.class, parameters={})
+    @Export(name="azureContainerInfo", type=AzureContainerInfoResponse.class, parameters={})
     private Output</* @Nullable */ AzureContainerInfoResponse> azureContainerInfo;
 
     /**
@@ -68,7 +68,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * List of IP addresses and corresponding access rights on the share(required for NFS protocol).
      * 
      */
-    @OutputExport(name="clientAccessRights", type=List.class, parameters={ClientAccessRightResponse.class})
+    @Export(name="clientAccessRights", type=List.class, parameters={ClientAccessRightResponse.class})
     private Output</* @Nullable */ List<ClientAccessRightResponse>> clientAccessRights;
 
     /**
@@ -82,7 +82,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * Data policy of the share.
      * 
      */
-    @OutputExport(name="dataPolicy", type=String.class, parameters={})
+    @Export(name="dataPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataPolicy;
 
     /**
@@ -96,7 +96,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * Description for the share.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -110,7 +110,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * Current monitoring status of the share.
      * 
      */
-    @OutputExport(name="monitoringStatus", type=String.class, parameters={})
+    @Export(name="monitoringStatus", type=String.class, parameters={})
     private Output<String> monitoringStatus;
 
     /**
@@ -124,7 +124,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * The object name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -138,7 +138,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * Details of the refresh job on this share.
      * 
      */
-    @OutputExport(name="refreshDetails", type=RefreshDetailsResponse.class, parameters={})
+    @Export(name="refreshDetails", type=RefreshDetailsResponse.class, parameters={})
     private Output</* @Nullable */ RefreshDetailsResponse> refreshDetails;
 
     /**
@@ -152,7 +152,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * Share mount point to the role.
      * 
      */
-    @OutputExport(name="shareMappings", type=List.class, parameters={MountPointMapResponse.class})
+    @Export(name="shareMappings", type=List.class, parameters={MountPointMapResponse.class})
     private Output<List<MountPointMapResponse>> shareMappings;
 
     /**
@@ -166,7 +166,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * Current status of the share.
      * 
      */
-    @OutputExport(name="shareStatus", type=String.class, parameters={})
+    @Export(name="shareStatus", type=String.class, parameters={})
     private Output<String> shareStatus;
 
     /**
@@ -180,7 +180,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * Share on ASE device
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -194,7 +194,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -208,7 +208,7 @@ public class Share extends io.pulumi.resources.CustomResource {
      * Mapping of users and corresponding access rights on the share (required for SMB protocol).
      * 
      */
-    @OutputExport(name="userAccessRights", type=List.class, parameters={UserAccessRightResponse.class})
+    @Export(name="userAccessRights", type=List.class, parameters={UserAccessRightResponse.class})
     private Output</* @Nullable */ List<UserAccessRightResponse>> userAccessRights;
 
     /**

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.ConnectorMappingPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectorMappingResult {
     /**
      * The connector mapping name
@@ -103,26 +103,26 @@ public final class GetConnectorMappingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectorMappingResult(
-        @OutputCustomType.Parameter("connectorMappingName") String connectorMappingName,
-        @OutputCustomType.Parameter("connectorName") String connectorName,
-        @OutputCustomType.Parameter("connectorType") @Nullable String connectorType,
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("dataFormatId") String dataFormatId,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("entityType") String entityType,
-        @OutputCustomType.Parameter("entityTypeName") String entityTypeName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModified") String lastModified,
-        @OutputCustomType.Parameter("mappingProperties") ConnectorMappingPropertiesResponse mappingProperties,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nextRunTime") String nextRunTime,
-        @OutputCustomType.Parameter("runId") String runId,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("connectorMappingName") String connectorMappingName,
+        @CustomType.Parameter("connectorName") String connectorName,
+        @CustomType.Parameter("connectorType") @Nullable String connectorType,
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("dataFormatId") String dataFormatId,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("entityType") String entityType,
+        @CustomType.Parameter("entityTypeName") String entityTypeName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModified") String lastModified,
+        @CustomType.Parameter("mappingProperties") ConnectorMappingPropertiesResponse mappingProperties,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nextRunTime") String nextRunTime,
+        @CustomType.Parameter("runId") String runId,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.connectorMappingName = connectorMappingName;
         this.connectorName = connectorName;
         this.connectorType = connectorType;

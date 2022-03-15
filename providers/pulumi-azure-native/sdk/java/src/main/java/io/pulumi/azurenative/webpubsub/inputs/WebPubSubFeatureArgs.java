@@ -6,7 +6,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 import io.pulumi.azurenative.webpubsub.enums.FeatureFlags;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class WebPubSubFeatureArgs extends io.pulumi.resources.ResourceArgs
      *  - EnableLiveTrace: Live Trace allows you to know what's happening inside Azure SignalR service, it will give you live traces in real time, it will be helpful when you developing your own Azure SignalR based web application or self-troubleshooting some issues. Please note that live traces are counted as outbound messages that will be charged. Values allowed: "true"/"false", to enable/disable live trace feature.
      * 
      */
-    @InputImport(name="flag", required=true)
+    @Import(name="flag", required=true)
       private final Output<Either<String,FeatureFlags>> flag;
 
     public Output<Either<String,FeatureFlags>> getFlag() {
@@ -39,7 +39,7 @@ public final class WebPubSubFeatureArgs extends io.pulumi.resources.ResourceArgs
      * Optional properties related to this feature.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -50,7 +50,7 @@ public final class WebPubSubFeatureArgs extends io.pulumi.resources.ResourceArgs
      * Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

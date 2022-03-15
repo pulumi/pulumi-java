@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class WorkspaceKeyDetailsResponse extends io.pulumi.resources.Invok
      * Workspace Key sub-resource key vault url
      * 
      */
-    @InputImport(name="keyVaultUrl")
+    @Import(name="keyVaultUrl")
       private final @Nullable String keyVaultUrl;
 
     public Optional<String> getKeyVaultUrl() {
@@ -33,7 +33,7 @@ public final class WorkspaceKeyDetailsResponse extends io.pulumi.resources.Invok
      * Workspace Key sub-resource name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
      * Parameters that you want to pass in with `entry_point`.
      * 
      */
-    @InputImport(name="commands")
+    @Import(name="commands")
       private final @Nullable Output<List<String>> commands;
 
     public Output<List<String>> getCommands() {
@@ -30,7 +30,7 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
      * Entry point to your application, which is typically the location of the runtime executable.
      * 
      */
-    @InputImport(name="entryPoints")
+    @Import(name="entryPoints")
       private final @Nullable Output<List<String>> entryPoints;
 
     public Output<List<String>> getEntryPoints() {
@@ -41,7 +41,7 @@ public final class FunctionImageConfigGetArgs extends io.pulumi.resources.Resour
      * Working directory.
      * 
      */
-    @InputImport(name="workingDirectory")
+    @Import(name="workingDirectory")
       private final @Nullable Output<String> workingDirectory;
 
     public Output<String> getWorkingDirectory() {

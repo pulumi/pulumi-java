@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.quantum.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProviderResponse {
     /**
      * The provider's marketplace application display name.
@@ -42,14 +42,14 @@ public final class ProviderResponse {
      */
     private final @Nullable String resourceUsageId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProviderResponse(
-        @OutputCustomType.Parameter("applicationName") @Nullable String applicationName,
-        @OutputCustomType.Parameter("instanceUri") @Nullable String instanceUri,
-        @OutputCustomType.Parameter("providerId") @Nullable String providerId,
-        @OutputCustomType.Parameter("providerSku") @Nullable String providerSku,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("resourceUsageId") @Nullable String resourceUsageId) {
+        @CustomType.Parameter("applicationName") @Nullable String applicationName,
+        @CustomType.Parameter("instanceUri") @Nullable String instanceUri,
+        @CustomType.Parameter("providerId") @Nullable String providerId,
+        @CustomType.Parameter("providerSku") @Nullable String providerSku,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("resourceUsageId") @Nullable String resourceUsageId) {
         this.applicationName = applicationName;
         this.instanceUri = instanceUri;
         this.providerId = providerId;

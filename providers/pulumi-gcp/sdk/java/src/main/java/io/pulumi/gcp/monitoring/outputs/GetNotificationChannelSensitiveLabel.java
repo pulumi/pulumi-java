@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNotificationChannelSensitiveLabel {
     private final String authToken;
     private final String password;
     private final String serviceKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNotificationChannelSensitiveLabel(
-        @OutputCustomType.Parameter("authToken") String authToken,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("serviceKey") String serviceKey) {
+        @CustomType.Parameter("authToken") String authToken,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("serviceKey") String serviceKey) {
         this.authToken = authToken;
         this.password = password;
         this.serviceKey = serviceKey;

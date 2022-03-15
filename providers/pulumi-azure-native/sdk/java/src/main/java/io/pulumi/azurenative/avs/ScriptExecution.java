@@ -10,7 +10,7 @@ import io.pulumi.azurenative.avs.outputs.ScriptSecureStringExecutionParameterRes
 import io.pulumi.azurenative.avs.outputs.ScriptStringExecutionParameterResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * Standard error output stream from the powershell execution
      * 
      */
-    @OutputExport(name="errors", type=List.class, parameters={String.class})
+    @Export(name="errors", type=List.class, parameters={String.class})
     private Output<List<String>> errors;
 
     /**
@@ -53,7 +53,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * Error message if the script was able to run, but if the script itself had errors or powershell threw an exception
      * 
      */
-    @OutputExport(name="failureReason", type=String.class, parameters={})
+    @Export(name="failureReason", type=String.class, parameters={})
     private Output</* @Nullable */ String> failureReason;
 
     /**
@@ -67,7 +67,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * Time the script execution was finished
      * 
      */
-    @OutputExport(name="finishedAt", type=String.class, parameters={})
+    @Export(name="finishedAt", type=String.class, parameters={})
     private Output<String> finishedAt;
 
     /**
@@ -81,7 +81,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * Parameters that will be hidden/not visible to ARM, such as passwords and credentials
      * 
      */
-    @OutputExport(name="hiddenParameters", type=List.class, parameters={Object.class})
+    @Export(name="hiddenParameters", type=List.class, parameters={Object.class})
     private Output</* @Nullable */ List<Object>> hiddenParameters;
 
     /**
@@ -95,7 +95,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * Standard information out stream from the powershell execution
      * 
      */
-    @OutputExport(name="information", type=List.class, parameters={String.class})
+    @Export(name="information", type=List.class, parameters={String.class})
     private Output<List<String>> information;
 
     /**
@@ -109,7 +109,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -123,7 +123,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * User-defined dictionary.
      * 
      */
-    @OutputExport(name="namedOutputs", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="namedOutputs", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> namedOutputs;
 
     /**
@@ -137,7 +137,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * Standard output stream from the powershell execution
      * 
      */
-    @OutputExport(name="output", type=List.class, parameters={String.class})
+    @Export(name="output", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> output;
 
     /**
@@ -151,7 +151,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * Parameters the script will accept
      * 
      */
-    @OutputExport(name="parameters", type=List.class, parameters={Object.class})
+    @Export(name="parameters", type=List.class, parameters={Object.class})
     private Output</* @Nullable */ List<Object>> parameters;
 
     /**
@@ -165,7 +165,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * The state of the script execution resource
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -179,7 +179,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * Time to live for the resource. If not provided, will be available for 60 days
      * 
      */
-    @OutputExport(name="retention", type=String.class, parameters={})
+    @Export(name="retention", type=String.class, parameters={})
     private Output</* @Nullable */ String> retention;
 
     /**
@@ -193,7 +193,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * A reference to the script cmdlet resource if user is running a AVS script
      * 
      */
-    @OutputExport(name="scriptCmdletId", type=String.class, parameters={})
+    @Export(name="scriptCmdletId", type=String.class, parameters={})
     private Output</* @Nullable */ String> scriptCmdletId;
 
     /**
@@ -207,7 +207,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * Time the script execution was started
      * 
      */
-    @OutputExport(name="startedAt", type=String.class, parameters={})
+    @Export(name="startedAt", type=String.class, parameters={})
     private Output<String> startedAt;
 
     /**
@@ -221,7 +221,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * Time the script execution was submitted
      * 
      */
-    @OutputExport(name="submittedAt", type=String.class, parameters={})
+    @Export(name="submittedAt", type=String.class, parameters={})
     private Output<String> submittedAt;
 
     /**
@@ -235,7 +235,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * Time limit for execution
      * 
      */
-    @OutputExport(name="timeout", type=String.class, parameters={})
+    @Export(name="timeout", type=String.class, parameters={})
     private Output<String> timeout;
 
     /**
@@ -249,7 +249,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -263,7 +263,7 @@ public class ScriptExecution extends io.pulumi.resources.CustomResource {
      * Standard warning out stream from the powershell execution
      * 
      */
-    @OutputExport(name="warnings", type=List.class, parameters={String.class})
+    @Export(name="warnings", type=List.class, parameters={String.class})
     private Output<List<String>> warnings;
 
     /**

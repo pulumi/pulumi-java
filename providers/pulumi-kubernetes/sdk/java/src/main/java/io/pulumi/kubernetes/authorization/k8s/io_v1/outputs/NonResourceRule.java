@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NonResourceRule {
     /**
      * NonResourceURLs is a set of partial urls that a user should have access to.  *s are allowed, but only as the full, final step in the path.  "*" means all.
@@ -22,10 +22,10 @@ public final class NonResourceRule {
      */
     private final List<String> verbs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NonResourceRule(
-        @OutputCustomType.Parameter("nonResourceURLs") @Nullable List<String> nonResourceURLs,
-        @OutputCustomType.Parameter("verbs") List<String> verbs) {
+        @CustomType.Parameter("nonResourceURLs") @Nullable List<String> nonResourceURLs,
+        @CustomType.Parameter("verbs") List<String> verbs) {
         this.nonResourceURLs = nonResourceURLs;
         this.verbs = verbs;
     }

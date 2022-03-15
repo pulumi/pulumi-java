@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DocumentDbOutputDataSourceResponse {
     /**
      * The DocumentDB account name or ID. Required on PUT (CreateOrReplace) requests.
@@ -48,15 +48,15 @@ public final class DocumentDbOutputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DocumentDbOutputDataSourceResponse(
-        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
-        @OutputCustomType.Parameter("accountKey") @Nullable String accountKey,
-        @OutputCustomType.Parameter("collectionNamePattern") @Nullable String collectionNamePattern,
-        @OutputCustomType.Parameter("database") @Nullable String database,
-        @OutputCustomType.Parameter("documentId") @Nullable String documentId,
-        @OutputCustomType.Parameter("partitionKey") @Nullable String partitionKey,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accountId") @Nullable String accountId,
+        @CustomType.Parameter("accountKey") @Nullable String accountKey,
+        @CustomType.Parameter("collectionNamePattern") @Nullable String collectionNamePattern,
+        @CustomType.Parameter("database") @Nullable String database,
+        @CustomType.Parameter("documentId") @Nullable String documentId,
+        @CustomType.Parameter("partitionKey") @Nullable String partitionKey,
+        @CustomType.Parameter("type") String type) {
         this.accountId = accountId;
         this.accountKey = accountKey;
         this.collectionNamePattern = collectionNamePattern;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigtableadmin_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigtableadmin_v2.enums.ClusterDefaultStorageType;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.ClusterConfigArgs;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.EncryptionConfigArgs;
@@ -22,14 +22,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for this cluster.
      * 
      */
-    @InputImport(name="clusterConfig")
+    @Import(name="clusterConfig")
       private final @Nullable Output<ClusterConfigArgs> clusterConfig;
 
     public Output<ClusterConfigArgs> getClusterConfig() {
         return this.clusterConfig == null ? Output.empty() : this.clusterConfig;
     }
 
-    @InputImport(name="clusterId", required=true)
+    @Import(name="clusterId", required=true)
       private final Output<String> clusterId;
 
     public Output<String> getClusterId() {
@@ -40,7 +40,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The type of storage used by this cluster to serve its parent instance's tables, unless explicitly overridden.
      * 
      */
-    @InputImport(name="defaultStorageType")
+    @Import(name="defaultStorageType")
       private final @Nullable Output<ClusterDefaultStorageType> defaultStorageType;
 
     public Output<ClusterDefaultStorageType> getDefaultStorageType() {
@@ -51,14 +51,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The encryption configuration for CMEK-protected clusters.
      * 
      */
-    @InputImport(name="encryptionConfig")
+    @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
     public Output<EncryptionConfigArgs> getEncryptionConfig() {
         return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
     }
 
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -69,7 +69,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The location where this cluster's nodes and storage reside. For best performance, clients should be located as close as possible to this cluster. Currently only zones are supported, so values should be of the form `projects/{project}/locations/{zone}`.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -80,14 +80,14 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The unique name of the cluster. Values are of the form `projects/{project}/instances/{instance}/clusters/a-z*`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -98,7 +98,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The number of nodes allocated to this cluster. More nodes enable higher throughput and more consistent performance.
      * 
      */
-    @InputImport(name="serveNodes")
+    @Import(name="serveNodes")
       private final @Nullable Output<Integer> serveNodes;
 
     public Output<Integer> getServeNodes() {

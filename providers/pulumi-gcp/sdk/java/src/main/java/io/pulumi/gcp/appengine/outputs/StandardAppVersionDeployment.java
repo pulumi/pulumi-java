@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.appengine.outputs.StandardAppVersionDeploymentFile;
 import io.pulumi.gcp.appengine.outputs.StandardAppVersionDeploymentZip;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StandardAppVersionDeployment {
     /**
      * Manifest of the files stored in Google Cloud Storage that are included as part of this version.
@@ -27,10 +27,10 @@ public final class StandardAppVersionDeployment {
      */
     private final @Nullable StandardAppVersionDeploymentZip zip;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StandardAppVersionDeployment(
-        @OutputCustomType.Parameter("files") @Nullable List<StandardAppVersionDeploymentFile> files,
-        @OutputCustomType.Parameter("zip") @Nullable StandardAppVersionDeploymentZip zip) {
+        @CustomType.Parameter("files") @Nullable List<StandardAppVersionDeploymentFile> files,
+        @CustomType.Parameter("zip") @Nullable StandardAppVersionDeploymentZip zip) {
         this.files = files;
         this.zip = zip;
     }

@@ -9,14 +9,14 @@ import io.pulumi.azurenative.securityinsights.outputs.MetadataDependenciesRespon
 import io.pulumi.azurenative.securityinsights.outputs.MetadataSourceResponse;
 import io.pulumi.azurenative.securityinsights.outputs.MetadataSupportResponse;
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMetadataResult {
     /**
      * The creator of the content item.
@@ -104,25 +104,25 @@ public final class GetMetadataResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMetadataResult(
-        @OutputCustomType.Parameter("author") @Nullable MetadataAuthorResponse author,
-        @OutputCustomType.Parameter("categories") @Nullable MetadataCategoriesResponse categories,
-        @OutputCustomType.Parameter("contentId") @Nullable String contentId,
-        @OutputCustomType.Parameter("dependencies") @Nullable MetadataDependenciesResponse dependencies,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("firstPublishDate") @Nullable String firstPublishDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("lastPublishDate") @Nullable String lastPublishDate,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parentId") String parentId,
-        @OutputCustomType.Parameter("providers") @Nullable List<String> providers,
-        @OutputCustomType.Parameter("source") @Nullable MetadataSourceResponse source,
-        @OutputCustomType.Parameter("support") @Nullable MetadataSupportResponse support,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("author") @Nullable MetadataAuthorResponse author,
+        @CustomType.Parameter("categories") @Nullable MetadataCategoriesResponse categories,
+        @CustomType.Parameter("contentId") @Nullable String contentId,
+        @CustomType.Parameter("dependencies") @Nullable MetadataDependenciesResponse dependencies,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("firstPublishDate") @Nullable String firstPublishDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("lastPublishDate") @Nullable String lastPublishDate,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parentId") String parentId,
+        @CustomType.Parameter("providers") @Nullable List<String> providers,
+        @CustomType.Parameter("source") @Nullable MetadataSourceResponse source,
+        @CustomType.Parameter("support") @Nullable MetadataSupportResponse support,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.author = author;
         this.categories = categories;
         this.contentId = contentId;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 import io.pulumi.awsnative.quicksight.inputs.ThemeGutterStyleArgs;
 import io.pulumi.awsnative.quicksight.inputs.ThemeMarginStyleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,14 +19,14 @@ public final class ThemeTileLayoutStyleArgs extends io.pulumi.resources.Resource
 
     public static final ThemeTileLayoutStyleArgs Empty = new ThemeTileLayoutStyleArgs();
 
-    @InputImport(name="gutter")
+    @Import(name="gutter")
       private final @Nullable Output<ThemeGutterStyleArgs> gutter;
 
     public Output<ThemeGutterStyleArgs> getGutter() {
         return this.gutter == null ? Output.empty() : this.gutter;
     }
 
-    @InputImport(name="margin")
+    @Import(name="margin")
       private final @Nullable Output<ThemeMarginStyleArgs> margin;
 
     public Output<ThemeMarginStyleArgs> getMargin() {

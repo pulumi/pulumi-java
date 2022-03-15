@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SupportInfoResponse {
     /**
      * Support contact email address.
@@ -32,12 +32,12 @@ public final class SupportInfoResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SupportInfoResponse(
-        @OutputCustomType.Parameter("email") @Nullable String email,
-        @OutputCustomType.Parameter("instructions") @Nullable String instructions,
-        @OutputCustomType.Parameter("phone") @Nullable String phone,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("email") @Nullable String email,
+        @CustomType.Parameter("instructions") @Nullable String instructions,
+        @CustomType.Parameter("phone") @Nullable String phone,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.email = email;
         this.instructions = instructions;
         this.phone = phone;

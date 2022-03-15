@@ -4,10 +4,10 @@
 package io.pulumi.awsnative.kinesis.outputs;
 
 import io.pulumi.awsnative.kinesis.enums.StreamModeDetailsStreamMode;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StreamModeDetails {
     /**
      * The mode of the stream
@@ -15,8 +15,8 @@ public final class StreamModeDetails {
      */
     private final StreamModeDetailsStreamMode streamMode;
 
-    @OutputCustomType.Constructor
-    private StreamModeDetails(@OutputCustomType.Parameter("streamMode") StreamModeDetailsStreamMode streamMode) {
+    @CustomType.Constructor
+    private StreamModeDetails(@CustomType.Parameter("streamMode") StreamModeDetailsStreamMode streamMode) {
         this.streamMode = streamMode;
     }
 

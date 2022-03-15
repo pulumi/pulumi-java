@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.containeranalysis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.containeranalysis.outputs.OccurenceAttestationSignature;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OccurenceAttestation {
     /**
      * The serialized payload that is verified by one or
@@ -28,10 +28,10 @@ public final class OccurenceAttestation {
      */
     private final List<OccurenceAttestationSignature> signatures;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OccurenceAttestation(
-        @OutputCustomType.Parameter("serializedPayload") String serializedPayload,
-        @OutputCustomType.Parameter("signatures") List<OccurenceAttestationSignature> signatures) {
+        @CustomType.Parameter("serializedPayload") String serializedPayload,
+        @CustomType.Parameter("signatures") List<OccurenceAttestationSignature> signatures) {
         this.serializedPayload = serializedPayload;
         this.signatures = signatures;
     }

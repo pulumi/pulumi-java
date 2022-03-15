@@ -3,8 +3,8 @@ package io.pulumi.core.internal;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
-import io.pulumi.core.annotations.InputImport;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.core.internal.annotations.InputMetadata;
 import io.pulumi.core.internal.annotations.OutputMetadata;
 import org.junit.jupiter.api.Test;
@@ -20,52 +20,52 @@ class InputOutputMetadataTest {
     @SuppressWarnings("unused")
     public static class Tester {
 
-        @OutputExport(name = "complex1", type = Either.class, parameters = {Integer.class, String.class})
+        @Export(name = "complex1", type = Either.class, parameters = {Integer.class, String.class})
         public final Output<Either<Integer, String>> complex1 = Output.of(Either.ofLeft(1));
 
-        @OutputExport(name = "complex2", type = Either.class, parameters = {Integer.class, String.class})
+        @Export(name = "complex2", type = Either.class, parameters = {Integer.class, String.class})
         public final Output<Either<Integer, String>> complex2 = Output.of(Either.ofRight("1"));
 
-        @OutputExport(name = "foo", type = String.class)
+        @Export(name = "foo", type = String.class)
         final Output<String> explicitFoo = Output.of("");
 
-        @OutputExport(type = String.class)
+        @Export(type = String.class)
         private final Output<String> implicitFoo = Output.of("");
 
-        @OutputExport(type = Map.class, parameters = {String.class, Integer.class})
+        @Export(type = Map.class, parameters = {String.class, Integer.class})
         public final Output<Map<String, Integer>> implicitBaz = Output.of(Map.of());
 
-        @OutputExport(type = Double.class)
+        @Export(type = Double.class)
         private Output<Double> incomplete;
 
-        @InputImport(name = "bar")
+        @Import(name = "bar")
         public final Output<String> explicitBar = Output.of("");
 
-        @InputImport
+        @Import
         final Output<String> implicitBar = Output.of("");
 
         @SuppressWarnings("DefaultAnnotationParam")
-        @InputImport(name = "", required = true, json = true)
+        @Import(name = "", required = true, json = true)
         public final Output<Map<String, Integer>> inputMap = Output.ofMap("k1", 1, "k2", 2);
 
         @SuppressWarnings("DefaultAnnotationParam")
-        @InputImport(name = "", required = true, json = true)
+        @Import(name = "", required = true, json = true)
         public final Output<Map<String, Integer>> inputMapNullsJson = Output.of(nullfulMap("k1", null, "k2", null));
 
         @SuppressWarnings("DefaultAnnotationParam")
-        @InputImport(name = "", required = true, json = false)
+        @Import(name = "", required = true, json = false)
         public final Output<Map<String, Integer>> inputMapNulls = Output.of(nullfulMap("k1", null, "k2", null));
 
-        @InputImport
+        @Import
         public final Output<List<Boolean>> inputList = Output.ofList(true, false);
 
-        @InputImport
+        @Import
         public final String inputless = "test";
 
-        @InputImport
+        @Import
         public final Integer inputlessNull = null;
 
-        @InputImport(json = true)
+        @Import(json = true)
         public final Integer inputlessNullJson = null;
     }
 

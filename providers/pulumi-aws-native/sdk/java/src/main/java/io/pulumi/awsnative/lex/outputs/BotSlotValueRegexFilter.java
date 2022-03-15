@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BotSlotValueRegexFilter {
     /**
      * Regex pattern
@@ -15,8 +15,8 @@ public final class BotSlotValueRegexFilter {
      */
     private final String pattern;
 
-    @OutputCustomType.Constructor
-    private BotSlotValueRegexFilter(@OutputCustomType.Parameter("pattern") String pattern) {
+    @CustomType.Constructor
+    private BotSlotValueRegexFilter(@CustomType.Parameter("pattern") String pattern) {
         this.pattern = pattern;
     }
 

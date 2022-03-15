@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FlowInforNexusSourceProperties {
     private final String object;
 
-    @OutputCustomType.Constructor
-    private FlowInforNexusSourceProperties(@OutputCustomType.Parameter("object") String object) {
+    @CustomType.Constructor
+    private FlowInforNexusSourceProperties(@CustomType.Parameter("object") String object) {
         this.object = object;
     }
 

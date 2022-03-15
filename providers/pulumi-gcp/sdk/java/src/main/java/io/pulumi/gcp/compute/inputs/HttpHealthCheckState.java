@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class HttpHealthCheckState extends io.pulumi.resources.ResourceArgs
      * seconds.
      * 
      */
-    @InputImport(name="checkIntervalSec")
+    @Import(name="checkIntervalSec")
       private final @Nullable Output<Integer> checkIntervalSec;
 
     public Output<Integer> getCheckIntervalSec() {
@@ -31,7 +31,7 @@ public final class HttpHealthCheckState extends io.pulumi.resources.ResourceArgs
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @InputImport(name="creationTimestamp")
+    @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
@@ -43,7 +43,7 @@ public final class HttpHealthCheckState extends io.pulumi.resources.ResourceArgs
      * you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -55,7 +55,7 @@ public final class HttpHealthCheckState extends io.pulumi.resources.ResourceArgs
      * consecutive successes. The default value is 2.
      * 
      */
-    @InputImport(name="healthyThreshold")
+    @Import(name="healthyThreshold")
       private final @Nullable Output<Integer> healthyThreshold;
 
     public Output<Integer> getHealthyThreshold() {
@@ -68,7 +68,7 @@ public final class HttpHealthCheckState extends io.pulumi.resources.ResourceArgs
      * health check is performed will be used.
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
@@ -85,7 +85,7 @@ public final class HttpHealthCheckState extends io.pulumi.resources.ResourceArgs
      * last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -97,7 +97,7 @@ public final class HttpHealthCheckState extends io.pulumi.resources.ResourceArgs
      * The default value is 80.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -109,7 +109,7 @@ public final class HttpHealthCheckState extends io.pulumi.resources.ResourceArgs
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -121,7 +121,7 @@ public final class HttpHealthCheckState extends io.pulumi.resources.ResourceArgs
      * The default value is /.
      * 
      */
-    @InputImport(name="requestPath")
+    @Import(name="requestPath")
       private final @Nullable Output<String> requestPath;
 
     public Output<String> getRequestPath() {
@@ -132,7 +132,7 @@ public final class HttpHealthCheckState extends io.pulumi.resources.ResourceArgs
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -145,7 +145,7 @@ public final class HttpHealthCheckState extends io.pulumi.resources.ResourceArgs
      * greater value than checkIntervalSec.
      * 
      */
-    @InputImport(name="timeoutSec")
+    @Import(name="timeoutSec")
       private final @Nullable Output<Integer> timeoutSec;
 
     public Output<Integer> getTimeoutSec() {
@@ -157,7 +157,7 @@ public final class HttpHealthCheckState extends io.pulumi.resources.ResourceArgs
      * consecutive failures. The default value is 2.
      * 
      */
-    @InputImport(name="unhealthyThreshold")
+    @Import(name="unhealthyThreshold")
       private final @Nullable Output<Integer> unhealthyThreshold;
 
     public Output<Integer> getUnhealthyThreshold() {

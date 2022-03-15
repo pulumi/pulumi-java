@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mwaa.inputs;
 
 import io.pulumi.awsnative.mwaa.inputs.EnvironmentModuleLoggingConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,35 +18,35 @@ public final class EnvironmentLoggingConfiguration extends io.pulumi.resources.I
 
     public static final EnvironmentLoggingConfiguration Empty = new EnvironmentLoggingConfiguration();
 
-    @InputImport(name="dagProcessingLogs")
+    @Import(name="dagProcessingLogs")
       private final @Nullable EnvironmentModuleLoggingConfiguration dagProcessingLogs;
 
     public Optional<EnvironmentModuleLoggingConfiguration> getDagProcessingLogs() {
         return this.dagProcessingLogs == null ? Optional.empty() : Optional.ofNullable(this.dagProcessingLogs);
     }
 
-    @InputImport(name="schedulerLogs")
+    @Import(name="schedulerLogs")
       private final @Nullable EnvironmentModuleLoggingConfiguration schedulerLogs;
 
     public Optional<EnvironmentModuleLoggingConfiguration> getSchedulerLogs() {
         return this.schedulerLogs == null ? Optional.empty() : Optional.ofNullable(this.schedulerLogs);
     }
 
-    @InputImport(name="taskLogs")
+    @Import(name="taskLogs")
       private final @Nullable EnvironmentModuleLoggingConfiguration taskLogs;
 
     public Optional<EnvironmentModuleLoggingConfiguration> getTaskLogs() {
         return this.taskLogs == null ? Optional.empty() : Optional.ofNullable(this.taskLogs);
     }
 
-    @InputImport(name="webserverLogs")
+    @Import(name="webserverLogs")
       private final @Nullable EnvironmentModuleLoggingConfiguration webserverLogs;
 
     public Optional<EnvironmentModuleLoggingConfiguration> getWebserverLogs() {
         return this.webserverLogs == null ? Optional.empty() : Optional.ofNullable(this.webserverLogs);
     }
 
-    @InputImport(name="workerLogs")
+    @Import(name="workerLogs")
       private final @Nullable EnvironmentModuleLoggingConfiguration workerLogs;
 
     public Optional<EnvironmentModuleLoggingConfiguration> getWorkerLogs() {

@@ -3,22 +3,22 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetHcVpnGatewayVpnInterface {
     private final Integer id;
     private final String interconnectAttachment;
     private final String ipAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHcVpnGatewayVpnInterface(
-        @OutputCustomType.Parameter("id") Integer id,
-        @OutputCustomType.Parameter("interconnectAttachment") String interconnectAttachment,
-        @OutputCustomType.Parameter("ipAddress") String ipAddress) {
+        @CustomType.Parameter("id") Integer id,
+        @CustomType.Parameter("interconnectAttachment") String interconnectAttachment,
+        @CustomType.Parameter("ipAddress") String ipAddress) {
         this.id = id;
         this.interconnectAttachment = interconnectAttachment;
         this.ipAddress = ipAddress;

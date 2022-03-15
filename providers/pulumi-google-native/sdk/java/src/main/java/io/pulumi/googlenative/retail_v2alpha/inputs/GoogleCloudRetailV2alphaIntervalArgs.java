@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2alphaIntervalArgs extends io.pulumi.resour
      * Exclusive upper bound.
      * 
      */
-    @InputImport(name="exclusiveMaximum")
+    @Import(name="exclusiveMaximum")
       private final @Nullable Output<Double> exclusiveMaximum;
 
     public Output<Double> getExclusiveMaximum() {
@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2alphaIntervalArgs extends io.pulumi.resour
      * Exclusive lower bound.
      * 
      */
-    @InputImport(name="exclusiveMinimum")
+    @Import(name="exclusiveMinimum")
       private final @Nullable Output<Double> exclusiveMinimum;
 
     public Output<Double> getExclusiveMinimum() {
@@ -44,7 +44,7 @@ public final class GoogleCloudRetailV2alphaIntervalArgs extends io.pulumi.resour
      * Inclusive upper bound.
      * 
      */
-    @InputImport(name="maximum")
+    @Import(name="maximum")
       private final @Nullable Output<Double> maximum;
 
     public Output<Double> getMaximum() {
@@ -55,7 +55,7 @@ public final class GoogleCloudRetailV2alphaIntervalArgs extends io.pulumi.resour
      * Inclusive lower bound.
      * 
      */
-    @InputImport(name="minimum")
+    @Import(name="minimum")
       private final @Nullable Output<Double> minimum;
 
     public Output<Double> getMinimum() {

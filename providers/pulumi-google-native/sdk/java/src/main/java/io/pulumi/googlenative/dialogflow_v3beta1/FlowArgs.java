@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1EventHandlerArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1NluSettingsArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1TransitionRouteArgs;
@@ -18,7 +18,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final FlowArgs Empty = new FlowArgs();
 
-    @InputImport(name="agentId", required=true)
+    @Import(name="agentId", required=true)
       private final Output<String> agentId;
 
     public Output<String> getAgentId() {
@@ -29,7 +29,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the flow. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -40,7 +40,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * The human-readable name of the flow.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -51,21 +51,21 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * A flow's event handlers serve two purposes: * They are responsible for handling events (e.g. no match, webhook errors) in the flow. * They are inherited by every page's event handlers, which can be used to handle common events regardless of the current page. Event handlers defined in the page have higher priority than those defined in the flow. Unlike transition_routes, these handlers are evaluated on a first-match basis. The first one that matches the event get executed, with the rest being ignored.
      * 
      */
-    @InputImport(name="eventHandlers")
+    @Import(name="eventHandlers")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> eventHandlers;
 
     public Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> getEventHandlers() {
         return this.eventHandlers == null ? Output.empty() : this.eventHandlers;
     }
 
-    @InputImport(name="languageCode")
+    @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
     public Output<String> getLanguageCode() {
         return this.languageCode == null ? Output.empty() : this.languageCode;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -76,7 +76,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -87,14 +87,14 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * NLU related settings of the flow.
      * 
      */
-    @InputImport(name="nluSettings")
+    @Import(name="nluSettings")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1NluSettingsArgs> nluSettings;
 
     public Output<GoogleCloudDialogflowCxV3beta1NluSettingsArgs> getNluSettings() {
         return this.nluSettings == null ? Output.empty() : this.nluSettings;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -105,7 +105,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * A flow's transition route group serve two purposes: * They are responsible for matching the user's first utterances in the flow. * They are inherited by every page's transition route groups. Transition route groups defined in the page have higher priority than those defined in the flow. Format:`projects//locations//agents//flows//transitionRouteGroups/`.
      * 
      */
-    @InputImport(name="transitionRouteGroups")
+    @Import(name="transitionRouteGroups")
       private final @Nullable Output<List<String>> transitionRouteGroups;
 
     public Output<List<String>> getTransitionRouteGroups() {
@@ -116,7 +116,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * A flow's transition routes serve two purposes: * They are responsible for matching the user's first utterances in the flow. * They are inherited by every page's transition routes and can support use cases such as the user saying "help" or "can I talk to a human?", which can be handled in a common way regardless of the current page. Transition routes defined in the page have higher priority than those defined in the flow. TransitionRoutes are evalauted in the following order: * TransitionRoutes with intent specified.. * TransitionRoutes with only condition specified. TransitionRoutes with intent specified are inherited by pages in the flow.
      * 
      */
-    @InputImport(name="transitionRoutes")
+    @Import(name="transitionRoutes")
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1TransitionRouteArgs>> transitionRoutes;
 
     public Output<List<GoogleCloudDialogflowCxV3beta1TransitionRouteArgs>> getTransitionRoutes() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.aws.cfg.inputs.RemediationConfigurationExecutionControlsSsmControlsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class RemediationConfigurationExecutionControlsArgs extends io.pulu
      * Configuration block for SSM controls. See below.
      * 
      */
-    @InputImport(name="ssmControls")
+    @Import(name="ssmControls")
       private final @Nullable Output<RemediationConfigurationExecutionControlsSsmControlsArgs> ssmControls;
 
     public Output<RemediationConfigurationExecutionControlsSsmControlsArgs> getSsmControls() {

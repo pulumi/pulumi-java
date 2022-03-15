@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProtectionModeResponse {
     /**
      * The application control policy enforcement/protection mode of the machine group
@@ -32,12 +32,12 @@ public final class ProtectionModeResponse {
      */
     private final @Nullable String script;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProtectionModeResponse(
-        @OutputCustomType.Parameter("exe") @Nullable String exe,
-        @OutputCustomType.Parameter("executable") @Nullable String executable,
-        @OutputCustomType.Parameter("msi") @Nullable String msi,
-        @OutputCustomType.Parameter("script") @Nullable String script) {
+        @CustomType.Parameter("exe") @Nullable String exe,
+        @CustomType.Parameter("executable") @Nullable String executable,
+        @CustomType.Parameter("msi") @Nullable String msi,
+        @CustomType.Parameter("script") @Nullable String script) {
         this.exe = exe;
         this.executable = executable;
         this.msi = msi;

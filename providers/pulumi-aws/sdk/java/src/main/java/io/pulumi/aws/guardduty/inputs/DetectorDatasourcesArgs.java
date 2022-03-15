@@ -5,7 +5,7 @@ package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.aws.guardduty.inputs.DetectorDatasourcesS3LogsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class DetectorDatasourcesArgs extends io.pulumi.resources.ResourceA
      * Describes whether S3 data event logs are enabled as a data source. See S3 Logs below for more details.
      * 
      */
-    @InputImport(name="s3Logs")
+    @Import(name="s3Logs")
       private final @Nullable Output<DetectorDatasourcesS3LogsArgs> s3Logs;
 
     public Output<DetectorDatasourcesS3LogsArgs> getS3Logs() {

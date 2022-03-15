@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.s3outposts.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EndpointNetworkInterface {
     private final String networkInterfaceId;
 
-    @OutputCustomType.Constructor
-    private EndpointNetworkInterface(@OutputCustomType.Parameter("networkInterfaceId") String networkInterfaceId) {
+    @CustomType.Constructor
+    private EndpointNetworkInterface(@CustomType.Parameter("networkInterfaceId") String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
     }
 

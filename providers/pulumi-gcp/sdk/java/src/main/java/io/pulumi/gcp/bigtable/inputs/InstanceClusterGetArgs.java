@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class InstanceClusterGetArgs extends io.pulumi.resources.ResourceAr
      * The ID of the Cloud Bigtable cluster.
      * 
      */
-    @InputImport(name="clusterId", required=true)
+    @Import(name="clusterId", required=true)
       private final Output<String> clusterId;
 
     public Output<String> getClusterId() {
@@ -30,7 +30,7 @@ public final class InstanceClusterGetArgs extends io.pulumi.resources.ResourceAr
      * Describes the Cloud KMS encryption key that will be used to protect the destination Bigtable cluster. The requirements for this key are: 1) The Cloud Bigtable service account associated with the project that contains this cluster must be granted the `cloudkms.cryptoKeyEncrypterDecrypter` role on the CMEK key. 2) Only regional keys can be used and the region of the CMEK key must match the region of the cluster. 3) All clusters within an instance must use the same CMEK key. Values are of the form `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}`
      * 
      */
-    @InputImport(name="kmsKeyName")
+    @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
@@ -43,7 +43,7 @@ public final class InstanceClusterGetArgs extends io.pulumi.resources.ResourceAr
      * for a `DEVELOPMENT` instance.
      * 
      */
-    @InputImport(name="numNodes")
+    @Import(name="numNodes")
       private final @Nullable Output<Integer> numNodes;
 
     public Output<Integer> getNumNodes() {
@@ -55,7 +55,7 @@ public final class InstanceClusterGetArgs extends io.pulumi.resources.ResourceAr
      * `"HDD"`. Defaults to `"SSD"`.
      * 
      */
-    @InputImport(name="storageType")
+    @Import(name="storageType")
       private final @Nullable Output<String> storageType;
 
     public Output<String> getStorageType() {
@@ -68,7 +68,7 @@ public final class InstanceClusterGetArgs extends io.pulumi.resources.ResourceAr
      * Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

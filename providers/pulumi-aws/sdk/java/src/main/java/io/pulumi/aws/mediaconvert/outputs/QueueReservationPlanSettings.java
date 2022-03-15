@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.mediaconvert.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class QueueReservationPlanSettings {
     /**
      * The length of the term of your reserved queue pricing plan commitment. Valid value is `ONE_YEAR`.
@@ -26,11 +26,11 @@ public final class QueueReservationPlanSettings {
      */
     private final Integer reservedSlots;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QueueReservationPlanSettings(
-        @OutputCustomType.Parameter("commitment") String commitment,
-        @OutputCustomType.Parameter("renewalType") String renewalType,
-        @OutputCustomType.Parameter("reservedSlots") Integer reservedSlots) {
+        @CustomType.Parameter("commitment") String commitment,
+        @CustomType.Parameter("renewalType") String renewalType,
+        @CustomType.Parameter("reservedSlots") Integer reservedSlots) {
         this.commitment = commitment;
         this.renewalType = renewalType;
         this.reservedSlots = reservedSlots;

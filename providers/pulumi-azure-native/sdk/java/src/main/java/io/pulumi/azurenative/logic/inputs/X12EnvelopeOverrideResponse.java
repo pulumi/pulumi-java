@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * The date format.
      * 
      */
-    @InputImport(name="dateFormat", required=true)
+    @Import(name="dateFormat", required=true)
       private final String dateFormat;
 
     public String getDateFormat() {
@@ -33,7 +33,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * The functional identifier code.
      * 
      */
-    @InputImport(name="functionalIdentifierCode")
+    @Import(name="functionalIdentifierCode")
       private final @Nullable String functionalIdentifierCode;
 
     public Optional<String> getFunctionalIdentifierCode() {
@@ -44,7 +44,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * The header version.
      * 
      */
-    @InputImport(name="headerVersion", required=true)
+    @Import(name="headerVersion", required=true)
       private final String headerVersion;
 
     public String getHeaderVersion() {
@@ -55,7 +55,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * The message id on which this envelope settings has to be applied.
      * 
      */
-    @InputImport(name="messageId", required=true)
+    @Import(name="messageId", required=true)
       private final String messageId;
 
     public String getMessageId() {
@@ -66,7 +66,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * The protocol version on which this envelope settings has to be applied.
      * 
      */
-    @InputImport(name="protocolVersion", required=true)
+    @Import(name="protocolVersion", required=true)
       private final String protocolVersion;
 
     public String getProtocolVersion() {
@@ -77,7 +77,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * The receiver application id.
      * 
      */
-    @InputImport(name="receiverApplicationId", required=true)
+    @Import(name="receiverApplicationId", required=true)
       private final String receiverApplicationId;
 
     public String getReceiverApplicationId() {
@@ -88,7 +88,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * The responsible agency code.
      * 
      */
-    @InputImport(name="responsibleAgencyCode", required=true)
+    @Import(name="responsibleAgencyCode", required=true)
       private final String responsibleAgencyCode;
 
     public String getResponsibleAgencyCode() {
@@ -99,7 +99,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * The sender application id.
      * 
      */
-    @InputImport(name="senderApplicationId", required=true)
+    @Import(name="senderApplicationId", required=true)
       private final String senderApplicationId;
 
     public String getSenderApplicationId() {
@@ -110,7 +110,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * The target namespace on which this envelope settings has to be applied.
      * 
      */
-    @InputImport(name="targetNamespace", required=true)
+    @Import(name="targetNamespace", required=true)
       private final String targetNamespace;
 
     public String getTargetNamespace() {
@@ -121,7 +121,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * The time format.
      * 
      */
-    @InputImport(name="timeFormat", required=true)
+    @Import(name="timeFormat", required=true)
       private final String timeFormat;
 
     public String getTimeFormat() {

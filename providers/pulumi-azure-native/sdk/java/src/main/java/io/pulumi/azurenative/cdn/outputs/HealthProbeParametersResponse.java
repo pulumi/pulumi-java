@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HealthProbeParametersResponse {
     /**
      * The number of seconds between health probes.Default is 240sec.
@@ -33,12 +33,12 @@ public final class HealthProbeParametersResponse {
      */
     private final @Nullable String probeRequestType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HealthProbeParametersResponse(
-        @OutputCustomType.Parameter("probeIntervalInSeconds") @Nullable Integer probeIntervalInSeconds,
-        @OutputCustomType.Parameter("probePath") @Nullable String probePath,
-        @OutputCustomType.Parameter("probeProtocol") @Nullable String probeProtocol,
-        @OutputCustomType.Parameter("probeRequestType") @Nullable String probeRequestType) {
+        @CustomType.Parameter("probeIntervalInSeconds") @Nullable Integer probeIntervalInSeconds,
+        @CustomType.Parameter("probePath") @Nullable String probePath,
+        @CustomType.Parameter("probeProtocol") @Nullable String probeProtocol,
+        @CustomType.Parameter("probeRequestType") @Nullable String probeRequestType) {
         this.probeIntervalInSeconds = probeIntervalInSeconds;
         this.probePath = probePath;
         this.probeProtocol = probeProtocol;

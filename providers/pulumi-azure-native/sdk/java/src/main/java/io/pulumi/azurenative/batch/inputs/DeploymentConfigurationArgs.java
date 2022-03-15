@@ -6,7 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.inputs.CloudServiceConfigurationArgs;
 import io.pulumi.azurenative.batch.inputs.VirtualMachineConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
      * This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to 'UserSubscription'.
      * 
      */
-    @InputImport(name="cloudServiceConfiguration")
+    @Import(name="cloudServiceConfiguration")
       private final @Nullable Output<CloudServiceConfigurationArgs> cloudServiceConfiguration;
 
     public Output<CloudServiceConfigurationArgs> getCloudServiceConfiguration() {
@@ -30,7 +30,7 @@ public final class DeploymentConfigurationArgs extends io.pulumi.resources.Resou
      * This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.
      * 
      */
-    @InputImport(name="virtualMachineConfiguration")
+    @Import(name="virtualMachineConfiguration")
       private final @Nullable Output<VirtualMachineConfigurationArgs> virtualMachineConfiguration;
 
     public Output<VirtualMachineConfigurationArgs> getVirtualMachineConfiguration() {

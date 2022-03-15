@@ -4,7 +4,7 @@
 package io.pulumi.gcp.deploymentmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentLabelGetArgs;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetGetArgs;
 import java.lang.Boolean;
@@ -28,7 +28,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
      * 
      */
-    @InputImport(name="createPolicy")
+    @Import(name="createPolicy")
       private final @Nullable Output<String> createPolicy;
 
     public Output<String> getCreatePolicy() {
@@ -46,7 +46,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `ABANDON` and `DELETE`.
      * 
      */
-    @InputImport(name="deletePolicy")
+    @Import(name="deletePolicy")
       private final @Nullable Output<String> deletePolicy;
 
     public Output<String> getDeletePolicy() {
@@ -57,7 +57,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * Unique identifier for deployment. Output only.
      * 
      */
-    @InputImport(name="deploymentId")
+    @Import(name="deploymentId")
       private final @Nullable Output<String> deploymentId;
 
     public Output<String> getDeploymentId() {
@@ -68,7 +68,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * Optional user-provided description of deployment.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -80,7 +80,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<DeploymentLabelGetArgs>> labels;
 
     public Output<List<DeploymentLabelGetArgs>> getLabels() {
@@ -91,7 +91,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * Output only. URL of the manifest representing the last manifest that was successfully deployed.
      * 
      */
-    @InputImport(name="manifest")
+    @Import(name="manifest")
       private final @Nullable Output<String> manifest;
 
     public Output<String> getManifest() {
@@ -103,7 +103,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -121,7 +121,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * to true or if other fields are updated while preview is true.
      * 
      */
-    @InputImport(name="preview")
+    @Import(name="preview")
       private final @Nullable Output<Boolean> preview;
 
     public Output<Boolean> getPreview() {
@@ -133,7 +133,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -144,7 +144,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * Output only. Server defined URL for the resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -157,7 +157,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<DeploymentTargetGetArgs> target;
 
     public Output<DeploymentTargetGetArgs> getTarget() {

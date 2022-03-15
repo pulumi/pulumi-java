@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.workflows_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkflowResult {
     /**
      * The timestamp of when the workflow was created.
@@ -61,18 +61,18 @@ public final class GetWorkflowResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkflowResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("revisionCreateTime") String revisionCreateTime,
-        @OutputCustomType.Parameter("revisionId") String revisionId,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("sourceContents") String sourceContents,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("revisionCreateTime") String revisionCreateTime,
+        @CustomType.Parameter("revisionId") String revisionId,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("sourceContents") String sourceContents,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.labels = labels;

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.inputs.ServiceReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
      * `caBundle` is a PEM encoded CA bundle which will be used to validate the webhook's server certificate. If unspecified, system trust roots on the apiserver are used.
      * 
      */
-    @InputImport(name="caBundle")
+    @Import(name="caBundle")
       private final @Nullable Output<String> caBundle;
 
     public Output<String> getCaBundle() {
@@ -36,7 +36,7 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
      * If the webhook is running within the cluster, then you should use `service`.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<ServiceReferenceArgs> service;
 
     public Output<ServiceReferenceArgs> getService() {
@@ -57,7 +57,7 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
      * Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fragments ("#...") and query parameters ("?...") are not allowed, either.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

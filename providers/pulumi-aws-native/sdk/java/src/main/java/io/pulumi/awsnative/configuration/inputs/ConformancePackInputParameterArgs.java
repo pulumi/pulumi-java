@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.configuration.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,14 +17,14 @@ public final class ConformancePackInputParameterArgs extends io.pulumi.resources
 
     public static final ConformancePackInputParameterArgs Empty = new ConformancePackInputParameterArgs();
 
-    @InputImport(name="parameterName", required=true)
+    @Import(name="parameterName", required=true)
       private final Output<String> parameterName;
 
     public Output<String> getParameterName() {
         return this.parameterName;
     }
 
-    @InputImport(name="parameterValue", required=true)
+    @Import(name="parameterValue", required=true)
       private final Output<String> parameterValue;
 
     public Output<String> getParameterValue() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.enums.EdifactDecimalIndicator;
 import io.pulumi.azurenative.logic.enums.SegmentTerminatorSuffix;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * The component separator.
      * 
      */
-    @InputImport(name="componentSeparator", required=true)
+    @Import(name="componentSeparator", required=true)
       private final Output<Integer> componentSeparator;
 
     public Output<Integer> getComponentSeparator() {
@@ -36,7 +36,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * The data element separator.
      * 
      */
-    @InputImport(name="dataElementSeparator", required=true)
+    @Import(name="dataElementSeparator", required=true)
       private final Output<Integer> dataElementSeparator;
 
     public Output<Integer> getDataElementSeparator() {
@@ -47,7 +47,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * The decimal point indicator.
      * 
      */
-    @InputImport(name="decimalPointIndicator", required=true)
+    @Import(name="decimalPointIndicator", required=true)
       private final Output<EdifactDecimalIndicator> decimalPointIndicator;
 
     public Output<EdifactDecimalIndicator> getDecimalPointIndicator() {
@@ -58,7 +58,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * The message association assigned code.
      * 
      */
-    @InputImport(name="messageAssociationAssignedCode")
+    @Import(name="messageAssociationAssignedCode")
       private final @Nullable Output<String> messageAssociationAssignedCode;
 
     public Output<String> getMessageAssociationAssignedCode() {
@@ -69,7 +69,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * The message id.
      * 
      */
-    @InputImport(name="messageId")
+    @Import(name="messageId")
       private final @Nullable Output<String> messageId;
 
     public Output<String> getMessageId() {
@@ -80,7 +80,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * The message release.
      * 
      */
-    @InputImport(name="messageRelease")
+    @Import(name="messageRelease")
       private final @Nullable Output<String> messageRelease;
 
     public Output<String> getMessageRelease() {
@@ -91,7 +91,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * The message version.
      * 
      */
-    @InputImport(name="messageVersion")
+    @Import(name="messageVersion")
       private final @Nullable Output<String> messageVersion;
 
     public Output<String> getMessageVersion() {
@@ -102,7 +102,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * The release indicator.
      * 
      */
-    @InputImport(name="releaseIndicator", required=true)
+    @Import(name="releaseIndicator", required=true)
       private final Output<Integer> releaseIndicator;
 
     public Output<Integer> getReleaseIndicator() {
@@ -113,7 +113,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * The repetition separator.
      * 
      */
-    @InputImport(name="repetitionSeparator", required=true)
+    @Import(name="repetitionSeparator", required=true)
       private final Output<Integer> repetitionSeparator;
 
     public Output<Integer> getRepetitionSeparator() {
@@ -124,7 +124,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * The segment terminator.
      * 
      */
-    @InputImport(name="segmentTerminator", required=true)
+    @Import(name="segmentTerminator", required=true)
       private final Output<Integer> segmentTerminator;
 
     public Output<Integer> getSegmentTerminator() {
@@ -135,7 +135,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * The segment terminator suffix.
      * 
      */
-    @InputImport(name="segmentTerminatorSuffix", required=true)
+    @Import(name="segmentTerminatorSuffix", required=true)
       private final Output<SegmentTerminatorSuffix> segmentTerminatorSuffix;
 
     public Output<SegmentTerminatorSuffix> getSegmentTerminatorSuffix() {
@@ -146,7 +146,7 @@ public final class EdifactDelimiterOverrideArgs extends io.pulumi.resources.Reso
      * The target namespace on which this delimiter settings has to be applied.
      * 
      */
-    @InputImport(name="targetNamespace")
+    @Import(name="targetNamespace")
       private final @Nullable Output<String> targetNamespace;
 
     public Output<String> getTargetNamespace() {

@@ -6,13 +6,13 @@ package io.pulumi.awsnative.s3objectlambda.outputs;
 import io.pulumi.awsnative.s3objectlambda.outputs.AccessPointObjectLambdaConfiguration;
 import io.pulumi.awsnative.s3objectlambda.outputs.AccessPointPublicAccessBlockConfiguration;
 import io.pulumi.awsnative.s3objectlambda.outputs.PolicyStatusProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAccessPointResult {
     private final @Nullable String arn;
     /**
@@ -32,13 +32,13 @@ public final class GetAccessPointResult {
      */
     private final @Nullable AccessPointPublicAccessBlockConfiguration publicAccessBlockConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccessPointResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("creationDate") @Nullable String creationDate,
-        @OutputCustomType.Parameter("objectLambdaConfiguration") @Nullable AccessPointObjectLambdaConfiguration objectLambdaConfiguration,
-        @OutputCustomType.Parameter("policyStatus") @Nullable PolicyStatusProperties policyStatus,
-        @OutputCustomType.Parameter("publicAccessBlockConfiguration") @Nullable AccessPointPublicAccessBlockConfiguration publicAccessBlockConfiguration) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("creationDate") @Nullable String creationDate,
+        @CustomType.Parameter("objectLambdaConfiguration") @Nullable AccessPointObjectLambdaConfiguration objectLambdaConfiguration,
+        @CustomType.Parameter("policyStatus") @Nullable PolicyStatusProperties policyStatus,
+        @CustomType.Parameter("publicAccessBlockConfiguration") @Nullable AccessPointPublicAccessBlockConfiguration publicAccessBlockConfiguration) {
         this.arn = arn;
         this.creationDate = creationDate;
         this.objectLambdaConfiguration = objectLambdaConfiguration;

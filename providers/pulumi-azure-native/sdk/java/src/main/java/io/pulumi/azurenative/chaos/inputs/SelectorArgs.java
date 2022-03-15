@@ -6,7 +6,7 @@ package io.pulumi.azurenative.chaos.inputs;
 import io.pulumi.azurenative.chaos.enums.SelectorType;
 import io.pulumi.azurenative.chaos.inputs.TargetReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
      * String of the selector ID.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -35,7 +35,7 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
      * List of Target references.
      * 
      */
-    @InputImport(name="targets", required=true)
+    @Import(name="targets", required=true)
       private final Output<List<TargetReferenceArgs>> targets;
 
     public Output<List<TargetReferenceArgs>> getTargets() {
@@ -46,7 +46,7 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
      * Enum of the selector type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<SelectorType> type;
 
     public Output<SelectorType> getType() {

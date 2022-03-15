@@ -7,7 +7,7 @@ import io.pulumi.azurenative.costmanagement.enums.GranularityType;
 import io.pulumi.azurenative.costmanagement.inputs.ExportDatasetConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * The export dataset configuration.
      * 
      */
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable Output<ExportDatasetConfigurationArgs> configuration;
 
     public Output<ExportDatasetConfigurationArgs> getConfiguration() {
@@ -36,7 +36,7 @@ public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * The granularity of rows in the export. Currently only 'Daily' is supported.
      * 
      */
-    @InputImport(name="granularity")
+    @Import(name="granularity")
       private final @Nullable Output<Either<String,GranularityType>> granularity;
 
     public Output<Either<String,GranularityType>> getGranularity() {

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.RecipeS3LocationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RecipeDataCatalogInputDefinitionArgs extends io.pulumi.resour
      * Catalog id
      * 
      */
-    @InputImport(name="catalogId")
+    @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
@@ -30,7 +30,7 @@ public final class RecipeDataCatalogInputDefinitionArgs extends io.pulumi.resour
      * Database name
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -41,14 +41,14 @@ public final class RecipeDataCatalogInputDefinitionArgs extends io.pulumi.resour
      * Table name
      * 
      */
-    @InputImport(name="tableName")
+    @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
     public Output<String> getTableName() {
         return this.tableName == null ? Output.empty() : this.tableName;
     }
 
-    @InputImport(name="tempDirectory")
+    @Import(name="tempDirectory")
       private final @Nullable Output<RecipeS3LocationArgs> tempDirectory;
 
     public Output<RecipeS3LocationArgs> getTempDirectory() {

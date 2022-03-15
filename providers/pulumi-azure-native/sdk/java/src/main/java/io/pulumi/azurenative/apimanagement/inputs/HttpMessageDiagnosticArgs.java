@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.inputs.BodyDiagnosticSettingsArgs;
 import io.pulumi.azurenative.apimanagement.inputs.DataMaskingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
      * Body logging settings.
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<BodyDiagnosticSettingsArgs> body;
 
     public Output<BodyDiagnosticSettingsArgs> getBody() {
@@ -36,7 +36,7 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
      * Data masking settings.
      * 
      */
-    @InputImport(name="dataMasking")
+    @Import(name="dataMasking")
       private final @Nullable Output<DataMaskingArgs> dataMasking;
 
     public Output<DataMaskingArgs> getDataMasking() {
@@ -47,7 +47,7 @@ public final class HttpMessageDiagnosticArgs extends io.pulumi.resources.Resourc
      * Array of HTTP Headers to log.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Output<List<String>> headers;
 
     public Output<List<String>> getHeaders() {

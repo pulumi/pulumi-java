@@ -8,7 +8,7 @@ import io.pulumi.aws.cloudfront.MonitoringSubscriptionArgs;
 import io.pulumi.aws.cloudfront.inputs.MonitoringSubscriptionState;
 import io.pulumi.aws.cloudfront.outputs.MonitoringSubscriptionMonitoringSubscription;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class MonitoringSubscription extends io.pulumi.resources.CustomResource {
      * The ID of the distribution that you are enabling metrics for.
      * 
      */
-    @OutputExport(name="distributionId", type=String.class, parameters={})
+    @Export(name="distributionId", type=String.class, parameters={})
     private Output<String> distributionId;
 
     /**
@@ -47,7 +47,7 @@ public class MonitoringSubscription extends io.pulumi.resources.CustomResource {
      * A monitoring subscription. This structure contains information about whether additional CloudWatch metrics are enabled for a given CloudFront distribution.
      * 
      */
-    @OutputExport(name="monitoringSubscription", type=MonitoringSubscriptionMonitoringSubscription.class, parameters={})
+    @Export(name="monitoringSubscription", type=MonitoringSubscriptionMonitoringSubscription.class, parameters={})
     private Output<MonitoringSubscriptionMonitoringSubscription> monitoringSubscription;
 
     /**

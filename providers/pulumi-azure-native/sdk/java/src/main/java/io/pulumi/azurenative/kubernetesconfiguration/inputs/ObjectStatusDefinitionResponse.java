@@ -6,7 +6,7 @@ package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.HelmReleasePropertiesDefinitionResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ObjectReferenceDefinitionResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ObjectStatusConditionDefinitionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
      * Object reference to the Kustomization that applied this object
      * 
      */
-    @InputImport(name="appliedBy")
+    @Import(name="appliedBy")
       private final @Nullable ObjectReferenceDefinitionResponse appliedBy;
 
     public Optional<ObjectReferenceDefinitionResponse> getAppliedBy() {
@@ -37,7 +37,7 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
      * Compliance state of the applied object showing whether the applied object has come into a ready state on the cluster.
      * 
      */
-    @InputImport(name="complianceState")
+    @Import(name="complianceState")
       private final @Nullable String complianceState;
 
     public Optional<String> getComplianceState() {
@@ -48,7 +48,7 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
      * Additional properties that are provided from objects of the HelmRelease kind
      * 
      */
-    @InputImport(name="helmReleaseProperties")
+    @Import(name="helmReleaseProperties")
       private final @Nullable HelmReleasePropertiesDefinitionResponse helmReleaseProperties;
 
     public Optional<HelmReleasePropertiesDefinitionResponse> getHelmReleaseProperties() {
@@ -59,7 +59,7 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
      * Kind of the applied object
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable String kind;
 
     public Optional<String> getKind() {
@@ -70,7 +70,7 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
      * Name of the applied object
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -81,7 +81,7 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
      * Namespace of the applied object
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable String namespace;
 
     public Optional<String> getNamespace() {
@@ -92,7 +92,7 @@ public final class ObjectStatusDefinitionResponse extends io.pulumi.resources.In
      * List of Kubernetes object status conditions present on the cluster
      * 
      */
-    @InputImport(name="statusConditions")
+    @Import(name="statusConditions")
       private final @Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions;
 
     public List<ObjectStatusConditionDefinitionResponse> getStatusConditions() {

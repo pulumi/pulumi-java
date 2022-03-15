@@ -8,7 +8,7 @@ import io.pulumi.aws.rds.OptionGroupArgs;
 import io.pulumi.aws.rds.inputs.OptionGroupState;
 import io.pulumi.aws.rds.outputs.OptionGroupOption;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class OptionGroup extends io.pulumi.resources.CustomResource {
      * The ARN of the db option group.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -54,7 +54,7 @@ public class OptionGroup extends io.pulumi.resources.CustomResource {
      * Specifies the name of the engine that this option group should be associated with.
      * 
      */
-    @OutputExport(name="engineName", type=String.class, parameters={})
+    @Export(name="engineName", type=String.class, parameters={})
     private Output<String> engineName;
 
     /**
@@ -68,7 +68,7 @@ public class OptionGroup extends io.pulumi.resources.CustomResource {
      * Specifies the major version of the engine that this option group should be associated with.
      * 
      */
-    @OutputExport(name="majorEngineVersion", type=String.class, parameters={})
+    @Export(name="majorEngineVersion", type=String.class, parameters={})
     private Output<String> majorEngineVersion;
 
     /**
@@ -82,7 +82,7 @@ public class OptionGroup extends io.pulumi.resources.CustomResource {
      * The Name of the setting.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -96,7 +96,7 @@ public class OptionGroup extends io.pulumi.resources.CustomResource {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`. Must be lowercase, to match as it is stored in AWS.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output<String> namePrefix;
 
     /**
@@ -110,7 +110,7 @@ public class OptionGroup extends io.pulumi.resources.CustomResource {
      * The description of the option group. Defaults to "Managed by Pulumi".
      * 
      */
-    @OutputExport(name="optionGroupDescription", type=String.class, parameters={})
+    @Export(name="optionGroupDescription", type=String.class, parameters={})
     private Output<String> optionGroupDescription;
 
     /**
@@ -124,7 +124,7 @@ public class OptionGroup extends io.pulumi.resources.CustomResource {
      * A list of Options to apply.
      * 
      */
-    @OutputExport(name="options", type=List.class, parameters={OptionGroupOption.class})
+    @Export(name="options", type=List.class, parameters={OptionGroupOption.class})
     private Output</* @Nullable */ List<OptionGroupOption>> options;
 
     /**
@@ -138,7 +138,7 @@ public class OptionGroup extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -152,7 +152,7 @@ public class OptionGroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

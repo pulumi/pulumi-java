@@ -5,7 +5,7 @@ package io.pulumi.aws.applicationloadbalancing.outputs;
 
 import io.pulumi.aws.applicationloadbalancing.outputs.GetLoadBalancerAccessLogs;
 import io.pulumi.aws.applicationloadbalancing.outputs.GetLoadBalancerSubnetMapping;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLoadBalancerResult {
     private final GetLoadBalancerAccessLogs accessLogs;
     private final String arn;
@@ -42,30 +42,30 @@ public final class GetLoadBalancerResult {
     private final String vpcId;
     private final String zoneId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLoadBalancerResult(
-        @OutputCustomType.Parameter("accessLogs") GetLoadBalancerAccessLogs accessLogs,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("arnSuffix") String arnSuffix,
-        @OutputCustomType.Parameter("customerOwnedIpv4Pool") String customerOwnedIpv4Pool,
-        @OutputCustomType.Parameter("desyncMitigationMode") String desyncMitigationMode,
-        @OutputCustomType.Parameter("dnsName") String dnsName,
-        @OutputCustomType.Parameter("dropInvalidHeaderFields") Boolean dropInvalidHeaderFields,
-        @OutputCustomType.Parameter("enableDeletionProtection") Boolean enableDeletionProtection,
-        @OutputCustomType.Parameter("enableHttp2") Boolean enableHttp2,
-        @OutputCustomType.Parameter("enableWafFailOpen") Boolean enableWafFailOpen,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("idleTimeout") Integer idleTimeout,
-        @OutputCustomType.Parameter("internal") Boolean internal,
-        @OutputCustomType.Parameter("ipAddressType") String ipAddressType,
-        @OutputCustomType.Parameter("loadBalancerType") String loadBalancerType,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("securityGroups") List<String> securityGroups,
-        @OutputCustomType.Parameter("subnetMappings") List<GetLoadBalancerSubnetMapping> subnetMappings,
-        @OutputCustomType.Parameter("subnets") List<String> subnets,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("vpcId") String vpcId,
-        @OutputCustomType.Parameter("zoneId") String zoneId) {
+        @CustomType.Parameter("accessLogs") GetLoadBalancerAccessLogs accessLogs,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("arnSuffix") String arnSuffix,
+        @CustomType.Parameter("customerOwnedIpv4Pool") String customerOwnedIpv4Pool,
+        @CustomType.Parameter("desyncMitigationMode") String desyncMitigationMode,
+        @CustomType.Parameter("dnsName") String dnsName,
+        @CustomType.Parameter("dropInvalidHeaderFields") Boolean dropInvalidHeaderFields,
+        @CustomType.Parameter("enableDeletionProtection") Boolean enableDeletionProtection,
+        @CustomType.Parameter("enableHttp2") Boolean enableHttp2,
+        @CustomType.Parameter("enableWafFailOpen") Boolean enableWafFailOpen,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("idleTimeout") Integer idleTimeout,
+        @CustomType.Parameter("internal") Boolean internal,
+        @CustomType.Parameter("ipAddressType") String ipAddressType,
+        @CustomType.Parameter("loadBalancerType") String loadBalancerType,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("securityGroups") List<String> securityGroups,
+        @CustomType.Parameter("subnetMappings") List<GetLoadBalancerSubnetMapping> subnetMappings,
+        @CustomType.Parameter("subnets") List<String> subnets,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("vpcId") String vpcId,
+        @CustomType.Parameter("zoneId") String zoneId) {
         this.accessLogs = accessLogs;
         this.arn = arn;
         this.arnSuffix = arnSuffix;

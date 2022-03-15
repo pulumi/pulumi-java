@@ -8,7 +8,7 @@ import io.pulumi.azurenative.automation.HybridRunbookWorkerArgs;
 import io.pulumi.azurenative.automation.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
      * Gets or sets the assigned machine IP address.
      * 
      */
-    @OutputExport(name="ip", type=String.class, parameters={})
+    @Export(name="ip", type=String.class, parameters={})
     private Output</* @Nullable */ String> ip;
 
     /**
@@ -49,7 +49,7 @@ public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
      * Last Heartbeat from the Worker
      * 
      */
-    @OutputExport(name="lastSeenDateTime", type=String.class, parameters={})
+    @Export(name="lastSeenDateTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastSeenDateTime;
 
     /**
@@ -63,7 +63,7 @@ public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
      * Gets or sets the registration time of the worker machine.
      * 
      */
-    @OutputExport(name="registeredDateTime", type=String.class, parameters={})
+    @Export(name="registeredDateTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> registeredDateTime;
 
     /**
@@ -91,7 +91,7 @@ public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
      * Resource system metadata.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -105,7 +105,7 @@ public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -119,7 +119,7 @@ public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager Id for a virtual machine.
      * 
      */
-    @OutputExport(name="vmResourceId", type=String.class, parameters={})
+    @Export(name="vmResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vmResourceId;
 
     /**
@@ -133,7 +133,7 @@ public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
      * Name of the HybridWorker.
      * 
      */
-    @OutputExport(name="workerName", type=String.class, parameters={})
+    @Export(name="workerName", type=String.class, parameters={})
     private Output</* @Nullable */ String> workerName;
 
     /**
@@ -147,7 +147,7 @@ public class HybridRunbookWorker extends io.pulumi.resources.CustomResource {
      * Type of the HybridWorker.
      * 
      */
-    @OutputExport(name="workerType", type=String.class, parameters={})
+    @Export(name="workerType", type=String.class, parameters={})
     private Output</* @Nullable */ String> workerType;
 
     /**

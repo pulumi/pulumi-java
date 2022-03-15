@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GuestPoliciesRecipeInstallStepScriptRun {
     /**
      * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
@@ -31,11 +31,11 @@ public final class GuestPoliciesRecipeInstallStepScriptRun {
      */
     private final String script;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestPoliciesRecipeInstallStepScriptRun(
-        @OutputCustomType.Parameter("allowedExitCodes") @Nullable List<Integer> allowedExitCodes,
-        @OutputCustomType.Parameter("interpreter") @Nullable String interpreter,
-        @OutputCustomType.Parameter("script") String script) {
+        @CustomType.Parameter("allowedExitCodes") @Nullable List<Integer> allowedExitCodes,
+        @CustomType.Parameter("interpreter") @Nullable String interpreter,
+        @CustomType.Parameter("script") String script) {
         this.allowedExitCodes = allowedExitCodes;
         this.interpreter = interpreter;
         this.script = script;

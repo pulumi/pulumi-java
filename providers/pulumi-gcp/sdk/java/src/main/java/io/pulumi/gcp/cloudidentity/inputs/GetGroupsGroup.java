@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudidentity.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudidentity.inputs.GetGroupsGroupGroupKey;
 import java.lang.String;
 import java.util.List;
@@ -15,49 +15,49 @@ public final class GetGroupsGroup extends io.pulumi.resources.InvokeArgs {
 
     public static final GetGroupsGroup Empty = new GetGroupsGroup();
 
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
     }
 
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
         return this.description;
     }
 
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
     }
 
-    @InputImport(name="groupKeys", required=true)
+    @Import(name="groupKeys", required=true)
       private final List<GetGroupsGroupGroupKey> groupKeys;
 
     public List<GetGroupsGroupGroupKey> getGroupKeys() {
         return this.groupKeys;
     }
 
-    @InputImport(name="initialGroupConfig", required=true)
+    @Import(name="initialGroupConfig", required=true)
       private final String initialGroupConfig;
 
     public String getInitialGroupConfig() {
         return this.initialGroupConfig;
     }
 
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -68,14 +68,14 @@ public final class GetGroupsGroup extends io.pulumi.resources.InvokeArgs {
      * The parent resource under which to list all Groups. Must be of the form identitysources/{identity_source_id} for external- identity-mapped groups or customers/{customer_id} for Google Groups.
      * 
      */
-    @InputImport(name="parent", required=true)
+    @Import(name="parent", required=true)
       private final String parent;
 
     public String getParent() {
         return this.parent;
     }
 
-    @InputImport(name="updateTime", required=true)
+    @Import(name="updateTime", required=true)
       private final String updateTime;
 
     public String getUpdateTime() {

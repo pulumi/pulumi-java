@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetOutputArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the streaming job.
      * 
      */
-    @InputImport(name="jobName", required=true)
+    @Import(name="jobName", required=true)
       private final String jobName;
 
     public String getJobName() {
@@ -27,7 +27,7 @@ public final class GetOutputArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the output.
      * 
      */
-    @InputImport(name="outputName", required=true)
+    @Import(name="outputName", required=true)
       private final String outputName;
 
     public String getOutputName() {
@@ -38,7 +38,7 @@ public final class GetOutputArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

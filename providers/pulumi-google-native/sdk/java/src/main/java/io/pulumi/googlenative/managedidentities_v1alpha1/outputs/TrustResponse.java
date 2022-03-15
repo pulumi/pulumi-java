@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.managedidentities_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TrustResponse {
     /**
      * The time the instance was created.
@@ -67,19 +67,19 @@ public final class TrustResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TrustResponse(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("lastKnownTrustConnectedHeartbeatTime") String lastKnownTrustConnectedHeartbeatTime,
-        @OutputCustomType.Parameter("selectiveAuthentication") Boolean selectiveAuthentication,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stateDescription") String stateDescription,
-        @OutputCustomType.Parameter("targetDnsIpAddresses") List<String> targetDnsIpAddresses,
-        @OutputCustomType.Parameter("targetDomainName") String targetDomainName,
-        @OutputCustomType.Parameter("trustDirection") String trustDirection,
-        @OutputCustomType.Parameter("trustHandshakeSecret") String trustHandshakeSecret,
-        @OutputCustomType.Parameter("trustType") String trustType,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("lastKnownTrustConnectedHeartbeatTime") String lastKnownTrustConnectedHeartbeatTime,
+        @CustomType.Parameter("selectiveAuthentication") Boolean selectiveAuthentication,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stateDescription") String stateDescription,
+        @CustomType.Parameter("targetDnsIpAddresses") List<String> targetDnsIpAddresses,
+        @CustomType.Parameter("targetDomainName") String targetDomainName,
+        @CustomType.Parameter("trustDirection") String trustDirection,
+        @CustomType.Parameter("trustHandshakeSecret") String trustHandshakeSecret,
+        @CustomType.Parameter("trustType") String trustType,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.lastKnownTrustConnectedHeartbeatTime = lastKnownTrustConnectedHeartbeatTime;
         this.selectiveAuthentication = selectiveAuthentication;

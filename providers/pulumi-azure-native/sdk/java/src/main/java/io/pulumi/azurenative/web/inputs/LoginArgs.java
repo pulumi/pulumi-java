@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.inputs.LoginRoutesArgs;
 import io.pulumi.azurenative.web.inputs.NonceArgs;
 import io.pulumi.azurenative.web.inputs.TokenStoreArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
      * Note that URLs within the current domain are always implicitly allowed.
      * 
      */
-    @InputImport(name="allowedExternalRedirectUrls")
+    @Import(name="allowedExternalRedirectUrls")
       private final @Nullable Output<List<String>> allowedExternalRedirectUrls;
 
     public Output<List<String>> getAllowedExternalRedirectUrls() {
@@ -41,7 +41,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration settings of the session cookie's expiration.
      * 
      */
-    @InputImport(name="cookieExpiration")
+    @Import(name="cookieExpiration")
       private final @Nullable Output<CookieExpirationArgs> cookieExpiration;
 
     public Output<CookieExpirationArgs> getCookieExpiration() {
@@ -52,7 +52,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration settings of the nonce used in the login flow.
      * 
      */
-    @InputImport(name="nonce")
+    @Import(name="nonce")
       private final @Nullable Output<NonceArgs> nonce;
 
     public Output<NonceArgs> getNonce() {
@@ -63,7 +63,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
      * <code>true</code> if the fragments from the request are preserved after the login request is made; otherwise, <code>false</code>.
      * 
      */
-    @InputImport(name="preserveUrlFragmentsForLogins")
+    @Import(name="preserveUrlFragmentsForLogins")
       private final @Nullable Output<Boolean> preserveUrlFragmentsForLogins;
 
     public Output<Boolean> getPreserveUrlFragmentsForLogins() {
@@ -74,7 +74,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
      * The routes that specify the endpoints used for login and logout requests.
      * 
      */
-    @InputImport(name="routes")
+    @Import(name="routes")
       private final @Nullable Output<LoginRoutesArgs> routes;
 
     public Output<LoginRoutesArgs> getRoutes() {
@@ -85,7 +85,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration settings of the token store.
      * 
      */
-    @InputImport(name="tokenStore")
+    @Import(name="tokenStore")
       private final @Nullable Output<TokenStoreArgs> tokenStore;
 
     public Output<TokenStoreArgs> getTokenStore() {

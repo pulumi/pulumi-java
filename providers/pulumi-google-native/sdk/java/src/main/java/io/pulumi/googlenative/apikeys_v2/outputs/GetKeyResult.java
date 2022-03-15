@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apikeys_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apikeys_v2.outputs.V2RestrictionsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetKeyResult {
     /**
      * A timestamp identifying the time this key was originally created.
@@ -56,17 +56,17 @@ public final class GetKeyResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKeyResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("deleteTime") String deleteTime,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("keyString") String keyString,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("restrictions") V2RestrictionsResponse restrictions,
-        @OutputCustomType.Parameter("uid") String uid,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("deleteTime") String deleteTime,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("keyString") String keyString,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("restrictions") V2RestrictionsResponse restrictions,
+        @CustomType.Parameter("uid") String uid,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.deleteTime = deleteTime;
         this.displayName = displayName;

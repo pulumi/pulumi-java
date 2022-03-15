@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * Describes what is the signature enforces
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -32,7 +32,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * Describes the list of destination ports related to this signature
      * 
      */
-    @InputImport(name="destinationPorts")
+    @Import(name="destinationPorts")
       private final @Nullable List<String> destinationPorts;
 
     public List<String> getDestinationPorts() {
@@ -43,7 +43,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * Describes in which direction signature is being enforced: 0 - Inbound, 1 - OutBound, 2 - Bidirectional
      * 
      */
-    @InputImport(name="direction")
+    @Import(name="direction")
       private final @Nullable Integer direction;
 
     public Optional<Integer> getDirection() {
@@ -54,7 +54,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * Describes the groups the signature belongs to
      * 
      */
-    @InputImport(name="group")
+    @Import(name="group")
       private final @Nullable String group;
 
     public Optional<String> getGroup() {
@@ -65,7 +65,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * Describes if this override is inherited from base policy or not
      * 
      */
-    @InputImport(name="inheritedFromParentPolicy")
+    @Import(name="inheritedFromParentPolicy")
       private final @Nullable Boolean inheritedFromParentPolicy;
 
     public Optional<Boolean> getInheritedFromParentPolicy() {
@@ -76,7 +76,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * Describes the last updated time of the signature (provided from 3rd party vendor)
      * 
      */
-    @InputImport(name="lastUpdated")
+    @Import(name="lastUpdated")
       private final @Nullable String lastUpdated;
 
     public Optional<String> getLastUpdated() {
@@ -87,7 +87,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * The current mode enforced, 0 - Disabled, 1 - Alert, 2 -Deny
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Integer mode;
 
     public Optional<Integer> getMode() {
@@ -98,7 +98,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * Describes the protocol the signatures is being enforced in
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
@@ -109,7 +109,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * Describes the severity of signature: 1 - Low, 2 - Medium, 3 - High
      * 
      */
-    @InputImport(name="severity")
+    @Import(name="severity")
       private final @Nullable Integer severity;
 
     public Optional<Integer> getSeverity() {
@@ -120,7 +120,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * The ID of the signature
      * 
      */
-    @InputImport(name="signatureId")
+    @Import(name="signatureId")
       private final @Nullable Integer signatureId;
 
     public Optional<Integer> getSignatureId() {
@@ -131,7 +131,7 @@ public final class SingleQueryResultResponse extends io.pulumi.resources.InvokeA
      * Describes the list of source ports related to this signature
      * 
      */
-    @InputImport(name="sourcePorts")
+    @Import(name="sourcePorts")
       private final @Nullable List<String> sourcePorts;
 
     public List<String> getSourcePorts() {

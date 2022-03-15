@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SigningKeyResponse extends io.pulumi.resources.InvokeArgs {
      * key_id is an identifier for the signing key.
      * 
      */
-    @InputImport(name="keyId", required=true)
+    @Import(name="keyId", required=true)
       private final String keyId;
 
     public String getKeyId() {
@@ -31,7 +31,7 @@ public final class SigningKeyResponse extends io.pulumi.resources.InvokeArgs {
      * This field contains the corresponding signature scheme. Eg: "rsassa-pss-sha256".
      * 
      */
-    @InputImport(name="keyScheme", required=true)
+    @Import(name="keyScheme", required=true)
       private final String keyScheme;
 
     public String getKeyScheme() {
@@ -42,7 +42,7 @@ public final class SigningKeyResponse extends io.pulumi.resources.InvokeArgs {
      * This field identifies the specific signing method. Eg: "rsa", "ed25519", and "ecdsa".
      * 
      */
-    @InputImport(name="keyType", required=true)
+    @Import(name="keyType", required=true)
       private final String keyType;
 
     public String getKeyType() {
@@ -53,7 +53,7 @@ public final class SigningKeyResponse extends io.pulumi.resources.InvokeArgs {
      * This field contains the actual public key.
      * 
      */
-    @InputImport(name="publicKeyValue", required=true)
+    @Import(name="publicKeyValue", required=true)
       private final String publicKeyValue;
 
     public String getPublicKeyValue() {

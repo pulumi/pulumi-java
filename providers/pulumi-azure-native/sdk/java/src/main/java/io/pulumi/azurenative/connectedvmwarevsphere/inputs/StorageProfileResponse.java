@@ -5,7 +5,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.VirtualDiskResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.VirtualSCSIControllerResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * Gets or sets the list of virtual disks associated with the virtual machine.
      * 
      */
-    @InputImport(name="disks")
+    @Import(name="disks")
       private final @Nullable List<VirtualDiskResponse> disks;
 
     public List<VirtualDiskResponse> getDisks() {
@@ -35,7 +35,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * Gets or sets the list of virtual SCSI controllers associated with the virtual machine.
      * 
      */
-    @InputImport(name="scsiControllers", required=true)
+    @Import(name="scsiControllers", required=true)
       private final List<VirtualSCSIControllerResponse> scsiControllers;
 
     public List<VirtualSCSIControllerResponse> getScsiControllers() {

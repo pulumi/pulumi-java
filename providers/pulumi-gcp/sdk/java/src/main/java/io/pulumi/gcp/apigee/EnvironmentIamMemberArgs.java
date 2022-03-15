@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.apigee.inputs.EnvironmentIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class EnvironmentIamMemberArgs extends io.pulumi.resources.Resource
 
     public static final EnvironmentIamMemberArgs Empty = new EnvironmentIamMemberArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<EnvironmentIamMemberConditionArgs> condition;
 
     public Output<EnvironmentIamMemberConditionArgs> getCondition() {
@@ -26,21 +26,21 @@ public final class EnvironmentIamMemberArgs extends io.pulumi.resources.Resource
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="envId", required=true)
+    @Import(name="envId", required=true)
       private final Output<String> envId;
 
     public Output<String> getEnvId() {
         return this.envId;
     }
 
-    @InputImport(name="member", required=true)
+    @Import(name="member", required=true)
       private final Output<String> member;
 
     public Output<String> getMember() {
         return this.member;
     }
 
-    @InputImport(name="orgId", required=true)
+    @Import(name="orgId", required=true)
       private final Output<String> orgId;
 
     public Output<String> getOrgId() {
@@ -53,7 +53,7 @@ public final class EnvironmentIamMemberArgs extends io.pulumi.resources.Resource
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

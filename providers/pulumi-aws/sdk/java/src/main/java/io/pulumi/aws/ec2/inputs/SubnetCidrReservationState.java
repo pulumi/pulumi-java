@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
      * The CIDR block for the reservation.
      * 
      */
-    @InputImport(name="cidrBlock")
+    @Import(name="cidrBlock")
       private final @Nullable Output<String> cidrBlock;
 
     public Output<String> getCidrBlock() {
@@ -29,7 +29,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
      * A brief description of the reservation.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -40,7 +40,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
      * ID of the AWS account that owns this CIDR reservation.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -51,7 +51,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
      * The type of reservation to create. Valid values: `explicit`, `prefix`
      * 
      */
-    @InputImport(name="reservationType")
+    @Import(name="reservationType")
       private final @Nullable Output<String> reservationType;
 
     public Output<String> getReservationType() {
@@ -62,7 +62,7 @@ public final class SubnetCidrReservationState extends io.pulumi.resources.Resour
      * The ID of the subnet to create the reservation for.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {

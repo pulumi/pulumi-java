@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RsaKeyTypeResponse {
     /**
      * Optional. The maximum allowed RSA modulus size (inclusive), in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.
@@ -20,10 +20,10 @@ public final class RsaKeyTypeResponse {
      */
     private final String minModulusSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RsaKeyTypeResponse(
-        @OutputCustomType.Parameter("maxModulusSize") String maxModulusSize,
-        @OutputCustomType.Parameter("minModulusSize") String minModulusSize) {
+        @CustomType.Parameter("maxModulusSize") String maxModulusSize,
+        @CustomType.Parameter("minModulusSize") String minModulusSize) {
         this.maxModulusSize = maxModulusSize;
         this.minModulusSize = minModulusSize;
     }

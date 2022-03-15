@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class MetadataSourceResponse extends io.pulumi.resources.InvokeArgs
      * Source type of the content
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -33,7 +33,7 @@ public final class MetadataSourceResponse extends io.pulumi.resources.InvokeArgs
      * Name of the content source.  The repo name, solution name, LA workspace name etc.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -44,7 +44,7 @@ public final class MetadataSourceResponse extends io.pulumi.resources.InvokeArgs
      * ID of the content source.  The solution ID, workspace ID, etc
      * 
      */
-    @InputImport(name="sourceId")
+    @Import(name="sourceId")
       private final @Nullable String sourceId;
 
     public Optional<String> getSourceId() {

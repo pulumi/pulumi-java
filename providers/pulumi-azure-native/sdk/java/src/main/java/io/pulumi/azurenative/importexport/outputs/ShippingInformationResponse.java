@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.importexport.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ShippingInformationResponse {
     /**
      * Additional shipping information for customer, specific to datacenter to which customer should send their disks.
@@ -57,17 +57,17 @@ public final class ShippingInformationResponse {
      */
     private final @Nullable String streetAddress2;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ShippingInformationResponse(
-        @OutputCustomType.Parameter("additionalInformation") String additionalInformation,
-        @OutputCustomType.Parameter("city") @Nullable String city,
-        @OutputCustomType.Parameter("countryOrRegion") @Nullable String countryOrRegion,
-        @OutputCustomType.Parameter("phone") @Nullable String phone,
-        @OutputCustomType.Parameter("postalCode") @Nullable String postalCode,
-        @OutputCustomType.Parameter("recipientName") @Nullable String recipientName,
-        @OutputCustomType.Parameter("stateOrProvince") @Nullable String stateOrProvince,
-        @OutputCustomType.Parameter("streetAddress1") @Nullable String streetAddress1,
-        @OutputCustomType.Parameter("streetAddress2") @Nullable String streetAddress2) {
+        @CustomType.Parameter("additionalInformation") String additionalInformation,
+        @CustomType.Parameter("city") @Nullable String city,
+        @CustomType.Parameter("countryOrRegion") @Nullable String countryOrRegion,
+        @CustomType.Parameter("phone") @Nullable String phone,
+        @CustomType.Parameter("postalCode") @Nullable String postalCode,
+        @CustomType.Parameter("recipientName") @Nullable String recipientName,
+        @CustomType.Parameter("stateOrProvince") @Nullable String stateOrProvince,
+        @CustomType.Parameter("streetAddress1") @Nullable String streetAddress1,
+        @CustomType.Parameter("streetAddress2") @Nullable String streetAddress2) {
         this.additionalInformation = additionalInformation;
         this.city = city;
         this.countryOrRegion = countryOrRegion;

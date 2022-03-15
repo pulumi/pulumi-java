@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.NodeSelectorRequirement;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodeSelectorTerm {
     /**
      * A list of node selector requirements by node's labels.
@@ -22,10 +22,10 @@ public final class NodeSelectorTerm {
      */
     private final @Nullable List<NodeSelectorRequirement> matchFields;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeSelectorTerm(
-        @OutputCustomType.Parameter("matchExpressions") @Nullable List<NodeSelectorRequirement> matchExpressions,
-        @OutputCustomType.Parameter("matchFields") @Nullable List<NodeSelectorRequirement> matchFields) {
+        @CustomType.Parameter("matchExpressions") @Nullable List<NodeSelectorRequirement> matchExpressions,
+        @CustomType.Parameter("matchFields") @Nullable List<NodeSelectorRequirement> matchFields) {
         this.matchExpressions = matchExpressions;
         this.matchFields = matchFields;
     }

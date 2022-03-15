@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.MultiClusterRoutingUseAnyResponse;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.SingleClusterRoutingResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAppProfileResult {
     /**
      * Long form description of the use case for this AppProfile.
@@ -37,13 +37,13 @@ public final class GetAppProfileResult {
      */
     private final SingleClusterRoutingResponse singleClusterRouting;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAppProfileResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("multiClusterRoutingUseAny") MultiClusterRoutingUseAnyResponse multiClusterRoutingUseAny,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("singleClusterRouting") SingleClusterRoutingResponse singleClusterRouting) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("multiClusterRoutingUseAny") MultiClusterRoutingUseAnyResponse multiClusterRoutingUseAny,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("singleClusterRouting") SingleClusterRoutingResponse singleClusterRouting) {
         this.description = description;
         this.etag = etag;
         this.multiClusterRoutingUseAny = multiClusterRoutingUseAny;

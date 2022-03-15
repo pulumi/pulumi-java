@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.SecretObjectResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomRegistryCredentialsResponse {
     /**
      * Indicates the managed identity assigned to the custom credential. If a user-assigned identity
@@ -33,11 +33,11 @@ public final class CustomRegistryCredentialsResponse {
      */
     private final @Nullable SecretObjectResponse userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomRegistryCredentialsResponse(
-        @OutputCustomType.Parameter("identity") @Nullable String identity,
-        @OutputCustomType.Parameter("password") @Nullable SecretObjectResponse password,
-        @OutputCustomType.Parameter("userName") @Nullable SecretObjectResponse userName) {
+        @CustomType.Parameter("identity") @Nullable String identity,
+        @CustomType.Parameter("password") @Nullable SecretObjectResponse password,
+        @CustomType.Parameter("userName") @Nullable SecretObjectResponse userName) {
         this.identity = identity;
         this.password = password;
         this.userName = userName;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsResponse extends
      * A list of flow version variants.
      * 
      */
-    @InputImport(name="variants", required=true)
+    @Import(name="variants", required=true)
       private final List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse> variants;
 
     public List<GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse> getVariants() {

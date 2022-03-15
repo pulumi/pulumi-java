@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserPoolSchemaNumberAttributeConstraints {
     /**
      * Maximum value of an attribute that is of the number data type.
@@ -22,10 +22,10 @@ public final class UserPoolSchemaNumberAttributeConstraints {
      */
     private final @Nullable String minValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserPoolSchemaNumberAttributeConstraints(
-        @OutputCustomType.Parameter("maxValue") @Nullable String maxValue,
-        @OutputCustomType.Parameter("minValue") @Nullable String minValue) {
+        @CustomType.Parameter("maxValue") @Nullable String maxValue,
+        @CustomType.Parameter("minValue") @Nullable String minValue) {
         this.maxValue = maxValue;
         this.minValue = minValue;
     }

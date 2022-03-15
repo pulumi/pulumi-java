@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.redis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceNode {
     private final String id;
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceNode(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("zone") String zone) {
         this.id = id;
         this.zone = zone;
     }

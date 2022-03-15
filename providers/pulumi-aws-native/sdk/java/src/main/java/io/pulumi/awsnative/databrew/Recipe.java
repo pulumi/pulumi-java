@@ -8,7 +8,7 @@ import io.pulumi.awsnative.databrew.RecipeArgs;
 import io.pulumi.awsnative.databrew.outputs.RecipeStep;
 import io.pulumi.awsnative.databrew.outputs.RecipeTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class Recipe extends io.pulumi.resources.CustomResource {
      * Description of the recipe
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -40,7 +40,7 @@ public class Recipe extends io.pulumi.resources.CustomResource {
      * Recipe name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,13 +50,13 @@ public class Recipe extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="steps", type=List.class, parameters={RecipeStep.class})
+    @Export(name="steps", type=List.class, parameters={RecipeStep.class})
     private Output<List<RecipeStep>> steps;
 
     public Output<List<RecipeStep>> getSteps() {
         return this.steps;
     }
-    @OutputExport(name="tags", type=List.class, parameters={RecipeTag.class})
+    @Export(name="tags", type=List.class, parameters={RecipeTag.class})
     private Output</* @Nullable */ List<RecipeTag>> tags;
 
     public Output</* @Nullable */ List<RecipeTag>> getTags() {

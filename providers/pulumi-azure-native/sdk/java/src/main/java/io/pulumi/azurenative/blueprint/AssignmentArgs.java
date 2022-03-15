@@ -8,7 +8,7 @@ import io.pulumi.azurenative.blueprint.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.blueprint.inputs.ParameterValueArgs;
 import io.pulumi.azurenative.blueprint.inputs.ResourceGroupValueArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the blueprint assignment.
      * 
      */
-    @InputImport(name="assignmentName")
+    @Import(name="assignmentName")
       private final @Nullable Output<String> assignmentName;
 
     public Output<String> getAssignmentName() {
@@ -34,7 +34,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the published version of a blueprint definition.
      * 
      */
-    @InputImport(name="blueprintId")
+    @Import(name="blueprintId")
       private final @Nullable Output<String> blueprintId;
 
     public Output<String> getBlueprintId() {
@@ -45,7 +45,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Multi-line explain this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -56,7 +56,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * One-liner string explain this resource.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -67,7 +67,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Managed identity for this blueprint assignment.
      * 
      */
-    @InputImport(name="identity", required=true)
+    @Import(name="identity", required=true)
       private final Output<ManagedServiceIdentityArgs> identity;
 
     public Output<ManagedServiceIdentityArgs> getIdentity() {
@@ -78,7 +78,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The location of this blueprint assignment.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -89,7 +89,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Defines how resources deployed by a blueprint assignment are locked.
      * 
      */
-    @InputImport(name="locks")
+    @Import(name="locks")
       private final @Nullable Output<AssignmentLockSettingsArgs> locks;
 
     public Output<AssignmentLockSettingsArgs> getLocks() {
@@ -100,7 +100,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Blueprint assignment parameter values.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final Output<Map<String,ParameterValueArgs>> parameters;
 
     public Output<Map<String,ParameterValueArgs>> getParameters() {
@@ -111,7 +111,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * Names and locations of resource group placeholders.
      * 
      */
-    @InputImport(name="resourceGroups", required=true)
+    @Import(name="resourceGroups", required=true)
       private final Output<Map<String,ResourceGroupValueArgs>> resourceGroups;
 
     public Output<Map<String,ResourceGroupValueArgs>> getResourceGroups() {
@@ -122,7 +122,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The scope of the resource. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format: '/subscriptions/{subscriptionId}').
      * 
      */
-    @InputImport(name="resourceScope", required=true)
+    @Import(name="resourceScope", required=true)
       private final Output<String> resourceScope;
 
     public Output<String> getResourceScope() {
@@ -133,7 +133,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * The target subscription scope of the blueprint assignment (format: '/subscriptions/{subscriptionId}'). For management group level assignments, the property is required.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ManualArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ScheduleArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2TriggerArgs extends io.pulumi.resources.Res
      * For use with hybrid jobs. Jobs must be manually created and finished.
      * 
      */
-    @InputImport(name="manual")
+    @Import(name="manual")
       private final @Nullable Output<GooglePrivacyDlpV2ManualArgs> manual;
 
     public Output<GooglePrivacyDlpV2ManualArgs> getManual() {
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2TriggerArgs extends io.pulumi.resources.Res
      * Create a job on a repeating basis based on the elapse of time.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<GooglePrivacyDlpV2ScheduleArgs> schedule;
 
     public Output<GooglePrivacyDlpV2ScheduleArgs> getSchedule() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class InstanceGroupEbsConfigArgs extends io.pulumi.resources.Resour
      * The number of I/O operations per second (IOPS) that the volume supports.
      * 
      */
-    @InputImport(name="iops")
+    @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
@@ -30,7 +30,7 @@ public final class InstanceGroupEbsConfigArgs extends io.pulumi.resources.Resour
      * The volume size, in gibibytes (GiB). This can be a number from 1 - 1024. If the volume type is EBS-optimized, the minimum value is 10.
      * 
      */
-    @InputImport(name="size", required=true)
+    @Import(name="size", required=true)
       private final Output<Integer> size;
 
     public Output<Integer> getSize() {
@@ -41,7 +41,7 @@ public final class InstanceGroupEbsConfigArgs extends io.pulumi.resources.Resour
      * The volume type. Valid options are 'gp2', 'io1' and 'standard'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -52,7 +52,7 @@ public final class InstanceGroupEbsConfigArgs extends io.pulumi.resources.Resour
      * The number of EBS Volumes to attach per instance.
      * 
      */
-    @InputImport(name="volumesPerInstance")
+    @Import(name="volumesPerInstance")
       private final @Nullable Output<Integer> volumesPerInstance;
 
     public Output<Integer> getVolumesPerInstance() {

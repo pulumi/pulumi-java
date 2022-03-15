@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs e
      * must be set.
      * 
      */
-    @InputImport(name="exactMatch")
+    @Import(name="exactMatch")
       private final @Nullable Output<String> exactMatch;
 
     public Output<String> getExactMatch() {
@@ -33,7 +33,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs e
      * The name of the header.
      * 
      */
-    @InputImport(name="headerName", required=true)
+    @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
     public Output<String> getHeaderName() {
@@ -46,7 +46,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs e
      * match criteria above are NOT met. Defaults to false.
      * 
      */
-    @InputImport(name="invertMatch")
+    @Import(name="invertMatch")
       private final @Nullable Output<Boolean> invertMatch;
 
     public Output<Boolean> getInvertMatch() {
@@ -59,7 +59,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs e
      * must be set.
      * 
      */
-    @InputImport(name="prefixMatch")
+    @Import(name="prefixMatch")
       private final @Nullable Output<String> prefixMatch;
 
     public Output<String> getPrefixMatch() {
@@ -72,7 +72,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs e
      * presentMatch, exactMatch and regexMatch must be set.
      * 
      */
-    @InputImport(name="presentMatch")
+    @Import(name="presentMatch")
       private final @Nullable Output<Boolean> presentMatch;
 
     public Output<Boolean> getPresentMatch() {
@@ -92,7 +92,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs e
      *   Structure is documented below.
      * 
      */
-    @InputImport(name="rangeMatch")
+    @Import(name="rangeMatch")
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchGetArgs> rangeMatch;
 
     public Output<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchGetArgs> getRangeMatch() {
@@ -106,7 +106,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs e
      * exactMatch and regexMatch must be set.
      * 
      */
-    @InputImport(name="regexMatch")
+    @Import(name="regexMatch")
       private final @Nullable Output<String> regexMatch;
 
     public Output<String> getRegexMatch() {
@@ -119,7 +119,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs e
      * must be set.
      * 
      */
-    @InputImport(name="suffixMatch")
+    @Import(name="suffixMatch")
       private final @Nullable Output<String> suffixMatch;
 
     public Output<String> getSuffixMatch() {

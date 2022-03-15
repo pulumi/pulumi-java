@@ -3,20 +3,20 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ModelVpcConfig {
     private final List<String> securityGroupIds;
     private final List<String> subnets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelVpcConfig(
-        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
-        @OutputCustomType.Parameter("subnets") List<String> subnets) {
+        @CustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @CustomType.Parameter("subnets") List<String> subnets) {
         this.securityGroupIds = securityGroupIds;
         this.subnets = subnets;
     }

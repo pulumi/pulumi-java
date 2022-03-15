@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContactDetailsResponse {
     /**
      * Contact name of the person.
@@ -38,13 +38,13 @@ public final class ContactDetailsResponse {
      */
     private final @Nullable String phoneExtension;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContactDetailsResponse(
-        @OutputCustomType.Parameter("contactName") String contactName,
-        @OutputCustomType.Parameter("emailList") List<String> emailList,
-        @OutputCustomType.Parameter("mobile") @Nullable String mobile,
-        @OutputCustomType.Parameter("phone") String phone,
-        @OutputCustomType.Parameter("phoneExtension") @Nullable String phoneExtension) {
+        @CustomType.Parameter("contactName") String contactName,
+        @CustomType.Parameter("emailList") List<String> emailList,
+        @CustomType.Parameter("mobile") @Nullable String mobile,
+        @CustomType.Parameter("phone") String phone,
+        @CustomType.Parameter("phoneExtension") @Nullable String phoneExtension) {
         this.contactName = contactName;
         this.emailList = emailList;
         this.mobile = mobile;

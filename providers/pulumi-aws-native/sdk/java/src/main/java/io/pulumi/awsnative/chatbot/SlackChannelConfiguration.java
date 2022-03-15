@@ -6,7 +6,7 @@ package io.pulumi.awsnative.chatbot;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.chatbot.SlackChannelConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * Amazon Resource Name (ARN) of the configuration
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -37,7 +37,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * The name of the configuration
      * 
      */
-    @OutputExport(name="configurationName", type=String.class, parameters={})
+    @Export(name="configurationName", type=String.class, parameters={})
     private Output<String> configurationName;
 
     /**
@@ -51,7 +51,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * The list of IAM policy ARNs that are applied as channel guardrails. The AWS managed 'AdministratorAccess' policy is applied as a default if this is not set.
      * 
      */
-    @OutputExport(name="guardrailPolicies", type=List.class, parameters={String.class})
+    @Export(name="guardrailPolicies", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> guardrailPolicies;
 
     /**
@@ -65,7 +65,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * The ARN of the IAM role that defines the permissions for AWS Chatbot
      * 
      */
-    @OutputExport(name="iamRoleArn", type=String.class, parameters={})
+    @Export(name="iamRoleArn", type=String.class, parameters={})
     private Output<String> iamRoleArn;
 
     /**
@@ -79,7 +79,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * Specifies the logging level for this configuration:ERROR,INFO or NONE. This property affects the log entries pushed to Amazon CloudWatch logs
      * 
      */
-    @OutputExport(name="loggingLevel", type=String.class, parameters={})
+    @Export(name="loggingLevel", type=String.class, parameters={})
     private Output</* @Nullable */ String> loggingLevel;
 
     /**
@@ -93,7 +93,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * The id of the Slack channel
      * 
      */
-    @OutputExport(name="slackChannelId", type=String.class, parameters={})
+    @Export(name="slackChannelId", type=String.class, parameters={})
     private Output<String> slackChannelId;
 
     /**
@@ -107,7 +107,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * The id of the Slack workspace
      * 
      */
-    @OutputExport(name="slackWorkspaceId", type=String.class, parameters={})
+    @Export(name="slackWorkspaceId", type=String.class, parameters={})
     private Output<String> slackWorkspaceId;
 
     /**
@@ -121,7 +121,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * ARNs of SNS topics which delivers notifications to AWS Chatbot, for example CloudWatch alarm notifications.
      * 
      */
-    @OutputExport(name="snsTopicArns", type=List.class, parameters={String.class})
+    @Export(name="snsTopicArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> snsTopicArns;
 
     /**
@@ -135,7 +135,7 @@ public class SlackChannelConfiguration extends io.pulumi.resources.CustomResourc
      * Enables use of a user role requirement in your chat configuration
      * 
      */
-    @OutputExport(name="userRoleRequired", type=Boolean.class, parameters={})
+    @Export(name="userRoleRequired", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> userRoleRequired;
 
     /**

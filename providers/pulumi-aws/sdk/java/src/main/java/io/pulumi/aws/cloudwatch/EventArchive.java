@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudwatch.EventArchiveArgs;
 import io.pulumi.aws.cloudwatch.inputs.EventArchiveState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class EventArchive extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the event archive.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class EventArchive extends io.pulumi.resources.CustomResource {
      * The description of the new event archive.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -64,7 +64,7 @@ public class EventArchive extends io.pulumi.resources.CustomResource {
      * Instructs the new event archive to only capture events matched by this pattern. By default, it attempts to archive every event received in the `event_source_arn`.
      * 
      */
-    @OutputExport(name="eventPattern", type=String.class, parameters={})
+    @Export(name="eventPattern", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventPattern;
 
     /**
@@ -78,7 +78,7 @@ public class EventArchive extends io.pulumi.resources.CustomResource {
      * Event bus source ARN from where these events should be archived.
      * 
      */
-    @OutputExport(name="eventSourceArn", type=String.class, parameters={})
+    @Export(name="eventSourceArn", type=String.class, parameters={})
     private Output<String> eventSourceArn;
 
     /**
@@ -92,7 +92,7 @@ public class EventArchive extends io.pulumi.resources.CustomResource {
      * The name of the new event archive. The archive name cannot exceed 48 characters.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -106,7 +106,7 @@ public class EventArchive extends io.pulumi.resources.CustomResource {
      * The maximum number of days to retain events in the new event archive. By default, it archives indefinitely.
      * 
      */
-    @OutputExport(name="retentionDays", type=Integer.class, parameters={})
+    @Export(name="retentionDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionDays;
 
     /**

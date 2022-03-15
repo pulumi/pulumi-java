@@ -6,25 +6,25 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.enums.RuleGroupRateBasedStatementAggregateKeyType;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupForwardedIPConfiguration;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRateBasedStatement {
     private final RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType;
     private final @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig;
     private final Integer limit;
     private final @Nullable RuleGroupStatement scopeDownStatement;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRateBasedStatement(
-        @OutputCustomType.Parameter("aggregateKeyType") RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType,
-        @OutputCustomType.Parameter("forwardedIPConfig") @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig,
-        @OutputCustomType.Parameter("limit") Integer limit,
-        @OutputCustomType.Parameter("scopeDownStatement") @Nullable RuleGroupStatement scopeDownStatement) {
+        @CustomType.Parameter("aggregateKeyType") RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType,
+        @CustomType.Parameter("forwardedIPConfig") @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig,
+        @CustomType.Parameter("limit") Integer limit,
+        @CustomType.Parameter("scopeDownStatement") @Nullable RuleGroupStatement scopeDownStatement) {
         this.aggregateKeyType = aggregateKeyType;
         this.forwardedIPConfig = forwardedIPConfig;
         this.limit = limit;

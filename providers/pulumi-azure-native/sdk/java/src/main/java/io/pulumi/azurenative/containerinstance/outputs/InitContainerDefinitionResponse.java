@@ -6,14 +6,14 @@ package io.pulumi.azurenative.containerinstance.outputs;
 import io.pulumi.azurenative.containerinstance.outputs.EnvironmentVariableResponse;
 import io.pulumi.azurenative.containerinstance.outputs.InitContainerPropertiesDefinitionResponseInstanceView;
 import io.pulumi.azurenative.containerinstance.outputs.VolumeMountResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InitContainerDefinitionResponse {
     /**
      * The command to execute within the init container in exec form.
@@ -46,14 +46,14 @@ public final class InitContainerDefinitionResponse {
      */
     private final @Nullable List<VolumeMountResponse> volumeMounts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InitContainerDefinitionResponse(
-        @OutputCustomType.Parameter("command") @Nullable List<String> command,
-        @OutputCustomType.Parameter("environmentVariables") @Nullable List<EnvironmentVariableResponse> environmentVariables,
-        @OutputCustomType.Parameter("image") @Nullable String image,
-        @OutputCustomType.Parameter("instanceView") InitContainerPropertiesDefinitionResponseInstanceView instanceView,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("volumeMounts") @Nullable List<VolumeMountResponse> volumeMounts) {
+        @CustomType.Parameter("command") @Nullable List<String> command,
+        @CustomType.Parameter("environmentVariables") @Nullable List<EnvironmentVariableResponse> environmentVariables,
+        @CustomType.Parameter("image") @Nullable String image,
+        @CustomType.Parameter("instanceView") InitContainerPropertiesDefinitionResponseInstanceView instanceView,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("volumeMounts") @Nullable List<VolumeMountResponse> volumeMounts) {
         this.command = command;
         this.environmentVariables = environmentVariables;
         this.image = image;

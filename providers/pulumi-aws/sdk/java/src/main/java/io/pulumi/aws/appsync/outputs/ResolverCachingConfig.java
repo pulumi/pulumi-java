@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appsync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResolverCachingConfig {
     /**
      * The list of caching key.
@@ -24,10 +24,10 @@ public final class ResolverCachingConfig {
      */
     private final @Nullable Integer ttl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResolverCachingConfig(
-        @OutputCustomType.Parameter("cachingKeys") @Nullable List<String> cachingKeys,
-        @OutputCustomType.Parameter("ttl") @Nullable Integer ttl) {
+        @CustomType.Parameter("cachingKeys") @Nullable List<String> cachingKeys,
+        @CustomType.Parameter("ttl") @Nullable Integer ttl) {
         this.cachingKeys = cachingKeys;
         this.ttl = ttl;
     }

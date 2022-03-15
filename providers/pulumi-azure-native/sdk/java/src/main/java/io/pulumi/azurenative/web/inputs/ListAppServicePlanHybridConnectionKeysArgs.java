@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends io.pulumi.
      * Name of the App Service plan.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -27,7 +27,7 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends io.pulumi.
      * The name of the Service Bus namespace.
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final String namespaceName;
 
     public String getNamespaceName() {
@@ -38,7 +38,7 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends io.pulumi.
      * The name of the Service Bus relay.
      * 
      */
-    @InputImport(name="relayName", required=true)
+    @Import(name="relayName", required=true)
       private final String relayName;
 
     public String getRelayName() {
@@ -49,7 +49,7 @@ public final class ListAppServicePlanHybridConnectionKeysArgs extends io.pulumi.
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

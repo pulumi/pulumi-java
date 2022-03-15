@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.transcoder_v1.enums.AnimationFadeFadeType;
 import io.pulumi.googlenative.transcoder_v1.inputs.NormalizedCoordinateArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
      * The time to end the fade animation, in seconds. Default: `start_time_offset` + 1s
      * 
      */
-    @InputImport(name="endTimeOffset")
+    @Import(name="endTimeOffset")
       private final @Nullable Output<String> endTimeOffset;
 
     public Output<String> getEndTimeOffset() {
@@ -35,7 +35,7 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
      * Type of fade animation: `FADE_IN` or `FADE_OUT`.
      * 
      */
-    @InputImport(name="fadeType", required=true)
+    @Import(name="fadeType", required=true)
       private final Output<AnimationFadeFadeType> fadeType;
 
     public Output<AnimationFadeFadeType> getFadeType() {
@@ -46,7 +46,7 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
      * The time to start the fade animation, in seconds. Default: 0
      * 
      */
-    @InputImport(name="startTimeOffset")
+    @Import(name="startTimeOffset")
       private final @Nullable Output<String> startTimeOffset;
 
     public Output<String> getStartTimeOffset() {
@@ -57,7 +57,7 @@ public final class AnimationFadeArgs extends io.pulumi.resources.ResourceArgs {
      * Normalized coordinates based on output video resolution. Valid values: `0.0`–`1.0`. `xy` is the upper-left coordinate of the overlay object. For example, use the x and y coordinates {0,0} to position the top-left corner of the overlay animation in the top-left corner of the output video.
      * 
      */
-    @InputImport(name="xy")
+    @Import(name="xy")
       private final @Nullable Output<NormalizedCoordinateArgs> xy;
 
     public Output<NormalizedCoordinateArgs> getXy() {

@@ -6,13 +6,13 @@ package io.pulumi.aws.apprunner.outputs;
 import io.pulumi.aws.apprunner.outputs.ServiceSourceConfigurationAuthenticationConfiguration;
 import io.pulumi.aws.apprunner.outputs.ServiceSourceConfigurationCodeRepository;
 import io.pulumi.aws.apprunner.outputs.ServiceSourceConfigurationImageRepository;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceSourceConfiguration {
     /**
      * Describes resources needed to authenticate access to some source repositories. See Authentication Configuration below for more details.
@@ -35,12 +35,12 @@ public final class ServiceSourceConfiguration {
      */
     private final @Nullable ServiceSourceConfigurationImageRepository imageRepository;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceSourceConfiguration(
-        @OutputCustomType.Parameter("authenticationConfiguration") @Nullable ServiceSourceConfigurationAuthenticationConfiguration authenticationConfiguration,
-        @OutputCustomType.Parameter("autoDeploymentsEnabled") @Nullable Boolean autoDeploymentsEnabled,
-        @OutputCustomType.Parameter("codeRepository") @Nullable ServiceSourceConfigurationCodeRepository codeRepository,
-        @OutputCustomType.Parameter("imageRepository") @Nullable ServiceSourceConfigurationImageRepository imageRepository) {
+        @CustomType.Parameter("authenticationConfiguration") @Nullable ServiceSourceConfigurationAuthenticationConfiguration authenticationConfiguration,
+        @CustomType.Parameter("autoDeploymentsEnabled") @Nullable Boolean autoDeploymentsEnabled,
+        @CustomType.Parameter("codeRepository") @Nullable ServiceSourceConfigurationCodeRepository codeRepository,
+        @CustomType.Parameter("imageRepository") @Nullable ServiceSourceConfigurationImageRepository imageRepository) {
         this.authenticationConfiguration = authenticationConfiguration;
         this.autoDeploymentsEnabled = autoDeploymentsEnabled;
         this.codeRepository = codeRepository;

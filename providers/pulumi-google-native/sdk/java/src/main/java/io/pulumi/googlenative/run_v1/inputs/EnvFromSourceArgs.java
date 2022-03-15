@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1.inputs.ConfigMapEnvSourceArgs;
 import io.pulumi.googlenative.run_v1.inputs.SecretEnvSourceArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
      * (Optional) The ConfigMap to select from
      * 
      */
-    @InputImport(name="configMapRef")
+    @Import(name="configMapRef")
       private final @Nullable Output<ConfigMapEnvSourceArgs> configMapRef;
 
     public Output<ConfigMapEnvSourceArgs> getConfigMapRef() {
@@ -35,7 +35,7 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
      * (Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
@@ -46,7 +46,7 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
      * (Optional) The Secret to select from
      * 
      */
-    @InputImport(name="secretRef")
+    @Import(name="secretRef")
       private final @Nullable Output<SecretEnvSourceArgs> secretRef;
 
     public Output<SecretEnvSourceArgs> getSecretRef() {

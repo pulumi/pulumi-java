@@ -9,7 +9,7 @@ import io.pulumi.azurenative.web.outputs.ConfigurationResponse;
 import io.pulumi.azurenative.web.outputs.TemplateResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * Non versioned Container App configuration properties.
      * 
      */
-    @OutputExport(name="configuration", type=ConfigurationResponse.class, parameters={})
+    @Export(name="configuration", type=ConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ ConfigurationResponse> configuration;
 
     /**
@@ -51,7 +51,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -65,7 +65,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * Resource ID of the Container App's KubeEnvironment.
      * 
      */
-    @OutputExport(name="kubeEnvironmentId", type=String.class, parameters={})
+    @Export(name="kubeEnvironmentId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kubeEnvironmentId;
 
     /**
@@ -79,7 +79,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * Fully Qualified Domain Name of the latest revision of the Container App.
      * 
      */
-    @OutputExport(name="latestRevisionFqdn", type=String.class, parameters={})
+    @Export(name="latestRevisionFqdn", type=String.class, parameters={})
     private Output<String> latestRevisionFqdn;
 
     /**
@@ -93,7 +93,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * Name of the latest revision of the Container App.
      * 
      */
-    @OutputExport(name="latestRevisionName", type=String.class, parameters={})
+    @Export(name="latestRevisionName", type=String.class, parameters={})
     private Output<String> latestRevisionName;
 
     /**
@@ -107,7 +107,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * Resource Location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -121,7 +121,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -135,7 +135,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * Provisioning state of the Container App.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -149,7 +149,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -163,7 +163,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * Container App versioned application definition.
      * 
      */
-    @OutputExport(name="template", type=TemplateResponse.class, parameters={})
+    @Export(name="template", type=TemplateResponse.class, parameters={})
     private Output</* @Nullable */ TemplateResponse> template;
 
     /**
@@ -177,7 +177,7 @@ public class ContainerApp extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

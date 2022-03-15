@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IngestionConnectionStringResponse {
     /**
      * The region where ingested logs and data resides
@@ -20,10 +20,10 @@ public final class IngestionConnectionStringResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IngestionConnectionStringResponse(
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("value") String value) {
         this.location = location;
         this.value = value;
     }

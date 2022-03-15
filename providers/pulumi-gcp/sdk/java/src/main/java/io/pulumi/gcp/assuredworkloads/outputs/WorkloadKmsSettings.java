@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.assuredworkloads.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkloadKmsSettings {
     /**
      * Required. Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary.
@@ -20,10 +20,10 @@ public final class WorkloadKmsSettings {
      */
     private final String rotationPeriod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkloadKmsSettings(
-        @OutputCustomType.Parameter("nextRotationTime") String nextRotationTime,
-        @OutputCustomType.Parameter("rotationPeriod") String rotationPeriod) {
+        @CustomType.Parameter("nextRotationTime") String nextRotationTime,
+        @CustomType.Parameter("rotationPeriod") String rotationPeriod) {
         this.nextRotationTime = nextRotationTime;
         this.rotationPeriod = rotationPeriod;
     }

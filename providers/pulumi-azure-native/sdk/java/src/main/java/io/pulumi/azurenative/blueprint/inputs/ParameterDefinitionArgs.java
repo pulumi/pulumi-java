@@ -6,7 +6,7 @@ package io.pulumi.azurenative.blueprint.inputs;
 import io.pulumi.azurenative.blueprint.enums.TemplateParameterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
      * Array of allowed values for this parameter.
      * 
      */
-    @InputImport(name="allowedValues")
+    @Import(name="allowedValues")
       private final @Nullable Output<List<Object>> allowedValues;
 
     public Output<List<Object>> getAllowedValues() {
@@ -37,7 +37,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
      * Default Value for this parameter.
      * 
      */
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable Output<Object> defaultValue;
 
     public Output<Object> getDefaultValue() {
@@ -48,7 +48,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
      * Description of this parameter/resourceGroup.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -59,7 +59,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
      * DisplayName of this parameter/resourceGroup.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -70,7 +70,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
      * StrongType for UI to render rich experience during blueprint assignment. Supported strong types are resourceType, principalId and location.
      * 
      */
-    @InputImport(name="strongType")
+    @Import(name="strongType")
       private final @Nullable Output<String> strongType;
 
     public Output<String> getStrongType() {
@@ -81,7 +81,7 @@ public final class ParameterDefinitionArgs extends io.pulumi.resources.ResourceA
      * Allowed data types for Resource Manager template parameters.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,TemplateParameterType>> type;
 
     public Output<Either<String,TemplateParameterType>> getType() {

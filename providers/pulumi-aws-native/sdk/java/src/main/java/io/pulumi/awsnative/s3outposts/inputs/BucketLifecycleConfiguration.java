@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3outposts.inputs;
 
 import io.pulumi.awsnative.s3outposts.inputs.BucketRule;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class BucketLifecycleConfiguration extends io.pulumi.resources.Invo
      * A list of lifecycle rules for individual objects in an Amazon S3Outposts bucket.
      * 
      */
-    @InputImport(name="rules", required=true)
+    @Import(name="rules", required=true)
       private final List<BucketRule> rules;
 
     public List<BucketRule> getRules() {

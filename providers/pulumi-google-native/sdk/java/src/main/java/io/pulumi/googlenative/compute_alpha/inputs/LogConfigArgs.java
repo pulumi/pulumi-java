@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.LogConfigCloudAuditOptionsArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.LogConfigCounterOptionsArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.LogConfigDataAccessOptionsArgs;
@@ -24,7 +24,7 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="cloudAudit")
+    @Import(name="cloudAudit")
       private final @Nullable Output<LogConfigCloudAuditOptionsArgs> cloudAudit;
 
     public Output<LogConfigCloudAuditOptionsArgs> getCloudAudit() {
@@ -35,7 +35,7 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="counter")
+    @Import(name="counter")
       private final @Nullable Output<LogConfigCounterOptionsArgs> counter;
 
     public Output<LogConfigCounterOptionsArgs> getCounter() {
@@ -46,7 +46,7 @@ public final class LogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="dataAccess")
+    @Import(name="dataAccess")
       private final @Nullable Output<LogConfigDataAccessOptionsArgs> dataAccess;
 
     public Output<LogConfigDataAccessOptionsArgs> getDataAccess() {

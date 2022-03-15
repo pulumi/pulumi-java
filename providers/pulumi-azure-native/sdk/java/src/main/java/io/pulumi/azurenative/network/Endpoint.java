@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.EndpointPropertiesResponseCustomHea
 import io.pulumi.azurenative.network.outputs.EndpointPropertiesResponseSubnets;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * List of custom headers.
      * 
      */
-    @OutputExport(name="customHeaders", type=List.class, parameters={EndpointPropertiesResponseCustomHeaders.class})
+    @Export(name="customHeaders", type=List.class, parameters={EndpointPropertiesResponseCustomHeaders.class})
     private Output</* @Nullable */ List<EndpointPropertiesResponseCustomHeaders>> customHeaders;
 
     /**
@@ -51,7 +51,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.
      * 
      */
-    @OutputExport(name="endpointLocation", type=String.class, parameters={})
+    @Export(name="endpointLocation", type=String.class, parameters={})
     private Output</* @Nullable */ String> endpointLocation;
 
     /**
@@ -65,7 +65,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The monitoring status of the endpoint.
      * 
      */
-    @OutputExport(name="endpointMonitorStatus", type=String.class, parameters={})
+    @Export(name="endpointMonitorStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> endpointMonitorStatus;
 
     /**
@@ -79,7 +79,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.
      * 
      */
-    @OutputExport(name="endpointStatus", type=String.class, parameters={})
+    @Export(name="endpointStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> endpointStatus;
 
     /**
@@ -93,7 +93,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
      * 
      */
-    @OutputExport(name="geoMapping", type=List.class, parameters={String.class})
+    @Export(name="geoMapping", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> geoMapping;
 
     /**
@@ -107,7 +107,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
      * 
      */
-    @OutputExport(name="minChildEndpoints", type=Double.class, parameters={})
+    @Export(name="minChildEndpoints", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> minChildEndpoints;
 
     /**
@@ -121,7 +121,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
      * 
      */
-    @OutputExport(name="minChildEndpointsIPv4", type=Double.class, parameters={})
+    @Export(name="minChildEndpointsIPv4", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> minChildEndpointsIPv4;
 
     /**
@@ -135,7 +135,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
      * 
      */
-    @OutputExport(name="minChildEndpointsIPv6", type=Double.class, parameters={})
+    @Export(name="minChildEndpointsIPv6", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> minChildEndpointsIPv6;
 
     /**
@@ -149,7 +149,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -163,7 +163,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
      * 
      */
-    @OutputExport(name="priority", type=Double.class, parameters={})
+    @Export(name="priority", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> priority;
 
     /**
@@ -177,7 +177,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.
      * 
      */
-    @OutputExport(name="subnets", type=List.class, parameters={EndpointPropertiesResponseSubnets.class})
+    @Export(name="subnets", type=List.class, parameters={EndpointPropertiesResponseSubnets.class})
     private Output</* @Nullable */ List<EndpointPropertiesResponseSubnets>> subnets;
 
     /**
@@ -191,7 +191,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.
      * 
      */
-    @OutputExport(name="target", type=String.class, parameters={})
+    @Export(name="target", type=String.class, parameters={})
     private Output</* @Nullable */ String> target;
 
     /**
@@ -205,7 +205,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.
      * 
      */
-    @OutputExport(name="targetResourceId", type=String.class, parameters={})
+    @Export(name="targetResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetResourceId;
 
     /**
@@ -219,7 +219,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**
@@ -233,7 +233,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.
      * 
      */
-    @OutputExport(name="weight", type=Double.class, parameters={})
+    @Export(name="weight", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> weight;
 
     /**

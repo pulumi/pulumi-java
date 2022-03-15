@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.codebuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectSecondarySourceAuth {
     /**
      * Resource value that applies to the specified authorization type. Use the `aws.codebuild.SourceCredential` resource instead.
@@ -30,10 +30,10 @@ public final class ProjectSecondarySourceAuth {
         @Deprecated /* Use the aws_codebuild_source_credential resource instead */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectSecondarySourceAuth(
-        @OutputCustomType.Parameter("resource") @Nullable String resource,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("resource") @Nullable String resource,
+        @CustomType.Parameter("type") String type) {
         this.resource = resource;
         this.type = type;
     }

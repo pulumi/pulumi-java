@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.kinesis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfiguration {
     /**
      * The ID of the AWS Glue Data Catalog. If you don't supply this, the AWS account ID is used by default.
@@ -42,14 +42,14 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      */
     private final @Nullable String versionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationSchemaConfiguration(
-        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
-        @OutputCustomType.Parameter("databaseName") String databaseName,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("tableName") String tableName,
-        @OutputCustomType.Parameter("versionId") @Nullable String versionId) {
+        @CustomType.Parameter("catalogId") @Nullable String catalogId,
+        @CustomType.Parameter("databaseName") String databaseName,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("tableName") String tableName,
+        @CustomType.Parameter("versionId") @Nullable String versionId) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.region = region;

@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterLogging {
     /**
      * The cluster control plane logging configuration for your cluster.
@@ -16,8 +16,8 @@ public final class ClusterLogging {
      */
     private final @Nullable ClusterLogging clusterLogging;
 
-    @OutputCustomType.Constructor
-    private ClusterLogging(@OutputCustomType.Parameter("clusterLogging") @Nullable ClusterLogging clusterLogging) {
+    @CustomType.Constructor
+    private ClusterLogging(@CustomType.Parameter("clusterLogging") @Nullable ClusterLogging clusterLogging) {
         this.clusterLogging = clusterLogging;
     }
 

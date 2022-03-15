@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.logging.inputs.ProjectSinkBigqueryOptionsGetArgs;
 import io.pulumi.gcp.logging.inputs.ProjectSinkExclusionGetArgs;
 import java.lang.Boolean;
@@ -22,7 +22,7 @@ public final class ProjectSinkState extends io.pulumi.resources.ResourceArgs {
      * Options that affect sinks exporting data to BigQuery. Structure documented below.
      * 
      */
-    @InputImport(name="bigqueryOptions")
+    @Import(name="bigqueryOptions")
       private final @Nullable Output<ProjectSinkBigqueryOptionsGetArgs> bigqueryOptions;
 
     public Output<ProjectSinkBigqueryOptionsGetArgs> getBigqueryOptions() {
@@ -33,7 +33,7 @@ public final class ProjectSinkState extends io.pulumi.resources.ResourceArgs {
      * A description of this exclusion.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -47,7 +47,7 @@ public final class ProjectSinkState extends io.pulumi.resources.ResourceArgs {
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */
-    @InputImport(name="destination")
+    @Import(name="destination")
       private final @Nullable Output<String> destination;
 
     public Output<String> getDestination() {
@@ -58,7 +58,7 @@ public final class ProjectSinkState extends io.pulumi.resources.ResourceArgs {
      * If set to True, then this exclusion is disabled and it does not exclude any log entries.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -69,7 +69,7 @@ public final class ProjectSinkState extends io.pulumi.resources.ResourceArgs {
      * Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion_filters it will not be exported.  Can be repeated multiple times for multiple exclusions. Structure is documented below.
      * 
      */
-    @InputImport(name="exclusions")
+    @Import(name="exclusions")
       private final @Nullable Output<List<ProjectSinkExclusionGetArgs>> exclusions;
 
     public Output<List<ProjectSinkExclusionGetArgs>> getExclusions() {
@@ -81,7 +81,7 @@ public final class ProjectSinkState extends io.pulumi.resources.ResourceArgs {
      * write a filter.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
@@ -92,7 +92,7 @@ public final class ProjectSinkState extends io.pulumi.resources.ResourceArgs {
      * A client-assigned identifier, such as `load-balancer-exclusion`. Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -104,7 +104,7 @@ public final class ProjectSinkState extends io.pulumi.resources.ResourceArgs {
      * used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -118,7 +118,7 @@ public final class ProjectSinkState extends io.pulumi.resources.ResourceArgs {
      * `bigquery_options`, you must set `unique_writer_identity` to true.
      * 
      */
-    @InputImport(name="uniqueWriterIdentity")
+    @Import(name="uniqueWriterIdentity")
       private final @Nullable Output<Boolean> uniqueWriterIdentity;
 
     public Output<Boolean> getUniqueWriterIdentity() {
@@ -130,7 +130,7 @@ public final class ProjectSinkState extends io.pulumi.resources.ResourceArgs {
      * configured `destination`.
      * 
      */
-    @InputImport(name="writerIdentity")
+    @Import(name="writerIdentity")
       private final @Nullable Output<String> writerIdentity;
 
     public Output<String> getWriterIdentity() {

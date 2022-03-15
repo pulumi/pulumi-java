@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class EC2FleetMemoryGiBPerVCpuRequestArgs extends io.pulumi.resourc
 
     public static final EC2FleetMemoryGiBPerVCpuRequestArgs Empty = new EC2FleetMemoryGiBPerVCpuRequestArgs();
 
-    @InputImport(name="max")
+    @Import(name="max")
       private final @Nullable Output<Double> max;
 
     public Output<Double> getMax() {
         return this.max == null ? Output.empty() : this.max;
     }
 
-    @InputImport(name="min")
+    @Import(name="min")
       private final @Nullable Output<Double> min;
 
     public Output<Double> getMin() {

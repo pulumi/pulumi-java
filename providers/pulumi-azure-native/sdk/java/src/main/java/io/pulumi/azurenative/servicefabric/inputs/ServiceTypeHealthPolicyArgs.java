@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ServiceTypeHealthPolicyArgs extends io.pulumi.resources.Resou
      * The maximum percentage of services allowed to be unhealthy before your application is considered in error.
      * 
      */
-    @InputImport(name="maxPercentUnhealthyServices")
+    @Import(name="maxPercentUnhealthyServices")
       private final @Nullable Output<Integer> maxPercentUnhealthyServices;
 
     public Output<Integer> getMaxPercentUnhealthyServices() {

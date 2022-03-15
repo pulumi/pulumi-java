@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.fms.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetPolicyArgs Empty = new GetPolicyArgs();
 
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {

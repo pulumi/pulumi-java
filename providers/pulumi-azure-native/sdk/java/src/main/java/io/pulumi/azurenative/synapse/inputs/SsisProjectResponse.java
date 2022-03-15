@@ -5,7 +5,7 @@ package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.SsisEnvironmentReferenceResponse;
 import io.pulumi.azurenative.synapse.inputs.SsisParameterResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
      * Metadata description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -37,7 +37,7 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
      * Environment reference in project
      * 
      */
-    @InputImport(name="environmentRefs")
+    @Import(name="environmentRefs")
       private final @Nullable List<SsisEnvironmentReferenceResponse> environmentRefs;
 
     public List<SsisEnvironmentReferenceResponse> getEnvironmentRefs() {
@@ -48,7 +48,7 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
      * Folder id which contains project.
      * 
      */
-    @InputImport(name="folderId")
+    @Import(name="folderId")
       private final @Nullable Double folderId;
 
     public Optional<Double> getFolderId() {
@@ -59,7 +59,7 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
      * Metadata id.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Double id;
 
     public Optional<Double> getId() {
@@ -70,7 +70,7 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
      * Metadata name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -81,7 +81,7 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
      * Parameters in project
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable List<SsisParameterResponse> parameters;
 
     public List<SsisParameterResponse> getParameters() {
@@ -93,7 +93,7 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'Project'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -104,7 +104,7 @@ public final class SsisProjectResponse extends io.pulumi.resources.InvokeArgs {
      * Project version.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Double version;
 
     public Optional<Double> getVersion() {

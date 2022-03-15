@@ -4,7 +4,7 @@
 package io.pulumi.docker;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.docker.ContainerArgs;
 import io.pulumi.docker.Utilities;
@@ -63,7 +63,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * If `true` attach to the container after its creation and waits the end of its execution. Defaults to `false`.
      * 
      */
-    @OutputExport(name="attach", type=Boolean.class, parameters={})
+    @Export(name="attach", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> attach;
 
     /**
@@ -77,7 +77,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * The network bridge of the container as read from its NetworkSettings.
      * 
      */
-    @OutputExport(name="bridge", type=String.class, parameters={})
+    @Export(name="bridge", type=String.class, parameters={})
     private Output<String> bridge;
 
     /**
@@ -91,7 +91,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Add or drop certrain linux capabilities.
      * 
      */
-    @OutputExport(name="capabilities", type=ContainerCapabilities.class, parameters={})
+    @Export(name="capabilities", type=ContainerCapabilities.class, parameters={})
     private Output</* @Nullable */ ContainerCapabilities> capabilities;
 
     /**
@@ -106,7 +106,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * `["/usr/bin/myprogram","-","baz.con"]`.
      * 
      */
-    @OutputExport(name="command", type=List.class, parameters={String.class})
+    @Export(name="command", type=List.class, parameters={String.class})
     private Output<List<String>> command;
 
     /**
@@ -121,7 +121,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * The logs of the container if its execution is done (`attach` must be disabled).
      * 
      */
-    @OutputExport(name="containerLogs", type=String.class, parameters={})
+    @Export(name="containerLogs", type=String.class, parameters={})
     private Output<String> containerLogs;
 
     /**
@@ -135,7 +135,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * A comma-separated list or hyphen-separated range of CPUs a container can use, e.g. `0-1`.
      * 
      */
-    @OutputExport(name="cpuSet", type=String.class, parameters={})
+    @Export(name="cpuSet", type=String.class, parameters={})
     private Output</* @Nullable */ String> cpuSet;
 
     /**
@@ -149,7 +149,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * CPU shares (relative weight) for the container.
      * 
      */
-    @OutputExport(name="cpuShares", type=Integer.class, parameters={})
+    @Export(name="cpuShares", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> cpuShares;
 
     /**
@@ -164,7 +164,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * successful stop.
      * 
      */
-    @OutputExport(name="destroyGraceSeconds", type=Integer.class, parameters={})
+    @Export(name="destroyGraceSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> destroyGraceSeconds;
 
     /**
@@ -179,7 +179,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Bind devices to the container.
      * 
      */
-    @OutputExport(name="devices", type=List.class, parameters={ContainerDevice.class})
+    @Export(name="devices", type=List.class, parameters={ContainerDevice.class})
     private Output</* @Nullable */ List<ContainerDevice>> devices;
 
     /**
@@ -193,7 +193,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * DNS servers to use.
      * 
      */
-    @OutputExport(name="dns", type=List.class, parameters={String.class})
+    @Export(name="dns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> dns;
 
     /**
@@ -207,7 +207,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * DNS options used by the DNS provider(s), see `resolv.conf` documentation for valid list of options.
      * 
      */
-    @OutputExport(name="dnsOpts", type=List.class, parameters={String.class})
+    @Export(name="dnsOpts", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> dnsOpts;
 
     /**
@@ -221,7 +221,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * DNS search domains that are used when bare unqualified hostnames are used inside of the container.
      * 
      */
-    @OutputExport(name="dnsSearches", type=List.class, parameters={String.class})
+    @Export(name="dnsSearches", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> dnsSearches;
 
     /**
@@ -235,7 +235,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Domain name of the container.
      * 
      */
-    @OutputExport(name="domainname", type=String.class, parameters={})
+    @Export(name="domainname", type=String.class, parameters={})
     private Output</* @Nullable */ String> domainname;
 
     /**
@@ -251,7 +251,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * `"/usr/bin/myprogra"]`.
      * 
      */
-    @OutputExport(name="entrypoints", type=List.class, parameters={String.class})
+    @Export(name="entrypoints", type=List.class, parameters={String.class})
     private Output<List<String>> entrypoints;
 
     /**
@@ -267,7 +267,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Environment variables to set in the form of `KEY=VALUE`, e.g. `DEBUG=0`
      * 
      */
-    @OutputExport(name="envs", type=List.class, parameters={String.class})
+    @Export(name="envs", type=List.class, parameters={String.class})
     private Output<List<String>> envs;
 
     /**
@@ -281,7 +281,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * The exit code of the container if its execution is done (`must_run` must be disabled).
      * 
      */
-    @OutputExport(name="exitCode", type=Integer.class, parameters={})
+    @Export(name="exitCode", type=Integer.class, parameters={})
     private Output<Integer> exitCode;
 
     /**
@@ -299,7 +299,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * 
      */
     @Deprecated /* Use `network_data` instead. The network gateway of the container as read from its NetworkSettings. */
-    @OutputExport(name="gateway", type=String.class, parameters={})
+    @Export(name="gateway", type=String.class, parameters={})
     private Output<String> gateway;
 
     /**
@@ -313,7 +313,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Additional groups for the container user
      * 
      */
-    @OutputExport(name="groupAdds", type=List.class, parameters={String.class})
+    @Export(name="groupAdds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> groupAdds;
 
     /**
@@ -327,7 +327,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * A test to perform to check that the container is healthy
      * 
      */
-    @OutputExport(name="healthcheck", type=ContainerHealthcheck.class, parameters={})
+    @Export(name="healthcheck", type=ContainerHealthcheck.class, parameters={})
     private Output<ContainerHealthcheck> healthcheck;
 
     /**
@@ -341,7 +341,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Hostname of the container.
      * 
      */
-    @OutputExport(name="hostname", type=String.class, parameters={})
+    @Export(name="hostname", type=String.class, parameters={})
     private Output<String> hostname;
 
     /**
@@ -355,7 +355,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Additional hosts to add to the container.
      * 
      */
-    @OutputExport(name="hosts", type=List.class, parameters={ContainerHost.class})
+    @Export(name="hosts", type=List.class, parameters={ContainerHost.class})
     private Output</* @Nullable */ List<ContainerHost>> hosts;
 
     /**
@@ -370,7 +370,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * is shown in the example.
      * 
      */
-    @OutputExport(name="image", type=String.class, parameters={})
+    @Export(name="image", type=String.class, parameters={})
     private Output<String> image;
 
     /**
@@ -386,7 +386,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * defaults.
      * 
      */
-    @OutputExport(name="init", type=Boolean.class, parameters={})
+    @Export(name="init", type=Boolean.class, parameters={})
     private Output<Boolean> init;
 
     /**
@@ -405,7 +405,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * 
      */
     @Deprecated /* Use `network_data` instead. The IP address of the container's first network it. */
-    @OutputExport(name="ipAddress", type=String.class, parameters={})
+    @Export(name="ipAddress", type=String.class, parameters={})
     private Output<String> ipAddress;
 
     /**
@@ -423,7 +423,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * 
      */
     @Deprecated /* Use `network_data` instead. The IP prefix length of the container as read from its NetworkSettings. */
-    @OutputExport(name="ipPrefixLength", type=Integer.class, parameters={})
+    @Export(name="ipPrefixLength", type=Integer.class, parameters={})
     private Output<Integer> ipPrefixLength;
 
     /**
@@ -438,7 +438,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * `host`.
      * 
      */
-    @OutputExport(name="ipcMode", type=String.class, parameters={})
+    @Export(name="ipcMode", type=String.class, parameters={})
     private Output<String> ipcMode;
 
     /**
@@ -453,7 +453,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * User-defined key/value metadata
      * 
      */
-    @OutputExport(name="labels", type=List.class, parameters={ContainerLabel.class})
+    @Export(name="labels", type=List.class, parameters={ContainerLabel.class})
     private Output<List<ContainerLabel>> labels;
 
     /**
@@ -471,7 +471,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * 
      */
     @Deprecated /* The --link flag is a legacy feature of Docker. It may eventually be removed. */
-    @OutputExport(name="links", type=List.class, parameters={String.class})
+    @Export(name="links", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> links;
 
     /**
@@ -485,7 +485,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * The logging driver to use for the container. Defaults to `json-file`.
      * 
      */
-    @OutputExport(name="logDriver", type=String.class, parameters={})
+    @Export(name="logDriver", type=String.class, parameters={})
     private Output</* @Nullable */ String> logDriver;
 
     /**
@@ -499,7 +499,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Key/value pairs to use as options for the logging driver.
      * 
      */
-    @OutputExport(name="logOpts", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="logOpts", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> logOpts;
 
     /**
@@ -513,7 +513,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Save the container logs (`attach` must be enabled). Defaults to `false`.
      * 
      */
-    @OutputExport(name="logs", type=Boolean.class, parameters={})
+    @Export(name="logs", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> logs;
 
     /**
@@ -527,7 +527,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * The maximum amount of times to an attempt a restart when `restart` is set to 'on-failure'.
      * 
      */
-    @OutputExport(name="maxRetryCount", type=Integer.class, parameters={})
+    @Export(name="maxRetryCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxRetryCount;
 
     /**
@@ -541,7 +541,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * The memory limit for the container in MBs.
      * 
      */
-    @OutputExport(name="memory", type=Integer.class, parameters={})
+    @Export(name="memory", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> memory;
 
     /**
@@ -556,7 +556,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * apply` if the target host doesn't support memory swap, when that is the case docker will use a soft limitation.
      * 
      */
-    @OutputExport(name="memorySwap", type=Integer.class, parameters={})
+    @Export(name="memorySwap", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> memorySwap;
 
     /**
@@ -571,7 +571,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Specification for mounts to be added to containers created as part of the service.
      * 
      */
-    @OutputExport(name="mounts", type=List.class, parameters={ContainerMount.class})
+    @Export(name="mounts", type=List.class, parameters={ContainerMount.class})
     private Output</* @Nullable */ List<ContainerMount>> mounts;
 
     /**
@@ -586,7 +586,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * assumes it is successful. Defaults to `true`.
      * 
      */
-    @OutputExport(name="mustRun", type=Boolean.class, parameters={})
+    @Export(name="mustRun", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> mustRun;
 
     /**
@@ -601,7 +601,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * The name of the container.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -619,7 +619,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * 
      */
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
-    @OutputExport(name="networkAliases", type=List.class, parameters={String.class})
+    @Export(name="networkAliases", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> networkAliases;
 
     /**
@@ -633,7 +633,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * The data of the networks the container is connected to.
      * 
      */
-    @OutputExport(name="networkDatas", type=List.class, parameters={ContainerNetworkData.class})
+    @Export(name="networkDatas", type=List.class, parameters={ContainerNetworkData.class})
     private Output<List<ContainerNetworkData>> networkDatas;
 
     /**
@@ -647,7 +647,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Network mode of the container.
      * 
      */
-    @OutputExport(name="networkMode", type=String.class, parameters={})
+    @Export(name="networkMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> networkMode;
 
     /**
@@ -665,7 +665,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * 
      */
     @Deprecated /* Use networks_advanced instead. Will be removed in v3.0.0 */
-    @OutputExport(name="networks", type=List.class, parameters={String.class})
+    @Export(name="networks", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> networks;
 
     /**
@@ -679,7 +679,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * The networks the container is attached to
      * 
      */
-    @OutputExport(name="networksAdvanced", type=List.class, parameters={ContainerNetworksAdvanced.class})
+    @Export(name="networksAdvanced", type=List.class, parameters={ContainerNetworksAdvanced.class})
     private Output</* @Nullable */ List<ContainerNetworksAdvanced>> networksAdvanced;
 
     /**
@@ -693,7 +693,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * he PID (Process) Namespace mode for the container. Either `container:<name|id>` or `host`.
      * 
      */
-    @OutputExport(name="pidMode", type=String.class, parameters={})
+    @Export(name="pidMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> pidMode;
 
     /**
@@ -707,7 +707,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Publish a container's port(s) to the host.
      * 
      */
-    @OutputExport(name="ports", type=List.class, parameters={ContainerPort.class})
+    @Export(name="ports", type=List.class, parameters={ContainerPort.class})
     private Output</* @Nullable */ List<ContainerPort>> ports;
 
     /**
@@ -721,7 +721,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * If `true`, the container runs in privileged mode.
      * 
      */
-    @OutputExport(name="privileged", type=Boolean.class, parameters={})
+    @Export(name="privileged", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> privileged;
 
     /**
@@ -735,7 +735,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Publish all ports of the container.
      * 
      */
-    @OutputExport(name="publishAllPorts", type=Boolean.class, parameters={})
+    @Export(name="publishAllPorts", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> publishAllPorts;
 
     /**
@@ -749,7 +749,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * If `true`, the container will be started as readonly. Defaults to `false`.
      * 
      */
-    @OutputExport(name="readOnly", type=Boolean.class, parameters={})
+    @Export(name="readOnly", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> readOnly;
 
     /**
@@ -763,7 +763,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * If `true`, it will remove anonymous volumes associated with the container. Defaults to `true`.
      * 
      */
-    @OutputExport(name="removeVolumes", type=Boolean.class, parameters={})
+    @Export(name="removeVolumes", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> removeVolumes;
 
     /**
@@ -777,7 +777,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * The restart policy for the container. Must be one of 'no', 'on-failure', 'always', 'unless-stopped'. Defaults to `no`.
      * 
      */
-    @OutputExport(name="restart", type=String.class, parameters={})
+    @Export(name="restart", type=String.class, parameters={})
     private Output</* @Nullable */ String> restart;
 
     /**
@@ -792,7 +792,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * after creation. Defaults to `false`.
      * 
      */
-    @OutputExport(name="rm", type=Boolean.class, parameters={})
+    @Export(name="rm", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> rm;
 
     /**
@@ -808,7 +808,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * https://docs.docker.com/engine/reference/run/#security-configuration.
      * 
      */
-    @OutputExport(name="securityOpts", type=List.class, parameters={String.class})
+    @Export(name="securityOpts", type=List.class, parameters={String.class})
     private Output<List<String>> securityOpts;
 
     /**
@@ -823,7 +823,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Size of `/dev/shm` in MBs.
      * 
      */
-    @OutputExport(name="shmSize", type=Integer.class, parameters={})
+    @Export(name="shmSize", type=Integer.class, parameters={})
     private Output<Integer> shmSize;
 
     /**
@@ -838,7 +838,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Defaults to `true`.
      * 
      */
-    @OutputExport(name="start", type=Boolean.class, parameters={})
+    @Export(name="start", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> start;
 
     /**
@@ -853,7 +853,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * If `true`, keep STDIN open even if not attached (`docker run -i`). Defaults to `false`.
      * 
      */
-    @OutputExport(name="stdinOpen", type=Boolean.class, parameters={})
+    @Export(name="stdinOpen", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> stdinOpen;
 
     /**
@@ -867,7 +867,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Key/value pairs for the storage driver options, e.g. `size`: `120G`
      * 
      */
-    @OutputExport(name="storageOpts", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="storageOpts", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> storageOpts;
 
     /**
@@ -881,7 +881,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * A map of kernel parameters (sysctls) to set in the container.
      * 
      */
-    @OutputExport(name="sysctls", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="sysctls", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> sysctls;
 
     /**
@@ -895,7 +895,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * A map of container directories which should be replaced by `tmpfs mounts`, and their corresponding mount options.
      * 
      */
-    @OutputExport(name="tmpfs", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="tmpfs", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> tmpfs;
 
     /**
@@ -909,7 +909,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * If `true`, allocate a pseudo-tty (`docker run -t`). Defaults to `false`.
      * 
      */
-    @OutputExport(name="tty", type=Boolean.class, parameters={})
+    @Export(name="tty", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> tty;
 
     /**
@@ -923,7 +923,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Ulimit options to add.
      * 
      */
-    @OutputExport(name="ulimits", type=List.class, parameters={ContainerUlimit.class})
+    @Export(name="ulimits", type=List.class, parameters={ContainerUlimit.class})
     private Output</* @Nullable */ List<ContainerUlimit>> ulimits;
 
     /**
@@ -938,7 +938,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * at least one of them has to be set.
      * 
      */
-    @OutputExport(name="uploads", type=List.class, parameters={ContainerUpload.class})
+    @Export(name="uploads", type=List.class, parameters={ContainerUpload.class})
     private Output</* @Nullable */ List<ContainerUpload>> uploads;
 
     /**
@@ -954,7 +954,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * name.
      * 
      */
-    @OutputExport(name="user", type=String.class, parameters={})
+    @Export(name="user", type=String.class, parameters={})
     private Output</* @Nullable */ String> user;
 
     /**
@@ -969,7 +969,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Sets the usernamespace mode for the container when usernamespace remapping option is enabled.
      * 
      */
-    @OutputExport(name="usernsMode", type=String.class, parameters={})
+    @Export(name="usernsMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> usernsMode;
 
     /**
@@ -983,7 +983,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * Spec for mounting volumes in the container.
      * 
      */
-    @OutputExport(name="volumes", type=List.class, parameters={ContainerVolume.class})
+    @Export(name="volumes", type=List.class, parameters={ContainerVolume.class})
     private Output</* @Nullable */ List<ContainerVolume>> volumes;
 
     /**
@@ -997,7 +997,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * The working directory for commands to run in.
      * 
      */
-    @OutputExport(name="workingDir", type=String.class, parameters={})
+    @Export(name="workingDir", type=String.class, parameters={})
     private Output</* @Nullable */ String> workingDir;
 
     /**

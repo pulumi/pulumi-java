@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RCranPackageResponse {
     /**
      * The package name.
@@ -22,10 +22,10 @@ public final class RCranPackageResponse {
      */
     private final @Nullable String repository;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RCranPackageResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("repository") @Nullable String repository) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("repository") @Nullable String repository) {
         this.name = name;
         this.repository = repository;
     }

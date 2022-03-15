@@ -10,7 +10,7 @@ import io.pulumi.azurenative.netapp.outputs.ActiveDirectoryResponse;
 import io.pulumi.azurenative.netapp.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Active Directories
      * 
      */
-    @OutputExport(name="activeDirectories", type=List.class, parameters={ActiveDirectoryResponse.class})
+    @Export(name="activeDirectories", type=List.class, parameters={ActiveDirectoryResponse.class})
     private Output</* @Nullable */ List<ActiveDirectoryResponse>> activeDirectories;
 
     /**
@@ -52,7 +52,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Encryption settings
      * 
      */
-    @OutputExport(name="encryption", type=AccountEncryptionResponse.class, parameters={})
+    @Export(name="encryption", type=AccountEncryptionResponse.class, parameters={})
     private Output</* @Nullable */ AccountEncryptionResponse> encryption;
 
     /**
@@ -66,7 +66,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -80,7 +80,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Azure lifecycle management
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -108,7 +108,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The system meta data relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -122,7 +122,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -136,7 +136,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.databrew.enums.JobOutputCompressionFormat;
 import io.pulumi.awsnative.databrew.enums.JobOutputFormat;
 import io.pulumi.awsnative.databrew.inputs.JobOutputFormatOptions;
 import io.pulumi.awsnative.databrew.inputs.JobS3Location;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,42 +20,42 @@ public final class JobOutput extends io.pulumi.resources.InvokeArgs {
 
     public static final JobOutput Empty = new JobOutput();
 
-    @InputImport(name="compressionFormat")
+    @Import(name="compressionFormat")
       private final @Nullable JobOutputCompressionFormat compressionFormat;
 
     public Optional<JobOutputCompressionFormat> getCompressionFormat() {
         return this.compressionFormat == null ? Optional.empty() : Optional.ofNullable(this.compressionFormat);
     }
 
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable JobOutputFormat format;
 
     public Optional<JobOutputFormat> getFormat() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
     }
 
-    @InputImport(name="formatOptions")
+    @Import(name="formatOptions")
       private final @Nullable JobOutputFormatOptions formatOptions;
 
     public Optional<JobOutputFormatOptions> getFormatOptions() {
         return this.formatOptions == null ? Optional.empty() : Optional.ofNullable(this.formatOptions);
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final JobS3Location location;
 
     public JobS3Location getLocation() {
         return this.location;
     }
 
-    @InputImport(name="overwrite")
+    @Import(name="overwrite")
       private final @Nullable Boolean overwrite;
 
     public Optional<Boolean> getOverwrite() {
         return this.overwrite == null ? Optional.empty() : Optional.ofNullable(this.overwrite);
     }
 
-    @InputImport(name="partitionColumns")
+    @Import(name="partitionColumns")
       private final @Nullable List<String> partitionColumns;
 
     public List<String> getPartitionColumns() {

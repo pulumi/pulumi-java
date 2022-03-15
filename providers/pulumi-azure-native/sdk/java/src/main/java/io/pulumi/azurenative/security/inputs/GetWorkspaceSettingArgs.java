@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetWorkspaceSettingArgs extends io.pulumi.resources.InvokeArg
      * Name of the security setting
      * 
      */
-    @InputImport(name="workspaceSettingName", required=true)
+    @Import(name="workspaceSettingName", required=true)
       private final String workspaceSettingName;
 
     public String getWorkspaceSettingName() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex.outputs;
 
 import io.pulumi.aws.lex.outputs.IntentSlotValueElicitationPrompt;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntentSlot {
     /**
      * A description of the bot. Must be less than or equal to 200 characters in length.
@@ -69,17 +69,17 @@ public final class IntentSlot {
      */
     private final @Nullable IntentSlotValueElicitationPrompt valueElicitationPrompt;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntentSlot(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("responseCard") @Nullable String responseCard,
-        @OutputCustomType.Parameter("sampleUtterances") @Nullable List<String> sampleUtterances,
-        @OutputCustomType.Parameter("slotConstraint") String slotConstraint,
-        @OutputCustomType.Parameter("slotType") String slotType,
-        @OutputCustomType.Parameter("slotTypeVersion") @Nullable String slotTypeVersion,
-        @OutputCustomType.Parameter("valueElicitationPrompt") @Nullable IntentSlotValueElicitationPrompt valueElicitationPrompt) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("responseCard") @Nullable String responseCard,
+        @CustomType.Parameter("sampleUtterances") @Nullable List<String> sampleUtterances,
+        @CustomType.Parameter("slotConstraint") String slotConstraint,
+        @CustomType.Parameter("slotType") String slotType,
+        @CustomType.Parameter("slotTypeVersion") @Nullable String slotTypeVersion,
+        @CustomType.Parameter("valueElicitationPrompt") @Nullable IntentSlotValueElicitationPrompt valueElicitationPrompt) {
         this.description = description;
         this.name = name;
         this.priority = priority;

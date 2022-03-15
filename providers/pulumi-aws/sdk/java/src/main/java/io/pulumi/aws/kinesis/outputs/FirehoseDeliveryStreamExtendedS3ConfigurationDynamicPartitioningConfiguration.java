@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.kinesis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfiguration {
     /**
      * Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
@@ -23,10 +23,10 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartition
      */
     private final @Nullable Integer retryDuration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirehoseDeliveryStreamExtendedS3ConfigurationDynamicPartitioningConfiguration(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("retryDuration") @Nullable Integer retryDuration) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("retryDuration") @Nullable Integer retryDuration) {
         this.enabled = enabled;
         this.retryDuration = retryDuration;
     }

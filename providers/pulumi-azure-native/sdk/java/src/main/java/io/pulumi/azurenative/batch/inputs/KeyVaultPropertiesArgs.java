@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      *  The KeyVault has soft-delete and purge protection enabled
      * 
      */
-    @InputImport(name="keyIdentifier")
+    @Import(name="keyIdentifier")
       private final @Nullable Output<String> keyIdentifier;
 
     public Output<String> getKeyIdentifier() {

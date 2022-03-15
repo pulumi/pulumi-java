@@ -5,11 +5,11 @@ package io.pulumi.awsnative.kafkaconnect.outputs;
 
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorScaleInPolicy;
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorScaleOutPolicy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorAutoScaling {
     /**
      * The maximum number of workers for a connector.
@@ -29,13 +29,13 @@ public final class ConnectorAutoScaling {
     private final ConnectorScaleInPolicy scaleInPolicy;
     private final ConnectorScaleOutPolicy scaleOutPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorAutoScaling(
-        @OutputCustomType.Parameter("maxWorkerCount") Integer maxWorkerCount,
-        @OutputCustomType.Parameter("mcuCount") Integer mcuCount,
-        @OutputCustomType.Parameter("minWorkerCount") Integer minWorkerCount,
-        @OutputCustomType.Parameter("scaleInPolicy") ConnectorScaleInPolicy scaleInPolicy,
-        @OutputCustomType.Parameter("scaleOutPolicy") ConnectorScaleOutPolicy scaleOutPolicy) {
+        @CustomType.Parameter("maxWorkerCount") Integer maxWorkerCount,
+        @CustomType.Parameter("mcuCount") Integer mcuCount,
+        @CustomType.Parameter("minWorkerCount") Integer minWorkerCount,
+        @CustomType.Parameter("scaleInPolicy") ConnectorScaleInPolicy scaleInPolicy,
+        @CustomType.Parameter("scaleOutPolicy") ConnectorScaleOutPolicy scaleOutPolicy) {
         this.maxWorkerCount = maxWorkerCount;
         this.mcuCount = mcuCount;
         this.minWorkerCount = minWorkerCount;

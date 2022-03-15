@@ -8,7 +8,7 @@ import io.pulumi.awsnative.fms.inputs.PolicyResourceTagArgs;
 import io.pulumi.awsnative.fms.inputs.PolicyTagArgs;
 import io.pulumi.awsnative.fms.inputs.SecurityServicePolicyDataPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,84 +20,84 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final PolicyArgs Empty = new PolicyArgs();
 
-    @InputImport(name="deleteAllPolicyResources")
+    @Import(name="deleteAllPolicyResources")
       private final @Nullable Output<Boolean> deleteAllPolicyResources;
 
     public Output<Boolean> getDeleteAllPolicyResources() {
         return this.deleteAllPolicyResources == null ? Output.empty() : this.deleteAllPolicyResources;
     }
 
-    @InputImport(name="excludeMap")
+    @Import(name="excludeMap")
       private final @Nullable Output<PolicyIEMapArgs> excludeMap;
 
     public Output<PolicyIEMapArgs> getExcludeMap() {
         return this.excludeMap == null ? Output.empty() : this.excludeMap;
     }
 
-    @InputImport(name="excludeResourceTags", required=true)
+    @Import(name="excludeResourceTags", required=true)
       private final Output<Boolean> excludeResourceTags;
 
     public Output<Boolean> getExcludeResourceTags() {
         return this.excludeResourceTags;
     }
 
-    @InputImport(name="includeMap")
+    @Import(name="includeMap")
       private final @Nullable Output<PolicyIEMapArgs> includeMap;
 
     public Output<PolicyIEMapArgs> getIncludeMap() {
         return this.includeMap == null ? Output.empty() : this.includeMap;
     }
 
-    @InputImport(name="policyName")
+    @Import(name="policyName")
       private final @Nullable Output<String> policyName;
 
     public Output<String> getPolicyName() {
         return this.policyName == null ? Output.empty() : this.policyName;
     }
 
-    @InputImport(name="remediationEnabled", required=true)
+    @Import(name="remediationEnabled", required=true)
       private final Output<Boolean> remediationEnabled;
 
     public Output<Boolean> getRemediationEnabled() {
         return this.remediationEnabled;
     }
 
-    @InputImport(name="resourceTags")
+    @Import(name="resourceTags")
       private final @Nullable Output<List<PolicyResourceTagArgs>> resourceTags;
 
     public Output<List<PolicyResourceTagArgs>> getResourceTags() {
         return this.resourceTags == null ? Output.empty() : this.resourceTags;
     }
 
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
         return this.resourceType;
     }
 
-    @InputImport(name="resourceTypeList")
+    @Import(name="resourceTypeList")
       private final @Nullable Output<List<String>> resourceTypeList;
 
     public Output<List<String>> getResourceTypeList() {
         return this.resourceTypeList == null ? Output.empty() : this.resourceTypeList;
     }
 
-    @InputImport(name="resourcesCleanUp")
+    @Import(name="resourcesCleanUp")
       private final @Nullable Output<Boolean> resourcesCleanUp;
 
     public Output<Boolean> getResourcesCleanUp() {
         return this.resourcesCleanUp == null ? Output.empty() : this.resourcesCleanUp;
     }
 
-    @InputImport(name="securityServicePolicyData", required=true)
+    @Import(name="securityServicePolicyData", required=true)
       private final Output<SecurityServicePolicyDataPropertiesArgs> securityServicePolicyData;
 
     public Output<SecurityServicePolicyDataPropertiesArgs> getSecurityServicePolicyData() {
         return this.securityServicePolicyData;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<PolicyTagArgs>> tags;
 
     public Output<List<PolicyTagArgs>> getTags() {

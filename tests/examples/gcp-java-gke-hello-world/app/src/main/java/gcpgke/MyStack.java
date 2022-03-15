@@ -7,7 +7,7 @@ import java.util.Map;
 import io.pulumi.Config;
 import io.pulumi.Stack;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.deployment.InvokeOptions;
 import io.pulumi.gcp.container.ClusterArgs;
 import io.pulumi.gcp.container.GetEngineVersions;
@@ -39,25 +39,25 @@ import io.pulumi.resources.CustomResourceOptions;
 
 public final class MyStack extends Stack {
 
-    @OutputExport(name="serviceName", type=String.class, parameters={})
+    @Export(name="serviceName", type=String.class, parameters={})
     private Output<String> serviceName;
 
-    @OutputExport(name="servicePublicIP", type=String.class, parameters={})
+    @Export(name="servicePublicIP", type=String.class, parameters={})
     private Output<String> servicePublicIP;
 
-    @OutputExport(name="deploymentName", type=String.class, parameters={})
+    @Export(name="deploymentName", type=String.class, parameters={})
     private Output<String> deploymentName;
 
-    @OutputExport(name="namespaceName", type=String.class, parameters={})
+    @Export(name="namespaceName", type=String.class, parameters={})
     private Output<String> namespaceName;
 
-    @OutputExport(name="kubeconfig", type=String.class, parameters={})
+    @Export(name="kubeconfig", type=String.class, parameters={})
     private Output<String> kubeconfig;
 
-    @OutputExport(name="clusterName", type=String.class, parameters={})
+    @Export(name="clusterName", type=String.class, parameters={})
     private Output<String> clusterName;
 
-    @OutputExport(name="masterVersion", type=String.class, parameters={})
+    @Export(name="masterVersion", type=String.class, parameters={})
     private Output<String> masterVersion;
 
     public MyStack() throws Exception {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.transcoder_v1.inputs.TextMappingResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class TextStreamResponse extends io.pulumi.resources.InvokeArgs {
      * The codec for this text stream. The default is `webvtt`. Supported text codecs: - `srt` - `ttml` - `cea608` - `cea708` - `webvtt`
      * 
      */
-    @InputImport(name="codec", required=true)
+    @Import(name="codec", required=true)
       private final String codec;
 
     public String getCodec() {
@@ -33,7 +33,7 @@ public final class TextStreamResponse extends io.pulumi.resources.InvokeArgs {
      * The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
      * 
      */
-    @InputImport(name="mapping", required=true)
+    @Import(name="mapping", required=true)
       private final List<TextMappingResponse> mapping;
 
     public List<TextMappingResponse> getMapping() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SignatureResponse {
     /**
      * The identifier for the public key that verifies this signature. * The `public_key_id` is required. * The `public_key_id` SHOULD be an RFC3986 conformant URI. * When possible, the `public_key_id` SHOULD be an immutable reference, such as a cryptographic digest. Examples of valid `public_key_id`s: OpenPGP V4 public key fingerprint: * "openpgp4fpr:74FAF3B861BDA0870C7B6DEF607E48D2A663AEEA" See https://www.iana.org/assignments/uri-schemes/prov/openpgp4fpr for more details on this scheme. RFC6920 digest-named SubjectPublicKeyInfo (digest of the DER serialization): * "ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU" * "nih:///sha-256;703f68f42aba2c6de30f488a5ea122fef76324679c9bf89791ba95a1271589a5"
@@ -20,10 +20,10 @@ public final class SignatureResponse {
      */
     private final String signature;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SignatureResponse(
-        @OutputCustomType.Parameter("publicKeyId") String publicKeyId,
-        @OutputCustomType.Parameter("signature") String signature) {
+        @CustomType.Parameter("publicKeyId") String publicKeyId,
+        @CustomType.Parameter("signature") String signature) {
         this.publicKeyId = publicKeyId;
         this.signature = signature;
     }

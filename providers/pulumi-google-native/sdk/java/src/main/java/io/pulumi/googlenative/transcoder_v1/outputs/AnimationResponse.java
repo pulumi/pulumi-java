@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.AnimationEndResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.AnimationFadeResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.AnimationStaticResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnimationResponse {
     /**
      * End previous animation.
@@ -27,11 +27,11 @@ public final class AnimationResponse {
      */
     private final AnimationStaticResponse animationStatic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnimationResponse(
-        @OutputCustomType.Parameter("animationEnd") AnimationEndResponse animationEnd,
-        @OutputCustomType.Parameter("animationFade") AnimationFadeResponse animationFade,
-        @OutputCustomType.Parameter("animationStatic") AnimationStaticResponse animationStatic) {
+        @CustomType.Parameter("animationEnd") AnimationEndResponse animationEnd,
+        @CustomType.Parameter("animationFade") AnimationFadeResponse animationFade,
+        @CustomType.Parameter("animationStatic") AnimationStaticResponse animationStatic) {
         this.animationEnd = animationEnd;
         this.animationFade = animationFade;
         this.animationStatic = animationStatic;

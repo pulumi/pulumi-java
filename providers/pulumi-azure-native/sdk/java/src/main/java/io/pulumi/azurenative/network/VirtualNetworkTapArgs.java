@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.FrontendIPConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.NetworkInterfaceIPConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * The reference to the private IP address on the internal Load Balancer that will receive the tap.
      * 
      */
-    @InputImport(name="destinationLoadBalancerFrontEndIPConfiguration")
+    @Import(name="destinationLoadBalancerFrontEndIPConfiguration")
       private final @Nullable Output<FrontendIPConfigurationArgs> destinationLoadBalancerFrontEndIPConfiguration;
 
     public Output<FrontendIPConfigurationArgs> getDestinationLoadBalancerFrontEndIPConfiguration() {
@@ -33,7 +33,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * The reference to the private IP Address of the collector nic that will receive the tap.
      * 
      */
-    @InputImport(name="destinationNetworkInterfaceIPConfiguration")
+    @Import(name="destinationNetworkInterfaceIPConfiguration")
       private final @Nullable Output<NetworkInterfaceIPConfigurationArgs> destinationNetworkInterfaceIPConfiguration;
 
     public Output<NetworkInterfaceIPConfigurationArgs> getDestinationNetworkInterfaceIPConfiguration() {
@@ -44,7 +44,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * The VXLAN destination port that will receive the tapped traffic.
      * 
      */
-    @InputImport(name="destinationPort")
+    @Import(name="destinationPort")
       private final @Nullable Output<Integer> destinationPort;
 
     public Output<Integer> getDestinationPort() {
@@ -55,7 +55,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -66,7 +66,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -77,7 +77,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -88,7 +88,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -99,7 +99,7 @@ public final class VirtualNetworkTapArgs extends io.pulumi.resources.ResourceArg
      * The name of the virtual network tap.
      * 
      */
-    @InputImport(name="tapName")
+    @Import(name="tapName")
       private final @Nullable Output<String> tapName;
 
     public Output<String> getTapName() {

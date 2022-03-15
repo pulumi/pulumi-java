@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PartnerRegionInfoResponse extends io.pulumi.resources.InvokeA
      * Geo location of the partner managed instances.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -33,7 +33,7 @@ public final class PartnerRegionInfoResponse extends io.pulumi.resources.InvokeA
      * Replication role of the partner managed instances.
      * 
      */
-    @InputImport(name="replicationRole", required=true)
+    @Import(name="replicationRole", required=true)
       private final String replicationRole;
 
     public String getReplicationRole() {

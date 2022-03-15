@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.BastionShareableLink;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetBastionShareableLinkArgs extends io.pulumi.resources.Invok
      * The name of the Bastion Host.
      * 
      */
-    @InputImport(name="bastionHostName", required=true)
+    @Import(name="bastionHostName", required=true)
       private final String bastionHostName;
 
     public String getBastionHostName() {
@@ -31,7 +31,7 @@ public final class GetBastionShareableLinkArgs extends io.pulumi.resources.Invok
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -42,7 +42,7 @@ public final class GetBastionShareableLinkArgs extends io.pulumi.resources.Invok
      * List of VM references.
      * 
      */
-    @InputImport(name="vms")
+    @Import(name="vms")
       private final @Nullable List<BastionShareableLink> vms;
 
     public List<BastionShareableLink> getVms() {

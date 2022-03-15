@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class EndpointConfigResponse extends io.pulumi.resources.InvokeArgs
      * Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
      * 
      */
-    @InputImport(name="enableHttpPortAccess", required=true)
+    @Import(name="enableHttpPortAccess", required=true)
       private final Boolean enableHttpPortAccess;
 
     public Boolean getEnableHttpPortAccess() {
@@ -33,7 +33,7 @@ public final class EndpointConfigResponse extends io.pulumi.resources.InvokeArgs
      * The map of port descriptions to URLs. Will only be populated if enable_http_port_access is true.
      * 
      */
-    @InputImport(name="httpPorts", required=true)
+    @Import(name="httpPorts", required=true)
       private final Map<String,String> httpPorts;
 
     public Map<String,String> getHttpPorts() {

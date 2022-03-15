@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudtasks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class QueueStackdriverLoggingConfigGetArgs extends io.pulumi.resour
      * default and means that no operations are logged.
      * 
      */
-    @InputImport(name="samplingRatio", required=true)
+    @Import(name="samplingRatio", required=true)
       private final Output<Double> samplingRatio;
 
     public Output<Double> getSamplingRatio() {

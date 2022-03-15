@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.azurestack.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRegistrationActivationKeyResult {
     /**
      * Azure Stack activation key.
@@ -17,8 +17,8 @@ public final class GetRegistrationActivationKeyResult {
      */
     private final @Nullable String activationKey;
 
-    @OutputCustomType.Constructor
-    private GetRegistrationActivationKeyResult(@OutputCustomType.Parameter("activationKey") @Nullable String activationKey) {
+    @CustomType.Constructor
+    private GetRegistrationActivationKeyResult(@CustomType.Parameter("activationKey") @Nullable String activationKey) {
         this.activationKey = activationKey;
     }
 

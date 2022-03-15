@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
      * The system's confidence score that this article is a good match for this conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely certain).
      * 
      */
-    @InputImport(name="confidenceScore", required=true)
+    @Import(name="confidenceScore", required=true)
       private final Double confidenceScore;
 
     public Double getConfidenceScore() {
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
      * Map that contains metadata about the Article Suggestion and the document that it originates from.
      * 
      */
-    @InputImport(name="metadata", required=true)
+    @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
@@ -44,7 +44,7 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
      * Name of the query record. Format: projects/{project}/locations/{location}/queryRecords/{query_record}
      * 
      */
-    @InputImport(name="queryRecord", required=true)
+    @Import(name="queryRecord", required=true)
       private final String queryRecord;
 
     public String getQueryRecord() {
@@ -55,7 +55,7 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
      * The knowledge document that this answer was extracted from. Format: projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final String source;
 
     public String getSource() {
@@ -66,7 +66,7 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
      * Article title.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final String title;
 
     public String getTitle() {
@@ -77,7 +77,7 @@ public final class GoogleCloudContactcenterinsightsV1ArticleSuggestionDataRespon
      * Article URI.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

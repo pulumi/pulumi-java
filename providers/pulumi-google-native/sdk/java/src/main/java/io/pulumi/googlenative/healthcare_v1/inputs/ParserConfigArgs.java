@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1.enums.ParserConfigVersion;
 import io.pulumi.googlenative.healthcare_v1.inputs.SchemaPackageArgs;
 import java.lang.Boolean;
@@ -25,7 +25,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Determines whether messages with no header are allowed.
      * 
      */
-    @InputImport(name="allowNullHeader")
+    @Import(name="allowNullHeader")
       private final @Nullable Output<Boolean> allowNullHeader;
 
     public Output<Boolean> getAllowNullHeader() {
@@ -36,7 +36,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Schemas used to parse messages in this store, if schematized parsing is desired.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<SchemaPackageArgs> schema;
 
     public Output<SchemaPackageArgs> getSchema() {
@@ -47,7 +47,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Byte(s) to use as the segment terminator. If this is unset, '\r' is used as segment terminator, matching the HL7 version 2 specification.
      * 
      */
-    @InputImport(name="segmentTerminator")
+    @Import(name="segmentTerminator")
       private final @Nullable Output<String> segmentTerminator;
 
     public Output<String> getSegmentTerminator() {
@@ -58,7 +58,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. Determines the version of both the default parser to be used when `schema` is not given, as well as the schematized parser used when `schema` is specified. This field is immutable after HL7v2 store creation.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<ParserConfigVersion> version;
 
     public Output<ParserConfigVersion> getVersion() {

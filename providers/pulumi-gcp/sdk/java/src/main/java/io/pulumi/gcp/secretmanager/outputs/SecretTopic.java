@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.secretmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecretTopic {
     /**
      * The resource name of the Pub/Sub topic that will be published to, in the following format: projects/*{@literal /}topics/*.
@@ -16,8 +16,8 @@ public final class SecretTopic {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private SecretTopic(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private SecretTopic(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeAr
      * The fully qualified customer provided Cloud KMS key name to use for customer data encryption, in the following form:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id}/cryptoKeys/{crypto_key_id}.
      * 
      */
-    @InputImport(name="kmsKey", required=true)
+    @Import(name="kmsKey", required=true)
       private final String kmsKey;
 
     public String getKmsKey() {

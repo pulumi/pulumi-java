@@ -7,7 +7,7 @@ import io.pulumi.azurenative.dbforpostgresql.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.dbforpostgresql.outputs.ServerPrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.dbforpostgresql.outputs.SkuResponse;
 import io.pulumi.azurenative.dbforpostgresql.outputs.StorageProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServerResult {
     /**
      * The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).
@@ -129,30 +129,30 @@ public final class GetServerResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServerResult(
-        @OutputCustomType.Parameter("administratorLogin") @Nullable String administratorLogin,
-        @OutputCustomType.Parameter("byokEnforcement") String byokEnforcement,
-        @OutputCustomType.Parameter("earliestRestoreDate") @Nullable String earliestRestoreDate,
-        @OutputCustomType.Parameter("fullyQualifiedDomainName") @Nullable String fullyQualifiedDomainName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
-        @OutputCustomType.Parameter("infrastructureEncryption") @Nullable String infrastructureEncryption,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("masterServerId") @Nullable String masterServerId,
-        @OutputCustomType.Parameter("minimalTlsVersion") @Nullable String minimalTlsVersion,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
-        @OutputCustomType.Parameter("replicaCapacity") @Nullable Integer replicaCapacity,
-        @OutputCustomType.Parameter("replicationRole") @Nullable String replicationRole,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("sslEnforcement") @Nullable String sslEnforcement,
-        @OutputCustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userVisibleState") @Nullable String userVisibleState,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("administratorLogin") @Nullable String administratorLogin,
+        @CustomType.Parameter("byokEnforcement") String byokEnforcement,
+        @CustomType.Parameter("earliestRestoreDate") @Nullable String earliestRestoreDate,
+        @CustomType.Parameter("fullyQualifiedDomainName") @Nullable String fullyQualifiedDomainName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @CustomType.Parameter("infrastructureEncryption") @Nullable String infrastructureEncryption,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("masterServerId") @Nullable String masterServerId,
+        @CustomType.Parameter("minimalTlsVersion") @Nullable String minimalTlsVersion,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateEndpointConnections") List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @CustomType.Parameter("replicaCapacity") @Nullable Integer replicaCapacity,
+        @CustomType.Parameter("replicationRole") @Nullable String replicationRole,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("sslEnforcement") @Nullable String sslEnforcement,
+        @CustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userVisibleState") @Nullable String userVisibleState,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.administratorLogin = administratorLogin;
         this.byokEnforcement = byokEnforcement;
         this.earliestRestoreDate = earliestRestoreDate;

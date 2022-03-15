@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.AdvancedScheduleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetScheduleResult {
     /**
      * Gets or sets the advanced schedule.
@@ -101,25 +101,25 @@ public final class GetScheduleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetScheduleResult(
-        @OutputCustomType.Parameter("advancedSchedule") @Nullable AdvancedScheduleResponse advancedSchedule,
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("expiryTime") @Nullable String expiryTime,
-        @OutputCustomType.Parameter("expiryTimeOffsetMinutes") @Nullable Double expiryTimeOffsetMinutes,
-        @OutputCustomType.Parameter("frequency") @Nullable String frequency,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("interval") @Nullable Object interval,
-        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
-        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nextRun") @Nullable String nextRun,
-        @OutputCustomType.Parameter("nextRunOffsetMinutes") @Nullable Double nextRunOffsetMinutes,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
-        @OutputCustomType.Parameter("startTimeOffsetMinutes") Double startTimeOffsetMinutes,
-        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("advancedSchedule") @Nullable AdvancedScheduleResponse advancedSchedule,
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("expiryTime") @Nullable String expiryTime,
+        @CustomType.Parameter("expiryTimeOffsetMinutes") @Nullable Double expiryTimeOffsetMinutes,
+        @CustomType.Parameter("frequency") @Nullable String frequency,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("interval") @Nullable Object interval,
+        @CustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
+        @CustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nextRun") @Nullable String nextRun,
+        @CustomType.Parameter("nextRunOffsetMinutes") @Nullable Double nextRunOffsetMinutes,
+        @CustomType.Parameter("startTime") @Nullable String startTime,
+        @CustomType.Parameter("startTimeOffsetMinutes") Double startTimeOffsetMinutes,
+        @CustomType.Parameter("timeZone") @Nullable String timeZone,
+        @CustomType.Parameter("type") String type) {
         this.advancedSchedule = advancedSchedule;
         this.creationTime = creationTime;
         this.description = description;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TransferJobTransferSpecTransferOptionsGetArgs extends io.pulu
      * Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and `delete_objects_unique_in_sink` are mutually exclusive.
      * 
      */
-    @InputImport(name="deleteObjectsFromSourceAfterTransfer")
+    @Import(name="deleteObjectsFromSourceAfterTransfer")
       private final @Nullable Output<Boolean> deleteObjectsFromSourceAfterTransfer;
 
     public Output<Boolean> getDeleteObjectsFromSourceAfterTransfer() {
@@ -30,7 +30,7 @@ public final class TransferJobTransferSpecTransferOptionsGetArgs extends io.pulu
      * `delete_objects_from_source_after_transfer` are mutually exclusive.
      * 
      */
-    @InputImport(name="deleteObjectsUniqueInSink")
+    @Import(name="deleteObjectsUniqueInSink")
       private final @Nullable Output<Boolean> deleteObjectsUniqueInSink;
 
     public Output<Boolean> getDeleteObjectsUniqueInSink() {
@@ -41,7 +41,7 @@ public final class TransferJobTransferSpecTransferOptionsGetArgs extends io.pulu
      * Whether overwriting objects that already exist in the sink is allowed.
      * 
      */
-    @InputImport(name="overwriteObjectsAlreadyExistingInSink")
+    @Import(name="overwriteObjectsAlreadyExistingInSink")
       private final @Nullable Output<Boolean> overwriteObjectsAlreadyExistingInSink;
 
     public Output<Boolean> getOverwriteObjectsAlreadyExistingInSink() {

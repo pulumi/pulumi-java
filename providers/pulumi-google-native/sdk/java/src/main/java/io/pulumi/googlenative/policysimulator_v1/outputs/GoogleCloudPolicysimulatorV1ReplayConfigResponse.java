@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.policysimulator_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudPolicysimulatorV1ReplayConfigResponse {
     /**
      * The logs to use as input for the Replay.
@@ -21,10 +21,10 @@ public final class GoogleCloudPolicysimulatorV1ReplayConfigResponse {
      */
     private final Map<String,String> policyOverlay;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudPolicysimulatorV1ReplayConfigResponse(
-        @OutputCustomType.Parameter("logSource") String logSource,
-        @OutputCustomType.Parameter("policyOverlay") Map<String,String> policyOverlay) {
+        @CustomType.Parameter("logSource") String logSource,
+        @CustomType.Parameter("policyOverlay") Map<String,String> policyOverlay) {
         this.logSource = logSource;
         this.policyOverlay = policyOverlay;
     }

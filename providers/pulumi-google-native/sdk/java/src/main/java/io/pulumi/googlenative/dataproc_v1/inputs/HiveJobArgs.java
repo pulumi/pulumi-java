@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1.inputs.QueryListArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries.
      * 
      */
-    @InputImport(name="continueOnFailure")
+    @Import(name="continueOnFailure")
       private final @Nullable Output<Boolean> continueOnFailure;
 
     public Output<Boolean> getContinueOnFailure() {
@@ -37,7 +37,7 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. HCFS URIs of jar files to add to the CLASSPATH of the Hive server and Hadoop MapReduce (MR) tasks. Can contain Hive SerDes and UDFs.
      * 
      */
-    @InputImport(name="jarFileUris")
+    @Import(name="jarFileUris")
       private final @Nullable Output<List<String>> jarFileUris;
 
     public Output<List<String>> getJarFileUris() {
@@ -48,7 +48,7 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. A mapping of property names and values, used to configure Hive. Properties that conflict with values set by the Dataproc API may be overwritten. Can include properties set in /etc/hadoop/conf/*-site.xml, /etc/hive/conf/hive-site.xml, and classes in user code.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -59,7 +59,7 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
      * The HCFS URI of the script that contains Hive queries.
      * 
      */
-    @InputImport(name="queryFileUri")
+    @Import(name="queryFileUri")
       private final @Nullable Output<String> queryFileUri;
 
     public Output<String> getQueryFileUri() {
@@ -70,7 +70,7 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
      * A list of queries.
      * 
      */
-    @InputImport(name="queryList")
+    @Import(name="queryList")
       private final @Nullable Output<QueryListArgs> queryList;
 
     public Output<QueryListArgs> getQueryList() {
@@ -81,7 +81,7 @@ public final class HiveJobArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Mapping of query variable names to values (equivalent to the Hive command: SET name="value";).
      * 
      */
-    @InputImport(name="scriptVariables")
+    @Import(name="scriptVariables")
       private final @Nullable Output<Map<String,String>> scriptVariables;
 
     public Output<Map<String,String>> getScriptVariables() {

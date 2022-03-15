@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GatewayRouteSpecHttpRouteMatch {
     /**
      * Specifies the path to match requests with. This parameter must always start with `/`, which by itself matches all requests to the virtual service name.
@@ -15,8 +15,8 @@ public final class GatewayRouteSpecHttpRouteMatch {
      */
     private final String prefix;
 
-    @OutputCustomType.Constructor
-    private GatewayRouteSpecHttpRouteMatch(@OutputCustomType.Parameter("prefix") String prefix) {
+    @CustomType.Constructor
+    private GatewayRouteSpecHttpRouteMatch(@CustomType.Parameter("prefix") String prefix) {
         this.prefix = prefix;
     }
 

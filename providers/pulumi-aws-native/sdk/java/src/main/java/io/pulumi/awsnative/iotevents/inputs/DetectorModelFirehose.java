@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayload;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,14 +23,14 @@ public final class DetectorModelFirehose extends io.pulumi.resources.InvokeArgs 
      * The name of the Kinesis Data Firehose delivery stream where the data is written.
      * 
      */
-    @InputImport(name="deliveryStreamName", required=true)
+    @Import(name="deliveryStreamName", required=true)
       private final String deliveryStreamName;
 
     public String getDeliveryStreamName() {
         return this.deliveryStreamName;
     }
 
-    @InputImport(name="payload")
+    @Import(name="payload")
       private final @Nullable DetectorModelPayload payload;
 
     public Optional<DetectorModelPayload> getPayload() {
@@ -41,7 +41,7 @@ public final class DetectorModelFirehose extends io.pulumi.resources.InvokeArgs 
      * A character separator that is used to separate records written to the Kinesis Data Firehose delivery stream. Valid values are: '\n' (newline), '\t' (tab), '\r\n' (Windows newline), ',' (comma).
      * 
      */
-    @InputImport(name="separator")
+    @Import(name="separator")
       private final @Nullable String separator;
 
     public Optional<String> getSeparator() {

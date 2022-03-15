@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StreamingPolicyFairPlayConfigurationResponse {
     /**
      * All license to be persistent or not
@@ -23,10 +23,10 @@ public final class StreamingPolicyFairPlayConfigurationResponse {
      */
     private final @Nullable String customLicenseAcquisitionUrlTemplate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StreamingPolicyFairPlayConfigurationResponse(
-        @OutputCustomType.Parameter("allowPersistentLicense") Boolean allowPersistentLicense,
-        @OutputCustomType.Parameter("customLicenseAcquisitionUrlTemplate") @Nullable String customLicenseAcquisitionUrlTemplate) {
+        @CustomType.Parameter("allowPersistentLicense") Boolean allowPersistentLicense,
+        @CustomType.Parameter("customLicenseAcquisitionUrlTemplate") @Nullable String customLicenseAcquisitionUrlTemplate) {
         this.allowPersistentLicense = allowPersistentLicense;
         this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
     }

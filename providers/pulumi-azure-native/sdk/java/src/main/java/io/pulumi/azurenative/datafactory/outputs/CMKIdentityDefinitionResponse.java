@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CMKIdentityDefinitionResponse {
     /**
      * The resource id of the user assigned identity to authenticate to customer's key vault.
@@ -17,8 +17,8 @@ public final class CMKIdentityDefinitionResponse {
      */
     private final @Nullable String userAssignedIdentity;
 
-    @OutputCustomType.Constructor
-    private CMKIdentityDefinitionResponse(@OutputCustomType.Parameter("userAssignedIdentity") @Nullable String userAssignedIdentity) {
+    @CustomType.Constructor
+    private CMKIdentityDefinitionResponse(@CustomType.Parameter("userAssignedIdentity") @Nullable String userAssignedIdentity) {
         this.userAssignedIdentity = userAssignedIdentity;
     }
 

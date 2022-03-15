@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class OSPolicyInventoryFilterResponse extends io.pulumi.resources.I
      * The OS short name
      * 
      */
-    @InputImport(name="osShortName", required=true)
+    @Import(name="osShortName", required=true)
       private final String osShortName;
 
     public String getOsShortName() {
@@ -31,7 +31,7 @@ public final class OSPolicyInventoryFilterResponse extends io.pulumi.resources.I
      * The OS version Prefix matches are supported if asterisk(*) is provided as the last character. For example, to match all versions with a major version of `7`, specify the following value for this field `7.*` An empty string matches all OS versions.
      * 
      */
-    @InputImport(name="osVersion", required=true)
+    @Import(name="osVersion", required=true)
       private final String osVersion;
 
     public String getOsVersion() {

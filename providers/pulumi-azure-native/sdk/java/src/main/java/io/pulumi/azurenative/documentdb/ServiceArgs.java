@@ -7,7 +7,7 @@ import io.pulumi.azurenative.documentdb.enums.ServiceSize;
 import io.pulumi.azurenative.documentdb.enums.ServiceType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Cosmos DB database account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -33,7 +33,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Instance count for the service.
      * 
      */
-    @InputImport(name="instanceCount")
+    @Import(name="instanceCount")
       private final @Nullable Output<Integer> instanceCount;
 
     public Output<Integer> getInstanceCount() {
@@ -44,7 +44,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Instance type for the service.
      * 
      */
-    @InputImport(name="instanceSize")
+    @Import(name="instanceSize")
       private final @Nullable Output<Either<String,ServiceSize>> instanceSize;
 
     public Output<Either<String,ServiceSize>> getInstanceSize() {
@@ -55,7 +55,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -66,7 +66,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Cosmos DB service name.
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -77,7 +77,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * ServiceType for the service.
      * 
      */
-    @InputImport(name="serviceType")
+    @Import(name="serviceType")
       private final @Nullable Output<Either<String,ServiceType>> serviceType;
 
     public Output<Either<String,ServiceType>> getServiceType() {

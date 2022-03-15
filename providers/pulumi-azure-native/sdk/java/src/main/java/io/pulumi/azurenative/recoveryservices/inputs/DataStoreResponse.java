@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
      * The capacity of data store in GBs.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable String capacity;
 
     public Optional<String> getCapacity() {
@@ -33,7 +33,7 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
      * The free space of data store in GBs.
      * 
      */
-    @InputImport(name="freeSpace")
+    @Import(name="freeSpace")
       private final @Nullable String freeSpace;
 
     public Optional<String> getFreeSpace() {
@@ -44,7 +44,7 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
      * The symbolic name of data store.
      * 
      */
-    @InputImport(name="symbolicName")
+    @Import(name="symbolicName")
       private final @Nullable String symbolicName;
 
     public Optional<String> getSymbolicName() {
@@ -55,7 +55,7 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
      * The type of data store.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -66,7 +66,7 @@ public final class DataStoreResponse extends io.pulumi.resources.InvokeArgs {
      * The uuid of data store.
      * 
      */
-    @InputImport(name="uuid")
+    @Import(name="uuid")
       private final @Nullable String uuid;
 
     public Optional<String> getUuid() {

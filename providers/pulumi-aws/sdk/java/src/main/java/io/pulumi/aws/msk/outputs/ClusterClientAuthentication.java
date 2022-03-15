@@ -5,12 +5,12 @@ package io.pulumi.aws.msk.outputs;
 
 import io.pulumi.aws.msk.outputs.ClusterClientAuthenticationSasl;
 import io.pulumi.aws.msk.outputs.ClusterClientAuthenticationTls;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClientAuthentication {
     /**
      * Configuration block for specifying SASL client authentication. See below.
@@ -23,10 +23,10 @@ public final class ClusterClientAuthentication {
      */
     private final @Nullable ClusterClientAuthenticationTls tls;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterClientAuthentication(
-        @OutputCustomType.Parameter("sasl") @Nullable ClusterClientAuthenticationSasl sasl,
-        @OutputCustomType.Parameter("tls") @Nullable ClusterClientAuthenticationTls tls) {
+        @CustomType.Parameter("sasl") @Nullable ClusterClientAuthenticationSasl sasl,
+        @CustomType.Parameter("tls") @Nullable ClusterClientAuthenticationTls tls) {
         this.sasl = sasl;
         this.tls = tls;
     }

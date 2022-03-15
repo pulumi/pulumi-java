@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="deidentifyConfig", required=true)
+    @Import(name="deidentifyConfig", required=true)
       private final Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig;
 
     public Output<PreventionDeidentifyTemplateDeidentifyConfigArgs> getDeidentifyConfig() {
@@ -31,7 +31,7 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
      * A description of the template.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
      * User set display name of the template.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -57,7 +57,7 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
      * * `organizations/{{organization_id}}/locations/{{location}}`
      * 
      */
-    @InputImport(name="parent", required=true)
+    @Import(name="parent", required=true)
       private final Output<String> parent;
 
     public Output<String> getParent() {

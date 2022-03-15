@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CrawlerRecrawlPolicy {
     /**
      * Specifies whether to crawl the entire dataset again or to crawl only folders that were added since the last crawler run. Valid Values are: `CRAWL_EVERYTHING` and `CRAWL_NEW_FOLDERS_ONLY`. Default value is `CRAWL_EVERYTHING`.
@@ -17,8 +17,8 @@ public final class CrawlerRecrawlPolicy {
      */
     private final @Nullable String recrawlBehavior;
 
-    @OutputCustomType.Constructor
-    private CrawlerRecrawlPolicy(@OutputCustomType.Parameter("recrawlBehavior") @Nullable String recrawlBehavior) {
+    @CustomType.Constructor
+    private CrawlerRecrawlPolicy(@CustomType.Parameter("recrawlBehavior") @Nullable String recrawlBehavior) {
         this.recrawlBehavior = recrawlBehavior;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class NetworkInsightsAccessScopeResourceStatementRequestArgs extend
 
     public static final NetworkInsightsAccessScopeResourceStatementRequestArgs Empty = new NetworkInsightsAccessScopeResourceStatementRequestArgs();
 
-    @InputImport(name="resourceTypes")
+    @Import(name="resourceTypes")
       private final @Nullable Output<List<String>> resourceTypes;
 
     public Output<List<String>> getResourceTypes() {
         return this.resourceTypes == null ? Output.empty() : this.resourceTypes;
     }
 
-    @InputImport(name="resources")
+    @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
     public Output<List<String>> getResources() {

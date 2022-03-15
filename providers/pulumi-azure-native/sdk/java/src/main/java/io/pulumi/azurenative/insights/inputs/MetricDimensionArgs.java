@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class MetricDimensionArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the dimension.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class MetricDimensionArgs extends io.pulumi.resources.ResourceArgs 
      * the dimension operator. Only 'Include' and 'Exclude' are supported
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final Output<String> operator;
 
     public Output<String> getOperator() {
@@ -44,7 +44,7 @@ public final class MetricDimensionArgs extends io.pulumi.resources.ResourceArgs 
      * list of dimension values.
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final Output<List<String>> values;
 
     public Output<List<String>> getValues() {

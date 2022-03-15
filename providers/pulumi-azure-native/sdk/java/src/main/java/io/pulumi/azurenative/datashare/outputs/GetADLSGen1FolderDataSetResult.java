@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetADLSGen1FolderDataSetResult {
     /**
      * The ADLS account name.
@@ -62,18 +62,18 @@ public final class GetADLSGen1FolderDataSetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetADLSGen1FolderDataSetResult(
-        @OutputCustomType.Parameter("accountName") String accountName,
-        @OutputCustomType.Parameter("dataSetId") String dataSetId,
-        @OutputCustomType.Parameter("folderPath") String folderPath,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceGroup") String resourceGroup,
-        @OutputCustomType.Parameter("subscriptionId") String subscriptionId,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accountName") String accountName,
+        @CustomType.Parameter("dataSetId") String dataSetId,
+        @CustomType.Parameter("folderPath") String folderPath,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceGroup") String resourceGroup,
+        @CustomType.Parameter("subscriptionId") String subscriptionId,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.accountName = accountName;
         this.dataSetId = dataSetId;
         this.folderPath = folderPath;

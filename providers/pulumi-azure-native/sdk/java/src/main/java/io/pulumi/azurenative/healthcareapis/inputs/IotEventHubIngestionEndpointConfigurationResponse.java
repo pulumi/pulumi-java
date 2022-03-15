@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class IotEventHubIngestionEndpointConfigurationResponse extends io.
      * Consumer group of the event hub to connected to.
      * 
      */
-    @InputImport(name="consumerGroup")
+    @Import(name="consumerGroup")
       private final @Nullable String consumerGroup;
 
     public Optional<String> getConsumerGroup() {
@@ -33,7 +33,7 @@ public final class IotEventHubIngestionEndpointConfigurationResponse extends io.
      * Event Hub name to connect to.
      * 
      */
-    @InputImport(name="eventHubName")
+    @Import(name="eventHubName")
       private final @Nullable String eventHubName;
 
     public Optional<String> getEventHubName() {
@@ -44,7 +44,7 @@ public final class IotEventHubIngestionEndpointConfigurationResponse extends io.
      * Fully qualified namespace of the Event Hub to connect to.
      * 
      */
-    @InputImport(name="fullyQualifiedEventHubNamespace")
+    @Import(name="fullyQualifiedEventHubNamespace")
       private final @Nullable String fullyQualifiedEventHubNamespace;
 
     public Optional<String> getFullyQualifiedEventHubNamespace() {

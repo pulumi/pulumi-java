@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
 import io.pulumi.azurenative.securityinsights.outputs.WatchlistUserInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWatchlistItemResult {
     /**
      * The time the watchlist item was created
@@ -91,23 +91,23 @@ public final class GetWatchlistItemResult {
      */
     private final @Nullable String watchlistItemType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWatchlistItemResult(
-        @OutputCustomType.Parameter("created") @Nullable String created,
-        @OutputCustomType.Parameter("createdBy") @Nullable WatchlistUserInfoResponse createdBy,
-        @OutputCustomType.Parameter("entityMapping") @Nullable Object entityMapping,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isDeleted") @Nullable Boolean isDeleted,
-        @OutputCustomType.Parameter("itemsKeyValue") Object itemsKeyValue,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updated") @Nullable String updated,
-        @OutputCustomType.Parameter("updatedBy") @Nullable WatchlistUserInfoResponse updatedBy,
-        @OutputCustomType.Parameter("watchlistItemId") @Nullable String watchlistItemId,
-        @OutputCustomType.Parameter("watchlistItemType") @Nullable String watchlistItemType) {
+        @CustomType.Parameter("created") @Nullable String created,
+        @CustomType.Parameter("createdBy") @Nullable WatchlistUserInfoResponse createdBy,
+        @CustomType.Parameter("entityMapping") @Nullable Object entityMapping,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isDeleted") @Nullable Boolean isDeleted,
+        @CustomType.Parameter("itemsKeyValue") Object itemsKeyValue,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updated") @Nullable String updated,
+        @CustomType.Parameter("updatedBy") @Nullable WatchlistUserInfoResponse updatedBy,
+        @CustomType.Parameter("watchlistItemId") @Nullable String watchlistItemId,
+        @CustomType.Parameter("watchlistItemType") @Nullable String watchlistItemType) {
         this.created = created;
         this.createdBy = createdBy;
         this.entityMapping = entityMapping;

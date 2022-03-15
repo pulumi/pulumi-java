@@ -6,7 +6,7 @@ package io.pulumi.aws.athena.inputs;
 import io.pulumi.aws.athena.inputs.WorkgroupConfigurationEngineVersionGetArgs;
 import io.pulumi.aws.athena.inputs.WorkgroupConfigurationResultConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WorkgroupConfigurationGetArgs extends io.pulumi.resources.Res
      * Integer for the upper data usage limit (cutoff) for the amount of bytes a single query in a workgroup is allowed to scan. Must be at least `10485760`.
      * 
      */
-    @InputImport(name="bytesScannedCutoffPerQuery")
+    @Import(name="bytesScannedCutoffPerQuery")
       private final @Nullable Output<Integer> bytesScannedCutoffPerQuery;
 
     public Output<Integer> getBytesScannedCutoffPerQuery() {
@@ -32,7 +32,7 @@ public final class WorkgroupConfigurationGetArgs extends io.pulumi.resources.Res
      * Boolean whether the settings for the workgroup override client-side settings. For more information, see [Workgroup Settings Override Client-Side Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html). Defaults to `true`.
      * 
      */
-    @InputImport(name="enforceWorkgroupConfiguration")
+    @Import(name="enforceWorkgroupConfiguration")
       private final @Nullable Output<Boolean> enforceWorkgroupConfiguration;
 
     public Output<Boolean> getEnforceWorkgroupConfiguration() {
@@ -43,7 +43,7 @@ public final class WorkgroupConfigurationGetArgs extends io.pulumi.resources.Res
      * Configuration block for the Athena Engine Versioning. For more information, see [Athena Engine Versioning](https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html). Documented below.
      * 
      */
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable Output<WorkgroupConfigurationEngineVersionGetArgs> engineVersion;
 
     public Output<WorkgroupConfigurationEngineVersionGetArgs> getEngineVersion() {
@@ -54,7 +54,7 @@ public final class WorkgroupConfigurationGetArgs extends io.pulumi.resources.Res
      * Boolean whether Amazon CloudWatch metrics are enabled for the workgroup. Defaults to `true`.
      * 
      */
-    @InputImport(name="publishCloudwatchMetricsEnabled")
+    @Import(name="publishCloudwatchMetricsEnabled")
       private final @Nullable Output<Boolean> publishCloudwatchMetricsEnabled;
 
     public Output<Boolean> getPublishCloudwatchMetricsEnabled() {
@@ -65,7 +65,7 @@ public final class WorkgroupConfigurationGetArgs extends io.pulumi.resources.Res
      * If set to true , allows members assigned to a workgroup to reference Amazon S3 Requester Pays buckets in queries. If set to false , workgroup members cannot query data from Requester Pays buckets, and queries that retrieve data from Requester Pays buckets cause an error. The default is false . For more information about Requester Pays buckets, see [Requester Pays Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/RequesterPaysBuckets.html) in the Amazon Simple Storage Service Developer Guide.
      * 
      */
-    @InputImport(name="requesterPaysEnabled")
+    @Import(name="requesterPaysEnabled")
       private final @Nullable Output<Boolean> requesterPaysEnabled;
 
     public Output<Boolean> getRequesterPaysEnabled() {
@@ -76,7 +76,7 @@ public final class WorkgroupConfigurationGetArgs extends io.pulumi.resources.Res
      * Configuration block with result settings. Documented below.
      * 
      */
-    @InputImport(name="resultConfiguration")
+    @Import(name="resultConfiguration")
       private final @Nullable Output<WorkgroupConfigurationResultConfigurationGetArgs> resultConfiguration;
 
     public Output<WorkgroupConfigurationResultConfigurationGetArgs> getResultConfiguration() {

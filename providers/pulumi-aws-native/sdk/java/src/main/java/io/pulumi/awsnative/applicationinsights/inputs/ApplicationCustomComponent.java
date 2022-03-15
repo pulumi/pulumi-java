@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.applicationinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ApplicationCustomComponent extends io.pulumi.resources.Invoke
      * The name of the component.
      * 
      */
-    @InputImport(name="componentName", required=true)
+    @Import(name="componentName", required=true)
       private final String componentName;
 
     public String getComponentName() {
@@ -32,7 +32,7 @@ public final class ApplicationCustomComponent extends io.pulumi.resources.Invoke
      * The list of resource ARNs that belong to the component.
      * 
      */
-    @InputImport(name="resourceList", required=true)
+    @Import(name="resourceList", required=true)
       private final List<String> resourceList;
 
     public List<String> getResourceList() {

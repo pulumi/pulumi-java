@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetInstanceBootDiskInitializeParam;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceBootDisk {
     /**
      * Whether the disk will be auto-deleted when the instance is deleted.
@@ -43,16 +43,16 @@ public final class GetInstanceBootDisk {
      */
     private final String source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceBootDisk(
-        @OutputCustomType.Parameter("autoDelete") Boolean autoDelete,
-        @OutputCustomType.Parameter("deviceName") String deviceName,
-        @OutputCustomType.Parameter("diskEncryptionKeyRaw") String diskEncryptionKeyRaw,
-        @OutputCustomType.Parameter("diskEncryptionKeySha256") String diskEncryptionKeySha256,
-        @OutputCustomType.Parameter("initializeParams") List<GetInstanceBootDiskInitializeParam> initializeParams,
-        @OutputCustomType.Parameter("kmsKeySelfLink") String kmsKeySelfLink,
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("source") String source) {
+        @CustomType.Parameter("autoDelete") Boolean autoDelete,
+        @CustomType.Parameter("deviceName") String deviceName,
+        @CustomType.Parameter("diskEncryptionKeyRaw") String diskEncryptionKeyRaw,
+        @CustomType.Parameter("diskEncryptionKeySha256") String diskEncryptionKeySha256,
+        @CustomType.Parameter("initializeParams") List<GetInstanceBootDiskInitializeParam> initializeParams,
+        @CustomType.Parameter("kmsKeySelfLink") String kmsKeySelfLink,
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("source") String source) {
         this.autoDelete = autoDelete;
         this.deviceName = deviceName;
         this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends io.pulumi.reso
      * The app consistent snapshot frequency in minutes.
      * 
      */
-    @InputImport(name="appConsistentFrequencyInMinutes")
+    @Import(name="appConsistentFrequencyInMinutes")
       private final @Nullable Integer appConsistentFrequencyInMinutes;
 
     public Optional<Integer> getAppConsistentFrequencyInMinutes() {
@@ -34,7 +34,7 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends io.pulumi.reso
      * The crash consistent snapshot frequency in minutes.
      * 
      */
-    @InputImport(name="crashConsistentFrequencyInMinutes")
+    @Import(name="crashConsistentFrequencyInMinutes")
       private final @Nullable Integer crashConsistentFrequencyInMinutes;
 
     public Optional<Integer> getCrashConsistentFrequencyInMinutes() {
@@ -46,7 +46,7 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends io.pulumi.reso
      * Expected value is 'RcmAzureMigration'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -57,7 +57,7 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends io.pulumi.reso
      * A value indicating whether multi-VM sync has to be enabled.
      * 
      */
-    @InputImport(name="multiVmSyncStatus")
+    @Import(name="multiVmSyncStatus")
       private final @Nullable String multiVmSyncStatus;
 
     public Optional<String> getMultiVmSyncStatus() {
@@ -68,7 +68,7 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends io.pulumi.reso
      * The duration in minutes until which the recovery points need to be stored.
      * 
      */
-    @InputImport(name="recoveryPointHistory")
+    @Import(name="recoveryPointHistory")
       private final @Nullable Integer recoveryPointHistory;
 
     public Optional<Integer> getRecoveryPointHistory() {
@@ -79,7 +79,7 @@ public final class RcmAzureMigrationPolicyDetailsResponse extends io.pulumi.reso
      * The recovery point threshold in minutes.
      * 
      */
-    @InputImport(name="recoveryPointThresholdInMinutes")
+    @Import(name="recoveryPointThresholdInMinutes")
       private final @Nullable Integer recoveryPointThresholdInMinutes;
 
     public Optional<Integer> getRecoveryPointThresholdInMinutes() {

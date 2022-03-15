@@ -20,7 +20,7 @@ import io.pulumi.awsnative.quicksight.inputs.DataSourceSnowflakeParameters;
 import io.pulumi.awsnative.quicksight.inputs.DataSourceSparkParameters;
 import io.pulumi.awsnative.quicksight.inputs.DataSourceSqlServerParameters;
 import io.pulumi.awsnative.quicksight.inputs.DataSourceTeradataParameters;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -36,119 +36,119 @@ public final class DataSourceParameters extends io.pulumi.resources.InvokeArgs {
 
     public static final DataSourceParameters Empty = new DataSourceParameters();
 
-    @InputImport(name="amazonElasticsearchParameters")
+    @Import(name="amazonElasticsearchParameters")
       private final @Nullable DataSourceAmazonElasticsearchParameters amazonElasticsearchParameters;
 
     public Optional<DataSourceAmazonElasticsearchParameters> getAmazonElasticsearchParameters() {
         return this.amazonElasticsearchParameters == null ? Optional.empty() : Optional.ofNullable(this.amazonElasticsearchParameters);
     }
 
-    @InputImport(name="amazonOpenSearchParameters")
+    @Import(name="amazonOpenSearchParameters")
       private final @Nullable DataSourceAmazonOpenSearchParameters amazonOpenSearchParameters;
 
     public Optional<DataSourceAmazonOpenSearchParameters> getAmazonOpenSearchParameters() {
         return this.amazonOpenSearchParameters == null ? Optional.empty() : Optional.ofNullable(this.amazonOpenSearchParameters);
     }
 
-    @InputImport(name="athenaParameters")
+    @Import(name="athenaParameters")
       private final @Nullable DataSourceAthenaParameters athenaParameters;
 
     public Optional<DataSourceAthenaParameters> getAthenaParameters() {
         return this.athenaParameters == null ? Optional.empty() : Optional.ofNullable(this.athenaParameters);
     }
 
-    @InputImport(name="auroraParameters")
+    @Import(name="auroraParameters")
       private final @Nullable DataSourceAuroraParameters auroraParameters;
 
     public Optional<DataSourceAuroraParameters> getAuroraParameters() {
         return this.auroraParameters == null ? Optional.empty() : Optional.ofNullable(this.auroraParameters);
     }
 
-    @InputImport(name="auroraPostgreSqlParameters")
+    @Import(name="auroraPostgreSqlParameters")
       private final @Nullable DataSourceAuroraPostgreSqlParameters auroraPostgreSqlParameters;
 
     public Optional<DataSourceAuroraPostgreSqlParameters> getAuroraPostgreSqlParameters() {
         return this.auroraPostgreSqlParameters == null ? Optional.empty() : Optional.ofNullable(this.auroraPostgreSqlParameters);
     }
 
-    @InputImport(name="mariaDbParameters")
+    @Import(name="mariaDbParameters")
       private final @Nullable DataSourceMariaDbParameters mariaDbParameters;
 
     public Optional<DataSourceMariaDbParameters> getMariaDbParameters() {
         return this.mariaDbParameters == null ? Optional.empty() : Optional.ofNullable(this.mariaDbParameters);
     }
 
-    @InputImport(name="mySqlParameters")
+    @Import(name="mySqlParameters")
       private final @Nullable DataSourceMySqlParameters mySqlParameters;
 
     public Optional<DataSourceMySqlParameters> getMySqlParameters() {
         return this.mySqlParameters == null ? Optional.empty() : Optional.ofNullable(this.mySqlParameters);
     }
 
-    @InputImport(name="oracleParameters")
+    @Import(name="oracleParameters")
       private final @Nullable DataSourceOracleParameters oracleParameters;
 
     public Optional<DataSourceOracleParameters> getOracleParameters() {
         return this.oracleParameters == null ? Optional.empty() : Optional.ofNullable(this.oracleParameters);
     }
 
-    @InputImport(name="postgreSqlParameters")
+    @Import(name="postgreSqlParameters")
       private final @Nullable DataSourcePostgreSqlParameters postgreSqlParameters;
 
     public Optional<DataSourcePostgreSqlParameters> getPostgreSqlParameters() {
         return this.postgreSqlParameters == null ? Optional.empty() : Optional.ofNullable(this.postgreSqlParameters);
     }
 
-    @InputImport(name="prestoParameters")
+    @Import(name="prestoParameters")
       private final @Nullable DataSourcePrestoParameters prestoParameters;
 
     public Optional<DataSourcePrestoParameters> getPrestoParameters() {
         return this.prestoParameters == null ? Optional.empty() : Optional.ofNullable(this.prestoParameters);
     }
 
-    @InputImport(name="rdsParameters")
+    @Import(name="rdsParameters")
       private final @Nullable DataSourceRdsParameters rdsParameters;
 
     public Optional<DataSourceRdsParameters> getRdsParameters() {
         return this.rdsParameters == null ? Optional.empty() : Optional.ofNullable(this.rdsParameters);
     }
 
-    @InputImport(name="redshiftParameters")
+    @Import(name="redshiftParameters")
       private final @Nullable DataSourceRedshiftParameters redshiftParameters;
 
     public Optional<DataSourceRedshiftParameters> getRedshiftParameters() {
         return this.redshiftParameters == null ? Optional.empty() : Optional.ofNullable(this.redshiftParameters);
     }
 
-    @InputImport(name="s3Parameters")
+    @Import(name="s3Parameters")
       private final @Nullable DataSourceS3Parameters s3Parameters;
 
     public Optional<DataSourceS3Parameters> getS3Parameters() {
         return this.s3Parameters == null ? Optional.empty() : Optional.ofNullable(this.s3Parameters);
     }
 
-    @InputImport(name="snowflakeParameters")
+    @Import(name="snowflakeParameters")
       private final @Nullable DataSourceSnowflakeParameters snowflakeParameters;
 
     public Optional<DataSourceSnowflakeParameters> getSnowflakeParameters() {
         return this.snowflakeParameters == null ? Optional.empty() : Optional.ofNullable(this.snowflakeParameters);
     }
 
-    @InputImport(name="sparkParameters")
+    @Import(name="sparkParameters")
       private final @Nullable DataSourceSparkParameters sparkParameters;
 
     public Optional<DataSourceSparkParameters> getSparkParameters() {
         return this.sparkParameters == null ? Optional.empty() : Optional.ofNullable(this.sparkParameters);
     }
 
-    @InputImport(name="sqlServerParameters")
+    @Import(name="sqlServerParameters")
       private final @Nullable DataSourceSqlServerParameters sqlServerParameters;
 
     public Optional<DataSourceSqlServerParameters> getSqlServerParameters() {
         return this.sqlServerParameters == null ? Optional.empty() : Optional.ofNullable(this.sqlServerParameters);
     }
 
-    @InputImport(name="teradataParameters")
+    @Import(name="teradataParameters")
       private final @Nullable DataSourceTeradataParameters teradataParameters;
 
     public Optional<DataSourceTeradataParameters> getTeradataParameters() {

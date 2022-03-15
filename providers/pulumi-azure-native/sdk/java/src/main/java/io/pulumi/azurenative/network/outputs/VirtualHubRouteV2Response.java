@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualHubRouteV2Response {
     /**
      * The type of destinations.
@@ -33,12 +33,12 @@ public final class VirtualHubRouteV2Response {
      */
     private final @Nullable List<String> nextHops;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualHubRouteV2Response(
-        @OutputCustomType.Parameter("destinationType") @Nullable String destinationType,
-        @OutputCustomType.Parameter("destinations") @Nullable List<String> destinations,
-        @OutputCustomType.Parameter("nextHopType") @Nullable String nextHopType,
-        @OutputCustomType.Parameter("nextHops") @Nullable List<String> nextHops) {
+        @CustomType.Parameter("destinationType") @Nullable String destinationType,
+        @CustomType.Parameter("destinations") @Nullable List<String> destinations,
+        @CustomType.Parameter("nextHopType") @Nullable String nextHopType,
+        @CustomType.Parameter("nextHops") @Nullable List<String> nextHops) {
         this.destinationType = destinationType;
         this.destinations = destinations;
         this.nextHopType = nextHopType;

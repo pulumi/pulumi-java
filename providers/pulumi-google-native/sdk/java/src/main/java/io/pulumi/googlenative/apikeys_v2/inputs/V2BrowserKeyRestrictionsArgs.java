@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apikeys_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class V2BrowserKeyRestrictionsArgs extends io.pulumi.resources.Reso
      * A list of regular expressions for the referrer URLs that are allowed to make API calls with this key.
      * 
      */
-    @InputImport(name="allowedReferrers")
+    @Import(name="allowedReferrers")
       private final @Nullable Output<List<String>> allowedReferrers;
 
     public Output<List<String>> getAllowedReferrers() {

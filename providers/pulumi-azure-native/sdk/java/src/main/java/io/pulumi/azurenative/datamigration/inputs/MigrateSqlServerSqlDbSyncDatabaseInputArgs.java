@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * Unique identifier for database
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -34,7 +34,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * Migration settings which tune the migration behavior
      * 
      */
-    @InputImport(name="migrationSetting")
+    @Import(name="migrationSetting")
       private final @Nullable Output<Map<String,String>> migrationSetting;
 
     public Output<Map<String,String>> getMigrationSetting() {
@@ -45,7 +45,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * Name of database
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -56,7 +56,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * Schema name to be migrated
      * 
      */
-    @InputImport(name="schemaName")
+    @Import(name="schemaName")
       private final @Nullable Output<String> schemaName;
 
     public Output<String> getSchemaName() {
@@ -67,7 +67,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * Source settings to tune source endpoint migration behavior
      * 
      */
-    @InputImport(name="sourceSetting")
+    @Import(name="sourceSetting")
       private final @Nullable Output<Map<String,String>> sourceSetting;
 
     public Output<Map<String,String>> getSourceSetting() {
@@ -78,7 +78,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * Mapping of source to target tables
      * 
      */
-    @InputImport(name="tableMap")
+    @Import(name="tableMap")
       private final @Nullable Output<Map<String,String>> tableMap;
 
     public Output<Map<String,String>> getTableMap() {
@@ -89,7 +89,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * Target database name
      * 
      */
-    @InputImport(name="targetDatabaseName")
+    @Import(name="targetDatabaseName")
       private final @Nullable Output<String> targetDatabaseName;
 
     public Output<String> getTargetDatabaseName() {
@@ -100,7 +100,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * Target settings to tune target endpoint migration behavior
      * 
      */
-    @InputImport(name="targetSetting")
+    @Import(name="targetSetting")
       private final @Nullable Output<Map<String,String>> targetSetting;
 
     public Output<Map<String,String>> getTargetSetting() {

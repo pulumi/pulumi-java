@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagesync;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -29,7 +29,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Name of Storage Sync Service resource.
      * 
      */
-    @InputImport(name="storageSyncServiceName", required=true)
+    @Import(name="storageSyncServiceName", required=true)
       private final Output<String> storageSyncServiceName;
 
     public Output<String> getStorageSyncServiceName() {
@@ -40,7 +40,7 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Name of Sync Group resource.
      * 
      */
-    @InputImport(name="syncGroupName")
+    @Import(name="syncGroupName")
       private final @Nullable Output<String> syncGroupName;
 
     public Output<String> getSyncGroupName() {

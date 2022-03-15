@@ -7,7 +7,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ExtendedLocationResp
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ResourceStatusResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.VICredentialResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVCenterResult {
     /**
      * Gets or sets the connection status to the vCenter.
@@ -109,26 +109,26 @@ public final class GetVCenterResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVCenterResult(
-        @OutputCustomType.Parameter("connectionStatus") String connectionStatus,
-        @OutputCustomType.Parameter("credentials") @Nullable VICredentialResponse credentials,
-        @OutputCustomType.Parameter("customResourceName") String customResourceName,
-        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
-        @OutputCustomType.Parameter("fqdn") String fqdn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceUuid") String instanceUuid,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("statuses") List<ResourceStatusResponse> statuses,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uuid") String uuid,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("connectionStatus") String connectionStatus,
+        @CustomType.Parameter("credentials") @Nullable VICredentialResponse credentials,
+        @CustomType.Parameter("customResourceName") String customResourceName,
+        @CustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @CustomType.Parameter("fqdn") String fqdn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceUuid") String instanceUuid,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("statuses") List<ResourceStatusResponse> statuses,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uuid") String uuid,
+        @CustomType.Parameter("version") String version) {
         this.connectionStatus = connectionStatus;
         this.credentials = credentials;
         this.customResourceName = customResourceName;

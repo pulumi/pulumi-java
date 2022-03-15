@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1beta1.enums.ClusterAutoscalingAutoscalingProfile;
 import io.pulumi.googlenative.container_v1beta1.inputs.AutoprovisioningNodePoolDefaultsArgs;
 import io.pulumi.googlenative.container_v1beta1.inputs.ResourceLimitArgs;
@@ -27,7 +27,7 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
      * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes can be created by NAP.
      * 
      */
-    @InputImport(name="autoprovisioningLocations")
+    @Import(name="autoprovisioningLocations")
       private final @Nullable Output<List<String>> autoprovisioningLocations;
 
     public Output<List<String>> getAutoprovisioningLocations() {
@@ -38,7 +38,7 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
      * AutoprovisioningNodePoolDefaults contains defaults for a node pool created by NAP.
      * 
      */
-    @InputImport(name="autoprovisioningNodePoolDefaults")
+    @Import(name="autoprovisioningNodePoolDefaults")
       private final @Nullable Output<AutoprovisioningNodePoolDefaultsArgs> autoprovisioningNodePoolDefaults;
 
     public Output<AutoprovisioningNodePoolDefaultsArgs> getAutoprovisioningNodePoolDefaults() {
@@ -49,7 +49,7 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
      * Defines autoscaling behaviour.
      * 
      */
-    @InputImport(name="autoscalingProfile")
+    @Import(name="autoscalingProfile")
       private final @Nullable Output<ClusterAutoscalingAutoscalingProfile> autoscalingProfile;
 
     public Output<ClusterAutoscalingAutoscalingProfile> getAutoscalingProfile() {
@@ -60,7 +60,7 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
      * Enables automatic node pool creation and deletion.
      * 
      */
-    @InputImport(name="enableNodeAutoprovisioning")
+    @Import(name="enableNodeAutoprovisioning")
       private final @Nullable Output<Boolean> enableNodeAutoprovisioning;
 
     public Output<Boolean> getEnableNodeAutoprovisioning() {
@@ -71,7 +71,7 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
      * Contains global constraints regarding minimum and maximum amount of resources in the cluster.
      * 
      */
-    @InputImport(name="resourceLimits")
+    @Import(name="resourceLimits")
       private final @Nullable Output<List<ResourceLimitArgs>> resourceLimits;
 
     public Output<List<ResourceLimitArgs>> getResourceLimits() {

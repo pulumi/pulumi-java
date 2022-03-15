@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.ErrorDetailResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.WorkloadInquiryDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class InquiryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Error Details if the Status is non-success.
      * 
      */
-    @InputImport(name="errorDetail")
+    @Import(name="errorDetail")
       private final @Nullable ErrorDetailResponse errorDetail;
 
     public Optional<ErrorDetailResponse> getErrorDetail() {
@@ -37,7 +37,7 @@ public final class InquiryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * For e.g. - For SQL and oracle this will contain different details.
      * 
      */
-    @InputImport(name="inquiryDetails")
+    @Import(name="inquiryDetails")
       private final @Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails;
 
     public List<WorkloadInquiryDetailsResponse> getInquiryDetails() {
@@ -49,7 +49,7 @@ public final class InquiryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * InProgress | Failed | Succeeded
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {

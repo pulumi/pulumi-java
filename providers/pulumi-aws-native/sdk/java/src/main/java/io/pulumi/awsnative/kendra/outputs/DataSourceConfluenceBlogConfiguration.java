@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceConfluenceBlogToIndexFieldMapping;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceConfluenceBlogConfiguration {
     private final @Nullable List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings;
 
-    @OutputCustomType.Constructor
-    private DataSourceConfluenceBlogConfiguration(@OutputCustomType.Parameter("blogFieldMappings") @Nullable List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings) {
+    @CustomType.Constructor
+    private DataSourceConfluenceBlogConfiguration(@CustomType.Parameter("blogFieldMappings") @Nullable List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings) {
         this.blogFieldMappings = blogFieldMappings;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.tpu_v2alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
      * Email address of the service account. If empty, default Compute service account will be used.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
@@ -34,7 +34,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
      * The list of scopes to be made available for this service account. If empty, access to all Cloud APIs will be allowed.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<List<String>> scope;
 
     public Output<List<String>> getScope() {

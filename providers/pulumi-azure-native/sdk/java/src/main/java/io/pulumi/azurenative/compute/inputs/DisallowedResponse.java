@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DisallowedResponse extends io.pulumi.resources.InvokeArgs {
      * A list of disk types.
      * 
      */
-    @InputImport(name="diskTypes")
+    @Import(name="diskTypes")
       private final @Nullable List<String> diskTypes;
 
     public List<String> getDiskTypes() {

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.RateLimitRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RateLimitRuleListResponse {
     /**
      * List of rules
@@ -17,8 +17,8 @@ public final class RateLimitRuleListResponse {
      */
     private final @Nullable List<RateLimitRuleResponse> rules;
 
-    @OutputCustomType.Constructor
-    private RateLimitRuleListResponse(@OutputCustomType.Parameter("rules") @Nullable List<RateLimitRuleResponse> rules) {
+    @CustomType.Constructor
+    private RateLimitRuleListResponse(@CustomType.Parameter("rules") @Nullable List<RateLimitRuleResponse> rules) {
         this.rules = rules;
     }
 

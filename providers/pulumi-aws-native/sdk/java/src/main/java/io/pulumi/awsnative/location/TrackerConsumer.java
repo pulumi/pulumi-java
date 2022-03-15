@@ -6,7 +6,7 @@ package io.pulumi.awsnative.location;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.location.TrackerConsumerArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -17,13 +17,13 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:location:TrackerConsumer")
 public class TrackerConsumer extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="consumerArn", type=String.class, parameters={})
+    @Export(name="consumerArn", type=String.class, parameters={})
     private Output<String> consumerArn;
 
     public Output<String> getConsumerArn() {
         return this.consumerArn;
     }
-    @OutputExport(name="trackerName", type=String.class, parameters={})
+    @Export(name="trackerName", type=String.class, parameters={})
     private Output<String> trackerName;
 
     public Output<String> getTrackerName() {

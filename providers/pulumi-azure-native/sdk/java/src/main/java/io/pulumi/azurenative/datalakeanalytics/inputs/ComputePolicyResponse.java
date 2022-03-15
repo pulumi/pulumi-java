@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakeanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * The resource identifier.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -32,7 +32,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * The maximum degree of parallelism per job this user can use to submit jobs.
      * 
      */
-    @InputImport(name="maxDegreeOfParallelismPerJob", required=true)
+    @Import(name="maxDegreeOfParallelismPerJob", required=true)
       private final Integer maxDegreeOfParallelismPerJob;
 
     public Integer getMaxDegreeOfParallelismPerJob() {
@@ -43,7 +43,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * The minimum priority per job this user can use to submit jobs.
      * 
      */
-    @InputImport(name="minPriorityPerJob", required=true)
+    @Import(name="minPriorityPerJob", required=true)
       private final Integer minPriorityPerJob;
 
     public Integer getMinPriorityPerJob() {
@@ -54,7 +54,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * The resource name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -65,7 +65,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * The AAD object identifier for the entity to create a policy for.
      * 
      */
-    @InputImport(name="objectId", required=true)
+    @Import(name="objectId", required=true)
       private final String objectId;
 
     public String getObjectId() {
@@ -76,7 +76,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * The type of AAD object the object identifier refers to.
      * 
      */
-    @InputImport(name="objectType", required=true)
+    @Import(name="objectType", required=true)
       private final String objectType;
 
     public String getObjectType() {
@@ -87,7 +87,7 @@ public final class ComputePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * The resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

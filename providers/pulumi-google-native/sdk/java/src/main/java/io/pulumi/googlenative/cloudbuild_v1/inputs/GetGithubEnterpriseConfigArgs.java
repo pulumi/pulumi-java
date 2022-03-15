@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,35 +14,35 @@ public final class GetGithubEnterpriseConfigArgs extends io.pulumi.resources.Inv
 
     public static final GetGithubEnterpriseConfigArgs Empty = new GetGithubEnterpriseConfigArgs();
 
-    @InputImport(name="configId")
+    @Import(name="configId")
       private final @Nullable String configId;
 
     public Optional<String> getConfigId() {
         return this.configId == null ? Optional.empty() : Optional.ofNullable(this.configId);
     }
 
-    @InputImport(name="githubEnterpriseConfigId", required=true)
+    @Import(name="githubEnterpriseConfigId", required=true)
       private final String githubEnterpriseConfigId;
 
     public String getGithubEnterpriseConfigId() {
         return this.githubEnterpriseConfigId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="projectId")
+    @Import(name="projectId")
       private final @Nullable String projectId;
 
     public Optional<String> getProjectId() {

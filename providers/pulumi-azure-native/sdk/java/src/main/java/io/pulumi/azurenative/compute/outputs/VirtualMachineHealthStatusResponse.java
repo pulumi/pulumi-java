@@ -4,10 +4,10 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineHealthStatusResponse {
     /**
      * The health status information for the VM.
@@ -15,8 +15,8 @@ public final class VirtualMachineHealthStatusResponse {
      */
     private final InstanceViewStatusResponse status;
 
-    @OutputCustomType.Constructor
-    private VirtualMachineHealthStatusResponse(@OutputCustomType.Parameter("status") InstanceViewStatusResponse status) {
+    @CustomType.Constructor
+    private VirtualMachineHealthStatusResponse(@CustomType.Parameter("status") InstanceViewStatusResponse status) {
         this.status = status;
     }
 

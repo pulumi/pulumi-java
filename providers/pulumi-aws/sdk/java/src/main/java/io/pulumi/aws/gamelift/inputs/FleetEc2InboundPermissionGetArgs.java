@@ -4,7 +4,7 @@
 package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class FleetEc2InboundPermissionGetArgs extends io.pulumi.resources.
      * Starting value for a range of allowed port numbers.
      * 
      */
-    @InputImport(name="fromPort", required=true)
+    @Import(name="fromPort", required=true)
       private final Output<Integer> fromPort;
 
     public Output<Integer> getFromPort() {
@@ -29,7 +29,7 @@ public final class FleetEc2InboundPermissionGetArgs extends io.pulumi.resources.
      * Range of allowed IP addresses expressed in CIDR notationE.g., `000.000.000.000/[subnet mask]` or `0.0.0.0/[subnet mask]`.
      * 
      */
-    @InputImport(name="ipRange", required=true)
+    @Import(name="ipRange", required=true)
       private final Output<String> ipRange;
 
     public Output<String> getIpRange() {
@@ -40,7 +40,7 @@ public final class FleetEc2InboundPermissionGetArgs extends io.pulumi.resources.
      * Network communication protocol used by the fleetE.g., `TCP` or `UDP`
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
     public Output<String> getProtocol() {
@@ -51,7 +51,7 @@ public final class FleetEc2InboundPermissionGetArgs extends io.pulumi.resources.
      * Ending value for a range of allowed port numbers. Port numbers are end-inclusive. This value must be higher than `from_port`.
      * 
      */
-    @InputImport(name="toPort", required=true)
+    @Import(name="toPort", required=true)
       private final Output<Integer> toPort;
 
     public Output<Integer> getToPort() {

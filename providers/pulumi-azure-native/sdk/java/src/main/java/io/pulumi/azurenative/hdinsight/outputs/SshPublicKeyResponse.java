@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SshPublicKeyResponse {
     /**
      * The certificate for SSH.
@@ -17,8 +17,8 @@ public final class SshPublicKeyResponse {
      */
     private final @Nullable String certificateData;
 
-    @OutputCustomType.Constructor
-    private SshPublicKeyResponse(@OutputCustomType.Parameter("certificateData") @Nullable String certificateData) {
+    @CustomType.Constructor
+    private SshPublicKeyResponse(@CustomType.Parameter("certificateData") @Nullable String certificateData) {
         this.certificateData = certificateData;
     }
 

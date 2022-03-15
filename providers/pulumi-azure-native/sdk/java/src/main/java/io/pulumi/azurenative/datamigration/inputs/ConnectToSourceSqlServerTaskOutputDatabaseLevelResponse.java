@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.DatabaseFileInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * SQL Server compatibility level of database
      * 
      */
-    @InputImport(name="compatibilityLevel", required=true)
+    @Import(name="compatibilityLevel", required=true)
       private final String compatibilityLevel;
 
     public String getCompatibilityLevel() {
@@ -34,7 +34,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * The list of database files
      * 
      */
-    @InputImport(name="databaseFiles", required=true)
+    @Import(name="databaseFiles", required=true)
       private final List<DatabaseFileInfoResponse> databaseFiles;
 
     public List<DatabaseFileInfoResponse> getDatabaseFiles() {
@@ -45,7 +45,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * State of the database
      * 
      */
-    @InputImport(name="databaseState", required=true)
+    @Import(name="databaseState", required=true)
       private final String databaseState;
 
     public String getDatabaseState() {
@@ -56,7 +56,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -67,7 +67,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * Database name
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -79,7 +79,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * Expected value is 'DatabaseLevelOutput'.
      * 
      */
-    @InputImport(name="resultType", required=true)
+    @Import(name="resultType", required=true)
       private final String resultType;
 
     public String getResultType() {
@@ -90,7 +90,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * Size of the file in megabytes
      * 
      */
-    @InputImport(name="sizeMB", required=true)
+    @Import(name="sizeMB", required=true)
       private final Double sizeMB;
 
     public Double getSizeMB() {

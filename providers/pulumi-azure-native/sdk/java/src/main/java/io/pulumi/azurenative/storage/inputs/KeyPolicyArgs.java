@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class KeyPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The key expiration period in days.
      * 
      */
-    @InputImport(name="keyExpirationPeriodInDays", required=true)
+    @Import(name="keyExpirationPeriodInDays", required=true)
       private final Output<Integer> keyExpirationPeriodInDays;
 
     public Output<Integer> getKeyExpirationPeriodInDays() {

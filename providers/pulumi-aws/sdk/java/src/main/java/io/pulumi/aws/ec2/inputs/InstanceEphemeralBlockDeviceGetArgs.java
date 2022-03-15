@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class InstanceEphemeralBlockDeviceGetArgs extends io.pulumi.resourc
      * The name of the block device to mount on the instance.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -30,7 +30,7 @@ public final class InstanceEphemeralBlockDeviceGetArgs extends io.pulumi.resourc
      * Suppresses the specified device included in the AMI's block device mapping.
      * 
      */
-    @InputImport(name="noDevice")
+    @Import(name="noDevice")
       private final @Nullable Output<Boolean> noDevice;
 
     public Output<Boolean> getNoDevice() {
@@ -41,7 +41,7 @@ public final class InstanceEphemeralBlockDeviceGetArgs extends io.pulumi.resourc
      * [Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames) (e.g., `ephemeral0`).
      * 
      */
-    @InputImport(name="virtualName")
+    @Import(name="virtualName")
       private final @Nullable Output<String> virtualName;
 
     public Output<String> getVirtualName() {

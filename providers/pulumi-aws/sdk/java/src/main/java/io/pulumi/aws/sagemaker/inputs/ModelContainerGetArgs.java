@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.ModelContainerImageConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
      * The DNS host name for the container.
      * 
      */
-    @InputImport(name="containerHostname")
+    @Import(name="containerHostname")
       private final @Nullable Output<String> containerHostname;
 
     public Output<String> getContainerHostname() {
@@ -32,7 +32,7 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
      * A list of key value pairs.
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable Output<Map<String,String>> environment;
 
     public Output<Map<String,String>> getEnvironment() {
@@ -43,7 +43,7 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
      * The registry path where the inference code image is stored in Amazon ECR.
      * 
      */
-    @InputImport(name="image", required=true)
+    @Import(name="image", required=true)
       private final Output<String> image;
 
     public Output<String> getImage() {
@@ -54,7 +54,7 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
      * Specifies whether the model container is in Amazon ECR or a private Docker registry accessible from your Amazon Virtual Private Cloud (VPC). For more information see [Using a Private Docker Registry for Real-Time Inference Containers](https://docs.aws.amazon.com/sagemaker/latest/dg/your-algorithms-containers-inference-private.html). see Image Config.
      * 
      */
-    @InputImport(name="imageConfig")
+    @Import(name="imageConfig")
       private final @Nullable Output<ModelContainerImageConfigGetArgs> imageConfig;
 
     public Output<ModelContainerImageConfigGetArgs> getImageConfig() {
@@ -65,7 +65,7 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
      * The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
@@ -76,7 +76,7 @@ public final class ModelContainerGetArgs extends io.pulumi.resources.ResourceArg
      * The URL for the S3 location where model artifacts are stored.
      * 
      */
-    @InputImport(name="modelDataUrl")
+    @Import(name="modelDataUrl")
       private final @Nullable Output<String> modelDataUrl;
 
     public Output<String> getModelDataUrl() {

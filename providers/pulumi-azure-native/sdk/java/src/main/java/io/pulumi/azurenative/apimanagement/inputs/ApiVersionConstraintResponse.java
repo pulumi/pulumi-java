@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApiVersionConstraintResponse extends io.pulumi.resources.Invo
      * Limit control plane API calls to API Management service with version equal to or newer than this value.
      * 
      */
-    @InputImport(name="minApiVersion")
+    @Import(name="minApiVersion")
       private final @Nullable String minApiVersion;
 
     public Optional<String> getMinApiVersion() {

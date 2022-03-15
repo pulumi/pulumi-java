@@ -7,14 +7,14 @@ import io.pulumi.azurenative.databoxedge.outputs.AddressResponse;
 import io.pulumi.azurenative.databoxedge.outputs.ContactDetailsResponse;
 import io.pulumi.azurenative.databoxedge.outputs.OrderStatusResponse;
 import io.pulumi.azurenative.databoxedge.outputs.TrackingInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOrderResult {
     /**
      * The contact details.
@@ -72,19 +72,19 @@ public final class GetOrderResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOrderResult(
-        @OutputCustomType.Parameter("contactInformation") ContactDetailsResponse contactInformation,
-        @OutputCustomType.Parameter("currentStatus") OrderStatusResponse currentStatus,
-        @OutputCustomType.Parameter("deliveryTrackingInfo") List<TrackingInfoResponse> deliveryTrackingInfo,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("orderHistory") List<OrderStatusResponse> orderHistory,
-        @OutputCustomType.Parameter("returnTrackingInfo") List<TrackingInfoResponse> returnTrackingInfo,
-        @OutputCustomType.Parameter("serialNumber") String serialNumber,
-        @OutputCustomType.Parameter("shipmentType") @Nullable String shipmentType,
-        @OutputCustomType.Parameter("shippingAddress") @Nullable AddressResponse shippingAddress,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("contactInformation") ContactDetailsResponse contactInformation,
+        @CustomType.Parameter("currentStatus") OrderStatusResponse currentStatus,
+        @CustomType.Parameter("deliveryTrackingInfo") List<TrackingInfoResponse> deliveryTrackingInfo,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("orderHistory") List<OrderStatusResponse> orderHistory,
+        @CustomType.Parameter("returnTrackingInfo") List<TrackingInfoResponse> returnTrackingInfo,
+        @CustomType.Parameter("serialNumber") String serialNumber,
+        @CustomType.Parameter("shipmentType") @Nullable String shipmentType,
+        @CustomType.Parameter("shippingAddress") @Nullable AddressResponse shippingAddress,
+        @CustomType.Parameter("type") String type) {
         this.contactInformation = contactInformation;
         this.currentStatus = currentStatus;
         this.deliveryTrackingInfo = deliveryTrackingInfo;

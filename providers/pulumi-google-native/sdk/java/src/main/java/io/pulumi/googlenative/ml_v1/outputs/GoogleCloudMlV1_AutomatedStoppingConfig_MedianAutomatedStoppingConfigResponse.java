@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse {
     /**
      * If true, the median automated stopping rule applies to measurement.use_elapsed_time, which means the elapsed_time field of the current trial's latest measurement is used to compute the median objective value for each completed trial.
@@ -15,8 +15,8 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppi
      */
     private final Boolean useElapsedTime;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse(@OutputCustomType.Parameter("useElapsedTime") Boolean useElapsedTime) {
+    @CustomType.Constructor
+    private GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse(@CustomType.Parameter("useElapsedTime") Boolean useElapsedTime) {
         this.useElapsedTime = useElapsedTime;
     }
 

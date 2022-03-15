@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.billing.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
      * The ID that uniquely identifies a billing account.
      * 
      */
-    @InputImport(name="billingAccountName", required=true)
+    @Import(name="billingAccountName", required=true)
       private final String billingAccountName;
 
     public String getBillingAccountName() {

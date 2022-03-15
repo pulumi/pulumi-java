@@ -5,12 +5,12 @@ package io.pulumi.aws.autoscaling.outputs;
 
 import io.pulumi.aws.autoscaling.outputs.GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification;
 import io.pulumi.aws.autoscaling.outputs.GroupMixedInstancesPolicyLaunchTemplateOverride;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GroupMixedInstancesPolicyLaunchTemplate {
     /**
      * Override the instance launch template specification in the Launch Template.
@@ -23,10 +23,10 @@ public final class GroupMixedInstancesPolicyLaunchTemplate {
      */
     private final @Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverride> overrides;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GroupMixedInstancesPolicyLaunchTemplate(
-        @OutputCustomType.Parameter("launchTemplateSpecification") GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification launchTemplateSpecification,
-        @OutputCustomType.Parameter("overrides") @Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverride> overrides) {
+        @CustomType.Parameter("launchTemplateSpecification") GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification launchTemplateSpecification,
+        @CustomType.Parameter("overrides") @Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverride> overrides) {
         this.launchTemplateSpecification = launchTemplateSpecification;
         this.overrides = overrides;
     }

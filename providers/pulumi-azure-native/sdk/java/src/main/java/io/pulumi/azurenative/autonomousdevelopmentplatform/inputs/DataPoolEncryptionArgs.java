@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.autonomousdevelopmentplatform.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DataPoolEncryptionArgs extends io.pulumi.resources.ResourceAr
      * The name of Key Vault key
      * 
      */
-    @InputImport(name="keyName", required=true)
+    @Import(name="keyName", required=true)
       private final Output<String> keyName;
 
     public Output<String> getKeyName() {
@@ -33,7 +33,7 @@ public final class DataPoolEncryptionArgs extends io.pulumi.resources.ResourceAr
      * The URI of a soft delete-enabled Key Vault that is in the same location as the Data Pool location
      * 
      */
-    @InputImport(name="keyVaultUri", required=true)
+    @Import(name="keyVaultUri", required=true)
       private final Output<String> keyVaultUri;
 
     public Output<String> getKeyVaultUri() {
@@ -44,7 +44,7 @@ public final class DataPoolEncryptionArgs extends io.pulumi.resources.ResourceAr
      * The version of Key Vault key
      * 
      */
-    @InputImport(name="keyVersion")
+    @Import(name="keyVersion")
       private final @Nullable Output<String> keyVersion;
 
     public Output<String> getKeyVersion() {
@@ -55,7 +55,7 @@ public final class DataPoolEncryptionArgs extends io.pulumi.resources.ResourceAr
      * The resource ID of a user-assigned Managed Identity used to access the encryption key in the Key Vault. Requires access to the key operations get, wrap, unwrap, and recover
      * 
      */
-    @InputImport(name="userAssignedIdentity", required=true)
+    @Import(name="userAssignedIdentity", required=true)
       private final Output<String> userAssignedIdentity;
 
     public Output<String> getUserAssignedIdentity() {

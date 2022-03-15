@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.ManagedRuleEnabledState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
      * Identifier for the managed rule.
      * 
      */
-    @InputImport(name="ruleId", required=true)
+    @Import(name="ruleId", required=true)
       private final Output<String> ruleId;
 
     public Output<String> getRuleId() {
@@ -35,7 +35,7 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
      * The state of the managed rule. Defaults to Disabled if not specified.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<Either<String,ManagedRuleEnabledState>> state;
 
     public Output<Either<String,ManagedRuleEnabledState>> getState() {

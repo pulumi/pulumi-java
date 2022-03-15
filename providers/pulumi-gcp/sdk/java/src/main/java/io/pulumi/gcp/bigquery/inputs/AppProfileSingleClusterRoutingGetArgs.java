@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AppProfileSingleClusterRoutingGetArgs extends io.pulumi.resou
      * It is unsafe to send these requests to the same table/row/column in multiple clusters.
      * 
      */
-    @InputImport(name="allowTransactionalWrites")
+    @Import(name="allowTransactionalWrites")
       private final @Nullable Output<Boolean> allowTransactionalWrites;
 
     public Output<Boolean> getAllowTransactionalWrites() {
@@ -31,7 +31,7 @@ public final class AppProfileSingleClusterRoutingGetArgs extends io.pulumi.resou
      * The cluster to which read/write requests should be routed.
      * 
      */
-    @InputImport(name="clusterId", required=true)
+    @Import(name="clusterId", required=true)
       private final Output<String> clusterId;
 
     public Output<String> getClusterId() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ClusterSelectorArgs extends io.pulumi.resources.ResourceArgs 
      * The cluster labels. Cluster must have all labels to match.
      * 
      */
-    @InputImport(name="clusterLabels", required=true)
+    @Import(name="clusterLabels", required=true)
       private final Output<Map<String,String>> clusterLabels;
 
     public Output<Map<String,String>> getClusterLabels() {
@@ -34,7 +34,7 @@ public final class ClusterSelectorArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. The zone where workflow process executes. This parameter does not affect the selection of the cluster.If unspecified, the zone of the first cluster matching the selector is used.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

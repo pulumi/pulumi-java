@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecretReference {
     /**
      * Name is unique within a namespace to reference a secret resource.
@@ -22,10 +22,10 @@ public final class SecretReference {
      */
     private final @Nullable String namespace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecretReference(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("namespace") @Nullable String namespace) {
         this.name = name;
         this.namespace = namespace;
     }

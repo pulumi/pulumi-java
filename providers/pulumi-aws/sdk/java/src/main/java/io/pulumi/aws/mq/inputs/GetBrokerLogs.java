@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mq.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetBrokerLogs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBrokerLogs Empty = new GetBrokerLogs();
 
-    @InputImport(name="audit", required=true)
+    @Import(name="audit", required=true)
       private final Boolean audit;
 
     public Boolean getAudit() {
         return this.audit;
     }
 
-    @InputImport(name="general", required=true)
+    @Import(name="general", required=true)
       private final Boolean general;
 
     public Boolean getGeneral() {

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.batch_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class UncountedTerminatedPodsArgs extends io.pulumi.resources.Resou
      * Failed holds UIDs of failed Pods.
      * 
      */
-    @InputImport(name="failed")
+    @Import(name="failed")
       private final @Nullable Output<List<String>> failed;
 
     public Output<List<String>> getFailed() {
@@ -34,7 +34,7 @@ public final class UncountedTerminatedPodsArgs extends io.pulumi.resources.Resou
      * Succeeded holds UIDs of succeeded Pods.
      * 
      */
-    @InputImport(name="succeeded")
+    @Import(name="succeeded")
       private final @Nullable Output<List<String>> succeeded;
 
     public Output<List<String>> getSucceeded() {

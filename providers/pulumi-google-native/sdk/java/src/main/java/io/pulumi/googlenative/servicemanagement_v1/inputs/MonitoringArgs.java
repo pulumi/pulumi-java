@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.MonitoringDestinationArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MonitoringArgs extends io.pulumi.resources.ResourceArgs {
      * Monitoring configurations for sending metrics to the consumer project. There can be multiple consumer destinations. A monitored resource type may appear in multiple monitoring destinations if different aggregations are needed for different sets of metrics associated with that monitored resource type. A monitored resource and metric pair may only be used once in the Monitoring configuration.
      * 
      */
-    @InputImport(name="consumerDestinations")
+    @Import(name="consumerDestinations")
       private final @Nullable Output<List<MonitoringDestinationArgs>> consumerDestinations;
 
     public Output<List<MonitoringDestinationArgs>> getConsumerDestinations() {
@@ -34,7 +34,7 @@ public final class MonitoringArgs extends io.pulumi.resources.ResourceArgs {
      * Monitoring configurations for sending metrics to the producer project. There can be multiple producer destinations. A monitored resource type may appear in multiple monitoring destinations if different aggregations are needed for different sets of metrics associated with that monitored resource type. A monitored resource and metric pair may only be used once in the Monitoring configuration.
      * 
      */
-    @InputImport(name="producerDestinations")
+    @Import(name="producerDestinations")
       private final @Nullable Output<List<MonitoringDestinationArgs>> producerDestinations;
 
     public Output<List<MonitoringDestinationArgs>> getProducerDestinations() {

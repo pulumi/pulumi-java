@@ -3,16 +3,16 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.ResourcePolicyDailyCycleResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse {
     private final ResourcePolicyDailyCycleResponse dailyMaintenanceWindow;
 
-    @OutputCustomType.Constructor
-    private ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse(@OutputCustomType.Parameter("dailyMaintenanceWindow") ResourcePolicyDailyCycleResponse dailyMaintenanceWindow) {
+    @CustomType.Constructor
+    private ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse(@CustomType.Parameter("dailyMaintenanceWindow") ResourcePolicyDailyCycleResponse dailyMaintenanceWindow) {
         this.dailyMaintenanceWindow = dailyMaintenanceWindow;
     }
 

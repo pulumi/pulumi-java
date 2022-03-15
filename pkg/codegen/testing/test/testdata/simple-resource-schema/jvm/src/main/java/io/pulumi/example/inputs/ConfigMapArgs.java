@@ -4,7 +4,7 @@
 package io.pulumi.example.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConfigMapArgs Empty = new ConfigMapArgs();
 
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Output<String> config;
 
     public Output<String> getConfig() {

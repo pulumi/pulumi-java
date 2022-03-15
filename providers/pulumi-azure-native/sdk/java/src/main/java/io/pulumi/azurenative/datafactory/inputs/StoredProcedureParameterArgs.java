@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.enums.StoredProcedureParameterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class StoredProcedureParameterArgs extends io.pulumi.resources.Reso
      * Stored procedure parameter type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<Either<String,StoredProcedureParameterType>> type;
 
     public Output<Either<String,StoredProcedureParameterType>> getType() {
@@ -36,7 +36,7 @@ public final class StoredProcedureParameterArgs extends io.pulumi.resources.Reso
      * Stored procedure parameter value. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<Object> value;
 
     public Output<Object> getValue() {

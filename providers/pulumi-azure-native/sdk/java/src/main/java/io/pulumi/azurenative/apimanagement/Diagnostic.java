@@ -9,7 +9,7 @@ import io.pulumi.azurenative.apimanagement.outputs.PipelineDiagnosticSettingsRes
 import io.pulumi.azurenative.apimanagement.outputs.SamplingSettingsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class Diagnostic extends io.pulumi.resources.CustomResource {
      * Specifies for what type of messages sampling settings should not apply.
      * 
      */
-    @OutputExport(name="alwaysLog", type=String.class, parameters={})
+    @Export(name="alwaysLog", type=String.class, parameters={})
     private Output</* @Nullable */ String> alwaysLog;
 
     /**
@@ -51,7 +51,7 @@ public class Diagnostic extends io.pulumi.resources.CustomResource {
      * Diagnostic settings for incoming/outgoing HTTP messages to the Backend
      * 
      */
-    @OutputExport(name="backend", type=PipelineDiagnosticSettingsResponse.class, parameters={})
+    @Export(name="backend", type=PipelineDiagnosticSettingsResponse.class, parameters={})
     private Output</* @Nullable */ PipelineDiagnosticSettingsResponse> backend;
 
     /**
@@ -65,7 +65,7 @@ public class Diagnostic extends io.pulumi.resources.CustomResource {
      * Diagnostic settings for incoming/outgoing HTTP messages to the Gateway.
      * 
      */
-    @OutputExport(name="frontend", type=PipelineDiagnosticSettingsResponse.class, parameters={})
+    @Export(name="frontend", type=PipelineDiagnosticSettingsResponse.class, parameters={})
     private Output</* @Nullable */ PipelineDiagnosticSettingsResponse> frontend;
 
     /**
@@ -79,7 +79,7 @@ public class Diagnostic extends io.pulumi.resources.CustomResource {
      * Sets correlation protocol to use for Application Insights diagnostics.
      * 
      */
-    @OutputExport(name="httpCorrelationProtocol", type=String.class, parameters={})
+    @Export(name="httpCorrelationProtocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> httpCorrelationProtocol;
 
     /**
@@ -93,7 +93,7 @@ public class Diagnostic extends io.pulumi.resources.CustomResource {
      * Log the ClientIP. Default is false.
      * 
      */
-    @OutputExport(name="logClientIp", type=Boolean.class, parameters={})
+    @Export(name="logClientIp", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> logClientIp;
 
     /**
@@ -107,7 +107,7 @@ public class Diagnostic extends io.pulumi.resources.CustomResource {
      * Resource Id of a target logger.
      * 
      */
-    @OutputExport(name="loggerId", type=String.class, parameters={})
+    @Export(name="loggerId", type=String.class, parameters={})
     private Output<String> loggerId;
 
     /**
@@ -121,7 +121,7 @@ public class Diagnostic extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -135,7 +135,7 @@ public class Diagnostic extends io.pulumi.resources.CustomResource {
      * The format of the Operation Name for Application Insights telemetries. Default is Name.
      * 
      */
-    @OutputExport(name="operationNameFormat", type=String.class, parameters={})
+    @Export(name="operationNameFormat", type=String.class, parameters={})
     private Output</* @Nullable */ String> operationNameFormat;
 
     /**
@@ -149,7 +149,7 @@ public class Diagnostic extends io.pulumi.resources.CustomResource {
      * Sampling settings for Diagnostic.
      * 
      */
-    @OutputExport(name="sampling", type=SamplingSettingsResponse.class, parameters={})
+    @Export(name="sampling", type=SamplingSettingsResponse.class, parameters={})
     private Output</* @Nullable */ SamplingSettingsResponse> sampling;
 
     /**
@@ -163,7 +163,7 @@ public class Diagnostic extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -177,7 +177,7 @@ public class Diagnostic extends io.pulumi.resources.CustomResource {
      * The verbosity level applied to traces emitted by trace policies.
      * 
      */
-    @OutputExport(name="verbosity", type=String.class, parameters={})
+    @Export(name="verbosity", type=String.class, parameters={})
     private Output</* @Nullable */ String> verbosity;
 
     /**

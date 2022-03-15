@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CloudServiceExtensionPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ExtensionResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the extension.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -34,7 +34,7 @@ public final class ExtensionResponse extends io.pulumi.resources.InvokeArgs {
      * Extension Properties.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable CloudServiceExtensionPropertiesResponse properties;
 
     public Optional<CloudServiceExtensionPropertiesResponse> getProperties() {

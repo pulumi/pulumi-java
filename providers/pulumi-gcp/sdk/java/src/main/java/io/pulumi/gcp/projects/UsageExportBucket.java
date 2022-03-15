@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.projects.UsageExportBucketArgs;
@@ -48,7 +48,7 @@ public class UsageExportBucket extends io.pulumi.resources.CustomResource {
      * The bucket to store reports in.
      * 
      */
-    @OutputExport(name="bucketName", type=String.class, parameters={})
+    @Export(name="bucketName", type=String.class, parameters={})
     private Output<String> bucketName;
 
     /**
@@ -62,7 +62,7 @@ public class UsageExportBucket extends io.pulumi.resources.CustomResource {
      * A prefix for the reports, for instance, the project name.
      * 
      */
-    @OutputExport(name="prefix", type=String.class, parameters={})
+    @Export(name="prefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> prefix;
 
     /**
@@ -76,7 +76,7 @@ public class UsageExportBucket extends io.pulumi.resources.CustomResource {
      * The project to set the export bucket on. If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ReportConfigTimePeriodArgs extends io.pulumi.resources.Resour
      * The start date to pull data from.
      * 
      */
-    @InputImport(name="from", required=true)
+    @Import(name="from", required=true)
       private final Output<String> from;
 
     public Output<String> getFrom() {
@@ -32,7 +32,7 @@ public final class ReportConfigTimePeriodArgs extends io.pulumi.resources.Resour
      * The end date to pull data to.
      * 
      */
-    @InputImport(name="to", required=true)
+    @Import(name="to", required=true)
       private final Output<String> to;
 
     public Output<String> getTo() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ReportConfigSortingResponse extends io.pulumi.resources.Invok
      * Direction of sort.
      * 
      */
-    @InputImport(name="direction")
+    @Import(name="direction")
       private final @Nullable String direction;
 
     public Optional<String> getDirection() {
@@ -33,7 +33,7 @@ public final class ReportConfigSortingResponse extends io.pulumi.resources.Invok
      * The name of the column to sort.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

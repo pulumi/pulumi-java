@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RepositoryRefDefinitionResponse {
     /**
      * The git repository branch name to checkout.
@@ -32,12 +32,12 @@ public final class RepositoryRefDefinitionResponse {
      */
     private final @Nullable String tag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RepositoryRefDefinitionResponse(
-        @OutputCustomType.Parameter("branch") @Nullable String branch,
-        @OutputCustomType.Parameter("commit") @Nullable String commit,
-        @OutputCustomType.Parameter("semver") @Nullable String semver,
-        @OutputCustomType.Parameter("tag") @Nullable String tag) {
+        @CustomType.Parameter("branch") @Nullable String branch,
+        @CustomType.Parameter("commit") @Nullable String commit,
+        @CustomType.Parameter("semver") @Nullable String semver,
+        @CustomType.Parameter("tag") @Nullable String tag) {
         this.branch = branch;
         this.commit = commit;
         this.semver = semver;

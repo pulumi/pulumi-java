@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.inputs;
 
 import io.pulumi.azurenative.labservices.inputs.SizeAvailabilityResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RegionalAvailabilityResponse extends io.pulumi.resources.Invo
      * Corresponding region
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable String region;
 
     public Optional<String> getRegion() {
@@ -35,7 +35,7 @@ public final class RegionalAvailabilityResponse extends io.pulumi.resources.Invo
      * List of all the size information for the region
      * 
      */
-    @InputImport(name="sizeAvailabilities")
+    @Import(name="sizeAvailabilities")
       private final @Nullable List<SizeAvailabilityResponse> sizeAvailabilities;
 
     public List<SizeAvailabilityResponse> getSizeAvailabilities() {

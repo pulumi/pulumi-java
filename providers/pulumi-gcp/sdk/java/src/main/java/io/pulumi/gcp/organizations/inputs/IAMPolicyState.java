@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
 
     public static final IAMPolicyState Empty = new IAMPolicyState();
 
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -25,14 +25,14 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
      * The numeric ID of the organization in which you want to manage the audit logging config.
      * 
      */
-    @InputImport(name="orgId")
+    @Import(name="orgId")
       private final @Nullable Output<String> orgId;
 
     public Output<String> getOrgId() {
         return this.orgId == null ? Output.empty() : this.orgId;
     }
 
-    @InputImport(name="policyData")
+    @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
     public Output<String> getPolicyData() {

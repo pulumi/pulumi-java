@@ -5,13 +5,13 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.DestinationsSpecResponseAzureMonitorMetrics;
 import io.pulumi.azurenative.insights.outputs.LogAnalyticsDestinationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataCollectionRuleResponseDestinations {
     /**
      * Azure Monitor Metrics destination.
@@ -24,10 +24,10 @@ public final class DataCollectionRuleResponseDestinations {
      */
     private final @Nullable List<LogAnalyticsDestinationResponse> logAnalytics;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataCollectionRuleResponseDestinations(
-        @OutputCustomType.Parameter("azureMonitorMetrics") @Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics,
-        @OutputCustomType.Parameter("logAnalytics") @Nullable List<LogAnalyticsDestinationResponse> logAnalytics) {
+        @CustomType.Parameter("azureMonitorMetrics") @Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics,
+        @CustomType.Parameter("logAnalytics") @Nullable List<LogAnalyticsDestinationResponse> logAnalytics) {
         this.azureMonitorMetrics = azureMonitorMetrics;
         this.logAnalytics = logAnalytics;
     }

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketAutoclassResponse {
     /**
      * Whether or not Autoclass is enabled on this bucket
@@ -21,10 +21,10 @@ public final class BucketAutoclassResponse {
      */
     private final String toggleTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketAutoclassResponse(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("toggleTime") String toggleTime) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("toggleTime") String toggleTime) {
         this.enabled = enabled;
         this.toggleTime = toggleTime;
     }

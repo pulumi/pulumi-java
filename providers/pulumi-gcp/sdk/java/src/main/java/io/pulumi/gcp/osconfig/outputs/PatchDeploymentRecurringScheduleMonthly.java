@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PatchDeploymentRecurringScheduleMonthly {
     /**
      * One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
@@ -26,10 +26,10 @@ public final class PatchDeploymentRecurringScheduleMonthly {
      */
     private final @Nullable PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth weekDayOfMonth;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchDeploymentRecurringScheduleMonthly(
-        @OutputCustomType.Parameter("monthDay") @Nullable Integer monthDay,
-        @OutputCustomType.Parameter("weekDayOfMonth") @Nullable PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth weekDayOfMonth) {
+        @CustomType.Parameter("monthDay") @Nullable Integer monthDay,
+        @CustomType.Parameter("weekDayOfMonth") @Nullable PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth weekDayOfMonth) {
         this.monthDay = monthDay;
         this.weekDayOfMonth = weekDayOfMonth;
     }

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.securityhub.OrganizationConfigurationArgs;
 import io.pulumi.aws.securityhub.inputs.OrganizationConfigurationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import javax.annotation.Nullable;
@@ -36,7 +36,7 @@ public class OrganizationConfiguration extends io.pulumi.resources.CustomResourc
      * Whether to automatically enable Security Hub for new accounts in the organization.
      * 
      */
-    @OutputExport(name="autoEnable", type=Boolean.class, parameters={})
+    @Export(name="autoEnable", type=Boolean.class, parameters={})
     private Output<Boolean> autoEnable;
 
     /**

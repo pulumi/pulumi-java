@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.NetworkArgs;
@@ -52,7 +52,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * the user can explicitly connect subnetwork resources.
      * 
      */
-    @OutputExport(name="autoCreateSubnetworks", type=Boolean.class, parameters={})
+    @Export(name="autoCreateSubnetworks", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoCreateSubnetworks;
 
     /**
@@ -71,7 +71,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * immediately after network creation. Defaults to `false`.
      * 
      */
-    @OutputExport(name="deleteDefaultRoutesOnCreate", type=Boolean.class, parameters={})
+    @Export(name="deleteDefaultRoutesOnCreate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deleteDefaultRoutesOnCreate;
 
     /**
@@ -87,7 +87,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * recreated to modify this field.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -102,7 +102,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * The gateway address for default routing out of the network. This value is selected by GCP.
      * 
      */
-    @OutputExport(name="gatewayIpv4", type=String.class, parameters={})
+    @Export(name="gatewayIpv4", type=String.class, parameters={})
     private Output<String> gatewayIpv4;
 
     /**
@@ -117,7 +117,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * and the maximum value is 1500 bytes.
      * 
      */
-    @OutputExport(name="mtu", type=Integer.class, parameters={})
+    @Export(name="mtu", type=Integer.class, parameters={})
     private Output<Integer> mtu;
 
     /**
@@ -138,7 +138,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -159,7 +159,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -179,7 +179,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * Possible values are `REGIONAL` and `GLOBAL`.
      * 
      */
-    @OutputExport(name="routingMode", type=String.class, parameters={})
+    @Export(name="routingMode", type=String.class, parameters={})
     private Output<String> routingMode;
 
     /**
@@ -198,7 +198,7 @@ public class Network extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkforceCognitoConfig {
     /**
      * The OIDC IdP client ID used to configure your private workforce.
@@ -20,10 +20,10 @@ public final class WorkforceCognitoConfig {
      */
     private final String userPool;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkforceCognitoConfig(
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("userPool") String userPool) {
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("userPool") String userPool) {
         this.clientId = clientId;
         this.userPool = userPool;
     }

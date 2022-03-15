@@ -4,13 +4,13 @@
 package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent {
     /**
      * Information about the Amazon S3 bucket containing the application code.
@@ -23,10 +23,10 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      */
     private final @Nullable String textContent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent(
-        @OutputCustomType.Parameter("s3ContentLocation") @Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation s3ContentLocation,
-        @OutputCustomType.Parameter("textContent") @Nullable String textContent) {
+        @CustomType.Parameter("s3ContentLocation") @Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation s3ContentLocation,
+        @CustomType.Parameter("textContent") @Nullable String textContent) {
         this.s3ContentLocation = s3ContentLocation;
         this.textContent = textContent;
     }

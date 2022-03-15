@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SubscriptionKeyParameterNamesContractResponse extends io.pulu
      * Subscription key header name.
      * 
      */
-    @InputImport(name="header")
+    @Import(name="header")
       private final @Nullable String header;
 
     public Optional<String> getHeader() {
@@ -33,7 +33,7 @@ public final class SubscriptionKeyParameterNamesContractResponse extends io.pulu
      * Subscription key query string parameter name.
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable String query;
 
     public Optional<String> getQuery() {

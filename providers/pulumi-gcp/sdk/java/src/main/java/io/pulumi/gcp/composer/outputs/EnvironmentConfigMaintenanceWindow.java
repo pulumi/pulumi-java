@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentConfigMaintenanceWindow {
     private final String endTime;
     private final String recurrence;
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentConfigMaintenanceWindow(
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("recurrence") String recurrence,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("recurrence") String recurrence,
+        @CustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.recurrence = recurrence;
         this.startTime = startTime;

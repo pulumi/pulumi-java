@@ -10,7 +10,7 @@ import io.pulumi.awsnative.finspace.enums.EnvironmentStatus;
 import io.pulumi.awsnative.finspace.outputs.EnvironmentFederationParameters;
 import io.pulumi.awsnative.finspace.outputs.EnvironmentSuperuserParameters;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * AWS account ID associated with the Environment
      * 
      */
-    @OutputExport(name="awsAccountId", type=String.class, parameters={})
+    @Export(name="awsAccountId", type=String.class, parameters={})
     private Output<String> awsAccountId;
 
     /**
@@ -42,7 +42,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * ARNs of FinSpace Data Bundles to install
      * 
      */
-    @OutputExport(name="dataBundles", type=List.class, parameters={String.class})
+    @Export(name="dataBundles", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> dataBundles;
 
     /**
@@ -56,7 +56,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * ID for FinSpace created account used to store Environment artifacts
      * 
      */
-    @OutputExport(name="dedicatedServiceAccountId", type=String.class, parameters={})
+    @Export(name="dedicatedServiceAccountId", type=String.class, parameters={})
     private Output<String> dedicatedServiceAccountId;
 
     /**
@@ -70,7 +70,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Description of the Environment
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -84,7 +84,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * ARN of the Environment
      * 
      */
-    @OutputExport(name="environmentArn", type=String.class, parameters={})
+    @Export(name="environmentArn", type=String.class, parameters={})
     private Output<String> environmentArn;
 
     /**
@@ -98,7 +98,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Unique identifier for representing FinSpace Environment
      * 
      */
-    @OutputExport(name="environmentId", type=String.class, parameters={})
+    @Export(name="environmentId", type=String.class, parameters={})
     private Output<String> environmentId;
 
     /**
@@ -112,7 +112,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * URL used to login to the Environment
      * 
      */
-    @OutputExport(name="environmentUrl", type=String.class, parameters={})
+    @Export(name="environmentUrl", type=String.class, parameters={})
     private Output<String> environmentUrl;
 
     /**
@@ -126,7 +126,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Federation mode used with the Environment
      * 
      */
-    @OutputExport(name="federationMode", type=EnvironmentFederationMode.class, parameters={})
+    @Export(name="federationMode", type=EnvironmentFederationMode.class, parameters={})
     private Output</* @Nullable */ EnvironmentFederationMode> federationMode;
 
     /**
@@ -136,7 +136,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ EnvironmentFederationMode> getFederationMode() {
         return this.federationMode;
     }
-    @OutputExport(name="federationParameters", type=EnvironmentFederationParameters.class, parameters={})
+    @Export(name="federationParameters", type=EnvironmentFederationParameters.class, parameters={})
     private Output</* @Nullable */ EnvironmentFederationParameters> federationParameters;
 
     public Output</* @Nullable */ EnvironmentFederationParameters> getFederationParameters() {
@@ -146,7 +146,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * KMS key used to encrypt customer data within FinSpace Environment infrastructure
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     /**
@@ -160,7 +160,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Name of the Environment
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -174,7 +174,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * SageMaker Studio Domain URL associated with the Environment
      * 
      */
-    @OutputExport(name="sageMakerStudioDomainUrl", type=String.class, parameters={})
+    @Export(name="sageMakerStudioDomainUrl", type=String.class, parameters={})
     private Output<String> sageMakerStudioDomainUrl;
 
     /**
@@ -188,7 +188,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * State of the Environment
      * 
      */
-    @OutputExport(name="status", type=EnvironmentStatus.class, parameters={})
+    @Export(name="status", type=EnvironmentStatus.class, parameters={})
     private Output<EnvironmentStatus> status;
 
     /**
@@ -198,7 +198,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
     public Output<EnvironmentStatus> getStatus() {
         return this.status;
     }
-    @OutputExport(name="superuserParameters", type=EnvironmentSuperuserParameters.class, parameters={})
+    @Export(name="superuserParameters", type=EnvironmentSuperuserParameters.class, parameters={})
     private Output</* @Nullable */ EnvironmentSuperuserParameters> superuserParameters;
 
     public Output</* @Nullable */ EnvironmentSuperuserParameters> getSuperuserParameters() {

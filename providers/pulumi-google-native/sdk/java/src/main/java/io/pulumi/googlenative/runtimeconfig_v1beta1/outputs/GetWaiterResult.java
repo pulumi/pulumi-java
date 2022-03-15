@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.runtimeconfig_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.outputs.EndConditionResponse;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.outputs.StatusResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetWaiterResult {
     /**
      * The instant at which this Waiter resource was created. Adding the value of `timeout` to this instant yields the timeout deadline for the waiter.
@@ -48,15 +48,15 @@ public final class GetWaiterResult {
      */
     private final String timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWaiterResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("done") Boolean done,
-        @OutputCustomType.Parameter("error") StatusResponse error,
-        @OutputCustomType.Parameter("failure") EndConditionResponse failure,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("success") EndConditionResponse success,
-        @OutputCustomType.Parameter("timeout") String timeout) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("done") Boolean done,
+        @CustomType.Parameter("error") StatusResponse error,
+        @CustomType.Parameter("failure") EndConditionResponse failure,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("success") EndConditionResponse success,
+        @CustomType.Parameter("timeout") String timeout) {
         this.createTime = createTime;
         this.done = done;
         this.error = error;

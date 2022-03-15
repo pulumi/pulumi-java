@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement;
 
 import io.pulumi.azurenative.costmanagement.inputs.SettingsPropertiesCacheArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
      * Array of scopes with additional details used by Cost Management in the Azure portal.
      * 
      */
-    @InputImport(name="cache")
+    @Import(name="cache")
       private final @Nullable Output<List<SettingsPropertiesCacheArgs>> cache;
 
     public Output<List<SettingsPropertiesCacheArgs>> getCache() {
@@ -31,7 +31,7 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
      * Sets the default scope the current user will see when they sign into Azure Cost Management in the Azure portal.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {
@@ -42,7 +42,7 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the setting. Allowed values: myscope
      * 
      */
-    @InputImport(name="settingName")
+    @Import(name="settingName")
       private final @Nullable Output<String> settingName;
 
     public Output<String> getSettingName() {
@@ -53,7 +53,7 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates what scope Cost Management in the Azure portal should default to. Allowed values: LastUsed.
      * 
      */
-    @InputImport(name="startOn")
+    @Import(name="startOn")
       private final @Nullable Output<String> startOn;
 
     public Output<String> getStartOn() {

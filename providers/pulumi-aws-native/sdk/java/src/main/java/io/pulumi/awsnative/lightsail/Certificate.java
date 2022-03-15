@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.lightsail.CertificateArgs;
 import io.pulumi.awsnative.lightsail.outputs.CertificateTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:lightsail:Certificate")
 public class Certificate extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="certificateArn", type=String.class, parameters={})
+    @Export(name="certificateArn", type=String.class, parameters={})
     private Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
@@ -29,7 +29,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The name for the certificate.
      * 
      */
-    @OutputExport(name="certificateName", type=String.class, parameters={})
+    @Export(name="certificateName", type=String.class, parameters={})
     private Output<String> certificateName;
 
     /**
@@ -43,7 +43,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The domain name (e.g., example.com ) for the certificate.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -57,7 +57,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The validation status of the certificate.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -71,7 +71,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * An array of strings that specify the alternate domains (e.g., example2.com) and subdomains (e.g., blog.example.com) for the certificate.
      * 
      */
-    @OutputExport(name="subjectAlternativeNames", type=List.class, parameters={String.class})
+    @Export(name="subjectAlternativeNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> subjectAlternativeNames;
 
     /**
@@ -85,7 +85,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={CertificateTag.class})
+    @Export(name="tags", type=List.class, parameters={CertificateTag.class})
     private Output</* @Nullable */ List<CertificateTag>> tags;
 
     /**

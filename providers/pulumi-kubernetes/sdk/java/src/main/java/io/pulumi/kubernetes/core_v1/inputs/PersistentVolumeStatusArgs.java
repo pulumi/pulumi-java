@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PersistentVolumeStatusArgs extends io.pulumi.resources.Resour
      * A human-readable message indicating details about why the volume is in this state.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
@@ -40,7 +40,7 @@ public final class PersistentVolumeStatusArgs extends io.pulumi.resources.Resour
      *  - `"Released"` used for PersistentVolumes where the bound PersistentVolumeClaim was deleted released volumes must be recycled before becoming available again this phase is used by the persistent volume claim binder to signal to another process to reclaim the resource
      * 
      */
-    @InputImport(name="phase")
+    @Import(name="phase")
       private final @Nullable Output<String> phase;
 
     public Output<String> getPhase() {
@@ -51,7 +51,7 @@ public final class PersistentVolumeStatusArgs extends io.pulumi.resources.Resour
      * Reason is a brief CamelCase string that describes any failure and is meant for machine parsing and tidy display in the CLI.
      * 
      */
-    @InputImport(name="reason")
+    @Import(name="reason")
       private final @Nullable Output<String> reason;
 
     public Output<String> getReason() {

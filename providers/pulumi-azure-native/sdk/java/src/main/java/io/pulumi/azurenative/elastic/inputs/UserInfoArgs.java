@@ -5,7 +5,7 @@ package io.pulumi.azurenative.elastic.inputs;
 
 import io.pulumi.azurenative.elastic.inputs.CompanyInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Company information of the user to be passed to partners.
      * 
      */
-    @InputImport(name="companyInfo")
+    @Import(name="companyInfo")
       private final @Nullable Output<CompanyInfoArgs> companyInfo;
 
     public Output<CompanyInfoArgs> getCompanyInfo() {
@@ -34,7 +34,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Company name of the user
      * 
      */
-    @InputImport(name="companyName")
+    @Import(name="companyName")
       private final @Nullable Output<String> companyName;
 
     public Output<String> getCompanyName() {
@@ -45,7 +45,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Email of the user used by Elastic for contacting them if needed
      * 
      */
-    @InputImport(name="emailAddress")
+    @Import(name="emailAddress")
       private final @Nullable Output<String> emailAddress;
 
     public Output<String> getEmailAddress() {
@@ -56,7 +56,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * First name of the user
      * 
      */
-    @InputImport(name="firstName")
+    @Import(name="firstName")
       private final @Nullable Output<String> firstName;
 
     public Output<String> getFirstName() {
@@ -67,7 +67,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Last name of the user
      * 
      */
-    @InputImport(name="lastName")
+    @Import(name="lastName")
       private final @Nullable Output<String> lastName;
 
     public Output<String> getLastName() {

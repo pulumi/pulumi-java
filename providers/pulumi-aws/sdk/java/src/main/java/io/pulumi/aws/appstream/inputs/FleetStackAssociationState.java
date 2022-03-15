@@ -4,7 +4,7 @@
 package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FleetStackAssociationState extends io.pulumi.resources.Resour
      * Name of the fleet.
      * 
      */
-    @InputImport(name="fleetName")
+    @Import(name="fleetName")
       private final @Nullable Output<String> fleetName;
 
     public Output<String> getFleetName() {
@@ -29,7 +29,7 @@ public final class FleetStackAssociationState extends io.pulumi.resources.Resour
      * Name of the stack.
      * 
      */
-    @InputImport(name="stackName")
+    @Import(name="stackName")
       private final @Nullable Output<String> stackName;
 
     public Output<String> getStackName() {

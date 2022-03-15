@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApplicationPackageSupportUrlsResponse extends io.pulumi.resou
      * The government cloud support URL.
      * 
      */
-    @InputImport(name="governmentCloud")
+    @Import(name="governmentCloud")
       private final @Nullable String governmentCloud;
 
     public Optional<String> getGovernmentCloud() {
@@ -33,7 +33,7 @@ public final class ApplicationPackageSupportUrlsResponse extends io.pulumi.resou
      * The public azure support URL.
      * 
      */
-    @InputImport(name="publicAzure")
+    @Import(name="publicAzure")
       private final @Nullable String publicAzure;
 
     public Optional<String> getPublicAzure() {

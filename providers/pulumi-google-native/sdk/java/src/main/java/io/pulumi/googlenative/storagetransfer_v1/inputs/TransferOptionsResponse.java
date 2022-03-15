@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.MetadataOptionsResponse;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TransferOptionsResponse extends io.pulumi.resources.InvokeArg
      * Whether objects should be deleted from the source after they are transferred to the sink. **Note:** This option and delete_objects_unique_in_sink are mutually exclusive.
      * 
      */
-    @InputImport(name="deleteObjectsFromSourceAfterTransfer", required=true)
+    @Import(name="deleteObjectsFromSourceAfterTransfer", required=true)
       private final Boolean deleteObjectsFromSourceAfterTransfer;
 
     public Boolean getDeleteObjectsFromSourceAfterTransfer() {
@@ -32,7 +32,7 @@ public final class TransferOptionsResponse extends io.pulumi.resources.InvokeArg
      * Whether objects that exist only in the sink should be deleted. **Note:** This option and delete_objects_from_source_after_transfer are mutually exclusive.
      * 
      */
-    @InputImport(name="deleteObjectsUniqueInSink", required=true)
+    @Import(name="deleteObjectsUniqueInSink", required=true)
       private final Boolean deleteObjectsUniqueInSink;
 
     public Boolean getDeleteObjectsUniqueInSink() {
@@ -43,7 +43,7 @@ public final class TransferOptionsResponse extends io.pulumi.resources.InvokeArg
      * Represents the selected metadata options for a transfer job.
      * 
      */
-    @InputImport(name="metadataOptions", required=true)
+    @Import(name="metadataOptions", required=true)
       private final MetadataOptionsResponse metadataOptions;
 
     public MetadataOptionsResponse getMetadataOptions() {
@@ -54,7 +54,7 @@ public final class TransferOptionsResponse extends io.pulumi.resources.InvokeArg
      * When to overwrite objects that already exist in the sink. The default is that only objects that are different from the source are ovewritten. If true, all objects in the sink whose name matches an object in the source are overwritten with the source object.
      * 
      */
-    @InputImport(name="overwriteObjectsAlreadyExistingInSink", required=true)
+    @Import(name="overwriteObjectsAlreadyExistingInSink", required=true)
       private final Boolean overwriteObjectsAlreadyExistingInSink;
 
     public Boolean getOverwriteObjectsAlreadyExistingInSink() {

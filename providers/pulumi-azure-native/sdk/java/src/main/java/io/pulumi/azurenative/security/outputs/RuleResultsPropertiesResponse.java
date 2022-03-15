@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleResultsPropertiesResponse {
     /**
      * Expected results in the baseline.
@@ -17,8 +17,8 @@ public final class RuleResultsPropertiesResponse {
      */
     private final @Nullable List<List<String>> results;
 
-    @OutputCustomType.Constructor
-    private RuleResultsPropertiesResponse(@OutputCustomType.Parameter("results") @Nullable List<List<String>> results) {
+    @CustomType.Constructor
+    private RuleResultsPropertiesResponse(@CustomType.Parameter("results") @Nullable List<List<String>> results) {
         this.results = results;
     }
 

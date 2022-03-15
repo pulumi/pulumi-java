@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.OrganizationSecurityPolicyRuleArgs;
@@ -43,7 +43,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * "allow", "deny" or "goto_next".
      * 
      */
-    @OutputExport(name="action", type=String.class, parameters={})
+    @Export(name="action", type=String.class, parameters={})
     private Output<String> action;
 
     /**
@@ -58,7 +58,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * A description of the rule.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -73,7 +73,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * Possible values are `INGRESS` and `EGRESS`.
      * 
      */
-    @OutputExport(name="direction", type=String.class, parameters={})
+    @Export(name="direction", type=String.class, parameters={})
     private Output</* @Nullable */ String> direction;
 
     /**
@@ -90,7 +90,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * configured export destination in Stackdriver.
      * 
      */
-    @OutputExport(name="enableLogging", type=Boolean.class, parameters={})
+    @Export(name="enableLogging", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableLogging;
 
     /**
@@ -107,7 +107,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="match", type=OrganizationSecurityPolicyRuleMatch.class, parameters={})
+    @Export(name="match", type=OrganizationSecurityPolicyRuleMatch.class, parameters={})
     private Output<OrganizationSecurityPolicyRuleMatch> match;
 
     /**
@@ -122,7 +122,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * The ID of the OrganizationSecurityPolicy this rule applies to.
      * 
      */
-    @OutputExport(name="policyId", type=String.class, parameters={})
+    @Export(name="policyId", type=String.class, parameters={})
     private Output<String> policyId;
 
     /**
@@ -136,7 +136,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * If set to true, the specified action is not enforced.
      * 
      */
-    @OutputExport(name="preview", type=Boolean.class, parameters={})
+    @Export(name="preview", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> preview;
 
     /**
@@ -152,7 +152,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * highest priority and 2147483647 is the lowest prority.
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output<Integer> priority;
 
     /**
@@ -171,7 +171,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * within the organization will receive the rule.
      * 
      */
-    @OutputExport(name="targetResources", type=List.class, parameters={String.class})
+    @Export(name="targetResources", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> targetResources;
 
     /**
@@ -189,7 +189,7 @@ public class OrganizationSecurityPolicyRule extends io.pulumi.resources.CustomRe
      * instances that are applied with this rule.
      * 
      */
-    @OutputExport(name="targetServiceAccounts", type=List.class, parameters={String.class})
+    @Export(name="targetServiceAccounts", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> targetServiceAccounts;
 
     /**

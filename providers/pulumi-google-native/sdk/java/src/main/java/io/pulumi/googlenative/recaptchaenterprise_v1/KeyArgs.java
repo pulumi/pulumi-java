@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recaptchaenterprise_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.recaptchaenterprise_v1.inputs.GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs;
 import io.pulumi.googlenative.recaptchaenterprise_v1.inputs.GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs;
 import io.pulumi.googlenative.recaptchaenterprise_v1.inputs.GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs;
@@ -24,7 +24,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Settings for keys that can be used by Android apps.
      * 
      */
-    @InputImport(name="androidSettings")
+    @Import(name="androidSettings")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> androidSettings;
 
     public Output<GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsArgs> getAndroidSettings() {
@@ -35,7 +35,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * The timestamp corresponding to the creation of this Key.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -46,7 +46,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Human-readable display name of this key. Modifiable by user.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -57,7 +57,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Settings for keys that can be used by iOS apps.
      * 
      */
-    @InputImport(name="iosSettings")
+    @Import(name="iosSettings")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> iosSettings;
 
     public Output<GoogleCloudRecaptchaenterpriseV1IOSKeySettingsArgs> getIosSettings() {
@@ -68,7 +68,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * See Creating and managing labels.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -79,14 +79,14 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name for the Key in the format "projects/{project}/keys/{key}".
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -97,7 +97,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Options for user acceptance testing.
      * 
      */
-    @InputImport(name="testingOptions")
+    @Import(name="testingOptions")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> testingOptions;
 
     public Output<GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs> getTestingOptions() {
@@ -108,7 +108,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Settings for WAF
      * 
      */
-    @InputImport(name="wafSettings")
+    @Import(name="wafSettings")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> wafSettings;
 
     public Output<GoogleCloudRecaptchaenterpriseV1WafSettingsArgs> getWafSettings() {
@@ -119,7 +119,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
      * Settings for keys that can be used by websites.
      * 
      */
-    @InputImport(name="webSettings")
+    @Import(name="webSettings")
       private final @Nullable Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> webSettings;
 
     public Output<GoogleCloudRecaptchaenterpriseV1WebKeySettingsArgs> getWebSettings() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPolicyDocumentStatementCondition {
     /**
      * Name of the [IAM condition operator](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition_operators.html) to evaluate.
@@ -26,11 +26,11 @@ public final class GetPolicyDocumentStatementCondition {
      */
     private final String variable;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPolicyDocumentStatementCondition(
-        @OutputCustomType.Parameter("test") String test,
-        @OutputCustomType.Parameter("values") List<String> values,
-        @OutputCustomType.Parameter("variable") String variable) {
+        @CustomType.Parameter("test") String test,
+        @CustomType.Parameter("values") List<String> values,
+        @CustomType.Parameter("variable") String variable) {
         this.test = test;
         this.values = values;
         this.variable = variable;

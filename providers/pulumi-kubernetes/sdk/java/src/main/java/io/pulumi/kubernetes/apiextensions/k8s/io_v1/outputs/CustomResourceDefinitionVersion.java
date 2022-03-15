@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.CustomResourceColumnDefinition;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.CustomResourceSubresources;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.CustomResourceValidation;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomResourceDefinitionVersion {
     /**
      * additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. If no columns are specified, a single column displaying the age of the custom resource is used.
@@ -57,16 +57,16 @@ public final class CustomResourceDefinitionVersion {
      */
     private final @Nullable CustomResourceSubresources subresources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomResourceDefinitionVersion(
-        @OutputCustomType.Parameter("additionalPrinterColumns") @Nullable List<CustomResourceColumnDefinition> additionalPrinterColumns,
-        @OutputCustomType.Parameter("deprecated") @Nullable Boolean deprecated,
-        @OutputCustomType.Parameter("deprecationWarning") @Nullable String deprecationWarning,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("schema") @Nullable CustomResourceValidation schema,
-        @OutputCustomType.Parameter("served") Boolean served,
-        @OutputCustomType.Parameter("storage") Boolean storage,
-        @OutputCustomType.Parameter("subresources") @Nullable CustomResourceSubresources subresources) {
+        @CustomType.Parameter("additionalPrinterColumns") @Nullable List<CustomResourceColumnDefinition> additionalPrinterColumns,
+        @CustomType.Parameter("deprecated") @Nullable Boolean deprecated,
+        @CustomType.Parameter("deprecationWarning") @Nullable String deprecationWarning,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("schema") @Nullable CustomResourceValidation schema,
+        @CustomType.Parameter("served") Boolean served,
+        @CustomType.Parameter("storage") Boolean storage,
+        @CustomType.Parameter("subresources") @Nullable CustomResourceSubresources subresources) {
         this.additionalPrinterColumns = additionalPrinterColumns;
         this.deprecated = deprecated;
         this.deprecationWarning = deprecationWarning;

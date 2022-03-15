@@ -5,7 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.aws.fsx.inputs.OntapVolumeTieringPolicyGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name of the volune.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * Describes the file system for the volume, e.g. `fs-12345679`
      * 
      */
-    @InputImport(name="fileSystemId")
+    @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
 
     public Output<String> getFileSystemId() {
@@ -44,7 +44,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * Specifies the FlexCache endpoint type of the volume, Valid values are `NONE`, `ORIGIN`, `CACHE`. Default value is `NONE`. These can be set by the ONTAP CLI or API and are use with FlexCache feature.
      * 
      */
-    @InputImport(name="flexcacheEndpointType")
+    @Import(name="flexcacheEndpointType")
       private final @Nullable Output<String> flexcacheEndpointType;
 
     public Output<String> getFlexcacheEndpointType() {
@@ -55,7 +55,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * Specifies the location in the storage virtual machine's namespace where the volume is mounted. The junction_path must have a leading forward slash, such as `/vol3`
      * 
      */
-    @InputImport(name="junctionPath")
+    @Import(name="junctionPath")
       private final @Nullable Output<String> junctionPath;
 
     public Output<String> getJunctionPath() {
@@ -66,7 +66,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * Specifies the tiering policy for the ONTAP volume for moving data to the capacity pool storage. Valid values are `SNAPSHOT_ONLY`, `AUTO`, `ALL`, `NONE`. Default value is `SNAPSHOT_ONLY`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -77,7 +77,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * Specifies the type of volume, Valid values are `RW`, `DP`,  and `LS`. Default value is `RW`. These can be set by the ONTAP CLI or API. This setting is used as part of migration and replication [Migrating to Amazon FSx for NetApp ONTAP](https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/migrating-fsx-ontap.html)
      * 
      */
-    @InputImport(name="ontapVolumeType")
+    @Import(name="ontapVolumeType")
       private final @Nullable Output<String> ontapVolumeType;
 
     public Output<String> getOntapVolumeType() {
@@ -88,7 +88,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * Specifies the volume security style, Valid values are `UNIX`, `NTFS`, and `MIXED`. Default value is `UNIX`.
      * 
      */
-    @InputImport(name="securityStyle")
+    @Import(name="securityStyle")
       private final @Nullable Output<String> securityStyle;
 
     public Output<String> getSecurityStyle() {
@@ -99,7 +99,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * Specifies the size of the volume, in megabytes (MB), that you are creating.
      * 
      */
-    @InputImport(name="sizeInMegabytes")
+    @Import(name="sizeInMegabytes")
       private final @Nullable Output<Integer> sizeInMegabytes;
 
     public Output<Integer> getSizeInMegabytes() {
@@ -110,7 +110,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * Set to true to enable deduplication, compression, and compaction storage efficiency features on the volume.
      * 
      */
-    @InputImport(name="storageEfficiencyEnabled")
+    @Import(name="storageEfficiencyEnabled")
       private final @Nullable Output<Boolean> storageEfficiencyEnabled;
 
     public Output<Boolean> getStorageEfficiencyEnabled() {
@@ -121,7 +121,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * Specifies the storage virtual machine in which to create the volume.
      * 
      */
-    @InputImport(name="storageVirtualMachineId")
+    @Import(name="storageVirtualMachineId")
       private final @Nullable Output<String> storageVirtualMachineId;
 
     public Output<String> getStorageVirtualMachineId() {
@@ -132,7 +132,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the volume. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -143,14 +143,14 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
         return this.tagsAll == null ? Output.empty() : this.tagsAll;
     }
 
-    @InputImport(name="tieringPolicy")
+    @Import(name="tieringPolicy")
       private final @Nullable Output<OntapVolumeTieringPolicyGetArgs> tieringPolicy;
 
     public Output<OntapVolumeTieringPolicyGetArgs> getTieringPolicy() {
@@ -161,7 +161,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * The Volume's UUID (universally unique identifier).
      * 
      */
-    @InputImport(name="uuid")
+    @Import(name="uuid")
       private final @Nullable Output<String> uuid;
 
     public Output<String> getUuid() {
@@ -172,7 +172,7 @@ public final class OntapVolumeState extends io.pulumi.resources.ResourceArgs {
      * The type of volume, currently the only valid value is `ONTAP`.
      * 
      */
-    @InputImport(name="volumeType")
+    @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudtasks_v2beta3.inputs.AppEngineRoutingResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AppEngineHttpQueueResponse extends io.pulumi.resources.Invoke
      * Overrides for the task-level app_engine_routing. If set, `app_engine_routing_override` is used for all tasks in the queue, no matter what the setting is for the task-level app_engine_routing.
      * 
      */
-    @InputImport(name="appEngineRoutingOverride", required=true)
+    @Import(name="appEngineRoutingOverride", required=true)
       private final AppEngineRoutingResponse appEngineRoutingOverride;
 
     public AppEngineRoutingResponse getAppEngineRoutingOverride() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.web.inputs.ConnectionGatewayDefinitionPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
      * The connection gateway name
      * 
      */
-    @InputImport(name="connectionGatewayName")
+    @Import(name="connectionGatewayName")
       private final @Nullable Output<String> connectionGatewayName;
 
     public Output<String> getConnectionGatewayName() {
@@ -31,14 +31,14 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ConnectionGatewayDefinitionPropertiesArgs> properties;
 
     public Output<ConnectionGatewayDefinitionPropertiesArgs> getProperties() {
@@ -49,7 +49,7 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
      * The resource group
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -60,7 +60,7 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
      * Subscription Id
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {
@@ -71,7 +71,7 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

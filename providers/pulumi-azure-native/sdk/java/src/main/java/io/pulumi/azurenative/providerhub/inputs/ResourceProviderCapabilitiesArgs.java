@@ -6,7 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.enums.ResourceProviderCapabilitiesEffect;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class ResourceProviderCapabilitiesArgs extends io.pulumi.resources.
 
     public static final ResourceProviderCapabilitiesArgs Empty = new ResourceProviderCapabilitiesArgs();
 
-    @InputImport(name="effect", required=true)
+    @Import(name="effect", required=true)
       private final Output<Either<String,ResourceProviderCapabilitiesEffect>> effect;
 
     public Output<Either<String,ResourceProviderCapabilitiesEffect>> getEffect() {
         return this.effect;
     }
 
-    @InputImport(name="quotaId", required=true)
+    @Import(name="quotaId", required=true)
       private final Output<String> quotaId;
 
     public Output<String> getQuotaId() {
         return this.quotaId;
     }
 
-    @InputImport(name="requiredFeatures")
+    @Import(name="requiredFeatures")
       private final @Nullable Output<List<String>> requiredFeatures;
 
     public Output<List<String>> getRequiredFeatures() {

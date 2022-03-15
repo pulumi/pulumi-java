@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MultiCloudClusterResponse {
     /**
      * If cluster_missing is set then it denotes that API(gkemulticloud.googleapis.com) resource for this GKE Multi-Cloud cluster no longer exists.
@@ -21,10 +21,10 @@ public final class MultiCloudClusterResponse {
      */
     private final String resourceLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MultiCloudClusterResponse(
-        @OutputCustomType.Parameter("clusterMissing") Boolean clusterMissing,
-        @OutputCustomType.Parameter("resourceLink") String resourceLink) {
+        @CustomType.Parameter("clusterMissing") Boolean clusterMissing,
+        @CustomType.Parameter("resourceLink") String resourceLink) {
         this.clusterMissing = clusterMissing;
         this.resourceLink = resourceLink;
     }

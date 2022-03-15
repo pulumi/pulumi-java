@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam_instanceProfile;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the role to add to the profile.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

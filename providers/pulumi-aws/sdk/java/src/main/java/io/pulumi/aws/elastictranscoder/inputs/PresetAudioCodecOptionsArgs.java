@@ -4,7 +4,7 @@
 package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PresetAudioCodecOptionsArgs extends io.pulumi.resources.Resou
      * The bit depth of a sample is how many bits of information are included in the audio samples. Valid values are `16` and `24`. (FLAC/PCM Only)
      * 
      */
-    @InputImport(name="bitDepth")
+    @Import(name="bitDepth")
       private final @Nullable Output<String> bitDepth;
 
     public Output<String> getBitDepth() {
@@ -29,7 +29,7 @@ public final class PresetAudioCodecOptionsArgs extends io.pulumi.resources.Resou
      * The order the bits of a PCM sample are stored in. The supported value is LittleEndian. (PCM Only)
      * 
      */
-    @InputImport(name="bitOrder")
+    @Import(name="bitOrder")
       private final @Nullable Output<String> bitOrder;
 
     public Output<String> getBitOrder() {
@@ -40,7 +40,7 @@ public final class PresetAudioCodecOptionsArgs extends io.pulumi.resources.Resou
      * If you specified AAC for Audio:Codec, choose the AAC profile for the output file.
      * 
      */
-    @InputImport(name="profile")
+    @Import(name="profile")
       private final @Nullable Output<String> profile;
 
     public Output<String> getProfile() {
@@ -51,7 +51,7 @@ public final class PresetAudioCodecOptionsArgs extends io.pulumi.resources.Resou
      * Whether audio samples are represented with negative and positive numbers (signed) or only positive numbers (unsigned). The supported value is Signed. (PCM Only)
      * 
      */
-    @InputImport(name="signed")
+    @Import(name="signed")
       private final @Nullable Output<String> signed;
 
     public Output<String> getSigned() {

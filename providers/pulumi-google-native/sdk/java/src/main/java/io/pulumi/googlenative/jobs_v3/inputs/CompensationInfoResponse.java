@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.jobs_v3.inputs.CompensationEntryResponse;
 import io.pulumi.googlenative.jobs_v3.inputs.CompensationRangeResponse;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class CompensationInfoResponse extends io.pulumi.resources.InvokeAr
      * Annualized base compensation range. Computed as base compensation entry's CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
      * 
      */
-    @InputImport(name="annualizedBaseCompensationRange", required=true)
+    @Import(name="annualizedBaseCompensationRange", required=true)
       private final CompensationRangeResponse annualizedBaseCompensationRange;
 
     public CompensationRangeResponse getAnnualizedBaseCompensationRange() {
@@ -33,7 +33,7 @@ public final class CompensationInfoResponse extends io.pulumi.resources.InvokeAr
      * Annualized total compensation range. Computed as all compensation entries' CompensationEntry.compensation times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
      * 
      */
-    @InputImport(name="annualizedTotalCompensationRange", required=true)
+    @Import(name="annualizedTotalCompensationRange", required=true)
       private final CompensationRangeResponse annualizedTotalCompensationRange;
 
     public CompensationRangeResponse getAnnualizedTotalCompensationRange() {
@@ -44,7 +44,7 @@ public final class CompensationInfoResponse extends io.pulumi.resources.InvokeAr
      * Optional. Job compensation information. At most one entry can be of type CompensationInfo.CompensationType.BASE, which is referred as ** base compensation entry ** for the job.
      * 
      */
-    @InputImport(name="entries", required=true)
+    @Import(name="entries", required=true)
       private final List<CompensationEntryResponse> entries;
 
     public List<CompensationEntryResponse> getEntries() {

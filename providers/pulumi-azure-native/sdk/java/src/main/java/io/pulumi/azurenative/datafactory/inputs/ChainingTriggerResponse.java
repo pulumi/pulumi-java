@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.PipelineReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
      * List of tags that can be used for describing the trigger.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -37,7 +37,7 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
      * Upstream Pipelines.
      * 
      */
-    @InputImport(name="dependsOn", required=true)
+    @Import(name="dependsOn", required=true)
       private final List<PipelineReferenceResponse> dependsOn;
 
     public List<PipelineReferenceResponse> getDependsOn() {
@@ -48,7 +48,7 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
      * Trigger description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -59,7 +59,7 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
      * Pipeline for which runs are created when all upstream pipelines complete successfully.
      * 
      */
-    @InputImport(name="pipeline", required=true)
+    @Import(name="pipeline", required=true)
       private final TriggerPipelineReferenceResponse pipeline;
 
     public TriggerPipelineReferenceResponse getPipeline() {
@@ -70,7 +70,7 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
      * Run Dimension property that needs to be emitted by upstream pipelines.
      * 
      */
-    @InputImport(name="runDimension", required=true)
+    @Import(name="runDimension", required=true)
       private final String runDimension;
 
     public String getRunDimension() {
@@ -81,7 +81,7 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
      * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
      */
-    @InputImport(name="runtimeState", required=true)
+    @Import(name="runtimeState", required=true)
       private final String runtimeState;
 
     public String getRuntimeState() {
@@ -93,7 +93,7 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
      * Expected value is 'ChainingTrigger'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

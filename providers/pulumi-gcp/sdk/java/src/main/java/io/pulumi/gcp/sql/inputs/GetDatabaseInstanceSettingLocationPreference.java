@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetDatabaseInstanceSettingLocationPreference extends io.pulum
 
     public static final GetDatabaseInstanceSettingLocationPreference Empty = new GetDatabaseInstanceSettingLocationPreference();
 
-    @InputImport(name="followGaeApplication", required=true)
+    @Import(name="followGaeApplication", required=true)
       private final String followGaeApplication;
 
     public String getFollowGaeApplication() {
         return this.followGaeApplication;
     }
 
-    @InputImport(name="zone", required=true)
+    @Import(name="zone", required=true)
       private final String zone;
 
     public String getZone() {

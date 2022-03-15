@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedClusterWindowsProfileResponse {
     /**
      * Specifies the password of the administrator account. <br><br> **Minimum-length:** 8 characters <br><br> **Max-length:** 123 characters <br><br> **Complexity requirements:** 3 out of 4 conditions below need to be fulfilled <br> Has lower characters <br>Has upper characters <br> Has a digit <br> Has a special character (Regex match [\W_]) <br><br> **Disallowed values:** "abc@123", "P@$$w0rd", "P@ssw0rd", "P@ssword123", "Pa$$word", "pass@word1", "Password!", "Password1", "Password22", "iloveyou!"
@@ -33,12 +33,12 @@ public final class ManagedClusterWindowsProfileResponse {
      */
     private final @Nullable String licenseType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedClusterWindowsProfileResponse(
-        @OutputCustomType.Parameter("adminPassword") @Nullable String adminPassword,
-        @OutputCustomType.Parameter("adminUsername") String adminUsername,
-        @OutputCustomType.Parameter("enableCSIProxy") @Nullable Boolean enableCSIProxy,
-        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType) {
+        @CustomType.Parameter("adminPassword") @Nullable String adminPassword,
+        @CustomType.Parameter("adminUsername") String adminUsername,
+        @CustomType.Parameter("enableCSIProxy") @Nullable Boolean enableCSIProxy,
+        @CustomType.Parameter("licenseType") @Nullable String licenseType) {
         this.adminPassword = adminPassword;
         this.adminUsername = adminUsername;
         this.enableCSIProxy = enableCSIProxy;

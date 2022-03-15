@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RequestedOptionsResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ResultResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse extends io
      * The configuration used for this job.
      * 
      */
-    @InputImport(name="requestedOptions", required=true)
+    @Import(name="requestedOptions", required=true)
       private final GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions;
 
     public GooglePrivacyDlpV2RequestedOptionsResponse getRequestedOptions() {
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse extends io
      * A summary of the outcome of this inspection job.
      * 
      */
-    @InputImport(name="result", required=true)
+    @Import(name="result", required=true)
       private final GooglePrivacyDlpV2ResultResponse result;
 
     public GooglePrivacyDlpV2ResultResponse getResult() {

@@ -5,13 +5,13 @@ package io.pulumi.azurenative.eventgrid.outputs;
 
 import io.pulumi.azurenative.eventgrid.outputs.JsonFieldResponse;
 import io.pulumi.azurenative.eventgrid.outputs.JsonFieldWithDefaultResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JsonInputSchemaMappingResponse {
     /**
      * The mapping information for the DataVersion property of the Event Grid Event.
@@ -50,15 +50,15 @@ public final class JsonInputSchemaMappingResponse {
      */
     private final @Nullable JsonFieldResponse topic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JsonInputSchemaMappingResponse(
-        @OutputCustomType.Parameter("dataVersion") @Nullable JsonFieldWithDefaultResponse dataVersion,
-        @OutputCustomType.Parameter("eventTime") @Nullable JsonFieldResponse eventTime,
-        @OutputCustomType.Parameter("eventType") @Nullable JsonFieldWithDefaultResponse eventType,
-        @OutputCustomType.Parameter("id") @Nullable JsonFieldResponse id,
-        @OutputCustomType.Parameter("inputSchemaMappingType") String inputSchemaMappingType,
-        @OutputCustomType.Parameter("subject") @Nullable JsonFieldWithDefaultResponse subject,
-        @OutputCustomType.Parameter("topic") @Nullable JsonFieldResponse topic) {
+        @CustomType.Parameter("dataVersion") @Nullable JsonFieldWithDefaultResponse dataVersion,
+        @CustomType.Parameter("eventTime") @Nullable JsonFieldResponse eventTime,
+        @CustomType.Parameter("eventType") @Nullable JsonFieldWithDefaultResponse eventType,
+        @CustomType.Parameter("id") @Nullable JsonFieldResponse id,
+        @CustomType.Parameter("inputSchemaMappingType") String inputSchemaMappingType,
+        @CustomType.Parameter("subject") @Nullable JsonFieldWithDefaultResponse subject,
+        @CustomType.Parameter("topic") @Nullable JsonFieldResponse topic) {
         this.dataVersion = dataVersion;
         this.eventTime = eventTime;
         this.eventType = eventType;

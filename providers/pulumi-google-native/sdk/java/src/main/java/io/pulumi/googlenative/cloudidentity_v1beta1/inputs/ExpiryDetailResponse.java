@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ExpiryDetailResponse extends io.pulumi.resources.InvokeArgs {
      * The time at which the `MembershipRole` will expire.
      * 
      */
-    @InputImport(name="expireTime", required=true)
+    @Import(name="expireTime", required=true)
       private final String expireTime;
 
     public String getExpireTime() {

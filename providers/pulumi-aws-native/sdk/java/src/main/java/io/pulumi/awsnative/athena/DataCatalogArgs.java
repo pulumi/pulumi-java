@@ -6,7 +6,7 @@ package io.pulumi.awsnative.athena;
 import io.pulumi.awsnative.athena.enums.DataCatalogType;
 import io.pulumi.awsnative.athena.inputs.DataCatalogTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the data catalog to be created.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the data catalog to create. The catalog name must be unique for the AWS account and can use a maximum of 128 alphanumeric, underscore, at sign, or hyphen characters.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the Lambda function or functions to use for creating the data catalog. This is a mapping whose values depend on the catalog type.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Object> parameters;
 
     public Output<Object> getParameters() {
@@ -55,7 +55,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * A list of comma separated tags to add to the data catalog that is created.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DataCatalogTagArgs>> tags;
 
     public Output<List<DataCatalogTagArgs>> getTags() {
@@ -66,7 +66,7 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
      * The type of data catalog to create: LAMBDA for a federated catalog, GLUE for AWS Glue Catalog, or HIVE for an external hive metastore.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<DataCatalogType> type;
 
     public Output<DataCatalogType> getType() {

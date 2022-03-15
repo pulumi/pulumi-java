@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.eventarc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GKEResponse {
     /**
      * The name of the cluster the GKE service is running in. The cluster must be running in the same project as the trigger being created.
@@ -35,13 +35,13 @@ public final class GKEResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GKEResponse(
-        @OutputCustomType.Parameter("cluster") String cluster,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("namespace") String namespace,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("cluster") String cluster,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("namespace") String namespace,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("service") String service) {
         this.cluster = cluster;
         this.location = location;
         this.namespace = namespace;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sourcerepo.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.sourcerepo.inputs.RepositoryPubsubConfigGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The repo name may contain slashes. eg, `name/with/slash`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -47,7 +47,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="pubsubConfigs")
+    @Import(name="pubsubConfigs")
       private final @Nullable Output<List<RepositoryPubsubConfigGetArgs>> pubsubConfigs;
 
     public Output<List<RepositoryPubsubConfigGetArgs>> getPubsubConfigs() {
@@ -58,7 +58,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The disk usage of the repo, in bytes.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<Integer> size;
 
     public Output<Integer> getSize() {
@@ -69,7 +69,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * URL to clone the repository from Google Cloud Source Repositories.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

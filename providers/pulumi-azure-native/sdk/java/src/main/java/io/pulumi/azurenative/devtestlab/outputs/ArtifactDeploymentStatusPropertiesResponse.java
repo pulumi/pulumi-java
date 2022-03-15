@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ArtifactDeploymentStatusPropertiesResponse {
     /**
      * The total count of the artifacts that were successfully applied.
@@ -28,11 +28,11 @@ public final class ArtifactDeploymentStatusPropertiesResponse {
      */
     private final @Nullable Integer totalArtifacts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ArtifactDeploymentStatusPropertiesResponse(
-        @OutputCustomType.Parameter("artifactsApplied") @Nullable Integer artifactsApplied,
-        @OutputCustomType.Parameter("deploymentStatus") @Nullable String deploymentStatus,
-        @OutputCustomType.Parameter("totalArtifacts") @Nullable Integer totalArtifacts) {
+        @CustomType.Parameter("artifactsApplied") @Nullable Integer artifactsApplied,
+        @CustomType.Parameter("deploymentStatus") @Nullable String deploymentStatus,
+        @CustomType.Parameter("totalArtifacts") @Nullable Integer totalArtifacts) {
         this.artifactsApplied = artifactsApplied;
         this.deploymentStatus = deploymentStatus;
         this.totalArtifacts = totalArtifacts;

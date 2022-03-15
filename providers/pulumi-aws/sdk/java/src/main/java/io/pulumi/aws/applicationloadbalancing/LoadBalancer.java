@@ -9,7 +9,7 @@ import io.pulumi.aws.applicationloadbalancing.inputs.LoadBalancerState;
 import io.pulumi.aws.applicationloadbalancing.outputs.LoadBalancerAccessLogs;
 import io.pulumi.aws.applicationloadbalancing.outputs.LoadBalancerSubnetMapping;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -44,7 +44,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * An Access Logs block. Access Logs documented below.
      * 
      */
-    @OutputExport(name="accessLogs", type=LoadBalancerAccessLogs.class, parameters={})
+    @Export(name="accessLogs", type=LoadBalancerAccessLogs.class, parameters={})
     private Output</* @Nullable */ LoadBalancerAccessLogs> accessLogs;
 
     /**
@@ -58,7 +58,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The ARN of the load balancer (matches `id`).
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -72,7 +72,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The ARN suffix for use with CloudWatch Metrics.
      * 
      */
-    @OutputExport(name="arnSuffix", type=String.class, parameters={})
+    @Export(name="arnSuffix", type=String.class, parameters={})
     private Output<String> arnSuffix;
 
     /**
@@ -86,7 +86,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The ID of the customer owned ipv4 pool to use for this load balancer.
      * 
      */
-    @OutputExport(name="customerOwnedIpv4Pool", type=String.class, parameters={})
+    @Export(name="customerOwnedIpv4Pool", type=String.class, parameters={})
     private Output</* @Nullable */ String> customerOwnedIpv4Pool;
 
     /**
@@ -100,7 +100,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Determines how the load balancer handles requests that might pose a security risk to an application due to HTTP desync. Valid values are `monitor`, `defensive` (default), `strictest`.
      * 
      */
-    @OutputExport(name="desyncMitigationMode", type=String.class, parameters={})
+    @Export(name="desyncMitigationMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> desyncMitigationMode;
 
     /**
@@ -114,7 +114,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The DNS name of the load balancer.
      * 
      */
-    @OutputExport(name="dnsName", type=String.class, parameters={})
+    @Export(name="dnsName", type=String.class, parameters={})
     private Output<String> dnsName;
 
     /**
@@ -128,7 +128,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Indicates whether HTTP headers with header fields that are not valid are removed by the load balancer (true) or routed to targets (false). The default is false. Elastic Load Balancing requires that message header names contain only alphanumeric characters and hyphens. Only valid for Load Balancers of type `application`.
      * 
      */
-    @OutputExport(name="dropInvalidHeaderFields", type=Boolean.class, parameters={})
+    @Export(name="dropInvalidHeaderFields", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> dropInvalidHeaderFields;
 
     /**
@@ -143,7 +143,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * This is a `network` load balancer feature. Defaults to `false`.
      * 
      */
-    @OutputExport(name="enableCrossZoneLoadBalancing", type=Boolean.class, parameters={})
+    @Export(name="enableCrossZoneLoadBalancing", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableCrossZoneLoadBalancing;
 
     /**
@@ -159,7 +159,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * the AWS API. This will prevent this provider from deleting the load balancer. Defaults to `false`.
      * 
      */
-    @OutputExport(name="enableDeletionProtection", type=Boolean.class, parameters={})
+    @Export(name="enableDeletionProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDeletionProtection;
 
     /**
@@ -174,7 +174,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Indicates whether HTTP/2 is enabled in `application` load balancers. Defaults to `true`.
      * 
      */
-    @OutputExport(name="enableHttp2", type=Boolean.class, parameters={})
+    @Export(name="enableHttp2", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableHttp2;
 
     /**
@@ -188,7 +188,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Indicates whether to allow a WAF-enabled load balancer to route requests to targets if it is unable to forward the request to AWS WAF. Defaults to `false`.
      * 
      */
-    @OutputExport(name="enableWafFailOpen", type=Boolean.class, parameters={})
+    @Export(name="enableWafFailOpen", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableWafFailOpen;
 
     /**
@@ -202,7 +202,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The time in seconds that the connection is allowed to be idle. Only valid for Load Balancers of type `application`. Default: 60.
      * 
      */
-    @OutputExport(name="idleTimeout", type=Integer.class, parameters={})
+    @Export(name="idleTimeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> idleTimeout;
 
     /**
@@ -216,7 +216,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * If true, the LB will be internal.
      * 
      */
-    @OutputExport(name="internal", type=Boolean.class, parameters={})
+    @Export(name="internal", type=Boolean.class, parameters={})
     private Output<Boolean> internal;
 
     /**
@@ -230,7 +230,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The type of IP addresses used by the subnets for your load balancer. The possible values are `ipv4` and `dualstack`
      * 
      */
-    @OutputExport(name="ipAddressType", type=String.class, parameters={})
+    @Export(name="ipAddressType", type=String.class, parameters={})
     private Output<String> ipAddressType;
 
     /**
@@ -244,7 +244,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * The type of load balancer to create. Possible values are `application`, `gateway`, or `network`. The default value is `application`.
      * 
      */
-    @OutputExport(name="loadBalancerType", type=String.class, parameters={})
+    @Export(name="loadBalancerType", type=String.class, parameters={})
     private Output</* @Nullable */ String> loadBalancerType;
 
     /**
@@ -260,7 +260,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * this provider will autogenerate a name beginning with `tf-lb`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -276,7 +276,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> namePrefix;
 
     /**
@@ -290,7 +290,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * A list of security group IDs to assign to the LB. Only valid for Load Balancers of type `application`.
      * 
      */
-    @OutputExport(name="securityGroups", type=List.class, parameters={String.class})
+    @Export(name="securityGroups", type=List.class, parameters={String.class})
     private Output<List<String>> securityGroups;
 
     /**
@@ -304,7 +304,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * A subnet mapping block as documented below.
      * 
      */
-    @OutputExport(name="subnetMappings", type=List.class, parameters={LoadBalancerSubnetMapping.class})
+    @Export(name="subnetMappings", type=List.class, parameters={LoadBalancerSubnetMapping.class})
     private Output<List<LoadBalancerSubnetMapping>> subnetMappings;
 
     /**
@@ -320,7 +320,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * for load balancers of type `network` will force a recreation of the resource.
      * 
      */
-    @OutputExport(name="subnets", type=List.class, parameters={String.class})
+    @Export(name="subnets", type=List.class, parameters={String.class})
     private Output<List<String>> subnets;
 
     /**
@@ -336,7 +336,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -350,7 +350,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -360,7 +360,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
     public Output<Map<String,String>> getTagsAll() {
         return this.tagsAll;
     }
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     public Output<String> getVpcId() {
@@ -371,7 +371,7 @@ public class LoadBalancer extends io.pulumi.resources.CustomResource {
      * * `subnet_mapping.*.outpost_id` - ID of the Outpost containing the load balancer.
      * 
      */
-    @OutputExport(name="zoneId", type=String.class, parameters={})
+    @Export(name="zoneId", type=String.class, parameters={})
     private Output<String> zoneId;
 
     /**

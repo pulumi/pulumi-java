@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.ImageDescriptorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageUpdateTriggerResponse {
     /**
      * The unique ID of the trigger.
@@ -29,11 +29,11 @@ public final class ImageUpdateTriggerResponse {
      */
     private final @Nullable String timestamp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageUpdateTriggerResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("images") @Nullable List<ImageDescriptorResponse> images,
-        @OutputCustomType.Parameter("timestamp") @Nullable String timestamp) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("images") @Nullable List<ImageDescriptorResponse> images,
+        @CustomType.Parameter("timestamp") @Nullable String timestamp) {
         this.id = id;
         this.images = images;
         this.timestamp = timestamp;

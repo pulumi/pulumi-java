@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RevocationDetailsResponse extends io.pulumi.resources.InvokeA
      * Indicates why a Certificate was revoked.
      * 
      */
-    @InputImport(name="revocationState", required=true)
+    @Import(name="revocationState", required=true)
       private final String revocationState;
 
     public String getRevocationState() {
@@ -31,7 +31,7 @@ public final class RevocationDetailsResponse extends io.pulumi.resources.InvokeA
      * The time at which this Certificate was revoked.
      * 
      */
-    @InputImport(name="revocationTime", required=true)
+    @Import(name="revocationTime", required=true)
       private final String revocationTime;
 
     public String getRevocationTime() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.CredentialResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.DeploymentLabelEntryResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.DeploymentOutputEntryResponse;
@@ -14,7 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDeploymentResult {
     /**
      * User provided default credential for the deployment.
@@ -82,21 +82,21 @@ public final class GetDeploymentResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDeploymentResult(
-        @OutputCustomType.Parameter("credential") CredentialResponse credential,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("insertTime") String insertTime,
-        @OutputCustomType.Parameter("labels") List<DeploymentLabelEntryResponse> labels,
-        @OutputCustomType.Parameter("manifest") String manifest,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operation") OperationResponse operation,
-        @OutputCustomType.Parameter("outputs") List<DeploymentOutputEntryResponse> outputs,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("target") TargetConfigurationResponse target,
-        @OutputCustomType.Parameter("update") DeploymentUpdateResponse update,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("credential") CredentialResponse credential,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("insertTime") String insertTime,
+        @CustomType.Parameter("labels") List<DeploymentLabelEntryResponse> labels,
+        @CustomType.Parameter("manifest") String manifest,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operation") OperationResponse operation,
+        @CustomType.Parameter("outputs") List<DeploymentOutputEntryResponse> outputs,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("target") TargetConfigurationResponse target,
+        @CustomType.Parameter("update") DeploymentUpdateResponse update,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.credential = credential;
         this.description = description;
         this.fingerprint = fingerprint;

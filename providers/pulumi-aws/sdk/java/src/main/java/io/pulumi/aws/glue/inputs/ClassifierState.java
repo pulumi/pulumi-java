@@ -8,7 +8,7 @@ import io.pulumi.aws.glue.inputs.ClassifierGrokClassifierGetArgs;
 import io.pulumi.aws.glue.inputs.ClassifierJsonClassifierGetArgs;
 import io.pulumi.aws.glue.inputs.ClassifierXmlClassifierGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ClassifierState extends io.pulumi.resources.ResourceArgs {
      * A classifier for Csv content. Defined below.
      * 
      */
-    @InputImport(name="csvClassifier")
+    @Import(name="csvClassifier")
       private final @Nullable Output<ClassifierCsvClassifierGetArgs> csvClassifier;
 
     public Output<ClassifierCsvClassifierGetArgs> getCsvClassifier() {
@@ -33,7 +33,7 @@ public final class ClassifierState extends io.pulumi.resources.ResourceArgs {
      * A classifier that uses grok patterns. Defined below.
      * 
      */
-    @InputImport(name="grokClassifier")
+    @Import(name="grokClassifier")
       private final @Nullable Output<ClassifierGrokClassifierGetArgs> grokClassifier;
 
     public Output<ClassifierGrokClassifierGetArgs> getGrokClassifier() {
@@ -44,7 +44,7 @@ public final class ClassifierState extends io.pulumi.resources.ResourceArgs {
      * A classifier for JSON content. Defined below.
      * 
      */
-    @InputImport(name="jsonClassifier")
+    @Import(name="jsonClassifier")
       private final @Nullable Output<ClassifierJsonClassifierGetArgs> jsonClassifier;
 
     public Output<ClassifierJsonClassifierGetArgs> getJsonClassifier() {
@@ -55,7 +55,7 @@ public final class ClassifierState extends io.pulumi.resources.ResourceArgs {
      * The name of the classifier.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -66,7 +66,7 @@ public final class ClassifierState extends io.pulumi.resources.ResourceArgs {
      * A classifier for XML content. Defined below.
      * 
      */
-    @InputImport(name="xmlClassifier")
+    @Import(name="xmlClassifier")
       private final @Nullable Output<ClassifierXmlClassifierGetArgs> xmlClassifier;
 
     public Output<ClassifierXmlClassifierGetArgs> getXmlClassifier() {

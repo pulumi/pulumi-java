@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetAppEngineServiceArgs extends io.pulumi.resources.InvokeArg
      * service. Corresponds to the moduleId resource label in the [gae_app](https://cloud.google.com/monitoring/api/resources#tag_gae_app) monitored resource, or the service/module name.
      * 
      */
-    @InputImport(name="moduleId", required=true)
+    @Import(name="moduleId", required=true)
       private final String moduleId;
 
     public String getModuleId() {
@@ -31,7 +31,7 @@ public final class GetAppEngineServiceArgs extends io.pulumi.resources.InvokeArg
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

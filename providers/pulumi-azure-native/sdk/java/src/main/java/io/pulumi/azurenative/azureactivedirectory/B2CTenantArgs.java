@@ -6,7 +6,7 @@ package io.pulumi.azurenative.azureactivedirectory;
 import io.pulumi.azurenative.azureactivedirectory.inputs.B2CResourceSKUArgs;
 import io.pulumi.azurenative.azureactivedirectory.inputs.CreateTenantRequestBodyPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,14 +21,14 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
      * The location in which the resource is hosted and data resides. Can be one of 'United States', 'Europe', 'Asia Pacific', or 'Australia' (preview). Refer to [this documentation](https://aka.ms/B2CDataResidency) for more information.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<CreateTenantRequestBodyPropertiesArgs> properties;
 
     public Output<CreateTenantRequestBodyPropertiesArgs> getProperties() {
@@ -39,7 +39,7 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -50,7 +50,7 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
      * The initial domain name of the B2C tenant.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -61,7 +61,7 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
      * SKU properties of the Azure AD B2C tenant. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cBilling).
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<B2CResourceSKUArgs> sku;
 
     public Output<B2CResourceSKUArgs> getSku() {
@@ -72,7 +72,7 @@ public final class B2CTenantArgs extends io.pulumi.resources.ResourceArgs {
      * Resource Tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

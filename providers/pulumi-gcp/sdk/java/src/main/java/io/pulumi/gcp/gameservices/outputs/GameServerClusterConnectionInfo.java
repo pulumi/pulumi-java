@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.gameservices.outputs.GameServerClusterConnectionInfoGkeClusterReference;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GameServerClusterConnectionInfo {
     /**
      * Reference of the GKE cluster where the game servers are installed.
@@ -24,10 +24,10 @@ public final class GameServerClusterConnectionInfo {
      */
     private final String namespace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GameServerClusterConnectionInfo(
-        @OutputCustomType.Parameter("gkeClusterReference") GameServerClusterConnectionInfoGkeClusterReference gkeClusterReference,
-        @OutputCustomType.Parameter("namespace") String namespace) {
+        @CustomType.Parameter("gkeClusterReference") GameServerClusterConnectionInfoGkeClusterReference gkeClusterReference,
+        @CustomType.Parameter("namespace") String namespace) {
         this.gkeClusterReference = gkeClusterReference;
         this.namespace = namespace;
     }

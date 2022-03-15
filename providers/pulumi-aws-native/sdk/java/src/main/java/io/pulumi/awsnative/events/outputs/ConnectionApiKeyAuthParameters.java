@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.events.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionApiKeyAuthParameters {
     private final String apiKeyName;
     private final String apiKeyValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionApiKeyAuthParameters(
-        @OutputCustomType.Parameter("apiKeyName") String apiKeyName,
-        @OutputCustomType.Parameter("apiKeyValue") String apiKeyValue) {
+        @CustomType.Parameter("apiKeyName") String apiKeyName,
+        @CustomType.Parameter("apiKeyValue") String apiKeyValue) {
         this.apiKeyName = apiKeyName;
         this.apiKeyValue = apiKeyValue;
     }

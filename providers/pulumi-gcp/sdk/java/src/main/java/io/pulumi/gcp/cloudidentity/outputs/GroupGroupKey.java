@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.cloudidentity.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GroupGroupKey {
     /**
      * The ID of the entity.
@@ -32,10 +32,10 @@ public final class GroupGroupKey {
      */
     private final @Nullable String namespace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GroupGroupKey(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("namespace") @Nullable String namespace) {
         this.id = id;
         this.namespace = namespace;
     }

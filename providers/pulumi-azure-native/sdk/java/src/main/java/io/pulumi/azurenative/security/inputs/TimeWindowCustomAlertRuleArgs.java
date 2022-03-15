@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
      * Status of the custom alert.
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -34,7 +34,7 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
      * The maximum threshold.
      * 
      */
-    @InputImport(name="maxThreshold", required=true)
+    @Import(name="maxThreshold", required=true)
       private final Output<Integer> maxThreshold;
 
     public Output<Integer> getMaxThreshold() {
@@ -45,7 +45,7 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
      * The minimum threshold.
      * 
      */
-    @InputImport(name="minThreshold", required=true)
+    @Import(name="minThreshold", required=true)
       private final Output<Integer> minThreshold;
 
     public Output<Integer> getMinThreshold() {
@@ -57,7 +57,7 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
      * Expected value is 'TimeWindowCustomAlertRule'.
      * 
      */
-    @InputImport(name="ruleType", required=true)
+    @Import(name="ruleType", required=true)
       private final Output<String> ruleType;
 
     public Output<String> getRuleType() {
@@ -68,7 +68,7 @@ public final class TimeWindowCustomAlertRuleArgs extends io.pulumi.resources.Res
      * The time window size in iso8601 format.
      * 
      */
-    @InputImport(name="timeWindowSize", required=true)
+    @Import(name="timeWindowSize", required=true)
       private final Output<String> timeWindowSize;
 
     public Output<String> getTimeWindowSize() {

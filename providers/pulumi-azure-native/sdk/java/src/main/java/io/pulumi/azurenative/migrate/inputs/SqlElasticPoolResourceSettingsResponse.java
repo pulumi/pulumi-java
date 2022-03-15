@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SqlElasticPoolResourceSettingsResponse extends io.pulumi.reso
      * Expected value is 'Microsoft.Sql/servers/elasticPools'.
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final String resourceType;
 
     public String getPropResourceType() {
@@ -34,7 +34,7 @@ public final class SqlElasticPoolResourceSettingsResponse extends io.pulumi.reso
      * Gets or sets the target Resource name.
      * 
      */
-    @InputImport(name="targetResourceName", required=true)
+    @Import(name="targetResourceName", required=true)
       private final String targetResourceName;
 
     public String getTargetResourceName() {
@@ -45,7 +45,7 @@ public final class SqlElasticPoolResourceSettingsResponse extends io.pulumi.reso
      * Defines the zone redundant resource setting.
      * 
      */
-    @InputImport(name="zoneRedundant")
+    @Import(name="zoneRedundant")
       private final @Nullable String zoneRedundant;
 
     public Optional<String> getZoneRedundant() {

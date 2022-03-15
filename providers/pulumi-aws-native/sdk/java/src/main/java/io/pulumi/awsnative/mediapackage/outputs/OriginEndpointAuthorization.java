@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.mediapackage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OriginEndpointAuthorization {
     /**
      * The Amazon Resource Name (ARN) for the secret in Secrets Manager that your Content Distribution Network (CDN) uses for authorization to access your endpoint.
@@ -20,10 +20,10 @@ public final class OriginEndpointAuthorization {
      */
     private final String secretsRoleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OriginEndpointAuthorization(
-        @OutputCustomType.Parameter("cdnIdentifierSecret") String cdnIdentifierSecret,
-        @OutputCustomType.Parameter("secretsRoleArn") String secretsRoleArn) {
+        @CustomType.Parameter("cdnIdentifierSecret") String cdnIdentifierSecret,
+        @CustomType.Parameter("secretsRoleArn") String secretsRoleArn) {
         this.cdnIdentifierSecret = cdnIdentifierSecret;
         this.secretsRoleArn = secretsRoleArn;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetContainerDefinitionArgs extends io.pulumi.resources.Invoke
      * The name of the container definition
      * 
      */
-    @InputImport(name="containerName", required=true)
+    @Import(name="containerName", required=true)
       private final String containerName;
 
     public String getContainerName() {
@@ -27,7 +27,7 @@ public final class GetContainerDefinitionArgs extends io.pulumi.resources.Invoke
      * The ARN of the task definition which contains the container
      * 
      */
-    @InputImport(name="taskDefinition", required=true)
+    @Import(name="taskDefinition", required=true)
       private final String taskDefinition;
 
     public String getTaskDefinition() {

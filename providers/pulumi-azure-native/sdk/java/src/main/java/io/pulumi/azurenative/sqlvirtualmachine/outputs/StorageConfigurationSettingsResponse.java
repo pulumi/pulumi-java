@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.SQLStorageSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageConfigurationSettingsResponse {
     /**
      * Disk configuration to apply to SQL Server.
@@ -38,13 +38,13 @@ public final class StorageConfigurationSettingsResponse {
      */
     private final @Nullable String storageWorkloadType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageConfigurationSettingsResponse(
-        @OutputCustomType.Parameter("diskConfigurationType") @Nullable String diskConfigurationType,
-        @OutputCustomType.Parameter("sqlDataSettings") @Nullable SQLStorageSettingsResponse sqlDataSettings,
-        @OutputCustomType.Parameter("sqlLogSettings") @Nullable SQLStorageSettingsResponse sqlLogSettings,
-        @OutputCustomType.Parameter("sqlTempDbSettings") @Nullable SQLStorageSettingsResponse sqlTempDbSettings,
-        @OutputCustomType.Parameter("storageWorkloadType") @Nullable String storageWorkloadType) {
+        @CustomType.Parameter("diskConfigurationType") @Nullable String diskConfigurationType,
+        @CustomType.Parameter("sqlDataSettings") @Nullable SQLStorageSettingsResponse sqlDataSettings,
+        @CustomType.Parameter("sqlLogSettings") @Nullable SQLStorageSettingsResponse sqlLogSettings,
+        @CustomType.Parameter("sqlTempDbSettings") @Nullable SQLStorageSettingsResponse sqlTempDbSettings,
+        @CustomType.Parameter("storageWorkloadType") @Nullable String storageWorkloadType) {
         this.diskConfigurationType = diskConfigurationType;
         this.sqlDataSettings = sqlDataSettings;
         this.sqlLogSettings = sqlLogSettings;

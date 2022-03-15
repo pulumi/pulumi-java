@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MessagingEndpointPropertiesResponse {
     /**
      * The lock duration. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.
@@ -28,11 +28,11 @@ public final class MessagingEndpointPropertiesResponse {
      */
     private final @Nullable String ttlAsIso8601;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MessagingEndpointPropertiesResponse(
-        @OutputCustomType.Parameter("lockDurationAsIso8601") @Nullable String lockDurationAsIso8601,
-        @OutputCustomType.Parameter("maxDeliveryCount") @Nullable Integer maxDeliveryCount,
-        @OutputCustomType.Parameter("ttlAsIso8601") @Nullable String ttlAsIso8601) {
+        @CustomType.Parameter("lockDurationAsIso8601") @Nullable String lockDurationAsIso8601,
+        @CustomType.Parameter("maxDeliveryCount") @Nullable Integer maxDeliveryCount,
+        @CustomType.Parameter("ttlAsIso8601") @Nullable String ttlAsIso8601) {
         this.lockDurationAsIso8601 = lockDurationAsIso8601;
         this.maxDeliveryCount = maxDeliveryCount;
         this.ttlAsIso8601 = ttlAsIso8601;

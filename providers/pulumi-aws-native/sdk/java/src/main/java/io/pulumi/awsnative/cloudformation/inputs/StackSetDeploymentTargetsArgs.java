@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudformation.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.Res
      * AWS accounts that you want to create stack instances in the specified Region(s) for.
      * 
      */
-    @InputImport(name="accounts")
+    @Import(name="accounts")
       private final @Nullable Output<List<String>> accounts;
 
     public Output<List<String>> getAccounts() {
@@ -34,7 +34,7 @@ public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.Res
      * The organization root ID or organizational unit (OU) IDs to which StackSets deploys.
      * 
      */
-    @InputImport(name="organizationalUnitIds")
+    @Import(name="organizationalUnitIds")
       private final @Nullable Output<List<String>> organizationalUnitIds;
 
     public Output<List<String>> getOrganizationalUnitIds() {

@@ -7,14 +7,14 @@ import io.pulumi.azurenative.datamigration.outputs.BlobShareResponse;
 import io.pulumi.azurenative.datamigration.outputs.FileShareResponse;
 import io.pulumi.azurenative.datamigration.outputs.MigrateSqlServerSqlMIDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse {
     /**
      * SAS URI of Azure Storage Account Container to be used for storing backup files.
@@ -52,15 +52,15 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse {
      */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ValidateMigrationInputSqlServerSqlMITaskInputResponse(
-        @OutputCustomType.Parameter("backupBlobShare") BlobShareResponse backupBlobShare,
-        @OutputCustomType.Parameter("backupFileShare") @Nullable FileShareResponse backupFileShare,
-        @OutputCustomType.Parameter("backupMode") @Nullable String backupMode,
-        @OutputCustomType.Parameter("selectedDatabases") List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases,
-        @OutputCustomType.Parameter("selectedLogins") @Nullable List<String> selectedLogins,
-        @OutputCustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo,
-        @OutputCustomType.Parameter("targetConnectionInfo") SqlConnectionInfoResponse targetConnectionInfo) {
+        @CustomType.Parameter("backupBlobShare") BlobShareResponse backupBlobShare,
+        @CustomType.Parameter("backupFileShare") @Nullable FileShareResponse backupFileShare,
+        @CustomType.Parameter("backupMode") @Nullable String backupMode,
+        @CustomType.Parameter("selectedDatabases") List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases,
+        @CustomType.Parameter("selectedLogins") @Nullable List<String> selectedLogins,
+        @CustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo,
+        @CustomType.Parameter("targetConnectionInfo") SqlConnectionInfoResponse targetConnectionInfo) {
         this.backupBlobShare = backupBlobShare;
         this.backupFileShare = backupFileShare;
         this.backupMode = backupMode;

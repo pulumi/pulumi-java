@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.sqladmin_v1.outputs.DiskEncryptionConfigurationResponse;
 import io.pulumi.googlenative.sqladmin_v1.outputs.DiskEncryptionStatusResponse;
 import io.pulumi.googlenative.sqladmin_v1.outputs.OperationErrorResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackupRunResult {
     /**
      * Specifies the kind of backup, PHYSICAL or DEFAULT_SNAPSHOT.
@@ -88,23 +88,23 @@ public final class GetBackupRunResult {
      */
     private final String windowStartTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackupRunResult(
-        @OutputCustomType.Parameter("backupKind") String backupKind,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("diskEncryptionConfiguration") DiskEncryptionConfigurationResponse diskEncryptionConfiguration,
-        @OutputCustomType.Parameter("diskEncryptionStatus") DiskEncryptionStatusResponse diskEncryptionStatus,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("enqueuedTime") String enqueuedTime,
-        @OutputCustomType.Parameter("error") OperationErrorResponse error,
-        @OutputCustomType.Parameter("instance") String instance,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("windowStartTime") String windowStartTime) {
+        @CustomType.Parameter("backupKind") String backupKind,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("diskEncryptionConfiguration") DiskEncryptionConfigurationResponse diskEncryptionConfiguration,
+        @CustomType.Parameter("diskEncryptionStatus") DiskEncryptionStatusResponse diskEncryptionStatus,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("enqueuedTime") String enqueuedTime,
+        @CustomType.Parameter("error") OperationErrorResponse error,
+        @CustomType.Parameter("instance") String instance,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("windowStartTime") String windowStartTime) {
         this.backupKind = backupKind;
         this.description = description;
         this.diskEncryptionConfiguration = diskEncryptionConfiguration;

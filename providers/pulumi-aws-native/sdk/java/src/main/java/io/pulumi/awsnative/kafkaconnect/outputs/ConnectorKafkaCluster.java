@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.kafkaconnect.outputs;
 
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorApacheKafkaCluster;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorKafkaCluster {
     private final ConnectorApacheKafkaCluster apacheKafkaCluster;
 
-    @OutputCustomType.Constructor
-    private ConnectorKafkaCluster(@OutputCustomType.Parameter("apacheKafkaCluster") ConnectorApacheKafkaCluster apacheKafkaCluster) {
+    @CustomType.Constructor
+    private ConnectorKafkaCluster(@CustomType.Parameter("apacheKafkaCluster") ConnectorApacheKafkaCluster apacheKafkaCluster) {
         this.apacheKafkaCluster = apacheKafkaCluster;
     }
 

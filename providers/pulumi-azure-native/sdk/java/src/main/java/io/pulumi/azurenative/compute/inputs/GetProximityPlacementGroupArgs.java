@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetProximityPlacementGroupArgs extends io.pulumi.resources.In
      * includeColocationStatus=true enables fetching the colocation status of all the resources in the proximity placement group.
      * 
      */
-    @InputImport(name="includeColocationStatus")
+    @Import(name="includeColocationStatus")
       private final @Nullable String includeColocationStatus;
 
     public Optional<String> getIncludeColocationStatus() {
@@ -29,7 +29,7 @@ public final class GetProximityPlacementGroupArgs extends io.pulumi.resources.In
      * The name of the proximity placement group.
      * 
      */
-    @InputImport(name="proximityPlacementGroupName", required=true)
+    @Import(name="proximityPlacementGroupName", required=true)
       private final String proximityPlacementGroupName;
 
     public String getProximityPlacementGroupName() {
@@ -40,7 +40,7 @@ public final class GetProximityPlacementGroupArgs extends io.pulumi.resources.In
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

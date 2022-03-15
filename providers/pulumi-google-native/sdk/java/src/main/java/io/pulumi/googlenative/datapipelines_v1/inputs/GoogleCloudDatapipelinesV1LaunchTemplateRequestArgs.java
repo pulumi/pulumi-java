@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datapipelines_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
      * A Cloud Storage path to the template from which to create the job. Must be a valid Cloud Storage URL, beginning with 'gs://'.
      * 
      */
-    @InputImport(name="gcsPath")
+    @Import(name="gcsPath")
       private final @Nullable Output<String> gcsPath;
 
     public Output<String> getGcsPath() {
@@ -35,7 +35,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
      * The parameters of the template to launch. This should be part of the body of the POST request.
      * 
      */
-    @InputImport(name="launchParameters")
+    @Import(name="launchParameters")
       private final @Nullable Output<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> launchParameters;
 
     public Output<GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs> getLaunchParameters() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
      * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) to which to direct the request.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -57,7 +57,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
      * The ID of the Cloud Platform project that the job belongs to.
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final Output<String> project;
 
     public Output<String> getProject() {
@@ -68,7 +68,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestArgs extends i
      * If true, the request is validated but not actually executed. Defaults to false.
      * 
      */
-    @InputImport(name="validateOnly")
+    @Import(name="validateOnly")
       private final @Nullable Output<Boolean> validateOnly;
 
     public Output<Boolean> getValidateOnly() {

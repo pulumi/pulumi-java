@@ -9,7 +9,7 @@ import io.pulumi.azurenative.hybriddata.enums.UserConfirmation;
 import io.pulumi.azurenative.hybriddata.inputs.CustomerSecretArgs;
 import io.pulumi.azurenative.hybriddata.inputs.ScheduleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
      * 
      */
-    @InputImport(name="customerSecrets")
+    @Import(name="customerSecrets")
       private final @Nullable Output<List<CustomerSecretArgs>> customerSecrets;
 
     public Output<List<CustomerSecretArgs>> getCustomerSecrets() {
@@ -36,7 +36,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
      * 
      */
-    @InputImport(name="dataManagerName", required=true)
+    @Import(name="dataManagerName", required=true)
       private final Output<String> dataManagerName;
 
     public Output<String> getDataManagerName() {
@@ -47,7 +47,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * A generic json used differently by each data service type.
      * 
      */
-    @InputImport(name="dataServiceInput")
+    @Import(name="dataServiceInput")
       private final @Nullable Output<Object> dataServiceInput;
 
     public Output<Object> getDataServiceInput() {
@@ -58,7 +58,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * The data service type of the job definition.
      * 
      */
-    @InputImport(name="dataServiceName", required=true)
+    @Import(name="dataServiceName", required=true)
       private final Output<String> dataServiceName;
 
     public Output<String> getDataServiceName() {
@@ -69,7 +69,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Data Sink Id associated to the job definition.
      * 
      */
-    @InputImport(name="dataSinkId", required=true)
+    @Import(name="dataSinkId", required=true)
       private final Output<String> dataSinkId;
 
     public Output<String> getDataSinkId() {
@@ -80,7 +80,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Data Source Id associated to the job definition.
      * 
      */
-    @InputImport(name="dataSourceId", required=true)
+    @Import(name="dataSourceId", required=true)
       private final Output<String> dataSourceId;
 
     public Output<String> getDataSourceId() {
@@ -91,7 +91,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * The job definition name to be created or updated.
      * 
      */
-    @InputImport(name="jobDefinitionName")
+    @Import(name="jobDefinitionName")
       private final @Nullable Output<String> jobDefinitionName;
 
     public Output<String> getJobDefinitionName() {
@@ -102,7 +102,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Last modified time of the job definition.
      * 
      */
-    @InputImport(name="lastModifiedTime")
+    @Import(name="lastModifiedTime")
       private final @Nullable Output<String> lastModifiedTime;
 
     public Output<String> getLastModifiedTime() {
@@ -113,7 +113,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * The Resource Group Name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -124,7 +124,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * This is the preferred geo location for the job to run.
      * 
      */
-    @InputImport(name="runLocation")
+    @Import(name="runLocation")
       private final @Nullable Output<RunLocation> runLocation;
 
     public Output<RunLocation> getRunLocation() {
@@ -135,7 +135,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Schedule for running the job definition
      * 
      */
-    @InputImport(name="schedules")
+    @Import(name="schedules")
       private final @Nullable Output<List<ScheduleArgs>> schedules;
 
     public Output<List<ScheduleArgs>> getSchedules() {
@@ -146,7 +146,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * State of the job definition.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final Output<State> state;
 
     public Output<State> getState() {
@@ -157,7 +157,7 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Enum to detect if user confirmation is required. If not passed will default to NotRequired.
      * 
      */
-    @InputImport(name="userConfirmation")
+    @Import(name="userConfirmation")
       private final @Nullable Output<UserConfirmation> userConfirmation;
 
     public Output<UserConfirmation> getUserConfirmation() {

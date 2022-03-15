@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hanaonazure.inputs;
 
 import io.pulumi.azurenative.hanaonazure.inputs.DiskResponse;
 import io.pulumi.azurenative.hanaonazure.inputs.SAPSystemIDResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * Specifies information related to SAP system IDs for the hana instance.
      * 
      */
-    @InputImport(name="hanaSids")
+    @Import(name="hanaSids")
       private final @Nullable List<SAPSystemIDResponse> hanaSids;
 
     public List<SAPSystemIDResponse> getHanaSids() {
@@ -36,7 +36,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * IP Address to connect to storage.
      * 
      */
-    @InputImport(name="nfsIpAddress", required=true)
+    @Import(name="nfsIpAddress", required=true)
       private final String nfsIpAddress;
 
     public String getNfsIpAddress() {
@@ -47,7 +47,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * Specifies information about the operating system disk used by the hana instance.
      * 
      */
-    @InputImport(name="osDisks")
+    @Import(name="osDisks")
       private final @Nullable List<DiskResponse> osDisks;
 
     public List<DiskResponse> getOsDisks() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.guardduty.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDetectorResult {
     /**
      * The frequency of notifications sent about subsequent finding occurrences.
@@ -26,12 +26,12 @@ public final class GetDetectorResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDetectorResult(
-        @OutputCustomType.Parameter("findingPublishingFrequency") String findingPublishingFrequency,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("serviceRoleArn") String serviceRoleArn,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("findingPublishingFrequency") String findingPublishingFrequency,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("serviceRoleArn") String serviceRoleArn,
+        @CustomType.Parameter("status") String status) {
         this.findingPublishingFrequency = findingPublishingFrequency;
         this.id = id;
         this.serviceRoleArn = serviceRoleArn;

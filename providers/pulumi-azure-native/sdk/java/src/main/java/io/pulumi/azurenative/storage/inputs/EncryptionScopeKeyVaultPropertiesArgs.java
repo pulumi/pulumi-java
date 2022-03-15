@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class EncryptionScopeKeyVaultPropertiesArgs extends io.pulumi.resou
      * The object identifier for a key vault key object. When applied, the encryption scope will use the key referenced by the identifier to enable customer-managed key support on this encryption scope.
      * 
      */
-    @InputImport(name="keyUri")
+    @Import(name="keyUri")
       private final @Nullable Output<String> keyUri;
 
     public Output<String> getKeyUri() {

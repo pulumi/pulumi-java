@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse {
     /**
      * Carousel items.
@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectRespon
      */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse> items;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse(@OutputCustomType.Parameter("items") List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse> items) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse(@CustomType.Parameter("items") List<GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse> items) {
         this.items = items;
     }
 

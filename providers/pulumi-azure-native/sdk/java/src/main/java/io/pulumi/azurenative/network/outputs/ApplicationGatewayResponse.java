@@ -28,7 +28,7 @@ import io.pulumi.azurenative.network.outputs.ApplicationGatewayUrlPathMapRespons
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayWebApplicationFirewallConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayResponse {
     /**
      * Authentication certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
@@ -230,46 +230,46 @@ public final class ApplicationGatewayResponse {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayResponse(
-        @OutputCustomType.Parameter("authenticationCertificates") @Nullable List<ApplicationGatewayAuthenticationCertificateResponse> authenticationCertificates,
-        @OutputCustomType.Parameter("autoscaleConfiguration") @Nullable ApplicationGatewayAutoscaleConfigurationResponse autoscaleConfiguration,
-        @OutputCustomType.Parameter("backendAddressPools") @Nullable List<ApplicationGatewayBackendAddressPoolResponse> backendAddressPools,
-        @OutputCustomType.Parameter("backendHttpSettingsCollection") @Nullable List<ApplicationGatewayBackendHttpSettingsResponse> backendHttpSettingsCollection,
-        @OutputCustomType.Parameter("customErrorConfigurations") @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations,
-        @OutputCustomType.Parameter("enableFips") @Nullable Boolean enableFips,
-        @OutputCustomType.Parameter("enableHttp2") @Nullable Boolean enableHttp2,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("firewallPolicy") @Nullable SubResourceResponse firewallPolicy,
-        @OutputCustomType.Parameter("forceFirewallPolicyAssociation") @Nullable Boolean forceFirewallPolicyAssociation,
-        @OutputCustomType.Parameter("frontendIPConfigurations") @Nullable List<ApplicationGatewayFrontendIPConfigurationResponse> frontendIPConfigurations,
-        @OutputCustomType.Parameter("frontendPorts") @Nullable List<ApplicationGatewayFrontendPortResponse> frontendPorts,
-        @OutputCustomType.Parameter("gatewayIPConfigurations") @Nullable List<ApplicationGatewayIPConfigurationResponse> gatewayIPConfigurations,
-        @OutputCustomType.Parameter("httpListeners") @Nullable List<ApplicationGatewayHttpListenerResponse> httpListeners,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operationalState") String operationalState,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<ApplicationGatewayPrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("privateLinkConfigurations") @Nullable List<ApplicationGatewayPrivateLinkConfigurationResponse> privateLinkConfigurations,
-        @OutputCustomType.Parameter("probes") @Nullable List<ApplicationGatewayProbeResponse> probes,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("redirectConfigurations") @Nullable List<ApplicationGatewayRedirectConfigurationResponse> redirectConfigurations,
-        @OutputCustomType.Parameter("requestRoutingRules") @Nullable List<ApplicationGatewayRequestRoutingRuleResponse> requestRoutingRules,
-        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
-        @OutputCustomType.Parameter("rewriteRuleSets") @Nullable List<ApplicationGatewayRewriteRuleSetResponse> rewriteRuleSets,
-        @OutputCustomType.Parameter("sku") @Nullable ApplicationGatewaySkuResponse sku,
-        @OutputCustomType.Parameter("sslCertificates") @Nullable List<ApplicationGatewaySslCertificateResponse> sslCertificates,
-        @OutputCustomType.Parameter("sslPolicy") @Nullable ApplicationGatewaySslPolicyResponse sslPolicy,
-        @OutputCustomType.Parameter("sslProfiles") @Nullable List<ApplicationGatewaySslProfileResponse> sslProfiles,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("trustedClientCertificates") @Nullable List<ApplicationGatewayTrustedClientCertificateResponse> trustedClientCertificates,
-        @OutputCustomType.Parameter("trustedRootCertificates") @Nullable List<ApplicationGatewayTrustedRootCertificateResponse> trustedRootCertificates,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("urlPathMaps") @Nullable List<ApplicationGatewayUrlPathMapResponse> urlPathMaps,
-        @OutputCustomType.Parameter("webApplicationFirewallConfiguration") @Nullable ApplicationGatewayWebApplicationFirewallConfigurationResponse webApplicationFirewallConfiguration,
-        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
+        @CustomType.Parameter("authenticationCertificates") @Nullable List<ApplicationGatewayAuthenticationCertificateResponse> authenticationCertificates,
+        @CustomType.Parameter("autoscaleConfiguration") @Nullable ApplicationGatewayAutoscaleConfigurationResponse autoscaleConfiguration,
+        @CustomType.Parameter("backendAddressPools") @Nullable List<ApplicationGatewayBackendAddressPoolResponse> backendAddressPools,
+        @CustomType.Parameter("backendHttpSettingsCollection") @Nullable List<ApplicationGatewayBackendHttpSettingsResponse> backendHttpSettingsCollection,
+        @CustomType.Parameter("customErrorConfigurations") @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations,
+        @CustomType.Parameter("enableFips") @Nullable Boolean enableFips,
+        @CustomType.Parameter("enableHttp2") @Nullable Boolean enableHttp2,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("firewallPolicy") @Nullable SubResourceResponse firewallPolicy,
+        @CustomType.Parameter("forceFirewallPolicyAssociation") @Nullable Boolean forceFirewallPolicyAssociation,
+        @CustomType.Parameter("frontendIPConfigurations") @Nullable List<ApplicationGatewayFrontendIPConfigurationResponse> frontendIPConfigurations,
+        @CustomType.Parameter("frontendPorts") @Nullable List<ApplicationGatewayFrontendPortResponse> frontendPorts,
+        @CustomType.Parameter("gatewayIPConfigurations") @Nullable List<ApplicationGatewayIPConfigurationResponse> gatewayIPConfigurations,
+        @CustomType.Parameter("httpListeners") @Nullable List<ApplicationGatewayHttpListenerResponse> httpListeners,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operationalState") String operationalState,
+        @CustomType.Parameter("privateEndpointConnections") List<ApplicationGatewayPrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("privateLinkConfigurations") @Nullable List<ApplicationGatewayPrivateLinkConfigurationResponse> privateLinkConfigurations,
+        @CustomType.Parameter("probes") @Nullable List<ApplicationGatewayProbeResponse> probes,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("redirectConfigurations") @Nullable List<ApplicationGatewayRedirectConfigurationResponse> redirectConfigurations,
+        @CustomType.Parameter("requestRoutingRules") @Nullable List<ApplicationGatewayRequestRoutingRuleResponse> requestRoutingRules,
+        @CustomType.Parameter("resourceGuid") String resourceGuid,
+        @CustomType.Parameter("rewriteRuleSets") @Nullable List<ApplicationGatewayRewriteRuleSetResponse> rewriteRuleSets,
+        @CustomType.Parameter("sku") @Nullable ApplicationGatewaySkuResponse sku,
+        @CustomType.Parameter("sslCertificates") @Nullable List<ApplicationGatewaySslCertificateResponse> sslCertificates,
+        @CustomType.Parameter("sslPolicy") @Nullable ApplicationGatewaySslPolicyResponse sslPolicy,
+        @CustomType.Parameter("sslProfiles") @Nullable List<ApplicationGatewaySslProfileResponse> sslProfiles,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("trustedClientCertificates") @Nullable List<ApplicationGatewayTrustedClientCertificateResponse> trustedClientCertificates,
+        @CustomType.Parameter("trustedRootCertificates") @Nullable List<ApplicationGatewayTrustedRootCertificateResponse> trustedRootCertificates,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("urlPathMaps") @Nullable List<ApplicationGatewayUrlPathMapResponse> urlPathMaps,
+        @CustomType.Parameter("webApplicationFirewallConfiguration") @Nullable ApplicationGatewayWebApplicationFirewallConfigurationResponse webApplicationFirewallConfiguration,
+        @CustomType.Parameter("zones") @Nullable List<String> zones) {
         this.authenticationCertificates = authenticationCertificates;
         this.autoscaleConfiguration = autoscaleConfiguration;
         this.backendAddressPools = backendAddressPools;

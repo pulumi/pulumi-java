@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
      * The port to which the external traffic will be redirected.
      * 
      */
-    @InputImport(name="backendPort")
+    @Import(name="backendPort")
       private final @Nullable Integer backendPort;
 
     public Optional<Integer> getBackendPort() {
@@ -34,7 +34,7 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
      * The external endpoint port of the inbound connection. Possible values range between 1 and 65535, inclusive. If unspecified, a value will be allocated automatically.
      * 
      */
-    @InputImport(name="frontendPort")
+    @Import(name="frontendPort")
       private final @Nullable Integer frontendPort;
 
     public Optional<Integer> getFrontendPort() {
@@ -45,7 +45,7 @@ public final class InboundNatRuleResponse extends io.pulumi.resources.InvokeArgs
      * The transport protocol for the endpoint.
      * 
      */
-    @InputImport(name="transportProtocol")
+    @Import(name="transportProtocol")
       private final @Nullable String transportProtocol;
 
     public Optional<String> getTransportProtocol() {

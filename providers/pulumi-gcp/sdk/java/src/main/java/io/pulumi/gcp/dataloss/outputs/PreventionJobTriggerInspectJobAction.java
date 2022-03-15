@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobActionSaveFindings;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PreventionJobTriggerInspectJobAction {
     /**
      * Schedule for triggered jobs
@@ -16,8 +16,8 @@ public final class PreventionJobTriggerInspectJobAction {
      */
     private final PreventionJobTriggerInspectJobActionSaveFindings saveFindings;
 
-    @OutputCustomType.Constructor
-    private PreventionJobTriggerInspectJobAction(@OutputCustomType.Parameter("saveFindings") PreventionJobTriggerInspectJobActionSaveFindings saveFindings) {
+    @CustomType.Constructor
+    private PreventionJobTriggerInspectJobAction(@CustomType.Parameter("saveFindings") PreventionJobTriggerInspectJobActionSaveFindings saveFindings) {
         this.saveFindings = saveFindings;
     }
 

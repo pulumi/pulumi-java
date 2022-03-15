@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.logging.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricMetricDescriptorLabel {
     /**
      * A description of this metric, which is used in documentation. The maximum length of the
@@ -30,11 +30,11 @@ public final class MetricMetricDescriptorLabel {
      */
     private final @Nullable String valueType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricMetricDescriptorLabel(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("valueType") @Nullable String valueType) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("valueType") @Nullable String valueType) {
         this.description = description;
         this.key = key;
         this.valueType = valueType;

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.customerprofiles.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetObjectTypeArgs extends io.pulumi.resources.InvokeArgs {
      * The unique name of the domain.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final String domainName;
 
     public String getDomainName() {
@@ -27,7 +27,7 @@ public final class GetObjectTypeArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the profile object type.
      * 
      */
-    @InputImport(name="objectTypeName", required=true)
+    @Import(name="objectTypeName", required=true)
       private final String objectTypeName;
 
     public String getObjectTypeName() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class AccessLevelsArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="accessLevels")
+    @Import(name="accessLevels")
       private final @Nullable Output<List<AccessLevelsAccessLevelArgs>> accessLevels;
 
     public Output<List<AccessLevelsAccessLevelArgs>> getAccessLevels() {
@@ -33,7 +33,7 @@ public final class AccessLevelsArgs extends io.pulumi.resources.ResourceArgs {
      * Format: accessPolicies/{policy_id}
      * 
      */
-    @InputImport(name="parent", required=true)
+    @Import(name="parent", required=true)
       private final Output<String> parent;
 
     public Output<String> getParent() {

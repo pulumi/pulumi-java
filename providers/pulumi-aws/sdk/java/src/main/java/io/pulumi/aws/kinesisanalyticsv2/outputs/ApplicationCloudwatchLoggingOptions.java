@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationCloudwatchLoggingOptions {
     private final @Nullable String cloudwatchLoggingOptionId;
     /**
@@ -18,10 +18,10 @@ public final class ApplicationCloudwatchLoggingOptions {
      */
     private final String logStreamArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationCloudwatchLoggingOptions(
-        @OutputCustomType.Parameter("cloudwatchLoggingOptionId") @Nullable String cloudwatchLoggingOptionId,
-        @OutputCustomType.Parameter("logStreamArn") String logStreamArn) {
+        @CustomType.Parameter("cloudwatchLoggingOptionId") @Nullable String cloudwatchLoggingOptionId,
+        @CustomType.Parameter("logStreamArn") String logStreamArn) {
         this.cloudwatchLoggingOptionId = cloudwatchLoggingOptionId;
         this.logStreamArn = logStreamArn;
     }

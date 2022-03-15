@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecretResourcePropertiesResponse {
     /**
      * The type of the content stored in the secret value. The value of this property is opaque to Service Fabric. Once set, the value of this property cannot be changed.
@@ -43,14 +43,14 @@ public final class SecretResourcePropertiesResponse {
      */
     private final String statusDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecretResourcePropertiesResponse(
-        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusDetails") String statusDetails) {
+        @CustomType.Parameter("contentType") @Nullable String contentType,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusDetails") String statusDetails) {
         this.contentType = contentType;
         this.description = description;
         this.kind = kind;

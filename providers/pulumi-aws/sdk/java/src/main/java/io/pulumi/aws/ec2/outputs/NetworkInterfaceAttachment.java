@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInterfaceAttachment {
     private final @Nullable String attachmentId;
     /**
@@ -24,11 +24,11 @@ public final class NetworkInterfaceAttachment {
      */
     private final String instance;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInterfaceAttachment(
-        @OutputCustomType.Parameter("attachmentId") @Nullable String attachmentId,
-        @OutputCustomType.Parameter("deviceIndex") Integer deviceIndex,
-        @OutputCustomType.Parameter("instance") String instance) {
+        @CustomType.Parameter("attachmentId") @Nullable String attachmentId,
+        @CustomType.Parameter("deviceIndex") Integer deviceIndex,
+        @CustomType.Parameter("instance") String instance) {
         this.attachmentId = attachmentId;
         this.deviceIndex = deviceIndex;
         this.instance = instance;

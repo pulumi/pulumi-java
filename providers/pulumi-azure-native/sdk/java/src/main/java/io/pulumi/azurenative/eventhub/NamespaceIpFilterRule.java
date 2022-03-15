@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.eventhub.NamespaceIpFilterRuleArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class NamespaceIpFilterRule extends io.pulumi.resources.CustomResource {
      * The IP Filter Action
      * 
      */
-    @OutputExport(name="action", type=String.class, parameters={})
+    @Export(name="action", type=String.class, parameters={})
     private Output</* @Nullable */ String> action;
 
     /**
@@ -48,7 +48,7 @@ public class NamespaceIpFilterRule extends io.pulumi.resources.CustomResource {
      * IP Filter name
      * 
      */
-    @OutputExport(name="filterName", type=String.class, parameters={})
+    @Export(name="filterName", type=String.class, parameters={})
     private Output</* @Nullable */ String> filterName;
 
     /**
@@ -62,7 +62,7 @@ public class NamespaceIpFilterRule extends io.pulumi.resources.CustomResource {
      * IP Mask
      * 
      */
-    @OutputExport(name="ipMask", type=String.class, parameters={})
+    @Export(name="ipMask", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipMask;
 
     /**
@@ -76,7 +76,7 @@ public class NamespaceIpFilterRule extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -90,7 +90,7 @@ public class NamespaceIpFilterRule extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

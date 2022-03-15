@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancerBackendAddressResponse {
     /**
      * IP Address belonging to the referenced virtual network.
@@ -43,14 +43,14 @@ public final class LoadBalancerBackendAddressResponse {
      */
     private final @Nullable SubResourceResponse virtualNetwork;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoadBalancerBackendAddressResponse(
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("loadBalancerFrontendIPConfiguration") @Nullable SubResourceResponse loadBalancerFrontendIPConfiguration,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("networkInterfaceIPConfiguration") SubResourceResponse networkInterfaceIPConfiguration,
-        @OutputCustomType.Parameter("subnet") @Nullable SubResourceResponse subnet,
-        @OutputCustomType.Parameter("virtualNetwork") @Nullable SubResourceResponse virtualNetwork) {
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("loadBalancerFrontendIPConfiguration") @Nullable SubResourceResponse loadBalancerFrontendIPConfiguration,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("networkInterfaceIPConfiguration") SubResourceResponse networkInterfaceIPConfiguration,
+        @CustomType.Parameter("subnet") @Nullable SubResourceResponse subnet,
+        @CustomType.Parameter("virtualNetwork") @Nullable SubResourceResponse virtualNetwork) {
         this.ipAddress = ipAddress;
         this.loadBalancerFrontendIPConfiguration = loadBalancerFrontendIPConfiguration;
         this.name = name;

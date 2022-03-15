@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.appstream.outputs;
 
 import io.pulumi.awsnative.appstream.outputs.ApplicationS3Location;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApplicationResult {
     private final @Nullable String appBlockArn;
     private final @Nullable String arn;
@@ -24,18 +24,18 @@ public final class GetApplicationResult {
     private final @Nullable String launchPath;
     private final @Nullable String workingDirectory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApplicationResult(
-        @OutputCustomType.Parameter("appBlockArn") @Nullable String appBlockArn,
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("attributesToDelete") @Nullable List<String> attributesToDelete,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("iconS3Location") @Nullable ApplicationS3Location iconS3Location,
-        @OutputCustomType.Parameter("launchParameters") @Nullable String launchParameters,
-        @OutputCustomType.Parameter("launchPath") @Nullable String launchPath,
-        @OutputCustomType.Parameter("workingDirectory") @Nullable String workingDirectory) {
+        @CustomType.Parameter("appBlockArn") @Nullable String appBlockArn,
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("attributesToDelete") @Nullable List<String> attributesToDelete,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("iconS3Location") @Nullable ApplicationS3Location iconS3Location,
+        @CustomType.Parameter("launchParameters") @Nullable String launchParameters,
+        @CustomType.Parameter("launchPath") @Nullable String launchPath,
+        @CustomType.Parameter("workingDirectory") @Nullable String workingDirectory) {
         this.appBlockArn = appBlockArn;
         this.arn = arn;
         this.attributesToDelete = attributesToDelete;

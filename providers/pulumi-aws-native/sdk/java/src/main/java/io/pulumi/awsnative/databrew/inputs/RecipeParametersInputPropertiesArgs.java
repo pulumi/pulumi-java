@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.RecipeDataCatalogInputDefinitionArgs;
 import io.pulumi.awsnative.databrew.inputs.RecipeS3LocationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,14 +19,14 @@ public final class RecipeParametersInputPropertiesArgs extends io.pulumi.resourc
 
     public static final RecipeParametersInputPropertiesArgs Empty = new RecipeParametersInputPropertiesArgs();
 
-    @InputImport(name="dataCatalogInputDefinition")
+    @Import(name="dataCatalogInputDefinition")
       private final @Nullable Output<RecipeDataCatalogInputDefinitionArgs> dataCatalogInputDefinition;
 
     public Output<RecipeDataCatalogInputDefinitionArgs> getDataCatalogInputDefinition() {
         return this.dataCatalogInputDefinition == null ? Output.empty() : this.dataCatalogInputDefinition;
     }
 
-    @InputImport(name="s3InputDefinition")
+    @Import(name="s3InputDefinition")
       private final @Nullable Output<RecipeS3LocationArgs> s3InputDefinition;
 
     public Output<RecipeS3LocationArgs> getS3InputDefinition() {

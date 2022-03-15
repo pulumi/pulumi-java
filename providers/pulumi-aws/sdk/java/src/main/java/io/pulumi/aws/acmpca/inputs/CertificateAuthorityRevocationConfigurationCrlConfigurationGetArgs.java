@@ -4,7 +4,7 @@
 package io.pulumi.aws.acmpca.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfigurationGe
      * Name inserted into the certificate CRL Distribution Points extension that enables the use of an alias for the CRL distribution point. Use this value if you don't want the name of your S3 bucket to be public. Must be less than or equal to 253 characters in length.
      * 
      */
-    @InputImport(name="customCname")
+    @Import(name="customCname")
       private final @Nullable Output<String> customCname;
 
     public Output<String> getCustomCname() {
@@ -31,7 +31,7 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfigurationGe
      * Boolean value that specifies whether certificate revocation lists (CRLs) are enabled. Defaults to `false`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -42,7 +42,7 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfigurationGe
      * Number of days until a certificate expires. Must be between 1 and 5000.
      * 
      */
-    @InputImport(name="expirationInDays", required=true)
+    @Import(name="expirationInDays", required=true)
       private final Output<Integer> expirationInDays;
 
     public Output<Integer> getExpirationInDays() {
@@ -53,7 +53,7 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfigurationGe
      * Name of the S3 bucket that contains the CRL. If you do not provide a value for the `custom_cname` argument, the name of your S3 bucket is placed into the CRL Distribution Points extension of the issued certificate. You must specify a bucket policy that allows ACM PCA to write the CRL to your bucket. Must be less than or equal to 255 characters in length.
      * 
      */
-    @InputImport(name="s3BucketName")
+    @Import(name="s3BucketName")
       private final @Nullable Output<String> s3BucketName;
 
     public Output<String> getS3BucketName() {
@@ -64,7 +64,7 @@ public final class CertificateAuthorityRevocationConfigurationCrlConfigurationGe
      * Determines whether the CRL will be publicly readable or privately held in the CRL Amazon S3 bucket. Defaults to `PUBLIC_READ`.
      * 
      */
-    @InputImport(name="s3ObjectAcl")
+    @Import(name="s3ObjectAcl")
       private final @Nullable Output<String> s3ObjectAcl;
 
     public Output<String> getS3ObjectAcl() {

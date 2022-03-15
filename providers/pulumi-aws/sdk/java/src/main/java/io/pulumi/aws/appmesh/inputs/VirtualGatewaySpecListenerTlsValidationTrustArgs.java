@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsValidationTrustFileArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecListenerTlsValidationTrustSdsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustArgs extends io.p
      * The TLS validation context trust for a local file certificate.
      * 
      */
-    @InputImport(name="file")
+    @Import(name="file")
       private final @Nullable Output<VirtualGatewaySpecListenerTlsValidationTrustFileArgs> file;
 
     public Output<VirtualGatewaySpecListenerTlsValidationTrustFileArgs> getFile() {
@@ -30,7 +30,7 @@ public final class VirtualGatewaySpecListenerTlsValidationTrustArgs extends io.p
      * The TLS validation context trust for a [Secret Discovery Service](https://www.envoyproxy.io/docs/envoy/latest/configuration/security/secret#secret-discovery-service-sds) certificate.
      * 
      */
-    @InputImport(name="sds")
+    @Import(name="sds")
       private final @Nullable Output<VirtualGatewaySpecListenerTlsValidationTrustSdsArgs> sds;
 
     public Output<VirtualGatewaySpecListenerTlsValidationTrustSdsArgs> getSds() {

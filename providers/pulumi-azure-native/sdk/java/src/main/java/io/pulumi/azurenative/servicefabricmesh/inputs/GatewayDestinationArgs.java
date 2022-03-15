@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GatewayDestinationArgs extends io.pulumi.resources.ResourceAr
      * Name of the service fabric Mesh application.
      * 
      */
-    @InputImport(name="applicationName", required=true)
+    @Import(name="applicationName", required=true)
       private final Output<String> applicationName;
 
     public Output<String> getApplicationName() {
@@ -32,7 +32,7 @@ public final class GatewayDestinationArgs extends io.pulumi.resources.ResourceAr
      * name of the endpoint in the service.
      * 
      */
-    @InputImport(name="endpointName", required=true)
+    @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
     public Output<String> getEndpointName() {
@@ -43,7 +43,7 @@ public final class GatewayDestinationArgs extends io.pulumi.resources.ResourceAr
      * service that contains the endpoint.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {

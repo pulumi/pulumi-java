@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RetryPolicyResponse {
     /**
      * Maximum ordinary retry attempts. Default is 0. Type: integer (or Expression with resultType integer), minimum: 0.
@@ -23,10 +23,10 @@ public final class RetryPolicyResponse {
      */
     private final @Nullable Integer intervalInSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RetryPolicyResponse(
-        @OutputCustomType.Parameter("count") @Nullable Object count,
-        @OutputCustomType.Parameter("intervalInSeconds") @Nullable Integer intervalInSeconds) {
+        @CustomType.Parameter("count") @Nullable Object count,
+        @CustomType.Parameter("intervalInSeconds") @Nullable Integer intervalInSeconds) {
         this.count = count;
         this.intervalInSeconds = intervalInSeconds;
     }

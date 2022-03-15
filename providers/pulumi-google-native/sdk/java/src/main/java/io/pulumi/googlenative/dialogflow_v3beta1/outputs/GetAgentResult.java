@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAgentResult {
     /**
      * Hierarchical advanced settings for this agent. The settings exposed at the lower level overrides the settings exposed at the higher level.
@@ -79,21 +79,21 @@ public final class GetAgentResult {
      */
     private final String timeZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAgentResult(
-        @OutputCustomType.Parameter("advancedSettings") GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse advancedSettings,
-        @OutputCustomType.Parameter("avatarUri") String avatarUri,
-        @OutputCustomType.Parameter("defaultLanguageCode") String defaultLanguageCode,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("enableSpellCorrection") Boolean enableSpellCorrection,
-        @OutputCustomType.Parameter("enableStackdriverLogging") Boolean enableStackdriverLogging,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("securitySettings") String securitySettings,
-        @OutputCustomType.Parameter("speechToTextSettings") GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse speechToTextSettings,
-        @OutputCustomType.Parameter("startFlow") String startFlow,
-        @OutputCustomType.Parameter("supportedLanguageCodes") List<String> supportedLanguageCodes,
-        @OutputCustomType.Parameter("timeZone") String timeZone) {
+        @CustomType.Parameter("advancedSettings") GoogleCloudDialogflowCxV3beta1AdvancedSettingsResponse advancedSettings,
+        @CustomType.Parameter("avatarUri") String avatarUri,
+        @CustomType.Parameter("defaultLanguageCode") String defaultLanguageCode,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("enableSpellCorrection") Boolean enableSpellCorrection,
+        @CustomType.Parameter("enableStackdriverLogging") Boolean enableStackdriverLogging,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("securitySettings") String securitySettings,
+        @CustomType.Parameter("speechToTextSettings") GoogleCloudDialogflowCxV3beta1SpeechToTextSettingsResponse speechToTextSettings,
+        @CustomType.Parameter("startFlow") String startFlow,
+        @CustomType.Parameter("supportedLanguageCodes") List<String> supportedLanguageCodes,
+        @CustomType.Parameter("timeZone") String timeZone) {
         this.advancedSettings = advancedSettings;
         this.avatarUri = avatarUri;
         this.defaultLanguageCode = defaultLanguageCode;

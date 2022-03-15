@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceManagedIdentityResponseIdentity {
     /**
      * Type of identity being specified, currently SystemAssigned and None are allowed.
@@ -17,8 +17,8 @@ public final class ServiceManagedIdentityResponseIdentity {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
-    private ServiceManagedIdentityResponseIdentity(@OutputCustomType.Parameter("type") @Nullable String type) {
+    @CustomType.Constructor
+    private ServiceManagedIdentityResponseIdentity(@CustomType.Parameter("type") @Nullable String type) {
         this.type = type;
     }
 

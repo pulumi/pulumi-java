@@ -12,7 +12,7 @@ import io.pulumi.azurenative.customerinsights.outputs.KpiParticipantProfilesMeta
 import io.pulumi.azurenative.customerinsights.outputs.KpiThresholdsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * The aliases.
      * 
      */
-    @OutputExport(name="aliases", type=List.class, parameters={KpiAliasResponse.class})
+    @Export(name="aliases", type=List.class, parameters={KpiAliasResponse.class})
     private Output</* @Nullable */ List<KpiAliasResponse>> aliases;
 
     /**
@@ -54,7 +54,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * The calculation window.
      * 
      */
-    @OutputExport(name="calculationWindow", type=String.class, parameters={})
+    @Export(name="calculationWindow", type=String.class, parameters={})
     private Output<String> calculationWindow;
 
     /**
@@ -68,7 +68,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * Name of calculation window field.
      * 
      */
-    @OutputExport(name="calculationWindowFieldName", type=String.class, parameters={})
+    @Export(name="calculationWindowFieldName", type=String.class, parameters={})
     private Output</* @Nullable */ String> calculationWindowFieldName;
 
     /**
@@ -82,7 +82,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * Localized description for the KPI.
      * 
      */
-    @OutputExport(name="description", type=Map.class, parameters={String.class, String.class})
+    @Export(name="description", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> description;
 
     /**
@@ -96,7 +96,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * Localized display name for the KPI.
      * 
      */
-    @OutputExport(name="displayName", type=Map.class, parameters={String.class, String.class})
+    @Export(name="displayName", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> displayName;
 
     /**
@@ -110,7 +110,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * The mapping entity type.
      * 
      */
-    @OutputExport(name="entityType", type=String.class, parameters={})
+    @Export(name="entityType", type=String.class, parameters={})
     private Output<String> entityType;
 
     /**
@@ -124,7 +124,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * The mapping entity name.
      * 
      */
-    @OutputExport(name="entityTypeName", type=String.class, parameters={})
+    @Export(name="entityTypeName", type=String.class, parameters={})
     private Output<String> entityTypeName;
 
     /**
@@ -138,7 +138,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * The computation expression for the KPI.
      * 
      */
-    @OutputExport(name="expression", type=String.class, parameters={})
+    @Export(name="expression", type=String.class, parameters={})
     private Output<String> expression;
 
     /**
@@ -152,7 +152,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * The KPI extracts.
      * 
      */
-    @OutputExport(name="extracts", type=List.class, parameters={KpiExtractResponse.class})
+    @Export(name="extracts", type=List.class, parameters={KpiExtractResponse.class})
     private Output</* @Nullable */ List<KpiExtractResponse>> extracts;
 
     /**
@@ -166,7 +166,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * The filter expression for the KPI.
      * 
      */
-    @OutputExport(name="filter", type=String.class, parameters={})
+    @Export(name="filter", type=String.class, parameters={})
     private Output</* @Nullable */ String> filter;
 
     /**
@@ -180,7 +180,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * The computation function for the KPI.
      * 
      */
-    @OutputExport(name="function", type=String.class, parameters={})
+    @Export(name="function", type=String.class, parameters={})
     private Output<String> function;
 
     /**
@@ -194,7 +194,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * the group by properties for the KPI.
      * 
      */
-    @OutputExport(name="groupBy", type=List.class, parameters={String.class})
+    @Export(name="groupBy", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> groupBy;
 
     /**
@@ -208,7 +208,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * The KPI GroupByMetadata.
      * 
      */
-    @OutputExport(name="groupByMetadata", type=List.class, parameters={KpiGroupByMetadataResponse.class})
+    @Export(name="groupByMetadata", type=List.class, parameters={KpiGroupByMetadataResponse.class})
     private Output<List<KpiGroupByMetadataResponse>> groupByMetadata;
 
     /**
@@ -222,7 +222,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * The KPI name.
      * 
      */
-    @OutputExport(name="kpiName", type=String.class, parameters={})
+    @Export(name="kpiName", type=String.class, parameters={})
     private Output<String> kpiName;
 
     /**
@@ -236,7 +236,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -250,7 +250,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * The participant profiles.
      * 
      */
-    @OutputExport(name="participantProfilesMetadata", type=List.class, parameters={KpiParticipantProfilesMetadataResponse.class})
+    @Export(name="participantProfilesMetadata", type=List.class, parameters={KpiParticipantProfilesMetadataResponse.class})
     private Output<List<KpiParticipantProfilesMetadataResponse>> participantProfilesMetadata;
 
     /**
@@ -264,7 +264,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * Provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -278,7 +278,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * The hub name.
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
@@ -292,7 +292,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * The KPI thresholds.
      * 
      */
-    @OutputExport(name="thresHolds", type=KpiThresholdsResponse.class, parameters={})
+    @Export(name="thresHolds", type=KpiThresholdsResponse.class, parameters={})
     private Output</* @Nullable */ KpiThresholdsResponse> thresHolds;
 
     /**
@@ -306,7 +306,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -320,7 +320,7 @@ public class Kpi extends io.pulumi.resources.CustomResource {
      * The unit of measurement for the KPI.
      * 
      */
-    @OutputExport(name="unit", type=String.class, parameters={})
+    @Export(name="unit", type=String.class, parameters={})
     private Output</* @Nullable */ String> unit;
 
     /**

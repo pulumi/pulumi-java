@@ -4,7 +4,7 @@
 package io.pulumi.aws.budgets.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class BudgetActionSubscriberGetArgs extends io.pulumi.resources.Res
      * The address that AWS sends budget notifications to, either an SNS topic or an email.
      * 
      */
-    @InputImport(name="address", required=true)
+    @Import(name="address", required=true)
       private final Output<String> address;
 
     public Output<String> getAddress() {
@@ -28,7 +28,7 @@ public final class BudgetActionSubscriberGetArgs extends io.pulumi.resources.Res
      * The type of notification that AWS sends to a subscriber. Valid values are `SNS` or `EMAIL`.
      * 
      */
-    @InputImport(name="subscriptionType", required=true)
+    @Import(name="subscriptionType", required=true)
       private final Output<String> subscriptionType;
 
     public Output<String> getSubscriptionType() {

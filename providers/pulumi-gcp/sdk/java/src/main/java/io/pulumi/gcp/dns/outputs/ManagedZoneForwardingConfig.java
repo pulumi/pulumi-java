@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dns.outputs.ManagedZoneForwardingConfigTargetNameServer;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedZoneForwardingConfig {
     /**
      * List of target name servers to forward to. Cloud DNS will
@@ -19,8 +19,8 @@ public final class ManagedZoneForwardingConfig {
      */
     private final List<ManagedZoneForwardingConfigTargetNameServer> targetNameServers;
 
-    @OutputCustomType.Constructor
-    private ManagedZoneForwardingConfig(@OutputCustomType.Parameter("targetNameServers") List<ManagedZoneForwardingConfigTargetNameServer> targetNameServers) {
+    @CustomType.Constructor
+    private ManagedZoneForwardingConfig(@CustomType.Parameter("targetNameServers") List<ManagedZoneForwardingConfigTargetNameServer> targetNameServers) {
         this.targetNameServers = targetNameServers;
     }
 

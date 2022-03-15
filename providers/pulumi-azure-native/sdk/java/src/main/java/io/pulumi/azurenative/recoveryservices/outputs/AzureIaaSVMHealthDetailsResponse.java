@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzureIaaSVMHealthDetailsResponse {
     /**
      * Health Code
@@ -32,12 +32,12 @@ public final class AzureIaaSVMHealthDetailsResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureIaaSVMHealthDetailsResponse(
-        @OutputCustomType.Parameter("code") Integer code,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("recommendations") List<String> recommendations,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("code") Integer code,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("recommendations") List<String> recommendations,
+        @CustomType.Parameter("title") String title) {
         this.code = code;
         this.message = message;
         this.recommendations = recommendations;

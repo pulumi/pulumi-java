@@ -5,13 +5,13 @@ package io.pulumi.azurenative.azurestack.outputs;
 
 import io.pulumi.azurenative.azurestack.outputs.DataDiskImageResponse;
 import io.pulumi.azurenative.azurestack.outputs.OsDiskImageResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListProductDetailsResult {
     /**
      * Specifies kind of compute role included in the package.
@@ -69,19 +69,19 @@ public final class ListProductDetailsResult {
      */
     private final Boolean vmScaleSetEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListProductDetailsResult(
-        @OutputCustomType.Parameter("computeRole") String computeRole,
-        @OutputCustomType.Parameter("dataDiskImages") List<DataDiskImageResponse> dataDiskImages,
-        @OutputCustomType.Parameter("galleryPackageBlobSasUri") String galleryPackageBlobSasUri,
-        @OutputCustomType.Parameter("isSystemExtension") Boolean isSystemExtension,
-        @OutputCustomType.Parameter("osDiskImage") OsDiskImageResponse osDiskImage,
-        @OutputCustomType.Parameter("productKind") String productKind,
-        @OutputCustomType.Parameter("supportMultipleExtensions") Boolean supportMultipleExtensions,
-        @OutputCustomType.Parameter("uri") String uri,
-        @OutputCustomType.Parameter("version") String version,
-        @OutputCustomType.Parameter("vmOsType") String vmOsType,
-        @OutputCustomType.Parameter("vmScaleSetEnabled") Boolean vmScaleSetEnabled) {
+        @CustomType.Parameter("computeRole") String computeRole,
+        @CustomType.Parameter("dataDiskImages") List<DataDiskImageResponse> dataDiskImages,
+        @CustomType.Parameter("galleryPackageBlobSasUri") String galleryPackageBlobSasUri,
+        @CustomType.Parameter("isSystemExtension") Boolean isSystemExtension,
+        @CustomType.Parameter("osDiskImage") OsDiskImageResponse osDiskImage,
+        @CustomType.Parameter("productKind") String productKind,
+        @CustomType.Parameter("supportMultipleExtensions") Boolean supportMultipleExtensions,
+        @CustomType.Parameter("uri") String uri,
+        @CustomType.Parameter("version") String version,
+        @CustomType.Parameter("vmOsType") String vmOsType,
+        @CustomType.Parameter("vmScaleSetEnabled") Boolean vmScaleSetEnabled) {
         this.computeRole = computeRole;
         this.dataDiskImages = dataDiskImages;
         this.galleryPackageBlobSasUri = galleryPackageBlobSasUri;

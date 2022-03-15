@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.enums.RetentionDurationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class RetentionDurationArgs extends io.pulumi.resources.ResourceArg
      * For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {
@@ -37,7 +37,7 @@ public final class RetentionDurationArgs extends io.pulumi.resources.ResourceArg
      * Retention duration type of retention policy.
      * 
      */
-    @InputImport(name="durationType")
+    @Import(name="durationType")
       private final @Nullable Output<Either<String,RetentionDurationType>> durationType;
 
     public Output<Either<String,RetentionDurationType>> getDurationType() {

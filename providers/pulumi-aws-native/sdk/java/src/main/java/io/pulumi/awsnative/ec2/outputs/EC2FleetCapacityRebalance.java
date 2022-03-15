@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.enums.EC2FleetCapacityRebalanceReplacementStrategy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EC2FleetCapacityRebalance {
     private final @Nullable EC2FleetCapacityRebalanceReplacementStrategy replacementStrategy;
     private final @Nullable Integer terminationDelay;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EC2FleetCapacityRebalance(
-        @OutputCustomType.Parameter("replacementStrategy") @Nullable EC2FleetCapacityRebalanceReplacementStrategy replacementStrategy,
-        @OutputCustomType.Parameter("terminationDelay") @Nullable Integer terminationDelay) {
+        @CustomType.Parameter("replacementStrategy") @Nullable EC2FleetCapacityRebalanceReplacementStrategy replacementStrategy,
+        @CustomType.Parameter("terminationDelay") @Nullable Integer terminationDelay) {
         this.replacementStrategy = replacementStrategy;
         this.terminationDelay = terminationDelay;
     }

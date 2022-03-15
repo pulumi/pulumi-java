@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh;
 
 import io.pulumi.aws.appmesh.inputs.MeshSpecArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MeshArgs extends io.pulumi.resources.ResourceArgs {
      * The name to use for the service mesh. Must be between 1 and 255 characters in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -31,7 +31,7 @@ public final class MeshArgs extends io.pulumi.resources.ResourceArgs {
      * The service mesh specification to apply.
      * 
      */
-    @InputImport(name="spec")
+    @Import(name="spec")
       private final @Nullable Output<MeshSpecArgs> spec;
 
     public Output<MeshSpecArgs> getSpec() {
@@ -42,7 +42,7 @@ public final class MeshArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

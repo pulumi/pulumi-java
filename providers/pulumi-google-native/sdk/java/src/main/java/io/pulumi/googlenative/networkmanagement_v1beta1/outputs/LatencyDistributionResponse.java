@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.LatencyPercentileResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LatencyDistributionResponse {
     /**
      * Representative latency percentiles.
@@ -16,8 +16,8 @@ public final class LatencyDistributionResponse {
      */
     private final List<LatencyPercentileResponse> latencyPercentiles;
 
-    @OutputCustomType.Constructor
-    private LatencyDistributionResponse(@OutputCustomType.Parameter("latencyPercentiles") List<LatencyPercentileResponse> latencyPercentiles) {
+    @CustomType.Constructor
+    private LatencyDistributionResponse(@CustomType.Parameter("latencyPercentiles") List<LatencyPercentileResponse> latencyPercentiles) {
         this.latencyPercentiles = latencyPercentiles;
     }
 

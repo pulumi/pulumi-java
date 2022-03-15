@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OptionResponse {
     /**
      * The option's name. For protobuf built-in options (options defined in descriptor.proto), this is the short name. For example, `"map_entry"`. For custom options, it should be the fully-qualified name. For example, `"google.api.http"`.
@@ -21,10 +21,10 @@ public final class OptionResponse {
      */
     private final Map<String,String> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OptionResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("value") Map<String,String> value) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("value") Map<String,String> value) {
         this.name = name;
         this.value = value;
     }

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackendPoolsSettingsResponse {
     /**
      * Whether to enforce certificate name check on HTTPS requests to all backend pools. No effect on non-HTTPS requests.
@@ -23,10 +23,10 @@ public final class BackendPoolsSettingsResponse {
      */
     private final @Nullable Integer sendRecvTimeoutSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendPoolsSettingsResponse(
-        @OutputCustomType.Parameter("enforceCertificateNameCheck") @Nullable String enforceCertificateNameCheck,
-        @OutputCustomType.Parameter("sendRecvTimeoutSeconds") @Nullable Integer sendRecvTimeoutSeconds) {
+        @CustomType.Parameter("enforceCertificateNameCheck") @Nullable String enforceCertificateNameCheck,
+        @CustomType.Parameter("sendRecvTimeoutSeconds") @Nullable Integer sendRecvTimeoutSeconds) {
         this.enforceCertificateNameCheck = enforceCertificateNameCheck;
         this.sendRecvTimeoutSeconds = sendRecvTimeoutSeconds;
     }

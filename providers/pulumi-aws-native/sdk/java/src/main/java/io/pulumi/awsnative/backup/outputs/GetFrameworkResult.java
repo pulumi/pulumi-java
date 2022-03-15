@@ -5,7 +5,7 @@ package io.pulumi.awsnative.backup.outputs;
 
 import io.pulumi.awsnative.backup.outputs.FrameworkControl;
 import io.pulumi.awsnative.backup.outputs.FrameworkTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFrameworkResult {
     /**
      * The date and time that a framework is created, in Unix format and Coordinated Universal Time (UTC). The value of `CreationTime` is accurate to milliseconds. For example, the value 1516925490.087 represents Friday, January 26, 2018 12:11:30.087 AM.
@@ -59,15 +59,15 @@ public final class GetFrameworkResult {
      */
     private final @Nullable List<FrameworkTag> frameworkTags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFrameworkResult(
-        @OutputCustomType.Parameter("creationTime") @Nullable Double creationTime,
-        @OutputCustomType.Parameter("deploymentStatus") @Nullable String deploymentStatus,
-        @OutputCustomType.Parameter("frameworkArn") @Nullable String frameworkArn,
-        @OutputCustomType.Parameter("frameworkControls") @Nullable List<FrameworkControl> frameworkControls,
-        @OutputCustomType.Parameter("frameworkDescription") @Nullable String frameworkDescription,
-        @OutputCustomType.Parameter("frameworkStatus") @Nullable String frameworkStatus,
-        @OutputCustomType.Parameter("frameworkTags") @Nullable List<FrameworkTag> frameworkTags) {
+        @CustomType.Parameter("creationTime") @Nullable Double creationTime,
+        @CustomType.Parameter("deploymentStatus") @Nullable String deploymentStatus,
+        @CustomType.Parameter("frameworkArn") @Nullable String frameworkArn,
+        @CustomType.Parameter("frameworkControls") @Nullable List<FrameworkControl> frameworkControls,
+        @CustomType.Parameter("frameworkDescription") @Nullable String frameworkDescription,
+        @CustomType.Parameter("frameworkStatus") @Nullable String frameworkStatus,
+        @CustomType.Parameter("frameworkTags") @Nullable List<FrameworkTag> frameworkTags) {
         this.creationTime = creationTime;
         this.deploymentStatus = deploymentStatus;
         this.frameworkArn = frameworkArn;

@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceAttachmentConsumerAcceptList {
     /**
      * The number of consumer forwarding rules the consumer project can
@@ -22,10 +22,10 @@ public final class ServiceAttachmentConsumerAcceptList {
      */
     private final String projectIdOrNum;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceAttachmentConsumerAcceptList(
-        @OutputCustomType.Parameter("connectionLimit") Integer connectionLimit,
-        @OutputCustomType.Parameter("projectIdOrNum") String projectIdOrNum) {
+        @CustomType.Parameter("connectionLimit") Integer connectionLimit,
+        @CustomType.Parameter("projectIdOrNum") String projectIdOrNum) {
         this.connectionLimit = connectionLimit;
         this.projectIdOrNum = projectIdOrNum;
     }

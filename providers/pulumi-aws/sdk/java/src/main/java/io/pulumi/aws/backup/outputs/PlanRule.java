@@ -5,7 +5,7 @@ package io.pulumi.aws.backup.outputs;
 
 import io.pulumi.aws.backup.outputs.PlanRuleCopyAction;
 import io.pulumi.aws.backup.outputs.PlanRuleLifecycle;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PlanRule {
     /**
      * The amount of time AWS Backup attempts a backup before canceling the job and returning an error.
@@ -63,17 +63,17 @@ public final class PlanRule {
      */
     private final String targetVaultName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PlanRule(
-        @OutputCustomType.Parameter("completionWindow") @Nullable Integer completionWindow,
-        @OutputCustomType.Parameter("copyActions") @Nullable List<PlanRuleCopyAction> copyActions,
-        @OutputCustomType.Parameter("enableContinuousBackup") @Nullable Boolean enableContinuousBackup,
-        @OutputCustomType.Parameter("lifecycle") @Nullable PlanRuleLifecycle lifecycle,
-        @OutputCustomType.Parameter("recoveryPointTags") @Nullable Map<String,String> recoveryPointTags,
-        @OutputCustomType.Parameter("ruleName") String ruleName,
-        @OutputCustomType.Parameter("schedule") @Nullable String schedule,
-        @OutputCustomType.Parameter("startWindow") @Nullable Integer startWindow,
-        @OutputCustomType.Parameter("targetVaultName") String targetVaultName) {
+        @CustomType.Parameter("completionWindow") @Nullable Integer completionWindow,
+        @CustomType.Parameter("copyActions") @Nullable List<PlanRuleCopyAction> copyActions,
+        @CustomType.Parameter("enableContinuousBackup") @Nullable Boolean enableContinuousBackup,
+        @CustomType.Parameter("lifecycle") @Nullable PlanRuleLifecycle lifecycle,
+        @CustomType.Parameter("recoveryPointTags") @Nullable Map<String,String> recoveryPointTags,
+        @CustomType.Parameter("ruleName") String ruleName,
+        @CustomType.Parameter("schedule") @Nullable String schedule,
+        @CustomType.Parameter("startWindow") @Nullable Integer startWindow,
+        @CustomType.Parameter("targetVaultName") String targetVaultName) {
         this.completionWindow = completionWindow;
         this.copyActions = copyActions;
         this.enableContinuousBackup = enableContinuousBackup;

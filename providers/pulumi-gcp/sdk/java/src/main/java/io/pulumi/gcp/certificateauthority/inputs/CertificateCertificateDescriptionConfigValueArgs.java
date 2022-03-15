@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageArgs;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CertificateCertificateDescriptionConfigValueArgs extends io.p
      * Structure is documented below.
      * 
      */
-    @InputImport(name="keyUsages")
+    @Import(name="keyUsages")
       private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> keyUsages;
 
     public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> getKeyUsages() {

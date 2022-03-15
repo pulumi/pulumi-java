@@ -13,7 +13,7 @@ import io.pulumi.azurenative.servicelinker.outputs.SystemDataResponse;
 import io.pulumi.azurenative.servicelinker.outputs.UserAssignedIdentityAuthInfoResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -41,7 +41,7 @@ public class Linker extends io.pulumi.resources.CustomResource {
      * The authentication type.
      * 
      */
-    @OutputExport(name="authInfo", type=Object.class, parameters={})
+    @Export(name="authInfo", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> authInfo;
 
     /**
@@ -55,7 +55,7 @@ public class Linker extends io.pulumi.resources.CustomResource {
      * The application client type
      * 
      */
-    @OutputExport(name="clientType", type=String.class, parameters={})
+    @Export(name="clientType", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientType;
 
     /**
@@ -69,7 +69,7 @@ public class Linker extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -83,7 +83,7 @@ public class Linker extends io.pulumi.resources.CustomResource {
      * The provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -97,7 +97,7 @@ public class Linker extends io.pulumi.resources.CustomResource {
      * The system data.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -111,7 +111,7 @@ public class Linker extends io.pulumi.resources.CustomResource {
      * The resource Id of target service.
      * 
      */
-    @OutputExport(name="targetId", type=String.class, parameters={})
+    @Export(name="targetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetId;
 
     /**
@@ -125,7 +125,7 @@ public class Linker extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

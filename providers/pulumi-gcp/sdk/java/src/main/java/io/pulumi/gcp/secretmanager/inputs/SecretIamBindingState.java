@@ -4,7 +4,7 @@
 package io.pulumi.gcp.secretmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.secretmanager.inputs.SecretIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class SecretIamBindingState extends io.pulumi.resources.ResourceArg
 
     public static final SecretIamBindingState Empty = new SecretIamBindingState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<SecretIamBindingConditionGetArgs> condition;
 
     public Output<SecretIamBindingConditionGetArgs> getCondition() {
@@ -27,14 +27,14 @@ public final class SecretIamBindingState extends io.pulumi.resources.ResourceArg
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="members")
+    @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -46,7 +46,7 @@ public final class SecretIamBindingState extends io.pulumi.resources.ResourceArg
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -59,14 +59,14 @@ public final class SecretIamBindingState extends io.pulumi.resources.ResourceArg
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
         return this.role == null ? Output.empty() : this.role;
     }
 
-    @InputImport(name="secretId")
+    @Import(name="secretId")
       private final @Nullable Output<String> secretId;
 
     public Output<String> getSecretId() {

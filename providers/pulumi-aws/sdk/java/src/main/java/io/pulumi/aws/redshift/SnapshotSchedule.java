@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.redshift.SnapshotScheduleArgs;
 import io.pulumi.aws.redshift.inputs.SnapshotScheduleState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class SnapshotSchedule extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the Redshift Snapshot Schedule.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class SnapshotSchedule extends io.pulumi.resources.CustomResource {
      * The definition of the snapshot schedule. The definition is made up of schedule expressions, for example `cron(30 12 *)` or `rate(12 hours)`.
      * 
      */
-    @OutputExport(name="definitions", type=List.class, parameters={String.class})
+    @Export(name="definitions", type=List.class, parameters={String.class})
     private Output<List<String>> definitions;
 
     /**
@@ -61,7 +61,7 @@ public class SnapshotSchedule extends io.pulumi.resources.CustomResource {
      * The description of the snapshot schedule.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -75,7 +75,7 @@ public class SnapshotSchedule extends io.pulumi.resources.CustomResource {
      * Whether to destroy all associated clusters with this snapshot schedule on deletion. Must be enabled and applied before attempting deletion.
      * 
      */
-    @OutputExport(name="forceDestroy", type=Boolean.class, parameters={})
+    @Export(name="forceDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDestroy;
 
     /**
@@ -89,7 +89,7 @@ public class SnapshotSchedule extends io.pulumi.resources.CustomResource {
      * The snapshot schedule identifier. If omitted, this provider will assign a random, unique identifier.
      * 
      */
-    @OutputExport(name="identifier", type=String.class, parameters={})
+    @Export(name="identifier", type=String.class, parameters={})
     private Output<String> identifier;
 
     /**
@@ -104,7 +104,7 @@ public class SnapshotSchedule extends io.pulumi.resources.CustomResource {
      * identifier beginning with the specified prefix. Conflicts with `identifier`.
      * 
      */
-    @OutputExport(name="identifierPrefix", type=String.class, parameters={})
+    @Export(name="identifierPrefix", type=String.class, parameters={})
     private Output<String> identifierPrefix;
 
     /**
@@ -119,7 +119,7 @@ public class SnapshotSchedule extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -133,7 +133,7 @@ public class SnapshotSchedule extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

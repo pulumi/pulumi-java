@@ -6,7 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeEndpointFeaturesRuleArgs;
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeExtensionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,49 +18,49 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
 
     public static final ResourceTypeEndpointArgs Empty = new ResourceTypeEndpointArgs();
 
-    @InputImport(name="apiVersions")
+    @Import(name="apiVersions")
       private final @Nullable Output<List<String>> apiVersions;
 
     public Output<List<String>> getApiVersions() {
         return this.apiVersions == null ? Output.empty() : this.apiVersions;
     }
 
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
         return this.enabled == null ? Output.empty() : this.enabled;
     }
 
-    @InputImport(name="extensions")
+    @Import(name="extensions")
       private final @Nullable Output<List<ResourceTypeExtensionArgs>> extensions;
 
     public Output<List<ResourceTypeExtensionArgs>> getExtensions() {
         return this.extensions == null ? Output.empty() : this.extensions;
     }
 
-    @InputImport(name="featuresRule")
+    @Import(name="featuresRule")
       private final @Nullable Output<ResourceTypeEndpointFeaturesRuleArgs> featuresRule;
 
     public Output<ResourceTypeEndpointFeaturesRuleArgs> getFeaturesRule() {
         return this.featuresRule == null ? Output.empty() : this.featuresRule;
     }
 
-    @InputImport(name="locations")
+    @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
     public Output<List<String>> getLocations() {
         return this.locations == null ? Output.empty() : this.locations;
     }
 
-    @InputImport(name="requiredFeatures")
+    @Import(name="requiredFeatures")
       private final @Nullable Output<List<String>> requiredFeatures;
 
     public Output<List<String>> getRequiredFeatures() {
         return this.requiredFeatures == null ? Output.empty() : this.requiredFeatures;
     }
 
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {

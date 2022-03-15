@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.customerprofiles.DomainArgs;
 import io.pulumi.awsnative.customerprofiles.outputs.DomainTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The time of this integration got created
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -40,7 +40,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The URL of the SQS dead letter queue
      * 
      */
-    @OutputExport(name="deadLetterQueueUrl", type=String.class, parameters={})
+    @Export(name="deadLetterQueueUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> deadLetterQueueUrl;
 
     /**
@@ -54,7 +54,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The default encryption key
      * 
      */
-    @OutputExport(name="defaultEncryptionKey", type=String.class, parameters={})
+    @Export(name="defaultEncryptionKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultEncryptionKey;
 
     /**
@@ -68,7 +68,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The default number of days until the data within the domain expires.
      * 
      */
-    @OutputExport(name="defaultExpirationDays", type=Integer.class, parameters={})
+    @Export(name="defaultExpirationDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> defaultExpirationDays;
 
     /**
@@ -82,7 +82,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The unique name of the domain.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -96,7 +96,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The time of this integration got last updated at
      * 
      */
-    @OutputExport(name="lastUpdatedAt", type=String.class, parameters={})
+    @Export(name="lastUpdatedAt", type=String.class, parameters={})
     private Output<String> lastUpdatedAt;
 
     /**
@@ -110,7 +110,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The tags (keys and values) associated with the domain
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DomainTag.class})
+    @Export(name="tags", type=List.class, parameters={DomainTag.class})
     private Output</* @Nullable */ List<DomainTag>> tags;
 
     /**

@@ -4,14 +4,14 @@
 package io.pulumi.aws.imagebuilder.outputs;
 
 import io.pulumi.aws.imagebuilder.outputs.ImageRecipeBlockDeviceMappingEbs;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageRecipeBlockDeviceMapping {
     /**
      * Name of the device. For example, `/dev/sda` or `/dev/xvdb`.
@@ -34,12 +34,12 @@ public final class ImageRecipeBlockDeviceMapping {
      */
     private final @Nullable String virtualName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageRecipeBlockDeviceMapping(
-        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
-        @OutputCustomType.Parameter("ebs") @Nullable ImageRecipeBlockDeviceMappingEbs ebs,
-        @OutputCustomType.Parameter("noDevice") @Nullable Boolean noDevice,
-        @OutputCustomType.Parameter("virtualName") @Nullable String virtualName) {
+        @CustomType.Parameter("deviceName") @Nullable String deviceName,
+        @CustomType.Parameter("ebs") @Nullable ImageRecipeBlockDeviceMappingEbs ebs,
+        @CustomType.Parameter("noDevice") @Nullable Boolean noDevice,
+        @CustomType.Parameter("virtualName") @Nullable String virtualName) {
         this.deviceName = deviceName;
         this.ebs = ebs;
         this.noDevice = noDevice;

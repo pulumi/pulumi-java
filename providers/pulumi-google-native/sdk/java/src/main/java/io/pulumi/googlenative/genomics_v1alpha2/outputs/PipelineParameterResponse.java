@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.genomics_v1alpha2.outputs.LocalCopyResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PipelineParameterResponse {
     /**
      * The default value for this parameter. Can be overridden at runtime. If `localCopy` is present, then this must be a Google Cloud Storage path beginning with `gs://`.
@@ -31,12 +31,12 @@ public final class PipelineParameterResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineParameterResponse(
-        @OutputCustomType.Parameter("defaultValue") String defaultValue,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("localCopy") LocalCopyResponse localCopy,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("defaultValue") String defaultValue,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("localCopy") LocalCopyResponse localCopy,
+        @CustomType.Parameter("name") String name) {
         this.defaultValue = defaultValue;
         this.description = description;
         this.localCopy = localCopy;

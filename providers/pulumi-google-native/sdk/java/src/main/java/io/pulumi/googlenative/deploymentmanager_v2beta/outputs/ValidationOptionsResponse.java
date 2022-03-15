@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ValidationOptionsResponse {
     /**
      * Customize how deployment manager will validate the resource against schema errors.
@@ -20,10 +20,10 @@ public final class ValidationOptionsResponse {
      */
     private final String undeclaredProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ValidationOptionsResponse(
-        @OutputCustomType.Parameter("schemaValidation") String schemaValidation,
-        @OutputCustomType.Parameter("undeclaredProperties") String undeclaredProperties) {
+        @CustomType.Parameter("schemaValidation") String schemaValidation,
+        @CustomType.Parameter("undeclaredProperties") String undeclaredProperties) {
         this.schemaValidation = schemaValidation;
         this.undeclaredProperties = undeclaredProperties;
     }

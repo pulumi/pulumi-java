@@ -8,7 +8,7 @@ import io.pulumi.azurenative.confidentialledger.inputs.AADBasedSecurityPrincipal
 import io.pulumi.azurenative.confidentialledger.inputs.CertBasedSecurityPrincipalArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * Array of all AAD based Security Principals.
      * 
      */
-    @InputImport(name="aadBasedSecurityPrincipals")
+    @Import(name="aadBasedSecurityPrincipals")
       private final @Nullable Output<List<AADBasedSecurityPrincipalArgs>> aadBasedSecurityPrincipals;
 
     public Output<List<AADBasedSecurityPrincipalArgs>> getAadBasedSecurityPrincipals() {
@@ -38,7 +38,7 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * Array of all cert based Security Principals.
      * 
      */
-    @InputImport(name="certBasedSecurityPrincipals")
+    @Import(name="certBasedSecurityPrincipals")
       private final @Nullable Output<List<CertBasedSecurityPrincipalArgs>> certBasedSecurityPrincipals;
 
     public Output<List<CertBasedSecurityPrincipalArgs>> getCertBasedSecurityPrincipals() {
@@ -49,7 +49,7 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * Name of the Blob Storage Account for saving ledger files
      * 
      */
-    @InputImport(name="ledgerStorageAccount")
+    @Import(name="ledgerStorageAccount")
       private final @Nullable Output<String> ledgerStorageAccount;
 
     public Output<String> getLedgerStorageAccount() {
@@ -60,7 +60,7 @@ public final class LedgerPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * Type of Confidential Ledger
      * 
      */
-    @InputImport(name="ledgerType")
+    @Import(name="ledgerType")
       private final @Nullable Output<Either<String,LedgerType>> ledgerType;
 
     public Output<Either<String,LedgerType>> getLedgerType() {

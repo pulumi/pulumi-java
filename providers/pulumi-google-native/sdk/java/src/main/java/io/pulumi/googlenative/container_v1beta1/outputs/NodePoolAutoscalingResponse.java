@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodePoolAutoscalingResponse {
     /**
      * Can this node pool be deleted automatically.
@@ -31,12 +31,12 @@ public final class NodePoolAutoscalingResponse {
      */
     private final Integer minNodeCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodePoolAutoscalingResponse(
-        @OutputCustomType.Parameter("autoprovisioned") Boolean autoprovisioned,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("maxNodeCount") Integer maxNodeCount,
-        @OutputCustomType.Parameter("minNodeCount") Integer minNodeCount) {
+        @CustomType.Parameter("autoprovisioned") Boolean autoprovisioned,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("maxNodeCount") Integer maxNodeCount,
+        @CustomType.Parameter("minNodeCount") Integer minNodeCount) {
         this.autoprovisioned = autoprovisioned;
         this.enabled = enabled;
         this.maxNodeCount = maxNodeCount;

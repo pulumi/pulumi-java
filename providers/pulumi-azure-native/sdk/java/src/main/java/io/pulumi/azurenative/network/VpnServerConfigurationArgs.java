@@ -14,7 +14,7 @@ import io.pulumi.azurenative.network.inputs.VpnServerConfigVpnClientRevokedCerti
 import io.pulumi.azurenative.network.inputs.VpnServerConfigVpnClientRootCertificateArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +30,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * The set of aad vpn authentication parameters.
      * 
      */
-    @InputImport(name="aadAuthenticationParameters")
+    @Import(name="aadAuthenticationParameters")
       private final @Nullable Output<AadAuthenticationParametersArgs> aadAuthenticationParameters;
 
     public Output<AadAuthenticationParametersArgs> getAadAuthenticationParameters() {
@@ -41,7 +41,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -52,7 +52,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -63,7 +63,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * The name of the VpnServerConfiguration that is unique within a resource group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -74,7 +74,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * Radius client root certificate of VpnServerConfiguration.
      * 
      */
-    @InputImport(name="radiusClientRootCertificates")
+    @Import(name="radiusClientRootCertificates")
       private final @Nullable Output<List<VpnServerConfigRadiusClientRootCertificateArgs>> radiusClientRootCertificates;
 
     public Output<List<VpnServerConfigRadiusClientRootCertificateArgs>> getRadiusClientRootCertificates() {
@@ -85,7 +85,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * The radius server address property of the VpnServerConfiguration resource for point to site client connection.
      * 
      */
-    @InputImport(name="radiusServerAddress")
+    @Import(name="radiusServerAddress")
       private final @Nullable Output<String> radiusServerAddress;
 
     public Output<String> getRadiusServerAddress() {
@@ -96,7 +96,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * Radius Server root certificate of VpnServerConfiguration.
      * 
      */
-    @InputImport(name="radiusServerRootCertificates")
+    @Import(name="radiusServerRootCertificates")
       private final @Nullable Output<List<VpnServerConfigRadiusServerRootCertificateArgs>> radiusServerRootCertificates;
 
     public Output<List<VpnServerConfigRadiusServerRootCertificateArgs>> getRadiusServerRootCertificates() {
@@ -107,7 +107,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * The radius secret property of the VpnServerConfiguration resource for point to site client connection.
      * 
      */
-    @InputImport(name="radiusServerSecret")
+    @Import(name="radiusServerSecret")
       private final @Nullable Output<String> radiusServerSecret;
 
     public Output<String> getRadiusServerSecret() {
@@ -118,7 +118,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * Multiple Radius Server configuration for VpnServerConfiguration.
      * 
      */
-    @InputImport(name="radiusServers")
+    @Import(name="radiusServers")
       private final @Nullable Output<List<RadiusServerArgs>> radiusServers;
 
     public Output<List<RadiusServerArgs>> getRadiusServers() {
@@ -129,7 +129,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * The resource group name of the VpnServerConfiguration.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -140,7 +140,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -151,7 +151,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * VPN authentication types for the VpnServerConfiguration.
      * 
      */
-    @InputImport(name="vpnAuthenticationTypes")
+    @Import(name="vpnAuthenticationTypes")
       private final @Nullable Output<List<Either<String,VpnAuthenticationType>>> vpnAuthenticationTypes;
 
     public Output<List<Either<String,VpnAuthenticationType>>> getVpnAuthenticationTypes() {
@@ -162,7 +162,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * VpnClientIpsecPolicies for VpnServerConfiguration.
      * 
      */
-    @InputImport(name="vpnClientIpsecPolicies")
+    @Import(name="vpnClientIpsecPolicies")
       private final @Nullable Output<List<IpsecPolicyArgs>> vpnClientIpsecPolicies;
 
     public Output<List<IpsecPolicyArgs>> getVpnClientIpsecPolicies() {
@@ -173,7 +173,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * VPN client revoked certificate of VpnServerConfiguration.
      * 
      */
-    @InputImport(name="vpnClientRevokedCertificates")
+    @Import(name="vpnClientRevokedCertificates")
       private final @Nullable Output<List<VpnServerConfigVpnClientRevokedCertificateArgs>> vpnClientRevokedCertificates;
 
     public Output<List<VpnServerConfigVpnClientRevokedCertificateArgs>> getVpnClientRevokedCertificates() {
@@ -184,7 +184,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * VPN client root certificate of VpnServerConfiguration.
      * 
      */
-    @InputImport(name="vpnClientRootCertificates")
+    @Import(name="vpnClientRootCertificates")
       private final @Nullable Output<List<VpnServerConfigVpnClientRootCertificateArgs>> vpnClientRootCertificates;
 
     public Output<List<VpnServerConfigVpnClientRootCertificateArgs>> getVpnClientRootCertificates() {
@@ -195,7 +195,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * VPN protocols for the VpnServerConfiguration.
      * 
      */
-    @InputImport(name="vpnProtocols")
+    @Import(name="vpnProtocols")
       private final @Nullable Output<List<Either<String,VpnGatewayTunnelingProtocol>>> vpnProtocols;
 
     public Output<List<Either<String,VpnGatewayTunnelingProtocol>>> getVpnProtocols() {
@@ -206,7 +206,7 @@ public final class VpnServerConfigurationArgs extends io.pulumi.resources.Resour
      * The name of the VpnServerConfiguration being created or updated.
      * 
      */
-    @InputImport(name="vpnServerConfigurationName")
+    @Import(name="vpnServerConfigurationName")
       private final @Nullable Output<String> vpnServerConfigurationName;
 
     public Output<String> getVpnServerConfigurationName() {

@@ -5,20 +5,20 @@ package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.ChannelCustomerManagedS3;
 import io.pulumi.awsnative.iotanalytics.outputs.ChannelServiceManagedS3;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ChannelStorage {
     private final @Nullable ChannelCustomerManagedS3 customerManagedS3;
     private final @Nullable ChannelServiceManagedS3 serviceManagedS3;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ChannelStorage(
-        @OutputCustomType.Parameter("customerManagedS3") @Nullable ChannelCustomerManagedS3 customerManagedS3,
-        @OutputCustomType.Parameter("serviceManagedS3") @Nullable ChannelServiceManagedS3 serviceManagedS3) {
+        @CustomType.Parameter("customerManagedS3") @Nullable ChannelCustomerManagedS3 customerManagedS3,
+        @CustomType.Parameter("serviceManagedS3") @Nullable ChannelServiceManagedS3 serviceManagedS3) {
         this.customerManagedS3 = customerManagedS3;
         this.serviceManagedS3 = serviceManagedS3;
     }

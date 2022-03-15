@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.WebACLImmunityTimeProperty;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebACLCaptchaConfig {
     private final @Nullable WebACLImmunityTimeProperty immunityTimeProperty;
 
-    @OutputCustomType.Constructor
-    private WebACLCaptchaConfig(@OutputCustomType.Parameter("immunityTimeProperty") @Nullable WebACLImmunityTimeProperty immunityTimeProperty) {
+    @CustomType.Constructor
+    private WebACLCaptchaConfig(@CustomType.Parameter("immunityTimeProperty") @Nullable WebACLImmunityTimeProperty immunityTimeProperty) {
         this.immunityTimeProperty = immunityTimeProperty;
     }
 

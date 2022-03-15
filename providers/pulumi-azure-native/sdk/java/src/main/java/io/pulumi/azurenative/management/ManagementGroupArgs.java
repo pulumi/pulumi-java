@@ -5,7 +5,7 @@ package io.pulumi.azurenative.management;
 
 import io.pulumi.azurenative.management.inputs.CreateManagementGroupDetailsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
      * The details of a management group used during creation.
      * 
      */
-    @InputImport(name="details")
+    @Import(name="details")
       private final @Nullable Output<CreateManagementGroupDetailsArgs> details;
 
     public Output<CreateManagementGroupDetailsArgs> getDetails() {
@@ -30,7 +30,7 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
      * The friendly name of the management group. If no value is passed then this  field will be set to the groupId.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -41,7 +41,7 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
      * Management Group ID.
      * 
      */
-    @InputImport(name="groupId")
+    @Import(name="groupId")
       private final @Nullable Output<String> groupId;
 
     public Output<String> getGroupId() {
@@ -52,7 +52,7 @@ public final class ManagementGroupArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the management group. For example, 00000000-0000-0000-0000-000000000000
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterValidationRegexGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterValidationValuesGetArgs;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WorkflowTemplateParameterValidationGetArgs extends io.pulumi.
      * Validation based on regular expressions.
      * 
      */
-    @InputImport(name="regex")
+    @Import(name="regex")
       private final @Nullable Output<WorkflowTemplateParameterValidationRegexGetArgs> regex;
 
     public Output<WorkflowTemplateParameterValidationRegexGetArgs> getRegex() {
@@ -30,7 +30,7 @@ public final class WorkflowTemplateParameterValidationGetArgs extends io.pulumi.
      * Optional. Corresponds to the label values of reservation resource.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<WorkflowTemplateParameterValidationValuesGetArgs> values;
 
     public Output<WorkflowTemplateParameterValidationValuesGetArgs> getValues() {

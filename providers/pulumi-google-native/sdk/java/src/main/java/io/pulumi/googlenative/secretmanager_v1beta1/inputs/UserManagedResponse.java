@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.secretmanager_v1beta1.inputs.ReplicaResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class UserManagedResponse extends io.pulumi.resources.InvokeArgs {
      * The list of Replicas for this Secret. Cannot be empty.
      * 
      */
-    @InputImport(name="replicas", required=true)
+    @Import(name="replicas", required=true)
       private final List<ReplicaResponse> replicas;
 
     public List<ReplicaResponse> getReplicas() {

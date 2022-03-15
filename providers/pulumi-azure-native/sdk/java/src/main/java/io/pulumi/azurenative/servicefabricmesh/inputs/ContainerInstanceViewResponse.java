@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.ContainerEventResponse;
 import io.pulumi.azurenative.servicefabricmesh.inputs.ContainerStateResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ContainerInstanceViewResponse extends io.pulumi.resources.Inv
      * Current container instance state.
      * 
      */
-    @InputImport(name="currentState")
+    @Import(name="currentState")
       private final @Nullable ContainerStateResponse currentState;
 
     public Optional<ContainerStateResponse> getCurrentState() {
@@ -36,7 +36,7 @@ public final class ContainerInstanceViewResponse extends io.pulumi.resources.Inv
      * The events of this container instance.
      * 
      */
-    @InputImport(name="events")
+    @Import(name="events")
       private final @Nullable List<ContainerEventResponse> events;
 
     public List<ContainerEventResponse> getEvents() {
@@ -47,7 +47,7 @@ public final class ContainerInstanceViewResponse extends io.pulumi.resources.Inv
      * Previous container instance state.
      * 
      */
-    @InputImport(name="previousState")
+    @Import(name="previousState")
       private final @Nullable ContainerStateResponse previousState;
 
     public Optional<ContainerStateResponse> getPreviousState() {
@@ -58,7 +58,7 @@ public final class ContainerInstanceViewResponse extends io.pulumi.resources.Inv
      * The number of times the container has been restarted.
      * 
      */
-    @InputImport(name="restartCount")
+    @Import(name="restartCount")
       private final @Nullable Integer restartCount;
 
     public Optional<Integer> getRestartCount() {

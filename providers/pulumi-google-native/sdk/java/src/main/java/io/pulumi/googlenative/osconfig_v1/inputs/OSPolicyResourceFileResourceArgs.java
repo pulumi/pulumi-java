@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1.enums.OSPolicyResourceFileResourceState;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
      * A a file with this content. The size of the content is limited to 1024 characters.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
@@ -35,7 +35,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
      * A remote or local source.
      * 
      */
-    @InputImport(name="file")
+    @Import(name="file")
       private final @Nullable Output<OSPolicyResourceFileArgs> file;
 
     public Output<OSPolicyResourceFileArgs> getFile() {
@@ -46,7 +46,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
      * The absolute path of the file within the VM.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final Output<String> path;
 
     public Output<String> getPath() {
@@ -57,7 +57,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
      * Consists of three octal digits which represent, in order, the permissions of the owner, group, and other users for the file (similarly to the numeric mode used in the linux chmod utility). Each digit represents a three bit number with the 4 bit corresponding to the read permissions, the 2 bit corresponds to the write bit, and the one bit corresponds to the execute permission. Default behavior is 755. Below are some examples of permissions and their associated values: read, write, and execute: 7 read and execute: 5 read and write: 6 read only: 4
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<String> permissions;
 
     public Output<String> getPermissions() {
@@ -68,7 +68,7 @@ public final class OSPolicyResourceFileResourceArgs extends io.pulumi.resources.
      * Desired state of the file.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final Output<OSPolicyResourceFileResourceState> state;
 
     public Output<OSPolicyResourceFileResourceState> getState() {

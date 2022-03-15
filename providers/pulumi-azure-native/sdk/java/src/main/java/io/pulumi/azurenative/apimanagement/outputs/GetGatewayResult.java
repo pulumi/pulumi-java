@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.ResourceLocationDataContractResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGatewayResult {
     /**
      * Gateway description
@@ -38,13 +38,13 @@ public final class GetGatewayResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGatewayResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("locationData") @Nullable ResourceLocationDataContractResponse locationData,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("locationData") @Nullable ResourceLocationDataContractResponse locationData,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.id = id;
         this.locationData = locationData;

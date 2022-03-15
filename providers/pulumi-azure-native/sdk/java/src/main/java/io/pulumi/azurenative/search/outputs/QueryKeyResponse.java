@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.search.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class QueryKeyResponse {
     /**
      * The value of the query API key.
@@ -20,10 +20,10 @@ public final class QueryKeyResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QueryKeyResponse(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("name") String name) {
         this.key = key;
         this.name = name;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1beta2.enums.PolicyAlternativeNameServerConfigTargetNameServerForwardingPath;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
      * Forwarding path for this TargetNameServer. If unset or set to DEFAULT, Cloud DNS makes forwarding decisions based on address ranges; that is, RFC1918 addresses go to the VPC network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends queries through the VPC network for this target.
      * 
      */
-    @InputImport(name="forwardingPath")
+    @Import(name="forwardingPath")
       private final @Nullable Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> forwardingPath;
 
     public Output<PolicyAlternativeNameServerConfigTargetNameServerForwardingPath> getForwardingPath() {
@@ -30,7 +30,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
      * IPv4 address to forward to.
      * 
      */
-    @InputImport(name="ipv4Address")
+    @Import(name="ipv4Address")
       private final @Nullable Output<String> ipv4Address;
 
     public Output<String> getIpv4Address() {
@@ -41,14 +41,14 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerArgs extends
      * IPv6 address to forward to. Does not accept both fields (ipv4 & ipv6) being populated.
      * 
      */
-    @InputImport(name="ipv6Address")
+    @Import(name="ipv6Address")
       private final @Nullable Output<String> ipv6Address;
 
     public Output<String> getIpv6Address() {
         return this.ipv6Address == null ? Output.empty() : this.ipv6Address;
     }
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {

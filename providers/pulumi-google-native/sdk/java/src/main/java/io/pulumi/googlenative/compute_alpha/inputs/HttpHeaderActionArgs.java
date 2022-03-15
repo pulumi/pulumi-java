@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.HttpHeaderOptionArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
      * Headers to add to a matching request before forwarding the request to the backendService.
      * 
      */
-    @InputImport(name="requestHeadersToAdd")
+    @Import(name="requestHeadersToAdd")
       private final @Nullable Output<List<HttpHeaderOptionArgs>> requestHeadersToAdd;
 
     public Output<List<HttpHeaderOptionArgs>> getRequestHeadersToAdd() {
@@ -35,7 +35,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
      * A list of header names for headers that need to be removed from the request before forwarding the request to the backendService.
      * 
      */
-    @InputImport(name="requestHeadersToRemove")
+    @Import(name="requestHeadersToRemove")
       private final @Nullable Output<List<String>> requestHeadersToRemove;
 
     public Output<List<String>> getRequestHeadersToRemove() {
@@ -46,7 +46,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
      * Headers to add the response before sending the response back to the client.
      * 
      */
-    @InputImport(name="responseHeadersToAdd")
+    @Import(name="responseHeadersToAdd")
       private final @Nullable Output<List<HttpHeaderOptionArgs>> responseHeadersToAdd;
 
     public Output<List<HttpHeaderOptionArgs>> getResponseHeadersToAdd() {
@@ -57,7 +57,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
      * A list of header names for headers that need to be removed from the response before sending the response back to the client.
      * 
      */
-    @InputImport(name="responseHeadersToRemove")
+    @Import(name="responseHeadersToRemove")
       private final @Nullable Output<List<String>> responseHeadersToRemove;
 
     public Output<List<String>> getResponseHeadersToRemove() {

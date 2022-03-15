@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.guestconfiguration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AssignmentReportResourceComplianceReasonResponse {
     /**
      * Code for the compliance of the guest configuration assignment resource.
@@ -20,10 +20,10 @@ public final class AssignmentReportResourceComplianceReasonResponse {
      */
     private final String phrase;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssignmentReportResourceComplianceReasonResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("phrase") String phrase) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("phrase") String phrase) {
         this.code = code;
         this.phrase = phrase;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.enums.TextFormat;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TextArgs extends io.pulumi.resources.ResourceArgs {
      * The text content to be displayed.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
@@ -34,7 +34,7 @@ public final class TextArgs extends io.pulumi.resources.ResourceArgs {
      * How the text content is formatted.
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable Output<TextFormat> format;
 
     public Output<TextFormat> getFormat() {

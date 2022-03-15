@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
      * Whether to enable automatic pause. A DB cluster can be paused only when it's idle (it has no connections). If a DB cluster is paused for more than seven days, the DB cluster might be backed up with a snapshot. In this case, the DB cluster is restored when there is a request to connect to it. Defaults to `true`.
      * 
      */
-    @InputImport(name="autoPause")
+    @Import(name="autoPause")
       private final @Nullable Output<Boolean> autoPause;
 
     public Output<Boolean> getAutoPause() {
@@ -31,7 +31,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
      * The maximum capacity for an Aurora DB cluster in `serverless` DB engine mode. The maximum capacity must be greater than or equal to the minimum capacity. Valid Aurora MySQL capacity values are `1`, `2`, `4`, `8`, `16`, `32`, `64`, `128`, `256`. Valid Aurora PostgreSQL capacity values are (`2`, `4`, `8`, `16`, `32`, `64`, `192`, and `384`). Defaults to `16`.
      * 
      */
-    @InputImport(name="maxCapacity")
+    @Import(name="maxCapacity")
       private final @Nullable Output<Integer> maxCapacity;
 
     public Output<Integer> getMaxCapacity() {
@@ -42,7 +42,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
      * The minimum capacity for an Aurora DB cluster in `serverless` DB engine mode. The minimum capacity must be lesser than or equal to the maximum capacity. Valid Aurora MySQL capacity values are `1`, `2`, `4`, `8`, `16`, `32`, `64`, `128`, `256`. Valid Aurora PostgreSQL capacity values are (`2`, `4`, `8`, `16`, `32`, `64`, `192`, and `384`). Defaults to `1`.
      * 
      */
-    @InputImport(name="minCapacity")
+    @Import(name="minCapacity")
       private final @Nullable Output<Integer> minCapacity;
 
     public Output<Integer> getMinCapacity() {
@@ -53,7 +53,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
      * The time, in seconds, before an Aurora DB cluster in serverless mode is paused. Valid values are `300` through `86400`. Defaults to `300`.
      * 
      */
-    @InputImport(name="secondsUntilAutoPause")
+    @Import(name="secondsUntilAutoPause")
       private final @Nullable Output<Integer> secondsUntilAutoPause;
 
     public Output<Integer> getSecondsUntilAutoPause() {
@@ -64,7 +64,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
      * The action to take when the timeout is reached. Valid values: `ForceApplyCapacityChange`, `RollbackCapacityChange`. Defaults to `RollbackCapacityChange`. See [documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.how-it-works.html#aurora-serverless.how-it-works.timeout-action).
      * 
      */
-    @InputImport(name="timeoutAction")
+    @Import(name="timeoutAction")
       private final @Nullable Output<String> timeoutAction;
 
     public Output<String> getTimeoutAction() {

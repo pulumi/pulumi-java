@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DataBoxDiskCopyLogDetailsResponse extends io.pulumi.resources
      * Expected value is 'DataBoxDisk'.
      * 
      */
-    @InputImport(name="copyLogDetailsType", required=true)
+    @Import(name="copyLogDetailsType", required=true)
       private final String copyLogDetailsType;
 
     public String getCopyLogDetailsType() {
@@ -32,7 +32,7 @@ public final class DataBoxDiskCopyLogDetailsResponse extends io.pulumi.resources
      * Disk Serial Number.
      * 
      */
-    @InputImport(name="diskSerialNumber", required=true)
+    @Import(name="diskSerialNumber", required=true)
       private final String diskSerialNumber;
 
     public String getDiskSerialNumber() {
@@ -43,7 +43,7 @@ public final class DataBoxDiskCopyLogDetailsResponse extends io.pulumi.resources
      * Link for copy error logs.
      * 
      */
-    @InputImport(name="errorLogLink", required=true)
+    @Import(name="errorLogLink", required=true)
       private final String errorLogLink;
 
     public String getErrorLogLink() {
@@ -54,7 +54,7 @@ public final class DataBoxDiskCopyLogDetailsResponse extends io.pulumi.resources
      * Link for copy verbose logs.
      * 
      */
-    @InputImport(name="verboseLogLink", required=true)
+    @Import(name="verboseLogLink", required=true)
       private final String verboseLogLink;
 
     public String getVerboseLogLink() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.SearchParameterResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SearchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * A list of search parameters in this FHIR store that are used to configure this FHIR store.
      * 
      */
-    @InputImport(name="searchParameters", required=true)
+    @Import(name="searchParameters", required=true)
       private final List<SearchParameterResponse> searchParameters;
 
     public List<SearchParameterResponse> getSearchParameters() {

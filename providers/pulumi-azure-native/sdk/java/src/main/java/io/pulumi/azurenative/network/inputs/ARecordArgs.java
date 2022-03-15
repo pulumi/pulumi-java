@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ARecordArgs extends io.pulumi.resources.ResourceArgs {
      * The IPv4 address of this A record.
      * 
      */
-    @InputImport(name="ipv4Address")
+    @Import(name="ipv4Address")
       private final @Nullable Output<String> ipv4Address;
 
     public Output<String> getIpv4Address() {

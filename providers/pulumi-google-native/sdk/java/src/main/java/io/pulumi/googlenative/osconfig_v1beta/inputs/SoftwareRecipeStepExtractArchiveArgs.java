@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1beta.enums.SoftwareRecipeStepExtractArchiveType;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
      * The id of the relevant artifact in the recipe.
      * 
      */
-    @InputImport(name="artifactId", required=true)
+    @Import(name="artifactId", required=true)
       private final Output<String> artifactId;
 
     public Output<String> getArtifactId() {
@@ -34,7 +34,7 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
      * Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.
      * 
      */
-    @InputImport(name="destination")
+    @Import(name="destination")
       private final @Nullable Output<String> destination;
 
     public Output<String> getDestination() {
@@ -45,7 +45,7 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
      * The type of the archive to extract.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<SoftwareRecipeStepExtractArchiveType> type;
 
     public Output<SoftwareRecipeStepExtractArchiveType> getType() {

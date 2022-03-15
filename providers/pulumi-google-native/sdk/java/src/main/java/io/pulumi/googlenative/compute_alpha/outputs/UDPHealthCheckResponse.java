@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UDPHealthCheckResponse {
     /**
      * The UDP port number for the health check request. Valid values are 1 through 65535.
@@ -31,12 +31,12 @@ public final class UDPHealthCheckResponse {
      */
     private final String response;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UDPHealthCheckResponse(
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("portName") String portName,
-        @OutputCustomType.Parameter("request") String request,
-        @OutputCustomType.Parameter("response") String response) {
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("portName") String portName,
+        @CustomType.Parameter("request") String request,
+        @CustomType.Parameter("response") String response) {
         this.port = port;
         this.portName = portName;
         this.request = request;

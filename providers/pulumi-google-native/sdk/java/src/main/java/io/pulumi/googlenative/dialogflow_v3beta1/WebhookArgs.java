@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs;
 import java.lang.Boolean;
@@ -17,7 +17,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WebhookArgs Empty = new WebhookArgs();
 
-    @InputImport(name="agentId", required=true)
+    @Import(name="agentId", required=true)
       private final Output<String> agentId;
 
     public Output<String> getAgentId() {
@@ -28,7 +28,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the webhook is disabled.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -39,7 +39,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * The human-readable name of the webhook, unique within the agent.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -50,14 +50,14 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for a generic web service.
      * 
      */
-    @InputImport(name="genericWebService")
+    @Import(name="genericWebService")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs> genericWebService;
 
     public Output<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs> getGenericWebService() {
         return this.genericWebService == null ? Output.empty() : this.genericWebService;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -68,14 +68,14 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method. Webhooks.CreateWebhook populates the name automatically. Format: `projects//locations//agents//webhooks/`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -86,7 +86,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
      * 
      */
-    @InputImport(name="serviceDirectory")
+    @Import(name="serviceDirectory")
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs> serviceDirectory;
 
     public Output<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigArgs> getServiceDirectory() {
@@ -97,7 +97,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * Webhook execution timeout. Execution is considered failed if Dialogflow doesn't receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {

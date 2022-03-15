@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class PredictionResponseMappings extends io.pulumi.resources.Invoke
      * The grade of the link mapping.
      * 
      */
-    @InputImport(name="grade", required=true)
+    @Import(name="grade", required=true)
       private final String grade;
 
     public String getGrade() {
@@ -31,7 +31,7 @@ public final class PredictionResponseMappings extends io.pulumi.resources.Invoke
      * The reason of the link mapping.
      * 
      */
-    @InputImport(name="reason", required=true)
+    @Import(name="reason", required=true)
       private final String reason;
 
     public String getReason() {
@@ -42,7 +42,7 @@ public final class PredictionResponseMappings extends io.pulumi.resources.Invoke
      * The score of the link mapping.
      * 
      */
-    @InputImport(name="score", required=true)
+    @Import(name="score", required=true)
       private final String score;
 
     public String getScore() {

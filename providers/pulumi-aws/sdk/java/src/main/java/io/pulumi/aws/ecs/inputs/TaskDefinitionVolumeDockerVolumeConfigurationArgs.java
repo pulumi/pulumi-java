@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class TaskDefinitionVolumeDockerVolumeConfigurationArgs extends io.
      * If this value is `true`, the Docker volume is created if it does not already exist. *Note*: This field is only used if the scope is `shared`.
      * 
      */
-    @InputImport(name="autoprovision")
+    @Import(name="autoprovision")
       private final @Nullable Output<Boolean> autoprovision;
 
     public Output<Boolean> getAutoprovision() {
@@ -31,7 +31,7 @@ public final class TaskDefinitionVolumeDockerVolumeConfigurationArgs extends io.
      * Docker volume driver to use. The driver value must match the driver name provided by Docker because it is used for task placement.
      * 
      */
-    @InputImport(name="driver")
+    @Import(name="driver")
       private final @Nullable Output<String> driver;
 
     public Output<String> getDriver() {
@@ -42,7 +42,7 @@ public final class TaskDefinitionVolumeDockerVolumeConfigurationArgs extends io.
      * Map of Docker driver specific options.
      * 
      */
-    @InputImport(name="driverOpts")
+    @Import(name="driverOpts")
       private final @Nullable Output<Map<String,String>> driverOpts;
 
     public Output<Map<String,String>> getDriverOpts() {
@@ -53,7 +53,7 @@ public final class TaskDefinitionVolumeDockerVolumeConfigurationArgs extends io.
      * Map of custom metadata to add to your Docker volume.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -64,7 +64,7 @@ public final class TaskDefinitionVolumeDockerVolumeConfigurationArgs extends io.
      * Scope for the Docker volume, which determines its lifecycle, either `task` or `shared`.  Docker volumes that are scoped to a `task` are automatically provisioned when the task starts and destroyed when the task stops. Docker volumes that are scoped as `shared` persist after the task stops.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {

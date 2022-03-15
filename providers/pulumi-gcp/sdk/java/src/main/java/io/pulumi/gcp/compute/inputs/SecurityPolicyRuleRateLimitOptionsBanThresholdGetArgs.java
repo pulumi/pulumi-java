@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class SecurityPolicyRuleRateLimitOptionsBanThresholdGetArgs extends
      * Number of HTTP(S) requests for calculating the threshold.
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Output<Integer> count;
 
     public Output<Integer> getCount() {
@@ -28,7 +28,7 @@ public final class SecurityPolicyRuleRateLimitOptionsBanThresholdGetArgs extends
      * Interval over which the threshold is computed.
      * 
      */
-    @InputImport(name="intervalSec", required=true)
+    @Import(name="intervalSec", required=true)
       private final Output<Integer> intervalSec;
 
     public Output<Integer> getIntervalSec() {

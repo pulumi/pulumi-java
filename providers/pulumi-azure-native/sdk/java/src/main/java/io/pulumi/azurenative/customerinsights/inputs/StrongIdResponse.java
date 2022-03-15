@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class StrongIdResponse extends io.pulumi.resources.InvokeArgs {
      * Localized descriptions.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Map<String,String> description;
 
     public Map<String,String> getDescription() {
@@ -35,7 +35,7 @@ public final class StrongIdResponse extends io.pulumi.resources.InvokeArgs {
      * Localized display name.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Map<String,String> displayName;
 
     public Map<String,String> getDisplayName() {
@@ -46,7 +46,7 @@ public final class StrongIdResponse extends io.pulumi.resources.InvokeArgs {
      * The properties which make up the unique ID.
      * 
      */
-    @InputImport(name="keyPropertyNames", required=true)
+    @Import(name="keyPropertyNames", required=true)
       private final List<String> keyPropertyNames;
 
     public List<String> getKeyPropertyNames() {
@@ -57,7 +57,7 @@ public final class StrongIdResponse extends io.pulumi.resources.InvokeArgs {
      * The Name identifying the strong ID.
      * 
      */
-    @InputImport(name="strongIdName", required=true)
+    @Import(name="strongIdName", required=true)
       private final String strongIdName;
 
     public String getStrongIdName() {

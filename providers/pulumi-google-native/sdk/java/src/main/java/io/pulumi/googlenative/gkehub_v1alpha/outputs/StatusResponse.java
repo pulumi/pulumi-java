@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StatusResponse {
     /**
      * Code specifies AppDevExperienceFeature's subcomponent ready state.
@@ -20,10 +20,10 @@ public final class StatusResponse {
      */
     private final String description;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StatusResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("description") String description) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("description") String description) {
         this.code = code;
         this.description = description;
     }

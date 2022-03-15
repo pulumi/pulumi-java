@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.outputs.ManagedRulesDefinitionResponse;
 import io.pulumi.azurenative.network.outputs.PolicySettingsResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.WebApplicationFirewallCustomRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebApplicationFirewallPolicyResult {
     /**
      * A collection of references to application gateways.
@@ -89,22 +89,22 @@ public final class GetWebApplicationFirewallPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebApplicationFirewallPolicyResult(
-        @OutputCustomType.Parameter("applicationGateways") List<ApplicationGatewayResponse> applicationGateways,
-        @OutputCustomType.Parameter("customRules") @Nullable List<WebApplicationFirewallCustomRuleResponse> customRules,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("httpListeners") List<SubResourceResponse> httpListeners,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("managedRules") ManagedRulesDefinitionResponse managedRules,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pathBasedRules") List<SubResourceResponse> pathBasedRules,
-        @OutputCustomType.Parameter("policySettings") @Nullable PolicySettingsResponse policySettings,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("applicationGateways") List<ApplicationGatewayResponse> applicationGateways,
+        @CustomType.Parameter("customRules") @Nullable List<WebApplicationFirewallCustomRuleResponse> customRules,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("httpListeners") List<SubResourceResponse> httpListeners,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("managedRules") ManagedRulesDefinitionResponse managedRules,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pathBasedRules") List<SubResourceResponse> pathBasedRules,
+        @CustomType.Parameter("policySettings") @Nullable PolicySettingsResponse policySettings,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.applicationGateways = applicationGateways;
         this.customRules = customRules;
         this.etag = etag;

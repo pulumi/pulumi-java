@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineExtensionHandlerInstanceViewResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class VirtualMachineAgentInstanceViewResponse extends io.pulumi.res
      * The virtual machine extension handler instance view.
      * 
      */
-    @InputImport(name="extensionHandlers")
+    @Import(name="extensionHandlers")
       private final @Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers;
 
     public List<VirtualMachineExtensionHandlerInstanceViewResponse> getExtensionHandlers() {
@@ -36,7 +36,7 @@ public final class VirtualMachineAgentInstanceViewResponse extends io.pulumi.res
      * The resource status information.
      * 
      */
-    @InputImport(name="statuses")
+    @Import(name="statuses")
       private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     public List<InstanceViewStatusResponse> getStatuses() {
@@ -47,7 +47,7 @@ public final class VirtualMachineAgentInstanceViewResponse extends io.pulumi.res
      * The VM Agent full version.
      * 
      */
-    @InputImport(name="vmAgentVersion")
+    @Import(name="vmAgentVersion")
       private final @Nullable String vmAgentVersion;
 
     public Optional<String> getVmAgentVersion() {

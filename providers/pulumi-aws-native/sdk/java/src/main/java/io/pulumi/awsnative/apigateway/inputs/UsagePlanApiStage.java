@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class UsagePlanApiStage extends io.pulumi.resources.InvokeArgs {
      * The ID of an API that is in the specified Stage property that you want to associate with the usage plan.
      * 
      */
-    @InputImport(name="apiId")
+    @Import(name="apiId")
       private final @Nullable String apiId;
 
     public Optional<String> getApiId() {
@@ -30,7 +30,7 @@ public final class UsagePlanApiStage extends io.pulumi.resources.InvokeArgs {
      * The name of the stage to associate with the usage plan.
      * 
      */
-    @InputImport(name="stage")
+    @Import(name="stage")
       private final @Nullable String stage;
 
     public Optional<String> getStage() {
@@ -41,7 +41,7 @@ public final class UsagePlanApiStage extends io.pulumi.resources.InvokeArgs {
      * Map containing method-level throttling information for an API stage in a usage plan. The key for the map is the path and method for which to configure custom throttling, for example, '/pets/GET'. Duplicates are not allowed.
      * 
      */
-    @InputImport(name="throttle")
+    @Import(name="throttle")
       private final @Nullable Object throttle;
 
     public Optional<Object> getThrottle() {

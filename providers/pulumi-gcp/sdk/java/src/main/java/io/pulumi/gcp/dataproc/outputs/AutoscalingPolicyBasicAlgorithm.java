@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.AutoscalingPolicyBasicAlgorithmYarnConfig;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoscalingPolicyBasicAlgorithm {
     /**
      * Duration between scaling events. A scaling period starts after the
@@ -26,10 +26,10 @@ public final class AutoscalingPolicyBasicAlgorithm {
      */
     private final AutoscalingPolicyBasicAlgorithmYarnConfig yarnConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscalingPolicyBasicAlgorithm(
-        @OutputCustomType.Parameter("cooldownPeriod") @Nullable String cooldownPeriod,
-        @OutputCustomType.Parameter("yarnConfig") AutoscalingPolicyBasicAlgorithmYarnConfig yarnConfig) {
+        @CustomType.Parameter("cooldownPeriod") @Nullable String cooldownPeriod,
+        @CustomType.Parameter("yarnConfig") AutoscalingPolicyBasicAlgorithmYarnConfig yarnConfig) {
         this.cooldownPeriod = cooldownPeriod;
         this.yarnConfig = yarnConfig;
     }

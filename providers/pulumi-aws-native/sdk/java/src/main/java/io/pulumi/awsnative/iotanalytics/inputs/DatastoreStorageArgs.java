@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.DatastoreCustomerManagedS3Args;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreIotSiteWiseMultiLayerStorageArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreServiceManagedS3Args;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -16,21 +16,21 @@ public final class DatastoreStorageArgs extends io.pulumi.resources.ResourceArgs
 
     public static final DatastoreStorageArgs Empty = new DatastoreStorageArgs();
 
-    @InputImport(name="customerManagedS3")
+    @Import(name="customerManagedS3")
       private final @Nullable Output<DatastoreCustomerManagedS3Args> customerManagedS3;
 
     public Output<DatastoreCustomerManagedS3Args> getCustomerManagedS3() {
         return this.customerManagedS3 == null ? Output.empty() : this.customerManagedS3;
     }
 
-    @InputImport(name="iotSiteWiseMultiLayerStorage")
+    @Import(name="iotSiteWiseMultiLayerStorage")
       private final @Nullable Output<DatastoreIotSiteWiseMultiLayerStorageArgs> iotSiteWiseMultiLayerStorage;
 
     public Output<DatastoreIotSiteWiseMultiLayerStorageArgs> getIotSiteWiseMultiLayerStorage() {
         return this.iotSiteWiseMultiLayerStorage == null ? Output.empty() : this.iotSiteWiseMultiLayerStorage;
     }
 
-    @InputImport(name="serviceManagedS3")
+    @Import(name="serviceManagedS3")
       private final @Nullable Output<DatastoreServiceManagedS3Args> serviceManagedS3;
 
     public Output<DatastoreServiceManagedS3Args> getServiceManagedS3() {

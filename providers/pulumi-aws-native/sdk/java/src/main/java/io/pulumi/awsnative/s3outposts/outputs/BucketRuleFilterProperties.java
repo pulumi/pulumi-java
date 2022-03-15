@@ -5,13 +5,13 @@ package io.pulumi.awsnative.s3outposts.outputs;
 
 import io.pulumi.awsnative.s3outposts.outputs.BucketFilterAndOperator;
 import io.pulumi.awsnative.s3outposts.outputs.BucketFilterTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketRuleFilterProperties {
     /**
      * The container for the AND condition for the lifecycle rule. A combination of Prefix and 1 or more Tags OR a minimum of 2 or more tags.
@@ -29,11 +29,11 @@ public final class BucketRuleFilterProperties {
      */
     private final @Nullable BucketFilterTag tag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketRuleFilterProperties(
-        @OutputCustomType.Parameter("andOperator") @Nullable BucketFilterAndOperator andOperator,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("tag") @Nullable BucketFilterTag tag) {
+        @CustomType.Parameter("andOperator") @Nullable BucketFilterAndOperator andOperator,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("tag") @Nullable BucketFilterTag tag) {
         this.andOperator = andOperator;
         this.prefix = prefix;
         this.tag = tag;

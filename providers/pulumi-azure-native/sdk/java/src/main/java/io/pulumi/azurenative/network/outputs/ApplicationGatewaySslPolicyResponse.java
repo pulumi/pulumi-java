@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewaySslPolicyResponse {
     /**
      * Ssl cipher suites to be enabled in the specified order to application gateway.
@@ -38,13 +38,13 @@ public final class ApplicationGatewaySslPolicyResponse {
      */
     private final @Nullable String policyType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewaySslPolicyResponse(
-        @OutputCustomType.Parameter("cipherSuites") @Nullable List<String> cipherSuites,
-        @OutputCustomType.Parameter("disabledSslProtocols") @Nullable List<String> disabledSslProtocols,
-        @OutputCustomType.Parameter("minProtocolVersion") @Nullable String minProtocolVersion,
-        @OutputCustomType.Parameter("policyName") @Nullable String policyName,
-        @OutputCustomType.Parameter("policyType") @Nullable String policyType) {
+        @CustomType.Parameter("cipherSuites") @Nullable List<String> cipherSuites,
+        @CustomType.Parameter("disabledSslProtocols") @Nullable List<String> disabledSslProtocols,
+        @CustomType.Parameter("minProtocolVersion") @Nullable String minProtocolVersion,
+        @CustomType.Parameter("policyName") @Nullable String policyName,
+        @CustomType.Parameter("policyType") @Nullable String policyType) {
         this.cipherSuites = cipherSuites;
         this.disabledSslProtocols = disabledSslProtocols;
         this.minProtocolVersion = minProtocolVersion;

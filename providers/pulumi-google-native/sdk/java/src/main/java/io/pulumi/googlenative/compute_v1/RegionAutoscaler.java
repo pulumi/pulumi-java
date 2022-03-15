@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.RegionAutoscalerArgs;
@@ -26,7 +26,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * The configuration parameters for the autoscaling algorithm. You can define one or more signals for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or 60%.
      * 
      */
-    @OutputExport(name="autoscalingPolicy", type=AutoscalingPolicyResponse.class, parameters={})
+    @Export(name="autoscalingPolicy", type=AutoscalingPolicyResponse.class, parameters={})
     private Output<AutoscalingPolicyResponse> autoscalingPolicy;
 
     /**
@@ -40,7 +40,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -54,7 +54,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -68,7 +68,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * Type of the resource. Always compute#autoscaler for autoscalers.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -82,7 +82,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -96,7 +96,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * Target recommended MIG size (number of instances) computed by autoscaler. Autoscaler calculates the recommended MIG size even when the autoscaling policy mode is different from ON. This field is empty when autoscaler is not connected to an existing managed instance group or autoscaler did not generate its prediction.
      * 
      */
-    @OutputExport(name="recommendedSize", type=Integer.class, parameters={})
+    @Export(name="recommendedSize", type=Integer.class, parameters={})
     private Output<Integer> recommendedSize;
 
     /**
@@ -110,7 +110,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * URL of the region where the instance group resides (for autoscalers living in regional scope).
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -124,7 +124,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * Status information of existing scaling schedules.
      * 
      */
-    @OutputExport(name="scalingScheduleStatus", type=Map.class, parameters={String.class, String.class})
+    @Export(name="scalingScheduleStatus", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> scalingScheduleStatus;
 
     /**
@@ -138,7 +138,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -152,7 +152,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * The status of the autoscaler configuration. Current set of possible values: - PENDING: Autoscaler backend hasn't read new/updated configuration. - DELETING: Configuration is being deleted. - ACTIVE: Configuration is acknowledged to be effective. Some warnings might be present in the statusDetails field. - ERROR: Configuration has errors. Actionable for users. Details are present in the statusDetails field. New values might be added in the future.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -166,7 +166,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * Human-readable details about the current state of the autoscaler. Read the documentation for Commonly returned status messages for examples of status messages you might encounter.
      * 
      */
-    @OutputExport(name="statusDetails", type=List.class, parameters={AutoscalerStatusDetailsResponse.class})
+    @Export(name="statusDetails", type=List.class, parameters={AutoscalerStatusDetailsResponse.class})
     private Output<List<AutoscalerStatusDetailsResponse>> statusDetails;
 
     /**
@@ -180,7 +180,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * URL of the managed instance group that this autoscaler will scale. This field is required when creating an autoscaler.
      * 
      */
-    @OutputExport(name="target", type=String.class, parameters={})
+    @Export(name="target", type=String.class, parameters={})
     private Output<String> target;
 
     /**
@@ -194,7 +194,7 @@ public class RegionAutoscaler extends io.pulumi.resources.CustomResource {
      * URL of the zone where the instance group resides (for autoscalers living in zonal scope).
      * 
      */
-    @OutputExport(name="zone", type=String.class, parameters={})
+    @Export(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
     /**

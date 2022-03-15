@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum {
     /**
      * Required. The name of the repository.
@@ -15,8 +15,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

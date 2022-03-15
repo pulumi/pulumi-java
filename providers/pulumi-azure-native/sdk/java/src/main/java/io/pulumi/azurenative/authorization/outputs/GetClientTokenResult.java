@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClientTokenResult {
     /**
      * OAuth token for Azure Management API and SDK authentication.
@@ -15,8 +15,8 @@ public final class GetClientTokenResult {
      */
     private final String token;
 
-    @OutputCustomType.Constructor
-    private GetClientTokenResult(@OutputCustomType.Parameter("token") String token) {
+    @CustomType.Constructor
+    private GetClientTokenResult(@CustomType.Parameter("token") String token) {
         this.token = token;
     }
 

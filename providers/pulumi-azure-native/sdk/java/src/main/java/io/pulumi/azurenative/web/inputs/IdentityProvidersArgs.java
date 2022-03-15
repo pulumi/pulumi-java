@@ -13,7 +13,7 @@ import io.pulumi.azurenative.web.inputs.GoogleArgs;
 import io.pulumi.azurenative.web.inputs.LegacyMicrosoftAccountArgs;
 import io.pulumi.azurenative.web.inputs.TwitterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -32,7 +32,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * The configuration settings of the Apple provider.
      * 
      */
-    @InputImport(name="apple")
+    @Import(name="apple")
       private final @Nullable Output<AppleArgs> apple;
 
     public Output<AppleArgs> getApple() {
@@ -43,7 +43,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * The configuration settings of the Azure Active directory provider.
      * 
      */
-    @InputImport(name="azureActiveDirectory")
+    @Import(name="azureActiveDirectory")
       private final @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
 
     public Output<AzureActiveDirectoryArgs> getAzureActiveDirectory() {
@@ -54,7 +54,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * The configuration settings of the Azure Static Web Apps provider.
      * 
      */
-    @InputImport(name="azureStaticWebApps")
+    @Import(name="azureStaticWebApps")
       private final @Nullable Output<AzureStaticWebAppsArgs> azureStaticWebApps;
 
     public Output<AzureStaticWebAppsArgs> getAzureStaticWebApps() {
@@ -66,7 +66,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * configuration settings of the custom Open ID Connect provider.
      * 
      */
-    @InputImport(name="customOpenIdConnectProviders")
+    @Import(name="customOpenIdConnectProviders")
       private final @Nullable Output<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders;
 
     public Output<Map<String,CustomOpenIdConnectProviderArgs>> getCustomOpenIdConnectProviders() {
@@ -77,7 +77,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * The configuration settings of the Facebook provider.
      * 
      */
-    @InputImport(name="facebook")
+    @Import(name="facebook")
       private final @Nullable Output<FacebookArgs> facebook;
 
     public Output<FacebookArgs> getFacebook() {
@@ -88,7 +88,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * The configuration settings of the GitHub provider.
      * 
      */
-    @InputImport(name="gitHub")
+    @Import(name="gitHub")
       private final @Nullable Output<GitHubArgs> gitHub;
 
     public Output<GitHubArgs> getGitHub() {
@@ -99,7 +99,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * The configuration settings of the Google provider.
      * 
      */
-    @InputImport(name="google")
+    @Import(name="google")
       private final @Nullable Output<GoogleArgs> google;
 
     public Output<GoogleArgs> getGoogle() {
@@ -110,7 +110,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * The configuration settings of the legacy Microsoft Account provider.
      * 
      */
-    @InputImport(name="legacyMicrosoftAccount")
+    @Import(name="legacyMicrosoftAccount")
       private final @Nullable Output<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount;
 
     public Output<LegacyMicrosoftAccountArgs> getLegacyMicrosoftAccount() {
@@ -121,7 +121,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
      * The configuration settings of the Twitter provider.
      * 
      */
-    @InputImport(name="twitter")
+    @Import(name="twitter")
       private final @Nullable Output<TwitterArgs> twitter;
 
     public Output<TwitterArgs> getTwitter() {

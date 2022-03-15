@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkConfigResponse {
     /**
      * Option to configure network egress for the workers.
@@ -20,10 +20,10 @@ public final class NetworkConfigResponse {
      */
     private final String peeredNetwork;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkConfigResponse(
-        @OutputCustomType.Parameter("egressOption") String egressOption,
-        @OutputCustomType.Parameter("peeredNetwork") String peeredNetwork) {
+        @CustomType.Parameter("egressOption") String egressOption,
+        @CustomType.Parameter("peeredNetwork") String peeredNetwork) {
         this.egressOption = egressOption;
         this.peeredNetwork = peeredNetwork;
     }

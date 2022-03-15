@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DistributionOrderedCacheBehaviorFunctionAssociationGetArgs ex
      * Valid values: `viewer-request` or `viewer-response`
      * 
      */
-    @InputImport(name="eventType", required=true)
+    @Import(name="eventType", required=true)
       private final Output<String> eventType;
 
     public Output<String> getEventType() {
@@ -29,7 +29,7 @@ public final class DistributionOrderedCacheBehaviorFunctionAssociationGetArgs ex
      * ARN of the Cloudfront function.
      * 
      */
-    @InputImport(name="functionArn", required=true)
+    @Import(name="functionArn", required=true)
       private final Output<String> functionArn;
 
     public Output<String> getFunctionArn() {

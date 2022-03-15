@@ -4,14 +4,14 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetVpcDhcpOptionsFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVpcDhcpOptionsResult {
     /**
      * The ARN of the DHCP Options Set.
@@ -65,19 +65,19 @@ public final class GetVpcDhcpOptionsResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVpcDhcpOptionsResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("dhcpOptionsId") String dhcpOptionsId,
-        @OutputCustomType.Parameter("domainName") String domainName,
-        @OutputCustomType.Parameter("domainNameServers") List<String> domainNameServers,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcDhcpOptionsFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("netbiosNameServers") List<String> netbiosNameServers,
-        @OutputCustomType.Parameter("netbiosNodeType") String netbiosNodeType,
-        @OutputCustomType.Parameter("ntpServers") List<String> ntpServers,
-        @OutputCustomType.Parameter("ownerId") String ownerId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("dhcpOptionsId") String dhcpOptionsId,
+        @CustomType.Parameter("domainName") String domainName,
+        @CustomType.Parameter("domainNameServers") List<String> domainNameServers,
+        @CustomType.Parameter("filters") @Nullable List<GetVpcDhcpOptionsFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("netbiosNameServers") List<String> netbiosNameServers,
+        @CustomType.Parameter("netbiosNodeType") String netbiosNodeType,
+        @CustomType.Parameter("ntpServers") List<String> ntpServers,
+        @CustomType.Parameter("ownerId") String ownerId,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.dhcpOptionsId = dhcpOptionsId;
         this.domainName = domainName;

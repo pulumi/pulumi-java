@@ -7,7 +7,7 @@ import io.pulumi.azurenative.databricks.inputs.WorkspaceCustomBooleanParameterRe
 import io.pulumi.azurenative.databricks.inputs.WorkspaceCustomObjectParameterResponse;
 import io.pulumi.azurenative.databricks.inputs.WorkspaceCustomStringParameterResponse;
 import io.pulumi.azurenative.databricks.inputs.WorkspaceEncryptionParameterResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * The ID of a Azure Machine Learning workspace to link with Databricks workspace
      * 
      */
-    @InputImport(name="amlWorkspaceId")
+    @Import(name="amlWorkspaceId")
       private final @Nullable WorkspaceCustomStringParameterResponse amlWorkspaceId;
 
     public Optional<WorkspaceCustomStringParameterResponse> getAmlWorkspaceId() {
@@ -36,7 +36,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * The name of the Private Subnet within the Virtual Network
      * 
      */
-    @InputImport(name="customPrivateSubnetName")
+    @Import(name="customPrivateSubnetName")
       private final @Nullable WorkspaceCustomStringParameterResponse customPrivateSubnetName;
 
     public Optional<WorkspaceCustomStringParameterResponse> getCustomPrivateSubnetName() {
@@ -47,7 +47,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * The name of a Public Subnet within the Virtual Network
      * 
      */
-    @InputImport(name="customPublicSubnetName")
+    @Import(name="customPublicSubnetName")
       private final @Nullable WorkspaceCustomStringParameterResponse customPublicSubnetName;
 
     public Optional<WorkspaceCustomStringParameterResponse> getCustomPublicSubnetName() {
@@ -58,7 +58,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * The ID of a Virtual Network where this Databricks Cluster should be created
      * 
      */
-    @InputImport(name="customVirtualNetworkId")
+    @Import(name="customVirtualNetworkId")
       private final @Nullable WorkspaceCustomStringParameterResponse customVirtualNetworkId;
 
     public Optional<WorkspaceCustomStringParameterResponse> getCustomVirtualNetworkId() {
@@ -69,7 +69,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * Should the Public IP be Disabled?
      * 
      */
-    @InputImport(name="enableNoPublicIp")
+    @Import(name="enableNoPublicIp")
       private final @Nullable WorkspaceCustomBooleanParameterResponse enableNoPublicIp;
 
     public Optional<WorkspaceCustomBooleanParameterResponse> getEnableNoPublicIp() {
@@ -80,7 +80,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * Contains the encryption details for Customer-Managed Key (CMK) enabled workspace.
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable WorkspaceEncryptionParameterResponse encryption;
 
     public Optional<WorkspaceEncryptionParameterResponse> getEncryption() {
@@ -91,7 +91,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * Name of the outbound Load Balancer Backend Pool for Secure Cluster Connectivity (No Public IP).
      * 
      */
-    @InputImport(name="loadBalancerBackendPoolName")
+    @Import(name="loadBalancerBackendPoolName")
       private final @Nullable WorkspaceCustomStringParameterResponse loadBalancerBackendPoolName;
 
     public Optional<WorkspaceCustomStringParameterResponse> getLoadBalancerBackendPoolName() {
@@ -102,7 +102,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * Resource URI of Outbound Load balancer for Secure Cluster Connectivity (No Public IP) workspace.
      * 
      */
-    @InputImport(name="loadBalancerId")
+    @Import(name="loadBalancerId")
       private final @Nullable WorkspaceCustomStringParameterResponse loadBalancerId;
 
     public Optional<WorkspaceCustomStringParameterResponse> getLoadBalancerId() {
@@ -113,7 +113,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * Name of the NAT gateway for Secure Cluster Connectivity (No Public IP) workspace subnets.
      * 
      */
-    @InputImport(name="natGatewayName")
+    @Import(name="natGatewayName")
       private final @Nullable WorkspaceCustomStringParameterResponse natGatewayName;
 
     public Optional<WorkspaceCustomStringParameterResponse> getNatGatewayName() {
@@ -124,7 +124,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * Prepare the workspace for encryption. Enables the Managed Identity for managed storage account.
      * 
      */
-    @InputImport(name="prepareEncryption")
+    @Import(name="prepareEncryption")
       private final @Nullable WorkspaceCustomBooleanParameterResponse prepareEncryption;
 
     public Optional<WorkspaceCustomBooleanParameterResponse> getPrepareEncryption() {
@@ -135,7 +135,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * Name of the Public IP for No Public IP workspace with managed vNet.
      * 
      */
-    @InputImport(name="publicIpName")
+    @Import(name="publicIpName")
       private final @Nullable WorkspaceCustomStringParameterResponse publicIpName;
 
     public Optional<WorkspaceCustomStringParameterResponse> getPublicIpName() {
@@ -146,7 +146,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * A boolean indicating whether or not the DBFS root file system will be enabled with secondary layer of encryption with platform managed keys for data at rest.
      * 
      */
-    @InputImport(name="requireInfrastructureEncryption")
+    @Import(name="requireInfrastructureEncryption")
       private final @Nullable WorkspaceCustomBooleanParameterResponse requireInfrastructureEncryption;
 
     public Optional<WorkspaceCustomBooleanParameterResponse> getRequireInfrastructureEncryption() {
@@ -157,7 +157,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * Tags applied to resources under Managed resource group. These can be updated by updating tags at workspace level.
      * 
      */
-    @InputImport(name="resourceTags", required=true)
+    @Import(name="resourceTags", required=true)
       private final WorkspaceCustomObjectParameterResponse resourceTags;
 
     public WorkspaceCustomObjectParameterResponse getResourceTags() {
@@ -168,7 +168,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * Default DBFS storage account name.
      * 
      */
-    @InputImport(name="storageAccountName")
+    @Import(name="storageAccountName")
       private final @Nullable WorkspaceCustomStringParameterResponse storageAccountName;
 
     public Optional<WorkspaceCustomStringParameterResponse> getStorageAccountName() {
@@ -179,7 +179,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * Storage account SKU name, ex: Standard_GRS, Standard_LRS. Refer https://aka.ms/storageskus for valid inputs.
      * 
      */
-    @InputImport(name="storageAccountSkuName")
+    @Import(name="storageAccountSkuName")
       private final @Nullable WorkspaceCustomStringParameterResponse storageAccountSkuName;
 
     public Optional<WorkspaceCustomStringParameterResponse> getStorageAccountSkuName() {
@@ -190,7 +190,7 @@ public final class WorkspaceCustomParametersResponse extends io.pulumi.resources
      * Address prefix for Managed virtual network. Default value for this input is 10.139.
      * 
      */
-    @InputImport(name="vnetAddressPrefix")
+    @Import(name="vnetAddressPrefix")
       private final @Nullable WorkspaceCustomStringParameterResponse vnetAddressPrefix;
 
     public Optional<WorkspaceCustomStringParameterResponse> getVnetAddressPrefix() {

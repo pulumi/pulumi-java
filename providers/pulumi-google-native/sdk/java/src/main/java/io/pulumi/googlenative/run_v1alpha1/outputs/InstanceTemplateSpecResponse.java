@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.InstanceSpecResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceTemplateSpecResponse {
     /**
      * Optional. Specification of the desired behavior of the instance. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status +optional
@@ -15,8 +15,8 @@ public final class InstanceTemplateSpecResponse {
      */
     private final InstanceSpecResponse spec;
 
-    @OutputCustomType.Constructor
-    private InstanceTemplateSpecResponse(@OutputCustomType.Parameter("spec") InstanceSpecResponse spec) {
+    @CustomType.Constructor
+    private InstanceTemplateSpecResponse(@CustomType.Parameter("spec") InstanceSpecResponse spec) {
         this.spec = spec;
     }
 

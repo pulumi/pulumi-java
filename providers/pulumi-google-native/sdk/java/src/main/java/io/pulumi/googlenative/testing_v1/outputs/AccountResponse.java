@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.GoogleAutoResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AccountResponse {
     /**
      * An automatic google login account.
@@ -15,8 +15,8 @@ public final class AccountResponse {
      */
     private final GoogleAutoResponse googleAuto;
 
-    @OutputCustomType.Constructor
-    private AccountResponse(@OutputCustomType.Parameter("googleAuto") GoogleAutoResponse googleAuto) {
+    @CustomType.Constructor
+    private AccountResponse(@CustomType.Parameter("googleAuto") GoogleAutoResponse googleAuto) {
         this.googleAuto = googleAuto;
     }
 

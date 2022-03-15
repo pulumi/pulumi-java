@@ -4,12 +4,12 @@
 package io.pulumi.aws.kms.outputs;
 
 import io.pulumi.aws.kms.outputs.GetSecretSecret;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSecretResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -18,10 +18,10 @@ public final class GetSecretResult {
     private final String id;
     private final List<GetSecretSecret> secrets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSecretResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("secrets") List<GetSecretSecret> secrets) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("secrets") List<GetSecretSecret> secrets) {
         this.id = id;
         this.secrets = secrets;
     }

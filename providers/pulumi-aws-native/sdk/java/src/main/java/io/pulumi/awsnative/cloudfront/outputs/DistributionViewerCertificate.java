@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionViewerCertificate {
     private final @Nullable String acmCertificateArn;
     private final @Nullable Boolean cloudFrontDefaultCertificate;
@@ -18,13 +18,13 @@ public final class DistributionViewerCertificate {
     private final @Nullable String minimumProtocolVersion;
     private final @Nullable String sslSupportMethod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionViewerCertificate(
-        @OutputCustomType.Parameter("acmCertificateArn") @Nullable String acmCertificateArn,
-        @OutputCustomType.Parameter("cloudFrontDefaultCertificate") @Nullable Boolean cloudFrontDefaultCertificate,
-        @OutputCustomType.Parameter("iamCertificateId") @Nullable String iamCertificateId,
-        @OutputCustomType.Parameter("minimumProtocolVersion") @Nullable String minimumProtocolVersion,
-        @OutputCustomType.Parameter("sslSupportMethod") @Nullable String sslSupportMethod) {
+        @CustomType.Parameter("acmCertificateArn") @Nullable String acmCertificateArn,
+        @CustomType.Parameter("cloudFrontDefaultCertificate") @Nullable Boolean cloudFrontDefaultCertificate,
+        @CustomType.Parameter("iamCertificateId") @Nullable String iamCertificateId,
+        @CustomType.Parameter("minimumProtocolVersion") @Nullable String minimumProtocolVersion,
+        @CustomType.Parameter("sslSupportMethod") @Nullable String sslSupportMethod) {
         this.acmCertificateArn = acmCertificateArn;
         this.cloudFrontDefaultCertificate = cloudFrontDefaultCertificate;
         this.iamCertificateId = iamCertificateId;

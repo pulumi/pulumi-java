@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.GitHubActionCodeConfigurationResponse;
 import io.pulumi.azurenative.web.inputs.GitHubActionContainerConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class GitHubActionConfigurationResponse extends io.pulumi.resources
      * GitHub Action code configuration.
      * 
      */
-    @InputImport(name="codeConfiguration")
+    @Import(name="codeConfiguration")
       private final @Nullable GitHubActionCodeConfigurationResponse codeConfiguration;
 
     public Optional<GitHubActionCodeConfigurationResponse> getCodeConfiguration() {
@@ -35,7 +35,7 @@ public final class GitHubActionConfigurationResponse extends io.pulumi.resources
      * GitHub Action container configuration.
      * 
      */
-    @InputImport(name="containerConfiguration")
+    @Import(name="containerConfiguration")
       private final @Nullable GitHubActionContainerConfigurationResponse containerConfiguration;
 
     public Optional<GitHubActionContainerConfigurationResponse> getContainerConfiguration() {
@@ -46,7 +46,7 @@ public final class GitHubActionConfigurationResponse extends io.pulumi.resources
      * Workflow option to determine whether the workflow file should be generated and written to the repository.
      * 
      */
-    @InputImport(name="generateWorkflowFile")
+    @Import(name="generateWorkflowFile")
       private final @Nullable Boolean generateWorkflowFile;
 
     public Optional<Boolean> getGenerateWorkflowFile() {
@@ -57,7 +57,7 @@ public final class GitHubActionConfigurationResponse extends io.pulumi.resources
      * This will help determine the workflow configuration to select.
      * 
      */
-    @InputImport(name="isLinux")
+    @Import(name="isLinux")
       private final @Nullable Boolean isLinux;
 
     public Optional<Boolean> getIsLinux() {

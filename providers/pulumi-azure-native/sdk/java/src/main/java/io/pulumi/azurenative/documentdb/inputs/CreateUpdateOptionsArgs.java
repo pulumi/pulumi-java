@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.AutoscaleSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CreateUpdateOptionsArgs extends io.pulumi.resources.ResourceA
      * Specifies the Autoscale settings.
      * 
      */
-    @InputImport(name="autoscaleSettings")
+    @Import(name="autoscaleSettings")
       private final @Nullable Output<AutoscaleSettingsArgs> autoscaleSettings;
 
     public Output<AutoscaleSettingsArgs> getAutoscaleSettings() {
@@ -34,7 +34,7 @@ public final class CreateUpdateOptionsArgs extends io.pulumi.resources.ResourceA
      * Request Units per second. For example, "throughput": 10000.
      * 
      */
-    @InputImport(name="throughput")
+    @Import(name="throughput")
       private final @Nullable Output<Integer> throughput;
 
     public Output<Integer> getThroughput() {

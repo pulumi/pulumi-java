@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VolumeFailoverMetadataResponse {
     /**
      * The date at which the snapshot was taken.
@@ -48,15 +48,15 @@ public final class VolumeFailoverMetadataResponse {
      */
     private final @Nullable String volumeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VolumeFailoverMetadataResponse(
-        @OutputCustomType.Parameter("backupCreatedDate") @Nullable String backupCreatedDate,
-        @OutputCustomType.Parameter("backupElementId") @Nullable String backupElementId,
-        @OutputCustomType.Parameter("backupId") @Nullable String backupId,
-        @OutputCustomType.Parameter("backupPolicyId") @Nullable String backupPolicyId,
-        @OutputCustomType.Parameter("sizeInBytes") @Nullable Double sizeInBytes,
-        @OutputCustomType.Parameter("volumeId") @Nullable String volumeId,
-        @OutputCustomType.Parameter("volumeType") @Nullable String volumeType) {
+        @CustomType.Parameter("backupCreatedDate") @Nullable String backupCreatedDate,
+        @CustomType.Parameter("backupElementId") @Nullable String backupElementId,
+        @CustomType.Parameter("backupId") @Nullable String backupId,
+        @CustomType.Parameter("backupPolicyId") @Nullable String backupPolicyId,
+        @CustomType.Parameter("sizeInBytes") @Nullable Double sizeInBytes,
+        @CustomType.Parameter("volumeId") @Nullable String volumeId,
+        @CustomType.Parameter("volumeType") @Nullable String volumeType) {
         this.backupCreatedDate = backupCreatedDate;
         this.backupElementId = backupElementId;
         this.backupId = backupId;

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.elastic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ElasticCloudUserResponse {
     /**
      * Elastic cloud default dashboard sso URL of the Elastic user account.
@@ -25,11 +25,11 @@ public final class ElasticCloudUserResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ElasticCloudUserResponse(
-        @OutputCustomType.Parameter("elasticCloudSsoDefaultUrl") String elasticCloudSsoDefaultUrl,
-        @OutputCustomType.Parameter("emailAddress") String emailAddress,
-        @OutputCustomType.Parameter("id") String id) {
+        @CustomType.Parameter("elasticCloudSsoDefaultUrl") String elasticCloudSsoDefaultUrl,
+        @CustomType.Parameter("emailAddress") String emailAddress,
+        @CustomType.Parameter("id") String id) {
         this.elasticCloudSsoDefaultUrl = elasticCloudSsoDefaultUrl;
         this.emailAddress = emailAddress;
         this.id = id;

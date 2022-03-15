@@ -4,7 +4,7 @@
 package io.pulumi.aws.appconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * The application ID.
      * 
      */
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -30,7 +30,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * The Amazon Resource Name (ARN) of the AppConfig  hosted configuration version.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -41,7 +41,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * The configuration profile ID.
      * 
      */
-    @InputImport(name="configurationProfileId")
+    @Import(name="configurationProfileId")
       private final @Nullable Output<String> configurationProfileId;
 
     public Output<String> getConfigurationProfileId() {
@@ -52,7 +52,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * The content of the configuration or the configuration data.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
@@ -63,7 +63,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * A standard MIME type describing the format of the configuration content. For more information, see [Content-Type](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17).
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -74,7 +74,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * A description of the configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -85,7 +85,7 @@ public final class HostedConfigurationVersionState extends io.pulumi.resources.R
      * The version number of the hosted configuration.
      * 
      */
-    @InputImport(name="versionNumber")
+    @Import(name="versionNumber")
       private final @Nullable Output<Integer> versionNumber;
 
     public Output<Integer> getVersionNumber() {

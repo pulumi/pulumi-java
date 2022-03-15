@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SoftwareRecipeStepExtractArchiveResponse {
     /**
      * The id of the relevant artifact in the recipe.
@@ -25,11 +25,11 @@ public final class SoftwareRecipeStepExtractArchiveResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SoftwareRecipeStepExtractArchiveResponse(
-        @OutputCustomType.Parameter("artifactId") String artifactId,
-        @OutputCustomType.Parameter("destination") String destination,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("artifactId") String artifactId,
+        @CustomType.Parameter("destination") String destination,
+        @CustomType.Parameter("type") String type) {
         this.artifactId = artifactId;
         this.destination = destination;
         this.type = type;

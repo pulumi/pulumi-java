@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GitHubActionCodeConfigurationArgs extends io.pulumi.resources
      * Runtime stack is used to determine the workflow file content for code base apps.
      * 
      */
-    @InputImport(name="runtimeStack")
+    @Import(name="runtimeStack")
       private final @Nullable Output<String> runtimeStack;
 
     public Output<String> getRuntimeStack() {
@@ -33,7 +33,7 @@ public final class GitHubActionCodeConfigurationArgs extends io.pulumi.resources
      * Runtime version is used to determine what build version to set in the workflow file.
      * 
      */
-    @InputImport(name="runtimeVersion")
+    @Import(name="runtimeVersion")
       private final @Nullable Output<String> runtimeVersion;
 
     public Output<String> getRuntimeVersion() {

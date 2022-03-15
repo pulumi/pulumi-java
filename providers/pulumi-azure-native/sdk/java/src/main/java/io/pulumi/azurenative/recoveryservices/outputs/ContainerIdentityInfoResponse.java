@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerIdentityInfoResponse {
     /**
      * Protection container identity - AAD Tenant
@@ -32,12 +32,12 @@ public final class ContainerIdentityInfoResponse {
      */
     private final @Nullable String uniqueName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerIdentityInfoResponse(
-        @OutputCustomType.Parameter("aadTenantId") @Nullable String aadTenantId,
-        @OutputCustomType.Parameter("audience") @Nullable String audience,
-        @OutputCustomType.Parameter("servicePrincipalClientId") @Nullable String servicePrincipalClientId,
-        @OutputCustomType.Parameter("uniqueName") @Nullable String uniqueName) {
+        @CustomType.Parameter("aadTenantId") @Nullable String aadTenantId,
+        @CustomType.Parameter("audience") @Nullable String audience,
+        @CustomType.Parameter("servicePrincipalClientId") @Nullable String servicePrincipalClientId,
+        @CustomType.Parameter("uniqueName") @Nullable String uniqueName) {
         this.aadTenantId = aadTenantId;
         this.audience = audience;
         this.servicePrincipalClientId = servicePrincipalClientId;

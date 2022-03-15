@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetAuthorizerArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAuthorizerArgs Empty = new GetAuthorizerArgs();
 
-    @InputImport(name="authorizerId", required=true)
+    @Import(name="authorizerId", required=true)
       private final String authorizerId;
 
     public String getAuthorizerId() {
@@ -23,7 +23,7 @@ public final class GetAuthorizerArgs extends io.pulumi.resources.InvokeArgs {
      * The identifier of the API.
      * 
      */
-    @InputImport(name="restApiId", required=true)
+    @Import(name="restApiId", required=true)
       private final String restApiId;
 
     public String getRestApiId() {

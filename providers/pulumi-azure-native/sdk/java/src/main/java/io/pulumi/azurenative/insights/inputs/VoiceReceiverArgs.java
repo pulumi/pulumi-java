@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VoiceReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * The country code of the voice receiver.
      * 
      */
-    @InputImport(name="countryCode", required=true)
+    @Import(name="countryCode", required=true)
       private final Output<String> countryCode;
 
     public Output<String> getCountryCode() {
@@ -32,7 +32,7 @@ public final class VoiceReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the voice receiver. Names must be unique across all receivers within an action group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class VoiceReceiverArgs extends io.pulumi.resources.ResourceArgs {
      * The phone number of the voice receiver.
      * 
      */
-    @InputImport(name="phoneNumber", required=true)
+    @Import(name="phoneNumber", required=true)
       private final Output<String> phoneNumber;
 
     public Output<String> getPhoneNumber() {

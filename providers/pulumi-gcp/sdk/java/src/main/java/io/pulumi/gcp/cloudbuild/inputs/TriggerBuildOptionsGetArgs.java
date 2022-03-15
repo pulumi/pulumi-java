@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildOptionsVolumeGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,7 +26,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * is 1000GB; builds that request more than the maximum are rejected with an error.
      * 
      */
-    @InputImport(name="diskSizeGb")
+    @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
     public Output<Integer> getDiskSizeGb() {
@@ -38,7 +38,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * NOTE this is always enabled for triggered builds and cannot be overridden in the build configuration file.
      * 
      */
-    @InputImport(name="dynamicSubstitutions")
+    @Import(name="dynamicSubstitutions")
       private final @Nullable Output<Boolean> dynamicSubstitutions;
 
     public Output<Boolean> getDynamicSubstitutions() {
@@ -52,7 +52,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * The elements are of the form "KEY=VALUE" for the environment variable "KEY" being given the value "VALUE".
      * 
      */
-    @InputImport(name="envs")
+    @Import(name="envs")
       private final @Nullable Output<List<String>> envs;
 
     public Output<List<String>> getEnvs() {
@@ -64,7 +64,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * Possible values are `STREAM_DEFAULT`, `STREAM_ON`, and `STREAM_OFF`.
      * 
      */
-    @InputImport(name="logStreamingOption")
+    @Import(name="logStreamingOption")
       private final @Nullable Output<String> logStreamingOption;
 
     public Output<String> getLogStreamingOption() {
@@ -76,7 +76,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * Possible values are `LOGGING_UNSPECIFIED`, `LEGACY`, `GCS_ONLY`, `STACKDRIVER_ONLY`, and `NONE`.
      * 
      */
-    @InputImport(name="logging")
+    @Import(name="logging")
       private final @Nullable Output<String> logging;
 
     public Output<String> getLogging() {
@@ -88,7 +88,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * Possible values are `UNSPECIFIED`, `N1_HIGHCPU_8`, `N1_HIGHCPU_32`, `E2_HIGHCPU_8`, and `E2_HIGHCPU_32`.
      * 
      */
-    @InputImport(name="machineType")
+    @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
     public Output<String> getMachineType() {
@@ -100,7 +100,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * Possible values are `NOT_VERIFIED` and `VERIFIED`.
      * 
      */
-    @InputImport(name="requestedVerifyOption")
+    @Import(name="requestedVerifyOption")
       private final @Nullable Output<String> requestedVerifyOption;
 
     public Output<String> getRequestedVerifyOption() {
@@ -113,7 +113,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * will be available to all build steps in this build.
      * 
      */
-    @InputImport(name="secretEnvs")
+    @Import(name="secretEnvs")
       private final @Nullable Output<List<String>> secretEnvs;
 
     public Output<List<String>> getSecretEnvs() {
@@ -125,7 +125,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * Each value may be one of `NONE`, `SHA256`, and `MD5`.
      * 
      */
-    @InputImport(name="sourceProvenanceHashes")
+    @Import(name="sourceProvenanceHashes")
       private final @Nullable Output<List<String>> sourceProvenanceHashes;
 
     public Output<List<String>> getSourceProvenanceHashes() {
@@ -139,7 +139,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * Possible values are `MUST_MATCH` and `ALLOW_LOOSE`.
      * 
      */
-    @InputImport(name="substitutionOption")
+    @Import(name="substitutionOption")
       private final @Nullable Output<String> substitutionOption;
 
     public Output<String> getSubstitutionOption() {
@@ -156,7 +156,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="volumes")
+    @Import(name="volumes")
       private final @Nullable Output<List<TriggerBuildOptionsVolumeGetArgs>> volumes;
 
     public Output<List<TriggerBuildOptionsVolumeGetArgs>> getVolumes() {
@@ -168,7 +168,7 @@ public final class TriggerBuildOptionsGetArgs extends io.pulumi.resources.Resour
      * This field is experimental.
      * 
      */
-    @InputImport(name="workerPool")
+    @Import(name="workerPool")
       private final @Nullable Output<String> workerPool;
 
     public Output<String> getWorkerPool() {

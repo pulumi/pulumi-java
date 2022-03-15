@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
      * List of tags that can be used for describing the trigger.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -37,7 +37,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
      * The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
      * 
      */
-    @InputImport(name="blobPathBeginsWith")
+    @Import(name="blobPathBeginsWith")
       private final @Nullable String blobPathBeginsWith;
 
     public Optional<String> getBlobPathBeginsWith() {
@@ -48,7 +48,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
      * The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.
      * 
      */
-    @InputImport(name="blobPathEndsWith")
+    @Import(name="blobPathEndsWith")
       private final @Nullable String blobPathEndsWith;
 
     public Optional<String> getBlobPathEndsWith() {
@@ -59,7 +59,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
      * Trigger description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -70,7 +70,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
      * The type of events that cause this trigger to fire.
      * 
      */
-    @InputImport(name="events", required=true)
+    @Import(name="events", required=true)
       private final List<String> events;
 
     public List<String> getEvents() {
@@ -81,7 +81,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
      * If set to true, blobs with zero bytes will be ignored.
      * 
      */
-    @InputImport(name="ignoreEmptyBlobs")
+    @Import(name="ignoreEmptyBlobs")
       private final @Nullable Boolean ignoreEmptyBlobs;
 
     public Optional<Boolean> getIgnoreEmptyBlobs() {
@@ -92,7 +92,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
      * Pipelines that need to be started.
      * 
      */
-    @InputImport(name="pipelines")
+    @Import(name="pipelines")
       private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
 
     public List<TriggerPipelineReferenceResponse> getPipelines() {
@@ -103,7 +103,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
      * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
      */
-    @InputImport(name="runtimeState", required=true)
+    @Import(name="runtimeState", required=true)
       private final String runtimeState;
 
     public String getRuntimeState() {
@@ -114,7 +114,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
      * The ARM resource ID of the Storage Account.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final String scope;
 
     public String getScope() {
@@ -126,7 +126,7 @@ public final class BlobEventsTriggerResponse extends io.pulumi.resources.InvokeA
      * Expected value is 'BlobEventsTrigger'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

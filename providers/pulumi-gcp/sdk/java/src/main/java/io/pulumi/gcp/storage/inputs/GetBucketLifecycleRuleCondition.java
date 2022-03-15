@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,63 +14,63 @@ public final class GetBucketLifecycleRuleCondition extends io.pulumi.resources.I
 
     public static final GetBucketLifecycleRuleCondition Empty = new GetBucketLifecycleRuleCondition();
 
-    @InputImport(name="age", required=true)
+    @Import(name="age", required=true)
       private final Integer age;
 
     public Integer getAge() {
         return this.age;
     }
 
-    @InputImport(name="createdBefore", required=true)
+    @Import(name="createdBefore", required=true)
       private final String createdBefore;
 
     public String getCreatedBefore() {
         return this.createdBefore;
     }
 
-    @InputImport(name="customTimeBefore", required=true)
+    @Import(name="customTimeBefore", required=true)
       private final String customTimeBefore;
 
     public String getCustomTimeBefore() {
         return this.customTimeBefore;
     }
 
-    @InputImport(name="daysSinceCustomTime", required=true)
+    @Import(name="daysSinceCustomTime", required=true)
       private final Integer daysSinceCustomTime;
 
     public Integer getDaysSinceCustomTime() {
         return this.daysSinceCustomTime;
     }
 
-    @InputImport(name="daysSinceNoncurrentTime", required=true)
+    @Import(name="daysSinceNoncurrentTime", required=true)
       private final Integer daysSinceNoncurrentTime;
 
     public Integer getDaysSinceNoncurrentTime() {
         return this.daysSinceNoncurrentTime;
     }
 
-    @InputImport(name="matchesStorageClasses", required=true)
+    @Import(name="matchesStorageClasses", required=true)
       private final List<String> matchesStorageClasses;
 
     public List<String> getMatchesStorageClasses() {
         return this.matchesStorageClasses;
     }
 
-    @InputImport(name="noncurrentTimeBefore", required=true)
+    @Import(name="noncurrentTimeBefore", required=true)
       private final String noncurrentTimeBefore;
 
     public String getNoncurrentTimeBefore() {
         return this.noncurrentTimeBefore;
     }
 
-    @InputImport(name="numNewerVersions", required=true)
+    @Import(name="numNewerVersions", required=true)
       private final Integer numNewerVersions;
 
     public Integer getNumNewerVersions() {
         return this.numNewerVersions;
     }
 
-    @InputImport(name="withState", required=true)
+    @Import(name="withState", required=true)
       private final String withState;
 
     public String getWithState() {

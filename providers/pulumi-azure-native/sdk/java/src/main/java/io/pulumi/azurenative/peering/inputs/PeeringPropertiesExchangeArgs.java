@@ -6,7 +6,7 @@ package io.pulumi.azurenative.peering.inputs;
 import io.pulumi.azurenative.peering.inputs.ExchangeConnectionArgs;
 import io.pulumi.azurenative.peering.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class PeeringPropertiesExchangeArgs extends io.pulumi.resources.Res
      * The set of connections that constitute an exchange peering.
      * 
      */
-    @InputImport(name="connections")
+    @Import(name="connections")
       private final @Nullable Output<List<ExchangeConnectionArgs>> connections;
 
     public Output<List<ExchangeConnectionArgs>> getConnections() {
@@ -35,7 +35,7 @@ public final class PeeringPropertiesExchangeArgs extends io.pulumi.resources.Res
      * The reference of the peer ASN.
      * 
      */
-    @InputImport(name="peerAsn")
+    @Import(name="peerAsn")
       private final @Nullable Output<SubResourceArgs> peerAsn;
 
     public Output<SubResourceArgs> getPeerAsn() {

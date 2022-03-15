@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.clouddeploy_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.AnthosClusterArgs;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.ExecutionConfigArgs;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.GkeClusterArgs;
@@ -24,7 +24,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
     public Output<Map<String,String>> getAnnotations() {
@@ -35,7 +35,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * Information specifying an Anthos Cluster.
      * 
      */
-    @InputImport(name="anthosCluster")
+    @Import(name="anthosCluster")
       private final @Nullable Output<AnthosClusterArgs> anthosCluster;
 
     public Output<AnthosClusterArgs> getAnthosCluster() {
@@ -46,7 +46,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Description of the `Target`. Max length is 255 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -57,7 +57,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -68,7 +68,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`.
      * 
      */
-    @InputImport(name="executionConfigs")
+    @Import(name="executionConfigs")
       private final @Nullable Output<List<ExecutionConfigArgs>> executionConfigs;
 
     public Output<List<ExecutionConfigArgs>> getExecutionConfigs() {
@@ -79,7 +79,7 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * Information specifying a GKE Cluster.
      * 
      */
-    @InputImport(name="gke")
+    @Import(name="gke")
       private final @Nullable Output<GkeClusterArgs> gke;
 
     public Output<GkeClusterArgs> getGke() {
@@ -90,14 +90,14 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -108,21 +108,21 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
@@ -133,21 +133,21 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Whether or not the `Target` requires approval.
      * 
      */
-    @InputImport(name="requireApproval")
+    @Import(name="requireApproval")
       private final @Nullable Output<Boolean> requireApproval;
 
     public Output<Boolean> getRequireApproval() {
         return this.requireApproval == null ? Output.empty() : this.requireApproval;
     }
 
-    @InputImport(name="targetId", required=true)
+    @Import(name="targetId", required=true)
       private final Output<String> targetId;
 
     public Output<String> getTargetId() {
         return this.targetId;
     }
 
-    @InputImport(name="validateOnly")
+    @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
     public Output<String> getValidateOnly() {

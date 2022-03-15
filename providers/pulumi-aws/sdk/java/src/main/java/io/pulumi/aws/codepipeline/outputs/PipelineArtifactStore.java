@@ -4,13 +4,13 @@
 package io.pulumi.aws.codepipeline.outputs;
 
 import io.pulumi.aws.codepipeline.outputs.PipelineArtifactStoreEncryptionKey;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineArtifactStore {
     /**
      * The encryption key block AWS CodePipeline uses to encrypt the data in the artifact store, such as an AWS Key Management Service (AWS KMS) key. If you don't specify a key, AWS CodePipeline uses the default key for Amazon Simple Storage Service (Amazon S3). An `encryption_key` block is documented below.
@@ -33,12 +33,12 @@ public final class PipelineArtifactStore {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineArtifactStore(
-        @OutputCustomType.Parameter("encryptionKey") @Nullable PipelineArtifactStoreEncryptionKey encryptionKey,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("encryptionKey") @Nullable PipelineArtifactStoreEncryptionKey encryptionKey,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("type") String type) {
         this.encryptionKey = encryptionKey;
         this.location = location;
         this.region = region;

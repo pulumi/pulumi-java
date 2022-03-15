@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logz.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Email of the user used by Logz for contacting them if needed
      * 
      */
-    @InputImport(name="emailAddress")
+    @Import(name="emailAddress")
       private final @Nullable String emailAddress;
 
     public Optional<String> getEmailAddress() {
@@ -29,7 +29,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * First Name of the user
      * 
      */
-    @InputImport(name="firstName")
+    @Import(name="firstName")
       private final @Nullable String firstName;
 
     public Optional<String> getFirstName() {
@@ -40,7 +40,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Last Name of the user
      * 
      */
-    @InputImport(name="lastName")
+    @Import(name="lastName")
       private final @Nullable String lastName;
 
     public Optional<String> getLastName() {
@@ -51,7 +51,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Phone number of the user used by Logz for contacting them if needed
      * 
      */
-    @InputImport(name="phoneNumber")
+    @Import(name="phoneNumber")
       private final @Nullable String phoneNumber;
 
     public Optional<String> getPhoneNumber() {

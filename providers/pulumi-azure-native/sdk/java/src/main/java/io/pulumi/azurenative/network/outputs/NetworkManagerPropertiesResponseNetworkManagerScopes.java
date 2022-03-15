@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkManagerPropertiesResponseNetworkManagerScopes {
     /**
      * List of management groups.
@@ -22,10 +22,10 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes {
      */
     private final @Nullable List<String> subscriptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkManagerPropertiesResponseNetworkManagerScopes(
-        @OutputCustomType.Parameter("managementGroups") @Nullable List<String> managementGroups,
-        @OutputCustomType.Parameter("subscriptions") @Nullable List<String> subscriptions) {
+        @CustomType.Parameter("managementGroups") @Nullable List<String> managementGroups,
+        @CustomType.Parameter("subscriptions") @Nullable List<String> subscriptions) {
         this.managementGroups = managementGroups;
         this.subscriptions = subscriptions;
     }

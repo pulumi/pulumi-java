@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * The list of additional recipients
      * 
      */
-    @InputImport(name="additionalRecipients")
+    @Import(name="additionalRecipients")
       private final @Nullable List<String> additionalRecipients;
 
     public List<String> getAdditionalRecipients() {
@@ -34,7 +34,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * Should domain controller admins be notified
      * 
      */
-    @InputImport(name="notifyDcAdmins")
+    @Import(name="notifyDcAdmins")
       private final @Nullable String notifyDcAdmins;
 
     public Optional<String> getNotifyDcAdmins() {
@@ -45,7 +45,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * Should global admins be notified
      * 
      */
-    @InputImport(name="notifyGlobalAdmins")
+    @Import(name="notifyGlobalAdmins")
       private final @Nullable String notifyGlobalAdmins;
 
     public Optional<String> getNotifyGlobalAdmins() {

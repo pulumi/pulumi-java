@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetSearchApplicationArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetSearchApplicationArgs Empty = new GetSearchApplicationArgs();
 
-    @InputImport(name="debugOptionsEnableDebugging")
+    @Import(name="debugOptionsEnableDebugging")
       private final @Nullable String debugOptionsEnableDebugging;
 
     public Optional<String> getDebugOptionsEnableDebugging() {
         return this.debugOptionsEnableDebugging == null ? Optional.empty() : Optional.ofNullable(this.debugOptionsEnableDebugging);
     }
 
-    @InputImport(name="searchapplicationId", required=true)
+    @Import(name="searchapplicationId", required=true)
       private final String searchapplicationId;
 
     public String getSearchapplicationId() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.workflowexecutions_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.workflowexecutions_v1.inputs.StackTraceElementResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class StackTraceResponse extends io.pulumi.resources.InvokeArgs {
      * An array of stack elements.
      * 
      */
-    @InputImport(name="elements", required=true)
+    @Import(name="elements", required=true)
       private final List<StackTraceElementResponse> elements;
 
     public List<StackTraceElementResponse> getElements() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2KAnonymityHistogramBucketResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2KAnonymityResultResponse {
     /**
      * Histogram of k-anonymity equivalence classes.
@@ -16,8 +16,8 @@ public final class GooglePrivacyDlpV2KAnonymityResultResponse {
      */
     private final List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets;
 
-    @OutputCustomType.Constructor
-    private GooglePrivacyDlpV2KAnonymityResultResponse(@OutputCustomType.Parameter("equivalenceClassHistogramBuckets") List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets) {
+    @CustomType.Constructor
+    private GooglePrivacyDlpV2KAnonymityResultResponse(@CustomType.Parameter("equivalenceClassHistogramBuckets") List<GooglePrivacyDlpV2KAnonymityHistogramBucketResponse> equivalenceClassHistogramBuckets) {
         this.equivalenceClassHistogramBuckets = equivalenceClassHistogramBuckets;
     }
 

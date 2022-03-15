@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RetentionPolicyParametersResponse {
     /**
      * Number of days to retain flow log records.
@@ -23,10 +23,10 @@ public final class RetentionPolicyParametersResponse {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RetentionPolicyParametersResponse(
-        @OutputCustomType.Parameter("days") @Nullable Integer days,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
+        @CustomType.Parameter("days") @Nullable Integer days,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.days = days;
         this.enabled = enabled;
     }

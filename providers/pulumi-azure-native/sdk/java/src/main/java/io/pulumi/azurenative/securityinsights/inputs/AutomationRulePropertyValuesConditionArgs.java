@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.AutomationRulePropertyValuesConditionConditionPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class AutomationRulePropertyValuesConditionArgs extends io.pulumi.r
      * The configuration of the automation rule condition
      * 
      */
-    @InputImport(name="conditionProperties", required=true)
+    @Import(name="conditionProperties", required=true)
       private final Output<AutomationRulePropertyValuesConditionConditionPropertiesArgs> conditionProperties;
 
     public Output<AutomationRulePropertyValuesConditionConditionPropertiesArgs> getConditionProperties() {
@@ -34,7 +34,7 @@ public final class AutomationRulePropertyValuesConditionArgs extends io.pulumi.r
      * Expected value is 'Property'.
      * 
      */
-    @InputImport(name="conditionType", required=true)
+    @Import(name="conditionType", required=true)
       private final Output<String> conditionType;
 
     public Output<String> getConditionType() {

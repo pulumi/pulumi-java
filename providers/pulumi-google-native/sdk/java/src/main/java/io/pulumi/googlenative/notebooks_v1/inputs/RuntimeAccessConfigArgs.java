@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.notebooks_v1.enums.RuntimeAccessConfigAccessType;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
      * The type of access mode this instance.
      * 
      */
-    @InputImport(name="accessType")
+    @Import(name="accessType")
       private final @Nullable Output<RuntimeAccessConfigAccessType> accessType;
 
     public Output<RuntimeAccessConfigAccessType> getAccessType() {
@@ -34,7 +34,7 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
      * The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.
      * 
      */
-    @InputImport(name="runtimeOwner")
+    @Import(name="runtimeOwner")
       private final @Nullable Output<String> runtimeOwner;
 
     public Output<String> getRuntimeOwner() {

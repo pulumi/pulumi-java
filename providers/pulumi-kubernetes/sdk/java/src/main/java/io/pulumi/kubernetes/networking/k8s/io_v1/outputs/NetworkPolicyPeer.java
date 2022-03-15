@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.IPBlock;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkPolicyPeer {
     /**
      * IPBlock defines policy on a particular IPBlock. If this field is set then neither of the other fields can be.
@@ -32,11 +32,11 @@ public final class NetworkPolicyPeer {
      */
     private final @Nullable LabelSelector podSelector;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkPolicyPeer(
-        @OutputCustomType.Parameter("ipBlock") @Nullable IPBlock ipBlock,
-        @OutputCustomType.Parameter("namespaceSelector") @Nullable LabelSelector namespaceSelector,
-        @OutputCustomType.Parameter("podSelector") @Nullable LabelSelector podSelector) {
+        @CustomType.Parameter("ipBlock") @Nullable IPBlock ipBlock,
+        @CustomType.Parameter("namespaceSelector") @Nullable LabelSelector namespaceSelector,
+        @CustomType.Parameter("podSelector") @Nullable LabelSelector podSelector) {
         this.ipBlock = ipBlock;
         this.namespaceSelector = namespaceSelector;
         this.podSelector = podSelector;

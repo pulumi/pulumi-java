@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datamigration.SqlMigrationServiceArgs;
 import io.pulumi.azurenative.datamigration.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class SqlMigrationService extends io.pulumi.resources.CustomResource {
      * Current state of the Integration runtime.
      * 
      */
-    @OutputExport(name="integrationRuntimeState", type=String.class, parameters={})
+    @Export(name="integrationRuntimeState", type=String.class, parameters={})
     private Output<String> integrationRuntimeState;
 
     /**
@@ -46,13 +46,13 @@ public class SqlMigrationService extends io.pulumi.resources.CustomResource {
     public Output<String> getIntegrationRuntimeState() {
         return this.integrationRuntimeState;
     }
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     public Output</* @Nullable */ String> getLocation() {
         return this.location;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
@@ -62,7 +62,7 @@ public class SqlMigrationService extends io.pulumi.resources.CustomResource {
      * Provisioning state to track the async operation status.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -72,19 +72,19 @@ public class SqlMigrationService extends io.pulumi.resources.CustomResource {
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     public Output<SystemDataResponse> getSystemData() {
         return this.systemData;
     }
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     public Output<String> getType() {

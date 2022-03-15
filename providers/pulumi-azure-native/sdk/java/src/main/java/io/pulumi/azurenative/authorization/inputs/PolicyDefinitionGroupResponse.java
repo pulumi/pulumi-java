@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PolicyDefinitionGroupResponse extends io.pulumi.resources.Inv
      * A resource ID of a resource that contains additional metadata about the group.
      * 
      */
-    @InputImport(name="additionalMetadataId")
+    @Import(name="additionalMetadataId")
       private final @Nullable String additionalMetadataId;
 
     public Optional<String> getAdditionalMetadataId() {
@@ -33,7 +33,7 @@ public final class PolicyDefinitionGroupResponse extends io.pulumi.resources.Inv
      * The group's category.
      * 
      */
-    @InputImport(name="category")
+    @Import(name="category")
       private final @Nullable String category;
 
     public Optional<String> getCategory() {
@@ -44,7 +44,7 @@ public final class PolicyDefinitionGroupResponse extends io.pulumi.resources.Inv
      * The group's description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -55,7 +55,7 @@ public final class PolicyDefinitionGroupResponse extends io.pulumi.resources.Inv
      * The group's display name.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -66,7 +66,7 @@ public final class PolicyDefinitionGroupResponse extends io.pulumi.resources.Inv
      * The name of the group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

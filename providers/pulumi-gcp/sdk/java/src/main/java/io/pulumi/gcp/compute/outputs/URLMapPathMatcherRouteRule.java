@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleHeaderAction;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleMatchRule;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleRouteAction;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class URLMapPathMatcherRouteRule {
     /**
      * Specifies changes to request and response headers that need to take effect for
@@ -74,14 +74,14 @@ public final class URLMapPathMatcherRouteRule {
      */
     private final @Nullable URLMapPathMatcherRouteRuleUrlRedirect urlRedirect;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private URLMapPathMatcherRouteRule(
-        @OutputCustomType.Parameter("headerAction") @Nullable URLMapPathMatcherRouteRuleHeaderAction headerAction,
-        @OutputCustomType.Parameter("matchRules") @Nullable List<URLMapPathMatcherRouteRuleMatchRule> matchRules,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("routeAction") @Nullable URLMapPathMatcherRouteRuleRouteAction routeAction,
-        @OutputCustomType.Parameter("service") @Nullable String service,
-        @OutputCustomType.Parameter("urlRedirect") @Nullable URLMapPathMatcherRouteRuleUrlRedirect urlRedirect) {
+        @CustomType.Parameter("headerAction") @Nullable URLMapPathMatcherRouteRuleHeaderAction headerAction,
+        @CustomType.Parameter("matchRules") @Nullable List<URLMapPathMatcherRouteRuleMatchRule> matchRules,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("routeAction") @Nullable URLMapPathMatcherRouteRuleRouteAction routeAction,
+        @CustomType.Parameter("service") @Nullable String service,
+        @CustomType.Parameter("urlRedirect") @Nullable URLMapPathMatcherRouteRuleUrlRedirect urlRedirect) {
         this.headerAction = headerAction;
         this.matchRules = matchRules;
         this.priority = priority;

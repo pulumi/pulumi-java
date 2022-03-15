@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SkippedDetailResponse {
     /**
      * If the App doesn't support the specific API level.
@@ -25,11 +25,11 @@ public final class SkippedDetailResponse {
      */
     private final Boolean incompatibleDevice;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkippedDetailResponse(
-        @OutputCustomType.Parameter("incompatibleAppVersion") Boolean incompatibleAppVersion,
-        @OutputCustomType.Parameter("incompatibleArchitecture") Boolean incompatibleArchitecture,
-        @OutputCustomType.Parameter("incompatibleDevice") Boolean incompatibleDevice) {
+        @CustomType.Parameter("incompatibleAppVersion") Boolean incompatibleAppVersion,
+        @CustomType.Parameter("incompatibleArchitecture") Boolean incompatibleArchitecture,
+        @CustomType.Parameter("incompatibleDevice") Boolean incompatibleDevice) {
         this.incompatibleAppVersion = incompatibleAppVersion;
         this.incompatibleArchitecture = incompatibleArchitecture;
         this.incompatibleDevice = incompatibleDevice;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.servicefabric.outputs.ApplicationMetricDescriptionR
 import io.pulumi.azurenative.servicefabric.outputs.ApplicationUpgradePolicyResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ApplicationUserAssignedIdentityResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ManagedIdentityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApplicationResult {
     /**
      * Azure resource etag.
@@ -105,25 +105,25 @@ public final class GetApplicationResult {
      */
     private final @Nullable ApplicationUpgradePolicyResponse upgradePolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApplicationResult(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ManagedIdentityResponse identity,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("managedIdentities") @Nullable List<ApplicationUserAssignedIdentityResponse> managedIdentities,
-        @OutputCustomType.Parameter("maximumNodes") @Nullable Double maximumNodes,
-        @OutputCustomType.Parameter("metrics") @Nullable List<ApplicationMetricDescriptionResponse> metrics,
-        @OutputCustomType.Parameter("minimumNodes") @Nullable Double minimumNodes,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("removeApplicationCapacity") @Nullable Boolean removeApplicationCapacity,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("typeName") @Nullable String typeName,
-        @OutputCustomType.Parameter("typeVersion") @Nullable String typeVersion,
-        @OutputCustomType.Parameter("upgradePolicy") @Nullable ApplicationUpgradePolicyResponse upgradePolicy) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ManagedIdentityResponse identity,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("managedIdentities") @Nullable List<ApplicationUserAssignedIdentityResponse> managedIdentities,
+        @CustomType.Parameter("maximumNodes") @Nullable Double maximumNodes,
+        @CustomType.Parameter("metrics") @Nullable List<ApplicationMetricDescriptionResponse> metrics,
+        @CustomType.Parameter("minimumNodes") @Nullable Double minimumNodes,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("removeApplicationCapacity") @Nullable Boolean removeApplicationCapacity,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("typeName") @Nullable String typeName,
+        @CustomType.Parameter("typeVersion") @Nullable String typeVersion,
+        @CustomType.Parameter("upgradePolicy") @Nullable ApplicationUpgradePolicyResponse upgradePolicy) {
         this.etag = etag;
         this.id = id;
         this.identity = identity;

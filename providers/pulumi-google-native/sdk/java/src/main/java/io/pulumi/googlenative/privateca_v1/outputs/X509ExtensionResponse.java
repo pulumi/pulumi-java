@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.ObjectIdResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class X509ExtensionResponse {
     /**
      * Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
@@ -27,11 +27,11 @@ public final class X509ExtensionResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private X509ExtensionResponse(
-        @OutputCustomType.Parameter("critical") Boolean critical,
-        @OutputCustomType.Parameter("objectId") ObjectIdResponse objectId,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("critical") Boolean critical,
+        @CustomType.Parameter("objectId") ObjectIdResponse objectId,
+        @CustomType.Parameter("value") String value) {
         this.critical = critical;
         this.objectId = objectId;
         this.value = value;

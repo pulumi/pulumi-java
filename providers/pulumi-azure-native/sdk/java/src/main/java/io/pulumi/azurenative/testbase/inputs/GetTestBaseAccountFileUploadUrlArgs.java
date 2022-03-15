@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends io.pulumi.resourc
      * The custom file name of the uploaded blob.
      * 
      */
-    @InputImport(name="blobName")
+    @Import(name="blobName")
       private final @Nullable String blobName;
 
     public Optional<String> getBlobName() {
@@ -29,7 +29,7 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends io.pulumi.resourc
      * The name of the resource group that contains the resource.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends io.pulumi.resourc
      * The resource name of the Test Base Account.
      * 
      */
-    @InputImport(name="testBaseAccountName", required=true)
+    @Import(name="testBaseAccountName", required=true)
       private final String testBaseAccountName;
 
     public String getTestBaseAccountName() {

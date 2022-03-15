@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicecatalog.OrganizationsAccessArgs;
 import io.pulumi.aws.servicecatalog.inputs.OrganizationsAccessState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public class OrganizationsAccess extends io.pulumi.resources.CustomResource {
      * Whether to enable AWS Organizations access.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output<Boolean> enabled;
 
     /**

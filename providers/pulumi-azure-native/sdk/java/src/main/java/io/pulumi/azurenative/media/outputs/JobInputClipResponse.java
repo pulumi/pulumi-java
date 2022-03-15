@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.outputs.FromEachInputFileResponse;
 import io.pulumi.azurenative.media.outputs.InputFileResponse;
 import io.pulumi.azurenative.media.outputs.UtcClipTimeResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobInputClipResponse {
     /**
      * Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.
@@ -51,14 +51,14 @@ public final class JobInputClipResponse {
      */
     private final @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobInputClipResponse(
-        @OutputCustomType.Parameter("end") @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end,
-        @OutputCustomType.Parameter("files") @Nullable List<String> files,
-        @OutputCustomType.Parameter("inputDefinitions") @Nullable List<Object> inputDefinitions,
-        @OutputCustomType.Parameter("label") @Nullable String label,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("start") @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
+        @CustomType.Parameter("end") @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end,
+        @CustomType.Parameter("files") @Nullable List<String> files,
+        @CustomType.Parameter("inputDefinitions") @Nullable List<Object> inputDefinitions,
+        @CustomType.Parameter("label") @Nullable String label,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("start") @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
         this.end = end;
         this.files = files;
         this.inputDefinitions = inputDefinitions;

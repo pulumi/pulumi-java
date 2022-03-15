@@ -5,20 +5,20 @@ package io.pulumi.awsnative.cassandra.outputs;
 
 import io.pulumi.awsnative.cassandra.enums.TableClusteringKeyColumnOrderBy;
 import io.pulumi.awsnative.cassandra.outputs.TableColumn;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TableClusteringKeyColumn {
     private final TableColumn column;
     private final @Nullable TableClusteringKeyColumnOrderBy orderBy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableClusteringKeyColumn(
-        @OutputCustomType.Parameter("column") TableColumn column,
-        @OutputCustomType.Parameter("orderBy") @Nullable TableClusteringKeyColumnOrderBy orderBy) {
+        @CustomType.Parameter("column") TableColumn column,
+        @CustomType.Parameter("orderBy") @Nullable TableClusteringKeyColumnOrderBy orderBy) {
         this.column = column;
         this.orderBy = orderBy;
     }

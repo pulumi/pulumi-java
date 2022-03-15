@@ -6,13 +6,13 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.LinkedIntegrationRuntimeKeyAuthorizationResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedIntegrationRuntimeRbacAuthorizationResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SelfHostedIntegrationRuntimeResponse {
     /**
      * Integration runtime description.
@@ -31,11 +31,11 @@ public final class SelfHostedIntegrationRuntimeResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SelfHostedIntegrationRuntimeResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("linkedInfo") @Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("linkedInfo") @Nullable Either<LinkedIntegrationRuntimeKeyAuthorizationResponse,LinkedIntegrationRuntimeRbacAuthorizationResponse> linkedInfo,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.linkedInfo = linkedInfo;
         this.type = type;

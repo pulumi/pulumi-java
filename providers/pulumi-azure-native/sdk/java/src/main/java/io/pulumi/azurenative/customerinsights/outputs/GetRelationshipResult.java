@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.PropertyDefinitionResponse;
 import io.pulumi.azurenative.customerinsights.outputs.RelationshipTypeMappingResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRelationshipResult {
     /**
      * The Relationship Cardinality.
@@ -91,23 +91,23 @@ public final class GetRelationshipResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRelationshipResult(
-        @OutputCustomType.Parameter("cardinality") @Nullable String cardinality,
-        @OutputCustomType.Parameter("description") @Nullable Map<String,String> description,
-        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
-        @OutputCustomType.Parameter("expiryDateTimeUtc") @Nullable String expiryDateTimeUtc,
-        @OutputCustomType.Parameter("fields") @Nullable List<PropertyDefinitionResponse> fields,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lookupMappings") @Nullable List<RelationshipTypeMappingResponse> lookupMappings,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("profileType") String profileType,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("relatedProfileType") String relatedProfileType,
-        @OutputCustomType.Parameter("relationshipGuidId") String relationshipGuidId,
-        @OutputCustomType.Parameter("relationshipName") String relationshipName,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("cardinality") @Nullable String cardinality,
+        @CustomType.Parameter("description") @Nullable Map<String,String> description,
+        @CustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @CustomType.Parameter("expiryDateTimeUtc") @Nullable String expiryDateTimeUtc,
+        @CustomType.Parameter("fields") @Nullable List<PropertyDefinitionResponse> fields,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lookupMappings") @Nullable List<RelationshipTypeMappingResponse> lookupMappings,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("profileType") String profileType,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("relatedProfileType") String relatedProfileType,
+        @CustomType.Parameter("relationshipGuidId") String relationshipGuidId,
+        @CustomType.Parameter("relationshipName") String relationshipName,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.cardinality = cardinality;
         this.description = description;
         this.displayName = displayName;

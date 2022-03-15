@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetKMSSecretArgs extends io.pulumi.resources.InvokeArgs {
      * The [additional authenticated data](https://cloud.google.com/kms/docs/additional-authenticated-data) used for integrity checks during encryption and decryption.
      * 
      */
-    @InputImport(name="additionalAuthenticatedData")
+    @Import(name="additionalAuthenticatedData")
       private final @Nullable String additionalAuthenticatedData;
 
     public Optional<String> getAdditionalAuthenticatedData() {
@@ -29,7 +29,7 @@ public final class GetKMSSecretArgs extends io.pulumi.resources.InvokeArgs {
      * The ciphertext to be decrypted, encoded in base64
      * 
      */
-    @InputImport(name="ciphertext", required=true)
+    @Import(name="ciphertext", required=true)
       private final String ciphertext;
 
     public String getCiphertext() {
@@ -42,7 +42,7 @@ public final class GetKMSSecretArgs extends io.pulumi.resources.InvokeArgs {
      * `{projectId}/{location}/{keyRingName}/{cryptoKeyName}`.
      * 
      */
-    @InputImport(name="cryptoKey", required=true)
+    @Import(name="cryptoKey", required=true)
       private final String cryptoKey;
 
     public String getCryptoKey() {

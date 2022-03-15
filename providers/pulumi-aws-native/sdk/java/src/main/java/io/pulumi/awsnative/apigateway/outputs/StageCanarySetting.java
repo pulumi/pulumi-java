@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StageCanarySetting {
     /**
      * The identifier of the deployment that the stage points to.
@@ -35,12 +35,12 @@ public final class StageCanarySetting {
      */
     private final @Nullable Boolean useStageCache;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StageCanarySetting(
-        @OutputCustomType.Parameter("deploymentId") @Nullable String deploymentId,
-        @OutputCustomType.Parameter("percentTraffic") @Nullable Double percentTraffic,
-        @OutputCustomType.Parameter("stageVariableOverrides") @Nullable Object stageVariableOverrides,
-        @OutputCustomType.Parameter("useStageCache") @Nullable Boolean useStageCache) {
+        @CustomType.Parameter("deploymentId") @Nullable String deploymentId,
+        @CustomType.Parameter("percentTraffic") @Nullable Double percentTraffic,
+        @CustomType.Parameter("stageVariableOverrides") @Nullable Object stageVariableOverrides,
+        @CustomType.Parameter("useStageCache") @Nullable Boolean useStageCache) {
         this.deploymentId = deploymentId;
         this.percentTraffic = percentTraffic;
         this.stageVariableOverrides = stageVariableOverrides;

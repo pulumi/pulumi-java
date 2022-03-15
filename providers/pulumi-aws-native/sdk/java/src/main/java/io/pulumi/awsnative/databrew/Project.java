@@ -8,7 +8,7 @@ import io.pulumi.awsnative.databrew.ProjectArgs;
 import io.pulumi.awsnative.databrew.outputs.ProjectSample;
 import io.pulumi.awsnative.databrew.outputs.ProjectTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Dataset name
      * 
      */
-    @OutputExport(name="datasetName", type=String.class, parameters={})
+    @Export(name="datasetName", type=String.class, parameters={})
     private Output<String> datasetName;
 
     /**
@@ -40,7 +40,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Project name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -54,7 +54,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Recipe name
      * 
      */
-    @OutputExport(name="recipeName", type=String.class, parameters={})
+    @Export(name="recipeName", type=String.class, parameters={})
     private Output<String> recipeName;
 
     /**
@@ -68,7 +68,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Role arn
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -82,7 +82,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Sample
      * 
      */
-    @OutputExport(name="sample", type=ProjectSample.class, parameters={})
+    @Export(name="sample", type=ProjectSample.class, parameters={})
     private Output</* @Nullable */ ProjectSample> sample;
 
     /**
@@ -92,7 +92,7 @@ public class Project extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ ProjectSample> getSample() {
         return this.sample;
     }
-    @OutputExport(name="tags", type=List.class, parameters={ProjectTag.class})
+    @Export(name="tags", type=List.class, parameters={ProjectTag.class})
     private Output</* @Nullable */ List<ProjectTag>> tags;
 
     public Output</* @Nullable */ List<ProjectTag>> getTags() {

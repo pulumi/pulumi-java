@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AdvancedMachineFeaturesResponse {
     /**
      * Whether to enable nested virtualization or not (default is false).
@@ -36,13 +36,13 @@ public final class AdvancedMachineFeaturesResponse {
      */
     private final Integer visibleCoreCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AdvancedMachineFeaturesResponse(
-        @OutputCustomType.Parameter("enableNestedVirtualization") Boolean enableNestedVirtualization,
-        @OutputCustomType.Parameter("enableUefiNetworking") Boolean enableUefiNetworking,
-        @OutputCustomType.Parameter("numaNodeCount") Integer numaNodeCount,
-        @OutputCustomType.Parameter("threadsPerCore") Integer threadsPerCore,
-        @OutputCustomType.Parameter("visibleCoreCount") Integer visibleCoreCount) {
+        @CustomType.Parameter("enableNestedVirtualization") Boolean enableNestedVirtualization,
+        @CustomType.Parameter("enableUefiNetworking") Boolean enableUefiNetworking,
+        @CustomType.Parameter("numaNodeCount") Integer numaNodeCount,
+        @CustomType.Parameter("threadsPerCore") Integer threadsPerCore,
+        @CustomType.Parameter("visibleCoreCount") Integer visibleCoreCount) {
         this.enableNestedVirtualization = enableNestedVirtualization;
         this.enableUefiNetworking = enableUefiNetworking;
         this.numaNodeCount = numaNodeCount;

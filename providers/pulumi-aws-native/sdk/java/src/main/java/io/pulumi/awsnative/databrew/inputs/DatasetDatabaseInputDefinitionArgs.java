@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.DatasetS3LocationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
      * Database table name
      * 
      */
-    @InputImport(name="databaseTableName")
+    @Import(name="databaseTableName")
       private final @Nullable Output<String> databaseTableName;
 
     public Output<String> getDatabaseTableName() {
@@ -30,7 +30,7 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
      * Glue connection name
      * 
      */
-    @InputImport(name="glueConnectionName", required=true)
+    @Import(name="glueConnectionName", required=true)
       private final Output<String> glueConnectionName;
 
     public Output<String> getGlueConnectionName() {
@@ -41,14 +41,14 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
      * Custom SQL to run against the provided AWS Glue connection. This SQL will be used as the input for DataBrew projects and jobs.
      * 
      */
-    @InputImport(name="queryString")
+    @Import(name="queryString")
       private final @Nullable Output<String> queryString;
 
     public Output<String> getQueryString() {
         return this.queryString == null ? Output.empty() : this.queryString;
     }
 
-    @InputImport(name="tempDirectory")
+    @Import(name="tempDirectory")
       private final @Nullable Output<DatasetS3LocationArgs> tempDirectory;
 
     public Output<DatasetS3LocationArgs> getTempDirectory() {

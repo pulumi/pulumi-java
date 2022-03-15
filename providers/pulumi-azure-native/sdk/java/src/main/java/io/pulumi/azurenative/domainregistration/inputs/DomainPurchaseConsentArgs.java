@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.domainregistration.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
      * Timestamp when the agreements were accepted.
      * 
      */
-    @InputImport(name="agreedAt")
+    @Import(name="agreedAt")
       private final @Nullable Output<String> agreedAt;
 
     public Output<String> getAgreedAt() {
@@ -34,7 +34,7 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
      * Client IP address.
      * 
      */
-    @InputImport(name="agreedBy")
+    @Import(name="agreedBy")
       private final @Nullable Output<String> agreedBy;
 
     public Output<String> getAgreedBy() {
@@ -45,7 +45,7 @@ public final class DomainPurchaseConsentArgs extends io.pulumi.resources.Resourc
      * List of applicable legal agreement keys. This list can be retrieved using ListLegalAgreements API under <code>TopLevelDomain</code> resource.
      * 
      */
-    @InputImport(name="agreementKeys")
+    @Import(name="agreementKeys")
       private final @Nullable Output<List<String>> agreementKeys;
 
     public Output<List<String>> getAgreementKeys() {

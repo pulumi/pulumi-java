@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ses.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReceiptRuleLambdaAction {
     /**
      * The ARN of the Lambda function to invoke
@@ -33,12 +33,12 @@ public final class ReceiptRuleLambdaAction {
      */
     private final @Nullable String topicArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReceiptRuleLambdaAction(
-        @OutputCustomType.Parameter("functionArn") String functionArn,
-        @OutputCustomType.Parameter("invocationType") @Nullable String invocationType,
-        @OutputCustomType.Parameter("position") Integer position,
-        @OutputCustomType.Parameter("topicArn") @Nullable String topicArn) {
+        @CustomType.Parameter("functionArn") String functionArn,
+        @CustomType.Parameter("invocationType") @Nullable String invocationType,
+        @CustomType.Parameter("position") Integer position,
+        @CustomType.Parameter("topicArn") @Nullable String topicArn) {
         this.functionArn = functionArn;
         this.invocationType = invocationType;
         this.position = position;

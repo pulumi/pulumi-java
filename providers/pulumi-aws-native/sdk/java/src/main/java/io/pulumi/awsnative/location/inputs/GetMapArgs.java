@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.location.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetMapArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetMapArgs Empty = new GetMapArgs();
 
-    @InputImport(name="mapName", required=true)
+    @Import(name="mapName", required=true)
       private final String mapName;
 
     public String getMapName() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.refactorspaces.enums.RouteType;
 import io.pulumi.awsnative.refactorspaces.inputs.RouteTagArgs;
 import io.pulumi.awsnative.refactorspaces.inputs.RouteUriPathRouteInputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,28 +18,28 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RouteArgs Empty = new RouteArgs();
 
-    @InputImport(name="applicationIdentifier", required=true)
+    @Import(name="applicationIdentifier", required=true)
       private final Output<String> applicationIdentifier;
 
     public Output<String> getApplicationIdentifier() {
         return this.applicationIdentifier;
     }
 
-    @InputImport(name="environmentIdentifier", required=true)
+    @Import(name="environmentIdentifier", required=true)
       private final Output<String> environmentIdentifier;
 
     public Output<String> getEnvironmentIdentifier() {
         return this.environmentIdentifier;
     }
 
-    @InputImport(name="routeType")
+    @Import(name="routeType")
       private final @Nullable Output<RouteType> routeType;
 
     public Output<RouteType> getRouteType() {
         return this.routeType == null ? Output.empty() : this.routeType;
     }
 
-    @InputImport(name="serviceIdentifier", required=true)
+    @Import(name="serviceIdentifier", required=true)
       private final Output<String> serviceIdentifier;
 
     public Output<String> getServiceIdentifier() {
@@ -50,14 +50,14 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata that you can assign to help organize the frameworks that you create. Each tag is a key-value pair.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<RouteTagArgs>> tags;
 
     public Output<List<RouteTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="uriPathRoute")
+    @Import(name="uriPathRoute")
       private final @Nullable Output<RouteUriPathRouteInputArgs> uriPathRoute;
 
     public Output<RouteUriPathRouteInputArgs> getUriPathRoute() {

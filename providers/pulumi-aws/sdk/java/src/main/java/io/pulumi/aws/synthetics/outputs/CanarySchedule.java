@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.synthetics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CanarySchedule {
     /**
      * Duration in seconds, for the canary to continue making regular runs according to the schedule in the Expression value.
@@ -23,10 +23,10 @@ public final class CanarySchedule {
      */
     private final String expression;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CanarySchedule(
-        @OutputCustomType.Parameter("durationInSeconds") @Nullable Integer durationInSeconds,
-        @OutputCustomType.Parameter("expression") String expression) {
+        @CustomType.Parameter("durationInSeconds") @Nullable Integer durationInSeconds,
+        @CustomType.Parameter("expression") String expression) {
         this.durationInSeconds = durationInSeconds;
         this.expression = expression;
     }

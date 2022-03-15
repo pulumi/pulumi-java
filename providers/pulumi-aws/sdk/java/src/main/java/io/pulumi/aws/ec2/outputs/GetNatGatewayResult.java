@@ -4,14 +4,14 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetNatGatewayFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNatGatewayResult {
     /**
      * The Id of the EIP allocated to the selected Nat Gateway.
@@ -45,19 +45,19 @@ public final class GetNatGatewayResult {
     private final Map<String,String> tags;
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNatGatewayResult(
-        @OutputCustomType.Parameter("allocationId") String allocationId,
-        @OutputCustomType.Parameter("connectivityType") String connectivityType,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetNatGatewayFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("networkInterfaceId") String networkInterfaceId,
-        @OutputCustomType.Parameter("privateIp") String privateIp,
-        @OutputCustomType.Parameter("publicIp") String publicIp,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("subnetId") String subnetId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("allocationId") String allocationId,
+        @CustomType.Parameter("connectivityType") String connectivityType,
+        @CustomType.Parameter("filters") @Nullable List<GetNatGatewayFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("networkInterfaceId") String networkInterfaceId,
+        @CustomType.Parameter("privateIp") String privateIp,
+        @CustomType.Parameter("publicIp") String publicIp,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("subnetId") String subnetId,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.allocationId = allocationId;
         this.connectivityType = connectivityType;
         this.filters = filters;

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,42 +14,42 @@ public final class TopicRuleCloudwatchMetricActionArgs extends io.pulumi.resourc
 
     public static final TopicRuleCloudwatchMetricActionArgs Empty = new TopicRuleCloudwatchMetricActionArgs();
 
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
     public Output<String> getMetricName() {
         return this.metricName;
     }
 
-    @InputImport(name="metricNamespace", required=true)
+    @Import(name="metricNamespace", required=true)
       private final Output<String> metricNamespace;
 
     public Output<String> getMetricNamespace() {
         return this.metricNamespace;
     }
 
-    @InputImport(name="metricTimestamp")
+    @Import(name="metricTimestamp")
       private final @Nullable Output<String> metricTimestamp;
 
     public Output<String> getMetricTimestamp() {
         return this.metricTimestamp == null ? Output.empty() : this.metricTimestamp;
     }
 
-    @InputImport(name="metricUnit", required=true)
+    @Import(name="metricUnit", required=true)
       private final Output<String> metricUnit;
 
     public Output<String> getMetricUnit() {
         return this.metricUnit;
     }
 
-    @InputImport(name="metricValue", required=true)
+    @Import(name="metricValue", required=true)
       private final Output<String> metricValue;
 
     public Output<String> getMetricValue() {
         return this.metricValue;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

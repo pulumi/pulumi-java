@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDatabaseInstanceReplicaConfiguration {
     private final String caCertificate;
     private final String clientCertificate;
@@ -23,19 +23,19 @@ public final class GetDatabaseInstanceReplicaConfiguration {
     private final String username;
     private final Boolean verifyServerCertificate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatabaseInstanceReplicaConfiguration(
-        @OutputCustomType.Parameter("caCertificate") String caCertificate,
-        @OutputCustomType.Parameter("clientCertificate") String clientCertificate,
-        @OutputCustomType.Parameter("clientKey") String clientKey,
-        @OutputCustomType.Parameter("connectRetryInterval") Integer connectRetryInterval,
-        @OutputCustomType.Parameter("dumpFilePath") String dumpFilePath,
-        @OutputCustomType.Parameter("failoverTarget") Boolean failoverTarget,
-        @OutputCustomType.Parameter("masterHeartbeatPeriod") Integer masterHeartbeatPeriod,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("sslCipher") String sslCipher,
-        @OutputCustomType.Parameter("username") String username,
-        @OutputCustomType.Parameter("verifyServerCertificate") Boolean verifyServerCertificate) {
+        @CustomType.Parameter("caCertificate") String caCertificate,
+        @CustomType.Parameter("clientCertificate") String clientCertificate,
+        @CustomType.Parameter("clientKey") String clientKey,
+        @CustomType.Parameter("connectRetryInterval") Integer connectRetryInterval,
+        @CustomType.Parameter("dumpFilePath") String dumpFilePath,
+        @CustomType.Parameter("failoverTarget") Boolean failoverTarget,
+        @CustomType.Parameter("masterHeartbeatPeriod") Integer masterHeartbeatPeriod,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("sslCipher") String sslCipher,
+        @CustomType.Parameter("username") String username,
+        @CustomType.Parameter("verifyServerCertificate") Boolean verifyServerCertificate) {
         this.caCertificate = caCertificate;
         this.clientCertificate = clientCertificate;
         this.clientKey = clientKey;

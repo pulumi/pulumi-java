@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ClusterStepHadoopJarStepGetArgs extends io.pulumi.resources.R
      * List of command line arguments passed to the JAR file's main function when executed.
      * 
      */
-    @InputImport(name="args")
+    @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
@@ -31,7 +31,7 @@ public final class ClusterStepHadoopJarStepGetArgs extends io.pulumi.resources.R
      * Path to a JAR file run during the step.
      * 
      */
-    @InputImport(name="jar", required=true)
+    @Import(name="jar", required=true)
       private final Output<String> jar;
 
     public Output<String> getJar() {
@@ -42,7 +42,7 @@ public final class ClusterStepHadoopJarStepGetArgs extends io.pulumi.resources.R
      * Name of the main class in the specified Java file. If not specified, the JAR file should specify a Main-Class in its manifest file.
      * 
      */
-    @InputImport(name="mainClass")
+    @Import(name="mainClass")
       private final @Nullable Output<String> mainClass;
 
     public Output<String> getMainClass() {
@@ -53,7 +53,7 @@ public final class ClusterStepHadoopJarStepGetArgs extends io.pulumi.resources.R
      * Key-Value map of Java properties that are set when the step runs. You can use these properties to pass key value pairs to your main function.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {

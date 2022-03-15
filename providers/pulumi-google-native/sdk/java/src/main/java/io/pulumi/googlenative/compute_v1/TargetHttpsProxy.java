@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.TargetHttpsProxyArgs;
@@ -23,7 +23,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * Optional. A URL referring to a networksecurity.AuthorizationPolicy resource that describes how the proxy should authorize inbound traffic. If left blank, access will not be restricted by an authorization policy. Refer to the AuthorizationPolicy resource for additional details. authorizationPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. Note: This field currently has no impact.
      * 
      */
-    @OutputExport(name="authorizationPolicy", type=String.class, parameters={})
+    @Export(name="authorizationPolicy", type=String.class, parameters={})
     private Output<String> authorizationPolicy;
 
     /**
@@ -37,7 +37,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -51,7 +51,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -65,7 +65,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a TargetHttpsProxy. An up-to-date fingerprint must be provided in order to patch the TargetHttpsProxy; otherwise, the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve the TargetHttpsProxy.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -79,7 +79,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * Type of resource. Always compute#targetHttpsProxy for target HTTPS proxies.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -93,7 +93,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * This field only applies when the forwarding rule that references this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED. When this field is set to true, Envoy proxies set up inbound traffic interception and bind to the IP address and port specified in the forwarding rule. This is generally useful when using Traffic Director to configure Envoy as a gateway or middle proxy (in other words, not a sidecar proxy). The Envoy proxy listens for inbound requests and handles requests when it receives them. The default is false.
      * 
      */
-    @OutputExport(name="proxyBind", type=Boolean.class, parameters={})
+    @Export(name="proxyBind", type=Boolean.class, parameters={})
     private Output<Boolean> proxyBind;
 
     /**
@@ -121,7 +121,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * Specifies the QUIC override policy for this TargetHttpsProxy resource. This setting determines whether the load balancer attempts to negotiate QUIC with clients. You can specify NONE, ENABLE, or DISABLE. - When quic-override is set to NONE, Google manages whether QUIC is used. - When quic-override is set to ENABLE, the load balancer uses QUIC when possible. - When quic-override is set to DISABLE, the load balancer doesn't use QUIC. - If the quic-override flag is not specified, NONE is implied.
      * 
      */
-    @OutputExport(name="quicOverride", type=String.class, parameters={})
+    @Export(name="quicOverride", type=String.class, parameters={})
     private Output<String> quicOverride;
 
     /**
@@ -135,7 +135,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * URL of the region where the regional TargetHttpsProxy resides. This field is not applicable to global TargetHttpsProxies.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -149,7 +149,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -163,7 +163,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field currently has no impact.
      * 
      */
-    @OutputExport(name="serverTlsPolicy", type=String.class, parameters={})
+    @Export(name="serverTlsPolicy", type=String.class, parameters={})
     private Output<String> serverTlsPolicy;
 
     /**
@@ -177,7 +177,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * URLs to SslCertificate resources that are used to authenticate connections between users and the load balancer. At least one SSL certificate must be specified. Currently, you may specify up to 15 SSL certificates. sslCertificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED.
      * 
      */
-    @OutputExport(name="sslCertificates", type=List.class, parameters={String.class})
+    @Export(name="sslCertificates", type=List.class, parameters={String.class})
     private Output<List<String>> sslCertificates;
 
     /**
@@ -191,7 +191,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * URL of SslPolicy resource that will be associated with the TargetHttpsProxy resource. If not set, the TargetHttpsProxy resource has no SSL policy configured.
      * 
      */
-    @OutputExport(name="sslPolicy", type=String.class, parameters={})
+    @Export(name="sslPolicy", type=String.class, parameters={})
     private Output<String> sslPolicy;
 
     /**
@@ -205,7 +205,7 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
      * A fully-qualified or valid partial URL to the UrlMap resource that defines the mapping from URL to the BackendService. For example, the following are all valid URLs for specifying a URL map: - https://www.googleapis.compute/v1/projects/project/global/urlMaps/ url-map - projects/project/global/urlMaps/url-map - global/urlMaps/url-map
      * 
      */
-    @OutputExport(name="urlMap", type=String.class, parameters={})
+    @Export(name="urlMap", type=String.class, parameters={})
     private Output<String> urlMap;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.DiskConfigResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.InstanceReferenceResponse;
@@ -14,7 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceGroupConfigResponse {
     /**
      * Optional. The Compute Engine accelerator configuration for these instances.
@@ -72,19 +72,19 @@ public final class InstanceGroupConfigResponse {
      */
     private final String preemptibility;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceGroupConfigResponse(
-        @OutputCustomType.Parameter("accelerators") List<AcceleratorConfigResponse> accelerators,
-        @OutputCustomType.Parameter("diskConfig") DiskConfigResponse diskConfig,
-        @OutputCustomType.Parameter("imageUri") String imageUri,
-        @OutputCustomType.Parameter("instanceNames") List<String> instanceNames,
-        @OutputCustomType.Parameter("instanceReferences") List<InstanceReferenceResponse> instanceReferences,
-        @OutputCustomType.Parameter("isPreemptible") Boolean isPreemptible,
-        @OutputCustomType.Parameter("machineTypeUri") String machineTypeUri,
-        @OutputCustomType.Parameter("managedGroupConfig") ManagedGroupConfigResponse managedGroupConfig,
-        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
-        @OutputCustomType.Parameter("numInstances") Integer numInstances,
-        @OutputCustomType.Parameter("preemptibility") String preemptibility) {
+        @CustomType.Parameter("accelerators") List<AcceleratorConfigResponse> accelerators,
+        @CustomType.Parameter("diskConfig") DiskConfigResponse diskConfig,
+        @CustomType.Parameter("imageUri") String imageUri,
+        @CustomType.Parameter("instanceNames") List<String> instanceNames,
+        @CustomType.Parameter("instanceReferences") List<InstanceReferenceResponse> instanceReferences,
+        @CustomType.Parameter("isPreemptible") Boolean isPreemptible,
+        @CustomType.Parameter("machineTypeUri") String machineTypeUri,
+        @CustomType.Parameter("managedGroupConfig") ManagedGroupConfigResponse managedGroupConfig,
+        @CustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @CustomType.Parameter("numInstances") Integer numInstances,
+        @CustomType.Parameter("preemptibility") String preemptibility) {
         this.accelerators = accelerators;
         this.diskConfig = diskConfig;
         this.imageUri = imageUri;

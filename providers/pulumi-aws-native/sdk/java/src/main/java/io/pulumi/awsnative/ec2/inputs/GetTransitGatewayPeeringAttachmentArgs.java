@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetTransitGatewayPeeringAttachmentArgs extends io.pulumi.reso
      * The ID of the transit gateway peering attachment.
      * 
      */
-    @InputImport(name="transitGatewayAttachmentId", required=true)
+    @Import(name="transitGatewayAttachmentId", required=true)
       private final String transitGatewayAttachmentId;
 
     public String getTransitGatewayAttachmentId() {

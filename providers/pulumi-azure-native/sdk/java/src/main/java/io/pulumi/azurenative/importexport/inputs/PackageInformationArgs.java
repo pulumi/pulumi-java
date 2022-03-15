@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.importexport.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
      * The name of the carrier that is used to ship the import or export drives.
      * 
      */
-    @InputImport(name="carrierName", required=true)
+    @Import(name="carrierName", required=true)
       private final Output<String> carrierName;
 
     public Output<String> getCarrierName() {
@@ -33,7 +33,7 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
      * The number of drives included in the package.
      * 
      */
-    @InputImport(name="driveCount", required=true)
+    @Import(name="driveCount", required=true)
       private final Output<Double> driveCount;
 
     public Output<Double> getDriveCount() {
@@ -44,7 +44,7 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
      * The date when the package is shipped.
      * 
      */
-    @InputImport(name="shipDate", required=true)
+    @Import(name="shipDate", required=true)
       private final Output<String> shipDate;
 
     public Output<String> getShipDate() {
@@ -55,7 +55,7 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
      * The tracking number of the package.
      * 
      */
-    @InputImport(name="trackingNumber", required=true)
+    @Import(name="trackingNumber", required=true)
       private final Output<String> trackingNumber;
 
     public Output<String> getTrackingNumber() {

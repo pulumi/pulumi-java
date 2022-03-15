@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.LocalGatewayRouteTableVPCAssociationTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLocalGatewayRouteTableVPCAssociationResult {
     /**
      * The ID of the local gateway.
@@ -34,12 +34,12 @@ public final class GetLocalGatewayRouteTableVPCAssociationResult {
      */
     private final @Nullable List<LocalGatewayRouteTableVPCAssociationTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLocalGatewayRouteTableVPCAssociationResult(
-        @OutputCustomType.Parameter("localGatewayId") @Nullable String localGatewayId,
-        @OutputCustomType.Parameter("localGatewayRouteTableVpcAssociationId") @Nullable String localGatewayRouteTableVpcAssociationId,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("tags") @Nullable List<LocalGatewayRouteTableVPCAssociationTag> tags) {
+        @CustomType.Parameter("localGatewayId") @Nullable String localGatewayId,
+        @CustomType.Parameter("localGatewayRouteTableVpcAssociationId") @Nullable String localGatewayRouteTableVpcAssociationId,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("tags") @Nullable List<LocalGatewayRouteTableVPCAssociationTag> tags) {
         this.localGatewayId = localGatewayId;
         this.localGatewayRouteTableVpcAssociationId = localGatewayRouteTableVpcAssociationId;
         this.state = state;

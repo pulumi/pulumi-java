@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sql.inputs.JobStepActionArgs;
 import io.pulumi.azurenative.sql.inputs.JobStepExecutionOptionsArgs;
 import io.pulumi.azurenative.sql.inputs.JobStepOutputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * The action payload of the job step.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<JobStepActionArgs> action;
 
     public Output<JobStepActionArgs> getAction() {
@@ -33,7 +33,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * The resource ID of the job credential that will be used to connect to the targets.
      * 
      */
-    @InputImport(name="credential", required=true)
+    @Import(name="credential", required=true)
       private final Output<String> credential;
 
     public Output<String> getCredential() {
@@ -44,7 +44,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * Execution options for the job step.
      * 
      */
-    @InputImport(name="executionOptions")
+    @Import(name="executionOptions")
       private final @Nullable Output<JobStepExecutionOptionsArgs> executionOptions;
 
     public Output<JobStepExecutionOptionsArgs> getExecutionOptions() {
@@ -55,7 +55,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the job agent.
      * 
      */
-    @InputImport(name="jobAgentName", required=true)
+    @Import(name="jobAgentName", required=true)
       private final Output<String> jobAgentName;
 
     public Output<String> getJobAgentName() {
@@ -66,7 +66,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the job.
      * 
      */
-    @InputImport(name="jobName", required=true)
+    @Import(name="jobName", required=true)
       private final Output<String> jobName;
 
     public Output<String> getJobName() {
@@ -77,7 +77,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * Output destination properties of the job step.
      * 
      */
-    @InputImport(name="output")
+    @Import(name="output")
       private final @Nullable Output<JobStepOutputArgs> output;
 
     public Output<JobStepOutputArgs> getOutput() {
@@ -88,7 +88,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -99,7 +99,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -110,7 +110,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
      * 
      */
-    @InputImport(name="stepId")
+    @Import(name="stepId")
       private final @Nullable Output<Integer> stepId;
 
     public Output<Integer> getStepId() {
@@ -121,7 +121,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the job step.
      * 
      */
-    @InputImport(name="stepName")
+    @Import(name="stepName")
       private final @Nullable Output<String> stepName;
 
     public Output<String> getStepName() {
@@ -132,7 +132,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
      * The resource ID of the target group that the job step will be executed on.
      * 
      */
-    @InputImport(name="targetGroup", required=true)
+    @Import(name="targetGroup", required=true)
       private final Output<String> targetGroup;
 
     public Output<String> getTargetGroup() {

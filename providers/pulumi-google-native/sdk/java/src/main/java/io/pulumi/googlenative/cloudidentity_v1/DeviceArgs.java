@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudidentity_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * Asset tag of the device.
      * 
      */
-    @InputImport(name="assetTag")
+    @Import(name="assetTag")
       private final @Nullable Output<String> assetTag;
 
     public Output<String> getAssetTag() {
         return this.assetTag == null ? Output.empty() : this.assetTag;
     }
 
-    @InputImport(name="customer")
+    @Import(name="customer")
       private final @Nullable Output<String> customer;
 
     public Output<String> getCustomer() {
@@ -37,7 +37,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * Most recent time when device synced with this service.
      * 
      */
-    @InputImport(name="lastSyncTime")
+    @Import(name="lastSyncTime")
       private final @Nullable Output<String> lastSyncTime;
 
     public Output<String> getLastSyncTime() {
@@ -48,7 +48,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * Serial Number of device. Example: HT82V1A01076.
      * 
      */
-    @InputImport(name="serialNumber")
+    @Import(name="serialNumber")
       private final @Nullable Output<String> serialNumber;
 
     public Output<String> getSerialNumber() {
@@ -59,7 +59,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * WiFi MAC addresses of device.
      * 
      */
-    @InputImport(name="wifiMacAddresses")
+    @Import(name="wifiMacAddresses")
       private final @Nullable Output<List<String>> wifiMacAddresses;
 
     public Output<List<String>> getWifiMacAddresses() {

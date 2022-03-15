@@ -9,7 +9,7 @@ import io.pulumi.azurenative.managedservices.outputs.PlanResponse;
 import io.pulumi.azurenative.managedservices.outputs.RegistrationDefinitionPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class RegistrationDefinition extends io.pulumi.resources.CustomResource {
      * Name of the registration definition.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class RegistrationDefinition extends io.pulumi.resources.CustomResource {
      * Plan details for the managed services.
      * 
      */
-    @OutputExport(name="plan", type=PlanResponse.class, parameters={})
+    @Export(name="plan", type=PlanResponse.class, parameters={})
     private Output</* @Nullable */ PlanResponse> plan;
 
     /**
@@ -64,7 +64,7 @@ public class RegistrationDefinition extends io.pulumi.resources.CustomResource {
      * Properties of a registration definition.
      * 
      */
-    @OutputExport(name="properties", type=RegistrationDefinitionPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=RegistrationDefinitionPropertiesResponse.class, parameters={})
     private Output<RegistrationDefinitionPropertiesResponse> properties;
 
     /**
@@ -78,7 +78,7 @@ public class RegistrationDefinition extends io.pulumi.resources.CustomResource {
      * Type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

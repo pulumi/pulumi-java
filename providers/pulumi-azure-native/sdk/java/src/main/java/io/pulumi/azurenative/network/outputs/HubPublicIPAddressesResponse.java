@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.AzureFirewallPublicIPAddressResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HubPublicIPAddressesResponse {
     /**
      * The list of Public IP addresses associated with azure firewall or IP addresses to be retained.
@@ -24,10 +24,10 @@ public final class HubPublicIPAddressesResponse {
      */
     private final @Nullable Integer count;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HubPublicIPAddressesResponse(
-        @OutputCustomType.Parameter("addresses") @Nullable List<AzureFirewallPublicIPAddressResponse> addresses,
-        @OutputCustomType.Parameter("count") @Nullable Integer count) {
+        @CustomType.Parameter("addresses") @Nullable List<AzureFirewallPublicIPAddressResponse> addresses,
+        @CustomType.Parameter("count") @Nullable Integer count) {
         this.addresses = addresses;
         this.count = count;
     }

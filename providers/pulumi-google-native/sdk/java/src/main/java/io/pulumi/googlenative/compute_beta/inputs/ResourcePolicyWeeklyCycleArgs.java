@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.inputs.ResourcePolicyWeeklyCycleDayOfWeekArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ResourcePolicyWeeklyCycleArgs extends io.pulumi.resources.Res
      * Up to 7 intervals/windows, one for each day of the week.
      * 
      */
-    @InputImport(name="dayOfWeeks")
+    @Import(name="dayOfWeeks")
       private final @Nullable Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks;
 
     public Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> getDayOfWeeks() {

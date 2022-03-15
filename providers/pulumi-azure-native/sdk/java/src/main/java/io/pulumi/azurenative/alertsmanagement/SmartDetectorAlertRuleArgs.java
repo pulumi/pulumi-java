@@ -10,7 +10,7 @@ import io.pulumi.azurenative.alertsmanagement.inputs.DetectorArgs;
 import io.pulumi.azurenative.alertsmanagement.inputs.ThrottlingInformationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * The alert rule actions.
      * 
      */
-    @InputImport(name="actionGroups", required=true)
+    @Import(name="actionGroups", required=true)
       private final Output<ActionGroupsInformationArgs> actionGroups;
 
     public Output<ActionGroupsInformationArgs> getActionGroups() {
@@ -37,7 +37,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * The name of the alert rule.
      * 
      */
-    @InputImport(name="alertRuleName")
+    @Import(name="alertRuleName")
       private final @Nullable Output<String> alertRuleName;
 
     public Output<String> getAlertRuleName() {
@@ -48,7 +48,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * The alert rule description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -59,7 +59,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * The alert rule's detector.
      * 
      */
-    @InputImport(name="detector", required=true)
+    @Import(name="detector", required=true)
       private final Output<DetectorArgs> detector;
 
     public Output<DetectorArgs> getDetector() {
@@ -70,7 +70,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * The alert rule frequency in ISO8601 format. The time granularity must be in minutes and minimum value is 5 minutes.
      * 
      */
-    @InputImport(name="frequency", required=true)
+    @Import(name="frequency", required=true)
       private final Output<String> frequency;
 
     public Output<String> getFrequency() {
@@ -81,7 +81,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -92,7 +92,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -103,7 +103,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * The alert rule resources scope.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<List<String>> scope;
 
     public Output<List<String>> getScope() {
@@ -114,7 +114,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * The alert rule severity.
      * 
      */
-    @InputImport(name="severity", required=true)
+    @Import(name="severity", required=true)
       private final Output<Either<String,Severity>> severity;
 
     public Output<Either<String,Severity>> getSeverity() {
@@ -125,7 +125,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * The alert rule state.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final Output<Either<String,AlertRuleState>> state;
 
     public Output<Either<String,AlertRuleState>> getState() {
@@ -136,7 +136,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -147,7 +147,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
      * The alert rule throttling information.
      * 
      */
-    @InputImport(name="throttling")
+    @Import(name="throttling")
       private final @Nullable Output<ThrottlingInformationArgs> throttling;
 
     public Output<ThrottlingInformationArgs> getThrottling() {

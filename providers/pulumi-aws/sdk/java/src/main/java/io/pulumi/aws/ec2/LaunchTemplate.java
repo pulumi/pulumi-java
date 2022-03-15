@@ -23,7 +23,7 @@ import io.pulumi.aws.ec2.outputs.LaunchTemplateNetworkInterface;
 import io.pulumi.aws.ec2.outputs.LaunchTemplatePlacement;
 import io.pulumi.aws.ec2.outputs.LaunchTemplateTagSpecification;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -52,7 +52,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the instance profile.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -67,7 +67,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * See Block Devices below for details.
      * 
      */
-    @OutputExport(name="blockDeviceMappings", type=List.class, parameters={LaunchTemplateBlockDeviceMapping.class})
+    @Export(name="blockDeviceMappings", type=List.class, parameters={LaunchTemplateBlockDeviceMapping.class})
     private Output</* @Nullable */ List<LaunchTemplateBlockDeviceMapping>> blockDeviceMappings;
 
     /**
@@ -82,7 +82,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
      * 
      */
-    @OutputExport(name="capacityReservationSpecification", type=LaunchTemplateCapacityReservationSpecification.class, parameters={})
+    @Export(name="capacityReservationSpecification", type=LaunchTemplateCapacityReservationSpecification.class, parameters={})
     private Output</* @Nullable */ LaunchTemplateCapacityReservationSpecification> capacityReservationSpecification;
 
     /**
@@ -96,7 +96,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * The CPU options for the instance. See CPU Options below for more details.
      * 
      */
-    @OutputExport(name="cpuOptions", type=LaunchTemplateCpuOptions.class, parameters={})
+    @Export(name="cpuOptions", type=LaunchTemplateCpuOptions.class, parameters={})
     private Output</* @Nullable */ LaunchTemplateCpuOptions> cpuOptions;
 
     /**
@@ -111,7 +111,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * Specification below for more details.
      * 
      */
-    @OutputExport(name="creditSpecification", type=LaunchTemplateCreditSpecification.class, parameters={})
+    @Export(name="creditSpecification", type=LaunchTemplateCreditSpecification.class, parameters={})
     private Output</* @Nullable */ LaunchTemplateCreditSpecification> creditSpecification;
 
     /**
@@ -126,7 +126,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * Default Version of the launch template.
      * 
      */
-    @OutputExport(name="defaultVersion", type=Integer.class, parameters={})
+    @Export(name="defaultVersion", type=Integer.class, parameters={})
     private Output<Integer> defaultVersion;
 
     /**
@@ -140,7 +140,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * Description of the launch template.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -155,7 +155,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
      * 
      */
-    @OutputExport(name="disableApiTermination", type=Boolean.class, parameters={})
+    @Export(name="disableApiTermination", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableApiTermination;
 
     /**
@@ -170,7 +170,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * If `true`, the launched EC2 instance will be EBS-optimized.
      * 
      */
-    @OutputExport(name="ebsOptimized", type=String.class, parameters={})
+    @Export(name="ebsOptimized", type=String.class, parameters={})
     private Output</* @Nullable */ String> ebsOptimized;
 
     /**
@@ -185,7 +185,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * below for more details.
      * 
      */
-    @OutputExport(name="elasticGpuSpecifications", type=List.class, parameters={LaunchTemplateElasticGpuSpecification.class})
+    @Export(name="elasticGpuSpecifications", type=List.class, parameters={LaunchTemplateElasticGpuSpecification.class})
     private Output</* @Nullable */ List<LaunchTemplateElasticGpuSpecification>> elasticGpuSpecifications;
 
     /**
@@ -200,7 +200,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
      * 
      */
-    @OutputExport(name="elasticInferenceAccelerator", type=LaunchTemplateElasticInferenceAccelerator.class, parameters={})
+    @Export(name="elasticInferenceAccelerator", type=LaunchTemplateElasticInferenceAccelerator.class, parameters={})
     private Output</* @Nullable */ LaunchTemplateElasticInferenceAccelerator> elasticInferenceAccelerator;
 
     /**
@@ -214,7 +214,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
      * 
      */
-    @OutputExport(name="enclaveOptions", type=LaunchTemplateEnclaveOptions.class, parameters={})
+    @Export(name="enclaveOptions", type=LaunchTemplateEnclaveOptions.class, parameters={})
     private Output</* @Nullable */ LaunchTemplateEnclaveOptions> enclaveOptions;
 
     /**
@@ -228,7 +228,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * The hibernation options for the instance. See Hibernation Options below for more details.
      * 
      */
-    @OutputExport(name="hibernationOptions", type=LaunchTemplateHibernationOptions.class, parameters={})
+    @Export(name="hibernationOptions", type=LaunchTemplateHibernationOptions.class, parameters={})
     private Output</* @Nullable */ LaunchTemplateHibernationOptions> hibernationOptions;
 
     /**
@@ -243,7 +243,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * below for more details.
      * 
      */
-    @OutputExport(name="iamInstanceProfile", type=LaunchTemplateIamInstanceProfile.class, parameters={})
+    @Export(name="iamInstanceProfile", type=LaunchTemplateIamInstanceProfile.class, parameters={})
     private Output</* @Nullable */ LaunchTemplateIamInstanceProfile> iamInstanceProfile;
 
     /**
@@ -258,7 +258,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * The AMI from which to launch the instance.
      * 
      */
-    @OutputExport(name="imageId", type=String.class, parameters={})
+    @Export(name="imageId", type=String.class, parameters={})
     private Output</* @Nullable */ String> imageId;
 
     /**
@@ -273,7 +273,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * (Default: `stop`).
      * 
      */
-    @OutputExport(name="instanceInitiatedShutdownBehavior", type=String.class, parameters={})
+    @Export(name="instanceInitiatedShutdownBehavior", type=String.class, parameters={})
     private Output</* @Nullable */ String> instanceInitiatedShutdownBehavior;
 
     /**
@@ -289,7 +289,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * below for details.
      * 
      */
-    @OutputExport(name="instanceMarketOptions", type=LaunchTemplateInstanceMarketOptions.class, parameters={})
+    @Export(name="instanceMarketOptions", type=LaunchTemplateInstanceMarketOptions.class, parameters={})
     private Output</* @Nullable */ LaunchTemplateInstanceMarketOptions> instanceMarketOptions;
 
     /**
@@ -304,7 +304,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * The type of the instance.
      * 
      */
-    @OutputExport(name="instanceType", type=String.class, parameters={})
+    @Export(name="instanceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> instanceType;
 
     /**
@@ -318,7 +318,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * The kernel ID.
      * 
      */
-    @OutputExport(name="kernelId", type=String.class, parameters={})
+    @Export(name="kernelId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kernelId;
 
     /**
@@ -332,7 +332,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * The key name to use for the instance.
      * 
      */
-    @OutputExport(name="keyName", type=String.class, parameters={})
+    @Export(name="keyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyName;
 
     /**
@@ -346,7 +346,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * The latest version of the launch template.
      * 
      */
-    @OutputExport(name="latestVersion", type=Integer.class, parameters={})
+    @Export(name="latestVersion", type=Integer.class, parameters={})
     private Output<Integer> latestVersion;
 
     /**
@@ -360,7 +360,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * A list of license specifications to associate with. See License Specification below for more details.
      * 
      */
-    @OutputExport(name="licenseSpecifications", type=List.class, parameters={LaunchTemplateLicenseSpecification.class})
+    @Export(name="licenseSpecifications", type=List.class, parameters={LaunchTemplateLicenseSpecification.class})
     private Output</* @Nullable */ List<LaunchTemplateLicenseSpecification>> licenseSpecifications;
 
     /**
@@ -374,7 +374,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * Customize the metadata options for the instance. See Metadata Options below for more details.
      * 
      */
-    @OutputExport(name="metadataOptions", type=LaunchTemplateMetadataOptions.class, parameters={})
+    @Export(name="metadataOptions", type=LaunchTemplateMetadataOptions.class, parameters={})
     private Output<LaunchTemplateMetadataOptions> metadataOptions;
 
     /**
@@ -388,7 +388,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * The monitoring option for the instance. See Monitoring below for more details.
      * 
      */
-    @OutputExport(name="monitoring", type=LaunchTemplateMonitoring.class, parameters={})
+    @Export(name="monitoring", type=LaunchTemplateMonitoring.class, parameters={})
     private Output</* @Nullable */ LaunchTemplateMonitoring> monitoring;
 
     /**
@@ -402,7 +402,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -416,7 +416,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output<String> namePrefix;
 
     /**
@@ -431,7 +431,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * Interfaces below for more details.
      * 
      */
-    @OutputExport(name="networkInterfaces", type=List.class, parameters={LaunchTemplateNetworkInterface.class})
+    @Export(name="networkInterfaces", type=List.class, parameters={LaunchTemplateNetworkInterface.class})
     private Output</* @Nullable */ List<LaunchTemplateNetworkInterface>> networkInterfaces;
 
     /**
@@ -446,7 +446,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * The placement of the instance. See Placement below for more details.
      * 
      */
-    @OutputExport(name="placement", type=LaunchTemplatePlacement.class, parameters={})
+    @Export(name="placement", type=LaunchTemplatePlacement.class, parameters={})
     private Output</* @Nullable */ LaunchTemplatePlacement> placement;
 
     /**
@@ -460,7 +460,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * The ID of the RAM disk.
      * 
      */
-    @OutputExport(name="ramDiskId", type=String.class, parameters={})
+    @Export(name="ramDiskId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ramDiskId;
 
     /**
@@ -475,7 +475,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * `vpc_security_group_ids` instead.
      * 
      */
-    @OutputExport(name="securityGroupNames", type=List.class, parameters={String.class})
+    @Export(name="securityGroupNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> securityGroupNames;
 
     /**
@@ -490,7 +490,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * The tags to apply to the resources during launch. See Tag Specifications below for more details.
      * 
      */
-    @OutputExport(name="tagSpecifications", type=List.class, parameters={LaunchTemplateTagSpecification.class})
+    @Export(name="tagSpecifications", type=List.class, parameters={LaunchTemplateTagSpecification.class})
     private Output</* @Nullable */ List<LaunchTemplateTagSpecification>> tagSpecifications;
 
     /**
@@ -504,7 +504,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the launch template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -518,7 +518,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -532,7 +532,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * Whether to update Default Version each update. Conflicts with `default_version`.
      * 
      */
-    @OutputExport(name="updateDefaultVersion", type=Boolean.class, parameters={})
+    @Export(name="updateDefaultVersion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> updateDefaultVersion;
 
     /**
@@ -546,7 +546,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * The Base64-encoded user data to provide when launching the instance.
      * 
      */
-    @OutputExport(name="userData", type=String.class, parameters={})
+    @Export(name="userData", type=String.class, parameters={})
     private Output</* @Nullable */ String> userData;
 
     /**
@@ -560,7 +560,7 @@ public class LaunchTemplate extends io.pulumi.resources.CustomResource {
      * A list of security group IDs to associate with. Conflicts with `network_interfaces.security_groups`
      * 
      */
-    @OutputExport(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
+    @Export(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> vpcSecurityGroupIds;
 
     /**

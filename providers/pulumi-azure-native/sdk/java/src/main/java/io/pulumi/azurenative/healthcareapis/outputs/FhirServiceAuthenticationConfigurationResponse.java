@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FhirServiceAuthenticationConfigurationResponse {
     /**
      * The audience url for the service
@@ -28,11 +28,11 @@ public final class FhirServiceAuthenticationConfigurationResponse {
      */
     private final @Nullable Boolean smartProxyEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FhirServiceAuthenticationConfigurationResponse(
-        @OutputCustomType.Parameter("audience") @Nullable String audience,
-        @OutputCustomType.Parameter("authority") @Nullable String authority,
-        @OutputCustomType.Parameter("smartProxyEnabled") @Nullable Boolean smartProxyEnabled) {
+        @CustomType.Parameter("audience") @Nullable String audience,
+        @CustomType.Parameter("authority") @Nullable String authority,
+        @CustomType.Parameter("smartProxyEnabled") @Nullable Boolean smartProxyEnabled) {
         this.audience = audience;
         this.authority = authority;
         this.smartProxyEnabled = smartProxyEnabled;

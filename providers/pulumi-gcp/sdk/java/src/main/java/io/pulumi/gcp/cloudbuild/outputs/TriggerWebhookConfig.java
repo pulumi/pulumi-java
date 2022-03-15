@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerWebhookConfig {
     /**
      * Secrets to decrypt using Cloud Key Management Service.
@@ -25,10 +25,10 @@ public final class TriggerWebhookConfig {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerWebhookConfig(
-        @OutputCustomType.Parameter("secret") String secret,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("secret") String secret,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.secret = secret;
         this.state = state;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ContainerImageResponse extends io.pulumi.resources.InvokeArgs
      * The path to the container image repository. For example: `gcr.io/{project_id}/{image_name}`
      * 
      */
-    @InputImport(name="repository", required=true)
+    @Import(name="repository", required=true)
       private final String repository;
 
     public String getRepository() {
@@ -31,7 +31,7 @@ public final class ContainerImageResponse extends io.pulumi.resources.InvokeArgs
      * The tag of the container image. If not specified, this defaults to the latest tag.
      * 
      */
-    @InputImport(name="tag", required=true)
+    @Import(name="tag", required=true)
       private final String tag;
 
     public String getTag() {

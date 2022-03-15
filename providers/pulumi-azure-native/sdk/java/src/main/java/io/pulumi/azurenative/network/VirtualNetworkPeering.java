@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkBgpCommunitiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class VirtualNetworkPeering extends io.pulumi.resources.CustomResource {
      * Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
      * 
      */
-    @OutputExport(name="allowForwardedTraffic", type=Boolean.class, parameters={})
+    @Export(name="allowForwardedTraffic", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowForwardedTraffic;
 
     /**
@@ -52,7 +52,7 @@ public class VirtualNetworkPeering extends io.pulumi.resources.CustomResource {
      * If gateway links can be used in remote virtual networking to link to this virtual network.
      * 
      */
-    @OutputExport(name="allowGatewayTransit", type=Boolean.class, parameters={})
+    @Export(name="allowGatewayTransit", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowGatewayTransit;
 
     /**
@@ -66,7 +66,7 @@ public class VirtualNetworkPeering extends io.pulumi.resources.CustomResource {
      * Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
      * 
      */
-    @OutputExport(name="allowVirtualNetworkAccess", type=Boolean.class, parameters={})
+    @Export(name="allowVirtualNetworkAccess", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowVirtualNetworkAccess;
 
     /**
@@ -80,7 +80,7 @@ public class VirtualNetworkPeering extends io.pulumi.resources.CustomResource {
      * If we need to verify the provisioning state of the remote gateway.
      * 
      */
-    @OutputExport(name="doNotVerifyRemoteGateways", type=Boolean.class, parameters={})
+    @Export(name="doNotVerifyRemoteGateways", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> doNotVerifyRemoteGateways;
 
     /**
@@ -94,7 +94,7 @@ public class VirtualNetworkPeering extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -108,7 +108,7 @@ public class VirtualNetworkPeering extends io.pulumi.resources.CustomResource {
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -122,7 +122,7 @@ public class VirtualNetworkPeering extends io.pulumi.resources.CustomResource {
      * The status of the virtual network peering.
      * 
      */
-    @OutputExport(name="peeringState", type=String.class, parameters={})
+    @Export(name="peeringState", type=String.class, parameters={})
     private Output</* @Nullable */ String> peeringState;
 
     /**
@@ -136,7 +136,7 @@ public class VirtualNetworkPeering extends io.pulumi.resources.CustomResource {
      * The provisioning state of the virtual network peering resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -150,7 +150,7 @@ public class VirtualNetworkPeering extends io.pulumi.resources.CustomResource {
      * The reference to the remote virtual network address space.
      * 
      */
-    @OutputExport(name="remoteAddressSpace", type=AddressSpaceResponse.class, parameters={})
+    @Export(name="remoteAddressSpace", type=AddressSpaceResponse.class, parameters={})
     private Output</* @Nullable */ AddressSpaceResponse> remoteAddressSpace;
 
     /**
@@ -164,7 +164,7 @@ public class VirtualNetworkPeering extends io.pulumi.resources.CustomResource {
      * The reference to the remote virtual network's Bgp Communities.
      * 
      */
-    @OutputExport(name="remoteBgpCommunities", type=VirtualNetworkBgpCommunitiesResponse.class, parameters={})
+    @Export(name="remoteBgpCommunities", type=VirtualNetworkBgpCommunitiesResponse.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkBgpCommunitiesResponse> remoteBgpCommunities;
 
     /**
@@ -178,7 +178,7 @@ public class VirtualNetworkPeering extends io.pulumi.resources.CustomResource {
      * The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).
      * 
      */
-    @OutputExport(name="remoteVirtualNetwork", type=SubResourceResponse.class, parameters={})
+    @Export(name="remoteVirtualNetwork", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> remoteVirtualNetwork;
 
     /**
@@ -192,7 +192,7 @@ public class VirtualNetworkPeering extends io.pulumi.resources.CustomResource {
      * The resourceGuid property of the Virtual Network peering resource.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -206,7 +206,7 @@ public class VirtualNetworkPeering extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**
@@ -220,7 +220,7 @@ public class VirtualNetworkPeering extends io.pulumi.resources.CustomResource {
      * If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
      * 
      */
-    @OutputExport(name="useRemoteGateways", type=Boolean.class, parameters={})
+    @Export(name="useRemoteGateways", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> useRemoteGateways;
 
     /**

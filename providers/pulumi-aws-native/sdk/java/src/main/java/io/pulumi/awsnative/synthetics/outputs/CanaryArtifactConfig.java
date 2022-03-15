@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.synthetics.outputs;
 
 import io.pulumi.awsnative.synthetics.outputs.CanaryS3Encryption;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CanaryArtifactConfig {
     /**
      * Encryption configuration for uploading artifacts to S3
@@ -17,8 +17,8 @@ public final class CanaryArtifactConfig {
      */
     private final @Nullable CanaryS3Encryption s3Encryption;
 
-    @OutputCustomType.Constructor
-    private CanaryArtifactConfig(@OutputCustomType.Parameter("s3Encryption") @Nullable CanaryS3Encryption s3Encryption) {
+    @CustomType.Constructor
+    private CanaryArtifactConfig(@CustomType.Parameter("s3Encryption") @Nullable CanaryS3Encryption s3Encryption) {
         this.s3Encryption = s3Encryption;
     }
 

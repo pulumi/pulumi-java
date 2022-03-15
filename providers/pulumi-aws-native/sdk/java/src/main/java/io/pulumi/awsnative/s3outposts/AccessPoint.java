@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.s3outposts.AccessPointArgs;
 import io.pulumi.awsnative.s3outposts.outputs.AccessPointVpcConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -23,7 +23,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the specified AccessPoint.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -37,7 +37,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the bucket you want to associate this AccessPoint with.
      * 
      */
-    @OutputExport(name="bucket", type=String.class, parameters={})
+    @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
@@ -51,7 +51,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * A name for the AccessPoint.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * The access point policy associated with this access point.
      * 
      */
-    @OutputExport(name="policy", type=Object.class, parameters={})
+    @Export(name="policy", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> policy;
 
     /**
@@ -79,7 +79,7 @@ public class AccessPoint extends io.pulumi.resources.CustomResource {
      * Virtual Private Cloud (VPC) from which requests can be made to the AccessPoint.
      * 
      */
-    @OutputExport(name="vpcConfiguration", type=AccessPointVpcConfiguration.class, parameters={})
+    @Export(name="vpcConfiguration", type=AccessPointVpcConfiguration.class, parameters={})
     private Output<AccessPointVpcConfiguration> vpcConfiguration;
 
     /**

@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.autoscaling_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.HPAScalingRules;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HorizontalPodAutoscalerBehavior {
     /**
      * scaleDown is scaling policy for scaling Down. If not set, the default value is to allow to scale down to minReplicas pods, with a 300 second stabilization window (i.e., the highest recommendation for the last 300sec is used).
@@ -25,10 +25,10 @@ public final class HorizontalPodAutoscalerBehavior {
      */
     private final @Nullable HPAScalingRules scaleUp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HorizontalPodAutoscalerBehavior(
-        @OutputCustomType.Parameter("scaleDown") @Nullable HPAScalingRules scaleDown,
-        @OutputCustomType.Parameter("scaleUp") @Nullable HPAScalingRules scaleUp) {
+        @CustomType.Parameter("scaleDown") @Nullable HPAScalingRules scaleDown,
+        @CustomType.Parameter("scaleUp") @Nullable HPAScalingRules scaleUp) {
         this.scaleDown = scaleDown;
         this.scaleUp = scaleUp;
     }

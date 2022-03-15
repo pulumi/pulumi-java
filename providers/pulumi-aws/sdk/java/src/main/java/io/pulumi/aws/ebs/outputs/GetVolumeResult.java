@@ -4,7 +4,7 @@
 package io.pulumi.aws.ebs.outputs;
 
 import io.pulumi.aws.ebs.outputs.GetVolumeFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVolumeResult {
     /**
      * The volume ARN (e.g., arn:aws:ec2:us-east-1:0123456789012:volume/vol-59fcb34e).
@@ -89,24 +89,24 @@ public final class GetVolumeResult {
      */
     private final String volumeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVolumeResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
-        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetVolumeFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("iops") Integer iops,
-        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
-        @OutputCustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
-        @OutputCustomType.Parameter("multiAttachEnabled") Boolean multiAttachEnabled,
-        @OutputCustomType.Parameter("outpostArn") String outpostArn,
-        @OutputCustomType.Parameter("size") Integer size,
-        @OutputCustomType.Parameter("snapshotId") String snapshotId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("throughput") Integer throughput,
-        @OutputCustomType.Parameter("volumeId") String volumeId,
-        @OutputCustomType.Parameter("volumeType") String volumeType) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("availabilityZone") String availabilityZone,
+        @CustomType.Parameter("encrypted") Boolean encrypted,
+        @CustomType.Parameter("filters") @Nullable List<GetVolumeFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("iops") Integer iops,
+        @CustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @CustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
+        @CustomType.Parameter("multiAttachEnabled") Boolean multiAttachEnabled,
+        @CustomType.Parameter("outpostArn") String outpostArn,
+        @CustomType.Parameter("size") Integer size,
+        @CustomType.Parameter("snapshotId") String snapshotId,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("throughput") Integer throughput,
+        @CustomType.Parameter("volumeId") String volumeId,
+        @CustomType.Parameter("volumeType") String volumeType) {
         this.arn = arn;
         this.availabilityZone = availabilityZone;
         this.encrypted = encrypted;

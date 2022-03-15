@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.outputs.ApplicationRuleConditionResponse;
 import io.pulumi.azurenative.network.outputs.FirewallPolicyNatRuleActionResponse;
 import io.pulumi.azurenative.network.outputs.NatRuleConditionResponse;
 import io.pulumi.azurenative.network.outputs.NetworkRuleConditionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyNatRuleResponse {
     /**
      * The action type of a Nat rule.
@@ -54,15 +54,15 @@ public final class FirewallPolicyNatRuleResponse {
      */
     private final @Nullable String translatedPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyNatRuleResponse(
-        @OutputCustomType.Parameter("action") @Nullable FirewallPolicyNatRuleActionResponse action,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("ruleCondition") @Nullable Object ruleCondition,
-        @OutputCustomType.Parameter("ruleType") String ruleType,
-        @OutputCustomType.Parameter("translatedAddress") @Nullable String translatedAddress,
-        @OutputCustomType.Parameter("translatedPort") @Nullable String translatedPort) {
+        @CustomType.Parameter("action") @Nullable FirewallPolicyNatRuleActionResponse action,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("ruleCondition") @Nullable Object ruleCondition,
+        @CustomType.Parameter("ruleType") String ruleType,
+        @CustomType.Parameter("translatedAddress") @Nullable String translatedAddress,
+        @CustomType.Parameter("translatedPort") @Nullable String translatedPort) {
         this.action = action;
         this.name = name;
         this.priority = priority;

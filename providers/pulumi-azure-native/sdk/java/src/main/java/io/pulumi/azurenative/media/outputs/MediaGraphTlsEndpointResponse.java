@@ -6,13 +6,13 @@ package io.pulumi.azurenative.media.outputs;
 import io.pulumi.azurenative.media.outputs.MediaGraphPemCertificateListResponse;
 import io.pulumi.azurenative.media.outputs.MediaGraphTlsValidationOptionsResponse;
 import io.pulumi.azurenative.media.outputs.MediaGraphUsernamePasswordCredentialsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MediaGraphTlsEndpointResponse {
     /**
      * Polymorphic credentials to present to the endpoint.
@@ -41,13 +41,13 @@ public final class MediaGraphTlsEndpointResponse {
      */
     private final @Nullable MediaGraphTlsValidationOptionsResponse validationOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MediaGraphTlsEndpointResponse(
-        @OutputCustomType.Parameter("credentials") @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("trustedCertificates") @Nullable MediaGraphPemCertificateListResponse trustedCertificates,
-        @OutputCustomType.Parameter("url") String url,
-        @OutputCustomType.Parameter("validationOptions") @Nullable MediaGraphTlsValidationOptionsResponse validationOptions) {
+        @CustomType.Parameter("credentials") @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("trustedCertificates") @Nullable MediaGraphPemCertificateListResponse trustedCertificates,
+        @CustomType.Parameter("url") String url,
+        @CustomType.Parameter("validationOptions") @Nullable MediaGraphTlsValidationOptionsResponse validationOptions) {
         this.credentials = credentials;
         this.odataType = odataType;
         this.trustedCertificates = trustedCertificates;

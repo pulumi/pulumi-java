@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScheduleResponse {
     /**
      * The duration for the cron job event. The duration of the event is effective after the cron job's start time.
@@ -30,12 +30,12 @@ public final class ScheduleResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduleResponse(
-        @OutputCustomType.Parameter("cronJobDuration") String cronJobDuration,
-        @OutputCustomType.Parameter("cronSpec") String cronSpec,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("cronJobDuration") String cronJobDuration,
+        @CustomType.Parameter("cronSpec") String cronSpec,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("startTime") String startTime) {
         this.cronJobDuration = cronJobDuration;
         this.cronSpec = cronSpec;
         this.endTime = endTime;

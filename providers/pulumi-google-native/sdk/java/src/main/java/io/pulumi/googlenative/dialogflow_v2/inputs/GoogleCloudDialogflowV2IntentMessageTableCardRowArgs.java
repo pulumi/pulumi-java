@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageTableCardCellArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardRowArgs extends 
      * Optional. List of cells that make up this row.
      * 
      */
-    @InputImport(name="cells")
+    @Import(name="cells")
       private final @Nullable Output<List<GoogleCloudDialogflowV2IntentMessageTableCardCellArgs>> cells;
 
     public Output<List<GoogleCloudDialogflowV2IntentMessageTableCardCellArgs>> getCells() {
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardRowArgs extends 
      * Optional. Whether to add a visual divider after this row.
      * 
      */
-    @InputImport(name="dividerAfter")
+    @Import(name="dividerAfter")
       private final @Nullable Output<Boolean> dividerAfter;
 
     public Output<Boolean> getDividerAfter() {

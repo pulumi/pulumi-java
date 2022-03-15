@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
      * The access type of the rule.
      * 
      */
-    @InputImport(name="access", required=true)
+    @Import(name="access", required=true)
       private final String access;
 
     public String getAccess() {
@@ -34,7 +34,7 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
      * The collection for bgp community values to filter on. e.g. ['12076:5010','12076:5020'].
      * 
      */
-    @InputImport(name="communities", required=true)
+    @Import(name="communities", required=true)
       private final List<String> communities;
 
     public List<String> getCommunities() {
@@ -45,7 +45,7 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -56,7 +56,7 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -67,7 +67,7 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -78,7 +78,7 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -89,7 +89,7 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
      * The provisioning state of the route filter rule resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -100,7 +100,7 @@ public final class RouteFilterRuleResponse extends io.pulumi.resources.InvokeArg
      * The rule type of the rule.
      * 
      */
-    @InputImport(name="routeFilterRuleType", required=true)
+    @Import(name="routeFilterRuleType", required=true)
       private final String routeFilterRuleType;
 
     public String getRouteFilterRuleType() {

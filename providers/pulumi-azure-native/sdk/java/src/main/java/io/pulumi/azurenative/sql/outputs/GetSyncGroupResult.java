@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
 import io.pulumi.azurenative.sql.outputs.SyncGroupSchemaResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSyncGroupResult {
     /**
      * Conflict logging retention period.
@@ -91,23 +91,23 @@ public final class GetSyncGroupResult {
      */
     private final @Nullable Boolean usePrivateLinkConnection;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSyncGroupResult(
-        @OutputCustomType.Parameter("conflictLoggingRetentionInDays") @Nullable Integer conflictLoggingRetentionInDays,
-        @OutputCustomType.Parameter("conflictResolutionPolicy") @Nullable String conflictResolutionPolicy,
-        @OutputCustomType.Parameter("enableConflictLogging") @Nullable Boolean enableConflictLogging,
-        @OutputCustomType.Parameter("hubDatabaseUserName") @Nullable String hubDatabaseUserName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
-        @OutputCustomType.Parameter("lastSyncTime") String lastSyncTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateEndpointName") String privateEndpointName,
-        @OutputCustomType.Parameter("schema") @Nullable SyncGroupSchemaResponse schema,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("syncDatabaseId") @Nullable String syncDatabaseId,
-        @OutputCustomType.Parameter("syncState") String syncState,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("usePrivateLinkConnection") @Nullable Boolean usePrivateLinkConnection) {
+        @CustomType.Parameter("conflictLoggingRetentionInDays") @Nullable Integer conflictLoggingRetentionInDays,
+        @CustomType.Parameter("conflictResolutionPolicy") @Nullable String conflictResolutionPolicy,
+        @CustomType.Parameter("enableConflictLogging") @Nullable Boolean enableConflictLogging,
+        @CustomType.Parameter("hubDatabaseUserName") @Nullable String hubDatabaseUserName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("interval") @Nullable Integer interval,
+        @CustomType.Parameter("lastSyncTime") String lastSyncTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateEndpointName") String privateEndpointName,
+        @CustomType.Parameter("schema") @Nullable SyncGroupSchemaResponse schema,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("syncDatabaseId") @Nullable String syncDatabaseId,
+        @CustomType.Parameter("syncState") String syncState,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("usePrivateLinkConnection") @Nullable Boolean usePrivateLinkConnection) {
         this.conflictLoggingRetentionInDays = conflictLoggingRetentionInDays;
         this.conflictResolutionPolicy = conflictResolutionPolicy;
         this.enableConflictLogging = enableConflictLogging;

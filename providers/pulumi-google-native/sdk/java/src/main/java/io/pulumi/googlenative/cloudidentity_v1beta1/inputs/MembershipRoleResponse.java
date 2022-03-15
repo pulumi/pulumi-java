@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.ExpiryDetailResponse;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.RestrictionEvaluationsResponse;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class MembershipRoleResponse extends io.pulumi.resources.InvokeArgs
      * The expiry details of the `MembershipRole`. Expiry details are only supported for `MEMBER` `MembershipRoles`. May be set if `name` is `MEMBER`. Must not be set if `name` is any other value.
      * 
      */
-    @InputImport(name="expiryDetail", required=true)
+    @Import(name="expiryDetail", required=true)
       private final ExpiryDetailResponse expiryDetail;
 
     public ExpiryDetailResponse getExpiryDetail() {
@@ -33,7 +33,7 @@ public final class MembershipRoleResponse extends io.pulumi.resources.InvokeArgs
      * The name of the `MembershipRole`. Must be one of `OWNER`, `MANAGER`, `MEMBER`.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -44,7 +44,7 @@ public final class MembershipRoleResponse extends io.pulumi.resources.InvokeArgs
      * Evaluations of restrictions applied to parent group on this membership.
      * 
      */
-    @InputImport(name="restrictionEvaluations", required=true)
+    @Import(name="restrictionEvaluations", required=true)
       private final RestrictionEvaluationsResponse restrictionEvaluations;
 
     public RestrictionEvaluationsResponse getRestrictionEvaluations() {

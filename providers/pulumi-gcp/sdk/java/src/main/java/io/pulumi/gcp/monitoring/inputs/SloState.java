@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.SloBasicSliGetArgs;
 import io.pulumi.gcp.monitoring.inputs.SloRequestBasedSliGetArgs;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGetArgs;
@@ -29,7 +29,7 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="basicSli")
+    @Import(name="basicSli")
       private final @Nullable Output<SloBasicSliGetArgs> basicSli;
 
     public Output<SloBasicSliGetArgs> getBasicSli() {
@@ -42,7 +42,7 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
      * 
      */
-    @InputImport(name="calendarPeriod")
+    @Import(name="calendarPeriod")
       private final @Nullable Output<String> calendarPeriod;
 
     public Output<String> getCalendarPeriod() {
@@ -53,7 +53,7 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * Name used for UI elements listing this SLO.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -65,7 +65,7 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * to be met. 0 < goal <= 0.999
      * 
      */
-    @InputImport(name="goal")
+    @Import(name="goal")
       private final @Nullable Output<Double> goal;
 
     public Output<Double> getGoal() {
@@ -77,7 +77,7 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -89,7 +89,7 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -107,7 +107,7 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="requestBasedSli")
+    @Import(name="requestBasedSli")
       private final @Nullable Output<SloRequestBasedSliGetArgs> requestBasedSli;
 
     public Output<SloRequestBasedSliGetArgs> getRequestBasedSli() {
@@ -119,7 +119,7 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * Must be between 1 to 30 days, inclusive.
      * 
      */
-    @InputImport(name="rollingPeriodDays")
+    @Import(name="rollingPeriodDays")
       private final @Nullable Output<Integer> rollingPeriodDays;
 
     public Output<Integer> getRollingPeriodDays() {
@@ -130,7 +130,7 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * ID of the service to which this SLO belongs.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
@@ -141,7 +141,7 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
      * 
      */
-    @InputImport(name="sloId")
+    @Import(name="sloId")
       private final @Nullable Output<String> sloId;
 
     public Output<String> getSloId() {
@@ -160,7 +160,7 @@ public final class SloState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="windowsBasedSli")
+    @Import(name="windowsBasedSli")
       private final @Nullable Output<SloWindowsBasedSliGetArgs> windowsBasedSli;
 
     public Output<SloWindowsBasedSliGetArgs> getWindowsBasedSli() {

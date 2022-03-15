@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.MoveResourceErrorBodyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MoveResourcePropertiesResponseErrors extends io.pulumi.resour
      * The move resource error body.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable MoveResourceErrorBodyResponse properties;
 
     public Optional<MoveResourceErrorBodyResponse> getProperties() {

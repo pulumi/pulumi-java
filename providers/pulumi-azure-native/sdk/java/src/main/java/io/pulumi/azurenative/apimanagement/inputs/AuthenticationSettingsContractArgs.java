@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.inputs.OAuth2AuthenticationSettingsContractArgs;
 import io.pulumi.azurenative.apimanagement.inputs.OpenIdAuthenticationSettingsContractArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class AuthenticationSettingsContractArgs extends io.pulumi.resource
      * OAuth2 Authentication settings
      * 
      */
-    @InputImport(name="oAuth2")
+    @Import(name="oAuth2")
       private final @Nullable Output<OAuth2AuthenticationSettingsContractArgs> oAuth2;
 
     public Output<OAuth2AuthenticationSettingsContractArgs> getOAuth2() {
@@ -34,7 +34,7 @@ public final class AuthenticationSettingsContractArgs extends io.pulumi.resource
      * OpenID Connect Authentication Settings
      * 
      */
-    @InputImport(name="openid")
+    @Import(name="openid")
       private final @Nullable Output<OpenIdAuthenticationSettingsContractArgs> openid;
 
     public Output<OpenIdAuthenticationSettingsContractArgs> getOpenid() {

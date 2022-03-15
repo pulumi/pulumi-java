@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
      * The layer-id of the final layer in the Docker image's v1 representation. This field can be used as a filter in list requests.
      * 
      */
-    @InputImport(name="v1Name")
+    @Import(name="v1Name")
       private final @Nullable Output<String> v1Name;
 
     public Output<String> getV1Name() {
@@ -34,7 +34,7 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
      * The ordered list of v2 blobs that represent a given image.
      * 
      */
-    @InputImport(name="v2Blob")
+    @Import(name="v2Blob")
       private final @Nullable Output<List<String>> v2Blob;
 
     public Output<List<String>> getV2Blob() {

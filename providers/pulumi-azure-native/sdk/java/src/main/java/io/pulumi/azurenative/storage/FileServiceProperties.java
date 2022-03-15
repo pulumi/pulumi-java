@@ -11,7 +11,7 @@ import io.pulumi.azurenative.storage.outputs.ProtocolSettingsResponse;
 import io.pulumi.azurenative.storage.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class FileServiceProperties extends io.pulumi.resources.CustomResource {
      * Specifies CORS rules for the File service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the File service.
      * 
      */
-    @OutputExport(name="cors", type=CorsRulesResponse.class, parameters={})
+    @Export(name="cors", type=CorsRulesResponse.class, parameters={})
     private Output</* @Nullable */ CorsRulesResponse> cors;
 
     /**
@@ -52,7 +52,7 @@ public class FileServiceProperties extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -66,7 +66,7 @@ public class FileServiceProperties extends io.pulumi.resources.CustomResource {
      * Protocol settings for file service
      * 
      */
-    @OutputExport(name="protocolSettings", type=ProtocolSettingsResponse.class, parameters={})
+    @Export(name="protocolSettings", type=ProtocolSettingsResponse.class, parameters={})
     private Output</* @Nullable */ ProtocolSettingsResponse> protocolSettings;
 
     /**
@@ -80,7 +80,7 @@ public class FileServiceProperties extends io.pulumi.resources.CustomResource {
      * The file service properties for share soft delete.
      * 
      */
-    @OutputExport(name="shareDeleteRetentionPolicy", type=DeleteRetentionPolicyResponse.class, parameters={})
+    @Export(name="shareDeleteRetentionPolicy", type=DeleteRetentionPolicyResponse.class, parameters={})
     private Output</* @Nullable */ DeleteRetentionPolicyResponse> shareDeleteRetentionPolicy;
 
     /**
@@ -94,7 +94,7 @@ public class FileServiceProperties extends io.pulumi.resources.CustomResource {
      * Sku name and tier.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
@@ -108,7 +108,7 @@ public class FileServiceProperties extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

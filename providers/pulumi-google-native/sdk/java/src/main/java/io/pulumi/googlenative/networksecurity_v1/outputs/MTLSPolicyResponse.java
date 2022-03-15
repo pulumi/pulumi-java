@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.networksecurity_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.networksecurity_v1.outputs.ValidationCAResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MTLSPolicyResponse {
     /**
      *  Defines the mechanism to obtain the Certificate Authority certificate to validate the client certificate.
@@ -16,8 +16,8 @@ public final class MTLSPolicyResponse {
      */
     private final List<ValidationCAResponse> clientValidationCa;
 
-    @OutputCustomType.Constructor
-    private MTLSPolicyResponse(@OutputCustomType.Parameter("clientValidationCa") List<ValidationCAResponse> clientValidationCa) {
+    @CustomType.Constructor
+    private MTLSPolicyResponse(@CustomType.Parameter("clientValidationCa") List<ValidationCAResponse> clientValidationCa) {
         this.clientValidationCa = clientValidationCa;
     }
 

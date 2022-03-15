@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.AnalysisDataSetReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AnalysisSourceTemplateArgs extends io.pulumi.resources.Resour
      * <p>The Amazon Resource Name (ARN) of the source template of an analysis.</p>
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final Output<String> arn;
 
     public Output<String> getArn() {
@@ -34,7 +34,7 @@ public final class AnalysisSourceTemplateArgs extends io.pulumi.resources.Resour
      * <p>The dataset references of the source template of an analysis.</p>
      * 
      */
-    @InputImport(name="dataSetReferences", required=true)
+    @Import(name="dataSetReferences", required=true)
       private final Output<List<AnalysisDataSetReferenceArgs>> dataSetReferences;
 
     public Output<List<AnalysisDataSetReferenceArgs>> getDataSetReferences() {

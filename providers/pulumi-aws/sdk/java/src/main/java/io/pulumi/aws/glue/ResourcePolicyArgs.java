@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ResourcePolicyArgs Empty = new ResourcePolicyArgs();
 
-    @InputImport(name="enableHybrid")
+    @Import(name="enableHybrid")
       private final @Nullable Output<String> enableHybrid;
 
     public Output<String> getEnableHybrid() {
@@ -25,7 +25,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The policy to be applied to the aws glue data catalog.
      * 
      */
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final Output<String> policy;
 
     public Output<String> getPolicy() {

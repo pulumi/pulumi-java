@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.compute.enums.OperatingSystemTypes;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * The description of this gallery Application Definition resource. This property is updatable.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * The end of life date of the gallery Application Definition. This property can be used for decommissioning purposes. This property is updatable.
      * 
      */
-    @InputImport(name="endOfLifeDate")
+    @Import(name="endOfLifeDate")
       private final @Nullable Output<String> endOfLifeDate;
 
     public Output<String> getEndOfLifeDate() {
@@ -42,7 +42,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * The Eula agreement for the gallery Application Definition.
      * 
      */
-    @InputImport(name="eula")
+    @Import(name="eula")
       private final @Nullable Output<String> eula;
 
     public Output<String> getEula() {
@@ -53,7 +53,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * The name of the gallery Application Definition to be created or updated. The allowed characters are alphabets and numbers with dots, dashes, and periods allowed in the middle. The maximum length is 80 characters.
      * 
      */
-    @InputImport(name="galleryApplicationName")
+    @Import(name="galleryApplicationName")
       private final @Nullable Output<String> galleryApplicationName;
 
     public Output<String> getGalleryApplicationName() {
@@ -64,7 +64,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * The name of the Shared Application Gallery in which the Application Definition is to be created.
      * 
      */
-    @InputImport(name="galleryName", required=true)
+    @Import(name="galleryName", required=true)
       private final Output<String> galleryName;
 
     public Output<String> getGalleryName() {
@@ -75,7 +75,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -86,7 +86,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * The privacy statement uri.
      * 
      */
-    @InputImport(name="privacyStatementUri")
+    @Import(name="privacyStatementUri")
       private final @Nullable Output<String> privacyStatementUri;
 
     public Output<String> getPrivacyStatementUri() {
@@ -97,7 +97,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * The release note uri.
      * 
      */
-    @InputImport(name="releaseNoteUri")
+    @Import(name="releaseNoteUri")
       private final @Nullable Output<String> releaseNoteUri;
 
     public Output<String> getReleaseNoteUri() {
@@ -108,7 +108,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -119,7 +119,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * This property allows you to specify the supported type of the OS that application is built for. <br><br> Possible values are: <br><br> **Windows** <br><br> **Linux**
      * 
      */
-    @InputImport(name="supportedOSType", required=true)
+    @Import(name="supportedOSType", required=true)
       private final Output<OperatingSystemTypes> supportedOSType;
 
     public Output<OperatingSystemTypes> getSupportedOSType() {
@@ -130,7 +130,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

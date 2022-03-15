@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.CustomerEncryptionKeyResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.GuestOsFeatureResponse;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SavedAttachedDiskResponse {
     /**
      * Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
@@ -95,24 +95,24 @@ public final class SavedAttachedDiskResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SavedAttachedDiskResponse(
-        @OutputCustomType.Parameter("autoDelete") Boolean autoDelete,
-        @OutputCustomType.Parameter("boot") Boolean boot,
-        @OutputCustomType.Parameter("deviceName") String deviceName,
-        @OutputCustomType.Parameter("diskEncryptionKey") CustomerEncryptionKeyResponse diskEncryptionKey,
-        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
-        @OutputCustomType.Parameter("diskType") String diskType,
-        @OutputCustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
-        @OutputCustomType.Parameter("index") Integer index,
-        @OutputCustomType.Parameter("interface") String $interface,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("licenses") List<String> licenses,
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("storageBytes") String storageBytes,
-        @OutputCustomType.Parameter("storageBytesStatus") String storageBytesStatus,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("autoDelete") Boolean autoDelete,
+        @CustomType.Parameter("boot") Boolean boot,
+        @CustomType.Parameter("deviceName") String deviceName,
+        @CustomType.Parameter("diskEncryptionKey") CustomerEncryptionKeyResponse diskEncryptionKey,
+        @CustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @CustomType.Parameter("diskType") String diskType,
+        @CustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
+        @CustomType.Parameter("index") Integer index,
+        @CustomType.Parameter("interface") String $interface,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("licenses") List<String> licenses,
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("storageBytes") String storageBytes,
+        @CustomType.Parameter("storageBytesStatus") String storageBytesStatus,
+        @CustomType.Parameter("type") String type) {
         this.autoDelete = autoDelete;
         this.boot = boot;
         this.deviceName = deviceName;

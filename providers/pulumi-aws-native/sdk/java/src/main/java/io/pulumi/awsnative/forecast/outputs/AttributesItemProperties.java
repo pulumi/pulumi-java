@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.forecast.outputs;
 
 import io.pulumi.awsnative.forecast.enums.DatasetAttributesItemPropertiesAttributeType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AttributesItemProperties {
     /**
      * Name of the dataset field
@@ -23,10 +23,10 @@ public final class AttributesItemProperties {
      */
     private final @Nullable DatasetAttributesItemPropertiesAttributeType attributeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AttributesItemProperties(
-        @OutputCustomType.Parameter("attributeName") @Nullable String attributeName,
-        @OutputCustomType.Parameter("attributeType") @Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
+        @CustomType.Parameter("attributeName") @Nullable String attributeName,
+        @CustomType.Parameter("attributeType") @Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
         this.attributeName = attributeName;
         this.attributeType = attributeType;
     }

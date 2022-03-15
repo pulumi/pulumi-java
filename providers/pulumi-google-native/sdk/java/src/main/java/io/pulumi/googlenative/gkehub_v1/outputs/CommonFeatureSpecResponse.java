@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.gkehub_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.gkehub_v1.outputs.AppDevExperienceFeatureSpecResponse;
 import io.pulumi.googlenative.gkehub_v1.outputs.MultiClusterIngressFeatureSpecResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CommonFeatureSpecResponse {
     /**
      * Appdevexperience specific spec.
@@ -21,10 +21,10 @@ public final class CommonFeatureSpecResponse {
      */
     private final MultiClusterIngressFeatureSpecResponse multiclusteringress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CommonFeatureSpecResponse(
-        @OutputCustomType.Parameter("appdevexperience") AppDevExperienceFeatureSpecResponse appdevexperience,
-        @OutputCustomType.Parameter("multiclusteringress") MultiClusterIngressFeatureSpecResponse multiclusteringress) {
+        @CustomType.Parameter("appdevexperience") AppDevExperienceFeatureSpecResponse appdevexperience,
+        @CustomType.Parameter("multiclusteringress") MultiClusterIngressFeatureSpecResponse multiclusteringress) {
         this.appdevexperience = appdevexperience;
         this.multiclusteringress = multiclusteringress;
     }

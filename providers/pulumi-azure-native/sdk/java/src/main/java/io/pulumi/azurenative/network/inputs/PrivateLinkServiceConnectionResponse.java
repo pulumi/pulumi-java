@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -35,7 +35,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * The ID(s) of the group(s) obtained from the remote resource that this private endpoint should connect to.
      * 
      */
-    @InputImport(name="groupIds")
+    @Import(name="groupIds")
       private final @Nullable List<String> groupIds;
 
     public List<String> getGroupIds() {
@@ -46,7 +46,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -57,7 +57,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -68,7 +68,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * A collection of read-only information about the state of the connection to the remote resource.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
@@ -79,7 +79,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * The resource id of private link service.
      * 
      */
-    @InputImport(name="privateLinkServiceId")
+    @Import(name="privateLinkServiceId")
       private final @Nullable String privateLinkServiceId;
 
     public Optional<String> getPrivateLinkServiceId() {
@@ -90,7 +90,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * The provisioning state of the private link service connection resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -101,7 +101,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * A message passed to the owner of the remote resource with this connection request. Restricted to 140 chars.
      * 
      */
-    @InputImport(name="requestMessage")
+    @Import(name="requestMessage")
       private final @Nullable String requestMessage;
 
     public Optional<String> getRequestMessage() {
@@ -112,7 +112,7 @@ public final class PrivateLinkServiceConnectionResponse extends io.pulumi.resour
      * The resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

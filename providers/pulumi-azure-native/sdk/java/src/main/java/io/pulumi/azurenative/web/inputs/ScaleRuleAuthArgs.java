@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ScaleRuleAuthArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Container App secret from which to pull the auth params.
      * 
      */
-    @InputImport(name="secretRef")
+    @Import(name="secretRef")
       private final @Nullable Output<String> secretRef;
 
     public Output<String> getSecretRef() {
@@ -33,7 +33,7 @@ public final class ScaleRuleAuthArgs extends io.pulumi.resources.ResourceArgs {
      * Trigger Parameter that uses the secret
      * 
      */
-    @InputImport(name="triggerParameter")
+    @Import(name="triggerParameter")
       private final @Nullable Output<String> triggerParameter;
 
     public Output<String> getTriggerParameter() {

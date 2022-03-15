@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databricks.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CreatedByResponse extends io.pulumi.resources.InvokeArgs {
      * The application ID of the application that initiated the creation of the workspace. For example, Azure Portal.
      * 
      */
-    @InputImport(name="applicationId", required=true)
+    @Import(name="applicationId", required=true)
       private final String applicationId;
 
     public String getApplicationId() {
@@ -31,7 +31,7 @@ public final class CreatedByResponse extends io.pulumi.resources.InvokeArgs {
      * The Object ID that created the workspace.
      * 
      */
-    @InputImport(name="oid", required=true)
+    @Import(name="oid", required=true)
       private final String oid;
 
     public String getOid() {
@@ -42,7 +42,7 @@ public final class CreatedByResponse extends io.pulumi.resources.InvokeArgs {
      * The Personal Object ID corresponding to the object ID above
      * 
      */
-    @InputImport(name="puid", required=true)
+    @Import(name="puid", required=true)
       private final String puid;
 
     public String getPuid() {

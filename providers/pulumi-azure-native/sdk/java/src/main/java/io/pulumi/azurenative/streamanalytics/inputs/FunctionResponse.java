@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.azurenative.streamanalytics.inputs.ScalarFunctionPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class FunctionResponse extends io.pulumi.resources.InvokeArgs {
      * Resource Id
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -34,7 +34,7 @@ public final class FunctionResponse extends io.pulumi.resources.InvokeArgs {
      * Resource name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -45,7 +45,7 @@ public final class FunctionResponse extends io.pulumi.resources.InvokeArgs {
      * The properties that are associated with a function.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable ScalarFunctionPropertiesResponse properties;
 
     public Optional<ScalarFunctionPropertiesResponse> getProperties() {
@@ -56,7 +56,7 @@ public final class FunctionResponse extends io.pulumi.resources.InvokeArgs {
      * Resource type
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

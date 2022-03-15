@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse {
     /**
      * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it's unset.
@@ -15,8 +15,8 @@ public final class GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse
      */
     private final String mode;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse(@OutputCustomType.Parameter("mode") String mode) {
+    @CustomType.Constructor
+    private GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse(@CustomType.Parameter("mode") String mode) {
         this.mode = mode;
     }
 

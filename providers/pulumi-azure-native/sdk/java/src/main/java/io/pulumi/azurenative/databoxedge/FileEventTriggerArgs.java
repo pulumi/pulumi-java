@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.databoxedge.inputs.FileSourceInfoArgs;
 import io.pulumi.azurenative.databoxedge.inputs.RoleSinkInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
      * A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
      * 
      */
-    @InputImport(name="customContextTag")
+    @Import(name="customContextTag")
       private final @Nullable Output<String> customContextTag;
 
     public Output<String> getCustomContextTag() {
@@ -31,7 +31,7 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
      * Creates or updates a trigger
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -43,7 +43,7 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
      * Expected value is 'FileEvent'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -54,7 +54,7 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
      * The trigger name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -76,7 +76,7 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
      * Role sink info.
      * 
      */
-    @InputImport(name="sinkInfo", required=true)
+    @Import(name="sinkInfo", required=true)
       private final Output<RoleSinkInfoArgs> sinkInfo;
 
     public Output<RoleSinkInfoArgs> getSinkInfo() {
@@ -87,7 +87,7 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
      * File event source details.
      * 
      */
-    @InputImport(name="sourceInfo", required=true)
+    @Import(name="sourceInfo", required=true)
       private final Output<FileSourceInfoArgs> sourceInfo;
 
     public Output<FileSourceInfoArgs> getSourceInfo() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.enums.ManagedRuleEnabledState;
 import io.pulumi.azurenative.network.inputs.ManagedRuleExclusionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class FrontDoorManagedRuleOverrideArgs extends io.pulumi.resources.
      * Describes the override action to be applied when rule matches.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<Either<String,ActionType>> action;
 
     public Output<Either<String,ActionType>> getAction() {
@@ -38,7 +38,7 @@ public final class FrontDoorManagedRuleOverrideArgs extends io.pulumi.resources.
      * Describes if the managed rule is in enabled or disabled state. Defaults to Disabled if not specified.
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable Output<Either<String,ManagedRuleEnabledState>> enabledState;
 
     public Output<Either<String,ManagedRuleEnabledState>> getEnabledState() {
@@ -49,7 +49,7 @@ public final class FrontDoorManagedRuleOverrideArgs extends io.pulumi.resources.
      * Describes the exclusions that are applied to this specific rule.
      * 
      */
-    @InputImport(name="exclusions")
+    @Import(name="exclusions")
       private final @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions;
 
     public Output<List<ManagedRuleExclusionArgs>> getExclusions() {
@@ -60,7 +60,7 @@ public final class FrontDoorManagedRuleOverrideArgs extends io.pulumi.resources.
      * Identifier for the managed rule.
      * 
      */
-    @InputImport(name="ruleId", required=true)
+    @Import(name="ruleId", required=true)
       private final Output<String> ruleId;
 
     public Output<String> getRuleId() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
      * IP Address belonging to the referenced virtual network.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -34,7 +34,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
      * Reference to the frontend ip address configuration defined in regional loadbalancer.
      * 
      */
-    @InputImport(name="loadBalancerFrontendIPConfiguration")
+    @Import(name="loadBalancerFrontendIPConfiguration")
       private final @Nullable Output<SubResourceArgs> loadBalancerFrontendIPConfiguration;
 
     public Output<SubResourceArgs> getLoadBalancerFrontendIPConfiguration() {
@@ -45,7 +45,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
      * Name of the backend address.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -56,7 +56,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
      * Reference to an existing subnet.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<SubResourceArgs> subnet;
 
     public Output<SubResourceArgs> getSubnet() {
@@ -67,7 +67,7 @@ public final class LoadBalancerBackendAddressArgs extends io.pulumi.resources.Re
      * Reference to an existing virtual network.
      * 
      */
-    @InputImport(name="virtualNetwork")
+    @Import(name="virtualNetwork")
       private final @Nullable Output<SubResourceArgs> virtualNetwork;
 
     public Output<SubResourceArgs> getVirtualNetwork() {

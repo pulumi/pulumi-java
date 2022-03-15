@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkmanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
      * The Amazon Resource Name (ARN) of the customer gateway.
      * 
      */
-    @InputImport(name="customerGatewayArn", required=true)
+    @Import(name="customerGatewayArn", required=true)
       private final Output<String> customerGatewayArn;
 
     public Output<String> getCustomerGatewayArn() {
@@ -29,7 +29,7 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
      * The ID of the device
      * 
      */
-    @InputImport(name="deviceId", required=true)
+    @Import(name="deviceId", required=true)
       private final Output<String> deviceId;
 
     public Output<String> getDeviceId() {
@@ -40,7 +40,7 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
      * The ID of the global network.
      * 
      */
-    @InputImport(name="globalNetworkId", required=true)
+    @Import(name="globalNetworkId", required=true)
       private final Output<String> globalNetworkId;
 
     public Output<String> getGlobalNetworkId() {
@@ -51,7 +51,7 @@ public final class CustomerGatewayAssociationArgs extends io.pulumi.resources.Re
      * The ID of the link
      * 
      */
-    @InputImport(name="linkId")
+    @Import(name="linkId")
       private final @Nullable Output<String> linkId;
 
     public Output<String> getLinkId() {

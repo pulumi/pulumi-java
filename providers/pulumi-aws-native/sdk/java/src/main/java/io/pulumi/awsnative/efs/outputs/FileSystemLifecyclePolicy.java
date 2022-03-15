@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.efs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FileSystemLifecyclePolicy {
     private final @Nullable String transitionToIA;
     private final @Nullable String transitionToPrimaryStorageClass;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FileSystemLifecyclePolicy(
-        @OutputCustomType.Parameter("transitionToIA") @Nullable String transitionToIA,
-        @OutputCustomType.Parameter("transitionToPrimaryStorageClass") @Nullable String transitionToPrimaryStorageClass) {
+        @CustomType.Parameter("transitionToIA") @Nullable String transitionToIA,
+        @CustomType.Parameter("transitionToPrimaryStorageClass") @Nullable String transitionToPrimaryStorageClass) {
         this.transitionToIA = transitionToIA;
         this.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
     }

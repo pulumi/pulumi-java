@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql.inputs;
 
 import io.pulumi.azurenative.sql.inputs.SyncGroupSchemaTableColumnArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SyncGroupSchemaTableArgs extends io.pulumi.resources.Resource
      * List of columns in sync group schema.
      * 
      */
-    @InputImport(name="columns")
+    @Import(name="columns")
       private final @Nullable Output<List<SyncGroupSchemaTableColumnArgs>> columns;
 
     public Output<List<SyncGroupSchemaTableColumnArgs>> getColumns() {
@@ -35,7 +35,7 @@ public final class SyncGroupSchemaTableArgs extends io.pulumi.resources.Resource
      * Quoted name of sync group schema table.
      * 
      */
-    @InputImport(name="quotedName")
+    @Import(name="quotedName")
       private final @Nullable Output<String> quotedName;
 
     public Output<String> getQuotedName() {

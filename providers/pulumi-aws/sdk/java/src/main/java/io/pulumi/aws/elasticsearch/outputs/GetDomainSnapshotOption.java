@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.elasticsearch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainSnapshotOption {
     /**
      * Hour during which the service takes an automated daily snapshot of the indices in the domain.
@@ -15,8 +15,8 @@ public final class GetDomainSnapshotOption {
      */
     private final Integer automatedSnapshotStartHour;
 
-    @OutputCustomType.Constructor
-    private GetDomainSnapshotOption(@OutputCustomType.Parameter("automatedSnapshotStartHour") Integer automatedSnapshotStartHour) {
+    @CustomType.Constructor
+    private GetDomainSnapshotOption(@CustomType.Parameter("automatedSnapshotStartHour") Integer automatedSnapshotStartHour) {
         this.automatedSnapshotStartHour = automatedSnapshotStartHour;
     }
 

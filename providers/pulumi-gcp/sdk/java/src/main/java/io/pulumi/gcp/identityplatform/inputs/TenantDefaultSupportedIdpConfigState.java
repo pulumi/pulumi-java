@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TenantDefaultSupportedIdpConfigState extends io.pulumi.resour
      * OAuth client ID
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -30,7 +30,7 @@ public final class TenantDefaultSupportedIdpConfigState extends io.pulumi.resour
      * OAuth client secret
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
@@ -41,7 +41,7 @@ public final class TenantDefaultSupportedIdpConfigState extends io.pulumi.resour
      * If this IDP allows the user to sign in
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -62,7 +62,7 @@ public final class TenantDefaultSupportedIdpConfigState extends io.pulumi.resour
      * * `yahoo.com`
      * 
      */
-    @InputImport(name="idpId")
+    @Import(name="idpId")
       private final @Nullable Output<String> idpId;
 
     public Output<String> getIdpId() {
@@ -73,7 +73,7 @@ public final class TenantDefaultSupportedIdpConfigState extends io.pulumi.resour
      * The name of the default supported IDP config resource
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -85,7 +85,7 @@ public final class TenantDefaultSupportedIdpConfigState extends io.pulumi.resour
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -96,7 +96,7 @@ public final class TenantDefaultSupportedIdpConfigState extends io.pulumi.resour
      * The name of the tenant where this DefaultSupportedIdpConfig resource exists
      * 
      */
-    @InputImport(name="tenant")
+    @Import(name="tenant")
       private final @Nullable Output<String> tenant;
 
     public Output<String> getTenant() {

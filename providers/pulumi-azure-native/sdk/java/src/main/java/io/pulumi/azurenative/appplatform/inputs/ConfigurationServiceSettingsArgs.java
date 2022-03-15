@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.ConfigurationServiceGitPropertyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class ConfigurationServiceSettingsArgs extends io.pulumi.resources.
      * Property of git environment.
      * 
      */
-    @InputImport(name="gitProperty")
+    @Import(name="gitProperty")
       private final @Nullable Output<ConfigurationServiceGitPropertyArgs> gitProperty;
 
     public Output<ConfigurationServiceGitPropertyArgs> getGitProperty() {

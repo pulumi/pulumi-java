@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 import io.pulumi.azurenative.deploymentmanager.inputs.RestRequestArgs;
 import io.pulumi.azurenative.deploymentmanager.inputs.RestResponseArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class RestHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * A unique name for this check.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -35,7 +35,7 @@ public final class RestHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * The request to the health provider.
      * 
      */
-    @InputImport(name="request", required=true)
+    @Import(name="request", required=true)
       private final Output<RestRequestArgs> request;
 
     public Output<RestRequestArgs> getRequest() {
@@ -46,7 +46,7 @@ public final class RestHealthCheckArgs extends io.pulumi.resources.ResourceArgs 
      * The expected response from the health provider. If no expected response is provided, the default is to expect the received response to have an HTTP status code of 200 OK.
      * 
      */
-    @InputImport(name="response")
+    @Import(name="response")
       private final @Nullable Output<RestResponseArgs> response;
 
     public Output<RestResponseArgs> getResponse() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DropInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Cause that the packet is dropped.
      * 
      */
-    @InputImport(name="cause", required=true)
+    @Import(name="cause", required=true)
       private final String cause;
 
     public String getCause() {
@@ -31,7 +31,7 @@ public final class DropInfoResponse extends io.pulumi.resources.InvokeArgs {
      * URI of the resource that caused the drop.
      * 
      */
-    @InputImport(name="resourceUri", required=true)
+    @Import(name="resourceUri", required=true)
       private final String resourceUri;
 
     public String getResourceUri() {

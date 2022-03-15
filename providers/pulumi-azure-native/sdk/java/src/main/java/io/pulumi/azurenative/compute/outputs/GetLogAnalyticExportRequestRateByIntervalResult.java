@@ -4,10 +4,10 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.LogAnalyticsOutputResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLogAnalyticExportRequestRateByIntervalResult {
     /**
      * LogAnalyticsOutput
@@ -15,8 +15,8 @@ public final class GetLogAnalyticExportRequestRateByIntervalResult {
      */
     private final LogAnalyticsOutputResponse properties;
 
-    @OutputCustomType.Constructor
-    private GetLogAnalyticExportRequestRateByIntervalResult(@OutputCustomType.Parameter("properties") LogAnalyticsOutputResponse properties) {
+    @CustomType.Constructor
+    private GetLogAnalyticExportRequestRateByIntervalResult(@CustomType.Parameter("properties") LogAnalyticsOutputResponse properties) {
         this.properties = properties;
     }
 

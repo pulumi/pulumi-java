@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComputeEnvironmentComputeResourcesEc2Configuration {
     /**
      * The AMI ID used for instances launched in the compute environment that match the image type. This setting overrides the `image_id` argument in the `compute_resources` block.
@@ -22,10 +22,10 @@ public final class ComputeEnvironmentComputeResourcesEc2Configuration {
      */
     private final @Nullable String imageType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComputeEnvironmentComputeResourcesEc2Configuration(
-        @OutputCustomType.Parameter("imageIdOverride") @Nullable String imageIdOverride,
-        @OutputCustomType.Parameter("imageType") @Nullable String imageType) {
+        @CustomType.Parameter("imageIdOverride") @Nullable String imageIdOverride,
+        @CustomType.Parameter("imageType") @Nullable String imageType) {
         this.imageIdOverride = imageIdOverride;
         this.imageType = imageType;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetHookTypeConfigArgs extends io.pulumi.resources.InvokeArgs 
      * The Amazon Resource Name (ARN) of the type version.
      * 
      */
-    @InputImport(name="typeArn", required=true)
+    @Import(name="typeArn", required=true)
       private final String typeArn;
 
     public String getTypeArn() {

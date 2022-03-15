@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetWebACLAssociationArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetWebACLAssociationArgs Empty = new GetWebACLAssociationArgs();
 
-    @InputImport(name="resourceArn", required=true)
+    @Import(name="resourceArn", required=true)
       private final String resourceArn;
 
     public String getResourceArn() {
         return this.resourceArn;
     }
 
-    @InputImport(name="webACLArn", required=true)
+    @Import(name="webACLArn", required=true)
       private final String webACLArn;
 
     public String getWebACLArn() {

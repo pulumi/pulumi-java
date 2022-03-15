@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.mq.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BrokerUser {
     /**
      * Whether to enable access to the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html) for the user. Applies to `engine_type` of `ActiveMQ` only.
@@ -34,12 +34,12 @@ public final class BrokerUser {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BrokerUser(
-        @OutputCustomType.Parameter("consoleAccess") @Nullable Boolean consoleAccess,
-        @OutputCustomType.Parameter("groups") @Nullable List<String> groups,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("consoleAccess") @Nullable Boolean consoleAccess,
+        @CustomType.Parameter("groups") @Nullable List<String> groups,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("username") String username) {
         this.consoleAccess = consoleAccess;
         this.groups = groups;
         this.password = password;

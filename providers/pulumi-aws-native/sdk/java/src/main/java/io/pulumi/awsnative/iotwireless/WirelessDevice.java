@@ -9,7 +9,7 @@ import io.pulumi.awsnative.iotwireless.enums.WirelessDeviceType;
 import io.pulumi.awsnative.iotwireless.outputs.WirelessDeviceLoRaWANDevice;
 import io.pulumi.awsnative.iotwireless.outputs.WirelessDeviceTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * Wireless device arn. Returned after successful create.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -39,7 +39,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * Wireless device description
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -53,7 +53,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * Wireless device destination name
      * 
      */
-    @OutputExport(name="destinationName", type=String.class, parameters={})
+    @Export(name="destinationName", type=String.class, parameters={})
     private Output<String> destinationName;
 
     /**
@@ -67,7 +67,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * The date and time when the most recent uplink was received.
      * 
      */
-    @OutputExport(name="lastUplinkReceivedAt", type=String.class, parameters={})
+    @Export(name="lastUplinkReceivedAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastUplinkReceivedAt;
 
     /**
@@ -81,7 +81,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Device.
      * 
      */
-    @OutputExport(name="loRaWAN", type=WirelessDeviceLoRaWANDevice.class, parameters={})
+    @Export(name="loRaWAN", type=WirelessDeviceLoRaWANDevice.class, parameters={})
     private Output</* @Nullable */ WirelessDeviceLoRaWANDevice> loRaWAN;
 
     /**
@@ -95,7 +95,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * Wireless device name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -109,7 +109,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * A list of key-value pairs that contain metadata for the device. Currently not supported, will not create if tags are passed.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={WirelessDeviceTag.class})
+    @Export(name="tags", type=List.class, parameters={WirelessDeviceTag.class})
     private Output</* @Nullable */ List<WirelessDeviceTag>> tags;
 
     /**
@@ -123,7 +123,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * Thing arn. Passed into update to associate Thing with Wireless device.
      * 
      */
-    @OutputExport(name="thingArn", type=String.class, parameters={})
+    @Export(name="thingArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> thingArn;
 
     /**
@@ -137,7 +137,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * Thing Arn. If there is a Thing created, this can be returned with a Get call.
      * 
      */
-    @OutputExport(name="thingName", type=String.class, parameters={})
+    @Export(name="thingName", type=String.class, parameters={})
     private Output<String> thingName;
 
     /**
@@ -151,7 +151,7 @@ public class WirelessDevice extends io.pulumi.resources.CustomResource {
      * Wireless device type, currently only Sidewalk and LoRa
      * 
      */
-    @OutputExport(name="type", type=WirelessDeviceType.class, parameters={})
+    @Export(name="type", type=WirelessDeviceType.class, parameters={})
     private Output<WirelessDeviceType> type;
 
     /**

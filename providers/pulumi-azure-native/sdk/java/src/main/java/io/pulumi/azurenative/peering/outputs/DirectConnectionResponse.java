@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.peering.outputs;
 
 import io.pulumi.azurenative.peering.outputs.BgpSessionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DirectConnectionResponse {
     /**
      * The bandwidth of the connection.
@@ -65,18 +65,18 @@ public final class DirectConnectionResponse {
      */
     private final @Nullable Boolean useForPeeringService;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DirectConnectionResponse(
-        @OutputCustomType.Parameter("bandwidthInMbps") @Nullable Integer bandwidthInMbps,
-        @OutputCustomType.Parameter("bgpSession") @Nullable BgpSessionResponse bgpSession,
-        @OutputCustomType.Parameter("connectionIdentifier") @Nullable String connectionIdentifier,
-        @OutputCustomType.Parameter("connectionState") String connectionState,
-        @OutputCustomType.Parameter("errorMessage") String errorMessage,
-        @OutputCustomType.Parameter("microsoftTrackingId") String microsoftTrackingId,
-        @OutputCustomType.Parameter("peeringDBFacilityId") @Nullable Integer peeringDBFacilityId,
-        @OutputCustomType.Parameter("provisionedBandwidthInMbps") Integer provisionedBandwidthInMbps,
-        @OutputCustomType.Parameter("sessionAddressProvider") @Nullable String sessionAddressProvider,
-        @OutputCustomType.Parameter("useForPeeringService") @Nullable Boolean useForPeeringService) {
+        @CustomType.Parameter("bandwidthInMbps") @Nullable Integer bandwidthInMbps,
+        @CustomType.Parameter("bgpSession") @Nullable BgpSessionResponse bgpSession,
+        @CustomType.Parameter("connectionIdentifier") @Nullable String connectionIdentifier,
+        @CustomType.Parameter("connectionState") String connectionState,
+        @CustomType.Parameter("errorMessage") String errorMessage,
+        @CustomType.Parameter("microsoftTrackingId") String microsoftTrackingId,
+        @CustomType.Parameter("peeringDBFacilityId") @Nullable Integer peeringDBFacilityId,
+        @CustomType.Parameter("provisionedBandwidthInMbps") Integer provisionedBandwidthInMbps,
+        @CustomType.Parameter("sessionAddressProvider") @Nullable String sessionAddressProvider,
+        @CustomType.Parameter("useForPeeringService") @Nullable Boolean useForPeeringService) {
         this.bandwidthInMbps = bandwidthInMbps;
         this.bgpSession = bgpSession;
         this.connectionIdentifier = connectionIdentifier;

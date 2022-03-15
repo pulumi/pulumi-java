@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DocumentOccurrenceResponse {
     /**
      * Identify when the SPDX file was originally created. The date is to be specified according to combined date and time in UTC format as specified in ISO 8601 standard
@@ -51,16 +51,16 @@ public final class DocumentOccurrenceResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DocumentOccurrenceResponse(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("creatorComment") String creatorComment,
-        @OutputCustomType.Parameter("creators") List<String> creators,
-        @OutputCustomType.Parameter("documentComment") String documentComment,
-        @OutputCustomType.Parameter("externalDocumentRefs") List<String> externalDocumentRefs,
-        @OutputCustomType.Parameter("licenseListVersion") String licenseListVersion,
-        @OutputCustomType.Parameter("namespace") String namespace,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("creatorComment") String creatorComment,
+        @CustomType.Parameter("creators") List<String> creators,
+        @CustomType.Parameter("documentComment") String documentComment,
+        @CustomType.Parameter("externalDocumentRefs") List<String> externalDocumentRefs,
+        @CustomType.Parameter("licenseListVersion") String licenseListVersion,
+        @CustomType.Parameter("namespace") String namespace,
+        @CustomType.Parameter("title") String title) {
         this.createTime = createTime;
         this.creatorComment = creatorComment;
         this.creators = creators;

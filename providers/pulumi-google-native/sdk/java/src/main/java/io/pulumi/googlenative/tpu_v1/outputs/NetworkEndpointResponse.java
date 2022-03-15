@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.tpu_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkEndpointResponse {
     /**
      * The IP address of this network endpoint.
@@ -21,10 +21,10 @@ public final class NetworkEndpointResponse {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkEndpointResponse(
-        @OutputCustomType.Parameter("ipAddress") String ipAddress,
-        @OutputCustomType.Parameter("port") Integer port) {
+        @CustomType.Parameter("ipAddress") String ipAddress,
+        @CustomType.Parameter("port") Integer port) {
         this.ipAddress = ipAddress;
         this.port = port;
     }

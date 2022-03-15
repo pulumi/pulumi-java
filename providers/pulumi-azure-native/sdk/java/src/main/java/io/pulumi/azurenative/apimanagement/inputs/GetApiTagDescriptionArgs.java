@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetApiTagDescriptionArgs extends io.pulumi.resources.InvokeAr
      * API revision identifier. Must be unique in the current API Management service instance. Non-current revision has ;rev=n as a suffix where n is the revision number.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final String apiId;
 
     public String getApiId() {
@@ -27,7 +27,7 @@ public final class GetApiTagDescriptionArgs extends io.pulumi.resources.InvokeAr
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetApiTagDescriptionArgs extends io.pulumi.resources.InvokeAr
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final String serviceName;
 
     public String getServiceName() {
@@ -49,7 +49,7 @@ public final class GetApiTagDescriptionArgs extends io.pulumi.resources.InvokeAr
      * Tag description identifier. Used when creating tagDescription for API/Tag association. Based on API and Tag names.
      * 
      */
-    @InputImport(name="tagDescriptionId", required=true)
+    @Import(name="tagDescriptionId", required=true)
       private final String tagDescriptionId;
 
     public String getTagDescriptionId() {

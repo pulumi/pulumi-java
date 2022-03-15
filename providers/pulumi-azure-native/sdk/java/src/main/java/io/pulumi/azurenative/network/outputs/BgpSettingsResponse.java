@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.IPConfigurationBgpPeeringAddressResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BgpSettingsResponse {
     /**
      * The BGP speaker's ASN.
@@ -36,12 +36,12 @@ public final class BgpSettingsResponse {
      */
     private final @Nullable Integer peerWeight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BgpSettingsResponse(
-        @OutputCustomType.Parameter("asn") @Nullable Double asn,
-        @OutputCustomType.Parameter("bgpPeeringAddress") @Nullable String bgpPeeringAddress,
-        @OutputCustomType.Parameter("bgpPeeringAddresses") @Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses,
-        @OutputCustomType.Parameter("peerWeight") @Nullable Integer peerWeight) {
+        @CustomType.Parameter("asn") @Nullable Double asn,
+        @CustomType.Parameter("bgpPeeringAddress") @Nullable String bgpPeeringAddress,
+        @CustomType.Parameter("bgpPeeringAddresses") @Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses,
+        @CustomType.Parameter("peerWeight") @Nullable Integer peerWeight) {
         this.asn = asn;
         this.bgpPeeringAddress = bgpPeeringAddress;
         this.bgpPeeringAddresses = bgpPeeringAddresses;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SparkHistoryServerConfigArgs extends io.pulumi.resources.Reso
      * Optional. Resource name of an existing Dataproc Cluster to act as a Spark History Server for the workload.Example: projects/[project_id]/regions/[region]/clusters/[cluster_name]
      * 
      */
-    @InputImport(name="dataprocCluster")
+    @Import(name="dataprocCluster")
       private final @Nullable Output<String> dataprocCluster;
 
     public Output<String> getDataprocCluster() {

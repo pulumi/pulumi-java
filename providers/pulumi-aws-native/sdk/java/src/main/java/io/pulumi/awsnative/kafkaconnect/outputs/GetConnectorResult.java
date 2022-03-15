@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.kafkaconnect.outputs;
 
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorCapacity;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectorResult {
     private final @Nullable ConnectorCapacity capacity;
     /**
@@ -19,10 +19,10 @@ public final class GetConnectorResult {
      */
     private final @Nullable String connectorArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectorResult(
-        @OutputCustomType.Parameter("capacity") @Nullable ConnectorCapacity capacity,
-        @OutputCustomType.Parameter("connectorArn") @Nullable String connectorArn) {
+        @CustomType.Parameter("capacity") @Nullable ConnectorCapacity capacity,
+        @CustomType.Parameter("connectorArn") @Nullable String connectorArn) {
         this.capacity = capacity;
         this.connectorArn = connectorArn;
     }

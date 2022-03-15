@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.amplifyuibuilder.inputs;
 
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ThemeValues;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class ThemeValue extends io.pulumi.resources.InvokeArgs {
 
     public static final ThemeValue Empty = new ThemeValue();
 
-    @InputImport(name="children")
+    @Import(name="children")
       private final @Nullable List<ThemeValues> children;
 
     public List<ThemeValues> getChildren() {
         return this.children == null ? List.of() : this.children;
     }
 
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

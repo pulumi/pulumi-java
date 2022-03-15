@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.WaitStepAttributesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class WaitStepPropertiesResponse extends io.pulumi.resources.Invoke
      * The Wait attributes
      * 
      */
-    @InputImport(name="attributes", required=true)
+    @Import(name="attributes", required=true)
       private final WaitStepAttributesResponse attributes;
 
     public WaitStepAttributesResponse getAttributes() {
@@ -33,7 +33,7 @@ public final class WaitStepPropertiesResponse extends io.pulumi.resources.Invoke
      * Expected value is 'Wait'.
      * 
      */
-    @InputImport(name="stepType", required=true)
+    @Import(name="stepType", required=true)
       private final String stepType;
 
     public String getStepType() {

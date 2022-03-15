@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FhirServiceAccessPolicyEntryResponse {
     /**
      * An Azure AD object ID (User or Apps) that is allowed access to the FHIR service.
@@ -15,8 +15,8 @@ public final class FhirServiceAccessPolicyEntryResponse {
      */
     private final String objectId;
 
-    @OutputCustomType.Constructor
-    private FhirServiceAccessPolicyEntryResponse(@OutputCustomType.Parameter("objectId") String objectId) {
+    @CustomType.Constructor
+    private FhirServiceAccessPolicyEntryResponse(@CustomType.Parameter("objectId") String objectId) {
         this.objectId = objectId;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.aws.detective.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
      * Date and time, in UTC and extended RFC 3339 format, when the Amazon Detective Graph was created.
      * 
      */
-    @InputImport(name="createdTime")
+    @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
@@ -30,7 +30,7 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
      * ARN of the Detective Graph.
      * 
      */
-    @InputImport(name="graphArn")
+    @Import(name="graphArn")
       private final @Nullable Output<String> graphArn;
 
     public Output<String> getGraphArn() {
@@ -41,14 +41,14 @@ public final class GraphState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the instance. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

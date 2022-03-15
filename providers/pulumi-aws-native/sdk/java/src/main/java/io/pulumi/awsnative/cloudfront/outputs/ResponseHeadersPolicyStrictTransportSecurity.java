@@ -3,26 +3,26 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResponseHeadersPolicyStrictTransportSecurity {
     private final Integer accessControlMaxAgeSec;
     private final @Nullable Boolean includeSubdomains;
     private final Boolean override;
     private final @Nullable Boolean preload;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResponseHeadersPolicyStrictTransportSecurity(
-        @OutputCustomType.Parameter("accessControlMaxAgeSec") Integer accessControlMaxAgeSec,
-        @OutputCustomType.Parameter("includeSubdomains") @Nullable Boolean includeSubdomains,
-        @OutputCustomType.Parameter("override") Boolean override,
-        @OutputCustomType.Parameter("preload") @Nullable Boolean preload) {
+        @CustomType.Parameter("accessControlMaxAgeSec") Integer accessControlMaxAgeSec,
+        @CustomType.Parameter("includeSubdomains") @Nullable Boolean includeSubdomains,
+        @CustomType.Parameter("override") Boolean override,
+        @CustomType.Parameter("preload") @Nullable Boolean preload) {
         this.accessControlMaxAgeSec = accessControlMaxAgeSec;
         this.includeSubdomains = includeSubdomains;
         this.override = override;

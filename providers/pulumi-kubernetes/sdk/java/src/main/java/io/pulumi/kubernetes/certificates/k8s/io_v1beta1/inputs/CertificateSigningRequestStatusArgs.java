@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.certificates.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.certificates.k8s.io_v1beta1.inputs.CertificateSigningRequestConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
      * If request was approved, the controller will place the issued certificate here.
      * 
      */
-    @InputImport(name="certificate")
+    @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
     public Output<String> getCertificate() {
@@ -31,7 +31,7 @@ public final class CertificateSigningRequestStatusArgs extends io.pulumi.resourc
      * Conditions applied to the request, such as approval or denial.
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<CertificateSigningRequestConditionArgs>> conditions;
 
     public Output<List<CertificateSigningRequestConditionArgs>> getConditions() {

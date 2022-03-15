@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.sourcerepo_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MirrorConfigResponse {
     /**
      * ID of the SSH deploy key at the other hosting service. Removing this key from the other service would deauthorize Google Cloud Source Repositories from mirroring.
@@ -25,11 +25,11 @@ public final class MirrorConfigResponse {
      */
     private final String webhookId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MirrorConfigResponse(
-        @OutputCustomType.Parameter("deployKeyId") String deployKeyId,
-        @OutputCustomType.Parameter("url") String url,
-        @OutputCustomType.Parameter("webhookId") String webhookId) {
+        @CustomType.Parameter("deployKeyId") String deployKeyId,
+        @CustomType.Parameter("url") String url,
+        @CustomType.Parameter("webhookId") String webhookId) {
         this.deployKeyId = deployKeyId;
         this.url = url;
         this.webhookId = webhookId;

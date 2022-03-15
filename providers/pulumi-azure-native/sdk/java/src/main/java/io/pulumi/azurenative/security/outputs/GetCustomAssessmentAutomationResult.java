@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCustomAssessmentAutomationResult {
     /**
      * The assessment metadata key used when an assessment is generated for this assessment automation.
@@ -68,19 +68,19 @@ public final class GetCustomAssessmentAutomationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCustomAssessmentAutomationResult(
-        @OutputCustomType.Parameter("assessmentKey") @Nullable String assessmentKey,
-        @OutputCustomType.Parameter("compressedQuery") @Nullable String compressedQuery,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("remediationDescription") @Nullable String remediationDescription,
-        @OutputCustomType.Parameter("severity") @Nullable String severity,
-        @OutputCustomType.Parameter("supportedCloud") @Nullable String supportedCloud,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("assessmentKey") @Nullable String assessmentKey,
+        @CustomType.Parameter("compressedQuery") @Nullable String compressedQuery,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("remediationDescription") @Nullable String remediationDescription,
+        @CustomType.Parameter("severity") @Nullable String severity,
+        @CustomType.Parameter("supportedCloud") @Nullable String supportedCloud,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.assessmentKey = assessmentKey;
         this.compressedQuery = compressedQuery;
         this.description = description;

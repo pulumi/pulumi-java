@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DicomServiceAuthenticationConfigurationResponse extends io.pu
      * The audiences for the service
      * 
      */
-    @InputImport(name="audiences", required=true)
+    @Import(name="audiences", required=true)
       private final List<String> audiences;
 
     public List<String> getAudiences() {
@@ -32,7 +32,7 @@ public final class DicomServiceAuthenticationConfigurationResponse extends io.pu
      * The authority url for the service
      * 
      */
-    @InputImport(name="authority", required=true)
+    @Import(name="authority", required=true)
       private final String authority;
 
     public String getAuthority() {

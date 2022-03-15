@@ -6,12 +6,12 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior;
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope;
 import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoggingConfigurationFieldToMatchJsonBodyProperties {
     /**
      * What AWS WAF should do if it fails to completely parse the JSON body.
@@ -29,11 +29,11 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties {
      */
     private final LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoggingConfigurationFieldToMatchJsonBodyProperties(
-        @OutputCustomType.Parameter("invalidFallbackBehavior") @Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior invalidFallbackBehavior,
-        @OutputCustomType.Parameter("matchPattern") LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties matchPattern,
-        @OutputCustomType.Parameter("matchScope") LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope) {
+        @CustomType.Parameter("invalidFallbackBehavior") @Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior invalidFallbackBehavior,
+        @CustomType.Parameter("matchPattern") LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties matchPattern,
+        @CustomType.Parameter("matchScope") LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope) {
         this.invalidFallbackBehavior = invalidFallbackBehavior;
         this.matchPattern = matchPattern;
         this.matchScope = matchScope;

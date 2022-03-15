@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AzureClusterControlPlaneRootVolumeGetArgs extends io.pulumi.r
      * Optional. The size of the disk, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
      * 
      */
-    @InputImport(name="sizeGib")
+    @Import(name="sizeGib")
       private final @Nullable Output<Integer> sizeGib;
 
     public Output<Integer> getSizeGib() {

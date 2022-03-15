@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MobilityServiceUpdateResponse {
     /**
      * The OS type.
@@ -27,11 +27,11 @@ public final class MobilityServiceUpdateResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MobilityServiceUpdateResponse(
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("rebootStatus") @Nullable String rebootStatus,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("rebootStatus") @Nullable String rebootStatus,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.osType = osType;
         this.rebootStatus = rebootStatus;
         this.version = version;

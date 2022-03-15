@@ -10,7 +10,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerPortMappingArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class VirtualNodeSpecListenerArgs extends io.pulumi.resources.Resou
      * The connection pool information for the listener.
      * 
      */
-    @InputImport(name="connectionPool")
+    @Import(name="connectionPool")
       private final @Nullable Output<VirtualNodeSpecListenerConnectionPoolArgs> connectionPool;
 
     public Output<VirtualNodeSpecListenerConnectionPoolArgs> getConnectionPool() {
@@ -34,7 +34,7 @@ public final class VirtualNodeSpecListenerArgs extends io.pulumi.resources.Resou
      * The health check information for the listener.
      * 
      */
-    @InputImport(name="healthCheck")
+    @Import(name="healthCheck")
       private final @Nullable Output<VirtualNodeSpecListenerHealthCheckArgs> healthCheck;
 
     public Output<VirtualNodeSpecListenerHealthCheckArgs> getHealthCheck() {
@@ -45,7 +45,7 @@ public final class VirtualNodeSpecListenerArgs extends io.pulumi.resources.Resou
      * The outlier detection information for the listener.
      * 
      */
-    @InputImport(name="outlierDetection")
+    @Import(name="outlierDetection")
       private final @Nullable Output<VirtualNodeSpecListenerOutlierDetectionArgs> outlierDetection;
 
     public Output<VirtualNodeSpecListenerOutlierDetectionArgs> getOutlierDetection() {
@@ -56,7 +56,7 @@ public final class VirtualNodeSpecListenerArgs extends io.pulumi.resources.Resou
      * The port mapping information for the listener.
      * 
      */
-    @InputImport(name="portMapping", required=true)
+    @Import(name="portMapping", required=true)
       private final Output<VirtualNodeSpecListenerPortMappingArgs> portMapping;
 
     public Output<VirtualNodeSpecListenerPortMappingArgs> getPortMapping() {
@@ -67,7 +67,7 @@ public final class VirtualNodeSpecListenerArgs extends io.pulumi.resources.Resou
      * Timeouts for different protocols.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<VirtualNodeSpecListenerTimeoutArgs> timeout;
 
     public Output<VirtualNodeSpecListenerTimeoutArgs> getTimeout() {
@@ -78,7 +78,7 @@ public final class VirtualNodeSpecListenerArgs extends io.pulumi.resources.Resou
      * The Transport Layer Security (TLS) properties for the listener
      * 
      */
-    @InputImport(name="tls")
+    @Import(name="tls")
       private final @Nullable Output<VirtualNodeSpecListenerTlsArgs> tls;
 
     public Output<VirtualNodeSpecListenerTlsArgs> getTls() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.RolloutPolicyResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DeprecationStatusResponse extends io.pulumi.resources.InvokeA
      * An optional RFC3339 timestamp on or after which the state of this resource is intended to change to DELETED. This is only informational and the status will not change unless the client explicitly changes it.
      * 
      */
-    @InputImport(name="deleted", required=true)
+    @Import(name="deleted", required=true)
       private final String deleted;
 
     public String getDeleted() {
@@ -32,7 +32,7 @@ public final class DeprecationStatusResponse extends io.pulumi.resources.InvokeA
      * An optional RFC3339 timestamp on or after which the state of this resource is intended to change to DEPRECATED. This is only informational and the status will not change unless the client explicitly changes it.
      * 
      */
-    @InputImport(name="deprecated", required=true)
+    @Import(name="deprecated", required=true)
       private final String deprecated;
 
     public String getDeprecated() {
@@ -43,7 +43,7 @@ public final class DeprecationStatusResponse extends io.pulumi.resources.InvokeA
      * An optional RFC3339 timestamp on or after which the state of this resource is intended to change to OBSOLETE. This is only informational and the status will not change unless the client explicitly changes it.
      * 
      */
-    @InputImport(name="obsolete", required=true)
+    @Import(name="obsolete", required=true)
       private final String obsolete;
 
     public String getObsolete() {
@@ -54,7 +54,7 @@ public final class DeprecationStatusResponse extends io.pulumi.resources.InvokeA
      * The URL of the suggested replacement for a deprecated resource. The suggested replacement resource must be the same kind of resource as the deprecated resource.
      * 
      */
-    @InputImport(name="replacement", required=true)
+    @Import(name="replacement", required=true)
       private final String replacement;
 
     public String getReplacement() {
@@ -65,7 +65,7 @@ public final class DeprecationStatusResponse extends io.pulumi.resources.InvokeA
      * The deprecation state of this resource. This can be ACTIVE, DEPRECATED, OBSOLETE, or DELETED. Operations which communicate the end of life date for an image, can use ACTIVE. Operations which create a new resource using a DEPRECATED resource will return successfully, but with a warning indicating the deprecated resource and recommending its replacement. Operations which use OBSOLETE or DELETED resources will be rejected and result in an error.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -76,7 +76,7 @@ public final class DeprecationStatusResponse extends io.pulumi.resources.InvokeA
      * The rollout policy for this deprecation. This policy is only enforced by image family views. The rollout policy restricts the zones where the associated resource is considered in a deprecated state. When the rollout policy does not include the user specified zone, or if the zone is rolled out, the associated resource is considered in a deprecated state. The rollout policy for this deprecation is read-only, except for allowlisted users. This field might not be configured. To view the latest non-deprecated image in a specific zone, use the imageFamilyViews.get method.
      * 
      */
-    @InputImport(name="stateOverride", required=true)
+    @Import(name="stateOverride", required=true)
       private final RolloutPolicyResponse stateOverride;
 
     public RolloutPolicyResponse getStateOverride() {

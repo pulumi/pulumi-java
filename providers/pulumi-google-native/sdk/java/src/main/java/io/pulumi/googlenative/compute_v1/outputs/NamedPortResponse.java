@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NamedPortResponse {
     /**
      * The name for this named port. The name must be 1-63 characters long, and comply with RFC1035.
@@ -21,10 +21,10 @@ public final class NamedPortResponse {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NamedPortResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("port") Integer port) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("port") Integer port) {
         this.name = name;
         this.port = port;
     }

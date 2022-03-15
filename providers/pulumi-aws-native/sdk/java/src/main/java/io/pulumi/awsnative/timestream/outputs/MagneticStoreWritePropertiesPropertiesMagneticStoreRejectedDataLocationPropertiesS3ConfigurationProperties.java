@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.timestream.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties {
     /**
      * The bucket name used to store the data.
@@ -32,12 +32,12 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
      */
     private final @Nullable String objectKeyPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("encryptionOption") String encryptionOption,
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
-        @OutputCustomType.Parameter("objectKeyPrefix") @Nullable String objectKeyPrefix) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("encryptionOption") String encryptionOption,
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @CustomType.Parameter("objectKeyPrefix") @Nullable String objectKeyPrefix) {
         this.bucketName = bucketName;
         this.encryptionOption = encryptionOption;
         this.kmsKeyId = kmsKeyId;

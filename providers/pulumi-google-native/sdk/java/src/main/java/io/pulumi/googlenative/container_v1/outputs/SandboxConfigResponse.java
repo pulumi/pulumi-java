@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SandboxConfigResponse {
     /**
      * Type of the sandbox to use for the node.
@@ -15,8 +15,8 @@ public final class SandboxConfigResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private SandboxConfigResponse(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private SandboxConfigResponse(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

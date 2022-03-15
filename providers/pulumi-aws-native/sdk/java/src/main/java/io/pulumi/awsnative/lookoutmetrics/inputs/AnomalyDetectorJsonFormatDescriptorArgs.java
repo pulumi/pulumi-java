@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lookoutmetrics.inputs;
 
 import io.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorJsonFormatDescriptorFileCompression;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class AnomalyDetectorJsonFormatDescriptorArgs extends io.pulumi.res
 
     public static final AnomalyDetectorJsonFormatDescriptorArgs Empty = new AnomalyDetectorJsonFormatDescriptorArgs();
 
-    @InputImport(name="charset")
+    @Import(name="charset")
       private final @Nullable Output<String> charset;
 
     public Output<String> getCharset() {
         return this.charset == null ? Output.empty() : this.charset;
     }
 
-    @InputImport(name="fileCompression")
+    @Import(name="fileCompression")
       private final @Nullable Output<AnomalyDetectorJsonFormatDescriptorFileCompression> fileCompression;
 
     public Output<AnomalyDetectorJsonFormatDescriptorFileCompression> getFileCompression() {

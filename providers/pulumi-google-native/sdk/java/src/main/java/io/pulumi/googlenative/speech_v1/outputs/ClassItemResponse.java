@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.speech_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClassItemResponse {
     /**
      * The class item's value.
@@ -15,8 +15,8 @@ public final class ClassItemResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
-    private ClassItemResponse(@OutputCustomType.Parameter("value") String value) {
+    @CustomType.Constructor
+    private ClassItemResponse(@CustomType.Parameter("value") String value) {
         this.value = value;
     }
 

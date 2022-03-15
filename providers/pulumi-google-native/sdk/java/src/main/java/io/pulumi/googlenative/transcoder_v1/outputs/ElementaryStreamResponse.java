@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.AudioStreamResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.TextStreamResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.VideoStreamResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ElementaryStreamResponse {
     /**
      * Encoding of an audio stream.
@@ -33,12 +33,12 @@ public final class ElementaryStreamResponse {
      */
     private final VideoStreamResponse videoStream;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ElementaryStreamResponse(
-        @OutputCustomType.Parameter("audioStream") AudioStreamResponse audioStream,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("textStream") TextStreamResponse textStream,
-        @OutputCustomType.Parameter("videoStream") VideoStreamResponse videoStream) {
+        @CustomType.Parameter("audioStream") AudioStreamResponse audioStream,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("textStream") TextStreamResponse textStream,
+        @CustomType.Parameter("videoStream") VideoStreamResponse videoStream) {
         this.audioStream = audioStream;
         this.key = key;
         this.textStream = textStream;

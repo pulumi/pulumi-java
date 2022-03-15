@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.InstanceGroupManagerArgs;
@@ -59,7 +59,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
      * 
      */
-    @OutputExport(name="autoHealingPolicies", type=InstanceGroupManagerAutoHealingPolicies.class, parameters={})
+    @Export(name="autoHealingPolicies", type=InstanceGroupManagerAutoHealingPolicies.class, parameters={})
     private Output</* @Nullable */ InstanceGroupManagerAutoHealingPolicies> autoHealingPolicies;
 
     /**
@@ -79,7 +79,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * name.
      * 
      */
-    @OutputExport(name="baseInstanceName", type=String.class, parameters={})
+    @Export(name="baseInstanceName", type=String.class, parameters={})
     private Output<String> baseInstanceName;
 
     /**
@@ -99,7 +99,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * group manager.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -114,7 +114,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * The fingerprint of the instance group manager.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -128,7 +128,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * The full URL of the instance group created by the manager.
      * 
      */
-    @OutputExport(name="instanceGroup", type=String.class, parameters={})
+    @Export(name="instanceGroup", type=String.class, parameters={})
     private Output<String> instanceGroup;
 
     /**
@@ -142,7 +142,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * - Version name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -157,7 +157,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * for details on configuration.
      * 
      */
-    @OutputExport(name="namedPorts", type=List.class, parameters={InstanceGroupManagerNamedPort.class})
+    @Export(name="namedPorts", type=List.class, parameters={InstanceGroupManagerNamedPort.class})
     private Output</* @Nullable */ List<InstanceGroupManagerNamedPort>> namedPorts;
 
     /**
@@ -168,7 +168,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<InstanceGroupManagerNamedPort>> getNamedPorts() {
         return this.namedPorts;
     }
-    @OutputExport(name="operation", type=String.class, parameters={})
+    @Export(name="operation", type=String.class, parameters={})
     private Output<String> operation;
 
     public Output<String> getOperation() {
@@ -179,7 +179,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -194,7 +194,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * The URL of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -208,7 +208,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * ) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
      * 
      */
-    @OutputExport(name="statefulDisks", type=List.class, parameters={InstanceGroupManagerStatefulDisk.class})
+    @Export(name="statefulDisks", type=List.class, parameters={InstanceGroupManagerStatefulDisk.class})
     private Output</* @Nullable */ List<InstanceGroupManagerStatefulDisk>> statefulDisks;
 
     /**
@@ -222,7 +222,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * The status of this managed instance group.
      * 
      */
-    @OutputExport(name="statuses", type=List.class, parameters={InstanceGroupManagerStatus.class})
+    @Export(name="statuses", type=List.class, parameters={InstanceGroupManagerStatus.class})
     private Output<List<InstanceGroupManagerStatus>> statuses;
 
     /**
@@ -238,7 +238,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * not affect existing instances.
      * 
      */
-    @OutputExport(name="targetPools", type=List.class, parameters={String.class})
+    @Export(name="targetPools", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> targetPools;
 
     /**
@@ -254,7 +254,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
      * 
      */
-    @OutputExport(name="targetSize", type=Integer.class, parameters={})
+    @Export(name="targetSize", type=Integer.class, parameters={})
     private Output<Integer> targetSize;
 
     /**
@@ -268,7 +268,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/instanceGroupManagers/patch)
      * 
      */
-    @OutputExport(name="updatePolicy", type=InstanceGroupManagerUpdatePolicy.class, parameters={})
+    @Export(name="updatePolicy", type=InstanceGroupManagerUpdatePolicy.class, parameters={})
     private Output<InstanceGroupManagerUpdatePolicy> updatePolicy;
 
     /**
@@ -284,7 +284,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="versions", type=List.class, parameters={InstanceGroupManagerVersion.class})
+    @Export(name="versions", type=List.class, parameters={InstanceGroupManagerVersion.class})
     private Output<List<InstanceGroupManagerVersion>> versions;
 
     /**
@@ -302,7 +302,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * continue trying until it times out.
      * 
      */
-    @OutputExport(name="waitForInstances", type=Boolean.class, parameters={})
+    @Export(name="waitForInstances", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> waitForInstances;
 
     /**
@@ -321,7 +321,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * instances to be stable before returning. The possible values are `STABLE` and `UPDATED`
      * 
      */
-    @OutputExport(name="waitForInstancesStatus", type=String.class, parameters={})
+    @Export(name="waitForInstancesStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> waitForInstancesStatus;
 
     /**
@@ -339,7 +339,7 @@ public class InstanceGroupManager extends io.pulumi.resources.CustomResource {
      * in.
      * 
      */
-    @OutputExport(name="zone", type=String.class, parameters={})
+    @Export(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
     /**

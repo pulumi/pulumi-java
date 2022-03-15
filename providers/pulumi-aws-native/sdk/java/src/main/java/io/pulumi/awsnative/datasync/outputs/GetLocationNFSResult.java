@@ -6,14 +6,14 @@ package io.pulumi.awsnative.datasync.outputs;
 import io.pulumi.awsnative.datasync.outputs.LocationNFSMountOptions;
 import io.pulumi.awsnative.datasync.outputs.LocationNFSOnPremConfig;
 import io.pulumi.awsnative.datasync.outputs.LocationNFSTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLocationNFSResult {
     /**
      * The Amazon Resource Name (ARN) of the NFS location.
@@ -33,13 +33,13 @@ public final class GetLocationNFSResult {
      */
     private final @Nullable List<LocationNFSTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLocationNFSResult(
-        @OutputCustomType.Parameter("locationArn") @Nullable String locationArn,
-        @OutputCustomType.Parameter("locationUri") @Nullable String locationUri,
-        @OutputCustomType.Parameter("mountOptions") @Nullable LocationNFSMountOptions mountOptions,
-        @OutputCustomType.Parameter("onPremConfig") @Nullable LocationNFSOnPremConfig onPremConfig,
-        @OutputCustomType.Parameter("tags") @Nullable List<LocationNFSTag> tags) {
+        @CustomType.Parameter("locationArn") @Nullable String locationArn,
+        @CustomType.Parameter("locationUri") @Nullable String locationUri,
+        @CustomType.Parameter("mountOptions") @Nullable LocationNFSMountOptions mountOptions,
+        @CustomType.Parameter("onPremConfig") @Nullable LocationNFSOnPremConfig onPremConfig,
+        @CustomType.Parameter("tags") @Nullable List<LocationNFSTag> tags) {
         this.locationArn = locationArn;
         this.locationUri = locationUri;
         this.mountOptions = mountOptions;

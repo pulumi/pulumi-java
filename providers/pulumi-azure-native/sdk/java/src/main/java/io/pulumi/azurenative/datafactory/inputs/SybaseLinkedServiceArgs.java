@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -42,7 +42,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * AuthenticationType to be used for connection.
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable Output<Either<String,SybaseAuthenticationType>> authenticationType;
 
     public Output<Either<String,SybaseAuthenticationType>> getAuthenticationType() {
@@ -53,7 +53,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -64,7 +64,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * Database name for connection. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="database", required=true)
+    @Import(name="database", required=true)
       private final Output<Object> database;
 
     public Output<Object> getDatabase() {
@@ -75,7 +75,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -86,7 +86,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -97,7 +97,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -108,7 +108,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * Password for authentication.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
@@ -119,7 +119,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * Schema name for connection. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<Object> schema;
 
     public Output<Object> getSchema() {
@@ -130,7 +130,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * Server name for connection. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="server", required=true)
+    @Import(name="server", required=true)
       private final Output<Object> server;
 
     public Output<Object> getServer() {
@@ -142,7 +142,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * Expected value is 'Sybase'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -153,7 +153,7 @@ public final class SybaseLinkedServiceArgs extends io.pulumi.resources.ResourceA
      * Username for authentication. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<Object> username;
 
     public Output<Object> getUsername() {

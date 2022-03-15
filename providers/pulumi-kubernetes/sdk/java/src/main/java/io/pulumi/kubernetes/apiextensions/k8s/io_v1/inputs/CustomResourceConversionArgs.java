@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.WebhookConversionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
      *   is needed for this option. This requires spec.preserveUnknownFields to be false, and spec.conversion.webhook to be set.
      * 
      */
-    @InputImport(name="strategy", required=true)
+    @Import(name="strategy", required=true)
       private final Output<String> strategy;
 
     public Output<String> getStrategy() {
@@ -35,7 +35,7 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
      * webhook describes how to call the conversion webhook. Required when `strategy` is set to `Webhook`.
      * 
      */
-    @InputImport(name="webhook")
+    @Import(name="webhook")
       private final @Nullable Output<WebhookConversionArgs> webhook;
 
     public Output<WebhookConversionArgs> getWebhook() {

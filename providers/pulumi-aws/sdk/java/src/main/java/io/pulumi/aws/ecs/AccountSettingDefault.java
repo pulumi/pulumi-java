@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ecs.AccountSettingDefaultArgs;
 import io.pulumi.aws.ecs.inputs.AccountSettingDefaultState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -36,7 +36,7 @@ public class AccountSettingDefault extends io.pulumi.resources.CustomResource {
      * Name of the account setting to set. Valid values are `serviceLongArnFormat`, `taskLongArnFormat`, `containerInstanceLongArnFormat`, `awsvpcTrunking` and `containerInsights`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -46,7 +46,7 @@ public class AccountSettingDefault extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="principalArn", type=String.class, parameters={})
+    @Export(name="principalArn", type=String.class, parameters={})
     private Output<String> principalArn;
 
     public Output<String> getPrincipalArn() {
@@ -56,7 +56,7 @@ public class AccountSettingDefault extends io.pulumi.resources.CustomResource {
      * State of the setting. Valid values are `enabled` and `disabled`.
      * 
      */
-    @OutputExport(name="value", type=String.class, parameters={})
+    @Export(name="value", type=String.class, parameters={})
     private Output<String> value;
 
     /**

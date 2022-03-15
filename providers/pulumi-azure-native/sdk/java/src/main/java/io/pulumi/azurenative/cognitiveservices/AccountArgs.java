@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cognitiveservices.inputs.CognitiveServicesAccountPr
 import io.pulumi.azurenative.cognitiveservices.inputs.IdentityArgs;
 import io.pulumi.azurenative.cognitiveservices.inputs.SkuArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The name of Cognitive Services account.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -33,7 +33,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The identity of Cognitive Services account.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
@@ -44,7 +44,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The Kind of the resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -55,7 +55,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -66,7 +66,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of Cognitive Services account.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<CognitiveServicesAccountPropertiesArgs> properties;
 
     public Output<CognitiveServicesAccountPropertiesArgs> getProperties() {
@@ -77,7 +77,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -88,7 +88,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU of Cognitive Services account.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -99,7 +99,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

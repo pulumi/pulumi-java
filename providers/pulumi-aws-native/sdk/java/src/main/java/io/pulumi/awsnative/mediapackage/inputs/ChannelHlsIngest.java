@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.ChannelIngestEndpoint;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ChannelHlsIngest extends io.pulumi.resources.InvokeArgs {
      * A list of endpoints to which the source stream should be sent.
      * 
      */
-    @InputImport(name="ingestEndpoints")
+    @Import(name="ingestEndpoints")
       private final @Nullable List<ChannelIngestEndpoint> ingestEndpoints;
 
     public List<ChannelIngestEndpoint> getIngestEndpoints() {

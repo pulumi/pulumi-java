@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UrlRewriteActionParametersResponse {
     /**
      * Define the relative URL to which the above requests will be rewritten by.
@@ -29,12 +29,12 @@ public final class UrlRewriteActionParametersResponse {
      */
     private final String sourcePattern;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UrlRewriteActionParametersResponse(
-        @OutputCustomType.Parameter("destination") String destination,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("preserveUnmatchedPath") @Nullable Boolean preserveUnmatchedPath,
-        @OutputCustomType.Parameter("sourcePattern") String sourcePattern) {
+        @CustomType.Parameter("destination") String destination,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("preserveUnmatchedPath") @Nullable Boolean preserveUnmatchedPath,
+        @CustomType.Parameter("sourcePattern") String sourcePattern) {
         this.destination = destination;
         this.odataType = odataType;
         this.preserveUnmatchedPath = preserveUnmatchedPath;

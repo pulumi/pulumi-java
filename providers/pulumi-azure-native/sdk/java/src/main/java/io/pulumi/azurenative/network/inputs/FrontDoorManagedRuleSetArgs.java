@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.FrontDoorManagedRuleGroupOverrideArg
 import io.pulumi.azurenative.network.inputs.ManagedRuleExclusionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
      * Describes the exclusions that are applied to all rules in the set.
      * 
      */
-    @InputImport(name="exclusions")
+    @Import(name="exclusions")
       private final @Nullable Output<List<ManagedRuleExclusionArgs>> exclusions;
 
     public Output<List<ManagedRuleExclusionArgs>> getExclusions() {
@@ -38,7 +38,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
      * Defines the rule group overrides to apply to the rule set.
      * 
      */
-    @InputImport(name="ruleGroupOverrides")
+    @Import(name="ruleGroupOverrides")
       private final @Nullable Output<List<FrontDoorManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
 
     public Output<List<FrontDoorManagedRuleGroupOverrideArgs>> getRuleGroupOverrides() {
@@ -49,7 +49,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
      * Defines the action to take when a managed rule set score threshold is met.
      * 
      */
-    @InputImport(name="ruleSetAction")
+    @Import(name="ruleSetAction")
       private final @Nullable Output<Either<String,ManagedRuleSetActionType>> ruleSetAction;
 
     public Output<Either<String,ManagedRuleSetActionType>> getRuleSetAction() {
@@ -60,7 +60,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
      * Defines the rule set type to use.
      * 
      */
-    @InputImport(name="ruleSetType", required=true)
+    @Import(name="ruleSetType", required=true)
       private final Output<String> ruleSetType;
 
     public Output<String> getRuleSetType() {
@@ -71,7 +71,7 @@ public final class FrontDoorManagedRuleSetArgs extends io.pulumi.resources.Resou
      * Defines the version of the rule set to use.
      * 
      */
-    @InputImport(name="ruleSetVersion", required=true)
+    @Import(name="ruleSetVersion", required=true)
       private final Output<String> ruleSetVersion;
 
     public Output<String> getRuleSetVersion() {

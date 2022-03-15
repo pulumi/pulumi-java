@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse extends
      * The target URI of the gRPC endpoint. Only UDS path is supported, and should start with “unix:”.
      * 
      */
-    @InputImport(name="targetUri", required=true)
+    @Import(name="targetUri", required=true)
       private final String targetUri;
 
     public String getTargetUri() {

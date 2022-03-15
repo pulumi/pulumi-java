@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayConnectionDrainingResponse {
     /**
      * The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
@@ -21,10 +21,10 @@ public final class ApplicationGatewayConnectionDrainingResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayConnectionDrainingResponse(
-        @OutputCustomType.Parameter("drainTimeoutInSec") Integer drainTimeoutInSec,
-        @OutputCustomType.Parameter("enabled") Boolean enabled) {
+        @CustomType.Parameter("drainTimeoutInSec") Integer drainTimeoutInSec,
+        @CustomType.Parameter("enabled") Boolean enabled) {
         this.drainTimeoutInSec = drainTimeoutInSec;
         this.enabled = enabled;
     }

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LinuxPropertiesResponse {
     /**
      * packages excluded from the software update configuration.
@@ -33,12 +33,12 @@ public final class LinuxPropertiesResponse {
      */
     private final @Nullable String rebootSetting;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LinuxPropertiesResponse(
-        @OutputCustomType.Parameter("excludedPackageNameMasks") @Nullable List<String> excludedPackageNameMasks,
-        @OutputCustomType.Parameter("includedPackageClassifications") @Nullable String includedPackageClassifications,
-        @OutputCustomType.Parameter("includedPackageNameMasks") @Nullable List<String> includedPackageNameMasks,
-        @OutputCustomType.Parameter("rebootSetting") @Nullable String rebootSetting) {
+        @CustomType.Parameter("excludedPackageNameMasks") @Nullable List<String> excludedPackageNameMasks,
+        @CustomType.Parameter("includedPackageClassifications") @Nullable String includedPackageClassifications,
+        @CustomType.Parameter("includedPackageNameMasks") @Nullable List<String> includedPackageNameMasks,
+        @CustomType.Parameter("rebootSetting") @Nullable String rebootSetting) {
         this.excludedPackageNameMasks = excludedPackageNameMasks;
         this.includedPackageClassifications = includedPackageClassifications;
         this.includedPackageNameMasks = includedPackageNameMasks;

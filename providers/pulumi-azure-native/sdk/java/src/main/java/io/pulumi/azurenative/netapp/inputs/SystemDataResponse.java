@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
      * The timestamp of resource creation (UTC).
      * 
      */
-    @InputImport(name="createdAt")
+    @Import(name="createdAt")
       private final @Nullable String createdAt;
 
     public Optional<String> getCreatedAt() {
@@ -33,7 +33,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
      * The identity that created the resource.
      * 
      */
-    @InputImport(name="createdBy")
+    @Import(name="createdBy")
       private final @Nullable String createdBy;
 
     public Optional<String> getCreatedBy() {
@@ -44,7 +44,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
      * The type of identity that created the resource.
      * 
      */
-    @InputImport(name="createdByType")
+    @Import(name="createdByType")
       private final @Nullable String createdByType;
 
     public Optional<String> getCreatedByType() {
@@ -55,7 +55,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
      * The timestamp of resource last modification (UTC)
      * 
      */
-    @InputImport(name="lastModifiedAt")
+    @Import(name="lastModifiedAt")
       private final @Nullable String lastModifiedAt;
 
     public Optional<String> getLastModifiedAt() {
@@ -66,7 +66,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
      * The identity that last modified the resource.
      * 
      */
-    @InputImport(name="lastModifiedBy")
+    @Import(name="lastModifiedBy")
       private final @Nullable String lastModifiedBy;
 
     public Optional<String> getLastModifiedBy() {
@@ -77,7 +77,7 @@ public final class SystemDataResponse extends io.pulumi.resources.InvokeArgs {
      * The type of identity that last modified the resource.
      * 
      */
-    @InputImport(name="lastModifiedByType")
+    @Import(name="lastModifiedByType")
       private final @Nullable String lastModifiedByType;
 
     public Optional<String> getLastModifiedByType() {

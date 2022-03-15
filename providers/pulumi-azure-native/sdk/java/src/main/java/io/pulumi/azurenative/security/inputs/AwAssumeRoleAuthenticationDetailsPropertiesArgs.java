@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pu
      * Expected value is 'awsAssumeRole'.
      * 
      */
-    @InputImport(name="authenticationType", required=true)
+    @Import(name="authenticationType", required=true)
       private final Output<String> authenticationType;
 
     public Output<String> getAuthenticationType() {
@@ -33,7 +33,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pu
      * Assumed role ID is an identifier that you can use to create temporary security credentials.
      * 
      */
-    @InputImport(name="awsAssumeRoleArn", required=true)
+    @Import(name="awsAssumeRoleArn", required=true)
       private final Output<String> awsAssumeRoleArn;
 
     public Output<String> getAwsAssumeRoleArn() {
@@ -44,7 +44,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends io.pu
      * A unique identifier that is required when you assume a role in another account.
      * 
      */
-    @InputImport(name="awsExternalId", required=true)
+    @Import(name="awsExternalId", required=true)
       private final Output<String> awsExternalId;
 
     public Output<String> getAwsExternalId() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs
      * Email address of the service account.
      * 
      */
-    @InputImport(name="email", required=true)
+    @Import(name="email", required=true)
       private final String email;
 
     public String getEmail() {
@@ -32,7 +32,7 @@ public final class ServiceAccountResponse extends io.pulumi.resources.InvokeArgs
      * The list of scopes to be made available for this service account.
      * 
      */
-    @InputImport(name="scopes", required=true)
+    @Import(name="scopes", required=true)
       private final List<String> scopes;
 
     public List<String> getScopes() {

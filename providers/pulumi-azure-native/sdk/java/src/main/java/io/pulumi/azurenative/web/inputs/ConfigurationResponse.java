@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.IngressResponse;
 import io.pulumi.azurenative.web.inputs.RegistryCredentialsResponse;
 import io.pulumi.azurenative.web.inputs.SecretResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
      * <list><item>Multiple: multiple revisions can be active. If no value if provided, this is the default</item><item>Single: Only one revision can be active at a time. Revision weights can not be used in this mode</item></list>
      * 
      */
-    @InputImport(name="activeRevisionsMode")
+    @Import(name="activeRevisionsMode")
       private final @Nullable String activeRevisionsMode;
 
     public Optional<String> getActiveRevisionsMode() {
@@ -38,7 +38,7 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
      * Ingress configurations.
      * 
      */
-    @InputImport(name="ingress")
+    @Import(name="ingress")
       private final @Nullable IngressResponse ingress;
 
     public Optional<IngressResponse> getIngress() {
@@ -49,7 +49,7 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
      * Collection of private container registry credentials for containers used by the Container app
      * 
      */
-    @InputImport(name="registries")
+    @Import(name="registries")
       private final @Nullable List<RegistryCredentialsResponse> registries;
 
     public List<RegistryCredentialsResponse> getRegistries() {
@@ -60,7 +60,7 @@ public final class ConfigurationResponse extends io.pulumi.resources.InvokeArgs 
      * Collection of secrets used by a Container app
      * 
      */
-    @InputImport(name="secrets")
+    @Import(name="secrets")
       private final @Nullable List<SecretResponse> secrets;
 
     public List<SecretResponse> getSecrets() {

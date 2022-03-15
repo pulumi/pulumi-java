@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.avs.outputs;
 
 import io.pulumi.azurenative.avs.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     /**
      * The identity
@@ -53,16 +53,16 @@ public final class GetClusterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("clusterId") Integer clusterId,
-        @OutputCustomType.Parameter("clusterSize") Integer clusterSize,
-        @OutputCustomType.Parameter("hosts") List<String> hosts,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sku") SkuResponse sku,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("clusterId") Integer clusterId,
+        @CustomType.Parameter("clusterSize") Integer clusterSize,
+        @CustomType.Parameter("hosts") List<String> hosts,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sku") SkuResponse sku,
+        @CustomType.Parameter("type") String type) {
         this.clusterId = clusterId;
         this.clusterSize = clusterSize;
         this.hosts = hosts;

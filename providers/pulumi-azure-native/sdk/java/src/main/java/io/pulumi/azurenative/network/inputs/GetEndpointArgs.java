@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the Traffic Manager endpoint.
      * 
      */
-    @InputImport(name="endpointName", required=true)
+    @Import(name="endpointName", required=true)
       private final String endpointName;
 
     public String getEndpointName() {
@@ -27,7 +27,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * The type of the Traffic Manager endpoint.
      * 
      */
-    @InputImport(name="endpointType", required=true)
+    @Import(name="endpointType", required=true)
       private final String endpointType;
 
     public String getEndpointType() {
@@ -38,7 +38,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the Traffic Manager profile.
      * 
      */
-    @InputImport(name="profileName", required=true)
+    @Import(name="profileName", required=true)
       private final String profileName;
 
     public String getProfileName() {
@@ -49,7 +49,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group containing the Traffic Manager endpoint.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

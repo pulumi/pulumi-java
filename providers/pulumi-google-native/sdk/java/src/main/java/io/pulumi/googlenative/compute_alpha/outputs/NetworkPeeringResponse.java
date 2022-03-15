@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkPeeringResponse {
     /**
      * Whether Cloud Routers in this network can automatically advertise subnets from the peer network.
@@ -72,20 +72,20 @@ public final class NetworkPeeringResponse {
      */
     private final String stateDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkPeeringResponse(
-        @OutputCustomType.Parameter("advertisePeerSubnetsViaRouters") Boolean advertisePeerSubnetsViaRouters,
-        @OutputCustomType.Parameter("autoCreateRoutes") Boolean autoCreateRoutes,
-        @OutputCustomType.Parameter("exchangeSubnetRoutes") Boolean exchangeSubnetRoutes,
-        @OutputCustomType.Parameter("exportCustomRoutes") Boolean exportCustomRoutes,
-        @OutputCustomType.Parameter("exportSubnetRoutesWithPublicIp") Boolean exportSubnetRoutesWithPublicIp,
-        @OutputCustomType.Parameter("importCustomRoutes") Boolean importCustomRoutes,
-        @OutputCustomType.Parameter("importSubnetRoutesWithPublicIp") Boolean importSubnetRoutesWithPublicIp,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("peerMtu") Integer peerMtu,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stateDetails") String stateDetails) {
+        @CustomType.Parameter("advertisePeerSubnetsViaRouters") Boolean advertisePeerSubnetsViaRouters,
+        @CustomType.Parameter("autoCreateRoutes") Boolean autoCreateRoutes,
+        @CustomType.Parameter("exchangeSubnetRoutes") Boolean exchangeSubnetRoutes,
+        @CustomType.Parameter("exportCustomRoutes") Boolean exportCustomRoutes,
+        @CustomType.Parameter("exportSubnetRoutesWithPublicIp") Boolean exportSubnetRoutesWithPublicIp,
+        @CustomType.Parameter("importCustomRoutes") Boolean importCustomRoutes,
+        @CustomType.Parameter("importSubnetRoutesWithPublicIp") Boolean importSubnetRoutesWithPublicIp,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("peerMtu") Integer peerMtu,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stateDetails") String stateDetails) {
         this.advertisePeerSubnetsViaRouters = advertisePeerSubnetsViaRouters;
         this.autoCreateRoutes = autoCreateRoutes;
         this.exchangeSubnetRoutes = exchangeSubnetRoutes;

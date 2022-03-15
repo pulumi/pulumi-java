@@ -10,7 +10,7 @@ import io.pulumi.azurenative.authorization.outputs.PolicyDefinitionGroupResponse
 import io.pulumi.azurenative.authorization.outputs.PolicyDefinitionReferenceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class PolicySetDefinition extends io.pulumi.resources.CustomResource {
      * The policy set definition description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -53,7 +53,7 @@ public class PolicySetDefinition extends io.pulumi.resources.CustomResource {
      * The display name of the policy set definition.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -67,7 +67,7 @@ public class PolicySetDefinition extends io.pulumi.resources.CustomResource {
      * The policy set definition metadata.  Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    @OutputExport(name="metadata", type=Object.class, parameters={})
+    @Export(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
     /**
@@ -81,7 +81,7 @@ public class PolicySetDefinition extends io.pulumi.resources.CustomResource {
      * The name of the policy set definition.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -95,7 +95,7 @@ public class PolicySetDefinition extends io.pulumi.resources.CustomResource {
      * The policy set definition parameters that can be used in policy definition references.
      * 
      */
-    @OutputExport(name="parameters", type=Map.class, parameters={String.class, ParameterDefinitionsValueResponse.class})
+    @Export(name="parameters", type=Map.class, parameters={String.class, ParameterDefinitionsValueResponse.class})
     private Output</* @Nullable */ Map<String,ParameterDefinitionsValueResponse>> parameters;
 
     /**
@@ -109,7 +109,7 @@ public class PolicySetDefinition extends io.pulumi.resources.CustomResource {
      * The metadata describing groups of policy definition references within the policy set definition.
      * 
      */
-    @OutputExport(name="policyDefinitionGroups", type=List.class, parameters={PolicyDefinitionGroupResponse.class})
+    @Export(name="policyDefinitionGroups", type=List.class, parameters={PolicyDefinitionGroupResponse.class})
     private Output</* @Nullable */ List<PolicyDefinitionGroupResponse>> policyDefinitionGroups;
 
     /**
@@ -123,7 +123,7 @@ public class PolicySetDefinition extends io.pulumi.resources.CustomResource {
      * An array of policy definition references.
      * 
      */
-    @OutputExport(name="policyDefinitions", type=List.class, parameters={PolicyDefinitionReferenceResponse.class})
+    @Export(name="policyDefinitions", type=List.class, parameters={PolicyDefinitionReferenceResponse.class})
     private Output<List<PolicyDefinitionReferenceResponse>> policyDefinitions;
 
     /**
@@ -137,7 +137,7 @@ public class PolicySetDefinition extends io.pulumi.resources.CustomResource {
      * The type of policy definition. Possible values are NotSpecified, BuiltIn, Custom, and Static.
      * 
      */
-    @OutputExport(name="policyType", type=String.class, parameters={})
+    @Export(name="policyType", type=String.class, parameters={})
     private Output</* @Nullable */ String> policyType;
 
     /**
@@ -151,7 +151,7 @@ public class PolicySetDefinition extends io.pulumi.resources.CustomResource {
      * The type of the resource (Microsoft.Authorization/policySetDefinitions).
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

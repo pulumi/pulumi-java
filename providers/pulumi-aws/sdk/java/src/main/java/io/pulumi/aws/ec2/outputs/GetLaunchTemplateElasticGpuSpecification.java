@@ -3,16 +3,16 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLaunchTemplateElasticGpuSpecification {
     private final String type;
 
-    @OutputCustomType.Constructor
-    private GetLaunchTemplateElasticGpuSpecification(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private GetLaunchTemplateElasticGpuSpecification(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

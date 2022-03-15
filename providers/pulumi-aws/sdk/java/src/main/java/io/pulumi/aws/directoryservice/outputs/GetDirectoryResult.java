@@ -5,7 +5,7 @@ package io.pulumi.aws.directoryservice.outputs;
 
 import io.pulumi.aws.directoryservice.outputs.GetDirectoryConnectSetting;
 import io.pulumi.aws.directoryservice.outputs.GetDirectoryVpcSetting;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDirectoryResult {
     /**
      * The access URL for the directory/connector, such as http://alias.awsapps.com.
@@ -84,24 +84,24 @@ public final class GetDirectoryResult {
     private final String type;
     private final List<GetDirectoryVpcSetting> vpcSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDirectoryResult(
-        @OutputCustomType.Parameter("accessUrl") String accessUrl,
-        @OutputCustomType.Parameter("alias") String alias,
-        @OutputCustomType.Parameter("connectSettings") List<GetDirectoryConnectSetting> connectSettings,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("directoryId") String directoryId,
-        @OutputCustomType.Parameter("dnsIpAddresses") List<String> dnsIpAddresses,
-        @OutputCustomType.Parameter("edition") String edition,
-        @OutputCustomType.Parameter("enableSso") Boolean enableSso,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("securityGroupId") String securityGroupId,
-        @OutputCustomType.Parameter("shortName") String shortName,
-        @OutputCustomType.Parameter("size") String size,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vpcSettings") List<GetDirectoryVpcSetting> vpcSettings) {
+        @CustomType.Parameter("accessUrl") String accessUrl,
+        @CustomType.Parameter("alias") String alias,
+        @CustomType.Parameter("connectSettings") List<GetDirectoryConnectSetting> connectSettings,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("directoryId") String directoryId,
+        @CustomType.Parameter("dnsIpAddresses") List<String> dnsIpAddresses,
+        @CustomType.Parameter("edition") String edition,
+        @CustomType.Parameter("enableSso") Boolean enableSso,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("securityGroupId") String securityGroupId,
+        @CustomType.Parameter("shortName") String shortName,
+        @CustomType.Parameter("size") String size,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vpcSettings") List<GetDirectoryVpcSetting> vpcSettings) {
         this.accessUrl = accessUrl;
         this.alias = alias;
         this.connectSettings = connectSettings;

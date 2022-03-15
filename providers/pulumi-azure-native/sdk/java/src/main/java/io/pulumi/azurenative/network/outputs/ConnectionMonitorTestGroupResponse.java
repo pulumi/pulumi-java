@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionMonitorTestGroupResponse {
     /**
      * List of destination endpoint names.
@@ -39,13 +39,13 @@ public final class ConnectionMonitorTestGroupResponse {
      */
     private final List<String> testConfigurations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionMonitorTestGroupResponse(
-        @OutputCustomType.Parameter("destinations") List<String> destinations,
-        @OutputCustomType.Parameter("disable") @Nullable Boolean disable,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sources") List<String> sources,
-        @OutputCustomType.Parameter("testConfigurations") List<String> testConfigurations) {
+        @CustomType.Parameter("destinations") List<String> destinations,
+        @CustomType.Parameter("disable") @Nullable Boolean disable,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sources") List<String> sources,
+        @CustomType.Parameter("testConfigurations") List<String> testConfigurations) {
         this.destinations = destinations;
         this.disable = disable;
         this.name = name;

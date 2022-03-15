@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class KubernetesRoleStorageClassInfoResponse extends io.pulumi.reso
      * Storage class name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -31,7 +31,7 @@ public final class KubernetesRoleStorageClassInfoResponse extends io.pulumi.reso
      * If provisioned storage is posix compliant.
      * 
      */
-    @InputImport(name="posixCompliant", required=true)
+    @Import(name="posixCompliant", required=true)
       private final String posixCompliant;
 
     public String getPosixCompliant() {
@@ -42,7 +42,7 @@ public final class KubernetesRoleStorageClassInfoResponse extends io.pulumi.reso
      * Storage class type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

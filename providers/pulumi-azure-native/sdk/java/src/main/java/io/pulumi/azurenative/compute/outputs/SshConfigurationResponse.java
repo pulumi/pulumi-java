@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.SshPublicKeyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SshConfigurationResponse {
     /**
      * The list of SSH public keys used to authenticate with linux based VMs.
@@ -17,8 +17,8 @@ public final class SshConfigurationResponse {
      */
     private final @Nullable List<SshPublicKeyResponse> publicKeys;
 
-    @OutputCustomType.Constructor
-    private SshConfigurationResponse(@OutputCustomType.Parameter("publicKeys") @Nullable List<SshPublicKeyResponse> publicKeys) {
+    @CustomType.Constructor
+    private SshConfigurationResponse(@CustomType.Parameter("publicKeys") @Nullable List<SshPublicKeyResponse> publicKeys) {
         this.publicKeys = publicKeys;
     }
 

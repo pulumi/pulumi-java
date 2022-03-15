@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MediaGraphAssetSinkResponse {
     /**
      * Asset name.
@@ -32,12 +32,12 @@ public final class MediaGraphAssetSinkResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MediaGraphAssetSinkResponse(
-        @OutputCustomType.Parameter("assetName") String assetName,
-        @OutputCustomType.Parameter("inputs") List<String> inputs,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("odataType") String odataType) {
+        @CustomType.Parameter("assetName") String assetName,
+        @CustomType.Parameter("inputs") List<String> inputs,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("odataType") String odataType) {
         this.assetName = assetName;
         this.inputs = inputs;
         this.name = name;

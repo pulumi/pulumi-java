@@ -6,7 +6,7 @@ package io.pulumi.aws.s3;
 import io.pulumi.aws.s3.inputs.BucketIntelligentTieringConfigurationFilterArgs;
 import io.pulumi.aws.s3.inputs.BucketIntelligentTieringConfigurationTieringArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * The name of the bucket this intelligent tiering configuration is associated with.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -32,7 +32,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * A bucket filter. The configuration only includes objects that meet the filter's criteria (documented below).
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<BucketIntelligentTieringConfigurationFilterArgs> filter;
 
     public Output<BucketIntelligentTieringConfigurationFilterArgs> getFilter() {
@@ -43,7 +43,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * The unique name used to identify the S3 Intelligent-Tiering configuration for the bucket.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * Specifies the status of the configuration. Valid values: `Enabled`, `Disabled`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -65,7 +65,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
      * The S3 Intelligent-Tiering storage class tiers of the configuration (documented below).
      * 
      */
-    @InputImport(name="tierings", required=true)
+    @Import(name="tierings", required=true)
       private final Output<List<BucketIntelligentTieringConfigurationTieringArgs>> tierings;
 
     public Output<List<BucketIntelligentTieringConfigurationTieringArgs>> getTierings() {

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.RegionalReplicationStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReplicationStatusResponse {
     /**
      * This is the aggregated replication status based on all the regional replication status flags.
@@ -22,10 +22,10 @@ public final class ReplicationStatusResponse {
      */
     private final List<RegionalReplicationStatusResponse> summary;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicationStatusResponse(
-        @OutputCustomType.Parameter("aggregatedState") String aggregatedState,
-        @OutputCustomType.Parameter("summary") List<RegionalReplicationStatusResponse> summary) {
+        @CustomType.Parameter("aggregatedState") String aggregatedState,
+        @CustomType.Parameter("summary") List<RegionalReplicationStatusResponse> summary) {
         this.aggregatedState = aggregatedState;
         this.summary = summary;
     }

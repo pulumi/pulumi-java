@@ -4,7 +4,7 @@
 package io.pulumi.gcp.eventarc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.eventarc.inputs.TriggerDestinationCloudRunServiceGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TriggerDestinationGetArgs extends io.pulumi.resources.Resourc
      * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project}/locations/{location}/functions/{function}
      * 
      */
-    @InputImport(name="cloudFunction")
+    @Import(name="cloudFunction")
       private final @Nullable Output<String> cloudFunction;
 
     public Output<String> getCloudFunction() {
@@ -30,7 +30,7 @@ public final class TriggerDestinationGetArgs extends io.pulumi.resources.Resourc
      * Cloud Run fully-managed service that receives the events. The service should be running in the same project of the trigger.
      * 
      */
-    @InputImport(name="cloudRunService")
+    @Import(name="cloudRunService")
       private final @Nullable Output<TriggerDestinationCloudRunServiceGetArgs> cloudRunService;
 
     public Output<TriggerDestinationCloudRunServiceGetArgs> getCloudRunService() {

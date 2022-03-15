@@ -6,7 +6,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 import io.pulumi.azurenative.connectedvmwarevsphere.enums.IPAddressAllocationMethod;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the nic allocation method.
      * 
      */
-    @InputImport(name="allocationMethod")
+    @Import(name="allocationMethod")
       private final @Nullable Output<Either<String,IPAddressAllocationMethod>> allocationMethod;
 
     public Output<Either<String,IPAddressAllocationMethod>> getAllocationMethod() {
@@ -36,7 +36,7 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the dns servers.
      * 
      */
-    @InputImport(name="dnsServers")
+    @Import(name="dnsServers")
       private final @Nullable Output<List<String>> dnsServers;
 
     public Output<List<String>> getDnsServers() {
@@ -47,7 +47,7 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the gateway.
      * 
      */
-    @InputImport(name="gateway")
+    @Import(name="gateway")
       private final @Nullable Output<List<String>> gateway;
 
     public Output<List<String>> getGateway() {
@@ -58,7 +58,7 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the ip address for the nic.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -69,7 +69,7 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the mask.
      * 
      */
-    @InputImport(name="subnetMask")
+    @Import(name="subnetMask")
       private final @Nullable Output<String> subnetMask;
 
     public Output<String> getSubnetMask() {

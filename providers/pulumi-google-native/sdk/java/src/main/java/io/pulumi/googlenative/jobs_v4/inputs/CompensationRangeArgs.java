@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.jobs_v4.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.jobs_v4.inputs.MoneyArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CompensationRangeArgs extends io.pulumi.resources.ResourceArg
      * The maximum amount of compensation. If left empty, the value is set to a maximal compensation value and the currency code is set to match the currency code of min_compensation.
      * 
      */
-    @InputImport(name="maxCompensation")
+    @Import(name="maxCompensation")
       private final @Nullable Output<MoneyArgs> maxCompensation;
 
     public Output<MoneyArgs> getMaxCompensation() {
@@ -33,7 +33,7 @@ public final class CompensationRangeArgs extends io.pulumi.resources.ResourceArg
      * The minimum amount of compensation. If left empty, the value is set to zero and the currency code is set to match the currency code of max_compensation.
      * 
      */
-    @InputImport(name="minCompensation")
+    @Import(name="minCompensation")
       private final @Nullable Output<MoneyArgs> minCompensation;
 
     public Output<MoneyArgs> getMinCompensation() {

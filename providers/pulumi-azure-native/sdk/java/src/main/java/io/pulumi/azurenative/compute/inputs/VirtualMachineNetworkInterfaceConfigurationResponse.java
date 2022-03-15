@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.SubResourceResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineNetworkInterfaceIPConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
      * Specify what happens to the network interface when the VM is deleted
      * 
      */
-    @InputImport(name="deleteOption")
+    @Import(name="deleteOption")
       private final @Nullable String deleteOption;
 
     public Optional<String> getDeleteOption() {
@@ -38,14 +38,14 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
      * The dns settings to be applied on the network interfaces.
      * 
      */
-    @InputImport(name="dnsSettings")
+    @Import(name="dnsSettings")
       private final @Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings;
 
     public Optional<VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse> getDnsSettings() {
         return this.dnsSettings == null ? Optional.empty() : Optional.ofNullable(this.dnsSettings);
     }
 
-    @InputImport(name="dscpConfiguration")
+    @Import(name="dscpConfiguration")
       private final @Nullable SubResourceResponse dscpConfiguration;
 
     public Optional<SubResourceResponse> getDscpConfiguration() {
@@ -56,7 +56,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
      * Specifies whether the network interface is accelerated networking-enabled.
      * 
      */
-    @InputImport(name="enableAcceleratedNetworking")
+    @Import(name="enableAcceleratedNetworking")
       private final @Nullable Boolean enableAcceleratedNetworking;
 
     public Optional<Boolean> getEnableAcceleratedNetworking() {
@@ -67,7 +67,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
      * Specifies whether the network interface is FPGA networking-enabled.
      * 
      */
-    @InputImport(name="enableFpga")
+    @Import(name="enableFpga")
       private final @Nullable Boolean enableFpga;
 
     public Optional<Boolean> getEnableFpga() {
@@ -78,7 +78,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
      * Whether IP forwarding enabled on this NIC.
      * 
      */
-    @InputImport(name="enableIPForwarding")
+    @Import(name="enableIPForwarding")
       private final @Nullable Boolean enableIPForwarding;
 
     public Optional<Boolean> getEnableIPForwarding() {
@@ -89,7 +89,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
      * Specifies the IP configurations of the network interface.
      * 
      */
-    @InputImport(name="ipConfigurations", required=true)
+    @Import(name="ipConfigurations", required=true)
       private final List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations;
 
     public List<VirtualMachineNetworkInterfaceIPConfigurationResponse> getIpConfigurations() {
@@ -100,7 +100,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
      * The network interface configuration name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -111,7 +111,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
      * The network security group.
      * 
      */
-    @InputImport(name="networkSecurityGroup")
+    @Import(name="networkSecurityGroup")
       private final @Nullable SubResourceResponse networkSecurityGroup;
 
     public Optional<SubResourceResponse> getNetworkSecurityGroup() {
@@ -122,7 +122,7 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse extends i
      * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
      * 
      */
-    @InputImport(name="primary")
+    @Import(name="primary")
       private final @Nullable Boolean primary;
 
     public Optional<Boolean> getPrimary() {

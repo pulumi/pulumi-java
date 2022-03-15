@@ -6,14 +6,14 @@ package io.pulumi.azurenative.documentdb.outputs;
 import io.pulumi.azurenative.documentdb.outputs.GraphResourceGetPropertiesResponseOptions;
 import io.pulumi.azurenative.documentdb.outputs.GraphResourceGetPropertiesResponseResource;
 import io.pulumi.azurenative.documentdb.outputs.ManagedServiceIdentityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGraphResourceGraphResult {
     /**
      * The unique resource identifier of the ARM resource.
@@ -48,16 +48,16 @@ public final class GetGraphResourceGraphResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGraphResourceGraphResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("options") @Nullable GraphResourceGetPropertiesResponseOptions options,
-        @OutputCustomType.Parameter("resource") @Nullable GraphResourceGetPropertiesResponseResource resource,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("options") @Nullable GraphResourceGetPropertiesResponseOptions options,
+        @CustomType.Parameter("resource") @Nullable GraphResourceGetPropertiesResponseResource resource,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.location = location;

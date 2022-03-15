@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.networkmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLinkAssociationResult {
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLinkAssociationResult() {
     }
 

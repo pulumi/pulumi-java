@@ -12,7 +12,7 @@ import io.pulumi.azurenative.sql.inputs.ResourceIdentityArgs;
 import io.pulumi.azurenative.sql.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Administrator username for the managed instance. Can only be specified when the managed instance is being created (and is required for creation).
      * 
      */
-    @InputImport(name="administratorLogin")
+    @Import(name="administratorLogin")
       private final @Nullable Output<String> administratorLogin;
 
     public Output<String> getAdministratorLogin() {
@@ -40,7 +40,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The administrator login password (required for managed instance creation).
      * 
      */
-    @InputImport(name="administratorLoginPassword")
+    @Import(name="administratorLoginPassword")
       private final @Nullable Output<String> administratorLoginPassword;
 
     public Output<String> getAdministratorLoginPassword() {
@@ -51,7 +51,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The Azure Active Directory administrator of the server.
      * 
      */
-    @InputImport(name="administrators")
+    @Import(name="administrators")
       private final @Nullable Output<ManagedInstanceExternalAdministratorArgs> administrators;
 
     public Output<ManagedInstanceExternalAdministratorArgs> getAdministrators() {
@@ -62,7 +62,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Collation of the managed instance.
      * 
      */
-    @InputImport(name="collation")
+    @Import(name="collation")
       private final @Nullable Output<String> collation;
 
     public Output<String> getCollation() {
@@ -73,7 +73,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The resource id of another managed instance whose DNS zone this managed instance will share after creation.
      * 
      */
-    @InputImport(name="dnsZonePartner")
+    @Import(name="dnsZonePartner")
       private final @Nullable Output<String> dnsZonePartner;
 
     public Output<String> getDnsZonePartner() {
@@ -84,7 +84,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The Azure Active Directory identity of the managed instance.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
     public Output<ResourceIdentityArgs> getIdentity() {
@@ -95,7 +95,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The Id of the instance pool this managed server belongs to.
      * 
      */
-    @InputImport(name="instancePoolId")
+    @Import(name="instancePoolId")
       private final @Nullable Output<String> instancePoolId;
 
     public Output<String> getInstancePoolId() {
@@ -106,7 +106,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * A CMK URI of the key to use for encryption.
      * 
      */
-    @InputImport(name="keyId")
+    @Import(name="keyId")
       private final @Nullable Output<String> keyId;
 
     public Output<String> getKeyId() {
@@ -117,7 +117,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The license type. Possible values are 'LicenseIncluded' (regular price inclusive of a new SQL license) and 'BasePrice' (discounted AHB price for bringing your own SQL licenses).
      * 
      */
-    @InputImport(name="licenseType")
+    @Import(name="licenseType")
       private final @Nullable Output<Either<String,ManagedInstanceLicenseType>> licenseType;
 
     public Output<Either<String,ManagedInstanceLicenseType>> getLicenseType() {
@@ -128,7 +128,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -139,7 +139,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies maintenance configuration id to apply to this managed instance.
      * 
      */
-    @InputImport(name="maintenanceConfigurationId")
+    @Import(name="maintenanceConfigurationId")
       private final @Nullable Output<String> maintenanceConfigurationId;
 
     public Output<String> getMaintenanceConfigurationId() {
@@ -154,7 +154,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Restore: Creates an instance by restoring a set of backups to specific point in time. RestorePointInTime and SourceManagedInstanceId must be specified.
      * 
      */
-    @InputImport(name="managedInstanceCreateMode")
+    @Import(name="managedInstanceCreateMode")
       private final @Nullable Output<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode;
 
     public Output<Either<String,ManagedServerCreateMode>> getManagedInstanceCreateMode() {
@@ -165,7 +165,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the managed instance.
      * 
      */
-    @InputImport(name="managedInstanceName")
+    @Import(name="managedInstanceName")
       private final @Nullable Output<String> managedInstanceName;
 
     public Output<String> getManagedInstanceName() {
@@ -176,7 +176,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Minimal TLS version. Allowed values: 'None', '1.0', '1.1', '1.2'
      * 
      */
-    @InputImport(name="minimalTlsVersion")
+    @Import(name="minimalTlsVersion")
       private final @Nullable Output<String> minimalTlsVersion;
 
     public Output<String> getMinimalTlsVersion() {
@@ -187,7 +187,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The resource id of a user assigned identity to be used by default.
      * 
      */
-    @InputImport(name="primaryUserAssignedIdentityId")
+    @Import(name="primaryUserAssignedIdentityId")
       private final @Nullable Output<String> primaryUserAssignedIdentityId;
 
     public Output<String> getPrimaryUserAssignedIdentityId() {
@@ -198,7 +198,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Connection type used for connecting to the instance.
      * 
      */
-    @InputImport(name="proxyOverride")
+    @Import(name="proxyOverride")
       private final @Nullable Output<Either<String,ManagedInstanceProxyOverride>> proxyOverride;
 
     public Output<Either<String,ManagedInstanceProxyOverride>> getProxyOverride() {
@@ -209,7 +209,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Whether or not the public data endpoint is enabled.
      * 
      */
-    @InputImport(name="publicDataEndpointEnabled")
+    @Import(name="publicDataEndpointEnabled")
       private final @Nullable Output<Boolean> publicDataEndpointEnabled;
 
     public Output<Boolean> getPublicDataEndpointEnabled() {
@@ -220,7 +220,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -231,7 +231,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies the point in time (ISO8601 format) of the source database that will be restored to create the new database.
      * 
      */
-    @InputImport(name="restorePointInTime")
+    @Import(name="restorePointInTime")
       private final @Nullable Output<String> restorePointInTime;
 
     public Output<String> getRestorePointInTime() {
@@ -242,7 +242,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Managed instance SKU. Allowed values for sku.name: GP_Gen4, GP_Gen5, BC_Gen4, BC_Gen5
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -253,7 +253,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The resource identifier of the source managed instance associated with create operation of this instance.
      * 
      */
-    @InputImport(name="sourceManagedInstanceId")
+    @Import(name="sourceManagedInstanceId")
       private final @Nullable Output<String> sourceManagedInstanceId;
 
     public Output<String> getSourceManagedInstanceId() {
@@ -264,7 +264,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The storage account type used to store backups for this instance. The options are LRS (LocallyRedundantStorage), ZRS (ZoneRedundantStorage) and GRS (GeoRedundantStorage)
      * 
      */
-    @InputImport(name="storageAccountType")
+    @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
     public Output<Either<String,StorageAccountType>> getStorageAccountType() {
@@ -275,7 +275,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Storage size in GB. Minimum value: 32. Maximum value: 8192. Increments of 32 GB allowed only.
      * 
      */
-    @InputImport(name="storageSizeInGB")
+    @Import(name="storageSizeInGB")
       private final @Nullable Output<Integer> storageSizeInGB;
 
     public Output<Integer> getStorageSizeInGB() {
@@ -286,7 +286,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Subnet resource ID for the managed instance.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -297,7 +297,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -313,7 +313,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * An example of valid timezone id is "Pacific Standard Time" or "W. Europe Standard Time".
      * 
      */
-    @InputImport(name="timezoneId")
+    @Import(name="timezoneId")
       private final @Nullable Output<String> timezoneId;
 
     public Output<String> getTimezoneId() {
@@ -324,7 +324,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The number of vCores. Allowed values: 8, 16, 24, 32, 40, 64, 80.
      * 
      */
-    @InputImport(name="vCores")
+    @Import(name="vCores")
       private final @Nullable Output<Integer> vCores;
 
     public Output<Integer> getVCores() {
@@ -335,7 +335,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * Whether or not the multi-az is enabled.
      * 
      */
-    @InputImport(name="zoneRedundant")
+    @Import(name="zoneRedundant")
       private final @Nullable Output<Boolean> zoneRedundant;
 
     public Output<Boolean> getZoneRedundant() {

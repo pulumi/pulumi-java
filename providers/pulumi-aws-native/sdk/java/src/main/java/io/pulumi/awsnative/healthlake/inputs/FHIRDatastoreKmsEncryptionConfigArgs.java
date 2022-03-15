@@ -5,7 +5,7 @@ package io.pulumi.awsnative.healthlake.inputs;
 
 import io.pulumi.awsnative.healthlake.enums.FHIRDatastoreKmsEncryptionConfigCmkType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class FHIRDatastoreKmsEncryptionConfigArgs extends io.pulumi.resour
      * The type of customer-managed-key (CMK) used for encryption. The two types of supported CMKs are customer owned CMKs and AWS owned CMKs.
      * 
      */
-    @InputImport(name="cmkType", required=true)
+    @Import(name="cmkType", required=true)
       private final Output<FHIRDatastoreKmsEncryptionConfigCmkType> cmkType;
 
     public Output<FHIRDatastoreKmsEncryptionConfigCmkType> getCmkType() {
@@ -34,7 +34,7 @@ public final class FHIRDatastoreKmsEncryptionConfigArgs extends io.pulumi.resour
      * The KMS encryption key id/alias used to encrypt the Data Store contents at rest.
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventSourceMappingEndpoints {
     /**
      * A list of Kafka server endpoints.
@@ -17,8 +17,8 @@ public final class EventSourceMappingEndpoints {
      */
     private final @Nullable List<String> kafkaBootstrapServers;
 
-    @OutputCustomType.Constructor
-    private EventSourceMappingEndpoints(@OutputCustomType.Parameter("kafkaBootstrapServers") @Nullable List<String> kafkaBootstrapServers) {
+    @CustomType.Constructor
+    private EventSourceMappingEndpoints(@CustomType.Parameter("kafkaBootstrapServers") @Nullable List<String> kafkaBootstrapServers) {
         this.kafkaBootstrapServers = kafkaBootstrapServers;
     }
 

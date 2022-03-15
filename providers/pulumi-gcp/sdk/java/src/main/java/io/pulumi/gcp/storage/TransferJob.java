@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.TransferJobArgs;
@@ -41,7 +41,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * When the Transfer Job was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -55,7 +55,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * When the Transfer Job was deleted.
      * 
      */
-    @OutputExport(name="deletionTime", type=String.class, parameters={})
+    @Export(name="deletionTime", type=String.class, parameters={})
     private Output<String> deletionTime;
 
     /**
@@ -69,7 +69,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * Unique description to identify the Transfer Job.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -83,7 +83,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * When the Transfer Job was last modified.
      * 
      */
-    @OutputExport(name="lastModificationTime", type=String.class, parameters={})
+    @Export(name="lastModificationTime", type=String.class, parameters={})
     private Output<String> lastModificationTime;
 
     /**
@@ -97,7 +97,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * The name of the Transfer Job.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -112,7 +112,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -127,7 +127,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run. Structure documented below.
      * 
      */
-    @OutputExport(name="schedule", type=TransferJobSchedule.class, parameters={})
+    @Export(name="schedule", type=TransferJobSchedule.class, parameters={})
     private Output</* @Nullable */ TransferJobSchedule> schedule;
 
     /**
@@ -141,7 +141,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
@@ -155,7 +155,7 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
      * Transfer specification. Structure documented below.
      * 
      */
-    @OutputExport(name="transferSpec", type=TransferJobTransferSpec.class, parameters={})
+    @Export(name="transferSpec", type=TransferJobTransferSpec.class, parameters={})
     private Output<TransferJobTransferSpec> transferSpec;
 
     /**

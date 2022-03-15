@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class InstanceLocationArgs extends io.pulumi.resources.ResourceArgs
      * The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -33,7 +33,7 @@ public final class InstanceLocationArgs extends io.pulumi.resources.ResourceArgs
      * The Region Name in which to create your instance.
      * 
      */
-    @InputImport(name="regionName")
+    @Import(name="regionName")
       private final @Nullable Output<String> regionName;
 
     public Output<String> getRegionName() {

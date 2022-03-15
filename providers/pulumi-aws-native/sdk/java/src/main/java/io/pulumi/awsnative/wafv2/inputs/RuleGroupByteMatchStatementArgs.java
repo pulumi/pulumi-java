@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.RuleGroupPositionalConstraint;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupTextTransformationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,35 +22,35 @@ public final class RuleGroupByteMatchStatementArgs extends io.pulumi.resources.R
 
     public static final RuleGroupByteMatchStatementArgs Empty = new RuleGroupByteMatchStatementArgs();
 
-    @InputImport(name="fieldToMatch", required=true)
+    @Import(name="fieldToMatch", required=true)
       private final Output<RuleGroupFieldToMatchArgs> fieldToMatch;
 
     public Output<RuleGroupFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
-    @InputImport(name="positionalConstraint", required=true)
+    @Import(name="positionalConstraint", required=true)
       private final Output<RuleGroupPositionalConstraint> positionalConstraint;
 
     public Output<RuleGroupPositionalConstraint> getPositionalConstraint() {
         return this.positionalConstraint;
     }
 
-    @InputImport(name="searchString")
+    @Import(name="searchString")
       private final @Nullable Output<String> searchString;
 
     public Output<String> getSearchString() {
         return this.searchString == null ? Output.empty() : this.searchString;
     }
 
-    @InputImport(name="searchStringBase64")
+    @Import(name="searchStringBase64")
       private final @Nullable Output<String> searchStringBase64;
 
     public Output<String> getSearchStringBase64() {
         return this.searchStringBase64 == null ? Output.empty() : this.searchStringBase64;
     }
 
-    @InputImport(name="textTransformations", required=true)
+    @Import(name="textTransformations", required=true)
       private final Output<List<RuleGroupTextTransformationArgs>> textTransformations;
 
     public Output<List<RuleGroupTextTransformationArgs>> getTextTransformations() {

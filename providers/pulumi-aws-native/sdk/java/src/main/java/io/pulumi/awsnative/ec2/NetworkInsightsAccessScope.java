@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ec2.NetworkInsightsAccessScopeArgs;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAccessScopeAccessScopePathRequest;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAccessScopeTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -20,43 +20,43 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:ec2:NetworkInsightsAccessScope")
 public class NetworkInsightsAccessScope extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     public Output<String> getCreatedDate() {
         return this.createdDate;
     }
-    @OutputExport(name="excludePaths", type=List.class, parameters={NetworkInsightsAccessScopeAccessScopePathRequest.class})
+    @Export(name="excludePaths", type=List.class, parameters={NetworkInsightsAccessScopeAccessScopePathRequest.class})
     private Output</* @Nullable */ List<NetworkInsightsAccessScopeAccessScopePathRequest>> excludePaths;
 
     public Output</* @Nullable */ List<NetworkInsightsAccessScopeAccessScopePathRequest>> getExcludePaths() {
         return this.excludePaths;
     }
-    @OutputExport(name="matchPaths", type=List.class, parameters={NetworkInsightsAccessScopeAccessScopePathRequest.class})
+    @Export(name="matchPaths", type=List.class, parameters={NetworkInsightsAccessScopeAccessScopePathRequest.class})
     private Output</* @Nullable */ List<NetworkInsightsAccessScopeAccessScopePathRequest>> matchPaths;
 
     public Output</* @Nullable */ List<NetworkInsightsAccessScopeAccessScopePathRequest>> getMatchPaths() {
         return this.matchPaths;
     }
-    @OutputExport(name="networkInsightsAccessScopeArn", type=String.class, parameters={})
+    @Export(name="networkInsightsAccessScopeArn", type=String.class, parameters={})
     private Output<String> networkInsightsAccessScopeArn;
 
     public Output<String> getNetworkInsightsAccessScopeArn() {
         return this.networkInsightsAccessScopeArn;
     }
-    @OutputExport(name="networkInsightsAccessScopeId", type=String.class, parameters={})
+    @Export(name="networkInsightsAccessScopeId", type=String.class, parameters={})
     private Output<String> networkInsightsAccessScopeId;
 
     public Output<String> getNetworkInsightsAccessScopeId() {
         return this.networkInsightsAccessScopeId;
     }
-    @OutputExport(name="tags", type=List.class, parameters={NetworkInsightsAccessScopeTag.class})
+    @Export(name="tags", type=List.class, parameters={NetworkInsightsAccessScopeTag.class})
     private Output</* @Nullable */ List<NetworkInsightsAccessScopeTag>> tags;
 
     public Output</* @Nullable */ List<NetworkInsightsAccessScopeTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="updatedDate", type=String.class, parameters={})
+    @Export(name="updatedDate", type=String.class, parameters={})
     private Output<String> updatedDate;
 
     public Output<String> getUpdatedDate() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse {
     /**
      * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.
@@ -26,11 +26,11 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
      */
     private final String writeDisposition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse(
-        @OutputCustomType.Parameter("force") Boolean force,
-        @OutputCustomType.Parameter("tableUri") String tableUri,
-        @OutputCustomType.Parameter("writeDisposition") String writeDisposition) {
+        @CustomType.Parameter("force") Boolean force,
+        @CustomType.Parameter("tableUri") String tableUri,
+        @CustomType.Parameter("writeDisposition") String writeDisposition) {
         this.force = force;
         this.tableUri = tableUri;
         this.writeDisposition = writeDisposition;

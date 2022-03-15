@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ivs.inputs.RecordingConfigurationDestinationConfigura
 import io.pulumi.awsnative.ivs.inputs.RecordingConfigurationTagArgs;
 import io.pulumi.awsnative.ivs.inputs.RecordingConfigurationThumbnailConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
 
     public static final RecordingConfigurationArgs Empty = new RecordingConfigurationArgs();
 
-    @InputImport(name="destinationConfiguration", required=true)
+    @Import(name="destinationConfiguration", required=true)
       private final Output<RecordingConfigurationDestinationConfigurationArgs> destinationConfiguration;
 
     public Output<RecordingConfigurationDestinationConfigurationArgs> getDestinationConfiguration() {
@@ -29,7 +29,7 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
      * Recording Configuration Name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -40,14 +40,14 @@ public final class RecordingConfigurationArgs extends io.pulumi.resources.Resour
      * A list of key-value pairs that contain metadata for the asset model.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<RecordingConfigurationTagArgs>> tags;
 
     public Output<List<RecordingConfigurationTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="thumbnailConfiguration")
+    @Import(name="thumbnailConfiguration")
       private final @Nullable Output<RecordingConfigurationThumbnailConfigurationArgs> thumbnailConfiguration;
 
     public Output<RecordingConfigurationThumbnailConfigurationArgs> getThumbnailConfiguration() {

@@ -6,13 +6,13 @@ package io.pulumi.awsnative.iotsitewise.outputs;
 import io.pulumi.awsnative.iotsitewise.enums.AssetModelDataType;
 import io.pulumi.awsnative.iotsitewise.enums.AssetModelDataTypeSpec;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelPropertyType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssetModelProperty {
     /**
      * The data type of the asset model property.
@@ -45,14 +45,14 @@ public final class AssetModelProperty {
      */
     private final @Nullable String unit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssetModelProperty(
-        @OutputCustomType.Parameter("dataType") AssetModelDataType dataType,
-        @OutputCustomType.Parameter("dataTypeSpec") @Nullable AssetModelDataTypeSpec dataTypeSpec,
-        @OutputCustomType.Parameter("logicalId") String logicalId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") AssetModelPropertyType type,
-        @OutputCustomType.Parameter("unit") @Nullable String unit) {
+        @CustomType.Parameter("dataType") AssetModelDataType dataType,
+        @CustomType.Parameter("dataTypeSpec") @Nullable AssetModelDataTypeSpec dataTypeSpec,
+        @CustomType.Parameter("logicalId") String logicalId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") AssetModelPropertyType type,
+        @CustomType.Parameter("unit") @Nullable String unit) {
         this.dataType = dataType;
         this.dataTypeSpec = dataTypeSpec;
         this.logicalId = logicalId;

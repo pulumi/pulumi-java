@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.BackendBucketArgs;
@@ -55,7 +55,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * Cloud Storage bucket name.
      * 
      */
-    @OutputExport(name="bucketName", type=String.class, parameters={})
+    @Export(name="bucketName", type=String.class, parameters={})
     private Output<String> bucketName;
 
     /**
@@ -70,7 +70,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="cdnPolicy", type=BackendBucketCdnPolicy.class, parameters={})
+    @Export(name="cdnPolicy", type=BackendBucketCdnPolicy.class, parameters={})
     private Output<BackendBucketCdnPolicy> cdnPolicy;
 
     /**
@@ -85,7 +85,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -99,7 +99,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * Headers that the HTTP/S load balancer should add to proxied responses.
      * 
      */
-    @OutputExport(name="customResponseHeaders", type=List.class, parameters={String.class})
+    @Export(name="customResponseHeaders", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customResponseHeaders;
 
     /**
@@ -114,7 +114,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * client when the resource is created.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -129,7 +129,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * If true, enable Cloud CDN for this BackendBucket.
      * 
      */
-    @OutputExport(name="enableCdn", type=Boolean.class, parameters={})
+    @Export(name="enableCdn", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableCdn;
 
     /**
@@ -149,7 +149,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -170,7 +170,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -185,7 +185,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**

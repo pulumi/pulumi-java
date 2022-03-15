@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.ParameterMetadataResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TemplateMetadataResponse {
     /**
      * Optional. A description of the template.
@@ -27,11 +27,11 @@ public final class TemplateMetadataResponse {
      */
     private final List<ParameterMetadataResponse> parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TemplateMetadataResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parameters") List<ParameterMetadataResponse> parameters) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parameters") List<ParameterMetadataResponse> parameters) {
         this.description = description;
         this.name = name;
         this.parameters = parameters;

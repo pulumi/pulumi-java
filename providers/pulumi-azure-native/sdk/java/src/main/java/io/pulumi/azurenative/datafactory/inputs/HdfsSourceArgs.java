@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.DistcpSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
     public Output<Object> getDisableMetricsCollection() {
@@ -35,7 +35,7 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies Distcp-related settings.
      * 
      */
-    @InputImport(name="distcpSettings")
+    @Import(name="distcpSettings")
       private final @Nullable Output<DistcpSettingsArgs> distcpSettings;
 
     public Output<DistcpSettingsArgs> getDistcpSettings() {
@@ -46,7 +46,7 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
     public Output<Object> getMaxConcurrentConnections() {
@@ -57,7 +57,7 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * If true, files under the folder path will be read recursively. Default is true. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="recursive")
+    @Import(name="recursive")
       private final @Nullable Output<Object> recursive;
 
     public Output<Object> getRecursive() {
@@ -68,7 +68,7 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="sourceRetryCount")
+    @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
 
     public Output<Object> getSourceRetryCount() {
@@ -79,7 +79,7 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="sourceRetryWait")
+    @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
 
     public Output<Object> getSourceRetryWait() {
@@ -91,7 +91,7 @@ public final class HdfsSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'HdfsSource'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

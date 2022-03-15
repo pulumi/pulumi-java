@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TransferJobTransferSpecGcsDataSink {
     /**
      * S3 Bucket name.
@@ -22,10 +22,10 @@ public final class TransferJobTransferSpecGcsDataSink {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TransferJobTransferSpecGcsDataSink(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("path") @Nullable String path) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("path") @Nullable String path) {
         this.bucketName = bucketName;
         this.path = path;
     }

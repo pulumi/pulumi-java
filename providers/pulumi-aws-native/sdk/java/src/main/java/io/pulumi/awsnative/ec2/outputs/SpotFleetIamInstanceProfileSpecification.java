@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SpotFleetIamInstanceProfileSpecification {
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor
-    private SpotFleetIamInstanceProfileSpecification(@OutputCustomType.Parameter("arn") @Nullable String arn) {
+    @CustomType.Constructor
+    private SpotFleetIamInstanceProfileSpecification(@CustomType.Parameter("arn") @Nullable String arn) {
         this.arn = arn;
     }
 

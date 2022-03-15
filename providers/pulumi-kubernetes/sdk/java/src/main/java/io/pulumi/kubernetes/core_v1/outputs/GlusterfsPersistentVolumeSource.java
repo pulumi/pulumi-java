@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GlusterfsPersistentVolumeSource {
     /**
      * EndpointsName is the endpoint name that details Glusterfs topology. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod
@@ -33,12 +33,12 @@ public final class GlusterfsPersistentVolumeSource {
      */
     private final @Nullable Boolean readOnly;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GlusterfsPersistentVolumeSource(
-        @OutputCustomType.Parameter("endpoints") String endpoints,
-        @OutputCustomType.Parameter("endpointsNamespace") @Nullable String endpointsNamespace,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
+        @CustomType.Parameter("endpoints") String endpoints,
+        @CustomType.Parameter("endpointsNamespace") @Nullable String endpointsNamespace,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
         this.endpoints = endpoints;
         this.endpointsNamespace = endpointsNamespace;
         this.path = path;

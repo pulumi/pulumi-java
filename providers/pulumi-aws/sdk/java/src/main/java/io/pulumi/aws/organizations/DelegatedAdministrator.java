@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.organizations.DelegatedAdministratorArgs;
 import io.pulumi.aws.organizations.inputs.DelegatedAdministratorState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
      * The account ID number of the member account in the organization to register as a delegated administrator.
      * 
      */
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
@@ -46,7 +46,7 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the delegated administrator's account.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -60,7 +60,7 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
      * The date when the account was made a delegated administrator.
      * 
      */
-    @OutputExport(name="delegationEnabledDate", type=String.class, parameters={})
+    @Export(name="delegationEnabledDate", type=String.class, parameters={})
     private Output<String> delegationEnabledDate;
 
     /**
@@ -74,7 +74,7 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
      * The email address that is associated with the delegated administrator's AWS account.
      * 
      */
-    @OutputExport(name="email", type=String.class, parameters={})
+    @Export(name="email", type=String.class, parameters={})
     private Output<String> email;
 
     /**
@@ -88,7 +88,7 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
      * The method by which the delegated administrator's account joined the organization.
      * 
      */
-    @OutputExport(name="joinedMethod", type=String.class, parameters={})
+    @Export(name="joinedMethod", type=String.class, parameters={})
     private Output<String> joinedMethod;
 
     /**
@@ -102,7 +102,7 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
      * The date when the delegated administrator's account became a part of the organization.
      * 
      */
-    @OutputExport(name="joinedTimestamp", type=String.class, parameters={})
+    @Export(name="joinedTimestamp", type=String.class, parameters={})
     private Output<String> joinedTimestamp;
 
     /**
@@ -116,7 +116,7 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
      * The friendly name of the delegated administrator's account.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -130,7 +130,7 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
      * The service principal of the AWS service for which you want to make the member account a delegated administrator.
      * 
      */
-    @OutputExport(name="servicePrincipal", type=String.class, parameters={})
+    @Export(name="servicePrincipal", type=String.class, parameters={})
     private Output<String> servicePrincipal;
 
     /**
@@ -144,7 +144,7 @@ public class DelegatedAdministrator extends io.pulumi.resources.CustomResource {
      * The status of the delegated administrator's account in the organization.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**

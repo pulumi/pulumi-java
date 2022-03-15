@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.AccountAuditConfigurationAuditNotificationTarget;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccountAuditConfigurationAuditNotificationTargetConfigurations {
     private final @Nullable AccountAuditConfigurationAuditNotificationTarget sns;
 
-    @OutputCustomType.Constructor
-    private AccountAuditConfigurationAuditNotificationTargetConfigurations(@OutputCustomType.Parameter("sns") @Nullable AccountAuditConfigurationAuditNotificationTarget sns) {
+    @CustomType.Constructor
+    private AccountAuditConfigurationAuditNotificationTargetConfigurations(@CustomType.Parameter("sns") @Nullable AccountAuditConfigurationAuditNotificationTarget sns) {
         this.sns = sns;
     }
 

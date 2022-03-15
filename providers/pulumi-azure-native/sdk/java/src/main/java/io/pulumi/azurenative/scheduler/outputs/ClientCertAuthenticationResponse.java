@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.scheduler.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClientCertAuthenticationResponse {
     /**
      * Gets or sets the certificate expiration date.
@@ -43,14 +43,14 @@ public final class ClientCertAuthenticationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClientCertAuthenticationResponse(
-        @OutputCustomType.Parameter("certificateExpirationDate") @Nullable String certificateExpirationDate,
-        @OutputCustomType.Parameter("certificateSubjectName") @Nullable String certificateSubjectName,
-        @OutputCustomType.Parameter("certificateThumbprint") @Nullable String certificateThumbprint,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("pfx") @Nullable String pfx,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("certificateExpirationDate") @Nullable String certificateExpirationDate,
+        @CustomType.Parameter("certificateSubjectName") @Nullable String certificateSubjectName,
+        @CustomType.Parameter("certificateThumbprint") @Nullable String certificateThumbprint,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("pfx") @Nullable String pfx,
+        @CustomType.Parameter("type") String type) {
         this.certificateExpirationDate = certificateExpirationDate;
         this.certificateSubjectName = certificateSubjectName;
         this.certificateThumbprint = certificateThumbprint;

@@ -5,7 +5,7 @@ package io.pulumi.aws.ecrpublic.inputs;
 
 import io.pulumi.aws.ecrpublic.inputs.RepositoryCatalogDataGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * Full ARN of the repository.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,14 +31,14 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * Catalog data configuration for the repository. See below for schema.
      * 
      */
-    @InputImport(name="catalogData")
+    @Import(name="catalogData")
       private final @Nullable Output<RepositoryCatalogDataGetArgs> catalogData;
 
     public Output<RepositoryCatalogDataGetArgs> getCatalogData() {
         return this.catalogData == null ? Output.empty() : this.catalogData;
     }
 
-    @InputImport(name="forceDestroy")
+    @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
     public Output<Boolean> getForceDestroy() {
@@ -49,7 +49,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The registry ID where the repository was created.
      * 
      */
-    @InputImport(name="registryId")
+    @Import(name="registryId")
       private final @Nullable Output<String> registryId;
 
     public Output<String> getRegistryId() {
@@ -60,7 +60,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * Name of the repository.
      * 
      */
-    @InputImport(name="repositoryName")
+    @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
     public Output<String> getRepositoryName() {
@@ -71,7 +71,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The URI of the repository.
      * 
      */
-    @InputImport(name="repositoryUri")
+    @Import(name="repositoryUri")
       private final @Nullable Output<String> repositoryUri;
 
     public Output<String> getRepositoryUri() {

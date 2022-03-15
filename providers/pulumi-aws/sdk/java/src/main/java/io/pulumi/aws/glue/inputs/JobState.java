@@ -7,7 +7,7 @@ import io.pulumi.aws.glue.inputs.JobCommandGetArgs;
 import io.pulumi.aws.glue.inputs.JobExecutionPropertyGetArgs;
 import io.pulumi.aws.glue.inputs.JobNotificationPropertyGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of Glue Job
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -36,7 +36,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The command of the job. Defined below.
      * 
      */
-    @InputImport(name="command")
+    @Import(name="command")
       private final @Nullable Output<JobCommandGetArgs> command;
 
     public Output<JobCommandGetArgs> getCommand() {
@@ -47,7 +47,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The list of connections used for this job.
      * 
      */
-    @InputImport(name="connections")
+    @Import(name="connections")
       private final @Nullable Output<List<String>> connections;
 
     public Output<List<String>> getConnections() {
@@ -58,7 +58,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the [Calling AWS Glue APIs in Python](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the [Special Parameters Used by AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html) topic in the developer guide.
      * 
      */
-    @InputImport(name="defaultArguments")
+    @Import(name="defaultArguments")
       private final @Nullable Output<Map<String,String>> defaultArguments;
 
     public Output<Map<String,String>> getDefaultArguments() {
@@ -69,7 +69,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * Description of the job.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -80,7 +80,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * Execution property of the job. Defined below.
      * 
      */
-    @InputImport(name="executionProperty")
+    @Import(name="executionProperty")
       private final @Nullable Output<JobExecutionPropertyGetArgs> executionProperty;
 
     public Output<JobExecutionPropertyGetArgs> getExecutionProperty() {
@@ -91,7 +91,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
      * 
      */
-    @InputImport(name="glueVersion")
+    @Import(name="glueVersion")
       private final @Nullable Output<String> glueVersion;
 
     public Output<String> getGlueVersion() {
@@ -102,7 +102,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`. Use `number_of_workers` and `worker_type` arguments instead with `glue_version` `2.0` and above.
      * 
      */
-    @InputImport(name="maxCapacity")
+    @Import(name="maxCapacity")
       private final @Nullable Output<Double> maxCapacity;
 
     public Output<Double> getMaxCapacity() {
@@ -113,7 +113,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The maximum number of times to retry this job if it fails.
      * 
      */
-    @InputImport(name="maxRetries")
+    @Import(name="maxRetries")
       private final @Nullable Output<Integer> maxRetries;
 
     public Output<Integer> getMaxRetries() {
@@ -124,7 +124,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The name you assign to this job. It must be unique in your account.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -135,7 +135,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * Non-overridable arguments for this job, specified as name-value pairs.
      * 
      */
-    @InputImport(name="nonOverridableArguments")
+    @Import(name="nonOverridableArguments")
       private final @Nullable Output<Map<String,String>> nonOverridableArguments;
 
     public Output<Map<String,String>> getNonOverridableArguments() {
@@ -146,7 +146,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * Notification property of the job. Defined below.
      * 
      */
-    @InputImport(name="notificationProperty")
+    @Import(name="notificationProperty")
       private final @Nullable Output<JobNotificationPropertyGetArgs> notificationProperty;
 
     public Output<JobNotificationPropertyGetArgs> getNotificationProperty() {
@@ -157,7 +157,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The number of workers of a defined workerType that are allocated when a job runs.
      * 
      */
-    @InputImport(name="numberOfWorkers")
+    @Import(name="numberOfWorkers")
       private final @Nullable Output<Integer> numberOfWorkers;
 
     public Output<Integer> getNumberOfWorkers() {
@@ -168,7 +168,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the IAM role associated with this job.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -179,7 +179,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The name of the Security Configuration to be associated with the job.
      * 
      */
-    @InputImport(name="securityConfiguration")
+    @Import(name="securityConfiguration")
       private final @Nullable Output<String> securityConfiguration;
 
     public Output<String> getSecurityConfiguration() {
@@ -190,7 +190,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -201,7 +201,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -212,7 +212,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The job timeout in minutes. The default is 2880 minutes (48 hours).
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<Integer> timeout;
 
     public Output<Integer> getTimeout() {
@@ -223,7 +223,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.
      * 
      */
-    @InputImport(name="workerType")
+    @Import(name="workerType")
       private final @Nullable Output<String> workerType;
 
     public Output<String> getWorkerType() {

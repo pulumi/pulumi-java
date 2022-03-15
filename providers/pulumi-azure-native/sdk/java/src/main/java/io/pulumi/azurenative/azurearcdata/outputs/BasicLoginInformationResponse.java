@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.azurearcdata.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BasicLoginInformationResponse {
     /**
      * Login username.
@@ -17,8 +17,8 @@ public final class BasicLoginInformationResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
-    private BasicLoginInformationResponse(@OutputCustomType.Parameter("username") @Nullable String username) {
+    @CustomType.Constructor
+    private BasicLoginInformationResponse(@CustomType.Parameter("username") @Nullable String username) {
         this.username = username;
     }
 

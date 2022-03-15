@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HealthAlertActionResponse {
     /**
      * the id of the action group to use.
@@ -23,10 +23,10 @@ public final class HealthAlertActionResponse {
      */
     private final @Nullable Map<String,String> webHookProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HealthAlertActionResponse(
-        @OutputCustomType.Parameter("actionGroupId") @Nullable String actionGroupId,
-        @OutputCustomType.Parameter("webHookProperties") @Nullable Map<String,String> webHookProperties) {
+        @CustomType.Parameter("actionGroupId") @Nullable String actionGroupId,
+        @CustomType.Parameter("webHookProperties") @Nullable Map<String,String> webHookProperties) {
         this.actionGroupId = actionGroupId;
         this.webHookProperties = webHookProperties;
     }

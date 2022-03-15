@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class EnvironmentConfigWebServerNetworkAccessControlArgs extends io
 
     public static final EnvironmentConfigWebServerNetworkAccessControlArgs Empty = new EnvironmentConfigWebServerNetworkAccessControlArgs();
 
-    @InputImport(name="allowedIpRanges")
+    @Import(name="allowedIpRanges")
       private final @Nullable Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs>> allowedIpRanges;
 
     public Output<List<EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs>> getAllowedIpRanges() {

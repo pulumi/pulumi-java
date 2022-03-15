@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.SubnetSharedPublicIpAddressConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubnetOverrideResponse {
     /**
      * The name given to the subnet within the lab.
@@ -43,14 +43,14 @@ public final class SubnetOverrideResponse {
      */
     private final @Nullable String virtualNetworkPoolName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubnetOverrideResponse(
-        @OutputCustomType.Parameter("labSubnetName") @Nullable String labSubnetName,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
-        @OutputCustomType.Parameter("sharedPublicIpAddressConfiguration") @Nullable SubnetSharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration,
-        @OutputCustomType.Parameter("useInVmCreationPermission") @Nullable String useInVmCreationPermission,
-        @OutputCustomType.Parameter("usePublicIpAddressPermission") @Nullable String usePublicIpAddressPermission,
-        @OutputCustomType.Parameter("virtualNetworkPoolName") @Nullable String virtualNetworkPoolName) {
+        @CustomType.Parameter("labSubnetName") @Nullable String labSubnetName,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId,
+        @CustomType.Parameter("sharedPublicIpAddressConfiguration") @Nullable SubnetSharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration,
+        @CustomType.Parameter("useInVmCreationPermission") @Nullable String useInVmCreationPermission,
+        @CustomType.Parameter("usePublicIpAddressPermission") @Nullable String usePublicIpAddressPermission,
+        @CustomType.Parameter("virtualNetworkPoolName") @Nullable String virtualNetworkPoolName) {
         this.labSubnetName = labSubnetName;
         this.resourceId = resourceId;
         this.sharedPublicIpAddressConfiguration = sharedPublicIpAddressConfiguration;

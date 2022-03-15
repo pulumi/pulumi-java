@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class ServiceTaskSpecPlacementPlatformArgs extends io.pulumi.resour
 
     public static final ServiceTaskSpecPlacementPlatformArgs Empty = new ServiceTaskSpecPlacementPlatformArgs();
 
-    @InputImport(name="architecture", required=true)
+    @Import(name="architecture", required=true)
       private final Output<String> architecture;
 
     public Output<String> getArchitecture() {
         return this.architecture;
     }
 
-    @InputImport(name="os", required=true)
+    @Import(name="os", required=true)
       private final Output<String> os;
 
     public Output<String> getOs() {

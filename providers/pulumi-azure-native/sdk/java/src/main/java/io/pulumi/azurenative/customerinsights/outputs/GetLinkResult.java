@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.ParticipantPropertyReferenceResponse;
 import io.pulumi.azurenative.customerinsights.outputs.TypePropertiesMappingResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLinkResult {
     /**
      * Localized descriptions for the Link.
@@ -97,24 +97,24 @@ public final class GetLinkResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLinkResult(
-        @OutputCustomType.Parameter("description") @Nullable Map<String,String> description,
-        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("linkName") String linkName,
-        @OutputCustomType.Parameter("mappings") @Nullable List<TypePropertiesMappingResponse> mappings,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operationType") @Nullable String operationType,
-        @OutputCustomType.Parameter("participantPropertyReferences") List<ParticipantPropertyReferenceResponse> participantPropertyReferences,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("referenceOnly") @Nullable Boolean referenceOnly,
-        @OutputCustomType.Parameter("sourceEntityType") String sourceEntityType,
-        @OutputCustomType.Parameter("sourceEntityTypeName") String sourceEntityTypeName,
-        @OutputCustomType.Parameter("targetEntityType") String targetEntityType,
-        @OutputCustomType.Parameter("targetEntityTypeName") String targetEntityTypeName,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable Map<String,String> description,
+        @CustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("linkName") String linkName,
+        @CustomType.Parameter("mappings") @Nullable List<TypePropertiesMappingResponse> mappings,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operationType") @Nullable String operationType,
+        @CustomType.Parameter("participantPropertyReferences") List<ParticipantPropertyReferenceResponse> participantPropertyReferences,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("referenceOnly") @Nullable Boolean referenceOnly,
+        @CustomType.Parameter("sourceEntityType") String sourceEntityType,
+        @CustomType.Parameter("sourceEntityTypeName") String sourceEntityTypeName,
+        @CustomType.Parameter("targetEntityType") String targetEntityType,
+        @CustomType.Parameter("targetEntityTypeName") String targetEntityTypeName,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.displayName = displayName;
         this.id = id;

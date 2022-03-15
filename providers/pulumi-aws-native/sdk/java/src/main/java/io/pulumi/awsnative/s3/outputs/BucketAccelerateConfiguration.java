@@ -4,10 +4,10 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketAccelerateConfigurationAccelerationStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketAccelerateConfiguration {
     /**
      * Configures the transfer acceleration state for an Amazon S3 bucket.
@@ -15,8 +15,8 @@ public final class BucketAccelerateConfiguration {
      */
     private final BucketAccelerateConfigurationAccelerationStatus accelerationStatus;
 
-    @OutputCustomType.Constructor
-    private BucketAccelerateConfiguration(@OutputCustomType.Parameter("accelerationStatus") BucketAccelerateConfigurationAccelerationStatus accelerationStatus) {
+    @CustomType.Constructor
+    private BucketAccelerateConfiguration(@CustomType.Parameter("accelerationStatus") BucketAccelerateConfigurationAccelerationStatus accelerationStatus) {
         this.accelerationStatus = accelerationStatus;
     }
 

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.LocalObjectReferenceResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConfigMapKeySelectorResponse {
     /**
      * The key to select.
@@ -32,12 +32,12 @@ public final class ConfigMapKeySelectorResponse {
      */
     private final Boolean optional;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigMapKeySelectorResponse(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("localObjectReference") LocalObjectReferenceResponse localObjectReference,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("optional") Boolean optional) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("localObjectReference") LocalObjectReferenceResponse localObjectReference,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("optional") Boolean optional) {
         this.key = key;
         this.localObjectReference = localObjectReference;
         this.name = name;

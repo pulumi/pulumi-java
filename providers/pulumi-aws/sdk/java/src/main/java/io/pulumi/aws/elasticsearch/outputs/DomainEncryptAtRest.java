@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.elasticsearch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainEncryptAtRest {
     /**
      * Whether to enable node-to-node encryption. If the `node_to_node_encryption` block is not provided then this defaults to `false`.
@@ -23,10 +23,10 @@ public final class DomainEncryptAtRest {
      */
     private final @Nullable String kmsKeyId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainEncryptAtRest(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
         this.enabled = enabled;
         this.kmsKeyId = kmsKeyId;
     }

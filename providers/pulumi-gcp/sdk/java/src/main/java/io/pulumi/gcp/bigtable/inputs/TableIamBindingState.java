@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigtable.inputs.TableIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
 
     public static final TableIamBindingState Empty = new TableIamBindingState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<TableIamBindingConditionGetArgs> condition;
 
     public Output<TableIamBindingConditionGetArgs> getCondition() {
@@ -27,7 +27,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
      * (Computed) The etag of the tables's IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -38,14 +38,14 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
      * The name or relative resource id of the instance that owns the table.
      * 
      */
-    @InputImport(name="instance")
+    @Import(name="instance")
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
         return this.instance == null ? Output.empty() : this.instance;
     }
 
-    @InputImport(name="members")
+    @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -57,7 +57,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
      * is not provided, this provider will use the provider default.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -70,7 +70,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
      * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
@@ -81,7 +81,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
      * The name or relative resource id of the table to manage IAM policies for.
      * 
      */
-    @InputImport(name="table")
+    @Import(name="table")
       private final @Nullable Output<String> table;
 
     public Output<String> getTable() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.chaos.inputs;
 import io.pulumi.azurenative.chaos.inputs.ContinuousActionResponse;
 import io.pulumi.azurenative.chaos.inputs.DelayActionResponse;
 import io.pulumi.azurenative.chaos.inputs.DiscreteActionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class BranchResponse extends io.pulumi.resources.InvokeArgs {
      * List of actions.
      * 
      */
-    @InputImport(name="actions", required=true)
+    @Import(name="actions", required=true)
       private final List<Object> actions;
 
     public List<Object> getActions() {
@@ -36,7 +36,7 @@ public final class BranchResponse extends io.pulumi.resources.InvokeArgs {
      * String of the branch name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

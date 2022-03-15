@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.datadog.outputs;
 
 import io.pulumi.azurenative.datadog.outputs.LinkedResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListMonitorLinkedResourcesResult {
     /**
      * Link to the next set of results, if any.
@@ -24,10 +24,10 @@ public final class ListMonitorLinkedResourcesResult {
      */
     private final @Nullable List<LinkedResourceResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListMonitorLinkedResourcesResult(
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
-        @OutputCustomType.Parameter("value") @Nullable List<LinkedResourceResponse> value) {
+        @CustomType.Parameter("nextLink") @Nullable String nextLink,
+        @CustomType.Parameter("value") @Nullable List<LinkedResourceResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cloudhsmv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClusterCertificate {
     private final @Nullable String awsHardwareCertificate;
     private final @Nullable String clusterCertificate;
@@ -17,13 +17,13 @@ public final class ClusterClusterCertificate {
     private final @Nullable String hsmCertificate;
     private final @Nullable String manufacturerHardwareCertificate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterClusterCertificate(
-        @OutputCustomType.Parameter("awsHardwareCertificate") @Nullable String awsHardwareCertificate,
-        @OutputCustomType.Parameter("clusterCertificate") @Nullable String clusterCertificate,
-        @OutputCustomType.Parameter("clusterCsr") @Nullable String clusterCsr,
-        @OutputCustomType.Parameter("hsmCertificate") @Nullable String hsmCertificate,
-        @OutputCustomType.Parameter("manufacturerHardwareCertificate") @Nullable String manufacturerHardwareCertificate) {
+        @CustomType.Parameter("awsHardwareCertificate") @Nullable String awsHardwareCertificate,
+        @CustomType.Parameter("clusterCertificate") @Nullable String clusterCertificate,
+        @CustomType.Parameter("clusterCsr") @Nullable String clusterCsr,
+        @CustomType.Parameter("hsmCertificate") @Nullable String hsmCertificate,
+        @CustomType.Parameter("manufacturerHardwareCertificate") @Nullable String manufacturerHardwareCertificate) {
         this.awsHardwareCertificate = awsHardwareCertificate;
         this.clusterCertificate = clusterCertificate;
         this.clusterCsr = clusterCsr;

@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.AmiEbsBlockDeviceArgs;
 import io.pulumi.aws.ec2.inputs.AmiEphemeralBlockDeviceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * Machine architecture for created instances. Defaults to "x86_64".
      * 
      */
-    @InputImport(name="architecture")
+    @Import(name="architecture")
       private final @Nullable Output<String> architecture;
 
     public Output<String> getArchitecture() {
@@ -34,7 +34,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * A longer, human-readable description for the AMI.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * attached to created instances. The structure of this block is described below.
      * 
      */
-    @InputImport(name="ebsBlockDevices")
+    @Import(name="ebsBlockDevices")
       private final @Nullable Output<List<AmiEbsBlockDeviceArgs>> ebsBlockDevices;
 
     public Output<List<AmiEbsBlockDeviceArgs>> getEbsBlockDevices() {
@@ -57,7 +57,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
      * 
      */
-    @InputImport(name="enaSupport")
+    @Import(name="enaSupport")
       private final @Nullable Output<Boolean> enaSupport;
 
     public Output<Boolean> getEnaSupport() {
@@ -69,7 +69,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * should be attached to created instances. The structure of this block is described below.
      * 
      */
-    @InputImport(name="ephemeralBlockDevices")
+    @Import(name="ephemeralBlockDevices")
       private final @Nullable Output<List<AmiEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
     public Output<List<AmiEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
@@ -81,7 +81,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * by the `ec2-upload-bundle` command in the EC2 command line tools.
      * 
      */
-    @InputImport(name="imageLocation")
+    @Import(name="imageLocation")
       private final @Nullable Output<String> imageLocation;
 
     public Output<String> getImageLocation() {
@@ -93,7 +93,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * kernel in created instances.
      * 
      */
-    @InputImport(name="kernelId")
+    @Import(name="kernelId")
       private final @Nullable Output<String> kernelId;
 
     public Output<String> getKernelId() {
@@ -104,7 +104,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * A region-unique name for the AMI.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -116,7 +116,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * created instances.
      * 
      */
-    @InputImport(name="ramdiskId")
+    @Import(name="ramdiskId")
       private final @Nullable Output<String> ramdiskId;
 
     public Output<String> getRamdiskId() {
@@ -127,7 +127,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
      * 
      */
-    @InputImport(name="rootDeviceName")
+    @Import(name="rootDeviceName")
       private final @Nullable Output<String> rootDeviceName;
 
     public Output<String> getRootDeviceName() {
@@ -139,7 +139,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * for created instances. No other value is supported at this time.
      * 
      */
-    @InputImport(name="sriovNetSupport")
+    @Import(name="sriovNetSupport")
       private final @Nullable Output<String> sriovNetSupport;
 
     public Output<String> getSriovNetSupport() {
@@ -150,7 +150,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -163,7 +163,7 @@ public final class AmiArgs extends io.pulumi.resources.ResourceArgs {
      * changes the set of further arguments that are required, as described below.
      * 
      */
-    @InputImport(name="virtualizationType")
+    @Import(name="virtualizationType")
       private final @Nullable Output<String> virtualizationType;
 
     public Output<String> getVirtualizationType() {

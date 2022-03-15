@@ -7,13 +7,13 @@ import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamS3DestinationConf
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamBufferingHints;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamCloudWatchLoggingOptions;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamEncryptionConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamS3DestinationConfiguration {
     private final String bucketARN;
     private final @Nullable DeliveryStreamBufferingHints bufferingHints;
@@ -24,16 +24,16 @@ public final class DeliveryStreamS3DestinationConfiguration {
     private final @Nullable String prefix;
     private final String roleARN;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamS3DestinationConfiguration(
-        @OutputCustomType.Parameter("bucketARN") String bucketARN,
-        @OutputCustomType.Parameter("bufferingHints") @Nullable DeliveryStreamBufferingHints bufferingHints,
-        @OutputCustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
-        @OutputCustomType.Parameter("compressionFormat") @Nullable DeliveryStreamS3DestinationConfigurationCompressionFormat compressionFormat,
-        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration,
-        @OutputCustomType.Parameter("errorOutputPrefix") @Nullable String errorOutputPrefix,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("roleARN") String roleARN) {
+        @CustomType.Parameter("bucketARN") String bucketARN,
+        @CustomType.Parameter("bufferingHints") @Nullable DeliveryStreamBufferingHints bufferingHints,
+        @CustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
+        @CustomType.Parameter("compressionFormat") @Nullable DeliveryStreamS3DestinationConfigurationCompressionFormat compressionFormat,
+        @CustomType.Parameter("encryptionConfiguration") @Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration,
+        @CustomType.Parameter("errorOutputPrefix") @Nullable String errorOutputPrefix,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("roleARN") String roleARN) {
         this.bucketARN = bucketARN;
         this.bufferingHints = bufferingHints;
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;

@@ -5,20 +5,20 @@ package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.IndexJsonTokenTypeConfiguration;
 import io.pulumi.awsnative.kendra.outputs.IndexJwtTokenTypeConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IndexUserTokenConfiguration {
     private final @Nullable IndexJsonTokenTypeConfiguration jsonTokenTypeConfiguration;
     private final @Nullable IndexJwtTokenTypeConfiguration jwtTokenTypeConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IndexUserTokenConfiguration(
-        @OutputCustomType.Parameter("jsonTokenTypeConfiguration") @Nullable IndexJsonTokenTypeConfiguration jsonTokenTypeConfiguration,
-        @OutputCustomType.Parameter("jwtTokenTypeConfiguration") @Nullable IndexJwtTokenTypeConfiguration jwtTokenTypeConfiguration) {
+        @CustomType.Parameter("jsonTokenTypeConfiguration") @Nullable IndexJsonTokenTypeConfiguration jsonTokenTypeConfiguration,
+        @CustomType.Parameter("jwtTokenTypeConfiguration") @Nullable IndexJwtTokenTypeConfiguration jwtTokenTypeConfiguration) {
         this.jsonTokenTypeConfiguration = jsonTokenTypeConfiguration;
         this.jwtTokenTypeConfiguration = jwtTokenTypeConfiguration;
     }

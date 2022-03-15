@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomImagePropertiesCustomResponse {
     /**
      * The image name.
@@ -28,11 +28,11 @@ public final class CustomImagePropertiesCustomResponse {
      */
     private final @Nullable Boolean sysPrep;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomImagePropertiesCustomResponse(
-        @OutputCustomType.Parameter("imageName") @Nullable String imageName,
-        @OutputCustomType.Parameter("osType") String osType,
-        @OutputCustomType.Parameter("sysPrep") @Nullable Boolean sysPrep) {
+        @CustomType.Parameter("imageName") @Nullable String imageName,
+        @CustomType.Parameter("osType") String osType,
+        @CustomType.Parameter("sysPrep") @Nullable Boolean sysPrep) {
         this.imageName = imageName;
         this.osType = osType;
         this.sysPrep = sysPrep;

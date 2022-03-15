@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,21 +13,21 @@ public final class CidrArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final CidrArgs Empty = new CidrArgs();
 
-    @InputImport(name="cidrBits", required=true)
+    @Import(name="cidrBits", required=true)
       private final Integer cidrBits;
 
     public Integer getCidrBits() {
         return this.cidrBits;
     }
 
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Integer count;
 
     public Integer getCount() {
         return this.count;
     }
 
-    @InputImport(name="ipBlock", required=true)
+    @Import(name="ipBlock", required=true)
       private final String ipBlock;
 
     public String getIpBlock() {

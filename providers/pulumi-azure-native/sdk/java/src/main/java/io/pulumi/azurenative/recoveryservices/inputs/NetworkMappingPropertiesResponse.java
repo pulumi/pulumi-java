@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.AzureToAzureNetworkMappingSettingsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VmmToAzureNetworkMappingSettingsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VmmToVmmNetworkMappingSettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
      * The fabric specific settings.
      * 
      */
-    @InputImport(name="fabricSpecificSettings")
+    @Import(name="fabricSpecificSettings")
       private final @Nullable Object fabricSpecificSettings;
 
     public Object getFabricSpecificSettings() {
@@ -37,7 +37,7 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
      * The primary fabric friendly name.
      * 
      */
-    @InputImport(name="primaryFabricFriendlyName")
+    @Import(name="primaryFabricFriendlyName")
       private final @Nullable String primaryFabricFriendlyName;
 
     public Optional<String> getPrimaryFabricFriendlyName() {
@@ -48,7 +48,7 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
      * The primary network friendly name.
      * 
      */
-    @InputImport(name="primaryNetworkFriendlyName")
+    @Import(name="primaryNetworkFriendlyName")
       private final @Nullable String primaryNetworkFriendlyName;
 
     public Optional<String> getPrimaryNetworkFriendlyName() {
@@ -59,7 +59,7 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
      * The primary network id for network mapping.
      * 
      */
-    @InputImport(name="primaryNetworkId")
+    @Import(name="primaryNetworkId")
       private final @Nullable String primaryNetworkId;
 
     public Optional<String> getPrimaryNetworkId() {
@@ -70,7 +70,7 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
      * The recovery fabric ARM id.
      * 
      */
-    @InputImport(name="recoveryFabricArmId")
+    @Import(name="recoveryFabricArmId")
       private final @Nullable String recoveryFabricArmId;
 
     public Optional<String> getRecoveryFabricArmId() {
@@ -81,7 +81,7 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
      * The recovery fabric friendly name.
      * 
      */
-    @InputImport(name="recoveryFabricFriendlyName")
+    @Import(name="recoveryFabricFriendlyName")
       private final @Nullable String recoveryFabricFriendlyName;
 
     public Optional<String> getRecoveryFabricFriendlyName() {
@@ -92,7 +92,7 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
      * The recovery network friendly name.
      * 
      */
-    @InputImport(name="recoveryNetworkFriendlyName")
+    @Import(name="recoveryNetworkFriendlyName")
       private final @Nullable String recoveryNetworkFriendlyName;
 
     public Optional<String> getRecoveryNetworkFriendlyName() {
@@ -103,7 +103,7 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
      * The recovery network id for network mapping.
      * 
      */
-    @InputImport(name="recoveryNetworkId")
+    @Import(name="recoveryNetworkId")
       private final @Nullable String recoveryNetworkId;
 
     public Optional<String> getRecoveryNetworkId() {
@@ -114,7 +114,7 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
      * The pairing state for network mapping.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {

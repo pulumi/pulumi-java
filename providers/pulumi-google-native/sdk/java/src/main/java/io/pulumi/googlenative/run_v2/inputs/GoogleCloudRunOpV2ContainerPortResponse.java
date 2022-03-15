@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudRunOpV2ContainerPortResponse extends io.pulumi.res
      * Port number the container listens on. This must be a valid TCP port number, 0 < container_port < 65536.
      * 
      */
-    @InputImport(name="containerPort", required=true)
+    @Import(name="containerPort", required=true)
       private final Integer containerPort;
 
     public Integer getContainerPort() {
@@ -32,7 +32,7 @@ public final class GoogleCloudRunOpV2ContainerPortResponse extends io.pulumi.res
      * If specified, used to specify which protocol to use. Allowed values are "http1" and "h2c".
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

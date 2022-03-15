@@ -5,14 +5,14 @@ package io.pulumi.awsnative.route53recoverycontrol.outputs;
 
 import io.pulumi.awsnative.route53recoverycontrol.enums.ClusterStatus;
 import io.pulumi.awsnative.route53recoverycontrol.outputs.ClusterEndpoint;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     /**
      * The Amazon Resource Name (ARN) of the cluster.
@@ -30,11 +30,11 @@ public final class GetClusterResult {
      */
     private final @Nullable ClusterStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("clusterArn") @Nullable String clusterArn,
-        @OutputCustomType.Parameter("clusterEndpoints") @Nullable List<ClusterEndpoint> clusterEndpoints,
-        @OutputCustomType.Parameter("status") @Nullable ClusterStatus status) {
+        @CustomType.Parameter("clusterArn") @Nullable String clusterArn,
+        @CustomType.Parameter("clusterEndpoints") @Nullable List<ClusterEndpoint> clusterEndpoints,
+        @CustomType.Parameter("status") @Nullable ClusterStatus status) {
         this.clusterArn = clusterArn;
         this.clusterEndpoints = clusterEndpoints;
         this.status = status;

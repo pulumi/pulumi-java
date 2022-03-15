@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datastream_v1.outputs.MysqlRdbmsResponse;
 import io.pulumi.googlenative.datastream_v1.outputs.OracleRdbmsResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackfillAllStrategyResponse {
     /**
      * MySQL data source objects to avoid backfilling.
@@ -21,10 +21,10 @@ public final class BackfillAllStrategyResponse {
      */
     private final OracleRdbmsResponse oracleExcludedObjects;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackfillAllStrategyResponse(
-        @OutputCustomType.Parameter("mysqlExcludedObjects") MysqlRdbmsResponse mysqlExcludedObjects,
-        @OutputCustomType.Parameter("oracleExcludedObjects") OracleRdbmsResponse oracleExcludedObjects) {
+        @CustomType.Parameter("mysqlExcludedObjects") MysqlRdbmsResponse mysqlExcludedObjects,
+        @CustomType.Parameter("oracleExcludedObjects") OracleRdbmsResponse oracleExcludedObjects) {
         this.mysqlExcludedObjects = mysqlExcludedObjects;
         this.oracleExcludedObjects = oracleExcludedObjects;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.AndroidAttributesResponse;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.EndpointVerificationSpecificAttributesResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDeviceResult {
     /**
      * Attributes specific to Android devices.
@@ -159,37 +159,37 @@ public final class GetDeviceResult {
      */
     private final List<String> wifiMacAddresses;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDeviceResult(
-        @OutputCustomType.Parameter("androidSpecificAttributes") AndroidAttributesResponse androidSpecificAttributes,
-        @OutputCustomType.Parameter("assetTag") String assetTag,
-        @OutputCustomType.Parameter("basebandVersion") String basebandVersion,
-        @OutputCustomType.Parameter("bootloaderVersion") String bootloaderVersion,
-        @OutputCustomType.Parameter("brand") String brand,
-        @OutputCustomType.Parameter("buildNumber") String buildNumber,
-        @OutputCustomType.Parameter("compromisedState") String compromisedState,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("deviceType") String deviceType,
-        @OutputCustomType.Parameter("enabledDeveloperOptions") Boolean enabledDeveloperOptions,
-        @OutputCustomType.Parameter("enabledUsbDebugging") Boolean enabledUsbDebugging,
-        @OutputCustomType.Parameter("encryptionState") String encryptionState,
-        @OutputCustomType.Parameter("endpointVerificationSpecificAttributes") EndpointVerificationSpecificAttributesResponse endpointVerificationSpecificAttributes,
-        @OutputCustomType.Parameter("imei") String imei,
-        @OutputCustomType.Parameter("kernelVersion") String kernelVersion,
-        @OutputCustomType.Parameter("lastSyncTime") String lastSyncTime,
-        @OutputCustomType.Parameter("managementState") String managementState,
-        @OutputCustomType.Parameter("manufacturer") String manufacturer,
-        @OutputCustomType.Parameter("meid") String meid,
-        @OutputCustomType.Parameter("model") String model,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkOperator") String networkOperator,
-        @OutputCustomType.Parameter("osVersion") String osVersion,
-        @OutputCustomType.Parameter("otherAccounts") List<String> otherAccounts,
-        @OutputCustomType.Parameter("ownerType") String ownerType,
-        @OutputCustomType.Parameter("releaseVersion") String releaseVersion,
-        @OutputCustomType.Parameter("securityPatchTime") String securityPatchTime,
-        @OutputCustomType.Parameter("serialNumber") String serialNumber,
-        @OutputCustomType.Parameter("wifiMacAddresses") List<String> wifiMacAddresses) {
+        @CustomType.Parameter("androidSpecificAttributes") AndroidAttributesResponse androidSpecificAttributes,
+        @CustomType.Parameter("assetTag") String assetTag,
+        @CustomType.Parameter("basebandVersion") String basebandVersion,
+        @CustomType.Parameter("bootloaderVersion") String bootloaderVersion,
+        @CustomType.Parameter("brand") String brand,
+        @CustomType.Parameter("buildNumber") String buildNumber,
+        @CustomType.Parameter("compromisedState") String compromisedState,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("deviceType") String deviceType,
+        @CustomType.Parameter("enabledDeveloperOptions") Boolean enabledDeveloperOptions,
+        @CustomType.Parameter("enabledUsbDebugging") Boolean enabledUsbDebugging,
+        @CustomType.Parameter("encryptionState") String encryptionState,
+        @CustomType.Parameter("endpointVerificationSpecificAttributes") EndpointVerificationSpecificAttributesResponse endpointVerificationSpecificAttributes,
+        @CustomType.Parameter("imei") String imei,
+        @CustomType.Parameter("kernelVersion") String kernelVersion,
+        @CustomType.Parameter("lastSyncTime") String lastSyncTime,
+        @CustomType.Parameter("managementState") String managementState,
+        @CustomType.Parameter("manufacturer") String manufacturer,
+        @CustomType.Parameter("meid") String meid,
+        @CustomType.Parameter("model") String model,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkOperator") String networkOperator,
+        @CustomType.Parameter("osVersion") String osVersion,
+        @CustomType.Parameter("otherAccounts") List<String> otherAccounts,
+        @CustomType.Parameter("ownerType") String ownerType,
+        @CustomType.Parameter("releaseVersion") String releaseVersion,
+        @CustomType.Parameter("securityPatchTime") String securityPatchTime,
+        @CustomType.Parameter("serialNumber") String serialNumber,
+        @CustomType.Parameter("wifiMacAddresses") List<String> wifiMacAddresses) {
         this.androidSpecificAttributes = androidSpecificAttributes;
         this.assetTag = assetTag;
         this.basebandVersion = basebandVersion;

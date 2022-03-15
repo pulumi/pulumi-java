@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.outputs.ApiResourceBackendServiceResponse;
 import io.pulumi.azurenative.web.outputs.ApiResourceDefinitionsResponse;
 import io.pulumi.azurenative.web.outputs.ConnectionParameterResponse;
 import io.pulumi.azurenative.web.outputs.WsdlDefinitionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomApiPropertiesDefinitionResponse {
     /**
      * API Definitions
@@ -79,20 +79,20 @@ public final class CustomApiPropertiesDefinitionResponse {
      */
     private final @Nullable WsdlDefinitionResponse wsdlDefinition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomApiPropertiesDefinitionResponse(
-        @OutputCustomType.Parameter("apiDefinitions") @Nullable ApiResourceDefinitionsResponse apiDefinitions,
-        @OutputCustomType.Parameter("apiType") @Nullable String apiType,
-        @OutputCustomType.Parameter("backendService") @Nullable ApiResourceBackendServiceResponse backendService,
-        @OutputCustomType.Parameter("brandColor") @Nullable String brandColor,
-        @OutputCustomType.Parameter("capabilities") @Nullable List<String> capabilities,
-        @OutputCustomType.Parameter("connectionParameters") @Nullable Map<String,ConnectionParameterResponse> connectionParameters,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("iconUri") @Nullable String iconUri,
-        @OutputCustomType.Parameter("runtimeUrls") @Nullable List<String> runtimeUrls,
-        @OutputCustomType.Parameter("swagger") @Nullable Object swagger,
-        @OutputCustomType.Parameter("wsdlDefinition") @Nullable WsdlDefinitionResponse wsdlDefinition) {
+        @CustomType.Parameter("apiDefinitions") @Nullable ApiResourceDefinitionsResponse apiDefinitions,
+        @CustomType.Parameter("apiType") @Nullable String apiType,
+        @CustomType.Parameter("backendService") @Nullable ApiResourceBackendServiceResponse backendService,
+        @CustomType.Parameter("brandColor") @Nullable String brandColor,
+        @CustomType.Parameter("capabilities") @Nullable List<String> capabilities,
+        @CustomType.Parameter("connectionParameters") @Nullable Map<String,ConnectionParameterResponse> connectionParameters,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("iconUri") @Nullable String iconUri,
+        @CustomType.Parameter("runtimeUrls") @Nullable List<String> runtimeUrls,
+        @CustomType.Parameter("swagger") @Nullable Object swagger,
+        @CustomType.Parameter("wsdlDefinition") @Nullable WsdlDefinitionResponse wsdlDefinition) {
         this.apiDefinitions = apiDefinitions;
         this.apiType = apiType;
         this.backendService = backendService;

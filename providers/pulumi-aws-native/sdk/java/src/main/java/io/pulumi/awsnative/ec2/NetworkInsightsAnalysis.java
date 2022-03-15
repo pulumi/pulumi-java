@@ -11,7 +11,7 @@ import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisExplanation;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisPathComponent;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,79 +24,79 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:ec2:NetworkInsightsAnalysis")
 public class NetworkInsightsAnalysis extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="alternatePathHints", type=List.class, parameters={NetworkInsightsAnalysisAlternatePathHint.class})
+    @Export(name="alternatePathHints", type=List.class, parameters={NetworkInsightsAnalysisAlternatePathHint.class})
     private Output<List<NetworkInsightsAnalysisAlternatePathHint>> alternatePathHints;
 
     public Output<List<NetworkInsightsAnalysisAlternatePathHint>> getAlternatePathHints() {
         return this.alternatePathHints;
     }
-    @OutputExport(name="explanations", type=List.class, parameters={NetworkInsightsAnalysisExplanation.class})
+    @Export(name="explanations", type=List.class, parameters={NetworkInsightsAnalysisExplanation.class})
     private Output<List<NetworkInsightsAnalysisExplanation>> explanations;
 
     public Output<List<NetworkInsightsAnalysisExplanation>> getExplanations() {
         return this.explanations;
     }
-    @OutputExport(name="filterInArns", type=List.class, parameters={String.class})
+    @Export(name="filterInArns", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> filterInArns;
 
     public Output</* @Nullable */ List<String>> getFilterInArns() {
         return this.filterInArns;
     }
-    @OutputExport(name="forwardPathComponents", type=List.class, parameters={NetworkInsightsAnalysisPathComponent.class})
+    @Export(name="forwardPathComponents", type=List.class, parameters={NetworkInsightsAnalysisPathComponent.class})
     private Output<List<NetworkInsightsAnalysisPathComponent>> forwardPathComponents;
 
     public Output<List<NetworkInsightsAnalysisPathComponent>> getForwardPathComponents() {
         return this.forwardPathComponents;
     }
-    @OutputExport(name="networkInsightsAnalysisArn", type=String.class, parameters={})
+    @Export(name="networkInsightsAnalysisArn", type=String.class, parameters={})
     private Output<String> networkInsightsAnalysisArn;
 
     public Output<String> getNetworkInsightsAnalysisArn() {
         return this.networkInsightsAnalysisArn;
     }
-    @OutputExport(name="networkInsightsAnalysisId", type=String.class, parameters={})
+    @Export(name="networkInsightsAnalysisId", type=String.class, parameters={})
     private Output<String> networkInsightsAnalysisId;
 
     public Output<String> getNetworkInsightsAnalysisId() {
         return this.networkInsightsAnalysisId;
     }
-    @OutputExport(name="networkInsightsPathId", type=String.class, parameters={})
+    @Export(name="networkInsightsPathId", type=String.class, parameters={})
     private Output<String> networkInsightsPathId;
 
     public Output<String> getNetworkInsightsPathId() {
         return this.networkInsightsPathId;
     }
-    @OutputExport(name="networkPathFound", type=Boolean.class, parameters={})
+    @Export(name="networkPathFound", type=Boolean.class, parameters={})
     private Output<Boolean> networkPathFound;
 
     public Output<Boolean> getNetworkPathFound() {
         return this.networkPathFound;
     }
-    @OutputExport(name="returnPathComponents", type=List.class, parameters={NetworkInsightsAnalysisPathComponent.class})
+    @Export(name="returnPathComponents", type=List.class, parameters={NetworkInsightsAnalysisPathComponent.class})
     private Output<List<NetworkInsightsAnalysisPathComponent>> returnPathComponents;
 
     public Output<List<NetworkInsightsAnalysisPathComponent>> getReturnPathComponents() {
         return this.returnPathComponents;
     }
-    @OutputExport(name="startDate", type=String.class, parameters={})
+    @Export(name="startDate", type=String.class, parameters={})
     private Output<String> startDate;
 
     public Output<String> getStartDate() {
         return this.startDate;
     }
-    @OutputExport(name="status", type=NetworkInsightsAnalysisStatus.class, parameters={})
+    @Export(name="status", type=NetworkInsightsAnalysisStatus.class, parameters={})
     private Output<NetworkInsightsAnalysisStatus> status;
 
     public Output<NetworkInsightsAnalysisStatus> getStatus() {
         return this.status;
     }
-    @OutputExport(name="statusMessage", type=String.class, parameters={})
+    @Export(name="statusMessage", type=String.class, parameters={})
     private Output<String> statusMessage;
 
     public Output<String> getStatusMessage() {
         return this.statusMessage;
     }
-    @OutputExport(name="tags", type=List.class, parameters={NetworkInsightsAnalysisTag.class})
+    @Export(name="tags", type=List.class, parameters={NetworkInsightsAnalysisTag.class})
     private Output</* @Nullable */ List<NetworkInsightsAnalysisTag>> tags;
 
     public Output</* @Nullable */ List<NetworkInsightsAnalysisTag>> getTags() {

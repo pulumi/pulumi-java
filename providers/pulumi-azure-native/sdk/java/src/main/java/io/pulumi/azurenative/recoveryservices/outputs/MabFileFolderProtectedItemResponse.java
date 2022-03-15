@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.MabFileFolderProtectedItemExtendedInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MabFileFolderProtectedItemResponse {
     /**
      * Type of backup management for the backed up item.
@@ -121,29 +121,29 @@ public final class MabFileFolderProtectedItemResponse {
      */
     private final @Nullable String workloadType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MabFileFolderProtectedItemResponse(
-        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
-        @OutputCustomType.Parameter("backupSetName") @Nullable String backupSetName,
-        @OutputCustomType.Parameter("computerName") @Nullable String computerName,
-        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
-        @OutputCustomType.Parameter("createMode") @Nullable String createMode,
-        @OutputCustomType.Parameter("deferredDeleteSyncTimeInUTC") @Nullable Double deferredDeleteSyncTimeInUTC,
-        @OutputCustomType.Parameter("deferredDeleteTimeInUTC") @Nullable String deferredDeleteTimeInUTC,
-        @OutputCustomType.Parameter("deferredDeleteTimeRemaining") @Nullable String deferredDeleteTimeRemaining,
-        @OutputCustomType.Parameter("extendedInfo") @Nullable MabFileFolderProtectedItemExtendedInfoResponse extendedInfo,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("isDeferredDeleteScheduleUpcoming") @Nullable Boolean isDeferredDeleteScheduleUpcoming,
-        @OutputCustomType.Parameter("isRehydrate") @Nullable Boolean isRehydrate,
-        @OutputCustomType.Parameter("isScheduledForDeferredDelete") @Nullable Boolean isScheduledForDeferredDelete,
-        @OutputCustomType.Parameter("lastBackupStatus") @Nullable String lastBackupStatus,
-        @OutputCustomType.Parameter("lastBackupTime") @Nullable String lastBackupTime,
-        @OutputCustomType.Parameter("lastRecoveryPoint") @Nullable String lastRecoveryPoint,
-        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
-        @OutputCustomType.Parameter("protectedItemType") String protectedItemType,
-        @OutputCustomType.Parameter("protectionState") @Nullable String protectionState,
-        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
-        @OutputCustomType.Parameter("workloadType") @Nullable String workloadType) {
+        @CustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @CustomType.Parameter("backupSetName") @Nullable String backupSetName,
+        @CustomType.Parameter("computerName") @Nullable String computerName,
+        @CustomType.Parameter("containerName") @Nullable String containerName,
+        @CustomType.Parameter("createMode") @Nullable String createMode,
+        @CustomType.Parameter("deferredDeleteSyncTimeInUTC") @Nullable Double deferredDeleteSyncTimeInUTC,
+        @CustomType.Parameter("deferredDeleteTimeInUTC") @Nullable String deferredDeleteTimeInUTC,
+        @CustomType.Parameter("deferredDeleteTimeRemaining") @Nullable String deferredDeleteTimeRemaining,
+        @CustomType.Parameter("extendedInfo") @Nullable MabFileFolderProtectedItemExtendedInfoResponse extendedInfo,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("isDeferredDeleteScheduleUpcoming") @Nullable Boolean isDeferredDeleteScheduleUpcoming,
+        @CustomType.Parameter("isRehydrate") @Nullable Boolean isRehydrate,
+        @CustomType.Parameter("isScheduledForDeferredDelete") @Nullable Boolean isScheduledForDeferredDelete,
+        @CustomType.Parameter("lastBackupStatus") @Nullable String lastBackupStatus,
+        @CustomType.Parameter("lastBackupTime") @Nullable String lastBackupTime,
+        @CustomType.Parameter("lastRecoveryPoint") @Nullable String lastRecoveryPoint,
+        @CustomType.Parameter("policyId") @Nullable String policyId,
+        @CustomType.Parameter("protectedItemType") String protectedItemType,
+        @CustomType.Parameter("protectionState") @Nullable String protectionState,
+        @CustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
+        @CustomType.Parameter("workloadType") @Nullable String workloadType) {
         this.backupManagementType = backupManagementType;
         this.backupSetName = backupSetName;
         this.computerName = computerName;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class KeyResponse extends io.pulumi.resources.InvokeArgs {
      * Automation key name.
      * 
      */
-    @InputImport(name="keyName", required=true)
+    @Import(name="keyName", required=true)
       private final String keyName;
 
     public String getKeyName() {
@@ -31,7 +31,7 @@ public final class KeyResponse extends io.pulumi.resources.InvokeArgs {
      * Automation key permissions.
      * 
      */
-    @InputImport(name="permissions", required=true)
+    @Import(name="permissions", required=true)
       private final String permissions;
 
     public String getPermissions() {
@@ -42,7 +42,7 @@ public final class KeyResponse extends io.pulumi.resources.InvokeArgs {
      * Value of the Automation Key used for registration.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

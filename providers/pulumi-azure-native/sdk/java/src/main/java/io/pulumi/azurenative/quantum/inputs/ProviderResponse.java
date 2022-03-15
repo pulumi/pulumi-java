@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.quantum.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * The provider's marketplace application display name.
      * 
      */
-    @InputImport(name="applicationName")
+    @Import(name="applicationName")
       private final @Nullable String applicationName;
 
     public Optional<String> getApplicationName() {
@@ -33,7 +33,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * A Uri identifying the specific instance of this provider.
      * 
      */
-    @InputImport(name="instanceUri")
+    @Import(name="instanceUri")
       private final @Nullable String instanceUri;
 
     public Optional<String> getInstanceUri() {
@@ -44,7 +44,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * Unique id of this provider.
      * 
      */
-    @InputImport(name="providerId")
+    @Import(name="providerId")
       private final @Nullable String providerId;
 
     public Optional<String> getProviderId() {
@@ -55,7 +55,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * The sku associated with pricing information for this provider.
      * 
      */
-    @InputImport(name="providerSku")
+    @Import(name="providerSku")
       private final @Nullable String providerSku;
 
     public Optional<String> getProviderSku() {
@@ -66,7 +66,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * Provisioning status field
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
@@ -77,7 +77,7 @@ public final class ProviderResponse extends io.pulumi.resources.InvokeArgs {
      * Id to track resource usage for the provider.
      * 
      */
-    @InputImport(name="resourceUsageId")
+    @Import(name="resourceUsageId")
       private final @Nullable String resourceUsageId;
 
     public Optional<String> getResourceUsageId() {

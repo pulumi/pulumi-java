@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetGetArgs extends io.pulumi
      * A configuration block that defines a set of IP addresses. See IP Set below for details.
      * 
      */
-    @InputImport(name="ipSet", required=true)
+    @Import(name="ipSet", required=true)
       private final Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs> ipSet;
 
     public Output<RuleGroupRuleGroupRuleVariablesIpSetIpSetGetArgs> getIpSet() {
@@ -29,7 +29,7 @@ public final class RuleGroupRuleGroupRuleVariablesIpSetGetArgs extends io.pulumi
      * A unique alphanumeric string to identify the `ip_set`.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {

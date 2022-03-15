@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2IntentMessageImageResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse {
     /**
      * Url where the media is stored.
@@ -36,13 +36,13 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectResponse(
-        @OutputCustomType.Parameter("contentUrl") String contentUrl,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("icon") GoogleCloudDialogflowV2IntentMessageImageResponse icon,
-        @OutputCustomType.Parameter("largeImage") GoogleCloudDialogflowV2IntentMessageImageResponse largeImage,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("contentUrl") String contentUrl,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("icon") GoogleCloudDialogflowV2IntentMessageImageResponse icon,
+        @CustomType.Parameter("largeImage") GoogleCloudDialogflowV2IntentMessageImageResponse largeImage,
+        @CustomType.Parameter("name") String name) {
         this.contentUrl = contentUrl;
         this.description = description;
         this.icon = icon;

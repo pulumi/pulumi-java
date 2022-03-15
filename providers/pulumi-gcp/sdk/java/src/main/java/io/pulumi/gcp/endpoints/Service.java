@@ -4,7 +4,7 @@
 package io.pulumi.gcp.endpoints;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.endpoints.ServiceArgs;
@@ -31,7 +31,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * A list of API objects.
      * 
      */
-    @OutputExport(name="apis", type=List.class, parameters={ServiceApi.class})
+    @Export(name="apis", type=List.class, parameters={ServiceApi.class})
     private Output<List<ServiceApi>> apis;
 
     /**
@@ -46,7 +46,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * to compute engine instances as a tag.
      * 
      */
-    @OutputExport(name="configId", type=String.class, parameters={})
+    @Export(name="configId", type=String.class, parameters={})
     private Output<String> configId;
 
     /**
@@ -61,7 +61,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The address at which the service can be found - usually the same as the service name.
      * 
      */
-    @OutputExport(name="dnsAddress", type=String.class, parameters={})
+    @Export(name="dnsAddress", type=String.class, parameters={})
     private Output<String> dnsAddress;
 
     /**
@@ -75,7 +75,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * A list of Endpoint objects.
      * 
      */
-    @OutputExport(name="endpoints", type=List.class, parameters={ServiceEndpoint.class})
+    @Export(name="endpoints", type=List.class, parameters={ServiceEndpoint.class})
     private Output<List<ServiceEndpoint>> endpoints;
 
     /**
@@ -90,7 +90,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * protoc_output_base64. open_api config must not be provided.
      * 
      */
-    @OutputExport(name="grpcConfig", type=String.class, parameters={})
+    @Export(name="grpcConfig", type=String.class, parameters={})
     private Output</* @Nullable */ String> grpcConfig;
 
     /**
@@ -106,7 +106,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * protoc_output_base64 must be specified.
      * 
      */
-    @OutputExport(name="openapiConfig", type=String.class, parameters={})
+    @Export(name="openapiConfig", type=String.class, parameters={})
     private Output</* @Nullable */ String> openapiConfig;
 
     /**
@@ -121,7 +121,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The project ID that the service belongs to. If not provided, provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -136,7 +136,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * base64-encoded.
      * 
      */
-    @OutputExport(name="protocOutputBase64", type=String.class, parameters={})
+    @Export(name="protocOutputBase64", type=String.class, parameters={})
     private Output</* @Nullable */ String> protocOutputBase64;
 
     /**
@@ -151,7 +151,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The name of the service. Usually of the form $apiname.endpoints.$projectid.cloud.goog.
      * 
      */
-    @OutputExport(name="serviceName", type=String.class, parameters={})
+    @Export(name="serviceName", type=String.class, parameters={})
     private Output<String> serviceName;
 
     /**

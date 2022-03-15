@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1FormParameterResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1FormResponse {
     /**
      * Parameters to collect from the user.
@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowCxV3beta1FormResponse {
      */
     private final List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> parameters;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowCxV3beta1FormResponse(@OutputCustomType.Parameter("parameters") List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> parameters) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowCxV3beta1FormResponse(@CustomType.Parameter("parameters") List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> parameters) {
         this.parameters = parameters;
     }
 

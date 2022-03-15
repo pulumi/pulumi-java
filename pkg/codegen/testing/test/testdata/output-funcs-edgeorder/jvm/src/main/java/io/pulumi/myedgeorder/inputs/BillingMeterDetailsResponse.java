@@ -4,7 +4,7 @@
 package io.pulumi.myedgeorder.inputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.myedgeorder.inputs.Pav2MeterDetailsResponse;
 import io.pulumi.myedgeorder.inputs.PurchaseMeterDetailsResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class BillingMeterDetailsResponse extends io.pulumi.resources.Invok
      * Frequency of recurrence
      * 
      */
-    @InputImport(name="frequency", required=true)
+    @Import(name="frequency", required=true)
       private final String frequency;
 
     public String getFrequency() {
@@ -34,7 +34,7 @@ public final class BillingMeterDetailsResponse extends io.pulumi.resources.Invok
      * Represents MeterDetails
      * 
      */
-    @InputImport(name="meterDetails", required=true)
+    @Import(name="meterDetails", required=true)
       private final Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails;
 
     public Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> getMeterDetails() {
@@ -45,7 +45,7 @@ public final class BillingMeterDetailsResponse extends io.pulumi.resources.Invok
      * Represents Metering type (eg one-time or recurrent)
      * 
      */
-    @InputImport(name="meteringType", required=true)
+    @Import(name="meteringType", required=true)
       private final String meteringType;
 
     public String getMeteringType() {
@@ -56,7 +56,7 @@ public final class BillingMeterDetailsResponse extends io.pulumi.resources.Invok
      * Represents Billing type name
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

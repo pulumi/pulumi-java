@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultCertificateSourceParametersResponse {
     /**
      * Describes the action that shall be taken when the certificate is removed from Key Vault.
@@ -48,16 +48,16 @@ public final class KeyVaultCertificateSourceParametersResponse {
      */
     private final String vaultName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyVaultCertificateSourceParametersResponse(
-        @OutputCustomType.Parameter("deleteRule") String deleteRule,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("resourceGroupName") String resourceGroupName,
-        @OutputCustomType.Parameter("secretName") String secretName,
-        @OutputCustomType.Parameter("secretVersion") @Nullable String secretVersion,
-        @OutputCustomType.Parameter("subscriptionId") String subscriptionId,
-        @OutputCustomType.Parameter("updateRule") String updateRule,
-        @OutputCustomType.Parameter("vaultName") String vaultName) {
+        @CustomType.Parameter("deleteRule") String deleteRule,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("resourceGroupName") String resourceGroupName,
+        @CustomType.Parameter("secretName") String secretName,
+        @CustomType.Parameter("secretVersion") @Nullable String secretVersion,
+        @CustomType.Parameter("subscriptionId") String subscriptionId,
+        @CustomType.Parameter("updateRule") String updateRule,
+        @CustomType.Parameter("vaultName") String vaultName) {
         this.deleteRule = deleteRule;
         this.odataType = odataType;
         this.resourceGroupName = resourceGroupName;

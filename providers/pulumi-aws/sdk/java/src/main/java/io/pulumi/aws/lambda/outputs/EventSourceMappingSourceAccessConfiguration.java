@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EventSourceMappingSourceAccessConfiguration {
     /**
      * The type of this configuration.  For Self Managed Kafka you will need to supply blocks for type `VPC_SUBNET` and `VPC_SECURITY_GROUP`.
@@ -20,10 +20,10 @@ public final class EventSourceMappingSourceAccessConfiguration {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventSourceMappingSourceAccessConfiguration(
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uri") String uri) {
         this.type = type;
         this.uri = uri;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
      * Certificate identifier. For example, `rds-ca-2019`.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -30,7 +30,7 @@ public final class GetCertificateArgs extends io.pulumi.resources.InvokeArgs {
      * When enabled, returns the certificate with the latest `ValidTill`.
      * 
      */
-    @InputImport(name="latestValidTill")
+    @Import(name="latestValidTill")
       private final @Nullable Boolean latestValidTill;
 
     public Optional<Boolean> getLatestValidTill() {

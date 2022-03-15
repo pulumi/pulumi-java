@@ -4,7 +4,7 @@
 package io.pulumi.random;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.random.RandomIntegerArgs;
 import io.pulumi.random.Utilities;
@@ -37,7 +37,7 @@ public class RandomInteger extends io.pulumi.resources.CustomResource {
      * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    @OutputExport(name="keepers", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="keepers", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> keepers;
 
     /**
@@ -51,7 +51,7 @@ public class RandomInteger extends io.pulumi.resources.CustomResource {
      * The maximum inclusive value of the range.
      * 
      */
-    @OutputExport(name="max", type=Integer.class, parameters={})
+    @Export(name="max", type=Integer.class, parameters={})
     private Output<Integer> max;
 
     /**
@@ -65,7 +65,7 @@ public class RandomInteger extends io.pulumi.resources.CustomResource {
      * The minimum inclusive value of the range.
      * 
      */
-    @OutputExport(name="min", type=Integer.class, parameters={})
+    @Export(name="min", type=Integer.class, parameters={})
     private Output<Integer> min;
 
     /**
@@ -79,7 +79,7 @@ public class RandomInteger extends io.pulumi.resources.CustomResource {
      * The random integer result.
      * 
      */
-    @OutputExport(name="result", type=Integer.class, parameters={})
+    @Export(name="result", type=Integer.class, parameters={})
     private Output<Integer> result;
 
     /**
@@ -93,7 +93,7 @@ public class RandomInteger extends io.pulumi.resources.CustomResource {
      * A custom seed to always produce the same value.
      * 
      */
-    @OutputExport(name="seed", type=String.class, parameters={})
+    @Export(name="seed", type=String.class, parameters={})
     private Output</* @Nullable */ String> seed;
 
     /**

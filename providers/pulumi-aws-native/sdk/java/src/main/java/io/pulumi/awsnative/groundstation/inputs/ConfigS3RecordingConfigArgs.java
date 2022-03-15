@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class ConfigS3RecordingConfigArgs extends io.pulumi.resources.Resou
 
     public static final ConfigS3RecordingConfigArgs Empty = new ConfigS3RecordingConfigArgs();
 
-    @InputImport(name="bucketArn")
+    @Import(name="bucketArn")
       private final @Nullable Output<String> bucketArn;
 
     public Output<String> getBucketArn() {
         return this.bucketArn == null ? Output.empty() : this.bucketArn;
     }
 
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
         return this.prefix == null ? Output.empty() : this.prefix;
     }
 
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {

@@ -3,17 +3,17 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.StandardSqlFieldResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StandardSqlStructTypeResponse {
     private final List<StandardSqlFieldResponse> fields;
 
-    @OutputCustomType.Constructor
-    private StandardSqlStructTypeResponse(@OutputCustomType.Parameter("fields") List<StandardSqlFieldResponse> fields) {
+    @CustomType.Constructor
+    private StandardSqlStructTypeResponse(@CustomType.Parameter("fields") List<StandardSqlFieldResponse> fields) {
         this.fields = fields;
     }
 

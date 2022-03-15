@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sns.PlatformApplicationArgs;
 import io.pulumi.aws.sns.inputs.PlatformApplicationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * The ARN of the SNS platform application
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -46,7 +46,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
      * 
      */
-    @OutputExport(name="eventDeliveryFailureTopicArn", type=String.class, parameters={})
+    @Export(name="eventDeliveryFailureTopicArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventDeliveryFailureTopicArn;
 
     /**
@@ -60,7 +60,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * SNS Topic triggered when a new platform endpoint is added to your platform application.
      * 
      */
-    @OutputExport(name="eventEndpointCreatedTopicArn", type=String.class, parameters={})
+    @Export(name="eventEndpointCreatedTopicArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventEndpointCreatedTopicArn;
 
     /**
@@ -74,7 +74,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
      * 
      */
-    @OutputExport(name="eventEndpointDeletedTopicArn", type=String.class, parameters={})
+    @Export(name="eventEndpointDeletedTopicArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventEndpointDeletedTopicArn;
 
     /**
@@ -88,7 +88,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * SNS Topic triggered when an existing platform endpoint is changed from your platform application.
      * 
      */
-    @OutputExport(name="eventEndpointUpdatedTopicArn", type=String.class, parameters={})
+    @Export(name="eventEndpointUpdatedTopicArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventEndpointUpdatedTopicArn;
 
     /**
@@ -102,7 +102,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * The IAM role permitted to receive failure feedback for this application.
      * 
      */
-    @OutputExport(name="failureFeedbackRoleArn", type=String.class, parameters={})
+    @Export(name="failureFeedbackRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> failureFeedbackRoleArn;
 
     /**
@@ -116,7 +116,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * The friendly name for the SNS platform application
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -130,7 +130,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
      * 
      */
-    @OutputExport(name="platform", type=String.class, parameters={})
+    @Export(name="platform", type=String.class, parameters={})
     private Output<String> platform;
 
     /**
@@ -144,7 +144,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
      * 
      */
-    @OutputExport(name="platformCredential", type=String.class, parameters={})
+    @Export(name="platformCredential", type=String.class, parameters={})
     private Output<String> platformCredential;
 
     /**
@@ -158,7 +158,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
      * 
      */
-    @OutputExport(name="platformPrincipal", type=String.class, parameters={})
+    @Export(name="platformPrincipal", type=String.class, parameters={})
     private Output</* @Nullable */ String> platformPrincipal;
 
     /**
@@ -172,7 +172,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * The IAM role permitted to receive success feedback for this application.
      * 
      */
-    @OutputExport(name="successFeedbackRoleArn", type=String.class, parameters={})
+    @Export(name="successFeedbackRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> successFeedbackRoleArn;
 
     /**
@@ -186,7 +186,7 @@ public class PlatformApplication extends io.pulumi.resources.CustomResource {
      * The percentage of success to sample (0-100)
      * 
      */
-    @OutputExport(name="successFeedbackSampleRate", type=String.class, parameters={})
+    @Export(name="successFeedbackSampleRate", type=String.class, parameters={})
     private Output</* @Nullable */ String> successFeedbackSampleRate;
 
     /**

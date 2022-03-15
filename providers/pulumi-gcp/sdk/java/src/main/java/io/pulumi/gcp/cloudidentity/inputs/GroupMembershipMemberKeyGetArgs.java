@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudidentity.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GroupMembershipMemberKeyGetArgs extends io.pulumi.resources.R
      * Must be unique within a namespace.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -39,7 +39,7 @@ public final class GroupMembershipMemberKeyGetArgs extends io.pulumi.resources.R
      * and must be in the form of `identitysources/{identity_source_id}`.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {

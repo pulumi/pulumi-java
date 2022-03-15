@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * The name of the share account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -29,7 +29,7 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * The expiration date of the share subscription.
      * 
      */
-    @InputImport(name="expirationDate")
+    @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
     public Output<String> getExpirationDate() {
@@ -40,7 +40,7 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * The invitation id.
      * 
      */
-    @InputImport(name="invitationId", required=true)
+    @Import(name="invitationId", required=true)
       private final Output<String> invitationId;
 
     public Output<String> getInvitationId() {
@@ -51,7 +51,7 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -62,7 +62,7 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * The name of the shareSubscription.
      * 
      */
-    @InputImport(name="shareSubscriptionName")
+    @Import(name="shareSubscriptionName")
       private final @Nullable Output<String> shareSubscriptionName;
 
     public Output<String> getShareSubscriptionName() {
@@ -73,7 +73,7 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * Source share location.
      * 
      */
-    @InputImport(name="sourceShareLocation", required=true)
+    @Import(name="sourceShareLocation", required=true)
       private final Output<String> sourceShareLocation;
 
     public Output<String> getSourceShareLocation() {

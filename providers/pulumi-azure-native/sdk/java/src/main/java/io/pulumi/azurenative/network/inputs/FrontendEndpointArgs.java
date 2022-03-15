@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.SessionAffinityEnabledState;
 import io.pulumi.azurenative.network.inputs.FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
      * The host name of the frontendEndpoint. Must be a domain name.
      * 
      */
-    @InputImport(name="hostName")
+    @Import(name="hostName")
       private final @Nullable Output<String> hostName;
 
     public Output<String> getHostName() {
@@ -37,7 +37,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -48,7 +48,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Resource name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -59,7 +59,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Whether to allow session affinity on this host. Valid options are 'Enabled' or 'Disabled'
      * 
      */
-    @InputImport(name="sessionAffinityEnabledState")
+    @Import(name="sessionAffinityEnabledState")
       private final @Nullable Output<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState;
 
     public Output<Either<String,SessionAffinityEnabledState>> getSessionAffinityEnabledState() {
@@ -70,7 +70,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
      * UNUSED. This field will be ignored. The TTL to use in seconds for session affinity, if applicable.
      * 
      */
-    @InputImport(name="sessionAffinityTtlSeconds")
+    @Import(name="sessionAffinityTtlSeconds")
       private final @Nullable Output<Integer> sessionAffinityTtlSeconds;
 
     public Output<Integer> getSessionAffinityTtlSeconds() {
@@ -81,7 +81,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Defines the Web Application Firewall policy for each host (if applicable)
      * 
      */
-    @InputImport(name="webApplicationFirewallPolicyLink")
+    @Import(name="webApplicationFirewallPolicyLink")
       private final @Nullable Output<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 
     public Output<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> getWebApplicationFirewallPolicyLink() {

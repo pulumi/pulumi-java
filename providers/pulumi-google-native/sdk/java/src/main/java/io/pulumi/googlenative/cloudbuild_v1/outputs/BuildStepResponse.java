@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.TimeSpanResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.VolumeResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BuildStepResponse {
     /**
      * A list of arguments that will be presented to the step when it is started. If the image used to run the step's container has an entrypoint, the `args` are used as arguments to that entrypoint. If the image does not define an entrypoint, the first element in args is used as the entrypoint, and the remainder will be used as arguments.
@@ -78,21 +78,21 @@ public final class BuildStepResponse {
      */
     private final List<String> waitFor;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BuildStepResponse(
-        @OutputCustomType.Parameter("args") List<String> args,
-        @OutputCustomType.Parameter("dir") String dir,
-        @OutputCustomType.Parameter("entrypoint") String entrypoint,
-        @OutputCustomType.Parameter("env") List<String> env,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pullTiming") TimeSpanResponse pullTiming,
-        @OutputCustomType.Parameter("script") String script,
-        @OutputCustomType.Parameter("secretEnv") List<String> secretEnv,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("timeout") String timeout,
-        @OutputCustomType.Parameter("timing") TimeSpanResponse timing,
-        @OutputCustomType.Parameter("volumes") List<VolumeResponse> volumes,
-        @OutputCustomType.Parameter("waitFor") List<String> waitFor) {
+        @CustomType.Parameter("args") List<String> args,
+        @CustomType.Parameter("dir") String dir,
+        @CustomType.Parameter("entrypoint") String entrypoint,
+        @CustomType.Parameter("env") List<String> env,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pullTiming") TimeSpanResponse pullTiming,
+        @CustomType.Parameter("script") String script,
+        @CustomType.Parameter("secretEnv") List<String> secretEnv,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("timeout") String timeout,
+        @CustomType.Parameter("timing") TimeSpanResponse timing,
+        @CustomType.Parameter("volumes") List<VolumeResponse> volumes,
+        @CustomType.Parameter("waitFor") List<String> waitFor) {
         this.args = args;
         this.dir = dir;
         this.entrypoint = entrypoint;

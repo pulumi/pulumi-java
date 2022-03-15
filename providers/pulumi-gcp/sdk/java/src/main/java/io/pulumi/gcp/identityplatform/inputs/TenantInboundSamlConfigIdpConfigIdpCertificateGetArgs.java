@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TenantInboundSamlConfigIdpConfigIdpCertificateGetArgs extends
      * The x509 certificate
      * 
      */
-    @InputImport(name="x509Certificate")
+    @Import(name="x509Certificate")
       private final @Nullable Output<String> x509Certificate;
 
     public Output<String> getX509Certificate() {

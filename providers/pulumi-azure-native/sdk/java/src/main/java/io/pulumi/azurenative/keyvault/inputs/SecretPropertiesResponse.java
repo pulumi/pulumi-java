@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.keyvault.inputs;
 
 import io.pulumi.azurenative.keyvault.inputs.SecretAttributesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SecretPropertiesResponse extends io.pulumi.resources.InvokeAr
      * The attributes of the secret.
      * 
      */
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable SecretAttributesResponse attributes;
 
     public Optional<SecretAttributesResponse> getAttributes() {
@@ -34,7 +34,7 @@ public final class SecretPropertiesResponse extends io.pulumi.resources.InvokeAr
      * The content type of the secret.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable String contentType;
 
     public Optional<String> getContentType() {
@@ -45,7 +45,7 @@ public final class SecretPropertiesResponse extends io.pulumi.resources.InvokeAr
      * The URI to retrieve the current version of the secret.
      * 
      */
-    @InputImport(name="secretUri", required=true)
+    @Import(name="secretUri", required=true)
       private final String secretUri;
 
     public String getSecretUri() {
@@ -56,7 +56,7 @@ public final class SecretPropertiesResponse extends io.pulumi.resources.InvokeAr
      * The URI to retrieve the specific version of the secret.
      * 
      */
-    @InputImport(name="secretUriWithVersion", required=true)
+    @Import(name="secretUriWithVersion", required=true)
       private final String secretUriWithVersion;
 
     public String getSecretUriWithVersion() {
@@ -67,7 +67,7 @@ public final class SecretPropertiesResponse extends io.pulumi.resources.InvokeAr
      * The value of the secret. NOTE: 'value' will never be returned from the service, as APIs using this model are is intended for internal use in ARM deployments. Users should use the data-plane REST service for interaction with vault secrets.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

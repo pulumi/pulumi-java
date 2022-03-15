@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.eventarc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerDestinationCloudRunService {
     /**
      * Optional. The relative path on the Cloud Run service the events should be sent to. The value must conform to the definition of URI path segment (section 3.3 of RFC2396). Examples: "/route", "route", "route/subroute".
@@ -27,11 +27,11 @@ public final class TriggerDestinationCloudRunService {
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerDestinationCloudRunService(
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("service") String service) {
         this.path = path;
         this.region = region;
         this.service = service;

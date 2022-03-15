@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
      * User specified arguments to HDInsightActivity.
      * 
      */
-    @InputImport(name="arguments")
+    @Import(name="arguments")
       private final @Nullable List<Object> arguments;
 
     public List<Object> getArguments() {
@@ -41,7 +41,7 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
      * Allows user to specify defines for Hive job request.
      * 
      */
-    @InputImport(name="defines")
+    @Import(name="defines")
       private final @Nullable Map<String,Object> defines;
 
     public Map<String,Object> getDefines() {
@@ -52,7 +52,7 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
@@ -63,7 +63,7 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -74,7 +74,7 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
      * Debug info option.
      * 
      */
-    @InputImport(name="getDebugInfo")
+    @Import(name="getDebugInfo")
       private final @Nullable String getDebugInfo;
 
     public Optional<String> getGetDebugInfo() {
@@ -85,7 +85,7 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName")
+    @Import(name="linkedServiceName")
       private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
@@ -96,7 +96,7 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -107,7 +107,7 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
      * Activity policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
@@ -118,7 +118,7 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
      * Query timeout value (in minutes).  Effective when the HDInsight cluster is with ESP (Enterprise Security Package)
      * 
      */
-    @InputImport(name="queryTimeout")
+    @Import(name="queryTimeout")
       private final @Nullable Integer queryTimeout;
 
     public Optional<Integer> getQueryTimeout() {
@@ -129,7 +129,7 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
      * Script linked service reference.
      * 
      */
-    @InputImport(name="scriptLinkedService")
+    @Import(name="scriptLinkedService")
       private final @Nullable LinkedServiceReferenceResponse scriptLinkedService;
 
     public Optional<LinkedServiceReferenceResponse> getScriptLinkedService() {
@@ -140,7 +140,7 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
      * Script path. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="scriptPath")
+    @Import(name="scriptPath")
       private final @Nullable Object scriptPath;
 
     public Optional<Object> getScriptPath() {
@@ -151,7 +151,7 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
      * Storage linked service references.
      * 
      */
-    @InputImport(name="storageLinkedServices")
+    @Import(name="storageLinkedServices")
       private final @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices;
 
     public List<LinkedServiceReferenceResponse> getStorageLinkedServices() {
@@ -163,7 +163,7 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
      * Expected value is 'HDInsightHive'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -174,7 +174,7 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
@@ -185,7 +185,7 @@ public final class HDInsightHiveActivityResponse extends io.pulumi.resources.Inv
      * User specified arguments under hivevar namespace.
      * 
      */
-    @InputImport(name="variables")
+    @Import(name="variables")
       private final @Nullable List<Object> variables;
 
     public List<Object> getVariables() {

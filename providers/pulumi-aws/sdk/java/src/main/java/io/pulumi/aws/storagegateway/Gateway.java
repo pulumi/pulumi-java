@@ -9,7 +9,7 @@ import io.pulumi.aws.storagegateway.inputs.GatewayState;
 import io.pulumi.aws.storagegateway.outputs.GatewayGatewayNetworkInterface;
 import io.pulumi.aws.storagegateway.outputs.GatewaySmbActiveDirectorySettings;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -42,7 +42,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Gateway activation key during resource creation. Conflicts with `gateway_ip_address`. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
      * 
      */
-    @OutputExport(name="activationKey", type=String.class, parameters={})
+    @Export(name="activationKey", type=String.class, parameters={})
     private Output<String> activationKey;
 
     /**
@@ -56,7 +56,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the gateway.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -70,7 +70,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * The average download bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
      * 
      */
-    @OutputExport(name="averageDownloadRateLimitInBitsPerSec", type=Integer.class, parameters={})
+    @Export(name="averageDownloadRateLimitInBitsPerSec", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> averageDownloadRateLimitInBitsPerSec;
 
     /**
@@ -84,7 +84,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * The average upload bandwidth rate limit in bits per second. This is supported for the `CACHED`, `STORED`, and `VTL` gateway types.
      * 
      */
-    @OutputExport(name="averageUploadRateLimitInBitsPerSec", type=Integer.class, parameters={})
+    @Export(name="averageUploadRateLimitInBitsPerSec", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> averageUploadRateLimitInBitsPerSec;
 
     /**
@@ -98,7 +98,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Amazon CloudWatch log group to use to monitor and log events in the gateway.
      * 
      */
-    @OutputExport(name="cloudwatchLogGroupArn", type=String.class, parameters={})
+    @Export(name="cloudwatchLogGroupArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudwatchLogGroupArn;
 
     /**
@@ -112,7 +112,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * The ID of the Amazon EC2 instance that was used to launch the gateway.
      * 
      */
-    @OutputExport(name="ec2InstanceId", type=String.class, parameters={})
+    @Export(name="ec2InstanceId", type=String.class, parameters={})
     private Output<String> ec2InstanceId;
 
     /**
@@ -126,7 +126,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * The type of endpoint for your gateway.
      * 
      */
-    @OutputExport(name="endpointType", type=String.class, parameters={})
+    @Export(name="endpointType", type=String.class, parameters={})
     private Output<String> endpointType;
 
     /**
@@ -140,7 +140,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Identifier of the gateway.
      * 
      */
-    @OutputExport(name="gatewayId", type=String.class, parameters={})
+    @Export(name="gatewayId", type=String.class, parameters={})
     private Output<String> gatewayId;
 
     /**
@@ -154,7 +154,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Gateway IP address to retrieve activation key during resource creation. Conflicts with `activation_key`. Gateway must be accessible on port 80 from where this provider is running. Additional information is available in the [Storage Gateway User Guide](https://docs.aws.amazon.com/storagegateway/latest/userguide/get-activation-key.html).
      * 
      */
-    @OutputExport(name="gatewayIpAddress", type=String.class, parameters={})
+    @Export(name="gatewayIpAddress", type=String.class, parameters={})
     private Output<String> gatewayIpAddress;
 
     /**
@@ -168,7 +168,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Name of the gateway.
      * 
      */
-    @OutputExport(name="gatewayName", type=String.class, parameters={})
+    @Export(name="gatewayName", type=String.class, parameters={})
     private Output<String> gatewayName;
 
     /**
@@ -182,7 +182,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * An array that contains descriptions of the gateway network interfaces. See Gateway Network Interface.
      * 
      */
-    @OutputExport(name="gatewayNetworkInterfaces", type=List.class, parameters={GatewayGatewayNetworkInterface.class})
+    @Export(name="gatewayNetworkInterfaces", type=List.class, parameters={GatewayGatewayNetworkInterface.class})
     private Output<List<GatewayGatewayNetworkInterface>> gatewayNetworkInterfaces;
 
     /**
@@ -196,7 +196,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Time zone for the gateway. The time zone is of the format "GMT", "GMT-hr:mm", or "GMT+hr:mm". For example, `GMT-4:00` indicates the time is 4 hours behind GMT. The time zone is used, for example, for scheduling snapshots and your gateway's maintenance schedule.
      * 
      */
-    @OutputExport(name="gatewayTimezone", type=String.class, parameters={})
+    @Export(name="gatewayTimezone", type=String.class, parameters={})
     private Output<String> gatewayTimezone;
 
     /**
@@ -210,7 +210,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Type of the gateway. The default value is `STORED`. Valid values: `CACHED`, `FILE_FSX_SMB`, `FILE_S3`, `STORED`, `VTL`.
      * 
      */
-    @OutputExport(name="gatewayType", type=String.class, parameters={})
+    @Export(name="gatewayType", type=String.class, parameters={})
     private Output</* @Nullable */ String> gatewayType;
 
     /**
@@ -224,7 +224,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * VPC endpoint address to be used when activating your gateway. This should be used when your instance is in a private subnet. Requires HTTP access from client computer running this provider. More info on what ports are required by your VPC Endpoint Security group in [Activating a Gateway in a Virtual Private Cloud](https://docs.aws.amazon.com/storagegateway/latest/userguide/gateway-private-link.html).
      * 
      */
-    @OutputExport(name="gatewayVpcEndpoint", type=String.class, parameters={})
+    @Export(name="gatewayVpcEndpoint", type=String.class, parameters={})
     private Output</* @Nullable */ String> gatewayVpcEndpoint;
 
     /**
@@ -238,7 +238,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * The type of hypervisor environment used by the host.
      * 
      */
-    @OutputExport(name="hostEnvironment", type=String.class, parameters={})
+    @Export(name="hostEnvironment", type=String.class, parameters={})
     private Output<String> hostEnvironment;
 
     /**
@@ -252,7 +252,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Type of medium changer to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `STK-L700`, `AWS-Gateway-VTL`, `IBM-03584L32-0402`.
      * 
      */
-    @OutputExport(name="mediumChangerType", type=String.class, parameters={})
+    @Export(name="mediumChangerType", type=String.class, parameters={})
     private Output</* @Nullable */ String> mediumChangerType;
 
     /**
@@ -266,7 +266,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Nested argument with Active Directory domain join information for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `ActiveDirectory` authentication SMB file shares. More details below.
      * 
      */
-    @OutputExport(name="smbActiveDirectorySettings", type=GatewaySmbActiveDirectorySettings.class, parameters={})
+    @Export(name="smbActiveDirectorySettings", type=GatewaySmbActiveDirectorySettings.class, parameters={})
     private Output</* @Nullable */ GatewaySmbActiveDirectorySettings> smbActiveDirectorySettings;
 
     /**
@@ -280,7 +280,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Specifies whether the shares on this gateway appear when listing shares.
      * 
      */
-    @OutputExport(name="smbFileShareVisibility", type=Boolean.class, parameters={})
+    @Export(name="smbFileShareVisibility", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> smbFileShareVisibility;
 
     /**
@@ -294,7 +294,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Guest password for Server Message Block (SMB) file shares. Only valid for `FILE_S3` and `FILE_FSX_SMB` gateway types. Must be set before creating `GuestAccess` authentication SMB file shares. This provider can only detect drift of the existence of a guest password, not its actual value from the gateway. This provider can however update the password with changing the argument.
      * 
      */
-    @OutputExport(name="smbGuestPassword", type=String.class, parameters={})
+    @Export(name="smbGuestPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> smbGuestPassword;
 
     /**
@@ -308,7 +308,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Specifies the type of security strategy. Valid values are: `ClientSpecified`, `MandatorySigning`, and `MandatoryEncryption`. See [Setting a Security Level for Your Gateway](https://docs.aws.amazon.com/storagegateway/latest/userguide/managing-gateway-file.html#security-strategy) for more information.
      * 
      */
-    @OutputExport(name="smbSecurityStrategy", type=String.class, parameters={})
+    @Export(name="smbSecurityStrategy", type=String.class, parameters={})
     private Output<String> smbSecurityStrategy;
 
     /**
@@ -322,7 +322,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -336,7 +336,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -350,7 +350,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Type of tape drive to use for tape gateway. This provider cannot detect drift of this argument. Valid values: `IBM-ULT3580-TD5`.
      * 
      */
-    @OutputExport(name="tapeDriveType", type=String.class, parameters={})
+    @Export(name="tapeDriveType", type=String.class, parameters={})
     private Output</* @Nullable */ String> tapeDriveType;
 
     /**

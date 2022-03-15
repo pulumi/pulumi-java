@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datafusion_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datafusion_v1beta1.enums.InstanceType;
 import io.pulumi.googlenative.datafusion_v1beta1.inputs.AcceleratorArgs;
 import io.pulumi.googlenative.datafusion_v1beta1.inputs.CryptoKeyConfigArgs;
@@ -26,7 +26,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * List of accelerators enabled for this CDF instance.
      * 
      */
-    @InputImport(name="accelerators")
+    @Import(name="accelerators")
       private final @Nullable Output<List<AcceleratorArgs>> accelerators;
 
     public Output<List<AcceleratorArgs>> getAccelerators() {
@@ -37,7 +37,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Available versions that the instance can be upgraded to using UpdateInstanceRequest.
      * 
      */
-    @InputImport(name="availableVersion")
+    @Import(name="availableVersion")
       private final @Nullable Output<List<VersionArgs>> availableVersion;
 
     public Output<List<VersionArgs>> getAvailableVersion() {
@@ -48,7 +48,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The crypto key configuration. This field is used by the Customer-Managed Encryption Keys (CMEK) feature.
      * 
      */
-    @InputImport(name="cryptoKeyConfig")
+    @Import(name="cryptoKeyConfig")
       private final @Nullable Output<CryptoKeyConfigArgs> cryptoKeyConfig;
 
     public Output<CryptoKeyConfigArgs> getCryptoKeyConfig() {
@@ -59,7 +59,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines. This allows users to have fine-grained access control on Dataproc's accesses to cloud resources.
      * 
      */
-    @InputImport(name="dataprocServiceAccount")
+    @Import(name="dataprocServiceAccount")
       private final @Nullable Output<String> dataprocServiceAccount;
 
     public Output<String> getDataprocServiceAccount() {
@@ -70,7 +70,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * A description of this instance.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -81,7 +81,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Display name for an instance.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -92,7 +92,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Option to enable granular role-based access control.
      * 
      */
-    @InputImport(name="enableRbac")
+    @Import(name="enableRbac")
       private final @Nullable Output<Boolean> enableRbac;
 
     public Output<Boolean> getEnableRbac() {
@@ -103,7 +103,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Option to enable Stackdriver Logging.
      * 
      */
-    @InputImport(name="enableStackdriverLogging")
+    @Import(name="enableStackdriverLogging")
       private final @Nullable Output<Boolean> enableStackdriverLogging;
 
     public Output<Boolean> getEnableStackdriverLogging() {
@@ -114,14 +114,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Option to enable Stackdriver Monitoring.
      * 
      */
-    @InputImport(name="enableStackdriverMonitoring")
+    @Import(name="enableStackdriverMonitoring")
       private final @Nullable Output<Boolean> enableStackdriverMonitoring;
 
     public Output<Boolean> getEnableStackdriverMonitoring() {
         return this.enableStackdriverMonitoring == null ? Output.empty() : this.enableStackdriverMonitoring;
     }
 
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -132,14 +132,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource labels for instance to use to annotate any related underlying resources such as Compute Engine VMs. The character '=' is not allowed to be used within the labels.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -150,7 +150,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Network configuration options. These are required when a private Data Fusion instance is to be created.
      * 
      */
-    @InputImport(name="networkConfig")
+    @Import(name="networkConfig")
       private final @Nullable Output<NetworkConfigArgs> networkConfig;
 
     public Output<NetworkConfigArgs> getNetworkConfig() {
@@ -161,7 +161,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Map of additional options used to configure the behavior of Data Fusion instance.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<Map<String,String>> options;
 
     public Output<Map<String,String>> getOptions() {
@@ -172,14 +172,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the Data Fusion instance should be private. If set to true, all Data Fusion nodes will have private IP addresses and will not be able to access the public internet.
      * 
      */
-    @InputImport(name="privateInstance")
+    @Import(name="privateInstance")
       private final @Nullable Output<Boolean> privateInstance;
 
     public Output<Boolean> getPrivateInstance() {
         return this.privateInstance == null ? Output.empty() : this.privateInstance;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -190,7 +190,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Instance type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<InstanceType> type;
 
     public Output<InstanceType> getType() {
@@ -201,7 +201,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Current version of Data Fusion.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
@@ -212,7 +212,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the zone in which the Data Fusion instance will be created. Only DEVELOPER instances use this field.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

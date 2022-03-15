@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CassandraKeyspaceGetPropertiesResponseResource {
     /**
      * A system generated property representing the resource etag required for optimistic concurrency control.
@@ -31,12 +31,12 @@ public final class CassandraKeyspaceGetPropertiesResponseResource {
      */
     private final Double ts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CassandraKeyspaceGetPropertiesResponseResource(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("rid") String rid,
-        @OutputCustomType.Parameter("ts") Double ts) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("rid") String rid,
+        @CustomType.Parameter("ts") Double ts) {
         this.etag = etag;
         this.id = id;
         this.rid = rid;

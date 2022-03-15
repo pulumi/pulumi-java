@@ -5,13 +5,13 @@ package io.pulumi.aws.elasticloadbalancingv2.outputs;
 
 import io.pulumi.aws.elasticloadbalancingv2.outputs.ListenerRuleActionForwardStickiness;
 import io.pulumi.aws.elasticloadbalancingv2.outputs.ListenerRuleActionForwardTargetGroup;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerRuleActionForward {
     /**
      * The target group stickiness for the rule.
@@ -24,10 +24,10 @@ public final class ListenerRuleActionForward {
      */
     private final List<ListenerRuleActionForwardTargetGroup> targetGroups;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerRuleActionForward(
-        @OutputCustomType.Parameter("stickiness") @Nullable ListenerRuleActionForwardStickiness stickiness,
-        @OutputCustomType.Parameter("targetGroups") List<ListenerRuleActionForwardTargetGroup> targetGroups) {
+        @CustomType.Parameter("stickiness") @Nullable ListenerRuleActionForwardStickiness stickiness,
+        @CustomType.Parameter("targetGroups") List<ListenerRuleActionForwardTargetGroup> targetGroups) {
         this.stickiness = stickiness;
         this.targetGroups = targetGroups;
     }

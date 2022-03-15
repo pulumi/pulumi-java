@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
      * The continuation token.
      * 
      */
-    @InputImport(name="continuationToken")
+    @Import(name="continuationToken")
       private final @Nullable String continuationToken;
 
     public Optional<String> getContinuationToken() {
@@ -31,7 +31,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
      * The format to use when returning the webtest result.
      * 
      */
-    @InputImport(name="downloadAs", required=true)
+    @Import(name="downloadAs", required=true)
       private final String downloadAs;
 
     public String getDownloadAs() {
@@ -42,7 +42,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
      * The location ID where the webtest was physically run.
      * 
      */
-    @InputImport(name="geoLocationId", required=true)
+    @Import(name="geoLocationId", required=true)
       private final String geoLocationId;
 
     public String getGeoLocationId() {
@@ -53,7 +53,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
      * The success state criteria for the webtest result.
      * 
      */
-    @InputImport(name="testSuccessfulCriteria")
+    @Import(name="testSuccessfulCriteria")
       private final @Nullable Boolean testSuccessfulCriteria;
 
     public Optional<Boolean> getTestSuccessfulCriteria() {
@@ -75,7 +75,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
      * The posix (epoch) time stamp for the webtest result.
      * 
      */
-    @InputImport(name="timeStamp", required=true)
+    @Import(name="timeStamp", required=true)
       private final Integer timeStamp;
 
     public Integer getTimeStamp() {
@@ -86,7 +86,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the Application Insights webtest resource.
      * 
      */
-    @InputImport(name="webTestName", required=true)
+    @Import(name="webTestName", required=true)
       private final String webTestName;
 
     public String getWebTestName() {

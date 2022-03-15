@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.chaos.outputs;
 
 import io.pulumi.azurenative.chaos.outputs.TargetReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SelectorResponse {
     /**
      * String of the selector ID.
@@ -27,11 +27,11 @@ public final class SelectorResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SelectorResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("targets") List<TargetReferenceResponse> targets,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("targets") List<TargetReferenceResponse> targets,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.targets = targets;
         this.type = type;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudsearch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DomainScalingParametersArgs extends io.pulumi.resources.Resou
      * The instance type that you want to preconfigure for your domain. See the [AWS documentation](https://docs.aws.amazon.com/cloudsearch/latest/developerguide/API_ScalingParameters.html) for valid values.
      * 
      */
-    @InputImport(name="desiredInstanceType")
+    @Import(name="desiredInstanceType")
       private final @Nullable Output<String> desiredInstanceType;
 
     public Output<String> getDesiredInstanceType() {
@@ -30,7 +30,7 @@ public final class DomainScalingParametersArgs extends io.pulumi.resources.Resou
      * The number of partitions you want to preconfigure for your domain. Only valid when you select `search.2xlarge` as the instance type.
      * 
      */
-    @InputImport(name="desiredPartitionCount")
+    @Import(name="desiredPartitionCount")
       private final @Nullable Output<Integer> desiredPartitionCount;
 
     public Output<Integer> getDesiredPartitionCount() {
@@ -41,7 +41,7 @@ public final class DomainScalingParametersArgs extends io.pulumi.resources.Resou
      * The number of replicas you want to preconfigure for each index partition.
      * 
      */
-    @InputImport(name="desiredReplicationCount")
+    @Import(name="desiredReplicationCount")
       private final @Nullable Output<Integer> desiredReplicationCount;
 
     public Output<Integer> getDesiredReplicationCount() {

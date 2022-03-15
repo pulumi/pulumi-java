@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.recommendationengine_v1beta1.enums.GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1ImageArgs;
 import io.pulumi.googlenative.recommendationengine_v1beta1.inputs.GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs;
@@ -28,7 +28,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
      * Optional. The available quantity of the item.
      * 
      */
-    @InputImport(name="availableQuantity")
+    @Import(name="availableQuantity")
       private final @Nullable Output<String> availableQuantity;
 
     public Output<String> getAvailableQuantity() {
@@ -39,7 +39,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
      * Optional. Canonical URL directly linking to the item detail page with a length limit of 5 KiB..
      * 
      */
-    @InputImport(name="canonicalProductUri")
+    @Import(name="canonicalProductUri")
       private final @Nullable Output<String> canonicalProductUri;
 
     public Output<String> getCanonicalProductUri() {
@@ -50,7 +50,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
      * Optional. A map to pass the costs associated with the product. For example: {"manufacturing": 45.5} The profit of selling this item is computed like so: * If 'exactPrice' is provided, profit = displayPrice - sum(costs) * If 'priceRange' is provided, profit = minPrice - sum(costs)
      * 
      */
-    @InputImport(name="costs")
+    @Import(name="costs")
       private final @Nullable Output<Map<String,String>> costs;
 
     public Output<Map<String,String>> getCosts() {
@@ -61,7 +61,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
      * Optional. Only required if the price is set. Currency code for price/costs. Use three-character ISO-4217 code.
      * 
      */
-    @InputImport(name="currencyCode")
+    @Import(name="currencyCode")
       private final @Nullable Output<String> currencyCode;
 
     public Output<String> getCurrencyCode() {
@@ -72,7 +72,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
      * Optional. The exact product price.
      * 
      */
-    @InputImport(name="exactPrice")
+    @Import(name="exactPrice")
       private final @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs> exactPrice;
 
     public Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceArgs> getExactPrice() {
@@ -83,7 +83,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
      * Optional. Product images for the catalog item.
      * 
      */
-    @InputImport(name="images")
+    @Import(name="images")
       private final @Nullable Output<List<GoogleCloudRecommendationengineV1beta1ImageArgs>> images;
 
     public Output<List<GoogleCloudRecommendationengineV1beta1ImageArgs>> getImages() {
@@ -94,7 +94,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
      * Optional. The product price range.
      * 
      */
-    @InputImport(name="priceRange")
+    @Import(name="priceRange")
       private final @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs> priceRange;
 
     public Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs> getPriceRange() {
@@ -105,7 +105,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs 
      * Optional. Online stock state of the catalog item. Default is `IN_STOCK`.
      * 
      */
-    @InputImport(name="stockState")
+    @Import(name="stockState")
       private final @Nullable Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState> stockState;
 
     public Output<GoogleCloudRecommendationengineV1beta1ProductCatalogItemStockState> getStockState() {

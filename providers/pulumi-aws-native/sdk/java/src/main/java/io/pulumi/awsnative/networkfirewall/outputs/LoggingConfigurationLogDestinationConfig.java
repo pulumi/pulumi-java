@@ -5,11 +5,11 @@ package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.LoggingConfigurationLogDestinationConfigLogDestinationType;
 import io.pulumi.awsnative.networkfirewall.enums.LoggingConfigurationLogDestinationConfigLogType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LoggingConfigurationLogDestinationConfig {
     /**
      * A key-value pair to configure the logDestinations.
@@ -19,11 +19,11 @@ public final class LoggingConfigurationLogDestinationConfig {
     private final LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType;
     private final LoggingConfigurationLogDestinationConfigLogType logType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoggingConfigurationLogDestinationConfig(
-        @OutputCustomType.Parameter("logDestination") Object logDestination,
-        @OutputCustomType.Parameter("logDestinationType") LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType,
-        @OutputCustomType.Parameter("logType") LoggingConfigurationLogDestinationConfigLogType logType) {
+        @CustomType.Parameter("logDestination") Object logDestination,
+        @CustomType.Parameter("logDestinationType") LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType,
+        @CustomType.Parameter("logType") LoggingConfigurationLogDestinationConfigLogType logType) {
         this.logDestination = logDestination;
         this.logDestinationType = logDestinationType;
         this.logType = logType;

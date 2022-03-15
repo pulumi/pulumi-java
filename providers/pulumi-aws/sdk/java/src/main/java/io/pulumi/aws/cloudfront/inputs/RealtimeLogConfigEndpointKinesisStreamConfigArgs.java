@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class RealtimeLogConfigEndpointKinesisStreamConfigArgs extends io.p
      * See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-iam-role) for more information.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -29,7 +29,7 @@ public final class RealtimeLogConfigEndpointKinesisStreamConfigArgs extends io.p
      * The ARN of the Kinesis data stream.
      * 
      */
-    @InputImport(name="streamArn", required=true)
+    @Import(name="streamArn", required=true)
       private final Output<String> streamArn;
 
     public Output<String> getStreamArn() {

@@ -5,13 +5,13 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.CacheConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ForwardingConfigurationResponse {
     /**
      * A reference to the BackendPool which this rule routes to.
@@ -39,13 +39,13 @@ public final class ForwardingConfigurationResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ForwardingConfigurationResponse(
-        @OutputCustomType.Parameter("backendPool") @Nullable SubResourceResponse backendPool,
-        @OutputCustomType.Parameter("cacheConfiguration") @Nullable CacheConfigurationResponse cacheConfiguration,
-        @OutputCustomType.Parameter("customForwardingPath") @Nullable String customForwardingPath,
-        @OutputCustomType.Parameter("forwardingProtocol") @Nullable String forwardingProtocol,
-        @OutputCustomType.Parameter("odataType") String odataType) {
+        @CustomType.Parameter("backendPool") @Nullable SubResourceResponse backendPool,
+        @CustomType.Parameter("cacheConfiguration") @Nullable CacheConfigurationResponse cacheConfiguration,
+        @CustomType.Parameter("customForwardingPath") @Nullable String customForwardingPath,
+        @CustomType.Parameter("forwardingProtocol") @Nullable String forwardingProtocol,
+        @CustomType.Parameter("odataType") String odataType) {
         this.backendPool = backendPool;
         this.cacheConfiguration = cacheConfiguration;
         this.customForwardingPath = customForwardingPath;

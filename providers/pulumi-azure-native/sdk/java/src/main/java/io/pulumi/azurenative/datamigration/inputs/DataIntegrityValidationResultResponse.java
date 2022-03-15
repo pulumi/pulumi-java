@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ValidationErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DataIntegrityValidationResultResponse extends io.pulumi.resou
      * List of failed table names of source and target pair
      * 
      */
-    @InputImport(name="failedObjects", required=true)
+    @Import(name="failedObjects", required=true)
       private final Map<String,String> failedObjects;
 
     public Map<String,String> getFailedObjects() {
@@ -33,7 +33,7 @@ public final class DataIntegrityValidationResultResponse extends io.pulumi.resou
      * List of errors that happened while performing data integrity validation
      * 
      */
-    @InputImport(name="validationErrors", required=true)
+    @Import(name="validationErrors", required=true)
       private final ValidationErrorResponse validationErrors;
 
     public ValidationErrorResponse getValidationErrors() {

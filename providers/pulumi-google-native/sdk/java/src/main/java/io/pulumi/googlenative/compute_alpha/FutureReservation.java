@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.FutureReservationArgs;
@@ -25,7 +25,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * The creation timestamp for this future reservation in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -39,7 +39,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this property when you create the future reservation.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -49,7 +49,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
     public Output<String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     public Output<String> getKind() {
@@ -59,7 +59,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -73,7 +73,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * Name prefix for the reservations to be created at the time of delivery. The name prefix must comply with RFC1035. Maximum allowed length for name prefix is 20. Automatically created reservations name format will be -date-####.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output<String> namePrefix;
 
     /**
@@ -87,7 +87,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * Server-defined fully-qualified URL for this resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -101,7 +101,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * Server-defined URL for this resource with the resource id.
      * 
      */
-    @OutputExport(name="selfLinkWithId", type=String.class, parameters={})
+    @Export(name="selfLinkWithId", type=String.class, parameters={})
     private Output<String> selfLinkWithId;
 
     /**
@@ -115,7 +115,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * List of Projects/Folders to share with.
      * 
      */
-    @OutputExport(name="shareSettings", type=ShareSettingsResponse.class, parameters={})
+    @Export(name="shareSettings", type=ShareSettingsResponse.class, parameters={})
     private Output<ShareSettingsResponse> shareSettings;
 
     /**
@@ -129,7 +129,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * Future Reservation configuration to indicate instance properties and total count.
      * 
      */
-    @OutputExport(name="specificSkuProperties", type=FutureReservationSpecificSKUPropertiesResponse.class, parameters={})
+    @Export(name="specificSkuProperties", type=FutureReservationSpecificSKUPropertiesResponse.class, parameters={})
     private Output<FutureReservationSpecificSKUPropertiesResponse> specificSkuProperties;
 
     /**
@@ -143,7 +143,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * [Output only] Status of the Future Reservation
      * 
      */
-    @OutputExport(name="status", type=FutureReservationStatusResponse.class, parameters={})
+    @Export(name="status", type=FutureReservationStatusResponse.class, parameters={})
     private Output<FutureReservationStatusResponse> status;
 
     /**
@@ -157,7 +157,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * Time window for this Future Reservation.
      * 
      */
-    @OutputExport(name="timeWindow", type=FutureReservationTimeWindowResponse.class, parameters={})
+    @Export(name="timeWindow", type=FutureReservationTimeWindowResponse.class, parameters={})
     private Output<FutureReservationTimeWindowResponse> timeWindow;
 
     /**
@@ -171,7 +171,7 @@ public class FutureReservation extends io.pulumi.resources.CustomResource {
      * URL of the Zone where this future reservation resides.
      * 
      */
-    @OutputExport(name="zone", type=String.class, parameters={})
+    @Export(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
     /**

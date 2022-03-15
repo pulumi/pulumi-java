@@ -6,13 +6,13 @@ package io.pulumi.azurenative.storagepool.outputs;
 import io.pulumi.azurenative.storagepool.outputs.AclResponse;
 import io.pulumi.azurenative.storagepool.outputs.AttributesResponse;
 import io.pulumi.azurenative.storagepool.outputs.IscsiLunResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TargetPortalGroupResponse {
     /**
      * Access Control List (ACL) for an iSCSI target portal group.
@@ -45,14 +45,14 @@ public final class TargetPortalGroupResponse {
      */
     private final Integer tag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TargetPortalGroupResponse(
-        @OutputCustomType.Parameter("acls") List<AclResponse> acls,
-        @OutputCustomType.Parameter("attributes") AttributesResponse attributes,
-        @OutputCustomType.Parameter("endpoints") List<String> endpoints,
-        @OutputCustomType.Parameter("luns") List<IscsiLunResponse> luns,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("tag") Integer tag) {
+        @CustomType.Parameter("acls") List<AclResponse> acls,
+        @CustomType.Parameter("attributes") AttributesResponse attributes,
+        @CustomType.Parameter("endpoints") List<String> endpoints,
+        @CustomType.Parameter("luns") List<IscsiLunResponse> luns,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("tag") Integer tag) {
         this.acls = acls;
         this.attributes = attributes;
         this.endpoints = endpoints;

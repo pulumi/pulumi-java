@@ -8,7 +8,7 @@ import io.pulumi.awsnative.codeguruprofiler.inputs.AgentPermissionsPropertiesArg
 import io.pulumi.awsnative.codeguruprofiler.inputs.ProfilingGroupChannelArgs;
 import io.pulumi.awsnative.codeguruprofiler.inputs.ProfilingGroupTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The agent permissions attached to this profiling group.
      * 
      */
-    @InputImport(name="agentPermissions")
+    @Import(name="agentPermissions")
       private final @Nullable Output<AgentPermissionsPropertiesArgs> agentPermissions;
 
     public Output<AgentPermissionsPropertiesArgs> getAgentPermissions() {
@@ -34,7 +34,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for Notification Channels for Anomaly Detection feature in CodeGuru Profiler which enables customers to detect anomalies in the application profile for those methods that represent the highest proportion of CPU time or latency
      * 
      */
-    @InputImport(name="anomalyDetectionNotificationConfiguration")
+    @Import(name="anomalyDetectionNotificationConfiguration")
       private final @Nullable Output<List<ProfilingGroupChannelArgs>> anomalyDetectionNotificationConfiguration;
 
     public Output<List<ProfilingGroupChannelArgs>> getAnomalyDetectionNotificationConfiguration() {
@@ -45,7 +45,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The compute platform of the profiling group.
      * 
      */
-    @InputImport(name="computePlatform")
+    @Import(name="computePlatform")
       private final @Nullable Output<ProfilingGroupComputePlatform> computePlatform;
 
     public Output<ProfilingGroupComputePlatform> getComputePlatform() {
@@ -56,7 +56,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the profiling group.
      * 
      */
-    @InputImport(name="profilingGroupName")
+    @Import(name="profilingGroupName")
       private final @Nullable Output<String> profilingGroupName;
 
     public Output<String> getProfilingGroupName() {
@@ -67,7 +67,7 @@ public final class ProfilingGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The tags associated with a profiling group.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ProfilingGroupTagArgs>> tags;
 
     public Output<List<ProfilingGroupTagArgs>> getTags() {

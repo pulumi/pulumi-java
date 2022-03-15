@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ImageVersionArgs extends io.pulumi.resources.ResourceArgs {
      * The registry path of the container image on which this image version is based.
      * 
      */
-    @InputImport(name="baseImage", required=true)
+    @Import(name="baseImage", required=true)
       private final Output<String> baseImage;
 
     public Output<String> getBaseImage() {
@@ -28,7 +28,7 @@ public final class ImageVersionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the image. Must be unique to your account.
      * 
      */
-    @InputImport(name="imageName", required=true)
+    @Import(name="imageName", required=true)
       private final Output<String> imageName;
 
     public Output<String> getImageName() {

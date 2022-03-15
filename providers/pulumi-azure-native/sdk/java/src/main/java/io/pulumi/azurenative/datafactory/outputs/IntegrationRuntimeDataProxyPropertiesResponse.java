@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.EntityReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationRuntimeDataProxyPropertiesResponse {
     /**
      * The self-hosted integration runtime reference.
@@ -28,11 +28,11 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse {
      */
     private final @Nullable EntityReferenceResponse stagingLinkedService;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationRuntimeDataProxyPropertiesResponse(
-        @OutputCustomType.Parameter("connectVia") @Nullable EntityReferenceResponse connectVia,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("stagingLinkedService") @Nullable EntityReferenceResponse stagingLinkedService) {
+        @CustomType.Parameter("connectVia") @Nullable EntityReferenceResponse connectVia,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("stagingLinkedService") @Nullable EntityReferenceResponse stagingLinkedService) {
         this.connectVia = connectVia;
         this.path = path;
         this.stagingLinkedService = stagingLinkedService;

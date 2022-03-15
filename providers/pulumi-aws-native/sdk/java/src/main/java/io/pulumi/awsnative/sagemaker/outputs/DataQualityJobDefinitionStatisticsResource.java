@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataQualityJobDefinitionStatisticsResource {
     /**
      * The Amazon S3 URI for the baseline statistics file in Amazon S3 that the current monitoring job should be validated against.
@@ -17,8 +17,8 @@ public final class DataQualityJobDefinitionStatisticsResource {
      */
     private final @Nullable String s3Uri;
 
-    @OutputCustomType.Constructor
-    private DataQualityJobDefinitionStatisticsResource(@OutputCustomType.Parameter("s3Uri") @Nullable String s3Uri) {
+    @CustomType.Constructor
+    private DataQualityJobDefinitionStatisticsResource(@CustomType.Parameter("s3Uri") @Nullable String s3Uri) {
         this.s3Uri = s3Uri;
     }
 

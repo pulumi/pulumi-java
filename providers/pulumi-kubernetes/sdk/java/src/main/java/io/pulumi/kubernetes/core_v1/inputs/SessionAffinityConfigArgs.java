@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.ClientIPConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SessionAffinityConfigArgs extends io.pulumi.resources.Resourc
      * clientIP contains the configurations of Client IP based session affinity.
      * 
      */
-    @InputImport(name="clientIP")
+    @Import(name="clientIP")
       private final @Nullable Output<ClientIPConfigArgs> clientIP;
 
     public Output<ClientIPConfigArgs> getClientIP() {

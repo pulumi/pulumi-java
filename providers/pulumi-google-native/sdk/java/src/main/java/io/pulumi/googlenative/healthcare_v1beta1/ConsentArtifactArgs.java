@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.ImageArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.SignatureArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. Screenshots, PDFs, or other binary information documenting the user's consent.
      * 
      */
-    @InputImport(name="consentContentScreenshots")
+    @Import(name="consentContentScreenshots")
       private final @Nullable Output<List<ImageArgs>> consentContentScreenshots;
 
     public Output<List<ImageArgs>> getConsentContentScreenshots() {
@@ -33,21 +33,21 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. An string indicating the version of the consent information shown to the user.
      * 
      */
-    @InputImport(name="consentContentVersion")
+    @Import(name="consentContentVersion")
       private final @Nullable Output<String> consentContentVersion;
 
     public Output<String> getConsentContentVersion() {
         return this.consentContentVersion == null ? Output.empty() : this.consentContentVersion;
     }
 
-    @InputImport(name="consentStoreId", required=true)
+    @Import(name="consentStoreId", required=true)
       private final Output<String> consentStoreId;
 
     public Output<String> getConsentStoreId() {
         return this.consentStoreId;
     }
 
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
     public Output<String> getDatasetId() {
@@ -58,14 +58,14 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. A signature from a guardian.
      * 
      */
-    @InputImport(name="guardianSignature")
+    @Import(name="guardianSignature")
       private final @Nullable Output<SignatureArgs> guardianSignature;
 
     public Output<SignatureArgs> getGuardianSignature() {
         return this.guardianSignature == null ? Output.empty() : this.guardianSignature;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -76,7 +76,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. Metadata associated with the Consent artifact. For example, the consent locale or user agent version.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -87,14 +87,14 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * Resource name of the Consent artifact, of the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed after creation.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -105,7 +105,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * User's UUID provided by the client.
      * 
      */
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final Output<String> userId;
 
     public Output<String> getUserId() {
@@ -116,7 +116,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. User's signature.
      * 
      */
-    @InputImport(name="userSignature")
+    @Import(name="userSignature")
       private final @Nullable Output<SignatureArgs> userSignature;
 
     public Output<SignatureArgs> getUserSignature() {
@@ -127,7 +127,7 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. A signature from a witness.
      * 
      */
-    @InputImport(name="witnessSignature")
+    @Import(name="witnessSignature")
       private final @Nullable Output<SignatureArgs> witnessSignature;
 
     public Output<SignatureArgs> getWitnessSignature() {

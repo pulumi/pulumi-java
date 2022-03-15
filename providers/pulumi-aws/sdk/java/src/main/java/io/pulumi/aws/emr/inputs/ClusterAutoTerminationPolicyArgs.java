@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ClusterAutoTerminationPolicyArgs extends io.pulumi.resources.
      * Specifies the amount of idle time in seconds after which the cluster automatically terminates. You can specify a minimum of `60` seconds and a maximum of `604800` seconds (seven days).
      * 
      */
-    @InputImport(name="idleTimeout")
+    @Import(name="idleTimeout")
       private final @Nullable Output<Integer> idleTimeout;
 
     public Output<Integer> getIdleTimeout() {

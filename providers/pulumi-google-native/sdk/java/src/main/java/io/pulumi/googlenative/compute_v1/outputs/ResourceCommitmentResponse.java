@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceCommitmentResponse {
     /**
      * Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
@@ -25,11 +25,11 @@ public final class ResourceCommitmentResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceCommitmentResponse(
-        @OutputCustomType.Parameter("acceleratorType") String acceleratorType,
-        @OutputCustomType.Parameter("amount") String amount,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("acceleratorType") String acceleratorType,
+        @CustomType.Parameter("amount") String amount,
+        @CustomType.Parameter("type") String type) {
         this.acceleratorType = acceleratorType;
         this.amount = amount;
         this.type = type;

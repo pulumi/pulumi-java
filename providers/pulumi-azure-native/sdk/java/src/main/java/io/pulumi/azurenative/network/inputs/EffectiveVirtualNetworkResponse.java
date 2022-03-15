@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EffectiveVirtualNetworkResponse extends io.pulumi.resources.I
      * Effective vnet Id.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -33,7 +33,7 @@ public final class EffectiveVirtualNetworkResponse extends io.pulumi.resources.I
      * Location of vnet.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -44,7 +44,7 @@ public final class EffectiveVirtualNetworkResponse extends io.pulumi.resources.I
      * Membership Type.
      * 
      */
-    @InputImport(name="membershipType")
+    @Import(name="membershipType")
       private final @Nullable String membershipType;
 
     public Optional<String> getMembershipType() {

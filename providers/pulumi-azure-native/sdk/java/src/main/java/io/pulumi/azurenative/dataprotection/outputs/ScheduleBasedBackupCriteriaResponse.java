@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.DayResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScheduleBasedBackupCriteriaResponse {
     /**
      * it contains absolute values like "AllBackup" / "FirstOfDay" / "FirstOfWeek" / "FirstOfMonth"
@@ -50,15 +50,15 @@ public final class ScheduleBasedBackupCriteriaResponse {
      */
     private final @Nullable List<String> weeksOfTheMonth;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScheduleBasedBackupCriteriaResponse(
-        @OutputCustomType.Parameter("absoluteCriteria") @Nullable List<String> absoluteCriteria,
-        @OutputCustomType.Parameter("daysOfMonth") @Nullable List<DayResponse> daysOfMonth,
-        @OutputCustomType.Parameter("daysOfTheWeek") @Nullable List<String> daysOfTheWeek,
-        @OutputCustomType.Parameter("monthsOfYear") @Nullable List<String> monthsOfYear,
-        @OutputCustomType.Parameter("objectType") String objectType,
-        @OutputCustomType.Parameter("scheduleTimes") @Nullable List<String> scheduleTimes,
-        @OutputCustomType.Parameter("weeksOfTheMonth") @Nullable List<String> weeksOfTheMonth) {
+        @CustomType.Parameter("absoluteCriteria") @Nullable List<String> absoluteCriteria,
+        @CustomType.Parameter("daysOfMonth") @Nullable List<DayResponse> daysOfMonth,
+        @CustomType.Parameter("daysOfTheWeek") @Nullable List<String> daysOfTheWeek,
+        @CustomType.Parameter("monthsOfYear") @Nullable List<String> monthsOfYear,
+        @CustomType.Parameter("objectType") String objectType,
+        @CustomType.Parameter("scheduleTimes") @Nullable List<String> scheduleTimes,
+        @CustomType.Parameter("weeksOfTheMonth") @Nullable List<String> weeksOfTheMonth) {
         this.absoluteCriteria = absoluteCriteria;
         this.daysOfMonth = daysOfMonth;
         this.daysOfTheWeek = daysOfTheWeek;

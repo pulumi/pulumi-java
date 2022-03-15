@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.location.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetRouteCalculatorArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetRouteCalculatorArgs Empty = new GetRouteCalculatorArgs();
 
-    @InputImport(name="calculatorName", required=true)
+    @Import(name="calculatorName", required=true)
       private final String calculatorName;
 
     public String getCalculatorName() {

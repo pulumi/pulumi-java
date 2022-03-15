@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.SuppressionAlertsScopeResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAlertsSuppressionRuleResult {
     /**
      * Type of the alert to automatically suppress. For all alert types, use '*'
@@ -63,18 +63,18 @@ public final class GetAlertsSuppressionRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAlertsSuppressionRuleResult(
-        @OutputCustomType.Parameter("alertType") String alertType,
-        @OutputCustomType.Parameter("comment") @Nullable String comment,
-        @OutputCustomType.Parameter("expirationDateUtc") @Nullable String expirationDateUtc,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModifiedUtc") String lastModifiedUtc,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("reason") String reason,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("suppressionAlertsScope") @Nullable SuppressionAlertsScopeResponse suppressionAlertsScope,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("alertType") String alertType,
+        @CustomType.Parameter("comment") @Nullable String comment,
+        @CustomType.Parameter("expirationDateUtc") @Nullable String expirationDateUtc,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModifiedUtc") String lastModifiedUtc,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("reason") String reason,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("suppressionAlertsScope") @Nullable SuppressionAlertsScopeResponse suppressionAlertsScope,
+        @CustomType.Parameter("type") String type) {
         this.alertType = alertType;
         this.comment = comment;
         this.expirationDateUtc = expirationDateUtc;

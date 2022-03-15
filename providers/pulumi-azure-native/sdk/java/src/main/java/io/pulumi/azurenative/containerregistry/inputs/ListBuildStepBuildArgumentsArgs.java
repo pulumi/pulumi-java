@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListBuildStepBuildArgumentsArgs extends io.pulumi.resources.I
      * The name of the container registry build task.
      * 
      */
-    @InputImport(name="buildTaskName", required=true)
+    @Import(name="buildTaskName", required=true)
       private final String buildTaskName;
 
     public String getBuildTaskName() {
@@ -27,7 +27,7 @@ public final class ListBuildStepBuildArgumentsArgs extends io.pulumi.resources.I
      * The name of the container registry.
      * 
      */
-    @InputImport(name="registryName", required=true)
+    @Import(name="registryName", required=true)
       private final String registryName;
 
     public String getRegistryName() {
@@ -38,7 +38,7 @@ public final class ListBuildStepBuildArgumentsArgs extends io.pulumi.resources.I
      * The name of the resource group to which the container registry belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class ListBuildStepBuildArgumentsArgs extends io.pulumi.resources.I
      * The name of a build step for a container registry build task.
      * 
      */
-    @InputImport(name="stepName", required=true)
+    @Import(name="stepName", required=true)
       private final String stepName;
 
     public String getStepName() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.ecrpublic;
 
 import io.pulumi.aws.ecrpublic.inputs.RepositoryCatalogDataArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * Catalog data configuration for the repository. See below for schema.
      * 
      */
-    @InputImport(name="catalogData")
+    @Import(name="catalogData")
       private final @Nullable Output<RepositoryCatalogDataArgs> catalogData;
 
     public Output<RepositoryCatalogDataArgs> getCatalogData() {
         return this.catalogData == null ? Output.empty() : this.catalogData;
     }
 
-    @InputImport(name="forceDestroy")
+    @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
     public Output<Boolean> getForceDestroy() {
@@ -38,7 +38,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the repository.
      * 
      */
-    @InputImport(name="repositoryName", required=true)
+    @Import(name="repositoryName", required=true)
       private final Output<String> repositoryName;
 
     public Output<String> getRepositoryName() {

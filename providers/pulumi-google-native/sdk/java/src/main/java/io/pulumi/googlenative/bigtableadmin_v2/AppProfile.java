@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigtableadmin_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigtableadmin_v2.AppProfileArgs;
@@ -23,7 +23,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * Long form description of the use case for this AppProfile.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -37,7 +37,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * Strongly validated etag for optimistic concurrency control. Preserve the value returned from `GetAppProfile` when calling `UpdateAppProfile` to fail the request if there has been a modification in the mean time. The `update_mask` of the request need not include `etag` for this protection to apply. See [Wikipedia](https://en.wikipedia.org/wiki/HTTP_ETag) and [RFC 7232](https://tools.ietf.org/html/rfc7232#section-2.3) for more details.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -51,7 +51,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * Use a multi-cluster routing policy.
      * 
      */
-    @OutputExport(name="multiClusterRoutingUseAny", type=MultiClusterRoutingUseAnyResponse.class, parameters={})
+    @Export(name="multiClusterRoutingUseAny", type=MultiClusterRoutingUseAnyResponse.class, parameters={})
     private Output<MultiClusterRoutingUseAnyResponse> multiClusterRoutingUseAny;
 
     /**
@@ -65,7 +65,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * The unique name of the app profile. Values are of the form `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * Use a single-cluster routing policy.
      * 
      */
-    @OutputExport(name="singleClusterRouting", type=SingleClusterRoutingResponse.class, parameters={})
+    @Export(name="singleClusterRouting", type=SingleClusterRoutingResponse.class, parameters={})
     private Output<SingleClusterRoutingResponse> singleClusterRouting;
 
     /**

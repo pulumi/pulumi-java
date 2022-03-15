@@ -4,14 +4,14 @@
 package io.pulumi.aws.batch.outputs;
 
 import io.pulumi.aws.batch.outputs.GetJobQueueComputeEnvironmentOrder;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetJobQueueResult {
     /**
      * The ARN of the job queue.
@@ -65,18 +65,18 @@ public final class GetJobQueueResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobQueueResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("computeEnvironmentOrders") List<GetJobQueueComputeEnvironmentOrder> computeEnvironmentOrders,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("schedulingPolicyArn") String schedulingPolicyArn,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusReason") String statusReason,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("computeEnvironmentOrders") List<GetJobQueueComputeEnvironmentOrder> computeEnvironmentOrders,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("schedulingPolicyArn") String schedulingPolicyArn,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusReason") String statusReason,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.computeEnvironmentOrders = computeEnvironmentOrders;
         this.id = id;

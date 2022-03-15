@@ -4,7 +4,7 @@
 package io.pulumi.aws.efs.inputs;
 
 import io.pulumi.aws.efs.inputs.GetAccessPointRootDirectoryCreationInfo;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetAccessPointRootDirectory extends io.pulumi.resources.Invok
      * Single element list containing information on the creation permissions of the directory
      * 
      */
-    @InputImport(name="creationInfos", required=true)
+    @Import(name="creationInfos", required=true)
       private final List<GetAccessPointRootDirectoryCreationInfo> creationInfos;
 
     public List<GetAccessPointRootDirectoryCreationInfo> getCreationInfos() {
@@ -29,7 +29,7 @@ public final class GetAccessPointRootDirectory extends io.pulumi.resources.Invok
      * Path exposed as the root directory
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {

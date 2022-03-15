@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
      * Amazon SNS topic to post a notification to when inference fails. If no topic is provided, no notification is sent on failure.
      * 
      */
-    @InputImport(name="errorTopic")
+    @Import(name="errorTopic")
       private final @Nullable Output<String> errorTopic;
 
     public Output<String> getErrorTopic() {
@@ -29,7 +29,7 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
      * Amazon SNS topic to post a notification to when inference completes successfully. If no topic is provided, no notification is sent on success.
      * 
      */
-    @InputImport(name="successTopic")
+    @Import(name="successTopic")
       private final @Nullable Output<String> successTopic;
 
     public Output<String> getSuccessTopic() {

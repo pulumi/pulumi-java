@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class A2AProtectedManagedDiskDetailsResponse {
     /**
      * The disk level operations list.
@@ -146,34 +146,34 @@ public final class A2AProtectedManagedDiskDetailsResponse {
      */
     private final @Nullable String tfoDiskName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private A2AProtectedManagedDiskDetailsResponse(
-        @OutputCustomType.Parameter("allowedDiskLevelOperation") @Nullable List<String> allowedDiskLevelOperation,
-        @OutputCustomType.Parameter("dataPendingAtSourceAgentInMB") @Nullable Double dataPendingAtSourceAgentInMB,
-        @OutputCustomType.Parameter("dataPendingInStagingStorageAccountInMB") @Nullable Double dataPendingInStagingStorageAccountInMB,
-        @OutputCustomType.Parameter("dekKeyVaultArmId") @Nullable String dekKeyVaultArmId,
-        @OutputCustomType.Parameter("diskCapacityInBytes") @Nullable Double diskCapacityInBytes,
-        @OutputCustomType.Parameter("diskId") @Nullable String diskId,
-        @OutputCustomType.Parameter("diskName") @Nullable String diskName,
-        @OutputCustomType.Parameter("diskState") @Nullable String diskState,
-        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
-        @OutputCustomType.Parameter("failoverDiskName") @Nullable String failoverDiskName,
-        @OutputCustomType.Parameter("isDiskEncrypted") @Nullable Boolean isDiskEncrypted,
-        @OutputCustomType.Parameter("isDiskKeyEncrypted") @Nullable Boolean isDiskKeyEncrypted,
-        @OutputCustomType.Parameter("kekKeyVaultArmId") @Nullable String kekKeyVaultArmId,
-        @OutputCustomType.Parameter("keyIdentifier") @Nullable String keyIdentifier,
-        @OutputCustomType.Parameter("monitoringJobType") @Nullable String monitoringJobType,
-        @OutputCustomType.Parameter("monitoringPercentageCompletion") @Nullable Integer monitoringPercentageCompletion,
-        @OutputCustomType.Parameter("primaryStagingAzureStorageAccountId") @Nullable String primaryStagingAzureStorageAccountId,
-        @OutputCustomType.Parameter("recoveryDiskEncryptionSetId") @Nullable String recoveryDiskEncryptionSetId,
-        @OutputCustomType.Parameter("recoveryReplicaDiskAccountType") @Nullable String recoveryReplicaDiskAccountType,
-        @OutputCustomType.Parameter("recoveryReplicaDiskId") @Nullable String recoveryReplicaDiskId,
-        @OutputCustomType.Parameter("recoveryResourceGroupId") @Nullable String recoveryResourceGroupId,
-        @OutputCustomType.Parameter("recoveryTargetDiskAccountType") @Nullable String recoveryTargetDiskAccountType,
-        @OutputCustomType.Parameter("recoveryTargetDiskId") @Nullable String recoveryTargetDiskId,
-        @OutputCustomType.Parameter("resyncRequired") @Nullable Boolean resyncRequired,
-        @OutputCustomType.Parameter("secretIdentifier") @Nullable String secretIdentifier,
-        @OutputCustomType.Parameter("tfoDiskName") @Nullable String tfoDiskName) {
+        @CustomType.Parameter("allowedDiskLevelOperation") @Nullable List<String> allowedDiskLevelOperation,
+        @CustomType.Parameter("dataPendingAtSourceAgentInMB") @Nullable Double dataPendingAtSourceAgentInMB,
+        @CustomType.Parameter("dataPendingInStagingStorageAccountInMB") @Nullable Double dataPendingInStagingStorageAccountInMB,
+        @CustomType.Parameter("dekKeyVaultArmId") @Nullable String dekKeyVaultArmId,
+        @CustomType.Parameter("diskCapacityInBytes") @Nullable Double diskCapacityInBytes,
+        @CustomType.Parameter("diskId") @Nullable String diskId,
+        @CustomType.Parameter("diskName") @Nullable String diskName,
+        @CustomType.Parameter("diskState") @Nullable String diskState,
+        @CustomType.Parameter("diskType") @Nullable String diskType,
+        @CustomType.Parameter("failoverDiskName") @Nullable String failoverDiskName,
+        @CustomType.Parameter("isDiskEncrypted") @Nullable Boolean isDiskEncrypted,
+        @CustomType.Parameter("isDiskKeyEncrypted") @Nullable Boolean isDiskKeyEncrypted,
+        @CustomType.Parameter("kekKeyVaultArmId") @Nullable String kekKeyVaultArmId,
+        @CustomType.Parameter("keyIdentifier") @Nullable String keyIdentifier,
+        @CustomType.Parameter("monitoringJobType") @Nullable String monitoringJobType,
+        @CustomType.Parameter("monitoringPercentageCompletion") @Nullable Integer monitoringPercentageCompletion,
+        @CustomType.Parameter("primaryStagingAzureStorageAccountId") @Nullable String primaryStagingAzureStorageAccountId,
+        @CustomType.Parameter("recoveryDiskEncryptionSetId") @Nullable String recoveryDiskEncryptionSetId,
+        @CustomType.Parameter("recoveryReplicaDiskAccountType") @Nullable String recoveryReplicaDiskAccountType,
+        @CustomType.Parameter("recoveryReplicaDiskId") @Nullable String recoveryReplicaDiskId,
+        @CustomType.Parameter("recoveryResourceGroupId") @Nullable String recoveryResourceGroupId,
+        @CustomType.Parameter("recoveryTargetDiskAccountType") @Nullable String recoveryTargetDiskAccountType,
+        @CustomType.Parameter("recoveryTargetDiskId") @Nullable String recoveryTargetDiskId,
+        @CustomType.Parameter("resyncRequired") @Nullable Boolean resyncRequired,
+        @CustomType.Parameter("secretIdentifier") @Nullable String secretIdentifier,
+        @CustomType.Parameter("tfoDiskName") @Nullable String tfoDiskName) {
         this.allowedDiskLevelOperation = allowedDiskLevelOperation;
         this.dataPendingAtSourceAgentInMB = dataPendingAtSourceAgentInMB;
         this.dataPendingInStagingStorageAccountInMB = dataPendingInStagingStorageAccountInMB;

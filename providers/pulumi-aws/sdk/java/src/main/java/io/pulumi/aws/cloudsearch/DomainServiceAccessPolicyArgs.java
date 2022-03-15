@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudsearch;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DomainServiceAccessPolicyArgs extends io.pulumi.resources.Res
      * The access rules you want to configure. These rules replace any existing rules. See the [AWS documentation](https://docs.aws.amazon.com/cloudsearch/latest/developerguide/configuring-access.html) for details.
      * 
      */
-    @InputImport(name="accessPolicy", required=true)
+    @Import(name="accessPolicy", required=true)
       private final Output<String> accessPolicy;
 
     public Output<String> getAccessPolicy() {
@@ -28,7 +28,7 @@ public final class DomainServiceAccessPolicyArgs extends io.pulumi.resources.Res
      * The CloudSearch domain name the policy applies to.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {

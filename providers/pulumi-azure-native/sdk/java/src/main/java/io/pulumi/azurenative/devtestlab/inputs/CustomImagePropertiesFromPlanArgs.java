@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
      * The id of the plan, equivalent to name of the plan
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -33,7 +33,7 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
      * The offer for the plan from the marketplace image the custom image is derived from
      * 
      */
-    @InputImport(name="offer")
+    @Import(name="offer")
       private final @Nullable Output<String> offer;
 
     public Output<String> getOffer() {
@@ -44,7 +44,7 @@ public final class CustomImagePropertiesFromPlanArgs extends io.pulumi.resources
      * The publisher for the plan from the marketplace image the custom image is derived from
      * 
      */
-    @InputImport(name="publisher")
+    @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
     public Output<String> getPublisher() {

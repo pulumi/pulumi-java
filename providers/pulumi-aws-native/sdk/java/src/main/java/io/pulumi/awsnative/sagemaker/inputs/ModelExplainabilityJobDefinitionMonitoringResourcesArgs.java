@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelExplainabilityJobDefinitionClusterConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class ModelExplainabilityJobDefinitionMonitoringResourcesArgs exten
 
     public static final ModelExplainabilityJobDefinitionMonitoringResourcesArgs Empty = new ModelExplainabilityJobDefinitionMonitoringResourcesArgs();
 
-    @InputImport(name="clusterConfig", required=true)
+    @Import(name="clusterConfig", required=true)
       private final Output<ModelExplainabilityJobDefinitionClusterConfigArgs> clusterConfig;
 
     public Output<ModelExplainabilityJobDefinitionClusterConfigArgs> getClusterConfig() {

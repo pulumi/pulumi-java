@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datamigration_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReverseSshConnectivityResponse {
     /**
      * The name of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
@@ -31,12 +31,12 @@ public final class ReverseSshConnectivityResponse {
      */
     private final String vpc;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReverseSshConnectivityResponse(
-        @OutputCustomType.Parameter("vm") String vm,
-        @OutputCustomType.Parameter("vmIp") String vmIp,
-        @OutputCustomType.Parameter("vmPort") Integer vmPort,
-        @OutputCustomType.Parameter("vpc") String vpc) {
+        @CustomType.Parameter("vm") String vm,
+        @CustomType.Parameter("vmIp") String vmIp,
+        @CustomType.Parameter("vmPort") Integer vmPort,
+        @CustomType.Parameter("vpc") String vpc) {
         this.vm = vm;
         this.vmIp = vmIp;
         this.vmPort = vmPort;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the role assignment. It can be any valid GUID.
      * 
      */
-    @InputImport(name="roleAssignmentName", required=true)
+    @Import(name="roleAssignmentName", required=true)
       private final String roleAssignmentName;
 
     public String getRoleAssignmentName() {
@@ -29,7 +29,7 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
      * The scope of the operation or resource. Valid scopes are: subscription (format: '/subscriptions/{subscriptionId}'), resource group (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final String scope;
 
     public String getScope() {
@@ -40,7 +40,7 @@ public final class GetRoleAssignmentArgs extends io.pulumi.resources.InvokeArgs 
      * Tenant ID for cross-tenant request
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {

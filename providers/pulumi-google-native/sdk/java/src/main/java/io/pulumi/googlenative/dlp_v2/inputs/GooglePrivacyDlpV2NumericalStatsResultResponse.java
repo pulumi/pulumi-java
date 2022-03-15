@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends io.pul
      * Maximum value appearing in the column.
      * 
      */
-    @InputImport(name="maxValue", required=true)
+    @Import(name="maxValue", required=true)
       private final GooglePrivacyDlpV2ValueResponse maxValue;
 
     public GooglePrivacyDlpV2ValueResponse getMaxValue() {
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends io.pul
      * Minimum value appearing in the column.
      * 
      */
-    @InputImport(name="minValue", required=true)
+    @Import(name="minValue", required=true)
       private final GooglePrivacyDlpV2ValueResponse minValue;
 
     public GooglePrivacyDlpV2ValueResponse getMinValue() {
@@ -43,7 +43,7 @@ public final class GooglePrivacyDlpV2NumericalStatsResultResponse extends io.pul
      * List of 99 values that partition the set of field values into 100 equal sized buckets.
      * 
      */
-    @InputImport(name="quantileValues", required=true)
+    @Import(name="quantileValues", required=true)
       private final List<GooglePrivacyDlpV2ValueResponse> quantileValues;
 
     public List<GooglePrivacyDlpV2ValueResponse> getQuantileValues() {

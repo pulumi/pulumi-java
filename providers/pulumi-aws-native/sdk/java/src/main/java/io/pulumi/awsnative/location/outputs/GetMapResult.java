@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.location.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMapResult {
     private final @Nullable String arn;
     private final @Nullable String createTime;
@@ -17,13 +17,13 @@ public final class GetMapResult {
     private final @Nullable String mapArn;
     private final @Nullable String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMapResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
-        @OutputCustomType.Parameter("dataSource") @Nullable String dataSource,
-        @OutputCustomType.Parameter("mapArn") @Nullable String mapArn,
-        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("createTime") @Nullable String createTime,
+        @CustomType.Parameter("dataSource") @Nullable String dataSource,
+        @CustomType.Parameter("mapArn") @Nullable String mapArn,
+        @CustomType.Parameter("updateTime") @Nullable String updateTime) {
         this.arn = arn;
         this.createTime = createTime;
         this.dataSource = dataSource;

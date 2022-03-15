@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TopicRulePutItemInput {
     private final String tableName;
 
-    @OutputCustomType.Constructor
-    private TopicRulePutItemInput(@OutputCustomType.Parameter("tableName") String tableName) {
+    @CustomType.Constructor
+    private TopicRulePutItemInput(@CustomType.Parameter("tableName") String tableName) {
         this.tableName = tableName;
     }
 

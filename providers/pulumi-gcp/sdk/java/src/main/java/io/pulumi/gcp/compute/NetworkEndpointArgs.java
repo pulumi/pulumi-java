@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * The instance must be in the same zone of network endpoint group.
      * 
      */
-    @InputImport(name="instance", required=true)
+    @Import(name="instance", required=true)
       private final Output<String> instance;
 
     public Output<String> getInstance() {
@@ -34,7 +34,7 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * range).
      * 
      */
-    @InputImport(name="ipAddress", required=true)
+    @Import(name="ipAddress", required=true)
       private final Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -45,7 +45,7 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * The network endpoint group this endpoint is part of.
      * 
      */
-    @InputImport(name="networkEndpointGroup", required=true)
+    @Import(name="networkEndpointGroup", required=true)
       private final Output<String> networkEndpointGroup;
 
     public Output<String> getNetworkEndpointGroup() {
@@ -56,7 +56,7 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * Port number of network endpoint.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -68,7 +68,7 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -79,7 +79,7 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * Zone where the containing network endpoint group is located.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

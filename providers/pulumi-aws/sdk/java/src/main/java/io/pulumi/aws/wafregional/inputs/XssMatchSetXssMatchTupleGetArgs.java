@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.aws.wafregional.inputs.XssMatchSetXssMatchTupleFieldToMatchGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class XssMatchSetXssMatchTupleGetArgs extends io.pulumi.resources.R
      * Specifies where in a web request to look for cross-site scripting attacks.
      * 
      */
-    @InputImport(name="fieldToMatch", required=true)
+    @Import(name="fieldToMatch", required=true)
       private final Output<XssMatchSetXssMatchTupleFieldToMatchGetArgs> fieldToMatch;
 
     public Output<XssMatchSetXssMatchTupleFieldToMatchGetArgs> getFieldToMatch() {
@@ -29,7 +29,7 @@ public final class XssMatchSetXssMatchTupleGetArgs extends io.pulumi.resources.R
      * Which text transformation, if any, to perform on the web request before inspecting the request for cross-site scripting attacks.
      * 
      */
-    @InputImport(name="textTransformation", required=true)
+    @Import(name="textTransformation", required=true)
       private final Output<String> textTransformation;
 
     public Output<String> getTextTransformation() {

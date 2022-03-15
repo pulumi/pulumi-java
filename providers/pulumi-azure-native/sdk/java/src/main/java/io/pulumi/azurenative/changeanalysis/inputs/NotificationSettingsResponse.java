@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.changeanalysis.inputs;
 
 import io.pulumi.azurenative.changeanalysis.inputs.AzureMonitorWorkspacePropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * The state of notifications feature.
      * 
      */
-    @InputImport(name="activationState")
+    @Import(name="activationState")
       private final @Nullable String activationState;
 
     public Optional<String> getActivationState() {
@@ -34,7 +34,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * Configuration properties of an Azure Monitor workspace that receives change notifications.
      * 
      */
-    @InputImport(name="azureMonitorWorkspaceProperties")
+    @Import(name="azureMonitorWorkspaceProperties")
       private final @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties;
 
     public Optional<AzureMonitorWorkspacePropertiesResponse> getAzureMonitorWorkspaceProperties() {

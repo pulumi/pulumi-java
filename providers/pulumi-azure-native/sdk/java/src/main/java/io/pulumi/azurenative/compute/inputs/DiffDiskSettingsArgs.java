@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.enums.DiffDiskOptions;
 import io.pulumi.azurenative.compute.enums.DiffDiskPlacement;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DiffDiskSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Specifies the ephemeral disk settings for operating system disk.
      * 
      */
-    @InputImport(name="option")
+    @Import(name="option")
       private final @Nullable Output<Either<String,DiffDiskOptions>> option;
 
     public Output<Either<String,DiffDiskOptions>> getOption() {
@@ -36,7 +36,7 @@ public final class DiffDiskSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Specifies the ephemeral disk placement for operating system disk.<br><br> Possible values are: <br><br> **CacheDisk** <br><br> **ResourceDisk** <br><br> Default: **CacheDisk** if one is configured for the VM size otherwise **ResourceDisk** is used.<br><br> Refer to VM size documentation for Windows VM at https://docs.microsoft.com/azure/virtual-machines/windows/sizes and Linux VM at https://docs.microsoft.com/azure/virtual-machines/linux/sizes to check which VM sizes exposes a cache disk.
      * 
      */
-    @InputImport(name="placement")
+    @Import(name="placement")
       private final @Nullable Output<Either<String,DiffDiskPlacement>> placement;
 
     public Output<Either<String,DiffDiskPlacement>> getPlacement() {

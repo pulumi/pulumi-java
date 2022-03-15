@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
      * The DateTime when the review instance is scheduled to end.
      * 
      */
-    @InputImport(name="endDateTime")
+    @Import(name="endDateTime")
       private final @Nullable String endDateTime;
 
     public Optional<String> getEndDateTime() {
@@ -33,7 +33,7 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
      * The access review instance id.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -44,7 +44,7 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
      * The access review instance name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -55,7 +55,7 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
      * The DateTime when the review instance is scheduled to be start.
      * 
      */
-    @InputImport(name="startDateTime")
+    @Import(name="startDateTime")
       private final @Nullable String startDateTime;
 
     public Optional<String> getStartDateTime() {
@@ -66,7 +66,7 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
      * This read-only field specifies the status of an access review instance.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -77,7 +77,7 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
      * The resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

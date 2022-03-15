@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.StandardSqlFieldArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StandardSqlTableTypeArgs extends io.pulumi.resources.Resource
      * The columns in this table type
      * 
      */
-    @InputImport(name="columns")
+    @Import(name="columns")
       private final @Nullable Output<List<StandardSqlFieldArgs>> columns;
 
     public Output<List<StandardSqlFieldArgs>> getColumns() {

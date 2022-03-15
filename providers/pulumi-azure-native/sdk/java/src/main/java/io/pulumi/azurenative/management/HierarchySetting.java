@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.management.HierarchySettingArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class HierarchySetting extends io.pulumi.resources.CustomResource {
      * Settings that sets the default Management Group under which new subscriptions get added in this tenant. For example, /providers/Microsoft.Management/managementGroups/defaultGroup
      * 
      */
-    @OutputExport(name="defaultManagementGroup", type=String.class, parameters={})
+    @Export(name="defaultManagementGroup", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultManagementGroup;
 
     /**
@@ -49,7 +49,7 @@ public class HierarchySetting extends io.pulumi.resources.CustomResource {
      * The name of the object. In this case, default.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class HierarchySetting extends io.pulumi.resources.CustomResource {
      * Indicates whether RBAC access is required upon group creation under the root Management Group. If set to true, user will require Microsoft.Management/managementGroups/write action on the root Management Group scope in order to create new Groups directly under the root. This will prevent new users from creating new Management Groups, unless they are given access.
      * 
      */
-    @OutputExport(name="requireAuthorizationForGroupCreation", type=Boolean.class, parameters={})
+    @Export(name="requireAuthorizationForGroupCreation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> requireAuthorizationForGroupCreation;
 
     /**
@@ -77,7 +77,7 @@ public class HierarchySetting extends io.pulumi.resources.CustomResource {
      * The AAD Tenant ID associated with the hierarchy settings. For example, 00000000-0000-0000-0000-000000000000
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
@@ -91,7 +91,7 @@ public class HierarchySetting extends io.pulumi.resources.CustomResource {
      * The type of the resource.  For example, Microsoft.Management/managementGroups/settings.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

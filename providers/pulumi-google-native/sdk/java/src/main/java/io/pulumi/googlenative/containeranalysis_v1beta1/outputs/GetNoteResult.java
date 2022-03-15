@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.AuthorityResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.BasisResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.BuildResponse;
@@ -21,7 +21,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNoteResult {
     /**
      * A note describing an attestation role.
@@ -129,29 +129,29 @@ public final class GetNoteResult {
      */
     private final VulnerabilityResponse vulnerability;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNoteResult(
-        @OutputCustomType.Parameter("attestationAuthority") AuthorityResponse attestationAuthority,
-        @OutputCustomType.Parameter("baseImage") BasisResponse baseImage,
-        @OutputCustomType.Parameter("build") BuildResponse build,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("deployable") DeployableResponse deployable,
-        @OutputCustomType.Parameter("discovery") DiscoveryResponse discovery,
-        @OutputCustomType.Parameter("expirationTime") String expirationTime,
-        @OutputCustomType.Parameter("intoto") InTotoResponse intoto,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("longDescription") String longDescription,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("package") PackageResponse $package,
-        @OutputCustomType.Parameter("relatedNoteNames") List<String> relatedNoteNames,
-        @OutputCustomType.Parameter("relatedUrl") List<RelatedUrlResponse> relatedUrl,
-        @OutputCustomType.Parameter("sbom") DocumentNoteResponse sbom,
-        @OutputCustomType.Parameter("shortDescription") String shortDescription,
-        @OutputCustomType.Parameter("spdxFile") FileNoteResponse spdxFile,
-        @OutputCustomType.Parameter("spdxPackage") PackageInfoNoteResponse spdxPackage,
-        @OutputCustomType.Parameter("spdxRelationship") RelationshipNoteResponse spdxRelationship,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("vulnerability") VulnerabilityResponse vulnerability) {
+        @CustomType.Parameter("attestationAuthority") AuthorityResponse attestationAuthority,
+        @CustomType.Parameter("baseImage") BasisResponse baseImage,
+        @CustomType.Parameter("build") BuildResponse build,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("deployable") DeployableResponse deployable,
+        @CustomType.Parameter("discovery") DiscoveryResponse discovery,
+        @CustomType.Parameter("expirationTime") String expirationTime,
+        @CustomType.Parameter("intoto") InTotoResponse intoto,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("longDescription") String longDescription,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("package") PackageResponse $package,
+        @CustomType.Parameter("relatedNoteNames") List<String> relatedNoteNames,
+        @CustomType.Parameter("relatedUrl") List<RelatedUrlResponse> relatedUrl,
+        @CustomType.Parameter("sbom") DocumentNoteResponse sbom,
+        @CustomType.Parameter("shortDescription") String shortDescription,
+        @CustomType.Parameter("spdxFile") FileNoteResponse spdxFile,
+        @CustomType.Parameter("spdxPackage") PackageInfoNoteResponse spdxPackage,
+        @CustomType.Parameter("spdxRelationship") RelationshipNoteResponse spdxRelationship,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("vulnerability") VulnerabilityResponse vulnerability) {
         this.attestationAuthority = attestationAuthority;
         this.baseImage = baseImage;
         this.build = build;

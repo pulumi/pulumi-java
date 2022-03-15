@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
      * Action, which will be allowed. `lambda:GetLayerVersion` value is suggested by AWS documantation.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {
@@ -30,7 +30,7 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
      * The name or ARN of the Lambda Layer, which you want to grant access to.
      * 
      */
-    @InputImport(name="layerName")
+    @Import(name="layerName")
       private final @Nullable Output<String> layerName;
 
     public Output<String> getLayerName() {
@@ -41,7 +41,7 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
      * An identifier of AWS Organization, which should be able to use your Lambda Layer. `principal` should be equal to `*` if `organization_id` provided.
      * 
      */
-    @InputImport(name="organizationId")
+    @Import(name="organizationId")
       private final @Nullable Output<String> organizationId;
 
     public Output<String> getOrganizationId() {
@@ -52,7 +52,7 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
      * Full Lambda Layer Permission policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -63,7 +63,7 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
      * AWS account ID which should be able to use your Lambda Layer. `*` can be used here, if you want to share your Lambda Layer widely.
      * 
      */
-    @InputImport(name="principal")
+    @Import(name="principal")
       private final @Nullable Output<String> principal;
 
     public Output<String> getPrincipal() {
@@ -74,7 +74,7 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
      * A unique identifier for the current revision of the policy.
      * 
      */
-    @InputImport(name="revisionId")
+    @Import(name="revisionId")
       private final @Nullable Output<String> revisionId;
 
     public Output<String> getRevisionId() {
@@ -85,7 +85,7 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
      * The name of Lambda Layer Permission, for example `dev-account` - human readable note about what is this permission for.
      * 
      */
-    @InputImport(name="statementId")
+    @Import(name="statementId")
       private final @Nullable Output<String> statementId;
 
     public Output<String> getStatementId() {
@@ -96,7 +96,7 @@ public final class LayerVersionPermissionState extends io.pulumi.resources.Resou
      * Version of Lambda Layer, which you want to grant access to. Note: permissions only apply to a single version of a layer.
      * 
      */
-    @InputImport(name="versionNumber")
+    @Import(name="versionNumber")
       private final @Nullable Output<Integer> versionNumber;
 
     public Output<Integer> getVersionNumber() {

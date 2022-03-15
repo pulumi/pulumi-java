@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.DailyRetentionFormatResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.RetentionDurationResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.WeeklyRetentionFormatResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class MonthlyRetentionScheduleResponse extends io.pulumi.resources.
      * Retention duration of retention Policy.
      * 
      */
-    @InputImport(name="retentionDuration")
+    @Import(name="retentionDuration")
       private final @Nullable RetentionDurationResponse retentionDuration;
 
     public Optional<RetentionDurationResponse> getRetentionDuration() {
@@ -37,7 +37,7 @@ public final class MonthlyRetentionScheduleResponse extends io.pulumi.resources.
      * Daily retention format for monthly retention policy.
      * 
      */
-    @InputImport(name="retentionScheduleDaily")
+    @Import(name="retentionScheduleDaily")
       private final @Nullable DailyRetentionFormatResponse retentionScheduleDaily;
 
     public Optional<DailyRetentionFormatResponse> getRetentionScheduleDaily() {
@@ -48,7 +48,7 @@ public final class MonthlyRetentionScheduleResponse extends io.pulumi.resources.
      * Retention schedule format type for monthly retention policy.
      * 
      */
-    @InputImport(name="retentionScheduleFormatType")
+    @Import(name="retentionScheduleFormatType")
       private final @Nullable String retentionScheduleFormatType;
 
     public Optional<String> getRetentionScheduleFormatType() {
@@ -59,7 +59,7 @@ public final class MonthlyRetentionScheduleResponse extends io.pulumi.resources.
      * Weekly retention format for monthly retention policy.
      * 
      */
-    @InputImport(name="retentionScheduleWeekly")
+    @Import(name="retentionScheduleWeekly")
       private final @Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly;
 
     public Optional<WeeklyRetentionFormatResponse> getRetentionScheduleWeekly() {
@@ -70,7 +70,7 @@ public final class MonthlyRetentionScheduleResponse extends io.pulumi.resources.
      * Retention times of retention policy.
      * 
      */
-    @InputImport(name="retentionTimes")
+    @Import(name="retentionTimes")
       private final @Nullable List<String> retentionTimes;
 
     public List<String> getRetentionTimes() {

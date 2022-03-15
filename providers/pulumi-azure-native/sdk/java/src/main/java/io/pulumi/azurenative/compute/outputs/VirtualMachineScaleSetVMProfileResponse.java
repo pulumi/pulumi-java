@@ -11,13 +11,13 @@ import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetExtensionProf
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetNetworkProfileResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetOSProfileResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetStorageProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineScaleSetVMProfileResponse {
     /**
      * Specifies the billing related details of a Azure Spot VMSS. <br><br>Minimum api-version: 2019-03-01.
@@ -80,20 +80,20 @@ public final class VirtualMachineScaleSetVMProfileResponse {
      */
     private final @Nullable String userData;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineScaleSetVMProfileResponse(
-        @OutputCustomType.Parameter("billingProfile") @Nullable BillingProfileResponse billingProfile,
-        @OutputCustomType.Parameter("diagnosticsProfile") @Nullable DiagnosticsProfileResponse diagnosticsProfile,
-        @OutputCustomType.Parameter("evictionPolicy") @Nullable String evictionPolicy,
-        @OutputCustomType.Parameter("extensionProfile") @Nullable VirtualMachineScaleSetExtensionProfileResponse extensionProfile,
-        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
-        @OutputCustomType.Parameter("networkProfile") @Nullable VirtualMachineScaleSetNetworkProfileResponse networkProfile,
-        @OutputCustomType.Parameter("osProfile") @Nullable VirtualMachineScaleSetOSProfileResponse osProfile,
-        @OutputCustomType.Parameter("priority") @Nullable String priority,
-        @OutputCustomType.Parameter("scheduledEventsProfile") @Nullable ScheduledEventsProfileResponse scheduledEventsProfile,
-        @OutputCustomType.Parameter("securityProfile") @Nullable SecurityProfileResponse securityProfile,
-        @OutputCustomType.Parameter("storageProfile") @Nullable VirtualMachineScaleSetStorageProfileResponse storageProfile,
-        @OutputCustomType.Parameter("userData") @Nullable String userData) {
+        @CustomType.Parameter("billingProfile") @Nullable BillingProfileResponse billingProfile,
+        @CustomType.Parameter("diagnosticsProfile") @Nullable DiagnosticsProfileResponse diagnosticsProfile,
+        @CustomType.Parameter("evictionPolicy") @Nullable String evictionPolicy,
+        @CustomType.Parameter("extensionProfile") @Nullable VirtualMachineScaleSetExtensionProfileResponse extensionProfile,
+        @CustomType.Parameter("licenseType") @Nullable String licenseType,
+        @CustomType.Parameter("networkProfile") @Nullable VirtualMachineScaleSetNetworkProfileResponse networkProfile,
+        @CustomType.Parameter("osProfile") @Nullable VirtualMachineScaleSetOSProfileResponse osProfile,
+        @CustomType.Parameter("priority") @Nullable String priority,
+        @CustomType.Parameter("scheduledEventsProfile") @Nullable ScheduledEventsProfileResponse scheduledEventsProfile,
+        @CustomType.Parameter("securityProfile") @Nullable SecurityProfileResponse securityProfile,
+        @CustomType.Parameter("storageProfile") @Nullable VirtualMachineScaleSetStorageProfileResponse storageProfile,
+        @CustomType.Parameter("userData") @Nullable String userData) {
         this.billingProfile = billingProfile;
         this.diagnosticsProfile = diagnosticsProfile;
         this.evictionPolicy = evictionPolicy;

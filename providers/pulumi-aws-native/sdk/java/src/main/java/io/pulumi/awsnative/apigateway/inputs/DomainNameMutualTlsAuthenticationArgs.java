@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class DomainNameMutualTlsAuthenticationArgs extends io.pulumi.resou
 
     public static final DomainNameMutualTlsAuthenticationArgs Empty = new DomainNameMutualTlsAuthenticationArgs();
 
-    @InputImport(name="truststoreUri")
+    @Import(name="truststoreUri")
       private final @Nullable Output<String> truststoreUri;
 
     public Output<String> getTruststoreUri() {
         return this.truststoreUri == null ? Output.empty() : this.truststoreUri;
     }
 
-    @InputImport(name="truststoreVersion")
+    @Import(name="truststoreVersion")
       private final @Nullable Output<String> truststoreVersion;
 
     public Output<String> getTruststoreVersion() {

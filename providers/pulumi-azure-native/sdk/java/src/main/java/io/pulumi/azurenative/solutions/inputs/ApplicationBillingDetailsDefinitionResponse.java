@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApplicationBillingDetailsDefinitionResponse extends io.pulumi
      * The managed application resource usage Id.
      * 
      */
-    @InputImport(name="resourceUsageId")
+    @Import(name="resourceUsageId")
       private final @Nullable String resourceUsageId;
 
     public Optional<String> getResourceUsageId() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.TriggerReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends io.pulum
      * Timespan applied to the start time of a tumbling window when evaluating dependency.
      * 
      */
-    @InputImport(name="offset")
+    @Import(name="offset")
       private final @Nullable Output<String> offset;
 
     public Output<String> getOffset() {
@@ -34,7 +34,7 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends io.pulum
      * Referenced trigger.
      * 
      */
-    @InputImport(name="referenceTrigger", required=true)
+    @Import(name="referenceTrigger", required=true)
       private final Output<TriggerReferenceArgs> referenceTrigger;
 
     public Output<TriggerReferenceArgs> getReferenceTrigger() {
@@ -45,7 +45,7 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends io.pulum
      * The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<String> size;
 
     public Output<String> getSize() {
@@ -57,7 +57,7 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends io.pulum
      * Expected value is 'TumblingWindowTriggerDependencyReference'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

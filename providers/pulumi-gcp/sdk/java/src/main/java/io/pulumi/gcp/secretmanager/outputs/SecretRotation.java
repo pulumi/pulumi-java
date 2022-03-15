@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.secretmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecretRotation {
     /**
      * Timestamp in UTC at which the Secret is scheduled to rotate.
@@ -24,10 +24,10 @@ public final class SecretRotation {
      */
     private final @Nullable String rotationPeriod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecretRotation(
-        @OutputCustomType.Parameter("nextRotationTime") @Nullable String nextRotationTime,
-        @OutputCustomType.Parameter("rotationPeriod") @Nullable String rotationPeriod) {
+        @CustomType.Parameter("nextRotationTime") @Nullable String nextRotationTime,
+        @CustomType.Parameter("rotationPeriod") @Nullable String rotationPeriod) {
         this.nextRotationTime = nextRotationTime;
         this.rotationPeriod = rotationPeriod;
     }

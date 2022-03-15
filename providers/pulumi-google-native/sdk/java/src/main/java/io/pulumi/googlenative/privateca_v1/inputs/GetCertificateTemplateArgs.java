@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetCertificateTemplateArgs extends io.pulumi.resources.Invoke
 
     public static final GetCertificateTemplateArgs Empty = new GetCertificateTemplateArgs();
 
-    @InputImport(name="certificateTemplateId", required=true)
+    @Import(name="certificateTemplateId", required=true)
       private final String certificateTemplateId;
 
     public String getCertificateTemplateId() {
         return this.certificateTemplateId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

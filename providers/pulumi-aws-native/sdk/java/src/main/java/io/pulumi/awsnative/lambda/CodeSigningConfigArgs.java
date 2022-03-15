@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lambda;
 import io.pulumi.awsnative.lambda.inputs.CodeSigningConfigAllowedPublishersArgs;
 import io.pulumi.awsnative.lambda.inputs.CodeSigningConfigCodeSigningPoliciesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
      * When the CodeSigningConfig is later on attached to a function, the function code will be expected to be signed by profiles from this list
      * 
      */
-    @InputImport(name="allowedPublishers", required=true)
+    @Import(name="allowedPublishers", required=true)
       private final Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
 
     public Output<CodeSigningConfigAllowedPublishersArgs> getAllowedPublishers() {
@@ -31,7 +31,7 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
      * Policies to control how to act if a signature is invalid
      * 
      */
-    @InputImport(name="codeSigningPolicies")
+    @Import(name="codeSigningPolicies")
       private final @Nullable Output<CodeSigningConfigCodeSigningPoliciesArgs> codeSigningPolicies;
 
     public Output<CodeSigningConfigCodeSigningPoliciesArgs> getCodeSigningPolicies() {
@@ -42,7 +42,7 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
      * A description of the CodeSigningConfig
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {

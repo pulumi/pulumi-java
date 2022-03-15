@@ -10,12 +10,12 @@ import io.pulumi.awsnative.groundstation.outputs.ConfigDataflowEndpointConfig;
 import io.pulumi.awsnative.groundstation.outputs.ConfigS3RecordingConfig;
 import io.pulumi.awsnative.groundstation.outputs.ConfigTrackingConfig;
 import io.pulumi.awsnative.groundstation.outputs.ConfigUplinkEchoConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConfigData {
     private final @Nullable ConfigAntennaDownlinkConfig antennaDownlinkConfig;
     private final @Nullable ConfigAntennaDownlinkDemodDecodeConfig antennaDownlinkDemodDecodeConfig;
@@ -25,15 +25,15 @@ public final class ConfigData {
     private final @Nullable ConfigTrackingConfig trackingConfig;
     private final @Nullable ConfigUplinkEchoConfig uplinkEchoConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConfigData(
-        @OutputCustomType.Parameter("antennaDownlinkConfig") @Nullable ConfigAntennaDownlinkConfig antennaDownlinkConfig,
-        @OutputCustomType.Parameter("antennaDownlinkDemodDecodeConfig") @Nullable ConfigAntennaDownlinkDemodDecodeConfig antennaDownlinkDemodDecodeConfig,
-        @OutputCustomType.Parameter("antennaUplinkConfig") @Nullable ConfigAntennaUplinkConfig antennaUplinkConfig,
-        @OutputCustomType.Parameter("dataflowEndpointConfig") @Nullable ConfigDataflowEndpointConfig dataflowEndpointConfig,
-        @OutputCustomType.Parameter("s3RecordingConfig") @Nullable ConfigS3RecordingConfig s3RecordingConfig,
-        @OutputCustomType.Parameter("trackingConfig") @Nullable ConfigTrackingConfig trackingConfig,
-        @OutputCustomType.Parameter("uplinkEchoConfig") @Nullable ConfigUplinkEchoConfig uplinkEchoConfig) {
+        @CustomType.Parameter("antennaDownlinkConfig") @Nullable ConfigAntennaDownlinkConfig antennaDownlinkConfig,
+        @CustomType.Parameter("antennaDownlinkDemodDecodeConfig") @Nullable ConfigAntennaDownlinkDemodDecodeConfig antennaDownlinkDemodDecodeConfig,
+        @CustomType.Parameter("antennaUplinkConfig") @Nullable ConfigAntennaUplinkConfig antennaUplinkConfig,
+        @CustomType.Parameter("dataflowEndpointConfig") @Nullable ConfigDataflowEndpointConfig dataflowEndpointConfig,
+        @CustomType.Parameter("s3RecordingConfig") @Nullable ConfigS3RecordingConfig s3RecordingConfig,
+        @CustomType.Parameter("trackingConfig") @Nullable ConfigTrackingConfig trackingConfig,
+        @CustomType.Parameter("uplinkEchoConfig") @Nullable ConfigUplinkEchoConfig uplinkEchoConfig) {
         this.antennaDownlinkConfig = antennaDownlinkConfig;
         this.antennaDownlinkDemodDecodeConfig = antennaDownlinkDemodDecodeConfig;
         this.antennaUplinkConfig = antennaUplinkConfig;

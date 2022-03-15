@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * The code the system generates when it processes the activation.
      * 
      */
-    @InputImport(name="activationCode")
+    @Import(name="activationCode")
       private final @Nullable Output<String> activationCode;
 
     public Output<String> getActivationCode() {
@@ -32,7 +32,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * The description of the resource that you want to register.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
      * 
      */
-    @InputImport(name="expirationDate")
+    @Import(name="expirationDate")
       private final @Nullable Output<String> expirationDate;
 
     public Output<String> getExpirationDate() {
@@ -54,7 +54,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * If the current activation has expired.
      * 
      */
-    @InputImport(name="expired")
+    @Import(name="expired")
       private final @Nullable Output<Boolean> expired;
 
     public Output<Boolean> getExpired() {
@@ -65,7 +65,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * The IAM Role to attach to the managed instance.
      * 
      */
-    @InputImport(name="iamRole")
+    @Import(name="iamRole")
       private final @Nullable Output<String> iamRole;
 
     public Output<String> getIamRole() {
@@ -76,7 +76,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * The default name of the registered managed instance.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -87,7 +87,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * The number of managed instances that are currently registered using this activation.
      * 
      */
-    @InputImport(name="registrationCount")
+    @Import(name="registrationCount")
       private final @Nullable Output<Integer> registrationCount;
 
     public Output<Integer> getRegistrationCount() {
@@ -98,7 +98,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * The maximum number of managed instances you want to register. The default value is 1 instance.
      * 
      */
-    @InputImport(name="registrationLimit")
+    @Import(name="registrationLimit")
       private final @Nullable Output<Integer> registrationLimit;
 
     public Output<Integer> getRegistrationLimit() {
@@ -109,7 +109,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the object. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -120,7 +120,7 @@ public final class ActivationState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

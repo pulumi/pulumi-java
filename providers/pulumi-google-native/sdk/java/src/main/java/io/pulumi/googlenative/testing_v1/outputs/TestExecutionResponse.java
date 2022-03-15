@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.EnvironmentResponse;
 import io.pulumi.googlenative.testing_v1.outputs.ShardResponse;
 import io.pulumi.googlenative.testing_v1.outputs.TestDetailsResponse;
@@ -12,7 +12,7 @@ import io.pulumi.googlenative.testing_v1.outputs.ToolResultsStepResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TestExecutionResponse {
     /**
      * How the host machine(s) are configured.
@@ -60,17 +60,17 @@ public final class TestExecutionResponse {
      */
     private final ToolResultsStepResponse toolResultsStep;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TestExecutionResponse(
-        @OutputCustomType.Parameter("environment") EnvironmentResponse environment,
-        @OutputCustomType.Parameter("matrixId") String matrixId,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("shard") ShardResponse shard,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("testDetails") TestDetailsResponse testDetails,
-        @OutputCustomType.Parameter("testSpecification") TestSpecificationResponse testSpecification,
-        @OutputCustomType.Parameter("timestamp") String timestamp,
-        @OutputCustomType.Parameter("toolResultsStep") ToolResultsStepResponse toolResultsStep) {
+        @CustomType.Parameter("environment") EnvironmentResponse environment,
+        @CustomType.Parameter("matrixId") String matrixId,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("shard") ShardResponse shard,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("testDetails") TestDetailsResponse testDetails,
+        @CustomType.Parameter("testSpecification") TestSpecificationResponse testSpecification,
+        @CustomType.Parameter("timestamp") String timestamp,
+        @CustomType.Parameter("toolResultsStep") ToolResultsStepResponse toolResultsStep) {
         this.environment = environment;
         this.matrixId = matrixId;
         this.project = project;

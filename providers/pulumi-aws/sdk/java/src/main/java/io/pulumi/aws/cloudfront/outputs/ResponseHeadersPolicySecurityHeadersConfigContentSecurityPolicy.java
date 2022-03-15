@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy {
     /**
      * The policy directives and their values that CloudFront includes as values for the `Content-Security-Policy` HTTP response header.
@@ -21,10 +21,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigContentSecurityPoli
      */
     private final Boolean override;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy(
-        @OutputCustomType.Parameter("contentSecurityPolicy") String contentSecurityPolicy,
-        @OutputCustomType.Parameter("override") Boolean override) {
+        @CustomType.Parameter("contentSecurityPolicy") String contentSecurityPolicy,
+        @CustomType.Parameter("override") Boolean override) {
         this.contentSecurityPolicy = contentSecurityPolicy;
         this.override = override;
     }

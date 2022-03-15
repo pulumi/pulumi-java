@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FirewallPolicyLogAnalyticsWorkspaceResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class FirewallPolicyLogAnalyticsResourcesResponse extends io.pulumi
      * The default workspace Id for Firewall Policy Insights.
      * 
      */
-    @InputImport(name="defaultWorkspaceId")
+    @Import(name="defaultWorkspaceId")
       private final @Nullable SubResourceResponse defaultWorkspaceId;
 
     public Optional<SubResourceResponse> getDefaultWorkspaceId() {
@@ -35,7 +35,7 @@ public final class FirewallPolicyLogAnalyticsResourcesResponse extends io.pulumi
      * List of workspaces for Firewall Policy Insights.
      * 
      */
-    @InputImport(name="workspaces")
+    @Import(name="workspaces")
       private final @Nullable List<FirewallPolicyLogAnalyticsWorkspaceResponse> workspaces;
 
     public List<FirewallPolicyLogAnalyticsWorkspaceResponse> getWorkspaces() {

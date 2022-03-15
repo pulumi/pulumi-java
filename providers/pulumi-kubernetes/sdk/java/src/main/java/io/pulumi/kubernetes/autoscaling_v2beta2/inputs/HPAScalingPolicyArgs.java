@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
      * PeriodSeconds specifies the window of time for which the policy should hold true. PeriodSeconds must be greater than zero and less than or equal to 1800 (30 min).
      * 
      */
-    @InputImport(name="periodSeconds", required=true)
+    @Import(name="periodSeconds", required=true)
       private final Output<Integer> periodSeconds;
 
     public Output<Integer> getPeriodSeconds() {
@@ -33,7 +33,7 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
      * Type is used to specify the scaling policy.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -44,7 +44,7 @@ public final class HPAScalingPolicyArgs extends io.pulumi.resources.ResourceArgs
      * Value contains the amount of change which is permitted by the policy. It must be greater than zero
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<Integer> value;
 
     public Output<Integer> getValue() {

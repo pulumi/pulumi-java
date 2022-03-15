@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.CompositePathResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IndexingPolicyResponse {
     /**
      * List of composite path list
@@ -17,8 +17,8 @@ public final class IndexingPolicyResponse {
      */
     private final @Nullable List<List<CompositePathResponse>> compositeIndexes;
 
-    @OutputCustomType.Constructor
-    private IndexingPolicyResponse(@OutputCustomType.Parameter("compositeIndexes") @Nullable List<List<CompositePathResponse>> compositeIndexes) {
+    @CustomType.Constructor
+    private IndexingPolicyResponse(@CustomType.Parameter("compositeIndexes") @Nullable List<List<CompositePathResponse>> compositeIndexes) {
         this.compositeIndexes = compositeIndexes;
     }
 

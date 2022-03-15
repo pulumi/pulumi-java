@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends io.p
      * Method used to authenticate against the service bus queue endpoint
      * 
      */
-    @InputImport(name="authenticationType")
+    @Import(name="authenticationType")
       private final @Nullable String authenticationType;
 
     public Optional<String> getAuthenticationType() {
@@ -33,7 +33,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends io.p
      * The connection string of the service bus queue endpoint.
      * 
      */
-    @InputImport(name="connectionString")
+    @Import(name="connectionString")
       private final @Nullable String connectionString;
 
     public Optional<String> getConnectionString() {
@@ -44,7 +44,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends io.p
      * The url of the service bus queue endpoint. It must include the protocol sb://
      * 
      */
-    @InputImport(name="endpointUri")
+    @Import(name="endpointUri")
       private final @Nullable String endpointUri;
 
     public Optional<String> getEndpointUri() {
@@ -55,7 +55,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends io.p
      * Queue name on the service bus namespace
      * 
      */
-    @InputImport(name="entityPath")
+    @Import(name="entityPath")
       private final @Nullable String entityPath;
 
     public Optional<String> getEntityPath() {
@@ -66,7 +66,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends io.p
      * Id of the service bus queue endpoint
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -77,7 +77,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends io.p
      * The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types. The name need not be the same as the actual queue name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -88,7 +88,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends io.p
      * The name of the resource group of the service bus queue endpoint.
      * 
      */
-    @InputImport(name="resourceGroup")
+    @Import(name="resourceGroup")
       private final @Nullable String resourceGroup;
 
     public Optional<String> getResourceGroup() {
@@ -99,7 +99,7 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse extends io.p
      * The subscription identifier of the service bus queue endpoint.
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {

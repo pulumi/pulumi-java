@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDeploymentLogFileUrlResult {
     /**
      * URL of the log file
@@ -15,8 +15,8 @@ public final class GetDeploymentLogFileUrlResult {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
-    private GetDeploymentLogFileUrlResult(@OutputCustomType.Parameter("url") String url) {
+    @CustomType.Constructor
+    private GetDeploymentLogFileUrlResult(@CustomType.Parameter("url") String url) {
         this.url = url;
     }
 

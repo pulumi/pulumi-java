@@ -5,14 +5,14 @@ package io.pulumi.azurenative.eventhub.outputs;
 
 import io.pulumi.azurenative.eventhub.outputs.NWRuleSetIpRulesResponse;
 import io.pulumi.azurenative.eventhub.outputs.NWRuleSetVirtualNetworkRulesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNamespaceNetworkRuleSetResult {
     /**
      * Default Action for Network Rule Set
@@ -45,14 +45,14 @@ public final class GetNamespaceNetworkRuleSetResult {
      */
     private final @Nullable List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNamespaceNetworkRuleSetResult(
-        @OutputCustomType.Parameter("defaultAction") @Nullable String defaultAction,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ipRules") @Nullable List<NWRuleSetIpRulesResponse> ipRules,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualNetworkRules") @Nullable List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules) {
+        @CustomType.Parameter("defaultAction") @Nullable String defaultAction,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ipRules") @Nullable List<NWRuleSetIpRulesResponse> ipRules,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualNetworkRules") @Nullable List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules) {
         this.defaultAction = defaultAction;
         this.id = id;
         this.ipRules = ipRules;

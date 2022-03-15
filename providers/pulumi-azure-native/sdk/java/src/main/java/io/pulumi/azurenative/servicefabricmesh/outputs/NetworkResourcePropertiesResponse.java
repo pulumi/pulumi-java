@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkResourcePropertiesResponse {
     /**
      * User readable description of the network.
@@ -38,13 +38,13 @@ public final class NetworkResourcePropertiesResponse {
      */
     private final String statusDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkResourcePropertiesResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusDetails") String statusDetails) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusDetails") String statusDetails) {
         this.description = description;
         this.kind = kind;
         this.provisioningState = provisioningState;

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.DataSourceManifestFileLocation;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -16,7 +16,7 @@ public final class DataSourceS3Parameters extends io.pulumi.resources.InvokeArgs
 
     public static final DataSourceS3Parameters Empty = new DataSourceS3Parameters();
 
-    @InputImport(name="manifestFileLocation", required=true)
+    @Import(name="manifestFileLocation", required=true)
       private final DataSourceManifestFileLocation manifestFileLocation;
 
     public DataSourceManifestFileLocation getManifestFileLocation() {

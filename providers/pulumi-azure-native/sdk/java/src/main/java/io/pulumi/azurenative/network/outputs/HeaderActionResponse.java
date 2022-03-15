@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HeaderActionResponse {
     /**
      * Which type of manipulation to apply to the header.
@@ -27,11 +27,11 @@ public final class HeaderActionResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HeaderActionResponse(
-        @OutputCustomType.Parameter("headerActionType") String headerActionType,
-        @OutputCustomType.Parameter("headerName") String headerName,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("headerActionType") String headerActionType,
+        @CustomType.Parameter("headerName") String headerName,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.headerActionType = headerActionType;
         this.headerName = headerName;
         this.value = value;

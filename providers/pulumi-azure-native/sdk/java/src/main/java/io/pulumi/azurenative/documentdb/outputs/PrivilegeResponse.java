@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.PrivilegeResponseResource;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivilegeResponse {
     /**
      * An array of actions that are allowed.
@@ -24,10 +24,10 @@ public final class PrivilegeResponse {
      */
     private final @Nullable PrivilegeResponseResource resource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivilegeResponse(
-        @OutputCustomType.Parameter("actions") @Nullable List<String> actions,
-        @OutputCustomType.Parameter("resource") @Nullable PrivilegeResponseResource resource) {
+        @CustomType.Parameter("actions") @Nullable List<String> actions,
+        @CustomType.Parameter("resource") @Nullable PrivilegeResponseResource resource) {
         this.actions = actions;
         this.resource = resource;
     }

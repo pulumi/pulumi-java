@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1beta1.inputs.DailyMaintenanceWindowArgs;
 import io.pulumi.googlenative.container_v1beta1.inputs.RecurringTimeWindowArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * DailyMaintenanceWindow specifies a daily maintenance operation window.
      * 
      */
-    @InputImport(name="dailyMaintenanceWindow")
+    @Import(name="dailyMaintenanceWindow")
       private final @Nullable Output<DailyMaintenanceWindowArgs> dailyMaintenanceWindow;
 
     public Output<DailyMaintenanceWindowArgs> getDailyMaintenanceWindow() {
@@ -36,7 +36,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows.
      * 
      */
-    @InputImport(name="maintenanceExclusions")
+    @Import(name="maintenanceExclusions")
       private final @Nullable Output<Map<String,String>> maintenanceExclusions;
 
     public Output<Map<String,String>> getMaintenanceExclusions() {
@@ -47,7 +47,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * RecurringWindow specifies some number of recurring time periods for maintenance to occur. The time windows may be overlapping. If no maintenance windows are set, maintenance can occur at any time.
      * 
      */
-    @InputImport(name="recurringWindow")
+    @Import(name="recurringWindow")
       private final @Nullable Output<RecurringTimeWindowArgs> recurringWindow;
 
     public Output<RecurringTimeWindowArgs> getRecurringWindow() {

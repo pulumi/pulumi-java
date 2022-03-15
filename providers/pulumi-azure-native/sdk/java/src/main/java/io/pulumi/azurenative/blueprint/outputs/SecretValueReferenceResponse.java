@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.blueprint.outputs;
 
 import io.pulumi.azurenative.blueprint.outputs.KeyVaultReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecretValueReferenceResponse {
     /**
      * Specifies the reference to a given Azure Key Vault.
@@ -28,11 +28,11 @@ public final class SecretValueReferenceResponse {
      */
     private final @Nullable String secretVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecretValueReferenceResponse(
-        @OutputCustomType.Parameter("keyVault") KeyVaultReferenceResponse keyVault,
-        @OutputCustomType.Parameter("secretName") String secretName,
-        @OutputCustomType.Parameter("secretVersion") @Nullable String secretVersion) {
+        @CustomType.Parameter("keyVault") KeyVaultReferenceResponse keyVault,
+        @CustomType.Parameter("secretName") String secretName,
+        @CustomType.Parameter("secretVersion") @Nullable String secretVersion) {
         this.keyVault = keyVault;
         this.secretName = secretName;
         this.secretVersion = secretVersion;

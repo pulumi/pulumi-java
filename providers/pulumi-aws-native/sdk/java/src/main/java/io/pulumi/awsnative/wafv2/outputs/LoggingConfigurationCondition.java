@@ -5,12 +5,12 @@ package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationConditionActionConditionProperties;
 import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationConditionLabelNameConditionProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoggingConfigurationCondition {
     /**
      * A single action condition.
@@ -23,10 +23,10 @@ public final class LoggingConfigurationCondition {
      */
     private final @Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoggingConfigurationCondition(
-        @OutputCustomType.Parameter("actionCondition") @Nullable LoggingConfigurationConditionActionConditionProperties actionCondition,
-        @OutputCustomType.Parameter("labelNameCondition") @Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition) {
+        @CustomType.Parameter("actionCondition") @Nullable LoggingConfigurationConditionActionConditionProperties actionCondition,
+        @CustomType.Parameter("labelNameCondition") @Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition) {
         this.actionCondition = actionCondition;
         this.labelNameCondition = labelNameCondition;
     }

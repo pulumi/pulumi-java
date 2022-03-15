@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2AuxiliaryTableResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TaggedFieldResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigResponse extends io.pul
      * Several auxiliary tables can be used in the analysis. Each custom_tag used to tag a quasi-identifiers column must appear in exactly one column of one auxiliary table.
      * 
      */
-    @InputImport(name="auxiliaryTables", required=true)
+    @Import(name="auxiliaryTables", required=true)
       private final List<GooglePrivacyDlpV2AuxiliaryTableResponse> auxiliaryTables;
 
     public List<GooglePrivacyDlpV2AuxiliaryTableResponse> getAuxiliaryTables() {
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigResponse extends io.pul
      * Fields considered to be quasi-identifiers. No two columns can have the same tag.
      * 
      */
-    @InputImport(name="quasiIds", required=true)
+    @Import(name="quasiIds", required=true)
       private final List<GooglePrivacyDlpV2TaggedFieldResponse> quasiIds;
 
     public List<GooglePrivacyDlpV2TaggedFieldResponse> getQuasiIds() {
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigResponse extends io.pul
      * ISO 3166-1 alpha-2 region code to use in the statistical modeling. Set if no column is tagged with a region-specific InfoType (like US_ZIP_5) or a region code.
      * 
      */
-    @InputImport(name="regionCode", required=true)
+    @Import(name="regionCode", required=true)
       private final String regionCode;
 
     public String getRegionCode() {

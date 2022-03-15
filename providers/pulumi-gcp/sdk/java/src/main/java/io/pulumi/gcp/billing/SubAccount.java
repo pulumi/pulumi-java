@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.billing.SubAccountArgs;
@@ -33,7 +33,7 @@ public class SubAccount extends io.pulumi.resources.CustomResource {
      * The billing account id.
      * 
      */
-    @OutputExport(name="billingAccountId", type=String.class, parameters={})
+    @Export(name="billingAccountId", type=String.class, parameters={})
     private Output<String> billingAccountId;
 
     /**
@@ -49,7 +49,7 @@ public class SubAccount extends io.pulumi.resources.CustomResource {
      * Default is "".
      * 
      */
-    @OutputExport(name="deletionPolicy", type=String.class, parameters={})
+    @Export(name="deletionPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> deletionPolicy;
 
     /**
@@ -65,7 +65,7 @@ public class SubAccount extends io.pulumi.resources.CustomResource {
      * The display name of the billing account.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -80,7 +80,7 @@ public class SubAccount extends io.pulumi.resources.CustomResource {
      * will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
      * 
      */
-    @OutputExport(name="masterBillingAccount", type=String.class, parameters={})
+    @Export(name="masterBillingAccount", type=String.class, parameters={})
     private Output<String> masterBillingAccount;
 
     /**
@@ -95,7 +95,7 @@ public class SubAccount extends io.pulumi.resources.CustomResource {
      * The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -109,7 +109,7 @@ public class SubAccount extends io.pulumi.resources.CustomResource {
      * `true` if the billing account is open, `false` if the billing account is closed.
      * 
      */
-    @OutputExport(name="open", type=Boolean.class, parameters={})
+    @Export(name="open", type=Boolean.class, parameters={})
     private Output<Boolean> open;
 
     /**

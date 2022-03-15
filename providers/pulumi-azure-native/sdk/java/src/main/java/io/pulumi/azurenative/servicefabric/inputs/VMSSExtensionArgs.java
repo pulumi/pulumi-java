@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
      */
-    @InputImport(name="autoUpgradeMinorVersion")
+    @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
     public Output<Boolean> getAutoUpgradeMinorVersion() {
@@ -36,7 +36,7 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * If a value is provided and is different from the previous value, the extension handler will be forced to update even if the extension configuration has not changed.
      * 
      */
-    @InputImport(name="forceUpdateTag")
+    @Import(name="forceUpdateTag")
       private final @Nullable Output<String> forceUpdateTag;
 
     public Output<String> getForceUpdateTag() {
@@ -47,7 +47,7 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the extension.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -58,7 +58,7 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all.
      * 
      */
-    @InputImport(name="protectedSettings")
+    @Import(name="protectedSettings")
       private final @Nullable Output<Object> protectedSettings;
 
     public Output<Object> getProtectedSettings() {
@@ -69,7 +69,7 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * Collection of extension names after which this extension needs to be provisioned.
      * 
      */
-    @InputImport(name="provisionAfterExtensions")
+    @Import(name="provisionAfterExtensions")
       private final @Nullable Output<List<String>> provisionAfterExtensions;
 
     public Output<List<String>> getProvisionAfterExtensions() {
@@ -80,7 +80,7 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the extension handler publisher.
      * 
      */
-    @InputImport(name="publisher", required=true)
+    @Import(name="publisher", required=true)
       private final Output<String> publisher;
 
     public Output<String> getPublisher() {
@@ -91,7 +91,7 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * Json formatted public settings for the extension.
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable Output<Object> settings;
 
     public Output<Object> getSettings() {
@@ -102,7 +102,7 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the type of the extension; an example is "CustomScriptExtension".
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -113,7 +113,7 @@ public final class VMSSExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the version of the script handler.
      * 
      */
-    @InputImport(name="typeHandlerVersion", required=true)
+    @Import(name="typeHandlerVersion", required=true)
       private final Output<String> typeHandlerVersion;
 
     public Output<String> getTypeHandlerVersion() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.monitoring.outputs.GetClusterIstioServiceTelemetry;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterIstioServiceResult {
     private final String clusterName;
     private final String displayName;
@@ -28,18 +28,18 @@ public final class GetClusterIstioServiceResult {
     private final String serviceNamespace;
     private final List<GetClusterIstioServiceTelemetry> telemetries;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterIstioServiceResult(
-        @OutputCustomType.Parameter("clusterName") String clusterName,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("serviceId") String serviceId,
-        @OutputCustomType.Parameter("serviceName") String serviceName,
-        @OutputCustomType.Parameter("serviceNamespace") String serviceNamespace,
-        @OutputCustomType.Parameter("telemetries") List<GetClusterIstioServiceTelemetry> telemetries) {
+        @CustomType.Parameter("clusterName") String clusterName,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("serviceId") String serviceId,
+        @CustomType.Parameter("serviceName") String serviceName,
+        @CustomType.Parameter("serviceNamespace") String serviceNamespace,
+        @CustomType.Parameter("telemetries") List<GetClusterIstioServiceTelemetry> telemetries) {
         this.clusterName = clusterName;
         this.displayName = displayName;
         this.id = id;

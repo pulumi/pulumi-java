@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzureResourceDetailsResponse {
     /**
      * Azure resource Id of the assessed resource
@@ -21,10 +21,10 @@ public final class AzureResourceDetailsResponse {
      */
     private final String source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureResourceDetailsResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("source") String source) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("source") String source) {
         this.id = id;
         this.source = source;
     }

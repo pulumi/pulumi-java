@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InlineSecretResponse {
     /**
      * Map of environment variable name to its encrypted value. Secret environment variables must be unique across all of a build's secrets, and must be used by at least one build step. Values can be at most 64 KB in size. There can be at most 100 secret values across all of a build's secrets.
@@ -21,10 +21,10 @@ public final class InlineSecretResponse {
      */
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InlineSecretResponse(
-        @OutputCustomType.Parameter("envMap") Map<String,String> envMap,
-        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
+        @CustomType.Parameter("envMap") Map<String,String> envMap,
+        @CustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.envMap = envMap;
         this.kmsKeyName = kmsKeyName;
     }

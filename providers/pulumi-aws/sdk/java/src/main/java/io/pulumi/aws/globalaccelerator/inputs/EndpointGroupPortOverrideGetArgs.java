@@ -4,7 +4,7 @@
 package io.pulumi.aws.globalaccelerator.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class EndpointGroupPortOverrideGetArgs extends io.pulumi.resources.
      * The endpoint port that you want a listener port to be mapped to. This is the port on the endpoint, such as the Application Load Balancer or Amazon EC2 instance.
      * 
      */
-    @InputImport(name="endpointPort", required=true)
+    @Import(name="endpointPort", required=true)
       private final Output<Integer> endpointPort;
 
     public Output<Integer> getEndpointPort() {
@@ -28,7 +28,7 @@ public final class EndpointGroupPortOverrideGetArgs extends io.pulumi.resources.
      * The listener port that you want to map to a specific endpoint port. This is the port that user traffic arrives to the Global Accelerator on.
      * 
      */
-    @InputImport(name="listenerPort", required=true)
+    @Import(name="listenerPort", required=true)
       private final Output<Integer> listenerPort;
 
     public Output<Integer> getListenerPort() {

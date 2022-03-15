@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs;
@@ -27,7 +27,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleGetArgs extends io.pulumi.
      * be specified.
      * 
      */
-    @InputImport(name="fullPathMatch")
+    @Import(name="fullPathMatch")
       private final @Nullable Output<String> fullPathMatch;
 
     public Output<String> getFullPathMatch() {
@@ -40,7 +40,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleGetArgs extends io.pulumi.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="headerMatches")
+    @Import(name="headerMatches")
       private final @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs>> headerMatches;
 
     public Output<List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs>> getHeaderMatches() {
@@ -52,7 +52,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleGetArgs extends io.pulumi.
      * Defaults to false.
      * 
      */
-    @InputImport(name="ignoreCase")
+    @Import(name="ignoreCase")
       private final @Nullable Output<Boolean> ignoreCase;
 
     public Output<Boolean> getIgnoreCase() {
@@ -74,7 +74,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleGetArgs extends io.pulumi.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="metadataFilters")
+    @Import(name="metadataFilters")
       private final @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs>> metadataFilters;
 
     public Output<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs>> getMetadataFilters() {
@@ -87,7 +87,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleGetArgs extends io.pulumi.
      * must be set.
      * 
      */
-    @InputImport(name="prefixMatch")
+    @Import(name="prefixMatch")
       private final @Nullable Output<String> prefixMatch;
 
     public Output<String> getPrefixMatch() {
@@ -100,7 +100,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleGetArgs extends io.pulumi.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="queryParameterMatches")
+    @Import(name="queryParameterMatches")
       private final @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs>> queryParameterMatches;
 
     public Output<List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs>> getQueryParameterMatches() {
@@ -114,7 +114,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleGetArgs extends io.pulumi.
      * exactMatch and regexMatch must be set.
      * 
      */
-    @InputImport(name="regexMatch")
+    @Import(name="regexMatch")
       private final @Nullable Output<String> regexMatch;
 
     public Output<String> getRegexMatch() {

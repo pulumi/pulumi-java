@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.apigatewayv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StageAccessLogSettings {
     /**
      * The ARN of the CloudWatch Logs log group to receive access logs. Any trailing `:*` is trimmed from the ARN.
@@ -20,10 +20,10 @@ public final class StageAccessLogSettings {
      */
     private final String format;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StageAccessLogSettings(
-        @OutputCustomType.Parameter("destinationArn") String destinationArn,
-        @OutputCustomType.Parameter("format") String format) {
+        @CustomType.Parameter("destinationArn") String destinationArn,
+        @CustomType.Parameter("format") String format) {
         this.destinationArn = destinationArn;
         this.format = format;
     }

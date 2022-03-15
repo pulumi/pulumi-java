@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FeatureGroupFeatureDefinition {
     /**
      * The name of a feature. `feature_name` cannot be any of the following: `is_deleted`, `write_time`, `api_invocation_time`.
@@ -22,10 +22,10 @@ public final class FeatureGroupFeatureDefinition {
      */
     private final @Nullable String featureType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FeatureGroupFeatureDefinition(
-        @OutputCustomType.Parameter("featureName") @Nullable String featureName,
-        @OutputCustomType.Parameter("featureType") @Nullable String featureType) {
+        @CustomType.Parameter("featureName") @Nullable String featureName,
+        @CustomType.Parameter("featureType") @Nullable String featureType) {
         this.featureName = featureName;
         this.featureType = featureType;
     }

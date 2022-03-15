@@ -5,7 +5,7 @@ package io.pulumi.aws.batch;
 
 import io.pulumi.aws.batch.inputs.ComputeEnvironmentComputeResourcesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * The name for your compute environment. Up to 128 letters (uppercase and lowercase), numbers, and underscores are allowed. If omitted, this provider will assign a random, unique name.
      * 
      */
-    @InputImport(name="computeEnvironmentName")
+    @Import(name="computeEnvironmentName")
       private final @Nullable Output<String> computeEnvironmentName;
 
     public Output<String> getComputeEnvironmentName() {
@@ -31,7 +31,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * Creates a unique compute environment name beginning with the specified prefix. Conflicts with `compute_environment_name`.
      * 
      */
-    @InputImport(name="computeEnvironmentNamePrefix")
+    @Import(name="computeEnvironmentNamePrefix")
       private final @Nullable Output<String> computeEnvironmentNamePrefix;
 
     public Output<String> getComputeEnvironmentNamePrefix() {
@@ -42,7 +42,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * Details of the compute resources managed by the compute environment. This parameter is required for managed compute environments. See details below.
      * 
      */
-    @InputImport(name="computeResources")
+    @Import(name="computeResources")
       private final @Nullable Output<ComputeEnvironmentComputeResourcesArgs> computeResources;
 
     public Output<ComputeEnvironmentComputeResourcesArgs> getComputeResources() {
@@ -53,7 +53,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * The full Amazon Resource Name (ARN) of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
      * 
      */
-    @InputImport(name="serviceRole")
+    @Import(name="serviceRole")
       private final @Nullable Output<String> serviceRole;
 
     public Output<String> getServiceRole() {
@@ -64,7 +64,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * The state of the compute environment. If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues. Valid items are `ENABLED` or `DISABLED`. Defaults to `ENABLED`.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -75,7 +75,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * Key-value pair tags to be applied to resources that are launched in the compute environment. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -86,7 +86,7 @@ public final class ComputeEnvironmentArgs extends io.pulumi.resources.ResourceAr
      * The type of compute environment. Valid items are `EC2`, `SPOT`, `FARGATE` or `FARGATE_SPOT`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

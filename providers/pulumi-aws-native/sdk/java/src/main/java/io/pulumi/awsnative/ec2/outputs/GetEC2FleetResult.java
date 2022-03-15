@@ -5,25 +5,25 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.enums.EC2FleetExcessCapacityTerminationPolicy;
 import io.pulumi.awsnative.ec2.outputs.EC2FleetTargetCapacitySpecificationRequest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEC2FleetResult {
     private final @Nullable String context;
     private final @Nullable EC2FleetExcessCapacityTerminationPolicy excessCapacityTerminationPolicy;
     private final @Nullable String fleetId;
     private final @Nullable EC2FleetTargetCapacitySpecificationRequest targetCapacitySpecification;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEC2FleetResult(
-        @OutputCustomType.Parameter("context") @Nullable String context,
-        @OutputCustomType.Parameter("excessCapacityTerminationPolicy") @Nullable EC2FleetExcessCapacityTerminationPolicy excessCapacityTerminationPolicy,
-        @OutputCustomType.Parameter("fleetId") @Nullable String fleetId,
-        @OutputCustomType.Parameter("targetCapacitySpecification") @Nullable EC2FleetTargetCapacitySpecificationRequest targetCapacitySpecification) {
+        @CustomType.Parameter("context") @Nullable String context,
+        @CustomType.Parameter("excessCapacityTerminationPolicy") @Nullable EC2FleetExcessCapacityTerminationPolicy excessCapacityTerminationPolicy,
+        @CustomType.Parameter("fleetId") @Nullable String fleetId,
+        @CustomType.Parameter("targetCapacitySpecification") @Nullable EC2FleetTargetCapacitySpecificationRequest targetCapacitySpecification) {
         this.context = context;
         this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
         this.fleetId = fleetId;

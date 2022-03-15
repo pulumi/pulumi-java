@@ -3,7 +3,7 @@
 
 package io.pulumi.example.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.example.Resource;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,7 +14,7 @@ public final class ArgFunctionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final ArgFunctionArgs Empty = new ArgFunctionArgs();
 
-    @InputImport(name="arg1")
+    @Import(name="arg1")
       private final @Nullable Resource arg1;
 
     public Optional<Resource> getArg1() {

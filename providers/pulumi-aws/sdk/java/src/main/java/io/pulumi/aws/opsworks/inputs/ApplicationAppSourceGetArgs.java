@@ -4,7 +4,7 @@
 package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ApplicationAppSourceGetArgs extends io.pulumi.resources.Resou
      * Password to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -29,7 +29,7 @@ public final class ApplicationAppSourceGetArgs extends io.pulumi.resources.Resou
      * For sources that are version-aware, the revision to use.
      * 
      */
-    @InputImport(name="revision")
+    @Import(name="revision")
       private final @Nullable Output<String> revision;
 
     public Output<String> getRevision() {
@@ -40,7 +40,7 @@ public final class ApplicationAppSourceGetArgs extends io.pulumi.resources.Resou
      * SSH key to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
      * 
      */
-    @InputImport(name="sshKey")
+    @Import(name="sshKey")
       private final @Nullable Output<String> sshKey;
 
     public Output<String> getSshKey() {
@@ -51,7 +51,7 @@ public final class ApplicationAppSourceGetArgs extends io.pulumi.resources.Resou
      * The type of source to use. For example, "archive".
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -62,7 +62,7 @@ public final class ApplicationAppSourceGetArgs extends io.pulumi.resources.Resou
      * The URL where the app resource can be found.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
@@ -73,7 +73,7 @@ public final class ApplicationAppSourceGetArgs extends io.pulumi.resources.Resou
      * Username to use when authenticating to the source.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

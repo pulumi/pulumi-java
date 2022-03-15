@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.MongoDbCursorMethodsPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CosmosDbMongoDbApiSourceResponse {
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
@@ -65,18 +65,18 @@ public final class CosmosDbMongoDbApiSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CosmosDbMongoDbApiSourceResponse(
-        @OutputCustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
-        @OutputCustomType.Parameter("batchSize") @Nullable Object batchSize,
-        @OutputCustomType.Parameter("cursorMethods") @Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods,
-        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
-        @OutputCustomType.Parameter("filter") @Nullable Object filter,
-        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
-        @OutputCustomType.Parameter("queryTimeout") @Nullable Object queryTimeout,
-        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
-        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
+        @CustomType.Parameter("batchSize") @Nullable Object batchSize,
+        @CustomType.Parameter("cursorMethods") @Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods,
+        @CustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @CustomType.Parameter("filter") @Nullable Object filter,
+        @CustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @CustomType.Parameter("queryTimeout") @Nullable Object queryTimeout,
+        @CustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @CustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @CustomType.Parameter("type") String type) {
         this.additionalColumns = additionalColumns;
         this.batchSize = batchSize;
         this.cursorMethods = cursorMethods;

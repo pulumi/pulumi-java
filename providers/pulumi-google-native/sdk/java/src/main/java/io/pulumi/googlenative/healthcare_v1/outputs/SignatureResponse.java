@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.ImageResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SignatureResponse {
     /**
      * Optional. An image of the user's signature.
@@ -32,12 +32,12 @@ public final class SignatureResponse {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SignatureResponse(
-        @OutputCustomType.Parameter("image") ImageResponse image,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("signatureTime") String signatureTime,
-        @OutputCustomType.Parameter("userId") String userId) {
+        @CustomType.Parameter("image") ImageResponse image,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("signatureTime") String signatureTime,
+        @CustomType.Parameter("userId") String userId) {
         this.image = image;
         this.metadata = metadata;
         this.signatureTime = signatureTime;

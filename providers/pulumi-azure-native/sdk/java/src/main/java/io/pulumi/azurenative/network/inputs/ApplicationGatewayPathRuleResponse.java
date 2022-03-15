@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
      * Backend address pool resource of URL path map path rule.
      * 
      */
-    @InputImport(name="backendAddressPool")
+    @Import(name="backendAddressPool")
       private final @Nullable SubResourceResponse backendAddressPool;
 
     public Optional<SubResourceResponse> getBackendAddressPool() {
@@ -35,7 +35,7 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
      * Backend http settings resource of URL path map path rule.
      * 
      */
-    @InputImport(name="backendHttpSettings")
+    @Import(name="backendHttpSettings")
       private final @Nullable SubResourceResponse backendHttpSettings;
 
     public Optional<SubResourceResponse> getBackendHttpSettings() {
@@ -46,7 +46,7 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -57,7 +57,7 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
      * Reference to the FirewallPolicy resource.
      * 
      */
-    @InputImport(name="firewallPolicy")
+    @Import(name="firewallPolicy")
       private final @Nullable SubResourceResponse firewallPolicy;
 
     public Optional<SubResourceResponse> getFirewallPolicy() {
@@ -68,7 +68,7 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -79,7 +79,7 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
      * Name of the path rule that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -90,7 +90,7 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
      * Path rules of URL path map.
      * 
      */
-    @InputImport(name="paths")
+    @Import(name="paths")
       private final @Nullable List<String> paths;
 
     public List<String> getPaths() {
@@ -101,7 +101,7 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
      * The provisioning state of the path rule resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -112,7 +112,7 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
      * Redirect configuration resource of URL path map path rule.
      * 
      */
-    @InputImport(name="redirectConfiguration")
+    @Import(name="redirectConfiguration")
       private final @Nullable SubResourceResponse redirectConfiguration;
 
     public Optional<SubResourceResponse> getRedirectConfiguration() {
@@ -123,7 +123,7 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
      * Rewrite rule set resource of URL path map path rule.
      * 
      */
-    @InputImport(name="rewriteRuleSet")
+    @Import(name="rewriteRuleSet")
       private final @Nullable SubResourceResponse rewriteRuleSet;
 
     public Optional<SubResourceResponse> getRewriteRuleSet() {
@@ -134,7 +134,7 @@ public final class ApplicationGatewayPathRuleResponse extends io.pulumi.resource
      * Type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

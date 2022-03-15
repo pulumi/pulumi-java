@@ -6,7 +6,7 @@ package io.pulumi.azurenative.alertsmanagement;
 import io.pulumi.azurenative.alertsmanagement.inputs.HealthAlertActionArgs;
 import io.pulumi.azurenative.alertsmanagement.inputs.HealthAlertCriteriaArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
      * 
      */
-    @InputImport(name="actions")
+    @Import(name="actions")
       private final @Nullable Output<List<HealthAlertActionArgs>> actions;
 
     public Output<List<HealthAlertActionArgs>> getActions() {
@@ -34,7 +34,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * defines the specific alert criteria information.
      * 
      */
-    @InputImport(name="criteria", required=true)
+    @Import(name="criteria", required=true)
       private final Output<HealthAlertCriteriaArgs> criteria;
 
     public Output<HealthAlertCriteriaArgs> getCriteria() {
@@ -45,7 +45,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * the description of the health alert that will be included in the alert email.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final Output<String> description;
 
     public Output<String> getDescription() {
@@ -56,7 +56,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * the flag that indicates whether the health alert is enabled.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -67,7 +67,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -78,7 +78,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -89,7 +89,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the rule.
      * 
      */
-    @InputImport(name="ruleName")
+    @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {
@@ -100,7 +100,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * the list of resource id's that this health alert is scoped to.
      * 
      */
-    @InputImport(name="scopes")
+    @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;
 
     public Output<List<String>> getScopes() {
@@ -111,7 +111,7 @@ public final class HealthAlertArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

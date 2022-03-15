@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPartnerRegistrationArgs extends io.pulumi.resources.Invoke
      * Name of the partner registration.
      * 
      */
-    @InputImport(name="partnerRegistrationName", required=true)
+    @Import(name="partnerRegistrationName", required=true)
       private final String partnerRegistrationName;
 
     public String getPartnerRegistrationName() {
@@ -27,7 +27,7 @@ public final class GetPartnerRegistrationArgs extends io.pulumi.resources.Invoke
      * The name of the resource group within the user's subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

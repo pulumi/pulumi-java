@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.gkehub.FeatureArgs;
@@ -40,7 +40,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * Output only. When the Feature resource was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -54,7 +54,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * Output only. When the Feature resource was deleted.
      * 
      */
-    @OutputExport(name="deleteTime", type=String.class, parameters={})
+    @Export(name="deleteTime", type=String.class, parameters={})
     private Output<String> deleteTime;
 
     /**
@@ -68,7 +68,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * GCP labels for this Feature.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -82,7 +82,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * The location for the resource
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -96,7 +96,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * The full, unique name of this Feature resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * The project for the resource
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -124,7 +124,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * State of the Feature resource itself.
      * 
      */
-    @OutputExport(name="resourceStates", type=List.class, parameters={FeatureResourceState.class})
+    @Export(name="resourceStates", type=List.class, parameters={FeatureResourceState.class})
     private Output<List<FeatureResourceState>> resourceStates;
 
     /**
@@ -138,7 +138,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * Optional. Hub-wide Feature configuration. If this Feature does not support any Hub-wide configuration, this field may be unused.
      * 
      */
-    @OutputExport(name="spec", type=FeatureSpec.class, parameters={})
+    @Export(name="spec", type=FeatureSpec.class, parameters={})
     private Output</* @Nullable */ FeatureSpec> spec;
 
     /**
@@ -152,7 +152,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * Output only. The Hub-wide Feature state
      * 
      */
-    @OutputExport(name="states", type=List.class, parameters={FeatureState.class})
+    @Export(name="states", type=List.class, parameters={FeatureState.class})
     private Output<List<FeatureState>> states;
 
     /**
@@ -166,7 +166,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * Output only. When the Feature resource was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.DatasetResponseSqlDataPath;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
      * Additional Properties.
      * 
      */
-    @InputImport(name="additionalProperties")
+    @Import(name="additionalProperties")
       private final @Nullable Map<String,Object> additionalProperties;
 
     public Map<String,Object> getAdditionalProperties() {
@@ -38,7 +38,7 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
      * Azure path for Azure Blob or File
      * 
      */
-    @InputImport(name="azureFilePath", required=true)
+    @Import(name="azureFilePath", required=true)
       private final String azureFilePath;
 
     public String getAzureFilePath() {
@@ -49,7 +49,7 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
      * Data store Name
      * 
      */
-    @InputImport(name="datastoreName", required=true)
+    @Import(name="datastoreName", required=true)
       private final String datastoreName;
 
     public String getDatastoreName() {
@@ -60,7 +60,7 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
      * HTTP URL.
      * 
      */
-    @InputImport(name="httpUrl", required=true)
+    @Import(name="httpUrl", required=true)
       private final String httpUrl;
 
     public String getHttpUrl() {
@@ -71,7 +71,7 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
      * Specify the partition format of path. Defaults to None.
      * 
      */
-    @InputImport(name="partitionFormat", required=true)
+    @Import(name="partitionFormat", required=true)
       private final String partitionFormat;
 
     public String getPartitionFormat() {
@@ -82,7 +82,7 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
      * Whether or not to ignore unmatched path.
      * 
      */
-    @InputImport(name="partitionFormatIgnoreError", required=true)
+    @Import(name="partitionFormatIgnoreError", required=true)
       private final Boolean partitionFormatIgnoreError;
 
     public Boolean getPartitionFormatIgnoreError() {
@@ -93,7 +93,7 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
      * List of files expanded from a file GLOB specified
      * 
      */
-    @InputImport(name="paths", required=true)
+    @Import(name="paths", required=true)
       private final List<String> paths;
 
     public List<String> getPaths() {
@@ -104,7 +104,7 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
      * Relative path in the data store
      * 
      */
-    @InputImport(name="relativePath", required=true)
+    @Import(name="relativePath", required=true)
       private final String relativePath;
 
     public String getRelativePath() {
@@ -115,7 +115,7 @@ public final class DatasetResponseDataPath extends io.pulumi.resources.InvokeArg
      * Sql Query/Table/Stored Procedure details.
      * 
      */
-    @InputImport(name="sqlDataPath")
+    @Import(name="sqlDataPath")
       private final @Nullable DatasetResponseSqlDataPath sqlDataPath;
 
     public Optional<DatasetResponseSqlDataPath> getSqlDataPath() {

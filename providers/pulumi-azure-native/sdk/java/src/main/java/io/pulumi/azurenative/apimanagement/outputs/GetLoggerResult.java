@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLoggerResult {
     /**
      * The name and SendRule connection string of the event hub for azureEventHub logger.
@@ -55,16 +55,16 @@ public final class GetLoggerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLoggerResult(
-        @OutputCustomType.Parameter("credentials") @Nullable Map<String,String> credentials,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isBuffered") @Nullable Boolean isBuffered,
-        @OutputCustomType.Parameter("loggerType") String loggerType,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("credentials") @Nullable Map<String,String> credentials,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isBuffered") @Nullable Boolean isBuffered,
+        @CustomType.Parameter("loggerType") String loggerType,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId,
+        @CustomType.Parameter("type") String type) {
         this.credentials = credentials;
         this.description = description;
         this.id = id;

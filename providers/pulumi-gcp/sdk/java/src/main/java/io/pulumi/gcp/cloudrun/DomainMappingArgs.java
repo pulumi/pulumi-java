@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingMetadataArgs;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingSpecArgs;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the cloud run instance. eg us-central1
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -32,7 +32,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="metadata", required=true)
+    @Import(name="metadata", required=true)
       private final Output<DomainMappingMetadataArgs> metadata;
 
     public Output<DomainMappingMetadataArgs> getMetadata() {
@@ -43,7 +43,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -67,7 +67,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="spec", required=true)
+    @Import(name="spec", required=true)
       private final Output<DomainMappingSpecArgs> spec;
 
     public Output<DomainMappingSpecArgs> getSpec() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AwsNodePoolConfigRootVolumeArgs extends io.pulumi.resources.R
      * Optional. The number of I/O operations per second (IOPS) to provision for GP3 volume.
      * 
      */
-    @InputImport(name="iops")
+    @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
@@ -30,7 +30,7 @@ public final class AwsNodePoolConfigRootVolumeArgs extends io.pulumi.resources.R
      * Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -41,7 +41,7 @@ public final class AwsNodePoolConfigRootVolumeArgs extends io.pulumi.resources.R
      * Optional. The size of the volume, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
      * 
      */
-    @InputImport(name="sizeGib")
+    @Import(name="sizeGib")
       private final @Nullable Output<Integer> sizeGib;
 
     public Output<Integer> getSizeGib() {
@@ -52,7 +52,7 @@ public final class AwsNodePoolConfigRootVolumeArgs extends io.pulumi.resources.R
      * Optional. Type of the EBS volume. When unspecified, it defaults to GP2 volume. Possible values: VOLUME_TYPE_UNSPECIFIED, GP2, GP3
      * 
      */
-    @InputImport(name="volumeType")
+    @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {

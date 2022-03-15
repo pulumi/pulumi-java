@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class OpenIdAuthenticationSettingsContractResponse extends io.pulum
      * How to send token to the server.
      * 
      */
-    @InputImport(name="bearerTokenSendingMethods")
+    @Import(name="bearerTokenSendingMethods")
       private final @Nullable List<String> bearerTokenSendingMethods;
 
     public List<String> getBearerTokenSendingMethods() {
@@ -34,7 +34,7 @@ public final class OpenIdAuthenticationSettingsContractResponse extends io.pulum
      * OAuth authorization server identifier.
      * 
      */
-    @InputImport(name="openidProviderId")
+    @Import(name="openidProviderId")
       private final @Nullable String openidProviderId;
 
     public Optional<String> getOpenidProviderId() {

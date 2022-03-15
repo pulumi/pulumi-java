@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNetworkBgpCommunitiesResponse {
     /**
      * The BGP community associated with the region of the virtual network.
@@ -20,10 +20,10 @@ public final class VirtualNetworkBgpCommunitiesResponse {
      */
     private final String virtualNetworkCommunity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNetworkBgpCommunitiesResponse(
-        @OutputCustomType.Parameter("regionalCommunity") String regionalCommunity,
-        @OutputCustomType.Parameter("virtualNetworkCommunity") String virtualNetworkCommunity) {
+        @CustomType.Parameter("regionalCommunity") String regionalCommunity,
+        @CustomType.Parameter("virtualNetworkCommunity") String virtualNetworkCommunity) {
         this.regionalCommunity = regionalCommunity;
         this.virtualNetworkCommunity = virtualNetworkCommunity;
     }

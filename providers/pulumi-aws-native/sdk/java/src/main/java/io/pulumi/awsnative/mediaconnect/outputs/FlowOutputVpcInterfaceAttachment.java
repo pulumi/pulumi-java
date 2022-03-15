@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.mediaconnect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowOutputVpcInterfaceAttachment {
     /**
      * The name of the VPC interface to use for this output.
@@ -17,8 +17,8 @@ public final class FlowOutputVpcInterfaceAttachment {
      */
     private final @Nullable String vpcInterfaceName;
 
-    @OutputCustomType.Constructor
-    private FlowOutputVpcInterfaceAttachment(@OutputCustomType.Parameter("vpcInterfaceName") @Nullable String vpcInterfaceName) {
+    @CustomType.Constructor
+    private FlowOutputVpcInterfaceAttachment(@CustomType.Parameter("vpcInterfaceName") @Nullable String vpcInterfaceName) {
         this.vpcInterfaceName = vpcInterfaceName;
     }
 

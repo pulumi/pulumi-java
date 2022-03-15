@@ -22,7 +22,7 @@ import io.pulumi.azurenative.storage.outputs.SasPolicyResponse;
 import io.pulumi.azurenative.storage.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -51,7 +51,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Required for storage accounts where kind = BlobStorage. The access tier used for billing.
      * 
      */
-    @OutputExport(name="accessTier", type=String.class, parameters={})
+    @Export(name="accessTier", type=String.class, parameters={})
     private Output<String> accessTier;
 
     /**
@@ -65,7 +65,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Allow or disallow public access to all blobs or containers in the storage account. The default interpretation is true for this property.
      * 
      */
-    @OutputExport(name="allowBlobPublicAccess", type=Boolean.class, parameters={})
+    @Export(name="allowBlobPublicAccess", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowBlobPublicAccess;
 
     /**
@@ -79,7 +79,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Indicates whether the storage account permits requests to be authorized with the account access key via Shared Key. If false, then all requests, including shared access signatures, must be authorized with Azure Active Directory (Azure AD). The default value is null, which is equivalent to true.
      * 
      */
-    @OutputExport(name="allowSharedKeyAccess", type=Boolean.class, parameters={})
+    @Export(name="allowSharedKeyAccess", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowSharedKeyAccess;
 
     /**
@@ -93,7 +93,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Provides the identity based authentication settings for Azure Files.
      * 
      */
-    @OutputExport(name="azureFilesIdentityBasedAuthentication", type=AzureFilesIdentityBasedAuthenticationResponse.class, parameters={})
+    @Export(name="azureFilesIdentityBasedAuthentication", type=AzureFilesIdentityBasedAuthenticationResponse.class, parameters={})
     private Output</* @Nullable */ AzureFilesIdentityBasedAuthenticationResponse> azureFilesIdentityBasedAuthentication;
 
     /**
@@ -107,7 +107,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Blob restore status
      * 
      */
-    @OutputExport(name="blobRestoreStatus", type=BlobRestoreStatusResponse.class, parameters={})
+    @Export(name="blobRestoreStatus", type=BlobRestoreStatusResponse.class, parameters={})
     private Output<BlobRestoreStatusResponse> blobRestoreStatus;
 
     /**
@@ -121,7 +121,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Gets the creation date and time of the storage account in UTC.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -135,7 +135,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Gets the custom domain the user assigned to this storage account.
      * 
      */
-    @OutputExport(name="customDomain", type=CustomDomainResponse.class, parameters={})
+    @Export(name="customDomain", type=CustomDomainResponse.class, parameters={})
     private Output<CustomDomainResponse> customDomain;
 
     /**
@@ -149,7 +149,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Allows https traffic only to storage service if sets to true.
      * 
      */
-    @OutputExport(name="enableHttpsTrafficOnly", type=Boolean.class, parameters={})
+    @Export(name="enableHttpsTrafficOnly", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableHttpsTrafficOnly;
 
     /**
@@ -163,7 +163,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * NFS 3.0 protocol support enabled if set to true.
      * 
      */
-    @OutputExport(name="enableNfsV3", type=Boolean.class, parameters={})
+    @Export(name="enableNfsV3", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableNfsV3;
 
     /**
@@ -177,7 +177,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Gets the encryption settings on the account. If unspecified, the account is unencrypted.
      * 
      */
-    @OutputExport(name="encryption", type=EncryptionResponse.class, parameters={})
+    @Export(name="encryption", type=EncryptionResponse.class, parameters={})
     private Output<EncryptionResponse> encryption;
 
     /**
@@ -191,7 +191,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * The extendedLocation of the resource.
      * 
      */
-    @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
+    @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
@@ -205,7 +205,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * If the failover is in progress, the value will be true, otherwise, it will be null.
      * 
      */
-    @OutputExport(name="failoverInProgress", type=Boolean.class, parameters={})
+    @Export(name="failoverInProgress", type=Boolean.class, parameters={})
     private Output<Boolean> failoverInProgress;
 
     /**
@@ -219,7 +219,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Geo Replication Stats
      * 
      */
-    @OutputExport(name="geoReplicationStats", type=GeoReplicationStatsResponse.class, parameters={})
+    @Export(name="geoReplicationStats", type=GeoReplicationStatsResponse.class, parameters={})
     private Output<GeoReplicationStatsResponse> geoReplicationStats;
 
     /**
@@ -233,7 +233,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * The identity of the resource.
      * 
      */
-    @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
+    @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
@@ -247,7 +247,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Account HierarchicalNamespace enabled if sets to true.
      * 
      */
-    @OutputExport(name="isHnsEnabled", type=Boolean.class, parameters={})
+    @Export(name="isHnsEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isHnsEnabled;
 
     /**
@@ -261,7 +261,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Storage account keys creation time.
      * 
      */
-    @OutputExport(name="keyCreationTime", type=KeyCreationTimeResponse.class, parameters={})
+    @Export(name="keyCreationTime", type=KeyCreationTimeResponse.class, parameters={})
     private Output<KeyCreationTimeResponse> keyCreationTime;
 
     /**
@@ -275,7 +275,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * KeyPolicy assigned to the storage account.
      * 
      */
-    @OutputExport(name="keyPolicy", type=KeyPolicyResponse.class, parameters={})
+    @Export(name="keyPolicy", type=KeyPolicyResponse.class, parameters={})
     private Output<KeyPolicyResponse> keyPolicy;
 
     /**
@@ -289,7 +289,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Gets the Kind.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -303,7 +303,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Allow large file shares if sets to Enabled. It cannot be disabled once it is enabled.
      * 
      */
-    @OutputExport(name="largeFileSharesState", type=String.class, parameters={})
+    @Export(name="largeFileSharesState", type=String.class, parameters={})
     private Output</* @Nullable */ String> largeFileSharesState;
 
     /**
@@ -317,7 +317,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Gets the timestamp of the most recent instance of a failover to the secondary location. Only the most recent timestamp is retained. This element is not returned if there has never been a failover instance. Only available if the accountType is Standard_GRS or Standard_RAGRS.
      * 
      */
-    @OutputExport(name="lastGeoFailoverTime", type=String.class, parameters={})
+    @Export(name="lastGeoFailoverTime", type=String.class, parameters={})
     private Output<String> lastGeoFailoverTime;
 
     /**
@@ -331,7 +331,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -345,7 +345,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Set the minimum TLS version to be permitted on requests to storage. The default interpretation is TLS 1.0 for this property.
      * 
      */
-    @OutputExport(name="minimumTlsVersion", type=String.class, parameters={})
+    @Export(name="minimumTlsVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> minimumTlsVersion;
 
     /**
@@ -359,7 +359,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -373,7 +373,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Network rule set
      * 
      */
-    @OutputExport(name="networkRuleSet", type=NetworkRuleSetResponse.class, parameters={})
+    @Export(name="networkRuleSet", type=NetworkRuleSetResponse.class, parameters={})
     private Output<NetworkRuleSetResponse> networkRuleSet;
 
     /**
@@ -387,7 +387,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object. Note that Standard_ZRS and Premium_LRS accounts only return the blob endpoint.
      * 
      */
-    @OutputExport(name="primaryEndpoints", type=EndpointsResponse.class, parameters={})
+    @Export(name="primaryEndpoints", type=EndpointsResponse.class, parameters={})
     private Output<EndpointsResponse> primaryEndpoints;
 
     /**
@@ -401,7 +401,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Gets the location of the primary data center for the storage account.
      * 
      */
-    @OutputExport(name="primaryLocation", type=String.class, parameters={})
+    @Export(name="primaryLocation", type=String.class, parameters={})
     private Output<String> primaryLocation;
 
     /**
@@ -415,7 +415,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * List of private endpoint connection associated with the specified storage account
      * 
      */
-    @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
+    @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
@@ -429,7 +429,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Gets the status of the storage account at the time the operation was called.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -443,7 +443,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Maintains information about the network routing choice opted by the user for data transfer
      * 
      */
-    @OutputExport(name="routingPreference", type=RoutingPreferenceResponse.class, parameters={})
+    @Export(name="routingPreference", type=RoutingPreferenceResponse.class, parameters={})
     private Output</* @Nullable */ RoutingPreferenceResponse> routingPreference;
 
     /**
@@ -457,7 +457,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * SasPolicy assigned to the storage account.
      * 
      */
-    @OutputExport(name="sasPolicy", type=SasPolicyResponse.class, parameters={})
+    @Export(name="sasPolicy", type=SasPolicyResponse.class, parameters={})
     private Output<SasPolicyResponse> sasPolicy;
 
     /**
@@ -471,7 +471,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Gets the URLs that are used to perform a retrieval of a public blob, queue, or table object from the secondary location of the storage account. Only available if the SKU name is Standard_RAGRS.
      * 
      */
-    @OutputExport(name="secondaryEndpoints", type=EndpointsResponse.class, parameters={})
+    @Export(name="secondaryEndpoints", type=EndpointsResponse.class, parameters={})
     private Output<EndpointsResponse> secondaryEndpoints;
 
     /**
@@ -485,7 +485,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Gets the location of the geo-replicated secondary for the storage account. Only available if the accountType is Standard_GRS or Standard_RAGRS.
      * 
      */
-    @OutputExport(name="secondaryLocation", type=String.class, parameters={})
+    @Export(name="secondaryLocation", type=String.class, parameters={})
     private Output<String> secondaryLocation;
 
     /**
@@ -499,7 +499,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Gets the SKU.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
@@ -513,7 +513,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Gets the status indicating whether the primary location of the storage account is available or unavailable.
      * 
      */
-    @OutputExport(name="statusOfPrimary", type=String.class, parameters={})
+    @Export(name="statusOfPrimary", type=String.class, parameters={})
     private Output<String> statusOfPrimary;
 
     /**
@@ -527,7 +527,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Gets the status indicating whether the secondary location of the storage account is available or unavailable. Only available if the SKU name is Standard_GRS or Standard_RAGRS.
      * 
      */
-    @OutputExport(name="statusOfSecondary", type=String.class, parameters={})
+    @Export(name="statusOfSecondary", type=String.class, parameters={})
     private Output<String> statusOfSecondary;
 
     /**
@@ -541,7 +541,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -555,7 +555,7 @@ public class StorageAccount extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

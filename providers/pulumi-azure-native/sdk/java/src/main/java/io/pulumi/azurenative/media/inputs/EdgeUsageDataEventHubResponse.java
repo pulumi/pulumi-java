@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class EdgeUsageDataEventHubResponse extends io.pulumi.resources.Inv
      * Name of the Event Hub where usage will be reported.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -29,7 +29,7 @@ public final class EdgeUsageDataEventHubResponse extends io.pulumi.resources.Inv
      * Namespace of the Event Hub where usage will be reported.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable String namespace;
 
     public Optional<String> getNamespace() {
@@ -40,7 +40,7 @@ public final class EdgeUsageDataEventHubResponse extends io.pulumi.resources.Inv
      * SAS token needed to interact with Event Hub.
      * 
      */
-    @InputImport(name="token")
+    @Import(name="token")
       private final @Nullable String token;
 
     public Optional<String> getToken() {

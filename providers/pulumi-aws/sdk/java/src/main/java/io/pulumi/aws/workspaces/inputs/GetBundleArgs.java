@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.workspaces.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetBundleArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the bundle.
      * 
      */
-    @InputImport(name="bundleId")
+    @Import(name="bundleId")
       private final @Nullable String bundleId;
 
     public Optional<String> getBundleId() {
@@ -29,7 +29,7 @@ public final class GetBundleArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the bundle. You cannot combine this parameter with `bundle_id`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -40,7 +40,7 @@ public final class GetBundleArgs extends io.pulumi.resources.InvokeArgs {
      * The owner of the bundles. You have to leave it blank for own bundles. You cannot combine this parameter with `bundle_id`.
      * 
      */
-    @InputImport(name="owner")
+    @Import(name="owner")
       private final @Nullable String owner;
 
     public Optional<String> getOwner() {

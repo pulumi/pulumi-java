@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storsimple.inputs;
 import io.pulumi.azurenative.storsimple.enums.DayOfWeek;
 import io.pulumi.azurenative.storsimple.enums.RecurrenceType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ScheduleRecurrenceArgs extends io.pulumi.resources.ResourceAr
      * The recurrence type.
      * 
      */
-    @InputImport(name="recurrenceType", required=true)
+    @Import(name="recurrenceType", required=true)
       private final Output<RecurrenceType> recurrenceType;
 
     public Output<RecurrenceType> getRecurrenceType() {
@@ -36,7 +36,7 @@ public final class ScheduleRecurrenceArgs extends io.pulumi.resources.ResourceAr
      * The recurrence value.
      * 
      */
-    @InputImport(name="recurrenceValue", required=true)
+    @Import(name="recurrenceValue", required=true)
       private final Output<Integer> recurrenceValue;
 
     public Output<Integer> getRecurrenceValue() {
@@ -47,7 +47,7 @@ public final class ScheduleRecurrenceArgs extends io.pulumi.resources.ResourceAr
      * The week days list. Applicable only for schedules of recurrence type 'weekly'.
      * 
      */
-    @InputImport(name="weeklyDaysList")
+    @Import(name="weeklyDaysList")
       private final @Nullable Output<List<DayOfWeek>> weeklyDaysList;
 
     public Output<List<DayOfWeek>> getWeeklyDaysList() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WindowsFileSystemAuditLogConfigurationArgs extends io.pulumi.
      * The Amazon Resource Name (ARN) for the destination of the audit logs. The destination can be any Amazon CloudWatch Logs log group ARN or Amazon Kinesis Data Firehose delivery stream ARN. Can be specified when `file_access_audit_log_level` and `file_share_access_audit_log_level` are not set to `DISABLED`. The name of the Amazon CloudWatch Logs log group must begin with the `/aws/fsx` prefix. The name of the Amazon Kinesis Data Firehouse delivery stream must begin with the `aws-fsx` prefix. If you do not provide a destination in `audit_log_destionation`, Amazon FSx will create and use a log stream in the CloudWatch Logs /aws/fsx/windows log group.
      * 
      */
-    @InputImport(name="auditLogDestination")
+    @Import(name="auditLogDestination")
       private final @Nullable Output<String> auditLogDestination;
 
     public Output<String> getAuditLogDestination() {
@@ -29,7 +29,7 @@ public final class WindowsFileSystemAuditLogConfigurationArgs extends io.pulumi.
      * Sets which attempt type is logged by Amazon FSx for file and folder accesses. Valid values are `SUCCESS_ONLY`, `FAILURE_ONLY`, `SUCCESS_AND_FAILURE`, and `DISABLED`. Default value is `DISABLED`.
      * 
      */
-    @InputImport(name="fileAccessAuditLogLevel")
+    @Import(name="fileAccessAuditLogLevel")
       private final @Nullable Output<String> fileAccessAuditLogLevel;
 
     public Output<String> getFileAccessAuditLogLevel() {
@@ -40,7 +40,7 @@ public final class WindowsFileSystemAuditLogConfigurationArgs extends io.pulumi.
      * Sets which attempt type is logged by Amazon FSx for file share accesses. Valid values are `SUCCESS_ONLY`, `FAILURE_ONLY`, `SUCCESS_AND_FAILURE`, and `DISABLED`. Default value is `DISABLED`.
      * 
      */
-    @InputImport(name="fileShareAccessAuditLogLevel")
+    @Import(name="fileShareAccessAuditLogLevel")
       private final @Nullable Output<String> fileShareAccessAuditLogLevel;
 
     public Output<String> getFileShareAccessAuditLogLevel() {

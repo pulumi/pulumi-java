@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3objectlambda.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class PolicyStatusProperties extends io.pulumi.resources.InvokeArgs
      * Specifies whether the Object lambda Access Point Policy is Public or not. Object lambda Access Points are private by default.
      * 
      */
-    @InputImport(name="isPublic")
+    @Import(name="isPublic")
       private final @Nullable Boolean isPublic;
 
     public Optional<Boolean> getIsPublic() {

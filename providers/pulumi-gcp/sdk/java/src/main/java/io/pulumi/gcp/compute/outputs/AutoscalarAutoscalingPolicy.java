@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.AutoscalarAutoscalingPolicyCpuUtilization;
 import io.pulumi.gcp.compute.outputs.AutoscalarAutoscalingPolicyLoadBalancingUtilization;
 import io.pulumi.gcp.compute.outputs.AutoscalarAutoscalingPolicyMetric;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoscalarAutoscalingPolicy {
     /**
      * The number of seconds that the autoscaler should wait before it
@@ -96,18 +96,18 @@ public final class AutoscalarAutoscalingPolicy {
      */
     private final @Nullable List<AutoscalarAutoscalingPolicyScalingSchedule> scalingSchedules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscalarAutoscalingPolicy(
-        @OutputCustomType.Parameter("cooldownPeriod") @Nullable Integer cooldownPeriod,
-        @OutputCustomType.Parameter("cpuUtilization") @Nullable AutoscalarAutoscalingPolicyCpuUtilization cpuUtilization,
-        @OutputCustomType.Parameter("loadBalancingUtilization") @Nullable AutoscalarAutoscalingPolicyLoadBalancingUtilization loadBalancingUtilization,
-        @OutputCustomType.Parameter("maxReplicas") Integer maxReplicas,
-        @OutputCustomType.Parameter("metrics") @Nullable List<AutoscalarAutoscalingPolicyMetric> metrics,
-        @OutputCustomType.Parameter("minReplicas") Integer minReplicas,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("scaleDownControl") @Nullable AutoscalarAutoscalingPolicyScaleDownControl scaleDownControl,
-        @OutputCustomType.Parameter("scaleInControl") @Nullable AutoscalarAutoscalingPolicyScaleInControl scaleInControl,
-        @OutputCustomType.Parameter("scalingSchedules") @Nullable List<AutoscalarAutoscalingPolicyScalingSchedule> scalingSchedules) {
+        @CustomType.Parameter("cooldownPeriod") @Nullable Integer cooldownPeriod,
+        @CustomType.Parameter("cpuUtilization") @Nullable AutoscalarAutoscalingPolicyCpuUtilization cpuUtilization,
+        @CustomType.Parameter("loadBalancingUtilization") @Nullable AutoscalarAutoscalingPolicyLoadBalancingUtilization loadBalancingUtilization,
+        @CustomType.Parameter("maxReplicas") Integer maxReplicas,
+        @CustomType.Parameter("metrics") @Nullable List<AutoscalarAutoscalingPolicyMetric> metrics,
+        @CustomType.Parameter("minReplicas") Integer minReplicas,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("scaleDownControl") @Nullable AutoscalarAutoscalingPolicyScaleDownControl scaleDownControl,
+        @CustomType.Parameter("scaleInControl") @Nullable AutoscalarAutoscalingPolicyScaleInControl scaleInControl,
+        @CustomType.Parameter("scalingSchedules") @Nullable List<AutoscalarAutoscalingPolicyScalingSchedule> scalingSchedules) {
         this.cooldownPeriod = cooldownPeriod;
         this.cpuUtilization = cpuUtilization;
         this.loadBalancingUtilization = loadBalancingUtilization;

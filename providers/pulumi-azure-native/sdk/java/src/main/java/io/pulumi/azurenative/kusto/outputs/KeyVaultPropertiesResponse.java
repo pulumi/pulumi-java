@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.kusto.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultPropertiesResponse {
     /**
      * The name of the key vault key.
@@ -32,12 +32,12 @@ public final class KeyVaultPropertiesResponse {
      */
     private final @Nullable String userIdentity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyVaultPropertiesResponse(
-        @OutputCustomType.Parameter("keyName") String keyName,
-        @OutputCustomType.Parameter("keyVaultUri") String keyVaultUri,
-        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion,
-        @OutputCustomType.Parameter("userIdentity") @Nullable String userIdentity) {
+        @CustomType.Parameter("keyName") String keyName,
+        @CustomType.Parameter("keyVaultUri") String keyVaultUri,
+        @CustomType.Parameter("keyVersion") @Nullable String keyVersion,
+        @CustomType.Parameter("userIdentity") @Nullable String userIdentity) {
         this.keyName = keyName;
         this.keyVaultUri = keyVaultUri;
         this.keyVersion = keyVersion;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListEdgeModuleProvisioningTokenArgs extends io.pulumi.resourc
      * The Azure Video Analyzer account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -27,7 +27,7 @@ public final class ListEdgeModuleProvisioningTokenArgs extends io.pulumi.resourc
      * The name of the edge module used to create a new provisioning token.
      * 
      */
-    @InputImport(name="edgeModuleName", required=true)
+    @Import(name="edgeModuleName", required=true)
       private final String edgeModuleName;
 
     public String getEdgeModuleName() {
@@ -38,7 +38,7 @@ public final class ListEdgeModuleProvisioningTokenArgs extends io.pulumi.resourc
      * The desired expiration date of the registration token. The Azure Video Analyzer IoT edge module must be initialized and connected to the Internet prior to the token expiration date.
      * 
      */
-    @InputImport(name="expirationDate", required=true)
+    @Import(name="expirationDate", required=true)
       private final String expirationDate;
 
     public String getExpirationDate() {
@@ -49,7 +49,7 @@ public final class ListEdgeModuleProvisioningTokenArgs extends io.pulumi.resourc
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

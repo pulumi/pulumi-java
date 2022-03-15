@@ -7,14 +7,14 @@ import io.pulumi.awsnative.route53.outputs.HostedZoneConfig;
 import io.pulumi.awsnative.route53.outputs.HostedZoneQueryLoggingConfig;
 import io.pulumi.awsnative.route53.outputs.HostedZoneTag;
 import io.pulumi.awsnative.route53.outputs.HostedZoneVPC;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHostedZoneResult {
     private final @Nullable HostedZoneConfig hostedZoneConfig;
     /**
@@ -33,14 +33,14 @@ public final class GetHostedZoneResult {
      */
     private final @Nullable List<HostedZoneVPC> vPCs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHostedZoneResult(
-        @OutputCustomType.Parameter("hostedZoneConfig") @Nullable HostedZoneConfig hostedZoneConfig,
-        @OutputCustomType.Parameter("hostedZoneTags") @Nullable List<HostedZoneTag> hostedZoneTags,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("nameServers") @Nullable List<String> nameServers,
-        @OutputCustomType.Parameter("queryLoggingConfig") @Nullable HostedZoneQueryLoggingConfig queryLoggingConfig,
-        @OutputCustomType.Parameter("vPCs") @Nullable List<HostedZoneVPC> vPCs) {
+        @CustomType.Parameter("hostedZoneConfig") @Nullable HostedZoneConfig hostedZoneConfig,
+        @CustomType.Parameter("hostedZoneTags") @Nullable List<HostedZoneTag> hostedZoneTags,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("nameServers") @Nullable List<String> nameServers,
+        @CustomType.Parameter("queryLoggingConfig") @Nullable HostedZoneQueryLoggingConfig queryLoggingConfig,
+        @CustomType.Parameter("vPCs") @Nullable List<HostedZoneVPC> vPCs) {
         this.hostedZoneConfig = hostedZoneConfig;
         this.hostedZoneTags = hostedZoneTags;
         this.id = id;

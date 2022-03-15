@@ -23,7 +23,7 @@ import io.pulumi.azurenative.datafactory.inputs.OracleCloudStorageReadSettingsAr
 import io.pulumi.azurenative.datafactory.inputs.SftpReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -44,7 +44,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Delete activity dataset reference.
      * 
      */
-    @InputImport(name="dataset", required=true)
+    @Import(name="dataset", required=true)
       private final Output<DatasetReferenceArgs> dataset;
 
     public Output<DatasetReferenceArgs> getDataset() {
@@ -55,7 +55,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
@@ -66,7 +66,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -77,7 +77,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to record detailed logs of delete-activity execution. Default value is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="enableLogging")
+    @Import(name="enableLogging")
       private final @Nullable Output<Object> enableLogging;
 
     public Output<Object> getEnableLogging() {
@@ -88,7 +88,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName")
+    @Import(name="linkedServiceName")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
@@ -99,7 +99,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Log storage settings customer need to provide when enableLogging is true.
      * 
      */
-    @InputImport(name="logStorageSettings")
+    @Import(name="logStorageSettings")
       private final @Nullable Output<LogStorageSettingsArgs> logStorageSettings;
 
     public Output<LogStorageSettingsArgs> getLogStorageSettings() {
@@ -110,7 +110,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * The max concurrent connections to connect data source at the same time.
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Integer> maxConcurrentConnections;
 
     public Output<Integer> getMaxConcurrentConnections() {
@@ -121,7 +121,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -132,7 +132,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Activity policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
     public Output<ActivityPolicyArgs> getPolicy() {
@@ -143,7 +143,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * If true, files or sub-folders under current folder path will be deleted recursively. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="recursive")
+    @Import(name="recursive")
       private final @Nullable Output<Object> recursive;
 
     public Output<Object> getRecursive() {
@@ -154,7 +154,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Delete activity store settings.
      * 
      */
-    @InputImport(name="storeSettings")
+    @Import(name="storeSettings")
       private final @Nullable Output<Object> storeSettings;
 
     public Output<Object> getStoreSettings() {
@@ -166,7 +166,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'Delete'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -177,7 +177,7 @@ public final class DeleteActivityArgs extends io.pulumi.resources.ResourceArgs {
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {

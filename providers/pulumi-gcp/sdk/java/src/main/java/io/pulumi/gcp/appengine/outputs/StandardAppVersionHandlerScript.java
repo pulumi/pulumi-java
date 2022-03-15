@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StandardAppVersionHandlerScript {
     /**
      * Path to the script from the application root directory.
@@ -15,8 +15,8 @@ public final class StandardAppVersionHandlerScript {
      */
     private final String scriptPath;
 
-    @OutputCustomType.Constructor
-    private StandardAppVersionHandlerScript(@OutputCustomType.Parameter("scriptPath") String scriptPath) {
+    @CustomType.Constructor
+    private StandardAppVersionHandlerScript(@CustomType.Parameter("scriptPath") String scriptPath) {
         this.scriptPath = scriptPath;
     }
 

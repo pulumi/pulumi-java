@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.MaintenanceWindowResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MaintenancePolicyResponse {
     /**
      * A hash identifying the version of this policy, so that updates to fields of the policy won't accidentally undo intermediate changes (and so that users of the API unaware of some fields won't accidentally remove other fields). Make a `get()` request to the cluster to get the current resource version and include it with requests to set the policy.
@@ -21,10 +21,10 @@ public final class MaintenancePolicyResponse {
      */
     private final MaintenanceWindowResponse window;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MaintenancePolicyResponse(
-        @OutputCustomType.Parameter("resourceVersion") String resourceVersion,
-        @OutputCustomType.Parameter("window") MaintenanceWindowResponse window) {
+        @CustomType.Parameter("resourceVersion") String resourceVersion,
+        @CustomType.Parameter("window") MaintenanceWindowResponse window) {
         this.resourceVersion = resourceVersion;
         this.window = window;
     }

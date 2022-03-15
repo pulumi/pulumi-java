@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorScaleInPolicyArgs;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorScaleOutPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
      * The maximum number of workers for a connector.
      * 
      */
-    @InputImport(name="maxWorkerCount", required=true)
+    @Import(name="maxWorkerCount", required=true)
       private final Output<Integer> maxWorkerCount;
 
     public Output<Integer> getMaxWorkerCount() {
@@ -34,7 +34,7 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
      * Specifies how many MSK Connect Units (MCU) as the minimum scaling unit.
      * 
      */
-    @InputImport(name="mcuCount", required=true)
+    @Import(name="mcuCount", required=true)
       private final Output<Integer> mcuCount;
 
     public Output<Integer> getMcuCount() {
@@ -45,21 +45,21 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
      * The minimum number of workers for a connector.
      * 
      */
-    @InputImport(name="minWorkerCount", required=true)
+    @Import(name="minWorkerCount", required=true)
       private final Output<Integer> minWorkerCount;
 
     public Output<Integer> getMinWorkerCount() {
         return this.minWorkerCount;
     }
 
-    @InputImport(name="scaleInPolicy", required=true)
+    @Import(name="scaleInPolicy", required=true)
       private final Output<ConnectorScaleInPolicyArgs> scaleInPolicy;
 
     public Output<ConnectorScaleInPolicyArgs> getScaleInPolicy() {
         return this.scaleInPolicy;
     }
 
-    @InputImport(name="scaleOutPolicy", required=true)
+    @Import(name="scaleOutPolicy", required=true)
       private final Output<ConnectorScaleOutPolicyArgs> scaleOutPolicy;
 
     public Output<ConnectorScaleOutPolicyArgs> getScaleOutPolicy() {

@@ -15,7 +15,7 @@ import io.pulumi.azurenative.solutions.outputs.ApplicationPolicyResponse;
 import io.pulumi.azurenative.solutions.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -45,7 +45,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.
      * 
      */
-    @OutputExport(name="artifacts", type=List.class, parameters={ApplicationDefinitionArtifactResponse.class})
+    @Export(name="artifacts", type=List.class, parameters={ApplicationDefinitionArtifactResponse.class})
     private Output</* @Nullable */ List<ApplicationDefinitionArtifactResponse>> artifacts;
 
     /**
@@ -59,7 +59,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * The managed application provider authorizations.
      * 
      */
-    @OutputExport(name="authorizations", type=List.class, parameters={ApplicationAuthorizationResponse.class})
+    @Export(name="authorizations", type=List.class, parameters={ApplicationAuthorizationResponse.class})
     private Output</* @Nullable */ List<ApplicationAuthorizationResponse>> authorizations;
 
     /**
@@ -73,7 +73,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * The createUiDefinition json for the backing template with Microsoft.Solutions/applications resource. It can be a JObject or well-formed JSON string.
      * 
      */
-    @OutputExport(name="createUiDefinition", type=Object.class, parameters={})
+    @Export(name="createUiDefinition", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> createUiDefinition;
 
     /**
@@ -87,7 +87,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * The managed application deployment policy.
      * 
      */
-    @OutputExport(name="deploymentPolicy", type=ApplicationDeploymentPolicyResponse.class, parameters={})
+    @Export(name="deploymentPolicy", type=ApplicationDeploymentPolicyResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationDeploymentPolicyResponse> deploymentPolicy;
 
     /**
@@ -101,7 +101,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * The managed application definition description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -115,7 +115,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * The managed application definition display name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -129,7 +129,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * A value indicating whether the package is enabled or not.
      * 
      */
-    @OutputExport(name="isEnabled", type=Boolean.class, parameters={})
+    @Export(name="isEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isEnabled;
 
     /**
@@ -143,7 +143,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -157,7 +157,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * The managed application lock level.
      * 
      */
-    @OutputExport(name="lockLevel", type=String.class, parameters={})
+    @Export(name="lockLevel", type=String.class, parameters={})
     private Output<String> lockLevel;
 
     /**
@@ -171,7 +171,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * The managed application locking policy.
      * 
      */
-    @OutputExport(name="lockingPolicy", type=ApplicationPackageLockingPolicyDefinitionResponse.class, parameters={})
+    @Export(name="lockingPolicy", type=ApplicationPackageLockingPolicyDefinitionResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationPackageLockingPolicyDefinitionResponse> lockingPolicy;
 
     /**
@@ -185,7 +185,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * The inline main template json which has resources to be provisioned. It can be a JObject or well-formed JSON string.
      * 
      */
-    @OutputExport(name="mainTemplate", type=Object.class, parameters={})
+    @Export(name="mainTemplate", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> mainTemplate;
 
     /**
@@ -199,7 +199,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * ID of the resource that manages this resource.
      * 
      */
-    @OutputExport(name="managedBy", type=String.class, parameters={})
+    @Export(name="managedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> managedBy;
 
     /**
@@ -213,7 +213,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * The managed application management policy that determines publisher's access to the managed resource group.
      * 
      */
-    @OutputExport(name="managementPolicy", type=ApplicationManagementPolicyResponse.class, parameters={})
+    @Export(name="managementPolicy", type=ApplicationManagementPolicyResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationManagementPolicyResponse> managementPolicy;
 
     /**
@@ -227,7 +227,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -241,7 +241,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * The managed application notification policy.
      * 
      */
-    @OutputExport(name="notificationPolicy", type=ApplicationNotificationPolicyResponse.class, parameters={})
+    @Export(name="notificationPolicy", type=ApplicationNotificationPolicyResponse.class, parameters={})
     private Output</* @Nullable */ ApplicationNotificationPolicyResponse> notificationPolicy;
 
     /**
@@ -255,7 +255,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * The managed application definition package file Uri. Use this element
      * 
      */
-    @OutputExport(name="packageFileUri", type=String.class, parameters={})
+    @Export(name="packageFileUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> packageFileUri;
 
     /**
@@ -269,7 +269,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * The managed application provider policies.
      * 
      */
-    @OutputExport(name="policies", type=List.class, parameters={ApplicationPolicyResponse.class})
+    @Export(name="policies", type=List.class, parameters={ApplicationPolicyResponse.class})
     private Output</* @Nullable */ List<ApplicationPolicyResponse>> policies;
 
     /**
@@ -283,7 +283,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * The SKU of the resource.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -297,7 +297,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -311,7 +311,7 @@ public class ApplicationDefinition extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

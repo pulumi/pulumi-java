@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.fis.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class ExperimentTemplateStopCondition extends io.pulumi.resources.I
 
     public static final ExperimentTemplateStopCondition Empty = new ExperimentTemplateStopCondition();
 
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final String source;
 
     public String getSource() {
         return this.source;
     }
 
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

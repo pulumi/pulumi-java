@@ -7,7 +7,7 @@ import io.pulumi.azurenative.customerinsights.enums.CardinalityTypes;
 import io.pulumi.azurenative.customerinsights.inputs.PropertyDefinitionArgs;
 import io.pulumi.azurenative.customerinsights.inputs.RelationshipTypeMappingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * The Relationship Cardinality.
      * 
      */
-    @InputImport(name="cardinality")
+    @Import(name="cardinality")
       private final @Nullable Output<CardinalityTypes> cardinality;
 
     public Output<CardinalityTypes> getCardinality() {
@@ -34,7 +34,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * Localized descriptions for the Relationship.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<Map<String,String>> description;
 
     public Output<Map<String,String>> getDescription() {
@@ -45,7 +45,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * Localized display name for the Relationship.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<Map<String,String>> displayName;
 
     public Output<Map<String,String>> getDisplayName() {
@@ -56,7 +56,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * The expiry date time in UTC.
      * 
      */
-    @InputImport(name="expiryDateTimeUtc")
+    @Import(name="expiryDateTimeUtc")
       private final @Nullable Output<String> expiryDateTimeUtc;
 
     public Output<String> getExpiryDateTimeUtc() {
@@ -67,7 +67,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * The properties of the Relationship.
      * 
      */
-    @InputImport(name="fields")
+    @Import(name="fields")
       private final @Nullable Output<List<PropertyDefinitionArgs>> fields;
 
     public Output<List<PropertyDefinitionArgs>> getFields() {
@@ -78,7 +78,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the hub.
      * 
      */
-    @InputImport(name="hubName", required=true)
+    @Import(name="hubName", required=true)
       private final Output<String> hubName;
 
     public Output<String> getHubName() {
@@ -89,7 +89,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * Optional property to be used to map fields in profile to their strong ids in related profile.
      * 
      */
-    @InputImport(name="lookupMappings")
+    @Import(name="lookupMappings")
       private final @Nullable Output<List<RelationshipTypeMappingArgs>> lookupMappings;
 
     public Output<List<RelationshipTypeMappingArgs>> getLookupMappings() {
@@ -100,7 +100,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * Profile type.
      * 
      */
-    @InputImport(name="profileType", required=true)
+    @Import(name="profileType", required=true)
       private final Output<String> profileType;
 
     public Output<String> getProfileType() {
@@ -111,7 +111,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * Related profile being referenced.
      * 
      */
-    @InputImport(name="relatedProfileType", required=true)
+    @Import(name="relatedProfileType", required=true)
       private final Output<String> relatedProfileType;
 
     public Output<String> getRelatedProfileType() {
@@ -122,7 +122,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Relationship.
      * 
      */
-    @InputImport(name="relationshipName")
+    @Import(name="relationshipName")
       private final @Nullable Output<String> relationshipName;
 
     public Output<String> getRelationshipName() {
@@ -133,7 +133,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

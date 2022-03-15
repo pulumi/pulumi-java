@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.PropertyDefinitionResponse;
 import io.pulumi.azurenative.customerinsights.outputs.StrongIdResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProfileResult {
     /**
      * The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
@@ -122,29 +122,29 @@ public final class GetProfileResult {
      */
     private final @Nullable String typeName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProfileResult(
-        @OutputCustomType.Parameter("apiEntitySetName") @Nullable String apiEntitySetName,
-        @OutputCustomType.Parameter("attributes") @Nullable Map<String,List<String>> attributes,
-        @OutputCustomType.Parameter("description") @Nullable Map<String,String> description,
-        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
-        @OutputCustomType.Parameter("entityType") @Nullable String entityType,
-        @OutputCustomType.Parameter("fields") @Nullable List<PropertyDefinitionResponse> fields,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instancesCount") @Nullable Integer instancesCount,
-        @OutputCustomType.Parameter("largeImage") @Nullable String largeImage,
-        @OutputCustomType.Parameter("lastChangedUtc") String lastChangedUtc,
-        @OutputCustomType.Parameter("localizedAttributes") @Nullable Map<String,Map<String,String>> localizedAttributes,
-        @OutputCustomType.Parameter("mediumImage") @Nullable String mediumImage,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("schemaItemTypeLink") @Nullable String schemaItemTypeLink,
-        @OutputCustomType.Parameter("smallImage") @Nullable String smallImage,
-        @OutputCustomType.Parameter("strongIds") @Nullable List<StrongIdResponse> strongIds,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("timestampFieldName") @Nullable String timestampFieldName,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("typeName") @Nullable String typeName) {
+        @CustomType.Parameter("apiEntitySetName") @Nullable String apiEntitySetName,
+        @CustomType.Parameter("attributes") @Nullable Map<String,List<String>> attributes,
+        @CustomType.Parameter("description") @Nullable Map<String,String> description,
+        @CustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @CustomType.Parameter("entityType") @Nullable String entityType,
+        @CustomType.Parameter("fields") @Nullable List<PropertyDefinitionResponse> fields,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instancesCount") @Nullable Integer instancesCount,
+        @CustomType.Parameter("largeImage") @Nullable String largeImage,
+        @CustomType.Parameter("lastChangedUtc") String lastChangedUtc,
+        @CustomType.Parameter("localizedAttributes") @Nullable Map<String,Map<String,String>> localizedAttributes,
+        @CustomType.Parameter("mediumImage") @Nullable String mediumImage,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("schemaItemTypeLink") @Nullable String schemaItemTypeLink,
+        @CustomType.Parameter("smallImage") @Nullable String smallImage,
+        @CustomType.Parameter("strongIds") @Nullable List<StrongIdResponse> strongIds,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("timestampFieldName") @Nullable String timestampFieldName,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("typeName") @Nullable String typeName) {
         this.apiEntitySetName = apiEntitySetName;
         this.attributes = attributes;
         this.description = description;

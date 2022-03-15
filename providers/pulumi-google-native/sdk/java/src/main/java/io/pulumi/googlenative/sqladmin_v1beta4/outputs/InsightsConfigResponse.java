@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InsightsConfigResponse {
     /**
      * Whether Query Insights feature is enabled.
@@ -36,13 +36,13 @@ public final class InsightsConfigResponse {
      */
     private final Boolean recordClientAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InsightsConfigResponse(
-        @OutputCustomType.Parameter("queryInsightsEnabled") Boolean queryInsightsEnabled,
-        @OutputCustomType.Parameter("queryPlansPerMinute") Integer queryPlansPerMinute,
-        @OutputCustomType.Parameter("queryStringLength") Integer queryStringLength,
-        @OutputCustomType.Parameter("recordApplicationTags") Boolean recordApplicationTags,
-        @OutputCustomType.Parameter("recordClientAddress") Boolean recordClientAddress) {
+        @CustomType.Parameter("queryInsightsEnabled") Boolean queryInsightsEnabled,
+        @CustomType.Parameter("queryPlansPerMinute") Integer queryPlansPerMinute,
+        @CustomType.Parameter("queryStringLength") Integer queryStringLength,
+        @CustomType.Parameter("recordApplicationTags") Boolean recordApplicationTags,
+        @CustomType.Parameter("recordClientAddress") Boolean recordClientAddress) {
         this.queryInsightsEnabled = queryInsightsEnabled;
         this.queryPlansPerMinute = queryPlansPerMinute;
         this.queryStringLength = queryStringLength;

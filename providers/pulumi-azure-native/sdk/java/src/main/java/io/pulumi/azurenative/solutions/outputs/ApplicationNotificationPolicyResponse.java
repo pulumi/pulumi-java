@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.solutions.outputs;
 
 import io.pulumi.azurenative.solutions.outputs.ApplicationNotificationEndpointResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationNotificationPolicyResponse {
     /**
      * The managed application notification endpoint.
@@ -16,8 +16,8 @@ public final class ApplicationNotificationPolicyResponse {
      */
     private final List<ApplicationNotificationEndpointResponse> notificationEndpoints;
 
-    @OutputCustomType.Constructor
-    private ApplicationNotificationPolicyResponse(@OutputCustomType.Parameter("notificationEndpoints") List<ApplicationNotificationEndpointResponse> notificationEndpoints) {
+    @CustomType.Constructor
+    private ApplicationNotificationPolicyResponse(@CustomType.Parameter("notificationEndpoints") List<ApplicationNotificationEndpointResponse> notificationEndpoints) {
         this.notificationEndpoints = notificationEndpoints;
     }
 

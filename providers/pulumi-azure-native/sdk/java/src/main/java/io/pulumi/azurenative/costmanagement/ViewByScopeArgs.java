@@ -14,7 +14,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ReportConfigDatasetArgs;
 import io.pulumi.azurenative.costmanagement.inputs.ReportConfigTimePeriodArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * Show costs accumulated over time.
      * 
      */
-    @InputImport(name="accumulated")
+    @Import(name="accumulated")
       private final @Nullable Output<Either<String,AccumulatedType>> accumulated;
 
     public Output<Either<String,AccumulatedType>> getAccumulated() {
@@ -40,7 +40,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * Chart type of the main view in Cost Analysis. Required.
      * 
      */
-    @InputImport(name="chart")
+    @Import(name="chart")
       private final @Nullable Output<Either<String,ChartType>> chart;
 
     public Output<Either<String,ChartType>> getChart() {
@@ -51,7 +51,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * Has definition for data in this report config.
      * 
      */
-    @InputImport(name="dataSet")
+    @Import(name="dataSet")
       private final @Nullable Output<ReportConfigDatasetArgs> dataSet;
 
     public Output<ReportConfigDatasetArgs> getDataSet() {
@@ -62,7 +62,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * User input name of the view. Required.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -73,7 +73,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
      */
-    @InputImport(name="eTag")
+    @Import(name="eTag")
       private final @Nullable Output<String> eTag;
 
     public Output<String> getETag() {
@@ -84,7 +84,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * List of KPIs to show in Cost Analysis UI.
      * 
      */
-    @InputImport(name="kpis")
+    @Import(name="kpis")
       private final @Nullable Output<List<KpiPropertiesArgs>> kpis;
 
     public Output<List<KpiPropertiesArgs>> getKpis() {
@@ -95,7 +95,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * Metric to use when displaying costs.
      * 
      */
-    @InputImport(name="metric")
+    @Import(name="metric")
       private final @Nullable Output<Either<String,MetricType>> metric;
 
     public Output<Either<String,MetricType>> getMetric() {
@@ -106,7 +106,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration of 3 sub-views in the Cost Analysis UI.
      * 
      */
-    @InputImport(name="pivots")
+    @Import(name="pivots")
       private final @Nullable Output<List<PivotPropertiesArgs>> pivots;
 
     public Output<List<PivotPropertiesArgs>> getPivots() {
@@ -117,7 +117,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * Cost Management scope to save the view on. This includes 'subscriptions/{subscriptionId}' for subscription scope, 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}' for resourceGroup scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}' for Billing Account scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/departments/{departmentId}' for Department scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/enrollmentAccounts/{enrollmentAccountId}' for EnrollmentAccount scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}' for BillingProfile scope, 'providers/Microsoft.Billing/billingAccounts/{billingAccountId}/invoiceSections/{invoiceSectionId}' for InvoiceSection scope, 'providers/Microsoft.Management/managementGroups/{managementGroupId}' for Management Group scope, '/providers/Microsoft.CostManagement/externalBillingAccounts/{externalBillingAccountName}' for ExternalBillingAccount scope, and '/providers/Microsoft.CostManagement/externalSubscriptions/{externalSubscriptionName}' for ExternalSubscription scope.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {
@@ -128,7 +128,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * Has time period for pulling data for the report.
      * 
      */
-    @InputImport(name="timePeriod")
+    @Import(name="timePeriod")
       private final @Nullable Output<ReportConfigTimePeriodArgs> timePeriod;
 
     public Output<ReportConfigTimePeriodArgs> getTimePeriod() {
@@ -139,7 +139,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * The time frame for pulling data for the report. If custom, then a specific time period must be provided.
      * 
      */
-    @InputImport(name="timeframe", required=true)
+    @Import(name="timeframe", required=true)
       private final Output<Either<String,ReportTimeframeType>> timeframe;
 
     public Output<Either<String,ReportTimeframeType>> getTimeframe() {
@@ -150,7 +150,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the report. Usage represents actual usage, forecast represents forecasted data and UsageAndForecast represents both usage and forecasted data. Actual usage and forecasted data can be differentiated based on dates.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,ReportType>> type;
 
     public Output<Either<String,ReportType>> getType() {
@@ -161,7 +161,7 @@ public final class ViewByScopeArgs extends io.pulumi.resources.ResourceArgs {
      * View name
      * 
      */
-    @InputImport(name="viewName")
+    @Import(name="viewName")
       private final @Nullable Output<String> viewName;
 
     public Output<String> getViewName() {

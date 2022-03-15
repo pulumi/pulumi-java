@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.elasticache.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetReplicationGroupArgs extends io.pulumi.resources.InvokeArg
      * The identifier for the replication group.
      * 
      */
-    @InputImport(name="replicationGroupId", required=true)
+    @Import(name="replicationGroupId", required=true)
       private final String replicationGroupId;
 
     public String getReplicationGroupId() {

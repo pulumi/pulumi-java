@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.auditmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssessmentAWSAccount {
     private final @Nullable String emailAddress;
     private final @Nullable String id;
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssessmentAWSAccount(
-        @OutputCustomType.Parameter("emailAddress") @Nullable String emailAddress,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("emailAddress") @Nullable String emailAddress,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.emailAddress = emailAddress;
         this.id = id;
         this.name = name;

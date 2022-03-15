@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.GalleryArtifactVersionSourceResponse;
 import io.pulumi.azurenative.compute.inputs.GalleryDataDiskImageResponse;
 import io.pulumi.azurenative.compute.inputs.GalleryOSDiskImageResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class GalleryImageVersionStorageProfileResponse extends io.pulumi.r
      * A list of data disk images.
      * 
      */
-    @InputImport(name="dataDiskImages")
+    @Import(name="dataDiskImages")
       private final @Nullable List<GalleryDataDiskImageResponse> dataDiskImages;
 
     public List<GalleryDataDiskImageResponse> getDataDiskImages() {
@@ -36,7 +36,7 @@ public final class GalleryImageVersionStorageProfileResponse extends io.pulumi.r
      * This is the OS disk image.
      * 
      */
-    @InputImport(name="osDiskImage")
+    @Import(name="osDiskImage")
       private final @Nullable GalleryOSDiskImageResponse osDiskImage;
 
     public Optional<GalleryOSDiskImageResponse> getOsDiskImage() {
@@ -47,7 +47,7 @@ public final class GalleryImageVersionStorageProfileResponse extends io.pulumi.r
      * The gallery artifact version source.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable GalleryArtifactVersionSourceResponse source;
 
     public Optional<GalleryArtifactVersionSourceResponse> getSource() {

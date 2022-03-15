@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
      * KubeletConfigKey declares which key of the referenced ConfigMap corresponds to the KubeletConfiguration structure This field is required in all cases.
      * 
      */
-    @InputImport(name="kubeletConfigKey", required=true)
+    @Import(name="kubeletConfigKey", required=true)
       private final Output<String> kubeletConfigKey;
 
     public Output<String> getKubeletConfigKey() {
@@ -33,7 +33,7 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
      * Name is the metadata.name of the referenced ConfigMap. This field is required in all cases.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
      * Namespace is the metadata.namespace of the referenced ConfigMap. This field is required in all cases.
      * 
      */
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -55,7 +55,7 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
      * ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
      * 
      */
-    @InputImport(name="resourceVersion")
+    @Import(name="resourceVersion")
       private final @Nullable Output<String> resourceVersion;
 
     public Output<String> getResourceVersion() {
@@ -66,7 +66,7 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
      * UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
      * 
      */
-    @InputImport(name="uid")
+    @Import(name="uid")
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {

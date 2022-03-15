@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.AS2ProtocolSettingsResponse;
 import io.pulumi.azurenative.logic.inputs.BusinessIdentityResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class AS2OneWayAgreementResponse extends io.pulumi.resources.Invoke
      * The AS2 protocol settings.
      * 
      */
-    @InputImport(name="protocolSettings", required=true)
+    @Import(name="protocolSettings", required=true)
       private final AS2ProtocolSettingsResponse protocolSettings;
 
     public AS2ProtocolSettingsResponse getProtocolSettings() {
@@ -32,7 +32,7 @@ public final class AS2OneWayAgreementResponse extends io.pulumi.resources.Invoke
      * The receiver business identity
      * 
      */
-    @InputImport(name="receiverBusinessIdentity", required=true)
+    @Import(name="receiverBusinessIdentity", required=true)
       private final BusinessIdentityResponse receiverBusinessIdentity;
 
     public BusinessIdentityResponse getReceiverBusinessIdentity() {
@@ -43,7 +43,7 @@ public final class AS2OneWayAgreementResponse extends io.pulumi.resources.Invoke
      * The sender business identity
      * 
      */
-    @InputImport(name="senderBusinessIdentity", required=true)
+    @Import(name="senderBusinessIdentity", required=true)
       private final BusinessIdentityResponse senderBusinessIdentity;
 
     public BusinessIdentityResponse getSenderBusinessIdentity() {

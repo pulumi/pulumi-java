@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.AzureInternalMonitoringPipelineSinkDescriptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DiagnosticsDescriptionResponse {
     /**
      * The sinks to be used if diagnostics is enabled. Sink choices can be overridden at the service and code package level.
@@ -30,11 +30,11 @@ public final class DiagnosticsDescriptionResponse {
      */
     private final @Nullable List<AzureInternalMonitoringPipelineSinkDescriptionResponse> sinks;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiagnosticsDescriptionResponse(
-        @OutputCustomType.Parameter("defaultSinkRefs") @Nullable List<String> defaultSinkRefs,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("sinks") @Nullable List<AzureInternalMonitoringPipelineSinkDescriptionResponse> sinks) {
+        @CustomType.Parameter("defaultSinkRefs") @Nullable List<String> defaultSinkRefs,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("sinks") @Nullable List<AzureInternalMonitoringPipelineSinkDescriptionResponse> sinks) {
         this.defaultSinkRefs = defaultSinkRefs;
         this.enabled = enabled;
         this.sinks = sinks;

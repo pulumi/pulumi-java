@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 import io.pulumi.azurenative.sqlvirtualmachine.enums.DiskConfigurationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
      * Disk configuration to apply to SQL Server.
      * 
      */
-    @InputImport(name="diskConfigurationType")
+    @Import(name="diskConfigurationType")
       private final @Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType;
 
     public Output<Either<String,DiskConfigurationType>> getDiskConfigurationType() {
@@ -36,7 +36,7 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
      * Virtual machine disk count.
      * 
      */
-    @InputImport(name="diskCount")
+    @Import(name="diskCount")
       private final @Nullable Output<Integer> diskCount;
 
     public Output<Integer> getDiskCount() {
@@ -47,7 +47,7 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
      * Device id of the first disk to be updated.
      * 
      */
-    @InputImport(name="startingDeviceId")
+    @Import(name="startingDeviceId")
       private final @Nullable Output<Integer> startingDeviceId;
 
     public Output<Integer> getStartingDeviceId() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class WebAclRuleActionAllowCustomRequestHandlingGetArgs extends io.
      * The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
      * 
      */
-    @InputImport(name="insertHeaders", required=true)
+    @Import(name="insertHeaders", required=true)
       private final Output<List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> insertHeaders;
 
     public Output<List<WebAclRuleActionAllowCustomRequestHandlingInsertHeaderGetArgs>> getInsertHeaders() {

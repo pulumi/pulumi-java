@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.avs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the cloud link resource
      * 
      */
-    @InputImport(name="cloudLinkName")
+    @Import(name="cloudLinkName")
       private final @Nullable Output<String> cloudLinkName;
 
     public Output<String> getCloudLinkName() {
@@ -29,7 +29,7 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier of the other private cloud participating in the link.
      * 
      */
-    @InputImport(name="linkedCloud")
+    @Import(name="linkedCloud")
       private final @Nullable Output<String> linkedCloud;
 
     public Output<String> getLinkedCloud() {
@@ -40,7 +40,7 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the private cloud.
      * 
      */
-    @InputImport(name="privateCloudName", required=true)
+    @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
     public Output<String> getPrivateCloudName() {
@@ -51,7 +51,7 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

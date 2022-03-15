@@ -5,7 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportArgs exte
      * Specifies the destination for the exported analytics data (documented below).
      * 
      */
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs> destination;
 
     public Output<AnalyticsConfigurationStorageClassAnalysisDataExportDestinationArgs> getDestination() {
@@ -30,7 +30,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportArgs exte
      * The schema version of exported analytics data. Allowed values: `V_1`. Default value: `V_1`.
      * 
      */
-    @InputImport(name="outputSchemaVersion")
+    @Import(name="outputSchemaVersion")
       private final @Nullable Output<String> outputSchemaVersion;
 
     public Output<String> getOutputSchemaVersion() {

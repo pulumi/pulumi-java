@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NumberLessThanAdvancedFilterArgs extends io.pulumi.resources.
      * The field/property in the event based on which you want to filter.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -35,7 +35,7 @@ public final class NumberLessThanAdvancedFilterArgs extends io.pulumi.resources.
      * Expected value is 'NumberLessThan'.
      * 
      */
-    @InputImport(name="operatorType", required=true)
+    @Import(name="operatorType", required=true)
       private final Output<String> operatorType;
 
     public Output<String> getOperatorType() {
@@ -46,7 +46,7 @@ public final class NumberLessThanAdvancedFilterArgs extends io.pulumi.resources.
      * The filter value.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<Double> value;
 
     public Output<Double> getValue() {

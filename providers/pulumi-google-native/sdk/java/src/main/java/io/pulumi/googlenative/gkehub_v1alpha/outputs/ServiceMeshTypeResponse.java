@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceMeshTypeResponse {
     /**
      * A 7 character code matching `^IST[0-9]{4}$` or `^ASM[0-9]{4}$`, intended to uniquely identify the message type. (e.g. "IST0001" is mapped to the "InternalError" message type.)
@@ -20,10 +20,10 @@ public final class ServiceMeshTypeResponse {
      */
     private final String displayName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceMeshTypeResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("displayName") String displayName) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("displayName") String displayName) {
         this.code = code;
         this.displayName = displayName;
     }

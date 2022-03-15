@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.aws.wafregional.inputs.RegexMatchSetRegexMatchTupleFieldToMatchGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class RegexMatchSetRegexMatchTupleGetArgs extends io.pulumi.resourc
      * The part of a web request that you want to search, such as a specified header or a query string.
      * 
      */
-    @InputImport(name="fieldToMatch", required=true)
+    @Import(name="fieldToMatch", required=true)
       private final Output<RegexMatchSetRegexMatchTupleFieldToMatchGetArgs> fieldToMatch;
 
     public Output<RegexMatchSetRegexMatchTupleFieldToMatchGetArgs> getFieldToMatch() {
@@ -29,7 +29,7 @@ public final class RegexMatchSetRegexMatchTupleGetArgs extends io.pulumi.resourc
      * The ID of a `WAF Regex Pattern Set`.
      * 
      */
-    @InputImport(name="regexPatternSetId", required=true)
+    @Import(name="regexPatternSetId", required=true)
       private final Output<String> regexPatternSetId;
 
     public Output<String> getRegexPatternSetId() {
@@ -43,7 +43,7 @@ public final class RegexMatchSetRegexMatchTupleGetArgs extends io.pulumi.resourc
      * for all supported values.
      * 
      */
-    @InputImport(name="textTransformation", required=true)
+    @Import(name="textTransformation", required=true)
       private final Output<String> textTransformation;
 
     public Output<String> getTextTransformation() {

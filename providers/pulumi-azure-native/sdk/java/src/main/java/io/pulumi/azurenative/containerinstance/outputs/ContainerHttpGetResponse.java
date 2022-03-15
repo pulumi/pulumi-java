@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.containerinstance.outputs;
 
 import io.pulumi.azurenative.containerinstance.outputs.HttpHeadersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerHttpGetResponse {
     /**
      * The HTTP headers.
@@ -34,12 +34,12 @@ public final class ContainerHttpGetResponse {
      */
     private final @Nullable String scheme;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerHttpGetResponse(
-        @OutputCustomType.Parameter("httpHeaders") @Nullable HttpHeadersResponse httpHeaders,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("scheme") @Nullable String scheme) {
+        @CustomType.Parameter("httpHeaders") @Nullable HttpHeadersResponse httpHeaders,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("scheme") @Nullable String scheme) {
         this.httpHeaders = httpHeaders;
         this.path = path;
         this.port = port;

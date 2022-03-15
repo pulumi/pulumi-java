@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GetInstanceTemplateArgs extends io.pulumi.resources.InvokeArg
      * If multiple instance templates match, either adjust the filter or specify `most_recent`. One of `name` or `filter` must be provided.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable String filter;
 
     public Optional<String> getFilter() {
@@ -32,7 +32,7 @@ public final class GetInstanceTemplateArgs extends io.pulumi.resources.InvokeArg
      * If `filter` is provided, ensures the most recent template is returned when multiple instance templates match. One of `name` or `filter` must be provided.
      * 
      */
-    @InputImport(name="mostRecent")
+    @Import(name="mostRecent")
       private final @Nullable Boolean mostRecent;
 
     public Optional<Boolean> getMostRecent() {
@@ -43,7 +43,7 @@ public final class GetInstanceTemplateArgs extends io.pulumi.resources.InvokeArg
      * The name of the instance template. One of `name` or `filter` must be provided.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -55,7 +55,7 @@ public final class GetInstanceTemplateArgs extends io.pulumi.resources.InvokeArg
      * If `project` is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final String project;
 
     public String getProject() {

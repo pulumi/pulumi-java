@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ReliableCollectionsRefResponse extends io.pulumi.resources.In
      * False (the default) if ReliableCollections state is persisted to disk as usual. True if you do not want to persist state, in which case replication is still enabled and you can use ReliableCollections as distributed cache.
      * 
      */
-    @InputImport(name="doNotPersistState")
+    @Import(name="doNotPersistState")
       private final @Nullable Boolean doNotPersistState;
 
     public Optional<Boolean> getDoNotPersistState() {
@@ -34,7 +34,7 @@ public final class ReliableCollectionsRefResponse extends io.pulumi.resources.In
      * Name of ReliableCollection resource. Right now it's not used and you can use any string.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

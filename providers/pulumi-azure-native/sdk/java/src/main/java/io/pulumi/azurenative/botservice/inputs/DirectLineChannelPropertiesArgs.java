@@ -5,7 +5,7 @@ package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.DirectLineSiteArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DirectLineChannelPropertiesArgs extends io.pulumi.resources.R
      * Direct Line embed code of the resource
      * 
      */
-    @InputImport(name="directLineEmbedCode")
+    @Import(name="directLineEmbedCode")
       private final @Nullable Output<String> directLineEmbedCode;
 
     public Output<String> getDirectLineEmbedCode() {
@@ -35,7 +35,7 @@ public final class DirectLineChannelPropertiesArgs extends io.pulumi.resources.R
      * The list of Direct Line sites
      * 
      */
-    @InputImport(name="sites")
+    @Import(name="sites")
       private final @Nullable Output<List<DirectLineSiteArgs>> sites;
 
     public Output<List<DirectLineSiteArgs>> getSites() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyAssociationResponse {
     /**
      * The resource that the security policy is attached to.
@@ -30,12 +30,12 @@ public final class SecurityPolicyAssociationResponse {
      */
     private final String securityPolicyId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityPolicyAssociationResponse(
-        @OutputCustomType.Parameter("attachmentId") String attachmentId,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("securityPolicyId") String securityPolicyId) {
+        @CustomType.Parameter("attachmentId") String attachmentId,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("securityPolicyId") String securityPolicyId) {
         this.attachmentId = attachmentId;
         this.displayName = displayName;
         this.name = name;

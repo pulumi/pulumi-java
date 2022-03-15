@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.VpnGatewayAttachmentArgs;
 import io.pulumi.aws.ec2.inputs.VpnGatewayAttachmentState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class VpnGatewayAttachment extends io.pulumi.resources.CustomResource {
      * The ID of the VPC.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**
@@ -47,7 +47,7 @@ public class VpnGatewayAttachment extends io.pulumi.resources.CustomResource {
      * The ID of the Virtual Private Gateway.
      * 
      */
-    @OutputExport(name="vpnGatewayId", type=String.class, parameters={})
+    @Export(name="vpnGatewayId", type=String.class, parameters={})
     private Output<String> vpnGatewayId;
 
     /**

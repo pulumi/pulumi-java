@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningexperimentation;
 
 import io.pulumi.azurenative.machinelearningexperimentation.inputs.StorageAccountPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the machine learning team account.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -31,7 +31,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The description of this workspace.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The friendly name for this workspace. This will be the workspace name in the arm id when the workspace object gets created
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -53,7 +53,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The fully qualified arm id of the user key vault.
      * 
      */
-    @InputImport(name="keyVaultId", required=true)
+    @Import(name="keyVaultId", required=true)
       private final Output<String> keyVaultId;
 
     public Output<String> getKeyVaultId() {
@@ -64,7 +64,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource. This cannot be changed after the resource is created.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -75,7 +75,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group to which the machine learning team account belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -86,7 +86,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The no of users/seats who can access this team account. This property defines the charge on the team account.
      * 
      */
-    @InputImport(name="seats")
+    @Import(name="seats")
       private final @Nullable Output<String> seats;
 
     public Output<String> getSeats() {
@@ -97,7 +97,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The properties of the storage account for the machine learning team account.
      * 
      */
-    @InputImport(name="storageAccount", required=true)
+    @Import(name="storageAccount", required=true)
       private final Output<StorageAccountPropertiesArgs> storageAccount;
 
     public Output<StorageAccountPropertiesArgs> getStorageAccount() {
@@ -108,7 +108,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -119,7 +119,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The fully qualified arm id of the vso account to be used for this team account.
      * 
      */
-    @InputImport(name="vsoAccountId", required=true)
+    @Import(name="vsoAccountId", required=true)
       private final Output<String> vsoAccountId;
 
     public Output<String> getVsoAccountId() {

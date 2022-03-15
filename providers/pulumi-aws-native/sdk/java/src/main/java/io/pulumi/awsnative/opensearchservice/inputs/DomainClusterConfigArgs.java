@@ -5,7 +5,7 @@ package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.awsnative.opensearchservice.inputs.DomainZoneAwarenessConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,70 +17,70 @@ public final class DomainClusterConfigArgs extends io.pulumi.resources.ResourceA
 
     public static final DomainClusterConfigArgs Empty = new DomainClusterConfigArgs();
 
-    @InputImport(name="dedicatedMasterCount")
+    @Import(name="dedicatedMasterCount")
       private final @Nullable Output<Integer> dedicatedMasterCount;
 
     public Output<Integer> getDedicatedMasterCount() {
         return this.dedicatedMasterCount == null ? Output.empty() : this.dedicatedMasterCount;
     }
 
-    @InputImport(name="dedicatedMasterEnabled")
+    @Import(name="dedicatedMasterEnabled")
       private final @Nullable Output<Boolean> dedicatedMasterEnabled;
 
     public Output<Boolean> getDedicatedMasterEnabled() {
         return this.dedicatedMasterEnabled == null ? Output.empty() : this.dedicatedMasterEnabled;
     }
 
-    @InputImport(name="dedicatedMasterType")
+    @Import(name="dedicatedMasterType")
       private final @Nullable Output<String> dedicatedMasterType;
 
     public Output<String> getDedicatedMasterType() {
         return this.dedicatedMasterType == null ? Output.empty() : this.dedicatedMasterType;
     }
 
-    @InputImport(name="instanceCount")
+    @Import(name="instanceCount")
       private final @Nullable Output<Integer> instanceCount;
 
     public Output<Integer> getInstanceCount() {
         return this.instanceCount == null ? Output.empty() : this.instanceCount;
     }
 
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
         return this.instanceType == null ? Output.empty() : this.instanceType;
     }
 
-    @InputImport(name="warmCount")
+    @Import(name="warmCount")
       private final @Nullable Output<Integer> warmCount;
 
     public Output<Integer> getWarmCount() {
         return this.warmCount == null ? Output.empty() : this.warmCount;
     }
 
-    @InputImport(name="warmEnabled")
+    @Import(name="warmEnabled")
       private final @Nullable Output<Boolean> warmEnabled;
 
     public Output<Boolean> getWarmEnabled() {
         return this.warmEnabled == null ? Output.empty() : this.warmEnabled;
     }
 
-    @InputImport(name="warmType")
+    @Import(name="warmType")
       private final @Nullable Output<String> warmType;
 
     public Output<String> getWarmType() {
         return this.warmType == null ? Output.empty() : this.warmType;
     }
 
-    @InputImport(name="zoneAwarenessConfig")
+    @Import(name="zoneAwarenessConfig")
       private final @Nullable Output<DomainZoneAwarenessConfigArgs> zoneAwarenessConfig;
 
     public Output<DomainZoneAwarenessConfigArgs> getZoneAwarenessConfig() {
         return this.zoneAwarenessConfig == null ? Output.empty() : this.zoneAwarenessConfig;
     }
 
-    @InputImport(name="zoneAwarenessEnabled")
+    @Import(name="zoneAwarenessEnabled")
       private final @Nullable Output<Boolean> zoneAwarenessEnabled;
 
     public Output<Boolean> getZoneAwarenessEnabled() {

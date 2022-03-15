@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse {
     /**
      * Will be [deprecated = true] post migration;
@@ -26,11 +26,11 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse {
      */
     private final List<String> synonyms;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRetailV2betaRuleOnewaySynonymsActionResponse(
-        @OutputCustomType.Parameter("onewayTerms") List<String> onewayTerms,
-        @OutputCustomType.Parameter("queryTerms") List<String> queryTerms,
-        @OutputCustomType.Parameter("synonyms") List<String> synonyms) {
+        @CustomType.Parameter("onewayTerms") List<String> onewayTerms,
+        @CustomType.Parameter("queryTerms") List<String> queryTerms,
+        @CustomType.Parameter("synonyms") List<String> synonyms) {
         this.onewayTerms = onewayTerms;
         this.queryTerms = queryTerms;
         this.synonyms = synonyms;

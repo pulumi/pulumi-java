@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.GetClusterMasterAuthClientCertificateConfig;
 import java.lang.String;
 import java.util.List;
@@ -14,28 +14,28 @@ public final class GetClusterMasterAuth extends io.pulumi.resources.InvokeArgs {
 
     public static final GetClusterMasterAuth Empty = new GetClusterMasterAuth();
 
-    @InputImport(name="clientCertificate", required=true)
+    @Import(name="clientCertificate", required=true)
       private final String clientCertificate;
 
     public String getClientCertificate() {
         return this.clientCertificate;
     }
 
-    @InputImport(name="clientCertificateConfigs", required=true)
+    @Import(name="clientCertificateConfigs", required=true)
       private final List<GetClusterMasterAuthClientCertificateConfig> clientCertificateConfigs;
 
     public List<GetClusterMasterAuthClientCertificateConfig> getClientCertificateConfigs() {
         return this.clientCertificateConfigs;
     }
 
-    @InputImport(name="clientKey", required=true)
+    @Import(name="clientKey", required=true)
       private final String clientKey;
 
     public String getClientKey() {
         return this.clientKey;
     }
 
-    @InputImport(name="clusterCaCertificate", required=true)
+    @Import(name="clusterCaCertificate", required=true)
       private final String clusterCaCertificate;
 
     public String getClusterCaCertificate() {

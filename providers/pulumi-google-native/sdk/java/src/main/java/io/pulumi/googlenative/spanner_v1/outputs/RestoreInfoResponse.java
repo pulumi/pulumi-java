@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.spanner_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.spanner_v1.outputs.BackupInfoResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RestoreInfoResponse {
     /**
      * Information about the backup used to restore the database. The backup may no longer exist.
@@ -21,10 +21,10 @@ public final class RestoreInfoResponse {
      */
     private final String sourceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RestoreInfoResponse(
-        @OutputCustomType.Parameter("backupInfo") BackupInfoResponse backupInfo,
-        @OutputCustomType.Parameter("sourceType") String sourceType) {
+        @CustomType.Parameter("backupInfo") BackupInfoResponse backupInfo,
+        @CustomType.Parameter("sourceType") String sourceType) {
         this.backupInfo = backupInfo;
         this.sourceType = sourceType;
     }

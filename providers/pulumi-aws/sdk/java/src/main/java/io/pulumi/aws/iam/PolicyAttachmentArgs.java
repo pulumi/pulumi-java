@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * The group(s) the policy should be applied to
      * 
      */
-    @InputImport(name="groups")
+    @Import(name="groups")
       private final @Nullable Output<List<String>> groups;
 
     public Output<List<String>> getGroups() {
@@ -30,7 +30,7 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * The name of the attachment. This cannot be an empty string.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * The ARN of the policy you want to apply
      * 
      */
-    @InputImport(name="policyArn", required=true)
+    @Import(name="policyArn", required=true)
       private final Output<String> policyArn;
 
     public Output<String> getPolicyArn() {
@@ -52,7 +52,7 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * The role(s) the policy should be applied to
      * 
      */
-    @InputImport(name="roles")
+    @Import(name="roles")
       private final @Nullable Output<List<String>> roles;
 
     public Output<List<String>> getRoles() {
@@ -63,7 +63,7 @@ public final class PolicyAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * The user(s) the policy should be applied to
      * 
      */
-    @InputImport(name="users")
+    @Import(name="users")
       private final @Nullable Output<List<String>> users;
 
     public Output<List<String>> getUsers() {

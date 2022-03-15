@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplianceNetworkConfigurationResponse {
     /**
      * Mac Address.
@@ -20,10 +20,10 @@ public final class ApplianceNetworkConfigurationResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplianceNetworkConfigurationResponse(
-        @OutputCustomType.Parameter("macAddress") String macAddress,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("macAddress") String macAddress,
+        @CustomType.Parameter("name") String name) {
         this.macAddress = macAddress;
         this.name = name;
     }

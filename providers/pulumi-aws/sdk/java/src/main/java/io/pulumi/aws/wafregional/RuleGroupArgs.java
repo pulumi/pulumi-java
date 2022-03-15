@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional;
 
 import io.pulumi.aws.wafregional.inputs.RuleGroupActivatedRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A list of activated rules, see below
      * 
      */
-    @InputImport(name="activatedRules")
+    @Import(name="activatedRules")
       private final @Nullable Output<List<RuleGroupActivatedRuleArgs>> activatedRules;
 
     public Output<List<RuleGroupActivatedRuleArgs>> getActivatedRules() {
@@ -32,7 +32,7 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A friendly name for the metrics from the rule group
      * 
      */
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -43,7 +43,7 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A friendly name of the rule group
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

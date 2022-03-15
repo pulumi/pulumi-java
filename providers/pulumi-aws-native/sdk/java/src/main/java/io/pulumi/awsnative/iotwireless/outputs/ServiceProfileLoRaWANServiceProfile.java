@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotwireless.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceProfileLoRaWANServiceProfile {
     private final @Nullable Boolean addGwMetadata;
     private final @Nullable String channelMask;
@@ -33,27 +33,27 @@ public final class ServiceProfileLoRaWANServiceProfile {
     private final @Nullable Integer ulRate;
     private final @Nullable String ulRatePolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceProfileLoRaWANServiceProfile(
-        @OutputCustomType.Parameter("addGwMetadata") @Nullable Boolean addGwMetadata,
-        @OutputCustomType.Parameter("channelMask") @Nullable String channelMask,
-        @OutputCustomType.Parameter("devStatusReqFreq") @Nullable Integer devStatusReqFreq,
-        @OutputCustomType.Parameter("dlBucketSize") @Nullable Integer dlBucketSize,
-        @OutputCustomType.Parameter("dlRate") @Nullable Integer dlRate,
-        @OutputCustomType.Parameter("dlRatePolicy") @Nullable String dlRatePolicy,
-        @OutputCustomType.Parameter("drMax") @Nullable Integer drMax,
-        @OutputCustomType.Parameter("drMin") @Nullable Integer drMin,
-        @OutputCustomType.Parameter("hrAllowed") @Nullable Boolean hrAllowed,
-        @OutputCustomType.Parameter("minGwDiversity") @Nullable Integer minGwDiversity,
-        @OutputCustomType.Parameter("nwkGeoLoc") @Nullable Boolean nwkGeoLoc,
-        @OutputCustomType.Parameter("prAllowed") @Nullable Boolean prAllowed,
-        @OutputCustomType.Parameter("raAllowed") @Nullable Boolean raAllowed,
-        @OutputCustomType.Parameter("reportDevStatusBattery") @Nullable Boolean reportDevStatusBattery,
-        @OutputCustomType.Parameter("reportDevStatusMargin") @Nullable Boolean reportDevStatusMargin,
-        @OutputCustomType.Parameter("targetPer") @Nullable Integer targetPer,
-        @OutputCustomType.Parameter("ulBucketSize") @Nullable Integer ulBucketSize,
-        @OutputCustomType.Parameter("ulRate") @Nullable Integer ulRate,
-        @OutputCustomType.Parameter("ulRatePolicy") @Nullable String ulRatePolicy) {
+        @CustomType.Parameter("addGwMetadata") @Nullable Boolean addGwMetadata,
+        @CustomType.Parameter("channelMask") @Nullable String channelMask,
+        @CustomType.Parameter("devStatusReqFreq") @Nullable Integer devStatusReqFreq,
+        @CustomType.Parameter("dlBucketSize") @Nullable Integer dlBucketSize,
+        @CustomType.Parameter("dlRate") @Nullable Integer dlRate,
+        @CustomType.Parameter("dlRatePolicy") @Nullable String dlRatePolicy,
+        @CustomType.Parameter("drMax") @Nullable Integer drMax,
+        @CustomType.Parameter("drMin") @Nullable Integer drMin,
+        @CustomType.Parameter("hrAllowed") @Nullable Boolean hrAllowed,
+        @CustomType.Parameter("minGwDiversity") @Nullable Integer minGwDiversity,
+        @CustomType.Parameter("nwkGeoLoc") @Nullable Boolean nwkGeoLoc,
+        @CustomType.Parameter("prAllowed") @Nullable Boolean prAllowed,
+        @CustomType.Parameter("raAllowed") @Nullable Boolean raAllowed,
+        @CustomType.Parameter("reportDevStatusBattery") @Nullable Boolean reportDevStatusBattery,
+        @CustomType.Parameter("reportDevStatusMargin") @Nullable Boolean reportDevStatusMargin,
+        @CustomType.Parameter("targetPer") @Nullable Integer targetPer,
+        @CustomType.Parameter("ulBucketSize") @Nullable Integer ulBucketSize,
+        @CustomType.Parameter("ulRate") @Nullable Integer ulRate,
+        @CustomType.Parameter("ulRatePolicy") @Nullable String ulRatePolicy) {
         this.addGwMetadata = addGwMetadata;
         this.channelMask = channelMask;
         this.devStatusReqFreq = devStatusReqFreq;

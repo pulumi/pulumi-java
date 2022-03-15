@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.enums.EC2FleetCapacityReservationOptionsRequestUsageStrategy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EC2FleetCapacityReservationOptionsRequest {
     private final @Nullable EC2FleetCapacityReservationOptionsRequestUsageStrategy usageStrategy;
 
-    @OutputCustomType.Constructor
-    private EC2FleetCapacityReservationOptionsRequest(@OutputCustomType.Parameter("usageStrategy") @Nullable EC2FleetCapacityReservationOptionsRequestUsageStrategy usageStrategy) {
+    @CustomType.Constructor
+    private EC2FleetCapacityReservationOptionsRequest(@CustomType.Parameter("usageStrategy") @Nullable EC2FleetCapacityReservationOptionsRequestUsageStrategy usageStrategy) {
         this.usageStrategy = usageStrategy;
     }
 

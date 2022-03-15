@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.connect.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetContactFlowModuleArgs extends io.pulumi.resources.InvokeAr
      * The identifier of the contact flow module (ARN).
      * 
      */
-    @InputImport(name="contactFlowModuleArn", required=true)
+    @Import(name="contactFlowModuleArn", required=true)
       private final String contactFlowModuleArn;
 
     public String getContactFlowModuleArn() {

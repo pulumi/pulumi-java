@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.AgentDiskDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * The Id of the agent running on the server.
      * 
      */
-    @InputImport(name="agentId", required=true)
+    @Import(name="agentId", required=true)
       private final String agentId;
 
     public String getAgentId() {
@@ -33,7 +33,7 @@ public final class AgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * The machine BIOS Id.
      * 
      */
-    @InputImport(name="biosId", required=true)
+    @Import(name="biosId", required=true)
       private final String biosId;
 
     public String getBiosId() {
@@ -44,7 +44,7 @@ public final class AgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * The details of agent disks.
      * 
      */
-    @InputImport(name="disks", required=true)
+    @Import(name="disks", required=true)
       private final List<AgentDiskDetailsResponse> disks;
 
     public List<AgentDiskDetailsResponse> getDisks() {
@@ -55,7 +55,7 @@ public final class AgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * The machine FQDN.
      * 
      */
-    @InputImport(name="fqdn", required=true)
+    @Import(name="fqdn", required=true)
       private final String fqdn;
 
     public String getFqdn() {
@@ -66,7 +66,7 @@ public final class AgentDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * The Id of the machine to which the agent is registered.
      * 
      */
-    @InputImport(name="machineId", required=true)
+    @Import(name="machineId", required=true)
       private final String machineId;
 
     public String getMachineId() {

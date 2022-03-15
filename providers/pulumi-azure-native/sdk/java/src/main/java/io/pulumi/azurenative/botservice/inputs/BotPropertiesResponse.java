@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Contains resource all settings defined as key/value pairs.
      * 
      */
-    @InputImport(name="allSettings")
+    @Import(name="allSettings")
       private final @Nullable Map<String,String> allSettings;
 
     public Map<String,String> getAllSettings() {
@@ -36,7 +36,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The hint (e.g. keyVault secret resourceId) on how to fetch the app secret
      * 
      */
-    @InputImport(name="appPasswordHint")
+    @Import(name="appPasswordHint")
       private final @Nullable String appPasswordHint;
 
     public Optional<String> getAppPasswordHint() {
@@ -47,7 +47,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The CMK encryption status
      * 
      */
-    @InputImport(name="cmekEncryptionStatus", required=true)
+    @Import(name="cmekEncryptionStatus", required=true)
       private final String cmekEncryptionStatus;
 
     public String getCmekEncryptionStatus() {
@@ -58,7 +58,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The CMK Url
      * 
      */
-    @InputImport(name="cmekKeyVaultUrl")
+    @Import(name="cmekKeyVaultUrl")
       private final @Nullable String cmekKeyVaultUrl;
 
     public Optional<String> getCmekKeyVaultUrl() {
@@ -69,7 +69,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Collection of channels for which the bot is configured
      * 
      */
-    @InputImport(name="configuredChannels", required=true)
+    @Import(name="configuredChannels", required=true)
       private final List<String> configuredChannels;
 
     public List<String> getConfiguredChannels() {
@@ -80,7 +80,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The description of the bot
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -91,7 +91,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The Application Insights key
      * 
      */
-    @InputImport(name="developerAppInsightKey")
+    @Import(name="developerAppInsightKey")
       private final @Nullable String developerAppInsightKey;
 
     public Optional<String> getDeveloperAppInsightKey() {
@@ -102,7 +102,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The Application Insights Api Key
      * 
      */
-    @InputImport(name="developerAppInsightsApiKey")
+    @Import(name="developerAppInsightsApiKey")
       private final @Nullable String developerAppInsightsApiKey;
 
     public Optional<String> getDeveloperAppInsightsApiKey() {
@@ -113,7 +113,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The Application Insights App Id
      * 
      */
-    @InputImport(name="developerAppInsightsApplicationId")
+    @Import(name="developerAppInsightsApplicationId")
       private final @Nullable String developerAppInsightsApplicationId;
 
     public Optional<String> getDeveloperAppInsightsApplicationId() {
@@ -124,7 +124,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Opt-out of local authentication and ensure only MSI and AAD can be used exclusively for authentication.
      * 
      */
-    @InputImport(name="disableLocalAuth")
+    @Import(name="disableLocalAuth")
       private final @Nullable Boolean disableLocalAuth;
 
     public Optional<Boolean> getDisableLocalAuth() {
@@ -135,7 +135,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The Name of the bot
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -146,7 +146,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Collection of channels for which the bot is enabled
      * 
      */
-    @InputImport(name="enabledChannels", required=true)
+    @Import(name="enabledChannels", required=true)
       private final List<String> enabledChannels;
 
     public List<String> getEnabledChannels() {
@@ -157,7 +157,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The bot's endpoint
      * 
      */
-    @InputImport(name="endpoint", required=true)
+    @Import(name="endpoint", required=true)
       private final String endpoint;
 
     public String getEndpoint() {
@@ -168,7 +168,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The bot's endpoint version
      * 
      */
-    @InputImport(name="endpointVersion", required=true)
+    @Import(name="endpointVersion", required=true)
       private final String endpointVersion;
 
     public String getEndpointVersion() {
@@ -179,7 +179,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The Icon Url of the bot
      * 
      */
-    @InputImport(name="iconUrl")
+    @Import(name="iconUrl")
       private final @Nullable String iconUrl;
 
     public Optional<String> getIconUrl() {
@@ -190,7 +190,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Whether Cmek is enabled
      * 
      */
-    @InputImport(name="isCmekEnabled")
+    @Import(name="isCmekEnabled")
       private final @Nullable Boolean isCmekEnabled;
 
     public Optional<Boolean> getIsCmekEnabled() {
@@ -201,7 +201,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Whether the bot is developerAppInsightsApiKey set
      * 
      */
-    @InputImport(name="isDeveloperAppInsightsApiKeySet", required=true)
+    @Import(name="isDeveloperAppInsightsApiKeySet", required=true)
       private final Boolean isDeveloperAppInsightsApiKeySet;
 
     public Boolean getIsDeveloperAppInsightsApiKeySet() {
@@ -212,7 +212,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Whether the bot is streaming supported
      * 
      */
-    @InputImport(name="isStreamingSupported")
+    @Import(name="isStreamingSupported")
       private final @Nullable Boolean isStreamingSupported;
 
     public Optional<Boolean> getIsStreamingSupported() {
@@ -223,7 +223,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Collection of LUIS App Ids
      * 
      */
-    @InputImport(name="luisAppIds")
+    @Import(name="luisAppIds")
       private final @Nullable List<String> luisAppIds;
 
     public List<String> getLuisAppIds() {
@@ -234,7 +234,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The LUIS Key
      * 
      */
-    @InputImport(name="luisKey")
+    @Import(name="luisKey")
       private final @Nullable String luisKey;
 
     public Optional<String> getLuisKey() {
@@ -245,7 +245,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The bot's manifest url
      * 
      */
-    @InputImport(name="manifestUrl")
+    @Import(name="manifestUrl")
       private final @Nullable String manifestUrl;
 
     public Optional<String> getManifestUrl() {
@@ -256,7 +256,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Token used to migrate non Azure bot to azure subscription
      * 
      */
-    @InputImport(name="migrationToken", required=true)
+    @Import(name="migrationToken", required=true)
       private final String migrationToken;
 
     public String getMigrationToken() {
@@ -267,7 +267,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Microsoft App Id for the bot
      * 
      */
-    @InputImport(name="msaAppId", required=true)
+    @Import(name="msaAppId", required=true)
       private final String msaAppId;
 
     public String getMsaAppId() {
@@ -278,7 +278,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Microsoft App Managed Identity Resource Id for the bot
      * 
      */
-    @InputImport(name="msaAppMSIResourceId")
+    @Import(name="msaAppMSIResourceId")
       private final @Nullable String msaAppMSIResourceId;
 
     public Optional<String> getMsaAppMSIResourceId() {
@@ -289,7 +289,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Microsoft App Tenant Id for the bot
      * 
      */
-    @InputImport(name="msaAppTenantId")
+    @Import(name="msaAppTenantId")
       private final @Nullable String msaAppTenantId;
 
     public Optional<String> getMsaAppTenantId() {
@@ -300,7 +300,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Microsoft App Type for the bot
      * 
      */
-    @InputImport(name="msaAppType")
+    @Import(name="msaAppType")
       private final @Nullable String msaAppType;
 
     public Optional<String> getMsaAppType() {
@@ -311,7 +311,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The hint to browser (e.g. protocol handler) on how to open the bot for authoring
      * 
      */
-    @InputImport(name="openWithHint")
+    @Import(name="openWithHint")
       private final @Nullable String openWithHint;
 
     public Optional<String> getOpenWithHint() {
@@ -322,7 +322,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Contains resource parameters defined as key/value pairs.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,String> parameters;
 
     public Map<String,String> getParameters() {
@@ -333,7 +333,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Provisioning state of the resource
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -344,7 +344,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Whether the bot is in an isolated network
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable String publicNetworkAccess;
 
     public Optional<String> getPublicNetworkAccess() {
@@ -355,7 +355,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Publishing credentials of the resource
      * 
      */
-    @InputImport(name="publishingCredentials")
+    @Import(name="publishingCredentials")
       private final @Nullable String publishingCredentials;
 
     public Optional<String> getPublishingCredentials() {
@@ -366,7 +366,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The channel schema transformation version for the bot
      * 
      */
-    @InputImport(name="schemaTransformationVersion")
+    @Import(name="schemaTransformationVersion")
       private final @Nullable String schemaTransformationVersion;
 
     public Optional<String> getSchemaTransformationVersion() {
@@ -377,7 +377,7 @@ public final class BotPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * The storage resourceId for the bot
      * 
      */
-    @InputImport(name="storageResourceId")
+    @Import(name="storageResourceId")
       private final @Nullable String storageResourceId;
 
     public Optional<String> getStorageResourceId() {

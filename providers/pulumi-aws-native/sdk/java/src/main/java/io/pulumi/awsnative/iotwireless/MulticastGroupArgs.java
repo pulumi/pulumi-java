@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotwireless;
 import io.pulumi.awsnative.iotwireless.inputs.MulticastGroupLoRaWANArgs;
 import io.pulumi.awsnative.iotwireless.inputs.MulticastGroupTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Wireless device to associate. Only for update request.
      * 
      */
-    @InputImport(name="associateWirelessDevice")
+    @Import(name="associateWirelessDevice")
       private final @Nullable Output<String> associateWirelessDevice;
 
     public Output<String> getAssociateWirelessDevice() {
@@ -32,7 +32,7 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Multicast group description
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Wireless device to disassociate. Only for update request.
      * 
      */
-    @InputImport(name="disassociateWirelessDevice")
+    @Import(name="disassociateWirelessDevice")
       private final @Nullable Output<String> disassociateWirelessDevice;
 
     public Output<String> getDisassociateWirelessDevice() {
@@ -54,7 +54,7 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Multicast group LoRaWAN
      * 
      */
-    @InputImport(name="loRaWAN", required=true)
+    @Import(name="loRaWAN", required=true)
       private final Output<MulticastGroupLoRaWANArgs> loRaWAN;
 
     public Output<MulticastGroupLoRaWANArgs> getLoRaWAN() {
@@ -65,7 +65,7 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Name of Multicast group
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class MulticastGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A list of key-value pairs that contain metadata for the Multicast group.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<MulticastGroupTagArgs>> tags;
 
     public Output<List<MulticastGroupTagArgs>> getTags() {

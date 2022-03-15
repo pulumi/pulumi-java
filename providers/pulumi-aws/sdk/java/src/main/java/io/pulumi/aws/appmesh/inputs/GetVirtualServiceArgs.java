@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.appmesh.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetVirtualServiceArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the service mesh in which the virtual service exists.
      * 
      */
-    @InputImport(name="meshName", required=true)
+    @Import(name="meshName", required=true)
       private final String meshName;
 
     public String getMeshName() {
@@ -30,7 +30,7 @@ public final class GetVirtualServiceArgs extends io.pulumi.resources.InvokeArgs 
      * The AWS account ID of the service mesh's owner.
      * 
      */
-    @InputImport(name="meshOwner")
+    @Import(name="meshOwner")
       private final @Nullable String meshOwner;
 
     public Optional<String> getMeshOwner() {
@@ -41,7 +41,7 @@ public final class GetVirtualServiceArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the virtual service.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -52,7 +52,7 @@ public final class GetVirtualServiceArgs extends io.pulumi.resources.InvokeArgs 
      * A map of tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

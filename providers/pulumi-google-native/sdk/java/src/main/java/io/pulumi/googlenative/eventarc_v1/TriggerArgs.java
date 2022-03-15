@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.eventarc_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.eventarc_v1.inputs.DestinationArgs;
 import io.pulumi.googlenative.eventarc_v1.inputs.EventFilterArgs;
 import io.pulumi.googlenative.eventarc_v1.inputs.TransportArgs;
@@ -23,7 +23,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Destination specifies where the events should be sent to.
      * 
      */
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final Output<DestinationArgs> destination;
 
     public Output<DestinationArgs> getDestination() {
@@ -34,7 +34,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * null The list of filters that applies to event attributes. Only events that match all the provided filters are sent to the destination.
      * 
      */
-    @InputImport(name="eventFilters", required=true)
+    @Import(name="eventFilters", required=true)
       private final Output<List<EventFilterArgs>> eventFilters;
 
     public Output<List<EventFilterArgs>> getEventFilters() {
@@ -45,14 +45,14 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. User labels attached to the triggers that can be used to group resources.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -63,14 +63,14 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the trigger. Must be unique within the location of the project and must be in `projects/{project}/locations/{location}/triggers/{trigger}` format.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -81,7 +81,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have the `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. To create Audit Log triggers, the service account should also have the `roles/eventarc.eventReceiver` IAM role.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
@@ -92,21 +92,21 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. To deliver messages, Eventarc might use other GCP products as a transport intermediary. This field contains a reference to that transport intermediary. This information can be used for debugging purposes.
      * 
      */
-    @InputImport(name="transport")
+    @Import(name="transport")
       private final @Nullable Output<TransportArgs> transport;
 
     public Output<TransportArgs> getTransport() {
         return this.transport == null ? Output.empty() : this.transport;
     }
 
-    @InputImport(name="triggerId", required=true)
+    @Import(name="triggerId", required=true)
       private final Output<String> triggerId;
 
     public Output<String> getTriggerId() {
         return this.triggerId;
     }
 
-    @InputImport(name="validateOnly", required=true)
+    @Import(name="validateOnly", required=true)
       private final Output<String> validateOnly;
 
     public Output<String> getValidateOnly() {

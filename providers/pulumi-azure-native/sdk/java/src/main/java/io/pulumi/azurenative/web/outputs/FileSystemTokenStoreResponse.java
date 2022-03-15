@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FileSystemTokenStoreResponse {
     /**
      * The directory in which the tokens will be stored.
@@ -17,8 +17,8 @@ public final class FileSystemTokenStoreResponse {
      */
     private final @Nullable String directory;
 
-    @OutputCustomType.Constructor
-    private FileSystemTokenStoreResponse(@OutputCustomType.Parameter("directory") @Nullable String directory) {
+    @CustomType.Constructor
+    private FileSystemTokenStoreResponse(@CustomType.Parameter("directory") @Nullable String directory) {
         this.directory = directory;
     }
 

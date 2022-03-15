@@ -9,7 +9,7 @@ import io.pulumi.awsnative.lightsail.outputs.DiskAddOn;
 import io.pulumi.awsnative.lightsail.outputs.DiskLocation;
 import io.pulumi.awsnative.lightsail.outputs.DiskTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,7 +27,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * An array of objects representing the add-ons to enable for the new instance.
      * 
      */
-    @OutputExport(name="addOns", type=List.class, parameters={DiskAddOn.class})
+    @Export(name="addOns", type=List.class, parameters={DiskAddOn.class})
     private Output</* @Nullable */ List<DiskAddOn>> addOns;
 
     /**
@@ -41,7 +41,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Name of the attached Lightsail Instance
      * 
      */
-    @OutputExport(name="attachedTo", type=String.class, parameters={})
+    @Export(name="attachedTo", type=String.class, parameters={})
     private Output<String> attachedTo;
 
     /**
@@ -55,7 +55,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Attachment State of the Lightsail disk
      * 
      */
-    @OutputExport(name="attachmentState", type=String.class, parameters={})
+    @Export(name="attachmentState", type=String.class, parameters={})
     private Output<String> attachmentState;
 
     /**
@@ -69,7 +69,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
      * 
      */
-    @OutputExport(name="availabilityZone", type=String.class, parameters={})
+    @Export(name="availabilityZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilityZone;
 
     /**
@@ -79,7 +79,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getAvailabilityZone() {
         return this.availabilityZone;
     }
-    @OutputExport(name="diskArn", type=String.class, parameters={})
+    @Export(name="diskArn", type=String.class, parameters={})
     private Output<String> diskArn;
 
     public Output<String> getDiskArn() {
@@ -89,7 +89,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * The names to use for your new Lightsail disk.
      * 
      */
-    @OutputExport(name="diskName", type=String.class, parameters={})
+    @Export(name="diskName", type=String.class, parameters={})
     private Output<String> diskName;
 
     /**
@@ -103,7 +103,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Iops of the Lightsail disk
      * 
      */
-    @OutputExport(name="iops", type=Integer.class, parameters={})
+    @Export(name="iops", type=Integer.class, parameters={})
     private Output<Integer> iops;
 
     /**
@@ -117,7 +117,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Check is Disk is attached state
      * 
      */
-    @OutputExport(name="isAttached", type=Boolean.class, parameters={})
+    @Export(name="isAttached", type=Boolean.class, parameters={})
     private Output<Boolean> isAttached;
 
     /**
@@ -127,7 +127,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
     public Output<Boolean> getIsAttached() {
         return this.isAttached;
     }
-    @OutputExport(name="location", type=DiskLocation.class, parameters={})
+    @Export(name="location", type=DiskLocation.class, parameters={})
     private Output<DiskLocation> location;
 
     public Output<DiskLocation> getLocation() {
@@ -137,7 +137,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Path of the  attached Disk
      * 
      */
-    @OutputExport(name="path", type=String.class, parameters={})
+    @Export(name="path", type=String.class, parameters={})
     private Output<String> path;
 
     /**
@@ -151,7 +151,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Resource type of Lightsail instance.
      * 
      */
-    @OutputExport(name="resourceType", type=String.class, parameters={})
+    @Export(name="resourceType", type=String.class, parameters={})
     private Output<String> resourceType;
 
     /**
@@ -165,7 +165,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Size of the Lightsail disk
      * 
      */
-    @OutputExport(name="sizeInGb", type=Integer.class, parameters={})
+    @Export(name="sizeInGb", type=Integer.class, parameters={})
     private Output<Integer> sizeInGb;
 
     /**
@@ -179,7 +179,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * State of the Lightsail disk
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -193,7 +193,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * Support code to help identify any issues
      * 
      */
-    @OutputExport(name="supportCode", type=String.class, parameters={})
+    @Export(name="supportCode", type=String.class, parameters={})
     private Output<String> supportCode;
 
     /**
@@ -207,7 +207,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DiskTag.class})
+    @Export(name="tags", type=List.class, parameters={DiskTag.class})
     private Output</* @Nullable */ List<DiskTag>> tags;
 
     /**

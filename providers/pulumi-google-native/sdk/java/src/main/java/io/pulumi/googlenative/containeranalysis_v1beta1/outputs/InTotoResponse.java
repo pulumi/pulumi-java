@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.ArtifactRuleResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.SigningKeyResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InTotoResponse {
     /**
      * This field contains the expected command used to perform the step.
@@ -39,14 +39,14 @@ public final class InTotoResponse {
      */
     private final String threshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InTotoResponse(
-        @OutputCustomType.Parameter("expectedCommand") List<String> expectedCommand,
-        @OutputCustomType.Parameter("expectedMaterials") List<ArtifactRuleResponse> expectedMaterials,
-        @OutputCustomType.Parameter("expectedProducts") List<ArtifactRuleResponse> expectedProducts,
-        @OutputCustomType.Parameter("signingKeys") List<SigningKeyResponse> signingKeys,
-        @OutputCustomType.Parameter("stepName") String stepName,
-        @OutputCustomType.Parameter("threshold") String threshold) {
+        @CustomType.Parameter("expectedCommand") List<String> expectedCommand,
+        @CustomType.Parameter("expectedMaterials") List<ArtifactRuleResponse> expectedMaterials,
+        @CustomType.Parameter("expectedProducts") List<ArtifactRuleResponse> expectedProducts,
+        @CustomType.Parameter("signingKeys") List<SigningKeyResponse> signingKeys,
+        @CustomType.Parameter("stepName") String stepName,
+        @CustomType.Parameter("threshold") String threshold) {
         this.expectedCommand = expectedCommand;
         this.expectedMaterials = expectedMaterials;
         this.expectedProducts = expectedProducts;

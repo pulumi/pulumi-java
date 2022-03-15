@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.connect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetUserHierarchyGroupResult {
     /**
      * The identifier of the Amazon Connect instance.
@@ -27,11 +27,11 @@ public final class GetUserHierarchyGroupResult {
      */
     private final @Nullable String userHierarchyGroupArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserHierarchyGroupResult(
-        @OutputCustomType.Parameter("instanceArn") @Nullable String instanceArn,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("userHierarchyGroupArn") @Nullable String userHierarchyGroupArn) {
+        @CustomType.Parameter("instanceArn") @Nullable String instanceArn,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("userHierarchyGroupArn") @Nullable String userHierarchyGroupArn) {
         this.instanceArn = instanceArn;
         this.name = name;
         this.userHierarchyGroupArn = userHierarchyGroupArn;

@@ -5,7 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.aws.ecs.inputs.TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGe
      * Configuration block for authorization for the Amazon FSx for Windows File Server file system detailed below.
      * 
      */
-    @InputImport(name="authorizationConfig", required=true)
+    @Import(name="authorizationConfig", required=true)
       private final Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs> authorizationConfig;
 
     public Output<TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigGetArgs> getAuthorizationConfig() {
@@ -29,7 +29,7 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGe
      * The Amazon FSx for Windows File Server file system ID to use.
      * 
      */
-    @InputImport(name="fileSystemId", required=true)
+    @Import(name="fileSystemId", required=true)
       private final Output<String> fileSystemId;
 
     public Output<String> getFileSystemId() {
@@ -40,7 +40,7 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationGe
      * The directory within the Amazon FSx for Windows File Server file system to mount as the root directory inside the host.
      * 
      */
-    @InputImport(name="rootDirectory", required=true)
+    @Import(name="rootDirectory", required=true)
       private final Output<String> rootDirectory;
 
     public Output<String> getRootDirectory() {

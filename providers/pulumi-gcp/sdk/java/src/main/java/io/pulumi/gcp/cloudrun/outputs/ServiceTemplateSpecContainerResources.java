@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTemplateSpecContainerResources {
     /**
      * Limits describes the maximum amount of compute resources allowed.
@@ -28,10 +28,10 @@ public final class ServiceTemplateSpecContainerResources {
      */
     private final @Nullable Map<String,String> requests;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTemplateSpecContainerResources(
-        @OutputCustomType.Parameter("limits") @Nullable Map<String,String> limits,
-        @OutputCustomType.Parameter("requests") @Nullable Map<String,String> requests) {
+        @CustomType.Parameter("limits") @Nullable Map<String,String> limits,
+        @CustomType.Parameter("requests") @Nullable Map<String,String> requests) {
         this.limits = limits;
         this.requests = requests;
     }

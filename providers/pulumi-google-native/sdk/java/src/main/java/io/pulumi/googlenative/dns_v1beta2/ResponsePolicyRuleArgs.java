@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1beta2.enums.ResponsePolicyRuleBehavior;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ResponsePolicyRuleLocalDataArgs;
 import java.lang.String;
@@ -20,14 +20,14 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * Answer this query with a behavior rather than DNS data.
      * 
      */
-    @InputImport(name="behavior")
+    @Import(name="behavior")
       private final @Nullable Output<ResponsePolicyRuleBehavior> behavior;
 
     public Output<ResponsePolicyRuleBehavior> getBehavior() {
         return this.behavior == null ? Output.empty() : this.behavior;
     }
 
-    @InputImport(name="clientOperationId")
+    @Import(name="clientOperationId")
       private final @Nullable Output<String> clientOperationId;
 
     public Output<String> getClientOperationId() {
@@ -38,14 +38,14 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * The DNS name (wildcard or exact) to apply this rule to. Must be unique within the Response Policy Rule.
      * 
      */
-    @InputImport(name="dnsName")
+    @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
         return this.dnsName == null ? Output.empty() : this.dnsName;
     }
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -56,21 +56,21 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * Answer this query directly with DNS data. These ResourceRecordSets override any other DNS behavior for the matched name; in particular they override private zones, the public internet, and GCP internal DNS. No SOA nor NS types are allowed.
      * 
      */
-    @InputImport(name="localData")
+    @Import(name="localData")
       private final @Nullable Output<ResponsePolicyRuleLocalDataArgs> localData;
 
     public Output<ResponsePolicyRuleLocalDataArgs> getLocalData() {
         return this.localData == null ? Output.empty() : this.localData;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="responsePolicy", required=true)
+    @Import(name="responsePolicy", required=true)
       private final Output<String> responsePolicy;
 
     public Output<String> getResponsePolicy() {
@@ -81,7 +81,7 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * An identifier for this rule. Must be unique with the ResponsePolicy.
      * 
      */
-    @InputImport(name="ruleName")
+    @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.AzureNodePoolConfigRootVolumeGetArgs;
 import io.pulumi.gcp.container.inputs.AzureNodePoolConfigSshConfigGetArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class AzureNodePoolConfigGetArgs extends io.pulumi.resources.Resour
      * Optional. Configuration related to the root volume provisioned for each node pool machine. When unspecified, it defaults to a 32-GiB Azure Disk.
      * 
      */
-    @InputImport(name="rootVolume")
+    @Import(name="rootVolume")
       private final @Nullable Output<AzureNodePoolConfigRootVolumeGetArgs> rootVolume;
 
     public Output<AzureNodePoolConfigRootVolumeGetArgs> getRootVolume() {
@@ -32,7 +32,7 @@ public final class AzureNodePoolConfigGetArgs extends io.pulumi.resources.Resour
      * Required. SSH configuration for how to access the node pool machines.
      * 
      */
-    @InputImport(name="sshConfig", required=true)
+    @Import(name="sshConfig", required=true)
       private final Output<AzureNodePoolConfigSshConfigGetArgs> sshConfig;
 
     public Output<AzureNodePoolConfigSshConfigGetArgs> getSshConfig() {
@@ -43,7 +43,7 @@ public final class AzureNodePoolConfigGetArgs extends io.pulumi.resources.Resour
      * Optional. A set of tags to apply to all underlying Azure resources for this node pool. This currently only includes Virtual Machine Scale Sets. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -54,7 +54,7 @@ public final class AzureNodePoolConfigGetArgs extends io.pulumi.resources.Resour
      * Optional. The Azure VM size name. Example: `Standard_DS2_v2`. See (/anthos/clusters/docs/azure/reference/supported-vms) for options. When unspecified, it defaults to `Standard_DS2_v2`.
      * 
      */
-    @InputImport(name="vmSize")
+    @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
     public Output<String> getVmSize() {

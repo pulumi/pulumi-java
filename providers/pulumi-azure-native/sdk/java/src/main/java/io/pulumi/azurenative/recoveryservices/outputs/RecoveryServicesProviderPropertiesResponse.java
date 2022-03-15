@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 import io.pulumi.azurenative.recoveryservices.outputs.HealthErrorResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.IdentityProviderDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VersionDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RecoveryServicesProviderPropertiesResponse {
     /**
      * The scenarios allowed on this provider.
@@ -97,24 +97,24 @@ public final class RecoveryServicesProviderPropertiesResponse {
      */
     private final @Nullable String serverVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecoveryServicesProviderPropertiesResponse(
-        @OutputCustomType.Parameter("allowedScenarios") @Nullable List<String> allowedScenarios,
-        @OutputCustomType.Parameter("authenticationIdentityDetails") @Nullable IdentityProviderDetailsResponse authenticationIdentityDetails,
-        @OutputCustomType.Parameter("connectionStatus") @Nullable String connectionStatus,
-        @OutputCustomType.Parameter("draIdentifier") @Nullable String draIdentifier,
-        @OutputCustomType.Parameter("fabricFriendlyName") @Nullable String fabricFriendlyName,
-        @OutputCustomType.Parameter("fabricType") @Nullable String fabricType,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("healthErrorDetails") @Nullable List<HealthErrorResponse> healthErrorDetails,
-        @OutputCustomType.Parameter("lastHeartBeat") @Nullable String lastHeartBeat,
-        @OutputCustomType.Parameter("protectedItemCount") @Nullable Integer protectedItemCount,
-        @OutputCustomType.Parameter("providerVersion") @Nullable String providerVersion,
-        @OutputCustomType.Parameter("providerVersionDetails") @Nullable VersionDetailsResponse providerVersionDetails,
-        @OutputCustomType.Parameter("providerVersionExpiryDate") @Nullable String providerVersionExpiryDate,
-        @OutputCustomType.Parameter("providerVersionState") @Nullable String providerVersionState,
-        @OutputCustomType.Parameter("resourceAccessIdentityDetails") @Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails,
-        @OutputCustomType.Parameter("serverVersion") @Nullable String serverVersion) {
+        @CustomType.Parameter("allowedScenarios") @Nullable List<String> allowedScenarios,
+        @CustomType.Parameter("authenticationIdentityDetails") @Nullable IdentityProviderDetailsResponse authenticationIdentityDetails,
+        @CustomType.Parameter("connectionStatus") @Nullable String connectionStatus,
+        @CustomType.Parameter("draIdentifier") @Nullable String draIdentifier,
+        @CustomType.Parameter("fabricFriendlyName") @Nullable String fabricFriendlyName,
+        @CustomType.Parameter("fabricType") @Nullable String fabricType,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("healthErrorDetails") @Nullable List<HealthErrorResponse> healthErrorDetails,
+        @CustomType.Parameter("lastHeartBeat") @Nullable String lastHeartBeat,
+        @CustomType.Parameter("protectedItemCount") @Nullable Integer protectedItemCount,
+        @CustomType.Parameter("providerVersion") @Nullable String providerVersion,
+        @CustomType.Parameter("providerVersionDetails") @Nullable VersionDetailsResponse providerVersionDetails,
+        @CustomType.Parameter("providerVersionExpiryDate") @Nullable String providerVersionExpiryDate,
+        @CustomType.Parameter("providerVersionState") @Nullable String providerVersionState,
+        @CustomType.Parameter("resourceAccessIdentityDetails") @Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails,
+        @CustomType.Parameter("serverVersion") @Nullable String serverVersion) {
         this.allowedScenarios = allowedScenarios;
         this.authenticationIdentityDetails = authenticationIdentityDetails;
         this.connectionStatus = connectionStatus;

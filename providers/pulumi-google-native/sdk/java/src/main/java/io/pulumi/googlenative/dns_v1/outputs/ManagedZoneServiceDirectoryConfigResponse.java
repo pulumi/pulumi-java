@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dns_v1.outputs.ManagedZoneServiceDirectoryConfigNamespaceResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedZoneServiceDirectoryConfigResponse {
     private final String kind;
     /**
@@ -17,10 +17,10 @@ public final class ManagedZoneServiceDirectoryConfigResponse {
      */
     private final ManagedZoneServiceDirectoryConfigNamespaceResponse namespace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedZoneServiceDirectoryConfigResponse(
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("namespace") ManagedZoneServiceDirectoryConfigNamespaceResponse namespace) {
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("namespace") ManagedZoneServiceDirectoryConfigNamespaceResponse namespace) {
         this.kind = kind;
         this.namespace = namespace;
     }

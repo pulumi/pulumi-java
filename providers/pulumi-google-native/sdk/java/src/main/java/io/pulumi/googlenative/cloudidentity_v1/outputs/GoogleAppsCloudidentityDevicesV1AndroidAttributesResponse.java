@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudidentity_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse {
     /**
      * Whether applications from unknown sources can be installed on device.
@@ -31,12 +31,12 @@ public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse {
      */
     private final Boolean supportsWorkProfile;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse(
-        @OutputCustomType.Parameter("enabledUnknownSources") Boolean enabledUnknownSources,
-        @OutputCustomType.Parameter("ownerProfileAccount") Boolean ownerProfileAccount,
-        @OutputCustomType.Parameter("ownershipPrivilege") String ownershipPrivilege,
-        @OutputCustomType.Parameter("supportsWorkProfile") Boolean supportsWorkProfile) {
+        @CustomType.Parameter("enabledUnknownSources") Boolean enabledUnknownSources,
+        @CustomType.Parameter("ownerProfileAccount") Boolean ownerProfileAccount,
+        @CustomType.Parameter("ownershipPrivilege") String ownershipPrivilege,
+        @CustomType.Parameter("supportsWorkProfile") Boolean supportsWorkProfile) {
         this.enabledUnknownSources = enabledUnknownSources;
         this.ownerProfileAccount = ownerProfileAccount;
         this.ownershipPrivilege = ownershipPrivilege;

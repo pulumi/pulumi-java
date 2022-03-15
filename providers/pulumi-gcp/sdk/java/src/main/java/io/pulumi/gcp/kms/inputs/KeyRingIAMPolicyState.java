@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class KeyRingIAMPolicyState extends io.pulumi.resources.ResourceArg
      * (Computed) The etag of the key ring's IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -32,7 +32,7 @@ public final class KeyRingIAMPolicyState extends io.pulumi.resources.ResourceArg
      * project setting will be used as a fallback.
      * 
      */
-    @InputImport(name="keyRingId")
+    @Import(name="keyRingId")
       private final @Nullable Output<String> keyRingId;
 
     public Output<String> getKeyRingId() {
@@ -44,7 +44,7 @@ public final class KeyRingIAMPolicyState extends io.pulumi.resources.ResourceArg
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @InputImport(name="policyData")
+    @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
     public Output<String> getPolicyData() {

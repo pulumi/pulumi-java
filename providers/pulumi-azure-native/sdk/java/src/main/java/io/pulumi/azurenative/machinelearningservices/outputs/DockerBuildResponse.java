@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.DockerImagePlatformResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DockerBuildResponse {
     /**
      * Path to a snapshot of the Docker Context. This property is only valid if Dockerfile is specified.
@@ -37,12 +37,12 @@ public final class DockerBuildResponse {
      */
     private final @Nullable DockerImagePlatformResponse platform;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DockerBuildResponse(
-        @OutputCustomType.Parameter("context") @Nullable String context,
-        @OutputCustomType.Parameter("dockerSpecificationType") String dockerSpecificationType,
-        @OutputCustomType.Parameter("dockerfile") String dockerfile,
-        @OutputCustomType.Parameter("platform") @Nullable DockerImagePlatformResponse platform) {
+        @CustomType.Parameter("context") @Nullable String context,
+        @CustomType.Parameter("dockerSpecificationType") String dockerSpecificationType,
+        @CustomType.Parameter("dockerfile") String dockerfile,
+        @CustomType.Parameter("platform") @Nullable DockerImagePlatformResponse platform) {
         this.context = context;
         this.dockerSpecificationType = dockerSpecificationType;
         this.dockerfile = dockerfile;

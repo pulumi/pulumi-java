@@ -6,7 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.enums.KeySource;
 import io.pulumi.azurenative.batch.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * Type of the key source.
      * 
      */
-    @InputImport(name="keySource")
+    @Import(name="keySource")
       private final @Nullable Output<KeySource> keySource;
 
     public Output<KeySource> getKeySource() {
@@ -34,7 +34,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * Additional details when using Microsoft.KeyVault
      * 
      */
-    @InputImport(name="keyVaultProperties")
+    @Import(name="keyVaultProperties")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {

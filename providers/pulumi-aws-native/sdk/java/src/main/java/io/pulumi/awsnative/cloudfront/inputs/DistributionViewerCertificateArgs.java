@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,35 +15,35 @@ public final class DistributionViewerCertificateArgs extends io.pulumi.resources
 
     public static final DistributionViewerCertificateArgs Empty = new DistributionViewerCertificateArgs();
 
-    @InputImport(name="acmCertificateArn")
+    @Import(name="acmCertificateArn")
       private final @Nullable Output<String> acmCertificateArn;
 
     public Output<String> getAcmCertificateArn() {
         return this.acmCertificateArn == null ? Output.empty() : this.acmCertificateArn;
     }
 
-    @InputImport(name="cloudFrontDefaultCertificate")
+    @Import(name="cloudFrontDefaultCertificate")
       private final @Nullable Output<Boolean> cloudFrontDefaultCertificate;
 
     public Output<Boolean> getCloudFrontDefaultCertificate() {
         return this.cloudFrontDefaultCertificate == null ? Output.empty() : this.cloudFrontDefaultCertificate;
     }
 
-    @InputImport(name="iamCertificateId")
+    @Import(name="iamCertificateId")
       private final @Nullable Output<String> iamCertificateId;
 
     public Output<String> getIamCertificateId() {
         return this.iamCertificateId == null ? Output.empty() : this.iamCertificateId;
     }
 
-    @InputImport(name="minimumProtocolVersion")
+    @Import(name="minimumProtocolVersion")
       private final @Nullable Output<String> minimumProtocolVersion;
 
     public Output<String> getMinimumProtocolVersion() {
         return this.minimumProtocolVersion == null ? Output.empty() : this.minimumProtocolVersion;
     }
 
-    @InputImport(name="sslSupportMethod")
+    @Import(name="sslSupportMethod")
       private final @Nullable Output<String> sslSupportMethod;
 
     public Output<String> getSslSupportMethod() {

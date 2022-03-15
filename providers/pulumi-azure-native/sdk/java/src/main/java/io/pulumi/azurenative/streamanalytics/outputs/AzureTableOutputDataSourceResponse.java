@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureTableOutputDataSourceResponse {
     /**
      * The account key for the Azure Storage account. Required on PUT (CreateOrReplace) requests.
@@ -55,16 +55,16 @@ public final class AzureTableOutputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureTableOutputDataSourceResponse(
-        @OutputCustomType.Parameter("accountKey") @Nullable String accountKey,
-        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
-        @OutputCustomType.Parameter("batchSize") @Nullable Integer batchSize,
-        @OutputCustomType.Parameter("columnsToRemove") @Nullable List<String> columnsToRemove,
-        @OutputCustomType.Parameter("partitionKey") @Nullable String partitionKey,
-        @OutputCustomType.Parameter("rowKey") @Nullable String rowKey,
-        @OutputCustomType.Parameter("table") @Nullable String table,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accountKey") @Nullable String accountKey,
+        @CustomType.Parameter("accountName") @Nullable String accountName,
+        @CustomType.Parameter("batchSize") @Nullable Integer batchSize,
+        @CustomType.Parameter("columnsToRemove") @Nullable List<String> columnsToRemove,
+        @CustomType.Parameter("partitionKey") @Nullable String partitionKey,
+        @CustomType.Parameter("rowKey") @Nullable String rowKey,
+        @CustomType.Parameter("table") @Nullable String table,
+        @CustomType.Parameter("type") String type) {
         this.accountKey = accountKey;
         this.accountName = accountName;
         this.batchSize = batchSize;

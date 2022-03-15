@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iam;
 
 import io.pulumi.awsnative.iam.inputs.ServerCertificateTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,42 +16,42 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
 
     public static final ServerCertificateArgs Empty = new ServerCertificateArgs();
 
-    @InputImport(name="certificateBody")
+    @Import(name="certificateBody")
       private final @Nullable Output<String> certificateBody;
 
     public Output<String> getCertificateBody() {
         return this.certificateBody == null ? Output.empty() : this.certificateBody;
     }
 
-    @InputImport(name="certificateChain")
+    @Import(name="certificateChain")
       private final @Nullable Output<String> certificateChain;
 
     public Output<String> getCertificateChain() {
         return this.certificateChain == null ? Output.empty() : this.certificateChain;
     }
 
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
         return this.path == null ? Output.empty() : this.path;
     }
 
-    @InputImport(name="privateKey")
+    @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
     public Output<String> getPrivateKey() {
         return this.privateKey == null ? Output.empty() : this.privateKey;
     }
 
-    @InputImport(name="serverCertificateName")
+    @Import(name="serverCertificateName")
       private final @Nullable Output<String> serverCertificateName;
 
     public Output<String> getServerCertificateName() {
         return this.serverCertificateName == null ? Output.empty() : this.serverCertificateName;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ServerCertificateTagArgs>> tags;
 
     public Output<List<ServerCertificateTagArgs>> getTags() {

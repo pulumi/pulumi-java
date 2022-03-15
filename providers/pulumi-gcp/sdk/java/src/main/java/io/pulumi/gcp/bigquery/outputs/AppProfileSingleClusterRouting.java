@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppProfileSingleClusterRouting {
     /**
      * If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
@@ -24,10 +24,10 @@ public final class AppProfileSingleClusterRouting {
      */
     private final String clusterId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppProfileSingleClusterRouting(
-        @OutputCustomType.Parameter("allowTransactionalWrites") @Nullable Boolean allowTransactionalWrites,
-        @OutputCustomType.Parameter("clusterId") String clusterId) {
+        @CustomType.Parameter("allowTransactionalWrites") @Nullable Boolean allowTransactionalWrites,
+        @CustomType.Parameter("clusterId") String clusterId) {
         this.allowTransactionalWrites = allowTransactionalWrites;
         this.clusterId = clusterId;
     }

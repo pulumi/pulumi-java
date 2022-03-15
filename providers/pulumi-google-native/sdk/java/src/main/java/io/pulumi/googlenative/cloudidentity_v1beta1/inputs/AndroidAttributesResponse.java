@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AndroidAttributesResponse extends io.pulumi.resources.InvokeA
      * Whether applications from unknown sources can be installed on device.
      * 
      */
-    @InputImport(name="enabledUnknownSources", required=true)
+    @Import(name="enabledUnknownSources", required=true)
       private final Boolean enabledUnknownSources;
 
     public Boolean getEnabledUnknownSources() {
@@ -32,7 +32,7 @@ public final class AndroidAttributesResponse extends io.pulumi.resources.InvokeA
      * Whether this account is on an owner/primary profile. For phones, only true for owner profiles. Android 4+ devices can have secondary or restricted user profiles.
      * 
      */
-    @InputImport(name="ownerProfileAccount", required=true)
+    @Import(name="ownerProfileAccount", required=true)
       private final Boolean ownerProfileAccount;
 
     public Boolean getOwnerProfileAccount() {
@@ -43,7 +43,7 @@ public final class AndroidAttributesResponse extends io.pulumi.resources.InvokeA
      * Ownership privileges on device.
      * 
      */
-    @InputImport(name="ownershipPrivilege", required=true)
+    @Import(name="ownershipPrivilege", required=true)
       private final String ownershipPrivilege;
 
     public String getOwnershipPrivilege() {
@@ -54,7 +54,7 @@ public final class AndroidAttributesResponse extends io.pulumi.resources.InvokeA
      * Whether device supports Android work profiles. If false, this service will not block access to corp data even if an administrator turns on the "Enforce Work Profile" policy.
      * 
      */
-    @InputImport(name="supportsWorkProfile", required=true)
+    @Import(name="supportsWorkProfile", required=true)
       private final Boolean supportsWorkProfile;
 
     public Boolean getSupportsWorkProfile() {

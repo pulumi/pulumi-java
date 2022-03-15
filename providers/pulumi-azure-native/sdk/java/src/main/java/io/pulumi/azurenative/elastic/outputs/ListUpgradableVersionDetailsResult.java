@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.elastic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListUpgradableVersionDetailsResult {
     /**
      * Current version of the elastic monitor
@@ -23,10 +23,10 @@ public final class ListUpgradableVersionDetailsResult {
      */
     private final @Nullable List<String> upgradableVersions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListUpgradableVersionDetailsResult(
-        @OutputCustomType.Parameter("currentVersion") @Nullable String currentVersion,
-        @OutputCustomType.Parameter("upgradableVersions") @Nullable List<String> upgradableVersions) {
+        @CustomType.Parameter("currentVersion") @Nullable String currentVersion,
+        @CustomType.Parameter("upgradableVersions") @Nullable List<String> upgradableVersions) {
         this.currentVersion = currentVersion;
         this.upgradableVersions = upgradableVersions;
     }

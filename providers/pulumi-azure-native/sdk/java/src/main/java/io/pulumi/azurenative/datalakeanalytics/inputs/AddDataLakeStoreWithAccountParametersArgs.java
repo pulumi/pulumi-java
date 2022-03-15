@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datalakeanalytics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AddDataLakeStoreWithAccountParametersArgs extends io.pulumi.r
      * The unique name of the Data Lake Store account to add.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class AddDataLakeStoreWithAccountParametersArgs extends io.pulumi.r
      * The optional suffix for the Data Lake Store account.
      * 
      */
-    @InputImport(name="suffix")
+    @Import(name="suffix")
       private final @Nullable Output<String> suffix;
 
     public Output<String> getSuffix() {

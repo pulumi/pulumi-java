@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.ReservationShareSettingsProjectMap;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReservationShareSettings {
     /**
      * A map of project number and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS.
@@ -26,10 +26,10 @@ public final class ReservationShareSettings {
      */
     private final @Nullable String shareType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReservationShareSettings(
-        @OutputCustomType.Parameter("projectMaps") @Nullable List<ReservationShareSettingsProjectMap> projectMaps,
-        @OutputCustomType.Parameter("shareType") @Nullable String shareType) {
+        @CustomType.Parameter("projectMaps") @Nullable List<ReservationShareSettingsProjectMap> projectMaps,
+        @CustomType.Parameter("shareType") @Nullable String shareType) {
         this.projectMaps = projectMaps;
         this.shareType = shareType;
     }

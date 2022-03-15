@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceExecResourceArgs;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileResourceArgs;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourcePackageResourceArgs;
@@ -26,7 +26,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
      * Exec resource
      * 
      */
-    @InputImport(name="exec")
+    @Import(name="exec")
       private final @Nullable Output<OSPolicyResourceExecResourceArgs> exec;
 
     public Output<OSPolicyResourceExecResourceArgs> getExec() {
@@ -37,7 +37,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
      * File resource
      * 
      */
-    @InputImport(name="file")
+    @Import(name="file")
       private final @Nullable Output<OSPolicyResourceFileResourceArgs> file;
 
     public Output<OSPolicyResourceFileResourceArgs> getFile() {
@@ -48,7 +48,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
      * The id of the resource with the following restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. * Must be unique within the OS policy.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -59,7 +59,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
      * Package resource
      * 
      */
-    @InputImport(name="pkg")
+    @Import(name="pkg")
       private final @Nullable Output<OSPolicyResourcePackageResourceArgs> pkg;
 
     public Output<OSPolicyResourcePackageResourceArgs> getPkg() {
@@ -70,7 +70,7 @@ public final class OSPolicyResourceArgs extends io.pulumi.resources.ResourceArgs
      * Package repository resource
      * 
      */
-    @InputImport(name="repository")
+    @Import(name="repository")
       private final @Nullable Output<OSPolicyResourceRepositoryResourceArgs> repository;
 
     public Output<OSPolicyResourceRepositoryResourceArgs> getRepository() {

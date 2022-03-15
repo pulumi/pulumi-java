@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPartnerNamespaceArgs extends io.pulumi.resources.InvokeArg
      * Name of the partner namespace.
      * 
      */
-    @InputImport(name="partnerNamespaceName", required=true)
+    @Import(name="partnerNamespaceName", required=true)
       private final String partnerNamespaceName;
 
     public String getPartnerNamespaceName() {
@@ -27,7 +27,7 @@ public final class GetPartnerNamespaceArgs extends io.pulumi.resources.InvokeArg
      * The name of the resource group within the user's subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

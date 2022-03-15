@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,14 +22,14 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
      * Describes the action that shall be taken when the certificate is removed from Key Vault.
      * 
      */
-    @InputImport(name="deleteRule", required=true)
+    @Import(name="deleteRule", required=true)
       private final String deleteRule;
 
     public String getDeleteRule() {
         return this.deleteRule;
     }
 
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -40,7 +40,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
      * Resource group of the user's Key Vault containing the SSL certificate
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
      * The name of Key Vault Secret (representing the full certificate PFX) in Key Vault.
      * 
      */
-    @InputImport(name="secretName", required=true)
+    @Import(name="secretName", required=true)
       private final String secretName;
 
     public String getSecretName() {
@@ -62,7 +62,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
      * The version(GUID) of Key Vault Secret in Key Vault.
      * 
      */
-    @InputImport(name="secretVersion")
+    @Import(name="secretVersion")
       private final @Nullable String secretVersion;
 
     public Optional<String> getSecretVersion() {
@@ -73,7 +73,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
      * Subscription Id of the user's Key Vault containing the SSL certificate
      * 
      */
-    @InputImport(name="subscriptionId", required=true)
+    @Import(name="subscriptionId", required=true)
       private final String subscriptionId;
 
     public String getSubscriptionId() {
@@ -84,7 +84,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
      * Describes the action that shall be taken when the certificate is updated in Key Vault.
      * 
      */
-    @InputImport(name="updateRule", required=true)
+    @Import(name="updateRule", required=true)
       private final String updateRule;
 
     public String getUpdateRule() {
@@ -95,7 +95,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
      * The name of the user's Key Vault containing the SSL certificate
      * 
      */
-    @InputImport(name="vaultName", required=true)
+    @Import(name="vaultName", required=true)
       private final String vaultName;
 
     public String getVaultName() {

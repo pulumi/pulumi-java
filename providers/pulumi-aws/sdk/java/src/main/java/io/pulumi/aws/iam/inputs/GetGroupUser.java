@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetGroupUser extends io.pulumi.resources.InvokeArgs {
      * The Amazon Resource Name (ARN) specifying the iam user.
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {
@@ -27,7 +27,7 @@ public final class GetGroupUser extends io.pulumi.resources.InvokeArgs {
      * The path to the iam user.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {
@@ -38,7 +38,7 @@ public final class GetGroupUser extends io.pulumi.resources.InvokeArgs {
      * The stable and unique string identifying the iam user.
      * 
      */
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final String userId;
 
     public String getUserId() {
@@ -49,7 +49,7 @@ public final class GetGroupUser extends io.pulumi.resources.InvokeArgs {
      * The name of the iam user.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final String userName;
 
     public String getUserName() {

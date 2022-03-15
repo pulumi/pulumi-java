@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.azurestack.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IconUrisResponse {
     /**
      * URI to hero icon.
@@ -37,13 +37,13 @@ public final class IconUrisResponse {
      */
     private final @Nullable String wide;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IconUrisResponse(
-        @OutputCustomType.Parameter("hero") @Nullable String hero,
-        @OutputCustomType.Parameter("large") @Nullable String large,
-        @OutputCustomType.Parameter("medium") @Nullable String medium,
-        @OutputCustomType.Parameter("small") @Nullable String small,
-        @OutputCustomType.Parameter("wide") @Nullable String wide) {
+        @CustomType.Parameter("hero") @Nullable String hero,
+        @CustomType.Parameter("large") @Nullable String large,
+        @CustomType.Parameter("medium") @Nullable String medium,
+        @CustomType.Parameter("small") @Nullable String small,
+        @CustomType.Parameter("wide") @Nullable String wide) {
         this.hero = hero;
         this.large = large;
         this.medium = medium;

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TransportPreferencesResponse {
     /**
      * Indicates Shipment Logistics type that the customer preferred.
@@ -15,8 +15,8 @@ public final class TransportPreferencesResponse {
      */
     private final String preferredShipmentType;
 
-    @OutputCustomType.Constructor
-    private TransportPreferencesResponse(@OutputCustomType.Parameter("preferredShipmentType") String preferredShipmentType) {
+    @CustomType.Constructor
+    private TransportPreferencesResponse(@CustomType.Parameter("preferredShipmentType") String preferredShipmentType) {
         this.preferredShipmentType = preferredShipmentType;
     }
 

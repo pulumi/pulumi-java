@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.networkmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LinkBandwidth {
     /**
      * Download speed in Mbps.
@@ -22,10 +22,10 @@ public final class LinkBandwidth {
      */
     private final @Nullable Integer uploadSpeed;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LinkBandwidth(
-        @OutputCustomType.Parameter("downloadSpeed") @Nullable Integer downloadSpeed,
-        @OutputCustomType.Parameter("uploadSpeed") @Nullable Integer uploadSpeed) {
+        @CustomType.Parameter("downloadSpeed") @Nullable Integer downloadSpeed,
+        @CustomType.Parameter("uploadSpeed") @Nullable Integer uploadSpeed) {
         this.downloadSpeed = downloadSpeed;
         this.uploadSpeed = uploadSpeed;
     }

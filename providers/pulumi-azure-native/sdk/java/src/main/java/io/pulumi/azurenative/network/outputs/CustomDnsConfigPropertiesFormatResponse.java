@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomDnsConfigPropertiesFormatResponse {
     /**
      * Fqdn that resolves to private endpoint ip address.
@@ -23,10 +23,10 @@ public final class CustomDnsConfigPropertiesFormatResponse {
      */
     private final @Nullable List<String> ipAddresses;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomDnsConfigPropertiesFormatResponse(
-        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
-        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses) {
+        @CustomType.Parameter("fqdn") @Nullable String fqdn,
+        @CustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses) {
         this.fqdn = fqdn;
         this.ipAddresses = ipAddresses;
     }

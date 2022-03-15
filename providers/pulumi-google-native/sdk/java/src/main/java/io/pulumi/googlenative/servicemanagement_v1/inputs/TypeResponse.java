@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.FieldResponse;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionResponse;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.SourceContextResponse;
@@ -24,7 +24,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
      * The list of fields.
      * 
      */
-    @InputImport(name="fields", required=true)
+    @Import(name="fields", required=true)
       private final List<FieldResponse> fields;
 
     public List<FieldResponse> getFields() {
@@ -35,7 +35,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
      * The fully qualified message name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -46,7 +46,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
      * The list of types appearing in `oneof` definitions in this type.
      * 
      */
-    @InputImport(name="oneofs", required=true)
+    @Import(name="oneofs", required=true)
       private final List<String> oneofs;
 
     public List<String> getOneofs() {
@@ -57,7 +57,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
      * The protocol buffer options.
      * 
      */
-    @InputImport(name="options", required=true)
+    @Import(name="options", required=true)
       private final List<OptionResponse> options;
 
     public List<OptionResponse> getOptions() {
@@ -68,7 +68,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
      * The source context.
      * 
      */
-    @InputImport(name="sourceContext", required=true)
+    @Import(name="sourceContext", required=true)
       private final SourceContextResponse sourceContext;
 
     public SourceContextResponse getSourceContext() {
@@ -79,7 +79,7 @@ public final class TypeResponse extends io.pulumi.resources.InvokeArgs {
      * The source syntax.
      * 
      */
-    @InputImport(name="syntax", required=true)
+    @Import(name="syntax", required=true)
       private final String syntax;
 
     public String getSyntax() {

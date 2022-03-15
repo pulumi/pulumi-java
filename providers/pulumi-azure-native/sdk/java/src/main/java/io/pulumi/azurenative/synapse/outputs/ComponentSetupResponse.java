@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.SecureStringResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComponentSetupResponse {
     /**
      * The name of the 3rd party component.
@@ -29,11 +29,11 @@ public final class ComponentSetupResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComponentSetupResponse(
-        @OutputCustomType.Parameter("componentName") String componentName,
-        @OutputCustomType.Parameter("licenseKey") @Nullable SecureStringResponse licenseKey,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("componentName") String componentName,
+        @CustomType.Parameter("licenseKey") @Nullable SecureStringResponse licenseKey,
+        @CustomType.Parameter("type") String type) {
         this.componentName = componentName;
         this.licenseKey = licenseKey;
         this.type = type;

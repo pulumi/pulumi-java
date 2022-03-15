@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDeploymentAtTenantScopeArgs extends io.pulumi.resources.In
      * The name of the deployment.
      * 
      */
-    @InputImport(name="deploymentName", required=true)
+    @Import(name="deploymentName", required=true)
       private final String deploymentName;
 
     public String getDeploymentName() {

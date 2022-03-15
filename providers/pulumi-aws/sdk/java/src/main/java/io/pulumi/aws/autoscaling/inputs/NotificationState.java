@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * A list of AutoScaling Group Names
      * 
      */
-    @InputImport(name="groupNames")
+    @Import(name="groupNames")
       private final @Nullable Output<List<String>> groupNames;
 
     public Output<List<String>> getGroupNames() {
@@ -31,7 +31,7 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * notifications. Acceptable values are documented [in the AWS documentation here](https://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_NotificationConfiguration.html)
      * 
      */
-    @InputImport(name="notifications")
+    @Import(name="notifications")
       private final @Nullable Output<List<String>> notifications;
 
     public Output<List<String>> getNotifications() {
@@ -42,7 +42,7 @@ public final class NotificationState extends io.pulumi.resources.ResourceArgs {
      * The Topic ARN for notifications to be sent through
      * 
      */
-    @InputImport(name="topicArn")
+    @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
     public Output<String> getTopicArn() {

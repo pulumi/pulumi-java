@@ -4,7 +4,7 @@
 package io.pulumi.aws.appconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class EnvironmentMonitorArgs extends io.pulumi.resources.ResourceAr
      * ARN of the Amazon CloudWatch alarm.
      * 
      */
-    @InputImport(name="alarmArn", required=true)
+    @Import(name="alarmArn", required=true)
       private final Output<String> alarmArn;
 
     public Output<String> getAlarmArn() {
@@ -29,7 +29,7 @@ public final class EnvironmentMonitorArgs extends io.pulumi.resources.ResourceAr
      * ARN of an IAM role for AWS AppConfig to monitor `alarm_arn`.
      * 
      */
-    @InputImport(name="alarmRoleArn")
+    @Import(name="alarmRoleArn")
       private final @Nullable Output<String> alarmRoleArn;
 
     public Output<String> getAlarmRoleArn() {

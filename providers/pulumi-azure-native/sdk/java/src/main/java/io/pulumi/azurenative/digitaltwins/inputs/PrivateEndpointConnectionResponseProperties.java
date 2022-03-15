@@ -5,7 +5,7 @@ package io.pulumi.azurenative.digitaltwins.inputs;
 
 import io.pulumi.azurenative.digitaltwins.inputs.ConnectionPropertiesResponsePrivateEndpoint;
 import io.pulumi.azurenative.digitaltwins.inputs.ConnectionPropertiesResponsePrivateLinkServiceConnectionState;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,21 +21,21 @@ public final class PrivateEndpointConnectionResponseProperties extends io.pulumi
      * The list of group ids for the private endpoint connection.
      * 
      */
-    @InputImport(name="groupIds")
+    @Import(name="groupIds")
       private final @Nullable List<String> groupIds;
 
     public List<String> getGroupIds() {
         return this.groupIds == null ? List.of() : this.groupIds;
     }
 
-    @InputImport(name="privateEndpoint")
+    @Import(name="privateEndpoint")
       private final @Nullable ConnectionPropertiesResponsePrivateEndpoint privateEndpoint;
 
     public Optional<ConnectionPropertiesResponsePrivateEndpoint> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
     }
 
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable ConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState;
 
     public Optional<ConnectionPropertiesResponsePrivateLinkServiceConnectionState> getPrivateLinkServiceConnectionState() {
@@ -46,7 +46,7 @@ public final class PrivateEndpointConnectionResponseProperties extends io.pulumi
      * The provisioning state.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

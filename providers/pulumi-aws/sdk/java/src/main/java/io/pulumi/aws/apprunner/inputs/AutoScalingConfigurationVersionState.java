@@ -4,7 +4,7 @@
 package io.pulumi.aws.apprunner.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * ARN of this auto scaling configuration version.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * Name of the auto scaling configuration.
      * 
      */
-    @InputImport(name="autoScalingConfigurationName")
+    @Import(name="autoScalingConfigurationName")
       private final @Nullable Output<String> autoScalingConfigurationName;
 
     public Output<String> getAutoScalingConfigurationName() {
@@ -43,7 +43,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * The revision of this auto scaling configuration.
      * 
      */
-    @InputImport(name="autoScalingConfigurationRevision")
+    @Import(name="autoScalingConfigurationRevision")
       private final @Nullable Output<Integer> autoScalingConfigurationRevision;
 
     public Output<Integer> getAutoScalingConfigurationRevision() {
@@ -54,7 +54,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * Whether the auto scaling configuration has the highest `auto_scaling_configuration_revision` among all configurations that share the same `auto_scaling_configuration_name`.
      * 
      */
-    @InputImport(name="latest")
+    @Import(name="latest")
       private final @Nullable Output<Boolean> latest;
 
     public Output<Boolean> getLatest() {
@@ -65,7 +65,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * The maximal number of concurrent requests that you want an instance to process. When the number of concurrent requests goes over this limit, App Runner scales up your service.
      * 
      */
-    @InputImport(name="maxConcurrency")
+    @Import(name="maxConcurrency")
       private final @Nullable Output<Integer> maxConcurrency;
 
     public Output<Integer> getMaxConcurrency() {
@@ -76,7 +76,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * The maximal number of instances that App Runner provisions for your service.
      * 
      */
-    @InputImport(name="maxSize")
+    @Import(name="maxSize")
       private final @Nullable Output<Integer> maxSize;
 
     public Output<Integer> getMaxSize() {
@@ -87,7 +87,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * The minimal number of instances that App Runner provisions for your service.
      * 
      */
-    @InputImport(name="minSize")
+    @Import(name="minSize")
       private final @Nullable Output<Integer> minSize;
 
     public Output<Integer> getMinSize() {
@@ -98,7 +98,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * The current state of the auto scaling configuration. An INACTIVE configuration revision has been deleted and can't be used. It is permanently removed some time after deletion.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -109,7 +109,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -120,7 +120,7 @@ public final class AutoScalingConfigurationVersionState extends io.pulumi.resour
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ssm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceDataSyncS3Destination {
     /**
      * Name of S3 bucket where the aggregated data is stored.
@@ -37,13 +37,13 @@ public final class ResourceDataSyncS3Destination {
      */
     private final @Nullable String syncFormat;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceDataSyncS3Destination(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("syncFormat") @Nullable String syncFormat) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("syncFormat") @Nullable String syncFormat) {
         this.bucketName = bucketName;
         this.kmsKeyArn = kmsKeyArn;
         this.prefix = prefix;

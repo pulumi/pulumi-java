@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.kusto.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEventHubDataConnectionResult {
     /**
      * The event hub messages compression type
@@ -84,22 +84,22 @@ public final class GetEventHubDataConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEventHubDataConnectionResult(
-        @OutputCustomType.Parameter("compression") @Nullable String compression,
-        @OutputCustomType.Parameter("consumerGroup") String consumerGroup,
-        @OutputCustomType.Parameter("dataFormat") @Nullable String dataFormat,
-        @OutputCustomType.Parameter("eventHubResourceId") String eventHubResourceId,
-        @OutputCustomType.Parameter("eventSystemProperties") @Nullable List<String> eventSystemProperties,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("managedIdentityResourceId") @Nullable String managedIdentityResourceId,
-        @OutputCustomType.Parameter("mappingRuleName") @Nullable String mappingRuleName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tableName") @Nullable String tableName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("compression") @Nullable String compression,
+        @CustomType.Parameter("consumerGroup") String consumerGroup,
+        @CustomType.Parameter("dataFormat") @Nullable String dataFormat,
+        @CustomType.Parameter("eventHubResourceId") String eventHubResourceId,
+        @CustomType.Parameter("eventSystemProperties") @Nullable List<String> eventSystemProperties,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("managedIdentityResourceId") @Nullable String managedIdentityResourceId,
+        @CustomType.Parameter("mappingRuleName") @Nullable String mappingRuleName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tableName") @Nullable String tableName,
+        @CustomType.Parameter("type") String type) {
         this.compression = compression;
         this.consumerGroup = consumerGroup;
         this.dataFormat = dataFormat;

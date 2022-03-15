@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelPropertyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
      * The property definitions of the asset model. You can specify up to 200 properties per asset model.
      * 
      */
-    @InputImport(name="compositeModelProperties")
+    @Import(name="compositeModelProperties")
       private final @Nullable Output<List<AssetModelPropertyArgs>> compositeModelProperties;
 
     public Output<List<AssetModelPropertyArgs>> getCompositeModelProperties() {
@@ -35,7 +35,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
      * A description for the asset composite model.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
      * A unique, friendly name for the asset composite model.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
      * The type of the composite model. For alarm composite models, this type is AWS/ALARM
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

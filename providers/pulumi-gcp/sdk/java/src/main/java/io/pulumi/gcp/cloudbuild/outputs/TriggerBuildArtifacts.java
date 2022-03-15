@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildArtifactsObjects;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerBuildArtifacts {
     /**
      * A list of images to be pushed upon the successful completion of all build steps.
@@ -32,10 +32,10 @@ public final class TriggerBuildArtifacts {
      */
     private final @Nullable TriggerBuildArtifactsObjects objects;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerBuildArtifacts(
-        @OutputCustomType.Parameter("images") @Nullable List<String> images,
-        @OutputCustomType.Parameter("objects") @Nullable TriggerBuildArtifactsObjects objects) {
+        @CustomType.Parameter("images") @Nullable List<String> images,
+        @CustomType.Parameter("objects") @Nullable TriggerBuildArtifactsObjects objects) {
         this.images = images;
         this.objects = objects;
     }

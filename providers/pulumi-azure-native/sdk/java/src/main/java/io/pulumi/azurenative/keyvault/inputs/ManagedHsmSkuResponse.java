@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.keyvault.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ManagedHsmSkuResponse extends io.pulumi.resources.InvokeArgs 
      * SKU Family of the managed HSM Pool
      * 
      */
-    @InputImport(name="family", required=true)
+    @Import(name="family", required=true)
       private final String family;
 
     public String getFamily() {
@@ -31,7 +31,7 @@ public final class ManagedHsmSkuResponse extends io.pulumi.resources.InvokeArgs 
      * SKU of the managed HSM Pool
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

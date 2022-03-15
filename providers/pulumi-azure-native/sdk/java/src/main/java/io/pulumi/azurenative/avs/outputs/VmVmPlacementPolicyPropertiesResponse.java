@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VmVmPlacementPolicyPropertiesResponse {
     /**
      * placement policy affinity type
@@ -44,14 +44,14 @@ public final class VmVmPlacementPolicyPropertiesResponse {
      */
     private final List<String> vmMembers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VmVmPlacementPolicyPropertiesResponse(
-        @OutputCustomType.Parameter("affinityType") String affinityType,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vmMembers") List<String> vmMembers) {
+        @CustomType.Parameter("affinityType") String affinityType,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vmMembers") List<String> vmMembers) {
         this.affinityType = affinityType;
         this.displayName = displayName;
         this.provisioningState = provisioningState;

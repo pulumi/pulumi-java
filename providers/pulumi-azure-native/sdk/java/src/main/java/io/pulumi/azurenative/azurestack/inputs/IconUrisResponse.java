@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestack.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
      * URI to hero icon.
      * 
      */
-    @InputImport(name="hero")
+    @Import(name="hero")
       private final @Nullable String hero;
 
     public Optional<String> getHero() {
@@ -33,7 +33,7 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
      * URI to large icon.
      * 
      */
-    @InputImport(name="large")
+    @Import(name="large")
       private final @Nullable String large;
 
     public Optional<String> getLarge() {
@@ -44,7 +44,7 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
      * URI to medium icon.
      * 
      */
-    @InputImport(name="medium")
+    @Import(name="medium")
       private final @Nullable String medium;
 
     public Optional<String> getMedium() {
@@ -55,7 +55,7 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
      * URI to small icon.
      * 
      */
-    @InputImport(name="small")
+    @Import(name="small")
       private final @Nullable String small;
 
     public Optional<String> getSmall() {
@@ -66,7 +66,7 @@ public final class IconUrisResponse extends io.pulumi.resources.InvokeArgs {
      * URI to wide icon.
      * 
      */
-    @InputImport(name="wide")
+    @Import(name="wide")
       private final @Nullable String wide;
 
     public Optional<String> getWide() {

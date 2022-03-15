@@ -4,7 +4,7 @@
 package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
      * Authentication mechanism to access the MongoDB source endpoint. Defaults to `default`.
      * 
      */
-    @InputImport(name="authMechanism")
+    @Import(name="authMechanism")
       private final @Nullable Output<String> authMechanism;
 
     public Output<String> getAuthMechanism() {
@@ -29,7 +29,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
      * Authentication database name. Not used when `auth_type` is `no`. Defaults to `admin`.
      * 
      */
-    @InputImport(name="authSource")
+    @Import(name="authSource")
       private final @Nullable Output<String> authSource;
 
     public Output<String> getAuthSource() {
@@ -40,7 +40,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
      * Authentication type to access the MongoDB source endpoint. Defaults to `password`.
      * 
      */
-    @InputImport(name="authType")
+    @Import(name="authType")
       private final @Nullable Output<String> authType;
 
     public Output<String> getAuthType() {
@@ -51,7 +51,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
      * Number of documents to preview to determine the document organization. Use this setting when `nesting_level` is set to `one`. Defaults to `1000`.
      * 
      */
-    @InputImport(name="docsToInvestigate")
+    @Import(name="docsToInvestigate")
       private final @Nullable Output<String> docsToInvestigate;
 
     public Output<String> getDocsToInvestigate() {
@@ -62,7 +62,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
      * Document ID. Use this setting when `nesting_level` is set to `none`. Defaults to `false`.
      * 
      */
-    @InputImport(name="extractDocId")
+    @Import(name="extractDocId")
       private final @Nullable Output<String> extractDocId;
 
     public Output<String> getExtractDocId() {
@@ -73,7 +73,7 @@ public final class EndpointMongodbSettingsArgs extends io.pulumi.resources.Resou
      * Specifies either document or table mode. Defaults to `none`. Valid values are `one` (table mode) and `none` (document mode).
      * 
      */
-    @InputImport(name="nestingLevel")
+    @Import(name="nestingLevel")
       private final @Nullable Output<String> nestingLevel;
 
     public Output<String> getNestingLevel() {

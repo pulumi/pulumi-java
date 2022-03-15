@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryArgs extends i
      * The location of the repository directory.
      * 
      */
-    @InputImport(name="baseUrl", required=true)
+    @Import(name="baseUrl", required=true)
       private final Output<String> baseUrl;
 
     public Output<String> getBaseUrl() {
@@ -34,7 +34,7 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryArgs extends i
      * The display name of the repository.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -45,7 +45,7 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryArgs extends i
      * URIs of GPG keys.
      * 
      */
-    @InputImport(name="gpgKeys")
+    @Import(name="gpgKeys")
       private final @Nullable Output<List<String>> gpgKeys;
 
     public Output<List<String>> getGpgKeys() {
@@ -56,7 +56,7 @@ public final class OSPolicyResourceRepositoryResourceYumRepositoryArgs extends i
      * A one word, unique name for this repository. This is the `repo id` in the yum config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for resource conflicts.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {

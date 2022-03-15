@@ -7,14 +7,14 @@ import io.pulumi.awsnative.s3.outputs.StorageLensAccountLevel;
 import io.pulumi.awsnative.s3.outputs.StorageLensAwsOrg;
 import io.pulumi.awsnative.s3.outputs.StorageLensBucketsAndRegions;
 import io.pulumi.awsnative.s3.outputs.StorageLensDataExport;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageLensConfiguration {
     private final StorageLensAccountLevel accountLevel;
     private final @Nullable StorageLensAwsOrg awsOrg;
@@ -33,16 +33,16 @@ public final class StorageLensConfiguration {
      */
     private final @Nullable String storageLensArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageLensConfiguration(
-        @OutputCustomType.Parameter("accountLevel") StorageLensAccountLevel accountLevel,
-        @OutputCustomType.Parameter("awsOrg") @Nullable StorageLensAwsOrg awsOrg,
-        @OutputCustomType.Parameter("dataExport") @Nullable StorageLensDataExport dataExport,
-        @OutputCustomType.Parameter("exclude") @Nullable StorageLensBucketsAndRegions exclude,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("include") @Nullable StorageLensBucketsAndRegions include,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("storageLensArn") @Nullable String storageLensArn) {
+        @CustomType.Parameter("accountLevel") StorageLensAccountLevel accountLevel,
+        @CustomType.Parameter("awsOrg") @Nullable StorageLensAwsOrg awsOrg,
+        @CustomType.Parameter("dataExport") @Nullable StorageLensDataExport dataExport,
+        @CustomType.Parameter("exclude") @Nullable StorageLensBucketsAndRegions exclude,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("include") @Nullable StorageLensBucketsAndRegions include,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("storageLensArn") @Nullable String storageLensArn) {
         this.accountLevel = accountLevel;
         this.awsOrg = awsOrg;
         this.dataExport = dataExport;

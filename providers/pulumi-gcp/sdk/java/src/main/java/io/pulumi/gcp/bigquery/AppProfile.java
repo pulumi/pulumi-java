@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.AppProfileArgs;
@@ -46,7 +46,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * The unique name of the app profile in the form `[_a-zA-Z0-9][-_.a-zA-Z0-9]*`.
      * 
      */
-    @OutputExport(name="appProfileId", type=String.class, parameters={})
+    @Export(name="appProfileId", type=String.class, parameters={})
     private Output<String> appProfileId;
 
     /**
@@ -60,7 +60,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * Long form description of the use case for this app profile.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -74,7 +74,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * If true, ignore safety checks when deleting/updating the app profile.
      * 
      */
-    @OutputExport(name="ignoreWarnings", type=Boolean.class, parameters={})
+    @Export(name="ignoreWarnings", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ignoreWarnings;
 
     /**
@@ -88,7 +88,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * The name of the instance to create the app profile within.
      * 
      */
-    @OutputExport(name="instance", type=String.class, parameters={})
+    @Export(name="instance", type=String.class, parameters={})
     private Output</* @Nullable */ String> instance;
 
     /**
@@ -104,7 +104,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * consistency to improve availability.
      * 
      */
-    @OutputExport(name="multiClusterRoutingUseAny", type=Boolean.class, parameters={})
+    @Export(name="multiClusterRoutingUseAny", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> multiClusterRoutingUseAny;
 
     /**
@@ -121,7 +121,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * 'projects/<project>/instances/<instance>/appProfiles/<appProfileId>'.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -137,7 +137,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -153,7 +153,7 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="singleClusterRouting", type=AppProfileSingleClusterRouting.class, parameters={})
+    @Export(name="singleClusterRouting", type=AppProfileSingleClusterRouting.class, parameters={})
     private Output</* @Nullable */ AppProfileSingleClusterRouting> singleClusterRouting;
 
     /**

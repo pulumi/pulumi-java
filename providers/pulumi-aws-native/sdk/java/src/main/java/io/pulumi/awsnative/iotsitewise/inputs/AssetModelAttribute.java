@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotsitewise.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,7 +14,7 @@ public final class AssetModelAttribute extends io.pulumi.resources.InvokeArgs {
 
     public static final AssetModelAttribute Empty = new AssetModelAttribute();
 
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable String defaultValue;
 
     public Optional<String> getDefaultValue() {

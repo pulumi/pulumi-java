@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class LaunchTemplateCapacityReservationSpecificationGetArgs extends
      * Indicates the instance's Capacity Reservation preferences. Can be `open` or `none`. (Default `none`).
      * 
      */
-    @InputImport(name="capacityReservationPreference")
+    @Import(name="capacityReservationPreference")
       private final @Nullable Output<String> capacityReservationPreference;
 
     public Output<String> getCapacityReservationPreference() {
@@ -30,7 +30,7 @@ public final class LaunchTemplateCapacityReservationSpecificationGetArgs extends
      * Used to target a specific Capacity Reservation:
      * 
      */
-    @InputImport(name="capacityReservationTarget")
+    @Import(name="capacityReservationTarget")
       private final @Nullable Output<LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget;
 
     public Output<LaunchTemplateCapacityReservationSpecificationCapacityReservationTargetGetArgs> getCapacityReservationTarget() {

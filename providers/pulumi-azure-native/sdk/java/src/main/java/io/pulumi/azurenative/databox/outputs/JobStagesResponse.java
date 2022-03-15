@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobStagesResponse {
     /**
      * Display name of the job stage.
@@ -36,13 +36,13 @@ public final class JobStagesResponse {
      */
     private final String stageTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStagesResponse(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("jobStageDetails") Object jobStageDetails,
-        @OutputCustomType.Parameter("stageName") String stageName,
-        @OutputCustomType.Parameter("stageStatus") String stageStatus,
-        @OutputCustomType.Parameter("stageTime") String stageTime) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("jobStageDetails") Object jobStageDetails,
+        @CustomType.Parameter("stageName") String stageName,
+        @CustomType.Parameter("stageStatus") String stageStatus,
+        @CustomType.Parameter("stageTime") String stageTime) {
         this.displayName = displayName;
         this.jobStageDetails = jobStageDetails;
         this.stageName = stageName;

@@ -4,9 +4,9 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
-import io.pulumi.core.internal.InputOutputData;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Maps;
+import io.pulumi.core.internal.OutputData;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.exceptions.RunException;
 
@@ -24,19 +24,19 @@ public class StackReference extends CustomResource {
     /**
      * The name of the referenced stack.
      */
-    @OutputExport(name = "name", type = String.class)
+    @Export(name = "name", type = String.class)
     private Output<String> name;
 
     /**
      * The outputs of the referenced stack.
      */
-    @OutputExport(name = "outputs", type = ImmutableMap.class, parameters = {String.class, Object.class})
+    @Export(name = "outputs", type = ImmutableMap.class, parameters = {String.class, Object.class})
     public Output<ImmutableMap<String, Object>> outputs;
 
     /**
      * The names of any stack outputs which contain secrets.
      */
-    @OutputExport(name = "secretOutputNames", type = ImmutableList.class, parameters = String.class)
+    @Export(name = "secretOutputNames", type = ImmutableList.class, parameters = String.class)
     public Output<ImmutableList<String>> secretOutputNames;
 
     /**
@@ -149,8 +149,8 @@ public class StackReference extends CustomResource {
 
     private CompletableFuture<Boolean> isSecretOutputName(Output<String> name) {
         return io.pulumi.core.internal.Internal.of(name).getDataAsync().thenCompose(
-                (InputOutputData<String> nameOutput) -> io.pulumi.core.internal.Internal.of(this.secretOutputNames).getDataAsync().thenCompose(
-                        (InputOutputData<ImmutableList<String>> secretOutputNamesData) -> {
+                (OutputData<String> nameOutput) -> io.pulumi.core.internal.Internal.of(this.secretOutputNames).getDataAsync().thenCompose(
+                        (OutputData<ImmutableList<String>> secretOutputNamesData) -> {
                             // If either the name or set of secret outputs is unknown, we can't do anything smart,
                             // so we just copy the secret-ness from the entire outputs value.
                             if (!(nameOutput.isKnown() && secretOutputNamesData.isKnown())) {

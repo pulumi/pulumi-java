@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagepool.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AclResponse extends io.pulumi.resources.InvokeArgs {
      * iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".
      * 
      */
-    @InputImport(name="initiatorIqn", required=true)
+    @Import(name="initiatorIqn", required=true)
       private final String initiatorIqn;
 
     public String getInitiatorIqn() {
@@ -32,7 +32,7 @@ public final class AclResponse extends io.pulumi.resources.InvokeArgs {
      * List of LUN names mapped to the ACL.
      * 
      */
-    @InputImport(name="mappedLuns", required=true)
+    @Import(name="mappedLuns", required=true)
       private final List<String> mappedLuns;
 
     public List<String> getMappedLuns() {
@@ -43,7 +43,7 @@ public final class AclResponse extends io.pulumi.resources.InvokeArgs {
      * Password for Challenge Handshake Authentication Protocol (CHAP) authentication.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final String password;
 
     public String getPassword() {
@@ -54,7 +54,7 @@ public final class AclResponse extends io.pulumi.resources.InvokeArgs {
      * Username for Challenge Handshake Authentication Protocol (CHAP) authentication.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final String username;
 
     public String getUsername() {

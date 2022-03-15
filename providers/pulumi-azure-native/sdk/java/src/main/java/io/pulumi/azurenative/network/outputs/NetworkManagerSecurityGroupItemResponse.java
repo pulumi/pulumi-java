@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkManagerSecurityGroupItemResponse {
     /**
      * Network manager group Id.
@@ -17,8 +17,8 @@ public final class NetworkManagerSecurityGroupItemResponse {
      */
     private final @Nullable String networkGroupId;
 
-    @OutputCustomType.Constructor
-    private NetworkManagerSecurityGroupItemResponse(@OutputCustomType.Parameter("networkGroupId") @Nullable String networkGroupId) {
+    @CustomType.Constructor
+    private NetworkManagerSecurityGroupItemResponse(@CustomType.Parameter("networkGroupId") @Nullable String networkGroupId) {
         this.networkGroupId = networkGroupId;
     }
 

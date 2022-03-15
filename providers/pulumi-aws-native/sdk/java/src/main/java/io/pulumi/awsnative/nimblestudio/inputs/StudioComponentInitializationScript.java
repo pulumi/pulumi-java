@@ -5,7 +5,7 @@ package io.pulumi.awsnative.nimblestudio.inputs;
 
 import io.pulumi.awsnative.nimblestudio.enums.StudioComponentInitializationScriptRunContext;
 import io.pulumi.awsnative.nimblestudio.enums.StudioComponentLaunchProfilePlatform;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,21 +24,21 @@ public final class StudioComponentInitializationScript extends io.pulumi.resourc
      * <p>The version number of the protocol that is used by the launch profile. The only valid version is "2021-03-31".</p>
      * 
      */
-    @InputImport(name="launchProfileProtocolVersion")
+    @Import(name="launchProfileProtocolVersion")
       private final @Nullable String launchProfileProtocolVersion;
 
     public Optional<String> getLaunchProfileProtocolVersion() {
         return this.launchProfileProtocolVersion == null ? Optional.empty() : Optional.ofNullable(this.launchProfileProtocolVersion);
     }
 
-    @InputImport(name="platform")
+    @Import(name="platform")
       private final @Nullable StudioComponentLaunchProfilePlatform platform;
 
     public Optional<StudioComponentLaunchProfilePlatform> getPlatform() {
         return this.platform == null ? Optional.empty() : Optional.ofNullable(this.platform);
     }
 
-    @InputImport(name="runContext")
+    @Import(name="runContext")
       private final @Nullable StudioComponentInitializationScriptRunContext runContext;
 
     public Optional<StudioComponentInitializationScriptRunContext> getRunContext() {
@@ -49,7 +49,7 @@ public final class StudioComponentInitializationScript extends io.pulumi.resourc
      * <p>The initialization script.</p>
      * 
      */
-    @InputImport(name="script")
+    @Import(name="script")
       private final @Nullable String script;
 
     public Optional<String> getScript() {

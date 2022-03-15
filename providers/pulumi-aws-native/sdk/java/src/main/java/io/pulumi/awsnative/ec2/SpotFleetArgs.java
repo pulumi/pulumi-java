@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.SpotFleetRequestConfigDataArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -13,7 +13,7 @@ public final class SpotFleetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SpotFleetArgs Empty = new SpotFleetArgs();
 
-    @InputImport(name="spotFleetRequestConfigData", required=true)
+    @Import(name="spotFleetRequestConfigData", required=true)
       private final Output<SpotFleetRequestConfigDataArgs> spotFleetRequestConfigData;
 
     public Output<SpotFleetRequestConfigDataArgs> getSpotFleetRequestConfigData() {

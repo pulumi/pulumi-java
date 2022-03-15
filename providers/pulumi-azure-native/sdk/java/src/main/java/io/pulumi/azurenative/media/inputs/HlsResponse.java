@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class HlsResponse extends io.pulumi.resources.InvokeArgs {
      * The number of fragments in an HTTP Live Streaming (HLS) TS segment in the output of the live event. This value does not affect the packing ratio for HLS CMAF output.
      * 
      */
-    @InputImport(name="fragmentsPerTsSegment")
+    @Import(name="fragmentsPerTsSegment")
       private final @Nullable Integer fragmentsPerTsSegment;
 
     public Optional<Integer> getFragmentsPerTsSegment() {

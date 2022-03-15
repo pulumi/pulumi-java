@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.VmStateDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReferenceVmResponse {
     /**
      * The password of the virtual machine. This will be set to null in GET resource API
@@ -33,12 +33,12 @@ public final class ReferenceVmResponse {
      */
     private final VmStateDetailsResponse vmStateDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReferenceVmResponse(
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("userName") String userName,
-        @OutputCustomType.Parameter("vmResourceId") String vmResourceId,
-        @OutputCustomType.Parameter("vmStateDetails") VmStateDetailsResponse vmStateDetails) {
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("userName") String userName,
+        @CustomType.Parameter("vmResourceId") String vmResourceId,
+        @CustomType.Parameter("vmStateDetails") VmStateDetailsResponse vmStateDetails) {
         this.password = password;
         this.userName = userName;
         this.vmResourceId = vmResourceId;

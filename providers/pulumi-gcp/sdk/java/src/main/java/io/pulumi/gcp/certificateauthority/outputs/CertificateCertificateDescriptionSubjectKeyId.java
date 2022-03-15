@@ -3,18 +3,18 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateCertificateDescriptionSubjectKeyId {
     private final @Nullable String keyId;
 
-    @OutputCustomType.Constructor
-    private CertificateCertificateDescriptionSubjectKeyId(@OutputCustomType.Parameter("keyId") @Nullable String keyId) {
+    @CustomType.Constructor
+    private CertificateCertificateDescriptionSubjectKeyId(@CustomType.Parameter("keyId") @Nullable String keyId) {
         this.keyId = keyId;
     }
 

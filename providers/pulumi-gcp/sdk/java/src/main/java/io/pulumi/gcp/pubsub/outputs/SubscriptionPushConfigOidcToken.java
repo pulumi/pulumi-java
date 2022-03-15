@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubscriptionPushConfigOidcToken {
     /**
      * Audience to be used when generating OIDC token. The audience claim
@@ -30,10 +30,10 @@ public final class SubscriptionPushConfigOidcToken {
      */
     private final String serviceAccountEmail;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubscriptionPushConfigOidcToken(
-        @OutputCustomType.Parameter("audience") @Nullable String audience,
-        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail) {
+        @CustomType.Parameter("audience") @Nullable String audience,
+        @CustomType.Parameter("serviceAccountEmail") String serviceAccountEmail) {
         this.audience = audience;
         this.serviceAccountEmail = serviceAccountEmail;
     }

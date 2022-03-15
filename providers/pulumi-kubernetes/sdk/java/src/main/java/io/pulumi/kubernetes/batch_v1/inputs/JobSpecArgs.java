@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.batch_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.Boolean;
@@ -26,7 +26,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the duration in seconds relative to the startTime that the job may be continuously active before the system tries to terminate it; value must be positive integer. If a Job is suspended (at creation or through an update), this timer will effectively be stopped and reset when the Job is resumed again.
      * 
      */
-    @InputImport(name="activeDeadlineSeconds")
+    @Import(name="activeDeadlineSeconds")
       private final @Nullable Output<Integer> activeDeadlineSeconds;
 
     public Output<Integer> getActiveDeadlineSeconds() {
@@ -37,7 +37,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the number of retries before marking this job failed. Defaults to 6
      * 
      */
-    @InputImport(name="backoffLimit")
+    @Import(name="backoffLimit")
       private final @Nullable Output<Integer> backoffLimit;
 
     public Output<Integer> getBackoffLimit() {
@@ -54,7 +54,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * This field is beta-level. More completion modes can be added in the future. If the Job controller observes a mode that it doesn't recognize, the controller skips updates for the Job.
      * 
      */
-    @InputImport(name="completionMode")
+    @Import(name="completionMode")
       private final @Nullable Output<String> completionMode;
 
     public Output<String> getCompletionMode() {
@@ -65,7 +65,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the desired number of successfully finished pods the job should be run with.  Setting to nil means that the success of any pod signals the success of all pods, and allows parallelism to have any positive value.  Setting to 1 means that parallelism is limited to 1 and the success of that pod signals the success of the job. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
      * 
      */
-    @InputImport(name="completions")
+    @Import(name="completions")
       private final @Nullable Output<Integer> completions;
 
     public Output<Integer> getCompletions() {
@@ -76,7 +76,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * manualSelector controls generation of pod labels and pod selectors. Leave `manualSelector` unset unless you are certain what you are doing. When false or unset, the system pick labels unique to this job and appends those labels to the pod template.  When true, the user is responsible for picking unique labels and specifying the selector.  Failure to pick a unique label may cause this and other jobs to not function correctly.  However, You may see `manualSelector=true` in jobs that were created with the old `extensions/v1beta1` API. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/#specifying-your-own-pod-selector
      * 
      */
-    @InputImport(name="manualSelector")
+    @Import(name="manualSelector")
       private final @Nullable Output<Boolean> manualSelector;
 
     public Output<Boolean> getManualSelector() {
@@ -87,7 +87,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the maximum desired number of pods the job should run at any given time. The actual number of pods running in steady state will be less than this number when ((.spec.completions - .status.successful) < .spec.parallelism), i.e. when the work left to do is less than max parallelism. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
      * 
      */
-    @InputImport(name="parallelism")
+    @Import(name="parallelism")
       private final @Nullable Output<Integer> parallelism;
 
     public Output<Integer> getParallelism() {
@@ -98,7 +98,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * A label query over pods that should match the pod count. Normally, the system sets this field for you. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;
 
     public Output<LabelSelectorArgs> getSelector() {
@@ -111,7 +111,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * This field is beta-level, gated by SuspendJob feature flag (enabled by default).
      * 
      */
-    @InputImport(name="suspend")
+    @Import(name="suspend")
       private final @Nullable Output<Boolean> suspend;
 
     public Output<Boolean> getSuspend() {
@@ -122,7 +122,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Describes the pod that will be created when executing a job. More info: https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/
      * 
      */
-    @InputImport(name="template", required=true)
+    @Import(name="template", required=true)
       private final Output<PodTemplateSpecArgs> template;
 
     public Output<PodTemplateSpecArgs> getTemplate() {
@@ -133,7 +133,7 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
      * ttlSecondsAfterFinished limits the lifetime of a Job that has finished execution (either Complete or Failed). If this field is set, ttlSecondsAfterFinished after the Job finishes, it is eligible to be automatically deleted. When the Job is being deleted, its lifecycle guarantees (e.g. finalizers) will be honored. If this field is unset, the Job won't be automatically deleted. If this field is set to zero, the Job becomes eligible to be deleted immediately after it finishes.
      * 
      */
-    @InputImport(name="ttlSecondsAfterFinished")
+    @Import(name="ttlSecondsAfterFinished")
       private final @Nullable Output<Integer> ttlSecondsAfterFinished;
 
     public Output<Integer> getTtlSecondsAfterFinished() {

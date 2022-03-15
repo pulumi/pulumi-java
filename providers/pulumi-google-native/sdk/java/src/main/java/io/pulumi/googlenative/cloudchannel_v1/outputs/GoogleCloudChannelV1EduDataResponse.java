@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudChannelV1EduDataResponse {
     /**
      * Size of the institute.
@@ -25,11 +25,11 @@ public final class GoogleCloudChannelV1EduDataResponse {
      */
     private final String website;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudChannelV1EduDataResponse(
-        @OutputCustomType.Parameter("instituteSize") String instituteSize,
-        @OutputCustomType.Parameter("instituteType") String instituteType,
-        @OutputCustomType.Parameter("website") String website) {
+        @CustomType.Parameter("instituteSize") String instituteSize,
+        @CustomType.Parameter("instituteType") String instituteType,
+        @CustomType.Parameter("website") String website) {
         this.instituteSize = instituteSize;
         this.instituteType = instituteType;
         this.website = website;

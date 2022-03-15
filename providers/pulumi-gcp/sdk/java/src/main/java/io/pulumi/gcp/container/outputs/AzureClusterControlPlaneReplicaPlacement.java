@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzureClusterControlPlaneReplicaPlacement {
     /**
      * For a given replica, the Azure availability zone where to provision the control plane VM and the ETCD disk.
@@ -20,10 +20,10 @@ public final class AzureClusterControlPlaneReplicaPlacement {
      */
     private final String subnetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureClusterControlPlaneReplicaPlacement(
-        @OutputCustomType.Parameter("azureAvailabilityZone") String azureAvailabilityZone,
-        @OutputCustomType.Parameter("subnetId") String subnetId) {
+        @CustomType.Parameter("azureAvailabilityZone") String azureAvailabilityZone,
+        @CustomType.Parameter("subnetId") String subnetId) {
         this.azureAvailabilityZone = azureAvailabilityZone;
         this.subnetId = subnetId;
     }

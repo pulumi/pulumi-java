@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.storage.k8s.io_v1beta1.outputs.TokenRequest;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CSIDriverSpec {
     /**
      * attachRequired indicates this CSI volume driver requires an attach operation (because it implements the CSI ControllerPublishVolume() method), and that the Kubernetes attach detach controller should call the attach volume interface which checks the volumeattachment status and waits until the volume is attached before proceeding to mounting. The CSI external-attacher coordinates with CSI volume driver and updates the volumeattachment status when the attach operation is complete. If the CSIDriverRegistry feature gate is enabled and the value is specified to false, the attach operation will be skipped. Otherwise the attach operation will be called.
@@ -73,15 +73,15 @@ public final class CSIDriverSpec {
      */
     private final @Nullable List<String> volumeLifecycleModes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CSIDriverSpec(
-        @OutputCustomType.Parameter("attachRequired") @Nullable Boolean attachRequired,
-        @OutputCustomType.Parameter("fsGroupPolicy") @Nullable String fsGroupPolicy,
-        @OutputCustomType.Parameter("podInfoOnMount") @Nullable Boolean podInfoOnMount,
-        @OutputCustomType.Parameter("requiresRepublish") @Nullable Boolean requiresRepublish,
-        @OutputCustomType.Parameter("storageCapacity") @Nullable Boolean storageCapacity,
-        @OutputCustomType.Parameter("tokenRequests") @Nullable List<TokenRequest> tokenRequests,
-        @OutputCustomType.Parameter("volumeLifecycleModes") @Nullable List<String> volumeLifecycleModes) {
+        @CustomType.Parameter("attachRequired") @Nullable Boolean attachRequired,
+        @CustomType.Parameter("fsGroupPolicy") @Nullable String fsGroupPolicy,
+        @CustomType.Parameter("podInfoOnMount") @Nullable Boolean podInfoOnMount,
+        @CustomType.Parameter("requiresRepublish") @Nullable Boolean requiresRepublish,
+        @CustomType.Parameter("storageCapacity") @Nullable Boolean storageCapacity,
+        @CustomType.Parameter("tokenRequests") @Nullable List<TokenRequest> tokenRequests,
+        @CustomType.Parameter("volumeLifecycleModes") @Nullable List<String> volumeLifecycleModes) {
         this.attachRequired = attachRequired;
         this.fsGroupPolicy = fsGroupPolicy;
         this.podInfoOnMount = podInfoOnMount;

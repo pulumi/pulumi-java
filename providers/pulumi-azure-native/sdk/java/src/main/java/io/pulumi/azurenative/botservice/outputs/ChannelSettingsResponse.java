@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.SiteResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ChannelSettingsResponse {
     /**
      * The bot icon url
@@ -60,17 +60,17 @@ public final class ChannelSettingsResponse {
      */
     private final @Nullable List<SiteResponse> sites;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ChannelSettingsResponse(
-        @OutputCustomType.Parameter("botIconUrl") @Nullable String botIconUrl,
-        @OutputCustomType.Parameter("botId") @Nullable String botId,
-        @OutputCustomType.Parameter("channelDisplayName") @Nullable String channelDisplayName,
-        @OutputCustomType.Parameter("channelId") @Nullable String channelId,
-        @OutputCustomType.Parameter("disableLocalAuth") @Nullable Boolean disableLocalAuth,
-        @OutputCustomType.Parameter("extensionKey1") @Nullable String extensionKey1,
-        @OutputCustomType.Parameter("extensionKey2") @Nullable String extensionKey2,
-        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
-        @OutputCustomType.Parameter("sites") @Nullable List<SiteResponse> sites) {
+        @CustomType.Parameter("botIconUrl") @Nullable String botIconUrl,
+        @CustomType.Parameter("botId") @Nullable String botId,
+        @CustomType.Parameter("channelDisplayName") @Nullable String channelDisplayName,
+        @CustomType.Parameter("channelId") @Nullable String channelId,
+        @CustomType.Parameter("disableLocalAuth") @Nullable Boolean disableLocalAuth,
+        @CustomType.Parameter("extensionKey1") @Nullable String extensionKey1,
+        @CustomType.Parameter("extensionKey2") @Nullable String extensionKey2,
+        @CustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
+        @CustomType.Parameter("sites") @Nullable List<SiteResponse> sites) {
         this.botIconUrl = botIconUrl;
         this.botId = botId;
         this.channelDisplayName = channelDisplayName;

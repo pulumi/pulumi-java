@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.billing.BudgetArgs;
@@ -60,7 +60,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="allUpdatesRule", type=BudgetAllUpdatesRule.class, parameters={})
+    @Export(name="allUpdatesRule", type=BudgetAllUpdatesRule.class, parameters={})
     private Output</* @Nullable */ BudgetAllUpdatesRule> allUpdatesRule;
 
     /**
@@ -78,7 +78,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="amount", type=BudgetAmount.class, parameters={})
+    @Export(name="amount", type=BudgetAmount.class, parameters={})
     private Output<BudgetAmount> amount;
 
     /**
@@ -93,7 +93,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * ID of the billing account to set a budget on.
      * 
      */
-    @OutputExport(name="billingAccount", type=String.class, parameters={})
+    @Export(name="billingAccount", type=String.class, parameters={})
     private Output<String> billingAccount;
 
     /**
@@ -109,7 +109,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="budgetFilter", type=BudgetBudgetFilter.class, parameters={})
+    @Export(name="budgetFilter", type=BudgetBudgetFilter.class, parameters={})
     private Output<BudgetBudgetFilter> budgetFilter;
 
     /**
@@ -125,7 +125,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * User data for display name in UI. Must be <= 60 chars.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -140,7 +140,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * billingAccounts/{billingAccountId}/budgets/{budgetId}.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -158,7 +158,7 @@ public class Budget extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="thresholdRules", type=List.class, parameters={BudgetThresholdRule.class})
+    @Export(name="thresholdRules", type=List.class, parameters={BudgetThresholdRule.class})
     private Output<List<BudgetThresholdRule>> thresholdRules;
 
     /**

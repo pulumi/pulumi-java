@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AutoscalingSettingsResponse extends io.pulumi.resources.Invok
      * The algorithm to use for autoscaling.
      * 
      */
-    @InputImport(name="algorithm", required=true)
+    @Import(name="algorithm", required=true)
       private final String algorithm;
 
     public String getAlgorithm() {
@@ -32,7 +32,7 @@ public final class AutoscalingSettingsResponse extends io.pulumi.resources.Invok
      * The maximum number of workers to cap scaling at.
      * 
      */
-    @InputImport(name="maxNumWorkers", required=true)
+    @Import(name="maxNumWorkers", required=true)
       private final Integer maxNumWorkers;
 
     public Integer getMaxNumWorkers() {

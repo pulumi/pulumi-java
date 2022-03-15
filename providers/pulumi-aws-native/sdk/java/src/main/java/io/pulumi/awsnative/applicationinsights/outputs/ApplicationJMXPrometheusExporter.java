@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.applicationinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationJMXPrometheusExporter {
     /**
      * Java agent host port
@@ -27,11 +27,11 @@ public final class ApplicationJMXPrometheusExporter {
      */
     private final @Nullable String prometheusPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationJMXPrometheusExporter(
-        @OutputCustomType.Parameter("hostPort") @Nullable String hostPort,
-        @OutputCustomType.Parameter("jMXURL") @Nullable String jMXURL,
-        @OutputCustomType.Parameter("prometheusPort") @Nullable String prometheusPort) {
+        @CustomType.Parameter("hostPort") @Nullable String hostPort,
+        @CustomType.Parameter("jMXURL") @Nullable String jMXURL,
+        @CustomType.Parameter("prometheusPort") @Nullable String prometheusPort) {
         this.hostPort = hostPort;
         this.jMXURL = jMXURL;
         this.prometheusPort = prometheusPort;

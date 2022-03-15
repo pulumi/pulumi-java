@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineRunCommandScriptSourceResponse {
     /**
      * Specifies a commandId of predefined built-in script.
@@ -27,11 +27,11 @@ public final class VirtualMachineRunCommandScriptSourceResponse {
      */
     private final @Nullable String scriptUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineRunCommandScriptSourceResponse(
-        @OutputCustomType.Parameter("commandId") @Nullable String commandId,
-        @OutputCustomType.Parameter("script") @Nullable String script,
-        @OutputCustomType.Parameter("scriptUri") @Nullable String scriptUri) {
+        @CustomType.Parameter("commandId") @Nullable String commandId,
+        @CustomType.Parameter("script") @Nullable String script,
+        @CustomType.Parameter("scriptUri") @Nullable String scriptUri) {
         this.commandId = commandId;
         this.script = script;
         this.scriptUri = scriptUri;

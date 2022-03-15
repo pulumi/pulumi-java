@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AzureOperationalStoreParametersResponse extends io.pulumi.res
      * type of datastore; Operational/Vault/Archive
      * 
      */
-    @InputImport(name="dataStoreType", required=true)
+    @Import(name="dataStoreType", required=true)
       private final String dataStoreType;
 
     public String getDataStoreType() {
@@ -34,7 +34,7 @@ public final class AzureOperationalStoreParametersResponse extends io.pulumi.res
      * Expected value is 'AzureOperationalStoreParameters'.
      * 
      */
-    @InputImport(name="objectType", required=true)
+    @Import(name="objectType", required=true)
       private final String objectType;
 
     public String getObjectType() {
@@ -45,7 +45,7 @@ public final class AzureOperationalStoreParametersResponse extends io.pulumi.res
      * Gets or sets the Snapshot Resource Group Uri.
      * 
      */
-    @InputImport(name="resourceGroupId")
+    @Import(name="resourceGroupId")
       private final @Nullable String resourceGroupId;
 
     public Optional<String> getResourceGroupId() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.GetClusterAddonsConfig;
 import io.pulumi.gcp.container.outputs.GetClusterAuthenticatorGroupsConfig;
 import io.pulumi.gcp.container.outputs.GetClusterClusterAutoscaling;
@@ -38,7 +38,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     private final List<GetClusterAddonsConfig> addonsConfigs;
     private final List<GetClusterAuthenticatorGroupsConfig> authenticatorGroupsConfigs;
@@ -105,68 +105,68 @@ public final class GetClusterResult {
     private final List<GetClusterVerticalPodAutoscaling> verticalPodAutoscalings;
     private final List<GetClusterWorkloadIdentityConfig> workloadIdentityConfigs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("addonsConfigs") List<GetClusterAddonsConfig> addonsConfigs,
-        @OutputCustomType.Parameter("authenticatorGroupsConfigs") List<GetClusterAuthenticatorGroupsConfig> authenticatorGroupsConfigs,
-        @OutputCustomType.Parameter("clusterAutoscalings") List<GetClusterClusterAutoscaling> clusterAutoscalings,
-        @OutputCustomType.Parameter("clusterIpv4Cidr") String clusterIpv4Cidr,
-        @OutputCustomType.Parameter("clusterTelemetries") List<GetClusterClusterTelemetry> clusterTelemetries,
-        @OutputCustomType.Parameter("confidentialNodes") List<GetClusterConfidentialNode> confidentialNodes,
-        @OutputCustomType.Parameter("databaseEncryptions") List<GetClusterDatabaseEncryption> databaseEncryptions,
-        @OutputCustomType.Parameter("datapathProvider") String datapathProvider,
-        @OutputCustomType.Parameter("defaultMaxPodsPerNode") Integer defaultMaxPodsPerNode,
-        @OutputCustomType.Parameter("defaultSnatStatuses") List<GetClusterDefaultSnatStatus> defaultSnatStatuses,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("dnsConfigs") List<GetClusterDnsConfig> dnsConfigs,
-        @OutputCustomType.Parameter("enableAutopilot") Boolean enableAutopilot,
-        @OutputCustomType.Parameter("enableBinaryAuthorization") Boolean enableBinaryAuthorization,
-        @OutputCustomType.Parameter("enableIntranodeVisibility") Boolean enableIntranodeVisibility,
-        @OutputCustomType.Parameter("enableKubernetesAlpha") Boolean enableKubernetesAlpha,
-        @OutputCustomType.Parameter("enableL4IlbSubsetting") Boolean enableL4IlbSubsetting,
-        @OutputCustomType.Parameter("enableLegacyAbac") Boolean enableLegacyAbac,
-        @OutputCustomType.Parameter("enableShieldedNodes") Boolean enableShieldedNodes,
-        @OutputCustomType.Parameter("enableTpu") Boolean enableTpu,
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identityServiceConfigs") List<GetClusterIdentityServiceConfig> identityServiceConfigs,
-        @OutputCustomType.Parameter("initialNodeCount") Integer initialNodeCount,
-        @OutputCustomType.Parameter("ipAllocationPolicies") List<GetClusterIpAllocationPolicy> ipAllocationPolicies,
-        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("loggingConfigs") List<GetClusterLoggingConfig> loggingConfigs,
-        @OutputCustomType.Parameter("loggingService") String loggingService,
-        @OutputCustomType.Parameter("maintenancePolicies") List<GetClusterMaintenancePolicy> maintenancePolicies,
-        @OutputCustomType.Parameter("masterAuthorizedNetworksConfigs") List<GetClusterMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs,
-        @OutputCustomType.Parameter("masterAuths") List<GetClusterMasterAuth> masterAuths,
-        @OutputCustomType.Parameter("masterVersion") String masterVersion,
-        @OutputCustomType.Parameter("minMasterVersion") String minMasterVersion,
-        @OutputCustomType.Parameter("monitoringConfigs") List<GetClusterMonitoringConfig> monitoringConfigs,
-        @OutputCustomType.Parameter("monitoringService") String monitoringService,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("networkPolicies") List<GetClusterNetworkPolicy> networkPolicies,
-        @OutputCustomType.Parameter("networkingMode") String networkingMode,
-        @OutputCustomType.Parameter("nodeConfigs") List<GetClusterNodeConfig> nodeConfigs,
-        @OutputCustomType.Parameter("nodeLocations") List<String> nodeLocations,
-        @OutputCustomType.Parameter("nodePools") List<GetClusterNodePool> nodePools,
-        @OutputCustomType.Parameter("nodeVersion") String nodeVersion,
-        @OutputCustomType.Parameter("notificationConfigs") List<GetClusterNotificationConfig> notificationConfigs,
-        @OutputCustomType.Parameter("operation") String operation,
-        @OutputCustomType.Parameter("podSecurityPolicyConfigs") List<GetClusterPodSecurityPolicyConfig> podSecurityPolicyConfigs,
-        @OutputCustomType.Parameter("privateClusterConfigs") List<GetClusterPrivateClusterConfig> privateClusterConfigs,
-        @OutputCustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("releaseChannels") List<GetClusterReleaseChannel> releaseChannels,
-        @OutputCustomType.Parameter("removeDefaultNodePool") Boolean removeDefaultNodePool,
-        @OutputCustomType.Parameter("resourceLabels") Map<String,String> resourceLabels,
-        @OutputCustomType.Parameter("resourceUsageExportConfigs") List<GetClusterResourceUsageExportConfig> resourceUsageExportConfigs,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("servicesIpv4Cidr") String servicesIpv4Cidr,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork,
-        @OutputCustomType.Parameter("tpuIpv4CidrBlock") String tpuIpv4CidrBlock,
-        @OutputCustomType.Parameter("verticalPodAutoscalings") List<GetClusterVerticalPodAutoscaling> verticalPodAutoscalings,
-        @OutputCustomType.Parameter("workloadIdentityConfigs") List<GetClusterWorkloadIdentityConfig> workloadIdentityConfigs) {
+        @CustomType.Parameter("addonsConfigs") List<GetClusterAddonsConfig> addonsConfigs,
+        @CustomType.Parameter("authenticatorGroupsConfigs") List<GetClusterAuthenticatorGroupsConfig> authenticatorGroupsConfigs,
+        @CustomType.Parameter("clusterAutoscalings") List<GetClusterClusterAutoscaling> clusterAutoscalings,
+        @CustomType.Parameter("clusterIpv4Cidr") String clusterIpv4Cidr,
+        @CustomType.Parameter("clusterTelemetries") List<GetClusterClusterTelemetry> clusterTelemetries,
+        @CustomType.Parameter("confidentialNodes") List<GetClusterConfidentialNode> confidentialNodes,
+        @CustomType.Parameter("databaseEncryptions") List<GetClusterDatabaseEncryption> databaseEncryptions,
+        @CustomType.Parameter("datapathProvider") String datapathProvider,
+        @CustomType.Parameter("defaultMaxPodsPerNode") Integer defaultMaxPodsPerNode,
+        @CustomType.Parameter("defaultSnatStatuses") List<GetClusterDefaultSnatStatus> defaultSnatStatuses,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("dnsConfigs") List<GetClusterDnsConfig> dnsConfigs,
+        @CustomType.Parameter("enableAutopilot") Boolean enableAutopilot,
+        @CustomType.Parameter("enableBinaryAuthorization") Boolean enableBinaryAuthorization,
+        @CustomType.Parameter("enableIntranodeVisibility") Boolean enableIntranodeVisibility,
+        @CustomType.Parameter("enableKubernetesAlpha") Boolean enableKubernetesAlpha,
+        @CustomType.Parameter("enableL4IlbSubsetting") Boolean enableL4IlbSubsetting,
+        @CustomType.Parameter("enableLegacyAbac") Boolean enableLegacyAbac,
+        @CustomType.Parameter("enableShieldedNodes") Boolean enableShieldedNodes,
+        @CustomType.Parameter("enableTpu") Boolean enableTpu,
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identityServiceConfigs") List<GetClusterIdentityServiceConfig> identityServiceConfigs,
+        @CustomType.Parameter("initialNodeCount") Integer initialNodeCount,
+        @CustomType.Parameter("ipAllocationPolicies") List<GetClusterIpAllocationPolicy> ipAllocationPolicies,
+        @CustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("loggingConfigs") List<GetClusterLoggingConfig> loggingConfigs,
+        @CustomType.Parameter("loggingService") String loggingService,
+        @CustomType.Parameter("maintenancePolicies") List<GetClusterMaintenancePolicy> maintenancePolicies,
+        @CustomType.Parameter("masterAuthorizedNetworksConfigs") List<GetClusterMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs,
+        @CustomType.Parameter("masterAuths") List<GetClusterMasterAuth> masterAuths,
+        @CustomType.Parameter("masterVersion") String masterVersion,
+        @CustomType.Parameter("minMasterVersion") String minMasterVersion,
+        @CustomType.Parameter("monitoringConfigs") List<GetClusterMonitoringConfig> monitoringConfigs,
+        @CustomType.Parameter("monitoringService") String monitoringService,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("networkPolicies") List<GetClusterNetworkPolicy> networkPolicies,
+        @CustomType.Parameter("networkingMode") String networkingMode,
+        @CustomType.Parameter("nodeConfigs") List<GetClusterNodeConfig> nodeConfigs,
+        @CustomType.Parameter("nodeLocations") List<String> nodeLocations,
+        @CustomType.Parameter("nodePools") List<GetClusterNodePool> nodePools,
+        @CustomType.Parameter("nodeVersion") String nodeVersion,
+        @CustomType.Parameter("notificationConfigs") List<GetClusterNotificationConfig> notificationConfigs,
+        @CustomType.Parameter("operation") String operation,
+        @CustomType.Parameter("podSecurityPolicyConfigs") List<GetClusterPodSecurityPolicyConfig> podSecurityPolicyConfigs,
+        @CustomType.Parameter("privateClusterConfigs") List<GetClusterPrivateClusterConfig> privateClusterConfigs,
+        @CustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("releaseChannels") List<GetClusterReleaseChannel> releaseChannels,
+        @CustomType.Parameter("removeDefaultNodePool") Boolean removeDefaultNodePool,
+        @CustomType.Parameter("resourceLabels") Map<String,String> resourceLabels,
+        @CustomType.Parameter("resourceUsageExportConfigs") List<GetClusterResourceUsageExportConfig> resourceUsageExportConfigs,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("servicesIpv4Cidr") String servicesIpv4Cidr,
+        @CustomType.Parameter("subnetwork") String subnetwork,
+        @CustomType.Parameter("tpuIpv4CidrBlock") String tpuIpv4CidrBlock,
+        @CustomType.Parameter("verticalPodAutoscalings") List<GetClusterVerticalPodAutoscaling> verticalPodAutoscalings,
+        @CustomType.Parameter("workloadIdentityConfigs") List<GetClusterWorkloadIdentityConfig> workloadIdentityConfigs) {
         this.addonsConfigs = addonsConfigs;
         this.authenticatorGroupsConfigs = authenticatorGroupsConfigs;
         this.clusterAutoscalings = clusterAutoscalings;

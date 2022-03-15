@@ -8,7 +8,7 @@ import io.pulumi.aws.sagemaker.DeviceFleetArgs;
 import io.pulumi.aws.sagemaker.inputs.DeviceFleetState;
 import io.pulumi.aws.sagemaker.outputs.DeviceFleetOutputConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) assigned by AWS to this Device Fleet.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * A description of the fleet.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -63,7 +63,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * The name of the Device Fleet (must be unique).
      * 
      */
-    @OutputExport(name="deviceFleetName", type=String.class, parameters={})
+    @Export(name="deviceFleetName", type=String.class, parameters={})
     private Output<String> deviceFleetName;
 
     /**
@@ -77,7 +77,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * Whether to create an AWS IoT Role Alias during device fleet creation. The name of the role alias generated will match this pattern: "SageMakerEdge-{DeviceFleetName}".
      * 
      */
-    @OutputExport(name="enableIotRoleAlias", type=Boolean.class, parameters={})
+    @Export(name="enableIotRoleAlias", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableIotRoleAlias;
 
     /**
@@ -87,7 +87,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Boolean> getEnableIotRoleAlias() {
         return this.enableIotRoleAlias;
     }
-    @OutputExport(name="iotRoleAlias", type=String.class, parameters={})
+    @Export(name="iotRoleAlias", type=String.class, parameters={})
     private Output<String> iotRoleAlias;
 
     public Output<String> getIotRoleAlias() {
@@ -97,7 +97,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * Specifies details about the repository. see Output Config details below.
      * 
      */
-    @OutputExport(name="outputConfig", type=DeviceFleetOutputConfig.class, parameters={})
+    @Export(name="outputConfig", type=DeviceFleetOutputConfig.class, parameters={})
     private Output<DeviceFleetOutputConfig> outputConfig;
 
     /**
@@ -111,7 +111,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) that has access to AWS Internet of Things (IoT).
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -125,7 +125,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -139,7 +139,7 @@ public class DeviceFleet extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

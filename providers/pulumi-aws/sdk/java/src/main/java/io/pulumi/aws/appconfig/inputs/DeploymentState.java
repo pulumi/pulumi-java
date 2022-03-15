@@ -4,7 +4,7 @@
 package io.pulumi.aws.appconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * The application ID. Must be between 4 and 7 characters in length.
      * 
      */
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -31,7 +31,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the AppConfig Deployment.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -42,7 +42,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * The configuration profile ID. Must be between 4 and 7 characters in length.
      * 
      */
-    @InputImport(name="configurationProfileId")
+    @Import(name="configurationProfileId")
       private final @Nullable Output<String> configurationProfileId;
 
     public Output<String> getConfigurationProfileId() {
@@ -53,7 +53,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * The configuration version to deploy. Can be at most 1024 characters.
      * 
      */
-    @InputImport(name="configurationVersion")
+    @Import(name="configurationVersion")
       private final @Nullable Output<String> configurationVersion;
 
     public Output<String> getConfigurationVersion() {
@@ -64,7 +64,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * The deployment number.
      * 
      */
-    @InputImport(name="deploymentNumber")
+    @Import(name="deploymentNumber")
       private final @Nullable Output<Integer> deploymentNumber;
 
     public Output<Integer> getDeploymentNumber() {
@@ -75,7 +75,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * The deployment strategy ID or name of a predefined deployment strategy. See [Predefined Deployment Strategies](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-deployment-strategy.html#appconfig-creating-deployment-strategy-predefined) for more details.
      * 
      */
-    @InputImport(name="deploymentStrategyId")
+    @Import(name="deploymentStrategyId")
       private final @Nullable Output<String> deploymentStrategyId;
 
     public Output<String> getDeploymentStrategyId() {
@@ -86,7 +86,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * The description of the deployment. Can be at most 1024 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -97,7 +97,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * The environment ID. Must be between 4 and 7 characters in length.
      * 
      */
-    @InputImport(name="environmentId")
+    @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
@@ -108,7 +108,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * The state of the deployment.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -119,7 +119,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -130,7 +130,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

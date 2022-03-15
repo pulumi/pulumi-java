@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs;
@@ -22,7 +22,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageGetArgs e
      * Structure is documented below.
      * 
      */
-    @InputImport(name="baseKeyUsages")
+    @Import(name="baseKeyUsages")
       private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs>> baseKeyUsages;
 
     public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageGetArgs>> getBaseKeyUsages() {
@@ -34,7 +34,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageGetArgs e
      * Structure is documented below.
      * 
      */
-    @InputImport(name="extendedKeyUsages")
+    @Import(name="extendedKeyUsages")
       private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageGetArgs>> extendedKeyUsages;
 
     public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageGetArgs>> getExtendedKeyUsages() {
@@ -46,7 +46,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageGetArgs e
      * Structure is documented below.
      * 
      */
-    @InputImport(name="unknownExtendedKeyUsages")
+    @Import(name="unknownExtendedKeyUsages")
       private final @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
 
     public Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageGetArgs>> getUnknownExtendedKeyUsages() {

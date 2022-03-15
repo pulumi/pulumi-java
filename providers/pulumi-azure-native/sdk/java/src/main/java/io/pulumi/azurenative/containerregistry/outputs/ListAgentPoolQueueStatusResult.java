@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListAgentPoolQueueStatusResult {
     /**
      * The number of pending runs in the queue
@@ -17,8 +17,8 @@ public final class ListAgentPoolQueueStatusResult {
      */
     private final @Nullable Integer count;
 
-    @OutputCustomType.Constructor
-    private ListAgentPoolQueueStatusResult(@OutputCustomType.Parameter("count") @Nullable Integer count) {
+    @CustomType.Constructor
+    private ListAgentPoolQueueStatusResult(@CustomType.Parameter("count") @Nullable Integer count) {
         this.count = count;
     }
 

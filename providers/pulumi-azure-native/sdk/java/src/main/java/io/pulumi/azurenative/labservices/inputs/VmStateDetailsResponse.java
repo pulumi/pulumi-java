@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class VmStateDetailsResponse extends io.pulumi.resources.InvokeArgs
      * Last known compute power state captured in DTL
      * 
      */
-    @InputImport(name="lastKnownPowerState", required=true)
+    @Import(name="lastKnownPowerState", required=true)
       private final String lastKnownPowerState;
 
     public String getLastKnownPowerState() {
@@ -31,7 +31,7 @@ public final class VmStateDetailsResponse extends io.pulumi.resources.InvokeArgs
      * The power state of the reference virtual machine.
      * 
      */
-    @InputImport(name="powerState", required=true)
+    @Import(name="powerState", required=true)
       private final String powerState;
 
     public String getPowerState() {
@@ -42,7 +42,7 @@ public final class VmStateDetailsResponse extends io.pulumi.resources.InvokeArgs
      * The RdpAuthority property is a server DNS host name or IP address followed by the service port number for RDP (Remote Desktop Protocol).
      * 
      */
-    @InputImport(name="rdpAuthority", required=true)
+    @Import(name="rdpAuthority", required=true)
       private final String rdpAuthority;
 
     public String getRdpAuthority() {
@@ -53,7 +53,7 @@ public final class VmStateDetailsResponse extends io.pulumi.resources.InvokeArgs
      * The SshAuthority property is a server DNS host name or IP address followed by the service port number for SSH.
      * 
      */
-    @InputImport(name="sshAuthority", required=true)
+    @Import(name="sshAuthority", required=true)
       private final String sshAuthority;
 
     public String getSshAuthority() {

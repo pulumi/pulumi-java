@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DataSourceElasticsearchConfigGetArgs extends io.pulumi.resour
      * HTTP URL.
      * 
      */
-    @InputImport(name="endpoint", required=true)
+    @Import(name="endpoint", required=true)
       private final Output<String> endpoint;
 
     public Output<String> getEndpoint() {
@@ -29,7 +29,7 @@ public final class DataSourceElasticsearchConfigGetArgs extends io.pulumi.resour
      * AWS Region for RDS HTTP endpoint. Defaults to current region.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {

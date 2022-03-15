@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterAddonsConfigIstioConfigArgs extends io.pulumi.resource
      * The authentication type between services in Istio. Available options include `AUTH_MUTUAL_TLS`.
      * 
      */
-    @InputImport(name="auth")
+    @Import(name="auth")
       private final @Nullable Output<String> auth;
 
     public Output<String> getAuth() {
@@ -31,7 +31,7 @@ public final class ClusterAddonsConfigIstioConfigArgs extends io.pulumi.resource
      * cluster. It is disabled by default. Set `disabled = false` to enable.
      * 
      */
-    @InputImport(name="disabled", required=true)
+    @Import(name="disabled", required=true)
       private final Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {

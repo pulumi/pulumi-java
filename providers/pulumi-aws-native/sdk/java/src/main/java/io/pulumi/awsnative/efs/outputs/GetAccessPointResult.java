@@ -4,24 +4,24 @@
 package io.pulumi.awsnative.efs.outputs;
 
 import io.pulumi.awsnative.efs.outputs.AccessPointTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAccessPointResult {
     private final @Nullable String accessPointId;
     private final @Nullable List<AccessPointTag> accessPointTags;
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccessPointResult(
-        @OutputCustomType.Parameter("accessPointId") @Nullable String accessPointId,
-        @OutputCustomType.Parameter("accessPointTags") @Nullable List<AccessPointTag> accessPointTags,
-        @OutputCustomType.Parameter("arn") @Nullable String arn) {
+        @CustomType.Parameter("accessPointId") @Nullable String accessPointId,
+        @CustomType.Parameter("accessPointTags") @Nullable List<AccessPointTag> accessPointTags,
+        @CustomType.Parameter("arn") @Nullable String arn) {
         this.accessPointId = accessPointId;
         this.accessPointTags = accessPointTags;
         this.arn = arn;

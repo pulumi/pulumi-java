@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class IstioConfigResponse extends io.pulumi.resources.InvokeArgs {
      * The specified Istio auth mode, either none, or mutual TLS.
      * 
      */
-    @InputImport(name="auth", required=true)
+    @Import(name="auth", required=true)
       private final String auth;
 
     public String getAuth() {
@@ -32,7 +32,7 @@ public final class IstioConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Whether Istio is enabled for this cluster.
      * 
      */
-    @InputImport(name="disabled", required=true)
+    @Import(name="disabled", required=true)
       private final Boolean disabled;
 
     public Boolean getDisabled() {

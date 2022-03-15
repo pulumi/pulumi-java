@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class PerfCounterDataSourceResponse extends io.pulumi.resources.Inv
      * To get a list of performance counters on Windows, run the command 'typeperf'.
      * 
      */
-    @InputImport(name="counterSpecifiers")
+    @Import(name="counterSpecifiers")
       private final @Nullable List<String> counterSpecifiers;
 
     public List<String> getCounterSpecifiers() {
@@ -39,7 +39,7 @@ public final class PerfCounterDataSourceResponse extends io.pulumi.resources.Inv
      * This name should be unique across all data sources (regardless of type) within the data collection rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -50,7 +50,7 @@ public final class PerfCounterDataSourceResponse extends io.pulumi.resources.Inv
      * The number of seconds between consecutive counter measurements (samples).
      * 
      */
-    @InputImport(name="samplingFrequencyInSeconds")
+    @Import(name="samplingFrequencyInSeconds")
       private final @Nullable Integer samplingFrequencyInSeconds;
 
     public Optional<Integer> getSamplingFrequencyInSeconds() {
@@ -62,7 +62,7 @@ public final class PerfCounterDataSourceResponse extends io.pulumi.resources.Inv
      * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
      * 
      */
-    @InputImport(name="streams")
+    @Import(name="streams")
       private final @Nullable List<String> streams;
 
     public List<String> getStreams() {

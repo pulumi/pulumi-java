@@ -4,11 +4,11 @@
 package io.pulumi.aws.acmpca.outputs;
 
 import io.pulumi.aws.acmpca.outputs.CertificateAuthorityCertificateAuthorityConfigurationSubject;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificateAuthorityCertificateAuthorityConfiguration {
     /**
      * Type of the public key algorithm and size, in bits, of the key pair that your key pair creates when it issues a certificate. Valid values can be found in the [ACM PCA Documentation](https://docs.aws.amazon.com/acm-pca/latest/APIReference/API_CertificateAuthorityConfiguration.html).
@@ -26,11 +26,11 @@ public final class CertificateAuthorityCertificateAuthorityConfiguration {
      */
     private final CertificateAuthorityCertificateAuthorityConfigurationSubject subject;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateAuthorityCertificateAuthorityConfiguration(
-        @OutputCustomType.Parameter("keyAlgorithm") String keyAlgorithm,
-        @OutputCustomType.Parameter("signingAlgorithm") String signingAlgorithm,
-        @OutputCustomType.Parameter("subject") CertificateAuthorityCertificateAuthorityConfigurationSubject subject) {
+        @CustomType.Parameter("keyAlgorithm") String keyAlgorithm,
+        @CustomType.Parameter("signingAlgorithm") String signingAlgorithm,
+        @CustomType.Parameter("subject") CertificateAuthorityCertificateAuthorityConfigurationSubject subject) {
         this.keyAlgorithm = keyAlgorithm;
         this.signingAlgorithm = signingAlgorithm;
         this.subject = subject;

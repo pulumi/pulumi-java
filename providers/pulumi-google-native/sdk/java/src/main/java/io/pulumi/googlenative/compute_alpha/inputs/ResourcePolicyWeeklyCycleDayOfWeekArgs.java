@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.ResourcePolicyWeeklyCycleDayOfWeekDay;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekArgs extends io.pulumi.reso
      * Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
      * 
      */
-    @InputImport(name="day")
+    @Import(name="day")
       private final @Nullable Output<ResourcePolicyWeeklyCycleDayOfWeekDay> day;
 
     public Output<ResourcePolicyWeeklyCycleDayOfWeekDay> getDay() {
@@ -30,7 +30,7 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekArgs extends io.pulumi.reso
      * Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {

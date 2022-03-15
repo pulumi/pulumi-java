@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RegionUrlMapHostRuleArgs extends io.pulumi.resources.Resource
      * Description of this test case.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class RegionUrlMapHostRuleArgs extends io.pulumi.resources.Resource
      * the pattern by either - or ..
      * 
      */
-    @InputImport(name="hosts", required=true)
+    @Import(name="hosts", required=true)
       private final Output<List<String>> hosts;
 
     public Output<List<String>> getHosts() {
@@ -45,7 +45,7 @@ public final class RegionUrlMapHostRuleArgs extends io.pulumi.resources.Resource
      * the URL if the hostRule matches the URL's host portion.
      * 
      */
-    @InputImport(name="pathMatcher", required=true)
+    @Import(name="pathMatcher", required=true)
       private final Output<String> pathMatcher;
 
     public Output<String> getPathMatcher() {

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.automation.outputs.SoftwareUpdateConfigurationTasks
 import io.pulumi.azurenative.automation.outputs.UpdateConfigurationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * CreatedBy property, which only appears in the response.
      * 
      */
-    @OutputExport(name="createdBy", type=String.class, parameters={})
+    @Export(name="createdBy", type=String.class, parameters={})
     private Output<String> createdBy;
 
     /**
@@ -52,7 +52,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * Creation time of the resource, which only appears in the response.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -66,7 +66,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * Details of provisioning error
      * 
      */
-    @OutputExport(name="error", type=ErrorResponseResponse.class, parameters={})
+    @Export(name="error", type=ErrorResponseResponse.class, parameters={})
     private Output</* @Nullable */ ErrorResponseResponse> error;
 
     /**
@@ -80,7 +80,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * LastModifiedBy property, which only appears in the response.
      * 
      */
-    @OutputExport(name="lastModifiedBy", type=String.class, parameters={})
+    @Export(name="lastModifiedBy", type=String.class, parameters={})
     private Output<String> lastModifiedBy;
 
     /**
@@ -94,7 +94,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * Last time resource was modified, which only appears in the response.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
@@ -108,7 +108,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -122,7 +122,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * Provisioning state for the software update configuration, which only appears in the response.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -136,7 +136,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * Schedule information for the Software update configuration
      * 
      */
-    @OutputExport(name="scheduleInfo", type=SUCSchedulePropertiesResponse.class, parameters={})
+    @Export(name="scheduleInfo", type=SUCSchedulePropertiesResponse.class, parameters={})
     private Output<SUCSchedulePropertiesResponse> scheduleInfo;
 
     /**
@@ -150,7 +150,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * Tasks information for the Software update configuration.
      * 
      */
-    @OutputExport(name="tasks", type=SoftwareUpdateConfigurationTasksResponse.class, parameters={})
+    @Export(name="tasks", type=SoftwareUpdateConfigurationTasksResponse.class, parameters={})
     private Output</* @Nullable */ SoftwareUpdateConfigurationTasksResponse> tasks;
 
     /**
@@ -164,7 +164,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -178,7 +178,7 @@ public class SoftwareUpdateConfigurationByName extends io.pulumi.resources.Custo
      * update specific properties for the Software update configuration
      * 
      */
-    @OutputExport(name="updateConfiguration", type=UpdateConfigurationResponse.class, parameters={})
+    @Export(name="updateConfiguration", type=UpdateConfigurationResponse.class, parameters={})
     private Output<UpdateConfigurationResponse> updateConfiguration;
 
     /**

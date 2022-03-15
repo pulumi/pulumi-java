@@ -24,7 +24,7 @@ import io.pulumi.aws.quicksight.inputs.DataSourceParametersSqlServerArgs;
 import io.pulumi.aws.quicksight.inputs.DataSourceParametersTeradataArgs;
 import io.pulumi.aws.quicksight.inputs.DataSourceParametersTwitterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -37,7 +37,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to Amazon Elasticsearch.
      * 
      */
-    @InputImport(name="amazonElasticsearch")
+    @Import(name="amazonElasticsearch")
       private final @Nullable Output<DataSourceParametersAmazonElasticsearchArgs> amazonElasticsearch;
 
     public Output<DataSourceParametersAmazonElasticsearchArgs> getAmazonElasticsearch() {
@@ -48,7 +48,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to Athena.
      * 
      */
-    @InputImport(name="athena")
+    @Import(name="athena")
       private final @Nullable Output<DataSourceParametersAthenaArgs> athena;
 
     public Output<DataSourceParametersAthenaArgs> getAthena() {
@@ -59,7 +59,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to Aurora MySQL.
      * 
      */
-    @InputImport(name="aurora")
+    @Import(name="aurora")
       private final @Nullable Output<DataSourceParametersAuroraArgs> aurora;
 
     public Output<DataSourceParametersAuroraArgs> getAurora() {
@@ -70,7 +70,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to Aurora Postgresql.
      * 
      */
-    @InputImport(name="auroraPostgresql")
+    @Import(name="auroraPostgresql")
       private final @Nullable Output<DataSourceParametersAuroraPostgresqlArgs> auroraPostgresql;
 
     public Output<DataSourceParametersAuroraPostgresqlArgs> getAuroraPostgresql() {
@@ -81,7 +81,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to AWS IOT Analytics.
      * 
      */
-    @InputImport(name="awsIotAnalytics")
+    @Import(name="awsIotAnalytics")
       private final @Nullable Output<DataSourceParametersAwsIotAnalyticsArgs> awsIotAnalytics;
 
     public Output<DataSourceParametersAwsIotAnalyticsArgs> getAwsIotAnalytics() {
@@ -92,7 +92,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to Jira.
      * 
      */
-    @InputImport(name="jira")
+    @Import(name="jira")
       private final @Nullable Output<DataSourceParametersJiraArgs> jira;
 
     public Output<DataSourceParametersJiraArgs> getJira() {
@@ -103,7 +103,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to MariaDB.
      * 
      */
-    @InputImport(name="mariaDb")
+    @Import(name="mariaDb")
       private final @Nullable Output<DataSourceParametersMariaDbArgs> mariaDb;
 
     public Output<DataSourceParametersMariaDbArgs> getMariaDb() {
@@ -114,7 +114,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to MySQL.
      * 
      */
-    @InputImport(name="mysql")
+    @Import(name="mysql")
       private final @Nullable Output<DataSourceParametersMysqlArgs> mysql;
 
     public Output<DataSourceParametersMysqlArgs> getMysql() {
@@ -125,7 +125,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to Oracle.
      * 
      */
-    @InputImport(name="oracle")
+    @Import(name="oracle")
       private final @Nullable Output<DataSourceParametersOracleArgs> oracle;
 
     public Output<DataSourceParametersOracleArgs> getOracle() {
@@ -136,7 +136,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to Postgresql.
      * 
      */
-    @InputImport(name="postgresql")
+    @Import(name="postgresql")
       private final @Nullable Output<DataSourceParametersPostgresqlArgs> postgresql;
 
     public Output<DataSourceParametersPostgresqlArgs> getPostgresql() {
@@ -147,7 +147,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to Presto.
      * 
      */
-    @InputImport(name="presto")
+    @Import(name="presto")
       private final @Nullable Output<DataSourceParametersPrestoArgs> presto;
 
     public Output<DataSourceParametersPrestoArgs> getPresto() {
@@ -158,7 +158,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to RDS.
      * 
      */
-    @InputImport(name="rds")
+    @Import(name="rds")
       private final @Nullable Output<DataSourceParametersRdsArgs> rds;
 
     public Output<DataSourceParametersRdsArgs> getRds() {
@@ -169,7 +169,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to Redshift.
      * 
      */
-    @InputImport(name="redshift")
+    @Import(name="redshift")
       private final @Nullable Output<DataSourceParametersRedshiftArgs> redshift;
 
     public Output<DataSourceParametersRedshiftArgs> getRedshift() {
@@ -180,7 +180,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to S3.
      * 
      */
-    @InputImport(name="s3")
+    @Import(name="s3")
       private final @Nullable Output<DataSourceParametersS3Args> s3;
 
     public Output<DataSourceParametersS3Args> getS3() {
@@ -191,7 +191,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to ServiceNow.
      * 
      */
-    @InputImport(name="serviceNow")
+    @Import(name="serviceNow")
       private final @Nullable Output<DataSourceParametersServiceNowArgs> serviceNow;
 
     public Output<DataSourceParametersServiceNowArgs> getServiceNow() {
@@ -202,7 +202,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to Snowflake.
      * 
      */
-    @InputImport(name="snowflake")
+    @Import(name="snowflake")
       private final @Nullable Output<DataSourceParametersSnowflakeArgs> snowflake;
 
     public Output<DataSourceParametersSnowflakeArgs> getSnowflake() {
@@ -213,7 +213,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to Spark.
      * 
      */
-    @InputImport(name="spark")
+    @Import(name="spark")
       private final @Nullable Output<DataSourceParametersSparkArgs> spark;
 
     public Output<DataSourceParametersSparkArgs> getSpark() {
@@ -224,7 +224,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to SQL Server.
      * 
      */
-    @InputImport(name="sqlServer")
+    @Import(name="sqlServer")
       private final @Nullable Output<DataSourceParametersSqlServerArgs> sqlServer;
 
     public Output<DataSourceParametersSqlServerArgs> getSqlServer() {
@@ -235,7 +235,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to Teradata.
      * 
      */
-    @InputImport(name="teradata")
+    @Import(name="teradata")
       private final @Nullable Output<DataSourceParametersTeradataArgs> teradata;
 
     public Output<DataSourceParametersTeradataArgs> getTeradata() {
@@ -246,7 +246,7 @@ public final class DataSourceParametersArgs extends io.pulumi.resources.Resource
      * Parameters for connecting to Twitter.
      * 
      */
-    @InputImport(name="twitter")
+    @Import(name="twitter")
       private final @Nullable Output<DataSourceParametersTwitterArgs> twitter;
 
     public Output<DataSourceParametersTwitterArgs> getTwitter() {

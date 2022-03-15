@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LinkedInfoResponse {
     /**
      * LinkedId id.
@@ -27,11 +27,11 @@ public final class LinkedInfoResponse {
      */
     private final @Nullable String origin;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LinkedInfoResponse(
-        @OutputCustomType.Parameter("linkedId") @Nullable String linkedId,
-        @OutputCustomType.Parameter("linkedResourceName") @Nullable String linkedResourceName,
-        @OutputCustomType.Parameter("origin") @Nullable String origin) {
+        @CustomType.Parameter("linkedId") @Nullable String linkedId,
+        @CustomType.Parameter("linkedResourceName") @Nullable String linkedResourceName,
+        @CustomType.Parameter("origin") @Nullable String origin) {
         this.linkedId = linkedId;
         this.linkedResourceName = linkedResourceName;
         this.origin = origin;

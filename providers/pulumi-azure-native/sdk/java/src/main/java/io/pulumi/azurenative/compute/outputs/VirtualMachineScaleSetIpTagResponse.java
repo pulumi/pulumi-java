@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineScaleSetIpTagResponse {
     /**
      * IP tag type. Example: FirstPartyUsage.
@@ -22,10 +22,10 @@ public final class VirtualMachineScaleSetIpTagResponse {
      */
     private final @Nullable String tag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineScaleSetIpTagResponse(
-        @OutputCustomType.Parameter("ipTagType") @Nullable String ipTagType,
-        @OutputCustomType.Parameter("tag") @Nullable String tag) {
+        @CustomType.Parameter("ipTagType") @Nullable String ipTagType,
+        @CustomType.Parameter("tag") @Nullable String tag) {
         this.ipTagType = ipTagType;
         this.tag = tag;
     }

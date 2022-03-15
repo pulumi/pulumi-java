@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class SubnetNetworkAclAssociationArgs extends io.pulumi.resources.R
      * The ID of the network ACL
      * 
      */
-    @InputImport(name="networkAclId", required=true)
+    @Import(name="networkAclId", required=true)
       private final Output<String> networkAclId;
 
     public Output<String> getNetworkAclId() {
@@ -28,7 +28,7 @@ public final class SubnetNetworkAclAssociationArgs extends io.pulumi.resources.R
      * The ID of the subnet
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
     public Output<String> getSubnetId() {

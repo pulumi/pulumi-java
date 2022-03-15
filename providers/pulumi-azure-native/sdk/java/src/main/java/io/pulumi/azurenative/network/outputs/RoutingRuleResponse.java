@@ -8,14 +8,14 @@ import io.pulumi.azurenative.network.outputs.RedirectConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RoutingRuleResponse {
     /**
      * Protocol schemes to match for this rule
@@ -73,19 +73,19 @@ public final class RoutingRuleResponse {
      */
     private final @Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RoutingRuleResponse(
-        @OutputCustomType.Parameter("acceptedProtocols") @Nullable List<String> acceptedProtocols,
-        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
-        @OutputCustomType.Parameter("frontendEndpoints") @Nullable List<SubResourceResponse> frontendEndpoints,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("patternsToMatch") @Nullable List<String> patternsToMatch,
-        @OutputCustomType.Parameter("resourceState") String resourceState,
-        @OutputCustomType.Parameter("routeConfiguration") @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration,
-        @OutputCustomType.Parameter("rulesEngine") @Nullable SubResourceResponse rulesEngine,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("webApplicationFirewallPolicyLink") @Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
+        @CustomType.Parameter("acceptedProtocols") @Nullable List<String> acceptedProtocols,
+        @CustomType.Parameter("enabledState") @Nullable String enabledState,
+        @CustomType.Parameter("frontendEndpoints") @Nullable List<SubResourceResponse> frontendEndpoints,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("patternsToMatch") @Nullable List<String> patternsToMatch,
+        @CustomType.Parameter("resourceState") String resourceState,
+        @CustomType.Parameter("routeConfiguration") @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration,
+        @CustomType.Parameter("rulesEngine") @Nullable SubResourceResponse rulesEngine,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("webApplicationFirewallPolicyLink") @Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
         this.acceptedProtocols = acceptedProtocols;
         this.enabledState = enabledState;
         this.frontendEndpoints = frontendEndpoints;

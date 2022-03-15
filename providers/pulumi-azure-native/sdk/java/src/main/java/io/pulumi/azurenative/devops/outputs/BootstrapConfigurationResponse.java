@@ -5,12 +5,12 @@ package io.pulumi.azurenative.devops.outputs;
 
 import io.pulumi.azurenative.devops.outputs.CodeRepositoryResponse;
 import io.pulumi.azurenative.devops.outputs.PipelineTemplateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BootstrapConfigurationResponse {
     /**
      * Repository containing the source code for the pipeline. Currently only 'azurePipeline' pipeline type supports this.
@@ -23,10 +23,10 @@ public final class BootstrapConfigurationResponse {
      */
     private final PipelineTemplateResponse template;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BootstrapConfigurationResponse(
-        @OutputCustomType.Parameter("sourceRepository") @Nullable CodeRepositoryResponse sourceRepository,
-        @OutputCustomType.Parameter("template") PipelineTemplateResponse template) {
+        @CustomType.Parameter("sourceRepository") @Nullable CodeRepositoryResponse sourceRepository,
+        @CustomType.Parameter("template") PipelineTemplateResponse template) {
         this.sourceRepository = sourceRepository;
         this.template = template;
     }

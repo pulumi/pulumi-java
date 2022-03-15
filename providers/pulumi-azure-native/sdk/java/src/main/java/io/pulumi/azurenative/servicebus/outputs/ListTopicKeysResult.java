@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.servicebus.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListTopicKeysResult {
     /**
      * Primary connection string of the alias if GEO DR is enabled
@@ -45,15 +45,15 @@ public final class ListTopicKeysResult {
      */
     private final String secondaryKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListTopicKeysResult(
-        @OutputCustomType.Parameter("aliasPrimaryConnectionString") String aliasPrimaryConnectionString,
-        @OutputCustomType.Parameter("aliasSecondaryConnectionString") String aliasSecondaryConnectionString,
-        @OutputCustomType.Parameter("keyName") String keyName,
-        @OutputCustomType.Parameter("primaryConnectionString") String primaryConnectionString,
-        @OutputCustomType.Parameter("primaryKey") String primaryKey,
-        @OutputCustomType.Parameter("secondaryConnectionString") String secondaryConnectionString,
-        @OutputCustomType.Parameter("secondaryKey") String secondaryKey) {
+        @CustomType.Parameter("aliasPrimaryConnectionString") String aliasPrimaryConnectionString,
+        @CustomType.Parameter("aliasSecondaryConnectionString") String aliasSecondaryConnectionString,
+        @CustomType.Parameter("keyName") String keyName,
+        @CustomType.Parameter("primaryConnectionString") String primaryConnectionString,
+        @CustomType.Parameter("primaryKey") String primaryKey,
+        @CustomType.Parameter("secondaryConnectionString") String secondaryConnectionString,
+        @CustomType.Parameter("secondaryKey") String secondaryKey) {
         this.aliasPrimaryConnectionString = aliasPrimaryConnectionString;
         this.aliasSecondaryConnectionString = aliasSecondaryConnectionString;
         this.keyName = keyName;

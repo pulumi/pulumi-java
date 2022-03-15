@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 import io.pulumi.awsnative.lightsail.enums.InstanceAddOnStatus;
 import io.pulumi.awsnative.lightsail.inputs.InstanceAutoSnapshotAddOnArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,14 +24,14 @@ public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
      * The add-on type
      * 
      */
-    @InputImport(name="addOnType", required=true)
+    @Import(name="addOnType", required=true)
       private final Output<String> addOnType;
 
     public Output<String> getAddOnType() {
         return this.addOnType;
     }
 
-    @InputImport(name="autoSnapshotAddOnRequest")
+    @Import(name="autoSnapshotAddOnRequest")
       private final @Nullable Output<InstanceAutoSnapshotAddOnArgs> autoSnapshotAddOnRequest;
 
     public Output<InstanceAutoSnapshotAddOnArgs> getAutoSnapshotAddOnRequest() {
@@ -42,7 +42,7 @@ public final class InstanceAddOnArgs extends io.pulumi.resources.ResourceArgs {
      * Status of the Addon
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<InstanceAddOnStatus> status;
 
     public Output<InstanceAddOnStatus> getStatus() {

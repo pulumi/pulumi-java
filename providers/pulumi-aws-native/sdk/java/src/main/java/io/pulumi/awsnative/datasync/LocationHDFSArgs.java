@@ -8,7 +8,7 @@ import io.pulumi.awsnative.datasync.inputs.LocationHDFSNameNodeArgs;
 import io.pulumi.awsnative.datasync.inputs.LocationHDFSQopConfigurationArgs;
 import io.pulumi.awsnative.datasync.inputs.LocationHDFSTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * ARN(s) of the agent(s) to use for an HDFS location.
      * 
      */
-    @InputImport(name="agentArns", required=true)
+    @Import(name="agentArns", required=true)
       private final Output<List<String>> agentArns;
 
     public Output<List<String>> getAgentArns() {
@@ -35,7 +35,7 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * The authentication mode used to determine identity of user.
      * 
      */
-    @InputImport(name="authenticationType", required=true)
+    @Import(name="authenticationType", required=true)
       private final Output<LocationHDFSAuthenticationType> authenticationType;
 
     public Output<LocationHDFSAuthenticationType> getAuthenticationType() {
@@ -46,7 +46,7 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * Size of chunks (blocks) in bytes that the data is divided into when stored in the HDFS cluster.
      * 
      */
-    @InputImport(name="blockSize")
+    @Import(name="blockSize")
       private final @Nullable Output<Integer> blockSize;
 
     public Output<Integer> getBlockSize() {
@@ -57,7 +57,7 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * The Base64 string representation of the Keytab file.
      * 
      */
-    @InputImport(name="kerberosKeytab")
+    @Import(name="kerberosKeytab")
       private final @Nullable Output<String> kerberosKeytab;
 
     public Output<String> getKerberosKeytab() {
@@ -68,7 +68,7 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * The string representation of the Krb5Conf file, or the presigned URL to access the Krb5.conf file within an S3 bucket.
      * 
      */
-    @InputImport(name="kerberosKrb5Conf")
+    @Import(name="kerberosKrb5Conf")
       private final @Nullable Output<String> kerberosKrb5Conf;
 
     public Output<String> getKerberosKrb5Conf() {
@@ -79,7 +79,7 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * The unique identity, or principal, to which Kerberos can assign tickets.
      * 
      */
-    @InputImport(name="kerberosPrincipal")
+    @Import(name="kerberosPrincipal")
       private final @Nullable Output<String> kerberosPrincipal;
 
     public Output<String> getKerberosPrincipal() {
@@ -90,7 +90,7 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier for the Key Management Server where the encryption keys that encrypt data inside HDFS clusters are stored.
      * 
      */
-    @InputImport(name="kmsKeyProviderUri")
+    @Import(name="kmsKeyProviderUri")
       private final @Nullable Output<String> kmsKeyProviderUri;
 
     public Output<String> getKmsKeyProviderUri() {
@@ -101,14 +101,14 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * An array of Name Node(s) of the HDFS location.
      * 
      */
-    @InputImport(name="nameNodes", required=true)
+    @Import(name="nameNodes", required=true)
       private final Output<List<LocationHDFSNameNodeArgs>> nameNodes;
 
     public Output<List<LocationHDFSNameNodeArgs>> getNameNodes() {
         return this.nameNodes;
     }
 
-    @InputImport(name="qopConfiguration")
+    @Import(name="qopConfiguration")
       private final @Nullable Output<LocationHDFSQopConfigurationArgs> qopConfiguration;
 
     public Output<LocationHDFSQopConfigurationArgs> getQopConfiguration() {
@@ -119,7 +119,7 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * Number of copies of each block that exists inside the HDFS cluster.
      * 
      */
-    @InputImport(name="replicationFactor")
+    @Import(name="replicationFactor")
       private final @Nullable Output<Integer> replicationFactor;
 
     public Output<Integer> getReplicationFactor() {
@@ -130,7 +130,7 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * The user name that has read and write permissions on the specified HDFS cluster.
      * 
      */
-    @InputImport(name="simpleUser")
+    @Import(name="simpleUser")
       private final @Nullable Output<String> simpleUser;
 
     public Output<String> getSimpleUser() {
@@ -141,7 +141,7 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * The subdirectory in HDFS that is used to read data from the HDFS source location or write data to the HDFS destination.
      * 
      */
-    @InputImport(name="subdirectory")
+    @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
@@ -152,7 +152,7 @@ public final class LocationHDFSArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<LocationHDFSTagArgs>> tags;
 
     public Output<List<LocationHDFSTagArgs>> getTags() {

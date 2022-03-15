@@ -8,7 +8,7 @@ import io.pulumi.aws.elasticbeanstalk.ConfigurationTemplateArgs;
 import io.pulumi.aws.elasticbeanstalk.inputs.ConfigurationTemplateState;
 import io.pulumi.aws.elasticbeanstalk.outputs.ConfigurationTemplateSetting;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * name of the application to associate with this configuration template
      * 
      */
-    @OutputExport(name="application", type=String.class, parameters={})
+    @Export(name="application", type=String.class, parameters={})
     private Output<String> application;
 
     /**
@@ -50,7 +50,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * Short description of the Template
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -64,7 +64,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * The ID of the environment used with this configuration template
      * 
      */
-    @OutputExport(name="environmentId", type=String.class, parameters={})
+    @Export(name="environmentId", type=String.class, parameters={})
     private Output</* @Nullable */ String> environmentId;
 
     /**
@@ -78,7 +78,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * A unique name for this Template.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * below in Option Settings
      * 
      */
-    @OutputExport(name="settings", type=List.class, parameters={ConfigurationTemplateSetting.class})
+    @Export(name="settings", type=List.class, parameters={ConfigurationTemplateSetting.class})
     private Output<List<ConfigurationTemplateSetting>> settings;
 
     /**
@@ -111,7 +111,7 @@ public class ConfigurationTemplate extends io.pulumi.resources.CustomResource {
      * off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
      * 
      */
-    @OutputExport(name="solutionStackName", type=String.class, parameters={})
+    @Export(name="solutionStackName", type=String.class, parameters={})
     private Output</* @Nullable */ String> solutionStackName;
 
     /**

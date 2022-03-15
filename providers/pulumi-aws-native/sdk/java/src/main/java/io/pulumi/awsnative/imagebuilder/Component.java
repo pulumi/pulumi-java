@@ -8,7 +8,7 @@ import io.pulumi.awsnative.imagebuilder.ComponentArgs;
 import io.pulumi.awsnative.imagebuilder.enums.ComponentPlatform;
 import io.pulumi.awsnative.imagebuilder.enums.ComponentType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -28,7 +28,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the component.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -42,7 +42,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * The change description of the component.
      * 
      */
-    @OutputExport(name="changeDescription", type=String.class, parameters={})
+    @Export(name="changeDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> changeDescription;
 
     /**
@@ -56,7 +56,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * The data of the component.
      * 
      */
-    @OutputExport(name="data", type=String.class, parameters={})
+    @Export(name="data", type=String.class, parameters={})
     private Output</* @Nullable */ String> data;
 
     /**
@@ -70,7 +70,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * The description of the component.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -84,7 +84,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * The encryption status of the component.
      * 
      */
-    @OutputExport(name="encrypted", type=Boolean.class, parameters={})
+    @Export(name="encrypted", type=Boolean.class, parameters={})
     private Output<Boolean> encrypted;
 
     /**
@@ -98,7 +98,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * The KMS key identifier used to encrypt the component.
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     /**
@@ -112,7 +112,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * The name of the component.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -126,7 +126,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * The platform of the component.
      * 
      */
-    @OutputExport(name="platform", type=ComponentPlatform.class, parameters={})
+    @Export(name="platform", type=ComponentPlatform.class, parameters={})
     private Output<ComponentPlatform> platform;
 
     /**
@@ -140,7 +140,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * The operating system (OS) version supported by the component.
      * 
      */
-    @OutputExport(name="supportedOsVersions", type=List.class, parameters={String.class})
+    @Export(name="supportedOsVersions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> supportedOsVersions;
 
     /**
@@ -154,7 +154,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * The tags associated with the component.
      * 
      */
-    @OutputExport(name="tags", type=Object.class, parameters={})
+    @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
     /**
@@ -168,7 +168,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * The type of the component denotes whether the component is used to build the image or only to test it.
      * 
      */
-    @OutputExport(name="type", type=ComponentType.class, parameters={})
+    @Export(name="type", type=ComponentType.class, parameters={})
     private Output<ComponentType> type;
 
     /**
@@ -182,7 +182,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * The uri of the component.
      * 
      */
-    @OutputExport(name="uri", type=String.class, parameters={})
+    @Export(name="uri", type=String.class, parameters={})
     private Output</* @Nullable */ String> uri;
 
     /**
@@ -196,7 +196,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * The version of the component.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

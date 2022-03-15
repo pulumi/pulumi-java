@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.OutputFileArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class Mp4FormatArgs extends io.pulumi.resources.ResourceArgs {
      * The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. {Resolution} - The video resolution. Any unsubstituted macros will be collapsed and removed from the filename.
      * 
      */
-    @InputImport(name="filenamePattern", required=true)
+    @Import(name="filenamePattern", required=true)
       private final Output<String> filenamePattern;
 
     public Output<String> getFilenamePattern() {
@@ -36,7 +36,7 @@ public final class Mp4FormatArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is '#Microsoft.Media.Mp4Format'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -47,7 +47,7 @@ public final class Mp4FormatArgs extends io.pulumi.resources.ResourceArgs {
      * The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .
      * 
      */
-    @InputImport(name="outputFiles")
+    @Import(name="outputFiles")
       private final @Nullable Output<List<OutputFileArgs>> outputFiles;
 
     public Output<List<OutputFileArgs>> getOutputFiles() {

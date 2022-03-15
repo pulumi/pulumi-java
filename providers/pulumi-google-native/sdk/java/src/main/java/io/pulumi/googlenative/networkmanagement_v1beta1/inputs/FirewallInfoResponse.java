@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Possible values: ALLOW, DENY
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final String action;
 
     public String getAction() {
@@ -33,7 +33,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * Possible values: INGRESS, EGRESS
      * 
      */
-    @InputImport(name="direction", required=true)
+    @Import(name="direction", required=true)
       private final String direction;
 
     public String getDirection() {
@@ -44,7 +44,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The display name of the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -55,7 +55,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The firewall rule's type.
      * 
      */
-    @InputImport(name="firewallRuleType", required=true)
+    @Import(name="firewallRuleType", required=true)
       private final String firewallRuleType;
 
     public String getFirewallRuleType() {
@@ -66,7 +66,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The URI of the VPC network that the firewall rule is associated with. This field is not applicable to hierarchical firewall policy rules.
      * 
      */
-    @InputImport(name="networkUri", required=true)
+    @Import(name="networkUri", required=true)
       private final String networkUri;
 
     public String getNetworkUri() {
@@ -77,7 +77,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The hierarchical firewall policy that this rule is associated with. This field is not applicable to VPC firewall rules.
      * 
      */
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final String policy;
 
     public String getPolicy() {
@@ -88,7 +88,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The priority of the firewall rule.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Integer priority;
 
     public Integer getPriority() {
@@ -99,7 +99,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The target service accounts specified by the firewall rule.
      * 
      */
-    @InputImport(name="targetServiceAccounts", required=true)
+    @Import(name="targetServiceAccounts", required=true)
       private final List<String> targetServiceAccounts;
 
     public List<String> getTargetServiceAccounts() {
@@ -110,7 +110,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The target tags defined by the VPC firewall rule. This field is not applicable to hierarchical firewall policy rules.
      * 
      */
-    @InputImport(name="targetTags", required=true)
+    @Import(name="targetTags", required=true)
       private final List<String> targetTags;
 
     public List<String> getTargetTags() {
@@ -121,7 +121,7 @@ public final class FirewallInfoResponse extends io.pulumi.resources.InvokeArgs {
      * The URI of the VPC firewall rule. This field is not applicable to implied firewall rules or hierarchical firewall policy rules.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

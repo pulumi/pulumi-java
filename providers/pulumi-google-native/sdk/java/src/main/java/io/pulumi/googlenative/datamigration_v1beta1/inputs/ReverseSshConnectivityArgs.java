@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datamigration_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
      * The name of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
      * 
      */
-    @InputImport(name="vm")
+    @Import(name="vm")
       private final @Nullable Output<String> vm;
 
     public Output<String> getVm() {
@@ -34,7 +34,7 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
      * The IP of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
      * 
      */
-    @InputImport(name="vmIp", required=true)
+    @Import(name="vmIp", required=true)
       private final Output<String> vmIp;
 
     public Output<String> getVmIp() {
@@ -45,7 +45,7 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
      * The forwarding port of the virtual machine (Compute Engine) used as the bastion server for the SSH tunnel.
      * 
      */
-    @InputImport(name="vmPort", required=true)
+    @Import(name="vmPort", required=true)
       private final Output<Integer> vmPort;
 
     public Output<Integer> getVmPort() {
@@ -56,7 +56,7 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
      * The name of the VPC to peer with the Cloud SQL private network.
      * 
      */
-    @InputImport(name="vpc")
+    @Import(name="vpc")
       private final @Nullable Output<String> vpc;
 
     public Output<String> getVpc() {

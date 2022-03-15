@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ApplicationSecurityGroupResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityRuleResponse {
     /**
      * The network traffic is allowed or denied.
@@ -115,28 +115,28 @@ public final class SecurityRuleResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityRuleResponse(
-        @OutputCustomType.Parameter("access") String access,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("destinationAddressPrefix") @Nullable String destinationAddressPrefix,
-        @OutputCustomType.Parameter("destinationAddressPrefixes") @Nullable List<String> destinationAddressPrefixes,
-        @OutputCustomType.Parameter("destinationApplicationSecurityGroups") @Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups,
-        @OutputCustomType.Parameter("destinationPortRange") @Nullable String destinationPortRange,
-        @OutputCustomType.Parameter("destinationPortRanges") @Nullable List<String> destinationPortRanges,
-        @OutputCustomType.Parameter("direction") String direction,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sourceAddressPrefix") @Nullable String sourceAddressPrefix,
-        @OutputCustomType.Parameter("sourceAddressPrefixes") @Nullable List<String> sourceAddressPrefixes,
-        @OutputCustomType.Parameter("sourceApplicationSecurityGroups") @Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups,
-        @OutputCustomType.Parameter("sourcePortRange") @Nullable String sourcePortRange,
-        @OutputCustomType.Parameter("sourcePortRanges") @Nullable List<String> sourcePortRanges,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("access") String access,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("destinationAddressPrefix") @Nullable String destinationAddressPrefix,
+        @CustomType.Parameter("destinationAddressPrefixes") @Nullable List<String> destinationAddressPrefixes,
+        @CustomType.Parameter("destinationApplicationSecurityGroups") @Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups,
+        @CustomType.Parameter("destinationPortRange") @Nullable String destinationPortRange,
+        @CustomType.Parameter("destinationPortRanges") @Nullable List<String> destinationPortRanges,
+        @CustomType.Parameter("direction") String direction,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sourceAddressPrefix") @Nullable String sourceAddressPrefix,
+        @CustomType.Parameter("sourceAddressPrefixes") @Nullable List<String> sourceAddressPrefixes,
+        @CustomType.Parameter("sourceApplicationSecurityGroups") @Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups,
+        @CustomType.Parameter("sourcePortRange") @Nullable String sourcePortRange,
+        @CustomType.Parameter("sourcePortRanges") @Nullable List<String> sourcePortRanges,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.access = access;
         this.description = description;
         this.destinationAddressPrefix = destinationAddressPrefix;

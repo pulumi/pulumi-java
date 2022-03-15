@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.apigateway.MethodResponseArgs;
 import io.pulumi.aws.apigateway.inputs.MethodResponseState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
      * The HTTP Method (`GET`, `POST`, `PUT`, `DELETE`, `HEAD`, `OPTIONS`, `ANY`)
      * 
      */
-    @OutputExport(name="httpMethod", type=String.class, parameters={})
+    @Export(name="httpMethod", type=String.class, parameters={})
     private Output<String> httpMethod;
 
     /**
@@ -48,7 +48,7 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
      * The API resource ID
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output<String> resourceId;
 
     /**
@@ -62,7 +62,7 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
      * A map of the API models used for the response's content type
      * 
      */
-    @OutputExport(name="responseModels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="responseModels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> responseModels;
 
     /**
@@ -78,7 +78,7 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
      * would define that the header `X-Some-Header` can be provided on the response.
      * 
      */
-    @OutputExport(name="responseParameters", type=Map.class, parameters={String.class, Boolean.class})
+    @Export(name="responseParameters", type=Map.class, parameters={String.class, Boolean.class})
     private Output</* @Nullable */ Map<String,Boolean>> responseParameters;
 
     /**
@@ -94,7 +94,7 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
      * The ID of the associated REST API
      * 
      */
-    @OutputExport(name="restApi", type=String.class, parameters={})
+    @Export(name="restApi", type=String.class, parameters={})
     private Output<String> restApi;
 
     /**
@@ -108,7 +108,7 @@ public class MethodResponse extends io.pulumi.resources.CustomResource {
      * The HTTP status code
      * 
      */
-    @OutputExport(name="statusCode", type=String.class, parameters={})
+    @Export(name="statusCode", type=String.class, parameters={})
     private Output<String> statusCode;
 
     /**

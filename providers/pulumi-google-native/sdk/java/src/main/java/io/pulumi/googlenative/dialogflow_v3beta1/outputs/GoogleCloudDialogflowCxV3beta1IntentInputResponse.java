@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1IntentInputResponse {
     /**
      * The unique identifier of the intent. Format: `projects//locations//agents//intents/`.
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowCxV3beta1IntentInputResponse {
      */
     private final String intent;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowCxV3beta1IntentInputResponse(@OutputCustomType.Parameter("intent") String intent) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowCxV3beta1IntentInputResponse(@CustomType.Parameter("intent") String intent) {
         this.intent = intent;
     }
 

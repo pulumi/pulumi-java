@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.DeviceDeviceGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
 
     public static final DeviceState Empty = new DeviceState();
 
-    @InputImport(name="agentVersion")
+    @Import(name="agentVersion")
       private final @Nullable Output<String> agentVersion;
 
     public Output<String> getAgentVersion() {
@@ -26,7 +26,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) assigned by AWS to this Device.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -37,7 +37,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * The device to register with SageMaker Edge Manager. See Device details below.
      * 
      */
-    @InputImport(name="device")
+    @Import(name="device")
       private final @Nullable Output<DeviceDeviceGetArgs> device;
 
     public Output<DeviceDeviceGetArgs> getDevice() {
@@ -48,7 +48,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * The name of the Device Fleet.
      * 
      */
-    @InputImport(name="deviceFleetName")
+    @Import(name="deviceFleetName")
       private final @Nullable Output<String> deviceFleetName;
 
     public Output<String> getDeviceFleetName() {

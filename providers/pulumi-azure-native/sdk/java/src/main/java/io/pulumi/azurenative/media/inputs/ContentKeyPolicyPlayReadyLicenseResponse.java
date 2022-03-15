@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyContentEncryp
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse;
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyPlayRightResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * A flag indicating whether test devices can use the license.
      * 
      */
-    @InputImport(name="allowTestDevices", required=true)
+    @Import(name="allowTestDevices", required=true)
       private final Boolean allowTestDevices;
 
     public Boolean getAllowTestDevices() {
@@ -38,7 +38,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * The begin date of license
      * 
      */
-    @InputImport(name="beginDate")
+    @Import(name="beginDate")
       private final @Nullable String beginDate;
 
     public Optional<String> getBeginDate() {
@@ -49,7 +49,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * The content key location.
      * 
      */
-    @InputImport(name="contentKeyLocation", required=true)
+    @Import(name="contentKeyLocation", required=true)
       private final Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> contentKeyLocation;
 
     public Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderResponse,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse> getContentKeyLocation() {
@@ -60,7 +60,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * The PlayReady content type.
      * 
      */
-    @InputImport(name="contentType", required=true)
+    @Import(name="contentType", required=true)
       private final String contentType;
 
     public String getContentType() {
@@ -71,7 +71,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * The expiration date of license.
      * 
      */
-    @InputImport(name="expirationDate")
+    @Import(name="expirationDate")
       private final @Nullable String expirationDate;
 
     public Optional<String> getExpirationDate() {
@@ -82,7 +82,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * The grace period of license.
      * 
      */
-    @InputImport(name="gracePeriod")
+    @Import(name="gracePeriod")
       private final @Nullable String gracePeriod;
 
     public Optional<String> getGracePeriod() {
@@ -93,7 +93,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * The license type.
      * 
      */
-    @InputImport(name="licenseType", required=true)
+    @Import(name="licenseType", required=true)
       private final String licenseType;
 
     public String getLicenseType() {
@@ -104,7 +104,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * The license PlayRight
      * 
      */
-    @InputImport(name="playRight")
+    @Import(name="playRight")
       private final @Nullable ContentKeyPolicyPlayReadyPlayRightResponse playRight;
 
     public Optional<ContentKeyPolicyPlayReadyPlayRightResponse> getPlayRight() {
@@ -115,7 +115,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * The relative begin date of license.
      * 
      */
-    @InputImport(name="relativeBeginDate")
+    @Import(name="relativeBeginDate")
       private final @Nullable String relativeBeginDate;
 
     public Optional<String> getRelativeBeginDate() {
@@ -126,7 +126,7 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse extends io.pulumi.re
      * The relative expiration date of license.
      * 
      */
-    @InputImport(name="relativeExpirationDate")
+    @Import(name="relativeExpirationDate")
       private final @Nullable String relativeExpirationDate;
 
     public Optional<String> getRelativeExpirationDate() {

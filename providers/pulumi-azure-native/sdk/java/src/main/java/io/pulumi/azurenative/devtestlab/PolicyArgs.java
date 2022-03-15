@@ -8,7 +8,7 @@ import io.pulumi.azurenative.devtestlab.enums.PolicyFactName;
 import io.pulumi.azurenative.devtestlab.enums.PolicyStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the policy.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -34,7 +34,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The evaluator type of the policy (i.e. AllowedValuesPolicy, MaxValuePolicy).
      * 
      */
-    @InputImport(name="evaluatorType")
+    @Import(name="evaluatorType")
       private final @Nullable Output<Either<String,PolicyEvaluatorType>> evaluatorType;
 
     public Output<Either<String,PolicyEvaluatorType>> getEvaluatorType() {
@@ -45,7 +45,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The fact data of the policy.
      * 
      */
-    @InputImport(name="factData")
+    @Import(name="factData")
       private final @Nullable Output<String> factData;
 
     public Output<String> getFactData() {
@@ -56,7 +56,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The fact name of the policy (e.g. LabVmCount, LabVmSize, MaxVmsAllowedPerLab, etc.
      * 
      */
-    @InputImport(name="factName")
+    @Import(name="factName")
       private final @Nullable Output<Either<String,PolicyFactName>> factName;
 
     public Output<Either<String,PolicyFactName>> getFactName() {
@@ -67,7 +67,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the lab.
      * 
      */
-    @InputImport(name="labName", required=true)
+    @Import(name="labName", required=true)
       private final Output<String> labName;
 
     public Output<String> getLabName() {
@@ -78,7 +78,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -89,7 +89,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -100,7 +100,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the policy set.
      * 
      */
-    @InputImport(name="policySetName", required=true)
+    @Import(name="policySetName", required=true)
       private final Output<String> policySetName;
 
     public Output<String> getPolicySetName() {
@@ -111,7 +111,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -122,7 +122,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The status of the policy.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,PolicyStatus>> status;
 
     public Output<Either<String,PolicyStatus>> getStatus() {
@@ -133,7 +133,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -144,7 +144,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The threshold of the policy (i.e. a number for MaxValuePolicy, and a JSON array of values for AllowedValuesPolicy).
      * 
      */
-    @InputImport(name="threshold")
+    @Import(name="threshold")
       private final @Nullable Output<String> threshold;
 
     public Output<String> getThreshold() {

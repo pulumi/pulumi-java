@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class VirtualDirectoryResponse extends io.pulumi.resources.InvokeAr
      * Physical path.
      * 
      */
-    @InputImport(name="physicalPath")
+    @Import(name="physicalPath")
       private final @Nullable String physicalPath;
 
     public Optional<String> getPhysicalPath() {
@@ -33,7 +33,7 @@ public final class VirtualDirectoryResponse extends io.pulumi.resources.InvokeAr
      * Path to virtual application.
      * 
      */
-    @InputImport(name="virtualPath")
+    @Import(name="virtualPath")
       private final @Nullable String virtualPath;
 
     public Optional<String> getVirtualPath() {

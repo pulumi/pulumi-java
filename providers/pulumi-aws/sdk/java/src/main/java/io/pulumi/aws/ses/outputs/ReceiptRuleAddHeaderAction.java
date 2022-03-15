@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.ses.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReceiptRuleAddHeaderAction {
     /**
      * The name of the header to add
@@ -26,11 +26,11 @@ public final class ReceiptRuleAddHeaderAction {
      */
     private final Integer position;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReceiptRuleAddHeaderAction(
-        @OutputCustomType.Parameter("headerName") String headerName,
-        @OutputCustomType.Parameter("headerValue") String headerValue,
-        @OutputCustomType.Parameter("position") Integer position) {
+        @CustomType.Parameter("headerName") String headerName,
+        @CustomType.Parameter("headerValue") String headerValue,
+        @CustomType.Parameter("position") Integer position) {
         this.headerName = headerName;
         this.headerValue = headerValue;
         this.position = position;

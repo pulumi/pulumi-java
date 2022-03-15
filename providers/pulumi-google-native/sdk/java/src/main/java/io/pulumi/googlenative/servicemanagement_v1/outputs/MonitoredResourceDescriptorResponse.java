@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.LabelDescriptorResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MonitoredResourceDescriptorResponse {
     /**
      * Optional. A detailed description of the monitored resource type that might be used in documentation.
@@ -42,14 +42,14 @@ public final class MonitoredResourceDescriptorResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MonitoredResourceDescriptorResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("labels") List<LabelDescriptorResponse> labels,
-        @OutputCustomType.Parameter("launchStage") String launchStage,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("labels") List<LabelDescriptorResponse> labels,
+        @CustomType.Parameter("launchStage") String launchStage,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.displayName = displayName;
         this.labels = labels;

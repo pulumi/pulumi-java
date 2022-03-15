@@ -4,13 +4,13 @@
 package io.pulumi.aws.quicksight.outputs;
 
 import io.pulumi.aws.quicksight.outputs.DataSourceCredentialsCredentialPair;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceCredentials {
     /**
      * - The Amazon Resource Name (ARN) of a data source that has the credential pair that you want to use.
@@ -24,10 +24,10 @@ public final class DataSourceCredentials {
      */
     private final @Nullable DataSourceCredentialsCredentialPair credentialPair;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceCredentials(
-        @OutputCustomType.Parameter("copySourceArn") @Nullable String copySourceArn,
-        @OutputCustomType.Parameter("credentialPair") @Nullable DataSourceCredentialsCredentialPair credentialPair) {
+        @CustomType.Parameter("copySourceArn") @Nullable String copySourceArn,
+        @CustomType.Parameter("credentialPair") @Nullable DataSourceCredentialsCredentialPair credentialPair) {
         this.copySourceArn = copySourceArn;
         this.credentialPair = credentialPair;
     }

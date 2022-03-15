@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.connect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class QuickConnectUserQuickConnectConfig {
     private final String contactFlowArn;
     private final String userArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QuickConnectUserQuickConnectConfig(
-        @OutputCustomType.Parameter("contactFlowArn") String contactFlowArn,
-        @OutputCustomType.Parameter("userArn") String userArn) {
+        @CustomType.Parameter("contactFlowArn") String contactFlowArn,
+        @CustomType.Parameter("userArn") String userArn) {
         this.contactFlowArn = contactFlowArn;
         this.userArn = userArn;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.deploymentmanager_alpha.enums.TemplateContentsInterpreter;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.ImportFileArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
      * Import files referenced by the main template.
      * 
      */
-    @InputImport(name="imports")
+    @Import(name="imports")
       private final @Nullable Output<List<ImportFileArgs>> imports;
 
     public Output<List<ImportFileArgs>> getImports() {
@@ -36,7 +36,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
      * Which interpreter (python or jinja) should be used during expansion.
      * 
      */
-    @InputImport(name="interpreter")
+    @Import(name="interpreter")
       private final @Nullable Output<TemplateContentsInterpreter> interpreter;
 
     public Output<TemplateContentsInterpreter> getInterpreter() {
@@ -47,7 +47,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
      * The filename of the mainTemplate
      * 
      */
-    @InputImport(name="mainTemplate")
+    @Import(name="mainTemplate")
       private final @Nullable Output<String> mainTemplate;
 
     public Output<String> getMainTemplate() {
@@ -58,7 +58,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
      * The contents of the template schema.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<String> schema;
 
     public Output<String> getSchema() {
@@ -69,7 +69,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
      * The contents of the main template file.
      * 
      */
-    @InputImport(name="template")
+    @Import(name="template")
       private final @Nullable Output<String> template;
 
     public Output<String> getTemplate() {

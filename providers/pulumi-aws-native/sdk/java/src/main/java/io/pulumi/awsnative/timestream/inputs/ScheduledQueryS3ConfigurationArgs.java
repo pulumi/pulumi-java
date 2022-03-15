@@ -5,7 +5,7 @@ package io.pulumi.awsnative.timestream.inputs;
 
 import io.pulumi.awsnative.timestream.enums.ScheduledQueryEncryptionOption;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,21 +19,21 @@ public final class ScheduledQueryS3ConfigurationArgs extends io.pulumi.resources
 
     public static final ScheduledQueryS3ConfigurationArgs Empty = new ScheduledQueryS3ConfigurationArgs();
 
-    @InputImport(name="bucketName", required=true)
+    @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
     public Output<String> getBucketName() {
         return this.bucketName;
     }
 
-    @InputImport(name="encryptionOption")
+    @Import(name="encryptionOption")
       private final @Nullable Output<ScheduledQueryEncryptionOption> encryptionOption;
 
     public Output<ScheduledQueryEncryptionOption> getEncryptionOption() {
         return this.encryptionOption == null ? Output.empty() : this.encryptionOption;
     }
 
-    @InputImport(name="objectKeyPrefix")
+    @Import(name="objectKeyPrefix")
       private final @Nullable Output<String> objectKeyPrefix;
 
     public Output<String> getObjectKeyPrefix() {

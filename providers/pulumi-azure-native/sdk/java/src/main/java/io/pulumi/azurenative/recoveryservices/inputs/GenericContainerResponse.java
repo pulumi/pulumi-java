@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.GenericContainerExtendedInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
      * Type of backup management for the container.
      * 
      */
-    @InputImport(name="backupManagementType")
+    @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
 
     public Optional<String> getBackupManagementType() {
@@ -38,7 +38,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
      * Expected value is 'GenericContainer'.
      * 
      */
-    @InputImport(name="containerType", required=true)
+    @Import(name="containerType", required=true)
       private final String containerType;
 
     public String getContainerType() {
@@ -49,7 +49,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
      * Extended information (not returned in List container API calls)
      * 
      */
-    @InputImport(name="extendedInformation")
+    @Import(name="extendedInformation")
       private final @Nullable GenericContainerExtendedInfoResponse extendedInformation;
 
     public Optional<GenericContainerExtendedInfoResponse> getExtendedInformation() {
@@ -60,7 +60,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
      * Name of the container's fabric
      * 
      */
-    @InputImport(name="fabricName")
+    @Import(name="fabricName")
       private final @Nullable String fabricName;
 
     public Optional<String> getFabricName() {
@@ -71,7 +71,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
      * Friendly name of the container.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
@@ -82,7 +82,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
      * Status of health of the container.
      * 
      */
-    @InputImport(name="healthStatus")
+    @Import(name="healthStatus")
       private final @Nullable String healthStatus;
 
     public Optional<String> getHealthStatus() {
@@ -93,7 +93,7 @@ public final class GenericContainerResponse extends io.pulumi.resources.InvokeAr
      * Status of registration of the container with the Recovery Services Vault.
      * 
      */
-    @InputImport(name="registrationStatus")
+    @Import(name="registrationStatus")
       private final @Nullable String registrationStatus;
 
     public Optional<String> getRegistrationStatus() {

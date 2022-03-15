@@ -12,7 +12,7 @@ import io.pulumi.awsnative.ecs.inputs.TaskDefinitionRuntimePlatformArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionTagArgs;
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionVolumeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,119 +23,119 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final TaskDefinitionArgs Empty = new TaskDefinitionArgs();
 
-    @InputImport(name="containerDefinitions")
+    @Import(name="containerDefinitions")
       private final @Nullable Output<List<TaskDefinitionContainerDefinitionArgs>> containerDefinitions;
 
     public Output<List<TaskDefinitionContainerDefinitionArgs>> getContainerDefinitions() {
         return this.containerDefinitions == null ? Output.empty() : this.containerDefinitions;
     }
 
-    @InputImport(name="cpu")
+    @Import(name="cpu")
       private final @Nullable Output<String> cpu;
 
     public Output<String> getCpu() {
         return this.cpu == null ? Output.empty() : this.cpu;
     }
 
-    @InputImport(name="ephemeralStorage")
+    @Import(name="ephemeralStorage")
       private final @Nullable Output<TaskDefinitionEphemeralStorageArgs> ephemeralStorage;
 
     public Output<TaskDefinitionEphemeralStorageArgs> getEphemeralStorage() {
         return this.ephemeralStorage == null ? Output.empty() : this.ephemeralStorage;
     }
 
-    @InputImport(name="executionRoleArn")
+    @Import(name="executionRoleArn")
       private final @Nullable Output<String> executionRoleArn;
 
     public Output<String> getExecutionRoleArn() {
         return this.executionRoleArn == null ? Output.empty() : this.executionRoleArn;
     }
 
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable Output<String> family;
 
     public Output<String> getFamily() {
         return this.family == null ? Output.empty() : this.family;
     }
 
-    @InputImport(name="inferenceAccelerators")
+    @Import(name="inferenceAccelerators")
       private final @Nullable Output<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators;
 
     public Output<List<TaskDefinitionInferenceAcceleratorArgs>> getInferenceAccelerators() {
         return this.inferenceAccelerators == null ? Output.empty() : this.inferenceAccelerators;
     }
 
-    @InputImport(name="ipcMode")
+    @Import(name="ipcMode")
       private final @Nullable Output<String> ipcMode;
 
     public Output<String> getIpcMode() {
         return this.ipcMode == null ? Output.empty() : this.ipcMode;
     }
 
-    @InputImport(name="memory")
+    @Import(name="memory")
       private final @Nullable Output<String> memory;
 
     public Output<String> getMemory() {
         return this.memory == null ? Output.empty() : this.memory;
     }
 
-    @InputImport(name="networkMode")
+    @Import(name="networkMode")
       private final @Nullable Output<String> networkMode;
 
     public Output<String> getNetworkMode() {
         return this.networkMode == null ? Output.empty() : this.networkMode;
     }
 
-    @InputImport(name="pidMode")
+    @Import(name="pidMode")
       private final @Nullable Output<String> pidMode;
 
     public Output<String> getPidMode() {
         return this.pidMode == null ? Output.empty() : this.pidMode;
     }
 
-    @InputImport(name="placementConstraints")
+    @Import(name="placementConstraints")
       private final @Nullable Output<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints;
 
     public Output<List<TaskDefinitionPlacementConstraintArgs>> getPlacementConstraints() {
         return this.placementConstraints == null ? Output.empty() : this.placementConstraints;
     }
 
-    @InputImport(name="proxyConfiguration")
+    @Import(name="proxyConfiguration")
       private final @Nullable Output<TaskDefinitionProxyConfigurationArgs> proxyConfiguration;
 
     public Output<TaskDefinitionProxyConfigurationArgs> getProxyConfiguration() {
         return this.proxyConfiguration == null ? Output.empty() : this.proxyConfiguration;
     }
 
-    @InputImport(name="requiresCompatibilities")
+    @Import(name="requiresCompatibilities")
       private final @Nullable Output<List<String>> requiresCompatibilities;
 
     public Output<List<String>> getRequiresCompatibilities() {
         return this.requiresCompatibilities == null ? Output.empty() : this.requiresCompatibilities;
     }
 
-    @InputImport(name="runtimePlatform")
+    @Import(name="runtimePlatform")
       private final @Nullable Output<TaskDefinitionRuntimePlatformArgs> runtimePlatform;
 
     public Output<TaskDefinitionRuntimePlatformArgs> getRuntimePlatform() {
         return this.runtimePlatform == null ? Output.empty() : this.runtimePlatform;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<TaskDefinitionTagArgs>> tags;
 
     public Output<List<TaskDefinitionTagArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="taskRoleArn")
+    @Import(name="taskRoleArn")
       private final @Nullable Output<String> taskRoleArn;
 
     public Output<String> getTaskRoleArn() {
         return this.taskRoleArn == null ? Output.empty() : this.taskRoleArn;
     }
 
-    @InputImport(name="volumes")
+    @Import(name="volumes")
       private final @Nullable Output<List<TaskDefinitionVolumeArgs>> volumes;
 
     public Output<List<TaskDefinitionVolumeArgs>> getVolumes() {

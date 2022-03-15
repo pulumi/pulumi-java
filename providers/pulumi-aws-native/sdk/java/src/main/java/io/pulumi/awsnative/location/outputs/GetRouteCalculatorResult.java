@@ -3,25 +3,25 @@
 
 package io.pulumi.awsnative.location.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRouteCalculatorResult {
     private final @Nullable String arn;
     private final @Nullable String calculatorArn;
     private final @Nullable String createTime;
     private final @Nullable String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRouteCalculatorResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("calculatorArn") @Nullable String calculatorArn,
-        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
-        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("calculatorArn") @Nullable String calculatorArn,
+        @CustomType.Parameter("createTime") @Nullable String createTime,
+        @CustomType.Parameter("updateTime") @Nullable String updateTime) {
         this.arn = arn;
         this.calculatorArn = calculatorArn;
         this.createTime = createTime;

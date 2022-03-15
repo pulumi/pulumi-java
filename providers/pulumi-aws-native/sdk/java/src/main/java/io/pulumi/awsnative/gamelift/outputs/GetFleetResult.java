@@ -8,7 +8,7 @@ import io.pulumi.awsnative.gamelift.outputs.FleetIpPermission;
 import io.pulumi.awsnative.gamelift.outputs.FleetLocationConfiguration;
 import io.pulumi.awsnative.gamelift.outputs.FleetResourceCreationLimitPolicy;
 import io.pulumi.awsnative.gamelift.outputs.FleetRuntimeConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFleetResult {
     /**
      * A human-readable description of a fleet.
@@ -77,20 +77,20 @@ public final class GetFleetResult {
      */
     private final @Nullable FleetRuntimeConfiguration runtimeConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFleetResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("desiredEC2Instances") @Nullable Integer desiredEC2Instances,
-        @OutputCustomType.Parameter("eC2InboundPermissions") @Nullable List<FleetIpPermission> eC2InboundPermissions,
-        @OutputCustomType.Parameter("fleetId") @Nullable String fleetId,
-        @OutputCustomType.Parameter("locations") @Nullable List<FleetLocationConfiguration> locations,
-        @OutputCustomType.Parameter("maxSize") @Nullable Integer maxSize,
-        @OutputCustomType.Parameter("metricGroups") @Nullable List<String> metricGroups,
-        @OutputCustomType.Parameter("minSize") @Nullable Integer minSize,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("newGameSessionProtectionPolicy") @Nullable FleetNewGameSessionProtectionPolicy newGameSessionProtectionPolicy,
-        @OutputCustomType.Parameter("resourceCreationLimitPolicy") @Nullable FleetResourceCreationLimitPolicy resourceCreationLimitPolicy,
-        @OutputCustomType.Parameter("runtimeConfiguration") @Nullable FleetRuntimeConfiguration runtimeConfiguration) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("desiredEC2Instances") @Nullable Integer desiredEC2Instances,
+        @CustomType.Parameter("eC2InboundPermissions") @Nullable List<FleetIpPermission> eC2InboundPermissions,
+        @CustomType.Parameter("fleetId") @Nullable String fleetId,
+        @CustomType.Parameter("locations") @Nullable List<FleetLocationConfiguration> locations,
+        @CustomType.Parameter("maxSize") @Nullable Integer maxSize,
+        @CustomType.Parameter("metricGroups") @Nullable List<String> metricGroups,
+        @CustomType.Parameter("minSize") @Nullable Integer minSize,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("newGameSessionProtectionPolicy") @Nullable FleetNewGameSessionProtectionPolicy newGameSessionProtectionPolicy,
+        @CustomType.Parameter("resourceCreationLimitPolicy") @Nullable FleetResourceCreationLimitPolicy resourceCreationLimitPolicy,
+        @CustomType.Parameter("runtimeConfiguration") @Nullable FleetRuntimeConfiguration runtimeConfiguration) {
         this.description = description;
         this.desiredEC2Instances = desiredEC2Instances;
         this.eC2InboundPermissions = eC2InboundPermissions;

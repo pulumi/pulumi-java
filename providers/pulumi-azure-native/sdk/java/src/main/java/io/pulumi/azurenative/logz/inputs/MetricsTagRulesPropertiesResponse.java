@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logz.inputs;
 
 import io.pulumi.azurenative.logz.inputs.MetricRulesResponse;
 import io.pulumi.azurenative.logz.inputs.SystemDataResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class MetricsTagRulesPropertiesResponse extends io.pulumi.resources
 
     public static final MetricsTagRulesPropertiesResponse Empty = new MetricsTagRulesPropertiesResponse();
 
-    @InputImport(name="metricRules")
+    @Import(name="metricRules")
       private final @Nullable List<MetricRulesResponse> metricRules;
 
     public List<MetricRulesResponse> getMetricRules() {
@@ -33,7 +33,7 @@ public final class MetricsTagRulesPropertiesResponse extends io.pulumi.resources
      * Flag specifying if the resource provisioning state as tracked by ARM.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -44,7 +44,7 @@ public final class MetricsTagRulesPropertiesResponse extends io.pulumi.resources
      * Flag specifying if metrics from Azure resources should be sent for the Monitor resource.
      * 
      */
-    @InputImport(name="sendMetrics")
+    @Import(name="sendMetrics")
       private final @Nullable Boolean sendMetrics;
 
     public Optional<Boolean> getSendMetrics() {
@@ -55,7 +55,7 @@ public final class MetricsTagRulesPropertiesResponse extends io.pulumi.resources
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @InputImport(name="systemData", required=true)
+    @Import(name="systemData", required=true)
       private final SystemDataResponse systemData;
 
     public SystemDataResponse getSystemData() {

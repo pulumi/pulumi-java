@@ -4,11 +4,11 @@
 package io.pulumi.awsnative.robomaker.outputs;
 
 import io.pulumi.awsnative.robomaker.enums.SimulationApplicationSourceConfigArchitecture;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SimulationApplicationSourceConfig {
     /**
      * The target processor architecture for the application.
@@ -26,11 +26,11 @@ public final class SimulationApplicationSourceConfig {
      */
     private final String s3Key;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SimulationApplicationSourceConfig(
-        @OutputCustomType.Parameter("architecture") SimulationApplicationSourceConfigArchitecture architecture,
-        @OutputCustomType.Parameter("s3Bucket") String s3Bucket,
-        @OutputCustomType.Parameter("s3Key") String s3Key) {
+        @CustomType.Parameter("architecture") SimulationApplicationSourceConfigArchitecture architecture,
+        @CustomType.Parameter("s3Bucket") String s3Bucket,
+        @CustomType.Parameter("s3Key") String s3Key) {
         this.architecture = architecture;
         this.s3Bucket = s3Bucket;
         this.s3Key = s3Key;

@@ -3,22 +3,22 @@
 
 package io.pulumi.aws.wafregional.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RulePredicate {
     private final String dataId;
     private final Boolean negated;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RulePredicate(
-        @OutputCustomType.Parameter("dataId") String dataId,
-        @OutputCustomType.Parameter("negated") Boolean negated,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("dataId") String dataId,
+        @CustomType.Parameter("negated") Boolean negated,
+        @CustomType.Parameter("type") String type) {
         this.dataId = dataId;
         this.negated = negated;
         this.type = type;

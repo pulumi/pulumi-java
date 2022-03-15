@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class TaskDefinitionEphemeralStorageGetArgs extends io.pulumi.resou
      * The total amount, in GiB, of ephemeral storage to set for the task. The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
      * 
      */
-    @InputImport(name="sizeInGib", required=true)
+    @Import(name="sizeInGib", required=true)
       private final Output<Integer> sizeInGib;
 
     public Output<Integer> getSizeInGib() {

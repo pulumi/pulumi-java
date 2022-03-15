@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
      * The bucket name where your backup is stored
      * 
      */
-    @InputImport(name="bucketName", required=true)
+    @Import(name="bucketName", required=true)
       private final Output<String> bucketName;
 
     public Output<String> getBucketName() {
@@ -29,7 +29,7 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
      * Can be blank, but is the path to your backup
      * 
      */
-    @InputImport(name="bucketPrefix")
+    @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
     public Output<String> getBucketPrefix() {
@@ -40,7 +40,7 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
      * Role applied to load the data.
      * 
      */
-    @InputImport(name="ingestionRole", required=true)
+    @Import(name="ingestionRole", required=true)
       private final Output<String> ingestionRole;
 
     public Output<String> getIngestionRole() {
@@ -51,7 +51,7 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
      * Source engine for the backup
      * 
      */
-    @InputImport(name="sourceEngine", required=true)
+    @Import(name="sourceEngine", required=true)
       private final Output<String> sourceEngine;
 
     public Output<String> getSourceEngine() {
@@ -62,7 +62,7 @@ public final class ClusterS3ImportGetArgs extends io.pulumi.resources.ResourceAr
      * Version of the source engine used to make the backup
      * 
      */
-    @InputImport(name="sourceEngineVersion", required=true)
+    @Import(name="sourceEngineVersion", required=true)
       private final Output<String> sourceEngineVersion;
 
     public Output<String> getSourceEngineVersion() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketRedirectRuleProtocol;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class BucketRedirectRule extends io.pulumi.resources.InvokeArgs {
      * The host name to use in the redirect request.
      * 
      */
-    @InputImport(name="hostName")
+    @Import(name="hostName")
       private final @Nullable String hostName;
 
     public Optional<String> getHostName() {
@@ -34,7 +34,7 @@ public final class BucketRedirectRule extends io.pulumi.resources.InvokeArgs {
      * The HTTP redirect code to use on the response. Not required if one of the siblings is present.
      * 
      */
-    @InputImport(name="httpRedirectCode")
+    @Import(name="httpRedirectCode")
       private final @Nullable String httpRedirectCode;
 
     public Optional<String> getHttpRedirectCode() {
@@ -45,7 +45,7 @@ public final class BucketRedirectRule extends io.pulumi.resources.InvokeArgs {
      * Protocol to use when redirecting requests. The default is the protocol that is used in the original request.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable BucketRedirectRuleProtocol protocol;
 
     public Optional<BucketRedirectRuleProtocol> getProtocol() {
@@ -56,7 +56,7 @@ public final class BucketRedirectRule extends io.pulumi.resources.InvokeArgs {
      * The object key prefix to use in the redirect request.
      * 
      */
-    @InputImport(name="replaceKeyPrefixWith")
+    @Import(name="replaceKeyPrefixWith")
       private final @Nullable String replaceKeyPrefixWith;
 
     public Optional<String> getReplaceKeyPrefixWith() {
@@ -67,7 +67,7 @@ public final class BucketRedirectRule extends io.pulumi.resources.InvokeArgs {
      * The specific object key to use in the redirect request.d
      * 
      */
-    @InputImport(name="replaceKeyWith")
+    @Import(name="replaceKeyWith")
       private final @Nullable String replaceKeyWith;
 
     public Optional<String> getReplaceKeyWith() {

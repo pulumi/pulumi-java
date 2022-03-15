@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.backup.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackupSelectionConditionParameter {
     private final @Nullable String conditionKey;
     private final @Nullable String conditionValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackupSelectionConditionParameter(
-        @OutputCustomType.Parameter("conditionKey") @Nullable String conditionKey,
-        @OutputCustomType.Parameter("conditionValue") @Nullable String conditionValue) {
+        @CustomType.Parameter("conditionKey") @Nullable String conditionKey,
+        @CustomType.Parameter("conditionValue") @Nullable String conditionValue) {
         this.conditionKey = conditionKey;
         this.conditionValue = conditionValue;
     }

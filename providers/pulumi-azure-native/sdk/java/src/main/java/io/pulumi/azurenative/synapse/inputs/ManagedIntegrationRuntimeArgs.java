@@ -6,7 +6,7 @@ package io.pulumi.azurenative.synapse.inputs;
 import io.pulumi.azurenative.synapse.inputs.IntegrationRuntimeComputePropertiesArgs;
 import io.pulumi.azurenative.synapse.inputs.IntegrationRuntimeSsisPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * The compute resource for managed integration runtime.
      * 
      */
-    @InputImport(name="computeProperties")
+    @Import(name="computeProperties")
       private final @Nullable Output<IntegrationRuntimeComputePropertiesArgs> computeProperties;
 
     public Output<IntegrationRuntimeComputePropertiesArgs> getComputeProperties() {
@@ -35,7 +35,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * Integration runtime description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * SSIS properties for managed integration runtime.
      * 
      */
-    @InputImport(name="ssisProperties")
+    @Import(name="ssisProperties")
       private final @Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties;
 
     public Output<IntegrationRuntimeSsisPropertiesArgs> getSsisProperties() {
@@ -58,7 +58,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
      * Expected value is 'Managed'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

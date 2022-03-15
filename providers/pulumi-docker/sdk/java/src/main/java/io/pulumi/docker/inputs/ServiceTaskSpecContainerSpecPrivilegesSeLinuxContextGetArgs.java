@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,35 +15,35 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs e
 
     public static final ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs Empty = new ServiceTaskSpecContainerSpecPrivilegesSeLinuxContextGetArgs();
 
-    @InputImport(name="disable")
+    @Import(name="disable")
       private final @Nullable Output<Boolean> disable;
 
     public Output<Boolean> getDisable() {
         return this.disable == null ? Output.empty() : this.disable;
     }
 
-    @InputImport(name="level")
+    @Import(name="level")
       private final @Nullable Output<String> level;
 
     public Output<String> getLevel() {
         return this.level == null ? Output.empty() : this.level;
     }
 
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
         return this.role == null ? Output.empty() : this.role;
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
         return this.type == null ? Output.empty() : this.type;
     }
 
-    @InputImport(name="user")
+    @Import(name="user")
       private final @Nullable Output<String> user;
 
     public Output<String> getUser() {

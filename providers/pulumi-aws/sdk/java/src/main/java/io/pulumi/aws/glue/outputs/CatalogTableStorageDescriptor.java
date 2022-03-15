@@ -8,7 +8,7 @@ import io.pulumi.aws.glue.outputs.CatalogTableStorageDescriptorSchemaReference;
 import io.pulumi.aws.glue.outputs.CatalogTableStorageDescriptorSerDeInfo;
 import io.pulumi.aws.glue.outputs.CatalogTableStorageDescriptorSkewedInfo;
 import io.pulumi.aws.glue.outputs.CatalogTableStorageDescriptorSortColumn;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CatalogTableStorageDescriptor {
     /**
      * List of reducer grouping columns, clustering columns, and bucketing columns in the table.
@@ -86,21 +86,21 @@ public final class CatalogTableStorageDescriptor {
      */
     private final @Nullable Boolean storedAsSubDirectories;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CatalogTableStorageDescriptor(
-        @OutputCustomType.Parameter("bucketColumns") @Nullable List<String> bucketColumns,
-        @OutputCustomType.Parameter("columns") @Nullable List<CatalogTableStorageDescriptorColumn> columns,
-        @OutputCustomType.Parameter("compressed") @Nullable Boolean compressed,
-        @OutputCustomType.Parameter("inputFormat") @Nullable String inputFormat,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("numberOfBuckets") @Nullable Integer numberOfBuckets,
-        @OutputCustomType.Parameter("outputFormat") @Nullable String outputFormat,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
-        @OutputCustomType.Parameter("schemaReference") @Nullable CatalogTableStorageDescriptorSchemaReference schemaReference,
-        @OutputCustomType.Parameter("serDeInfo") @Nullable CatalogTableStorageDescriptorSerDeInfo serDeInfo,
-        @OutputCustomType.Parameter("skewedInfo") @Nullable CatalogTableStorageDescriptorSkewedInfo skewedInfo,
-        @OutputCustomType.Parameter("sortColumns") @Nullable List<CatalogTableStorageDescriptorSortColumn> sortColumns,
-        @OutputCustomType.Parameter("storedAsSubDirectories") @Nullable Boolean storedAsSubDirectories) {
+        @CustomType.Parameter("bucketColumns") @Nullable List<String> bucketColumns,
+        @CustomType.Parameter("columns") @Nullable List<CatalogTableStorageDescriptorColumn> columns,
+        @CustomType.Parameter("compressed") @Nullable Boolean compressed,
+        @CustomType.Parameter("inputFormat") @Nullable String inputFormat,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("numberOfBuckets") @Nullable Integer numberOfBuckets,
+        @CustomType.Parameter("outputFormat") @Nullable String outputFormat,
+        @CustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @CustomType.Parameter("schemaReference") @Nullable CatalogTableStorageDescriptorSchemaReference schemaReference,
+        @CustomType.Parameter("serDeInfo") @Nullable CatalogTableStorageDescriptorSerDeInfo serDeInfo,
+        @CustomType.Parameter("skewedInfo") @Nullable CatalogTableStorageDescriptorSkewedInfo skewedInfo,
+        @CustomType.Parameter("sortColumns") @Nullable List<CatalogTableStorageDescriptorSortColumn> sortColumns,
+        @CustomType.Parameter("storedAsSubDirectories") @Nullable Boolean storedAsSubDirectories) {
         this.bucketColumns = bucketColumns;
         this.columns = columns;
         this.compressed = compressed;

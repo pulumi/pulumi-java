@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.baremetalsolution_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.baremetalsolution_v2.SnapshotSchedulePolicyArgs;
@@ -25,7 +25,7 @@ public class SnapshotSchedulePolicy extends io.pulumi.resources.CustomResource {
      * The description of the snapshot schedule policy.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -39,7 +39,7 @@ public class SnapshotSchedulePolicy extends io.pulumi.resources.CustomResource {
      * Labels as key value pairs.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -53,7 +53,7 @@ public class SnapshotSchedulePolicy extends io.pulumi.resources.CustomResource {
      * The name of the snapshot schedule policy.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -67,7 +67,7 @@ public class SnapshotSchedulePolicy extends io.pulumi.resources.CustomResource {
      * The snapshot schedules contained in this policy. You can specify a maximum of 5 schedules.
      * 
      */
-    @OutputExport(name="schedules", type=List.class, parameters={ScheduleResponse.class})
+    @Export(name="schedules", type=List.class, parameters={ScheduleResponse.class})
     private Output<List<ScheduleResponse>> schedules;
 
     /**

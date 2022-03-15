@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ssm;
 import io.pulumi.awsnative.ssm.inputs.ResourceDataSyncS3DestinationArgs;
 import io.pulumi.awsnative.ssm.inputs.ResourceDataSyncSyncSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,56 +16,56 @@ public final class ResourceDataSyncArgs extends io.pulumi.resources.ResourceArgs
 
     public static final ResourceDataSyncArgs Empty = new ResourceDataSyncArgs();
 
-    @InputImport(name="bucketName")
+    @Import(name="bucketName")
       private final @Nullable Output<String> bucketName;
 
     public Output<String> getBucketName() {
         return this.bucketName == null ? Output.empty() : this.bucketName;
     }
 
-    @InputImport(name="bucketPrefix")
+    @Import(name="bucketPrefix")
       private final @Nullable Output<String> bucketPrefix;
 
     public Output<String> getBucketPrefix() {
         return this.bucketPrefix == null ? Output.empty() : this.bucketPrefix;
     }
 
-    @InputImport(name="bucketRegion")
+    @Import(name="bucketRegion")
       private final @Nullable Output<String> bucketRegion;
 
     public Output<String> getBucketRegion() {
         return this.bucketRegion == null ? Output.empty() : this.bucketRegion;
     }
 
-    @InputImport(name="kMSKeyArn")
+    @Import(name="kMSKeyArn")
       private final @Nullable Output<String> kMSKeyArn;
 
     public Output<String> getKMSKeyArn() {
         return this.kMSKeyArn == null ? Output.empty() : this.kMSKeyArn;
     }
 
-    @InputImport(name="s3Destination")
+    @Import(name="s3Destination")
       private final @Nullable Output<ResourceDataSyncS3DestinationArgs> s3Destination;
 
     public Output<ResourceDataSyncS3DestinationArgs> getS3Destination() {
         return this.s3Destination == null ? Output.empty() : this.s3Destination;
     }
 
-    @InputImport(name="syncFormat")
+    @Import(name="syncFormat")
       private final @Nullable Output<String> syncFormat;
 
     public Output<String> getSyncFormat() {
         return this.syncFormat == null ? Output.empty() : this.syncFormat;
     }
 
-    @InputImport(name="syncSource")
+    @Import(name="syncSource")
       private final @Nullable Output<ResourceDataSyncSyncSourceArgs> syncSource;
 
     public Output<ResourceDataSyncSyncSourceArgs> getSyncSource() {
         return this.syncSource == null ? Output.empty() : this.syncSource;
     }
 
-    @InputImport(name="syncType")
+    @Import(name="syncType")
       private final @Nullable Output<String> syncType;
 
     public Output<String> getSyncType() {

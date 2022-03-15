@@ -5,7 +5,7 @@ package io.pulumi.azurenative.attestation.inputs;
 
 import io.pulumi.azurenative.attestation.inputs.JSONWebKeySetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class AttestationServiceCreationSpecificParamsArgs extends io.pulum
      * JSON Web Key Set defining a set of X.509 Certificates that will represent the parent certificate for the signing certificate used for policy operations
      * 
      */
-    @InputImport(name="policySigningCertificates")
+    @Import(name="policySigningCertificates")
       private final @Nullable Output<JSONWebKeySetArgs> policySigningCertificates;
 
     public Output<JSONWebKeySetArgs> getPolicySigningCertificates() {

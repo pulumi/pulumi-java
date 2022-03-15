@@ -11,7 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.TumblingWindowTriggerDependencyReferenceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -32,7 +32,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * List of tags that can be used for describing the trigger.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -43,7 +43,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * Specifies how long the trigger waits past due time before triggering new run. It doesn't alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="delay")
+    @Import(name="delay")
       private final @Nullable Output<Object> delay;
 
     public Output<Object> getDelay() {
@@ -54,7 +54,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * Triggers that this trigger depends on. Only tumbling window triggers are supported.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable Output<List<Object>> dependsOn;
 
     public Output<List<Object>> getDependsOn() {
@@ -65,7 +65,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * Trigger description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -76,7 +76,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -87,7 +87,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * The frequency of the time windows.
      * 
      */
-    @InputImport(name="frequency", required=true)
+    @Import(name="frequency", required=true)
       private final Output<Either<String,TumblingWindowFrequency>> frequency;
 
     public Output<Either<String,TumblingWindowFrequency>> getFrequency() {
@@ -98,7 +98,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * The interval of the time windows. The minimum interval allowed is 15 Minutes.
      * 
      */
-    @InputImport(name="interval", required=true)
+    @Import(name="interval", required=true)
       private final Output<Integer> interval;
 
     public Output<Integer> getInterval() {
@@ -109,7 +109,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * The max number of parallel time windows (ready for execution) for which a new run is triggered.
      * 
      */
-    @InputImport(name="maxConcurrency", required=true)
+    @Import(name="maxConcurrency", required=true)
       private final Output<Integer> maxConcurrency;
 
     public Output<Integer> getMaxConcurrency() {
@@ -120,7 +120,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * Pipeline for which runs are created when an event is fired for trigger window that is ready.
      * 
      */
-    @InputImport(name="pipeline", required=true)
+    @Import(name="pipeline", required=true)
       private final Output<TriggerPipelineReferenceArgs> pipeline;
 
     public Output<TriggerPipelineReferenceArgs> getPipeline() {
@@ -131,7 +131,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * Retry policy that will be applied for failed pipeline runs.
      * 
      */
-    @InputImport(name="retryPolicy")
+    @Import(name="retryPolicy")
       private final @Nullable Output<RetryPolicyArgs> retryPolicy;
 
     public Output<RetryPolicyArgs> getRetryPolicy() {
@@ -142,7 +142,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -154,7 +154,7 @@ public final class TumblingWindowTriggerArgs extends io.pulumi.resources.Resourc
      * Expected value is 'TumblingWindowTrigger'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

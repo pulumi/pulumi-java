@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.enums.IntegrationServiceEnvironmentSkuName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resour
      * The sku capacity.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
@@ -36,7 +36,7 @@ public final class IntegrationServiceEnvironmentSkuArgs extends io.pulumi.resour
      * The sku name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<Either<String,IntegrationServiceEnvironmentSkuName>> name;
 
     public Output<Either<String,IntegrationServiceEnvironmentSkuName>> getName() {

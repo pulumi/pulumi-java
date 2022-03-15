@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions {
     private final @Nullable String target;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions(
-        @OutputCustomType.Parameter("target") @Nullable String target,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("target") @Nullable String target,
+        @CustomType.Parameter("type") String type) {
         this.target = target;
         this.type = type;
     }

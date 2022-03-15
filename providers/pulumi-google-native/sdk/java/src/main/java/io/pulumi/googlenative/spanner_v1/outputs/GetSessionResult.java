@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.spanner_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSessionResult {
     /**
      * The approximate timestamp when the session is last used. It is typically earlier than the actual last use time.
@@ -31,12 +31,12 @@ public final class GetSessionResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSessionResult(
-        @OutputCustomType.Parameter("approximateLastUseTime") String approximateLastUseTime,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("approximateLastUseTime") String approximateLastUseTime,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name) {
         this.approximateLastUseTime = approximateLastUseTime;
         this.createTime = createTime;
         this.labels = labels;

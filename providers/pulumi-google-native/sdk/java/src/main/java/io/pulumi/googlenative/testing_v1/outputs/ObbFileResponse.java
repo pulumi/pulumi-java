@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ObbFileResponse {
     /**
      * Opaque Binary Blob (OBB) file(s) to install on the device.
@@ -21,10 +21,10 @@ public final class ObbFileResponse {
      */
     private final String obbFileName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObbFileResponse(
-        @OutputCustomType.Parameter("obb") FileReferenceResponse obb,
-        @OutputCustomType.Parameter("obbFileName") String obbFileName) {
+        @CustomType.Parameter("obb") FileReferenceResponse obb,
+        @CustomType.Parameter("obbFileName") String obbFileName) {
         this.obb = obb;
         this.obbFileName = obbFileName;
     }

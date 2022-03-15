@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
 import io.pulumi.azurenative.machinelearningcompute.outputs.ServicePrincipalPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KubernetesClusterPropertiesResponse {
     /**
      * The Azure Service Principal used by Kubernetes
@@ -17,8 +17,8 @@ public final class KubernetesClusterPropertiesResponse {
      */
     private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
 
-    @OutputCustomType.Constructor
-    private KubernetesClusterPropertiesResponse(@OutputCustomType.Parameter("servicePrincipal") @Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
+    @CustomType.Constructor
+    private KubernetesClusterPropertiesResponse(@CustomType.Parameter("servicePrincipal") @Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
         this.servicePrincipal = servicePrincipal;
     }
 

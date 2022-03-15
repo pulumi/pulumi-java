@@ -6,13 +6,13 @@ package io.pulumi.awsnative.acmpca.outputs;
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityEdiPartyName;
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityOtherName;
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthoritySubject;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateAuthorityGeneralName {
     private final @Nullable CertificateAuthoritySubject directoryName;
     private final @Nullable String dnsName;
@@ -23,16 +23,16 @@ public final class CertificateAuthorityGeneralName {
     private final @Nullable String rfc822Name;
     private final @Nullable String uniformResourceIdentifier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateAuthorityGeneralName(
-        @OutputCustomType.Parameter("directoryName") @Nullable CertificateAuthoritySubject directoryName,
-        @OutputCustomType.Parameter("dnsName") @Nullable String dnsName,
-        @OutputCustomType.Parameter("ediPartyName") @Nullable CertificateAuthorityEdiPartyName ediPartyName,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("otherName") @Nullable CertificateAuthorityOtherName otherName,
-        @OutputCustomType.Parameter("registeredId") @Nullable String registeredId,
-        @OutputCustomType.Parameter("rfc822Name") @Nullable String rfc822Name,
-        @OutputCustomType.Parameter("uniformResourceIdentifier") @Nullable String uniformResourceIdentifier) {
+        @CustomType.Parameter("directoryName") @Nullable CertificateAuthoritySubject directoryName,
+        @CustomType.Parameter("dnsName") @Nullable String dnsName,
+        @CustomType.Parameter("ediPartyName") @Nullable CertificateAuthorityEdiPartyName ediPartyName,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("otherName") @Nullable CertificateAuthorityOtherName otherName,
+        @CustomType.Parameter("registeredId") @Nullable String registeredId,
+        @CustomType.Parameter("rfc822Name") @Nullable String rfc822Name,
+        @CustomType.Parameter("uniformResourceIdentifier") @Nullable String uniformResourceIdentifier) {
         this.directoryName = directoryName;
         this.dnsName = dnsName;
         this.ediPartyName = ediPartyName;

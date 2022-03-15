@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.sso.outputs;
 
 import io.pulumi.awsnative.sso.outputs.InstanceAccessControlAttributeConfigurationAccessControlAttributeValue;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceAccessControlAttributeConfigurationAccessControlAttribute {
     private final String key;
     private final InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceAccessControlAttributeConfigurationAccessControlAttribute(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("value") InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("value") InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value) {
         this.key = key;
         this.value = value;
     }

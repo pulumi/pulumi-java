@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.inputs.ExprArgs;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CustomLevelArgs extends io.pulumi.resources.ResourceArgs {
      * A Cloud CEL expression evaluating to a boolean.
      * 
      */
-    @InputImport(name="expr", required=true)
+    @Import(name="expr", required=true)
       private final Output<ExprArgs> expr;
 
     public Output<ExprArgs> getExpr() {

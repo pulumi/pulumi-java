@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.res
      * The active storage account Id.
      * 
      */
-    @InputImport(name="activeStorageAccountId")
+    @Import(name="activeStorageAccountId")
       private final @Nullable String activeStorageAccountId;
 
     public Optional<String> getActiveStorageAccountId() {
@@ -34,7 +34,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.res
      * The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
      * 
      */
-    @InputImport(name="applicationConsistentSnapshotFrequencyInHours")
+    @Import(name="applicationConsistentSnapshotFrequencyInHours")
       private final @Nullable Integer applicationConsistentSnapshotFrequencyInHours;
 
     public Optional<Integer> getApplicationConsistentSnapshotFrequencyInHours() {
@@ -45,7 +45,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.res
      * A value indicating whether encryption is enabled for virtual machines in this cloud.
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable String encryption;
 
     public Optional<String> getEncryption() {
@@ -57,7 +57,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.res
      * Expected value is 'HyperVReplicaAzure'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -68,7 +68,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.res
      * The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
      * 
      */
-    @InputImport(name="onlineReplicationStartTime")
+    @Import(name="onlineReplicationStartTime")
       private final @Nullable String onlineReplicationStartTime;
 
     public Optional<String> getOnlineReplicationStartTime() {
@@ -79,7 +79,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.res
      * The duration (in hours) to which point the recovery history needs to be maintained.
      * 
      */
-    @InputImport(name="recoveryPointHistoryDurationInHours")
+    @Import(name="recoveryPointHistoryDurationInHours")
       private final @Nullable Integer recoveryPointHistoryDurationInHours;
 
     public Optional<Integer> getRecoveryPointHistoryDurationInHours() {
@@ -90,7 +90,7 @@ public final class HyperVReplicaAzurePolicyDetailsResponse extends io.pulumi.res
      * The replication interval.
      * 
      */
-    @InputImport(name="replicationInterval")
+    @Import(name="replicationInterval")
       private final @Nullable Integer replicationInterval;
 
     public Optional<Integer> getReplicationInterval() {

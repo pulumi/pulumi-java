@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
      * Interval between health checks.
      * 
      */
-    @InputImport(name="checkInterval", required=true)
+    @Import(name="checkInterval", required=true)
       private final String checkInterval;
 
     public String getCheckInterval() {
@@ -33,7 +33,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
      * Whether to explicitly disable health checks for this instance.
      * 
      */
-    @InputImport(name="disableHealthCheck", required=true)
+    @Import(name="disableHealthCheck", required=true)
       private final Boolean disableHealthCheck;
 
     public Boolean getDisableHealthCheck() {
@@ -44,7 +44,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
      * Number of consecutive successful health checks required before receiving traffic.
      * 
      */
-    @InputImport(name="healthyThreshold", required=true)
+    @Import(name="healthyThreshold", required=true)
       private final Integer healthyThreshold;
 
     public Integer getHealthyThreshold() {
@@ -55,7 +55,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
      * Host header to send when performing an HTTP health check. Example: "myapp.appspot.com"
      * 
      */
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final String host;
 
     public String getHost() {
@@ -66,7 +66,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
      * Number of consecutive failed health checks required before an instance is restarted.
      * 
      */
-    @InputImport(name="restartThreshold", required=true)
+    @Import(name="restartThreshold", required=true)
       private final Integer restartThreshold;
 
     public Integer getRestartThreshold() {
@@ -77,7 +77,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
      * Time before the health check is considered failed.
      * 
      */
-    @InputImport(name="timeout", required=true)
+    @Import(name="timeout", required=true)
       private final String timeout;
 
     public String getTimeout() {
@@ -88,7 +88,7 @@ public final class HealthCheckResponse extends io.pulumi.resources.InvokeArgs {
      * Number of consecutive failed health checks required before removing traffic.
      * 
      */
-    @InputImport(name="unhealthyThreshold", required=true)
+    @Import(name="unhealthyThreshold", required=true)
       private final Integer unhealthyThreshold;
 
     public Integer getUnhealthyThreshold() {

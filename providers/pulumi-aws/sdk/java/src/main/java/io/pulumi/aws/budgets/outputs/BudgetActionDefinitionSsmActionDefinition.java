@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.budgets.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BudgetActionDefinitionSsmActionDefinition {
     /**
      * The action subType. Valid values are `STOP_EC2_INSTANCES` or `STOP_RDS_INSTANCES`.
@@ -26,11 +26,11 @@ public final class BudgetActionDefinitionSsmActionDefinition {
      */
     private final String region;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetActionDefinitionSsmActionDefinition(
-        @OutputCustomType.Parameter("actionSubType") String actionSubType,
-        @OutputCustomType.Parameter("instanceIds") List<String> instanceIds,
-        @OutputCustomType.Parameter("region") String region) {
+        @CustomType.Parameter("actionSubType") String actionSubType,
+        @CustomType.Parameter("instanceIds") List<String> instanceIds,
+        @CustomType.Parameter("region") String region) {
         this.actionSubType = actionSubType;
         this.instanceIds = instanceIds;
         this.region = region;

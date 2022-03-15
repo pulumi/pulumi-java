@@ -6,7 +6,7 @@ package io.pulumi.azurenative.changeanalysis.inputs;
 import io.pulumi.azurenative.changeanalysis.enums.ChangeDetailsMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class AzureMonitorWorkspacePropertiesArgs extends io.pulumi.resourc
      * The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.
      * 
      */
-    @InputImport(name="includeChangeDetails")
+    @Import(name="includeChangeDetails")
       private final @Nullable Output<Either<String,ChangeDetailsMode>> includeChangeDetails;
 
     public Output<Either<String,ChangeDetailsMode>> getIncludeChangeDetails() {
@@ -35,7 +35,7 @@ public final class AzureMonitorWorkspacePropertiesArgs extends io.pulumi.resourc
      * The Azure Monitor workspace ID - the unique identifier for the Log Analytics workspace.
      * 
      */
-    @InputImport(name="workspaceId")
+    @Import(name="workspaceId")
       private final @Nullable Output<String> workspaceId;
 
     public Output<String> getWorkspaceId() {
@@ -46,7 +46,7 @@ public final class AzureMonitorWorkspacePropertiesArgs extends io.pulumi.resourc
      * The Azure Monitor workspace ARM Resource ID. The resource ID should be in the following format: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.OperationalInsights/workspaces/{workspaceName}
      * 
      */
-    @InputImport(name="workspaceResourceId")
+    @Import(name="workspaceResourceId")
       private final @Nullable Output<String> workspaceResourceId;
 
     public Output<String> getWorkspaceResourceId() {

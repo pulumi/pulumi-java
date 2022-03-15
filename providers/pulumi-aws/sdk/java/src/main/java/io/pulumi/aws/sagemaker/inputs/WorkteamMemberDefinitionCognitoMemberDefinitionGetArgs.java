@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs extend
      * An identifier for an application client. You must create the app client ID using Amazon Cognito.
      * 
      */
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -28,7 +28,7 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs extend
      * An identifier for a user group.
      * 
      */
-    @InputImport(name="userGroup", required=true)
+    @Import(name="userGroup", required=true)
       private final Output<String> userGroup;
 
     public Output<String> getUserGroup() {
@@ -39,7 +39,7 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinitionGetArgs extend
      * An identifier for a user pool. The user pool must be in the same region as the service that you are calling.
      * 
      */
-    @InputImport(name="userPool", required=true)
+    @Import(name="userPool", required=true)
       private final Output<String> userPool;
 
     public Output<String> getUserPool() {

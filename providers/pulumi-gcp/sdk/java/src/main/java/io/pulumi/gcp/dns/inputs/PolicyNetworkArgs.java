@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class PolicyNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * `https://www.googleapis.com/compute/v1/projects/{project}/global/networks/{network}`
      * 
      */
-    @InputImport(name="networkUrl", required=true)
+    @Import(name="networkUrl", required=true)
       private final Output<String> networkUrl;
 
     public Output<String> getNetworkUrl() {

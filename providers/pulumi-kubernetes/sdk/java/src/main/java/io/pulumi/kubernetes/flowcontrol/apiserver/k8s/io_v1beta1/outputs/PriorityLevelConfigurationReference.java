@@ -3,11 +3,11 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PriorityLevelConfigurationReference {
     /**
      * `name` is the name of the priority level configuration being referenced Required.
@@ -15,8 +15,8 @@ public final class PriorityLevelConfigurationReference {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private PriorityLevelConfigurationReference(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private PriorityLevelConfigurationReference(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

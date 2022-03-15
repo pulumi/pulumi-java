@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.GpuResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ResourceLimitsResponse extends io.pulumi.resources.InvokeArgs
      * The CPU limit of this container instance.
      * 
      */
-    @InputImport(name="cpu")
+    @Import(name="cpu")
       private final @Nullable Double cpu;
 
     public Optional<Double> getCpu() {
@@ -34,7 +34,7 @@ public final class ResourceLimitsResponse extends io.pulumi.resources.InvokeArgs
      * The GPU limit of this container instance.
      * 
      */
-    @InputImport(name="gpu")
+    @Import(name="gpu")
       private final @Nullable GpuResourceResponse gpu;
 
     public Optional<GpuResourceResponse> getGpu() {
@@ -45,7 +45,7 @@ public final class ResourceLimitsResponse extends io.pulumi.resources.InvokeArgs
      * The memory limit in GB of this container instance.
      * 
      */
-    @InputImport(name="memoryInGB")
+    @Import(name="memoryInGB")
       private final @Nullable Double memoryInGB;
 
     public Optional<Double> getMemoryInGB() {

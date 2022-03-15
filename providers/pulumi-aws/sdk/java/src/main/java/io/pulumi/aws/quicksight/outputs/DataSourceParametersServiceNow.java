@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceParametersServiceNow {
     /**
      * The base URL of the Jira instance's site to which to connect.
@@ -15,8 +15,8 @@ public final class DataSourceParametersServiceNow {
      */
     private final String siteBaseUrl;
 
-    @OutputCustomType.Constructor
-    private DataSourceParametersServiceNow(@OutputCustomType.Parameter("siteBaseUrl") String siteBaseUrl) {
+    @CustomType.Constructor
+    private DataSourceParametersServiceNow(@CustomType.Parameter("siteBaseUrl") String siteBaseUrl) {
         this.siteBaseUrl = siteBaseUrl;
     }
 

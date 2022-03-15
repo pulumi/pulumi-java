@@ -15,7 +15,7 @@ import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamS3Configuration;
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamServerSideEncryption;
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamSplunkConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -45,7 +45,7 @@ public class FirehoseDeliveryStream extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) specifying the Stream
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -59,7 +59,7 @@ public class FirehoseDeliveryStream extends io.pulumi.resources.CustomResource {
      * This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, `splunk`, and `http_endpoint`.
      * 
      */
-    @OutputExport(name="destination", type=String.class, parameters={})
+    @Export(name="destination", type=String.class, parameters={})
     private Output<String> destination;
 
     /**
@@ -69,7 +69,7 @@ public class FirehoseDeliveryStream extends io.pulumi.resources.CustomResource {
     public Output<String> getDestination() {
         return this.destination;
     }
-    @OutputExport(name="destinationId", type=String.class, parameters={})
+    @Export(name="destinationId", type=String.class, parameters={})
     private Output<String> destinationId;
 
     public Output<String> getDestinationId() {
@@ -79,7 +79,7 @@ public class FirehoseDeliveryStream extends io.pulumi.resources.CustomResource {
      * Configuration options if elasticsearch is the destination. More details are given below.
      * 
      */
-    @OutputExport(name="elasticsearchConfiguration", type=FirehoseDeliveryStreamElasticsearchConfiguration.class, parameters={})
+    @Export(name="elasticsearchConfiguration", type=FirehoseDeliveryStreamElasticsearchConfiguration.class, parameters={})
     private Output</* @Nullable */ FirehoseDeliveryStreamElasticsearchConfiguration> elasticsearchConfiguration;
 
     /**
@@ -93,7 +93,7 @@ public class FirehoseDeliveryStream extends io.pulumi.resources.CustomResource {
      * Enhanced configuration options for the s3 destination. More details are given below.
      * 
      */
-    @OutputExport(name="extendedS3Configuration", type=FirehoseDeliveryStreamExtendedS3Configuration.class, parameters={})
+    @Export(name="extendedS3Configuration", type=FirehoseDeliveryStreamExtendedS3Configuration.class, parameters={})
     private Output</* @Nullable */ FirehoseDeliveryStreamExtendedS3Configuration> extendedS3Configuration;
 
     /**
@@ -107,7 +107,7 @@ public class FirehoseDeliveryStream extends io.pulumi.resources.CustomResource {
      * Configuration options if http_endpoint is the destination. requires the user to also specify a `s3_configuration` block.  More details are given below.
      * 
      */
-    @OutputExport(name="httpEndpointConfiguration", type=FirehoseDeliveryStreamHttpEndpointConfiguration.class, parameters={})
+    @Export(name="httpEndpointConfiguration", type=FirehoseDeliveryStreamHttpEndpointConfiguration.class, parameters={})
     private Output</* @Nullable */ FirehoseDeliveryStreamHttpEndpointConfiguration> httpEndpointConfiguration;
 
     /**
@@ -121,7 +121,7 @@ public class FirehoseDeliveryStream extends io.pulumi.resources.CustomResource {
      * Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
      * 
      */
-    @OutputExport(name="kinesisSourceConfiguration", type=FirehoseDeliveryStreamKinesisSourceConfiguration.class, parameters={})
+    @Export(name="kinesisSourceConfiguration", type=FirehoseDeliveryStreamKinesisSourceConfiguration.class, parameters={})
     private Output</* @Nullable */ FirehoseDeliveryStreamKinesisSourceConfiguration> kinesisSourceConfiguration;
 
     /**
@@ -136,7 +136,7 @@ public class FirehoseDeliveryStream extends io.pulumi.resources.CustomResource {
      * AWS account and region the Stream is created in.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -153,7 +153,7 @@ public class FirehoseDeliveryStream extends io.pulumi.resources.CustomResource {
      * `s3_configuration` block. More details are given below.
      * 
      */
-    @OutputExport(name="redshiftConfiguration", type=FirehoseDeliveryStreamRedshiftConfiguration.class, parameters={})
+    @Export(name="redshiftConfiguration", type=FirehoseDeliveryStreamRedshiftConfiguration.class, parameters={})
     private Output</* @Nullable */ FirehoseDeliveryStreamRedshiftConfiguration> redshiftConfiguration;
 
     /**
@@ -170,7 +170,7 @@ public class FirehoseDeliveryStream extends io.pulumi.resources.CustomResource {
      * is redshift). More details are given below.
      * 
      */
-    @OutputExport(name="s3Configuration", type=FirehoseDeliveryStreamS3Configuration.class, parameters={})
+    @Export(name="s3Configuration", type=FirehoseDeliveryStreamS3Configuration.class, parameters={})
     private Output</* @Nullable */ FirehoseDeliveryStreamS3Configuration> s3Configuration;
 
     /**
@@ -186,7 +186,7 @@ public class FirehoseDeliveryStream extends io.pulumi.resources.CustomResource {
      * Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
      * 
      */
-    @OutputExport(name="serverSideEncryption", type=FirehoseDeliveryStreamServerSideEncryption.class, parameters={})
+    @Export(name="serverSideEncryption", type=FirehoseDeliveryStreamServerSideEncryption.class, parameters={})
     private Output</* @Nullable */ FirehoseDeliveryStreamServerSideEncryption> serverSideEncryption;
 
     /**
@@ -201,7 +201,7 @@ public class FirehoseDeliveryStream extends io.pulumi.resources.CustomResource {
      * Configuration options if splunk is the destination. More details are given below.
      * 
      */
-    @OutputExport(name="splunkConfiguration", type=FirehoseDeliveryStreamSplunkConfiguration.class, parameters={})
+    @Export(name="splunkConfiguration", type=FirehoseDeliveryStreamSplunkConfiguration.class, parameters={})
     private Output</* @Nullable */ FirehoseDeliveryStreamSplunkConfiguration> splunkConfiguration;
 
     /**
@@ -215,7 +215,7 @@ public class FirehoseDeliveryStream extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -229,7 +229,7 @@ public class FirehoseDeliveryStream extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -243,7 +243,7 @@ public class FirehoseDeliveryStream extends io.pulumi.resources.CustomResource {
      * Specifies the table version for the output data schema. Defaults to `LATEST`.
      * 
      */
-    @OutputExport(name="versionId", type=String.class, parameters={})
+    @Export(name="versionId", type=String.class, parameters={})
     private Output<String> versionId;
 
     /**

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.enums.RecommendationConfigStatus;
 import io.pulumi.azurenative.security.enums.RecommendationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class RecommendationConfigurationPropertiesArgs extends io.pulumi.r
      * The type of IoT Security recommendation.
      * 
      */
-    @InputImport(name="recommendationType", required=true)
+    @Import(name="recommendationType", required=true)
       private final Output<Either<String,RecommendationType>> recommendationType;
 
     public Output<Either<String,RecommendationType>> getRecommendationType() {
@@ -35,7 +35,7 @@ public final class RecommendationConfigurationPropertiesArgs extends io.pulumi.r
      * Recommendation status. When the recommendation status is disabled recommendations are not generated.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<Either<String,RecommendationConfigStatus>> status;
 
     public Output<Either<String,RecommendationConfigStatus>> getStatus() {

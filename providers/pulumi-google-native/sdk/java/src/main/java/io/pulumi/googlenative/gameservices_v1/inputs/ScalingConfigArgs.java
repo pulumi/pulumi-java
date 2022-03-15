@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gameservices_v1.inputs.LabelSelectorArgs;
 import io.pulumi.googlenative.gameservices_v1.inputs.ScheduleArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Agones fleet autoscaler spec. Example spec: https://agones.dev/site/docs/reference/fleetautoscaler/
      * 
      */
-    @InputImport(name="fleetAutoscalerSpec", required=true)
+    @Import(name="fleetAutoscalerSpec", required=true)
       private final Output<String> fleetAutoscalerSpec;
 
     public Output<String> getFleetAutoscalerSpec() {
@@ -36,7 +36,7 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Scaling Config
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -47,7 +47,7 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The schedules to which this Scaling Config applies.
      * 
      */
-    @InputImport(name="schedules")
+    @Import(name="schedules")
       private final @Nullable Output<List<ScheduleArgs>> schedules;
 
     public Output<List<ScheduleArgs>> getSchedules() {
@@ -58,7 +58,7 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Labels used to identify the game server clusters to which this Agones scaling config applies. A game server cluster is subject to this Agones scaling config if its labels match any of the selector entries.
      * 
      */
-    @InputImport(name="selectors")
+    @Import(name="selectors")
       private final @Nullable Output<List<LabelSelectorArgs>> selectors;
 
     public Output<List<LabelSelectorArgs>> getSelectors() {

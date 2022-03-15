@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.AzureNodePoolAutoscalingGetArgs;
 import io.pulumi.gcp.container.inputs.AzureNodePoolConfigGetArgs;
 import io.pulumi.gcp.container.inputs.AzureNodePoolMaxPodsConstraintGetArgs;
@@ -23,7 +23,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
      * Optional. Annotations on the node pool. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Keys can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
     public Output<Map<String,String>> getAnnotations() {
@@ -34,7 +34,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
      * Required. Autoscaler configuration for this node pool.
      * 
      */
-    @InputImport(name="autoscaling")
+    @Import(name="autoscaling")
       private final @Nullable Output<AzureNodePoolAutoscalingGetArgs> autoscaling;
 
     public Output<AzureNodePoolAutoscalingGetArgs> getAutoscaling() {
@@ -45,7 +45,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
      * Optional. The Azure availability zone of the nodes in this nodepool. When unspecified, it defaults to `1`.
      * 
      */
-    @InputImport(name="azureAvailabilityZone")
+    @Import(name="azureAvailabilityZone")
       private final @Nullable Output<String> azureAvailabilityZone;
 
     public Output<String> getAzureAvailabilityZone() {
@@ -56,7 +56,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
      * The azureCluster for the resource
      * 
      */
-    @InputImport(name="cluster")
+    @Import(name="cluster")
       private final @Nullable Output<String> cluster;
 
     public Output<String> getCluster() {
@@ -67,7 +67,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
      * Required. The node configuration of the node pool.
      * 
      */
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Output<AzureNodePoolConfigGetArgs> config;
 
     public Output<AzureNodePoolConfigGetArgs> getConfig() {
@@ -78,7 +78,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
      * Output only. The time at which this node pool was created.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -90,7 +90,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
      * and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -101,7 +101,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
      * The location for the resource
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -112,7 +112,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
      * Required. The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
      * 
      */
-    @InputImport(name="maxPodsConstraint")
+    @Import(name="maxPodsConstraint")
       private final @Nullable Output<AzureNodePoolMaxPodsConstraintGetArgs> maxPodsConstraint;
 
     public Output<AzureNodePoolMaxPodsConstraintGetArgs> getMaxPodsConstraint() {
@@ -123,7 +123,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
      * The name of this resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -134,7 +134,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
      * The project for the resource
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -145,7 +145,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
      * Output only. If set, there are currently pending changes to the node pool.
      * 
      */
-    @InputImport(name="reconciling")
+    @Import(name="reconciling")
       private final @Nullable Output<Boolean> reconciling;
 
     public Output<Boolean> getReconciling() {
@@ -157,7 +157,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
      * STOPPING, ERROR, DEGRADED
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -168,7 +168,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
      * Required. The ARM ID of the subnet where the node pool VMs run. Make sure it's a subnet under the virtual network in the cluster configuration.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -179,7 +179,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
      * Output only. A globally unique identifier for the node pool.
      * 
      */
-    @InputImport(name="uid")
+    @Import(name="uid")
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {
@@ -190,7 +190,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
      * Output only. The time at which this node pool was last updated.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
@@ -201,7 +201,7 @@ public final class AzureNodePoolState extends io.pulumi.resources.ResourceArgs {
      * Required. The Kubernetes version (e.g. `1.19.10-gke.1000`) running on this node pool.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

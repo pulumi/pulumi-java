@@ -6,14 +6,14 @@ package io.pulumi.azurenative.datamigration.outputs;
 import io.pulumi.azurenative.datamigration.outputs.DatabaseSummaryResultResponse;
 import io.pulumi.azurenative.datamigration.outputs.MigrationReportResultResponse;
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse {
     /**
      * Summary of database results in the migration
@@ -97,24 +97,24 @@ public final class MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse {
      */
     private final String targetServerVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateSqlServerSqlDbTaskOutputMigrationLevelResponse(
-        @OutputCustomType.Parameter("databaseSummary") Map<String,DatabaseSummaryResultResponse> databaseSummary,
-        @OutputCustomType.Parameter("databases") Map<String,String> databases,
-        @OutputCustomType.Parameter("durationInSeconds") Double durationInSeconds,
-        @OutputCustomType.Parameter("endedOn") String endedOn,
-        @OutputCustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("migrationReport") MigrationReportResultResponse migrationReport,
-        @OutputCustomType.Parameter("resultType") String resultType,
-        @OutputCustomType.Parameter("sourceServerBrandVersion") String sourceServerBrandVersion,
-        @OutputCustomType.Parameter("sourceServerVersion") String sourceServerVersion,
-        @OutputCustomType.Parameter("startedOn") String startedOn,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusMessage") String statusMessage,
-        @OutputCustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
-        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion) {
+        @CustomType.Parameter("databaseSummary") Map<String,DatabaseSummaryResultResponse> databaseSummary,
+        @CustomType.Parameter("databases") Map<String,String> databases,
+        @CustomType.Parameter("durationInSeconds") Double durationInSeconds,
+        @CustomType.Parameter("endedOn") String endedOn,
+        @CustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("migrationReport") MigrationReportResultResponse migrationReport,
+        @CustomType.Parameter("resultType") String resultType,
+        @CustomType.Parameter("sourceServerBrandVersion") String sourceServerBrandVersion,
+        @CustomType.Parameter("sourceServerVersion") String sourceServerVersion,
+        @CustomType.Parameter("startedOn") String startedOn,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusMessage") String statusMessage,
+        @CustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
+        @CustomType.Parameter("targetServerVersion") String targetServerVersion) {
         this.databaseSummary = databaseSummary;
         this.databases = databases;
         this.durationInSeconds = durationInSeconds;

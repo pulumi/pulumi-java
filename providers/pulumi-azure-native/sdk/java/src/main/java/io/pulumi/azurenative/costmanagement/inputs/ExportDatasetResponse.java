@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.ExportDatasetConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ExportDatasetResponse extends io.pulumi.resources.InvokeArgs 
      * The export dataset configuration.
      * 
      */
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable ExportDatasetConfigurationResponse configuration;
 
     public Optional<ExportDatasetConfigurationResponse> getConfiguration() {
@@ -34,7 +34,7 @@ public final class ExportDatasetResponse extends io.pulumi.resources.InvokeArgs 
      * The granularity of rows in the export. Currently only 'Daily' is supported.
      * 
      */
-    @InputImport(name="granularity")
+    @Import(name="granularity")
       private final @Nullable String granularity;
 
     public Optional<String> getGranularity() {

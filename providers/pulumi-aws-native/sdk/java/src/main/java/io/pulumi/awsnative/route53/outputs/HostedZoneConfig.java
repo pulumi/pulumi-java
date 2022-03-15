@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.route53.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HostedZoneConfig {
     /**
      * Any comments that you want to include about the hosted zone.
@@ -17,8 +17,8 @@ public final class HostedZoneConfig {
      */
     private final @Nullable String comment;
 
-    @OutputCustomType.Constructor
-    private HostedZoneConfig(@OutputCustomType.Parameter("comment") @Nullable String comment) {
+    @CustomType.Constructor
+    private HostedZoneConfig(@CustomType.Parameter("comment") @Nullable String comment) {
         this.comment = comment;
     }
 

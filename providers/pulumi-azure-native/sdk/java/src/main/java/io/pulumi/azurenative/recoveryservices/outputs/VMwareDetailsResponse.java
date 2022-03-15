@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.MasterTargetServerResponse
 import io.pulumi.azurenative.recoveryservices.outputs.ProcessServerResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RunAsAccountResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VersionDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VMwareDetailsResponse {
     /**
      * The number of source and target servers configured to talk to this CS.
@@ -185,41 +185,41 @@ public final class VMwareDetailsResponse {
      */
     private final @Nullable String webLoadStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VMwareDetailsResponse(
-        @OutputCustomType.Parameter("agentCount") @Nullable String agentCount,
-        @OutputCustomType.Parameter("agentExpiryDate") @Nullable String agentExpiryDate,
-        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
-        @OutputCustomType.Parameter("agentVersionDetails") @Nullable VersionDetailsResponse agentVersionDetails,
-        @OutputCustomType.Parameter("availableMemoryInBytes") @Nullable Double availableMemoryInBytes,
-        @OutputCustomType.Parameter("availableSpaceInBytes") @Nullable Double availableSpaceInBytes,
-        @OutputCustomType.Parameter("cpuLoad") @Nullable String cpuLoad,
-        @OutputCustomType.Parameter("cpuLoadStatus") @Nullable String cpuLoadStatus,
-        @OutputCustomType.Parameter("csServiceStatus") @Nullable String csServiceStatus,
-        @OutputCustomType.Parameter("databaseServerLoad") @Nullable String databaseServerLoad,
-        @OutputCustomType.Parameter("databaseServerLoadStatus") @Nullable String databaseServerLoadStatus,
-        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
-        @OutputCustomType.Parameter("masterTargetServers") @Nullable List<MasterTargetServerResponse> masterTargetServers,
-        @OutputCustomType.Parameter("memoryUsageStatus") @Nullable String memoryUsageStatus,
-        @OutputCustomType.Parameter("processServerCount") @Nullable String processServerCount,
-        @OutputCustomType.Parameter("processServers") @Nullable List<ProcessServerResponse> processServers,
-        @OutputCustomType.Parameter("protectedServers") @Nullable String protectedServers,
-        @OutputCustomType.Parameter("psTemplateVersion") @Nullable String psTemplateVersion,
-        @OutputCustomType.Parameter("replicationPairCount") @Nullable String replicationPairCount,
-        @OutputCustomType.Parameter("runAsAccounts") @Nullable List<RunAsAccountResponse> runAsAccounts,
-        @OutputCustomType.Parameter("spaceUsageStatus") @Nullable String spaceUsageStatus,
-        @OutputCustomType.Parameter("sslCertExpiryDate") @Nullable String sslCertExpiryDate,
-        @OutputCustomType.Parameter("sslCertExpiryRemainingDays") @Nullable Integer sslCertExpiryRemainingDays,
-        @OutputCustomType.Parameter("systemLoad") @Nullable String systemLoad,
-        @OutputCustomType.Parameter("systemLoadStatus") @Nullable String systemLoadStatus,
-        @OutputCustomType.Parameter("totalMemoryInBytes") @Nullable Double totalMemoryInBytes,
-        @OutputCustomType.Parameter("totalSpaceInBytes") @Nullable Double totalSpaceInBytes,
-        @OutputCustomType.Parameter("versionStatus") @Nullable String versionStatus,
-        @OutputCustomType.Parameter("webLoad") @Nullable String webLoad,
-        @OutputCustomType.Parameter("webLoadStatus") @Nullable String webLoadStatus) {
+        @CustomType.Parameter("agentCount") @Nullable String agentCount,
+        @CustomType.Parameter("agentExpiryDate") @Nullable String agentExpiryDate,
+        @CustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @CustomType.Parameter("agentVersionDetails") @Nullable VersionDetailsResponse agentVersionDetails,
+        @CustomType.Parameter("availableMemoryInBytes") @Nullable Double availableMemoryInBytes,
+        @CustomType.Parameter("availableSpaceInBytes") @Nullable Double availableSpaceInBytes,
+        @CustomType.Parameter("cpuLoad") @Nullable String cpuLoad,
+        @CustomType.Parameter("cpuLoadStatus") @Nullable String cpuLoadStatus,
+        @CustomType.Parameter("csServiceStatus") @Nullable String csServiceStatus,
+        @CustomType.Parameter("databaseServerLoad") @Nullable String databaseServerLoad,
+        @CustomType.Parameter("databaseServerLoadStatus") @Nullable String databaseServerLoadStatus,
+        @CustomType.Parameter("hostName") @Nullable String hostName,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
+        @CustomType.Parameter("masterTargetServers") @Nullable List<MasterTargetServerResponse> masterTargetServers,
+        @CustomType.Parameter("memoryUsageStatus") @Nullable String memoryUsageStatus,
+        @CustomType.Parameter("processServerCount") @Nullable String processServerCount,
+        @CustomType.Parameter("processServers") @Nullable List<ProcessServerResponse> processServers,
+        @CustomType.Parameter("protectedServers") @Nullable String protectedServers,
+        @CustomType.Parameter("psTemplateVersion") @Nullable String psTemplateVersion,
+        @CustomType.Parameter("replicationPairCount") @Nullable String replicationPairCount,
+        @CustomType.Parameter("runAsAccounts") @Nullable List<RunAsAccountResponse> runAsAccounts,
+        @CustomType.Parameter("spaceUsageStatus") @Nullable String spaceUsageStatus,
+        @CustomType.Parameter("sslCertExpiryDate") @Nullable String sslCertExpiryDate,
+        @CustomType.Parameter("sslCertExpiryRemainingDays") @Nullable Integer sslCertExpiryRemainingDays,
+        @CustomType.Parameter("systemLoad") @Nullable String systemLoad,
+        @CustomType.Parameter("systemLoadStatus") @Nullable String systemLoadStatus,
+        @CustomType.Parameter("totalMemoryInBytes") @Nullable Double totalMemoryInBytes,
+        @CustomType.Parameter("totalSpaceInBytes") @Nullable Double totalSpaceInBytes,
+        @CustomType.Parameter("versionStatus") @Nullable String versionStatus,
+        @CustomType.Parameter("webLoad") @Nullable String webLoad,
+        @CustomType.Parameter("webLoadStatus") @Nullable String webLoadStatus) {
         this.agentCount = agentCount;
         this.agentExpiryDate = agentExpiryDate;
         this.agentVersion = agentVersion;

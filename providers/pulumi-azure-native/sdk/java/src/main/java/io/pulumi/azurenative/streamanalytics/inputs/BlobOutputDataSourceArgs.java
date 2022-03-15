@@ -5,7 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.azurenative.streamanalytics.inputs.StorageAccountArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
      * The name of a container within the associated Storage account. This container contains either the blob(s) to be read from or written to. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="container")
+    @Import(name="container")
       private final @Nullable Output<String> container;
 
     public Output<String> getContainer() {
@@ -35,7 +35,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
      * The date format. Wherever {date} appears in pathPattern, the value of this property is used as the date format instead.
      * 
      */
-    @InputImport(name="dateFormat")
+    @Import(name="dateFormat")
       private final @Nullable Output<String> dateFormat;
 
     public Output<String> getDateFormat() {
@@ -46,7 +46,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
      * The blob path pattern. Not a regular expression. It represents a pattern against which blob names will be matched to determine whether or not they should be included as input or output to the job. See https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-input or https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for a more detailed explanation and example.
      * 
      */
-    @InputImport(name="pathPattern")
+    @Import(name="pathPattern")
       private final @Nullable Output<String> pathPattern;
 
     public Output<String> getPathPattern() {
@@ -57,7 +57,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
      * A list of one or more Azure Storage accounts. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="storageAccounts")
+    @Import(name="storageAccounts")
       private final @Nullable Output<List<StorageAccountArgs>> storageAccounts;
 
     public Output<List<StorageAccountArgs>> getStorageAccounts() {
@@ -68,7 +68,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
      * The time format. Wherever {time} appears in pathPattern, the value of this property is used as the time format instead.
      * 
      */
-    @InputImport(name="timeFormat")
+    @Import(name="timeFormat")
       private final @Nullable Output<String> timeFormat;
 
     public Output<String> getTimeFormat() {
@@ -80,7 +80,7 @@ public final class BlobOutputDataSourceArgs extends io.pulumi.resources.Resource
      * Expected value is 'Microsoft.Storage/Blob'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

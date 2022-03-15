@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.datasync.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LocationNFSOnPremConfig extends io.pulumi.resources.InvokeArg
      * ARN(s) of the agent(s) to use for an NFS location.
      * 
      */
-    @InputImport(name="agentArns", required=true)
+    @Import(name="agentArns", required=true)
       private final List<String> agentArns;
 
     public List<String> getAgentArns() {

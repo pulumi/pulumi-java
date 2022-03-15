@@ -8,7 +8,7 @@ import io.pulumi.azurenative.appplatform.BindingArgs;
 import io.pulumi.azurenative.appplatform.outputs.BindingResourcePropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Binding extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class Binding extends io.pulumi.resources.CustomResource {
      * Properties of the Binding resource
      * 
      */
-    @OutputExport(name="properties", type=BindingResourcePropertiesResponse.class, parameters={})
+    @Export(name="properties", type=BindingResourcePropertiesResponse.class, parameters={})
     private Output<BindingResourcePropertiesResponse> properties;
 
     /**
@@ -63,7 +63,7 @@ public class Binding extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

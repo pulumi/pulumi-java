@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClientOpenIdUserInfoResult {
     /**
      * The email of the account used by the provider to authenticate with GCP.
@@ -20,10 +20,10 @@ public final class GetClientOpenIdUserInfoResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClientOpenIdUserInfoResult(
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("id") String id) {
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("id") String id) {
         this.email = email;
         this.id = id;
     }

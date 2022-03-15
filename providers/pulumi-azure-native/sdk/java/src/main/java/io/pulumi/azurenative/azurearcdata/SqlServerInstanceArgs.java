@@ -5,7 +5,7 @@ package io.pulumi.azurenative.azurearcdata;
 
 import io.pulumi.azurenative.azurearcdata.inputs.SqlServerInstancePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -31,7 +31,7 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
      * null
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<SqlServerInstancePropertiesArgs> properties;
 
     public Output<SqlServerInstancePropertiesArgs> getProperties() {
@@ -42,7 +42,7 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
      * The name of the Azure resource group
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
      * The name of SQL Server Instance
      * 
      */
-    @InputImport(name="sqlServerInstanceName")
+    @Import(name="sqlServerInstanceName")
       private final @Nullable Output<String> sqlServerInstanceName;
 
     public Output<String> getSqlServerInstanceName() {
@@ -64,7 +64,7 @@ public final class SqlServerInstanceArgs extends io.pulumi.resources.ResourceArg
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

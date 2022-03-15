@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.clouddeploy_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.clouddeploy_v1.RolloutArgs;
@@ -25,7 +25,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
      */
-    @OutputExport(name="annotations", type=Map.class, parameters={String.class, String.class})
+    @Export(name="annotations", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> annotations;
 
     /**
@@ -39,7 +39,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * Approval state of the `Rollout`.
      * 
      */
-    @OutputExport(name="approvalState", type=String.class, parameters={})
+    @Export(name="approvalState", type=String.class, parameters={})
     private Output<String> approvalState;
 
     /**
@@ -53,7 +53,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * Time at which the `Rollout` was approved.
      * 
      */
-    @OutputExport(name="approveTime", type=String.class, parameters={})
+    @Export(name="approveTime", type=String.class, parameters={})
     private Output<String> approveTime;
 
     /**
@@ -67,7 +67,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * Time at which the `Rollout` was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -81,7 +81,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * Time at which the `Rollout` finished deploying.
      * 
      */
-    @OutputExport(name="deployEndTime", type=String.class, parameters={})
+    @Export(name="deployEndTime", type=String.class, parameters={})
     private Output<String> deployEndTime;
 
     /**
@@ -95,7 +95,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * The reason this deploy failed. This will always be unspecified while the deploy in progress.
      * 
      */
-    @OutputExport(name="deployFailureCause", type=String.class, parameters={})
+    @Export(name="deployFailureCause", type=String.class, parameters={})
     private Output<String> deployFailureCause;
 
     /**
@@ -109,7 +109,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * Time at which the `Rollout` started deploying.
      * 
      */
-    @OutputExport(name="deployStartTime", type=String.class, parameters={})
+    @Export(name="deployStartTime", type=String.class, parameters={})
     private Output<String> deployStartTime;
 
     /**
@@ -123,7 +123,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * The resource name of the Cloud Build `Build` object that is used to deploy the Rollout. Format is `projects/{project}/locations/{location}/builds/{build}`.
      * 
      */
-    @OutputExport(name="deployingBuild", type=String.class, parameters={})
+    @Export(name="deployingBuild", type=String.class, parameters={})
     private Output<String> deployingBuild;
 
     /**
@@ -137,7 +137,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * Description of the `Rollout` for user purposes. Max length is 255 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -151,7 +151,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * Time at which the `Rollout` was enqueued.
      * 
      */
-    @OutputExport(name="enqueueTime", type=String.class, parameters={})
+    @Export(name="enqueueTime", type=String.class, parameters={})
     private Output<String> enqueueTime;
 
     /**
@@ -165,7 +165,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -179,7 +179,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * Reason the build failed. Empty if the build succeeded.
      * 
      */
-    @OutputExport(name="failureReason", type=String.class, parameters={})
+    @Export(name="failureReason", type=String.class, parameters={})
     private Output<String> failureReason;
 
     /**
@@ -193,7 +193,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -207,7 +207,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * Optional. Name of the `Rollout`. Format is projects/{project}/ locations/{location}/deliveryPipelines/{deliveryPipeline}/ releases/{release}/rollouts/a-z{0,62}.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -221,7 +221,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * Current state of the `Rollout`.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -235,7 +235,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * The ID of Target to which this `Rollout` is deploying.
      * 
      */
-    @OutputExport(name="targetId", type=String.class, parameters={})
+    @Export(name="targetId", type=String.class, parameters={})
     private Output<String> targetId;
 
     /**
@@ -249,7 +249,7 @@ public class Rollout extends io.pulumi.resources.CustomResource {
      * Unique identifier of the `Rollout`.
      * 
      */
-    @OutputExport(name="uid", type=String.class, parameters={})
+    @Export(name="uid", type=String.class, parameters={})
     private Output<String> uid;
 
     /**

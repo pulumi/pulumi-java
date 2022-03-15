@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.PacketCaptureFilterResponse;
 import io.pulumi.azurenative.network.outputs.PacketCaptureStorageLocationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPacketCaptureResult {
     /**
      * Number of bytes captured per packet, the remaining bytes are truncated.
@@ -67,18 +67,18 @@ public final class GetPacketCaptureResult {
      */
     private final @Nullable Double totalBytesPerSession;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPacketCaptureResult(
-        @OutputCustomType.Parameter("bytesToCapturePerPacket") @Nullable Double bytesToCapturePerPacket,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("filters") @Nullable List<PacketCaptureFilterResponse> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("storageLocation") PacketCaptureStorageLocationResponse storageLocation,
-        @OutputCustomType.Parameter("target") String target,
-        @OutputCustomType.Parameter("timeLimitInSeconds") @Nullable Integer timeLimitInSeconds,
-        @OutputCustomType.Parameter("totalBytesPerSession") @Nullable Double totalBytesPerSession) {
+        @CustomType.Parameter("bytesToCapturePerPacket") @Nullable Double bytesToCapturePerPacket,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("filters") @Nullable List<PacketCaptureFilterResponse> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("storageLocation") PacketCaptureStorageLocationResponse storageLocation,
+        @CustomType.Parameter("target") String target,
+        @CustomType.Parameter("timeLimitInSeconds") @Nullable Integer timeLimitInSeconds,
+        @CustomType.Parameter("totalBytesPerSession") @Nullable Double totalBytesPerSession) {
         this.bytesToCapturePerPacket = bytesToCapturePerPacket;
         this.etag = etag;
         this.filters = filters;

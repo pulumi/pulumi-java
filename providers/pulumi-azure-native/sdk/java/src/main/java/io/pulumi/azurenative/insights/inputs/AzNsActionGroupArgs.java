@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
      * Azure Action Group reference.
      * 
      */
-    @InputImport(name="actionGroup")
+    @Import(name="actionGroup")
       private final @Nullable Output<List<String>> actionGroup;
 
     public Output<List<String>> getActionGroup() {
@@ -34,7 +34,7 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
      * Custom payload to be sent for all webhook URI in Azure action group
      * 
      */
-    @InputImport(name="customWebhookPayload")
+    @Import(name="customWebhookPayload")
       private final @Nullable Output<String> customWebhookPayload;
 
     public Output<String> getCustomWebhookPayload() {
@@ -45,7 +45,7 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
      * Custom subject override for all email ids in Azure action group
      * 
      */
-    @InputImport(name="emailSubject")
+    @Import(name="emailSubject")
       private final @Nullable Output<String> emailSubject;
 
     public Output<String> getEmailSubject() {

@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotAliasS3BucketLogDestination;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotAliasAudioLogDestination {
     private final @Nullable BotAliasS3BucketLogDestination s3Bucket;
 
-    @OutputCustomType.Constructor
-    private BotAliasAudioLogDestination(@OutputCustomType.Parameter("s3Bucket") @Nullable BotAliasS3BucketLogDestination s3Bucket) {
+    @CustomType.Constructor
+    private BotAliasAudioLogDestination(@CustomType.Parameter("s3Bucket") @Nullable BotAliasS3BucketLogDestination s3Bucket) {
         this.s3Bucket = s3Bucket;
     }
 

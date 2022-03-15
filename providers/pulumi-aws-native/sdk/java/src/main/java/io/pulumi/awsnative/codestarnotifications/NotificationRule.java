@@ -9,7 +9,7 @@ import io.pulumi.awsnative.codestarnotifications.enums.NotificationRuleDetailTyp
 import io.pulumi.awsnative.codestarnotifications.enums.NotificationRuleStatus;
 import io.pulumi.awsnative.codestarnotifications.outputs.NotificationRuleTarget;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -22,67 +22,67 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:codestarnotifications:NotificationRule")
 public class NotificationRule extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="createdBy", type=String.class, parameters={})
+    @Export(name="createdBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdBy;
 
     public Output</* @Nullable */ String> getCreatedBy() {
         return this.createdBy;
     }
-    @OutputExport(name="detailType", type=NotificationRuleDetailType.class, parameters={})
+    @Export(name="detailType", type=NotificationRuleDetailType.class, parameters={})
     private Output<NotificationRuleDetailType> detailType;
 
     public Output<NotificationRuleDetailType> getDetailType() {
         return this.detailType;
     }
-    @OutputExport(name="eventTypeId", type=String.class, parameters={})
+    @Export(name="eventTypeId", type=String.class, parameters={})
     private Output</* @Nullable */ String> eventTypeId;
 
     public Output</* @Nullable */ String> getEventTypeId() {
         return this.eventTypeId;
     }
-    @OutputExport(name="eventTypeIds", type=List.class, parameters={String.class})
+    @Export(name="eventTypeIds", type=List.class, parameters={String.class})
     private Output<List<String>> eventTypeIds;
 
     public Output<List<String>> getEventTypeIds() {
         return this.eventTypeIds;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="resource", type=String.class, parameters={})
+    @Export(name="resource", type=String.class, parameters={})
     private Output<String> resource;
 
     public Output<String> getResource() {
         return this.resource;
     }
-    @OutputExport(name="status", type=NotificationRuleStatus.class, parameters={})
+    @Export(name="status", type=NotificationRuleStatus.class, parameters={})
     private Output</* @Nullable */ NotificationRuleStatus> status;
 
     public Output</* @Nullable */ NotificationRuleStatus> getStatus() {
         return this.status;
     }
-    @OutputExport(name="tags", type=Object.class, parameters={})
+    @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
     public Output</* @Nullable */ Object> getTags() {
         return this.tags;
     }
-    @OutputExport(name="targetAddress", type=String.class, parameters={})
+    @Export(name="targetAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetAddress;
 
     public Output</* @Nullable */ String> getTargetAddress() {
         return this.targetAddress;
     }
-    @OutputExport(name="targets", type=List.class, parameters={NotificationRuleTarget.class})
+    @Export(name="targets", type=List.class, parameters={NotificationRuleTarget.class})
     private Output<List<NotificationRuleTarget>> targets;
 
     public Output<List<NotificationRuleTarget>> getTargets() {

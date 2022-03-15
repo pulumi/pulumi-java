@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class VpcAccessibleServicesArgs extends io.pulumi.resources.Resourc
      * The list of APIs usable within the Service Perimeter. Must be empty unless 'enable_restriction' is True. You can specify a list of individual services, as well as include the 'RESTRICTED-SERVICES' value, which automatically includes all of the services protected by the perimeter.
      * 
      */
-    @InputImport(name="allowedServices")
+    @Import(name="allowedServices")
       private final @Nullable Output<List<String>> allowedServices;
 
     public Output<List<String>> getAllowedServices() {
@@ -35,7 +35,7 @@ public final class VpcAccessibleServicesArgs extends io.pulumi.resources.Resourc
      * Whether to restrict API calls within the Service Perimeter to the list of APIs specified in 'allowed_services'.
      * 
      */
-    @InputImport(name="enableRestriction")
+    @Import(name="enableRestriction")
       private final @Nullable Output<Boolean> enableRestriction;
 
     public Output<Boolean> getEnableRestriction() {

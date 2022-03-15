@@ -8,7 +8,7 @@ import io.pulumi.aws.networkfirewall.FirewallPolicyArgs;
 import io.pulumi.aws.networkfirewall.inputs.FirewallPolicyState;
 import io.pulumi.aws.networkfirewall.outputs.FirewallPolicyFirewallPolicy;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -35,7 +35,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) that identifies the firewall policy.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * A friendly description of the firewall policy.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -63,7 +63,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * A configuration block describing the rule groups and policy actions to use in the firewall policy. See Firewall Policy below for details.
      * 
      */
-    @OutputExport(name="firewallPolicy", type=FirewallPolicyFirewallPolicy.class, parameters={})
+    @Export(name="firewallPolicy", type=FirewallPolicyFirewallPolicy.class, parameters={})
     private Output<FirewallPolicyFirewallPolicy> firewallPolicy;
 
     /**
@@ -77,7 +77,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * A friendly name of the firewall policy.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * Map of resource tags to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -105,7 +105,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -119,7 +119,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * A string token used when updating a firewall policy.
      * 
      */
-    @OutputExport(name="updateToken", type=String.class, parameters={})
+    @Export(name="updateToken", type=String.class, parameters={})
     private Output<String> updateToken;
 
     /**

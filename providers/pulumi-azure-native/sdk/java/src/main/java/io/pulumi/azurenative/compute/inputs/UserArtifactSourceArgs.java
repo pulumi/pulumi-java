@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
      * Optional. The defaultConfigurationLink of the artifact, must be a readable storage page blob.
      * 
      */
-    @InputImport(name="defaultConfigurationLink")
+    @Import(name="defaultConfigurationLink")
       private final @Nullable Output<String> defaultConfigurationLink;
 
     public Output<String> getDefaultConfigurationLink() {
@@ -33,7 +33,7 @@ public final class UserArtifactSourceArgs extends io.pulumi.resources.ResourceAr
      * Required. The mediaLink of the artifact, must be a readable storage page blob.
      * 
      */
-    @InputImport(name="mediaLink", required=true)
+    @Import(name="mediaLink", required=true)
       private final Output<String> mediaLink;
 
     public Output<String> getMediaLink() {

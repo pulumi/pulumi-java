@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.IngressClassParametersReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
      * Controller refers to the name of the controller that should handle this class. This allows for different "flavors" that are controlled by the same controller. For example, you may have different Parameters for the same implementing controller. This should be specified as a domain-prefixed path no more than 250 characters in length, e.g. "acme.io/ingress-controller". This field is immutable.
      * 
      */
-    @InputImport(name="controller")
+    @Import(name="controller")
       private final @Nullable Output<String> controller;
 
     public Output<String> getController() {
@@ -34,7 +34,7 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
      * Parameters is a link to a custom resource containing additional configuration for the controller. This is optional if the controller does not require extra parameters.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<IngressClassParametersReferenceArgs> parameters;
 
     public Output<IngressClassParametersReferenceArgs> getParameters() {

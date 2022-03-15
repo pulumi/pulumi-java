@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.hardwaresecuritymodules.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInterfaceResponse {
     /**
      * The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
@@ -22,10 +22,10 @@ public final class NetworkInterfaceResponse {
      */
     private final @Nullable String privateIpAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInterfaceResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress) {
         this.id = id;
         this.privateIpAddress = privateIpAddress;
     }

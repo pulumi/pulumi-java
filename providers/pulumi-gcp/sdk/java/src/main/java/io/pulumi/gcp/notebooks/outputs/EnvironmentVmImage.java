@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentVmImage {
     /**
      * Use this VM image family to find the image; the newest image in this family will be used.
@@ -28,11 +28,11 @@ public final class EnvironmentVmImage {
      */
     private final String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentVmImage(
-        @OutputCustomType.Parameter("imageFamily") @Nullable String imageFamily,
-        @OutputCustomType.Parameter("imageName") @Nullable String imageName,
-        @OutputCustomType.Parameter("project") String project) {
+        @CustomType.Parameter("imageFamily") @Nullable String imageFamily,
+        @CustomType.Parameter("imageName") @Nullable String imageName,
+        @CustomType.Parameter("project") String project) {
         this.imageFamily = imageFamily;
         this.imageName = imageName;
         this.project = project;

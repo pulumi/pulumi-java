@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class FlowAmplitudeSourcePropertiesArgs extends io.pulumi.resources
 
     public static final FlowAmplitudeSourcePropertiesArgs Empty = new FlowAmplitudeSourcePropertiesArgs();
 
-    @InputImport(name="object", required=true)
+    @Import(name="object", required=true)
       private final Output<String> object;
 
     public Output<String> getObject() {

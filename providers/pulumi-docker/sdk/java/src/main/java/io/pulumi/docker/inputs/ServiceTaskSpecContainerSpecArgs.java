@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecConfigArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecDnsConfigArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecHealthcheckArgs;
@@ -25,140 +25,140 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
 
     public static final ServiceTaskSpecContainerSpecArgs Empty = new ServiceTaskSpecContainerSpecArgs();
 
-    @InputImport(name="args")
+    @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
         return this.args == null ? Output.empty() : this.args;
     }
 
-    @InputImport(name="commands")
+    @Import(name="commands")
       private final @Nullable Output<List<String>> commands;
 
     public Output<List<String>> getCommands() {
         return this.commands == null ? Output.empty() : this.commands;
     }
 
-    @InputImport(name="configs")
+    @Import(name="configs")
       private final @Nullable Output<List<ServiceTaskSpecContainerSpecConfigArgs>> configs;
 
     public Output<List<ServiceTaskSpecContainerSpecConfigArgs>> getConfigs() {
         return this.configs == null ? Output.empty() : this.configs;
     }
 
-    @InputImport(name="dir")
+    @Import(name="dir")
       private final @Nullable Output<String> dir;
 
     public Output<String> getDir() {
         return this.dir == null ? Output.empty() : this.dir;
     }
 
-    @InputImport(name="dnsConfig")
+    @Import(name="dnsConfig")
       private final @Nullable Output<ServiceTaskSpecContainerSpecDnsConfigArgs> dnsConfig;
 
     public Output<ServiceTaskSpecContainerSpecDnsConfigArgs> getDnsConfig() {
         return this.dnsConfig == null ? Output.empty() : this.dnsConfig;
     }
 
-    @InputImport(name="env")
+    @Import(name="env")
       private final @Nullable Output<Map<String,String>> env;
 
     public Output<Map<String,String>> getEnv() {
         return this.env == null ? Output.empty() : this.env;
     }
 
-    @InputImport(name="groups")
+    @Import(name="groups")
       private final @Nullable Output<List<String>> groups;
 
     public Output<List<String>> getGroups() {
         return this.groups == null ? Output.empty() : this.groups;
     }
 
-    @InputImport(name="healthcheck")
+    @Import(name="healthcheck")
       private final @Nullable Output<ServiceTaskSpecContainerSpecHealthcheckArgs> healthcheck;
 
     public Output<ServiceTaskSpecContainerSpecHealthcheckArgs> getHealthcheck() {
         return this.healthcheck == null ? Output.empty() : this.healthcheck;
     }
 
-    @InputImport(name="hostname")
+    @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
     public Output<String> getHostname() {
         return this.hostname == null ? Output.empty() : this.hostname;
     }
 
-    @InputImport(name="hosts")
+    @Import(name="hosts")
       private final @Nullable Output<List<ServiceTaskSpecContainerSpecHostArgs>> hosts;
 
     public Output<List<ServiceTaskSpecContainerSpecHostArgs>> getHosts() {
         return this.hosts == null ? Output.empty() : this.hosts;
     }
 
-    @InputImport(name="image", required=true)
+    @Import(name="image", required=true)
       private final Output<String> image;
 
     public Output<String> getImage() {
         return this.image;
     }
 
-    @InputImport(name="isolation")
+    @Import(name="isolation")
       private final @Nullable Output<String> isolation;
 
     public Output<String> getIsolation() {
         return this.isolation == null ? Output.empty() : this.isolation;
     }
 
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<ServiceTaskSpecContainerSpecLabelArgs>> labels;
 
     public Output<List<ServiceTaskSpecContainerSpecLabelArgs>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="mounts")
+    @Import(name="mounts")
       private final @Nullable Output<List<ServiceTaskSpecContainerSpecMountArgs>> mounts;
 
     public Output<List<ServiceTaskSpecContainerSpecMountArgs>> getMounts() {
         return this.mounts == null ? Output.empty() : this.mounts;
     }
 
-    @InputImport(name="privileges")
+    @Import(name="privileges")
       private final @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesArgs> privileges;
 
     public Output<ServiceTaskSpecContainerSpecPrivilegesArgs> getPrivileges() {
         return this.privileges == null ? Output.empty() : this.privileges;
     }
 
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
         return this.readOnly == null ? Output.empty() : this.readOnly;
     }
 
-    @InputImport(name="secrets")
+    @Import(name="secrets")
       private final @Nullable Output<List<ServiceTaskSpecContainerSpecSecretArgs>> secrets;
 
     public Output<List<ServiceTaskSpecContainerSpecSecretArgs>> getSecrets() {
         return this.secrets == null ? Output.empty() : this.secrets;
     }
 
-    @InputImport(name="stopGracePeriod")
+    @Import(name="stopGracePeriod")
       private final @Nullable Output<String> stopGracePeriod;
 
     public Output<String> getStopGracePeriod() {
         return this.stopGracePeriod == null ? Output.empty() : this.stopGracePeriod;
     }
 
-    @InputImport(name="stopSignal")
+    @Import(name="stopSignal")
       private final @Nullable Output<String> stopSignal;
 
     public Output<String> getStopSignal() {
         return this.stopSignal == null ? Output.empty() : this.stopSignal;
     }
 
-    @InputImport(name="user")
+    @Import(name="user")
       private final @Nullable Output<String> user;
 
     public Output<String> getUser() {

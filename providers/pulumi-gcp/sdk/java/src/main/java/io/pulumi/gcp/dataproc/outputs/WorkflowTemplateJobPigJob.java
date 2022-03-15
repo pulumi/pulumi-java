@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobPigJobLoggingConfig;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobPigJobQueryList;
 import java.lang.Boolean;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplateJobPigJob {
     /**
      * Optional. Whether to continue executing queries if a query fails. The default value is `false`. Setting to `true` can be useful when executing independent parallel queries.
@@ -52,15 +52,15 @@ public final class WorkflowTemplateJobPigJob {
      */
     private final @Nullable Map<String,String> scriptVariables;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplateJobPigJob(
-        @OutputCustomType.Parameter("continueOnFailure") @Nullable Boolean continueOnFailure,
-        @OutputCustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
-        @OutputCustomType.Parameter("loggingConfig") @Nullable WorkflowTemplateJobPigJobLoggingConfig loggingConfig,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("queryFileUri") @Nullable String queryFileUri,
-        @OutputCustomType.Parameter("queryList") @Nullable WorkflowTemplateJobPigJobQueryList queryList,
-        @OutputCustomType.Parameter("scriptVariables") @Nullable Map<String,String> scriptVariables) {
+        @CustomType.Parameter("continueOnFailure") @Nullable Boolean continueOnFailure,
+        @CustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
+        @CustomType.Parameter("loggingConfig") @Nullable WorkflowTemplateJobPigJobLoggingConfig loggingConfig,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("queryFileUri") @Nullable String queryFileUri,
+        @CustomType.Parameter("queryList") @Nullable WorkflowTemplateJobPigJobQueryList queryList,
+        @CustomType.Parameter("scriptVariables") @Nullable Map<String,String> scriptVariables) {
         this.continueOnFailure = continueOnFailure;
         this.jarFileUris = jarFileUris;
         this.loggingConfig = loggingConfig;

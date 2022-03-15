@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetHmacKeyResult {
     /**
      * The ID of the HMAC Key.
@@ -55,17 +55,17 @@ public final class GetHmacKeyResult {
      */
     private final String updated;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHmacKeyResult(
-        @OutputCustomType.Parameter("accessId") String accessId,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("timeCreated") String timeCreated,
-        @OutputCustomType.Parameter("updated") String updated) {
+        @CustomType.Parameter("accessId") String accessId,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("timeCreated") String timeCreated,
+        @CustomType.Parameter("updated") String updated) {
         this.accessId = accessId;
         this.etag = etag;
         this.kind = kind;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.SecurityPolicyAdaptiveProtectionConfigResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.SecurityPolicyAdvancedOptionsConfigResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.SecurityPolicyAssociationResponse;
@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRegionSecurityPolicyResult {
     private final SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig;
     private final SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig;
@@ -105,29 +105,29 @@ public final class GetRegionSecurityPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegionSecurityPolicyResult(
-        @OutputCustomType.Parameter("adaptiveProtectionConfig") SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig,
-        @OutputCustomType.Parameter("advancedOptionsConfig") SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig,
-        @OutputCustomType.Parameter("associations") List<SecurityPolicyAssociationResponse> associations,
-        @OutputCustomType.Parameter("cloudArmorConfig") SecurityPolicyCloudArmorConfigResponse cloudArmorConfig,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("ddosProtectionConfig") SecurityPolicyDdosProtectionConfigResponse ddosProtectionConfig,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parent") String parent,
-        @OutputCustomType.Parameter("recaptchaOptionsConfig") SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("ruleTupleCount") Integer ruleTupleCount,
-        @OutputCustomType.Parameter("rules") List<SecurityPolicyRuleResponse> rules,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("adaptiveProtectionConfig") SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig,
+        @CustomType.Parameter("advancedOptionsConfig") SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig,
+        @CustomType.Parameter("associations") List<SecurityPolicyAssociationResponse> associations,
+        @CustomType.Parameter("cloudArmorConfig") SecurityPolicyCloudArmorConfigResponse cloudArmorConfig,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("ddosProtectionConfig") SecurityPolicyDdosProtectionConfigResponse ddosProtectionConfig,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parent") String parent,
+        @CustomType.Parameter("recaptchaOptionsConfig") SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("ruleTupleCount") Integer ruleTupleCount,
+        @CustomType.Parameter("rules") List<SecurityPolicyRuleResponse> rules,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("type") String type) {
         this.adaptiveProtectionConfig = adaptiveProtectionConfig;
         this.advancedOptionsConfig = advancedOptionsConfig;
         this.associations = associations;

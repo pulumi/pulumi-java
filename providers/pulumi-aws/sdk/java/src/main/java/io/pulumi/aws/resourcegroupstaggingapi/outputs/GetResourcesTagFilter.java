@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.resourcegroupstaggingapi.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResourcesTagFilter {
     /**
      * One part of a key-value pair that makes up a tag.
@@ -22,10 +22,10 @@ public final class GetResourcesTagFilter {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourcesTagFilter(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("values") @Nullable List<String> values) {
         this.key = key;
         this.values = values;
     }

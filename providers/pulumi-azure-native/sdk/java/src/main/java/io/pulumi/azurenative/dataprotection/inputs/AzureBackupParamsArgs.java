@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AzureBackupParamsArgs extends io.pulumi.resources.ResourceArg
      * BackupType ; Full/Incremental etc
      * 
      */
-    @InputImport(name="backupType", required=true)
+    @Import(name="backupType", required=true)
       private final Output<String> backupType;
 
     public Output<String> getBackupType() {
@@ -33,7 +33,7 @@ public final class AzureBackupParamsArgs extends io.pulumi.resources.ResourceArg
      * Expected value is 'AzureBackupParams'.
      * 
      */
-    @InputImport(name="objectType", required=true)
+    @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
     public Output<String> getObjectType() {

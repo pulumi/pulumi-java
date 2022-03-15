@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecr.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetRepositoryEncryptionConfiguration extends io.pulumi.resour
      * The encryption type to use for the repository, either `AES256` or `KMS`.
      * 
      */
-    @InputImport(name="encryptionType", required=true)
+    @Import(name="encryptionType", required=true)
       private final String encryptionType;
 
     public String getEncryptionType() {
@@ -27,7 +27,7 @@ public final class GetRepositoryEncryptionConfiguration extends io.pulumi.resour
      * If `encryption_type` is `KMS`, the ARN of the KMS key used.
      * 
      */
-    @InputImport(name="kmsKey", required=true)
+    @Import(name="kmsKey", required=true)
       private final String kmsKey;
 
     public String getKmsKey() {

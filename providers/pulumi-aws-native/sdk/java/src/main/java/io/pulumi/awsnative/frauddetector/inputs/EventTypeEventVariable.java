@@ -7,7 +7,7 @@ import io.pulumi.awsnative.frauddetector.enums.EventTypeEventVariableDataSource;
 import io.pulumi.awsnative.frauddetector.enums.EventTypeEventVariableDataType;
 import io.pulumi.awsnative.frauddetector.enums.EventTypeEventVariableVariableType;
 import io.pulumi.awsnative.frauddetector.inputs.EventTypeTag;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class EventTypeEventVariable extends io.pulumi.resources.InvokeArgs
 
     public static final EventTypeEventVariable Empty = new EventTypeEventVariable();
 
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable String arn;
 
     public Optional<String> getArn() {
@@ -31,28 +31,28 @@ public final class EventTypeEventVariable extends io.pulumi.resources.InvokeArgs
      * The time when the event type was created.
      * 
      */
-    @InputImport(name="createdTime")
+    @Import(name="createdTime")
       private final @Nullable String createdTime;
 
     public Optional<String> getCreatedTime() {
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
     }
 
-    @InputImport(name="dataSource")
+    @Import(name="dataSource")
       private final @Nullable EventTypeEventVariableDataSource dataSource;
 
     public Optional<EventTypeEventVariableDataSource> getDataSource() {
         return this.dataSource == null ? Optional.empty() : Optional.ofNullable(this.dataSource);
     }
 
-    @InputImport(name="dataType")
+    @Import(name="dataType")
       private final @Nullable EventTypeEventVariableDataType dataType;
 
     public Optional<EventTypeEventVariableDataType> getDataType() {
         return this.dataType == null ? Optional.empty() : Optional.ofNullable(this.dataType);
     }
 
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable String defaultValue;
 
     public Optional<String> getDefaultValue() {
@@ -63,14 +63,14 @@ public final class EventTypeEventVariable extends io.pulumi.resources.InvokeArgs
      * The description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
-    @InputImport(name="inline")
+    @Import(name="inline")
       private final @Nullable Boolean inline;
 
     public Optional<Boolean> getInline() {
@@ -81,14 +81,14 @@ public final class EventTypeEventVariable extends io.pulumi.resources.InvokeArgs
      * The time when the event type was last updated.
      * 
      */
-    @InputImport(name="lastUpdatedTime")
+    @Import(name="lastUpdatedTime")
       private final @Nullable String lastUpdatedTime;
 
     public Optional<String> getLastUpdatedTime() {
         return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -99,14 +99,14 @@ public final class EventTypeEventVariable extends io.pulumi.resources.InvokeArgs
      * Tags associated with this event type.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable List<EventTypeTag> tags;
 
     public List<EventTypeTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
     }
 
-    @InputImport(name="variableType")
+    @Import(name="variableType")
       private final @Nullable EventTypeEventVariableVariableType variableType;
 
     public Optional<EventTypeEventVariableVariableType> getVariableType() {

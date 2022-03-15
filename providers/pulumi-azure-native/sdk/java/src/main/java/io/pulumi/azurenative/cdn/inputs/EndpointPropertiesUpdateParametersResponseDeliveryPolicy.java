@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.DeliveryRuleResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy exte
      * User-friendly description of the policy.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -35,7 +35,7 @@ public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy exte
      * A list of the delivery rules.
      * 
      */
-    @InputImport(name="rules", required=true)
+    @Import(name="rules", required=true)
       private final List<DeliveryRuleResponse> rules;
 
     public List<DeliveryRuleResponse> getRules() {

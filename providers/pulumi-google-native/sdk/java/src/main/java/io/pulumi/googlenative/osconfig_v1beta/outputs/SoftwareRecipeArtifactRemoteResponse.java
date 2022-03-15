@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SoftwareRecipeArtifactRemoteResponse {
     /**
      * Must be provided if `allow_insecure` is `false`. SHA256 checksum in hex format, to compare to the checksum of the artifact. If the checksum is not empty and it doesn't match the artifact then the recipe installation fails before running any of the steps.
@@ -20,10 +20,10 @@ public final class SoftwareRecipeArtifactRemoteResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SoftwareRecipeArtifactRemoteResponse(
-        @OutputCustomType.Parameter("checksum") String checksum,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("checksum") String checksum,
+        @CustomType.Parameter("uri") String uri) {
         this.checksum = checksum;
         this.uri = uri;
     }

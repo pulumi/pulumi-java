@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1CertInfoResponse {
     /**
      * X.509 basic constraints extension.
@@ -67,19 +67,19 @@ public final class GoogleCloudApigeeV1CertInfoResponse {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1CertInfoResponse(
-        @OutputCustomType.Parameter("basicConstraints") String basicConstraints,
-        @OutputCustomType.Parameter("expiryDate") String expiryDate,
-        @OutputCustomType.Parameter("isValid") String isValid,
-        @OutputCustomType.Parameter("issuer") String issuer,
-        @OutputCustomType.Parameter("publicKey") String publicKey,
-        @OutputCustomType.Parameter("serialNumber") String serialNumber,
-        @OutputCustomType.Parameter("sigAlgName") String sigAlgName,
-        @OutputCustomType.Parameter("subject") String subject,
-        @OutputCustomType.Parameter("subjectAlternativeNames") List<String> subjectAlternativeNames,
-        @OutputCustomType.Parameter("validFrom") String validFrom,
-        @OutputCustomType.Parameter("version") Integer version) {
+        @CustomType.Parameter("basicConstraints") String basicConstraints,
+        @CustomType.Parameter("expiryDate") String expiryDate,
+        @CustomType.Parameter("isValid") String isValid,
+        @CustomType.Parameter("issuer") String issuer,
+        @CustomType.Parameter("publicKey") String publicKey,
+        @CustomType.Parameter("serialNumber") String serialNumber,
+        @CustomType.Parameter("sigAlgName") String sigAlgName,
+        @CustomType.Parameter("subject") String subject,
+        @CustomType.Parameter("subjectAlternativeNames") List<String> subjectAlternativeNames,
+        @CustomType.Parameter("validFrom") String validFrom,
+        @CustomType.Parameter("version") Integer version) {
         this.basicConstraints = basicConstraints;
         this.expiryDate = expiryDate;
         this.isValid = isValid;

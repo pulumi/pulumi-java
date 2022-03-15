@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.BillingAccountExclusionArgs;
@@ -29,7 +29,7 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
      * The billing account to create the exclusion for.
      * 
      */
-    @OutputExport(name="billingAccount", type=String.class, parameters={})
+    @Export(name="billingAccount", type=String.class, parameters={})
     private Output<String> billingAccount;
 
     /**
@@ -43,7 +43,7 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
      * A human-readable description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -58,7 +58,7 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
      * false.
      * 
      */
-    @OutputExport(name="disabled", type=Boolean.class, parameters={})
+    @Export(name="disabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disabled;
 
     /**
@@ -75,7 +75,7 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
      * write a filter.
      * 
      */
-    @OutputExport(name="filter", type=String.class, parameters={})
+    @Export(name="filter", type=String.class, parameters={})
     private Output<String> filter;
 
     /**
@@ -91,7 +91,7 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
      * The name of the logging exclusion.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

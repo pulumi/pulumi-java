@@ -8,7 +8,7 @@ import io.pulumi.azurenative.resources.DeploymentAtScopeArgs;
 import io.pulumi.azurenative.resources.outputs.DeploymentPropertiesExtendedResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class DeploymentAtScope extends io.pulumi.resources.CustomResource {
      * the location of the deployment.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -50,7 +50,7 @@ public class DeploymentAtScope extends io.pulumi.resources.CustomResource {
      * The name of the deployment.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class DeploymentAtScope extends io.pulumi.resources.CustomResource {
      * Deployment properties.
      * 
      */
-    @OutputExport(name="properties", type=DeploymentPropertiesExtendedResponse.class, parameters={})
+    @Export(name="properties", type=DeploymentPropertiesExtendedResponse.class, parameters={})
     private Output<DeploymentPropertiesExtendedResponse> properties;
 
     /**
@@ -78,7 +78,7 @@ public class DeploymentAtScope extends io.pulumi.resources.CustomResource {
      * Deployment tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -92,7 +92,7 @@ public class DeploymentAtScope extends io.pulumi.resources.CustomResource {
      * The type of the deployment.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

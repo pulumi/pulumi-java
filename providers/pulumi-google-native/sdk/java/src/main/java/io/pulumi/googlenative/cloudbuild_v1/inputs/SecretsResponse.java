@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.InlineSecretResponse;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.SecretManagerSecretResponse;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class SecretsResponse extends io.pulumi.resources.InvokeArgs {
      * Secrets encrypted with KMS key and the associated secret environment variable.
      * 
      */
-    @InputImport(name="inline", required=true)
+    @Import(name="inline", required=true)
       private final List<InlineSecretResponse> inline;
 
     public List<InlineSecretResponse> getInline() {
@@ -33,7 +33,7 @@ public final class SecretsResponse extends io.pulumi.resources.InvokeArgs {
      * Secrets in Secret Manager and associated secret environment variable.
      * 
      */
-    @InputImport(name="secretManager", required=true)
+    @Import(name="secretManager", required=true)
       private final List<SecretManagerSecretResponse> secretManager;
 
     public List<SecretManagerSecretResponse> getSecretManager() {

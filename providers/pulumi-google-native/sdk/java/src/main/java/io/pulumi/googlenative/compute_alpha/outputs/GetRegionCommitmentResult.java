@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.LicenseResourceCommitmentResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.ReservationResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.ResourceCommitmentResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRegionCommitmentResult {
     /**
      * Specifies whether to enable automatic renewal for the commitment. The default value is false if not specified. The field can be updated until the day of the commitment expiration at 12:00am PST. If the field is set to true, the commitment will be automatically renewed for either one or three years according to the terms of the existing commitment.
@@ -115,28 +115,28 @@ public final class GetRegionCommitmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegionCommitmentResult(
-        @OutputCustomType.Parameter("autoRenew") Boolean autoRenew,
-        @OutputCustomType.Parameter("category") String category,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("endTimestamp") String endTimestamp,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("licenseResource") LicenseResourceCommitmentResponse licenseResource,
-        @OutputCustomType.Parameter("mergeSourceCommitments") List<String> mergeSourceCommitments,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("plan") String plan,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("reservations") List<ReservationResponse> reservations,
-        @OutputCustomType.Parameter("resources") List<ResourceCommitmentResponse> resources,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("splitSourceCommitment") String splitSourceCommitment,
-        @OutputCustomType.Parameter("startTimestamp") String startTimestamp,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusMessage") String statusMessage,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("autoRenew") Boolean autoRenew,
+        @CustomType.Parameter("category") String category,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("endTimestamp") String endTimestamp,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("licenseResource") LicenseResourceCommitmentResponse licenseResource,
+        @CustomType.Parameter("mergeSourceCommitments") List<String> mergeSourceCommitments,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("plan") String plan,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("reservations") List<ReservationResponse> reservations,
+        @CustomType.Parameter("resources") List<ResourceCommitmentResponse> resources,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("splitSourceCommitment") String splitSourceCommitment,
+        @CustomType.Parameter("startTimestamp") String startTimestamp,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusMessage") String statusMessage,
+        @CustomType.Parameter("type") String type) {
         this.autoRenew = autoRenew;
         this.category = category;
         this.creationTimestamp = creationTimestamp;

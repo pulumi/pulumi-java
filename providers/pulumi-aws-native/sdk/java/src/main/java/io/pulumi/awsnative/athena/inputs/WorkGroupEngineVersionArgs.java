@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.athena.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +18,14 @@ public final class WorkGroupEngineVersionArgs extends io.pulumi.resources.Resour
 
     public static final WorkGroupEngineVersionArgs Empty = new WorkGroupEngineVersionArgs();
 
-    @InputImport(name="effectiveEngineVersion")
+    @Import(name="effectiveEngineVersion")
       private final @Nullable Output<String> effectiveEngineVersion;
 
     public Output<String> getEffectiveEngineVersion() {
         return this.effectiveEngineVersion == null ? Output.empty() : this.effectiveEngineVersion;
     }
 
-    @InputImport(name="selectedEngineVersion")
+    @Import(name="selectedEngineVersion")
       private final @Nullable Output<String> selectedEngineVersion;
 
     public Output<String> getSelectedEngineVersion() {

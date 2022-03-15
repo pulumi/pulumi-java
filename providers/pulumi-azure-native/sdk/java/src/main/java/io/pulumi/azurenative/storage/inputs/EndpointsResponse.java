@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.StorageAccountInternetEndpointsResponse;
 import io.pulumi.azurenative.storage.inputs.StorageAccountMicrosoftEndpointsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * Gets the blob endpoint.
      * 
      */
-    @InputImport(name="blob", required=true)
+    @Import(name="blob", required=true)
       private final String blob;
 
     public String getBlob() {
@@ -35,7 +35,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * Gets the dfs endpoint.
      * 
      */
-    @InputImport(name="dfs", required=true)
+    @Import(name="dfs", required=true)
       private final String dfs;
 
     public String getDfs() {
@@ -46,7 +46,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * Gets the file endpoint.
      * 
      */
-    @InputImport(name="file", required=true)
+    @Import(name="file", required=true)
       private final String file;
 
     public String getFile() {
@@ -57,7 +57,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * Gets the internet routing storage endpoints
      * 
      */
-    @InputImport(name="internetEndpoints")
+    @Import(name="internetEndpoints")
       private final @Nullable StorageAccountInternetEndpointsResponse internetEndpoints;
 
     public Optional<StorageAccountInternetEndpointsResponse> getInternetEndpoints() {
@@ -68,7 +68,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * Gets the microsoft routing storage endpoints.
      * 
      */
-    @InputImport(name="microsoftEndpoints")
+    @Import(name="microsoftEndpoints")
       private final @Nullable StorageAccountMicrosoftEndpointsResponse microsoftEndpoints;
 
     public Optional<StorageAccountMicrosoftEndpointsResponse> getMicrosoftEndpoints() {
@@ -79,7 +79,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * Gets the queue endpoint.
      * 
      */
-    @InputImport(name="queue", required=true)
+    @Import(name="queue", required=true)
       private final String queue;
 
     public String getQueue() {
@@ -90,7 +90,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * Gets the table endpoint.
      * 
      */
-    @InputImport(name="table", required=true)
+    @Import(name="table", required=true)
       private final String table;
 
     public String getTable() {
@@ -101,7 +101,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * Gets the web endpoint.
      * 
      */
-    @InputImport(name="web", required=true)
+    @Import(name="web", required=true)
       private final String web;
 
     public String getWeb() {

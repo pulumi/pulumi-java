@@ -8,12 +8,12 @@ import io.pulumi.awsnative.transfer.outputs.WorkflowStepCopyStepDetailsPropertie
 import io.pulumi.awsnative.transfer.outputs.WorkflowStepCustomStepDetailsProperties;
 import io.pulumi.awsnative.transfer.outputs.WorkflowStepDeleteStepDetailsProperties;
 import io.pulumi.awsnative.transfer.outputs.WorkflowStepTagStepDetailsProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowStep {
     /**
      * Details for a step that performs a file copy.
@@ -37,13 +37,13 @@ public final class WorkflowStep {
     private final @Nullable WorkflowStepTagStepDetailsProperties tagStepDetails;
     private final @Nullable WorkflowStepType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowStep(
-        @OutputCustomType.Parameter("copyStepDetails") @Nullable WorkflowStepCopyStepDetailsProperties copyStepDetails,
-        @OutputCustomType.Parameter("customStepDetails") @Nullable WorkflowStepCustomStepDetailsProperties customStepDetails,
-        @OutputCustomType.Parameter("deleteStepDetails") @Nullable WorkflowStepDeleteStepDetailsProperties deleteStepDetails,
-        @OutputCustomType.Parameter("tagStepDetails") @Nullable WorkflowStepTagStepDetailsProperties tagStepDetails,
-        @OutputCustomType.Parameter("type") @Nullable WorkflowStepType type) {
+        @CustomType.Parameter("copyStepDetails") @Nullable WorkflowStepCopyStepDetailsProperties copyStepDetails,
+        @CustomType.Parameter("customStepDetails") @Nullable WorkflowStepCustomStepDetailsProperties customStepDetails,
+        @CustomType.Parameter("deleteStepDetails") @Nullable WorkflowStepDeleteStepDetailsProperties deleteStepDetails,
+        @CustomType.Parameter("tagStepDetails") @Nullable WorkflowStepTagStepDetailsProperties tagStepDetails,
+        @CustomType.Parameter("type") @Nullable WorkflowStepType type) {
         this.copyStepDetails = copyStepDetails;
         this.customStepDetails = customStepDetails;
         this.deleteStepDetails = deleteStepDetails;

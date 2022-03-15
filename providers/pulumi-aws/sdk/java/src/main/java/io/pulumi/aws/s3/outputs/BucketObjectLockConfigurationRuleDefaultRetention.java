@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketObjectLockConfigurationRuleDefaultRetention {
     /**
      * The number of days that you want to specify for the default retention period.
@@ -28,11 +28,11 @@ public final class BucketObjectLockConfigurationRuleDefaultRetention {
      */
     private final @Nullable Integer years;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketObjectLockConfigurationRuleDefaultRetention(
-        @OutputCustomType.Parameter("days") @Nullable Integer days,
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("years") @Nullable Integer years) {
+        @CustomType.Parameter("days") @Nullable Integer days,
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("years") @Nullable Integer years) {
         this.days = days;
         this.mode = mode;
         this.years = years;

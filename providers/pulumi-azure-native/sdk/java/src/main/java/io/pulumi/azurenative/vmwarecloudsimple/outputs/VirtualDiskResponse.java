@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualDiskResponse {
     /**
      * Disk's Controller id
@@ -38,13 +38,13 @@ public final class VirtualDiskResponse {
      */
     private final String virtualDiskName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualDiskResponse(
-        @OutputCustomType.Parameter("controllerId") String controllerId,
-        @OutputCustomType.Parameter("independenceMode") String independenceMode,
-        @OutputCustomType.Parameter("totalSize") Integer totalSize,
-        @OutputCustomType.Parameter("virtualDiskId") @Nullable String virtualDiskId,
-        @OutputCustomType.Parameter("virtualDiskName") String virtualDiskName) {
+        @CustomType.Parameter("controllerId") String controllerId,
+        @CustomType.Parameter("independenceMode") String independenceMode,
+        @CustomType.Parameter("totalSize") Integer totalSize,
+        @CustomType.Parameter("virtualDiskId") @Nullable String virtualDiskId,
+        @CustomType.Parameter("virtualDiskName") String virtualDiskName) {
         this.controllerId = controllerId;
         this.independenceMode = independenceMode;
         this.totalSize = totalSize;

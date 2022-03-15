@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.nimblestudio.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StudioComponentLicenseServiceConfiguration {
     /**
      * <p>The endpoint of the license service that is accessed by the studio component resource.</p>
@@ -17,8 +17,8 @@ public final class StudioComponentLicenseServiceConfiguration {
      */
     private final @Nullable String endpoint;
 
-    @OutputCustomType.Constructor
-    private StudioComponentLicenseServiceConfiguration(@OutputCustomType.Parameter("endpoint") @Nullable String endpoint) {
+    @CustomType.Constructor
+    private StudioComponentLicenseServiceConfiguration(@CustomType.Parameter("endpoint") @Nullable String endpoint) {
         this.endpoint = endpoint;
     }
 

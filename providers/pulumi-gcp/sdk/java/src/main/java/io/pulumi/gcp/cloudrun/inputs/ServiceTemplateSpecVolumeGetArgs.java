@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecVolumeSecretGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ServiceTemplateSpecVolumeGetArgs extends io.pulumi.resources.
      * Volume's name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -32,7 +32,7 @@ public final class ServiceTemplateSpecVolumeGetArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="secret", required=true)
+    @Import(name="secret", required=true)
       private final Output<ServiceTemplateSpecVolumeSecretGetArgs> secret;
 
     public Output<ServiceTemplateSpecVolumeSecretGetArgs> getSecret() {

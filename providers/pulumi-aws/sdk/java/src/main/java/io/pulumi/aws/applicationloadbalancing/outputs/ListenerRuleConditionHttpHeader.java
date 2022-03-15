@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.applicationloadbalancing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListenerRuleConditionHttpHeader {
     /**
      * Name of HTTP header to search. The maximum size is 40 characters. Comparison is case insensitive. Only RFC7240 characters are supported. Wildcards are not supported. You cannot use HTTP header condition to specify the host header, use a `host-header` condition instead.
@@ -21,10 +21,10 @@ public final class ListenerRuleConditionHttpHeader {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerRuleConditionHttpHeader(
-        @OutputCustomType.Parameter("httpHeaderName") String httpHeaderName,
-        @OutputCustomType.Parameter("values") List<String> values) {
+        @CustomType.Parameter("httpHeaderName") String httpHeaderName,
+        @CustomType.Parameter("values") List<String> values) {
         this.httpHeaderName = httpHeaderName;
         this.values = values;
     }

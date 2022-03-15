@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebActivityAuthenticationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebHookActivityResponse {
     /**
      * Authentication method used for calling the endpoint.
@@ -78,20 +78,20 @@ public final class WebHookActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebHookActivityResponse(
-        @OutputCustomType.Parameter("authentication") @Nullable WebActivityAuthenticationResponse authentication,
-        @OutputCustomType.Parameter("body") @Nullable Object body,
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("headers") @Nullable Object headers,
-        @OutputCustomType.Parameter("method") String method,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("reportStatusOnCallBack") @Nullable Object reportStatusOnCallBack,
-        @OutputCustomType.Parameter("timeout") @Nullable String timeout,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("url") Object url,
-        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
+        @CustomType.Parameter("authentication") @Nullable WebActivityAuthenticationResponse authentication,
+        @CustomType.Parameter("body") @Nullable Object body,
+        @CustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("headers") @Nullable Object headers,
+        @CustomType.Parameter("method") String method,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("reportStatusOnCallBack") @Nullable Object reportStatusOnCallBack,
+        @CustomType.Parameter("timeout") @Nullable String timeout,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("url") Object url,
+        @CustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.authentication = authentication;
         this.body = body;
         this.dependsOn = dependsOn;

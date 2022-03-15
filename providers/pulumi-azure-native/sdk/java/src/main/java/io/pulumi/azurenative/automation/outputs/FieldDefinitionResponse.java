@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FieldDefinitionResponse {
     /**
      * Gets or sets the isEncrypted flag of the connection field definition.
@@ -28,11 +28,11 @@ public final class FieldDefinitionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FieldDefinitionResponse(
-        @OutputCustomType.Parameter("isEncrypted") @Nullable Boolean isEncrypted,
-        @OutputCustomType.Parameter("isOptional") @Nullable Boolean isOptional,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("isEncrypted") @Nullable Boolean isEncrypted,
+        @CustomType.Parameter("isOptional") @Nullable Boolean isOptional,
+        @CustomType.Parameter("type") String type) {
         this.isEncrypted = isEncrypted;
         this.isOptional = isOptional;
         this.type = type;

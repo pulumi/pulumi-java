@@ -4,14 +4,14 @@
 package io.pulumi.aws.appsync.outputs;
 
 import io.pulumi.aws.appsync.outputs.DataSourceDynamodbConfigDeltaSyncConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceDynamodbConfig {
     private final @Nullable DataSourceDynamodbConfigDeltaSyncConfig deltaSyncConfig;
     /**
@@ -31,13 +31,13 @@ public final class DataSourceDynamodbConfig {
     private final @Nullable Boolean useCallerCredentials;
     private final @Nullable Boolean versioned;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceDynamodbConfig(
-        @OutputCustomType.Parameter("deltaSyncConfig") @Nullable DataSourceDynamodbConfigDeltaSyncConfig deltaSyncConfig,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("tableName") String tableName,
-        @OutputCustomType.Parameter("useCallerCredentials") @Nullable Boolean useCallerCredentials,
-        @OutputCustomType.Parameter("versioned") @Nullable Boolean versioned) {
+        @CustomType.Parameter("deltaSyncConfig") @Nullable DataSourceDynamodbConfigDeltaSyncConfig deltaSyncConfig,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("tableName") String tableName,
+        @CustomType.Parameter("useCallerCredentials") @Nullable Boolean useCallerCredentials,
+        @CustomType.Parameter("versioned") @Nullable Boolean versioned) {
         this.deltaSyncConfig = deltaSyncConfig;
         this.region = region;
         this.tableName = tableName;

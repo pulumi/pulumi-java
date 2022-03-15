@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.organizations.inputs.IAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final IAMBindingArgs Empty = new IAMBindingArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<IAMBindingConditionArgs> condition;
 
     public Output<IAMBindingConditionArgs> getCondition() {
@@ -27,7 +27,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * A list of users that the role should apply to. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
      * 
      */
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -38,7 +38,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * The numeric ID of the organization in which you want to create a custom role.
      * 
      */
-    @InputImport(name="orgId", required=true)
+    @Import(name="orgId", required=true)
       private final Output<String> orgId;
 
     public Output<String> getOrgId() {
@@ -51,7 +51,7 @@ public final class IAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

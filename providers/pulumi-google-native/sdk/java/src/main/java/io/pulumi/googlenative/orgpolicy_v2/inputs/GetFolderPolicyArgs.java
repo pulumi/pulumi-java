@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.orgpolicy_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetFolderPolicyArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetFolderPolicyArgs Empty = new GetFolderPolicyArgs();
 
-    @InputImport(name="folderId", required=true)
+    @Import(name="folderId", required=true)
       private final String folderId;
 
     public String getFolderId() {
         return this.folderId;
     }
 
-    @InputImport(name="policyId", required=true)
+    @Import(name="policyId", required=true)
       private final String policyId;
 
     public String getPolicyId() {

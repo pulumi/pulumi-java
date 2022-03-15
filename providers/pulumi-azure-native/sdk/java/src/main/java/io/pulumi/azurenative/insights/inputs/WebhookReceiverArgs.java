@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * Indicates the identifier uri for aad auth.
      * 
      */
-    @InputImport(name="identifierUri")
+    @Import(name="identifierUri")
       private final @Nullable Output<String> identifierUri;
 
     public Output<String> getIdentifierUri() {
@@ -34,7 +34,7 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the webhook receiver. Names must be unique across all receivers within an action group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -45,7 +45,7 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * Indicates the webhook app object Id for aad auth.
      * 
      */
-    @InputImport(name="objectId")
+    @Import(name="objectId")
       private final @Nullable Output<String> objectId;
 
     public Output<String> getObjectId() {
@@ -56,7 +56,7 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * The URI where webhooks should be sent.
      * 
      */
-    @InputImport(name="serviceUri", required=true)
+    @Import(name="serviceUri", required=true)
       private final Output<String> serviceUri;
 
     public Output<String> getServiceUri() {
@@ -67,7 +67,7 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * Indicates the tenant id for aad auth.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
@@ -78,7 +78,7 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * Indicates whether or not use AAD authentication.
      * 
      */
-    @InputImport(name="useAadAuth")
+    @Import(name="useAadAuth")
       private final @Nullable Output<Boolean> useAadAuth;
 
     public Output<Boolean> getUseAadAuth() {
@@ -89,7 +89,7 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * Indicates whether to use common alert schema.
      * 
      */
-    @InputImport(name="useCommonAlertSchema")
+    @Import(name="useCommonAlertSchema")
       private final @Nullable Output<Boolean> useCommonAlertSchema;
 
     public Output<Boolean> getUseCommonAlertSchema() {

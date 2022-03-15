@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigateway.ApiArgs;
@@ -47,7 +47,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Identifier to assign to the API. Must be unique within scope of the parent resource(project)
      * 
      */
-    @OutputExport(name="apiId", type=String.class, parameters={})
+    @Export(name="apiId", type=String.class, parameters={})
     private Output<String> apiId;
 
     /**
@@ -61,7 +61,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -75,7 +75,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * A user-visible name for the API.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -89,7 +89,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * Resource labels to represent user-provided metadata.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -104,7 +104,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * If not specified, a new Service will automatically be created in the same project as this API.
      * 
      */
-    @OutputExport(name="managedService", type=String.class, parameters={})
+    @Export(name="managedService", type=String.class, parameters={})
     private Output<String> managedService;
 
     /**
@@ -119,7 +119,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * The resource name of the API. Format 'projects/{{project}}/locations/global/apis/{{apiId}}'
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -134,7 +134,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

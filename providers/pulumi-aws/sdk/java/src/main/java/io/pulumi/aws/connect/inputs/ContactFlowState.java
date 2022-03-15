@@ -4,7 +4,7 @@
 package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the Contact Flow.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
      * The identifier of the Contact Flow.
      * 
      */
-    @InputImport(name="contactFlowId")
+    @Import(name="contactFlowId")
       private final @Nullable Output<String> contactFlowId;
 
     public Output<String> getContactFlowId() {
@@ -41,14 +41,14 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
      * Specifies the content of the Contact Flow, provided as a JSON string, written in Amazon Connect Contact Flow Language. If defined, the `filename` argument cannot be used.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
         return this.content == null ? Output.empty() : this.content;
     }
 
-    @InputImport(name="contentHash")
+    @Import(name="contentHash")
       private final @Nullable Output<String> contentHash;
 
     public Output<String> getContentHash() {
@@ -59,7 +59,7 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
      * Specifies the description of the Contact Flow.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -70,7 +70,7 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
      * The path to the Contact Flow source within the local filesystem. Conflicts with `content`.
      * 
      */
-    @InputImport(name="filename")
+    @Import(name="filename")
       private final @Nullable Output<String> filename;
 
     public Output<String> getFilename() {
@@ -81,7 +81,7 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
      * Specifies the identifier of the hosting Amazon Connect Instance.
      * 
      */
-    @InputImport(name="instanceId")
+    @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -92,7 +92,7 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
      * Specifies the name of the Contact Flow.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -103,7 +103,7 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
      * Tags to apply to the Contact Flow. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -114,7 +114,7 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -125,7 +125,7 @@ public final class ContactFlowState extends io.pulumi.resources.ResourceArgs {
      * Specifies the type of the Contact Flow. Defaults to `CONTACT_FLOW`. Allowed Values are: `CONTACT_FLOW`, `CUSTOMER_QUEUE`, `CUSTOMER_HOLD`, `CUSTOMER_WHISPER`, `AGENT_HOLD`, `AGENT_WHISPER`, `OUTBOUND_WHISPER`, `AGENT_TRANSFER`, `QUEUE_TRANSFER`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

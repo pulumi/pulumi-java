@@ -17,7 +17,7 @@ import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamS3DestinationCo
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamSplunkDestinationConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -31,79 +31,79 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:kinesisfirehose:DeliveryStream")
 public class DeliveryStream extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="amazonopensearchserviceDestinationConfiguration", type=DeliveryStreamAmazonopensearchserviceDestinationConfiguration.class, parameters={})
+    @Export(name="amazonopensearchserviceDestinationConfiguration", type=DeliveryStreamAmazonopensearchserviceDestinationConfiguration.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamAmazonopensearchserviceDestinationConfiguration> amazonopensearchserviceDestinationConfiguration;
 
     public Output</* @Nullable */ DeliveryStreamAmazonopensearchserviceDestinationConfiguration> getAmazonopensearchserviceDestinationConfiguration() {
         return this.amazonopensearchserviceDestinationConfiguration;
     }
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="deliveryStreamEncryptionConfigurationInput", type=DeliveryStreamEncryptionConfigurationInput.class, parameters={})
+    @Export(name="deliveryStreamEncryptionConfigurationInput", type=DeliveryStreamEncryptionConfigurationInput.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamEncryptionConfigurationInput> deliveryStreamEncryptionConfigurationInput;
 
     public Output</* @Nullable */ DeliveryStreamEncryptionConfigurationInput> getDeliveryStreamEncryptionConfigurationInput() {
         return this.deliveryStreamEncryptionConfigurationInput;
     }
-    @OutputExport(name="deliveryStreamName", type=String.class, parameters={})
+    @Export(name="deliveryStreamName", type=String.class, parameters={})
     private Output</* @Nullable */ String> deliveryStreamName;
 
     public Output</* @Nullable */ String> getDeliveryStreamName() {
         return this.deliveryStreamName;
     }
-    @OutputExport(name="deliveryStreamType", type=DeliveryStreamType.class, parameters={})
+    @Export(name="deliveryStreamType", type=DeliveryStreamType.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamType> deliveryStreamType;
 
     public Output</* @Nullable */ DeliveryStreamType> getDeliveryStreamType() {
         return this.deliveryStreamType;
     }
-    @OutputExport(name="elasticsearchDestinationConfiguration", type=DeliveryStreamElasticsearchDestinationConfiguration.class, parameters={})
+    @Export(name="elasticsearchDestinationConfiguration", type=DeliveryStreamElasticsearchDestinationConfiguration.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamElasticsearchDestinationConfiguration> elasticsearchDestinationConfiguration;
 
     public Output</* @Nullable */ DeliveryStreamElasticsearchDestinationConfiguration> getElasticsearchDestinationConfiguration() {
         return this.elasticsearchDestinationConfiguration;
     }
-    @OutputExport(name="extendedS3DestinationConfiguration", type=DeliveryStreamExtendedS3DestinationConfiguration.class, parameters={})
+    @Export(name="extendedS3DestinationConfiguration", type=DeliveryStreamExtendedS3DestinationConfiguration.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamExtendedS3DestinationConfiguration> extendedS3DestinationConfiguration;
 
     public Output</* @Nullable */ DeliveryStreamExtendedS3DestinationConfiguration> getExtendedS3DestinationConfiguration() {
         return this.extendedS3DestinationConfiguration;
     }
-    @OutputExport(name="httpEndpointDestinationConfiguration", type=DeliveryStreamHttpEndpointDestinationConfiguration.class, parameters={})
+    @Export(name="httpEndpointDestinationConfiguration", type=DeliveryStreamHttpEndpointDestinationConfiguration.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamHttpEndpointDestinationConfiguration> httpEndpointDestinationConfiguration;
 
     public Output</* @Nullable */ DeliveryStreamHttpEndpointDestinationConfiguration> getHttpEndpointDestinationConfiguration() {
         return this.httpEndpointDestinationConfiguration;
     }
-    @OutputExport(name="kinesisStreamSourceConfiguration", type=DeliveryStreamKinesisStreamSourceConfiguration.class, parameters={})
+    @Export(name="kinesisStreamSourceConfiguration", type=DeliveryStreamKinesisStreamSourceConfiguration.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamKinesisStreamSourceConfiguration> kinesisStreamSourceConfiguration;
 
     public Output</* @Nullable */ DeliveryStreamKinesisStreamSourceConfiguration> getKinesisStreamSourceConfiguration() {
         return this.kinesisStreamSourceConfiguration;
     }
-    @OutputExport(name="redshiftDestinationConfiguration", type=DeliveryStreamRedshiftDestinationConfiguration.class, parameters={})
+    @Export(name="redshiftDestinationConfiguration", type=DeliveryStreamRedshiftDestinationConfiguration.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamRedshiftDestinationConfiguration> redshiftDestinationConfiguration;
 
     public Output</* @Nullable */ DeliveryStreamRedshiftDestinationConfiguration> getRedshiftDestinationConfiguration() {
         return this.redshiftDestinationConfiguration;
     }
-    @OutputExport(name="s3DestinationConfiguration", type=DeliveryStreamS3DestinationConfiguration.class, parameters={})
+    @Export(name="s3DestinationConfiguration", type=DeliveryStreamS3DestinationConfiguration.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamS3DestinationConfiguration> s3DestinationConfiguration;
 
     public Output</* @Nullable */ DeliveryStreamS3DestinationConfiguration> getS3DestinationConfiguration() {
         return this.s3DestinationConfiguration;
     }
-    @OutputExport(name="splunkDestinationConfiguration", type=DeliveryStreamSplunkDestinationConfiguration.class, parameters={})
+    @Export(name="splunkDestinationConfiguration", type=DeliveryStreamSplunkDestinationConfiguration.class, parameters={})
     private Output</* @Nullable */ DeliveryStreamSplunkDestinationConfiguration> splunkDestinationConfiguration;
 
     public Output</* @Nullable */ DeliveryStreamSplunkDestinationConfiguration> getSplunkDestinationConfiguration() {
         return this.splunkDestinationConfiguration;
     }
-    @OutputExport(name="tags", type=List.class, parameters={DeliveryStreamTag.class})
+    @Export(name="tags", type=List.class, parameters={DeliveryStreamTag.class})
     private Output</* @Nullable */ List<DeliveryStreamTag>> tags;
 
     public Output</* @Nullable */ List<DeliveryStreamTag>> getTags() {

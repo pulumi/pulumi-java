@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.EventResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListWebhookEventsResult {
     /**
      * The URI that can be used to request the next list of events.
@@ -24,10 +24,10 @@ public final class ListWebhookEventsResult {
      */
     private final @Nullable List<EventResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListWebhookEventsResult(
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
-        @OutputCustomType.Parameter("value") @Nullable List<EventResponse> value) {
+        @CustomType.Parameter("nextLink") @Nullable String nextLink,
+        @CustomType.Parameter("value") @Nullable List<EventResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53.ResolverFirewallRuleArgs;
 import io.pulumi.aws.route53.inputs.ResolverFirewallRuleState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class ResolverFirewallRule extends io.pulumi.resources.CustomResource {
      * The action that DNS Firewall should take on a DNS query when it matches one of the domains in the rule's domain list. Valid values: `ALLOW`, `BLOCK`, `ALERT`.
      * 
      */
-    @OutputExport(name="action", type=String.class, parameters={})
+    @Export(name="action", type=String.class, parameters={})
     private Output<String> action;
 
     /**
@@ -47,7 +47,7 @@ public class ResolverFirewallRule extends io.pulumi.resources.CustomResource {
      * The DNS record's type. This determines the format of the record value that you provided in BlockOverrideDomain. Value values: `CNAME`.
      * 
      */
-    @OutputExport(name="blockOverrideDnsType", type=String.class, parameters={})
+    @Export(name="blockOverrideDnsType", type=String.class, parameters={})
     private Output</* @Nullable */ String> blockOverrideDnsType;
 
     /**
@@ -61,7 +61,7 @@ public class ResolverFirewallRule extends io.pulumi.resources.CustomResource {
      * The custom DNS record to send back in response to the query.
      * 
      */
-    @OutputExport(name="blockOverrideDomain", type=String.class, parameters={})
+    @Export(name="blockOverrideDomain", type=String.class, parameters={})
     private Output</* @Nullable */ String> blockOverrideDomain;
 
     /**
@@ -75,7 +75,7 @@ public class ResolverFirewallRule extends io.pulumi.resources.CustomResource {
      * The recommended amount of time, in seconds, for the DNS resolver or web browser to cache the provided override record. Minimum value of 0. Maximum value of 604800.
      * 
      */
-    @OutputExport(name="blockOverrideTtl", type=Integer.class, parameters={})
+    @Export(name="blockOverrideTtl", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> blockOverrideTtl;
 
     /**
@@ -89,7 +89,7 @@ public class ResolverFirewallRule extends io.pulumi.resources.CustomResource {
      * The way that you want DNS Firewall to block the request. Valid values: `NODATA`, `NXDOMAIN`, `OVERRIDE`.
      * 
      */
-    @OutputExport(name="blockResponse", type=String.class, parameters={})
+    @Export(name="blockResponse", type=String.class, parameters={})
     private Output</* @Nullable */ String> blockResponse;
 
     /**
@@ -103,7 +103,7 @@ public class ResolverFirewallRule extends io.pulumi.resources.CustomResource {
      * The ID of the domain list that you want to use in the rule.
      * 
      */
-    @OutputExport(name="firewallDomainListId", type=String.class, parameters={})
+    @Export(name="firewallDomainListId", type=String.class, parameters={})
     private Output<String> firewallDomainListId;
 
     /**
@@ -117,7 +117,7 @@ public class ResolverFirewallRule extends io.pulumi.resources.CustomResource {
      * The unique identifier of the firewall rule group where you want to create the rule.
      * 
      */
-    @OutputExport(name="firewallRuleGroupId", type=String.class, parameters={})
+    @Export(name="firewallRuleGroupId", type=String.class, parameters={})
     private Output<String> firewallRuleGroupId;
 
     /**
@@ -131,7 +131,7 @@ public class ResolverFirewallRule extends io.pulumi.resources.CustomResource {
      * A name that lets you identify the rule, to manage and use it.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -145,7 +145,7 @@ public class ResolverFirewallRule extends io.pulumi.resources.CustomResource {
      * The setting that determines the processing order of the rule in the rule group. DNS Firewall processes the rules in a rule group by order of priority, starting from the lowest setting.
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output<Integer> priority;
 
     /**

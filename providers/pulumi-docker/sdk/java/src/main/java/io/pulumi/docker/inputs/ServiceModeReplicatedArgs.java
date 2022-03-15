@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class ServiceModeReplicatedArgs extends io.pulumi.resources.Resourc
 
     public static final ServiceModeReplicatedArgs Empty = new ServiceModeReplicatedArgs();
 
-    @InputImport(name="replicas")
+    @Import(name="replicas")
       private final @Nullable Output<Integer> replicas;
 
     public Output<Integer> getReplicas() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. List of CIDR ranges to match based on source IP address. At least one IP block should match. Single IP (e.g., "1.2.3.4") and CIDR (e.g., "1.2.3.0/24") are supported. Authorization based on source IP alone should be avoided. The IP addresses of any load balancers or proxies should be considered untrusted.
      * 
      */
-    @InputImport(name="ipBlocks", required=true)
+    @Import(name="ipBlocks", required=true)
       private final List<String> ipBlocks;
 
     public List<String> getIpBlocks() {
@@ -32,7 +32,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. List of peer identities to match for authorization. At least one principal should match. Each peer can be an exact match, or a prefix match (example, "namespace/*") or a suffix match (example, // *{@literal /}service-account") or a presence match "*". Authorization based on the principal name without certificate validation (configured by ServerTlsPolicy resource) is considered insecure.
      * 
      */
-    @InputImport(name="principals", required=true)
+    @Import(name="principals", required=true)
       private final List<String> principals;
 
     public List<String> getPrincipals() {

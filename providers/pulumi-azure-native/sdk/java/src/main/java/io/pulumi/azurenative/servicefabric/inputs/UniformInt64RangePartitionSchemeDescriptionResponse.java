@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends i
      * The number of partitions.
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Integer count;
 
     public Integer getCount() {
@@ -33,7 +33,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends i
      * should be split between the partition ‘count’
      * 
      */
-    @InputImport(name="highKey", required=true)
+    @Import(name="highKey", required=true)
       private final String highKey;
 
     public String getHighKey() {
@@ -45,7 +45,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends i
      * should be split between the partition ‘count’
      * 
      */
-    @InputImport(name="lowKey", required=true)
+    @Import(name="lowKey", required=true)
       private final String lowKey;
 
     public String getLowKey() {
@@ -57,7 +57,7 @@ public final class UniformInt64RangePartitionSchemeDescriptionResponse extends i
      * Expected value is 'UniformInt64Range'.
      * 
      */
-    @InputImport(name="partitionScheme", required=true)
+    @Import(name="partitionScheme", required=true)
       private final String partitionScheme;
 
     public String getPartitionScheme() {

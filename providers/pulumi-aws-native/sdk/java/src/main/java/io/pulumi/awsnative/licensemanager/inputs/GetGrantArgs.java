@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.licensemanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetGrantArgs extends io.pulumi.resources.InvokeArgs {
      * Arn of the grant.
      * 
      */
-    @InputImport(name="grantArn", required=true)
+    @Import(name="grantArn", required=true)
       private final String grantArn;
 
     public String getGrantArn() {

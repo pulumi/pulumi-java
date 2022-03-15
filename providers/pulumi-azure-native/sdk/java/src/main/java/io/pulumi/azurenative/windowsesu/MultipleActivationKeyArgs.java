@@ -7,7 +7,7 @@ import io.pulumi.azurenative.windowsesu.enums.OsType;
 import io.pulumi.azurenative.windowsesu.enums.SupportType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * Agreement number under which the key is requested.
      * 
      */
-    @InputImport(name="agreementNumber")
+    @Import(name="agreementNumber")
       private final @Nullable Output<String> agreementNumber;
 
     public Output<String> getAgreementNumber() {
@@ -35,7 +35,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * Number of activations/servers using the MAK key.
      * 
      */
-    @InputImport(name="installedServerNumber")
+    @Import(name="installedServerNumber")
       private final @Nullable Output<Integer> installedServerNumber;
 
     public Output<Integer> getInstalledServerNumber() {
@@ -46,7 +46,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * <code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise.
      * 
      */
-    @InputImport(name="isEligible")
+    @Import(name="isEligible")
       private final @Nullable Output<Boolean> isEligible;
 
     public Output<Boolean> getIsEligible() {
@@ -57,7 +57,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -68,7 +68,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * The name of the MAK key.
      * 
      */
-    @InputImport(name="multipleActivationKeyName")
+    @Import(name="multipleActivationKeyName")
       private final @Nullable Output<String> multipleActivationKeyName;
 
     public Output<String> getMultipleActivationKeyName() {
@@ -79,7 +79,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * Type of OS for which the key is requested.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable Output<Either<String,OsType>> osType;
 
     public Output<Either<String,OsType>> getOsType() {
@@ -90,7 +90,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -101,7 +101,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * Type of support
      * 
      */
-    @InputImport(name="supportType")
+    @Import(name="supportType")
       private final @Nullable Output<Either<String,SupportType>> supportType;
 
     public Output<Either<String,SupportType>> getSupportType() {
@@ -112,7 +112,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

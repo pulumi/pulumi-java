@@ -6,7 +6,7 @@ package io.pulumi.aws.codeartifact;
 import io.pulumi.aws.codeartifact.inputs.RepositoryExternalConnectionsArgs;
 import io.pulumi.aws.codeartifact.inputs.RepositoryUpstreamArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the repository.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The domain that contains the created repository.
      * 
      */
-    @InputImport(name="domain", required=true)
+    @Import(name="domain", required=true)
       private final Output<String> domain;
 
     public Output<String> getDomain() {
@@ -44,7 +44,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The account number of the AWS account that owns the domain.
      * 
      */
-    @InputImport(name="domainOwner")
+    @Import(name="domainOwner")
       private final @Nullable Output<String> domainOwner;
 
     public Output<String> getDomainOwner() {
@@ -55,7 +55,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.
      * 
      */
-    @InputImport(name="externalConnections")
+    @Import(name="externalConnections")
       private final @Nullable Output<RepositoryExternalConnectionsArgs> externalConnections;
 
     public Output<RepositoryExternalConnectionsArgs> getExternalConnections() {
@@ -66,7 +66,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the repository to create.
      * 
      */
-    @InputImport(name="repository", required=true)
+    @Import(name="repository", required=true)
       private final Output<String> repository;
 
     public Output<String> getRepository() {
@@ -77,7 +77,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -88,7 +88,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * A list of upstream repositories to associate with the repository. The order of the upstream repositories in the list determines their priority order when AWS CodeArtifact looks for a requested package version. see Upstream
      * 
      */
-    @InputImport(name="upstreams")
+    @Import(name="upstreams")
       private final @Nullable Output<List<RepositoryUpstreamArgs>> upstreams;
 
     public Output<List<RepositoryUpstreamArgs>> getUpstreams() {

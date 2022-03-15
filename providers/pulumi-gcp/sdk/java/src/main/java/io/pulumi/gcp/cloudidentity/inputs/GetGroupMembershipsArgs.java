@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudidentity.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetGroupMembershipsArgs extends io.pulumi.resources.InvokeArg
      * The parent Group resource under which to lookup the Membership names. Must be of the form groups/{group_id}.
      * 
      */
-    @InputImport(name="group", required=true)
+    @Import(name="group", required=true)
       private final String group;
 
     public String getGroup() {

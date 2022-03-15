@@ -9,7 +9,7 @@ import io.pulumi.azurenative.customerinsights.outputs.PropertyDefinitionResponse
 import io.pulumi.azurenative.customerinsights.outputs.StrongIdResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * The api entity set name. This becomes the odata entity set name for the entity Type being referred in this object.
      * 
      */
-    @OutputExport(name="apiEntitySetName", type=String.class, parameters={})
+    @Export(name="apiEntitySetName", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiEntitySetName;
 
     /**
@@ -52,7 +52,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * The attributes for the Type.
      * 
      */
-    @OutputExport(name="attributes", type=Map.class, parameters={String.class, List.class})
+    @Export(name="attributes", type=Map.class, parameters={String.class, List.class})
     private Output</* @Nullable */ Map<String,List<String>>> attributes;
 
     /**
@@ -66,7 +66,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * Localized descriptions for the property.
      * 
      */
-    @OutputExport(name="description", type=Map.class, parameters={String.class, String.class})
+    @Export(name="description", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> description;
 
     /**
@@ -80,7 +80,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * Localized display names for the property.
      * 
      */
-    @OutputExport(name="displayName", type=Map.class, parameters={String.class, String.class})
+    @Export(name="displayName", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> displayName;
 
     /**
@@ -94,7 +94,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * Type of entity.
      * 
      */
-    @OutputExport(name="entityType", type=String.class, parameters={})
+    @Export(name="entityType", type=String.class, parameters={})
     private Output</* @Nullable */ String> entityType;
 
     /**
@@ -108,7 +108,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * The properties of the Profile.
      * 
      */
-    @OutputExport(name="fields", type=List.class, parameters={PropertyDefinitionResponse.class})
+    @Export(name="fields", type=List.class, parameters={PropertyDefinitionResponse.class})
     private Output</* @Nullable */ List<PropertyDefinitionResponse>> fields;
 
     /**
@@ -122,7 +122,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * The instance count.
      * 
      */
-    @OutputExport(name="instancesCount", type=Integer.class, parameters={})
+    @Export(name="instancesCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> instancesCount;
 
     /**
@@ -136,7 +136,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * Large Image associated with the Property or EntityType.
      * 
      */
-    @OutputExport(name="largeImage", type=String.class, parameters={})
+    @Export(name="largeImage", type=String.class, parameters={})
     private Output</* @Nullable */ String> largeImage;
 
     /**
@@ -150,7 +150,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * The last changed time for the type definition.
      * 
      */
-    @OutputExport(name="lastChangedUtc", type=String.class, parameters={})
+    @Export(name="lastChangedUtc", type=String.class, parameters={})
     private Output<String> lastChangedUtc;
 
     /**
@@ -164,7 +164,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * Any custom localized attributes for the Type.
      * 
      */
-    @OutputExport(name="localizedAttributes", type=Map.class, parameters={String.class, Map.class})
+    @Export(name="localizedAttributes", type=Map.class, parameters={String.class, Map.class})
     private Output</* @Nullable */ Map<String,Map<String,String>>> localizedAttributes;
 
     /**
@@ -178,7 +178,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * Medium Image associated with the Property or EntityType.
      * 
      */
-    @OutputExport(name="mediumImage", type=String.class, parameters={})
+    @Export(name="mediumImage", type=String.class, parameters={})
     private Output</* @Nullable */ String> mediumImage;
 
     /**
@@ -192,7 +192,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -206,7 +206,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * Provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -220,7 +220,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * The schema org link. This helps ACI identify and suggest semantic models.
      * 
      */
-    @OutputExport(name="schemaItemTypeLink", type=String.class, parameters={})
+    @Export(name="schemaItemTypeLink", type=String.class, parameters={})
     private Output</* @Nullable */ String> schemaItemTypeLink;
 
     /**
@@ -234,7 +234,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * Small Image associated with the Property or EntityType.
      * 
      */
-    @OutputExport(name="smallImage", type=String.class, parameters={})
+    @Export(name="smallImage", type=String.class, parameters={})
     private Output</* @Nullable */ String> smallImage;
 
     /**
@@ -248,7 +248,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * The strong IDs.
      * 
      */
-    @OutputExport(name="strongIds", type=List.class, parameters={StrongIdResponse.class})
+    @Export(name="strongIds", type=List.class, parameters={StrongIdResponse.class})
     private Output</* @Nullable */ List<StrongIdResponse>> strongIds;
 
     /**
@@ -262,7 +262,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * The hub name.
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
@@ -276,7 +276,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * The timestamp property name. Represents the time when the interaction or profile update happened.
      * 
      */
-    @OutputExport(name="timestampFieldName", type=String.class, parameters={})
+    @Export(name="timestampFieldName", type=String.class, parameters={})
     private Output</* @Nullable */ String> timestampFieldName;
 
     /**
@@ -290,7 +290,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -304,7 +304,7 @@ public class Profile extends io.pulumi.resources.CustomResource {
      * The name of the entity.
      * 
      */
-    @OutputExport(name="typeName", type=String.class, parameters={})
+    @Export(name="typeName", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeName;
 
     /**

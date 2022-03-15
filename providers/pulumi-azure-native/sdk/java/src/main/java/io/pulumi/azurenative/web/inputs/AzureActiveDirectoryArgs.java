@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.inputs.AzureActiveDirectoryLoginArgs;
 import io.pulumi.azurenative.web.inputs.AzureActiveDirectoryRegistrationArgs;
 import io.pulumi.azurenative.web.inputs.AzureActiveDirectoryValidationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * <code>false</code> if the Azure Active Directory provider should not be enabled despite the set registration; otherwise, <code>true</code>.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -38,7 +38,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * read or write to this property.
      * 
      */
-    @InputImport(name="isAutoProvisioned")
+    @Import(name="isAutoProvisioned")
       private final @Nullable Output<Boolean> isAutoProvisioned;
 
     public Output<Boolean> getIsAutoProvisioned() {
@@ -49,7 +49,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * The configuration settings of the Azure Active Directory login flow.
      * 
      */
-    @InputImport(name="login")
+    @Import(name="login")
       private final @Nullable Output<AzureActiveDirectoryLoginArgs> login;
 
     public Output<AzureActiveDirectoryLoginArgs> getLogin() {
@@ -60,7 +60,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * The configuration settings of the Azure Active Directory app registration.
      * 
      */
-    @InputImport(name="registration")
+    @Import(name="registration")
       private final @Nullable Output<AzureActiveDirectoryRegistrationArgs> registration;
 
     public Output<AzureActiveDirectoryRegistrationArgs> getRegistration() {
@@ -71,7 +71,7 @@ public final class AzureActiveDirectoryArgs extends io.pulumi.resources.Resource
      * The configuration settings of the Azure Active Directory token validation flow.
      * 
      */
-    @InputImport(name="validation")
+    @Import(name="validation")
       private final @Nullable Output<AzureActiveDirectoryValidationArgs> validation;
 
     public Output<AzureActiveDirectoryValidationArgs> getValidation() {

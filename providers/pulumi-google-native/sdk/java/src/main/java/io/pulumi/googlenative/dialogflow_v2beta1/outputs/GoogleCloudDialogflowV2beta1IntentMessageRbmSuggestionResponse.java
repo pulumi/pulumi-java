@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse {
     /**
      * Predefined client side actions that user can choose
@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionRespons
      */
     private final GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse(
-        @OutputCustomType.Parameter("action") GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action,
-        @OutputCustomType.Parameter("reply") GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply) {
+        @CustomType.Parameter("action") GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionResponse action,
+        @CustomType.Parameter("reply") GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyResponse reply) {
         this.action = action;
         this.reply = reply;
     }

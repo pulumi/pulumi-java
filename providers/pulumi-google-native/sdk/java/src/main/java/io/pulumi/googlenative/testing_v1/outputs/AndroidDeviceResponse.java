@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AndroidDeviceResponse {
     /**
      * The id of the Android device to be used. Use the TestEnvironmentDiscoveryService to get supported options.
@@ -30,12 +30,12 @@ public final class AndroidDeviceResponse {
      */
     private final String orientation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AndroidDeviceResponse(
-        @OutputCustomType.Parameter("androidModelId") String androidModelId,
-        @OutputCustomType.Parameter("androidVersionId") String androidVersionId,
-        @OutputCustomType.Parameter("locale") String locale,
-        @OutputCustomType.Parameter("orientation") String orientation) {
+        @CustomType.Parameter("androidModelId") String androidModelId,
+        @CustomType.Parameter("androidVersionId") String androidVersionId,
+        @CustomType.Parameter("locale") String locale,
+        @CustomType.Parameter("orientation") String orientation) {
         this.androidModelId = androidModelId;
         this.androidVersionId = androidVersionId;
         this.locale = locale;

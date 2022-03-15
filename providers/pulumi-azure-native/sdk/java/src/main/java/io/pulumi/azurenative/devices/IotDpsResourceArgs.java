@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devices;
 import io.pulumi.azurenative.devices.inputs.IotDpsPropertiesDescriptionArgs;
 import io.pulumi.azurenative.devices.inputs.IotDpsSkuInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -32,7 +32,7 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
      * Service specific properties for a provisioning service
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<IotDpsPropertiesDescriptionArgs> properties;
 
     public Output<IotDpsPropertiesDescriptionArgs> getProperties() {
@@ -43,7 +43,7 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of provisioning service to create or update.
      * 
      */
-    @InputImport(name="provisioningServiceName")
+    @Import(name="provisioningServiceName")
       private final @Nullable Output<String> provisioningServiceName;
 
     public Output<String> getProvisioningServiceName() {
@@ -54,7 +54,7 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource group identifier.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
      * Sku info for a provisioning Service.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<IotDpsSkuInfoArgs> sku;
 
     public Output<IotDpsSkuInfoArgs> getSku() {
@@ -76,7 +76,7 @@ public final class IotDpsResourceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

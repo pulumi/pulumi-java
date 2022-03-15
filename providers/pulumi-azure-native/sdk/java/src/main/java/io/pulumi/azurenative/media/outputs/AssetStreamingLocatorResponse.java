@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AssetStreamingLocatorResponse {
     /**
      * Asset Name.
@@ -50,16 +50,16 @@ public final class AssetStreamingLocatorResponse {
      */
     private final String streamingPolicyName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssetStreamingLocatorResponse(
-        @OutputCustomType.Parameter("assetName") String assetName,
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("defaultContentKeyPolicyName") String defaultContentKeyPolicyName,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("streamingLocatorId") String streamingLocatorId,
-        @OutputCustomType.Parameter("streamingPolicyName") String streamingPolicyName) {
+        @CustomType.Parameter("assetName") String assetName,
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("defaultContentKeyPolicyName") String defaultContentKeyPolicyName,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("streamingLocatorId") String streamingLocatorId,
+        @CustomType.Parameter("streamingPolicyName") String streamingPolicyName) {
         this.assetName = assetName;
         this.created = created;
         this.defaultContentKeyPolicyName = defaultContentKeyPolicyName;

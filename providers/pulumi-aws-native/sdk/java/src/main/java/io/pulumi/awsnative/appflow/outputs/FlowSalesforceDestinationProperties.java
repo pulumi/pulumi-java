@@ -5,14 +5,14 @@ package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowWriteOperationType;
 import io.pulumi.awsnative.appflow.outputs.FlowErrorHandlingConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowSalesforceDestinationProperties {
     private final @Nullable FlowErrorHandlingConfig errorHandlingConfig;
     /**
@@ -23,12 +23,12 @@ public final class FlowSalesforceDestinationProperties {
     private final String object;
     private final @Nullable FlowWriteOperationType writeOperationType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowSalesforceDestinationProperties(
-        @OutputCustomType.Parameter("errorHandlingConfig") @Nullable FlowErrorHandlingConfig errorHandlingConfig,
-        @OutputCustomType.Parameter("idFieldNames") @Nullable List<String> idFieldNames,
-        @OutputCustomType.Parameter("object") String object,
-        @OutputCustomType.Parameter("writeOperationType") @Nullable FlowWriteOperationType writeOperationType) {
+        @CustomType.Parameter("errorHandlingConfig") @Nullable FlowErrorHandlingConfig errorHandlingConfig,
+        @CustomType.Parameter("idFieldNames") @Nullable List<String> idFieldNames,
+        @CustomType.Parameter("object") String object,
+        @CustomType.Parameter("writeOperationType") @Nullable FlowWriteOperationType writeOperationType) {
         this.errorHandlingConfig = errorHandlingConfig;
         this.idFieldNames = idFieldNames;
         this.object = object;

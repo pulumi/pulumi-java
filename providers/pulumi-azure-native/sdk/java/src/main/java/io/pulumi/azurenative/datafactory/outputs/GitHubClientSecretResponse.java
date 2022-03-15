@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GitHubClientSecretResponse {
     /**
      * Bring your own app client secret AKV URL.
@@ -22,10 +22,10 @@ public final class GitHubClientSecretResponse {
      */
     private final @Nullable String byoaSecretName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GitHubClientSecretResponse(
-        @OutputCustomType.Parameter("byoaSecretAkvUrl") @Nullable String byoaSecretAkvUrl,
-        @OutputCustomType.Parameter("byoaSecretName") @Nullable String byoaSecretName) {
+        @CustomType.Parameter("byoaSecretAkvUrl") @Nullable String byoaSecretAkvUrl,
+        @CustomType.Parameter("byoaSecretName") @Nullable String byoaSecretName) {
         this.byoaSecretAkvUrl = byoaSecretAkvUrl;
         this.byoaSecretName = byoaSecretName;
     }

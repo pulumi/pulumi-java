@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs;
@@ -23,7 +23,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="requestHeaderToAdds")
+    @Import(name="requestHeaderToAdds")
       private final @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs>> requestHeaderToAdds;
 
     public Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAddGetArgs>> getRequestHeaderToAdds() {
@@ -35,7 +35,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="requestHeaderToRemoves")
+    @Import(name="requestHeaderToRemoves")
       private final @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs>> requestHeaderToRemoves;
 
     public Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemoveGetArgs>> getRequestHeaderToRemoves() {
@@ -48,7 +48,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="responseHeaderToAdds")
+    @Import(name="responseHeaderToAdds")
       private final @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs>> responseHeaderToAdds;
 
     public Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs>> getResponseHeaderToAdds() {
@@ -60,7 +60,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionGetArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="responseHeaderToRemoves")
+    @Import(name="responseHeaderToRemoves")
       private final @Nullable Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs>> responseHeaderToRemoves;
 
     public Output<List<EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemoveGetArgs>> getResponseHeaderToRemoves() {

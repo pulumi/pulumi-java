@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dns_v1beta2.ManagedZoneArgs;
@@ -26,7 +26,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="google-native:dns/v1beta2:ManagedZone")
 public class ManagedZone extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="cloudLoggingConfig", type=ManagedZoneCloudLoggingConfigResponse.class, parameters={})
+    @Export(name="cloudLoggingConfig", type=ManagedZoneCloudLoggingConfigResponse.class, parameters={})
     private Output<ManagedZoneCloudLoggingConfigResponse> cloudLoggingConfig;
 
     public Output<ManagedZoneCloudLoggingConfigResponse> getCloudLoggingConfig() {
@@ -36,7 +36,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * The time that this resource was created on the server. This is in RFC3339 text format. Output only.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -50,7 +50,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * A mutable string of at most 1024 characters associated with this resource for the user's convenience. Has no effect on the managed zone's function.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -64,7 +64,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * The DNS name of this managed zone, for instance "example.com.".
      * 
      */
-    @OutputExport(name="dnsName", type=String.class, parameters={})
+    @Export(name="dnsName", type=String.class, parameters={})
     private Output<String> dnsName;
 
     /**
@@ -78,7 +78,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * DNSSEC configuration.
      * 
      */
-    @OutputExport(name="dnssecConfig", type=ManagedZoneDnsSecConfigResponse.class, parameters={})
+    @Export(name="dnssecConfig", type=ManagedZoneDnsSecConfigResponse.class, parameters={})
     private Output<ManagedZoneDnsSecConfigResponse> dnssecConfig;
 
     /**
@@ -92,7 +92,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * The presence for this field indicates that outbound forwarding is enabled for this zone. The value of this field contains the set of destinations to forward to.
      * 
      */
-    @OutputExport(name="forwardingConfig", type=ManagedZoneForwardingConfigResponse.class, parameters={})
+    @Export(name="forwardingConfig", type=ManagedZoneForwardingConfigResponse.class, parameters={})
     private Output<ManagedZoneForwardingConfigResponse> forwardingConfig;
 
     /**
@@ -102,7 +102,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
     public Output<ManagedZoneForwardingConfigResponse> getForwardingConfig() {
         return this.forwardingConfig;
     }
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     public Output<String> getKind() {
@@ -112,7 +112,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * User labels.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -126,7 +126,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * User assigned name for this resource. Must be unique within the project. The name must be 1-63 characters long, must begin with a letter, end with a letter or digit, and only contain lowercase letters, digits or dashes.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -140,7 +140,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * Optionally specifies the NameServerSet for this ManagedZone. A NameServerSet is a set of DNS name servers that all host the same ManagedZones. Most users leave this field unset. If you need to use this field, contact your account team.
      * 
      */
-    @OutputExport(name="nameServerSet", type=String.class, parameters={})
+    @Export(name="nameServerSet", type=String.class, parameters={})
     private Output<String> nameServerSet;
 
     /**
@@ -154,7 +154,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * Delegate your managed_zone to these virtual name servers; defined by the server (output only)
      * 
      */
-    @OutputExport(name="nameServers", type=List.class, parameters={String.class})
+    @Export(name="nameServers", type=List.class, parameters={String.class})
     private Output<List<String>> nameServers;
 
     /**
@@ -168,7 +168,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * The presence of this field indicates that DNS Peering is enabled for this zone. The value of this field contains the network to peer with.
      * 
      */
-    @OutputExport(name="peeringConfig", type=ManagedZonePeeringConfigResponse.class, parameters={})
+    @Export(name="peeringConfig", type=ManagedZonePeeringConfigResponse.class, parameters={})
     private Output<ManagedZonePeeringConfigResponse> peeringConfig;
 
     /**
@@ -182,7 +182,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * For privately visible zones, the set of Virtual Private Cloud resources that the zone is visible from.
      * 
      */
-    @OutputExport(name="privateVisibilityConfig", type=ManagedZonePrivateVisibilityConfigResponse.class, parameters={})
+    @Export(name="privateVisibilityConfig", type=ManagedZonePrivateVisibilityConfigResponse.class, parameters={})
     private Output<ManagedZonePrivateVisibilityConfigResponse> privateVisibilityConfig;
 
     /**
@@ -196,7 +196,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * The presence of this field indicates that this is a managed reverse lookup zone and Cloud DNS resolves reverse lookup queries using automatically configured records for VPC resources. This only applies to networks listed under private_visibility_config.
      * 
      */
-    @OutputExport(name="reverseLookupConfig", type=ManagedZoneReverseLookupConfigResponse.class, parameters={})
+    @Export(name="reverseLookupConfig", type=ManagedZoneReverseLookupConfigResponse.class, parameters={})
     private Output<ManagedZoneReverseLookupConfigResponse> reverseLookupConfig;
 
     /**
@@ -210,7 +210,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * This field links to the associated service directory namespace. Do not set this field for public zones or forwarding zones.
      * 
      */
-    @OutputExport(name="serviceDirectoryConfig", type=ManagedZoneServiceDirectoryConfigResponse.class, parameters={})
+    @Export(name="serviceDirectoryConfig", type=ManagedZoneServiceDirectoryConfigResponse.class, parameters={})
     private Output<ManagedZoneServiceDirectoryConfigResponse> serviceDirectoryConfig;
 
     /**
@@ -224,7 +224,7 @@ public class ManagedZone extends io.pulumi.resources.CustomResource {
      * The zone's visibility: public zones are exposed to the Internet, while private zones are visible only to Virtual Private Cloud resources.
      * 
      */
-    @OutputExport(name="visibility", type=String.class, parameters={})
+    @Export(name="visibility", type=String.class, parameters={})
     private Output<String> visibility;
 
     /**

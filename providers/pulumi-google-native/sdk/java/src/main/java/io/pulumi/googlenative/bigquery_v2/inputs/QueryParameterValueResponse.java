@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +18,7 @@ public final class QueryParameterValueResponse extends io.pulumi.resources.Invok
      * [Optional] The array values, if this is an array type.
      * 
      */
-    @InputImport(name="arrayValues", required=true)
+    @Import(name="arrayValues", required=true)
       private final List<QueryParameterValueResponse> arrayValues;
 
     public List<QueryParameterValueResponse> getArrayValues() {
@@ -29,7 +29,7 @@ public final class QueryParameterValueResponse extends io.pulumi.resources.Invok
      * [Optional] The struct field values, in order of the struct type's declaration.
      * 
      */
-    @InputImport(name="structValues", required=true)
+    @Import(name="structValues", required=true)
       private final Map<String,String> structValues;
 
     public Map<String,String> getStructValues() {
@@ -40,7 +40,7 @@ public final class QueryParameterValueResponse extends io.pulumi.resources.Invok
      * [Optional] The value of this value, if a simple scalar type.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

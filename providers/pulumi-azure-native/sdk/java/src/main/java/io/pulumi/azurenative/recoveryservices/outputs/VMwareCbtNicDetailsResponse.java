@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VMwareCbtNicDetailsResponse {
     /**
      * A value indicating whether this is the primary NIC.
@@ -57,17 +57,17 @@ public final class VMwareCbtNicDetailsResponse {
      */
     private final @Nullable String targetSubnetName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VMwareCbtNicDetailsResponse(
-        @OutputCustomType.Parameter("isPrimaryNic") @Nullable String isPrimaryNic,
-        @OutputCustomType.Parameter("isSelectedForMigration") @Nullable String isSelectedForMigration,
-        @OutputCustomType.Parameter("nicId") String nicId,
-        @OutputCustomType.Parameter("sourceIPAddress") String sourceIPAddress,
-        @OutputCustomType.Parameter("sourceIPAddressType") String sourceIPAddressType,
-        @OutputCustomType.Parameter("sourceNetworkId") String sourceNetworkId,
-        @OutputCustomType.Parameter("targetIPAddress") @Nullable String targetIPAddress,
-        @OutputCustomType.Parameter("targetIPAddressType") @Nullable String targetIPAddressType,
-        @OutputCustomType.Parameter("targetSubnetName") @Nullable String targetSubnetName) {
+        @CustomType.Parameter("isPrimaryNic") @Nullable String isPrimaryNic,
+        @CustomType.Parameter("isSelectedForMigration") @Nullable String isSelectedForMigration,
+        @CustomType.Parameter("nicId") String nicId,
+        @CustomType.Parameter("sourceIPAddress") String sourceIPAddress,
+        @CustomType.Parameter("sourceIPAddressType") String sourceIPAddressType,
+        @CustomType.Parameter("sourceNetworkId") String sourceNetworkId,
+        @CustomType.Parameter("targetIPAddress") @Nullable String targetIPAddress,
+        @CustomType.Parameter("targetIPAddressType") @Nullable String targetIPAddressType,
+        @CustomType.Parameter("targetSubnetName") @Nullable String targetSubnetName) {
         this.isPrimaryNic = isPrimaryNic;
         this.isSelectedForMigration = isSelectedForMigration;
         this.nicId = nicId;

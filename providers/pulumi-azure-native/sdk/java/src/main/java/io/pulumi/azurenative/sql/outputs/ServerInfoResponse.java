@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServerInfoResponse {
     /**
      * Server Id.
@@ -15,8 +15,8 @@ public final class ServerInfoResponse {
      */
     private final String serverId;
 
-    @OutputCustomType.Constructor
-    private ServerInfoResponse(@OutputCustomType.Parameter("serverId") String serverId) {
+    @CustomType.Constructor
+    private ServerInfoResponse(@CustomType.Parameter("serverId") String serverId) {
         this.serverId = serverId;
     }
 

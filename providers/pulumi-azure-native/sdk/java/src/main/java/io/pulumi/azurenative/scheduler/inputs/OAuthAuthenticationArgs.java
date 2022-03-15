@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
      * Gets or sets the audience.
      * 
      */
-    @InputImport(name="audience")
+    @Import(name="audience")
       private final @Nullable Output<String> audience;
 
     public Output<String> getAudience() {
@@ -29,7 +29,7 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
      * Gets or sets the client identifier.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -40,7 +40,7 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
      * Gets or sets the secret, return value will always be empty.
      * 
      */
-    @InputImport(name="secret")
+    @Import(name="secret")
       private final @Nullable Output<String> secret;
 
     public Output<String> getSecret() {
@@ -51,7 +51,7 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
      * Gets or sets the tenant.
      * 
      */
-    @InputImport(name="tenant")
+    @Import(name="tenant")
       private final @Nullable Output<String> tenant;
 
     public Output<String> getTenant() {
@@ -63,7 +63,7 @@ public final class OAuthAuthenticationArgs extends io.pulumi.resources.ResourceA
      * Expected value is 'ActiveDirectoryOAuth'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.autoscaling.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GroupMixedInstancesPolicyInstancesDistribution {
     /**
      * Strategy to use when launching on-demand instances. Valid values: `prioritized`. Default: `prioritized`.
@@ -43,14 +43,14 @@ public final class GroupMixedInstancesPolicyInstancesDistribution {
      */
     private final @Nullable String spotMaxPrice;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GroupMixedInstancesPolicyInstancesDistribution(
-        @OutputCustomType.Parameter("onDemandAllocationStrategy") @Nullable String onDemandAllocationStrategy,
-        @OutputCustomType.Parameter("onDemandBaseCapacity") @Nullable Integer onDemandBaseCapacity,
-        @OutputCustomType.Parameter("onDemandPercentageAboveBaseCapacity") @Nullable Integer onDemandPercentageAboveBaseCapacity,
-        @OutputCustomType.Parameter("spotAllocationStrategy") @Nullable String spotAllocationStrategy,
-        @OutputCustomType.Parameter("spotInstancePools") @Nullable Integer spotInstancePools,
-        @OutputCustomType.Parameter("spotMaxPrice") @Nullable String spotMaxPrice) {
+        @CustomType.Parameter("onDemandAllocationStrategy") @Nullable String onDemandAllocationStrategy,
+        @CustomType.Parameter("onDemandBaseCapacity") @Nullable Integer onDemandBaseCapacity,
+        @CustomType.Parameter("onDemandPercentageAboveBaseCapacity") @Nullable Integer onDemandPercentageAboveBaseCapacity,
+        @CustomType.Parameter("spotAllocationStrategy") @Nullable String spotAllocationStrategy,
+        @CustomType.Parameter("spotInstancePools") @Nullable Integer spotInstancePools,
+        @CustomType.Parameter("spotMaxPrice") @Nullable String spotMaxPrice) {
         this.onDemandAllocationStrategy = onDemandAllocationStrategy;
         this.onDemandBaseCapacity = onDemandBaseCapacity;
         this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;

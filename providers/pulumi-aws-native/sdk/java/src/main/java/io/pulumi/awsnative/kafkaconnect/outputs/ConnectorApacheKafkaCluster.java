@@ -4,11 +4,11 @@
 package io.pulumi.awsnative.kafkaconnect.outputs;
 
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorVpc;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorApacheKafkaCluster {
     /**
      * The bootstrap servers string of the Apache Kafka cluster.
@@ -17,10 +17,10 @@ public final class ConnectorApacheKafkaCluster {
     private final String bootstrapServers;
     private final ConnectorVpc vpc;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorApacheKafkaCluster(
-        @OutputCustomType.Parameter("bootstrapServers") String bootstrapServers,
-        @OutputCustomType.Parameter("vpc") ConnectorVpc vpc) {
+        @CustomType.Parameter("bootstrapServers") String bootstrapServers,
+        @CustomType.Parameter("vpc") ConnectorVpc vpc) {
         this.bootstrapServers = bootstrapServers;
         this.vpc = vpc;
     }

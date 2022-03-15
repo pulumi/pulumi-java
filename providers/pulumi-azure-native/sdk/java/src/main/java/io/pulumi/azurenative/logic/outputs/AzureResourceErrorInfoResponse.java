@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureResourceErrorInfoResponse {
     /**
      * The error code.
@@ -27,11 +27,11 @@ public final class AzureResourceErrorInfoResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureResourceErrorInfoResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("details") @Nullable List<AzureResourceErrorInfoResponse> details,
-        @OutputCustomType.Parameter("message") String message) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("details") @Nullable List<AzureResourceErrorInfoResponse> details,
+        @CustomType.Parameter("message") String message) {
         this.code = code;
         this.details = details;
         this.message = message;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.FrontDoorMatchConditionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomRuleResponse {
     /**
      * Describes what action to be applied when rule matches.
@@ -55,16 +55,16 @@ public final class CustomRuleResponse {
      */
     private final String ruleType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomRuleResponse(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
-        @OutputCustomType.Parameter("matchConditions") List<FrontDoorMatchConditionResponse> matchConditions,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("rateLimitDurationInMinutes") @Nullable Integer rateLimitDurationInMinutes,
-        @OutputCustomType.Parameter("rateLimitThreshold") @Nullable Integer rateLimitThreshold,
-        @OutputCustomType.Parameter("ruleType") String ruleType) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("enabledState") @Nullable String enabledState,
+        @CustomType.Parameter("matchConditions") List<FrontDoorMatchConditionResponse> matchConditions,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("rateLimitDurationInMinutes") @Nullable Integer rateLimitDurationInMinutes,
+        @CustomType.Parameter("rateLimitThreshold") @Nullable Integer rateLimitThreshold,
+        @CustomType.Parameter("ruleType") String ruleType) {
         this.action = action;
         this.enabledState = enabledState;
         this.matchConditions = matchConditions;

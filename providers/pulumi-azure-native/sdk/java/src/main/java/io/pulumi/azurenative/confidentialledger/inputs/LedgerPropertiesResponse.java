@@ -5,7 +5,7 @@ package io.pulumi.azurenative.confidentialledger.inputs;
 
 import io.pulumi.azurenative.confidentialledger.inputs.AADBasedSecurityPrincipalResponse;
 import io.pulumi.azurenative.confidentialledger.inputs.CertBasedSecurityPrincipalResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
      * Array of all AAD based Security Principals.
      * 
      */
-    @InputImport(name="aadBasedSecurityPrincipals")
+    @Import(name="aadBasedSecurityPrincipals")
       private final @Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals;
 
     public List<AADBasedSecurityPrincipalResponse> getAadBasedSecurityPrincipals() {
@@ -36,7 +36,7 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
      * Array of all cert based Security Principals.
      * 
      */
-    @InputImport(name="certBasedSecurityPrincipals")
+    @Import(name="certBasedSecurityPrincipals")
       private final @Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals;
 
     public List<CertBasedSecurityPrincipalResponse> getCertBasedSecurityPrincipals() {
@@ -47,7 +47,7 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
      * Endpoint for accessing network identity.
      * 
      */
-    @InputImport(name="identityServiceUri", required=true)
+    @Import(name="identityServiceUri", required=true)
       private final String identityServiceUri;
 
     public String getIdentityServiceUri() {
@@ -58,7 +58,7 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
      * Internal namespace for the Ledger
      * 
      */
-    @InputImport(name="ledgerInternalNamespace", required=true)
+    @Import(name="ledgerInternalNamespace", required=true)
       private final String ledgerInternalNamespace;
 
     public String getLedgerInternalNamespace() {
@@ -69,7 +69,7 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
      * Unique name for the Confidential Ledger.
      * 
      */
-    @InputImport(name="ledgerName", required=true)
+    @Import(name="ledgerName", required=true)
       private final String ledgerName;
 
     public String getLedgerName() {
@@ -80,7 +80,7 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
      * Name of the Blob Storage Account for saving ledger files
      * 
      */
-    @InputImport(name="ledgerStorageAccount")
+    @Import(name="ledgerStorageAccount")
       private final @Nullable String ledgerStorageAccount;
 
     public Optional<String> getLedgerStorageAccount() {
@@ -91,7 +91,7 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
      * Type of Confidential Ledger
      * 
      */
-    @InputImport(name="ledgerType")
+    @Import(name="ledgerType")
       private final @Nullable String ledgerType;
 
     public Optional<String> getLedgerType() {
@@ -102,7 +102,7 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
      * Endpoint for calling Ledger Service.
      * 
      */
-    @InputImport(name="ledgerUri", required=true)
+    @Import(name="ledgerUri", required=true)
       private final String ledgerUri;
 
     public String getLedgerUri() {
@@ -113,7 +113,7 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
      * Provisioning state of Ledger Resource
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

@@ -5,14 +5,14 @@ package io.pulumi.azurenative.deploymentmanager.outputs;
 
 import io.pulumi.azurenative.deploymentmanager.outputs.RolloutStepResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.ServiceUnitArtifactsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceUnitResponse {
     /**
      * The artifacts for the service unit.
@@ -40,13 +40,13 @@ public final class ServiceUnitResponse {
      */
     private final String targetResourceGroup;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceUnitResponse(
-        @OutputCustomType.Parameter("artifacts") @Nullable ServiceUnitArtifactsResponse artifacts,
-        @OutputCustomType.Parameter("deploymentMode") String deploymentMode,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("steps") @Nullable List<RolloutStepResponse> steps,
-        @OutputCustomType.Parameter("targetResourceGroup") String targetResourceGroup) {
+        @CustomType.Parameter("artifacts") @Nullable ServiceUnitArtifactsResponse artifacts,
+        @CustomType.Parameter("deploymentMode") String deploymentMode,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("steps") @Nullable List<RolloutStepResponse> steps,
+        @CustomType.Parameter("targetResourceGroup") String targetResourceGroup) {
         this.artifacts = artifacts;
         this.deploymentMode = deploymentMode;
         this.name = name;

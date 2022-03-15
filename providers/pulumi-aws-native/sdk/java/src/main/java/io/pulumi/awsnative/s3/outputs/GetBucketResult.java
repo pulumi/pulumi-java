@@ -21,14 +21,14 @@ import io.pulumi.awsnative.s3.outputs.BucketReplicationConfiguration;
 import io.pulumi.awsnative.s3.outputs.BucketTag;
 import io.pulumi.awsnative.s3.outputs.BucketVersioningConfiguration;
 import io.pulumi.awsnative.s3.outputs.BucketWebsiteConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketResult {
     /**
      * Configuration for the transfer acceleration state.
@@ -130,31 +130,31 @@ public final class GetBucketResult {
      */
     private final @Nullable String websiteURL;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBucketResult(
-        @OutputCustomType.Parameter("accelerateConfiguration") @Nullable BucketAccelerateConfiguration accelerateConfiguration,
-        @OutputCustomType.Parameter("accessControl") @Nullable BucketAccessControl accessControl,
-        @OutputCustomType.Parameter("analyticsConfigurations") @Nullable List<BucketAnalyticsConfiguration> analyticsConfigurations,
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("bucketEncryption") @Nullable BucketEncryption bucketEncryption,
-        @OutputCustomType.Parameter("corsConfiguration") @Nullable BucketCorsConfiguration corsConfiguration,
-        @OutputCustomType.Parameter("domainName") @Nullable String domainName,
-        @OutputCustomType.Parameter("dualStackDomainName") @Nullable String dualStackDomainName,
-        @OutputCustomType.Parameter("intelligentTieringConfigurations") @Nullable List<BucketIntelligentTieringConfiguration> intelligentTieringConfigurations,
-        @OutputCustomType.Parameter("inventoryConfigurations") @Nullable List<BucketInventoryConfiguration> inventoryConfigurations,
-        @OutputCustomType.Parameter("lifecycleConfiguration") @Nullable BucketLifecycleConfiguration lifecycleConfiguration,
-        @OutputCustomType.Parameter("loggingConfiguration") @Nullable BucketLoggingConfiguration loggingConfiguration,
-        @OutputCustomType.Parameter("metricsConfigurations") @Nullable List<BucketMetricsConfiguration> metricsConfigurations,
-        @OutputCustomType.Parameter("notificationConfiguration") @Nullable BucketNotificationConfiguration notificationConfiguration,
-        @OutputCustomType.Parameter("objectLockConfiguration") @Nullable BucketObjectLockConfiguration objectLockConfiguration,
-        @OutputCustomType.Parameter("ownershipControls") @Nullable BucketOwnershipControls ownershipControls,
-        @OutputCustomType.Parameter("publicAccessBlockConfiguration") @Nullable BucketPublicAccessBlockConfiguration publicAccessBlockConfiguration,
-        @OutputCustomType.Parameter("regionalDomainName") @Nullable String regionalDomainName,
-        @OutputCustomType.Parameter("replicationConfiguration") @Nullable BucketReplicationConfiguration replicationConfiguration,
-        @OutputCustomType.Parameter("tags") @Nullable List<BucketTag> tags,
-        @OutputCustomType.Parameter("versioningConfiguration") @Nullable BucketVersioningConfiguration versioningConfiguration,
-        @OutputCustomType.Parameter("websiteConfiguration") @Nullable BucketWebsiteConfiguration websiteConfiguration,
-        @OutputCustomType.Parameter("websiteURL") @Nullable String websiteURL) {
+        @CustomType.Parameter("accelerateConfiguration") @Nullable BucketAccelerateConfiguration accelerateConfiguration,
+        @CustomType.Parameter("accessControl") @Nullable BucketAccessControl accessControl,
+        @CustomType.Parameter("analyticsConfigurations") @Nullable List<BucketAnalyticsConfiguration> analyticsConfigurations,
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("bucketEncryption") @Nullable BucketEncryption bucketEncryption,
+        @CustomType.Parameter("corsConfiguration") @Nullable BucketCorsConfiguration corsConfiguration,
+        @CustomType.Parameter("domainName") @Nullable String domainName,
+        @CustomType.Parameter("dualStackDomainName") @Nullable String dualStackDomainName,
+        @CustomType.Parameter("intelligentTieringConfigurations") @Nullable List<BucketIntelligentTieringConfiguration> intelligentTieringConfigurations,
+        @CustomType.Parameter("inventoryConfigurations") @Nullable List<BucketInventoryConfiguration> inventoryConfigurations,
+        @CustomType.Parameter("lifecycleConfiguration") @Nullable BucketLifecycleConfiguration lifecycleConfiguration,
+        @CustomType.Parameter("loggingConfiguration") @Nullable BucketLoggingConfiguration loggingConfiguration,
+        @CustomType.Parameter("metricsConfigurations") @Nullable List<BucketMetricsConfiguration> metricsConfigurations,
+        @CustomType.Parameter("notificationConfiguration") @Nullable BucketNotificationConfiguration notificationConfiguration,
+        @CustomType.Parameter("objectLockConfiguration") @Nullable BucketObjectLockConfiguration objectLockConfiguration,
+        @CustomType.Parameter("ownershipControls") @Nullable BucketOwnershipControls ownershipControls,
+        @CustomType.Parameter("publicAccessBlockConfiguration") @Nullable BucketPublicAccessBlockConfiguration publicAccessBlockConfiguration,
+        @CustomType.Parameter("regionalDomainName") @Nullable String regionalDomainName,
+        @CustomType.Parameter("replicationConfiguration") @Nullable BucketReplicationConfiguration replicationConfiguration,
+        @CustomType.Parameter("tags") @Nullable List<BucketTag> tags,
+        @CustomType.Parameter("versioningConfiguration") @Nullable BucketVersioningConfiguration versioningConfiguration,
+        @CustomType.Parameter("websiteConfiguration") @Nullable BucketWebsiteConfiguration websiteConfiguration,
+        @CustomType.Parameter("websiteURL") @Nullable String websiteURL) {
         this.accelerateConfiguration = accelerateConfiguration;
         this.accessControl = accessControl;
         this.analyticsConfigurations = analyticsConfigurations;

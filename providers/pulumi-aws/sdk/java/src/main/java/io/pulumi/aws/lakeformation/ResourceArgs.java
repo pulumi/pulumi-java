@@ -4,7 +4,7 @@
 package io.pulumi.aws.lakeformation;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the resource, an S3 path.
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
      * Role that has read/write access to the resource. If not provided, the Lake Formation service-linked role must exist and is used.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {

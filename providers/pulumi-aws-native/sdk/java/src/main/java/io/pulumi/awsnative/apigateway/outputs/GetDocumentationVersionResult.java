@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDocumentationVersionResult {
     /**
      * The description of the API documentation snapshot.
@@ -17,8 +17,8 @@ public final class GetDocumentationVersionResult {
      */
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor
-    private GetDocumentationVersionResult(@OutputCustomType.Parameter("description") @Nullable String description) {
+    @CustomType.Constructor
+    private GetDocumentationVersionResult(@CustomType.Parameter("description") @Nullable String description) {
         this.description = description;
     }
 

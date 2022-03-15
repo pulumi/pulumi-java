@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyRuleMatchLayer4Config {
     /**
      * The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (`tcp`, `udp`, `icmp`, `esp`, `ah`, `ipip`, `sctp`), or the IP protocol number.
@@ -22,10 +22,10 @@ public final class FirewallPolicyRuleMatchLayer4Config {
      */
     private final @Nullable List<String> ports;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyRuleMatchLayer4Config(
-        @OutputCustomType.Parameter("ipProtocol") String ipProtocol,
-        @OutputCustomType.Parameter("ports") @Nullable List<String> ports) {
+        @CustomType.Parameter("ipProtocol") String ipProtocol,
+        @CustomType.Parameter("ports") @Nullable List<String> ports) {
         this.ipProtocol = ipProtocol;
         this.ports = ports;
     }

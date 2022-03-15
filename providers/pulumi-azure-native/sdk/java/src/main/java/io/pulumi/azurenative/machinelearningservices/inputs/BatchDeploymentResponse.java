@@ -10,7 +10,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ComputeConfiguration
 import io.pulumi.azurenative.machinelearningservices.inputs.DataPathAssetReferenceResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.IdAssetReferenceResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.OutputPathAssetReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.Object;
@@ -34,7 +34,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * Code configuration for the endpoint deployment.
      * 
      */
-    @InputImport(name="codeConfiguration")
+    @Import(name="codeConfiguration")
       private final @Nullable CodeConfigurationResponse codeConfiguration;
 
     public Optional<CodeConfigurationResponse> getCodeConfiguration() {
@@ -45,7 +45,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * Configuration for compute binding.
      * 
      */
-    @InputImport(name="compute")
+    @Import(name="compute")
       private final @Nullable ComputeConfigurationResponse compute;
 
     public Optional<ComputeConfigurationResponse> getCompute() {
@@ -56,7 +56,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * Description of the endpoint deployment.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -67,7 +67,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * ARM resource ID of the environment specification for the endpoint deployment.
      * 
      */
-    @InputImport(name="environmentId")
+    @Import(name="environmentId")
       private final @Nullable String environmentId;
 
     public Optional<String> getEnvironmentId() {
@@ -78,7 +78,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * Environment variables configuration for the deployment.
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Map<String,String> environmentVariables;
 
     public Map<String,String> getEnvironmentVariables() {
@@ -93,7 +93,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * If set to -1 (the lower bound), all failures during batch inference will be ignored.
      * 
      */
-    @InputImport(name="errorThreshold")
+    @Import(name="errorThreshold")
       private final @Nullable Integer errorThreshold;
 
     public Optional<Integer> getErrorThreshold() {
@@ -104,7 +104,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * Logging level for batch inference operation.
      * 
      */
-    @InputImport(name="loggingLevel")
+    @Import(name="loggingLevel")
       private final @Nullable String loggingLevel;
 
     public Optional<String> getLoggingLevel() {
@@ -117,7 +117,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * For TabularDataset, this is the size of the records in bytes, per mini-batch.
      * 
      */
-    @InputImport(name="miniBatchSize")
+    @Import(name="miniBatchSize")
       private final @Nullable Double miniBatchSize;
 
     public Optional<Double> getMiniBatchSize() {
@@ -128,7 +128,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * Reference to the model asset for the endpoint deployment.
      * 
      */
-    @InputImport(name="model")
+    @Import(name="model")
       private final @Nullable Object model;
 
     public Object getModel() {
@@ -139,7 +139,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * Output configuration for the batch inference operation.
      * 
      */
-    @InputImport(name="outputConfiguration")
+    @Import(name="outputConfiguration")
       private final @Nullable BatchOutputConfigurationResponse outputConfiguration;
 
     public Optional<BatchOutputConfigurationResponse> getOutputConfiguration() {
@@ -150,7 +150,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * Partition keys list used for Named partitioning.
      * 
      */
-    @InputImport(name="partitionKeys")
+    @Import(name="partitionKeys")
       private final @Nullable List<String> partitionKeys;
 
     public List<String> getPartitionKeys() {
@@ -161,7 +161,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * Property dictionary. Properties can be added, but not removed or altered.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -172,7 +172,7 @@ public final class BatchDeploymentResponse extends io.pulumi.resources.InvokeArg
      * Retry Settings for the batch inference operation.
      * 
      */
-    @InputImport(name="retrySettings")
+    @Import(name="retrySettings")
       private final @Nullable BatchRetrySettingsResponse retrySettings;
 
     public Optional<BatchRetrySettingsResponse> getRetrySettings() {

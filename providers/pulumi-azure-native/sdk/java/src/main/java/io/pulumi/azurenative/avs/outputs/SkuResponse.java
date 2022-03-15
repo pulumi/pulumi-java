@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SkuResponse {
     /**
      * The name of the SKU.
@@ -15,8 +15,8 @@ public final class SkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private SkuResponse(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private SkuResponse(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

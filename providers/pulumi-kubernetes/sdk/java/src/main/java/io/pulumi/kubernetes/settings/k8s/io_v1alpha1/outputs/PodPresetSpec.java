@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.settings.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.EnvFromSource;
 import io.pulumi.kubernetes.core_v1.outputs.EnvVar;
 import io.pulumi.kubernetes.core_v1.outputs.Volume;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PodPresetSpec {
     /**
      * Env defines the collection of EnvVar to inject into containers.
@@ -42,13 +42,13 @@ public final class PodPresetSpec {
      */
     private final @Nullable List<Volume> volumes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PodPresetSpec(
-        @OutputCustomType.Parameter("env") @Nullable List<EnvVar> env,
-        @OutputCustomType.Parameter("envFrom") @Nullable List<EnvFromSource> envFrom,
-        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector,
-        @OutputCustomType.Parameter("volumeMounts") @Nullable List<VolumeMount> volumeMounts,
-        @OutputCustomType.Parameter("volumes") @Nullable List<Volume> volumes) {
+        @CustomType.Parameter("env") @Nullable List<EnvVar> env,
+        @CustomType.Parameter("envFrom") @Nullable List<EnvFromSource> envFrom,
+        @CustomType.Parameter("selector") @Nullable LabelSelector selector,
+        @CustomType.Parameter("volumeMounts") @Nullable List<VolumeMount> volumeMounts,
+        @CustomType.Parameter("volumes") @Nullable List<Volume> volumes) {
         this.env = env;
         this.envFrom = envFrom;
         this.selector = selector;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
      * The message id.
      * 
      */
-    @InputImport(name="messageId", required=true)
+    @Import(name="messageId", required=true)
       private final Output<String> messageId;
 
     public Output<String> getMessageId() {
@@ -33,7 +33,7 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
      * The schema name.
      * 
      */
-    @InputImport(name="schemaName", required=true)
+    @Import(name="schemaName", required=true)
       private final Output<String> schemaName;
 
     public Output<String> getSchemaName() {
@@ -44,7 +44,7 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
      * The schema version.
      * 
      */
-    @InputImport(name="schemaVersion", required=true)
+    @Import(name="schemaVersion", required=true)
       private final Output<String> schemaVersion;
 
     public Output<String> getSchemaVersion() {
@@ -55,7 +55,7 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
      * The sender application id.
      * 
      */
-    @InputImport(name="senderApplicationId")
+    @Import(name="senderApplicationId")
       private final @Nullable Output<String> senderApplicationId;
 
     public Output<String> getSenderApplicationId() {

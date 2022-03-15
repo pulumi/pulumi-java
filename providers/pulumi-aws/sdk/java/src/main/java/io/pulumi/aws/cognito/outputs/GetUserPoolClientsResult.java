@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetUserPoolClientsResult {
     /**
      * List of Cognito user pool client IDs.
@@ -27,12 +27,12 @@ public final class GetUserPoolClientsResult {
     private final String id;
     private final String userPoolId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserPoolClientsResult(
-        @OutputCustomType.Parameter("clientIds") List<String> clientIds,
-        @OutputCustomType.Parameter("clientNames") List<String> clientNames,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("userPoolId") String userPoolId) {
+        @CustomType.Parameter("clientIds") List<String> clientIds,
+        @CustomType.Parameter("clientNames") List<String> clientNames,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("userPoolId") String userPoolId) {
         this.clientIds = clientIds;
         this.clientNames = clientNames;
         this.id = id;

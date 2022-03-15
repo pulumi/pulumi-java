@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScriptReferenceResponse {
     /**
      * Optional command line arguments passed to the script to run.
@@ -32,12 +32,12 @@ public final class ScriptReferenceResponse {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScriptReferenceResponse(
-        @OutputCustomType.Parameter("scriptArguments") @Nullable String scriptArguments,
-        @OutputCustomType.Parameter("scriptData") @Nullable String scriptData,
-        @OutputCustomType.Parameter("scriptSource") @Nullable String scriptSource,
-        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
+        @CustomType.Parameter("scriptArguments") @Nullable String scriptArguments,
+        @CustomType.Parameter("scriptData") @Nullable String scriptData,
+        @CustomType.Parameter("scriptSource") @Nullable String scriptSource,
+        @CustomType.Parameter("timeout") @Nullable String timeout) {
         this.scriptArguments = scriptArguments;
         this.scriptData = scriptData;
         this.scriptSource = scriptSource;

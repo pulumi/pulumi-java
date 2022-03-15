@@ -14,7 +14,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.outputs.StorageConfigurationSetti
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.WsfcDomainCredentialsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +42,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * Auto backup settings for SQL Server.
      * 
      */
-    @OutputExport(name="autoBackupSettings", type=AutoBackupSettingsResponse.class, parameters={})
+    @Export(name="autoBackupSettings", type=AutoBackupSettingsResponse.class, parameters={})
     private Output</* @Nullable */ AutoBackupSettingsResponse> autoBackupSettings;
 
     /**
@@ -56,7 +56,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * Auto patching settings for applying critical security updates to SQL virtual machine.
      * 
      */
-    @OutputExport(name="autoPatchingSettings", type=AutoPatchingSettingsResponse.class, parameters={})
+    @Export(name="autoPatchingSettings", type=AutoPatchingSettingsResponse.class, parameters={})
     private Output</* @Nullable */ AutoPatchingSettingsResponse> autoPatchingSettings;
 
     /**
@@ -70,7 +70,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * Azure Active Directory identity of the server.
      * 
      */
-    @OutputExport(name="identity", type=ResourceIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ResourceIdentityResponse.class, parameters={})
     private Output</* @Nullable */ ResourceIdentityResponse> identity;
 
     /**
@@ -84,7 +84,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * Key vault credential settings.
      * 
      */
-    @OutputExport(name="keyVaultCredentialSettings", type=KeyVaultCredentialSettingsResponse.class, parameters={})
+    @Export(name="keyVaultCredentialSettings", type=KeyVaultCredentialSettingsResponse.class, parameters={})
     private Output</* @Nullable */ KeyVaultCredentialSettingsResponse> keyVaultCredentialSettings;
 
     /**
@@ -98,7 +98,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -112,7 +112,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -126,7 +126,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * Provisioning state to track the async operation status.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -140,7 +140,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * SQL Server configuration management settings.
      * 
      */
-    @OutputExport(name="serverConfigurationsManagementSettings", type=ServerConfigurationsManagementSettingsResponse.class, parameters={})
+    @Export(name="serverConfigurationsManagementSettings", type=ServerConfigurationsManagementSettingsResponse.class, parameters={})
     private Output</* @Nullable */ ServerConfigurationsManagementSettingsResponse> serverConfigurationsManagementSettings;
 
     /**
@@ -154,7 +154,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * SQL image offer. Examples include SQL2016-WS2016, SQL2017-WS2016.
      * 
      */
-    @OutputExport(name="sqlImageOffer", type=String.class, parameters={})
+    @Export(name="sqlImageOffer", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlImageOffer;
 
     /**
@@ -168,7 +168,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * SQL Server edition type.
      * 
      */
-    @OutputExport(name="sqlImageSku", type=String.class, parameters={})
+    @Export(name="sqlImageSku", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlImageSku;
 
     /**
@@ -182,7 +182,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * SQL Server Management type.
      * 
      */
-    @OutputExport(name="sqlManagement", type=String.class, parameters={})
+    @Export(name="sqlManagement", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlManagement;
 
     /**
@@ -196,7 +196,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * SQL Server license type.
      * 
      */
-    @OutputExport(name="sqlServerLicenseType", type=String.class, parameters={})
+    @Export(name="sqlServerLicenseType", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlServerLicenseType;
 
     /**
@@ -210,7 +210,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * ARM resource id of the SQL virtual machine group this SQL virtual machine is or will be part of.
      * 
      */
-    @OutputExport(name="sqlVirtualMachineGroupResourceId", type=String.class, parameters={})
+    @Export(name="sqlVirtualMachineGroupResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlVirtualMachineGroupResourceId;
 
     /**
@@ -224,7 +224,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * Storage Configuration Settings.
      * 
      */
-    @OutputExport(name="storageConfigurationSettings", type=StorageConfigurationSettingsResponse.class, parameters={})
+    @Export(name="storageConfigurationSettings", type=StorageConfigurationSettingsResponse.class, parameters={})
     private Output</* @Nullable */ StorageConfigurationSettingsResponse> storageConfigurationSettings;
 
     /**
@@ -238,7 +238,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -252,7 +252,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -266,7 +266,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * ARM Resource id of underlying virtual machine created from SQL marketplace image.
      * 
      */
-    @OutputExport(name="virtualMachineResourceId", type=String.class, parameters={})
+    @Export(name="virtualMachineResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> virtualMachineResourceId;
 
     /**
@@ -280,7 +280,7 @@ public class SqlVirtualMachine extends io.pulumi.resources.CustomResource {
      * Domain credentials for setting up Windows Server Failover Cluster for SQL availability group.
      * 
      */
-    @OutputExport(name="wsfcDomainCredentials", type=WsfcDomainCredentialsResponse.class, parameters={})
+    @Export(name="wsfcDomainCredentials", type=WsfcDomainCredentialsResponse.class, parameters={})
     private Output</* @Nullable */ WsfcDomainCredentialsResponse> wsfcDomainCredentials;
 
     /**

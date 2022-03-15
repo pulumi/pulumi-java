@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.ServiceMeshAnalysisMessageResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceMeshFeatureStateResponse {
     /**
      * Results of running Service Mesh analyzers.
@@ -16,8 +16,8 @@ public final class ServiceMeshFeatureStateResponse {
      */
     private final List<ServiceMeshAnalysisMessageResponse> analysisMessages;
 
-    @OutputCustomType.Constructor
-    private ServiceMeshFeatureStateResponse(@OutputCustomType.Parameter("analysisMessages") List<ServiceMeshAnalysisMessageResponse> analysisMessages) {
+    @CustomType.Constructor
+    private ServiceMeshFeatureStateResponse(@CustomType.Parameter("analysisMessages") List<ServiceMeshAnalysisMessageResponse> analysisMessages) {
         this.analysisMessages = analysisMessages;
     }
 

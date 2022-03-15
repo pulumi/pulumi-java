@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iam.outputs;
 
 import io.pulumi.awsnative.iam.outputs.RolePolicy;
 import io.pulumi.awsnative.iam.outputs.RoleTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRoleResult {
     /**
      * The Amazon Resource Name (ARN) for the role.
@@ -62,17 +62,17 @@ public final class GetRoleResult {
      */
     private final @Nullable List<RoleTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRoleResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("assumeRolePolicyDocument") @Nullable Object assumeRolePolicyDocument,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("managedPolicyArns") @Nullable List<String> managedPolicyArns,
-        @OutputCustomType.Parameter("maxSessionDuration") @Nullable Integer maxSessionDuration,
-        @OutputCustomType.Parameter("permissionsBoundary") @Nullable String permissionsBoundary,
-        @OutputCustomType.Parameter("policies") @Nullable List<RolePolicy> policies,
-        @OutputCustomType.Parameter("roleId") @Nullable String roleId,
-        @OutputCustomType.Parameter("tags") @Nullable List<RoleTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("assumeRolePolicyDocument") @Nullable Object assumeRolePolicyDocument,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("managedPolicyArns") @Nullable List<String> managedPolicyArns,
+        @CustomType.Parameter("maxSessionDuration") @Nullable Integer maxSessionDuration,
+        @CustomType.Parameter("permissionsBoundary") @Nullable String permissionsBoundary,
+        @CustomType.Parameter("policies") @Nullable List<RolePolicy> policies,
+        @CustomType.Parameter("roleId") @Nullable String roleId,
+        @CustomType.Parameter("tags") @Nullable List<RoleTag> tags) {
         this.arn = arn;
         this.assumeRolePolicyDocument = assumeRolePolicyDocument;
         this.description = description;

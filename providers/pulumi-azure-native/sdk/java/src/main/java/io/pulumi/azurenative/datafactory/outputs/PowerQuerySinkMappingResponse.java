@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.PowerQuerySinkResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PowerQuerySinkMappingResponse {
     /**
      * List of sinks mapped to Power Query mashup query.
@@ -24,10 +24,10 @@ public final class PowerQuerySinkMappingResponse {
      */
     private final @Nullable String queryName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PowerQuerySinkMappingResponse(
-        @OutputCustomType.Parameter("dataflowSinks") @Nullable List<PowerQuerySinkResponse> dataflowSinks,
-        @OutputCustomType.Parameter("queryName") @Nullable String queryName) {
+        @CustomType.Parameter("dataflowSinks") @Nullable List<PowerQuerySinkResponse> dataflowSinks,
+        @CustomType.Parameter("queryName") @Nullable String queryName) {
         this.dataflowSinks = dataflowSinks;
         this.queryName = queryName;
     }

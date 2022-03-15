@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DiskSourceImageEncryptionKey {
     /**
      * The self link of the encryption key used to encrypt the disk. Also called KmsKeyName
@@ -40,12 +40,12 @@ public final class DiskSourceImageEncryptionKey {
      */
     private final @Nullable String sha256;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiskSourceImageEncryptionKey(
-        @OutputCustomType.Parameter("kmsKeySelfLink") @Nullable String kmsKeySelfLink,
-        @OutputCustomType.Parameter("kmsKeyServiceAccount") @Nullable String kmsKeyServiceAccount,
-        @OutputCustomType.Parameter("rawKey") @Nullable String rawKey,
-        @OutputCustomType.Parameter("sha256") @Nullable String sha256) {
+        @CustomType.Parameter("kmsKeySelfLink") @Nullable String kmsKeySelfLink,
+        @CustomType.Parameter("kmsKeyServiceAccount") @Nullable String kmsKeyServiceAccount,
+        @CustomType.Parameter("rawKey") @Nullable String rawKey,
+        @CustomType.Parameter("sha256") @Nullable String sha256) {
         this.kmsKeySelfLink = kmsKeySelfLink;
         this.kmsKeyServiceAccount = kmsKeyServiceAccount;
         this.rawKey = rawKey;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends io.pulumi.reso
      * Name of domain ownership identifier.
      * 
      */
-    @InputImport(name="domainOwnershipIdentifierName", required=true)
+    @Import(name="domainOwnershipIdentifierName", required=true)
       private final String domainOwnershipIdentifierName;
 
     public String getDomainOwnershipIdentifierName() {
@@ -27,7 +27,7 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends io.pulumi.reso
      * Name of the app.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -38,7 +38,7 @@ public final class GetWebAppDomainOwnershipIdentifierArgs extends io.pulumi.reso
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

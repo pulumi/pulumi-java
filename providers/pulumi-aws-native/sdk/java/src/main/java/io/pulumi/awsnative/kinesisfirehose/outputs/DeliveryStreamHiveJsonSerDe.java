@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamHiveJsonSerDe {
     private final @Nullable List<String> timestampFormats;
 
-    @OutputCustomType.Constructor
-    private DeliveryStreamHiveJsonSerDe(@OutputCustomType.Parameter("timestampFormats") @Nullable List<String> timestampFormats) {
+    @CustomType.Constructor
+    private DeliveryStreamHiveJsonSerDe(@CustomType.Parameter("timestampFormats") @Nullable List<String> timestampFormats) {
         this.timestampFormats = timestampFormats;
     }
 

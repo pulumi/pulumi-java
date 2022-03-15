@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.testbase;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
      * The actual name of the favorite process. It will be equal to resource name except for the scenario that the process name contains characters that are not allowed in the resource name.
      * 
      */
-    @InputImport(name="actualProcessName", required=true)
+    @Import(name="actualProcessName", required=true)
       private final Output<String> actualProcessName;
 
     public Output<String> getActualProcessName() {
@@ -29,7 +29,7 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
      * The resource name of a favorite process in a package. If the process name contains characters that are not allowed in Azure Resource Name, we use 'actualProcessName' in request body to submit the name.
      * 
      */
-    @InputImport(name="favoriteProcessResourceName")
+    @Import(name="favoriteProcessResourceName")
       private final @Nullable Output<String> favoriteProcessResourceName;
 
     public Output<String> getFavoriteProcessResourceName() {
@@ -40,7 +40,7 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
      * The resource name of the Test Base Package.
      * 
      */
-    @InputImport(name="packageName", required=true)
+    @Import(name="packageName", required=true)
       private final Output<String> packageName;
 
     public Output<String> getPackageName() {
@@ -51,7 +51,7 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group that contains the resource.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -62,7 +62,7 @@ public final class FavoriteProcessArgs extends io.pulumi.resources.ResourceArgs 
      * The resource name of the Test Base Account.
      * 
      */
-    @InputImport(name="testBaseAccountName", required=true)
+    @Import(name="testBaseAccountName", required=true)
       private final Output<String> testBaseAccountName;
 
     public Output<String> getTestBaseAccountName() {

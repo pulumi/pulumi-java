@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
      * List of dns servers to use
      * 
      */
-    @InputImport(name="dnsServers")
+    @Import(name="dnsServers")
       private final @Nullable List<String> dnsServers;
 
     public List<String> getDnsServers() {
@@ -34,7 +34,7 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
      * Virtual Machine hostname
      * 
      */
-    @InputImport(name="hostName")
+    @Import(name="hostName")
       private final @Nullable String hostName;
 
     public Optional<String> getHostName() {
@@ -45,7 +45,7 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
      * Password for login
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable String password;
 
     public Optional<String> getPassword() {
@@ -56,7 +56,7 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
      * id of customization policy
      * 
      */
-    @InputImport(name="policyId")
+    @Import(name="policyId")
       private final @Nullable String policyId;
 
     public Optional<String> getPolicyId() {
@@ -67,7 +67,7 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
      * Username for login
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable String username;
 
     public Optional<String> getUsername() {

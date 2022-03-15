@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs 
 
     public static final ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs Empty = new ResponseHeadersPolicyCorsConfigAccessControlAllowHeadersArgs();
 
-    @InputImport(name="items")
+    @Import(name="items")
       private final @Nullable Output<List<String>> items;
 
     public Output<List<String>> getItems() {

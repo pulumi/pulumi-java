@@ -14,7 +14,7 @@ import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.azurenative.cdn.inputs.UrlSigningKeyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * List of content types on which compression applies. The value should be a valid MIME type.
      * 
      */
-    @InputImport(name="contentTypesToCompress")
+    @Import(name="contentTypesToCompress")
       private final @Nullable Output<List<String>> contentTypesToCompress;
 
     public Output<List<String>> getContentTypesToCompress() {
@@ -42,7 +42,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to the origin group.
      * 
      */
-    @InputImport(name="defaultOriginGroup")
+    @Import(name="defaultOriginGroup")
       private final @Nullable Output<ResourceReferenceArgs> defaultOriginGroup;
 
     public Output<ResourceReferenceArgs> getDefaultOriginGroup() {
@@ -53,7 +53,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * A policy that specifies the delivery rules to be used for an endpoint.
      * 
      */
-    @InputImport(name="deliveryPolicy")
+    @Import(name="deliveryPolicy")
       private final @Nullable Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy;
 
     public Output<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> getDeliveryPolicy() {
@@ -64,7 +64,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the endpoint under the profile which is unique globally.
      * 
      */
-    @InputImport(name="endpointName")
+    @Import(name="endpointName")
       private final @Nullable Output<String> endpointName;
 
     public Output<String> getEndpointName() {
@@ -75,7 +75,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * List of rules defining the user's geo access within a CDN endpoint. Each geo filter defines an access rule to a specified path or content, e.g. block APAC for path /pictures/
      * 
      */
-    @InputImport(name="geoFilters")
+    @Import(name="geoFilters")
       private final @Nullable Output<List<GeoFilterArgs>> geoFilters;
 
     public Output<List<GeoFilterArgs>> getGeoFilters() {
@@ -86,7 +86,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether content compression is enabled on CDN. Default value is false. If compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be compressed on CDN when requested content is smaller than 1 byte or larger than 1 MB.
      * 
      */
-    @InputImport(name="isCompressionEnabled")
+    @Import(name="isCompressionEnabled")
       private final @Nullable Output<Boolean> isCompressionEnabled;
 
     public Output<Boolean> getIsCompressionEnabled() {
@@ -97,7 +97,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether HTTP traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
      * 
      */
-    @InputImport(name="isHttpAllowed")
+    @Import(name="isHttpAllowed")
       private final @Nullable Output<Boolean> isHttpAllowed;
 
     public Output<Boolean> getIsHttpAllowed() {
@@ -108,7 +108,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether HTTPS traffic is allowed on the endpoint. Default value is true. At least one protocol (HTTP or HTTPS) must be allowed.
      * 
      */
-    @InputImport(name="isHttpsAllowed")
+    @Import(name="isHttpsAllowed")
       private final @Nullable Output<Boolean> isHttpsAllowed;
 
     public Output<Boolean> getIsHttpsAllowed() {
@@ -119,7 +119,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -130,7 +130,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies what scenario the customer wants this CDN endpoint to optimize for, e.g. Download, Media services. With this information, CDN can apply scenario driven optimization.
      * 
      */
-    @InputImport(name="optimizationType")
+    @Import(name="optimizationType")
       private final @Nullable Output<Either<String,OptimizationType>> optimizationType;
 
     public Output<Either<String,OptimizationType>> getOptimizationType() {
@@ -141,7 +141,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The origin groups comprising of origins that are used for load balancing the traffic based on availability.
      * 
      */
-    @InputImport(name="originGroups")
+    @Import(name="originGroups")
       private final @Nullable Output<List<DeepCreatedOriginGroupArgs>> originGroups;
 
     public Output<List<DeepCreatedOriginGroupArgs>> getOriginGroups() {
@@ -152,7 +152,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The host header value sent to the origin with each request. This property at Endpoint is only allowed when endpoint uses single origin and can be overridden by the same property specified at origin.If you leave this blank, the request hostname determines this value. Azure CDN origins, such as Web Apps, Blob Storage, and Cloud Services require this host header value to match the origin hostname by default.
      * 
      */
-    @InputImport(name="originHostHeader")
+    @Import(name="originHostHeader")
       private final @Nullable Output<String> originHostHeader;
 
     public Output<String> getOriginHostHeader() {
@@ -163,7 +163,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * A directory path on the origin that CDN can use to retrieve content from, e.g. contoso.cloudapp.net/originpath.
      * 
      */
-    @InputImport(name="originPath")
+    @Import(name="originPath")
       private final @Nullable Output<String> originPath;
 
     public Output<String> getOriginPath() {
@@ -174,7 +174,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * The source of the content being delivered via CDN.
      * 
      */
-    @InputImport(name="origins", required=true)
+    @Import(name="origins", required=true)
       private final Output<List<DeepCreatedOriginArgs>> origins;
 
     public Output<List<DeepCreatedOriginArgs>> getOrigins() {
@@ -185,7 +185,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Path to a file hosted on the origin which helps accelerate delivery of the dynamic content and calculate the most optimal routes for the CDN. This is relative to the origin path. This property is only relevant when using a single origin.
      * 
      */
-    @InputImport(name="probePath")
+    @Import(name="probePath")
       private final @Nullable Output<String> probePath;
 
     public Output<String> getProbePath() {
@@ -196,7 +196,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the CDN profile which is unique within the resource group.
      * 
      */
-    @InputImport(name="profileName", required=true)
+    @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
     public Output<String> getProfileName() {
@@ -207,7 +207,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Defines how CDN caches requests that include query strings. You can ignore any query strings when caching, bypass caching to prevent requests that contain query strings from being cached, or cache every request with a unique URL.
      * 
      */
-    @InputImport(name="queryStringCachingBehavior")
+    @Import(name="queryStringCachingBehavior")
       private final @Nullable Output<QueryStringCachingBehavior> queryStringCachingBehavior;
 
     public Output<QueryStringCachingBehavior> getQueryStringCachingBehavior() {
@@ -218,7 +218,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -229,7 +229,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -240,7 +240,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * List of keys used to validate the signed URL hashes.
      * 
      */
-    @InputImport(name="urlSigningKeys")
+    @Import(name="urlSigningKeys")
       private final @Nullable Output<List<UrlSigningKeyArgs>> urlSigningKeys;
 
     public Output<List<UrlSigningKeyArgs>> getUrlSigningKeys() {
@@ -251,7 +251,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * Defines the Web Application Firewall policy for the endpoint (if applicable)
      * 
      */
-    @InputImport(name="webApplicationFirewallPolicyLink")
+    @Import(name="webApplicationFirewallPolicyLink")
       private final @Nullable Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 
     public Output<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> getWebApplicationFirewallPolicyLink() {

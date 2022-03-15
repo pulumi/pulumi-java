@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.BqmlTrainingRunResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.ModelDefinitionModelOptionsResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ModelDefinitionResponse {
     /**
      * [Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.
@@ -22,10 +22,10 @@ public final class ModelDefinitionResponse {
      */
     private final List<BqmlTrainingRunResponse> trainingRuns;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelDefinitionResponse(
-        @OutputCustomType.Parameter("modelOptions") ModelDefinitionModelOptionsResponse modelOptions,
-        @OutputCustomType.Parameter("trainingRuns") List<BqmlTrainingRunResponse> trainingRuns) {
+        @CustomType.Parameter("modelOptions") ModelDefinitionModelOptionsResponse modelOptions,
+        @CustomType.Parameter("trainingRuns") List<BqmlTrainingRunResponse> trainingRuns) {
         this.modelOptions = modelOptions;
         this.trainingRuns = trainingRuns;
     }

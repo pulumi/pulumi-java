@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GlobalTableAttributeDefinition {
     private final String attributeName;
     private final String attributeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GlobalTableAttributeDefinition(
-        @OutputCustomType.Parameter("attributeName") String attributeName,
-        @OutputCustomType.Parameter("attributeType") String attributeType) {
+        @CustomType.Parameter("attributeName") String attributeName,
+        @CustomType.Parameter("attributeType") String attributeType) {
         this.attributeName = attributeName;
         this.attributeType = attributeType;
     }

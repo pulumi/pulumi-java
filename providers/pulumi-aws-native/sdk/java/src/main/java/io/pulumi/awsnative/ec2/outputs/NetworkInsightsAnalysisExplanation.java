@@ -10,7 +10,7 @@ import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAnalysisLoadBalanc
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAnalysisRouteTableRoute;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAnalysisSecurityGroupRule;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisPortRange;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInsightsAnalysisExplanation {
     private final @Nullable NetworkInsightsAnalysisAnalysisComponent acl;
     private final @Nullable NetworkInsightsAnalysisAnalysisAclRule aclRule;
@@ -66,53 +66,53 @@ public final class NetworkInsightsAnalysisExplanation {
     private final @Nullable NetworkInsightsAnalysisAnalysisComponent vpnConnection;
     private final @Nullable NetworkInsightsAnalysisAnalysisComponent vpnGateway;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInsightsAnalysisExplanation(
-        @OutputCustomType.Parameter("acl") @Nullable NetworkInsightsAnalysisAnalysisComponent acl,
-        @OutputCustomType.Parameter("aclRule") @Nullable NetworkInsightsAnalysisAnalysisAclRule aclRule,
-        @OutputCustomType.Parameter("address") @Nullable String address,
-        @OutputCustomType.Parameter("addresses") @Nullable List<String> addresses,
-        @OutputCustomType.Parameter("attachedTo") @Nullable NetworkInsightsAnalysisAnalysisComponent attachedTo,
-        @OutputCustomType.Parameter("availabilityZones") @Nullable List<String> availabilityZones,
-        @OutputCustomType.Parameter("cidrs") @Nullable List<String> cidrs,
-        @OutputCustomType.Parameter("classicLoadBalancerListener") @Nullable NetworkInsightsAnalysisAnalysisLoadBalancerListener classicLoadBalancerListener,
-        @OutputCustomType.Parameter("component") @Nullable NetworkInsightsAnalysisAnalysisComponent component,
-        @OutputCustomType.Parameter("customerGateway") @Nullable NetworkInsightsAnalysisAnalysisComponent customerGateway,
-        @OutputCustomType.Parameter("destination") @Nullable NetworkInsightsAnalysisAnalysisComponent destination,
-        @OutputCustomType.Parameter("destinationVpc") @Nullable NetworkInsightsAnalysisAnalysisComponent destinationVpc,
-        @OutputCustomType.Parameter("direction") @Nullable String direction,
-        @OutputCustomType.Parameter("elasticLoadBalancerListener") @Nullable NetworkInsightsAnalysisAnalysisComponent elasticLoadBalancerListener,
-        @OutputCustomType.Parameter("explanationCode") @Nullable String explanationCode,
-        @OutputCustomType.Parameter("ingressRouteTable") @Nullable NetworkInsightsAnalysisAnalysisComponent ingressRouteTable,
-        @OutputCustomType.Parameter("internetGateway") @Nullable NetworkInsightsAnalysisAnalysisComponent internetGateway,
-        @OutputCustomType.Parameter("loadBalancerArn") @Nullable String loadBalancerArn,
-        @OutputCustomType.Parameter("loadBalancerListenerPort") @Nullable Integer loadBalancerListenerPort,
-        @OutputCustomType.Parameter("loadBalancerTarget") @Nullable NetworkInsightsAnalysisAnalysisLoadBalancerTarget loadBalancerTarget,
-        @OutputCustomType.Parameter("loadBalancerTargetGroup") @Nullable NetworkInsightsAnalysisAnalysisComponent loadBalancerTargetGroup,
-        @OutputCustomType.Parameter("loadBalancerTargetGroups") @Nullable List<NetworkInsightsAnalysisAnalysisComponent> loadBalancerTargetGroups,
-        @OutputCustomType.Parameter("loadBalancerTargetPort") @Nullable Integer loadBalancerTargetPort,
-        @OutputCustomType.Parameter("missingComponent") @Nullable String missingComponent,
-        @OutputCustomType.Parameter("natGateway") @Nullable NetworkInsightsAnalysisAnalysisComponent natGateway,
-        @OutputCustomType.Parameter("networkInterface") @Nullable NetworkInsightsAnalysisAnalysisComponent networkInterface,
-        @OutputCustomType.Parameter("packetField") @Nullable String packetField,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("portRanges") @Nullable List<NetworkInsightsAnalysisPortRange> portRanges,
-        @OutputCustomType.Parameter("prefixList") @Nullable NetworkInsightsAnalysisAnalysisComponent prefixList,
-        @OutputCustomType.Parameter("protocols") @Nullable List<String> protocols,
-        @OutputCustomType.Parameter("routeTable") @Nullable NetworkInsightsAnalysisAnalysisComponent routeTable,
-        @OutputCustomType.Parameter("routeTableRoute") @Nullable NetworkInsightsAnalysisAnalysisRouteTableRoute routeTableRoute,
-        @OutputCustomType.Parameter("securityGroup") @Nullable NetworkInsightsAnalysisAnalysisComponent securityGroup,
-        @OutputCustomType.Parameter("securityGroupRule") @Nullable NetworkInsightsAnalysisAnalysisSecurityGroupRule securityGroupRule,
-        @OutputCustomType.Parameter("securityGroups") @Nullable List<NetworkInsightsAnalysisAnalysisComponent> securityGroups,
-        @OutputCustomType.Parameter("sourceVpc") @Nullable NetworkInsightsAnalysisAnalysisComponent sourceVpc,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("subnet") @Nullable NetworkInsightsAnalysisAnalysisComponent subnet,
-        @OutputCustomType.Parameter("subnetRouteTable") @Nullable NetworkInsightsAnalysisAnalysisComponent subnetRouteTable,
-        @OutputCustomType.Parameter("vpc") @Nullable NetworkInsightsAnalysisAnalysisComponent vpc,
-        @OutputCustomType.Parameter("vpcEndpoint") @Nullable NetworkInsightsAnalysisAnalysisComponent vpcEndpoint,
-        @OutputCustomType.Parameter("vpcPeeringConnection") @Nullable NetworkInsightsAnalysisAnalysisComponent vpcPeeringConnection,
-        @OutputCustomType.Parameter("vpnConnection") @Nullable NetworkInsightsAnalysisAnalysisComponent vpnConnection,
-        @OutputCustomType.Parameter("vpnGateway") @Nullable NetworkInsightsAnalysisAnalysisComponent vpnGateway) {
+        @CustomType.Parameter("acl") @Nullable NetworkInsightsAnalysisAnalysisComponent acl,
+        @CustomType.Parameter("aclRule") @Nullable NetworkInsightsAnalysisAnalysisAclRule aclRule,
+        @CustomType.Parameter("address") @Nullable String address,
+        @CustomType.Parameter("addresses") @Nullable List<String> addresses,
+        @CustomType.Parameter("attachedTo") @Nullable NetworkInsightsAnalysisAnalysisComponent attachedTo,
+        @CustomType.Parameter("availabilityZones") @Nullable List<String> availabilityZones,
+        @CustomType.Parameter("cidrs") @Nullable List<String> cidrs,
+        @CustomType.Parameter("classicLoadBalancerListener") @Nullable NetworkInsightsAnalysisAnalysisLoadBalancerListener classicLoadBalancerListener,
+        @CustomType.Parameter("component") @Nullable NetworkInsightsAnalysisAnalysisComponent component,
+        @CustomType.Parameter("customerGateway") @Nullable NetworkInsightsAnalysisAnalysisComponent customerGateway,
+        @CustomType.Parameter("destination") @Nullable NetworkInsightsAnalysisAnalysisComponent destination,
+        @CustomType.Parameter("destinationVpc") @Nullable NetworkInsightsAnalysisAnalysisComponent destinationVpc,
+        @CustomType.Parameter("direction") @Nullable String direction,
+        @CustomType.Parameter("elasticLoadBalancerListener") @Nullable NetworkInsightsAnalysisAnalysisComponent elasticLoadBalancerListener,
+        @CustomType.Parameter("explanationCode") @Nullable String explanationCode,
+        @CustomType.Parameter("ingressRouteTable") @Nullable NetworkInsightsAnalysisAnalysisComponent ingressRouteTable,
+        @CustomType.Parameter("internetGateway") @Nullable NetworkInsightsAnalysisAnalysisComponent internetGateway,
+        @CustomType.Parameter("loadBalancerArn") @Nullable String loadBalancerArn,
+        @CustomType.Parameter("loadBalancerListenerPort") @Nullable Integer loadBalancerListenerPort,
+        @CustomType.Parameter("loadBalancerTarget") @Nullable NetworkInsightsAnalysisAnalysisLoadBalancerTarget loadBalancerTarget,
+        @CustomType.Parameter("loadBalancerTargetGroup") @Nullable NetworkInsightsAnalysisAnalysisComponent loadBalancerTargetGroup,
+        @CustomType.Parameter("loadBalancerTargetGroups") @Nullable List<NetworkInsightsAnalysisAnalysisComponent> loadBalancerTargetGroups,
+        @CustomType.Parameter("loadBalancerTargetPort") @Nullable Integer loadBalancerTargetPort,
+        @CustomType.Parameter("missingComponent") @Nullable String missingComponent,
+        @CustomType.Parameter("natGateway") @Nullable NetworkInsightsAnalysisAnalysisComponent natGateway,
+        @CustomType.Parameter("networkInterface") @Nullable NetworkInsightsAnalysisAnalysisComponent networkInterface,
+        @CustomType.Parameter("packetField") @Nullable String packetField,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("portRanges") @Nullable List<NetworkInsightsAnalysisPortRange> portRanges,
+        @CustomType.Parameter("prefixList") @Nullable NetworkInsightsAnalysisAnalysisComponent prefixList,
+        @CustomType.Parameter("protocols") @Nullable List<String> protocols,
+        @CustomType.Parameter("routeTable") @Nullable NetworkInsightsAnalysisAnalysisComponent routeTable,
+        @CustomType.Parameter("routeTableRoute") @Nullable NetworkInsightsAnalysisAnalysisRouteTableRoute routeTableRoute,
+        @CustomType.Parameter("securityGroup") @Nullable NetworkInsightsAnalysisAnalysisComponent securityGroup,
+        @CustomType.Parameter("securityGroupRule") @Nullable NetworkInsightsAnalysisAnalysisSecurityGroupRule securityGroupRule,
+        @CustomType.Parameter("securityGroups") @Nullable List<NetworkInsightsAnalysisAnalysisComponent> securityGroups,
+        @CustomType.Parameter("sourceVpc") @Nullable NetworkInsightsAnalysisAnalysisComponent sourceVpc,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("subnet") @Nullable NetworkInsightsAnalysisAnalysisComponent subnet,
+        @CustomType.Parameter("subnetRouteTable") @Nullable NetworkInsightsAnalysisAnalysisComponent subnetRouteTable,
+        @CustomType.Parameter("vpc") @Nullable NetworkInsightsAnalysisAnalysisComponent vpc,
+        @CustomType.Parameter("vpcEndpoint") @Nullable NetworkInsightsAnalysisAnalysisComponent vpcEndpoint,
+        @CustomType.Parameter("vpcPeeringConnection") @Nullable NetworkInsightsAnalysisAnalysisComponent vpcPeeringConnection,
+        @CustomType.Parameter("vpnConnection") @Nullable NetworkInsightsAnalysisAnalysisComponent vpnConnection,
+        @CustomType.Parameter("vpnGateway") @Nullable NetworkInsightsAnalysisAnalysisComponent vpnGateway) {
         this.acl = acl;
         this.aclRule = aclRule;
         this.address = address;

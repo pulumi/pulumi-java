@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.iotsitewise.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AssetModelTumblingWindow {
     private final String interval;
     private final @Nullable String offset;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssetModelTumblingWindow(
-        @OutputCustomType.Parameter("interval") String interval,
-        @OutputCustomType.Parameter("offset") @Nullable String offset) {
+        @CustomType.Parameter("interval") String interval,
+        @CustomType.Parameter("offset") @Nullable String offset) {
         this.interval = interval;
         this.offset = offset;
     }

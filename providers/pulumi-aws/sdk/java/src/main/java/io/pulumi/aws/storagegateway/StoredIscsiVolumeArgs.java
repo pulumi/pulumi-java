@@ -4,7 +4,7 @@
 package io.pulumi.aws.storagegateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
      * The unique identifier for the gateway local disk that is configured as a stored volume.
      * 
      */
-    @InputImport(name="diskId", required=true)
+    @Import(name="diskId", required=true)
       private final Output<String> diskId;
 
     public Output<String> getDiskId() {
@@ -31,7 +31,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
      * The Amazon Resource Name (ARN) of the gateway.
      * 
      */
-    @InputImport(name="gatewayArn", required=true)
+    @Import(name="gatewayArn", required=true)
       private final Output<String> gatewayArn;
 
     public Output<String> getGatewayArn() {
@@ -42,7 +42,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
      * `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Optional.
      * 
      */
-    @InputImport(name="kmsEncrypted")
+    @Import(name="kmsEncrypted")
       private final @Nullable Output<Boolean> kmsEncrypted;
 
     public Output<Boolean> getKmsEncrypted() {
@@ -53,7 +53,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
      * The Amazon Resource Name (ARN) of the AWS KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is `true`.
      * 
      */
-    @InputImport(name="kmsKey")
+    @Import(name="kmsKey")
       private final @Nullable Output<String> kmsKey;
 
     public Output<String> getKmsKey() {
@@ -64,7 +64,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
      * The network interface of the gateway on which to expose the iSCSI target. Only IPv4 addresses are accepted.
      * 
      */
-    @InputImport(name="networkInterfaceId", required=true)
+    @Import(name="networkInterfaceId", required=true)
       private final Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {
@@ -75,7 +75,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
      * Specify this field as `true` if you want to preserve the data on the local disk. Otherwise, specifying this field as false creates an empty volume.
      * 
      */
-    @InputImport(name="preserveExistingData", required=true)
+    @Import(name="preserveExistingData", required=true)
       private final Output<Boolean> preserveExistingData;
 
     public Output<Boolean> getPreserveExistingData() {
@@ -86,7 +86,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
      * The snapshot ID of the snapshot to restore as the new stored volumeE.g., `snap-1122aabb`.
      * 
      */
-    @InputImport(name="snapshotId")
+    @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
 
     public Output<String> getSnapshotId() {
@@ -97,7 +97,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
      * Key-value mapping of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -108,7 +108,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
      * The name of the iSCSI target used by initiators to connect to the target and as a suffix for the target ARN. The target name must be unique across all volumes of a gateway.
      * 
      */
-    @InputImport(name="targetName", required=true)
+    @Import(name="targetName", required=true)
       private final Output<String> targetName;
 
     public Output<String> getTargetName() {

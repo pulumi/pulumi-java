@@ -11,7 +11,7 @@ import io.pulumi.azurenative.solutions.outputs.ApplicationNotificationPolicyResp
 import io.pulumi.azurenative.solutions.outputs.ApplicationPackageLockingPolicyDefinitionResponse;
 import io.pulumi.azurenative.solutions.outputs.ApplicationPolicyResponse;
 import io.pulumi.azurenative.solutions.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -21,7 +21,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApplicationDefinitionResult {
     /**
      * The collection of managed application artifacts. The portal will use the files specified as artifacts to construct the user experience of creating a managed application from a managed application definition.
@@ -129,29 +129,29 @@ public final class GetApplicationDefinitionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApplicationDefinitionResult(
-        @OutputCustomType.Parameter("artifacts") @Nullable List<ApplicationDefinitionArtifactResponse> artifacts,
-        @OutputCustomType.Parameter("authorizations") @Nullable List<ApplicationAuthorizationResponse> authorizations,
-        @OutputCustomType.Parameter("createUiDefinition") @Nullable Object createUiDefinition,
-        @OutputCustomType.Parameter("deploymentPolicy") @Nullable ApplicationDeploymentPolicyResponse deploymentPolicy,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("lockLevel") String lockLevel,
-        @OutputCustomType.Parameter("lockingPolicy") @Nullable ApplicationPackageLockingPolicyDefinitionResponse lockingPolicy,
-        @OutputCustomType.Parameter("mainTemplate") @Nullable Object mainTemplate,
-        @OutputCustomType.Parameter("managedBy") @Nullable String managedBy,
-        @OutputCustomType.Parameter("managementPolicy") @Nullable ApplicationManagementPolicyResponse managementPolicy,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notificationPolicy") @Nullable ApplicationNotificationPolicyResponse notificationPolicy,
-        @OutputCustomType.Parameter("packageFileUri") @Nullable String packageFileUri,
-        @OutputCustomType.Parameter("policies") @Nullable List<ApplicationPolicyResponse> policies,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("artifacts") @Nullable List<ApplicationDefinitionArtifactResponse> artifacts,
+        @CustomType.Parameter("authorizations") @Nullable List<ApplicationAuthorizationResponse> authorizations,
+        @CustomType.Parameter("createUiDefinition") @Nullable Object createUiDefinition,
+        @CustomType.Parameter("deploymentPolicy") @Nullable ApplicationDeploymentPolicyResponse deploymentPolicy,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("lockLevel") String lockLevel,
+        @CustomType.Parameter("lockingPolicy") @Nullable ApplicationPackageLockingPolicyDefinitionResponse lockingPolicy,
+        @CustomType.Parameter("mainTemplate") @Nullable Object mainTemplate,
+        @CustomType.Parameter("managedBy") @Nullable String managedBy,
+        @CustomType.Parameter("managementPolicy") @Nullable ApplicationManagementPolicyResponse managementPolicy,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notificationPolicy") @Nullable ApplicationNotificationPolicyResponse notificationPolicy,
+        @CustomType.Parameter("packageFileUri") @Nullable String packageFileUri,
+        @CustomType.Parameter("policies") @Nullable List<ApplicationPolicyResponse> policies,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.artifacts = artifacts;
         this.authorizations = authorizations;
         this.createUiDefinition = createUiDefinition;

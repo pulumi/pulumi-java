@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ToolResultsExecutionResponse {
     /**
      * A tool results execution ID.
@@ -25,11 +25,11 @@ public final class ToolResultsExecutionResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ToolResultsExecutionResponse(
-        @OutputCustomType.Parameter("executionId") String executionId,
-        @OutputCustomType.Parameter("historyId") String historyId,
-        @OutputCustomType.Parameter("project") String project) {
+        @CustomType.Parameter("executionId") String executionId,
+        @CustomType.Parameter("historyId") String historyId,
+        @CustomType.Parameter("project") String project) {
         this.executionId = executionId;
         this.historyId = historyId;
         this.project = project;

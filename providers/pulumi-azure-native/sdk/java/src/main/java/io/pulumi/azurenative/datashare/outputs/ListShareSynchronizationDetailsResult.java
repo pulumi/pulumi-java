@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SynchronizationDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListShareSynchronizationDetailsResult {
     /**
      * The Url of next result page.
@@ -24,10 +24,10 @@ public final class ListShareSynchronizationDetailsResult {
      */
     private final List<SynchronizationDetailsResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListShareSynchronizationDetailsResult(
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
-        @OutputCustomType.Parameter("value") List<SynchronizationDetailsResponse> value) {
+        @CustomType.Parameter("nextLink") @Nullable String nextLink,
+        @CustomType.Parameter("value") List<SynchronizationDetailsResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

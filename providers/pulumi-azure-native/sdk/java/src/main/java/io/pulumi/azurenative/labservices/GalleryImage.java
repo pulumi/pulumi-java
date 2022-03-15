@@ -9,7 +9,7 @@ import io.pulumi.azurenative.labservices.outputs.GalleryImageReferenceResponse;
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The author of the gallery image.
      * 
      */
-    @OutputExport(name="author", type=String.class, parameters={})
+    @Export(name="author", type=String.class, parameters={})
     private Output<String> author;
 
     /**
@@ -49,7 +49,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The creation date of the gallery image.
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
@@ -63,7 +63,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The description of the gallery image.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -77,7 +77,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The icon of the gallery image.
      * 
      */
-    @OutputExport(name="icon", type=String.class, parameters={})
+    @Export(name="icon", type=String.class, parameters={})
     private Output<String> icon;
 
     /**
@@ -91,7 +91,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The image reference of the gallery image.
      * 
      */
-    @OutputExport(name="imageReference", type=GalleryImageReferenceResponse.class, parameters={})
+    @Export(name="imageReference", type=GalleryImageReferenceResponse.class, parameters={})
     private Output<GalleryImageReferenceResponse> imageReference;
 
     /**
@@ -105,7 +105,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * Indicates whether this gallery image is enabled.
      * 
      */
-    @OutputExport(name="isEnabled", type=Boolean.class, parameters={})
+    @Export(name="isEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isEnabled;
 
     /**
@@ -119,7 +119,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * Indicates whether this gallery has been overridden for this lab account
      * 
      */
-    @OutputExport(name="isOverride", type=Boolean.class, parameters={})
+    @Export(name="isOverride", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isOverride;
 
     /**
@@ -133,7 +133,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * Indicates if the plan has been authorized for programmatic deployment.
      * 
      */
-    @OutputExport(name="isPlanAuthorized", type=Boolean.class, parameters={})
+    @Export(name="isPlanAuthorized", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isPlanAuthorized;
 
     /**
@@ -147,7 +147,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The details of the latest operation. ex: status, error
      * 
      */
-    @OutputExport(name="latestOperationResult", type=LatestOperationResultResponse.class, parameters={})
+    @Export(name="latestOperationResult", type=LatestOperationResultResponse.class, parameters={})
     private Output<LatestOperationResultResponse> latestOperationResult;
 
     /**
@@ -161,7 +161,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -175,7 +175,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -189,7 +189,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The third party plan that applies to this image
      * 
      */
-    @OutputExport(name="planId", type=String.class, parameters={})
+    @Export(name="planId", type=String.class, parameters={})
     private Output<String> planId;
 
     /**
@@ -203,7 +203,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The provisioning status of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -217,7 +217,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -231,7 +231,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -245,7 +245,7 @@ public class GalleryImage extends io.pulumi.resources.CustomResource {
      * The unique immutable identifier of a resource (Guid).
      * 
      */
-    @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
+    @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> uniqueIdentifier;
 
     /**

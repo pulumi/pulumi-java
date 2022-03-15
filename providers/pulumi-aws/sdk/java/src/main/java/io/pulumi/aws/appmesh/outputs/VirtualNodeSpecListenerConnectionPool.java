@@ -7,12 +7,12 @@ import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerConnectionPoolGrpc;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerConnectionPoolHttp2;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerConnectionPoolHttp;
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerConnectionPoolTcp;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecListenerConnectionPool {
     /**
      * Connection pool information for gRPC listeners.
@@ -35,12 +35,12 @@ public final class VirtualNodeSpecListenerConnectionPool {
      */
     private final @Nullable VirtualNodeSpecListenerConnectionPoolTcp tcp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNodeSpecListenerConnectionPool(
-        @OutputCustomType.Parameter("grpc") @Nullable VirtualNodeSpecListenerConnectionPoolGrpc grpc,
-        @OutputCustomType.Parameter("http") @Nullable VirtualNodeSpecListenerConnectionPoolHttp http,
-        @OutputCustomType.Parameter("http2") @Nullable VirtualNodeSpecListenerConnectionPoolHttp2 http2,
-        @OutputCustomType.Parameter("tcp") @Nullable VirtualNodeSpecListenerConnectionPoolTcp tcp) {
+        @CustomType.Parameter("grpc") @Nullable VirtualNodeSpecListenerConnectionPoolGrpc grpc,
+        @CustomType.Parameter("http") @Nullable VirtualNodeSpecListenerConnectionPoolHttp http,
+        @CustomType.Parameter("http2") @Nullable VirtualNodeSpecListenerConnectionPoolHttp2 http2,
+        @CustomType.Parameter("tcp") @Nullable VirtualNodeSpecListenerConnectionPoolTcp tcp) {
         this.grpc = grpc;
         this.http = http;
         this.http2 = http2;

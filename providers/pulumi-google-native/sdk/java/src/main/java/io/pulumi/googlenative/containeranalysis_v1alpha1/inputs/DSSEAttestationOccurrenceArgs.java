@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.EnvelopeArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.InTotoStatementArgs;
 import java.util.Objects;
@@ -23,14 +23,14 @@ public final class DSSEAttestationOccurrenceArgs extends io.pulumi.resources.Res
      * If doing something security critical, make sure to verify the signatures in this metadata.
      * 
      */
-    @InputImport(name="envelope")
+    @Import(name="envelope")
       private final @Nullable Output<EnvelopeArgs> envelope;
 
     public Output<EnvelopeArgs> getEnvelope() {
         return this.envelope == null ? Output.empty() : this.envelope;
     }
 
-    @InputImport(name="statement")
+    @Import(name="statement")
       private final @Nullable Output<InTotoStatementArgs> statement;
 
     public Output<InTotoStatementArgs> getStatement() {

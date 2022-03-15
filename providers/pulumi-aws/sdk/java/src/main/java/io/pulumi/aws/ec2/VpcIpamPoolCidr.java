@@ -8,7 +8,7 @@ import io.pulumi.aws.ec2.VpcIpamPoolCidrArgs;
 import io.pulumi.aws.ec2.inputs.VpcIpamPoolCidrState;
 import io.pulumi.aws.ec2.outputs.VpcIpamPoolCidrCidrAuthorizationContext;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -38,7 +38,7 @@ public class VpcIpamPoolCidr extends io.pulumi.resources.CustomResource {
      * The CIDR you want to assign to the pool.
      * 
      */
-    @OutputExport(name="cidr", type=String.class, parameters={})
+    @Export(name="cidr", type=String.class, parameters={})
     private Output<String> cidr;
 
     /**
@@ -52,7 +52,7 @@ public class VpcIpamPoolCidr extends io.pulumi.resources.CustomResource {
      * A signed document that proves that you are authorized to bring the specified IP address range to Amazon using BYOIP. This is not stored in the state file. See cidr_authorization_context for more information.
      * 
      */
-    @OutputExport(name="cidrAuthorizationContext", type=VpcIpamPoolCidrCidrAuthorizationContext.class, parameters={})
+    @Export(name="cidrAuthorizationContext", type=VpcIpamPoolCidrCidrAuthorizationContext.class, parameters={})
     private Output</* @Nullable */ VpcIpamPoolCidrCidrAuthorizationContext> cidrAuthorizationContext;
 
     /**
@@ -66,7 +66,7 @@ public class VpcIpamPoolCidr extends io.pulumi.resources.CustomResource {
      * The ID of the pool to which you want to assign a CIDR.
      * 
      */
-    @OutputExport(name="ipamPoolId", type=String.class, parameters={})
+    @Export(name="ipamPoolId", type=String.class, parameters={})
     private Output<String> ipamPoolId;
 
     /**

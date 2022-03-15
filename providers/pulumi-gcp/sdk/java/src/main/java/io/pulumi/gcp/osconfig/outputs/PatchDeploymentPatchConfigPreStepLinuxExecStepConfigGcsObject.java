@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject {
     /**
      * Bucket of the Cloud Storage object.
@@ -25,11 +25,11 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject
      */
     private final String object;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("generationNumber") String generationNumber,
-        @OutputCustomType.Parameter("object") String object) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("generationNumber") String generationNumber,
+        @CustomType.Parameter("object") String object) {
         this.bucket = bucket;
         this.generationNumber = generationNumber;
         this.object = object;

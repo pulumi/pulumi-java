@@ -10,7 +10,7 @@ import io.pulumi.azurenative.sql.outputs.JobStepExecutionOptionsResponse;
 import io.pulumi.azurenative.sql.outputs.JobStepOutputResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class JobStep extends io.pulumi.resources.CustomResource {
      * The action payload of the job step.
      * 
      */
-    @OutputExport(name="action", type=JobStepActionResponse.class, parameters={})
+    @Export(name="action", type=JobStepActionResponse.class, parameters={})
     private Output<JobStepActionResponse> action;
 
     /**
@@ -52,7 +52,7 @@ public class JobStep extends io.pulumi.resources.CustomResource {
      * The resource ID of the job credential that will be used to connect to the targets.
      * 
      */
-    @OutputExport(name="credential", type=String.class, parameters={})
+    @Export(name="credential", type=String.class, parameters={})
     private Output<String> credential;
 
     /**
@@ -66,7 +66,7 @@ public class JobStep extends io.pulumi.resources.CustomResource {
      * Execution options for the job step.
      * 
      */
-    @OutputExport(name="executionOptions", type=JobStepExecutionOptionsResponse.class, parameters={})
+    @Export(name="executionOptions", type=JobStepExecutionOptionsResponse.class, parameters={})
     private Output</* @Nullable */ JobStepExecutionOptionsResponse> executionOptions;
 
     /**
@@ -80,7 +80,7 @@ public class JobStep extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class JobStep extends io.pulumi.resources.CustomResource {
      * Output destination properties of the job step.
      * 
      */
-    @OutputExport(name="output", type=JobStepOutputResponse.class, parameters={})
+    @Export(name="output", type=JobStepOutputResponse.class, parameters={})
     private Output</* @Nullable */ JobStepOutputResponse> output;
 
     /**
@@ -108,7 +108,7 @@ public class JobStep extends io.pulumi.resources.CustomResource {
      * The job step's index within the job. If not specified when creating the job step, it will be created as the last step. If not specified when updating the job step, the step id is not modified.
      * 
      */
-    @OutputExport(name="stepId", type=Integer.class, parameters={})
+    @Export(name="stepId", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> stepId;
 
     /**
@@ -122,7 +122,7 @@ public class JobStep extends io.pulumi.resources.CustomResource {
      * The resource ID of the target group that the job step will be executed on.
      * 
      */
-    @OutputExport(name="targetGroup", type=String.class, parameters={})
+    @Export(name="targetGroup", type=String.class, parameters={})
     private Output<String> targetGroup;
 
     /**
@@ -136,7 +136,7 @@ public class JobStep extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

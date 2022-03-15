@@ -6,7 +6,7 @@ package io.pulumi.awsnative.connect;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.connect.UserHierarchyGroupArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class UserHierarchyGroup extends io.pulumi.resources.CustomResource {
      * The identifier of the Amazon Connect instance.
      * 
      */
-    @OutputExport(name="instanceArn", type=String.class, parameters={})
+    @Export(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
     /**
@@ -35,7 +35,7 @@ public class UserHierarchyGroup extends io.pulumi.resources.CustomResource {
      * The name of the user hierarchy group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class UserHierarchyGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the parent user hierarchy group.
      * 
      */
-    @OutputExport(name="parentGroupArn", type=String.class, parameters={})
+    @Export(name="parentGroupArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> parentGroupArn;
 
     /**
@@ -63,7 +63,7 @@ public class UserHierarchyGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the user hierarchy group.
      * 
      */
-    @OutputExport(name="userHierarchyGroupArn", type=String.class, parameters={})
+    @Export(name="userHierarchyGroupArn", type=String.class, parameters={})
     private Output<String> userHierarchyGroupArn;
 
     /**

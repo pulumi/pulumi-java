@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KubernetesRoleComputeResponse {
     /**
      * Memory in bytes
@@ -27,11 +27,11 @@ public final class KubernetesRoleComputeResponse {
      */
     private final String vmProfile;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KubernetesRoleComputeResponse(
-        @OutputCustomType.Parameter("memoryInBytes") Double memoryInBytes,
-        @OutputCustomType.Parameter("processorCount") Integer processorCount,
-        @OutputCustomType.Parameter("vmProfile") String vmProfile) {
+        @CustomType.Parameter("memoryInBytes") Double memoryInBytes,
+        @CustomType.Parameter("processorCount") Integer processorCount,
+        @CustomType.Parameter("vmProfile") String vmProfile) {
         this.memoryInBytes = memoryInBytes;
         this.processorCount = processorCount;
         this.vmProfile = vmProfile;

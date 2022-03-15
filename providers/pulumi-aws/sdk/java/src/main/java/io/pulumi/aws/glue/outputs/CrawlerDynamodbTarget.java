@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CrawlerDynamodbTarget {
     /**
      * The path of the Amazon DocumentDB or MongoDB target (database/collection).
@@ -29,11 +29,11 @@ public final class CrawlerDynamodbTarget {
      */
     private final @Nullable Double scanRate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CrawlerDynamodbTarget(
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("scanAll") @Nullable Boolean scanAll,
-        @OutputCustomType.Parameter("scanRate") @Nullable Double scanRate) {
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("scanAll") @Nullable Boolean scanAll,
+        @CustomType.Parameter("scanRate") @Nullable Double scanRate) {
         this.path = path;
         this.scanAll = scanAll;
         this.scanRate = scanRate;

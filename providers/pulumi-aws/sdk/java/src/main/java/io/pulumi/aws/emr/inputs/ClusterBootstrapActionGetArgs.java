@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterBootstrapActionGetArgs extends io.pulumi.resources.Res
      * List of command line arguments passed to the JAR file's main function when executed.
      * 
      */
-    @InputImport(name="args")
+    @Import(name="args")
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
@@ -30,7 +30,7 @@ public final class ClusterBootstrapActionGetArgs extends io.pulumi.resources.Res
      * Name of the step.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class ClusterBootstrapActionGetArgs extends io.pulumi.resources.Res
      * Location of the script to run during a bootstrap action. Can be either a location in Amazon S3 or on a local file system.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final Output<String> path;
 
     public Output<String> getPath() {

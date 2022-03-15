@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.enums.SecurityAlertsPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * The name of the  database for which the security alert policy is defined.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -33,7 +33,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * Specifies an array of alerts that are disabled. Allowed values are: Sql_Injection, Sql_Injection_Vulnerability, Access_Anomaly, Data_Exfiltration, Unsafe_Action, Brute_Force
      * 
      */
-    @InputImport(name="disabledAlerts")
+    @Import(name="disabledAlerts")
       private final @Nullable Output<List<String>> disabledAlerts;
 
     public Output<List<String>> getDisabledAlerts() {
@@ -44,7 +44,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * Specifies that the alert is sent to the account administrators.
      * 
      */
-    @InputImport(name="emailAccountAdmins")
+    @Import(name="emailAccountAdmins")
       private final @Nullable Output<Boolean> emailAccountAdmins;
 
     public Output<Boolean> getEmailAccountAdmins() {
@@ -55,7 +55,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * Specifies an array of e-mail addresses to which the alert is sent.
      * 
      */
-    @InputImport(name="emailAddresses")
+    @Import(name="emailAddresses")
       private final @Nullable Output<List<String>> emailAddresses;
 
     public Output<List<String>> getEmailAddresses() {
@@ -66,7 +66,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -77,7 +77,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * Specifies the number of days to keep in the Threat Detection audit logs.
      * 
      */
-    @InputImport(name="retentionDays")
+    @Import(name="retentionDays")
       private final @Nullable Output<Integer> retentionDays;
 
     public Output<Integer> getRetentionDays() {
@@ -88,7 +88,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * The name of the security alert policy.
      * 
      */
-    @InputImport(name="securityAlertPolicyName")
+    @Import(name="securityAlertPolicyName")
       private final @Nullable Output<String> securityAlertPolicyName;
 
     public Output<String> getSecurityAlertPolicyName() {
@@ -99,7 +99,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * The name of the  server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -110,7 +110,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * Specifies the state of the policy, whether it is enabled or disabled or a policy has not been applied yet on the specific database.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final Output<SecurityAlertsPolicyState> state;
 
     public Output<SecurityAlertsPolicyState> getState() {
@@ -121,7 +121,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * Specifies the identifier key of the Threat Detection audit storage account.
      * 
      */
-    @InputImport(name="storageAccountAccessKey")
+    @Import(name="storageAccountAccessKey")
       private final @Nullable Output<String> storageAccountAccessKey;
 
     public Output<String> getStorageAccountAccessKey() {
@@ -132,7 +132,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
      * Specifies the blob storage endpoint (e.g. https://MyAccount.blob.core.windows.net). This blob storage will hold all Threat Detection audit logs.
      * 
      */
-    @InputImport(name="storageEndpoint")
+    @Import(name="storageEndpoint")
       private final @Nullable Output<String> storageEndpoint;
 
     public Output<String> getStorageEndpoint() {

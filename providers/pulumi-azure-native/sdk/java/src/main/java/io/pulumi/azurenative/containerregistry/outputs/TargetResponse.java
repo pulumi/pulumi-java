@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TargetResponse {
     /**
      * The digest of the content, as defined by the Registry V2 HTTP API Specification.
@@ -58,17 +58,17 @@ public final class TargetResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TargetResponse(
-        @OutputCustomType.Parameter("digest") @Nullable String digest,
-        @OutputCustomType.Parameter("length") @Nullable Double length,
-        @OutputCustomType.Parameter("mediaType") @Nullable String mediaType,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("repository") @Nullable String repository,
-        @OutputCustomType.Parameter("size") @Nullable Double size,
-        @OutputCustomType.Parameter("tag") @Nullable String tag,
-        @OutputCustomType.Parameter("url") @Nullable String url,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("digest") @Nullable String digest,
+        @CustomType.Parameter("length") @Nullable Double length,
+        @CustomType.Parameter("mediaType") @Nullable String mediaType,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("repository") @Nullable String repository,
+        @CustomType.Parameter("size") @Nullable Double size,
+        @CustomType.Parameter("tag") @Nullable String tag,
+        @CustomType.Parameter("url") @Nullable String url,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.digest = digest;
         this.length = length;
         this.mediaType = mediaType;

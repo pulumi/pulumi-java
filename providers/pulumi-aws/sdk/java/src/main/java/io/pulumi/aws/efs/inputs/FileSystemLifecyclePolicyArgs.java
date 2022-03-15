@@ -4,7 +4,7 @@
 package io.pulumi.aws.efs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FileSystemLifecyclePolicyArgs extends io.pulumi.resources.Res
      * Indicates how long it takes to transition files to the IA storage class. Valid values: `AFTER_7_DAYS`, `AFTER_14_DAYS`, `AFTER_30_DAYS`, `AFTER_60_DAYS`, or `AFTER_90_DAYS`.
      * 
      */
-    @InputImport(name="transitionToIa")
+    @Import(name="transitionToIa")
       private final @Nullable Output<String> transitionToIa;
 
     public Output<String> getTransitionToIa() {
@@ -29,7 +29,7 @@ public final class FileSystemLifecyclePolicyArgs extends io.pulumi.resources.Res
      * Describes the policy used to transition a file from infequent access storage to primary storage. Valid values: `AFTER_1_ACCESS`.
      * 
      */
-    @InputImport(name="transitionToPrimaryStorageClass")
+    @Import(name="transitionToPrimaryStorageClass")
       private final @Nullable Output<String> transitionToPrimaryStorageClass;
 
     public Output<String> getTransitionToPrimaryStorageClass() {

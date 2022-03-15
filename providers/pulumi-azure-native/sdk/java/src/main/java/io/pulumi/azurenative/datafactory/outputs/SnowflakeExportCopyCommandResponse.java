@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SnowflakeExportCopyCommandResponse {
     /**
      * Additional copy options directly passed to snowflake Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalCopyOptions": { "DATE_FORMAT": "MM/DD/YYYY", "TIME_FORMAT": "'HH24:MI:SS.FF'" }
@@ -29,11 +29,11 @@ public final class SnowflakeExportCopyCommandResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SnowflakeExportCopyCommandResponse(
-        @OutputCustomType.Parameter("additionalCopyOptions") @Nullable Map<String,Object> additionalCopyOptions,
-        @OutputCustomType.Parameter("additionalFormatOptions") @Nullable Map<String,Object> additionalFormatOptions,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("additionalCopyOptions") @Nullable Map<String,Object> additionalCopyOptions,
+        @CustomType.Parameter("additionalFormatOptions") @Nullable Map<String,Object> additionalFormatOptions,
+        @CustomType.Parameter("type") String type) {
         this.additionalCopyOptions = additionalCopyOptions;
         this.additionalFormatOptions = additionalFormatOptions;
         this.type = type;

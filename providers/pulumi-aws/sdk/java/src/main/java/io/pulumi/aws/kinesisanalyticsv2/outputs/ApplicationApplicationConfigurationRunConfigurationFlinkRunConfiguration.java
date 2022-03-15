@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration {
     /**
      * When restoring from a snapshot, specifies whether the runtime is allowed to skip a state that cannot be mapped to the new program. Default is `false`.
@@ -17,8 +17,8 @@ public final class ApplicationApplicationConfigurationRunConfigurationFlinkRunCo
      */
     private final @Nullable Boolean allowNonRestoredState;
 
-    @OutputCustomType.Constructor
-    private ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration(@OutputCustomType.Parameter("allowNonRestoredState") @Nullable Boolean allowNonRestoredState) {
+    @CustomType.Constructor
+    private ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration(@CustomType.Parameter("allowNonRestoredState") @Nullable Boolean allowNonRestoredState) {
         this.allowNonRestoredState = allowNonRestoredState;
     }
 

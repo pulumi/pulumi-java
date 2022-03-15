@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebAppFunctionResult {
     /**
      * Config information.
@@ -100,25 +100,25 @@ public final class GetWebAppFunctionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebAppFunctionResult(
-        @OutputCustomType.Parameter("config") @Nullable Object config,
-        @OutputCustomType.Parameter("configHref") @Nullable String configHref,
-        @OutputCustomType.Parameter("files") @Nullable Map<String,String> files,
-        @OutputCustomType.Parameter("functionAppId") @Nullable String functionAppId,
-        @OutputCustomType.Parameter("href") @Nullable String href,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("invokeUrlTemplate") @Nullable String invokeUrlTemplate,
-        @OutputCustomType.Parameter("isDisabled") @Nullable Boolean isDisabled,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("language") @Nullable String language,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("scriptHref") @Nullable String scriptHref,
-        @OutputCustomType.Parameter("scriptRootPathHref") @Nullable String scriptRootPathHref,
-        @OutputCustomType.Parameter("secretsFileHref") @Nullable String secretsFileHref,
-        @OutputCustomType.Parameter("testData") @Nullable String testData,
-        @OutputCustomType.Parameter("testDataHref") @Nullable String testDataHref,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("config") @Nullable Object config,
+        @CustomType.Parameter("configHref") @Nullable String configHref,
+        @CustomType.Parameter("files") @Nullable Map<String,String> files,
+        @CustomType.Parameter("functionAppId") @Nullable String functionAppId,
+        @CustomType.Parameter("href") @Nullable String href,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("invokeUrlTemplate") @Nullable String invokeUrlTemplate,
+        @CustomType.Parameter("isDisabled") @Nullable Boolean isDisabled,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("language") @Nullable String language,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("scriptHref") @Nullable String scriptHref,
+        @CustomType.Parameter("scriptRootPathHref") @Nullable String scriptRootPathHref,
+        @CustomType.Parameter("secretsFileHref") @Nullable String secretsFileHref,
+        @CustomType.Parameter("testData") @Nullable String testData,
+        @CustomType.Parameter("testDataHref") @Nullable String testDataHref,
+        @CustomType.Parameter("type") String type) {
         this.config = config;
         this.configHref = configHref;
         this.files = files;

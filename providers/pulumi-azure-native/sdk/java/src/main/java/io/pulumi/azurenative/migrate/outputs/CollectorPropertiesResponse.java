@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.CollectorAgentPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CollectorPropertiesResponse {
     private final @Nullable CollectorAgentPropertiesResponse agentProperties;
     /**
@@ -29,12 +29,12 @@ public final class CollectorPropertiesResponse {
      */
     private final String updatedTimestamp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CollectorPropertiesResponse(
-        @OutputCustomType.Parameter("agentProperties") @Nullable CollectorAgentPropertiesResponse agentProperties,
-        @OutputCustomType.Parameter("createdTimestamp") String createdTimestamp,
-        @OutputCustomType.Parameter("discoverySiteId") @Nullable String discoverySiteId,
-        @OutputCustomType.Parameter("updatedTimestamp") String updatedTimestamp) {
+        @CustomType.Parameter("agentProperties") @Nullable CollectorAgentPropertiesResponse agentProperties,
+        @CustomType.Parameter("createdTimestamp") String createdTimestamp,
+        @CustomType.Parameter("discoverySiteId") @Nullable String discoverySiteId,
+        @CustomType.Parameter("updatedTimestamp") String updatedTimestamp) {
         this.agentProperties = agentProperties;
         this.createdTimestamp = createdTimestamp;
         this.discoverySiteId = discoverySiteId;

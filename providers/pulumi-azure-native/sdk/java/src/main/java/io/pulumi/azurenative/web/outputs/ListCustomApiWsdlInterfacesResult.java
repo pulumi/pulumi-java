@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.WsdlServiceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListCustomApiWsdlInterfacesResult {
     /**
      * Collection of WSDL interfaces
@@ -17,8 +17,8 @@ public final class ListCustomApiWsdlInterfacesResult {
      */
     private final @Nullable List<WsdlServiceResponse> value;
 
-    @OutputCustomType.Constructor
-    private ListCustomApiWsdlInterfacesResult(@OutputCustomType.Parameter("value") @Nullable List<WsdlServiceResponse> value) {
+    @CustomType.Constructor
+    private ListCustomApiWsdlInterfacesResult(@CustomType.Parameter("value") @Nullable List<WsdlServiceResponse> value) {
         this.value = value;
     }
 

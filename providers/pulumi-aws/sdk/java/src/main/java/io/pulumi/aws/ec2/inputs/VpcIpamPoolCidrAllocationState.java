@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * The CIDR you want to assign to the pool.
      * 
      */
-    @InputImport(name="cidr")
+    @Import(name="cidr")
       private final @Nullable Output<String> cidr;
 
     public Output<String> getCidr() {
@@ -31,7 +31,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * The description for the allocation.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,14 +42,14 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * Exclude a particular CIDR range from being returned by the pool.
      * 
      */
-    @InputImport(name="disallowedCidrs")
+    @Import(name="disallowedCidrs")
       private final @Nullable Output<List<String>> disallowedCidrs;
 
     public Output<List<String>> getDisallowedCidrs() {
         return this.disallowedCidrs == null ? Output.empty() : this.disallowedCidrs;
     }
 
-    @InputImport(name="ipamPoolAllocationId")
+    @Import(name="ipamPoolAllocationId")
       private final @Nullable Output<String> ipamPoolAllocationId;
 
     public Output<String> getIpamPoolAllocationId() {
@@ -60,7 +60,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * The ID of the pool to which you want to assign a CIDR.
      * 
      */
-    @InputImport(name="ipamPoolId")
+    @Import(name="ipamPoolId")
       private final @Nullable Output<String> ipamPoolId;
 
     public Output<String> getIpamPoolId() {
@@ -71,7 +71,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * The netmask length of the CIDR you would like to allocate to the IPAM pool. Valid Values: `0-32`.
      * 
      */
-    @InputImport(name="netmaskLength")
+    @Import(name="netmaskLength")
       private final @Nullable Output<Integer> netmaskLength;
 
     public Output<Integer> getNetmaskLength() {
@@ -82,7 +82,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * The ID of the resource.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -93,7 +93,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * The owner of the resource.
      * 
      */
-    @InputImport(name="resourceOwner")
+    @Import(name="resourceOwner")
       private final @Nullable Output<String> resourceOwner;
 
     public Output<String> getResourceOwner() {
@@ -104,7 +104,7 @@ public final class VpcIpamPoolCidrAllocationState extends io.pulumi.resources.Re
      * The type of the resource.
      * 
      */
-    @InputImport(name="resourceType")
+    @Import(name="resourceType")
       private final @Nullable Output<String> resourceType;
 
     public Output<String> getPropResourceType() {

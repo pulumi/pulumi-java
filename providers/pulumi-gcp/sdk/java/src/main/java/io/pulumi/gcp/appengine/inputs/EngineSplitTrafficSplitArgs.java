@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EngineSplitTrafficSplitArgs extends io.pulumi.resources.Resou
      * Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits.
      * 
      */
-    @InputImport(name="allocations", required=true)
+    @Import(name="allocations", required=true)
       private final Output<Map<String,String>> allocations;
 
     public Output<Map<String,String>> getAllocations() {
@@ -31,7 +31,7 @@ public final class EngineSplitTrafficSplitArgs extends io.pulumi.resources.Resou
      * Possible values are `UNSPECIFIED`, `COOKIE`, `IP`, and `RANDOM`.
      * 
      */
-    @InputImport(name="shardBy")
+    @Import(name="shardBy")
       private final @Nullable Output<String> shardBy;
 
     public Output<String> getShardBy() {

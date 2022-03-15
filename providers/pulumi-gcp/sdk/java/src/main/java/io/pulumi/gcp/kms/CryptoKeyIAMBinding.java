@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.kms.CryptoKeyIAMBindingArgs;
@@ -65,7 +65,7 @@ public class CryptoKeyIAMBinding extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="condition", type=CryptoKeyIAMBindingCondition.class, parameters={})
+    @Export(name="condition", type=CryptoKeyIAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ CryptoKeyIAMBindingCondition> condition;
 
     /**
@@ -83,7 +83,7 @@ public class CryptoKeyIAMBinding extends io.pulumi.resources.CustomResource {
      * the provider's project setting will be used as a fallback.
      * 
      */
-    @OutputExport(name="cryptoKeyId", type=String.class, parameters={})
+    @Export(name="cryptoKeyId", type=String.class, parameters={})
     private Output<String> cryptoKeyId;
 
     /**
@@ -100,7 +100,7 @@ public class CryptoKeyIAMBinding extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the project's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -110,7 +110,7 @@ public class CryptoKeyIAMBinding extends io.pulumi.resources.CustomResource {
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -121,7 +121,7 @@ public class CryptoKeyIAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

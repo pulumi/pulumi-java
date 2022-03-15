@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.panorama.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,35 +14,35 @@ public final class PackageStorageLocation extends io.pulumi.resources.InvokeArgs
 
     public static final PackageStorageLocation Empty = new PackageStorageLocation();
 
-    @InputImport(name="binaryPrefixLocation")
+    @Import(name="binaryPrefixLocation")
       private final @Nullable String binaryPrefixLocation;
 
     public Optional<String> getBinaryPrefixLocation() {
         return this.binaryPrefixLocation == null ? Optional.empty() : Optional.ofNullable(this.binaryPrefixLocation);
     }
 
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable String bucket;
 
     public Optional<String> getBucket() {
         return this.bucket == null ? Optional.empty() : Optional.ofNullable(this.bucket);
     }
 
-    @InputImport(name="generatedPrefixLocation")
+    @Import(name="generatedPrefixLocation")
       private final @Nullable String generatedPrefixLocation;
 
     public Optional<String> getGeneratedPrefixLocation() {
         return this.generatedPrefixLocation == null ? Optional.empty() : Optional.ofNullable(this.generatedPrefixLocation);
     }
 
-    @InputImport(name="manifestPrefixLocation")
+    @Import(name="manifestPrefixLocation")
       private final @Nullable String manifestPrefixLocation;
 
     public Optional<String> getManifestPrefixLocation() {
         return this.manifestPrefixLocation == null ? Optional.empty() : Optional.ofNullable(this.manifestPrefixLocation);
     }
 
-    @InputImport(name="repoPrefixLocation")
+    @Import(name="repoPrefixLocation")
       private final @Nullable String repoPrefixLocation;
 
     public Optional<String> getRepoPrefixLocation() {

@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.AppImageConfigKernelGatewayImageConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAppImageConfigResult {
     /**
      * The Amazon Resource Name (ARN) of the AppImageConfig.
@@ -23,10 +23,10 @@ public final class GetAppImageConfigResult {
      */
     private final @Nullable AppImageConfigKernelGatewayImageConfig kernelGatewayImageConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAppImageConfigResult(
-        @OutputCustomType.Parameter("appImageConfigArn") @Nullable String appImageConfigArn,
-        @OutputCustomType.Parameter("kernelGatewayImageConfig") @Nullable AppImageConfigKernelGatewayImageConfig kernelGatewayImageConfig) {
+        @CustomType.Parameter("appImageConfigArn") @Nullable String appImageConfigArn,
+        @CustomType.Parameter("kernelGatewayImageConfig") @Nullable AppImageConfigKernelGatewayImageConfig kernelGatewayImageConfig) {
         this.appImageConfigArn = appImageConfigArn;
         this.kernelGatewayImageConfig = kernelGatewayImageConfig;
     }

@@ -5,7 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetGetArgs extends io.pulu
      * An unique alphanumeric string to identify the `port_set`.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -29,7 +29,7 @@ public final class RuleGroupRuleGroupRuleVariablesPortSetGetArgs extends io.pulu
      * A configuration block that defines a set of port ranges. See Port Set below for details.
      * 
      */
-    @InputImport(name="portSet", required=true)
+    @Import(name="portSet", required=true)
       private final Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs> portSet;
 
     public Output<RuleGroupRuleGroupRuleVariablesPortSetPortSetGetArgs> getPortSet() {

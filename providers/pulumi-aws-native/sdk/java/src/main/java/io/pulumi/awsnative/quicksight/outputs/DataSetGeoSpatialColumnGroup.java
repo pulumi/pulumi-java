@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.enums.DataSetGeoSpatialCountryCode;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSetGeoSpatialColumnGroup {
     /**
      * <p>Columns in this hierarchy.</p>
@@ -25,11 +25,11 @@ public final class DataSetGeoSpatialColumnGroup {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSetGeoSpatialColumnGroup(
-        @OutputCustomType.Parameter("columns") List<String> columns,
-        @OutputCustomType.Parameter("countryCode") @Nullable DataSetGeoSpatialCountryCode countryCode,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("columns") List<String> columns,
+        @CustomType.Parameter("countryCode") @Nullable DataSetGeoSpatialCountryCode countryCode,
+        @CustomType.Parameter("name") String name) {
         this.columns = columns;
         this.countryCode = countryCode;
         this.name = name;

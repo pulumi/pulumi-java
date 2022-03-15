@@ -7,7 +7,7 @@ import io.pulumi.azurenative.dataprotection.inputs.AbsoluteDeleteOptionArgs;
 import io.pulumi.azurenative.dataprotection.inputs.DataStoreInfoBaseArgs;
 import io.pulumi.azurenative.dataprotection.inputs.TargetCopySettingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SourceLifeCycleArgs extends io.pulumi.resources.ResourceArgs 
      * Delete Option
      * 
      */
-    @InputImport(name="deleteAfter", required=true)
+    @Import(name="deleteAfter", required=true)
       private final Output<AbsoluteDeleteOptionArgs> deleteAfter;
 
     public Output<AbsoluteDeleteOptionArgs> getDeleteAfter() {
@@ -36,14 +36,14 @@ public final class SourceLifeCycleArgs extends io.pulumi.resources.ResourceArgs 
      * DataStoreInfo base
      * 
      */
-    @InputImport(name="sourceDataStore", required=true)
+    @Import(name="sourceDataStore", required=true)
       private final Output<DataStoreInfoBaseArgs> sourceDataStore;
 
     public Output<DataStoreInfoBaseArgs> getSourceDataStore() {
         return this.sourceDataStore;
     }
 
-    @InputImport(name="targetDataStoreCopySettings")
+    @Import(name="targetDataStoreCopySettings")
       private final @Nullable Output<List<TargetCopySettingArgs>> targetDataStoreCopySettings;
 
     public Output<List<TargetCopySettingArgs>> getTargetDataStoreCopySettings() {

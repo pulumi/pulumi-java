@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ssm.enums.AssociationComplianceSeverity;
 import io.pulumi.awsnative.ssm.enums.AssociationSyncCompliance;
 import io.pulumi.awsnative.ssm.outputs.AssociationInstanceAssociationOutputLocation;
 import io.pulumi.awsnative.ssm.outputs.AssociationTarget;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAssociationResult {
     private final @Nullable Boolean applyOnlyAtCronInterval;
     /**
@@ -69,25 +69,25 @@ public final class GetAssociationResult {
     private final @Nullable List<AssociationTarget> targets;
     private final @Nullable Integer waitForSuccessTimeoutSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAssociationResult(
-        @OutputCustomType.Parameter("applyOnlyAtCronInterval") @Nullable Boolean applyOnlyAtCronInterval,
-        @OutputCustomType.Parameter("associationId") @Nullable String associationId,
-        @OutputCustomType.Parameter("associationName") @Nullable String associationName,
-        @OutputCustomType.Parameter("automationTargetParameterName") @Nullable String automationTargetParameterName,
-        @OutputCustomType.Parameter("calendarNames") @Nullable List<String> calendarNames,
-        @OutputCustomType.Parameter("complianceSeverity") @Nullable AssociationComplianceSeverity complianceSeverity,
-        @OutputCustomType.Parameter("documentVersion") @Nullable String documentVersion,
-        @OutputCustomType.Parameter("instanceId") @Nullable String instanceId,
-        @OutputCustomType.Parameter("maxConcurrency") @Nullable String maxConcurrency,
-        @OutputCustomType.Parameter("maxErrors") @Nullable String maxErrors,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("outputLocation") @Nullable AssociationInstanceAssociationOutputLocation outputLocation,
-        @OutputCustomType.Parameter("parameters") @Nullable Object parameters,
-        @OutputCustomType.Parameter("scheduleExpression") @Nullable String scheduleExpression,
-        @OutputCustomType.Parameter("syncCompliance") @Nullable AssociationSyncCompliance syncCompliance,
-        @OutputCustomType.Parameter("targets") @Nullable List<AssociationTarget> targets,
-        @OutputCustomType.Parameter("waitForSuccessTimeoutSeconds") @Nullable Integer waitForSuccessTimeoutSeconds) {
+        @CustomType.Parameter("applyOnlyAtCronInterval") @Nullable Boolean applyOnlyAtCronInterval,
+        @CustomType.Parameter("associationId") @Nullable String associationId,
+        @CustomType.Parameter("associationName") @Nullable String associationName,
+        @CustomType.Parameter("automationTargetParameterName") @Nullable String automationTargetParameterName,
+        @CustomType.Parameter("calendarNames") @Nullable List<String> calendarNames,
+        @CustomType.Parameter("complianceSeverity") @Nullable AssociationComplianceSeverity complianceSeverity,
+        @CustomType.Parameter("documentVersion") @Nullable String documentVersion,
+        @CustomType.Parameter("instanceId") @Nullable String instanceId,
+        @CustomType.Parameter("maxConcurrency") @Nullable String maxConcurrency,
+        @CustomType.Parameter("maxErrors") @Nullable String maxErrors,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("outputLocation") @Nullable AssociationInstanceAssociationOutputLocation outputLocation,
+        @CustomType.Parameter("parameters") @Nullable Object parameters,
+        @CustomType.Parameter("scheduleExpression") @Nullable String scheduleExpression,
+        @CustomType.Parameter("syncCompliance") @Nullable AssociationSyncCompliance syncCompliance,
+        @CustomType.Parameter("targets") @Nullable List<AssociationTarget> targets,
+        @CustomType.Parameter("waitForSuccessTimeoutSeconds") @Nullable Integer waitForSuccessTimeoutSeconds) {
         this.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
         this.associationId = associationId;
         this.associationName = associationName;

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iotwireless.WirelessGatewayArgs;
 import io.pulumi.awsnative.iotwireless.outputs.WirelessGatewayLoRaWANGateway;
 import io.pulumi.awsnative.iotwireless.outputs.WirelessGatewayTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class WirelessGateway extends io.pulumi.resources.CustomResource {
      * Arn for Wireless Gateway. Returned upon successful create.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -38,7 +38,7 @@ public class WirelessGateway extends io.pulumi.resources.CustomResource {
      * Description of Wireless Gateway.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -52,7 +52,7 @@ public class WirelessGateway extends io.pulumi.resources.CustomResource {
      * The date and time when the most recent uplink was received.
      * 
      */
-    @OutputExport(name="lastUplinkReceivedAt", type=String.class, parameters={})
+    @Export(name="lastUplinkReceivedAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastUplinkReceivedAt;
 
     /**
@@ -66,7 +66,7 @@ public class WirelessGateway extends io.pulumi.resources.CustomResource {
      * The combination of Package, Station and Model which represents the version of the LoRaWAN Wireless Gateway.
      * 
      */
-    @OutputExport(name="loRaWAN", type=WirelessGatewayLoRaWANGateway.class, parameters={})
+    @Export(name="loRaWAN", type=WirelessGatewayLoRaWANGateway.class, parameters={})
     private Output<WirelessGatewayLoRaWANGateway> loRaWAN;
 
     /**
@@ -80,7 +80,7 @@ public class WirelessGateway extends io.pulumi.resources.CustomResource {
      * Name of Wireless Gateway.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -94,7 +94,7 @@ public class WirelessGateway extends io.pulumi.resources.CustomResource {
      * A list of key-value pairs that contain metadata for the gateway.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={WirelessGatewayTag.class})
+    @Export(name="tags", type=List.class, parameters={WirelessGatewayTag.class})
     private Output</* @Nullable */ List<WirelessGatewayTag>> tags;
 
     /**
@@ -108,7 +108,7 @@ public class WirelessGateway extends io.pulumi.resources.CustomResource {
      * Thing Arn. Passed into Update to associate a Thing with the Wireless Gateway.
      * 
      */
-    @OutputExport(name="thingArn", type=String.class, parameters={})
+    @Export(name="thingArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> thingArn;
 
     /**
@@ -122,7 +122,7 @@ public class WirelessGateway extends io.pulumi.resources.CustomResource {
      * Thing Arn. If there is a Thing created, this can be returned with a Get call.
      * 
      */
-    @OutputExport(name="thingName", type=String.class, parameters={})
+    @Export(name="thingName", type=String.class, parameters={})
     private Output<String> thingName;
 
     /**

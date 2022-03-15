@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
      * The name of the claim that contains the users name.
      * 
      */
-    @InputImport(name="nameClaimType")
+    @Import(name="nameClaimType")
       private final @Nullable Output<String> nameClaimType;
 
     public Output<String> getNameClaimType() {
@@ -34,7 +34,7 @@ public final class OpenIdConnectLoginArgs extends io.pulumi.resources.ResourceAr
      * A list of the scopes that should be requested while authenticating.
      * 
      */
-    @InputImport(name="scopes")
+    @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;
 
     public Output<List<String>> getScopes() {

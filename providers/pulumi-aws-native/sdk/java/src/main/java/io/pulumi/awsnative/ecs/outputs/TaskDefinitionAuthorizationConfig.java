@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.enums.TaskDefinitionAuthorizationConfigIAM;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionAuthorizationConfig {
     private final @Nullable String accessPointId;
     private final @Nullable TaskDefinitionAuthorizationConfigIAM iAM;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionAuthorizationConfig(
-        @OutputCustomType.Parameter("accessPointId") @Nullable String accessPointId,
-        @OutputCustomType.Parameter("iAM") @Nullable TaskDefinitionAuthorizationConfigIAM iAM) {
+        @CustomType.Parameter("accessPointId") @Nullable String accessPointId,
+        @CustomType.Parameter("iAM") @Nullable TaskDefinitionAuthorizationConfigIAM iAM) {
         this.accessPointId = accessPointId;
         this.iAM = iAM;
     }

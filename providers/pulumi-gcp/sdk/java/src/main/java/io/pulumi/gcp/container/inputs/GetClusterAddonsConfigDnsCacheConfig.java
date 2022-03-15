@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetClusterAddonsConfigDnsCacheConfig extends io.pulumi.resour
 
     public static final GetClusterAddonsConfigDnsCacheConfig Empty = new GetClusterAddonsConfigDnsCacheConfig();
 
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {

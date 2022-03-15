@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.events.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventSeries {
     /**
      * count is the number of occurrences in this series up to the last heartbeat time.
@@ -28,11 +28,11 @@ public final class EventSeries {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventSeries(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("lastObservedTime") String lastObservedTime,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("lastObservedTime") String lastObservedTime,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.count = count;
         this.lastObservedTime = lastObservedTime;
         this.state = state;

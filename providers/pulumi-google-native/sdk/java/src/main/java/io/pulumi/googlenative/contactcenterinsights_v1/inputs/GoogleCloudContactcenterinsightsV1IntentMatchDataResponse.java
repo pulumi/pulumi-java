@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudContactcenterinsightsV1IntentMatchDataResponse ext
      * The id of the matched intent. Can be used to retrieve the corresponding intent information.
      * 
      */
-    @InputImport(name="intentUniqueId", required=true)
+    @Import(name="intentUniqueId", required=true)
       private final String intentUniqueId;
 
     public String getIntentUniqueId() {

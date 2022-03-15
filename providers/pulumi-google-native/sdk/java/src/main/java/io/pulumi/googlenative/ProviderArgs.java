@@ -4,7 +4,7 @@
 package io.pulumi.googlenative;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.Utilities;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * Additional user-agent string to append to the default one (<prod_name>/<ver>).
      * 
      */
-    @InputImport(name="appendUserAgent")
+    @Import(name="appendUserAgent")
       private final @Nullable Output<String> appendUserAgent;
 
     public Output<String> getAppendUserAgent() {
@@ -31,7 +31,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * This will disable the Pulumi Partner Name which is used if a custom `partnerName` isn't specified.
      * 
      */
-    @InputImport(name="disablePartnerName", json=true)
+    @Import(name="disablePartnerName", json=true)
       private final @Nullable Output<Boolean> disablePartnerName;
 
     public Output<Boolean> getDisablePartnerName() {
@@ -42,7 +42,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * A Google Partner Name to facilitate partner resource usage attribution.
      * 
      */
-    @InputImport(name="partnerName")
+    @Import(name="partnerName")
       private final @Nullable Output<String> partnerName;
 
     public Output<String> getPartnerName() {
@@ -53,7 +53,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The default project to manage resources in. If another project is specified on a resource, it will take precedence.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -64,7 +64,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The default region to manage resources in. If another region is specified on a regional resource, it will take precedence.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -75,7 +75,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * The default zone to manage resources in. Generally, this zone should be within the default region you specified. If another zone is specified on a zonal resource, it will take precedence.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

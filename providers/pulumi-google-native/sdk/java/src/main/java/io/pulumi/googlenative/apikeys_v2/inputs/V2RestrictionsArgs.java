@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apikeys_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apikeys_v2.inputs.V2AndroidKeyRestrictionsArgs;
 import io.pulumi.googlenative.apikeys_v2.inputs.V2ApiTargetArgs;
 import io.pulumi.googlenative.apikeys_v2.inputs.V2BrowserKeyRestrictionsArgs;
@@ -27,7 +27,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
      * The Android apps that are allowed to use the key.
      * 
      */
-    @InputImport(name="androidKeyRestrictions")
+    @Import(name="androidKeyRestrictions")
       private final @Nullable Output<V2AndroidKeyRestrictionsArgs> androidKeyRestrictions;
 
     public Output<V2AndroidKeyRestrictionsArgs> getAndroidKeyRestrictions() {
@@ -38,7 +38,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
      * A restriction for a specific service and optionally one or more specific methods. Requests are allowed if they match any of these restrictions. If no restrictions are specified, all targets are allowed.
      * 
      */
-    @InputImport(name="apiTargets")
+    @Import(name="apiTargets")
       private final @Nullable Output<List<V2ApiTargetArgs>> apiTargets;
 
     public Output<List<V2ApiTargetArgs>> getApiTargets() {
@@ -49,7 +49,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
      * The HTTP referrers (websites) that are allowed to use the key.
      * 
      */
-    @InputImport(name="browserKeyRestrictions")
+    @Import(name="browserKeyRestrictions")
       private final @Nullable Output<V2BrowserKeyRestrictionsArgs> browserKeyRestrictions;
 
     public Output<V2BrowserKeyRestrictionsArgs> getBrowserKeyRestrictions() {
@@ -60,7 +60,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
      * The iOS apps that are allowed to use the key.
      * 
      */
-    @InputImport(name="iosKeyRestrictions")
+    @Import(name="iosKeyRestrictions")
       private final @Nullable Output<V2IosKeyRestrictionsArgs> iosKeyRestrictions;
 
     public Output<V2IosKeyRestrictionsArgs> getIosKeyRestrictions() {
@@ -71,7 +71,7 @@ public final class V2RestrictionsArgs extends io.pulumi.resources.ResourceArgs {
      * The IP addresses of callers that are allowed to use the key.
      * 
      */
-    @InputImport(name="serverKeyRestrictions")
+    @Import(name="serverKeyRestrictions")
       private final @Nullable Output<V2ServerKeyRestrictionsArgs> serverKeyRestrictions;
 
     public Output<V2ServerKeyRestrictionsArgs> getServerKeyRestrictions() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationPackageSupportUrlsResponse {
     /**
      * The government cloud support URL.
@@ -22,10 +22,10 @@ public final class ApplicationPackageSupportUrlsResponse {
      */
     private final @Nullable String publicAzure;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationPackageSupportUrlsResponse(
-        @OutputCustomType.Parameter("governmentCloud") @Nullable String governmentCloud,
-        @OutputCustomType.Parameter("publicAzure") @Nullable String publicAzure) {
+        @CustomType.Parameter("governmentCloud") @Nullable String governmentCloud,
+        @CustomType.Parameter("publicAzure") @Nullable String publicAzure) {
         this.governmentCloud = governmentCloud;
         this.publicAzure = publicAzure;
     }

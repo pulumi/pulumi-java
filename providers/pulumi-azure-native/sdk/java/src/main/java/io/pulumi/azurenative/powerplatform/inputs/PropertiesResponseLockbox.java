@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.powerplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PropertiesResponseLockbox extends io.pulumi.resources.InvokeA
      * lockbox configuration
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {

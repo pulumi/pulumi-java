@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class QosPortRangeResponse extends io.pulumi.resources.InvokeArgs {
      * Qos Port Range end.
      * 
      */
-    @InputImport(name="end")
+    @Import(name="end")
       private final @Nullable Integer end;
 
     public Optional<Integer> getEnd() {
@@ -33,7 +33,7 @@ public final class QosPortRangeResponse extends io.pulumi.resources.InvokeArgs {
      * Qos Port Range start.
      * 
      */
-    @InputImport(name="start")
+    @Import(name="start")
       private final @Nullable Integer start;
 
     public Optional<Integer> getStart() {

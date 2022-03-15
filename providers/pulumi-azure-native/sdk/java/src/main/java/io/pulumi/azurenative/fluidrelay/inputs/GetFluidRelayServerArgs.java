@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.fluidrelay.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetFluidRelayServerArgs extends io.pulumi.resources.InvokeArg
      * The resource name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -27,7 +27,7 @@ public final class GetFluidRelayServerArgs extends io.pulumi.resources.InvokeArg
      * The resource group containing the resource.
      * 
      */
-    @InputImport(name="resourceGroup", required=true)
+    @Import(name="resourceGroup", required=true)
       private final String resourceGroup;
 
     public String getResourceGroup() {

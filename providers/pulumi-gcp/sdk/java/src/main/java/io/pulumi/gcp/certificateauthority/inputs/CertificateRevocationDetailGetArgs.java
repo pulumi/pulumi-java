@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class CertificateRevocationDetailGetArgs extends io.pulumi.resource
 
     public static final CertificateRevocationDetailGetArgs Empty = new CertificateRevocationDetailGetArgs();
 
-    @InputImport(name="revocationState")
+    @Import(name="revocationState")
       private final @Nullable Output<String> revocationState;
 
     public Output<String> getRevocationState() {
         return this.revocationState == null ? Output.empty() : this.revocationState;
     }
 
-    @InputImport(name="revocationTime")
+    @Import(name="revocationTime")
       private final @Nullable Output<String> revocationTime;
 
     public Output<String> getRevocationTime() {

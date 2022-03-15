@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.GetInstanceSchedulingNodeAffinity;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,21 +21,21 @@ public final class GetInstanceScheduling extends io.pulumi.resources.InvokeArgs 
      * restarted if it was terminated by Compute Engine (not a user).
      * 
      */
-    @InputImport(name="automaticRestart", required=true)
+    @Import(name="automaticRestart", required=true)
       private final Boolean automaticRestart;
 
     public Boolean getAutomaticRestart() {
         return this.automaticRestart;
     }
 
-    @InputImport(name="minNodeCpus", required=true)
+    @Import(name="minNodeCpus", required=true)
       private final Integer minNodeCpus;
 
     public Integer getMinNodeCpus() {
         return this.minNodeCpus;
     }
 
-    @InputImport(name="nodeAffinities", required=true)
+    @Import(name="nodeAffinities", required=true)
       private final List<GetInstanceSchedulingNodeAffinity> nodeAffinities;
 
     public List<GetInstanceSchedulingNodeAffinity> getNodeAffinities() {
@@ -48,7 +48,7 @@ public final class GetInstanceScheduling extends io.pulumi.resources.InvokeArgs 
      * [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options)
      * 
      */
-    @InputImport(name="onHostMaintenance", required=true)
+    @Import(name="onHostMaintenance", required=true)
       private final String onHostMaintenance;
 
     public String getOnHostMaintenance() {
@@ -59,7 +59,7 @@ public final class GetInstanceScheduling extends io.pulumi.resources.InvokeArgs 
      * Whether the instance is preemptible.
      * 
      */
-    @InputImport(name="preemptible", required=true)
+    @Import(name="preemptible", required=true)
       private final Boolean preemptible;
 
     public Boolean getPreemptible() {

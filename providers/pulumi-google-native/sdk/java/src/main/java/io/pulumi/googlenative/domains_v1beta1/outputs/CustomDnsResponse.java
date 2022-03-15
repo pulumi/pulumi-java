@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.domains_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.domains_v1beta1.outputs.DsRecordResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CustomDnsResponse {
     /**
      * The list of DS records for this domain, which are used to enable DNSSEC. The domain's DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.
@@ -22,10 +22,10 @@ public final class CustomDnsResponse {
      */
     private final List<String> nameServers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomDnsResponse(
-        @OutputCustomType.Parameter("dsRecords") List<DsRecordResponse> dsRecords,
-        @OutputCustomType.Parameter("nameServers") List<String> nameServers) {
+        @CustomType.Parameter("dsRecords") List<DsRecordResponse> dsRecords,
+        @CustomType.Parameter("nameServers") List<String> nameServers) {
         this.dsRecords = dsRecords;
         this.nameServers = nameServers;
     }

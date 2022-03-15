@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datapipelines_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datapipelines_v1.enums.PipelineState;
 import io.pulumi.googlenative.datapipelines_v1.enums.PipelineType;
 import io.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1ScheduleSpecArgs;
@@ -23,14 +23,14 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The display name of the pipeline. It can contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), and underscores (_).
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -41,7 +41,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The pipeline name. For example: `projects/PROJECT_ID/locations/LOCATION_ID/pipelines/PIPELINE_ID`. * `PROJECT_ID` can contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), and periods (.). For more information, see [Identifying projects](https://cloud.google.com/resource-manager/docs/creating-managing-projects#identifying_projects). * `LOCATION_ID` is the canonical ID for the pipeline's location. The list of available locations can be obtained by calling `google.cloud.location.Locations.ListLocations`. Note that the Data Pipelines service is not available in all regions. It depends on Cloud Scheduler, an App Engine application, so it's only available in [App Engine regions](https://cloud.google.com/about/locations#region). * `PIPELINE_ID` is the ID of the pipeline. Must be unique for the selected project and location.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,14 +52,14 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The sources of the pipeline (for example, Dataplex). The keys and values are set by the corresponding sources during pipeline creation.
      * 
      */
-    @InputImport(name="pipelineSources")
+    @Import(name="pipelineSources")
       private final @Nullable Output<Map<String,String>> pipelineSources;
 
     public Output<Map<String,String>> getPipelineSources() {
         return this.pipelineSources == null ? Output.empty() : this.pipelineSources;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -70,7 +70,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * Internal scheduling information for a pipeline. If this information is provided, periodic jobs will be created per the schedule. If not, users are responsible for creating jobs externally.
      * 
      */
-    @InputImport(name="scheduleInfo")
+    @Import(name="scheduleInfo")
       private final @Nullable Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs> scheduleInfo;
 
     public Output<GoogleCloudDatapipelinesV1ScheduleSpecArgs> getScheduleInfo() {
@@ -81,7 +81,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. A service account email to be used with the Cloud Scheduler job. If not specified, the default compute engine service account will be used.
      * 
      */
-    @InputImport(name="schedulerServiceAccountEmail")
+    @Import(name="schedulerServiceAccountEmail")
       private final @Nullable Output<String> schedulerServiceAccountEmail;
 
     public Output<String> getSchedulerServiceAccountEmail() {
@@ -92,7 +92,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The state of the pipeline. When the pipeline is created, the state is set to 'PIPELINE_STATE_ACTIVE' by default. State changes can be requested by setting the state to stopping, paused, or resuming. State cannot be changed through UpdatePipeline requests.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final Output<PipelineState> state;
 
     public Output<PipelineState> getState() {
@@ -103,7 +103,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the pipeline. This field affects the scheduling of the pipeline and the type of metrics to show for the pipeline.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<PipelineType> type;
 
     public Output<PipelineType> getType() {
@@ -114,7 +114,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * Workload information for creating new jobs.
      * 
      */
-    @InputImport(name="workload")
+    @Import(name="workload")
       private final @Nullable Output<GoogleCloudDatapipelinesV1WorkloadArgs> workload;
 
     public Output<GoogleCloudDatapipelinesV1WorkloadArgs> getWorkload() {

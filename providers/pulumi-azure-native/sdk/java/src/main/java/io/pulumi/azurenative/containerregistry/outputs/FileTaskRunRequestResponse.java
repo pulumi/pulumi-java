@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.outputs.AgentPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.CredentialsResponse;
 import io.pulumi.azurenative.containerregistry.outputs.PlatformPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SetValueResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FileTaskRunRequestResponse {
     /**
      * The machine configuration of the run agent.
@@ -81,20 +81,20 @@ public final class FileTaskRunRequestResponse {
      */
     private final @Nullable String valuesFilePath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FileTaskRunRequestResponse(
-        @OutputCustomType.Parameter("agentConfiguration") @Nullable AgentPropertiesResponse agentConfiguration,
-        @OutputCustomType.Parameter("agentPoolName") @Nullable String agentPoolName,
-        @OutputCustomType.Parameter("credentials") @Nullable CredentialsResponse credentials,
-        @OutputCustomType.Parameter("isArchiveEnabled") @Nullable Boolean isArchiveEnabled,
-        @OutputCustomType.Parameter("logTemplate") @Nullable String logTemplate,
-        @OutputCustomType.Parameter("platform") PlatformPropertiesResponse platform,
-        @OutputCustomType.Parameter("sourceLocation") @Nullable String sourceLocation,
-        @OutputCustomType.Parameter("taskFilePath") String taskFilePath,
-        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("values") @Nullable List<SetValueResponse> values,
-        @OutputCustomType.Parameter("valuesFilePath") @Nullable String valuesFilePath) {
+        @CustomType.Parameter("agentConfiguration") @Nullable AgentPropertiesResponse agentConfiguration,
+        @CustomType.Parameter("agentPoolName") @Nullable String agentPoolName,
+        @CustomType.Parameter("credentials") @Nullable CredentialsResponse credentials,
+        @CustomType.Parameter("isArchiveEnabled") @Nullable Boolean isArchiveEnabled,
+        @CustomType.Parameter("logTemplate") @Nullable String logTemplate,
+        @CustomType.Parameter("platform") PlatformPropertiesResponse platform,
+        @CustomType.Parameter("sourceLocation") @Nullable String sourceLocation,
+        @CustomType.Parameter("taskFilePath") String taskFilePath,
+        @CustomType.Parameter("timeout") @Nullable Integer timeout,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("values") @Nullable List<SetValueResponse> values,
+        @CustomType.Parameter("valuesFilePath") @Nullable String valuesFilePath) {
         this.agentConfiguration = agentConfiguration;
         this.agentPoolName = agentPoolName;
         this.credentials = credentials;

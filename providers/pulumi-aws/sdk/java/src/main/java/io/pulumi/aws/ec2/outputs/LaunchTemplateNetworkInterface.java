@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LaunchTemplateNetworkInterface {
     /**
      * Associate a Carrier IP address with `eth0` for a new network interface. Use this option when you launch an instance in a Wavelength Zone and want to associate a Carrier IP address with the network interface. Boolean value.
@@ -89,23 +89,23 @@ public final class LaunchTemplateNetworkInterface {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LaunchTemplateNetworkInterface(
-        @OutputCustomType.Parameter("associateCarrierIpAddress") @Nullable String associateCarrierIpAddress,
-        @OutputCustomType.Parameter("associatePublicIpAddress") @Nullable String associatePublicIpAddress,
-        @OutputCustomType.Parameter("deleteOnTermination") @Nullable String deleteOnTermination,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("deviceIndex") @Nullable Integer deviceIndex,
-        @OutputCustomType.Parameter("interfaceType") @Nullable String interfaceType,
-        @OutputCustomType.Parameter("ipv4AddressCount") @Nullable Integer ipv4AddressCount,
-        @OutputCustomType.Parameter("ipv4Addresses") @Nullable List<String> ipv4Addresses,
-        @OutputCustomType.Parameter("ipv6AddressCount") @Nullable Integer ipv6AddressCount,
-        @OutputCustomType.Parameter("ipv6Addresses") @Nullable List<String> ipv6Addresses,
-        @OutputCustomType.Parameter("networkCardIndex") @Nullable Integer networkCardIndex,
-        @OutputCustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
-        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
-        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
+        @CustomType.Parameter("associateCarrierIpAddress") @Nullable String associateCarrierIpAddress,
+        @CustomType.Parameter("associatePublicIpAddress") @Nullable String associatePublicIpAddress,
+        @CustomType.Parameter("deleteOnTermination") @Nullable String deleteOnTermination,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("deviceIndex") @Nullable Integer deviceIndex,
+        @CustomType.Parameter("interfaceType") @Nullable String interfaceType,
+        @CustomType.Parameter("ipv4AddressCount") @Nullable Integer ipv4AddressCount,
+        @CustomType.Parameter("ipv4Addresses") @Nullable List<String> ipv4Addresses,
+        @CustomType.Parameter("ipv6AddressCount") @Nullable Integer ipv6AddressCount,
+        @CustomType.Parameter("ipv6Addresses") @Nullable List<String> ipv6Addresses,
+        @CustomType.Parameter("networkCardIndex") @Nullable Integer networkCardIndex,
+        @CustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
+        @CustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
+        @CustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.associateCarrierIpAddress = associateCarrierIpAddress;
         this.associatePublicIpAddress = associatePublicIpAddress;
         this.deleteOnTermination = deleteOnTermination;

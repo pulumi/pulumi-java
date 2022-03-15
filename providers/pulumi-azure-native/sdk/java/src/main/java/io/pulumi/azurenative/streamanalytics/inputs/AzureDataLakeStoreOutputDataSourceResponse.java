@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
      * The name of the Azure Data Lake Store account. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable String accountName;
 
     public Optional<String> getAccountName() {
@@ -33,7 +33,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
      * The date format. Wherever {date} appears in filePathPrefix, the value of this property is used as the date format instead.
      * 
      */
-    @InputImport(name="dateFormat")
+    @Import(name="dateFormat")
       private final @Nullable String dateFormat;
 
     public Optional<String> getDateFormat() {
@@ -44,7 +44,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
      * The location of the file to which the output should be written to. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="filePathPrefix")
+    @Import(name="filePathPrefix")
       private final @Nullable String filePathPrefix;
 
     public Optional<String> getFilePathPrefix() {
@@ -55,7 +55,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
      * A refresh token that can be used to obtain a valid access token that can then be used to authenticate with the data source. A valid refresh token is currently only obtainable via the Azure Portal. It is recommended to put a dummy string value here when creating the data source and then going to the Azure Portal to authenticate the data source which will update this property with a valid refresh token. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="refreshToken")
+    @Import(name="refreshToken")
       private final @Nullable String refreshToken;
 
     public Optional<String> getRefreshToken() {
@@ -66,7 +66,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
      * The tenant id of the user used to obtain the refresh token. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
@@ -77,7 +77,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
      * The time format. Wherever {time} appears in filePathPrefix, the value of this property is used as the time format instead.
      * 
      */
-    @InputImport(name="timeFormat")
+    @Import(name="timeFormat")
       private final @Nullable String timeFormat;
 
     public Optional<String> getTimeFormat() {
@@ -88,7 +88,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
      * The user display name of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
      * 
      */
-    @InputImport(name="tokenUserDisplayName")
+    @Import(name="tokenUserDisplayName")
       private final @Nullable String tokenUserDisplayName;
 
     public Optional<String> getTokenUserDisplayName() {
@@ -99,7 +99,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
      * The user principal name (UPN) of the user that was used to obtain the refresh token. Use this property to help remember which user was used to obtain the refresh token.
      * 
      */
-    @InputImport(name="tokenUserPrincipalName")
+    @Import(name="tokenUserPrincipalName")
       private final @Nullable String tokenUserPrincipalName;
 
     public Optional<String> getTokenUserPrincipalName() {
@@ -111,7 +111,7 @@ public final class AzureDataLakeStoreOutputDataSourceResponse extends io.pulumi.
      * Expected value is 'Microsoft.DataLake/Accounts'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

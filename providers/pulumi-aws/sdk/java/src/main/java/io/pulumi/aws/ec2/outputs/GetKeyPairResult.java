@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetKeyPairFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetKeyPairResult {
     /**
      * The ARN of the Key Pair.
@@ -38,15 +38,15 @@ public final class GetKeyPairResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKeyPairResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetKeyPairFilter> filters,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
-        @OutputCustomType.Parameter("keyPairId") @Nullable String keyPairId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("filters") @Nullable List<GetKeyPairFilter> filters,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("keyName") @Nullable String keyName,
+        @CustomType.Parameter("keyPairId") @Nullable String keyPairId,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.filters = filters;
         this.fingerprint = fingerprint;

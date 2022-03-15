@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
 
     public static final ObjectLambdaAccessPointPolicyState Empty = new ObjectLambdaAccessPointPolicyState();
 
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -26,7 +26,7 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
      * Indicates whether this access point currently has a policy that allows public access.
      * 
      */
-    @InputImport(name="hasPublicAccessPolicy")
+    @Import(name="hasPublicAccessPolicy")
       private final @Nullable Output<Boolean> hasPublicAccessPolicy;
 
     public Output<Boolean> getHasPublicAccessPolicy() {
@@ -37,7 +37,7 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
      * The name of the Object Lambda Access Point.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -48,7 +48,7 @@ public final class ObjectLambdaAccessPointPolicyState extends io.pulumi.resource
      * The Object Lambda Access Point resource policy document.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {

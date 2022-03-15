@@ -7,7 +7,7 @@ import io.pulumi.azurenative.policyinsights.enums.ComplianceState;
 import io.pulumi.azurenative.policyinsights.inputs.AttestationEvidenceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
      * The name of the attestation.
      * 
      */
-    @InputImport(name="attestationName")
+    @Import(name="attestationName")
       private final @Nullable Output<String> attestationName;
 
     public Output<String> getAttestationName() {
@@ -33,7 +33,7 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
      * Comments describing why this attestation was created.
      * 
      */
-    @InputImport(name="comments")
+    @Import(name="comments")
       private final @Nullable Output<String> comments;
 
     public Output<String> getComments() {
@@ -44,7 +44,7 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
      * The compliance state that should be set on the resource.
      * 
      */
-    @InputImport(name="complianceState")
+    @Import(name="complianceState")
       private final @Nullable Output<Either<String,ComplianceState>> complianceState;
 
     public Output<Either<String,ComplianceState>> getComplianceState() {
@@ -55,7 +55,7 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
      * The evidence supporting the compliance state set in this attestation.
      * 
      */
-    @InputImport(name="evidence")
+    @Import(name="evidence")
       private final @Nullable Output<List<AttestationEvidenceArgs>> evidence;
 
     public Output<List<AttestationEvidenceArgs>> getEvidence() {
@@ -66,7 +66,7 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
      * The time the compliance state should expire.
      * 
      */
-    @InputImport(name="expiresOn")
+    @Import(name="expiresOn")
       private final @Nullable Output<String> expiresOn;
 
     public Output<String> getExpiresOn() {
@@ -77,7 +77,7 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
      * The person responsible for setting the state of the resource. This value is typically an Azure Active Directory object ID.
      * 
      */
-    @InputImport(name="owner")
+    @Import(name="owner")
       private final @Nullable Output<String> owner;
 
     public Output<String> getOwner() {
@@ -88,7 +88,7 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
      * The resource ID of the policy assignment that the attestation is setting the state for.
      * 
      */
-    @InputImport(name="policyAssignmentId", required=true)
+    @Import(name="policyAssignmentId", required=true)
       private final Output<String> policyAssignmentId;
 
     public Output<String> getPolicyAssignmentId() {
@@ -99,7 +99,7 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
      * The policy definition reference ID from a policy set definition that the attestation is setting the state for. If the policy assignment assigns a policy set definition the attestation can choose a definition within the set definition with this property or omit this and set the state for the entire set definition.
      * 
      */
-    @InputImport(name="policyDefinitionReferenceId")
+    @Import(name="policyDefinitionReferenceId")
       private final @Nullable Output<String> policyDefinitionReferenceId;
 
     public Output<String> getPolicyDefinitionReferenceId() {
@@ -110,7 +110,7 @@ public final class AttestationAtResourceArgs extends io.pulumi.resources.Resourc
      * Resource ID.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
     public Output<String> getResourceId() {

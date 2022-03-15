@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 import io.pulumi.awsnative.lightsail.inputs.ContainerEnvironmentVariableArgs;
 import io.pulumi.awsnative.lightsail.inputs.ContainerPortInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The launch command for the container.
      * 
      */
-    @InputImport(name="command")
+    @Import(name="command")
       private final @Nullable Output<List<String>> command;
 
     public Output<List<String>> getCommand() {
@@ -36,7 +36,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the container.
      * 
      */
-    @InputImport(name="containerName")
+    @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
     public Output<String> getContainerName() {
@@ -47,7 +47,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The environment variables of the container.
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable Output<List<ContainerEnvironmentVariableArgs>> environment;
 
     public Output<List<ContainerEnvironmentVariableArgs>> getEnvironment() {
@@ -58,7 +58,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the image used for the container.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable Output<String> image;
 
     public Output<String> getImage() {
@@ -69,7 +69,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * The open firewall ports of the container.
      * 
      */
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable Output<List<ContainerPortInfoArgs>> ports;
 
     public Output<List<ContainerPortInfoArgs>> getPorts() {

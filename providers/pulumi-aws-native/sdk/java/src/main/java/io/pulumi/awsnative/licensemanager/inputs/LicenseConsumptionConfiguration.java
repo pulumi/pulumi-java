@@ -5,7 +5,7 @@ package io.pulumi.awsnative.licensemanager.inputs;
 
 import io.pulumi.awsnative.licensemanager.inputs.LicenseBorrowConfiguration;
 import io.pulumi.awsnative.licensemanager.inputs.LicenseProvisionalConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,21 +16,21 @@ public final class LicenseConsumptionConfiguration extends io.pulumi.resources.I
 
     public static final LicenseConsumptionConfiguration Empty = new LicenseConsumptionConfiguration();
 
-    @InputImport(name="borrowConfiguration")
+    @Import(name="borrowConfiguration")
       private final @Nullable LicenseBorrowConfiguration borrowConfiguration;
 
     public Optional<LicenseBorrowConfiguration> getBorrowConfiguration() {
         return this.borrowConfiguration == null ? Optional.empty() : Optional.ofNullable(this.borrowConfiguration);
     }
 
-    @InputImport(name="provisionalConfiguration")
+    @Import(name="provisionalConfiguration")
       private final @Nullable LicenseProvisionalConfiguration provisionalConfiguration;
 
     public Optional<LicenseProvisionalConfiguration> getProvisionalConfiguration() {
         return this.provisionalConfiguration == null ? Optional.empty() : Optional.ofNullable(this.provisionalConfiguration);
     }
 
-    @InputImport(name="renewType")
+    @Import(name="renewType")
       private final @Nullable String renewType;
 
     public Optional<String> getRenewType() {

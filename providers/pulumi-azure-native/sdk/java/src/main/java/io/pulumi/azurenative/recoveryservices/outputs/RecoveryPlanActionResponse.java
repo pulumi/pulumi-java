@@ -6,13 +6,13 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 import io.pulumi.azurenative.recoveryservices.outputs.RecoveryPlanAutomationRunbookActionDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RecoveryPlanManualActionDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RecoveryPlanScriptActionDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RecoveryPlanActionResponse {
     /**
      * The action name.
@@ -35,12 +35,12 @@ public final class RecoveryPlanActionResponse {
      */
     private final List<String> failoverTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecoveryPlanActionResponse(
-        @OutputCustomType.Parameter("actionName") String actionName,
-        @OutputCustomType.Parameter("customDetails") Object customDetails,
-        @OutputCustomType.Parameter("failoverDirections") List<String> failoverDirections,
-        @OutputCustomType.Parameter("failoverTypes") List<String> failoverTypes) {
+        @CustomType.Parameter("actionName") String actionName,
+        @CustomType.Parameter("customDetails") Object customDetails,
+        @CustomType.Parameter("failoverDirections") List<String> failoverDirections,
+        @CustomType.Parameter("failoverTypes") List<String> failoverTypes) {
         this.actionName = actionName;
         this.customDetails = customDetails;
         this.failoverDirections = failoverDirections;

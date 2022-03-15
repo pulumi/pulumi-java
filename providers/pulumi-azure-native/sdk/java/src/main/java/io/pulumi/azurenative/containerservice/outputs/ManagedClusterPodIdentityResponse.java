@@ -5,13 +5,13 @@ package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterPodIdentityResponseProvisioningInfo;
 import io.pulumi.azurenative.containerservice.outputs.UserAssignedIdentityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedClusterPodIdentityResponse {
     /**
      * Binding selector to use for the AzureIdentityBinding resource.
@@ -40,14 +40,14 @@ public final class ManagedClusterPodIdentityResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedClusterPodIdentityResponse(
-        @OutputCustomType.Parameter("bindingSelector") @Nullable String bindingSelector,
-        @OutputCustomType.Parameter("identity") UserAssignedIdentityResponse identity,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namespace") String namespace,
-        @OutputCustomType.Parameter("provisioningInfo") ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
+        @CustomType.Parameter("bindingSelector") @Nullable String bindingSelector,
+        @CustomType.Parameter("identity") UserAssignedIdentityResponse identity,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namespace") String namespace,
+        @CustomType.Parameter("provisioningInfo") ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo,
+        @CustomType.Parameter("provisioningState") String provisioningState) {
         this.bindingSelector = bindingSelector;
         this.identity = identity;
         this.name = name;

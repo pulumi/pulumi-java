@@ -5,7 +5,7 @@ package io.pulumi.aws.glue;
 
 import io.pulumi.aws.glue.inputs.PartitionIndexPartitionIndexArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
      * The catalog ID where the table resides.
      * 
      */
-    @InputImport(name="catalogId")
+    @Import(name="catalogId")
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
@@ -30,7 +30,7 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -41,7 +41,7 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for a partition index. See `partition_index` below.
      * 
      */
-    @InputImport(name="partitionIndex", required=true)
+    @Import(name="partitionIndex", required=true)
       private final Output<PartitionIndexPartitionIndexArgs> partitionIndex;
 
     public Output<PartitionIndexPartitionIndexArgs> getPartitionIndex() {
@@ -52,7 +52,7 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the table. For Hive compatibility, this must be entirely lowercase.
      * 
      */
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
     public Output<String> getTableName() {

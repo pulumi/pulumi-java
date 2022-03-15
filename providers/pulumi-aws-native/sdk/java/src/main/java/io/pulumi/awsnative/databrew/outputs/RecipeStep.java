@@ -5,12 +5,12 @@ package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.RecipeAction;
 import io.pulumi.awsnative.databrew.outputs.RecipeConditionExpression;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RecipeStep {
     private final RecipeAction action;
     /**
@@ -19,10 +19,10 @@ public final class RecipeStep {
      */
     private final @Nullable List<RecipeConditionExpression> conditionExpressions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecipeStep(
-        @OutputCustomType.Parameter("action") RecipeAction action,
-        @OutputCustomType.Parameter("conditionExpressions") @Nullable List<RecipeConditionExpression> conditionExpressions) {
+        @CustomType.Parameter("action") RecipeAction action,
+        @CustomType.Parameter("conditionExpressions") @Nullable List<RecipeConditionExpression> conditionExpressions) {
         this.action = action;
         this.conditionExpressions = conditionExpressions;
     }

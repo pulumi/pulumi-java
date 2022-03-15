@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ServerEndpointFilesNotSyncingErrorResponse extends io.pulumi.
      * Error code (HResult)
      * 
      */
-    @InputImport(name="errorCode", required=true)
+    @Import(name="errorCode", required=true)
       private final Integer errorCode;
 
     public Integer getErrorCode() {
@@ -32,7 +32,7 @@ public final class ServerEndpointFilesNotSyncingErrorResponse extends io.pulumi.
      * Count of persistent files not syncing with the specified error code
      * 
      */
-    @InputImport(name="persistentCount", required=true)
+    @Import(name="persistentCount", required=true)
       private final Double persistentCount;
 
     public Double getPersistentCount() {
@@ -43,7 +43,7 @@ public final class ServerEndpointFilesNotSyncingErrorResponse extends io.pulumi.
      * Count of transient files not syncing with the specified error code
      * 
      */
-    @InputImport(name="transientCount", required=true)
+    @Import(name="transientCount", required=true)
       private final Double transientCount;
 
     public Double getTransientCount() {

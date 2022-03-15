@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.inputs.StatefulPolicyPreservedStateArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class StatefulPolicyArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StatefulPolicyArgs Empty = new StatefulPolicyArgs();
 
-    @InputImport(name="preservedState")
+    @Import(name="preservedState")
       private final @Nullable Output<StatefulPolicyPreservedStateArgs> preservedState;
 
     public Output<StatefulPolicyPreservedStateArgs> getPreservedState() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PortStatus {
     /**
      * Error is to record the problem with the service port The format of the error shall comply with the following rules: - built-in error values shall be specified in this file and those shall use
@@ -36,11 +36,11 @@ public final class PortStatus {
      */
     private final String protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PortStatus(
-        @OutputCustomType.Parameter("error") @Nullable String error,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("protocol") String protocol) {
+        @CustomType.Parameter("error") @Nullable String error,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("protocol") String protocol) {
         this.error = error;
         this.port = port;
         this.protocol = protocol;

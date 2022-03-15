@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.aad.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainSecuritySettingsResponse {
     /**
      * A flag to determine whether or not KerberosArmoring is enabled or disabled.
@@ -47,15 +47,15 @@ public final class DomainSecuritySettingsResponse {
      */
     private final @Nullable String tlsV1;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainSecuritySettingsResponse(
-        @OutputCustomType.Parameter("kerberosArmoring") @Nullable String kerberosArmoring,
-        @OutputCustomType.Parameter("kerberosRc4Encryption") @Nullable String kerberosRc4Encryption,
-        @OutputCustomType.Parameter("ntlmV1") @Nullable String ntlmV1,
-        @OutputCustomType.Parameter("syncKerberosPasswords") @Nullable String syncKerberosPasswords,
-        @OutputCustomType.Parameter("syncNtlmPasswords") @Nullable String syncNtlmPasswords,
-        @OutputCustomType.Parameter("syncOnPremPasswords") @Nullable String syncOnPremPasswords,
-        @OutputCustomType.Parameter("tlsV1") @Nullable String tlsV1) {
+        @CustomType.Parameter("kerberosArmoring") @Nullable String kerberosArmoring,
+        @CustomType.Parameter("kerberosRc4Encryption") @Nullable String kerberosRc4Encryption,
+        @CustomType.Parameter("ntlmV1") @Nullable String ntlmV1,
+        @CustomType.Parameter("syncKerberosPasswords") @Nullable String syncKerberosPasswords,
+        @CustomType.Parameter("syncNtlmPasswords") @Nullable String syncNtlmPasswords,
+        @CustomType.Parameter("syncOnPremPasswords") @Nullable String syncOnPremPasswords,
+        @CustomType.Parameter("tlsV1") @Nullable String tlsV1) {
         this.kerberosArmoring = kerberosArmoring;
         this.kerberosRc4Encryption = kerberosRc4Encryption;
         this.ntlmV1 = ntlmV1;

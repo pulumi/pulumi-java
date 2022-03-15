@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SSISExecutionCredentialResponse extends io.pulumi.resources.I
      * Domain for windows authentication.
      * 
      */
-    @InputImport(name="domain", required=true)
+    @Import(name="domain", required=true)
       private final Object domain;
 
     public Object getDomain() {
@@ -32,7 +32,7 @@ public final class SSISExecutionCredentialResponse extends io.pulumi.resources.I
      * Password for windows authentication.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final SecureStringResponse password;
 
     public SecureStringResponse getPassword() {
@@ -43,7 +43,7 @@ public final class SSISExecutionCredentialResponse extends io.pulumi.resources.I
      * UseName for windows authentication.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final Object userName;
 
     public Object getUserName() {

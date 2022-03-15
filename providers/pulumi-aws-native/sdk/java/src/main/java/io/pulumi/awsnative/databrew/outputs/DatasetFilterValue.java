@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatasetFilterValue {
     private final String value;
     /**
@@ -16,10 +16,10 @@ public final class DatasetFilterValue {
      */
     private final String valueReference;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetFilterValue(
-        @OutputCustomType.Parameter("value") String value,
-        @OutputCustomType.Parameter("valueReference") String valueReference) {
+        @CustomType.Parameter("value") String value,
+        @CustomType.Parameter("valueReference") String valueReference) {
         this.value = value;
         this.valueReference = valueReference;
     }

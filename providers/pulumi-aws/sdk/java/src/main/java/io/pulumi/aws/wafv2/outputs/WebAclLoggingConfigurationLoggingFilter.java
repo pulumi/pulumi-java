@@ -4,12 +4,12 @@
 package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.WebAclLoggingConfigurationLoggingFilterFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebAclLoggingConfigurationLoggingFilter {
     /**
      * Default handling for logs that don't match any of the specified filtering conditions. Valid values: `KEEP` or `DROP`.
@@ -22,10 +22,10 @@ public final class WebAclLoggingConfigurationLoggingFilter {
      */
     private final List<WebAclLoggingConfigurationLoggingFilterFilter> filters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAclLoggingConfigurationLoggingFilter(
-        @OutputCustomType.Parameter("defaultBehavior") String defaultBehavior,
-        @OutputCustomType.Parameter("filters") List<WebAclLoggingConfigurationLoggingFilterFilter> filters) {
+        @CustomType.Parameter("defaultBehavior") String defaultBehavior,
+        @CustomType.Parameter("filters") List<WebAclLoggingConfigurationLoggingFilterFilter> filters) {
         this.defaultBehavior = defaultBehavior;
         this.filters = filters;
     }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningcompute.inputs;
 import io.pulumi.azurenative.machinelearningcompute.enums.Status;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
      * The maximum number of replicas for each service.
      * 
      */
-    @InputImport(name="maxReplicas")
+    @Import(name="maxReplicas")
       private final @Nullable Output<Integer> maxReplicas;
 
     public Output<Integer> getMaxReplicas() {
@@ -37,7 +37,7 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
      * The minimum number of replicas for each service.
      * 
      */
-    @InputImport(name="minReplicas")
+    @Import(name="minReplicas")
       private final @Nullable Output<Integer> minReplicas;
 
     public Output<Integer> getMinReplicas() {
@@ -48,7 +48,7 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
      * Refresh period in seconds.
      * 
      */
-    @InputImport(name="refreshPeriodInSeconds")
+    @Import(name="refreshPeriodInSeconds")
       private final @Nullable Output<Integer> refreshPeriodInSeconds;
 
     public Output<Integer> getRefreshPeriodInSeconds() {
@@ -59,7 +59,7 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
      * If auto-scale is enabled for all services. Each service can turn it off individually.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,Status>> status;
 
     public Output<Either<String,Status>> getStatus() {
@@ -70,7 +70,7 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
      * The target utilization.
      * 
      */
-    @InputImport(name="targetUtilization")
+    @Import(name="targetUtilization")
       private final @Nullable Output<Double> targetUtilization;
 
     public Output<Double> getTargetUtilization() {

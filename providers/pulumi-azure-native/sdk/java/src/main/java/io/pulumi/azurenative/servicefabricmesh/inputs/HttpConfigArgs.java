@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.HttpHostConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * description for routing.
      * 
      */
-    @InputImport(name="hosts", required=true)
+    @Import(name="hosts", required=true)
       private final Output<List<HttpHostConfigArgs>> hosts;
 
     public Output<List<HttpHostConfigArgs>> getHosts() {
@@ -35,7 +35,7 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * http gateway config name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the port at which the service endpoint below needs to be exposed.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Output<Integer> port;
 
     public Output<Integer> getPort() {

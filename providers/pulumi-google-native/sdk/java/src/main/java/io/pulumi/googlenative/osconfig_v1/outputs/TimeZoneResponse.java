@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TimeZoneResponse {
     /**
      * Optional. IANA Time Zone Database version number, e.g. "2019a".
@@ -15,8 +15,8 @@ public final class TimeZoneResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
-    private TimeZoneResponse(@OutputCustomType.Parameter("version") String version) {
+    @CustomType.Constructor
+    private TimeZoneResponse(@CustomType.Parameter("version") String version) {
         this.version = version;
     }
 

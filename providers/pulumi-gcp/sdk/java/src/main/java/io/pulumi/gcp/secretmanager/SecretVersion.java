@@ -4,7 +4,7 @@
 package io.pulumi.gcp.secretmanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.secretmanager.SecretVersionArgs;
@@ -36,7 +36,7 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
      * The time at which the Secret was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -50,7 +50,7 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
      * The time at which the Secret was destroyed. Only present if state is DESTROYED.
      * 
      */
-    @OutputExport(name="destroyTime", type=String.class, parameters={})
+    @Export(name="destroyTime", type=String.class, parameters={})
     private Output<String> destroyTime;
 
     /**
@@ -64,7 +64,7 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
      * The current state of the SecretVersion.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -78,7 +78,7 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
      * The resource name of the SecretVersion. Format: 'projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}'
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
      * Secret Manager secret resource
      * 
      */
-    @OutputExport(name="secret", type=String.class, parameters={})
+    @Export(name="secret", type=String.class, parameters={})
     private Output<String> secret;
 
     /**
@@ -107,7 +107,7 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @OutputExport(name="secretData", type=String.class, parameters={})
+    @Export(name="secretData", type=String.class, parameters={})
     private Output<String> secretData;
 
     /**

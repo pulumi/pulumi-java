@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.HostingEnvironmentProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCertificateResult {
     /**
      * CNAME of the certificate to be issued via free certificate
@@ -146,34 +146,34 @@ public final class GetCertificateResult {
      */
     private final Boolean valid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCertificateResult(
-        @OutputCustomType.Parameter("canonicalName") @Nullable String canonicalName,
-        @OutputCustomType.Parameter("cerBlob") String cerBlob,
-        @OutputCustomType.Parameter("domainValidationMethod") @Nullable String domainValidationMethod,
-        @OutputCustomType.Parameter("expirationDate") String expirationDate,
-        @OutputCustomType.Parameter("friendlyName") String friendlyName,
-        @OutputCustomType.Parameter("hostNames") @Nullable List<String> hostNames,
-        @OutputCustomType.Parameter("hostingEnvironmentProfile") HostingEnvironmentProfileResponse hostingEnvironmentProfile,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("issueDate") String issueDate,
-        @OutputCustomType.Parameter("issuer") String issuer,
-        @OutputCustomType.Parameter("keyVaultId") @Nullable String keyVaultId,
-        @OutputCustomType.Parameter("keyVaultSecretName") @Nullable String keyVaultSecretName,
-        @OutputCustomType.Parameter("keyVaultSecretStatus") String keyVaultSecretStatus,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pfxBlob") @Nullable String pfxBlob,
-        @OutputCustomType.Parameter("publicKeyHash") String publicKeyHash,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("serverFarmId") @Nullable String serverFarmId,
-        @OutputCustomType.Parameter("siteName") String siteName,
-        @OutputCustomType.Parameter("subjectName") String subjectName,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("thumbprint") String thumbprint,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("valid") Boolean valid) {
+        @CustomType.Parameter("canonicalName") @Nullable String canonicalName,
+        @CustomType.Parameter("cerBlob") String cerBlob,
+        @CustomType.Parameter("domainValidationMethod") @Nullable String domainValidationMethod,
+        @CustomType.Parameter("expirationDate") String expirationDate,
+        @CustomType.Parameter("friendlyName") String friendlyName,
+        @CustomType.Parameter("hostNames") @Nullable List<String> hostNames,
+        @CustomType.Parameter("hostingEnvironmentProfile") HostingEnvironmentProfileResponse hostingEnvironmentProfile,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("issueDate") String issueDate,
+        @CustomType.Parameter("issuer") String issuer,
+        @CustomType.Parameter("keyVaultId") @Nullable String keyVaultId,
+        @CustomType.Parameter("keyVaultSecretName") @Nullable String keyVaultSecretName,
+        @CustomType.Parameter("keyVaultSecretStatus") String keyVaultSecretStatus,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pfxBlob") @Nullable String pfxBlob,
+        @CustomType.Parameter("publicKeyHash") String publicKeyHash,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("serverFarmId") @Nullable String serverFarmId,
+        @CustomType.Parameter("siteName") String siteName,
+        @CustomType.Parameter("subjectName") String subjectName,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("thumbprint") String thumbprint,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("valid") Boolean valid) {
         this.canonicalName = canonicalName;
         this.cerBlob = cerBlob;
         this.domainValidationMethod = domainValidationMethod;

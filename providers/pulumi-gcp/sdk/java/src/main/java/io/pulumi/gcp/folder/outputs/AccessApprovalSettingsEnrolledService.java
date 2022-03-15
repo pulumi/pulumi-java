@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.folder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessApprovalSettingsEnrolledService {
     /**
      * The product for which Access Approval will be enrolled. Allowed values are listed (case-sensitive):
@@ -46,10 +46,10 @@ public final class AccessApprovalSettingsEnrolledService {
      */
     private final @Nullable String enrollmentLevel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessApprovalSettingsEnrolledService(
-        @OutputCustomType.Parameter("cloudProduct") String cloudProduct,
-        @OutputCustomType.Parameter("enrollmentLevel") @Nullable String enrollmentLevel) {
+        @CustomType.Parameter("cloudProduct") String cloudProduct,
+        @CustomType.Parameter("enrollmentLevel") @Nullable String enrollmentLevel) {
         this.cloudProduct = cloudProduct;
         this.enrollmentLevel = enrollmentLevel;
     }

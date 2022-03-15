@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageArg
      * Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
      * 
      */
-    @InputImport(name="clientAuth")
+    @Import(name="clientAuth")
       private final @Nullable Output<Boolean> clientAuth;
 
     public Output<Boolean> getClientAuth() {
@@ -29,7 +29,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageArg
      * Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as "Signing of downloadable executable code client authentication".
      * 
      */
-    @InputImport(name="codeSigning")
+    @Import(name="codeSigning")
       private final @Nullable Output<Boolean> codeSigning;
 
     public Output<Boolean> getCodeSigning() {
@@ -40,7 +40,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageArg
      * Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as "Email protection".
      * 
      */
-    @InputImport(name="emailProtection")
+    @Import(name="emailProtection")
       private final @Nullable Output<Boolean> emailProtection;
 
     public Output<Boolean> getEmailProtection() {
@@ -51,7 +51,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageArg
      * Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as "Signing OCSP responses".
      * 
      */
-    @InputImport(name="ocspSigning")
+    @Import(name="ocspSigning")
       private final @Nullable Output<Boolean> ocspSigning;
 
     public Output<Boolean> getOcspSigning() {
@@ -62,7 +62,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageArg
      * Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as "TLS WWW server authentication", though regularly used for non-WWW TLS.
      * 
      */
-    @InputImport(name="serverAuth")
+    @Import(name="serverAuth")
       private final @Nullable Output<Boolean> serverAuth;
 
     public Output<Boolean> getServerAuth() {
@@ -73,7 +73,7 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsageArg
      * Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as "Binding the hash of an object to a time".
      * 
      */
-    @InputImport(name="timeStamping")
+    @Import(name="timeStamping")
       private final @Nullable Output<Boolean> timeStamping;
 
     public Output<Boolean> getTimeStamping() {

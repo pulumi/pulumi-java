@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.servicequotas.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceQuotaResult {
     /**
      * Whether the service quota is adjustable.
@@ -50,18 +50,18 @@ public final class GetServiceQuotaResult {
      */
     private final Double value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceQuotaResult(
-        @OutputCustomType.Parameter("adjustable") Boolean adjustable,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("defaultValue") Double defaultValue,
-        @OutputCustomType.Parameter("globalQuota") Boolean globalQuota,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("quotaCode") String quotaCode,
-        @OutputCustomType.Parameter("quotaName") String quotaName,
-        @OutputCustomType.Parameter("serviceCode") String serviceCode,
-        @OutputCustomType.Parameter("serviceName") String serviceName,
-        @OutputCustomType.Parameter("value") Double value) {
+        @CustomType.Parameter("adjustable") Boolean adjustable,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("defaultValue") Double defaultValue,
+        @CustomType.Parameter("globalQuota") Boolean globalQuota,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("quotaCode") String quotaCode,
+        @CustomType.Parameter("quotaName") String quotaName,
+        @CustomType.Parameter("serviceCode") String serviceCode,
+        @CustomType.Parameter("serviceName") String serviceName,
+        @CustomType.Parameter("value") Double value) {
         this.adjustable = adjustable;
         this.arn = arn;
         this.defaultValue = defaultValue;

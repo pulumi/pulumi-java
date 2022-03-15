@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.saas.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SaasPropertiesResponseTerm extends io.pulumi.resources.Invoke
      * The end date of the current term
      * 
      */
-    @InputImport(name="endDate")
+    @Import(name="endDate")
       private final @Nullable String endDate;
 
     public Optional<String> getEndDate() {
@@ -33,7 +33,7 @@ public final class SaasPropertiesResponseTerm extends io.pulumi.resources.Invoke
      * The start date of the current term
      * 
      */
-    @InputImport(name="startDate")
+    @Import(name="startDate")
       private final @Nullable String startDate;
 
     public Optional<String> getStartDate() {
@@ -44,7 +44,7 @@ public final class SaasPropertiesResponseTerm extends io.pulumi.resources.Invoke
      * The unit indicating Monthly / Yearly
      * 
      */
-    @InputImport(name="termUnit")
+    @Import(name="termUnit")
       private final @Nullable String termUnit;
 
     public Optional<String> getTermUnit() {

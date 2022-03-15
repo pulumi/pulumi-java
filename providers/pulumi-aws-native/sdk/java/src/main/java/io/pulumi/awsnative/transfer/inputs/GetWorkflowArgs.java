@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.transfer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetWorkflowArgs extends io.pulumi.resources.InvokeArgs {
      * A unique identifier for the workflow.
      * 
      */
-    @InputImport(name="workflowId", required=true)
+    @Import(name="workflowId", required=true)
       private final String workflowId;
 
     public String getWorkflowId() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.baremetalsolution_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSnapshotResult {
     /**
      * The creation time of the storage volume snapshot.
@@ -35,13 +35,13 @@ public final class GetSnapshotResult {
      */
     private final String storageVolume;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSnapshotResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sizeBytes") String sizeBytes,
-        @OutputCustomType.Parameter("storageVolume") String storageVolume) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sizeBytes") String sizeBytes,
+        @CustomType.Parameter("storageVolume") String storageVolume) {
         this.createTime = createTime;
         this.description = description;
         this.name = name;

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.media.inputs.RectangleArgs;
 import io.pulumi.azurenative.media.inputs.VideoOverlayArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
      * The parameters for the rectangular window with which to crop the input video.
      * 
      */
-    @InputImport(name="crop")
+    @Import(name="crop")
       private final @Nullable Output<RectangleArgs> crop;
 
     public Output<RectangleArgs> getCrop() {
@@ -40,7 +40,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
      * The de-interlacing settings.
      * 
      */
-    @InputImport(name="deinterlace")
+    @Import(name="deinterlace")
       private final @Nullable Output<DeinterlaceArgs> deinterlace;
 
     public Output<DeinterlaceArgs> getDeinterlace() {
@@ -51,7 +51,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
      * The properties of overlays to be applied to the input video. These could be audio, image or video overlays.
      * 
      */
-    @InputImport(name="overlays")
+    @Import(name="overlays")
       private final @Nullable Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> overlays;
 
     public Output<List<Either<AudioOverlayArgs,VideoOverlayArgs>>> getOverlays() {
@@ -62,7 +62,7 @@ public final class FiltersArgs extends io.pulumi.resources.ResourceArgs {
      * The rotation, if any, to be applied to the input video, before it is encoded. Default is Auto
      * 
      */
-    @InputImport(name="rotation")
+    @Import(name="rotation")
       private final @Nullable Output<Either<String,Rotation>> rotation;
 
     public Output<Either<String,Rotation>> getRotation() {

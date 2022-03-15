@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RetentionDurationResponse {
     /**
      * Count of duration types. Retention duration is obtained by the counting the duration type Count times.
@@ -24,10 +24,10 @@ public final class RetentionDurationResponse {
      */
     private final @Nullable String durationType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RetentionDurationResponse(
-        @OutputCustomType.Parameter("count") @Nullable Integer count,
-        @OutputCustomType.Parameter("durationType") @Nullable String durationType) {
+        @CustomType.Parameter("count") @Nullable Integer count,
+        @CustomType.Parameter("durationType") @Nullable String durationType) {
         this.count = count;
         this.durationType = durationType;
     }

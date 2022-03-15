@@ -7,14 +7,14 @@ import io.pulumi.azurenative.security.outputs.AdaptiveApplicationControlIssueSum
 import io.pulumi.azurenative.security.outputs.PathRecommendationResponse;
 import io.pulumi.azurenative.security.outputs.ProtectionModeResponse;
 import io.pulumi.azurenative.security.outputs.VmRecommendationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAdaptiveApplicationControlResult {
     /**
      * The configuration status of the machines group or machine or rule
@@ -65,20 +65,20 @@ public final class GetAdaptiveApplicationControlResult {
     private final String type;
     private final @Nullable List<VmRecommendationResponse> vmRecommendations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAdaptiveApplicationControlResult(
-        @OutputCustomType.Parameter("configurationStatus") String configurationStatus,
-        @OutputCustomType.Parameter("enforcementMode") @Nullable String enforcementMode,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("issues") List<AdaptiveApplicationControlIssueSummaryResponse> issues,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pathRecommendations") @Nullable List<PathRecommendationResponse> pathRecommendations,
-        @OutputCustomType.Parameter("protectionMode") @Nullable ProtectionModeResponse protectionMode,
-        @OutputCustomType.Parameter("recommendationStatus") String recommendationStatus,
-        @OutputCustomType.Parameter("sourceSystem") String sourceSystem,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vmRecommendations") @Nullable List<VmRecommendationResponse> vmRecommendations) {
+        @CustomType.Parameter("configurationStatus") String configurationStatus,
+        @CustomType.Parameter("enforcementMode") @Nullable String enforcementMode,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("issues") List<AdaptiveApplicationControlIssueSummaryResponse> issues,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pathRecommendations") @Nullable List<PathRecommendationResponse> pathRecommendations,
+        @CustomType.Parameter("protectionMode") @Nullable ProtectionModeResponse protectionMode,
+        @CustomType.Parameter("recommendationStatus") String recommendationStatus,
+        @CustomType.Parameter("sourceSystem") String sourceSystem,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vmRecommendations") @Nullable List<VmRecommendationResponse> vmRecommendations) {
         this.configurationStatus = configurationStatus;
         this.enforcementMode = enforcementMode;
         this.id = id;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.eventgrid.inputs.ConnectionStateArgs;
 import io.pulumi.azurenative.eventgrid.inputs.PrivateEndpointArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * GroupIds from the private link service resource.
      * 
      */
-    @InputImport(name="groupIds")
+    @Import(name="groupIds")
       private final @Nullable Output<List<String>> groupIds;
 
     public Output<List<String>> getGroupIds() {
@@ -34,7 +34,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The name of the parent resource (namely, either, the topic name or domain name).
      * 
      */
-    @InputImport(name="parentName", required=true)
+    @Import(name="parentName", required=true)
       private final Output<String> parentName;
 
     public Output<String> getParentName() {
@@ -45,7 +45,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The type of the parent resource. This can be either \'topics\' or \'domains\'.
      * 
      */
-    @InputImport(name="parentType", required=true)
+    @Import(name="parentType", required=true)
       private final Output<String> parentType;
 
     public Output<String> getParentType() {
@@ -56,7 +56,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The Private Endpoint resource for this Connection.
      * 
      */
-    @InputImport(name="privateEndpoint")
+    @Import(name="privateEndpoint")
       private final @Nullable Output<PrivateEndpointArgs> privateEndpoint;
 
     public Output<PrivateEndpointArgs> getPrivateEndpoint() {
@@ -67,7 +67,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The name of the private endpoint connection connection.
      * 
      */
-    @InputImport(name="privateEndpointConnectionName")
+    @Import(name="privateEndpointConnectionName")
       private final @Nullable Output<String> privateEndpointConnectionName;
 
     public Output<String> getPrivateEndpointConnectionName() {
@@ -78,7 +78,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * Details about the state of the connection.
      * 
      */
-    @InputImport(name="privateLinkServiceConnectionState")
+    @Import(name="privateLinkServiceConnectionState")
       private final @Nullable Output<ConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Output<ConnectionStateArgs> getPrivateLinkServiceConnectionState() {
@@ -89,7 +89,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * Provisioning state of the Private Endpoint Connection.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ResourceProvisioningState>> provisioningState;
 
     public Output<Either<String,ResourceProvisioningState>> getProvisioningState() {
@@ -100,7 +100,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * The name of the resource group within the user's subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerEnvironmentVariable {
     private final @Nullable String value;
     private final @Nullable String variable;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerEnvironmentVariable(
-        @OutputCustomType.Parameter("value") @Nullable String value,
-        @OutputCustomType.Parameter("variable") @Nullable String variable) {
+        @CustomType.Parameter("value") @Nullable String value,
+        @CustomType.Parameter("variable") @Nullable String variable) {
         this.value = value;
         this.variable = variable;
     }

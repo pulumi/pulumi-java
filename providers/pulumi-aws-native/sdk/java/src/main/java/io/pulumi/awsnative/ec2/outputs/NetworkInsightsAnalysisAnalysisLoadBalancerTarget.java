@@ -4,26 +4,26 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisAnalysisComponent;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInsightsAnalysisAnalysisLoadBalancerTarget {
     private final @Nullable String address;
     private final @Nullable String availabilityZone;
     private final @Nullable NetworkInsightsAnalysisAnalysisComponent instance;
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInsightsAnalysisAnalysisLoadBalancerTarget(
-        @OutputCustomType.Parameter("address") @Nullable String address,
-        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
-        @OutputCustomType.Parameter("instance") @Nullable NetworkInsightsAnalysisAnalysisComponent instance,
-        @OutputCustomType.Parameter("port") @Nullable Integer port) {
+        @CustomType.Parameter("address") @Nullable String address,
+        @CustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @CustomType.Parameter("instance") @Nullable NetworkInsightsAnalysisAnalysisComponent instance,
+        @CustomType.Parameter("port") @Nullable Integer port) {
         this.address = address;
         this.availabilityZone = availabilityZone;
         this.instance = instance;

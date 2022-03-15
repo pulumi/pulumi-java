@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KeyToPathResponse {
     /**
      * The Cloud Secret Manager secret version. Can be 'latest' for the latest value or an integer for a specific version. The key to project.
@@ -26,11 +26,11 @@ public final class KeyToPathResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyToPathResponse(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("mode") Integer mode,
-        @OutputCustomType.Parameter("path") String path) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("mode") Integer mode,
+        @CustomType.Parameter("path") String path) {
         this.key = key;
         this.mode = mode;
         this.path = path;

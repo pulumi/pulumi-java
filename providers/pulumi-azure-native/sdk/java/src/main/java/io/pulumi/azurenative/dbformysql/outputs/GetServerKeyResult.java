@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.dbformysql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServerKeyResult {
     /**
      * The key creation date.
@@ -47,15 +47,15 @@ public final class GetServerKeyResult {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServerKeyResult(
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("serverKeyType") String serverKeyType,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uri") @Nullable String uri) {
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("serverKeyType") String serverKeyType,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uri") @Nullable String uri) {
         this.creationDate = creationDate;
         this.id = id;
         this.kind = kind;

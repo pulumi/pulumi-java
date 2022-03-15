@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse;
 import io.pulumi.googlenative.compute_beta.outputs.BackendBucketCdnPolicyCacheKeyPolicyResponse;
 import io.pulumi.googlenative.compute_beta.outputs.BackendBucketCdnPolicyNegativeCachingPolicyResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackendBucketCdnPolicyResponse {
     /**
      * Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings.
@@ -76,20 +76,20 @@ public final class BackendBucketCdnPolicyResponse {
      */
     private final List<String> signedUrlKeyNames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendBucketCdnPolicyResponse(
-        @OutputCustomType.Parameter("bypassCacheOnRequestHeaders") List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse> bypassCacheOnRequestHeaders,
-        @OutputCustomType.Parameter("cacheKeyPolicy") BackendBucketCdnPolicyCacheKeyPolicyResponse cacheKeyPolicy,
-        @OutputCustomType.Parameter("cacheMode") String cacheMode,
-        @OutputCustomType.Parameter("clientTtl") Integer clientTtl,
-        @OutputCustomType.Parameter("defaultTtl") Integer defaultTtl,
-        @OutputCustomType.Parameter("maxTtl") Integer maxTtl,
-        @OutputCustomType.Parameter("negativeCaching") Boolean negativeCaching,
-        @OutputCustomType.Parameter("negativeCachingPolicy") List<BackendBucketCdnPolicyNegativeCachingPolicyResponse> negativeCachingPolicy,
-        @OutputCustomType.Parameter("requestCoalescing") Boolean requestCoalescing,
-        @OutputCustomType.Parameter("serveWhileStale") Integer serveWhileStale,
-        @OutputCustomType.Parameter("signedUrlCacheMaxAgeSec") String signedUrlCacheMaxAgeSec,
-        @OutputCustomType.Parameter("signedUrlKeyNames") List<String> signedUrlKeyNames) {
+        @CustomType.Parameter("bypassCacheOnRequestHeaders") List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse> bypassCacheOnRequestHeaders,
+        @CustomType.Parameter("cacheKeyPolicy") BackendBucketCdnPolicyCacheKeyPolicyResponse cacheKeyPolicy,
+        @CustomType.Parameter("cacheMode") String cacheMode,
+        @CustomType.Parameter("clientTtl") Integer clientTtl,
+        @CustomType.Parameter("defaultTtl") Integer defaultTtl,
+        @CustomType.Parameter("maxTtl") Integer maxTtl,
+        @CustomType.Parameter("negativeCaching") Boolean negativeCaching,
+        @CustomType.Parameter("negativeCachingPolicy") List<BackendBucketCdnPolicyNegativeCachingPolicyResponse> negativeCachingPolicy,
+        @CustomType.Parameter("requestCoalescing") Boolean requestCoalescing,
+        @CustomType.Parameter("serveWhileStale") Integer serveWhileStale,
+        @CustomType.Parameter("signedUrlCacheMaxAgeSec") String signedUrlCacheMaxAgeSec,
+        @CustomType.Parameter("signedUrlKeyNames") List<String> signedUrlKeyNames) {
         this.bypassCacheOnRequestHeaders = bypassCacheOnRequestHeaders;
         this.cacheKeyPolicy = cacheKeyPolicy;
         this.cacheMode = cacheMode;

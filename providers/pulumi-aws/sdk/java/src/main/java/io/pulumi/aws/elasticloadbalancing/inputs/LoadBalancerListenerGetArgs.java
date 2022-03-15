@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticloadbalancing.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
      * The port on the instance to route to
      * 
      */
-    @InputImport(name="instancePort", required=true)
+    @Import(name="instancePort", required=true)
       private final Output<Integer> instancePort;
 
     public Output<Integer> getInstancePort() {
@@ -31,7 +31,7 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
      * values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
      * 
      */
-    @InputImport(name="instanceProtocol", required=true)
+    @Import(name="instanceProtocol", required=true)
       private final Output<String> instanceProtocol;
 
     public Output<String> getInstanceProtocol() {
@@ -42,7 +42,7 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
      * The port to listen on for the load balancer
      * 
      */
-    @InputImport(name="lbPort", required=true)
+    @Import(name="lbPort", required=true)
       private final Output<Integer> lbPort;
 
     public Output<Integer> getLbPort() {
@@ -54,7 +54,7 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
      * `HTTPS`, `TCP`, or `SSL`
      * 
      */
-    @InputImport(name="lbProtocol", required=true)
+    @Import(name="lbProtocol", required=true)
       private final Output<String> lbProtocol;
 
     public Output<String> getLbProtocol() {
@@ -66,7 +66,7 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
      * uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when `lb_protocol` is either HTTPS or SSL**
      * 
      */
-    @InputImport(name="sslCertificateId")
+    @Import(name="sslCertificateId")
       private final @Nullable Output<String> sslCertificateId;
 
     public Output<String> getSslCertificateId() {

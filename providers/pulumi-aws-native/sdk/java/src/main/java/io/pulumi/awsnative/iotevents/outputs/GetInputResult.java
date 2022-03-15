@@ -5,14 +5,14 @@ package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.InputDefinition;
 import io.pulumi.awsnative.iotevents.outputs.InputTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInputResult {
     private final @Nullable InputDefinition inputDefinition;
     /**
@@ -28,11 +28,11 @@ public final class GetInputResult {
      */
     private final @Nullable List<InputTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInputResult(
-        @OutputCustomType.Parameter("inputDefinition") @Nullable InputDefinition inputDefinition,
-        @OutputCustomType.Parameter("inputDescription") @Nullable String inputDescription,
-        @OutputCustomType.Parameter("tags") @Nullable List<InputTag> tags) {
+        @CustomType.Parameter("inputDefinition") @Nullable InputDefinition inputDefinition,
+        @CustomType.Parameter("inputDescription") @Nullable String inputDescription,
+        @CustomType.Parameter("tags") @Nullable List<InputTag> tags) {
         this.inputDefinition = inputDefinition;
         this.inputDescription = inputDescription;
         this.tags = tags;

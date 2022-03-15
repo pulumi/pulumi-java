@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v2.ParticipantArgs;
@@ -24,7 +24,7 @@ public class Participant extends io.pulumi.resources.CustomResource {
      * Optional. Key-value filters on the metadata of documents returned by article suggestion. If specified, article suggestion only returns suggested documents that match all filters in their Document.metadata. Multiple values for a metadata key should be concatenated by comma. For example, filters to match all documents that have 'US' or 'CA' in their market metadata values and 'agent' in their user metadata values will be ```documents_metadata_filters { key: "market" value: "US,CA" } documents_metadata_filters { key: "user" value: "agent" }```
      * 
      */
-    @OutputExport(name="documentsMetadataFilters", type=Map.class, parameters={String.class, String.class})
+    @Export(name="documentsMetadataFilters", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> documentsMetadataFilters;
 
     /**
@@ -38,7 +38,7 @@ public class Participant extends io.pulumi.resources.CustomResource {
      * Optional. The unique identifier of this participant. Format: `projects//locations//conversations//participants/`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -52,7 +52,7 @@ public class Participant extends io.pulumi.resources.CustomResource {
      * Immutable. The role this participant plays in the conversation. This field must be set during participant creation and is then immutable.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**
@@ -66,7 +66,7 @@ public class Participant extends io.pulumi.resources.CustomResource {
      * Optional. Label applied to streams representing this participant in SIPREC XML metadata and SDP. This is used to assign transcriptions from that media stream to this participant. This field can be updated.
      * 
      */
-    @OutputExport(name="sipRecordingMediaLabel", type=String.class, parameters={})
+    @Export(name="sipRecordingMediaLabel", type=String.class, parameters={})
     private Output<String> sipRecordingMediaLabel;
 
     /**

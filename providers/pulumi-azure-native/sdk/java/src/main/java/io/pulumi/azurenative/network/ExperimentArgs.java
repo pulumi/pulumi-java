@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.State;
 import io.pulumi.azurenative.network.inputs.ExperimentEndpointArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the details or intents of the Experiment
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * The state of the Experiment
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable Output<Either<String,State>> enabledState;
 
     public Output<Either<String,State>> getEnabledState() {
@@ -44,7 +44,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * The endpoint A of an experiment
      * 
      */
-    @InputImport(name="endpointA")
+    @Import(name="endpointA")
       private final @Nullable Output<ExperimentEndpointArgs> endpointA;
 
     public Output<ExperimentEndpointArgs> getEndpointA() {
@@ -55,7 +55,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * The endpoint B of an experiment
      * 
      */
-    @InputImport(name="endpointB")
+    @Import(name="endpointB")
       private final @Nullable Output<ExperimentEndpointArgs> endpointB;
 
     public Output<ExperimentEndpointArgs> getEndpointB() {
@@ -66,7 +66,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * The Experiment identifier associated with the Experiment
      * 
      */
-    @InputImport(name="experimentName")
+    @Import(name="experimentName")
       private final @Nullable Output<String> experimentName;
 
     public Output<String> getExperimentName() {
@@ -77,7 +77,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -88,7 +88,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * The Profile identifier associated with the Tenant and Partner
      * 
      */
-    @InputImport(name="profileName", required=true)
+    @Import(name="profileName", required=true)
       private final Output<String> profileName;
 
     public Output<String> getProfileName() {
@@ -99,7 +99,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -110,7 +110,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

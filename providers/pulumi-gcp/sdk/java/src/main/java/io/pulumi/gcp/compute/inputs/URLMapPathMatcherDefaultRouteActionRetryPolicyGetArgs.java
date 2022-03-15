@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicyGetArgs extends
      * Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
      * 
      */
-    @InputImport(name="numRetries")
+    @Import(name="numRetries")
       private final @Nullable Output<Integer> numRetries;
 
     public Output<Integer> getNumRetries() {
@@ -35,7 +35,7 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicyGetArgs extends
      * Structure is documented below.
      * 
      */
-    @InputImport(name="perTryTimeout")
+    @Import(name="perTryTimeout")
       private final @Nullable Output<URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutGetArgs> perTryTimeout;
 
     public Output<URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeoutGetArgs> getPerTryTimeout() {
@@ -60,7 +60,7 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicyGetArgs extends
      * * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable
      * 
      */
-    @InputImport(name="retryConditions")
+    @Import(name="retryConditions")
       private final @Nullable Output<List<String>> retryConditions;
 
     public Output<List<String>> getRetryConditions() {

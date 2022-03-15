@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.monitoring.outputs.GetIstioCanonicalServiceTelemetry;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIstioCanonicalServiceResult {
     private final String canonicalService;
     private final String canonicalServiceNamespace;
@@ -27,17 +27,17 @@ public final class GetIstioCanonicalServiceResult {
     private final String serviceId;
     private final List<GetIstioCanonicalServiceTelemetry> telemetries;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIstioCanonicalServiceResult(
-        @OutputCustomType.Parameter("canonicalService") String canonicalService,
-        @OutputCustomType.Parameter("canonicalServiceNamespace") String canonicalServiceNamespace,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("meshUid") String meshUid,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("serviceId") String serviceId,
-        @OutputCustomType.Parameter("telemetries") List<GetIstioCanonicalServiceTelemetry> telemetries) {
+        @CustomType.Parameter("canonicalService") String canonicalService,
+        @CustomType.Parameter("canonicalServiceNamespace") String canonicalServiceNamespace,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("meshUid") String meshUid,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("serviceId") String serviceId,
+        @CustomType.Parameter("telemetries") List<GetIstioCanonicalServiceTelemetry> telemetries) {
         this.canonicalService = canonicalService;
         this.canonicalServiceNamespace = canonicalServiceNamespace;
         this.displayName = displayName;

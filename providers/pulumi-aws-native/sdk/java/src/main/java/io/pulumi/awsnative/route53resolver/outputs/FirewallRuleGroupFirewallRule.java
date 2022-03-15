@@ -6,14 +6,14 @@ package io.pulumi.awsnative.route53resolver.outputs;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupFirewallRuleAction;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupFirewallRuleBlockOverrideDnsType;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupFirewallRuleBlockResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallRuleGroupFirewallRule {
     /**
      * Rule Action
@@ -51,15 +51,15 @@ public final class FirewallRuleGroupFirewallRule {
      */
     private final Integer priority;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallRuleGroupFirewallRule(
-        @OutputCustomType.Parameter("action") FirewallRuleGroupFirewallRuleAction action,
-        @OutputCustomType.Parameter("blockOverrideDnsType") @Nullable FirewallRuleGroupFirewallRuleBlockOverrideDnsType blockOverrideDnsType,
-        @OutputCustomType.Parameter("blockOverrideDomain") @Nullable String blockOverrideDomain,
-        @OutputCustomType.Parameter("blockOverrideTtl") @Nullable Integer blockOverrideTtl,
-        @OutputCustomType.Parameter("blockResponse") @Nullable FirewallRuleGroupFirewallRuleBlockResponse blockResponse,
-        @OutputCustomType.Parameter("firewallDomainListId") String firewallDomainListId,
-        @OutputCustomType.Parameter("priority") Integer priority) {
+        @CustomType.Parameter("action") FirewallRuleGroupFirewallRuleAction action,
+        @CustomType.Parameter("blockOverrideDnsType") @Nullable FirewallRuleGroupFirewallRuleBlockOverrideDnsType blockOverrideDnsType,
+        @CustomType.Parameter("blockOverrideDomain") @Nullable String blockOverrideDomain,
+        @CustomType.Parameter("blockOverrideTtl") @Nullable Integer blockOverrideTtl,
+        @CustomType.Parameter("blockResponse") @Nullable FirewallRuleGroupFirewallRuleBlockResponse blockResponse,
+        @CustomType.Parameter("firewallDomainListId") String firewallDomainListId,
+        @CustomType.Parameter("priority") Integer priority) {
         this.action = action;
         this.blockOverrideDnsType = blockOverrideDnsType;
         this.blockOverrideDomain = blockOverrideDomain;

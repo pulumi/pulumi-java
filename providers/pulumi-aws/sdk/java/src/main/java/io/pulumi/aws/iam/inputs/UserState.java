@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * The ARN assigned by AWS for this user.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * a user with non-provider-managed access keys and login profile will fail to be destroyed.
      * 
      */
-    @InputImport(name="forceDestroy")
+    @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
     public Output<Boolean> getForceDestroy() {
@@ -44,7 +44,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * The user's name. The name must consist of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: `=,.@-_.`. User names are not distinguished by case. For example, you cannot create users named both "TESTUSER" and "testuser".
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * Path in which to create the user.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -66,7 +66,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the policy that is used to set the permissions boundary for the user.
      * 
      */
-    @InputImport(name="permissionsBoundary")
+    @Import(name="permissionsBoundary")
       private final @Nullable Output<String> permissionsBoundary;
 
     public Output<String> getPermissionsBoundary() {
@@ -77,7 +77,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * Key-value mapping of tags for the IAM user
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -88,7 +88,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -99,7 +99,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * The [unique ID][1] assigned by AWS.
      * 
      */
-    @InputImport(name="uniqueId")
+    @Import(name="uniqueId")
       private final @Nullable Output<String> uniqueId;
 
     public Output<String> getUniqueId() {

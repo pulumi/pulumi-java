@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.greengrassv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class ComponentVersionComponentPlatformArgs extends io.pulumi.resou
 
     public static final ComponentVersionComponentPlatformArgs Empty = new ComponentVersionComponentPlatformArgs();
 
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable Output<Object> attributes;
 
     public Output<Object> getAttributes() {
         return this.attributes == null ? Output.empty() : this.attributes;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

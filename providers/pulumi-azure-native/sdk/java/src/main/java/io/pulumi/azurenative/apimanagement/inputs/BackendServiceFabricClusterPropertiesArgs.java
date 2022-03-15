@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.X509CertificateNameArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
      * The client certificate id for the management endpoint.
      * 
      */
-    @InputImport(name="clientCertificateId")
+    @Import(name="clientCertificateId")
       private final @Nullable Output<String> clientCertificateId;
 
     public Output<String> getClientCertificateId() {
@@ -36,7 +36,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
      * The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided
      * 
      */
-    @InputImport(name="clientCertificatethumbprint")
+    @Import(name="clientCertificatethumbprint")
       private final @Nullable Output<String> clientCertificatethumbprint;
 
     public Output<String> getClientCertificatethumbprint() {
@@ -47,7 +47,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
      * The cluster management endpoint.
      * 
      */
-    @InputImport(name="managementEndpoints", required=true)
+    @Import(name="managementEndpoints", required=true)
       private final Output<List<String>> managementEndpoints;
 
     public Output<List<String>> getManagementEndpoints() {
@@ -58,7 +58,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
      * Maximum number of retries while attempting resolve the partition.
      * 
      */
-    @InputImport(name="maxPartitionResolutionRetries")
+    @Import(name="maxPartitionResolutionRetries")
       private final @Nullable Output<Integer> maxPartitionResolutionRetries;
 
     public Output<Integer> getMaxPartitionResolutionRetries() {
@@ -69,7 +69,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
      * Thumbprints of certificates cluster management service uses for tls communication
      * 
      */
-    @InputImport(name="serverCertificateThumbprints")
+    @Import(name="serverCertificateThumbprints")
       private final @Nullable Output<List<String>> serverCertificateThumbprints;
 
     public Output<List<String>> getServerCertificateThumbprints() {
@@ -80,7 +80,7 @@ public final class BackendServiceFabricClusterPropertiesArgs extends io.pulumi.r
      * Server X509 Certificate Names Collection
      * 
      */
-    @InputImport(name="serverX509Names")
+    @Import(name="serverX509Names")
       private final @Nullable Output<List<X509CertificateNameArgs>> serverX509Names;
 
     public Output<List<X509CertificateNameArgs>> getServerX509Names() {

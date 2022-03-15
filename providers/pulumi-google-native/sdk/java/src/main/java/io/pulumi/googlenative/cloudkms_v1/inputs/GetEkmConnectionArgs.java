@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetEkmConnectionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEkmConnectionArgs Empty = new GetEkmConnectionArgs();
 
-    @InputImport(name="ekmConnectionId", required=true)
+    @Import(name="ekmConnectionId", required=true)
       private final String ekmConnectionId;
 
     public String getEkmConnectionId() {
         return this.ekmConnectionId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

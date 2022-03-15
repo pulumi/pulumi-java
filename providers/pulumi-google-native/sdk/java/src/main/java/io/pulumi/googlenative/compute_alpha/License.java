@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.LicenseArgs;
@@ -23,7 +23,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -37,7 +37,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * An optional textual description of the resource; provided by the client when the resource is created.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -51,7 +51,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * Type of resource. Always compute#license for licenses.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -65,7 +65,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * The unique code used to attach this license to images, snapshots, and disks.
      * 
      */
-    @OutputExport(name="licenseCode", type=String.class, parameters={})
+    @Export(name="licenseCode", type=String.class, parameters={})
     private Output<String> licenseCode;
 
     /**
@@ -79,7 +79,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -89,7 +89,7 @@ public class License extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="resourceRequirements", type=LicenseResourceRequirementsResponse.class, parameters={})
+    @Export(name="resourceRequirements", type=LicenseResourceRequirementsResponse.class, parameters={})
     private Output<LicenseResourceRequirementsResponse> resourceRequirements;
 
     public Output<LicenseResourceRequirementsResponse> getResourceRequirements() {
@@ -99,7 +99,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -113,7 +113,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * Server-defined URL for this resource with the resource id.
      * 
      */
-    @OutputExport(name="selfLinkWithId", type=String.class, parameters={})
+    @Export(name="selfLinkWithId", type=String.class, parameters={})
     private Output<String> selfLinkWithId;
 
     /**
@@ -127,7 +127,7 @@ public class License extends io.pulumi.resources.CustomResource {
      * If false, licenses will not be copied from the source resource when creating an image from a disk, disk from snapshot, or snapshot from disk.
      * 
      */
-    @OutputExport(name="transferable", type=Boolean.class, parameters={})
+    @Export(name="transferable", type=Boolean.class, parameters={})
     private Output<Boolean> transferable;
 
     /**

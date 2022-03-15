@@ -4,12 +4,12 @@
 package io.pulumi.aws.eks.outputs;
 
 import io.pulumi.aws.eks.outputs.ClusterIdentityOidc;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterIdentity {
     /**
      * Nested block containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
@@ -17,8 +17,8 @@ public final class ClusterIdentity {
      */
     private final @Nullable List<ClusterIdentityOidc> oidcs;
 
-    @OutputCustomType.Constructor
-    private ClusterIdentity(@OutputCustomType.Parameter("oidcs") @Nullable List<ClusterIdentityOidc> oidcs) {
+    @CustomType.Constructor
+    private ClusterIdentity(@CustomType.Parameter("oidcs") @Nullable List<ClusterIdentityOidc> oidcs) {
         this.oidcs = oidcs;
     }
 

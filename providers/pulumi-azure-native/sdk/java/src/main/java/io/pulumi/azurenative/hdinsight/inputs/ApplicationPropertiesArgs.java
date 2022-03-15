@@ -9,7 +9,7 @@ import io.pulumi.azurenative.hdinsight.inputs.ComputeProfileArgs;
 import io.pulumi.azurenative.hdinsight.inputs.ErrorsArgs;
 import io.pulumi.azurenative.hdinsight.inputs.RuntimeScriptActionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
      * The application type.
      * 
      */
-    @InputImport(name="applicationType")
+    @Import(name="applicationType")
       private final @Nullable Output<String> applicationType;
 
     public Output<String> getApplicationType() {
@@ -39,7 +39,7 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
      * The list of roles in the cluster.
      * 
      */
-    @InputImport(name="computeProfile")
+    @Import(name="computeProfile")
       private final @Nullable Output<ComputeProfileArgs> computeProfile;
 
     public Output<ComputeProfileArgs> getComputeProfile() {
@@ -50,7 +50,7 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
      * The list of errors.
      * 
      */
-    @InputImport(name="errors")
+    @Import(name="errors")
       private final @Nullable Output<List<ErrorsArgs>> errors;
 
     public Output<List<ErrorsArgs>> getErrors() {
@@ -61,7 +61,7 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
      * The list of application HTTPS endpoints.
      * 
      */
-    @InputImport(name="httpsEndpoints")
+    @Import(name="httpsEndpoints")
       private final @Nullable Output<List<ApplicationGetHttpsEndpointArgs>> httpsEndpoints;
 
     public Output<List<ApplicationGetHttpsEndpointArgs>> getHttpsEndpoints() {
@@ -72,7 +72,7 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
      * The list of install script actions.
      * 
      */
-    @InputImport(name="installScriptActions")
+    @Import(name="installScriptActions")
       private final @Nullable Output<List<RuntimeScriptActionArgs>> installScriptActions;
 
     public Output<List<RuntimeScriptActionArgs>> getInstallScriptActions() {
@@ -83,7 +83,7 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
      * The list of application SSH endpoints.
      * 
      */
-    @InputImport(name="sshEndpoints")
+    @Import(name="sshEndpoints")
       private final @Nullable Output<List<ApplicationGetEndpointArgs>> sshEndpoints;
 
     public Output<List<ApplicationGetEndpointArgs>> getSshEndpoints() {
@@ -94,7 +94,7 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
      * The list of uninstall script actions.
      * 
      */
-    @InputImport(name="uninstallScriptActions")
+    @Import(name="uninstallScriptActions")
       private final @Nullable Output<List<RuntimeScriptActionArgs>> uninstallScriptActions;
 
     public Output<List<RuntimeScriptActionArgs>> getUninstallScriptActions() {

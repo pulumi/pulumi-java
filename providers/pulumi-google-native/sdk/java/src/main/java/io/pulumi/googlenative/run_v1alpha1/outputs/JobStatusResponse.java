@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.InstanceStatusResponse;
 import io.pulumi.googlenative.run_v1alpha1.outputs.JobConditionResponse;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobStatusResponse {
     /**
      * Optional. The number of actively running instances. +optional
@@ -59,17 +59,17 @@ public final class JobStatusResponse {
      */
     private final Integer succeeded;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStatusResponse(
-        @OutputCustomType.Parameter("active") Integer active,
-        @OutputCustomType.Parameter("completionTime") String completionTime,
-        @OutputCustomType.Parameter("conditions") List<JobConditionResponse> conditions,
-        @OutputCustomType.Parameter("failed") Integer failed,
-        @OutputCustomType.Parameter("imageDigest") String imageDigest,
-        @OutputCustomType.Parameter("instances") List<InstanceStatusResponse> instances,
-        @OutputCustomType.Parameter("observedGeneration") Integer observedGeneration,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("succeeded") Integer succeeded) {
+        @CustomType.Parameter("active") Integer active,
+        @CustomType.Parameter("completionTime") String completionTime,
+        @CustomType.Parameter("conditions") List<JobConditionResponse> conditions,
+        @CustomType.Parameter("failed") Integer failed,
+        @CustomType.Parameter("imageDigest") String imageDigest,
+        @CustomType.Parameter("instances") List<InstanceStatusResponse> instances,
+        @CustomType.Parameter("observedGeneration") Integer observedGeneration,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("succeeded") Integer succeeded) {
         this.active = active;
         this.completionTime = completionTime;
         this.conditions = conditions;

@@ -5,14 +5,14 @@ package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.BodyDiagnosticSettingsResponse;
 import io.pulumi.azurenative.apimanagement.outputs.DataMaskingResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HttpMessageDiagnosticResponse {
     /**
      * Body logging settings.
@@ -30,11 +30,11 @@ public final class HttpMessageDiagnosticResponse {
      */
     private final @Nullable List<String> headers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpMessageDiagnosticResponse(
-        @OutputCustomType.Parameter("body") @Nullable BodyDiagnosticSettingsResponse body,
-        @OutputCustomType.Parameter("dataMasking") @Nullable DataMaskingResponse dataMasking,
-        @OutputCustomType.Parameter("headers") @Nullable List<String> headers) {
+        @CustomType.Parameter("body") @Nullable BodyDiagnosticSettingsResponse body,
+        @CustomType.Parameter("dataMasking") @Nullable DataMaskingResponse dataMasking,
+        @CustomType.Parameter("headers") @Nullable List<String> headers) {
         this.body = body;
         this.dataMasking = dataMasking;
         this.headers = headers;

@@ -7,13 +7,13 @@ import io.pulumi.azurenative.apimanagement.outputs.BackendCredentialsContractRes
 import io.pulumi.azurenative.apimanagement.outputs.BackendPropertiesResponse;
 import io.pulumi.azurenative.apimanagement.outputs.BackendProxyContractResponse;
 import io.pulumi.azurenative.apimanagement.outputs.BackendTlsPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBackendResult {
     /**
      * Backend Credentials Contract Properties
@@ -76,20 +76,20 @@ public final class GetBackendResult {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackendResult(
-        @OutputCustomType.Parameter("credentials") @Nullable BackendCredentialsContractResponse credentials,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") BackendPropertiesResponse properties,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("proxy") @Nullable BackendProxyContractResponse proxy,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
-        @OutputCustomType.Parameter("title") @Nullable String title,
-        @OutputCustomType.Parameter("tls") @Nullable BackendTlsPropertiesResponse tls,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("credentials") @Nullable BackendCredentialsContractResponse credentials,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") BackendPropertiesResponse properties,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("proxy") @Nullable BackendProxyContractResponse proxy,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId,
+        @CustomType.Parameter("title") @Nullable String title,
+        @CustomType.Parameter("tls") @Nullable BackendTlsPropertiesResponse tls,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("url") String url) {
         this.credentials = credentials;
         this.description = description;
         this.id = id;

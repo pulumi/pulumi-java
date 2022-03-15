@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LaunchTemplateInstanceMarketOptionsSpotOptions {
     /**
      * The required duration in minutes. This value must be a multiple of 60.
@@ -39,13 +39,13 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptions {
      */
     private final @Nullable String validUntil;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LaunchTemplateInstanceMarketOptionsSpotOptions(
-        @OutputCustomType.Parameter("blockDurationMinutes") @Nullable Integer blockDurationMinutes,
-        @OutputCustomType.Parameter("instanceInterruptionBehavior") @Nullable String instanceInterruptionBehavior,
-        @OutputCustomType.Parameter("maxPrice") @Nullable String maxPrice,
-        @OutputCustomType.Parameter("spotInstanceType") @Nullable String spotInstanceType,
-        @OutputCustomType.Parameter("validUntil") @Nullable String validUntil) {
+        @CustomType.Parameter("blockDurationMinutes") @Nullable Integer blockDurationMinutes,
+        @CustomType.Parameter("instanceInterruptionBehavior") @Nullable String instanceInterruptionBehavior,
+        @CustomType.Parameter("maxPrice") @Nullable String maxPrice,
+        @CustomType.Parameter("spotInstanceType") @Nullable String spotInstanceType,
+        @CustomType.Parameter("validUntil") @Nullable String validUntil) {
         this.blockDurationMinutes = blockDurationMinutes;
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         this.maxPrice = maxPrice;

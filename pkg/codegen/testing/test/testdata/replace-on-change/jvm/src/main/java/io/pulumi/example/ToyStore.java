@@ -4,7 +4,7 @@
 package io.pulumi.example;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.example.ToyStoreArgs;
 import io.pulumi.example.Utilities;
@@ -16,25 +16,25 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::ToyStore")
 public class ToyStore extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="chew", type=Chew.class, parameters={})
+    @Export(name="chew", type=Chew.class, parameters={})
     private Output</* @Nullable */ Chew> chew;
 
     public Output</* @Nullable */ Chew> getChew() {
         return this.chew;
     }
-    @OutputExport(name="laser", type=Laser.class, parameters={})
+    @Export(name="laser", type=Laser.class, parameters={})
     private Output</* @Nullable */ Laser> laser;
 
     public Output</* @Nullable */ Laser> getLaser() {
         return this.laser;
     }
-    @OutputExport(name="stuff", type=List.class, parameters={Toy.class})
+    @Export(name="stuff", type=List.class, parameters={Toy.class})
     private Output</* @Nullable */ List<Toy>> stuff;
 
     public Output</* @Nullable */ List<Toy>> getStuff() {
         return this.stuff;
     }
-    @OutputExport(name="wanted", type=List.class, parameters={Toy.class})
+    @Export(name="wanted", type=List.class, parameters={Toy.class})
     private Output</* @Nullable */ List<Toy>> wanted;
 
     public Output</* @Nullable */ List<Toy>> getWanted() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetRegisteredServerArgs extends io.pulumi.resources.InvokeArg
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetRegisteredServerArgs extends io.pulumi.resources.InvokeArg
      * GUID identifying the on-premises server.
      * 
      */
-    @InputImport(name="serverId", required=true)
+    @Import(name="serverId", required=true)
       private final String serverId;
 
     public String getServerId() {
@@ -38,7 +38,7 @@ public final class GetRegisteredServerArgs extends io.pulumi.resources.InvokeArg
      * Name of Storage Sync Service resource.
      * 
      */
-    @InputImport(name="storageSyncServiceName", required=true)
+    @Import(name="storageSyncServiceName", required=true)
       private final String storageSyncServiceName;
 
     public String getStorageSyncServiceName() {

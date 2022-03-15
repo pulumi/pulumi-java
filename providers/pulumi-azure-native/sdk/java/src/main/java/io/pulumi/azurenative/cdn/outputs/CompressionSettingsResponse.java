@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CompressionSettingsResponse {
     /**
      * List of content types on which compression applies. The value should be a valid MIME type.
@@ -24,10 +24,10 @@ public final class CompressionSettingsResponse {
      */
     private final @Nullable Boolean isCompressionEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CompressionSettingsResponse(
-        @OutputCustomType.Parameter("contentTypesToCompress") @Nullable List<String> contentTypesToCompress,
-        @OutputCustomType.Parameter("isCompressionEnabled") @Nullable Boolean isCompressionEnabled) {
+        @CustomType.Parameter("contentTypesToCompress") @Nullable List<String> contentTypesToCompress,
+        @CustomType.Parameter("isCompressionEnabled") @Nullable Boolean isCompressionEnabled) {
         this.contentTypesToCompress = contentTypesToCompress;
         this.isCompressionEnabled = isCompressionEnabled;
     }

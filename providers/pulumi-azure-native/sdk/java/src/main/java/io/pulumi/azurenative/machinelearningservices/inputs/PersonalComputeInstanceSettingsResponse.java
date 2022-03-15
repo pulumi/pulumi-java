@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.AssignedUserResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PersonalComputeInstanceSettingsResponse extends io.pulumi.res
      * A user explicitly assigned to a personal compute instance.
      * 
      */
-    @InputImport(name="assignedUser")
+    @Import(name="assignedUser")
       private final @Nullable AssignedUserResponse assignedUser;
 
     public Optional<AssignedUserResponse> getAssignedUser() {

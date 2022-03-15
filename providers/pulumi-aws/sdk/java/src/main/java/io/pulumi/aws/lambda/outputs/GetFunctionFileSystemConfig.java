@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFunctionFileSystemConfig {
     /**
      * Unqualified (no `:QUALIFIER` or `:VERSION` suffix) Amazon Resource Name (ARN) identifying your Lambda Function. See also `qualified_arn`.
@@ -16,10 +16,10 @@ public final class GetFunctionFileSystemConfig {
     private final String arn;
     private final String localMountPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFunctionFileSystemConfig(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("localMountPath") String localMountPath) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("localMountPath") String localMountPath) {
         this.arn = arn;
         this.localMountPath = localMountPath;
     }

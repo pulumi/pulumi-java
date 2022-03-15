@@ -3,26 +3,26 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerPort {
     private final @Nullable Integer external;
     private final Integer internal;
     private final @Nullable String ip;
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerPort(
-        @OutputCustomType.Parameter("external") @Nullable Integer external,
-        @OutputCustomType.Parameter("internal") Integer internal,
-        @OutputCustomType.Parameter("ip") @Nullable String ip,
-        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
+        @CustomType.Parameter("external") @Nullable Integer external,
+        @CustomType.Parameter("internal") Integer internal,
+        @CustomType.Parameter("ip") @Nullable String ip,
+        @CustomType.Parameter("protocol") @Nullable String protocol) {
         this.external = external;
         this.internal = internal;
         this.ip = ip;

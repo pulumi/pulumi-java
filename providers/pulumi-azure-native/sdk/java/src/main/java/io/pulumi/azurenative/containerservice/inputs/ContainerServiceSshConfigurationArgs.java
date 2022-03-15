@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.ContainerServiceSshPublicKeyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ContainerServiceSshConfigurationArgs extends io.pulumi.resour
      * The list of SSH public keys used to authenticate with Linux-based VMs. Only expect one key specified.
      * 
      */
-    @InputImport(name="publicKeys", required=true)
+    @Import(name="publicKeys", required=true)
       private final Output<List<ContainerServiceSshPublicKeyArgs>> publicKeys;
 
     public Output<List<ContainerServiceSshPublicKeyArgs>> getPublicKeys() {

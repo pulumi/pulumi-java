@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.enums.ModelExplainabilityJobDefinitionS3OutputS3UploadMode;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ModelExplainabilityJobDefinitionS3OutputArgs extends io.pulum
      * The local path to the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job. LocalPath is an absolute path for the output data.
      * 
      */
-    @InputImport(name="localPath", required=true)
+    @Import(name="localPath", required=true)
       private final Output<String> localPath;
 
     public Output<String> getLocalPath() {
@@ -34,7 +34,7 @@ public final class ModelExplainabilityJobDefinitionS3OutputArgs extends io.pulum
      * Whether to upload the results of the monitoring job continuously or after the job completes.
      * 
      */
-    @InputImport(name="s3UploadMode")
+    @Import(name="s3UploadMode")
       private final @Nullable Output<ModelExplainabilityJobDefinitionS3OutputS3UploadMode> s3UploadMode;
 
     public Output<ModelExplainabilityJobDefinitionS3OutputS3UploadMode> getS3UploadMode() {
@@ -45,7 +45,7 @@ public final class ModelExplainabilityJobDefinitionS3OutputArgs extends io.pulum
      * A URI that identifies the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job.
      * 
      */
-    @InputImport(name="s3Uri", required=true)
+    @Import(name="s3Uri", required=true)
       private final Output<String> s3Uri;
 
     public Output<String> getS3Uri() {

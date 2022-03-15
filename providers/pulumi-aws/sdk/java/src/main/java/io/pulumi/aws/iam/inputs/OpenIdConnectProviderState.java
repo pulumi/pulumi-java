@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
      * The ARN assigned by AWS for this provider.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
      * A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect provider, they establish a value that identifies the application. (This is the value that's sent as the client_id parameter on OAuth requests.)
      * 
      */
-    @InputImport(name="clientIdLists")
+    @Import(name="clientIdLists")
       private final @Nullable Output<List<String>> clientIdLists;
 
     public Output<List<String>> getClientIdLists() {
@@ -42,7 +42,7 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
      * Map of resource tags for the IAM OIDC provider. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -53,7 +53,7 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -64,7 +64,7 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
      * A list of server certificate thumbprints for the OpenID Connect (OIDC) identity provider's server certificate(s).
      * 
      */
-    @InputImport(name="thumbprintLists")
+    @Import(name="thumbprintLists")
       private final @Nullable Output<List<String>> thumbprintLists;
 
     public Output<List<String>> getThumbprintLists() {
@@ -75,7 +75,7 @@ public final class OpenIdConnectProviderState extends io.pulumi.resources.Resour
      * The URL of the identity provider. Corresponds to the _iss_ claim.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

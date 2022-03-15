@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1.inputs.MaxPodsConstraintResponse;
 import io.pulumi.googlenative.container_v1.inputs.NodeConfigResponse;
 import io.pulumi.googlenative.container_v1.inputs.NodeManagementResponse;
@@ -29,7 +29,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
      * Autoscaler configuration for this NodePool. Autoscaler is enabled only if a valid configuration is present.
      * 
      */
-    @InputImport(name="autoscaling", required=true)
+    @Import(name="autoscaling", required=true)
       private final NodePoolAutoscalingResponse autoscaling;
 
     public NodePoolAutoscalingResponse getAutoscaling() {
@@ -40,7 +40,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
      * Which conditions caused the current node pool state.
      * 
      */
-    @InputImport(name="conditions", required=true)
+    @Import(name="conditions", required=true)
       private final List<StatusConditionResponse> conditions;
 
     public List<StatusConditionResponse> getConditions() {
@@ -51,7 +51,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
      * The node configuration of the pool.
      * 
      */
-    @InputImport(name="config", required=true)
+    @Import(name="config", required=true)
       private final NodeConfigResponse config;
 
     public NodeConfigResponse getConfig() {
@@ -62,7 +62,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
      * The initial node count for the pool. You must ensure that your Compute Engine [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of instances. You must also have available firewall and routes quota.
      * 
      */
-    @InputImport(name="initialNodeCount", required=true)
+    @Import(name="initialNodeCount", required=true)
       private final Integer initialNodeCount;
 
     public Integer getInitialNodeCount() {
@@ -73,7 +73,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
      * [Output only] The resource URLs of the [managed instance groups](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances) associated with this node pool.
      * 
      */
-    @InputImport(name="instanceGroupUrls", required=true)
+    @Import(name="instanceGroupUrls", required=true)
       private final List<String> instanceGroupUrls;
 
     public List<String> getInstanceGroupUrls() {
@@ -84,7 +84,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
      * The list of Google Compute Engine [zones](https://cloud.google.com/compute/docs/zones#available) in which the NodePool's nodes should be located. If this value is unspecified during node pool creation, the [Cluster.Locations](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.FIELDS.locations) value will be used, instead. Warning: changing node pool locations will result in nodes being added and/or removed.
      * 
      */
-    @InputImport(name="locations", required=true)
+    @Import(name="locations", required=true)
       private final List<String> locations;
 
     public List<String> getLocations() {
@@ -95,7 +95,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
      * NodeManagement configuration for this NodePool.
      * 
      */
-    @InputImport(name="management", required=true)
+    @Import(name="management", required=true)
       private final NodeManagementResponse management;
 
     public NodeManagementResponse getManagement() {
@@ -106,7 +106,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
      * The constraint on the maximum number of pods that can be run simultaneously on a node in the node pool.
      * 
      */
-    @InputImport(name="maxPodsConstraint", required=true)
+    @Import(name="maxPodsConstraint", required=true)
       private final MaxPodsConstraintResponse maxPodsConstraint;
 
     public MaxPodsConstraintResponse getMaxPodsConstraint() {
@@ -117,7 +117,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the node pool.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -128,7 +128,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
      * Networking configuration for this NodePool. If specified, it overrides the cluster-level defaults.
      * 
      */
-    @InputImport(name="networkConfig", required=true)
+    @Import(name="networkConfig", required=true)
       private final NodeNetworkConfigResponse networkConfig;
 
     public NodeNetworkConfigResponse getNetworkConfig() {
@@ -139,7 +139,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
      * [Output only] The pod CIDR block size per node in this node pool.
      * 
      */
-    @InputImport(name="podIpv4CidrSize", required=true)
+    @Import(name="podIpv4CidrSize", required=true)
       private final Integer podIpv4CidrSize;
 
     public Integer getPodIpv4CidrSize() {
@@ -150,7 +150,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
      * [Output only] Server-defined URL for the resource.
      * 
      */
-    @InputImport(name="selfLink", required=true)
+    @Import(name="selfLink", required=true)
       private final String selfLink;
 
     public String getSelfLink() {
@@ -161,7 +161,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
      * [Output only] The status of the nodes in this pool instance.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -172,7 +172,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
      * Upgrade settings control disruption and speed of the upgrade.
      * 
      */
-    @InputImport(name="upgradeSettings", required=true)
+    @Import(name="upgradeSettings", required=true)
       private final UpgradeSettingsResponse upgradeSettings;
 
     public UpgradeSettingsResponse getUpgradeSettings() {
@@ -183,7 +183,7 @@ public final class NodePoolResponse extends io.pulumi.resources.InvokeArgs {
      * The version of the Kubernetes of this node.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

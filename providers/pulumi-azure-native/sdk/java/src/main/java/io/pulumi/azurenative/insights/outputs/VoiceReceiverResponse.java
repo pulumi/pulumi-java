@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VoiceReceiverResponse {
     /**
      * The country code of the voice receiver.
@@ -25,11 +25,11 @@ public final class VoiceReceiverResponse {
      */
     private final String phoneNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VoiceReceiverResponse(
-        @OutputCustomType.Parameter("countryCode") String countryCode,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("phoneNumber") String phoneNumber) {
+        @CustomType.Parameter("countryCode") String countryCode,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("phoneNumber") String phoneNumber) {
         this.countryCode = countryCode;
         this.name = name;
         this.phoneNumber = phoneNumber;

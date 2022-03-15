@@ -4,12 +4,12 @@
 package io.pulumi.aws.macie2.outputs;
 
 import io.pulumi.aws.macie2.outputs.ClassificationJobS3JobDefinitionScopingIncludesAnd;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClassificationJobS3JobDefinitionScopingIncludes {
     /**
      * An array of conditions, one for each condition that determines which objects to include or exclude from the job. (documented below)
@@ -17,8 +17,8 @@ public final class ClassificationJobS3JobDefinitionScopingIncludes {
      */
     private final @Nullable List<ClassificationJobS3JobDefinitionScopingIncludesAnd> ands;
 
-    @OutputCustomType.Constructor
-    private ClassificationJobS3JobDefinitionScopingIncludes(@OutputCustomType.Parameter("ands") @Nullable List<ClassificationJobS3JobDefinitionScopingIncludesAnd> ands) {
+    @CustomType.Constructor
+    private ClassificationJobS3JobDefinitionScopingIncludes(@CustomType.Parameter("ands") @Nullable List<ClassificationJobS3JobDefinitionScopingIncludesAnd> ands) {
         this.ands = ands;
     }
 

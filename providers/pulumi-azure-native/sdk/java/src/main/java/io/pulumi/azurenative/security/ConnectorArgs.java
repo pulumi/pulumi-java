@@ -8,7 +8,7 @@ import io.pulumi.azurenative.security.inputs.AwsCredsAuthenticationDetailsProper
 import io.pulumi.azurenative.security.inputs.GcpCredentialsDetailsPropertiesArgs;
 import io.pulumi.azurenative.security.inputs.HybridComputeSettingsPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Settings for authentication management, these settings are relevant only for the cloud connector.
      * 
      */
-    @InputImport(name="authenticationDetails")
+    @Import(name="authenticationDetails")
       private final @Nullable Output<Object> authenticationDetails;
 
     public Output<Object> getAuthenticationDetails() {
@@ -34,7 +34,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the cloud account connector
      * 
      */
-    @InputImport(name="connectorName")
+    @Import(name="connectorName")
       private final @Nullable Output<String> connectorName;
 
     public Output<String> getConnectorName() {
@@ -45,7 +45,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * Settings for hybrid compute management. These settings are relevant only for Arc autoProvision (Hybrid Compute).
      * 
      */
-    @InputImport(name="hybridComputeSettings")
+    @Import(name="hybridComputeSettings")
       private final @Nullable Output<HybridComputeSettingsPropertiesArgs> hybridComputeSettings;
 
     public Output<HybridComputeSettingsPropertiesArgs> getHybridComputeSettings() {

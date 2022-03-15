@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends io.pulum
      * The IP address of the peer.
      * 
      */
-    @InputImport(name="peer", required=true)
+    @Import(name="peer", required=true)
       private final String peer;
 
     public String getPeer() {
@@ -27,7 +27,7 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends io.pulum
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesArgs extends io.pulum
      * The name of the virtual network gateway.
      * 
      */
-    @InputImport(name="virtualNetworkGatewayName", required=true)
+    @Import(name="virtualNetworkGatewayName", required=true)
       private final String virtualNetworkGatewayName;
 
     public String getVirtualNetworkGatewayName() {

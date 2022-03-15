@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.LoadBalancerStatusArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ConditionArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * Current service state
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<ConditionArgs>> conditions;
 
     public Output<List<ConditionArgs>> getConditions() {
@@ -35,7 +35,7 @@ public final class ServiceStatusArgs extends io.pulumi.resources.ResourceArgs {
      * LoadBalancer contains the current status of the load-balancer, if one is present.
      * 
      */
-    @InputImport(name="loadBalancer")
+    @Import(name="loadBalancer")
       private final @Nullable Output<LoadBalancerStatusArgs> loadBalancer;
 
     public Output<LoadBalancerStatusArgs> getLoadBalancer() {

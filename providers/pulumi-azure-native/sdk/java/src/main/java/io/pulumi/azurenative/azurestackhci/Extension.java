@@ -8,7 +8,7 @@ import io.pulumi.azurenative.azurestackhci.ExtensionArgs;
 import io.pulumi.azurenative.azurestackhci.outputs.PerNodeExtensionStateResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -37,7 +37,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Aggregate state of Arc Extensions across the nodes in this HCI cluster.
      * 
      */
-    @OutputExport(name="aggregateState", type=String.class, parameters={})
+    @Export(name="aggregateState", type=String.class, parameters={})
     private Output<String> aggregateState;
 
     /**
@@ -51,7 +51,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.
      * 
      */
-    @OutputExport(name="autoUpgradeMinorVersion", type=Boolean.class, parameters={})
+    @Export(name="autoUpgradeMinorVersion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoUpgradeMinorVersion;
 
     /**
@@ -65,7 +65,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * The timestamp of resource creation (UTC).
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdAt;
 
     /**
@@ -79,7 +79,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * The identity that created the resource.
      * 
      */
-    @OutputExport(name="createdBy", type=String.class, parameters={})
+    @Export(name="createdBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdBy;
 
     /**
@@ -93,7 +93,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * The type of identity that created the resource.
      * 
      */
-    @OutputExport(name="createdByType", type=String.class, parameters={})
+    @Export(name="createdByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdByType;
 
     /**
@@ -107,7 +107,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * How the extension handler should be forced to update even if the extension configuration has not changed.
      * 
      */
-    @OutputExport(name="forceUpdateTag", type=String.class, parameters={})
+    @Export(name="forceUpdateTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> forceUpdateTag;
 
     /**
@@ -121,7 +121,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * The timestamp of resource last modification (UTC)
      * 
      */
-    @OutputExport(name="lastModifiedAt", type=String.class, parameters={})
+    @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedAt;
 
     /**
@@ -135,7 +135,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * The identity that last modified the resource.
      * 
      */
-    @OutputExport(name="lastModifiedBy", type=String.class, parameters={})
+    @Export(name="lastModifiedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedBy;
 
     /**
@@ -149,7 +149,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * The type of identity that last modified the resource.
      * 
      */
-    @OutputExport(name="lastModifiedByType", type=String.class, parameters={})
+    @Export(name="lastModifiedByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedByType;
 
     /**
@@ -163,7 +163,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -177,7 +177,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * State of Arc Extension in each of the nodes.
      * 
      */
-    @OutputExport(name="perNodeExtensionDetails", type=List.class, parameters={PerNodeExtensionStateResponse.class})
+    @Export(name="perNodeExtensionDetails", type=List.class, parameters={PerNodeExtensionStateResponse.class})
     private Output<List<PerNodeExtensionStateResponse>> perNodeExtensionDetails;
 
     /**
@@ -191,7 +191,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Protected settings (may contain secrets).
      * 
      */
-    @OutputExport(name="protectedSettings", type=Object.class, parameters={})
+    @Export(name="protectedSettings", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> protectedSettings;
 
     /**
@@ -205,7 +205,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Provisioning state of the Extension proxy resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -219,7 +219,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * The name of the extension handler publisher.
      * 
      */
-    @OutputExport(name="publisher", type=String.class, parameters={})
+    @Export(name="publisher", type=String.class, parameters={})
     private Output</* @Nullable */ String> publisher;
 
     /**
@@ -233,7 +233,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Json formatted public settings for the extension.
      * 
      */
-    @OutputExport(name="settings", type=Object.class, parameters={})
+    @Export(name="settings", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> settings;
 
     /**
@@ -247,7 +247,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -261,7 +261,7 @@ public class Extension extends io.pulumi.resources.CustomResource {
      * Specifies the version of the script handler.
      * 
      */
-    @OutputExport(name="typeHandlerVersion", type=String.class, parameters={})
+    @Export(name="typeHandlerVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> typeHandlerVersion;
 
     /**

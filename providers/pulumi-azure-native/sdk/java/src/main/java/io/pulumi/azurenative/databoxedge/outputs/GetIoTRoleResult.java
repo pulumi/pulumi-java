@@ -8,14 +8,14 @@ import io.pulumi.azurenative.databoxedge.outputs.IoTDeviceInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.IoTEdgeAgentInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.MountPointMapResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIoTRoleResult {
     /**
      * Resource allocation
@@ -84,21 +84,21 @@ public final class GetIoTRoleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIoTRoleResult(
-        @OutputCustomType.Parameter("computeResource") @Nullable ComputeResourceResponse computeResource,
-        @OutputCustomType.Parameter("hostPlatform") String hostPlatform,
-        @OutputCustomType.Parameter("hostPlatformType") String hostPlatformType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ioTDeviceDetails") IoTDeviceInfoResponse ioTDeviceDetails,
-        @OutputCustomType.Parameter("ioTEdgeAgentInfo") @Nullable IoTEdgeAgentInfoResponse ioTEdgeAgentInfo,
-        @OutputCustomType.Parameter("ioTEdgeDeviceDetails") IoTDeviceInfoResponse ioTEdgeDeviceDetails,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("roleStatus") String roleStatus,
-        @OutputCustomType.Parameter("shareMappings") @Nullable List<MountPointMapResponse> shareMappings,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("computeResource") @Nullable ComputeResourceResponse computeResource,
+        @CustomType.Parameter("hostPlatform") String hostPlatform,
+        @CustomType.Parameter("hostPlatformType") String hostPlatformType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ioTDeviceDetails") IoTDeviceInfoResponse ioTDeviceDetails,
+        @CustomType.Parameter("ioTEdgeAgentInfo") @Nullable IoTEdgeAgentInfoResponse ioTEdgeAgentInfo,
+        @CustomType.Parameter("ioTEdgeDeviceDetails") IoTDeviceInfoResponse ioTEdgeDeviceDetails,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("roleStatus") String roleStatus,
+        @CustomType.Parameter("shareMappings") @Nullable List<MountPointMapResponse> shareMappings,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.computeResource = computeResource;
         this.hostPlatform = hostPlatform;
         this.hostPlatformType = hostPlatformType;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +18,14 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the API product for which the developer is purchasing a subscription.
      * 
      */
-    @InputImport(name="apiproduct")
+    @Import(name="apiproduct")
       private final @Nullable Output<String> apiproduct;
 
     public Output<String> getApiproduct() {
         return this.apiproduct == null ? Output.empty() : this.apiproduct;
     }
 
-    @InputImport(name="developerId", required=true)
+    @Import(name="developerId", required=true)
       private final Output<String> developerId;
 
     public Output<String> getDeveloperId() {
@@ -36,14 +36,14 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Time when the API product subscription ends in milliseconds since epoch.
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
         return this.endTime == null ? Output.empty() : this.endTime;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
     public Output<String> getOrganizationId() {
@@ -54,7 +54,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Time when the API product subscription starts in milliseconds since epoch.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {

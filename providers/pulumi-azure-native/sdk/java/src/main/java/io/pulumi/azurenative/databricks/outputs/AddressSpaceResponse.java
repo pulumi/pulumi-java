@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databricks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AddressSpaceResponse {
     /**
      * A list of address blocks reserved for this virtual network in CIDR notation.
@@ -17,8 +17,8 @@ public final class AddressSpaceResponse {
      */
     private final @Nullable List<String> addressPrefixes;
 
-    @OutputCustomType.Constructor
-    private AddressSpaceResponse(@OutputCustomType.Parameter("addressPrefixes") @Nullable List<String> addressPrefixes) {
+    @CustomType.Constructor
+    private AddressSpaceResponse(@CustomType.Parameter("addressPrefixes") @Nullable List<String> addressPrefixes) {
         this.addressPrefixes = addressPrefixes;
     }
 

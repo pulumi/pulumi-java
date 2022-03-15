@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatusStatefulGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatusVersionTargetGetArgs;
 import java.lang.Boolean;
@@ -21,7 +21,7 @@ public final class RegionInstanceGroupManagerStatusGetArgs extends io.pulumi.res
      * A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
      * 
      */
-    @InputImport(name="isStable")
+    @Import(name="isStable")
       private final @Nullable Output<Boolean> isStable;
 
     public Output<Boolean> getIsStable() {
@@ -32,7 +32,7 @@ public final class RegionInstanceGroupManagerStatusGetArgs extends io.pulumi.res
      * Stateful status of the given Instance Group Manager.
      * 
      */
-    @InputImport(name="statefuls")
+    @Import(name="statefuls")
       private final @Nullable Output<List<RegionInstanceGroupManagerStatusStatefulGetArgs>> statefuls;
 
     public Output<List<RegionInstanceGroupManagerStatusStatefulGetArgs>> getStatefuls() {
@@ -43,7 +43,7 @@ public final class RegionInstanceGroupManagerStatusGetArgs extends io.pulumi.res
      * A bit indicating whether version target has been reached in this managed instance group, i.e. all instances are in their target version. Instances' target version are specified by version field on Instance Group Manager.
      * 
      */
-    @InputImport(name="versionTargets")
+    @Import(name="versionTargets")
       private final @Nullable Output<List<RegionInstanceGroupManagerStatusVersionTargetGetArgs>> versionTargets;
 
     public Output<List<RegionInstanceGroupManagerStatusVersionTargetGetArgs>> getVersionTargets() {

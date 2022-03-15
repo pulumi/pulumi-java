@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyAlternativeNameServerConfigTargetNameServer {
     /**
      * Forwarding path for this TargetNameServer. If unset or `default` Cloud DNS will make forwarding
@@ -25,10 +25,10 @@ public final class PolicyAlternativeNameServerConfigTargetNameServer {
      */
     private final String ipv4Address;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyAlternativeNameServerConfigTargetNameServer(
-        @OutputCustomType.Parameter("forwardingPath") @Nullable String forwardingPath,
-        @OutputCustomType.Parameter("ipv4Address") String ipv4Address) {
+        @CustomType.Parameter("forwardingPath") @Nullable String forwardingPath,
+        @CustomType.Parameter("ipv4Address") String ipv4Address) {
         this.forwardingPath = forwardingPath;
         this.ipv4Address = ipv4Address;
     }

@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.OperationBatchStatusResponseItemResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGlobalUserOperationBatchStatusResult {
     /**
      * Gets a collection of items that contain the operation url and status.
@@ -16,8 +16,8 @@ public final class GetGlobalUserOperationBatchStatusResult {
      */
     private final List<OperationBatchStatusResponseItemResponse> items;
 
-    @OutputCustomType.Constructor
-    private GetGlobalUserOperationBatchStatusResult(@OutputCustomType.Parameter("items") List<OperationBatchStatusResponseItemResponse> items) {
+    @CustomType.Constructor
+    private GetGlobalUserOperationBatchStatusResult(@CustomType.Parameter("items") List<OperationBatchStatusResponseItemResponse> items) {
         this.items = items;
     }
 

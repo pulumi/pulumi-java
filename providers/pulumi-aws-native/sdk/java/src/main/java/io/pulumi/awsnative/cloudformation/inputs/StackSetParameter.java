@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class StackSetParameter extends io.pulumi.resources.InvokeArgs {
      * The key associated with the parameter. If you don't specify a key and value for a particular parameter, AWS CloudFormation uses the default value that is specified in your template.
      * 
      */
-    @InputImport(name="parameterKey", required=true)
+    @Import(name="parameterKey", required=true)
       private final String parameterKey;
 
     public String getParameterKey() {
@@ -27,7 +27,7 @@ public final class StackSetParameter extends io.pulumi.resources.InvokeArgs {
      * The input value associated with the parameter.
      * 
      */
-    @InputImport(name="parameterValue", required=true)
+    @Import(name="parameterValue", required=true)
       private final String parameterValue;
 
     public String getParameterValue() {

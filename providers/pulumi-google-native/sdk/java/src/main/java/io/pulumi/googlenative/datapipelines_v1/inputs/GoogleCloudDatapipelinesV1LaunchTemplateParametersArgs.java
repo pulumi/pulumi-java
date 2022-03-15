@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datapipelines_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
      * The runtime environment for the job.
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> environment;
 
     public Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> getEnvironment() {
@@ -36,7 +36,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
      * The job name to use for the created job.
      * 
      */
-    @InputImport(name="jobName", required=true)
+    @Import(name="jobName", required=true)
       private final Output<String> jobName;
 
     public Output<String> getJobName() {
@@ -47,7 +47,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
      * The runtime parameters to pass to the job.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
@@ -58,7 +58,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
      * Map of transform name prefixes of the job to be replaced to the corresponding name prefixes of the new job. Only applicable when updating a pipeline.
      * 
      */
-    @InputImport(name="transformNameMapping")
+    @Import(name="transformNameMapping")
       private final @Nullable Output<Map<String,String>> transformNameMapping;
 
     public Output<Map<String,String>> getTransformNameMapping() {
@@ -69,7 +69,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
      * If set, replace the existing pipeline with the name specified by jobName with this pipeline, preserving state.
      * 
      */
-    @InputImport(name="update")
+    @Import(name="update")
       private final @Nullable Output<Boolean> update;
 
     public Output<Boolean> getUpdate() {

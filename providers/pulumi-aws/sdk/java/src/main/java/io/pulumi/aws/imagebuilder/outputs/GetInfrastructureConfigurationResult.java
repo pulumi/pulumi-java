@@ -4,14 +4,14 @@
 package io.pulumi.aws.imagebuilder.outputs;
 
 import io.pulumi.aws.imagebuilder.outputs.GetInfrastructureConfigurationLogging;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInfrastructureConfigurationResult {
     private final String arn;
     /**
@@ -86,24 +86,24 @@ public final class GetInfrastructureConfigurationResult {
      */
     private final Boolean terminateInstanceOnFailure;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInfrastructureConfigurationResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("dateCreated") String dateCreated,
-        @OutputCustomType.Parameter("dateUpdated") String dateUpdated,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceProfileName") String instanceProfileName,
-        @OutputCustomType.Parameter("instanceTypes") List<String> instanceTypes,
-        @OutputCustomType.Parameter("keyPair") String keyPair,
-        @OutputCustomType.Parameter("loggings") List<GetInfrastructureConfigurationLogging> loggings,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceTags") Map<String,String> resourceTags,
-        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
-        @OutputCustomType.Parameter("snsTopicArn") String snsTopicArn,
-        @OutputCustomType.Parameter("subnetId") String subnetId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("terminateInstanceOnFailure") Boolean terminateInstanceOnFailure) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("dateCreated") String dateCreated,
+        @CustomType.Parameter("dateUpdated") String dateUpdated,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceProfileName") String instanceProfileName,
+        @CustomType.Parameter("instanceTypes") List<String> instanceTypes,
+        @CustomType.Parameter("keyPair") String keyPair,
+        @CustomType.Parameter("loggings") List<GetInfrastructureConfigurationLogging> loggings,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceTags") Map<String,String> resourceTags,
+        @CustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @CustomType.Parameter("snsTopicArn") String snsTopicArn,
+        @CustomType.Parameter("subnetId") String subnetId,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("terminateInstanceOnFailure") Boolean terminateInstanceOnFailure) {
         this.arn = arn;
         this.dateCreated = dateCreated;
         this.dateUpdated = dateUpdated;

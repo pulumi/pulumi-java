@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apikeys_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class V2IosKeyRestrictionsResponse {
     /**
      * A list of bundle IDs that are allowed when making API calls with this key.
@@ -16,8 +16,8 @@ public final class V2IosKeyRestrictionsResponse {
      */
     private final List<String> allowedBundleIds;
 
-    @OutputCustomType.Constructor
-    private V2IosKeyRestrictionsResponse(@OutputCustomType.Parameter("allowedBundleIds") List<String> allowedBundleIds) {
+    @CustomType.Constructor
+    private V2IosKeyRestrictionsResponse(@CustomType.Parameter("allowedBundleIds") List<String> allowedBundleIds) {
         this.allowedBundleIds = allowedBundleIds;
     }
 

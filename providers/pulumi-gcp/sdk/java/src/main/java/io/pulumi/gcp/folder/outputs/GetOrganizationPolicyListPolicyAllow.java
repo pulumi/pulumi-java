@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.folder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetOrganizationPolicyListPolicyAllow {
     private final Boolean all;
     private final List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOrganizationPolicyListPolicyAllow(
-        @OutputCustomType.Parameter("all") Boolean all,
-        @OutputCustomType.Parameter("values") List<String> values) {
+        @CustomType.Parameter("all") Boolean all,
+        @CustomType.Parameter("values") List<String> values) {
         this.all = all;
         this.values = values;
     }

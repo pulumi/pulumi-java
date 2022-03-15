@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.sqladmin_v1beta4.enums.PasswordValidationPolicyComplexity;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
      * The complexity of the password.
      * 
      */
-    @InputImport(name="complexity")
+    @Import(name="complexity")
       private final @Nullable Output<PasswordValidationPolicyComplexity> complexity;
 
     public Output<PasswordValidationPolicyComplexity> getComplexity() {
@@ -36,7 +36,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
      * Disallow username as a part of the password.
      * 
      */
-    @InputImport(name="disallowUsernameSubstring")
+    @Import(name="disallowUsernameSubstring")
       private final @Nullable Output<Boolean> disallowUsernameSubstring;
 
     public Output<Boolean> getDisallowUsernameSubstring() {
@@ -47,7 +47,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
      * Minimum number of characters allowed.
      * 
      */
-    @InputImport(name="minLength")
+    @Import(name="minLength")
       private final @Nullable Output<Integer> minLength;
 
     public Output<Integer> getMinLength() {
@@ -58,7 +58,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
      * Minimum interval after which the password can be changed. This flag is only supported for PostgresSQL.
      * 
      */
-    @InputImport(name="passwordChangeInterval")
+    @Import(name="passwordChangeInterval")
       private final @Nullable Output<String> passwordChangeInterval;
 
     public Output<String> getPasswordChangeInterval() {
@@ -69,7 +69,7 @@ public final class PasswordValidationPolicyArgs extends io.pulumi.resources.Reso
      * Number of previous passwords that cannot be reused.
      * 
      */
-    @InputImport(name="reuseInterval")
+    @Import(name="reuseInterval")
       private final @Nullable Output<Integer> reuseInterval;
 
     public Output<Integer> getReuseInterval() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
      * [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base table is updated. The default value is "true".
      * 
      */
-    @InputImport(name="enableRefresh")
+    @Import(name="enableRefresh")
       private final @Nullable Output<Boolean> enableRefresh;
 
     public Output<Boolean> getEnableRefresh() {
@@ -30,7 +30,7 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
      * [Required] A query whose result is persisted.
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Output<String> query;
 
     public Output<String> getQuery() {
@@ -41,7 +41,7 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
      * [Optional] [TrustedTester] The maximum frequency at which this materialized view will be refreshed. The default value is "1800000" (30 minutes).
      * 
      */
-    @InputImport(name="refreshIntervalMs")
+    @Import(name="refreshIntervalMs")
       private final @Nullable Output<String> refreshIntervalMs;
 
     public Output<String> getRefreshIntervalMs() {

@@ -5,13 +5,13 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.CloudServiceVaultCertificateResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CloudServiceVaultSecretGroupResponse {
     /**
      * The relative URL of the Key Vault containing all of the certificates in VaultCertificates.
@@ -24,10 +24,10 @@ public final class CloudServiceVaultSecretGroupResponse {
      */
     private final @Nullable List<CloudServiceVaultCertificateResponse> vaultCertificates;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudServiceVaultSecretGroupResponse(
-        @OutputCustomType.Parameter("sourceVault") @Nullable SubResourceResponse sourceVault,
-        @OutputCustomType.Parameter("vaultCertificates") @Nullable List<CloudServiceVaultCertificateResponse> vaultCertificates) {
+        @CustomType.Parameter("sourceVault") @Nullable SubResourceResponse sourceVault,
+        @CustomType.Parameter("vaultCertificates") @Nullable List<CloudServiceVaultCertificateResponse> vaultCertificates) {
         this.sourceVault = sourceVault;
         this.vaultCertificates = vaultCertificates;
     }

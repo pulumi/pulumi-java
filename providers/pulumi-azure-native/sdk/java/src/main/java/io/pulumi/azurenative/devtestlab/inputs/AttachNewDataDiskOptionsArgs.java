@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.StorageType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
      * The name of the disk to be attached.
      * 
      */
-    @InputImport(name="diskName")
+    @Import(name="diskName")
       private final @Nullable Output<String> diskName;
 
     public Output<String> getDiskName() {
@@ -36,7 +36,7 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
      * Size of the disk to be attached in Gibibytes.
      * 
      */
-    @InputImport(name="diskSizeGiB")
+    @Import(name="diskSizeGiB")
       private final @Nullable Output<Integer> diskSizeGiB;
 
     public Output<Integer> getDiskSizeGiB() {
@@ -47,7 +47,7 @@ public final class AttachNewDataDiskOptionsArgs extends io.pulumi.resources.Reso
      * The storage type for the disk (i.e. Standard, Premium).
      * 
      */
-    @InputImport(name="diskType")
+    @Import(name="diskType")
       private final @Nullable Output<Either<String,StorageType>> diskType;
 
     public Output<Either<String,StorageType>> getDiskType() {

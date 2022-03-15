@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetExportResult {
     private final @Nullable String accepts;
     /**
@@ -38,17 +38,17 @@ public final class GetExportResult {
     private final String restApiId;
     private final String stageName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExportResult(
-        @OutputCustomType.Parameter("accepts") @Nullable String accepts,
-        @OutputCustomType.Parameter("body") String body,
-        @OutputCustomType.Parameter("contentDisposition") String contentDisposition,
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("exportType") String exportType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
-        @OutputCustomType.Parameter("restApiId") String restApiId,
-        @OutputCustomType.Parameter("stageName") String stageName) {
+        @CustomType.Parameter("accepts") @Nullable String accepts,
+        @CustomType.Parameter("body") String body,
+        @CustomType.Parameter("contentDisposition") String contentDisposition,
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("exportType") String exportType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @CustomType.Parameter("restApiId") String restApiId,
+        @CustomType.Parameter("stageName") String stageName) {
         this.accepts = accepts;
         this.body = body;
         this.contentDisposition = contentDisposition;

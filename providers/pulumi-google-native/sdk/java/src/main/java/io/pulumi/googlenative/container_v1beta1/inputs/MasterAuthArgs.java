@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1beta1.inputs.ClientCertificateConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,14 +23,14 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for client certificate authentication on the cluster. For clusters before v1.12, if no configuration is specified, a client certificate is issued.
      * 
      */
-    @InputImport(name="clientCertificateConfig")
+    @Import(name="clientCertificateConfig")
       private final @Nullable Output<ClientCertificateConfigArgs> clientCertificateConfig;
 
     public Output<ClientCertificateConfigArgs> getClientCertificateConfig() {
         return this.clientCertificateConfig == null ? Output.empty() : this.clientCertificateConfig;
     }
 
-    @InputImport(name="clusterCaCertificate")
+    @Import(name="clusterCaCertificate")
       private final @Nullable Output<String> clusterCaCertificate;
 
     public Output<String> getClusterCaCertificate() {
@@ -41,7 +41,7 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
      * The password to use for HTTP basic authentication to the master endpoint. Because the master endpoint is open to the Internet, you should create a strong password. If a password is provided for cluster creation, username must be non-empty. Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -52,7 +52,7 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
      * The username to use for HTTP basic authentication to the master endpoint. For clusters v1.6.0 and later, basic authentication can be disabled by leaving username unspecified (or setting it to the empty string). Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

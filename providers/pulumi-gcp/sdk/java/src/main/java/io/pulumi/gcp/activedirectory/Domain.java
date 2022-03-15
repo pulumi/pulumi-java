@@ -4,7 +4,7 @@
 package io.pulumi.gcp.activedirectory;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.activedirectory.DomainArgs;
@@ -41,7 +41,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * If not specified, setupadmin will be used.
      * 
      */
-    @OutputExport(name="admin", type=String.class, parameters={})
+    @Export(name="admin", type=String.class, parameters={})
     private Output</* @Nullable */ String> admin;
 
     /**
@@ -57,7 +57,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * If CIDR subnets overlap between networks, domain creation will fail.
      * 
      */
-    @OutputExport(name="authorizedNetworks", type=List.class, parameters={String.class})
+    @Export(name="authorizedNetworks", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> authorizedNetworks;
 
     /**
@@ -73,7 +73,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -89,7 +89,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * be chosen for an Active Directory set up on an internal network.
      * 
      */
-    @OutputExport(name="fqdn", type=String.class, parameters={})
+    @Export(name="fqdn", type=String.class, parameters={})
     private Output<String> fqdn;
 
     /**
@@ -104,7 +104,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Resource labels that can contain user-provided metadata
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -119,7 +119,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
      * 
      */
-    @OutputExport(name="locations", type=List.class, parameters={String.class})
+    @Export(name="locations", type=List.class, parameters={String.class})
     private Output<List<String>> locations;
 
     /**
@@ -134,7 +134,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The unique name of the domain using the format: 'projects/{project}/locations/global/domains/{domainName}'.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -149,7 +149,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -165,7 +165,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Ranges must be unique and non-overlapping with existing subnets in authorizedNetworks
      * 
      */
-    @OutputExport(name="reservedIpRange", type=String.class, parameters={})
+    @Export(name="reservedIpRange", type=String.class, parameters={})
     private Output<String> reservedIpRange;
 
     /**

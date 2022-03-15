@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplateJobScheduling {
     /**
      * Optional. Maximum number of times per hour a driver may be restarted as a result of driver exiting with non-zero code before job is reported failed. A job may be reported as thrashing if driver exits with non-zero code 4 times within 10 minute window. Maximum value is 10.
@@ -22,10 +22,10 @@ public final class WorkflowTemplateJobScheduling {
      */
     private final @Nullable Integer maxFailuresTotal;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplateJobScheduling(
-        @OutputCustomType.Parameter("maxFailuresPerHour") @Nullable Integer maxFailuresPerHour,
-        @OutputCustomType.Parameter("maxFailuresTotal") @Nullable Integer maxFailuresTotal) {
+        @CustomType.Parameter("maxFailuresPerHour") @Nullable Integer maxFailuresPerHour,
+        @CustomType.Parameter("maxFailuresTotal") @Nullable Integer maxFailuresTotal) {
         this.maxFailuresPerHour = maxFailuresPerHour;
         this.maxFailuresTotal = maxFailuresTotal;
     }

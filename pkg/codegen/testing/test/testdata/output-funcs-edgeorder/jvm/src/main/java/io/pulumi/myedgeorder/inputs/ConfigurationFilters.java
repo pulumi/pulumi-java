@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.myedgeorder.inputs.FilterableProperty;
 import io.pulumi.myedgeorder.inputs.HierarchyInformation;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ConfigurationFilters extends io.pulumi.resources.InvokeArgs {
      * Filters specific to product
      * 
      */
-    @InputImport(name="filterableProperty")
+    @Import(name="filterableProperty")
       private final @Nullable List<FilterableProperty> filterableProperty;
 
     public List<FilterableProperty> getFilterableProperty() {
@@ -35,7 +35,7 @@ public final class ConfigurationFilters extends io.pulumi.resources.InvokeArgs {
      * Product hierarchy information
      * 
      */
-    @InputImport(name="hierarchyInformation", required=true)
+    @Import(name="hierarchyInformation", required=true)
       private final HierarchyInformation hierarchyInformation;
 
     public HierarchyInformation getHierarchyInformation() {

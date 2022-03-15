@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecuritySettingsResponse {
     /**
      * Optional. A URL referring to a networksecurity.ClientTlsPolicy resource that describes how clients should authenticate with this service's backends. clientTlsPolicy only applies to a global BackendService with the loadBalancingScheme set to INTERNAL_SELF_MANAGED. If left blank, communications are not encrypted. Note: This field currently has no impact.
@@ -21,10 +21,10 @@ public final class SecuritySettingsResponse {
      */
     private final List<String> subjectAltNames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecuritySettingsResponse(
-        @OutputCustomType.Parameter("clientTlsPolicy") String clientTlsPolicy,
-        @OutputCustomType.Parameter("subjectAltNames") List<String> subjectAltNames) {
+        @CustomType.Parameter("clientTlsPolicy") String clientTlsPolicy,
+        @CustomType.Parameter("subjectAltNames") List<String> subjectAltNames) {
         this.clientTlsPolicy = clientTlsPolicy;
         this.subjectAltNames = subjectAltNames;
     }

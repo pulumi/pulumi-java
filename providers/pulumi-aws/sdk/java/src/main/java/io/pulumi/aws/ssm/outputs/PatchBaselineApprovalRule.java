@@ -4,7 +4,7 @@
 package io.pulumi.aws.ssm.outputs;
 
 import io.pulumi.aws.ssm.outputs.PatchBaselineApprovalRulePatchFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PatchBaselineApprovalRule {
     /**
      * The number of days after the release date of each patch matched by the rule the patch is marked as approved in the patch baseline. Valid Range: 0 to 100. Conflicts with `approve_until_date`
@@ -41,13 +41,13 @@ public final class PatchBaselineApprovalRule {
      */
     private final List<PatchBaselineApprovalRulePatchFilter> patchFilters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchBaselineApprovalRule(
-        @OutputCustomType.Parameter("approveAfterDays") @Nullable Integer approveAfterDays,
-        @OutputCustomType.Parameter("approveUntilDate") @Nullable String approveUntilDate,
-        @OutputCustomType.Parameter("complianceLevel") @Nullable String complianceLevel,
-        @OutputCustomType.Parameter("enableNonSecurity") @Nullable Boolean enableNonSecurity,
-        @OutputCustomType.Parameter("patchFilters") List<PatchBaselineApprovalRulePatchFilter> patchFilters) {
+        @CustomType.Parameter("approveAfterDays") @Nullable Integer approveAfterDays,
+        @CustomType.Parameter("approveUntilDate") @Nullable String approveUntilDate,
+        @CustomType.Parameter("complianceLevel") @Nullable String complianceLevel,
+        @CustomType.Parameter("enableNonSecurity") @Nullable Boolean enableNonSecurity,
+        @CustomType.Parameter("patchFilters") List<PatchBaselineApprovalRulePatchFilter> patchFilters) {
         this.approveAfterDays = approveAfterDays;
         this.approveUntilDate = approveUntilDate;
         this.complianceLevel = complianceLevel;

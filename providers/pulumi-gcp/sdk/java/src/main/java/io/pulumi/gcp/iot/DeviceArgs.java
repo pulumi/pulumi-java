@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iot;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.iot.inputs.DeviceCredentialArgs;
 import io.pulumi.gcp.iot.inputs.DeviceGatewayConfigArgs;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * If a device is blocked, connections or requests from this device will fail.
      * 
      */
-    @InputImport(name="blocked")
+    @Import(name="blocked")
       private final @Nullable Output<Boolean> blocked;
 
     public Output<Boolean> getBlocked() {
@@ -35,7 +35,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable Output<List<DeviceCredentialArgs>> credentials;
 
     public Output<List<DeviceCredentialArgs>> getCredentials() {
@@ -47,7 +47,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="gatewayConfig")
+    @Import(name="gatewayConfig")
       private final @Nullable Output<DeviceGatewayConfigArgs> gatewayConfig;
 
     public Output<DeviceGatewayConfigArgs> getGatewayConfig() {
@@ -59,7 +59,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
      * 
      */
-    @InputImport(name="logLevel")
+    @Import(name="logLevel")
       private final @Nullable Output<String> logLevel;
 
     public Output<String> getLogLevel() {
@@ -70,7 +70,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The metadata key-value pairs assigned to the device.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -81,7 +81,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * A unique name for the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -92,7 +92,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the device registry where this device should be created.
      * 
      */
-    @InputImport(name="registry", required=true)
+    @Import(name="registry", required=true)
       private final Output<String> registry;
 
     public Output<String> getRegistry() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.notificationhubs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApnsCredentialResponse {
     /**
      * The APNS certificate. Specify if using Certificate Authentication Mode.
@@ -52,16 +52,16 @@ public final class ApnsCredentialResponse {
      */
     private final @Nullable String token;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApnsCredentialResponse(
-        @OutputCustomType.Parameter("apnsCertificate") @Nullable String apnsCertificate,
-        @OutputCustomType.Parameter("appId") @Nullable String appId,
-        @OutputCustomType.Parameter("appName") @Nullable String appName,
-        @OutputCustomType.Parameter("certificateKey") @Nullable String certificateKey,
-        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
-        @OutputCustomType.Parameter("keyId") @Nullable String keyId,
-        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint,
-        @OutputCustomType.Parameter("token") @Nullable String token) {
+        @CustomType.Parameter("apnsCertificate") @Nullable String apnsCertificate,
+        @CustomType.Parameter("appId") @Nullable String appId,
+        @CustomType.Parameter("appName") @Nullable String appName,
+        @CustomType.Parameter("certificateKey") @Nullable String certificateKey,
+        @CustomType.Parameter("endpoint") @Nullable String endpoint,
+        @CustomType.Parameter("keyId") @Nullable String keyId,
+        @CustomType.Parameter("thumbprint") @Nullable String thumbprint,
+        @CustomType.Parameter("token") @Nullable String token) {
         this.apnsCertificate = apnsCertificate;
         this.appId = appId;
         this.appName = appName;

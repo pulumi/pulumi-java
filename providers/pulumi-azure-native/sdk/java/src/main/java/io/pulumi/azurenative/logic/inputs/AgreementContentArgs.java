@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.inputs.AS2AgreementContentArgs;
 import io.pulumi.azurenative.logic.inputs.EdifactAgreementContentArgs;
 import io.pulumi.azurenative.logic.inputs.X12AgreementContentArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class AgreementContentArgs extends io.pulumi.resources.ResourceArgs
      * The AS2 agreement content.
      * 
      */
-    @InputImport(name="aS2")
+    @Import(name="aS2")
       private final @Nullable Output<AS2AgreementContentArgs> aS2;
 
     public Output<AS2AgreementContentArgs> getAS2() {
@@ -35,7 +35,7 @@ public final class AgreementContentArgs extends io.pulumi.resources.ResourceArgs
      * The EDIFACT agreement content.
      * 
      */
-    @InputImport(name="edifact")
+    @Import(name="edifact")
       private final @Nullable Output<EdifactAgreementContentArgs> edifact;
 
     public Output<EdifactAgreementContentArgs> getEdifact() {
@@ -46,7 +46,7 @@ public final class AgreementContentArgs extends io.pulumi.resources.ResourceArgs
      * The X12 agreement content.
      * 
      */
-    @InputImport(name="x12")
+    @Import(name="x12")
       private final @Nullable Output<X12AgreementContentArgs> x12;
 
     public Output<X12AgreementContentArgs> getX12() {

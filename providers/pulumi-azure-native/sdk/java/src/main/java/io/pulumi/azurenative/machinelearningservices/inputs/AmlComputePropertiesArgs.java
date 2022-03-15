@@ -12,7 +12,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.UserAccountCredentia
 import io.pulumi.azurenative.machinelearningservices.inputs.VirtualMachineImageArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * Enable or disable node public IP address provisioning. Possible values are: Possible values are: true - Indicates that the compute nodes will have public IPs provisioned. false - Indicates that the compute nodes will have a private endpoint and no public IPs.
      * 
      */
-    @InputImport(name="enableNodePublicIp")
+    @Import(name="enableNodePublicIp")
       private final @Nullable Output<Boolean> enableNodePublicIp;
 
     public Output<Boolean> getEnableNodePublicIp() {
@@ -42,7 +42,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * Network is isolated or not
      * 
      */
-    @InputImport(name="isolatedNetwork")
+    @Import(name="isolatedNetwork")
       private final @Nullable Output<Boolean> isolatedNetwork;
 
     public Output<Boolean> getIsolatedNetwork() {
@@ -53,7 +53,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * Compute OS Type
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable Output<Either<String,OsType>> osType;
 
     public Output<Either<String,OsType>> getOsType() {
@@ -64,7 +64,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * State of the public SSH port. Possible values are: Disabled - Indicates that the public ssh port is closed on all nodes of the cluster. Enabled - Indicates that the public ssh port is open on all nodes of the cluster. NotSpecified - Indicates that the public ssh port is closed on all nodes of the cluster if VNet is defined, else is open all public nodes. It can be default only during cluster creation time, after creation it will be either enabled or disabled.
      * 
      */
-    @InputImport(name="remoteLoginPortPublicAccess")
+    @Import(name="remoteLoginPortPublicAccess")
       private final @Nullable Output<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess;
 
     public Output<Either<String,RemoteLoginPortPublicAccess>> getRemoteLoginPortPublicAccess() {
@@ -75,7 +75,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * Scale settings for AML Compute
      * 
      */
-    @InputImport(name="scaleSettings")
+    @Import(name="scaleSettings")
       private final @Nullable Output<ScaleSettingsArgs> scaleSettings;
 
     public Output<ScaleSettingsArgs> getScaleSettings() {
@@ -86,7 +86,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * Virtual network subnet resource ID the compute nodes belong to.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<ResourceIdArgs> subnet;
 
     public Output<ResourceIdArgs> getSubnet() {
@@ -97,7 +97,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * Credentials for an administrator user account that will be created on each compute node.
      * 
      */
-    @InputImport(name="userAccountCredentials")
+    @Import(name="userAccountCredentials")
       private final @Nullable Output<UserAccountCredentialsArgs> userAccountCredentials;
 
     public Output<UserAccountCredentialsArgs> getUserAccountCredentials() {
@@ -108,7 +108,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * Virtual Machine image for AML Compute - windows only
      * 
      */
-    @InputImport(name="virtualMachineImage")
+    @Import(name="virtualMachineImage")
       private final @Nullable Output<VirtualMachineImageArgs> virtualMachineImage;
 
     public Output<VirtualMachineImageArgs> getVirtualMachineImage() {
@@ -119,7 +119,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * Virtual Machine priority
      * 
      */
-    @InputImport(name="vmPriority")
+    @Import(name="vmPriority")
       private final @Nullable Output<Either<String,VmPriority>> vmPriority;
 
     public Output<Either<String,VmPriority>> getVmPriority() {
@@ -130,7 +130,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
      * Virtual Machine Size
      * 
      */
-    @InputImport(name="vmSize")
+    @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
     public Output<String> getVmSize() {

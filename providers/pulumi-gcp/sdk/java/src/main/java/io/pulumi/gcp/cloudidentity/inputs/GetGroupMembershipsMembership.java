@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudidentity.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudidentity.inputs.GetGroupMembershipsMembershipMemberKey;
 import io.pulumi.gcp.cloudidentity.inputs.GetGroupMembershipsMembershipPreferredMemberKey;
 import io.pulumi.gcp.cloudidentity.inputs.GetGroupMembershipsMembershipRole;
@@ -16,7 +16,7 @@ public final class GetGroupMembershipsMembership extends io.pulumi.resources.Inv
 
     public static final GetGroupMembershipsMembership Empty = new GetGroupMembershipsMembership();
 
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -27,14 +27,14 @@ public final class GetGroupMembershipsMembership extends io.pulumi.resources.Inv
      * The parent Group resource under which to lookup the Membership names. Must be of the form groups/{group_id}.
      * 
      */
-    @InputImport(name="group", required=true)
+    @Import(name="group", required=true)
       private final String group;
 
     public String getGroup() {
         return this.group;
     }
 
-    @InputImport(name="memberKeys", required=true)
+    @Import(name="memberKeys", required=true)
       private final List<GetGroupMembershipsMembershipMemberKey> memberKeys;
 
     public List<GetGroupMembershipsMembershipMemberKey> getMemberKeys() {
@@ -45,14 +45,14 @@ public final class GetGroupMembershipsMembership extends io.pulumi.resources.Inv
      * The name of the MembershipRole. One of OWNER, MANAGER, MEMBER.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="preferredMemberKeys", required=true)
+    @Import(name="preferredMemberKeys", required=true)
       private final List<GetGroupMembershipsMembershipPreferredMemberKey> preferredMemberKeys;
 
     public List<GetGroupMembershipsMembershipPreferredMemberKey> getPreferredMemberKeys() {
@@ -63,21 +63,21 @@ public final class GetGroupMembershipsMembership extends io.pulumi.resources.Inv
      * The MembershipRoles that apply to the Membership. Structure is documented below.
      * 
      */
-    @InputImport(name="roles", required=true)
+    @Import(name="roles", required=true)
       private final List<GetGroupMembershipsMembershipRole> roles;
 
     public List<GetGroupMembershipsMembershipRole> getRoles() {
         return this.roles;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
         return this.type;
     }
 
-    @InputImport(name="updateTime", required=true)
+    @Import(name="updateTime", required=true)
       private final String updateTime;
 
     public String getUpdateTime() {

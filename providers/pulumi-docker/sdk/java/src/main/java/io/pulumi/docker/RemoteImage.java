@@ -4,7 +4,7 @@
 package io.pulumi.docker;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.docker.RemoteImageArgs;
 import io.pulumi.docker.Utilities;
@@ -68,7 +68,7 @@ public class RemoteImage extends io.pulumi.resources.CustomResource {
      * reference](https://docs.docker.com/engine/reference/commandline/build/#options) too.
      * 
      */
-    @OutputExport(name="build", type=RemoteImageBuild.class, parameters={})
+    @Export(name="build", type=RemoteImageBuild.class, parameters={})
     private Output</* @Nullable */ RemoteImageBuild> build;
 
     /**
@@ -83,7 +83,7 @@ public class RemoteImage extends io.pulumi.resources.CustomResource {
      * If true, then the image is removed forcibly when the resource is destroyed.
      * 
      */
-    @OutputExport(name="forceRemove", type=Boolean.class, parameters={})
+    @Export(name="forceRemove", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceRemove;
 
     /**
@@ -98,7 +98,7 @@ public class RemoteImage extends io.pulumi.resources.CustomResource {
      * the docker local storage on destroy operation.
      * 
      */
-    @OutputExport(name="keepLocally", type=Boolean.class, parameters={})
+    @Export(name="keepLocally", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> keepLocally;
 
     /**
@@ -117,7 +117,7 @@ public class RemoteImage extends io.pulumi.resources.CustomResource {
      * 
      */
     @Deprecated /* Use repo_digest instead */
-    @OutputExport(name="latest", type=String.class, parameters={})
+    @Export(name="latest", type=String.class, parameters={})
     private Output<String> latest;
 
     /**
@@ -131,7 +131,7 @@ public class RemoteImage extends io.pulumi.resources.CustomResource {
      * The name of the Docker image, including any tags or SHA256 repo digests.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -147,7 +147,7 @@ public class RemoteImage extends io.pulumi.resources.CustomResource {
      * 
      */
     @Deprecated /* Is unused and will be removed. */
-    @OutputExport(name="output", type=String.class, parameters={})
+    @Export(name="output", type=String.class, parameters={})
     private Output<String> output;
 
     public Output<String> getOutput() {
@@ -161,7 +161,7 @@ public class RemoteImage extends io.pulumi.resources.CustomResource {
      * 
      */
     @Deprecated /* Use field pull_triggers instead */
-    @OutputExport(name="pullTrigger", type=String.class, parameters={})
+    @Export(name="pullTrigger", type=String.class, parameters={})
     private Output</* @Nullable */ String> pullTrigger;
 
     /**
@@ -176,7 +176,7 @@ public class RemoteImage extends io.pulumi.resources.CustomResource {
      * using the [docker_registry_image](../data-sources/registry_image.md).
      * 
      */
-    @OutputExport(name="pullTriggers", type=List.class, parameters={String.class})
+    @Export(name="pullTriggers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> pullTriggers;
 
     /**
@@ -191,7 +191,7 @@ public class RemoteImage extends io.pulumi.resources.CustomResource {
      * The image sha256 digest in the form of `repo[:tag]@sha256:<hash>`.
      * 
      */
-    @OutputExport(name="repoDigest", type=String.class, parameters={})
+    @Export(name="repoDigest", type=String.class, parameters={})
     private Output<String> repoDigest;
 
     /**

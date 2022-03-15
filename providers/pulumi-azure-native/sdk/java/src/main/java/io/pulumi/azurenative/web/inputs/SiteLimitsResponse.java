@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SiteLimitsResponse extends io.pulumi.resources.InvokeArgs {
      * Maximum allowed disk size usage in MB.
      * 
      */
-    @InputImport(name="maxDiskSizeInMb")
+    @Import(name="maxDiskSizeInMb")
       private final @Nullable Double maxDiskSizeInMb;
 
     public Optional<Double> getMaxDiskSizeInMb() {
@@ -33,7 +33,7 @@ public final class SiteLimitsResponse extends io.pulumi.resources.InvokeArgs {
      * Maximum allowed memory usage in MB.
      * 
      */
-    @InputImport(name="maxMemoryInMb")
+    @Import(name="maxMemoryInMb")
       private final @Nullable Double maxMemoryInMb;
 
     public Optional<Double> getMaxMemoryInMb() {
@@ -44,7 +44,7 @@ public final class SiteLimitsResponse extends io.pulumi.resources.InvokeArgs {
      * Maximum allowed CPU usage percentage.
      * 
      */
-    @InputImport(name="maxPercentageCpu")
+    @Import(name="maxPercentageCpu")
       private final @Nullable Double maxPercentageCpu;
 
     public Optional<Double> getMaxPercentageCpu() {

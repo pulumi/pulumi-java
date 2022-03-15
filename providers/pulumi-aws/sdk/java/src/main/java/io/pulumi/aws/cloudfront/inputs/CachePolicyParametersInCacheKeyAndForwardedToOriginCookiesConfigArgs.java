@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
      * Determines whether any cookies in viewer requests are included in the cache key and automatically included in requests that CloudFront sends to the origin. Valid values are `none`, `whitelist`, `allExcept`, `all`.
      * 
      */
-    @InputImport(name="cookieBehavior", required=true)
+    @Import(name="cookieBehavior", required=true)
       private final Output<String> cookieBehavior;
 
     public Output<String> getCookieBehavior() {
@@ -30,7 +30,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
      * Object that contains a list of cookie names. See Items for more information.
      * 
      */
-    @InputImport(name="cookies")
+    @Import(name="cookies")
       private final @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs> cookies;
 
     public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesArgs> getCookies() {

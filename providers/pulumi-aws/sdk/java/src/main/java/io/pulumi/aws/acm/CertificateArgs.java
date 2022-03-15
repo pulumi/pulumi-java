@@ -5,7 +5,7 @@ package io.pulumi.aws.acm;
 
 import io.pulumi.aws.acm.inputs.CertificateOptionsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of an ACM PCA
      * 
      */
-    @InputImport(name="certificateAuthorityArn")
+    @Import(name="certificateAuthorityArn")
       private final @Nullable Output<String> certificateAuthorityArn;
 
     public Output<String> getCertificateAuthorityArn() {
@@ -32,7 +32,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The certificate's PEM-formatted public key
      * 
      */
-    @InputImport(name="certificateBody")
+    @Import(name="certificateBody")
       private final @Nullable Output<String> certificateBody;
 
     public Output<String> getCertificateBody() {
@@ -44,7 +44,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * * Creating a private CA issued certificate
      * 
      */
-    @InputImport(name="certificateChain")
+    @Import(name="certificateChain")
       private final @Nullable Output<String> certificateChain;
 
     public Output<String> getCertificateChain() {
@@ -55,7 +55,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * A domain name for which the certificate should be issued
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -67,7 +67,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * * Importing an existing certificate
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<CertificateOptionsArgs> options;
 
     public Output<CertificateOptionsArgs> getOptions() {
@@ -78,7 +78,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The certificate's PEM-formatted private key
      * 
      */
-    @InputImport(name="privateKey")
+    @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
     public Output<String> getPrivateKey() {
@@ -89,7 +89,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Set of domains that should be SANs in the issued certificate. To remove all elements of a previously configured list, set this value equal to an empty list (`[]`).
      * 
      */
-    @InputImport(name="subjectAlternativeNames")
+    @Import(name="subjectAlternativeNames")
       private final @Nullable Output<List<String>> subjectAlternativeNames;
 
     public Output<List<String>> getSubjectAlternativeNames() {
@@ -100,7 +100,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource..
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -111,7 +111,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into the provider.
      * 
      */
-    @InputImport(name="validationMethod")
+    @Import(name="validationMethod")
       private final @Nullable Output<String> validationMethod;
 
     public Output<String> getValidationMethod() {

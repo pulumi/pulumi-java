@@ -3,25 +3,25 @@
 
 package io.pulumi.awsnative.resiliencehub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppPhysicalResourceId {
     private final @Nullable String awsAccountId;
     private final @Nullable String awsRegion;
     private final String identifier;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppPhysicalResourceId(
-        @OutputCustomType.Parameter("awsAccountId") @Nullable String awsAccountId,
-        @OutputCustomType.Parameter("awsRegion") @Nullable String awsRegion,
-        @OutputCustomType.Parameter("identifier") String identifier,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("awsAccountId") @Nullable String awsAccountId,
+        @CustomType.Parameter("awsRegion") @Nullable String awsRegion,
+        @CustomType.Parameter("identifier") String identifier,
+        @CustomType.Parameter("type") String type) {
         this.awsAccountId = awsAccountId;
         this.awsRegion = awsRegion;
         this.identifier = identifier;

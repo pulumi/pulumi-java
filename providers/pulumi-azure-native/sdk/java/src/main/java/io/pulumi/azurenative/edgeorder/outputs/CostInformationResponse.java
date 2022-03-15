@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.edgeorder.outputs;
 
 import io.pulumi.azurenative.edgeorder.outputs.BillingMeterDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CostInformationResponse {
     /**
      * Default url to display billing information
@@ -22,10 +22,10 @@ public final class CostInformationResponse {
      */
     private final List<BillingMeterDetailsResponse> billingMeterDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CostInformationResponse(
-        @OutputCustomType.Parameter("billingInfoUrl") String billingInfoUrl,
-        @OutputCustomType.Parameter("billingMeterDetails") List<BillingMeterDetailsResponse> billingMeterDetails) {
+        @CustomType.Parameter("billingInfoUrl") String billingInfoUrl,
+        @CustomType.Parameter("billingMeterDetails") List<BillingMeterDetailsResponse> billingMeterDetails) {
         this.billingInfoUrl = billingInfoUrl;
         this.billingMeterDetails = billingMeterDetails;
     }

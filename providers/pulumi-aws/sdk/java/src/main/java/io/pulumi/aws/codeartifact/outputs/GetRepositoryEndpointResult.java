@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.codeartifact.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRepositoryEndpointResult {
     private final String domain;
     private final String domainOwner;
@@ -24,14 +24,14 @@ public final class GetRepositoryEndpointResult {
      */
     private final String repositoryEndpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRepositoryEndpointResult(
-        @OutputCustomType.Parameter("domain") String domain,
-        @OutputCustomType.Parameter("domainOwner") String domainOwner,
-        @OutputCustomType.Parameter("format") String format,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("repository") String repository,
-        @OutputCustomType.Parameter("repositoryEndpoint") String repositoryEndpoint) {
+        @CustomType.Parameter("domain") String domain,
+        @CustomType.Parameter("domainOwner") String domainOwner,
+        @CustomType.Parameter("format") String format,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("repository") String repository,
+        @CustomType.Parameter("repositoryEndpoint") String repositoryEndpoint) {
         this.domain = domain;
         this.domainOwner = domainOwner;
         this.format = format;

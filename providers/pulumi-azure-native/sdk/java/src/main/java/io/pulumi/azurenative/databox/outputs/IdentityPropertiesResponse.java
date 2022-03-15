@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.databox.outputs;
 
 import io.pulumi.azurenative.databox.outputs.UserAssignedPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IdentityPropertiesResponse {
     /**
      * Managed service identity type.
@@ -23,10 +23,10 @@ public final class IdentityPropertiesResponse {
      */
     private final @Nullable UserAssignedPropertiesResponse userAssigned;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IdentityPropertiesResponse(
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("userAssigned") @Nullable UserAssignedPropertiesResponse userAssigned) {
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("userAssigned") @Nullable UserAssignedPropertiesResponse userAssigned) {
         this.type = type;
         this.userAssigned = userAssigned;
     }

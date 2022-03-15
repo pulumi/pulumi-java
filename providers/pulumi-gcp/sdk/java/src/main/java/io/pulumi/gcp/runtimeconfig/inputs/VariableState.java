@@ -4,7 +4,7 @@
 package io.pulumi.gcp.runtimeconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class VariableState extends io.pulumi.resources.ResourceArgs {
      * names can be hierarchical using slashes (e.g. "prod-variables/hostname").
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -31,7 +31,7 @@ public final class VariableState extends io.pulumi.resources.ResourceArgs {
      * variable.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -43,7 +43,7 @@ public final class VariableState extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -57,7 +57,7 @@ public final class VariableState extends io.pulumi.resources.ResourceArgs {
      * is specified, it must be base64 encoded and less than 4096 bytes in length.
      * 
      */
-    @InputImport(name="text")
+    @Import(name="text")
       private final @Nullable Output<String> text;
 
     public Output<String> getText() {
@@ -70,14 +70,14 @@ public final class VariableState extends io.pulumi.resources.ResourceArgs {
      * Example: "2016-10-09T12:33:37.578138407Z".
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
         return this.updateTime == null ? Output.empty() : this.updateTime;
     }
 
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

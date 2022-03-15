@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LabelingDatasetConfigurationResponse {
     /**
      * Name of the data asset to perform labeling.
@@ -28,11 +28,11 @@ public final class LabelingDatasetConfigurationResponse {
      */
     private final @Nullable Boolean enableIncrementalDatasetRefresh;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LabelingDatasetConfigurationResponse(
-        @OutputCustomType.Parameter("assetName") String assetName,
-        @OutputCustomType.Parameter("datasetVersion") String datasetVersion,
-        @OutputCustomType.Parameter("enableIncrementalDatasetRefresh") @Nullable Boolean enableIncrementalDatasetRefresh) {
+        @CustomType.Parameter("assetName") String assetName,
+        @CustomType.Parameter("datasetVersion") String datasetVersion,
+        @CustomType.Parameter("enableIncrementalDatasetRefresh") @Nullable Boolean enableIncrementalDatasetRefresh) {
         this.assetName = assetName;
         this.datasetVersion = datasetVersion;
         this.enableIncrementalDatasetRefresh = enableIncrementalDatasetRefresh;

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessReviewScopeResponse {
     /**
      * The role assignment state eligible/active to review
@@ -43,14 +43,14 @@ public final class AccessReviewScopeResponse {
      */
     private final String roleDefinitionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessReviewScopeResponse(
-        @OutputCustomType.Parameter("assignmentState") String assignmentState,
-        @OutputCustomType.Parameter("expandNestedMemberships") @Nullable Boolean expandNestedMemberships,
-        @OutputCustomType.Parameter("inactiveDuration") @Nullable String inactiveDuration,
-        @OutputCustomType.Parameter("principalType") String principalType,
-        @OutputCustomType.Parameter("resourceId") String resourceId,
-        @OutputCustomType.Parameter("roleDefinitionId") String roleDefinitionId) {
+        @CustomType.Parameter("assignmentState") String assignmentState,
+        @CustomType.Parameter("expandNestedMemberships") @Nullable Boolean expandNestedMemberships,
+        @CustomType.Parameter("inactiveDuration") @Nullable String inactiveDuration,
+        @CustomType.Parameter("principalType") String principalType,
+        @CustomType.Parameter("resourceId") String resourceId,
+        @CustomType.Parameter("roleDefinitionId") String roleDefinitionId) {
         this.assignmentState = assignmentState;
         this.expandNestedMemberships = expandNestedMemberships;
         this.inactiveDuration = inactiveDuration;

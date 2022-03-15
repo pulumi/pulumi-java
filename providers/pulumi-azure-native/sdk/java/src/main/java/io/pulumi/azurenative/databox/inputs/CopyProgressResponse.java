@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
      * Id of the account where the data needs to be uploaded.
      * 
      */
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final String accountId;
 
     public String getAccountId() {
@@ -33,7 +33,7 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
      * To indicate bytes transferred.
      * 
      */
-    @InputImport(name="bytesProcessed", required=true)
+    @Import(name="bytesProcessed", required=true)
       private final Double bytesProcessed;
 
     public Double getBytesProcessed() {
@@ -44,7 +44,7 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
      * Data Account Type.
      * 
      */
-    @InputImport(name="dataAccountType", required=true)
+    @Import(name="dataAccountType", required=true)
       private final String dataAccountType;
 
     public String getDataAccountType() {
@@ -55,7 +55,7 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
      * To indicate directories errored out in the job.
      * 
      */
-    @InputImport(name="directoriesErroredOut", required=true)
+    @Import(name="directoriesErroredOut", required=true)
       private final Double directoriesErroredOut;
 
     public Double getDirectoriesErroredOut() {
@@ -66,7 +66,7 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
      * Number of files which could not be copied
      * 
      */
-    @InputImport(name="filesErroredOut", required=true)
+    @Import(name="filesErroredOut", required=true)
       private final Double filesErroredOut;
 
     public Double getFilesErroredOut() {
@@ -77,7 +77,7 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
      * Number of files processed
      * 
      */
-    @InputImport(name="filesProcessed", required=true)
+    @Import(name="filesProcessed", required=true)
       private final Double filesProcessed;
 
     public Double getFilesProcessed() {
@@ -88,7 +88,7 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
      * To indicate directories renamed
      * 
      */
-    @InputImport(name="invalidDirectoriesProcessed", required=true)
+    @Import(name="invalidDirectoriesProcessed", required=true)
       private final Double invalidDirectoriesProcessed;
 
     public Double getInvalidDirectoriesProcessed() {
@@ -99,7 +99,7 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
      * Total amount of data not adhering to azure naming conventions which were processed by automatic renaming
      * 
      */
-    @InputImport(name="invalidFileBytesUploaded", required=true)
+    @Import(name="invalidFileBytesUploaded", required=true)
       private final Double invalidFileBytesUploaded;
 
     public Double getInvalidFileBytesUploaded() {
@@ -110,7 +110,7 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
      * Number of files not adhering to azure naming conventions which were processed by automatic renaming
      * 
      */
-    @InputImport(name="invalidFilesProcessed", required=true)
+    @Import(name="invalidFilesProcessed", required=true)
       private final Double invalidFilesProcessed;
 
     public Double getInvalidFilesProcessed() {
@@ -122,7 +122,7 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
      * Until this is true, the TotalBytesToProcess may not be valid.
      * 
      */
-    @InputImport(name="isEnumerationInProgress", required=true)
+    @Import(name="isEnumerationInProgress", required=true)
       private final Boolean isEnumerationInProgress;
 
     public Boolean getIsEnumerationInProgress() {
@@ -133,7 +133,7 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
      * Number of folders not adhering to azure naming conventions which were processed by automatic renaming
      * 
      */
-    @InputImport(name="renamedContainerCount", required=true)
+    @Import(name="renamedContainerCount", required=true)
       private final Double renamedContainerCount;
 
     public Double getRenamedContainerCount() {
@@ -144,7 +144,7 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the storage account. This will be empty for data account types other than storage account.
      * 
      */
-    @InputImport(name="storageAccountName", required=true)
+    @Import(name="storageAccountName", required=true)
       private final String storageAccountName;
 
     public String getStorageAccountName() {
@@ -155,7 +155,7 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
      * Total amount of data to be processed by the job.
      * 
      */
-    @InputImport(name="totalBytesToProcess", required=true)
+    @Import(name="totalBytesToProcess", required=true)
       private final Double totalBytesToProcess;
 
     public Double getTotalBytesToProcess() {
@@ -166,7 +166,7 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
      * Total files to process
      * 
      */
-    @InputImport(name="totalFilesToProcess", required=true)
+    @Import(name="totalFilesToProcess", required=true)
       private final Double totalFilesToProcess;
 
     public Double getTotalFilesToProcess() {
@@ -177,7 +177,7 @@ public final class CopyProgressResponse extends io.pulumi.resources.InvokeArgs {
      * Transfer type of data
      * 
      */
-    @InputImport(name="transferType", required=true)
+    @Import(name="transferType", required=true)
       private final String transferType;
 
     public String getTransferType() {

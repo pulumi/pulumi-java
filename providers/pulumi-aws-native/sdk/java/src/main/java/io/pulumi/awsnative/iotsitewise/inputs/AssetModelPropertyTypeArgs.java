@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iotsitewise.inputs.AssetModelAttributeArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelMetricArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelTransformArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,28 +21,28 @@ public final class AssetModelPropertyTypeArgs extends io.pulumi.resources.Resour
 
     public static final AssetModelPropertyTypeArgs Empty = new AssetModelPropertyTypeArgs();
 
-    @InputImport(name="attribute")
+    @Import(name="attribute")
       private final @Nullable Output<AssetModelAttributeArgs> attribute;
 
     public Output<AssetModelAttributeArgs> getAttribute() {
         return this.attribute == null ? Output.empty() : this.attribute;
     }
 
-    @InputImport(name="metric")
+    @Import(name="metric")
       private final @Nullable Output<AssetModelMetricArgs> metric;
 
     public Output<AssetModelMetricArgs> getMetric() {
         return this.metric == null ? Output.empty() : this.metric;
     }
 
-    @InputImport(name="transform")
+    @Import(name="transform")
       private final @Nullable Output<AssetModelTransformArgs> transform;
 
     public Output<AssetModelTransformArgs> getTransform() {
         return this.transform == null ? Output.empty() : this.transform;
     }
 
-    @InputImport(name="typeName", required=true)
+    @Import(name="typeName", required=true)
       private final Output<AssetModelTypeName> typeName;
 
     public Output<AssetModelTypeName> getTypeName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * Count of databases
      * 
      */
-    @InputImport(name="databaseCount", required=true)
+    @Import(name="databaseCount", required=true)
       private final Integer databaseCount;
 
     public Integer getDatabaseCount() {
@@ -28,7 +28,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * Number of database level errors
      * 
      */
-    @InputImport(name="databaseErrorCount", required=true)
+    @Import(name="databaseErrorCount", required=true)
       private final Integer databaseErrorCount;
 
     public Integer getDatabaseErrorCount() {
@@ -39,7 +39,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * Migration end time
      * 
      */
-    @InputImport(name="endedOn", required=true)
+    @Import(name="endedOn", required=true)
       private final String endedOn;
 
     public String getEndedOn() {
@@ -50,7 +50,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -62,7 +62,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * Expected value is 'MigrationLevelOutput'.
      * 
      */
-    @InputImport(name="resultType", required=true)
+    @Import(name="resultType", required=true)
       private final String resultType;
 
     public String getResultType() {
@@ -73,7 +73,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * Source server brand version
      * 
      */
-    @InputImport(name="sourceServerBrandVersion", required=true)
+    @Import(name="sourceServerBrandVersion", required=true)
       private final String sourceServerBrandVersion;
 
     public String getSourceServerBrandVersion() {
@@ -84,7 +84,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * Source server name
      * 
      */
-    @InputImport(name="sourceServerName", required=true)
+    @Import(name="sourceServerName", required=true)
       private final String sourceServerName;
 
     public String getSourceServerName() {
@@ -95,7 +95,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * Source server version
      * 
      */
-    @InputImport(name="sourceServerVersion", required=true)
+    @Import(name="sourceServerVersion", required=true)
       private final String sourceServerVersion;
 
     public String getSourceServerVersion() {
@@ -106,7 +106,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * Migration start time
      * 
      */
-    @InputImport(name="startedOn", required=true)
+    @Import(name="startedOn", required=true)
       private final String startedOn;
 
     public String getStartedOn() {
@@ -117,7 +117,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * Current state of migration
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -128,7 +128,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * Target server brand version
      * 
      */
-    @InputImport(name="targetServerBrandVersion", required=true)
+    @Import(name="targetServerBrandVersion", required=true)
       private final String targetServerBrandVersion;
 
     public String getTargetServerBrandVersion() {
@@ -139,7 +139,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * Target server name
      * 
      */
-    @InputImport(name="targetServerName", required=true)
+    @Import(name="targetServerName", required=true)
       private final String targetServerName;
 
     public String getTargetServerName() {
@@ -150,7 +150,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputMigrationLevelResponse ext
      * Target server version
      * 
      */
-    @InputImport(name="targetServerVersion", required=true)
+    @Import(name="targetServerVersion", required=true)
       private final String targetServerVersion;
 
     public String getTargetServerVersion() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.inputs;
 
 import io.pulumi.azurenative.labservices.inputs.SizeInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class EnvironmentSizeResponse extends io.pulumi.resources.InvokeArg
      * The pay-as-you-go dollar price per hour this size will cost. It does not include discounts and may not reflect the actual price the size will cost. This is the maximum price of all prices within this tier.
      * 
      */
-    @InputImport(name="maxPrice", required=true)
+    @Import(name="maxPrice", required=true)
       private final Double maxPrice;
 
     public Double getMaxPrice() {
@@ -37,7 +37,7 @@ public final class EnvironmentSizeResponse extends io.pulumi.resources.InvokeArg
      * The amount of memory available (in GB). This is the minimum amount of memory within this tier.
      * 
      */
-    @InputImport(name="minMemory", required=true)
+    @Import(name="minMemory", required=true)
       private final Double minMemory;
 
     public Double getMinMemory() {
@@ -48,7 +48,7 @@ public final class EnvironmentSizeResponse extends io.pulumi.resources.InvokeArg
      * The number of cores a VM of this size has. This is the minimum number of cores within this tier.
      * 
      */
-    @InputImport(name="minNumberOfCores", required=true)
+    @Import(name="minNumberOfCores", required=true)
       private final Integer minNumberOfCores;
 
     public Integer getMinNumberOfCores() {
@@ -59,7 +59,7 @@ public final class EnvironmentSizeResponse extends io.pulumi.resources.InvokeArg
      * The size category
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -70,7 +70,7 @@ public final class EnvironmentSizeResponse extends io.pulumi.resources.InvokeArg
      * Represents a set of compute sizes that can serve this given size type
      * 
      */
-    @InputImport(name="vmSizes")
+    @Import(name="vmSizes")
       private final @Nullable List<SizeInfoResponse> vmSizes;
 
     public List<SizeInfoResponse> getVmSizes() {

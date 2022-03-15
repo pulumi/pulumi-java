@@ -8,7 +8,7 @@ import io.pulumi.aws.wafregional.SqlInjectionMatchSetArgs;
 import io.pulumi.aws.wafregional.inputs.SqlInjectionMatchSetState;
 import io.pulumi.aws.wafregional.outputs.SqlInjectionMatchSetSqlInjectionMatchTuple;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class SqlInjectionMatchSet extends io.pulumi.resources.CustomResource {
      * The name or description of the SizeConstraintSet.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -48,7 +48,7 @@ public class SqlInjectionMatchSet extends io.pulumi.resources.CustomResource {
      * The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.
      * 
      */
-    @OutputExport(name="sqlInjectionMatchTuples", type=List.class, parameters={SqlInjectionMatchSetSqlInjectionMatchTuple.class})
+    @Export(name="sqlInjectionMatchTuples", type=List.class, parameters={SqlInjectionMatchSetSqlInjectionMatchTuple.class})
     private Output</* @Nullable */ List<SqlInjectionMatchSetSqlInjectionMatchTuple>> sqlInjectionMatchTuples;
 
     /**

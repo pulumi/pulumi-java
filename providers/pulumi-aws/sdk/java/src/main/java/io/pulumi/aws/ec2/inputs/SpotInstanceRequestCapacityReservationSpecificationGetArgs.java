@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SpotInstanceRequestCapacityReservationSpecificationGetArgs ex
      * Indicates the instance's Capacity Reservation preferences. Can be `"open"` or `"none"`. (Default: `"open"`).
      * 
      */
-    @InputImport(name="capacityReservationPreference")
+    @Import(name="capacityReservationPreference")
       private final @Nullable Output<String> capacityReservationPreference;
 
     public Output<String> getCapacityReservationPreference() {
@@ -30,7 +30,7 @@ public final class SpotInstanceRequestCapacityReservationSpecificationGetArgs ex
      * Information about the target Capacity Reservation. See Capacity Reservation Target below for more details.
      * 
      */
-    @InputImport(name="capacityReservationTarget")
+    @Import(name="capacityReservationTarget")
       private final @Nullable Output<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs> capacityReservationTarget;
 
     public Output<SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTargetGetArgs> getCapacityReservationTarget() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterSnapshotCopyArgs extends io.pulumi.resources.ResourceA
      * The destination region that you want to copy snapshots to.
      * 
      */
-    @InputImport(name="destinationRegion", required=true)
+    @Import(name="destinationRegion", required=true)
       private final Output<String> destinationRegion;
 
     public Output<String> getDestinationRegion() {
@@ -30,7 +30,7 @@ public final class ClusterSnapshotCopyArgs extends io.pulumi.resources.ResourceA
      * The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.
      * 
      */
-    @InputImport(name="grantName")
+    @Import(name="grantName")
       private final @Nullable Output<String> grantName;
 
     public Output<String> getGrantName() {
@@ -41,7 +41,7 @@ public final class ClusterSnapshotCopyArgs extends io.pulumi.resources.ResourceA
      * The number of days to retain automated snapshots in the destination region after they are copied from the source region. Defaults to `7`.
      * 
      */
-    @InputImport(name="retentionPeriod")
+    @Import(name="retentionPeriod")
       private final @Nullable Output<Integer> retentionPeriod;
 
     public Output<Integer> getRetentionPeriod() {

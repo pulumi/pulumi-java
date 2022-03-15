@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__BuiltInAlgorithmOutputResponse;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__HyperparameterOutputResponse;
 import java.lang.Boolean;
@@ -26,7 +26,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
      * Details related to built-in algorithms jobs. Only set for built-in algorithms jobs.
      * 
      */
-    @InputImport(name="builtInAlgorithmOutput", required=true)
+    @Import(name="builtInAlgorithmOutput", required=true)
       private final GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput;
 
     public GoogleCloudMlV1__BuiltInAlgorithmOutputResponse getBuiltInAlgorithmOutput() {
@@ -37,7 +37,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
      * The number of hyperparameter tuning trials that completed successfully. Only set for hyperparameter tuning jobs.
      * 
      */
-    @InputImport(name="completedTrialCount", required=true)
+    @Import(name="completedTrialCount", required=true)
       private final String completedTrialCount;
 
     public String getCompletedTrialCount() {
@@ -48,7 +48,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
      * The amount of ML units consumed by the job.
      * 
      */
-    @InputImport(name="consumedMLUnits", required=true)
+    @Import(name="consumedMLUnits", required=true)
       private final Double consumedMLUnits;
 
     public Double getConsumedMLUnits() {
@@ -59,7 +59,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
      * The TensorFlow summary tag name used for optimizing hyperparameter tuning trials. See [`HyperparameterSpec.hyperparameterMetricTag`](#HyperparameterSpec.FIELDS.hyperparameter_metric_tag) for more information. Only set for hyperparameter tuning jobs.
      * 
      */
-    @InputImport(name="hyperparameterMetricTag", required=true)
+    @Import(name="hyperparameterMetricTag", required=true)
       private final String hyperparameterMetricTag;
 
     public String getHyperparameterMetricTag() {
@@ -70,7 +70,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
      * Whether this job is a built-in Algorithm job.
      * 
      */
-    @InputImport(name="isBuiltInAlgorithmJob", required=true)
+    @Import(name="isBuiltInAlgorithmJob", required=true)
       private final Boolean isBuiltInAlgorithmJob;
 
     public Boolean getIsBuiltInAlgorithmJob() {
@@ -81,7 +81,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
      * Whether this job is a hyperparameter tuning job.
      * 
      */
-    @InputImport(name="isHyperparameterTuningJob", required=true)
+    @Import(name="isHyperparameterTuningJob", required=true)
       private final Boolean isHyperparameterTuningJob;
 
     public Boolean getIsHyperparameterTuningJob() {
@@ -92,7 +92,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
      * Results for individual Hyperparameter trials. Only set for hyperparameter tuning jobs.
      * 
      */
-    @InputImport(name="trials", required=true)
+    @Import(name="trials", required=true)
       private final List<GoogleCloudMlV1__HyperparameterOutputResponse> trials;
 
     public List<GoogleCloudMlV1__HyperparameterOutputResponse> getTrials() {
@@ -103,7 +103,7 @@ public final class GoogleCloudMlV1__TrainingOutputResponse extends io.pulumi.res
      * URIs for accessing [interactive shells](https://cloud.google.com/ai-platform/training/docs/monitor-debug-interactive-shell) (one URI for each training node). Only available if training_input.enable_web_access is `true`. The keys are names of each node in the training job; for example, `master-replica-0` for the master node, `worker-replica-0` for the first worker, and `ps-replica-0` for the first parameter server. The values are the URIs for each node's interactive shell.
      * 
      */
-    @InputImport(name="webAccessUris", required=true)
+    @Import(name="webAccessUris", required=true)
       private final Map<String,String> webAccessUris;
 
     public Map<String,String> getWebAccessUris() {

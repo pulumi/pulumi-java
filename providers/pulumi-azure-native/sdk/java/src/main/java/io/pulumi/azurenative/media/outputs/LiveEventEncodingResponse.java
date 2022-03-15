@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LiveEventEncodingResponse {
     /**
      * Live event type. When encodingType is set to None, the service simply passes through the incoming video and audio layer(s) to the output. When encodingType is set to Standard or Premium1080p, a live encoder transcodes the incoming stream into multiple bitrates or layers. See https://go.microsoft.com/fwlink/?linkid=2095101 for more information. This property cannot be modified after the live event is created.
@@ -32,12 +32,12 @@ public final class LiveEventEncodingResponse {
      */
     private final @Nullable String stretchMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LiveEventEncodingResponse(
-        @OutputCustomType.Parameter("encodingType") @Nullable String encodingType,
-        @OutputCustomType.Parameter("keyFrameInterval") @Nullable String keyFrameInterval,
-        @OutputCustomType.Parameter("presetName") @Nullable String presetName,
-        @OutputCustomType.Parameter("stretchMode") @Nullable String stretchMode) {
+        @CustomType.Parameter("encodingType") @Nullable String encodingType,
+        @CustomType.Parameter("keyFrameInterval") @Nullable String keyFrameInterval,
+        @CustomType.Parameter("presetName") @Nullable String presetName,
+        @CustomType.Parameter("stretchMode") @Nullable String stretchMode) {
         this.encodingType = encodingType;
         this.keyFrameInterval = keyFrameInterval;
         this.presetName = presetName;

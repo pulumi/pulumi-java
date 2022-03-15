@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.servicediscovery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceDnsConfigDnsRecord {
     /**
      * The amount of time, in seconds, that you want DNS resolvers to cache the settings for this resource record set.
@@ -21,10 +21,10 @@ public final class ServiceDnsConfigDnsRecord {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceDnsConfigDnsRecord(
-        @OutputCustomType.Parameter("ttl") Integer ttl,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("ttl") Integer ttl,
+        @CustomType.Parameter("type") String type) {
         this.ttl = ttl;
         this.type = type;
     }

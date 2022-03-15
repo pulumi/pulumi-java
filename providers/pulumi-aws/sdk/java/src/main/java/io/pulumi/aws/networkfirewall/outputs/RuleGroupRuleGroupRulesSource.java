@@ -6,14 +6,14 @@ package io.pulumi.aws.networkfirewall.outputs;
 import io.pulumi.aws.networkfirewall.outputs.RuleGroupRuleGroupRulesSourceRulesSourceList;
 import io.pulumi.aws.networkfirewall.outputs.RuleGroupRuleGroupRulesSourceStatefulRule;
 import io.pulumi.aws.networkfirewall.outputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleGroupRulesSource {
     /**
      * A configuration block containing **stateful** inspection criteria for a domain list rule group. See Rules Source List below for details.
@@ -36,12 +36,12 @@ public final class RuleGroupRuleGroupRulesSource {
      */
     private final @Nullable RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions statelessRulesAndCustomActions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleGroupRulesSource(
-        @OutputCustomType.Parameter("rulesSourceList") @Nullable RuleGroupRuleGroupRulesSourceRulesSourceList rulesSourceList,
-        @OutputCustomType.Parameter("rulesString") @Nullable String rulesString,
-        @OutputCustomType.Parameter("statefulRules") @Nullable List<RuleGroupRuleGroupRulesSourceStatefulRule> statefulRules,
-        @OutputCustomType.Parameter("statelessRulesAndCustomActions") @Nullable RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions statelessRulesAndCustomActions) {
+        @CustomType.Parameter("rulesSourceList") @Nullable RuleGroupRuleGroupRulesSourceRulesSourceList rulesSourceList,
+        @CustomType.Parameter("rulesString") @Nullable String rulesString,
+        @CustomType.Parameter("statefulRules") @Nullable List<RuleGroupRuleGroupRulesSourceStatefulRule> statefulRules,
+        @CustomType.Parameter("statelessRulesAndCustomActions") @Nullable RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions statelessRulesAndCustomActions) {
         this.rulesSourceList = rulesSourceList;
         this.rulesString = rulesString;
         this.statefulRules = statefulRules;

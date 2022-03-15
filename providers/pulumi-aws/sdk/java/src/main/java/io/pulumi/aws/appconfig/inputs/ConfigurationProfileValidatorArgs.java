@@ -4,7 +4,7 @@
 package io.pulumi.aws.appconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ConfigurationProfileValidatorArgs extends io.pulumi.resources
      * Either the JSON Schema content or the Amazon Resource Name (ARN) of an AWS Lambda function.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
@@ -29,7 +29,7 @@ public final class ConfigurationProfileValidatorArgs extends io.pulumi.resources
      * The type of validator. Valid values: `JSON_SCHEMA` and `LAMBDA`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

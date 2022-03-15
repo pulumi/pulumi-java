@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicelinker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends io.pulumi.res
      * Expected value is 'servicePrincipalCertificate'.
      * 
      */
-    @InputImport(name="authType", required=true)
+    @Import(name="authType", required=true)
       private final Output<String> authType;
 
     public Output<String> getAuthType() {
@@ -33,7 +33,7 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends io.pulumi.res
      * ServicePrincipal certificate for servicePrincipal auth.
      * 
      */
-    @InputImport(name="certificate", required=true)
+    @Import(name="certificate", required=true)
       private final Output<String> certificate;
 
     public Output<String> getCertificate() {
@@ -44,7 +44,7 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends io.pulumi.res
      * Application clientId for servicePrincipal auth.
      * 
      */
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -55,7 +55,7 @@ public final class ServicePrincipalCertificateAuthInfoArgs extends io.pulumi.res
      * Principal Id for servicePrincipal auth.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
     public Output<String> getPrincipalId() {

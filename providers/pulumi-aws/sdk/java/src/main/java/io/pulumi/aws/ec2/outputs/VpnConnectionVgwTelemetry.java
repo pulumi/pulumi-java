@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VpnConnectionVgwTelemetry {
     /**
      * The number of accepted routes.
@@ -43,14 +43,14 @@ public final class VpnConnectionVgwTelemetry {
      */
     private final @Nullable String statusMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpnConnectionVgwTelemetry(
-        @OutputCustomType.Parameter("acceptedRouteCount") @Nullable Integer acceptedRouteCount,
-        @OutputCustomType.Parameter("certificateArn") @Nullable String certificateArn,
-        @OutputCustomType.Parameter("lastStatusChange") @Nullable String lastStatusChange,
-        @OutputCustomType.Parameter("outsideIpAddress") @Nullable String outsideIpAddress,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("statusMessage") @Nullable String statusMessage) {
+        @CustomType.Parameter("acceptedRouteCount") @Nullable Integer acceptedRouteCount,
+        @CustomType.Parameter("certificateArn") @Nullable String certificateArn,
+        @CustomType.Parameter("lastStatusChange") @Nullable String lastStatusChange,
+        @CustomType.Parameter("outsideIpAddress") @Nullable String outsideIpAddress,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("statusMessage") @Nullable String statusMessage) {
         this.acceptedRouteCount = acceptedRouteCount;
         this.certificateArn = certificateArn;
         this.lastStatusChange = lastStatusChange;

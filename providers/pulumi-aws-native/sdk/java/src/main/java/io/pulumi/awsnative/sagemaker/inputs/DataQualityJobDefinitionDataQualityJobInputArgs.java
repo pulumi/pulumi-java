@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionEndpointInputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class DataQualityJobDefinitionDataQualityJobInputArgs extends io.pu
 
     public static final DataQualityJobDefinitionDataQualityJobInputArgs Empty = new DataQualityJobDefinitionDataQualityJobInputArgs();
 
-    @InputImport(name="endpointInput", required=true)
+    @Import(name="endpointInput", required=true)
       private final Output<DataQualityJobDefinitionEndpointInputArgs> endpointInput;
 
     public Output<DataQualityJobDefinitionEndpointInputArgs> getEndpointInput() {

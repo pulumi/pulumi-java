@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.WebAppSourceControlArgs;
 import io.pulumi.azurenative.web.outputs.GitHubActionConfigurationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class WebAppSourceControl extends io.pulumi.resources.CustomResource {
      * Name of branch to use for deployment.
      * 
      */
-    @OutputExport(name="branch", type=String.class, parameters={})
+    @Export(name="branch", type=String.class, parameters={})
     private Output</* @Nullable */ String> branch;
 
     /**
@@ -47,7 +47,7 @@ public class WebAppSourceControl extends io.pulumi.resources.CustomResource {
      * <code>true</code> to enable deployment rollback; otherwise, <code>false</code>.
      * 
      */
-    @OutputExport(name="deploymentRollbackEnabled", type=Boolean.class, parameters={})
+    @Export(name="deploymentRollbackEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deploymentRollbackEnabled;
 
     /**
@@ -61,7 +61,7 @@ public class WebAppSourceControl extends io.pulumi.resources.CustomResource {
      * If GitHub Action is selected, than the associated configuration.
      * 
      */
-    @OutputExport(name="gitHubActionConfiguration", type=GitHubActionConfigurationResponse.class, parameters={})
+    @Export(name="gitHubActionConfiguration", type=GitHubActionConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ GitHubActionConfigurationResponse> gitHubActionConfiguration;
 
     /**
@@ -75,7 +75,7 @@ public class WebAppSourceControl extends io.pulumi.resources.CustomResource {
      * <code>true</code> if this is deployed via GitHub action.
      * 
      */
-    @OutputExport(name="isGitHubAction", type=Boolean.class, parameters={})
+    @Export(name="isGitHubAction", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isGitHubAction;
 
     /**
@@ -89,7 +89,7 @@ public class WebAppSourceControl extends io.pulumi.resources.CustomResource {
      * <code>true</code> to limit to manual integration; <code>false</code> to enable continuous integration (which configures webhooks into online repos like GitHub).
      * 
      */
-    @OutputExport(name="isManualIntegration", type=Boolean.class, parameters={})
+    @Export(name="isManualIntegration", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isManualIntegration;
 
     /**
@@ -103,7 +103,7 @@ public class WebAppSourceControl extends io.pulumi.resources.CustomResource {
      * <code>true</code> for a Mercurial repository; <code>false</code> for a Git repository.
      * 
      */
-    @OutputExport(name="isMercurial", type=Boolean.class, parameters={})
+    @Export(name="isMercurial", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isMercurial;
 
     /**
@@ -117,7 +117,7 @@ public class WebAppSourceControl extends io.pulumi.resources.CustomResource {
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -131,7 +131,7 @@ public class WebAppSourceControl extends io.pulumi.resources.CustomResource {
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -145,7 +145,7 @@ public class WebAppSourceControl extends io.pulumi.resources.CustomResource {
      * Repository or source control URL.
      * 
      */
-    @OutputExport(name="repoUrl", type=String.class, parameters={})
+    @Export(name="repoUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> repoUrl;
 
     /**
@@ -159,7 +159,7 @@ public class WebAppSourceControl extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.aws.memorydb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * Description for the cluster.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * Version number of the Redis engine used by the cluster.
      * 
      */
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
@@ -41,7 +41,7 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * The weekly time range during which maintenance on the cluster is performed.
      * 
      */
-    @InputImport(name="maintenanceWindow")
+    @Import(name="maintenanceWindow")
       private final @Nullable Output<String> maintenanceWindow;
 
     public Output<String> getMaintenanceWindow() {
@@ -52,7 +52,7 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * Name of the cluster.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -63,7 +63,7 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * Compute and memory capacity of the nodes in the cluster.
      * 
      */
-    @InputImport(name="nodeType")
+    @Import(name="nodeType")
       private final @Nullable Output<String> nodeType;
 
     public Output<String> getNodeType() {
@@ -74,7 +74,7 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * Number of shards in the cluster.
      * 
      */
-    @InputImport(name="numShards")
+    @Import(name="numShards")
       private final @Nullable Output<Integer> numShards;
 
     public Output<Integer> getNumShards() {
@@ -85,7 +85,7 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * Name of the parameter group associated with the cluster.
      * 
      */
-    @InputImport(name="parameterGroupName")
+    @Import(name="parameterGroupName")
       private final @Nullable Output<String> parameterGroupName;
 
     public Output<String> getParameterGroupName() {
@@ -96,7 +96,7 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * Port number on which the cluster accepts connections.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -107,7 +107,7 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * Number of days for which MemoryDB retains automatic snapshots before deleting them.
      * 
      */
-    @InputImport(name="snapshotRetentionLimit")
+    @Import(name="snapshotRetentionLimit")
       private final @Nullable Output<Integer> snapshotRetentionLimit;
 
     public Output<Integer> getSnapshotRetentionLimit() {
@@ -118,7 +118,7 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * The daily time range (in UTC) during which MemoryDB begins taking a daily snapshot of the shard.
      * 
      */
-    @InputImport(name="snapshotWindow")
+    @Import(name="snapshotWindow")
       private final @Nullable Output<String> snapshotWindow;
 
     public Output<String> getSnapshotWindow() {
@@ -129,7 +129,7 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * Name of the subnet group used by the cluster.
      * 
      */
-    @InputImport(name="subnetGroupName")
+    @Import(name="subnetGroupName")
       private final @Nullable Output<String> subnetGroupName;
 
     public Output<String> getSubnetGroupName() {
@@ -140,7 +140,7 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * ARN of the SNS topic to which cluster notifications are sent.
      * 
      */
-    @InputImport(name="topicArn")
+    @Import(name="topicArn")
       private final @Nullable Output<String> topicArn;
 
     public Output<String> getTopicArn() {
@@ -151,7 +151,7 @@ public final class SnapshotClusterConfigurationArgs extends io.pulumi.resources.
      * The VPC in which the cluster exists.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

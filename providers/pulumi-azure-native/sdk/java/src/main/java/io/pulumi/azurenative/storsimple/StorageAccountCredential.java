@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storsimple.StorageAccountCredentialArgs;
 import io.pulumi.azurenative.storsimple.outputs.AsymmetricEncryptedSecretResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * The details of the storage account password.
      * 
      */
-    @OutputExport(name="accessKey", type=AsymmetricEncryptedSecretResponse.class, parameters={})
+    @Export(name="accessKey", type=AsymmetricEncryptedSecretResponse.class, parameters={})
     private Output</* @Nullable */ AsymmetricEncryptedSecretResponse> accessKey;
 
     /**
@@ -50,7 +50,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * The storage endpoint
      * 
      */
-    @OutputExport(name="endPoint", type=String.class, parameters={})
+    @Export(name="endPoint", type=String.class, parameters={})
     private Output<String> endPoint;
 
     /**
@@ -64,7 +64,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -78,7 +78,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * The name of the object.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * Signifies whether SSL needs to be enabled or not.
      * 
      */
-    @OutputExport(name="sslStatus", type=String.class, parameters={})
+    @Export(name="sslStatus", type=String.class, parameters={})
     private Output<String> sslStatus;
 
     /**
@@ -106,7 +106,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -120,7 +120,7 @@ public class StorageAccountCredential extends io.pulumi.resources.CustomResource
      * The count of volumes using this storage account credential.
      * 
      */
-    @OutputExport(name="volumesCount", type=Integer.class, parameters={})
+    @Export(name="volumesCount", type=Integer.class, parameters={})
     private Output<Integer> volumesCount;
 
     /**

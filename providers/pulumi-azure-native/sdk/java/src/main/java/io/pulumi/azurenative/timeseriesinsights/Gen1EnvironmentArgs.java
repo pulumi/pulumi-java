@@ -8,7 +8,7 @@ import io.pulumi.azurenative.timeseriesinsights.inputs.SkuArgs;
 import io.pulumi.azurenative.timeseriesinsights.inputs.TimeSeriesIdPropertyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * ISO8601 timespan specifying the minimum number of days the environment's events will be available for query.
      * 
      */
-    @InputImport(name="dataRetentionTime", required=true)
+    @Import(name="dataRetentionTime", required=true)
       private final Output<String> dataRetentionTime;
 
     public Output<String> getDataRetentionTime() {
@@ -35,7 +35,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the environment
      * 
      */
-    @InputImport(name="environmentName")
+    @Import(name="environmentName")
       private final @Nullable Output<String> environmentName;
 
     public Output<String> getEnvironmentName() {
@@ -47,7 +47,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * Expected value is 'Gen1'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -58,7 +58,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -69,7 +69,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * The list of event properties which will be used to partition data in the environment. Currently, only a single partition key property is supported.
      * 
      */
-    @InputImport(name="partitionKeyProperties")
+    @Import(name="partitionKeyProperties")
       private final @Nullable Output<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties;
 
     public Output<List<TimeSeriesIdPropertyArgs>> getPartitionKeyProperties() {
@@ -80,7 +80,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -91,7 +91,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -102,7 +102,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * The behavior the Time Series Insights service should take when the environment's capacity has been exceeded. If "PauseIngress" is specified, new events will not be read from the event source. If "PurgeOldData" is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
      * 
      */
-    @InputImport(name="storageLimitExceededBehavior")
+    @Import(name="storageLimitExceededBehavior")
       private final @Nullable Output<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior;
 
     public Output<Either<String,StorageLimitExceededBehavior>> getStorageLimitExceededBehavior() {
@@ -113,7 +113,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * Key-value pairs of additional properties for the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

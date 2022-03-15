@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.MediaGraphPemCertificateListResponse;
 import io.pulumi.azurenative.media.inputs.MediaGraphTlsValidationOptionsResponse;
 import io.pulumi.azurenative.media.inputs.MediaGraphUsernamePasswordCredentialsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class MediaGraphTlsEndpointResponse extends io.pulumi.resources.Inv
      * Polymorphic credentials to present to the endpoint.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
 
     public Optional<MediaGraphUsernamePasswordCredentialsResponse> getCredentials() {
@@ -37,7 +37,7 @@ public final class MediaGraphTlsEndpointResponse extends io.pulumi.resources.Inv
      * Expected value is '#Microsoft.Media.MediaGraphTlsEndpoint'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -48,7 +48,7 @@ public final class MediaGraphTlsEndpointResponse extends io.pulumi.resources.Inv
      * What certificates should be trusted when authenticating a TLS connection. Null designates that Azure Media's source of trust should be used.
      * 
      */
-    @InputImport(name="trustedCertificates")
+    @Import(name="trustedCertificates")
       private final @Nullable MediaGraphPemCertificateListResponse trustedCertificates;
 
     public Optional<MediaGraphPemCertificateListResponse> getTrustedCertificates() {
@@ -59,7 +59,7 @@ public final class MediaGraphTlsEndpointResponse extends io.pulumi.resources.Inv
      * Url for the endpoint.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {
@@ -70,7 +70,7 @@ public final class MediaGraphTlsEndpointResponse extends io.pulumi.resources.Inv
      * Validation options to use when authenticating a TLS connection. By default, strict validation is used.
      * 
      */
-    @InputImport(name="validationOptions")
+    @Import(name="validationOptions")
       private final @Nullable MediaGraphTlsValidationOptionsResponse validationOptions;
 
     public Optional<MediaGraphTlsValidationOptionsResponse> getValidationOptions() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataflow_v1b3.enums.ExecutionStageStateExecutionStageState;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
      * The time at which the stage transitioned to this state.
      * 
      */
-    @InputImport(name="currentStateTime")
+    @Import(name="currentStateTime")
       private final @Nullable Output<String> currentStateTime;
 
     public Output<String> getCurrentStateTime() {
@@ -34,7 +34,7 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
      * The name of the execution stage.
      * 
      */
-    @InputImport(name="executionStageName")
+    @Import(name="executionStageName")
       private final @Nullable Output<String> executionStageName;
 
     public Output<String> getExecutionStageName() {
@@ -45,7 +45,7 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
      * Executions stage states allow the same set of values as JobState.
      * 
      */
-    @InputImport(name="executionStageState")
+    @Import(name="executionStageState")
       private final @Nullable Output<ExecutionStageStateExecutionStageState> executionStageState;
 
     public Output<ExecutionStageStateExecutionStageState> getExecutionStageState() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devops.inputs;
 import io.pulumi.azurenative.devops.enums.AuthorizationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * Type of authorization.
      * 
      */
-    @InputImport(name="authorizationType", required=true)
+    @Import(name="authorizationType", required=true)
       private final Output<Either<String,AuthorizationType>> authorizationType;
 
     public Output<Either<String,AuthorizationType>> getAuthorizationType() {
@@ -36,7 +36,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * Authorization parameters corresponding to the authorization type.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {

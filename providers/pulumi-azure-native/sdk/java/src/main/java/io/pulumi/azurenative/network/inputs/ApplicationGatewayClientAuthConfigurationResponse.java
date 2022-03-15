@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ApplicationGatewayClientAuthConfigurationResponse extends io.
      * Verify client certificate issuer name on the application gateway.
      * 
      */
-    @InputImport(name="verifyClientCertIssuerDN")
+    @Import(name="verifyClientCertIssuerDN")
       private final @Nullable Boolean verifyClientCertIssuerDN;
 
     public Optional<Boolean> getVerifyClientCertIssuerDN() {

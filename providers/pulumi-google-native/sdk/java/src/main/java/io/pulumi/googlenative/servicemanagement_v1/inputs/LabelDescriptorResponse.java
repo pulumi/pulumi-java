@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class LabelDescriptorResponse extends io.pulumi.resources.InvokeArg
      * A human-readable description for the label.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -31,7 +31,7 @@ public final class LabelDescriptorResponse extends io.pulumi.resources.InvokeArg
      * The label key.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -42,7 +42,7 @@ public final class LabelDescriptorResponse extends io.pulumi.resources.InvokeArg
      * The type of data that can be assigned to the label.
      * 
      */
-    @InputImport(name="valueType", required=true)
+    @Import(name="valueType", required=true)
       private final String valueType;
 
     public String getValueType() {

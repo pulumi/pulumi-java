@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.MetricCounterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class MetricCounterSetArgs extends io.pulumi.resources.ResourceArgs
      * The counters that should be collected in this set.
      * 
      */
-    @InputImport(name="counters", required=true)
+    @Import(name="counters", required=true)
       private final Output<List<MetricCounterArgs>> counters;
 
     public Output<List<MetricCounterArgs>> getCounters() {

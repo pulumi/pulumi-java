@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1.inputs.ContainerPortResponse;
 import io.pulumi.googlenative.run_v1.inputs.EnvFromSourceResponse;
 import io.pulumi.googlenative.run_v1.inputs.EnvVarResponse;
@@ -28,14 +28,14 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * (Optional) Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell
      * 
      */
-    @InputImport(name="args", required=true)
+    @Import(name="args", required=true)
       private final List<String> args;
 
     public List<String> getArgs() {
         return this.args;
     }
 
-    @InputImport(name="command", required=true)
+    @Import(name="command", required=true)
       private final List<String> command;
 
     public List<String> getCommand() {
@@ -46,7 +46,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * (Optional) List of environment variables to set in the container.
      * 
      */
-    @InputImport(name="env", required=true)
+    @Import(name="env", required=true)
       private final List<EnvVarResponse> env;
 
     public List<EnvVarResponse> getEnv() {
@@ -57,7 +57,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * (Optional) List of sources to populate environment variables in the container. The keys defined within a source must be a C_IDENTIFIER. All invalid keys will be reported as an event when the container is starting. When a key exists in multiple sources, the value associated with the last source will take precedence. Values defined by an Env with a duplicate key will take precedence. Cannot be updated.
      * 
      */
-    @InputImport(name="envFrom", required=true)
+    @Import(name="envFrom", required=true)
       private final List<EnvFromSourceResponse> envFrom;
 
     public List<EnvFromSourceResponse> getEnvFrom() {
@@ -68,7 +68,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * Only supports containers from Google Container Registry or Artifact Registry URL of the Container image. More info: https://kubernetes.io/docs/concepts/containers/images
      * 
      */
-    @InputImport(name="image", required=true)
+    @Import(name="image", required=true)
       private final String image;
 
     public String getImage() {
@@ -79,7 +79,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * (Optional) Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images
      * 
      */
-    @InputImport(name="imagePullPolicy", required=true)
+    @Import(name="imagePullPolicy", required=true)
       private final String imagePullPolicy;
 
     public String getImagePullPolicy() {
@@ -90,7 +90,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * (Optional) Periodic probe of container liveness. Container will be restarted if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * 
      */
-    @InputImport(name="livenessProbe", required=true)
+    @Import(name="livenessProbe", required=true)
       private final ProbeResponse livenessProbe;
 
     public ProbeResponse getLivenessProbe() {
@@ -101,7 +101,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * (Optional) Name of the container specified as a DNS_LABEL. Currently unused in Cloud Run. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#dns-label-names
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -112,7 +112,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * (Optional) List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible. If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.
      * 
      */
-    @InputImport(name="ports", required=true)
+    @Import(name="ports", required=true)
       private final List<ContainerPortResponse> ports;
 
     public List<ContainerPortResponse> getPorts() {
@@ -123,7 +123,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * (Optional) Periodic probe of container service readiness. Container will be removed from service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * 
      */
-    @InputImport(name="readinessProbe", required=true)
+    @Import(name="readinessProbe", required=true)
       private final ProbeResponse readinessProbe;
 
     public ProbeResponse getReadinessProbe() {
@@ -134,7 +134,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * (Optional) Compute Resources required by this container. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#resources
      * 
      */
-    @InputImport(name="resources", required=true)
+    @Import(name="resources", required=true)
       private final ResourceRequirementsResponse resources;
 
     public ResourceRequirementsResponse getResources() {
@@ -145,7 +145,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * (Optional) Security options the pod should run with. More info: https://kubernetes.io/docs/concepts/policy/security-context/ More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
      * 
      */
-    @InputImport(name="securityContext", required=true)
+    @Import(name="securityContext", required=true)
       private final SecurityContextResponse securityContext;
 
     public SecurityContextResponse getSecurityContext() {
@@ -156,7 +156,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * (Optional) Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
      * 
      */
-    @InputImport(name="startupProbe", required=true)
+    @Import(name="startupProbe", required=true)
       private final ProbeResponse startupProbe;
 
     public ProbeResponse getStartupProbe() {
@@ -167,7 +167,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * (Optional) Path at which the file to which the container's termination message will be written is mounted into the container's filesystem. Message written is intended to be brief final status, such as an assertion failure message. Will be truncated by the node if greater than 4096 bytes. The total message length across all containers will be limited to 12kb. Defaults to /dev/termination-log.
      * 
      */
-    @InputImport(name="terminationMessagePath", required=true)
+    @Import(name="terminationMessagePath", required=true)
       private final String terminationMessagePath;
 
     public String getTerminationMessagePath() {
@@ -178,7 +178,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * (Optional) Indicate how the termination message should be populated. File will use the contents of terminationMessagePath to populate the container status message on both success and failure. FallbackToLogsOnError will use the last chunk of container log output if the termination message file is empty and the container exited with an error. The log output is limited to 2048 bytes or 80 lines, whichever is smaller. Defaults to File. Cannot be updated.
      * 
      */
-    @InputImport(name="terminationMessagePolicy", required=true)
+    @Import(name="terminationMessagePolicy", required=true)
       private final String terminationMessagePolicy;
 
     public String getTerminationMessagePolicy() {
@@ -189,7 +189,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * (Optional) Volume to mount into the container's filesystem. Only supports SecretVolumeSources. Pod volumes to mount into the container's filesystem.
      * 
      */
-    @InputImport(name="volumeMounts", required=true)
+    @Import(name="volumeMounts", required=true)
       private final List<VolumeMountResponse> volumeMounts;
 
     public List<VolumeMountResponse> getVolumeMounts() {
@@ -200,7 +200,7 @@ public final class ContainerResponse extends io.pulumi.resources.InvokeArgs {
      * (Optional) Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image.
      * 
      */
-    @InputImport(name="workingDir", required=true)
+    @Import(name="workingDir", required=true)
       private final String workingDir;
 
     public String getWorkingDir() {

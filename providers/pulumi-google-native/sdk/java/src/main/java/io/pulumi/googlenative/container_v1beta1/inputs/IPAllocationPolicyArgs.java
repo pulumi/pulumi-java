@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
      * If true, allow allocation of cluster CIDR ranges that overlap with certain kinds of network routes. By default we do not allow cluster CIDR ranges to intersect with any user declared routes. With allow_route_overlap == true, we allow overlapping with CIDR ranges that are larger than the cluster CIDR range. If this field is set to true, then cluster and services CIDRs must be fully-specified (e.g. `10.96.0.0/14`, but not `/14`), which means: 1) When `use_ip_aliases` is true, `cluster_ipv4_cidr_block` and `services_ipv4_cidr_block` must be fully-specified. 2) When `use_ip_aliases` is false, `cluster.cluster_ipv4_cidr` muse be fully-specified.
      * 
      */
-    @InputImport(name="allowRouteOverlap")
+    @Import(name="allowRouteOverlap")
       private final @Nullable Output<Boolean> allowRouteOverlap;
 
     public Output<Boolean> getAllowRouteOverlap() {
@@ -34,7 +34,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
      * The IP address range for the cluster pod IPs. If this field is set, then `cluster.cluster_ipv4_cidr` must be left blank. This field is only applicable when `use_ip_aliases` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
      * 
      */
-    @InputImport(name="clusterIpv4CidrBlock")
+    @Import(name="clusterIpv4CidrBlock")
       private final @Nullable Output<String> clusterIpv4CidrBlock;
 
     public Output<String> getClusterIpv4CidrBlock() {
@@ -45,7 +45,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
      * The name of the secondary range to be used for the cluster CIDR block. The secondary range will be used for pod IP addresses. This must be an existing secondary range associated with the cluster subnetwork. This field is only applicable with use_ip_aliases and create_subnetwork is false.
      * 
      */
-    @InputImport(name="clusterSecondaryRangeName")
+    @Import(name="clusterSecondaryRangeName")
       private final @Nullable Output<String> clusterSecondaryRangeName;
 
     public Output<String> getClusterSecondaryRangeName() {
@@ -56,7 +56,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
      * Whether a new subnetwork will be created automatically for the cluster. This field is only applicable when `use_ip_aliases` is true.
      * 
      */
-    @InputImport(name="createSubnetwork")
+    @Import(name="createSubnetwork")
       private final @Nullable Output<Boolean> createSubnetwork;
 
     public Output<Boolean> getCreateSubnetwork() {
@@ -67,7 +67,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
      * The IP address range of the instance IPs in this cluster. This is applicable only if `create_subnetwork` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
      * 
      */
-    @InputImport(name="nodeIpv4CidrBlock")
+    @Import(name="nodeIpv4CidrBlock")
       private final @Nullable Output<String> nodeIpv4CidrBlock;
 
     public Output<String> getNodeIpv4CidrBlock() {
@@ -78,7 +78,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
      * The IP address range of the services IPs in this cluster. If blank, a range will be automatically chosen with the default size. This field is only applicable when `use_ip_aliases` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
      * 
      */
-    @InputImport(name="servicesIpv4CidrBlock")
+    @Import(name="servicesIpv4CidrBlock")
       private final @Nullable Output<String> servicesIpv4CidrBlock;
 
     public Output<String> getServicesIpv4CidrBlock() {
@@ -89,7 +89,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
      * The name of the secondary range to be used as for the services CIDR block. The secondary range will be used for service ClusterIPs. This must be an existing secondary range associated with the cluster subnetwork. This field is only applicable with use_ip_aliases and create_subnetwork is false.
      * 
      */
-    @InputImport(name="servicesSecondaryRangeName")
+    @Import(name="servicesSecondaryRangeName")
       private final @Nullable Output<String> servicesSecondaryRangeName;
 
     public Output<String> getServicesSecondaryRangeName() {
@@ -100,7 +100,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
      * A custom subnetwork name to be used if `create_subnetwork` is true. If this field is empty, then an automatic name will be chosen for the new subnetwork.
      * 
      */
-    @InputImport(name="subnetworkName")
+    @Import(name="subnetworkName")
       private final @Nullable Output<String> subnetworkName;
 
     public Output<String> getSubnetworkName() {
@@ -111,7 +111,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
      * Whether alias IPs will be used for pod IPs in the cluster. This is used in conjunction with use_routes. It cannot be true if use_routes is true. If both use_ip_aliases and use_routes are false, then the server picks the default IP allocation mode
      * 
      */
-    @InputImport(name="useIpAliases")
+    @Import(name="useIpAliases")
       private final @Nullable Output<Boolean> useIpAliases;
 
     public Output<Boolean> getUseIpAliases() {
@@ -122,7 +122,7 @@ public final class IPAllocationPolicyArgs extends io.pulumi.resources.ResourceAr
      * Whether routes will be used for pod IPs in the cluster. This is used in conjunction with use_ip_aliases. It cannot be true if use_ip_aliases is true. If both use_ip_aliases and use_routes are false, then the server picks the default IP allocation mode
      * 
      */
-    @InputImport(name="useRoutes")
+    @Import(name="useRoutes")
       private final @Nullable Output<Boolean> useRoutes;
 
     public Output<Boolean> getUseRoutes() {

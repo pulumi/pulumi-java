@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse exte
      * Call-specific metadata created by the analysis.
      * 
      */
-    @InputImport(name="callAnalysisMetadata", required=true)
+    @Import(name="callAnalysisMetadata", required=true)
       private final GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata;
 
     public GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse getCallAnalysisMetadata() {
@@ -32,7 +32,7 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse exte
      * The time at which the analysis ended.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {

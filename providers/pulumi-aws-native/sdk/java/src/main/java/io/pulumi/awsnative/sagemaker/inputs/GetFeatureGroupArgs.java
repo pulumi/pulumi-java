@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetFeatureGroupArgs extends io.pulumi.resources.InvokeArgs {
      * The Name of the FeatureGroup.
      * 
      */
-    @InputImport(name="featureGroupName", required=true)
+    @Import(name="featureGroupName", required=true)
       private final String featureGroupName;
 
     public String getFeatureGroupName() {

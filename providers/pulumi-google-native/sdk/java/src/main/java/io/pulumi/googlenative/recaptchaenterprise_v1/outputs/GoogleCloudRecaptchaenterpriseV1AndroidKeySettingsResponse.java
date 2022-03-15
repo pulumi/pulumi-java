@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.recaptchaenterprise_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse {
     /**
      * If set to true, allowed_package_names are not enforced.
@@ -22,10 +22,10 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse {
      */
     private final List<String> allowedPackageNames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse(
-        @OutputCustomType.Parameter("allowAllPackageNames") Boolean allowAllPackageNames,
-        @OutputCustomType.Parameter("allowedPackageNames") List<String> allowedPackageNames) {
+        @CustomType.Parameter("allowAllPackageNames") Boolean allowAllPackageNames,
+        @CustomType.Parameter("allowedPackageNames") List<String> allowedPackageNames) {
         this.allowAllPackageNames = allowAllPackageNames;
         this.allowedPackageNames = allowedPackageNames;
     }

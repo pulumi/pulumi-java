@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationsmanagement.inputs;
 
 import io.pulumi.azurenative.operationsmanagement.inputs.ArmTemplateParameterResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ManagementConfigurationPropertiesResponse extends io.pulumi.r
      * The applicationId of the appliance for this Management.
      * 
      */
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable String applicationId;
 
     public Optional<String> getApplicationId() {
@@ -36,7 +36,7 @@ public final class ManagementConfigurationPropertiesResponse extends io.pulumi.r
      * Parameters to run the ARM template
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final List<ArmTemplateParameterResponse> parameters;
 
     public List<ArmTemplateParameterResponse> getParameters() {
@@ -47,7 +47,7 @@ public final class ManagementConfigurationPropertiesResponse extends io.pulumi.r
      * The type of the parent resource.
      * 
      */
-    @InputImport(name="parentResourceType", required=true)
+    @Import(name="parentResourceType", required=true)
       private final String parentResourceType;
 
     public String getParentResourceType() {
@@ -58,7 +58,7 @@ public final class ManagementConfigurationPropertiesResponse extends io.pulumi.r
      * The provisioning state for the ManagementConfiguration.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -69,7 +69,7 @@ public final class ManagementConfigurationPropertiesResponse extends io.pulumi.r
      * The Json object containing the ARM template to deploy
      * 
      */
-    @InputImport(name="template", required=true)
+    @Import(name="template", required=true)
       private final Object template;
 
     public Object getTemplate() {

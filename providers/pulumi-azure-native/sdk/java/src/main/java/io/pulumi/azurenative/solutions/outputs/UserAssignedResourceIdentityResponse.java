@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserAssignedResourceIdentityResponse {
     /**
      * The principal id of user assigned identity.
@@ -20,10 +20,10 @@ public final class UserAssignedResourceIdentityResponse {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserAssignedResourceIdentityResponse(
-        @OutputCustomType.Parameter("principalId") String principalId,
-        @OutputCustomType.Parameter("tenantId") String tenantId) {
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("tenantId") String tenantId) {
         this.principalId = principalId;
         this.tenantId = tenantId;
     }

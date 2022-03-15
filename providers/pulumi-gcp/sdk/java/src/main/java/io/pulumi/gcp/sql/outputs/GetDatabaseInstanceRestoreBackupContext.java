@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDatabaseInstanceRestoreBackupContext {
     private final Integer backupRunId;
     private final String instanceId;
@@ -18,11 +18,11 @@ public final class GetDatabaseInstanceRestoreBackupContext {
      */
     private final String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatabaseInstanceRestoreBackupContext(
-        @OutputCustomType.Parameter("backupRunId") Integer backupRunId,
-        @OutputCustomType.Parameter("instanceId") String instanceId,
-        @OutputCustomType.Parameter("project") String project) {
+        @CustomType.Parameter("backupRunId") Integer backupRunId,
+        @CustomType.Parameter("instanceId") String instanceId,
+        @CustomType.Parameter("project") String project) {
         this.backupRunId = backupRunId;
         this.instanceId = instanceId;
         this.project = project;

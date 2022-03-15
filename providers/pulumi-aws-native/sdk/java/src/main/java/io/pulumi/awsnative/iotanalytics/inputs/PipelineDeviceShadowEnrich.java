@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,35 +14,35 @@ public final class PipelineDeviceShadowEnrich extends io.pulumi.resources.Invoke
 
     public static final PipelineDeviceShadowEnrich Empty = new PipelineDeviceShadowEnrich();
 
-    @InputImport(name="attribute", required=true)
+    @Import(name="attribute", required=true)
       private final String attribute;
 
     public String getAttribute() {
         return this.attribute;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="next")
+    @Import(name="next")
       private final @Nullable String next;
 
     public Optional<String> getNext() {
         return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="thingName", required=true)
+    @Import(name="thingName", required=true)
       private final String thingName;
 
     public String getThingName() {

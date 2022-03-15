@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.azurearcdata.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UploadWatermarkResponse {
     /**
      * Last uploaded date for logs from kubernetes cluster. Defaults to current date time
@@ -27,11 +27,11 @@ public final class UploadWatermarkResponse {
      */
     private final @Nullable String usages;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UploadWatermarkResponse(
-        @OutputCustomType.Parameter("logs") @Nullable String logs,
-        @OutputCustomType.Parameter("metrics") @Nullable String metrics,
-        @OutputCustomType.Parameter("usages") @Nullable String usages) {
+        @CustomType.Parameter("logs") @Nullable String logs,
+        @CustomType.Parameter("metrics") @Nullable String metrics,
+        @CustomType.Parameter("usages") @Nullable String usages) {
         this.logs = logs;
         this.metrics = metrics;
         this.usages = usages;

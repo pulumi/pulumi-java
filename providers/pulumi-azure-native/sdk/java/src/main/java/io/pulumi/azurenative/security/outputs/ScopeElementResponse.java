@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScopeElementResponse {
     /**
      * The alert entity type to suppress by.
@@ -17,8 +17,8 @@ public final class ScopeElementResponse {
      */
     private final @Nullable String field;
 
-    @OutputCustomType.Constructor
-    private ScopeElementResponse(@OutputCustomType.Parameter("field") @Nullable String field) {
+    @CustomType.Constructor
+    private ScopeElementResponse(@CustomType.Parameter("field") @Nullable String field) {
         this.field = field;
     }
 

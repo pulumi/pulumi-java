@@ -8,7 +8,7 @@ import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentComputeFarmConfigu
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentLicenseServiceConfigurationArgs;
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentSharedFileSystemConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,28 +21,28 @@ public final class StudioComponentConfigurationArgs extends io.pulumi.resources.
 
     public static final StudioComponentConfigurationArgs Empty = new StudioComponentConfigurationArgs();
 
-    @InputImport(name="activeDirectoryConfiguration")
+    @Import(name="activeDirectoryConfiguration")
       private final @Nullable Output<StudioComponentActiveDirectoryConfigurationArgs> activeDirectoryConfiguration;
 
     public Output<StudioComponentActiveDirectoryConfigurationArgs> getActiveDirectoryConfiguration() {
         return this.activeDirectoryConfiguration == null ? Output.empty() : this.activeDirectoryConfiguration;
     }
 
-    @InputImport(name="computeFarmConfiguration")
+    @Import(name="computeFarmConfiguration")
       private final @Nullable Output<StudioComponentComputeFarmConfigurationArgs> computeFarmConfiguration;
 
     public Output<StudioComponentComputeFarmConfigurationArgs> getComputeFarmConfiguration() {
         return this.computeFarmConfiguration == null ? Output.empty() : this.computeFarmConfiguration;
     }
 
-    @InputImport(name="licenseServiceConfiguration")
+    @Import(name="licenseServiceConfiguration")
       private final @Nullable Output<StudioComponentLicenseServiceConfigurationArgs> licenseServiceConfiguration;
 
     public Output<StudioComponentLicenseServiceConfigurationArgs> getLicenseServiceConfiguration() {
         return this.licenseServiceConfiguration == null ? Output.empty() : this.licenseServiceConfiguration;
     }
 
-    @InputImport(name="sharedFileSystemConfiguration")
+    @Import(name="sharedFileSystemConfiguration")
       private final @Nullable Output<StudioComponentSharedFileSystemConfigurationArgs> sharedFileSystemConfiguration;
 
     public Output<StudioComponentSharedFileSystemConfigurationArgs> getSharedFileSystemConfiguration() {

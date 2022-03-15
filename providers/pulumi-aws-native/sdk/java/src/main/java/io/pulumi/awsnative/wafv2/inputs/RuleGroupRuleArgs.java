@@ -9,7 +9,7 @@ import io.pulumi.awsnative.wafv2.inputs.RuleGroupRuleActionArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupStatementArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupVisibilityConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,28 +25,28 @@ public final class RuleGroupRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuleGroupRuleArgs Empty = new RuleGroupRuleArgs();
 
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<RuleGroupRuleActionArgs> action;
 
     public Output<RuleGroupRuleActionArgs> getAction() {
         return this.action == null ? Output.empty() : this.action;
     }
 
-    @InputImport(name="captchaConfig")
+    @Import(name="captchaConfig")
       private final @Nullable Output<RuleGroupCaptchaConfigArgs> captchaConfig;
 
     public Output<RuleGroupCaptchaConfigArgs> getCaptchaConfig() {
         return this.captchaConfig == null ? Output.empty() : this.captchaConfig;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -57,21 +57,21 @@ public final class RuleGroupRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Collection of Rule Labels.
      * 
      */
-    @InputImport(name="ruleLabels")
+    @Import(name="ruleLabels")
       private final @Nullable Output<List<RuleGroupLabelArgs>> ruleLabels;
 
     public Output<List<RuleGroupLabelArgs>> getRuleLabels() {
         return this.ruleLabels == null ? Output.empty() : this.ruleLabels;
     }
 
-    @InputImport(name="statement", required=true)
+    @Import(name="statement", required=true)
       private final Output<RuleGroupStatementArgs> statement;
 
     public Output<RuleGroupStatementArgs> getStatement() {
         return this.statement;
     }
 
-    @InputImport(name="visibilityConfig", required=true)
+    @Import(name="visibilityConfig", required=true)
       private final Output<RuleGroupVisibilityConfigArgs> visibilityConfig;
 
     public Output<RuleGroupVisibilityConfigArgs> getVisibilityConfig() {

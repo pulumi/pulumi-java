@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class ConnectorProfileOAuthPropertiesArgs extends io.pulumi.resourc
 
     public static final ConnectorProfileOAuthPropertiesArgs Empty = new ConnectorProfileOAuthPropertiesArgs();
 
-    @InputImport(name="authCodeUrl")
+    @Import(name="authCodeUrl")
       private final @Nullable Output<String> authCodeUrl;
 
     public Output<String> getAuthCodeUrl() {
         return this.authCodeUrl == null ? Output.empty() : this.authCodeUrl;
     }
 
-    @InputImport(name="oAuthScopes")
+    @Import(name="oAuthScopes")
       private final @Nullable Output<List<String>> oAuthScopes;
 
     public Output<List<String>> getOAuthScopes() {
         return this.oAuthScopes == null ? Output.empty() : this.oAuthScopes;
     }
 
-    @InputImport(name="tokenUrl")
+    @Import(name="tokenUrl")
       private final @Nullable Output<String> tokenUrl;
 
     public Output<String> getTokenUrl() {

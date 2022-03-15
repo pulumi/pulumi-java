@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MetastoreConfigResponse extends io.pulumi.resources.InvokeArg
      * Resource name of an existing Dataproc Metastore service.Example: projects/[project_id]/locations/[dataproc_region]/services/[service-name]
      * 
      */
-    @InputImport(name="dataprocMetastoreService", required=true)
+    @Import(name="dataprocMetastoreService", required=true)
       private final String dataprocMetastoreService;
 
     public String getDataprocMetastoreService() {

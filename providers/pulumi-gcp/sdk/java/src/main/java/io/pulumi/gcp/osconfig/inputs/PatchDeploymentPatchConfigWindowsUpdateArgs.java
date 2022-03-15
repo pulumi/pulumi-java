@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PatchDeploymentPatchConfigWindowsUpdateArgs extends io.pulumi
      * Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATURE_PACK`, `SERVICE_PACK`, `TOOL`, `UPDATE_ROLLUP`, and `UPDATE`.
      * 
      */
-    @InputImport(name="classifications")
+    @Import(name="classifications")
       private final @Nullable Output<List<String>> classifications;
 
     public Output<List<String>> getClassifications() {
@@ -31,7 +31,7 @@ public final class PatchDeploymentPatchConfigWindowsUpdateArgs extends io.pulumi
      * List of KBs to exclude from update.
      * 
      */
-    @InputImport(name="excludes")
+    @Import(name="excludes")
       private final @Nullable Output<List<String>> excludes;
 
     public Output<List<String>> getExcludes() {
@@ -43,7 +43,7 @@ public final class PatchDeploymentPatchConfigWindowsUpdateArgs extends io.pulumi
      * This field must not be used with other patch configurations.
      * 
      */
-    @InputImport(name="exclusivePatches")
+    @Import(name="exclusivePatches")
       private final @Nullable Output<List<String>> exclusivePatches;
 
     public Output<List<String>> getExclusivePatches() {

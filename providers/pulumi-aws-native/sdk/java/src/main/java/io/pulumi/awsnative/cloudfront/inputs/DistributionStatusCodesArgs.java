@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class DistributionStatusCodesArgs extends io.pulumi.resources.Resou
 
     public static final DistributionStatusCodesArgs Empty = new DistributionStatusCodesArgs();
 
-    @InputImport(name="items", required=true)
+    @Import(name="items", required=true)
       private final Output<List<Integer>> items;
 
     public Output<List<Integer>> getItems() {
         return this.items;
     }
 
-    @InputImport(name="quantity", required=true)
+    @Import(name="quantity", required=true)
       private final Output<Integer> quantity;
 
     public Output<Integer> getQuantity() {

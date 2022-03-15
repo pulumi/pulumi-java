@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v4.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.jobs_v4.inputs.LocationResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class JobDerivedInfoResponse extends io.pulumi.resources.InvokeArgs
      * Job categories derived from Job.title and Job.description.
      * 
      */
-    @InputImport(name="jobCategories", required=true)
+    @Import(name="jobCategories", required=true)
       private final List<String> jobCategories;
 
     public List<String> getJobCategories() {
@@ -33,7 +33,7 @@ public final class JobDerivedInfoResponse extends io.pulumi.resources.InvokeArgs
      * Structured locations of the job, resolved from Job.addresses. locations are exactly matched to Job.addresses in the same order.
      * 
      */
-    @InputImport(name="locations", required=true)
+    @Import(name="locations", required=true)
       private final List<LocationResponse> locations;
 
     public List<LocationResponse> getLocations() {

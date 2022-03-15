@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storsimple;
 
 import io.pulumi.azurenative.storsimple.enums.Kind;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
      * The name of the access control record.
      * 
      */
-    @InputImport(name="accessControlRecordName")
+    @Import(name="accessControlRecordName")
       private final @Nullable Output<String> accessControlRecordName;
 
     public Output<String> getAccessControlRecordName() {
@@ -30,7 +30,7 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
      * The iSCSI initiator name (IQN).
      * 
      */
-    @InputImport(name="initiatorName", required=true)
+    @Import(name="initiatorName", required=true)
       private final Output<String> initiatorName;
 
     public Output<String> getInitiatorName() {
@@ -41,7 +41,7 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
      * The Kind of the object. Currently only Series8000 is supported
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<Kind> kind;
 
     public Output<Kind> getKind() {
@@ -52,7 +52,7 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
      * The manager name
      * 
      */
-    @InputImport(name="managerName", required=true)
+    @Import(name="managerName", required=true)
       private final Output<String> managerName;
 
     public Output<String> getManagerName() {
@@ -63,7 +63,7 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
      * The resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IdentityResponse {
     /**
      * The list of identities.
@@ -21,10 +21,10 @@ public final class IdentityResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IdentityResponse(
-        @OutputCustomType.Parameter("identityIds") List<String> identityIds,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("identityIds") List<String> identityIds,
+        @CustomType.Parameter("type") String type) {
         this.identityIds = identityIds;
         this.type = type;
     }

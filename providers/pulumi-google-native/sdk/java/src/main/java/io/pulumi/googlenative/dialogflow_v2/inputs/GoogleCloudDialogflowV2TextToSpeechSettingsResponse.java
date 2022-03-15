@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse extends i
      * Optional. Indicates whether text to speech is enabled. Even when this field is false, other settings in this proto are still retained.
      * 
      */
-    @InputImport(name="enableTextToSpeech", required=true)
+    @Import(name="enableTextToSpeech", required=true)
       private final Boolean enableTextToSpeech;
 
     public Boolean getEnableTextToSpeech() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse extends i
      * Audio encoding of the synthesized audio content.
      * 
      */
-    @InputImport(name="outputAudioEncoding", required=true)
+    @Import(name="outputAudioEncoding", required=true)
       private final String outputAudioEncoding;
 
     public String getOutputAudioEncoding() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse extends i
      * Optional. The synthesis sample rate (in hertz) for this audio. If not provided, then the synthesizer will use the default sample rate based on the audio encoding. If this is different from the voice's natural sample rate, then the synthesizer will honor this request by converting to the desired sample rate (which might result in worse audio quality).
      * 
      */
-    @InputImport(name="sampleRateHertz", required=true)
+    @Import(name="sampleRateHertz", required=true)
       private final Integer sampleRateHertz;
 
     public Integer getSampleRateHertz() {
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2TextToSpeechSettingsResponse extends i
      * Optional. Configuration of how speech should be synthesized, mapping from language (https://cloud.google.com/dialogflow/docs/reference/language) to SynthesizeSpeechConfig.
      * 
      */
-    @InputImport(name="synthesizeSpeechConfigs", required=true)
+    @Import(name="synthesizeSpeechConfigs", required=true)
       private final Map<String,String> synthesizeSpeechConfigs;
 
     public Map<String,String> getSynthesizeSpeechConfigs() {

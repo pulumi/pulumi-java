@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.HttpErrorRangeParametersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResponseBasedOriginErrorDetectionParametersResponse {
     /**
      * The list of Http status code ranges that are considered as server errors for origin and it is marked as unhealthy.
@@ -30,11 +30,11 @@ public final class ResponseBasedOriginErrorDetectionParametersResponse {
      */
     private final @Nullable Integer responseBasedFailoverThresholdPercentage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResponseBasedOriginErrorDetectionParametersResponse(
-        @OutputCustomType.Parameter("httpErrorRanges") @Nullable List<HttpErrorRangeParametersResponse> httpErrorRanges,
-        @OutputCustomType.Parameter("responseBasedDetectedErrorTypes") @Nullable String responseBasedDetectedErrorTypes,
-        @OutputCustomType.Parameter("responseBasedFailoverThresholdPercentage") @Nullable Integer responseBasedFailoverThresholdPercentage) {
+        @CustomType.Parameter("httpErrorRanges") @Nullable List<HttpErrorRangeParametersResponse> httpErrorRanges,
+        @CustomType.Parameter("responseBasedDetectedErrorTypes") @Nullable String responseBasedDetectedErrorTypes,
+        @CustomType.Parameter("responseBasedFailoverThresholdPercentage") @Nullable Integer responseBasedFailoverThresholdPercentage) {
         this.httpErrorRanges = httpErrorRanges;
         this.responseBasedDetectedErrorTypes = responseBasedDetectedErrorTypes;
         this.responseBasedFailoverThresholdPercentage = responseBasedFailoverThresholdPercentage;

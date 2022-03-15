@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SkuResponse {
     /**
      * The display name of the sku.
@@ -27,11 +27,11 @@ public final class SkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkuResponse(
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("family") @Nullable String family,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("family") @Nullable String family,
+        @CustomType.Parameter("name") String name) {
         this.displayName = displayName;
         this.family = family;
         this.name = name;

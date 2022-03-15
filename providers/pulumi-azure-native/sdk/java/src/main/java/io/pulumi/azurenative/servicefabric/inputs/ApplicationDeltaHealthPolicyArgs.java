@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.ServiceTypeDeltaHealthPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationDeltaHealthPolicyArgs extends io.pulumi.resources.
      * The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.
      * 
      */
-    @InputImport(name="defaultServiceTypeDeltaHealthPolicy")
+    @Import(name="defaultServiceTypeDeltaHealthPolicy")
       private final @Nullable Output<ServiceTypeDeltaHealthPolicyArgs> defaultServiceTypeDeltaHealthPolicy;
 
     public Output<ServiceTypeDeltaHealthPolicyArgs> getDefaultServiceTypeDeltaHealthPolicy() {
@@ -35,7 +35,7 @@ public final class ApplicationDeltaHealthPolicyArgs extends io.pulumi.resources.
      * The map with service type delta health policy per service type name. The map is empty by default.
      * 
      */
-    @InputImport(name="serviceTypeDeltaHealthPolicies")
+    @Import(name="serviceTypeDeltaHealthPolicies")
       private final @Nullable Output<Map<String,ServiceTypeDeltaHealthPolicyArgs>> serviceTypeDeltaHealthPolicies;
 
     public Output<Map<String,ServiceTypeDeltaHealthPolicyArgs>> getServiceTypeDeltaHealthPolicies() {

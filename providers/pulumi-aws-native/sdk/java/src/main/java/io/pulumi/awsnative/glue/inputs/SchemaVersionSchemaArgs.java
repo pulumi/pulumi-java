@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
      * Name of the registry to identify where the Schema is located.
      * 
      */
-    @InputImport(name="registryName")
+    @Import(name="registryName")
       private final @Nullable Output<String> registryName;
 
     public Output<String> getRegistryName() {
@@ -33,7 +33,7 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
      * Amazon Resource Name for the Schema. This attribute can be used to uniquely represent the Schema.
      * 
      */
-    @InputImport(name="schemaArn")
+    @Import(name="schemaArn")
       private final @Nullable Output<String> schemaArn;
 
     public Output<String> getSchemaArn() {
@@ -44,7 +44,7 @@ public final class SchemaVersionSchemaArgs extends io.pulumi.resources.ResourceA
      * Name of the schema. This parameter requires RegistryName to be provided.
      * 
      */
-    @InputImport(name="schemaName")
+    @Import(name="schemaName")
       private final @Nullable Output<String> schemaName;
 
     public Output<String> getSchemaName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.ExternalRefResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.LicenseResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PackageInfoNoteResponse {
     /**
      * Indicates whether the file content of this package has been available for or subjected to analysis when creating the SPDX document
@@ -99,25 +99,25 @@ public final class PackageInfoNoteResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackageInfoNoteResponse(
-        @OutputCustomType.Parameter("analyzed") Boolean analyzed,
-        @OutputCustomType.Parameter("attribution") String attribution,
-        @OutputCustomType.Parameter("checksum") String checksum,
-        @OutputCustomType.Parameter("copyright") String copyright,
-        @OutputCustomType.Parameter("detailedDescription") String detailedDescription,
-        @OutputCustomType.Parameter("downloadLocation") String downloadLocation,
-        @OutputCustomType.Parameter("externalRefs") List<ExternalRefResponse> externalRefs,
-        @OutputCustomType.Parameter("filesLicenseInfo") List<String> filesLicenseInfo,
-        @OutputCustomType.Parameter("homePage") String homePage,
-        @OutputCustomType.Parameter("licenseDeclared") LicenseResponse licenseDeclared,
-        @OutputCustomType.Parameter("originator") String originator,
-        @OutputCustomType.Parameter("packageType") String packageType,
-        @OutputCustomType.Parameter("summaryDescription") String summaryDescription,
-        @OutputCustomType.Parameter("supplier") String supplier,
-        @OutputCustomType.Parameter("title") String title,
-        @OutputCustomType.Parameter("verificationCode") String verificationCode,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("analyzed") Boolean analyzed,
+        @CustomType.Parameter("attribution") String attribution,
+        @CustomType.Parameter("checksum") String checksum,
+        @CustomType.Parameter("copyright") String copyright,
+        @CustomType.Parameter("detailedDescription") String detailedDescription,
+        @CustomType.Parameter("downloadLocation") String downloadLocation,
+        @CustomType.Parameter("externalRefs") List<ExternalRefResponse> externalRefs,
+        @CustomType.Parameter("filesLicenseInfo") List<String> filesLicenseInfo,
+        @CustomType.Parameter("homePage") String homePage,
+        @CustomType.Parameter("licenseDeclared") LicenseResponse licenseDeclared,
+        @CustomType.Parameter("originator") String originator,
+        @CustomType.Parameter("packageType") String packageType,
+        @CustomType.Parameter("summaryDescription") String summaryDescription,
+        @CustomType.Parameter("supplier") String supplier,
+        @CustomType.Parameter("title") String title,
+        @CustomType.Parameter("verificationCode") String verificationCode,
+        @CustomType.Parameter("version") String version) {
         this.analyzed = analyzed;
         this.attribution = attribution;
         this.checksum = checksum;

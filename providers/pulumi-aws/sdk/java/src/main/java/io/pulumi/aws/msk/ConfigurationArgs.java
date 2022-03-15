@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * List of Apache Kafka versions which can use this configuration.
      * 
      */
-    @InputImport(name="kafkaVersions")
+    @Import(name="kafkaVersions")
       private final @Nullable Output<List<String>> kafkaVersions;
 
     public Output<List<String>> getKafkaVersions() {
@@ -41,7 +41,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * Contents of the server.properties file. Supported properties are documented in the [MSK Developer Guide](https://docs.aws.amazon.com/msk/latest/developerguide/msk-configuration-properties.html).
      * 
      */
-    @InputImport(name="serverProperties", required=true)
+    @Import(name="serverProperties", required=true)
       private final Output<String> serverProperties;
 
     public Output<String> getServerProperties() {

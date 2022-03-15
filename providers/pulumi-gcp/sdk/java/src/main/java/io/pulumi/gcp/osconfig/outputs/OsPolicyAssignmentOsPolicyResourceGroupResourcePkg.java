@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkg {
     /**
      * An Apt Repository.
@@ -59,16 +59,16 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkg {
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper zypper;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkg(
-        @OutputCustomType.Parameter("apt") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt apt,
-        @OutputCustomType.Parameter("deb") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb deb,
-        @OutputCustomType.Parameter("desiredState") String desiredState,
-        @OutputCustomType.Parameter("googet") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget googet,
-        @OutputCustomType.Parameter("msi") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi msi,
-        @OutputCustomType.Parameter("rpm") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpm rpm,
-        @OutputCustomType.Parameter("yum") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum yum,
-        @OutputCustomType.Parameter("zypper") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper zypper) {
+        @CustomType.Parameter("apt") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt apt,
+        @CustomType.Parameter("deb") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb deb,
+        @CustomType.Parameter("desiredState") String desiredState,
+        @CustomType.Parameter("googet") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget googet,
+        @CustomType.Parameter("msi") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi msi,
+        @CustomType.Parameter("rpm") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpm rpm,
+        @CustomType.Parameter("yum") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum yum,
+        @CustomType.Parameter("zypper") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper zypper) {
         this.apt = apt;
         this.deb = deb;
         this.desiredState = desiredState;

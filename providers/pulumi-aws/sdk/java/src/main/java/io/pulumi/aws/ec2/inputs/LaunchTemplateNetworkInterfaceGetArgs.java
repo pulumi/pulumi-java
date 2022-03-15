@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
      * Associate a Carrier IP address with `eth0` for a new network interface. Use this option when you launch an instance in a Wavelength Zone and want to associate a Carrier IP address with the network interface. Boolean value.
      * 
      */
-    @InputImport(name="associateCarrierIpAddress")
+    @Import(name="associateCarrierIpAddress")
       private final @Nullable Output<String> associateCarrierIpAddress;
 
     public Output<String> getAssociateCarrierIpAddress() {
@@ -31,7 +31,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
      * Associate a public ip address with the network interface.  Boolean value.
      * 
      */
-    @InputImport(name="associatePublicIpAddress")
+    @Import(name="associatePublicIpAddress")
       private final @Nullable Output<String> associatePublicIpAddress;
 
     public Output<String> getAssociatePublicIpAddress() {
@@ -42,7 +42,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
      * Whether the network interface should be destroyed on instance termination. Defaults to `false` if not set.
      * 
      */
-    @InputImport(name="deleteOnTermination")
+    @Import(name="deleteOnTermination")
       private final @Nullable Output<String> deleteOnTermination;
 
     public Output<String> getDeleteOnTermination() {
@@ -53,7 +53,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
      * Description of the network interface.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -64,7 +64,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
      * The integer index of the network interface attachment.
      * 
      */
-    @InputImport(name="deviceIndex")
+    @Import(name="deviceIndex")
       private final @Nullable Output<Integer> deviceIndex;
 
     public Output<Integer> getDeviceIndex() {
@@ -75,7 +75,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
      * The type of network interface. To create an Elastic Fabric Adapter (EFA), specify `efa`.
      * 
      */
-    @InputImport(name="interfaceType")
+    @Import(name="interfaceType")
       private final @Nullable Output<String> interfaceType;
 
     public Output<String> getInterfaceType() {
@@ -86,7 +86,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
      * The number of secondary private IPv4 addresses to assign to a network interface. Conflicts with `ipv4_addresses`
      * 
      */
-    @InputImport(name="ipv4AddressCount")
+    @Import(name="ipv4AddressCount")
       private final @Nullable Output<Integer> ipv4AddressCount;
 
     public Output<Integer> getIpv4AddressCount() {
@@ -97,7 +97,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
      * One or more private IPv4 addresses to associate. Conflicts with `ipv4_address_count`
      * 
      */
-    @InputImport(name="ipv4Addresses")
+    @Import(name="ipv4Addresses")
       private final @Nullable Output<List<String>> ipv4Addresses;
 
     public Output<List<String>> getIpv4Addresses() {
@@ -108,7 +108,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
      * The number of IPv6 addresses to assign to a network interface. Conflicts with `ipv6_addresses`
      * 
      */
-    @InputImport(name="ipv6AddressCount")
+    @Import(name="ipv6AddressCount")
       private final @Nullable Output<Integer> ipv6AddressCount;
 
     public Output<Integer> getIpv6AddressCount() {
@@ -119,7 +119,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
      * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Conflicts with `ipv6_address_count`
      * 
      */
-    @InputImport(name="ipv6Addresses")
+    @Import(name="ipv6Addresses")
       private final @Nullable Output<List<String>> ipv6Addresses;
 
     public Output<List<String>> getIpv6Addresses() {
@@ -130,7 +130,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
      * The index of the network card. Some instance types support multiple network cards. The primary network interface must be assigned to network card index 0. The default is network card index 0.
      * 
      */
-    @InputImport(name="networkCardIndex")
+    @Import(name="networkCardIndex")
       private final @Nullable Output<Integer> networkCardIndex;
 
     public Output<Integer> getNetworkCardIndex() {
@@ -141,7 +141,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
      * The ID of the network interface to attach.
      * 
      */
-    @InputImport(name="networkInterfaceId")
+    @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {
@@ -152,7 +152,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
      * The primary private IPv4 address.
      * 
      */
-    @InputImport(name="privateIpAddress")
+    @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
     public Output<String> getPrivateIpAddress() {
@@ -163,7 +163,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
      * A list of security group IDs to associate.
      * 
      */
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
@@ -174,7 +174,7 @@ public final class LaunchTemplateNetworkInterfaceGetArgs extends io.pulumi.resou
      * The VPC Subnet ID to associate.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {

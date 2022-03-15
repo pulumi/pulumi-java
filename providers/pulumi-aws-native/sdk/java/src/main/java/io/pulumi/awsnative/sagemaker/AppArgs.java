@@ -7,7 +7,7 @@ import io.pulumi.awsnative.sagemaker.enums.AppType;
 import io.pulumi.awsnative.sagemaker.inputs.AppResourceSpecArgs;
 import io.pulumi.awsnative.sagemaker.inputs.AppTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the app.
      * 
      */
-    @InputImport(name="appName")
+    @Import(name="appName")
       private final @Nullable Output<String> appName;
 
     public Output<String> getAppName() {
@@ -33,7 +33,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The type of app.
      * 
      */
-    @InputImport(name="appType", required=true)
+    @Import(name="appType", required=true)
       private final Output<AppType> appType;
 
     public Output<AppType> getAppType() {
@@ -44,7 +44,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The domain ID.
      * 
      */
-    @InputImport(name="domainId", required=true)
+    @Import(name="domainId", required=true)
       private final Output<String> domainId;
 
     public Output<String> getDomainId() {
@@ -55,7 +55,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.
      * 
      */
-    @InputImport(name="resourceSpec")
+    @Import(name="resourceSpec")
       private final @Nullable Output<AppResourceSpecArgs> resourceSpec;
 
     public Output<AppResourceSpecArgs> getResourceSpec() {
@@ -66,7 +66,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * A list of tags to apply to the app.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<AppTagArgs>> tags;
 
     public Output<List<AppTagArgs>> getTags() {
@@ -77,7 +77,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The user profile name.
      * 
      */
-    @InputImport(name="userProfileName", required=true)
+    @Import(name="userProfileName", required=true)
       private final Output<String> userProfileName;
 
     public Output<String> getUserProfileName() {

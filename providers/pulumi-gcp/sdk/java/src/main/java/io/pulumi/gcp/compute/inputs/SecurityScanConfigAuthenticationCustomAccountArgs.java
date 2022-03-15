@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class SecurityScanConfigAuthenticationCustomAccountArgs extends io.
      * The login form URL of the website.
      * 
      */
-    @InputImport(name="loginUrl", required=true)
+    @Import(name="loginUrl", required=true)
       private final Output<String> loginUrl;
 
     public Output<String> getLoginUrl() {
@@ -30,7 +30,7 @@ public final class SecurityScanConfigAuthenticationCustomAccountArgs extends io.
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Output<String> password;
 
     public Output<String> getPassword() {
@@ -41,7 +41,7 @@ public final class SecurityScanConfigAuthenticationCustomAccountArgs extends io.
      * The user name of the custom account.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final Output<String> username;
 
     public Output<String> getUsername() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appconfiguration.inputs;
 import io.pulumi.azurenative.appconfiguration.enums.ConnectionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * The private link service connection description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * The private link service connection status.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,ConnectionStatus>> status;
 
     public Output<Either<String,ConnectionStatus>> getStatus() {

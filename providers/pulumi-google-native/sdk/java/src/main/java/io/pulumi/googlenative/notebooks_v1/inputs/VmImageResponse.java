@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class VmImageResponse extends io.pulumi.resources.InvokeArgs {
      * Use this VM image family to find the image; the newest image in this family will be used.
      * 
      */
-    @InputImport(name="imageFamily", required=true)
+    @Import(name="imageFamily", required=true)
       private final String imageFamily;
 
     public String getImageFamily() {
@@ -31,7 +31,7 @@ public final class VmImageResponse extends io.pulumi.resources.InvokeArgs {
      * Use VM image name to find the image.
      * 
      */
-    @InputImport(name="imageName", required=true)
+    @Import(name="imageName", required=true)
       private final String imageName;
 
     public String getImageName() {
@@ -42,7 +42,7 @@ public final class VmImageResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the Google Cloud project that this VM image belongs to. Format: `projects/{project_id}`
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final String project;
 
     public String getProject() {

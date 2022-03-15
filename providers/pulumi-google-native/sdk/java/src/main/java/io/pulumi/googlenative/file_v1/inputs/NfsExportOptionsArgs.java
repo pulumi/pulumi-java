@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.file_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.file_v1.enums.NfsExportOptionsAccessMode;
 import io.pulumi.googlenative.file_v1.enums.NfsExportOptionsSquashMode;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
      * Either READ_ONLY, for allowing only read requests on the exported directory, or READ_WRITE, for allowing both read and write requests. The default is READ_WRITE.
      * 
      */
-    @InputImport(name="accessMode")
+    @Import(name="accessMode")
       private final @Nullable Output<NfsExportOptionsAccessMode> accessMode;
 
     public Output<NfsExportOptionsAccessMode> getAccessMode() {
@@ -36,7 +36,7 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
      * An integer representing the anonymous group id with a default value of 65534. Anon_gid may only be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified for other squash_mode settings.
      * 
      */
-    @InputImport(name="anonGid")
+    @Import(name="anonGid")
       private final @Nullable Output<String> anonGid;
 
     public Output<String> getAnonGid() {
@@ -47,7 +47,7 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
      * An integer representing the anonymous user id with a default value of 65534. Anon_uid may only be set with squash_mode of ROOT_SQUASH. An error will be returned if this field is specified for other squash_mode settings.
      * 
      */
-    @InputImport(name="anonUid")
+    @Import(name="anonUid")
       private final @Nullable Output<String> anonUid;
 
     public Output<String> getAnonUid() {
@@ -58,7 +58,7 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
      * List of either an IPv4 addresses in the format `{octet1}.{octet2}.{octet3}.{octet4}` or CIDR ranges in the format `{octet1}.{octet2}.{octet3}.{octet4}/{mask size}` which may mount the file share. Overlapping IP ranges are not allowed, both within and across NfsExportOptions. An error will be returned. The limit is 64 IP ranges/addresses for each FileShareConfig among all NfsExportOptions.
      * 
      */
-    @InputImport(name="ipRanges")
+    @Import(name="ipRanges")
       private final @Nullable Output<List<String>> ipRanges;
 
     public Output<List<String>> getIpRanges() {
@@ -69,7 +69,7 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
      * Either NO_ROOT_SQUASH, for allowing root access on the exported directory, or ROOT_SQUASH, for not allowing root access. The default is NO_ROOT_SQUASH.
      * 
      */
-    @InputImport(name="squashMode")
+    @Import(name="squashMode")
       private final @Nullable Output<NfsExportOptionsSquashMode> squashMode;
 
     public Output<NfsExportOptionsSquashMode> getSquashMode() {

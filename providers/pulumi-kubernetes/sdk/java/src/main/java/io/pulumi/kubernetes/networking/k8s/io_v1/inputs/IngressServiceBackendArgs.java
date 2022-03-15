@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.ServiceBackendPortArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IngressServiceBackendArgs extends io.pulumi.resources.Resourc
      * Name is the referenced service. The service must exist in the same namespace as the Ingress object.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class IngressServiceBackendArgs extends io.pulumi.resources.Resourc
      * Port of the referenced service. A port name or port number is required for a IngressServiceBackend.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<ServiceBackendPortArgs> port;
 
     public Output<ServiceBackendPortArgs> getPort() {

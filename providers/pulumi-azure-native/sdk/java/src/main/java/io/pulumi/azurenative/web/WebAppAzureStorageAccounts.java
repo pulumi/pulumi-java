@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.WebAppAzureStorageAccountsArgs;
 import io.pulumi.azurenative.web.outputs.AzureStorageInfoValueResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public class WebAppAzureStorageAccounts extends io.pulumi.resources.CustomResour
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -47,7 +47,7 @@ public class WebAppAzureStorageAccounts extends io.pulumi.resources.CustomResour
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -61,7 +61,7 @@ public class WebAppAzureStorageAccounts extends io.pulumi.resources.CustomResour
      * Azure storage accounts.
      * 
      */
-    @OutputExport(name="properties", type=Map.class, parameters={String.class, AzureStorageInfoValueResponse.class})
+    @Export(name="properties", type=Map.class, parameters={String.class, AzureStorageInfoValueResponse.class})
     private Output<Map<String,AzureStorageInfoValueResponse>> properties;
 
     /**
@@ -75,7 +75,7 @@ public class WebAppAzureStorageAccounts extends io.pulumi.resources.CustomResour
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

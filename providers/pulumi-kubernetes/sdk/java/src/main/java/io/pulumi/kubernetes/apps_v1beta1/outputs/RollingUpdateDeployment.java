@@ -4,14 +4,14 @@
 package io.pulumi.kubernetes.apps_v1beta1.outputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RollingUpdateDeployment {
     /**
      * The maximum number of pods that can be scheduled above the desired number of pods. Value can be an absolute number (ex: 5) or a percentage of desired pods (ex: 10%). This can not be 0 if MaxUnavailable is 0. Absolute number is calculated from percentage by rounding up. Defaults to 25%. Example: when this is set to 30%, the new ReplicaSet can be scaled up immediately when the rolling update starts, such that the total number of old and new pods do not exceed 130% of desired pods. Once old pods have been killed, new ReplicaSet can be scaled up further, ensuring that total number of pods running at any time during the update is at most 130% of desired pods.
@@ -24,10 +24,10 @@ public final class RollingUpdateDeployment {
      */
     private final @Nullable Either<Integer,String> maxUnavailable;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RollingUpdateDeployment(
-        @OutputCustomType.Parameter("maxSurge") @Nullable Either<Integer,String> maxSurge,
-        @OutputCustomType.Parameter("maxUnavailable") @Nullable Either<Integer,String> maxUnavailable) {
+        @CustomType.Parameter("maxSurge") @Nullable Either<Integer,String> maxSurge,
+        @CustomType.Parameter("maxUnavailable") @Nullable Either<Integer,String> maxUnavailable) {
         this.maxSurge = maxSurge;
         this.maxUnavailable = maxUnavailable;
     }

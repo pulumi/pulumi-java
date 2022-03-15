@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudkms_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudkms_v1.CryptoKeyVersionArgs;
@@ -27,7 +27,7 @@ public class CryptoKeyVersion extends io.pulumi.resources.CustomResource {
      * The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
      * 
      */
-    @OutputExport(name="algorithm", type=String.class, parameters={})
+    @Export(name="algorithm", type=String.class, parameters={})
     private Output<String> algorithm;
 
     /**
@@ -41,7 +41,7 @@ public class CryptoKeyVersion extends io.pulumi.resources.CustomResource {
      * Statement that was generated and signed by the HSM at key creation time. Use this statement to verify attributes of the key as stored on the HSM, independently of Google. Only provided for key versions with protection_level HSM.
      * 
      */
-    @OutputExport(name="attestation", type=KeyOperationAttestationResponse.class, parameters={})
+    @Export(name="attestation", type=KeyOperationAttestationResponse.class, parameters={})
     private Output<KeyOperationAttestationResponse> attestation;
 
     /**
@@ -55,7 +55,7 @@ public class CryptoKeyVersion extends io.pulumi.resources.CustomResource {
      * The time at which this CryptoKeyVersion was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -69,7 +69,7 @@ public class CryptoKeyVersion extends io.pulumi.resources.CustomResource {
      * The time this CryptoKeyVersion's key material was destroyed. Only present if state is DESTROYED.
      * 
      */
-    @OutputExport(name="destroyEventTime", type=String.class, parameters={})
+    @Export(name="destroyEventTime", type=String.class, parameters={})
     private Output<String> destroyEventTime;
 
     /**
@@ -83,7 +83,7 @@ public class CryptoKeyVersion extends io.pulumi.resources.CustomResource {
      * The time this CryptoKeyVersion's key material is scheduled for destruction. Only present if state is DESTROY_SCHEDULED.
      * 
      */
-    @OutputExport(name="destroyTime", type=String.class, parameters={})
+    @Export(name="destroyTime", type=String.class, parameters={})
     private Output<String> destroyTime;
 
     /**
@@ -97,7 +97,7 @@ public class CryptoKeyVersion extends io.pulumi.resources.CustomResource {
      * ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.
      * 
      */
-    @OutputExport(name="externalProtectionLevelOptions", type=ExternalProtectionLevelOptionsResponse.class, parameters={})
+    @Export(name="externalProtectionLevelOptions", type=ExternalProtectionLevelOptionsResponse.class, parameters={})
     private Output<ExternalProtectionLevelOptionsResponse> externalProtectionLevelOptions;
 
     /**
@@ -111,7 +111,7 @@ public class CryptoKeyVersion extends io.pulumi.resources.CustomResource {
      * The time this CryptoKeyVersion's key material was generated.
      * 
      */
-    @OutputExport(name="generateTime", type=String.class, parameters={})
+    @Export(name="generateTime", type=String.class, parameters={})
     private Output<String> generateTime;
 
     /**
@@ -125,7 +125,7 @@ public class CryptoKeyVersion extends io.pulumi.resources.CustomResource {
      * The root cause of the most recent import failure. Only present if state is IMPORT_FAILED.
      * 
      */
-    @OutputExport(name="importFailureReason", type=String.class, parameters={})
+    @Export(name="importFailureReason", type=String.class, parameters={})
     private Output<String> importFailureReason;
 
     /**
@@ -139,7 +139,7 @@ public class CryptoKeyVersion extends io.pulumi.resources.CustomResource {
      * The name of the ImportJob used in the most recent import of this CryptoKeyVersion. Only present if the underlying key material was imported.
      * 
      */
-    @OutputExport(name="importJob", type=String.class, parameters={})
+    @Export(name="importJob", type=String.class, parameters={})
     private Output<String> importJob;
 
     /**
@@ -153,7 +153,7 @@ public class CryptoKeyVersion extends io.pulumi.resources.CustomResource {
      * The time at which this CryptoKeyVersion's key material was most recently imported.
      * 
      */
-    @OutputExport(name="importTime", type=String.class, parameters={})
+    @Export(name="importTime", type=String.class, parameters={})
     private Output<String> importTime;
 
     /**
@@ -167,7 +167,7 @@ public class CryptoKeyVersion extends io.pulumi.resources.CustomResource {
      * The resource name for this CryptoKeyVersion in the format `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*{@literal /}cryptoKeyVersions/*`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -181,7 +181,7 @@ public class CryptoKeyVersion extends io.pulumi.resources.CustomResource {
      * The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.
      * 
      */
-    @OutputExport(name="protectionLevel", type=String.class, parameters={})
+    @Export(name="protectionLevel", type=String.class, parameters={})
     private Output<String> protectionLevel;
 
     /**
@@ -195,7 +195,7 @@ public class CryptoKeyVersion extends io.pulumi.resources.CustomResource {
      * Whether or not this key version is eligible for reimport, by being specified as a target in ImportCryptoKeyVersionRequest.crypto_key_version.
      * 
      */
-    @OutputExport(name="reimportEligible", type=Boolean.class, parameters={})
+    @Export(name="reimportEligible", type=Boolean.class, parameters={})
     private Output<Boolean> reimportEligible;
 
     /**
@@ -209,7 +209,7 @@ public class CryptoKeyVersion extends io.pulumi.resources.CustomResource {
      * The current state of the CryptoKeyVersion.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

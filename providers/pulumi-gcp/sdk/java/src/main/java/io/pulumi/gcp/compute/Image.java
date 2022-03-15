@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ImageArgs;
@@ -66,7 +66,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
      * 
      */
-    @OutputExport(name="archiveSizeBytes", type=Integer.class, parameters={})
+    @Export(name="archiveSizeBytes", type=Integer.class, parameters={})
     private Output<Integer> archiveSizeBytes;
 
     /**
@@ -80,7 +80,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -95,7 +95,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -110,7 +110,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * Size of the image when restored onto a persistent disk (in GB).
      * 
      */
-    @OutputExport(name="diskSizeGb", type=Integer.class, parameters={})
+    @Export(name="diskSizeGb", type=Integer.class, parameters={})
     private Output<Integer> diskSizeGb;
 
     /**
@@ -128,7 +128,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * RFC1035.
      * 
      */
-    @OutputExport(name="family", type=String.class, parameters={})
+    @Export(name="family", type=String.class, parameters={})
     private Output</* @Nullable */ String> family;
 
     /**
@@ -148,7 +148,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="guestOsFeatures", type=List.class, parameters={ImageGuestOsFeature.class})
+    @Export(name="guestOsFeatures", type=List.class, parameters={ImageGuestOsFeature.class})
     private Output<List<ImageGuestOsFeature>> guestOsFeatures;
 
     /**
@@ -164,7 +164,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * The fingerprint used for optimistic locking of this resource. Used internally during updates.
      * 
      */
-    @OutputExport(name="labelFingerprint", type=String.class, parameters={})
+    @Export(name="labelFingerprint", type=String.class, parameters={})
     private Output<String> labelFingerprint;
 
     /**
@@ -178,7 +178,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * Labels to apply to this Image.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -192,7 +192,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * Any applicable license URI.
      * 
      */
-    @OutputExport(name="licenses", type=List.class, parameters={String.class})
+    @Export(name="licenses", type=List.class, parameters={String.class})
     private Output<List<String>> licenses;
 
     /**
@@ -212,7 +212,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -233,7 +233,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -249,7 +249,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="rawDisk", type=ImageRawDisk.class, parameters={})
+    @Export(name="rawDisk", type=ImageRawDisk.class, parameters={})
     private Output</* @Nullable */ ImageRawDisk> rawDisk;
 
     /**
@@ -264,7 +264,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -280,7 +280,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * rawDisk.source property but not both to create an image.
      * 
      */
-    @OutputExport(name="sourceDisk", type=String.class, parameters={})
+    @Export(name="sourceDisk", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceDisk;
 
     /**
@@ -301,7 +301,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * * The sourceDisk URL
      * 
      */
-    @OutputExport(name="sourceImage", type=String.class, parameters={})
+    @Export(name="sourceImage", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceImage;
 
     /**
@@ -326,7 +326,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * * The sourceDisk URL
      * 
      */
-    @OutputExport(name="sourceSnapshot", type=String.class, parameters={})
+    @Export(name="sourceSnapshot", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceSnapshot;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataBoxDiskCopyLogDetailsResponse {
     /**
      * Indicates the type of job details.
@@ -31,12 +31,12 @@ public final class DataBoxDiskCopyLogDetailsResponse {
      */
     private final String verboseLogLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataBoxDiskCopyLogDetailsResponse(
-        @OutputCustomType.Parameter("copyLogDetailsType") String copyLogDetailsType,
-        @OutputCustomType.Parameter("diskSerialNumber") String diskSerialNumber,
-        @OutputCustomType.Parameter("errorLogLink") String errorLogLink,
-        @OutputCustomType.Parameter("verboseLogLink") String verboseLogLink) {
+        @CustomType.Parameter("copyLogDetailsType") String copyLogDetailsType,
+        @CustomType.Parameter("diskSerialNumber") String diskSerialNumber,
+        @CustomType.Parameter("errorLogLink") String errorLogLink,
+        @CustomType.Parameter("verboseLogLink") String verboseLogLink) {
         this.copyLogDetailsType = copyLogDetailsType;
         this.diskSerialNumber = diskSerialNumber;
         this.errorLogLink = errorLogLink;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.autonomousdevelopmentplatform.inputs;
 
 import io.pulumi.azurenative.autonomousdevelopmentplatform.inputs.DataPoolEncryptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DataPoolLocationResponse extends io.pulumi.resources.InvokeAr
      * Encryption properties of a Data Pool location
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable DataPoolEncryptionResponse encryption;
 
     public Optional<DataPoolEncryptionResponse> getEncryption() {
@@ -34,7 +34,7 @@ public final class DataPoolLocationResponse extends io.pulumi.resources.InvokeAr
      * The location name
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

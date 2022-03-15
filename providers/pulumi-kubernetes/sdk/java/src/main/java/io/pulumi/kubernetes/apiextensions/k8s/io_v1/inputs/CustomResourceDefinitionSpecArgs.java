@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceConversionArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceDefinitionNamesArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceDefinitionVersionArgs;
@@ -27,7 +27,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * conversion defines conversion settings for the CRD.
      * 
      */
-    @InputImport(name="conversion")
+    @Import(name="conversion")
       private final @Nullable Output<CustomResourceConversionArgs> conversion;
 
     public Output<CustomResourceConversionArgs> getConversion() {
@@ -38,7 +38,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * group is the API group of the defined custom resource. The custom resources are served under `/apis/<group>/...`. Must match the name of the CustomResourceDefinition (in the form `<names.plural>.<group>`).
      * 
      */
-    @InputImport(name="group", required=true)
+    @Import(name="group", required=true)
       private final Output<String> group;
 
     public Output<String> getGroup() {
@@ -49,7 +49,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * names specify the resource and kind names for the custom resource.
      * 
      */
-    @InputImport(name="names", required=true)
+    @Import(name="names", required=true)
       private final Output<CustomResourceDefinitionNamesArgs> names;
 
     public Output<CustomResourceDefinitionNamesArgs> getNames() {
@@ -60,7 +60,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * preserveUnknownFields indicates that object fields which are not specified in the OpenAPI schema should be preserved when persisting to storage. apiVersion, kind, metadata and known fields inside metadata are always preserved. This field is deprecated in favor of setting `x-preserve-unknown-fields` to true in `spec.versions[*].schema.openAPIV3Schema`. See https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/#pruning-versus-preserving-unknown-fields for details.
      * 
      */
-    @InputImport(name="preserveUnknownFields")
+    @Import(name="preserveUnknownFields")
       private final @Nullable Output<Boolean> preserveUnknownFields;
 
     public Output<Boolean> getPreserveUnknownFields() {
@@ -71,7 +71,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * scope indicates whether the defined custom resource is cluster- or namespace-scoped. Allowed values are `Cluster` and `Namespaced`.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {
@@ -82,7 +82,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * versions is the list of all API versions of the defined custom resource. Version names are used to compute the order in which served versions are listed in API discovery. If the version string is "kube-like", it will sort above non "kube-like" version strings, which are ordered lexicographically. "Kube-like" versions start with a "v", then are followed by a number (the major version), then optionally the string "alpha" or "beta" and another number (the minor version). These are sorted first by GA > beta > alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.
      * 
      */
-    @InputImport(name="versions", required=true)
+    @Import(name="versions", required=true)
       private final Output<List<CustomResourceDefinitionVersionArgs>> versions;
 
     public Output<List<CustomResourceDefinitionVersionArgs>> getVersions() {

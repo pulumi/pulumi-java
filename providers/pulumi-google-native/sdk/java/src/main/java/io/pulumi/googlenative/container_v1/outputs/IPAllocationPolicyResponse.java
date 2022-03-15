@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IPAllocationPolicyResponse {
     /**
      * The IP address range for the cluster pod IPs. If this field is set, then `cluster.cluster_ipv4_cidr` must be left blank. This field is only applicable when `use_ip_aliases` is true. Set to blank to have a range chosen with the default size. Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask. Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range to use.
@@ -61,18 +61,18 @@ public final class IPAllocationPolicyResponse {
      */
     private final Boolean useRoutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IPAllocationPolicyResponse(
-        @OutputCustomType.Parameter("clusterIpv4CidrBlock") String clusterIpv4CidrBlock,
-        @OutputCustomType.Parameter("clusterSecondaryRangeName") String clusterSecondaryRangeName,
-        @OutputCustomType.Parameter("createSubnetwork") Boolean createSubnetwork,
-        @OutputCustomType.Parameter("nodeIpv4CidrBlock") String nodeIpv4CidrBlock,
-        @OutputCustomType.Parameter("servicesIpv4CidrBlock") String servicesIpv4CidrBlock,
-        @OutputCustomType.Parameter("servicesSecondaryRangeName") String servicesSecondaryRangeName,
-        @OutputCustomType.Parameter("subnetworkName") String subnetworkName,
-        @OutputCustomType.Parameter("tpuIpv4CidrBlock") String tpuIpv4CidrBlock,
-        @OutputCustomType.Parameter("useIpAliases") Boolean useIpAliases,
-        @OutputCustomType.Parameter("useRoutes") Boolean useRoutes) {
+        @CustomType.Parameter("clusterIpv4CidrBlock") String clusterIpv4CidrBlock,
+        @CustomType.Parameter("clusterSecondaryRangeName") String clusterSecondaryRangeName,
+        @CustomType.Parameter("createSubnetwork") Boolean createSubnetwork,
+        @CustomType.Parameter("nodeIpv4CidrBlock") String nodeIpv4CidrBlock,
+        @CustomType.Parameter("servicesIpv4CidrBlock") String servicesIpv4CidrBlock,
+        @CustomType.Parameter("servicesSecondaryRangeName") String servicesSecondaryRangeName,
+        @CustomType.Parameter("subnetworkName") String subnetworkName,
+        @CustomType.Parameter("tpuIpv4CidrBlock") String tpuIpv4CidrBlock,
+        @CustomType.Parameter("useIpAliases") Boolean useIpAliases,
+        @CustomType.Parameter("useRoutes") Boolean useRoutes) {
         this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
         this.clusterSecondaryRangeName = clusterSecondaryRangeName;
         this.createSubnetwork = createSubnetwork;

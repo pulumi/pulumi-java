@@ -5,7 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.aws.ecs.inputs.CapacityProviderAutoScalingGroupProviderGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CapacityProviderState extends io.pulumi.resources.ResourceArg
      * ARN that identifies the capacity provider.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class CapacityProviderState extends io.pulumi.resources.ResourceArg
      * Configuration block for the provider for the ECS auto scaling group. Detailed below.
      * 
      */
-    @InputImport(name="autoScalingGroupProvider")
+    @Import(name="autoScalingGroupProvider")
       private final @Nullable Output<CapacityProviderAutoScalingGroupProviderGetArgs> autoScalingGroupProvider;
 
     public Output<CapacityProviderAutoScalingGroupProviderGetArgs> getAutoScalingGroupProvider() {
@@ -42,7 +42,7 @@ public final class CapacityProviderState extends io.pulumi.resources.ResourceArg
      * Name of the capacity provider.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,14 +53,14 @@ public final class CapacityProviderState extends io.pulumi.resources.ResourceArg
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

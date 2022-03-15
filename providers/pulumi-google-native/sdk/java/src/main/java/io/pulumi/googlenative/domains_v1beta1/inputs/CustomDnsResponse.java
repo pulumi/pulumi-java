@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.domains_v1beta1.inputs.DsRecordResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class CustomDnsResponse extends io.pulumi.resources.InvokeArgs {
      * The list of DS records for this domain, which are used to enable DNSSEC. The domain's DNS provider can provide the values to set here. If this field is empty, DNSSEC is disabled.
      * 
      */
-    @InputImport(name="dsRecords", required=true)
+    @Import(name="dsRecords", required=true)
       private final List<DsRecordResponse> dsRecords;
 
     public List<DsRecordResponse> getDsRecords() {
@@ -33,7 +33,7 @@ public final class CustomDnsResponse extends io.pulumi.resources.InvokeArgs {
      * A list of name servers that store the DNS zone for this domain. Each name server is a domain name, with Unicode domain names expressed in Punycode format.
      * 
      */
-    @InputImport(name="nameServers", required=true)
+    @Import(name="nameServers", required=true)
       private final List<String> nameServers;
 
     public List<String> getNameServers() {

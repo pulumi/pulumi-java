@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.codecommit.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetApprovalRuleTemplateResult {
     /**
      * The ID of the approval rule template.
@@ -51,17 +51,17 @@ public final class GetApprovalRuleTemplateResult {
      */
     private final String ruleContentSha256;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApprovalRuleTemplateResult(
-        @OutputCustomType.Parameter("approvalRuleTemplateId") String approvalRuleTemplateId,
-        @OutputCustomType.Parameter("content") String content,
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModifiedDate") String lastModifiedDate,
-        @OutputCustomType.Parameter("lastModifiedUser") String lastModifiedUser,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("ruleContentSha256") String ruleContentSha256) {
+        @CustomType.Parameter("approvalRuleTemplateId") String approvalRuleTemplateId,
+        @CustomType.Parameter("content") String content,
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModifiedDate") String lastModifiedDate,
+        @CustomType.Parameter("lastModifiedUser") String lastModifiedUser,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("ruleContentSha256") String ruleContentSha256) {
         this.approvalRuleTemplateId = approvalRuleTemplateId;
         this.content = content;
         this.creationDate = creationDate;

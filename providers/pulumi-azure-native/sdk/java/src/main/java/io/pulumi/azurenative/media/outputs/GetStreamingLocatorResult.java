@@ -5,14 +5,14 @@ package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.StreamingLocatorContentKeyResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStreamingLocatorResult {
     /**
      * Alternative Media ID of this Streaming Locator
@@ -85,22 +85,22 @@ public final class GetStreamingLocatorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStreamingLocatorResult(
-        @OutputCustomType.Parameter("alternativeMediaId") @Nullable String alternativeMediaId,
-        @OutputCustomType.Parameter("assetName") String assetName,
-        @OutputCustomType.Parameter("contentKeys") @Nullable List<StreamingLocatorContentKeyResponse> contentKeys,
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("defaultContentKeyPolicyName") @Nullable String defaultContentKeyPolicyName,
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("filters") @Nullable List<String> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
-        @OutputCustomType.Parameter("streamingLocatorId") @Nullable String streamingLocatorId,
-        @OutputCustomType.Parameter("streamingPolicyName") String streamingPolicyName,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("alternativeMediaId") @Nullable String alternativeMediaId,
+        @CustomType.Parameter("assetName") String assetName,
+        @CustomType.Parameter("contentKeys") @Nullable List<StreamingLocatorContentKeyResponse> contentKeys,
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("defaultContentKeyPolicyName") @Nullable String defaultContentKeyPolicyName,
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("filters") @Nullable List<String> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("startTime") @Nullable String startTime,
+        @CustomType.Parameter("streamingLocatorId") @Nullable String streamingLocatorId,
+        @CustomType.Parameter("streamingPolicyName") String streamingPolicyName,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.alternativeMediaId = alternativeMediaId;
         this.assetName = assetName;
         this.contentKeys = contentKeys;

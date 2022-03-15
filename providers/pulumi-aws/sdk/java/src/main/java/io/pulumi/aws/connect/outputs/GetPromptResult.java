@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.connect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPromptResult {
     /**
      * The Amazon Resource Name (ARN) of the Prompt.
@@ -27,13 +27,13 @@ public final class GetPromptResult {
      */
     private final String promptId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPromptResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceId") String instanceId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("promptId") String promptId) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceId") String instanceId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("promptId") String promptId) {
         this.arn = arn;
         this.id = id;
         this.instanceId = instanceId;

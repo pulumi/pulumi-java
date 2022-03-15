@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.TagSettingsPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureQueryPropertiesResponse {
     /**
      * List of locations to scope the query to.
@@ -29,11 +29,11 @@ public final class AzureQueryPropertiesResponse {
      */
     private final @Nullable TagSettingsPropertiesResponse tagSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureQueryPropertiesResponse(
-        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
-        @OutputCustomType.Parameter("scope") @Nullable List<String> scope,
-        @OutputCustomType.Parameter("tagSettings") @Nullable TagSettingsPropertiesResponse tagSettings) {
+        @CustomType.Parameter("locations") @Nullable List<String> locations,
+        @CustomType.Parameter("scope") @Nullable List<String> scope,
+        @CustomType.Parameter("tagSettings") @Nullable TagSettingsPropertiesResponse tagSettings) {
         this.locations = locations;
         this.scope = scope;
         this.tagSettings = tagSettings;

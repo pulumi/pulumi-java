@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.CarrierGatewayTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCarrierGatewayResult {
     /**
      * The ID of the carrier gateway.
@@ -34,12 +34,12 @@ public final class GetCarrierGatewayResult {
      */
     private final @Nullable List<CarrierGatewayTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCarrierGatewayResult(
-        @OutputCustomType.Parameter("carrierGatewayId") @Nullable String carrierGatewayId,
-        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("tags") @Nullable List<CarrierGatewayTag> tags) {
+        @CustomType.Parameter("carrierGatewayId") @Nullable String carrierGatewayId,
+        @CustomType.Parameter("ownerId") @Nullable String ownerId,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("tags") @Nullable List<CarrierGatewayTag> tags) {
         this.carrierGatewayId = carrierGatewayId;
         this.ownerId = ownerId;
         this.state = state;

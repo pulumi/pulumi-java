@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.devopsguru.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ResourceCollectionCloudFormationCollectionFilterArgs extends 
      * An array of CloudFormation stack names.
      * 
      */
-    @InputImport(name="stackNames")
+    @Import(name="stackNames")
       private final @Nullable Output<List<String>> stackNames;
 
     public Output<List<String>> getStackNames() {

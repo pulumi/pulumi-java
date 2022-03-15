@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
      * More information on OpenID Connect: http://openid.net/specs/openid-connect-core-1_0.html
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -37,7 +37,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
      * a replacement for the Client Secret Certificate Thumbprint. It is also optional.
      * 
      */
-    @InputImport(name="clientSecretCertificateIssuer")
+    @Import(name="clientSecretCertificateIssuer")
       private final @Nullable Output<String> clientSecretCertificateIssuer;
 
     public Output<String> getClientSecretCertificateIssuer() {
@@ -49,7 +49,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
      * a replacement for the Client Secret Certificate Thumbprint. It is also optional.
      * 
      */
-    @InputImport(name="clientSecretCertificateSubjectAlternativeName")
+    @Import(name="clientSecretCertificateSubjectAlternativeName")
       private final @Nullable Output<String> clientSecretCertificateSubjectAlternativeName;
 
     public Output<String> getClientSecretCertificateSubjectAlternativeName() {
@@ -61,7 +61,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
      * a replacement for the Client Secret. It is also optional.
      * 
      */
-    @InputImport(name="clientSecretCertificateThumbprint")
+    @Import(name="clientSecretCertificateThumbprint")
       private final @Nullable Output<String> clientSecretCertificateThumbprint;
 
     public Output<String> getClientSecretCertificateThumbprint() {
@@ -72,7 +72,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
      * The app setting name that contains the client secret of the relying party application.
      * 
      */
-    @InputImport(name="clientSecretSettingName")
+    @Import(name="clientSecretSettingName")
       private final @Nullable Output<String> clientSecretSettingName;
 
     public Output<String> getClientSecretSettingName() {
@@ -86,7 +86,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
      * More information on OpenID Connect Discovery: http://openid.net/specs/openid-connect-discovery-1_0.html
      * 
      */
-    @InputImport(name="openIdIssuer")
+    @Import(name="openIdIssuer")
       private final @Nullable Output<String> openIdIssuer;
 
     public Output<String> getOpenIdIssuer() {

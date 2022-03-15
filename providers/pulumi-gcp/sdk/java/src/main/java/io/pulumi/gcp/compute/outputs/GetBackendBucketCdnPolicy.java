@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetBackendBucketCdnPolicyNegativeCachingPolicy;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackendBucketCdnPolicy {
     private final String cacheMode;
     private final Integer clientTtl;
@@ -22,16 +22,16 @@ public final class GetBackendBucketCdnPolicy {
     private final Integer serveWhileStale;
     private final Integer signedUrlCacheMaxAgeSec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackendBucketCdnPolicy(
-        @OutputCustomType.Parameter("cacheMode") String cacheMode,
-        @OutputCustomType.Parameter("clientTtl") Integer clientTtl,
-        @OutputCustomType.Parameter("defaultTtl") Integer defaultTtl,
-        @OutputCustomType.Parameter("maxTtl") Integer maxTtl,
-        @OutputCustomType.Parameter("negativeCaching") Boolean negativeCaching,
-        @OutputCustomType.Parameter("negativeCachingPolicies") List<GetBackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicies,
-        @OutputCustomType.Parameter("serveWhileStale") Integer serveWhileStale,
-        @OutputCustomType.Parameter("signedUrlCacheMaxAgeSec") Integer signedUrlCacheMaxAgeSec) {
+        @CustomType.Parameter("cacheMode") String cacheMode,
+        @CustomType.Parameter("clientTtl") Integer clientTtl,
+        @CustomType.Parameter("defaultTtl") Integer defaultTtl,
+        @CustomType.Parameter("maxTtl") Integer maxTtl,
+        @CustomType.Parameter("negativeCaching") Boolean negativeCaching,
+        @CustomType.Parameter("negativeCachingPolicies") List<GetBackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicies,
+        @CustomType.Parameter("serveWhileStale") Integer serveWhileStale,
+        @CustomType.Parameter("signedUrlCacheMaxAgeSec") Integer signedUrlCacheMaxAgeSec) {
         this.cacheMode = cacheMode;
         this.clientTtl = clientTtl;
         this.defaultTtl = defaultTtl;

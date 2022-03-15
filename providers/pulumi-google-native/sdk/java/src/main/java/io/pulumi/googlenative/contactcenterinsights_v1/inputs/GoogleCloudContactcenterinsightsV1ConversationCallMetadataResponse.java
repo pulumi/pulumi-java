@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
      * The audio channel that contains the agent.
      * 
      */
-    @InputImport(name="agentChannel", required=true)
+    @Import(name="agentChannel", required=true)
       private final Integer agentChannel;
 
     public Integer getAgentChannel() {
@@ -31,7 +31,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
      * The audio channel that contains the customer.
      * 
      */
-    @InputImport(name="customerChannel", required=true)
+    @Import(name="customerChannel", required=true)
       private final Integer customerChannel;
 
     public Integer getCustomerChannel() {

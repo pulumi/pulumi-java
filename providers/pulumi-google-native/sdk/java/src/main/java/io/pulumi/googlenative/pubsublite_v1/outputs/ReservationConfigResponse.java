@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.pubsublite_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReservationConfigResponse {
     /**
      * The Reservation to use for this topic's throughput capacity. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
@@ -15,8 +15,8 @@ public final class ReservationConfigResponse {
      */
     private final String throughputReservation;
 
-    @OutputCustomType.Constructor
-    private ReservationConfigResponse(@OutputCustomType.Parameter("throughputReservation") String throughputReservation) {
+    @CustomType.Constructor
+    private ReservationConfigResponse(@CustomType.Parameter("throughputReservation") String throughputReservation) {
         this.throughputReservation = throughputReservation;
     }
 

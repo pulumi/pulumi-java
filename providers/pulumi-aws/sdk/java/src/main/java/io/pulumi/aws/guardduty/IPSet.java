@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.guardduty.IPSetArgs;
 import io.pulumi.aws.guardduty.inputs.IPSetState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class IPSet extends io.pulumi.resources.CustomResource {
      * Specifies whether GuardDuty is to start using the uploaded IPSet.
      * 
      */
-    @OutputExport(name="activate", type=Boolean.class, parameters={})
+    @Export(name="activate", type=Boolean.class, parameters={})
     private Output<Boolean> activate;
 
     /**
@@ -50,7 +50,7 @@ public class IPSet extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the GuardDuty IPSet.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -64,7 +64,7 @@ public class IPSet extends io.pulumi.resources.CustomResource {
      * The detector ID of the GuardDuty.
      * 
      */
-    @OutputExport(name="detectorId", type=String.class, parameters={})
+    @Export(name="detectorId", type=String.class, parameters={})
     private Output<String> detectorId;
 
     /**
@@ -78,7 +78,7 @@ public class IPSet extends io.pulumi.resources.CustomResource {
      * The format of the file that contains the IPSet. Valid values: `TXT` | `STIX` | `OTX_CSV` | `ALIEN_VAULT` | `PROOF_POINT` | `FIRE_EYE`
      * 
      */
-    @OutputExport(name="format", type=String.class, parameters={})
+    @Export(name="format", type=String.class, parameters={})
     private Output<String> format;
 
     /**
@@ -92,7 +92,7 @@ public class IPSet extends io.pulumi.resources.CustomResource {
      * The URI of the file that contains the IPSet.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -106,7 +106,7 @@ public class IPSet extends io.pulumi.resources.CustomResource {
      * The friendly name to identify the IPSet.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class IPSet extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -134,7 +134,7 @@ public class IPSet extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

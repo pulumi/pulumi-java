@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.AppEngineHttpTargetResponse;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.PullTargetResponse;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.QueueStatsResponse;
@@ -12,7 +12,7 @@ import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.RetryConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetQueueResult {
     /**
      * App Engine HTTP target. An App Engine queue is a queue that has an AppEngineHttpTarget.
@@ -65,18 +65,18 @@ public final class GetQueueResult {
      */
     private final String tombstoneTtl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetQueueResult(
-        @OutputCustomType.Parameter("appEngineHttpTarget") AppEngineHttpTargetResponse appEngineHttpTarget,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pullTarget") PullTargetResponse pullTarget,
-        @OutputCustomType.Parameter("purgeTime") String purgeTime,
-        @OutputCustomType.Parameter("rateLimits") RateLimitsResponse rateLimits,
-        @OutputCustomType.Parameter("retryConfig") RetryConfigResponse retryConfig,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stats") QueueStatsResponse stats,
-        @OutputCustomType.Parameter("taskTtl") String taskTtl,
-        @OutputCustomType.Parameter("tombstoneTtl") String tombstoneTtl) {
+        @CustomType.Parameter("appEngineHttpTarget") AppEngineHttpTargetResponse appEngineHttpTarget,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pullTarget") PullTargetResponse pullTarget,
+        @CustomType.Parameter("purgeTime") String purgeTime,
+        @CustomType.Parameter("rateLimits") RateLimitsResponse rateLimits,
+        @CustomType.Parameter("retryConfig") RetryConfigResponse retryConfig,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stats") QueueStatsResponse stats,
+        @CustomType.Parameter("taskTtl") String taskTtl,
+        @CustomType.Parameter("tombstoneTtl") String tombstoneTtl) {
         this.appEngineHttpTarget = appEngineHttpTarget;
         this.name = name;
         this.pullTarget = pullTarget;

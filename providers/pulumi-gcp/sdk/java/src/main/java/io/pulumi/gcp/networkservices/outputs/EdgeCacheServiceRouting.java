@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingHostRule;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcher;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EdgeCacheServiceRouting {
     /**
      * The list of hostRules to match against. These rules define which hostnames the EdgeCacheService will match against, and which route configurations apply.
@@ -23,10 +23,10 @@ public final class EdgeCacheServiceRouting {
      */
     private final List<EdgeCacheServiceRoutingPathMatcher> pathMatchers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdgeCacheServiceRouting(
-        @OutputCustomType.Parameter("hostRules") List<EdgeCacheServiceRoutingHostRule> hostRules,
-        @OutputCustomType.Parameter("pathMatchers") List<EdgeCacheServiceRoutingPathMatcher> pathMatchers) {
+        @CustomType.Parameter("hostRules") List<EdgeCacheServiceRoutingHostRule> hostRules,
+        @CustomType.Parameter("pathMatchers") List<EdgeCacheServiceRoutingPathMatcher> pathMatchers) {
         this.hostRules = hostRules;
         this.pathMatchers = pathMatchers;
     }

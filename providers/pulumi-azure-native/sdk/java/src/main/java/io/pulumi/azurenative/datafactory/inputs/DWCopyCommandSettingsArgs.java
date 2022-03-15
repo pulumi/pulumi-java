@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.DWCopyCommandDefaultValueArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class DWCopyCommandSettingsArgs extends io.pulumi.resources.Resourc
      * Additional options directly passed to SQL DW in Copy Command. Type: key value pairs (value should be string type) (or Expression with resultType object). Example: "additionalOptions": { "MAXERRORS": "1000", "DATEFORMAT": "'ymd'" }
      * 
      */
-    @InputImport(name="additionalOptions")
+    @Import(name="additionalOptions")
       private final @Nullable Output<Map<String,String>> additionalOptions;
 
     public Output<Map<String,String>> getAdditionalOptions() {
@@ -36,7 +36,7 @@ public final class DWCopyCommandSettingsArgs extends io.pulumi.resources.Resourc
      * Specifies the default values for each target column in SQL DW. The default values in the property overwrite the DEFAULT constraint set in the DB, and identity column cannot have a default value. Type: array of objects (or Expression with resultType array of objects).
      * 
      */
-    @InputImport(name="defaultValues")
+    @Import(name="defaultValues")
       private final @Nullable Output<List<DWCopyCommandDefaultValueArgs>> defaultValues;
 
     public Output<List<DWCopyCommandDefaultValueArgs>> getDefaultValues() {

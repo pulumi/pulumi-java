@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ImageTemplateManagedImageSourceResponse {
     /**
      * ARM resource id of the managed image in customer subscription
@@ -21,10 +21,10 @@ public final class ImageTemplateManagedImageSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageTemplateManagedImageSourceResponse(
-        @OutputCustomType.Parameter("imageId") String imageId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("imageId") String imageId,
+        @CustomType.Parameter("type") String type) {
         this.imageId = imageId;
         this.type = type;
     }

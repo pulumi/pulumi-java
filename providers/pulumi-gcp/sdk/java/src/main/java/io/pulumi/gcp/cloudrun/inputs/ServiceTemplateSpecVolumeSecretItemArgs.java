@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends io.pulumi.res
      * Can be 'latest' for the latest value or an integer for a specific version.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -34,7 +34,7 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends io.pulumi.res
      * the result can be other mode bits set.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<Integer> mode;
 
     public Output<Integer> getMode() {
@@ -48,7 +48,7 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends io.pulumi.res
      * May not start with the string '..'.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final Output<String> path;
 
     public Output<String> getPath() {

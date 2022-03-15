@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.dbforpostgresql.VirtualNetworkRuleArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class VirtualNetworkRule extends io.pulumi.resources.CustomResource {
      * Create firewall rule before the virtual network has vnet service endpoint enabled.
      * 
      */
-    @OutputExport(name="ignoreMissingVnetServiceEndpoint", type=Boolean.class, parameters={})
+    @Export(name="ignoreMissingVnetServiceEndpoint", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ignoreMissingVnetServiceEndpoint;
 
     /**
@@ -49,7 +49,7 @@ public class VirtualNetworkRule extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class VirtualNetworkRule extends io.pulumi.resources.CustomResource {
      * Virtual Network Rule State
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -77,7 +77,7 @@ public class VirtualNetworkRule extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -91,7 +91,7 @@ public class VirtualNetworkRule extends io.pulumi.resources.CustomResource {
      * The ARM resource id of the virtual network subnet.
      * 
      */
-    @OutputExport(name="virtualNetworkSubnetId", type=String.class, parameters={})
+    @Export(name="virtualNetworkSubnetId", type=String.class, parameters={})
     private Output<String> virtualNetworkSubnetId;
 
     /**

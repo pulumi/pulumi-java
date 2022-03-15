@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetUserPoolsResult {
     /**
      * The set of cognito user pool Amazon Resource Names (ARNs).
@@ -27,12 +27,12 @@ public final class GetUserPoolsResult {
     private final List<String> ids;
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserPoolsResult(
-        @OutputCustomType.Parameter("arns") List<String> arns,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ids") List<String> ids,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("arns") List<String> arns,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ids") List<String> ids,
+        @CustomType.Parameter("name") String name) {
         this.arns = arns;
         this.id = id;
         this.ids = ids;

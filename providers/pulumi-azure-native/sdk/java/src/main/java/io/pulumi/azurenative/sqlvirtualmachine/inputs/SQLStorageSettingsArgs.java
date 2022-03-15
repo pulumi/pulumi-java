@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class SQLStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * SQL Server default file path
      * 
      */
-    @InputImport(name="defaultFilePath")
+    @Import(name="defaultFilePath")
       private final @Nullable Output<String> defaultFilePath;
 
     public Output<String> getDefaultFilePath() {
@@ -35,7 +35,7 @@ public final class SQLStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * Logical Unit Numbers for the disks.
      * 
      */
-    @InputImport(name="luns")
+    @Import(name="luns")
       private final @Nullable Output<List<Integer>> luns;
 
     public Output<List<Integer>> getLuns() {

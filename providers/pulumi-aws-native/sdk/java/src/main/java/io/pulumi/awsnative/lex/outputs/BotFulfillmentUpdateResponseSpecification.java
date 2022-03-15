@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotMessageGroup;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotFulfillmentUpdateResponseSpecification {
     /**
      * Determines whether the user can interrupt an update message while it is playing.
@@ -26,11 +26,11 @@ public final class BotFulfillmentUpdateResponseSpecification {
     private final Integer frequencyInSeconds;
     private final List<BotMessageGroup> messageGroups;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotFulfillmentUpdateResponseSpecification(
-        @OutputCustomType.Parameter("allowInterrupt") @Nullable Boolean allowInterrupt,
-        @OutputCustomType.Parameter("frequencyInSeconds") Integer frequencyInSeconds,
-        @OutputCustomType.Parameter("messageGroups") List<BotMessageGroup> messageGroups) {
+        @CustomType.Parameter("allowInterrupt") @Nullable Boolean allowInterrupt,
+        @CustomType.Parameter("frequencyInSeconds") Integer frequencyInSeconds,
+        @CustomType.Parameter("messageGroups") List<BotMessageGroup> messageGroups) {
         this.allowInterrupt = allowInterrupt;
         this.frequencyInSeconds = frequencyInSeconds;
         this.messageGroups = messageGroups;

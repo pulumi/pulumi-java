@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeGetArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
      * Structure is documented below.
      * 
      */
-    @InputImport(name="infoType", required=true)
+    @Import(name="infoType", required=true)
       private final Output<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeGetArgs> infoType;
 
     public Output<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeGetArgs> getInfoType() {
@@ -33,7 +33,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
      * Max findings limit for the given infoType.
      * 
      */
-    @InputImport(name="maxFindings", required=true)
+    @Import(name="maxFindings", required=true)
       private final Output<Integer> maxFindings;
 
     public Output<Integer> getMaxFindings() {

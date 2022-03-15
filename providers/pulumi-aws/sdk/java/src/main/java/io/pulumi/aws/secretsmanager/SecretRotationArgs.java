@@ -5,7 +5,7 @@ package io.pulumi.aws.secretsmanager;
 
 import io.pulumi.aws.secretsmanager.inputs.SecretRotationRotationRulesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the ARN of the Lambda function that can rotate the secret.
      * 
      */
-    @InputImport(name="rotationLambdaArn", required=true)
+    @Import(name="rotationLambdaArn", required=true)
       private final Output<String> rotationLambdaArn;
 
     public Output<String> getRotationLambdaArn() {
@@ -31,7 +31,7 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
      * A structure that defines the rotation configuration for this secret. Defined below.
      * 
      */
-    @InputImport(name="rotationRules", required=true)
+    @Import(name="rotationRules", required=true)
       private final Output<SecretRotationRotationRulesArgs> rotationRules;
 
     public Output<SecretRotationRotationRulesArgs> getRotationRules() {
@@ -42,14 +42,14 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the secret to which you want to add a new version. You can specify either the Amazon Resource Name (ARN) or the friendly name of the secret. The secret must already exist.
      * 
      */
-    @InputImport(name="secretId", required=true)
+    @Import(name="secretId", required=true)
       private final Output<String> secretId;
 
     public Output<String> getSecretId() {
         return this.secretId;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

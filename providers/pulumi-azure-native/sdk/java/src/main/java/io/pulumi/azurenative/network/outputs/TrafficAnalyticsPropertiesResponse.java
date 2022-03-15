@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.TrafficAnalyticsConfigurationPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TrafficAnalyticsPropertiesResponse {
     /**
      * Parameters that define the configuration of traffic analytics.
@@ -17,8 +17,8 @@ public final class TrafficAnalyticsPropertiesResponse {
      */
     private final @Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration;
 
-    @OutputCustomType.Constructor
-    private TrafficAnalyticsPropertiesResponse(@OutputCustomType.Parameter("networkWatcherFlowAnalyticsConfiguration") @Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration) {
+    @CustomType.Constructor
+    private TrafficAnalyticsPropertiesResponse(@CustomType.Parameter("networkWatcherFlowAnalyticsConfiguration") @Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration) {
         this.networkWatcherFlowAnalyticsConfiguration = networkWatcherFlowAnalyticsConfiguration;
     }
 

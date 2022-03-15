@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.appsync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResolverSyncConfigLambdaConflictHandlerConfig {
     /**
      * The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
@@ -17,8 +17,8 @@ public final class ResolverSyncConfigLambdaConflictHandlerConfig {
      */
     private final @Nullable String lambdaConflictHandlerArn;
 
-    @OutputCustomType.Constructor
-    private ResolverSyncConfigLambdaConflictHandlerConfig(@OutputCustomType.Parameter("lambdaConflictHandlerArn") @Nullable String lambdaConflictHandlerArn) {
+    @CustomType.Constructor
+    private ResolverSyncConfigLambdaConflictHandlerConfig(@CustomType.Parameter("lambdaConflictHandlerArn") @Nullable String lambdaConflictHandlerArn) {
         this.lambdaConflictHandlerArn = lambdaConflictHandlerArn;
     }
 

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzPowerShellSetupResponse {
     /**
      * The type of custom setup.
@@ -21,10 +21,10 @@ public final class AzPowerShellSetupResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzPowerShellSetupResponse(
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") String version) {
         this.type = type;
         this.version = version;
     }

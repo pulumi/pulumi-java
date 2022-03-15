@@ -6,7 +6,7 @@ package io.pulumi.awsnative.nimblestudio.outputs;
 import io.pulumi.awsnative.nimblestudio.enums.LaunchProfileStreamingClipboardMode;
 import io.pulumi.awsnative.nimblestudio.enums.LaunchProfileStreamingInstanceType;
 import io.pulumi.awsnative.nimblestudio.outputs.LaunchProfileStreamConfigurationSessionStorage;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LaunchProfileStreamConfiguration {
     private final LaunchProfileStreamingClipboardMode clipboardMode;
     /**
@@ -53,14 +53,14 @@ public final class LaunchProfileStreamConfiguration {
      */
     private final List<String> streamingImageIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LaunchProfileStreamConfiguration(
-        @OutputCustomType.Parameter("clipboardMode") LaunchProfileStreamingClipboardMode clipboardMode,
-        @OutputCustomType.Parameter("ec2InstanceTypes") List<LaunchProfileStreamingInstanceType> ec2InstanceTypes,
-        @OutputCustomType.Parameter("maxSessionLengthInMinutes") @Nullable Double maxSessionLengthInMinutes,
-        @OutputCustomType.Parameter("maxStoppedSessionLengthInMinutes") @Nullable Double maxStoppedSessionLengthInMinutes,
-        @OutputCustomType.Parameter("sessionStorage") @Nullable LaunchProfileStreamConfigurationSessionStorage sessionStorage,
-        @OutputCustomType.Parameter("streamingImageIds") List<String> streamingImageIds) {
+        @CustomType.Parameter("clipboardMode") LaunchProfileStreamingClipboardMode clipboardMode,
+        @CustomType.Parameter("ec2InstanceTypes") List<LaunchProfileStreamingInstanceType> ec2InstanceTypes,
+        @CustomType.Parameter("maxSessionLengthInMinutes") @Nullable Double maxSessionLengthInMinutes,
+        @CustomType.Parameter("maxStoppedSessionLengthInMinutes") @Nullable Double maxStoppedSessionLengthInMinutes,
+        @CustomType.Parameter("sessionStorage") @Nullable LaunchProfileStreamConfigurationSessionStorage sessionStorage,
+        @CustomType.Parameter("streamingImageIds") List<String> streamingImageIds) {
         this.clipboardMode = clipboardMode;
         this.ec2InstanceTypes = ec2InstanceTypes;
         this.maxSessionLengthInMinutes = maxSessionLengthInMinutes;

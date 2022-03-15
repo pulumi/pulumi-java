@@ -8,7 +8,7 @@ import io.pulumi.azurenative.automation.ScheduleArgs;
 import io.pulumi.azurenative.automation.outputs.AdvancedScheduleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -38,7 +38,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Gets or sets the advanced schedule.
      * 
      */
-    @OutputExport(name="advancedSchedule", type=AdvancedScheduleResponse.class, parameters={})
+    @Export(name="advancedSchedule", type=AdvancedScheduleResponse.class, parameters={})
     private Output</* @Nullable */ AdvancedScheduleResponse> advancedSchedule;
 
     /**
@@ -52,7 +52,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Gets or sets the creation time.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationTime;
 
     /**
@@ -66,7 +66,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Gets or sets the description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -80,7 +80,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Gets or sets the end time of the schedule.
      * 
      */
-    @OutputExport(name="expiryTime", type=String.class, parameters={})
+    @Export(name="expiryTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> expiryTime;
 
     /**
@@ -94,7 +94,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Gets or sets the expiry time's offset in minutes.
      * 
      */
-    @OutputExport(name="expiryTimeOffsetMinutes", type=Double.class, parameters={})
+    @Export(name="expiryTimeOffsetMinutes", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> expiryTimeOffsetMinutes;
 
     /**
@@ -108,7 +108,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Gets or sets the frequency of the schedule.
      * 
      */
-    @OutputExport(name="frequency", type=String.class, parameters={})
+    @Export(name="frequency", type=String.class, parameters={})
     private Output</* @Nullable */ String> frequency;
 
     /**
@@ -122,7 +122,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Gets or sets the interval of the schedule.
      * 
      */
-    @OutputExport(name="interval", type=Object.class, parameters={})
+    @Export(name="interval", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> interval;
 
     /**
@@ -136,7 +136,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Gets or sets a value indicating whether this schedule is enabled.
      * 
      */
-    @OutputExport(name="isEnabled", type=Boolean.class, parameters={})
+    @Export(name="isEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isEnabled;
 
     /**
@@ -150,7 +150,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Gets or sets the last modified time.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedTime;
 
     /**
@@ -164,7 +164,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -178,7 +178,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Gets or sets the next run time of the schedule.
      * 
      */
-    @OutputExport(name="nextRun", type=String.class, parameters={})
+    @Export(name="nextRun", type=String.class, parameters={})
     private Output</* @Nullable */ String> nextRun;
 
     /**
@@ -192,7 +192,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Gets or sets the next run time's offset in minutes.
      * 
      */
-    @OutputExport(name="nextRunOffsetMinutes", type=Double.class, parameters={})
+    @Export(name="nextRunOffsetMinutes", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> nextRunOffsetMinutes;
 
     /**
@@ -206,7 +206,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Gets or sets the start time of the schedule.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> startTime;
 
     /**
@@ -220,7 +220,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Gets the start time's offset in minutes.
      * 
      */
-    @OutputExport(name="startTimeOffsetMinutes", type=Double.class, parameters={})
+    @Export(name="startTimeOffsetMinutes", type=Double.class, parameters={})
     private Output<Double> startTimeOffsetMinutes;
 
     /**
@@ -234,7 +234,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Gets or sets the time zone of the schedule.
      * 
      */
-    @OutputExport(name="timeZone", type=String.class, parameters={})
+    @Export(name="timeZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> timeZone;
 
     /**
@@ -248,7 +248,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

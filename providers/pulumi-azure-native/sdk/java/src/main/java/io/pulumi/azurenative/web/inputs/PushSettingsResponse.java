@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
      * 
      */
-    @InputImport(name="dynamicTagsJson")
+    @Import(name="dynamicTagsJson")
       private final @Nullable String dynamicTagsJson;
 
     public Optional<String> getDynamicTagsJson() {
@@ -34,7 +34,7 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * Resource Id.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -45,7 +45,7 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets a flag indicating whether the Push endpoint is enabled.
      * 
      */
-    @InputImport(name="isPushEnabled", required=true)
+    @Import(name="isPushEnabled", required=true)
       private final Boolean isPushEnabled;
 
     public Boolean getIsPushEnabled() {
@@ -56,7 +56,7 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable String kind;
 
     public Optional<String> getKind() {
@@ -67,7 +67,7 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * Resource Name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -78,7 +78,7 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
      * 
      */
-    @InputImport(name="tagWhitelistJson")
+    @Import(name="tagWhitelistJson")
       private final @Nullable String tagWhitelistJson;
 
     public Optional<String> getTagWhitelistJson() {
@@ -92,7 +92,7 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * Validation should be performed at the PushRequestHandler.
      * 
      */
-    @InputImport(name="tagsRequiringAuth")
+    @Import(name="tagsRequiringAuth")
       private final @Nullable String tagsRequiringAuth;
 
     public Optional<String> getTagsRequiringAuth() {
@@ -103,7 +103,7 @@ public final class PushSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

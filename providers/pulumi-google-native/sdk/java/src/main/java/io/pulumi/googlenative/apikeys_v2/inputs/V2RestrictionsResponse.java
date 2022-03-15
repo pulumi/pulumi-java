@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apikeys_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apikeys_v2.inputs.V2AndroidKeyRestrictionsResponse;
 import io.pulumi.googlenative.apikeys_v2.inputs.V2ApiTargetResponse;
 import io.pulumi.googlenative.apikeys_v2.inputs.V2BrowserKeyRestrictionsResponse;
@@ -25,7 +25,7 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
      * The Android apps that are allowed to use the key.
      * 
      */
-    @InputImport(name="androidKeyRestrictions", required=true)
+    @Import(name="androidKeyRestrictions", required=true)
       private final V2AndroidKeyRestrictionsResponse androidKeyRestrictions;
 
     public V2AndroidKeyRestrictionsResponse getAndroidKeyRestrictions() {
@@ -36,7 +36,7 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
      * A restriction for a specific service and optionally one or more specific methods. Requests are allowed if they match any of these restrictions. If no restrictions are specified, all targets are allowed.
      * 
      */
-    @InputImport(name="apiTargets", required=true)
+    @Import(name="apiTargets", required=true)
       private final List<V2ApiTargetResponse> apiTargets;
 
     public List<V2ApiTargetResponse> getApiTargets() {
@@ -47,7 +47,7 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
      * The HTTP referrers (websites) that are allowed to use the key.
      * 
      */
-    @InputImport(name="browserKeyRestrictions", required=true)
+    @Import(name="browserKeyRestrictions", required=true)
       private final V2BrowserKeyRestrictionsResponse browserKeyRestrictions;
 
     public V2BrowserKeyRestrictionsResponse getBrowserKeyRestrictions() {
@@ -58,7 +58,7 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
      * The iOS apps that are allowed to use the key.
      * 
      */
-    @InputImport(name="iosKeyRestrictions", required=true)
+    @Import(name="iosKeyRestrictions", required=true)
       private final V2IosKeyRestrictionsResponse iosKeyRestrictions;
 
     public V2IosKeyRestrictionsResponse getIosKeyRestrictions() {
@@ -69,7 +69,7 @@ public final class V2RestrictionsResponse extends io.pulumi.resources.InvokeArgs
      * The IP addresses of callers that are allowed to use the key.
      * 
      */
-    @InputImport(name="serverKeyRestrictions", required=true)
+    @Import(name="serverKeyRestrictions", required=true)
       private final V2ServerKeyRestrictionsResponse serverKeyRestrictions;
 
     public V2ServerKeyRestrictionsResponse getServerKeyRestrictions() {

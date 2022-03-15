@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends io
      * The name of the P2SVpnGateway.
      * 
      */
-    @InputImport(name="gatewayName", required=true)
+    @Import(name="gatewayName", required=true)
       private final String gatewayName;
 
     public String getGatewayName() {
@@ -30,7 +30,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends io
      * The sas-url to download the P2S Vpn connection health detail.
      * 
      */
-    @InputImport(name="outputBlobSasUrl")
+    @Import(name="outputBlobSasUrl")
       private final @Nullable String outputBlobSasUrl;
 
     public Optional<String> getOutputBlobSasUrl() {
@@ -41,7 +41,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends io
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthDetailedArgs extends io
      * The list of p2s vpn user names whose p2s vpn connection detailed health to retrieve for.
      * 
      */
-    @InputImport(name="vpnUserNamesFilter")
+    @Import(name="vpnUserNamesFilter")
       private final @Nullable List<String> vpnUserNamesFilter;
 
     public List<String> getVpnUserNamesFilter() {

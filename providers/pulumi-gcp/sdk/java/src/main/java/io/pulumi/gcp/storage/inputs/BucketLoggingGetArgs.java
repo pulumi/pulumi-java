@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BucketLoggingGetArgs extends io.pulumi.resources.ResourceArgs
      * The bucket that will receive log objects.
      * 
      */
-    @InputImport(name="logBucket", required=true)
+    @Import(name="logBucket", required=true)
       private final Output<String> logBucket;
 
     public Output<String> getLogBucket() {
@@ -30,7 +30,7 @@ public final class BucketLoggingGetArgs extends io.pulumi.resources.ResourceArgs
      * by default GCS sets this to this bucket's name.
      * 
      */
-    @InputImport(name="logObjectPrefix")
+    @Import(name="logObjectPrefix")
       private final @Nullable Output<String> logObjectPrefix;
 
     public Output<String> getLogObjectPrefix() {

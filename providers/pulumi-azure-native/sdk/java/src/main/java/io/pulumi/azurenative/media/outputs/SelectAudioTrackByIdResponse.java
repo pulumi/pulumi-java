@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SelectAudioTrackByIdResponse {
     /**
      * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
@@ -29,11 +29,11 @@ public final class SelectAudioTrackByIdResponse {
      */
     private final Double trackId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SelectAudioTrackByIdResponse(
-        @OutputCustomType.Parameter("channelMapping") @Nullable String channelMapping,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("trackId") Double trackId) {
+        @CustomType.Parameter("channelMapping") @Nullable String channelMapping,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("trackId") Double trackId) {
         this.channelMapping = channelMapping;
         this.odataType = odataType;
         this.trackId = trackId;

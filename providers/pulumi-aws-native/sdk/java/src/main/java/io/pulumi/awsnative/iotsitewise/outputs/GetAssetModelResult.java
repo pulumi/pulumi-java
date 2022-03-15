@@ -7,14 +7,14 @@ import io.pulumi.awsnative.iotsitewise.outputs.AssetModelCompositeModel;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelHierarchy;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelProperty;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAssetModelResult {
     /**
      * The ARN of the asset model, which has the following format.
@@ -57,16 +57,16 @@ public final class GetAssetModelResult {
      */
     private final @Nullable List<AssetModelTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAssetModelResult(
-        @OutputCustomType.Parameter("assetModelArn") @Nullable String assetModelArn,
-        @OutputCustomType.Parameter("assetModelCompositeModels") @Nullable List<AssetModelCompositeModel> assetModelCompositeModels,
-        @OutputCustomType.Parameter("assetModelDescription") @Nullable String assetModelDescription,
-        @OutputCustomType.Parameter("assetModelHierarchies") @Nullable List<AssetModelHierarchy> assetModelHierarchies,
-        @OutputCustomType.Parameter("assetModelId") @Nullable String assetModelId,
-        @OutputCustomType.Parameter("assetModelName") @Nullable String assetModelName,
-        @OutputCustomType.Parameter("assetModelProperties") @Nullable List<AssetModelProperty> assetModelProperties,
-        @OutputCustomType.Parameter("tags") @Nullable List<AssetModelTag> tags) {
+        @CustomType.Parameter("assetModelArn") @Nullable String assetModelArn,
+        @CustomType.Parameter("assetModelCompositeModels") @Nullable List<AssetModelCompositeModel> assetModelCompositeModels,
+        @CustomType.Parameter("assetModelDescription") @Nullable String assetModelDescription,
+        @CustomType.Parameter("assetModelHierarchies") @Nullable List<AssetModelHierarchy> assetModelHierarchies,
+        @CustomType.Parameter("assetModelId") @Nullable String assetModelId,
+        @CustomType.Parameter("assetModelName") @Nullable String assetModelName,
+        @CustomType.Parameter("assetModelProperties") @Nullable List<AssetModelProperty> assetModelProperties,
+        @CustomType.Parameter("tags") @Nullable List<AssetModelTag> tags) {
         this.assetModelArn = assetModelArn;
         this.assetModelCompositeModels = assetModelCompositeModels;
         this.assetModelDescription = assetModelDescription;

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity;
 import java.lang.Boolean;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig {
     /**
      * Optional. If true, all instances in the cluster will only have internal IP addresses. By default, clusters are not restricted to internal IP addresses, and will have ephemeral external IP addresses assigned to each instance. This `internal_ip_only` restriction can only be enabled for subnetwork enabled networks, and all off-cluster dependencies must be configured to be accessible without external IP addresses.
@@ -72,19 +72,19 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig(
-        @OutputCustomType.Parameter("internalIpOnly") @Nullable Boolean internalIpOnly,
-        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
-        @OutputCustomType.Parameter("network") @Nullable String network,
-        @OutputCustomType.Parameter("nodeGroupAffinity") @Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity nodeGroupAffinity,
-        @OutputCustomType.Parameter("privateIpv6GoogleAccess") @Nullable String privateIpv6GoogleAccess,
-        @OutputCustomType.Parameter("reservationAffinity") @Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity reservationAffinity,
-        @OutputCustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
-        @OutputCustomType.Parameter("serviceAccountScopes") @Nullable List<String> serviceAccountScopes,
-        @OutputCustomType.Parameter("subnetwork") @Nullable String subnetwork,
-        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
-        @OutputCustomType.Parameter("zone") @Nullable String zone) {
+        @CustomType.Parameter("internalIpOnly") @Nullable Boolean internalIpOnly,
+        @CustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @CustomType.Parameter("network") @Nullable String network,
+        @CustomType.Parameter("nodeGroupAffinity") @Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity nodeGroupAffinity,
+        @CustomType.Parameter("privateIpv6GoogleAccess") @Nullable String privateIpv6GoogleAccess,
+        @CustomType.Parameter("reservationAffinity") @Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity reservationAffinity,
+        @CustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
+        @CustomType.Parameter("serviceAccountScopes") @Nullable List<String> serviceAccountScopes,
+        @CustomType.Parameter("subnetwork") @Nullable String subnetwork,
+        @CustomType.Parameter("tags") @Nullable List<String> tags,
+        @CustomType.Parameter("zone") @Nullable String zone) {
         this.internalIpOnly = internalIpOnly;
         this.metadata = metadata;
         this.network = network;

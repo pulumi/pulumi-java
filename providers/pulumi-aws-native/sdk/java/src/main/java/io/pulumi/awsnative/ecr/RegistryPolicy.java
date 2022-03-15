@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ecr;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ecr.RegistryPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -24,7 +24,7 @@ public class RegistryPolicy extends io.pulumi.resources.CustomResource {
      * The JSON policy text to apply to your registry. The policy text follows the same format as IAM policy text. For more information, see Registry permissions (https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html) in the Amazon Elastic Container Registry User Guide.
      * 
      */
-    @OutputExport(name="policyText", type=Object.class, parameters={})
+    @Export(name="policyText", type=Object.class, parameters={})
     private Output<Object> policyText;
 
     /**
@@ -34,7 +34,7 @@ public class RegistryPolicy extends io.pulumi.resources.CustomResource {
     public Output<Object> getPolicyText() {
         return this.policyText;
     }
-    @OutputExport(name="registryId", type=String.class, parameters={})
+    @Export(name="registryId", type=String.class, parameters={})
     private Output<String> registryId;
 
     public Output<String> getRegistryId() {

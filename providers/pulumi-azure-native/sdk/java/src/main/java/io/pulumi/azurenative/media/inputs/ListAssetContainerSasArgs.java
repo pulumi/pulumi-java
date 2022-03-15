@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.enums.AssetContainerPermission;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class ListAssetContainerSasArgs extends io.pulumi.resources.InvokeA
      * The Media Services account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -31,7 +31,7 @@ public final class ListAssetContainerSasArgs extends io.pulumi.resources.InvokeA
      * The Asset name.
      * 
      */
-    @InputImport(name="assetName", required=true)
+    @Import(name="assetName", required=true)
       private final String assetName;
 
     public String getAssetName() {
@@ -42,7 +42,7 @@ public final class ListAssetContainerSasArgs extends io.pulumi.resources.InvokeA
      * The SAS URL expiration time.  This must be less than 24 hours from the current time.
      * 
      */
-    @InputImport(name="expiryTime")
+    @Import(name="expiryTime")
       private final @Nullable String expiryTime;
 
     public Optional<String> getExpiryTime() {
@@ -53,7 +53,7 @@ public final class ListAssetContainerSasArgs extends io.pulumi.resources.InvokeA
      * The permissions to set on the SAS URL.
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Either<String,AssetContainerPermission> permissions;
 
     public Either<String,AssetContainerPermission> getPermissions() {
@@ -64,7 +64,7 @@ public final class ListAssetContainerSasArgs extends io.pulumi.resources.InvokeA
      * The name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

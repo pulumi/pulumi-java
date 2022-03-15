@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EndpointInfoResponse {
     /**
      * Destination IP address.
@@ -51,16 +51,16 @@ public final class EndpointInfoResponse {
      */
     private final Integer sourcePort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointInfoResponse(
-        @OutputCustomType.Parameter("destinationIp") String destinationIp,
-        @OutputCustomType.Parameter("destinationNetworkUri") String destinationNetworkUri,
-        @OutputCustomType.Parameter("destinationPort") Integer destinationPort,
-        @OutputCustomType.Parameter("protocol") String protocol,
-        @OutputCustomType.Parameter("sourceAgentUri") String sourceAgentUri,
-        @OutputCustomType.Parameter("sourceIp") String sourceIp,
-        @OutputCustomType.Parameter("sourceNetworkUri") String sourceNetworkUri,
-        @OutputCustomType.Parameter("sourcePort") Integer sourcePort) {
+        @CustomType.Parameter("destinationIp") String destinationIp,
+        @CustomType.Parameter("destinationNetworkUri") String destinationNetworkUri,
+        @CustomType.Parameter("destinationPort") Integer destinationPort,
+        @CustomType.Parameter("protocol") String protocol,
+        @CustomType.Parameter("sourceAgentUri") String sourceAgentUri,
+        @CustomType.Parameter("sourceIp") String sourceIp,
+        @CustomType.Parameter("sourceNetworkUri") String sourceNetworkUri,
+        @CustomType.Parameter("sourcePort") Integer sourcePort) {
         this.destinationIp = destinationIp;
         this.destinationNetworkUri = destinationNetworkUri;
         this.destinationPort = destinationPort;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 import io.pulumi.azurenative.databoxedge.inputs.KubernetesRoleComputeArgs;
 import io.pulumi.azurenative.databoxedge.inputs.KubernetesRoleStorageArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class KubernetesRoleResourcesArgs extends io.pulumi.resources.Resou
      * Kubernetes role compute resource
      * 
      */
-    @InputImport(name="compute", required=true)
+    @Import(name="compute", required=true)
       private final Output<KubernetesRoleComputeArgs> compute;
 
     public Output<KubernetesRoleComputeArgs> getCompute() {
@@ -34,7 +34,7 @@ public final class KubernetesRoleResourcesArgs extends io.pulumi.resources.Resou
      * Kubernetes role storage resource
      * 
      */
-    @InputImport(name="storage")
+    @Import(name="storage")
       private final @Nullable Output<KubernetesRoleStorageArgs> storage;
 
     public Output<KubernetesRoleStorageArgs> getStorage() {

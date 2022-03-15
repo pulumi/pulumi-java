@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybridcompute;
 
 import io.pulumi.azurenative.hybridcompute.inputs.HybridComputePrivateLinkScopePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -31,7 +31,7 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
      * Properties that define a Azure Arc PrivateLinkScope resource.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<HybridComputePrivateLinkScopePropertiesArgs> properties;
 
     public Output<HybridComputePrivateLinkScopePropertiesArgs> getProperties() {
@@ -42,7 +42,7 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
      * The name of the Azure Arc PrivateLinkScope resource.
      * 
      */
-    @InputImport(name="scopeName")
+    @Import(name="scopeName")
       private final @Nullable Output<String> scopeName;
 
     public Output<String> getScopeName() {
@@ -64,7 +64,7 @@ public final class PrivateLinkScopeArgs extends io.pulumi.resources.ResourceArgs
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

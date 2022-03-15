@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class VpcEndpointSubnetAssociationArgs extends io.pulumi.resources.
      * The ID of the subnet to be associated with the VPC endpoint.
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -28,7 +28,7 @@ public final class VpcEndpointSubnetAssociationArgs extends io.pulumi.resources.
      * The ID of the VPC endpoint with which the subnet will be associated.
      * 
      */
-    @InputImport(name="vpcEndpointId", required=true)
+    @Import(name="vpcEndpointId", required=true)
       private final Output<String> vpcEndpointId;
 
     public Output<String> getVpcEndpointId() {

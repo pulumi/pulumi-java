@@ -10,7 +10,7 @@ import io.pulumi.azurenative.timeseriesinsights.outputs.SkuResponse;
 import io.pulumi.azurenative.timeseriesinsights.outputs.TimeSeriesIdPropertyResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * The time the resource was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -52,7 +52,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * The fully qualified domain name used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
      * 
      */
-    @OutputExport(name="dataAccessFqdn", type=String.class, parameters={})
+    @Export(name="dataAccessFqdn", type=String.class, parameters={})
     private Output<String> dataAccessFqdn;
 
     /**
@@ -66,7 +66,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * An id used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
      * 
      */
-    @OutputExport(name="dataAccessId", type=String.class, parameters={})
+    @Export(name="dataAccessId", type=String.class, parameters={})
     private Output<String> dataAccessId;
 
     /**
@@ -80,7 +80,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * ISO8601 timespan specifying the minimum number of days the environment's events will be available for query.
      * 
      */
-    @OutputExport(name="dataRetentionTime", type=String.class, parameters={})
+    @Export(name="dataRetentionTime", type=String.class, parameters={})
     private Output<String> dataRetentionTime;
 
     /**
@@ -95,7 +95,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * Expected value is 'Gen1'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -110,7 +110,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -124,7 +124,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -138,7 +138,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * The list of event properties which will be used to partition data in the environment. Currently, only a single partition key property is supported.
      * 
      */
-    @OutputExport(name="partitionKeyProperties", type=List.class, parameters={TimeSeriesIdPropertyResponse.class})
+    @Export(name="partitionKeyProperties", type=List.class, parameters={TimeSeriesIdPropertyResponse.class})
     private Output</* @Nullable */ List<TimeSeriesIdPropertyResponse>> partitionKeyProperties;
 
     /**
@@ -152,7 +152,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * Provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -166,7 +166,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
@@ -180,7 +180,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * An object that represents the status of the environment, and its internal state in the Time Series Insights service.
      * 
      */
-    @OutputExport(name="status", type=EnvironmentStatusResponse.class, parameters={})
+    @Export(name="status", type=EnvironmentStatusResponse.class, parameters={})
     private Output<EnvironmentStatusResponse> status;
 
     /**
@@ -194,7 +194,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * The behavior the Time Series Insights service should take when the environment's capacity has been exceeded. If "PauseIngress" is specified, new events will not be read from the event source. If "PurgeOldData" is specified, new events will continue to be read and old events will be deleted from the environment. The default behavior is PurgeOldData.
      * 
      */
-    @OutputExport(name="storageLimitExceededBehavior", type=String.class, parameters={})
+    @Export(name="storageLimitExceededBehavior", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageLimitExceededBehavior;
 
     /**
@@ -208,7 +208,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -222,7 +222,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

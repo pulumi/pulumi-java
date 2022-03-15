@@ -4,7 +4,7 @@
 package io.pulumi.foobar.deeply_nested_module;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.foobar.Utilities;
 import io.pulumi.foobar.deeply_nested_module.ResourceArgs;
@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="foo-bar:deeply/nested/module:Resource")
 public class Resource extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="baz", type=String.class, parameters={})
+    @Export(name="baz", type=String.class, parameters={})
     private Output</* @Nullable */ String> baz;
 
     public Output</* @Nullable */ String> getBaz() {

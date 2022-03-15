@@ -10,7 +10,7 @@ import io.pulumi.aws.appstream.outputs.ImageBuilderAccessEndpoint;
 import io.pulumi.aws.appstream.outputs.ImageBuilderDomainJoinInfo;
 import io.pulumi.aws.appstream.outputs.ImageBuilderVpcConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * Set of interface VPC endpoint (interface endpoint) objects. Maximum of 4. See below.
      * 
      */
-    @OutputExport(name="accessEndpoints", type=List.class, parameters={ImageBuilderAccessEndpoint.class})
+    @Export(name="accessEndpoints", type=List.class, parameters={ImageBuilderAccessEndpoint.class})
     private Output</* @Nullable */ List<ImageBuilderAccessEndpoint>> accessEndpoints;
 
     /**
@@ -52,7 +52,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * The version of the AppStream 2.0 agent to use for this image builder.
      * 
      */
-    @OutputExport(name="appstreamAgentVersion", type=String.class, parameters={})
+    @Export(name="appstreamAgentVersion", type=String.class, parameters={})
     private Output<String> appstreamAgentVersion;
 
     /**
@@ -66,7 +66,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * ARN of the appstream image builder.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -80,7 +80,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * Date and time, in UTC and extended RFC 3339 format, when the image builder was created.
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -94,7 +94,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * Description to display.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -108,7 +108,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * Human-readable friendly name for the AppStream image builder.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -122,7 +122,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * Configuration block for the name of the directory and organizational unit (OU) to use to join the image builder to a Microsoft Active Directory domain. See below.
      * 
      */
-    @OutputExport(name="domainJoinInfo", type=ImageBuilderDomainJoinInfo.class, parameters={})
+    @Export(name="domainJoinInfo", type=ImageBuilderDomainJoinInfo.class, parameters={})
     private Output<ImageBuilderDomainJoinInfo> domainJoinInfo;
 
     /**
@@ -136,7 +136,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * Enables or disables default internet access for the image builder.
      * 
      */
-    @OutputExport(name="enableDefaultInternetAccess", type=Boolean.class, parameters={})
+    @Export(name="enableDefaultInternetAccess", type=Boolean.class, parameters={})
     private Output<Boolean> enableDefaultInternetAccess;
 
     /**
@@ -150,7 +150,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * ARN of the IAM role to apply to the image builder.
      * 
      */
-    @OutputExport(name="iamRoleArn", type=String.class, parameters={})
+    @Export(name="iamRoleArn", type=String.class, parameters={})
     private Output<String> iamRoleArn;
 
     /**
@@ -164,7 +164,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * ARN of the public, private, or shared image to use.
      * 
      */
-    @OutputExport(name="imageArn", type=String.class, parameters={})
+    @Export(name="imageArn", type=String.class, parameters={})
     private Output<String> imageArn;
 
     /**
@@ -178,7 +178,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * Name of the image used to create the image builder.
      * 
      */
-    @OutputExport(name="imageName", type=String.class, parameters={})
+    @Export(name="imageName", type=String.class, parameters={})
     private Output<String> imageName;
 
     /**
@@ -192,7 +192,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * The instance type to use when launching the image builder.
      * 
      */
-    @OutputExport(name="instanceType", type=String.class, parameters={})
+    @Export(name="instanceType", type=String.class, parameters={})
     private Output<String> instanceType;
 
     /**
@@ -206,7 +206,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * Unique name for the image builder.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -220,7 +220,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * State of the image builder. Can be: `PENDING`, `UPDATING_AGENT`, `RUNNING`, `STOPPING`, `STOPPED`, `REBOOTING`, `SNAPSHOTTING`, `DELETING`, `FAILED`, `UPDATING`, `PENDING_QUALIFICATION`
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -234,7 +234,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the instance. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -248,7 +248,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -262,7 +262,7 @@ public class ImageBuilder extends io.pulumi.resources.CustomResource {
      * Configuration block for the VPC configuration for the image builder. See below.
      * 
      */
-    @OutputExport(name="vpcConfig", type=ImageBuilderVpcConfig.class, parameters={})
+    @Export(name="vpcConfig", type=ImageBuilderVpcConfig.class, parameters={})
     private Output<ImageBuilderVpcConfig> vpcConfig;
 
     /**

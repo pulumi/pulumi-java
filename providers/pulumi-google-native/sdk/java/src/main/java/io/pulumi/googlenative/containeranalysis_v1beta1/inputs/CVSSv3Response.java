@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class CVSSv3Response extends io.pulumi.resources.InvokeArgs {
 
     public static final CVSSv3Response Empty = new CVSSv3Response();
 
-    @InputImport(name="attackComplexity", required=true)
+    @Import(name="attackComplexity", required=true)
       private final String attackComplexity;
 
     public String getAttackComplexity() {
@@ -28,14 +28,14 @@ public final class CVSSv3Response extends io.pulumi.resources.InvokeArgs {
      * Base Metrics Represents the intrinsic characteristics of a vulnerability that are constant over time and across user environments.
      * 
      */
-    @InputImport(name="attackVector", required=true)
+    @Import(name="attackVector", required=true)
       private final String attackVector;
 
     public String getAttackVector() {
         return this.attackVector;
     }
 
-    @InputImport(name="availabilityImpact", required=true)
+    @Import(name="availabilityImpact", required=true)
       private final String availabilityImpact;
 
     public String getAvailabilityImpact() {
@@ -46,56 +46,56 @@ public final class CVSSv3Response extends io.pulumi.resources.InvokeArgs {
      * The base score is a function of the base metric scores.
      * 
      */
-    @InputImport(name="baseScore", required=true)
+    @Import(name="baseScore", required=true)
       private final Double baseScore;
 
     public Double getBaseScore() {
         return this.baseScore;
     }
 
-    @InputImport(name="confidentialityImpact", required=true)
+    @Import(name="confidentialityImpact", required=true)
       private final String confidentialityImpact;
 
     public String getConfidentialityImpact() {
         return this.confidentialityImpact;
     }
 
-    @InputImport(name="exploitabilityScore", required=true)
+    @Import(name="exploitabilityScore", required=true)
       private final Double exploitabilityScore;
 
     public Double getExploitabilityScore() {
         return this.exploitabilityScore;
     }
 
-    @InputImport(name="impactScore", required=true)
+    @Import(name="impactScore", required=true)
       private final Double impactScore;
 
     public Double getImpactScore() {
         return this.impactScore;
     }
 
-    @InputImport(name="integrityImpact", required=true)
+    @Import(name="integrityImpact", required=true)
       private final String integrityImpact;
 
     public String getIntegrityImpact() {
         return this.integrityImpact;
     }
 
-    @InputImport(name="privilegesRequired", required=true)
+    @Import(name="privilegesRequired", required=true)
       private final String privilegesRequired;
 
     public String getPrivilegesRequired() {
         return this.privilegesRequired;
     }
 
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final String scope;
 
     public String getScope() {
         return this.scope;
     }
 
-    @InputImport(name="userInteraction", required=true)
+    @Import(name="userInteraction", required=true)
       private final String userInteraction;
 
     public String getUserInteraction() {

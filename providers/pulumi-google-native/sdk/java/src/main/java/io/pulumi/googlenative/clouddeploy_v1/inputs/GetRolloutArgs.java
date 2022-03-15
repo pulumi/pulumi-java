@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,35 +14,35 @@ public final class GetRolloutArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRolloutArgs Empty = new GetRolloutArgs();
 
-    @InputImport(name="deliveryPipelineId", required=true)
+    @Import(name="deliveryPipelineId", required=true)
       private final String deliveryPipelineId;
 
     public String getDeliveryPipelineId() {
         return this.deliveryPipelineId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="releaseId", required=true)
+    @Import(name="releaseId", required=true)
       private final String releaseId;
 
     public String getReleaseId() {
         return this.releaseId;
     }
 
-    @InputImport(name="rolloutId", required=true)
+    @Import(name="rolloutId", required=true)
       private final String rolloutId;
 
     public String getRolloutId() {

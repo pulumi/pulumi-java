@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SiteMachineKeyResponse {
     /**
      * Algorithm used for decryption.
@@ -32,12 +32,12 @@ public final class SiteMachineKeyResponse {
      */
     private final @Nullable String validationKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SiteMachineKeyResponse(
-        @OutputCustomType.Parameter("decryption") @Nullable String decryption,
-        @OutputCustomType.Parameter("decryptionKey") @Nullable String decryptionKey,
-        @OutputCustomType.Parameter("validation") @Nullable String validation,
-        @OutputCustomType.Parameter("validationKey") @Nullable String validationKey) {
+        @CustomType.Parameter("decryption") @Nullable String decryption,
+        @CustomType.Parameter("decryptionKey") @Nullable String decryptionKey,
+        @CustomType.Parameter("validation") @Nullable String validation,
+        @CustomType.Parameter("validationKey") @Nullable String validationKey) {
         this.decryption = decryption;
         this.decryptionKey = decryptionKey;
         this.validation = validation;

@@ -6,14 +6,14 @@ package io.pulumi.azurenative.storage.outputs;
 import io.pulumi.azurenative.storage.outputs.IPRuleResponse;
 import io.pulumi.azurenative.storage.outputs.ResourceAccessRuleResponse;
 import io.pulumi.azurenative.storage.outputs.VirtualNetworkRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkRuleSetResponse {
     /**
      * Specifies whether traffic is bypassed for Logging/Metrics/AzureServices. Possible values are any combination of Logging|Metrics|AzureServices (For example, "Logging, Metrics"), or None to bypass none of those traffics.
@@ -41,13 +41,13 @@ public final class NetworkRuleSetResponse {
      */
     private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkRuleSetResponse(
-        @OutputCustomType.Parameter("bypass") @Nullable String bypass,
-        @OutputCustomType.Parameter("defaultAction") String defaultAction,
-        @OutputCustomType.Parameter("ipRules") @Nullable List<IPRuleResponse> ipRules,
-        @OutputCustomType.Parameter("resourceAccessRules") @Nullable List<ResourceAccessRuleResponse> resourceAccessRules,
-        @OutputCustomType.Parameter("virtualNetworkRules") @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
+        @CustomType.Parameter("bypass") @Nullable String bypass,
+        @CustomType.Parameter("defaultAction") String defaultAction,
+        @CustomType.Parameter("ipRules") @Nullable List<IPRuleResponse> ipRules,
+        @CustomType.Parameter("resourceAccessRules") @Nullable List<ResourceAccessRuleResponse> resourceAccessRules,
+        @CustomType.Parameter("virtualNetworkRules") @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
         this.bypass = bypass;
         this.defaultAction = defaultAction;
         this.ipRules = ipRules;

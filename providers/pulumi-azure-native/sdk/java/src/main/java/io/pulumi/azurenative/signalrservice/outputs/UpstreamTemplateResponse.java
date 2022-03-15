@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.signalrservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UpstreamTemplateResponse {
     /**
      * Gets or sets the matching pattern for category names. If not set, it matches any category.
@@ -45,12 +45,12 @@ public final class UpstreamTemplateResponse {
      */
     private final String urlTemplate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UpstreamTemplateResponse(
-        @OutputCustomType.Parameter("categoryPattern") @Nullable String categoryPattern,
-        @OutputCustomType.Parameter("eventPattern") @Nullable String eventPattern,
-        @OutputCustomType.Parameter("hubPattern") @Nullable String hubPattern,
-        @OutputCustomType.Parameter("urlTemplate") String urlTemplate) {
+        @CustomType.Parameter("categoryPattern") @Nullable String categoryPattern,
+        @CustomType.Parameter("eventPattern") @Nullable String eventPattern,
+        @CustomType.Parameter("hubPattern") @Nullable String hubPattern,
+        @CustomType.Parameter("urlTemplate") String urlTemplate) {
         this.categoryPattern = categoryPattern;
         this.eventPattern = eventPattern;
         this.hubPattern = hubPattern;

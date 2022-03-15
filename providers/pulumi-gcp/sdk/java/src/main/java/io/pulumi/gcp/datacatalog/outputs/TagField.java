@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TagField {
     /**
      * Holds the value for a tag field with boolean type.
@@ -60,16 +60,16 @@ public final class TagField {
      */
     private final @Nullable String timestampValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TagField(
-        @OutputCustomType.Parameter("boolValue") @Nullable Boolean boolValue,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("doubleValue") @Nullable Double doubleValue,
-        @OutputCustomType.Parameter("enumValue") @Nullable String enumValue,
-        @OutputCustomType.Parameter("fieldName") String fieldName,
-        @OutputCustomType.Parameter("order") @Nullable Integer order,
-        @OutputCustomType.Parameter("stringValue") @Nullable String stringValue,
-        @OutputCustomType.Parameter("timestampValue") @Nullable String timestampValue) {
+        @CustomType.Parameter("boolValue") @Nullable Boolean boolValue,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("doubleValue") @Nullable Double doubleValue,
+        @CustomType.Parameter("enumValue") @Nullable String enumValue,
+        @CustomType.Parameter("fieldName") String fieldName,
+        @CustomType.Parameter("order") @Nullable Integer order,
+        @CustomType.Parameter("stringValue") @Nullable String stringValue,
+        @CustomType.Parameter("timestampValue") @Nullable String timestampValue) {
         this.boolValue = boolValue;
         this.displayName = displayName;
         this.doubleValue = doubleValue;

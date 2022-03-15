@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SasPolicyResponse {
     /**
      * The SAS expiration action. Can only be Log.
@@ -20,10 +20,10 @@ public final class SasPolicyResponse {
      */
     private final String sasExpirationPeriod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SasPolicyResponse(
-        @OutputCustomType.Parameter("expirationAction") String expirationAction,
-        @OutputCustomType.Parameter("sasExpirationPeriod") String sasExpirationPeriod) {
+        @CustomType.Parameter("expirationAction") String expirationAction,
+        @CustomType.Parameter("sasExpirationPeriod") String sasExpirationPeriod) {
         this.expirationAction = expirationAction;
         this.sasExpirationPeriod = sasExpirationPeriod;
     }

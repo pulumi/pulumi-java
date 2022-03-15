@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GCPolicyMaxVersionGetArgs extends io.pulumi.resources.Resourc
      * Number of version before applying the GC policy.
      * 
      */
-    @InputImport(name="number", required=true)
+    @Import(name="number", required=true)
       private final Output<Integer> number;
 
     public Output<Integer> getNumber() {

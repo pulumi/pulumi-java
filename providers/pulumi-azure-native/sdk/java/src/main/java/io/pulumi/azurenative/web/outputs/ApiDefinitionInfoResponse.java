@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiDefinitionInfoResponse {
     /**
      * The URL of the API definition.
@@ -17,8 +17,8 @@ public final class ApiDefinitionInfoResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
-    private ApiDefinitionInfoResponse(@OutputCustomType.Parameter("url") @Nullable String url) {
+    @CustomType.Constructor
+    private ApiDefinitionInfoResponse(@CustomType.Parameter("url") @Nullable String url) {
         this.url = url;
     }
 

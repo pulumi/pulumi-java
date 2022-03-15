@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class AudioMappingResponse extends io.pulumi.resources.InvokeArgs {
      * The `EditAtom.key` that references the atom with audio inputs in the `Job.edit_list`.
      * 
      */
-    @InputImport(name="atomKey", required=true)
+    @Import(name="atomKey", required=true)
       private final String atomKey;
 
     public String getAtomKey() {
@@ -33,7 +33,7 @@ public final class AudioMappingResponse extends io.pulumi.resources.InvokeArgs {
      * Audio volume control in dB. Negative values decrease volume, positive values increase. The default is 0.
      * 
      */
-    @InputImport(name="gainDb", required=true)
+    @Import(name="gainDb", required=true)
       private final Double gainDb;
 
     public Double getGainDb() {
@@ -44,7 +44,7 @@ public final class AudioMappingResponse extends io.pulumi.resources.InvokeArgs {
      * The zero-based index of the channel in the input audio stream.
      * 
      */
-    @InputImport(name="inputChannel", required=true)
+    @Import(name="inputChannel", required=true)
       private final Integer inputChannel;
 
     public Integer getInputChannel() {
@@ -55,7 +55,7 @@ public final class AudioMappingResponse extends io.pulumi.resources.InvokeArgs {
      * The `Input.key` that identifies the input file.
      * 
      */
-    @InputImport(name="inputKey", required=true)
+    @Import(name="inputKey", required=true)
       private final String inputKey;
 
     public String getInputKey() {
@@ -66,7 +66,7 @@ public final class AudioMappingResponse extends io.pulumi.resources.InvokeArgs {
      * The zero-based index of the track in the input file.
      * 
      */
-    @InputImport(name="inputTrack", required=true)
+    @Import(name="inputTrack", required=true)
       private final Integer inputTrack;
 
     public Integer getInputTrack() {
@@ -77,7 +77,7 @@ public final class AudioMappingResponse extends io.pulumi.resources.InvokeArgs {
      * The zero-based index of the channel in the output audio stream.
      * 
      */
-    @InputImport(name="outputChannel", required=true)
+    @Import(name="outputChannel", required=true)
       private final Integer outputChannel;
 
     public Integer getOutputChannel() {

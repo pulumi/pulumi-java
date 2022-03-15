@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apps_v1beta1.inputs.DeploymentStrategyArgs;
 import io.pulumi.kubernetes.apps_v1beta1.inputs.RollbackConfigArgs;
 import io.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
@@ -27,7 +27,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)
      * 
      */
-    @InputImport(name="minReadySeconds")
+    @Import(name="minReadySeconds")
       private final @Nullable Output<Integer> minReadySeconds;
 
     public Output<Integer> getMinReadySeconds() {
@@ -38,7 +38,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates that the deployment is paused.
      * 
      */
-    @InputImport(name="paused")
+    @Import(name="paused")
       private final @Nullable Output<Boolean> paused;
 
     public Output<Boolean> getPaused() {
@@ -49,7 +49,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum time in seconds for a deployment to make progress before it is considered to be failed. The deployment controller will continue to process failed deployments and a condition with a ProgressDeadlineExceeded reason will be surfaced in the deployment status. Note that progress will not be estimated during the time a deployment is paused. Defaults to 600s.
      * 
      */
-    @InputImport(name="progressDeadlineSeconds")
+    @Import(name="progressDeadlineSeconds")
       private final @Nullable Output<Integer> progressDeadlineSeconds;
 
     public Output<Integer> getProgressDeadlineSeconds() {
@@ -60,7 +60,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Number of desired pods. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1.
      * 
      */
-    @InputImport(name="replicas")
+    @Import(name="replicas")
       private final @Nullable Output<Integer> replicas;
 
     public Output<Integer> getReplicas() {
@@ -71,7 +71,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
      * The number of old ReplicaSets to retain to allow rollback. This is a pointer to distinguish between explicit zero and not specified. Defaults to 2.
      * 
      */
-    @InputImport(name="revisionHistoryLimit")
+    @Import(name="revisionHistoryLimit")
       private final @Nullable Output<Integer> revisionHistoryLimit;
 
     public Output<Integer> getRevisionHistoryLimit() {
@@ -82,7 +82,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
      * DEPRECATED. The config this deployment is rolling back to. Will be cleared after rollback is done.
      * 
      */
-    @InputImport(name="rollbackTo")
+    @Import(name="rollbackTo")
       private final @Nullable Output<RollbackConfigArgs> rollbackTo;
 
     public Output<RollbackConfigArgs> getRollbackTo() {
@@ -93,7 +93,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Label selector for pods. Existing ReplicaSets whose pods are selected by this will be the ones affected by this deployment.
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable Output<LabelSelectorArgs> selector;
 
     public Output<LabelSelectorArgs> getSelector() {
@@ -104,7 +104,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
      * The deployment strategy to use to replace existing pods with new ones.
      * 
      */
-    @InputImport(name="strategy")
+    @Import(name="strategy")
       private final @Nullable Output<DeploymentStrategyArgs> strategy;
 
     public Output<DeploymentStrategyArgs> getStrategy() {
@@ -115,7 +115,7 @@ public final class DeploymentSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Template describes the pods that will be created.
      * 
      */
-    @InputImport(name="template", required=true)
+    @Import(name="template", required=true)
       private final Output<PodTemplateSpecArgs> template;
 
     public Output<PodTemplateSpecArgs> getTemplate() {

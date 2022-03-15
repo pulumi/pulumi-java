@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.detective.MemberArgs;
 import io.pulumi.aws.detective.inputs.MemberState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * AWS account ID for the account.
      * 
      */
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
@@ -47,7 +47,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * AWS account ID for the administrator account.
      * 
      */
-    @OutputExport(name="administratorId", type=String.class, parameters={})
+    @Export(name="administratorId", type=String.class, parameters={})
     private Output<String> administratorId;
 
     /**
@@ -61,7 +61,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * If set to true, then the root user of the invited account will _not_ receive an email notification. This notification is in addition to an alert that the root user receives in AWS Personal Health Dashboard. By default, this is set to `false`.
      * 
      */
-    @OutputExport(name="disableEmailNotification", type=Boolean.class, parameters={})
+    @Export(name="disableEmailNotification", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableEmailNotification;
 
     /**
@@ -71,7 +71,7 @@ public class Member extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Boolean> getDisableEmailNotification() {
         return this.disableEmailNotification;
     }
-    @OutputExport(name="disabledReason", type=String.class, parameters={})
+    @Export(name="disabledReason", type=String.class, parameters={})
     private Output<String> disabledReason;
 
     public Output<String> getDisabledReason() {
@@ -81,7 +81,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * Email address for the account.
      * 
      */
-    @OutputExport(name="emailAddress", type=String.class, parameters={})
+    @Export(name="emailAddress", type=String.class, parameters={})
     private Output<String> emailAddress;
 
     /**
@@ -95,7 +95,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * ARN of the behavior graph to invite the member accounts to contribute their data to.
      * 
      */
-    @OutputExport(name="graphArn", type=String.class, parameters={})
+    @Export(name="graphArn", type=String.class, parameters={})
     private Output<String> graphArn;
 
     /**
@@ -109,7 +109,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * Date and time, in UTC and extended RFC 3339 format, when an Amazon Detective membership invitation was last sent to the account.
      * 
      */
-    @OutputExport(name="invitedTime", type=String.class, parameters={})
+    @Export(name="invitedTime", type=String.class, parameters={})
     private Output<String> invitedTime;
 
     /**
@@ -123,7 +123,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * A custom message to include in the invitation. Amazon Detective adds this message to the standard content that it sends for an invitation.
      * 
      */
-    @OutputExport(name="message", type=String.class, parameters={})
+    @Export(name="message", type=String.class, parameters={})
     private Output</* @Nullable */ String> message;
 
     /**
@@ -137,7 +137,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * Current membership status of the member account.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -151,7 +151,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * Date and time, in UTC and extended RFC 3339 format, of the most recent change to the member account's status.
      * 
      */
-    @OutputExport(name="updatedTime", type=String.class, parameters={})
+    @Export(name="updatedTime", type=String.class, parameters={})
     private Output<String> updatedTime;
 
     /**
@@ -165,7 +165,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * Data volume in bytes per day for the member account.
      * 
      */
-    @OutputExport(name="volumeUsageInBytes", type=String.class, parameters={})
+    @Export(name="volumeUsageInBytes", type=String.class, parameters={})
     private Output<String> volumeUsageInBytes;
 
     /**

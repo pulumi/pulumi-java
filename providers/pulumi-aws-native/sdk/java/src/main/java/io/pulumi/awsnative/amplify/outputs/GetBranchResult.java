@@ -6,7 +6,7 @@ package io.pulumi.awsnative.amplify.outputs;
 import io.pulumi.awsnative.amplify.enums.BranchStage;
 import io.pulumi.awsnative.amplify.outputs.BranchEnvironmentVariable;
 import io.pulumi.awsnative.amplify.outputs.BranchTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBranchResult {
     private final @Nullable String arn;
     private final @Nullable String buildSpec;
@@ -27,18 +27,18 @@ public final class GetBranchResult {
     private final @Nullable BranchStage stage;
     private final @Nullable List<BranchTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBranchResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("buildSpec") @Nullable String buildSpec,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("enableAutoBuild") @Nullable Boolean enableAutoBuild,
-        @OutputCustomType.Parameter("enablePerformanceMode") @Nullable Boolean enablePerformanceMode,
-        @OutputCustomType.Parameter("enablePullRequestPreview") @Nullable Boolean enablePullRequestPreview,
-        @OutputCustomType.Parameter("environmentVariables") @Nullable List<BranchEnvironmentVariable> environmentVariables,
-        @OutputCustomType.Parameter("pullRequestEnvironmentName") @Nullable String pullRequestEnvironmentName,
-        @OutputCustomType.Parameter("stage") @Nullable BranchStage stage,
-        @OutputCustomType.Parameter("tags") @Nullable List<BranchTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("buildSpec") @Nullable String buildSpec,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("enableAutoBuild") @Nullable Boolean enableAutoBuild,
+        @CustomType.Parameter("enablePerformanceMode") @Nullable Boolean enablePerformanceMode,
+        @CustomType.Parameter("enablePullRequestPreview") @Nullable Boolean enablePullRequestPreview,
+        @CustomType.Parameter("environmentVariables") @Nullable List<BranchEnvironmentVariable> environmentVariables,
+        @CustomType.Parameter("pullRequestEnvironmentName") @Nullable String pullRequestEnvironmentName,
+        @CustomType.Parameter("stage") @Nullable BranchStage stage,
+        @CustomType.Parameter("tags") @Nullable List<BranchTag> tags) {
         this.arn = arn;
         this.buildSpec = buildSpec;
         this.description = description;

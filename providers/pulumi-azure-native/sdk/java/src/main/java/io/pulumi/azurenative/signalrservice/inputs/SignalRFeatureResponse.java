@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.signalrservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SignalRFeatureResponse extends io.pulumi.resources.InvokeArgs
      * - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log category respectively.
      * 
      */
-    @InputImport(name="flag", required=true)
+    @Import(name="flag", required=true)
       private final String flag;
 
     public String getFlag() {
@@ -36,7 +36,7 @@ public final class SignalRFeatureResponse extends io.pulumi.resources.InvokeArgs
      * Optional properties related to this feature.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
@@ -47,7 +47,7 @@ public final class SignalRFeatureResponse extends io.pulumi.resources.InvokeArgs
      * Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

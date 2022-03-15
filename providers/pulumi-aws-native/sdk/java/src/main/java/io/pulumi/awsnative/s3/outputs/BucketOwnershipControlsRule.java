@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketOwnershipControlsRuleObjectOwnership;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketOwnershipControlsRule {
     /**
      * Specifies an object ownership rule.
@@ -17,8 +17,8 @@ public final class BucketOwnershipControlsRule {
      */
     private final @Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership;
 
-    @OutputCustomType.Constructor
-    private BucketOwnershipControlsRule(@OutputCustomType.Parameter("objectOwnership") @Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership) {
+    @CustomType.Constructor
+    private BucketOwnershipControlsRule(@CustomType.Parameter("objectOwnership") @Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership) {
         this.objectOwnership = objectOwnership;
     }
 

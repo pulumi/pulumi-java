@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGlobalReachConnectionResult {
     /**
      * The network used for global reach carved out from the original network block provided for the private cloud
@@ -52,16 +52,16 @@ public final class GetGlobalReachConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGlobalReachConnectionResult(
-        @OutputCustomType.Parameter("addressPrefix") String addressPrefix,
-        @OutputCustomType.Parameter("authorizationKey") @Nullable String authorizationKey,
-        @OutputCustomType.Parameter("circuitConnectionStatus") String circuitConnectionStatus,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("peerExpressRouteCircuit") @Nullable String peerExpressRouteCircuit,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("addressPrefix") String addressPrefix,
+        @CustomType.Parameter("authorizationKey") @Nullable String authorizationKey,
+        @CustomType.Parameter("circuitConnectionStatus") String circuitConnectionStatus,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("peerExpressRouteCircuit") @Nullable String peerExpressRouteCircuit,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.addressPrefix = addressPrefix;
         this.authorizationKey = authorizationKey;
         this.circuitConnectionStatus = circuitConnectionStatus;

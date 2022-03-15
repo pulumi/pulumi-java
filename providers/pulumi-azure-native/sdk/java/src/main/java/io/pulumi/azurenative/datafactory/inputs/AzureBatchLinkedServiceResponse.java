@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * The Azure Batch account access key.
      * 
      */
-    @InputImport(name="accessKey")
+    @Import(name="accessKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accessKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getAccessKey() {
@@ -43,7 +43,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * The Azure Batch account name. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Object accountName;
 
     public Object getAccountName() {
@@ -54,7 +54,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -65,7 +65,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * The Azure Batch URI. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="batchUri", required=true)
+    @Import(name="batchUri", required=true)
       private final Object batchUri;
 
     public Object getBatchUri() {
@@ -76,7 +76,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -87,7 +87,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * The credential reference containing authentication information.
      * 
      */
-    @InputImport(name="credential")
+    @Import(name="credential")
       private final @Nullable CredentialReferenceResponse credential;
 
     public Optional<CredentialReferenceResponse> getCredential() {
@@ -98,7 +98,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -109,7 +109,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -120,7 +120,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * The Azure Storage linked service reference.
      * 
      */
-    @InputImport(name="linkedServiceName", required=true)
+    @Import(name="linkedServiceName", required=true)
       private final LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse getLinkedServiceName() {
@@ -131,7 +131,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -142,7 +142,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * The Azure Batch pool name. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="poolName", required=true)
+    @Import(name="poolName", required=true)
       private final Object poolName;
 
     public Object getPoolName() {
@@ -154,7 +154,7 @@ public final class AzureBatchLinkedServiceResponse extends io.pulumi.resources.I
      * Expected value is 'AzureBatch'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
      * The virtual machine extension name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -35,7 +35,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
      * The resource status information.
      * 
      */
-    @InputImport(name="statuses")
+    @Import(name="statuses")
       private final @Nullable Output<List<InstanceViewStatusArgs>> statuses;
 
     public Output<List<InstanceViewStatusArgs>> getStatuses() {
@@ -46,7 +46,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
      * The resource status information.
      * 
      */
-    @InputImport(name="substatuses")
+    @Import(name="substatuses")
       private final @Nullable Output<List<InstanceViewStatusArgs>> substatuses;
 
     public Output<List<InstanceViewStatusArgs>> getSubstatuses() {
@@ -57,7 +57,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
      * Specifies the type of the extension; an example is "CustomScriptExtension".
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -68,7 +68,7 @@ public final class VirtualMachineExtensionInstanceViewArgs extends io.pulumi.res
      * Specifies the version of the script handler.
      * 
      */
-    @InputImport(name="typeHandlerVersion")
+    @Import(name="typeHandlerVersion")
       private final @Nullable Output<String> typeHandlerVersion;
 
     public Output<String> getTypeHandlerVersion() {

@@ -3,21 +3,21 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceGuardOperationDetailResponse {
     private final @Nullable String defaultResourceRequest;
     private final @Nullable String vaultCriticalOperation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceGuardOperationDetailResponse(
-        @OutputCustomType.Parameter("defaultResourceRequest") @Nullable String defaultResourceRequest,
-        @OutputCustomType.Parameter("vaultCriticalOperation") @Nullable String vaultCriticalOperation) {
+        @CustomType.Parameter("defaultResourceRequest") @Nullable String defaultResourceRequest,
+        @CustomType.Parameter("vaultCriticalOperation") @Nullable String vaultCriticalOperation) {
         this.defaultResourceRequest = defaultResourceRequest;
         this.vaultCriticalOperation = vaultCriticalOperation;
     }

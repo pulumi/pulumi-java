@@ -5,7 +5,7 @@ package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.aws.appstream.inputs.DirectoryConfigServiceAccountCredentialsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
      * Date and time, in UTC and extended RFC 3339 format, when the directory config was created.
      * 
      */
-    @InputImport(name="createdTime")
+    @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
@@ -31,7 +31,7 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
      * Fully qualified name of the directory.
      * 
      */
-    @InputImport(name="directoryName")
+    @Import(name="directoryName")
       private final @Nullable Output<String> directoryName;
 
     public Output<String> getDirectoryName() {
@@ -42,7 +42,7 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
      * Distinguished names of the organizational units for computer accounts.
      * 
      */
-    @InputImport(name="organizationalUnitDistinguishedNames")
+    @Import(name="organizationalUnitDistinguishedNames")
       private final @Nullable Output<List<String>> organizationalUnitDistinguishedNames;
 
     public Output<List<String>> getOrganizationalUnitDistinguishedNames() {
@@ -53,7 +53,7 @@ public final class DirectoryConfigState extends io.pulumi.resources.ResourceArgs
      * Configuration block for the name of the directory and organizational unit (OU) to use to join the directory config to a Microsoft Active Directory domain. See `service_account_credentials` below.
      * 
      */
-    @InputImport(name="serviceAccountCredentials")
+    @Import(name="serviceAccountCredentials")
       private final @Nullable Output<DirectoryConfigServiceAccountCredentialsGetArgs> serviceAccountCredentials;
 
     public Output<DirectoryConfigServiceAccountCredentialsGetArgs> getServiceAccountCredentials() {

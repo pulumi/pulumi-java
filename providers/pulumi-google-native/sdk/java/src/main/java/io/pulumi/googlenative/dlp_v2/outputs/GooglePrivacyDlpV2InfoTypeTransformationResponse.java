@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2PrimitiveTransformationResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2InfoTypeTransformationResponse {
     /**
      * InfoTypes to apply the transformation to. An empty list will cause this transformation to apply to all findings that correspond to infoTypes that were requested in `InspectConfig`.
@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationResponse {
      */
     private final GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2InfoTypeTransformationResponse(
-        @OutputCustomType.Parameter("infoTypes") List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
-        @OutputCustomType.Parameter("primitiveTransformation") GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
+        @CustomType.Parameter("infoTypes") List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
+        @CustomType.Parameter("primitiveTransformation") GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
         this.infoTypes = infoTypes;
         this.primitiveTransformation = primitiveTransformation;
     }

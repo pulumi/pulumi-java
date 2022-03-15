@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyRuleSecureTagResponse {
     /**
      * Name of the secure tag, created with TagManager's TagValue API.
@@ -20,10 +20,10 @@ public final class FirewallPolicyRuleSecureTagResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyRuleSecureTagResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state) {
         this.name = name;
         this.state = state;
     }

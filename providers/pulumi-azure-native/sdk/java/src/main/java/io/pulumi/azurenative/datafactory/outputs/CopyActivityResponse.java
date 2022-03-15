@@ -147,7 +147,7 @@ import io.pulumi.azurenative.datafactory.outputs.WebSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.XeroSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.XmlSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.ZohoSourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -155,7 +155,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CopyActivityResponse {
     /**
      * Maximum number of data integration units that can be used to perform this data movement. Type: integer (or Expression with resultType integer), minimum: 0.
@@ -279,32 +279,32 @@ public final class CopyActivityResponse {
      */
     private final @Nullable Object validateDataConsistency;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CopyActivityResponse(
-        @OutputCustomType.Parameter("dataIntegrationUnits") @Nullable Object dataIntegrationUnits,
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("enableSkipIncompatibleRow") @Nullable Object enableSkipIncompatibleRow,
-        @OutputCustomType.Parameter("enableStaging") @Nullable Object enableStaging,
-        @OutputCustomType.Parameter("inputs") @Nullable List<DatasetReferenceResponse> inputs,
-        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @OutputCustomType.Parameter("logSettings") @Nullable LogSettingsResponse logSettings,
-        @OutputCustomType.Parameter("logStorageSettings") @Nullable LogStorageSettingsResponse logStorageSettings,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputs") @Nullable List<DatasetReferenceResponse> outputs,
-        @OutputCustomType.Parameter("parallelCopies") @Nullable Object parallelCopies,
-        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
-        @OutputCustomType.Parameter("preserve") @Nullable List<Object> preserve,
-        @OutputCustomType.Parameter("preserveRules") @Nullable List<Object> preserveRules,
-        @OutputCustomType.Parameter("redirectIncompatibleRowSettings") @Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings,
-        @OutputCustomType.Parameter("sink") Object sink,
-        @OutputCustomType.Parameter("skipErrorFile") @Nullable SkipErrorFileResponse skipErrorFile,
-        @OutputCustomType.Parameter("source") Object source,
-        @OutputCustomType.Parameter("stagingSettings") @Nullable StagingSettingsResponse stagingSettings,
-        @OutputCustomType.Parameter("translator") @Nullable Object translator,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties,
-        @OutputCustomType.Parameter("validateDataConsistency") @Nullable Object validateDataConsistency) {
+        @CustomType.Parameter("dataIntegrationUnits") @Nullable Object dataIntegrationUnits,
+        @CustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("enableSkipIncompatibleRow") @Nullable Object enableSkipIncompatibleRow,
+        @CustomType.Parameter("enableStaging") @Nullable Object enableStaging,
+        @CustomType.Parameter("inputs") @Nullable List<DatasetReferenceResponse> inputs,
+        @CustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @CustomType.Parameter("logSettings") @Nullable LogSettingsResponse logSettings,
+        @CustomType.Parameter("logStorageSettings") @Nullable LogStorageSettingsResponse logStorageSettings,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputs") @Nullable List<DatasetReferenceResponse> outputs,
+        @CustomType.Parameter("parallelCopies") @Nullable Object parallelCopies,
+        @CustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @CustomType.Parameter("preserve") @Nullable List<Object> preserve,
+        @CustomType.Parameter("preserveRules") @Nullable List<Object> preserveRules,
+        @CustomType.Parameter("redirectIncompatibleRowSettings") @Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings,
+        @CustomType.Parameter("sink") Object sink,
+        @CustomType.Parameter("skipErrorFile") @Nullable SkipErrorFileResponse skipErrorFile,
+        @CustomType.Parameter("source") Object source,
+        @CustomType.Parameter("stagingSettings") @Nullable StagingSettingsResponse stagingSettings,
+        @CustomType.Parameter("translator") @Nullable Object translator,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties,
+        @CustomType.Parameter("validateDataConsistency") @Nullable Object validateDataConsistency) {
         this.dataIntegrationUnits = dataIntegrationUnits;
         this.dependsOn = dependsOn;
         this.description = description;

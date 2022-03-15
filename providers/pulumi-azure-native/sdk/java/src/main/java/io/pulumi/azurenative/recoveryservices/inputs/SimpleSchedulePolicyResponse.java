@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class SimpleSchedulePolicyResponse extends io.pulumi.resources.Invo
      * Expected value is 'SimpleSchedulePolicy'.
      * 
      */
-    @InputImport(name="schedulePolicyType", required=true)
+    @Import(name="schedulePolicyType", required=true)
       private final String schedulePolicyType;
 
     public String getSchedulePolicyType() {
@@ -36,7 +36,7 @@ public final class SimpleSchedulePolicyResponse extends io.pulumi.resources.Invo
      * List of days of week this schedule has to be run.
      * 
      */
-    @InputImport(name="scheduleRunDays")
+    @Import(name="scheduleRunDays")
       private final @Nullable List<String> scheduleRunDays;
 
     public List<String> getScheduleRunDays() {
@@ -47,7 +47,7 @@ public final class SimpleSchedulePolicyResponse extends io.pulumi.resources.Invo
      * Frequency of the schedule operation of this policy.
      * 
      */
-    @InputImport(name="scheduleRunFrequency")
+    @Import(name="scheduleRunFrequency")
       private final @Nullable String scheduleRunFrequency;
 
     public Optional<String> getScheduleRunFrequency() {
@@ -58,7 +58,7 @@ public final class SimpleSchedulePolicyResponse extends io.pulumi.resources.Invo
      * List of times of day this schedule has to be run.
      * 
      */
-    @InputImport(name="scheduleRunTimes")
+    @Import(name="scheduleRunTimes")
       private final @Nullable List<String> scheduleRunTimes;
 
     public List<String> getScheduleRunTimes() {
@@ -69,7 +69,7 @@ public final class SimpleSchedulePolicyResponse extends io.pulumi.resources.Invo
      * At every number weeks this schedule has to be run.
      * 
      */
-    @InputImport(name="scheduleWeeklyFrequency")
+    @Import(name="scheduleWeeklyFrequency")
       private final @Nullable Integer scheduleWeeklyFrequency;
 
     public Optional<Integer> getScheduleWeeklyFrequency() {

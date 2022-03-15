@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Gets the number of times this job has executed.
      * 
      */
-    @InputImport(name="executionCount", required=true)
+    @Import(name="executionCount", required=true)
       private final Integer executionCount;
 
     public Integer getExecutionCount() {
@@ -28,7 +28,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Gets the number of times this job has failed.
      * 
      */
-    @InputImport(name="failureCount", required=true)
+    @Import(name="failureCount", required=true)
       private final Integer failureCount;
 
     public Integer getFailureCount() {
@@ -39,7 +39,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Gets the number of faulted occurrences (occurrences that were retried and failed as many times as the retry policy states).
      * 
      */
-    @InputImport(name="faultedCount", required=true)
+    @Import(name="faultedCount", required=true)
       private final Integer faultedCount;
 
     public Integer getFaultedCount() {
@@ -50,7 +50,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Gets the time the last occurrence executed in ISO-8601 format.  Could be empty if job has not run yet.
      * 
      */
-    @InputImport(name="lastExecutionTime", required=true)
+    @Import(name="lastExecutionTime", required=true)
       private final String lastExecutionTime;
 
     public String getLastExecutionTime() {
@@ -61,7 +61,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Gets the time of the next occurrence in ISO-8601 format. Could be empty if the job is completed.
      * 
      */
-    @InputImport(name="nextExecutionTime", required=true)
+    @Import(name="nextExecutionTime", required=true)
       private final String nextExecutionTime;
 
     public String getNextExecutionTime() {

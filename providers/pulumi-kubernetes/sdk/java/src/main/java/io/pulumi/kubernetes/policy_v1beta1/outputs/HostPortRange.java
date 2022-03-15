@@ -3,11 +3,11 @@
 
 package io.pulumi.kubernetes.policy_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HostPortRange {
     /**
      * max is the end of the range, inclusive.
@@ -20,10 +20,10 @@ public final class HostPortRange {
      */
     private final Integer min;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HostPortRange(
-        @OutputCustomType.Parameter("max") Integer max,
-        @OutputCustomType.Parameter("min") Integer min) {
+        @CustomType.Parameter("max") Integer max,
+        @CustomType.Parameter("min") Integer min) {
         this.max = max;
         this.min = min;
     }

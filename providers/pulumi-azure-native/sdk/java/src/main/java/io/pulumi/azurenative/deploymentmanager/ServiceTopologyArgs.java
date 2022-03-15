@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
      * The resource Id of the artifact source that contains the artifacts that can be referenced in the service units.
      * 
      */
-    @InputImport(name="artifactSourceId")
+    @Import(name="artifactSourceId")
       private final @Nullable Output<String> artifactSourceId;
 
     public Output<String> getArtifactSourceId() {
@@ -30,7 +30,7 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -41,7 +41,7 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the service topology .
      * 
      */
-    @InputImport(name="serviceTopologyName")
+    @Import(name="serviceTopologyName")
       private final @Nullable Output<String> serviceTopologyName;
 
     public Output<String> getServiceTopologyName() {
@@ -63,7 +63,7 @@ public final class ServiceTopologyArgs extends io.pulumi.resources.ResourceArgs 
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

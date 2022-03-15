@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleDurationArgs extends 
      * The unit of time specifying the duration of an Auto-Tune maintenance window. Valid values: `HOURS`.
      * 
      */
-    @InputImport(name="unit", required=true)
+    @Import(name="unit", required=true)
       private final Output<String> unit;
 
     public Output<String> getUnit() {
@@ -29,7 +29,7 @@ public final class DomainAutoTuneOptionsMaintenanceScheduleDurationArgs extends 
      * An integer specifying the value of the duration of an Auto-Tune maintenance window.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<Integer> value;
 
     public Output<Integer> getValue() {

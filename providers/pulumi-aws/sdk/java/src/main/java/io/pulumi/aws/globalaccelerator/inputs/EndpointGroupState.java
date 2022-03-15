@@ -6,7 +6,7 @@ package io.pulumi.aws.globalaccelerator.inputs;
 import io.pulumi.aws.globalaccelerator.inputs.EndpointGroupEndpointConfigurationGetArgs;
 import io.pulumi.aws.globalaccelerator.inputs.EndpointGroupPortOverrideGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the endpoint group.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -34,7 +34,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
      * The list of endpoint objects. Fields documented below.
      * 
      */
-    @InputImport(name="endpointConfigurations")
+    @Import(name="endpointConfigurations")
       private final @Nullable Output<List<EndpointGroupEndpointConfigurationGetArgs>> endpointConfigurations;
 
     public Output<List<EndpointGroupEndpointConfigurationGetArgs>> getEndpointConfigurations() {
@@ -45,7 +45,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
      * The name of the AWS Region where the endpoint group is located.
      * 
      */
-    @InputImport(name="endpointGroupRegion")
+    @Import(name="endpointGroupRegion")
       private final @Nullable Output<String> endpointGroupRegion;
 
     public Output<String> getEndpointGroupRegion() {
@@ -56,7 +56,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
      * The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
      * 
      */
-    @InputImport(name="healthCheckIntervalSeconds")
+    @Import(name="healthCheckIntervalSeconds")
       private final @Nullable Output<Integer> healthCheckIntervalSeconds;
 
     public Output<Integer> getHealthCheckIntervalSeconds() {
@@ -67,7 +67,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
      * If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (`/`). the provider will only perform drift detection of its value when present in a configuration.
      * 
      */
-    @InputImport(name="healthCheckPath")
+    @Import(name="healthCheckPath")
       private final @Nullable Output<String> healthCheckPath;
 
     public Output<String> getHealthCheckPath() {
@@ -79,7 +79,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
      * the provider will only perform drift detection of its value when present in a configuration.
      * 
      */
-    @InputImport(name="healthCheckPort")
+    @Import(name="healthCheckPort")
       private final @Nullable Output<Integer> healthCheckPort;
 
     public Output<Integer> getHealthCheckPort() {
@@ -90,7 +90,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
      * The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
      * 
      */
-    @InputImport(name="healthCheckProtocol")
+    @Import(name="healthCheckProtocol")
       private final @Nullable Output<String> healthCheckProtocol;
 
     public Output<String> getHealthCheckProtocol() {
@@ -101,7 +101,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the listener.
      * 
      */
-    @InputImport(name="listenerArn")
+    @Import(name="listenerArn")
       private final @Nullable Output<String> listenerArn;
 
     public Output<String> getListenerArn() {
@@ -112,7 +112,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
      * Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
      * 
      */
-    @InputImport(name="portOverrides")
+    @Import(name="portOverrides")
       private final @Nullable Output<List<EndpointGroupPortOverrideGetArgs>> portOverrides;
 
     public Output<List<EndpointGroupPortOverrideGetArgs>> getPortOverrides() {
@@ -123,7 +123,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
      * The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
      * 
      */
-    @InputImport(name="thresholdCount")
+    @Import(name="thresholdCount")
       private final @Nullable Output<Integer> thresholdCount;
 
     public Output<Integer> getThresholdCount() {
@@ -134,7 +134,7 @@ public final class EndpointGroupState extends io.pulumi.resources.ResourceArgs {
      * The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
      * 
      */
-    @InputImport(name="trafficDialPercentage")
+    @Import(name="trafficDialPercentage")
       private final @Nullable Output<Double> trafficDialPercentage;
 
     public Output<Double> getTrafficDialPercentage() {

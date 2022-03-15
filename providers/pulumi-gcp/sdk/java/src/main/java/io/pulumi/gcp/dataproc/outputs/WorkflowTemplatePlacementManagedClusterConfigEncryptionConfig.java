@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig {
     /**
      * Optional. The Cloud KMS key name to use for PD disk encryption for all instances in the cluster.
@@ -17,8 +17,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig
      */
     private final @Nullable String gcePdKmsKeyName;
 
-    @OutputCustomType.Constructor
-    private WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig(@OutputCustomType.Parameter("gcePdKmsKeyName") @Nullable String gcePdKmsKeyName) {
+    @CustomType.Constructor
+    private WorkflowTemplatePlacementManagedClusterConfigEncryptionConfig(@CustomType.Parameter("gcePdKmsKeyName") @Nullable String gcePdKmsKeyName) {
         this.gcePdKmsKeyName = gcePdKmsKeyName;
     }
 

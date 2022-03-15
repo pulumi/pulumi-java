@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID.
      * 
      */
-    @InputImport(name="autoPlacement")
+    @Import(name="autoPlacement")
       private final @Nullable Output<String> autoPlacement;
 
     public Output<String> getAutoPlacement() {
@@ -29,7 +29,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * The Availability Zone in which to allocate the Dedicated Host.
      * 
      */
-    @InputImport(name="availabilityZone", required=true)
+    @Import(name="availabilityZone", required=true)
       private final Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -40,7 +40,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether to enable or disable host recovery for the Dedicated Host. Host recovery is disabled by default.
      * 
      */
-    @InputImport(name="hostRecovery")
+    @Import(name="hostRecovery")
       private final @Nullable Output<String> hostRecovery;
 
     public Output<String> getHostRecovery() {
@@ -51,7 +51,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the instance type to be supported by the Dedicated Hosts. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
     public Output<String> getInstanceType() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
      * Whether or not to enable encryption on the CloudWatch logs. If not specified, encryption will be disabled.
      * 
      */
-    @InputImport(name="cloudWatchEncryptionEnabled")
+    @Import(name="cloudWatchEncryptionEnabled")
       private final @Nullable Output<Boolean> cloudWatchEncryptionEnabled;
 
     public Output<Boolean> getCloudWatchEncryptionEnabled() {
@@ -30,7 +30,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
      * The name of the CloudWatch log group to send logs to.
      * 
      */
-    @InputImport(name="cloudWatchLogGroupName")
+    @Import(name="cloudWatchLogGroupName")
       private final @Nullable Output<String> cloudWatchLogGroupName;
 
     public Output<String> getCloudWatchLogGroupName() {
@@ -41,7 +41,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
      * Whether or not to enable encryption on the logs sent to S3. If not specified, encryption will be disabled.
      * 
      */
-    @InputImport(name="s3BucketEncryptionEnabled")
+    @Import(name="s3BucketEncryptionEnabled")
       private final @Nullable Output<Boolean> s3BucketEncryptionEnabled;
 
     public Output<Boolean> getS3BucketEncryptionEnabled() {
@@ -52,7 +52,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
      * The name of the S3 bucket to send logs to.
      * 
      */
-    @InputImport(name="s3BucketName")
+    @Import(name="s3BucketName")
       private final @Nullable Output<String> s3BucketName;
 
     public Output<String> getS3BucketName() {
@@ -63,7 +63,7 @@ public final class ClusterConfigurationExecuteCommandConfigurationLogConfigurati
      * An optional folder in the S3 bucket to place logs in.
      * 
      */
-    @InputImport(name="s3KeyPrefix")
+    @Import(name="s3KeyPrefix")
       private final @Nullable Output<String> s3KeyPrefix;
 
     public Output<String> getS3KeyPrefix() {

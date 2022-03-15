@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreStreamConfigBigqueryDestinationArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class FhirStoreStreamConfigArgs extends io.pulumi.resources.Resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="bigqueryDestination", required=true)
+    @Import(name="bigqueryDestination", required=true)
       private final Output<FhirStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination;
 
     public Output<FhirStoreStreamConfigBigqueryDestinationArgs> getBigqueryDestination() {
@@ -38,7 +38,7 @@ public final class FhirStoreStreamConfigArgs extends io.pulumi.resources.Resourc
      * an empty list as an intent to stream all the supported resource types in this FHIR store.
      * 
      */
-    @InputImport(name="resourceTypes")
+    @Import(name="resourceTypes")
       private final @Nullable Output<List<String>> resourceTypes;
 
     public Output<List<String>> getResourceTypes() {

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.notebooks.outputs;
 
 import io.pulumi.azurenative.notebooks.outputs.NotebookResourceSystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNotebookProxyResult {
     /**
      * The friendly string identifier of the creator of the NotebookProxy resource.
@@ -63,18 +63,18 @@ public final class GetNotebookProxyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNotebookProxyResult(
-        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("publicDns") @Nullable String publicDns,
-        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("resourceId") String resourceId,
-        @OutputCustomType.Parameter("secondaryAppId") @Nullable String secondaryAppId,
-        @OutputCustomType.Parameter("systemData") @Nullable NotebookResourceSystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("hostname") @Nullable String hostname,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("publicDns") @Nullable String publicDns,
+        @CustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("resourceId") String resourceId,
+        @CustomType.Parameter("secondaryAppId") @Nullable String secondaryAppId,
+        @CustomType.Parameter("systemData") @Nullable NotebookResourceSystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.hostname = hostname;
         this.id = id;
         this.name = name;

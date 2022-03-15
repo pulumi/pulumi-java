@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudsearch_v1.DataSourceArgs;
@@ -24,7 +24,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * If true, sets the datasource to read-only mode. In read-only mode, the Indexing API rejects any requests to index or delete items in this source. Enabling read-only mode does not stop the processing of previously accepted data.
      * 
      */
-    @OutputExport(name="disableModifications", type=Boolean.class, parameters={})
+    @Export(name="disableModifications", type=Boolean.class, parameters={})
     private Output<Boolean> disableModifications;
 
     /**
@@ -38,7 +38,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * Disable serving any search or assist results.
      * 
      */
-    @OutputExport(name="disableServing", type=Boolean.class, parameters={})
+    @Export(name="disableServing", type=Boolean.class, parameters={})
     private Output<Boolean> disableServing;
 
     /**
@@ -52,7 +52,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * Display name of the datasource The maximum length is 300 characters.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -66,7 +66,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * List of service accounts that have indexing access.
      * 
      */
-    @OutputExport(name="indexingServiceAccounts", type=List.class, parameters={String.class})
+    @Export(name="indexingServiceAccounts", type=List.class, parameters={String.class})
     private Output<List<String>> indexingServiceAccounts;
 
     /**
@@ -80,7 +80,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * This field restricts visibility to items at the datasource level. Items within the datasource are restricted to the union of users and groups included in this field. Note that, this does not ensure access to a specific item, as users need to have ACL permissions on the contained items. This ensures a high level access on the entire datasource, and that the individual items are not shared outside this visibility.
      * 
      */
-    @OutputExport(name="itemsVisibility", type=List.class, parameters={GSuitePrincipalResponse.class})
+    @Export(name="itemsVisibility", type=List.class, parameters={GSuitePrincipalResponse.class})
     private Output<List<GSuitePrincipalResponse>> itemsVisibility;
 
     /**
@@ -94,7 +94,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * Name of the datasource resource. Format: datasources/{source_id}. The name is ignored when creating a datasource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * IDs of the Long Running Operations (LROs) currently running for this schema.
      * 
      */
-    @OutputExport(name="operationIds", type=List.class, parameters={String.class})
+    @Export(name="operationIds", type=List.class, parameters={String.class})
     private Output<List<String>> operationIds;
 
     /**
@@ -122,7 +122,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * Can a user request to get thumbnail URI for Items indexed in this data source.
      * 
      */
-    @OutputExport(name="returnThumbnailUrls", type=Boolean.class, parameters={})
+    @Export(name="returnThumbnailUrls", type=Boolean.class, parameters={})
     private Output<Boolean> returnThumbnailUrls;
 
     /**
@@ -136,7 +136,7 @@ public class DataSource extends io.pulumi.resources.CustomResource {
      * A short name or alias for the source. This value will be used to match the 'source' operator. For example, if the short name is *<value>* then queries like *source:<value>* will only return results for this source. The value must be unique across all datasources. The value must only contain alphanumeric characters (a-zA-Z0-9). The value cannot start with 'google' and cannot be one of the following: mail, gmail, docs, drive, groups, sites, calendar, hangouts, gplus, keep, people, teams. Its maximum length is 32 characters.
      * 
      */
-    @OutputExport(name="shortName", type=String.class, parameters={})
+    @Export(name="shortName", type=String.class, parameters={})
     private Output<String> shortName;
 
     /**

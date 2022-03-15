@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.SpotFleetEbsBlockDevice;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class SpotFleetBlockDeviceMapping extends io.pulumi.resources.Invok
 
     public static final SpotFleetBlockDeviceMapping Empty = new SpotFleetBlockDeviceMapping();
 
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final String deviceName;
 
     public String getDeviceName() {
         return this.deviceName;
     }
 
-    @InputImport(name="ebs")
+    @Import(name="ebs")
       private final @Nullable SpotFleetEbsBlockDevice ebs;
 
     public Optional<SpotFleetEbsBlockDevice> getEbs() {
         return this.ebs == null ? Optional.empty() : Optional.ofNullable(this.ebs);
     }
 
-    @InputImport(name="noDevice")
+    @Import(name="noDevice")
       private final @Nullable String noDevice;
 
     public Optional<String> getNoDevice() {
         return this.noDevice == null ? Optional.empty() : Optional.ofNullable(this.noDevice);
     }
 
-    @InputImport(name="virtualName")
+    @Import(name="virtualName")
       private final @Nullable String virtualName;
 
     public Optional<String> getVirtualName() {

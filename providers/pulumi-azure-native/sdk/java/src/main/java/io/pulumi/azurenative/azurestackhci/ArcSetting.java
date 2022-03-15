@@ -8,7 +8,7 @@ import io.pulumi.azurenative.azurestackhci.ArcSettingArgs;
 import io.pulumi.azurenative.azurestackhci.outputs.PerNodeStateResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * Aggregate state of Arc agent across the nodes in this HCI cluster.
      * 
      */
-    @OutputExport(name="aggregateState", type=String.class, parameters={})
+    @Export(name="aggregateState", type=String.class, parameters={})
     private Output<String> aggregateState;
 
     /**
@@ -49,7 +49,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * The resource group that hosts the Arc agents, ie. Hybrid Compute Machine resources.
      * 
      */
-    @OutputExport(name="arcInstanceResourceGroup", type=String.class, parameters={})
+    @Export(name="arcInstanceResourceGroup", type=String.class, parameters={})
     private Output<String> arcInstanceResourceGroup;
 
     /**
@@ -63,7 +63,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * The timestamp of resource creation (UTC).
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdAt;
 
     /**
@@ -77,7 +77,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * The identity that created the resource.
      * 
      */
-    @OutputExport(name="createdBy", type=String.class, parameters={})
+    @Export(name="createdBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdBy;
 
     /**
@@ -91,7 +91,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * The type of identity that created the resource.
      * 
      */
-    @OutputExport(name="createdByType", type=String.class, parameters={})
+    @Export(name="createdByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdByType;
 
     /**
@@ -105,7 +105,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * The timestamp of resource last modification (UTC)
      * 
      */
-    @OutputExport(name="lastModifiedAt", type=String.class, parameters={})
+    @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedAt;
 
     /**
@@ -119,7 +119,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * The identity that last modified the resource.
      * 
      */
-    @OutputExport(name="lastModifiedBy", type=String.class, parameters={})
+    @Export(name="lastModifiedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedBy;
 
     /**
@@ -133,7 +133,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * The type of identity that last modified the resource.
      * 
      */
-    @OutputExport(name="lastModifiedByType", type=String.class, parameters={})
+    @Export(name="lastModifiedByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedByType;
 
     /**
@@ -147,7 +147,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -161,7 +161,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * State of Arc agent in each of the nodes.
      * 
      */
-    @OutputExport(name="perNodeDetails", type=List.class, parameters={PerNodeStateResponse.class})
+    @Export(name="perNodeDetails", type=List.class, parameters={PerNodeStateResponse.class})
     private Output<List<PerNodeStateResponse>> perNodeDetails;
 
     /**
@@ -175,7 +175,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * Provisioning state of the ArcSetting proxy resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -189,7 +189,7 @@ public class ArcSetting extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

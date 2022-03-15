@@ -11,7 +11,7 @@ import io.pulumi.azurenative.compute.inputs.ManagedDiskParametersArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualHardDiskArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,7 +31,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the caching requirements. <br><br> Possible values are: <br><br> **None** <br><br> **ReadOnly** <br><br> **ReadWrite** <br><br> Default: **None for Standard storage. ReadOnly for Premium storage**
      * 
      */
-    @InputImport(name="caching")
+    @Import(name="caching")
       private final @Nullable Output<CachingTypes> caching;
 
     public Output<CachingTypes> getCaching() {
@@ -42,7 +42,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies how the virtual machine should be created.<br><br> Possible values are:<br><br> **Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.<br><br> **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
      * 
      */
-    @InputImport(name="createOption", required=true)
+    @Import(name="createOption", required=true)
       private final Output<Either<String,DiskCreateOptionTypes>> createOption;
 
     public Output<Either<String,DiskCreateOptionTypes>> getCreateOption() {
@@ -53,7 +53,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether data disk should be deleted or detached upon VM deletion.<br><br> Possible values: <br><br> **Delete** If this value is used, the data disk is deleted when VM is deleted.<br><br> **Detach** If this value is used, the data disk is retained after VM is deleted.<br><br> The default value is set to **detach**
      * 
      */
-    @InputImport(name="deleteOption")
+    @Import(name="deleteOption")
       private final @Nullable Output<Either<String,DiskDeleteOptionTypes>> deleteOption;
 
     public Output<Either<String,DiskDeleteOptionTypes>> getDeleteOption() {
@@ -64,7 +64,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. <br><br> detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. <br><br> This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'.
      * 
      */
-    @InputImport(name="detachOption")
+    @Import(name="detachOption")
       private final @Nullable Output<Either<String,DiskDetachOptionTypes>> detachOption;
 
     public Output<Either<String,DiskDetachOptionTypes>> getDetachOption() {
@@ -75,7 +75,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. <br><br> This value cannot be larger than 1023 GB
      * 
      */
-    @InputImport(name="diskSizeGB")
+    @Import(name="diskSizeGB")
       private final @Nullable Output<Integer> diskSizeGB;
 
     public Output<Integer> getDiskSizeGB() {
@@ -86,7 +86,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable Output<VirtualHardDiskArgs> image;
 
     public Output<VirtualHardDiskArgs> getImage() {
@@ -97,7 +97,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
      * 
      */
-    @InputImport(name="lun", required=true)
+    @Import(name="lun", required=true)
       private final Output<Integer> lun;
 
     public Output<Integer> getLun() {
@@ -108,7 +108,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * The managed disk parameters.
      * 
      */
-    @InputImport(name="managedDisk")
+    @Import(name="managedDisk")
       private final @Nullable Output<ManagedDiskParametersArgs> managedDisk;
 
     public Output<ManagedDiskParametersArgs> getManagedDisk() {
@@ -119,7 +119,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * The disk name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -130,7 +130,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the data disk is in process of detachment from the VirtualMachine/VirtualMachineScaleset
      * 
      */
-    @InputImport(name="toBeDetached")
+    @Import(name="toBeDetached")
       private final @Nullable Output<Boolean> toBeDetached;
 
     public Output<Boolean> getToBeDetached() {
@@ -141,7 +141,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * The virtual hard disk.
      * 
      */
-    @InputImport(name="vhd")
+    @Import(name="vhd")
       private final @Nullable Output<VirtualHardDiskArgs> vhd;
 
     public Output<VirtualHardDiskArgs> getVhd() {
@@ -152,7 +152,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether writeAccelerator should be enabled or disabled on the disk.
      * 
      */
-    @InputImport(name="writeAcceleratorEnabled")
+    @Import(name="writeAcceleratorEnabled")
       private final @Nullable Output<Boolean> writeAcceleratorEnabled;
 
     public Output<Boolean> getWriteAcceleratorEnabled() {

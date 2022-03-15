@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AddRemoveReplicaScalingMechanismResponse {
     /**
      * Enumerates the mechanisms for auto scaling.
@@ -32,12 +32,12 @@ public final class AddRemoveReplicaScalingMechanismResponse {
      */
     private final Integer scaleIncrement;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AddRemoveReplicaScalingMechanismResponse(
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("maxCount") Integer maxCount,
-        @OutputCustomType.Parameter("minCount") Integer minCount,
-        @OutputCustomType.Parameter("scaleIncrement") Integer scaleIncrement) {
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("maxCount") Integer maxCount,
+        @CustomType.Parameter("minCount") Integer minCount,
+        @CustomType.Parameter("scaleIncrement") Integer scaleIncrement) {
         this.kind = kind;
         this.maxCount = maxCount;
         this.minCount = minCount;

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.Capabilities;
 import io.pulumi.kubernetes.core_v1.outputs.SELinuxOptions;
 import io.pulumi.kubernetes.core_v1.outputs.SeccompProfile;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityContext {
     /**
      * AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN Note that this field cannot be set when spec.os.name is windows.
@@ -73,19 +73,19 @@ public final class SecurityContext {
      */
     private final @Nullable WindowsSecurityContextOptions windowsOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityContext(
-        @OutputCustomType.Parameter("allowPrivilegeEscalation") @Nullable Boolean allowPrivilegeEscalation,
-        @OutputCustomType.Parameter("capabilities") @Nullable Capabilities capabilities,
-        @OutputCustomType.Parameter("privileged") @Nullable Boolean privileged,
-        @OutputCustomType.Parameter("procMount") @Nullable String procMount,
-        @OutputCustomType.Parameter("readOnlyRootFilesystem") @Nullable Boolean readOnlyRootFilesystem,
-        @OutputCustomType.Parameter("runAsGroup") @Nullable Integer runAsGroup,
-        @OutputCustomType.Parameter("runAsNonRoot") @Nullable Boolean runAsNonRoot,
-        @OutputCustomType.Parameter("runAsUser") @Nullable Integer runAsUser,
-        @OutputCustomType.Parameter("seLinuxOptions") @Nullable SELinuxOptions seLinuxOptions,
-        @OutputCustomType.Parameter("seccompProfile") @Nullable SeccompProfile seccompProfile,
-        @OutputCustomType.Parameter("windowsOptions") @Nullable WindowsSecurityContextOptions windowsOptions) {
+        @CustomType.Parameter("allowPrivilegeEscalation") @Nullable Boolean allowPrivilegeEscalation,
+        @CustomType.Parameter("capabilities") @Nullable Capabilities capabilities,
+        @CustomType.Parameter("privileged") @Nullable Boolean privileged,
+        @CustomType.Parameter("procMount") @Nullable String procMount,
+        @CustomType.Parameter("readOnlyRootFilesystem") @Nullable Boolean readOnlyRootFilesystem,
+        @CustomType.Parameter("runAsGroup") @Nullable Integer runAsGroup,
+        @CustomType.Parameter("runAsNonRoot") @Nullable Boolean runAsNonRoot,
+        @CustomType.Parameter("runAsUser") @Nullable Integer runAsUser,
+        @CustomType.Parameter("seLinuxOptions") @Nullable SELinuxOptions seLinuxOptions,
+        @CustomType.Parameter("seccompProfile") @Nullable SeccompProfile seccompProfile,
+        @CustomType.Parameter("windowsOptions") @Nullable WindowsSecurityContextOptions windowsOptions) {
         this.allowPrivilegeEscalation = allowPrivilegeEscalation;
         this.capabilities = capabilities;
         this.privileged = privileged;

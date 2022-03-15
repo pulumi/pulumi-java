@@ -5,13 +5,13 @@ package io.pulumi.azurenative.avs.outputs;
 
 import io.pulumi.azurenative.avs.outputs.DiskPoolVolumeResponse;
 import io.pulumi.azurenative.avs.outputs.NetAppVolumeResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDatastoreResult {
     /**
      * An iSCSI volume
@@ -44,14 +44,14 @@ public final class GetDatastoreResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatastoreResult(
-        @OutputCustomType.Parameter("diskPoolVolume") @Nullable DiskPoolVolumeResponse diskPoolVolume,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("netAppVolume") @Nullable NetAppVolumeResponse netAppVolume,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("diskPoolVolume") @Nullable DiskPoolVolumeResponse diskPoolVolume,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("netAppVolume") @Nullable NetAppVolumeResponse netAppVolume,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.diskPoolVolume = diskPoolVolume;
         this.id = id;
         this.name = name;

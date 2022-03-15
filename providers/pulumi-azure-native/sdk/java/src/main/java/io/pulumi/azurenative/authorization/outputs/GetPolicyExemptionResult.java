@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.outputs;
 
 import io.pulumi.azurenative.authorization.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPolicyExemptionResult {
     /**
      * The description of the policy exemption.
@@ -70,19 +70,19 @@ public final class GetPolicyExemptionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPolicyExemptionResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("exemptionCategory") String exemptionCategory,
-        @OutputCustomType.Parameter("expiresOn") @Nullable String expiresOn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("policyAssignmentId") String policyAssignmentId,
-        @OutputCustomType.Parameter("policyDefinitionReferenceIds") @Nullable List<String> policyDefinitionReferenceIds,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("exemptionCategory") String exemptionCategory,
+        @CustomType.Parameter("expiresOn") @Nullable String expiresOn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("metadata") @Nullable Object metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("policyAssignmentId") String policyAssignmentId,
+        @CustomType.Parameter("policyDefinitionReferenceIds") @Nullable List<String> policyDefinitionReferenceIds,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.displayName = displayName;
         this.exemptionCategory = exemptionCategory;

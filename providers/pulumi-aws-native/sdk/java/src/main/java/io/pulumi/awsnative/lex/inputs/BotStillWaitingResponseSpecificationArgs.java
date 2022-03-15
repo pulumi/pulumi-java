@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotMessageGroupArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -25,28 +25,28 @@ public final class BotStillWaitingResponseSpecificationArgs extends io.pulumi.re
      * Indicates whether the user can interrupt a speech prompt from the bot.
      * 
      */
-    @InputImport(name="allowInterrupt")
+    @Import(name="allowInterrupt")
       private final @Nullable Output<Boolean> allowInterrupt;
 
     public Output<Boolean> getAllowInterrupt() {
         return this.allowInterrupt == null ? Output.empty() : this.allowInterrupt;
     }
 
-    @InputImport(name="frequencyInSeconds", required=true)
+    @Import(name="frequencyInSeconds", required=true)
       private final Output<Integer> frequencyInSeconds;
 
     public Output<Integer> getFrequencyInSeconds() {
         return this.frequencyInSeconds;
     }
 
-    @InputImport(name="messageGroupsList", required=true)
+    @Import(name="messageGroupsList", required=true)
       private final Output<List<BotMessageGroupArgs>> messageGroupsList;
 
     public Output<List<BotMessageGroupArgs>> getMessageGroupsList() {
         return this.messageGroupsList;
     }
 
-    @InputImport(name="timeoutInSeconds", required=true)
+    @Import(name="timeoutInSeconds", required=true)
       private final Output<Integer> timeoutInSeconds;
 
     public Output<Integer> getTimeoutInSeconds() {

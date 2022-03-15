@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customproviders;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the association.
      * 
      */
-    @InputImport(name="associationName")
+    @Import(name="associationName")
       private final @Nullable Output<String> associationName;
 
     public Output<String> getAssociationName() {
@@ -29,7 +29,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * The scope of the association. The scope can be any valid REST resource instance. For example, use '/subscriptions/{subscription-id}/resourceGroups/{resource-group-name}/providers/Microsoft.Compute/virtualMachines/{vm-name}' for a virtual machine resource.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {
@@ -40,7 +40,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * The REST resource instance of the target resource for this association.
      * 
      */
-    @InputImport(name="targetResourceId")
+    @Import(name="targetResourceId")
       private final @Nullable Output<String> targetResourceId;
 
     public Output<String> getTargetResourceId() {

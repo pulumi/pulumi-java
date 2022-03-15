@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2.enums.ConversationConversationStage;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConversationArgs Empty = new ConversationArgs();
 
-    @InputImport(name="conversationId")
+    @Import(name="conversationId")
       private final @Nullable Output<String> conversationId;
 
     public Output<String> getConversationId() {
@@ -26,7 +26,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * The Conversation Profile to be used to configure this Conversation. This field cannot be updated. Format: `projects//locations//conversationProfiles/`.
      * 
      */
-    @InputImport(name="conversationProfile", required=true)
+    @Import(name="conversationProfile", required=true)
       private final Output<String> conversationProfile;
 
     public Output<String> getConversationProfile() {
@@ -37,21 +37,21 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * The stage of a conversation. It indicates whether the virtual agent or a human agent is handling the conversation. If the conversation is created with the conversation profile that has Dialogflow config set, defaults to ConversationStage.VIRTUAL_AGENT_STAGE; Otherwise, defaults to ConversationStage.HUMAN_ASSIST_STAGE. If the conversation is created with the conversation profile that has Dialogflow config set but explicitly sets conversation_stage to ConversationStage.HUMAN_ASSIST_STAGE, it skips ConversationStage.VIRTUAL_AGENT_STAGE stage and directly goes to ConversationStage.HUMAN_ASSIST_STAGE.
      * 
      */
-    @InputImport(name="conversationStage")
+    @Import(name="conversationStage")
       private final @Nullable Output<ConversationConversationStage> conversationStage;
 
     public Output<ConversationConversationStage> getConversationStage() {
         return this.conversationStage == null ? Output.empty() : this.conversationStage;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

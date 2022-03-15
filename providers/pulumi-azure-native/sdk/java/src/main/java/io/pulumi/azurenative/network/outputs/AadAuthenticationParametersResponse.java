@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AadAuthenticationParametersResponse {
     /**
      * AAD Vpn authentication parameter AAD audience.
@@ -27,11 +27,11 @@ public final class AadAuthenticationParametersResponse {
      */
     private final @Nullable String aadTenant;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AadAuthenticationParametersResponse(
-        @OutputCustomType.Parameter("aadAudience") @Nullable String aadAudience,
-        @OutputCustomType.Parameter("aadIssuer") @Nullable String aadIssuer,
-        @OutputCustomType.Parameter("aadTenant") @Nullable String aadTenant) {
+        @CustomType.Parameter("aadAudience") @Nullable String aadAudience,
+        @CustomType.Parameter("aadIssuer") @Nullable String aadIssuer,
+        @CustomType.Parameter("aadTenant") @Nullable String aadTenant) {
         this.aadAudience = aadAudience;
         this.aadIssuer = aadIssuer;
         this.aadTenant = aadTenant;

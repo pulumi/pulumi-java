@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.networkfirewall.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension {
     /**
      * The string value to use in the custom metric dimension.
@@ -15,8 +15,8 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
      */
     private final String value;
 
-    @OutputCustomType.Constructor
-    private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension(@OutputCustomType.Parameter("value") String value) {
+    @CustomType.Constructor
+    private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension(@CustomType.Parameter("value") String value) {
         this.value = value;
     }
 

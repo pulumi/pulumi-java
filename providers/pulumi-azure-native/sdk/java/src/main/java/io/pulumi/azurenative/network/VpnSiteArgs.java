@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.inputs.O365PolicyPropertiesArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.azurenative.network.inputs.VpnSiteLinkArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * The AddressSpace that contains an array of IP address ranges.
      * 
      */
-    @InputImport(name="addressSpace")
+    @Import(name="addressSpace")
       private final @Nullable Output<AddressSpaceArgs> addressSpace;
 
     public Output<AddressSpaceArgs> getAddressSpace() {
@@ -38,7 +38,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * The set of bgp properties.
      * 
      */
-    @InputImport(name="bgpProperties")
+    @Import(name="bgpProperties")
       private final @Nullable Output<BgpSettingsArgs> bgpProperties;
 
     public Output<BgpSettingsArgs> getBgpProperties() {
@@ -49,7 +49,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * The device properties.
      * 
      */
-    @InputImport(name="deviceProperties")
+    @Import(name="deviceProperties")
       private final @Nullable Output<DevicePropertiesArgs> deviceProperties;
 
     public Output<DevicePropertiesArgs> getDeviceProperties() {
@@ -60,7 +60,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -71,7 +71,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * The ip-address for the vpn-site.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -82,7 +82,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * IsSecuritySite flag.
      * 
      */
-    @InputImport(name="isSecuritySite")
+    @Import(name="isSecuritySite")
       private final @Nullable Output<Boolean> isSecuritySite;
 
     public Output<Boolean> getIsSecuritySite() {
@@ -93,7 +93,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -104,7 +104,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * Office365 Policy.
      * 
      */
-    @InputImport(name="o365Policy")
+    @Import(name="o365Policy")
       private final @Nullable Output<O365PolicyPropertiesArgs> o365Policy;
 
     public Output<O365PolicyPropertiesArgs> getO365Policy() {
@@ -115,7 +115,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name of the VpnSite.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -126,7 +126,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * The key for vpn-site that can be used for connections.
      * 
      */
-    @InputImport(name="siteKey")
+    @Import(name="siteKey")
       private final @Nullable Output<String> siteKey;
 
     public Output<String> getSiteKey() {
@@ -137,7 +137,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -148,7 +148,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * The VirtualWAN to which the vpnSite belongs.
      * 
      */
-    @InputImport(name="virtualWan")
+    @Import(name="virtualWan")
       private final @Nullable Output<SubResourceArgs> virtualWan;
 
     public Output<SubResourceArgs> getVirtualWan() {
@@ -159,7 +159,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * List of all vpn site links.
      * 
      */
-    @InputImport(name="vpnSiteLinks")
+    @Import(name="vpnSiteLinks")
       private final @Nullable Output<List<VpnSiteLinkArgs>> vpnSiteLinks;
 
     public Output<List<VpnSiteLinkArgs>> getVpnSiteLinks() {
@@ -170,7 +170,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the VpnSite being created or updated.
      * 
      */
-    @InputImport(name="vpnSiteName")
+    @Import(name="vpnSiteName")
       private final @Nullable Output<String> vpnSiteName;
 
     public Output<String> getVpnSiteName() {

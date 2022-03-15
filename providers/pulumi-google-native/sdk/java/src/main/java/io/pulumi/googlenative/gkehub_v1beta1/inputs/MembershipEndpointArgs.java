@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gkehub_v1beta1.inputs.EdgeClusterArgs;
 import io.pulumi.googlenative.gkehub_v1beta1.inputs.GkeClusterArgs;
 import io.pulumi.googlenative.gkehub_v1beta1.inputs.KubernetesResourceArgs;
@@ -26,7 +26,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
      * Optional. Specific information for a Google Edge cluster.
      * 
      */
-    @InputImport(name="edgeCluster")
+    @Import(name="edgeCluster")
       private final @Nullable Output<EdgeClusterArgs> edgeCluster;
 
     public Output<EdgeClusterArgs> getEdgeCluster() {
@@ -37,7 +37,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
      * Optional. Specific information for a GKE-on-GCP cluster.
      * 
      */
-    @InputImport(name="gkeCluster")
+    @Import(name="gkeCluster")
       private final @Nullable Output<GkeClusterArgs> gkeCluster;
 
     public Output<GkeClusterArgs> getGkeCluster() {
@@ -48,7 +48,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
      * Optional. The in-cluster Kubernetes Resources that should be applied for a correctly registered cluster, in the steady state. These resources: * Ensure that the cluster is exclusively registered to one and only one Hub Membership. * Propagate Workload Pool Information available in the Membership Authority field. * Ensure proper initial configuration of default Hub Features.
      * 
      */
-    @InputImport(name="kubernetesResource")
+    @Import(name="kubernetesResource")
       private final @Nullable Output<KubernetesResourceArgs> kubernetesResource;
 
     public Output<KubernetesResourceArgs> getKubernetesResource() {
@@ -59,7 +59,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
      * Optional. Specific information for a GKE Multi-Cloud cluster.
      * 
      */
-    @InputImport(name="multiCloudCluster")
+    @Import(name="multiCloudCluster")
       private final @Nullable Output<MultiCloudClusterArgs> multiCloudCluster;
 
     public Output<MultiCloudClusterArgs> getMultiCloudCluster() {
@@ -70,7 +70,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
      * Optional. Specific information for a GKE On-Prem cluster. An onprem user-cluster who has no resourceLink is not allowed to use this field, it should have a nil "type" instead.
      * 
      */
-    @InputImport(name="onPremCluster")
+    @Import(name="onPremCluster")
       private final @Nullable Output<OnPremClusterArgs> onPremCluster;
 
     public Output<OnPremClusterArgs> getOnPremCluster() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.outputs.ErrorDefinitionResp
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ExtensionStatusResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ScopeResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetExtensionResult {
     /**
      * Flag to note if this instance participates in auto upgrade of minor version, or not.
@@ -110,26 +110,26 @@ public final class GetExtensionResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetExtensionResult(
-        @OutputCustomType.Parameter("autoUpgradeMinorVersion") @Nullable Boolean autoUpgradeMinorVersion,
-        @OutputCustomType.Parameter("configurationProtectedSettings") @Nullable Map<String,String> configurationProtectedSettings,
-        @OutputCustomType.Parameter("configurationSettings") @Nullable Map<String,String> configurationSettings,
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("errorInfo") ErrorDefinitionResponse errorInfo,
-        @OutputCustomType.Parameter("extensionType") @Nullable String extensionType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ConfigurationIdentityResponse identity,
-        @OutputCustomType.Parameter("installState") String installState,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("lastStatusTime") String lastStatusTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("releaseTrain") @Nullable String releaseTrain,
-        @OutputCustomType.Parameter("scope") @Nullable ScopeResponse scope,
-        @OutputCustomType.Parameter("statuses") @Nullable List<ExtensionStatusResponse> statuses,
-        @OutputCustomType.Parameter("systemData") @Nullable SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("autoUpgradeMinorVersion") @Nullable Boolean autoUpgradeMinorVersion,
+        @CustomType.Parameter("configurationProtectedSettings") @Nullable Map<String,String> configurationProtectedSettings,
+        @CustomType.Parameter("configurationSettings") @Nullable Map<String,String> configurationSettings,
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("errorInfo") ErrorDefinitionResponse errorInfo,
+        @CustomType.Parameter("extensionType") @Nullable String extensionType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ConfigurationIdentityResponse identity,
+        @CustomType.Parameter("installState") String installState,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("lastStatusTime") String lastStatusTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("releaseTrain") @Nullable String releaseTrain,
+        @CustomType.Parameter("scope") @Nullable ScopeResponse scope,
+        @CustomType.Parameter("statuses") @Nullable List<ExtensionStatusResponse> statuses,
+        @CustomType.Parameter("systemData") @Nullable SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
         this.configurationProtectedSettings = configurationProtectedSettings;
         this.configurationSettings = configurationSettings;

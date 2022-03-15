@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.changeanalysis.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetConfigurationProfileArgs extends io.pulumi.resources.Invok
      * The name of the configuration profile. The profile name should be set to 'default', all other names will be overwritten.
      * 
      */
-    @InputImport(name="profileName", required=true)
+    @Import(name="profileName", required=true)
       private final String profileName;
 
     public String getProfileName() {

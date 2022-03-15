@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.synthetics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CanaryBaseScreenshot {
     /**
      * List of coordinates of rectangles to be ignored during visual testing
@@ -22,10 +22,10 @@ public final class CanaryBaseScreenshot {
      */
     private final String screenshotName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CanaryBaseScreenshot(
-        @OutputCustomType.Parameter("ignoreCoordinates") @Nullable List<String> ignoreCoordinates,
-        @OutputCustomType.Parameter("screenshotName") String screenshotName) {
+        @CustomType.Parameter("ignoreCoordinates") @Nullable List<String> ignoreCoordinates,
+        @CustomType.Parameter("screenshotName") String screenshotName) {
         this.ignoreCoordinates = ignoreCoordinates;
         this.screenshotName = screenshotName;
     }

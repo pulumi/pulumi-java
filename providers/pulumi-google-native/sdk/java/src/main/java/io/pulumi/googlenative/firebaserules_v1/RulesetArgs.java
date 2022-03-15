@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebaserules_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.firebaserules_v1.inputs.SourceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RulesetArgs Empty = new RulesetArgs();
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -26,7 +26,7 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
      * `Source` for the `Ruleset`.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<SourceArgs> source;
 
     public Output<SourceArgs> getSource() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLaunchTemplateBlockDeviceMappingEb {
     private final String deleteOnTermination;
     private final String encrypted;
@@ -19,16 +19,16 @@ public final class GetLaunchTemplateBlockDeviceMappingEb {
     private final Integer volumeSize;
     private final String volumeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLaunchTemplateBlockDeviceMappingEb(
-        @OutputCustomType.Parameter("deleteOnTermination") String deleteOnTermination,
-        @OutputCustomType.Parameter("encrypted") String encrypted,
-        @OutputCustomType.Parameter("iops") Integer iops,
-        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
-        @OutputCustomType.Parameter("snapshotId") String snapshotId,
-        @OutputCustomType.Parameter("throughput") Integer throughput,
-        @OutputCustomType.Parameter("volumeSize") Integer volumeSize,
-        @OutputCustomType.Parameter("volumeType") String volumeType) {
+        @CustomType.Parameter("deleteOnTermination") String deleteOnTermination,
+        @CustomType.Parameter("encrypted") String encrypted,
+        @CustomType.Parameter("iops") Integer iops,
+        @CustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @CustomType.Parameter("snapshotId") String snapshotId,
+        @CustomType.Parameter("throughput") Integer throughput,
+        @CustomType.Parameter("volumeSize") Integer volumeSize,
+        @CustomType.Parameter("volumeType") String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.encrypted = encrypted;
         this.iops = iops;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.apigateway;
 
 import io.pulumi.awsnative.apigateway.inputs.ClientCertificateTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
      * A description of the client certificate.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
      * An array of arbitrary tags (key-value pairs) to associate with the client certificate.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ClientCertificateTagArgs>> tags;
 
     public Output<List<ClientCertificateTagArgs>> getTags() {

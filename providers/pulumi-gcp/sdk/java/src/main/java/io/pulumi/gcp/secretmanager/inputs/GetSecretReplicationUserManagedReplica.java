@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.secretmanager.inputs.GetSecretReplicationUserManagedReplicaCustomerManagedEncryption;
 import java.lang.String;
 import java.util.List;
@@ -14,14 +14,14 @@ public final class GetSecretReplicationUserManagedReplica extends io.pulumi.reso
 
     public static final GetSecretReplicationUserManagedReplica Empty = new GetSecretReplicationUserManagedReplica();
 
-    @InputImport(name="customerManagedEncryptions", required=true)
+    @Import(name="customerManagedEncryptions", required=true)
       private final List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> customerManagedEncryptions;
 
     public List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> getCustomerManagedEncryptions() {
         return this.customerManagedEncryptions;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {

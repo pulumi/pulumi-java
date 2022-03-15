@@ -5,14 +5,14 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ContainerResourcesResponse;
 import io.pulumi.azurenative.web.outputs.EnvironmentVarResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerResponse {
     /**
      * Container start command arguments.
@@ -45,14 +45,14 @@ public final class ContainerResponse {
      */
     private final @Nullable ContainerResourcesResponse resources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerResponse(
-        @OutputCustomType.Parameter("args") @Nullable List<String> args,
-        @OutputCustomType.Parameter("command") @Nullable List<String> command,
-        @OutputCustomType.Parameter("env") @Nullable List<EnvironmentVarResponse> env,
-        @OutputCustomType.Parameter("image") @Nullable String image,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("resources") @Nullable ContainerResourcesResponse resources) {
+        @CustomType.Parameter("args") @Nullable List<String> args,
+        @CustomType.Parameter("command") @Nullable List<String> command,
+        @CustomType.Parameter("env") @Nullable List<EnvironmentVarResponse> env,
+        @CustomType.Parameter("image") @Nullable String image,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("resources") @Nullable ContainerResourcesResponse resources) {
         this.args = args;
         this.command = command;
         this.env = env;

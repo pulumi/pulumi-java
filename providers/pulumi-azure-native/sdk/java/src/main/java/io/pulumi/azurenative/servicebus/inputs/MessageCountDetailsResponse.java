@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
      * Number of active messages in the queue, topic, or subscription.
      * 
      */
-    @InputImport(name="activeMessageCount", required=true)
+    @Import(name="activeMessageCount", required=true)
       private final Double activeMessageCount;
 
     public Double getActiveMessageCount() {
@@ -31,7 +31,7 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
      * Number of messages that are dead lettered.
      * 
      */
-    @InputImport(name="deadLetterMessageCount", required=true)
+    @Import(name="deadLetterMessageCount", required=true)
       private final Double deadLetterMessageCount;
 
     public Double getDeadLetterMessageCount() {
@@ -42,7 +42,7 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
      * Number of scheduled messages.
      * 
      */
-    @InputImport(name="scheduledMessageCount", required=true)
+    @Import(name="scheduledMessageCount", required=true)
       private final Double scheduledMessageCount;
 
     public Double getScheduledMessageCount() {
@@ -53,7 +53,7 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
      * Number of messages transferred into dead letters.
      * 
      */
-    @InputImport(name="transferDeadLetterMessageCount", required=true)
+    @Import(name="transferDeadLetterMessageCount", required=true)
       private final Double transferDeadLetterMessageCount;
 
     public Double getTransferDeadLetterMessageCount() {
@@ -64,7 +64,7 @@ public final class MessageCountDetailsResponse extends io.pulumi.resources.Invok
      * Number of messages transferred to another queue, topic, or subscription.
      * 
      */
-    @InputImport(name="transferMessageCount", required=true)
+    @Import(name="transferMessageCount", required=true)
       private final Double transferMessageCount;
 
     public Double getTransferMessageCount() {

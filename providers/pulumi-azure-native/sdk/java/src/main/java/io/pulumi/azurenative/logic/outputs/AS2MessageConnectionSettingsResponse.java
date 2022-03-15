@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AS2MessageConnectionSettingsResponse {
     /**
      * The value indicating whether to ignore mismatch in certificate name.
@@ -30,12 +30,12 @@ public final class AS2MessageConnectionSettingsResponse {
      */
     private final Boolean unfoldHttpHeaders;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AS2MessageConnectionSettingsResponse(
-        @OutputCustomType.Parameter("ignoreCertificateNameMismatch") Boolean ignoreCertificateNameMismatch,
-        @OutputCustomType.Parameter("keepHttpConnectionAlive") Boolean keepHttpConnectionAlive,
-        @OutputCustomType.Parameter("supportHttpStatusCodeContinue") Boolean supportHttpStatusCodeContinue,
-        @OutputCustomType.Parameter("unfoldHttpHeaders") Boolean unfoldHttpHeaders) {
+        @CustomType.Parameter("ignoreCertificateNameMismatch") Boolean ignoreCertificateNameMismatch,
+        @CustomType.Parameter("keepHttpConnectionAlive") Boolean keepHttpConnectionAlive,
+        @CustomType.Parameter("supportHttpStatusCodeContinue") Boolean supportHttpStatusCodeContinue,
+        @CustomType.Parameter("unfoldHttpHeaders") Boolean unfoldHttpHeaders) {
         this.ignoreCertificateNameMismatch = ignoreCertificateNameMismatch;
         this.keepHttpConnectionAlive = keepHttpConnectionAlive;
         this.supportHttpStatusCodeContinue = supportHttpStatusCodeContinue;

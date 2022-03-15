@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.FingerprintResponse;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.LayerResponse;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class ImageOccurrenceResponse extends io.pulumi.resources.InvokeArg
      * This contains the base image URL for the derived image occurrence.
      * 
      */
-    @InputImport(name="baseResourceUrl", required=true)
+    @Import(name="baseResourceUrl", required=true)
       private final String baseResourceUrl;
 
     public String getBaseResourceUrl() {
@@ -35,7 +35,7 @@ public final class ImageOccurrenceResponse extends io.pulumi.resources.InvokeArg
      * The number of layers by which this image differs from the associated image basis.
      * 
      */
-    @InputImport(name="distance", required=true)
+    @Import(name="distance", required=true)
       private final Integer distance;
 
     public Integer getDistance() {
@@ -46,7 +46,7 @@ public final class ImageOccurrenceResponse extends io.pulumi.resources.InvokeArg
      * The fingerprint of the derived image.
      * 
      */
-    @InputImport(name="fingerprint", required=true)
+    @Import(name="fingerprint", required=true)
       private final FingerprintResponse fingerprint;
 
     public FingerprintResponse getFingerprint() {
@@ -57,7 +57,7 @@ public final class ImageOccurrenceResponse extends io.pulumi.resources.InvokeArg
      * This contains layer-specific metadata, if populated it has length "distance" and is ordered with [distance] being the layer immediately following the base image and [1] being the final layer.
      * 
      */
-    @InputImport(name="layerInfo", required=true)
+    @Import(name="layerInfo", required=true)
       private final List<LayerResponse> layerInfo;
 
     public List<LayerResponse> getLayerInfo() {

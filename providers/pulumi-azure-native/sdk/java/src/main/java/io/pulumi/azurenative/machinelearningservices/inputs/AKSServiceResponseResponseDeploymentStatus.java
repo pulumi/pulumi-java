@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.AKSReplicaStatusResponseError;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
      * The number of available replicas.
      * 
      */
-    @InputImport(name="availableReplicas")
+    @Import(name="availableReplicas")
       private final @Nullable Integer availableReplicas;
 
     public Optional<Integer> getAvailableReplicas() {
@@ -34,7 +34,7 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
      * The desired number of replicas.
      * 
      */
-    @InputImport(name="desiredReplicas")
+    @Import(name="desiredReplicas")
       private final @Nullable Integer desiredReplicas;
 
     public Optional<Integer> getDesiredReplicas() {
@@ -45,7 +45,7 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
      * The error details.
      * 
      */
-    @InputImport(name="error")
+    @Import(name="error")
       private final @Nullable AKSReplicaStatusResponseError error;
 
     public Optional<AKSReplicaStatusResponseError> getError() {
@@ -56,7 +56,7 @@ public final class AKSServiceResponseResponseDeploymentStatus extends io.pulumi.
      * The number of updated replicas.
      * 
      */
-    @InputImport(name="updatedReplicas")
+    @Import(name="updatedReplicas")
       private final @Nullable Integer updatedReplicas;
 
     public Optional<Integer> getUpdatedReplicas() {

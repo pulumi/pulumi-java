@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzureClusterControlPlaneSshConfig {
     /**
      * Required. The SSH public key data for VMs managed by Anthos. This accepts the authorized_keys file format used in OpenSSH according to the sshd(8) manual page.
@@ -15,8 +15,8 @@ public final class AzureClusterControlPlaneSshConfig {
      */
     private final String authorizedKey;
 
-    @OutputCustomType.Constructor
-    private AzureClusterControlPlaneSshConfig(@OutputCustomType.Parameter("authorizedKey") String authorizedKey) {
+    @CustomType.Constructor
+    private AzureClusterControlPlaneSshConfig(@CustomType.Parameter("authorizedKey") String authorizedKey) {
         this.authorizedKey = authorizedKey;
     }
 

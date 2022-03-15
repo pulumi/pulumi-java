@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CacheUpgradeStatusResponse {
     /**
      * Version string of the firmware currently installed on this Cache.
@@ -35,13 +35,13 @@ public final class CacheUpgradeStatusResponse {
      */
     private final String pendingFirmwareVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CacheUpgradeStatusResponse(
-        @OutputCustomType.Parameter("currentFirmwareVersion") String currentFirmwareVersion,
-        @OutputCustomType.Parameter("firmwareUpdateDeadline") String firmwareUpdateDeadline,
-        @OutputCustomType.Parameter("firmwareUpdateStatus") String firmwareUpdateStatus,
-        @OutputCustomType.Parameter("lastFirmwareUpdate") String lastFirmwareUpdate,
-        @OutputCustomType.Parameter("pendingFirmwareVersion") String pendingFirmwareVersion) {
+        @CustomType.Parameter("currentFirmwareVersion") String currentFirmwareVersion,
+        @CustomType.Parameter("firmwareUpdateDeadline") String firmwareUpdateDeadline,
+        @CustomType.Parameter("firmwareUpdateStatus") String firmwareUpdateStatus,
+        @CustomType.Parameter("lastFirmwareUpdate") String lastFirmwareUpdate,
+        @CustomType.Parameter("pendingFirmwareVersion") String pendingFirmwareVersion) {
         this.currentFirmwareVersion = currentFirmwareVersion;
         this.firmwareUpdateDeadline = firmwareUpdateDeadline;
         this.firmwareUpdateStatus = firmwareUpdateStatus;

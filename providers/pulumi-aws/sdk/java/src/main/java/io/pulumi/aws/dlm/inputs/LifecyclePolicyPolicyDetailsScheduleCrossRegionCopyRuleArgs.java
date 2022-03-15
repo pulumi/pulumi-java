@@ -6,7 +6,7 @@ package io.pulumi.aws.dlm.inputs;
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs;
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
      * The Amazon Resource Name (ARN) of the AWS KMS customer master key (CMK) to use for EBS encryption. If this argument is not specified, the default KMS key for the account is used.
      * 
      */
-    @InputImport(name="cmkArn")
+    @Import(name="cmkArn")
       private final @Nullable Output<String> cmkArn;
 
     public Output<String> getCmkArn() {
@@ -32,7 +32,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
      * Whether to copy all user-defined tags from the source snapshot to the cross-region snapshot copy.
      * 
      */
-    @InputImport(name="copyTags")
+    @Import(name="copyTags")
       private final @Nullable Output<Boolean> copyTags;
 
     public Output<Boolean> getCopyTags() {
@@ -43,7 +43,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
      * The AMI deprecation rule for cross-Region AMI copies created by the rule. See the `deprecate_rule` block.
      * 
      */
-    @InputImport(name="deprecateRule")
+    @Import(name="deprecateRule")
       private final @Nullable Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs> deprecateRule;
 
     public Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRuleArgs> getDeprecateRule() {
@@ -54,7 +54,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
      * To encrypt a copy of an unencrypted snapshot if encryption by default is not enabled, enable encryption using this parameter. Copies of encrypted snapshots are encrypted, even if this parameter is false or if encryption by default is not enabled.
      * 
      */
-    @InputImport(name="encrypted", required=true)
+    @Import(name="encrypted", required=true)
       private final Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
@@ -65,7 +65,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
      * The retention rule that indicates how long snapshot copies are to be retained in the destination Region. See the `retain_rule` block. Max of 1 per schedule.
      * 
      */
-    @InputImport(name="retainRule")
+    @Import(name="retainRule")
       private final @Nullable Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs> retainRule;
 
     public Output<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRuleArgs> getRetainRule() {
@@ -76,7 +76,7 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleArgs e
      * The target Region or the Amazon Resource Name (ARN) of the target Outpost for the snapshot copies.
      * 
      */
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final Output<String> target;
 
     public Output<String> getTarget() {

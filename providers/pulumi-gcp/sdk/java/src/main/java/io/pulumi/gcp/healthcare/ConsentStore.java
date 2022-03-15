@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.ConsentStoreArgs;
@@ -41,7 +41,7 @@ public class ConsentStore extends io.pulumi.resources.CustomResource {
      * 'projects/{project}/locations/{location}/datasets/{dataset}'
      * 
      */
-    @OutputExport(name="dataset", type=String.class, parameters={})
+    @Export(name="dataset", type=String.class, parameters={})
     private Output<String> dataset;
 
     /**
@@ -57,7 +57,7 @@ public class ConsentStore extends io.pulumi.resources.CustomResource {
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @OutputExport(name="defaultConsentTtl", type=String.class, parameters={})
+    @Export(name="defaultConsentTtl", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultConsentTtl;
 
     /**
@@ -72,7 +72,7 @@ public class ConsentStore extends io.pulumi.resources.CustomResource {
      * If true, [consents.patch] [google.cloud.healthcare.v1.consent.UpdateConsent] creates the consent if it does not already exist.
      * 
      */
-    @OutputExport(name="enableConsentCreateOnUpdate", type=Boolean.class, parameters={})
+    @Export(name="enableConsentCreateOnUpdate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableConsentCreateOnUpdate;
 
     /**
@@ -93,7 +93,7 @@ public class ConsentStore extends io.pulumi.resources.CustomResource {
      * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -115,7 +115,7 @@ public class ConsentStore extends io.pulumi.resources.CustomResource {
      * "consent1"
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

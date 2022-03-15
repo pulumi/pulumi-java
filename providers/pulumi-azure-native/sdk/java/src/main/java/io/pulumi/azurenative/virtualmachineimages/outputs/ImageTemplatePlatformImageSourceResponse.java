@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
 import io.pulumi.azurenative.virtualmachineimages.outputs.PlatformImagePurchasePlanResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageTemplatePlatformImageSourceResponse {
     /**
      * Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
@@ -44,14 +44,14 @@ public final class ImageTemplatePlatformImageSourceResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageTemplatePlatformImageSourceResponse(
-        @OutputCustomType.Parameter("offer") @Nullable String offer,
-        @OutputCustomType.Parameter("planInfo") @Nullable PlatformImagePurchasePlanResponse planInfo,
-        @OutputCustomType.Parameter("publisher") @Nullable String publisher,
-        @OutputCustomType.Parameter("sku") @Nullable String sku,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("offer") @Nullable String offer,
+        @CustomType.Parameter("planInfo") @Nullable PlatformImagePurchasePlanResponse planInfo,
+        @CustomType.Parameter("publisher") @Nullable String publisher,
+        @CustomType.Parameter("sku") @Nullable String sku,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.offer = offer;
         this.planInfo = planInfo;
         this.publisher = publisher;

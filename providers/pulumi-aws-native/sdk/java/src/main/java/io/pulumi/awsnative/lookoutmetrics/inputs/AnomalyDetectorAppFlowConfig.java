@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lookoutmetrics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class AnomalyDetectorAppFlowConfig extends io.pulumi.resources.Invo
 
     public static final AnomalyDetectorAppFlowConfig Empty = new AnomalyDetectorAppFlowConfig();
 
-    @InputImport(name="flowName", required=true)
+    @Import(name="flowName", required=true)
       private final String flowName;
 
     public String getFlowName() {
         return this.flowName;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final String roleArn;
 
     public String getRoleArn() {

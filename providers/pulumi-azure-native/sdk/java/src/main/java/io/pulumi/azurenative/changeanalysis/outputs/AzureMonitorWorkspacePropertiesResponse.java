@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.changeanalysis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureMonitorWorkspacePropertiesResponse {
     /**
      * The mode of includeChangeDetails feature. The flag configures whether to include or exclude content of the change before and after values.
@@ -27,11 +27,11 @@ public final class AzureMonitorWorkspacePropertiesResponse {
      */
     private final @Nullable String workspaceResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureMonitorWorkspacePropertiesResponse(
-        @OutputCustomType.Parameter("includeChangeDetails") @Nullable String includeChangeDetails,
-        @OutputCustomType.Parameter("workspaceId") @Nullable String workspaceId,
-        @OutputCustomType.Parameter("workspaceResourceId") @Nullable String workspaceResourceId) {
+        @CustomType.Parameter("includeChangeDetails") @Nullable String includeChangeDetails,
+        @CustomType.Parameter("workspaceId") @Nullable String workspaceId,
+        @CustomType.Parameter("workspaceResourceId") @Nullable String workspaceResourceId) {
         this.includeChangeDetails = includeChangeDetails;
         this.workspaceId = workspaceId;
         this.workspaceResourceId = workspaceResourceId;

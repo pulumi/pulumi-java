@@ -10,7 +10,7 @@ import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleMonitoringOutputC
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleMonitoringResources;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleNetworkConfig;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleStoppingCondition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MonitoringScheduleMonitoringJobDefinition {
     private final @Nullable MonitoringScheduleBaselineConfig baselineConfig;
     /**
@@ -38,17 +38,17 @@ public final class MonitoringScheduleMonitoringJobDefinition {
     private final String roleArn;
     private final @Nullable MonitoringScheduleStoppingCondition stoppingCondition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MonitoringScheduleMonitoringJobDefinition(
-        @OutputCustomType.Parameter("baselineConfig") @Nullable MonitoringScheduleBaselineConfig baselineConfig,
-        @OutputCustomType.Parameter("environment") @Nullable Object environment,
-        @OutputCustomType.Parameter("monitoringAppSpecification") MonitoringScheduleMonitoringAppSpecification monitoringAppSpecification,
-        @OutputCustomType.Parameter("monitoringInputs") List<MonitoringScheduleMonitoringInput> monitoringInputs,
-        @OutputCustomType.Parameter("monitoringOutputConfig") MonitoringScheduleMonitoringOutputConfig monitoringOutputConfig,
-        @OutputCustomType.Parameter("monitoringResources") MonitoringScheduleMonitoringResources monitoringResources,
-        @OutputCustomType.Parameter("networkConfig") @Nullable MonitoringScheduleNetworkConfig networkConfig,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("stoppingCondition") @Nullable MonitoringScheduleStoppingCondition stoppingCondition) {
+        @CustomType.Parameter("baselineConfig") @Nullable MonitoringScheduleBaselineConfig baselineConfig,
+        @CustomType.Parameter("environment") @Nullable Object environment,
+        @CustomType.Parameter("monitoringAppSpecification") MonitoringScheduleMonitoringAppSpecification monitoringAppSpecification,
+        @CustomType.Parameter("monitoringInputs") List<MonitoringScheduleMonitoringInput> monitoringInputs,
+        @CustomType.Parameter("monitoringOutputConfig") MonitoringScheduleMonitoringOutputConfig monitoringOutputConfig,
+        @CustomType.Parameter("monitoringResources") MonitoringScheduleMonitoringResources monitoringResources,
+        @CustomType.Parameter("networkConfig") @Nullable MonitoringScheduleNetworkConfig networkConfig,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("stoppingCondition") @Nullable MonitoringScheduleStoppingCondition stoppingCondition) {
         this.baselineConfig = baselineConfig;
         this.environment = environment;
         this.monitoringAppSpecification = monitoringAppSpecification;

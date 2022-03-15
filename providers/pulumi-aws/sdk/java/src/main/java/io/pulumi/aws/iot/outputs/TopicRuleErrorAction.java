@@ -18,12 +18,12 @@ import io.pulumi.aws.iot.outputs.TopicRuleErrorActionS3;
 import io.pulumi.aws.iot.outputs.TopicRuleErrorActionSns;
 import io.pulumi.aws.iot.outputs.TopicRuleErrorActionSqs;
 import io.pulumi.aws.iot.outputs.TopicRuleErrorActionStepFunctions;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleErrorAction {
     private final @Nullable TopicRuleErrorActionCloudwatchAlarm cloudwatchAlarm;
     private final @Nullable TopicRuleErrorActionCloudwatchMetric cloudwatchMetric;
@@ -41,23 +41,23 @@ public final class TopicRuleErrorAction {
     private final @Nullable TopicRuleErrorActionSqs sqs;
     private final @Nullable TopicRuleErrorActionStepFunctions stepFunctions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleErrorAction(
-        @OutputCustomType.Parameter("cloudwatchAlarm") @Nullable TopicRuleErrorActionCloudwatchAlarm cloudwatchAlarm,
-        @OutputCustomType.Parameter("cloudwatchMetric") @Nullable TopicRuleErrorActionCloudwatchMetric cloudwatchMetric,
-        @OutputCustomType.Parameter("dynamodb") @Nullable TopicRuleErrorActionDynamodb dynamodb,
-        @OutputCustomType.Parameter("dynamodbv2") @Nullable TopicRuleErrorActionDynamodbv2 dynamodbv2,
-        @OutputCustomType.Parameter("elasticsearch") @Nullable TopicRuleErrorActionElasticsearch elasticsearch,
-        @OutputCustomType.Parameter("firehose") @Nullable TopicRuleErrorActionFirehose firehose,
-        @OutputCustomType.Parameter("iotAnalytics") @Nullable TopicRuleErrorActionIotAnalytics iotAnalytics,
-        @OutputCustomType.Parameter("iotEvents") @Nullable TopicRuleErrorActionIotEvents iotEvents,
-        @OutputCustomType.Parameter("kinesis") @Nullable TopicRuleErrorActionKinesis kinesis,
-        @OutputCustomType.Parameter("lambda") @Nullable TopicRuleErrorActionLambda lambda,
-        @OutputCustomType.Parameter("republish") @Nullable TopicRuleErrorActionRepublish republish,
-        @OutputCustomType.Parameter("s3") @Nullable TopicRuleErrorActionS3 s3,
-        @OutputCustomType.Parameter("sns") @Nullable TopicRuleErrorActionSns sns,
-        @OutputCustomType.Parameter("sqs") @Nullable TopicRuleErrorActionSqs sqs,
-        @OutputCustomType.Parameter("stepFunctions") @Nullable TopicRuleErrorActionStepFunctions stepFunctions) {
+        @CustomType.Parameter("cloudwatchAlarm") @Nullable TopicRuleErrorActionCloudwatchAlarm cloudwatchAlarm,
+        @CustomType.Parameter("cloudwatchMetric") @Nullable TopicRuleErrorActionCloudwatchMetric cloudwatchMetric,
+        @CustomType.Parameter("dynamodb") @Nullable TopicRuleErrorActionDynamodb dynamodb,
+        @CustomType.Parameter("dynamodbv2") @Nullable TopicRuleErrorActionDynamodbv2 dynamodbv2,
+        @CustomType.Parameter("elasticsearch") @Nullable TopicRuleErrorActionElasticsearch elasticsearch,
+        @CustomType.Parameter("firehose") @Nullable TopicRuleErrorActionFirehose firehose,
+        @CustomType.Parameter("iotAnalytics") @Nullable TopicRuleErrorActionIotAnalytics iotAnalytics,
+        @CustomType.Parameter("iotEvents") @Nullable TopicRuleErrorActionIotEvents iotEvents,
+        @CustomType.Parameter("kinesis") @Nullable TopicRuleErrorActionKinesis kinesis,
+        @CustomType.Parameter("lambda") @Nullable TopicRuleErrorActionLambda lambda,
+        @CustomType.Parameter("republish") @Nullable TopicRuleErrorActionRepublish republish,
+        @CustomType.Parameter("s3") @Nullable TopicRuleErrorActionS3 s3,
+        @CustomType.Parameter("sns") @Nullable TopicRuleErrorActionSns sns,
+        @CustomType.Parameter("sqs") @Nullable TopicRuleErrorActionSqs sqs,
+        @CustomType.Parameter("stepFunctions") @Nullable TopicRuleErrorActionStepFunctions stepFunctions) {
         this.cloudwatchAlarm = cloudwatchAlarm;
         this.cloudwatchMetric = cloudwatchMetric;
         this.dynamodb = dynamodb;

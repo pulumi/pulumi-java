@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SourceResponse {
     /**
      * List of  Resource referred into query
@@ -33,12 +33,12 @@ public final class SourceResponse {
      */
     private final @Nullable String queryType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceResponse(
-        @OutputCustomType.Parameter("authorizedResources") @Nullable List<String> authorizedResources,
-        @OutputCustomType.Parameter("dataSourceId") String dataSourceId,
-        @OutputCustomType.Parameter("query") @Nullable String query,
-        @OutputCustomType.Parameter("queryType") @Nullable String queryType) {
+        @CustomType.Parameter("authorizedResources") @Nullable List<String> authorizedResources,
+        @CustomType.Parameter("dataSourceId") String dataSourceId,
+        @CustomType.Parameter("query") @Nullable String query,
+        @CustomType.Parameter("queryType") @Nullable String queryType) {
         this.authorizedResources = authorizedResources;
         this.dataSourceId = dataSourceId;
         this.query = query;

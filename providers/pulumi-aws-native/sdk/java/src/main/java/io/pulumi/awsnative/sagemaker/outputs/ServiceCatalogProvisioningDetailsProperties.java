@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.ProjectProvisioningParameter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceCatalogProvisioningDetailsProperties {
     private final @Nullable String pathId;
     private final String productId;
@@ -22,12 +22,12 @@ public final class ServiceCatalogProvisioningDetailsProperties {
      */
     private final @Nullable List<ProjectProvisioningParameter> provisioningParameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceCatalogProvisioningDetailsProperties(
-        @OutputCustomType.Parameter("pathId") @Nullable String pathId,
-        @OutputCustomType.Parameter("productId") String productId,
-        @OutputCustomType.Parameter("provisioningArtifactId") @Nullable String provisioningArtifactId,
-        @OutputCustomType.Parameter("provisioningParameters") @Nullable List<ProjectProvisioningParameter> provisioningParameters) {
+        @CustomType.Parameter("pathId") @Nullable String pathId,
+        @CustomType.Parameter("productId") String productId,
+        @CustomType.Parameter("provisioningArtifactId") @Nullable String provisioningArtifactId,
+        @CustomType.Parameter("provisioningParameters") @Nullable List<ProjectProvisioningParameter> provisioningParameters) {
         this.pathId = pathId;
         this.productId = productId;
         this.provisioningArtifactId = provisioningArtifactId;

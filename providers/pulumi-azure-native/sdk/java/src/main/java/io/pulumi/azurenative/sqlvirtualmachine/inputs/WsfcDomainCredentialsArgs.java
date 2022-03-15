@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.Resourc
      * Cluster bootstrap account password.
      * 
      */
-    @InputImport(name="clusterBootstrapAccountPassword")
+    @Import(name="clusterBootstrapAccountPassword")
       private final @Nullable Output<String> clusterBootstrapAccountPassword;
 
     public Output<String> getClusterBootstrapAccountPassword() {
@@ -33,7 +33,7 @@ public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.Resourc
      * Cluster operator account password.
      * 
      */
-    @InputImport(name="clusterOperatorAccountPassword")
+    @Import(name="clusterOperatorAccountPassword")
       private final @Nullable Output<String> clusterOperatorAccountPassword;
 
     public Output<String> getClusterOperatorAccountPassword() {
@@ -44,7 +44,7 @@ public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.Resourc
      * SQL service account password.
      * 
      */
-    @InputImport(name="sqlServiceAccountPassword")
+    @Import(name="sqlServiceAccountPassword")
       private final @Nullable Output<String> sqlServiceAccountPassword;
 
     public Output<String> getSqlServiceAccountPassword() {

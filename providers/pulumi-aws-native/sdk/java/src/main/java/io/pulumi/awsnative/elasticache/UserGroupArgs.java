@@ -5,7 +5,7 @@ package io.pulumi.awsnative.elasticache;
 
 import io.pulumi.awsnative.elasticache.enums.UserGroupEngine;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Must be redis.
      * 
      */
-    @InputImport(name="engine", required=true)
+    @Import(name="engine", required=true)
       private final Output<UserGroupEngine> engine;
 
     public Output<UserGroupEngine> getEngine() {
@@ -31,7 +31,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the user group.
      * 
      */
-    @InputImport(name="userGroupId", required=true)
+    @Import(name="userGroupId", required=true)
       private final Output<String> userGroupId;
 
     public Output<String> getUserGroupId() {
@@ -42,7 +42,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
      * List of users associated to this user group.
      * 
      */
-    @InputImport(name="userIds")
+    @Import(name="userIds")
       private final @Nullable Output<List<String>> userIds;
 
     public Output<List<String>> getUserIds() {

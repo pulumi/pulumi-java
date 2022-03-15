@@ -4,7 +4,7 @@
 package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DeploymentGroupDeploymentStyleGetArgs extends io.pulumi.resou
      * Indicates whether to route deployment traffic behind a load balancer. Valid Values are `WITH_TRAFFIC_CONTROL` or `WITHOUT_TRAFFIC_CONTROL`. Default is `WITHOUT_TRAFFIC_CONTROL`.
      * 
      */
-    @InputImport(name="deploymentOption")
+    @Import(name="deploymentOption")
       private final @Nullable Output<String> deploymentOption;
 
     public Output<String> getDeploymentOption() {
@@ -29,7 +29,7 @@ public final class DeploymentGroupDeploymentStyleGetArgs extends io.pulumi.resou
      * Indicates whether to run an in-place deployment or a blue/green deployment. Valid Values are `IN_PLACE` or `BLUE_GREEN`. Default is `IN_PLACE`.
      * 
      */
-    @InputImport(name="deploymentType")
+    @Import(name="deploymentType")
       private final @Nullable Output<String> deploymentType;
 
     public Output<String> getDeploymentType() {

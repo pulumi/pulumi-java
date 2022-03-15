@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ssm.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetPatchBaselineArgs extends io.pulumi.resources.InvokeArgs {
      * Filters the results against the baselines default_baseline field.
      * 
      */
-    @InputImport(name="defaultBaseline")
+    @Import(name="defaultBaseline")
       private final @Nullable Boolean defaultBaseline;
 
     public Optional<Boolean> getDefaultBaseline() {
@@ -30,7 +30,7 @@ public final class GetPatchBaselineArgs extends io.pulumi.resources.InvokeArgs {
      * Filter results by the baseline name prefix.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable String namePrefix;
 
     public Optional<String> getNamePrefix() {
@@ -41,7 +41,7 @@ public final class GetPatchBaselineArgs extends io.pulumi.resources.InvokeArgs {
      * The specified OS for the baseline.
      * 
      */
-    @InputImport(name="operatingSystem")
+    @Import(name="operatingSystem")
       private final @Nullable String operatingSystem;
 
     public Optional<String> getOperatingSystem() {
@@ -52,7 +52,7 @@ public final class GetPatchBaselineArgs extends io.pulumi.resources.InvokeArgs {
      * The owner of the baseline. Valid values: `All`, `AWS`, `Self` (the current account).
      * 
      */
-    @InputImport(name="owner", required=true)
+    @Import(name="owner", required=true)
       private final String owner;
 
     public String getOwner() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TableLocalSecondaryIndex {
     /**
      * The name of the index
@@ -38,12 +38,12 @@ public final class TableLocalSecondaryIndex {
      */
     private final String rangeKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableLocalSecondaryIndex(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nonKeyAttributes") @Nullable List<String> nonKeyAttributes,
-        @OutputCustomType.Parameter("projectionType") String projectionType,
-        @OutputCustomType.Parameter("rangeKey") String rangeKey) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nonKeyAttributes") @Nullable List<String> nonKeyAttributes,
+        @CustomType.Parameter("projectionType") String projectionType,
+        @CustomType.Parameter("rangeKey") String rangeKey) {
         this.name = name;
         this.nonKeyAttributes = nonKeyAttributes;
         this.projectionType = projectionType;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether actions should be executed during any changes to the alarm state of the composite alarm. Defaults to `true`.
      * 
      */
-    @InputImport(name="actionsEnabled")
+    @Import(name="actionsEnabled")
       private final @Nullable Output<Boolean> actionsEnabled;
 
     public Output<Boolean> getActionsEnabled() {
@@ -32,7 +32,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The set of actions to execute when this alarm transitions to the `ALARM` state from any other state. Each action is specified as an ARN. Up to 5 actions are allowed.
      * 
      */
-    @InputImport(name="alarmActions")
+    @Import(name="alarmActions")
       private final @Nullable Output<List<String>> alarmActions;
 
     public Output<List<String>> getAlarmActions() {
@@ -43,7 +43,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The description for the composite alarm.
      * 
      */
-    @InputImport(name="alarmDescription")
+    @Import(name="alarmDescription")
       private final @Nullable Output<String> alarmDescription;
 
     public Output<String> getAlarmDescription() {
@@ -54,7 +54,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The name for the composite alarm. This name must be unique within the region.
      * 
      */
-    @InputImport(name="alarmName", required=true)
+    @Import(name="alarmName", required=true)
       private final Output<String> alarmName;
 
     public Output<String> getAlarmName() {
@@ -65,7 +65,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * An expression that specifies which other alarms are to be evaluated to determine this composite alarm's state. For syntax, see [Creating a Composite Alarm](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Create_Composite_Alarm.html). The maximum length is 10240 characters.
      * 
      */
-    @InputImport(name="alarmRule", required=true)
+    @Import(name="alarmRule", required=true)
       private final Output<String> alarmRule;
 
     public Output<String> getAlarmRule() {
@@ -76,7 +76,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The set of actions to execute when this alarm transitions to the `INSUFFICIENT_DATA` state from any other state. Each action is specified as an ARN. Up to 5 actions are allowed.
      * 
      */
-    @InputImport(name="insufficientDataActions")
+    @Import(name="insufficientDataActions")
       private final @Nullable Output<List<String>> insufficientDataActions;
 
     public Output<List<String>> getInsufficientDataActions() {
@@ -87,7 +87,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * The set of actions to execute when this alarm transitions to an `OK` state from any other state. Each action is specified as an ARN. Up to 5 actions are allowed.
      * 
      */
-    @InputImport(name="okActions")
+    @Import(name="okActions")
       private final @Nullable Output<List<String>> okActions;
 
     public Output<List<String>> getOkActions() {
@@ -98,7 +98,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to associate with the alarm. Up to 50 tags are allowed. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

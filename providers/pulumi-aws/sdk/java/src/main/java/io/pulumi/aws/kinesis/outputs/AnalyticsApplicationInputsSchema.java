@@ -5,14 +5,14 @@ package io.pulumi.aws.kinesis.outputs;
 
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationInputsSchemaRecordColumn;
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationInputsSchemaRecordFormat;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsApplicationInputsSchema {
     /**
      * The Record Column mapping for the streaming source data element.
@@ -32,11 +32,11 @@ public final class AnalyticsApplicationInputsSchema {
      */
     private final AnalyticsApplicationInputsSchemaRecordFormat recordFormat;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalyticsApplicationInputsSchema(
-        @OutputCustomType.Parameter("recordColumns") List<AnalyticsApplicationInputsSchemaRecordColumn> recordColumns,
-        @OutputCustomType.Parameter("recordEncoding") @Nullable String recordEncoding,
-        @OutputCustomType.Parameter("recordFormat") AnalyticsApplicationInputsSchemaRecordFormat recordFormat) {
+        @CustomType.Parameter("recordColumns") List<AnalyticsApplicationInputsSchemaRecordColumn> recordColumns,
+        @CustomType.Parameter("recordEncoding") @Nullable String recordEncoding,
+        @CustomType.Parameter("recordFormat") AnalyticsApplicationInputsSchemaRecordFormat recordFormat) {
         this.recordColumns = recordColumns;
         this.recordEncoding = recordEncoding;
         this.recordFormat = recordFormat;

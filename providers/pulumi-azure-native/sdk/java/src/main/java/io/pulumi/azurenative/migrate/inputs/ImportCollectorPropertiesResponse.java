@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class ImportCollectorPropertiesResponse extends io.pulumi.resources
 
     public static final ImportCollectorPropertiesResponse Empty = new ImportCollectorPropertiesResponse();
 
-    @InputImport(name="createdTimestamp", required=true)
+    @Import(name="createdTimestamp", required=true)
       private final String createdTimestamp;
 
     public String getCreatedTimestamp() {
         return this.createdTimestamp;
     }
 
-    @InputImport(name="discoverySiteId")
+    @Import(name="discoverySiteId")
       private final @Nullable String discoverySiteId;
 
     public Optional<String> getDiscoverySiteId() {
         return this.discoverySiteId == null ? Optional.empty() : Optional.ofNullable(this.discoverySiteId);
     }
 
-    @InputImport(name="updatedTimestamp", required=true)
+    @Import(name="updatedTimestamp", required=true)
       private final String updatedTimestamp;
 
     public String getUpdatedTimestamp() {

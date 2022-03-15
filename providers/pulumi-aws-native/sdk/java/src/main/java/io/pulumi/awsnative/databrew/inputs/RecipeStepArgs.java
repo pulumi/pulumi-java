@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.RecipeActionArgs;
 import io.pulumi.awsnative.databrew.inputs.RecipeConditionExpressionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ public final class RecipeStepArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RecipeStepArgs Empty = new RecipeStepArgs();
 
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<RecipeActionArgs> action;
 
     public Output<RecipeActionArgs> getAction() {
@@ -27,7 +27,7 @@ public final class RecipeStepArgs extends io.pulumi.resources.ResourceArgs {
      * Condition expressions applied to the step action
      * 
      */
-    @InputImport(name="conditionExpressions")
+    @Import(name="conditionExpressions")
       private final @Nullable Output<List<RecipeConditionExpressionArgs>> conditionExpressions;
 
     public Output<List<RecipeConditionExpressionArgs>> getConditionExpressions() {

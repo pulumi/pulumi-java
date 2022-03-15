@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ComputeBindingResponse extends io.pulumi.resources.InvokeArgs
      * ID of the compute resource.
      * 
      */
-    @InputImport(name="computeId")
+    @Import(name="computeId")
       private final @Nullable String computeId;
 
     public Optional<String> getComputeId() {
@@ -34,7 +34,7 @@ public final class ComputeBindingResponse extends io.pulumi.resources.InvokeArgs
      * Number of nodes.
      * 
      */
-    @InputImport(name="nodeCount")
+    @Import(name="nodeCount")
       private final @Nullable Integer nodeCount;
 
     public Optional<Integer> getNodeCount() {

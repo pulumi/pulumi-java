@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ecr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetImageResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -38,16 +38,16 @@ public final class GetImageResult {
     private final String registryId;
     private final String repositoryName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetImageResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("imageDigest") String imageDigest,
-        @OutputCustomType.Parameter("imagePushedAt") Integer imagePushedAt,
-        @OutputCustomType.Parameter("imageSizeInBytes") Integer imageSizeInBytes,
-        @OutputCustomType.Parameter("imageTag") @Nullable String imageTag,
-        @OutputCustomType.Parameter("imageTags") List<String> imageTags,
-        @OutputCustomType.Parameter("registryId") String registryId,
-        @OutputCustomType.Parameter("repositoryName") String repositoryName) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("imageDigest") String imageDigest,
+        @CustomType.Parameter("imagePushedAt") Integer imagePushedAt,
+        @CustomType.Parameter("imageSizeInBytes") Integer imageSizeInBytes,
+        @CustomType.Parameter("imageTag") @Nullable String imageTag,
+        @CustomType.Parameter("imageTags") List<String> imageTags,
+        @CustomType.Parameter("registryId") String registryId,
+        @CustomType.Parameter("repositoryName") String repositoryName) {
         this.id = id;
         this.imageDigest = imageDigest;
         this.imagePushedAt = imagePushedAt;

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.importexport.outputs;
 
 import io.pulumi.azurenative.importexport.outputs.DriveBitLockerKeyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListBitLockerKeyResult {
     /**
      * drive status
@@ -17,8 +17,8 @@ public final class ListBitLockerKeyResult {
      */
     private final @Nullable List<DriveBitLockerKeyResponse> value;
 
-    @OutputCustomType.Constructor
-    private ListBitLockerKeyResult(@OutputCustomType.Parameter("value") @Nullable List<DriveBitLockerKeyResponse> value) {
+    @CustomType.Constructor
+    private ListBitLockerKeyResult(@CustomType.Parameter("value") @Nullable List<DriveBitLockerKeyResponse> value) {
         this.value = value;
     }
 

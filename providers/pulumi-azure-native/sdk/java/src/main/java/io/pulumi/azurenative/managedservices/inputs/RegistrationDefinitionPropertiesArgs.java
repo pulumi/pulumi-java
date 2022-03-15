@@ -5,7 +5,7 @@ package io.pulumi.azurenative.managedservices.inputs;
 
 import io.pulumi.azurenative.managedservices.inputs.AuthorizationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
      * Authorization tuple containing principal id of the user/security group or service principal and id of the build-in role.
      * 
      */
-    @InputImport(name="authorizations", required=true)
+    @Import(name="authorizations", required=true)
       private final Output<List<AuthorizationArgs>> authorizations;
 
     public Output<List<AuthorizationArgs>> getAuthorizations() {
@@ -35,7 +35,7 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
      * Description of the registration definition.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
      * Id of the managedBy tenant.
      * 
      */
-    @InputImport(name="managedByTenantId", required=true)
+    @Import(name="managedByTenantId", required=true)
       private final Output<String> managedByTenantId;
 
     public Output<String> getManagedByTenantId() {
@@ -57,7 +57,7 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
      * Name of the registration definition.
      * 
      */
-    @InputImport(name="registrationDefinitionName")
+    @Import(name="registrationDefinitionName")
       private final @Nullable Output<String> registrationDefinitionName;
 
     public Output<String> getRegistrationDefinitionName() {

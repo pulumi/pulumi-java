@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
      * Resource name of the attached database configuration in the follower cluster.
      * 
      */
-    @InputImport(name="attachedDatabaseConfigurationName", required=true)
+    @Import(name="attachedDatabaseConfigurationName", required=true)
       private final String attachedDatabaseConfigurationName;
 
     public String getAttachedDatabaseConfigurationName() {
@@ -31,7 +31,7 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
      * The database name owned by this cluster that was followed. * in case following all databases.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final String databaseName;
 
     public String getDatabaseName() {
@@ -42,7 +42,7 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
      * Resource id of the cluster that follows a database owned by this cluster.
      * 
      */
-    @InputImport(name="kustoPoolResourceId", required=true)
+    @Import(name="kustoPoolResourceId", required=true)
       private final String kustoPoolResourceId;
 
     public String getKustoPoolResourceId() {

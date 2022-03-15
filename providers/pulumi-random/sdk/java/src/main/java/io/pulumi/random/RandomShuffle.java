@@ -4,7 +4,7 @@
 package io.pulumi.random;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.random.RandomShuffleArgs;
 import io.pulumi.random.Utilities;
@@ -28,7 +28,7 @@ public class RandomShuffle extends io.pulumi.resources.CustomResource {
      * The list of strings to shuffle.
      * 
      */
-    @OutputExport(name="inputs", type=List.class, parameters={String.class})
+    @Export(name="inputs", type=List.class, parameters={String.class})
     private Output<List<String>> inputs;
 
     /**
@@ -42,7 +42,7 @@ public class RandomShuffle extends io.pulumi.resources.CustomResource {
      * Arbitrary map of values that, when changed, will trigger recreation of resource. See the main provider documentation for more information.
      * 
      */
-    @OutputExport(name="keepers", type=Map.class, parameters={String.class, Object.class})
+    @Export(name="keepers", type=Map.class, parameters={String.class, Object.class})
     private Output</* @Nullable */ Map<String,Object>> keepers;
 
     /**
@@ -56,7 +56,7 @@ public class RandomShuffle extends io.pulumi.resources.CustomResource {
      * The number of results to return. Defaults to the number of items in the `input` list. If fewer items are requested, some elements will be excluded from the result. If more items are requested, items will be repeated in the result but not more frequently than the number of items in the input list.
      * 
      */
-    @OutputExport(name="resultCount", type=Integer.class, parameters={})
+    @Export(name="resultCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> resultCount;
 
     /**
@@ -70,7 +70,7 @@ public class RandomShuffle extends io.pulumi.resources.CustomResource {
      * Random permutation of the list of strings given in `input`.
      * 
      */
-    @OutputExport(name="results", type=List.class, parameters={String.class})
+    @Export(name="results", type=List.class, parameters={String.class})
     private Output<List<String>> results;
 
     /**
@@ -84,7 +84,7 @@ public class RandomShuffle extends io.pulumi.resources.CustomResource {
      * Arbitrary string with which to seed the random number generator, in order to produce less-volatile permutations of the list.
      * 
      */
-    @OutputExport(name="seed", type=String.class, parameters={})
+    @Export(name="seed", type=String.class, parameters={})
     private Output</* @Nullable */ String> seed;
 
     /**

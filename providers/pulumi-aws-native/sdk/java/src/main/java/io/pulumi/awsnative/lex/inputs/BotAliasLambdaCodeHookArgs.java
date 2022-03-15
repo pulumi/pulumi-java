@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BotAliasLambdaCodeHookArgs extends io.pulumi.resources.Resour
      * The version of the request-response that you want Amazon Lex to use to invoke your Lambda function.
      * 
      */
-    @InputImport(name="codeHookInterfaceVersion", required=true)
+    @Import(name="codeHookInterfaceVersion", required=true)
       private final Output<String> codeHookInterfaceVersion;
 
     public Output<String> getCodeHookInterfaceVersion() {
@@ -32,7 +32,7 @@ public final class BotAliasLambdaCodeHookArgs extends io.pulumi.resources.Resour
      * The Amazon Resource Name (ARN) of the Lambda function.
      * 
      */
-    @InputImport(name="lambdaArn", required=true)
+    @Import(name="lambdaArn", required=true)
       private final Output<String> lambdaArn;
 
     public Output<String> getLambdaArn() {

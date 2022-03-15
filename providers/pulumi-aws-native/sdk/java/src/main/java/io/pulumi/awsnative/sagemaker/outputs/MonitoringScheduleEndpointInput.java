@@ -5,13 +5,13 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleEndpointInputS3DataDistributionType;
 import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleEndpointInputS3InputMode;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MonitoringScheduleEndpointInput {
     private final String endpointName;
     /**
@@ -30,12 +30,12 @@ public final class MonitoringScheduleEndpointInput {
      */
     private final @Nullable MonitoringScheduleEndpointInputS3InputMode s3InputMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MonitoringScheduleEndpointInput(
-        @OutputCustomType.Parameter("endpointName") String endpointName,
-        @OutputCustomType.Parameter("localPath") String localPath,
-        @OutputCustomType.Parameter("s3DataDistributionType") @Nullable MonitoringScheduleEndpointInputS3DataDistributionType s3DataDistributionType,
-        @OutputCustomType.Parameter("s3InputMode") @Nullable MonitoringScheduleEndpointInputS3InputMode s3InputMode) {
+        @CustomType.Parameter("endpointName") String endpointName,
+        @CustomType.Parameter("localPath") String localPath,
+        @CustomType.Parameter("s3DataDistributionType") @Nullable MonitoringScheduleEndpointInputS3DataDistributionType s3DataDistributionType,
+        @CustomType.Parameter("s3InputMode") @Nullable MonitoringScheduleEndpointInputS3InputMode s3InputMode) {
         this.endpointName = endpointName;
         this.localPath = localPath;
         this.s3DataDistributionType = s3DataDistributionType;

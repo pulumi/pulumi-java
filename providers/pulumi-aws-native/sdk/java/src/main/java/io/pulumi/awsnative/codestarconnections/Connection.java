@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.codestarconnections.ConnectionArgs;
 import io.pulumi.awsnative.codestarconnections.outputs.ConnectionTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the  connection. The ARN is used as the connection reference when the connection is shared between AWS services.
      * 
      */
-    @OutputExport(name="connectionArn", type=String.class, parameters={})
+    @Export(name="connectionArn", type=String.class, parameters={})
     private Output<String> connectionArn;
 
     /**
@@ -39,7 +39,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The name of the connection. Connection names must be unique in an AWS user account.
      * 
      */
-    @OutputExport(name="connectionName", type=String.class, parameters={})
+    @Export(name="connectionName", type=String.class, parameters={})
     private Output<String> connectionName;
 
     /**
@@ -53,7 +53,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The current status of the connection.
      * 
      */
-    @OutputExport(name="connectionStatus", type=String.class, parameters={})
+    @Export(name="connectionStatus", type=String.class, parameters={})
     private Output<String> connectionStatus;
 
     /**
@@ -67,7 +67,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The host arn configured to represent the infrastructure where your third-party provider is installed. You must specify either a ProviderType or a HostArn.
      * 
      */
-    @OutputExport(name="hostArn", type=String.class, parameters={})
+    @Export(name="hostArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostArn;
 
     /**
@@ -81,7 +81,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The name of the external provider where your third-party code repository is configured. For Bitbucket, this is the account ID of the owner of the Bitbucket repository.
      * 
      */
-    @OutputExport(name="ownerAccountId", type=String.class, parameters={})
+    @Export(name="ownerAccountId", type=String.class, parameters={})
     private Output<String> ownerAccountId;
 
     /**
@@ -95,7 +95,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The name of the external provider where your third-party code repository is configured. You must specify either a ProviderType or a HostArn.
      * 
      */
-    @OutputExport(name="providerType", type=String.class, parameters={})
+    @Export(name="providerType", type=String.class, parameters={})
     private Output</* @Nullable */ String> providerType;
 
     /**
@@ -109,7 +109,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Specifies the tags applied to a connection.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ConnectionTag.class})
+    @Export(name="tags", type=List.class, parameters={ConnectionTag.class})
     private Output</* @Nullable */ List<ConnectionTag>> tags;
 
     /**

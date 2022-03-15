@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AllowedHostPathArgs extends io.pulumi.resources.ResourceArgs 
      * Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not allow `/food` or `/etc/foo`
      * 
      */
-    @InputImport(name="pathPrefix")
+    @Import(name="pathPrefix")
       private final @Nullable Output<String> pathPrefix;
 
     public Output<String> getPathPrefix() {
@@ -36,7 +36,7 @@ public final class AllowedHostPathArgs extends io.pulumi.resources.ResourceArgs 
      * when set to true, will allow host volumes matching the pathPrefix only if all volume mounts are readOnly.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {

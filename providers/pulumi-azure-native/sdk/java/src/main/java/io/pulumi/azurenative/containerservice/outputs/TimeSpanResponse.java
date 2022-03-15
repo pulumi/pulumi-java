@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TimeSpanResponse {
     /**
      * The end of a time span
@@ -22,10 +22,10 @@ public final class TimeSpanResponse {
      */
     private final @Nullable String start;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TimeSpanResponse(
-        @OutputCustomType.Parameter("end") @Nullable String end,
-        @OutputCustomType.Parameter("start") @Nullable String start) {
+        @CustomType.Parameter("end") @Nullable String end,
+        @CustomType.Parameter("start") @Nullable String start) {
         this.end = end;
         this.start = start;
     }

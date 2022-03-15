@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse ex
      * The name of the header to set.
      * 
      */
-    @InputImport(name="headerName", required=true)
+    @Import(name="headerName", required=true)
       private final String headerName;
 
     public String getHeaderName() {
@@ -27,7 +27,7 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse ex
      * The value to set the named header to.
      * 
      */
-    @InputImport(name="headerValue", required=true)
+    @Import(name="headerValue", required=true)
       private final String headerValue;
 
     public String getHeaderValue() {

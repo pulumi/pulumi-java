@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.inputs.RouterAdvertisedIpRangeResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +19,7 @@ public final class RouterBgpResponse extends io.pulumi.resources.InvokeArgs {
      * User-specified flag to indicate which mode to use for advertisement. The options are DEFAULT or CUSTOM.
      * 
      */
-    @InputImport(name="advertiseMode", required=true)
+    @Import(name="advertiseMode", required=true)
       private final String advertiseMode;
 
     public String getAdvertiseMode() {
@@ -30,7 +30,7 @@ public final class RouterBgpResponse extends io.pulumi.resources.InvokeArgs {
      * User-specified list of prefix groups to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These groups will be advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.
      * 
      */
-    @InputImport(name="advertisedGroups", required=true)
+    @Import(name="advertisedGroups", required=true)
       private final List<String> advertisedGroups;
 
     public List<String> getAdvertisedGroups() {
@@ -41,7 +41,7 @@ public final class RouterBgpResponse extends io.pulumi.resources.InvokeArgs {
      * User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and is advertised to all peers of the router. These IP ranges will be advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.
      * 
      */
-    @InputImport(name="advertisedIpRanges", required=true)
+    @Import(name="advertisedIpRanges", required=true)
       private final List<RouterAdvertisedIpRangeResponse> advertisedIpRanges;
 
     public List<RouterAdvertisedIpRangeResponse> getAdvertisedIpRanges() {
@@ -52,7 +52,7 @@ public final class RouterBgpResponse extends io.pulumi.resources.InvokeArgs {
      * Local BGP Autonomous System Number (ASN). Must be an RFC6996 private ASN, either 16-bit or 32-bit. The value will be fixed for this router resource. All VPN tunnels that link to this router will have the same local ASN.
      * 
      */
-    @InputImport(name="asn", required=true)
+    @Import(name="asn", required=true)
       private final Integer asn;
 
     public Integer getAsn() {
@@ -63,7 +63,7 @@ public final class RouterBgpResponse extends io.pulumi.resources.InvokeArgs {
      * The interval in seconds between BGP keepalive messages that are sent to the peer. Hold time is three times the interval at which keepalive messages are sent, and the hold time is the maximum number of seconds allowed to elapse between successive keepalive messages that BGP receives from a peer. BGP will use the smaller of either the local hold time value or the peer's hold time value as the hold time for the BGP connection between the two peers. If set, this value must be between 20 and 60. The default is 20.
      * 
      */
-    @InputImport(name="keepaliveInterval", required=true)
+    @Import(name="keepaliveInterval", required=true)
       private final Integer keepaliveInterval;
 
     public Integer getKeepaliveInterval() {

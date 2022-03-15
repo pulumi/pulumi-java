@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.AzureFirewallApplicationRuleProtocolResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureFirewallApplicationRuleResponse {
     /**
      * Description of the rule.
@@ -49,15 +49,15 @@ public final class AzureFirewallApplicationRuleResponse {
      */
     private final @Nullable List<String> targetFqdns;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureFirewallApplicationRuleResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("fqdnTags") @Nullable List<String> fqdnTags,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("protocols") @Nullable List<AzureFirewallApplicationRuleProtocolResponse> protocols,
-        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
-        @OutputCustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups,
-        @OutputCustomType.Parameter("targetFqdns") @Nullable List<String> targetFqdns) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("fqdnTags") @Nullable List<String> fqdnTags,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("protocols") @Nullable List<AzureFirewallApplicationRuleProtocolResponse> protocols,
+        @CustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @CustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups,
+        @CustomType.Parameter("targetFqdns") @Nullable List<String> targetFqdns) {
         this.description = description;
         this.fqdnTags = fqdnTags;
         this.name = name;

@@ -8,14 +8,14 @@ import io.pulumi.azurenative.media.outputs.BuiltInStandardEncoderPresetResponse;
 import io.pulumi.azurenative.media.outputs.FaceDetectorPresetResponse;
 import io.pulumi.azurenative.media.outputs.StandardEncoderPresetResponse;
 import io.pulumi.azurenative.media.outputs.VideoAnalyzerPresetResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TransformOutputResponse {
     /**
      * A Transform can define more than one outputs. This property defines what the service should do when one output fails - either continue to produce other outputs, or, stop the other outputs. The overall Job state will not reflect failures of outputs that are specified with 'ContinueJob'. The default is 'StopProcessingJob'.
@@ -33,11 +33,11 @@ public final class TransformOutputResponse {
      */
     private final @Nullable String relativePriority;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TransformOutputResponse(
-        @OutputCustomType.Parameter("onError") @Nullable String onError,
-        @OutputCustomType.Parameter("preset") Object preset,
-        @OutputCustomType.Parameter("relativePriority") @Nullable String relativePriority) {
+        @CustomType.Parameter("onError") @Nullable String onError,
+        @CustomType.Parameter("preset") Object preset,
+        @CustomType.Parameter("relativePriority") @Nullable String relativePriority) {
         this.onError = onError;
         this.preset = preset;
         this.relativePriority = relativePriority;

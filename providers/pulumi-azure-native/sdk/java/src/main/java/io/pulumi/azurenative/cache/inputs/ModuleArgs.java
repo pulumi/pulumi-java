@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cache.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration options for the module, e.g. 'ERROR_RATE 0.00 INITIAL_SIZE 400'.
      * 
      */
-    @InputImport(name="args")
+    @Import(name="args")
       private final @Nullable Output<String> args;
 
     public Output<String> getArgs() {
@@ -33,7 +33,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the module, e.g. 'RedisBloom', 'RediSearch', 'RedisTimeSeries'
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

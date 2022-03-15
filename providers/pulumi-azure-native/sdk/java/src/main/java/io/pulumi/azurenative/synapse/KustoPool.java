@@ -9,7 +9,7 @@ import io.pulumi.azurenative.synapse.outputs.AzureSkuResponse;
 import io.pulumi.azurenative.synapse.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * The Kusto Pool data ingestion URI.
      * 
      */
-    @OutputExport(name="dataIngestionUri", type=String.class, parameters={})
+    @Export(name="dataIngestionUri", type=String.class, parameters={})
     private Output<String> dataIngestionUri;
 
     /**
@@ -51,7 +51,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * The engine type
      * 
      */
-    @OutputExport(name="engineType", type=String.class, parameters={})
+    @Export(name="engineType", type=String.class, parameters={})
     private Output</* @Nullable */ String> engineType;
 
     /**
@@ -65,7 +65,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -79,7 +79,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -93,7 +93,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * The provisioned state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -121,7 +121,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * The SKU of the kusto pool.
      * 
      */
-    @OutputExport(name="sku", type=AzureSkuResponse.class, parameters={})
+    @Export(name="sku", type=AzureSkuResponse.class, parameters={})
     private Output<AzureSkuResponse> sku;
 
     /**
@@ -135,7 +135,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * The state of the resource.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -149,7 +149,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * The reason for the Kusto Pool's current state.
      * 
      */
-    @OutputExport(name="stateReason", type=String.class, parameters={})
+    @Export(name="stateReason", type=String.class, parameters={})
     private Output<String> stateReason;
 
     /**
@@ -163,7 +163,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -177,7 +177,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -191,7 +191,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -205,7 +205,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * The Kusto Pool URI.
      * 
      */
-    @OutputExport(name="uri", type=String.class, parameters={})
+    @Export(name="uri", type=String.class, parameters={})
     private Output<String> uri;
 
     /**
@@ -219,7 +219,7 @@ public class KustoPool extends io.pulumi.resources.CustomResource {
      * The workspace unique identifier.
      * 
      */
-    @OutputExport(name="workspaceUid", type=String.class, parameters={})
+    @Export(name="workspaceUid", type=String.class, parameters={})
     private Output</* @Nullable */ String> workspaceUid;
 
     /**

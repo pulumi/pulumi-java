@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iot.PolicyAttachmentArgs;
 import io.pulumi.aws.iot.inputs.PolicyAttachmentState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * The name of the policy to attach.
      * 
      */
-    @OutputExport(name="policy", type=String.class, parameters={})
+    @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
     /**
@@ -38,7 +38,7 @@ public class PolicyAttachment extends io.pulumi.resources.CustomResource {
      * The identity to which the policy is attached.
      * 
      */
-    @OutputExport(name="target", type=String.class, parameters={})
+    @Export(name="target", type=String.class, parameters={})
     private Output<String> target;
 
     /**

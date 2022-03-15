@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.logs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResourcePolicyResult {
     /**
      * The policy document
@@ -17,8 +17,8 @@ public final class GetResourcePolicyResult {
      */
     private final @Nullable String policyDocument;
 
-    @OutputCustomType.Constructor
-    private GetResourcePolicyResult(@OutputCustomType.Parameter("policyDocument") @Nullable String policyDocument) {
+    @CustomType.Constructor
+    private GetResourcePolicyResult(@CustomType.Parameter("policyDocument") @Nullable String policyDocument) {
         this.policyDocument = policyDocument;
     }
 

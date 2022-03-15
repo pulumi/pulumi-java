@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EngineSplitTrafficSplit {
     /**
      * Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits.
@@ -24,10 +24,10 @@ public final class EngineSplitTrafficSplit {
      */
     private final @Nullable String shardBy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EngineSplitTrafficSplit(
-        @OutputCustomType.Parameter("allocations") Map<String,String> allocations,
-        @OutputCustomType.Parameter("shardBy") @Nullable String shardBy) {
+        @CustomType.Parameter("allocations") Map<String,String> allocations,
+        @CustomType.Parameter("shardBy") @Nullable String shardBy) {
         this.allocations = allocations;
         this.shardBy = shardBy;
     }

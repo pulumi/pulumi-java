@@ -11,7 +11,7 @@ import io.pulumi.azurenative.mixedreality.outputs.SkuResponse;
 import io.pulumi.azurenative.mixedreality.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * Correspond domain name of certain Spatial Anchors Account
      * 
      */
-    @OutputExport(name="accountDomain", type=String.class, parameters={})
+    @Export(name="accountDomain", type=String.class, parameters={})
     private Output<String> accountDomain;
 
     /**
@@ -53,7 +53,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * unique id of certain account.
      * 
      */
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
@@ -63,7 +63,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
     public Output<String> getAccountId() {
         return this.accountId;
     }
-    @OutputExport(name="identity", type=ObjectAnchorsAccountResponseIdentity.class, parameters={})
+    @Export(name="identity", type=ObjectAnchorsAccountResponseIdentity.class, parameters={})
     private Output</* @Nullable */ ObjectAnchorsAccountResponseIdentity> identity;
 
     public Output</* @Nullable */ ObjectAnchorsAccountResponseIdentity> getIdentity() {
@@ -73,7 +73,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * The kind of account, if supported
      * 
      */
-    @OutputExport(name="kind", type=SkuResponse.class, parameters={})
+    @Export(name="kind", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> kind;
 
     /**
@@ -87,7 +87,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -101,7 +101,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -115,7 +115,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * The plan associated with this account
      * 
      */
-    @OutputExport(name="plan", type=IdentityResponse.class, parameters={})
+    @Export(name="plan", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> plan;
 
     /**
@@ -129,7 +129,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * The sku associated with this account
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -143,7 +143,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * The name of the storage account associated with this accountId
      * 
      */
-    @OutputExport(name="storageAccountName", type=String.class, parameters={})
+    @Export(name="storageAccountName", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountName;
 
     /**
@@ -157,7 +157,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * The system metadata related to an object anchors account.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -171,7 +171,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -185,7 +185,7 @@ public class ObjectAnchorsAccount extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

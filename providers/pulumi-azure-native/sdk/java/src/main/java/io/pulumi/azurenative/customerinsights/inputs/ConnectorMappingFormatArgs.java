@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.azurenative.customerinsights.enums.FormatTypes;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
      * The oData language.
      * 
      */
-    @InputImport(name="acceptLanguage")
+    @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
     public Output<String> getAcceptLanguage() {
@@ -34,7 +34,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
      * Character separating array elements.
      * 
      */
-    @InputImport(name="arraySeparator")
+    @Import(name="arraySeparator")
       private final @Nullable Output<String> arraySeparator;
 
     public Output<String> getArraySeparator() {
@@ -45,7 +45,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
      * The character that signifies a break between columns.
      * 
      */
-    @InputImport(name="columnDelimiter")
+    @Import(name="columnDelimiter")
       private final @Nullable Output<String> columnDelimiter;
 
     public Output<String> getColumnDelimiter() {
@@ -56,7 +56,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
      * The type mapping format.
      * 
      */
-    @InputImport(name="formatType", required=true)
+    @Import(name="formatType", required=true)
       private final Output<FormatTypes> formatType;
 
     public Output<FormatTypes> getFormatType() {
@@ -67,7 +67,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
      * Quote character, used to indicate enquoted fields.
      * 
      */
-    @InputImport(name="quoteCharacter")
+    @Import(name="quoteCharacter")
       private final @Nullable Output<String> quoteCharacter;
 
     public Output<String> getQuoteCharacter() {
@@ -78,7 +78,7 @@ public final class ConnectorMappingFormatArgs extends io.pulumi.resources.Resour
      * Escape character for quotes, can be the same as the quoteCharacter.
      * 
      */
-    @InputImport(name="quoteEscapeCharacter")
+    @Import(name="quoteEscapeCharacter")
       private final @Nullable Output<String> quoteEscapeCharacter;
 
     public Output<String> getQuoteEscapeCharacter() {

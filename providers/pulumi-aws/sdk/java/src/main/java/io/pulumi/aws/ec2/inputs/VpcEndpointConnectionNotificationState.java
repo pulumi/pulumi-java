@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
      * One or more endpoint [events](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateVpcEndpointConnectionNotification.html#API_CreateVpcEndpointConnectionNotification_RequestParameters) for which to receive notifications.
      * 
      */
-    @InputImport(name="connectionEvents")
+    @Import(name="connectionEvents")
       private final @Nullable Output<List<String>> connectionEvents;
 
     public Output<List<String>> getConnectionEvents() {
@@ -30,7 +30,7 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
      * The ARN of the SNS topic for the notifications.
      * 
      */
-    @InputImport(name="connectionNotificationArn")
+    @Import(name="connectionNotificationArn")
       private final @Nullable Output<String> connectionNotificationArn;
 
     public Output<String> getConnectionNotificationArn() {
@@ -41,7 +41,7 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
      * The type of notification.
      * 
      */
-    @InputImport(name="notificationType")
+    @Import(name="notificationType")
       private final @Nullable Output<String> notificationType;
 
     public Output<String> getNotificationType() {
@@ -52,7 +52,7 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
      * The state of the notification.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -63,7 +63,7 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
      * The ID of the VPC Endpoint to receive notifications for.
      * 
      */
-    @InputImport(name="vpcEndpointId")
+    @Import(name="vpcEndpointId")
       private final @Nullable Output<String> vpcEndpointId;
 
     public Output<String> getVpcEndpointId() {
@@ -74,7 +74,7 @@ public final class VpcEndpointConnectionNotificationState extends io.pulumi.reso
      * The ID of the VPC Endpoint Service to receive notifications for.
      * 
      */
-    @InputImport(name="vpcEndpointServiceId")
+    @Import(name="vpcEndpointServiceId")
       private final @Nullable Output<String> vpcEndpointServiceId;
 
     public Output<String> getVpcEndpointServiceId() {

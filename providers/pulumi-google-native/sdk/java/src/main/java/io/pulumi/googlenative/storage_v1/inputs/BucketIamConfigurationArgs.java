@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.storage_v1.inputs.BucketIamConfigurationBucketPolicyOnlyArgs;
 import io.pulumi.googlenative.storage_v1.inputs.BucketIamConfigurationUniformBucketLevelAccessArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
      * The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
      * 
      */
-    @InputImport(name="bucketPolicyOnly")
+    @Import(name="bucketPolicyOnly")
       private final @Nullable Output<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly;
 
     public Output<BucketIamConfigurationBucketPolicyOnlyArgs> getBucketPolicyOnly() {
@@ -35,7 +35,7 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
      * The bucket's Public Access Prevention configuration. Currently, 'inherited' and 'enforced' are supported.
      * 
      */
-    @InputImport(name="publicAccessPrevention")
+    @Import(name="publicAccessPrevention")
       private final @Nullable Output<String> publicAccessPrevention;
 
     public Output<String> getPublicAccessPrevention() {
@@ -46,7 +46,7 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
      * The bucket's uniform bucket-level access configuration.
      * 
      */
-    @InputImport(name="uniformBucketLevelAccess")
+    @Import(name="uniformBucketLevelAccess")
       private final @Nullable Output<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess;
 
     public Output<BucketIamConfigurationUniformBucketLevelAccessArgs> getUniformBucketLevelAccess() {

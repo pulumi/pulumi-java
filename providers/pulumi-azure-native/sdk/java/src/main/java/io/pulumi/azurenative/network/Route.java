@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.network.RouteArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The destination CIDR to which the route applies.
      * 
      */
-    @OutputExport(name="addressPrefix", type=String.class, parameters={})
+    @Export(name="addressPrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> addressPrefix;
 
     /**
@@ -49,7 +49,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -63,7 +63,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
      * 
      */
-    @OutputExport(name="hasBgpOverride", type=Boolean.class, parameters={})
+    @Export(name="hasBgpOverride", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> hasBgpOverride;
 
     /**
@@ -77,7 +77,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -91,7 +91,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
      * 
      */
-    @OutputExport(name="nextHopIpAddress", type=String.class, parameters={})
+    @Export(name="nextHopIpAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> nextHopIpAddress;
 
     /**
@@ -105,7 +105,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The type of Azure hop the packet should be sent to.
      * 
      */
-    @OutputExport(name="nextHopType", type=String.class, parameters={})
+    @Export(name="nextHopType", type=String.class, parameters={})
     private Output<String> nextHopType;
 
     /**
@@ -119,7 +119,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The provisioning state of the route resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -133,7 +133,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**

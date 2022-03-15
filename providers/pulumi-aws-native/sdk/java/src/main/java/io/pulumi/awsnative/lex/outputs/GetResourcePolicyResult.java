@@ -4,25 +4,25 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.ResourcePolicyPolicy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResourcePolicyResult {
     private final @Nullable String id;
     private final @Nullable ResourcePolicyPolicy policy;
     private final @Nullable String resourceArn;
     private final @Nullable String revisionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourcePolicyResult(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("policy") @Nullable ResourcePolicyPolicy policy,
-        @OutputCustomType.Parameter("resourceArn") @Nullable String resourceArn,
-        @OutputCustomType.Parameter("revisionId") @Nullable String revisionId) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("policy") @Nullable ResourcePolicyPolicy policy,
+        @CustomType.Parameter("resourceArn") @Nullable String resourceArn,
+        @CustomType.Parameter("revisionId") @Nullable String revisionId) {
         this.id = id;
         this.policy = policy;
         this.resourceArn = resourceArn;

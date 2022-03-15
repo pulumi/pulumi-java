@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings {
     /**
      * Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit
@@ -24,10 +24,10 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
      */
     private final @Nullable String retentionUnit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings(
-        @OutputCustomType.Parameter("retainedBackups") Integer retainedBackups,
-        @OutputCustomType.Parameter("retentionUnit") @Nullable String retentionUnit) {
+        @CustomType.Parameter("retainedBackups") Integer retainedBackups,
+        @CustomType.Parameter("retentionUnit") @Nullable String retentionUnit) {
         this.retainedBackups = retainedBackups;
         this.retentionUnit = retentionUnit;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class HealthMonitorResponse extends io.pulumi.resources.InvokeArgs 
      * Health Monitor Details
      * 
      */
-    @InputImport(name="details", required=true)
+    @Import(name="details", required=true)
       private final String details;
 
     public String getDetails() {
@@ -31,7 +31,7 @@ public final class HealthMonitorResponse extends io.pulumi.resources.InvokeArgs 
      * Health Monitor Id
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -42,7 +42,7 @@ public final class HealthMonitorResponse extends io.pulumi.resources.InvokeArgs 
      * Health Monitor Name
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

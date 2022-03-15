@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.deploymentmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentTargetImport {
     /**
      * The full contents of the template that you want to import.
@@ -23,10 +23,10 @@ public final class DeploymentTargetImport {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentTargetImport(
-        @OutputCustomType.Parameter("content") @Nullable String content,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("content") @Nullable String content,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.content = content;
         this.name = name;
     }

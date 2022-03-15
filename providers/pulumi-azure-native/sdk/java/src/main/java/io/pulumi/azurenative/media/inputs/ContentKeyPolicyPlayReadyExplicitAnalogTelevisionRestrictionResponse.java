@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
      * Indicates whether this restriction is enforced on a Best Effort basis.
      * 
      */
-    @InputImport(name="bestEffort", required=true)
+    @Import(name="bestEffort", required=true)
       private final Boolean bestEffort;
 
     public Boolean getBestEffort() {
@@ -32,7 +32,7 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
      * Configures the restriction control bits. Must be between 0 and 3 inclusive.
      * 
      */
-    @InputImport(name="configurationData", required=true)
+    @Import(name="configurationData", required=true)
       private final Integer configurationData;
 
     public Integer getConfigurationData() {

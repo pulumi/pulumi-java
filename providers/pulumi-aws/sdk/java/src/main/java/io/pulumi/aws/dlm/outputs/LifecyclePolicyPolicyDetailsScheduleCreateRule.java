@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.dlm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LifecyclePolicyPolicyDetailsScheduleCreateRule {
     /**
      * The amount of time to retain each snapshot. The maximum is 100 years. This is equivalent to 1200 months, 5200 weeks, or 36500 days.
@@ -28,11 +28,11 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRule {
      */
     private final @Nullable String times;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LifecyclePolicyPolicyDetailsScheduleCreateRule(
-        @OutputCustomType.Parameter("interval") Integer interval,
-        @OutputCustomType.Parameter("intervalUnit") @Nullable String intervalUnit,
-        @OutputCustomType.Parameter("times") @Nullable String times) {
+        @CustomType.Parameter("interval") Integer interval,
+        @CustomType.Parameter("intervalUnit") @Nullable String intervalUnit,
+        @CustomType.Parameter("times") @Nullable String times) {
         this.interval = interval;
         this.intervalUnit = intervalUnit;
         this.times = times;

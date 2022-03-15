@@ -5,7 +5,7 @@ package io.pulumi.aws.memorydb.inputs;
 
 import io.pulumi.aws.memorydb.inputs.SnapshotClusterConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the snapshot.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * The configuration of the cluster from which the snapshot was taken.
      * 
      */
-    @InputImport(name="clusterConfigurations")
+    @Import(name="clusterConfigurations")
       private final @Nullable Output<List<SnapshotClusterConfigurationGetArgs>> clusterConfigurations;
 
     public Output<List<SnapshotClusterConfigurationGetArgs>> getClusterConfigurations() {
@@ -43,7 +43,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Name of the MemoryDB cluster to take a snapshot of.
      * 
      */
-    @InputImport(name="clusterName")
+    @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -54,7 +54,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * ARN of the KMS key used to encrypt the snapshot at rest.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -65,7 +65,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Name of the cluster.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -87,7 +87,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether the snapshot is from an automatic backup (`automated`) or was created manually (`manual`).
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
@@ -98,7 +98,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -109,7 +109,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

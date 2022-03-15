@@ -6,12 +6,12 @@ package io.pulumi.azurenative.securityinsights.outputs;
 import io.pulumi.azurenative.securityinsights.outputs.OfficeDataConnectorDataTypesResponseExchange;
 import io.pulumi.azurenative.securityinsights.outputs.OfficeDataConnectorDataTypesResponseSharePoint;
 import io.pulumi.azurenative.securityinsights.outputs.OfficeDataConnectorDataTypesResponseTeams;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OfficeDataConnectorDataTypesResponse {
     /**
      * Exchange data type connection.
@@ -29,11 +29,11 @@ public final class OfficeDataConnectorDataTypesResponse {
      */
     private final @Nullable OfficeDataConnectorDataTypesResponseTeams teams;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OfficeDataConnectorDataTypesResponse(
-        @OutputCustomType.Parameter("exchange") @Nullable OfficeDataConnectorDataTypesResponseExchange exchange,
-        @OutputCustomType.Parameter("sharePoint") @Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint,
-        @OutputCustomType.Parameter("teams") @Nullable OfficeDataConnectorDataTypesResponseTeams teams) {
+        @CustomType.Parameter("exchange") @Nullable OfficeDataConnectorDataTypesResponseExchange exchange,
+        @CustomType.Parameter("sharePoint") @Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint,
+        @CustomType.Parameter("teams") @Nullable OfficeDataConnectorDataTypesResponseTeams teams) {
         this.exchange = exchange;
         this.sharePoint = sharePoint;
         this.teams = teams;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SparkStandaloneAutoscalingConfigResponse {
     /**
      * Timeout for Spark graceful decommissioning of spark workers. Specifies the duration to wait for spark worker to complete spark decomissioning tasks before forcefully removing workers. Only applicable to downscaling operations.Bounds: 0s, 1d.
@@ -36,13 +36,13 @@ public final class SparkStandaloneAutoscalingConfigResponse {
      */
     private final Double scaleUpMinWorkerFraction;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SparkStandaloneAutoscalingConfigResponse(
-        @OutputCustomType.Parameter("gracefulDecommissionTimeout") String gracefulDecommissionTimeout,
-        @OutputCustomType.Parameter("scaleDownFactor") Double scaleDownFactor,
-        @OutputCustomType.Parameter("scaleDownMinWorkerFraction") Double scaleDownMinWorkerFraction,
-        @OutputCustomType.Parameter("scaleUpFactor") Double scaleUpFactor,
-        @OutputCustomType.Parameter("scaleUpMinWorkerFraction") Double scaleUpMinWorkerFraction) {
+        @CustomType.Parameter("gracefulDecommissionTimeout") String gracefulDecommissionTimeout,
+        @CustomType.Parameter("scaleDownFactor") Double scaleDownFactor,
+        @CustomType.Parameter("scaleDownMinWorkerFraction") Double scaleDownMinWorkerFraction,
+        @CustomType.Parameter("scaleUpFactor") Double scaleUpFactor,
+        @CustomType.Parameter("scaleUpMinWorkerFraction") Double scaleUpMinWorkerFraction) {
         this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
         this.scaleDownFactor = scaleDownFactor;
         this.scaleDownMinWorkerFraction = scaleDownMinWorkerFraction;

@@ -5,12 +5,12 @@ package io.pulumi.aws.networkfirewall.outputs;
 
 import io.pulumi.aws.networkfirewall.outputs.RuleGroupRuleGroupRulesSourceStatefulRuleHeader;
 import io.pulumi.aws.networkfirewall.outputs.RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleGroupRulesSourceStatefulRule {
     /**
      * Action to take with packets in a traffic flow when the flow matches the stateful rule criteria. For all actions, AWS Network Firewall performs the specified action and discontinues stateful inspection of the traffic flow. Valid values: `ALERT`, `DROP` or `PASS`.
@@ -28,11 +28,11 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRule {
      */
     private final List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption> ruleOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupRuleGroupRulesSourceStatefulRule(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("header") RuleGroupRuleGroupRulesSourceStatefulRuleHeader header,
-        @OutputCustomType.Parameter("ruleOptions") List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption> ruleOptions) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("header") RuleGroupRuleGroupRulesSourceStatefulRuleHeader header,
+        @CustomType.Parameter("ruleOptions") List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption> ruleOptions) {
         this.action = action;
         this.header = header;
         this.ruleOptions = ruleOptions;

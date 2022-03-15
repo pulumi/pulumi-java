@@ -6,7 +6,7 @@ package io.pulumi.awsnative.pinpoint.inputs;
 import io.pulumi.awsnative.pinpoint.inputs.InAppTemplateBodyConfig;
 import io.pulumi.awsnative.pinpoint.inputs.InAppTemplateButtonConfig;
 import io.pulumi.awsnative.pinpoint.inputs.InAppTemplateHeaderConfig;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,42 +17,42 @@ public final class InAppTemplateInAppMessageContent extends io.pulumi.resources.
 
     public static final InAppTemplateInAppMessageContent Empty = new InAppTemplateInAppMessageContent();
 
-    @InputImport(name="backgroundColor")
+    @Import(name="backgroundColor")
       private final @Nullable String backgroundColor;
 
     public Optional<String> getBackgroundColor() {
         return this.backgroundColor == null ? Optional.empty() : Optional.ofNullable(this.backgroundColor);
     }
 
-    @InputImport(name="bodyConfig")
+    @Import(name="bodyConfig")
       private final @Nullable InAppTemplateBodyConfig bodyConfig;
 
     public Optional<InAppTemplateBodyConfig> getBodyConfig() {
         return this.bodyConfig == null ? Optional.empty() : Optional.ofNullable(this.bodyConfig);
     }
 
-    @InputImport(name="headerConfig")
+    @Import(name="headerConfig")
       private final @Nullable InAppTemplateHeaderConfig headerConfig;
 
     public Optional<InAppTemplateHeaderConfig> getHeaderConfig() {
         return this.headerConfig == null ? Optional.empty() : Optional.ofNullable(this.headerConfig);
     }
 
-    @InputImport(name="imageUrl")
+    @Import(name="imageUrl")
       private final @Nullable String imageUrl;
 
     public Optional<String> getImageUrl() {
         return this.imageUrl == null ? Optional.empty() : Optional.ofNullable(this.imageUrl);
     }
 
-    @InputImport(name="primaryBtn")
+    @Import(name="primaryBtn")
       private final @Nullable InAppTemplateButtonConfig primaryBtn;
 
     public Optional<InAppTemplateButtonConfig> getPrimaryBtn() {
         return this.primaryBtn == null ? Optional.empty() : Optional.ofNullable(this.primaryBtn);
     }
 
-    @InputImport(name="secondaryBtn")
+    @Import(name="secondaryBtn")
       private final @Nullable InAppTemplateButtonConfig secondaryBtn;
 
     public Optional<InAppTemplateButtonConfig> getSecondaryBtn() {

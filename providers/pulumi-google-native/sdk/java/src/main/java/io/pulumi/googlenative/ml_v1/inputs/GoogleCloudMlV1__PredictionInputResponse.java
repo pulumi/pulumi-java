@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
      * Optional. Number of records per batch, defaults to 64. The service will buffer batch_size number of records in memory before invoking one Tensorflow prediction call internally. So take the record size and memory available into consideration when setting this parameter.
      * 
      */
-    @InputImport(name="batchSize", required=true)
+    @Import(name="batchSize", required=true)
       private final String batchSize;
 
     public String getBatchSize() {
@@ -32,7 +32,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
      * The format of the input data files.
      * 
      */
-    @InputImport(name="dataFormat", required=true)
+    @Import(name="dataFormat", required=true)
       private final String dataFormat;
 
     public String getDataFormat() {
@@ -43,7 +43,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
      * The Cloud Storage location of the input data files. May contain wildcards.
      * 
      */
-    @InputImport(name="inputPaths", required=true)
+    @Import(name="inputPaths", required=true)
       private final List<String> inputPaths;
 
     public List<String> getInputPaths() {
@@ -54,7 +54,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
      * Optional. The maximum number of workers to be used for parallel processing. Defaults to 10 if not specified.
      * 
      */
-    @InputImport(name="maxWorkerCount", required=true)
+    @Import(name="maxWorkerCount", required=true)
       private final String maxWorkerCount;
 
     public String getMaxWorkerCount() {
@@ -65,7 +65,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
      * Use this field if you want to use the default version for the specified model. The string must use the following format: `"projects/YOUR_PROJECT/models/YOUR_MODEL"`
      * 
      */
-    @InputImport(name="modelName", required=true)
+    @Import(name="modelName", required=true)
       private final String modelName;
 
     public String getModelName() {
@@ -76,7 +76,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
      * Optional. Format of the output data files, defaults to JSON.
      * 
      */
-    @InputImport(name="outputDataFormat", required=true)
+    @Import(name="outputDataFormat", required=true)
       private final String outputDataFormat;
 
     public String getOutputDataFormat() {
@@ -87,7 +87,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
      * The output Google Cloud Storage location.
      * 
      */
-    @InputImport(name="outputPath", required=true)
+    @Import(name="outputPath", required=true)
       private final String outputPath;
 
     public String getOutputPath() {
@@ -98,7 +98,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
      * The Google Compute Engine region to run the prediction job in. See the available regions for AI Platform services.
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final String region;
 
     public String getRegion() {
@@ -109,7 +109,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
      * Optional. The AI Platform runtime version to use for this batch prediction. If not set, AI Platform will pick the runtime version used during the CreateVersion request for this model version, or choose the latest stable version when model version information is not available such as when the model is specified by uri.
      * 
      */
-    @InputImport(name="runtimeVersion", required=true)
+    @Import(name="runtimeVersion", required=true)
       private final String runtimeVersion;
 
     public String getRuntimeVersion() {
@@ -120,7 +120,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
      * Optional. The name of the signature defined in the SavedModel to use for this job. Please refer to [SavedModel](https://tensorflow.github.io/serving/serving_basic.html) for information about how to use signatures. Defaults to [DEFAULT_SERVING_SIGNATURE_DEF_KEY](https://www.tensorflow.org/api_docs/python/tf/saved_model/signature_constants) , which is "serving_default".
      * 
      */
-    @InputImport(name="signatureName", required=true)
+    @Import(name="signatureName", required=true)
       private final String signatureName;
 
     public String getSignatureName() {
@@ -131,7 +131,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
      * Use this field if you want to specify a Google Cloud Storage path for the model to use.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {
@@ -142,7 +142,7 @@ public final class GoogleCloudMlV1__PredictionInputResponse extends io.pulumi.re
      * Use this field if you want to specify a version of the model to use. The string is formatted the same way as `model_version`, with the addition of the version information: `"projects/YOUR_PROJECT/models/YOUR_MODEL/versions/YOUR_VERSION"`
      * 
      */
-    @InputImport(name="versionName", required=true)
+    @Import(name="versionName", required=true)
       private final String versionName;
 
     public String getVersionName() {

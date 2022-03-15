@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule;
 import io.pulumi.gcp.compute.outputs.ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule;
 import io.pulumi.gcp.compute.outputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicySnapshotSchedulePolicySchedule {
     /**
      * The policy will execute every nth day at the specified time.
@@ -32,11 +32,11 @@ public final class ResourcePolicySnapshotSchedulePolicySchedule {
      */
     private final @Nullable ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule weeklySchedule;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicySchedule(
-        @OutputCustomType.Parameter("dailySchedule") @Nullable ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule dailySchedule,
-        @OutputCustomType.Parameter("hourlySchedule") @Nullable ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule hourlySchedule,
-        @OutputCustomType.Parameter("weeklySchedule") @Nullable ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule weeklySchedule) {
+        @CustomType.Parameter("dailySchedule") @Nullable ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule dailySchedule,
+        @CustomType.Parameter("hourlySchedule") @Nullable ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule hourlySchedule,
+        @CustomType.Parameter("weeklySchedule") @Nullable ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule weeklySchedule) {
         this.dailySchedule = dailySchedule;
         this.hourlySchedule = hourlySchedule;
         this.weeklySchedule = weeklySchedule;

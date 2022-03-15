@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticloadbalancing;
 
 import io.pulumi.aws.elasticloadbalancing.inputs.SslNegotiationPolicyAttributeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class SslNegotiationPolicyArgs extends io.pulumi.resources.Resource
      * An SSL Negotiation policy attribute. Each has two properties:
      * 
      */
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable Output<List<SslNegotiationPolicyAttributeArgs>> attributes;
 
     public Output<List<SslNegotiationPolicyAttributeArgs>> getAttributes() {
@@ -34,7 +34,7 @@ public final class SslNegotiationPolicyArgs extends io.pulumi.resources.Resource
      * balancer.
      * 
      */
-    @InputImport(name="lbPort", required=true)
+    @Import(name="lbPort", required=true)
       private final Output<Integer> lbPort;
 
     public Output<Integer> getLbPort() {
@@ -46,7 +46,7 @@ public final class SslNegotiationPolicyArgs extends io.pulumi.resources.Resource
      * should be attached.
      * 
      */
-    @InputImport(name="loadBalancer", required=true)
+    @Import(name="loadBalancer", required=true)
       private final Output<String> loadBalancer;
 
     public Output<String> getLoadBalancer() {
@@ -57,7 +57,7 @@ public final class SslNegotiationPolicyArgs extends io.pulumi.resources.Resource
      * The name of the attribute
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

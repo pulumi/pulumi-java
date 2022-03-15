@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AutoscalarAutoscalingPolicyScaleDownControlArgs extends io.pu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="maxScaledDownReplicas")
+    @Import(name="maxScaledDownReplicas")
       private final @Nullable Output<AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs> maxScaledDownReplicas;
 
     public Output<AutoscalarAutoscalingPolicyScaleDownControlMaxScaledDownReplicasArgs> getMaxScaledDownReplicas() {
@@ -32,7 +32,7 @@ public final class AutoscalarAutoscalingPolicyScaleDownControlArgs extends io.pu
      * to include directives regarding slower scale down, as described above.
      * 
      */
-    @InputImport(name="timeWindowSec")
+    @Import(name="timeWindowSec")
       private final @Nullable Output<Integer> timeWindowSec;
 
     public Output<Integer> getTimeWindowSec() {

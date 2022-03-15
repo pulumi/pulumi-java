@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDatabaseResult {
     /**
      * Time in minutes after which database is automatically paused. A value of -1 means that automatic pause is disabled
@@ -189,42 +189,42 @@ public final class GetDatabaseResult {
      */
     private final @Nullable Boolean zoneRedundant;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatabaseResult(
-        @OutputCustomType.Parameter("autoPauseDelay") @Nullable Integer autoPauseDelay,
-        @OutputCustomType.Parameter("catalogCollation") @Nullable String catalogCollation,
-        @OutputCustomType.Parameter("collation") @Nullable String collation,
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("currentBackupStorageRedundancy") String currentBackupStorageRedundancy,
-        @OutputCustomType.Parameter("currentServiceObjectiveName") String currentServiceObjectiveName,
-        @OutputCustomType.Parameter("currentSku") SkuResponse currentSku,
-        @OutputCustomType.Parameter("databaseId") String databaseId,
-        @OutputCustomType.Parameter("defaultSecondaryLocation") String defaultSecondaryLocation,
-        @OutputCustomType.Parameter("earliestRestoreDate") String earliestRestoreDate,
-        @OutputCustomType.Parameter("elasticPoolId") @Nullable String elasticPoolId,
-        @OutputCustomType.Parameter("failoverGroupId") String failoverGroupId,
-        @OutputCustomType.Parameter("highAvailabilityReplicaCount") @Nullable Integer highAvailabilityReplicaCount,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("maintenanceConfigurationId") @Nullable String maintenanceConfigurationId,
-        @OutputCustomType.Parameter("managedBy") String managedBy,
-        @OutputCustomType.Parameter("maxLogSizeBytes") Double maxLogSizeBytes,
-        @OutputCustomType.Parameter("maxSizeBytes") @Nullable Double maxSizeBytes,
-        @OutputCustomType.Parameter("minCapacity") @Nullable Double minCapacity,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pausedDate") String pausedDate,
-        @OutputCustomType.Parameter("readScale") @Nullable String readScale,
-        @OutputCustomType.Parameter("requestedBackupStorageRedundancy") @Nullable String requestedBackupStorageRedundancy,
-        @OutputCustomType.Parameter("requestedServiceObjectiveName") String requestedServiceObjectiveName,
-        @OutputCustomType.Parameter("resumedDate") String resumedDate,
-        @OutputCustomType.Parameter("secondaryType") @Nullable String secondaryType,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("zoneRedundant") @Nullable Boolean zoneRedundant) {
+        @CustomType.Parameter("autoPauseDelay") @Nullable Integer autoPauseDelay,
+        @CustomType.Parameter("catalogCollation") @Nullable String catalogCollation,
+        @CustomType.Parameter("collation") @Nullable String collation,
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("currentBackupStorageRedundancy") String currentBackupStorageRedundancy,
+        @CustomType.Parameter("currentServiceObjectiveName") String currentServiceObjectiveName,
+        @CustomType.Parameter("currentSku") SkuResponse currentSku,
+        @CustomType.Parameter("databaseId") String databaseId,
+        @CustomType.Parameter("defaultSecondaryLocation") String defaultSecondaryLocation,
+        @CustomType.Parameter("earliestRestoreDate") String earliestRestoreDate,
+        @CustomType.Parameter("elasticPoolId") @Nullable String elasticPoolId,
+        @CustomType.Parameter("failoverGroupId") String failoverGroupId,
+        @CustomType.Parameter("highAvailabilityReplicaCount") @Nullable Integer highAvailabilityReplicaCount,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("licenseType") @Nullable String licenseType,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("maintenanceConfigurationId") @Nullable String maintenanceConfigurationId,
+        @CustomType.Parameter("managedBy") String managedBy,
+        @CustomType.Parameter("maxLogSizeBytes") Double maxLogSizeBytes,
+        @CustomType.Parameter("maxSizeBytes") @Nullable Double maxSizeBytes,
+        @CustomType.Parameter("minCapacity") @Nullable Double minCapacity,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pausedDate") String pausedDate,
+        @CustomType.Parameter("readScale") @Nullable String readScale,
+        @CustomType.Parameter("requestedBackupStorageRedundancy") @Nullable String requestedBackupStorageRedundancy,
+        @CustomType.Parameter("requestedServiceObjectiveName") String requestedServiceObjectiveName,
+        @CustomType.Parameter("resumedDate") String resumedDate,
+        @CustomType.Parameter("secondaryType") @Nullable String secondaryType,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("zoneRedundant") @Nullable Boolean zoneRedundant) {
         this.autoPauseDelay = autoPauseDelay;
         this.catalogCollation = catalogCollation;
         this.collation = collation;

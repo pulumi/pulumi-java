@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClusterConfigAutoscalingConfig {
     /**
      * The autoscaling policy used by the cluster.
@@ -15,8 +15,8 @@ public final class ClusterClusterConfigAutoscalingConfig {
      */
     private final String policyUri;
 
-    @OutputCustomType.Constructor
-    private ClusterClusterConfigAutoscalingConfig(@OutputCustomType.Parameter("policyUri") String policyUri) {
+    @CustomType.Constructor
+    private ClusterClusterConfigAutoscalingConfig(@CustomType.Parameter("policyUri") String policyUri) {
         this.policyUri = policyUri;
     }
 

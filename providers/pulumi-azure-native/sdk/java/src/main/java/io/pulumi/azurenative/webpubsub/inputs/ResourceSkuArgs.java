@@ -6,7 +6,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 import io.pulumi.azurenative.webpubsub.enums.WebPubSubSkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
      *     Standard: 1,2,5,10,20,50,100
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
@@ -42,7 +42,7 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * Allowed values: Standard_S1, Free_F1
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class ResourceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * `Basic` is deprecated, use `Standard` instead.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<Either<String,WebPubSubSkuTier>> tier;
 
     public Output<Either<String,WebPubSubSkuTier>> getTier() {

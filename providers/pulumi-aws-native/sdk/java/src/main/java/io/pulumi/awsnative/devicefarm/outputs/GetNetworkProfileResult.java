@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.devicefarm.outputs;
 
 import io.pulumi.awsnative.devicefarm.outputs.NetworkProfileTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNetworkProfileResult {
     private final @Nullable String arn;
     private final @Nullable String description;
@@ -27,20 +27,20 @@ public final class GetNetworkProfileResult {
     private final @Nullable Integer uplinkJitterMs;
     private final @Nullable Integer uplinkLossPercent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNetworkProfileResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("downlinkBandwidthBits") @Nullable Integer downlinkBandwidthBits,
-        @OutputCustomType.Parameter("downlinkDelayMs") @Nullable Integer downlinkDelayMs,
-        @OutputCustomType.Parameter("downlinkJitterMs") @Nullable Integer downlinkJitterMs,
-        @OutputCustomType.Parameter("downlinkLossPercent") @Nullable Integer downlinkLossPercent,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tags") @Nullable List<NetworkProfileTag> tags,
-        @OutputCustomType.Parameter("uplinkBandwidthBits") @Nullable Integer uplinkBandwidthBits,
-        @OutputCustomType.Parameter("uplinkDelayMs") @Nullable Integer uplinkDelayMs,
-        @OutputCustomType.Parameter("uplinkJitterMs") @Nullable Integer uplinkJitterMs,
-        @OutputCustomType.Parameter("uplinkLossPercent") @Nullable Integer uplinkLossPercent) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("downlinkBandwidthBits") @Nullable Integer downlinkBandwidthBits,
+        @CustomType.Parameter("downlinkDelayMs") @Nullable Integer downlinkDelayMs,
+        @CustomType.Parameter("downlinkJitterMs") @Nullable Integer downlinkJitterMs,
+        @CustomType.Parameter("downlinkLossPercent") @Nullable Integer downlinkLossPercent,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tags") @Nullable List<NetworkProfileTag> tags,
+        @CustomType.Parameter("uplinkBandwidthBits") @Nullable Integer uplinkBandwidthBits,
+        @CustomType.Parameter("uplinkDelayMs") @Nullable Integer uplinkDelayMs,
+        @CustomType.Parameter("uplinkJitterMs") @Nullable Integer uplinkJitterMs,
+        @CustomType.Parameter("uplinkLossPercent") @Nullable Integer uplinkLossPercent) {
         this.arn = arn;
         this.description = description;
         this.downlinkBandwidthBits = downlinkBandwidthBits;

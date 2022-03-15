@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cfg.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleSourceSourceDetail {
     /**
      * The source of the event, such as an AWS service, that triggers AWS Config to evaluate your AWS resources. This defaults to `aws.config` and is the only valid value.
@@ -27,11 +27,11 @@ public final class RuleSourceSourceDetail {
      */
     private final @Nullable String messageType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleSourceSourceDetail(
-        @OutputCustomType.Parameter("eventSource") @Nullable String eventSource,
-        @OutputCustomType.Parameter("maximumExecutionFrequency") @Nullable String maximumExecutionFrequency,
-        @OutputCustomType.Parameter("messageType") @Nullable String messageType) {
+        @CustomType.Parameter("eventSource") @Nullable String eventSource,
+        @CustomType.Parameter("maximumExecutionFrequency") @Nullable String maximumExecutionFrequency,
+        @CustomType.Parameter("messageType") @Nullable String messageType) {
         this.eventSource = eventSource;
         this.maximumExecutionFrequency = maximumExecutionFrequency;
         this.messageType = messageType;

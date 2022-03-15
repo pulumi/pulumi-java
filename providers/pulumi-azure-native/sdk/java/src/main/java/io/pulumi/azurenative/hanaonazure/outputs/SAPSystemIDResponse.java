@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.hanaonazure.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SAPSystemIDResponse {
     /**
      * Group ID of the HANA database user.
@@ -37,13 +37,13 @@ public final class SAPSystemIDResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SAPSystemIDResponse(
-        @OutputCustomType.Parameter("gid") @Nullable String gid,
-        @OutputCustomType.Parameter("memoryAllocation") String memoryAllocation,
-        @OutputCustomType.Parameter("sid") @Nullable String sid,
-        @OutputCustomType.Parameter("uid") @Nullable String uid,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("gid") @Nullable String gid,
+        @CustomType.Parameter("memoryAllocation") String memoryAllocation,
+        @CustomType.Parameter("sid") @Nullable String sid,
+        @CustomType.Parameter("uid") @Nullable String uid,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.gid = gid;
         this.memoryAllocation = memoryAllocation;
         this.sid = sid;

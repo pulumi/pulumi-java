@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.FixedOrPercentResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceGroupManagerAutoHealingPolicyResponse {
     /**
      * Restricts what triggers autohealing.
@@ -34,13 +34,13 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse {
     private final FixedOrPercentResponse maxUnavailable;
     private final String updateInstances;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceGroupManagerAutoHealingPolicyResponse(
-        @OutputCustomType.Parameter("autoHealingTriggers") InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers,
-        @OutputCustomType.Parameter("healthCheck") String healthCheck,
-        @OutputCustomType.Parameter("initialDelaySec") Integer initialDelaySec,
-        @OutputCustomType.Parameter("maxUnavailable") FixedOrPercentResponse maxUnavailable,
-        @OutputCustomType.Parameter("updateInstances") String updateInstances) {
+        @CustomType.Parameter("autoHealingTriggers") InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers,
+        @CustomType.Parameter("healthCheck") String healthCheck,
+        @CustomType.Parameter("initialDelaySec") Integer initialDelaySec,
+        @CustomType.Parameter("maxUnavailable") FixedOrPercentResponse maxUnavailable,
+        @CustomType.Parameter("updateInstances") String updateInstances) {
         this.autoHealingTriggers = autoHealingTriggers;
         this.healthCheck = healthCheck;
         this.initialDelaySec = initialDelaySec;

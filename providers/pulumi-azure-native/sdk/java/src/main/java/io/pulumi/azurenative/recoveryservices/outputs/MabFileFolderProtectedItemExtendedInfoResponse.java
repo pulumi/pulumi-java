@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MabFileFolderProtectedItemExtendedInfoResponse {
     /**
      * Last time when the agent data synced to service.
@@ -28,11 +28,11 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse {
      */
     private final @Nullable Integer recoveryPointCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MabFileFolderProtectedItemExtendedInfoResponse(
-        @OutputCustomType.Parameter("lastRefreshedAt") @Nullable String lastRefreshedAt,
-        @OutputCustomType.Parameter("oldestRecoveryPoint") @Nullable String oldestRecoveryPoint,
-        @OutputCustomType.Parameter("recoveryPointCount") @Nullable Integer recoveryPointCount) {
+        @CustomType.Parameter("lastRefreshedAt") @Nullable String lastRefreshedAt,
+        @CustomType.Parameter("oldestRecoveryPoint") @Nullable String oldestRecoveryPoint,
+        @CustomType.Parameter("recoveryPointCount") @Nullable Integer recoveryPointCount) {
         this.lastRefreshedAt = lastRefreshedAt;
         this.oldestRecoveryPoint = oldestRecoveryPoint;
         this.recoveryPointCount = recoveryPointCount;

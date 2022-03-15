@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.visualstudio.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
      * Name of the plan.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
      * Product name.
      * 
      */
-    @InputImport(name="product")
+    @Import(name="product")
       private final @Nullable Output<String> product;
 
     public Output<String> getProduct() {
@@ -44,7 +44,7 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
      * Optional: the promotion code associated with the plan.
      * 
      */
-    @InputImport(name="promotionCode")
+    @Import(name="promotionCode")
       private final @Nullable Output<String> promotionCode;
 
     public Output<String> getPromotionCode() {
@@ -55,7 +55,7 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
      * Name of the extension publisher.
      * 
      */
-    @InputImport(name="publisher")
+    @Import(name="publisher")
       private final @Nullable Output<String> publisher;
 
     public Output<String> getPublisher() {
@@ -66,7 +66,7 @@ public final class ExtensionResourcePlanArgs extends io.pulumi.resources.Resourc
      * A string that uniquely identifies the plan version.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @InputImport(name="creationTimestamp")
+    @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
@@ -31,7 +31,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -48,7 +48,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -60,7 +60,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -72,7 +72,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
      * this target proxy has a loadBalancingScheme set to INTERNAL_SELF_MANAGED.
      * 
      */
-    @InputImport(name="proxyBind")
+    @Import(name="proxyBind")
       private final @Nullable Output<Boolean> proxyBind;
 
     public Output<Boolean> getProxyBind() {
@@ -83,7 +83,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
      * The unique identifier for the resource.
      * 
      */
-    @InputImport(name="proxyId")
+    @Import(name="proxyId")
       private final @Nullable Output<Integer> proxyId;
 
     public Output<Integer> getProxyId() {
@@ -94,7 +94,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -106,7 +106,7 @@ public final class TargetHttpProxyState extends io.pulumi.resources.ResourceArgs
      * to the BackendService.
      * 
      */
-    @InputImport(name="urlMap")
+    @Import(name="urlMap")
       private final @Nullable Output<String> urlMap;
 
     public Output<String> getUrlMap() {

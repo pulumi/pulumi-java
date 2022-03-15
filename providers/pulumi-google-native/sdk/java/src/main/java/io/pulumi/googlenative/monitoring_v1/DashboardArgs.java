@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.inputs.ColumnLayoutArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.GridLayoutArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.MosaicLayoutArgs;
@@ -23,7 +23,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * The content is divided into equally spaced columns and the widgets are arranged vertically.
      * 
      */
-    @InputImport(name="columnLayout")
+    @Import(name="columnLayout")
       private final @Nullable Output<ColumnLayoutArgs> columnLayout;
 
     public Output<ColumnLayoutArgs> getColumnLayout() {
@@ -34,7 +34,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * The mutable, human-readable name.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -45,7 +45,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * etag is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. An etag is returned in the response to GetDashboard, and users are expected to put that etag in the request to UpdateDashboard to ensure that their change will be applied to the same version of the Dashboard configuration. The field should not be passed during dashboard creation.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -56,7 +56,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * Content is arranged with a basic layout that re-flows a simple list of informational elements like widgets or tiles.
      * 
      */
-    @InputImport(name="gridLayout")
+    @Import(name="gridLayout")
       private final @Nullable Output<GridLayoutArgs> gridLayout;
 
     public Output<GridLayoutArgs> getGridLayout() {
@@ -67,7 +67,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * Labels applied to the dashboard
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -78,7 +78,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * The content is arranged as a grid of tiles, with each content widget occupying one or more grid blocks.
      * 
      */
-    @InputImport(name="mosaicLayout")
+    @Import(name="mosaicLayout")
       private final @Nullable Output<MosaicLayoutArgs> mosaicLayout;
 
     public Output<MosaicLayoutArgs> getMosaicLayout() {
@@ -89,14 +89,14 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The resource name of the dashboard.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -107,14 +107,14 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * The content is divided into equally spaced rows and the widgets are arranged horizontally.
      * 
      */
-    @InputImport(name="rowLayout")
+    @Import(name="rowLayout")
       private final @Nullable Output<RowLayoutArgs> rowLayout;
 
     public Output<RowLayoutArgs> getRowLayout() {
         return this.rowLayout == null ? Output.empty() : this.rowLayout;
     }
 
-    @InputImport(name="validateOnly")
+    @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
     public Output<String> getValidateOnly() {

@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetHealthCheckLogConfig {
     private final Boolean enable;
 
-    @OutputCustomType.Constructor
-    private GetHealthCheckLogConfig(@OutputCustomType.Parameter("enable") Boolean enable) {
+    @CustomType.Constructor
+    private GetHealthCheckLogConfig(@CustomType.Parameter("enable") Boolean enable) {
         this.enable = enable;
     }
 

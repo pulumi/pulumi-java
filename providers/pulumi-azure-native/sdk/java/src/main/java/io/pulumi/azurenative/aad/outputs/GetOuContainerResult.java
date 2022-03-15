@@ -5,7 +5,7 @@ package io.pulumi.azurenative.aad.outputs;
 
 import io.pulumi.azurenative.aad.outputs.ContainerAccountResponse;
 import io.pulumi.azurenative.aad.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOuContainerResult {
     /**
      * The list of container accounts
@@ -91,23 +91,23 @@ public final class GetOuContainerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOuContainerResult(
-        @OutputCustomType.Parameter("accounts") @Nullable List<ContainerAccountResponse> accounts,
-        @OutputCustomType.Parameter("containerId") String containerId,
-        @OutputCustomType.Parameter("deploymentId") String deploymentId,
-        @OutputCustomType.Parameter("distinguishedName") String distinguishedName,
-        @OutputCustomType.Parameter("domainName") String domainName,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("serviceStatus") String serviceStatus,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accounts") @Nullable List<ContainerAccountResponse> accounts,
+        @CustomType.Parameter("containerId") String containerId,
+        @CustomType.Parameter("deploymentId") String deploymentId,
+        @CustomType.Parameter("distinguishedName") String distinguishedName,
+        @CustomType.Parameter("domainName") String domainName,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("serviceStatus") String serviceStatus,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.accounts = accounts;
         this.containerId = containerId;
         this.deploymentId = deploymentId;

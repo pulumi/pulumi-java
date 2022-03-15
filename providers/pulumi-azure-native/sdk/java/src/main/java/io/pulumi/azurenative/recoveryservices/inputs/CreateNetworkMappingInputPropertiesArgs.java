@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.AzureToAzureCreateNetworkMa
 import io.pulumi.azurenative.recoveryservices.inputs.VmmToAzureCreateNetworkMappingInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.VmmToVmmCreateNetworkMappingInputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
      * Fabric specific input properties.
      * 
      */
-    @InputImport(name="fabricSpecificDetails")
+    @Import(name="fabricSpecificDetails")
       private final @Nullable Output<Object> fabricSpecificDetails;
 
     public Output<Object> getFabricSpecificDetails() {
@@ -37,7 +37,7 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
      * Recovery fabric Name.
      * 
      */
-    @InputImport(name="recoveryFabricName")
+    @Import(name="recoveryFabricName")
       private final @Nullable Output<String> recoveryFabricName;
 
     public Output<String> getRecoveryFabricName() {
@@ -48,7 +48,7 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
      * Recovery network Id.
      * 
      */
-    @InputImport(name="recoveryNetworkId")
+    @Import(name="recoveryNetworkId")
       private final @Nullable Output<String> recoveryNetworkId;
 
     public Output<String> getRecoveryNetworkId() {

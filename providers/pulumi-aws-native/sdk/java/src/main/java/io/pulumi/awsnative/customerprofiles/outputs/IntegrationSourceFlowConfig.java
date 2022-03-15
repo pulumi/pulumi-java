@@ -6,25 +6,25 @@ package io.pulumi.awsnative.customerprofiles.outputs;
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationConnectorType;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationIncrementalPullConfig;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationSourceConnectorProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationSourceFlowConfig {
     private final @Nullable String connectorProfileName;
     private final IntegrationConnectorType connectorType;
     private final @Nullable IntegrationIncrementalPullConfig incrementalPullConfig;
     private final IntegrationSourceConnectorProperties sourceConnectorProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationSourceFlowConfig(
-        @OutputCustomType.Parameter("connectorProfileName") @Nullable String connectorProfileName,
-        @OutputCustomType.Parameter("connectorType") IntegrationConnectorType connectorType,
-        @OutputCustomType.Parameter("incrementalPullConfig") @Nullable IntegrationIncrementalPullConfig incrementalPullConfig,
-        @OutputCustomType.Parameter("sourceConnectorProperties") IntegrationSourceConnectorProperties sourceConnectorProperties) {
+        @CustomType.Parameter("connectorProfileName") @Nullable String connectorProfileName,
+        @CustomType.Parameter("connectorType") IntegrationConnectorType connectorType,
+        @CustomType.Parameter("incrementalPullConfig") @Nullable IntegrationIncrementalPullConfig incrementalPullConfig,
+        @CustomType.Parameter("sourceConnectorProperties") IntegrationSourceConnectorProperties sourceConnectorProperties) {
         this.connectorProfileName = connectorProfileName;
         this.connectorType = connectorType;
         this.incrementalPullConfig = incrementalPullConfig;

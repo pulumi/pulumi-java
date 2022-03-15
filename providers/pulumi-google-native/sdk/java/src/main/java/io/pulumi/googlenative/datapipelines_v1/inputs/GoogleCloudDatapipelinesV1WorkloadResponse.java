@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datapipelines_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse;
 import io.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse extends io.pulumi.
      * Template information and additional parameters needed to launch a Dataflow job using the flex launch API.
      * 
      */
-    @InputImport(name="dataflowFlexTemplateRequest", required=true)
+    @Import(name="dataflowFlexTemplateRequest", required=true)
       private final GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse dataflowFlexTemplateRequest;
 
     public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse getDataflowFlexTemplateRequest() {
@@ -32,7 +32,7 @@ public final class GoogleCloudDatapipelinesV1WorkloadResponse extends io.pulumi.
      * Template information and additional parameters needed to launch a Dataflow job using the standard launch API.
      * 
      */
-    @InputImport(name="dataflowLaunchTemplateRequest", required=true)
+    @Import(name="dataflowLaunchTemplateRequest", required=true)
       private final GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse dataflowLaunchTemplateRequest;
 
     public GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse getDataflowLaunchTemplateRequest() {

@@ -12,7 +12,7 @@ import io.pulumi.awsnative.lightsail.outputs.InstanceNetworking;
 import io.pulumi.awsnative.lightsail.outputs.InstanceState;
 import io.pulumi.awsnative.lightsail.outputs.InstanceTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -29,7 +29,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * An array of objects representing the add-ons to enable for the new instance.
      * 
      */
-    @OutputExport(name="addOns", type=List.class, parameters={InstanceAddOn.class})
+    @Export(name="addOns", type=List.class, parameters={InstanceAddOn.class})
     private Output</* @Nullable */ List<InstanceAddOn>> addOns;
 
     /**
@@ -43,7 +43,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The Availability Zone in which to create your instance. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
      * 
      */
-    @OutputExport(name="availabilityZone", type=String.class, parameters={})
+    @Export(name="availabilityZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilityZone;
 
     /**
@@ -57,7 +57,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The ID for a virtual private server image (e.g., app_wordpress_4_4 or app_lamp_7_0 ). Use the get blueprints operation to return a list of available images (or blueprints ).
      * 
      */
-    @OutputExport(name="blueprintId", type=String.class, parameters={})
+    @Export(name="blueprintId", type=String.class, parameters={})
     private Output<String> blueprintId;
 
     /**
@@ -71,7 +71,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The bundle of specification information for your virtual private server (or instance ), including the pricing plan (e.g., micro_1_0 ).
      * 
      */
-    @OutputExport(name="bundleId", type=String.class, parameters={})
+    @Export(name="bundleId", type=String.class, parameters={})
     private Output<String> bundleId;
 
     /**
@@ -81,13 +81,13 @@ public class Instance extends io.pulumi.resources.CustomResource {
     public Output<String> getBundleId() {
         return this.bundleId;
     }
-    @OutputExport(name="hardware", type=InstanceHardware.class, parameters={})
+    @Export(name="hardware", type=InstanceHardware.class, parameters={})
     private Output</* @Nullable */ InstanceHardware> hardware;
 
     public Output</* @Nullable */ InstanceHardware> getHardware() {
         return this.hardware;
     }
-    @OutputExport(name="instanceArn", type=String.class, parameters={})
+    @Export(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
     public Output<String> getInstanceArn() {
@@ -97,7 +97,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The names to use for your new Lightsail instance.
      * 
      */
-    @OutputExport(name="instanceName", type=String.class, parameters={})
+    @Export(name="instanceName", type=String.class, parameters={})
     private Output<String> instanceName;
 
     /**
@@ -111,7 +111,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Is the IP Address of the Instance is the static IP
      * 
      */
-    @OutputExport(name="isStaticIp", type=Boolean.class, parameters={})
+    @Export(name="isStaticIp", type=Boolean.class, parameters={})
     private Output<Boolean> isStaticIp;
 
     /**
@@ -125,7 +125,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The name of your key pair.
      * 
      */
-    @OutputExport(name="keyPairName", type=String.class, parameters={})
+    @Export(name="keyPairName", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyPairName;
 
     /**
@@ -135,13 +135,13 @@ public class Instance extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getKeyPairName() {
         return this.keyPairName;
     }
-    @OutputExport(name="location", type=InstanceLocation.class, parameters={})
+    @Export(name="location", type=InstanceLocation.class, parameters={})
     private Output</* @Nullable */ InstanceLocation> location;
 
     public Output</* @Nullable */ InstanceLocation> getLocation() {
         return this.location;
     }
-    @OutputExport(name="networking", type=InstanceNetworking.class, parameters={})
+    @Export(name="networking", type=InstanceNetworking.class, parameters={})
     private Output</* @Nullable */ InstanceNetworking> networking;
 
     public Output</* @Nullable */ InstanceNetworking> getNetworking() {
@@ -151,7 +151,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Private IP Address of the Instance
      * 
      */
-    @OutputExport(name="privateIpAddress", type=String.class, parameters={})
+    @Export(name="privateIpAddress", type=String.class, parameters={})
     private Output<String> privateIpAddress;
 
     /**
@@ -165,7 +165,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Public IP Address of the Instance
      * 
      */
-    @OutputExport(name="publicIpAddress", type=String.class, parameters={})
+    @Export(name="publicIpAddress", type=String.class, parameters={})
     private Output<String> publicIpAddress;
 
     /**
@@ -179,7 +179,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Resource type of Lightsail instance.
      * 
      */
-    @OutputExport(name="resourceType", type=String.class, parameters={})
+    @Export(name="resourceType", type=String.class, parameters={})
     private Output<String> resourceType;
 
     /**
@@ -193,7 +193,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * SSH Key Name of the  Lightsail instance.
      * 
      */
-    @OutputExport(name="sshKeyName", type=String.class, parameters={})
+    @Export(name="sshKeyName", type=String.class, parameters={})
     private Output<String> sshKeyName;
 
     /**
@@ -203,7 +203,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
     public Output<String> getSshKeyName() {
         return this.sshKeyName;
     }
-    @OutputExport(name="state", type=InstanceState.class, parameters={})
+    @Export(name="state", type=InstanceState.class, parameters={})
     private Output</* @Nullable */ InstanceState> state;
 
     public Output</* @Nullable */ InstanceState> getState() {
@@ -213,7 +213,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Support code to help identify any issues
      * 
      */
-    @OutputExport(name="supportCode", type=String.class, parameters={})
+    @Export(name="supportCode", type=String.class, parameters={})
     private Output<String> supportCode;
 
     /**
@@ -227,7 +227,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={InstanceTag.class})
+    @Export(name="tags", type=List.class, parameters={InstanceTag.class})
     private Output</* @Nullable */ List<InstanceTag>> tags;
 
     /**
@@ -241,7 +241,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * A launch script you can create that configures a server with additional user data. For example, you might want to run apt-get -y update.
      * 
      */
-    @OutputExport(name="userData", type=String.class, parameters={})
+    @Export(name="userData", type=String.class, parameters={})
     private Output</* @Nullable */ String> userData;
 
     /**
@@ -255,7 +255,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Username of the  Lightsail instance.
      * 
      */
-    @OutputExport(name="userName", type=String.class, parameters={})
+    @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**

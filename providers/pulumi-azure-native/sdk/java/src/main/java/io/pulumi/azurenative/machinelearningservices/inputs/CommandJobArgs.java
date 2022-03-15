@@ -13,7 +13,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.PyTorchArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.TensorFlowArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -34,7 +34,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
      * ARM resource ID of the code asset.
      * 
      */
-    @InputImport(name="codeId")
+    @Import(name="codeId")
       private final @Nullable Output<String> codeId;
 
     public Output<String> getCodeId() {
@@ -45,7 +45,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
      * The command to execute on startup of the job. eg. "python train.py"
      * 
      */
-    @InputImport(name="command", required=true)
+    @Import(name="command", required=true)
       private final Output<String> command;
 
     public Output<String> getCommand() {
@@ -56,7 +56,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
      * Compute binding for the job.
      * 
      */
-    @InputImport(name="compute", required=true)
+    @Import(name="compute", required=true)
       private final Output<ComputeConfigurationArgs> compute;
 
     public Output<ComputeConfigurationArgs> getCompute() {
@@ -67,7 +67,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
      * The asset description text.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -78,7 +78,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
      * Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
      * 
      */
-    @InputImport(name="distribution")
+    @Import(name="distribution")
       private final @Nullable Output<Object> distribution;
 
     public Output<Object> getDistribution() {
@@ -89,7 +89,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
      * The ARM resource ID of the Environment specification for the job.
      * 
      */
-    @InputImport(name="environmentId")
+    @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
@@ -100,7 +100,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
      * Environment variables included in the job.
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
     public Output<Map<String,String>> getEnvironmentVariables() {
@@ -111,7 +111,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the experiment the job belongs to. If not set, the job is placed in the "Default" experiment.
      * 
      */
-    @InputImport(name="experimentName")
+    @Import(name="experimentName")
       private final @Nullable Output<String> experimentName;
 
     public Output<String> getExperimentName() {
@@ -123,7 +123,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
      * Defaults to AmlToken if null.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<Either<AmlTokenArgs,ManagedIdentityArgs>> identity;
 
     public Output<Either<AmlTokenArgs,ManagedIdentityArgs>> getIdentity() {
@@ -134,7 +134,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
      * Mapping of input data bindings used in the job.
      * 
      */
-    @InputImport(name="inputDataBindings")
+    @Import(name="inputDataBindings")
       private final @Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings;
 
     public Output<Map<String,InputDataBindingArgs>> getInputDataBindings() {
@@ -146,7 +146,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'Command'.
      * 
      */
-    @InputImport(name="jobType", required=true)
+    @Import(name="jobType", required=true)
       private final Output<String> jobType;
 
     public Output<String> getJobType() {
@@ -157,7 +157,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
      * Mapping of output data bindings used in the job.
      * 
      */
-    @InputImport(name="outputDataBindings")
+    @Import(name="outputDataBindings")
       private final @Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings;
 
     public Output<Map<String,OutputDataBindingArgs>> getOutputDataBindings() {
@@ -169,7 +169,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
      * Private preview feature and only available to users on the allow list.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -180,7 +180,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
      * The asset property dictionary.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -191,7 +191,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
      * Tag dictionary. Tags can be added, removed, and updated.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -202,7 +202,7 @@ public final class CommandJobArgs extends io.pulumi.resources.ResourceArgs {
      * The max run duration in ISO 8601 format, after which the job will be cancelled. Only supports duration with precision as low as Seconds.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {

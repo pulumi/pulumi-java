@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
      * The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="alternateKeyName")
+    @Import(name="alternateKeyName")
       private final @Nullable Object alternateKeyName;
 
     public Optional<Object> getAlternateKeyName() {
@@ -34,7 +34,7 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
@@ -45,7 +45,7 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
      * The flag indicating whether to ignore null values from input dataset (except key fields) during write operation. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="ignoreNullValues")
+    @Import(name="ignoreNullValues")
       private final @Nullable Object ignoreNullValues;
 
     public Optional<Object> getIgnoreNullValues() {
@@ -56,7 +56,7 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
      * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
@@ -67,7 +67,7 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
      * Sink retry count. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="sinkRetryCount")
+    @Import(name="sinkRetryCount")
       private final @Nullable Object sinkRetryCount;
 
     public Optional<Object> getSinkRetryCount() {
@@ -78,7 +78,7 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
      * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="sinkRetryWait")
+    @Import(name="sinkRetryWait")
       private final @Nullable Object sinkRetryWait;
 
     public Optional<Object> getSinkRetryWait() {
@@ -90,7 +90,7 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
      * Expected value is 'CommonDataServiceForAppsSink'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -101,7 +101,7 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
      * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
      */
-    @InputImport(name="writeBatchSize")
+    @Import(name="writeBatchSize")
       private final @Nullable Object writeBatchSize;
 
     public Optional<Object> getWriteBatchSize() {
@@ -112,7 +112,7 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
      * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="writeBatchTimeout")
+    @Import(name="writeBatchTimeout")
       private final @Nullable Object writeBatchTimeout;
 
     public Optional<Object> getWriteBatchTimeout() {
@@ -123,7 +123,7 @@ public final class CommonDataServiceForAppsSinkResponse extends io.pulumi.resour
      * The write behavior for the operation.
      * 
      */
-    @InputImport(name="writeBehavior", required=true)
+    @Import(name="writeBehavior", required=true)
       private final String writeBehavior;
 
     public String getWriteBehavior() {

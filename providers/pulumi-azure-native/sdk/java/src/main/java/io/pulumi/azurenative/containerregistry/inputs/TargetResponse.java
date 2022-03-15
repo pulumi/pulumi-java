@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * The digest of the content, as defined by the Registry V2 HTTP API Specification.
      * 
      */
-    @InputImport(name="digest")
+    @Import(name="digest")
       private final @Nullable String digest;
 
     public Optional<String> getDigest() {
@@ -34,7 +34,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * The number of bytes of the content. Same as Size field.
      * 
      */
-    @InputImport(name="length")
+    @Import(name="length")
       private final @Nullable Double length;
 
     public Optional<Double> getLength() {
@@ -45,7 +45,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * The MIME type of the referenced object.
      * 
      */
-    @InputImport(name="mediaType")
+    @Import(name="mediaType")
       private final @Nullable String mediaType;
 
     public Optional<String> getMediaType() {
@@ -56,7 +56,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the artifact.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -67,7 +67,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * The repository name.
      * 
      */
-    @InputImport(name="repository")
+    @Import(name="repository")
       private final @Nullable String repository;
 
     public Optional<String> getRepository() {
@@ -78,7 +78,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * The number of bytes of the content. Same as Length field.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Double size;
 
     public Optional<Double> getSize() {
@@ -89,7 +89,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * The tag name.
      * 
      */
-    @InputImport(name="tag")
+    @Import(name="tag")
       private final @Nullable String tag;
 
     public Optional<String> getTag() {
@@ -100,7 +100,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * The direct URL to the content.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable String url;
 
     public Optional<String> getUrl() {
@@ -111,7 +111,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * The version of the artifact.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

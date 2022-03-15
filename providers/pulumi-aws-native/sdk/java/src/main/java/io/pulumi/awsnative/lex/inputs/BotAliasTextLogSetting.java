@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotAliasTextLogDestination;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,14 +19,14 @@ public final class BotAliasTextLogSetting extends io.pulumi.resources.InvokeArgs
 
     public static final BotAliasTextLogSetting Empty = new BotAliasTextLogSetting();
 
-    @InputImport(name="destination")
+    @Import(name="destination")
       private final @Nullable BotAliasTextLogDestination destination;
 
     public Optional<BotAliasTextLogDestination> getDestination() {
         return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);
     }
 
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {

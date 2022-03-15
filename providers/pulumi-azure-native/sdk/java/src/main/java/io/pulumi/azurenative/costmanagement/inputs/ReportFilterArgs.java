@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.ReportComparisonExpressionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
      * The logical "AND" expression. Must have at least 2 items.
      * 
      */
-    @InputImport(name="and")
+    @Import(name="and")
       private final @Nullable Output<List<ReportFilterArgs>> and;
 
     public Output<List<ReportFilterArgs>> getAnd() {
@@ -34,7 +34,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
      * Has comparison expression for a dimension
      * 
      */
-    @InputImport(name="dimension")
+    @Import(name="dimension")
       private final @Nullable Output<ReportComparisonExpressionArgs> dimension;
 
     public Output<ReportComparisonExpressionArgs> getDimension() {
@@ -45,7 +45,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
      * The logical "NOT" expression.
      * 
      */
-    @InputImport(name="not")
+    @Import(name="not")
       private final @Nullable Output<ReportFilterArgs> not;
 
     public Output<ReportFilterArgs> getNot() {
@@ -56,7 +56,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
      * The logical "OR" expression. Must have at least 2 items.
      * 
      */
-    @InputImport(name="or")
+    @Import(name="or")
       private final @Nullable Output<List<ReportFilterArgs>> or;
 
     public Output<List<ReportFilterArgs>> getOr() {
@@ -67,7 +67,7 @@ public final class ReportFilterArgs extends io.pulumi.resources.ResourceArgs {
      * Has comparison expression for a tag
      * 
      */
-    @InputImport(name="tag")
+    @Import(name="tag")
       private final @Nullable Output<ReportComparisonExpressionArgs> tag;
 
     public Output<ReportComparisonExpressionArgs> getTag() {

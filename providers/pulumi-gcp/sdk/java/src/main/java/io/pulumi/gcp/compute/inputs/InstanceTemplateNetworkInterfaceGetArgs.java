@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.InstanceTemplateNetworkInterfaceAccessConfigGetArgs;
 import io.pulumi.gcp.compute.inputs.InstanceTemplateNetworkInterfaceAliasIpRangeGetArgs;
 import io.pulumi.gcp.compute.inputs.InstanceTemplateNetworkInterfaceIpv6AccessConfigGetArgs;
@@ -28,7 +28,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * on that network). This block can be repeated multiple times. Structure documented below.
      * 
      */
-    @InputImport(name="accessConfigs")
+    @Import(name="accessConfigs")
       private final @Nullable Output<List<InstanceTemplateNetworkInterfaceAccessConfigGetArgs>> accessConfigs;
 
     public Output<List<InstanceTemplateNetworkInterfaceAccessConfigGetArgs>> getAccessConfigs() {
@@ -41,7 +41,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * interfaces on subnet-mode networks. Structure documented below.
      * 
      */
-    @InputImport(name="aliasIpRanges")
+    @Import(name="aliasIpRanges")
       private final @Nullable Output<List<InstanceTemplateNetworkInterfaceAliasIpRangeGetArgs>> aliasIpRanges;
 
     public Output<List<InstanceTemplateNetworkInterfaceAliasIpRangeGetArgs>> getAliasIpRanges() {
@@ -54,14 +54,14 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * specified, then this instance will have no external IPv6 Internet access. Structure documented below.
      * 
      */
-    @InputImport(name="ipv6AccessConfigs")
+    @Import(name="ipv6AccessConfigs")
       private final @Nullable Output<List<InstanceTemplateNetworkInterfaceIpv6AccessConfigGetArgs>> ipv6AccessConfigs;
 
     public Output<List<InstanceTemplateNetworkInterfaceIpv6AccessConfigGetArgs>> getIpv6AccessConfigs() {
         return this.ipv6AccessConfigs == null ? Output.empty() : this.ipv6AccessConfigs;
     }
 
-    @InputImport(name="ipv6AccessType")
+    @Import(name="ipv6AccessType")
       private final @Nullable Output<String> ipv6AccessType;
 
     public Output<String> getIpv6AccessType() {
@@ -73,7 +73,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * this blank, the provider will auto-generate a unique name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -86,7 +86,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * `subnetwork` for custom subnetted networks.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -98,7 +98,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * empty, the address will be automatically assigned.
      * 
      */
-    @InputImport(name="networkIp")
+    @Import(name="networkIp")
       private final @Nullable Output<String> networkIp;
 
     public Output<String> getNetworkIp() {
@@ -109,7 +109,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * The type of vNIC to be used on this interface. Possible values: GVNIC, VIRTIO_NET.
      * 
      */
-    @InputImport(name="nicType")
+    @Import(name="nicType")
       private final @Nullable Output<String> nicType;
 
     public Output<String> getNicType() {
@@ -120,7 +120,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It will be empty if not specified.
      * 
      */
-    @InputImport(name="queueCount")
+    @Import(name="queueCount")
       private final @Nullable Output<Integer> queueCount;
 
     public Output<Integer> getQueueCount() {
@@ -131,7 +131,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6 or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
      * 
      */
-    @InputImport(name="stackType")
+    @Import(name="stackType")
       private final @Nullable Output<String> stackType;
 
     public Output<String> getStackType() {
@@ -144,7 +144,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * created in. Either `network` or `subnetwork` must be provided.
      * 
      */
-    @InputImport(name="subnetwork")
+    @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {
@@ -156,7 +156,7 @@ public final class InstanceTemplateNetworkInterfaceGetArgs extends io.pulumi.res
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="subnetworkProject")
+    @Import(name="subnetworkProject")
       private final @Nullable Output<String> subnetworkProject;
 
     public Output<String> getSubnetworkProject() {

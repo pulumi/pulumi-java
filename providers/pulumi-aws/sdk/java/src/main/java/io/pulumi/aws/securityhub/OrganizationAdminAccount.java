@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.securityhub.OrganizationAdminAccountArgs;
 import io.pulumi.aws.securityhub.inputs.OrganizationAdminAccountState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class OrganizationAdminAccount extends io.pulumi.resources.CustomResource
      * The AWS account identifier of the account to designate as the Security Hub administrator account.
      * 
      */
-    @OutputExport(name="adminAccountId", type=String.class, parameters={})
+    @Export(name="adminAccountId", type=String.class, parameters={})
     private Output<String> adminAccountId;
 
     /**

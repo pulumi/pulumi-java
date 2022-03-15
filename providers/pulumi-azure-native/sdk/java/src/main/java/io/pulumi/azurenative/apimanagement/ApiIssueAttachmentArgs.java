@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * API identifier. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -29,7 +29,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * Attachment identifier within an Issue. Must be unique in the current Issue.
      * 
      */
-    @InputImport(name="attachmentId")
+    @Import(name="attachmentId")
       private final @Nullable Output<String> attachmentId;
 
     public Output<String> getAttachmentId() {
@@ -40,7 +40,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * An HTTP link or Base64-encoded binary data.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final Output<String> content;
 
     public Output<String> getContent() {
@@ -51,7 +51,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * Either 'link' if content is provided via an HTTP link or the MIME type of the Base64-encoded binary data provided in the 'content' property.
      * 
      */
-    @InputImport(name="contentFormat", required=true)
+    @Import(name="contentFormat", required=true)
       private final Output<String> contentFormat;
 
     public Output<String> getContentFormat() {
@@ -62,7 +62,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * Issue identifier. Must be unique in the current API Management service instance.
      * 
      */
-    @InputImport(name="issueId", required=true)
+    @Import(name="issueId", required=true)
       private final Output<String> issueId;
 
     public Output<String> getIssueId() {
@@ -73,7 +73,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -84,7 +84,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -95,7 +95,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
      * Filename by which the binary data will be saved.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final Output<String> title;
 
     public Output<String> getTitle() {

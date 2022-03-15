@@ -5,7 +5,7 @@ package io.pulumi.aws.mskconnect.inputs;
 
 import io.pulumi.aws.mskconnect.inputs.CustomPluginLocationS3Args;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class CustomPluginLocationArgs extends io.pulumi.resources.Resource
      * Information of the plugin file stored in Amazon S3. See below.
      * 
      */
-    @InputImport(name="s3", required=true)
+    @Import(name="s3", required=true)
       private final Output<CustomPluginLocationS3Args> s3;
 
     public Output<CustomPluginLocationS3Args> getS3() {

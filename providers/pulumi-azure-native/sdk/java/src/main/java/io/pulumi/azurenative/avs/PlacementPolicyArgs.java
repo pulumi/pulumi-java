@@ -7,7 +7,7 @@ import io.pulumi.azurenative.avs.inputs.VmHostPlacementPolicyPropertiesArgs;
 import io.pulumi.azurenative.avs.inputs.VmVmPlacementPolicyPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the cluster in the private cloud
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -32,7 +32,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the VMware vSphere Distributed Resource Scheduler (DRS) placement policy
      * 
      */
-    @InputImport(name="placementPolicyName")
+    @Import(name="placementPolicyName")
       private final @Nullable Output<String> placementPolicyName;
 
     public Output<String> getPlacementPolicyName() {
@@ -43,7 +43,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the private cloud
      * 
      */
-    @InputImport(name="privateCloudName", required=true)
+    @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
     public Output<String> getPrivateCloudName() {
@@ -54,7 +54,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * placement policy properties
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> properties;
 
     public Output<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> getProperties() {
@@ -65,7 +65,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

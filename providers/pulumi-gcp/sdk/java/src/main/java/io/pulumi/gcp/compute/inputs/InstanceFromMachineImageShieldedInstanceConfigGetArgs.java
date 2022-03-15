@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class InstanceFromMachineImageShieldedInstanceConfigGetArgs extends
 
     public static final InstanceFromMachineImageShieldedInstanceConfigGetArgs Empty = new InstanceFromMachineImageShieldedInstanceConfigGetArgs();
 
-    @InputImport(name="enableIntegrityMonitoring")
+    @Import(name="enableIntegrityMonitoring")
       private final @Nullable Output<Boolean> enableIntegrityMonitoring;
 
     public Output<Boolean> getEnableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring == null ? Output.empty() : this.enableIntegrityMonitoring;
     }
 
-    @InputImport(name="enableSecureBoot")
+    @Import(name="enableSecureBoot")
       private final @Nullable Output<Boolean> enableSecureBoot;
 
     public Output<Boolean> getEnableSecureBoot() {
         return this.enableSecureBoot == null ? Output.empty() : this.enableSecureBoot;
     }
 
-    @InputImport(name="enableVtpm")
+    @Import(name="enableVtpm")
       private final @Nullable Output<Boolean> enableVtpm;
 
     public Output<Boolean> getEnableVtpm() {

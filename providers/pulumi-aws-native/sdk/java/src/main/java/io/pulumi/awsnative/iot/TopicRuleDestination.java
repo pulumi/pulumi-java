@@ -9,7 +9,7 @@ import io.pulumi.awsnative.iot.enums.TopicRuleDestinationStatus;
 import io.pulumi.awsnative.iot.outputs.TopicRuleDestinationHttpUrlDestinationSummary;
 import io.pulumi.awsnative.iot.outputs.TopicRuleDestinationVpcDestinationProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public class TopicRuleDestination extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN).
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -38,7 +38,7 @@ public class TopicRuleDestination extends io.pulumi.resources.CustomResource {
      * HTTP URL destination properties.
      * 
      */
-    @OutputExport(name="httpUrlProperties", type=TopicRuleDestinationHttpUrlDestinationSummary.class, parameters={})
+    @Export(name="httpUrlProperties", type=TopicRuleDestinationHttpUrlDestinationSummary.class, parameters={})
     private Output</* @Nullable */ TopicRuleDestinationHttpUrlDestinationSummary> httpUrlProperties;
 
     /**
@@ -52,7 +52,7 @@ public class TopicRuleDestination extends io.pulumi.resources.CustomResource {
      * The status of the TopicRuleDestination.
      * 
      */
-    @OutputExport(name="status", type=TopicRuleDestinationStatus.class, parameters={})
+    @Export(name="status", type=TopicRuleDestinationStatus.class, parameters={})
     private Output</* @Nullable */ TopicRuleDestinationStatus> status;
 
     /**
@@ -66,7 +66,7 @@ public class TopicRuleDestination extends io.pulumi.resources.CustomResource {
      * The reasoning for the current status of the TopicRuleDestination.
      * 
      */
-    @OutputExport(name="statusReason", type=String.class, parameters={})
+    @Export(name="statusReason", type=String.class, parameters={})
     private Output<String> statusReason;
 
     /**
@@ -80,7 +80,7 @@ public class TopicRuleDestination extends io.pulumi.resources.CustomResource {
      * VPC destination properties.
      * 
      */
-    @OutputExport(name="vpcProperties", type=TopicRuleDestinationVpcDestinationProperties.class, parameters={})
+    @Export(name="vpcProperties", type=TopicRuleDestinationVpcDestinationProperties.class, parameters={})
     private Output</* @Nullable */ TopicRuleDestinationVpcDestinationProperties> vpcProperties;
 
     /**

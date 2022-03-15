@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class HttpErrorRangeParametersArgs extends io.pulumi.resources.Reso
      * The inclusive start of the http status code range.
      * 
      */
-    @InputImport(name="begin")
+    @Import(name="begin")
       private final @Nullable Output<Integer> begin;
 
     public Output<Integer> getBegin() {
@@ -33,7 +33,7 @@ public final class HttpErrorRangeParametersArgs extends io.pulumi.resources.Reso
      * The inclusive end of the http status code range.
      * 
      */
-    @InputImport(name="end")
+    @Import(name="end")
       private final @Nullable Output<Integer> end;
 
     public Output<Integer> getEnd() {

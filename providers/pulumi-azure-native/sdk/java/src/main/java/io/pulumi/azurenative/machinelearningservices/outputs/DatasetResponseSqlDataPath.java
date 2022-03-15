@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatasetResponseSqlDataPath {
     /**
      * SQL query timeout. Unit in seconds.
@@ -31,12 +31,12 @@ public final class DatasetResponseSqlDataPath {
      */
     private final String sqlTableName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetResponseSqlDataPath(
-        @OutputCustomType.Parameter("queryTimeout") Double queryTimeout,
-        @OutputCustomType.Parameter("sqlQuery") String sqlQuery,
-        @OutputCustomType.Parameter("sqlStoredProcedureName") String sqlStoredProcedureName,
-        @OutputCustomType.Parameter("sqlTableName") String sqlTableName) {
+        @CustomType.Parameter("queryTimeout") Double queryTimeout,
+        @CustomType.Parameter("sqlQuery") String sqlQuery,
+        @CustomType.Parameter("sqlStoredProcedureName") String sqlStoredProcedureName,
+        @CustomType.Parameter("sqlTableName") String sqlTableName) {
         this.queryTimeout = queryTimeout;
         this.sqlQuery = sqlQuery;
         this.sqlStoredProcedureName = sqlStoredProcedureName;

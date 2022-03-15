@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.pubsub.inputs.LiteTopicPartitionConfigCapacityArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LiteTopicPartitionConfigArgs extends io.pulumi.resources.Reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<LiteTopicPartitionConfigCapacityArgs> capacity;
 
     public Output<LiteTopicPartitionConfigCapacityArgs> getCapacity() {
@@ -31,7 +31,7 @@ public final class LiteTopicPartitionConfigArgs extends io.pulumi.resources.Reso
      * The number of partitions in the topic. Must be at least 1.
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Output<Integer> count;
 
     public Output<Integer> getCount() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.confluent.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
      * Offer Id
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -33,7 +33,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
      * Offer Plan Id
      * 
      */
-    @InputImport(name="planId")
+    @Import(name="planId")
       private final @Nullable Output<String> planId;
 
     public Output<String> getPlanId() {
@@ -44,7 +44,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
      * Offer Plan Name
      * 
      */
-    @InputImport(name="planName")
+    @Import(name="planName")
       private final @Nullable Output<String> planName;
 
     public Output<String> getPlanName() {
@@ -55,7 +55,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
      * Publisher Id
      * 
      */
-    @InputImport(name="publisherId")
+    @Import(name="publisherId")
       private final @Nullable Output<String> publisherId;
 
     public Output<String> getPublisherId() {
@@ -66,7 +66,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
      * Offer Plan Term unit
      * 
      */
-    @InputImport(name="termUnit")
+    @Import(name="termUnit")
       private final @Nullable Output<String> termUnit;
 
     public Output<String> getTermUnit() {

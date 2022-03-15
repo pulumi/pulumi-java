@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53.ResolverRuleAssociationArgs;
 import io.pulumi.aws.route53.inputs.ResolverRuleAssociationState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class ResolverRuleAssociation extends io.pulumi.resources.CustomResource 
      * A name for the association that you're creating between a resolver rule and a VPC.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -46,7 +46,7 @@ public class ResolverRuleAssociation extends io.pulumi.resources.CustomResource 
      * The ID of the resolver rule that you want to associate with the VPC.
      * 
      */
-    @OutputExport(name="resolverRuleId", type=String.class, parameters={})
+    @Export(name="resolverRuleId", type=String.class, parameters={})
     private Output<String> resolverRuleId;
 
     /**
@@ -60,7 +60,7 @@ public class ResolverRuleAssociation extends io.pulumi.resources.CustomResource 
      * The ID of the VPC that you want to associate the resolver rule with.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

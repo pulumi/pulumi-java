@@ -6,7 +6,7 @@ package io.pulumi.awsnative.acmpca.inputs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateExtensionsArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateSubjectArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,14 +19,14 @@ public final class CertificateApiPassthroughArgs extends io.pulumi.resources.Res
 
     public static final CertificateApiPassthroughArgs Empty = new CertificateApiPassthroughArgs();
 
-    @InputImport(name="extensions")
+    @Import(name="extensions")
       private final @Nullable Output<CertificateExtensionsArgs> extensions;
 
     public Output<CertificateExtensionsArgs> getExtensions() {
         return this.extensions == null ? Output.empty() : this.extensions;
     }
 
-    @InputImport(name="subject")
+    @Import(name="subject")
       private final @Nullable Output<CertificateSubjectArgs> subject;
 
     public Output<CertificateSubjectArgs> getSubject() {

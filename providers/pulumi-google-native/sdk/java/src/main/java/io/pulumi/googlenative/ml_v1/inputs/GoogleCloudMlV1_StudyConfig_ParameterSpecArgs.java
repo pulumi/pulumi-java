@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1_StudyConfig_ParameterSpecScaleType;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1_StudyConfig_ParameterSpecType;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecArgs;
@@ -32,7 +32,7 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
      * The value spec for a 'CATEGORICAL' parameter.
      * 
      */
-    @InputImport(name="categoricalValueSpec")
+    @Import(name="categoricalValueSpec")
       private final @Nullable Output<GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecArgs> categoricalValueSpec;
 
     public Output<GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecArgs> getCategoricalValueSpec() {
@@ -43,7 +43,7 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
      * A child node is active if the parameter's value matches the child node's matching_parent_values. If two items in child_parameter_specs have the same name, they must have disjoint matching_parent_values.
      * 
      */
-    @InputImport(name="childParameterSpecs")
+    @Import(name="childParameterSpecs")
       private final @Nullable Output<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> childParameterSpecs;
 
     public Output<List<GoogleCloudMlV1_StudyConfig_ParameterSpecArgs>> getChildParameterSpecs() {
@@ -54,7 +54,7 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
      * The value spec for a 'DISCRETE' parameter.
      * 
      */
-    @InputImport(name="discreteValueSpec")
+    @Import(name="discreteValueSpec")
       private final @Nullable Output<GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs> discreteValueSpec;
 
     public Output<GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs> getDiscreteValueSpec() {
@@ -65,7 +65,7 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
      * The value spec for a 'DOUBLE' parameter.
      * 
      */
-    @InputImport(name="doubleValueSpec")
+    @Import(name="doubleValueSpec")
       private final @Nullable Output<GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs> doubleValueSpec;
 
     public Output<GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecArgs> getDoubleValueSpec() {
@@ -76,7 +76,7 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
      * The value spec for an 'INTEGER' parameter.
      * 
      */
-    @InputImport(name="integerValueSpec")
+    @Import(name="integerValueSpec")
       private final @Nullable Output<GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs> integerValueSpec;
 
     public Output<GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecArgs> getIntegerValueSpec() {
@@ -87,28 +87,28 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
      * The parameter name must be unique amongst all ParameterSpecs.
      * 
      */
-    @InputImport(name="parameter", required=true)
+    @Import(name="parameter", required=true)
       private final Output<String> parameter;
 
     public Output<String> getParameter() {
         return this.parameter;
     }
 
-    @InputImport(name="parentCategoricalValues")
+    @Import(name="parentCategoricalValues")
       private final @Nullable Output<GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecArgs> parentCategoricalValues;
 
     public Output<GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecArgs> getParentCategoricalValues() {
         return this.parentCategoricalValues == null ? Output.empty() : this.parentCategoricalValues;
     }
 
-    @InputImport(name="parentDiscreteValues")
+    @Import(name="parentDiscreteValues")
       private final @Nullable Output<GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecArgs> parentDiscreteValues;
 
     public Output<GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecArgs> getParentDiscreteValues() {
         return this.parentDiscreteValues == null ? Output.empty() : this.parentDiscreteValues;
     }
 
-    @InputImport(name="parentIntValues")
+    @Import(name="parentIntValues")
       private final @Nullable Output<GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs> parentIntValues;
 
     public Output<GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecArgs> getParentIntValues() {
@@ -119,7 +119,7 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
      * How the parameter should be scaled. Leave unset for categorical parameters.
      * 
      */
-    @InputImport(name="scaleType")
+    @Import(name="scaleType")
       private final @Nullable Output<GoogleCloudMlV1_StudyConfig_ParameterSpecScaleType> scaleType;
 
     public Output<GoogleCloudMlV1_StudyConfig_ParameterSpecScaleType> getScaleType() {
@@ -130,7 +130,7 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecArgs extends io.pulu
      * The type of the parameter.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<GoogleCloudMlV1_StudyConfig_ParameterSpecType> type;
 
     public Output<GoogleCloudMlV1_StudyConfig_ParameterSpecType> getType() {

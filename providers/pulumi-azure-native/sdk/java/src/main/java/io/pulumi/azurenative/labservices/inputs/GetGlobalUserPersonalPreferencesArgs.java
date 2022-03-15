@@ -5,7 +5,7 @@ package io.pulumi.azurenative.labservices.inputs;
 
 import io.pulumi.azurenative.labservices.enums.AddRemove;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
      * Enum indicating if user is adding or removing a favorite lab
      * 
      */
-    @InputImport(name="addRemove")
+    @Import(name="addRemove")
       private final @Nullable Either<String,AddRemove> addRemove;
 
     public Either<String,AddRemove> getAddRemove() {
@@ -31,7 +31,7 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
      * Resource Id of the lab account
      * 
      */
-    @InputImport(name="labAccountResourceId")
+    @Import(name="labAccountResourceId")
       private final @Nullable String labAccountResourceId;
 
     public Optional<String> getLabAccountResourceId() {
@@ -42,7 +42,7 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
      * Resource Id of the lab to add/remove from the favorites list
      * 
      */
-    @InputImport(name="labResourceId")
+    @Import(name="labResourceId")
       private final @Nullable String labResourceId;
 
     public Optional<String> getLabResourceId() {
@@ -53,7 +53,7 @@ public final class GetGlobalUserPersonalPreferencesArgs extends io.pulumi.resour
      * The name of the user.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final String userName;
 
     public String getUserName() {

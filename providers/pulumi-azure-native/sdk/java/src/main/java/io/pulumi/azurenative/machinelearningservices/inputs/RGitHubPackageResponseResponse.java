@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class RGitHubPackageResponseResponse extends io.pulumi.resources.In
      * Repository address in the format username/repo[/subdir][@ref|#pull].
      * 
      */
-    @InputImport(name="repository")
+    @Import(name="repository")
       private final @Nullable String repository;
 
     public Optional<String> getRepository() {

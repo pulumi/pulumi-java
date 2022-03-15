@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.InstanceBootDiskInitializeParams;
 import java.lang.Boolean;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceBootDisk {
     /**
      * Whether the disk will be auto-deleted when the instance
@@ -62,16 +62,16 @@ public final class InstanceBootDisk {
      */
     private final @Nullable String source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceBootDisk(
-        @OutputCustomType.Parameter("autoDelete") @Nullable Boolean autoDelete,
-        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
-        @OutputCustomType.Parameter("diskEncryptionKeyRaw") @Nullable String diskEncryptionKeyRaw,
-        @OutputCustomType.Parameter("diskEncryptionKeySha256") @Nullable String diskEncryptionKeySha256,
-        @OutputCustomType.Parameter("initializeParams") @Nullable InstanceBootDiskInitializeParams initializeParams,
-        @OutputCustomType.Parameter("kmsKeySelfLink") @Nullable String kmsKeySelfLink,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("source") @Nullable String source) {
+        @CustomType.Parameter("autoDelete") @Nullable Boolean autoDelete,
+        @CustomType.Parameter("deviceName") @Nullable String deviceName,
+        @CustomType.Parameter("diskEncryptionKeyRaw") @Nullable String diskEncryptionKeyRaw,
+        @CustomType.Parameter("diskEncryptionKeySha256") @Nullable String diskEncryptionKeySha256,
+        @CustomType.Parameter("initializeParams") @Nullable InstanceBootDiskInitializeParams initializeParams,
+        @CustomType.Parameter("kmsKeySelfLink") @Nullable String kmsKeySelfLink,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("source") @Nullable String source) {
         this.autoDelete = autoDelete;
         this.deviceName = deviceName;
         this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;

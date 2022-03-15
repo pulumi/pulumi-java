@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datafusion_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datafusion_v1.outputs.AcceleratorResponse;
 import io.pulumi.googlenative.datafusion_v1.outputs.CryptoKeyConfigResponse;
 import io.pulumi.googlenative.datafusion_v1.outputs.NetworkConfigResponse;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceResult {
     /**
      * List of accelerators enabled for this CDF instance.
@@ -152,35 +152,35 @@ public final class GetInstanceResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceResult(
-        @OutputCustomType.Parameter("accelerators") List<AcceleratorResponse> accelerators,
-        @OutputCustomType.Parameter("apiEndpoint") String apiEndpoint,
-        @OutputCustomType.Parameter("availableVersion") List<VersionResponse> availableVersion,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("cryptoKeyConfig") CryptoKeyConfigResponse cryptoKeyConfig,
-        @OutputCustomType.Parameter("dataprocServiceAccount") String dataprocServiceAccount,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("disabledReason") List<String> disabledReason,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("enableRbac") Boolean enableRbac,
-        @OutputCustomType.Parameter("enableStackdriverLogging") Boolean enableStackdriverLogging,
-        @OutputCustomType.Parameter("enableStackdriverMonitoring") Boolean enableStackdriverMonitoring,
-        @OutputCustomType.Parameter("gcsBucket") String gcsBucket,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
-        @OutputCustomType.Parameter("options") Map<String,String> options,
-        @OutputCustomType.Parameter("p4ServiceAccount") String p4ServiceAccount,
-        @OutputCustomType.Parameter("privateInstance") Boolean privateInstance,
-        @OutputCustomType.Parameter("serviceEndpoint") String serviceEndpoint,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("stateMessage") String stateMessage,
-        @OutputCustomType.Parameter("tenantProjectId") String tenantProjectId,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("version") String version,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("accelerators") List<AcceleratorResponse> accelerators,
+        @CustomType.Parameter("apiEndpoint") String apiEndpoint,
+        @CustomType.Parameter("availableVersion") List<VersionResponse> availableVersion,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("cryptoKeyConfig") CryptoKeyConfigResponse cryptoKeyConfig,
+        @CustomType.Parameter("dataprocServiceAccount") String dataprocServiceAccount,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("disabledReason") List<String> disabledReason,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("enableRbac") Boolean enableRbac,
+        @CustomType.Parameter("enableStackdriverLogging") Boolean enableStackdriverLogging,
+        @CustomType.Parameter("enableStackdriverMonitoring") Boolean enableStackdriverMonitoring,
+        @CustomType.Parameter("gcsBucket") String gcsBucket,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
+        @CustomType.Parameter("options") Map<String,String> options,
+        @CustomType.Parameter("p4ServiceAccount") String p4ServiceAccount,
+        @CustomType.Parameter("privateInstance") Boolean privateInstance,
+        @CustomType.Parameter("serviceEndpoint") String serviceEndpoint,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("stateMessage") String stateMessage,
+        @CustomType.Parameter("tenantProjectId") String tenantProjectId,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("version") String version,
+        @CustomType.Parameter("zone") String zone) {
         this.accelerators = accelerators;
         this.apiEndpoint = apiEndpoint;
         this.availableVersion = availableVersion;

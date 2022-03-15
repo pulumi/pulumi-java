@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExpressRouteCircuitServiceProviderPropertiesResponse {
     /**
      * The BandwidthInMbps.
@@ -28,11 +28,11 @@ public final class ExpressRouteCircuitServiceProviderPropertiesResponse {
      */
     private final @Nullable String serviceProviderName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExpressRouteCircuitServiceProviderPropertiesResponse(
-        @OutputCustomType.Parameter("bandwidthInMbps") @Nullable Integer bandwidthInMbps,
-        @OutputCustomType.Parameter("peeringLocation") @Nullable String peeringLocation,
-        @OutputCustomType.Parameter("serviceProviderName") @Nullable String serviceProviderName) {
+        @CustomType.Parameter("bandwidthInMbps") @Nullable Integer bandwidthInMbps,
+        @CustomType.Parameter("peeringLocation") @Nullable String peeringLocation,
+        @CustomType.Parameter("serviceProviderName") @Nullable String serviceProviderName) {
         this.bandwidthInMbps = bandwidthInMbps;
         this.peeringLocation = peeringLocation;
         this.serviceProviderName = serviceProviderName;

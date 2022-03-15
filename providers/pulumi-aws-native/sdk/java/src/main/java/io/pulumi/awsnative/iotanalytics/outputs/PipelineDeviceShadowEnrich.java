@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineDeviceShadowEnrich {
     private final String attribute;
     private final String name;
@@ -17,13 +17,13 @@ public final class PipelineDeviceShadowEnrich {
     private final String roleArn;
     private final String thingName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineDeviceShadowEnrich(
-        @OutputCustomType.Parameter("attribute") String attribute,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("next") @Nullable String next,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("thingName") String thingName) {
+        @CustomType.Parameter("attribute") String attribute,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("next") @Nullable String next,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("thingName") String thingName) {
         this.attribute = attribute;
         this.name = name;
         this.next = next;

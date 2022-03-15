@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.amplifyuibuilder.inputs;
 
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentProperties;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,28 +16,28 @@ public final class ComponentChild extends io.pulumi.resources.InvokeArgs {
 
     public static final ComponentChild Empty = new ComponentChild();
 
-    @InputImport(name="children")
+    @Import(name="children")
       private final @Nullable List<ComponentChild> children;
 
     public List<ComponentChild> getChildren() {
         return this.children == null ? List.of() : this.children;
     }
 
-    @InputImport(name="componentType", required=true)
+    @Import(name="componentType", required=true)
       private final String componentType;
 
     public String getComponentType() {
         return this.componentType;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final ComponentProperties properties;
 
     public ComponentProperties getProperties() {

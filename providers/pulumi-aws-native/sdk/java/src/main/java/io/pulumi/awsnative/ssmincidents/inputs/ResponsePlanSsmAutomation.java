@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ssmincidents.inputs;
 
 import io.pulumi.awsnative.ssmincidents.enums.ResponsePlanSsmAutomationTargetAccount;
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanSsmParameter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
      * The document name to use when starting the SSM automation document.
      * 
      */
-    @InputImport(name="documentName", required=true)
+    @Import(name="documentName", required=true)
       private final String documentName;
 
     public String getDocumentName() {
@@ -36,7 +36,7 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
      * The version of the document to use when starting the SSM automation document.
      * 
      */
-    @InputImport(name="documentVersion")
+    @Import(name="documentVersion")
       private final @Nullable String documentVersion;
 
     public Optional<String> getDocumentVersion() {
@@ -47,7 +47,7 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
      * The parameters to set when starting the SSM automation document.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable List<ResponsePlanSsmParameter> parameters;
 
     public List<ResponsePlanSsmParameter> getParameters() {
@@ -58,7 +58,7 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
      * The role ARN to use when starting the SSM automation document.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final String roleArn;
 
     public String getRoleArn() {
@@ -69,7 +69,7 @@ public final class ResponsePlanSsmAutomation extends io.pulumi.resources.InvokeA
      * The account type to use when starting the SSM automation document.
      * 
      */
-    @InputImport(name="targetAccount")
+    @Import(name="targetAccount")
       private final @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount;
 
     public Optional<ResponsePlanSsmAutomationTargetAccount> getTargetAccount() {

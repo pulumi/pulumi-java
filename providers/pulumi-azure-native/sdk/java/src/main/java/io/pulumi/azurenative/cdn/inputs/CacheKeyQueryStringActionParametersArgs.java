@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.enums.QueryStringBehavior;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
 
     public static final CacheKeyQueryStringActionParametersArgs Empty = new CacheKeyQueryStringActionParametersArgs();
 
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -31,7 +31,7 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
      * query parameters to include or exclude (comma separated).
      * 
      */
-    @InputImport(name="queryParameters")
+    @Import(name="queryParameters")
       private final @Nullable Output<String> queryParameters;
 
     public Output<String> getQueryParameters() {
@@ -42,7 +42,7 @@ public final class CacheKeyQueryStringActionParametersArgs extends io.pulumi.res
      * Caching behavior for the requests
      * 
      */
-    @InputImport(name="queryStringBehavior", required=true)
+    @Import(name="queryStringBehavior", required=true)
       private final Output<Either<String,QueryStringBehavior>> queryStringBehavior;
 
     public Output<Either<String,QueryStringBehavior>> getQueryStringBehavior() {

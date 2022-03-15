@@ -4,7 +4,7 @@
 package io.pulumi.gcp.containeranalysis;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.containeranalysis.inputs.OccurenceAttestationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="attestation", required=true)
+    @Import(name="attestation", required=true)
       private final Output<OccurenceAttestationArgs> attestation;
 
     public Output<OccurenceAttestationArgs> getAttestation() {
@@ -40,7 +40,7 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
      * filter in list requests.
      * 
      */
-    @InputImport(name="noteName", required=true)
+    @Import(name="noteName", required=true)
       private final Output<String> noteName;
 
     public Output<String> getNoteName() {
@@ -52,7 +52,7 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -63,7 +63,7 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
      * A description of actions that can be taken to remedy the note.
      * 
      */
-    @InputImport(name="remediation")
+    @Import(name="remediation")
       private final @Nullable Output<String> remediation;
 
     public Output<String> getRemediation() {
@@ -76,7 +76,7 @@ public final class OccurenceArgs extends io.pulumi.resources.ResourceArgs {
      * https://gcr.io/project/image@sha256:123abc for a Docker image.
      * 
      */
-    @InputImport(name="resourceUri", required=true)
+    @Import(name="resourceUri", required=true)
       private final Output<String> resourceUri;
 
     public Output<String> getResourceUri() {

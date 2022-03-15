@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.TarGZipReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.inputs.TarReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.inputs.ZipDeflateReadSettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class BinaryReadSettingsResponse extends io.pulumi.resources.Invoke
      * Compression settings.
      * 
      */
-    @InputImport(name="compressionProperties")
+    @Import(name="compressionProperties")
       private final @Nullable Object compressionProperties;
 
     public Object getCompressionProperties() {
@@ -38,7 +38,7 @@ public final class BinaryReadSettingsResponse extends io.pulumi.resources.Invoke
      * Expected value is 'BinaryReadSettings'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

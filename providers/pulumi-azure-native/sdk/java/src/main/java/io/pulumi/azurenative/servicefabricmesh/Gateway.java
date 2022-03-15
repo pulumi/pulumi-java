@@ -10,7 +10,7 @@ import io.pulumi.azurenative.servicefabricmesh.outputs.NetworkRefResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.TcpConfigResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * User readable description of the gateway.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -52,7 +52,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Network that the Application is using.
      * 
      */
-    @OutputExport(name="destinationNetwork", type=NetworkRefResponse.class, parameters={})
+    @Export(name="destinationNetwork", type=NetworkRefResponse.class, parameters={})
     private Output<NetworkRefResponse> destinationNetwork;
 
     /**
@@ -66,7 +66,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Configuration for http connectivity for this gateway.
      * 
      */
-    @OutputExport(name="http", type=List.class, parameters={HttpConfigResponse.class})
+    @Export(name="http", type=List.class, parameters={HttpConfigResponse.class})
     private Output</* @Nullable */ List<HttpConfigResponse>> http;
 
     /**
@@ -80,7 +80,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * IP address of the gateway. This is populated in the response and is ignored for incoming requests.
      * 
      */
-    @OutputExport(name="ipAddress", type=String.class, parameters={})
+    @Export(name="ipAddress", type=String.class, parameters={})
     private Output<String> ipAddress;
 
     /**
@@ -94,7 +94,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -108,7 +108,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -122,7 +122,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * State of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -136,7 +136,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Network the gateway should listen on for requests.
      * 
      */
-    @OutputExport(name="sourceNetwork", type=NetworkRefResponse.class, parameters={})
+    @Export(name="sourceNetwork", type=NetworkRefResponse.class, parameters={})
     private Output<NetworkRefResponse> sourceNetwork;
 
     /**
@@ -150,7 +150,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Status of the resource.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -164,7 +164,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Gives additional information about the current status of the gateway.
      * 
      */
-    @OutputExport(name="statusDetails", type=String.class, parameters={})
+    @Export(name="statusDetails", type=String.class, parameters={})
     private Output<String> statusDetails;
 
     /**
@@ -178,7 +178,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -192,7 +192,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Configuration for tcp connectivity for this gateway.
      * 
      */
-    @OutputExport(name="tcp", type=List.class, parameters={TcpConfigResponse.class})
+    @Export(name="tcp", type=List.class, parameters={TcpConfigResponse.class})
     private Output</* @Nullable */ List<TcpConfigResponse>> tcp;
 
     /**
@@ -206,7 +206,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

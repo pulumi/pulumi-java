@@ -11,7 +11,7 @@ import io.pulumi.awsnative.appflow.outputs.FlowTag;
 import io.pulumi.awsnative.appflow.outputs.FlowTask;
 import io.pulumi.awsnative.appflow.outputs.FlowTriggerConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * Description of the flow.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -43,7 +43,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * List of Destination connectors of the flow.
      * 
      */
-    @OutputExport(name="destinationFlowConfigList", type=List.class, parameters={FlowDestinationFlowConfig.class})
+    @Export(name="destinationFlowConfigList", type=List.class, parameters={FlowDestinationFlowConfig.class})
     private Output<List<FlowDestinationFlowConfig>> destinationFlowConfigList;
 
     /**
@@ -57,7 +57,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * ARN identifier of the flow.
      * 
      */
-    @OutputExport(name="flowArn", type=String.class, parameters={})
+    @Export(name="flowArn", type=String.class, parameters={})
     private Output<String> flowArn;
 
     /**
@@ -71,7 +71,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * Name of the flow.
      * 
      */
-    @OutputExport(name="flowName", type=String.class, parameters={})
+    @Export(name="flowName", type=String.class, parameters={})
     private Output<String> flowName;
 
     /**
@@ -85,7 +85,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * The ARN of the AWS Key Management Service (AWS KMS) key that's used to encrypt your function's environment variables. If it's not provided, AWS Lambda uses a default service key.
      * 
      */
-    @OutputExport(name="kMSArn", type=String.class, parameters={})
+    @Export(name="kMSArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> kMSArn;
 
     /**
@@ -99,7 +99,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * Configurations of Source connector of the flow.
      * 
      */
-    @OutputExport(name="sourceFlowConfig", type=FlowSourceFlowConfig.class, parameters={})
+    @Export(name="sourceFlowConfig", type=FlowSourceFlowConfig.class, parameters={})
     private Output<FlowSourceFlowConfig> sourceFlowConfig;
 
     /**
@@ -113,7 +113,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * List of Tags.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={FlowTag.class})
+    @Export(name="tags", type=List.class, parameters={FlowTag.class})
     private Output</* @Nullable */ List<FlowTag>> tags;
 
     /**
@@ -127,7 +127,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * List of tasks for the flow.
      * 
      */
-    @OutputExport(name="tasks", type=List.class, parameters={FlowTask.class})
+    @Export(name="tasks", type=List.class, parameters={FlowTask.class})
     private Output<List<FlowTask>> tasks;
 
     /**
@@ -141,7 +141,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * Trigger settings of the flow.
      * 
      */
-    @OutputExport(name="triggerConfig", type=FlowTriggerConfig.class, parameters={})
+    @Export(name="triggerConfig", type=FlowTriggerConfig.class, parameters={})
     private Output<FlowTriggerConfig> triggerConfig;
 
     /**

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.notificationhubs.outputs.MpnsCredentialResponse;
 import io.pulumi.azurenative.notificationhubs.outputs.SharedAccessAuthorizationRulePropertiesResponse;
 import io.pulumi.azurenative.notificationhubs.outputs.SkuResponse;
 import io.pulumi.azurenative.notificationhubs.outputs.WnsCredentialResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNotificationHubResult {
     /**
      * The AdmCredential of the created NotificationHub
@@ -92,22 +92,22 @@ public final class GetNotificationHubResult {
      */
     private final @Nullable WnsCredentialResponse wnsCredential;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNotificationHubResult(
-        @OutputCustomType.Parameter("admCredential") @Nullable AdmCredentialResponse admCredential,
-        @OutputCustomType.Parameter("apnsCredential") @Nullable ApnsCredentialResponse apnsCredential,
-        @OutputCustomType.Parameter("authorizationRules") @Nullable List<SharedAccessAuthorizationRulePropertiesResponse> authorizationRules,
-        @OutputCustomType.Parameter("baiduCredential") @Nullable BaiduCredentialResponse baiduCredential,
-        @OutputCustomType.Parameter("gcmCredential") @Nullable GcmCredentialResponse gcmCredential,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("mpnsCredential") @Nullable MpnsCredentialResponse mpnsCredential,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("registrationTtl") @Nullable String registrationTtl,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("wnsCredential") @Nullable WnsCredentialResponse wnsCredential) {
+        @CustomType.Parameter("admCredential") @Nullable AdmCredentialResponse admCredential,
+        @CustomType.Parameter("apnsCredential") @Nullable ApnsCredentialResponse apnsCredential,
+        @CustomType.Parameter("authorizationRules") @Nullable List<SharedAccessAuthorizationRulePropertiesResponse> authorizationRules,
+        @CustomType.Parameter("baiduCredential") @Nullable BaiduCredentialResponse baiduCredential,
+        @CustomType.Parameter("gcmCredential") @Nullable GcmCredentialResponse gcmCredential,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("mpnsCredential") @Nullable MpnsCredentialResponse mpnsCredential,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("registrationTtl") @Nullable String registrationTtl,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("wnsCredential") @Nullable WnsCredentialResponse wnsCredential) {
         this.admCredential = admCredential;
         this.apnsCredential = apnsCredential;
         this.authorizationRules = authorizationRules;

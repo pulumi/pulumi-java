@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelPayload;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DetectorModelSns {
     private final @Nullable DetectorModelPayload payload;
     /**
@@ -19,10 +19,10 @@ public final class DetectorModelSns {
      */
     private final String targetArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorModelSns(
-        @OutputCustomType.Parameter("payload") @Nullable DetectorModelPayload payload,
-        @OutputCustomType.Parameter("targetArn") String targetArn) {
+        @CustomType.Parameter("payload") @Nullable DetectorModelPayload payload,
+        @CustomType.Parameter("targetArn") String targetArn) {
         this.payload = payload;
         this.targetArn = targetArn;
     }

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.SecretResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeviceSecretsResponse {
     /**
      * Keyvault Id of BMCDefaultUserPassword
@@ -52,16 +52,16 @@ public final class DeviceSecretsResponse {
      */
     private final @Nullable SecretResponse systemVolumeBitLockerRecoveryKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeviceSecretsResponse(
-        @OutputCustomType.Parameter("bmcDefaultUserPassword") @Nullable SecretResponse bmcDefaultUserPassword,
-        @OutputCustomType.Parameter("hcsDataVolumeBitLockerExternalKey") @Nullable SecretResponse hcsDataVolumeBitLockerExternalKey,
-        @OutputCustomType.Parameter("hcsInternalVolumeBitLockerExternalKey") @Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey,
-        @OutputCustomType.Parameter("rotateKeyForDataVolumeBitlocker") @Nullable SecretResponse rotateKeyForDataVolumeBitlocker,
-        @OutputCustomType.Parameter("rotateKeysForSedDrivesSerialized") @Nullable SecretResponse rotateKeysForSedDrivesSerialized,
-        @OutputCustomType.Parameter("sedEncryptionExternalKey") @Nullable SecretResponse sedEncryptionExternalKey,
-        @OutputCustomType.Parameter("sedEncryptionExternalKeyId") @Nullable SecretResponse sedEncryptionExternalKeyId,
-        @OutputCustomType.Parameter("systemVolumeBitLockerRecoveryKey") @Nullable SecretResponse systemVolumeBitLockerRecoveryKey) {
+        @CustomType.Parameter("bmcDefaultUserPassword") @Nullable SecretResponse bmcDefaultUserPassword,
+        @CustomType.Parameter("hcsDataVolumeBitLockerExternalKey") @Nullable SecretResponse hcsDataVolumeBitLockerExternalKey,
+        @CustomType.Parameter("hcsInternalVolumeBitLockerExternalKey") @Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey,
+        @CustomType.Parameter("rotateKeyForDataVolumeBitlocker") @Nullable SecretResponse rotateKeyForDataVolumeBitlocker,
+        @CustomType.Parameter("rotateKeysForSedDrivesSerialized") @Nullable SecretResponse rotateKeysForSedDrivesSerialized,
+        @CustomType.Parameter("sedEncryptionExternalKey") @Nullable SecretResponse sedEncryptionExternalKey,
+        @CustomType.Parameter("sedEncryptionExternalKeyId") @Nullable SecretResponse sedEncryptionExternalKeyId,
+        @CustomType.Parameter("systemVolumeBitLockerRecoveryKey") @Nullable SecretResponse systemVolumeBitLockerRecoveryKey) {
         this.bmcDefaultUserPassword = bmcDefaultUserPassword;
         this.hcsDataVolumeBitLockerExternalKey = hcsDataVolumeBitLockerExternalKey;
         this.hcsInternalVolumeBitLockerExternalKey = hcsInternalVolumeBitLockerExternalKey;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.dbformysql;
 import io.pulumi.azurenative.dbformysql.enums.AdministratorType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
      * The type of administrator.
      * 
      */
-    @InputImport(name="administratorType", required=true)
+    @Import(name="administratorType", required=true)
       private final Output<Either<String,AdministratorType>> administratorType;
 
     public Output<Either<String,AdministratorType>> getAdministratorType() {
@@ -30,7 +30,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
      * The server administrator login account name.
      * 
      */
-    @InputImport(name="login", required=true)
+    @Import(name="login", required=true)
       private final Output<String> login;
 
     public Output<String> getLogin() {
@@ -41,7 +41,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {
@@ -63,7 +63,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
      * The server administrator Sid (Secure ID).
      * 
      */
-    @InputImport(name="sid", required=true)
+    @Import(name="sid", required=true)
       private final Output<String> sid;
 
     public Output<String> getSid() {
@@ -74,7 +74,7 @@ public final class ServerAdministratorArgs extends io.pulumi.resources.ResourceA
      * The server Active Directory Administrator tenant id.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final Output<String> tenantId;
 
     public Output<String> getTenantId() {

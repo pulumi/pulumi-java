@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.azurenative.resources.inputs.ErrorResponseResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
      * ACI resource Id.
      * 
      */
-    @InputImport(name="containerInstanceId", required=true)
+    @Import(name="containerInstanceId", required=true)
       private final String containerInstanceId;
 
     public String getContainerInstanceId() {
@@ -34,7 +34,7 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
      * End time of the script execution.
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
@@ -45,7 +45,7 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Error that is relayed from the script execution.
      * 
      */
-    @InputImport(name="error")
+    @Import(name="error")
       private final @Nullable ErrorResponseResponse error;
 
     public Optional<ErrorResponseResponse> getError() {
@@ -56,7 +56,7 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Time the deployment script resource will expire.
      * 
      */
-    @InputImport(name="expirationTime", required=true)
+    @Import(name="expirationTime", required=true)
       private final String expirationTime;
 
     public String getExpirationTime() {
@@ -67,7 +67,7 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Start time of the script execution.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -78,7 +78,7 @@ public final class ScriptStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Storage account resource Id.
      * 
      */
-    @InputImport(name="storageAccountId", required=true)
+    @Import(name="storageAccountId", required=true)
       private final String storageAccountId;
 
     public String getStorageAccountId() {

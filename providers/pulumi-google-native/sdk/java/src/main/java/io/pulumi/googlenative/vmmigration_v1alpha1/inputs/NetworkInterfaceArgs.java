@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * The external IP to define in the NIC.
      * 
      */
-    @InputImport(name="externalIp")
+    @Import(name="externalIp")
       private final @Nullable Output<String> externalIp;
 
     public Output<String> getExternalIp() {
@@ -33,7 +33,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * The internal IP to define in the NIC. The formats accepted are: `ephemeral` \ ipv4 address \ a named address resource full path.
      * 
      */
-    @InputImport(name="internalIp")
+    @Import(name="internalIp")
       private final @Nullable Output<String> internalIp;
 
     public Output<String> getInternalIp() {
@@ -44,7 +44,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * The network to connect the NIC to.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -55,7 +55,7 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
      * The subnetwork to connect the NIC to.
      * 
      */
-    @InputImport(name="subnetwork")
+    @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {

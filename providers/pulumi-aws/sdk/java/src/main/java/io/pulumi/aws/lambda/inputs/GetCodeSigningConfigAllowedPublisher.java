@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetCodeSigningConfigAllowedPublisher extends io.pulumi.resour
      * The Amazon Resource Name (ARN) for each of the signing profiles. A signing profile defines a trusted user who can sign a code package.
      * 
      */
-    @InputImport(name="signingProfileVersionArns", required=true)
+    @Import(name="signingProfileVersionArns", required=true)
       private final List<String> signingProfileVersionArns;
 
     public List<String> getSigningProfileVersionArns() {

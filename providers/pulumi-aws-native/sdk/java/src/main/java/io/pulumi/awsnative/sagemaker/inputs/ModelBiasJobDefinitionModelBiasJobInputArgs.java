@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionEndpointInputArgs;
 import io.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -18,14 +18,14 @@ public final class ModelBiasJobDefinitionModelBiasJobInputArgs extends io.pulumi
 
     public static final ModelBiasJobDefinitionModelBiasJobInputArgs Empty = new ModelBiasJobDefinitionModelBiasJobInputArgs();
 
-    @InputImport(name="endpointInput", required=true)
+    @Import(name="endpointInput", required=true)
       private final Output<ModelBiasJobDefinitionEndpointInputArgs> endpointInput;
 
     public Output<ModelBiasJobDefinitionEndpointInputArgs> getEndpointInput() {
         return this.endpointInput;
     }
 
-    @InputImport(name="groundTruthS3Input", required=true)
+    @Import(name="groundTruthS3Input", required=true)
       private final Output<ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input;
 
     public Output<ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs> getGroundTruthS3Input() {

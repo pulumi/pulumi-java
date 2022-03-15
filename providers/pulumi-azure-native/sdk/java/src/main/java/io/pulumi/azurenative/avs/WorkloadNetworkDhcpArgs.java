@@ -6,7 +6,7 @@ package io.pulumi.azurenative.avs;
 import io.pulumi.azurenative.avs.enums.DhcpTypeEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
      * NSX DHCP identifier. Generally the same as the DHCP display name
      * 
      */
-    @InputImport(name="dhcpId")
+    @Import(name="dhcpId")
       private final @Nullable Output<String> dhcpId;
 
     public Output<String> getDhcpId() {
@@ -32,7 +32,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
      * Type of DHCP: SERVER or RELAY.
      * 
      */
-    @InputImport(name="dhcpType", required=true)
+    @Import(name="dhcpType", required=true)
       private final Output<Either<String,DhcpTypeEnum>> dhcpType;
 
     public Output<Either<String,DhcpTypeEnum>> getDhcpType() {
@@ -43,7 +43,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
      * Display name of the DHCP entity.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -54,7 +54,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
      * Name of the private cloud
      * 
      */
-    @InputImport(name="privateCloudName", required=true)
+    @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
     public Output<String> getPrivateCloudName() {
@@ -65,7 +65,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -76,7 +76,7 @@ public final class WorkloadNetworkDhcpArgs extends io.pulumi.resources.ResourceA
      * NSX revision number.
      * 
      */
-    @InputImport(name="revision")
+    @Import(name="revision")
       private final @Nullable Output<Double> revision;
 
     public Output<Double> getRevision() {

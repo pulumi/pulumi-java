@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
      * Application ARN for an Amazon Pinpoint application. Conflicts with `external_id` and `role_arn`.
      * 
      */
-    @InputImport(name="applicationArn")
+    @Import(name="applicationArn")
       private final @Nullable Output<String> applicationArn;
 
     public Output<String> getApplicationArn() {
@@ -30,7 +30,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
      * Application ID for an Amazon Pinpoint application.
      * 
      */
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -41,7 +41,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
      * ID for the Analytics Configuration. Conflicts with `application_arn`.
      * 
      */
-    @InputImport(name="externalId")
+    @Import(name="externalId")
       private final @Nullable Output<String> externalId;
 
     public Output<String> getExternalId() {
@@ -52,7 +52,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
      * ARN of an IAM role that authorizes Amazon Cognito to publish events to Amazon Pinpoint analytics. Conflicts with `application_arn`.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -63,7 +63,7 @@ public final class UserPoolClientAnalyticsConfigurationGetArgs extends io.pulumi
      * If set to `true`, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics.
      * 
      */
-    @InputImport(name="userDataShared")
+    @Import(name="userDataShared")
       private final @Nullable Output<Boolean> userDataShared;
 
     public Output<Boolean> getUserDataShared() {

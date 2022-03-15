@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
      * Name of the project scoping this PublicDelegatedSubPrefix.
      * 
      */
-    @InputImport(name="delegateeProject")
+    @Import(name="delegateeProject")
       private final @Nullable Output<String> delegateeProject;
 
     public Output<String> getDelegateeProject() {
@@ -34,7 +34,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
      * The IPv4 address range, in CIDR format, represented by this sub public delegated prefix.
      * 
      */
-    @InputImport(name="ipCidrRange")
+    @Import(name="ipCidrRange")
       private final @Nullable Output<String> ipCidrRange;
 
     public Output<String> getIpCidrRange() {
@@ -56,7 +56,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
      * Whether the sub prefix is delegated to create Address resources in the delegatee project.
      * 
      */
-    @InputImport(name="isAddress")
+    @Import(name="isAddress")
       private final @Nullable Output<Boolean> isAddress;
 
     public Output<Boolean> getIsAddress() {
@@ -67,7 +67,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
      * The name of the sub public delegated prefix.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

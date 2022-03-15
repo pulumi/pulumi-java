@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class VpnGatewayAttachmentState extends io.pulumi.resources.Resourc
      * The ID of the VPC.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
@@ -29,7 +29,7 @@ public final class VpnGatewayAttachmentState extends io.pulumi.resources.Resourc
      * The ID of the Virtual Private Gateway.
      * 
      */
-    @InputImport(name="vpnGatewayId")
+    @Import(name="vpnGatewayId")
       private final @Nullable Output<String> vpnGatewayId;
 
     public Output<String> getVpnGatewayId() {

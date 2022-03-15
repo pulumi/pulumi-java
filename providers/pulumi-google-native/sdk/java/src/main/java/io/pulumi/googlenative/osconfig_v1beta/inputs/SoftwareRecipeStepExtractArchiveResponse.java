@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends io.pulumi.re
      * The id of the relevant artifact in the recipe.
      * 
      */
-    @InputImport(name="artifactId", required=true)
+    @Import(name="artifactId", required=true)
       private final String artifactId;
 
     public String getArtifactId() {
@@ -31,7 +31,7 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends io.pulumi.re
      * Directory to extract archive to. Defaults to `/` on Linux or `C:\` on Windows.
      * 
      */
-    @InputImport(name="destination", required=true)
+    @Import(name="destination", required=true)
       private final String destination;
 
     public String getDestination() {
@@ -42,7 +42,7 @@ public final class SoftwareRecipeStepExtractArchiveResponse extends io.pulumi.re
      * The type of the archive to extract.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IPAMIpamOperatingRegion {
     /**
      * The name of the region.
@@ -15,8 +15,8 @@ public final class IPAMIpamOperatingRegion {
      */
     private final String regionName;
 
-    @OutputCustomType.Constructor
-    private IPAMIpamOperatingRegion(@OutputCustomType.Parameter("regionName") String regionName) {
+    @CustomType.Constructor
+    private IPAMIpamOperatingRegion(@CustomType.Parameter("regionName") String regionName) {
         this.regionName = regionName;
     }
 

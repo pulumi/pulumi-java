@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AliasRoutingConfig {
     /**
      * A map that defines the proportion of events that should be sent to different versions of a lambda function.
@@ -18,8 +18,8 @@ public final class AliasRoutingConfig {
      */
     private final @Nullable Map<String,Double> additionalVersionWeights;
 
-    @OutputCustomType.Constructor
-    private AliasRoutingConfig(@OutputCustomType.Parameter("additionalVersionWeights") @Nullable Map<String,Double> additionalVersionWeights) {
+    @CustomType.Constructor
+    private AliasRoutingConfig(@CustomType.Parameter("additionalVersionWeights") @Nullable Map<String,Double> additionalVersionWeights) {
         this.additionalVersionWeights = additionalVersionWeights;
     }
 

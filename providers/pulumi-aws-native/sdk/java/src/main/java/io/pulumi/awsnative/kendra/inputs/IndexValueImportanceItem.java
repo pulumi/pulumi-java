@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class IndexValueImportanceItem extends io.pulumi.resources.InvokeAr
 
     public static final IndexValueImportanceItem Empty = new IndexValueImportanceItem();
 
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Integer value;
 
     public Optional<Integer> getValue() {

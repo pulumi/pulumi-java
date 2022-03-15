@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.DomainUserSettings;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainResult {
     /**
      * The default user settings.
@@ -43,14 +43,14 @@ public final class GetDomainResult {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainResult(
-        @OutputCustomType.Parameter("defaultUserSettings") @Nullable DomainUserSettings defaultUserSettings,
-        @OutputCustomType.Parameter("domainArn") @Nullable String domainArn,
-        @OutputCustomType.Parameter("domainId") @Nullable String domainId,
-        @OutputCustomType.Parameter("homeEfsFileSystemId") @Nullable String homeEfsFileSystemId,
-        @OutputCustomType.Parameter("singleSignOnManagedApplicationInstanceId") @Nullable String singleSignOnManagedApplicationInstanceId,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("defaultUserSettings") @Nullable DomainUserSettings defaultUserSettings,
+        @CustomType.Parameter("domainArn") @Nullable String domainArn,
+        @CustomType.Parameter("domainId") @Nullable String domainId,
+        @CustomType.Parameter("homeEfsFileSystemId") @Nullable String homeEfsFileSystemId,
+        @CustomType.Parameter("singleSignOnManagedApplicationInstanceId") @Nullable String singleSignOnManagedApplicationInstanceId,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.defaultUserSettings = defaultUserSettings;
         this.domainArn = domainArn;
         this.domainId = domainId;

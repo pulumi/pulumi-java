@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.sso.PermissionSetArgs;
 import io.pulumi.awsnative.sso.outputs.PermissionSetTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -24,7 +24,7 @@ public class PermissionSet extends io.pulumi.resources.CustomResource {
      * The permission set description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -38,7 +38,7 @@ public class PermissionSet extends io.pulumi.resources.CustomResource {
      * The inline policy to put in permission set.
      * 
      */
-    @OutputExport(name="inlinePolicy", type=Object.class, parameters={})
+    @Export(name="inlinePolicy", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> inlinePolicy;
 
     /**
@@ -52,7 +52,7 @@ public class PermissionSet extends io.pulumi.resources.CustomResource {
      * The sso instance arn that the permission set is owned.
      * 
      */
-    @OutputExport(name="instanceArn", type=String.class, parameters={})
+    @Export(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
     /**
@@ -62,7 +62,7 @@ public class PermissionSet extends io.pulumi.resources.CustomResource {
     public Output<String> getInstanceArn() {
         return this.instanceArn;
     }
-    @OutputExport(name="managedPolicies", type=List.class, parameters={String.class})
+    @Export(name="managedPolicies", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> managedPolicies;
 
     public Output</* @Nullable */ List<String>> getManagedPolicies() {
@@ -72,7 +72,7 @@ public class PermissionSet extends io.pulumi.resources.CustomResource {
      * The name you want to assign to this permission set.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -86,7 +86,7 @@ public class PermissionSet extends io.pulumi.resources.CustomResource {
      * The permission set that the policy will be attached to
      * 
      */
-    @OutputExport(name="permissionSetArn", type=String.class, parameters={})
+    @Export(name="permissionSetArn", type=String.class, parameters={})
     private Output<String> permissionSetArn;
 
     /**
@@ -100,7 +100,7 @@ public class PermissionSet extends io.pulumi.resources.CustomResource {
      * The relay state URL that redirect links to any service in the AWS Management Console.
      * 
      */
-    @OutputExport(name="relayStateType", type=String.class, parameters={})
+    @Export(name="relayStateType", type=String.class, parameters={})
     private Output</* @Nullable */ String> relayStateType;
 
     /**
@@ -114,7 +114,7 @@ public class PermissionSet extends io.pulumi.resources.CustomResource {
      * The length of time that a user can be signed in to an AWS account.
      * 
      */
-    @OutputExport(name="sessionDuration", type=String.class, parameters={})
+    @Export(name="sessionDuration", type=String.class, parameters={})
     private Output</* @Nullable */ String> sessionDuration;
 
     /**
@@ -124,7 +124,7 @@ public class PermissionSet extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getSessionDuration() {
         return this.sessionDuration;
     }
-    @OutputExport(name="tags", type=List.class, parameters={PermissionSetTag.class})
+    @Export(name="tags", type=List.class, parameters={PermissionSetTag.class})
     private Output</* @Nullable */ List<PermissionSetTag>> tags;
 
     public Output</* @Nullable */ List<PermissionSetTag>> getTags() {

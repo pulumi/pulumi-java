@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.SqlDedicatedGatewayRegionalServiceResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SqlDedicatedGatewayServiceResourcePropertiesResponse {
     /**
      * Time of the last state change (ISO-8601 format).
@@ -51,15 +51,15 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlDedicatedGatewayServiceResourcePropertiesResponse(
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
-        @OutputCustomType.Parameter("instanceSize") @Nullable String instanceSize,
-        @OutputCustomType.Parameter("locations") List<SqlDedicatedGatewayRegionalServiceResourceResponse> locations,
-        @OutputCustomType.Parameter("serviceType") String serviceType,
-        @OutputCustomType.Parameter("sqlDedicatedGatewayEndpoint") @Nullable String sqlDedicatedGatewayEndpoint,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
+        @CustomType.Parameter("instanceSize") @Nullable String instanceSize,
+        @CustomType.Parameter("locations") List<SqlDedicatedGatewayRegionalServiceResourceResponse> locations,
+        @CustomType.Parameter("serviceType") String serviceType,
+        @CustomType.Parameter("sqlDedicatedGatewayEndpoint") @Nullable String sqlDedicatedGatewayEndpoint,
+        @CustomType.Parameter("status") String status) {
         this.creationTime = creationTime;
         this.instanceCount = instanceCount;
         this.instanceSize = instanceSize;

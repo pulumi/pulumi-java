@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration;
 
 import io.pulumi.azurenative.datamigration.inputs.ProjectFilePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the File
      * 
      */
-    @InputImport(name="fileName")
+    @Import(name="fileName")
       private final @Nullable Output<String> fileName;
 
     public Output<String> getFileName() {
@@ -30,7 +30,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group
      * 
      */
-    @InputImport(name="groupName", required=true)
+    @Import(name="groupName", required=true)
       private final Output<String> groupName;
 
     public Output<String> getGroupName() {
@@ -41,7 +41,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the project
      * 
      */
-    @InputImport(name="projectName", required=true)
+    @Import(name="projectName", required=true)
       private final Output<String> projectName;
 
     public Output<String> getProjectName() {
@@ -52,7 +52,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * Custom file properties
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ProjectFilePropertiesArgs> properties;
 
     public Output<ProjectFilePropertiesArgs> getProperties() {
@@ -63,7 +63,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the service
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {

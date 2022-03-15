@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.consumption.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class BudgetTimePeriodResponse extends io.pulumi.resources.InvokeAr
      * The end date for the budget. If not provided, we default this to 10 years from the start date.
      * 
      */
-    @InputImport(name="endDate")
+    @Import(name="endDate")
       private final @Nullable String endDate;
 
     public Optional<String> getEndDate() {
@@ -33,7 +33,7 @@ public final class BudgetTimePeriodResponse extends io.pulumi.resources.InvokeAr
      * The start date for the budget.
      * 
      */
-    @InputImport(name="startDate", required=true)
+    @Import(name="startDate", required=true)
       private final String startDate;
 
     public String getStartDate() {

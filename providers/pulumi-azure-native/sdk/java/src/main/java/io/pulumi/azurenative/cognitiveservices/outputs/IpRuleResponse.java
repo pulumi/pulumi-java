@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IpRuleResponse {
     /**
      * An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).
@@ -15,8 +15,8 @@ public final class IpRuleResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
-    private IpRuleResponse(@OutputCustomType.Parameter("value") String value) {
+    @CustomType.Constructor
+    private IpRuleResponse(@CustomType.Parameter("value") String value) {
         this.value = value;
     }
 

@@ -4,14 +4,14 @@
 package io.pulumi.aws.s3.outputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketWebsite {
     /**
      * An absolute path to the document to return in case of a 4XX error.
@@ -35,12 +35,12 @@ public final class BucketWebsite {
      */
     private final @Nullable Either<String,List<String>> routingRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketWebsite(
-        @OutputCustomType.Parameter("errorDocument") @Nullable String errorDocument,
-        @OutputCustomType.Parameter("indexDocument") @Nullable String indexDocument,
-        @OutputCustomType.Parameter("redirectAllRequestsTo") @Nullable String redirectAllRequestsTo,
-        @OutputCustomType.Parameter("routingRules") @Nullable Either<String,List<String>> routingRules) {
+        @CustomType.Parameter("errorDocument") @Nullable String errorDocument,
+        @CustomType.Parameter("indexDocument") @Nullable String indexDocument,
+        @CustomType.Parameter("redirectAllRequestsTo") @Nullable String redirectAllRequestsTo,
+        @CustomType.Parameter("routingRules") @Nullable Either<String,List<String>> routingRules) {
         this.errorDocument = errorDocument;
         this.indexDocument = indexDocument;
         this.redirectAllRequestsTo = redirectAllRequestsTo;

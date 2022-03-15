@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.iotsitewise.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AssetHierarchy {
     /**
      * The ID of the child asset to be associated.
@@ -20,10 +20,10 @@ public final class AssetHierarchy {
      */
     private final String logicalId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssetHierarchy(
-        @OutputCustomType.Parameter("childAssetId") String childAssetId,
-        @OutputCustomType.Parameter("logicalId") String logicalId) {
+        @CustomType.Parameter("childAssetId") String childAssetId,
+        @CustomType.Parameter("logicalId") String logicalId) {
         this.childAssetId = childAssetId;
         this.logicalId = logicalId;
     }

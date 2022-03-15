@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class LiteSubscriptionDeliveryConfigArgs extends io.pulumi.resource
      * Possible values are `DELIVER_IMMEDIATELY`, `DELIVER_AFTER_STORED`, and `DELIVERY_REQUIREMENT_UNSPECIFIED`.
      * 
      */
-    @InputImport(name="deliveryRequirement", required=true)
+    @Import(name="deliveryRequirement", required=true)
       private final Output<String> deliveryRequirement;
 
     public Output<String> getDeliveryRequirement() {

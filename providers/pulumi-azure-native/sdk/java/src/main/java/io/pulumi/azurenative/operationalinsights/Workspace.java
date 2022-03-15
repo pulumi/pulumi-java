@@ -11,7 +11,7 @@ import io.pulumi.azurenative.operationalinsights.outputs.WorkspaceFeaturesRespon
 import io.pulumi.azurenative.operationalinsights.outputs.WorkspaceSkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -41,7 +41,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Workspace creation date.
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
@@ -55,7 +55,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * This is a read-only property. Represents the ID associated with the workspace.
      * 
      */
-    @OutputExport(name="customerId", type=String.class, parameters={})
+    @Export(name="customerId", type=String.class, parameters={})
     private Output<String> customerId;
 
     /**
@@ -69,7 +69,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The ETag of the workspace.
      * 
      */
-    @OutputExport(name="eTag", type=String.class, parameters={})
+    @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
@@ -83,7 +83,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Workspace features.
      * 
      */
-    @OutputExport(name="features", type=WorkspaceFeaturesResponse.class, parameters={})
+    @Export(name="features", type=WorkspaceFeaturesResponse.class, parameters={})
     private Output</* @Nullable */ WorkspaceFeaturesResponse> features;
 
     /**
@@ -97,7 +97,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Indicates whether customer managed storage is mandatory for query management.
      * 
      */
-    @OutputExport(name="forceCmkForQuery", type=Boolean.class, parameters={})
+    @Export(name="forceCmkForQuery", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceCmkForQuery;
 
     /**
@@ -111,7 +111,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -125,7 +125,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Workspace modification date.
      * 
      */
-    @OutputExport(name="modifiedDate", type=String.class, parameters={})
+    @Export(name="modifiedDate", type=String.class, parameters={})
     private Output<String> modifiedDate;
 
     /**
@@ -139,7 +139,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -153,7 +153,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * List of linked private link scope resources.
      * 
      */
-    @OutputExport(name="privateLinkScopedResources", type=List.class, parameters={PrivateLinkScopedResourceResponse.class})
+    @Export(name="privateLinkScopedResources", type=List.class, parameters={PrivateLinkScopedResourceResponse.class})
     private Output<List<PrivateLinkScopedResourceResponse>> privateLinkScopedResources;
 
     /**
@@ -167,7 +167,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The provisioning state of the workspace.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -181,7 +181,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The network access type for accessing Log Analytics ingestion.
      * 
      */
-    @OutputExport(name="publicNetworkAccessForIngestion", type=String.class, parameters={})
+    @Export(name="publicNetworkAccessForIngestion", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccessForIngestion;
 
     /**
@@ -195,7 +195,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The network access type for accessing Log Analytics query.
      * 
      */
-    @OutputExport(name="publicNetworkAccessForQuery", type=String.class, parameters={})
+    @Export(name="publicNetworkAccessForQuery", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccessForQuery;
 
     /**
@@ -209,7 +209,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
      * 
      */
-    @OutputExport(name="retentionInDays", type=Integer.class, parameters={})
+    @Export(name="retentionInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionInDays;
 
     /**
@@ -223,7 +223,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The SKU of the workspace.
      * 
      */
-    @OutputExport(name="sku", type=WorkspaceSkuResponse.class, parameters={})
+    @Export(name="sku", type=WorkspaceSkuResponse.class, parameters={})
     private Output</* @Nullable */ WorkspaceSkuResponse> sku;
 
     /**
@@ -237,7 +237,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -251,7 +251,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -265,7 +265,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The daily volume cap for ingestion.
      * 
      */
-    @OutputExport(name="workspaceCapping", type=WorkspaceCappingResponse.class, parameters={})
+    @Export(name="workspaceCapping", type=WorkspaceCappingResponse.class, parameters={})
     private Output</* @Nullable */ WorkspaceCappingResponse> workspaceCapping;
 
     /**

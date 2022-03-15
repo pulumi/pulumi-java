@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.ResourceHealthDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class KPIResourceHealthDetailsResponse extends io.pulumi.resources.
      * Resource Health Status
      * 
      */
-    @InputImport(name="resourceHealthDetails")
+    @Import(name="resourceHealthDetails")
       private final @Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails;
 
     public List<ResourceHealthDetailsResponse> getResourceHealthDetails() {
@@ -35,7 +35,7 @@ public final class KPIResourceHealthDetailsResponse extends io.pulumi.resources.
      * Resource Health Status
      * 
      */
-    @InputImport(name="resourceHealthStatus")
+    @Import(name="resourceHealthStatus")
       private final @Nullable String resourceHealthStatus;
 
     public Optional<String> getResourceHealthStatus() {

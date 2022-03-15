@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class OutputPathAssetReferenceArgs extends io.pulumi.resources.Reso
      * ARM resource ID of the job.
      * 
      */
-    @InputImport(name="jobId")
+    @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
     public Output<String> getJobId() {
@@ -33,7 +33,7 @@ public final class OutputPathAssetReferenceArgs extends io.pulumi.resources.Reso
      * The path of the file/directory in the job output.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -45,7 +45,7 @@ public final class OutputPathAssetReferenceArgs extends io.pulumi.resources.Reso
      * Expected value is 'OutputPath'.
      * 
      */
-    @InputImport(name="referenceType", required=true)
+    @Import(name="referenceType", required=true)
       private final Output<String> referenceType;
 
     public Output<String> getReferenceType() {

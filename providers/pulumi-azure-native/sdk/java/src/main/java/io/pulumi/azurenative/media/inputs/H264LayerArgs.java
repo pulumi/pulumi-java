@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.enums.EntropyMode;
 import io.pulumi.azurenative.media.enums.H264VideoProfile;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * Whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.
      * 
      */
-    @InputImport(name="adaptiveBFrame")
+    @Import(name="adaptiveBFrame")
       private final @Nullable Output<Boolean> adaptiveBFrame;
 
     public Output<Boolean> getAdaptiveBFrame() {
@@ -38,7 +38,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.
      * 
      */
-    @InputImport(name="bFrames")
+    @Import(name="bFrames")
       private final @Nullable Output<Integer> bFrames;
 
     public Output<Integer> getBFrames() {
@@ -49,7 +49,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * The average bitrate in bits per second at which to encode the input video when generating this layer. This is a required field.
      * 
      */
-    @InputImport(name="bitrate", required=true)
+    @Import(name="bitrate", required=true)
       private final Output<Integer> bitrate;
 
     public Output<Integer> getBitrate() {
@@ -60,7 +60,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).
      * 
      */
-    @InputImport(name="bufferWindow")
+    @Import(name="bufferWindow")
       private final @Nullable Output<String> bufferWindow;
 
     public Output<String> getBufferWindow() {
@@ -71,7 +71,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * The entropy mode to be used for this layer. If not specified, the encoder chooses the mode that is appropriate for the profile and level.
      * 
      */
-    @InputImport(name="entropyMode")
+    @Import(name="entropyMode")
       private final @Nullable Output<Either<String,EntropyMode>> entropyMode;
 
     public Output<Either<String,EntropyMode>> getEntropyMode() {
@@ -82,7 +82,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.
      * 
      */
-    @InputImport(name="frameRate")
+    @Import(name="frameRate")
       private final @Nullable Output<String> frameRate;
 
     public Output<String> getFrameRate() {
@@ -93,7 +93,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.
      * 
      */
-    @InputImport(name="height")
+    @Import(name="height")
       private final @Nullable Output<String> height;
 
     public Output<String> getHeight() {
@@ -104,7 +104,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.
      * 
      */
-    @InputImport(name="label")
+    @Import(name="label")
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
@@ -115,7 +115,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.264 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.
      * 
      */
-    @InputImport(name="level")
+    @Import(name="level")
       private final @Nullable Output<String> level;
 
     public Output<String> getLevel() {
@@ -126,7 +126,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.
      * 
      */
-    @InputImport(name="maxBitrate")
+    @Import(name="maxBitrate")
       private final @Nullable Output<Integer> maxBitrate;
 
     public Output<Integer> getMaxBitrate() {
@@ -138,7 +138,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is '#Microsoft.Media.H264Layer'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -149,7 +149,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * We currently support Baseline, Main, High, High422, High444. Default is Auto.
      * 
      */
-    @InputImport(name="profile")
+    @Import(name="profile")
       private final @Nullable Output<Either<String,H264VideoProfile>> profile;
 
     public Output<Either<String,H264VideoProfile>> getProfile() {
@@ -160,7 +160,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.
      * 
      */
-    @InputImport(name="referenceFrames")
+    @Import(name="referenceFrames")
       private final @Nullable Output<Integer> referenceFrames;
 
     public Output<Integer> getReferenceFrames() {
@@ -171,7 +171,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.
      * 
      */
-    @InputImport(name="slices")
+    @Import(name="slices")
       private final @Nullable Output<Integer> slices;
 
     public Output<Integer> getSlices() {
@@ -182,7 +182,7 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
      * The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.
      * 
      */
-    @InputImport(name="width")
+    @Import(name="width")
       private final @Nullable Output<String> width;
 
     public Output<String> getWidth() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class LaunchMetricDefinitionObjectArgs extends io.pulumi.resources.
      * The JSON path to reference the entity id in the event.
      * 
      */
-    @InputImport(name="entityIdKey", required=true)
+    @Import(name="entityIdKey", required=true)
       private final Output<String> entityIdKey;
 
     public Output<String> getEntityIdKey() {
@@ -29,21 +29,21 @@ public final class LaunchMetricDefinitionObjectArgs extends io.pulumi.resources.
      * Event patterns have the same structure as the events they match. Rules use event patterns to select events. An event pattern either matches an event or it doesn't.
      * 
      */
-    @InputImport(name="eventPattern", required=true)
+    @Import(name="eventPattern", required=true)
       private final Output<String> eventPattern;
 
     public Output<String> getEventPattern() {
         return this.eventPattern;
     }
 
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
     public Output<String> getMetricName() {
         return this.metricName;
     }
 
-    @InputImport(name="unitLabel")
+    @Import(name="unitLabel")
       private final @Nullable Output<String> unitLabel;
 
     public Output<String> getUnitLabel() {
@@ -54,7 +54,7 @@ public final class LaunchMetricDefinitionObjectArgs extends io.pulumi.resources.
      * The JSON path to reference the numerical metric value in the event.
      * 
      */
-    @InputImport(name="valueKey", required=true)
+    @Import(name="valueKey", required=true)
       private final Output<String> valueKey;
 
     public Output<String> getValueKey() {

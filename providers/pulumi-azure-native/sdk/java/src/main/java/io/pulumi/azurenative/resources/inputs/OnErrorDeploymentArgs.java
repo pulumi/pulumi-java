@@ -5,7 +5,7 @@ package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.azurenative.resources.enums.OnErrorDeploymentType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class OnErrorDeploymentArgs extends io.pulumi.resources.ResourceArg
      * The deployment to be used on error case.
      * 
      */
-    @InputImport(name="deploymentName")
+    @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
 
     public Output<String> getDeploymentName() {
@@ -34,7 +34,7 @@ public final class OnErrorDeploymentArgs extends io.pulumi.resources.ResourceArg
      * The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<OnErrorDeploymentType> type;
 
     public Output<OnErrorDeploymentType> getType() {

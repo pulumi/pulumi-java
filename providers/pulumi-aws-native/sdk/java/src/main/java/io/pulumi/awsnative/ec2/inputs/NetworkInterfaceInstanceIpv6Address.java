@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class NetworkInterfaceInstanceIpv6Address extends io.pulumi.resourc
 
     public static final NetworkInterfaceInstanceIpv6Address Empty = new NetworkInterfaceInstanceIpv6Address();
 
-    @InputImport(name="ipv6Address", required=true)
+    @Import(name="ipv6Address", required=true)
       private final String ipv6Address;
 
     public String getIpv6Address() {

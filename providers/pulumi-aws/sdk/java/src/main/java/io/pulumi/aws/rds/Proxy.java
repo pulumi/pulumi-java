@@ -8,7 +8,7 @@ import io.pulumi.aws.rds.ProxyArgs;
 import io.pulumi.aws.rds.inputs.ProxyState;
 import io.pulumi.aws.rds.outputs.ProxyAuth;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -37,7 +37,7 @@ public class Proxy extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the proxy.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -51,7 +51,7 @@ public class Proxy extends io.pulumi.resources.CustomResource {
      * Configuration block(s) with authorization mechanisms to connect to the associated instances or clusters. Described below.
      * 
      */
-    @OutputExport(name="auths", type=List.class, parameters={ProxyAuth.class})
+    @Export(name="auths", type=List.class, parameters={ProxyAuth.class})
     private Output<List<ProxyAuth>> auths;
 
     /**
@@ -65,7 +65,7 @@ public class Proxy extends io.pulumi.resources.CustomResource {
      * Whether the proxy includes detailed information about SQL statements in its logs. This information helps you to debug issues involving SQL behavior or the performance and scalability of the proxy connections. The debug information includes the text of SQL statements that you submit through the proxy. Thus, only enable this setting when needed for debugging, and only when you have security measures in place to safeguard any sensitive information that appears in the logs.
      * 
      */
-    @OutputExport(name="debugLogging", type=Boolean.class, parameters={})
+    @Export(name="debugLogging", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> debugLogging;
 
     /**
@@ -79,7 +79,7 @@ public class Proxy extends io.pulumi.resources.CustomResource {
      * The endpoint that you can use to connect to the proxy. You include the endpoint value in the connection string for a database client application.
      * 
      */
-    @OutputExport(name="endpoint", type=String.class, parameters={})
+    @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
@@ -93,7 +93,7 @@ public class Proxy extends io.pulumi.resources.CustomResource {
      * The kinds of databases that the proxy can connect to. This value determines which database network protocol the proxy recognizes when it interprets network traffic to and from the database. The engine family applies to MySQL and PostgreSQL for both RDS and Aurora. Valid values are `MYSQL` and `POSTGRESQL`.
      * 
      */
-    @OutputExport(name="engineFamily", type=String.class, parameters={})
+    @Export(name="engineFamily", type=String.class, parameters={})
     private Output<String> engineFamily;
 
     /**
@@ -107,7 +107,7 @@ public class Proxy extends io.pulumi.resources.CustomResource {
      * The number of seconds that a connection to the proxy can be inactive before the proxy disconnects it. You can set this value higher or lower than the connection timeout limit for the associated database.
      * 
      */
-    @OutputExport(name="idleClientTimeout", type=Integer.class, parameters={})
+    @Export(name="idleClientTimeout", type=Integer.class, parameters={})
     private Output<Integer> idleClientTimeout;
 
     /**
@@ -121,7 +121,7 @@ public class Proxy extends io.pulumi.resources.CustomResource {
      * The identifier for the proxy. This name must be unique for all proxies owned by your AWS account in the specified AWS Region. An identifier must begin with a letter and must contain only ASCII letters, digits, and hyphens; it can't end with a hyphen or contain two consecutive hyphens.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -135,7 +135,7 @@ public class Proxy extends io.pulumi.resources.CustomResource {
      * A Boolean parameter that specifies whether Transport Layer Security (TLS) encryption is required for connections to the proxy. By enabling this setting, you can enforce encrypted TLS connections to the proxy.
      * 
      */
-    @OutputExport(name="requireTls", type=Boolean.class, parameters={})
+    @Export(name="requireTls", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> requireTls;
 
     /**
@@ -149,7 +149,7 @@ public class Proxy extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the IAM role that the proxy uses to access secrets in AWS Secrets Manager.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -163,7 +163,7 @@ public class Proxy extends io.pulumi.resources.CustomResource {
      * A mapping of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -177,7 +177,7 @@ public class Proxy extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -191,7 +191,7 @@ public class Proxy extends io.pulumi.resources.CustomResource {
      * One or more VPC security group IDs to associate with the new proxy.
      * 
      */
-    @OutputExport(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
+    @Export(name="vpcSecurityGroupIds", type=List.class, parameters={String.class})
     private Output<List<String>> vpcSecurityGroupIds;
 
     /**
@@ -205,7 +205,7 @@ public class Proxy extends io.pulumi.resources.CustomResource {
      * One or more VPC subnet IDs to associate with the new proxy.
      * 
      */
-    @OutputExport(name="vpcSubnetIds", type=List.class, parameters={String.class})
+    @Export(name="vpcSubnetIds", type=List.class, parameters={String.class})
     private Output<List<String>> vpcSubnetIds;
 
     /**

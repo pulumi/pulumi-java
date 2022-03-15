@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class GetInsightsErrorResponse extends io.pulumi.resources.InvokeAr
      * the error message
      * 
      */
-    @InputImport(name="errorMessage", required=true)
+    @Import(name="errorMessage", required=true)
       private final String errorMessage;
 
     public String getErrorMessage() {
@@ -33,7 +33,7 @@ public final class GetInsightsErrorResponse extends io.pulumi.resources.InvokeAr
      * the query kind
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -44,7 +44,7 @@ public final class GetInsightsErrorResponse extends io.pulumi.resources.InvokeAr
      * the query id
      * 
      */
-    @InputImport(name="queryId")
+    @Import(name="queryId")
       private final @Nullable String queryId;
 
     public Optional<String> getQueryId() {

@@ -11,7 +11,7 @@ import io.pulumi.awsnative.eks.outputs.ClusterLogging;
 import io.pulumi.awsnative.eks.outputs.ClusterResourcesVpcConfig;
 import io.pulumi.awsnative.eks.outputs.ClusterTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The ARN of the cluster, such as arn:aws:eks:us-west-2:666666666666:cluster/prod.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -41,7 +41,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The certificate-authority-data for your cluster.
      * 
      */
-    @OutputExport(name="certificateAuthorityData", type=String.class, parameters={})
+    @Export(name="certificateAuthorityData", type=String.class, parameters={})
     private Output<String> certificateAuthorityData;
 
     /**
@@ -55,7 +55,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control plane to data plane communication.
      * 
      */
-    @OutputExport(name="clusterSecurityGroupId", type=String.class, parameters={})
+    @Export(name="clusterSecurityGroupId", type=String.class, parameters={})
     private Output<String> clusterSecurityGroupId;
 
     /**
@@ -65,7 +65,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
     public Output<String> getClusterSecurityGroupId() {
         return this.clusterSecurityGroupId;
     }
-    @OutputExport(name="encryptionConfig", type=List.class, parameters={ClusterEncryptionConfig.class})
+    @Export(name="encryptionConfig", type=List.class, parameters={ClusterEncryptionConfig.class})
     private Output</* @Nullable */ List<ClusterEncryptionConfig>> encryptionConfig;
 
     public Output</* @Nullable */ List<ClusterEncryptionConfig>> getEncryptionConfig() {
@@ -75,7 +75,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) or alias of the customer master key (CMK).
      * 
      */
-    @OutputExport(name="encryptionConfigKeyArn", type=String.class, parameters={})
+    @Export(name="encryptionConfigKeyArn", type=String.class, parameters={})
     private Output<String> encryptionConfigKeyArn;
 
     /**
@@ -89,7 +89,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The endpoint for your Kubernetes API server, such as https://5E1D0CEXAMPLEA591B746AFC5AB30262.yl4.us-west-2.eks.amazonaws.com.
      * 
      */
-    @OutputExport(name="endpoint", type=String.class, parameters={})
+    @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
@@ -99,13 +99,13 @@ public class Cluster extends io.pulumi.resources.CustomResource {
     public Output<String> getEndpoint() {
         return this.endpoint;
     }
-    @OutputExport(name="kubernetesNetworkConfig", type=ClusterKubernetesNetworkConfig.class, parameters={})
+    @Export(name="kubernetesNetworkConfig", type=ClusterKubernetesNetworkConfig.class, parameters={})
     private Output</* @Nullable */ ClusterKubernetesNetworkConfig> kubernetesNetworkConfig;
 
     public Output</* @Nullable */ ClusterKubernetesNetworkConfig> getKubernetesNetworkConfig() {
         return this.kubernetesNetworkConfig;
     }
-    @OutputExport(name="logging", type=ClusterLogging.class, parameters={})
+    @Export(name="logging", type=ClusterLogging.class, parameters={})
     private Output</* @Nullable */ ClusterLogging> logging;
 
     public Output</* @Nullable */ ClusterLogging> getLogging() {
@@ -115,7 +115,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The unique name to give to your cluster.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -129,7 +129,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The issuer URL for the cluster's OIDC identity provider, such as https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E. If you need to remove https:// from this output value, you can include the following code in your template.
      * 
      */
-    @OutputExport(name="openIdConnectIssuerUrl", type=String.class, parameters={})
+    @Export(name="openIdConnectIssuerUrl", type=String.class, parameters={})
     private Output<String> openIdConnectIssuerUrl;
 
     /**
@@ -139,7 +139,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
     public Output<String> getOpenIdConnectIssuerUrl() {
         return this.openIdConnectIssuerUrl;
     }
-    @OutputExport(name="resourcesVpcConfig", type=ClusterResourcesVpcConfig.class, parameters={})
+    @Export(name="resourcesVpcConfig", type=ClusterResourcesVpcConfig.class, parameters={})
     private Output<ClusterResourcesVpcConfig> resourcesVpcConfig;
 
     public Output<ClusterResourcesVpcConfig> getResourcesVpcConfig() {
@@ -149,7 +149,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the IAM role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -163,7 +163,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ClusterTag.class})
+    @Export(name="tags", type=List.class, parameters={ClusterTag.class})
     private Output</* @Nullable */ List<ClusterTag>> tags;
 
     /**
@@ -177,7 +177,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The desired Kubernetes version for your cluster. If you don't specify a value here, the latest version available in Amazon EKS is used.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**

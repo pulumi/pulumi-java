@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.AutomationRulePropertyValuesConditionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutomationRuleTriggeringLogicResponse {
     /**
      * The conditions to evaluate to determine if the automation rule should be triggered on a given object
@@ -40,13 +40,13 @@ public final class AutomationRuleTriggeringLogicResponse {
      */
     private final String triggersWhen;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutomationRuleTriggeringLogicResponse(
-        @OutputCustomType.Parameter("conditions") @Nullable List<AutomationRulePropertyValuesConditionResponse> conditions,
-        @OutputCustomType.Parameter("expirationTimeUtc") @Nullable String expirationTimeUtc,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
-        @OutputCustomType.Parameter("triggersOn") String triggersOn,
-        @OutputCustomType.Parameter("triggersWhen") String triggersWhen) {
+        @CustomType.Parameter("conditions") @Nullable List<AutomationRulePropertyValuesConditionResponse> conditions,
+        @CustomType.Parameter("expirationTimeUtc") @Nullable String expirationTimeUtc,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled,
+        @CustomType.Parameter("triggersOn") String triggersOn,
+        @CustomType.Parameter("triggersWhen") String triggersWhen) {
         this.conditions = conditions;
         this.expirationTimeUtc = expirationTimeUtc;
         this.isEnabled = isEnabled;

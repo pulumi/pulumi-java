@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IdentityProviderDetailsResponse {
     /**
      * The base authority for Azure Active Directory authentication.
@@ -37,13 +37,13 @@ public final class IdentityProviderDetailsResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IdentityProviderDetailsResponse(
-        @OutputCustomType.Parameter("aadAuthority") @Nullable String aadAuthority,
-        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
-        @OutputCustomType.Parameter("audience") @Nullable String audience,
-        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
+        @CustomType.Parameter("aadAuthority") @Nullable String aadAuthority,
+        @CustomType.Parameter("applicationId") @Nullable String applicationId,
+        @CustomType.Parameter("audience") @Nullable String audience,
+        @CustomType.Parameter("objectId") @Nullable String objectId,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.aadAuthority = aadAuthority;
         this.applicationId = applicationId;
         this.audience = audience;

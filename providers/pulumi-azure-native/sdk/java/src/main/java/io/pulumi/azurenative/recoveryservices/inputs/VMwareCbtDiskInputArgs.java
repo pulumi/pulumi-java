@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.enums.DiskAccountType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
      * The disk Id.
      * 
      */
-    @InputImport(name="diskId", required=true)
+    @Import(name="diskId", required=true)
       private final Output<String> diskId;
 
     public Output<String> getDiskId() {
@@ -35,7 +35,7 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
      * The disk type.
      * 
      */
-    @InputImport(name="diskType")
+    @Import(name="diskType")
       private final @Nullable Output<Either<String,DiskAccountType>> diskType;
 
     public Output<Either<String,DiskAccountType>> getDiskType() {
@@ -46,7 +46,7 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
      * A value indicating whether the disk is the OS disk.
      * 
      */
-    @InputImport(name="isOSDisk", required=true)
+    @Import(name="isOSDisk", required=true)
       private final Output<String> isOSDisk;
 
     public Output<String> getIsOSDisk() {
@@ -57,7 +57,7 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
      * The log storage account ARM Id.
      * 
      */
-    @InputImport(name="logStorageAccountId", required=true)
+    @Import(name="logStorageAccountId", required=true)
       private final Output<String> logStorageAccountId;
 
     public Output<String> getLogStorageAccountId() {
@@ -68,7 +68,7 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
      * The key vault secret name of the log storage account.
      * 
      */
-    @InputImport(name="logStorageAccountSasSecretName", required=true)
+    @Import(name="logStorageAccountSasSecretName", required=true)
       private final Output<String> logStorageAccountSasSecretName;
 
     public Output<String> getLogStorageAccountSasSecretName() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CloudEndpointsResponse {
     /**
      * The name of the Cloud Endpoints service underlying this service. Corresponds to the service resource label in the api monitored resource: https://cloud.google.com/monitoring/api/resources#tag_api
@@ -15,8 +15,8 @@ public final class CloudEndpointsResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor
-    private CloudEndpointsResponse(@OutputCustomType.Parameter("service") String service) {
+    @CustomType.Constructor
+    private CloudEndpointsResponse(@CustomType.Parameter("service") String service) {
         this.service = service;
     }
 

@@ -4,16 +4,16 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles {
     private final List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem> items;
 
-    @OutputCustomType.Constructor
-    private FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles(@OutputCustomType.Parameter("items") List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem> items) {
+    @CustomType.Constructor
+    private FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles(@CustomType.Parameter("items") List<FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItem> items) {
         this.items = items;
     }
 

@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobScheduling {
     private final Integer maxFailuresPerHour;
     private final Integer maxFailuresTotal;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobScheduling(
-        @OutputCustomType.Parameter("maxFailuresPerHour") Integer maxFailuresPerHour,
-        @OutputCustomType.Parameter("maxFailuresTotal") Integer maxFailuresTotal) {
+        @CustomType.Parameter("maxFailuresPerHour") Integer maxFailuresPerHour,
+        @CustomType.Parameter("maxFailuresTotal") Integer maxFailuresTotal) {
         this.maxFailuresPerHour = maxFailuresPerHour;
         this.maxFailuresTotal = maxFailuresTotal;
     }

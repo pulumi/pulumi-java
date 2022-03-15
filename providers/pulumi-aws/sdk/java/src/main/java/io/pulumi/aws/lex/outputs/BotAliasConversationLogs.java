@@ -4,13 +4,13 @@
 package io.pulumi.aws.lex.outputs;
 
 import io.pulumi.aws.lex.outputs.BotAliasConversationLogsLogSetting;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotAliasConversationLogs {
     /**
      * The Amazon Resource Name (ARN) of the IAM role used to write your logs to CloudWatch Logs or an S3 bucket. Must be between 20 and 2048 characters in length.
@@ -23,10 +23,10 @@ public final class BotAliasConversationLogs {
      */
     private final @Nullable List<BotAliasConversationLogsLogSetting> logSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotAliasConversationLogs(
-        @OutputCustomType.Parameter("iamRoleArn") String iamRoleArn,
-        @OutputCustomType.Parameter("logSettings") @Nullable List<BotAliasConversationLogsLogSetting> logSettings) {
+        @CustomType.Parameter("iamRoleArn") String iamRoleArn,
+        @CustomType.Parameter("logSettings") @Nullable List<BotAliasConversationLogsLogSetting> logSettings) {
         this.iamRoleArn = iamRoleArn;
         this.logSettings = logSettings;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceProviderParameterResponseConstraints {
     /**
      * Whether required the constraints of the bot meta data.
@@ -17,8 +17,8 @@ public final class ServiceProviderParameterResponseConstraints {
      */
     private final @Nullable Boolean required;
 
-    @OutputCustomType.Constructor
-    private ServiceProviderParameterResponseConstraints(@OutputCustomType.Parameter("required") @Nullable Boolean required) {
+    @CustomType.Constructor
+    private ServiceProviderParameterResponseConstraints(@CustomType.Parameter("required") @Nullable Boolean required) {
         this.required = required;
     }
 

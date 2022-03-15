@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiOAuthSettingsParameterResponse {
     /**
      * Options available to this parameter
@@ -28,11 +28,11 @@ public final class ApiOAuthSettingsParameterResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiOAuthSettingsParameterResponse(
-        @OutputCustomType.Parameter("options") @Nullable Object options,
-        @OutputCustomType.Parameter("uiDefinition") @Nullable Object uiDefinition,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("options") @Nullable Object options,
+        @CustomType.Parameter("uiDefinition") @Nullable Object uiDefinition,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.options = options;
         this.uiDefinition = uiDefinition;
         this.value = value;

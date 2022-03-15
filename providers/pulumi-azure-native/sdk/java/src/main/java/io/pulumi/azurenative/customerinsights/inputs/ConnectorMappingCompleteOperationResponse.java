@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ConnectorMappingCompleteOperationResponse extends io.pulumi.r
      * The type of completion operation.
      * 
      */
-    @InputImport(name="completionOperationType")
+    @Import(name="completionOperationType")
       private final @Nullable String completionOperationType;
 
     public Optional<String> getCompletionOperationType() {
@@ -33,7 +33,7 @@ public final class ConnectorMappingCompleteOperationResponse extends io.pulumi.r
      * The destination folder where files will be moved to once the import is done.
      * 
      */
-    @InputImport(name="destinationFolder")
+    @Import(name="destinationFolder")
       private final @Nullable String destinationFolder;
 
     public Optional<String> getDestinationFolder() {

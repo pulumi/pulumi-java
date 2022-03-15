@@ -9,7 +9,7 @@ import io.pulumi.azurenative.domainregistration.outputs.HostNameResponse;
 import io.pulumi.azurenative.domainregistration.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -31,7 +31,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="azure-native:domainregistration:Domain")
 public class Domain extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="authCode", type=String.class, parameters={})
+    @Export(name="authCode", type=String.class, parameters={})
     private Output</* @Nullable */ String> authCode;
 
     public Output</* @Nullable */ String> getAuthCode() {
@@ -41,7 +41,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * <code>true</code> if the domain should be automatically renewed; otherwise, <code>false</code>.
      * 
      */
-    @OutputExport(name="autoRenew", type=Boolean.class, parameters={})
+    @Export(name="autoRenew", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoRenew;
 
     /**
@@ -55,7 +55,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Domain creation timestamp.
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -69,7 +69,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Current DNS type
      * 
      */
-    @OutputExport(name="dnsType", type=String.class, parameters={})
+    @Export(name="dnsType", type=String.class, parameters={})
     private Output</* @Nullable */ String> dnsType;
 
     /**
@@ -83,7 +83,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Azure DNS Zone to use
      * 
      */
-    @OutputExport(name="dnsZoneId", type=String.class, parameters={})
+    @Export(name="dnsZoneId", type=String.class, parameters={})
     private Output</* @Nullable */ String> dnsZoneId;
 
     /**
@@ -97,7 +97,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Reasons why domain is not renewable.
      * 
      */
-    @OutputExport(name="domainNotRenewableReasons", type=List.class, parameters={String.class})
+    @Export(name="domainNotRenewableReasons", type=List.class, parameters={String.class})
     private Output<List<String>> domainNotRenewableReasons;
 
     /**
@@ -111,7 +111,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Domain expiration timestamp.
      * 
      */
-    @OutputExport(name="expirationTime", type=String.class, parameters={})
+    @Export(name="expirationTime", type=String.class, parameters={})
     private Output<String> expirationTime;
 
     /**
@@ -125,7 +125,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -139,7 +139,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Timestamp when the domain was renewed last time.
      * 
      */
-    @OutputExport(name="lastRenewedTime", type=String.class, parameters={})
+    @Export(name="lastRenewedTime", type=String.class, parameters={})
     private Output<String> lastRenewedTime;
 
     /**
@@ -153,7 +153,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Resource Location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -167,7 +167,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * All hostnames derived from the domain and assigned to Azure resources.
      * 
      */
-    @OutputExport(name="managedHostNames", type=List.class, parameters={HostNameResponse.class})
+    @Export(name="managedHostNames", type=List.class, parameters={HostNameResponse.class})
     private Output<List<HostNameResponse>> managedHostNames;
 
     /**
@@ -181,7 +181,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -195,7 +195,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Name servers.
      * 
      */
-    @OutputExport(name="nameServers", type=List.class, parameters={String.class})
+    @Export(name="nameServers", type=List.class, parameters={String.class})
     private Output<List<String>> nameServers;
 
     /**
@@ -209,7 +209,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * <code>true</code> if domain privacy is enabled for this domain; otherwise, <code>false</code>.
      * 
      */
-    @OutputExport(name="privacy", type=Boolean.class, parameters={})
+    @Export(name="privacy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> privacy;
 
     /**
@@ -223,7 +223,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Domain provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -238,7 +238,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      *  it is hosted on name servers Azure has programmatic access to.
      * 
      */
-    @OutputExport(name="readyForDnsRecordManagement", type=Boolean.class, parameters={})
+    @Export(name="readyForDnsRecordManagement", type=Boolean.class, parameters={})
     private Output<Boolean> readyForDnsRecordManagement;
 
     /**
@@ -253,7 +253,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Domain registration status.
      * 
      */
-    @OutputExport(name="registrationStatus", type=String.class, parameters={})
+    @Export(name="registrationStatus", type=String.class, parameters={})
     private Output<String> registrationStatus;
 
     /**
@@ -267,7 +267,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The system metadata relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -281,7 +281,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -295,7 +295,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Target DNS type (would be used for migration)
      * 
      */
-    @OutputExport(name="targetDnsType", type=String.class, parameters={})
+    @Export(name="targetDnsType", type=String.class, parameters={})
     private Output</* @Nullable */ String> targetDnsType;
 
     /**
@@ -309,7 +309,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

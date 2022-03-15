@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1alpha1.inputs.HTTPHeaderResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class HTTPGetActionResponse extends io.pulumi.resources.InvokeArgs 
      * (Optional) Host name to connect to, defaults to the pod IP. You probably want to set "Host" in httpHeaders instead.
      * 
      */
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final String host;
 
     public String getHost() {
@@ -33,7 +33,7 @@ public final class HTTPGetActionResponse extends io.pulumi.resources.InvokeArgs 
      * (Optional) Custom headers to set in the request. HTTP allows repeated headers.
      * 
      */
-    @InputImport(name="httpHeaders", required=true)
+    @Import(name="httpHeaders", required=true)
       private final List<HTTPHeaderResponse> httpHeaders;
 
     public List<HTTPHeaderResponse> getHttpHeaders() {
@@ -44,7 +44,7 @@ public final class HTTPGetActionResponse extends io.pulumi.resources.InvokeArgs 
      * (Optional) Path to access on the HTTP server.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {
@@ -55,7 +55,7 @@ public final class HTTPGetActionResponse extends io.pulumi.resources.InvokeArgs 
      * (Optional) Scheme to use for connecting to the host. Defaults to HTTP.
      * 
      */
-    @InputImport(name="scheme", required=true)
+    @Import(name="scheme", required=true)
       private final String scheme;
 
     public String getScheme() {

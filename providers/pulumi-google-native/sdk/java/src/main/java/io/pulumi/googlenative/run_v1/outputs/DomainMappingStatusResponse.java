@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1.outputs.GoogleCloudRunV1ConditionResponse;
 import io.pulumi.googlenative.run_v1.outputs.ResourceRecordResponse;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DomainMappingStatusResponse {
     /**
      * Array of observed DomainMappingConditions, indicating the current state of the DomainMapping.
@@ -39,13 +39,13 @@ public final class DomainMappingStatusResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainMappingStatusResponse(
-        @OutputCustomType.Parameter("conditions") List<GoogleCloudRunV1ConditionResponse> conditions,
-        @OutputCustomType.Parameter("mappedRouteName") String mappedRouteName,
-        @OutputCustomType.Parameter("observedGeneration") Integer observedGeneration,
-        @OutputCustomType.Parameter("resourceRecords") List<ResourceRecordResponse> resourceRecords,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("conditions") List<GoogleCloudRunV1ConditionResponse> conditions,
+        @CustomType.Parameter("mappedRouteName") String mappedRouteName,
+        @CustomType.Parameter("observedGeneration") Integer observedGeneration,
+        @CustomType.Parameter("resourceRecords") List<ResourceRecordResponse> resourceRecords,
+        @CustomType.Parameter("url") String url) {
         this.conditions = conditions;
         this.mappedRouteName = mappedRouteName;
         this.observedGeneration = observedGeneration;

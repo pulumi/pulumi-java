@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AwsNodePoolConfigTaintArgs extends io.pulumi.resources.Resour
      * Required. The taint effect. Possible values: EFFECT_UNSPECIFIED, NO_SCHEDULE, PREFER_NO_SCHEDULE, NO_EXECUTE
      * 
      */
-    @InputImport(name="effect", required=true)
+    @Import(name="effect", required=true)
       private final Output<String> effect;
 
     public Output<String> getEffect() {
@@ -28,7 +28,7 @@ public final class AwsNodePoolConfigTaintArgs extends io.pulumi.resources.Resour
      * Required. Key for the taint.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -39,7 +39,7 @@ public final class AwsNodePoolConfigTaintArgs extends io.pulumi.resources.Resour
      * Required. Value for the taint.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

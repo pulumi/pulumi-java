@@ -5,12 +5,12 @@ package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.ManagementPolicyActionResponse;
 import io.pulumi.azurenative.storage.outputs.ManagementPolicyFilterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagementPolicyDefinitionResponse {
     /**
      * An object that defines the action set.
@@ -23,10 +23,10 @@ public final class ManagementPolicyDefinitionResponse {
      */
     private final @Nullable ManagementPolicyFilterResponse filters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagementPolicyDefinitionResponse(
-        @OutputCustomType.Parameter("actions") ManagementPolicyActionResponse actions,
-        @OutputCustomType.Parameter("filters") @Nullable ManagementPolicyFilterResponse filters) {
+        @CustomType.Parameter("actions") ManagementPolicyActionResponse actions,
+        @CustomType.Parameter("filters") @Nullable ManagementPolicyFilterResponse filters) {
         this.actions = actions;
         this.filters = filters;
     }

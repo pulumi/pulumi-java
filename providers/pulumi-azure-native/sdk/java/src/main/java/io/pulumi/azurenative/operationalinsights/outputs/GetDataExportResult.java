@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDataExportResult {
     /**
      * The latest data export rule modification time.
@@ -64,18 +64,18 @@ public final class GetDataExportResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDataExportResult(
-        @OutputCustomType.Parameter("createdDate") @Nullable String createdDate,
-        @OutputCustomType.Parameter("dataExportId") @Nullable String dataExportId,
-        @OutputCustomType.Parameter("enable") @Nullable Boolean enable,
-        @OutputCustomType.Parameter("eventHubName") @Nullable String eventHubName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastModifiedDate") @Nullable String lastModifiedDate,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceId") String resourceId,
-        @OutputCustomType.Parameter("tableNames") List<String> tableNames,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("createdDate") @Nullable String createdDate,
+        @CustomType.Parameter("dataExportId") @Nullable String dataExportId,
+        @CustomType.Parameter("enable") @Nullable Boolean enable,
+        @CustomType.Parameter("eventHubName") @Nullable String eventHubName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastModifiedDate") @Nullable String lastModifiedDate,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceId") String resourceId,
+        @CustomType.Parameter("tableNames") List<String> tableNames,
+        @CustomType.Parameter("type") String type) {
         this.createdDate = createdDate;
         this.dataExportId = dataExportId;
         this.enable = enable;

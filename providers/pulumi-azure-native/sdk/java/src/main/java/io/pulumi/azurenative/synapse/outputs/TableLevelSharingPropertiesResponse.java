@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TableLevelSharingPropertiesResponse {
     /**
      * List of external tables exclude from the follower database
@@ -42,14 +42,14 @@ public final class TableLevelSharingPropertiesResponse {
      */
     private final @Nullable List<String> tablesToInclude;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableLevelSharingPropertiesResponse(
-        @OutputCustomType.Parameter("externalTablesToExclude") @Nullable List<String> externalTablesToExclude,
-        @OutputCustomType.Parameter("externalTablesToInclude") @Nullable List<String> externalTablesToInclude,
-        @OutputCustomType.Parameter("materializedViewsToExclude") @Nullable List<String> materializedViewsToExclude,
-        @OutputCustomType.Parameter("materializedViewsToInclude") @Nullable List<String> materializedViewsToInclude,
-        @OutputCustomType.Parameter("tablesToExclude") @Nullable List<String> tablesToExclude,
-        @OutputCustomType.Parameter("tablesToInclude") @Nullable List<String> tablesToInclude) {
+        @CustomType.Parameter("externalTablesToExclude") @Nullable List<String> externalTablesToExclude,
+        @CustomType.Parameter("externalTablesToInclude") @Nullable List<String> externalTablesToInclude,
+        @CustomType.Parameter("materializedViewsToExclude") @Nullable List<String> materializedViewsToExclude,
+        @CustomType.Parameter("materializedViewsToInclude") @Nullable List<String> materializedViewsToInclude,
+        @CustomType.Parameter("tablesToExclude") @Nullable List<String> tablesToExclude,
+        @CustomType.Parameter("tablesToInclude") @Nullable List<String> tablesToInclude) {
         this.externalTablesToExclude = externalTablesToExclude;
         this.externalTablesToInclude = externalTablesToInclude;
         this.materializedViewsToExclude = materializedViewsToExclude;

@@ -6,7 +6,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 import io.pulumi.aws.imagebuilder.inputs.ImageImageTestsConfigurationGetArgs;
 import io.pulumi.aws.imagebuilder.inputs.ImageOutputResourceGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the image.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -34,7 +34,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * Date the image was created.
      * 
      */
-    @InputImport(name="dateCreated")
+    @Import(name="dateCreated")
       private final @Nullable Output<String> dateCreated;
 
     public Output<String> getDateCreated() {
@@ -45,7 +45,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the Image Builder Distribution Configuration.
      * 
      */
-    @InputImport(name="distributionConfigurationArn")
+    @Import(name="distributionConfigurationArn")
       private final @Nullable Output<String> distributionConfigurationArn;
 
     public Output<String> getDistributionConfigurationArn() {
@@ -56,7 +56,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * Whether additional information about the image being created is collected. Defaults to `true`.
      * 
      */
-    @InputImport(name="enhancedImageMetadataEnabled")
+    @Import(name="enhancedImageMetadataEnabled")
       private final @Nullable Output<Boolean> enhancedImageMetadataEnabled;
 
     public Output<Boolean> getEnhancedImageMetadataEnabled() {
@@ -67,7 +67,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the Image Builder Infrastructure Recipe.
      * 
      */
-    @InputImport(name="imageRecipeArn")
+    @Import(name="imageRecipeArn")
       private final @Nullable Output<String> imageRecipeArn;
 
     public Output<String> getImageRecipeArn() {
@@ -78,7 +78,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * Configuration block with image tests configuration. Detailed below.
      * 
      */
-    @InputImport(name="imageTestsConfiguration")
+    @Import(name="imageTestsConfiguration")
       private final @Nullable Output<ImageImageTestsConfigurationGetArgs> imageTestsConfiguration;
 
     public Output<ImageImageTestsConfigurationGetArgs> getImageTestsConfiguration() {
@@ -89,7 +89,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the Image Builder Infrastructure Configuration.
      * 
      */
-    @InputImport(name="infrastructureConfigurationArn")
+    @Import(name="infrastructureConfigurationArn")
       private final @Nullable Output<String> infrastructureConfigurationArn;
 
     public Output<String> getInfrastructureConfigurationArn() {
@@ -100,7 +100,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * Name of the AMI.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -111,7 +111,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * Operating System version of the image.
      * 
      */
-    @InputImport(name="osVersion")
+    @Import(name="osVersion")
       private final @Nullable Output<String> osVersion;
 
     public Output<String> getOsVersion() {
@@ -122,7 +122,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * List of objects with resources created by the image.
      * 
      */
-    @InputImport(name="outputResources")
+    @Import(name="outputResources")
       private final @Nullable Output<List<ImageOutputResourceGetArgs>> outputResources;
 
     public Output<List<ImageOutputResourceGetArgs>> getOutputResources() {
@@ -133,7 +133,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * Platform of the image.
      * 
      */
-    @InputImport(name="platform")
+    @Import(name="platform")
       private final @Nullable Output<String> platform;
 
     public Output<String> getPlatform() {
@@ -144,7 +144,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags for the Image Builder Image. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -155,7 +155,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -166,7 +166,7 @@ public final class ImageState extends io.pulumi.resources.ResourceArgs {
      * Version of the image.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
      * A description of the network security perimeter.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
      * A friendly name for the network security perimeter.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -41,7 +41,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -52,7 +52,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -63,7 +63,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -74,7 +74,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
      * The name of the network security perimeter.
      * 
      */
-    @InputImport(name="networkSecurityPerimeterName")
+    @Import(name="networkSecurityPerimeterName")
       private final @Nullable Output<String> networkSecurityPerimeterName;
 
     public Output<String> getNetworkSecurityPerimeterName() {
@@ -85,7 +85,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -96,7 +96,7 @@ public final class NetworkSecurityPerimeterArgs extends io.pulumi.resources.Reso
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

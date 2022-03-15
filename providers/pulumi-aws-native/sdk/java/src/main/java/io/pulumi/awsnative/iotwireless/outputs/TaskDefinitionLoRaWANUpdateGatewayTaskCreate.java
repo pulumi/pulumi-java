@@ -4,26 +4,26 @@
 package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.outputs.TaskDefinitionLoRaWANGatewayVersion;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionLoRaWANUpdateGatewayTaskCreate {
     private final @Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion;
     private final @Nullable Integer sigKeyCrc;
     private final @Nullable String updateSignature;
     private final @Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionLoRaWANUpdateGatewayTaskCreate(
-        @OutputCustomType.Parameter("currentVersion") @Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion,
-        @OutputCustomType.Parameter("sigKeyCrc") @Nullable Integer sigKeyCrc,
-        @OutputCustomType.Parameter("updateSignature") @Nullable String updateSignature,
-        @OutputCustomType.Parameter("updateVersion") @Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion) {
+        @CustomType.Parameter("currentVersion") @Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion,
+        @CustomType.Parameter("sigKeyCrc") @Nullable Integer sigKeyCrc,
+        @CustomType.Parameter("updateSignature") @Nullable String updateSignature,
+        @CustomType.Parameter("updateVersion") @Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion) {
         this.currentVersion = currentVersion;
         this.sigKeyCrc = sigKeyCrc;
         this.updateSignature = updateSignature;

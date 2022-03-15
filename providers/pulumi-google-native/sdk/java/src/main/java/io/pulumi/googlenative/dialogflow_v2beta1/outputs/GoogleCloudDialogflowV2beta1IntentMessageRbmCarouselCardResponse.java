@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse {
     /**
      * The cards in the carousel. A carousel must have at least 2 cards and at most 10.
@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardRespo
      */
     private final String cardWidth;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse(
-        @OutputCustomType.Parameter("cardContents") List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> cardContents,
-        @OutputCustomType.Parameter("cardWidth") String cardWidth) {
+        @CustomType.Parameter("cardContents") List<GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse> cardContents,
+        @CustomType.Parameter("cardWidth") String cardWidth) {
         this.cardContents = cardContents;
         this.cardWidth = cardWidth;
     }

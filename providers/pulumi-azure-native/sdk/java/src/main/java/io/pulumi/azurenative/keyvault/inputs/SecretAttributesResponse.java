@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.keyvault.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
      * Creation time in seconds since 1970-01-01T00:00:00Z.
      * 
      */
-    @InputImport(name="created", required=true)
+    @Import(name="created", required=true)
       private final Integer created;
 
     public Integer getCreated() {
@@ -34,7 +34,7 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
      * Determines whether the object is enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
@@ -45,7 +45,7 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
      * Expiry date in seconds since 1970-01-01T00:00:00Z.
      * 
      */
-    @InputImport(name="expires")
+    @Import(name="expires")
       private final @Nullable Integer expires;
 
     public Optional<Integer> getExpires() {
@@ -56,7 +56,7 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
      * Not before date in seconds since 1970-01-01T00:00:00Z.
      * 
      */
-    @InputImport(name="notBefore")
+    @Import(name="notBefore")
       private final @Nullable Integer notBefore;
 
     public Optional<Integer> getNotBefore() {
@@ -67,7 +67,7 @@ public final class SecretAttributesResponse extends io.pulumi.resources.InvokeAr
      * Last updated time in seconds since 1970-01-01T00:00:00Z.
      * 
      */
-    @InputImport(name="updated", required=true)
+    @Import(name="updated", required=true)
       private final Integer updated;
 
     public Integer getUpdated() {

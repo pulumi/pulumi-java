@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketDataExport;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BucketStorageClassAnalysis extends io.pulumi.resources.Invoke
 
     public static final BucketStorageClassAnalysis Empty = new BucketStorageClassAnalysis();
 
-    @InputImport(name="dataExport")
+    @Import(name="dataExport")
       private final @Nullable BucketDataExport dataExport;
 
     public Optional<BucketDataExport> getDataExport() {

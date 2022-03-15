@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.FirewallPolicyRuleMatcherLayer4ConfigResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyRuleMatcherResponse {
     /**
      * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
@@ -27,11 +27,11 @@ public final class FirewallPolicyRuleMatcherResponse {
      */
     private final List<String> srcIpRanges;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyRuleMatcherResponse(
-        @OutputCustomType.Parameter("destIpRanges") List<String> destIpRanges,
-        @OutputCustomType.Parameter("layer4Configs") List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs,
-        @OutputCustomType.Parameter("srcIpRanges") List<String> srcIpRanges) {
+        @CustomType.Parameter("destIpRanges") List<String> destIpRanges,
+        @CustomType.Parameter("layer4Configs") List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs,
+        @CustomType.Parameter("srcIpRanges") List<String> srcIpRanges) {
         this.destIpRanges = destIpRanges;
         this.layer4Configs = layer4Configs;
         this.srcIpRanges = srcIpRanges;

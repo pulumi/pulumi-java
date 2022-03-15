@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.ZoneArgs;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * The etag of the zone.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -51,7 +51,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -65,7 +65,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * The maximum number of record sets that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    @OutputExport(name="maxNumberOfRecordSets", type=Double.class, parameters={})
+    @Export(name="maxNumberOfRecordSets", type=Double.class, parameters={})
     private Output<Double> maxNumberOfRecordSets;
 
     /**
@@ -79,7 +79,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * The maximum number of records per record set that can be created in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    @OutputExport(name="maxNumberOfRecordsPerRecordSet", type=Double.class, parameters={})
+    @Export(name="maxNumberOfRecordsPerRecordSet", type=Double.class, parameters={})
     private Output<Double> maxNumberOfRecordsPerRecordSet;
 
     /**
@@ -93,7 +93,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * The name servers for this DNS zone. This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    @OutputExport(name="nameServers", type=List.class, parameters={String.class})
+    @Export(name="nameServers", type=List.class, parameters={String.class})
     private Output<List<String>> nameServers;
 
     /**
@@ -121,7 +121,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * The current number of record sets in this DNS zone.  This is a read-only property and any attempt to set this value will be ignored.
      * 
      */
-    @OutputExport(name="numberOfRecordSets", type=Double.class, parameters={})
+    @Export(name="numberOfRecordSets", type=Double.class, parameters={})
     private Output<Double> numberOfRecordSets;
 
     /**
@@ -135,7 +135,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * A list of references to virtual networks that register hostnames in this DNS zone. This is a only when ZoneType is Private.
      * 
      */
-    @OutputExport(name="registrationVirtualNetworks", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="registrationVirtualNetworks", type=List.class, parameters={SubResourceResponse.class})
     private Output</* @Nullable */ List<SubResourceResponse>> registrationVirtualNetworks;
 
     /**
@@ -149,7 +149,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * A list of references to virtual networks that resolve records in this DNS zone. This is a only when ZoneType is Private.
      * 
      */
-    @OutputExport(name="resolutionVirtualNetworks", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="resolutionVirtualNetworks", type=List.class, parameters={SubResourceResponse.class})
     private Output</* @Nullable */ List<SubResourceResponse>> resolutionVirtualNetworks;
 
     /**
@@ -163,7 +163,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -177,7 +177,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -191,7 +191,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * The type of this DNS zone (Public or Private).
      * 
      */
-    @OutputExport(name="zoneType", type=String.class, parameters={})
+    @Export(name="zoneType", type=String.class, parameters={})
     private Output</* @Nullable */ String> zoneType;
 
     /**

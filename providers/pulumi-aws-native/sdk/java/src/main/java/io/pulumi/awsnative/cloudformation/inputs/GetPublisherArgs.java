@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetPublisherArgs extends io.pulumi.resources.InvokeArgs {
      * The publisher id assigned by CloudFormation for publishing in this region.
      * 
      */
-    @InputImport(name="publisherId", required=true)
+    @Import(name="publisherId", required=true)
       private final String publisherId;
 
     public String getPublisherId() {

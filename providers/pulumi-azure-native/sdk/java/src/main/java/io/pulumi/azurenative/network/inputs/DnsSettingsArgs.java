@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Enable DNS Proxy on Firewalls attached to the Firewall Policy.
      * 
      */
-    @InputImport(name="enableProxy")
+    @Import(name="enableProxy")
       private final @Nullable Output<Boolean> enableProxy;
 
     public Output<Boolean> getEnableProxy() {
@@ -35,7 +35,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * FQDNs in Network Rules are supported when set to true.
      * 
      */
-    @InputImport(name="requireProxyForNetworkRules")
+    @Import(name="requireProxyForNetworkRules")
       private final @Nullable Output<Boolean> requireProxyForNetworkRules;
 
     public Output<Boolean> getRequireProxyForNetworkRules() {
@@ -46,7 +46,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * List of Custom DNS Servers.
      * 
      */
-    @InputImport(name="servers")
+    @Import(name="servers")
       private final @Nullable Output<List<String>> servers;
 
     public Output<List<String>> getServers() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -41,7 +41,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * Client ID of the client on the BW system. (Usually a three-digit decimal number represented as a string) Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final Output<Object> clientId;
 
     public Output<Object> getClientId() {
@@ -52,7 +52,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -63,7 +63,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -74,7 +74,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -85,7 +85,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -96,7 +96,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * Password to access the SAP BW server.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
@@ -107,7 +107,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * Host name of the SAP BW instance. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="server", required=true)
+    @Import(name="server", required=true)
       private final Output<Object> server;
 
     public Output<Object> getServer() {
@@ -118,7 +118,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * System number of the BW system. (Usually a two-digit decimal number represented as a string.) Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="systemNumber", required=true)
+    @Import(name="systemNumber", required=true)
       private final Output<Object> systemNumber;
 
     public Output<Object> getSystemNumber() {
@@ -130,7 +130,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * Expected value is 'SapBW'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -141,7 +141,7 @@ public final class SapBWLinkedServiceArgs extends io.pulumi.resources.ResourceAr
      * Username to access the SAP BW server. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<Object> userName;
 
     public Output<Object> getUserName() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
      * The bandwidth of the connection. Valid values for dedicated connections: 1Gbps, 10Gbps. Valid values for hosted connections: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps and 10Gbps. Case sensitive.
      * 
      */
-    @InputImport(name="bandwidth", required=true)
+    @Import(name="bandwidth", required=true)
       private final Output<String> bandwidth;
 
     public Output<String> getBandwidth() {
@@ -30,7 +30,7 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
      * The ID of the interconnect or LAG.
      * 
      */
-    @InputImport(name="connectionId", required=true)
+    @Import(name="connectionId", required=true)
       private final Output<String> connectionId;
 
     public Output<String> getConnectionId() {
@@ -41,7 +41,7 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
      * The name of the connection.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
      * The ID of the AWS account of the customer for the connection.
      * 
      */
-    @InputImport(name="ownerAccountId", required=true)
+    @Import(name="ownerAccountId", required=true)
       private final Output<String> ownerAccountId;
 
     public Output<String> getOwnerAccountId() {
@@ -63,7 +63,7 @@ public final class HostedConnectionArgs extends io.pulumi.resources.ResourceArgs
      * The dedicated VLAN provisioned to the hosted connection.
      * 
      */
-    @InputImport(name="vlan", required=true)
+    @Import(name="vlan", required=true)
       private final Output<Integer> vlan;
 
     public Output<Integer> getVlan() {

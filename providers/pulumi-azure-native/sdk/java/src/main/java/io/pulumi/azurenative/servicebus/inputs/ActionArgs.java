@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicebus.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * This property is reserved for future use. An integer value showing the compatibility level, currently hard-coded to 20.
      * 
      */
-    @InputImport(name="compatibilityLevel")
+    @Import(name="compatibilityLevel")
       private final @Nullable Output<Integer> compatibilityLevel;
 
     public Output<Integer> getCompatibilityLevel() {
@@ -35,7 +35,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * Value that indicates whether the rule action requires preprocessing.
      * 
      */
-    @InputImport(name="requiresPreprocessing")
+    @Import(name="requiresPreprocessing")
       private final @Nullable Output<Boolean> requiresPreprocessing;
 
     public Output<Boolean> getRequiresPreprocessing() {
@@ -46,7 +46,7 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
      * SQL expression. e.g. MyProperty='ABC'
      * 
      */
-    @InputImport(name="sqlExpression")
+    @Import(name="sqlExpression")
       private final @Nullable Output<String> sqlExpression;
 
     public Output<String> getSqlExpression() {

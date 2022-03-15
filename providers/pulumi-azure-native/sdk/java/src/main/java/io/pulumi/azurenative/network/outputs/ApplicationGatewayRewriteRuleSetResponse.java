@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayRewriteRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayRewriteRuleSetResponse {
     /**
      * A unique read-only string that changes whenever the resource is updated.
@@ -39,13 +39,13 @@ public final class ApplicationGatewayRewriteRuleSetResponse {
      */
     private final @Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayRewriteRuleSetResponse(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("rewriteRules") @Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("rewriteRules") @Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules) {
         this.etag = etag;
         this.id = id;
         this.name = name;

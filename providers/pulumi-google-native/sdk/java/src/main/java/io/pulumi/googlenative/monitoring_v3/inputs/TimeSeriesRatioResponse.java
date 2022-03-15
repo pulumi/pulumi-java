@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class TimeSeriesRatioResponse extends io.pulumi.resources.InvokeArg
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying bad service, either demanded service that was not provided or demanded service that was of inadequate quality. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
      */
-    @InputImport(name="badServiceFilter", required=true)
+    @Import(name="badServiceFilter", required=true)
       private final String badServiceFilter;
 
     public String getBadServiceFilter() {
@@ -31,7 +31,7 @@ public final class TimeSeriesRatioResponse extends io.pulumi.resources.InvokeArg
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying good service provided. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
      */
-    @InputImport(name="goodServiceFilter", required=true)
+    @Import(name="goodServiceFilter", required=true)
       private final String goodServiceFilter;
 
     public String getGoodServiceFilter() {
@@ -42,7 +42,7 @@ public final class TimeSeriesRatioResponse extends io.pulumi.resources.InvokeArg
      * A monitoring filter (https://cloud.google.com/monitoring/api/v3/filters) specifying a TimeSeries quantifying total demanded service. Must have ValueType = DOUBLE or ValueType = INT64 and must have MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
      */
-    @InputImport(name="totalServiceFilter", required=true)
+    @Import(name="totalServiceFilter", required=true)
       private final String totalServiceFilter;
 
     public String getTotalServiceFilter() {

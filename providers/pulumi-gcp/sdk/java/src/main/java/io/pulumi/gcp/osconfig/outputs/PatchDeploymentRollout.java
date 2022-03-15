@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentRolloutDisruptionBudget;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PatchDeploymentRollout {
     /**
      * The maximum number (or percentage) of VMs per zone to disrupt at any given moment. The number of VMs calculated from multiplying the percentage by the total number of VMs in a zone is rounded up.
@@ -27,10 +27,10 @@ public final class PatchDeploymentRollout {
      */
     private final String mode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchDeploymentRollout(
-        @OutputCustomType.Parameter("disruptionBudget") PatchDeploymentRolloutDisruptionBudget disruptionBudget,
-        @OutputCustomType.Parameter("mode") String mode) {
+        @CustomType.Parameter("disruptionBudget") PatchDeploymentRolloutDisruptionBudget disruptionBudget,
+        @CustomType.Parameter("mode") String mode) {
         this.disruptionBudget = disruptionBudget;
         this.mode = mode;
     }

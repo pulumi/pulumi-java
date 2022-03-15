@@ -4,14 +4,14 @@
 package io.pulumi.aws.emr.outputs;
 
 import io.pulumi.aws.emr.outputs.GetReleaseLabelsFilters;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetReleaseLabelsResult {
     private final @Nullable GetReleaseLabelsFilters filters;
     /**
@@ -25,11 +25,11 @@ public final class GetReleaseLabelsResult {
      */
     private final List<String> releaseLabels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetReleaseLabelsResult(
-        @OutputCustomType.Parameter("filters") @Nullable GetReleaseLabelsFilters filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("releaseLabels") List<String> releaseLabels) {
+        @CustomType.Parameter("filters") @Nullable GetReleaseLabelsFilters filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("releaseLabels") List<String> releaseLabels) {
         this.filters = filters;
         this.id = id;
         this.releaseLabels = releaseLabels;

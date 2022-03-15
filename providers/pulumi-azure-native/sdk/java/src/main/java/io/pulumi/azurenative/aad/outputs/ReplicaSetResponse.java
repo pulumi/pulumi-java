@@ -5,14 +5,14 @@ package io.pulumi.azurenative.aad.outputs;
 
 import io.pulumi.azurenative.aad.outputs.HealthAlertResponse;
 import io.pulumi.azurenative.aad.outputs.HealthMonitorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReplicaSetResponse {
     /**
      * List of Domain Controller IP Address
@@ -65,18 +65,18 @@ public final class ReplicaSetResponse {
      */
     private final String vnetSiteId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicaSetResponse(
-        @OutputCustomType.Parameter("domainControllerIpAddress") List<String> domainControllerIpAddress,
-        @OutputCustomType.Parameter("externalAccessIpAddress") String externalAccessIpAddress,
-        @OutputCustomType.Parameter("healthAlerts") List<HealthAlertResponse> healthAlerts,
-        @OutputCustomType.Parameter("healthLastEvaluated") String healthLastEvaluated,
-        @OutputCustomType.Parameter("healthMonitors") List<HealthMonitorResponse> healthMonitors,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("replicaSetId") String replicaSetId,
-        @OutputCustomType.Parameter("serviceStatus") String serviceStatus,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
-        @OutputCustomType.Parameter("vnetSiteId") String vnetSiteId) {
+        @CustomType.Parameter("domainControllerIpAddress") List<String> domainControllerIpAddress,
+        @CustomType.Parameter("externalAccessIpAddress") String externalAccessIpAddress,
+        @CustomType.Parameter("healthAlerts") List<HealthAlertResponse> healthAlerts,
+        @CustomType.Parameter("healthLastEvaluated") String healthLastEvaluated,
+        @CustomType.Parameter("healthMonitors") List<HealthMonitorResponse> healthMonitors,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("replicaSetId") String replicaSetId,
+        @CustomType.Parameter("serviceStatus") String serviceStatus,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId,
+        @CustomType.Parameter("vnetSiteId") String vnetSiteId) {
         this.domainControllerIpAddress = domainControllerIpAddress;
         this.externalAccessIpAddress = externalAccessIpAddress;
         this.healthAlerts = healthAlerts;

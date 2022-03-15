@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlexibleAppVersionNetwork {
     /**
      * List of ports, or port pairs, to forward from the virtual machine to the application container.
@@ -43,13 +43,13 @@ public final class FlexibleAppVersionNetwork {
      */
     private final @Nullable String subnetwork;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlexibleAppVersionNetwork(
-        @OutputCustomType.Parameter("forwardedPorts") @Nullable List<String> forwardedPorts,
-        @OutputCustomType.Parameter("instanceTag") @Nullable String instanceTag,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sessionAffinity") @Nullable Boolean sessionAffinity,
-        @OutputCustomType.Parameter("subnetwork") @Nullable String subnetwork) {
+        @CustomType.Parameter("forwardedPorts") @Nullable List<String> forwardedPorts,
+        @CustomType.Parameter("instanceTag") @Nullable String instanceTag,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sessionAffinity") @Nullable Boolean sessionAffinity,
+        @CustomType.Parameter("subnetwork") @Nullable String subnetwork) {
         this.forwardedPorts = forwardedPorts;
         this.instanceTag = instanceTag;
         this.name = name;

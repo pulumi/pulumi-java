@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.managedidentities_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackupArgs Empty = new BackupArgs();
 
-    @InputImport(name="backupId", required=true)
+    @Import(name="backupId", required=true)
       private final Output<String> backupId;
 
     public Output<String> getBackupId() {
         return this.backupId;
     }
 
-    @InputImport(name="domainId", required=true)
+    @Import(name="domainId", required=true)
       private final Output<String> domainId;
 
     public Output<String> getDomainId() {
@@ -33,14 +33,14 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Resource labels to represent user provided metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

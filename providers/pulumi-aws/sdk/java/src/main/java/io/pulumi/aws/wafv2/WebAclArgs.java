@@ -8,7 +8,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclDefaultActionArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclVisibilityConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * Defines custom response bodies that can be referenced by `custom_response` actions. See Custom Response Body below for details.
      * 
      */
-    @InputImport(name="customResponseBodies")
+    @Import(name="customResponseBodies")
       private final @Nullable Output<List<WebAclCustomResponseBodyArgs>> customResponseBodies;
 
     public Output<List<WebAclCustomResponseBodyArgs>> getCustomResponseBodies() {
@@ -35,7 +35,7 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * The action to perform if none of the `rules` contained in the WebACL match. See Default Action below for details.
      * 
      */
-    @InputImport(name="defaultAction", required=true)
+    @Import(name="defaultAction", required=true)
       private final Output<WebAclDefaultActionArgs> defaultAction;
 
     public Output<WebAclDefaultActionArgs> getDefaultAction() {
@@ -46,7 +46,7 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * A friendly description of the WebACL.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -57,7 +57,7 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * The label string.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -68,7 +68,7 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * The rule blocks used to identify the web requests that you want to `allow`, `block`, or `count`. See Rules below for details.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<WebAclRuleArgs>> rules;
 
     public Output<List<WebAclRuleArgs>> getRules() {
@@ -79,7 +79,7 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the region `us-east-1` (N. Virginia) on the AWS provider.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {
@@ -90,7 +90,7 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * An map of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -101,7 +101,7 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -112,7 +112,7 @@ public final class WebAclArgs extends io.pulumi.resources.ResourceArgs {
      * Defines and enables Amazon CloudWatch metrics and web request sample collection. See Visibility Configuration below for details.
      * 
      */
-    @InputImport(name="visibilityConfig", required=true)
+    @Import(name="visibilityConfig", required=true)
       private final Output<WebAclVisibilityConfigArgs> visibilityConfig;
 
     public Output<WebAclVisibilityConfigArgs> getVisibilityConfig() {

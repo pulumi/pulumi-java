@@ -5,13 +5,13 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ExpressRouteCircuitPeeringConfigResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Ipv6ExpressRouteCircuitPeeringConfigResponse {
     /**
      * The Microsoft peering configuration.
@@ -39,13 +39,13 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Ipv6ExpressRouteCircuitPeeringConfigResponse(
-        @OutputCustomType.Parameter("microsoftPeeringConfig") @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig,
-        @OutputCustomType.Parameter("primaryPeerAddressPrefix") @Nullable String primaryPeerAddressPrefix,
-        @OutputCustomType.Parameter("routeFilter") @Nullable SubResourceResponse routeFilter,
-        @OutputCustomType.Parameter("secondaryPeerAddressPrefix") @Nullable String secondaryPeerAddressPrefix,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("microsoftPeeringConfig") @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig,
+        @CustomType.Parameter("primaryPeerAddressPrefix") @Nullable String primaryPeerAddressPrefix,
+        @CustomType.Parameter("routeFilter") @Nullable SubResourceResponse routeFilter,
+        @CustomType.Parameter("secondaryPeerAddressPrefix") @Nullable String secondaryPeerAddressPrefix,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.microsoftPeeringConfig = microsoftPeeringConfig;
         this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
         this.routeFilter = routeFilter;

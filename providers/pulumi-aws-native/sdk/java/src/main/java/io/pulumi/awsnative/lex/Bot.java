@@ -10,7 +10,7 @@ import io.pulumi.awsnative.lex.outputs.BotS3Location;
 import io.pulumi.awsnative.lex.outputs.BotTag;
 import io.pulumi.awsnative.lex.outputs.DataPrivacyProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,7 +26,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:lex:Bot")
 public class Bot extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
@@ -36,7 +36,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * Specifies whether to build the bot locales after bot creation completes.
      * 
      */
-    @OutputExport(name="autoBuildBotLocales", type=Boolean.class, parameters={})
+    @Export(name="autoBuildBotLocales", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoBuildBotLocales;
 
     /**
@@ -46,7 +46,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Boolean> getAutoBuildBotLocales() {
         return this.autoBuildBotLocales;
     }
-    @OutputExport(name="botFileS3Location", type=BotS3Location.class, parameters={})
+    @Export(name="botFileS3Location", type=BotS3Location.class, parameters={})
     private Output</* @Nullable */ BotS3Location> botFileS3Location;
 
     public Output</* @Nullable */ BotS3Location> getBotFileS3Location() {
@@ -56,7 +56,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * List of bot locales
      * 
      */
-    @OutputExport(name="botLocales", type=List.class, parameters={BotLocale.class})
+    @Export(name="botLocales", type=List.class, parameters={BotLocale.class})
     private Output</* @Nullable */ List<BotLocale>> botLocales;
 
     /**
@@ -70,7 +70,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * A list of tags to add to the bot, which can only be added at bot creation.
      * 
      */
-    @OutputExport(name="botTags", type=List.class, parameters={BotTag.class})
+    @Export(name="botTags", type=List.class, parameters={BotTag.class})
     private Output</* @Nullable */ List<BotTag>> botTags;
 
     /**
@@ -84,7 +84,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * Data privacy setting of the Bot.
      * 
      */
-    @OutputExport(name="dataPrivacy", type=DataPrivacyProperties.class, parameters={})
+    @Export(name="dataPrivacy", type=DataPrivacyProperties.class, parameters={})
     private Output<DataPrivacyProperties> dataPrivacy;
 
     /**
@@ -94,7 +94,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
     public Output<DataPrivacyProperties> getDataPrivacy() {
         return this.dataPrivacy;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
@@ -104,7 +104,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * IdleSessionTTLInSeconds of the resource
      * 
      */
-    @OutputExport(name="idleSessionTTLInSeconds", type=Integer.class, parameters={})
+    @Export(name="idleSessionTTLInSeconds", type=Integer.class, parameters={})
     private Output<Integer> idleSessionTTLInSeconds;
 
     /**
@@ -114,13 +114,13 @@ public class Bot extends io.pulumi.resources.CustomResource {
     public Output<Integer> getIdleSessionTTLInSeconds() {
         return this.idleSessionTTLInSeconds;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -130,7 +130,7 @@ public class Bot extends io.pulumi.resources.CustomResource {
      * A list of tags to add to the test alias for a bot, , which can only be added at bot/bot alias creation.
      * 
      */
-    @OutputExport(name="testBotAliasTags", type=List.class, parameters={BotTag.class})
+    @Export(name="testBotAliasTags", type=List.class, parameters={BotTag.class})
     private Output</* @Nullable */ List<BotTag>> testBotAliasTags;
 
     /**

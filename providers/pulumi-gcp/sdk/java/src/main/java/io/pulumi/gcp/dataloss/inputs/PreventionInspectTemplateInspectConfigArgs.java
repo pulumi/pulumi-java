@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigInfoTypeArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigLimitsArgs;
@@ -25,7 +25,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
      * Each value may be one of `CONTENT_TEXT` and `CONTENT_IMAGE`.
      * 
      */
-    @InputImport(name="contentOptions")
+    @Import(name="contentOptions")
       private final @Nullable Output<List<String>> contentOptions;
 
     public Output<List<String>> getContentOptions() {
@@ -37,7 +37,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="customInfoTypes")
+    @Import(name="customInfoTypes")
       private final @Nullable Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeArgs>> customInfoTypes;
 
     public Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeArgs>> getCustomInfoTypes() {
@@ -49,7 +49,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="excludeInfoTypes")
+    @Import(name="excludeInfoTypes")
       private final @Nullable Output<Boolean> excludeInfoTypes;
 
     public Output<Boolean> getExcludeInfoTypes() {
@@ -60,7 +60,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
      * When true, a contextual quote from the data that triggered a finding is included in the response.
      * 
      */
-    @InputImport(name="includeQuote")
+    @Import(name="includeQuote")
       private final @Nullable Output<Boolean> includeQuote;
 
     public Output<Boolean> getIncludeQuote() {
@@ -72,7 +72,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="infoTypes")
+    @Import(name="infoTypes")
       private final @Nullable Output<List<PreventionInspectTemplateInspectConfigInfoTypeArgs>> infoTypes;
 
     public Output<List<PreventionInspectTemplateInspectConfigInfoTypeArgs>> getInfoTypes() {
@@ -84,7 +84,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="limits")
+    @Import(name="limits")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigLimitsArgs> limits;
 
     public Output<PreventionInspectTemplateInspectConfigLimitsArgs> getLimits() {
@@ -97,7 +97,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
      * Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
      * 
      */
-    @InputImport(name="minLikelihood")
+    @Import(name="minLikelihood")
       private final @Nullable Output<String> minLikelihood;
 
     public Output<String> getMinLikelihood() {
@@ -110,7 +110,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="ruleSets")
+    @Import(name="ruleSets")
       private final @Nullable Output<List<PreventionInspectTemplateInspectConfigRuleSetArgs>> ruleSets;
 
     public Output<List<PreventionInspectTemplateInspectConfigRuleSetArgs>> getRuleSets() {

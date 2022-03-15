@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.enums.SamplingType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SamplingSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Rate of sampling for fixed-rate sampling.
      * 
      */
-    @InputImport(name="percentage")
+    @Import(name="percentage")
       private final @Nullable Output<Double> percentage;
 
     public Output<Double> getPercentage() {
@@ -36,7 +36,7 @@ public final class SamplingSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Sampling type.
      * 
      */
-    @InputImport(name="samplingType")
+    @Import(name="samplingType")
       private final @Nullable Output<Either<String,SamplingType>> samplingType;
 
     public Output<Either<String,SamplingType>> getSamplingType() {

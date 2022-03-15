@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.azurenative.machinelearning.inputs.ModuleAssetParameterResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ModeValueInfoResponse extends io.pulumi.resources.InvokeArgs 
      * The interface string name for the nested parameter.
      * 
      */
-    @InputImport(name="interfaceString")
+    @Import(name="interfaceString")
       private final @Nullable String interfaceString;
 
     public Optional<String> getInterfaceString() {
@@ -35,7 +35,7 @@ public final class ModeValueInfoResponse extends io.pulumi.resources.InvokeArgs 
      * The definition of the parameter.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable List<ModuleAssetParameterResponse> parameters;
 
     public List<ModuleAssetParameterResponse> getParameters() {

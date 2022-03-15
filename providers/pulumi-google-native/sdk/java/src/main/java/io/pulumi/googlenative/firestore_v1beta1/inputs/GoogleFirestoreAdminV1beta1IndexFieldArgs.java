@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firestore_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.firestore_v1beta1.enums.GoogleFirestoreAdminV1beta1IndexFieldMode;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
      * The path of the field. Must match the field path specification described by google.firestore.v1beta1.Document.fields. Special field path `__name__` may be used by itself or at the end of a path. `__type__` may be used only at the end of path.
      * 
      */
-    @InputImport(name="fieldPath")
+    @Import(name="fieldPath")
       private final @Nullable Output<String> fieldPath;
 
     public Output<String> getFieldPath() {
@@ -34,7 +34,7 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldArgs extends io.pulumi.r
      * The field's mode.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<GoogleFirestoreAdminV1beta1IndexFieldMode> mode;
 
     public Output<GoogleFirestoreAdminV1beta1IndexFieldMode> getMode() {

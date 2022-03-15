@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SapTablePartitionSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SapTableSourceResponse {
     /**
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
@@ -95,24 +95,24 @@ public final class SapTableSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SapTableSourceResponse(
-        @OutputCustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
-        @OutputCustomType.Parameter("batchSize") @Nullable Object batchSize,
-        @OutputCustomType.Parameter("customRfcReadTableFunctionModule") @Nullable Object customRfcReadTableFunctionModule,
-        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
-        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
-        @OutputCustomType.Parameter("partitionOption") @Nullable Object partitionOption,
-        @OutputCustomType.Parameter("partitionSettings") @Nullable SapTablePartitionSettingsResponse partitionSettings,
-        @OutputCustomType.Parameter("queryTimeout") @Nullable Object queryTimeout,
-        @OutputCustomType.Parameter("rfcTableFields") @Nullable Object rfcTableFields,
-        @OutputCustomType.Parameter("rfcTableOptions") @Nullable Object rfcTableOptions,
-        @OutputCustomType.Parameter("rowCount") @Nullable Object rowCount,
-        @OutputCustomType.Parameter("rowSkips") @Nullable Object rowSkips,
-        @OutputCustomType.Parameter("sapDataColumnDelimiter") @Nullable Object sapDataColumnDelimiter,
-        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
-        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
+        @CustomType.Parameter("batchSize") @Nullable Object batchSize,
+        @CustomType.Parameter("customRfcReadTableFunctionModule") @Nullable Object customRfcReadTableFunctionModule,
+        @CustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @CustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @CustomType.Parameter("partitionOption") @Nullable Object partitionOption,
+        @CustomType.Parameter("partitionSettings") @Nullable SapTablePartitionSettingsResponse partitionSettings,
+        @CustomType.Parameter("queryTimeout") @Nullable Object queryTimeout,
+        @CustomType.Parameter("rfcTableFields") @Nullable Object rfcTableFields,
+        @CustomType.Parameter("rfcTableOptions") @Nullable Object rfcTableOptions,
+        @CustomType.Parameter("rowCount") @Nullable Object rowCount,
+        @CustomType.Parameter("rowSkips") @Nullable Object rowSkips,
+        @CustomType.Parameter("sapDataColumnDelimiter") @Nullable Object sapDataColumnDelimiter,
+        @CustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @CustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @CustomType.Parameter("type") String type) {
         this.additionalColumns = additionalColumns;
         this.batchSize = batchSize;
         this.customRfcReadTableFunctionModule = customRfcReadTableFunctionModule;

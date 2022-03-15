@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicyWeeklyCycleDayOfWeekResponse {
     /**
      * Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
@@ -25,11 +25,11 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourcePolicyWeeklyCycleDayOfWeekResponse(
-        @OutputCustomType.Parameter("day") String day,
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("day") String day,
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("startTime") String startTime) {
         this.day = day;
         this.duration = duration;
         this.startTime = startTime;

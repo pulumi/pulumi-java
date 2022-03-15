@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1ValueResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class GoogleCloudChannelV1ParameterResponse extends io.pulumi.resou
      * Specifies whether this parameter is allowed to be changed. For example, for a Google Workspace Business Starter entitlement in commitment plan, num_units is editable when entitlement is active.
      * 
      */
-    @InputImport(name="editable", required=true)
+    @Import(name="editable", required=true)
       private final Boolean editable;
 
     public Boolean getEditable() {
@@ -33,7 +33,7 @@ public final class GoogleCloudChannelV1ParameterResponse extends io.pulumi.resou
      * Name of the parameter.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -44,7 +44,7 @@ public final class GoogleCloudChannelV1ParameterResponse extends io.pulumi.resou
      * Value of the parameter.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final GoogleCloudChannelV1ValueResponse value;
 
     public GoogleCloudChannelV1ValueResponse getValue() {

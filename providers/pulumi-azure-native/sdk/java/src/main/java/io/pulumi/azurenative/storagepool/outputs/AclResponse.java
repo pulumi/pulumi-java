@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.storagepool.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AclResponse {
     /**
      * iSCSI initiator IQN (iSCSI Qualified Name); example: "iqn.2005-03.org.iscsi:client".
@@ -31,12 +31,12 @@ public final class AclResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AclResponse(
-        @OutputCustomType.Parameter("initiatorIqn") String initiatorIqn,
-        @OutputCustomType.Parameter("mappedLuns") List<String> mappedLuns,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("initiatorIqn") String initiatorIqn,
+        @CustomType.Parameter("mappedLuns") List<String> mappedLuns,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("username") String username) {
         this.initiatorIqn = initiatorIqn;
         this.mappedLuns = mappedLuns;
         this.password = password;

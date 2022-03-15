@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.SubscriptionRegisteredFeaturesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdgeProfileSubscriptionResponse {
     /**
      * ARM ID of the subscription
@@ -32,18 +32,18 @@ public final class EdgeProfileSubscriptionResponse {
     private final @Nullable String subscriptionId;
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdgeProfileSubscriptionResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("locationPlacementId") @Nullable String locationPlacementId,
-        @OutputCustomType.Parameter("quotaId") @Nullable String quotaId,
-        @OutputCustomType.Parameter("registeredFeatures") @Nullable List<SubscriptionRegisteredFeaturesResponse> registeredFeatures,
-        @OutputCustomType.Parameter("registrationDate") @Nullable String registrationDate,
-        @OutputCustomType.Parameter("registrationId") @Nullable String registrationId,
-        @OutputCustomType.Parameter("serializedDetails") @Nullable String serializedDetails,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("locationPlacementId") @Nullable String locationPlacementId,
+        @CustomType.Parameter("quotaId") @Nullable String quotaId,
+        @CustomType.Parameter("registeredFeatures") @Nullable List<SubscriptionRegisteredFeaturesResponse> registeredFeatures,
+        @CustomType.Parameter("registrationDate") @Nullable String registrationDate,
+        @CustomType.Parameter("registrationId") @Nullable String registrationId,
+        @CustomType.Parameter("serializedDetails") @Nullable String serializedDetails,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.id = id;
         this.locationPlacementId = locationPlacementId;
         this.quotaId = quotaId;

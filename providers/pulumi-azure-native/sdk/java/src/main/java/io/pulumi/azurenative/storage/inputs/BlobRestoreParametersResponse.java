@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.BlobRestoreRangeResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BlobRestoreParametersResponse extends io.pulumi.resources.Inv
      * Blob ranges to restore.
      * 
      */
-    @InputImport(name="blobRanges", required=true)
+    @Import(name="blobRanges", required=true)
       private final List<BlobRestoreRangeResponse> blobRanges;
 
     public List<BlobRestoreRangeResponse> getBlobRanges() {
@@ -33,7 +33,7 @@ public final class BlobRestoreParametersResponse extends io.pulumi.resources.Inv
      * Restore blob to the specified time.
      * 
      */
-    @InputImport(name="timeToRestore", required=true)
+    @Import(name="timeToRestore", required=true)
       private final String timeToRestore;
 
     public String getTimeToRestore() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.apprunner.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceSourceConfigurationCodeRepositorySourceCodeVersion {
     /**
      * The type of version identifier. For a git-based repository, branches represent versions. Valid values: `BRANCH`.
@@ -20,10 +20,10 @@ public final class ServiceSourceConfigurationCodeRepositorySourceCodeVersion {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceSourceConfigurationCodeRepositorySourceCodeVersion(
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") String value) {
         this.type = type;
         this.value = value;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SizeInfoResponse {
     /**
      * Represents the actual compute size, e.g. Standard_A2_v2.
@@ -34,12 +34,12 @@ public final class SizeInfoResponse {
      */
     private final @Nullable Double price;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SizeInfoResponse(
-        @OutputCustomType.Parameter("computeSize") @Nullable String computeSize,
-        @OutputCustomType.Parameter("memory") @Nullable Double memory,
-        @OutputCustomType.Parameter("numberOfCores") @Nullable Integer numberOfCores,
-        @OutputCustomType.Parameter("price") @Nullable Double price) {
+        @CustomType.Parameter("computeSize") @Nullable String computeSize,
+        @CustomType.Parameter("memory") @Nullable Double memory,
+        @CustomType.Parameter("numberOfCores") @Nullable Integer numberOfCores,
+        @CustomType.Parameter("price") @Nullable Double price) {
         this.computeSize = computeSize;
         this.memory = memory;
         this.numberOfCores = numberOfCores;

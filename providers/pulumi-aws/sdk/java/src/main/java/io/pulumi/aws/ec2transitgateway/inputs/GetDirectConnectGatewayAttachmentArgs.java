@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2transitgateway.inputs;
 
 import io.pulumi.aws.ec2transitgateway.inputs.GetDirectConnectGatewayAttachmentFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends io.pulumi.resou
      * Identifier of the Direct Connect Gateway.
      * 
      */
-    @InputImport(name="dxGatewayId")
+    @Import(name="dxGatewayId")
       private final @Nullable String dxGatewayId;
 
     public Optional<String> getDxGatewayId() {
@@ -32,7 +32,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends io.pulumi.resou
      * Configuration block(s) for filtering. Detailed below.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetDirectConnectGatewayAttachmentFilter> filters;
 
     public List<GetDirectConnectGatewayAttachmentFilter> getFilters() {
@@ -43,7 +43,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends io.pulumi.resou
      * A map of tags, each pair of which must exactly match a pair on the desired Transit Gateway Direct Connect Gateway Attachment.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -54,7 +54,7 @@ public final class GetDirectConnectGatewayAttachmentArgs extends io.pulumi.resou
      * Identifier of the EC2 Transit Gateway.
      * 
      */
-    @InputImport(name="transitGatewayId")
+    @Import(name="transitGatewayId")
       private final @Nullable String transitGatewayId;
 
     public Optional<String> getTransitGatewayId() {

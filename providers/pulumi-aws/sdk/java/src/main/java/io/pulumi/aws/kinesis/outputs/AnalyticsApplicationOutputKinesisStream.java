@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.kinesis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsApplicationOutputKinesisStream {
     /**
      * The ARN of the Kinesis Stream.
@@ -20,10 +20,10 @@ public final class AnalyticsApplicationOutputKinesisStream {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalyticsApplicationOutputKinesisStream(
-        @OutputCustomType.Parameter("resourceArn") String resourceArn,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("resourceArn") String resourceArn,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.resourceArn = resourceArn;
         this.roleArn = roleArn;
     }

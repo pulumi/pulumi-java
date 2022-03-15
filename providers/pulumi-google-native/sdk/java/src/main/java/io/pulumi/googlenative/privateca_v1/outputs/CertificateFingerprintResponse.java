@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CertificateFingerprintResponse {
     /**
      * The SHA 256 hash, encoded in hexadecimal, of the DER x509 certificate.
@@ -15,8 +15,8 @@ public final class CertificateFingerprintResponse {
      */
     private final String sha256Hash;
 
-    @OutputCustomType.Constructor
-    private CertificateFingerprintResponse(@OutputCustomType.Parameter("sha256Hash") String sha256Hash) {
+    @CustomType.Constructor
+    private CertificateFingerprintResponse(@CustomType.Parameter("sha256Hash") String sha256Hash) {
         this.sha256Hash = sha256Hash;
     }
 

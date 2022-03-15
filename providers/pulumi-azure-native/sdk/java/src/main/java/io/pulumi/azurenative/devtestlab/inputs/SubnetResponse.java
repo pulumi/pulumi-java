@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
      * The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
      * 
      */
-    @InputImport(name="allowPublicIp")
+    @Import(name="allowPublicIp")
       private final @Nullable String allowPublicIp;
 
     public Optional<String> getAllowPublicIp() {
@@ -33,7 +33,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the subnet as seen in the lab.
      * 
      */
-    @InputImport(name="labSubnetName")
+    @Import(name="labSubnetName")
       private final @Nullable String labSubnetName;
 
     public Optional<String> getLabSubnetName() {
@@ -44,7 +44,7 @@ public final class SubnetResponse extends io.pulumi.resources.InvokeArgs {
      * The resource ID of the subnet.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {

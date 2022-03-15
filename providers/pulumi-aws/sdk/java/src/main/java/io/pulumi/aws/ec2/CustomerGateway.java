@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.CustomerGatewayArgs;
 import io.pulumi.aws.ec2.inputs.CustomerGatewayState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class CustomerGateway extends io.pulumi.resources.CustomResource {
      * The ARN of the customer gateway.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class CustomerGateway extends io.pulumi.resources.CustomResource {
      * The gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
      * 
      */
-    @OutputExport(name="bgpAsn", type=String.class, parameters={})
+    @Export(name="bgpAsn", type=String.class, parameters={})
     private Output<String> bgpAsn;
 
     /**
@@ -61,7 +61,7 @@ public class CustomerGateway extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the customer gateway certificate.
      * 
      */
-    @OutputExport(name="certificateArn", type=String.class, parameters={})
+    @Export(name="certificateArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateArn;
 
     /**
@@ -75,7 +75,7 @@ public class CustomerGateway extends io.pulumi.resources.CustomResource {
      * A name for the customer gateway device.
      * 
      */
-    @OutputExport(name="deviceName", type=String.class, parameters={})
+    @Export(name="deviceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> deviceName;
 
     /**
@@ -89,7 +89,7 @@ public class CustomerGateway extends io.pulumi.resources.CustomResource {
      * The IP address of the gateway's Internet-routable external interface.
      * 
      */
-    @OutputExport(name="ipAddress", type=String.class, parameters={})
+    @Export(name="ipAddress", type=String.class, parameters={})
     private Output<String> ipAddress;
 
     /**
@@ -103,7 +103,7 @@ public class CustomerGateway extends io.pulumi.resources.CustomResource {
      * Tags to apply to the gateway. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -117,7 +117,7 @@ public class CustomerGateway extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -132,7 +132,7 @@ public class CustomerGateway extends io.pulumi.resources.CustomResource {
      * supports at this time is "ipsec.1".
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

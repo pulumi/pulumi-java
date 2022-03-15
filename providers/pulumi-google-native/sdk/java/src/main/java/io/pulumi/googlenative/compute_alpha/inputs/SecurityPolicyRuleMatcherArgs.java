@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.SecurityPolicyRuleMatcherVersionedExpr;
 import io.pulumi.googlenative.compute_alpha.inputs.ExprArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleMatcherConfigArgs;
@@ -24,7 +24,7 @@ public final class SecurityPolicyRuleMatcherArgs extends io.pulumi.resources.Res
      * The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified.
      * 
      */
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Output<SecurityPolicyRuleMatcherConfigArgs> config;
 
     public Output<SecurityPolicyRuleMatcherConfigArgs> getConfig() {
@@ -35,7 +35,7 @@ public final class SecurityPolicyRuleMatcherArgs extends io.pulumi.resources.Res
      * User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as origin.ip, source.region_code and contents in the request header.
      * 
      */
-    @InputImport(name="expr")
+    @Import(name="expr")
       private final @Nullable Output<ExprArgs> expr;
 
     public Output<ExprArgs> getExpr() {
@@ -46,7 +46,7 @@ public final class SecurityPolicyRuleMatcherArgs extends io.pulumi.resources.Res
      * Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.
      * 
      */
-    @InputImport(name="versionedExpr")
+    @Import(name="versionedExpr")
       private final @Nullable Output<SecurityPolicyRuleMatcherVersionedExpr> versionedExpr;
 
     public Output<SecurityPolicyRuleMatcherVersionedExpr> getVersionedExpr() {

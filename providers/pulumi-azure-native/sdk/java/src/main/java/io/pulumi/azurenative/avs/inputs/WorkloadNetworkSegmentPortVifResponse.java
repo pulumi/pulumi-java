@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class WorkloadNetworkSegmentPortVifResponse extends io.pulumi.resou
      * Name of port or VIF attached to segment.
      * 
      */
-    @InputImport(name="portName")
+    @Import(name="portName")
       private final @Nullable String portName;
 
     public Optional<String> getPortName() {

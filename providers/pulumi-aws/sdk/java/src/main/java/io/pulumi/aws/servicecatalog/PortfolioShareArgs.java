@@ -4,7 +4,7 @@
 package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
      * Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    @InputImport(name="acceptLanguage")
+    @Import(name="acceptLanguage")
       private final @Nullable Output<String> acceptLanguage;
 
     public Output<String> getAcceptLanguage() {
@@ -30,7 +30,7 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
      * Portfolio identifier.
      * 
      */
-    @InputImport(name="portfolioId", required=true)
+    @Import(name="portfolioId", required=true)
       private final Output<String> portfolioId;
 
     public Output<String> getPortfolioId() {
@@ -41,7 +41,7 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier of the principal with whom you will share the portfolio. Valid values AWS account IDs and ARNs of AWS Organizations and organizational units.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
     public Output<String> getPrincipalId() {
@@ -52,7 +52,7 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to enable sharing of `aws.servicecatalog.TagOption` resources when creating the portfolio share.
      * 
      */
-    @InputImport(name="shareTagOptions")
+    @Import(name="shareTagOptions")
       private final @Nullable Output<Boolean> shareTagOptions;
 
     public Output<Boolean> getShareTagOptions() {
@@ -63,7 +63,7 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
      * Type of portfolio share. Valid values are `ACCOUNT` (an external account), `ORGANIZATION` (a share to every account in an organization), `ORGANIZATIONAL_UNIT`, `ORGANIZATION_MEMBER_ACCOUNT` (a share to an account in an organization).
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -74,7 +74,7 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to wait (up to the timeout) for the share to be accepted. Organizational shares are automatically accepted.
      * 
      */
-    @InputImport(name="waitForAcceptance")
+    @Import(name="waitForAcceptance")
       private final @Nullable Output<Boolean> waitForAcceptance;
 
     public Output<Boolean> getWaitForAcceptance() {

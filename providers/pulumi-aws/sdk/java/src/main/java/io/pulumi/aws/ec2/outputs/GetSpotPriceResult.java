@@ -4,14 +4,14 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetSpotPriceFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSpotPriceResult {
     private final @Nullable String availabilityZone;
     private final @Nullable List<GetSpotPriceFilter> filters;
@@ -32,14 +32,14 @@ public final class GetSpotPriceResult {
      */
     private final String spotPriceTimestamp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSpotPriceResult(
-        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetSpotPriceFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
-        @OutputCustomType.Parameter("spotPrice") String spotPrice,
-        @OutputCustomType.Parameter("spotPriceTimestamp") String spotPriceTimestamp) {
+        @CustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @CustomType.Parameter("filters") @Nullable List<GetSpotPriceFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceType") @Nullable String instanceType,
+        @CustomType.Parameter("spotPrice") String spotPrice,
+        @CustomType.Parameter("spotPriceTimestamp") String spotPriceTimestamp) {
         this.availabilityZone = availabilityZone;
         this.filters = filters;
         this.id = id;

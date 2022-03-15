@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkflowAccessKeyResult {
     /**
      * Gets or sets the resource id.
@@ -37,13 +37,13 @@ public final class GetWorkflowAccessKeyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkflowAccessKeyResult(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notAfter") @Nullable String notAfter,
-        @OutputCustomType.Parameter("notBefore") @Nullable String notBefore,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notAfter") @Nullable String notAfter,
+        @CustomType.Parameter("notBefore") @Nullable String notBefore,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.notAfter = notAfter;

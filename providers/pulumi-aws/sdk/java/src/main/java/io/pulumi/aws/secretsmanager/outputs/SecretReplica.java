@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.secretsmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecretReplica {
     /**
      * ARN, Key ID, or Alias of the AWS KMS key within the region secret is replicated to. If one is not specified, then Secrets Manager defaults to using the AWS account's default KMS key (`aws/secretsmanager`) in the region or creates one for use if non-existent.
@@ -37,13 +37,13 @@ public final class SecretReplica {
      */
     private final @Nullable String statusMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecretReplica(
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
-        @OutputCustomType.Parameter("lastAccessedDate") @Nullable String lastAccessedDate,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("statusMessage") @Nullable String statusMessage) {
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @CustomType.Parameter("lastAccessedDate") @Nullable String lastAccessedDate,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("statusMessage") @Nullable String statusMessage) {
         this.kmsKeyId = kmsKeyId;
         this.lastAccessedDate = lastAccessedDate;
         this.region = region;

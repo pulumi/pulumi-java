@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.timestream.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RetentionPropertiesPropertiesArgs extends io.pulumi.resources
      * The duration for which data must be stored in the magnetic store.
      * 
      */
-    @InputImport(name="magneticStoreRetentionPeriodInDays")
+    @Import(name="magneticStoreRetentionPeriodInDays")
       private final @Nullable Output<String> magneticStoreRetentionPeriodInDays;
 
     public Output<String> getMagneticStoreRetentionPeriodInDays() {
@@ -33,7 +33,7 @@ public final class RetentionPropertiesPropertiesArgs extends io.pulumi.resources
      * The duration for which data must be stored in the memory store.
      * 
      */
-    @InputImport(name="memoryStoreRetentionPeriodInHours")
+    @Import(name="memoryStoreRetentionPeriodInHours")
       private final @Nullable Output<String> memoryStoreRetentionPeriodInHours;
 
     public Output<String> getMemoryStoreRetentionPeriodInHours() {

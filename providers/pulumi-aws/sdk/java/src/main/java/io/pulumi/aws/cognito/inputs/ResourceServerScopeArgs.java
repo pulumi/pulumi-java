@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ResourceServerScopeArgs extends io.pulumi.resources.ResourceA
      * The scope description.
      * 
      */
-    @InputImport(name="scopeDescription", required=true)
+    @Import(name="scopeDescription", required=true)
       private final Output<String> scopeDescription;
 
     public Output<String> getScopeDescription() {
@@ -28,7 +28,7 @@ public final class ResourceServerScopeArgs extends io.pulumi.resources.ResourceA
      * The scope name.
      * 
      */
-    @InputImport(name="scopeName", required=true)
+    @Import(name="scopeName", required=true)
       private final Output<String> scopeName;
 
     public Output<String> getScopeName() {

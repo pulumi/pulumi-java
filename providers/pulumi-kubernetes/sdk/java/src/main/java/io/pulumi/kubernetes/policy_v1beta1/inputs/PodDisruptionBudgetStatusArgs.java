@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.policy_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.meta_v1.inputs.ConditionArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +34,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      *                   disruptions are provided by the disruptionsAllowed property.
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<ConditionArgs>> conditions;
 
     public Output<List<ConditionArgs>> getConditions() {
@@ -45,7 +45,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * current number of healthy pods
      * 
      */
-    @InputImport(name="currentHealthy", required=true)
+    @Import(name="currentHealthy", required=true)
       private final Output<Integer> currentHealthy;
 
     public Output<Integer> getCurrentHealthy() {
@@ -56,7 +56,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * minimum desired number of healthy pods
      * 
      */
-    @InputImport(name="desiredHealthy", required=true)
+    @Import(name="desiredHealthy", required=true)
       private final Output<Integer> desiredHealthy;
 
     public Output<Integer> getDesiredHealthy() {
@@ -67,7 +67,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * DisruptedPods contains information about pods whose eviction was processed by the API server eviction subresource handler but has not yet been observed by the PodDisruptionBudget controller. A pod will be in this map from the time when the API server processed the eviction request to the time when the pod is seen by PDB controller as having been marked for deletion (or after a timeout). The key in the map is the name of the pod and the value is the time when the API server processed the eviction request. If the deletion didn't occur and a pod is still there it will be removed from the list automatically by PodDisruptionBudget controller after some time. If everything goes smooth this map should be empty for the most of the time. Large number of entries in the map may indicate problems with pod deletions.
      * 
      */
-    @InputImport(name="disruptedPods")
+    @Import(name="disruptedPods")
       private final @Nullable Output<Map<String,String>> disruptedPods;
 
     public Output<Map<String,String>> getDisruptedPods() {
@@ -78,7 +78,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * Number of pod disruptions that are currently allowed.
      * 
      */
-    @InputImport(name="disruptionsAllowed", required=true)
+    @Import(name="disruptionsAllowed", required=true)
       private final Output<Integer> disruptionsAllowed;
 
     public Output<Integer> getDisruptionsAllowed() {
@@ -89,7 +89,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * total number of pods counted by this disruption budget
      * 
      */
-    @InputImport(name="expectedPods", required=true)
+    @Import(name="expectedPods", required=true)
       private final Output<Integer> expectedPods;
 
     public Output<Integer> getExpectedPods() {
@@ -100,7 +100,7 @@ public final class PodDisruptionBudgetStatusArgs extends io.pulumi.resources.Res
      * Most recent generation observed when updating this PDB status. DisruptionsAllowed and other status information is valid only if observedGeneration equals to PDB's object generation.
      * 
      */
-    @InputImport(name="observedGeneration")
+    @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
     public Output<Integer> getObservedGeneration() {

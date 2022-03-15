@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementArgs;
@@ -24,7 +24,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * (Beta only) Optional. Timeout duration for the DAG of jobs. You can use "s", "m", "h", and "d" suffixes for second, minute, hour, and day duration values, respectively. The timeout duration must be from 10 minutes ("10m") to 24 hours ("24h" or "1d"). The timer begins when the first job is submitted. If the workflow is running at the end of the timeout period, any remaining jobs are cancelled, the workflow is ended, and if the workflow was running on a (/dataproc/docs/concepts/workflows/using-workflows#configuring_or_selecting_a_cluster), the cluster is deleted.
      * 
      */
-    @InputImport(name="dagTimeout")
+    @Import(name="dagTimeout")
       private final @Nullable Output<String> dagTimeout;
 
     public Output<String> getDagTimeout() {
@@ -35,7 +35,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Required. The Directed Acyclic Graph of Jobs to submit.
      * 
      */
-    @InputImport(name="jobs", required=true)
+    @Import(name="jobs", required=true)
       private final Output<List<WorkflowTemplateJobArgs>> jobs;
 
     public Output<List<WorkflowTemplateJobArgs>> getJobs() {
@@ -46,7 +46,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Optional. The labels to associate with this cluster. Label keys must be between 1 and 63 characters long, and must conform to the following PCRE regular expression: {0,63} No more than 32 labels can be associated with a given cluster.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -57,7 +57,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * The location for the resource
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -68,7 +68,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Required. Parameter name. The parameter name is used as the key, and paired with the parameter value, which are passed to the template when the template is instantiated. The name must contain only capital letters (A-Z), numbers (0-9), and underscores (_), and must not start with a number. The maximum length is 40 characters.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -79,7 +79,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Optional. Template parameters whose values are substituted into the template. Values for parameters must be provided when the template is instantiated.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<WorkflowTemplateParameterArgs>> parameters;
 
     public Output<List<WorkflowTemplateParameterArgs>> getParameters() {
@@ -90,7 +90,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Required. WorkflowTemplate scheduling information.
      * 
      */
-    @InputImport(name="placement", required=true)
+    @Import(name="placement", required=true)
       private final Output<WorkflowTemplatePlacementArgs> placement;
 
     public Output<WorkflowTemplatePlacementArgs> getPlacement() {
@@ -101,7 +101,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * The project for the resource
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -116,7 +116,7 @@ public final class WorkflowTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @Deprecated /* version is not useful as a configurable field, and will be removed in the future. */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<Integer> version;
 
     @Deprecated /* version is not useful as a configurable field, and will be removed in the future. */

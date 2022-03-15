@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyAlertStrategyNotificationRateLimit;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AlertPolicyAlertStrategy {
     /**
      * If an alert policy that was active has no data for this long, any open incidents will close.
@@ -25,10 +25,10 @@ public final class AlertPolicyAlertStrategy {
      */
     private final @Nullable AlertPolicyAlertStrategyNotificationRateLimit notificationRateLimit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AlertPolicyAlertStrategy(
-        @OutputCustomType.Parameter("autoClose") @Nullable String autoClose,
-        @OutputCustomType.Parameter("notificationRateLimit") @Nullable AlertPolicyAlertStrategyNotificationRateLimit notificationRateLimit) {
+        @CustomType.Parameter("autoClose") @Nullable String autoClose,
+        @CustomType.Parameter("notificationRateLimit") @Nullable AlertPolicyAlertStrategyNotificationRateLimit notificationRateLimit) {
         this.autoClose = autoClose;
         this.notificationRateLimit = notificationRateLimit;
     }

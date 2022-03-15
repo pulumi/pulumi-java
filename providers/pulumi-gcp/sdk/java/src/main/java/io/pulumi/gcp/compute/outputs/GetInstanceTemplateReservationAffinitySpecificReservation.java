@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceTemplateReservationAffinitySpecificReservation {
     /**
      * The key for the node affinity label.
@@ -17,10 +17,10 @@ public final class GetInstanceTemplateReservationAffinitySpecificReservation {
     private final String key;
     private final List<String> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceTemplateReservationAffinitySpecificReservation(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("values") List<String> values) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("values") List<String> values) {
         this.key = key;
         this.values = values;
     }

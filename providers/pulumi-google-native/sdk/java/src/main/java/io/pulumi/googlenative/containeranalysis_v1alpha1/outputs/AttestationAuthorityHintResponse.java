@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AttestationAuthorityHintResponse {
     /**
      * The human readable name of this Attestation Authority, for example "qa".
@@ -15,8 +15,8 @@ public final class AttestationAuthorityHintResponse {
      */
     private final String humanReadableName;
 
-    @OutputCustomType.Constructor
-    private AttestationAuthorityHintResponse(@OutputCustomType.Parameter("humanReadableName") String humanReadableName) {
+    @CustomType.Constructor
+    private AttestationAuthorityHintResponse(@CustomType.Parameter("humanReadableName") String humanReadableName) {
         this.humanReadableName = humanReadableName;
     }
 

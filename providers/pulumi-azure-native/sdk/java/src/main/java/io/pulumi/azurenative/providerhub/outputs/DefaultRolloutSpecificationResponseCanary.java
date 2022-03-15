@@ -3,21 +3,21 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DefaultRolloutSpecificationResponseCanary {
     private final @Nullable List<String> regions;
     private final @Nullable List<String> skipRegions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DefaultRolloutSpecificationResponseCanary(
-        @OutputCustomType.Parameter("regions") @Nullable List<String> regions,
-        @OutputCustomType.Parameter("skipRegions") @Nullable List<String> skipRegions) {
+        @CustomType.Parameter("regions") @Nullable List<String> regions,
+        @CustomType.Parameter("skipRegions") @Nullable List<String> skipRegions) {
         this.regions = regions;
         this.skipRegions = skipRegions;
     }

@@ -7,25 +7,25 @@ import io.pulumi.awsnative.s3.outputs.BucketEventBridgeConfiguration;
 import io.pulumi.awsnative.s3.outputs.BucketLambdaConfiguration;
 import io.pulumi.awsnative.s3.outputs.BucketQueueConfiguration;
 import io.pulumi.awsnative.s3.outputs.BucketTopicConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketNotificationConfiguration {
     private final @Nullable BucketEventBridgeConfiguration eventBridgeConfiguration;
     private final @Nullable List<BucketLambdaConfiguration> lambdaConfigurations;
     private final @Nullable List<BucketQueueConfiguration> queueConfigurations;
     private final @Nullable List<BucketTopicConfiguration> topicConfigurations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketNotificationConfiguration(
-        @OutputCustomType.Parameter("eventBridgeConfiguration") @Nullable BucketEventBridgeConfiguration eventBridgeConfiguration,
-        @OutputCustomType.Parameter("lambdaConfigurations") @Nullable List<BucketLambdaConfiguration> lambdaConfigurations,
-        @OutputCustomType.Parameter("queueConfigurations") @Nullable List<BucketQueueConfiguration> queueConfigurations,
-        @OutputCustomType.Parameter("topicConfigurations") @Nullable List<BucketTopicConfiguration> topicConfigurations) {
+        @CustomType.Parameter("eventBridgeConfiguration") @Nullable BucketEventBridgeConfiguration eventBridgeConfiguration,
+        @CustomType.Parameter("lambdaConfigurations") @Nullable List<BucketLambdaConfiguration> lambdaConfigurations,
+        @CustomType.Parameter("queueConfigurations") @Nullable List<BucketQueueConfiguration> queueConfigurations,
+        @CustomType.Parameter("topicConfigurations") @Nullable List<BucketTopicConfiguration> topicConfigurations) {
         this.eventBridgeConfiguration = eventBridgeConfiguration;
         this.lambdaConfigurations = lambdaConfigurations;
         this.queueConfigurations = queueConfigurations;

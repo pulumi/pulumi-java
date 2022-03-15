@@ -5,13 +5,13 @@ package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.JobStatusResponse;
 import io.pulumi.azurenative.migrate.outputs.MoveResourceErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MoveResourcePropertiesResponseMoveStatus {
     /**
      * An error response from the azure resource mover service.
@@ -29,11 +29,11 @@ public final class MoveResourcePropertiesResponseMoveStatus {
      */
     private final String moveState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MoveResourcePropertiesResponseMoveStatus(
-        @OutputCustomType.Parameter("errors") @Nullable MoveResourceErrorResponse errors,
-        @OutputCustomType.Parameter("jobStatus") @Nullable JobStatusResponse jobStatus,
-        @OutputCustomType.Parameter("moveState") String moveState) {
+        @CustomType.Parameter("errors") @Nullable MoveResourceErrorResponse errors,
+        @CustomType.Parameter("jobStatus") @Nullable JobStatusResponse jobStatus,
+        @CustomType.Parameter("moveState") String moveState) {
         this.errors = errors;
         this.jobStatus = jobStatus;
         this.moveState = moveState;

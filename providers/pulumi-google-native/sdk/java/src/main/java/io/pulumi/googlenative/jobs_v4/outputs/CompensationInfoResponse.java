@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.jobs_v4.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.jobs_v4.outputs.CompensationEntryResponse;
 import io.pulumi.googlenative.jobs_v4.outputs.CompensationRangeResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CompensationInfoResponse {
     /**
      * Annualized base compensation range. Computed as base compensation entry's CompensationEntry.amount times CompensationEntry.expected_units_per_year. See CompensationEntry for explanation on compensation annualization.
@@ -27,11 +27,11 @@ public final class CompensationInfoResponse {
      */
     private final List<CompensationEntryResponse> entries;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CompensationInfoResponse(
-        @OutputCustomType.Parameter("annualizedBaseCompensationRange") CompensationRangeResponse annualizedBaseCompensationRange,
-        @OutputCustomType.Parameter("annualizedTotalCompensationRange") CompensationRangeResponse annualizedTotalCompensationRange,
-        @OutputCustomType.Parameter("entries") List<CompensationEntryResponse> entries) {
+        @CustomType.Parameter("annualizedBaseCompensationRange") CompensationRangeResponse annualizedBaseCompensationRange,
+        @CustomType.Parameter("annualizedTotalCompensationRange") CompensationRangeResponse annualizedTotalCompensationRange,
+        @CustomType.Parameter("entries") List<CompensationEntryResponse> entries) {
         this.annualizedBaseCompensationRange = annualizedBaseCompensationRange;
         this.annualizedTotalCompensationRange = annualizedTotalCompensationRange;
         this.entries = entries;

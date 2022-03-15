@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem {
     /**
      * ID of profile to use for field-level encryption query argument-profile mapping
@@ -20,10 +20,10 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
      */
     private final String queryArg;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfilesItem(
-        @OutputCustomType.Parameter("profileId") String profileId,
-        @OutputCustomType.Parameter("queryArg") String queryArg) {
+        @CustomType.Parameter("profileId") String profileId,
+        @CustomType.Parameter("queryArg") String queryArg) {
         this.profileId = profileId;
         this.queryArg = queryArg;
     }

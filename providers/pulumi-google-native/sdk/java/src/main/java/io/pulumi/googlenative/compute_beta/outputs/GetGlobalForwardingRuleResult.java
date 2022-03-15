@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.ForwardingRuleServiceDirectoryRegistrationResponse;
 import io.pulumi.googlenative.compute_beta.outputs.MetadataFilterResponse;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGlobalForwardingRuleResult {
     /**
      * This field is used along with the backend_service field for Internal TCP/UDP Load Balancing or Network Load Balancing, or with the target field for internal and external TargetInstance. You can only use one of ports and port_range, or allPorts. The three are mutually exclusive. For TCP, UDP and SCTP traffic, packets addressed to any ports will be forwarded to the target or backendService.
@@ -157,38 +157,38 @@ public final class GetGlobalForwardingRuleResult {
     private final String subnetwork;
     private final String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGlobalForwardingRuleResult(
-        @OutputCustomType.Parameter("allPorts") Boolean allPorts,
-        @OutputCustomType.Parameter("allowGlobalAccess") Boolean allowGlobalAccess,
-        @OutputCustomType.Parameter("backendService") String backendService,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("ipAddress") String ipAddress,
-        @OutputCustomType.Parameter("ipProtocol") String ipProtocol,
-        @OutputCustomType.Parameter("ipVersion") String ipVersion,
-        @OutputCustomType.Parameter("isMirroringCollector") Boolean isMirroringCollector,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("loadBalancingScheme") String loadBalancingScheme,
-        @OutputCustomType.Parameter("metadataFilters") List<MetadataFilterResponse> metadataFilters,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("networkTier") String networkTier,
-        @OutputCustomType.Parameter("portRange") String portRange,
-        @OutputCustomType.Parameter("ports") List<String> ports,
-        @OutputCustomType.Parameter("pscConnectionId") String pscConnectionId,
-        @OutputCustomType.Parameter("pscConnectionStatus") String pscConnectionStatus,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("serviceDirectoryRegistrations") List<ForwardingRuleServiceDirectoryRegistrationResponse> serviceDirectoryRegistrations,
-        @OutputCustomType.Parameter("serviceLabel") String serviceLabel,
-        @OutputCustomType.Parameter("serviceName") String serviceName,
-        @OutputCustomType.Parameter("sourceIpRanges") List<String> sourceIpRanges,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork,
-        @OutputCustomType.Parameter("target") String target) {
+        @CustomType.Parameter("allPorts") Boolean allPorts,
+        @CustomType.Parameter("allowGlobalAccess") Boolean allowGlobalAccess,
+        @CustomType.Parameter("backendService") String backendService,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("ipAddress") String ipAddress,
+        @CustomType.Parameter("ipProtocol") String ipProtocol,
+        @CustomType.Parameter("ipVersion") String ipVersion,
+        @CustomType.Parameter("isMirroringCollector") Boolean isMirroringCollector,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("loadBalancingScheme") String loadBalancingScheme,
+        @CustomType.Parameter("metadataFilters") List<MetadataFilterResponse> metadataFilters,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("networkTier") String networkTier,
+        @CustomType.Parameter("portRange") String portRange,
+        @CustomType.Parameter("ports") List<String> ports,
+        @CustomType.Parameter("pscConnectionId") String pscConnectionId,
+        @CustomType.Parameter("pscConnectionStatus") String pscConnectionStatus,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("serviceDirectoryRegistrations") List<ForwardingRuleServiceDirectoryRegistrationResponse> serviceDirectoryRegistrations,
+        @CustomType.Parameter("serviceLabel") String serviceLabel,
+        @CustomType.Parameter("serviceName") String serviceName,
+        @CustomType.Parameter("sourceIpRanges") List<String> sourceIpRanges,
+        @CustomType.Parameter("subnetwork") String subnetwork,
+        @CustomType.Parameter("target") String target) {
         this.allPorts = allPorts;
         this.allowGlobalAccess = allowGlobalAccess;
         this.backendService = backendService;

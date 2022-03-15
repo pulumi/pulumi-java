@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datadog.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class DatadogLogsAgentResponse extends io.pulumi.resources.InvokeAr
      * The transport.
      * 
      */
-    @InputImport(name="transport")
+    @Import(name="transport")
       private final @Nullable String transport;
 
     public Optional<String> getTransport() {

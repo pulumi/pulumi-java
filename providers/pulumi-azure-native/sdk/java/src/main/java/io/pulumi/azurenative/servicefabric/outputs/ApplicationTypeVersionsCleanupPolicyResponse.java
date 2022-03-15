@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationTypeVersionsCleanupPolicyResponse {
     /**
      * Number of unused versions per application type to keep.
@@ -15,8 +15,8 @@ public final class ApplicationTypeVersionsCleanupPolicyResponse {
      */
     private final Double maxUnusedVersionsToKeep;
 
-    @OutputCustomType.Constructor
-    private ApplicationTypeVersionsCleanupPolicyResponse(@OutputCustomType.Parameter("maxUnusedVersionsToKeep") Double maxUnusedVersionsToKeep) {
+    @CustomType.Constructor
+    private ApplicationTypeVersionsCleanupPolicyResponse(@CustomType.Parameter("maxUnusedVersionsToKeep") Double maxUnusedVersionsToKeep) {
         this.maxUnusedVersionsToKeep = maxUnusedVersionsToKeep;
     }
 

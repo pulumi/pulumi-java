@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.storage_v1.inputs.BucketIamPolicyBindingsItemArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,14 +21,14 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * An association between a role, which comes with a set of permissions, and members who may assume that role.
      * 
      */
-    @InputImport(name="bindings")
+    @Import(name="bindings")
       private final @Nullable Output<List<BucketIamPolicyBindingsItemArgs>> bindings;
 
     public Output<List<BucketIamPolicyBindingsItemArgs>> getBindings() {
         return this.bindings == null ? Output.empty() : this.bindings;
     }
 
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -39,7 +39,7 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * HTTP 1.1  Entity tag for the policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -50,14 +50,14 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * The kind of item this is. For policies, this is always storage#policy. This field is ignored on input.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
         return this.kind == null ? Output.empty() : this.kind;
     }
 
-    @InputImport(name="provisionalUserProject")
+    @Import(name="provisionalUserProject")
       private final @Nullable Output<String> provisionalUserProject;
 
     public Output<String> getProvisionalUserProject() {
@@ -68,14 +68,14 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * The ID of the resource to which this policy belongs. Will be of the form projects/_/buckets/bucket for buckets, and projects/_/buckets/bucket/objects/object for objects. A specific generation may be specified by appending #generationNumber to the end of the object name, e.g. projects/_/buckets/my-bucket/objects/data.txt#17. The current generation can be denoted with #0. This field is ignored on input.
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
         return this.resourceId == null ? Output.empty() : this.resourceId;
     }
 
-    @InputImport(name="userProject")
+    @Import(name="userProject")
       private final @Nullable Output<String> userProject;
 
     public Output<String> getUserProject() {
@@ -86,7 +86,7 @@ public final class BucketIamPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * The IAM policy format version.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {

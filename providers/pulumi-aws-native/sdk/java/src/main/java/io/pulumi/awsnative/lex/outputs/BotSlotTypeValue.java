@@ -4,20 +4,20 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotSampleValue;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotSlotTypeValue {
     private final BotSampleValue sampleValue;
     private final @Nullable List<BotSampleValue> synonyms;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotSlotTypeValue(
-        @OutputCustomType.Parameter("sampleValue") BotSampleValue sampleValue,
-        @OutputCustomType.Parameter("synonyms") @Nullable List<BotSampleValue> synonyms) {
+        @CustomType.Parameter("sampleValue") BotSampleValue sampleValue,
+        @CustomType.Parameter("synonyms") @Nullable List<BotSampleValue> synonyms) {
         this.sampleValue = sampleValue;
         this.synonyms = synonyms;
     }

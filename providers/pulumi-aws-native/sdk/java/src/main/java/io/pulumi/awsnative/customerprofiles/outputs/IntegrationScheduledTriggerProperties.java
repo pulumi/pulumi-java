@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.customerprofiles.outputs;
 
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationScheduledTriggerPropertiesDataPullMode;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationScheduledTriggerProperties {
     private final @Nullable IntegrationScheduledTriggerPropertiesDataPullMode dataPullMode;
     private final @Nullable Double firstExecutionFrom;
@@ -22,15 +22,15 @@ public final class IntegrationScheduledTriggerProperties {
     private final @Nullable Double scheduleStartTime;
     private final @Nullable String timezone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationScheduledTriggerProperties(
-        @OutputCustomType.Parameter("dataPullMode") @Nullable IntegrationScheduledTriggerPropertiesDataPullMode dataPullMode,
-        @OutputCustomType.Parameter("firstExecutionFrom") @Nullable Double firstExecutionFrom,
-        @OutputCustomType.Parameter("scheduleEndTime") @Nullable Double scheduleEndTime,
-        @OutputCustomType.Parameter("scheduleExpression") String scheduleExpression,
-        @OutputCustomType.Parameter("scheduleOffset") @Nullable Integer scheduleOffset,
-        @OutputCustomType.Parameter("scheduleStartTime") @Nullable Double scheduleStartTime,
-        @OutputCustomType.Parameter("timezone") @Nullable String timezone) {
+        @CustomType.Parameter("dataPullMode") @Nullable IntegrationScheduledTriggerPropertiesDataPullMode dataPullMode,
+        @CustomType.Parameter("firstExecutionFrom") @Nullable Double firstExecutionFrom,
+        @CustomType.Parameter("scheduleEndTime") @Nullable Double scheduleEndTime,
+        @CustomType.Parameter("scheduleExpression") String scheduleExpression,
+        @CustomType.Parameter("scheduleOffset") @Nullable Integer scheduleOffset,
+        @CustomType.Parameter("scheduleStartTime") @Nullable Double scheduleStartTime,
+        @CustomType.Parameter("timezone") @Nullable String timezone) {
         this.dataPullMode = dataPullMode;
         this.firstExecutionFrom = firstExecutionFrom;
         this.scheduleEndTime = scheduleEndTime;

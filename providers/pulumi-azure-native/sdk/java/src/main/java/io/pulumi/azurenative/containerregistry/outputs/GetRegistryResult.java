@@ -8,7 +8,7 @@ import io.pulumi.azurenative.containerregistry.outputs.PoliciesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SkuResponse;
 import io.pulumi.azurenative.containerregistry.outputs.StatusResponse;
 import io.pulumi.azurenative.containerregistry.outputs.StorageAccountPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRegistryResult {
     /**
      * The value that indicates whether the admin user is enabled.
@@ -89,22 +89,22 @@ public final class GetRegistryResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegistryResult(
-        @OutputCustomType.Parameter("adminUserEnabled") @Nullable Boolean adminUserEnabled,
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("loginServer") String loginServer,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkRuleSet") @Nullable NetworkRuleSetResponse networkRuleSet,
-        @OutputCustomType.Parameter("policies") @Nullable PoliciesResponse policies,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sku") SkuResponse sku,
-        @OutputCustomType.Parameter("status") StatusResponse status,
-        @OutputCustomType.Parameter("storageAccount") @Nullable StorageAccountPropertiesResponse storageAccount,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("adminUserEnabled") @Nullable Boolean adminUserEnabled,
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("loginServer") String loginServer,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkRuleSet") @Nullable NetworkRuleSetResponse networkRuleSet,
+        @CustomType.Parameter("policies") @Nullable PoliciesResponse policies,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sku") SkuResponse sku,
+        @CustomType.Parameter("status") StatusResponse status,
+        @CustomType.Parameter("storageAccount") @Nullable StorageAccountPropertiesResponse storageAccount,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.adminUserEnabled = adminUserEnabled;
         this.creationDate = creationDate;
         this.id = id;

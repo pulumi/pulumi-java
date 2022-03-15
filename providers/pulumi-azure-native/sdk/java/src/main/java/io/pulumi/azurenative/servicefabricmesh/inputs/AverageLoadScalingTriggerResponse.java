@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.AutoScalingResourceMetricResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class AverageLoadScalingTriggerResponse extends io.pulumi.resources
      * Expected value is 'AverageLoad'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -35,7 +35,7 @@ public final class AverageLoadScalingTriggerResponse extends io.pulumi.resources
      * Lower load threshold (if average load is below this threshold, service will scale down).
      * 
      */
-    @InputImport(name="lowerLoadThreshold", required=true)
+    @Import(name="lowerLoadThreshold", required=true)
       private final Double lowerLoadThreshold;
 
     public Double getLowerLoadThreshold() {
@@ -46,7 +46,7 @@ public final class AverageLoadScalingTriggerResponse extends io.pulumi.resources
      * Description of the metric that is used for scaling.
      * 
      */
-    @InputImport(name="metric", required=true)
+    @Import(name="metric", required=true)
       private final AutoScalingResourceMetricResponse metric;
 
     public AutoScalingResourceMetricResponse getMetric() {
@@ -57,7 +57,7 @@ public final class AverageLoadScalingTriggerResponse extends io.pulumi.resources
      * Scale interval that indicates how often will this trigger be checked.
      * 
      */
-    @InputImport(name="scaleIntervalInSeconds", required=true)
+    @Import(name="scaleIntervalInSeconds", required=true)
       private final Integer scaleIntervalInSeconds;
 
     public Integer getScaleIntervalInSeconds() {
@@ -68,7 +68,7 @@ public final class AverageLoadScalingTriggerResponse extends io.pulumi.resources
      * Upper load threshold (if average load is above this threshold, service will scale up).
      * 
      */
-    @InputImport(name="upperLoadThreshold", required=true)
+    @Import(name="upperLoadThreshold", required=true)
       private final Double upperLoadThreshold;
 
     public Double getUpperLoadThreshold() {

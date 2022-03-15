@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventhub.outputs;
 
 import io.pulumi.azurenative.eventhub.outputs.SkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNamespaceResult {
     /**
      * The time the Namespace was created.
@@ -86,22 +86,22 @@ public final class GetNamespaceResult {
      */
     private final String updatedAt;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNamespaceResult(
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isAutoInflateEnabled") @Nullable Boolean isAutoInflateEnabled,
-        @OutputCustomType.Parameter("kafkaEnabled") @Nullable Boolean kafkaEnabled,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("maximumThroughputUnits") @Nullable Integer maximumThroughputUnits,
-        @OutputCustomType.Parameter("metricId") String metricId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("serviceBusEndpoint") String serviceBusEndpoint,
-        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updatedAt") String updatedAt) {
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isAutoInflateEnabled") @Nullable Boolean isAutoInflateEnabled,
+        @CustomType.Parameter("kafkaEnabled") @Nullable Boolean kafkaEnabled,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("maximumThroughputUnits") @Nullable Integer maximumThroughputUnits,
+        @CustomType.Parameter("metricId") String metricId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("serviceBusEndpoint") String serviceBusEndpoint,
+        @CustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updatedAt") String updatedAt) {
         this.createdAt = createdAt;
         this.id = id;
         this.isAutoInflateEnabled = isAutoInflateEnabled;

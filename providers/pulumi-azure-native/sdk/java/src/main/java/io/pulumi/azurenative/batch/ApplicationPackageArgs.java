@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
      * The name of the Batch account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -29,7 +29,7 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
      * The name of the application. This must be unique within the account.
      * 
      */
-    @InputImport(name="applicationName", required=true)
+    @Import(name="applicationName", required=true)
       private final Output<String> applicationName;
 
     public Output<String> getApplicationName() {
@@ -40,7 +40,7 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group that contains the Batch account.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
      * The version of the application.
      * 
      */
-    @InputImport(name="versionName")
+    @Import(name="versionName")
       private final @Nullable Output<String> versionName;
 
     public Output<String> getVersionName() {

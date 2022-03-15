@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse {
     /**
      * Set the likelihood of a finding to a fixed value.
@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse {
      */
     private final Integer relativeLikelihood;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2LikelihoodAdjustmentResponse(
-        @OutputCustomType.Parameter("fixedLikelihood") String fixedLikelihood,
-        @OutputCustomType.Parameter("relativeLikelihood") Integer relativeLikelihood) {
+        @CustomType.Parameter("fixedLikelihood") String fixedLikelihood,
+        @CustomType.Parameter("relativeLikelihood") Integer relativeLikelihood) {
         this.fixedLikelihood = fixedLikelihood;
         this.relativeLikelihood = relativeLikelihood;
     }

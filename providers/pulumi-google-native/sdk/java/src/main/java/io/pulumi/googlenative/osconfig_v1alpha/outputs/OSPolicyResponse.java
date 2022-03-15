@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyResourceGroupResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OSPolicyResponse {
     /**
      * This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.
@@ -33,12 +33,12 @@ public final class OSPolicyResponse {
      */
     private final List<OSPolicyResourceGroupResponse> resourceGroups;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OSPolicyResponse(
-        @OutputCustomType.Parameter("allowNoResourceGroupMatch") Boolean allowNoResourceGroupMatch,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("resourceGroups") List<OSPolicyResourceGroupResponse> resourceGroups) {
+        @CustomType.Parameter("allowNoResourceGroupMatch") Boolean allowNoResourceGroupMatch,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("resourceGroups") List<OSPolicyResourceGroupResponse> resourceGroups) {
         this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
         this.description = description;
         this.mode = mode;

@@ -3,20 +3,20 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackendServiceSecuritySetting {
     private final String clientTlsPolicy;
     private final List<String> subjectAltNames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackendServiceSecuritySetting(
-        @OutputCustomType.Parameter("clientTlsPolicy") String clientTlsPolicy,
-        @OutputCustomType.Parameter("subjectAltNames") List<String> subjectAltNames) {
+        @CustomType.Parameter("clientTlsPolicy") String clientTlsPolicy,
+        @CustomType.Parameter("subjectAltNames") List<String> subjectAltNames) {
         this.clientTlsPolicy = clientTlsPolicy;
         this.subjectAltNames = subjectAltNames;
     }

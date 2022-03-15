@@ -3,26 +3,26 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SkuSettingResponseCapacity {
     private final @Nullable Integer $default;
     private final @Nullable Integer maximum;
     private final Integer minimum;
     private final @Nullable String scaleType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkuSettingResponseCapacity(
-        @OutputCustomType.Parameter("default") @Nullable Integer $default,
-        @OutputCustomType.Parameter("maximum") @Nullable Integer maximum,
-        @OutputCustomType.Parameter("minimum") Integer minimum,
-        @OutputCustomType.Parameter("scaleType") @Nullable String scaleType) {
+        @CustomType.Parameter("default") @Nullable Integer $default,
+        @CustomType.Parameter("maximum") @Nullable Integer maximum,
+        @CustomType.Parameter("minimum") Integer minimum,
+        @CustomType.Parameter("scaleType") @Nullable String scaleType) {
         this.$default = $default;
         this.maximum = maximum;
         this.minimum = minimum;

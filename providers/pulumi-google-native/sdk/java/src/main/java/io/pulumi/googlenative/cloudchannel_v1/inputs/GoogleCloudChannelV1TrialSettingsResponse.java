@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudChannelV1TrialSettingsResponse extends io.pulumi.r
      * Date when the trial ends. The value is in milliseconds using the UNIX Epoch format. See an example [Epoch converter](https://www.epochconverter.com).
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
@@ -32,7 +32,7 @@ public final class GoogleCloudChannelV1TrialSettingsResponse extends io.pulumi.r
      * Determines if the entitlement is in a trial or not: * `true` - The entitlement is in trial. * `false` - The entitlement is not in trial.
      * 
      */
-    @InputImport(name="trial", required=true)
+    @Import(name="trial", required=true)
       private final Boolean trial;
 
     public Boolean getTrial() {

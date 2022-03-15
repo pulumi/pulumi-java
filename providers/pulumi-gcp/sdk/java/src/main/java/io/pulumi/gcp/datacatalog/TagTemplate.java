@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.TagTemplateArgs;
@@ -42,7 +42,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * The display name for this template.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -57,7 +57,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="fields", type=List.class, parameters={TagTemplateField.class})
+    @Export(name="fields", type=List.class, parameters={TagTemplateField.class})
     private Output<List<TagTemplateField>> fields;
 
     /**
@@ -72,7 +72,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template.
      * 
      */
-    @OutputExport(name="forceDelete", type=Boolean.class, parameters={})
+    @Export(name="forceDelete", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDelete;
 
     /**
@@ -87,7 +87,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -103,7 +103,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -118,7 +118,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * Template location region.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -132,7 +132,7 @@ public class TagTemplate extends io.pulumi.resources.CustomResource {
      * The id of the tag template to create.
      * 
      */
-    @OutputExport(name="tagTemplateId", type=String.class, parameters={})
+    @Export(name="tagTemplateId", type=String.class, parameters={})
     private Output<String> tagTemplateId;
 
     /**

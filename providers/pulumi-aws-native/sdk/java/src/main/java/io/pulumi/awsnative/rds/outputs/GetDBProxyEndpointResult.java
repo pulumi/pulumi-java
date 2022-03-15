@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.rds.outputs;
 
 import io.pulumi.awsnative.rds.outputs.DBProxyEndpointTagFormat;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDBProxyEndpointResult {
     /**
      * The Amazon Resource Name (ARN) for the DB proxy endpoint.
@@ -45,14 +45,14 @@ public final class GetDBProxyEndpointResult {
      */
     private final @Nullable List<String> vpcSecurityGroupIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDBProxyEndpointResult(
-        @OutputCustomType.Parameter("dBProxyEndpointArn") @Nullable String dBProxyEndpointArn,
-        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
-        @OutputCustomType.Parameter("isDefault") @Nullable Boolean isDefault,
-        @OutputCustomType.Parameter("tags") @Nullable List<DBProxyEndpointTagFormat> tags,
-        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId,
-        @OutputCustomType.Parameter("vpcSecurityGroupIds") @Nullable List<String> vpcSecurityGroupIds) {
+        @CustomType.Parameter("dBProxyEndpointArn") @Nullable String dBProxyEndpointArn,
+        @CustomType.Parameter("endpoint") @Nullable String endpoint,
+        @CustomType.Parameter("isDefault") @Nullable Boolean isDefault,
+        @CustomType.Parameter("tags") @Nullable List<DBProxyEndpointTagFormat> tags,
+        @CustomType.Parameter("vpcId") @Nullable String vpcId,
+        @CustomType.Parameter("vpcSecurityGroupIds") @Nullable List<String> vpcSecurityGroupIds) {
         this.dBProxyEndpointArn = dBProxyEndpointArn;
         this.endpoint = endpoint;
         this.isDefault = isDefault;

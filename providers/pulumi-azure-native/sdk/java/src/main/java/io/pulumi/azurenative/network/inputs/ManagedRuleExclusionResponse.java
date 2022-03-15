@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ManagedRuleExclusionResponse extends io.pulumi.resources.Invo
      * The variable type to be excluded.
      * 
      */
-    @InputImport(name="matchVariable", required=true)
+    @Import(name="matchVariable", required=true)
       private final String matchVariable;
 
     public String getMatchVariable() {
@@ -31,7 +31,7 @@ public final class ManagedRuleExclusionResponse extends io.pulumi.resources.Invo
      * Selector value for which elements in the collection this exclusion applies to.
      * 
      */
-    @InputImport(name="selector", required=true)
+    @Import(name="selector", required=true)
       private final String selector;
 
     public String getSelector() {
@@ -42,7 +42,7 @@ public final class ManagedRuleExclusionResponse extends io.pulumi.resources.Invo
      * Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.
      * 
      */
-    @InputImport(name="selectorMatchOperator", required=true)
+    @Import(name="selectorMatchOperator", required=true)
       private final String selectorMatchOperator;
 
     public String getSelectorMatchOperator() {

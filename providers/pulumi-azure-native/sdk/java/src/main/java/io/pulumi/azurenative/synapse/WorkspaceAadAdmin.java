@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.synapse.WorkspaceAadAdminArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class WorkspaceAadAdmin extends io.pulumi.resources.CustomResource {
      * Workspace active directory administrator type
      * 
      */
-    @OutputExport(name="administratorType", type=String.class, parameters={})
+    @Export(name="administratorType", type=String.class, parameters={})
     private Output</* @Nullable */ String> administratorType;
 
     /**
@@ -48,7 +48,7 @@ public class WorkspaceAadAdmin extends io.pulumi.resources.CustomResource {
      * Login of the workspace active directory administrator
      * 
      */
-    @OutputExport(name="login", type=String.class, parameters={})
+    @Export(name="login", type=String.class, parameters={})
     private Output</* @Nullable */ String> login;
 
     /**
@@ -62,7 +62,7 @@ public class WorkspaceAadAdmin extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class WorkspaceAadAdmin extends io.pulumi.resources.CustomResource {
      * Object ID of the workspace active directory administrator
      * 
      */
-    @OutputExport(name="sid", type=String.class, parameters={})
+    @Export(name="sid", type=String.class, parameters={})
     private Output</* @Nullable */ String> sid;
 
     /**
@@ -90,7 +90,7 @@ public class WorkspaceAadAdmin extends io.pulumi.resources.CustomResource {
      * Tenant ID of the workspace active directory administrator
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
@@ -104,7 +104,7 @@ public class WorkspaceAadAdmin extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.location.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class MapConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     public static final MapConfigurationArgs Empty = new MapConfigurationArgs();
 
-    @InputImport(name="style", required=true)
+    @Import(name="style", required=true)
       private final Output<String> style;
 
     public Output<String> getStyle() {

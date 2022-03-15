@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessageTextGetArgs ext
      * Whether the playback of this message can be interrupted by the end user's speech and the client can then starts the next Dialogflow request.
      * 
      */
-    @InputImport(name="allowPlaybackInterruption")
+    @Import(name="allowPlaybackInterruption")
       private final @Nullable Output<Boolean> allowPlaybackInterruption;
 
     public Output<Boolean> getAllowPlaybackInterruption() {
@@ -32,7 +32,7 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessageTextGetArgs ext
      * A collection of text responses.
      * 
      */
-    @InputImport(name="texts")
+    @Import(name="texts")
       private final @Nullable Output<List<String>> texts;
 
     public Output<List<String>> getTexts() {

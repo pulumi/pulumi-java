@@ -4,7 +4,7 @@
 package io.pulumi.gcp.firestore;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.firestore.IndexArgs;
@@ -48,7 +48,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * The collection being indexed.
      * 
      */
-    @OutputExport(name="collection", type=String.class, parameters={})
+    @Export(name="collection", type=String.class, parameters={})
     private Output<String> collection;
 
     /**
@@ -62,7 +62,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * The Firestore database id. Defaults to `"(default)"`.
      * 
      */
-    @OutputExport(name="database", type=String.class, parameters={})
+    @Export(name="database", type=String.class, parameters={})
     private Output</* @Nullable */ String> database;
 
     /**
@@ -82,7 +82,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="fields", type=List.class, parameters={IndexField.class})
+    @Export(name="fields", type=List.class, parameters={IndexField.class})
     private Output<List<IndexField>> fields;
 
     /**
@@ -103,7 +103,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -119,7 +119,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -136,7 +136,7 @@ public class Index extends io.pulumi.resources.CustomResource {
      * Possible values are `COLLECTION` and `COLLECTION_GROUP`.
      * 
      */
-    @OutputExport(name="queryScope", type=String.class, parameters={})
+    @Export(name="queryScope", type=String.class, parameters={})
     private Output</* @Nullable */ String> queryScope;
 
     /**

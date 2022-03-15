@@ -4,13 +4,13 @@
 package io.pulumi.aws.cognito.outputs;
 
 import io.pulumi.aws.cognito.outputs.UserPoolAdminCreateUserConfigInviteMessageTemplate;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserPoolAdminCreateUserConfig {
     /**
      * Set to True if only the administrator is allowed to create user profiles. Set to False if users can sign themselves up via an app.
@@ -23,10 +23,10 @@ public final class UserPoolAdminCreateUserConfig {
      */
     private final @Nullable UserPoolAdminCreateUserConfigInviteMessageTemplate inviteMessageTemplate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserPoolAdminCreateUserConfig(
-        @OutputCustomType.Parameter("allowAdminCreateUserOnly") @Nullable Boolean allowAdminCreateUserOnly,
-        @OutputCustomType.Parameter("inviteMessageTemplate") @Nullable UserPoolAdminCreateUserConfigInviteMessageTemplate inviteMessageTemplate) {
+        @CustomType.Parameter("allowAdminCreateUserOnly") @Nullable Boolean allowAdminCreateUserOnly,
+        @CustomType.Parameter("inviteMessageTemplate") @Nullable UserPoolAdminCreateUserConfigInviteMessageTemplate inviteMessageTemplate) {
         this.allowAdminCreateUserOnly = allowAdminCreateUserOnly;
         this.inviteMessageTemplate = inviteMessageTemplate;
     }

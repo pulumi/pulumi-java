@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class TableEncryptionConfigurationArgs extends io.pulumi.resources.
      * `gcp.kms.CryptoKeyIAMBinding` resource.
      * 
      */
-    @InputImport(name="kmsKeyName", required=true)
+    @Import(name="kmsKeyName", required=true)
       private final Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
@@ -33,7 +33,7 @@ public final class TableEncryptionConfigurationArgs extends io.pulumi.resources.
      * The self link or full name of the kms key version used to encrypt this table.
      * 
      */
-    @InputImport(name="kmsKeyVersion")
+    @Import(name="kmsKeyVersion")
       private final @Nullable Output<String> kmsKeyVersion;
 
     public Output<String> getKmsKeyVersion() {

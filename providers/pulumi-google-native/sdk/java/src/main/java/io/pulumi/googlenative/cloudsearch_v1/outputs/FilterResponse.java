@@ -3,20 +3,20 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.CompositeFilterResponse;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.ValueFilterResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FilterResponse {
     private final CompositeFilterResponse compositeFilter;
     private final ValueFilterResponse valueFilter;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FilterResponse(
-        @OutputCustomType.Parameter("compositeFilter") CompositeFilterResponse compositeFilter,
-        @OutputCustomType.Parameter("valueFilter") ValueFilterResponse valueFilter) {
+        @CustomType.Parameter("compositeFilter") CompositeFilterResponse compositeFilter,
+        @CustomType.Parameter("valueFilter") ValueFilterResponse valueFilter) {
         this.compositeFilter = compositeFilter;
         this.valueFilter = valueFilter;
     }

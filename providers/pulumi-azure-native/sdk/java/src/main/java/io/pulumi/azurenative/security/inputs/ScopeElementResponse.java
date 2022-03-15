@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ScopeElementResponse extends io.pulumi.resources.InvokeArgs {
      * The alert entity type to suppress by.
      * 
      */
-    @InputImport(name="field")
+    @Import(name="field")
       private final @Nullable String field;
 
     public Optional<String> getField() {

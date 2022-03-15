@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ce.CostCategoryArgs;
 import io.pulumi.awsnative.ce.enums.CostCategoryRuleVersion;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public class CostCategory extends io.pulumi.resources.CustomResource {
      * Cost category ARN
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -36,7 +36,7 @@ public class CostCategory extends io.pulumi.resources.CustomResource {
      * The default value for the cost category
      * 
      */
-    @OutputExport(name="defaultValue", type=String.class, parameters={})
+    @Export(name="defaultValue", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultValue;
 
     /**
@@ -46,19 +46,19 @@ public class CostCategory extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getDefaultValue() {
         return this.defaultValue;
     }
-    @OutputExport(name="effectiveStart", type=String.class, parameters={})
+    @Export(name="effectiveStart", type=String.class, parameters={})
     private Output<String> effectiveStart;
 
     public Output<String> getEffectiveStart() {
         return this.effectiveStart;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="ruleVersion", type=CostCategoryRuleVersion.class, parameters={})
+    @Export(name="ruleVersion", type=CostCategoryRuleVersion.class, parameters={})
     private Output<CostCategoryRuleVersion> ruleVersion;
 
     public Output<CostCategoryRuleVersion> getRuleVersion() {
@@ -68,7 +68,7 @@ public class CostCategory extends io.pulumi.resources.CustomResource {
      * JSON array format of Expression in Billing and Cost Management API
      * 
      */
-    @OutputExport(name="rules", type=String.class, parameters={})
+    @Export(name="rules", type=String.class, parameters={})
     private Output<String> rules;
 
     /**
@@ -82,7 +82,7 @@ public class CostCategory extends io.pulumi.resources.CustomResource {
      * Json array format of CostCategorySplitChargeRule in Billing and Cost Management API
      * 
      */
-    @OutputExport(name="splitChargeRules", type=String.class, parameters={})
+    @Export(name="splitChargeRules", type=String.class, parameters={})
     private Output</* @Nullable */ String> splitChargeRules;
 
     /**

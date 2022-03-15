@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetNetworkInterfaceAssociation extends io.pulumi.resources.In
      * The allocation ID.
      * 
      */
-    @InputImport(name="allocationId", required=true)
+    @Import(name="allocationId", required=true)
       private final String allocationId;
 
     public String getAllocationId() {
@@ -27,7 +27,7 @@ public final class GetNetworkInterfaceAssociation extends io.pulumi.resources.In
      * The association ID.
      * 
      */
-    @InputImport(name="associationId", required=true)
+    @Import(name="associationId", required=true)
       private final String associationId;
 
     public String getAssociationId() {
@@ -38,7 +38,7 @@ public final class GetNetworkInterfaceAssociation extends io.pulumi.resources.In
      * The carrier IP address associated with the network interface. This attribute is only set when the network interface is in a subnet which is associated with a Wavelength Zone.
      * 
      */
-    @InputImport(name="carrierIp", required=true)
+    @Import(name="carrierIp", required=true)
       private final String carrierIp;
 
     public String getCarrierIp() {
@@ -49,7 +49,7 @@ public final class GetNetworkInterfaceAssociation extends io.pulumi.resources.In
      * The customer-owned IP address.
      * 
      */
-    @InputImport(name="customerOwnedIp", required=true)
+    @Import(name="customerOwnedIp", required=true)
       private final String customerOwnedIp;
 
     public String getCustomerOwnedIp() {
@@ -60,7 +60,7 @@ public final class GetNetworkInterfaceAssociation extends io.pulumi.resources.In
      * The ID of the Elastic IP address owner.
      * 
      */
-    @InputImport(name="ipOwnerId", required=true)
+    @Import(name="ipOwnerId", required=true)
       private final String ipOwnerId;
 
     public String getIpOwnerId() {
@@ -71,7 +71,7 @@ public final class GetNetworkInterfaceAssociation extends io.pulumi.resources.In
      * The public DNS name.
      * 
      */
-    @InputImport(name="publicDnsName", required=true)
+    @Import(name="publicDnsName", required=true)
       private final String publicDnsName;
 
     public String getPublicDnsName() {
@@ -82,7 +82,7 @@ public final class GetNetworkInterfaceAssociation extends io.pulumi.resources.In
      * The address of the Elastic IP address bound to the network interface.
      * 
      */
-    @InputImport(name="publicIp", required=true)
+    @Import(name="publicIp", required=true)
       private final String publicIp;
 
     public String getPublicIp() {

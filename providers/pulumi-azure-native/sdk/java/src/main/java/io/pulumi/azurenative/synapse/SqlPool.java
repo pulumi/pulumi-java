@@ -8,7 +8,7 @@ import io.pulumi.azurenative.synapse.SqlPoolArgs;
 import io.pulumi.azurenative.synapse.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * Collation mode
      * 
      */
-    @OutputExport(name="collation", type=String.class, parameters={})
+    @Export(name="collation", type=String.class, parameters={})
     private Output</* @Nullable */ String> collation;
 
     /**
@@ -59,7 +59,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. SourceDatabaseId should be the sql pool's original resource ID. SourceDatabaseId and sourceDatabaseDeletionDate must be specified.
      * 
      */
-    @OutputExport(name="createMode", type=String.class, parameters={})
+    @Export(name="createMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> createMode;
 
     /**
@@ -81,7 +81,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * Date the SQL pool was created
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> creationDate;
 
     /**
@@ -95,7 +95,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -109,7 +109,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * Maximum size in bytes
      * 
      */
-    @OutputExport(name="maxSizeBytes", type=Double.class, parameters={})
+    @Export(name="maxSizeBytes", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> maxSizeBytes;
 
     /**
@@ -123,7 +123,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -137,7 +137,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * Resource state
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -151,7 +151,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * Backup database to restore from
      * 
      */
-    @OutputExport(name="recoverableDatabaseId", type=String.class, parameters={})
+    @Export(name="recoverableDatabaseId", type=String.class, parameters={})
     private Output</* @Nullable */ String> recoverableDatabaseId;
 
     /**
@@ -165,7 +165,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * Snapshot time to restore
      * 
      */
-    @OutputExport(name="restorePointInTime", type=String.class, parameters={})
+    @Export(name="restorePointInTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> restorePointInTime;
 
     /**
@@ -179,7 +179,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * SQL pool SKU
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -193,7 +193,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * Source database to create from
      * 
      */
-    @OutputExport(name="sourceDatabaseId", type=String.class, parameters={})
+    @Export(name="sourceDatabaseId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceDatabaseId;
 
     /**
@@ -207,7 +207,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * Resource status
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
@@ -221,7 +221,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * The storage account type used to store backups for this sql pool.
      * 
      */
-    @OutputExport(name="storageAccountType", type=String.class, parameters={})
+    @Export(name="storageAccountType", type=String.class, parameters={})
     private Output</* @Nullable */ String> storageAccountType;
 
     /**
@@ -235,7 +235,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -249,7 +249,7 @@ public class SqlPool extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorEndpointScopeItemResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectionMonitorEndpointScopeResponse {
     /**
      * List of items which needs to be excluded from the endpoint scope.
@@ -22,10 +22,10 @@ public final class ConnectionMonitorEndpointScopeResponse {
      */
     private final @Nullable List<ConnectionMonitorEndpointScopeItemResponse> include;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectionMonitorEndpointScopeResponse(
-        @OutputCustomType.Parameter("exclude") @Nullable List<ConnectionMonitorEndpointScopeItemResponse> exclude,
-        @OutputCustomType.Parameter("include") @Nullable List<ConnectionMonitorEndpointScopeItemResponse> include) {
+        @CustomType.Parameter("exclude") @Nullable List<ConnectionMonitorEndpointScopeItemResponse> exclude,
+        @CustomType.Parameter("include") @Nullable List<ConnectionMonitorEndpointScopeItemResponse> include) {
         this.exclude = exclude;
         this.include = include;
     }

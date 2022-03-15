@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class VideoFlagsResponse extends io.pulumi.resources.InvokeArgs {
      * Value indicating whether or not the video can be streamed. Only "archive" type videos can be streamed.
      * 
      */
-    @InputImport(name="canStream", required=true)
+    @Import(name="canStream", required=true)
       private final Boolean canStream;
 
     public Boolean getCanStream() {
@@ -31,7 +31,7 @@ public final class VideoFlagsResponse extends io.pulumi.resources.InvokeArgs {
      * Value indicating whether or not there has ever been data recorded or uploaded into the video. Newly created videos have this value set to false.
      * 
      */
-    @InputImport(name="hasData", required=true)
+    @Import(name="hasData", required=true)
       private final Boolean hasData;
 
     public Boolean getHasData() {
@@ -42,7 +42,7 @@ public final class VideoFlagsResponse extends io.pulumi.resources.InvokeArgs {
      * Value indicating whether or not the video is currently being referenced be an active live pipeline. The fact that is being referenced, doesn't necessarily indicate that data is being received. For example, video recording may be gated on events or camera may not be accessible at the time.
      * 
      */
-    @InputImport(name="isRecording", required=true)
+    @Import(name="isRecording", required=true)
       private final Boolean isRecording;
 
     public Boolean getIsRecording() {

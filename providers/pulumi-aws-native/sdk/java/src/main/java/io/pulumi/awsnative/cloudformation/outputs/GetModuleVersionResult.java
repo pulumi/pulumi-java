@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.cloudformation.outputs;
 
 import io.pulumi.awsnative.cloudformation.enums.ModuleVersionVisibility;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetModuleVersionResult {
     /**
      * The Amazon Resource Name (ARN) of the module.
@@ -58,16 +58,16 @@ public final class GetModuleVersionResult {
      */
     private final @Nullable ModuleVersionVisibility visibility;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetModuleVersionResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("documentationUrl") @Nullable String documentationUrl,
-        @OutputCustomType.Parameter("isDefaultVersion") @Nullable Boolean isDefaultVersion,
-        @OutputCustomType.Parameter("schema") @Nullable String schema,
-        @OutputCustomType.Parameter("timeCreated") @Nullable String timeCreated,
-        @OutputCustomType.Parameter("versionId") @Nullable String versionId,
-        @OutputCustomType.Parameter("visibility") @Nullable ModuleVersionVisibility visibility) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("documentationUrl") @Nullable String documentationUrl,
+        @CustomType.Parameter("isDefaultVersion") @Nullable Boolean isDefaultVersion,
+        @CustomType.Parameter("schema") @Nullable String schema,
+        @CustomType.Parameter("timeCreated") @Nullable String timeCreated,
+        @CustomType.Parameter("versionId") @Nullable String versionId,
+        @CustomType.Parameter("visibility") @Nullable ModuleVersionVisibility visibility) {
         this.arn = arn;
         this.description = description;
         this.documentationUrl = documentationUrl;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.synapse.EventHubDataConnectionArgs;
 import io.pulumi.azurenative.synapse.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class EventHubDataConnection extends io.pulumi.resources.CustomResource {
      * The event hub messages compression type
      * 
      */
-    @OutputExport(name="compression", type=String.class, parameters={})
+    @Export(name="compression", type=String.class, parameters={})
     private Output</* @Nullable */ String> compression;
 
     /**
@@ -49,7 +49,7 @@ public class EventHubDataConnection extends io.pulumi.resources.CustomResource {
      * The event hub consumer group.
      * 
      */
-    @OutputExport(name="consumerGroup", type=String.class, parameters={})
+    @Export(name="consumerGroup", type=String.class, parameters={})
     private Output<String> consumerGroup;
 
     /**
@@ -63,7 +63,7 @@ public class EventHubDataConnection extends io.pulumi.resources.CustomResource {
      * The data format of the message. Optionally the data format can be added to each message.
      * 
      */
-    @OutputExport(name="dataFormat", type=String.class, parameters={})
+    @Export(name="dataFormat", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataFormat;
 
     /**
@@ -77,7 +77,7 @@ public class EventHubDataConnection extends io.pulumi.resources.CustomResource {
      * The resource ID of the event hub to be used to create a data connection.
      * 
      */
-    @OutputExport(name="eventHubResourceId", type=String.class, parameters={})
+    @Export(name="eventHubResourceId", type=String.class, parameters={})
     private Output<String> eventHubResourceId;
 
     /**
@@ -91,7 +91,7 @@ public class EventHubDataConnection extends io.pulumi.resources.CustomResource {
      * System properties of the event hub
      * 
      */
-    @OutputExport(name="eventSystemProperties", type=List.class, parameters={String.class})
+    @Export(name="eventSystemProperties", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> eventSystemProperties;
 
     /**
@@ -106,7 +106,7 @@ public class EventHubDataConnection extends io.pulumi.resources.CustomResource {
      * Expected value is 'EventHub'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -121,7 +121,7 @@ public class EventHubDataConnection extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -135,7 +135,7 @@ public class EventHubDataConnection extends io.pulumi.resources.CustomResource {
      * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
      * 
      */
-    @OutputExport(name="mappingRuleName", type=String.class, parameters={})
+    @Export(name="mappingRuleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> mappingRuleName;
 
     /**
@@ -149,7 +149,7 @@ public class EventHubDataConnection extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -163,7 +163,7 @@ public class EventHubDataConnection extends io.pulumi.resources.CustomResource {
      * The provisioned state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -177,7 +177,7 @@ public class EventHubDataConnection extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -191,7 +191,7 @@ public class EventHubDataConnection extends io.pulumi.resources.CustomResource {
      * The table where the data should be ingested. Optionally the table information can be added to each message.
      * 
      */
-    @OutputExport(name="tableName", type=String.class, parameters={})
+    @Export(name="tableName", type=String.class, parameters={})
     private Output</* @Nullable */ String> tableName;
 
     /**
@@ -205,7 +205,7 @@ public class EventHubDataConnection extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

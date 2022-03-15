@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class JobQueryScriptOptionsGetArgs extends io.pulumi.resources.Reso
      * Possible values are `LAST` and `FIRST_SELECT`.
      * 
      */
-    @InputImport(name="keyResultStatement")
+    @Import(name="keyResultStatement")
       private final @Nullable Output<String> keyResultStatement;
 
     public Output<String> getKeyResultStatement() {
@@ -31,7 +31,7 @@ public final class JobQueryScriptOptionsGetArgs extends io.pulumi.resources.Reso
      * Limit on the number of bytes billed per statement. Exceeding this budget results in an error.
      * 
      */
-    @InputImport(name="statementByteBudget")
+    @Import(name="statementByteBudget")
       private final @Nullable Output<String> statementByteBudget;
 
     public Output<String> getStatementByteBudget() {
@@ -42,7 +42,7 @@ public final class JobQueryScriptOptionsGetArgs extends io.pulumi.resources.Reso
      * Timeout period for each statement in a script.
      * 
      */
-    @InputImport(name="statementTimeoutMs")
+    @Import(name="statementTimeoutMs")
       private final @Nullable Output<String> statementTimeoutMs;
 
     public Output<String> getStatementTimeoutMs() {

@@ -13,7 +13,7 @@ import io.pulumi.azurenative.datafactory.inputs.PowerQuerySinkArgs;
 import io.pulumi.azurenative.datafactory.inputs.PowerQuerySinkMappingArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * Compute properties for data flow activity.
      * 
      */
-    @InputImport(name="compute")
+    @Import(name="compute")
       private final @Nullable Output<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute;
 
     public Output<ExecuteDataFlowActivityTypePropertiesComputeArgs> getCompute() {
@@ -45,7 +45,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
      * 
      */
-    @InputImport(name="continueOnError")
+    @Import(name="continueOnError")
       private final @Nullable Output<Object> continueOnError;
 
     public Output<Object> getContinueOnError() {
@@ -56,7 +56,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * Data flow reference.
      * 
      */
-    @InputImport(name="dataFlow", required=true)
+    @Import(name="dataFlow", required=true)
       private final Output<DataFlowReferenceArgs> dataFlow;
 
     public Output<DataFlowReferenceArgs> getDataFlow() {
@@ -67,7 +67,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
@@ -78,7 +78,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -89,7 +89,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="integrationRuntime")
+    @Import(name="integrationRuntime")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> integrationRuntime;
 
     public Output<IntegrationRuntimeReferenceArgs> getIntegrationRuntime() {
@@ -100,7 +100,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -111,7 +111,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * Activity policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
     public Output<ActivityPolicyArgs> getPolicy() {
@@ -122,7 +122,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * List of mapping for Power Query mashup query to sink dataset(s).
      * 
      */
-    @InputImport(name="queries")
+    @Import(name="queries")
       private final @Nullable Output<List<PowerQuerySinkMappingArgs>> queries;
 
     public Output<List<PowerQuerySinkMappingArgs>> getQueries() {
@@ -133,7 +133,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
      * 
      */
-    @InputImport(name="runConcurrently")
+    @Import(name="runConcurrently")
       private final @Nullable Output<Object> runConcurrently;
 
     public Output<Object> getRunConcurrently() {
@@ -144,7 +144,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * (Deprecated. Please use Queries). List of Power Query activity sinks mapped to a queryName.
      * 
      */
-    @InputImport(name="sinks")
+    @Import(name="sinks")
       private final @Nullable Output<Map<String,PowerQuerySinkArgs>> sinks;
 
     public Output<Map<String,PowerQuerySinkArgs>> getSinks() {
@@ -155,7 +155,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * Staging info for execute data flow activity.
      * 
      */
-    @InputImport(name="staging")
+    @Import(name="staging")
       private final @Nullable Output<DataFlowStagingInfoArgs> staging;
 
     public Output<DataFlowStagingInfoArgs> getStaging() {
@@ -166,7 +166,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * Trace level setting used for data flow monitoring output. Supported values are: 'coarse', 'fine', and 'none'. Type: string (or Expression with resultType string)
      * 
      */
-    @InputImport(name="traceLevel")
+    @Import(name="traceLevel")
       private final @Nullable Output<Object> traceLevel;
 
     public Output<Object> getTraceLevel() {
@@ -178,7 +178,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * Expected value is 'ExecuteWranglingDataflow'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -189,7 +189,7 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {

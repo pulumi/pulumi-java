@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.redshift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScheduledActionTargetActionPauseCluster {
     /**
      * The identifier of the cluster to be resumed.
@@ -15,8 +15,8 @@ public final class ScheduledActionTargetActionPauseCluster {
      */
     private final String clusterIdentifier;
 
-    @OutputCustomType.Constructor
-    private ScheduledActionTargetActionPauseCluster(@OutputCustomType.Parameter("clusterIdentifier") String clusterIdentifier) {
+    @CustomType.Constructor
+    private ScheduledActionTargetActionPauseCluster(@CustomType.Parameter("clusterIdentifier") String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
     }
 

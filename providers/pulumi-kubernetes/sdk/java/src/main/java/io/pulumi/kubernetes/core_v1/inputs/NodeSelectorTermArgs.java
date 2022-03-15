@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.NodeSelectorRequirementArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs
      * A list of node selector requirements by node's labels.
      * 
      */
-    @InputImport(name="matchExpressions")
+    @Import(name="matchExpressions")
       private final @Nullable Output<List<NodeSelectorRequirementArgs>> matchExpressions;
 
     public Output<List<NodeSelectorRequirementArgs>> getMatchExpressions() {
@@ -34,7 +34,7 @@ public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs
      * A list of node selector requirements by node's fields.
      * 
      */
-    @InputImport(name="matchFields")
+    @Import(name="matchFields")
       private final @Nullable Output<List<NodeSelectorRequirementArgs>> matchFields;
 
     public Output<List<NodeSelectorRequirementArgs>> getMatchFields() {

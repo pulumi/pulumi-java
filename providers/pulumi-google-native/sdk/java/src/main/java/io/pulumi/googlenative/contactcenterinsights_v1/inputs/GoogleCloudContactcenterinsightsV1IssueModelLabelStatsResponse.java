@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
      * Number of conversations the issue model has analyzed at this point in time.
      * 
      */
-    @InputImport(name="analyzedConversationsCount", required=true)
+    @Import(name="analyzedConversationsCount", required=true)
       private final String analyzedConversationsCount;
 
     public String getAnalyzedConversationsCount() {
@@ -32,7 +32,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
      * Statistics on each issue. Key is the issue's resource name.
      * 
      */
-    @InputImport(name="issueStats", required=true)
+    @Import(name="issueStats", required=true)
       private final Map<String,String> issueStats;
 
     public Map<String,String> getIssueStats() {
@@ -43,7 +43,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
      * Number of analyzed conversations for which no issue was applicable at this point in time.
      * 
      */
-    @InputImport(name="unclassifiedConversationsCount", required=true)
+    @Import(name="unclassifiedConversationsCount", required=true)
       private final String unclassifiedConversationsCount;
 
     public String getUnclassifiedConversationsCount() {

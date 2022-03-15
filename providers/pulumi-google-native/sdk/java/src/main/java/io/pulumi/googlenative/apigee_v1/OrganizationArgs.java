@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.apigee_v1.enums.OrganizationBillingType;
 import io.pulumi.googlenative.apigee_v1.enums.OrganizationRuntimeType;
 import io.pulumi.googlenative.apigee_v1.enums.OrganizationType;
@@ -25,7 +25,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Addon configurations of the Apigee organization.
      * 
      */
-    @InputImport(name="addonsConfig")
+    @Import(name="addonsConfig")
       private final @Nullable Output<GoogleCloudApigeeV1AddonsConfigArgs> addonsConfig;
 
     public Output<GoogleCloudApigeeV1AddonsConfigArgs> getAddonsConfig() {
@@ -36,7 +36,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
      * 
      */
-    @InputImport(name="analyticsRegion", required=true)
+    @Import(name="analyticsRegion", required=true)
       private final Output<String> analyticsRegion;
 
     public Output<String> getAnalyticsRegion() {
@@ -47,7 +47,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Not used by Apigee.
      * 
      */
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable Output<List<String>> attributes;
 
     public Output<List<String>> getAttributes() {
@@ -58,7 +58,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Compute Engine network used for Service Networking to be peered with Apigee runtime instances. See [Getting started with the Service Networking API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started). Valid only when [RuntimeType](#RuntimeType) is set to `CLOUD`. The value must be set before the creation of a runtime instance and can be updated only when there are no runtime instances. For example: `default`. Apigee also supports shared VPC (that is, the host network project is not the same as the one that is peering with Apigee). See [Shared VPC overview](https://cloud.google.com/vpc/docs/shared-vpc). To use a shared VPC network, use the following format: `projects/{host-project-id}/{region}/networks/{network-name}`. For example: `projects/my-sharedvpc-host/global/networks/mynetwork` **Note:** Not supported for Apigee hybrid.
      * 
      */
-    @InputImport(name="authorizedNetwork")
+    @Import(name="authorizedNetwork")
       private final @Nullable Output<String> authorizedNetwork;
 
     public Output<String> getAuthorizedNetwork() {
@@ -69,7 +69,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Billing type of the Apigee organization. See [Apigee pricing](https://cloud.google.com/apigee/pricing).
      * 
      */
-    @InputImport(name="billingType")
+    @Import(name="billingType")
       private final @Nullable Output<OrganizationBillingType> billingType;
 
     public Output<OrganizationBillingType> getBillingType() {
@@ -80,7 +80,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Not used by Apigee.
      * 
      */
-    @InputImport(name="customerName")
+    @Import(name="customerName")
       private final @Nullable Output<String> customerName;
 
     public Output<String> getCustomerName() {
@@ -91,7 +91,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the Apigee organization.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -102,14 +102,14 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Display name for the Apigee organization. Unused, but reserved for future use.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName == null ? Output.empty() : this.displayName;
     }
 
-    @InputImport(name="parent", required=true)
+    @Import(name="parent", required=true)
       private final Output<String> parent;
 
     public Output<String> getParent() {
@@ -120,7 +120,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for the Portals settings.
      * 
      */
-    @InputImport(name="portalDisabled")
+    @Import(name="portalDisabled")
       private final @Nullable Output<Boolean> portalDisabled;
 
     public Output<Boolean> getPortalDisabled() {
@@ -131,7 +131,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Properties defined in the Apigee organization profile.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<GoogleCloudApigeeV1PropertiesArgs> properties;
 
     public Output<GoogleCloudApigeeV1PropertiesArgs> getProperties() {
@@ -142,7 +142,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances. Update is not allowed after the organization is created. Required when [RuntimeType](#RuntimeType) is `CLOUD`. If not specified when [RuntimeType](#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For example: "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for Apigee hybrid.
      * 
      */
-    @InputImport(name="runtimeDatabaseEncryptionKeyName")
+    @Import(name="runtimeDatabaseEncryptionKeyName")
       private final @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
 
     public Output<String> getRuntimeDatabaseEncryptionKeyName() {
@@ -153,7 +153,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Runtime type of the Apigee organization based on the Apigee subscription purchased.
      * 
      */
-    @InputImport(name="runtimeType", required=true)
+    @Import(name="runtimeType", required=true)
       private final Output<OrganizationRuntimeType> runtimeType;
 
     public Output<OrganizationRuntimeType> getRuntimeType() {
@@ -164,7 +164,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Not used by Apigee.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<OrganizationType> type;
 
     public Output<OrganizationType> getType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.X509ExtensionResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class SubjectAltNamesResponse extends io.pulumi.resources.InvokeArg
      * Contains additional subject alternative name values.
      * 
      */
-    @InputImport(name="customSans", required=true)
+    @Import(name="customSans", required=true)
       private final List<X509ExtensionResponse> customSans;
 
     public List<X509ExtensionResponse> getCustomSans() {
@@ -33,7 +33,7 @@ public final class SubjectAltNamesResponse extends io.pulumi.resources.InvokeArg
      * Contains only valid, fully-qualified host names.
      * 
      */
-    @InputImport(name="dnsNames", required=true)
+    @Import(name="dnsNames", required=true)
       private final List<String> dnsNames;
 
     public List<String> getDnsNames() {
@@ -44,7 +44,7 @@ public final class SubjectAltNamesResponse extends io.pulumi.resources.InvokeArg
      * Contains only valid RFC 2822 E-mail addresses.
      * 
      */
-    @InputImport(name="emailAddresses", required=true)
+    @Import(name="emailAddresses", required=true)
       private final List<String> emailAddresses;
 
     public List<String> getEmailAddresses() {
@@ -55,7 +55,7 @@ public final class SubjectAltNamesResponse extends io.pulumi.resources.InvokeArg
      * Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
      * 
      */
-    @InputImport(name="ipAddresses", required=true)
+    @Import(name="ipAddresses", required=true)
       private final List<String> ipAddresses;
 
     public List<String> getIpAddresses() {
@@ -66,7 +66,7 @@ public final class SubjectAltNamesResponse extends io.pulumi.resources.InvokeArg
      * Contains only valid RFC 3986 URIs.
      * 
      */
-    @InputImport(name="uris", required=true)
+    @Import(name="uris", required=true)
       private final List<String> uris;
 
     public List<String> getUris() {

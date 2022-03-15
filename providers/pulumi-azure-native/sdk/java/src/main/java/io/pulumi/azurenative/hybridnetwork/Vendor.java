@@ -8,7 +8,7 @@ import io.pulumi.azurenative.hybridnetwork.VendorArgs;
 import io.pulumi.azurenative.hybridnetwork.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Vendor extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class Vendor extends io.pulumi.resources.CustomResource {
      * The provisioning state of the vendor resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -63,7 +63,7 @@ public class Vendor extends io.pulumi.resources.CustomResource {
      * A list of IDs of the vendor skus offered by the vendor.
      * 
      */
-    @OutputExport(name="skus", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="skus", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> skus;
 
     /**
@@ -77,7 +77,7 @@ public class Vendor extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

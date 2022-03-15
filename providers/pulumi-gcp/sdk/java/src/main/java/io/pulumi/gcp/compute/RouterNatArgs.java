@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RouterNatLogConfigArgs;
 import io.pulumi.gcp.compute.inputs.RouterNatSubnetworkArgs;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * valid static external IPs that have been assigned to the NAT.
      * 
      */
-    @InputImport(name="drainNatIps")
+    @Import(name="drainNatIps")
       private final @Nullable Output<List<String>> drainNatIps;
 
     public Output<List<String>> getDrainNatIps() {
@@ -36,7 +36,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
      * 
      */
-    @InputImport(name="enableEndpointIndependentMapping")
+    @Import(name="enableEndpointIndependentMapping")
       private final @Nullable Output<Boolean> enableEndpointIndependentMapping;
 
     public Output<Boolean> getEnableEndpointIndependentMapping() {
@@ -47,7 +47,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
      * 
      */
-    @InputImport(name="icmpIdleTimeoutSec")
+    @Import(name="icmpIdleTimeoutSec")
       private final @Nullable Output<Integer> icmpIdleTimeoutSec;
 
     public Output<Integer> getIcmpIdleTimeoutSec() {
@@ -59,7 +59,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="logConfig")
+    @Import(name="logConfig")
       private final @Nullable Output<RouterNatLogConfigArgs> logConfig;
 
     public Output<RouterNatLogConfigArgs> getLogConfig() {
@@ -70,7 +70,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Minimum number of ports allocated to a VM from this NAT.
      * 
      */
-    @InputImport(name="minPortsPerVm")
+    @Import(name="minPortsPerVm")
       private final @Nullable Output<Integer> minPortsPerVm;
 
     public Output<Integer> getMinPortsPerVm() {
@@ -81,7 +81,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Self-link of subnetwork to NAT
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -95,7 +95,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
      * 
      */
-    @InputImport(name="natIpAllocateOption", required=true)
+    @Import(name="natIpAllocateOption", required=true)
       private final Output<String> natIpAllocateOption;
 
     public Output<String> getNatIpAllocateOption() {
@@ -107,7 +107,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * is set to MANUAL_ONLY.
      * 
      */
-    @InputImport(name="natIps")
+    @Import(name="natIps")
       private final @Nullable Output<List<String>> natIps;
 
     public Output<List<String>> getNatIps() {
@@ -119,7 +119,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -130,7 +130,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Region where the router and NAT reside.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -141,7 +141,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Cloud Router in which this NAT will be configured.
      * 
      */
-    @InputImport(name="router", required=true)
+    @Import(name="router", required=true)
       private final Output<String> router;
 
     public Output<String> getRouter() {
@@ -162,7 +162,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, and `LIST_OF_SUBNETWORKS`.
      * 
      */
-    @InputImport(name="sourceSubnetworkIpRangesToNat", required=true)
+    @Import(name="sourceSubnetworkIpRangesToNat", required=true)
       private final Output<String> sourceSubnetworkIpRangesToNat;
 
     public Output<String> getSourceSubnetworkIpRangesToNat() {
@@ -175,7 +175,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="subnetworks")
+    @Import(name="subnetworks")
       private final @Nullable Output<List<RouterNatSubnetworkArgs>> subnetworks;
 
     public Output<List<RouterNatSubnetworkArgs>> getSubnetworks() {
@@ -187,7 +187,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Defaults to 1200s if not set.
      * 
      */
-    @InputImport(name="tcpEstablishedIdleTimeoutSec")
+    @Import(name="tcpEstablishedIdleTimeoutSec")
       private final @Nullable Output<Integer> tcpEstablishedIdleTimeoutSec;
 
     public Output<Integer> getTcpEstablishedIdleTimeoutSec() {
@@ -199,7 +199,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Defaults to 30s if not set.
      * 
      */
-    @InputImport(name="tcpTransitoryIdleTimeoutSec")
+    @Import(name="tcpTransitoryIdleTimeoutSec")
       private final @Nullable Output<Integer> tcpTransitoryIdleTimeoutSec;
 
     public Output<Integer> getTcpTransitoryIdleTimeoutSec() {
@@ -210,7 +210,7 @@ public final class RouterNatArgs extends io.pulumi.resources.ResourceArgs {
      * Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
      * 
      */
-    @InputImport(name="udpIdleTimeoutSec")
+    @Import(name="udpIdleTimeoutSec")
       private final @Nullable Output<Integer> udpIdleTimeoutSec;
 
     public Output<Integer> getUdpIdleTimeoutSec() {

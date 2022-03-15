@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TpuConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Whether Cloud TPU integration is enabled or not.
      * 
      */
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
@@ -32,7 +32,7 @@ public final class TpuConfigResponse extends io.pulumi.resources.InvokeArgs {
      * IPv4 CIDR block reserved for Cloud TPU in the VPC.
      * 
      */
-    @InputImport(name="ipv4CidrBlock", required=true)
+    @Import(name="ipv4CidrBlock", required=true)
       private final String ipv4CidrBlock;
 
     public String getIpv4CidrBlock() {
@@ -43,7 +43,7 @@ public final class TpuConfigResponse extends io.pulumi.resources.InvokeArgs {
      * Whether to use service networking for Cloud TPU or not.
      * 
      */
-    @InputImport(name="useServiceNetworking", required=true)
+    @Import(name="useServiceNetworking", required=true)
       private final Boolean useServiceNetworking;
 
     public Boolean getUseServiceNetworking() {

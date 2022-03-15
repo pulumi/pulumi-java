@@ -10,12 +10,12 @@ import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurat
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationRunConfiguration;
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationSqlApplicationConfiguration;
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationVpcConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfiguration {
     /**
      * The code location and type parameters for the application.
@@ -53,15 +53,15 @@ public final class ApplicationApplicationConfiguration {
      */
     private final @Nullable ApplicationApplicationConfigurationVpcConfiguration vpcConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationApplicationConfiguration(
-        @OutputCustomType.Parameter("applicationCodeConfiguration") ApplicationApplicationConfigurationApplicationCodeConfiguration applicationCodeConfiguration,
-        @OutputCustomType.Parameter("applicationSnapshotConfiguration") @Nullable ApplicationApplicationConfigurationApplicationSnapshotConfiguration applicationSnapshotConfiguration,
-        @OutputCustomType.Parameter("environmentProperties") @Nullable ApplicationApplicationConfigurationEnvironmentProperties environmentProperties,
-        @OutputCustomType.Parameter("flinkApplicationConfiguration") @Nullable ApplicationApplicationConfigurationFlinkApplicationConfiguration flinkApplicationConfiguration,
-        @OutputCustomType.Parameter("runConfiguration") @Nullable ApplicationApplicationConfigurationRunConfiguration runConfiguration,
-        @OutputCustomType.Parameter("sqlApplicationConfiguration") @Nullable ApplicationApplicationConfigurationSqlApplicationConfiguration sqlApplicationConfiguration,
-        @OutputCustomType.Parameter("vpcConfiguration") @Nullable ApplicationApplicationConfigurationVpcConfiguration vpcConfiguration) {
+        @CustomType.Parameter("applicationCodeConfiguration") ApplicationApplicationConfigurationApplicationCodeConfiguration applicationCodeConfiguration,
+        @CustomType.Parameter("applicationSnapshotConfiguration") @Nullable ApplicationApplicationConfigurationApplicationSnapshotConfiguration applicationSnapshotConfiguration,
+        @CustomType.Parameter("environmentProperties") @Nullable ApplicationApplicationConfigurationEnvironmentProperties environmentProperties,
+        @CustomType.Parameter("flinkApplicationConfiguration") @Nullable ApplicationApplicationConfigurationFlinkApplicationConfiguration flinkApplicationConfiguration,
+        @CustomType.Parameter("runConfiguration") @Nullable ApplicationApplicationConfigurationRunConfiguration runConfiguration,
+        @CustomType.Parameter("sqlApplicationConfiguration") @Nullable ApplicationApplicationConfigurationSqlApplicationConfiguration sqlApplicationConfiguration,
+        @CustomType.Parameter("vpcConfiguration") @Nullable ApplicationApplicationConfigurationVpcConfiguration vpcConfiguration) {
         this.applicationCodeConfiguration = applicationCodeConfiguration;
         this.applicationSnapshotConfiguration = applicationSnapshotConfiguration;
         this.environmentProperties = environmentProperties;

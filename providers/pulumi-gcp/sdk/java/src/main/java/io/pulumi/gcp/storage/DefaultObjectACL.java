@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.DefaultObjectACLArgs;
@@ -41,7 +41,7 @@ public class DefaultObjectACL extends io.pulumi.resources.CustomResource {
      * The name of the bucket it applies to.
      * 
      */
-    @OutputExport(name="bucket", type=String.class, parameters={})
+    @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
@@ -57,7 +57,7 @@ public class DefaultObjectACL extends io.pulumi.resources.CustomResource {
      * Omitting the field is the same as providing an empty list.
      * 
      */
-    @OutputExport(name="roleEntities", type=List.class, parameters={String.class})
+    @Export(name="roleEntities", type=List.class, parameters={String.class})
     private Output<List<String>> roleEntities;
 
     /**

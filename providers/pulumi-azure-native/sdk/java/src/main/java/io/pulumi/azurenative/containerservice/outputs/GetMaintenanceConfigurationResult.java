@@ -6,13 +6,13 @@ package io.pulumi.azurenative.containerservice.outputs;
 import io.pulumi.azurenative.containerservice.outputs.SystemDataResponse;
 import io.pulumi.azurenative.containerservice.outputs.TimeInWeekResponse;
 import io.pulumi.azurenative.containerservice.outputs.TimeSpanResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMaintenanceConfigurationResult {
     /**
      * Resource ID.
@@ -45,14 +45,14 @@ public final class GetMaintenanceConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMaintenanceConfigurationResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notAllowedTime") @Nullable List<TimeSpanResponse> notAllowedTime,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("timeInWeek") @Nullable List<TimeInWeekResponse> timeInWeek,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notAllowedTime") @Nullable List<TimeSpanResponse> notAllowedTime,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("timeInWeek") @Nullable List<TimeInWeekResponse> timeInWeek,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.notAllowedTime = notAllowedTime;

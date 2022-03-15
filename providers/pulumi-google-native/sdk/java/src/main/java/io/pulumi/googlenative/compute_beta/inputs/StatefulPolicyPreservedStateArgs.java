@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
      * Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
      * 
      */
-    @InputImport(name="disks")
+    @Import(name="disks")
       private final @Nullable Output<Map<String,String>> disks;
 
     public Output<Map<String,String>> getDisks() {
@@ -34,7 +34,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
      * External network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
      * 
      */
-    @InputImport(name="externalIPs")
+    @Import(name="externalIPs")
       private final @Nullable Output<Map<String,String>> externalIPs;
 
     public Output<Map<String,String>> getExternalIPs() {
@@ -45,7 +45,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
      * Internal network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
      * 
      */
-    @InputImport(name="internalIPs")
+    @Import(name="internalIPs")
       private final @Nullable Output<Map<String,String>> internalIPs;
 
     public Output<Map<String,String>> getInternalIPs() {

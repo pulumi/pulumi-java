@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.enums.MethodSyntax;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
 import java.lang.Boolean;
@@ -26,7 +26,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * The simple name of this method.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -37,7 +37,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * Any metadata attached to the method.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<List<OptionArgs>> options;
 
     public Output<List<OptionArgs>> getOptions() {
@@ -48,7 +48,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * If true, the request is streamed.
      * 
      */
-    @InputImport(name="requestStreaming")
+    @Import(name="requestStreaming")
       private final @Nullable Output<Boolean> requestStreaming;
 
     public Output<Boolean> getRequestStreaming() {
@@ -59,7 +59,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * A URL of the input message type.
      * 
      */
-    @InputImport(name="requestTypeUrl")
+    @Import(name="requestTypeUrl")
       private final @Nullable Output<String> requestTypeUrl;
 
     public Output<String> getRequestTypeUrl() {
@@ -70,7 +70,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * If true, the response is streamed.
      * 
      */
-    @InputImport(name="responseStreaming")
+    @Import(name="responseStreaming")
       private final @Nullable Output<Boolean> responseStreaming;
 
     public Output<Boolean> getResponseStreaming() {
@@ -81,7 +81,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * The URL of the output message type.
      * 
      */
-    @InputImport(name="responseTypeUrl")
+    @Import(name="responseTypeUrl")
       private final @Nullable Output<String> responseTypeUrl;
 
     public Output<String> getResponseTypeUrl() {
@@ -92,7 +92,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * The source syntax of this method.
      * 
      */
-    @InputImport(name="syntax")
+    @Import(name="syntax")
       private final @Nullable Output<MethodSyntax> syntax;
 
     public Output<MethodSyntax> getSyntax() {

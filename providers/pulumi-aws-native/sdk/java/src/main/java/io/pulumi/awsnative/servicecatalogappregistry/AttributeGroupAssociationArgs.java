@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.servicecatalogappregistry;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AttributeGroupAssociationArgs extends io.pulumi.resources.Res
      * The name or the Id of the Application.
      * 
      */
-    @InputImport(name="application", required=true)
+    @Import(name="application", required=true)
       private final Output<String> application;
 
     public Output<String> getApplication() {
@@ -28,7 +28,7 @@ public final class AttributeGroupAssociationArgs extends io.pulumi.resources.Res
      * The name or the Id of the AttributeGroup.
      * 
      */
-    @InputImport(name="attributeGroup", required=true)
+    @Import(name="attributeGroup", required=true)
       private final Output<String> attributeGroup;
 
     public Output<String> getAttributeGroup() {

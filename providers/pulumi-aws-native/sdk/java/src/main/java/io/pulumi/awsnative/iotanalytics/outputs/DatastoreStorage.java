@@ -6,22 +6,22 @@ package io.pulumi.awsnative.iotanalytics.outputs;
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreCustomerManagedS3;
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreIotSiteWiseMultiLayerStorage;
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreServiceManagedS3;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatastoreStorage {
     private final @Nullable DatastoreCustomerManagedS3 customerManagedS3;
     private final @Nullable DatastoreIotSiteWiseMultiLayerStorage iotSiteWiseMultiLayerStorage;
     private final @Nullable DatastoreServiceManagedS3 serviceManagedS3;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatastoreStorage(
-        @OutputCustomType.Parameter("customerManagedS3") @Nullable DatastoreCustomerManagedS3 customerManagedS3,
-        @OutputCustomType.Parameter("iotSiteWiseMultiLayerStorage") @Nullable DatastoreIotSiteWiseMultiLayerStorage iotSiteWiseMultiLayerStorage,
-        @OutputCustomType.Parameter("serviceManagedS3") @Nullable DatastoreServiceManagedS3 serviceManagedS3) {
+        @CustomType.Parameter("customerManagedS3") @Nullable DatastoreCustomerManagedS3 customerManagedS3,
+        @CustomType.Parameter("iotSiteWiseMultiLayerStorage") @Nullable DatastoreIotSiteWiseMultiLayerStorage iotSiteWiseMultiLayerStorage,
+        @CustomType.Parameter("serviceManagedS3") @Nullable DatastoreServiceManagedS3 serviceManagedS3) {
         this.customerManagedS3 = customerManagedS3;
         this.iotSiteWiseMultiLayerStorage = iotSiteWiseMultiLayerStorage;
         this.serviceManagedS3 = serviceManagedS3;

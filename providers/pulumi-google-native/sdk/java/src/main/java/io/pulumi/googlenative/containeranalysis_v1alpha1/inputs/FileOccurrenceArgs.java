@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.LicenseArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * This field provides a place for the SPDX data creator to record, at the file level, acknowledgements that may be needed to be communicated in some contexts
      * 
      */
-    @InputImport(name="attributions")
+    @Import(name="attributions")
       private final @Nullable Output<List<String>> attributions;
 
     public Output<List<String>> getAttributions() {
@@ -35,7 +35,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * This field provides a place for the SPDX file creator to record any general comments about the file
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -46,7 +46,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * This field provides a place for the SPDX file creator to record file contributors
      * 
      */
-    @InputImport(name="contributors")
+    @Import(name="contributors")
       private final @Nullable Output<List<String>> contributors;
 
     public Output<List<String>> getContributors() {
@@ -57,7 +57,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Identify the copyright holder of the file, as well as any dates present
      * 
      */
-    @InputImport(name="copyright")
+    @Import(name="copyright")
       private final @Nullable Output<String> copyright;
 
     public Output<String> getCopyright() {
@@ -68,7 +68,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * This field contains the license information actually found in the file, if any
      * 
      */
-    @InputImport(name="filesLicenseInfo")
+    @Import(name="filesLicenseInfo")
       private final @Nullable Output<List<String>> filesLicenseInfo;
 
     public Output<List<String>> getFilesLicenseInfo() {
@@ -79,7 +79,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Uniquely identify any element in an SPDX document which may be referenced by other elements
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -90,7 +90,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * This field contains the license the SPDX file creator has concluded as governing the file or alternative values if the governing license cannot be determined
      * 
      */
-    @InputImport(name="licenseConcluded")
+    @Import(name="licenseConcluded")
       private final @Nullable Output<LicenseArgs> licenseConcluded;
 
     public Output<LicenseArgs> getLicenseConcluded() {
@@ -101,7 +101,7 @@ public final class FileOccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * This field provides a place for the SPDX file creator to record license notices or other such related notices found in the file
      * 
      */
-    @InputImport(name="notice")
+    @Import(name="notice")
       private final @Nullable Output<String> notice;
 
     public Output<String> getNotice() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.secretmanager_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReplicaResponse {
     /**
      * The canonical IDs of the location to replicate data. For example: `"us-east1"`.
@@ -15,8 +15,8 @@ public final class ReplicaResponse {
      */
     private final String location;
 
-    @OutputCustomType.Constructor
-    private ReplicaResponse(@OutputCustomType.Parameter("location") String location) {
+    @CustomType.Constructor
+    private ReplicaResponse(@CustomType.Parameter("location") String location) {
         this.location = location;
     }
 

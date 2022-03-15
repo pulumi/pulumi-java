@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudchannel_v1.enums.GoogleCloudChannelV1PeriodPeriodType;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudChannelV1PeriodArgs extends io.pulumi.resources.Re
      * Total duration of Period Type defined.
      * 
      */
-    @InputImport(name="duration")
+    @Import(name="duration")
       private final @Nullable Output<Integer> duration;
 
     public Output<Integer> getDuration() {
@@ -34,7 +34,7 @@ public final class GoogleCloudChannelV1PeriodArgs extends io.pulumi.resources.Re
      * Period Type.
      * 
      */
-    @InputImport(name="periodType")
+    @Import(name="periodType")
       private final @Nullable Output<GoogleCloudChannelV1PeriodPeriodType> periodType;
 
     public Output<GoogleCloudChannelV1PeriodPeriodType> getPeriodType() {

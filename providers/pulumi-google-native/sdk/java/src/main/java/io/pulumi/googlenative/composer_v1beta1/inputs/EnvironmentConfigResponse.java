@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.composer_v1beta1.inputs.DatabaseConfigResponse;
 import io.pulumi.googlenative.composer_v1beta1.inputs.EncryptionConfigResponse;
 import io.pulumi.googlenative.composer_v1beta1.inputs.MaintenanceWindowResponse;
@@ -31,7 +31,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
      * The URI of the Apache Airflow Web UI hosted within this environment (see [Airflow web interface](/composer/docs/how-to/accessing/airflow-web-interface)).
      * 
      */
-    @InputImport(name="airflowUri", required=true)
+    @Import(name="airflowUri", required=true)
       private final String airflowUri;
 
     public String getAirflowUri() {
@@ -42,7 +42,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
      * The Cloud Storage prefix of the DAGs for this environment. Although Cloud Storage objects reside in a flat namespace, a hierarchical file tree can be simulated using "/"-delimited object name prefixes. DAG objects for this environment reside in a simulated directory with the given prefix.
      * 
      */
-    @InputImport(name="dagGcsPrefix", required=true)
+    @Import(name="dagGcsPrefix", required=true)
       private final String dagGcsPrefix;
 
     public String getDagGcsPrefix() {
@@ -53,7 +53,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
      * Optional. The configuration settings for Cloud SQL instance used internally by Apache Airflow software. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
      */
-    @InputImport(name="databaseConfig", required=true)
+    @Import(name="databaseConfig", required=true)
       private final DatabaseConfigResponse databaseConfig;
 
     public DatabaseConfigResponse getDatabaseConfig() {
@@ -64,7 +64,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
      * Optional. The encryption options for the Cloud Composer environment and its dependencies. Cannot be updated.
      * 
      */
-    @InputImport(name="encryptionConfig", required=true)
+    @Import(name="encryptionConfig", required=true)
       private final EncryptionConfigResponse encryptionConfig;
 
     public EncryptionConfigResponse getEncryptionConfig() {
@@ -75,7 +75,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
      * Optional. The size of the Cloud Composer environment. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
      * 
      */
-    @InputImport(name="environmentSize", required=true)
+    @Import(name="environmentSize", required=true)
       private final String environmentSize;
 
     public String getEnvironmentSize() {
@@ -86,7 +86,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
      * The Kubernetes Engine cluster used to run this environment.
      * 
      */
-    @InputImport(name="gkeCluster", required=true)
+    @Import(name="gkeCluster", required=true)
       private final String gkeCluster;
 
     public String getGkeCluster() {
@@ -97,7 +97,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
      * Optional. The maintenance window is the period when Cloud Composer components may undergo maintenance. It is defined so that maintenance is not executed during peak hours or critical time periods. The system will not be under maintenance for every occurrence of this window, but when maintenance is planned, it will be scheduled during the window. The maintenance window period must encompass at least 12 hours per week. This may be split into multiple chunks, each with a size of at least 4 hours. If this value is omitted, Cloud Composer components may be subject to maintenance at any time.
      * 
      */
-    @InputImport(name="maintenanceWindow", required=true)
+    @Import(name="maintenanceWindow", required=true)
       private final MaintenanceWindowResponse maintenanceWindow;
 
     public MaintenanceWindowResponse getMaintenanceWindow() {
@@ -108,7 +108,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
      * Optional. The configuration options for GKE clusters master authorized networks. By default master authorized networks feature is: - in case of private environment: enabled with no external networks allowlisted. - in case of public environment: disabled.
      * 
      */
-    @InputImport(name="masterAuthorizedNetworksConfig", required=true)
+    @Import(name="masterAuthorizedNetworksConfig", required=true)
       private final MasterAuthorizedNetworksConfigResponse masterAuthorizedNetworksConfig;
 
     public MasterAuthorizedNetworksConfigResponse getMasterAuthorizedNetworksConfig() {
@@ -119,7 +119,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
      * The configuration used for the Kubernetes Engine cluster.
      * 
      */
-    @InputImport(name="nodeConfig", required=true)
+    @Import(name="nodeConfig", required=true)
       private final NodeConfigResponse nodeConfig;
 
     public NodeConfigResponse getNodeConfig() {
@@ -130,7 +130,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
      * The number of nodes in the Kubernetes Engine cluster that will be used to run this environment. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
      */
-    @InputImport(name="nodeCount", required=true)
+    @Import(name="nodeCount", required=true)
       private final Integer nodeCount;
 
     public Integer getNodeCount() {
@@ -141,7 +141,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
      * The configuration used for the Private IP Cloud Composer environment.
      * 
      */
-    @InputImport(name="privateEnvironmentConfig", required=true)
+    @Import(name="privateEnvironmentConfig", required=true)
       private final PrivateEnvironmentConfigResponse privateEnvironmentConfig;
 
     public PrivateEnvironmentConfigResponse getPrivateEnvironmentConfig() {
@@ -152,7 +152,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
      * The configuration settings for software inside the environment.
      * 
      */
-    @InputImport(name="softwareConfig", required=true)
+    @Import(name="softwareConfig", required=true)
       private final SoftwareConfigResponse softwareConfig;
 
     public SoftwareConfigResponse getSoftwareConfig() {
@@ -163,7 +163,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
      * Optional. The configuration settings for the Airflow web server App Engine instance. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
      * 
      */
-    @InputImport(name="webServerConfig", required=true)
+    @Import(name="webServerConfig", required=true)
       private final WebServerConfigResponse webServerConfig;
 
     public WebServerConfigResponse getWebServerConfig() {
@@ -174,7 +174,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
      * Optional. The network-level access control policy for the Airflow web server. If unspecified, no network-level access restrictions will be applied.
      * 
      */
-    @InputImport(name="webServerNetworkAccessControl", required=true)
+    @Import(name="webServerNetworkAccessControl", required=true)
       private final WebServerNetworkAccessControlResponse webServerNetworkAccessControl;
 
     public WebServerNetworkAccessControlResponse getWebServerNetworkAccessControl() {
@@ -185,7 +185,7 @@ public final class EnvironmentConfigResponse extends io.pulumi.resources.InvokeA
      * Optional. The workloads configuration settings for the GKE cluster associated with the Cloud Composer environment. The GKE cluster runs Airflow scheduler, web server and workers workloads. This field is supported for Cloud Composer environments in versions composer-2.*.*-airflow-*.*.* and newer.
      * 
      */
-    @InputImport(name="workloadsConfig", required=true)
+    @Import(name="workloadsConfig", required=true)
       private final WorkloadsConfigResponse workloadsConfig;
 
     public WorkloadsConfigResponse getWorkloadsConfig() {

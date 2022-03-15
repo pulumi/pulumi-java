@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigWorkerConfigAcceleratorArgs;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigWorkerConfigDiskConfigArgs;
 import java.lang.Integer;
@@ -22,7 +22,7 @@ public final class ClusterClusterConfigWorkerConfigArgs extends io.pulumi.resour
      * The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
      * 
      */
-    @InputImport(name="accelerators")
+    @Import(name="accelerators")
       private final @Nullable Output<List<ClusterClusterConfigWorkerConfigAcceleratorArgs>> accelerators;
 
     public Output<List<ClusterClusterConfigWorkerConfigAcceleratorArgs>> getAccelerators() {
@@ -33,7 +33,7 @@ public final class ClusterClusterConfigWorkerConfigArgs extends io.pulumi.resour
      * Disk Config
      * 
      */
-    @InputImport(name="diskConfig")
+    @Import(name="diskConfig")
       private final @Nullable Output<ClusterClusterConfigWorkerConfigDiskConfigArgs> diskConfig;
 
     public Output<ClusterClusterConfigWorkerConfigDiskConfigArgs> getDiskConfig() {
@@ -45,14 +45,14 @@ public final class ClusterClusterConfigWorkerConfigArgs extends io.pulumi.resour
      * for more information.
      * 
      */
-    @InputImport(name="imageUri")
+    @Import(name="imageUri")
       private final @Nullable Output<String> imageUri;
 
     public Output<String> getImageUri() {
         return this.imageUri == null ? Output.empty() : this.imageUri;
     }
 
-    @InputImport(name="instanceNames")
+    @Import(name="instanceNames")
       private final @Nullable Output<List<String>> instanceNames;
 
     public Output<List<String>> getInstanceNames() {
@@ -65,7 +65,7 @@ public final class ClusterClusterConfigWorkerConfigArgs extends io.pulumi.resour
      * computed value (currently `n1-standard-4`).
      * 
      */
-    @InputImport(name="machineType")
+    @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
     public Output<String> getMachineType() {
@@ -79,7 +79,7 @@ public final class ClusterClusterConfigWorkerConfigArgs extends io.pulumi.resour
      * for details about which CPU families are available (and defaulted) for each zone.
      * 
      */
-    @InputImport(name="minCpuPlatform")
+    @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
     public Output<String> getMinCpuPlatform() {
@@ -91,7 +91,7 @@ public final class ClusterClusterConfigWorkerConfigArgs extends io.pulumi.resour
      * Defaults to 0.
      * 
      */
-    @InputImport(name="numInstances")
+    @Import(name="numInstances")
       private final @Nullable Output<Integer> numInstances;
 
     public Output<Integer> getNumInstances() {

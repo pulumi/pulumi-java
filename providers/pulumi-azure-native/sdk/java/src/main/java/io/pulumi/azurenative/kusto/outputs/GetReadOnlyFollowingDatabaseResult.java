@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.kusto.outputs;
 
 import io.pulumi.azurenative.kusto.outputs.DatabaseStatisticsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetReadOnlyFollowingDatabaseResult {
     /**
      * The name of the attached database configuration cluster
@@ -74,20 +74,20 @@ public final class GetReadOnlyFollowingDatabaseResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetReadOnlyFollowingDatabaseResult(
-        @OutputCustomType.Parameter("attachedDatabaseConfigurationName") String attachedDatabaseConfigurationName,
-        @OutputCustomType.Parameter("hotCachePeriod") @Nullable String hotCachePeriod,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("leaderClusterResourceId") String leaderClusterResourceId,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("principalsModificationKind") String principalsModificationKind,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("softDeletePeriod") String softDeletePeriod,
-        @OutputCustomType.Parameter("statistics") DatabaseStatisticsResponse statistics,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("attachedDatabaseConfigurationName") String attachedDatabaseConfigurationName,
+        @CustomType.Parameter("hotCachePeriod") @Nullable String hotCachePeriod,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("leaderClusterResourceId") String leaderClusterResourceId,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("principalsModificationKind") String principalsModificationKind,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("softDeletePeriod") String softDeletePeriod,
+        @CustomType.Parameter("statistics") DatabaseStatisticsResponse statistics,
+        @CustomType.Parameter("type") String type) {
         this.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
         this.hotCachePeriod = hotCachePeriod;
         this.id = id;

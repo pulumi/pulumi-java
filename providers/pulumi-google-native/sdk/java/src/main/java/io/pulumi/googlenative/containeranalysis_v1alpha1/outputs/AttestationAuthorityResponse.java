@@ -3,16 +3,16 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.AttestationAuthorityHintResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AttestationAuthorityResponse {
     private final AttestationAuthorityHintResponse hint;
 
-    @OutputCustomType.Constructor
-    private AttestationAuthorityResponse(@OutputCustomType.Parameter("hint") AttestationAuthorityHintResponse hint) {
+    @CustomType.Constructor
+    private AttestationAuthorityResponse(@CustomType.Parameter("hint") AttestationAuthorityHintResponse hint) {
         this.hint = hint;
     }
 

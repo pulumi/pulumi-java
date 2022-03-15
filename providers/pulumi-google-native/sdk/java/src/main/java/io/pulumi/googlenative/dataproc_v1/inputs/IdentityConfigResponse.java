@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class IdentityConfigResponse extends io.pulumi.resources.InvokeArgs
      * Map of user to service account.
      * 
      */
-    @InputImport(name="userServiceAccountMapping", required=true)
+    @Import(name="userServiceAccountMapping", required=true)
       private final Map<String,String> userServiceAccountMapping;
 
     public Map<String,String> getUserServiceAccountMapping() {

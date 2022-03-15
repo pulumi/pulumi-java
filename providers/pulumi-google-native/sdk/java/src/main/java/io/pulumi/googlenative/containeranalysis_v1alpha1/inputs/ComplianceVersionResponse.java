@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ComplianceVersionResponse extends io.pulumi.resources.InvokeA
      * The CPE URI (https://cpe.mitre.org/specification/) this benchmark is applicable to.
      * 
      */
-    @InputImport(name="cpeUri", required=true)
+    @Import(name="cpeUri", required=true)
       private final String cpeUri;
 
     public String getCpeUri() {
@@ -31,7 +31,7 @@ public final class ComplianceVersionResponse extends io.pulumi.resources.InvokeA
      * The version of the benchmark. This is set to the version of the OS-specific CIS document the benchmark is defined in.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

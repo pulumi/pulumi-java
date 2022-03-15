@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ApiResourceBackendServiceArgs extends io.pulumi.resources.Res
      * The service URL
      * 
      */
-    @InputImport(name="serviceUrl")
+    @Import(name="serviceUrl")
       private final @Nullable Output<String> serviceUrl;
 
     public Output<String> getServiceUrl() {

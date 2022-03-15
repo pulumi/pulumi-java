@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.BackfillAllStrategyResponse;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.BackfillNoneStrategyResponse;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.DestinationConfigResponse;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetStreamResult {
     /**
      * Automatically backfill objects included in the stream source configuration. Specific objects can be excluded.
@@ -77,20 +77,20 @@ public final class GetStreamResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStreamResult(
-        @OutputCustomType.Parameter("backfillAll") BackfillAllStrategyResponse backfillAll,
-        @OutputCustomType.Parameter("backfillNone") BackfillNoneStrategyResponse backfillNone,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("customerManagedEncryptionKey") String customerManagedEncryptionKey,
-        @OutputCustomType.Parameter("destinationConfig") DestinationConfigResponse destinationConfig,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("errors") List<ErrorResponse> errors,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("sourceConfig") SourceConfigResponse sourceConfig,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("backfillAll") BackfillAllStrategyResponse backfillAll,
+        @CustomType.Parameter("backfillNone") BackfillNoneStrategyResponse backfillNone,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("customerManagedEncryptionKey") String customerManagedEncryptionKey,
+        @CustomType.Parameter("destinationConfig") DestinationConfigResponse destinationConfig,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("errors") List<ErrorResponse> errors,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("sourceConfig") SourceConfigResponse sourceConfig,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.backfillAll = backfillAll;
         this.backfillNone = backfillNone;
         this.createTime = createTime;

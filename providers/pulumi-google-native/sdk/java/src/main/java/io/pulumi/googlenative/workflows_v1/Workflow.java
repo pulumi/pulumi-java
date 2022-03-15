@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.workflows_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.workflows_v1.WorkflowArgs;
@@ -22,7 +22,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * The timestamp of when the workflow was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -36,7 +36,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Description of the workflow provided by the user. Must be at most 1000 unicode characters long.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -50,7 +50,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Labels associated with this workflow. Labels can contain at most 64 entries. Keys and values can be no longer than 63 characters and can only contain lowercase letters, numeric characters, underscores and dashes. Label keys must start with a letter. International characters are allowed.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -64,7 +64,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * The resource name of the workflow. Format: projects/{project}/locations/{location}/workflows/{workflow}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * The timestamp that the latest revision of the workflow was created.
      * 
      */
-    @OutputExport(name="revisionCreateTime", type=String.class, parameters={})
+    @Export(name="revisionCreateTime", type=String.class, parameters={})
     private Output<String> revisionCreateTime;
 
     /**
@@ -92,7 +92,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * The revision of the workflow. A new revision of a workflow is created as a result of updating the following properties of a workflow: - Service account - Workflow code to be executed The format is "000001-a4d", where the first 6 characters define the zero-padded revision ordinal number. They are followed by a hyphen and 3 hexadecimal random characters.
      * 
      */
-    @OutputExport(name="revisionId", type=String.class, parameters={})
+    @Export(name="revisionId", type=String.class, parameters={})
     private Output<String> revisionId;
 
     /**
@@ -106,7 +106,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * The service account associated with the latest workflow version. This service account represents the identity of the workflow and determines what permissions the workflow has. Format: projects/{project}/serviceAccounts/{account} or {account} Using `-` as a wildcard for the `{project}` or not providing one at all will infer the project from the account. The `{account}` value can be the `email` address or the `unique_id` of the service account. If not provided, workflow will use the project's default service account. Modifying this field for an existing workflow results in a new workflow revision.
      * 
      */
-    @OutputExport(name="serviceAccount", type=String.class, parameters={})
+    @Export(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
     /**
@@ -120,7 +120,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * Workflow code to be executed. The size limit is 128KB.
      * 
      */
-    @OutputExport(name="sourceContents", type=String.class, parameters={})
+    @Export(name="sourceContents", type=String.class, parameters={})
     private Output<String> sourceContents;
 
     /**
@@ -134,7 +134,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * State of the workflow deployment.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -148,7 +148,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * The last update timestamp of the workflow.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

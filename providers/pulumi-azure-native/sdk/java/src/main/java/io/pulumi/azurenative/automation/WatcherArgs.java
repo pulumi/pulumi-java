@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the automation account.
      * 
      */
-    @InputImport(name="automationAccountName", required=true)
+    @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
     public Output<String> getAutomationAccountName() {
@@ -31,7 +31,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the frequency at which the watcher is invoked.
      * 
      */
-    @InputImport(name="executionFrequencyInSeconds")
+    @Import(name="executionFrequencyInSeconds")
       private final @Nullable Output<Double> executionFrequencyInSeconds;
 
     public Output<Double> getExecutionFrequencyInSeconds() {
@@ -53,7 +53,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -64,7 +64,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.
      * 
      */
-    @InputImport(name="scriptName")
+    @Import(name="scriptName")
       private final @Nullable Output<String> scriptName;
 
     public Output<String> getScriptName() {
@@ -86,7 +86,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the parameters of the script.
      * 
      */
-    @InputImport(name="scriptParameters")
+    @Import(name="scriptParameters")
       private final @Nullable Output<Map<String,String>> scriptParameters;
 
     public Output<Map<String,String>> getScriptParameters() {
@@ -97,7 +97,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the name of the hybrid worker group the watcher will run on.
      * 
      */
-    @InputImport(name="scriptRunOn")
+    @Import(name="scriptRunOn")
       private final @Nullable Output<String> scriptRunOn;
 
     public Output<String> getScriptRunOn() {
@@ -108,7 +108,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -119,7 +119,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * The watcher name.
      * 
      */
-    @InputImport(name="watcherName")
+    @Import(name="watcherName")
       private final @Nullable Output<String> watcherName;
 
     public Output<String> getWatcherName() {

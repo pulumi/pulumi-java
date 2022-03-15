@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.GoogleMonitoringV3RangeResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MetricRangeResponse {
     /**
      * Range of values considered "good." For a one-sided range, set one bound to an infinite value.
@@ -21,10 +21,10 @@ public final class MetricRangeResponse {
      */
     private final String timeSeries;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricRangeResponse(
-        @OutputCustomType.Parameter("range") GoogleMonitoringV3RangeResponse range,
-        @OutputCustomType.Parameter("timeSeries") String timeSeries) {
+        @CustomType.Parameter("range") GoogleMonitoringV3RangeResponse range,
+        @CustomType.Parameter("timeSeries") String timeSeries) {
         this.range = range;
         this.timeSeries = timeSeries;
     }

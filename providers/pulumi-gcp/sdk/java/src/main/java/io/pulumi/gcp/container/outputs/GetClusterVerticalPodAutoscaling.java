@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterVerticalPodAutoscaling {
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private GetClusterVerticalPodAutoscaling(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private GetClusterVerticalPodAutoscaling(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.outputs.PublicIPAddressSkuResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineIpTagResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachinePublicIPAddressConfigurationResponse {
     /**
      * Specify what happens to the public IP address when the VM is deleted
@@ -63,17 +63,17 @@ public final class VirtualMachinePublicIPAddressConfigurationResponse {
      */
     private final @Nullable PublicIPAddressSkuResponse sku;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachinePublicIPAddressConfigurationResponse(
-        @OutputCustomType.Parameter("deleteOption") @Nullable String deleteOption,
-        @OutputCustomType.Parameter("dnsSettings") @Nullable VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse dnsSettings,
-        @OutputCustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
-        @OutputCustomType.Parameter("ipTags") @Nullable List<VirtualMachineIpTagResponse> ipTags,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("publicIPAddressVersion") @Nullable String publicIPAddressVersion,
-        @OutputCustomType.Parameter("publicIPAllocationMethod") @Nullable String publicIPAllocationMethod,
-        @OutputCustomType.Parameter("publicIPPrefix") @Nullable SubResourceResponse publicIPPrefix,
-        @OutputCustomType.Parameter("sku") @Nullable PublicIPAddressSkuResponse sku) {
+        @CustomType.Parameter("deleteOption") @Nullable String deleteOption,
+        @CustomType.Parameter("dnsSettings") @Nullable VirtualMachinePublicIPAddressDnsSettingsConfigurationResponse dnsSettings,
+        @CustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
+        @CustomType.Parameter("ipTags") @Nullable List<VirtualMachineIpTagResponse> ipTags,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("publicIPAddressVersion") @Nullable String publicIPAddressVersion,
+        @CustomType.Parameter("publicIPAllocationMethod") @Nullable String publicIPAllocationMethod,
+        @CustomType.Parameter("publicIPPrefix") @Nullable SubResourceResponse publicIPPrefix,
+        @CustomType.Parameter("sku") @Nullable PublicIPAddressSkuResponse sku) {
         this.deleteOption = deleteOption;
         this.dnsSettings = dnsSettings;
         this.idleTimeoutInMinutes = idleTimeoutInMinutes;

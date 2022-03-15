@@ -11,7 +11,7 @@ import io.pulumi.azurenative.security.outputs.AssignmentPropertiesResponseAdditi
 import io.pulumi.azurenative.security.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -40,7 +40,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * Additional data about the assignment
      * 
      */
-    @OutputExport(name="additionalData", type=AssignmentPropertiesResponseAdditionalData.class, parameters={})
+    @Export(name="additionalData", type=AssignmentPropertiesResponseAdditionalData.class, parameters={})
     private Output</* @Nullable */ AssignmentPropertiesResponseAdditionalData> additionalData;
 
     /**
@@ -54,7 +54,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * Component item with key as applied to this standard assignment over the given scope
      * 
      */
-    @OutputExport(name="assignedComponent", type=AssignedComponentItemResponse.class, parameters={})
+    @Export(name="assignedComponent", type=AssignedComponentItemResponse.class, parameters={})
     private Output</* @Nullable */ AssignedComponentItemResponse> assignedComponent;
 
     /**
@@ -68,7 +68,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * Standard item with key as applied to this standard assignment over the given scope
      * 
      */
-    @OutputExport(name="assignedStandard", type=AssignedStandardItemResponse.class, parameters={})
+    @Export(name="assignedStandard", type=AssignedStandardItemResponse.class, parameters={})
     private Output</* @Nullable */ AssignedStandardItemResponse> assignedStandard;
 
     /**
@@ -82,7 +82,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * description of the standardAssignment
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -96,7 +96,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * display name of the standardAssignment
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -110,7 +110,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * expected effect of this assignment (Disable/Exempt/etc)
      * 
      */
-    @OutputExport(name="effect", type=String.class, parameters={})
+    @Export(name="effect", type=String.class, parameters={})
     private Output</* @Nullable */ String> effect;
 
     /**
@@ -124,7 +124,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * Entity tag is used for comparing two or more entities from the same requested resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -138,7 +138,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * Expiration date of this assignment as a full ISO date
      * 
      */
-    @OutputExport(name="expiresOn", type=String.class, parameters={})
+    @Export(name="expiresOn", type=String.class, parameters={})
     private Output</* @Nullable */ String> expiresOn;
 
     /**
@@ -152,7 +152,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * Kind of the resource
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -166,7 +166,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * Location where the resource is stored
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -180,7 +180,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * The assignment metadata. Metadata is an open ended object and is typically a collection of key value pairs.
      * 
      */
-    @OutputExport(name="metadata", type=Object.class, parameters={})
+    @Export(name="metadata", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> metadata;
 
     /**
@@ -194,7 +194,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -208,7 +208,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * Scope to which the standardAssignment applies - can be a subscription path or a resource group under that subscription
      * 
      */
-    @OutputExport(name="scope", type=String.class, parameters={})
+    @Export(name="scope", type=String.class, parameters={})
     private Output</* @Nullable */ String> scope;
 
     /**
@@ -222,7 +222,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -236,7 +236,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * A list of key value pairs that describe the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -250,7 +250,7 @@ public class Assignment extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

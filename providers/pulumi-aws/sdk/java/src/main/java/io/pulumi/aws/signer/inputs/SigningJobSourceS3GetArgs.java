@@ -4,7 +4,7 @@
 package io.pulumi.aws.signer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class SigningJobSourceS3GetArgs extends io.pulumi.resources.Resourc
      * Name of the S3 bucket.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -28,7 +28,7 @@ public final class SigningJobSourceS3GetArgs extends io.pulumi.resources.Resourc
      * Key name of the bucket object that contains your unsigned code.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -39,7 +39,7 @@ public final class SigningJobSourceS3GetArgs extends io.pulumi.resources.Resourc
      * Version of your source image in your version enabled S3 bucket.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final Output<String> version;
 
     public Output<String> getVersion() {

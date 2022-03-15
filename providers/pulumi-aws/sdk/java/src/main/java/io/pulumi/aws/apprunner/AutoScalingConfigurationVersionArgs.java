@@ -4,7 +4,7 @@
 package io.pulumi.aws.apprunner;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
      * Name of the auto scaling configuration.
      * 
      */
-    @InputImport(name="autoScalingConfigurationName", required=true)
+    @Import(name="autoScalingConfigurationName", required=true)
       private final Output<String> autoScalingConfigurationName;
 
     public Output<String> getAutoScalingConfigurationName() {
@@ -31,7 +31,7 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
      * The maximal number of concurrent requests that you want an instance to process. When the number of concurrent requests goes over this limit, App Runner scales up your service.
      * 
      */
-    @InputImport(name="maxConcurrency")
+    @Import(name="maxConcurrency")
       private final @Nullable Output<Integer> maxConcurrency;
 
     public Output<Integer> getMaxConcurrency() {
@@ -42,7 +42,7 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
      * The maximal number of instances that App Runner provisions for your service.
      * 
      */
-    @InputImport(name="maxSize")
+    @Import(name="maxSize")
       private final @Nullable Output<Integer> maxSize;
 
     public Output<Integer> getMaxSize() {
@@ -53,7 +53,7 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
      * The minimal number of instances that App Runner provisions for your service.
      * 
      */
-    @InputImport(name="minSize")
+    @Import(name="minSize")
       private final @Nullable Output<Integer> minSize;
 
     public Output<Integer> getMinSize() {
@@ -64,7 +64,7 @@ public final class AutoScalingConfigurationVersionArgs extends io.pulumi.resourc
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

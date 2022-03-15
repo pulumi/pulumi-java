@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The flags for this CAA record as an integer between 0 and 255.
      * 
      */
-    @InputImport(name="flags")
+    @Import(name="flags")
       private final @Nullable Output<Integer> flags;
 
     public Output<Integer> getFlags() {
@@ -34,7 +34,7 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The tag for this CAA record.
      * 
      */
-    @InputImport(name="tag")
+    @Import(name="tag")
       private final @Nullable Output<String> tag;
 
     public Output<String> getTag() {
@@ -45,7 +45,7 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The value for this CAA record.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

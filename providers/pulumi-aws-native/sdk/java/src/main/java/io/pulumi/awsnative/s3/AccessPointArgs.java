@@ -7,7 +7,7 @@ import io.pulumi.awsnative.s3.inputs.AccessPointPublicAccessBlockConfigurationAr
 import io.pulumi.awsnative.s3.inputs.AccessPointVpcConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.PolicyStatusPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the bucket that you want to associate this Access Point with.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -33,14 +33,14 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * The Access Point Policy you want to apply to this access point.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<Object> policy;
 
     public Output<Object> getPolicy() {
         return this.policy == null ? Output.empty() : this.policy;
     }
 
-    @InputImport(name="policyStatus")
+    @Import(name="policyStatus")
       private final @Nullable Output<PolicyStatusPropertiesArgs> policyStatus;
 
     public Output<PolicyStatusPropertiesArgs> getPolicyStatus() {
@@ -51,7 +51,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * The PublicAccessBlock configuration that you want to apply to this Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status 'The Meaning of Public' in the Amazon Simple Storage Service Developer Guide.
      * 
      */
-    @InputImport(name="publicAccessBlockConfiguration")
+    @Import(name="publicAccessBlockConfiguration")
       private final @Nullable Output<AccessPointPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration;
 
     public Output<AccessPointPublicAccessBlockConfigurationArgs> getPublicAccessBlockConfiguration() {
@@ -62,7 +62,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * If you include this field, Amazon S3 restricts access to this Access Point to requests from the specified Virtual Private Cloud (VPC).
      * 
      */
-    @InputImport(name="vpcConfiguration")
+    @Import(name="vpcConfiguration")
       private final @Nullable Output<AccessPointVpcConfigurationArgs> vpcConfiguration;
 
     public Output<AccessPointVpcConfigurationArgs> getVpcConfiguration() {

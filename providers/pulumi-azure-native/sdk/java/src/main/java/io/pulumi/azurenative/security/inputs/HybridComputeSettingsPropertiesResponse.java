@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.ProxyServerPropertiesResponse;
 import io.pulumi.azurenative.security.inputs.ServicePrincipalPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
      * Whether or not to automatically install Azure Arc (hybrid compute) agents on machines
      * 
      */
-    @InputImport(name="autoProvision", required=true)
+    @Import(name="autoProvision", required=true)
       private final String autoProvision;
 
     public String getAutoProvision() {
@@ -35,7 +35,7 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
      * State of the service principal and its secret
      * 
      */
-    @InputImport(name="hybridComputeProvisioningState", required=true)
+    @Import(name="hybridComputeProvisioningState", required=true)
       private final String hybridComputeProvisioningState;
 
     public String getHybridComputeProvisioningState() {
@@ -46,7 +46,7 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
      * For a non-Azure machine that is not connected directly to the internet, specify a proxy server that the non-Azure machine can use.
      * 
      */
-    @InputImport(name="proxyServer")
+    @Import(name="proxyServer")
       private final @Nullable ProxyServerPropertiesResponse proxyServer;
 
     public Optional<ProxyServerPropertiesResponse> getProxyServer() {
@@ -57,7 +57,7 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
      * The location where the metadata of machines will be stored
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable String region;
 
     public Optional<String> getRegion() {
@@ -68,7 +68,7 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
      * The name of the resource group where Arc (Hybrid Compute) connectors are connected.
      * 
      */
-    @InputImport(name="resourceGroupName")
+    @Import(name="resourceGroupName")
       private final @Nullable String resourceGroupName;
 
     public Optional<String> getResourceGroupName() {
@@ -79,7 +79,7 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
      * An object to access resources that are secured by an Azure AD tenant.
      * 
      */
-    @InputImport(name="servicePrincipal")
+    @Import(name="servicePrincipal")
       private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
 
     public Optional<ServicePrincipalPropertiesResponse> getServicePrincipal() {

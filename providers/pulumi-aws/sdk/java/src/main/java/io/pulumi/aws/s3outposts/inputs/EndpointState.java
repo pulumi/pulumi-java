@@ -5,7 +5,7 @@ package io.pulumi.aws.s3outposts.inputs;
 
 import io.pulumi.aws.s3outposts.inputs.EndpointNetworkInterfaceGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the endpoint.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * VPC CIDR block of the endpoint.
      * 
      */
-    @InputImport(name="cidrBlock")
+    @Import(name="cidrBlock")
       private final @Nullable Output<String> cidrBlock;
 
     public Output<String> getCidrBlock() {
@@ -42,7 +42,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * UTC creation time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8).
      * 
      */
-    @InputImport(name="creationTime")
+    @Import(name="creationTime")
       private final @Nullable Output<String> creationTime;
 
     public Output<String> getCreationTime() {
@@ -53,7 +53,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * Set of nested attributes for associated Elastic Network Interfaces (ENIs).
      * 
      */
-    @InputImport(name="networkInterfaces")
+    @Import(name="networkInterfaces")
       private final @Nullable Output<List<EndpointNetworkInterfaceGetArgs>> networkInterfaces;
 
     public Output<List<EndpointNetworkInterfaceGetArgs>> getNetworkInterfaces() {
@@ -64,7 +64,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * Identifier of the Outpost to contain this endpoint.
      * 
      */
-    @InputImport(name="outpostId")
+    @Import(name="outpostId")
       private final @Nullable Output<String> outpostId;
 
     public Output<String> getOutpostId() {
@@ -75,7 +75,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * Identifier of the EC2 Security Group.
      * 
      */
-    @InputImport(name="securityGroupId")
+    @Import(name="securityGroupId")
       private final @Nullable Output<String> securityGroupId;
 
     public Output<String> getSecurityGroupId() {
@@ -86,7 +86,7 @@ public final class EndpointState extends io.pulumi.resources.ResourceArgs {
      * Identifier of the EC2 Subnet.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {

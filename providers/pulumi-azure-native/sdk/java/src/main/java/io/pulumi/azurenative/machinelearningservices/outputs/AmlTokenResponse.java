@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AmlTokenResponse {
     /**
      * Enum to determine identity framework.
@@ -16,8 +16,8 @@ public final class AmlTokenResponse {
      */
     private final String identityType;
 
-    @OutputCustomType.Constructor
-    private AmlTokenResponse(@OutputCustomType.Parameter("identityType") String identityType) {
+    @CustomType.Constructor
+    private AmlTokenResponse(@CustomType.Parameter("identityType") String identityType) {
         this.identityType = identityType;
     }
 

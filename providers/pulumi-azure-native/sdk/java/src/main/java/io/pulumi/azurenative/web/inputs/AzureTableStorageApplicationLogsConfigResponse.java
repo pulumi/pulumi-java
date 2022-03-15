@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AzureTableStorageApplicationLogsConfigResponse extends io.pul
      * Log level.
      * 
      */
-    @InputImport(name="level")
+    @Import(name="level")
       private final @Nullable String level;
 
     public Optional<String> getLevel() {
@@ -33,7 +33,7 @@ public final class AzureTableStorageApplicationLogsConfigResponse extends io.pul
      * SAS URL to an Azure table with add/query/delete permissions.
      * 
      */
-    @InputImport(name="sasUrl", required=true)
+    @Import(name="sasUrl", required=true)
       private final String sasUrl;
 
     public String getSasUrl() {

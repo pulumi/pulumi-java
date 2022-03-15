@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.BigtableColumnFamilyResponse;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BigtableOptionsResponse {
     /**
      * [Optional] List of column families to expose in the table schema along with their types. This list restricts the column families that can be referenced in queries and specifies their value types. You can use this list to do type conversions - see the 'type' field for more details. If you leave this list empty, all column families are present in the table schema and their values are read as BYTES. During a query only the column families referenced in that query are read from Bigtable.
@@ -27,11 +27,11 @@ public final class BigtableOptionsResponse {
      */
     private final Boolean readRowkeyAsString;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BigtableOptionsResponse(
-        @OutputCustomType.Parameter("columnFamilies") List<BigtableColumnFamilyResponse> columnFamilies,
-        @OutputCustomType.Parameter("ignoreUnspecifiedColumnFamilies") Boolean ignoreUnspecifiedColumnFamilies,
-        @OutputCustomType.Parameter("readRowkeyAsString") Boolean readRowkeyAsString) {
+        @CustomType.Parameter("columnFamilies") List<BigtableColumnFamilyResponse> columnFamilies,
+        @CustomType.Parameter("ignoreUnspecifiedColumnFamilies") Boolean ignoreUnspecifiedColumnFamilies,
+        @CustomType.Parameter("readRowkeyAsString") Boolean readRowkeyAsString) {
         this.columnFamilies = columnFamilies;
         this.ignoreUnspecifiedColumnFamilies = ignoreUnspecifiedColumnFamilies;
         this.readRowkeyAsString = readRowkeyAsString;

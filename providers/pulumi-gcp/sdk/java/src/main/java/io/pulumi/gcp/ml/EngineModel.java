@@ -4,7 +4,7 @@
 package io.pulumi.gcp.ml;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.ml.EngineModelArgs;
@@ -54,7 +54,7 @@ public class EngineModel extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="defaultVersion", type=EngineModelDefaultVersion.class, parameters={})
+    @Export(name="defaultVersion", type=EngineModelDefaultVersion.class, parameters={})
     private Output</* @Nullable */ EngineModelDefaultVersion> defaultVersion;
 
     /**
@@ -70,7 +70,7 @@ public class EngineModel extends io.pulumi.resources.CustomResource {
      * The description specified for the model when it was created.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -84,7 +84,7 @@ public class EngineModel extends io.pulumi.resources.CustomResource {
      * One or more labels that you can add, to organize your models.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -98,7 +98,7 @@ public class EngineModel extends io.pulumi.resources.CustomResource {
      * The name specified for the version when it was created.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -112,7 +112,7 @@ public class EngineModel extends io.pulumi.resources.CustomResource {
      * If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
      * 
      */
-    @OutputExport(name="onlinePredictionConsoleLogging", type=Boolean.class, parameters={})
+    @Export(name="onlinePredictionConsoleLogging", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> onlinePredictionConsoleLogging;
 
     /**
@@ -126,7 +126,7 @@ public class EngineModel extends io.pulumi.resources.CustomResource {
      * If true, online prediction access logs are sent to StackDriver Logging.
      * 
      */
-    @OutputExport(name="onlinePredictionLogging", type=Boolean.class, parameters={})
+    @Export(name="onlinePredictionLogging", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> onlinePredictionLogging;
 
     /**
@@ -141,7 +141,7 @@ public class EngineModel extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -157,7 +157,7 @@ public class EngineModel extends io.pulumi.resources.CustomResource {
      * Currently only one region per model is supported
      * 
      */
-    @OutputExport(name="regions", type=String.class, parameters={})
+    @Export(name="regions", type=String.class, parameters={})
     private Output</* @Nullable */ String> regions;
 
     /**

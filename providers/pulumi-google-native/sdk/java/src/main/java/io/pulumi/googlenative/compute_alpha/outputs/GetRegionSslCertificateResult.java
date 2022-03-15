@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.SslCertificateManagedSslCertificateResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.SslCertificateSelfManagedSslCertificateResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRegionSslCertificateResult {
     /**
      * A value read into memory from a certificate file. The certificate file must be in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.
@@ -83,22 +83,22 @@ public final class GetRegionSslCertificateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegionSslCertificateResult(
-        @OutputCustomType.Parameter("certificate") String certificate,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("expireTime") String expireTime,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("managed") SslCertificateManagedSslCertificateResponse managed,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateKey") String privateKey,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("selfManaged") SslCertificateSelfManagedSslCertificateResponse selfManaged,
-        @OutputCustomType.Parameter("subjectAlternativeNames") List<String> subjectAlternativeNames,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("certificate") String certificate,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("expireTime") String expireTime,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("managed") SslCertificateManagedSslCertificateResponse managed,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateKey") String privateKey,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("selfManaged") SslCertificateSelfManagedSslCertificateResponse selfManaged,
+        @CustomType.Parameter("subjectAlternativeNames") List<String> subjectAlternativeNames,
+        @CustomType.Parameter("type") String type) {
         this.certificate = certificate;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

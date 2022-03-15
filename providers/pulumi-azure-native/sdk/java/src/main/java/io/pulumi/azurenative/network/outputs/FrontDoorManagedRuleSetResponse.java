@@ -5,14 +5,14 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.FrontDoorManagedRuleGroupOverrideResponse;
 import io.pulumi.azurenative.network.outputs.ManagedRuleExclusionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FrontDoorManagedRuleSetResponse {
     /**
      * Describes the exclusions that are applied to all rules in the set.
@@ -40,13 +40,13 @@ public final class FrontDoorManagedRuleSetResponse {
      */
     private final String ruleSetVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FrontDoorManagedRuleSetResponse(
-        @OutputCustomType.Parameter("exclusions") @Nullable List<ManagedRuleExclusionResponse> exclusions,
-        @OutputCustomType.Parameter("ruleGroupOverrides") @Nullable List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides,
-        @OutputCustomType.Parameter("ruleSetAction") @Nullable String ruleSetAction,
-        @OutputCustomType.Parameter("ruleSetType") String ruleSetType,
-        @OutputCustomType.Parameter("ruleSetVersion") String ruleSetVersion) {
+        @CustomType.Parameter("exclusions") @Nullable List<ManagedRuleExclusionResponse> exclusions,
+        @CustomType.Parameter("ruleGroupOverrides") @Nullable List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides,
+        @CustomType.Parameter("ruleSetAction") @Nullable String ruleSetAction,
+        @CustomType.Parameter("ruleSetType") String ruleSetType,
+        @CustomType.Parameter("ruleSetVersion") String ruleSetVersion) {
         this.exclusions = exclusions;
         this.ruleGroupOverrides = ruleGroupOverrides;
         this.ruleSetAction = ruleSetAction;

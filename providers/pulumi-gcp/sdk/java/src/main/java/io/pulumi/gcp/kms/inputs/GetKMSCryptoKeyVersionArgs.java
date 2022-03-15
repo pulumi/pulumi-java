@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetKMSCryptoKeyVersionArgs extends io.pulumi.resources.Invoke
      * `gcp.kms.CryptoKey` resource/datasource.
      * 
      */
-    @InputImport(name="cryptoKey", required=true)
+    @Import(name="cryptoKey", required=true)
       private final String cryptoKey;
 
     public String getCryptoKey() {
@@ -31,7 +31,7 @@ public final class GetKMSCryptoKeyVersionArgs extends io.pulumi.resources.Invoke
      * The version number for this CryptoKeyVersion. Defaults to `1`.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Integer version;
 
     public Optional<Integer> getVersion() {

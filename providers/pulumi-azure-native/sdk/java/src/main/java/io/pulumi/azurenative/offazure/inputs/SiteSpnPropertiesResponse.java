@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.offazure.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SiteSpnPropertiesResponse extends io.pulumi.resources.InvokeA
      * AAD Authority URL which was used to request the token for the service principal.
      * 
      */
-    @InputImport(name="aadAuthority")
+    @Import(name="aadAuthority")
       private final @Nullable String aadAuthority;
 
     public Optional<String> getAadAuthority() {
@@ -33,7 +33,7 @@ public final class SiteSpnPropertiesResponse extends io.pulumi.resources.InvokeA
      * Application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
      */
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable String applicationId;
 
     public Optional<String> getApplicationId() {
@@ -44,7 +44,7 @@ public final class SiteSpnPropertiesResponse extends io.pulumi.resources.InvokeA
      * Intended audience for the service principal.
      * 
      */
-    @InputImport(name="audience")
+    @Import(name="audience")
       private final @Nullable String audience;
 
     public Optional<String> getAudience() {
@@ -55,7 +55,7 @@ public final class SiteSpnPropertiesResponse extends io.pulumi.resources.InvokeA
      * Object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
      */
-    @InputImport(name="objectId")
+    @Import(name="objectId")
       private final @Nullable String objectId;
 
     public Optional<String> getObjectId() {
@@ -66,7 +66,7 @@ public final class SiteSpnPropertiesResponse extends io.pulumi.resources.InvokeA
      * Raw certificate data for building certificate expiry flows.
      * 
      */
-    @InputImport(name="rawCertData")
+    @Import(name="rawCertData")
       private final @Nullable String rawCertData;
 
     public Optional<String> getRawCertData() {
@@ -77,7 +77,7 @@ public final class SiteSpnPropertiesResponse extends io.pulumi.resources.InvokeA
      * Tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {

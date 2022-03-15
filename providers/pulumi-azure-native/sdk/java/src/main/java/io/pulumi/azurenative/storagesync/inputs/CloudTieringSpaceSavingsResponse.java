@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
      * Cached content size on the server
      * 
      */
-    @InputImport(name="cachedSizeBytes", required=true)
+    @Import(name="cachedSizeBytes", required=true)
       private final Double cachedSizeBytes;
 
     public Double getCachedSizeBytes() {
@@ -33,7 +33,7 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
      * Last updated timestamp
      * 
      */
-    @InputImport(name="lastUpdatedTimestamp", required=true)
+    @Import(name="lastUpdatedTimestamp", required=true)
       private final String lastUpdatedTimestamp;
 
     public String getLastUpdatedTimestamp() {
@@ -44,7 +44,7 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
      * Count of bytes saved on the server
      * 
      */
-    @InputImport(name="spaceSavingsBytes", required=true)
+    @Import(name="spaceSavingsBytes", required=true)
       private final Double spaceSavingsBytes;
 
     public Double getSpaceSavingsBytes() {
@@ -55,7 +55,7 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
      * Percentage of cached size over total size
      * 
      */
-    @InputImport(name="spaceSavingsPercent", required=true)
+    @Import(name="spaceSavingsPercent", required=true)
       private final Integer spaceSavingsPercent;
 
     public Integer getSpaceSavingsPercent() {
@@ -66,7 +66,7 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
      * Total size of content in the azure file share
      * 
      */
-    @InputImport(name="totalSizeCloudBytes", required=true)
+    @Import(name="totalSizeCloudBytes", required=true)
       private final Double totalSizeCloudBytes;
 
     public Double getTotalSizeCloudBytes() {
@@ -77,7 +77,7 @@ public final class CloudTieringSpaceSavingsResponse extends io.pulumi.resources.
      * Volume size
      * 
      */
-    @InputImport(name="volumeSizeBytes", required=true)
+    @Import(name="volumeSizeBytes", required=true)
       private final Double volumeSizeBytes;
 
     public Double getVolumeSizeBytes() {

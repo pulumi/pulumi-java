@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SchedulingNodeAffinityResponse extends io.pulumi.resources.In
      * Corresponds to the label key of Node resource.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -32,7 +32,7 @@ public final class SchedulingNodeAffinityResponse extends io.pulumi.resources.In
      * Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final String operator;
 
     public String getOperator() {
@@ -43,7 +43,7 @@ public final class SchedulingNodeAffinityResponse extends io.pulumi.resources.In
      * Corresponds to the label values of Node resource.
      * 
      */
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final List<String> values;
 
     public List<String> getValues() {

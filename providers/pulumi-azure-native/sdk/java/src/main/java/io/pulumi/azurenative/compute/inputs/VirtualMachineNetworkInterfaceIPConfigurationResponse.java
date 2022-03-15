@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.SubResourceResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachinePublicIPAddressConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * Specifies an array of references to backend address pools of application gateways. A virtual machine can reference backend address pools of multiple application gateways. Multiple virtual machines cannot use the same application gateway.
      * 
      */
-    @InputImport(name="applicationGatewayBackendAddressPools")
+    @Import(name="applicationGatewayBackendAddressPools")
       private final @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools;
 
     public List<SubResourceResponse> getApplicationGatewayBackendAddressPools() {
@@ -37,7 +37,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * Specifies an array of references to application security group.
      * 
      */
-    @InputImport(name="applicationSecurityGroups")
+    @Import(name="applicationSecurityGroups")
       private final @Nullable List<SubResourceResponse> applicationSecurityGroups;
 
     public List<SubResourceResponse> getApplicationSecurityGroups() {
@@ -48,7 +48,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * Specifies an array of references to backend address pools of load balancers. A virtual machine can reference backend address pools of one public and one internal load balancer. [Multiple virtual machines cannot use the same basic sku load balancer].
      * 
      */
-    @InputImport(name="loadBalancerBackendAddressPools")
+    @Import(name="loadBalancerBackendAddressPools")
       private final @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools;
 
     public List<SubResourceResponse> getLoadBalancerBackendAddressPools() {
@@ -59,7 +59,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * The IP configuration name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -70,7 +70,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * Specifies the primary network interface in case the virtual machine has more than 1 network interface.
      * 
      */
-    @InputImport(name="primary")
+    @Import(name="primary")
       private final @Nullable Boolean primary;
 
     public Optional<Boolean> getPrimary() {
@@ -81,7 +81,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * Available from Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.  Possible values are: 'IPv4' and 'IPv6'.
      * 
      */
-    @InputImport(name="privateIPAddressVersion")
+    @Import(name="privateIPAddressVersion")
       private final @Nullable String privateIPAddressVersion;
 
     public Optional<String> getPrivateIPAddressVersion() {
@@ -92,7 +92,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * The publicIPAddressConfiguration.
      * 
      */
-    @InputImport(name="publicIPAddressConfiguration")
+    @Import(name="publicIPAddressConfiguration")
       private final @Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration;
 
     public Optional<VirtualMachinePublicIPAddressConfigurationResponse> getPublicIPAddressConfiguration() {
@@ -103,7 +103,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * Specifies the identifier of the subnet.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable SubResourceResponse subnet;
 
     public Optional<SubResourceResponse> getSubnet() {

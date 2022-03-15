@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.resiliencehub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,28 +14,28 @@ public final class AppPhysicalResourceIdArgs extends io.pulumi.resources.Resourc
 
     public static final AppPhysicalResourceIdArgs Empty = new AppPhysicalResourceIdArgs();
 
-    @InputImport(name="awsAccountId")
+    @Import(name="awsAccountId")
       private final @Nullable Output<String> awsAccountId;
 
     public Output<String> getAwsAccountId() {
         return this.awsAccountId == null ? Output.empty() : this.awsAccountId;
     }
 
-    @InputImport(name="awsRegion")
+    @Import(name="awsRegion")
       private final @Nullable Output<String> awsRegion;
 
     public Output<String> getAwsRegion() {
         return this.awsRegion == null ? Output.empty() : this.awsRegion;
     }
 
-    @InputImport(name="identifier", required=true)
+    @Import(name="identifier", required=true)
       private final Output<String> identifier;
 
     public Output<String> getIdentifier() {
         return this.identifier;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

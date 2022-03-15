@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.metastore_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.metastore_v1beta.outputs.ConsumerResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkConfigResponse {
     /**
      * Immutable. The consumer-side network configuration for the Dataproc Metastore instance.
@@ -16,8 +16,8 @@ public final class NetworkConfigResponse {
      */
     private final List<ConsumerResponse> consumers;
 
-    @OutputCustomType.Constructor
-    private NetworkConfigResponse(@OutputCustomType.Parameter("consumers") List<ConsumerResponse> consumers) {
+    @CustomType.Constructor
+    private NetworkConfigResponse(@CustomType.Parameter("consumers") List<ConsumerResponse> consumers) {
         this.consumers = consumers;
     }
 

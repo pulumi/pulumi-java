@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.pinpoint.outputs;
 
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateButtonAction;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InAppTemplateOverrideButtonConfiguration {
     private final @Nullable InAppTemplateButtonAction buttonAction;
     private final @Nullable String link;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InAppTemplateOverrideButtonConfiguration(
-        @OutputCustomType.Parameter("buttonAction") @Nullable InAppTemplateButtonAction buttonAction,
-        @OutputCustomType.Parameter("link") @Nullable String link) {
+        @CustomType.Parameter("buttonAction") @Nullable InAppTemplateButtonAction buttonAction,
+        @CustomType.Parameter("link") @Nullable String link) {
         this.buttonAction = buttonAction;
         this.link = link;
     }

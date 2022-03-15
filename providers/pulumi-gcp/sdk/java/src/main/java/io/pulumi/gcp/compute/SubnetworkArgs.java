@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.SubnetworkLogConfigArgs;
 import io.pulumi.gcp.compute.inputs.SubnetworkSecondaryIpRangeArgs;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * creation time.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -38,7 +38,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * secondary IP ranges within a network. Only IPv4 is supported.
      * 
      */
-    @InputImport(name="ipCidrRange", required=true)
+    @Import(name="ipCidrRange", required=true)
       private final Output<String> ipCidrRange;
 
     public Output<String> getIpCidrRange() {
@@ -52,7 +52,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `EXTERNAL`.
      * 
      */
-    @InputImport(name="ipv6AccessType")
+    @Import(name="ipv6AccessType")
       private final @Nullable Output<String> ipv6AccessType;
 
     public Output<String> getIpv6AccessType() {
@@ -66,7 +66,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="logConfig")
+    @Import(name="logConfig")
       private final @Nullable Output<SubnetworkLogConfigArgs> logConfig;
 
     public Output<SubnetworkLogConfigArgs> getLogConfig() {
@@ -83,7 +83,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -95,7 +95,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Only networks that are in the distributed mode can have subnetworks.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final Output<String> network;
 
     public Output<String> getNetwork() {
@@ -107,7 +107,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * access Google APIs and services by using Private Google Access.
      * 
      */
-    @InputImport(name="privateIpGoogleAccess")
+    @Import(name="privateIpGoogleAccess")
       private final @Nullable Output<Boolean> privateIpGoogleAccess;
 
     public Output<Boolean> getPrivateIpGoogleAccess() {
@@ -118,7 +118,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The private IPv6 google access type for the VMs in this subnet.
      * 
      */
-    @InputImport(name="privateIpv6GoogleAccess")
+    @Import(name="privateIpv6GoogleAccess")
       private final @Nullable Output<String> privateIpv6GoogleAccess;
 
     public Output<String> getPrivateIpv6GoogleAccess() {
@@ -130,7 +130,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -144,7 +144,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * If set to INTERNAL_HTTPS_LOAD_BALANCER you must also set the `role` field.
      * 
      */
-    @InputImport(name="purpose")
+    @Import(name="purpose")
       private final @Nullable Output<String> purpose;
 
     public Output<String> getPurpose() {
@@ -155,7 +155,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * The GCP region for this subnetwork.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -171,7 +171,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `ACTIVE` and `BACKUP`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
@@ -186,7 +186,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="secondaryIpRanges")
+    @Import(name="secondaryIpRanges")
       private final @Nullable Output<List<SubnetworkSecondaryIpRangeArgs>> secondaryIpRanges;
 
     public Output<List<SubnetworkSecondaryIpRangeArgs>> getSecondaryIpRanges() {
@@ -199,7 +199,7 @@ public final class SubnetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `IPV4_ONLY` and `IPV4_IPV6`.
      * 
      */
-    @InputImport(name="stackType")
+    @Import(name="stackType")
       private final @Nullable Output<String> stackType;
 
     public Output<String> getStackType() {

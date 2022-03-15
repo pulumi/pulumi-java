@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudidentity_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudidentity_v1beta1.DeviceArgs;
@@ -26,7 +26,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Attributes specific to Android devices.
      * 
      */
-    @OutputExport(name="androidSpecificAttributes", type=AndroidAttributesResponse.class, parameters={})
+    @Export(name="androidSpecificAttributes", type=AndroidAttributesResponse.class, parameters={})
     private Output<AndroidAttributesResponse> androidSpecificAttributes;
 
     /**
@@ -40,7 +40,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Asset tag of the device.
      * 
      */
-    @OutputExport(name="assetTag", type=String.class, parameters={})
+    @Export(name="assetTag", type=String.class, parameters={})
     private Output<String> assetTag;
 
     /**
@@ -54,7 +54,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Baseband version of the device.
      * 
      */
-    @OutputExport(name="basebandVersion", type=String.class, parameters={})
+    @Export(name="basebandVersion", type=String.class, parameters={})
     private Output<String> basebandVersion;
 
     /**
@@ -68,7 +68,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Device bootloader version. Example: 0.6.7.
      * 
      */
-    @OutputExport(name="bootloaderVersion", type=String.class, parameters={})
+    @Export(name="bootloaderVersion", type=String.class, parameters={})
     private Output<String> bootloaderVersion;
 
     /**
@@ -82,7 +82,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Device brand. Example: Samsung.
      * 
      */
-    @OutputExport(name="brand", type=String.class, parameters={})
+    @Export(name="brand", type=String.class, parameters={})
     private Output<String> brand;
 
     /**
@@ -96,7 +96,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Build number of the device.
      * 
      */
-    @OutputExport(name="buildNumber", type=String.class, parameters={})
+    @Export(name="buildNumber", type=String.class, parameters={})
     private Output<String> buildNumber;
 
     /**
@@ -110,7 +110,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Represents whether the Device is compromised.
      * 
      */
-    @OutputExport(name="compromisedState", type=String.class, parameters={})
+    @Export(name="compromisedState", type=String.class, parameters={})
     private Output<String> compromisedState;
 
     /**
@@ -124,7 +124,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * When the Company-Owned device was imported. This field is empty for BYOD devices.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -138,7 +138,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Type of device.
      * 
      */
-    @OutputExport(name="deviceType", type=String.class, parameters={})
+    @Export(name="deviceType", type=String.class, parameters={})
     private Output<String> deviceType;
 
     /**
@@ -152,7 +152,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Whether developer options is enabled on device.
      * 
      */
-    @OutputExport(name="enabledDeveloperOptions", type=Boolean.class, parameters={})
+    @Export(name="enabledDeveloperOptions", type=Boolean.class, parameters={})
     private Output<Boolean> enabledDeveloperOptions;
 
     /**
@@ -166,7 +166,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Whether USB debugging is enabled on device.
      * 
      */
-    @OutputExport(name="enabledUsbDebugging", type=Boolean.class, parameters={})
+    @Export(name="enabledUsbDebugging", type=Boolean.class, parameters={})
     private Output<Boolean> enabledUsbDebugging;
 
     /**
@@ -180,7 +180,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Device encryption state.
      * 
      */
-    @OutputExport(name="encryptionState", type=String.class, parameters={})
+    @Export(name="encryptionState", type=String.class, parameters={})
     private Output<String> encryptionState;
 
     /**
@@ -194,7 +194,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Attributes specific to Endpoint Verification devices.
      * 
      */
-    @OutputExport(name="endpointVerificationSpecificAttributes", type=EndpointVerificationSpecificAttributesResponse.class, parameters={})
+    @Export(name="endpointVerificationSpecificAttributes", type=EndpointVerificationSpecificAttributesResponse.class, parameters={})
     private Output<EndpointVerificationSpecificAttributesResponse> endpointVerificationSpecificAttributes;
 
     /**
@@ -208,7 +208,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * IMEI number of device if GSM device; empty otherwise.
      * 
      */
-    @OutputExport(name="imei", type=String.class, parameters={})
+    @Export(name="imei", type=String.class, parameters={})
     private Output<String> imei;
 
     /**
@@ -222,7 +222,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Kernel version of the device.
      * 
      */
-    @OutputExport(name="kernelVersion", type=String.class, parameters={})
+    @Export(name="kernelVersion", type=String.class, parameters={})
     private Output<String> kernelVersion;
 
     /**
@@ -236,7 +236,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Most recent time when device synced with this service.
      * 
      */
-    @OutputExport(name="lastSyncTime", type=String.class, parameters={})
+    @Export(name="lastSyncTime", type=String.class, parameters={})
     private Output<String> lastSyncTime;
 
     /**
@@ -250,7 +250,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Management state of the device
      * 
      */
-    @OutputExport(name="managementState", type=String.class, parameters={})
+    @Export(name="managementState", type=String.class, parameters={})
     private Output<String> managementState;
 
     /**
@@ -264,7 +264,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Device manufacturer. Example: Motorola.
      * 
      */
-    @OutputExport(name="manufacturer", type=String.class, parameters={})
+    @Export(name="manufacturer", type=String.class, parameters={})
     private Output<String> manufacturer;
 
     /**
@@ -278,7 +278,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * MEID number of device if CDMA device; empty otherwise.
      * 
      */
-    @OutputExport(name="meid", type=String.class, parameters={})
+    @Export(name="meid", type=String.class, parameters={})
     private Output<String> meid;
 
     /**
@@ -292,7 +292,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Model name of device. Example: Pixel 3.
      * 
      */
-    @OutputExport(name="model", type=String.class, parameters={})
+    @Export(name="model", type=String.class, parameters={})
     private Output<String> model;
 
     /**
@@ -306,7 +306,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * [Resource name](https://cloud.google.com/apis/design/resource_names) of the Device in format: `devices/{device_id}`, where device_id is the unique id assigned to the Device.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -320,7 +320,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Mobile or network operator of device, if available.
      * 
      */
-    @OutputExport(name="networkOperator", type=String.class, parameters={})
+    @Export(name="networkOperator", type=String.class, parameters={})
     private Output<String> networkOperator;
 
     /**
@@ -334,7 +334,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * OS version of the device. Example: Android 8.1.0.
      * 
      */
-    @OutputExport(name="osVersion", type=String.class, parameters={})
+    @Export(name="osVersion", type=String.class, parameters={})
     private Output<String> osVersion;
 
     /**
@@ -348,7 +348,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Domain name for Google accounts on device. Type for other accounts on device. On Android, will only be populated if |ownership_privilege| is |PROFILE_OWNER| or |DEVICE_OWNER|. Does not include the account signed in to the device policy app if that account's domain has only one account. Examples: "com.example", "xyz.com".
      * 
      */
-    @OutputExport(name="otherAccounts", type=List.class, parameters={String.class})
+    @Export(name="otherAccounts", type=List.class, parameters={String.class})
     private Output<List<String>> otherAccounts;
 
     /**
@@ -362,7 +362,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Whether the device is owned by the company or an individual
      * 
      */
-    @OutputExport(name="ownerType", type=String.class, parameters={})
+    @Export(name="ownerType", type=String.class, parameters={})
     private Output<String> ownerType;
 
     /**
@@ -376,7 +376,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * OS release version. Example: 6.0.
      * 
      */
-    @OutputExport(name="releaseVersion", type=String.class, parameters={})
+    @Export(name="releaseVersion", type=String.class, parameters={})
     private Output<String> releaseVersion;
 
     /**
@@ -390,7 +390,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * OS security patch update time on device.
      * 
      */
-    @OutputExport(name="securityPatchTime", type=String.class, parameters={})
+    @Export(name="securityPatchTime", type=String.class, parameters={})
     private Output<String> securityPatchTime;
 
     /**
@@ -404,7 +404,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Serial Number of device. Example: HT82V1A01076.
      * 
      */
-    @OutputExport(name="serialNumber", type=String.class, parameters={})
+    @Export(name="serialNumber", type=String.class, parameters={})
     private Output<String> serialNumber;
 
     /**
@@ -418,7 +418,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * WiFi MAC addresses of device.
      * 
      */
-    @OutputExport(name="wifiMacAddresses", type=List.class, parameters={String.class})
+    @Export(name="wifiMacAddresses", type=List.class, parameters={String.class})
     private Output<List<String>> wifiMacAddresses;
 
     /**

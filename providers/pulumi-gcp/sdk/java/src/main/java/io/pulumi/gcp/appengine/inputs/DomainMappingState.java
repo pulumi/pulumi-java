@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.appengine.inputs.DomainMappingResourceRecordGetArgs;
 import io.pulumi.gcp.appengine.inputs.DomainMappingSslSettingsGetArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
      * Relative name of the domain serving the application. Example: example.com.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -32,7 +32,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
      * Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `STRICT` and `OVERRIDE`.
      * 
      */
-    @InputImport(name="overrideStrategy")
+    @Import(name="overrideStrategy")
       private final @Nullable Output<String> overrideStrategy;
 
     public Output<String> getOverrideStrategy() {
@@ -58,7 +58,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -70,7 +70,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
      * configuration in order to serve the application via this domain mapping.
      * 
      */
-    @InputImport(name="resourceRecords")
+    @Import(name="resourceRecords")
       private final @Nullable Output<List<DomainMappingResourceRecordGetArgs>> resourceRecords;
 
     public Output<List<DomainMappingResourceRecordGetArgs>> getResourceRecords() {
@@ -82,7 +82,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="sslSettings")
+    @Import(name="sslSettings")
       private final @Nullable Output<DomainMappingSslSettingsGetArgs> sslSettings;
 
     public Output<DomainMappingSslSettingsGetArgs> getSslSettings() {

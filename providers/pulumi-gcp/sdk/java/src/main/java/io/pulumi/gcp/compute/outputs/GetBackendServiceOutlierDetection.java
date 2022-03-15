@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetBackendServiceOutlierDetectionBaseEjectionTime;
 import io.pulumi.gcp.compute.outputs.GetBackendServiceOutlierDetectionInterval;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackendServiceOutlierDetection {
     private final List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes;
     private final Integer consecutiveErrors;
@@ -24,19 +24,19 @@ public final class GetBackendServiceOutlierDetection {
     private final Integer successRateRequestVolume;
     private final Integer successRateStdevFactor;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackendServiceOutlierDetection(
-        @OutputCustomType.Parameter("baseEjectionTimes") List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes,
-        @OutputCustomType.Parameter("consecutiveErrors") Integer consecutiveErrors,
-        @OutputCustomType.Parameter("consecutiveGatewayFailure") Integer consecutiveGatewayFailure,
-        @OutputCustomType.Parameter("enforcingConsecutiveErrors") Integer enforcingConsecutiveErrors,
-        @OutputCustomType.Parameter("enforcingConsecutiveGatewayFailure") Integer enforcingConsecutiveGatewayFailure,
-        @OutputCustomType.Parameter("enforcingSuccessRate") Integer enforcingSuccessRate,
-        @OutputCustomType.Parameter("intervals") List<GetBackendServiceOutlierDetectionInterval> intervals,
-        @OutputCustomType.Parameter("maxEjectionPercent") Integer maxEjectionPercent,
-        @OutputCustomType.Parameter("successRateMinimumHosts") Integer successRateMinimumHosts,
-        @OutputCustomType.Parameter("successRateRequestVolume") Integer successRateRequestVolume,
-        @OutputCustomType.Parameter("successRateStdevFactor") Integer successRateStdevFactor) {
+        @CustomType.Parameter("baseEjectionTimes") List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes,
+        @CustomType.Parameter("consecutiveErrors") Integer consecutiveErrors,
+        @CustomType.Parameter("consecutiveGatewayFailure") Integer consecutiveGatewayFailure,
+        @CustomType.Parameter("enforcingConsecutiveErrors") Integer enforcingConsecutiveErrors,
+        @CustomType.Parameter("enforcingConsecutiveGatewayFailure") Integer enforcingConsecutiveGatewayFailure,
+        @CustomType.Parameter("enforcingSuccessRate") Integer enforcingSuccessRate,
+        @CustomType.Parameter("intervals") List<GetBackendServiceOutlierDetectionInterval> intervals,
+        @CustomType.Parameter("maxEjectionPercent") Integer maxEjectionPercent,
+        @CustomType.Parameter("successRateMinimumHosts") Integer successRateMinimumHosts,
+        @CustomType.Parameter("successRateRequestVolume") Integer successRateRequestVolume,
+        @CustomType.Parameter("successRateStdevFactor") Integer successRateStdevFactor) {
         this.baseEjectionTimes = baseEjectionTimes;
         this.consecutiveErrors = consecutiveErrors;
         this.consecutiveGatewayFailure = consecutiveGatewayFailure;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
      * The name of the share account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -29,7 +29,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
      * The id of the source data set.
      * 
      */
-    @InputImport(name="dataSetId", required=true)
+    @Import(name="dataSetId", required=true)
       private final Output<String> dataSetId;
 
     public Output<String> getDataSetId() {
@@ -40,7 +40,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
      * The name of the data set mapping to be created.
      * 
      */
-    @InputImport(name="dataSetMappingName")
+    @Import(name="dataSetMappingName")
       private final @Nullable Output<String> dataSetMappingName;
 
     public Output<String> getDataSetMappingName() {
@@ -51,7 +51,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
      * The file system name.
      * 
      */
-    @InputImport(name="fileSystem", required=true)
+    @Import(name="fileSystem", required=true)
       private final Output<String> fileSystem;
 
     public Output<String> getFileSystem() {
@@ -63,7 +63,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
      * Expected value is 'AdlsGen2FileSystem'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -74,7 +74,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
      * Resource group of storage account.
      * 
      */
-    @InputImport(name="resourceGroup", required=true)
+    @Import(name="resourceGroup", required=true)
       private final Output<String> resourceGroup;
 
     public Output<String> getResourceGroup() {
@@ -85,7 +85,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -96,7 +96,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
      * The name of the share subscription which will hold the data set sink.
      * 
      */
-    @InputImport(name="shareSubscriptionName", required=true)
+    @Import(name="shareSubscriptionName", required=true)
       private final Output<String> shareSubscriptionName;
 
     public Output<String> getShareSubscriptionName() {
@@ -107,7 +107,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
      * Storage account name of the source data set.
      * 
      */
-    @InputImport(name="storageAccountName", required=true)
+    @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;
 
     public Output<String> getStorageAccountName() {
@@ -118,7 +118,7 @@ public final class ADLSGen2FileSystemDataSetMappingArgs extends io.pulumi.resour
      * Subscription id of storage account.
      * 
      */
-    @InputImport(name="subscriptionId", required=true)
+    @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {

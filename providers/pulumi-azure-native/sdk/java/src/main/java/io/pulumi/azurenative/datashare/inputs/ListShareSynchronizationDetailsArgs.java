@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * The name of the share account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -30,7 +30,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * Email of the user who created the synchronization
      * 
      */
-    @InputImport(name="consumerEmail")
+    @Import(name="consumerEmail")
       private final @Nullable String consumerEmail;
 
     public Optional<String> getConsumerEmail() {
@@ -41,7 +41,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * Name of the user who created the synchronization
      * 
      */
-    @InputImport(name="consumerName")
+    @Import(name="consumerName")
       private final @Nullable String consumerName;
 
     public Optional<String> getConsumerName() {
@@ -52,7 +52,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * Tenant name of the consumer who created the synchronization
      * 
      */
-    @InputImport(name="consumerTenantName")
+    @Import(name="consumerTenantName")
       private final @Nullable String consumerTenantName;
 
     public Optional<String> getConsumerTenantName() {
@@ -63,7 +63,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * synchronization duration
      * 
      */
-    @InputImport(name="durationMs")
+    @Import(name="durationMs")
       private final @Nullable Integer durationMs;
 
     public Optional<Integer> getDurationMs() {
@@ -74,7 +74,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * End time of synchronization
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable String endTime;
 
     public Optional<String> getEndTime() {
@@ -85,7 +85,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * Filters the results using OData syntax.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable String filter;
 
     public Optional<String> getFilter() {
@@ -96,7 +96,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * message of synchronization
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
@@ -107,7 +107,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * Sorts the results using OData syntax.
      * 
      */
-    @InputImport(name="orderby")
+    @Import(name="orderby")
       private final @Nullable String orderby;
 
     public Optional<String> getOrderby() {
@@ -118,7 +118,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -129,7 +129,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * The name of the share.
      * 
      */
-    @InputImport(name="shareName", required=true)
+    @Import(name="shareName", required=true)
       private final String shareName;
 
     public String getShareName() {
@@ -140,7 +140,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * Continuation token
      * 
      */
-    @InputImport(name="skipToken")
+    @Import(name="skipToken")
       private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {
@@ -151,7 +151,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * start time of synchronization
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
@@ -162,7 +162,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * Raw Status
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable String status;
 
     public Optional<String> getStatus() {
@@ -173,7 +173,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * Synchronization id
      * 
      */
-    @InputImport(name="synchronizationId")
+    @Import(name="synchronizationId")
       private final @Nullable String synchronizationId;
 
     public Optional<String> getSynchronizationId() {

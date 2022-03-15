@@ -7,7 +7,7 @@ import io.pulumi.azurenative.purview.enums.PublicNetworkAccess;
 import io.pulumi.azurenative.purview.inputs.IdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the account.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -33,7 +33,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * Identity Info on the tracked resource
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
@@ -44,7 +44,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -55,7 +55,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the managed resource group name
      * 
      */
-    @InputImport(name="managedResourceGroupName")
+    @Import(name="managedResourceGroupName")
       private final @Nullable Output<String> managedResourceGroupName;
 
     public Output<String> getManagedResourceGroupName() {
@@ -66,7 +66,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the public network access.
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
@@ -77,7 +77,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -88,7 +88,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * Tags on the azure resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

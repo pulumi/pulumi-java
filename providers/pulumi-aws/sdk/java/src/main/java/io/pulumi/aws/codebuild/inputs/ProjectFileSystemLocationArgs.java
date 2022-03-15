@@ -4,7 +4,7 @@
 package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ProjectFileSystemLocationArgs extends io.pulumi.resources.Res
      * The name used to access a file system created by Amazon EFS. CodeBuild creates an environment variable by appending the identifier in all capital letters to CODEBUILD\_. For example, if you specify my-efs for identifier, a new environment variable is create named CODEBUILD_MY-EFS.
      * 
      */
-    @InputImport(name="identifier")
+    @Import(name="identifier")
       private final @Nullable Output<String> identifier;
 
     public Output<String> getIdentifier() {
@@ -29,7 +29,7 @@ public final class ProjectFileSystemLocationArgs extends io.pulumi.resources.Res
      * A string that specifies the location of the file system created by Amazon EFS. Its format is `efs-dns-name:/directory-path`.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -40,7 +40,7 @@ public final class ProjectFileSystemLocationArgs extends io.pulumi.resources.Res
      * The mount options for a file system created by AWS EFS.
      * 
      */
-    @InputImport(name="mountOptions")
+    @Import(name="mountOptions")
       private final @Nullable Output<String> mountOptions;
 
     public Output<String> getMountOptions() {
@@ -51,7 +51,7 @@ public final class ProjectFileSystemLocationArgs extends io.pulumi.resources.Res
      * The location in the container where you mount the file system.
      * 
      */
-    @InputImport(name="mountPoint")
+    @Import(name="mountPoint")
       private final @Nullable Output<String> mountPoint;
 
     public Output<String> getMountPoint() {
@@ -62,7 +62,7 @@ public final class ProjectFileSystemLocationArgs extends io.pulumi.resources.Res
      * Authorization type to use. The only valid value is `OAUTH`. This data type is deprecated and is no longer accurate or used. Use the `aws.codebuild.SourceCredential` resource instead.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

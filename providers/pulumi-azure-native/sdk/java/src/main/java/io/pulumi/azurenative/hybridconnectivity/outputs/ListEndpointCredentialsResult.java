@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.hybridconnectivity.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListEndpointCredentialsResult {
     /**
      * Access key for hybrid connection.
@@ -38,13 +38,13 @@ public final class ListEndpointCredentialsResult {
      */
     private final String namespaceNameSuffix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListEndpointCredentialsResult(
-        @OutputCustomType.Parameter("accessKey") String accessKey,
-        @OutputCustomType.Parameter("expiresOn") @Nullable Double expiresOn,
-        @OutputCustomType.Parameter("hybridConnectionName") String hybridConnectionName,
-        @OutputCustomType.Parameter("namespaceName") String namespaceName,
-        @OutputCustomType.Parameter("namespaceNameSuffix") String namespaceNameSuffix) {
+        @CustomType.Parameter("accessKey") String accessKey,
+        @CustomType.Parameter("expiresOn") @Nullable Double expiresOn,
+        @CustomType.Parameter("hybridConnectionName") String hybridConnectionName,
+        @CustomType.Parameter("namespaceName") String namespaceName,
+        @CustomType.Parameter("namespaceNameSuffix") String namespaceNameSuffix) {
         this.accessKey = accessKey;
         this.expiresOn = expiresOn;
         this.hybridConnectionName = hybridConnectionName;

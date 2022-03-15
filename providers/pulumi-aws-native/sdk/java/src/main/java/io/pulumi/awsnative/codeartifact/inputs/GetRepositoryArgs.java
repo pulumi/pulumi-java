@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.codeartifact.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetRepositoryArgs extends io.pulumi.resources.InvokeArgs {
      * The ARN of the repository.
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {

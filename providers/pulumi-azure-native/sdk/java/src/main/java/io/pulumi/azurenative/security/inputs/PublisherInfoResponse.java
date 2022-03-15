@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PublisherInfoResponse extends io.pulumi.resources.InvokeArgs 
      * The "OriginalName" field taken from the file's version resource
      * 
      */
-    @InputImport(name="binaryName")
+    @Import(name="binaryName")
       private final @Nullable String binaryName;
 
     public Optional<String> getBinaryName() {
@@ -33,7 +33,7 @@ public final class PublisherInfoResponse extends io.pulumi.resources.InvokeArgs 
      * The product name taken from the file's version resource
      * 
      */
-    @InputImport(name="productName")
+    @Import(name="productName")
       private final @Nullable String productName;
 
     public Optional<String> getProductName() {
@@ -44,7 +44,7 @@ public final class PublisherInfoResponse extends io.pulumi.resources.InvokeArgs 
      * The Subject field of the x.509 certificate used to sign the code, using the following fields -  O = Organization, L = Locality, S = State or Province, and C = Country
      * 
      */
-    @InputImport(name="publisherName")
+    @Import(name="publisherName")
       private final @Nullable String publisherName;
 
     public Optional<String> getPublisherName() {
@@ -55,7 +55,7 @@ public final class PublisherInfoResponse extends io.pulumi.resources.InvokeArgs 
      * The binary file version taken from the file's version resource
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

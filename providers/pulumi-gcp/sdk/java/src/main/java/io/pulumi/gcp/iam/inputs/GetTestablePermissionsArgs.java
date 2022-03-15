@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetTestablePermissionsArgs extends io.pulumi.resources.Invoke
      * The level of support for custom roles. Can be one of `"NOT_SUPPORTED"`, `"SUPPORTED"`, `"TESTING"`. Default is `"SUPPORTED"`
      * 
      */
-    @InputImport(name="customSupportLevel")
+    @Import(name="customSupportLevel")
       private final @Nullable String customSupportLevel;
 
     public Optional<String> getCustomSupportLevel() {
@@ -30,7 +30,7 @@ public final class GetTestablePermissionsArgs extends io.pulumi.resources.Invoke
      * See [full resource name documentation](https://cloud.google.com/apis/design/resource_names#full_resource_name) for more detail.
      * 
      */
-    @InputImport(name="fullResourceName", required=true)
+    @Import(name="fullResourceName", required=true)
       private final String fullResourceName;
 
     public String getFullResourceName() {
@@ -41,7 +41,7 @@ public final class GetTestablePermissionsArgs extends io.pulumi.resources.Invoke
      * The acceptable release stages of the permission in the output. Note that `BETA` does not include permissions in `GA`, but you can specify both with `["GA", "BETA"]` for example. Can be a list of `"ALPHA"`, `"BETA"`, `"GA"`, `"DEPRECATED"`. Default is `["GA"]`.
      * 
      */
-    @InputImport(name="stages")
+    @Import(name="stages")
       private final @Nullable List<String> stages;
 
     public List<String> getStages() {

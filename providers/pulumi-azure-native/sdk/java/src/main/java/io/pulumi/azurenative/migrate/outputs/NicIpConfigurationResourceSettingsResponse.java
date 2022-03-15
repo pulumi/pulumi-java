@@ -7,7 +7,7 @@ import io.pulumi.azurenative.migrate.outputs.LoadBalancerBackendAddressPoolRefer
 import io.pulumi.azurenative.migrate.outputs.LoadBalancerNatRuleReferenceResponse;
 import io.pulumi.azurenative.migrate.outputs.PublicIpReferenceResponse;
 import io.pulumi.azurenative.migrate.outputs.SubnetReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NicIpConfigurationResourceSettingsResponse {
     /**
      * Gets or sets the references of the load balancer backend address pools.
@@ -58,16 +58,16 @@ public final class NicIpConfigurationResourceSettingsResponse {
      */
     private final @Nullable SubnetReferenceResponse subnet;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NicIpConfigurationResourceSettingsResponse(
-        @OutputCustomType.Parameter("loadBalancerBackendAddressPools") @Nullable List<LoadBalancerBackendAddressPoolReferenceResponse> loadBalancerBackendAddressPools,
-        @OutputCustomType.Parameter("loadBalancerNatRules") @Nullable List<LoadBalancerNatRuleReferenceResponse> loadBalancerNatRules,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("primary") @Nullable Boolean primary,
-        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
-        @OutputCustomType.Parameter("privateIpAllocationMethod") @Nullable String privateIpAllocationMethod,
-        @OutputCustomType.Parameter("publicIp") @Nullable PublicIpReferenceResponse publicIp,
-        @OutputCustomType.Parameter("subnet") @Nullable SubnetReferenceResponse subnet) {
+        @CustomType.Parameter("loadBalancerBackendAddressPools") @Nullable List<LoadBalancerBackendAddressPoolReferenceResponse> loadBalancerBackendAddressPools,
+        @CustomType.Parameter("loadBalancerNatRules") @Nullable List<LoadBalancerNatRuleReferenceResponse> loadBalancerNatRules,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("primary") @Nullable Boolean primary,
+        @CustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
+        @CustomType.Parameter("privateIpAllocationMethod") @Nullable String privateIpAllocationMethod,
+        @CustomType.Parameter("publicIp") @Nullable PublicIpReferenceResponse publicIp,
+        @CustomType.Parameter("subnet") @Nullable SubnetReferenceResponse subnet) {
         this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
         this.loadBalancerNatRules = loadBalancerNatRules;
         this.name = name;

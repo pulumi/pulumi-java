@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.chime.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VoiceConnectorTerminationCredentialsCredential {
     /**
      * RFC2617 compliant password associated with the SIP credentials.
@@ -20,10 +20,10 @@ public final class VoiceConnectorTerminationCredentialsCredential {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VoiceConnectorTerminationCredentialsCredential(
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("username") String username) {
         this.password = password;
         this.username = username;
     }

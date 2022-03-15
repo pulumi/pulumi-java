@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse {
     /**
      * Optional. Indicates whether text to speech is enabled. Even when this field is false, other settings in this proto are still retained.
@@ -33,12 +33,12 @@ public final class GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse {
      */
     private final Map<String,String> synthesizeSpeechConfigs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1TextToSpeechSettingsResponse(
-        @OutputCustomType.Parameter("enableTextToSpeech") Boolean enableTextToSpeech,
-        @OutputCustomType.Parameter("outputAudioEncoding") String outputAudioEncoding,
-        @OutputCustomType.Parameter("sampleRateHertz") Integer sampleRateHertz,
-        @OutputCustomType.Parameter("synthesizeSpeechConfigs") Map<String,String> synthesizeSpeechConfigs) {
+        @CustomType.Parameter("enableTextToSpeech") Boolean enableTextToSpeech,
+        @CustomType.Parameter("outputAudioEncoding") String outputAudioEncoding,
+        @CustomType.Parameter("sampleRateHertz") Integer sampleRateHertz,
+        @CustomType.Parameter("synthesizeSpeechConfigs") Map<String,String> synthesizeSpeechConfigs) {
         this.enableTextToSpeech = enableTextToSpeech;
         this.outputAudioEncoding = outputAudioEncoding;
         this.sampleRateHertz = sampleRateHertz;

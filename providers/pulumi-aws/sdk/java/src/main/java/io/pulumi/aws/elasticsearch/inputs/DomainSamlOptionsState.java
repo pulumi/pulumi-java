@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.aws.elasticsearch.inputs.DomainSamlOptionsSamlOptionsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DomainSamlOptionsState extends io.pulumi.resources.ResourceAr
      * Name of the domain.
      * 
      */
-    @InputImport(name="domainName")
+    @Import(name="domainName")
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -30,7 +30,7 @@ public final class DomainSamlOptionsState extends io.pulumi.resources.ResourceAr
      * The SAML authentication options for an AWS Elasticsearch Domain.
      * 
      */
-    @InputImport(name="samlOptions")
+    @Import(name="samlOptions")
       private final @Nullable Output<DomainSamlOptionsSamlOptionsGetArgs> samlOptions;
 
     public Output<DomainSamlOptionsSamlOptionsGetArgs> getSamlOptions() {

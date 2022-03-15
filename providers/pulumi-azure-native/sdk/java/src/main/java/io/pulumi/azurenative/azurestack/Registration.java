@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.azurestack.RegistrationArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * Specifies the billing mode for the Azure Stack registration.
      * 
      */
-    @OutputExport(name="billingModel", type=String.class, parameters={})
+    @Export(name="billingModel", type=String.class, parameters={})
     private Output</* @Nullable */ String> billingModel;
 
     /**
@@ -49,7 +49,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * The identifier of the registered Azure Stack.
      * 
      */
-    @OutputExport(name="cloudId", type=String.class, parameters={})
+    @Export(name="cloudId", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudId;
 
     /**
@@ -63,7 +63,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * The entity tag used for optimistic concurrency when modifying the resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -77,7 +77,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * Location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -91,7 +91,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * Name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * The object identifier associated with the Azure Stack connecting to Azure.
      * 
      */
-    @OutputExport(name="objectId", type=String.class, parameters={})
+    @Export(name="objectId", type=String.class, parameters={})
     private Output</* @Nullable */ String> objectId;
 
     /**
@@ -119,7 +119,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * Custom tags for the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -133,7 +133,7 @@ public class Registration extends io.pulumi.resources.CustomResource {
      * Type of Resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

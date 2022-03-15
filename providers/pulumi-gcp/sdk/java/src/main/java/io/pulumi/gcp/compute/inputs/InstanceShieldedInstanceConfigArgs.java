@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class InstanceShieldedInstanceConfigArgs extends io.pulumi.resource
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
      */
-    @InputImport(name="enableIntegrityMonitoring")
+    @Import(name="enableIntegrityMonitoring")
       private final @Nullable Output<Boolean> enableIntegrityMonitoring;
 
     public Output<Boolean> getEnableIntegrityMonitoring() {
@@ -31,7 +31,7 @@ public final class InstanceShieldedInstanceConfigArgs extends io.pulumi.resource
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
      */
-    @InputImport(name="enableSecureBoot")
+    @Import(name="enableSecureBoot")
       private final @Nullable Output<Boolean> enableSecureBoot;
 
     public Output<Boolean> getEnableSecureBoot() {
@@ -43,7 +43,7 @@ public final class InstanceShieldedInstanceConfigArgs extends io.pulumi.resource
      * **Note**: `allow_stopping_for_update` must be set to true or your instance must have a `desired_status` of `TERMINATED` in order to update this field.
      * 
      */
-    @InputImport(name="enableVtpm")
+    @Import(name="enableVtpm")
       private final @Nullable Output<Boolean> enableVtpm;
 
     public Output<Boolean> getEnableVtpm() {

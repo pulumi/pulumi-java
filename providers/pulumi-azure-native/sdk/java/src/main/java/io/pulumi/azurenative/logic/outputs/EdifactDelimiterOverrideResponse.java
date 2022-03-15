@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdifactDelimiterOverrideResponse {
     /**
      * The component separator.
@@ -73,20 +73,20 @@ public final class EdifactDelimiterOverrideResponse {
      */
     private final @Nullable String targetNamespace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdifactDelimiterOverrideResponse(
-        @OutputCustomType.Parameter("componentSeparator") Integer componentSeparator,
-        @OutputCustomType.Parameter("dataElementSeparator") Integer dataElementSeparator,
-        @OutputCustomType.Parameter("decimalPointIndicator") String decimalPointIndicator,
-        @OutputCustomType.Parameter("messageAssociationAssignedCode") @Nullable String messageAssociationAssignedCode,
-        @OutputCustomType.Parameter("messageId") @Nullable String messageId,
-        @OutputCustomType.Parameter("messageRelease") @Nullable String messageRelease,
-        @OutputCustomType.Parameter("messageVersion") @Nullable String messageVersion,
-        @OutputCustomType.Parameter("releaseIndicator") Integer releaseIndicator,
-        @OutputCustomType.Parameter("repetitionSeparator") Integer repetitionSeparator,
-        @OutputCustomType.Parameter("segmentTerminator") Integer segmentTerminator,
-        @OutputCustomType.Parameter("segmentTerminatorSuffix") String segmentTerminatorSuffix,
-        @OutputCustomType.Parameter("targetNamespace") @Nullable String targetNamespace) {
+        @CustomType.Parameter("componentSeparator") Integer componentSeparator,
+        @CustomType.Parameter("dataElementSeparator") Integer dataElementSeparator,
+        @CustomType.Parameter("decimalPointIndicator") String decimalPointIndicator,
+        @CustomType.Parameter("messageAssociationAssignedCode") @Nullable String messageAssociationAssignedCode,
+        @CustomType.Parameter("messageId") @Nullable String messageId,
+        @CustomType.Parameter("messageRelease") @Nullable String messageRelease,
+        @CustomType.Parameter("messageVersion") @Nullable String messageVersion,
+        @CustomType.Parameter("releaseIndicator") Integer releaseIndicator,
+        @CustomType.Parameter("repetitionSeparator") Integer repetitionSeparator,
+        @CustomType.Parameter("segmentTerminator") Integer segmentTerminator,
+        @CustomType.Parameter("segmentTerminatorSuffix") String segmentTerminatorSuffix,
+        @CustomType.Parameter("targetNamespace") @Nullable String targetNamespace) {
         this.componentSeparator = componentSeparator;
         this.dataElementSeparator = dataElementSeparator;
         this.decimalPointIndicator = decimalPointIndicator;

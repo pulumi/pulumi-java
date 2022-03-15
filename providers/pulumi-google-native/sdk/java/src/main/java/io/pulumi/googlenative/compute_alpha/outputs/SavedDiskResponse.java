@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SavedDiskResponse {
     /**
      * Type of the resource. Always compute#savedDisk for attached disks.
@@ -30,12 +30,12 @@ public final class SavedDiskResponse {
      */
     private final String storageBytesStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SavedDiskResponse(
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("sourceDisk") String sourceDisk,
-        @OutputCustomType.Parameter("storageBytes") String storageBytes,
-        @OutputCustomType.Parameter("storageBytesStatus") String storageBytesStatus) {
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("sourceDisk") String sourceDisk,
+        @CustomType.Parameter("storageBytes") String storageBytes,
+        @CustomType.Parameter("storageBytesStatus") String storageBytesStatus) {
         this.kind = kind;
         this.sourceDisk = sourceDisk;
         this.storageBytes = storageBytes;

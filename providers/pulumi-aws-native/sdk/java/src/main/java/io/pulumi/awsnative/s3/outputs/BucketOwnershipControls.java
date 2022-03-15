@@ -4,16 +4,16 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketOwnershipControlsRule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketOwnershipControls {
     private final List<BucketOwnershipControlsRule> rules;
 
-    @OutputCustomType.Constructor
-    private BucketOwnershipControls(@OutputCustomType.Parameter("rules") List<BucketOwnershipControlsRule> rules) {
+    @CustomType.Constructor
+    private BucketOwnershipControls(@CustomType.Parameter("rules") List<BucketOwnershipControlsRule> rules) {
         this.rules = rules;
     }
 

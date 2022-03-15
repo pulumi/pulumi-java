@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class JobConditionResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Last time the condition transitioned from one status to another.
      * 
      */
-    @InputImport(name="lastTransitionTime", required=true)
+    @Import(name="lastTransitionTime", required=true)
       private final String lastTransitionTime;
 
     public String getLastTransitionTime() {
@@ -31,7 +31,7 @@ public final class JobConditionResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Human readable message indicating details about the current status.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -42,7 +42,7 @@ public final class JobConditionResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. One-word CamelCase reason for the condition's last transition.
      * 
      */
-    @InputImport(name="reason", required=true)
+    @Import(name="reason", required=true)
       private final String reason;
 
     public String getReason() {
@@ -53,7 +53,7 @@ public final class JobConditionResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. How to interpret failures of this condition, one of Error, Warning, Info
      * 
      */
-    @InputImport(name="severity", required=true)
+    @Import(name="severity", required=true)
       private final String severity;
 
     public String getSeverity() {
@@ -64,7 +64,7 @@ public final class JobConditionResponse extends io.pulumi.resources.InvokeArgs {
      * Status of the condition, one of True, False, Unknown.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -75,7 +75,7 @@ public final class JobConditionResponse extends io.pulumi.resources.InvokeArgs {
      * Type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types include: * "Completed": True when the Job has successfully completed. * "Started": True when the Job has successfully started running. * "ResourcesAvailable": True when underlying resources have been provisioned.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

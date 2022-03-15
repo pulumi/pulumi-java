@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventhub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetEventHubArgs extends io.pulumi.resources.InvokeArgs {
      * The Event Hub name
      * 
      */
-    @InputImport(name="eventHubName", required=true)
+    @Import(name="eventHubName", required=true)
       private final String eventHubName;
 
     public String getEventHubName() {
@@ -27,7 +27,7 @@ public final class GetEventHubArgs extends io.pulumi.resources.InvokeArgs {
      * The Namespace name
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final String namespaceName;
 
     public String getNamespaceName() {
@@ -38,7 +38,7 @@ public final class GetEventHubArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the resource group within the azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

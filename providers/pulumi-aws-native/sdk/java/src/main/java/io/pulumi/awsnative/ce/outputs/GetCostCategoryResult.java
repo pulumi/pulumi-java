@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.ce.outputs;
 
 import io.pulumi.awsnative.ce.enums.CostCategoryRuleVersion;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCostCategoryResult {
     /**
      * Cost category ARN
@@ -35,14 +35,14 @@ public final class GetCostCategoryResult {
      */
     private final @Nullable String splitChargeRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCostCategoryResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
-        @OutputCustomType.Parameter("effectiveStart") @Nullable String effectiveStart,
-        @OutputCustomType.Parameter("ruleVersion") @Nullable CostCategoryRuleVersion ruleVersion,
-        @OutputCustomType.Parameter("rules") @Nullable String rules,
-        @OutputCustomType.Parameter("splitChargeRules") @Nullable String splitChargeRules) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @CustomType.Parameter("effectiveStart") @Nullable String effectiveStart,
+        @CustomType.Parameter("ruleVersion") @Nullable CostCategoryRuleVersion ruleVersion,
+        @CustomType.Parameter("rules") @Nullable String rules,
+        @CustomType.Parameter("splitChargeRules") @Nullable String splitChargeRules) {
         this.arn = arn;
         this.defaultValue = defaultValue;
         this.effectiveStart = effectiveStart;

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.tpu.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetTensorflowVersionsArgs extends io.pulumi.resources.InvokeA
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
@@ -31,7 +31,7 @@ public final class GetTensorflowVersionsArgs extends io.pulumi.resources.InvokeA
      * is not provided, the provider zone is used.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable String zone;
 
     public Optional<String> getZone() {

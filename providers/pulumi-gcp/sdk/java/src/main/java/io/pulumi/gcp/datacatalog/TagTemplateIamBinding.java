@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.TagTemplateIamBindingArgs;
@@ -16,43 +16,43 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:datacatalog/tagTemplateIamBinding:TagTemplateIamBinding")
 public class TagTemplateIamBinding extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=TagTemplateIamBindingCondition.class, parameters={})
+    @Export(name="condition", type=TagTemplateIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ TagTemplateIamBindingCondition> condition;
 
     public Output</* @Nullable */ TagTemplateIamBindingCondition> getCondition() {
         return this.condition;
     }
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
         return this.members;
     }
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     public Output<String> getProject() {
         return this.project;
     }
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     public Output<String> getRegion() {
         return this.region;
     }
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     public Output<String> getRole() {
         return this.role;
     }
-    @OutputExport(name="tagTemplate", type=String.class, parameters={})
+    @Export(name="tagTemplate", type=String.class, parameters={})
     private Output<String> tagTemplate;
 
     public Output<String> getTagTemplate() {

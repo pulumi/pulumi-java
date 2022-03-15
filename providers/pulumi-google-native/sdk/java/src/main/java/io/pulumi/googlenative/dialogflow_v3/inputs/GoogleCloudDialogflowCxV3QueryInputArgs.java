@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3AudioInputArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3DtmfInputArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3EventInputArgs;
@@ -27,7 +27,7 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
      * The natural language speech audio to be processed.
      * 
      */
-    @InputImport(name="audio")
+    @Import(name="audio")
       private final @Nullable Output<GoogleCloudDialogflowCxV3AudioInputArgs> audio;
 
     public Output<GoogleCloudDialogflowCxV3AudioInputArgs> getAudio() {
@@ -38,7 +38,7 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
      * The DTMF event to be handled.
      * 
      */
-    @InputImport(name="dtmf")
+    @Import(name="dtmf")
       private final @Nullable Output<GoogleCloudDialogflowCxV3DtmfInputArgs> dtmf;
 
     public Output<GoogleCloudDialogflowCxV3DtmfInputArgs> getDtmf() {
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
      * The event to be triggered.
      * 
      */
-    @InputImport(name="event")
+    @Import(name="event")
       private final @Nullable Output<GoogleCloudDialogflowCxV3EventInputArgs> event;
 
     public Output<GoogleCloudDialogflowCxV3EventInputArgs> getEvent() {
@@ -60,7 +60,7 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
      * The intent to be triggered.
      * 
      */
-    @InputImport(name="intent")
+    @Import(name="intent")
       private final @Nullable Output<GoogleCloudDialogflowCxV3IntentInputArgs> intent;
 
     public Output<GoogleCloudDialogflowCxV3IntentInputArgs> getIntent() {
@@ -71,7 +71,7 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
      * The language of the input. See [Language Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the currently supported language codes. Note that queries in the same session do not necessarily need to specify the same language.
      * 
      */
-    @InputImport(name="languageCode", required=true)
+    @Import(name="languageCode", required=true)
       private final Output<String> languageCode;
 
     public Output<String> getLanguageCode() {
@@ -82,7 +82,7 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
      * The natural language text to be processed.
      * 
      */
-    @InputImport(name="text")
+    @Import(name="text")
       private final @Nullable Output<GoogleCloudDialogflowCxV3TextInputArgs> text;
 
     public Output<GoogleCloudDialogflowCxV3TextInputArgs> getText() {

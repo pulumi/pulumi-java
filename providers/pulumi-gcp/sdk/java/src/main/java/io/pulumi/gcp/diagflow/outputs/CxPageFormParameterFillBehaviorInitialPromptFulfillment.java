@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.diagflow.outputs.CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessage;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CxPageFormParameterFillBehaviorInitialPromptFulfillment {
     /**
      * The list of rich message responses to present to the user.
@@ -36,12 +36,12 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillment {
      */
     private final @Nullable String webhook;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CxPageFormParameterFillBehaviorInitialPromptFulfillment(
-        @OutputCustomType.Parameter("messages") @Nullable List<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessage> messages,
-        @OutputCustomType.Parameter("returnPartialResponses") @Nullable Boolean returnPartialResponses,
-        @OutputCustomType.Parameter("tag") @Nullable String tag,
-        @OutputCustomType.Parameter("webhook") @Nullable String webhook) {
+        @CustomType.Parameter("messages") @Nullable List<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessage> messages,
+        @CustomType.Parameter("returnPartialResponses") @Nullable Boolean returnPartialResponses,
+        @CustomType.Parameter("tag") @Nullable String tag,
+        @CustomType.Parameter("webhook") @Nullable String webhook) {
         this.messages = messages;
         this.returnPartialResponses = returnPartialResponses;
         this.tag = tag;

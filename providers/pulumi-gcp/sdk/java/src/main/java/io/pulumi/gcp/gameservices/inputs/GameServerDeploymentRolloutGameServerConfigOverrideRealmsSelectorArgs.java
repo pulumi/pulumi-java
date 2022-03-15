@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gameservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSele
      * List of realms to match against.
      * 
      */
-    @InputImport(name="realms")
+    @Import(name="realms")
       private final @Nullable Output<List<String>> realms;
 
     public Output<List<String>> getRealms() {

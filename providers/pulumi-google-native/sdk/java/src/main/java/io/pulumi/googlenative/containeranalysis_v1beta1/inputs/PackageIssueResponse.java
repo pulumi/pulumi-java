@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.VulnerabilityLocationResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * The location of the vulnerability.
      * 
      */
-    @InputImport(name="affectedLocation", required=true)
+    @Import(name="affectedLocation", required=true)
       private final VulnerabilityLocationResponse affectedLocation;
 
     public VulnerabilityLocationResponse getAffectedLocation() {
@@ -32,7 +32,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * The distro or language system assigned severity for this vulnerability when that is available and note provider assigned severity when it is not available.
      * 
      */
-    @InputImport(name="effectiveSeverity", required=true)
+    @Import(name="effectiveSeverity", required=true)
       private final String effectiveSeverity;
 
     public String getEffectiveSeverity() {
@@ -43,7 +43,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * The location of the available fix for vulnerability.
      * 
      */
-    @InputImport(name="fixedLocation", required=true)
+    @Import(name="fixedLocation", required=true)
       private final VulnerabilityLocationResponse fixedLocation;
 
     public VulnerabilityLocationResponse getFixedLocation() {
@@ -54,7 +54,7 @@ public final class PackageIssueResponse extends io.pulumi.resources.InvokeArgs {
      * The type of package (e.g. OS, MAVEN, GO).
      * 
      */
-    @InputImport(name="packageType", required=true)
+    @Import(name="packageType", required=true)
       private final String packageType;
 
     public String getPackageType() {

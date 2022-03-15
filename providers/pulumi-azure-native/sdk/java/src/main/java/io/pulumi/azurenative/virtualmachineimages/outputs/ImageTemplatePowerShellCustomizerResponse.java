@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageTemplatePowerShellCustomizerResponse {
     /**
      * Array of PowerShell commands to execute
@@ -56,16 +56,16 @@ public final class ImageTemplatePowerShellCustomizerResponse {
      */
     private final @Nullable List<Integer> validExitCodes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageTemplatePowerShellCustomizerResponse(
-        @OutputCustomType.Parameter("inline") @Nullable List<String> inline,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("runAsSystem") @Nullable Boolean runAsSystem,
-        @OutputCustomType.Parameter("runElevated") @Nullable Boolean runElevated,
-        @OutputCustomType.Parameter("scriptUri") @Nullable String scriptUri,
-        @OutputCustomType.Parameter("sha256Checksum") @Nullable String sha256Checksum,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("validExitCodes") @Nullable List<Integer> validExitCodes) {
+        @CustomType.Parameter("inline") @Nullable List<String> inline,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("runAsSystem") @Nullable Boolean runAsSystem,
+        @CustomType.Parameter("runElevated") @Nullable Boolean runElevated,
+        @CustomType.Parameter("scriptUri") @Nullable String scriptUri,
+        @CustomType.Parameter("sha256Checksum") @Nullable String sha256Checksum,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("validExitCodes") @Nullable List<Integer> validExitCodes) {
         this.inline = inline;
         this.name = name;
         this.runAsSystem = runAsSystem;

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicediscovery.PublicDnsNamespaceArgs;
 import io.pulumi.aws.servicediscovery.inputs.PublicDnsNamespaceState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class PublicDnsNamespace extends io.pulumi.resources.CustomResource {
      * The ARN that Amazon Route 53 assigns to the namespace when you create it.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class PublicDnsNamespace extends io.pulumi.resources.CustomResource {
      * The description that you specify for the namespace when you create it.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -61,7 +61,7 @@ public class PublicDnsNamespace extends io.pulumi.resources.CustomResource {
      * The ID for the hosted zone that Amazon Route 53 creates when you create a namespace.
      * 
      */
-    @OutputExport(name="hostedZone", type=String.class, parameters={})
+    @Export(name="hostedZone", type=String.class, parameters={})
     private Output<String> hostedZone;
 
     /**
@@ -75,7 +75,7 @@ public class PublicDnsNamespace extends io.pulumi.resources.CustomResource {
      * The name of the namespace.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -89,7 +89,7 @@ public class PublicDnsNamespace extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the namespace. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -103,7 +103,7 @@ public class PublicDnsNamespace extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

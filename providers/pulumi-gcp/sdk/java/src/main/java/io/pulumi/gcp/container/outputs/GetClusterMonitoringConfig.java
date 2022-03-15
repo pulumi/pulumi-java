@@ -3,17 +3,17 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterMonitoringConfig {
     private final List<String> enableComponents;
 
-    @OutputCustomType.Constructor
-    private GetClusterMonitoringConfig(@OutputCustomType.Parameter("enableComponents") List<String> enableComponents) {
+    @CustomType.Constructor
+    private GetClusterMonitoringConfig(@CustomType.Parameter("enableComponents") List<String> enableComponents) {
         this.enableComponents = enableComponents;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.dms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointKafkaSettings {
     /**
      * Kafka broker location. Specify in the form broker-hostname-or-ip:port.
@@ -104,26 +104,26 @@ public final class EndpointKafkaSettings {
      */
     private final @Nullable String topic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointKafkaSettings(
-        @OutputCustomType.Parameter("broker") String broker,
-        @OutputCustomType.Parameter("includeControlDetails") @Nullable Boolean includeControlDetails,
-        @OutputCustomType.Parameter("includeNullAndEmpty") @Nullable Boolean includeNullAndEmpty,
-        @OutputCustomType.Parameter("includePartitionValue") @Nullable Boolean includePartitionValue,
-        @OutputCustomType.Parameter("includeTableAlterOperations") @Nullable Boolean includeTableAlterOperations,
-        @OutputCustomType.Parameter("includeTransactionDetails") @Nullable Boolean includeTransactionDetails,
-        @OutputCustomType.Parameter("messageFormat") @Nullable String messageFormat,
-        @OutputCustomType.Parameter("messageMaxBytes") @Nullable Integer messageMaxBytes,
-        @OutputCustomType.Parameter("noHexPrefix") @Nullable Boolean noHexPrefix,
-        @OutputCustomType.Parameter("partitionIncludeSchemaTable") @Nullable Boolean partitionIncludeSchemaTable,
-        @OutputCustomType.Parameter("saslPassword") @Nullable String saslPassword,
-        @OutputCustomType.Parameter("saslUsername") @Nullable String saslUsername,
-        @OutputCustomType.Parameter("securityProtocol") @Nullable String securityProtocol,
-        @OutputCustomType.Parameter("sslCaCertificateArn") @Nullable String sslCaCertificateArn,
-        @OutputCustomType.Parameter("sslClientCertificateArn") @Nullable String sslClientCertificateArn,
-        @OutputCustomType.Parameter("sslClientKeyArn") @Nullable String sslClientKeyArn,
-        @OutputCustomType.Parameter("sslClientKeyPassword") @Nullable String sslClientKeyPassword,
-        @OutputCustomType.Parameter("topic") @Nullable String topic) {
+        @CustomType.Parameter("broker") String broker,
+        @CustomType.Parameter("includeControlDetails") @Nullable Boolean includeControlDetails,
+        @CustomType.Parameter("includeNullAndEmpty") @Nullable Boolean includeNullAndEmpty,
+        @CustomType.Parameter("includePartitionValue") @Nullable Boolean includePartitionValue,
+        @CustomType.Parameter("includeTableAlterOperations") @Nullable Boolean includeTableAlterOperations,
+        @CustomType.Parameter("includeTransactionDetails") @Nullable Boolean includeTransactionDetails,
+        @CustomType.Parameter("messageFormat") @Nullable String messageFormat,
+        @CustomType.Parameter("messageMaxBytes") @Nullable Integer messageMaxBytes,
+        @CustomType.Parameter("noHexPrefix") @Nullable Boolean noHexPrefix,
+        @CustomType.Parameter("partitionIncludeSchemaTable") @Nullable Boolean partitionIncludeSchemaTable,
+        @CustomType.Parameter("saslPassword") @Nullable String saslPassword,
+        @CustomType.Parameter("saslUsername") @Nullable String saslUsername,
+        @CustomType.Parameter("securityProtocol") @Nullable String securityProtocol,
+        @CustomType.Parameter("sslCaCertificateArn") @Nullable String sslCaCertificateArn,
+        @CustomType.Parameter("sslClientCertificateArn") @Nullable String sslClientCertificateArn,
+        @CustomType.Parameter("sslClientKeyArn") @Nullable String sslClientKeyArn,
+        @CustomType.Parameter("sslClientKeyPassword") @Nullable String sslClientKeyPassword,
+        @CustomType.Parameter("topic") @Nullable String topic) {
         this.broker = broker;
         this.includeControlDetails = includeControlDetails;
         this.includeNullAndEmpty = includeNullAndEmpty;

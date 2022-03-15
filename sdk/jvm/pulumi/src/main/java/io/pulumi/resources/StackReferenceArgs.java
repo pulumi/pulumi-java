@@ -1,7 +1,7 @@
 package io.pulumi.resources;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 
 import javax.annotation.Nullable;
 import java.util.Optional;
@@ -14,7 +14,7 @@ public class StackReferenceArgs extends ResourceArgs {
     /**
      * The name of the stack to reference.
      */
-    @InputImport(name = "name", required = true)
+    @Import(name = "name", required = true)
     @Nullable
     public final Output<String> name;
 

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigateway_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigateway_v1beta.ConfigArgs;
@@ -28,7 +28,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Created time.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -42,7 +42,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Optional. Display name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -56,7 +56,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Immutable. Gateway specific configuration.
      * 
      */
-    @OutputExport(name="gatewayConfig", type=ApigatewayGatewayConfigResponse.class, parameters={})
+    @Export(name="gatewayConfig", type=ApigatewayGatewayConfigResponse.class, parameters={})
     private Output<ApigatewayGatewayConfigResponse> gatewayConfig;
 
     /**
@@ -70,7 +70,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Immutable. The Google Cloud IAM Service Account that Gateways serving this config should use to authenticate to other services. This may either be the Service Account's email (`{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com`) or its full resource name (`projects/{PROJECT}/accounts/{UNIQUE_ID}`). This is most often used when the service is a GCP resource such as a Cloud Run Service or an IAP-secured service.
      * 
      */
-    @OutputExport(name="gatewayServiceAccount", type=String.class, parameters={})
+    @Export(name="gatewayServiceAccount", type=String.class, parameters={})
     private Output<String> gatewayServiceAccount;
 
     /**
@@ -84,7 +84,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Optional. gRPC service definition files. If specified, openapi_documents must not be included.
      * 
      */
-    @OutputExport(name="grpcServices", type=List.class, parameters={ApigatewayApiConfigGrpcServiceDefinitionResponse.class})
+    @Export(name="grpcServices", type=List.class, parameters={ApigatewayApiConfigGrpcServiceDefinitionResponse.class})
     private Output<List<ApigatewayApiConfigGrpcServiceDefinitionResponse>> grpcServices;
 
     /**
@@ -98,7 +98,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -112,7 +112,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Optional. Service Configuration files. At least one must be included when using gRPC service definitions. See https://cloud.google.com/endpoints/docs/grpc/grpc-service-config#service_configuration_overview for the expected file contents. If multiple files are specified, the files are merged with the following rules: * All singular scalar fields are merged using "last one wins" semantics in the order of the files uploaded. * Repeated fields are concatenated. * Singular embedded messages are merged using these rules for nested fields.
      * 
      */
-    @OutputExport(name="managedServiceConfigs", type=List.class, parameters={ApigatewayApiConfigFileResponse.class})
+    @Export(name="managedServiceConfigs", type=List.class, parameters={ApigatewayApiConfigFileResponse.class})
     private Output<List<ApigatewayApiConfigFileResponse>> managedServiceConfigs;
 
     /**
@@ -126,7 +126,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Resource name of the API Config. Format: projects/{project}/locations/global/apis/{api}/configs/{api_config}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -140,7 +140,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Optional. OpenAPI specification documents. If specified, grpc_services and managed_service_configs must not be included.
      * 
      */
-    @OutputExport(name="openapiDocuments", type=List.class, parameters={ApigatewayApiConfigOpenApiDocumentResponse.class})
+    @Export(name="openapiDocuments", type=List.class, parameters={ApigatewayApiConfigOpenApiDocumentResponse.class})
     private Output<List<ApigatewayApiConfigOpenApiDocumentResponse>> openapiDocuments;
 
     /**
@@ -154,7 +154,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * The ID of the associated Service Config ( https://cloud.google.com/service-infrastructure/docs/glossary#config).
      * 
      */
-    @OutputExport(name="serviceConfigId", type=String.class, parameters={})
+    @Export(name="serviceConfigId", type=String.class, parameters={})
     private Output<String> serviceConfigId;
 
     /**
@@ -168,7 +168,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * State of the API Config.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -182,7 +182,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * Updated time.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

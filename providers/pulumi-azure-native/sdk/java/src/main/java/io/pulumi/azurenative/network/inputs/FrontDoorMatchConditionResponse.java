@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
      * List of possible match values.
      * 
      */
-    @InputImport(name="matchValue", required=true)
+    @Import(name="matchValue", required=true)
       private final List<String> matchValue;
 
     public List<String> getMatchValue() {
@@ -35,7 +35,7 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
      * Request variable to compare with.
      * 
      */
-    @InputImport(name="matchVariable", required=true)
+    @Import(name="matchVariable", required=true)
       private final String matchVariable;
 
     public String getMatchVariable() {
@@ -46,7 +46,7 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
      * Describes if the result of this condition should be negated.
      * 
      */
-    @InputImport(name="negateCondition")
+    @Import(name="negateCondition")
       private final @Nullable Boolean negateCondition;
 
     public Optional<Boolean> getNegateCondition() {
@@ -57,7 +57,7 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
      * Comparison type to use for matching with the variable value.
      * 
      */
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final String operator;
 
     public String getOperator() {
@@ -68,7 +68,7 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
      * Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is null.
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable String selector;
 
     public Optional<String> getSelector() {
@@ -79,7 +79,7 @@ public final class FrontDoorMatchConditionResponse extends io.pulumi.resources.I
      * List of transforms.
      * 
      */
-    @InputImport(name="transforms")
+    @Import(name="transforms")
       private final @Nullable List<String> transforms;
 
     public List<String> getTransforms() {

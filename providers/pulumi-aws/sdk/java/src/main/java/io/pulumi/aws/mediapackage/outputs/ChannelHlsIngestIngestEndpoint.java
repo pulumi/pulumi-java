@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.mediapackage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ChannelHlsIngestIngestEndpoint {
     /**
      * The password
@@ -27,11 +27,11 @@ public final class ChannelHlsIngestIngestEndpoint {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ChannelHlsIngestIngestEndpoint(
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("url") @Nullable String url,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("url") @Nullable String url,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.url = url;
         this.username = username;

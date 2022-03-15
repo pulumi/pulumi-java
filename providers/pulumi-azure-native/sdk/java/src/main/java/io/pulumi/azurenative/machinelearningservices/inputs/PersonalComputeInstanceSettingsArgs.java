@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.AssignedUserArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class PersonalComputeInstanceSettingsArgs extends io.pulumi.resourc
      * A user explicitly assigned to a personal compute instance.
      * 
      */
-    @InputImport(name="assignedUser")
+    @Import(name="assignedUser")
       private final @Nullable Output<AssignedUserArgs> assignedUser;
 
     public Output<AssignedUserArgs> getAssignedUser() {

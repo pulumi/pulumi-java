@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.documentdb.inputs.DataCenterResourcePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
      * Managed Cassandra cluster name.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -30,7 +30,7 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
      * Data center name in a managed Cassandra cluster.
      * 
      */
-    @InputImport(name="dataCenterName")
+    @Import(name="dataCenterName")
       private final @Nullable Output<String> dataCenterName;
 
     public Output<String> getDataCenterName() {
@@ -41,7 +41,7 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
      * Properties of a managed Cassandra data center.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<DataCenterResourcePropertiesArgs> properties;
 
     public Output<DataCenterResourcePropertiesArgs> getProperties() {
@@ -52,7 +52,7 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.awsnative.backup.inputs.BackupPlanLifecycleResourceType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class BackupPlanCopyActionResourceType extends io.pulumi.resources.
 
     public static final BackupPlanCopyActionResourceType Empty = new BackupPlanCopyActionResourceType();
 
-    @InputImport(name="destinationBackupVaultArn", required=true)
+    @Import(name="destinationBackupVaultArn", required=true)
       private final String destinationBackupVaultArn;
 
     public String getDestinationBackupVaultArn() {
         return this.destinationBackupVaultArn;
     }
 
-    @InputImport(name="lifecycle")
+    @Import(name="lifecycle")
       private final @Nullable BackupPlanLifecycleResourceType lifecycle;
 
     public Optional<BackupPlanLifecycleResourceType> getLifecycle() {

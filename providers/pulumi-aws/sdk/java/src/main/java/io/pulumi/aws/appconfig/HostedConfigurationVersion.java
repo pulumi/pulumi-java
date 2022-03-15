@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.appconfig.HostedConfigurationVersionArgs;
 import io.pulumi.aws.appconfig.inputs.HostedConfigurationVersionState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class HostedConfigurationVersion extends io.pulumi.resources.CustomResour
      * The application ID.
      * 
      */
-    @OutputExport(name="applicationId", type=String.class, parameters={})
+    @Export(name="applicationId", type=String.class, parameters={})
     private Output<String> applicationId;
 
     /**
@@ -47,7 +47,7 @@ public class HostedConfigurationVersion extends io.pulumi.resources.CustomResour
      * The Amazon Resource Name (ARN) of the AppConfig  hosted configuration version.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -61,7 +61,7 @@ public class HostedConfigurationVersion extends io.pulumi.resources.CustomResour
      * The configuration profile ID.
      * 
      */
-    @OutputExport(name="configurationProfileId", type=String.class, parameters={})
+    @Export(name="configurationProfileId", type=String.class, parameters={})
     private Output<String> configurationProfileId;
 
     /**
@@ -75,7 +75,7 @@ public class HostedConfigurationVersion extends io.pulumi.resources.CustomResour
      * The content of the configuration or the configuration data.
      * 
      */
-    @OutputExport(name="content", type=String.class, parameters={})
+    @Export(name="content", type=String.class, parameters={})
     private Output<String> content;
 
     /**
@@ -89,7 +89,7 @@ public class HostedConfigurationVersion extends io.pulumi.resources.CustomResour
      * A standard MIME type describing the format of the configuration content. For more information, see [Content-Type](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.17).
      * 
      */
-    @OutputExport(name="contentType", type=String.class, parameters={})
+    @Export(name="contentType", type=String.class, parameters={})
     private Output<String> contentType;
 
     /**
@@ -103,7 +103,7 @@ public class HostedConfigurationVersion extends io.pulumi.resources.CustomResour
      * A description of the configuration.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -117,7 +117,7 @@ public class HostedConfigurationVersion extends io.pulumi.resources.CustomResour
      * The version number of the hosted configuration.
      * 
      */
-    @OutputExport(name="versionNumber", type=Integer.class, parameters={})
+    @Export(name="versionNumber", type=Integer.class, parameters={})
     private Output<Integer> versionNumber;
 
     /**

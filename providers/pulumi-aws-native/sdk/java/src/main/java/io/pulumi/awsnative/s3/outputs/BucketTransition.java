@@ -4,24 +4,24 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketTransitionStorageClass;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketTransition {
     private final BucketTransitionStorageClass storageClass;
     private final @Nullable String transitionDate;
     private final @Nullable Integer transitionInDays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketTransition(
-        @OutputCustomType.Parameter("storageClass") BucketTransitionStorageClass storageClass,
-        @OutputCustomType.Parameter("transitionDate") @Nullable String transitionDate,
-        @OutputCustomType.Parameter("transitionInDays") @Nullable Integer transitionInDays) {
+        @CustomType.Parameter("storageClass") BucketTransitionStorageClass storageClass,
+        @CustomType.Parameter("transitionDate") @Nullable String transitionDate,
+        @CustomType.Parameter("transitionInDays") @Nullable Integer transitionInDays) {
         this.storageClass = storageClass;
         this.transitionDate = transitionDate;
         this.transitionInDays = transitionInDays;

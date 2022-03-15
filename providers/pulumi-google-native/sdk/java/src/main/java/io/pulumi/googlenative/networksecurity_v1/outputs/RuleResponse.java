@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.networksecurity_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.networksecurity_v1.outputs.DestinationResponse;
 import io.pulumi.googlenative.networksecurity_v1.outputs.SourceResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleResponse {
     /**
      * Optional. List of attributes for the traffic destination. All of the destinations must match. A destination is a match if a request matches all the specified hosts, ports, methods and headers. If not set, the action specified in the 'action' field will be applied without any rule checks for the destination.
@@ -22,10 +22,10 @@ public final class RuleResponse {
      */
     private final List<SourceResponse> sources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleResponse(
-        @OutputCustomType.Parameter("destinations") List<DestinationResponse> destinations,
-        @OutputCustomType.Parameter("sources") List<SourceResponse> sources) {
+        @CustomType.Parameter("destinations") List<DestinationResponse> destinations,
+        @CustomType.Parameter("sources") List<SourceResponse> sources) {
         this.destinations = destinations;
         this.sources = sources;
     }

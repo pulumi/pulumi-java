@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.gamelift.inputs;
 
 import io.pulumi.awsnative.gamelift.enums.AliasRoutingStrategyType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class AliasRoutingStrategy extends io.pulumi.resources.InvokeArgs {
      * A unique identifier for a fleet that the alias points to. If you specify SIMPLE for the Type property, you must specify this property.
      * 
      */
-    @InputImport(name="fleetId")
+    @Import(name="fleetId")
       private final @Nullable String fleetId;
 
     public Optional<String> getFleetId() {
@@ -30,7 +30,7 @@ public final class AliasRoutingStrategy extends io.pulumi.resources.InvokeArgs {
      * The message text to be used with a terminal routing strategy. If you specify TERMINAL for the Type property, you must specify this property.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
@@ -41,7 +41,7 @@ public final class AliasRoutingStrategy extends io.pulumi.resources.InvokeArgs {
      * Simple routing strategy. The alias resolves to one specific fleet. Use this type when routing to active fleets.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final AliasRoutingStrategyType type;
 
     public AliasRoutingStrategyType getType() {

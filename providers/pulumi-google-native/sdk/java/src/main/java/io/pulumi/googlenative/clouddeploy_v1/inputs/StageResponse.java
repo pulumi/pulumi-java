@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class StageResponse extends io.pulumi.resources.InvokeArgs {
      * Skaffold profiles to use when rendering the manifest for this stage's `Target`.
      * 
      */
-    @InputImport(name="profiles", required=true)
+    @Import(name="profiles", required=true)
       private final List<String> profiles;
 
     public List<String> getProfiles() {
@@ -32,7 +32,7 @@ public final class StageResponse extends io.pulumi.resources.InvokeArgs {
      * The target_id to which this stage points. This field refers exclusively to the last segment of a target name. For example, this field would just be `my-target` (rather than `projects/project/locations/location/targets/my-target`). The location of the `Target` is inferred to be the same as the location of the `DeliveryPipeline` that contains this `Stage`.
      * 
      */
-    @InputImport(name="targetId", required=true)
+    @Import(name="targetId", required=true)
       private final String targetId;
 
     public String getTargetId() {

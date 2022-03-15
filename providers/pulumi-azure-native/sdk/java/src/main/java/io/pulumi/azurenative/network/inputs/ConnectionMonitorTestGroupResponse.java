@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
      * List of destination endpoint names.
      * 
      */
-    @InputImport(name="destinations", required=true)
+    @Import(name="destinations", required=true)
       private final List<String> destinations;
 
     public List<String> getDestinations() {
@@ -35,7 +35,7 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
      * Value indicating whether test group is disabled.
      * 
      */
-    @InputImport(name="disable")
+    @Import(name="disable")
       private final @Nullable Boolean disable;
 
     public Optional<Boolean> getDisable() {
@@ -46,7 +46,7 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
      * The name of the connection monitor test group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -57,7 +57,7 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
      * List of source endpoint names.
      * 
      */
-    @InputImport(name="sources", required=true)
+    @Import(name="sources", required=true)
       private final List<String> sources;
 
     public List<String> getSources() {
@@ -68,7 +68,7 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
      * List of test configuration names.
      * 
      */
-    @InputImport(name="testConfigurations", required=true)
+    @Import(name="testConfigurations", required=true)
       private final List<String> testConfigurations;
 
     public List<String> getTestConfigurations() {

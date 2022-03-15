@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CopyProgressResponse {
     /**
      * Id of the account where the data needs to be uploaded.
@@ -88,23 +88,23 @@ public final class CopyProgressResponse {
      */
     private final String transferType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CopyProgressResponse(
-        @OutputCustomType.Parameter("accountId") String accountId,
-        @OutputCustomType.Parameter("bytesProcessed") Double bytesProcessed,
-        @OutputCustomType.Parameter("dataAccountType") String dataAccountType,
-        @OutputCustomType.Parameter("directoriesErroredOut") Double directoriesErroredOut,
-        @OutputCustomType.Parameter("filesErroredOut") Double filesErroredOut,
-        @OutputCustomType.Parameter("filesProcessed") Double filesProcessed,
-        @OutputCustomType.Parameter("invalidDirectoriesProcessed") Double invalidDirectoriesProcessed,
-        @OutputCustomType.Parameter("invalidFileBytesUploaded") Double invalidFileBytesUploaded,
-        @OutputCustomType.Parameter("invalidFilesProcessed") Double invalidFilesProcessed,
-        @OutputCustomType.Parameter("isEnumerationInProgress") Boolean isEnumerationInProgress,
-        @OutputCustomType.Parameter("renamedContainerCount") Double renamedContainerCount,
-        @OutputCustomType.Parameter("storageAccountName") String storageAccountName,
-        @OutputCustomType.Parameter("totalBytesToProcess") Double totalBytesToProcess,
-        @OutputCustomType.Parameter("totalFilesToProcess") Double totalFilesToProcess,
-        @OutputCustomType.Parameter("transferType") String transferType) {
+        @CustomType.Parameter("accountId") String accountId,
+        @CustomType.Parameter("bytesProcessed") Double bytesProcessed,
+        @CustomType.Parameter("dataAccountType") String dataAccountType,
+        @CustomType.Parameter("directoriesErroredOut") Double directoriesErroredOut,
+        @CustomType.Parameter("filesErroredOut") Double filesErroredOut,
+        @CustomType.Parameter("filesProcessed") Double filesProcessed,
+        @CustomType.Parameter("invalidDirectoriesProcessed") Double invalidDirectoriesProcessed,
+        @CustomType.Parameter("invalidFileBytesUploaded") Double invalidFileBytesUploaded,
+        @CustomType.Parameter("invalidFilesProcessed") Double invalidFilesProcessed,
+        @CustomType.Parameter("isEnumerationInProgress") Boolean isEnumerationInProgress,
+        @CustomType.Parameter("renamedContainerCount") Double renamedContainerCount,
+        @CustomType.Parameter("storageAccountName") String storageAccountName,
+        @CustomType.Parameter("totalBytesToProcess") Double totalBytesToProcess,
+        @CustomType.Parameter("totalFilesToProcess") Double totalFilesToProcess,
+        @CustomType.Parameter("transferType") String transferType) {
         this.accountId = accountId;
         this.bytesProcessed = bytesProcessed;
         this.dataAccountType = dataAccountType;

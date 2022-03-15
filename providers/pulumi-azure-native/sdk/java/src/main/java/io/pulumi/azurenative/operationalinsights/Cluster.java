@@ -12,7 +12,7 @@ import io.pulumi.azurenative.operationalinsights.outputs.IdentityResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.KeyVaultPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -41,7 +41,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The list of Log Analytics workspaces associated with the cluster
      * 
      */
-    @OutputExport(name="associatedWorkspaces", type=List.class, parameters={AssociatedWorkspaceResponse.class})
+    @Export(name="associatedWorkspaces", type=List.class, parameters={AssociatedWorkspaceResponse.class})
     private Output</* @Nullable */ List<AssociatedWorkspaceResponse>> associatedWorkspaces;
 
     /**
@@ -55,7 +55,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The cluster's billing type.
      * 
      */
-    @OutputExport(name="billingType", type=String.class, parameters={})
+    @Export(name="billingType", type=String.class, parameters={})
     private Output</* @Nullable */ String> billingType;
 
     /**
@@ -69,7 +69,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Additional properties for capacity reservation
      * 
      */
-    @OutputExport(name="capacityReservationProperties", type=CapacityReservationPropertiesResponse.class, parameters={})
+    @Export(name="capacityReservationProperties", type=CapacityReservationPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ CapacityReservationPropertiesResponse> capacityReservationProperties;
 
     /**
@@ -83,7 +83,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The ID associated with the cluster.
      * 
      */
-    @OutputExport(name="clusterId", type=String.class, parameters={})
+    @Export(name="clusterId", type=String.class, parameters={})
     private Output<String> clusterId;
 
     /**
@@ -97,7 +97,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The cluster creation time
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
@@ -111,7 +111,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The identity of the resource.
      * 
      */
-    @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
+    @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
@@ -125,7 +125,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is 'true' if region supports Availability Zones.
      * 
      */
-    @OutputExport(name="isAvailabilityZonesEnabled", type=Boolean.class, parameters={})
+    @Export(name="isAvailabilityZonesEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isAvailabilityZonesEnabled;
 
     /**
@@ -139,7 +139,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The associated key properties.
      * 
      */
-    @OutputExport(name="keyVaultProperties", type=KeyVaultPropertiesResponse.class, parameters={})
+    @Export(name="keyVaultProperties", type=KeyVaultPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ KeyVaultPropertiesResponse> keyVaultProperties;
 
     /**
@@ -153,7 +153,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The last time the cluster was updated.
      * 
      */
-    @OutputExport(name="lastModifiedDate", type=String.class, parameters={})
+    @Export(name="lastModifiedDate", type=String.class, parameters={})
     private Output<String> lastModifiedDate;
 
     /**
@@ -167,7 +167,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -181,7 +181,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -195,7 +195,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The provisioning state of the cluster.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -209,7 +209,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The sku properties.
      * 
      */
-    @OutputExport(name="sku", type=ClusterSkuResponse.class, parameters={})
+    @Export(name="sku", type=ClusterSkuResponse.class, parameters={})
     private Output</* @Nullable */ ClusterSkuResponse> sku;
 
     /**
@@ -223,7 +223,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -237,7 +237,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

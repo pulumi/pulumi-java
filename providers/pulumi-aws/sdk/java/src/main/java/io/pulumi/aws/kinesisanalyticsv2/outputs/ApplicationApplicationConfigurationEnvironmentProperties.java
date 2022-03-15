@@ -4,11 +4,11 @@
 package io.pulumi.aws.kinesisanalyticsv2.outputs;
 
 import io.pulumi.aws.kinesisanalyticsv2.outputs.ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationApplicationConfigurationEnvironmentProperties {
     /**
      * Describes the execution property groups.
@@ -16,8 +16,8 @@ public final class ApplicationApplicationConfigurationEnvironmentProperties {
      */
     private final List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup> propertyGroups;
 
-    @OutputCustomType.Constructor
-    private ApplicationApplicationConfigurationEnvironmentProperties(@OutputCustomType.Parameter("propertyGroups") List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup> propertyGroups) {
+    @CustomType.Constructor
+    private ApplicationApplicationConfigurationEnvironmentProperties(@CustomType.Parameter("propertyGroups") List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup> propertyGroups) {
         this.propertyGroups = propertyGroups;
     }
 

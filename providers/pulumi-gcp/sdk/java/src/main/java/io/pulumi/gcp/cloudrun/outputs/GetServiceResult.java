@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceMetadata;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceStatus;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplate;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceResult {
     private final Boolean autogenerateRevisionName;
     /**
@@ -31,17 +31,17 @@ public final class GetServiceResult {
     private final List<GetServiceTemplate> templates;
     private final List<GetServiceTraffic> traffics;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceResult(
-        @OutputCustomType.Parameter("autogenerateRevisionName") Boolean autogenerateRevisionName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("metadatas") List<GetServiceMetadata> metadatas,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("statuses") List<GetServiceStatus> statuses,
-        @OutputCustomType.Parameter("templates") List<GetServiceTemplate> templates,
-        @OutputCustomType.Parameter("traffics") List<GetServiceTraffic> traffics) {
+        @CustomType.Parameter("autogenerateRevisionName") Boolean autogenerateRevisionName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("metadatas") List<GetServiceMetadata> metadatas,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("statuses") List<GetServiceStatus> statuses,
+        @CustomType.Parameter("templates") List<GetServiceTemplate> templates,
+        @CustomType.Parameter("traffics") List<GetServiceTraffic> traffics) {
         this.autogenerateRevisionName = autogenerateRevisionName;
         this.id = id;
         this.location = location;

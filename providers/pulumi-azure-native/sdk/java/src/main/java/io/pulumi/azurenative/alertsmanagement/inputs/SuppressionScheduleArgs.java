@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
      * End date for suppression
      * 
      */
-    @InputImport(name="endDate")
+    @Import(name="endDate")
       private final @Nullable Output<String> endDate;
 
     public Output<String> getEndDate() {
@@ -35,7 +35,7 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
      * End date for suppression
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -46,7 +46,7 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
      * Specifies the values for recurrence pattern
      * 
      */
-    @InputImport(name="recurrenceValues")
+    @Import(name="recurrenceValues")
       private final @Nullable Output<List<Integer>> recurrenceValues;
 
     public Output<List<Integer>> getRecurrenceValues() {
@@ -57,7 +57,7 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
      * Start date for suppression
      * 
      */
-    @InputImport(name="startDate")
+    @Import(name="startDate")
       private final @Nullable Output<String> startDate;
 
     public Output<String> getStartDate() {
@@ -68,7 +68,7 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
      * Start time for suppression
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {

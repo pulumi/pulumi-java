@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse {
     /**
      * StoredInfoType where findings are defined by a dictionary of phrases.
@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse {
      */
     private final GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary;
 
-    @OutputCustomType.Constructor
-    private GooglePrivacyDlpV2StoredInfoTypeStatsResponse(@OutputCustomType.Parameter("largeCustomDictionary") GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary) {
+    @CustomType.Constructor
+    private GooglePrivacyDlpV2StoredInfoTypeStatsResponse(@CustomType.Parameter("largeCustomDictionary") GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse largeCustomDictionary) {
         this.largeCustomDictionary = largeCustomDictionary;
     }
 

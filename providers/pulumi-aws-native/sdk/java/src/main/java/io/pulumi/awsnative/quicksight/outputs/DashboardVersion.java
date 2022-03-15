@@ -6,7 +6,7 @@ package io.pulumi.awsnative.quicksight.outputs;
 import io.pulumi.awsnative.quicksight.enums.DashboardResourceStatus;
 import io.pulumi.awsnative.quicksight.outputs.DashboardError;
 import io.pulumi.awsnative.quicksight.outputs.DashboardSheet;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DashboardVersion {
     /**
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
@@ -64,18 +64,18 @@ public final class DashboardVersion {
      */
     private final @Nullable Double versionNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DashboardVersion(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("dataSetArns") @Nullable List<String> dataSetArns,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("errors") @Nullable List<DashboardError> errors,
-        @OutputCustomType.Parameter("sheets") @Nullable List<DashboardSheet> sheets,
-        @OutputCustomType.Parameter("sourceEntityArn") @Nullable String sourceEntityArn,
-        @OutputCustomType.Parameter("status") @Nullable DashboardResourceStatus status,
-        @OutputCustomType.Parameter("themeArn") @Nullable String themeArn,
-        @OutputCustomType.Parameter("versionNumber") @Nullable Double versionNumber) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("dataSetArns") @Nullable List<String> dataSetArns,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("errors") @Nullable List<DashboardError> errors,
+        @CustomType.Parameter("sheets") @Nullable List<DashboardSheet> sheets,
+        @CustomType.Parameter("sourceEntityArn") @Nullable String sourceEntityArn,
+        @CustomType.Parameter("status") @Nullable DashboardResourceStatus status,
+        @CustomType.Parameter("themeArn") @Nullable String themeArn,
+        @CustomType.Parameter("versionNumber") @Nullable Double versionNumber) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.dataSetArns = dataSetArns;

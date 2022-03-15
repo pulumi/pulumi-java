@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceGroupManagerUpdatePolicy {
     /**
      * , The maximum number of instances that can be created above the specified targetSize during the update process. Conflicts with `max_surge_percent`. If neither is set, defaults to 1
@@ -54,16 +54,16 @@ public final class InstanceGroupManagerUpdatePolicy {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceGroupManagerUpdatePolicy(
-        @OutputCustomType.Parameter("maxSurgeFixed") @Nullable Integer maxSurgeFixed,
-        @OutputCustomType.Parameter("maxSurgePercent") @Nullable Integer maxSurgePercent,
-        @OutputCustomType.Parameter("maxUnavailableFixed") @Nullable Integer maxUnavailableFixed,
-        @OutputCustomType.Parameter("maxUnavailablePercent") @Nullable Integer maxUnavailablePercent,
-        @OutputCustomType.Parameter("minReadySec") @Nullable Integer minReadySec,
-        @OutputCustomType.Parameter("minimalAction") String minimalAction,
-        @OutputCustomType.Parameter("replacementMethod") @Nullable String replacementMethod,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("maxSurgeFixed") @Nullable Integer maxSurgeFixed,
+        @CustomType.Parameter("maxSurgePercent") @Nullable Integer maxSurgePercent,
+        @CustomType.Parameter("maxUnavailableFixed") @Nullable Integer maxUnavailableFixed,
+        @CustomType.Parameter("maxUnavailablePercent") @Nullable Integer maxUnavailablePercent,
+        @CustomType.Parameter("minReadySec") @Nullable Integer minReadySec,
+        @CustomType.Parameter("minimalAction") String minimalAction,
+        @CustomType.Parameter("replacementMethod") @Nullable String replacementMethod,
+        @CustomType.Parameter("type") String type) {
         this.maxSurgeFixed = maxSurgeFixed;
         this.maxSurgePercent = maxSurgePercent;
         this.maxUnavailableFixed = maxUnavailableFixed;

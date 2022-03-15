@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TimeInWeekResponse {
     /**
      * A day in a week.
@@ -24,10 +24,10 @@ public final class TimeInWeekResponse {
      */
     private final @Nullable List<Integer> hourSlots;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TimeInWeekResponse(
-        @OutputCustomType.Parameter("day") @Nullable String day,
-        @OutputCustomType.Parameter("hourSlots") @Nullable List<Integer> hourSlots) {
+        @CustomType.Parameter("day") @Nullable String day,
+        @CustomType.Parameter("hourSlots") @Nullable List<Integer> hourSlots) {
         this.day = day;
         this.hourSlots = hourSlots;
     }

@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.efs.outputs;
 
 import io.pulumi.awsnative.efs.outputs.AccessPointCreationInfo;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessPointRootDirectory {
     /**
      * (Optional) Specifies the POSIX IDs and permissions to apply to the access point's RootDirectory. If the RootDirectory>Path specified does not exist, EFS creates the root directory using the CreationInfo settings when a client connects to an access point. When specifying the CreationInfo, you must provide values for all properties.   If you do not provide CreationInfo and the specified RootDirectory>Path does not exist, attempts to mount the file system using the access point will fail.
@@ -23,10 +23,10 @@ public final class AccessPointRootDirectory {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessPointRootDirectory(
-        @OutputCustomType.Parameter("creationInfo") @Nullable AccessPointCreationInfo creationInfo,
-        @OutputCustomType.Parameter("path") @Nullable String path) {
+        @CustomType.Parameter("creationInfo") @Nullable AccessPointCreationInfo creationInfo,
+        @CustomType.Parameter("path") @Nullable String path) {
         this.creationInfo = creationInfo;
         this.path = path;
     }

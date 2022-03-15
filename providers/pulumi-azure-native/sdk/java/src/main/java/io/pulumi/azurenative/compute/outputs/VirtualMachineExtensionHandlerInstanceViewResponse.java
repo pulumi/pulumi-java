@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineExtensionHandlerInstanceViewResponse {
     /**
      * The extension handler status.
@@ -28,11 +28,11 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse {
      */
     private final @Nullable String typeHandlerVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineExtensionHandlerInstanceViewResponse(
-        @OutputCustomType.Parameter("status") @Nullable InstanceViewStatusResponse status,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("typeHandlerVersion") @Nullable String typeHandlerVersion) {
+        @CustomType.Parameter("status") @Nullable InstanceViewStatusResponse status,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("typeHandlerVersion") @Nullable String typeHandlerVersion) {
         this.status = status;
         this.type = type;
         this.typeHandlerVersion = typeHandlerVersion;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1.inputs.PublicKeyArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.SubjectConfigArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.X509ParametersArgs;
@@ -24,7 +24,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
      * Optional. The public key that corresponds to this config. This is, for example, used when issuing Certificates, but not when creating a self-signed CertificateAuthority or CertificateAuthority CSR.
      * 
      */
-    @InputImport(name="publicKey")
+    @Import(name="publicKey")
       private final @Nullable Output<PublicKeyArgs> publicKey;
 
     public Output<PublicKeyArgs> getPublicKey() {
@@ -35,7 +35,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
      * Specifies some of the values in a certificate that are related to the subject.
      * 
      */
-    @InputImport(name="subjectConfig", required=true)
+    @Import(name="subjectConfig", required=true)
       private final Output<SubjectConfigArgs> subjectConfig;
 
     public Output<SubjectConfigArgs> getSubjectConfig() {
@@ -46,7 +46,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
      * Describes how some of the technical X.509 fields in a certificate should be populated.
      * 
      */
-    @InputImport(name="x509Config", required=true)
+    @Import(name="x509Config", required=true)
       private final Output<X509ParametersArgs> x509Config;
 
     public Output<X509ParametersArgs> getX509Config() {

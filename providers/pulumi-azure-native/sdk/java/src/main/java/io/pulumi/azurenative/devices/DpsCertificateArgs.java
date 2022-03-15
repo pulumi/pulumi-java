@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devices;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Base-64 representation of the X509 leaf certificate .cer file or just .pem file content.
      * 
      */
-    @InputImport(name="certificate")
+    @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
     public Output<String> getCertificate() {
@@ -30,7 +30,7 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the certificate create or update.
      * 
      */
-    @InputImport(name="certificateName")
+    @Import(name="certificateName")
       private final @Nullable Output<String> certificateName;
 
     public Output<String> getCertificateName() {
@@ -41,7 +41,7 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * True indicates that the certificate will be created in verified state and proof of possession will not be required.
      * 
      */
-    @InputImport(name="isVerified")
+    @Import(name="isVerified")
       private final @Nullable Output<Boolean> isVerified;
 
     public Output<Boolean> getIsVerified() {
@@ -52,7 +52,7 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the provisioning service.
      * 
      */
-    @InputImport(name="provisioningServiceName", required=true)
+    @Import(name="provisioningServiceName", required=true)
       private final Output<String> provisioningServiceName;
 
     public Output<String> getProvisioningServiceName() {
@@ -63,7 +63,7 @@ public final class DpsCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Resource group identifier.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

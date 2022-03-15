@@ -9,7 +9,7 @@ import io.pulumi.azurenative.migrate.outputs.IdentityResponse;
 import io.pulumi.azurenative.migrate.outputs.MoveCollectionPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class MoveCollection extends io.pulumi.resources.CustomResource {
      * The etag of the resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -51,7 +51,7 @@ public class MoveCollection extends io.pulumi.resources.CustomResource {
      * Defines the MSI properties of the Move Collection.
      * 
      */
-    @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
+    @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
@@ -65,7 +65,7 @@ public class MoveCollection extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -79,7 +79,7 @@ public class MoveCollection extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class MoveCollection extends io.pulumi.resources.CustomResource {
      * Defines the move collection properties.
      * 
      */
-    @OutputExport(name="properties", type=MoveCollectionPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=MoveCollectionPropertiesResponse.class, parameters={})
     private Output<MoveCollectionPropertiesResponse> properties;
 
     /**
@@ -107,7 +107,7 @@ public class MoveCollection extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -121,7 +121,7 @@ public class MoveCollection extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

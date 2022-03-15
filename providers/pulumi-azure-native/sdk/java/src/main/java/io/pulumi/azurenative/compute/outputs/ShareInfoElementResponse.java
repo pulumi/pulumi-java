@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ShareInfoElementResponse {
     /**
      * A relative URI containing the ID of the VM that has the disk attached.
@@ -15,8 +15,8 @@ public final class ShareInfoElementResponse {
      */
     private final String vmUri;
 
-    @OutputCustomType.Constructor
-    private ShareInfoElementResponse(@OutputCustomType.Parameter("vmUri") String vmUri) {
+    @CustomType.Constructor
+    private ShareInfoElementResponse(@CustomType.Parameter("vmUri") String vmUri) {
         this.vmUri = vmUri;
     }
 

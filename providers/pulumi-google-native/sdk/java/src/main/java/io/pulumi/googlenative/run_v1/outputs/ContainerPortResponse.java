@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContainerPortResponse {
     /**
      * (Optional) Port number the container listens on. This must be a valid port number, 0 < x < 65536.
@@ -26,11 +26,11 @@ public final class ContainerPortResponse {
      */
     private final String protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerPortResponse(
-        @OutputCustomType.Parameter("containerPort") Integer containerPort,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("protocol") String protocol) {
+        @CustomType.Parameter("containerPort") Integer containerPort,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("protocol") String protocol) {
         this.containerPort = containerPort;
         this.name = name;
         this.protocol = protocol;

@@ -5,12 +5,12 @@ package io.pulumi.aws.fsx.outputs;
 
 import io.pulumi.aws.fsx.outputs.DataRepositoryAssociationS3AutoExportPolicy;
 import io.pulumi.aws.fsx.outputs.DataRepositoryAssociationS3AutoImportPolicy;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataRepositoryAssociationS3 {
     /**
      * Specifies the type of updated objects that will be automatically exported from your file system to the linked S3 bucket. See the `events` configuration block.
@@ -23,10 +23,10 @@ public final class DataRepositoryAssociationS3 {
      */
     private final @Nullable DataRepositoryAssociationS3AutoImportPolicy autoImportPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataRepositoryAssociationS3(
-        @OutputCustomType.Parameter("autoExportPolicy") @Nullable DataRepositoryAssociationS3AutoExportPolicy autoExportPolicy,
-        @OutputCustomType.Parameter("autoImportPolicy") @Nullable DataRepositoryAssociationS3AutoImportPolicy autoImportPolicy) {
+        @CustomType.Parameter("autoExportPolicy") @Nullable DataRepositoryAssociationS3AutoExportPolicy autoExportPolicy,
+        @CustomType.Parameter("autoImportPolicy") @Nullable DataRepositoryAssociationS3AutoImportPolicy autoImportPolicy) {
         this.autoExportPolicy = autoExportPolicy;
         this.autoImportPolicy = autoImportPolicy;
     }

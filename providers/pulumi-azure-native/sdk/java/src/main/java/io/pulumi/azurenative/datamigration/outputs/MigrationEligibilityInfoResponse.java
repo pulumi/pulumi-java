@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MigrationEligibilityInfoResponse {
     /**
      * Whether object is eligible for migration or not.
@@ -22,10 +22,10 @@ public final class MigrationEligibilityInfoResponse {
      */
     private final List<String> validationMessages;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrationEligibilityInfoResponse(
-        @OutputCustomType.Parameter("isEligibleForMigration") Boolean isEligibleForMigration,
-        @OutputCustomType.Parameter("validationMessages") List<String> validationMessages) {
+        @CustomType.Parameter("isEligibleForMigration") Boolean isEligibleForMigration,
+        @CustomType.Parameter("validationMessages") List<String> validationMessages) {
         this.isEligibleForMigration = isEligibleForMigration;
         this.validationMessages = validationMessages;
     }

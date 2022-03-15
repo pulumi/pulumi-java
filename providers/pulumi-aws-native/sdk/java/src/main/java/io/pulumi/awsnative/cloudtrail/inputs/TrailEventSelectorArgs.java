@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudtrail.inputs;
 import io.pulumi.awsnative.cloudtrail.enums.TrailEventSelectorReadWriteType;
 import io.pulumi.awsnative.cloudtrail.inputs.TrailDataResourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class TrailEventSelectorArgs extends io.pulumi.resources.ResourceAr
 
     public static final TrailEventSelectorArgs Empty = new TrailEventSelectorArgs();
 
-    @InputImport(name="dataResources")
+    @Import(name="dataResources")
       private final @Nullable Output<List<TrailDataResourceArgs>> dataResources;
 
     public Output<List<TrailDataResourceArgs>> getDataResources() {
@@ -33,7 +33,7 @@ public final class TrailEventSelectorArgs extends io.pulumi.resources.ResourceAr
      * An optional list of service event sources from which you do not want management events to be logged on your trail. In this release, the list can be empty (disables the filter), or it can filter out AWS Key Management Service events by containing "kms.amazonaws.com". By default, ExcludeManagementEventSources is empty, and AWS KMS events are included in events that are logged to your trail.
      * 
      */
-    @InputImport(name="excludeManagementEventSources")
+    @Import(name="excludeManagementEventSources")
       private final @Nullable Output<List<String>> excludeManagementEventSources;
 
     public Output<List<String>> getExcludeManagementEventSources() {
@@ -44,7 +44,7 @@ public final class TrailEventSelectorArgs extends io.pulumi.resources.ResourceAr
      * Specify if you want your event selector to include management events for your trail.
      * 
      */
-    @InputImport(name="includeManagementEvents")
+    @Import(name="includeManagementEvents")
       private final @Nullable Output<Boolean> includeManagementEvents;
 
     public Output<Boolean> getIncludeManagementEvents() {
@@ -55,7 +55,7 @@ public final class TrailEventSelectorArgs extends io.pulumi.resources.ResourceAr
      * Specify if you want your trail to log read-only events, write-only events, or all. For example, the EC2 GetConsoleOutput is a read-only API operation and RunInstances is a write-only API operation.
      * 
      */
-    @InputImport(name="readWriteType")
+    @Import(name="readWriteType")
       private final @Nullable Output<TrailEventSelectorReadWriteType> readWriteType;
 
     public Output<TrailEventSelectorReadWriteType> getReadWriteType() {

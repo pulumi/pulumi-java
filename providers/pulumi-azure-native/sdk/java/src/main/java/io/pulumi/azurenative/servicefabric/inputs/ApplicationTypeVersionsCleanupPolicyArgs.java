@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ApplicationTypeVersionsCleanupPolicyArgs extends io.pulumi.re
      * Number of unused versions per application type to keep.
      * 
      */
-    @InputImport(name="maxUnusedVersionsToKeep", required=true)
+    @Import(name="maxUnusedVersionsToKeep", required=true)
       private final Output<Double> maxUnusedVersionsToKeep;
 
     public Output<Double> getMaxUnusedVersionsToKeep() {

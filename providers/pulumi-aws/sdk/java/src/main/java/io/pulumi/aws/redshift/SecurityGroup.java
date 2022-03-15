@@ -8,7 +8,7 @@ import io.pulumi.aws.redshift.SecurityGroupArgs;
 import io.pulumi.aws.redshift.inputs.SecurityGroupState;
 import io.pulumi.aws.redshift.outputs.SecurityGroupIngress;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * The description of the Redshift security group. Defaults to "Managed by Pulumi".
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -48,7 +48,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * A list of ingress rules.
      * 
      */
-    @OutputExport(name="ingress", type=List.class, parameters={SecurityGroupIngress.class})
+    @Export(name="ingress", type=List.class, parameters={SecurityGroupIngress.class})
     private Output<List<SecurityGroupIngress>> ingress;
 
     /**
@@ -62,7 +62,7 @@ public class SecurityGroup extends io.pulumi.resources.CustomResource {
      * The name of the Redshift security group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

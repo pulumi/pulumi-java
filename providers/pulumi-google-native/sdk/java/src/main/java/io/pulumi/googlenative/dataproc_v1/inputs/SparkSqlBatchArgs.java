@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class SparkSqlBatchArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
      */
-    @InputImport(name="jarFileUris")
+    @Import(name="jarFileUris")
       private final @Nullable Output<List<String>> jarFileUris;
 
     public Output<List<String>> getJarFileUris() {
@@ -35,7 +35,7 @@ public final class SparkSqlBatchArgs extends io.pulumi.resources.ResourceArgs {
      * The HCFS URI of the script that contains Spark SQL queries to execute.
      * 
      */
-    @InputImport(name="queryFileUri", required=true)
+    @Import(name="queryFileUri", required=true)
       private final Output<String> queryFileUri;
 
     public Output<String> getQueryFileUri() {
@@ -46,7 +46,7 @@ public final class SparkSqlBatchArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET name="value";).
      * 
      */
-    @InputImport(name="queryVariables")
+    @Import(name="queryVariables")
       private final @Nullable Output<Map<String,String>> queryVariables;
 
     public Output<Map<String,String>> getQueryVariables() {

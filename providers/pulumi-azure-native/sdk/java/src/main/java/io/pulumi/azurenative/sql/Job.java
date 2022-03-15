@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sql.JobArgs;
 import io.pulumi.azurenative.sql.outputs.JobScheduleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * User-defined description of the job.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -50,7 +50,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Schedule properties of the job.
      * 
      */
-    @OutputExport(name="schedule", type=JobScheduleResponse.class, parameters={})
+    @Export(name="schedule", type=JobScheduleResponse.class, parameters={})
     private Output</* @Nullable */ JobScheduleResponse> schedule;
 
     /**
@@ -78,7 +78,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -92,7 +92,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The job version number.
      * 
      */
-    @OutputExport(name="version", type=Integer.class, parameters={})
+    @Export(name="version", type=Integer.class, parameters={})
     private Output<Integer> version;
 
     /**

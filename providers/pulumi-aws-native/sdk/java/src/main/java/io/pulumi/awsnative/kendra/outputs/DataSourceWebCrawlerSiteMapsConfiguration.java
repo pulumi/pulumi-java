@@ -3,17 +3,17 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceWebCrawlerSiteMapsConfiguration {
     private final List<String> siteMaps;
 
-    @OutputCustomType.Constructor
-    private DataSourceWebCrawlerSiteMapsConfiguration(@OutputCustomType.Parameter("siteMaps") List<String> siteMaps) {
+    @CustomType.Constructor
+    private DataSourceWebCrawlerSiteMapsConfiguration(@CustomType.Parameter("siteMaps") List<String> siteMaps) {
         this.siteMaps = siteMaps;
     }
 

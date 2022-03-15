@@ -9,7 +9,7 @@ import io.pulumi.aws.ec2.inputs.NetworkAclState;
 import io.pulumi.aws.ec2.outputs.NetworkAclEgress;
 import io.pulumi.aws.ec2.outputs.NetworkAclIngress;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +43,7 @@ public class NetworkAcl extends io.pulumi.resources.CustomResource {
      * The ARN of the network ACL
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -57,7 +57,7 @@ public class NetworkAcl extends io.pulumi.resources.CustomResource {
      * Specifies an egress rule. Parameters defined below.
      * 
      */
-    @OutputExport(name="egress", type=List.class, parameters={NetworkAclEgress.class})
+    @Export(name="egress", type=List.class, parameters={NetworkAclEgress.class})
     private Output<List<NetworkAclEgress>> egress;
 
     /**
@@ -71,7 +71,7 @@ public class NetworkAcl extends io.pulumi.resources.CustomResource {
      * Specifies an ingress rule. Parameters defined below.
      * 
      */
-    @OutputExport(name="ingress", type=List.class, parameters={NetworkAclIngress.class})
+    @Export(name="ingress", type=List.class, parameters={NetworkAclIngress.class})
     private Output<List<NetworkAclIngress>> ingress;
 
     /**
@@ -85,7 +85,7 @@ public class NetworkAcl extends io.pulumi.resources.CustomResource {
      * The ID of the AWS account that owns the network ACL.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -99,7 +99,7 @@ public class NetworkAcl extends io.pulumi.resources.CustomResource {
      * A list of Subnet IDs to apply the ACL to
      * 
      */
-    @OutputExport(name="subnetIds", type=List.class, parameters={String.class})
+    @Export(name="subnetIds", type=List.class, parameters={String.class})
     private Output<List<String>> subnetIds;
 
     /**
@@ -113,7 +113,7 @@ public class NetworkAcl extends io.pulumi.resources.CustomResource {
      * A mapping of tags to assign to the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -127,7 +127,7 @@ public class NetworkAcl extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -141,7 +141,7 @@ public class NetworkAcl extends io.pulumi.resources.CustomResource {
      * The ID of the associated VPC.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

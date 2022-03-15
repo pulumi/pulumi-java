@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.composer_v1beta1.outputs.IPAllocationPolicyResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeConfigResponse {
     /**
      * Optional. The disk size in GB used for node VMs. Minimum size is 20GB. If unspecified, defaults to 100GB. Cannot be updated. This field is supported for Cloud Composer environments in versions composer-1.*.*-airflow-*.*.*.
@@ -69,19 +69,19 @@ public final class NodeConfigResponse {
      */
     private final List<String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeConfigResponse(
-        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
-        @OutputCustomType.Parameter("enableIpMasqAgent") Boolean enableIpMasqAgent,
-        @OutputCustomType.Parameter("ipAllocationPolicy") IPAllocationPolicyResponse ipAllocationPolicy,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("maxPodsPerNode") Integer maxPodsPerNode,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("oauthScopes") List<String> oauthScopes,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork,
-        @OutputCustomType.Parameter("tags") List<String> tags) {
+        @CustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @CustomType.Parameter("enableIpMasqAgent") Boolean enableIpMasqAgent,
+        @CustomType.Parameter("ipAllocationPolicy") IPAllocationPolicyResponse ipAllocationPolicy,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("maxPodsPerNode") Integer maxPodsPerNode,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("oauthScopes") List<String> oauthScopes,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("subnetwork") String subnetwork,
+        @CustomType.Parameter("tags") List<String> tags) {
         this.diskSizeGb = diskSizeGb;
         this.enableIpMasqAgent = enableIpMasqAgent;
         this.ipAllocationPolicy = ipAllocationPolicy;

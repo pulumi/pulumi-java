@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
      * The last time the schedule successfully ran. The timestamp is an RFC3339 string.
      * 
      */
-    @InputImport(name="lastRunStartTime", required=true)
+    @Import(name="lastRunStartTime", required=true)
       private final String lastRunStartTime;
 
     public String getLastRunStartTime() {
@@ -27,7 +27,7 @@ public final class ResourcePolicyResourceStatusInstanceSchedulePolicyStatusRespo
      * The next time the schedule is planned to run. The actual time might be slightly different. The timestamp is an RFC3339 string.
      * 
      */
-    @InputImport(name="nextRunStartTime", required=true)
+    @Import(name="nextRunStartTime", required=true)
       private final String nextRunStartTime;
 
     public String getNextRunStartTime() {

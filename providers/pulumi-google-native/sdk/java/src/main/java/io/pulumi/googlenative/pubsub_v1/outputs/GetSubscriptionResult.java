@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.pubsub_v1.outputs.DeadLetterPolicyResponse;
 import io.pulumi.googlenative.pubsub_v1.outputs.ExpirationPolicyResponse;
 import io.pulumi.googlenative.pubsub_v1.outputs.PushConfigResponse;
@@ -14,7 +14,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSubscriptionResult {
     /**
      * The approximate amount of time (on a best-effort basis) Pub/Sub waits for the subscriber to acknowledge receipt before resending the message. In the interval after the message is delivered and before it is acknowledged, it is considered to be *outstanding*. During that time period, the message will not be redelivered (on a best-effort basis). For pull subscriptions, this value is used as the initial value for the ack deadline. To override this value for a given message, call `ModifyAckDeadline` with the corresponding `ack_id` if using non-streaming pull or send the `ack_id` in a `StreamingModifyAckDeadlineRequest` if using streaming pull. The minimum custom deadline you can specify is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 minutes). If this parameter is 0, a default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the message.
@@ -92,23 +92,23 @@ public final class GetSubscriptionResult {
      */
     private final String topicMessageRetentionDuration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSubscriptionResult(
-        @OutputCustomType.Parameter("ackDeadlineSeconds") Integer ackDeadlineSeconds,
-        @OutputCustomType.Parameter("deadLetterPolicy") DeadLetterPolicyResponse deadLetterPolicy,
-        @OutputCustomType.Parameter("detached") Boolean detached,
-        @OutputCustomType.Parameter("enableMessageOrdering") Boolean enableMessageOrdering,
-        @OutputCustomType.Parameter("expirationPolicy") ExpirationPolicyResponse expirationPolicy,
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("messageRetentionDuration") String messageRetentionDuration,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pushConfig") PushConfigResponse pushConfig,
-        @OutputCustomType.Parameter("retainAckedMessages") Boolean retainAckedMessages,
-        @OutputCustomType.Parameter("retryPolicy") RetryPolicyResponse retryPolicy,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("topic") String topic,
-        @OutputCustomType.Parameter("topicMessageRetentionDuration") String topicMessageRetentionDuration) {
+        @CustomType.Parameter("ackDeadlineSeconds") Integer ackDeadlineSeconds,
+        @CustomType.Parameter("deadLetterPolicy") DeadLetterPolicyResponse deadLetterPolicy,
+        @CustomType.Parameter("detached") Boolean detached,
+        @CustomType.Parameter("enableMessageOrdering") Boolean enableMessageOrdering,
+        @CustomType.Parameter("expirationPolicy") ExpirationPolicyResponse expirationPolicy,
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("messageRetentionDuration") String messageRetentionDuration,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pushConfig") PushConfigResponse pushConfig,
+        @CustomType.Parameter("retainAckedMessages") Boolean retainAckedMessages,
+        @CustomType.Parameter("retryPolicy") RetryPolicyResponse retryPolicy,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("topic") String topic,
+        @CustomType.Parameter("topicMessageRetentionDuration") String topicMessageRetentionDuration) {
         this.ackDeadlineSeconds = ackDeadlineSeconds;
         this.deadLetterPolicy = deadLetterPolicy;
         this.detached = detached;

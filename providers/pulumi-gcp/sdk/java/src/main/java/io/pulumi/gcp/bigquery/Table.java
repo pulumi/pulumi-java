@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.TableArgs;
@@ -50,7 +50,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * descending priority order.
      * 
      */
-    @OutputExport(name="clusterings", type=List.class, parameters={String.class})
+    @Export(name="clusterings", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> clusterings;
 
     /**
@@ -66,7 +66,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The time when this table was created, in milliseconds since the epoch.
      * 
      */
-    @OutputExport(name="creationTime", type=Integer.class, parameters={})
+    @Export(name="creationTime", type=Integer.class, parameters={})
     private Output<Integer> creationTime;
 
     /**
@@ -81,7 +81,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Changing this forces a new resource to be created.
      * 
      */
-    @OutputExport(name="datasetId", type=String.class, parameters={})
+    @Export(name="datasetId", type=String.class, parameters={})
     private Output<String> datasetId;
 
     /**
@@ -97,7 +97,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * in state, a `=destroy` or `=update` that would delete the instance will fail.
      * 
      */
-    @OutputExport(name="deletionProtection", type=Boolean.class, parameters={})
+    @Export(name="deletionProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deletionProtection;
 
     /**
@@ -112,7 +112,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The field description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -128,7 +128,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * is transparent to the user.  Structure is documented below.
      * 
      */
-    @OutputExport(name="encryptionConfiguration", type=TableEncryptionConfiguration.class, parameters={})
+    @Export(name="encryptionConfiguration", type=TableEncryptionConfiguration.class, parameters={})
     private Output</* @Nullable */ TableEncryptionConfiguration> encryptionConfiguration;
 
     /**
@@ -144,7 +144,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * A hash of the resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -161,7 +161,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * reclaimed.
      * 
      */
-    @OutputExport(name="expirationTime", type=Integer.class, parameters={})
+    @Export(name="expirationTime", type=Integer.class, parameters={})
     private Output<Integer> expirationTime;
 
     /**
@@ -181,7 +181,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * if it were a standard BigQuery table. Structure is documented below.
      * 
      */
-    @OutputExport(name="externalDataConfiguration", type=TableExternalDataConfiguration.class, parameters={})
+    @Export(name="externalDataConfiguration", type=TableExternalDataConfiguration.class, parameters={})
     private Output</* @Nullable */ TableExternalDataConfiguration> externalDataConfiguration;
 
     /**
@@ -198,7 +198,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * A descriptive name for the table.
      * 
      */
-    @OutputExport(name="friendlyName", type=String.class, parameters={})
+    @Export(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
     /**
@@ -212,7 +212,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * A mapping of labels to assign to the resource.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -226,7 +226,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The time when this table was last modified, in milliseconds since the epoch.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=Integer.class, parameters={})
+    @Export(name="lastModifiedTime", type=Integer.class, parameters={})
     private Output<Integer> lastModifiedTime;
 
     /**
@@ -240,7 +240,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The geographic location where the table resides. This value is inherited from the dataset.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -255,7 +255,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="materializedView", type=TableMaterializedView.class, parameters={})
+    @Export(name="materializedView", type=TableMaterializedView.class, parameters={})
     private Output</* @Nullable */ TableMaterializedView> materializedView;
 
     /**
@@ -270,7 +270,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The size of this table in bytes, excluding any data in the streaming buffer.
      * 
      */
-    @OutputExport(name="numBytes", type=Integer.class, parameters={})
+    @Export(name="numBytes", type=Integer.class, parameters={})
     private Output<Integer> numBytes;
 
     /**
@@ -284,7 +284,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The number of bytes in the table that are considered "long-term storage".
      * 
      */
-    @OutputExport(name="numLongTermBytes", type=Integer.class, parameters={})
+    @Export(name="numLongTermBytes", type=Integer.class, parameters={})
     private Output<Integer> numLongTermBytes;
 
     /**
@@ -298,7 +298,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The number of rows of data in this table, excluding any data in the streaming buffer.
      * 
      */
-    @OutputExport(name="numRows", type=Integer.class, parameters={})
+    @Export(name="numRows", type=Integer.class, parameters={})
     private Output<Integer> numRows;
 
     /**
@@ -313,7 +313,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -329,7 +329,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * partitioning for this table. Structure is documented below.
      * 
      */
-    @OutputExport(name="rangePartitioning", type=TableRangePartitioning.class, parameters={})
+    @Export(name="rangePartitioning", type=TableRangePartitioning.class, parameters={})
     private Output</* @Nullable */ TableRangePartitioning> rangePartitioning;
 
     /**
@@ -354,7 +354,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * `google_bigquery_table.schema`
      * 
      */
-    @OutputExport(name="schema", type=String.class, parameters={})
+    @Export(name="schema", type=String.class, parameters={})
     private Output<String> schema;
 
     /**
@@ -378,7 +378,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -393,7 +393,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Changing this forces a new resource to be created.
      * 
      */
-    @OutputExport(name="tableId", type=String.class, parameters={})
+    @Export(name="tableId", type=String.class, parameters={})
     private Output<String> tableId;
 
     /**
@@ -409,7 +409,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * partitioning for this table. Structure is documented below.
      * 
      */
-    @OutputExport(name="timePartitioning", type=TableTimePartitioning.class, parameters={})
+    @Export(name="timePartitioning", type=TableTimePartitioning.class, parameters={})
     private Output</* @Nullable */ TableTimePartitioning> timePartitioning;
 
     /**
@@ -425,7 +425,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * which will generate one partition per day, hour, month, and year, respectively.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -441,7 +441,7 @@ public class Table extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="view", type=TableView.class, parameters={})
+    @Export(name="view", type=TableView.class, parameters={})
     private Output</* @Nullable */ TableView> view;
 
     /**

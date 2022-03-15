@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__IntegratedGradientsAttributionResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__SampledShapleyAttributionResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__XraiAttributionResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1__ExplanationConfigResponse {
     /**
      * Attributes credit by computing the Aumann-Shapley value taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365
@@ -27,11 +27,11 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse {
      */
     private final GoogleCloudMlV1__XraiAttributionResponse xraiAttribution;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1__ExplanationConfigResponse(
-        @OutputCustomType.Parameter("integratedGradientsAttribution") GoogleCloudMlV1__IntegratedGradientsAttributionResponse integratedGradientsAttribution,
-        @OutputCustomType.Parameter("sampledShapleyAttribution") GoogleCloudMlV1__SampledShapleyAttributionResponse sampledShapleyAttribution,
-        @OutputCustomType.Parameter("xraiAttribution") GoogleCloudMlV1__XraiAttributionResponse xraiAttribution) {
+        @CustomType.Parameter("integratedGradientsAttribution") GoogleCloudMlV1__IntegratedGradientsAttributionResponse integratedGradientsAttribution,
+        @CustomType.Parameter("sampledShapleyAttribution") GoogleCloudMlV1__SampledShapleyAttributionResponse sampledShapleyAttribution,
+        @CustomType.Parameter("xraiAttribution") GoogleCloudMlV1__XraiAttributionResponse xraiAttribution) {
         this.integratedGradientsAttribution = integratedGradientsAttribution;
         this.sampledShapleyAttribution = sampledShapleyAttribution;
         this.xraiAttribution = xraiAttribution;

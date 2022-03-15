@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.inputs.NatGatewayResponse;
 import io.pulumi.azurenative.network.inputs.PublicIPAddressDnsSettingsResponse;
 import io.pulumi.azurenative.network.inputs.PublicIPAddressSkuResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * The DDoS protection custom policy associated with the public IP address.
      * 
      */
-    @InputImport(name="ddosSettings")
+    @Import(name="ddosSettings")
       private final @Nullable DdosSettingsResponse ddosSettings;
 
     public Optional<DdosSettingsResponse> getDdosSettings() {
@@ -44,7 +44,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * The FQDN of the DNS record associated with the public IP address.
      * 
      */
-    @InputImport(name="dnsSettings")
+    @Import(name="dnsSettings")
       private final @Nullable PublicIPAddressDnsSettingsResponse dnsSettings;
 
     public Optional<PublicIPAddressDnsSettingsResponse> getDnsSettings() {
@@ -55,7 +55,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -66,7 +66,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * The extended location of the public ip address.
      * 
      */
-    @InputImport(name="extendedLocation")
+    @Import(name="extendedLocation")
       private final @Nullable ExtendedLocationResponse extendedLocation;
 
     public Optional<ExtendedLocationResponse> getExtendedLocation() {
@@ -77,7 +77,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -88,7 +88,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * The idle timeout of the public IP address.
      * 
      */
-    @InputImport(name="idleTimeoutInMinutes")
+    @Import(name="idleTimeoutInMinutes")
       private final @Nullable Integer idleTimeoutInMinutes;
 
     public Optional<Integer> getIdleTimeoutInMinutes() {
@@ -99,7 +99,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * The IP address associated with the public IP address resource.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
@@ -110,7 +110,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * The IP configuration associated with the public IP address.
      * 
      */
-    @InputImport(name="ipConfiguration", required=true)
+    @Import(name="ipConfiguration", required=true)
       private final IPConfigurationResponse ipConfiguration;
 
     public IPConfigurationResponse getIpConfiguration() {
@@ -121,7 +121,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * The list of tags associated with the public IP address.
      * 
      */
-    @InputImport(name="ipTags")
+    @Import(name="ipTags")
       private final @Nullable List<IpTagResponse> ipTags;
 
     public List<IpTagResponse> getIpTags() {
@@ -132,7 +132,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * The linked public IP address of the public IP address resource.
      * 
      */
-    @InputImport(name="linkedPublicIPAddress")
+    @Import(name="linkedPublicIPAddress")
       private final @Nullable PublicIPAddressResponse linkedPublicIPAddress;
 
     public Optional<PublicIPAddressResponse> getLinkedPublicIPAddress() {
@@ -143,7 +143,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -154,7 +154,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * Migration phase of Public IP Address.
      * 
      */
-    @InputImport(name="migrationPhase")
+    @Import(name="migrationPhase")
       private final @Nullable String migrationPhase;
 
     public Optional<String> getMigrationPhase() {
@@ -165,7 +165,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * Resource name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -176,7 +176,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * The NatGateway for the Public IP address.
      * 
      */
-    @InputImport(name="natGateway")
+    @Import(name="natGateway")
       private final @Nullable NatGatewayResponse natGateway;
 
     public Optional<NatGatewayResponse> getNatGateway() {
@@ -187,7 +187,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * The provisioning state of the public IP address resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -198,7 +198,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * The public IP address version.
      * 
      */
-    @InputImport(name="publicIPAddressVersion")
+    @Import(name="publicIPAddressVersion")
       private final @Nullable String publicIPAddressVersion;
 
     public Optional<String> getPublicIPAddressVersion() {
@@ -209,7 +209,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * The public IP address allocation method.
      * 
      */
-    @InputImport(name="publicIPAllocationMethod")
+    @Import(name="publicIPAllocationMethod")
       private final @Nullable String publicIPAllocationMethod;
 
     public Optional<String> getPublicIPAllocationMethod() {
@@ -220,7 +220,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * The Public IP Prefix this Public IP Address should be allocated from.
      * 
      */
-    @InputImport(name="publicIPPrefix")
+    @Import(name="publicIPPrefix")
       private final @Nullable SubResourceResponse publicIPPrefix;
 
     public Optional<SubResourceResponse> getPublicIPPrefix() {
@@ -231,7 +231,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * The resource GUID property of the public IP address resource.
      * 
      */
-    @InputImport(name="resourceGuid", required=true)
+    @Import(name="resourceGuid", required=true)
       private final String resourceGuid;
 
     public String getResourceGuid() {
@@ -242,7 +242,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * The service public IP address of the public IP address resource.
      * 
      */
-    @InputImport(name="servicePublicIPAddress")
+    @Import(name="servicePublicIPAddress")
       private final @Nullable PublicIPAddressResponse servicePublicIPAddress;
 
     public Optional<PublicIPAddressResponse> getServicePublicIPAddress() {
@@ -253,7 +253,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * The public IP address SKU.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable PublicIPAddressSkuResponse sku;
 
     public Optional<PublicIPAddressSkuResponse> getSku() {
@@ -264,7 +264,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -275,7 +275,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -286,7 +286,7 @@ public final class PublicIPAddressResponse extends io.pulumi.resources.InvokeArg
      * A list of availability zones denoting the IP allocated for the resource needs to come from.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable List<String> zones;
 
     public List<String> getZones() {

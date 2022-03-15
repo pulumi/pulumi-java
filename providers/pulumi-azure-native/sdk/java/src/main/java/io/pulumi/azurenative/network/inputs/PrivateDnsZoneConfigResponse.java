@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.RecordSetResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PrivateDnsZoneConfigResponse extends io.pulumi.resources.Invo
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -35,7 +35,7 @@ public final class PrivateDnsZoneConfigResponse extends io.pulumi.resources.Invo
      * The resource id of the private dns zone.
      * 
      */
-    @InputImport(name="privateDnsZoneId")
+    @Import(name="privateDnsZoneId")
       private final @Nullable String privateDnsZoneId;
 
     public Optional<String> getPrivateDnsZoneId() {
@@ -46,7 +46,7 @@ public final class PrivateDnsZoneConfigResponse extends io.pulumi.resources.Invo
      * A collection of information regarding a recordSet, holding information to identify private resources.
      * 
      */
-    @InputImport(name="recordSets", required=true)
+    @Import(name="recordSets", required=true)
       private final List<RecordSetResponse> recordSets;
 
     public List<RecordSetResponse> getRecordSets() {

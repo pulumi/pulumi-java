@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logz.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSubAccountTagRuleArgs extends io.pulumi.resources.InvokeAr
      * Monitor resource name
      * 
      */
-    @InputImport(name="monitorName", required=true)
+    @Import(name="monitorName", required=true)
       private final String monitorName;
 
     public String getMonitorName() {
@@ -27,14 +27,14 @@ public final class GetSubAccountTagRuleArgs extends io.pulumi.resources.InvokeAr
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
     }
 
-    @InputImport(name="ruleSetName", required=true)
+    @Import(name="ruleSetName", required=true)
       private final String ruleSetName;
 
     public String getRuleSetName() {
@@ -45,7 +45,7 @@ public final class GetSubAccountTagRuleArgs extends io.pulumi.resources.InvokeAr
      * Sub Account resource name
      * 
      */
-    @InputImport(name="subAccountName", required=true)
+    @Import(name="subAccountName", required=true)
       private final String subAccountName;
 
     public String getSubAccountName() {

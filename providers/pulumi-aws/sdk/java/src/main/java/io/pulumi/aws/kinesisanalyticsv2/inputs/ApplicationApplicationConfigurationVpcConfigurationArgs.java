@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ApplicationApplicationConfigurationVpcConfigurationArgs exten
      * The Security Group IDs used by the VPC configuration.
      * 
      */
-    @InputImport(name="securityGroupIds", required=true)
+    @Import(name="securityGroupIds", required=true)
       private final Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -30,21 +30,21 @@ public final class ApplicationApplicationConfigurationVpcConfigurationArgs exten
      * The Subnet IDs used by the VPC configuration.
      * 
      */
-    @InputImport(name="subnetIds", required=true)
+    @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
 
-    @InputImport(name="vpcConfigurationId")
+    @Import(name="vpcConfigurationId")
       private final @Nullable Output<String> vpcConfigurationId;
 
     public Output<String> getVpcConfigurationId() {
         return this.vpcConfigurationId == null ? Output.empty() : this.vpcConfigurationId;
     }
 
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

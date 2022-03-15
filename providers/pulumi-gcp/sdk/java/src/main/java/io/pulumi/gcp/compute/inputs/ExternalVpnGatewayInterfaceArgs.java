@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ExternalVpnGatewayInterfaceArgs extends io.pulumi.resources.R
      * * `0, 1, 2, 3 - FOUR_IPS_REDUNDANCY`
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<Integer> id;
 
     public Output<Integer> getId() {
@@ -37,7 +37,7 @@ public final class ExternalVpnGatewayInterfaceArgs extends io.pulumi.resources.R
      * it cannot be an IP address from Google Compute Engine.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {

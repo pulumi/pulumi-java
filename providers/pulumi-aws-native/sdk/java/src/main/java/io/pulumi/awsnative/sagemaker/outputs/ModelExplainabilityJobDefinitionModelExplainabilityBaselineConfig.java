@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.ModelExplainabilityJobDefinitionConstraintsResource;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfig {
     private final @Nullable String baseliningJobName;
     private final @Nullable ModelExplainabilityJobDefinitionConstraintsResource constraintsResource;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfig(
-        @OutputCustomType.Parameter("baseliningJobName") @Nullable String baseliningJobName,
-        @OutputCustomType.Parameter("constraintsResource") @Nullable ModelExplainabilityJobDefinitionConstraintsResource constraintsResource) {
+        @CustomType.Parameter("baseliningJobName") @Nullable String baseliningJobName,
+        @CustomType.Parameter("constraintsResource") @Nullable ModelExplainabilityJobDefinitionConstraintsResource constraintsResource) {
         this.baseliningJobName = baseliningJobName;
         this.constraintsResource = constraintsResource;
     }

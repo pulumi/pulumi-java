@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SpriteSheetResponse {
     /**
      * The maximum number of sprites per row in a sprite sheet. The default is 0, which indicates no maximum limit.
@@ -66,19 +66,19 @@ public final class SpriteSheetResponse {
      */
     private final Integer totalCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SpriteSheetResponse(
-        @OutputCustomType.Parameter("columnCount") Integer columnCount,
-        @OutputCustomType.Parameter("endTimeOffset") String endTimeOffset,
-        @OutputCustomType.Parameter("filePrefix") String filePrefix,
-        @OutputCustomType.Parameter("format") String format,
-        @OutputCustomType.Parameter("interval") String interval,
-        @OutputCustomType.Parameter("quality") Integer quality,
-        @OutputCustomType.Parameter("rowCount") Integer rowCount,
-        @OutputCustomType.Parameter("spriteHeightPixels") Integer spriteHeightPixels,
-        @OutputCustomType.Parameter("spriteWidthPixels") Integer spriteWidthPixels,
-        @OutputCustomType.Parameter("startTimeOffset") String startTimeOffset,
-        @OutputCustomType.Parameter("totalCount") Integer totalCount) {
+        @CustomType.Parameter("columnCount") Integer columnCount,
+        @CustomType.Parameter("endTimeOffset") String endTimeOffset,
+        @CustomType.Parameter("filePrefix") String filePrefix,
+        @CustomType.Parameter("format") String format,
+        @CustomType.Parameter("interval") String interval,
+        @CustomType.Parameter("quality") Integer quality,
+        @CustomType.Parameter("rowCount") Integer rowCount,
+        @CustomType.Parameter("spriteHeightPixels") Integer spriteHeightPixels,
+        @CustomType.Parameter("spriteWidthPixels") Integer spriteWidthPixels,
+        @CustomType.Parameter("startTimeOffset") String startTimeOffset,
+        @CustomType.Parameter("totalCount") Integer totalCount) {
         this.columnCount = columnCount;
         this.endTimeOffset = endTimeOffset;
         this.filePrefix = filePrefix;

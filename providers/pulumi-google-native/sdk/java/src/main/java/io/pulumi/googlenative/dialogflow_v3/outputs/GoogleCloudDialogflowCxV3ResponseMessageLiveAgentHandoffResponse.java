@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse {
     /**
      * Custom metadata for your handoff procedure. Dialogflow doesn't impose any structure on this.
@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffRespo
      */
     private final Map<String,String> metadata;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse(@OutputCustomType.Parameter("metadata") Map<String,String> metadata) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffResponse(@CustomType.Parameter("metadata") Map<String,String> metadata) {
         this.metadata = metadata;
     }
 

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.enums.CacheBehavior;
 import io.pulumi.azurenative.cdn.enums.CacheType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
      * Caching behavior for the requests
      * 
      */
-    @InputImport(name="cacheBehavior", required=true)
+    @Import(name="cacheBehavior", required=true)
       private final Output<Either<String,CacheBehavior>> cacheBehavior;
 
     public Output<Either<String,CacheBehavior>> getCacheBehavior() {
@@ -36,7 +36,7 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
      * The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
      * 
      */
-    @InputImport(name="cacheDuration")
+    @Import(name="cacheDuration")
       private final @Nullable Output<String> cacheDuration;
 
     public Output<String> getCacheDuration() {
@@ -47,14 +47,14 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
      * The level at which the content needs to be cached.
      * 
      */
-    @InputImport(name="cacheType", required=true)
+    @Import(name="cacheType", required=true)
       private final Output<Either<String,CacheType>> cacheType;
 
     public Output<Either<String,CacheType>> getCacheType() {
         return this.cacheType;
     }
 
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {

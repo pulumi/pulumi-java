@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2_getAmi.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetAmiArgs extends io.pulumi.resources.InvokeArgs {
      * the image. Valid items are the numeric account ID or `self`.
      * 
      */
-    @InputImport(name="executableUsers")
+    @Import(name="executableUsers")
       private final @Nullable List<String> executableUsers;
 
     public List<String> getExecutableUsers() {
@@ -31,7 +31,7 @@ public final class GetAmiArgs extends io.pulumi.resources.InvokeArgs {
      * List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g., `amazon`, `aws-marketplace`, `microsoft`).
      * 
      */
-    @InputImport(name="owners", required=true)
+    @Import(name="owners", required=true)
       private final List<String> owners;
 
     public List<String> getOwners() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ec2.enums.PrefixListAddressFamily;
 import io.pulumi.awsnative.ec2.inputs.PrefixListEntryArgs;
 import io.pulumi.awsnative.ec2.inputs.PrefixListTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
      * Ip Version of Prefix List.
      * 
      */
-    @InputImport(name="addressFamily", required=true)
+    @Import(name="addressFamily", required=true)
       private final Output<PrefixListAddressFamily> addressFamily;
 
     public Output<PrefixListAddressFamily> getAddressFamily() {
@@ -34,7 +34,7 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
      * Entries of Prefix List.
      * 
      */
-    @InputImport(name="entries")
+    @Import(name="entries")
       private final @Nullable Output<List<PrefixListEntryArgs>> entries;
 
     public Output<List<PrefixListEntryArgs>> getEntries() {
@@ -45,7 +45,7 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
      * Max Entries of Prefix List.
      * 
      */
-    @InputImport(name="maxEntries", required=true)
+    @Import(name="maxEntries", required=true)
       private final Output<Integer> maxEntries;
 
     public Output<Integer> getMaxEntries() {
@@ -56,7 +56,7 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
      * Name of Prefix List.
      * 
      */
-    @InputImport(name="prefixListName")
+    @Import(name="prefixListName")
       private final @Nullable Output<String> prefixListName;
 
     public Output<String> getPrefixListName() {
@@ -67,7 +67,7 @@ public final class PrefixListArgs extends io.pulumi.resources.ResourceArgs {
      * Tags for Prefix List
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<PrefixListTagArgs>> tags;
 
     public Output<List<PrefixListTagArgs>> getTags() {

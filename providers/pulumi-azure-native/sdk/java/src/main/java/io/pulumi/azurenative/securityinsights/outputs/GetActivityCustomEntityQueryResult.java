@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.ActivityEntityQueriesPropertiesResponseQueryDefinitions;
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetActivityCustomEntityQueryResult {
     /**
      * The entity query content to display in timeline
@@ -103,25 +103,25 @@ public final class GetActivityCustomEntityQueryResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetActivityCustomEntityQueryResult(
-        @OutputCustomType.Parameter("content") @Nullable String content,
-        @OutputCustomType.Parameter("createdTimeUtc") String createdTimeUtc,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("entitiesFilter") @Nullable Map<String,List<String>> entitiesFilter,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("inputEntityType") @Nullable String inputEntityType,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("lastModifiedTimeUtc") String lastModifiedTimeUtc,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("queryDefinitions") @Nullable ActivityEntityQueriesPropertiesResponseQueryDefinitions queryDefinitions,
-        @OutputCustomType.Parameter("requiredInputFieldsSets") @Nullable List<List<String>> requiredInputFieldsSets,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("templateName") @Nullable String templateName,
-        @OutputCustomType.Parameter("title") @Nullable String title,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("content") @Nullable String content,
+        @CustomType.Parameter("createdTimeUtc") String createdTimeUtc,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("entitiesFilter") @Nullable Map<String,List<String>> entitiesFilter,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("inputEntityType") @Nullable String inputEntityType,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("lastModifiedTimeUtc") String lastModifiedTimeUtc,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("queryDefinitions") @Nullable ActivityEntityQueriesPropertiesResponseQueryDefinitions queryDefinitions,
+        @CustomType.Parameter("requiredInputFieldsSets") @Nullable List<List<String>> requiredInputFieldsSets,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("templateName") @Nullable String templateName,
+        @CustomType.Parameter("title") @Nullable String title,
+        @CustomType.Parameter("type") String type) {
         this.content = content;
         this.createdTimeUtc = createdTimeUtc;
         this.description = description;

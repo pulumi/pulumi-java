@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ManagedScalingPolicyComputeLimitGetArgs extends io.pulumi.res
      * The upper boundary of EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration.
      * 
      */
-    @InputImport(name="maximumCapacityUnits", required=true)
+    @Import(name="maximumCapacityUnits", required=true)
       private final Output<Integer> maximumCapacityUnits;
 
     public Output<Integer> getMaximumCapacityUnits() {
@@ -30,7 +30,7 @@ public final class ManagedScalingPolicyComputeLimitGetArgs extends io.pulumi.res
      * The upper boundary of EC2 units for core node type in a cluster. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. The core units are not allowed to scale beyond this boundary. The parameter is used to split capacity allocation between core and task nodes.
      * 
      */
-    @InputImport(name="maximumCoreCapacityUnits")
+    @Import(name="maximumCoreCapacityUnits")
       private final @Nullable Output<Integer> maximumCoreCapacityUnits;
 
     public Output<Integer> getMaximumCoreCapacityUnits() {
@@ -41,7 +41,7 @@ public final class ManagedScalingPolicyComputeLimitGetArgs extends io.pulumi.res
      * The upper boundary of On-Demand EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. The On-Demand units are not allowed to scale beyond this boundary. The parameter is used to split capacity allocation between On-Demand and Spot instances.
      * 
      */
-    @InputImport(name="maximumOndemandCapacityUnits")
+    @Import(name="maximumOndemandCapacityUnits")
       private final @Nullable Output<Integer> maximumOndemandCapacityUnits;
 
     public Output<Integer> getMaximumOndemandCapacityUnits() {
@@ -52,7 +52,7 @@ public final class ManagedScalingPolicyComputeLimitGetArgs extends io.pulumi.res
      * The lower boundary of EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration.
      * 
      */
-    @InputImport(name="minimumCapacityUnits", required=true)
+    @Import(name="minimumCapacityUnits", required=true)
       private final Output<Integer> minimumCapacityUnits;
 
     public Output<Integer> getMinimumCapacityUnits() {
@@ -63,7 +63,7 @@ public final class ManagedScalingPolicyComputeLimitGetArgs extends io.pulumi.res
      * The unit type used for specifying a managed scaling policy. Valid Values: `InstanceFleetUnits` | `Instances` | `VCPU`
      * 
      */
-    @InputImport(name="unitType", required=true)
+    @Import(name="unitType", required=true)
       private final Output<String> unitType;
 
     public Output<String> getUnitType() {

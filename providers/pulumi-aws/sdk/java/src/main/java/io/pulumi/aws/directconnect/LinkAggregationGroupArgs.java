@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * The ID of an existing dedicated connection to migrate to the LAG.
      * 
      */
-    @InputImport(name="connectionId")
+    @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
     public Output<String> getConnectionId() {
@@ -31,7 +31,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * The bandwidth of the individual physical connections bundled by the LAG. Valid values: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, 10Gbps and 100Gbps. Case sensitive.
      * 
      */
-    @InputImport(name="connectionsBandwidth", required=true)
+    @Import(name="connectionsBandwidth", required=true)
       private final Output<String> connectionsBandwidth;
 
     public Output<String> getConnectionsBandwidth() {
@@ -42,7 +42,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * A boolean that indicates all connections associated with the LAG should be deleted so that the LAG can be destroyed without error. These objects are *not* recoverable.
      * 
      */
-    @InputImport(name="forceDestroy")
+    @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
     public Output<Boolean> getForceDestroy() {
@@ -53,7 +53,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * The AWS Direct Connect location in which the LAG should be allocated. See [DescribeLocations](https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DescribeLocations.html) for the list of AWS Direct Connect locations. Use `locationCode`.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -64,7 +64,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * The name of the LAG.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -75,7 +75,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * The name of the service provider associated with the LAG.
      * 
      */
-    @InputImport(name="providerName")
+    @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
     public Output<String> getProviderName() {
@@ -86,7 +86,7 @@ public final class LinkAggregationGroupArgs extends io.pulumi.resources.Resource
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

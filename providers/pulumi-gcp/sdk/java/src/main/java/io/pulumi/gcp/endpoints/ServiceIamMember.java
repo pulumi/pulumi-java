@@ -4,7 +4,7 @@
 package io.pulumi.gcp.endpoints;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.endpoints.ServiceIamMemberArgs;
@@ -57,7 +57,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:endpoints/serviceIamMember:ServiceIamMember")
 public class ServiceIamMember extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=ServiceIamMemberCondition.class, parameters={})
+    @Export(name="condition", type=ServiceIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ ServiceIamMemberCondition> condition;
 
     public Output</* @Nullable */ ServiceIamMemberCondition> getCondition() {
@@ -67,7 +67,7 @@ public class ServiceIamMember extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -77,7 +77,7 @@ public class ServiceIamMember extends io.pulumi.resources.CustomResource {
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="member", type=String.class, parameters={})
+    @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
     public Output<String> getMember() {
@@ -89,7 +89,7 @@ public class ServiceIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**
@@ -101,7 +101,7 @@ public class ServiceIamMember extends io.pulumi.resources.CustomResource {
     public Output<String> getRole() {
         return this.role;
     }
-    @OutputExport(name="serviceName", type=String.class, parameters={})
+    @Export(name="serviceName", type=String.class, parameters={})
     private Output<String> serviceName;
 
     public Output<String> getServiceName() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyAbortArgs extends
      * The value must be between 200 and 599 inclusive.
      * 
      */
-    @InputImport(name="httpStatus")
+    @Import(name="httpStatus")
       private final @Nullable Output<Integer> httpStatus;
 
     public Output<Integer> getHttpStatus() {
@@ -32,7 +32,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyAbortArgs extends
      * The value must be between 0.0 and 100.0 inclusive.
      * 
      */
-    @InputImport(name="percentage")
+    @Import(name="percentage")
       private final @Nullable Output<Double> percentage;
 
     public Output<Double> getPercentage() {

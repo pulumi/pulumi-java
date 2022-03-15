@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.peering.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRegisteredPrefixResult {
     /**
      * The error message associated with the validation state, if any.
@@ -52,16 +52,16 @@ public final class GetRegisteredPrefixResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegisteredPrefixResult(
-        @OutputCustomType.Parameter("errorMessage") String errorMessage,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("peeringServicePrefixKey") String peeringServicePrefixKey,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("prefixValidationState") String prefixValidationState,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("errorMessage") String errorMessage,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("peeringServicePrefixKey") String peeringServicePrefixKey,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("prefixValidationState") String prefixValidationState,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") String type) {
         this.errorMessage = errorMessage;
         this.id = id;
         this.name = name;

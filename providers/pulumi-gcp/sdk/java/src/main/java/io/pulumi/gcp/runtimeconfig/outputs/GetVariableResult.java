@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.runtimeconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVariableResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -23,15 +23,15 @@ public final class GetVariableResult {
     private final String updateTime;
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVariableResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parent") String parent,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("text") String text,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parent") String parent,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("text") String text,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("value") String value) {
         this.id = id;
         this.name = name;
         this.parent = parent;

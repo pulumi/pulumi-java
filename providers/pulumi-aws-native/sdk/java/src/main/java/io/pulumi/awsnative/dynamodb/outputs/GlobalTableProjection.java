@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GlobalTableProjection {
     private final @Nullable List<String> nonKeyAttributes;
     private final @Nullable String projectionType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GlobalTableProjection(
-        @OutputCustomType.Parameter("nonKeyAttributes") @Nullable List<String> nonKeyAttributes,
-        @OutputCustomType.Parameter("projectionType") @Nullable String projectionType) {
+        @CustomType.Parameter("nonKeyAttributes") @Nullable List<String> nonKeyAttributes,
+        @CustomType.Parameter("projectionType") @Nullable String projectionType) {
         this.nonKeyAttributes = nonKeyAttributes;
         this.projectionType = projectionType;
     }

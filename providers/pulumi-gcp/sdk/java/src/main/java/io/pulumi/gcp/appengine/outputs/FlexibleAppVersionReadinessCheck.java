@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlexibleAppVersionReadinessCheck {
     /**
      * A maximum time limit on application initialization, measured from moment the application successfully
@@ -50,15 +50,15 @@ public final class FlexibleAppVersionReadinessCheck {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlexibleAppVersionReadinessCheck(
-        @OutputCustomType.Parameter("appStartTimeout") @Nullable String appStartTimeout,
-        @OutputCustomType.Parameter("checkInterval") @Nullable String checkInterval,
-        @OutputCustomType.Parameter("failureThreshold") @Nullable Double failureThreshold,
-        @OutputCustomType.Parameter("host") @Nullable String host,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("successThreshold") @Nullable Double successThreshold,
-        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
+        @CustomType.Parameter("appStartTimeout") @Nullable String appStartTimeout,
+        @CustomType.Parameter("checkInterval") @Nullable String checkInterval,
+        @CustomType.Parameter("failureThreshold") @Nullable Double failureThreshold,
+        @CustomType.Parameter("host") @Nullable String host,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("successThreshold") @Nullable Double successThreshold,
+        @CustomType.Parameter("timeout") @Nullable String timeout) {
         this.appStartTimeout = appStartTimeout;
         this.checkInterval = checkInterval;
         this.failureThreshold = failureThreshold;

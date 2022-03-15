@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.powerplatform.inputs;
 
 import io.pulumi.azurenative.powerplatform.inputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class PropertiesResponseEncryption extends io.pulumi.resources.Invo
      * Key vault properties.
      * 
      */
-    @InputImport(name="keyVault")
+    @Import(name="keyVault")
       private final @Nullable KeyVaultPropertiesResponse keyVault;
 
     public Optional<KeyVaultPropertiesResponse> getKeyVault() {
@@ -34,7 +34,7 @@ public final class PropertiesResponseEncryption extends io.pulumi.resources.Invo
      * The state of onboarding, which only appears in the response.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {

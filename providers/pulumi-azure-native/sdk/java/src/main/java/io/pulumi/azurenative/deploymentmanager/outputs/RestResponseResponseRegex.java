@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RestResponseResponseRegex {
     /**
      * Indicates whether any or all of the expressions should match with the response content.
@@ -23,10 +23,10 @@ public final class RestResponseResponseRegex {
      */
     private final @Nullable List<String> matches;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RestResponseResponseRegex(
-        @OutputCustomType.Parameter("matchQuantifier") @Nullable String matchQuantifier,
-        @OutputCustomType.Parameter("matches") @Nullable List<String> matches) {
+        @CustomType.Parameter("matchQuantifier") @Nullable String matchQuantifier,
+        @CustomType.Parameter("matches") @Nullable List<String> matches) {
         this.matchQuantifier = matchQuantifier;
         this.matches = matches;
     }

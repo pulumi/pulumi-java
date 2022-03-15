@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel {
     /**
      * The name of the query parameter to match. The query parameter must exist in the
@@ -22,10 +22,10 @@ public final class URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel 
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private URLMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabel(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("value") String value) {
         this.name = name;
         this.value = value;
     }

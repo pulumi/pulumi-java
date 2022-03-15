@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.NodeManagementResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.ShieldedInstanceConfigResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.UpgradeSettingsResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AutoprovisioningNodePoolDefaultsResponse {
     /**
      *  The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the node pool. This should be of the form projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For more information about protecting resources with Cloud KMS Keys please see: https://cloud.google.com/compute/docs/disks/customer-managed-encryption
@@ -65,18 +65,18 @@ public final class AutoprovisioningNodePoolDefaultsResponse {
      */
     private final UpgradeSettingsResponse upgradeSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoprovisioningNodePoolDefaultsResponse(
-        @OutputCustomType.Parameter("bootDiskKmsKey") String bootDiskKmsKey,
-        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
-        @OutputCustomType.Parameter("diskType") String diskType,
-        @OutputCustomType.Parameter("imageType") String imageType,
-        @OutputCustomType.Parameter("management") NodeManagementResponse management,
-        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
-        @OutputCustomType.Parameter("oauthScopes") List<String> oauthScopes,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
-        @OutputCustomType.Parameter("upgradeSettings") UpgradeSettingsResponse upgradeSettings) {
+        @CustomType.Parameter("bootDiskKmsKey") String bootDiskKmsKey,
+        @CustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @CustomType.Parameter("diskType") String diskType,
+        @CustomType.Parameter("imageType") String imageType,
+        @CustomType.Parameter("management") NodeManagementResponse management,
+        @CustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @CustomType.Parameter("oauthScopes") List<String> oauthScopes,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
+        @CustomType.Parameter("upgradeSettings") UpgradeSettingsResponse upgradeSettings) {
         this.bootDiskKmsKey = bootDiskKmsKey;
         this.diskSizeGb = diskSizeGb;
         this.diskType = diskType;

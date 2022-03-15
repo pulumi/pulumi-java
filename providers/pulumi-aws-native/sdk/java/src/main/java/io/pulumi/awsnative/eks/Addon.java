@@ -8,7 +8,7 @@ import io.pulumi.awsnative.eks.AddonArgs;
 import io.pulumi.awsnative.eks.enums.AddonResolveConflicts;
 import io.pulumi.awsnative.eks.outputs.AddonTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * Name of Addon
      * 
      */
-    @OutputExport(name="addonName", type=String.class, parameters={})
+    @Export(name="addonName", type=String.class, parameters={})
     private Output<String> addonName;
 
     /**
@@ -38,7 +38,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * Version of Addon
      * 
      */
-    @OutputExport(name="addonVersion", type=String.class, parameters={})
+    @Export(name="addonVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> addonVersion;
 
     /**
@@ -52,7 +52,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the add-on
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -66,7 +66,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * Name of Cluster
      * 
      */
-    @OutputExport(name="clusterName", type=String.class, parameters={})
+    @Export(name="clusterName", type=String.class, parameters={})
     private Output<String> clusterName;
 
     /**
@@ -80,7 +80,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * Resolve parameter value conflicts
      * 
      */
-    @OutputExport(name="resolveConflicts", type=AddonResolveConflicts.class, parameters={})
+    @Export(name="resolveConflicts", type=AddonResolveConflicts.class, parameters={})
     private Output</* @Nullable */ AddonResolveConflicts> resolveConflicts;
 
     /**
@@ -94,7 +94,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * IAM role to bind to the add-on's service account
      * 
      */
-    @OutputExport(name="serviceAccountRoleArn", type=String.class, parameters={})
+    @Export(name="serviceAccountRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceAccountRoleArn;
 
     /**
@@ -108,7 +108,7 @@ public class Addon extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={AddonTag.class})
+    @Export(name="tags", type=List.class, parameters={AddonTag.class})
     private Output</* @Nullable */ List<AddonTag>> tags;
 
     /**

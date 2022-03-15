@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotsitewise.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,14 +18,14 @@ public final class AssetModelTumblingWindow extends io.pulumi.resources.InvokeAr
 
     public static final AssetModelTumblingWindow Empty = new AssetModelTumblingWindow();
 
-    @InputImport(name="interval", required=true)
+    @Import(name="interval", required=true)
       private final String interval;
 
     public String getInterval() {
         return this.interval;
     }
 
-    @InputImport(name="offset")
+    @Import(name="offset")
       private final @Nullable String offset;
 
     public Optional<String> getOffset() {

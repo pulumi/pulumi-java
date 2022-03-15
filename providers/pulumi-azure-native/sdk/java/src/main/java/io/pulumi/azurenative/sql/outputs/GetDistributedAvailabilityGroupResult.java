@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDistributedAvailabilityGroupResult {
     /**
      * The distributed availability group id
@@ -77,21 +77,21 @@ public final class GetDistributedAvailabilityGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDistributedAvailabilityGroupResult(
-        @OutputCustomType.Parameter("distributedAvailabilityGroupId") String distributedAvailabilityGroupId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastHardenedLsn") String lastHardenedLsn,
-        @OutputCustomType.Parameter("linkState") String linkState,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("primaryAvailabilityGroupName") @Nullable String primaryAvailabilityGroupName,
-        @OutputCustomType.Parameter("replicationMode") @Nullable String replicationMode,
-        @OutputCustomType.Parameter("secondaryAvailabilityGroupName") @Nullable String secondaryAvailabilityGroupName,
-        @OutputCustomType.Parameter("sourceEndpoint") @Nullable String sourceEndpoint,
-        @OutputCustomType.Parameter("sourceReplicaId") String sourceReplicaId,
-        @OutputCustomType.Parameter("targetDatabase") @Nullable String targetDatabase,
-        @OutputCustomType.Parameter("targetReplicaId") String targetReplicaId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("distributedAvailabilityGroupId") String distributedAvailabilityGroupId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastHardenedLsn") String lastHardenedLsn,
+        @CustomType.Parameter("linkState") String linkState,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("primaryAvailabilityGroupName") @Nullable String primaryAvailabilityGroupName,
+        @CustomType.Parameter("replicationMode") @Nullable String replicationMode,
+        @CustomType.Parameter("secondaryAvailabilityGroupName") @Nullable String secondaryAvailabilityGroupName,
+        @CustomType.Parameter("sourceEndpoint") @Nullable String sourceEndpoint,
+        @CustomType.Parameter("sourceReplicaId") String sourceReplicaId,
+        @CustomType.Parameter("targetDatabase") @Nullable String targetDatabase,
+        @CustomType.Parameter("targetReplicaId") String targetReplicaId,
+        @CustomType.Parameter("type") String type) {
         this.distributedAvailabilityGroupId = distributedAvailabilityGroupId;
         this.id = id;
         this.lastHardenedLsn = lastHardenedLsn;

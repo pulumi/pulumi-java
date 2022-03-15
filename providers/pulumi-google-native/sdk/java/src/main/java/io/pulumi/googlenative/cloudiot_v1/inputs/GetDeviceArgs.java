@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,35 +14,35 @@ public final class GetDeviceArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDeviceArgs Empty = new GetDeviceArgs();
 
-    @InputImport(name="deviceId", required=true)
+    @Import(name="deviceId", required=true)
       private final String deviceId;
 
     public String getDeviceId() {
         return this.deviceId;
     }
 
-    @InputImport(name="fieldMask")
+    @Import(name="fieldMask")
       private final @Nullable String fieldMask;
 
     public Optional<String> getFieldMask() {
         return this.fieldMask == null ? Optional.empty() : Optional.ofNullable(this.fieldMask);
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="registryId", required=true)
+    @Import(name="registryId", required=true)
       private final String registryId;
 
     public String getRegistryId() {

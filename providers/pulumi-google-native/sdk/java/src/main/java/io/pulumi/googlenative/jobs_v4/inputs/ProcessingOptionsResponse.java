@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v4.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ProcessingOptionsResponse extends io.pulumi.resources.InvokeA
      * If set to `true`, the service does not attempt to resolve a more precise address for the job.
      * 
      */
-    @InputImport(name="disableStreetAddressResolution", required=true)
+    @Import(name="disableStreetAddressResolution", required=true)
       private final Boolean disableStreetAddressResolution;
 
     public Boolean getDisableStreetAddressResolution() {
@@ -32,7 +32,7 @@ public final class ProcessingOptionsResponse extends io.pulumi.resources.InvokeA
      * Option for job HTML content sanitization. Applied fields are: * description * applicationInfo.instruction * incentives * qualifications * responsibilities HTML tags in these fields may be stripped if sanitiazation isn't disabled. Defaults to HtmlSanitization.SIMPLE_FORMATTING_ONLY.
      * 
      */
-    @InputImport(name="htmlSanitization", required=true)
+    @Import(name="htmlSanitization", required=true)
       private final String htmlSanitization;
 
     public String getHtmlSanitization() {

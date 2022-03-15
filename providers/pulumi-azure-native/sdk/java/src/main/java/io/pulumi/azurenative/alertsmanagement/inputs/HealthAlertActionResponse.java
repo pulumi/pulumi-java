@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HealthAlertActionResponse extends io.pulumi.resources.InvokeA
      * the id of the action group to use.
      * 
      */
-    @InputImport(name="actionGroupId")
+    @Import(name="actionGroupId")
       private final @Nullable String actionGroupId;
 
     public Optional<String> getActionGroupId() {
@@ -34,7 +34,7 @@ public final class HealthAlertActionResponse extends io.pulumi.resources.InvokeA
      * The properties of a webhook object.
      * 
      */
-    @InputImport(name="webHookProperties")
+    @Import(name="webHookProperties")
       private final @Nullable Map<String,String> webHookProperties;
 
     public Map<String,String> getWebHookProperties() {

@@ -8,7 +8,7 @@ import io.pulumi.aws.elasticsearch.DomainSamlOptionsArgs;
 import io.pulumi.aws.elasticsearch.inputs.DomainSamlOptionsState;
 import io.pulumi.aws.elasticsearch.outputs.DomainSamlOptionsSamlOptions;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class DomainSamlOptions extends io.pulumi.resources.CustomResource {
      * Name of the domain.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -47,7 +47,7 @@ public class DomainSamlOptions extends io.pulumi.resources.CustomResource {
      * The SAML authentication options for an AWS Elasticsearch Domain.
      * 
      */
-    @OutputExport(name="samlOptions", type=DomainSamlOptionsSamlOptions.class, parameters={})
+    @Export(name="samlOptions", type=DomainSamlOptionsSamlOptions.class, parameters={})
     private Output</* @Nullable */ DomainSamlOptionsSamlOptions> samlOptions;
 
     /**

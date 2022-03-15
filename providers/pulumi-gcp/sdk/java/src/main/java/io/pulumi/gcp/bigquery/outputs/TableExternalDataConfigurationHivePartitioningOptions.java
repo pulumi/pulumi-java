@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TableExternalDataConfigurationHivePartitioningOptions {
     /**
      * When set, what mode of hive partitioning to use when
@@ -44,11 +44,11 @@ public final class TableExternalDataConfigurationHivePartitioningOptions {
      */
     private final @Nullable String sourceUriPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableExternalDataConfigurationHivePartitioningOptions(
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("requirePartitionFilter") @Nullable Boolean requirePartitionFilter,
-        @OutputCustomType.Parameter("sourceUriPrefix") @Nullable String sourceUriPrefix) {
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("requirePartitionFilter") @Nullable Boolean requirePartitionFilter,
+        @CustomType.Parameter("sourceUriPrefix") @Nullable String sourceUriPrefix) {
         this.mode = mode;
         this.requirePartitionFilter = requirePartitionFilter;
         this.sourceUriPrefix = sourceUriPrefix;

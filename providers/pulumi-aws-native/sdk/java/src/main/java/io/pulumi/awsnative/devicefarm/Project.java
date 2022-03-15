@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.devicefarm.ProjectArgs;
 import io.pulumi.awsnative.devicefarm.outputs.ProjectTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,25 +20,25 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:devicefarm:Project")
 public class Project extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="defaultJobTimeoutMinutes", type=Integer.class, parameters={})
+    @Export(name="defaultJobTimeoutMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> defaultJobTimeoutMinutes;
 
     public Output</* @Nullable */ Integer> getDefaultJobTimeoutMinutes() {
         return this.defaultJobTimeoutMinutes;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="tags", type=List.class, parameters={ProjectTag.class})
+    @Export(name="tags", type=List.class, parameters={ProjectTag.class})
     private Output</* @Nullable */ List<ProjectTag>> tags;
 
     public Output</* @Nullable */ List<ProjectTag>> getTags() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.mwaa;
 import io.pulumi.aws.mwaa.inputs.EnvironmentLoggingConfigurationArgs;
 import io.pulumi.aws.mwaa.inputs.EnvironmentNetworkConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The `airflow_configuration_options` parameter specifies airflow override options. Check the [Official documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-env-variables.html#configuring-env-variables-reference) for all possible configuration options.
      * 
      */
-    @InputImport(name="airflowConfigurationOptions")
+    @Import(name="airflowConfigurationOptions")
       private final @Nullable Output<Map<String,String>> airflowConfigurationOptions;
 
     public Output<Map<String,String>> getAirflowConfigurationOptions() {
@@ -33,7 +33,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Airflow version of your environment, will be set by default to the latest version that MWAA supports.
      * 
      */
-    @InputImport(name="airflowVersion")
+    @Import(name="airflowVersion")
       private final @Nullable Output<String> airflowVersion;
 
     public Output<String> getAirflowVersion() {
@@ -44,7 +44,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The relative path to the DAG folder on your Amazon S3 storage bucket. For example, dags. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
      * 
      */
-    @InputImport(name="dagS3Path", required=true)
+    @Import(name="dagS3Path", required=true)
       private final Output<String> dagS3Path;
 
     public Output<String> getDagS3Path() {
@@ -55,7 +55,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Environment class for the cluster. Possible options are `mw1.small`, `mw1.medium`, `mw1.large`. Will be set by default to `mw1.small`. Please check the [AWS Pricing](https://aws.amazon.com/de/managed-workflows-for-apache-airflow/pricing/) for more information about the environment classes.
      * 
      */
-    @InputImport(name="environmentClass")
+    @Import(name="environmentClass")
       private final @Nullable Output<String> environmentClass;
 
     public Output<String> getEnvironmentClass() {
@@ -66,7 +66,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the task execution role that the Amazon MWAA and its environment can assume. Check the [official AWS documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html) for the detailed role specification.
      * 
      */
-    @InputImport(name="executionRoleArn", required=true)
+    @Import(name="executionRoleArn", required=true)
       private final Output<String> executionRoleArn;
 
     public Output<String> getExecutionRoleArn() {
@@ -77,7 +77,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of your KMS key that you want to use for encryption. Will be set to the ARN of the managed KMS key `aws/airflow` by default. Please check the [Official Documentation](https://docs.aws.amazon.com/mwaa/latest/userguide/custom-keys-certs.html) for more information.
      * 
      */
-    @InputImport(name="kmsKey")
+    @Import(name="kmsKey")
       private final @Nullable Output<String> kmsKey;
 
     public Output<String> getKmsKey() {
@@ -88,7 +88,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The Apache Airflow logs you want to send to Amazon CloudWatch Logs.
      * 
      */
-    @InputImport(name="loggingConfiguration")
+    @Import(name="loggingConfiguration")
       private final @Nullable Output<EnvironmentLoggingConfigurationArgs> loggingConfiguration;
 
     public Output<EnvironmentLoggingConfigurationArgs> getLoggingConfiguration() {
@@ -99,7 +99,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum number of workers that can be automatically scaled up. Value need to be between `1` and `25`. Will be `10` by default.
      * 
      */
-    @InputImport(name="maxWorkers")
+    @Import(name="maxWorkers")
       private final @Nullable Output<Integer> maxWorkers;
 
     public Output<Integer> getMaxWorkers() {
@@ -110,7 +110,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The minimum number of workers that you want to run in your environment. Will be `1` by default.
      * 
      */
-    @InputImport(name="minWorkers")
+    @Import(name="minWorkers")
       private final @Nullable Output<Integer> minWorkers;
 
     public Output<Integer> getMinWorkers() {
@@ -121,7 +121,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Apache Airflow Environment
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -132,7 +132,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the network configuration for your Apache Airflow Environment. This includes two private subnets as well as security groups for the Airflow environment. Each subnet requires internet connection, otherwise the deployment will fail. See Network configuration below for details.
      * 
      */
-    @InputImport(name="networkConfiguration", required=true)
+    @Import(name="networkConfiguration", required=true)
       private final Output<EnvironmentNetworkConfigurationArgs> networkConfiguration;
 
     public Output<EnvironmentNetworkConfigurationArgs> getNetworkConfiguration() {
@@ -143,7 +143,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The plugins.zip file version you want to use.
      * 
      */
-    @InputImport(name="pluginsS3ObjectVersion")
+    @Import(name="pluginsS3ObjectVersion")
       private final @Nullable Output<String> pluginsS3ObjectVersion;
 
     public Output<String> getPluginsS3ObjectVersion() {
@@ -154,7 +154,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The relative path to the plugins.zip file on your Amazon S3 storage bucket. For example, plugins.zip. If a relative path is provided in the request, then plugins_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
      * 
      */
-    @InputImport(name="pluginsS3Path")
+    @Import(name="pluginsS3Path")
       private final @Nullable Output<String> pluginsS3Path;
 
     public Output<String> getPluginsS3Path() {
@@ -165,7 +165,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The requirements.txt file version you want to use.
      * 
      */
-    @InputImport(name="requirementsS3ObjectVersion")
+    @Import(name="requirementsS3ObjectVersion")
       private final @Nullable Output<String> requirementsS3ObjectVersion;
 
     public Output<String> getRequirementsS3ObjectVersion() {
@@ -176,7 +176,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The relative path to the requirements.txt file on your Amazon S3 storage bucket. For example, requirements.txt. If a relative path is provided in the request, then requirements_s3_object_version is required. For more information, see [Importing DAGs on Amazon MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/configuring-dag-import.html).
      * 
      */
-    @InputImport(name="requirementsS3Path")
+    @Import(name="requirementsS3Path")
       private final @Nullable Output<String> requirementsS3Path;
 
     public Output<String> getRequirementsS3Path() {
@@ -187,7 +187,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of your Amazon S3 storage bucket. For example, arn:aws:s3:::airflow-mybucketname.
      * 
      */
-    @InputImport(name="sourceBucketArn", required=true)
+    @Import(name="sourceBucketArn", required=true)
       private final Output<String> sourceBucketArn;
 
     public Output<String> getSourceBucketArn() {
@@ -198,7 +198,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * A map of resource tags to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -209,7 +209,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the webserver should be accessible over the internet or via your specified VPC. Possible options: `PRIVATE_ONLY` (default) and `PUBLIC_ONLY`.
      * 
      */
-    @InputImport(name="webserverAccessMode")
+    @Import(name="webserverAccessMode")
       private final @Nullable Output<String> webserverAccessMode;
 
     public Output<String> getWebserverAccessMode() {
@@ -220,7 +220,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the start date for the weekly maintenance window.
      * 
      */
-    @InputImport(name="weeklyMaintenanceWindowStart")
+    @Import(name="weeklyMaintenanceWindowStart")
       private final @Nullable Output<String> weeklyMaintenanceWindowStart;
 
     public Output<String> getWeeklyMaintenanceWindowStart() {

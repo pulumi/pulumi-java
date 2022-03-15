@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.deviceupdate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GroupConnectivityInformationResponse {
     /**
      * List of customer visible FQDNs.
@@ -43,14 +43,14 @@ public final class GroupConnectivityInformationResponse {
      */
     private final @Nullable String redirectMapId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GroupConnectivityInformationResponse(
-        @OutputCustomType.Parameter("customerVisibleFqdns") @Nullable List<String> customerVisibleFqdns,
-        @OutputCustomType.Parameter("groupId") String groupId,
-        @OutputCustomType.Parameter("internalFqdn") String internalFqdn,
-        @OutputCustomType.Parameter("memberName") String memberName,
-        @OutputCustomType.Parameter("privateLinkServiceArmRegion") @Nullable String privateLinkServiceArmRegion,
-        @OutputCustomType.Parameter("redirectMapId") @Nullable String redirectMapId) {
+        @CustomType.Parameter("customerVisibleFqdns") @Nullable List<String> customerVisibleFqdns,
+        @CustomType.Parameter("groupId") String groupId,
+        @CustomType.Parameter("internalFqdn") String internalFqdn,
+        @CustomType.Parameter("memberName") String memberName,
+        @CustomType.Parameter("privateLinkServiceArmRegion") @Nullable String privateLinkServiceArmRegion,
+        @CustomType.Parameter("redirectMapId") @Nullable String redirectMapId) {
         this.customerVisibleFqdns = customerVisibleFqdns;
         this.groupId = groupId;
         this.internalFqdn = internalFqdn;

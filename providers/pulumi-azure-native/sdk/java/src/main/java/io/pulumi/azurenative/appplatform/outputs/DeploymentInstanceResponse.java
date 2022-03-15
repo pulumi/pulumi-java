@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentInstanceResponse {
     /**
      * Discovery status of the deployment instance
@@ -35,13 +35,13 @@ public final class DeploymentInstanceResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentInstanceResponse(
-        @OutputCustomType.Parameter("discoveryStatus") String discoveryStatus,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("reason") String reason,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("discoveryStatus") String discoveryStatus,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("reason") String reason,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("status") String status) {
         this.discoveryStatus = discoveryStatus;
         this.name = name;
         this.reason = reason;

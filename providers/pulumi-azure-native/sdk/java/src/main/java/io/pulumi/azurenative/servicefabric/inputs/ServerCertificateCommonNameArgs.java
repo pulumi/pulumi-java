@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ServerCertificateCommonNameArgs extends io.pulumi.resources.R
      * The common name of the server certificate.
      * 
      */
-    @InputImport(name="certificateCommonName", required=true)
+    @Import(name="certificateCommonName", required=true)
       private final Output<String> certificateCommonName;
 
     public Output<String> getCertificateCommonName() {
@@ -32,7 +32,7 @@ public final class ServerCertificateCommonNameArgs extends io.pulumi.resources.R
      * The issuer thumbprint of the server certificate.
      * 
      */
-    @InputImport(name="certificateIssuerThumbprint", required=true)
+    @Import(name="certificateIssuerThumbprint", required=true)
       private final Output<String> certificateIssuerThumbprint;
 
     public Output<String> getCertificateIssuerThumbprint() {

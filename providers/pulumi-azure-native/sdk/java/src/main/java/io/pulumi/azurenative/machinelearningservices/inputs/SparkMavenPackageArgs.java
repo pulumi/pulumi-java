@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class SparkMavenPackageArgs extends io.pulumi.resources.ResourceArg
 
     public static final SparkMavenPackageArgs Empty = new SparkMavenPackageArgs();
 
-    @InputImport(name="artifact")
+    @Import(name="artifact")
       private final @Nullable Output<String> artifact;
 
     public Output<String> getArtifact() {
         return this.artifact == null ? Output.empty() : this.artifact;
     }
 
-    @InputImport(name="group")
+    @Import(name="group")
       private final @Nullable Output<String> group;
 
     public Output<String> getGroup() {
         return this.group == null ? Output.empty() : this.group;
     }
 
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

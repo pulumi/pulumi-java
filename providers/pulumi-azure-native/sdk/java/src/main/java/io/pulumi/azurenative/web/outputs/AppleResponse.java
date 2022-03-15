@@ -5,13 +5,13 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.AppleRegistrationResponse;
 import io.pulumi.azurenative.web.outputs.LoginScopesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppleResponse {
     /**
      * <code>false</code> if the Apple provider should not be enabled despite the set registration; otherwise, <code>true</code>.
@@ -29,11 +29,11 @@ public final class AppleResponse {
      */
     private final @Nullable AppleRegistrationResponse registration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppleResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("login") @Nullable LoginScopesResponse login,
-        @OutputCustomType.Parameter("registration") @Nullable AppleRegistrationResponse registration) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("login") @Nullable LoginScopesResponse login,
+        @CustomType.Parameter("registration") @Nullable AppleRegistrationResponse registration) {
         this.enabled = enabled;
         this.login = login;
         this.registration = registration;

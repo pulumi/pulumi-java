@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to export the custom routes to the peer network. Defaults to `false`.
      * 
      */
-    @InputImport(name="exportCustomRoutes")
+    @Import(name="exportCustomRoutes")
       private final @Nullable Output<Boolean> exportCustomRoutes;
 
     public Output<Boolean> getExportCustomRoutes() {
@@ -30,7 +30,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
      * 
      */
-    @InputImport(name="exportSubnetRoutesWithPublicIp")
+    @Import(name="exportSubnetRoutesWithPublicIp")
       private final @Nullable Output<Boolean> exportSubnetRoutesWithPublicIp;
 
     public Output<Boolean> getExportSubnetRoutesWithPublicIp() {
@@ -41,7 +41,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to import the custom routes from the peer network. Defaults to `false`.
      * 
      */
-    @InputImport(name="importCustomRoutes")
+    @Import(name="importCustomRoutes")
       private final @Nullable Output<Boolean> importCustomRoutes;
 
     public Output<Boolean> getImportCustomRoutes() {
@@ -52,7 +52,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
      * 
      */
-    @InputImport(name="importSubnetRoutesWithPublicIp")
+    @Import(name="importSubnetRoutesWithPublicIp")
       private final @Nullable Output<Boolean> importSubnetRoutesWithPublicIp;
 
     public Output<Boolean> getImportSubnetRoutesWithPublicIp() {
@@ -63,7 +63,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the peering.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -74,7 +74,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * The primary network of the peering.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final Output<String> network;
 
     public Output<String> getNetwork() {
@@ -86,7 +86,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * may belong to a different project.
      * 
      */
-    @InputImport(name="peerNetwork", required=true)
+    @Import(name="peerNetwork", required=true)
       private final Output<String> peerNetwork;
 
     public Output<String> getPeerNetwork() {

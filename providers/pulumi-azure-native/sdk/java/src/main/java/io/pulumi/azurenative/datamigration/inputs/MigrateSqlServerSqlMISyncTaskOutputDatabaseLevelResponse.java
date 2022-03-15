@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.BackupSetInfoResponse;
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * Backup sets that are currently active (Either being uploaded or getting restored)
      * 
      */
-    @InputImport(name="activeBackupSets", required=true)
+    @Import(name="activeBackupSets", required=true)
       private final List<BackupSetInfoResponse> activeBackupSets;
 
     public List<BackupSetInfoResponse> getActiveBackupSets() {
@@ -31,7 +31,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * Name of container created in the Azure Storage account where backups are copied to
      * 
      */
-    @InputImport(name="containerName", required=true)
+    @Import(name="containerName", required=true)
       private final String containerName;
 
     public String getContainerName() {
@@ -42,7 +42,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * Database migration end time
      * 
      */
-    @InputImport(name="endedOn", required=true)
+    @Import(name="endedOn", required=true)
       private final String endedOn;
 
     public String getEndedOn() {
@@ -53,7 +53,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * prefix string to use for querying errors for this database
      * 
      */
-    @InputImport(name="errorPrefix", required=true)
+    @Import(name="errorPrefix", required=true)
       private final String errorPrefix;
 
     public String getErrorPrefix() {
@@ -64,7 +64,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * Migration exceptions and warnings
      * 
      */
-    @InputImport(name="exceptionsAndWarnings", required=true)
+    @Import(name="exceptionsAndWarnings", required=true)
       private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
@@ -75,7 +75,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * Details of full backup set
      * 
      */
-    @InputImport(name="fullBackupSetInfo", required=true)
+    @Import(name="fullBackupSetInfo", required=true)
       private final BackupSetInfoResponse fullBackupSetInfo;
 
     public BackupSetInfoResponse getFullBackupSetInfo() {
@@ -86,7 +86,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -97,7 +97,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * Whether full backup has been applied to the target database or not
      * 
      */
-    @InputImport(name="isFullBackupRestored", required=true)
+    @Import(name="isFullBackupRestored", required=true)
       private final Boolean isFullBackupRestored;
 
     public Boolean getIsFullBackupRestored() {
@@ -108,7 +108,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * Last applied backup set information
      * 
      */
-    @InputImport(name="lastRestoredBackupSetInfo", required=true)
+    @Import(name="lastRestoredBackupSetInfo", required=true)
       private final BackupSetInfoResponse lastRestoredBackupSetInfo;
 
     public BackupSetInfoResponse getLastRestoredBackupSetInfo() {
@@ -119,7 +119,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * Current state of database
      * 
      */
-    @InputImport(name="migrationState", required=true)
+    @Import(name="migrationState", required=true)
       private final String migrationState;
 
     public String getMigrationState() {
@@ -131,7 +131,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * Expected value is 'DatabaseLevelOutput'.
      * 
      */
-    @InputImport(name="resultType", required=true)
+    @Import(name="resultType", required=true)
       private final String resultType;
 
     public String getResultType() {
@@ -142,7 +142,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * Name of the database
      * 
      */
-    @InputImport(name="sourceDatabaseName", required=true)
+    @Import(name="sourceDatabaseName", required=true)
       private final String sourceDatabaseName;
 
     public String getSourceDatabaseName() {
@@ -153,7 +153,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * Database migration start time
      * 
      */
-    @InputImport(name="startedOn", required=true)
+    @Import(name="startedOn", required=true)
       private final String startedOn;
 
     public String getStartedOn() {

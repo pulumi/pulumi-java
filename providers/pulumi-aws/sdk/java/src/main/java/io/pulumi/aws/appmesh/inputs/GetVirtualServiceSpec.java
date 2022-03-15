@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.GetVirtualServiceSpecProvider;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetVirtualServiceSpec extends io.pulumi.resources.InvokeArgs 
      * The App Mesh object that is acting as the provider for a virtual service.
      * 
      */
-    @InputImport(name="providers", required=true)
+    @Import(name="providers", required=true)
       private final List<GetVirtualServiceSpecProvider> providers;
 
     public List<GetVirtualServiceSpecProvider> getProviders() {

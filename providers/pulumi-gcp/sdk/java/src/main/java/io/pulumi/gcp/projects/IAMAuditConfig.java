@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.projects.IAMAuditConfigArgs;
@@ -94,7 +94,7 @@ public class IAMAuditConfig extends io.pulumi.resources.CustomResource {
      * The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
      * 
      */
-    @OutputExport(name="auditLogConfigs", type=List.class, parameters={IAMAuditConfigAuditLogConfig.class})
+    @Export(name="auditLogConfigs", type=List.class, parameters={IAMAuditConfigAuditLogConfig.class})
     private Output<List<IAMAuditConfigAuditLogConfig>> auditLogConfigs;
 
     /**
@@ -108,7 +108,7 @@ public class IAMAuditConfig extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the project's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -123,7 +123,7 @@ public class IAMAuditConfig extends io.pulumi.resources.CustomResource {
      * inferred from the provider.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -138,7 +138,7 @@ public class IAMAuditConfig extends io.pulumi.resources.CustomResource {
      * Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_project\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
      * 
      */
-    @OutputExport(name="service", type=String.class, parameters={})
+    @Export(name="service", type=String.class, parameters={})
     private Output<String> service;
 
     /**

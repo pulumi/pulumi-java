@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.BackendServiceConsistentHashHttpCookie;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackendServiceConsistentHash {
     /**
      * Hash is based on HTTP Cookie. This field describes a HTTP cookie
@@ -39,11 +39,11 @@ public final class BackendServiceConsistentHash {
      */
     private final @Nullable Integer minimumRingSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendServiceConsistentHash(
-        @OutputCustomType.Parameter("httpCookie") @Nullable BackendServiceConsistentHashHttpCookie httpCookie,
-        @OutputCustomType.Parameter("httpHeaderName") @Nullable String httpHeaderName,
-        @OutputCustomType.Parameter("minimumRingSize") @Nullable Integer minimumRingSize) {
+        @CustomType.Parameter("httpCookie") @Nullable BackendServiceConsistentHashHttpCookie httpCookie,
+        @CustomType.Parameter("httpHeaderName") @Nullable String httpHeaderName,
+        @CustomType.Parameter("minimumRingSize") @Nullable Integer minimumRingSize) {
         this.httpCookie = httpCookie;
         this.httpHeaderName = httpHeaderName;
         this.minimumRingSize = minimumRingSize;

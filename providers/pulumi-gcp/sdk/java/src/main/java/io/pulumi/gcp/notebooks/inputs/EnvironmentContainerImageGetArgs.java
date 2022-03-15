@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EnvironmentContainerImageGetArgs extends io.pulumi.resources.
      * For example: gcr.io/{project_id}/{imageName}
      * 
      */
-    @InputImport(name="repository", required=true)
+    @Import(name="repository", required=true)
       private final Output<String> repository;
 
     public Output<String> getRepository() {
@@ -30,7 +30,7 @@ public final class EnvironmentContainerImageGetArgs extends io.pulumi.resources.
      * The tag of the container image. If not specified, this defaults to the latest tag.
      * 
      */
-    @InputImport(name="tag")
+    @Import(name="tag")
       private final @Nullable Output<String> tag;
 
     public Output<String> getTag() {

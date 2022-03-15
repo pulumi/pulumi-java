@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ModelInferenceExecutionConfigGetArgs extends io.pulumi.resour
      * The container hosts value `SingleModel/MultiModel`. The default value is `SingleModel`.
      * 
      */
-    @InputImport(name="mode", required=true)
+    @Import(name="mode", required=true)
       private final Output<String> mode;
 
     public Output<String> getMode() {

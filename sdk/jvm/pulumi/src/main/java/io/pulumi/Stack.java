@@ -1,7 +1,7 @@
 package io.pulumi;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Internal.Field;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.core.internal.annotations.OutputMetadata;
@@ -135,7 +135,7 @@ public class Stack extends ComponentResource {
             if (!nulls.isEmpty()) {
                 throw new RunException(String.format(
                         "Output(s) '%s' have no value assigned. %s annotated fields must be assigned inside Stack constructor.",
-                        String.join(", ", nulls), OutputExport.class.getSimpleName()
+                        String.join(", ", nulls), Export.class.getSimpleName()
                 ));
             }
 
@@ -151,7 +151,7 @@ public class Stack extends ComponentResource {
             if (!wrongFields.isEmpty()) {
                 throw new RunException(String.format(
                         "Output(s) '%s' have incorrect type. %s annotated fields must be instances of Output<T>",
-                        String.join(", ", wrongFields), OutputExport.class.getSimpleName()
+                        String.join(", ", wrongFields), Export.class.getSimpleName()
                 ));
             }
 

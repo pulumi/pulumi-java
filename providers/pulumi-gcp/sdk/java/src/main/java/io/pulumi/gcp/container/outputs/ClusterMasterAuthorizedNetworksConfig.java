@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.ClusterMasterAuthorizedNetworksConfigCidrBlock;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterMasterAuthorizedNetworksConfig {
     /**
      * External networks that can access the
@@ -18,8 +18,8 @@ public final class ClusterMasterAuthorizedNetworksConfig {
      */
     private final @Nullable List<ClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks;
 
-    @OutputCustomType.Constructor
-    private ClusterMasterAuthorizedNetworksConfig(@OutputCustomType.Parameter("cidrBlocks") @Nullable List<ClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
+    @CustomType.Constructor
+    private ClusterMasterAuthorizedNetworksConfig(@CustomType.Parameter("cidrBlocks") @Nullable List<ClusterMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
         this.cidrBlocks = cidrBlocks;
     }
 

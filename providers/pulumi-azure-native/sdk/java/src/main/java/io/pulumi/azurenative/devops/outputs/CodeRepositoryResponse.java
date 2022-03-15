@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.devops.outputs;
 
 import io.pulumi.azurenative.devops.outputs.AuthorizationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CodeRepositoryResponse {
     /**
      * Authorization info to access the code repository.
@@ -39,13 +39,13 @@ public final class CodeRepositoryResponse {
      */
     private final String repositoryType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CodeRepositoryResponse(
-        @OutputCustomType.Parameter("authorization") @Nullable AuthorizationResponse authorization,
-        @OutputCustomType.Parameter("defaultBranch") String defaultBranch,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("repositoryType") String repositoryType) {
+        @CustomType.Parameter("authorization") @Nullable AuthorizationResponse authorization,
+        @CustomType.Parameter("defaultBranch") String defaultBranch,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("repositoryType") String repositoryType) {
         this.authorization = authorization;
         this.defaultBranch = defaultBranch;
         this.id = id;

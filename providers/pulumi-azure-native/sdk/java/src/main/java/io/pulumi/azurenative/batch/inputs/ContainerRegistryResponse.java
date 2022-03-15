@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,7 +14,7 @@ public final class ContainerRegistryResponse extends io.pulumi.resources.InvokeA
 
     public static final ContainerRegistryResponse Empty = new ContainerRegistryResponse();
 
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final String password;
 
     public String getPassword() {
@@ -25,14 +25,14 @@ public final class ContainerRegistryResponse extends io.pulumi.resources.InvokeA
      * If omitted, the default is "docker.io".
      * 
      */
-    @InputImport(name="registryServer")
+    @Import(name="registryServer")
       private final @Nullable String registryServer;
 
     public Optional<String> getRegistryServer() {
         return this.registryServer == null ? Optional.empty() : Optional.ofNullable(this.registryServer);
     }
 
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final String userName;
 
     public String getUserName() {

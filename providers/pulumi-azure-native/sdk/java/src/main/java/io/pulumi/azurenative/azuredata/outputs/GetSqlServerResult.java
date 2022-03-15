@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.azuredata.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSqlServerResult {
     /**
      * Cores of the Sql Server.
@@ -53,16 +53,16 @@ public final class GetSqlServerResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSqlServerResult(
-        @OutputCustomType.Parameter("cores") @Nullable Integer cores,
-        @OutputCustomType.Parameter("edition") @Nullable String edition,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("propertyBag") @Nullable String propertyBag,
-        @OutputCustomType.Parameter("registrationID") @Nullable String registrationID,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("cores") @Nullable Integer cores,
+        @CustomType.Parameter("edition") @Nullable String edition,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("propertyBag") @Nullable String propertyBag,
+        @CustomType.Parameter("registrationID") @Nullable String registrationID,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.cores = cores;
         this.edition = edition;
         this.id = id;

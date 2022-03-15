@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationConfigRuleDestinationEncryptionConfiguration {
     /**
      * The ID (Key ARN or Alias ARN) of the customer managed AWS KMS key stored in AWS Key Management Service (KMS) for the destination bucket.
@@ -15,8 +15,8 @@ public final class BucketReplicationConfigRuleDestinationEncryptionConfiguration
      */
     private final String replicaKmsKeyId;
 
-    @OutputCustomType.Constructor
-    private BucketReplicationConfigRuleDestinationEncryptionConfiguration(@OutputCustomType.Parameter("replicaKmsKeyId") String replicaKmsKeyId) {
+    @CustomType.Constructor
+    private BucketReplicationConfigRuleDestinationEncryptionConfiguration(@CustomType.Parameter("replicaKmsKeyId") String replicaKmsKeyId) {
         this.replicaKmsKeyId = replicaKmsKeyId;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
      * Action name. Required for START_ACTIVITY.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {
@@ -34,7 +34,7 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
      * Intent categories to set on the intent.
      * 
      */
-    @InputImport(name="categories")
+    @Import(name="categories")
       private final @Nullable Output<List<String>> categories;
 
     public Output<List<String>> getCategories() {
@@ -45,7 +45,7 @@ public final class StartActivityIntentArgs extends io.pulumi.resources.ResourceA
      * URI for the action.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.EndpointRefResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkRefResponse {
     /**
      * A list of endpoints that are exposed on this network.
@@ -24,10 +24,10 @@ public final class NetworkRefResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkRefResponse(
-        @OutputCustomType.Parameter("endpointRefs") @Nullable List<EndpointRefResponse> endpointRefs,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("endpointRefs") @Nullable List<EndpointRefResponse> endpointRefs,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.endpointRefs = endpointRefs;
         this.name = name;
     }

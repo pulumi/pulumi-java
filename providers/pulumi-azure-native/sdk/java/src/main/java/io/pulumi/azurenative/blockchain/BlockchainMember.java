@@ -10,7 +10,7 @@ import io.pulumi.azurenative.blockchain.outputs.FirewallRuleResponse;
 import io.pulumi.azurenative.blockchain.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
      * Gets or sets the consortium for the blockchain member.
      * 
      */
-    @OutputExport(name="consortium", type=String.class, parameters={})
+    @Export(name="consortium", type=String.class, parameters={})
     private Output</* @Nullable */ String> consortium;
 
     /**
@@ -52,7 +52,7 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
      * Gets the managed consortium management account address.
      * 
      */
-    @OutputExport(name="consortiumManagementAccountAddress", type=String.class, parameters={})
+    @Export(name="consortiumManagementAccountAddress", type=String.class, parameters={})
     private Output<String> consortiumManagementAccountAddress;
 
     /**
@@ -66,7 +66,7 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
      * Sets the managed consortium management account password.
      * 
      */
-    @OutputExport(name="consortiumManagementAccountPassword", type=String.class, parameters={})
+    @Export(name="consortiumManagementAccountPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> consortiumManagementAccountPassword;
 
     /**
@@ -80,7 +80,7 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
      * Gets the display name of the member in the consortium.
      * 
      */
-    @OutputExport(name="consortiumMemberDisplayName", type=String.class, parameters={})
+    @Export(name="consortiumMemberDisplayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> consortiumMemberDisplayName;
 
     /**
@@ -94,7 +94,7 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
      * Gets the role of the member in the consortium.
      * 
      */
-    @OutputExport(name="consortiumRole", type=String.class, parameters={})
+    @Export(name="consortiumRole", type=String.class, parameters={})
     private Output</* @Nullable */ String> consortiumRole;
 
     /**
@@ -108,7 +108,7 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
      * Gets the dns endpoint of the blockchain member.
      * 
      */
-    @OutputExport(name="dns", type=String.class, parameters={})
+    @Export(name="dns", type=String.class, parameters={})
     private Output<String> dns;
 
     /**
@@ -122,7 +122,7 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
      * Gets or sets firewall rules
      * 
      */
-    @OutputExport(name="firewallRules", type=List.class, parameters={FirewallRuleResponse.class})
+    @Export(name="firewallRules", type=List.class, parameters={FirewallRuleResponse.class})
     private Output</* @Nullable */ List<FirewallRuleResponse>> firewallRules;
 
     /**
@@ -136,7 +136,7 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
      * The GEO location of the blockchain service.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -150,7 +150,7 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -164,7 +164,7 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
      * Sets the basic auth password of the blockchain member.
      * 
      */
-    @OutputExport(name="password", type=String.class, parameters={})
+    @Export(name="password", type=String.class, parameters={})
     private Output</* @Nullable */ String> password;
 
     /**
@@ -178,7 +178,7 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
      * Gets or sets the blockchain protocol.
      * 
      */
-    @OutputExport(name="protocol", type=String.class, parameters={})
+    @Export(name="protocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> protocol;
 
     /**
@@ -192,7 +192,7 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
      * Gets or sets the blockchain member provision state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -206,7 +206,7 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
      * Gets the public key of the blockchain member (default transaction node).
      * 
      */
-    @OutputExport(name="publicKey", type=String.class, parameters={})
+    @Export(name="publicKey", type=String.class, parameters={})
     private Output<String> publicKey;
 
     /**
@@ -220,7 +220,7 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
      * Gets the Ethereum root contract address of the blockchain.
      * 
      */
-    @OutputExport(name="rootContractAddress", type=String.class, parameters={})
+    @Export(name="rootContractAddress", type=String.class, parameters={})
     private Output<String> rootContractAddress;
 
     /**
@@ -234,7 +234,7 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
      * Gets or sets the blockchain member Sku.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -248,7 +248,7 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
      * Tags of the service which is a list of key value pairs that describes the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -262,7 +262,7 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
      * The type of the service - e.g. "Microsoft.Blockchain"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -276,7 +276,7 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
      * Gets the auth user name of the blockchain member.
      * 
      */
-    @OutputExport(name="userName", type=String.class, parameters={})
+    @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**
@@ -290,7 +290,7 @@ public class BlockchainMember extends io.pulumi.resources.CustomResource {
      * Gets or sets the blockchain validator nodes Sku.
      * 
      */
-    @OutputExport(name="validatorNodesSku", type=BlockchainMemberNodesSkuResponse.class, parameters={})
+    @Export(name="validatorNodesSku", type=BlockchainMemberNodesSkuResponse.class, parameters={})
     private Output</* @Nullable */ BlockchainMemberNodesSkuResponse> validatorNodesSku;
 
     /**

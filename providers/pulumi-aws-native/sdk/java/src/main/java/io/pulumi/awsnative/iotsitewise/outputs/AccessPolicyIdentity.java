@@ -6,22 +6,22 @@ package io.pulumi.awsnative.iotsitewise.outputs;
 import io.pulumi.awsnative.iotsitewise.outputs.AccessPolicyIamRole;
 import io.pulumi.awsnative.iotsitewise.outputs.AccessPolicyIamUser;
 import io.pulumi.awsnative.iotsitewise.outputs.AccessPolicyUser;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessPolicyIdentity {
     private final @Nullable AccessPolicyIamRole iamRole;
     private final @Nullable AccessPolicyIamUser iamUser;
     private final @Nullable AccessPolicyUser user;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessPolicyIdentity(
-        @OutputCustomType.Parameter("iamRole") @Nullable AccessPolicyIamRole iamRole,
-        @OutputCustomType.Parameter("iamUser") @Nullable AccessPolicyIamUser iamUser,
-        @OutputCustomType.Parameter("user") @Nullable AccessPolicyUser user) {
+        @CustomType.Parameter("iamRole") @Nullable AccessPolicyIamRole iamRole,
+        @CustomType.Parameter("iamUser") @Nullable AccessPolicyIamUser iamUser,
+        @CustomType.Parameter("user") @Nullable AccessPolicyUser user) {
         this.iamRole = iamRole;
         this.iamUser = iamUser;
         this.user = user;

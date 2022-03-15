@@ -14,7 +14,7 @@ import io.pulumi.azurenative.network.outputs.RoutingRuleResponse;
 import io.pulumi.azurenative.network.outputs.RulesEngineResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +42,7 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
      * Backend pools available to routing rules.
      * 
      */
-    @OutputExport(name="backendPools", type=List.class, parameters={BackendPoolResponse.class})
+    @Export(name="backendPools", type=List.class, parameters={BackendPoolResponse.class})
     private Output</* @Nullable */ List<BackendPoolResponse>> backendPools;
 
     /**
@@ -56,7 +56,7 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
      * Settings for all backendPools
      * 
      */
-    @OutputExport(name="backendPoolsSettings", type=BackendPoolsSettingsResponse.class, parameters={})
+    @Export(name="backendPoolsSettings", type=BackendPoolsSettingsResponse.class, parameters={})
     private Output</* @Nullable */ BackendPoolsSettingsResponse> backendPoolsSettings;
 
     /**
@@ -70,7 +70,7 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
      * The host that each frontendEndpoint must CNAME to.
      * 
      */
-    @OutputExport(name="cname", type=String.class, parameters={})
+    @Export(name="cname", type=String.class, parameters={})
     private Output<String> cname;
 
     /**
@@ -84,7 +84,7 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
      * Operational status of the Front Door load balancer. Permitted values are 'Enabled' or 'Disabled'
      * 
      */
-    @OutputExport(name="enabledState", type=String.class, parameters={})
+    @Export(name="enabledState", type=String.class, parameters={})
     private Output</* @Nullable */ String> enabledState;
 
     /**
@@ -98,7 +98,7 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
      * A friendly name for the frontDoor
      * 
      */
-    @OutputExport(name="friendlyName", type=String.class, parameters={})
+    @Export(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
     /**
@@ -112,7 +112,7 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
      * The Id of the frontdoor.
      * 
      */
-    @OutputExport(name="frontdoorId", type=String.class, parameters={})
+    @Export(name="frontdoorId", type=String.class, parameters={})
     private Output<String> frontdoorId;
 
     /**
@@ -126,7 +126,7 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
      * Frontend endpoints available to routing rules.
      * 
      */
-    @OutputExport(name="frontendEndpoints", type=List.class, parameters={FrontendEndpointResponse.class})
+    @Export(name="frontendEndpoints", type=List.class, parameters={FrontendEndpointResponse.class})
     private Output</* @Nullable */ List<FrontendEndpointResponse>> frontendEndpoints;
 
     /**
@@ -140,7 +140,7 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
      * Health probe settings associated with this Front Door instance.
      * 
      */
-    @OutputExport(name="healthProbeSettings", type=List.class, parameters={HealthProbeSettingsModelResponse.class})
+    @Export(name="healthProbeSettings", type=List.class, parameters={HealthProbeSettingsModelResponse.class})
     private Output</* @Nullable */ List<HealthProbeSettingsModelResponse>> healthProbeSettings;
 
     /**
@@ -154,7 +154,7 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
      * Load balancing settings associated with this Front Door instance.
      * 
      */
-    @OutputExport(name="loadBalancingSettings", type=List.class, parameters={LoadBalancingSettingsModelResponse.class})
+    @Export(name="loadBalancingSettings", type=List.class, parameters={LoadBalancingSettingsModelResponse.class})
     private Output</* @Nullable */ List<LoadBalancingSettingsModelResponse>> loadBalancingSettings;
 
     /**
@@ -168,7 +168,7 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -182,7 +182,7 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -196,7 +196,7 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
      * Provisioning state of the Front Door.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -210,7 +210,7 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
      * Resource status of the Front Door.
      * 
      */
-    @OutputExport(name="resourceState", type=String.class, parameters={})
+    @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
@@ -224,7 +224,7 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
      * Routing rules associated with this Front Door.
      * 
      */
-    @OutputExport(name="routingRules", type=List.class, parameters={RoutingRuleResponse.class})
+    @Export(name="routingRules", type=List.class, parameters={RoutingRuleResponse.class})
     private Output</* @Nullable */ List<RoutingRuleResponse>> routingRules;
 
     /**
@@ -238,7 +238,7 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
      * Rules Engine Configurations available to routing rules.
      * 
      */
-    @OutputExport(name="rulesEngines", type=List.class, parameters={RulesEngineResponse.class})
+    @Export(name="rulesEngines", type=List.class, parameters={RulesEngineResponse.class})
     private Output<List<RulesEngineResponse>> rulesEngines;
 
     /**
@@ -252,7 +252,7 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -266,7 +266,7 @@ public class FrontDoor extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

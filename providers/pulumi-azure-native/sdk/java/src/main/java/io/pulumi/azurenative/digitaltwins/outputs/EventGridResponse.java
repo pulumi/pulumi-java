@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.digitaltwins.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventGridResponse {
     /**
      * EventGrid secondary accesskey. Will be obfuscated during read.
@@ -58,17 +58,17 @@ public final class EventGridResponse {
      */
     private final String topicEndpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventGridResponse(
-        @OutputCustomType.Parameter("accessKey1") String accessKey1,
-        @OutputCustomType.Parameter("accessKey2") @Nullable String accessKey2,
-        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
-        @OutputCustomType.Parameter("createdTime") String createdTime,
-        @OutputCustomType.Parameter("deadLetterSecret") @Nullable String deadLetterSecret,
-        @OutputCustomType.Parameter("deadLetterUri") @Nullable String deadLetterUri,
-        @OutputCustomType.Parameter("endpointType") String endpointType,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("topicEndpoint") String topicEndpoint) {
+        @CustomType.Parameter("accessKey1") String accessKey1,
+        @CustomType.Parameter("accessKey2") @Nullable String accessKey2,
+        @CustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @CustomType.Parameter("createdTime") String createdTime,
+        @CustomType.Parameter("deadLetterSecret") @Nullable String deadLetterSecret,
+        @CustomType.Parameter("deadLetterUri") @Nullable String deadLetterUri,
+        @CustomType.Parameter("endpointType") String endpointType,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("topicEndpoint") String topicEndpoint) {
         this.accessKey1 = accessKey1;
         this.accessKey2 = accessKey2;
         this.authenticationType = authenticationType;

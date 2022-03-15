@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouterAdvertisedIpRangeResponse {
     /**
      * User-specified description for the IP range.
@@ -20,10 +20,10 @@ public final class RouterAdvertisedIpRangeResponse {
      */
     private final String range;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouterAdvertisedIpRangeResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("range") String range) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("range") String range) {
         this.description = description;
         this.range = range;
     }

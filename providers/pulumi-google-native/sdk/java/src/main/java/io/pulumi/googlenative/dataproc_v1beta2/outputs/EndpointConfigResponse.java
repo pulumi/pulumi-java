@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EndpointConfigResponse {
     /**
      * Optional. If true, enable http access to specific ports on the cluster from external sources. Defaults to false.
@@ -22,10 +22,10 @@ public final class EndpointConfigResponse {
      */
     private final Map<String,String> httpPorts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointConfigResponse(
-        @OutputCustomType.Parameter("enableHttpPortAccess") Boolean enableHttpPortAccess,
-        @OutputCustomType.Parameter("httpPorts") Map<String,String> httpPorts) {
+        @CustomType.Parameter("enableHttpPortAccess") Boolean enableHttpPortAccess,
+        @CustomType.Parameter("httpPorts") Map<String,String> httpPorts) {
         this.enableHttpPortAccess = enableHttpPortAccess;
         this.httpPorts = httpPorts;
     }

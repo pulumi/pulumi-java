@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.PersistentVolumeSpecArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VolumeAttachmentSourceArgs extends io.pulumi.resources.Resour
      * inlineVolumeSpec contains all the information necessary to attach a persistent volume defined by a pod's inline VolumeSource. This field is populated only for the CSIMigration feature. It contains translated fields from a pod's inline VolumeSource to a PersistentVolumeSpec. This field is beta-level and is only honored by servers that enabled the CSIMigration feature.
      * 
      */
-    @InputImport(name="inlineVolumeSpec")
+    @Import(name="inlineVolumeSpec")
       private final @Nullable Output<PersistentVolumeSpecArgs> inlineVolumeSpec;
 
     public Output<PersistentVolumeSpecArgs> getInlineVolumeSpec() {
@@ -34,7 +34,7 @@ public final class VolumeAttachmentSourceArgs extends io.pulumi.resources.Resour
      * Name of the persistent volume to attach.
      * 
      */
-    @InputImport(name="persistentVolumeName")
+    @Import(name="persistentVolumeName")
       private final @Nullable Output<String> persistentVolumeName;
 
     public Output<String> getPersistentVolumeName() {

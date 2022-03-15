@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__AcceleratorConfigResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__DiskConfigResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1__ReplicaConfigResponse {
     /**
      * Represents the type and number of accelerators used by the replica. [Learn about restrictions on accelerator configurations for training.](/ai-platform/training/docs/using-gpus#compute-engine-machine-types-with-gpu)
@@ -43,14 +43,14 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse {
      */
     private final String tpuTfVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1__ReplicaConfigResponse(
-        @OutputCustomType.Parameter("acceleratorConfig") GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig,
-        @OutputCustomType.Parameter("containerArgs") List<String> containerArgs,
-        @OutputCustomType.Parameter("containerCommand") List<String> containerCommand,
-        @OutputCustomType.Parameter("diskConfig") GoogleCloudMlV1__DiskConfigResponse diskConfig,
-        @OutputCustomType.Parameter("imageUri") String imageUri,
-        @OutputCustomType.Parameter("tpuTfVersion") String tpuTfVersion) {
+        @CustomType.Parameter("acceleratorConfig") GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig,
+        @CustomType.Parameter("containerArgs") List<String> containerArgs,
+        @CustomType.Parameter("containerCommand") List<String> containerCommand,
+        @CustomType.Parameter("diskConfig") GoogleCloudMlV1__DiskConfigResponse diskConfig,
+        @CustomType.Parameter("imageUri") String imageUri,
+        @CustomType.Parameter("tpuTfVersion") String tpuTfVersion) {
         this.acceleratorConfig = acceleratorConfig;
         this.containerArgs = containerArgs;
         this.containerCommand = containerCommand;

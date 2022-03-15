@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.scheduler.outputs;
 
 import io.pulumi.azurenative.scheduler.outputs.JobMaxRecurrenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobCollectionQuotaResponse {
     /**
      * Gets or set the maximum job count.
@@ -28,11 +28,11 @@ public final class JobCollectionQuotaResponse {
      */
     private final @Nullable JobMaxRecurrenceResponse maxRecurrence;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobCollectionQuotaResponse(
-        @OutputCustomType.Parameter("maxJobCount") @Nullable Integer maxJobCount,
-        @OutputCustomType.Parameter("maxJobOccurrence") @Nullable Integer maxJobOccurrence,
-        @OutputCustomType.Parameter("maxRecurrence") @Nullable JobMaxRecurrenceResponse maxRecurrence) {
+        @CustomType.Parameter("maxJobCount") @Nullable Integer maxJobCount,
+        @CustomType.Parameter("maxJobOccurrence") @Nullable Integer maxJobOccurrence,
+        @CustomType.Parameter("maxRecurrence") @Nullable JobMaxRecurrenceResponse maxRecurrence) {
         this.maxJobCount = maxJobCount;
         this.maxJobOccurrence = maxJobOccurrence;
         this.maxRecurrence = maxRecurrence;

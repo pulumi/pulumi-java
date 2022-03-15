@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.AppEngineResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.CloudEndpointsResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.ClusterIstioResponse;
@@ -15,7 +15,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceResult {
     /**
      * Type used for App Engine services.
@@ -68,18 +68,18 @@ public final class GetServiceResult {
      */
     private final Map<String,String> userLabels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceResult(
-        @OutputCustomType.Parameter("appEngine") AppEngineResponse appEngine,
-        @OutputCustomType.Parameter("cloudEndpoints") CloudEndpointsResponse cloudEndpoints,
-        @OutputCustomType.Parameter("clusterIstio") ClusterIstioResponse clusterIstio,
-        @OutputCustomType.Parameter("custom") CustomResponse custom,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("istioCanonicalService") IstioCanonicalServiceResponse istioCanonicalService,
-        @OutputCustomType.Parameter("meshIstio") MeshIstioResponse meshIstio,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("telemetry") TelemetryResponse telemetry,
-        @OutputCustomType.Parameter("userLabels") Map<String,String> userLabels) {
+        @CustomType.Parameter("appEngine") AppEngineResponse appEngine,
+        @CustomType.Parameter("cloudEndpoints") CloudEndpointsResponse cloudEndpoints,
+        @CustomType.Parameter("clusterIstio") ClusterIstioResponse clusterIstio,
+        @CustomType.Parameter("custom") CustomResponse custom,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("istioCanonicalService") IstioCanonicalServiceResponse istioCanonicalService,
+        @CustomType.Parameter("meshIstio") MeshIstioResponse meshIstio,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("telemetry") TelemetryResponse telemetry,
+        @CustomType.Parameter("userLabels") Map<String,String> userLabels) {
         this.appEngine = appEngine;
         this.cloudEndpoints = cloudEndpoints;
         this.clusterIstio = clusterIstio;

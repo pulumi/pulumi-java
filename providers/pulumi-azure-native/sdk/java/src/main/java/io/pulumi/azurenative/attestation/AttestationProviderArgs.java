@@ -5,7 +5,7 @@ package io.pulumi.azurenative.attestation;
 
 import io.pulumi.azurenative.attestation.inputs.AttestationServiceCreationSpecificParamsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
      * The supported Azure location where the attestation provider should be created.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -31,7 +31,7 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
      * Properties of the attestation provider
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<AttestationServiceCreationSpecificParamsArgs> properties;
 
     public Output<AttestationServiceCreationSpecificParamsArgs> getProperties() {
@@ -42,7 +42,7 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
      * Name of the attestation provider.
      * 
      */
-    @InputImport(name="providerName")
+    @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
     public Output<String> getProviderName() {
@@ -53,7 +53,7 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class AttestationProviderArgs extends io.pulumi.resources.ResourceA
      * The tags that will be assigned to the attestation provider.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

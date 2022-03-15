@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDeploymentResult {
     /**
      * Primary Id for this resource
@@ -22,10 +22,10 @@ public final class GetDeploymentResult {
      */
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDeploymentResult(
-        @OutputCustomType.Parameter("deploymentId") @Nullable String deploymentId,
-        @OutputCustomType.Parameter("description") @Nullable String description) {
+        @CustomType.Parameter("deploymentId") @Nullable String deploymentId,
+        @CustomType.Parameter("description") @Nullable String description) {
         this.deploymentId = deploymentId;
         this.description = description;
     }

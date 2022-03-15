@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
      * Code of the status
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable Output<String> code;
 
     public Output<String> getCode() {
@@ -34,7 +34,7 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
      * Resource ETag
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -45,7 +45,7 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -56,7 +56,7 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
      * Description of the status
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
@@ -67,7 +67,7 @@ public final class ConnectionErrorArgs extends io.pulumi.resources.ResourceArgs 
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

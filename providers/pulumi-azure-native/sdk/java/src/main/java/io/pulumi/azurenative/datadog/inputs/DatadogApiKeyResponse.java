@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datadog.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class DatadogApiKeyResponse extends io.pulumi.resources.InvokeArgs 
      * The time of creation of the API key.
      * 
      */
-    @InputImport(name="created")
+    @Import(name="created")
       private final @Nullable String created;
 
     public Optional<String> getCreated() {
@@ -29,7 +29,7 @@ public final class DatadogApiKeyResponse extends io.pulumi.resources.InvokeArgs 
      * The user that created the API key.
      * 
      */
-    @InputImport(name="createdBy")
+    @Import(name="createdBy")
       private final @Nullable String createdBy;
 
     public Optional<String> getCreatedBy() {
@@ -40,7 +40,7 @@ public final class DatadogApiKeyResponse extends io.pulumi.resources.InvokeArgs 
      * The value of the API key.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final String key;
 
     public String getKey() {
@@ -51,7 +51,7 @@ public final class DatadogApiKeyResponse extends io.pulumi.resources.InvokeArgs 
      * The name of the API key.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

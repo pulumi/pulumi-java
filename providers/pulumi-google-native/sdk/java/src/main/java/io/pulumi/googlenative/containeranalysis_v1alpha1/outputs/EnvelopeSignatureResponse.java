@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EnvelopeSignatureResponse {
     /**
      * A reference id to the key being used for signing
@@ -20,10 +20,10 @@ public final class EnvelopeSignatureResponse {
      */
     private final String sig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvelopeSignatureResponse(
-        @OutputCustomType.Parameter("keyid") String keyid,
-        @OutputCustomType.Parameter("sig") String sig) {
+        @CustomType.Parameter("keyid") String keyid,
+        @CustomType.Parameter("sig") String sig) {
         this.keyid = keyid;
         this.sig = sig;
     }

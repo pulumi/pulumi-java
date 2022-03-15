@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.cloudtasks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class QueueAppEngineRoutingOverride {
     /**
      * - 
@@ -36,12 +36,12 @@ public final class QueueAppEngineRoutingOverride {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QueueAppEngineRoutingOverride(
-        @OutputCustomType.Parameter("host") @Nullable String host,
-        @OutputCustomType.Parameter("instance") @Nullable String instance,
-        @OutputCustomType.Parameter("service") @Nullable String service,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("host") @Nullable String host,
+        @CustomType.Parameter("instance") @Nullable String instance,
+        @CustomType.Parameter("service") @Nullable String service,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.host = host;
         this.instance = instance;
         this.service = service;

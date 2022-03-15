@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SpotInstanceRequestEnclaveOptions {
     /**
      * Whether Nitro Enclaves will be enabled on the instance. Defaults to `false`.
@@ -17,8 +17,8 @@ public final class SpotInstanceRequestEnclaveOptions {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private SpotInstanceRequestEnclaveOptions(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
+    @CustomType.Constructor
+    private SpotInstanceRequestEnclaveOptions(@CustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

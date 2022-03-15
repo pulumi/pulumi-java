@@ -3,7 +3,7 @@ package io.pulumi.resources;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import io.pulumi.Log;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.core.internal.CompletableFutures;
 import io.pulumi.core.internal.Internal.Field;
 import io.pulumi.core.internal.annotations.InputMetadata;
@@ -108,6 +108,6 @@ public abstract class InputArgs {
     }
 
     private String fullName(InputMetadata input) {
-        return String.format("@%s %s", InputImport.class.getSimpleName(), input.generateFullName(this.getClass()));
+        return String.format("@%s %s", Import.class.getSimpleName(), input.generateFullName(this.getClass()));
     }
 }

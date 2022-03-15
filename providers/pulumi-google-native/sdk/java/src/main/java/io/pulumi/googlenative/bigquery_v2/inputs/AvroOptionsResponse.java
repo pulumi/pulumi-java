@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class AvroOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * [Optional] If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the corresponding BigQuery data type (for example, TIMESTAMP), instead of using the raw type (for example, INTEGER).
      * 
      */
-    @InputImport(name="useAvroLogicalTypes", required=true)
+    @Import(name="useAvroLogicalTypes", required=true)
       private final Boolean useAvroLogicalTypes;
 
     public Boolean getUseAvroLogicalTypes() {

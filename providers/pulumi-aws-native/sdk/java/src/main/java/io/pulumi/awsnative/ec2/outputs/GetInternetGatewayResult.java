@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.InternetGatewayTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInternetGatewayResult {
     /**
      * ID of internet gateway.
@@ -24,10 +24,10 @@ public final class GetInternetGatewayResult {
      */
     private final @Nullable List<InternetGatewayTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInternetGatewayResult(
-        @OutputCustomType.Parameter("internetGatewayId") @Nullable String internetGatewayId,
-        @OutputCustomType.Parameter("tags") @Nullable List<InternetGatewayTag> tags) {
+        @CustomType.Parameter("internetGatewayId") @Nullable String internetGatewayId,
+        @CustomType.Parameter("tags") @Nullable List<InternetGatewayTag> tags) {
         this.internetGatewayId = internetGatewayId;
         this.tags = tags;
     }

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackupRetentionSettingsResponse {
     /**
      * Depending on the value of retention_unit, this is used to determine if a backup needs to be deleted. If retention_unit is 'COUNT', we will retain this many backups.
@@ -21,10 +21,10 @@ public final class BackupRetentionSettingsResponse {
      */
     private final String retentionUnit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackupRetentionSettingsResponse(
-        @OutputCustomType.Parameter("retainedBackups") Integer retainedBackups,
-        @OutputCustomType.Parameter("retentionUnit") String retentionUnit) {
+        @CustomType.Parameter("retainedBackups") Integer retainedBackups,
+        @CustomType.Parameter("retentionUnit") String retentionUnit) {
         this.retainedBackups = retainedBackups;
         this.retentionUnit = retentionUnit;
     }

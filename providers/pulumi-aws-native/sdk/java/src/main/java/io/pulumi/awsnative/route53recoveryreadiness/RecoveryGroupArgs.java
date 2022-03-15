@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53recoveryreadiness;
 
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.RecoveryGroupTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A list of the cell Amazon Resource Names (ARNs) in the recovery group.
      * 
      */
-    @InputImport(name="cells")
+    @Import(name="cells")
       private final @Nullable Output<List<String>> cells;
 
     public Output<List<String>> getCells() {
@@ -31,7 +31,7 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the recovery group to create.
      * 
      */
-    @InputImport(name="recoveryGroupName")
+    @Import(name="recoveryGroupName")
       private final @Nullable Output<String> recoveryGroupName;
 
     public Output<String> getRecoveryGroupName() {
@@ -42,7 +42,7 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A collection of tags associated with a resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<RecoveryGroupTagArgs>> tags;
 
     public Output<List<RecoveryGroupTagArgs>> getTags() {

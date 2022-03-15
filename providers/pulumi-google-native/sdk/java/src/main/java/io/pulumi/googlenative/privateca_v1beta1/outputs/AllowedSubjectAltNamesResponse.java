@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AllowedSubjectAltNamesResponse {
     /**
      * Optional. Specifies if to allow custom X509Extension values.
@@ -42,14 +42,14 @@ public final class AllowedSubjectAltNamesResponse {
      */
     private final List<String> allowedUris;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AllowedSubjectAltNamesResponse(
-        @OutputCustomType.Parameter("allowCustomSans") Boolean allowCustomSans,
-        @OutputCustomType.Parameter("allowGlobbingDnsWildcards") Boolean allowGlobbingDnsWildcards,
-        @OutputCustomType.Parameter("allowedDnsNames") List<String> allowedDnsNames,
-        @OutputCustomType.Parameter("allowedEmailAddresses") List<String> allowedEmailAddresses,
-        @OutputCustomType.Parameter("allowedIps") List<String> allowedIps,
-        @OutputCustomType.Parameter("allowedUris") List<String> allowedUris) {
+        @CustomType.Parameter("allowCustomSans") Boolean allowCustomSans,
+        @CustomType.Parameter("allowGlobbingDnsWildcards") Boolean allowGlobbingDnsWildcards,
+        @CustomType.Parameter("allowedDnsNames") List<String> allowedDnsNames,
+        @CustomType.Parameter("allowedEmailAddresses") List<String> allowedEmailAddresses,
+        @CustomType.Parameter("allowedIps") List<String> allowedIps,
+        @CustomType.Parameter("allowedUris") List<String> allowedUris) {
         this.allowCustomSans = allowCustomSans;
         this.allowGlobbingDnsWildcards = allowGlobbingDnsWildcards;
         this.allowedDnsNames = allowedDnsNames;

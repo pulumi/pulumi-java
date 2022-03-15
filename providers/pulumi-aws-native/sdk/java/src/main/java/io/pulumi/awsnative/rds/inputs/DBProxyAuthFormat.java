@@ -5,7 +5,7 @@ package io.pulumi.awsnative.rds.inputs;
 
 import io.pulumi.awsnative.rds.enums.DBProxyAuthFormatAuthScheme;
 import io.pulumi.awsnative.rds.enums.DBProxyAuthFormatIAMAuth;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class DBProxyAuthFormat extends io.pulumi.resources.InvokeArgs {
      * The type of authentication that the proxy uses for connections from the proxy to the underlying database.
      * 
      */
-    @InputImport(name="authScheme")
+    @Import(name="authScheme")
       private final @Nullable DBProxyAuthFormatAuthScheme authScheme;
 
     public Optional<DBProxyAuthFormatAuthScheme> getAuthScheme() {
@@ -31,7 +31,7 @@ public final class DBProxyAuthFormat extends io.pulumi.resources.InvokeArgs {
      * A user-specified description about the authentication used by a proxy to log in as a specific database user.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -42,7 +42,7 @@ public final class DBProxyAuthFormat extends io.pulumi.resources.InvokeArgs {
      * Whether to require or disallow AWS Identity and Access Management (IAM) authentication for connections to the proxy.
      * 
      */
-    @InputImport(name="iAMAuth")
+    @Import(name="iAMAuth")
       private final @Nullable DBProxyAuthFormatIAMAuth iAMAuth;
 
     public Optional<DBProxyAuthFormatIAMAuth> getIAMAuth() {
@@ -53,7 +53,7 @@ public final class DBProxyAuthFormat extends io.pulumi.resources.InvokeArgs {
      * The Amazon Resource Name (ARN) representing the secret that the proxy uses to authenticate to the RDS DB instance or Aurora DB cluster. These secrets are stored within Amazon Secrets Manager.
      * 
      */
-    @InputImport(name="secretArn")
+    @Import(name="secretArn")
       private final @Nullable String secretArn;
 
     public Optional<String> getSecretArn() {
@@ -64,7 +64,7 @@ public final class DBProxyAuthFormat extends io.pulumi.resources.InvokeArgs {
      * The name of the database user to which the proxy connects.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable String userName;
 
     public Optional<String> getUserName() {

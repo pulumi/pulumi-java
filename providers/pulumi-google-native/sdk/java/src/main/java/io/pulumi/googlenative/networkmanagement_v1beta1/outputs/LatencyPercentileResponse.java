@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LatencyPercentileResponse {
     /**
      * percent-th percentile of latency observed, in microseconds. Fraction of percent/100 of samples have latency lower or equal to the value of this field.
@@ -21,10 +21,10 @@ public final class LatencyPercentileResponse {
      */
     private final Integer percent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LatencyPercentileResponse(
-        @OutputCustomType.Parameter("latencyMicros") String latencyMicros,
-        @OutputCustomType.Parameter("percent") Integer percent) {
+        @CustomType.Parameter("latencyMicros") String latencyMicros,
+        @CustomType.Parameter("percent") Integer percent) {
         this.latencyMicros = latencyMicros;
         this.percent = percent;
     }

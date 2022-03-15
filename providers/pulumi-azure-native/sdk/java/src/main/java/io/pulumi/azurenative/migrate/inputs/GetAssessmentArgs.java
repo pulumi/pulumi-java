@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
      * Unique name of an assessment within a project.
      * 
      */
-    @InputImport(name="assessmentName", required=true)
+    @Import(name="assessmentName", required=true)
       private final String assessmentName;
 
     public String getAssessmentName() {
@@ -27,7 +27,7 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
      * Unique name of a group within a project.
      * 
      */
-    @InputImport(name="groupName", required=true)
+    @Import(name="groupName", required=true)
       private final String groupName;
 
     public String getGroupName() {
@@ -38,7 +38,7 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the Azure Migrate project.
      * 
      */
-    @InputImport(name="projectName", required=true)
+    @Import(name="projectName", required=true)
       private final String projectName;
 
     public String getProjectName() {
@@ -49,7 +49,7 @@ public final class GetAssessmentArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the Azure Resource Group that project is part of.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

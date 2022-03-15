@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.ComponentArgs;
 import io.pulumi.azurenative.insights.outputs.PrivateLinkScopedResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -39,7 +39,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Application Insights Unique ID for your Application.
      * 
      */
-    @OutputExport(name="appId", type=String.class, parameters={})
+    @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
     /**
@@ -53,7 +53,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * The unique ID of your application. This field mirrors the 'Name' field and cannot be changed.
      * 
      */
-    @OutputExport(name="applicationId", type=String.class, parameters={})
+    @Export(name="applicationId", type=String.class, parameters={})
     private Output<String> applicationId;
 
     /**
@@ -67,7 +67,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Type of application being monitored.
      * 
      */
-    @OutputExport(name="applicationType", type=String.class, parameters={})
+    @Export(name="applicationType", type=String.class, parameters={})
     private Output<String> applicationType;
 
     /**
@@ -81,7 +81,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Application Insights component connection string.
      * 
      */
-    @OutputExport(name="connectionString", type=String.class, parameters={})
+    @Export(name="connectionString", type=String.class, parameters={})
     private Output<String> connectionString;
 
     /**
@@ -95,7 +95,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Creation Date for the Application Insights component, in ISO 8601 format.
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -109,7 +109,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Disable IP masking.
      * 
      */
-    @OutputExport(name="disableIpMasking", type=Boolean.class, parameters={})
+    @Export(name="disableIpMasking", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableIpMasking;
 
     /**
@@ -123,7 +123,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.
      * 
      */
-    @OutputExport(name="flowType", type=String.class, parameters={})
+    @Export(name="flowType", type=String.class, parameters={})
     private Output</* @Nullable */ String> flowType;
 
     /**
@@ -137,7 +137,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.
      * 
      */
-    @OutputExport(name="hockeyAppId", type=String.class, parameters={})
+    @Export(name="hockeyAppId", type=String.class, parameters={})
     private Output</* @Nullable */ String> hockeyAppId;
 
     /**
@@ -151,7 +151,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Token used to authenticate communications with between Application Insights and HockeyApp.
      * 
      */
-    @OutputExport(name="hockeyAppToken", type=String.class, parameters={})
+    @Export(name="hockeyAppToken", type=String.class, parameters={})
     private Output<String> hockeyAppToken;
 
     /**
@@ -165,7 +165,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Purge data immediately after 30 days.
      * 
      */
-    @OutputExport(name="immediatePurgeDataOn30Days", type=Boolean.class, parameters={})
+    @Export(name="immediatePurgeDataOn30Days", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> immediatePurgeDataOn30Days;
 
     /**
@@ -179,7 +179,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Indicates the flow of the ingestion.
      * 
      */
-    @OutputExport(name="ingestionMode", type=String.class, parameters={})
+    @Export(name="ingestionMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> ingestionMode;
 
     /**
@@ -193,7 +193,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Application Insights Instrumentation key. A read-only value that applications can use to identify the destination for all telemetry sent to Azure Application Insights. This value will be supplied upon construction of each new Application Insights component.
      * 
      */
-    @OutputExport(name="instrumentationKey", type=String.class, parameters={})
+    @Export(name="instrumentationKey", type=String.class, parameters={})
     private Output<String> instrumentationKey;
 
     /**
@@ -207,7 +207,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -221,7 +221,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -235,7 +235,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -249,7 +249,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * List of linked private link scope resources.
      * 
      */
-    @OutputExport(name="privateLinkScopedResources", type=List.class, parameters={PrivateLinkScopedResourceResponse.class})
+    @Export(name="privateLinkScopedResources", type=List.class, parameters={PrivateLinkScopedResourceResponse.class})
     private Output<List<PrivateLinkScopedResourceResponse>> privateLinkScopedResources;
 
     /**
@@ -263,7 +263,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Current state of this component: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -277,7 +277,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.
      * 
      */
-    @OutputExport(name="requestSource", type=String.class, parameters={})
+    @Export(name="requestSource", type=String.class, parameters={})
     private Output</* @Nullable */ String> requestSource;
 
     /**
@@ -291,7 +291,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Retention period in days.
      * 
      */
-    @OutputExport(name="retentionInDays", type=Integer.class, parameters={})
+    @Export(name="retentionInDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionInDays;
 
     /**
@@ -305,7 +305,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.
      * 
      */
-    @OutputExport(name="samplingPercentage", type=Double.class, parameters={})
+    @Export(name="samplingPercentage", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> samplingPercentage;
 
     /**
@@ -319,7 +319,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -333,7 +333,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Azure Tenant Id.
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
@@ -347,7 +347,7 @@ public class Component extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.appengine_v1.inputs.CpuUtilizationResponse;
 import io.pulumi.googlenative.appengine_v1.inputs.DiskUtilizationResponse;
 import io.pulumi.googlenative.appengine_v1.inputs.NetworkUtilizationResponse;
@@ -26,7 +26,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * The time period that the Autoscaler (https://cloud.google.com/compute/docs/autoscaler/) should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. Only applicable in the App Engine flexible environment.
      * 
      */
-    @InputImport(name="coolDownPeriod", required=true)
+    @Import(name="coolDownPeriod", required=true)
       private final String coolDownPeriod;
 
     public String getCoolDownPeriod() {
@@ -37,7 +37,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * Target scaling by CPU usage.
      * 
      */
-    @InputImport(name="cpuUtilization", required=true)
+    @Import(name="cpuUtilization", required=true)
       private final CpuUtilizationResponse cpuUtilization;
 
     public CpuUtilizationResponse getCpuUtilization() {
@@ -48,7 +48,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * Target scaling by disk usage.
      * 
      */
-    @InputImport(name="diskUtilization", required=true)
+    @Import(name="diskUtilization", required=true)
       private final DiskUtilizationResponse diskUtilization;
 
     public DiskUtilizationResponse getDiskUtilization() {
@@ -59,7 +59,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.Defaults to a runtime-specific value.
      * 
      */
-    @InputImport(name="maxConcurrentRequests", required=true)
+    @Import(name="maxConcurrentRequests", required=true)
       private final Integer maxConcurrentRequests;
 
     public Integer getMaxConcurrentRequests() {
@@ -70,7 +70,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * Maximum number of idle instances that should be maintained for this version.
      * 
      */
-    @InputImport(name="maxIdleInstances", required=true)
+    @Import(name="maxIdleInstances", required=true)
       private final Integer maxIdleInstances;
 
     public Integer getMaxIdleInstances() {
@@ -81,7 +81,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
      * 
      */
-    @InputImport(name="maxPendingLatency", required=true)
+    @Import(name="maxPendingLatency", required=true)
       private final String maxPendingLatency;
 
     public String getMaxPendingLatency() {
@@ -92,7 +92,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * Maximum number of instances that should be started to handle requests for this version.
      * 
      */
-    @InputImport(name="maxTotalInstances", required=true)
+    @Import(name="maxTotalInstances", required=true)
       private final Integer maxTotalInstances;
 
     public Integer getMaxTotalInstances() {
@@ -103,7 +103,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
      * 
      */
-    @InputImport(name="minIdleInstances", required=true)
+    @Import(name="minIdleInstances", required=true)
       private final Integer minIdleInstances;
 
     public Integer getMinIdleInstances() {
@@ -114,7 +114,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
      * 
      */
-    @InputImport(name="minPendingLatency", required=true)
+    @Import(name="minPendingLatency", required=true)
       private final String minPendingLatency;
 
     public String getMinPendingLatency() {
@@ -125,7 +125,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * Minimum number of running instances that should be maintained for this version.
      * 
      */
-    @InputImport(name="minTotalInstances", required=true)
+    @Import(name="minTotalInstances", required=true)
       private final Integer minTotalInstances;
 
     public Integer getMinTotalInstances() {
@@ -136,7 +136,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * Target scaling by network usage.
      * 
      */
-    @InputImport(name="networkUtilization", required=true)
+    @Import(name="networkUtilization", required=true)
       private final NetworkUtilizationResponse networkUtilization;
 
     public NetworkUtilizationResponse getNetworkUtilization() {
@@ -147,7 +147,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * Target scaling by request utilization.
      * 
      */
-    @InputImport(name="requestUtilization", required=true)
+    @Import(name="requestUtilization", required=true)
       private final RequestUtilizationResponse requestUtilization;
 
     public RequestUtilizationResponse getRequestUtilization() {
@@ -158,7 +158,7 @@ public final class AutomaticScalingResponse extends io.pulumi.resources.InvokeAr
      * Scheduler settings for standard environment.
      * 
      */
-    @InputImport(name="standardSchedulerSettings", required=true)
+    @Import(name="standardSchedulerSettings", required=true)
       private final StandardSchedulerSettingsResponse standardSchedulerSettings;
 
     public StandardSchedulerSettingsResponse getStandardSchedulerSettings() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.dynamodb;
 
 import io.pulumi.aws.dynamodb.inputs.GlobalTableReplicaArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the global table. Must match underlying DynamoDB Table names in all regions.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -31,7 +31,7 @@ public final class GlobalTableArgs extends io.pulumi.resources.ResourceArgs {
      * Underlying DynamoDB Table. At least 1 replica must be defined. See below.
      * 
      */
-    @InputImport(name="replicas", required=true)
+    @Import(name="replicas", required=true)
       private final Output<List<GlobalTableReplicaArgs>> replicas;
 
     public Output<List<GlobalTableReplicaArgs>> getReplicas() {

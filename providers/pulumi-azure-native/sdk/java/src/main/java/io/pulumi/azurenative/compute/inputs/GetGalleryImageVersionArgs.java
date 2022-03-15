@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetGalleryImageVersionArgs extends io.pulumi.resources.Invoke
      * The expand expression to apply on the operation.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -29,7 +29,7 @@ public final class GetGalleryImageVersionArgs extends io.pulumi.resources.Invoke
      * The name of the gallery image definition in which the Image Version resides.
      * 
      */
-    @InputImport(name="galleryImageName", required=true)
+    @Import(name="galleryImageName", required=true)
       private final String galleryImageName;
 
     public String getGalleryImageName() {
@@ -40,7 +40,7 @@ public final class GetGalleryImageVersionArgs extends io.pulumi.resources.Invoke
      * The name of the gallery image version to be retrieved.
      * 
      */
-    @InputImport(name="galleryImageVersionName", required=true)
+    @Import(name="galleryImageVersionName", required=true)
       private final String galleryImageVersionName;
 
     public String getGalleryImageVersionName() {
@@ -51,7 +51,7 @@ public final class GetGalleryImageVersionArgs extends io.pulumi.resources.Invoke
      * The name of the Shared Image Gallery in which the Image Definition resides.
      * 
      */
-    @InputImport(name="galleryName", required=true)
+    @Import(name="galleryName", required=true)
       private final String galleryName;
 
     public String getGalleryName() {
@@ -62,7 +62,7 @@ public final class GetGalleryImageVersionArgs extends io.pulumi.resources.Invoke
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

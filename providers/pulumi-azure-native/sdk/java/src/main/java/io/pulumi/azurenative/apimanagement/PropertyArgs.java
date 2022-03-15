@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * Unique name of Property. It may contain only letters, digits, period, dash, and underscore characters.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -31,7 +31,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier of the property.
      * 
      */
-    @InputImport(name="propId")
+    @Import(name="propId")
       private final @Nullable Output<String> propId;
 
     public Output<String> getPropId() {
@@ -42,7 +42,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * Determines whether the value is a secret and should be encrypted or not. Default value is false.
      * 
      */
-    @InputImport(name="secret")
+    @Import(name="secret")
       private final @Nullable Output<Boolean> secret;
 
     public Output<Boolean> getSecret() {
@@ -64,7 +64,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -75,7 +75,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * Optional tags that when provided can be used to filter the property list.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
@@ -86,7 +86,7 @@ public final class PropertyArgs extends io.pulumi.resources.ResourceArgs {
      * Value of the property. Can contain policy expressions. It may not be empty or consist only of whitespace.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

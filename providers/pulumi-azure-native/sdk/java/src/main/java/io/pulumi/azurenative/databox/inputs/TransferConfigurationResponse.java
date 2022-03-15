@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.inputs.TransferConfigurationResponseTransferAllDetails;
 import io.pulumi.azurenative.databox.inputs.TransferConfigurationResponseTransferFilterDetails;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class TransferConfigurationResponse extends io.pulumi.resources.Inv
      * Map of filter type and the details to transfer all data. This field is required only if the TransferConfigurationType is given as TransferAll
      * 
      */
-    @InputImport(name="transferAllDetails")
+    @Import(name="transferAllDetails")
       private final @Nullable TransferConfigurationResponseTransferAllDetails transferAllDetails;
 
     public Optional<TransferConfigurationResponseTransferAllDetails> getTransferAllDetails() {
@@ -35,7 +35,7 @@ public final class TransferConfigurationResponse extends io.pulumi.resources.Inv
      * Type of the configuration for transfer.
      * 
      */
-    @InputImport(name="transferConfigurationType", required=true)
+    @Import(name="transferConfigurationType", required=true)
       private final String transferConfigurationType;
 
     public String getTransferConfigurationType() {
@@ -46,7 +46,7 @@ public final class TransferConfigurationResponse extends io.pulumi.resources.Inv
      * Map of filter type and the details to filter. This field is required only if the TransferConfigurationType is given as TransferUsingFilter.
      * 
      */
-    @InputImport(name="transferFilterDetails")
+    @Import(name="transferFilterDetails")
       private final @Nullable TransferConfigurationResponseTransferFilterDetails transferFilterDetails;
 
     public Optional<TransferConfigurationResponseTransferFilterDetails> getTransferFilterDetails() {

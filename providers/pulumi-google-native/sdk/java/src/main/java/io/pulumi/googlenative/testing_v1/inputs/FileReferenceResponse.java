@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class FileReferenceResponse extends io.pulumi.resources.InvokeArgs 
      * A path to a file in Google Cloud Storage. Example: gs://build-app-1414623860166/app%40debug-unaligned.apk These paths are expected to be url encoded (percent encoding)
      * 
      */
-    @InputImport(name="gcsPath", required=true)
+    @Import(name="gcsPath", required=true)
       private final String gcsPath;
 
     public String getGcsPath() {

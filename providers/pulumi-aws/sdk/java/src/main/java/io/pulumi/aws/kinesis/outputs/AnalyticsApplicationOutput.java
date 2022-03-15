@@ -7,13 +7,13 @@ import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationOutputKinesisFirehose;
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationOutputKinesisStream;
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationOutputLambda;
 import io.pulumi.aws.kinesis.outputs.AnalyticsApplicationOutputSchema;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsApplicationOutput {
     /**
      * The ARN of the Kinesis Analytics Application.
@@ -48,14 +48,14 @@ public final class AnalyticsApplicationOutput {
      */
     private final AnalyticsApplicationOutputSchema schema;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalyticsApplicationOutput(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("kinesisFirehose") @Nullable AnalyticsApplicationOutputKinesisFirehose kinesisFirehose,
-        @OutputCustomType.Parameter("kinesisStream") @Nullable AnalyticsApplicationOutputKinesisStream kinesisStream,
-        @OutputCustomType.Parameter("lambda") @Nullable AnalyticsApplicationOutputLambda lambda,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("schema") AnalyticsApplicationOutputSchema schema) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("kinesisFirehose") @Nullable AnalyticsApplicationOutputKinesisFirehose kinesisFirehose,
+        @CustomType.Parameter("kinesisStream") @Nullable AnalyticsApplicationOutputKinesisStream kinesisStream,
+        @CustomType.Parameter("lambda") @Nullable AnalyticsApplicationOutputLambda lambda,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("schema") AnalyticsApplicationOutputSchema schema) {
         this.id = id;
         this.kinesisFirehose = kinesisFirehose;
         this.kinesisStream = kinesisStream;

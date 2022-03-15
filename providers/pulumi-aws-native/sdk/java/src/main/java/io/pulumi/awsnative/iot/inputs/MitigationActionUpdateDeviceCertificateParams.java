@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.MitigationActionUpdateDeviceCertificateParamsAction;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -16,7 +16,7 @@ public final class MitigationActionUpdateDeviceCertificateParams extends io.pulu
 
     public static final MitigationActionUpdateDeviceCertificateParams Empty = new MitigationActionUpdateDeviceCertificateParams();
 
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final MitigationActionUpdateDeviceCertificateParamsAction action;
 
     public MitigationActionUpdateDeviceCertificateParamsAction getAction() {

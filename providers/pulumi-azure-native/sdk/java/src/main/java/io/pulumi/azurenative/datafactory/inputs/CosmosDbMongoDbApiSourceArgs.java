@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.MongoDbCursorMethodsPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
      */
-    @InputImport(name="additionalColumns")
+    @Import(name="additionalColumns")
       private final @Nullable Output<Object> additionalColumns;
 
     public Output<Object> getAdditionalColumns() {
@@ -35,7 +35,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * Specifies the number of documents to return in each batch of the response from MongoDB instance. In most cases, modifying the batch size will not affect the user or the application. This property's main purpose is to avoid hit the limitation of response size. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="batchSize")
+    @Import(name="batchSize")
       private final @Nullable Output<Object> batchSize;
 
     public Output<Object> getBatchSize() {
@@ -46,7 +46,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * Cursor methods for Mongodb query.
      * 
      */
-    @InputImport(name="cursorMethods")
+    @Import(name="cursorMethods")
       private final @Nullable Output<MongoDbCursorMethodsPropertiesArgs> cursorMethods;
 
     public Output<MongoDbCursorMethodsPropertiesArgs> getCursorMethods() {
@@ -57,7 +57,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
     public Output<Object> getDisableMetricsCollection() {
@@ -68,7 +68,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * Specifies selection filter using query operators. To return all documents in a collection, omit this parameter or pass an empty document ({}). Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<Object> filter;
 
     public Output<Object> getFilter() {
@@ -79,7 +79,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
     public Output<Object> getMaxConcurrentConnections() {
@@ -90,7 +90,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="queryTimeout")
+    @Import(name="queryTimeout")
       private final @Nullable Output<Object> queryTimeout;
 
     public Output<Object> getQueryTimeout() {
@@ -101,7 +101,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="sourceRetryCount")
+    @Import(name="sourceRetryCount")
       private final @Nullable Output<Object> sourceRetryCount;
 
     public Output<Object> getSourceRetryCount() {
@@ -112,7 +112,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="sourceRetryWait")
+    @Import(name="sourceRetryWait")
       private final @Nullable Output<Object> sourceRetryWait;
 
     public Output<Object> getSourceRetryWait() {
@@ -124,7 +124,7 @@ public final class CosmosDbMongoDbApiSourceArgs extends io.pulumi.resources.Reso
      * Expected value is 'CosmosDbMongoDbApiSource'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class ContainerEnvironmentVariableArgs extends io.pulumi.resources.
 
     public static final ContainerEnvironmentVariableArgs Empty = new ContainerEnvironmentVariableArgs();
 
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
         return this.value == null ? Output.empty() : this.value;
     }
 
-    @InputImport(name="variable")
+    @Import(name="variable")
       private final @Nullable Output<String> variable;
 
     public Output<String> getVariable() {

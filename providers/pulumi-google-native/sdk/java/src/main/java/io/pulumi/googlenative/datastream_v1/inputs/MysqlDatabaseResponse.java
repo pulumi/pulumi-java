@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1.inputs.MysqlTableResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class MysqlDatabaseResponse extends io.pulumi.resources.InvokeArgs 
      * Database name.
      * 
      */
-    @InputImport(name="database", required=true)
+    @Import(name="database", required=true)
       private final String database;
 
     public String getDatabase() {
@@ -33,7 +33,7 @@ public final class MysqlDatabaseResponse extends io.pulumi.resources.InvokeArgs 
      * Tables in the database.
      * 
      */
-    @InputImport(name="mysqlTables", required=true)
+    @Import(name="mysqlTables", required=true)
       private final List<MysqlTableResponse> mysqlTables;
 
     public List<MysqlTableResponse> getMysqlTables() {

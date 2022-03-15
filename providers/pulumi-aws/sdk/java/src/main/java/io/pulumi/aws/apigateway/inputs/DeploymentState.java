@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * The creation date of the deployment
      * 
      */
-    @InputImport(name="createdDate")
+    @Import(name="createdDate")
       private final @Nullable Output<String> createdDate;
 
     public Output<String> getCreatedDate() {
@@ -30,7 +30,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * Description of the deployment
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * e.g., `arn:aws:execute-api:eu-west-2:123456789012:z4675bid1j/prod`
      * 
      */
-    @InputImport(name="executionArn")
+    @Import(name="executionArn")
       private final @Nullable Output<String> executionArn;
 
     public Output<String> getExecutionArn() {
@@ -55,7 +55,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * e.g. `https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod`
      * 
      */
-    @InputImport(name="invokeUrl")
+    @Import(name="invokeUrl")
       private final @Nullable Output<String> invokeUrl;
 
     public Output<String> getInvokeUrl() {
@@ -66,7 +66,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * REST API identifier.
      * 
      */
-    @InputImport(name="restApi")
+    @Import(name="restApi")
       private final @Nullable Output<String> restApi;
 
     public Output<String> getRestApi() {
@@ -77,7 +77,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * Description to set on the stage managed by the `stage_name` argument.
      * 
      */
-    @InputImport(name="stageDescription")
+    @Import(name="stageDescription")
       private final @Nullable Output<String> stageDescription;
 
     public Output<String> getStageDescription() {
@@ -88,7 +88,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * Name of the stage to create with this deployment. If the specified stage already exists, it will be updated to point to the new deployment. It is recommended to use the `aws.apigateway.Stage` resource instead to manage stages.
      * 
      */
-    @InputImport(name="stageName")
+    @Import(name="stageName")
       private final @Nullable Output<String> stageName;
 
     public Output<String> getStageName() {
@@ -99,7 +99,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * Map of arbitrary keys and values that, when changed, will trigger a redeployment.
      * 
      */
-    @InputImport(name="triggers")
+    @Import(name="triggers")
       private final @Nullable Output<Map<String,String>> triggers;
 
     public Output<Map<String,String>> getTriggers() {
@@ -110,7 +110,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
      * Map to set on the stage managed by the `stage_name` argument.
      * 
      */
-    @InputImport(name="variables")
+    @Import(name="variables")
       private final @Nullable Output<Map<String,String>> variables;
 
     public Output<Map<String,String>> getVariables() {

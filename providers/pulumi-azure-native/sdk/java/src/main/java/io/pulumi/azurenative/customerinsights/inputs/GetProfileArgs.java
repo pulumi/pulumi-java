@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the hub.
      * 
      */
-    @InputImport(name="hubName", required=true)
+    @Import(name="hubName", required=true)
       private final String hubName;
 
     public String getHubName() {
@@ -29,7 +29,7 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
      * Locale of profile to retrieve, default is en-us.
      * 
      */
-    @InputImport(name="localeCode")
+    @Import(name="localeCode")
       private final @Nullable String localeCode;
 
     public Optional<String> getLocaleCode() {
@@ -40,7 +40,7 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the profile.
      * 
      */
-    @InputImport(name="profileName", required=true)
+    @Import(name="profileName", required=true)
       private final String profileName;
 
     public String getProfileName() {
@@ -51,7 +51,7 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

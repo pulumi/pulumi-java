@@ -4,7 +4,7 @@
 package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class ClusterVpcConfigArgs extends io.pulumi.resources.ResourceArgs
      * Cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control-plane-to-data-plane communication.
      * 
      */
-    @InputImport(name="clusterSecurityGroupId")
+    @Import(name="clusterSecurityGroupId")
       private final @Nullable Output<String> clusterSecurityGroupId;
 
     public Output<String> getClusterSecurityGroupId() {
@@ -31,7 +31,7 @@ public final class ClusterVpcConfigArgs extends io.pulumi.resources.ResourceArgs
      * Whether the Amazon EKS private API server endpoint is enabled. Default is `false`.
      * 
      */
-    @InputImport(name="endpointPrivateAccess")
+    @Import(name="endpointPrivateAccess")
       private final @Nullable Output<Boolean> endpointPrivateAccess;
 
     public Output<Boolean> getEndpointPrivateAccess() {
@@ -42,7 +42,7 @@ public final class ClusterVpcConfigArgs extends io.pulumi.resources.ResourceArgs
      * Whether the Amazon EKS public API server endpoint is enabled. Default is `true`.
      * 
      */
-    @InputImport(name="endpointPublicAccess")
+    @Import(name="endpointPublicAccess")
       private final @Nullable Output<Boolean> endpointPublicAccess;
 
     public Output<Boolean> getEndpointPublicAccess() {
@@ -53,7 +53,7 @@ public final class ClusterVpcConfigArgs extends io.pulumi.resources.ResourceArgs
      * List of CIDR blocks. Indicates which CIDR blocks can access the Amazon EKS public API server endpoint when enabled. EKS defaults this to a list with `0.0.0.0/0`. This provider will only perform drift detection of its value when present in a configuration.
      * 
      */
-    @InputImport(name="publicAccessCidrs")
+    @Import(name="publicAccessCidrs")
       private final @Nullable Output<List<String>> publicAccessCidrs;
 
     public Output<List<String>> getPublicAccessCidrs() {
@@ -64,7 +64,7 @@ public final class ClusterVpcConfigArgs extends io.pulumi.resources.ResourceArgs
      * List of security group IDs for the cross-account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane.
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -75,7 +75,7 @@ public final class ClusterVpcConfigArgs extends io.pulumi.resources.ResourceArgs
      * List of subnet IDs. Must be in at least two different availability zones. Amazon EKS creates cross-account elastic network interfaces in these subnets to allow communication between your worker nodes and the Kubernetes control plane.
      * 
      */
-    @InputImport(name="subnetIds", required=true)
+    @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -86,7 +86,7 @@ public final class ClusterVpcConfigArgs extends io.pulumi.resources.ResourceArgs
      * ID of the VPC associated with your cluster.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

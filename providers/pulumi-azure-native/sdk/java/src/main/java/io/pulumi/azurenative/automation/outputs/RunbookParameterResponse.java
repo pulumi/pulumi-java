@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RunbookParameterResponse {
     /**
      * Gets or sets the default value of parameter.
@@ -34,12 +34,12 @@ public final class RunbookParameterResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RunbookParameterResponse(
-        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
-        @OutputCustomType.Parameter("isMandatory") @Nullable Boolean isMandatory,
-        @OutputCustomType.Parameter("position") @Nullable Integer position,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @CustomType.Parameter("isMandatory") @Nullable Boolean isMandatory,
+        @CustomType.Parameter("position") @Nullable Integer position,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.defaultValue = defaultValue;
         this.isMandatory = isMandatory;
         this.position = position;

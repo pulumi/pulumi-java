@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudbuild_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1alpha1.outputs.NetworkResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkerConfigResponse {
     /**
      * Size of the disk attached to the worker, in GB. See https://cloud.google.com/compute/docs/disks/ If `0` is specified, Cloud Build will use a standard disk size. `disk_size` is overridden if you specify a different disk size in `build_options`. In this case, a VM with a disk size specified in the `build_options` will be created on demand at build time. For more information see https://cloud.google.com/cloud-build/docs/api/reference/rest/v1/projects.builds#buildoptions
@@ -31,12 +31,12 @@ public final class WorkerConfigResponse {
      */
     private final String tag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkerConfigResponse(
-        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("network") NetworkResponse network,
-        @OutputCustomType.Parameter("tag") String tag) {
+        @CustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("network") NetworkResponse network,
+        @CustomType.Parameter("tag") String tag) {
         this.diskSizeGb = diskSizeGb;
         this.machineType = machineType;
         this.network = network;

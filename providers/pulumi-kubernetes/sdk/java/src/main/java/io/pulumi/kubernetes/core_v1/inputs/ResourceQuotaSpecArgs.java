@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.ScopeSelectorArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
      * hard is the set of desired hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
      * 
      */
-    @InputImport(name="hard")
+    @Import(name="hard")
       private final @Nullable Output<Map<String,String>> hard;
 
     public Output<Map<String,String>> getHard() {
@@ -36,7 +36,7 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
      * scopeSelector is also a collection of filters like scopes that must match each object tracked by a quota but expressed using ScopeSelectorOperator in combination with possible values. For a resource to match, both scopes AND scopeSelector (if specified in spec), must be matched.
      * 
      */
-    @InputImport(name="scopeSelector")
+    @Import(name="scopeSelector")
       private final @Nullable Output<ScopeSelectorArgs> scopeSelector;
 
     public Output<ScopeSelectorArgs> getScopeSelector() {
@@ -47,7 +47,7 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
      * A collection of filters that must match each object tracked by a quota. If not specified, the quota matches all objects.
      * 
      */
-    @InputImport(name="scopes")
+    @Import(name="scopes")
       private final @Nullable Output<List<String>> scopes;
 
     public Output<List<String>> getScopes() {

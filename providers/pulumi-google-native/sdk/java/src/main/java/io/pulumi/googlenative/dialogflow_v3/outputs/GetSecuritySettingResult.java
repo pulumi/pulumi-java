@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSecuritySettingResult {
     /**
      * [DLP](https://cloud.google.com/dlp/docs) deidentify template name. Use this template to define de-identification configuration for the content. The `DLP De-identify Templates Reader` role is needed on the Dialogflow service identity service account (has the form `service-PROJECT_NUMBER@gcp-sa-dialogflow.iam.gserviceaccount.com`) for your agent's project. If empty, Dialogflow replaces sensitive info with `[redacted]` text. The template name will have one of the following formats: `projects//locations//deidentifyTemplates/` OR `organizations//locations//deidentifyTemplates/` Note: `deidentify_template` must be located in the same region as the `SecuritySettings`.
@@ -58,17 +58,17 @@ public final class GetSecuritySettingResult {
      */
     private final Integer retentionWindowDays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSecuritySettingResult(
-        @OutputCustomType.Parameter("deidentifyTemplate") String deidentifyTemplate,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("insightsExportSettings") GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse insightsExportSettings,
-        @OutputCustomType.Parameter("inspectTemplate") String inspectTemplate,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("purgeDataTypes") List<String> purgeDataTypes,
-        @OutputCustomType.Parameter("redactionScope") String redactionScope,
-        @OutputCustomType.Parameter("redactionStrategy") String redactionStrategy,
-        @OutputCustomType.Parameter("retentionWindowDays") Integer retentionWindowDays) {
+        @CustomType.Parameter("deidentifyTemplate") String deidentifyTemplate,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("insightsExportSettings") GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse insightsExportSettings,
+        @CustomType.Parameter("inspectTemplate") String inspectTemplate,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("purgeDataTypes") List<String> purgeDataTypes,
+        @CustomType.Parameter("redactionScope") String redactionScope,
+        @CustomType.Parameter("redactionStrategy") String redactionStrategy,
+        @CustomType.Parameter("retentionWindowDays") Integer retentionWindowDays) {
         this.deidentifyTemplate = deidentifyTemplate;
         this.displayName = displayName;
         this.insightsExportSettings = insightsExportSettings;

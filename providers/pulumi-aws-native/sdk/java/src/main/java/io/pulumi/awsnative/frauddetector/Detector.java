@@ -12,7 +12,7 @@ import io.pulumi.awsnative.frauddetector.outputs.DetectorModel;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorRule;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * The ARN of the detector.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -42,7 +42,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * The models to associate with this detector.
      * 
      */
-    @OutputExport(name="associatedModels", type=List.class, parameters={DetectorModel.class})
+    @Export(name="associatedModels", type=List.class, parameters={DetectorModel.class})
     private Output</* @Nullable */ List<DetectorModel>> associatedModels;
 
     /**
@@ -56,7 +56,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * The time when the detector was created.
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -70,7 +70,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * The description of the detector.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -84,7 +84,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * The ID of the detector
      * 
      */
-    @OutputExport(name="detectorId", type=String.class, parameters={})
+    @Export(name="detectorId", type=String.class, parameters={})
     private Output<String> detectorId;
 
     /**
@@ -98,7 +98,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * The active version ID of the detector
      * 
      */
-    @OutputExport(name="detectorVersionId", type=String.class, parameters={})
+    @Export(name="detectorVersionId", type=String.class, parameters={})
     private Output<String> detectorVersionId;
 
     /**
@@ -112,7 +112,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * The desired detector version status for the detector
      * 
      */
-    @OutputExport(name="detectorVersionStatus", type=DetectorVersionStatus.class, parameters={})
+    @Export(name="detectorVersionStatus", type=DetectorVersionStatus.class, parameters={})
     private Output</* @Nullable */ DetectorVersionStatus> detectorVersionStatus;
 
     /**
@@ -126,7 +126,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * The event type to associate this detector with.
      * 
      */
-    @OutputExport(name="eventType", type=DetectorEventType.class, parameters={})
+    @Export(name="eventType", type=DetectorEventType.class, parameters={})
     private Output<DetectorEventType> eventType;
 
     /**
@@ -140,7 +140,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * The time when the detector was last updated.
      * 
      */
-    @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
+    @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
@@ -150,13 +150,13 @@ public class Detector extends io.pulumi.resources.CustomResource {
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
-    @OutputExport(name="ruleExecutionMode", type=DetectorRuleExecutionMode.class, parameters={})
+    @Export(name="ruleExecutionMode", type=DetectorRuleExecutionMode.class, parameters={})
     private Output</* @Nullable */ DetectorRuleExecutionMode> ruleExecutionMode;
 
     public Output</* @Nullable */ DetectorRuleExecutionMode> getRuleExecutionMode() {
         return this.ruleExecutionMode;
     }
-    @OutputExport(name="rules", type=List.class, parameters={DetectorRule.class})
+    @Export(name="rules", type=List.class, parameters={DetectorRule.class})
     private Output<List<DetectorRule>> rules;
 
     public Output<List<DetectorRule>> getRules() {
@@ -166,7 +166,7 @@ public class Detector extends io.pulumi.resources.CustomResource {
      * Tags associated with this detector.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DetectorTag.class})
+    @Export(name="tags", type=List.class, parameters={DetectorTag.class})
     private Output</* @Nullable */ List<DetectorTag>> tags;
 
     /**

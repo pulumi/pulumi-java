@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
      * The API identifier.
      * 
      */
-    @InputImport(name="apiId")
+    @Import(name="apiId")
       private final @Nullable Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -30,7 +30,7 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
      * The [model selection expression](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions) for the route response.
      * 
      */
-    @InputImport(name="modelSelectionExpression")
+    @Import(name="modelSelectionExpression")
       private final @Nullable Output<String> modelSelectionExpression;
 
     public Output<String> getModelSelectionExpression() {
@@ -41,7 +41,7 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
      * The response models for the route response.
      * 
      */
-    @InputImport(name="responseModels")
+    @Import(name="responseModels")
       private final @Nullable Output<Map<String,String>> responseModels;
 
     public Output<Map<String,String>> getResponseModels() {
@@ -52,7 +52,7 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
      * The identifier of the `aws.apigatewayv2.Route`.
      * 
      */
-    @InputImport(name="routeId")
+    @Import(name="routeId")
       private final @Nullable Output<String> routeId;
 
     public Output<String> getRouteId() {
@@ -63,7 +63,7 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
      * The route response key.
      * 
      */
-    @InputImport(name="routeResponseKey")
+    @Import(name="routeResponseKey")
       private final @Nullable Output<String> routeResponseKey;
 
     public Output<String> getRouteResponseKey() {

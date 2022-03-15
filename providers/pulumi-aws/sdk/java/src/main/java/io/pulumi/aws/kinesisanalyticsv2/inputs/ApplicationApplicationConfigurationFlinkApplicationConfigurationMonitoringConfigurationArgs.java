@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * Describes whether to use the default CloudWatch logging configuration for an application. Valid values: `CUSTOM`, `DEFAULT`. Set this attribute to `CUSTOM` in order for any specified `log_level` or `metrics_level` attribute values to be effective.
      * 
      */
-    @InputImport(name="configurationType", required=true)
+    @Import(name="configurationType", required=true)
       private final Output<String> configurationType;
 
     public Output<String> getConfigurationType() {
@@ -29,7 +29,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * Describes the verbosity of the CloudWatch Logs for an application. Valid values: `DEBUG`, `ERROR`, `INFO`, `WARN`.
      * 
      */
-    @InputImport(name="logLevel")
+    @Import(name="logLevel")
       private final @Nullable Output<String> logLevel;
 
     public Output<String> getLogLevel() {
@@ -40,7 +40,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      * Describes the granularity of the CloudWatch Logs for an application. Valid values: `APPLICATION`, `OPERATOR`, `PARALLELISM`, `TASK`.
      * 
      */
-    @InputImport(name="metricsLevel")
+    @Import(name="metricsLevel")
       private final @Nullable Output<String> metricsLevel;
 
     public Output<String> getMetricsLevel() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse extend
      * For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
      * 
      */
-    @InputImport(name="testingChallenge", required=true)
+    @Import(name="testingChallenge", required=true)
       private final String testingChallenge;
 
     public String getTestingChallenge() {
@@ -32,7 +32,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse extend
      * All assessments for this Key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive.
      * 
      */
-    @InputImport(name="testingScore", required=true)
+    @Import(name="testingScore", required=true)
       private final Double testingScore;
 
     public Double getTestingScore() {

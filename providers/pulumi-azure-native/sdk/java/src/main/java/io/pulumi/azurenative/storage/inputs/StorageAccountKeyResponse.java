@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class StorageAccountKeyResponse extends io.pulumi.resources.InvokeA
      * Creation time of the key, in round trip date format.
      * 
      */
-    @InputImport(name="creationTime", required=true)
+    @Import(name="creationTime", required=true)
       private final String creationTime;
 
     public String getCreationTime() {
@@ -31,7 +31,7 @@ public final class StorageAccountKeyResponse extends io.pulumi.resources.InvokeA
      * Name of the key.
      * 
      */
-    @InputImport(name="keyName", required=true)
+    @Import(name="keyName", required=true)
       private final String keyName;
 
     public String getKeyName() {
@@ -42,7 +42,7 @@ public final class StorageAccountKeyResponse extends io.pulumi.resources.InvokeA
      * Permissions for the key -- read-only or full permissions.
      * 
      */
-    @InputImport(name="permissions", required=true)
+    @Import(name="permissions", required=true)
       private final String permissions;
 
     public String getPermissions() {
@@ -53,7 +53,7 @@ public final class StorageAccountKeyResponse extends io.pulumi.resources.InvokeA
      * Base 64-encoded value of the key.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

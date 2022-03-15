@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.NatGatewayArgs;
 import io.pulumi.aws.ec2.inputs.NatGatewayState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * The Allocation ID of the Elastic IP address for the gateway. Required for `connectivity_type` of `public`.
      * 
      */
-    @OutputExport(name="allocationId", type=String.class, parameters={})
+    @Export(name="allocationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> allocationId;
 
     /**
@@ -47,7 +47,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * Connectivity type for the gateway. Valid values are `private` and `public`. Defaults to `public`.
      * 
      */
-    @OutputExport(name="connectivityType", type=String.class, parameters={})
+    @Export(name="connectivityType", type=String.class, parameters={})
     private Output</* @Nullable */ String> connectivityType;
 
     /**
@@ -61,7 +61,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * The ENI ID of the network interface created by the NAT gateway.
      * 
      */
-    @OutputExport(name="networkInterfaceId", type=String.class, parameters={})
+    @Export(name="networkInterfaceId", type=String.class, parameters={})
     private Output<String> networkInterfaceId;
 
     /**
@@ -75,7 +75,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * The private IP address of the NAT Gateway.
      * 
      */
-    @OutputExport(name="privateIp", type=String.class, parameters={})
+    @Export(name="privateIp", type=String.class, parameters={})
     private Output<String> privateIp;
 
     /**
@@ -89,7 +89,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * The public IP address of the NAT Gateway.
      * 
      */
-    @OutputExport(name="publicIp", type=String.class, parameters={})
+    @Export(name="publicIp", type=String.class, parameters={})
     private Output<String> publicIp;
 
     /**
@@ -103,7 +103,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * The Subnet ID of the subnet in which to place the gateway.
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output<String> subnetId;
 
     /**
@@ -117,7 +117,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -131,7 +131,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

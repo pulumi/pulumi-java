@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecServiceDiscoveryDnsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class VirtualNodeSpecServiceDiscoveryArgs extends io.pulumi.resourc
      * Specifies any AWS Cloud Map information for the virtual node.
      * 
      */
-    @InputImport(name="awsCloudMap")
+    @Import(name="awsCloudMap")
       private final @Nullable Output<VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs> awsCloudMap;
 
     public Output<VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs> getAwsCloudMap() {
@@ -30,7 +30,7 @@ public final class VirtualNodeSpecServiceDiscoveryArgs extends io.pulumi.resourc
      * Specifies the DNS service name for the virtual node.
      * 
      */
-    @InputImport(name="dns")
+    @Import(name="dns")
       private final @Nullable Output<VirtualNodeSpecServiceDiscoveryDnsArgs> dns;
 
     public Output<VirtualNodeSpecServiceDiscoveryDnsArgs> getDns() {

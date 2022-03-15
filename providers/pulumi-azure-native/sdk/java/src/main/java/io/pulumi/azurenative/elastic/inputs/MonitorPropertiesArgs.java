@@ -8,7 +8,7 @@ import io.pulumi.azurenative.elastic.enums.ProvisioningState;
 import io.pulumi.azurenative.elastic.inputs.UserInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Flag specifying if the resource monitoring is enabled or disabled.
      * 
      */
-    @InputImport(name="monitoringStatus")
+    @Import(name="monitoringStatus")
       private final @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
 
     public Output<Either<String,MonitoringStatus>> getMonitoringStatus() {
@@ -37,7 +37,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Provisioning state of the monitor resource.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
     public Output<Either<String,ProvisioningState>> getProvisioningState() {
@@ -48,7 +48,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * User information.
      * 
      */
-    @InputImport(name="userInfo")
+    @Import(name="userInfo")
       private final @Nullable Output<UserInfoArgs> userInfo;
 
     public Output<UserInfoArgs> getUserInfo() {

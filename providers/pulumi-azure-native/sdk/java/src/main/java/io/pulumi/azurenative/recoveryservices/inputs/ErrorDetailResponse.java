@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
      * Error code.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -32,7 +32,7 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
      * Error Message related to the Code.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -43,7 +43,7 @@ public final class ErrorDetailResponse extends io.pulumi.resources.InvokeArgs {
      * List of recommendation strings.
      * 
      */
-    @InputImport(name="recommendations", required=true)
+    @Import(name="recommendations", required=true)
       private final List<String> recommendations;
 
     public List<String> getRecommendations() {

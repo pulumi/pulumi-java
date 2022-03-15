@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudformation.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * Valid values: `CAPABILITY_IAM`, `CAPABILITY_NAMED_IAM`, or `CAPABILITY_AUTO_EXPAND`
      * 
      */
-    @InputImport(name="capabilities")
+    @Import(name="capabilities")
       private final @Nullable Output<List<String>> capabilities;
 
     public Output<List<String>> getCapabilities() {
@@ -35,7 +35,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * Conflicts with `on_failure`.
      * 
      */
-    @InputImport(name="disableRollback")
+    @Import(name="disableRollback")
       private final @Nullable Output<Boolean> disableRollback;
 
     public Output<Boolean> getDisableRollback() {
@@ -46,7 +46,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * The ARN of an IAM role that AWS CloudFormation assumes to create the stack. If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
      * 
      */
-    @InputImport(name="iamRoleArn")
+    @Import(name="iamRoleArn")
       private final @Nullable Output<String> iamRoleArn;
 
     public Output<String> getIamRoleArn() {
@@ -57,7 +57,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * Stack name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -68,7 +68,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * A list of SNS topic ARNs to publish stack related events.
      * 
      */
-    @InputImport(name="notificationArns")
+    @Import(name="notificationArns")
       private final @Nullable Output<List<String>> notificationArns;
 
     public Output<List<String>> getNotificationArns() {
@@ -80,7 +80,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * one of: `DO_NOTHING`, `ROLLBACK`, or `DELETE`. Conflicts with `disable_rollback`.
      * 
      */
-    @InputImport(name="onFailure")
+    @Import(name="onFailure")
       private final @Nullable Output<String> onFailure;
 
     public Output<String> getOnFailure() {
@@ -91,7 +91,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * A map of outputs from the stack.
      * 
      */
-    @InputImport(name="outputs")
+    @Import(name="outputs")
       private final @Nullable Output<Map<String,String>> outputs;
 
     public Output<Map<String,String>> getOutputs() {
@@ -102,7 +102,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * A map of Parameter structures that specify input parameters for the stack.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
@@ -114,7 +114,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * Conflicts w/ `policy_url`.
      * 
      */
-    @InputImport(name="policyBody")
+    @Import(name="policyBody")
       private final @Nullable Output<String> policyBody;
 
     public Output<String> getPolicyBody() {
@@ -126,7 +126,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * Conflicts w/ `policy_body`.
      * 
      */
-    @InputImport(name="policyUrl")
+    @Import(name="policyUrl")
       private final @Nullable Output<String> policyUrl;
 
     public Output<String> getPolicyUrl() {
@@ -137,7 +137,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * Map of resource tags to associate with this stack. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -148,7 +148,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -159,7 +159,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * Structure containing the template body (max size: 51,200 bytes).
      * 
      */
-    @InputImport(name="templateBody")
+    @Import(name="templateBody")
       private final @Nullable Output<String> templateBody;
 
     public Output<String> getTemplateBody() {
@@ -170,7 +170,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * Location of a file containing the template body (max size: 460,800 bytes).
      * 
      */
-    @InputImport(name="templateUrl")
+    @Import(name="templateUrl")
       private final @Nullable Output<String> templateUrl;
 
     public Output<String> getTemplateUrl() {
@@ -181,7 +181,7 @@ public final class StackState extends io.pulumi.resources.ResourceArgs {
      * The amount of time that can pass before the stack status becomes `CREATE_FAILED`.
      * 
      */
-    @InputImport(name="timeoutInMinutes")
+    @Import(name="timeoutInMinutes")
       private final @Nullable Output<Integer> timeoutInMinutes;
 
     public Output<Integer> getTimeoutInMinutes() {

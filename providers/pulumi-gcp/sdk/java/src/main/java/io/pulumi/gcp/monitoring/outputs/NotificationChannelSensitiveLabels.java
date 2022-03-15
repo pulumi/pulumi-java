@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NotificationChannelSensitiveLabels {
     /**
      * An authorization token for a notification channel. Channel types that support this field include: slack
@@ -30,11 +30,11 @@ public final class NotificationChannelSensitiveLabels {
      */
     private final @Nullable String serviceKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NotificationChannelSensitiveLabels(
-        @OutputCustomType.Parameter("authToken") @Nullable String authToken,
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("serviceKey") @Nullable String serviceKey) {
+        @CustomType.Parameter("authToken") @Nullable String authToken,
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("serviceKey") @Nullable String serviceKey) {
         this.authToken = authToken;
         this.password = password;
         this.serviceKey = serviceKey;

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.customerprofiles.inputs.IntegrationSalesforceSourcePr
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationServiceNowSourcePropertiesArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationZendeskSourcePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,35 +18,35 @@ public final class IntegrationSourceConnectorPropertiesArgs extends io.pulumi.re
 
     public static final IntegrationSourceConnectorPropertiesArgs Empty = new IntegrationSourceConnectorPropertiesArgs();
 
-    @InputImport(name="marketo")
+    @Import(name="marketo")
       private final @Nullable Output<IntegrationMarketoSourcePropertiesArgs> marketo;
 
     public Output<IntegrationMarketoSourcePropertiesArgs> getMarketo() {
         return this.marketo == null ? Output.empty() : this.marketo;
     }
 
-    @InputImport(name="s3")
+    @Import(name="s3")
       private final @Nullable Output<IntegrationS3SourcePropertiesArgs> s3;
 
     public Output<IntegrationS3SourcePropertiesArgs> getS3() {
         return this.s3 == null ? Output.empty() : this.s3;
     }
 
-    @InputImport(name="salesforce")
+    @Import(name="salesforce")
       private final @Nullable Output<IntegrationSalesforceSourcePropertiesArgs> salesforce;
 
     public Output<IntegrationSalesforceSourcePropertiesArgs> getSalesforce() {
         return this.salesforce == null ? Output.empty() : this.salesforce;
     }
 
-    @InputImport(name="serviceNow")
+    @Import(name="serviceNow")
       private final @Nullable Output<IntegrationServiceNowSourcePropertiesArgs> serviceNow;
 
     public Output<IntegrationServiceNowSourcePropertiesArgs> getServiceNow() {
         return this.serviceNow == null ? Output.empty() : this.serviceNow;
     }
 
-    @InputImport(name="zendesk")
+    @Import(name="zendesk")
       private final @Nullable Output<IntegrationZendeskSourcePropertiesArgs> zendesk;
 
     public Output<IntegrationZendeskSourcePropertiesArgs> getZendesk() {

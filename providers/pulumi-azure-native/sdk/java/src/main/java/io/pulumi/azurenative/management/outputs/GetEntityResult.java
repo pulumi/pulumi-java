@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.management.outputs;
 
 import io.pulumi.azurenative.management.outputs.EntityInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEntityResult {
     /**
      * Total count of records that match the filter
@@ -29,11 +29,11 @@ public final class GetEntityResult {
      */
     private final @Nullable List<EntityInfoResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEntityResult(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("nextLink") String nextLink,
-        @OutputCustomType.Parameter("value") @Nullable List<EntityInfoResponse> value) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("nextLink") String nextLink,
+        @CustomType.Parameter("value") @Nullable List<EntityInfoResponse> value) {
         this.count = count;
         this.nextLink = nextLink;
         this.value = value;

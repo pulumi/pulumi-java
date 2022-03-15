@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RouteResponse {
     /**
      * The destination CIDR to which the route applies.
@@ -58,17 +58,17 @@ public final class RouteResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteResponse(
-        @OutputCustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("hasBgpOverride") @Nullable Boolean hasBgpOverride,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("nextHopIpAddress") @Nullable String nextHopIpAddress,
-        @OutputCustomType.Parameter("nextHopType") String nextHopType,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("hasBgpOverride") @Nullable Boolean hasBgpOverride,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("nextHopIpAddress") @Nullable String nextHopIpAddress,
+        @CustomType.Parameter("nextHopType") String nextHopType,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.addressPrefix = addressPrefix;
         this.etag = etag;
         this.hasBgpOverride = hasBgpOverride;

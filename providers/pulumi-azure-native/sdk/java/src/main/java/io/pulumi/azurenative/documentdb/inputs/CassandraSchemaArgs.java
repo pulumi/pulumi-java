@@ -7,7 +7,7 @@ import io.pulumi.azurenative.documentdb.inputs.CassandraPartitionKeyArgs;
 import io.pulumi.azurenative.documentdb.inputs.ClusterKeyArgs;
 import io.pulumi.azurenative.documentdb.inputs.ColumnArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs 
      * List of cluster key.
      * 
      */
-    @InputImport(name="clusterKeys")
+    @Import(name="clusterKeys")
       private final @Nullable Output<List<ClusterKeyArgs>> clusterKeys;
 
     public Output<List<ClusterKeyArgs>> getClusterKeys() {
@@ -36,7 +36,7 @@ public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs 
      * List of Cassandra table columns.
      * 
      */
-    @InputImport(name="columns")
+    @Import(name="columns")
       private final @Nullable Output<List<ColumnArgs>> columns;
 
     public Output<List<ColumnArgs>> getColumns() {
@@ -47,7 +47,7 @@ public final class CassandraSchemaArgs extends io.pulumi.resources.ResourceArgs 
      * List of partition key.
      * 
      */
-    @InputImport(name="partitionKeys")
+    @Import(name="partitionKeys")
       private final @Nullable Output<List<CassandraPartitionKeyArgs>> partitionKeys;
 
     public Output<List<CassandraPartitionKeyArgs>> getPartitionKeys() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetRequestValidatorArgs extends io.pulumi.resources.InvokeArg
      * ID of the request validator.
      * 
      */
-    @InputImport(name="requestValidatorId", required=true)
+    @Import(name="requestValidatorId", required=true)
       private final String requestValidatorId;
 
     public String getRequestValidatorId() {
@@ -27,7 +27,7 @@ public final class GetRequestValidatorArgs extends io.pulumi.resources.InvokeArg
      * The identifier of the targeted API entity.
      * 
      */
-    @InputImport(name="restApiId", required=true)
+    @Import(name="restApiId", required=true)
       private final String restApiId;
 
     public String getRestApiId() {

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.MetricCriteriaResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse {
     /**
      * The list of metric criteria for this 'all of' operation.
@@ -24,10 +24,10 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricAlertSingleResourceMultipleMetricCriteriaResponse(
-        @OutputCustomType.Parameter("allOf") @Nullable List<MetricCriteriaResponse> allOf,
-        @OutputCustomType.Parameter("odataType") String odataType) {
+        @CustomType.Parameter("allOf") @Nullable List<MetricCriteriaResponse> allOf,
+        @CustomType.Parameter("odataType") String odataType) {
         this.allOf = allOf;
         this.odataType = odataType;
     }

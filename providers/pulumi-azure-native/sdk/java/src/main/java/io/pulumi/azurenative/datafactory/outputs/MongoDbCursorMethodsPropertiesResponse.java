@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MongoDbCursorMethodsPropertiesResponse {
     /**
      * Specifies the maximum number of documents the server returns. limit() is analogous to the LIMIT statement in a SQL database. Type: integer (or Expression with resultType integer).
@@ -32,12 +32,12 @@ public final class MongoDbCursorMethodsPropertiesResponse {
      */
     private final @Nullable Object sort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MongoDbCursorMethodsPropertiesResponse(
-        @OutputCustomType.Parameter("limit") @Nullable Object limit,
-        @OutputCustomType.Parameter("project") @Nullable Object project,
-        @OutputCustomType.Parameter("skip") @Nullable Object skip,
-        @OutputCustomType.Parameter("sort") @Nullable Object sort) {
+        @CustomType.Parameter("limit") @Nullable Object limit,
+        @CustomType.Parameter("project") @Nullable Object project,
+        @CustomType.Parameter("skip") @Nullable Object skip,
+        @CustomType.Parameter("sort") @Nullable Object sort) {
         this.limit = limit;
         this.project = project;
         this.skip = skip;

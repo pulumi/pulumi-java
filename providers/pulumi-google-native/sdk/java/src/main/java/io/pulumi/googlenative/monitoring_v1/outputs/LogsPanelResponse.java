@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LogsPanelResponse {
     /**
      * A filter that chooses which log entries to return. See Advanced Logs Queries (https://cloud.google.com/logging/docs/view/advanced-queries). Only log entries that match the filter are returned. An empty filter matches all log entries.
@@ -21,10 +21,10 @@ public final class LogsPanelResponse {
      */
     private final List<String> resourceNames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LogsPanelResponse(
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("resourceNames") List<String> resourceNames) {
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("resourceNames") List<String> resourceNames) {
         this.filter = filter;
         this.resourceNames = resourceNames;
     }

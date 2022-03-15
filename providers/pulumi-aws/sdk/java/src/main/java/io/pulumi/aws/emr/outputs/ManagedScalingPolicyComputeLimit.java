@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.emr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedScalingPolicyComputeLimit {
     /**
      * The upper boundary of EC2 units. It is measured through VCPU cores or instances for instance groups and measured through units for instance fleets. Managed scaling activities are not allowed beyond this boundary. The limit only applies to the core and task nodes. The master node cannot be scaled after initial configuration.
@@ -38,13 +38,13 @@ public final class ManagedScalingPolicyComputeLimit {
      */
     private final String unitType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedScalingPolicyComputeLimit(
-        @OutputCustomType.Parameter("maximumCapacityUnits") Integer maximumCapacityUnits,
-        @OutputCustomType.Parameter("maximumCoreCapacityUnits") @Nullable Integer maximumCoreCapacityUnits,
-        @OutputCustomType.Parameter("maximumOndemandCapacityUnits") @Nullable Integer maximumOndemandCapacityUnits,
-        @OutputCustomType.Parameter("minimumCapacityUnits") Integer minimumCapacityUnits,
-        @OutputCustomType.Parameter("unitType") String unitType) {
+        @CustomType.Parameter("maximumCapacityUnits") Integer maximumCapacityUnits,
+        @CustomType.Parameter("maximumCoreCapacityUnits") @Nullable Integer maximumCoreCapacityUnits,
+        @CustomType.Parameter("maximumOndemandCapacityUnits") @Nullable Integer maximumOndemandCapacityUnits,
+        @CustomType.Parameter("minimumCapacityUnits") Integer minimumCapacityUnits,
+        @CustomType.Parameter("unitType") String unitType) {
         this.maximumCapacityUnits = maximumCapacityUnits;
         this.maximumCoreCapacityUnits = maximumCoreCapacityUnits;
         this.maximumOndemandCapacityUnits = maximumOndemandCapacityUnits;

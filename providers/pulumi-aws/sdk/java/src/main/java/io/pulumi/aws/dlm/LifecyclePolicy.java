@@ -8,7 +8,7 @@ import io.pulumi.aws.dlm.LifecyclePolicyArgs;
 import io.pulumi.aws.dlm.inputs.LifecyclePolicyState;
 import io.pulumi.aws.dlm.outputs.LifecyclePolicyPolicyDetails;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -34,7 +34,7 @@ public class LifecyclePolicy extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the DLM Lifecycle Policy.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class LifecyclePolicy extends io.pulumi.resources.CustomResource {
      * A description for the DLM lifecycle policy.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -62,7 +62,7 @@ public class LifecyclePolicy extends io.pulumi.resources.CustomResource {
      * The ARN of an IAM role that is able to be assumed by the DLM service.
      * 
      */
-    @OutputExport(name="executionRoleArn", type=String.class, parameters={})
+    @Export(name="executionRoleArn", type=String.class, parameters={})
     private Output<String> executionRoleArn;
 
     /**
@@ -76,7 +76,7 @@ public class LifecyclePolicy extends io.pulumi.resources.CustomResource {
      * See the `policy_details` configuration block. Max of 1.
      * 
      */
-    @OutputExport(name="policyDetails", type=LifecyclePolicyPolicyDetails.class, parameters={})
+    @Export(name="policyDetails", type=LifecyclePolicyPolicyDetails.class, parameters={})
     private Output<LifecyclePolicyPolicyDetails> policyDetails;
 
     /**
@@ -90,7 +90,7 @@ public class LifecyclePolicy extends io.pulumi.resources.CustomResource {
      * Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABLED` are valid values. Defaults to `ENABLED`.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output</* @Nullable */ String> state;
 
     /**
@@ -104,7 +104,7 @@ public class LifecyclePolicy extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -118,7 +118,7 @@ public class LifecyclePolicy extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

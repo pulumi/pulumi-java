@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.composer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AllowedIpRangeResponse {
     /**
      * Optional. User-provided description. It must contain at most 300 characters.
@@ -20,10 +20,10 @@ public final class AllowedIpRangeResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AllowedIpRangeResponse(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("value") String value) {
         this.description = description;
         this.value = value;
     }

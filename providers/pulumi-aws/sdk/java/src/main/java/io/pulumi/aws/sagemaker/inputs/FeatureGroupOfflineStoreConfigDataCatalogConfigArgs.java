@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigArgs extends i
      * The name of the Glue table catalog.
      * 
      */
-    @InputImport(name="catalog")
+    @Import(name="catalog")
       private final @Nullable Output<String> catalog;
 
     public Output<String> getCatalog() {
@@ -29,7 +29,7 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigArgs extends i
      * The name of the Glue table database.
      * 
      */
-    @InputImport(name="database")
+    @Import(name="database")
       private final @Nullable Output<String> database;
 
     public Output<String> getDatabase() {
@@ -40,7 +40,7 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigArgs extends i
      * The name of the Glue table.
      * 
      */
-    @InputImport(name="tableName")
+    @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
     public Output<String> getTableName() {

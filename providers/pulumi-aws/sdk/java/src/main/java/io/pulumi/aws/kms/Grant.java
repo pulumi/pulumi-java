@@ -8,7 +8,7 @@ import io.pulumi.aws.kms.GrantArgs;
 import io.pulumi.aws.kms.inputs.GrantState;
 import io.pulumi.aws.kms.outputs.GrantConstraint;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class Grant extends io.pulumi.resources.CustomResource {
      * A structure that you can use to allow certain operations in the grant only when the desired encryption context is present. For more information about encryption context, see [Encryption Context](http://docs.aws.amazon.com/kms/latest/developerguide/encryption-context.html).
      * 
      */
-    @OutputExport(name="constraints", type=List.class, parameters={GrantConstraint.class})
+    @Export(name="constraints", type=List.class, parameters={GrantConstraint.class})
     private Output</* @Nullable */ List<GrantConstraint>> constraints;
 
     /**
@@ -49,7 +49,7 @@ public class Grant extends io.pulumi.resources.CustomResource {
      * A list of grant tokens to be used when creating the grant. See [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token) for more information about grant tokens.
      * 
      */
-    @OutputExport(name="grantCreationTokens", type=List.class, parameters={String.class})
+    @Export(name="grantCreationTokens", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> grantCreationTokens;
 
     /**
@@ -63,7 +63,7 @@ public class Grant extends io.pulumi.resources.CustomResource {
      * The unique identifier for the grant.
      * 
      */
-    @OutputExport(name="grantId", type=String.class, parameters={})
+    @Export(name="grantId", type=String.class, parameters={})
     private Output<String> grantId;
 
     /**
@@ -77,7 +77,7 @@ public class Grant extends io.pulumi.resources.CustomResource {
      * The grant token for the created grant. For more information, see [Grant Tokens](http://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token).
      * 
      */
-    @OutputExport(name="grantToken", type=String.class, parameters={})
+    @Export(name="grantToken", type=String.class, parameters={})
     private Output<String> grantToken;
 
     /**
@@ -91,7 +91,7 @@ public class Grant extends io.pulumi.resources.CustomResource {
      * The principal that is given permission to perform the operations that the grant permits in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
      * 
      */
-    @OutputExport(name="granteePrincipal", type=String.class, parameters={})
+    @Export(name="granteePrincipal", type=String.class, parameters={})
     private Output<String> granteePrincipal;
 
     /**
@@ -105,7 +105,7 @@ public class Grant extends io.pulumi.resources.CustomResource {
      * The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
      * 
      */
-    @OutputExport(name="keyId", type=String.class, parameters={})
+    @Export(name="keyId", type=String.class, parameters={})
     private Output<String> keyId;
 
     /**
@@ -119,7 +119,7 @@ public class Grant extends io.pulumi.resources.CustomResource {
      * A friendly name for identifying the grant.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -133,7 +133,7 @@ public class Grant extends io.pulumi.resources.CustomResource {
      * A list of operations that the grant permits. The permitted values are: `Decrypt`, `Encrypt`, `GenerateDataKey`, `GenerateDataKeyWithoutPlaintext`, `ReEncryptFrom`, `ReEncryptTo`, `Sign`, `Verify`, `GetPublicKey`, `CreateGrant`, `RetireGrant`, `DescribeKey`, `GenerateDataKeyPair`, or `GenerateDataKeyPairWithoutPlaintext`.
      * 
      */
-    @OutputExport(name="operations", type=List.class, parameters={String.class})
+    @Export(name="operations", type=List.class, parameters={String.class})
     private Output<List<String>> operations;
 
     /**
@@ -148,7 +148,7 @@ public class Grant extends io.pulumi.resources.CustomResource {
      * See [RetireGrant](https://docs.aws.amazon.com/kms/latest/APIReference/API_RetireGrant.html) for more information.
      * 
      */
-    @OutputExport(name="retireOnDelete", type=Boolean.class, parameters={})
+    @Export(name="retireOnDelete", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> retireOnDelete;
 
     /**
@@ -163,7 +163,7 @@ public class Grant extends io.pulumi.resources.CustomResource {
      * The principal that is given permission to retire the grant by using RetireGrant operation in ARN format. Note that due to eventual consistency issues around IAM principals, the providers's state may not always be refreshed to reflect what is true in AWS.
      * 
      */
-    @OutputExport(name="retiringPrincipal", type=String.class, parameters={})
+    @Export(name="retiringPrincipal", type=String.class, parameters={})
     private Output</* @Nullable */ String> retiringPrincipal;
 
     /**

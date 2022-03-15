@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DistributionOriginGroupMember {
     /**
      * The unique identifier of the member origin
@@ -15,8 +15,8 @@ public final class DistributionOriginGroupMember {
      */
     private final String originId;
 
-    @OutputCustomType.Constructor
-    private DistributionOriginGroupMember(@OutputCustomType.Parameter("originId") String originId) {
+    @CustomType.Constructor
+    private DistributionOriginGroupMember(@CustomType.Parameter("originId") String originId) {
         this.originId = originId;
     }
 

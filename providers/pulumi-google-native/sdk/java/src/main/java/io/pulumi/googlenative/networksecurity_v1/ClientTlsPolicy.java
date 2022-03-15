@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networksecurity_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networksecurity_v1.ClientTlsPolicyArgs;
@@ -25,7 +25,7 @@ public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
      * Optional. Defines a mechanism to provision client identity (public and private keys) for peer to peer authentication. The presence of this dictates mTLS.
      * 
      */
-    @OutputExport(name="clientCertificate", type=GoogleCloudNetworksecurityV1CertificateProviderResponse.class, parameters={})
+    @Export(name="clientCertificate", type=GoogleCloudNetworksecurityV1CertificateProviderResponse.class, parameters={})
     private Output<GoogleCloudNetworksecurityV1CertificateProviderResponse> clientCertificate;
 
     /**
@@ -39,7 +39,7 @@ public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
      * The timestamp when the resource was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -53,7 +53,7 @@ public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
      * Optional. Free-text description of the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -67,7 +67,7 @@ public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
      * Optional. Set of label tags associated with the resource.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -81,7 +81,7 @@ public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
      * Name of the ClientTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/clientTlsPolicies/{client_tls_policy}`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -95,7 +95,7 @@ public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
      * Optional. Defines the mechanism to obtain the Certificate Authority certificate to validate the server certificate. If empty, client does not validate the server certificate.
      * 
      */
-    @OutputExport(name="serverValidationCa", type=List.class, parameters={ValidationCAResponse.class})
+    @Export(name="serverValidationCa", type=List.class, parameters={ValidationCAResponse.class})
     private Output<List<ValidationCAResponse>> serverValidationCa;
 
     /**
@@ -109,7 +109,7 @@ public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
      * Optional. Server Name Indication string to present to the server during TLS handshake. E.g: "secure.example.com".
      * 
      */
-    @OutputExport(name="sni", type=String.class, parameters={})
+    @Export(name="sni", type=String.class, parameters={})
     private Output<String> sni;
 
     /**
@@ -123,7 +123,7 @@ public class ClientTlsPolicy extends io.pulumi.resources.CustomResource {
      * The timestamp when the resource was updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

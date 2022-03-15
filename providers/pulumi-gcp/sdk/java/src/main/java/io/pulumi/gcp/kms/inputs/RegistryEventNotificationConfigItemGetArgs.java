@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class RegistryEventNotificationConfigItemGetArgs extends io.pulumi.
 
     public static final RegistryEventNotificationConfigItemGetArgs Empty = new RegistryEventNotificationConfigItemGetArgs();
 
-    @InputImport(name="pubsubTopicName", required=true)
+    @Import(name="pubsubTopicName", required=true)
       private final Output<String> pubsubTopicName;
 
     public Output<String> getPubsubTopicName() {
         return this.pubsubTopicName;
     }
 
-    @InputImport(name="subfolderMatches")
+    @Import(name="subfolderMatches")
       private final @Nullable Output<String> subfolderMatches;
 
     public Output<String> getSubfolderMatches() {

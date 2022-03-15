@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.GatewayRouteSpecHttp2RouteActionTargetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class GatewayRouteSpecHttp2RouteActionArgs extends io.pulumi.resour
      * The target that traffic is routed to when a request matches the gateway route.
      * 
      */
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final Output<GatewayRouteSpecHttp2RouteActionTargetArgs> target;
 
     public Output<GatewayRouteSpecHttp2RouteActionTargetArgs> getTarget() {

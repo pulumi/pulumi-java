@@ -14,7 +14,7 @@ import io.pulumi.awsnative.ecs.outputs.TaskDefinitionRuntimePlatform;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionTag;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionVolume;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -28,91 +28,91 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:ecs:TaskDefinition")
 public class TaskDefinition extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="containerDefinitions", type=List.class, parameters={TaskDefinitionContainerDefinition.class})
+    @Export(name="containerDefinitions", type=List.class, parameters={TaskDefinitionContainerDefinition.class})
     private Output</* @Nullable */ List<TaskDefinitionContainerDefinition>> containerDefinitions;
 
     public Output</* @Nullable */ List<TaskDefinitionContainerDefinition>> getContainerDefinitions() {
         return this.containerDefinitions;
     }
-    @OutputExport(name="cpu", type=String.class, parameters={})
+    @Export(name="cpu", type=String.class, parameters={})
     private Output</* @Nullable */ String> cpu;
 
     public Output</* @Nullable */ String> getCpu() {
         return this.cpu;
     }
-    @OutputExport(name="ephemeralStorage", type=TaskDefinitionEphemeralStorage.class, parameters={})
+    @Export(name="ephemeralStorage", type=TaskDefinitionEphemeralStorage.class, parameters={})
     private Output</* @Nullable */ TaskDefinitionEphemeralStorage> ephemeralStorage;
 
     public Output</* @Nullable */ TaskDefinitionEphemeralStorage> getEphemeralStorage() {
         return this.ephemeralStorage;
     }
-    @OutputExport(name="executionRoleArn", type=String.class, parameters={})
+    @Export(name="executionRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> executionRoleArn;
 
     public Output</* @Nullable */ String> getExecutionRoleArn() {
         return this.executionRoleArn;
     }
-    @OutputExport(name="family", type=String.class, parameters={})
+    @Export(name="family", type=String.class, parameters={})
     private Output</* @Nullable */ String> family;
 
     public Output</* @Nullable */ String> getFamily() {
         return this.family;
     }
-    @OutputExport(name="inferenceAccelerators", type=List.class, parameters={TaskDefinitionInferenceAccelerator.class})
+    @Export(name="inferenceAccelerators", type=List.class, parameters={TaskDefinitionInferenceAccelerator.class})
     private Output</* @Nullable */ List<TaskDefinitionInferenceAccelerator>> inferenceAccelerators;
 
     public Output</* @Nullable */ List<TaskDefinitionInferenceAccelerator>> getInferenceAccelerators() {
         return this.inferenceAccelerators;
     }
-    @OutputExport(name="ipcMode", type=String.class, parameters={})
+    @Export(name="ipcMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipcMode;
 
     public Output</* @Nullable */ String> getIpcMode() {
         return this.ipcMode;
     }
-    @OutputExport(name="memory", type=String.class, parameters={})
+    @Export(name="memory", type=String.class, parameters={})
     private Output</* @Nullable */ String> memory;
 
     public Output</* @Nullable */ String> getMemory() {
         return this.memory;
     }
-    @OutputExport(name="networkMode", type=String.class, parameters={})
+    @Export(name="networkMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> networkMode;
 
     public Output</* @Nullable */ String> getNetworkMode() {
         return this.networkMode;
     }
-    @OutputExport(name="pidMode", type=String.class, parameters={})
+    @Export(name="pidMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> pidMode;
 
     public Output</* @Nullable */ String> getPidMode() {
         return this.pidMode;
     }
-    @OutputExport(name="placementConstraints", type=List.class, parameters={TaskDefinitionPlacementConstraint.class})
+    @Export(name="placementConstraints", type=List.class, parameters={TaskDefinitionPlacementConstraint.class})
     private Output</* @Nullable */ List<TaskDefinitionPlacementConstraint>> placementConstraints;
 
     public Output</* @Nullable */ List<TaskDefinitionPlacementConstraint>> getPlacementConstraints() {
         return this.placementConstraints;
     }
-    @OutputExport(name="proxyConfiguration", type=TaskDefinitionProxyConfiguration.class, parameters={})
+    @Export(name="proxyConfiguration", type=TaskDefinitionProxyConfiguration.class, parameters={})
     private Output</* @Nullable */ TaskDefinitionProxyConfiguration> proxyConfiguration;
 
     public Output</* @Nullable */ TaskDefinitionProxyConfiguration> getProxyConfiguration() {
         return this.proxyConfiguration;
     }
-    @OutputExport(name="requiresCompatibilities", type=List.class, parameters={String.class})
+    @Export(name="requiresCompatibilities", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> requiresCompatibilities;
 
     public Output</* @Nullable */ List<String>> getRequiresCompatibilities() {
         return this.requiresCompatibilities;
     }
-    @OutputExport(name="runtimePlatform", type=TaskDefinitionRuntimePlatform.class, parameters={})
+    @Export(name="runtimePlatform", type=TaskDefinitionRuntimePlatform.class, parameters={})
     private Output</* @Nullable */ TaskDefinitionRuntimePlatform> runtimePlatform;
 
     public Output</* @Nullable */ TaskDefinitionRuntimePlatform> getRuntimePlatform() {
         return this.runtimePlatform;
     }
-    @OutputExport(name="tags", type=List.class, parameters={TaskDefinitionTag.class})
+    @Export(name="tags", type=List.class, parameters={TaskDefinitionTag.class})
     private Output</* @Nullable */ List<TaskDefinitionTag>> tags;
 
     public Output</* @Nullable */ List<TaskDefinitionTag>> getTags() {
@@ -122,7 +122,7 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Amazon ECS task definition
      * 
      */
-    @OutputExport(name="taskDefinitionArn", type=String.class, parameters={})
+    @Export(name="taskDefinitionArn", type=String.class, parameters={})
     private Output<String> taskDefinitionArn;
 
     /**
@@ -132,13 +132,13 @@ public class TaskDefinition extends io.pulumi.resources.CustomResource {
     public Output<String> getTaskDefinitionArn() {
         return this.taskDefinitionArn;
     }
-    @OutputExport(name="taskRoleArn", type=String.class, parameters={})
+    @Export(name="taskRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> taskRoleArn;
 
     public Output</* @Nullable */ String> getTaskRoleArn() {
         return this.taskRoleArn;
     }
-    @OutputExport(name="volumes", type=List.class, parameters={TaskDefinitionVolume.class})
+    @Export(name="volumes", type=List.class, parameters={TaskDefinitionVolume.class})
     private Output</* @Nullable */ List<TaskDefinitionVolume>> volumes;
 
     public Output</* @Nullable */ List<TaskDefinitionVolume>> getVolumes() {

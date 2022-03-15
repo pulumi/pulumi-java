@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -13,28 +13,28 @@ public final class GetDatabaseInstanceSettingInsightsConfig extends io.pulumi.re
 
     public static final GetDatabaseInstanceSettingInsightsConfig Empty = new GetDatabaseInstanceSettingInsightsConfig();
 
-    @InputImport(name="queryInsightsEnabled", required=true)
+    @Import(name="queryInsightsEnabled", required=true)
       private final Boolean queryInsightsEnabled;
 
     public Boolean getQueryInsightsEnabled() {
         return this.queryInsightsEnabled;
     }
 
-    @InputImport(name="queryStringLength", required=true)
+    @Import(name="queryStringLength", required=true)
       private final Integer queryStringLength;
 
     public Integer getQueryStringLength() {
         return this.queryStringLength;
     }
 
-    @InputImport(name="recordApplicationTags", required=true)
+    @Import(name="recordApplicationTags", required=true)
       private final Boolean recordApplicationTags;
 
     public Boolean getRecordApplicationTags() {
         return this.recordApplicationTags;
     }
 
-    @InputImport(name="recordClientAddress", required=true)
+    @Import(name="recordClientAddress", required=true)
       private final Boolean recordClientAddress;
 
     public Boolean getRecordClientAddress() {

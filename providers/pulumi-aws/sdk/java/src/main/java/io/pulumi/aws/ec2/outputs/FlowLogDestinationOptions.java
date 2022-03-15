@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowLogDestinationOptions {
     /**
      * The format for the flow log. Default value: `plain-text`. Valid values: `plain-text`, `parquet`.
@@ -28,11 +28,11 @@ public final class FlowLogDestinationOptions {
      */
     private final @Nullable Boolean perHourPartition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowLogDestinationOptions(
-        @OutputCustomType.Parameter("fileFormat") @Nullable String fileFormat,
-        @OutputCustomType.Parameter("hiveCompatiblePartitions") @Nullable Boolean hiveCompatiblePartitions,
-        @OutputCustomType.Parameter("perHourPartition") @Nullable Boolean perHourPartition) {
+        @CustomType.Parameter("fileFormat") @Nullable String fileFormat,
+        @CustomType.Parameter("hiveCompatiblePartitions") @Nullable Boolean hiveCompatiblePartitions,
+        @CustomType.Parameter("perHourPartition") @Nullable Boolean perHourPartition) {
         this.fileFormat = fileFormat;
         this.hiveCompatiblePartitions = hiveCompatiblePartitions;
         this.perHourPartition = perHourPartition;

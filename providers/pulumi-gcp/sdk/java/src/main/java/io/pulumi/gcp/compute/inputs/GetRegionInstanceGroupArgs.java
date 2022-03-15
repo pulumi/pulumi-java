@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetRegionInstanceGroupArgs extends io.pulumi.resources.Invoke
      * The name of the instance group.  One of `name` or `self_link` must be provided.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -31,7 +31,7 @@ public final class GetRegionInstanceGroupArgs extends io.pulumi.resources.Invoke
      * nor `project` are provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
@@ -44,7 +44,7 @@ public final class GetRegionInstanceGroupArgs extends io.pulumi.resources.Invoke
      * provided, the provider region is used.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable String region;
 
     public Optional<String> getRegion() {
@@ -55,7 +55,7 @@ public final class GetRegionInstanceGroupArgs extends io.pulumi.resources.Invoke
      * The link to the instance group.  One of `name` or `self_link` must be provided.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable String selfLink;
 
     public Optional<String> getSelfLink() {

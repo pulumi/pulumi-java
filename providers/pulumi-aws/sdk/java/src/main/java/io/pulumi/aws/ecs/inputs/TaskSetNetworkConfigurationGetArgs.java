@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class TaskSetNetworkConfigurationGetArgs extends io.pulumi.resource
      * Whether to assign a public IP address to the ENI (`FARGATE` launch type only). Valid values are `true` or `false`. Default `false`.
      * 
      */
-    @InputImport(name="assignPublicIp")
+    @Import(name="assignPublicIp")
       private final @Nullable Output<Boolean> assignPublicIp;
 
     public Output<Boolean> getAssignPublicIp() {
@@ -31,7 +31,7 @@ public final class TaskSetNetworkConfigurationGetArgs extends io.pulumi.resource
      * The security groups associated with the task or service. If you do not specify a security group, the default security group for the VPC is used. Maximum of 5.
      * 
      */
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
@@ -42,7 +42,7 @@ public final class TaskSetNetworkConfigurationGetArgs extends io.pulumi.resource
      * The subnets associated with the task or service. Maximum of 16.
      * 
      */
-    @InputImport(name="subnets", required=true)
+    @Import(name="subnets", required=true)
       private final Output<List<String>> subnets;
 
     public Output<List<String>> getSubnets() {

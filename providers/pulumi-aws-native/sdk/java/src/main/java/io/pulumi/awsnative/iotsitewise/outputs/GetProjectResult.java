@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.ProjectTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProjectResult {
     /**
      * The IDs of the assets to be associated to the project.
@@ -44,14 +44,14 @@ public final class GetProjectResult {
      */
     private final @Nullable List<ProjectTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProjectResult(
-        @OutputCustomType.Parameter("assetIds") @Nullable List<String> assetIds,
-        @OutputCustomType.Parameter("projectArn") @Nullable String projectArn,
-        @OutputCustomType.Parameter("projectDescription") @Nullable String projectDescription,
-        @OutputCustomType.Parameter("projectId") @Nullable String projectId,
-        @OutputCustomType.Parameter("projectName") @Nullable String projectName,
-        @OutputCustomType.Parameter("tags") @Nullable List<ProjectTag> tags) {
+        @CustomType.Parameter("assetIds") @Nullable List<String> assetIds,
+        @CustomType.Parameter("projectArn") @Nullable String projectArn,
+        @CustomType.Parameter("projectDescription") @Nullable String projectDescription,
+        @CustomType.Parameter("projectId") @Nullable String projectId,
+        @CustomType.Parameter("projectName") @Nullable String projectName,
+        @CustomType.Parameter("tags") @Nullable List<ProjectTag> tags) {
         this.assetIds = assetIds;
         this.projectArn = projectArn;
         this.projectDescription = projectDescription;

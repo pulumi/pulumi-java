@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
      * Indicates whether Advanced Threat Protection is enabled.
      * 
      */
-    @InputImport(name="isEnabled")
+    @Import(name="isEnabled")
       private final @Nullable Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -30,7 +30,7 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
      * The identifier of the resource.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -41,7 +41,7 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
      * Advanced Threat Protection setting name.
      * 
      */
-    @InputImport(name="settingName")
+    @Import(name="settingName")
       private final @Nullable Output<String> settingName;
 
     public Output<String> getSettingName() {

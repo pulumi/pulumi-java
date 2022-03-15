@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.WebAppConnectionStringsArgs;
 import io.pulumi.azurenative.web.outputs.ConnStringValueTypePairResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public class WebAppConnectionStrings extends io.pulumi.resources.CustomResource 
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -47,7 +47,7 @@ public class WebAppConnectionStrings extends io.pulumi.resources.CustomResource 
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -61,7 +61,7 @@ public class WebAppConnectionStrings extends io.pulumi.resources.CustomResource 
      * Connection strings.
      * 
      */
-    @OutputExport(name="properties", type=Map.class, parameters={String.class, ConnStringValueTypePairResponse.class})
+    @Export(name="properties", type=Map.class, parameters={String.class, ConnStringValueTypePairResponse.class})
     private Output<Map<String,ConnStringValueTypePairResponse>> properties;
 
     /**
@@ -75,7 +75,7 @@ public class WebAppConnectionStrings extends io.pulumi.resources.CustomResource 
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

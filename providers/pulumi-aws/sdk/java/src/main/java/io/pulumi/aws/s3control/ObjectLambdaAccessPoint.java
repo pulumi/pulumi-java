@@ -8,7 +8,7 @@ import io.pulumi.aws.s3control.ObjectLambdaAccessPointArgs;
 import io.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointState;
 import io.pulumi.aws.s3control.outputs.ObjectLambdaAccessPointConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -30,7 +30,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws:s3control/objectLambdaAccessPoint:ObjectLambdaAccessPoint")
 public class ObjectLambdaAccessPoint extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -40,7 +40,7 @@ public class ObjectLambdaAccessPoint extends io.pulumi.resources.CustomResource 
      * Amazon Resource Name (ARN) of the Object Lambda Access Point.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -54,7 +54,7 @@ public class ObjectLambdaAccessPoint extends io.pulumi.resources.CustomResource 
      * A configuration block containing details about the Object Lambda Access Point. See Configuration below for more details.
      * 
      */
-    @OutputExport(name="configuration", type=ObjectLambdaAccessPointConfiguration.class, parameters={})
+    @Export(name="configuration", type=ObjectLambdaAccessPointConfiguration.class, parameters={})
     private Output<ObjectLambdaAccessPointConfiguration> configuration;
 
     /**
@@ -68,7 +68,7 @@ public class ObjectLambdaAccessPoint extends io.pulumi.resources.CustomResource 
      * The name for this Object Lambda Access Point.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

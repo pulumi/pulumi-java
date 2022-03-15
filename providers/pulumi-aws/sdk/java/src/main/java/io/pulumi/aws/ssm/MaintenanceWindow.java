@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ssm.MaintenanceWindowArgs;
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -37,7 +37,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * Whether targets must be registered with the Maintenance Window before tasks can be defined for those targets.
      * 
      */
-    @OutputExport(name="allowUnassociatedTargets", type=Boolean.class, parameters={})
+    @Export(name="allowUnassociatedTargets", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowUnassociatedTargets;
 
     /**
@@ -51,7 +51,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * The number of hours before the end of the Maintenance Window that Systems Manager stops scheduling new tasks for execution.
      * 
      */
-    @OutputExport(name="cutoff", type=Integer.class, parameters={})
+    @Export(name="cutoff", type=Integer.class, parameters={})
     private Output<Integer> cutoff;
 
     /**
@@ -65,7 +65,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * A description for the maintenance window.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -79,7 +79,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * The duration of the Maintenance Window in hours.
      * 
      */
-    @OutputExport(name="duration", type=Integer.class, parameters={})
+    @Export(name="duration", type=Integer.class, parameters={})
     private Output<Integer> duration;
 
     /**
@@ -93,7 +93,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * Whether the maintenance window is enabled. Default: `true`.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -107,7 +107,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to no longer run the maintenance window.
      * 
      */
-    @OutputExport(name="endDate", type=String.class, parameters={})
+    @Export(name="endDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> endDate;
 
     /**
@@ -121,7 +121,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * The name of the maintenance window.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -135,7 +135,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * The schedule of the Maintenance Window in the form of a [cron](https://docs.aws.amazon.com/systems-manager/latest/userguide/sysman-maintenance-cron.html) or rate expression.
      * 
      */
-    @OutputExport(name="schedule", type=String.class, parameters={})
+    @Export(name="schedule", type=String.class, parameters={})
     private Output<String> schedule;
 
     /**
@@ -149,7 +149,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * The number of days to wait after the date and time specified by a CRON expression before running the maintenance window.
      * 
      */
-    @OutputExport(name="scheduleOffset", type=Integer.class, parameters={})
+    @Export(name="scheduleOffset", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> scheduleOffset;
 
     /**
@@ -163,7 +163,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * Timezone for schedule in [Internet Assigned Numbers Authority (IANA) Time Zone Database format](https://www.iana.org/time-zones). For example: `America/Los_Angeles`, `etc/UTC`, or `Asia/Seoul`.
      * 
      */
-    @OutputExport(name="scheduleTimezone", type=String.class, parameters={})
+    @Export(name="scheduleTimezone", type=String.class, parameters={})
     private Output</* @Nullable */ String> scheduleTimezone;
 
     /**
@@ -177,7 +177,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * Timestamp in [ISO-8601 extended format](https://www.iso.org/iso-8601-date-and-time-format.html) when to begin the maintenance window.
      * 
      */
-    @OutputExport(name="startDate", type=String.class, parameters={})
+    @Export(name="startDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> startDate;
 
     /**
@@ -191,7 +191,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -205,7 +205,7 @@ public class MaintenanceWindow extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRegionResult {
     /**
      * The region's description in this format: "Location (Region name)".
@@ -30,12 +30,12 @@ public final class GetRegionResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegionResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name) {
         this.description = description;
         this.endpoint = endpoint;
         this.id = id;

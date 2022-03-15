@@ -13,14 +13,14 @@ import io.pulumi.aws.elasticsearch.outputs.GetDomainLogPublishingOption;
 import io.pulumi.aws.elasticsearch.outputs.GetDomainNodeToNodeEncryption;
 import io.pulumi.aws.elasticsearch.outputs.GetDomainSnapshotOption;
 import io.pulumi.aws.elasticsearch.outputs.GetDomainVpcOption;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainResult {
     /**
      * The policy document attached to the domain.
@@ -131,31 +131,31 @@ public final class GetDomainResult {
      */
     private final List<GetDomainVpcOption> vpcOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainResult(
-        @OutputCustomType.Parameter("accessPolicies") String accessPolicies,
-        @OutputCustomType.Parameter("advancedOptions") Map<String,String> advancedOptions,
-        @OutputCustomType.Parameter("advancedSecurityOptions") List<GetDomainAdvancedSecurityOption> advancedSecurityOptions,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("autoTuneOptions") List<GetDomainAutoTuneOption> autoTuneOptions,
-        @OutputCustomType.Parameter("clusterConfigs") List<GetDomainClusterConfig> clusterConfigs,
-        @OutputCustomType.Parameter("cognitoOptions") List<GetDomainCognitoOption> cognitoOptions,
-        @OutputCustomType.Parameter("created") Boolean created,
-        @OutputCustomType.Parameter("deleted") Boolean deleted,
-        @OutputCustomType.Parameter("domainId") String domainId,
-        @OutputCustomType.Parameter("domainName") String domainName,
-        @OutputCustomType.Parameter("ebsOptions") List<GetDomainEbsOption> ebsOptions,
-        @OutputCustomType.Parameter("elasticsearchVersion") String elasticsearchVersion,
-        @OutputCustomType.Parameter("encryptionAtRests") List<GetDomainEncryptionAtRest> encryptionAtRests,
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kibanaEndpoint") String kibanaEndpoint,
-        @OutputCustomType.Parameter("logPublishingOptions") List<GetDomainLogPublishingOption> logPublishingOptions,
-        @OutputCustomType.Parameter("nodeToNodeEncryptions") List<GetDomainNodeToNodeEncryption> nodeToNodeEncryptions,
-        @OutputCustomType.Parameter("processing") Boolean processing,
-        @OutputCustomType.Parameter("snapshotOptions") List<GetDomainSnapshotOption> snapshotOptions,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("vpcOptions") List<GetDomainVpcOption> vpcOptions) {
+        @CustomType.Parameter("accessPolicies") String accessPolicies,
+        @CustomType.Parameter("advancedOptions") Map<String,String> advancedOptions,
+        @CustomType.Parameter("advancedSecurityOptions") List<GetDomainAdvancedSecurityOption> advancedSecurityOptions,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("autoTuneOptions") List<GetDomainAutoTuneOption> autoTuneOptions,
+        @CustomType.Parameter("clusterConfigs") List<GetDomainClusterConfig> clusterConfigs,
+        @CustomType.Parameter("cognitoOptions") List<GetDomainCognitoOption> cognitoOptions,
+        @CustomType.Parameter("created") Boolean created,
+        @CustomType.Parameter("deleted") Boolean deleted,
+        @CustomType.Parameter("domainId") String domainId,
+        @CustomType.Parameter("domainName") String domainName,
+        @CustomType.Parameter("ebsOptions") List<GetDomainEbsOption> ebsOptions,
+        @CustomType.Parameter("elasticsearchVersion") String elasticsearchVersion,
+        @CustomType.Parameter("encryptionAtRests") List<GetDomainEncryptionAtRest> encryptionAtRests,
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kibanaEndpoint") String kibanaEndpoint,
+        @CustomType.Parameter("logPublishingOptions") List<GetDomainLogPublishingOption> logPublishingOptions,
+        @CustomType.Parameter("nodeToNodeEncryptions") List<GetDomainNodeToNodeEncryption> nodeToNodeEncryptions,
+        @CustomType.Parameter("processing") Boolean processing,
+        @CustomType.Parameter("snapshotOptions") List<GetDomainSnapshotOption> snapshotOptions,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("vpcOptions") List<GetDomainVpcOption> vpcOptions) {
         this.accessPolicies = accessPolicies;
         this.advancedOptions = advancedOptions;
         this.advancedSecurityOptions = advancedSecurityOptions;

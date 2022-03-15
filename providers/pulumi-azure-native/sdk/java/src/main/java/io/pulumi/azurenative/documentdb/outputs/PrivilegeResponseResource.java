@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivilegeResponseResource {
     /**
      * The collection name the role is applied.
@@ -22,10 +22,10 @@ public final class PrivilegeResponseResource {
      */
     private final @Nullable String db;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivilegeResponseResource(
-        @OutputCustomType.Parameter("collection") @Nullable String collection,
-        @OutputCustomType.Parameter("db") @Nullable String db) {
+        @CustomType.Parameter("collection") @Nullable String collection,
+        @CustomType.Parameter("db") @Nullable String db) {
         this.collection = collection;
         this.db = db;
     }

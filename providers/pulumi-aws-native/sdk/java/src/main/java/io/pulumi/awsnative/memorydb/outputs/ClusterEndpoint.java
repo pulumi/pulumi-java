@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.memorydb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterEndpoint {
     /**
      * The DNS address of the primary read-write node.
@@ -23,10 +23,10 @@ public final class ClusterEndpoint {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterEndpoint(
-        @OutputCustomType.Parameter("address") @Nullable String address,
-        @OutputCustomType.Parameter("port") @Nullable Integer port) {
+        @CustomType.Parameter("address") @Nullable String address,
+        @CustomType.Parameter("port") @Nullable Integer port) {
         this.address = address;
         this.port = port;
     }

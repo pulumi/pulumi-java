@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class DatasetIotEventsDestinationConfiguration extends io.pulumi.re
 
     public static final DatasetIotEventsDestinationConfiguration Empty = new DatasetIotEventsDestinationConfiguration();
 
-    @InputImport(name="inputName", required=true)
+    @Import(name="inputName", required=true)
       private final String inputName;
 
     public String getInputName() {
         return this.inputName;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final String roleArn;
 
     public String getRoleArn() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComputeDataDiskResponse {
     /**
      * Gets data disk size in GiB.
@@ -33,12 +33,12 @@ public final class ComputeDataDiskResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComputeDataDiskResponse(
-        @OutputCustomType.Parameter("diskSizeGiB") @Nullable Integer diskSizeGiB,
-        @OutputCustomType.Parameter("diskUri") @Nullable String diskUri,
-        @OutputCustomType.Parameter("managedDiskId") @Nullable String managedDiskId,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("diskSizeGiB") @Nullable Integer diskSizeGiB,
+        @CustomType.Parameter("diskUri") @Nullable String diskUri,
+        @CustomType.Parameter("managedDiskId") @Nullable String managedDiskId,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.diskSizeGiB = diskSizeGiB;
         this.diskUri = diskUri;
         this.managedDiskId = managedDiskId;

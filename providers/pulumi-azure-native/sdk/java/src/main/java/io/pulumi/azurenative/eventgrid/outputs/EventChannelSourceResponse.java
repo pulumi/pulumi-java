@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventChannelSourceResponse {
     /**
      * The identifier of the resource that's the source of the events.
@@ -18,8 +18,8 @@ public final class EventChannelSourceResponse {
      */
     private final @Nullable String source;
 
-    @OutputCustomType.Constructor
-    private EventChannelSourceResponse(@OutputCustomType.Parameter("source") @Nullable String source) {
+    @CustomType.Constructor
+    private EventChannelSourceResponse(@CustomType.Parameter("source") @Nullable String source) {
         this.source = source;
     }
 

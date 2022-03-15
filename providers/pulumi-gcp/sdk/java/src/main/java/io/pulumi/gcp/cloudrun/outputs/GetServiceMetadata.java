@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceMetadata {
     private final Map<String,String> annotations;
     private final Integer generation;
@@ -19,15 +19,15 @@ public final class GetServiceMetadata {
     private final String selfLink;
     private final String uid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceMetadata(
-        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
-        @OutputCustomType.Parameter("generation") Integer generation,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("namespace") String namespace,
-        @OutputCustomType.Parameter("resourceVersion") String resourceVersion,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("uid") String uid) {
+        @CustomType.Parameter("annotations") Map<String,String> annotations,
+        @CustomType.Parameter("generation") Integer generation,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("namespace") String namespace,
+        @CustomType.Parameter("resourceVersion") String resourceVersion,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("uid") String uid) {
         this.annotations = annotations;
         this.generation = generation;
         this.labels = labels;

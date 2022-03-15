@@ -4,7 +4,7 @@
 package io.pulumi.aws.signer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class SigningProfileRevocationRecordArgs extends io.pulumi.resource
 
     public static final SigningProfileRevocationRecordArgs Empty = new SigningProfileRevocationRecordArgs();
 
-    @InputImport(name="revocationEffectiveFrom")
+    @Import(name="revocationEffectiveFrom")
       private final @Nullable Output<String> revocationEffectiveFrom;
 
     public Output<String> getRevocationEffectiveFrom() {
         return this.revocationEffectiveFrom == null ? Output.empty() : this.revocationEffectiveFrom;
     }
 
-    @InputImport(name="revokedAt")
+    @Import(name="revokedAt")
       private final @Nullable Output<String> revokedAt;
 
     public Output<String> getRevokedAt() {
         return this.revokedAt == null ? Output.empty() : this.revokedAt;
     }
 
-    @InputImport(name="revokedBy")
+    @Import(name="revokedBy")
       private final @Nullable Output<String> revokedBy;
 
     public Output<String> getRevokedBy() {

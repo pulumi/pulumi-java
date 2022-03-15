@@ -4,7 +4,7 @@
 package io.pulumi.aws.globalaccelerator.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class EndpointGroupEndpointConfigurationArgs extends io.pulumi.reso
      * **Note:** When client IP address preservation is enabled, the Global Accelerator service creates an EC2 Security Group in the VPC named `GlobalAccelerator` that must be deleted (potentially outside of the provider) before the VPC will successfully delete. If this EC2 Security Group is not deleted, the provider will retry the VPC deletion for a few minutes before reporting a `DependencyViolation` error. This cannot be resolved by re-running the provider.
      * 
      */
-    @InputImport(name="clientIpPreservationEnabled")
+    @Import(name="clientIpPreservationEnabled")
       private final @Nullable Output<Boolean> clientIpPreservationEnabled;
 
     public Output<Boolean> getClientIpPreservationEnabled() {
@@ -32,7 +32,7 @@ public final class EndpointGroupEndpointConfigurationArgs extends io.pulumi.reso
      * An ID for the endpoint. If the endpoint is a Network Load Balancer or Application Load Balancer, this is the Amazon Resource Name (ARN) of the resource. If the endpoint is an Elastic IP address, this is the Elastic IP address allocation ID.
      * 
      */
-    @InputImport(name="endpointId")
+    @Import(name="endpointId")
       private final @Nullable Output<String> endpointId;
 
     public Output<String> getEndpointId() {
@@ -43,7 +43,7 @@ public final class EndpointGroupEndpointConfigurationArgs extends io.pulumi.reso
      * The weight associated with the endpoint. When you add weights to endpoints, you configure AWS Global Accelerator to route traffic based on proportions that you specify.
      * 
      */
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
     public Output<Integer> getWeight() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.gamelift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GameSessionQueuePlayerLatencyPolicy {
     /**
      * Maximum latency value that is allowed for any player.
@@ -22,10 +22,10 @@ public final class GameSessionQueuePlayerLatencyPolicy {
      */
     private final @Nullable Integer policyDurationSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GameSessionQueuePlayerLatencyPolicy(
-        @OutputCustomType.Parameter("maximumIndividualPlayerLatencyMilliseconds") Integer maximumIndividualPlayerLatencyMilliseconds,
-        @OutputCustomType.Parameter("policyDurationSeconds") @Nullable Integer policyDurationSeconds) {
+        @CustomType.Parameter("maximumIndividualPlayerLatencyMilliseconds") Integer maximumIndividualPlayerLatencyMilliseconds,
+        @CustomType.Parameter("policyDurationSeconds") @Nullable Integer policyDurationSeconds) {
         this.maximumIndividualPlayerLatencyMilliseconds = maximumIndividualPlayerLatencyMilliseconds;
         this.policyDurationSeconds = policyDurationSeconds;
     }

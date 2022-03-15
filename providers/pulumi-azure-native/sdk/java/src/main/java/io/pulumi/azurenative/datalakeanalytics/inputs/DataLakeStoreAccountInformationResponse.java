@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakeanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DataLakeStoreAccountInformationResponse extends io.pulumi.res
      * The resource identifier.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -31,7 +31,7 @@ public final class DataLakeStoreAccountInformationResponse extends io.pulumi.res
      * The resource name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -42,7 +42,7 @@ public final class DataLakeStoreAccountInformationResponse extends io.pulumi.res
      * The optional suffix for the Data Lake Store account.
      * 
      */
-    @InputImport(name="suffix", required=true)
+    @Import(name="suffix", required=true)
       private final String suffix;
 
     public String getSuffix() {
@@ -53,7 +53,7 @@ public final class DataLakeStoreAccountInformationResponse extends io.pulumi.res
      * The resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

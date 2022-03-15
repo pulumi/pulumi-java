@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceIdResponse {
     /**
      * The ID of the resource
@@ -15,8 +15,8 @@ public final class ResourceIdResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
-    private ResourceIdResponse(@OutputCustomType.Parameter("id") String id) {
+    @CustomType.Constructor
+    private ResourceIdResponse(@CustomType.Parameter("id") String id) {
         this.id = id;
     }
 

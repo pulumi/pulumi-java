@@ -5,14 +5,14 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineExtensionHandlerInstanceViewResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachineAgentInstanceViewResponse {
     /**
      * The virtual machine extension handler instance view.
@@ -30,11 +30,11 @@ public final class VirtualMachineAgentInstanceViewResponse {
      */
     private final @Nullable String vmAgentVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachineAgentInstanceViewResponse(
-        @OutputCustomType.Parameter("extensionHandlers") @Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers,
-        @OutputCustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses,
-        @OutputCustomType.Parameter("vmAgentVersion") @Nullable String vmAgentVersion) {
+        @CustomType.Parameter("extensionHandlers") @Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers,
+        @CustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses,
+        @CustomType.Parameter("vmAgentVersion") @Nullable String vmAgentVersion) {
         this.extensionHandlers = extensionHandlers;
         this.statuses = statuses;
         this.vmAgentVersion = vmAgentVersion;

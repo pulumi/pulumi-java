@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.DateAfterModificationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagementPolicyBaseBlobResponse {
     /**
      * The function to delete the blob
@@ -33,12 +33,12 @@ public final class ManagementPolicyBaseBlobResponse {
      */
     private final @Nullable DateAfterModificationResponse tierToCool;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagementPolicyBaseBlobResponse(
-        @OutputCustomType.Parameter("delete") @Nullable DateAfterModificationResponse delete,
-        @OutputCustomType.Parameter("enableAutoTierToHotFromCool") @Nullable Boolean enableAutoTierToHotFromCool,
-        @OutputCustomType.Parameter("tierToArchive") @Nullable DateAfterModificationResponse tierToArchive,
-        @OutputCustomType.Parameter("tierToCool") @Nullable DateAfterModificationResponse tierToCool) {
+        @CustomType.Parameter("delete") @Nullable DateAfterModificationResponse delete,
+        @CustomType.Parameter("enableAutoTierToHotFromCool") @Nullable Boolean enableAutoTierToHotFromCool,
+        @CustomType.Parameter("tierToArchive") @Nullable DateAfterModificationResponse tierToArchive,
+        @CustomType.Parameter("tierToCool") @Nullable DateAfterModificationResponse tierToCool) {
         this.delete = delete;
         this.enableAutoTierToHotFromCool = enableAutoTierToHotFromCool;
         this.tierToArchive = tierToArchive;

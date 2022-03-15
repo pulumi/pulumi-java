@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.containeranalysis_v1beta1.NoteArgs;
@@ -36,7 +36,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing an attestation role.
      * 
      */
-    @OutputExport(name="attestationAuthority", type=AuthorityResponse.class, parameters={})
+    @Export(name="attestationAuthority", type=AuthorityResponse.class, parameters={})
     private Output<AuthorityResponse> attestationAuthority;
 
     /**
@@ -50,7 +50,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing a base image.
      * 
      */
-    @OutputExport(name="baseImage", type=BasisResponse.class, parameters={})
+    @Export(name="baseImage", type=BasisResponse.class, parameters={})
     private Output<BasisResponse> baseImage;
 
     /**
@@ -64,7 +64,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing build provenance for a verifiable build.
      * 
      */
-    @OutputExport(name="build", type=BuildResponse.class, parameters={})
+    @Export(name="build", type=BuildResponse.class, parameters={})
     private Output<BuildResponse> build;
 
     /**
@@ -78,7 +78,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * The time this note was created. This field can be used as a filter in list requests.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -92,7 +92,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing something that can be deployed.
      * 
      */
-    @OutputExport(name="deployable", type=DeployableResponse.class, parameters={})
+    @Export(name="deployable", type=DeployableResponse.class, parameters={})
     private Output<DeployableResponse> deployable;
 
     /**
@@ -106,7 +106,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing the initial analysis of a resource.
      * 
      */
-    @OutputExport(name="discovery", type=DiscoveryResponse.class, parameters={})
+    @Export(name="discovery", type=DiscoveryResponse.class, parameters={})
     private Output<DiscoveryResponse> discovery;
 
     /**
@@ -120,7 +120,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * Time of expiration for this note. Empty if note does not expire.
      * 
      */
-    @OutputExport(name="expirationTime", type=String.class, parameters={})
+    @Export(name="expirationTime", type=String.class, parameters={})
     private Output<String> expirationTime;
 
     /**
@@ -134,7 +134,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing an in-toto link.
      * 
      */
-    @OutputExport(name="intoto", type=InTotoResponse.class, parameters={})
+    @Export(name="intoto", type=InTotoResponse.class, parameters={})
     private Output<InTotoResponse> intoto;
 
     /**
@@ -148,7 +148,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * The type of analysis. This field can be used as a filter in list requests.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -162,7 +162,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A detailed description of this note.
      * 
      */
-    @OutputExport(name="longDescription", type=String.class, parameters={})
+    @Export(name="longDescription", type=String.class, parameters={})
     private Output<String> longDescription;
 
     /**
@@ -176,7 +176,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * The name of the note in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -190,7 +190,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing a package hosted by various package managers.
      * 
      */
-    @OutputExport(name="package", type=PackageResponse.class, parameters={})
+    @Export(name="package", type=PackageResponse.class, parameters={})
     private Output<PackageResponse> $package;
 
     /**
@@ -204,7 +204,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * Other notes related to this note.
      * 
      */
-    @OutputExport(name="relatedNoteNames", type=List.class, parameters={String.class})
+    @Export(name="relatedNoteNames", type=List.class, parameters={String.class})
     private Output<List<String>> relatedNoteNames;
 
     /**
@@ -218,7 +218,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * URLs associated with this note.
      * 
      */
-    @OutputExport(name="relatedUrl", type=List.class, parameters={RelatedUrlResponse.class})
+    @Export(name="relatedUrl", type=List.class, parameters={RelatedUrlResponse.class})
     private Output<List<RelatedUrlResponse>> relatedUrl;
 
     /**
@@ -232,7 +232,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing a software bill of materials.
      * 
      */
-    @OutputExport(name="sbom", type=DocumentNoteResponse.class, parameters={})
+    @Export(name="sbom", type=DocumentNoteResponse.class, parameters={})
     private Output<DocumentNoteResponse> sbom;
 
     /**
@@ -246,7 +246,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A one sentence description of this note.
      * 
      */
-    @OutputExport(name="shortDescription", type=String.class, parameters={})
+    @Export(name="shortDescription", type=String.class, parameters={})
     private Output<String> shortDescription;
 
     /**
@@ -260,7 +260,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing an SPDX File.
      * 
      */
-    @OutputExport(name="spdxFile", type=FileNoteResponse.class, parameters={})
+    @Export(name="spdxFile", type=FileNoteResponse.class, parameters={})
     private Output<FileNoteResponse> spdxFile;
 
     /**
@@ -274,7 +274,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing an SPDX Package.
      * 
      */
-    @OutputExport(name="spdxPackage", type=PackageInfoNoteResponse.class, parameters={})
+    @Export(name="spdxPackage", type=PackageInfoNoteResponse.class, parameters={})
     private Output<PackageInfoNoteResponse> spdxPackage;
 
     /**
@@ -288,7 +288,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing an SPDX File.
      * 
      */
-    @OutputExport(name="spdxRelationship", type=RelationshipNoteResponse.class, parameters={})
+    @Export(name="spdxRelationship", type=RelationshipNoteResponse.class, parameters={})
     private Output<RelationshipNoteResponse> spdxRelationship;
 
     /**
@@ -302,7 +302,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * The time this note was last updated. This field can be used as a filter in list requests.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -316,7 +316,7 @@ public class Note extends io.pulumi.resources.CustomResource {
      * A note describing a package vulnerability.
      * 
      */
-    @OutputExport(name="vulnerability", type=VulnerabilityResponse.class, parameters={})
+    @Export(name="vulnerability", type=VulnerabilityResponse.class, parameters={})
     private Output<VulnerabilityResponse> vulnerability;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbilling_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetBillingAccountArgs Empty = new GetBillingAccountArgs();
 
-    @InputImport(name="billingAccountId", required=true)
+    @Import(name="billingAccountId", required=true)
       private final String billingAccountId;
 
     public String getBillingAccountId() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceProviderDetailsResponse {
     /**
      * Resource provider namespace
@@ -15,8 +15,8 @@ public final class ResourceProviderDetailsResponse {
      */
     private final String resourceProviderNamespace;
 
-    @OutputCustomType.Constructor
-    private ResourceProviderDetailsResponse(@OutputCustomType.Parameter("resourceProviderNamespace") String resourceProviderNamespace) {
+    @CustomType.Constructor
+    private ResourceProviderDetailsResponse(@CustomType.Parameter("resourceProviderNamespace") String resourceProviderNamespace) {
         this.resourceProviderNamespace = resourceProviderNamespace;
     }
 

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.edgeorder.inputs;
 
 import io.pulumi.azurenative.edgeorder.enums.SupportedFilterTypes;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FilterableProperty extends io.pulumi.resources.InvokeArgs {
      * Values to be filtered.
      * 
      */
-    @InputImport(name="supportedValues", required=true)
+    @Import(name="supportedValues", required=true)
       private final List<String> supportedValues;
 
     public List<String> getSupportedValues() {
@@ -34,7 +34,7 @@ public final class FilterableProperty extends io.pulumi.resources.InvokeArgs {
      * Type of product filter.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Either<String,SupportedFilterTypes> type;
 
     public Either<String,SupportedFilterTypes> getType() {

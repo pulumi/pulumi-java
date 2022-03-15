@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VpnServerConfigVpnClientRevokedCertificateResponse {
     /**
      * The certificate name.
@@ -22,10 +22,10 @@ public final class VpnServerConfigVpnClientRevokedCertificateResponse {
      */
     private final @Nullable String thumbprint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpnServerConfigVpnClientRevokedCertificateResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("thumbprint") @Nullable String thumbprint) {
         this.name = name;
         this.thumbprint = thumbprint;
     }

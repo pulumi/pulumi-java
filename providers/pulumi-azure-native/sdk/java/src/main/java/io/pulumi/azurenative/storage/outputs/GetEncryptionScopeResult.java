@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.EncryptionScopeKeyVaultPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEncryptionScopeResult {
     /**
      * Gets the creation date and time of the encryption scope in UTC.
@@ -59,17 +59,17 @@ public final class GetEncryptionScopeResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEncryptionScopeResult(
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("keyVaultProperties") @Nullable EncryptionScopeKeyVaultPropertiesResponse keyVaultProperties,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("requireInfrastructureEncryption") @Nullable Boolean requireInfrastructureEncryption,
-        @OutputCustomType.Parameter("source") @Nullable String source,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("keyVaultProperties") @Nullable EncryptionScopeKeyVaultPropertiesResponse keyVaultProperties,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("requireInfrastructureEncryption") @Nullable Boolean requireInfrastructureEncryption,
+        @CustomType.Parameter("source") @Nullable String source,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("type") String type) {
         this.creationTime = creationTime;
         this.id = id;
         this.keyVaultProperties = keyVaultProperties;

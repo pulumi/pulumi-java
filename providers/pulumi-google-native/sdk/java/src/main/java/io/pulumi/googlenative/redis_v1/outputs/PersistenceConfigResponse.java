@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.redis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PersistenceConfigResponse {
     /**
      * Optional. Controls whether Persistence features are enabled. If not provided, the existing value will be used.
@@ -30,12 +30,12 @@ public final class PersistenceConfigResponse {
      */
     private final String rdbSnapshotStartTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PersistenceConfigResponse(
-        @OutputCustomType.Parameter("persistenceMode") String persistenceMode,
-        @OutputCustomType.Parameter("rdbNextSnapshotTime") String rdbNextSnapshotTime,
-        @OutputCustomType.Parameter("rdbSnapshotPeriod") String rdbSnapshotPeriod,
-        @OutputCustomType.Parameter("rdbSnapshotStartTime") String rdbSnapshotStartTime) {
+        @CustomType.Parameter("persistenceMode") String persistenceMode,
+        @CustomType.Parameter("rdbNextSnapshotTime") String rdbNextSnapshotTime,
+        @CustomType.Parameter("rdbSnapshotPeriod") String rdbSnapshotPeriod,
+        @CustomType.Parameter("rdbSnapshotStartTime") String rdbSnapshotStartTime) {
         this.persistenceMode = persistenceMode;
         this.rdbNextSnapshotTime = rdbNextSnapshotTime;
         this.rdbSnapshotPeriod = rdbSnapshotPeriod;

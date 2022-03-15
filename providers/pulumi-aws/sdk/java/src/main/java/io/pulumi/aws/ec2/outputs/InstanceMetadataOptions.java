@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceMetadataOptions {
     /**
      * Whether the metadata service is available. Valid values include `enabled` or `disabled`. Defaults to `enabled`.
@@ -33,12 +33,12 @@ public final class InstanceMetadataOptions {
      */
     private final @Nullable String instanceMetadataTags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceMetadataOptions(
-        @OutputCustomType.Parameter("httpEndpoint") @Nullable String httpEndpoint,
-        @OutputCustomType.Parameter("httpPutResponseHopLimit") @Nullable Integer httpPutResponseHopLimit,
-        @OutputCustomType.Parameter("httpTokens") @Nullable String httpTokens,
-        @OutputCustomType.Parameter("instanceMetadataTags") @Nullable String instanceMetadataTags) {
+        @CustomType.Parameter("httpEndpoint") @Nullable String httpEndpoint,
+        @CustomType.Parameter("httpPutResponseHopLimit") @Nullable Integer httpPutResponseHopLimit,
+        @CustomType.Parameter("httpTokens") @Nullable String httpTokens,
+        @CustomType.Parameter("instanceMetadataTags") @Nullable String instanceMetadataTags) {
         this.httpEndpoint = httpEndpoint;
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         this.httpTokens = httpTokens;

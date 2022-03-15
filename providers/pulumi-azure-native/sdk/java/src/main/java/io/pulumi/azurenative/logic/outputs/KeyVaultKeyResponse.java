@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.KeyVaultKeyResponseAttributes;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultKeyResponse {
     /**
      * The key attributes.
@@ -23,10 +23,10 @@ public final class KeyVaultKeyResponse {
      */
     private final @Nullable String kid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyVaultKeyResponse(
-        @OutputCustomType.Parameter("attributes") @Nullable KeyVaultKeyResponseAttributes attributes,
-        @OutputCustomType.Parameter("kid") @Nullable String kid) {
+        @CustomType.Parameter("attributes") @Nullable KeyVaultKeyResponseAttributes attributes,
+        @CustomType.Parameter("kid") @Nullable String kid) {
         this.attributes = attributes;
         this.kid = kid;
     }

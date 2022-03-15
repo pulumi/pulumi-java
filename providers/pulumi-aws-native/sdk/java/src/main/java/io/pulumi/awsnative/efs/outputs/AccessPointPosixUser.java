@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.efs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessPointPosixUser {
     /**
      * The POSIX group ID used for all file system operations using this access point.
@@ -27,11 +27,11 @@ public final class AccessPointPosixUser {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessPointPosixUser(
-        @OutputCustomType.Parameter("gid") String gid,
-        @OutputCustomType.Parameter("secondaryGids") @Nullable List<String> secondaryGids,
-        @OutputCustomType.Parameter("uid") String uid) {
+        @CustomType.Parameter("gid") String gid,
+        @CustomType.Parameter("secondaryGids") @Nullable List<String> secondaryGids,
+        @CustomType.Parameter("uid") String uid) {
         this.gid = gid;
         this.secondaryGids = secondaryGids;
         this.uid = uid;

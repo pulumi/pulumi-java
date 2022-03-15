@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NonComplianceMessageResponse {
     /**
      * A message that describes why a resource is non-compliant with the policy. This is shown in 'deny' error messages and on resource's non-compliant compliance results.
@@ -22,10 +22,10 @@ public final class NonComplianceMessageResponse {
      */
     private final @Nullable String policyDefinitionReferenceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NonComplianceMessageResponse(
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("policyDefinitionReferenceId") @Nullable String policyDefinitionReferenceId) {
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("policyDefinitionReferenceId") @Nullable String policyDefinitionReferenceId) {
         this.message = message;
         this.policyDefinitionReferenceId = policyDefinitionReferenceId;
     }

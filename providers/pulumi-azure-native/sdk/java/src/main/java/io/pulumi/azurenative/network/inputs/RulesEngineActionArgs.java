@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.HeaderActionArgs;
 import io.pulumi.azurenative.network.inputs.RedirectConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class RulesEngineActionArgs extends io.pulumi.resources.ResourceArg
      * A list of header actions to apply from the request from AFD to the origin.
      * 
      */
-    @InputImport(name="requestHeaderActions")
+    @Import(name="requestHeaderActions")
       private final @Nullable Output<List<HeaderActionArgs>> requestHeaderActions;
 
     public Output<List<HeaderActionArgs>> getRequestHeaderActions() {
@@ -37,7 +37,7 @@ public final class RulesEngineActionArgs extends io.pulumi.resources.ResourceArg
      * A list of header actions to apply from the response from AFD to the client.
      * 
      */
-    @InputImport(name="responseHeaderActions")
+    @Import(name="responseHeaderActions")
       private final @Nullable Output<List<HeaderActionArgs>> responseHeaderActions;
 
     public Output<List<HeaderActionArgs>> getResponseHeaderActions() {
@@ -48,7 +48,7 @@ public final class RulesEngineActionArgs extends io.pulumi.resources.ResourceArg
      * Override the route configuration.
      * 
      */
-    @InputImport(name="routeConfigurationOverride")
+    @Import(name="routeConfigurationOverride")
       private final @Nullable Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> routeConfigurationOverride;
 
     public Output<Either<ForwardingConfigurationArgs,RedirectConfigurationArgs>> getRouteConfigurationOverride() {

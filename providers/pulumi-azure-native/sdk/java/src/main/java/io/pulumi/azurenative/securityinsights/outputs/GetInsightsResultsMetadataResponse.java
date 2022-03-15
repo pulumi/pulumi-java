@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.GetInsightsErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInsightsResultsMetadataResponse {
     /**
      * information about the failed queries
@@ -23,10 +23,10 @@ public final class GetInsightsResultsMetadataResponse {
      */
     private final Integer totalCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInsightsResultsMetadataResponse(
-        @OutputCustomType.Parameter("errors") @Nullable List<GetInsightsErrorResponse> errors,
-        @OutputCustomType.Parameter("totalCount") Integer totalCount) {
+        @CustomType.Parameter("errors") @Nullable List<GetInsightsErrorResponse> errors,
+        @CustomType.Parameter("totalCount") Integer totalCount) {
         this.errors = errors;
         this.totalCount = totalCount;
     }

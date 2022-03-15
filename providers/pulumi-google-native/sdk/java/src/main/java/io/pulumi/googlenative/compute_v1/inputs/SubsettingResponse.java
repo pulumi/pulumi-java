@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class SubsettingResponse extends io.pulumi.resources.InvokeArgs {
 
     public static final SubsettingResponse Empty = new SubsettingResponse();
 
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final String policy;
 
     public String getPolicy() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.HostCaching;
 import io.pulumi.azurenative.compute.inputs.GalleryArtifactVersionSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class GalleryOSDiskImageArgs extends io.pulumi.resources.ResourceAr
      * The host caching of the disk. Valid values are 'None', 'ReadOnly', and 'ReadWrite'
      * 
      */
-    @InputImport(name="hostCaching")
+    @Import(name="hostCaching")
       private final @Nullable Output<HostCaching> hostCaching;
 
     public Output<HostCaching> getHostCaching() {
@@ -34,7 +34,7 @@ public final class GalleryOSDiskImageArgs extends io.pulumi.resources.ResourceAr
      * The gallery artifact version source.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<GalleryArtifactVersionSourceArgs> source;
 
     public Output<GalleryArtifactVersionSourceArgs> getSource() {

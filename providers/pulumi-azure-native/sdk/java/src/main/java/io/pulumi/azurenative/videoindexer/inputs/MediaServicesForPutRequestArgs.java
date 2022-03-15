@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoindexer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
      * The media services resource id
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -33,7 +33,7 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
      * The user assigned identity to be used to grant permissions
      * 
      */
-    @InputImport(name="userAssignedIdentity")
+    @Import(name="userAssignedIdentity")
       private final @Nullable Output<String> userAssignedIdentity;
 
     public Output<String> getUserAssignedIdentity() {

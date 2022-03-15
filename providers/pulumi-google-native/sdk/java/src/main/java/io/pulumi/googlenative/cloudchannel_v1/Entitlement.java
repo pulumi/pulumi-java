@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudchannel_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudchannel_v1.EntitlementArgs;
@@ -30,7 +30,7 @@ public class Entitlement extends io.pulumi.resources.CustomResource {
      * Association information to other entitlements.
      * 
      */
-    @OutputExport(name="associationInfo", type=GoogleCloudChannelV1AssociationInfoResponse.class, parameters={})
+    @Export(name="associationInfo", type=GoogleCloudChannelV1AssociationInfoResponse.class, parameters={})
     private Output<GoogleCloudChannelV1AssociationInfoResponse> associationInfo;
 
     /**
@@ -44,7 +44,7 @@ public class Entitlement extends io.pulumi.resources.CustomResource {
      * Commitment settings for a commitment-based Offer. Required for commitment based offers.
      * 
      */
-    @OutputExport(name="commitmentSettings", type=GoogleCloudChannelV1CommitmentSettingsResponse.class, parameters={})
+    @Export(name="commitmentSettings", type=GoogleCloudChannelV1CommitmentSettingsResponse.class, parameters={})
     private Output<GoogleCloudChannelV1CommitmentSettingsResponse> commitmentSettings;
 
     /**
@@ -58,7 +58,7 @@ public class Entitlement extends io.pulumi.resources.CustomResource {
      * The time at which the entitlement is created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -72,7 +72,7 @@ public class Entitlement extends io.pulumi.resources.CustomResource {
      * Resource name of an entitlement in the form: accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -86,7 +86,7 @@ public class Entitlement extends io.pulumi.resources.CustomResource {
      * The offer resource name for which the entitlement is to be created. Takes the form: accounts/{account_id}/offers/{offer_id}.
      * 
      */
-    @OutputExport(name="offer", type=String.class, parameters={})
+    @Export(name="offer", type=String.class, parameters={})
     private Output<String> offer;
 
     /**
@@ -100,7 +100,7 @@ public class Entitlement extends io.pulumi.resources.CustomResource {
      * Extended entitlement parameters. When creating an entitlement, valid parameter names and values are defined in the Offer.parameter_definitions. The response may include the following output-only Parameters: - assigned_units: The number of licenses assigned to users. - max_units: The maximum assignable units for a flexible offer. - num_units: The total commitment for commitment-based offers.
      * 
      */
-    @OutputExport(name="parameters", type=List.class, parameters={GoogleCloudChannelV1ParameterResponse.class})
+    @Export(name="parameters", type=List.class, parameters={GoogleCloudChannelV1ParameterResponse.class})
     private Output<List<GoogleCloudChannelV1ParameterResponse>> parameters;
 
     /**
@@ -114,7 +114,7 @@ public class Entitlement extends io.pulumi.resources.CustomResource {
      * Service provisioning details for the entitlement.
      * 
      */
-    @OutputExport(name="provisionedService", type=GoogleCloudChannelV1ProvisionedServiceResponse.class, parameters={})
+    @Export(name="provisionedService", type=GoogleCloudChannelV1ProvisionedServiceResponse.class, parameters={})
     private Output<GoogleCloudChannelV1ProvisionedServiceResponse> provisionedService;
 
     /**
@@ -128,7 +128,7 @@ public class Entitlement extends io.pulumi.resources.CustomResource {
      * Current provisioning state of the entitlement.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -142,7 +142,7 @@ public class Entitlement extends io.pulumi.resources.CustomResource {
      * Optional. This purchase order (PO) information is for resellers to use for their company tracking usage. If a purchaseOrderId value is given, it appears in the API responses and shows up in the invoice. The property accepts up to 80 plain text characters.
      * 
      */
-    @OutputExport(name="purchaseOrderId", type=String.class, parameters={})
+    @Export(name="purchaseOrderId", type=String.class, parameters={})
     private Output<String> purchaseOrderId;
 
     /**
@@ -156,7 +156,7 @@ public class Entitlement extends io.pulumi.resources.CustomResource {
      * Enumerable of all current suspension reasons for an entitlement.
      * 
      */
-    @OutputExport(name="suspensionReasons", type=List.class, parameters={String.class})
+    @Export(name="suspensionReasons", type=List.class, parameters={String.class})
     private Output<List<String>> suspensionReasons;
 
     /**
@@ -170,7 +170,7 @@ public class Entitlement extends io.pulumi.resources.CustomResource {
      * Settings for trial offers.
      * 
      */
-    @OutputExport(name="trialSettings", type=GoogleCloudChannelV1TrialSettingsResponse.class, parameters={})
+    @Export(name="trialSettings", type=GoogleCloudChannelV1TrialSettingsResponse.class, parameters={})
     private Output<GoogleCloudChannelV1TrialSettingsResponse> trialSettings;
 
     /**
@@ -184,7 +184,7 @@ public class Entitlement extends io.pulumi.resources.CustomResource {
      * The time at which the entitlement is updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

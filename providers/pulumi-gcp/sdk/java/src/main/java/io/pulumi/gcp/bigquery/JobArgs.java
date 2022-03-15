@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.JobCopyArgs;
 import io.pulumi.gcp.bigquery.inputs.JobExtractArgs;
 import io.pulumi.gcp.bigquery.inputs.JobLoadArgs;
@@ -24,7 +24,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="copy")
+    @Import(name="copy")
       private final @Nullable Output<JobCopyArgs> copy;
 
     public Output<JobCopyArgs> getCopy() {
@@ -36,7 +36,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="extract")
+    @Import(name="extract")
       private final @Nullable Output<JobExtractArgs> extract;
 
     public Output<JobExtractArgs> getExtract() {
@@ -47,7 +47,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
      * 
      */
-    @InputImport(name="jobId", required=true)
+    @Import(name="jobId", required=true)
       private final Output<String> jobId;
 
     public Output<String> getJobId() {
@@ -58,7 +58,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
      * 
      */
-    @InputImport(name="jobTimeoutMs")
+    @Import(name="jobTimeoutMs")
       private final @Nullable Output<String> jobTimeoutMs;
 
     public Output<String> getJobTimeoutMs() {
@@ -69,7 +69,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The labels associated with this job. You can use these to organize and group your jobs.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -81,7 +81,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="load")
+    @Import(name="load")
       private final @Nullable Output<JobLoadArgs> load;
 
     public Output<JobLoadArgs> getLoad() {
@@ -92,7 +92,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * The geographic location of the job. The default value is US.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -104,7 +104,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -116,7 +116,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Output<JobQueryArgs> query;
 
     public Output<JobQueryArgs> getQuery() {

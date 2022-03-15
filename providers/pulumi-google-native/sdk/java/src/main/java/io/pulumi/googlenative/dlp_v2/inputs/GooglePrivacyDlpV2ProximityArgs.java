@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2ProximityArgs extends io.pulumi.resources.R
      * Number of characters after the finding to consider.
      * 
      */
-    @InputImport(name="windowAfter")
+    @Import(name="windowAfter")
       private final @Nullable Output<Integer> windowAfter;
 
     public Output<Integer> getWindowAfter() {
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2ProximityArgs extends io.pulumi.resources.R
      * Number of characters before the finding to consider.
      * 
      */
-    @InputImport(name="windowBefore")
+    @Import(name="windowBefore")
       private final @Nullable Output<Integer> windowBefore;
 
     public Output<Integer> getWindowBefore() {

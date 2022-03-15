@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VpnGatewayIpConfigurationResponse {
     /**
      * The identifier of the IP configuration for a VPN Gateway.
@@ -27,11 +27,11 @@ public final class VpnGatewayIpConfigurationResponse {
      */
     private final @Nullable String publicIpAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpnGatewayIpConfigurationResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
-        @OutputCustomType.Parameter("publicIpAddress") @Nullable String publicIpAddress) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
+        @CustomType.Parameter("publicIpAddress") @Nullable String publicIpAddress) {
         this.id = id;
         this.privateIpAddress = privateIpAddress;
         this.publicIpAddress = publicIpAddress;

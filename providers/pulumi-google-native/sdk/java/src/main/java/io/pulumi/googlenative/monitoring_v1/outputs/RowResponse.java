@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.WidgetResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RowResponse {
     /**
      * The relative weight of this row. The row weight is used to adjust the height of rows on the screen (relative to peers). Greater the weight, greater the height of the row on the screen. If omitted, a value of 1 is used while rendering.
@@ -22,10 +22,10 @@ public final class RowResponse {
      */
     private final List<WidgetResponse> widgets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RowResponse(
-        @OutputCustomType.Parameter("weight") String weight,
-        @OutputCustomType.Parameter("widgets") List<WidgetResponse> widgets) {
+        @CustomType.Parameter("weight") String weight,
+        @CustomType.Parameter("widgets") List<WidgetResponse> widgets) {
         this.weight = weight;
         this.widgets = widgets;
     }

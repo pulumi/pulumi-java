@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.TargetEligibilityErrorMessageResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TargetEligibilityResultResponse {
     /**
      * The eligibility status of device, as a failover target device.
@@ -24,10 +24,10 @@ public final class TargetEligibilityResultResponse {
      */
     private final @Nullable List<TargetEligibilityErrorMessageResponse> messages;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TargetEligibilityResultResponse(
-        @OutputCustomType.Parameter("eligibilityStatus") @Nullable String eligibilityStatus,
-        @OutputCustomType.Parameter("messages") @Nullable List<TargetEligibilityErrorMessageResponse> messages) {
+        @CustomType.Parameter("eligibilityStatus") @Nullable String eligibilityStatus,
+        @CustomType.Parameter("messages") @Nullable List<TargetEligibilityErrorMessageResponse> messages) {
         this.eligibilityStatus = eligibilityStatus;
         this.messages = messages;
     }

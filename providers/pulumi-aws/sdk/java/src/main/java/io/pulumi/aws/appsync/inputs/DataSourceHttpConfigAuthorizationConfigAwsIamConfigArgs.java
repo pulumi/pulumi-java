@@ -4,7 +4,7 @@
 package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs exten
      * The signing Amazon Web Services Region for IAM authorization.
      * 
      */
-    @InputImport(name="signingRegion")
+    @Import(name="signingRegion")
       private final @Nullable Output<String> signingRegion;
 
     public Output<String> getSigningRegion() {
@@ -29,7 +29,7 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfigArgs exten
      * The signing service name for IAM authorization.
      * 
      */
-    @InputImport(name="signingServiceName")
+    @Import(name="signingServiceName")
       private final @Nullable Output<String> signingServiceName;
 
     public Output<String> getSigningServiceName() {

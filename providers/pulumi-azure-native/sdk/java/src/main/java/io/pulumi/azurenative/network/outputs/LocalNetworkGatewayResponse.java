@@ -5,14 +5,14 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.AddressSpaceResponse;
 import io.pulumi.azurenative.network.outputs.BgpSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LocalNetworkGatewayResponse {
     /**
      * Local network gateway's BGP speaker settings.
@@ -75,20 +75,20 @@ public final class LocalNetworkGatewayResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LocalNetworkGatewayResponse(
-        @OutputCustomType.Parameter("bgpSettings") @Nullable BgpSettingsResponse bgpSettings,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
-        @OutputCustomType.Parameter("gatewayIpAddress") @Nullable String gatewayIpAddress,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("localNetworkAddressSpace") @Nullable AddressSpaceResponse localNetworkAddressSpace,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("bgpSettings") @Nullable BgpSettingsResponse bgpSettings,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("fqdn") @Nullable String fqdn,
+        @CustomType.Parameter("gatewayIpAddress") @Nullable String gatewayIpAddress,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("localNetworkAddressSpace") @Nullable AddressSpaceResponse localNetworkAddressSpace,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceGuid") String resourceGuid,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.bgpSettings = bgpSettings;
         this.etag = etag;
         this.fqdn = fqdn;

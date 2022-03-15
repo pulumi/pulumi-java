@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1CertificateResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAliasResult {
     /**
      * Resource ID for this alias. Values must match the regular expression `[^/]{1,255}`.
@@ -26,11 +26,11 @@ public final class GetAliasResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAliasResult(
-        @OutputCustomType.Parameter("alias") String alias,
-        @OutputCustomType.Parameter("certsInfo") GoogleCloudApigeeV1CertificateResponse certsInfo,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("alias") String alias,
+        @CustomType.Parameter("certsInfo") GoogleCloudApigeeV1CertificateResponse certsInfo,
+        @CustomType.Parameter("type") String type) {
         this.alias = alias;
         this.certsInfo = certsInfo;
         this.type = type;

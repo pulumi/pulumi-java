@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class CloudServiceVaultCertificateArgs extends io.pulumi.resources.
      * This is the URL of a certificate that has been uploaded to Key Vault as a secret.
      * 
      */
-    @InputImport(name="certificateUrl")
+    @Import(name="certificateUrl")
       private final @Nullable Output<String> certificateUrl;
 
     public Output<String> getCertificateUrl() {

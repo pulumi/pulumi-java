@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningexperimentation.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class StorageAccountPropertiesArgs extends io.pulumi.resources.Reso
      * The access key to the storage account.
      * 
      */
-    @InputImport(name="accessKey", required=true)
+    @Import(name="accessKey", required=true)
       private final Output<String> accessKey;
 
     public Output<String> getAccessKey() {
@@ -32,7 +32,7 @@ public final class StorageAccountPropertiesArgs extends io.pulumi.resources.Reso
      * The fully qualified arm Id of the storage account.
      * 
      */
-    @InputImport(name="storageAccountId", required=true)
+    @Import(name="storageAccountId", required=true)
       private final Output<String> storageAccountId;
 
     public Output<String> getStorageAccountId() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,35 +20,35 @@ public final class CertificateAuthorityCrlConfigurationArgs extends io.pulumi.re
 
     public static final CertificateAuthorityCrlConfigurationArgs Empty = new CertificateAuthorityCrlConfigurationArgs();
 
-    @InputImport(name="customCname")
+    @Import(name="customCname")
       private final @Nullable Output<String> customCname;
 
     public Output<String> getCustomCname() {
         return this.customCname == null ? Output.empty() : this.customCname;
     }
 
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
         return this.enabled == null ? Output.empty() : this.enabled;
     }
 
-    @InputImport(name="expirationInDays")
+    @Import(name="expirationInDays")
       private final @Nullable Output<Integer> expirationInDays;
 
     public Output<Integer> getExpirationInDays() {
         return this.expirationInDays == null ? Output.empty() : this.expirationInDays;
     }
 
-    @InputImport(name="s3BucketName")
+    @Import(name="s3BucketName")
       private final @Nullable Output<String> s3BucketName;
 
     public Output<String> getS3BucketName() {
         return this.s3BucketName == null ? Output.empty() : this.s3BucketName;
     }
 
-    @InputImport(name="s3ObjectAcl")
+    @Import(name="s3ObjectAcl")
       private final @Nullable Output<String> s3ObjectAcl;
 
     public Output<String> getS3ObjectAcl() {

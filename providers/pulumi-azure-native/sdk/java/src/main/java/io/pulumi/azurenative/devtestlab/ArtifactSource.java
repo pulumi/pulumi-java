@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.devtestlab.ArtifactSourceArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ArtifactSource extends io.pulumi.resources.CustomResource {
      * The folder containing Azure Resource Manager templates.
      * 
      */
-    @OutputExport(name="armTemplateFolderPath", type=String.class, parameters={})
+    @Export(name="armTemplateFolderPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> armTemplateFolderPath;
 
     /**
@@ -49,7 +49,7 @@ public class ArtifactSource extends io.pulumi.resources.CustomResource {
      * The artifact source's branch reference.
      * 
      */
-    @OutputExport(name="branchRef", type=String.class, parameters={})
+    @Export(name="branchRef", type=String.class, parameters={})
     private Output</* @Nullable */ String> branchRef;
 
     /**
@@ -63,7 +63,7 @@ public class ArtifactSource extends io.pulumi.resources.CustomResource {
      * The artifact source's creation date.
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
@@ -77,7 +77,7 @@ public class ArtifactSource extends io.pulumi.resources.CustomResource {
      * The artifact source's display name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -91,7 +91,7 @@ public class ArtifactSource extends io.pulumi.resources.CustomResource {
      * The folder containing artifacts.
      * 
      */
-    @OutputExport(name="folderPath", type=String.class, parameters={})
+    @Export(name="folderPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> folderPath;
 
     /**
@@ -105,7 +105,7 @@ public class ArtifactSource extends io.pulumi.resources.CustomResource {
      * The location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -119,7 +119,7 @@ public class ArtifactSource extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -133,7 +133,7 @@ public class ArtifactSource extends io.pulumi.resources.CustomResource {
      * The provisioning status of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -147,7 +147,7 @@ public class ArtifactSource extends io.pulumi.resources.CustomResource {
      * The security token to authenticate to the artifact source.
      * 
      */
-    @OutputExport(name="securityToken", type=String.class, parameters={})
+    @Export(name="securityToken", type=String.class, parameters={})
     private Output</* @Nullable */ String> securityToken;
 
     /**
@@ -161,7 +161,7 @@ public class ArtifactSource extends io.pulumi.resources.CustomResource {
      * The artifact source's type.
      * 
      */
-    @OutputExport(name="sourceType", type=String.class, parameters={})
+    @Export(name="sourceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceType;
 
     /**
@@ -175,7 +175,7 @@ public class ArtifactSource extends io.pulumi.resources.CustomResource {
      * Indicates if the artifact source is enabled (values: Enabled, Disabled).
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
@@ -189,7 +189,7 @@ public class ArtifactSource extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -203,7 +203,7 @@ public class ArtifactSource extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -217,7 +217,7 @@ public class ArtifactSource extends io.pulumi.resources.CustomResource {
      * The unique immutable identifier of a resource (Guid).
      * 
      */
-    @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
+    @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output<String> uniqueIdentifier;
 
     /**
@@ -231,7 +231,7 @@ public class ArtifactSource extends io.pulumi.resources.CustomResource {
      * The artifact source's URI.
      * 
      */
-    @OutputExport(name="uri", type=String.class, parameters={})
+    @Export(name="uri", type=String.class, parameters={})
     private Output</* @Nullable */ String> uri;
 
     /**

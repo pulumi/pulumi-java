@@ -7,14 +7,14 @@ import io.pulumi.awsnative.evidently.outputs.LaunchGroupObject;
 import io.pulumi.awsnative.evidently.outputs.LaunchMetricDefinitionObject;
 import io.pulumi.awsnative.evidently.outputs.LaunchStepConfig;
 import io.pulumi.awsnative.evidently.outputs.LaunchTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetLaunchResult {
     private final @Nullable String arn;
     private final @Nullable String description;
@@ -28,15 +28,15 @@ public final class GetLaunchResult {
      */
     private final @Nullable List<LaunchTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLaunchResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("groups") @Nullable List<LaunchGroupObject> groups,
-        @OutputCustomType.Parameter("metricMonitors") @Nullable List<LaunchMetricDefinitionObject> metricMonitors,
-        @OutputCustomType.Parameter("randomizationSalt") @Nullable String randomizationSalt,
-        @OutputCustomType.Parameter("scheduledSplitsConfig") @Nullable List<LaunchStepConfig> scheduledSplitsConfig,
-        @OutputCustomType.Parameter("tags") @Nullable List<LaunchTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("groups") @Nullable List<LaunchGroupObject> groups,
+        @CustomType.Parameter("metricMonitors") @Nullable List<LaunchMetricDefinitionObject> metricMonitors,
+        @CustomType.Parameter("randomizationSalt") @Nullable String randomizationSalt,
+        @CustomType.Parameter("scheduledSplitsConfig") @Nullable List<LaunchStepConfig> scheduledSplitsConfig,
+        @CustomType.Parameter("tags") @Nullable List<LaunchTag> tags) {
         this.arn = arn;
         this.description = description;
         this.groups = groups;

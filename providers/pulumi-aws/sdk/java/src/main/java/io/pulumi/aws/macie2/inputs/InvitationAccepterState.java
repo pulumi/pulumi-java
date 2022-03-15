@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
      * The AWS account ID for the account that sent the invitation.
      * 
      */
-    @InputImport(name="administratorAccountId")
+    @Import(name="administratorAccountId")
       private final @Nullable Output<String> administratorAccountId;
 
     public Output<String> getAdministratorAccountId() {
@@ -29,7 +29,7 @@ public final class InvitationAccepterState extends io.pulumi.resources.ResourceA
      * The unique identifier for the invitation.
      * 
      */
-    @InputImport(name="invitationId")
+    @Import(name="invitationId")
       private final @Nullable Output<String> invitationId;
 
     public Output<String> getInvitationId() {

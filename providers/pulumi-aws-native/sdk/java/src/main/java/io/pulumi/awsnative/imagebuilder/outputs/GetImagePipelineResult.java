@@ -6,7 +6,7 @@ package io.pulumi.awsnative.imagebuilder.outputs;
 import io.pulumi.awsnative.imagebuilder.enums.ImagePipelineStatus;
 import io.pulumi.awsnative.imagebuilder.outputs.ImagePipelineImageTestsConfiguration;
 import io.pulumi.awsnative.imagebuilder.outputs.ImagePipelineSchedule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetImagePipelineResult {
     /**
      * The Amazon Resource Name (ARN) of the image pipeline.
@@ -72,19 +72,19 @@ public final class GetImagePipelineResult {
      */
     private final @Nullable Object tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetImagePipelineResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("containerRecipeArn") @Nullable String containerRecipeArn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("distributionConfigurationArn") @Nullable String distributionConfigurationArn,
-        @OutputCustomType.Parameter("enhancedImageMetadataEnabled") @Nullable Boolean enhancedImageMetadataEnabled,
-        @OutputCustomType.Parameter("imageRecipeArn") @Nullable String imageRecipeArn,
-        @OutputCustomType.Parameter("imageTestsConfiguration") @Nullable ImagePipelineImageTestsConfiguration imageTestsConfiguration,
-        @OutputCustomType.Parameter("infrastructureConfigurationArn") @Nullable String infrastructureConfigurationArn,
-        @OutputCustomType.Parameter("schedule") @Nullable ImagePipelineSchedule schedule,
-        @OutputCustomType.Parameter("status") @Nullable ImagePipelineStatus status,
-        @OutputCustomType.Parameter("tags") @Nullable Object tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("containerRecipeArn") @Nullable String containerRecipeArn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("distributionConfigurationArn") @Nullable String distributionConfigurationArn,
+        @CustomType.Parameter("enhancedImageMetadataEnabled") @Nullable Boolean enhancedImageMetadataEnabled,
+        @CustomType.Parameter("imageRecipeArn") @Nullable String imageRecipeArn,
+        @CustomType.Parameter("imageTestsConfiguration") @Nullable ImagePipelineImageTestsConfiguration imageTestsConfiguration,
+        @CustomType.Parameter("infrastructureConfigurationArn") @Nullable String infrastructureConfigurationArn,
+        @CustomType.Parameter("schedule") @Nullable ImagePipelineSchedule schedule,
+        @CustomType.Parameter("status") @Nullable ImagePipelineStatus status,
+        @CustomType.Parameter("tags") @Nullable Object tags) {
         this.arn = arn;
         this.containerRecipeArn = containerRecipeArn;
         this.description = description;

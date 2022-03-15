@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1TestConfigResponse {
     /**
      * Flow name. If not set, default start flow is assumed. Format: `projects//locations//agents//flows/`.
@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3beta1TestConfigResponse {
      */
     private final List<String> trackingParameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1TestConfigResponse(
-        @OutputCustomType.Parameter("flow") String flow,
-        @OutputCustomType.Parameter("trackingParameters") List<String> trackingParameters) {
+        @CustomType.Parameter("flow") String flow,
+        @CustomType.Parameter("trackingParameters") List<String> trackingParameters) {
         this.flow = flow;
         this.trackingParameters = trackingParameters;
     }

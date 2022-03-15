@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.NetworkInterfaceAttachmentArgs;
 import io.pulumi.aws.ec2.inputs.NetworkInterfaceAttachmentState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public class NetworkInterfaceAttachment extends io.pulumi.resources.CustomResour
      * The ENI Attachment ID.
      * 
      */
-    @OutputExport(name="attachmentId", type=String.class, parameters={})
+    @Export(name="attachmentId", type=String.class, parameters={})
     private Output<String> attachmentId;
 
     /**
@@ -39,7 +39,7 @@ public class NetworkInterfaceAttachment extends io.pulumi.resources.CustomResour
      * Network interface index (int).
      * 
      */
-    @OutputExport(name="deviceIndex", type=Integer.class, parameters={})
+    @Export(name="deviceIndex", type=Integer.class, parameters={})
     private Output<Integer> deviceIndex;
 
     /**
@@ -53,7 +53,7 @@ public class NetworkInterfaceAttachment extends io.pulumi.resources.CustomResour
      * Instance ID to attach.
      * 
      */
-    @OutputExport(name="instanceId", type=String.class, parameters={})
+    @Export(name="instanceId", type=String.class, parameters={})
     private Output<String> instanceId;
 
     /**
@@ -67,7 +67,7 @@ public class NetworkInterfaceAttachment extends io.pulumi.resources.CustomResour
      * ENI ID to attach.
      * 
      */
-    @OutputExport(name="networkInterfaceId", type=String.class, parameters={})
+    @Export(name="networkInterfaceId", type=String.class, parameters={})
     private Output<String> networkInterfaceId;
 
     /**
@@ -81,7 +81,7 @@ public class NetworkInterfaceAttachment extends io.pulumi.resources.CustomResour
      * The status of the Network Interface Attachment.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**

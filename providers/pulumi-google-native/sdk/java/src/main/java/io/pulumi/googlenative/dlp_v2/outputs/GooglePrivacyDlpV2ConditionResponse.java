@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2ConditionResponse {
     /**
      * Field within the record this condition is evaluated against.
@@ -27,11 +27,11 @@ public final class GooglePrivacyDlpV2ConditionResponse {
      */
     private final GooglePrivacyDlpV2ValueResponse value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2ConditionResponse(
-        @OutputCustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field,
-        @OutputCustomType.Parameter("operator") String operator,
-        @OutputCustomType.Parameter("value") GooglePrivacyDlpV2ValueResponse value) {
+        @CustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field,
+        @CustomType.Parameter("operator") String operator,
+        @CustomType.Parameter("value") GooglePrivacyDlpV2ValueResponse value) {
         this.field = field;
         this.operator = operator;
         this.value = value;

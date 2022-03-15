@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.inputs.CloudServiceExtensionProfileResponse
 import io.pulumi.azurenative.compute.inputs.CloudServiceNetworkProfileResponse;
 import io.pulumi.azurenative.compute.inputs.CloudServiceOsProfileResponse;
 import io.pulumi.azurenative.compute.inputs.CloudServiceRoleProfileResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * The default value is `false`.
      * 
      */
-    @InputImport(name="allowModelOverride")
+    @Import(name="allowModelOverride")
       private final @Nullable Boolean allowModelOverride;
 
     public Optional<Boolean> getAllowModelOverride() {
@@ -39,7 +39,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * Specifies the XML service configuration (.cscfg) for the cloud service.
      * 
      */
-    @InputImport(name="configuration")
+    @Import(name="configuration")
       private final @Nullable String configuration;
 
     public Optional<String> getConfiguration() {
@@ -51,7 +51,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * This is a write-only property and is not returned in GET calls.
      * 
      */
-    @InputImport(name="configurationUrl")
+    @Import(name="configurationUrl")
       private final @Nullable String configurationUrl;
 
     public Optional<String> getConfigurationUrl() {
@@ -62,7 +62,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * Describes a cloud service extension profile.
      * 
      */
-    @InputImport(name="extensionProfile")
+    @Import(name="extensionProfile")
       private final @Nullable CloudServiceExtensionProfileResponse extensionProfile;
 
     public Optional<CloudServiceExtensionProfileResponse> getExtensionProfile() {
@@ -73,7 +73,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * Network Profile for the cloud service.
      * 
      */
-    @InputImport(name="networkProfile")
+    @Import(name="networkProfile")
       private final @Nullable CloudServiceNetworkProfileResponse networkProfile;
 
     public Optional<CloudServiceNetworkProfileResponse> getNetworkProfile() {
@@ -84,7 +84,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * Describes the OS profile for the cloud service.
      * 
      */
-    @InputImport(name="osProfile")
+    @Import(name="osProfile")
       private final @Nullable CloudServiceOsProfileResponse osProfile;
 
     public Optional<CloudServiceOsProfileResponse> getOsProfile() {
@@ -96,7 +96,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * This is a write-only property and is not returned in GET calls.
      * 
      */
-    @InputImport(name="packageUrl")
+    @Import(name="packageUrl")
       private final @Nullable String packageUrl;
 
     public Optional<String> getPackageUrl() {
@@ -107,7 +107,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * The provisioning state, which only appears in the response.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -118,7 +118,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * Describes the role profile for the cloud service.
      * 
      */
-    @InputImport(name="roleProfile")
+    @Import(name="roleProfile")
       private final @Nullable CloudServiceRoleProfileResponse roleProfile;
 
     public Optional<CloudServiceRoleProfileResponse> getRoleProfile() {
@@ -130,7 +130,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * If false, the service model is still deployed, but the code is not run immediately. Instead, the service is PoweredOff until you call Start, at which time the service will be started. A deployed service still incurs charges, even if it is poweredoff.
      * 
      */
-    @InputImport(name="startCloudService")
+    @Import(name="startCloudService")
       private final @Nullable Boolean startCloudService;
 
     public Optional<Boolean> getStartCloudService() {
@@ -141,7 +141,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * The unique identifier for the cloud service.
      * 
      */
-    @InputImport(name="uniqueId", required=true)
+    @Import(name="uniqueId", required=true)
       private final String uniqueId;
 
     public String getUniqueId() {
@@ -154,7 +154,7 @@ public final class CloudServicePropertiesResponse extends io.pulumi.resources.In
      * If not specified, the default value is Auto. If set to Manual, PUT UpdateDomain must be called to apply the update. If set to Auto, the update is automatically applied to each update domain in sequence.
      * 
      */
-    @InputImport(name="upgradeMode")
+    @Import(name="upgradeMode")
       private final @Nullable String upgradeMode;
 
     public Optional<String> getUpgradeMode() {

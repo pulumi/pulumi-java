@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.outputs;
 
 import io.pulumi.aws.sagemaker.outputs.FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowDefinitionHumanLoopConfig {
     /**
      * The Amazon Resource Name (ARN) of the human task user interface.
@@ -60,17 +60,17 @@ public final class FlowDefinitionHumanLoopConfig {
      */
     private final String workteamArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowDefinitionHumanLoopConfig(
-        @OutputCustomType.Parameter("humanTaskUiArn") String humanTaskUiArn,
-        @OutputCustomType.Parameter("publicWorkforceTaskPrice") @Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice publicWorkforceTaskPrice,
-        @OutputCustomType.Parameter("taskAvailabilityLifetimeInSeconds") @Nullable Integer taskAvailabilityLifetimeInSeconds,
-        @OutputCustomType.Parameter("taskCount") Integer taskCount,
-        @OutputCustomType.Parameter("taskDescription") String taskDescription,
-        @OutputCustomType.Parameter("taskKeywords") @Nullable List<String> taskKeywords,
-        @OutputCustomType.Parameter("taskTimeLimitInSeconds") @Nullable Integer taskTimeLimitInSeconds,
-        @OutputCustomType.Parameter("taskTitle") String taskTitle,
-        @OutputCustomType.Parameter("workteamArn") String workteamArn) {
+        @CustomType.Parameter("humanTaskUiArn") String humanTaskUiArn,
+        @CustomType.Parameter("publicWorkforceTaskPrice") @Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice publicWorkforceTaskPrice,
+        @CustomType.Parameter("taskAvailabilityLifetimeInSeconds") @Nullable Integer taskAvailabilityLifetimeInSeconds,
+        @CustomType.Parameter("taskCount") Integer taskCount,
+        @CustomType.Parameter("taskDescription") String taskDescription,
+        @CustomType.Parameter("taskKeywords") @Nullable List<String> taskKeywords,
+        @CustomType.Parameter("taskTimeLimitInSeconds") @Nullable Integer taskTimeLimitInSeconds,
+        @CustomType.Parameter("taskTitle") String taskTitle,
+        @CustomType.Parameter("workteamArn") String workteamArn) {
         this.humanTaskUiArn = humanTaskUiArn;
         this.publicWorkforceTaskPrice = publicWorkforceTaskPrice;
         this.taskAvailabilityLifetimeInSeconds = taskAvailabilityLifetimeInSeconds;

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iam.GroupPolicyArgs;
 import io.pulumi.aws.iam.inputs.GroupPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class GroupPolicy extends io.pulumi.resources.CustomResource {
      * The IAM group to attach to the policy.
      * 
      */
-    @OutputExport(name="group", type=String.class, parameters={})
+    @Export(name="group", type=String.class, parameters={})
     private Output<String> group;
 
     /**
@@ -47,7 +47,7 @@ public class GroupPolicy extends io.pulumi.resources.CustomResource {
      * assign a random, unique name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class GroupPolicy extends io.pulumi.resources.CustomResource {
      * prefix. Conflicts with `name`.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> namePrefix;
 
     /**
@@ -78,7 +78,7 @@ public class GroupPolicy extends io.pulumi.resources.CustomResource {
      * The policy document. This is a JSON formatted string.
      * 
      */
-    @OutputExport(name="policy", type=String.class, parameters={})
+    @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
     /**

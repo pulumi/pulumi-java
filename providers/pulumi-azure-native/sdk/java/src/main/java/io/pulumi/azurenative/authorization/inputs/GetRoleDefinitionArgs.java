@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetRoleDefinitionArgs extends io.pulumi.resources.InvokeArgs 
      * The ID of the role definition.
      * 
      */
-    @InputImport(name="roleDefinitionId", required=true)
+    @Import(name="roleDefinitionId", required=true)
       private final String roleDefinitionId;
 
     public String getRoleDefinitionId() {
@@ -27,7 +27,7 @@ public final class GetRoleDefinitionArgs extends io.pulumi.resources.InvokeArgs 
      * The scope of the role definition.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final String scope;
 
     public String getScope() {

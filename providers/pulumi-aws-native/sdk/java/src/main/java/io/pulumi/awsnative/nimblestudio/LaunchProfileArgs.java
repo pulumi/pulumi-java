@@ -6,7 +6,7 @@ package io.pulumi.awsnative.nimblestudio;
 import io.pulumi.awsnative.nimblestudio.inputs.LaunchProfileStreamConfigurationArgs;
 import io.pulumi.awsnative.nimblestudio.inputs.LaunchProfileTagsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
      * <p>The description.</p>
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
      *             These subnets must support the specified instance types. </p>
      * 
      */
-    @InputImport(name="ec2SubnetIds", required=true)
+    @Import(name="ec2SubnetIds", required=true)
       private final Output<List<String>> ec2SubnetIds;
 
     public Output<List<String>> getEc2SubnetIds() {
@@ -45,7 +45,7 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
      *             version is "2021-03-31".</p>
      * 
      */
-    @InputImport(name="launchProfileProtocolVersions", required=true)
+    @Import(name="launchProfileProtocolVersions", required=true)
       private final Output<List<String>> launchProfileProtocolVersions;
 
     public Output<List<String>> getLaunchProfileProtocolVersions() {
@@ -56,14 +56,14 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
      * <p>The name for the launch profile.</p>
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="streamConfiguration", required=true)
+    @Import(name="streamConfiguration", required=true)
       private final Output<LaunchProfileStreamConfigurationArgs> streamConfiguration;
 
     public Output<LaunchProfileStreamConfigurationArgs> getStreamConfiguration() {
@@ -75,7 +75,7 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
      *             launch profile.</p>
      * 
      */
-    @InputImport(name="studioComponentIds", required=true)
+    @Import(name="studioComponentIds", required=true)
       private final Output<List<String>> studioComponentIds;
 
     public Output<List<String>> getStudioComponentIds() {
@@ -86,14 +86,14 @@ public final class LaunchProfileArgs extends io.pulumi.resources.ResourceArgs {
      * <p>The studio ID. </p>
      * 
      */
-    @InputImport(name="studioId", required=true)
+    @Import(name="studioId", required=true)
       private final Output<String> studioId;
 
     public Output<String> getStudioId() {
         return this.studioId;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<LaunchProfileTagsArgs> tags;
 
     public Output<LaunchProfileTagsArgs> getTags() {

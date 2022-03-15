@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi {
     /**
      * Additional properties to use during installation. This should be in the format of Property=Setting. Appended to the defaults of `ACTION=INSTALL REBOOT=ReallySuppress`.
@@ -23,10 +23,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi {
      */
     private final OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi(
-        @OutputCustomType.Parameter("properties") @Nullable List<String> properties,
-        @OutputCustomType.Parameter("source") OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource source) {
+        @CustomType.Parameter("properties") @Nullable List<String> properties,
+        @CustomType.Parameter("source") OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSource source) {
         this.properties = properties;
         this.source = source;
     }

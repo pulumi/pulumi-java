@@ -8,7 +8,7 @@ import io.pulumi.azurenative.media.inputs.JobInputClipArgs;
 import io.pulumi.azurenative.media.inputs.JobInputHttpArgs;
 import io.pulumi.azurenative.media.inputs.JobInputSequenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class JobInputsArgs extends io.pulumi.resources.ResourceArgs {
      * List of inputs to a Job.
      * 
      */
-    @InputImport(name="inputs")
+    @Import(name="inputs")
       private final @Nullable Output<List<Object>> inputs;
 
     public Output<List<Object>> getInputs() {
@@ -40,7 +40,7 @@ public final class JobInputsArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is '#Microsoft.Media.JobInputs'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {

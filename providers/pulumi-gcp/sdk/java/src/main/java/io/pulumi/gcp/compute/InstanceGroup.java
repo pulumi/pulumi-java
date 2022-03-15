@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.InstanceGroupArgs;
@@ -46,7 +46,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * group.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -63,7 +63,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * network and zone as the instance group.
      * 
      */
-    @OutputExport(name="instances", type=List.class, parameters={String.class})
+    @Export(name="instances", type=List.class, parameters={String.class})
     private Output<List<String>> instances;
 
     /**
@@ -79,7 +79,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * The name which the port will be mapped to.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * for details on configuration. Structure is documented below.
      * 
      */
-    @OutputExport(name="namedPorts", type=List.class, parameters={InstanceGroupNamedPort.class})
+    @Export(name="namedPorts", type=List.class, parameters={InstanceGroupNamedPort.class})
     private Output</* @Nullable */ List<InstanceGroupNamedPort>> namedPorts;
 
     /**
@@ -112,7 +112,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * `network` nor `instances` is specified, this field will be blank).
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
@@ -130,7 +130,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -145,7 +145,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -159,7 +159,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * The number of instances in the group.
      * 
      */
-    @OutputExport(name="size", type=Integer.class, parameters={})
+    @Export(name="size", type=Integer.class, parameters={})
     private Output<Integer> size;
 
     /**
@@ -173,7 +173,7 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
      * The zone that this instance group should be created in.
      * 
      */
-    @OutputExport(name="zone", type=String.class, parameters={})
+    @Export(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
     /**

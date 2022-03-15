@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1QueryMetadataResponse {
     /**
      * Dimensions of the AsyncQuery.
@@ -41,14 +41,14 @@ public final class GoogleCloudApigeeV1QueryMetadataResponse {
      */
     private final String timeUnit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1QueryMetadataResponse(
-        @OutputCustomType.Parameter("dimensions") List<String> dimensions,
-        @OutputCustomType.Parameter("endTimestamp") String endTimestamp,
-        @OutputCustomType.Parameter("metrics") List<String> metrics,
-        @OutputCustomType.Parameter("outputFormat") String outputFormat,
-        @OutputCustomType.Parameter("startTimestamp") String startTimestamp,
-        @OutputCustomType.Parameter("timeUnit") String timeUnit) {
+        @CustomType.Parameter("dimensions") List<String> dimensions,
+        @CustomType.Parameter("endTimestamp") String endTimestamp,
+        @CustomType.Parameter("metrics") List<String> metrics,
+        @CustomType.Parameter("outputFormat") String outputFormat,
+        @CustomType.Parameter("startTimestamp") String startTimestamp,
+        @CustomType.Parameter("timeUnit") String timeUnit) {
         this.dimensions = dimensions;
         this.endTimestamp = endTimestamp;
         this.metrics = metrics;

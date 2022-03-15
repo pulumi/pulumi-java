@@ -4,7 +4,7 @@
 package io.pulumi.gcp.secretmanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.secretmanager.SecretArgs;
@@ -49,7 +49,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * The time at which the Secret was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -64,7 +64,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @OutputExport(name="expireTime", type=String.class, parameters={})
+    @Export(name="expireTime", type=String.class, parameters={})
     private Output<String> expireTime;
 
     /**
@@ -86,7 +86,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -108,7 +108,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * For publication to succeed, the Secret Manager Service Agent service account must have pubsub.publisher permissions on the topic.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -124,7 +124,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -141,7 +141,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="replication", type=SecretReplication.class, parameters={})
+    @Export(name="replication", type=SecretReplication.class, parameters={})
     private Output<SecretReplication> replication;
 
     /**
@@ -158,7 +158,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="rotation", type=SecretRotation.class, parameters={})
+    @Export(name="rotation", type=SecretRotation.class, parameters={})
     private Output</* @Nullable */ SecretRotation> rotation;
 
     /**
@@ -173,7 +173,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * This must be unique within the project.
      * 
      */
-    @OutputExport(name="secretId", type=String.class, parameters={})
+    @Export(name="secretId", type=String.class, parameters={})
     private Output<String> secretId;
 
     /**
@@ -188,7 +188,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="topics", type=List.class, parameters={SecretTopic.class})
+    @Export(name="topics", type=List.class, parameters={SecretTopic.class})
     private Output</* @Nullable */ List<SecretTopic>> topics;
 
     /**
@@ -204,7 +204,7 @@ public class Secret extends io.pulumi.resources.CustomResource {
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @OutputExport(name="ttl", type=String.class, parameters={})
+    @Export(name="ttl", type=String.class, parameters={})
     private Output</* @Nullable */ String> ttl;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleArgs extends
      * Structure is documented below.
      * 
      */
-    @InputImport(name="exclusionRule")
+    @Import(name="exclusionRule")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs> exclusionRule;
 
     public Output<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleArgs> getExclusionRule() {
@@ -32,7 +32,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleArgs extends
      * Structure is documented below.
      * 
      */
-    @InputImport(name="hotwordRule")
+    @Import(name="hotwordRule")
       private final @Nullable Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs> hotwordRule;
 
     public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleArgs> getHotwordRule() {

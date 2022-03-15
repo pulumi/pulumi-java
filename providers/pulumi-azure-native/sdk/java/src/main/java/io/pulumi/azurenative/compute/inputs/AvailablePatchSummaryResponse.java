@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.ApiErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
      * The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs.
      * 
      */
-    @InputImport(name="assessmentActivityId", required=true)
+    @Import(name="assessmentActivityId", required=true)
       private final String assessmentActivityId;
 
     public String getAssessmentActivityId() {
@@ -34,7 +34,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
      * The number of critical or security patches that have been detected as available and not yet installed.
      * 
      */
-    @InputImport(name="criticalAndSecurityPatchCount", required=true)
+    @Import(name="criticalAndSecurityPatchCount", required=true)
       private final Integer criticalAndSecurityPatchCount;
 
     public Integer getCriticalAndSecurityPatchCount() {
@@ -45,7 +45,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
      * The errors that were encountered during execution of the operation. The details array contains the list of them.
      * 
      */
-    @InputImport(name="error", required=true)
+    @Import(name="error", required=true)
       private final ApiErrorResponse error;
 
     public ApiErrorResponse getError() {
@@ -56,7 +56,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
      * The UTC timestamp when the operation began.
      * 
      */
-    @InputImport(name="lastModifiedTime", required=true)
+    @Import(name="lastModifiedTime", required=true)
       private final String lastModifiedTime;
 
     public String getLastModifiedTime() {
@@ -67,7 +67,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
      * The number of all available patches excluding critical and security.
      * 
      */
-    @InputImport(name="otherPatchCount", required=true)
+    @Import(name="otherPatchCount", required=true)
       private final Integer otherPatchCount;
 
     public Integer getOtherPatchCount() {
@@ -78,7 +78,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
      * The overall reboot status of the VM. It will be true when partially installed patches require a reboot to complete installation but the reboot has not yet occurred.
      * 
      */
-    @InputImport(name="rebootPending", required=true)
+    @Import(name="rebootPending", required=true)
       private final Boolean rebootPending;
 
     public Boolean getRebootPending() {
@@ -89,7 +89,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
      * The UTC timestamp when the operation began.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -100,7 +100,7 @@ public final class AvailablePatchSummaryResponse extends io.pulumi.resources.Inv
      * The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Unknown", "Failed", "Succeeded", or "CompletedWithWarnings."
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

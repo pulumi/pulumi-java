@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.outputs;
 
 import io.pulumi.aws.glue.outputs.GetScriptDagNodeArg;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetScriptDagNode {
     /**
      * Nested configuration an argument or property of a node. Defined below.
@@ -35,12 +35,12 @@ public final class GetScriptDagNode {
      */
     private final String nodeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetScriptDagNode(
-        @OutputCustomType.Parameter("args") List<GetScriptDagNodeArg> args,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lineNumber") @Nullable Integer lineNumber,
-        @OutputCustomType.Parameter("nodeType") String nodeType) {
+        @CustomType.Parameter("args") List<GetScriptDagNodeArg> args,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lineNumber") @Nullable Integer lineNumber,
+        @CustomType.Parameter("nodeType") String nodeType) {
         this.args = args;
         this.id = id;
         this.lineNumber = lineNumber;

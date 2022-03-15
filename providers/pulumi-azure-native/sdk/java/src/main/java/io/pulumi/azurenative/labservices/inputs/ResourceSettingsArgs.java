@@ -7,7 +7,7 @@ import io.pulumi.azurenative.labservices.enums.ManagedLabVmSize;
 import io.pulumi.azurenative.labservices.inputs.ReferenceVmArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The resource id of the gallery image used for creating the virtual machine
      * 
      */
-    @InputImport(name="galleryImageResourceId")
+    @Import(name="galleryImageResourceId")
       private final @Nullable Output<String> galleryImageResourceId;
 
     public Output<String> getGalleryImageResourceId() {
@@ -36,7 +36,7 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Details specific to Reference Vm
      * 
      */
-    @InputImport(name="referenceVm", required=true)
+    @Import(name="referenceVm", required=true)
       private final Output<ReferenceVmArgs> referenceVm;
 
     public Output<ReferenceVmArgs> getReferenceVm() {
@@ -47,7 +47,7 @@ public final class ResourceSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The size of the virtual machine
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<Either<String,ManagedLabVmSize>> size;
 
     public Output<Either<String,ManagedLabVmSize>> getSize() {

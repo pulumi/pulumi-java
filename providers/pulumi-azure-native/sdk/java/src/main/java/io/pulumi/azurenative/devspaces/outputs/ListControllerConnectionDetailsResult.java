@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.devspaces.outputs;
 
 import io.pulumi.azurenative.devspaces.outputs.ControllerConnectionDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListControllerConnectionDetailsResult {
     /**
      * List of Azure Dev Spaces Controller connection details.
@@ -17,8 +17,8 @@ public final class ListControllerConnectionDetailsResult {
      */
     private final @Nullable List<ControllerConnectionDetailsResponse> connectionDetailsList;
 
-    @OutputCustomType.Constructor
-    private ListControllerConnectionDetailsResult(@OutputCustomType.Parameter("connectionDetailsList") @Nullable List<ControllerConnectionDetailsResponse> connectionDetailsList) {
+    @CustomType.Constructor
+    private ListControllerConnectionDetailsResult(@CustomType.Parameter("connectionDetailsList") @Nullable List<ControllerConnectionDetailsResponse> connectionDetailsList) {
         this.connectionDetailsList = connectionDetailsList;
     }
 

@@ -4,21 +4,21 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.JobStatisticOverride;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobStatisticsConfiguration {
     private final @Nullable List<String> includedStatistics;
     private final @Nullable List<JobStatisticOverride> overrides;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStatisticsConfiguration(
-        @OutputCustomType.Parameter("includedStatistics") @Nullable List<String> includedStatistics,
-        @OutputCustomType.Parameter("overrides") @Nullable List<JobStatisticOverride> overrides) {
+        @CustomType.Parameter("includedStatistics") @Nullable List<String> includedStatistics,
+        @CustomType.Parameter("overrides") @Nullable List<JobStatisticOverride> overrides) {
         this.includedStatistics = includedStatistics;
         this.overrides = overrides;
     }

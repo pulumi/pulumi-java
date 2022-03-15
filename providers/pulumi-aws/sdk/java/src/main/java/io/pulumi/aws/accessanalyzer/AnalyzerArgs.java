@@ -4,7 +4,7 @@
 package io.pulumi.aws.accessanalyzer;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Analyzer.
      * 
      */
-    @InputImport(name="analyzerName", required=true)
+    @Import(name="analyzerName", required=true)
       private final Output<String> analyzerName;
 
     public Output<String> getAnalyzerName() {
@@ -30,7 +30,7 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -41,7 +41,7 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * Type of Analyzer. Valid values are `ACCOUNT` or `ORGANIZATION`. Defaults to `ACCOUNT`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.diagflow.outputs.CxFlowTransitionRouteTriggerFulfillmentMessageText;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CxFlowTransitionRouteTriggerFulfillmentMessage {
     /**
      * A collection of text responses.
@@ -17,8 +17,8 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessage {
      */
     private final @Nullable CxFlowTransitionRouteTriggerFulfillmentMessageText text;
 
-    @OutputCustomType.Constructor
-    private CxFlowTransitionRouteTriggerFulfillmentMessage(@OutputCustomType.Parameter("text") @Nullable CxFlowTransitionRouteTriggerFulfillmentMessageText text) {
+    @CustomType.Constructor
+    private CxFlowTransitionRouteTriggerFulfillmentMessage(@CustomType.Parameter("text") @Nullable CxFlowTransitionRouteTriggerFulfillmentMessageText text) {
         this.text = text;
     }
 

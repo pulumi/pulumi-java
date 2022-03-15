@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeNetworkConfigResponse {
     /**
      * Input only. Whether to create a new range for pod IPs in this node pool. Defaults are provided for `pod_range` and `pod_ipv4_cidr_block` if they are not specified. If neither `create_pod_range` or `pod_range` are specified, the cluster-level default (`ip_allocation_policy.cluster_ipv4_cidr_block`) is used. Only applicable if `ip_allocation_policy.use_ip_aliases` is true. This field cannot be changed after the node pool has been created.
@@ -26,11 +26,11 @@ public final class NodeNetworkConfigResponse {
      */
     private final String podRange;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeNetworkConfigResponse(
-        @OutputCustomType.Parameter("createPodRange") Boolean createPodRange,
-        @OutputCustomType.Parameter("podIpv4CidrBlock") String podIpv4CidrBlock,
-        @OutputCustomType.Parameter("podRange") String podRange) {
+        @CustomType.Parameter("createPodRange") Boolean createPodRange,
+        @CustomType.Parameter("podIpv4CidrBlock") String podIpv4CidrBlock,
+        @CustomType.Parameter("podRange") String podRange) {
         this.createPodRange = createPodRange;
         this.podIpv4CidrBlock = podIpv4CidrBlock;
         this.podRange = podRange;

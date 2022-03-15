@@ -6,7 +6,7 @@ package io.pulumi.azurenative.synapse;
 import io.pulumi.azurenative.synapse.enums.DataConnectionKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the data connection.
      * 
      */
-    @InputImport(name="dataConnectionName")
+    @Import(name="dataConnectionName")
       private final @Nullable Output<String> dataConnectionName;
 
     public Output<String> getDataConnectionName() {
@@ -31,7 +31,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the database in the Kusto pool.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -42,7 +42,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Kind of the endpoint for the data connection
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<Either<String,DataConnectionKind>> kind;
 
     public Output<Either<String,DataConnectionKind>> getKind() {
@@ -53,7 +53,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Kusto pool.
      * 
      */
-    @InputImport(name="kustoPoolName", required=true)
+    @Import(name="kustoPoolName", required=true)
       private final Output<String> kustoPoolName;
 
     public Output<String> getKustoPoolName() {
@@ -64,7 +64,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -75,7 +75,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -86,7 +86,7 @@ public final class DataConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

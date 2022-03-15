@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCertificateAuthorityActivationResult {
     /**
      * The complete certificate chain, including the Certificate Authority certificate.
@@ -22,10 +22,10 @@ public final class GetCertificateAuthorityActivationResult {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCertificateAuthorityActivationResult(
-        @OutputCustomType.Parameter("completeCertificateChain") @Nullable String completeCertificateChain,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("completeCertificateChain") @Nullable String completeCertificateChain,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.completeCertificateChain = completeCertificateChain;
         this.status = status;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MongoIndexKeysArgs extends io.pulumi.resources.ResourceArgs {
      * List of keys for each MongoDB collection in the Azure Cosmos DB service
      * 
      */
-    @InputImport(name="keys")
+    @Import(name="keys")
       private final @Nullable Output<List<String>> keys;
 
     public Output<List<String>> getKeys() {

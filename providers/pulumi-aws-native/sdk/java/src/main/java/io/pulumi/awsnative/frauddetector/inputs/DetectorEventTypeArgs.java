@@ -8,7 +8,7 @@ import io.pulumi.awsnative.frauddetector.inputs.DetectorEventVariableArgs;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorLabelArgs;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
      * The ARN of the event type.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -35,7 +35,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
      * The time when the event type was created.
      * 
      */
-    @InputImport(name="createdTime")
+    @Import(name="createdTime")
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
@@ -46,35 +46,35 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
      * The description of the event type.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="entityTypes")
+    @Import(name="entityTypes")
       private final @Nullable Output<List<DetectorEntityTypeArgs>> entityTypes;
 
     public Output<List<DetectorEntityTypeArgs>> getEntityTypes() {
         return this.entityTypes == null ? Output.empty() : this.entityTypes;
     }
 
-    @InputImport(name="eventVariables")
+    @Import(name="eventVariables")
       private final @Nullable Output<List<DetectorEventVariableArgs>> eventVariables;
 
     public Output<List<DetectorEventVariableArgs>> getEventVariables() {
         return this.eventVariables == null ? Output.empty() : this.eventVariables;
     }
 
-    @InputImport(name="inline")
+    @Import(name="inline")
       private final @Nullable Output<Boolean> inline;
 
     public Output<Boolean> getInline() {
         return this.inline == null ? Output.empty() : this.inline;
     }
 
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<DetectorLabelArgs>> labels;
 
     public Output<List<DetectorLabelArgs>> getLabels() {
@@ -85,7 +85,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
      * The time when the event type was last updated.
      * 
      */
-    @InputImport(name="lastUpdatedTime")
+    @Import(name="lastUpdatedTime")
       private final @Nullable Output<String> lastUpdatedTime;
 
     public Output<String> getLastUpdatedTime() {
@@ -96,7 +96,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
      * The name for the event type
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -107,7 +107,7 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
      * Tags associated with this event type.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DetectorTagArgs>> tags;
 
     public Output<List<DetectorTagArgs>> getTags() {

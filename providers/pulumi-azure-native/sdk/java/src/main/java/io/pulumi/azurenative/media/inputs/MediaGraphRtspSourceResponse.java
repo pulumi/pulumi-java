@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.MediaGraphClearEndpointResponse;
 import io.pulumi.azurenative.media.inputs.MediaGraphTlsEndpointResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class MediaGraphRtspSourceResponse extends io.pulumi.resources.Invo
      * RTSP endpoint of the stream being connected to.
      * 
      */
-    @InputImport(name="endpoint", required=true)
+    @Import(name="endpoint", required=true)
       private final Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint;
 
     public Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> getEndpoint() {
@@ -34,7 +34,7 @@ public final class MediaGraphRtspSourceResponse extends io.pulumi.resources.Invo
      * Source name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -46,7 +46,7 @@ public final class MediaGraphRtspSourceResponse extends io.pulumi.resources.Invo
      * Expected value is '#Microsoft.Media.MediaGraphRtspSource'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -57,7 +57,7 @@ public final class MediaGraphRtspSourceResponse extends io.pulumi.resources.Invo
      * Underlying RTSP transport. This can be used to enable or disable HTTP tunneling.
      * 
      */
-    @InputImport(name="transport", required=true)
+    @Import(name="transport", required=true)
       private final String transport;
 
     public String getTransport() {

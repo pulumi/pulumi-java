@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lookoutmetrics.inputs;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AlertLambdaConfigurationArgs;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AlertSNSConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,14 +15,14 @@ public final class AlertActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AlertActionArgs Empty = new AlertActionArgs();
 
-    @InputImport(name="lambdaConfiguration")
+    @Import(name="lambdaConfiguration")
       private final @Nullable Output<AlertLambdaConfigurationArgs> lambdaConfiguration;
 
     public Output<AlertLambdaConfigurationArgs> getLambdaConfiguration() {
         return this.lambdaConfiguration == null ? Output.empty() : this.lambdaConfiguration;
     }
 
-    @InputImport(name="sNSConfiguration")
+    @Import(name="sNSConfiguration")
       private final @Nullable Output<AlertSNSConfigurationArgs> sNSConfiguration;
 
     public Output<AlertSNSConfigurationArgs> getSNSConfiguration() {

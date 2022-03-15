@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.guardduty.MemberArgs;
 import io.pulumi.aws.guardduty.inputs.MemberState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * AWS account ID for member account.
      * 
      */
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
@@ -47,7 +47,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * The detector ID of the GuardDuty account where you want to create member accounts.
      * 
      */
-    @OutputExport(name="detectorId", type=String.class, parameters={})
+    @Export(name="detectorId", type=String.class, parameters={})
     private Output<String> detectorId;
 
     /**
@@ -61,7 +61,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * Boolean whether an email notification is sent to the accounts. Defaults to `false`.
      * 
      */
-    @OutputExport(name="disableEmailNotification", type=Boolean.class, parameters={})
+    @Export(name="disableEmailNotification", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disableEmailNotification;
 
     /**
@@ -75,7 +75,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * Email address for member account.
      * 
      */
-    @OutputExport(name="email", type=String.class, parameters={})
+    @Export(name="email", type=String.class, parameters={})
     private Output<String> email;
 
     /**
@@ -89,7 +89,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * Message for invitation.
      * 
      */
-    @OutputExport(name="invitationMessage", type=String.class, parameters={})
+    @Export(name="invitationMessage", type=String.class, parameters={})
     private Output</* @Nullable */ String> invitationMessage;
 
     /**
@@ -103,7 +103,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * Boolean whether to invite the account to GuardDuty as a member. Defaults to `false`. To detect if an invitation needs to be (re-)sent, the this provider state value is `true` based on a `relationship_status` of `Disabled`, `Enabled`, `Invited`, or `EmailVerificationInProgress`.
      * 
      */
-    @OutputExport(name="invite", type=Boolean.class, parameters={})
+    @Export(name="invite", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> invite;
 
     /**
@@ -117,7 +117,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * The status of the relationship between the member account and its primary account. More information can be found in [Amazon GuardDuty API Reference](https://docs.aws.amazon.com/guardduty/latest/ug/get-members.html).
      * 
      */
-    @OutputExport(name="relationshipStatus", type=String.class, parameters={})
+    @Export(name="relationshipStatus", type=String.class, parameters={})
     private Output<String> relationshipStatus;
 
     /**

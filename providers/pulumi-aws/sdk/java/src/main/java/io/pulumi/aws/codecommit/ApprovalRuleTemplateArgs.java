@@ -4,7 +4,7 @@
 package io.pulumi.aws.codecommit;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ApprovalRuleTemplateArgs extends io.pulumi.resources.Resource
      * The content of the approval rule template. Maximum of 3000 characters.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final Output<String> content;
 
     public Output<String> getContent() {
@@ -29,7 +29,7 @@ public final class ApprovalRuleTemplateArgs extends io.pulumi.resources.Resource
      * The description of the approval rule template. Maximum of 1000 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -40,7 +40,7 @@ public final class ApprovalRuleTemplateArgs extends io.pulumi.resources.Resource
      * The name for the approval rule template. Maximum of 100 characters.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

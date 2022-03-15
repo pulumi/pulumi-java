@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.ApiOperationResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EgressToResponse {
     /**
      * A list of ApiOperations allowed to be performed by the sources specified in the corresponding EgressFrom. A request matches if it uses an operation/service in this list.
@@ -22,10 +22,10 @@ public final class EgressToResponse {
      */
     private final List<String> resources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EgressToResponse(
-        @OutputCustomType.Parameter("operations") List<ApiOperationResponse> operations,
-        @OutputCustomType.Parameter("resources") List<String> resources) {
+        @CustomType.Parameter("operations") List<ApiOperationResponse> operations,
+        @CustomType.Parameter("resources") List<String> resources) {
         this.operations = operations;
         this.resources = resources;
     }

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NatRuleResponse {
     /**
      * Description of the rule.
@@ -69,19 +69,19 @@ public final class NatRuleResponse {
      */
     private final @Nullable String translatedPort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NatRuleResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
-        @OutputCustomType.Parameter("destinationPorts") @Nullable List<String> destinationPorts,
-        @OutputCustomType.Parameter("ipProtocols") @Nullable List<String> ipProtocols,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("ruleType") String ruleType,
-        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
-        @OutputCustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups,
-        @OutputCustomType.Parameter("translatedAddress") @Nullable String translatedAddress,
-        @OutputCustomType.Parameter("translatedFqdn") @Nullable String translatedFqdn,
-        @OutputCustomType.Parameter("translatedPort") @Nullable String translatedPort) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
+        @CustomType.Parameter("destinationPorts") @Nullable List<String> destinationPorts,
+        @CustomType.Parameter("ipProtocols") @Nullable List<String> ipProtocols,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("ruleType") String ruleType,
+        @CustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @CustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups,
+        @CustomType.Parameter("translatedAddress") @Nullable String translatedAddress,
+        @CustomType.Parameter("translatedFqdn") @Nullable String translatedFqdn,
+        @CustomType.Parameter("translatedPort") @Nullable String translatedPort) {
         this.description = description;
         this.destinationAddresses = destinationAddresses;
         this.destinationPorts = destinationPorts;

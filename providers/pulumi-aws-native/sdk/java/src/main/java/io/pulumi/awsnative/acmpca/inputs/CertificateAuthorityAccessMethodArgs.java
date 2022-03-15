@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +18,14 @@ public final class CertificateAuthorityAccessMethodArgs extends io.pulumi.resour
 
     public static final CertificateAuthorityAccessMethodArgs Empty = new CertificateAuthorityAccessMethodArgs();
 
-    @InputImport(name="accessMethodType")
+    @Import(name="accessMethodType")
       private final @Nullable Output<String> accessMethodType;
 
     public Output<String> getAccessMethodType() {
         return this.accessMethodType == null ? Output.empty() : this.accessMethodType;
     }
 
-    @InputImport(name="customObjectIdentifier")
+    @Import(name="customObjectIdentifier")
       private final @Nullable Output<String> customObjectIdentifier;
 
     public Output<String> getCustomObjectIdentifier() {

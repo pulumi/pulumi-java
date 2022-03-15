@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.enums.AutoExecuteStatus;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ServerAdvisorArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Server Advisor.
      * 
      */
-    @InputImport(name="advisorName")
+    @Import(name="advisorName")
       private final @Nullable Output<String> advisorName;
 
     public Output<String> getAdvisorName() {
@@ -30,7 +30,7 @@ public final class ServerAdvisorArgs extends io.pulumi.resources.ResourceArgs {
      * Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are 'Enabled' and 'Disabled'
      * 
      */
-    @InputImport(name="autoExecuteStatus", required=true)
+    @Import(name="autoExecuteStatus", required=true)
       private final Output<AutoExecuteStatus> autoExecuteStatus;
 
     public Output<AutoExecuteStatus> getAutoExecuteStatus() {
@@ -41,7 +41,7 @@ public final class ServerAdvisorArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class ServerAdvisorArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final Output<String> serverName;
 
     public Output<String> getServerName() {

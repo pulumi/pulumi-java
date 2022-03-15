@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorMappingCompleteOperationResponse {
     /**
      * The type of completion operation.
@@ -22,10 +22,10 @@ public final class ConnectorMappingCompleteOperationResponse {
      */
     private final @Nullable String destinationFolder;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorMappingCompleteOperationResponse(
-        @OutputCustomType.Parameter("completionOperationType") @Nullable String completionOperationType,
-        @OutputCustomType.Parameter("destinationFolder") @Nullable String destinationFolder) {
+        @CustomType.Parameter("completionOperationType") @Nullable String completionOperationType,
+        @CustomType.Parameter("destinationFolder") @Nullable String destinationFolder) {
         this.completionOperationType = completionOperationType;
         this.destinationFolder = destinationFolder;
     }

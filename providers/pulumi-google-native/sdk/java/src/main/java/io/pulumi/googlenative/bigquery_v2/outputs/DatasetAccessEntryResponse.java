@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.DatasetReferenceResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatasetAccessEntryResponse {
     /**
      * [Required] The dataset this entry applies to.
@@ -18,10 +18,10 @@ public final class DatasetAccessEntryResponse {
     private final DatasetReferenceResponse dataset;
     private final List<String> targetTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetAccessEntryResponse(
-        @OutputCustomType.Parameter("dataset") DatasetReferenceResponse dataset,
-        @OutputCustomType.Parameter("targetTypes") List<String> targetTypes) {
+        @CustomType.Parameter("dataset") DatasetReferenceResponse dataset,
+        @CustomType.Parameter("targetTypes") List<String> targetTypes) {
         this.dataset = dataset;
         this.targetTypes = targetTypes;
     }

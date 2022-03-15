@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.FilterResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FilterOptionsResponse {
     /**
      * Generic filter to restrict the search, such as `lang:en`, `site:xyz`.
@@ -21,10 +21,10 @@ public final class FilterOptionsResponse {
      */
     private final String objectType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FilterOptionsResponse(
-        @OutputCustomType.Parameter("filter") FilterResponse filter,
-        @OutputCustomType.Parameter("objectType") String objectType) {
+        @CustomType.Parameter("filter") FilterResponse filter,
+        @CustomType.Parameter("objectType") String objectType) {
         this.filter = filter;
         this.objectType = objectType;
     }

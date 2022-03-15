@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ResourceRecordResponse extends io.pulumi.resources.InvokeArgs
      * Relative name of the object affected by this record. Only applicable for CNAME records. Example: 'www'.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -31,7 +31,7 @@ public final class ResourceRecordResponse extends io.pulumi.resources.InvokeArgs
      * Data for this record. Values vary by record type, as defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1).
      * 
      */
-    @InputImport(name="rrdata", required=true)
+    @Import(name="rrdata", required=true)
       private final String rrdata;
 
     public String getRrdata() {
@@ -42,7 +42,7 @@ public final class ResourceRecordResponse extends io.pulumi.resources.InvokeArgs
      * Resource record type. Example: AAAA.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.hdinsight.outputs;
 
 import io.pulumi.azurenative.hdinsight.outputs.SshPublicKeyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SshProfileResponse {
     /**
      * The list of SSH public keys.
@@ -17,8 +17,8 @@ public final class SshProfileResponse {
      */
     private final @Nullable List<SshPublicKeyResponse> publicKeys;
 
-    @OutputCustomType.Constructor
-    private SshProfileResponse(@OutputCustomType.Parameter("publicKeys") @Nullable List<SshPublicKeyResponse> publicKeys) {
+    @CustomType.Constructor
+    private SshProfileResponse(@CustomType.Parameter("publicKeys") @Nullable List<SshPublicKeyResponse> publicKeys) {
         this.publicKeys = publicKeys;
     }
 

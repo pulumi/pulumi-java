@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SkuCapacityResponse {
     /**
      * Default number of workers for this App Service plan SKU.
@@ -38,13 +38,13 @@ public final class SkuCapacityResponse {
      */
     private final @Nullable String scaleType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkuCapacityResponse(
-        @OutputCustomType.Parameter("default") @Nullable Integer $default,
-        @OutputCustomType.Parameter("elasticMaximum") @Nullable Integer elasticMaximum,
-        @OutputCustomType.Parameter("maximum") @Nullable Integer maximum,
-        @OutputCustomType.Parameter("minimum") @Nullable Integer minimum,
-        @OutputCustomType.Parameter("scaleType") @Nullable String scaleType) {
+        @CustomType.Parameter("default") @Nullable Integer $default,
+        @CustomType.Parameter("elasticMaximum") @Nullable Integer elasticMaximum,
+        @CustomType.Parameter("maximum") @Nullable Integer maximum,
+        @CustomType.Parameter("minimum") @Nullable Integer minimum,
+        @CustomType.Parameter("scaleType") @Nullable String scaleType) {
         this.$default = $default;
         this.elasticMaximum = elasticMaximum;
         this.maximum = maximum;

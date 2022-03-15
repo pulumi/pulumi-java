@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.codeartifact.DomainArgs;
 import io.pulumi.awsnative.codeartifact.outputs.DomainTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -26,7 +26,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The ARN of the domain.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -40,7 +40,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The name of the domain.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -54,7 +54,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The ARN of an AWS Key Management Service (AWS KMS) key associated with a domain.
      * 
      */
-    @OutputExport(name="encryptionKey", type=String.class, parameters={})
+    @Export(name="encryptionKey", type=String.class, parameters={})
     private Output<String> encryptionKey;
 
     /**
@@ -68,7 +68,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The name of the domain. This field is used for GetAtt
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -82,7 +82,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The 12-digit account ID of the AWS account that owns the domain. This field is used for GetAtt
      * 
      */
-    @OutputExport(name="owner", type=String.class, parameters={})
+    @Export(name="owner", type=String.class, parameters={})
     private Output<String> owner;
 
     /**
@@ -96,7 +96,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * The access control resource policy on the provided domain.
      * 
      */
-    @OutputExport(name="permissionsPolicyDocument", type=Object.class, parameters={})
+    @Export(name="permissionsPolicyDocument", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> permissionsPolicyDocument;
 
     /**
@@ -110,7 +110,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DomainTag.class})
+    @Export(name="tags", type=List.class, parameters={DomainTag.class})
     private Output</* @Nullable */ List<DomainTag>> tags;
 
     /**

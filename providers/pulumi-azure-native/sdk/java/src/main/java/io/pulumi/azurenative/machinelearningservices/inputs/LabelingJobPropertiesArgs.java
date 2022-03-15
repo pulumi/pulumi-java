@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.LabelingJobImageProp
 import io.pulumi.azurenative.machinelearningservices.inputs.LabelingJobInstructionsArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.MLAssistConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * Dataset configuration for the job.
      * 
      */
-    @InputImport(name="datasetConfiguration", required=true)
+    @Import(name="datasetConfiguration", required=true)
       private final Output<LabelingDatasetConfigurationArgs> datasetConfiguration;
 
     public Output<LabelingDatasetConfigurationArgs> getDatasetConfiguration() {
@@ -39,7 +39,7 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * Instructions for the job.
      * 
      */
-    @InputImport(name="jobInstructions", required=true)
+    @Import(name="jobInstructions", required=true)
       private final Output<LabelingJobInstructionsArgs> jobInstructions;
 
     public Output<LabelingJobInstructionsArgs> getJobInstructions() {
@@ -50,7 +50,7 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * Label categories of the job.
      * 
      */
-    @InputImport(name="labelCategories", required=true)
+    @Import(name="labelCategories", required=true)
       private final Output<Map<String,LabelCategoryArgs>> labelCategories;
 
     public Output<Map<String,LabelCategoryArgs>> getLabelCategories() {
@@ -61,7 +61,7 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * Media specific properties in a labeling job.
      * 
      */
-    @InputImport(name="labelingJobMediaProperties", required=true)
+    @Import(name="labelingJobMediaProperties", required=true)
       private final Output<LabelingJobImagePropertiesArgs> labelingJobMediaProperties;
 
     public Output<LabelingJobImagePropertiesArgs> getLabelingJobMediaProperties() {
@@ -72,7 +72,7 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * Machine learning assisted configuration for the job.
      * 
      */
-    @InputImport(name="mlAssistConfiguration")
+    @Import(name="mlAssistConfiguration")
       private final @Nullable Output<MLAssistConfigurationArgs> mlAssistConfiguration;
 
     public Output<MLAssistConfigurationArgs> getMlAssistConfiguration() {
@@ -83,7 +83,7 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * The job property dictionary. Properties can be added, but not removed or altered.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -94,7 +94,7 @@ public final class LabelingJobPropertiesArgs extends io.pulumi.resources.Resourc
      * The job tag dictionary. Tags can be added, removed, and updated.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

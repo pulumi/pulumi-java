@@ -8,7 +8,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.enums.OperatorType;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.HelmOperatorPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
      * The name of the kubernetes cluster.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -35,7 +35,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
      * The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
      * 
      */
-    @InputImport(name="clusterResourceName", required=true)
+    @Import(name="clusterResourceName", required=true)
       private final Output<String> clusterResourceName;
 
     public Output<String> getClusterResourceName() {
@@ -46,7 +46,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
      * The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
      * 
      */
-    @InputImport(name="clusterRp", required=true)
+    @Import(name="clusterRp", required=true)
       private final Output<String> clusterRp;
 
     public Output<String> getClusterRp() {
@@ -57,7 +57,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
      * Name-value pairs of protected configuration settings for the configuration
      * 
      */
-    @InputImport(name="configurationProtectedSettings")
+    @Import(name="configurationProtectedSettings")
       private final @Nullable Output<Map<String,String>> configurationProtectedSettings;
 
     public Output<Map<String,String>> getConfigurationProtectedSettings() {
@@ -68,7 +68,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
      * Option to enable Helm Operator for this git configuration.
      * 
      */
-    @InputImport(name="enableHelmOperator")
+    @Import(name="enableHelmOperator")
       private final @Nullable Output<Boolean> enableHelmOperator;
 
     public Output<Boolean> getEnableHelmOperator() {
@@ -79,7 +79,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
      * Properties for Helm operator.
      * 
      */
-    @InputImport(name="helmOperatorProperties")
+    @Import(name="helmOperatorProperties")
       private final @Nullable Output<HelmOperatorPropertiesArgs> helmOperatorProperties;
 
     public Output<HelmOperatorPropertiesArgs> getHelmOperatorProperties() {
@@ -90,7 +90,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
      * Instance name of the operator - identifying the specific configuration.
      * 
      */
-    @InputImport(name="operatorInstanceName")
+    @Import(name="operatorInstanceName")
       private final @Nullable Output<String> operatorInstanceName;
 
     public Output<String> getOperatorInstanceName() {
@@ -101,7 +101,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
      * The namespace to which this operator is installed to. Maximum of 253 lower case alphanumeric characters, hyphen and period only.
      * 
      */
-    @InputImport(name="operatorNamespace")
+    @Import(name="operatorNamespace")
       private final @Nullable Output<String> operatorNamespace;
 
     public Output<String> getOperatorNamespace() {
@@ -112,7 +112,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
      * Any Parameters for the Operator instance in string format.
      * 
      */
-    @InputImport(name="operatorParams")
+    @Import(name="operatorParams")
       private final @Nullable Output<String> operatorParams;
 
     public Output<String> getOperatorParams() {
@@ -123,7 +123,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
      * Scope at which the operator will be installed.
      * 
      */
-    @InputImport(name="operatorScope")
+    @Import(name="operatorScope")
       private final @Nullable Output<Either<String,OperatorScopeType>> operatorScope;
 
     public Output<Either<String,OperatorScopeType>> getOperatorScope() {
@@ -134,7 +134,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
      * Type of the operator
      * 
      */
-    @InputImport(name="operatorType")
+    @Import(name="operatorType")
       private final @Nullable Output<Either<String,OperatorType>> operatorType;
 
     public Output<Either<String,OperatorType>> getOperatorType() {
@@ -145,7 +145,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
      * Url of the SourceControl Repository.
      * 
      */
-    @InputImport(name="repositoryUrl")
+    @Import(name="repositoryUrl")
       private final @Nullable Output<String> repositoryUrl;
 
     public Output<String> getRepositoryUrl() {
@@ -156,7 +156,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -167,7 +167,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
      * Name of the Source Control Configuration.
      * 
      */
-    @InputImport(name="sourceControlConfigurationName")
+    @Import(name="sourceControlConfigurationName")
       private final @Nullable Output<String> sourceControlConfigurationName;
 
     public Output<String> getSourceControlConfigurationName() {
@@ -178,7 +178,7 @@ public final class SourceControlConfigurationArgs extends io.pulumi.resources.Re
      * Base64-encoded known_hosts contents containing public SSH keys required to access private Git instances
      * 
      */
-    @InputImport(name="sshKnownHostsContents")
+    @Import(name="sshKnownHostsContents")
       private final @Nullable Output<String> sshKnownHostsContents;
 
     public Output<String> getSshKnownHostsContents() {

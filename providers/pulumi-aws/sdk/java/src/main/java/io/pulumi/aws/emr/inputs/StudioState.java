@@ -4,7 +4,7 @@
 package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
 
     public static final StudioState Empty = new StudioState();
 
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -27,7 +27,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the Studio authenticates users using IAM or Amazon Web Services SSO. Valid values are `SSO` or `IAM`.
      * 
      */
-    @InputImport(name="authMode")
+    @Import(name="authMode")
       private final @Nullable Output<String> authMode;
 
     public Output<String> getAuthMode() {
@@ -38,7 +38,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * The Amazon S3 location to back up Amazon EMR Studio Workspaces and notebook files.
      * 
      */
-    @InputImport(name="defaultS3Location")
+    @Import(name="defaultS3Location")
       private final @Nullable Output<String> defaultS3Location;
 
     public Output<String> getDefaultS3Location() {
@@ -49,7 +49,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * A detailed description of the Amazon EMR Studio.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -60,7 +60,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * The ID of the Amazon EMR Studio Engine security group. The Engine security group allows inbound network traffic from the Workspace security group, and it must be in the same VPC specified by `vpc_id`.
      * 
      */
-    @InputImport(name="engineSecurityGroupId")
+    @Import(name="engineSecurityGroupId")
       private final @Nullable Output<String> engineSecurityGroupId;
 
     public Output<String> getEngineSecurityGroupId() {
@@ -71,7 +71,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * The authentication endpoint of your identity provider (IdP). Specify this value when you use IAM authentication and want to let federated users log in to a Studio with the Studio URL and credentials from your IdP. Amazon EMR Studio redirects users to this endpoint to enter credentials.
      * 
      */
-    @InputImport(name="idpAuthUrl")
+    @Import(name="idpAuthUrl")
       private final @Nullable Output<String> idpAuthUrl;
 
     public Output<String> getIdpAuthUrl() {
@@ -82,7 +82,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * The name that your identity provider (IdP) uses for its RelayState parameter. For example, RelayState or TargetSource. Specify this value when you use IAM authentication and want to let federated users log in to a Studio using the Studio URL. The RelayState parameter differs by IdP.
      * 
      */
-    @InputImport(name="idpRelayStateParameterName")
+    @Import(name="idpRelayStateParameterName")
       private final @Nullable Output<String> idpRelayStateParameterName;
 
     public Output<String> getIdpRelayStateParameterName() {
@@ -93,7 +93,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * A descriptive name for the Amazon EMR Studio.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -104,7 +104,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * The IAM role that the Amazon EMR Studio assumes. The service role provides a way for Amazon EMR Studio to interoperate with other Amazon Web Services services.
      * 
      */
-    @InputImport(name="serviceRole")
+    @Import(name="serviceRole")
       private final @Nullable Output<String> serviceRole;
 
     public Output<String> getServiceRole() {
@@ -115,7 +115,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * A list of subnet IDs to associate with the Amazon EMR Studio. A Studio can have a maximum of 5 subnets. The subnets must belong to the VPC specified by `vpc_id`. Studio users can create a Workspace in any of the specified subnets.
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -126,14 +126,14 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * list of tags to apply to the EMR Cluster. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -144,7 +144,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * The unique access URL of the Amazon EMR Studio.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
@@ -155,7 +155,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * - The IAM user role that users and groups assume when logged in to an Amazon EMR Studio. Only specify a User Role when you use Amazon Web Services SSO authentication. The permissions attached to the User Role can be scoped down for each user or group using session policies.
      * 
      */
-    @InputImport(name="userRole")
+    @Import(name="userRole")
       private final @Nullable Output<String> userRole;
 
     public Output<String> getUserRole() {
@@ -166,7 +166,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * The ID of the Amazon Virtual Private Cloud (Amazon VPC) to associate with the Studio.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
@@ -177,7 +177,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
      * The ID of the Amazon EMR Studio Workspace security group. The Workspace security group allows outbound network traffic to resources in the Engine security group, and it must be in the same VPC specified by `vpc_id`.
      * 
      */
-    @InputImport(name="workspaceSecurityGroupId")
+    @Import(name="workspaceSecurityGroupId")
       private final @Nullable Output<String> workspaceSecurityGroupId;
 
     public Output<String> getWorkspaceSecurityGroupId() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetStaticMemberArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the network group.
      * 
      */
-    @InputImport(name="networkGroupName", required=true)
+    @Import(name="networkGroupName", required=true)
       private final String networkGroupName;
 
     public String getNetworkGroupName() {
@@ -27,7 +27,7 @@ public final class GetStaticMemberArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the network manager.
      * 
      */
-    @InputImport(name="networkManagerName", required=true)
+    @Import(name="networkManagerName", required=true)
       private final String networkManagerName;
 
     public String getNetworkManagerName() {
@@ -38,7 +38,7 @@ public final class GetStaticMemberArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class GetStaticMemberArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the static member.
      * 
      */
-    @InputImport(name="staticMemberName", required=true)
+    @Import(name="staticMemberName", required=true)
       private final String staticMemberName;
 
     public String getStaticMemberName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.backup.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetBackupPlanArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBackupPlanArgs Empty = new GetBackupPlanArgs();
 
-    @InputImport(name="backupPlanId", required=true)
+    @Import(name="backupPlanId", required=true)
       private final String backupPlanId;
 
     public String getBackupPlanId() {

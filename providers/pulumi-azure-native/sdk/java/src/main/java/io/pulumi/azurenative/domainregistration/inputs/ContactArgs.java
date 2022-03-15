@@ -5,7 +5,7 @@ package io.pulumi.azurenative.domainregistration.inputs;
 
 import io.pulumi.azurenative.domainregistration.inputs.AddressArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * Mailing address.
      * 
      */
-    @InputImport(name="addressMailing")
+    @Import(name="addressMailing")
       private final @Nullable Output<AddressArgs> addressMailing;
 
     public Output<AddressArgs> getAddressMailing() {
@@ -35,7 +35,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * Email address.
      * 
      */
-    @InputImport(name="email", required=true)
+    @Import(name="email", required=true)
       private final Output<String> email;
 
     public Output<String> getEmail() {
@@ -46,7 +46,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * Fax number.
      * 
      */
-    @InputImport(name="fax")
+    @Import(name="fax")
       private final @Nullable Output<String> fax;
 
     public Output<String> getFax() {
@@ -57,7 +57,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * Job title.
      * 
      */
-    @InputImport(name="jobTitle")
+    @Import(name="jobTitle")
       private final @Nullable Output<String> jobTitle;
 
     public Output<String> getJobTitle() {
@@ -68,7 +68,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * First name.
      * 
      */
-    @InputImport(name="nameFirst", required=true)
+    @Import(name="nameFirst", required=true)
       private final Output<String> nameFirst;
 
     public Output<String> getNameFirst() {
@@ -79,7 +79,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * Last name.
      * 
      */
-    @InputImport(name="nameLast", required=true)
+    @Import(name="nameLast", required=true)
       private final Output<String> nameLast;
 
     public Output<String> getNameLast() {
@@ -90,7 +90,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * Middle name.
      * 
      */
-    @InputImport(name="nameMiddle")
+    @Import(name="nameMiddle")
       private final @Nullable Output<String> nameMiddle;
 
     public Output<String> getNameMiddle() {
@@ -101,7 +101,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * Organization contact belongs to.
      * 
      */
-    @InputImport(name="organization")
+    @Import(name="organization")
       private final @Nullable Output<String> organization;
 
     public Output<String> getOrganization() {
@@ -112,7 +112,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * Phone number.
      * 
      */
-    @InputImport(name="phone", required=true)
+    @Import(name="phone", required=true)
       private final Output<String> phone;
 
     public Output<String> getPhone() {

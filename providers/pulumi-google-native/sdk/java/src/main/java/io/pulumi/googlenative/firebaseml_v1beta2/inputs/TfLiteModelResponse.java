@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaseml_v1beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class TfLiteModelResponse extends io.pulumi.resources.InvokeArgs {
      * The AutoML model id referencing a model you created with the AutoML API. The name should have format 'projects//locations//models/' (This is the model resource name returned from the AutoML API)
      * 
      */
-    @InputImport(name="automlModel", required=true)
+    @Import(name="automlModel", required=true)
       private final String automlModel;
 
     public String getAutomlModel() {
@@ -31,7 +31,7 @@ public final class TfLiteModelResponse extends io.pulumi.resources.InvokeArgs {
      * The TfLite file containing the model. (Stored in Google Cloud). The gcs_tflite_uri should have form: gs://some-bucket/some-model.tflite Note: If you update the file in the original location, it is necessary to call UpdateModel for ML to pick up and validate the updated file.
      * 
      */
-    @InputImport(name="gcsTfliteUri", required=true)
+    @Import(name="gcsTfliteUri", required=true)
       private final String gcsTfliteUri;
 
     public String getGcsTfliteUri() {
@@ -42,7 +42,7 @@ public final class TfLiteModelResponse extends io.pulumi.resources.InvokeArgs {
      * The size of the TFLite model
      * 
      */
-    @InputImport(name="sizeBytes", required=true)
+    @Import(name="sizeBytes", required=true)
       private final String sizeBytes;
 
     public String getSizeBytes() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClusterConfigWorkerConfigAccelerator {
     /**
      * The number of the accelerator cards of this type exposed to this instance. Often restricted to one of `1`, `2`, `4`, or `8`.
@@ -21,10 +21,10 @@ public final class ClusterClusterConfigWorkerConfigAccelerator {
      */
     private final String acceleratorType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterClusterConfigWorkerConfigAccelerator(
-        @OutputCustomType.Parameter("acceleratorCount") Integer acceleratorCount,
-        @OutputCustomType.Parameter("acceleratorType") String acceleratorType) {
+        @CustomType.Parameter("acceleratorCount") Integer acceleratorCount,
+        @CustomType.Parameter("acceleratorType") String acceleratorType) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorType = acceleratorType;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datastream_v1.inputs.MysqlRdbmsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
      * MySQL objects to exclude from the stream.
      * 
      */
-    @InputImport(name="excludeObjects")
+    @Import(name="excludeObjects")
       private final @Nullable Output<MysqlRdbmsArgs> excludeObjects;
 
     public Output<MysqlRdbmsArgs> getExcludeObjects() {
@@ -33,7 +33,7 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
      * MySQL objects to retrieve from the source.
      * 
      */
-    @InputImport(name="includeObjects")
+    @Import(name="includeObjects")
       private final @Nullable Output<MysqlRdbmsArgs> includeObjects;
 
     public Output<MysqlRdbmsArgs> getIncludeObjects() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.dbforpostgresql.ServerKeyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * The key creation date.
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -48,7 +48,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * Kind of encryption protector used to protect the key.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -62,7 +62,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * The key type like 'AzureKeyVault'.
      * 
      */
-    @OutputExport(name="serverKeyType", type=String.class, parameters={})
+    @Export(name="serverKeyType", type=String.class, parameters={})
     private Output<String> serverKeyType;
 
     /**
@@ -90,7 +90,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -104,7 +104,7 @@ public class ServerKey extends io.pulumi.resources.CustomResource {
      * The URI of the key.
      * 
      */
-    @OutputExport(name="uri", type=String.class, parameters={})
+    @Export(name="uri", type=String.class, parameters={})
     private Output</* @Nullable */ String> uri;
 
     /**

@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.timestream.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScheduledQuerySnsConfiguration {
     private final String topicArn;
 
-    @OutputCustomType.Constructor
-    private ScheduledQuerySnsConfiguration(@OutputCustomType.Parameter("topicArn") String topicArn) {
+    @CustomType.Constructor
+    private ScheduledQuerySnsConfiguration(@CustomType.Parameter("topicArn") String topicArn) {
         this.topicArn = topicArn;
     }
 

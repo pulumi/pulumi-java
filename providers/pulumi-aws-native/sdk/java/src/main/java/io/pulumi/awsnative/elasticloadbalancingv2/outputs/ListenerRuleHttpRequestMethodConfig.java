@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerRuleHttpRequestMethodConfig {
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor
-    private ListenerRuleHttpRequestMethodConfig(@OutputCustomType.Parameter("values") @Nullable List<String> values) {
+    @CustomType.Constructor
+    private ListenerRuleHttpRequestMethodConfig(@CustomType.Parameter("values") @Nullable List<String> values) {
         this.values = values;
     }
 

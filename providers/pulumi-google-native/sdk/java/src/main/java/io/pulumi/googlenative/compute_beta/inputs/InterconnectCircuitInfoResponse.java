@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class InterconnectCircuitInfoResponse extends io.pulumi.resources.I
      * Customer-side demarc ID for this circuit.
      * 
      */
-    @InputImport(name="customerDemarcId", required=true)
+    @Import(name="customerDemarcId", required=true)
       private final String customerDemarcId;
 
     public String getCustomerDemarcId() {
@@ -31,7 +31,7 @@ public final class InterconnectCircuitInfoResponse extends io.pulumi.resources.I
      * Google-assigned unique ID for this circuit. Assigned at circuit turn-up.
      * 
      */
-    @InputImport(name="googleCircuitId", required=true)
+    @Import(name="googleCircuitId", required=true)
       private final String googleCircuitId;
 
     public String getGoogleCircuitId() {
@@ -42,7 +42,7 @@ public final class InterconnectCircuitInfoResponse extends io.pulumi.resources.I
      * Google-side demarc ID for this circuit. Assigned at circuit turn-up and provided by Google to the customer in the LOA.
      * 
      */
-    @InputImport(name="googleDemarcId", required=true)
+    @Import(name="googleDemarcId", required=true)
       private final String googleDemarcId;
 
     public String getGoogleDemarcId() {

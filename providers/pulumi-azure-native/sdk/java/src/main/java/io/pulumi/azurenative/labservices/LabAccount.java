@@ -9,7 +9,7 @@ import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
 import io.pulumi.azurenative.labservices.outputs.SizeConfigurationPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class LabAccount extends io.pulumi.resources.CustomResource {
      * Represents if region selection is enabled
      * 
      */
-    @OutputExport(name="enabledRegionSelection", type=Boolean.class, parameters={})
+    @Export(name="enabledRegionSelection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabledRegionSelection;
 
     /**
@@ -49,7 +49,7 @@ public class LabAccount extends io.pulumi.resources.CustomResource {
      * The details of the latest operation. ex: status, error
      * 
      */
-    @OutputExport(name="latestOperationResult", type=LatestOperationResultResponse.class, parameters={})
+    @Export(name="latestOperationResult", type=LatestOperationResultResponse.class, parameters={})
     private Output<LatestOperationResultResponse> latestOperationResult;
 
     /**
@@ -63,7 +63,7 @@ public class LabAccount extends io.pulumi.resources.CustomResource {
      * The location of the resource.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -77,7 +77,7 @@ public class LabAccount extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class LabAccount extends io.pulumi.resources.CustomResource {
      * The provisioning status of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -105,7 +105,7 @@ public class LabAccount extends io.pulumi.resources.CustomResource {
      * Represents the size configuration under the lab account
      * 
      */
-    @OutputExport(name="sizeConfiguration", type=SizeConfigurationPropertiesResponse.class, parameters={})
+    @Export(name="sizeConfiguration", type=SizeConfigurationPropertiesResponse.class, parameters={})
     private Output<SizeConfigurationPropertiesResponse> sizeConfiguration;
 
     /**
@@ -119,7 +119,7 @@ public class LabAccount extends io.pulumi.resources.CustomResource {
      * The tags of the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -133,7 +133,7 @@ public class LabAccount extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -147,7 +147,7 @@ public class LabAccount extends io.pulumi.resources.CustomResource {
      * The unique immutable identifier of a resource (Guid).
      * 
      */
-    @OutputExport(name="uniqueIdentifier", type=String.class, parameters={})
+    @Export(name="uniqueIdentifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> uniqueIdentifier;
 
     /**

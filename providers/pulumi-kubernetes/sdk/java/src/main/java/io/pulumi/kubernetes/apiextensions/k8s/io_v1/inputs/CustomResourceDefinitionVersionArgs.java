@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceColumnDefinitionArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceSubresourcesArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceValidationArgs;
@@ -27,7 +27,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. If no columns are specified, a single column displaying the age of the custom resource is used.
      * 
      */
-    @InputImport(name="additionalPrinterColumns")
+    @Import(name="additionalPrinterColumns")
       private final @Nullable Output<List<CustomResourceColumnDefinitionArgs>> additionalPrinterColumns;
 
     public Output<List<CustomResourceColumnDefinitionArgs>> getAdditionalPrinterColumns() {
@@ -38,7 +38,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * deprecated indicates this version of the custom resource API is deprecated. When set to true, API requests to this version receive a warning header in the server response. Defaults to false.
      * 
      */
-    @InputImport(name="deprecated")
+    @Import(name="deprecated")
       private final @Nullable Output<Boolean> deprecated;
 
     public Output<Boolean> getDeprecated() {
@@ -49,7 +49,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * deprecationWarning overrides the default warning returned to API clients. May only be set when `deprecated` is true. The default warning indicates this version is deprecated and recommends use of the newest served version of equal or greater stability, if one exists.
      * 
      */
-    @InputImport(name="deprecationWarning")
+    @Import(name="deprecationWarning")
       private final @Nullable Output<String> deprecationWarning;
 
     public Output<String> getDeprecationWarning() {
@@ -60,7 +60,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * name is the version name, e.g. “v1”, “v2beta1”, etc. The custom resources are served under this version at `/apis/<group>/<version>/...` if `served` is true.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -71,7 +71,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * schema describes the schema used for validation, pruning, and defaulting of this version of the custom resource.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<CustomResourceValidationArgs> schema;
 
     public Output<CustomResourceValidationArgs> getSchema() {
@@ -82,7 +82,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * served is a flag enabling/disabling this version from being served via REST APIs
      * 
      */
-    @InputImport(name="served", required=true)
+    @Import(name="served", required=true)
       private final Output<Boolean> served;
 
     public Output<Boolean> getServed() {
@@ -93,7 +93,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * storage indicates this version should be used when persisting custom resources to storage. There must be exactly one version with storage=true.
      * 
      */
-    @InputImport(name="storage", required=true)
+    @Import(name="storage", required=true)
       private final Output<Boolean> storage;
 
     public Output<Boolean> getStorage() {
@@ -104,7 +104,7 @@ public final class CustomResourceDefinitionVersionArgs extends io.pulumi.resourc
      * subresources specify what subresources this version of the defined custom resource have.
      * 
      */
-    @InputImport(name="subresources")
+    @Import(name="subresources")
       private final @Nullable Output<CustomResourceSubresourcesArgs> subresources;
 
     public Output<CustomResourceSubresourcesArgs> getSubresources() {

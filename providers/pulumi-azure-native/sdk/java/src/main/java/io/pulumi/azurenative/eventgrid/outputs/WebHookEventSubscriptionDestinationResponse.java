@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebHookEventSubscriptionDestinationResponse {
     /**
      * The Azure Active Directory Application ID or URI to get the access token that will be included as the bearer token in delivery requests.
@@ -49,15 +49,15 @@ public final class WebHookEventSubscriptionDestinationResponse {
      */
     private final @Nullable Integer preferredBatchSizeInKilobytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebHookEventSubscriptionDestinationResponse(
-        @OutputCustomType.Parameter("azureActiveDirectoryApplicationIdOrUri") @Nullable String azureActiveDirectoryApplicationIdOrUri,
-        @OutputCustomType.Parameter("azureActiveDirectoryTenantId") @Nullable String azureActiveDirectoryTenantId,
-        @OutputCustomType.Parameter("endpointBaseUrl") String endpointBaseUrl,
-        @OutputCustomType.Parameter("endpointType") String endpointType,
-        @OutputCustomType.Parameter("endpointUrl") @Nullable String endpointUrl,
-        @OutputCustomType.Parameter("maxEventsPerBatch") @Nullable Integer maxEventsPerBatch,
-        @OutputCustomType.Parameter("preferredBatchSizeInKilobytes") @Nullable Integer preferredBatchSizeInKilobytes) {
+        @CustomType.Parameter("azureActiveDirectoryApplicationIdOrUri") @Nullable String azureActiveDirectoryApplicationIdOrUri,
+        @CustomType.Parameter("azureActiveDirectoryTenantId") @Nullable String azureActiveDirectoryTenantId,
+        @CustomType.Parameter("endpointBaseUrl") String endpointBaseUrl,
+        @CustomType.Parameter("endpointType") String endpointType,
+        @CustomType.Parameter("endpointUrl") @Nullable String endpointUrl,
+        @CustomType.Parameter("maxEventsPerBatch") @Nullable Integer maxEventsPerBatch,
+        @CustomType.Parameter("preferredBatchSizeInKilobytes") @Nullable Integer preferredBatchSizeInKilobytes) {
         this.azureActiveDirectoryApplicationIdOrUri = azureActiveDirectoryApplicationIdOrUri;
         this.azureActiveDirectoryTenantId = azureActiveDirectoryTenantId;
         this.endpointBaseUrl = endpointBaseUrl;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The port value for this SRV record.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -34,7 +34,7 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The priority value for this SRV record.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -45,7 +45,7 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The target domain name for this SRV record.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {
@@ -56,7 +56,7 @@ public final class SrvRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The weight value for this SRV record.
      * 
      */
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
     public Output<Integer> getWeight() {

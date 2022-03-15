@@ -5,13 +5,13 @@ package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.IpAddressRangeResponse;
 import io.pulumi.azurenative.logic.outputs.OpenAuthenticationAccessPoliciesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowAccessControlConfigurationPolicyResponse {
     /**
      * The allowed caller IP address ranges.
@@ -24,10 +24,10 @@ public final class FlowAccessControlConfigurationPolicyResponse {
      */
     private final @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowAccessControlConfigurationPolicyResponse(
-        @OutputCustomType.Parameter("allowedCallerIpAddresses") @Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses,
-        @OutputCustomType.Parameter("openAuthenticationPolicies") @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies) {
+        @CustomType.Parameter("allowedCallerIpAddresses") @Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses,
+        @CustomType.Parameter("openAuthenticationPolicies") @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies) {
         this.allowedCallerIpAddresses = allowedCallerIpAddresses;
         this.openAuthenticationPolicies = openAuthenticationPolicies;
     }

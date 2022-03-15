@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.elastictranscoder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PresetAudioCodecOptions {
     /**
      * The bit depth of a sample is how many bits of information are included in the audio samples. Valid values are `16` and `24`. (FLAC/PCM Only)
@@ -32,12 +32,12 @@ public final class PresetAudioCodecOptions {
      */
     private final @Nullable String signed;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PresetAudioCodecOptions(
-        @OutputCustomType.Parameter("bitDepth") @Nullable String bitDepth,
-        @OutputCustomType.Parameter("bitOrder") @Nullable String bitOrder,
-        @OutputCustomType.Parameter("profile") @Nullable String profile,
-        @OutputCustomType.Parameter("signed") @Nullable String signed) {
+        @CustomType.Parameter("bitDepth") @Nullable String bitDepth,
+        @CustomType.Parameter("bitOrder") @Nullable String bitOrder,
+        @CustomType.Parameter("profile") @Nullable String profile,
+        @CustomType.Parameter("signed") @Nullable String signed) {
         this.bitDepth = bitDepth;
         this.bitOrder = bitOrder;
         this.profile = profile;

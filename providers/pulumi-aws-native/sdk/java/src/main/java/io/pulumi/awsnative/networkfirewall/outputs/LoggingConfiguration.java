@@ -4,16 +4,16 @@
 package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.outputs.LoggingConfigurationLogDestinationConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LoggingConfiguration {
     private final List<LoggingConfigurationLogDestinationConfig> logDestinationConfigs;
 
-    @OutputCustomType.Constructor
-    private LoggingConfiguration(@OutputCustomType.Parameter("logDestinationConfigs") List<LoggingConfigurationLogDestinationConfig> logDestinationConfigs) {
+    @CustomType.Constructor
+    private LoggingConfiguration(@CustomType.Parameter("logDestinationConfigs") List<LoggingConfigurationLogDestinationConfig> logDestinationConfigs) {
         this.logDestinationConfigs = logDestinationConfigs;
     }
 

@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRegionResult {
     private final String region;
 
-    @OutputCustomType.Constructor
-    private GetRegionResult(@OutputCustomType.Parameter("region") String region) {
+    @CustomType.Constructor
+    private GetRegionResult(@CustomType.Parameter("region") String region) {
         this.region = region;
     }
 

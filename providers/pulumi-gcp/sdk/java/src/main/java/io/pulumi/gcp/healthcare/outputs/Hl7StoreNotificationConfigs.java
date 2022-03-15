@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.healthcare.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Hl7StoreNotificationConfigs {
     /**
      * Restricts notifications sent for messages matching a filter. If this is empty, all messages
@@ -35,10 +35,10 @@ public final class Hl7StoreNotificationConfigs {
      */
     private final String pubsubTopic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Hl7StoreNotificationConfigs(
-        @OutputCustomType.Parameter("filter") @Nullable String filter,
-        @OutputCustomType.Parameter("pubsubTopic") String pubsubTopic) {
+        @CustomType.Parameter("filter") @Nullable String filter,
+        @CustomType.Parameter("pubsubTopic") String pubsubTopic) {
         this.filter = filter;
         this.pubsubTopic = pubsubTopic;
     }

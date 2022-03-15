@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SmsChannelPropertiesResponse extends io.pulumi.resources.Invo
      * The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
-    @InputImport(name="accountSID", required=true)
+    @Import(name="accountSID", required=true)
       private final String accountSID;
 
     public String getAccountSID() {
@@ -34,7 +34,7 @@ public final class SmsChannelPropertiesResponse extends io.pulumi.resources.Invo
      * The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
-    @InputImport(name="authToken")
+    @Import(name="authToken")
       private final @Nullable String authToken;
 
     public Optional<String> getAuthToken() {
@@ -45,7 +45,7 @@ public final class SmsChannelPropertiesResponse extends io.pulumi.resources.Invo
      * Whether this channel is enabled for the bot
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
@@ -56,7 +56,7 @@ public final class SmsChannelPropertiesResponse extends io.pulumi.resources.Invo
      * Whether this channel is validated for the bot
      * 
      */
-    @InputImport(name="isValidated")
+    @Import(name="isValidated")
       private final @Nullable Boolean isValidated;
 
     public Optional<Boolean> getIsValidated() {
@@ -67,7 +67,7 @@ public final class SmsChannelPropertiesResponse extends io.pulumi.resources.Invo
      * The Sms phone
      * 
      */
-    @InputImport(name="phone", required=true)
+    @Import(name="phone", required=true)
       private final String phone;
 
     public String getPhone() {

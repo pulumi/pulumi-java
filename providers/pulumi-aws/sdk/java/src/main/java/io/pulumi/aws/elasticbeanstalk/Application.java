@@ -8,7 +8,7 @@ import io.pulumi.aws.elasticbeanstalk.ApplicationArgs;
 import io.pulumi.aws.elasticbeanstalk.inputs.ApplicationState;
 import io.pulumi.aws.elasticbeanstalk.outputs.ApplicationAppversionLifecycle;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -35,7 +35,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws:elasticbeanstalk/application:Application")
 public class Application extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="appversionLifecycle", type=ApplicationAppversionLifecycle.class, parameters={})
+    @Export(name="appversionLifecycle", type=ApplicationAppversionLifecycle.class, parameters={})
     private Output</* @Nullable */ ApplicationAppversionLifecycle> appversionLifecycle;
 
     public Output</* @Nullable */ ApplicationAppversionLifecycle> getAppversionLifecycle() {
@@ -45,7 +45,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The ARN assigned by AWS for this Elastic Beanstalk Application.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -59,7 +59,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Short description of the application
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -73,7 +73,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The name of the application, must be unique within your account
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -87,7 +87,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * Key-value map of tags for the Elastic Beanstalk Application. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -101,7 +101,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

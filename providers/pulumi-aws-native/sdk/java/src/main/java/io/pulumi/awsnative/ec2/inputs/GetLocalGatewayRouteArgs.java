@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetLocalGatewayRouteArgs extends io.pulumi.resources.InvokeAr
      * The CIDR block used for destination matches.
      * 
      */
-    @InputImport(name="destinationCidrBlock", required=true)
+    @Import(name="destinationCidrBlock", required=true)
       private final String destinationCidrBlock;
 
     public String getDestinationCidrBlock() {
@@ -27,7 +27,7 @@ public final class GetLocalGatewayRouteArgs extends io.pulumi.resources.InvokeAr
      * The ID of the local gateway route table.
      * 
      */
-    @InputImport(name="localGatewayRouteTableId", required=true)
+    @Import(name="localGatewayRouteTableId", required=true)
       private final String localGatewayRouteTableId;
 
     public String getLocalGatewayRouteTableId() {

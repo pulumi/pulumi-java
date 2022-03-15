@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class GalleryImageReferenceResponse extends io.pulumi.resources.Inv
      * The offer of the gallery image.
      * 
      */
-    @InputImport(name="offer")
+    @Import(name="offer")
       private final @Nullable String offer;
 
     public Optional<String> getOffer() {
@@ -33,7 +33,7 @@ public final class GalleryImageReferenceResponse extends io.pulumi.resources.Inv
      * The OS type of the gallery image.
      * 
      */
-    @InputImport(name="osType")
+    @Import(name="osType")
       private final @Nullable String osType;
 
     public Optional<String> getOsType() {
@@ -44,7 +44,7 @@ public final class GalleryImageReferenceResponse extends io.pulumi.resources.Inv
      * The publisher of the gallery image.
      * 
      */
-    @InputImport(name="publisher")
+    @Import(name="publisher")
       private final @Nullable String publisher;
 
     public Optional<String> getPublisher() {
@@ -55,7 +55,7 @@ public final class GalleryImageReferenceResponse extends io.pulumi.resources.Inv
      * The SKU of the gallery image.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable String sku;
 
     public Optional<String> getSku() {
@@ -66,7 +66,7 @@ public final class GalleryImageReferenceResponse extends io.pulumi.resources.Inv
      * The version of the gallery image.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

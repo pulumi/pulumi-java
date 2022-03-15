@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.compute_beta.outputs.AdvancedMachineFeaturesResponse;
 import io.pulumi.googlenative.compute_beta.outputs.AttachedDiskResponse;
@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceResult {
     /**
      * Controls for advanced machine-related behavior features.
@@ -240,53 +240,53 @@ public final class GetInstanceResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceResult(
-        @OutputCustomType.Parameter("advancedMachineFeatures") AdvancedMachineFeaturesResponse advancedMachineFeatures,
-        @OutputCustomType.Parameter("canIpForward") Boolean canIpForward,
-        @OutputCustomType.Parameter("confidentialInstanceConfig") ConfidentialInstanceConfigResponse confidentialInstanceConfig,
-        @OutputCustomType.Parameter("cpuPlatform") String cpuPlatform,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("deletionProtection") Boolean deletionProtection,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("disks") List<AttachedDiskResponse> disks,
-        @OutputCustomType.Parameter("displayDevice") DisplayDeviceResponse displayDevice,
-        @OutputCustomType.Parameter("eraseWindowsVssSignature") Boolean eraseWindowsVssSignature,
-        @OutputCustomType.Parameter("fingerprint") String fingerprint,
-        @OutputCustomType.Parameter("guestAccelerators") List<AcceleratorConfigResponse> guestAccelerators,
-        @OutputCustomType.Parameter("hostname") String hostname,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("lastStartTimestamp") String lastStartTimestamp,
-        @OutputCustomType.Parameter("lastStopTimestamp") String lastStopTimestamp,
-        @OutputCustomType.Parameter("lastSuspendedTimestamp") String lastSuspendedTimestamp,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("metadata") MetadataResponse metadata,
-        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
-        @OutputCustomType.Parameter("networkPerformanceConfig") NetworkPerformanceConfigResponse networkPerformanceConfig,
-        @OutputCustomType.Parameter("params") InstanceParamsResponse params,
-        @OutputCustomType.Parameter("postKeyRevocationActionType") String postKeyRevocationActionType,
-        @OutputCustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
-        @OutputCustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
-        @OutputCustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
-        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
-        @OutputCustomType.Parameter("scheduling") SchedulingResponse scheduling,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("serviceAccounts") List<ServiceAccountResponse> serviceAccounts,
-        @OutputCustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
-        @OutputCustomType.Parameter("shieldedInstanceIntegrityPolicy") ShieldedInstanceIntegrityPolicyResponse shieldedInstanceIntegrityPolicy,
-        @OutputCustomType.Parameter("shieldedVmConfig") ShieldedVmConfigResponse shieldedVmConfig,
-        @OutputCustomType.Parameter("shieldedVmIntegrityPolicy") ShieldedVmIntegrityPolicyResponse shieldedVmIntegrityPolicy,
-        @OutputCustomType.Parameter("sourceMachineImage") String sourceMachineImage,
-        @OutputCustomType.Parameter("sourceMachineImageEncryptionKey") CustomerEncryptionKeyResponse sourceMachineImageEncryptionKey,
-        @OutputCustomType.Parameter("startRestricted") Boolean startRestricted,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusMessage") String statusMessage,
-        @OutputCustomType.Parameter("tags") TagsResponse tags,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("advancedMachineFeatures") AdvancedMachineFeaturesResponse advancedMachineFeatures,
+        @CustomType.Parameter("canIpForward") Boolean canIpForward,
+        @CustomType.Parameter("confidentialInstanceConfig") ConfidentialInstanceConfigResponse confidentialInstanceConfig,
+        @CustomType.Parameter("cpuPlatform") String cpuPlatform,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("deletionProtection") Boolean deletionProtection,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("disks") List<AttachedDiskResponse> disks,
+        @CustomType.Parameter("displayDevice") DisplayDeviceResponse displayDevice,
+        @CustomType.Parameter("eraseWindowsVssSignature") Boolean eraseWindowsVssSignature,
+        @CustomType.Parameter("fingerprint") String fingerprint,
+        @CustomType.Parameter("guestAccelerators") List<AcceleratorConfigResponse> guestAccelerators,
+        @CustomType.Parameter("hostname") String hostname,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("lastStartTimestamp") String lastStartTimestamp,
+        @CustomType.Parameter("lastStopTimestamp") String lastStopTimestamp,
+        @CustomType.Parameter("lastSuspendedTimestamp") String lastSuspendedTimestamp,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("metadata") MetadataResponse metadata,
+        @CustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @CustomType.Parameter("networkPerformanceConfig") NetworkPerformanceConfigResponse networkPerformanceConfig,
+        @CustomType.Parameter("params") InstanceParamsResponse params,
+        @CustomType.Parameter("postKeyRevocationActionType") String postKeyRevocationActionType,
+        @CustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
+        @CustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
+        @CustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
+        @CustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @CustomType.Parameter("scheduling") SchedulingResponse scheduling,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("serviceAccounts") List<ServiceAccountResponse> serviceAccounts,
+        @CustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
+        @CustomType.Parameter("shieldedInstanceIntegrityPolicy") ShieldedInstanceIntegrityPolicyResponse shieldedInstanceIntegrityPolicy,
+        @CustomType.Parameter("shieldedVmConfig") ShieldedVmConfigResponse shieldedVmConfig,
+        @CustomType.Parameter("shieldedVmIntegrityPolicy") ShieldedVmIntegrityPolicyResponse shieldedVmIntegrityPolicy,
+        @CustomType.Parameter("sourceMachineImage") String sourceMachineImage,
+        @CustomType.Parameter("sourceMachineImageEncryptionKey") CustomerEncryptionKeyResponse sourceMachineImageEncryptionKey,
+        @CustomType.Parameter("startRestricted") Boolean startRestricted,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusMessage") String statusMessage,
+        @CustomType.Parameter("tags") TagsResponse tags,
+        @CustomType.Parameter("zone") String zone) {
         this.advancedMachineFeatures = advancedMachineFeatures;
         this.canIpForward = canIpForward;
         this.confidentialInstanceConfig = confidentialInstanceConfig;

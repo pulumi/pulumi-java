@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouteSpecGrpcRouteActionWeightedTarget {
     /**
      * The virtual node to associate with the weighted target. Must be between 1 and 255 characters in length.
@@ -21,10 +21,10 @@ public final class RouteSpecGrpcRouteActionWeightedTarget {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteSpecGrpcRouteActionWeightedTarget(
-        @OutputCustomType.Parameter("virtualNode") String virtualNode,
-        @OutputCustomType.Parameter("weight") Integer weight) {
+        @CustomType.Parameter("virtualNode") String virtualNode,
+        @CustomType.Parameter("weight") Integer weight) {
         this.virtualNode = virtualNode;
         this.weight = weight;
     }

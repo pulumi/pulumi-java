@@ -4,16 +4,16 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketFilterRule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketS3KeyFilter {
     private final List<BucketFilterRule> rules;
 
-    @OutputCustomType.Constructor
-    private BucketS3KeyFilter(@OutputCustomType.Parameter("rules") List<BucketFilterRule> rules) {
+    @CustomType.Constructor
+    private BucketS3KeyFilter(@CustomType.Parameter("rules") List<BucketFilterRule> rules) {
         this.rules = rules;
     }
 

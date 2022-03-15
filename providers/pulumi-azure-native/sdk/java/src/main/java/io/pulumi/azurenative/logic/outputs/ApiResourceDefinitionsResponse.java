@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiResourceDefinitionsResponse {
     /**
      * The modified swagger url.
@@ -22,10 +22,10 @@ public final class ApiResourceDefinitionsResponse {
      */
     private final @Nullable String originalSwaggerUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiResourceDefinitionsResponse(
-        @OutputCustomType.Parameter("modifiedSwaggerUrl") @Nullable String modifiedSwaggerUrl,
-        @OutputCustomType.Parameter("originalSwaggerUrl") @Nullable String originalSwaggerUrl) {
+        @CustomType.Parameter("modifiedSwaggerUrl") @Nullable String modifiedSwaggerUrl,
+        @CustomType.Parameter("originalSwaggerUrl") @Nullable String originalSwaggerUrl) {
         this.modifiedSwaggerUrl = modifiedSwaggerUrl;
         this.originalSwaggerUrl = originalSwaggerUrl;
     }

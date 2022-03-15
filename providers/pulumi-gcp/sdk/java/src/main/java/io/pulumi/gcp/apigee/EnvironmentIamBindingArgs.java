@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.apigee.inputs.EnvironmentIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class EnvironmentIamBindingArgs extends io.pulumi.resources.Resourc
 
     public static final EnvironmentIamBindingArgs Empty = new EnvironmentIamBindingArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<EnvironmentIamBindingConditionArgs> condition;
 
     public Output<EnvironmentIamBindingConditionArgs> getCondition() {
@@ -27,21 +27,21 @@ public final class EnvironmentIamBindingArgs extends io.pulumi.resources.Resourc
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="envId", required=true)
+    @Import(name="envId", required=true)
       private final Output<String> envId;
 
     public Output<String> getEnvId() {
         return this.envId;
     }
 
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
         return this.members;
     }
 
-    @InputImport(name="orgId", required=true)
+    @Import(name="orgId", required=true)
       private final Output<String> orgId;
 
     public Output<String> getOrgId() {
@@ -54,7 +54,7 @@ public final class EnvironmentIamBindingArgs extends io.pulumi.resources.Resourc
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

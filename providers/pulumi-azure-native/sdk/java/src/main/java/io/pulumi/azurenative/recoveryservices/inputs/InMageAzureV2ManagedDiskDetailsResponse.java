@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends io.pulumi.res
      * The disk id.
      * 
      */
-    @InputImport(name="diskId")
+    @Import(name="diskId")
       private final @Nullable String diskId;
 
     public Optional<String> getDiskId() {
@@ -33,7 +33,7 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends io.pulumi.res
      * The replica disk type.
      * 
      */
-    @InputImport(name="replicaDiskType")
+    @Import(name="replicaDiskType")
       private final @Nullable String replicaDiskType;
 
     public Optional<String> getReplicaDiskType() {
@@ -44,7 +44,7 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends io.pulumi.res
      * Seed managed disk Id.
      * 
      */
-    @InputImport(name="seedManagedDiskId")
+    @Import(name="seedManagedDiskId")
       private final @Nullable String seedManagedDiskId;
 
     public Optional<String> getSeedManagedDiskId() {

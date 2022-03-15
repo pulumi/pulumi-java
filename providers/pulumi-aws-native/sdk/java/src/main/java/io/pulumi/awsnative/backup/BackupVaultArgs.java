@@ -6,7 +6,7 @@ package io.pulumi.awsnative.backup;
 import io.pulumi.awsnative.backup.inputs.BackupVaultLockConfigurationTypeArgs;
 import io.pulumi.awsnative.backup.inputs.BackupVaultNotificationObjectTypeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -17,42 +17,42 @@ public final class BackupVaultArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackupVaultArgs Empty = new BackupVaultArgs();
 
-    @InputImport(name="accessPolicy")
+    @Import(name="accessPolicy")
       private final @Nullable Output<Object> accessPolicy;
 
     public Output<Object> getAccessPolicy() {
         return this.accessPolicy == null ? Output.empty() : this.accessPolicy;
     }
 
-    @InputImport(name="backupVaultName")
+    @Import(name="backupVaultName")
       private final @Nullable Output<String> backupVaultName;
 
     public Output<String> getBackupVaultName() {
         return this.backupVaultName == null ? Output.empty() : this.backupVaultName;
     }
 
-    @InputImport(name="backupVaultTags")
+    @Import(name="backupVaultTags")
       private final @Nullable Output<Object> backupVaultTags;
 
     public Output<Object> getBackupVaultTags() {
         return this.backupVaultTags == null ? Output.empty() : this.backupVaultTags;
     }
 
-    @InputImport(name="encryptionKeyArn")
+    @Import(name="encryptionKeyArn")
       private final @Nullable Output<String> encryptionKeyArn;
 
     public Output<String> getEncryptionKeyArn() {
         return this.encryptionKeyArn == null ? Output.empty() : this.encryptionKeyArn;
     }
 
-    @InputImport(name="lockConfiguration")
+    @Import(name="lockConfiguration")
       private final @Nullable Output<BackupVaultLockConfigurationTypeArgs> lockConfiguration;
 
     public Output<BackupVaultLockConfigurationTypeArgs> getLockConfiguration() {
         return this.lockConfiguration == null ? Output.empty() : this.lockConfiguration;
     }
 
-    @InputImport(name="notifications")
+    @Import(name="notifications")
       private final @Nullable Output<BackupVaultNotificationObjectTypeArgs> notifications;
 
     public Output<BackupVaultNotificationObjectTypeArgs> getNotifications() {

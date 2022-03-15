@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.servicecatalogappregistry.outputs;
 
 import io.pulumi.awsnative.servicecatalogappregistry.outputs.AttributeGroupTags;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAttributeGroupResult {
     private final @Nullable String arn;
     private final @Nullable Object attributes;
@@ -28,14 +28,14 @@ public final class GetAttributeGroupResult {
     private final @Nullable String name;
     private final @Nullable AttributeGroupTags tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAttributeGroupResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("attributes") @Nullable Object attributes,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tags") @Nullable AttributeGroupTags tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("attributes") @Nullable Object attributes,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tags") @Nullable AttributeGroupTags tags) {
         this.arn = arn;
         this.attributes = attributes;
         this.description = description;

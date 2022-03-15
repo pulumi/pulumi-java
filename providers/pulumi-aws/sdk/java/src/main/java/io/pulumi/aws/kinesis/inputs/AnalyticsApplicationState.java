@@ -8,7 +8,7 @@ import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsGetArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationOutputGetArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationReferenceDataSourcesGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * The ARN of the Kinesis Analytics Appliation.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -38,7 +38,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * See CloudWatch Logging Options below for more details.
      * 
      */
-    @InputImport(name="cloudwatchLoggingOptions")
+    @Import(name="cloudwatchLoggingOptions")
       private final @Nullable Output<AnalyticsApplicationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
     public Output<AnalyticsApplicationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
@@ -49,7 +49,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * SQL Code to transform input data, and generate output.
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable Output<String> code;
 
     public Output<String> getCode() {
@@ -60,7 +60,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * The Timestamp when the application version was created.
      * 
      */
-    @InputImport(name="createTimestamp")
+    @Import(name="createTimestamp")
       private final @Nullable Output<String> createTimestamp;
 
     public Output<String> getCreateTimestamp() {
@@ -71,7 +71,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * Description of the application.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -82,7 +82,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * Input configuration of the application. See Inputs below for more details.
      * 
      */
-    @InputImport(name="inputs")
+    @Import(name="inputs")
       private final @Nullable Output<AnalyticsApplicationInputsGetArgs> inputs;
 
     public Output<AnalyticsApplicationInputsGetArgs> getInputs() {
@@ -93,7 +93,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * The Timestamp when the application was last updated.
      * 
      */
-    @InputImport(name="lastUpdateTimestamp")
+    @Import(name="lastUpdateTimestamp")
       private final @Nullable Output<String> lastUpdateTimestamp;
 
     public Output<String> getLastUpdateTimestamp() {
@@ -104,7 +104,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * Name of the Kinesis Analytics Application.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -115,7 +115,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * Output destination configuration of the application. See Outputs below for more details.
      * 
      */
-    @InputImport(name="outputs")
+    @Import(name="outputs")
       private final @Nullable Output<List<AnalyticsApplicationOutputGetArgs>> outputs;
 
     public Output<List<AnalyticsApplicationOutputGetArgs>> getOutputs() {
@@ -127,7 +127,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * See Reference Data Sources below for more details.
      * 
      */
-    @InputImport(name="referenceDataSources")
+    @Import(name="referenceDataSources")
       private final @Nullable Output<AnalyticsApplicationReferenceDataSourcesGetArgs> referenceDataSources;
 
     public Output<AnalyticsApplicationReferenceDataSourcesGetArgs> getReferenceDataSources() {
@@ -139,7 +139,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * To modify an application's starting position, first stop the application by setting `start_application = false`, then update `starting_position` and set `start_application = true`.
      * 
      */
-    @InputImport(name="startApplication")
+    @Import(name="startApplication")
       private final @Nullable Output<Boolean> startApplication;
 
     public Output<Boolean> getStartApplication() {
@@ -150,7 +150,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * The Status of the application.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -161,7 +161,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * Key-value map of tags for the Kinesis Analytics Application. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -172,7 +172,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -183,7 +183,7 @@ public final class AnalyticsApplicationState extends io.pulumi.resources.Resourc
      * The Version of the application.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {

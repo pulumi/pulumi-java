@@ -4,7 +4,7 @@
 package io.pulumi.aws.sns;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * Integer indicating number of minutes to wait in retrying mode for fetching subscription arn before marking it as failure. Only applicable for http and https protocols. Default is `1`.
      * 
      */
-    @InputImport(name="confirmationTimeoutInMinutes")
+    @Import(name="confirmationTimeoutInMinutes")
       private final @Nullable Output<Integer> confirmationTimeoutInMinutes;
 
     public Output<Integer> getConfirmationTimeoutInMinutes() {
@@ -31,7 +31,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * JSON String with the delivery policy (retries, backoff, etc.) that will be used in the subscription - this only applies to HTTP/S subscriptions. Refer to the [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html) for more details.
      * 
      */
-    @InputImport(name="deliveryPolicy")
+    @Import(name="deliveryPolicy")
       private final @Nullable Output<String> deliveryPolicy;
 
     public Output<String> getDeliveryPolicy() {
@@ -42,7 +42,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * Endpoint to send data to. The contents vary with the protocol. See details below.
      * 
      */
-    @InputImport(name="endpoint", required=true)
+    @Import(name="endpoint", required=true)
       private final Output<String> endpoint;
 
     public Output<String> getEndpoint() {
@@ -53,7 +53,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * Whether the endpoint is capable of [auto confirming subscription](http://docs.aws.amazon.com/sns/latest/dg/SendMessageToHttp.html#SendMessageToHttp.prepare) (e.g., PagerDuty). Default is `false`.
      * 
      */
-    @InputImport(name="endpointAutoConfirms")
+    @Import(name="endpointAutoConfirms")
       private final @Nullable Output<Boolean> endpointAutoConfirms;
 
     public Output<Boolean> getEndpointAutoConfirms() {
@@ -64,7 +64,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * JSON String with the filter policy that will be used in the subscription to filter messages seen by the target resource. Refer to the [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/message-filtering.html) for more details.
      * 
      */
-    @InputImport(name="filterPolicy")
+    @Import(name="filterPolicy")
       private final @Nullable Output<String> filterPolicy;
 
     public Output<String> getFilterPolicy() {
@@ -75,7 +75,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * Protocol to use. Valid values are: `sqs`, `sms`, `lambda`, `firehose`, and `application`. Protocols `email`, `email-json`, `http` and `https` are also valid but partially supported. See details below.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<String> protocol;
 
     public Output<String> getProtocol() {
@@ -86,7 +86,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * Whether to enable raw message delivery (the original message is directly passed, not wrapped in JSON with the original message in the message property). Default is `false`.
      * 
      */
-    @InputImport(name="rawMessageDelivery")
+    @Import(name="rawMessageDelivery")
       private final @Nullable Output<Boolean> rawMessageDelivery;
 
     public Output<Boolean> getRawMessageDelivery() {
@@ -97,7 +97,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * JSON String with the redrive policy that will be used in the subscription. Refer to the [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/sns-dead-letter-queues.html#how-messages-moved-into-dead-letter-queue) for more details.
      * 
      */
-    @InputImport(name="redrivePolicy")
+    @Import(name="redrivePolicy")
       private final @Nullable Output<String> redrivePolicy;
 
     public Output<String> getRedrivePolicy() {
@@ -108,7 +108,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * ARN of the IAM role to publish to Kinesis Data Firehose delivery stream. Refer to [SNS docs](https://docs.aws.amazon.com/sns/latest/dg/sns-firehose-as-subscriber.html).
      * 
      */
-    @InputImport(name="subscriptionRoleArn")
+    @Import(name="subscriptionRoleArn")
       private final @Nullable Output<String> subscriptionRoleArn;
 
     public Output<String> getSubscriptionRoleArn() {
@@ -119,7 +119,7 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
      * ARN of the SNS topic to subscribe to.
      * 
      */
-    @InputImport(name="topic", required=true)
+    @Import(name="topic", required=true)
       private final Output<String> topic;
 
     public Output<String> getTopic() {

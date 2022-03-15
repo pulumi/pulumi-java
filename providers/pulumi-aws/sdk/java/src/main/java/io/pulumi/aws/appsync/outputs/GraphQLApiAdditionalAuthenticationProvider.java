@@ -6,13 +6,13 @@ package io.pulumi.aws.appsync.outputs;
 import io.pulumi.aws.appsync.outputs.GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfig;
 import io.pulumi.aws.appsync.outputs.GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig;
 import io.pulumi.aws.appsync.outputs.GraphQLApiAdditionalAuthenticationProviderUserPoolConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GraphQLApiAdditionalAuthenticationProvider {
     /**
      * The authentication type. Valid values: `API_KEY`, `AWS_IAM`, `AMAZON_COGNITO_USER_POOLS`, `OPENID_CONNECT`, `AWS_LAMBDA`
@@ -35,12 +35,12 @@ public final class GraphQLApiAdditionalAuthenticationProvider {
      */
     private final @Nullable GraphQLApiAdditionalAuthenticationProviderUserPoolConfig userPoolConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GraphQLApiAdditionalAuthenticationProvider(
-        @OutputCustomType.Parameter("authenticationType") String authenticationType,
-        @OutputCustomType.Parameter("lambdaAuthorizerConfig") @Nullable GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfig lambdaAuthorizerConfig,
-        @OutputCustomType.Parameter("openidConnectConfig") @Nullable GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig openidConnectConfig,
-        @OutputCustomType.Parameter("userPoolConfig") @Nullable GraphQLApiAdditionalAuthenticationProviderUserPoolConfig userPoolConfig) {
+        @CustomType.Parameter("authenticationType") String authenticationType,
+        @CustomType.Parameter("lambdaAuthorizerConfig") @Nullable GraphQLApiAdditionalAuthenticationProviderLambdaAuthorizerConfig lambdaAuthorizerConfig,
+        @CustomType.Parameter("openidConnectConfig") @Nullable GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig openidConnectConfig,
+        @CustomType.Parameter("userPoolConfig") @Nullable GraphQLApiAdditionalAuthenticationProviderUserPoolConfig userPoolConfig) {
         this.authenticationType = authenticationType;
         this.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
         this.openidConnectConfig = openidConnectConfig;

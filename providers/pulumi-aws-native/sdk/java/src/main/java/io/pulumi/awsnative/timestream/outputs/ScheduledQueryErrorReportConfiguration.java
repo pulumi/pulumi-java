@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.timestream.outputs;
 
 import io.pulumi.awsnative.timestream.outputs.ScheduledQueryS3Configuration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScheduledQueryErrorReportConfiguration {
     private final ScheduledQueryS3Configuration s3Configuration;
 
-    @OutputCustomType.Constructor
-    private ScheduledQueryErrorReportConfiguration(@OutputCustomType.Parameter("s3Configuration") ScheduledQueryS3Configuration s3Configuration) {
+    @CustomType.Constructor
+    private ScheduledQueryErrorReportConfiguration(@CustomType.Parameter("s3Configuration") ScheduledQueryS3Configuration s3Configuration) {
         this.s3Configuration = s3Configuration;
     }
 

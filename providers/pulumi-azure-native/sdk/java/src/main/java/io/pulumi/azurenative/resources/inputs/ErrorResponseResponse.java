@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.azurenative.resources.inputs.ErrorAdditionalInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
      * The error additional info.
      * 
      */
-    @InputImport(name="additionalInfo", required=true)
+    @Import(name="additionalInfo", required=true)
       private final List<ErrorAdditionalInfoResponse> additionalInfo;
 
     public List<ErrorAdditionalInfoResponse> getAdditionalInfo() {
@@ -33,7 +33,7 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
      * The error code.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
@@ -44,7 +44,7 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
      * The error details.
      * 
      */
-    @InputImport(name="details", required=true)
+    @Import(name="details", required=true)
       private final List<ErrorResponseResponse> details;
 
     public List<ErrorResponseResponse> getDetails() {
@@ -55,7 +55,7 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
      * The error message.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -66,7 +66,7 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
      * The error target.
      * 
      */
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final String target;
 
     public String getTarget() {

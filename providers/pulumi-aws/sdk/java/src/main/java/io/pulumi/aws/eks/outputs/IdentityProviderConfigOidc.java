@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IdentityProviderConfigOidc {
     /**
      * Client ID for the OpenID Connect identity provider.
@@ -53,16 +53,16 @@ public final class IdentityProviderConfigOidc {
      */
     private final @Nullable String usernamePrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IdentityProviderConfigOidc(
-        @OutputCustomType.Parameter("clientId") String clientId,
-        @OutputCustomType.Parameter("groupsClaim") @Nullable String groupsClaim,
-        @OutputCustomType.Parameter("groupsPrefix") @Nullable String groupsPrefix,
-        @OutputCustomType.Parameter("identityProviderConfigName") String identityProviderConfigName,
-        @OutputCustomType.Parameter("issuerUrl") String issuerUrl,
-        @OutputCustomType.Parameter("requiredClaims") @Nullable Map<String,String> requiredClaims,
-        @OutputCustomType.Parameter("usernameClaim") @Nullable String usernameClaim,
-        @OutputCustomType.Parameter("usernamePrefix") @Nullable String usernamePrefix) {
+        @CustomType.Parameter("clientId") String clientId,
+        @CustomType.Parameter("groupsClaim") @Nullable String groupsClaim,
+        @CustomType.Parameter("groupsPrefix") @Nullable String groupsPrefix,
+        @CustomType.Parameter("identityProviderConfigName") String identityProviderConfigName,
+        @CustomType.Parameter("issuerUrl") String issuerUrl,
+        @CustomType.Parameter("requiredClaims") @Nullable Map<String,String> requiredClaims,
+        @CustomType.Parameter("usernameClaim") @Nullable String usernameClaim,
+        @CustomType.Parameter("usernamePrefix") @Nullable String usernamePrefix) {
         this.clientId = clientId;
         this.groupsClaim = groupsClaim;
         this.groupsPrefix = groupsPrefix;

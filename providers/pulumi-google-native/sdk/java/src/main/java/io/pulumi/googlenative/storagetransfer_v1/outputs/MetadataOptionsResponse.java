@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MetadataOptionsResponse {
     /**
      * Specifies how each object's ACLs should be preserved for transfers between Google Cloud Storage buckets. If unspecified, the default behavior is the same as ACL_DESTINATION_BUCKET_DEFAULT.
@@ -50,16 +50,16 @@ public final class MetadataOptionsResponse {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetadataOptionsResponse(
-        @OutputCustomType.Parameter("acl") String acl,
-        @OutputCustomType.Parameter("gid") String gid,
-        @OutputCustomType.Parameter("kmsKey") String kmsKey,
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("storageClass") String storageClass,
-        @OutputCustomType.Parameter("symlink") String symlink,
-        @OutputCustomType.Parameter("temporaryHold") String temporaryHold,
-        @OutputCustomType.Parameter("uid") String uid) {
+        @CustomType.Parameter("acl") String acl,
+        @CustomType.Parameter("gid") String gid,
+        @CustomType.Parameter("kmsKey") String kmsKey,
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("storageClass") String storageClass,
+        @CustomType.Parameter("symlink") String symlink,
+        @CustomType.Parameter("temporaryHold") String temporaryHold,
+        @CustomType.Parameter("uid") String uid) {
         this.acl = acl;
         this.gid = gid;
         this.kmsKey = kmsKey;

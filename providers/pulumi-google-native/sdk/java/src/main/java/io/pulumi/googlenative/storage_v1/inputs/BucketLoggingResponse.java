@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class BucketLoggingResponse extends io.pulumi.resources.InvokeArgs 
      * The destination bucket where the current bucket's logs should be placed.
      * 
      */
-    @InputImport(name="logBucket", required=true)
+    @Import(name="logBucket", required=true)
       private final String logBucket;
 
     public String getLogBucket() {
@@ -31,7 +31,7 @@ public final class BucketLoggingResponse extends io.pulumi.resources.InvokeArgs 
      * A prefix for log object names.
      * 
      */
-    @InputImport(name="logObjectPrefix", required=true)
+    @Import(name="logObjectPrefix", required=true)
       private final String logObjectPrefix;
 
     public String getLogObjectPrefix() {

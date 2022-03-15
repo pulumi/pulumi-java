@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BigQueryDestinationArgs extends io.pulumi.resources.ResourceA
      * The ID of a BigQuery Dataset.
      * 
      */
-    @InputImport(name="datasetId")
+    @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
 
     public Output<String> getDatasetId() {

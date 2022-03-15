@@ -10,7 +10,7 @@ import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsProcessingConfigur
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsSchemaArgs;
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsStartingPositionConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AnalyticsApplicationInputsArgs extends io.pulumi.resources.Re
      * The ARN of the Kinesis Analytics Application.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -37,7 +37,7 @@ public final class AnalyticsApplicationInputsArgs extends io.pulumi.resources.Re
      * See Kinesis Firehose below for more details.
      * 
      */
-    @InputImport(name="kinesisFirehose")
+    @Import(name="kinesisFirehose")
       private final @Nullable Output<AnalyticsApplicationInputsKinesisFirehoseArgs> kinesisFirehose;
 
     public Output<AnalyticsApplicationInputsKinesisFirehoseArgs> getKinesisFirehose() {
@@ -49,7 +49,7 @@ public final class AnalyticsApplicationInputsArgs extends io.pulumi.resources.Re
      * See Kinesis Stream below for more details.
      * 
      */
-    @InputImport(name="kinesisStream")
+    @Import(name="kinesisStream")
       private final @Nullable Output<AnalyticsApplicationInputsKinesisStreamArgs> kinesisStream;
 
     public Output<AnalyticsApplicationInputsKinesisStreamArgs> getKinesisStream() {
@@ -60,7 +60,7 @@ public final class AnalyticsApplicationInputsArgs extends io.pulumi.resources.Re
      * The Name Prefix to use when creating an in-application stream.
      * 
      */
-    @InputImport(name="namePrefix", required=true)
+    @Import(name="namePrefix", required=true)
       private final Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -72,7 +72,7 @@ public final class AnalyticsApplicationInputsArgs extends io.pulumi.resources.Re
      * See Parallelism below for more details.
      * 
      */
-    @InputImport(name="parallelism")
+    @Import(name="parallelism")
       private final @Nullable Output<AnalyticsApplicationInputsParallelismArgs> parallelism;
 
     public Output<AnalyticsApplicationInputsParallelismArgs> getParallelism() {
@@ -84,7 +84,7 @@ public final class AnalyticsApplicationInputsArgs extends io.pulumi.resources.Re
      * See Processing Configuration below for more details.
      * 
      */
-    @InputImport(name="processingConfiguration")
+    @Import(name="processingConfiguration")
       private final @Nullable Output<AnalyticsApplicationInputsProcessingConfigurationArgs> processingConfiguration;
 
     public Output<AnalyticsApplicationInputsProcessingConfigurationArgs> getProcessingConfiguration() {
@@ -95,7 +95,7 @@ public final class AnalyticsApplicationInputsArgs extends io.pulumi.resources.Re
      * The Schema format of the data in the streaming source. See Source Schema below for more details.
      * 
      */
-    @InputImport(name="schema", required=true)
+    @Import(name="schema", required=true)
       private final Output<AnalyticsApplicationInputsSchemaArgs> schema;
 
     public Output<AnalyticsApplicationInputsSchemaArgs> getSchema() {
@@ -107,14 +107,14 @@ public final class AnalyticsApplicationInputsArgs extends io.pulumi.resources.Re
      * See Starting Position Configuration below for more details.
      * 
      */
-    @InputImport(name="startingPositionConfigurations")
+    @Import(name="startingPositionConfigurations")
       private final @Nullable Output<List<AnalyticsApplicationInputsStartingPositionConfigurationArgs>> startingPositionConfigurations;
 
     public Output<List<AnalyticsApplicationInputsStartingPositionConfigurationArgs>> getStartingPositionConfigurations() {
         return this.startingPositionConfigurations == null ? Output.empty() : this.startingPositionConfigurations;
     }
 
-    @InputImport(name="streamNames")
+    @Import(name="streamNames")
       private final @Nullable Output<List<String>> streamNames;
 
     public Output<List<String>> getStreamNames() {

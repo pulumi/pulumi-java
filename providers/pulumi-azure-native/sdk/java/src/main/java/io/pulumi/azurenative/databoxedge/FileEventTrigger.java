@@ -10,7 +10,7 @@ import io.pulumi.azurenative.databoxedge.outputs.RoleSinkInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class FileEventTrigger extends io.pulumi.resources.CustomResource {
      * A custom context tag typically used to correlate the trigger against its usage. For example, if a periodic timer trigger is intended for certain specific IoT modules in the device, the tag can be the name or the image URL of the module.
      * 
      */
-    @OutputExport(name="customContextTag", type=String.class, parameters={})
+    @Export(name="customContextTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> customContextTag;
 
     /**
@@ -52,7 +52,7 @@ public class FileEventTrigger extends io.pulumi.resources.CustomResource {
      * Expected value is 'FileEvent'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -67,7 +67,7 @@ public class FileEventTrigger extends io.pulumi.resources.CustomResource {
      * The object name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -81,7 +81,7 @@ public class FileEventTrigger extends io.pulumi.resources.CustomResource {
      * Role sink info.
      * 
      */
-    @OutputExport(name="sinkInfo", type=RoleSinkInfoResponse.class, parameters={})
+    @Export(name="sinkInfo", type=RoleSinkInfoResponse.class, parameters={})
     private Output<RoleSinkInfoResponse> sinkInfo;
 
     /**
@@ -95,7 +95,7 @@ public class FileEventTrigger extends io.pulumi.resources.CustomResource {
      * File event source details.
      * 
      */
-    @OutputExport(name="sourceInfo", type=FileSourceInfoResponse.class, parameters={})
+    @Export(name="sourceInfo", type=FileSourceInfoResponse.class, parameters={})
     private Output<FileSourceInfoResponse> sourceInfo;
 
     /**
@@ -109,7 +109,7 @@ public class FileEventTrigger extends io.pulumi.resources.CustomResource {
      * Trigger in DataBoxEdge Resource
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -123,7 +123,7 @@ public class FileEventTrigger extends io.pulumi.resources.CustomResource {
      * The hierarchical type of the object.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.devices.IotDpsResourcePrivateEndpointConnectionArgs
 import io.pulumi.azurenative.devices.outputs.PrivateEndpointConnectionPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class IotDpsResourcePrivateEndpointConnection extends io.pulumi.resources
      * The resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class IotDpsResourcePrivateEndpointConnection extends io.pulumi.resources
      * The properties of a private endpoint connection
      * 
      */
-    @OutputExport(name="properties", type=PrivateEndpointConnectionPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=PrivateEndpointConnectionPropertiesResponse.class, parameters={})
     private Output<PrivateEndpointConnectionPropertiesResponse> properties;
 
     /**
@@ -63,7 +63,7 @@ public class IotDpsResourcePrivateEndpointConnection extends io.pulumi.resources
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

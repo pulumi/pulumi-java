@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.orbital.outputs;
 
 import io.pulumi.azurenative.orbital.outputs.EndPointResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContactProfileLinkChannelResponse {
     /**
      * Bandwidth in MHz
@@ -49,15 +49,15 @@ public final class ContactProfileLinkChannelResponse {
      */
     private final @Nullable String modulationConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContactProfileLinkChannelResponse(
-        @OutputCustomType.Parameter("bandwidthMHz") Double bandwidthMHz,
-        @OutputCustomType.Parameter("centerFrequencyMHz") Double centerFrequencyMHz,
-        @OutputCustomType.Parameter("decodingConfiguration") @Nullable String decodingConfiguration,
-        @OutputCustomType.Parameter("demodulationConfiguration") @Nullable String demodulationConfiguration,
-        @OutputCustomType.Parameter("encodingConfiguration") @Nullable String encodingConfiguration,
-        @OutputCustomType.Parameter("endPoint") EndPointResponse endPoint,
-        @OutputCustomType.Parameter("modulationConfiguration") @Nullable String modulationConfiguration) {
+        @CustomType.Parameter("bandwidthMHz") Double bandwidthMHz,
+        @CustomType.Parameter("centerFrequencyMHz") Double centerFrequencyMHz,
+        @CustomType.Parameter("decodingConfiguration") @Nullable String decodingConfiguration,
+        @CustomType.Parameter("demodulationConfiguration") @Nullable String demodulationConfiguration,
+        @CustomType.Parameter("encodingConfiguration") @Nullable String encodingConfiguration,
+        @CustomType.Parameter("endPoint") EndPointResponse endPoint,
+        @CustomType.Parameter("modulationConfiguration") @Nullable String modulationConfiguration) {
         this.bandwidthMHz = bandwidthMHz;
         this.centerFrequencyMHz = centerFrequencyMHz;
         this.decodingConfiguration = decodingConfiguration;

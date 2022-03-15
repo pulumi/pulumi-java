@@ -3,24 +3,24 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecContainerEnvFromConfigMapRef;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecContainerEnvFromSecretRef;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceTemplateSpecContainerEnvFrom {
     private final List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> configMapReves;
     private final String prefix;
     private final List<GetServiceTemplateSpecContainerEnvFromSecretRef> secretReves;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceTemplateSpecContainerEnvFrom(
-        @OutputCustomType.Parameter("configMapReves") List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> configMapReves,
-        @OutputCustomType.Parameter("prefix") String prefix,
-        @OutputCustomType.Parameter("secretReves") List<GetServiceTemplateSpecContainerEnvFromSecretRef> secretReves) {
+        @CustomType.Parameter("configMapReves") List<GetServiceTemplateSpecContainerEnvFromConfigMapRef> configMapReves,
+        @CustomType.Parameter("prefix") String prefix,
+        @CustomType.Parameter("secretReves") List<GetServiceTemplateSpecContainerEnvFromSecretRef> secretReves) {
         this.configMapReves = configMapReves;
         this.prefix = prefix;
         this.secretReves = secretReves;

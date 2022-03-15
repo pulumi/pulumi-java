@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class LicenseResourceRequirementsArgs extends io.pulumi.resources.R
      * Minimum number of guest cpus required to use the Instance. Enforced at Instance creation and Instance start.
      * 
      */
-    @InputImport(name="minGuestCpuCount")
+    @Import(name="minGuestCpuCount")
       private final @Nullable Output<Integer> minGuestCpuCount;
 
     public Output<Integer> getMinGuestCpuCount() {
@@ -29,7 +29,7 @@ public final class LicenseResourceRequirementsArgs extends io.pulumi.resources.R
      * Minimum memory required to use the Instance. Enforced at Instance creation and Instance start.
      * 
      */
-    @InputImport(name="minMemoryMb")
+    @Import(name="minMemoryMb")
       private final @Nullable Output<Integer> minMemoryMb;
 
     public Output<Integer> getMinMemoryMb() {

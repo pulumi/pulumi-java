@@ -6,7 +6,7 @@ package io.pulumi.aws.ecr.inputs;
 import io.pulumi.aws.ecr.inputs.RepositoryEncryptionConfigurationGetArgs;
 import io.pulumi.aws.ecr.inputs.RepositoryImageScanningConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * Full ARN of the repository.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * Encryption configuration for the repository. See below for schema.
      * 
      */
-    @InputImport(name="encryptionConfigurations")
+    @Import(name="encryptionConfigurations")
       private final @Nullable Output<List<RepositoryEncryptionConfigurationGetArgs>> encryptionConfigurations;
 
     public Output<List<RepositoryEncryptionConfigurationGetArgs>> getEncryptionConfigurations() {
@@ -44,7 +44,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * Configuration block that defines image scanning configuration for the repository. By default, image scanning must be manually triggered. See the [ECR User Guide](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) for more information about image scanning.
      * 
      */
-    @InputImport(name="imageScanningConfiguration")
+    @Import(name="imageScanningConfiguration")
       private final @Nullable Output<RepositoryImageScanningConfigurationGetArgs> imageScanningConfiguration;
 
     public Output<RepositoryImageScanningConfigurationGetArgs> getImageScanningConfiguration() {
@@ -55,7 +55,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The tag mutability setting for the repository. Must be one of: `MUTABLE` or `IMMUTABLE`. Defaults to `MUTABLE`.
      * 
      */
-    @InputImport(name="imageTagMutability")
+    @Import(name="imageTagMutability")
       private final @Nullable Output<String> imageTagMutability;
 
     public Output<String> getImageTagMutability() {
@@ -66,7 +66,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * Name of the repository.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -77,7 +77,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The registry ID where the repository was created.
      * 
      */
-    @InputImport(name="registryId")
+    @Import(name="registryId")
       private final @Nullable Output<String> registryId;
 
     public Output<String> getRegistryId() {
@@ -88,7 +88,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The URL of the repository (in the form `aws_account_id.dkr.ecr.region.amazonaws.com/repositoryName`).
      * 
      */
-    @InputImport(name="repositoryUrl")
+    @Import(name="repositoryUrl")
       private final @Nullable Output<String> repositoryUrl;
 
     public Output<String> getRepositoryUrl() {
@@ -99,7 +99,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -110,7 +110,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

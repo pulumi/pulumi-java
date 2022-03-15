@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
      * Optional. Display price of the product.
      * 
      */
-    @InputImport(name="displayPrice")
+    @Import(name="displayPrice")
       private final @Nullable Output<Double> displayPrice;
 
     public Output<Double> getDisplayPrice() {
@@ -33,7 +33,7 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
      * Optional. Price of the product without any discount. If zero, by default set to be the 'displayPrice'.
      * 
      */
-    @InputImport(name="originalPrice")
+    @Import(name="originalPrice")
       private final @Nullable Output<Double> originalPrice;
 
     public Output<Double> getOriginalPrice() {

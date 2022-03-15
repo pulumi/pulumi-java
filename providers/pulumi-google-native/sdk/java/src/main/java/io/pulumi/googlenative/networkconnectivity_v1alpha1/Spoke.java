@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkconnectivity_v1alpha1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networkconnectivity_v1alpha1.SpokeArgs;
@@ -24,7 +24,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * The time when the Spoke was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -38,7 +38,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * Short description of the spoke resource
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -52,7 +52,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * The resource URL of the hub resource that the spoke is attached to
      * 
      */
-    @OutputExport(name="hub", type=String.class, parameters={})
+    @Export(name="hub", type=String.class, parameters={})
     private Output<String> hub;
 
     /**
@@ -66,7 +66,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * User-defined labels.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -80,7 +80,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * The URIs of linked interconnect attachment resources
      * 
      */
-    @OutputExport(name="linkedInterconnectAttachments", type=List.class, parameters={String.class})
+    @Export(name="linkedInterconnectAttachments", type=List.class, parameters={String.class})
     private Output<List<String>> linkedInterconnectAttachments;
 
     /**
@@ -94,7 +94,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * The URIs of linked Router appliance resources
      * 
      */
-    @OutputExport(name="linkedRouterApplianceInstances", type=List.class, parameters={RouterApplianceInstanceResponse.class})
+    @Export(name="linkedRouterApplianceInstances", type=List.class, parameters={RouterApplianceInstanceResponse.class})
     private Output<List<RouterApplianceInstanceResponse>> linkedRouterApplianceInstances;
 
     /**
@@ -108,7 +108,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * The URIs of linked VPN tunnel resources
      * 
      */
-    @OutputExport(name="linkedVpnTunnels", type=List.class, parameters={String.class})
+    @Export(name="linkedVpnTunnels", type=List.class, parameters={String.class})
     private Output<List<String>> linkedVpnTunnels;
 
     /**
@@ -122,7 +122,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * Immutable. The name of a Spoke resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -136,7 +136,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * The current lifecycle state of this Hub.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -150,7 +150,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * Google-generated UUID for this resource. This is unique across all Spoke resources. If a Spoke resource is deleted and another with the same name is created, it gets a different unique_id.
      * 
      */
-    @OutputExport(name="uniqueId", type=String.class, parameters={})
+    @Export(name="uniqueId", type=String.class, parameters={})
     private Output<String> uniqueId;
 
     /**
@@ -164,7 +164,7 @@ public class Spoke extends io.pulumi.resources.CustomResource {
      * The time when the Spoke was updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

@@ -3,22 +3,22 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ModelDefinitionModelOptionsResponse {
     private final List<String> labels;
     private final String lossType;
     private final String modelType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ModelDefinitionModelOptionsResponse(
-        @OutputCustomType.Parameter("labels") List<String> labels,
-        @OutputCustomType.Parameter("lossType") String lossType,
-        @OutputCustomType.Parameter("modelType") String modelType) {
+        @CustomType.Parameter("labels") List<String> labels,
+        @CustomType.Parameter("lossType") String lossType,
+        @CustomType.Parameter("modelType") String modelType) {
         this.labels = labels;
         this.lossType = lossType;
         this.modelType = modelType;

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketCorsRuleAllowedMethodsItem;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketCorsRule {
     /**
      * Headers that are specified in the Access-Control-Request-Headers header.
@@ -45,14 +45,14 @@ public final class BucketCorsRule {
      */
     private final @Nullable Integer maxAge;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketCorsRule(
-        @OutputCustomType.Parameter("allowedHeaders") @Nullable List<String> allowedHeaders,
-        @OutputCustomType.Parameter("allowedMethods") List<BucketCorsRuleAllowedMethodsItem> allowedMethods,
-        @OutputCustomType.Parameter("allowedOrigins") List<String> allowedOrigins,
-        @OutputCustomType.Parameter("exposedHeaders") @Nullable List<String> exposedHeaders,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("maxAge") @Nullable Integer maxAge) {
+        @CustomType.Parameter("allowedHeaders") @Nullable List<String> allowedHeaders,
+        @CustomType.Parameter("allowedMethods") List<BucketCorsRuleAllowedMethodsItem> allowedMethods,
+        @CustomType.Parameter("allowedOrigins") List<String> allowedOrigins,
+        @CustomType.Parameter("exposedHeaders") @Nullable List<String> exposedHeaders,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("maxAge") @Nullable Integer maxAge) {
         this.allowedHeaders = allowedHeaders;
         this.allowedMethods = allowedMethods;
         this.allowedOrigins = allowedOrigins;

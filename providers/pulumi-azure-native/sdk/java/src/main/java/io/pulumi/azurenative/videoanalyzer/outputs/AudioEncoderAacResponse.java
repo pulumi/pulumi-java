@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AudioEncoderAacResponse {
     /**
      * Bitrate, in kilobits per second or Kbps, at which audio should be encoded (2-channel stereo audio at a sampling rate of 48 kHz). Allowed values are 96, 112, 128, 160, 192, 224, and 256. If omitted, the bitrate of the input audio is used.
@@ -23,10 +23,10 @@ public final class AudioEncoderAacResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AudioEncoderAacResponse(
-        @OutputCustomType.Parameter("bitrateKbps") @Nullable String bitrateKbps,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("bitrateKbps") @Nullable String bitrateKbps,
+        @CustomType.Parameter("type") String type) {
         this.bitrateKbps = bitrateKbps;
         this.type = type;
     }

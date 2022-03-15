@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.iam_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkloadIdentityPoolResult {
     /**
      * A description of the pool. Cannot exceed 256 characters.
@@ -36,13 +36,13 @@ public final class GetWorkloadIdentityPoolResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkloadIdentityPoolResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("disabled") Boolean disabled,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("disabled") Boolean disabled,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state) {
         this.description = description;
         this.disabled = disabled;
         this.displayName = displayName;

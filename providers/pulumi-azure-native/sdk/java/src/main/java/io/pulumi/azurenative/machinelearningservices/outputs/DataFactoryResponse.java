@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.MachineLearningServiceErrorResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataFactoryResponse {
     /**
      * Location for the underlying compute
@@ -51,15 +51,15 @@ public final class DataFactoryResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataFactoryResponse(
-        @OutputCustomType.Parameter("computeLocation") @Nullable String computeLocation,
-        @OutputCustomType.Parameter("computeType") String computeType,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("isAttachedCompute") Boolean isAttachedCompute,
-        @OutputCustomType.Parameter("provisioningErrors") List<MachineLearningServiceErrorResponse> provisioningErrors,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
+        @CustomType.Parameter("computeLocation") @Nullable String computeLocation,
+        @CustomType.Parameter("computeType") String computeType,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("isAttachedCompute") Boolean isAttachedCompute,
+        @CustomType.Parameter("provisioningErrors") List<MachineLearningServiceErrorResponse> provisioningErrors,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.computeLocation = computeLocation;
         this.computeType = computeType;
         this.description = description;

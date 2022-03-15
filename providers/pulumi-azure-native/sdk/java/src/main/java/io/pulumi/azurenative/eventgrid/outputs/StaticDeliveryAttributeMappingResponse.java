@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StaticDeliveryAttributeMappingResponse {
     /**
      * Boolean flag to tell if the attribute contains sensitive information .
@@ -34,12 +34,12 @@ public final class StaticDeliveryAttributeMappingResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StaticDeliveryAttributeMappingResponse(
-        @OutputCustomType.Parameter("isSecret") @Nullable Boolean isSecret,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("isSecret") @Nullable Boolean isSecret,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.isSecret = isSecret;
         this.name = name;
         this.type = type;

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionResponse {
     /**
      * The HTTP or HTTPS scheme URI.
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenU
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionResponse(@OutputCustomType.Parameter("uri") String uri) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriActionResponse(@CustomType.Parameter("uri") String uri) {
         this.uri = uri;
     }
 

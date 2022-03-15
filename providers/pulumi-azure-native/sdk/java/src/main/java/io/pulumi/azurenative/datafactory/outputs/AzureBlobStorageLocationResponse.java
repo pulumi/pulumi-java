@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureBlobStorageLocationResponse {
     /**
      * Specify the container of azure blob. Type: string (or Expression with resultType string).
@@ -34,12 +34,12 @@ public final class AzureBlobStorageLocationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureBlobStorageLocationResponse(
-        @OutputCustomType.Parameter("container") @Nullable Object container,
-        @OutputCustomType.Parameter("fileName") @Nullable Object fileName,
-        @OutputCustomType.Parameter("folderPath") @Nullable Object folderPath,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("container") @Nullable Object container,
+        @CustomType.Parameter("fileName") @Nullable Object fileName,
+        @CustomType.Parameter("folderPath") @Nullable Object folderPath,
+        @CustomType.Parameter("type") String type) {
         this.container = container;
         this.fileName = fileName;
         this.folderPath = folderPath;

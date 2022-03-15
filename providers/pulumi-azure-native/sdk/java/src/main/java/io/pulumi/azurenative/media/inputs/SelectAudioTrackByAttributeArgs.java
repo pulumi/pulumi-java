@@ -8,7 +8,7 @@ import io.pulumi.azurenative.media.enums.ChannelMapping;
 import io.pulumi.azurenative.media.enums.TrackAttribute;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
      * The TrackAttribute to filter the tracks by.
      * 
      */
-    @InputImport(name="attribute", required=true)
+    @Import(name="attribute", required=true)
       private final Output<Either<String,TrackAttribute>> attribute;
 
     public Output<Either<String,TrackAttribute>> getAttribute() {
@@ -37,7 +37,7 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
      * Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
      * 
      */
-    @InputImport(name="channelMapping")
+    @Import(name="channelMapping")
       private final @Nullable Output<Either<String,ChannelMapping>> channelMapping;
 
     public Output<Either<String,ChannelMapping>> getChannelMapping() {
@@ -48,7 +48,7 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
      * The type of AttributeFilter to apply to the TrackAttribute in order to select the tracks.
      * 
      */
-    @InputImport(name="filter", required=true)
+    @Import(name="filter", required=true)
       private final Output<Either<String,AttributeFilter>> filter;
 
     public Output<Either<String,AttributeFilter>> getFilter() {
@@ -59,7 +59,7 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
      * The value to filter the tracks by.  Only used when AttributeFilter.ValueEquals is specified for the Filter property.
      * 
      */
-    @InputImport(name="filterValue")
+    @Import(name="filterValue")
       private final @Nullable Output<String> filterValue;
 
     public Output<String> getFilterValue() {
@@ -71,7 +71,7 @@ public final class SelectAudioTrackByAttributeArgs extends io.pulumi.resources.R
      * Expected value is '#Microsoft.Media.SelectAudioTrackByAttribute'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {

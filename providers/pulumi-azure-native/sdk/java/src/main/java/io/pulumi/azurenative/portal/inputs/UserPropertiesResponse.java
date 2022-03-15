@@ -5,7 +5,7 @@ package io.pulumi.azurenative.portal.inputs;
 
 import io.pulumi.azurenative.portal.inputs.StorageProfileResponse;
 import io.pulumi.azurenative.portal.inputs.TerminalSettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class UserPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * The preferred location of the cloud shell.
      * 
      */
-    @InputImport(name="preferredLocation", required=true)
+    @Import(name="preferredLocation", required=true)
       private final String preferredLocation;
 
     public String getPreferredLocation() {
@@ -33,7 +33,7 @@ public final class UserPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * The operating system type of the cloud shell. Deprecated, use preferredShellType.
      * 
      */
-    @InputImport(name="preferredOsType", required=true)
+    @Import(name="preferredOsType", required=true)
       private final String preferredOsType;
 
     public String getPreferredOsType() {
@@ -44,7 +44,7 @@ public final class UserPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * The shell type of the cloud shell.
      * 
      */
-    @InputImport(name="preferredShellType", required=true)
+    @Import(name="preferredShellType", required=true)
       private final String preferredShellType;
 
     public String getPreferredShellType() {
@@ -55,7 +55,7 @@ public final class UserPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * The storage profile of the user settings.
      * 
      */
-    @InputImport(name="storageProfile", required=true)
+    @Import(name="storageProfile", required=true)
       private final StorageProfileResponse storageProfile;
 
     public StorageProfileResponse getStorageProfile() {
@@ -66,7 +66,7 @@ public final class UserPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * Settings for terminal appearance.
      * 
      */
-    @InputImport(name="terminalSettings", required=true)
+    @Import(name="terminalSettings", required=true)
       private final TerminalSettingsResponse terminalSettings;
 
     public TerminalSettingsResponse getTerminalSettings() {

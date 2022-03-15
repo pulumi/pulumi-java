@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.CertificateResponse;
 import io.pulumi.azurenative.documentdb.outputs.SeedNodeResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterResourceResponseProperties {
     /**
      * Which authentication method Cassandra should use to authenticate clients. 'None' turns off authentication, so should not be used except in emergencies. 'Cassandra' is the default password based authentication. The default is 'Cassandra'.
@@ -82,21 +82,21 @@ public final class ClusterResourceResponseProperties {
      */
     private final List<SeedNodeResponse> seedNodes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterResourceResponseProperties(
-        @OutputCustomType.Parameter("authenticationMethod") @Nullable String authenticationMethod,
-        @OutputCustomType.Parameter("cassandraVersion") @Nullable String cassandraVersion,
-        @OutputCustomType.Parameter("clientCertificates") @Nullable List<CertificateResponse> clientCertificates,
-        @OutputCustomType.Parameter("clusterNameOverride") @Nullable String clusterNameOverride,
-        @OutputCustomType.Parameter("delegatedManagementSubnetId") @Nullable String delegatedManagementSubnetId,
-        @OutputCustomType.Parameter("externalGossipCertificates") @Nullable List<CertificateResponse> externalGossipCertificates,
-        @OutputCustomType.Parameter("externalSeedNodes") @Nullable List<SeedNodeResponse> externalSeedNodes,
-        @OutputCustomType.Parameter("gossipCertificates") List<CertificateResponse> gossipCertificates,
-        @OutputCustomType.Parameter("hoursBetweenBackups") @Nullable Integer hoursBetweenBackups,
-        @OutputCustomType.Parameter("prometheusEndpoint") @Nullable SeedNodeResponse prometheusEndpoint,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("repairEnabled") @Nullable Boolean repairEnabled,
-        @OutputCustomType.Parameter("seedNodes") List<SeedNodeResponse> seedNodes) {
+        @CustomType.Parameter("authenticationMethod") @Nullable String authenticationMethod,
+        @CustomType.Parameter("cassandraVersion") @Nullable String cassandraVersion,
+        @CustomType.Parameter("clientCertificates") @Nullable List<CertificateResponse> clientCertificates,
+        @CustomType.Parameter("clusterNameOverride") @Nullable String clusterNameOverride,
+        @CustomType.Parameter("delegatedManagementSubnetId") @Nullable String delegatedManagementSubnetId,
+        @CustomType.Parameter("externalGossipCertificates") @Nullable List<CertificateResponse> externalGossipCertificates,
+        @CustomType.Parameter("externalSeedNodes") @Nullable List<SeedNodeResponse> externalSeedNodes,
+        @CustomType.Parameter("gossipCertificates") List<CertificateResponse> gossipCertificates,
+        @CustomType.Parameter("hoursBetweenBackups") @Nullable Integer hoursBetweenBackups,
+        @CustomType.Parameter("prometheusEndpoint") @Nullable SeedNodeResponse prometheusEndpoint,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("repairEnabled") @Nullable Boolean repairEnabled,
+        @CustomType.Parameter("seedNodes") List<SeedNodeResponse> seedNodes) {
         this.authenticationMethod = authenticationMethod;
         this.cassandraVersion = cassandraVersion;
         this.clientCertificates = clientCertificates;

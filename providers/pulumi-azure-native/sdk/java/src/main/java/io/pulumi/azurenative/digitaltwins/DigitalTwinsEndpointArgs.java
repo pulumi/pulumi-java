@@ -7,7 +7,7 @@ import io.pulumi.azurenative.digitaltwins.inputs.EventGridArgs;
 import io.pulumi.azurenative.digitaltwins.inputs.EventHubArgs;
 import io.pulumi.azurenative.digitaltwins.inputs.ServiceBusArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
      * Name of Endpoint Resource.
      * 
      */
-    @InputImport(name="endpointName")
+    @Import(name="endpointName")
       private final @Nullable Output<String> endpointName;
 
     public Output<String> getEndpointName() {
@@ -33,7 +33,7 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
      * DigitalTwinsInstance endpoint resource properties.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<Object> properties;
 
     public Output<Object> getProperties() {
@@ -44,7 +44,7 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
      * The name of the resource group that contains the DigitalTwinsInstance.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -55,7 +55,7 @@ public final class DigitalTwinsEndpointArgs extends io.pulumi.resources.Resource
      * The name of the DigitalTwinsInstance.
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {

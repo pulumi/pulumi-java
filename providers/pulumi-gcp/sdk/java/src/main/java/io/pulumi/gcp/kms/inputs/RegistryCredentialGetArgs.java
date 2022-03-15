@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -15,7 +15,7 @@ public final class RegistryCredentialGetArgs extends io.pulumi.resources.Resourc
 
     public static final RegistryCredentialGetArgs Empty = new RegistryCredentialGetArgs();
 
-    @InputImport(name="publicKeyCertificate", required=true)
+    @Import(name="publicKeyCertificate", required=true)
       private final Output<Map<String,Object>> publicKeyCertificate;
 
     public Output<Map<String,Object>> getPublicKeyCertificate() {

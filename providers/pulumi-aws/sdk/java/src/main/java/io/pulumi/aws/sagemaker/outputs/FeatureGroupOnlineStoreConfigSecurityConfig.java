@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FeatureGroupOnlineStoreConfigSecurityConfig {
     /**
      * The ID of the AWS Key Management Service (AWS KMS) key that SageMaker Feature Store uses to encrypt the Amazon S3 objects at rest using Amazon S3 server-side encryption.
@@ -17,8 +17,8 @@ public final class FeatureGroupOnlineStoreConfigSecurityConfig {
      */
     private final @Nullable String kmsKeyId;
 
-    @OutputCustomType.Constructor
-    private FeatureGroupOnlineStoreConfigSecurityConfig(@OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
+    @CustomType.Constructor
+    private FeatureGroupOnlineStoreConfigSecurityConfig(@CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
     }
 

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.DailyRetentionScheduleRespo
 import io.pulumi.azurenative.recoveryservices.inputs.MonthlyRetentionScheduleResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.WeeklyRetentionScheduleResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.YearlyRetentionScheduleResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
      * Daily retention schedule of the protection policy.
      * 
      */
-    @InputImport(name="dailySchedule")
+    @Import(name="dailySchedule")
       private final @Nullable DailyRetentionScheduleResponse dailySchedule;
 
     public Optional<DailyRetentionScheduleResponse> getDailySchedule() {
@@ -37,7 +37,7 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
      * Monthly retention schedule of the protection policy.
      * 
      */
-    @InputImport(name="monthlySchedule")
+    @Import(name="monthlySchedule")
       private final @Nullable MonthlyRetentionScheduleResponse monthlySchedule;
 
     public Optional<MonthlyRetentionScheduleResponse> getMonthlySchedule() {
@@ -49,7 +49,7 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
      * Expected value is 'LongTermRetentionPolicy'.
      * 
      */
-    @InputImport(name="retentionPolicyType", required=true)
+    @Import(name="retentionPolicyType", required=true)
       private final String retentionPolicyType;
 
     public String getRetentionPolicyType() {
@@ -60,7 +60,7 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
      * Weekly retention schedule of the protection policy.
      * 
      */
-    @InputImport(name="weeklySchedule")
+    @Import(name="weeklySchedule")
       private final @Nullable WeeklyRetentionScheduleResponse weeklySchedule;
 
     public Optional<WeeklyRetentionScheduleResponse> getWeeklySchedule() {
@@ -71,7 +71,7 @@ public final class LongTermRetentionPolicyResponse extends io.pulumi.resources.I
      * Yearly retention schedule of the protection policy.
      * 
      */
-    @InputImport(name="yearlySchedule")
+    @Import(name="yearlySchedule")
       private final @Nullable YearlyRetentionScheduleResponse yearlySchedule;
 
     public Optional<YearlyRetentionScheduleResponse> getYearlySchedule() {

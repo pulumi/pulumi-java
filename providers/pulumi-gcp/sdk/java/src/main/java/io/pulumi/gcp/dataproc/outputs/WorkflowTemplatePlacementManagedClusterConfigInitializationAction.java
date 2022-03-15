@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAction {
     /**
      * Required. Cloud Storage URI of executable file.
@@ -22,10 +22,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
      */
     private final @Nullable String executionTimeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigInitializationAction(
-        @OutputCustomType.Parameter("executableFile") @Nullable String executableFile,
-        @OutputCustomType.Parameter("executionTimeout") @Nullable String executionTimeout) {
+        @CustomType.Parameter("executableFile") @Nullable String executableFile,
+        @CustomType.Parameter("executionTimeout") @Nullable String executionTimeout) {
         this.executableFile = executableFile;
         this.executionTimeout = executionTimeout;
     }

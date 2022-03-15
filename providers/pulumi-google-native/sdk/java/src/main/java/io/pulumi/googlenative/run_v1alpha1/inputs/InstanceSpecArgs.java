@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1alpha1.inputs.ContainerArgs;
 import io.pulumi.googlenative.run_v1alpha1.inputs.VolumeArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Optional duration in seconds the instance may be active relative to StartTime before the system will actively try to mark it failed and kill associated containers. If set to zero, the system will never attempt to kill an instance based on time. Otherwise, value must be a positive integer. +optional
      * 
      */
-    @InputImport(name="activeDeadlineSeconds")
+    @Import(name="activeDeadlineSeconds")
       private final @Nullable Output<String> activeDeadlineSeconds;
 
     public Output<String> getActiveDeadlineSeconds() {
@@ -36,7 +36,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. List of containers belonging to the instance. We disallow a number of fields on this Container. Only a single container may be provided.
      * 
      */
-    @InputImport(name="containers")
+    @Import(name="containers")
       private final @Nullable Output<List<ContainerArgs>> containers;
 
     public Output<List<ContainerArgs>> getContainers() {
@@ -47,7 +47,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Restart policy for all containers within the instance. Allowed values are: - OnFailure: Instances will always be restarted on failure if the backoffLimit has not been reached. - Never: Instances are never restarted and all failures are permanent. Cannot be used if backoffLimit is set. +optional
      * 
      */
-    @InputImport(name="restartPolicy")
+    @Import(name="restartPolicy")
       private final @Nullable Output<String> restartPolicy;
 
     public Output<String> getRestartPolicy() {
@@ -58,7 +58,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Email address of the IAM service account associated with the instance of a Job. The service account represents the identity of the running instance, and determines what permissions the instance has. If not provided, the instance will use the project's default service account. +optional
      * 
      */
-    @InputImport(name="serviceAccountName")
+    @Import(name="serviceAccountName")
       private final @Nullable Output<String> serviceAccountName;
 
     public Output<String> getServiceAccountName() {
@@ -69,7 +69,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Optional duration in seconds the instance needs to terminate gracefully. Value must be non-negative integer. The value zero indicates delete immediately. The grace period is the duration in seconds after the processes running in the instance are sent a termination signal and the time when the processes are forcibly halted with a kill signal. Set this value longer than the expected cleanup time for your process. +optional
      * 
      */
-    @InputImport(name="terminationGracePeriodSeconds")
+    @Import(name="terminationGracePeriodSeconds")
       private final @Nullable Output<String> terminationGracePeriodSeconds;
 
     public Output<String> getTerminationGracePeriodSeconds() {
@@ -80,7 +80,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. List of volumes that can be mounted by containers belonging to the instance. More info: https://kubernetes.io/docs/concepts/storage/volumes +optional
      * 
      */
-    @InputImport(name="volumes")
+    @Import(name="volumes")
       private final @Nullable Output<List<VolumeArgs>> volumes;
 
     public Output<List<VolumeArgs>> getVolumes() {

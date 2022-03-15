@@ -10,7 +10,7 @@ import io.pulumi.aws.alb.inputs.ListenerRuleConditionPathPatternGetArgs;
 import io.pulumi.aws.alb.inputs.ListenerRuleConditionQueryStringGetArgs;
 import io.pulumi.aws.alb.inputs.ListenerRuleConditionSourceIpGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ListenerRuleConditionGetArgs extends io.pulumi.resources.Reso
      * Contains a single `values` item which is a list of host header patterns to match. The maximum size of each pattern is 128 characters. Comparison is case insensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied.
      * 
      */
-    @InputImport(name="hostHeader")
+    @Import(name="hostHeader")
       private final @Nullable Output<ListenerRuleConditionHostHeaderGetArgs> hostHeader;
 
     public Output<ListenerRuleConditionHostHeaderGetArgs> getHostHeader() {
@@ -35,7 +35,7 @@ public final class ListenerRuleConditionGetArgs extends io.pulumi.resources.Reso
      * HTTP headers to match. HTTP Header block fields documented below.
      * 
      */
-    @InputImport(name="httpHeader")
+    @Import(name="httpHeader")
       private final @Nullable Output<ListenerRuleConditionHttpHeaderGetArgs> httpHeader;
 
     public Output<ListenerRuleConditionHttpHeaderGetArgs> getHttpHeader() {
@@ -46,7 +46,7 @@ public final class ListenerRuleConditionGetArgs extends io.pulumi.resources.Reso
      * Contains a single `values` item which is a list of HTTP request methods or verbs to match. Maximum size is 40 characters. Only allowed characters are A-Z, hyphen (-) and underscore (\_). Comparison is case sensitive. Wildcards are not supported. Only one needs to match for the condition to be satisfied. AWS recommends that GET and HEAD requests are routed in the same way because the response to a HEAD request may be cached.
      * 
      */
-    @InputImport(name="httpRequestMethod")
+    @Import(name="httpRequestMethod")
       private final @Nullable Output<ListenerRuleConditionHttpRequestMethodGetArgs> httpRequestMethod;
 
     public Output<ListenerRuleConditionHttpRequestMethodGetArgs> getHttpRequestMethod() {
@@ -57,7 +57,7 @@ public final class ListenerRuleConditionGetArgs extends io.pulumi.resources.Reso
      * Contains a single `values` item which is a list of path patterns to match against the request URL. Maximum size of each pattern is 128 characters. Comparison is case sensitive. Wildcard characters supported: * (matches 0 or more characters) and ? (matches exactly 1 character). Only one pattern needs to match for the condition to be satisfied. Path pattern is compared only to the path of the URL, not to its query string. To compare against the query string, use a `query_string` condition.
      * 
      */
-    @InputImport(name="pathPattern")
+    @Import(name="pathPattern")
       private final @Nullable Output<ListenerRuleConditionPathPatternGetArgs> pathPattern;
 
     public Output<ListenerRuleConditionPathPatternGetArgs> getPathPattern() {
@@ -68,7 +68,7 @@ public final class ListenerRuleConditionGetArgs extends io.pulumi.resources.Reso
      * Query strings to match. Query String block fields documented below.
      * 
      */
-    @InputImport(name="queryStrings")
+    @Import(name="queryStrings")
       private final @Nullable Output<List<ListenerRuleConditionQueryStringGetArgs>> queryStrings;
 
     public Output<List<ListenerRuleConditionQueryStringGetArgs>> getQueryStrings() {
@@ -79,7 +79,7 @@ public final class ListenerRuleConditionGetArgs extends io.pulumi.resources.Reso
      * Contains a single `values` item which is a list of source IP CIDR notations to match. You can use both IPv4 and IPv6 addresses. Wildcards are not supported. Condition is satisfied if the source IP address of the request matches one of the CIDR blocks. Condition is not satisfied by the addresses in the `X-Forwarded-For` header, use `http_header` condition instead.
      * 
      */
-    @InputImport(name="sourceIp")
+    @Import(name="sourceIp")
       private final @Nullable Output<ListenerRuleConditionSourceIpGetArgs> sourceIp;
 
     public Output<ListenerRuleConditionSourceIpGetArgs> getSourceIp() {

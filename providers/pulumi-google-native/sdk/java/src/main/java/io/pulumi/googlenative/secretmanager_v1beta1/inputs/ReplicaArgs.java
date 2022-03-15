@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.secretmanager_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
      * The canonical IDs of the location to replicate data. For example: `"us-east1"`.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {

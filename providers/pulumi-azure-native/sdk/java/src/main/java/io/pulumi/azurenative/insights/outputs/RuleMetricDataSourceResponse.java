@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleMetricDataSourceResponse {
     /**
      * the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
@@ -43,14 +43,14 @@ public final class RuleMetricDataSourceResponse {
      */
     private final @Nullable String resourceUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleMetricDataSourceResponse(
-        @OutputCustomType.Parameter("legacyResourceId") @Nullable String legacyResourceId,
-        @OutputCustomType.Parameter("metricName") @Nullable String metricName,
-        @OutputCustomType.Parameter("metricNamespace") @Nullable String metricNamespace,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("resourceLocation") @Nullable String resourceLocation,
-        @OutputCustomType.Parameter("resourceUri") @Nullable String resourceUri) {
+        @CustomType.Parameter("legacyResourceId") @Nullable String legacyResourceId,
+        @CustomType.Parameter("metricName") @Nullable String metricName,
+        @CustomType.Parameter("metricNamespace") @Nullable String metricNamespace,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("resourceLocation") @Nullable String resourceLocation,
+        @CustomType.Parameter("resourceUri") @Nullable String resourceUri) {
         this.legacyResourceId = legacyResourceId;
         this.metricName = metricName;
         this.metricNamespace = metricNamespace;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.enums.StorageAccountType;
 import io.pulumi.azurenative.compute.inputs.EncryptionImagesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Allows users to provide customer managed keys for encrypting the OS and data disks in the gallery artifact.
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<EncryptionImagesArgs> encryption;
 
     public Output<EncryptionImagesArgs> getEncryption() {
@@ -37,7 +37,7 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the region.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -48,7 +48,7 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
      * The number of replicas of the Image Version to be created per region. This property is updatable.
      * 
      */
-    @InputImport(name="regionalReplicaCount")
+    @Import(name="regionalReplicaCount")
       private final @Nullable Output<Integer> regionalReplicaCount;
 
     public Output<Integer> getRegionalReplicaCount() {
@@ -59,7 +59,7 @@ public final class TargetRegionArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the storage account type to be used to store the image. This property is not updatable.
      * 
      */
-    @InputImport(name="storageAccountType")
+    @Import(name="storageAccountType")
       private final @Nullable Output<Either<String,StorageAccountType>> storageAccountType;
 
     public Output<Either<String,StorageAccountType>> getStorageAccountType() {

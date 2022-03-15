@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class SpotFleetRequestSpotMaintenanceStrategiesGetArgs extends io.p
      * Nested argument containing the capacity rebalance for your fleet request. Defined below.
      * 
      */
-    @InputImport(name="capacityRebalance")
+    @Import(name="capacityRebalance")
       private final @Nullable Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs> capacityRebalance;
 
     public Output<SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalanceGetArgs> getCapacityRebalance() {

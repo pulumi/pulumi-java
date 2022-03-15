@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wisdom.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class KnowledgeBaseAppIntegrationsConfigurationArgs extends io.pulu
 
     public static final KnowledgeBaseAppIntegrationsConfigurationArgs Empty = new KnowledgeBaseAppIntegrationsConfigurationArgs();
 
-    @InputImport(name="appIntegrationArn", required=true)
+    @Import(name="appIntegrationArn", required=true)
       private final Output<String> appIntegrationArn;
 
     public Output<String> getAppIntegrationArn() {
         return this.appIntegrationArn;
     }
 
-    @InputImport(name="objectFields", required=true)
+    @Import(name="objectFields", required=true)
       private final Output<List<String>> objectFields;
 
     public Output<List<String>> getObjectFields() {

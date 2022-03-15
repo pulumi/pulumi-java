@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.enums.RuleAction;
 import io.pulumi.googlenative.compute_v1.inputs.ConditionArgs;
 import io.pulumi.googlenative.compute_v1.inputs.LogConfigArgs;
@@ -26,7 +26,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<RuleAction> action;
 
     public Output<RuleAction> getAction() {
@@ -37,7 +37,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<ConditionArgs>> conditions;
 
     public Output<List<ConditionArgs>> getConditions() {
@@ -48,7 +48,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -59,7 +59,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="ins")
+    @Import(name="ins")
       private final @Nullable Output<List<String>> ins;
 
     public Output<List<String>> getIns() {
@@ -70,7 +70,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="logConfigs")
+    @Import(name="logConfigs")
       private final @Nullable Output<List<LogConfigArgs>> logConfigs;
 
     public Output<List<LogConfigArgs>> getLogConfigs() {
@@ -81,7 +81,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="notIns")
+    @Import(name="notIns")
       private final @Nullable Output<List<String>> notIns;
 
     public Output<List<String>> getNotIns() {
@@ -92,7 +92,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<List<String>> permissions;
 
     public Output<List<String>> getPermissions() {

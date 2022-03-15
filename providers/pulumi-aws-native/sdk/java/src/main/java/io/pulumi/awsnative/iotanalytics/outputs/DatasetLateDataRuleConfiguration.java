@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetDeltaTimeSessionWindowConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetLateDataRuleConfiguration {
     private final @Nullable DatasetDeltaTimeSessionWindowConfiguration deltaTimeSessionWindowConfiguration;
 
-    @OutputCustomType.Constructor
-    private DatasetLateDataRuleConfiguration(@OutputCustomType.Parameter("deltaTimeSessionWindowConfiguration") @Nullable DatasetDeltaTimeSessionWindowConfiguration deltaTimeSessionWindowConfiguration) {
+    @CustomType.Constructor
+    private DatasetLateDataRuleConfiguration(@CustomType.Parameter("deltaTimeSessionWindowConfiguration") @Nullable DatasetDeltaTimeSessionWindowConfiguration deltaTimeSessionWindowConfiguration) {
         this.deltaTimeSessionWindowConfiguration = deltaTimeSessionWindowConfiguration;
     }
 

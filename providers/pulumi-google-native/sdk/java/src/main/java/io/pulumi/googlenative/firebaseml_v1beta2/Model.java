@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebaseml_v1beta2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebaseml_v1beta2.ModelArgs;
@@ -25,7 +25,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * Lists operation ids associated with this model whose status is NOT done.
      * 
      */
-    @OutputExport(name="activeOperations", type=List.class, parameters={OperationResponse.class})
+    @Export(name="activeOperations", type=List.class, parameters={OperationResponse.class})
     private Output<List<OperationResponse>> activeOperations;
 
     /**
@@ -39,7 +39,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * Timestamp when this model was created in Firebase ML.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -53,7 +53,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * The name of the model to create. The name can be up to 32 characters long and can consist only of ASCII Latin letters A-Z and a-z, underscores(_) and ASCII digits 0-9. It must start with a letter.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -67,7 +67,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * See RFC7232 https://tools.ietf.org/html/rfc7232#section-2.3
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -81,7 +81,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * The model_hash will change if a new file is available for download.
      * 
      */
-    @OutputExport(name="modelHash", type=String.class, parameters={})
+    @Export(name="modelHash", type=String.class, parameters={})
     private Output<String> modelHash;
 
     /**
@@ -95,7 +95,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * The resource name of the Model. Model names have the form `projects/{project_id}/models/{model_id}` The name is ignored when creating a model.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -109,7 +109,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * State common to all model types. Includes publishing and validation information.
      * 
      */
-    @OutputExport(name="state", type=ModelStateResponse.class, parameters={})
+    @Export(name="state", type=ModelStateResponse.class, parameters={})
     private Output<ModelStateResponse> state;
 
     /**
@@ -123,7 +123,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * User defined tags which can be used to group/filter models during listing
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={String.class})
+    @Export(name="tags", type=List.class, parameters={String.class})
     private Output<List<String>> tags;
 
     /**
@@ -137,7 +137,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * A TFLite Model
      * 
      */
-    @OutputExport(name="tfliteModel", type=TfLiteModelResponse.class, parameters={})
+    @Export(name="tfliteModel", type=TfLiteModelResponse.class, parameters={})
     private Output<TfLiteModelResponse> tfliteModel;
 
     /**
@@ -151,7 +151,7 @@ public class Model extends io.pulumi.resources.CustomResource {
      * Timestamp when this model was updated in Firebase ML.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

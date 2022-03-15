@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53recoveryreadiness;
 
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.CellTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the cell to create.
      * 
      */
-    @InputImport(name="cellName")
+    @Import(name="cellName")
       private final @Nullable Output<String> cellName;
 
     public Output<String> getCellName() {
@@ -31,7 +31,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
      * A list of cell Amazon Resource Names (ARNs) contained within this cell, for use in nested cells. For example, Availability Zones within specific Regions.
      * 
      */
-    @InputImport(name="cells")
+    @Import(name="cells")
       private final @Nullable Output<List<String>> cells;
 
     public Output<List<String>> getCells() {
@@ -42,7 +42,7 @@ public final class CellArgs extends io.pulumi.resources.ResourceArgs {
      * A collection of tags associated with a resource
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<CellTagArgs>> tags;
 
     public Output<List<CellTagArgs>> getTags() {

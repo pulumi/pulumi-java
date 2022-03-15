@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ClusterMonitoringConfigGetArgs extends io.pulumi.resources.Re
      * The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
      * 
      */
-    @InputImport(name="enableComponents", required=true)
+    @Import(name="enableComponents", required=true)
       private final Output<List<String>> enableComponents;
 
     public Output<List<String>> getEnableComponents() {

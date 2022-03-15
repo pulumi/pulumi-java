@@ -5,7 +5,7 @@ package io.pulumi.azurenative.operationalinsights.inputs;
 
 import io.pulumi.azurenative.operationalinsights.inputs.ColumnArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * A list of table custom columns.
      * 
      */
-    @InputImport(name="columns")
+    @Import(name="columns")
       private final @Nullable Output<List<ColumnArgs>> columns;
 
     public Output<List<ColumnArgs>> getColumns() {
@@ -35,7 +35,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Table description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Table display name.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -57,7 +57,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
      * Table name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

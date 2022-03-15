@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.ScriptReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ScriptsToExecuteResponse extends io.pulumi.resources.InvokeAr
      * Script that's run only once during provision of the compute.
      * 
      */
-    @InputImport(name="creationScript")
+    @Import(name="creationScript")
       private final @Nullable ScriptReferenceResponse creationScript;
 
     public Optional<ScriptReferenceResponse> getCreationScript() {
@@ -33,7 +33,7 @@ public final class ScriptsToExecuteResponse extends io.pulumi.resources.InvokeAr
      * Script that's run every time the machine starts.
      * 
      */
-    @InputImport(name="startupScript")
+    @Import(name="startupScript")
       private final @Nullable ScriptReferenceResponse startupScript;
 
     public Optional<ScriptReferenceResponse> getStartupScript() {

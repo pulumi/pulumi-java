@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PortworxVolumeSource {
     /**
      * FSType represents the filesystem type to mount Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs". Implicitly inferred to be "ext4" if unspecified.
@@ -28,11 +28,11 @@ public final class PortworxVolumeSource {
      */
     private final String volumeID;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PortworxVolumeSource(
-        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("volumeID") String volumeID) {
+        @CustomType.Parameter("fsType") @Nullable String fsType,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("volumeID") String volumeID) {
         this.fsType = fsType;
         this.readOnly = readOnly;
         this.volumeID = volumeID;

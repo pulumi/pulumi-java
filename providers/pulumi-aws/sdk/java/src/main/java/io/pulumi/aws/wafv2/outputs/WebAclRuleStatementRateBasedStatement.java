@@ -5,14 +5,14 @@ package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementRateBasedStatementForwardedIpConfig;
 import io.pulumi.aws.wafv2.outputs.WebAclRuleStatementRateBasedStatementScopeDownStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRuleStatementRateBasedStatement {
     /**
      * Setting that indicates how to aggregate the request counts. Valid values include: `FORWARDED_IP` or `IP`. Default: `IP`.
@@ -35,12 +35,12 @@ public final class WebAclRuleStatementRateBasedStatement {
      */
     private final @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatement scopeDownStatement;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAclRuleStatementRateBasedStatement(
-        @OutputCustomType.Parameter("aggregateKeyType") @Nullable String aggregateKeyType,
-        @OutputCustomType.Parameter("forwardedIpConfig") @Nullable WebAclRuleStatementRateBasedStatementForwardedIpConfig forwardedIpConfig,
-        @OutputCustomType.Parameter("limit") Integer limit,
-        @OutputCustomType.Parameter("scopeDownStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatement scopeDownStatement) {
+        @CustomType.Parameter("aggregateKeyType") @Nullable String aggregateKeyType,
+        @CustomType.Parameter("forwardedIpConfig") @Nullable WebAclRuleStatementRateBasedStatementForwardedIpConfig forwardedIpConfig,
+        @CustomType.Parameter("limit") Integer limit,
+        @CustomType.Parameter("scopeDownStatement") @Nullable WebAclRuleStatementRateBasedStatementScopeDownStatement scopeDownStatement) {
         this.aggregateKeyType = aggregateKeyType;
         this.forwardedIpConfig = forwardedIpConfig;
         this.limit = limit;

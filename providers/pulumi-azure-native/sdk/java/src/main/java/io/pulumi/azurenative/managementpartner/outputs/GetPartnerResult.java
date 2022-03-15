@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.managementpartner.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPartnerResult {
     /**
      * This is the DateTime when the partner was created.
@@ -68,19 +68,19 @@ public final class GetPartnerResult {
      */
     private final @Nullable Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPartnerResult(
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("etag") @Nullable Integer etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
-        @OutputCustomType.Parameter("partnerId") @Nullable String partnerId,
-        @OutputCustomType.Parameter("partnerName") @Nullable String partnerName,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updatedTime") @Nullable String updatedTime,
-        @OutputCustomType.Parameter("version") @Nullable Integer version) {
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("etag") @Nullable Integer etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("objectId") @Nullable String objectId,
+        @CustomType.Parameter("partnerId") @Nullable String partnerId,
+        @CustomType.Parameter("partnerName") @Nullable String partnerName,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updatedTime") @Nullable String updatedTime,
+        @CustomType.Parameter("version") @Nullable Integer version) {
         this.createdTime = createdTime;
         this.etag = etag;
         this.id = id;

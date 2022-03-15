@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorAutoScalingArgs;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorProvisionedCapacityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,14 +19,14 @@ public final class ConnectorCapacityArgs extends io.pulumi.resources.ResourceArg
 
     public static final ConnectorCapacityArgs Empty = new ConnectorCapacityArgs();
 
-    @InputImport(name="autoScaling")
+    @Import(name="autoScaling")
       private final @Nullable Output<ConnectorAutoScalingArgs> autoScaling;
 
     public Output<ConnectorAutoScalingArgs> getAutoScaling() {
         return this.autoScaling == null ? Output.empty() : this.autoScaling;
     }
 
-    @InputImport(name="provisionedCapacity")
+    @Import(name="provisionedCapacity")
       private final @Nullable Output<ConnectorProvisionedCapacityArgs> provisionedCapacity;
 
     public Output<ConnectorProvisionedCapacityArgs> getProvisionedCapacity() {

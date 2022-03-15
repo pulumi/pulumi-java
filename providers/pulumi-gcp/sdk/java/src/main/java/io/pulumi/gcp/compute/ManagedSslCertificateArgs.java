@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.ManagedSslCertificateManagedArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class ManagedSslCertificateArgs extends io.pulumi.resources.Resourc
      * The unique identifier for the resource.
      * 
      */
-    @InputImport(name="certificateId")
+    @Import(name="certificateId")
       private final @Nullable Output<Integer> certificateId;
 
     public Output<Integer> getCertificateId() {
@@ -31,7 +31,7 @@ public final class ManagedSslCertificateArgs extends io.pulumi.resources.Resourc
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class ManagedSslCertificateArgs extends io.pulumi.resources.Resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="managed")
+    @Import(name="managed")
       private final @Nullable Output<ManagedSslCertificateManagedArgs> managed;
 
     public Output<ManagedSslCertificateManagedArgs> getManaged() {
@@ -61,7 +61,7 @@ public final class ManagedSslCertificateArgs extends io.pulumi.resources.Resourc
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -73,7 +73,7 @@ public final class ManagedSslCertificateArgs extends io.pulumi.resources.Resourc
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -87,7 +87,7 @@ public final class ManagedSslCertificateArgs extends io.pulumi.resources.Resourc
      * Possible values are `MANAGED`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

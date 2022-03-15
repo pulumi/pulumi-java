@@ -3,22 +3,22 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterNodeConfigGuestAccelerator {
     private final Integer count;
     private final String gpuPartitionSize;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterNodeConfigGuestAccelerator(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("gpuPartitionSize") String gpuPartitionSize,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("gpuPartitionSize") String gpuPartitionSize,
+        @CustomType.Parameter("type") String type) {
         this.count = count;
         this.gpuPartitionSize = gpuPartitionSize;
         this.type = type;

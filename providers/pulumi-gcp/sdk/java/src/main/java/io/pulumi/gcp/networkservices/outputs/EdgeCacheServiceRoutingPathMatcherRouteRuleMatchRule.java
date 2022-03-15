@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch;
 import java.lang.Boolean;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
     /**
      * For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL.
@@ -55,14 +55,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
      */
     private final @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule(
-        @OutputCustomType.Parameter("fullPathMatch") @Nullable String fullPathMatch,
-        @OutputCustomType.Parameter("headerMatches") @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches,
-        @OutputCustomType.Parameter("ignoreCase") @Nullable Boolean ignoreCase,
-        @OutputCustomType.Parameter("pathTemplateMatch") @Nullable String pathTemplateMatch,
-        @OutputCustomType.Parameter("prefixMatch") @Nullable String prefixMatch,
-        @OutputCustomType.Parameter("queryParameterMatches") @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches) {
+        @CustomType.Parameter("fullPathMatch") @Nullable String fullPathMatch,
+        @CustomType.Parameter("headerMatches") @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches,
+        @CustomType.Parameter("ignoreCase") @Nullable Boolean ignoreCase,
+        @CustomType.Parameter("pathTemplateMatch") @Nullable String pathTemplateMatch,
+        @CustomType.Parameter("prefixMatch") @Nullable String prefixMatch,
+        @CustomType.Parameter("queryParameterMatches") @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches) {
         this.fullPathMatch = fullPathMatch;
         this.headerMatches = headerMatches;
         this.ignoreCase = ignoreCase;

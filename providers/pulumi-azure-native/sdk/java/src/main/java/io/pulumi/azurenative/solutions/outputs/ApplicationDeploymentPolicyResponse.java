@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationDeploymentPolicyResponse {
     /**
      * The managed application deployment mode.
@@ -15,8 +15,8 @@ public final class ApplicationDeploymentPolicyResponse {
      */
     private final String deploymentMode;
 
-    @OutputCustomType.Constructor
-    private ApplicationDeploymentPolicyResponse(@OutputCustomType.Parameter("deploymentMode") String deploymentMode) {
+    @CustomType.Constructor
+    private ApplicationDeploymentPolicyResponse(@CustomType.Parameter("deploymentMode") String deploymentMode) {
         this.deploymentMode = deploymentMode;
     }
 

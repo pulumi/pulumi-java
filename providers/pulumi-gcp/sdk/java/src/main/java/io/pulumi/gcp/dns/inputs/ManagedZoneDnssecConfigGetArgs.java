@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dns.inputs.ManagedZoneDnssecConfigDefaultKeySpecGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ManagedZoneDnssecConfigGetArgs extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="defaultKeySpecs")
+    @Import(name="defaultKeySpecs")
       private final @Nullable Output<List<ManagedZoneDnssecConfigDefaultKeySpecGetArgs>> defaultKeySpecs;
 
     public Output<List<ManagedZoneDnssecConfigDefaultKeySpecGetArgs>> getDefaultKeySpecs() {
@@ -35,7 +35,7 @@ public final class ManagedZoneDnssecConfigGetArgs extends io.pulumi.resources.Re
      * Identifies what kind of resource this is
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -48,7 +48,7 @@ public final class ManagedZoneDnssecConfigGetArgs extends io.pulumi.resources.Re
      * Possible values are `nsec` and `nsec3`.
      * 
      */
-    @InputImport(name="nonExistence")
+    @Import(name="nonExistence")
       private final @Nullable Output<String> nonExistence;
 
     public Output<String> getNonExistence() {
@@ -60,7 +60,7 @@ public final class ManagedZoneDnssecConfigGetArgs extends io.pulumi.resources.Re
      * Possible values are `off`, `on`, and `transfer`.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {

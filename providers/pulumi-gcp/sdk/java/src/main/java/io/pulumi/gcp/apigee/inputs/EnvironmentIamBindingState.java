@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.apigee.inputs.EnvironmentIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
 
     public static final EnvironmentIamBindingState Empty = new EnvironmentIamBindingState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<EnvironmentIamBindingConditionGetArgs> condition;
 
     public Output<EnvironmentIamBindingConditionGetArgs> getCondition() {
@@ -27,7 +27,7 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="envId")
+    @Import(name="envId")
       private final @Nullable Output<String> envId;
 
     public Output<String> getEnvId() {
@@ -38,21 +38,21 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="members")
+    @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
         return this.members == null ? Output.empty() : this.members;
     }
 
-    @InputImport(name="orgId")
+    @Import(name="orgId")
       private final @Nullable Output<String> orgId;
 
     public Output<String> getOrgId() {
@@ -65,7 +65,7 @@ public final class EnvironmentIamBindingState extends io.pulumi.resources.Resour
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

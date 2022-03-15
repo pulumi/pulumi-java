@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobReferenceResponse {
     /**
      * Optional. The job ID, which must be unique within the project.The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or hyphens (-). The maximum length is 100 characters.If not specified by the caller, the job ID will be provided by the server.
@@ -20,10 +20,10 @@ public final class JobReferenceResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobReferenceResponse(
-        @OutputCustomType.Parameter("jobId") String jobId,
-        @OutputCustomType.Parameter("project") String project) {
+        @CustomType.Parameter("jobId") String jobId,
+        @CustomType.Parameter("project") String project) {
         this.jobId = jobId;
         this.project = project;
     }

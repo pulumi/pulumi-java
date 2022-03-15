@@ -6,7 +6,7 @@ package io.pulumi.azurenative.customerinsights.outputs;
 import io.pulumi.azurenative.customerinsights.outputs.PredictionResponseGrades;
 import io.pulumi.azurenative.customerinsights.outputs.PredictionResponseMappings;
 import io.pulumi.azurenative.customerinsights.outputs.PredictionResponseSystemGeneratedEntities;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPredictionResult {
     /**
      * Whether do auto analyze.
@@ -118,28 +118,28 @@ public final class GetPredictionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPredictionResult(
-        @OutputCustomType.Parameter("autoAnalyze") Boolean autoAnalyze,
-        @OutputCustomType.Parameter("description") @Nullable Map<String,String> description,
-        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
-        @OutputCustomType.Parameter("grades") @Nullable List<PredictionResponseGrades> grades,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("involvedInteractionTypes") @Nullable List<String> involvedInteractionTypes,
-        @OutputCustomType.Parameter("involvedKpiTypes") @Nullable List<String> involvedKpiTypes,
-        @OutputCustomType.Parameter("involvedRelationships") @Nullable List<String> involvedRelationships,
-        @OutputCustomType.Parameter("mappings") PredictionResponseMappings mappings,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("negativeOutcomeExpression") String negativeOutcomeExpression,
-        @OutputCustomType.Parameter("positiveOutcomeExpression") String positiveOutcomeExpression,
-        @OutputCustomType.Parameter("predictionName") @Nullable String predictionName,
-        @OutputCustomType.Parameter("primaryProfileType") String primaryProfileType,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("scopeExpression") String scopeExpression,
-        @OutputCustomType.Parameter("scoreLabel") String scoreLabel,
-        @OutputCustomType.Parameter("systemGeneratedEntities") PredictionResponseSystemGeneratedEntities systemGeneratedEntities,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("autoAnalyze") Boolean autoAnalyze,
+        @CustomType.Parameter("description") @Nullable Map<String,String> description,
+        @CustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @CustomType.Parameter("grades") @Nullable List<PredictionResponseGrades> grades,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("involvedInteractionTypes") @Nullable List<String> involvedInteractionTypes,
+        @CustomType.Parameter("involvedKpiTypes") @Nullable List<String> involvedKpiTypes,
+        @CustomType.Parameter("involvedRelationships") @Nullable List<String> involvedRelationships,
+        @CustomType.Parameter("mappings") PredictionResponseMappings mappings,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("negativeOutcomeExpression") String negativeOutcomeExpression,
+        @CustomType.Parameter("positiveOutcomeExpression") String positiveOutcomeExpression,
+        @CustomType.Parameter("predictionName") @Nullable String predictionName,
+        @CustomType.Parameter("primaryProfileType") String primaryProfileType,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("scopeExpression") String scopeExpression,
+        @CustomType.Parameter("scoreLabel") String scoreLabel,
+        @CustomType.Parameter("systemGeneratedEntities") PredictionResponseSystemGeneratedEntities systemGeneratedEntities,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.autoAnalyze = autoAnalyze;
         this.description = description;
         this.displayName = displayName;

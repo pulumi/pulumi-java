@@ -7,7 +7,7 @@ import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanScalingInstructionCustom
 import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationArgs;
 import io.pulumi.aws.autoscalingplans.inputs.ScalingPlanScalingInstructionTargetTrackingConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ScalingPlanScalingInstructionArgs extends io.pulumi.resources
      * More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_CustomizedLoadMetricSpecification.html).
      * 
      */
-    @InputImport(name="customizedLoadMetricSpecification")
+    @Import(name="customizedLoadMetricSpecification")
       private final @Nullable Output<ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationArgs> customizedLoadMetricSpecification;
 
     public Output<ScalingPlanScalingInstructionCustomizedLoadMetricSpecificationArgs> getCustomizedLoadMetricSpecification() {
@@ -36,7 +36,7 @@ public final class ScalingPlanScalingInstructionArgs extends io.pulumi.resources
      * Boolean controlling whether dynamic scaling by AWS Auto Scaling is disabled. Defaults to `false`.
      * 
      */
-    @InputImport(name="disableDynamicScaling")
+    @Import(name="disableDynamicScaling")
       private final @Nullable Output<Boolean> disableDynamicScaling;
 
     public Output<Boolean> getDisableDynamicScaling() {
@@ -47,7 +47,7 @@ public final class ScalingPlanScalingInstructionArgs extends io.pulumi.resources
      * The maximum capacity of the resource. The exception to this upper limit is if you specify a non-default setting for `predictive_scaling_max_capacity_behavior`.
      * 
      */
-    @InputImport(name="maxCapacity", required=true)
+    @Import(name="maxCapacity", required=true)
       private final Output<Integer> maxCapacity;
 
     public Output<Integer> getMaxCapacity() {
@@ -58,7 +58,7 @@ public final class ScalingPlanScalingInstructionArgs extends io.pulumi.resources
      * The minimum capacity of the resource.
      * 
      */
-    @InputImport(name="minCapacity", required=true)
+    @Import(name="minCapacity", required=true)
       private final Output<Integer> minCapacity;
 
     public Output<Integer> getMinCapacity() {
@@ -70,7 +70,7 @@ public final class ScalingPlanScalingInstructionArgs extends io.pulumi.resources
      * More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_PredefinedLoadMetricSpecification.html).
      * 
      */
-    @InputImport(name="predefinedLoadMetricSpecification")
+    @Import(name="predefinedLoadMetricSpecification")
       private final @Nullable Output<ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationArgs> predefinedLoadMetricSpecification;
 
     public Output<ScalingPlanScalingInstructionPredefinedLoadMetricSpecificationArgs> getPredefinedLoadMetricSpecification() {
@@ -82,7 +82,7 @@ public final class ScalingPlanScalingInstructionArgs extends io.pulumi.resources
      * Valid values: `SetForecastCapacityToMaxCapacity`, `SetMaxCapacityAboveForecastCapacity`, `SetMaxCapacityToForecastCapacity`.
      * 
      */
-    @InputImport(name="predictiveScalingMaxCapacityBehavior")
+    @Import(name="predictiveScalingMaxCapacityBehavior")
       private final @Nullable Output<String> predictiveScalingMaxCapacityBehavior;
 
     public Output<String> getPredictiveScalingMaxCapacityBehavior() {
@@ -93,7 +93,7 @@ public final class ScalingPlanScalingInstructionArgs extends io.pulumi.resources
      * The size of the capacity buffer to use when the forecast capacity is close to or exceeds the maximum capacity.
      * 
      */
-    @InputImport(name="predictiveScalingMaxCapacityBuffer")
+    @Import(name="predictiveScalingMaxCapacityBuffer")
       private final @Nullable Output<Integer> predictiveScalingMaxCapacityBuffer;
 
     public Output<Integer> getPredictiveScalingMaxCapacityBuffer() {
@@ -104,7 +104,7 @@ public final class ScalingPlanScalingInstructionArgs extends io.pulumi.resources
      * The predictive scaling mode. Valid values: `ForecastAndScale`, `ForecastOnly`.
      * 
      */
-    @InputImport(name="predictiveScalingMode")
+    @Import(name="predictiveScalingMode")
       private final @Nullable Output<String> predictiveScalingMode;
 
     public Output<String> getPredictiveScalingMode() {
@@ -115,7 +115,7 @@ public final class ScalingPlanScalingInstructionArgs extends io.pulumi.resources
      * The ID of the resource. This string consists of the resource type and unique identifier.
      * 
      */
-    @InputImport(name="resourceId", required=true)
+    @Import(name="resourceId", required=true)
       private final Output<String> resourceId;
 
     public Output<String> getResourceId() {
@@ -126,7 +126,7 @@ public final class ScalingPlanScalingInstructionArgs extends io.pulumi.resources
      * The scalable dimension associated with the resource. Valid values: `autoscaling:autoScalingGroup:DesiredCapacity`, `dynamodb:index:ReadCapacityUnits`, `dynamodb:index:WriteCapacityUnits`, `dynamodb:table:ReadCapacityUnits`, `dynamodb:table:WriteCapacityUnits`, `ecs:service:DesiredCount`, `ec2:spot-fleet-request:TargetCapacity`, `rds:cluster:ReadReplicaCount`.
      * 
      */
-    @InputImport(name="scalableDimension", required=true)
+    @Import(name="scalableDimension", required=true)
       private final Output<String> scalableDimension;
 
     public Output<String> getScalableDimension() {
@@ -137,7 +137,7 @@ public final class ScalingPlanScalingInstructionArgs extends io.pulumi.resources
      * Controls whether a resource's externally created scaling policies are kept or replaced. Valid values: `KeepExternalPolicies`, `ReplaceExternalPolicies`. Defaults to `KeepExternalPolicies`.
      * 
      */
-    @InputImport(name="scalingPolicyUpdateBehavior")
+    @Import(name="scalingPolicyUpdateBehavior")
       private final @Nullable Output<String> scalingPolicyUpdateBehavior;
 
     public Output<String> getScalingPolicyUpdateBehavior() {
@@ -148,7 +148,7 @@ public final class ScalingPlanScalingInstructionArgs extends io.pulumi.resources
      * The amount of time, in seconds, to buffer the run time of scheduled scaling actions when scaling out.
      * 
      */
-    @InputImport(name="scheduledActionBufferTime")
+    @Import(name="scheduledActionBufferTime")
       private final @Nullable Output<Integer> scheduledActionBufferTime;
 
     public Output<Integer> getScheduledActionBufferTime() {
@@ -159,7 +159,7 @@ public final class ScalingPlanScalingInstructionArgs extends io.pulumi.resources
      * The namespace of the AWS service. Valid values: `autoscaling`, `dynamodb`, `ecs`, `ec2`, `rds`.
      * 
      */
-    @InputImport(name="serviceNamespace", required=true)
+    @Import(name="serviceNamespace", required=true)
       private final Output<String> serviceNamespace;
 
     public Output<String> getServiceNamespace() {
@@ -171,7 +171,7 @@ public final class ScalingPlanScalingInstructionArgs extends io.pulumi.resources
      * More details can be found in the [AWS Auto Scaling API Reference](https://docs.aws.amazon.com/autoscaling/plans/APIReference/API_TargetTrackingConfiguration.html).
      * 
      */
-    @InputImport(name="targetTrackingConfigurations", required=true)
+    @Import(name="targetTrackingConfigurations", required=true)
       private final Output<List<ScalingPlanScalingInstructionTargetTrackingConfigurationArgs>> targetTrackingConfigurations;
 
     public Output<List<ScalingPlanScalingInstructionTargetTrackingConfigurationArgs>> getTargetTrackingConfigurations() {

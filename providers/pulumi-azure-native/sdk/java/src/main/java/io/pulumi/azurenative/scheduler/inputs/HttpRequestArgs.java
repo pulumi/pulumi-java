@@ -7,7 +7,7 @@ import io.pulumi.azurenative.scheduler.inputs.BasicAuthenticationArgs;
 import io.pulumi.azurenative.scheduler.inputs.ClientCertAuthenticationArgs;
 import io.pulumi.azurenative.scheduler.inputs.OAuthAuthenticationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the authentication method of the request.
      * 
      */
-    @InputImport(name="authentication")
+    @Import(name="authentication")
       private final @Nullable Output<Object> authentication;
 
     public Output<Object> getAuthentication() {
@@ -34,7 +34,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the request body.
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<String> body;
 
     public Output<String> getBody() {
@@ -45,7 +45,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the headers.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Output<Map<String,String>> headers;
 
     public Output<Map<String,String>> getHeaders() {
@@ -56,7 +56,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the method of the request.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable Output<String> method;
 
     public Output<String> getMethod() {
@@ -67,7 +67,7 @@ public final class HttpRequestArgs extends io.pulumi.resources.ResourceArgs {
      * Gets or sets the URI of the request.
      * 
      */
-    @InputImport(name="uri")
+    @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {

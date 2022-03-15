@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.billing.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AzurePlanResponse extends io.pulumi.resources.InvokeArgs {
      * The sku description.
      * 
      */
-    @InputImport(name="skuDescription", required=true)
+    @Import(name="skuDescription", required=true)
       private final String skuDescription;
 
     public String getSkuDescription() {
@@ -33,7 +33,7 @@ public final class AzurePlanResponse extends io.pulumi.resources.InvokeArgs {
      * The sku id.
      * 
      */
-    @InputImport(name="skuId")
+    @Import(name="skuId")
       private final @Nullable String skuId;
 
     public Optional<String> getSkuId() {

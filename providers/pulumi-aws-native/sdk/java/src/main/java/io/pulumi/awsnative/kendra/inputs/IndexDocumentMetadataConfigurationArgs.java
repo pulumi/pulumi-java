@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kendra.enums.IndexDocumentAttributeValueType;
 import io.pulumi.awsnative.kendra.inputs.IndexRelevanceArgs;
 import io.pulumi.awsnative.kendra.inputs.IndexSearchArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,28 +17,28 @@ public final class IndexDocumentMetadataConfigurationArgs extends io.pulumi.reso
 
     public static final IndexDocumentMetadataConfigurationArgs Empty = new IndexDocumentMetadataConfigurationArgs();
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="relevance")
+    @Import(name="relevance")
       private final @Nullable Output<IndexRelevanceArgs> relevance;
 
     public Output<IndexRelevanceArgs> getRelevance() {
         return this.relevance == null ? Output.empty() : this.relevance;
     }
 
-    @InputImport(name="search")
+    @Import(name="search")
       private final @Nullable Output<IndexSearchArgs> search;
 
     public Output<IndexSearchArgs> getSearch() {
         return this.search == null ? Output.empty() : this.search;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<IndexDocumentAttributeValueType> type;
 
     public Output<IndexDocumentAttributeValueType> getType() {

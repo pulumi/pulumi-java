@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudfunctions_v1.inputs.RetryResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class FailurePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * If specified, then the function will be retried in case of a failure.
      * 
      */
-    @InputImport(name="retry", required=true)
+    @Import(name="retry", required=true)
       private final RetryResponse retry;
 
     public RetryResponse getRetry() {

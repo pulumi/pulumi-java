@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MatchVariableResponse {
     /**
      * The selector of match variable.
@@ -22,10 +22,10 @@ public final class MatchVariableResponse {
      */
     private final String variableName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MatchVariableResponse(
-        @OutputCustomType.Parameter("selector") @Nullable String selector,
-        @OutputCustomType.Parameter("variableName") String variableName) {
+        @CustomType.Parameter("selector") @Nullable String selector,
+        @CustomType.Parameter("variableName") String variableName) {
         this.selector = selector;
         this.variableName = variableName;
     }

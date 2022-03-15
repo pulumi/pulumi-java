@@ -6,7 +6,7 @@ package io.pulumi.azurenative.signalrservice.inputs;
 import io.pulumi.azurenative.signalrservice.enums.SignalRRequestType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class NetworkACLArgs extends io.pulumi.resources.ResourceArgs {
      * Allowed request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
      * 
      */
-    @InputImport(name="allow")
+    @Import(name="allow")
       private final @Nullable Output<List<Either<String,SignalRRequestType>>> allow;
 
     public Output<List<Either<String,SignalRRequestType>>> getAllow() {
@@ -36,7 +36,7 @@ public final class NetworkACLArgs extends io.pulumi.resources.ResourceArgs {
      * Denied request types. The value can be one or more of: ClientConnection, ServerConnection, RESTAPI.
      * 
      */
-    @InputImport(name="deny")
+    @Import(name="deny")
       private final @Nullable Output<List<Either<String,SignalRRequestType>>> deny;
 
     public Output<List<Either<String,SignalRRequestType>>> getDeny() {

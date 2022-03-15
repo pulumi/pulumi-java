@@ -6,7 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.inputs.AutoScaleSettingsArgs;
 import io.pulumi.azurenative.batch.inputs.FixedScaleSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * This property and fixedScale are mutually exclusive and one of the properties must be specified.
      * 
      */
-    @InputImport(name="autoScale")
+    @Import(name="autoScale")
       private final @Nullable Output<AutoScaleSettingsArgs> autoScale;
 
     public Output<AutoScaleSettingsArgs> getAutoScale() {
@@ -34,7 +34,7 @@ public final class ScaleSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * This property and autoScale are mutually exclusive and one of the properties must be specified.
      * 
      */
-    @InputImport(name="fixedScale")
+    @Import(name="fixedScale")
       private final @Nullable Output<FixedScaleSettingsArgs> fixedScale;
 
     public Output<FixedScaleSettingsArgs> getFixedScale() {

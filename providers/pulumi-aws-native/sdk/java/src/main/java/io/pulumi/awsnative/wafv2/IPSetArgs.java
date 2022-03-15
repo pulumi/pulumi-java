@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.IPSetIPAddressVersion;
 import io.pulumi.awsnative.wafv2.enums.IPSetScope;
 import io.pulumi.awsnative.wafv2.inputs.IPSetTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,42 +22,42 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
      * List of IPAddresses.
      * 
      */
-    @InputImport(name="addresses", required=true)
+    @Import(name="addresses", required=true)
       private final Output<List<String>> addresses;
 
     public Output<List<String>> getAddresses() {
         return this.addresses;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="iPAddressVersion", required=true)
+    @Import(name="iPAddressVersion", required=true)
       private final Output<IPSetIPAddressVersion> iPAddressVersion;
 
     public Output<IPSetIPAddressVersion> getIPAddressVersion() {
         return this.iPAddressVersion;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<IPSetScope> scope;
 
     public Output<IPSetScope> getScope() {
         return this.scope;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<IPSetTagArgs>> tags;
 
     public Output<List<IPSetTagArgs>> getTags() {

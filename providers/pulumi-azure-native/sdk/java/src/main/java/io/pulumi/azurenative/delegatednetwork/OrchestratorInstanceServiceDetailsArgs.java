@@ -8,7 +8,7 @@ import io.pulumi.azurenative.delegatednetwork.inputs.ControllerDetailsArgs;
 import io.pulumi.azurenative.delegatednetwork.inputs.OrchestratorIdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified
      * 
      */
-    @InputImport(name="apiServerEndpoint")
+    @Import(name="apiServerEndpoint")
       private final @Nullable Output<String> apiServerEndpoint;
 
     public Output<String> getApiServerEndpoint() {
@@ -34,7 +34,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * RootCA certificate of kubernetes cluster base64 encoded
      * 
      */
-    @InputImport(name="clusterRootCA")
+    @Import(name="clusterRootCA")
       private final @Nullable Output<String> clusterRootCA;
 
     public Output<String> getClusterRootCA() {
@@ -45,7 +45,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * Properties of the controller.
      * 
      */
-    @InputImport(name="controllerDetails", required=true)
+    @Import(name="controllerDetails", required=true)
       private final Output<ControllerDetailsArgs> controllerDetails;
 
     public Output<ControllerDetailsArgs> getControllerDetails() {
@@ -56,7 +56,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * The identity of the orchestrator
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<OrchestratorIdentityArgs> identity;
 
     public Output<OrchestratorIdentityArgs> getIdentity() {
@@ -67,7 +67,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * The kind of workbook. Choices are user and shared.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<Either<String,OrchestratorKind>> kind;
 
     public Output<Either<String,OrchestratorKind>> getKind() {
@@ -78,7 +78,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * Location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -89,7 +89,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * AAD ID used with apiserver
      * 
      */
-    @InputImport(name="orchestratorAppId")
+    @Import(name="orchestratorAppId")
       private final @Nullable Output<String> orchestratorAppId;
 
     public Output<String> getOrchestratorAppId() {
@@ -100,7 +100,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * TenantID of server App ID
      * 
      */
-    @InputImport(name="orchestratorTenantId")
+    @Import(name="orchestratorTenantId")
       private final @Nullable Output<String> orchestratorTenantId;
 
     public Output<String> getOrchestratorTenantId() {
@@ -111,7 +111,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified
      * 
      */
-    @InputImport(name="privateLinkResourceId")
+    @Import(name="privateLinkResourceId")
       private final @Nullable Output<String> privateLinkResourceId;
 
     public Output<String> getPrivateLinkResourceId() {
@@ -122,7 +122,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -133,7 +133,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * The name of the resource. It must be a minimum of 3 characters, and a maximum of 63.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -144,7 +144,7 @@ public final class OrchestratorInstanceServiceDetailsArgs extends io.pulumi.reso
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

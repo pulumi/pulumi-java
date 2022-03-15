@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * The hard disk max size in MB.
      * 
      */
-    @InputImport(name="maxSizeMB")
+    @Import(name="maxSizeMB")
       private final @Nullable Double maxSizeMB;
 
     public Optional<Double> getMaxSizeMB() {
@@ -34,7 +34,7 @@ public final class DiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * The VHD Id.
      * 
      */
-    @InputImport(name="vhdId")
+    @Import(name="vhdId")
       private final @Nullable String vhdId;
 
     public Optional<String> getVhdId() {
@@ -45,7 +45,7 @@ public final class DiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * The VHD name.
      * 
      */
-    @InputImport(name="vhdName")
+    @Import(name="vhdName")
       private final @Nullable String vhdName;
 
     public Optional<String> getVhdName() {
@@ -56,7 +56,7 @@ public final class DiskDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * The type of the volume.
      * 
      */
-    @InputImport(name="vhdType")
+    @Import(name="vhdType")
       private final @Nullable String vhdType;
 
     public Optional<String> getVhdType() {

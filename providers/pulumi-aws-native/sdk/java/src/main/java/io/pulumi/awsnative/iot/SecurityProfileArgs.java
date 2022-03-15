@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iot.inputs.SecurityProfileBehaviorArgs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileMetricToRetainArgs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * A list of metrics whose data is retained (stored). By default, data is retained for any metric used in the profile's behaviors, but it is also retained for any metric specified here.
      * 
      */
-    @InputImport(name="additionalMetricsToRetainV2")
+    @Import(name="additionalMetricsToRetainV2")
       private final @Nullable Output<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2;
 
     public Output<List<SecurityProfileMetricToRetainArgs>> getAdditionalMetricsToRetainV2() {
@@ -34,7 +34,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies the destinations to which alerts are sent.
      * 
      */
-    @InputImport(name="alertTargets")
+    @Import(name="alertTargets")
       private final @Nullable Output<Object> alertTargets;
 
     public Output<Object> getAlertTargets() {
@@ -45,7 +45,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies the behaviors that, when violated by a device (thing), cause an alert.
      * 
      */
-    @InputImport(name="behaviors")
+    @Import(name="behaviors")
       private final @Nullable Output<List<SecurityProfileBehaviorArgs>> behaviors;
 
     public Output<List<SecurityProfileBehaviorArgs>> getBehaviors() {
@@ -56,7 +56,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * A description of the security profile.
      * 
      */
-    @InputImport(name="securityProfileDescription")
+    @Import(name="securityProfileDescription")
       private final @Nullable Output<String> securityProfileDescription;
 
     public Output<String> getSecurityProfileDescription() {
@@ -67,7 +67,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * A unique identifier for the security profile.
      * 
      */
-    @InputImport(name="securityProfileName")
+    @Import(name="securityProfileName")
       private final @Nullable Output<String> securityProfileName;
 
     public Output<String> getSecurityProfileName() {
@@ -78,7 +78,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * Metadata that can be used to manage the security profile.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<SecurityProfileTagArgs>> tags;
 
     public Output<List<SecurityProfileTagArgs>> getTags() {
@@ -89,7 +89,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * A set of target ARNs that the security profile is attached to.
      * 
      */
-    @InputImport(name="targetArns")
+    @Import(name="targetArns")
       private final @Nullable Output<List<String>> targetArns;
 
     public Output<List<String>> getTargetArns() {

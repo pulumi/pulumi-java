@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v1alpha1.inputs.ConfigMapEnvSourceResponse;
 import io.pulumi.googlenative.run_v1alpha1.inputs.SecretEnvSourceResponse;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class EnvFromSourceResponse extends io.pulumi.resources.InvokeArgs 
      * (Optional) The ConfigMap to select from
      * 
      */
-    @InputImport(name="configMapRef", required=true)
+    @Import(name="configMapRef", required=true)
       private final ConfigMapEnvSourceResponse configMapRef;
 
     public ConfigMapEnvSourceResponse getConfigMapRef() {
@@ -33,7 +33,7 @@ public final class EnvFromSourceResponse extends io.pulumi.resources.InvokeArgs 
      * (Optional) An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
      * 
      */
-    @InputImport(name="prefix", required=true)
+    @Import(name="prefix", required=true)
       private final String prefix;
 
     public String getPrefix() {
@@ -44,7 +44,7 @@ public final class EnvFromSourceResponse extends io.pulumi.resources.InvokeArgs 
      * (Optional) The Secret to select from
      * 
      */
-    @InputImport(name="secretRef", required=true)
+    @Import(name="secretRef", required=true)
       private final SecretEnvSourceResponse secretRef;
 
     public SecretEnvSourceResponse getSecretRef() {

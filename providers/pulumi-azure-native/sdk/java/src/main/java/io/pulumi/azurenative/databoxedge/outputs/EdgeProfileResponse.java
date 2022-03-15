@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.EdgeProfileSubscriptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdgeProfileResponse {
     /**
      * Edge Profile Subscription
@@ -17,8 +17,8 @@ public final class EdgeProfileResponse {
      */
     private final @Nullable EdgeProfileSubscriptionResponse subscription;
 
-    @OutputCustomType.Constructor
-    private EdgeProfileResponse(@OutputCustomType.Parameter("subscription") @Nullable EdgeProfileSubscriptionResponse subscription) {
+    @CustomType.Constructor
+    private EdgeProfileResponse(@CustomType.Parameter("subscription") @Nullable EdgeProfileSubscriptionResponse subscription) {
         this.subscription = subscription;
     }
 

@@ -3,18 +3,18 @@
 
 package io.pulumi.example.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.example.Resource;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ArgFunctionResult {
     private final @Nullable Resource result;
 
-    @OutputCustomType.Constructor
-    private ArgFunctionResult(@OutputCustomType.Parameter("result") @Nullable Resource result) {
+    @CustomType.Constructor
+    private ArgFunctionResult(@CustomType.Parameter("result") @Nullable Resource result) {
         this.result = result;
     }
 

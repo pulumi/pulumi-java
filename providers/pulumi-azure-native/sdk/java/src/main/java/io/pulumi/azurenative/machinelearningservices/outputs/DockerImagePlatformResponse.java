@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DockerImagePlatformResponse {
     /**
      * The OS type the Environment.
@@ -17,8 +17,8 @@ public final class DockerImagePlatformResponse {
      */
     private final @Nullable String operatingSystemType;
 
-    @OutputCustomType.Constructor
-    private DockerImagePlatformResponse(@OutputCustomType.Parameter("operatingSystemType") @Nullable String operatingSystemType) {
+    @CustomType.Constructor
+    private DockerImagePlatformResponse(@CustomType.Parameter("operatingSystemType") @Nullable String operatingSystemType) {
         this.operatingSystemType = operatingSystemType;
     }
 

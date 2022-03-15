@@ -7,7 +7,7 @@ import io.pulumi.azurenative.azurestack.outputs.CompatibilityResponse;
 import io.pulumi.azurenative.azurestack.outputs.IconUrisResponse;
 import io.pulumi.azurenative.azurestack.outputs.ProductLinkResponse;
 import io.pulumi.azurenative.azurestack.outputs.ProductPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProductResponse {
     /**
      * The part number used for billing purposes.
@@ -128,30 +128,30 @@ public final class ProductResponse {
      */
     private final @Nullable String vmExtensionType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProductResponse(
-        @OutputCustomType.Parameter("billingPartNumber") @Nullable String billingPartNumber,
-        @OutputCustomType.Parameter("compatibility") @Nullable CompatibilityResponse compatibility,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("galleryItemIdentity") @Nullable String galleryItemIdentity,
-        @OutputCustomType.Parameter("iconUris") @Nullable IconUrisResponse iconUris,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("legalTerms") @Nullable String legalTerms,
-        @OutputCustomType.Parameter("links") @Nullable List<ProductLinkResponse> links,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("offer") @Nullable String offer,
-        @OutputCustomType.Parameter("offerVersion") @Nullable String offerVersion,
-        @OutputCustomType.Parameter("payloadLength") @Nullable Double payloadLength,
-        @OutputCustomType.Parameter("privacyPolicy") @Nullable String privacyPolicy,
-        @OutputCustomType.Parameter("productKind") @Nullable String productKind,
-        @OutputCustomType.Parameter("productProperties") @Nullable ProductPropertiesResponse productProperties,
-        @OutputCustomType.Parameter("publisherDisplayName") @Nullable String publisherDisplayName,
-        @OutputCustomType.Parameter("publisherIdentifier") @Nullable String publisherIdentifier,
-        @OutputCustomType.Parameter("sku") @Nullable String sku,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vmExtensionType") @Nullable String vmExtensionType) {
+        @CustomType.Parameter("billingPartNumber") @Nullable String billingPartNumber,
+        @CustomType.Parameter("compatibility") @Nullable CompatibilityResponse compatibility,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("galleryItemIdentity") @Nullable String galleryItemIdentity,
+        @CustomType.Parameter("iconUris") @Nullable IconUrisResponse iconUris,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("legalTerms") @Nullable String legalTerms,
+        @CustomType.Parameter("links") @Nullable List<ProductLinkResponse> links,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("offer") @Nullable String offer,
+        @CustomType.Parameter("offerVersion") @Nullable String offerVersion,
+        @CustomType.Parameter("payloadLength") @Nullable Double payloadLength,
+        @CustomType.Parameter("privacyPolicy") @Nullable String privacyPolicy,
+        @CustomType.Parameter("productKind") @Nullable String productKind,
+        @CustomType.Parameter("productProperties") @Nullable ProductPropertiesResponse productProperties,
+        @CustomType.Parameter("publisherDisplayName") @Nullable String publisherDisplayName,
+        @CustomType.Parameter("publisherIdentifier") @Nullable String publisherIdentifier,
+        @CustomType.Parameter("sku") @Nullable String sku,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vmExtensionType") @Nullable String vmExtensionType) {
         this.billingPartNumber = billingPartNumber;
         this.compatibility = compatibility;
         this.description = description;

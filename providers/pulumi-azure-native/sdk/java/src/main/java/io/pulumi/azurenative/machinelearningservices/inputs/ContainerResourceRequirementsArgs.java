@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
      * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
      * 
      */
-    @InputImport(name="cpu")
+    @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
 
     public Output<Double> getCpu() {
@@ -36,7 +36,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
      * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
      * 
      */
-    @InputImport(name="cpuLimit")
+    @Import(name="cpuLimit")
       private final @Nullable Output<Double> cpuLimit;
 
     public Output<Double> getCpuLimit() {
@@ -47,7 +47,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
      * The number of FPGA PCIE devices exposed to the container. Must be multiple of 2.
      * 
      */
-    @InputImport(name="fpga")
+    @Import(name="fpga")
       private final @Nullable Output<Integer> fpga;
 
     public Output<Integer> getFpga() {
@@ -58,7 +58,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
      * The number of GPU cores in the container.
      * 
      */
-    @InputImport(name="gpu")
+    @Import(name="gpu")
       private final @Nullable Output<Integer> gpu;
 
     public Output<Integer> getGpu() {
@@ -70,7 +70,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
      * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
      * 
      */
-    @InputImport(name="memoryInGB")
+    @Import(name="memoryInGB")
       private final @Nullable Output<Double> memoryInGB;
 
     public Output<Double> getMemoryInGB() {
@@ -82,7 +82,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
      * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
      * 
      */
-    @InputImport(name="memoryInGBLimit")
+    @Import(name="memoryInGBLimit")
       private final @Nullable Output<Double> memoryInGBLimit;
 
     public Output<Double> getMemoryInGBLimit() {

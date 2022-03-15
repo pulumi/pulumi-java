@@ -8,7 +8,7 @@ import io.pulumi.azurenative.managednetwork.ManagedNetworkPeeringPolicyArgs;
 import io.pulumi.azurenative.managednetwork.outputs.ManagedNetworkPeeringPolicyPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ManagedNetworkPeeringPolicy extends io.pulumi.resources.CustomResou
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -49,7 +49,7 @@ public class ManagedNetworkPeeringPolicy extends io.pulumi.resources.CustomResou
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class ManagedNetworkPeeringPolicy extends io.pulumi.resources.CustomResou
      * Gets or sets the properties of a Managed Network Policy
      * 
      */
-    @OutputExport(name="properties", type=ManagedNetworkPeeringPolicyPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=ManagedNetworkPeeringPolicyPropertiesResponse.class, parameters={})
     private Output<ManagedNetworkPeeringPolicyPropertiesResponse> properties;
 
     /**
@@ -77,7 +77,7 @@ public class ManagedNetworkPeeringPolicy extends io.pulumi.resources.CustomResou
      * The type of the resource. Ex- Microsoft.Compute/virtualMachines or Microsoft.Storage/storageAccounts.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

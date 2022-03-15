@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.ecr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RepositoryLifecyclePolicy {
     private final @Nullable String lifecyclePolicyText;
     private final @Nullable String registryId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RepositoryLifecyclePolicy(
-        @OutputCustomType.Parameter("lifecyclePolicyText") @Nullable String lifecyclePolicyText,
-        @OutputCustomType.Parameter("registryId") @Nullable String registryId) {
+        @CustomType.Parameter("lifecyclePolicyText") @Nullable String lifecyclePolicyText,
+        @CustomType.Parameter("registryId") @Nullable String registryId) {
         this.lifecyclePolicyText = lifecyclePolicyText;
         this.registryId = registryId;
     }

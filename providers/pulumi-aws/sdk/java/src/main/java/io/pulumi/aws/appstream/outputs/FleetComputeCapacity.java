@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.appstream.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FleetComputeCapacity {
     /**
      * Number of currently available instances that can be used to stream sessions.
@@ -32,12 +32,12 @@ public final class FleetComputeCapacity {
      */
     private final @Nullable Integer running;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FleetComputeCapacity(
-        @OutputCustomType.Parameter("available") @Nullable Integer available,
-        @OutputCustomType.Parameter("desiredInstances") Integer desiredInstances,
-        @OutputCustomType.Parameter("inUse") @Nullable Integer inUse,
-        @OutputCustomType.Parameter("running") @Nullable Integer running) {
+        @CustomType.Parameter("available") @Nullable Integer available,
+        @CustomType.Parameter("desiredInstances") Integer desiredInstances,
+        @CustomType.Parameter("inUse") @Nullable Integer inUse,
+        @CustomType.Parameter("running") @Nullable Integer running) {
         this.available = available;
         this.desiredInstances = desiredInstances;
         this.inUse = inUse;

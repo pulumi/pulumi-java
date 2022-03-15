@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionS3OriginConfig {
     private final @Nullable String originAccessIdentity;
 
-    @OutputCustomType.Constructor
-    private DistributionS3OriginConfig(@OutputCustomType.Parameter("originAccessIdentity") @Nullable String originAccessIdentity) {
+    @CustomType.Constructor
+    private DistributionS3OriginConfig(@CustomType.Parameter("originAccessIdentity") @Nullable String originAccessIdentity) {
         this.originAccessIdentity = originAccessIdentity;
     }
 

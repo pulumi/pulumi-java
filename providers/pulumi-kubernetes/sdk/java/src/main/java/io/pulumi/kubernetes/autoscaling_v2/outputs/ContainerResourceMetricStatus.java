@@ -3,12 +3,12 @@
 
 package io.pulumi.kubernetes.autoscaling_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.MetricValueStatus;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContainerResourceMetricStatus {
     /**
      * Container is the name of the container in the pods of the scaling target
@@ -26,11 +26,11 @@ public final class ContainerResourceMetricStatus {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerResourceMetricStatus(
-        @OutputCustomType.Parameter("container") String container,
-        @OutputCustomType.Parameter("current") MetricValueStatus current,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("container") String container,
+        @CustomType.Parameter("current") MetricValueStatus current,
+        @CustomType.Parameter("name") String name) {
         this.container = container;
         this.current = current;
         this.name = name;

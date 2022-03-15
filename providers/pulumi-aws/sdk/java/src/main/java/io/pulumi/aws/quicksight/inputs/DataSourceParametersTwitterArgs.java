@@ -4,7 +4,7 @@
 package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class DataSourceParametersTwitterArgs extends io.pulumi.resources.R
      * The maximum number of rows to query.
      * 
      */
-    @InputImport(name="maxRows", required=true)
+    @Import(name="maxRows", required=true)
       private final Output<Integer> maxRows;
 
     public Output<Integer> getMaxRows() {
@@ -29,7 +29,7 @@ public final class DataSourceParametersTwitterArgs extends io.pulumi.resources.R
      * The Twitter query to retrieve the data.
      * 
      */
-    @InputImport(name="query", required=true)
+    @Import(name="query", required=true)
       private final Output<String> query;
 
     public Output<String> getQuery() {

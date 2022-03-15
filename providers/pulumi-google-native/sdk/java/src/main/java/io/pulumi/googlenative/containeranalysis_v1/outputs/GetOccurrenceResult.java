@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.AttestationOccurrenceResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.BuildOccurrenceResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.ComplianceOccurrenceResponse;
@@ -18,7 +18,7 @@ import io.pulumi.googlenative.containeranalysis_v1.outputs.VulnerabilityOccurren
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetOccurrenceResult {
     /**
      * Describes an attestation of an artifact.
@@ -111,26 +111,26 @@ public final class GetOccurrenceResult {
      */
     private final VulnerabilityOccurrenceResponse vulnerability;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOccurrenceResult(
-        @OutputCustomType.Parameter("attestation") AttestationOccurrenceResponse attestation,
-        @OutputCustomType.Parameter("build") BuildOccurrenceResponse build,
-        @OutputCustomType.Parameter("compliance") ComplianceOccurrenceResponse compliance,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("deployment") DeploymentOccurrenceResponse deployment,
-        @OutputCustomType.Parameter("discovery") DiscoveryOccurrenceResponse discovery,
-        @OutputCustomType.Parameter("dsseAttestation") DSSEAttestationOccurrenceResponse dsseAttestation,
-        @OutputCustomType.Parameter("envelope") EnvelopeResponse envelope,
-        @OutputCustomType.Parameter("image") ImageOccurrenceResponse image,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("noteName") String noteName,
-        @OutputCustomType.Parameter("package") PackageOccurrenceResponse $package,
-        @OutputCustomType.Parameter("remediation") String remediation,
-        @OutputCustomType.Parameter("resourceUri") String resourceUri,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("upgrade") UpgradeOccurrenceResponse upgrade,
-        @OutputCustomType.Parameter("vulnerability") VulnerabilityOccurrenceResponse vulnerability) {
+        @CustomType.Parameter("attestation") AttestationOccurrenceResponse attestation,
+        @CustomType.Parameter("build") BuildOccurrenceResponse build,
+        @CustomType.Parameter("compliance") ComplianceOccurrenceResponse compliance,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("deployment") DeploymentOccurrenceResponse deployment,
+        @CustomType.Parameter("discovery") DiscoveryOccurrenceResponse discovery,
+        @CustomType.Parameter("dsseAttestation") DSSEAttestationOccurrenceResponse dsseAttestation,
+        @CustomType.Parameter("envelope") EnvelopeResponse envelope,
+        @CustomType.Parameter("image") ImageOccurrenceResponse image,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("noteName") String noteName,
+        @CustomType.Parameter("package") PackageOccurrenceResponse $package,
+        @CustomType.Parameter("remediation") String remediation,
+        @CustomType.Parameter("resourceUri") String resourceUri,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("upgrade") UpgradeOccurrenceResponse upgrade,
+        @CustomType.Parameter("vulnerability") VulnerabilityOccurrenceResponse vulnerability) {
         this.attestation = attestation;
         this.build = build;
         this.compliance = compliance;

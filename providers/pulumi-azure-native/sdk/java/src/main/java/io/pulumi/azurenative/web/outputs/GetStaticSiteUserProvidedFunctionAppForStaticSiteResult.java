@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteResult {
     /**
      * The date and time on which the function app was registered with the static site.
@@ -47,15 +47,15 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStaticSiteUserProvidedFunctionAppForStaticSiteResult(
-        @OutputCustomType.Parameter("createdOn") String createdOn,
-        @OutputCustomType.Parameter("functionAppRegion") @Nullable String functionAppRegion,
-        @OutputCustomType.Parameter("functionAppResourceId") @Nullable String functionAppResourceId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("createdOn") String createdOn,
+        @CustomType.Parameter("functionAppRegion") @Nullable String functionAppRegion,
+        @CustomType.Parameter("functionAppResourceId") @Nullable String functionAppResourceId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.createdOn = createdOn;
         this.functionAppRegion = functionAppRegion;
         this.functionAppResourceId = functionAppResourceId;

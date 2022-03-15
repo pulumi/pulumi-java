@@ -7,7 +7,7 @@ import io.pulumi.azurenative.orbital.enums.Direction;
 import io.pulumi.azurenative.orbital.enums.Polarization;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
      * Bandwidth in MHz
      * 
      */
-    @InputImport(name="bandwidthMHz", required=true)
+    @Import(name="bandwidthMHz", required=true)
       private final Output<Double> bandwidthMHz;
 
     public Output<Double> getBandwidthMHz() {
@@ -36,7 +36,7 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
      * Center Frequency in MHz
      * 
      */
-    @InputImport(name="centerFrequencyMHz", required=true)
+    @Import(name="centerFrequencyMHz", required=true)
       private final Output<Double> centerFrequencyMHz;
 
     public Output<Double> getCenterFrequencyMHz() {
@@ -47,7 +47,7 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
      * Direction (uplink or downlink)
      * 
      */
-    @InputImport(name="direction", required=true)
+    @Import(name="direction", required=true)
       private final Output<Either<String,Direction>> direction;
 
     public Output<Either<String,Direction>> getDirection() {
@@ -58,7 +58,7 @@ public final class SpacecraftLinkArgs extends io.pulumi.resources.ResourceArgs {
      * polarization. eg (RHCP, LHCP)
      * 
      */
-    @InputImport(name="polarization", required=true)
+    @Import(name="polarization", required=true)
       private final Output<Either<String,Polarization>> polarization;
 
     public Output<Either<String,Polarization>> getPolarization() {

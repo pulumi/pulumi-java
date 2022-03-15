@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaConditionArgs;
 import io.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaRuleBoostActionArgs;
 import io.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs;
@@ -30,7 +30,7 @@ public final class GoogleCloudRetailV2alphaRuleArgs extends io.pulumi.resources.
      * A boost action.
      * 
      */
-    @InputImport(name="boostAction")
+    @Import(name="boostAction")
       private final @Nullable Output<GoogleCloudRetailV2alphaRuleBoostActionArgs> boostAction;
 
     public Output<GoogleCloudRetailV2alphaRuleBoostActionArgs> getBoostAction() {
@@ -41,7 +41,7 @@ public final class GoogleCloudRetailV2alphaRuleArgs extends io.pulumi.resources.
      * The condition that triggers the rule. If the condition is empty, the rule will always apply.
      * 
      */
-    @InputImport(name="condition", required=true)
+    @Import(name="condition", required=true)
       private final Output<GoogleCloudRetailV2alphaConditionArgs> condition;
 
     public Output<GoogleCloudRetailV2alphaConditionArgs> getCondition() {
@@ -52,7 +52,7 @@ public final class GoogleCloudRetailV2alphaRuleArgs extends io.pulumi.resources.
      * Prevents term from being associated with other terms.
      * 
      */
-    @InputImport(name="doNotAssociateAction")
+    @Import(name="doNotAssociateAction")
       private final @Nullable Output<GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs> doNotAssociateAction;
 
     public Output<GoogleCloudRetailV2alphaRuleDoNotAssociateActionArgs> getDoNotAssociateAction() {
@@ -63,7 +63,7 @@ public final class GoogleCloudRetailV2alphaRuleArgs extends io.pulumi.resources.
      * Filters results.
      * 
      */
-    @InputImport(name="filterAction")
+    @Import(name="filterAction")
       private final @Nullable Output<GoogleCloudRetailV2alphaRuleFilterActionArgs> filterAction;
 
     public Output<GoogleCloudRetailV2alphaRuleFilterActionArgs> getFilterAction() {
@@ -74,7 +74,7 @@ public final class GoogleCloudRetailV2alphaRuleArgs extends io.pulumi.resources.
      * Ignores specific terms from query during search.
      * 
      */
-    @InputImport(name="ignoreAction")
+    @Import(name="ignoreAction")
       private final @Nullable Output<GoogleCloudRetailV2alphaRuleIgnoreActionArgs> ignoreAction;
 
     public Output<GoogleCloudRetailV2alphaRuleIgnoreActionArgs> getIgnoreAction() {
@@ -85,7 +85,7 @@ public final class GoogleCloudRetailV2alphaRuleArgs extends io.pulumi.resources.
      * Treats specific term as a synonym with a group of terms. Group of terms will not be treated as synonyms with the specific term.
      * 
      */
-    @InputImport(name="onewaySynonymsAction")
+    @Import(name="onewaySynonymsAction")
       private final @Nullable Output<GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs> onewaySynonymsAction;
 
     public Output<GoogleCloudRetailV2alphaRuleOnewaySynonymsActionArgs> getOnewaySynonymsAction() {
@@ -96,7 +96,7 @@ public final class GoogleCloudRetailV2alphaRuleArgs extends io.pulumi.resources.
      * Redirects a shopper to a specific page.
      * 
      */
-    @InputImport(name="redirectAction")
+    @Import(name="redirectAction")
       private final @Nullable Output<GoogleCloudRetailV2alphaRuleRedirectActionArgs> redirectAction;
 
     public Output<GoogleCloudRetailV2alphaRuleRedirectActionArgs> getRedirectAction() {
@@ -107,7 +107,7 @@ public final class GoogleCloudRetailV2alphaRuleArgs extends io.pulumi.resources.
      * Replaces specific terms in the query.
      * 
      */
-    @InputImport(name="replacementAction")
+    @Import(name="replacementAction")
       private final @Nullable Output<GoogleCloudRetailV2alphaRuleReplacementActionArgs> replacementAction;
 
     public Output<GoogleCloudRetailV2alphaRuleReplacementActionArgs> getReplacementAction() {
@@ -118,7 +118,7 @@ public final class GoogleCloudRetailV2alphaRuleArgs extends io.pulumi.resources.
      * Treats a set of terms as synonyms of one another.
      * 
      */
-    @InputImport(name="twowaySynonymsAction")
+    @Import(name="twowaySynonymsAction")
       private final @Nullable Output<GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs> twowaySynonymsAction;
 
     public Output<GoogleCloudRetailV2alphaRuleTwowaySynonymsActionArgs> getTwowaySynonymsAction() {

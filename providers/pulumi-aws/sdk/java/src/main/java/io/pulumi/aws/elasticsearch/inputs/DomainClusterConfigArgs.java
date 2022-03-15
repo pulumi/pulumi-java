@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.aws.elasticsearch.inputs.DomainClusterConfigZoneAwarenessConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class DomainClusterConfigArgs extends io.pulumi.resources.ResourceA
      * Number of dedicated main nodes in the cluster.
      * 
      */
-    @InputImport(name="dedicatedMasterCount")
+    @Import(name="dedicatedMasterCount")
       private final @Nullable Output<Integer> dedicatedMasterCount;
 
     public Output<Integer> getDedicatedMasterCount() {
@@ -32,7 +32,7 @@ public final class DomainClusterConfigArgs extends io.pulumi.resources.ResourceA
      * Whether dedicated main nodes are enabled for the cluster.
      * 
      */
-    @InputImport(name="dedicatedMasterEnabled")
+    @Import(name="dedicatedMasterEnabled")
       private final @Nullable Output<Boolean> dedicatedMasterEnabled;
 
     public Output<Boolean> getDedicatedMasterEnabled() {
@@ -43,7 +43,7 @@ public final class DomainClusterConfigArgs extends io.pulumi.resources.ResourceA
      * Instance type of the dedicated main nodes in the cluster.
      * 
      */
-    @InputImport(name="dedicatedMasterType")
+    @Import(name="dedicatedMasterType")
       private final @Nullable Output<String> dedicatedMasterType;
 
     public Output<String> getDedicatedMasterType() {
@@ -54,7 +54,7 @@ public final class DomainClusterConfigArgs extends io.pulumi.resources.ResourceA
      * Number of instances in the cluster.
      * 
      */
-    @InputImport(name="instanceCount")
+    @Import(name="instanceCount")
       private final @Nullable Output<Integer> instanceCount;
 
     public Output<Integer> getInstanceCount() {
@@ -65,7 +65,7 @@ public final class DomainClusterConfigArgs extends io.pulumi.resources.ResourceA
      * Instance type of data nodes in the cluster.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -76,7 +76,7 @@ public final class DomainClusterConfigArgs extends io.pulumi.resources.ResourceA
      * Number of warm nodes in the cluster. Valid values are between `2` and `150`. `warm_count` can be only and must be set when `warm_enabled` is set to `true`.
      * 
      */
-    @InputImport(name="warmCount")
+    @Import(name="warmCount")
       private final @Nullable Output<Integer> warmCount;
 
     public Output<Integer> getWarmCount() {
@@ -87,7 +87,7 @@ public final class DomainClusterConfigArgs extends io.pulumi.resources.ResourceA
      * Whether to enable warm storage.
      * 
      */
-    @InputImport(name="warmEnabled")
+    @Import(name="warmEnabled")
       private final @Nullable Output<Boolean> warmEnabled;
 
     public Output<Boolean> getWarmEnabled() {
@@ -98,7 +98,7 @@ public final class DomainClusterConfigArgs extends io.pulumi.resources.ResourceA
      * Instance type for the Elasticsearch cluster's warm nodes. Valid values are `ultrawarm1.medium.elasticsearch`, `ultrawarm1.large.elasticsearch` and `ultrawarm1.xlarge.elasticsearch`. `warm_type` can be only and must be set when `warm_enabled` is set to `true`.
      * 
      */
-    @InputImport(name="warmType")
+    @Import(name="warmType")
       private final @Nullable Output<String> warmType;
 
     public Output<String> getWarmType() {
@@ -109,7 +109,7 @@ public final class DomainClusterConfigArgs extends io.pulumi.resources.ResourceA
      * Configuration block containing zone awareness settings. Detailed below.
      * 
      */
-    @InputImport(name="zoneAwarenessConfig")
+    @Import(name="zoneAwarenessConfig")
       private final @Nullable Output<DomainClusterConfigZoneAwarenessConfigArgs> zoneAwarenessConfig;
 
     public Output<DomainClusterConfigZoneAwarenessConfigArgs> getZoneAwarenessConfig() {
@@ -120,7 +120,7 @@ public final class DomainClusterConfigArgs extends io.pulumi.resources.ResourceA
      * Whether zone awareness is enabled, set to `true` for multi-az deployment. To enable awareness with three Availability Zones, the `availability_zone_count` within the `zone_awareness_config` must be set to `3`.
      * 
      */
-    @InputImport(name="zoneAwarenessEnabled")
+    @Import(name="zoneAwarenessEnabled")
       private final @Nullable Output<Boolean> zoneAwarenessEnabled;
 
     public Output<Boolean> getZoneAwarenessEnabled() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.NonCompliantFileResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ComplianceOccurrenceResponse extends io.pulumi.resources.Invo
      * The reason for non compliance of these files.
      * 
      */
-    @InputImport(name="nonComplianceReason", required=true)
+    @Import(name="nonComplianceReason", required=true)
       private final String nonComplianceReason;
 
     public String getNonComplianceReason() {
@@ -33,7 +33,7 @@ public final class ComplianceOccurrenceResponse extends io.pulumi.resources.Invo
      * A list of files which are violating compliance checks.
      * 
      */
-    @InputImport(name="nonCompliantFiles", required=true)
+    @Import(name="nonCompliantFiles", required=true)
       private final List<NonCompliantFileResponse> nonCompliantFiles;
 
     public List<NonCompliantFileResponse> getNonCompliantFiles() {

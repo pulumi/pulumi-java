@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAliasArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the aliased Lambda function.
      * 
      */
-    @InputImport(name="functionName", required=true)
+    @Import(name="functionName", required=true)
       private final String functionName;
 
     public String getFunctionName() {
@@ -27,7 +27,7 @@ public final class GetAliasArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the Lambda alias.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

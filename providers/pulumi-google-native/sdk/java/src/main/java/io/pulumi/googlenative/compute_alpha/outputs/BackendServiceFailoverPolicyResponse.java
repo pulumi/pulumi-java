@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackendServiceFailoverPolicyResponse {
     /**
      * This can be set to true only if the protocol is TCP. The default is false.
@@ -26,11 +26,11 @@ public final class BackendServiceFailoverPolicyResponse {
      */
     private final Double failoverRatio;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendServiceFailoverPolicyResponse(
-        @OutputCustomType.Parameter("disableConnectionDrainOnFailover") Boolean disableConnectionDrainOnFailover,
-        @OutputCustomType.Parameter("dropTrafficIfUnhealthy") Boolean dropTrafficIfUnhealthy,
-        @OutputCustomType.Parameter("failoverRatio") Double failoverRatio) {
+        @CustomType.Parameter("disableConnectionDrainOnFailover") Boolean disableConnectionDrainOnFailover,
+        @CustomType.Parameter("dropTrafficIfUnhealthy") Boolean dropTrafficIfUnhealthy,
+        @CustomType.Parameter("failoverRatio") Double failoverRatio) {
         this.disableConnectionDrainOnFailover = disableConnectionDrainOnFailover;
         this.dropTrafficIfUnhealthy = dropTrafficIfUnhealthy;
         this.failoverRatio = failoverRatio;

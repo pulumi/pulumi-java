@@ -4,7 +4,7 @@
 package io.pulumi.aws.neptune.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,14 +20,14 @@ public final class ClusterEndpointState extends io.pulumi.resources.ResourceArgs
      * The Neptune Cluster Endpoint Amazon Resource Name (ARN).
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn == null ? Output.empty() : this.arn;
     }
 
-    @InputImport(name="clusterEndpointIdentifier")
+    @Import(name="clusterEndpointIdentifier")
       private final @Nullable Output<String> clusterEndpointIdentifier;
 
     public Output<String> getClusterEndpointIdentifier() {
@@ -38,7 +38,7 @@ public final class ClusterEndpointState extends io.pulumi.resources.ResourceArgs
      * The DB cluster identifier of the DB cluster associated with the endpoint.
      * 
      */
-    @InputImport(name="clusterIdentifier")
+    @Import(name="clusterIdentifier")
       private final @Nullable Output<String> clusterIdentifier;
 
     public Output<String> getClusterIdentifier() {
@@ -49,7 +49,7 @@ public final class ClusterEndpointState extends io.pulumi.resources.ResourceArgs
      * The DNS address of the endpoint.
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
     public Output<String> getEndpoint() {
@@ -60,7 +60,7 @@ public final class ClusterEndpointState extends io.pulumi.resources.ResourceArgs
      * The type of the endpoint. One of: `READER`, `WRITER`, `ANY`.
      * 
      */
-    @InputImport(name="endpointType")
+    @Import(name="endpointType")
       private final @Nullable Output<String> endpointType;
 
     public Output<String> getEndpointType() {
@@ -71,7 +71,7 @@ public final class ClusterEndpointState extends io.pulumi.resources.ResourceArgs
      * List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty.
      * 
      */
-    @InputImport(name="excludedMembers")
+    @Import(name="excludedMembers")
       private final @Nullable Output<List<String>> excludedMembers;
 
     public Output<List<String>> getExcludedMembers() {
@@ -82,7 +82,7 @@ public final class ClusterEndpointState extends io.pulumi.resources.ResourceArgs
      * List of DB instance identifiers that are part of the custom endpoint group.
      * 
      */
-    @InputImport(name="staticMembers")
+    @Import(name="staticMembers")
       private final @Nullable Output<List<String>> staticMembers;
 
     public Output<List<String>> getStaticMembers() {
@@ -93,7 +93,7 @@ public final class ClusterEndpointState extends io.pulumi.resources.ResourceArgs
      * A map of tags to assign to the Neptune cluster. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -104,7 +104,7 @@ public final class ClusterEndpointState extends io.pulumi.resources.ResourceArgs
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

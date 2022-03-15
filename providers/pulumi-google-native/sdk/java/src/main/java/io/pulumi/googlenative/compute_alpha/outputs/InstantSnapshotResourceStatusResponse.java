@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstantSnapshotResourceStatusResponse {
     /**
      * The storage size of this instant snapshot.
@@ -15,8 +15,8 @@ public final class InstantSnapshotResourceStatusResponse {
      */
     private final String storageSizeBytes;
 
-    @OutputCustomType.Constructor
-    private InstantSnapshotResourceStatusResponse(@OutputCustomType.Parameter("storageSizeBytes") String storageSizeBytes) {
+    @CustomType.Constructor
+    private InstantSnapshotResourceStatusResponse(@CustomType.Parameter("storageSizeBytes") String storageSizeBytes) {
         this.storageSizeBytes = storageSizeBytes;
     }
 

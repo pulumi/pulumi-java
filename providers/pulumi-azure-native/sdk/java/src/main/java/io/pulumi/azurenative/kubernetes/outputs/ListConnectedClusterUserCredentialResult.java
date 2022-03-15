@@ -5,11 +5,11 @@ package io.pulumi.azurenative.kubernetes.outputs;
 
 import io.pulumi.azurenative.kubernetes.outputs.CredentialResultResponse;
 import io.pulumi.azurenative.kubernetes.outputs.HybridConnectionConfigResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListConnectedClusterUserCredentialResult {
     /**
      * Contains the REP (rendezvous endpoint) and “Sender” access token.
@@ -22,10 +22,10 @@ public final class ListConnectedClusterUserCredentialResult {
      */
     private final List<CredentialResultResponse> kubeconfigs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListConnectedClusterUserCredentialResult(
-        @OutputCustomType.Parameter("hybridConnectionConfig") HybridConnectionConfigResponse hybridConnectionConfig,
-        @OutputCustomType.Parameter("kubeconfigs") List<CredentialResultResponse> kubeconfigs) {
+        @CustomType.Parameter("hybridConnectionConfig") HybridConnectionConfigResponse hybridConnectionConfig,
+        @CustomType.Parameter("kubeconfigs") List<CredentialResultResponse> kubeconfigs) {
         this.hybridConnectionConfig = hybridConnectionConfig;
         this.kubeconfigs = kubeconfigs;
     }

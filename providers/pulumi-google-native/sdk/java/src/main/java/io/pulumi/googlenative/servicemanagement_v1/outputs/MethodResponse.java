@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.OptionResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MethodResponse {
     /**
      * The simple name of this method.
@@ -48,15 +48,15 @@ public final class MethodResponse {
      */
     private final String syntax;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MethodResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("options") List<OptionResponse> options,
-        @OutputCustomType.Parameter("requestStreaming") Boolean requestStreaming,
-        @OutputCustomType.Parameter("requestTypeUrl") String requestTypeUrl,
-        @OutputCustomType.Parameter("responseStreaming") Boolean responseStreaming,
-        @OutputCustomType.Parameter("responseTypeUrl") String responseTypeUrl,
-        @OutputCustomType.Parameter("syntax") String syntax) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("options") List<OptionResponse> options,
+        @CustomType.Parameter("requestStreaming") Boolean requestStreaming,
+        @CustomType.Parameter("requestTypeUrl") String requestTypeUrl,
+        @CustomType.Parameter("responseStreaming") Boolean responseStreaming,
+        @CustomType.Parameter("responseTypeUrl") String responseTypeUrl,
+        @CustomType.Parameter("syntax") String syntax) {
         this.name = name;
         this.options = options;
         this.requestStreaming = requestStreaming;

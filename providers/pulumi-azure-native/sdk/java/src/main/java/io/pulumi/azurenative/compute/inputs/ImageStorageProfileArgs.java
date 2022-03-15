@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.ImageDataDiskArgs;
 import io.pulumi.azurenative.compute.inputs.ImageOSDiskArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
      * Specifies the parameters that are used to add a data disk to a virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
      * 
      */
-    @InputImport(name="dataDisks")
+    @Import(name="dataDisks")
       private final @Nullable Output<List<ImageDataDiskArgs>> dataDisks;
 
     public Output<List<ImageDataDiskArgs>> getDataDisks() {
@@ -36,7 +36,7 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
      * Specifies information about the operating system disk used by the virtual machine. <br><br> For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-about-disks-vhds?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
      * 
      */
-    @InputImport(name="osDisk")
+    @Import(name="osDisk")
       private final @Nullable Output<ImageOSDiskArgs> osDisk;
 
     public Output<ImageOSDiskArgs> getOsDisk() {
@@ -47,7 +47,7 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
      * Specifies whether an image is zone resilient or not. Default is false. Zone resilient images can be created only in regions that provide Zone Redundant Storage (ZRS).
      * 
      */
-    @InputImport(name="zoneResilient")
+    @Import(name="zoneResilient")
       private final @Nullable Output<Boolean> zoneResilient;
 
     public Output<Boolean> getZoneResilient() {

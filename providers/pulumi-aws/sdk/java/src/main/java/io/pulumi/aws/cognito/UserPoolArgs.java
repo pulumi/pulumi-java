@@ -16,7 +16,7 @@ import io.pulumi.aws.cognito.inputs.UserPoolUserPoolAddOnsArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolUsernameConfigurationArgs;
 import io.pulumi.aws.cognito.inputs.UserPoolVerificationMessageTemplateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -32,7 +32,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.
      * 
      */
-    @InputImport(name="accountRecoverySetting")
+    @Import(name="accountRecoverySetting")
       private final @Nullable Output<UserPoolAccountRecoverySettingArgs> accountRecoverySetting;
 
     public Output<UserPoolAccountRecoverySettingArgs> getAccountRecoverySetting() {
@@ -43,7 +43,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for creating a new user profile. Detailed below.
      * 
      */
-    @InputImport(name="adminCreateUserConfig")
+    @Import(name="adminCreateUserConfig")
       private final @Nullable Output<UserPoolAdminCreateUserConfigArgs> adminCreateUserConfig;
 
     public Output<UserPoolAdminCreateUserConfigArgs> getAdminCreateUserConfig() {
@@ -54,7 +54,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Attributes supported as an alias for this user pool. Valid values: `phone_number`, `email`, or `preferred_username`. Conflicts with `username_attributes`.
      * 
      */
-    @InputImport(name="aliasAttributes")
+    @Import(name="aliasAttributes")
       private final @Nullable Output<List<String>> aliasAttributes;
 
     public Output<List<String>> getAliasAttributes() {
@@ -65,7 +65,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Attributes to be auto-verified. Valid values: `email`, `phone_number`.
      * 
      */
-    @InputImport(name="autoVerifiedAttributes")
+    @Import(name="autoVerifiedAttributes")
       private final @Nullable Output<List<String>> autoVerifiedAttributes;
 
     public Output<List<String>> getAutoVerifiedAttributes() {
@@ -76,7 +76,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for the user pool's device tracking. Detailed below.
      * 
      */
-    @InputImport(name="deviceConfiguration")
+    @Import(name="deviceConfiguration")
       private final @Nullable Output<UserPoolDeviceConfigurationArgs> deviceConfiguration;
 
     public Output<UserPoolDeviceConfigurationArgs> getDeviceConfiguration() {
@@ -87,7 +87,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for configuring email. Detailed below.
      * 
      */
-    @InputImport(name="emailConfiguration")
+    @Import(name="emailConfiguration")
       private final @Nullable Output<UserPoolEmailConfigurationArgs> emailConfiguration;
 
     public Output<UserPoolEmailConfigurationArgs> getEmailConfiguration() {
@@ -98,7 +98,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * String representing the email verification message. Conflicts with `verification_message_template` configuration block `email_message` argument.
      * 
      */
-    @InputImport(name="emailVerificationMessage")
+    @Import(name="emailVerificationMessage")
       private final @Nullable Output<String> emailVerificationMessage;
 
     public Output<String> getEmailVerificationMessage() {
@@ -109,7 +109,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * String representing the email verification subject. Conflicts with `verification_message_template` configuration block `email_subject` argument.
      * 
      */
-    @InputImport(name="emailVerificationSubject")
+    @Import(name="emailVerificationSubject")
       private final @Nullable Output<String> emailVerificationSubject;
 
     public Output<String> getEmailVerificationSubject() {
@@ -120,7 +120,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for the AWS Lambda triggers associated with the user pool. Detailed below.
      * 
      */
-    @InputImport(name="lambdaConfig")
+    @Import(name="lambdaConfig")
       private final @Nullable Output<UserPoolLambdaConfigArgs> lambdaConfig;
 
     public Output<UserPoolLambdaConfigArgs> getLambdaConfig() {
@@ -131,7 +131,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Multi-Factor Authentication (MFA) configuration for the User Pool. Defaults of `OFF`. Valid values are `OFF` (MFA Tokens are not required), `ON` (MFA is required for all users to sign in; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured), or `OPTIONAL` (MFA Will be required only for individual users who have MFA Enabled; requires at least one of `sms_configuration` or `software_token_mfa_configuration` to be configured).
      * 
      */
-    @InputImport(name="mfaConfiguration")
+    @Import(name="mfaConfiguration")
       private final @Nullable Output<String> mfaConfiguration;
 
     public Output<String> getMfaConfiguration() {
@@ -142,7 +142,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the attribute.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -153,7 +153,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration blocked for information about the user pool password policy. Detailed below.
      * 
      */
-    @InputImport(name="passwordPolicy")
+    @Import(name="passwordPolicy")
       private final @Nullable Output<UserPoolPasswordPolicyArgs> passwordPolicy;
 
     public Output<UserPoolPasswordPolicyArgs> getPasswordPolicy() {
@@ -164,7 +164,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the [standard attribute set](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html#cognito-user-pools-standard-attributes) only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.
      * 
      */
-    @InputImport(name="schemas")
+    @Import(name="schemas")
       private final @Nullable Output<List<UserPoolSchemaArgs>> schemas;
 
     public Output<List<UserPoolSchemaArgs>> getSchemas() {
@@ -175,7 +175,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * String representing the SMS authentication message. The Message must contain the `{####}` placeholder, which will be replaced with the code.
      * 
      */
-    @InputImport(name="smsAuthenticationMessage")
+    @Import(name="smsAuthenticationMessage")
       private final @Nullable Output<String> smsAuthenticationMessage;
 
     public Output<String> getSmsAuthenticationMessage() {
@@ -186,7 +186,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for Short Message Service (SMS) settings. Detailed below. These settings apply to SMS user verification and SMS Multi-Factor Authentication (MFA). Due to Cognito API restrictions, the SMS configuration cannot be removed without recreating the Cognito User Pool. For user data safety, this resource will ignore the removal of this configuration by disabling drift detection.
      * 
      */
-    @InputImport(name="smsConfiguration")
+    @Import(name="smsConfiguration")
       private final @Nullable Output<UserPoolSmsConfigurationArgs> smsConfiguration;
 
     public Output<UserPoolSmsConfigurationArgs> getSmsConfiguration() {
@@ -197,7 +197,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * String representing the SMS verification message. Conflicts with `verification_message_template` configuration block `sms_message` argument.
      * 
      */
-    @InputImport(name="smsVerificationMessage")
+    @Import(name="smsVerificationMessage")
       private final @Nullable Output<String> smsVerificationMessage;
 
     public Output<String> getSmsVerificationMessage() {
@@ -208,7 +208,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for software token Mult-Factor Authentication (MFA) settings. Detailed below.
      * 
      */
-    @InputImport(name="softwareTokenMfaConfiguration")
+    @Import(name="softwareTokenMfaConfiguration")
       private final @Nullable Output<UserPoolSoftwareTokenMfaConfigurationArgs> softwareTokenMfaConfiguration;
 
     public Output<UserPoolSoftwareTokenMfaConfigurationArgs> getSoftwareTokenMfaConfiguration() {
@@ -219,7 +219,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Map of tags to assign to the User Pool. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -230,7 +230,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.
      * 
      */
-    @InputImport(name="userPoolAddOns")
+    @Import(name="userPoolAddOns")
       private final @Nullable Output<UserPoolUserPoolAddOnsArgs> userPoolAddOns;
 
     public Output<UserPoolUserPoolAddOnsArgs> getUserPoolAddOns() {
@@ -241,7 +241,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with `alias_attributes`.
      * 
      */
-    @InputImport(name="usernameAttributes")
+    @Import(name="usernameAttributes")
       private final @Nullable Output<List<String>> usernameAttributes;
 
     public Output<List<String>> getUsernameAttributes() {
@@ -252,7 +252,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for username configuration. Detailed below.
      * 
      */
-    @InputImport(name="usernameConfiguration")
+    @Import(name="usernameConfiguration")
       private final @Nullable Output<UserPoolUsernameConfigurationArgs> usernameConfiguration;
 
     public Output<UserPoolUsernameConfigurationArgs> getUsernameConfiguration() {
@@ -263,7 +263,7 @@ public final class UserPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for verification message templates. Detailed below.
      * 
      */
-    @InputImport(name="verificationMessageTemplate")
+    @Import(name="verificationMessageTemplate")
       private final @Nullable Output<UserPoolVerificationMessageTemplateArgs> verificationMessageTemplate;
 
     public Output<UserPoolVerificationMessageTemplateArgs> getVerificationMessageTemplate() {

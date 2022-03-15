@@ -9,7 +9,7 @@ import io.pulumi.azurenative.apimanagement.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.apimanagement.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class PrivateEndpointConnectionByName extends io.pulumi.resources.CustomR
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class PrivateEndpointConnectionByName extends io.pulumi.resources.CustomR
      * The resource of private end point.
      * 
      */
-    @OutputExport(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
+    @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
     /**
@@ -64,7 +64,7 @@ public class PrivateEndpointConnectionByName extends io.pulumi.resources.CustomR
      * A collection of information about the state of the connection between service consumer and provider.
      * 
      */
-    @OutputExport(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
+    @Export(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output<PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
@@ -78,7 +78,7 @@ public class PrivateEndpointConnectionByName extends io.pulumi.resources.CustomR
      * The provisioning state of the private endpoint connection resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -92,7 +92,7 @@ public class PrivateEndpointConnectionByName extends io.pulumi.resources.CustomR
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

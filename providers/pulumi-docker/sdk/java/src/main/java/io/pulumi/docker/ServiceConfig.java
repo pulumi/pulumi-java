@@ -4,7 +4,7 @@
 package io.pulumi.docker;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.docker.ServiceConfigArgs;
 import io.pulumi.docker.Utilities;
@@ -34,7 +34,7 @@ public class ServiceConfig extends io.pulumi.resources.CustomResource {
      * Base64-url-safe-encoded config data
      * 
      */
-    @OutputExport(name="data", type=String.class, parameters={})
+    @Export(name="data", type=String.class, parameters={})
     private Output<String> data;
 
     /**
@@ -48,7 +48,7 @@ public class ServiceConfig extends io.pulumi.resources.CustomResource {
      * User-defined name of the config
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

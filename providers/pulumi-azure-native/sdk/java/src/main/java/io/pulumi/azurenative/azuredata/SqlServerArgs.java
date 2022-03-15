@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azuredata;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * Cores of the Sql Server.
      * 
      */
-    @InputImport(name="cores")
+    @Import(name="cores")
       private final @Nullable Output<Integer> cores;
 
     public Output<Integer> getCores() {
@@ -30,7 +30,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * Sql Server Edition.
      * 
      */
-    @InputImport(name="edition")
+    @Import(name="edition")
       private final @Nullable Output<String> edition;
 
     public Output<String> getEdition() {
@@ -41,7 +41,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * Sql Server Json Property Bag.
      * 
      */
-    @InputImport(name="propertyBag")
+    @Import(name="propertyBag")
       private final @Nullable Output<String> propertyBag;
 
     public Output<String> getPropertyBag() {
@@ -52,7 +52,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * ID for Parent Sql Server Registration.
      * 
      */
-    @InputImport(name="registrationID")
+    @Import(name="registrationID")
       private final @Nullable Output<String> registrationID;
 
     public Output<String> getRegistrationID() {
@@ -63,7 +63,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -74,7 +74,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the SQL Server.
      * 
      */
-    @InputImport(name="sqlServerName")
+    @Import(name="sqlServerName")
       private final @Nullable Output<String> sqlServerName;
 
     public Output<String> getSqlServerName() {
@@ -85,7 +85,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the SQL Server registration.
      * 
      */
-    @InputImport(name="sqlServerRegistrationName", required=true)
+    @Import(name="sqlServerRegistrationName", required=true)
       private final Output<String> sqlServerRegistrationName;
 
     public Output<String> getSqlServerRegistrationName() {
@@ -96,7 +96,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
      * Version of the Sql Server.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

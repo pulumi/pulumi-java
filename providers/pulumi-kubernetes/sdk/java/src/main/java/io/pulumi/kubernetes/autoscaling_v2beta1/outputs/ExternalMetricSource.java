@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExternalMetricSource {
     /**
      * metricName is the name of the metric in question.
@@ -33,12 +33,12 @@ public final class ExternalMetricSource {
      */
     private final @Nullable String targetValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExternalMetricSource(
-        @OutputCustomType.Parameter("metricName") String metricName,
-        @OutputCustomType.Parameter("metricSelector") @Nullable LabelSelector metricSelector,
-        @OutputCustomType.Parameter("targetAverageValue") @Nullable String targetAverageValue,
-        @OutputCustomType.Parameter("targetValue") @Nullable String targetValue) {
+        @CustomType.Parameter("metricName") String metricName,
+        @CustomType.Parameter("metricSelector") @Nullable LabelSelector metricSelector,
+        @CustomType.Parameter("targetAverageValue") @Nullable String targetAverageValue,
+        @CustomType.Parameter("targetValue") @Nullable String targetValue) {
         this.metricName = metricName;
         this.metricSelector = metricSelector;
         this.targetAverageValue = targetAverageValue;

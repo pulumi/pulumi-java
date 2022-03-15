@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudsearch_v1.enums.CompositeFilterLogicOperator;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.FilterArgs;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class CompositeFilterArgs extends io.pulumi.resources.ResourceArgs 
      * The logic operator of the sub filter.
      * 
      */
-    @InputImport(name="logicOperator")
+    @Import(name="logicOperator")
       private final @Nullable Output<CompositeFilterLogicOperator> logicOperator;
 
     public Output<CompositeFilterLogicOperator> getLogicOperator() {
@@ -31,7 +31,7 @@ public final class CompositeFilterArgs extends io.pulumi.resources.ResourceArgs 
      * Sub filters.
      * 
      */
-    @InputImport(name="subFilters")
+    @Import(name="subFilters")
       private final @Nullable Output<List<FilterArgs>> subFilters;
 
     public Output<List<FilterArgs>> getSubFilters() {

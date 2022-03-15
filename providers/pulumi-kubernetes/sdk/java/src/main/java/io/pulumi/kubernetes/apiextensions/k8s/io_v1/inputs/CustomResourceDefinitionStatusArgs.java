@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceDefinitionConditionArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceDefinitionNamesArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
      * acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in spec.
      * 
      */
-    @InputImport(name="acceptedNames", required=true)
+    @Import(name="acceptedNames", required=true)
       private final Output<CustomResourceDefinitionNamesArgs> acceptedNames;
 
     public Output<CustomResourceDefinitionNamesArgs> getAcceptedNames() {
@@ -36,7 +36,7 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
      * conditions indicate state for particular aspects of a CustomResourceDefinition
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<CustomResourceDefinitionConditionArgs>> conditions;
 
     public Output<List<CustomResourceDefinitionConditionArgs>> getConditions() {
@@ -47,7 +47,7 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
      * storedVersions lists all versions of CustomResources that were ever persisted. Tracking these versions allows a migration path for stored versions in etcd. The field is mutable so a migration controller can finish a migration to another version (ensuring no old objects are left in storage), and then remove the rest of the versions from this list. Versions may not be removed from `spec.versions` while they exist in this list.
      * 
      */
-    @InputImport(name="storedVersions", required=true)
+    @Import(name="storedVersions", required=true)
       private final Output<List<String>> storedVersions;
 
     public Output<List<String>> getStoredVersions() {

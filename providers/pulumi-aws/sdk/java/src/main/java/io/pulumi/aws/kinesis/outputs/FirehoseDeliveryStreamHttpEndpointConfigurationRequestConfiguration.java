@@ -4,14 +4,14 @@
 package io.pulumi.aws.kinesis.outputs;
 
 import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttribute;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfiguration {
     /**
      * Describes the metadata sent to the HTTP endpoint destination. More details are given below
@@ -24,10 +24,10 @@ public final class FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigu
      */
     private final @Nullable String contentEncoding;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfiguration(
-        @OutputCustomType.Parameter("commonAttributes") @Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttribute> commonAttributes,
-        @OutputCustomType.Parameter("contentEncoding") @Nullable String contentEncoding) {
+        @CustomType.Parameter("commonAttributes") @Nullable List<FirehoseDeliveryStreamHttpEndpointConfigurationRequestConfigurationCommonAttribute> commonAttributes,
+        @CustomType.Parameter("contentEncoding") @Nullable String contentEncoding) {
         this.commonAttributes = commonAttributes;
         this.contentEncoding = contentEncoding;
     }

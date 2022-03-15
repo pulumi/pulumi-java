@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sqs.outputs;
 
 import io.pulumi.awsnative.sqs.outputs.QueueTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetQueueResult {
     /**
      * Amazon Resource Name (ARN) of the queue.
@@ -92,23 +92,23 @@ public final class GetQueueResult {
      */
     private final @Nullable Integer visibilityTimeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetQueueResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("contentBasedDeduplication") @Nullable Boolean contentBasedDeduplication,
-        @OutputCustomType.Parameter("deduplicationScope") @Nullable String deduplicationScope,
-        @OutputCustomType.Parameter("delaySeconds") @Nullable Integer delaySeconds,
-        @OutputCustomType.Parameter("fifoThroughputLimit") @Nullable String fifoThroughputLimit,
-        @OutputCustomType.Parameter("kmsDataKeyReusePeriodSeconds") @Nullable Integer kmsDataKeyReusePeriodSeconds,
-        @OutputCustomType.Parameter("kmsMasterKeyId") @Nullable String kmsMasterKeyId,
-        @OutputCustomType.Parameter("maximumMessageSize") @Nullable Integer maximumMessageSize,
-        @OutputCustomType.Parameter("messageRetentionPeriod") @Nullable Integer messageRetentionPeriod,
-        @OutputCustomType.Parameter("queueUrl") @Nullable String queueUrl,
-        @OutputCustomType.Parameter("receiveMessageWaitTimeSeconds") @Nullable Integer receiveMessageWaitTimeSeconds,
-        @OutputCustomType.Parameter("redriveAllowPolicy") @Nullable Object redriveAllowPolicy,
-        @OutputCustomType.Parameter("redrivePolicy") @Nullable Object redrivePolicy,
-        @OutputCustomType.Parameter("tags") @Nullable List<QueueTag> tags,
-        @OutputCustomType.Parameter("visibilityTimeout") @Nullable Integer visibilityTimeout) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("contentBasedDeduplication") @Nullable Boolean contentBasedDeduplication,
+        @CustomType.Parameter("deduplicationScope") @Nullable String deduplicationScope,
+        @CustomType.Parameter("delaySeconds") @Nullable Integer delaySeconds,
+        @CustomType.Parameter("fifoThroughputLimit") @Nullable String fifoThroughputLimit,
+        @CustomType.Parameter("kmsDataKeyReusePeriodSeconds") @Nullable Integer kmsDataKeyReusePeriodSeconds,
+        @CustomType.Parameter("kmsMasterKeyId") @Nullable String kmsMasterKeyId,
+        @CustomType.Parameter("maximumMessageSize") @Nullable Integer maximumMessageSize,
+        @CustomType.Parameter("messageRetentionPeriod") @Nullable Integer messageRetentionPeriod,
+        @CustomType.Parameter("queueUrl") @Nullable String queueUrl,
+        @CustomType.Parameter("receiveMessageWaitTimeSeconds") @Nullable Integer receiveMessageWaitTimeSeconds,
+        @CustomType.Parameter("redriveAllowPolicy") @Nullable Object redriveAllowPolicy,
+        @CustomType.Parameter("redrivePolicy") @Nullable Object redrivePolicy,
+        @CustomType.Parameter("tags") @Nullable List<QueueTag> tags,
+        @CustomType.Parameter("visibilityTimeout") @Nullable Integer visibilityTimeout) {
         this.arn = arn;
         this.contentBasedDeduplication = contentBasedDeduplication;
         this.deduplicationScope = deduplicationScope;

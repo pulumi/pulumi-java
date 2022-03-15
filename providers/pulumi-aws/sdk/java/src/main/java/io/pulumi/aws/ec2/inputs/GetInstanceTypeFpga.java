@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,14 +13,14 @@ public final class GetInstanceTypeFpga extends io.pulumi.resources.InvokeArgs {
 
     public static final GetInstanceTypeFpga Empty = new GetInstanceTypeFpga();
 
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Integer count;
 
     public Integer getCount() {
         return this.count;
     }
 
-    @InputImport(name="manufacturer", required=true)
+    @Import(name="manufacturer", required=true)
       private final String manufacturer;
 
     public String getManufacturer() {
@@ -31,14 +31,14 @@ public final class GetInstanceTypeFpga extends io.pulumi.resources.InvokeArgs {
      * Size of the instance memory, in MiB.
      * 
      */
-    @InputImport(name="memorySize", required=true)
+    @Import(name="memorySize", required=true)
       private final Integer memorySize;
 
     public Integer getMemorySize() {
         return this.memorySize;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

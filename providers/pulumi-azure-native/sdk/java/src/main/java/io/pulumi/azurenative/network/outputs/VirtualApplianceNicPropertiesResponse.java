@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualApplianceNicPropertiesResponse {
     /**
      * NIC name.
@@ -25,11 +25,11 @@ public final class VirtualApplianceNicPropertiesResponse {
      */
     private final String publicIpAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualApplianceNicPropertiesResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
-        @OutputCustomType.Parameter("publicIpAddress") String publicIpAddress) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @CustomType.Parameter("publicIpAddress") String publicIpAddress) {
         this.name = name;
         this.privateIpAddress = privateIpAddress;
         this.publicIpAddress = publicIpAddress;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse {
     /**
      * Optional. The collection of quick replies.
@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse(
-        @OutputCustomType.Parameter("quickReplies") List<String> quickReplies,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("quickReplies") List<String> quickReplies,
+        @CustomType.Parameter("title") String title) {
         this.quickReplies = quickReplies;
         this.title = title;
     }

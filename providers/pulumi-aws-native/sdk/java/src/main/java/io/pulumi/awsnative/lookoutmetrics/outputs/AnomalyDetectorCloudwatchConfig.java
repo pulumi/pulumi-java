@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.lookoutmetrics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnomalyDetectorCloudwatchConfig {
     private final String roleArn;
 
-    @OutputCustomType.Constructor
-    private AnomalyDetectorCloudwatchConfig(@OutputCustomType.Parameter("roleArn") String roleArn) {
+    @CustomType.Constructor
+    private AnomalyDetectorCloudwatchConfig(@CustomType.Parameter("roleArn") String roleArn) {
         this.roleArn = roleArn;
     }
 

@@ -5,14 +5,14 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.CapacityReservationUtilizationResponse;
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CapacityReservationInstanceViewWithNameResponse {
     /**
      * The name of the capacity reservation.
@@ -30,11 +30,11 @@ public final class CapacityReservationInstanceViewWithNameResponse {
      */
     private final @Nullable CapacityReservationUtilizationResponse utilizationInfo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CapacityReservationInstanceViewWithNameResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses,
-        @OutputCustomType.Parameter("utilizationInfo") @Nullable CapacityReservationUtilizationResponse utilizationInfo) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses,
+        @CustomType.Parameter("utilizationInfo") @Nullable CapacityReservationUtilizationResponse utilizationInfo) {
         this.name = name;
         this.statuses = statuses;
         this.utilizationInfo = utilizationInfo;

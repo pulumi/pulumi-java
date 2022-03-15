@@ -3,12 +3,12 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.HTTPIngressPath;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HTTPIngressRuleValue {
     /**
      * A collection of paths that map requests to backends.
@@ -16,8 +16,8 @@ public final class HTTPIngressRuleValue {
      */
     private final List<HTTPIngressPath> paths;
 
-    @OutputCustomType.Constructor
-    private HTTPIngressRuleValue(@OutputCustomType.Parameter("paths") List<HTTPIngressPath> paths) {
+    @CustomType.Constructor
+    private HTTPIngressRuleValue(@CustomType.Parameter("paths") List<HTTPIngressPath> paths) {
         this.paths = paths;
     }
 

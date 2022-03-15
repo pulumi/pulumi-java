@@ -4,7 +4,7 @@
 package io.pulumi.aws.imagebuilder.outputs;
 
 import io.pulumi.aws.imagebuilder.outputs.DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionConfigurationDistributionAmiDistributionConfiguration {
     /**
      * Key-value map of tags to apply to the distributed AMI.
@@ -45,14 +45,14 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      */
     private final @Nullable List<String> targetAccountIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionConfigurationDistributionAmiDistributionConfiguration(
-        @OutputCustomType.Parameter("amiTags") @Nullable Map<String,String> amiTags,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
-        @OutputCustomType.Parameter("launchPermission") @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission launchPermission,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("targetAccountIds") @Nullable List<String> targetAccountIds) {
+        @CustomType.Parameter("amiTags") @Nullable Map<String,String> amiTags,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @CustomType.Parameter("launchPermission") @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission launchPermission,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("targetAccountIds") @Nullable List<String> targetAccountIds) {
         this.amiTags = amiTags;
         this.description = description;
         this.kmsKeyId = kmsKeyId;

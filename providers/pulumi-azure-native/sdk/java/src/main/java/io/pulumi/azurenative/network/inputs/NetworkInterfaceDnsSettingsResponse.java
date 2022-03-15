@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NetworkInterfaceDnsSettingsResponse extends io.pulumi.resourc
      * If the VM that uses this NIC is part of an Availability Set, then this list will have the union of all DNS servers from all NICs that are part of the Availability Set. This property is what is configured on each of those VMs.
      * 
      */
-    @InputImport(name="appliedDnsServers", required=true)
+    @Import(name="appliedDnsServers", required=true)
       private final List<String> appliedDnsServers;
 
     public List<String> getAppliedDnsServers() {
@@ -34,7 +34,7 @@ public final class NetworkInterfaceDnsSettingsResponse extends io.pulumi.resourc
      * List of DNS servers IP addresses. Use 'AzureProvidedDNS' to switch to azure provided DNS resolution. 'AzureProvidedDNS' value cannot be combined with other IPs, it must be the only value in dnsServers collection.
      * 
      */
-    @InputImport(name="dnsServers")
+    @Import(name="dnsServers")
       private final @Nullable List<String> dnsServers;
 
     public List<String> getDnsServers() {
@@ -45,7 +45,7 @@ public final class NetworkInterfaceDnsSettingsResponse extends io.pulumi.resourc
      * Relative DNS name for this NIC used for internal communications between VMs in the same virtual network.
      * 
      */
-    @InputImport(name="internalDnsNameLabel")
+    @Import(name="internalDnsNameLabel")
       private final @Nullable String internalDnsNameLabel;
 
     public Optional<String> getInternalDnsNameLabel() {
@@ -56,7 +56,7 @@ public final class NetworkInterfaceDnsSettingsResponse extends io.pulumi.resourc
      * Even if internalDnsNameLabel is not specified, a DNS entry is created for the primary NIC of the VM. This DNS name can be constructed by concatenating the VM name with the value of internalDomainNameSuffix.
      * 
      */
-    @InputImport(name="internalDomainNameSuffix", required=true)
+    @Import(name="internalDomainNameSuffix", required=true)
       private final String internalDomainNameSuffix;
 
     public String getInternalDomainNameSuffix() {
@@ -67,7 +67,7 @@ public final class NetworkInterfaceDnsSettingsResponse extends io.pulumi.resourc
      * Fully qualified DNS name supporting internal communications between VMs in the same virtual network.
      * 
      */
-    @InputImport(name="internalFqdn", required=true)
+    @Import(name="internalFqdn", required=true)
       private final String internalFqdn;
 
     public String getInternalFqdn() {

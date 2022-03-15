@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.jobs_v4.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.jobs_v4.outputs.MoneyResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CompensationRangeResponse {
     /**
      * The maximum amount of compensation. If left empty, the value is set to a maximal compensation value and the currency code is set to match the currency code of min_compensation.
@@ -20,10 +20,10 @@ public final class CompensationRangeResponse {
      */
     private final MoneyResponse minCompensation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CompensationRangeResponse(
-        @OutputCustomType.Parameter("maxCompensation") MoneyResponse maxCompensation,
-        @OutputCustomType.Parameter("minCompensation") MoneyResponse minCompensation) {
+        @CustomType.Parameter("maxCompensation") MoneyResponse maxCompensation,
+        @CustomType.Parameter("minCompensation") MoneyResponse minCompensation) {
         this.maxCompensation = maxCompensation;
         this.minCompensation = minCompensation;
     }

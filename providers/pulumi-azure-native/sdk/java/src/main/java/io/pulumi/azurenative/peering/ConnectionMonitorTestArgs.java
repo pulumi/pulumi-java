@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.peering;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * The name of the connection monitor test
      * 
      */
-    @InputImport(name="connectionMonitorTestName")
+    @Import(name="connectionMonitorTestName")
       private final @Nullable Output<String> connectionMonitorTestName;
 
     public Output<String> getConnectionMonitorTestName() {
@@ -30,7 +30,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * The Connection Monitor test destination
      * 
      */
-    @InputImport(name="destination")
+    @Import(name="destination")
       private final @Nullable Output<String> destination;
 
     public Output<String> getDestination() {
@@ -41,7 +41,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * The Connection Monitor test destination port
      * 
      */
-    @InputImport(name="destinationPort")
+    @Import(name="destinationPort")
       private final @Nullable Output<Integer> destinationPort;
 
     public Output<Integer> getDestinationPort() {
@@ -52,7 +52,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * The name of the peering service.
      * 
      */
-    @InputImport(name="peeringServiceName", required=true)
+    @Import(name="peeringServiceName", required=true)
       private final Output<String> peeringServiceName;
 
     public Output<String> getPeeringServiceName() {
@@ -63,7 +63,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -74,7 +74,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * The Connection Monitor test source agent
      * 
      */
-    @InputImport(name="sourceAgent")
+    @Import(name="sourceAgent")
       private final @Nullable Output<String> sourceAgent;
 
     public Output<String> getSourceAgent() {
@@ -85,7 +85,7 @@ public final class ConnectionMonitorTestArgs extends io.pulumi.resources.Resourc
      * The Connection Monitor test frequency in seconds
      * 
      */
-    @InputImport(name="testFrequencyInSec")
+    @Import(name="testFrequencyInSec")
       private final @Nullable Output<Integer> testFrequencyInSec;
 
     public Output<Integer> getTestFrequencyInSec() {

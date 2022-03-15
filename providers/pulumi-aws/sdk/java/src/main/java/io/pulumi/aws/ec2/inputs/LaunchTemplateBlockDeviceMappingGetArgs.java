@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.LaunchTemplateBlockDeviceMappingEbsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends io.pulumi.res
      * The name of the device to mount.
      * 
      */
-    @InputImport(name="deviceName")
+    @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -30,7 +30,7 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends io.pulumi.res
      * Configure EBS volume properties.
      * 
      */
-    @InputImport(name="ebs")
+    @Import(name="ebs")
       private final @Nullable Output<LaunchTemplateBlockDeviceMappingEbsGetArgs> ebs;
 
     public Output<LaunchTemplateBlockDeviceMappingEbsGetArgs> getEbs() {
@@ -41,7 +41,7 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends io.pulumi.res
      * Suppresses the specified device included in the AMI's block device mapping.
      * 
      */
-    @InputImport(name="noDevice")
+    @Import(name="noDevice")
       private final @Nullable Output<String> noDevice;
 
     public Output<String> getNoDevice() {
@@ -54,7 +54,7 @@ public final class LaunchTemplateBlockDeviceMappingGetArgs extends io.pulumi.res
      * (e.g., `"ephemeral0"`).
      * 
      */
-    @InputImport(name="virtualName")
+    @Import(name="virtualName")
       private final @Nullable Output<String> virtualName;
 
     public Output<String> getVirtualName() {

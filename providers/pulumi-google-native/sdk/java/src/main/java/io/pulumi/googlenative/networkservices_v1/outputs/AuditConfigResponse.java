@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.networkservices_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.networkservices_v1.outputs.AuditLogConfigResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AuditConfigResponse {
     /**
      * The configuration for logging of each type of permission.
@@ -22,10 +22,10 @@ public final class AuditConfigResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuditConfigResponse(
-        @OutputCustomType.Parameter("auditLogConfigs") List<AuditLogConfigResponse> auditLogConfigs,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("auditLogConfigs") List<AuditLogConfigResponse> auditLogConfigs,
+        @CustomType.Parameter("service") String service) {
         this.auditLogConfigs = auditLogConfigs;
         this.service = service;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
 
     public static final EnvgroupAttachmentArgs Empty = new EnvgroupAttachmentArgs();
 
-    @InputImport(name="envgroupId", required=true)
+    @Import(name="envgroupId", required=true)
       private final Output<String> envgroupId;
 
     public Output<String> getEnvgroupId() {
@@ -25,7 +25,7 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
      * ID of the attached environment.
      * 
      */
-    @InputImport(name="environment", required=true)
+    @Import(name="environment", required=true)
       private final Output<String> environment;
 
     public Output<String> getEnvironment() {
@@ -36,14 +36,14 @@ public final class EnvgroupAttachmentArgs extends io.pulumi.resources.ResourceAr
      * ID of the environment group attachment.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final Output<String> organizationId;
 
     public Output<String> getOrganizationId() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsublite_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ReservationArgs Empty = new ReservationArgs();
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -25,21 +25,21 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the reservation. Structured like: projects/{project_number}/locations/{location}/reservations/{reservation_id}
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="reservationId", required=true)
+    @Import(name="reservationId", required=true)
       private final Output<String> reservationId;
 
     public Output<String> getReservationId() {
@@ -50,7 +50,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * The reserved throughput capacity. Every unit of throughput capacity is equivalent to 1 MiB/s of published messages or 2 MiB/s of subscribed messages. Any topics which are declared as using capacity from a Reservation will consume resources from this reservation instead of being charged individually.
      * 
      */
-    @InputImport(name="throughputCapacity")
+    @Import(name="throughputCapacity")
       private final @Nullable Output<String> throughputCapacity;
 
     public Output<String> getThroughputCapacity() {

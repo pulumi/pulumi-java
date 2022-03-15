@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class TimerTriggerDescriptorResponse extends io.pulumi.resources.In
      * The occurrence that triggered the run.
      * 
      */
-    @InputImport(name="scheduleOccurrence")
+    @Import(name="scheduleOccurrence")
       private final @Nullable String scheduleOccurrence;
 
     public Optional<String> getScheduleOccurrence() {
@@ -29,7 +29,7 @@ public final class TimerTriggerDescriptorResponse extends io.pulumi.resources.In
      * The timer trigger name that caused the run.
      * 
      */
-    @InputImport(name="timerTriggerName")
+    @Import(name="timerTriggerName")
       private final @Nullable String timerTriggerName;
 
     public Optional<String> getTimerTriggerName() {

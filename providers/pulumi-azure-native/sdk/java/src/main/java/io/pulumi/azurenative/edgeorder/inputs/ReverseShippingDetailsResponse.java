@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ReverseShippingDetailsResponse extends io.pulumi.resources.In
      * Carrier Name for display purpose. Not to be used for any processing.
      * 
      */
-    @InputImport(name="carrierDisplayName", required=true)
+    @Import(name="carrierDisplayName", required=true)
       private final String carrierDisplayName;
 
     public String getCarrierDisplayName() {
@@ -31,7 +31,7 @@ public final class ReverseShippingDetailsResponse extends io.pulumi.resources.In
      * Name of the carrier.
      * 
      */
-    @InputImport(name="carrierName", required=true)
+    @Import(name="carrierName", required=true)
       private final String carrierName;
 
     public String getCarrierName() {
@@ -42,7 +42,7 @@ public final class ReverseShippingDetailsResponse extends io.pulumi.resources.In
      * SAS key to download the reverse shipment label of the package.
      * 
      */
-    @InputImport(name="sasKeyForLabel", required=true)
+    @Import(name="sasKeyForLabel", required=true)
       private final String sasKeyForLabel;
 
     public String getSasKeyForLabel() {
@@ -53,7 +53,7 @@ public final class ReverseShippingDetailsResponse extends io.pulumi.resources.In
      * TrackingId of the package
      * 
      */
-    @InputImport(name="trackingId", required=true)
+    @Import(name="trackingId", required=true)
       private final String trackingId;
 
     public String getTrackingId() {
@@ -64,7 +64,7 @@ public final class ReverseShippingDetailsResponse extends io.pulumi.resources.In
      * TrackingUrl of the package.
      * 
      */
-    @InputImport(name="trackingUrl", required=true)
+    @Import(name="trackingUrl", required=true)
       private final String trackingUrl;
 
     public String getTrackingUrl() {

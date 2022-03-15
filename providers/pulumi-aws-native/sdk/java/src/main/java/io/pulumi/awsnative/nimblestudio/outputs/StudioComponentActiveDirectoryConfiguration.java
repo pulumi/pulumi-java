@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.nimblestudio.outputs;
 
 import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentActiveDirectoryComputerAttribute;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StudioComponentActiveDirectoryConfiguration {
     /**
      * <p>A collection of custom attributes for an Active Directory computer.</p>
@@ -29,11 +29,11 @@ public final class StudioComponentActiveDirectoryConfiguration {
      */
     private final @Nullable String organizationalUnitDistinguishedName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StudioComponentActiveDirectoryConfiguration(
-        @OutputCustomType.Parameter("computerAttributes") @Nullable List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes,
-        @OutputCustomType.Parameter("directoryId") @Nullable String directoryId,
-        @OutputCustomType.Parameter("organizationalUnitDistinguishedName") @Nullable String organizationalUnitDistinguishedName) {
+        @CustomType.Parameter("computerAttributes") @Nullable List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes,
+        @CustomType.Parameter("directoryId") @Nullable String directoryId,
+        @CustomType.Parameter("organizationalUnitDistinguishedName") @Nullable String organizationalUnitDistinguishedName) {
         this.computerAttributes = computerAttributes;
         this.directoryId = directoryId;
         this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;

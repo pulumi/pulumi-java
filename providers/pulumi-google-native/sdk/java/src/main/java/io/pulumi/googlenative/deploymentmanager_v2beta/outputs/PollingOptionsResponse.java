@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.DiagnosticResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PollingOptionsResponse {
     /**
      * An array of diagnostics to be collected by Deployment Manager, these diagnostics will be displayed to the user.
@@ -37,13 +37,13 @@ public final class PollingOptionsResponse {
      */
     private final String targetLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PollingOptionsResponse(
-        @OutputCustomType.Parameter("diagnostics") List<DiagnosticResponse> diagnostics,
-        @OutputCustomType.Parameter("failCondition") String failCondition,
-        @OutputCustomType.Parameter("finishCondition") String finishCondition,
-        @OutputCustomType.Parameter("pollingLink") String pollingLink,
-        @OutputCustomType.Parameter("targetLink") String targetLink) {
+        @CustomType.Parameter("diagnostics") List<DiagnosticResponse> diagnostics,
+        @CustomType.Parameter("failCondition") String failCondition,
+        @CustomType.Parameter("finishCondition") String finishCondition,
+        @CustomType.Parameter("pollingLink") String pollingLink,
+        @CustomType.Parameter("targetLink") String targetLink) {
         this.diagnostics = diagnostics;
         this.failCondition = failCondition;
         this.finishCondition = finishCondition;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation;
 import io.pulumi.azurenative.automation.inputs.ContentSourceArgs;
 import io.pulumi.azurenative.automation.inputs.DscConfigurationParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * The name of the automation account.
      * 
      */
-    @InputImport(name="automationAccountName", required=true)
+    @Import(name="automationAccountName", required=true)
       private final Output<String> automationAccountName;
 
     public Output<String> getAutomationAccountName() {
@@ -33,7 +33,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * The create or update parameters for configuration.
      * 
      */
-    @InputImport(name="configurationName")
+    @Import(name="configurationName")
       private final @Nullable Output<String> configurationName;
 
     public Output<String> getConfigurationName() {
@@ -44,7 +44,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets the description of the configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -55,7 +55,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets the location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -66,7 +66,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets progress log option.
      * 
      */
-    @InputImport(name="logProgress")
+    @Import(name="logProgress")
       private final @Nullable Output<Boolean> logProgress;
 
     public Output<Boolean> getLogProgress() {
@@ -77,7 +77,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets verbose log option.
      * 
      */
-    @InputImport(name="logVerbose")
+    @Import(name="logVerbose")
       private final @Nullable Output<Boolean> logVerbose;
 
     public Output<Boolean> getLogVerbose() {
@@ -88,7 +88,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets name of the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -99,7 +99,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets the configuration parameters.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,DscConfigurationParameterArgs>> parameters;
 
     public Output<Map<String,DscConfigurationParameterArgs>> getParameters() {
@@ -110,7 +110,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -121,7 +121,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets the source.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<ContentSourceArgs> source;
 
     public Output<ContentSourceArgs> getSource() {
@@ -132,7 +132,7 @@ public final class DscConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * Gets or sets the tags attached to the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

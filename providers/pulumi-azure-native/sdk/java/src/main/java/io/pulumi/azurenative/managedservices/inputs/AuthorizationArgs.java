@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managedservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.
      * 
      */
-    @InputImport(name="delegatedRoleDefinitionIds")
+    @Import(name="delegatedRoleDefinitionIds")
       private final @Nullable Output<List<String>> delegatedRoleDefinitionIds;
 
     public Output<List<String>> getDelegatedRoleDefinitionIds() {
@@ -34,7 +34,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * Principal Id of the security group/service principal/user that would be assigned permissions to the projected subscription
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final Output<String> principalId;
 
     public Output<String> getPrincipalId() {
@@ -45,7 +45,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * Display name of the principal Id.
      * 
      */
-    @InputImport(name="principalIdDisplayName")
+    @Import(name="principalIdDisplayName")
       private final @Nullable Output<String> principalIdDisplayName;
 
     public Output<String> getPrincipalIdDisplayName() {
@@ -56,7 +56,7 @@ public final class AuthorizationArgs extends io.pulumi.resources.ResourceArgs {
      * The role definition identifier. This role will define all the permissions that the security group/service principal/user must have on the projected subscription. This role cannot be an owner role.
      * 
      */
-    @InputImport(name="roleDefinitionId", required=true)
+    @Import(name="roleDefinitionId", required=true)
       private final Output<String> roleDefinitionId;
 
     public Output<String> getRoleDefinitionId() {

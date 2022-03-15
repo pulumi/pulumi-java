@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media;
 import io.pulumi.azurenative.media.inputs.CrossSiteAccessPoliciesArgs;
 import io.pulumi.azurenative.media.inputs.StreamingEndpointAccessControlArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * The access control definition of the streaming endpoint.
      * 
      */
-    @InputImport(name="accessControl")
+    @Import(name="accessControl")
       private final @Nullable Output<StreamingEndpointAccessControlArgs> accessControl;
 
     public Output<StreamingEndpointAccessControlArgs> getAccessControl() {
@@ -36,7 +36,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * The Media Services account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -47,7 +47,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * The flag indicates if the resource should be automatically started on creation.
      * 
      */
-    @InputImport(name="autoStart")
+    @Import(name="autoStart")
       private final @Nullable Output<Boolean> autoStart;
 
     public Output<Boolean> getAutoStart() {
@@ -58,7 +58,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * This feature is deprecated, do not set a value for this property.
      * 
      */
-    @InputImport(name="availabilitySetName")
+    @Import(name="availabilitySetName")
       private final @Nullable Output<String> availabilitySetName;
 
     public Output<String> getAvailabilitySetName() {
@@ -69,7 +69,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * The CDN enabled flag.
      * 
      */
-    @InputImport(name="cdnEnabled")
+    @Import(name="cdnEnabled")
       private final @Nullable Output<Boolean> cdnEnabled;
 
     public Output<Boolean> getCdnEnabled() {
@@ -80,7 +80,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * The CDN profile name.
      * 
      */
-    @InputImport(name="cdnProfile")
+    @Import(name="cdnProfile")
       private final @Nullable Output<String> cdnProfile;
 
     public Output<String> getCdnProfile() {
@@ -91,7 +91,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * The CDN provider name.
      * 
      */
-    @InputImport(name="cdnProvider")
+    @Import(name="cdnProvider")
       private final @Nullable Output<String> cdnProvider;
 
     public Output<String> getCdnProvider() {
@@ -102,7 +102,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * The streaming endpoint access policies.
      * 
      */
-    @InputImport(name="crossSiteAccessPolicies")
+    @Import(name="crossSiteAccessPolicies")
       private final @Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
 
     public Output<CrossSiteAccessPoliciesArgs> getCrossSiteAccessPolicies() {
@@ -113,7 +113,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * The custom host names of the streaming endpoint
      * 
      */
-    @InputImport(name="customHostNames")
+    @Import(name="customHostNames")
       private final @Nullable Output<List<String>> customHostNames;
 
     public Output<List<String>> getCustomHostNames() {
@@ -124,7 +124,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * The streaming endpoint description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -135,7 +135,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -146,7 +146,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * Max cache age
      * 
      */
-    @InputImport(name="maxCacheAge")
+    @Import(name="maxCacheAge")
       private final @Nullable Output<Double> maxCacheAge;
 
     public Output<Double> getMaxCacheAge() {
@@ -157,7 +157,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * The name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -168,7 +168,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * The number of scale units. Use the Scale operation to adjust this value.
      * 
      */
-    @InputImport(name="scaleUnits", required=true)
+    @Import(name="scaleUnits", required=true)
       private final Output<Integer> scaleUnits;
 
     public Output<Integer> getScaleUnits() {
@@ -179,7 +179,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * The name of the streaming endpoint, maximum length is 24.
      * 
      */
-    @InputImport(name="streamingEndpointName")
+    @Import(name="streamingEndpointName")
       private final @Nullable Output<String> streamingEndpointName;
 
     public Output<String> getStreamingEndpointName() {
@@ -190,7 +190,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

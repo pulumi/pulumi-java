@@ -6,7 +6,7 @@ package io.pulumi.aws.autoscalingplans.outputs;
 import io.pulumi.aws.autoscalingplans.outputs.ScalingPlanScalingInstructionCustomizedLoadMetricSpecification;
 import io.pulumi.aws.autoscalingplans.outputs.ScalingPlanScalingInstructionPredefinedLoadMetricSpecification;
 import io.pulumi.aws.autoscalingplans.outputs.ScalingPlanScalingInstructionTargetTrackingConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ScalingPlanScalingInstruction {
     /**
      * The customized load metric to use for predictive scaling. You must specify either `customized_load_metric_specification` or `predefined_load_metric_specification` when configuring predictive scaling.
@@ -92,22 +92,22 @@ public final class ScalingPlanScalingInstruction {
      */
     private final List<ScalingPlanScalingInstructionTargetTrackingConfiguration> targetTrackingConfigurations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScalingPlanScalingInstruction(
-        @OutputCustomType.Parameter("customizedLoadMetricSpecification") @Nullable ScalingPlanScalingInstructionCustomizedLoadMetricSpecification customizedLoadMetricSpecification,
-        @OutputCustomType.Parameter("disableDynamicScaling") @Nullable Boolean disableDynamicScaling,
-        @OutputCustomType.Parameter("maxCapacity") Integer maxCapacity,
-        @OutputCustomType.Parameter("minCapacity") Integer minCapacity,
-        @OutputCustomType.Parameter("predefinedLoadMetricSpecification") @Nullable ScalingPlanScalingInstructionPredefinedLoadMetricSpecification predefinedLoadMetricSpecification,
-        @OutputCustomType.Parameter("predictiveScalingMaxCapacityBehavior") @Nullable String predictiveScalingMaxCapacityBehavior,
-        @OutputCustomType.Parameter("predictiveScalingMaxCapacityBuffer") @Nullable Integer predictiveScalingMaxCapacityBuffer,
-        @OutputCustomType.Parameter("predictiveScalingMode") @Nullable String predictiveScalingMode,
-        @OutputCustomType.Parameter("resourceId") String resourceId,
-        @OutputCustomType.Parameter("scalableDimension") String scalableDimension,
-        @OutputCustomType.Parameter("scalingPolicyUpdateBehavior") @Nullable String scalingPolicyUpdateBehavior,
-        @OutputCustomType.Parameter("scheduledActionBufferTime") @Nullable Integer scheduledActionBufferTime,
-        @OutputCustomType.Parameter("serviceNamespace") String serviceNamespace,
-        @OutputCustomType.Parameter("targetTrackingConfigurations") List<ScalingPlanScalingInstructionTargetTrackingConfiguration> targetTrackingConfigurations) {
+        @CustomType.Parameter("customizedLoadMetricSpecification") @Nullable ScalingPlanScalingInstructionCustomizedLoadMetricSpecification customizedLoadMetricSpecification,
+        @CustomType.Parameter("disableDynamicScaling") @Nullable Boolean disableDynamicScaling,
+        @CustomType.Parameter("maxCapacity") Integer maxCapacity,
+        @CustomType.Parameter("minCapacity") Integer minCapacity,
+        @CustomType.Parameter("predefinedLoadMetricSpecification") @Nullable ScalingPlanScalingInstructionPredefinedLoadMetricSpecification predefinedLoadMetricSpecification,
+        @CustomType.Parameter("predictiveScalingMaxCapacityBehavior") @Nullable String predictiveScalingMaxCapacityBehavior,
+        @CustomType.Parameter("predictiveScalingMaxCapacityBuffer") @Nullable Integer predictiveScalingMaxCapacityBuffer,
+        @CustomType.Parameter("predictiveScalingMode") @Nullable String predictiveScalingMode,
+        @CustomType.Parameter("resourceId") String resourceId,
+        @CustomType.Parameter("scalableDimension") String scalableDimension,
+        @CustomType.Parameter("scalingPolicyUpdateBehavior") @Nullable String scalingPolicyUpdateBehavior,
+        @CustomType.Parameter("scheduledActionBufferTime") @Nullable Integer scheduledActionBufferTime,
+        @CustomType.Parameter("serviceNamespace") String serviceNamespace,
+        @CustomType.Parameter("targetTrackingConfigurations") List<ScalingPlanScalingInstructionTargetTrackingConfiguration> targetTrackingConfigurations) {
         this.customizedLoadMetricSpecification = customizedLoadMetricSpecification;
         this.disableDynamicScaling = disableDynamicScaling;
         this.maxCapacity = maxCapacity;

@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.azurearcdata.outputs;
 
 import io.pulumi.azurenative.azurearcdata.outputs.BasicLoginInformationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PostgresInstancePropertiesResponse {
     /**
      * The instance admin
@@ -40,14 +40,14 @@ public final class PostgresInstancePropertiesResponse {
     private final @Nullable String lastUploadedDate;
     private final String provisioningState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PostgresInstancePropertiesResponse(
-        @OutputCustomType.Parameter("admin") @Nullable String admin,
-        @OutputCustomType.Parameter("basicLoginInformation") @Nullable BasicLoginInformationResponse basicLoginInformation,
-        @OutputCustomType.Parameter("dataControllerId") @Nullable String dataControllerId,
-        @OutputCustomType.Parameter("k8sRaw") @Nullable Object k8sRaw,
-        @OutputCustomType.Parameter("lastUploadedDate") @Nullable String lastUploadedDate,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
+        @CustomType.Parameter("admin") @Nullable String admin,
+        @CustomType.Parameter("basicLoginInformation") @Nullable BasicLoginInformationResponse basicLoginInformation,
+        @CustomType.Parameter("dataControllerId") @Nullable String dataControllerId,
+        @CustomType.Parameter("k8sRaw") @Nullable Object k8sRaw,
+        @CustomType.Parameter("lastUploadedDate") @Nullable String lastUploadedDate,
+        @CustomType.Parameter("provisioningState") String provisioningState) {
         this.admin = admin;
         this.basicLoginInformation = basicLoginInformation;
         this.dataControllerId = dataControllerId;

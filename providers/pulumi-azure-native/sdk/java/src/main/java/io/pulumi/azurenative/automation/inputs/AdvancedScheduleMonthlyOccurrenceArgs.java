@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation.inputs;
 import io.pulumi.azurenative.automation.enums.ScheduleDay;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends io.pulumi.resou
      * Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
      * 
      */
-    @InputImport(name="day")
+    @Import(name="day")
       private final @Nullable Output<Either<String,ScheduleDay>> day;
 
     public Output<Either<String,ScheduleDay>> getDay() {
@@ -36,7 +36,7 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends io.pulumi.resou
      * Occurrence of the week within the month. Must be between 1 and 5
      * 
      */
-    @InputImport(name="occurrence")
+    @Import(name="occurrence")
       private final @Nullable Output<Integer> occurrence;
 
     public Output<Integer> getOccurrence() {

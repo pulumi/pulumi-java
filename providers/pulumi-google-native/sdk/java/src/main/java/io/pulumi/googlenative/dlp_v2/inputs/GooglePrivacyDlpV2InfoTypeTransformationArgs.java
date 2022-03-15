@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PrimitiveTransformationArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends io.pulum
      * InfoTypes to apply the transformation to. An empty list will cause this transformation to apply to all findings that correspond to infoTypes that were requested in `InspectConfig`.
      * 
      */
-    @InputImport(name="infoTypes")
+    @Import(name="infoTypes")
       private final @Nullable Output<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
 
     public Output<List<GooglePrivacyDlpV2InfoTypeArgs>> getInfoTypes() {
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends io.pulum
      * Primitive transformation to apply to the infoType.
      * 
      */
-    @InputImport(name="primitiveTransformation", required=true)
+    @Import(name="primitiveTransformation", required=true)
       private final Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation;
 
     public Output<GooglePrivacyDlpV2PrimitiveTransformationArgs> getPrimitiveTransformation() {

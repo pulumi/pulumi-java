@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1EntityMetadataResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSharedflowResult {
     /**
      * The id of the most recently created revision for this shared flow.
@@ -32,12 +32,12 @@ public final class GetSharedflowResult {
      */
     private final List<String> revision;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSharedflowResult(
-        @OutputCustomType.Parameter("latestRevisionId") String latestRevisionId,
-        @OutputCustomType.Parameter("metaData") GoogleCloudApigeeV1EntityMetadataResponse metaData,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("revision") List<String> revision) {
+        @CustomType.Parameter("latestRevisionId") String latestRevisionId,
+        @CustomType.Parameter("metaData") GoogleCloudApigeeV1EntityMetadataResponse metaData,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("revision") List<String> revision) {
         this.latestRevisionId = latestRevisionId;
         this.metaData = metaData;
         this.name = name;

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.costmanagement.CloudConnectorArgs;
 import io.pulumi.azurenative.costmanagement.outputs.ConnectorCollectionInfoResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * Connector billing model
      * 
      */
-    @OutputExport(name="billingModel", type=String.class, parameters={})
+    @Export(name="billingModel", type=String.class, parameters={})
     private Output</* @Nullable */ String> billingModel;
 
     /**
@@ -50,7 +50,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * Collection information
      * 
      */
-    @OutputExport(name="collectionInfo", type=ConnectorCollectionInfoResponse.class, parameters={})
+    @Export(name="collectionInfo", type=ConnectorCollectionInfoResponse.class, parameters={})
     private Output<ConnectorCollectionInfoResponse> collectionInfo;
 
     /**
@@ -64,7 +64,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * Connector definition creation datetime
      * 
      */
-    @OutputExport(name="createdOn", type=String.class, parameters={})
+    @Export(name="createdOn", type=String.class, parameters={})
     private Output<String> createdOn;
 
     /**
@@ -78,7 +78,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * Credentials authentication key (eg AWS ARN)
      * 
      */
-    @OutputExport(name="credentialsKey", type=String.class, parameters={})
+    @Export(name="credentialsKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> credentialsKey;
 
     /**
@@ -92,7 +92,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * Number of days remaining of trial
      * 
      */
-    @OutputExport(name="daysTrialRemaining", type=Integer.class, parameters={})
+    @Export(name="daysTrialRemaining", type=Integer.class, parameters={})
     private Output<Integer> daysTrialRemaining;
 
     /**
@@ -106,7 +106,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * Default ManagementGroupId
      * 
      */
-    @OutputExport(name="defaultManagementGroupId", type=String.class, parameters={})
+    @Export(name="defaultManagementGroupId", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultManagementGroupId;
 
     /**
@@ -120,7 +120,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * Connector DisplayName
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -134,7 +134,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * Associated ExternalBillingAccountId
      * 
      */
-    @OutputExport(name="externalBillingAccountId", type=String.class, parameters={})
+    @Export(name="externalBillingAccountId", type=String.class, parameters={})
     private Output<String> externalBillingAccountId;
 
     /**
@@ -148,7 +148,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * Connector kind (eg aws)
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -162,7 +162,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * Connector last modified datetime
      * 
      */
-    @OutputExport(name="modifiedOn", type=String.class, parameters={})
+    @Export(name="modifiedOn", type=String.class, parameters={})
     private Output<String> modifiedOn;
 
     /**
@@ -176,7 +176,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * Connector name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -190,7 +190,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * The display name of the providerBillingAccountId as defined on the external provider
      * 
      */
-    @OutputExport(name="providerBillingAccountDisplayName", type=String.class, parameters={})
+    @Export(name="providerBillingAccountDisplayName", type=String.class, parameters={})
     private Output<String> providerBillingAccountDisplayName;
 
     /**
@@ -204,7 +204,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * Connector providerBillingAccountId, determined from credentials (eg AWS Consolidated account number)
      * 
      */
-    @OutputExport(name="providerBillingAccountId", type=String.class, parameters={})
+    @Export(name="providerBillingAccountId", type=String.class, parameters={})
     private Output<String> providerBillingAccountId;
 
     /**
@@ -218,7 +218,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * Identifying source report. (For AWS this is a CUR report name, defined with Daily and with Resources)
      * 
      */
-    @OutputExport(name="reportId", type=String.class, parameters={})
+    @Export(name="reportId", type=String.class, parameters={})
     private Output</* @Nullable */ String> reportId;
 
     /**
@@ -232,7 +232,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * Connector status
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -246,7 +246,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * Billing SubscriptionId
      * 
      */
-    @OutputExport(name="subscriptionId", type=String.class, parameters={})
+    @Export(name="subscriptionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subscriptionId;
 
     /**
@@ -260,7 +260,7 @@ public class CloudConnector extends io.pulumi.resources.CustomResource {
      * Connector type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

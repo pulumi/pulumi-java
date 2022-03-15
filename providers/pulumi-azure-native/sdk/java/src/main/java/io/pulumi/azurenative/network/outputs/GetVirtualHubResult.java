@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VirtualHubRouteTableResponse;
 import io.pulumi.azurenative.network.outputs.VirtualHubRouteTableV2Response;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualHubResult {
     /**
      * Address-prefix for this VirtualHub.
@@ -139,32 +139,32 @@ public final class GetVirtualHubResult {
      */
     private final @Nullable SubResourceResponse vpnGateway;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualHubResult(
-        @OutputCustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
-        @OutputCustomType.Parameter("allowBranchToBranchTraffic") @Nullable Boolean allowBranchToBranchTraffic,
-        @OutputCustomType.Parameter("azureFirewall") @Nullable SubResourceResponse azureFirewall,
-        @OutputCustomType.Parameter("bgpConnections") List<SubResourceResponse> bgpConnections,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("expressRouteGateway") @Nullable SubResourceResponse expressRouteGateway,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ipConfigurations") List<SubResourceResponse> ipConfigurations,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("p2SVpnGateway") @Nullable SubResourceResponse p2SVpnGateway,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("routeTable") @Nullable VirtualHubRouteTableResponse routeTable,
-        @OutputCustomType.Parameter("routingState") String routingState,
-        @OutputCustomType.Parameter("securityPartnerProvider") @Nullable SubResourceResponse securityPartnerProvider,
-        @OutputCustomType.Parameter("securityProviderName") @Nullable String securityProviderName,
-        @OutputCustomType.Parameter("sku") @Nullable String sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualHubRouteTableV2s") @Nullable List<VirtualHubRouteTableV2Response> virtualHubRouteTableV2s,
-        @OutputCustomType.Parameter("virtualRouterAsn") @Nullable Double virtualRouterAsn,
-        @OutputCustomType.Parameter("virtualRouterIps") @Nullable List<String> virtualRouterIps,
-        @OutputCustomType.Parameter("virtualWan") @Nullable SubResourceResponse virtualWan,
-        @OutputCustomType.Parameter("vpnGateway") @Nullable SubResourceResponse vpnGateway) {
+        @CustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
+        @CustomType.Parameter("allowBranchToBranchTraffic") @Nullable Boolean allowBranchToBranchTraffic,
+        @CustomType.Parameter("azureFirewall") @Nullable SubResourceResponse azureFirewall,
+        @CustomType.Parameter("bgpConnections") List<SubResourceResponse> bgpConnections,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("expressRouteGateway") @Nullable SubResourceResponse expressRouteGateway,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ipConfigurations") List<SubResourceResponse> ipConfigurations,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("p2SVpnGateway") @Nullable SubResourceResponse p2SVpnGateway,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("routeTable") @Nullable VirtualHubRouteTableResponse routeTable,
+        @CustomType.Parameter("routingState") String routingState,
+        @CustomType.Parameter("securityPartnerProvider") @Nullable SubResourceResponse securityPartnerProvider,
+        @CustomType.Parameter("securityProviderName") @Nullable String securityProviderName,
+        @CustomType.Parameter("sku") @Nullable String sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualHubRouteTableV2s") @Nullable List<VirtualHubRouteTableV2Response> virtualHubRouteTableV2s,
+        @CustomType.Parameter("virtualRouterAsn") @Nullable Double virtualRouterAsn,
+        @CustomType.Parameter("virtualRouterIps") @Nullable List<String> virtualRouterIps,
+        @CustomType.Parameter("virtualWan") @Nullable SubResourceResponse virtualWan,
+        @CustomType.Parameter("vpnGateway") @Nullable SubResourceResponse vpnGateway) {
         this.addressPrefix = addressPrefix;
         this.allowBranchToBranchTraffic = allowBranchToBranchTraffic;
         this.azureFirewall = azureFirewall;

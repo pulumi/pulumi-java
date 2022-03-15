@@ -3,23 +3,23 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerDevice {
     private final @Nullable String containerPath;
     private final String hostPath;
     private final @Nullable String permissions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerDevice(
-        @OutputCustomType.Parameter("containerPath") @Nullable String containerPath,
-        @OutputCustomType.Parameter("hostPath") String hostPath,
-        @OutputCustomType.Parameter("permissions") @Nullable String permissions) {
+        @CustomType.Parameter("containerPath") @Nullable String containerPath,
+        @CustomType.Parameter("hostPath") String hostPath,
+        @CustomType.Parameter("permissions") @Nullable String permissions) {
         this.containerPath = containerPath;
         this.hostPath = hostPath;
         this.permissions = permissions;

@@ -5,7 +5,7 @@ package io.pulumi.aws.ecr;
 
 import io.pulumi.aws.ecr.inputs.ReplicationConfigurationReplicationConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
      * Replication configuration for a registry. See Replication Configuration.
      * 
      */
-    @InputImport(name="replicationConfiguration")
+    @Import(name="replicationConfiguration")
       private final @Nullable Output<ReplicationConfigurationReplicationConfigurationArgs> replicationConfiguration;
 
     public Output<ReplicationConfigurationReplicationConfigurationArgs> getReplicationConfiguration() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.opsworks;
 import io.pulumi.aws.opsworks.inputs.JavaAppLayerCloudwatchConfigurationArgs;
 import io.pulumi.aws.opsworks.inputs.JavaAppLayerEbsVolumeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * Keyword for the application container to use. Defaults to "tomcat".
      * 
      */
-    @InputImport(name="appServer")
+    @Import(name="appServer")
       private final @Nullable Output<String> appServer;
 
     public Output<String> getAppServer() {
@@ -35,7 +35,7 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * Version of the selected application container to use. Defaults to "7".
      * 
      */
-    @InputImport(name="appServerVersion")
+    @Import(name="appServerVersion")
       private final @Nullable Output<String> appServerVersion;
 
     public Output<String> getAppServerVersion() {
@@ -46,7 +46,7 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to automatically assign an elastic IP address to the layer's instances.
      * 
      */
-    @InputImport(name="autoAssignElasticIps")
+    @Import(name="autoAssignElasticIps")
       private final @Nullable Output<Boolean> autoAssignElasticIps;
 
     public Output<Boolean> getAutoAssignElasticIps() {
@@ -57,7 +57,7 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
      * 
      */
-    @InputImport(name="autoAssignPublicIps")
+    @Import(name="autoAssignPublicIps")
       private final @Nullable Output<Boolean> autoAssignPublicIps;
 
     public Output<Boolean> getAutoAssignPublicIps() {
@@ -68,28 +68,28 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to enable auto-healing for the layer.
      * 
      */
-    @InputImport(name="autoHealing")
+    @Import(name="autoHealing")
       private final @Nullable Output<Boolean> autoHealing;
 
     public Output<Boolean> getAutoHealing() {
         return this.autoHealing == null ? Output.empty() : this.autoHealing;
     }
 
-    @InputImport(name="cloudwatchConfiguration")
+    @Import(name="cloudwatchConfiguration")
       private final @Nullable Output<JavaAppLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
 
     public Output<JavaAppLayerCloudwatchConfigurationArgs> getCloudwatchConfiguration() {
         return this.cloudwatchConfiguration == null ? Output.empty() : this.cloudwatchConfiguration;
     }
 
-    @InputImport(name="customConfigureRecipes")
+    @Import(name="customConfigureRecipes")
       private final @Nullable Output<List<String>> customConfigureRecipes;
 
     public Output<List<String>> getCustomConfigureRecipes() {
         return this.customConfigureRecipes == null ? Output.empty() : this.customConfigureRecipes;
     }
 
-    @InputImport(name="customDeployRecipes")
+    @Import(name="customDeployRecipes")
       private final @Nullable Output<List<String>> customDeployRecipes;
 
     public Output<List<String>> getCustomDeployRecipes() {
@@ -100,7 +100,7 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of an IAM profile that will be used for the layer's instances.
      * 
      */
-    @InputImport(name="customInstanceProfileArn")
+    @Import(name="customInstanceProfileArn")
       private final @Nullable Output<String> customInstanceProfileArn;
 
     public Output<String> getCustomInstanceProfileArn() {
@@ -111,7 +111,7 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * Custom JSON attributes to apply to the layer.
      * 
      */
-    @InputImport(name="customJson")
+    @Import(name="customJson")
       private final @Nullable Output<String> customJson;
 
     public Output<String> getCustomJson() {
@@ -122,28 +122,28 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * Ids for a set of security groups to apply to the layer's instances.
      * 
      */
-    @InputImport(name="customSecurityGroupIds")
+    @Import(name="customSecurityGroupIds")
       private final @Nullable Output<List<String>> customSecurityGroupIds;
 
     public Output<List<String>> getCustomSecurityGroupIds() {
         return this.customSecurityGroupIds == null ? Output.empty() : this.customSecurityGroupIds;
     }
 
-    @InputImport(name="customSetupRecipes")
+    @Import(name="customSetupRecipes")
       private final @Nullable Output<List<String>> customSetupRecipes;
 
     public Output<List<String>> getCustomSetupRecipes() {
         return this.customSetupRecipes == null ? Output.empty() : this.customSetupRecipes;
     }
 
-    @InputImport(name="customShutdownRecipes")
+    @Import(name="customShutdownRecipes")
       private final @Nullable Output<List<String>> customShutdownRecipes;
 
     public Output<List<String>> getCustomShutdownRecipes() {
         return this.customShutdownRecipes == null ? Output.empty() : this.customShutdownRecipes;
     }
 
-    @InputImport(name="customUndeployRecipes")
+    @Import(name="customUndeployRecipes")
       private final @Nullable Output<List<String>> customUndeployRecipes;
 
     public Output<List<String>> getCustomUndeployRecipes() {
@@ -154,7 +154,7 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to enable Elastic Load Balancing connection draining.
      * 
      */
-    @InputImport(name="drainElbOnShutdown")
+    @Import(name="drainElbOnShutdown")
       private final @Nullable Output<Boolean> drainElbOnShutdown;
 
     public Output<Boolean> getDrainElbOnShutdown() {
@@ -165,7 +165,7 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * `ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
      * 
      */
-    @InputImport(name="ebsVolumes")
+    @Import(name="ebsVolumes")
       private final @Nullable Output<List<JavaAppLayerEbsVolumeArgs>> ebsVolumes;
 
     public Output<List<JavaAppLayerEbsVolumeArgs>> getEbsVolumes() {
@@ -176,7 +176,7 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an Elastic Load Balancer to attach to this layer
      * 
      */
-    @InputImport(name="elasticLoadBalancer")
+    @Import(name="elasticLoadBalancer")
       private final @Nullable Output<String> elasticLoadBalancer;
 
     public Output<String> getElasticLoadBalancer() {
@@ -187,7 +187,7 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to install OS and package updates on each instance when it boots.
      * 
      */
-    @InputImport(name="installUpdatesOnBoot")
+    @Import(name="installUpdatesOnBoot")
       private final @Nullable Output<Boolean> installUpdatesOnBoot;
 
     public Output<Boolean> getInstallUpdatesOnBoot() {
@@ -198,7 +198,7 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
      * 
      */
-    @InputImport(name="instanceShutdownTimeout")
+    @Import(name="instanceShutdownTimeout")
       private final @Nullable Output<Integer> instanceShutdownTimeout;
 
     public Output<Integer> getInstanceShutdownTimeout() {
@@ -209,7 +209,7 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * Options to set for the JVM.
      * 
      */
-    @InputImport(name="jvmOptions")
+    @Import(name="jvmOptions")
       private final @Nullable Output<String> jvmOptions;
 
     public Output<String> getJvmOptions() {
@@ -220,7 +220,7 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * Keyword for the type of JVM to use. Defaults to `openjdk`.
      * 
      */
-    @InputImport(name="jvmType")
+    @Import(name="jvmType")
       private final @Nullable Output<String> jvmType;
 
     public Output<String> getJvmType() {
@@ -231,7 +231,7 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * Version of JVM to use. Defaults to "7".
      * 
      */
-    @InputImport(name="jvmVersion")
+    @Import(name="jvmVersion")
       private final @Nullable Output<String> jvmVersion;
 
     public Output<String> getJvmVersion() {
@@ -242,7 +242,7 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * A human-readable name for the layer.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -253,7 +253,7 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * The id of the stack the layer will belong to.
      * 
      */
-    @InputImport(name="stackId", required=true)
+    @Import(name="stackId", required=true)
       private final Output<String> stackId;
 
     public Output<String> getStackId() {
@@ -264,7 +264,7 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * Names of a set of system packages to install on the layer's instances.
      * 
      */
-    @InputImport(name="systemPackages")
+    @Import(name="systemPackages")
       private final @Nullable Output<List<String>> systemPackages;
 
     public Output<List<String>> getSystemPackages() {
@@ -275,7 +275,7 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -286,7 +286,7 @@ public final class JavaAppLayerArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to use EBS-optimized instances.
      * 
      */
-    @InputImport(name="useEbsOptimizedInstances")
+    @Import(name="useEbsOptimizedInstances")
       private final @Nullable Output<Boolean> useEbsOptimizedInstances;
 
     public Output<Boolean> getUseEbsOptimizedInstances() {

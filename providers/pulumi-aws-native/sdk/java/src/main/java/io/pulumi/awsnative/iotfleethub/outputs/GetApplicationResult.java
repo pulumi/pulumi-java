@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotfleethub.outputs;
 
 import io.pulumi.awsnative.iotfleethub.outputs.ApplicationTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApplicationResult {
     /**
      * The ARN of the application.
@@ -75,20 +75,20 @@ public final class GetApplicationResult {
      */
     private final @Nullable List<ApplicationTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApplicationResult(
-        @OutputCustomType.Parameter("applicationArn") @Nullable String applicationArn,
-        @OutputCustomType.Parameter("applicationCreationDate") @Nullable Integer applicationCreationDate,
-        @OutputCustomType.Parameter("applicationDescription") @Nullable String applicationDescription,
-        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
-        @OutputCustomType.Parameter("applicationLastUpdateDate") @Nullable Integer applicationLastUpdateDate,
-        @OutputCustomType.Parameter("applicationName") @Nullable String applicationName,
-        @OutputCustomType.Parameter("applicationState") @Nullable String applicationState,
-        @OutputCustomType.Parameter("applicationUrl") @Nullable String applicationUrl,
-        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("ssoClientId") @Nullable String ssoClientId,
-        @OutputCustomType.Parameter("tags") @Nullable List<ApplicationTag> tags) {
+        @CustomType.Parameter("applicationArn") @Nullable String applicationArn,
+        @CustomType.Parameter("applicationCreationDate") @Nullable Integer applicationCreationDate,
+        @CustomType.Parameter("applicationDescription") @Nullable String applicationDescription,
+        @CustomType.Parameter("applicationId") @Nullable String applicationId,
+        @CustomType.Parameter("applicationLastUpdateDate") @Nullable Integer applicationLastUpdateDate,
+        @CustomType.Parameter("applicationName") @Nullable String applicationName,
+        @CustomType.Parameter("applicationState") @Nullable String applicationState,
+        @CustomType.Parameter("applicationUrl") @Nullable String applicationUrl,
+        @CustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("ssoClientId") @Nullable String ssoClientId,
+        @CustomType.Parameter("tags") @Nullable List<ApplicationTag> tags) {
         this.applicationArn = applicationArn;
         this.applicationCreationDate = applicationCreationDate;
         this.applicationDescription = applicationDescription;

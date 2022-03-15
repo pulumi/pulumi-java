@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.route53.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HostedZoneVPC {
     /**
      * The ID of an Amazon VPC.
@@ -20,10 +20,10 @@ public final class HostedZoneVPC {
      */
     private final String vPCRegion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HostedZoneVPC(
-        @OutputCustomType.Parameter("vPCId") String vPCId,
-        @OutputCustomType.Parameter("vPCRegion") String vPCRegion) {
+        @CustomType.Parameter("vPCId") String vPCId,
+        @CustomType.Parameter("vPCRegion") String vPCRegion) {
         this.vPCId = vPCId;
         this.vPCRegion = vPCRegion;
     }

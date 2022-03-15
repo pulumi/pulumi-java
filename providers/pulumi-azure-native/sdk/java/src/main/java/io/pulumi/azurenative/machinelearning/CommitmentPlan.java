@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearning.outputs.CommitmentPlanPropertiesRes
 import io.pulumi.azurenative.machinelearning.outputs.ResourceSkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * An entity tag used to enforce optimistic concurrency.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -48,7 +48,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -62,7 +62,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * The commitment plan properties.
      * 
      */
-    @OutputExport(name="properties", type=CommitmentPlanPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=CommitmentPlanPropertiesResponse.class, parameters={})
     private Output<CommitmentPlanPropertiesResponse> properties;
 
     /**
@@ -90,7 +90,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * The commitment plan SKU.
      * 
      */
-    @OutputExport(name="sku", type=ResourceSkuResponse.class, parameters={})
+    @Export(name="sku", type=ResourceSkuResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSkuResponse> sku;
 
     /**
@@ -104,7 +104,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * User-defined tags for the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -118,7 +118,7 @@ public class CommitmentPlan extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

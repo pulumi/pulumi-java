@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ExpressRouteLinkMacSecConfigResponse extends io.pulumi.resour
      * Keyvault Secret Identifier URL containing Mac security CAK key.
      * 
      */
-    @InputImport(name="cakSecretIdentifier")
+    @Import(name="cakSecretIdentifier")
       private final @Nullable String cakSecretIdentifier;
 
     public Optional<String> getCakSecretIdentifier() {
@@ -33,7 +33,7 @@ public final class ExpressRouteLinkMacSecConfigResponse extends io.pulumi.resour
      * Mac security cipher.
      * 
      */
-    @InputImport(name="cipher")
+    @Import(name="cipher")
       private final @Nullable String cipher;
 
     public Optional<String> getCipher() {
@@ -44,7 +44,7 @@ public final class ExpressRouteLinkMacSecConfigResponse extends io.pulumi.resour
      * Keyvault Secret Identifier URL containing Mac security CKN key.
      * 
      */
-    @InputImport(name="cknSecretIdentifier")
+    @Import(name="cknSecretIdentifier")
       private final @Nullable String cknSecretIdentifier;
 
     public Optional<String> getCknSecretIdentifier() {
@@ -55,7 +55,7 @@ public final class ExpressRouteLinkMacSecConfigResponse extends io.pulumi.resour
      * Sci mode enabled/disabled.
      * 
      */
-    @InputImport(name="sciState")
+    @Import(name="sciState")
       private final @Nullable String sciState;
 
     public Optional<String> getSciState() {

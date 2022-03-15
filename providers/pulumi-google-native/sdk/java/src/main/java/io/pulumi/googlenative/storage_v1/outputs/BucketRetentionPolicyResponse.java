@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketRetentionPolicyResponse {
     /**
      * Server-determined value that indicates the time from which policy was enforced and effective. This value is in RFC 3339 format.
@@ -26,11 +26,11 @@ public final class BucketRetentionPolicyResponse {
      */
     private final String retentionPeriod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketRetentionPolicyResponse(
-        @OutputCustomType.Parameter("effectiveTime") String effectiveTime,
-        @OutputCustomType.Parameter("isLocked") Boolean isLocked,
-        @OutputCustomType.Parameter("retentionPeriod") String retentionPeriod) {
+        @CustomType.Parameter("effectiveTime") String effectiveTime,
+        @CustomType.Parameter("isLocked") Boolean isLocked,
+        @CustomType.Parameter("retentionPeriod") String retentionPeriod) {
         this.effectiveTime = effectiveTime;
         this.isLocked = isLocked;
         this.retentionPeriod = retentionPeriod;

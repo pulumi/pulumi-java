@@ -4,7 +4,7 @@
 package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class EventDestinationKinesisDestinationArgs extends io.pulumi.reso
      * The ARN of the role that has permissions to access the Kinesis Stream
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -28,7 +28,7 @@ public final class EventDestinationKinesisDestinationArgs extends io.pulumi.reso
      * The ARN of the Kinesis Stream
      * 
      */
-    @InputImport(name="streamArn", required=true)
+    @Import(name="streamArn", required=true)
       private final Output<String> streamArn;
 
     public Output<String> getStreamArn() {

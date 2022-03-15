@@ -6,7 +6,7 @@ package io.pulumi.awsnative.macie;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.macie.CustomDataIdentifierArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public class CustomDataIdentifier extends io.pulumi.resources.CustomResource {
      * Custom data identifier ARN.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -37,7 +37,7 @@ public class CustomDataIdentifier extends io.pulumi.resources.CustomResource {
      * Description of custom data identifier.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -51,7 +51,7 @@ public class CustomDataIdentifier extends io.pulumi.resources.CustomResource {
      * Words to be ignored.
      * 
      */
-    @OutputExport(name="ignoreWords", type=List.class, parameters={String.class})
+    @Export(name="ignoreWords", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ignoreWords;
 
     /**
@@ -65,7 +65,7 @@ public class CustomDataIdentifier extends io.pulumi.resources.CustomResource {
      * Keywords to be matched against.
      * 
      */
-    @OutputExport(name="keywords", type=List.class, parameters={String.class})
+    @Export(name="keywords", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> keywords;
 
     /**
@@ -79,7 +79,7 @@ public class CustomDataIdentifier extends io.pulumi.resources.CustomResource {
      * Maximum match distance.
      * 
      */
-    @OutputExport(name="maximumMatchDistance", type=Integer.class, parameters={})
+    @Export(name="maximumMatchDistance", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maximumMatchDistance;
 
     /**
@@ -93,7 +93,7 @@ public class CustomDataIdentifier extends io.pulumi.resources.CustomResource {
      * Name of custom data identifier.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class CustomDataIdentifier extends io.pulumi.resources.CustomResource {
      * Regular expression for custom data identifier.
      * 
      */
-    @OutputExport(name="regex", type=String.class, parameters={})
+    @Export(name="regex", type=String.class, parameters={})
     private Output<String> regex;
 
     /**

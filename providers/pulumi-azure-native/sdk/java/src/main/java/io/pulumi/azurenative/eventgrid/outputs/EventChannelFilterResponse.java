@@ -22,7 +22,7 @@ import io.pulumi.azurenative.eventgrid.outputs.StringNotBeginsWithAdvancedFilter
 import io.pulumi.azurenative.eventgrid.outputs.StringNotContainsAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.outputs.StringNotEndsWithAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.outputs.StringNotInAdvancedFilterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.util.List;
@@ -30,7 +30,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventChannelFilterResponse {
     /**
      * An array of advanced filters that are used for filtering event channels.
@@ -43,10 +43,10 @@ public final class EventChannelFilterResponse {
      */
     private final @Nullable Boolean enableAdvancedFilteringOnArrays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventChannelFilterResponse(
-        @OutputCustomType.Parameter("advancedFilters") @Nullable List<Object> advancedFilters,
-        @OutputCustomType.Parameter("enableAdvancedFilteringOnArrays") @Nullable Boolean enableAdvancedFilteringOnArrays) {
+        @CustomType.Parameter("advancedFilters") @Nullable List<Object> advancedFilters,
+        @CustomType.Parameter("enableAdvancedFilteringOnArrays") @Nullable Boolean enableAdvancedFilteringOnArrays) {
         this.advancedFilters = advancedFilters;
         this.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays;
     }

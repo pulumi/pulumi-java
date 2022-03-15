@@ -18,7 +18,7 @@ import io.pulumi.azurenative.migrate.inputs.SqlServerResourceSettingsArgs;
 import io.pulumi.azurenative.migrate.inputs.VirtualMachineResourceSettingsArgs;
 import io.pulumi.azurenative.migrate.inputs.VirtualNetworkResourceSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
      * Gets or sets the move resource dependencies overrides.
      * 
      */
-    @InputImport(name="dependsOnOverrides")
+    @Import(name="dependsOnOverrides")
       private final @Nullable Output<List<MoveResourceDependencyOverrideArgs>> dependsOnOverrides;
 
     public Output<List<MoveResourceDependencyOverrideArgs>> getDependsOnOverrides() {
@@ -49,7 +49,7 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
      * Gets or sets the existing target ARM Id of the resource.
      * 
      */
-    @InputImport(name="existingTargetId")
+    @Import(name="existingTargetId")
       private final @Nullable Output<String> existingTargetId;
 
     public Output<String> getExistingTargetId() {
@@ -60,7 +60,7 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
      * Gets or sets the resource settings.
      * 
      */
-    @InputImport(name="resourceSettings")
+    @Import(name="resourceSettings")
       private final @Nullable Output<Object> resourceSettings;
 
     public Output<Object> getResourceSettings() {
@@ -71,7 +71,7 @@ public final class MoveResourcePropertiesArgs extends io.pulumi.resources.Resour
      * Gets or sets the Source ARM Id of the resource.
      * 
      */
-    @InputImport(name="sourceId", required=true)
+    @Import(name="sourceId", required=true)
       private final Output<String> sourceId;
 
     public Output<String> getSourceId() {

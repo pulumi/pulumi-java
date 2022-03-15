@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.eks.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
      * Name of Addon
      * 
      */
-    @InputImport(name="addonName", required=true)
+    @Import(name="addonName", required=true)
       private final String addonName;
 
     public String getAddonName() {
@@ -27,7 +27,7 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
      * Name of Cluster
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final String clusterName;
 
     public String getClusterName() {

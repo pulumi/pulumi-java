@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.InterconnectAttachmentArgs;
@@ -50,7 +50,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * PARTNER type this will Pre-Activate the interconnect attachment
      * 
      */
-    @OutputExport(name="adminEnabled", type=Boolean.class, parameters={})
+    @Export(name="adminEnabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> adminEnabled;
 
     /**
@@ -70,7 +70,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
      * 
      */
-    @OutputExport(name="bandwidth", type=String.class, parameters={})
+    @Export(name="bandwidth", type=String.class, parameters={})
     private Output<String> bandwidth;
 
     /**
@@ -95,7 +95,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * Google will randomly select an unused /29 from all of link-local space.
      * 
      */
-    @OutputExport(name="candidateSubnets", type=List.class, parameters={String.class})
+    @Export(name="candidateSubnets", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> candidateSubnets;
 
     /**
@@ -115,7 +115,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * IPv4 address + prefix length to be configured on Cloud Router Interface for this interconnect attachment.
      * 
      */
-    @OutputExport(name="cloudRouterIpAddress", type=String.class, parameters={})
+    @Export(name="cloudRouterIpAddress", type=String.class, parameters={})
     private Output<String> cloudRouterIpAddress;
 
     /**
@@ -129,7 +129,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -143,7 +143,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * IPv4 address + prefix length to be configured on the customer router subinterface for this interconnect attachment.
      * 
      */
-    @OutputExport(name="customerRouterIpAddress", type=String.class, parameters={})
+    @Export(name="customerRouterIpAddress", type=String.class, parameters={})
     private Output<String> customerRouterIpAddress;
 
     /**
@@ -157,7 +157,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * An optional description of this resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -176,7 +176,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
      * 
      */
-    @OutputExport(name="edgeAvailabilityDomain", type=String.class, parameters={})
+    @Export(name="edgeAvailabilityDomain", type=String.class, parameters={})
     private Output<String> edgeAvailabilityDomain;
 
     /**
@@ -207,7 +207,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * Possible values are `NONE` and `IPSEC`.
      * 
      */
-    @OutputExport(name="encryption", type=String.class, parameters={})
+    @Export(name="encryption", type=String.class, parameters={})
     private Output</* @Nullable */ String> encryption;
 
     /**
@@ -234,7 +234,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * issues.
      * 
      */
-    @OutputExport(name="googleReferenceId", type=String.class, parameters={})
+    @Export(name="googleReferenceId", type=String.class, parameters={})
     private Output<String> googleReferenceId;
 
     /**
@@ -251,7 +251,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * be set if type is PARTNER.
      * 
      */
-    @OutputExport(name="interconnect", type=String.class, parameters={})
+    @Export(name="interconnect", type=String.class, parameters={})
     private Output</* @Nullable */ String> interconnect;
 
     /**
@@ -282,7 +282,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * allocated from regional external IP address pool.
      * 
      */
-    @OutputExport(name="ipsecInternalAddresses", type=List.class, parameters={String.class})
+    @Export(name="ipsecInternalAddresses", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ipsecInternalAddresses;
 
     /**
@@ -312,7 +312,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
      * 
      */
-    @OutputExport(name="mtu", type=String.class, parameters={})
+    @Export(name="mtu", type=String.class, parameters={})
     private Output<String> mtu;
 
     /**
@@ -332,7 +332,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -352,7 +352,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * initiate provisioning with a selected partner. Of the form "XXXXX/region/domain"
      * 
      */
-    @OutputExport(name="pairingKey", type=String.class, parameters={})
+    @Export(name="pairingKey", type=String.class, parameters={})
     private Output<String> pairingKey;
 
     /**
@@ -368,7 +368,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * layer 3 Partner if they configured BGP on behalf of the customer.
      * 
      */
-    @OutputExport(name="partnerAsn", type=String.class, parameters={})
+    @Export(name="partnerAsn", type=String.class, parameters={})
     private Output<String> partnerAsn;
 
     /**
@@ -384,7 +384,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * to is of type DEDICATED.
      * 
      */
-    @OutputExport(name="privateInterconnectInfos", type=List.class, parameters={InterconnectAttachmentPrivateInterconnectInfo.class})
+    @Export(name="privateInterconnectInfos", type=List.class, parameters={InterconnectAttachmentPrivateInterconnectInfo.class})
     private Output<List<InterconnectAttachmentPrivateInterconnectInfo>> privateInterconnectInfos;
 
     /**
@@ -400,7 +400,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -415,7 +415,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * Region where the regional interconnect attachment resides.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -432,7 +432,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * Cloud Router is configured.
      * 
      */
-    @OutputExport(name="router", type=String.class, parameters={})
+    @Export(name="router", type=String.class, parameters={})
     private Output<String> router;
 
     /**
@@ -449,7 +449,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -463,7 +463,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * [Output Only] The current state of this attachment's functionality.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -479,7 +479,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -496,7 +496,7 @@ public class InterconnectAttachment extends io.pulumi.resources.CustomResource {
      * using PARTNER type this will be managed upstream.
      * 
      */
-    @OutputExport(name="vlanTag8021q", type=Integer.class, parameters={})
+    @Export(name="vlanTag8021q", type=Integer.class, parameters={})
     private Output<Integer> vlanTag8021q;
 
     /**

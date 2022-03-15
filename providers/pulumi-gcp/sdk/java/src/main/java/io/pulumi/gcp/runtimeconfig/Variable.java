@@ -4,7 +4,7 @@
 package io.pulumi.gcp.runtimeconfig;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.runtimeconfig.VariableArgs;
@@ -35,7 +35,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * names can be hierarchical using slashes (e.g. "prod-variables/hostname").
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -51,7 +51,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * variable.
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -67,7 +67,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -85,7 +85,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * is specified, it must be base64 encoded and less than 4096 bytes in length.
      * 
      */
-    @OutputExport(name="text", type=String.class, parameters={})
+    @Export(name="text", type=String.class, parameters={})
     private Output</* @Nullable */ String> text;
 
     /**
@@ -104,7 +104,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * Example: "2016-10-09T12:33:37.578138407Z".
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -116,7 +116,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
     public Output<String> getUpdateTime() {
         return this.updateTime;
     }
-    @OutputExport(name="value", type=String.class, parameters={})
+    @Export(name="value", type=String.class, parameters={})
     private Output</* @Nullable */ String> value;
 
     public Output</* @Nullable */ String> getValue() {

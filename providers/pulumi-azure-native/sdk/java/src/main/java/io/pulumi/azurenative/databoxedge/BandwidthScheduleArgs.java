@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.databoxedge.enums.DayOfWeek;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * The days of the week when this schedule is applicable.
      * 
      */
-    @InputImport(name="days", required=true)
+    @Import(name="days", required=true)
       private final Output<List<Either<String,DayOfWeek>>> days;
 
     public Output<List<Either<String,DayOfWeek>>> getDays() {
@@ -33,7 +33,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * The device name.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -44,7 +44,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * The bandwidth schedule name which needs to be added/updated.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * The bandwidth rate in Mbps.
      * 
      */
-    @InputImport(name="rateInMbps", required=true)
+    @Import(name="rateInMbps", required=true)
       private final Output<Integer> rateInMbps;
 
     public Output<Integer> getRateInMbps() {
@@ -66,7 +66,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -77,7 +77,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * The start time of the schedule in UTC.
      * 
      */
-    @InputImport(name="start", required=true)
+    @Import(name="start", required=true)
       private final Output<String> start;
 
     public Output<String> getStart() {
@@ -88,7 +88,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * The stop time of the schedule in UTC.
      * 
      */
-    @InputImport(name="stop", required=true)
+    @Import(name="stop", required=true)
       private final Output<String> stop;
 
     public Output<String> getStop() {

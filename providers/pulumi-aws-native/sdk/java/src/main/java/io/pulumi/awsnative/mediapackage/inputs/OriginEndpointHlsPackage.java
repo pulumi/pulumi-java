@@ -9,7 +9,7 @@ import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsPackageAdTriggers
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsPackagePlaylistType;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointHlsEncryption;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointStreamSelection;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class OriginEndpointHlsPackage extends io.pulumi.resources.InvokeAr
      * This setting controls how ad markers are included in the packaged OriginEndpoint. "NONE" will omit all SCTE-35 ad markers from the output. "PASSTHROUGH" causes the manifest to contain a copy of the SCTE-35 ad markers (comments) taken directly from the input HTTP Live Streaming (HLS) manifest. "SCTE35_ENHANCED" generates ad markers and blackout tags based on SCTE-35 messages in the input source. "DATERANGE" inserts EXT-X-DATERANGE tags to signal ad and program transition events in HLS and CMAF manifests. For this option, you must set a programDateTimeIntervalSeconds value that is greater than 0.
      * 
      */
-    @InputImport(name="adMarkers")
+    @Import(name="adMarkers")
       private final @Nullable OriginEndpointHlsPackageAdMarkers adMarkers;
 
     public Optional<OriginEndpointHlsPackageAdMarkers> getAdMarkers() {
@@ -41,21 +41,21 @@ public final class OriginEndpointHlsPackage extends io.pulumi.resources.InvokeAr
      * A list of SCTE-35 message types that are treated as ad markers in the output.  If empty, no ad markers are output.  Specify multiple items to create ad markers for all of the included message types.
      * 
      */
-    @InputImport(name="adTriggers")
+    @Import(name="adTriggers")
       private final @Nullable List<OriginEndpointHlsPackageAdTriggersItem> adTriggers;
 
     public List<OriginEndpointHlsPackageAdTriggersItem> getAdTriggers() {
         return this.adTriggers == null ? List.of() : this.adTriggers;
     }
 
-    @InputImport(name="adsOnDeliveryRestrictions")
+    @Import(name="adsOnDeliveryRestrictions")
       private final @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions;
 
     public Optional<OriginEndpointAdsOnDeliveryRestrictions> getAdsOnDeliveryRestrictions() {
         return this.adsOnDeliveryRestrictions == null ? Optional.empty() : Optional.ofNullable(this.adsOnDeliveryRestrictions);
     }
 
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable OriginEndpointHlsEncryption encryption;
 
     public Optional<OriginEndpointHlsEncryption> getEncryption() {
@@ -66,7 +66,7 @@ public final class OriginEndpointHlsPackage extends io.pulumi.resources.InvokeAr
      * When enabled, an I-Frame only stream will be included in the output.
      * 
      */
-    @InputImport(name="includeIframeOnlyStream")
+    @Import(name="includeIframeOnlyStream")
       private final @Nullable Boolean includeIframeOnlyStream;
 
     public Optional<Boolean> getIncludeIframeOnlyStream() {
@@ -77,7 +77,7 @@ public final class OriginEndpointHlsPackage extends io.pulumi.resources.InvokeAr
      * The HTTP Live Streaming (HLS) playlist type. When either "EVENT" or "VOD" is specified, a corresponding EXT-X-PLAYLIST-TYPE entry will be included in the media playlist.
      * 
      */
-    @InputImport(name="playlistType")
+    @Import(name="playlistType")
       private final @Nullable OriginEndpointHlsPackagePlaylistType playlistType;
 
     public Optional<OriginEndpointHlsPackagePlaylistType> getPlaylistType() {
@@ -88,7 +88,7 @@ public final class OriginEndpointHlsPackage extends io.pulumi.resources.InvokeAr
      * Time window (in seconds) contained in each parent manifest.
      * 
      */
-    @InputImport(name="playlistWindowSeconds")
+    @Import(name="playlistWindowSeconds")
       private final @Nullable Integer playlistWindowSeconds;
 
     public Optional<Integer> getPlaylistWindowSeconds() {
@@ -99,7 +99,7 @@ public final class OriginEndpointHlsPackage extends io.pulumi.resources.InvokeAr
      * The interval (in seconds) between each EXT-X-PROGRAM-DATE-TIME tag inserted into manifests. Additionally, when an interval is specified ID3Timed Metadata messages will be generated every 5 seconds using the ingest time of the content. If the interval is not specified, or set to 0, then no EXT-X-PROGRAM-DATE-TIME tags will be inserted into manifests and no ID3Timed Metadata messages will be generated. Note that irrespective of this parameter, if any ID3 Timed Metadata is found in HTTP Live Streaming (HLS) input, it will be passed through to HLS output.
      * 
      */
-    @InputImport(name="programDateTimeIntervalSeconds")
+    @Import(name="programDateTimeIntervalSeconds")
       private final @Nullable Integer programDateTimeIntervalSeconds;
 
     public Optional<Integer> getProgramDateTimeIntervalSeconds() {
@@ -110,14 +110,14 @@ public final class OriginEndpointHlsPackage extends io.pulumi.resources.InvokeAr
      * Duration (in seconds) of each fragment. Actual fragments will be rounded to the nearest multiple of the source fragment duration.
      * 
      */
-    @InputImport(name="segmentDurationSeconds")
+    @Import(name="segmentDurationSeconds")
       private final @Nullable Integer segmentDurationSeconds;
 
     public Optional<Integer> getSegmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Optional.empty() : Optional.ofNullable(this.segmentDurationSeconds);
     }
 
-    @InputImport(name="streamSelection")
+    @Import(name="streamSelection")
       private final @Nullable OriginEndpointStreamSelection streamSelection;
 
     public Optional<OriginEndpointStreamSelection> getStreamSelection() {
@@ -128,7 +128,7 @@ public final class OriginEndpointHlsPackage extends io.pulumi.resources.InvokeAr
      * When enabled, audio streams will be placed in rendition groups in the output.
      * 
      */
-    @InputImport(name="useAudioRenditionGroup")
+    @Import(name="useAudioRenditionGroup")
       private final @Nullable Boolean useAudioRenditionGroup;
 
     public Optional<Boolean> getUseAudioRenditionGroup() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayClientAuthConfigurationResponse {
     /**
      * Verify client certificate issuer name on the application gateway.
@@ -17,8 +17,8 @@ public final class ApplicationGatewayClientAuthConfigurationResponse {
      */
     private final @Nullable Boolean verifyClientCertIssuerDN;
 
-    @OutputCustomType.Constructor
-    private ApplicationGatewayClientAuthConfigurationResponse(@OutputCustomType.Parameter("verifyClientCertIssuerDN") @Nullable Boolean verifyClientCertIssuerDN) {
+    @CustomType.Constructor
+    private ApplicationGatewayClientAuthConfigurationResponse(@CustomType.Parameter("verifyClientCertIssuerDN") @Nullable Boolean verifyClientCertIssuerDN) {
         this.verifyClientCertIssuerDN = verifyClientCertIssuerDN;
     }
 

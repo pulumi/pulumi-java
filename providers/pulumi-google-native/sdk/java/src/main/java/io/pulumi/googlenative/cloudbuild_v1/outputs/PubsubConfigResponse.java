@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PubsubConfigResponse {
     /**
      * Service account that will make the push request.
@@ -30,12 +30,12 @@ public final class PubsubConfigResponse {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PubsubConfigResponse(
-        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("subscription") String subscription,
-        @OutputCustomType.Parameter("topic") String topic) {
+        @CustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("subscription") String subscription,
+        @CustomType.Parameter("topic") String topic) {
         this.serviceAccountEmail = serviceAccountEmail;
         this.state = state;
         this.subscription = subscription;

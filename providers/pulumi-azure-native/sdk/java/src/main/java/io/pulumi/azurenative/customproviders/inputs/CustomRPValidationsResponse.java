@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customproviders.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class CustomRPValidationsResponse extends io.pulumi.resources.Invok
      * A link to the validation specification. The specification must be hosted on raw.githubusercontent.com.
      * 
      */
-    @InputImport(name="specification", required=true)
+    @Import(name="specification", required=true)
       private final String specification;
 
     public String getSpecification() {
@@ -33,7 +33,7 @@ public final class CustomRPValidationsResponse extends io.pulumi.resources.Invok
      * The type of validation to run against a matching request.
      * 
      */
-    @InputImport(name="validationType")
+    @Import(name="validationType")
       private final @Nullable String validationType;
 
     public Optional<String> getValidationType() {

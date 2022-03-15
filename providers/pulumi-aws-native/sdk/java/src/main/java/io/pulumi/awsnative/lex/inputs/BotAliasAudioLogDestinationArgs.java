@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotAliasS3BucketLogDestinationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class BotAliasAudioLogDestinationArgs extends io.pulumi.resources.R
 
     public static final BotAliasAudioLogDestinationArgs Empty = new BotAliasAudioLogDestinationArgs();
 
-    @InputImport(name="s3Bucket")
+    @Import(name="s3Bucket")
       private final @Nullable Output<BotAliasS3BucketLogDestinationArgs> s3Bucket;
 
     public Output<BotAliasS3BucketLogDestinationArgs> getS3Bucket() {

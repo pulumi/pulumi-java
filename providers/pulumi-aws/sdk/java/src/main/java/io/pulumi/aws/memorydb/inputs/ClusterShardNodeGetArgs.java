@@ -5,7 +5,7 @@ package io.pulumi.aws.memorydb.inputs;
 
 import io.pulumi.aws.memorydb.inputs.ClusterShardNodeEndpointGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterShardNodeGetArgs extends io.pulumi.resources.ResourceA
      * The Availability Zone in which the node resides.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -31,14 +31,14 @@ public final class ClusterShardNodeGetArgs extends io.pulumi.resources.ResourceA
      * The date and time when the node was created. Example: `2022-01-01T21:00:00Z`.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
         return this.createTime == null ? Output.empty() : this.createTime;
     }
 
-    @InputImport(name="endpoints")
+    @Import(name="endpoints")
       private final @Nullable Output<List<ClusterShardNodeEndpointGetArgs>> endpoints;
 
     public Output<List<ClusterShardNodeEndpointGetArgs>> getEndpoints() {
@@ -50,7 +50,7 @@ public final class ClusterShardNodeGetArgs extends io.pulumi.resources.ResourceA
      * * `endpoint`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

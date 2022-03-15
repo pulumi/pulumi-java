@@ -8,7 +8,7 @@ import io.pulumi.awsnative.redshift.enums.EventSubscriptionSeverity;
 import io.pulumi.awsnative.redshift.enums.EventSubscriptionSourceType;
 import io.pulumi.awsnative.redshift.enums.EventSubscriptionStatus;
 import io.pulumi.awsnative.redshift.outputs.EventSubscriptionTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEventSubscriptionResult {
     /**
      * The name of the Amazon Redshift event notification subscription.
@@ -84,21 +84,21 @@ public final class GetEventSubscriptionResult {
      */
     private final @Nullable List<EventSubscriptionTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEventSubscriptionResult(
-        @OutputCustomType.Parameter("custSubscriptionId") @Nullable String custSubscriptionId,
-        @OutputCustomType.Parameter("customerAwsId") @Nullable String customerAwsId,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("eventCategories") @Nullable List<EventSubscriptionEventCategoriesItem> eventCategories,
-        @OutputCustomType.Parameter("eventCategoriesList") @Nullable List<String> eventCategoriesList,
-        @OutputCustomType.Parameter("severity") @Nullable EventSubscriptionSeverity severity,
-        @OutputCustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn,
-        @OutputCustomType.Parameter("sourceIds") @Nullable List<String> sourceIds,
-        @OutputCustomType.Parameter("sourceIdsList") @Nullable List<String> sourceIdsList,
-        @OutputCustomType.Parameter("sourceType") @Nullable EventSubscriptionSourceType sourceType,
-        @OutputCustomType.Parameter("status") @Nullable EventSubscriptionStatus status,
-        @OutputCustomType.Parameter("subscriptionCreationTime") @Nullable String subscriptionCreationTime,
-        @OutputCustomType.Parameter("tags") @Nullable List<EventSubscriptionTag> tags) {
+        @CustomType.Parameter("custSubscriptionId") @Nullable String custSubscriptionId,
+        @CustomType.Parameter("customerAwsId") @Nullable String customerAwsId,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("eventCategories") @Nullable List<EventSubscriptionEventCategoriesItem> eventCategories,
+        @CustomType.Parameter("eventCategoriesList") @Nullable List<String> eventCategoriesList,
+        @CustomType.Parameter("severity") @Nullable EventSubscriptionSeverity severity,
+        @CustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn,
+        @CustomType.Parameter("sourceIds") @Nullable List<String> sourceIds,
+        @CustomType.Parameter("sourceIdsList") @Nullable List<String> sourceIdsList,
+        @CustomType.Parameter("sourceType") @Nullable EventSubscriptionSourceType sourceType,
+        @CustomType.Parameter("status") @Nullable EventSubscriptionStatus status,
+        @CustomType.Parameter("subscriptionCreationTime") @Nullable String subscriptionCreationTime,
+        @CustomType.Parameter("tags") @Nullable List<EventSubscriptionTag> tags) {
         this.custSubscriptionId = custSubscriptionId;
         this.customerAwsId = customerAwsId;
         this.enabled = enabled;

@@ -9,7 +9,7 @@ import io.pulumi.aws.elastictranscoder.inputs.PipelineNotificationsArgs;
 import io.pulumi.aws.elastictranscoder.inputs.PipelineThumbnailConfigArgs;
 import io.pulumi.aws.elastictranscoder.inputs.PipelineThumbnailConfigPermissionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The AWS Key Management Service (AWS KMS) key that you want to use with this pipeline.
      * 
      */
-    @InputImport(name="awsKmsKeyArn")
+    @Import(name="awsKmsKeyArn")
       private final @Nullable Output<String> awsKmsKeyArn;
 
     public Output<String> getAwsKmsKeyArn() {
@@ -35,7 +35,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The ContentConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save transcoded files and playlists. (documented below)
      * 
      */
-    @InputImport(name="contentConfig")
+    @Import(name="contentConfig")
       private final @Nullable Output<PipelineContentConfigArgs> contentConfig;
 
     public Output<PipelineContentConfigArgs> getContentConfig() {
@@ -46,7 +46,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The permissions for the `content_config` object. (documented below)
      * 
      */
-    @InputImport(name="contentConfigPermissions")
+    @Import(name="contentConfigPermissions")
       private final @Nullable Output<List<PipelineContentConfigPermissionArgs>> contentConfigPermissions;
 
     public Output<List<PipelineContentConfigPermissionArgs>> getContentConfigPermissions() {
@@ -57,7 +57,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon S3 bucket in which you saved the media files that you want to transcode and the graphics that you want to use as watermarks.
      * 
      */
-    @InputImport(name="inputBucket", required=true)
+    @Import(name="inputBucket", required=true)
       private final Output<String> inputBucket;
 
     public Output<String> getInputBucket() {
@@ -68,7 +68,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the pipeline. Maximum 40 characters
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -79,7 +79,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Simple Notification Service (Amazon SNS) topic that you want to notify to report job status. (documented below)
      * 
      */
-    @InputImport(name="notifications")
+    @Import(name="notifications")
       private final @Nullable Output<PipelineNotificationsArgs> notifications;
 
     public Output<PipelineNotificationsArgs> getNotifications() {
@@ -90,7 +90,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.
      * 
      */
-    @InputImport(name="outputBucket")
+    @Import(name="outputBucket")
       private final @Nullable Output<String> outputBucket;
 
     public Output<String> getOutputBucket() {
@@ -101,7 +101,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {
@@ -112,7 +112,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The ThumbnailConfig object specifies information about the Amazon S3 bucket in which you want Elastic Transcoder to save thumbnail files. (documented below)
      * 
      */
-    @InputImport(name="thumbnailConfig")
+    @Import(name="thumbnailConfig")
       private final @Nullable Output<PipelineThumbnailConfigArgs> thumbnailConfig;
 
     public Output<PipelineThumbnailConfigArgs> getThumbnailConfig() {
@@ -123,7 +123,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The permissions for the `thumbnail_config` object. (documented below)
      * 
      */
-    @InputImport(name="thumbnailConfigPermissions")
+    @Import(name="thumbnailConfigPermissions")
       private final @Nullable Output<List<PipelineThumbnailConfigPermissionArgs>> thumbnailConfigPermissions;
 
     public Output<List<PipelineThumbnailConfigPermissionArgs>> getThumbnailConfigPermissions() {

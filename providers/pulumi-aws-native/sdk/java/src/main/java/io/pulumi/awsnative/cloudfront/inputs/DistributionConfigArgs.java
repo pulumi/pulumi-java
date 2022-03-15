@@ -14,7 +14,7 @@ import io.pulumi.awsnative.cloudfront.inputs.DistributionOriginGroupsArgs;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionRestrictionsArgs;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionViewerCertificateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,133 +26,133 @@ public final class DistributionConfigArgs extends io.pulumi.resources.ResourceAr
 
     public static final DistributionConfigArgs Empty = new DistributionConfigArgs();
 
-    @InputImport(name="aliases")
+    @Import(name="aliases")
       private final @Nullable Output<List<String>> aliases;
 
     public Output<List<String>> getAliases() {
         return this.aliases == null ? Output.empty() : this.aliases;
     }
 
-    @InputImport(name="cNAMEs")
+    @Import(name="cNAMEs")
       private final @Nullable Output<List<String>> cNAMEs;
 
     public Output<List<String>> getCNAMEs() {
         return this.cNAMEs == null ? Output.empty() : this.cNAMEs;
     }
 
-    @InputImport(name="cacheBehaviors")
+    @Import(name="cacheBehaviors")
       private final @Nullable Output<List<DistributionCacheBehaviorArgs>> cacheBehaviors;
 
     public Output<List<DistributionCacheBehaviorArgs>> getCacheBehaviors() {
         return this.cacheBehaviors == null ? Output.empty() : this.cacheBehaviors;
     }
 
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
         return this.comment == null ? Output.empty() : this.comment;
     }
 
-    @InputImport(name="customErrorResponses")
+    @Import(name="customErrorResponses")
       private final @Nullable Output<List<DistributionCustomErrorResponseArgs>> customErrorResponses;
 
     public Output<List<DistributionCustomErrorResponseArgs>> getCustomErrorResponses() {
         return this.customErrorResponses == null ? Output.empty() : this.customErrorResponses;
     }
 
-    @InputImport(name="customOrigin")
+    @Import(name="customOrigin")
       private final @Nullable Output<DistributionLegacyCustomOriginArgs> customOrigin;
 
     public Output<DistributionLegacyCustomOriginArgs> getCustomOrigin() {
         return this.customOrigin == null ? Output.empty() : this.customOrigin;
     }
 
-    @InputImport(name="defaultCacheBehavior")
+    @Import(name="defaultCacheBehavior")
       private final @Nullable Output<DistributionDefaultCacheBehaviorArgs> defaultCacheBehavior;
 
     public Output<DistributionDefaultCacheBehaviorArgs> getDefaultCacheBehavior() {
         return this.defaultCacheBehavior == null ? Output.empty() : this.defaultCacheBehavior;
     }
 
-    @InputImport(name="defaultRootObject")
+    @Import(name="defaultRootObject")
       private final @Nullable Output<String> defaultRootObject;
 
     public Output<String> getDefaultRootObject() {
         return this.defaultRootObject == null ? Output.empty() : this.defaultRootObject;
     }
 
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
         return this.enabled;
     }
 
-    @InputImport(name="httpVersion")
+    @Import(name="httpVersion")
       private final @Nullable Output<String> httpVersion;
 
     public Output<String> getHttpVersion() {
         return this.httpVersion == null ? Output.empty() : this.httpVersion;
     }
 
-    @InputImport(name="iPV6Enabled")
+    @Import(name="iPV6Enabled")
       private final @Nullable Output<Boolean> iPV6Enabled;
 
     public Output<Boolean> getIPV6Enabled() {
         return this.iPV6Enabled == null ? Output.empty() : this.iPV6Enabled;
     }
 
-    @InputImport(name="logging")
+    @Import(name="logging")
       private final @Nullable Output<DistributionLoggingArgs> logging;
 
     public Output<DistributionLoggingArgs> getLogging() {
         return this.logging == null ? Output.empty() : this.logging;
     }
 
-    @InputImport(name="originGroups")
+    @Import(name="originGroups")
       private final @Nullable Output<DistributionOriginGroupsArgs> originGroups;
 
     public Output<DistributionOriginGroupsArgs> getOriginGroups() {
         return this.originGroups == null ? Output.empty() : this.originGroups;
     }
 
-    @InputImport(name="origins")
+    @Import(name="origins")
       private final @Nullable Output<List<DistributionOriginArgs>> origins;
 
     public Output<List<DistributionOriginArgs>> getOrigins() {
         return this.origins == null ? Output.empty() : this.origins;
     }
 
-    @InputImport(name="priceClass")
+    @Import(name="priceClass")
       private final @Nullable Output<String> priceClass;
 
     public Output<String> getPriceClass() {
         return this.priceClass == null ? Output.empty() : this.priceClass;
     }
 
-    @InputImport(name="restrictions")
+    @Import(name="restrictions")
       private final @Nullable Output<DistributionRestrictionsArgs> restrictions;
 
     public Output<DistributionRestrictionsArgs> getRestrictions() {
         return this.restrictions == null ? Output.empty() : this.restrictions;
     }
 
-    @InputImport(name="s3Origin")
+    @Import(name="s3Origin")
       private final @Nullable Output<DistributionLegacyS3OriginArgs> s3Origin;
 
     public Output<DistributionLegacyS3OriginArgs> getS3Origin() {
         return this.s3Origin == null ? Output.empty() : this.s3Origin;
     }
 
-    @InputImport(name="viewerCertificate")
+    @Import(name="viewerCertificate")
       private final @Nullable Output<DistributionViewerCertificateArgs> viewerCertificate;
 
     public Output<DistributionViewerCertificateArgs> getViewerCertificate() {
         return this.viewerCertificate == null ? Output.empty() : this.viewerCertificate;
     }
 
-    @InputImport(name="webACLId")
+    @Import(name="webACLId")
       private final @Nullable Output<String> webACLId;
 
     public Output<String> getWebACLId() {

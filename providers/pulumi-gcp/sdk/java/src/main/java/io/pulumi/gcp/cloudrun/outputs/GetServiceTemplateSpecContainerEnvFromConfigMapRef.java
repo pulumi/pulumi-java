@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceTemplateSpecContainerEnvFromConfigMapRef {
     private final List<GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> localObjectReferences;
     private final Boolean optional;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceTemplateSpecContainerEnvFromConfigMapRef(
-        @OutputCustomType.Parameter("localObjectReferences") List<GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> localObjectReferences,
-        @OutputCustomType.Parameter("optional") Boolean optional) {
+        @CustomType.Parameter("localObjectReferences") List<GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> localObjectReferences,
+        @CustomType.Parameter("optional") Boolean optional) {
         this.localObjectReferences = localObjectReferences;
         this.optional = optional;
     }

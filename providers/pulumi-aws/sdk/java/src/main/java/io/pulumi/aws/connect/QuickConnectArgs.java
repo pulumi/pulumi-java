@@ -5,7 +5,7 @@ package io.pulumi.aws.connect;
 
 import io.pulumi.aws.connect.inputs.QuickConnectQuickConnectConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the description of the Quick Connect.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the identifier of the hosting Amazon Connect Instance.
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -42,7 +42,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the name of the Quick Connect.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * A block that defines the configuration information for the Quick Connect: `quick_connect_type` and one of `phone_config`, `queue_config`, `user_config` . The Quick Connect Config block is documented below.
      * 
      */
-    @InputImport(name="quickConnectConfig", required=true)
+    @Import(name="quickConnectConfig", required=true)
       private final Output<QuickConnectQuickConnectConfigArgs> quickConnectConfig;
 
     public Output<QuickConnectQuickConnectConfigArgs> getQuickConnectConfig() {
@@ -64,7 +64,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * Tags to apply to the Quick Connect. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -75,7 +75,7 @@ public final class QuickConnectArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

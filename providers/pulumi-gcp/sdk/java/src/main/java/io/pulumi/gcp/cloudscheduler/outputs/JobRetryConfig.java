@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.cloudscheduler.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobRetryConfig {
     /**
      * The maximum amount of time to wait before retrying a job after it fails.
@@ -47,13 +47,13 @@ public final class JobRetryConfig {
      */
     private final @Nullable Integer retryCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobRetryConfig(
-        @OutputCustomType.Parameter("maxBackoffDuration") @Nullable String maxBackoffDuration,
-        @OutputCustomType.Parameter("maxDoublings") @Nullable Integer maxDoublings,
-        @OutputCustomType.Parameter("maxRetryDuration") @Nullable String maxRetryDuration,
-        @OutputCustomType.Parameter("minBackoffDuration") @Nullable String minBackoffDuration,
-        @OutputCustomType.Parameter("retryCount") @Nullable Integer retryCount) {
+        @CustomType.Parameter("maxBackoffDuration") @Nullable String maxBackoffDuration,
+        @CustomType.Parameter("maxDoublings") @Nullable Integer maxDoublings,
+        @CustomType.Parameter("maxRetryDuration") @Nullable String maxRetryDuration,
+        @CustomType.Parameter("minBackoffDuration") @Nullable String minBackoffDuration,
+        @CustomType.Parameter("retryCount") @Nullable Integer retryCount) {
         this.maxBackoffDuration = maxBackoffDuration;
         this.maxDoublings = maxDoublings;
         this.maxRetryDuration = maxRetryDuration;

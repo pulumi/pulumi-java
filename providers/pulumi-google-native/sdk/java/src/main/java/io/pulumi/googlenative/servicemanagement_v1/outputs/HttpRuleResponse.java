@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.CustomHttpPatternResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpRuleResponse {
     /**
      * Additional HTTP bindings for the selector. Nested bindings must not contain an `additional_bindings` field themselves (that is, the nesting may only be one level deep).
@@ -62,18 +62,18 @@ public final class HttpRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpRuleResponse(
-        @OutputCustomType.Parameter("additionalBindings") List<HttpRuleResponse> additionalBindings,
-        @OutputCustomType.Parameter("body") String body,
-        @OutputCustomType.Parameter("custom") CustomHttpPatternResponse custom,
-        @OutputCustomType.Parameter("delete") String delete,
-        @OutputCustomType.Parameter("get") String get,
-        @OutputCustomType.Parameter("patch") String patch,
-        @OutputCustomType.Parameter("post") String post,
-        @OutputCustomType.Parameter("put") String put,
-        @OutputCustomType.Parameter("responseBody") String responseBody,
-        @OutputCustomType.Parameter("selector") String selector) {
+        @CustomType.Parameter("additionalBindings") List<HttpRuleResponse> additionalBindings,
+        @CustomType.Parameter("body") String body,
+        @CustomType.Parameter("custom") CustomHttpPatternResponse custom,
+        @CustomType.Parameter("delete") String delete,
+        @CustomType.Parameter("get") String get,
+        @CustomType.Parameter("patch") String patch,
+        @CustomType.Parameter("post") String post,
+        @CustomType.Parameter("put") String put,
+        @CustomType.Parameter("responseBody") String responseBody,
+        @CustomType.Parameter("selector") String selector) {
         this.additionalBindings = additionalBindings;
         this.body = body;
         this.custom = custom;

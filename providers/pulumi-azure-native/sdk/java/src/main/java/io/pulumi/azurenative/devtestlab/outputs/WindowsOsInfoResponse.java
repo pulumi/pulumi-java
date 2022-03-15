@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WindowsOsInfoResponse {
     /**
      * The state of the Windows OS (i.e. NonSysprepped, SysprepRequested, SysprepApplied).
@@ -17,8 +17,8 @@ public final class WindowsOsInfoResponse {
      */
     private final @Nullable String windowsOsState;
 
-    @OutputCustomType.Constructor
-    private WindowsOsInfoResponse(@OutputCustomType.Parameter("windowsOsState") @Nullable String windowsOsState) {
+    @CustomType.Constructor
+    private WindowsOsInfoResponse(@CustomType.Parameter("windowsOsState") @Nullable String windowsOsState) {
         this.windowsOsState = windowsOsState;
     }
 

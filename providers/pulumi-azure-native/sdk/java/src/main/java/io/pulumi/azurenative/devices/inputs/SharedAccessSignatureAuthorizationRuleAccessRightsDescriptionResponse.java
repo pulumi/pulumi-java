@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
      * Name of the key.
      * 
      */
-    @InputImport(name="keyName", required=true)
+    @Import(name="keyName", required=true)
       private final String keyName;
 
     public String getKeyName() {
@@ -33,7 +33,7 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
      * Primary SAS key value.
      * 
      */
-    @InputImport(name="primaryKey")
+    @Import(name="primaryKey")
       private final @Nullable String primaryKey;
 
     public Optional<String> getPrimaryKey() {
@@ -44,7 +44,7 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
      * Rights that this key has.
      * 
      */
-    @InputImport(name="rights", required=true)
+    @Import(name="rights", required=true)
       private final String rights;
 
     public String getRights() {
@@ -55,7 +55,7 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
      * Secondary SAS key value.
      * 
      */
-    @InputImport(name="secondaryKey")
+    @Import(name="secondaryKey")
       private final @Nullable String secondaryKey;
 
     public Optional<String> getSecondaryKey() {

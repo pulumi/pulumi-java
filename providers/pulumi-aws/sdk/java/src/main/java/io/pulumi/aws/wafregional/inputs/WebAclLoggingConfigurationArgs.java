@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional.inputs;
 
 import io.pulumi.aws.wafregional.inputs.WebAclLoggingConfigurationRedactedFieldsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WebAclLoggingConfigurationArgs extends io.pulumi.resources.Re
      * Amazon Resource Name (ARN) of Kinesis Firehose Delivery Stream
      * 
      */
-    @InputImport(name="logDestination", required=true)
+    @Import(name="logDestination", required=true)
       private final Output<String> logDestination;
 
     public Output<String> getLogDestination() {
@@ -30,7 +30,7 @@ public final class WebAclLoggingConfigurationArgs extends io.pulumi.resources.Re
      * Configuration block containing parts of the request that you want redacted from the logs. Detailed below.
      * 
      */
-    @InputImport(name="redactedFields")
+    @Import(name="redactedFields")
       private final @Nullable Output<WebAclLoggingConfigurationRedactedFieldsArgs> redactedFields;
 
     public Output<WebAclLoggingConfigurationRedactedFieldsArgs> getRedactedFields() {

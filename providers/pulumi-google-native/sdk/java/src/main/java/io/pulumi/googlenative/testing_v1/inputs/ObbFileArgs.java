@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ObbFileArgs extends io.pulumi.resources.ResourceArgs {
      * Opaque Binary Blob (OBB) file(s) to install on the device.
      * 
      */
-    @InputImport(name="obb", required=true)
+    @Import(name="obb", required=true)
       private final Output<FileReferenceArgs> obb;
 
     public Output<FileReferenceArgs> getObb() {
@@ -33,7 +33,7 @@ public final class ObbFileArgs extends io.pulumi.resources.ResourceArgs {
      * OBB file name which must conform to the format as specified by Android e.g. [main|patch].0300110.com.example.android.obb which will be installed into \/Android/obb/\/ on the device.
      * 
      */
-    @InputImport(name="obbFileName", required=true)
+    @Import(name="obbFileName", required=true)
       private final Output<String> obbFileName;
 
     public Output<String> getObbFileName() {

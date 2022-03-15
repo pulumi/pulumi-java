@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.ProjectProvisioningParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,21 +20,21 @@ public final class ServiceCatalogProvisioningDetailsPropertiesArgs extends io.pu
 
     public static final ServiceCatalogProvisioningDetailsPropertiesArgs Empty = new ServiceCatalogProvisioningDetailsPropertiesArgs();
 
-    @InputImport(name="pathId")
+    @Import(name="pathId")
       private final @Nullable Output<String> pathId;
 
     public Output<String> getPathId() {
         return this.pathId == null ? Output.empty() : this.pathId;
     }
 
-    @InputImport(name="productId", required=true)
+    @Import(name="productId", required=true)
       private final Output<String> productId;
 
     public Output<String> getProductId() {
         return this.productId;
     }
 
-    @InputImport(name="provisioningArtifactId")
+    @Import(name="provisioningArtifactId")
       private final @Nullable Output<String> provisioningArtifactId;
 
     public Output<String> getProvisioningArtifactId() {
@@ -45,7 +45,7 @@ public final class ServiceCatalogProvisioningDetailsPropertiesArgs extends io.pu
      * Parameters specified by the administrator that are required for provisioning the product.
      * 
      */
-    @InputImport(name="provisioningParameters")
+    @Import(name="provisioningParameters")
       private final @Nullable Output<List<ProjectProvisioningParameterArgs>> provisioningParameters;
 
     public Output<List<ProjectProvisioningParameterArgs>> getProvisioningParameters() {

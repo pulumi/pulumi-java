@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OperationBatchStatusResponseItemResponse {
     /**
      * status of the long running operation for an environment
@@ -20,10 +20,10 @@ public final class OperationBatchStatusResponseItemResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OperationBatchStatusResponseItemResponse(
-        @OutputCustomType.Parameter("operationUrl") String operationUrl,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("operationUrl") String operationUrl,
+        @CustomType.Parameter("status") String status) {
         this.operationUrl = operationUrl;
         this.status = status;
     }

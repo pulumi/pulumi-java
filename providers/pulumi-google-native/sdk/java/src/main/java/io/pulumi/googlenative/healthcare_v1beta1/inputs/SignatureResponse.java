@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.ImageResponse;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. An image of the user's signature.
      * 
      */
-    @InputImport(name="image", required=true)
+    @Import(name="image", required=true)
       private final ImageResponse image;
 
     public ImageResponse getImage() {
@@ -33,7 +33,7 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Metadata associated with the user's signature. For example, the user's name or the user's title.
      * 
      */
-    @InputImport(name="metadata", required=true)
+    @Import(name="metadata", required=true)
       private final Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
@@ -44,7 +44,7 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Timestamp of the signature.
      * 
      */
-    @InputImport(name="signatureTime", required=true)
+    @Import(name="signatureTime", required=true)
       private final String signatureTime;
 
     public String getSignatureTime() {
@@ -55,7 +55,7 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
      * User's UUID provided by the client.
      * 
      */
-    @InputImport(name="userId", required=true)
+    @Import(name="userId", required=true)
       private final String userId;
 
     public String getUserId() {

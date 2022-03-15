@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class RecoveryPlanProtectedItemResponse extends io.pulumi.resources
      * The ARM Id of the recovery plan protected item.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -33,7 +33,7 @@ public final class RecoveryPlanProtectedItemResponse extends io.pulumi.resources
      * The virtual machine Id.
      * 
      */
-    @InputImport(name="virtualMachineId")
+    @Import(name="virtualMachineId")
       private final @Nullable String virtualMachineId;
 
     public Optional<String> getVirtualMachineId() {

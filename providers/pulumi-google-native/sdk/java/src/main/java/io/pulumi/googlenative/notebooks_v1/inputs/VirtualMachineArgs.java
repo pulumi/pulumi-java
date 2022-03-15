@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.notebooks_v1.inputs.VirtualMachineConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
      * Virtual Machine configuration settings.
      * 
      */
-    @InputImport(name="virtualMachineConfig")
+    @Import(name="virtualMachineConfig")
       private final @Nullable Output<VirtualMachineConfigArgs> virtualMachineConfig;
 
     public Output<VirtualMachineConfigArgs> getVirtualMachineConfig() {

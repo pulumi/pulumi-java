@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.outputs;
 
 import io.pulumi.azurenative.servicefabric.outputs.ArmServiceTypeHealthPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ArmApplicationHealthPolicyResponse {
     /**
      * Indicates whether warnings are treated with the same severity as errors.
@@ -39,12 +39,12 @@ public final class ArmApplicationHealthPolicyResponse {
      */
     private final @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ArmApplicationHealthPolicyResponse(
-        @OutputCustomType.Parameter("considerWarningAsError") @Nullable Boolean considerWarningAsError,
-        @OutputCustomType.Parameter("defaultServiceTypeHealthPolicy") @Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy,
-        @OutputCustomType.Parameter("maxPercentUnhealthyDeployedApplications") @Nullable Integer maxPercentUnhealthyDeployedApplications,
-        @OutputCustomType.Parameter("serviceTypeHealthPolicyMap") @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap) {
+        @CustomType.Parameter("considerWarningAsError") @Nullable Boolean considerWarningAsError,
+        @CustomType.Parameter("defaultServiceTypeHealthPolicy") @Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy,
+        @CustomType.Parameter("maxPercentUnhealthyDeployedApplications") @Nullable Integer maxPercentUnhealthyDeployedApplications,
+        @CustomType.Parameter("serviceTypeHealthPolicyMap") @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap) {
         this.considerWarningAsError = considerWarningAsError;
         this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
         this.maxPercentUnhealthyDeployedApplications = maxPercentUnhealthyDeployedApplications;

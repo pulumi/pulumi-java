@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UpdateHistoryPropertyResponse {
     /**
      * The immutability period for the blobs in the container since the policy creation, in days.
@@ -41,14 +41,14 @@ public final class UpdateHistoryPropertyResponse {
      */
     private final String upn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UpdateHistoryPropertyResponse(
-        @OutputCustomType.Parameter("immutabilityPeriodSinceCreationInDays") Integer immutabilityPeriodSinceCreationInDays,
-        @OutputCustomType.Parameter("objectIdentifier") String objectIdentifier,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("timestamp") String timestamp,
-        @OutputCustomType.Parameter("update") String update,
-        @OutputCustomType.Parameter("upn") String upn) {
+        @CustomType.Parameter("immutabilityPeriodSinceCreationInDays") Integer immutabilityPeriodSinceCreationInDays,
+        @CustomType.Parameter("objectIdentifier") String objectIdentifier,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("timestamp") String timestamp,
+        @CustomType.Parameter("update") String update,
+        @CustomType.Parameter("upn") String upn) {
         this.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;
         this.objectIdentifier = objectIdentifier;
         this.tenantId = tenantId;

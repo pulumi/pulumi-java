@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
      * The number of bad records encountered. Note that if the job has failed because of more bad records encountered than the maximum allowed in the load job configuration, then this number can be less than the total number of bad records present in the input data.
      * 
      */
-    @InputImport(name="badRecords", required=true)
+    @Import(name="badRecords", required=true)
       private final String badRecords;
 
     public String getBadRecords() {
@@ -27,7 +27,7 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
      * Number of bytes of source data in a load job.
      * 
      */
-    @InputImport(name="inputFileBytes", required=true)
+    @Import(name="inputFileBytes", required=true)
       private final String inputFileBytes;
 
     public String getInputFileBytes() {
@@ -38,7 +38,7 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
      * Number of source files in a load job.
      * 
      */
-    @InputImport(name="inputFiles", required=true)
+    @Import(name="inputFiles", required=true)
       private final String inputFiles;
 
     public String getInputFiles() {
@@ -49,7 +49,7 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
      * Size of the loaded data in bytes. Note that while a load job is in the running state, this value may change.
      * 
      */
-    @InputImport(name="outputBytes", required=true)
+    @Import(name="outputBytes", required=true)
       private final String outputBytes;
 
     public String getOutputBytes() {
@@ -60,7 +60,7 @@ public final class JobStatistics3Response extends io.pulumi.resources.InvokeArgs
      * Number of rows imported in a load job. Note that while an import job is in the running state, this value may change.
      * 
      */
-    @InputImport(name="outputRows", required=true)
+    @Import(name="outputRows", required=true)
       private final String outputRows;
 
     public String getOutputRows() {

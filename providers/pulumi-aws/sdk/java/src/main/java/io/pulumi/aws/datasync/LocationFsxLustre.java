@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.datasync.LocationFsxLustreArgs;
 import io.pulumi.aws.datasync.inputs.LocationFsxLustreState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class LocationFsxLustre extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the DataSync Location.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class LocationFsxLustre extends io.pulumi.resources.CustomResource {
      * The time that the FSx for Lustre location was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -62,7 +62,7 @@ public class LocationFsxLustre extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the FSx for Lustre file system.
      * 
      */
-    @OutputExport(name="fsxFilesystemArn", type=String.class, parameters={})
+    @Export(name="fsxFilesystemArn", type=String.class, parameters={})
     private Output<String> fsxFilesystemArn;
 
     /**
@@ -76,7 +76,7 @@ public class LocationFsxLustre extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Names (ARNs) of the security groups that are to use to configure the FSx for Lustre file system.
      * 
      */
-    @OutputExport(name="securityGroupArns", type=List.class, parameters={String.class})
+    @Export(name="securityGroupArns", type=List.class, parameters={String.class})
     private Output<List<String>> securityGroupArns;
 
     /**
@@ -90,7 +90,7 @@ public class LocationFsxLustre extends io.pulumi.resources.CustomResource {
      * Subdirectory to perform actions as source or destination.
      * 
      */
-    @OutputExport(name="subdirectory", type=String.class, parameters={})
+    @Export(name="subdirectory", type=String.class, parameters={})
     private Output<String> subdirectory;
 
     /**
@@ -104,7 +104,7 @@ public class LocationFsxLustre extends io.pulumi.resources.CustomResource {
      * Key-value pairs of resource tags to assign to the DataSync Location. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -118,7 +118,7 @@ public class LocationFsxLustre extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -132,7 +132,7 @@ public class LocationFsxLustre extends io.pulumi.resources.CustomResource {
      * The URL of the FSx for Lustre location that was described.
      * 
      */
-    @OutputExport(name="uri", type=String.class, parameters={})
+    @Export(name="uri", type=String.class, parameters={})
     private Output<String> uri;
 
     /**

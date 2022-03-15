@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch {
     /**
      * The end of the range (exclusive).
@@ -20,10 +20,10 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch {
      */
     private final Integer rangeStart;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch(
-        @OutputCustomType.Parameter("rangeEnd") Integer rangeEnd,
-        @OutputCustomType.Parameter("rangeStart") Integer rangeStart) {
+        @CustomType.Parameter("rangeEnd") Integer rangeEnd,
+        @CustomType.Parameter("rangeStart") Integer rangeStart) {
         this.rangeEnd = rangeEnd;
         this.rangeStart = rangeStart;
     }

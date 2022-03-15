@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageImageResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
      * Url where the media is stored.
      * 
      */
-    @InputImport(name="contentUrl", required=true)
+    @Import(name="contentUrl", required=true)
       private final String contentUrl;
 
     public String getContentUrl() {
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
      * Optional. Description of media card.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -43,7 +43,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
      * Optional. Icon to display above media content.
      * 
      */
-    @InputImport(name="icon", required=true)
+    @Import(name="icon", required=true)
       private final GoogleCloudDialogflowV2IntentMessageImageResponse icon;
 
     public GoogleCloudDialogflowV2IntentMessageImageResponse getIcon() {
@@ -54,7 +54,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
      * Optional. Image to display above media content.
      * 
      */
-    @InputImport(name="largeImage", required=true)
+    @Import(name="largeImage", required=true)
       private final GoogleCloudDialogflowV2IntentMessageImageResponse largeImage;
 
     public GoogleCloudDialogflowV2IntentMessageImageResponse getLargeImage() {
@@ -65,7 +65,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
      * Name of media card.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

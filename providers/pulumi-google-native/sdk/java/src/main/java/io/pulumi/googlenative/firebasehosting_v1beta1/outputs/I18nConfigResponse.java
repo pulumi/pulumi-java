@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class I18nConfigResponse {
     /**
      * The user-supplied path where country and language specific content will be looked for within the public directory.
@@ -15,8 +15,8 @@ public final class I18nConfigResponse {
      */
     private final String root;
 
-    @OutputCustomType.Constructor
-    private I18nConfigResponse(@OutputCustomType.Parameter("root") String root) {
+    @CustomType.Constructor
+    private I18nConfigResponse(@CustomType.Parameter("root") String root) {
         this.root = root;
     }
 

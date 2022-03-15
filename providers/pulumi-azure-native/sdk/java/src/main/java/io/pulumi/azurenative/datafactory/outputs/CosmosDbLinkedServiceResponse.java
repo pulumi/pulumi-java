@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CosmosDbLinkedServiceResponse {
     /**
      * The endpoint of the Azure CosmosDB account. Type: string (or Expression with resultType string)
@@ -107,25 +107,25 @@ public final class CosmosDbLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CosmosDbLinkedServiceResponse(
-        @OutputCustomType.Parameter("accountEndpoint") @Nullable Object accountEndpoint,
-        @OutputCustomType.Parameter("accountKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accountKey,
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("azureCloudType") @Nullable Object azureCloudType,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("connectionMode") @Nullable String connectionMode,
-        @OutputCustomType.Parameter("connectionString") @Nullable Object connectionString,
-        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
-        @OutputCustomType.Parameter("database") @Nullable Object database,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("servicePrincipalCredential") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential,
-        @OutputCustomType.Parameter("servicePrincipalCredentialType") @Nullable String servicePrincipalCredentialType,
-        @OutputCustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
-        @OutputCustomType.Parameter("tenant") @Nullable Object tenant,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accountEndpoint") @Nullable Object accountEndpoint,
+        @CustomType.Parameter("accountKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> accountKey,
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("azureCloudType") @Nullable Object azureCloudType,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("connectionMode") @Nullable String connectionMode,
+        @CustomType.Parameter("connectionString") @Nullable Object connectionString,
+        @CustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @CustomType.Parameter("database") @Nullable Object database,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("servicePrincipalCredential") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalCredential,
+        @CustomType.Parameter("servicePrincipalCredentialType") @Nullable String servicePrincipalCredentialType,
+        @CustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
+        @CustomType.Parameter("tenant") @Nullable Object tenant,
+        @CustomType.Parameter("type") String type) {
         this.accountEndpoint = accountEndpoint;
         this.accountKey = accountKey;
         this.annotations = annotations;

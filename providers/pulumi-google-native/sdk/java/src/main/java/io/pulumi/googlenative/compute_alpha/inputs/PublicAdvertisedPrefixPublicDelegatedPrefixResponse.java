@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
      * The IP address range of the public delegated prefix
      * 
      */
-    @InputImport(name="ipRange", required=true)
+    @Import(name="ipRange", required=true)
       private final String ipRange;
 
     public String getIpRange() {
@@ -31,7 +31,7 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
      * The name of the public delegated prefix
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -42,7 +42,7 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
      * The project number of the public delegated prefix
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final String project;
 
     public String getProject() {
@@ -53,7 +53,7 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
      * The region of the public delegated prefix if it is regional. If absent, the prefix is global.
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final String region;
 
     public String getRegion() {
@@ -64,7 +64,7 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse extends i
      * The status of the public delegated prefix. Possible values are: INITIALIZING: The public delegated prefix is being initialized and addresses cannot be created yet. ANNOUNCED: The public delegated prefix is active.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

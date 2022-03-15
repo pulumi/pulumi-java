@@ -5,7 +5,7 @@ package io.pulumi.azurenative.kubernetes.inputs;
 
 import io.pulumi.azurenative.kubernetes.enums.AuthenticationMethod;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ListConnectedClusterUserCredentialsArgs extends io.pulumi.res
      * The mode of client authentication.
      * 
      */
-    @InputImport(name="authenticationMethod", required=true)
+    @Import(name="authenticationMethod", required=true)
       private final Either<String,AuthenticationMethod> authenticationMethod;
 
     public Either<String,AuthenticationMethod> getAuthenticationMethod() {
@@ -30,7 +30,7 @@ public final class ListConnectedClusterUserCredentialsArgs extends io.pulumi.res
      * Boolean value to indicate whether the request is for client side proxy or not
      * 
      */
-    @InputImport(name="clientProxy", required=true)
+    @Import(name="clientProxy", required=true)
       private final Boolean clientProxy;
 
     public Boolean getClientProxy() {
@@ -41,7 +41,7 @@ public final class ListConnectedClusterUserCredentialsArgs extends io.pulumi.res
      * The name of the Kubernetes cluster on which get is called.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final String clusterName;
 
     public String getClusterName() {
@@ -52,7 +52,7 @@ public final class ListConnectedClusterUserCredentialsArgs extends io.pulumi.res
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

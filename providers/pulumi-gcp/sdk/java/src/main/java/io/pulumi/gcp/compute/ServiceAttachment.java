@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ServiceAttachmentArgs;
@@ -54,7 +54,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * An array of the consumer forwarding rules connected to this service attachment.
      * 
      */
-    @OutputExport(name="connectedEndpoints", type=List.class, parameters={ServiceAttachmentConnectedEndpoint.class})
+    @Export(name="connectedEndpoints", type=List.class, parameters={ServiceAttachmentConnectedEndpoint.class})
     private Output<List<ServiceAttachmentConnectedEndpoint>> connectedEndpoints;
 
     /**
@@ -69,7 +69,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * values include "ACCEPT_AUTOMATIC", "ACCEPT_MANUAL".
      * 
      */
-    @OutputExport(name="connectionPreference", type=String.class, parameters={})
+    @Export(name="connectionPreference", type=String.class, parameters={})
     private Output<String> connectionPreference;
 
     /**
@@ -86,7 +86,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="consumerAcceptLists", type=List.class, parameters={ServiceAttachmentConsumerAcceptList.class})
+    @Export(name="consumerAcceptLists", type=List.class, parameters={ServiceAttachmentConsumerAcceptList.class})
     private Output</* @Nullable */ List<ServiceAttachmentConsumerAcceptList>> consumerAcceptLists;
 
     /**
@@ -103,7 +103,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * attachment.
      * 
      */
-    @OutputExport(name="consumerRejectLists", type=List.class, parameters={String.class})
+    @Export(name="consumerRejectLists", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> consumerRejectLists;
 
     /**
@@ -118,7 +118,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * An optional description of this resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -134,7 +134,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * destination servers.
      * 
      */
-    @OutputExport(name="enableProxyProtocol", type=Boolean.class, parameters={})
+    @Export(name="enableProxyProtocol", type=Boolean.class, parameters={})
     private Output<Boolean> enableProxyProtocol;
 
     /**
@@ -150,7 +150,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * Fingerprint of this resource. This field is used internally during updates of this resource.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -169,7 +169,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -188,7 +188,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * An array of subnets that is provided for NAT in this service attachment.
      * 
      */
-    @OutputExport(name="natSubnets", type=List.class, parameters={String.class})
+    @Export(name="natSubnets", type=List.class, parameters={String.class})
     private Output<List<String>> natSubnets;
 
     /**
@@ -203,7 +203,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -218,7 +218,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * URL of the region where the resource resides.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -232,7 +232,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -247,7 +247,7 @@ public class ServiceAttachment extends io.pulumi.resources.CustomResource {
      * this service attachment.
      * 
      */
-    @OutputExport(name="targetService", type=String.class, parameters={})
+    @Export(name="targetService", type=String.class, parameters={})
     private Output<String> targetService;
 
     /**

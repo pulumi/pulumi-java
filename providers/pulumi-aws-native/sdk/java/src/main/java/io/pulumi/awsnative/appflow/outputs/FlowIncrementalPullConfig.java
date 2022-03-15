@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowIncrementalPullConfig {
     private final @Nullable String datetimeTypeFieldName;
 
-    @OutputCustomType.Constructor
-    private FlowIncrementalPullConfig(@OutputCustomType.Parameter("datetimeTypeFieldName") @Nullable String datetimeTypeFieldName) {
+    @CustomType.Constructor
+    private FlowIncrementalPullConfig(@CustomType.Parameter("datetimeTypeFieldName") @Nullable String datetimeTypeFieldName) {
         this.datetimeTypeFieldName = datetimeTypeFieldName;
     }
 

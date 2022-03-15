@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class LaunchTemplateCpuOptionsArgs extends io.pulumi.resources.Reso
      * The number of CPU cores for the instance.
      * 
      */
-    @InputImport(name="coreCount")
+    @Import(name="coreCount")
       private final @Nullable Output<Integer> coreCount;
 
     public Output<Integer> getCoreCount() {
@@ -30,7 +30,7 @@ public final class LaunchTemplateCpuOptionsArgs extends io.pulumi.resources.Reso
      * Otherwise, specify the default value of 2.
      * 
      */
-    @InputImport(name="threadsPerCore")
+    @Import(name="threadsPerCore")
       private final @Nullable Output<Integer> threadsPerCore;
 
     public Output<Integer> getThreadsPerCore() {

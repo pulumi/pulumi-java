@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkmanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * The ID of the device
      * 
      */
-    @InputImport(name="deviceId", required=true)
+    @Import(name="deviceId", required=true)
       private final Output<String> deviceId;
 
     public Output<String> getDeviceId() {
@@ -28,7 +28,7 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * The ID of the global network.
      * 
      */
-    @InputImport(name="globalNetworkId", required=true)
+    @Import(name="globalNetworkId", required=true)
       private final Output<String> globalNetworkId;
 
     public Output<String> getGlobalNetworkId() {
@@ -39,7 +39,7 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * The ID of the link
      * 
      */
-    @InputImport(name="linkId", required=true)
+    @Import(name="linkId", required=true)
       private final Output<String> linkId;
 
     public Output<String> getLinkId() {

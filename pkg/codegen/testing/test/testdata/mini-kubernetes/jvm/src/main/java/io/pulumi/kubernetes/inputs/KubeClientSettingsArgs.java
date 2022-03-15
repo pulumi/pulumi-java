@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.Utilities;
 import java.lang.Double;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class KubeClientSettingsArgs extends io.pulumi.resources.ResourceAr
      * Maximum burst for throttle. Default value is 10.
      * 
      */
-    @InputImport(name="burst")
+    @Import(name="burst")
       private final @Nullable Output<Integer> burst;
 
     public Output<Integer> getBurst() {
@@ -35,7 +35,7 @@ public final class KubeClientSettingsArgs extends io.pulumi.resources.ResourceAr
      * Maximum queries per second (QPS) to the API server from this client. Default value is 5.
      * 
      */
-    @InputImport(name="qps")
+    @Import(name="qps")
       private final @Nullable Output<Double> qps;
 
     public Output<Double> getQps() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.web.enums.PublicCertificateLocation;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
      * Public Certificate byte array
      * 
      */
-    @InputImport(name="blob")
+    @Import(name="blob")
       private final @Nullable Output<String> blob;
 
     public Output<String> getBlob() {
@@ -30,7 +30,7 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -41,7 +41,7 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
      * Name of the app.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
      * Public Certificate Location
      * 
      */
-    @InputImport(name="publicCertificateLocation")
+    @Import(name="publicCertificateLocation")
       private final @Nullable Output<PublicCertificateLocation> publicCertificateLocation;
 
     public Output<PublicCertificateLocation> getPublicCertificateLocation() {
@@ -63,7 +63,7 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
      * Public certificate name.
      * 
      */
-    @InputImport(name="publicCertificateName")
+    @Import(name="publicCertificateName")
       private final @Nullable Output<String> publicCertificateName;
 
     public Output<String> getPublicCertificateName() {
@@ -74,7 +74,7 @@ public final class WebAppPublicCertificateArgs extends io.pulumi.resources.Resou
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

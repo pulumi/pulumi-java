@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.sagemaker.ImageVersionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,37 +18,37 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:sagemaker:ImageVersion")
 public class ImageVersion extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="baseImage", type=String.class, parameters={})
+    @Export(name="baseImage", type=String.class, parameters={})
     private Output<String> baseImage;
 
     public Output<String> getBaseImage() {
         return this.baseImage;
     }
-    @OutputExport(name="containerImage", type=String.class, parameters={})
+    @Export(name="containerImage", type=String.class, parameters={})
     private Output<String> containerImage;
 
     public Output<String> getContainerImage() {
         return this.containerImage;
     }
-    @OutputExport(name="imageArn", type=String.class, parameters={})
+    @Export(name="imageArn", type=String.class, parameters={})
     private Output<String> imageArn;
 
     public Output<String> getImageArn() {
         return this.imageArn;
     }
-    @OutputExport(name="imageName", type=String.class, parameters={})
+    @Export(name="imageName", type=String.class, parameters={})
     private Output<String> imageName;
 
     public Output<String> getImageName() {
         return this.imageName;
     }
-    @OutputExport(name="imageVersionArn", type=String.class, parameters={})
+    @Export(name="imageVersionArn", type=String.class, parameters={})
     private Output<String> imageVersionArn;
 
     public Output<String> getImageVersionArn() {
         return this.imageVersionArn;
     }
-    @OutputExport(name="version", type=Integer.class, parameters={})
+    @Export(name="version", type=Integer.class, parameters={})
     private Output<Integer> version;
 
     public Output<Integer> getVersion() {

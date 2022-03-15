@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs exte
 
     public static final ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs Empty = new ServiceTaskSpecContainerSpecPrivilegesCredentialSpecArgs();
 
-    @InputImport(name="file")
+    @Import(name="file")
       private final @Nullable Output<String> file;
 
     public Output<String> getFile() {
         return this.file == null ? Output.empty() : this.file;
     }
 
-    @InputImport(name="registry")
+    @Import(name="registry")
       private final @Nullable Output<String> registry;
 
     public Output<String> getRegistry() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterSpecEgressPolicy;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterSpecIngressPolicy;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterSpecVpcAccessibleServices;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServicePerimetersServicePerimeterSpec {
     /**
      * A list of AccessLevel resource names that allow resources within
@@ -72,14 +72,14 @@ public final class ServicePerimetersServicePerimeterSpec {
      */
     private final @Nullable ServicePerimetersServicePerimeterSpecVpcAccessibleServices vpcAccessibleServices;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicePerimetersServicePerimeterSpec(
-        @OutputCustomType.Parameter("accessLevels") @Nullable List<String> accessLevels,
-        @OutputCustomType.Parameter("egressPolicies") @Nullable List<ServicePerimetersServicePerimeterSpecEgressPolicy> egressPolicies,
-        @OutputCustomType.Parameter("ingressPolicies") @Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicy> ingressPolicies,
-        @OutputCustomType.Parameter("resources") @Nullable List<String> resources,
-        @OutputCustomType.Parameter("restrictedServices") @Nullable List<String> restrictedServices,
-        @OutputCustomType.Parameter("vpcAccessibleServices") @Nullable ServicePerimetersServicePerimeterSpecVpcAccessibleServices vpcAccessibleServices) {
+        @CustomType.Parameter("accessLevels") @Nullable List<String> accessLevels,
+        @CustomType.Parameter("egressPolicies") @Nullable List<ServicePerimetersServicePerimeterSpecEgressPolicy> egressPolicies,
+        @CustomType.Parameter("ingressPolicies") @Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicy> ingressPolicies,
+        @CustomType.Parameter("resources") @Nullable List<String> resources,
+        @CustomType.Parameter("restrictedServices") @Nullable List<String> restrictedServices,
+        @CustomType.Parameter("vpcAccessibleServices") @Nullable ServicePerimetersServicePerimeterSpecVpcAccessibleServices vpcAccessibleServices) {
         this.accessLevels = accessLevels;
         this.egressPolicies = egressPolicies;
         this.ingressPolicies = ingressPolicies;

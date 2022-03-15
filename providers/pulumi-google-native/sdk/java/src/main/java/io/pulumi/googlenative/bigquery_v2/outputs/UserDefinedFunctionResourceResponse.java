@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserDefinedFunctionResourceResponse {
     /**
      * [Pick one] An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI for a file containing the same code.
@@ -20,10 +20,10 @@ public final class UserDefinedFunctionResourceResponse {
      */
     private final String resourceUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserDefinedFunctionResourceResponse(
-        @OutputCustomType.Parameter("inlineCode") String inlineCode,
-        @OutputCustomType.Parameter("resourceUri") String resourceUri) {
+        @CustomType.Parameter("inlineCode") String inlineCode,
+        @CustomType.Parameter("resourceUri") String resourceUri) {
         this.inlineCode = inlineCode;
         this.resourceUri = resourceUri;
     }

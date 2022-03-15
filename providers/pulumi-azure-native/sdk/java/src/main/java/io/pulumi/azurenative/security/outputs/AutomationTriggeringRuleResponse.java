@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutomationTriggeringRuleResponse {
     /**
      * The expected value.
@@ -32,12 +32,12 @@ public final class AutomationTriggeringRuleResponse {
      */
     private final @Nullable String propertyType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutomationTriggeringRuleResponse(
-        @OutputCustomType.Parameter("expectedValue") @Nullable String expectedValue,
-        @OutputCustomType.Parameter("operator") @Nullable String operator,
-        @OutputCustomType.Parameter("propertyJPath") @Nullable String propertyJPath,
-        @OutputCustomType.Parameter("propertyType") @Nullable String propertyType) {
+        @CustomType.Parameter("expectedValue") @Nullable String expectedValue,
+        @CustomType.Parameter("operator") @Nullable String operator,
+        @CustomType.Parameter("propertyJPath") @Nullable String propertyJPath,
+        @CustomType.Parameter("propertyType") @Nullable String propertyType) {
         this.expectedValue = expectedValue;
         this.operator = operator;
         this.propertyJPath = propertyJPath;

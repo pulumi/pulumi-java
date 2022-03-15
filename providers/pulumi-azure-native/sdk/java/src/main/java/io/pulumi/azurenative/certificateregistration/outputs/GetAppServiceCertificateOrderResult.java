@@ -6,7 +6,7 @@ package io.pulumi.azurenative.certificateregistration.outputs;
 import io.pulumi.azurenative.certificateregistration.outputs.AppServiceCertificateResponse;
 import io.pulumi.azurenative.certificateregistration.outputs.CertificateDetailsResponse;
 import io.pulumi.azurenative.certificateregistration.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAppServiceCertificateOrderResult {
     /**
      * Reasons why App Service Certificate is not renewable at the current moment.
@@ -149,34 +149,34 @@ public final class GetAppServiceCertificateOrderResult {
      */
     private final @Nullable Integer validityInYears;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAppServiceCertificateOrderResult(
-        @OutputCustomType.Parameter("appServiceCertificateNotRenewableReasons") List<String> appServiceCertificateNotRenewableReasons,
-        @OutputCustomType.Parameter("autoRenew") @Nullable Boolean autoRenew,
-        @OutputCustomType.Parameter("certificates") @Nullable Map<String,AppServiceCertificateResponse> certificates,
-        @OutputCustomType.Parameter("csr") @Nullable String csr,
-        @OutputCustomType.Parameter("distinguishedName") @Nullable String distinguishedName,
-        @OutputCustomType.Parameter("domainVerificationToken") String domainVerificationToken,
-        @OutputCustomType.Parameter("expirationTime") String expirationTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("intermediate") CertificateDetailsResponse intermediate,
-        @OutputCustomType.Parameter("isPrivateKeyExternal") Boolean isPrivateKeyExternal,
-        @OutputCustomType.Parameter("keySize") @Nullable Integer keySize,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("lastCertificateIssuanceTime") String lastCertificateIssuanceTime,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nextAutoRenewalTimeStamp") String nextAutoRenewalTimeStamp,
-        @OutputCustomType.Parameter("productType") String productType,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("root") CertificateDetailsResponse root,
-        @OutputCustomType.Parameter("serialNumber") String serialNumber,
-        @OutputCustomType.Parameter("signedCertificate") CertificateDetailsResponse signedCertificate,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("validityInYears") @Nullable Integer validityInYears) {
+        @CustomType.Parameter("appServiceCertificateNotRenewableReasons") List<String> appServiceCertificateNotRenewableReasons,
+        @CustomType.Parameter("autoRenew") @Nullable Boolean autoRenew,
+        @CustomType.Parameter("certificates") @Nullable Map<String,AppServiceCertificateResponse> certificates,
+        @CustomType.Parameter("csr") @Nullable String csr,
+        @CustomType.Parameter("distinguishedName") @Nullable String distinguishedName,
+        @CustomType.Parameter("domainVerificationToken") String domainVerificationToken,
+        @CustomType.Parameter("expirationTime") String expirationTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("intermediate") CertificateDetailsResponse intermediate,
+        @CustomType.Parameter("isPrivateKeyExternal") Boolean isPrivateKeyExternal,
+        @CustomType.Parameter("keySize") @Nullable Integer keySize,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("lastCertificateIssuanceTime") String lastCertificateIssuanceTime,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nextAutoRenewalTimeStamp") String nextAutoRenewalTimeStamp,
+        @CustomType.Parameter("productType") String productType,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("root") CertificateDetailsResponse root,
+        @CustomType.Parameter("serialNumber") String serialNumber,
+        @CustomType.Parameter("signedCertificate") CertificateDetailsResponse signedCertificate,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("validityInYears") @Nullable Integer validityInYears) {
         this.appServiceCertificateNotRenewableReasons = appServiceCertificateNotRenewableReasons;
         this.autoRenew = autoRenew;
         this.certificates = certificates;

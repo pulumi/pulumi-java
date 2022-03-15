@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.outputs.MetricAlertActionResponse;
 import io.pulumi.azurenative.insights.outputs.MetricAlertMultipleResourceMultipleMetricCriteriaResponse;
 import io.pulumi.azurenative.insights.outputs.MetricAlertSingleResourceMultipleMetricCriteriaResponse;
 import io.pulumi.azurenative.insights.outputs.WebtestLocationAvailabilityCriteriaResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMetricAlertResult {
     /**
      * the array of actions that are performed when the alert rule becomes active, and when an alert condition is resolved.
@@ -111,26 +111,26 @@ public final class GetMetricAlertResult {
      */
     private final String windowSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMetricAlertResult(
-        @OutputCustomType.Parameter("actions") @Nullable List<MetricAlertActionResponse> actions,
-        @OutputCustomType.Parameter("autoMitigate") @Nullable Boolean autoMitigate,
-        @OutputCustomType.Parameter("criteria") Object criteria,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("evaluationFrequency") String evaluationFrequency,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isMigrated") Boolean isMigrated,
-        @OutputCustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("scopes") List<String> scopes,
-        @OutputCustomType.Parameter("severity") Integer severity,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("targetResourceRegion") @Nullable String targetResourceRegion,
-        @OutputCustomType.Parameter("targetResourceType") @Nullable String targetResourceType,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("windowSize") String windowSize) {
+        @CustomType.Parameter("actions") @Nullable List<MetricAlertActionResponse> actions,
+        @CustomType.Parameter("autoMitigate") @Nullable Boolean autoMitigate,
+        @CustomType.Parameter("criteria") Object criteria,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("evaluationFrequency") String evaluationFrequency,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isMigrated") Boolean isMigrated,
+        @CustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("scopes") List<String> scopes,
+        @CustomType.Parameter("severity") Integer severity,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("targetResourceRegion") @Nullable String targetResourceRegion,
+        @CustomType.Parameter("targetResourceType") @Nullable String targetResourceType,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("windowSize") String windowSize) {
         this.actions = actions;
         this.autoMitigate = autoMitigate;
         this.criteria = criteria;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SensitiveTextAnnotationResponse extends io.pulumi.resources.I
      * Maps from a resource slice. For example, FHIR resource field path to a set of sensitive text findings. For example, Appointment.Narrative text1 --> {findings_1, findings_2, findings_3}
      * 
      */
-    @InputImport(name="details", required=true)
+    @Import(name="details", required=true)
       private final Map<String,String> details;
 
     public Map<String,String> getDetails() {

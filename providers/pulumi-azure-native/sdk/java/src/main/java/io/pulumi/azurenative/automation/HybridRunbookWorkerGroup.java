@@ -10,7 +10,7 @@ import io.pulumi.azurenative.automation.outputs.RunAsCredentialAssociationProper
 import io.pulumi.azurenative.automation.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class HybridRunbookWorkerGroup extends io.pulumi.resources.CustomResource
      * Sets the credential of a worker group.
      * 
      */
-    @OutputExport(name="credential", type=RunAsCredentialAssociationPropertyResponse.class, parameters={})
+    @Export(name="credential", type=RunAsCredentialAssociationPropertyResponse.class, parameters={})
     private Output</* @Nullable */ RunAsCredentialAssociationPropertyResponse> credential;
 
     /**
@@ -51,7 +51,7 @@ public class HybridRunbookWorkerGroup extends io.pulumi.resources.CustomResource
      * Type of the HybridWorkerGroup.
      * 
      */
-    @OutputExport(name="groupType", type=String.class, parameters={})
+    @Export(name="groupType", type=String.class, parameters={})
     private Output</* @Nullable */ String> groupType;
 
     /**
@@ -65,7 +65,7 @@ public class HybridRunbookWorkerGroup extends io.pulumi.resources.CustomResource
      * Gets or sets the list of hybrid runbook workers.
      * 
      */
-    @OutputExport(name="hybridRunbookWorkers", type=List.class, parameters={HybridRunbookWorkerLegacyResponse.class})
+    @Export(name="hybridRunbookWorkers", type=List.class, parameters={HybridRunbookWorkerLegacyResponse.class})
     private Output</* @Nullable */ List<HybridRunbookWorkerLegacyResponse>> hybridRunbookWorkers;
 
     /**
@@ -79,7 +79,7 @@ public class HybridRunbookWorkerGroup extends io.pulumi.resources.CustomResource
      * Gets or sets the name of the group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -93,7 +93,7 @@ public class HybridRunbookWorkerGroup extends io.pulumi.resources.CustomResource
      * Resource system metadata.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -107,7 +107,7 @@ public class HybridRunbookWorkerGroup extends io.pulumi.resources.CustomResource
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

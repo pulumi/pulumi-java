@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.TrafficMirrorFilterRuleDestinationPortRangeGetArgs;
 import io.pulumi.aws.ec2.inputs.TrafficMirrorFilterRuleSourcePortRangeGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TrafficMirrorFilterRuleState extends io.pulumi.resources.Reso
      * ARN of the traffic mirror filter rule.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class TrafficMirrorFilterRuleState extends io.pulumi.resources.Reso
      * Description of the traffic mirror filter rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class TrafficMirrorFilterRuleState extends io.pulumi.resources.Reso
      * Destination CIDR block to assign to the Traffic Mirror rule.
      * 
      */
-    @InputImport(name="destinationCidrBlock")
+    @Import(name="destinationCidrBlock")
       private final @Nullable Output<String> destinationCidrBlock;
 
     public Output<String> getDestinationCidrBlock() {
@@ -54,7 +54,7 @@ public final class TrafficMirrorFilterRuleState extends io.pulumi.resources.Reso
      * Destination port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
      * 
      */
-    @InputImport(name="destinationPortRange")
+    @Import(name="destinationPortRange")
       private final @Nullable Output<TrafficMirrorFilterRuleDestinationPortRangeGetArgs> destinationPortRange;
 
     public Output<TrafficMirrorFilterRuleDestinationPortRangeGetArgs> getDestinationPortRange() {
@@ -65,7 +65,7 @@ public final class TrafficMirrorFilterRuleState extends io.pulumi.resources.Reso
      * Protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see [Protocol Numbers](https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml) on the Internet Assigned Numbers Authority (IANA) website.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<Integer> protocol;
 
     public Output<Integer> getProtocol() {
@@ -76,7 +76,7 @@ public final class TrafficMirrorFilterRuleState extends io.pulumi.resources.Reso
      * Action to take (accept | reject) on the filtered traffic. Valid values are `accept` and `reject`
      * 
      */
-    @InputImport(name="ruleAction")
+    @Import(name="ruleAction")
       private final @Nullable Output<String> ruleAction;
 
     public Output<String> getRuleAction() {
@@ -87,7 +87,7 @@ public final class TrafficMirrorFilterRuleState extends io.pulumi.resources.Reso
      * Number of the Traffic Mirror rule. This number must be unique for each Traffic Mirror rule in a given direction. The rules are processed in ascending order by rule number.
      * 
      */
-    @InputImport(name="ruleNumber")
+    @Import(name="ruleNumber")
       private final @Nullable Output<Integer> ruleNumber;
 
     public Output<Integer> getRuleNumber() {
@@ -98,7 +98,7 @@ public final class TrafficMirrorFilterRuleState extends io.pulumi.resources.Reso
      * Source CIDR block to assign to the Traffic Mirror rule.
      * 
      */
-    @InputImport(name="sourceCidrBlock")
+    @Import(name="sourceCidrBlock")
       private final @Nullable Output<String> sourceCidrBlock;
 
     public Output<String> getSourceCidrBlock() {
@@ -109,7 +109,7 @@ public final class TrafficMirrorFilterRuleState extends io.pulumi.resources.Reso
      * Source port range. Supported only when the protocol is set to TCP(6) or UDP(17). See Traffic mirror port range documented below
      * 
      */
-    @InputImport(name="sourcePortRange")
+    @Import(name="sourcePortRange")
       private final @Nullable Output<TrafficMirrorFilterRuleSourcePortRangeGetArgs> sourcePortRange;
 
     public Output<TrafficMirrorFilterRuleSourcePortRangeGetArgs> getSourcePortRange() {
@@ -120,7 +120,7 @@ public final class TrafficMirrorFilterRuleState extends io.pulumi.resources.Reso
      * Direction of traffic to be captured. Valid values are `ingress` and `egress`
      * 
      */
-    @InputImport(name="trafficDirection")
+    @Import(name="trafficDirection")
       private final @Nullable Output<String> trafficDirection;
 
     public Output<String> getTrafficDirection() {
@@ -131,7 +131,7 @@ public final class TrafficMirrorFilterRuleState extends io.pulumi.resources.Reso
      * ID of the traffic mirror filter to which this rule should be added
      * 
      */
-    @InputImport(name="trafficMirrorFilterId")
+    @Import(name="trafficMirrorFilterId")
       private final @Nullable Output<String> trafficMirrorFilterId;
 
     public Output<String> getTrafficMirrorFilterId() {

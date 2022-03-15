@@ -7,7 +7,7 @@ import io.pulumi.azurenative.apimanagement.enums.ApimIdentityType;
 import io.pulumi.azurenative.apimanagement.inputs.UserIdentityPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ApiManagementServiceIdentityArgs extends io.pulumi.resources.
      * The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<Either<String,ApimIdentityType>> type;
 
     public Output<Either<String,ApimIdentityType>> getType() {
@@ -40,7 +40,7 @@ public final class ApiManagementServiceIdentityArgs extends io.pulumi.resources.
      *     providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
      * 
      */
-    @InputImport(name="userAssignedIdentities")
+    @Import(name="userAssignedIdentities")
       private final @Nullable Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
 
     public Output<Map<String,UserIdentityPropertiesArgs>> getUserAssignedIdentities() {

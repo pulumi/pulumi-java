@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceAttachedDisk {
     /**
      * Name with which the attached disk is accessible
@@ -29,14 +29,14 @@ public final class GetInstanceAttachedDisk {
      */
     private final String source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceAttachedDisk(
-        @OutputCustomType.Parameter("deviceName") String deviceName,
-        @OutputCustomType.Parameter("diskEncryptionKeyRaw") String diskEncryptionKeyRaw,
-        @OutputCustomType.Parameter("diskEncryptionKeySha256") String diskEncryptionKeySha256,
-        @OutputCustomType.Parameter("kmsKeySelfLink") String kmsKeySelfLink,
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("source") String source) {
+        @CustomType.Parameter("deviceName") String deviceName,
+        @CustomType.Parameter("diskEncryptionKeyRaw") String diskEncryptionKeyRaw,
+        @CustomType.Parameter("diskEncryptionKeySha256") String diskEncryptionKeySha256,
+        @CustomType.Parameter("kmsKeySelfLink") String kmsKeySelfLink,
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("source") String source) {
         this.deviceName = deviceName;
         this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;
         this.diskEncryptionKeySha256 = diskEncryptionKeySha256;

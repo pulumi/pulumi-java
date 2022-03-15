@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.metastore_v1beta.enums.ServiceDatabaseType;
 import io.pulumi.googlenative.metastore_v1beta.enums.ServiceReleaseChannel;
 import io.pulumi.googlenative.metastore_v1beta.enums.ServiceTier;
@@ -28,7 +28,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The database type that the Metastore service stores its data.
      * 
      */
-    @InputImport(name="databaseType")
+    @Import(name="databaseType")
       private final @Nullable Output<ServiceDatabaseType> databaseType;
 
     public Output<ServiceDatabaseType> getDatabaseType() {
@@ -39,7 +39,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. Information used to configure the Dataproc Metastore service to encrypt customer data at rest. Cannot be updated.
      * 
      */
-    @InputImport(name="encryptionConfig")
+    @Import(name="encryptionConfig")
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
     public Output<EncryptionConfigArgs> getEncryptionConfig() {
@@ -50,7 +50,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration information specific to running Hive metastore software as the metastore service.
      * 
      */
-    @InputImport(name="hiveMetastoreConfig")
+    @Import(name="hiveMetastoreConfig")
       private final @Nullable Output<HiveMetastoreConfigArgs> hiveMetastoreConfig;
 
     public Output<HiveMetastoreConfigArgs> getHiveMetastoreConfig() {
@@ -61,14 +61,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * User-defined labels for the metastore service.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -79,7 +79,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The one hour maintenance window of the metastore service. This specifies when the service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed for services with the SPANNER database type.
      * 
      */
-    @InputImport(name="maintenanceWindow")
+    @Import(name="maintenanceWindow")
       private final @Nullable Output<MaintenanceWindowArgs> maintenanceWindow;
 
     public Output<MaintenanceWindowArgs> getMaintenanceWindow() {
@@ -90,7 +90,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The setting that defines how metastore metadata should be integrated with external services and systems.
      * 
      */
-    @InputImport(name="metadataIntegration")
+    @Import(name="metadataIntegration")
       private final @Nullable Output<MetadataIntegrationArgs> metadataIntegration;
 
     public Output<MetadataIntegrationArgs> getMetadataIntegration() {
@@ -101,7 +101,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The relative resource name of the metastore service, of the form:projects/{project_number}/locations/{location_id}/services/{service_id}.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -112,7 +112,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The relative resource name of the VPC network on which the instance can be accessed. It is specified in the following form:projects/{project_number}/global/networks/{network_id}.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -123,7 +123,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The configuration specifying the network settings for the Dataproc Metastore service.
      * 
      */
-    @InputImport(name="networkConfig")
+    @Import(name="networkConfig")
       private final @Nullable Output<NetworkConfigArgs> networkConfig;
 
     public Output<NetworkConfigArgs> getNetworkConfig() {
@@ -134,14 +134,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The TCP port at which the metastore service is reached. Default: 9083.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
         return this.port == null ? Output.empty() : this.port;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -152,21 +152,21 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The release channel of the service. If unspecified, defaults to STABLE.
      * 
      */
-    @InputImport(name="releaseChannel")
+    @Import(name="releaseChannel")
       private final @Nullable Output<ServiceReleaseChannel> releaseChannel;
 
     public Output<ServiceReleaseChannel> getReleaseChannel() {
         return this.releaseChannel == null ? Output.empty() : this.releaseChannel;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
         return this.requestId == null ? Output.empty() : this.requestId;
     }
 
-    @InputImport(name="serviceId", required=true)
+    @Import(name="serviceId", required=true)
       private final Output<String> serviceId;
 
     public Output<String> getServiceId() {
@@ -177,7 +177,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The tier of the service.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<ServiceTier> tier;
 
     public Output<ServiceTier> getTier() {

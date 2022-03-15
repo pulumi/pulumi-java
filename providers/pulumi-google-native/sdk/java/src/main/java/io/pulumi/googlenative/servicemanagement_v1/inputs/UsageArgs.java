@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.UsageRuleArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class UsageArgs extends io.pulumi.resources.ResourceArgs {
      * The full resource name of a channel used for sending notifications to the service producer. Google Service Management currently only supports [Google Cloud Pub/Sub](https://cloud.google.com/pubsub) as a notification channel. To use Google Cloud Pub/Sub as the channel, this must be the name of a Cloud Pub/Sub topic that uses the Cloud Pub/Sub topic name format documented in https://cloud.google.com/pubsub/docs/overview.
      * 
      */
-    @InputImport(name="producerNotificationChannel")
+    @Import(name="producerNotificationChannel")
       private final @Nullable Output<String> producerNotificationChannel;
 
     public Output<String> getProducerNotificationChannel() {
@@ -35,7 +35,7 @@ public final class UsageArgs extends io.pulumi.resources.ResourceArgs {
      * Requirements that must be satisfied before a consumer project can use the service. Each requirement is of the form /; for example 'serviceusage.googleapis.com/billing-enabled'. For Google APIs, a Terms of Service requirement must be included here. Google Cloud APIs must include "serviceusage.googleapis.com/tos/cloud". Other Google APIs should include "serviceusage.googleapis.com/tos/universal". Additional ToS can be included based on the business needs.
      * 
      */
-    @InputImport(name="requirements")
+    @Import(name="requirements")
       private final @Nullable Output<List<String>> requirements;
 
     public Output<List<String>> getRequirements() {
@@ -46,7 +46,7 @@ public final class UsageArgs extends io.pulumi.resources.ResourceArgs {
      * A list of usage rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<UsageRuleArgs>> rules;
 
     public Output<List<UsageRuleArgs>> getRules() {

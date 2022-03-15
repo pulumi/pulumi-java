@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.tpu_v2alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AttachedDiskResponse {
     /**
      * The mode in which to attach this disk. If not specified, the default is READ_WRITE mode. Only applicable to data_disks.
@@ -20,10 +20,10 @@ public final class AttachedDiskResponse {
      */
     private final String sourceDisk;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AttachedDiskResponse(
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("sourceDisk") String sourceDisk) {
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("sourceDisk") String sourceDisk) {
         this.mode = mode;
         this.sourceDisk = sourceDisk;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class HubRouteResponse extends io.pulumi.resources.InvokeArgs {
      * The type of destinations (eg: CIDR, ResourceId, Service).
      * 
      */
-    @InputImport(name="destinationType", required=true)
+    @Import(name="destinationType", required=true)
       private final String destinationType;
 
     public String getDestinationType() {
@@ -32,7 +32,7 @@ public final class HubRouteResponse extends io.pulumi.resources.InvokeArgs {
      * List of all destinations.
      * 
      */
-    @InputImport(name="destinations", required=true)
+    @Import(name="destinations", required=true)
       private final List<String> destinations;
 
     public List<String> getDestinations() {
@@ -43,7 +43,7 @@ public final class HubRouteResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the Route that is unique within a RouteTable. This name can be used to access this route.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -54,7 +54,7 @@ public final class HubRouteResponse extends io.pulumi.resources.InvokeArgs {
      * NextHop resource ID.
      * 
      */
-    @InputImport(name="nextHop", required=true)
+    @Import(name="nextHop", required=true)
       private final String nextHop;
 
     public String getNextHop() {
@@ -65,7 +65,7 @@ public final class HubRouteResponse extends io.pulumi.resources.InvokeArgs {
      * The type of next hop (eg: ResourceId).
      * 
      */
-    @InputImport(name="nextHopType", required=true)
+    @Import(name="nextHopType", required=true)
       private final String nextHopType;
 
     public String getNextHopType() {

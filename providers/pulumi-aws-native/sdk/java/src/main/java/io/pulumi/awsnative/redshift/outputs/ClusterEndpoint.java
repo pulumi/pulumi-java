@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.redshift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterEndpoint {
     private final @Nullable String address;
     private final @Nullable String port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterEndpoint(
-        @OutputCustomType.Parameter("address") @Nullable String address,
-        @OutputCustomType.Parameter("port") @Nullable String port) {
+        @CustomType.Parameter("address") @Nullable String address,
+        @CustomType.Parameter("port") @Nullable String port) {
         this.address = address;
         this.port = port;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SuccessDetailArgs extends io.pulumi.resources.ResourceArgs {
      * If a native process other than the app crashed.
      * 
      */
-    @InputImport(name="otherNativeCrash")
+    @Import(name="otherNativeCrash")
       private final @Nullable Output<Boolean> otherNativeCrash;
 
     public Output<Boolean> getOtherNativeCrash() {

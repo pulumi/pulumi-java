@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ExpressRouteLinkMacSecConfigResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExpressRouteLinkResponse {
     /**
      * Administrative state of the physical port.
@@ -68,19 +68,19 @@ public final class ExpressRouteLinkResponse {
      */
     private final String routerName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExpressRouteLinkResponse(
-        @OutputCustomType.Parameter("adminState") @Nullable String adminState,
-        @OutputCustomType.Parameter("connectorType") String connectorType,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("interfaceName") String interfaceName,
-        @OutputCustomType.Parameter("macSecConfig") @Nullable ExpressRouteLinkMacSecConfigResponse macSecConfig,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("patchPanelId") String patchPanelId,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("rackId") String rackId,
-        @OutputCustomType.Parameter("routerName") String routerName) {
+        @CustomType.Parameter("adminState") @Nullable String adminState,
+        @CustomType.Parameter("connectorType") String connectorType,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("interfaceName") String interfaceName,
+        @CustomType.Parameter("macSecConfig") @Nullable ExpressRouteLinkMacSecConfigResponse macSecConfig,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("patchPanelId") String patchPanelId,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("rackId") String rackId,
+        @CustomType.Parameter("routerName") String routerName) {
         this.adminState = adminState;
         this.connectorType = connectorType;
         this.etag = etag;

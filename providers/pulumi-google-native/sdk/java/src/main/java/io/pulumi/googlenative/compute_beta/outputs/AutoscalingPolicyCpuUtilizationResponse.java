@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AutoscalingPolicyCpuUtilizationResponse {
     /**
      * Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are: * NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics. * OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.
@@ -21,10 +21,10 @@ public final class AutoscalingPolicyCpuUtilizationResponse {
      */
     private final Double utilizationTarget;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscalingPolicyCpuUtilizationResponse(
-        @OutputCustomType.Parameter("predictiveMethod") String predictiveMethod,
-        @OutputCustomType.Parameter("utilizationTarget") Double utilizationTarget) {
+        @CustomType.Parameter("predictiveMethod") String predictiveMethod,
+        @CustomType.Parameter("utilizationTarget") Double utilizationTarget) {
         this.predictiveMethod = predictiveMethod;
         this.utilizationTarget = utilizationTarget;
     }

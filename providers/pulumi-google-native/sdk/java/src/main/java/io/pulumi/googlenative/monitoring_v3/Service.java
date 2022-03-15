@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.monitoring_v3.ServiceArgs;
@@ -30,7 +30,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Type used for App Engine services.
      * 
      */
-    @OutputExport(name="appEngine", type=AppEngineResponse.class, parameters={})
+    @Export(name="appEngine", type=AppEngineResponse.class, parameters={})
     private Output<AppEngineResponse> appEngine;
 
     /**
@@ -44,7 +44,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Type used for Cloud Endpoints services.
      * 
      */
-    @OutputExport(name="cloudEndpoints", type=CloudEndpointsResponse.class, parameters={})
+    @Export(name="cloudEndpoints", type=CloudEndpointsResponse.class, parameters={})
     private Output<CloudEndpointsResponse> cloudEndpoints;
 
     /**
@@ -58,7 +58,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Type used for Istio services that live in a Kubernetes cluster.
      * 
      */
-    @OutputExport(name="clusterIstio", type=ClusterIstioResponse.class, parameters={})
+    @Export(name="clusterIstio", type=ClusterIstioResponse.class, parameters={})
     private Output<ClusterIstioResponse> clusterIstio;
 
     /**
@@ -72,7 +72,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Custom service type.
      * 
      */
-    @OutputExport(name="custom", type=CustomResponse.class, parameters={})
+    @Export(name="custom", type=CustomResponse.class, parameters={})
     private Output<CustomResponse> custom;
 
     /**
@@ -86,7 +86,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Name used for UI elements listing this Service.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -100,7 +100,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Type used for canonical services scoped to an Istio mesh. Metrics for Istio are documented here (https://istio.io/latest/docs/reference/config/metrics/)
      * 
      */
-    @OutputExport(name="istioCanonicalService", type=IstioCanonicalServiceResponse.class, parameters={})
+    @Export(name="istioCanonicalService", type=IstioCanonicalServiceResponse.class, parameters={})
     private Output<IstioCanonicalServiceResponse> istioCanonicalService;
 
     /**
@@ -114,7 +114,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Type used for Istio services scoped to an Istio mesh.
      * 
      */
-    @OutputExport(name="meshIstio", type=MeshIstioResponse.class, parameters={})
+    @Export(name="meshIstio", type=MeshIstioResponse.class, parameters={})
     private Output<MeshIstioResponse> meshIstio;
 
     /**
@@ -128,7 +128,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Resource name for this Service. The format is: projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -142,7 +142,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Configuration for how to query telemetry on a Service.
      * 
      */
-    @OutputExport(name="telemetry", type=TelemetryResponse.class, parameters={})
+    @Export(name="telemetry", type=TelemetryResponse.class, parameters={})
     private Output<TelemetryResponse> telemetry;
 
     /**
@@ -156,7 +156,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Labels which have been used to annotate the service. Label keys must start with a letter. Label keys and values may contain lowercase letters, numbers, underscores, and dashes. Label keys and values have a maximum length of 63 characters, and must be less than 128 bytes in size. Up to 64 label entries may be stored. For labels which do not have a semantic value, the empty string may be supplied for the label value.
      * 
      */
-    @OutputExport(name="userLabels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="userLabels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> userLabels;
 
     /**

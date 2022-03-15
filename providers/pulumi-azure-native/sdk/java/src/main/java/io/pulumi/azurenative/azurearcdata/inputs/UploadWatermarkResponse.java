@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurearcdata.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class UploadWatermarkResponse extends io.pulumi.resources.InvokeArg
      * Last uploaded date for logs from kubernetes cluster. Defaults to current date time
      * 
      */
-    @InputImport(name="logs")
+    @Import(name="logs")
       private final @Nullable String logs;
 
     public Optional<String> getLogs() {
@@ -33,7 +33,7 @@ public final class UploadWatermarkResponse extends io.pulumi.resources.InvokeArg
      * Last uploaded date for metrics from kubernetes cluster. Defaults to current date time
      * 
      */
-    @InputImport(name="metrics")
+    @Import(name="metrics")
       private final @Nullable String metrics;
 
     public Optional<String> getMetrics() {
@@ -44,7 +44,7 @@ public final class UploadWatermarkResponse extends io.pulumi.resources.InvokeArg
      * Last uploaded date for usages from kubernetes cluster. Defaults to current date time
      * 
      */
-    @InputImport(name="usages")
+    @Import(name="usages")
       private final @Nullable String usages;
 
     public Optional<String> getUsages() {

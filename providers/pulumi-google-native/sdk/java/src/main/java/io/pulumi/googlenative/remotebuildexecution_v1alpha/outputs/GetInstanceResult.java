@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.outputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceResult {
     /**
      * The policy to define whether or not RBE features can be used or how they can be used.
@@ -37,13 +37,13 @@ public final class GetInstanceResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceResult(
-        @OutputCustomType.Parameter("featurePolicy") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse featurePolicy,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("loggingEnabled") Boolean loggingEnabled,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("featurePolicy") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse featurePolicy,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("loggingEnabled") Boolean loggingEnabled,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state) {
         this.featurePolicy = featurePolicy;
         this.location = location;
         this.loggingEnabled = loggingEnabled;

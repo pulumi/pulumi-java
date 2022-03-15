@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.servicenetworking.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetPeeredDnsDomainResult {
     private final String dnsSuffix;
     /**
@@ -21,15 +21,15 @@ public final class GetPeeredDnsDomainResult {
     private final String project;
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPeeredDnsDomainResult(
-        @OutputCustomType.Parameter("dnsSuffix") String dnsSuffix,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("parent") String parent,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("dnsSuffix") String dnsSuffix,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("parent") String parent,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("service") String service) {
         this.dnsSuffix = dnsSuffix;
         this.id = id;
         this.name = name;

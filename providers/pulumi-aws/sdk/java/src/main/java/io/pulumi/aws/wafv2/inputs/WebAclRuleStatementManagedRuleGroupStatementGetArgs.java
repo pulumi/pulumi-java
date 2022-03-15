@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends i
      * The `rules` whose actions are set to `COUNT` by the web ACL, regardless of the action that is set on the rule. See Excluded Rule below for details.
      * 
      */
-    @InputImport(name="excludedRules")
+    @Import(name="excludedRules")
       private final @Nullable Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>> excludedRules;
 
     public Output<List<WebAclRuleStatementManagedRuleGroupStatementExcludedRuleGetArgs>> getExcludedRules() {
@@ -32,7 +32,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends i
      * The name of the managed rule group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends i
      * Narrows the scope of the statement to matching web requests. This can be any nestable statement, and you can nest statements at any level below this scope-down statement. See Statement above for details.
      * 
      */
-    @InputImport(name="scopeDownStatement")
+    @Import(name="scopeDownStatement")
       private final @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs> scopeDownStatement;
 
     public Output<WebAclRuleStatementManagedRuleGroupStatementScopeDownStatementGetArgs> getScopeDownStatement() {
@@ -54,7 +54,7 @@ public final class WebAclRuleStatementManagedRuleGroupStatementGetArgs extends i
      * The name of the managed rule group vendor.
      * 
      */
-    @InputImport(name="vendorName", required=true)
+    @Import(name="vendorName", required=true)
       private final Output<String> vendorName;
 
     public Output<String> getVendorName() {

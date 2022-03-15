@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Destination address for connection
      * 
      */
-    @InputImport(name="destinationAddress", required=true)
+    @Import(name="destinationAddress", required=true)
       private final Output<String> destinationAddress;
 
     public Output<String> getDestinationAddress() {
@@ -31,7 +31,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Destination port for connection
      * 
      */
-    @InputImport(name="destinationPort")
+    @Import(name="destinationPort")
       private final @Nullable Output<Integer> destinationPort;
 
     public Output<Integer> getDestinationPort() {
@@ -42,7 +42,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Display name.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -53,42 +53,42 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Labels.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="privateConnectionId", required=true)
+    @Import(name="privateConnectionId", required=true)
       private final Output<String> privateConnectionId;
 
     public Output<String> getPrivateConnectionId() {
         return this.privateConnectionId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
         return this.requestId == null ? Output.empty() : this.requestId;
     }
 
-    @InputImport(name="routeId", required=true)
+    @Import(name="routeId", required=true)
       private final Output<String> routeId;
 
     public Output<String> getRouteId() {

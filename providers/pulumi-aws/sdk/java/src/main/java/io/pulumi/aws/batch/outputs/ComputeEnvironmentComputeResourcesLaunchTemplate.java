@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComputeEnvironmentComputeResourcesLaunchTemplate {
     /**
      * ID of the launch template. You must specify either the launch template ID or launch template name in the request, but not both.
@@ -27,11 +27,11 @@ public final class ComputeEnvironmentComputeResourcesLaunchTemplate {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComputeEnvironmentComputeResourcesLaunchTemplate(
-        @OutputCustomType.Parameter("launchTemplateId") @Nullable String launchTemplateId,
-        @OutputCustomType.Parameter("launchTemplateName") @Nullable String launchTemplateName,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("launchTemplateId") @Nullable String launchTemplateId,
+        @CustomType.Parameter("launchTemplateName") @Nullable String launchTemplateName,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.launchTemplateId = launchTemplateId;
         this.launchTemplateName = launchTemplateName;
         this.version = version;

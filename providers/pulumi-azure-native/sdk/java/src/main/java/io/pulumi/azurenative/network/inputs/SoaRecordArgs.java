@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The email contact for this SOA record.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
@@ -34,7 +34,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The expire time for this SOA record.
      * 
      */
-    @InputImport(name="expireTime")
+    @Import(name="expireTime")
       private final @Nullable Output<Double> expireTime;
 
     public Output<Double> getExpireTime() {
@@ -45,7 +45,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The domain name of the authoritative name server for this SOA record.
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
@@ -56,7 +56,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The minimum value for this SOA record. By convention this is used to determine the negative caching duration.
      * 
      */
-    @InputImport(name="minimumTtl")
+    @Import(name="minimumTtl")
       private final @Nullable Output<Double> minimumTtl;
 
     public Output<Double> getMinimumTtl() {
@@ -67,7 +67,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The refresh value for this SOA record.
      * 
      */
-    @InputImport(name="refreshTime")
+    @Import(name="refreshTime")
       private final @Nullable Output<Double> refreshTime;
 
     public Output<Double> getRefreshTime() {
@@ -78,7 +78,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The retry time for this SOA record.
      * 
      */
-    @InputImport(name="retryTime")
+    @Import(name="retryTime")
       private final @Nullable Output<Double> retryTime;
 
     public Output<Double> getRetryTime() {
@@ -89,7 +89,7 @@ public final class SoaRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The serial number for this SOA record.
      * 
      */
-    @InputImport(name="serialNumber")
+    @Import(name="serialNumber")
       private final @Nullable Output<Double> serialNumber;
 
     public Output<Double> getSerialNumber() {

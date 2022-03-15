@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.ApprovalConfigResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.BitbucketServerTriggerConfigResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.BuildResponse;
@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTriggerResult {
     /**
      * Configuration for manual approval to start a build invocation of this BuildTrigger.
@@ -137,31 +137,31 @@ public final class GetTriggerResult {
      */
     private final WebhookConfigResponse webhookConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTriggerResult(
-        @OutputCustomType.Parameter("approvalConfig") ApprovalConfigResponse approvalConfig,
-        @OutputCustomType.Parameter("autodetect") Boolean autodetect,
-        @OutputCustomType.Parameter("bitbucketServerTriggerConfig") BitbucketServerTriggerConfigResponse bitbucketServerTriggerConfig,
-        @OutputCustomType.Parameter("build") BuildResponse build,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("disabled") Boolean disabled,
-        @OutputCustomType.Parameter("eventType") String eventType,
-        @OutputCustomType.Parameter("filename") String filename,
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("gitFileSource") GitFileSourceResponse gitFileSource,
-        @OutputCustomType.Parameter("github") GitHubEventsConfigResponse github,
-        @OutputCustomType.Parameter("ignoredFiles") List<String> ignoredFiles,
-        @OutputCustomType.Parameter("includedFiles") List<String> includedFiles,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pubsubConfig") PubsubConfigResponse pubsubConfig,
-        @OutputCustomType.Parameter("resourceName") String resourceName,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("sourceToBuild") GitRepoSourceResponse sourceToBuild,
-        @OutputCustomType.Parameter("substitutions") Map<String,String> substitutions,
-        @OutputCustomType.Parameter("tags") List<String> tags,
-        @OutputCustomType.Parameter("triggerTemplate") RepoSourceResponse triggerTemplate,
-        @OutputCustomType.Parameter("webhookConfig") WebhookConfigResponse webhookConfig) {
+        @CustomType.Parameter("approvalConfig") ApprovalConfigResponse approvalConfig,
+        @CustomType.Parameter("autodetect") Boolean autodetect,
+        @CustomType.Parameter("bitbucketServerTriggerConfig") BitbucketServerTriggerConfigResponse bitbucketServerTriggerConfig,
+        @CustomType.Parameter("build") BuildResponse build,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("disabled") Boolean disabled,
+        @CustomType.Parameter("eventType") String eventType,
+        @CustomType.Parameter("filename") String filename,
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("gitFileSource") GitFileSourceResponse gitFileSource,
+        @CustomType.Parameter("github") GitHubEventsConfigResponse github,
+        @CustomType.Parameter("ignoredFiles") List<String> ignoredFiles,
+        @CustomType.Parameter("includedFiles") List<String> includedFiles,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pubsubConfig") PubsubConfigResponse pubsubConfig,
+        @CustomType.Parameter("resourceName") String resourceName,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("sourceToBuild") GitRepoSourceResponse sourceToBuild,
+        @CustomType.Parameter("substitutions") Map<String,String> substitutions,
+        @CustomType.Parameter("tags") List<String> tags,
+        @CustomType.Parameter("triggerTemplate") RepoSourceResponse triggerTemplate,
+        @CustomType.Parameter("webhookConfig") WebhookConfigResponse webhookConfig) {
         this.approvalConfig = approvalConfig;
         this.autodetect = autodetect;
         this.bitbucketServerTriggerConfig = bitbucketServerTriggerConfig;

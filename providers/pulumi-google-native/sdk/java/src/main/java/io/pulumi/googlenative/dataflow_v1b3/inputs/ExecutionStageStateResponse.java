@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ExecutionStageStateResponse extends io.pulumi.resources.Invok
      * The time at which the stage transitioned to this state.
      * 
      */
-    @InputImport(name="currentStateTime", required=true)
+    @Import(name="currentStateTime", required=true)
       private final String currentStateTime;
 
     public String getCurrentStateTime() {
@@ -31,7 +31,7 @@ public final class ExecutionStageStateResponse extends io.pulumi.resources.Invok
      * The name of the execution stage.
      * 
      */
-    @InputImport(name="executionStageName", required=true)
+    @Import(name="executionStageName", required=true)
       private final String executionStageName;
 
     public String getExecutionStageName() {
@@ -42,7 +42,7 @@ public final class ExecutionStageStateResponse extends io.pulumi.resources.Invok
      * Executions stage states allow the same set of values as JobState.
      * 
      */
-    @InputImport(name="executionStageState", required=true)
+    @Import(name="executionStageState", required=true)
       private final String executionStageState;
 
     public String getExecutionStageState() {

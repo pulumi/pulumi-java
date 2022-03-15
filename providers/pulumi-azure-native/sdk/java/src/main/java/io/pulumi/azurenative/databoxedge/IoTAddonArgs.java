@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.azurenative.databoxedge.inputs.IoTDeviceInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * The addon name.
      * 
      */
-    @InputImport(name="addonName")
+    @Import(name="addonName")
       private final @Nullable Output<String> addonName;
 
     public Output<String> getAddonName() {
@@ -30,7 +30,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * The device name.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -41,7 +41,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * IoT device metadata to which appliance needs to be connected.
      * 
      */
-    @InputImport(name="ioTDeviceDetails", required=true)
+    @Import(name="ioTDeviceDetails", required=true)
       private final Output<IoTDeviceInfoArgs> ioTDeviceDetails;
 
     public Output<IoTDeviceInfoArgs> getIoTDeviceDetails() {
@@ -52,7 +52,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * IoT edge device to which the IoT Addon needs to be configured.
      * 
      */
-    @InputImport(name="ioTEdgeDeviceDetails", required=true)
+    @Import(name="ioTEdgeDeviceDetails", required=true)
       private final Output<IoTDeviceInfoArgs> ioTEdgeDeviceDetails;
 
     public Output<IoTDeviceInfoArgs> getIoTEdgeDeviceDetails() {
@@ -64,7 +64,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'IotEdge'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -75,7 +75,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -86,7 +86,7 @@ public final class IoTAddonArgs extends io.pulumi.resources.ResourceArgs {
      * The role name.
      * 
      */
-    @InputImport(name="roleName", required=true)
+    @Import(name="roleName", required=true)
       private final Output<String> roleName;
 
     public Output<String> getRoleName() {

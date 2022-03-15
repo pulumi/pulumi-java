@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apigateway;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.apigateway.AccountArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of an IAM role that has write access to CloudWatch Logs in your account.
      * 
      */
-    @OutputExport(name="cloudWatchRoleArn", type=String.class, parameters={})
+    @Export(name="cloudWatchRoleArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> cloudWatchRoleArn;
 
     /**

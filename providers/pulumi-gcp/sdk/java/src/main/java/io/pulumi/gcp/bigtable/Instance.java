@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigtable.InstanceArgs;
@@ -49,7 +49,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * See structure below.
      * 
      */
-    @OutputExport(name="clusters", type=List.class, parameters={InstanceCluster.class})
+    @Export(name="clusters", type=List.class, parameters={InstanceCluster.class})
     private Output<List<InstanceCluster>> clusters;
 
     /**
@@ -65,7 +65,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * in the statefile, a `pulumi destroy` or `pulumi up` that would delete the instance will fail.
      * 
      */
-    @OutputExport(name="deletionProtection", type=Boolean.class, parameters={})
+    @Export(name="deletionProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deletionProtection;
 
     /**
@@ -80,7 +80,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -102,7 +102,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * 
      */
     @Deprecated /* It is recommended to leave this field unspecified since the distinction between ""DEVELOPMENT"" and ""PRODUCTION"" instances is going away, and all instances will become ""PRODUCTION"" instances. This means that new and existing ""DEVELOPMENT"" instances will be converted to ""PRODUCTION"" instances. It is recommended for users to use ""PRODUCTION"" instances in any case, since a 1-node ""PRODUCTION"" instance is functionally identical to a ""DEVELOPMENT"" instance, but without the accompanying restrictions. */
-    @OutputExport(name="instanceType", type=String.class, parameters={})
+    @Export(name="instanceType", type=String.class, parameters={})
     private Output</* @Nullable */ String> instanceType;
 
     /**
@@ -120,7 +120,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -134,7 +134,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -149,7 +149,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

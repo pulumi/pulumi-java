@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs extend
      * A URI that identifies the Amazon S3 storage location where Amazon SageMaker saves the results of a monitoring job.
      * 
      */
-    @InputImport(name="s3Uri", required=true)
+    @Import(name="s3Uri", required=true)
       private final Output<String> s3Uri;
 
     public Output<String> getS3Uri() {

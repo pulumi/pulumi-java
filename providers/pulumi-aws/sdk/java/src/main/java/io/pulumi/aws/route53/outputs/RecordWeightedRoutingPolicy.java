@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.route53.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RecordWeightedRoutingPolicy {
     /**
      * A numeric value indicating the relative weight of the record. See http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html#routing-policy-weighted.
@@ -15,8 +15,8 @@ public final class RecordWeightedRoutingPolicy {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor
-    private RecordWeightedRoutingPolicy(@OutputCustomType.Parameter("weight") Integer weight) {
+    @CustomType.Constructor
+    private RecordWeightedRoutingPolicy(@CustomType.Parameter("weight") Integer weight) {
         this.weight = weight;
     }
 

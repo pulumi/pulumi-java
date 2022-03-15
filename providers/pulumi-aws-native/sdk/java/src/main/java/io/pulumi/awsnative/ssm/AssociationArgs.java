@@ -8,7 +8,7 @@ import io.pulumi.awsnative.ssm.enums.AssociationSyncCompliance;
 import io.pulumi.awsnative.ssm.inputs.AssociationInstanceAssociationOutputLocationArgs;
 import io.pulumi.awsnative.ssm.inputs.AssociationTargetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -22,7 +22,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final AssociationArgs Empty = new AssociationArgs();
 
-    @InputImport(name="applyOnlyAtCronInterval")
+    @Import(name="applyOnlyAtCronInterval")
       private final @Nullable Output<Boolean> applyOnlyAtCronInterval;
 
     public Output<Boolean> getApplyOnlyAtCronInterval() {
@@ -33,28 +33,28 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the association.
      * 
      */
-    @InputImport(name="associationName")
+    @Import(name="associationName")
       private final @Nullable Output<String> associationName;
 
     public Output<String> getAssociationName() {
         return this.associationName == null ? Output.empty() : this.associationName;
     }
 
-    @InputImport(name="automationTargetParameterName")
+    @Import(name="automationTargetParameterName")
       private final @Nullable Output<String> automationTargetParameterName;
 
     public Output<String> getAutomationTargetParameterName() {
         return this.automationTargetParameterName == null ? Output.empty() : this.automationTargetParameterName;
     }
 
-    @InputImport(name="calendarNames")
+    @Import(name="calendarNames")
       private final @Nullable Output<List<String>> calendarNames;
 
     public Output<List<String>> getCalendarNames() {
         return this.calendarNames == null ? Output.empty() : this.calendarNames;
     }
 
-    @InputImport(name="complianceSeverity")
+    @Import(name="complianceSeverity")
       private final @Nullable Output<AssociationComplianceSeverity> complianceSeverity;
 
     public Output<AssociationComplianceSeverity> getComplianceSeverity() {
@@ -65,7 +65,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * The version of the SSM document to associate with the target.
      * 
      */
-    @InputImport(name="documentVersion")
+    @Import(name="documentVersion")
       private final @Nullable Output<String> documentVersion;
 
     public Output<String> getDocumentVersion() {
@@ -76,21 +76,21 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the instance that the SSM document is associated with.
      * 
      */
-    @InputImport(name="instanceId")
+    @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
         return this.instanceId == null ? Output.empty() : this.instanceId;
     }
 
-    @InputImport(name="maxConcurrency")
+    @Import(name="maxConcurrency")
       private final @Nullable Output<String> maxConcurrency;
 
     public Output<String> getMaxConcurrency() {
         return this.maxConcurrency == null ? Output.empty() : this.maxConcurrency;
     }
 
-    @InputImport(name="maxErrors")
+    @Import(name="maxErrors")
       private final @Nullable Output<String> maxErrors;
 
     public Output<String> getMaxErrors() {
@@ -101,14 +101,14 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the SSM document.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="outputLocation")
+    @Import(name="outputLocation")
       private final @Nullable Output<AssociationInstanceAssociationOutputLocationArgs> outputLocation;
 
     public Output<AssociationInstanceAssociationOutputLocationArgs> getOutputLocation() {
@@ -119,7 +119,7 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * Parameter values that the SSM document uses at runtime.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Object> parameters;
 
     public Output<Object> getParameters() {
@@ -130,14 +130,14 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * A Cron or Rate expression that specifies when the association is applied to the target.
      * 
      */
-    @InputImport(name="scheduleExpression")
+    @Import(name="scheduleExpression")
       private final @Nullable Output<String> scheduleExpression;
 
     public Output<String> getScheduleExpression() {
         return this.scheduleExpression == null ? Output.empty() : this.scheduleExpression;
     }
 
-    @InputImport(name="syncCompliance")
+    @Import(name="syncCompliance")
       private final @Nullable Output<AssociationSyncCompliance> syncCompliance;
 
     public Output<AssociationSyncCompliance> getSyncCompliance() {
@@ -148,14 +148,14 @@ public final class AssociationArgs extends io.pulumi.resources.ResourceArgs {
      * The targets that the SSM document sends commands to.
      * 
      */
-    @InputImport(name="targets")
+    @Import(name="targets")
       private final @Nullable Output<List<AssociationTargetArgs>> targets;
 
     public Output<List<AssociationTargetArgs>> getTargets() {
         return this.targets == null ? Output.empty() : this.targets;
     }
 
-    @InputImport(name="waitForSuccessTimeoutSeconds")
+    @Import(name="waitForSuccessTimeoutSeconds")
       private final @Nullable Output<Integer> waitForSuccessTimeoutSeconds;
 
     public Output<Integer> getWaitForSuccessTimeoutSeconds() {

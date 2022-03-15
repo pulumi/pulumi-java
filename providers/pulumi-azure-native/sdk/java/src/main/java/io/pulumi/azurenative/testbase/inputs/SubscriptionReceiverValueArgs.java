@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.testbase.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
      * The role of the notification receiver.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
@@ -33,7 +33,7 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
      * The subscription id of the notification receiver.
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {
@@ -44,7 +44,7 @@ public final class SubscriptionReceiverValueArgs extends io.pulumi.resources.Res
      * The subscription name of the notification receiver.
      * 
      */
-    @InputImport(name="subscriptionName")
+    @Import(name="subscriptionName")
       private final @Nullable Output<String> subscriptionName;
 
     public Output<String> getSubscriptionName() {

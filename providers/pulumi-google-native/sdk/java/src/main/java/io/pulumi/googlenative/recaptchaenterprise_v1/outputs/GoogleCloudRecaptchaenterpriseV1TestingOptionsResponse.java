@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.recaptchaenterprise_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse {
     /**
      * For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
@@ -21,10 +21,10 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse {
      */
     private final Double testingScore;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse(
-        @OutputCustomType.Parameter("testingChallenge") String testingChallenge,
-        @OutputCustomType.Parameter("testingScore") Double testingScore) {
+        @CustomType.Parameter("testingChallenge") String testingChallenge,
+        @CustomType.Parameter("testingScore") Double testingScore) {
         this.testingChallenge = testingChallenge;
         this.testingScore = testingScore;
     }

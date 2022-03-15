@@ -28,7 +28,7 @@ import io.pulumi.azurenative.network.inputs.ApplicationGatewayUrlPathMapResponse
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayWebApplicationFirewallConfigurationResponse;
 import io.pulumi.azurenative.network.inputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -50,7 +50,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Authentication certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    @InputImport(name="authenticationCertificates")
+    @Import(name="authenticationCertificates")
       private final @Nullable List<ApplicationGatewayAuthenticationCertificateResponse> authenticationCertificates;
 
     public List<ApplicationGatewayAuthenticationCertificateResponse> getAuthenticationCertificates() {
@@ -61,7 +61,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Autoscale Configuration.
      * 
      */
-    @InputImport(name="autoscaleConfiguration")
+    @Import(name="autoscaleConfiguration")
       private final @Nullable ApplicationGatewayAutoscaleConfigurationResponse autoscaleConfiguration;
 
     public Optional<ApplicationGatewayAutoscaleConfigurationResponse> getAutoscaleConfiguration() {
@@ -72,7 +72,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Backend address pool of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    @InputImport(name="backendAddressPools")
+    @Import(name="backendAddressPools")
       private final @Nullable List<ApplicationGatewayBackendAddressPoolResponse> backendAddressPools;
 
     public List<ApplicationGatewayBackendAddressPoolResponse> getBackendAddressPools() {
@@ -83,7 +83,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Backend http settings of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    @InputImport(name="backendHttpSettingsCollection")
+    @Import(name="backendHttpSettingsCollection")
       private final @Nullable List<ApplicationGatewayBackendHttpSettingsResponse> backendHttpSettingsCollection;
 
     public List<ApplicationGatewayBackendHttpSettingsResponse> getBackendHttpSettingsCollection() {
@@ -94,7 +94,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Custom error configurations of the application gateway resource.
      * 
      */
-    @InputImport(name="customErrorConfigurations")
+    @Import(name="customErrorConfigurations")
       private final @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations;
 
     public List<ApplicationGatewayCustomErrorResponse> getCustomErrorConfigurations() {
@@ -105,7 +105,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Whether FIPS is enabled on the application gateway resource.
      * 
      */
-    @InputImport(name="enableFips")
+    @Import(name="enableFips")
       private final @Nullable Boolean enableFips;
 
     public Optional<Boolean> getEnableFips() {
@@ -116,7 +116,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Whether HTTP2 is enabled on the application gateway resource.
      * 
      */
-    @InputImport(name="enableHttp2")
+    @Import(name="enableHttp2")
       private final @Nullable Boolean enableHttp2;
 
     public Optional<Boolean> getEnableHttp2() {
@@ -127,7 +127,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -138,7 +138,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Reference to the FirewallPolicy resource.
      * 
      */
-    @InputImport(name="firewallPolicy")
+    @Import(name="firewallPolicy")
       private final @Nullable SubResourceResponse firewallPolicy;
 
     public Optional<SubResourceResponse> getFirewallPolicy() {
@@ -149,7 +149,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * If true, associates a firewall policy with an application gateway regardless whether the policy differs from the WAF Config.
      * 
      */
-    @InputImport(name="forceFirewallPolicyAssociation")
+    @Import(name="forceFirewallPolicyAssociation")
       private final @Nullable Boolean forceFirewallPolicyAssociation;
 
     public Optional<Boolean> getForceFirewallPolicyAssociation() {
@@ -160,7 +160,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Frontend IP addresses of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    @InputImport(name="frontendIPConfigurations")
+    @Import(name="frontendIPConfigurations")
       private final @Nullable List<ApplicationGatewayFrontendIPConfigurationResponse> frontendIPConfigurations;
 
     public List<ApplicationGatewayFrontendIPConfigurationResponse> getFrontendIPConfigurations() {
@@ -171,7 +171,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Frontend ports of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    @InputImport(name="frontendPorts")
+    @Import(name="frontendPorts")
       private final @Nullable List<ApplicationGatewayFrontendPortResponse> frontendPorts;
 
     public List<ApplicationGatewayFrontendPortResponse> getFrontendPorts() {
@@ -182,7 +182,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Subnets of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    @InputImport(name="gatewayIPConfigurations")
+    @Import(name="gatewayIPConfigurations")
       private final @Nullable List<ApplicationGatewayIPConfigurationResponse> gatewayIPConfigurations;
 
     public List<ApplicationGatewayIPConfigurationResponse> getGatewayIPConfigurations() {
@@ -193,7 +193,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Http listeners of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    @InputImport(name="httpListeners")
+    @Import(name="httpListeners")
       private final @Nullable List<ApplicationGatewayHttpListenerResponse> httpListeners;
 
     public List<ApplicationGatewayHttpListenerResponse> getHttpListeners() {
@@ -204,7 +204,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -215,7 +215,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * The identity of the application gateway, if configured.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable ManagedServiceIdentityResponse identity;
 
     public Optional<ManagedServiceIdentityResponse> getIdentity() {
@@ -226,7 +226,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable String location;
 
     public Optional<String> getLocation() {
@@ -237,7 +237,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Resource name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -248,7 +248,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Operational state of the application gateway resource.
      * 
      */
-    @InputImport(name="operationalState", required=true)
+    @Import(name="operationalState", required=true)
       private final String operationalState;
 
     public String getOperationalState() {
@@ -259,7 +259,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Private Endpoint connections on application gateway.
      * 
      */
-    @InputImport(name="privateEndpointConnections", required=true)
+    @Import(name="privateEndpointConnections", required=true)
       private final List<ApplicationGatewayPrivateEndpointConnectionResponse> privateEndpointConnections;
 
     public List<ApplicationGatewayPrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
@@ -270,7 +270,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * PrivateLink configurations on application gateway.
      * 
      */
-    @InputImport(name="privateLinkConfigurations")
+    @Import(name="privateLinkConfigurations")
       private final @Nullable List<ApplicationGatewayPrivateLinkConfigurationResponse> privateLinkConfigurations;
 
     public List<ApplicationGatewayPrivateLinkConfigurationResponse> getPrivateLinkConfigurations() {
@@ -281,7 +281,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Probes of the application gateway resource.
      * 
      */
-    @InputImport(name="probes")
+    @Import(name="probes")
       private final @Nullable List<ApplicationGatewayProbeResponse> probes;
 
     public List<ApplicationGatewayProbeResponse> getProbes() {
@@ -292,7 +292,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * The provisioning state of the application gateway resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -303,7 +303,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Redirect configurations of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    @InputImport(name="redirectConfigurations")
+    @Import(name="redirectConfigurations")
       private final @Nullable List<ApplicationGatewayRedirectConfigurationResponse> redirectConfigurations;
 
     public List<ApplicationGatewayRedirectConfigurationResponse> getRedirectConfigurations() {
@@ -314,7 +314,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Request routing rules of the application gateway resource.
      * 
      */
-    @InputImport(name="requestRoutingRules")
+    @Import(name="requestRoutingRules")
       private final @Nullable List<ApplicationGatewayRequestRoutingRuleResponse> requestRoutingRules;
 
     public List<ApplicationGatewayRequestRoutingRuleResponse> getRequestRoutingRules() {
@@ -325,7 +325,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * The resource GUID property of the application gateway resource.
      * 
      */
-    @InputImport(name="resourceGuid", required=true)
+    @Import(name="resourceGuid", required=true)
       private final String resourceGuid;
 
     public String getResourceGuid() {
@@ -336,7 +336,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Rewrite rules for the application gateway resource.
      * 
      */
-    @InputImport(name="rewriteRuleSets")
+    @Import(name="rewriteRuleSets")
       private final @Nullable List<ApplicationGatewayRewriteRuleSetResponse> rewriteRuleSets;
 
     public List<ApplicationGatewayRewriteRuleSetResponse> getRewriteRuleSets() {
@@ -347,7 +347,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * SKU of the application gateway resource.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable ApplicationGatewaySkuResponse sku;
 
     public Optional<ApplicationGatewaySkuResponse> getSku() {
@@ -358,7 +358,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * SSL certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    @InputImport(name="sslCertificates")
+    @Import(name="sslCertificates")
       private final @Nullable List<ApplicationGatewaySslCertificateResponse> sslCertificates;
 
     public List<ApplicationGatewaySslCertificateResponse> getSslCertificates() {
@@ -369,7 +369,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * SSL policy of the application gateway resource.
      * 
      */
-    @InputImport(name="sslPolicy")
+    @Import(name="sslPolicy")
       private final @Nullable ApplicationGatewaySslPolicyResponse sslPolicy;
 
     public Optional<ApplicationGatewaySslPolicyResponse> getSslPolicy() {
@@ -380,7 +380,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * SSL profiles of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    @InputImport(name="sslProfiles")
+    @Import(name="sslProfiles")
       private final @Nullable List<ApplicationGatewaySslProfileResponse> sslProfiles;
 
     public List<ApplicationGatewaySslProfileResponse> getSslProfiles() {
@@ -391,7 +391,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -402,7 +402,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Trusted client certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    @InputImport(name="trustedClientCertificates")
+    @Import(name="trustedClientCertificates")
       private final @Nullable List<ApplicationGatewayTrustedClientCertificateResponse> trustedClientCertificates;
 
     public List<ApplicationGatewayTrustedClientCertificateResponse> getTrustedClientCertificates() {
@@ -413,7 +413,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Trusted Root certificates of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    @InputImport(name="trustedRootCertificates")
+    @Import(name="trustedRootCertificates")
       private final @Nullable List<ApplicationGatewayTrustedRootCertificateResponse> trustedRootCertificates;
 
     public List<ApplicationGatewayTrustedRootCertificateResponse> getTrustedRootCertificates() {
@@ -424,7 +424,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Resource type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -435,7 +435,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * URL path map of the application gateway resource. For default limits, see [Application Gateway limits](https://docs.microsoft.com/azure/azure-subscription-service-limits#application-gateway-limits).
      * 
      */
-    @InputImport(name="urlPathMaps")
+    @Import(name="urlPathMaps")
       private final @Nullable List<ApplicationGatewayUrlPathMapResponse> urlPathMaps;
 
     public List<ApplicationGatewayUrlPathMapResponse> getUrlPathMaps() {
@@ -446,7 +446,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * Web application firewall configuration.
      * 
      */
-    @InputImport(name="webApplicationFirewallConfiguration")
+    @Import(name="webApplicationFirewallConfiguration")
       private final @Nullable ApplicationGatewayWebApplicationFirewallConfigurationResponse webApplicationFirewallConfiguration;
 
     public Optional<ApplicationGatewayWebApplicationFirewallConfigurationResponse> getWebApplicationFirewallConfiguration() {
@@ -457,7 +457,7 @@ public final class ApplicationGatewayResponse extends io.pulumi.resources.Invoke
      * A list of availability zones denoting where the resource needs to come from.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable List<String> zones;
 
     public List<String> getZones() {

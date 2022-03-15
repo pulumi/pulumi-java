@@ -9,7 +9,7 @@ import io.pulumi.azurenative.appplatform.inputs.GatewayInstanceResponse;
 import io.pulumi.azurenative.appplatform.inputs.GatewayOperatorPropertiesResponse;
 import io.pulumi.azurenative.appplatform.inputs.GatewayResourceRequestsResponse;
 import io.pulumi.azurenative.appplatform.inputs.SsoPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * API metadata property for Spring Cloud Gateway
      * 
      */
-    @InputImport(name="apiMetadataProperties")
+    @Import(name="apiMetadataProperties")
       private final @Nullable GatewayApiMetadataPropertiesResponse apiMetadataProperties;
 
     public Optional<GatewayApiMetadataPropertiesResponse> getApiMetadataProperties() {
@@ -41,7 +41,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * Cross-Origin Resource Sharing property
      * 
      */
-    @InputImport(name="corsProperties")
+    @Import(name="corsProperties")
       private final @Nullable GatewayCorsPropertiesResponse corsProperties;
 
     public Optional<GatewayCorsPropertiesResponse> getCorsProperties() {
@@ -52,7 +52,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * Indicate if only https is allowed.
      * 
      */
-    @InputImport(name="httpsOnly")
+    @Import(name="httpsOnly")
       private final @Nullable Boolean httpsOnly;
 
     public Optional<Boolean> getHttpsOnly() {
@@ -63,7 +63,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * Collection of instances belong to Spring Cloud Gateway.
      * 
      */
-    @InputImport(name="instances", required=true)
+    @Import(name="instances", required=true)
       private final List<GatewayInstanceResponse> instances;
 
     public List<GatewayInstanceResponse> getInstances() {
@@ -74,7 +74,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * Properties of the Spring Cloud Gateway Operator.
      * 
      */
-    @InputImport(name="operatorProperties", required=true)
+    @Import(name="operatorProperties", required=true)
       private final GatewayOperatorPropertiesResponse operatorProperties;
 
     public GatewayOperatorPropertiesResponse getOperatorProperties() {
@@ -85,7 +85,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * State of the Spring Cloud Gateway.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -96,7 +96,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * Indicates whether the Spring Cloud Gateway exposes endpoint.
      * 
      */
-    @InputImport(name="public")
+    @Import(name="public")
       private final @Nullable Boolean $public;
 
     public Optional<Boolean> get$public() {
@@ -107,7 +107,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * The requested resource quantity for required CPU and Memory.
      * 
      */
-    @InputImport(name="resourceRequests")
+    @Import(name="resourceRequests")
       private final @Nullable GatewayResourceRequestsResponse resourceRequests;
 
     public Optional<GatewayResourceRequestsResponse> getResourceRequests() {
@@ -118,7 +118,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * Single sign-on related configuration
      * 
      */
-    @InputImport(name="ssoProperties")
+    @Import(name="ssoProperties")
       private final @Nullable SsoPropertiesResponse ssoProperties;
 
     public Optional<SsoPropertiesResponse> getSsoProperties() {
@@ -129,7 +129,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * URL of the Spring Cloud Gateway, exposed when 'public' is true.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {

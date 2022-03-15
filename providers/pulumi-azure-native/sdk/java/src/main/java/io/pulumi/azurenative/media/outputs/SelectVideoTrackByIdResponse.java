@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SelectVideoTrackByIdResponse {
     /**
      * The discriminator for derived types.
@@ -22,10 +22,10 @@ public final class SelectVideoTrackByIdResponse {
      */
     private final Double trackId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SelectVideoTrackByIdResponse(
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("trackId") Double trackId) {
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("trackId") Double trackId) {
         this.odataType = odataType;
         this.trackId = trackId;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class MountPointMapResponse extends io.pulumi.resources.InvokeArgs 
      * Mount point for the share.
      * 
      */
-    @InputImport(name="mountPoint", required=true)
+    @Import(name="mountPoint", required=true)
       private final String mountPoint;
 
     public String getMountPoint() {
@@ -31,7 +31,7 @@ public final class MountPointMapResponse extends io.pulumi.resources.InvokeArgs 
      * Mounting type.
      * 
      */
-    @InputImport(name="mountType", required=true)
+    @Import(name="mountType", required=true)
       private final String mountType;
 
     public String getMountType() {
@@ -42,7 +42,7 @@ public final class MountPointMapResponse extends io.pulumi.resources.InvokeArgs 
      * ID of the role to which share is mounted.
      * 
      */
-    @InputImport(name="roleId", required=true)
+    @Import(name="roleId", required=true)
       private final String roleId;
 
     public String getRoleId() {
@@ -53,7 +53,7 @@ public final class MountPointMapResponse extends io.pulumi.resources.InvokeArgs 
      * Role type.
      * 
      */
-    @InputImport(name="roleType", required=true)
+    @Import(name="roleType", required=true)
       private final String roleType;
 
     public String getRoleType() {
@@ -64,7 +64,7 @@ public final class MountPointMapResponse extends io.pulumi.resources.InvokeArgs 
      * ID of the share mounted to the role VM.
      * 
      */
-    @InputImport(name="shareId", required=true)
+    @Import(name="shareId", required=true)
       private final String shareId;
 
     public String getShareId() {

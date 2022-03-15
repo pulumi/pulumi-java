@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Characters to not transform when masking.
      * 
      */
-    @InputImport(name="charactersToSkip")
+    @Import(name="charactersToSkip")
       private final @Nullable Output<String> charactersToSkip;
 
     public Output<String> getCharactersToSkip() {
@@ -30,7 +30,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Possible values are `NUMERIC`, `ALPHA_UPPER_CASE`, `ALPHA_LOWER_CASE`, `PUNCTUATION`, and `WHITESPACE`.
      * 
      */
-    @InputImport(name="commonCharactersToIgnore")
+    @Import(name="commonCharactersToIgnore")
       private final @Nullable Output<String> commonCharactersToIgnore;
 
     public Output<String> getCommonCharactersToIgnore() {

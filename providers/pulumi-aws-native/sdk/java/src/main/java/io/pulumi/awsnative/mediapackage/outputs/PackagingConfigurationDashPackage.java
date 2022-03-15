@@ -7,7 +7,7 @@ import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashPackageP
 import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashPackageSegmentTemplateFormat;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationDashEncryption;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationDashManifest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PackagingConfigurationDashPackage {
     /**
      * A list of DASH manifest configurations.
@@ -40,14 +40,14 @@ public final class PackagingConfigurationDashPackage {
      */
     private final @Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackagingConfigurationDashPackage(
-        @OutputCustomType.Parameter("dashManifests") List<PackagingConfigurationDashManifest> dashManifests,
-        @OutputCustomType.Parameter("encryption") @Nullable PackagingConfigurationDashEncryption encryption,
-        @OutputCustomType.Parameter("includeEncoderConfigurationInSegments") @Nullable Boolean includeEncoderConfigurationInSegments,
-        @OutputCustomType.Parameter("periodTriggers") @Nullable List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers,
-        @OutputCustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds,
-        @OutputCustomType.Parameter("segmentTemplateFormat") @Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat) {
+        @CustomType.Parameter("dashManifests") List<PackagingConfigurationDashManifest> dashManifests,
+        @CustomType.Parameter("encryption") @Nullable PackagingConfigurationDashEncryption encryption,
+        @CustomType.Parameter("includeEncoderConfigurationInSegments") @Nullable Boolean includeEncoderConfigurationInSegments,
+        @CustomType.Parameter("periodTriggers") @Nullable List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers,
+        @CustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds,
+        @CustomType.Parameter("segmentTemplateFormat") @Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat) {
         this.dashManifests = dashManifests;
         this.encryption = encryption;
         this.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;

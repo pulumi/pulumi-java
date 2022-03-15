@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.MitigationActionUpdateCACertificateParamsAction;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MitigationActionUpdateCACertificateParams {
     private final MitigationActionUpdateCACertificateParamsAction action;
 
-    @OutputCustomType.Constructor
-    private MitigationActionUpdateCACertificateParams(@OutputCustomType.Parameter("action") MitigationActionUpdateCACertificateParamsAction action) {
+    @CustomType.Constructor
+    private MitigationActionUpdateCACertificateParams(@CustomType.Parameter("action") MitigationActionUpdateCACertificateParamsAction action) {
         this.action = action;
     }
 

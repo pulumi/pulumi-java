@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.RouteTableTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRouteTableResult {
     /**
      * The route table ID.
@@ -24,10 +24,10 @@ public final class GetRouteTableResult {
      */
     private final @Nullable List<RouteTableTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRouteTableResult(
-        @OutputCustomType.Parameter("routeTableId") @Nullable String routeTableId,
-        @OutputCustomType.Parameter("tags") @Nullable List<RouteTableTag> tags) {
+        @CustomType.Parameter("routeTableId") @Nullable String routeTableId,
+        @CustomType.Parameter("tags") @Nullable List<RouteTableTag> tags) {
         this.routeTableId = routeTableId;
         this.tags = tags;
     }

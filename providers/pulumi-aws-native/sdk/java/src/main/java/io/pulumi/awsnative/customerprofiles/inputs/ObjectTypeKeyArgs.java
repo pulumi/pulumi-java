@@ -5,7 +5,7 @@ package io.pulumi.awsnative.customerprofiles.inputs;
 
 import io.pulumi.awsnative.customerprofiles.enums.ObjectTypeKeyStandardIdentifiersItem;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ObjectTypeKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The reference for the key name of the fields map.
      * 
      */
-    @InputImport(name="fieldNames")
+    @Import(name="fieldNames")
       private final @Nullable Output<List<String>> fieldNames;
 
     public Output<List<String>> getFieldNames() {
@@ -35,7 +35,7 @@ public final class ObjectTypeKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but multiple PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE means that it can be used to uniquely identify an object. If a key a is marked as SECONDARY, it will be used to search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only used to match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is only used if the profile does not already exist before the object is ingested, otherwise it is only used for matching objects to profiles.
      * 
      */
-    @InputImport(name="standardIdentifiers")
+    @Import(name="standardIdentifiers")
       private final @Nullable Output<List<ObjectTypeKeyStandardIdentifiersItem>> standardIdentifiers;
 
     public Output<List<ObjectTypeKeyStandardIdentifiersItem>> getStandardIdentifiers() {

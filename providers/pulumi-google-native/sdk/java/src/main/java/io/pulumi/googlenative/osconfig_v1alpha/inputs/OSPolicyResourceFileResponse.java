@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceFileGcsResponse;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceFileRemoteResponse;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class OSPolicyResourceFileResponse extends io.pulumi.resources.Invo
      * Defaults to false. When false, files are subject to validations based on the file type: Remote: A checksum must be specified. Cloud Storage: An object generation number must be specified.
      * 
      */
-    @InputImport(name="allowInsecure", required=true)
+    @Import(name="allowInsecure", required=true)
       private final Boolean allowInsecure;
 
     public Boolean getAllowInsecure() {
@@ -34,7 +34,7 @@ public final class OSPolicyResourceFileResponse extends io.pulumi.resources.Invo
      * A Cloud Storage object.
      * 
      */
-    @InputImport(name="gcs", required=true)
+    @Import(name="gcs", required=true)
       private final OSPolicyResourceFileGcsResponse gcs;
 
     public OSPolicyResourceFileGcsResponse getGcs() {
@@ -45,7 +45,7 @@ public final class OSPolicyResourceFileResponse extends io.pulumi.resources.Invo
      * A local path within the VM to use.
      * 
      */
-    @InputImport(name="localPath", required=true)
+    @Import(name="localPath", required=true)
       private final String localPath;
 
     public String getLocalPath() {
@@ -56,7 +56,7 @@ public final class OSPolicyResourceFileResponse extends io.pulumi.resources.Invo
      * A generic remote file.
      * 
      */
-    @InputImport(name="remote", required=true)
+    @Import(name="remote", required=true)
       private final OSPolicyResourceFileRemoteResponse remote;
 
     public OSPolicyResourceFileRemoteResponse getRemote() {

@@ -18,12 +18,12 @@ import io.pulumi.awsnative.appflow.enums.FlowSlackConnectorOperator;
 import io.pulumi.awsnative.appflow.enums.FlowTrendmicroConnectorOperator;
 import io.pulumi.awsnative.appflow.enums.FlowVeevaConnectorOperator;
 import io.pulumi.awsnative.appflow.enums.FlowZendeskConnectorOperator;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowConnectorOperator {
     private final @Nullable FlowAmplitudeConnectorOperator amplitude;
     private final @Nullable FlowDatadogConnectorOperator datadog;
@@ -41,23 +41,23 @@ public final class FlowConnectorOperator {
     private final @Nullable FlowVeevaConnectorOperator veeva;
     private final @Nullable FlowZendeskConnectorOperator zendesk;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowConnectorOperator(
-        @OutputCustomType.Parameter("amplitude") @Nullable FlowAmplitudeConnectorOperator amplitude,
-        @OutputCustomType.Parameter("datadog") @Nullable FlowDatadogConnectorOperator datadog,
-        @OutputCustomType.Parameter("dynatrace") @Nullable FlowDynatraceConnectorOperator dynatrace,
-        @OutputCustomType.Parameter("googleAnalytics") @Nullable FlowGoogleAnalyticsConnectorOperator googleAnalytics,
-        @OutputCustomType.Parameter("inforNexus") @Nullable FlowInforNexusConnectorOperator inforNexus,
-        @OutputCustomType.Parameter("marketo") @Nullable FlowMarketoConnectorOperator marketo,
-        @OutputCustomType.Parameter("s3") @Nullable FlowS3ConnectorOperator s3,
-        @OutputCustomType.Parameter("sAPOData") @Nullable FlowSAPODataConnectorOperator sAPOData,
-        @OutputCustomType.Parameter("salesforce") @Nullable FlowSalesforceConnectorOperator salesforce,
-        @OutputCustomType.Parameter("serviceNow") @Nullable FlowServiceNowConnectorOperator serviceNow,
-        @OutputCustomType.Parameter("singular") @Nullable FlowSingularConnectorOperator singular,
-        @OutputCustomType.Parameter("slack") @Nullable FlowSlackConnectorOperator slack,
-        @OutputCustomType.Parameter("trendmicro") @Nullable FlowTrendmicroConnectorOperator trendmicro,
-        @OutputCustomType.Parameter("veeva") @Nullable FlowVeevaConnectorOperator veeva,
-        @OutputCustomType.Parameter("zendesk") @Nullable FlowZendeskConnectorOperator zendesk) {
+        @CustomType.Parameter("amplitude") @Nullable FlowAmplitudeConnectorOperator amplitude,
+        @CustomType.Parameter("datadog") @Nullable FlowDatadogConnectorOperator datadog,
+        @CustomType.Parameter("dynatrace") @Nullable FlowDynatraceConnectorOperator dynatrace,
+        @CustomType.Parameter("googleAnalytics") @Nullable FlowGoogleAnalyticsConnectorOperator googleAnalytics,
+        @CustomType.Parameter("inforNexus") @Nullable FlowInforNexusConnectorOperator inforNexus,
+        @CustomType.Parameter("marketo") @Nullable FlowMarketoConnectorOperator marketo,
+        @CustomType.Parameter("s3") @Nullable FlowS3ConnectorOperator s3,
+        @CustomType.Parameter("sAPOData") @Nullable FlowSAPODataConnectorOperator sAPOData,
+        @CustomType.Parameter("salesforce") @Nullable FlowSalesforceConnectorOperator salesforce,
+        @CustomType.Parameter("serviceNow") @Nullable FlowServiceNowConnectorOperator serviceNow,
+        @CustomType.Parameter("singular") @Nullable FlowSingularConnectorOperator singular,
+        @CustomType.Parameter("slack") @Nullable FlowSlackConnectorOperator slack,
+        @CustomType.Parameter("trendmicro") @Nullable FlowTrendmicroConnectorOperator trendmicro,
+        @CustomType.Parameter("veeva") @Nullable FlowVeevaConnectorOperator veeva,
+        @CustomType.Parameter("zendesk") @Nullable FlowZendeskConnectorOperator zendesk) {
         this.amplitude = amplitude;
         this.datadog = datadog;
         this.dynatrace = dynatrace;

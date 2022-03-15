@@ -9,7 +9,7 @@ import io.pulumi.awsnative.gamelift.outputs.GameServerGroupAutoScalingPolicy;
 import io.pulumi.awsnative.gamelift.outputs.GameServerGroupInstanceDefinition;
 import io.pulumi.awsnative.gamelift.outputs.GameServerGroupLaunchTemplate;
 import io.pulumi.awsnative.gamelift.outputs.GameServerGroupTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGameServerGroupResult {
     /**
      * A generated unique ID for the EC2 Auto Scaling group that is associated with this game server group.
@@ -85,21 +85,21 @@ public final class GetGameServerGroupResult {
      */
     private final @Nullable List<String> vpcSubnets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGameServerGroupResult(
-        @OutputCustomType.Parameter("autoScalingGroupArn") @Nullable String autoScalingGroupArn,
-        @OutputCustomType.Parameter("autoScalingPolicy") @Nullable GameServerGroupAutoScalingPolicy autoScalingPolicy,
-        @OutputCustomType.Parameter("balancingStrategy") @Nullable GameServerGroupBalancingStrategy balancingStrategy,
-        @OutputCustomType.Parameter("gameServerGroupArn") @Nullable String gameServerGroupArn,
-        @OutputCustomType.Parameter("gameServerGroupName") @Nullable String gameServerGroupName,
-        @OutputCustomType.Parameter("gameServerProtectionPolicy") @Nullable GameServerGroupGameServerProtectionPolicy gameServerProtectionPolicy,
-        @OutputCustomType.Parameter("instanceDefinitions") @Nullable List<GameServerGroupInstanceDefinition> instanceDefinitions,
-        @OutputCustomType.Parameter("launchTemplate") @Nullable GameServerGroupLaunchTemplate launchTemplate,
-        @OutputCustomType.Parameter("maxSize") @Nullable Double maxSize,
-        @OutputCustomType.Parameter("minSize") @Nullable Double minSize,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<GameServerGroupTag> tags,
-        @OutputCustomType.Parameter("vpcSubnets") @Nullable List<String> vpcSubnets) {
+        @CustomType.Parameter("autoScalingGroupArn") @Nullable String autoScalingGroupArn,
+        @CustomType.Parameter("autoScalingPolicy") @Nullable GameServerGroupAutoScalingPolicy autoScalingPolicy,
+        @CustomType.Parameter("balancingStrategy") @Nullable GameServerGroupBalancingStrategy balancingStrategy,
+        @CustomType.Parameter("gameServerGroupArn") @Nullable String gameServerGroupArn,
+        @CustomType.Parameter("gameServerGroupName") @Nullable String gameServerGroupName,
+        @CustomType.Parameter("gameServerProtectionPolicy") @Nullable GameServerGroupGameServerProtectionPolicy gameServerProtectionPolicy,
+        @CustomType.Parameter("instanceDefinitions") @Nullable List<GameServerGroupInstanceDefinition> instanceDefinitions,
+        @CustomType.Parameter("launchTemplate") @Nullable GameServerGroupLaunchTemplate launchTemplate,
+        @CustomType.Parameter("maxSize") @Nullable Double maxSize,
+        @CustomType.Parameter("minSize") @Nullable Double minSize,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("tags") @Nullable List<GameServerGroupTag> tags,
+        @CustomType.Parameter("vpcSubnets") @Nullable List<String> vpcSubnets) {
         this.autoScalingGroupArn = autoScalingGroupArn;
         this.autoScalingPolicy = autoScalingPolicy;
         this.balancingStrategy = balancingStrategy;

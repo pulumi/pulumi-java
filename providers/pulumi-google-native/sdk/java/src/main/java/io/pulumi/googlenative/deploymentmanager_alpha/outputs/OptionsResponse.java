@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.AsyncOptionsResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.InputMappingResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.ValidationOptionsResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OptionsResponse {
     /**
      * Options regarding how to thread async requests.
@@ -34,12 +34,12 @@ public final class OptionsResponse {
      */
     private final ValidationOptionsResponse validationOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OptionsResponse(
-        @OutputCustomType.Parameter("asyncOptions") List<AsyncOptionsResponse> asyncOptions,
-        @OutputCustomType.Parameter("inputMappings") List<InputMappingResponse> inputMappings,
-        @OutputCustomType.Parameter("nameProperty") String nameProperty,
-        @OutputCustomType.Parameter("validationOptions") ValidationOptionsResponse validationOptions) {
+        @CustomType.Parameter("asyncOptions") List<AsyncOptionsResponse> asyncOptions,
+        @CustomType.Parameter("inputMappings") List<InputMappingResponse> inputMappings,
+        @CustomType.Parameter("nameProperty") String nameProperty,
+        @CustomType.Parameter("validationOptions") ValidationOptionsResponse validationOptions) {
         this.asyncOptions = asyncOptions;
         this.inputMappings = inputMappings;
         this.nameProperty = nameProperty;

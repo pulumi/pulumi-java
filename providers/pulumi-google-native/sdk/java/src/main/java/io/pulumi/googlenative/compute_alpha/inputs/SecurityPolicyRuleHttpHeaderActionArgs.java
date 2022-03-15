@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SecurityPolicyRuleHttpHeaderActionArgs extends io.pulumi.reso
      * The list of request headers to add or overwrite if they're already present.
      * 
      */
-    @InputImport(name="requestHeadersToAdds")
+    @Import(name="requestHeadersToAdds")
       private final @Nullable Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> requestHeadersToAdds;
 
     public Output<List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs>> getRequestHeadersToAdds() {

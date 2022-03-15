@@ -4,14 +4,14 @@
 package io.pulumi.aws.kinesis.outputs;
 
 import io.pulumi.aws.kinesis.outputs.GetStreamStreamModeDetail;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetStreamResult {
     /**
      * The Amazon Resource Name (ARN) of the Kinesis Stream (same as id).
@@ -69,19 +69,19 @@ public final class GetStreamResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStreamResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("closedShards") List<String> closedShards,
-        @OutputCustomType.Parameter("creationTimestamp") Integer creationTimestamp,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("openShards") List<String> openShards,
-        @OutputCustomType.Parameter("retentionPeriod") Integer retentionPeriod,
-        @OutputCustomType.Parameter("shardLevelMetrics") List<String> shardLevelMetrics,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("streamModeDetails") List<GetStreamStreamModeDetail> streamModeDetails,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("closedShards") List<String> closedShards,
+        @CustomType.Parameter("creationTimestamp") Integer creationTimestamp,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("openShards") List<String> openShards,
+        @CustomType.Parameter("retentionPeriod") Integer retentionPeriod,
+        @CustomType.Parameter("shardLevelMetrics") List<String> shardLevelMetrics,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("streamModeDetails") List<GetStreamStreamModeDetail> streamModeDetails,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.closedShards = closedShards;
         this.creationTimestamp = creationTimestamp;

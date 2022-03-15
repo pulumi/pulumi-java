@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsArgs ext
      * * CUSTOM: when set to `CUSTOM`, you must encode the partition key schema within the `source_uri_prefix` by setting `source_uri_prefix` to `gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}`.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
@@ -39,7 +39,7 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsArgs ext
      * specified.
      * 
      */
-    @InputImport(name="requirePartitionFilter")
+    @Import(name="requirePartitionFilter")
       private final @Nullable Output<Boolean> requirePartitionFilter;
 
     public Output<Boolean> getRequirePartitionFilter() {
@@ -57,7 +57,7 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsArgs ext
      * Note that when `mode` is set to `CUSTOM`, you must encode the partition key schema within the `source_uri_prefix` by setting `source_uri_prefix` to `gs://bucket/path_to_table/{key1:TYPE1}/{key2:TYPE2}/{key3:TYPE3}`.
      * 
      */
-    @InputImport(name="sourceUriPrefix")
+    @Import(name="sourceUriPrefix")
       private final @Nullable Output<String> sourceUriPrefix;
 
     public Output<String> getSourceUriPrefix() {

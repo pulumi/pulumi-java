@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.organizations.outputs.GetIAMPolicyAuditConfigAuditLogConfig;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetIAMPolicyAuditConfig {
     /**
      * A nested block that defines the operations you'd like to log.
@@ -22,10 +22,10 @@ public final class GetIAMPolicyAuditConfig {
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIAMPolicyAuditConfig(
-        @OutputCustomType.Parameter("auditLogConfigs") List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("auditLogConfigs") List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs,
+        @CustomType.Parameter("service") String service) {
         this.auditLogConfigs = auditLogConfigs;
         this.service = service;
     }

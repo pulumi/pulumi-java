@@ -7,7 +7,7 @@ import io.pulumi.awsnative.globalaccelerator.enums.ListenerClientAffinity;
 import io.pulumi.awsnative.globalaccelerator.enums.ListenerProtocol;
 import io.pulumi.awsnative.globalaccelerator.inputs.ListenerPortRangeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the accelerator.
      * 
      */
-    @InputImport(name="acceleratorArn", required=true)
+    @Import(name="acceleratorArn", required=true)
       private final Output<String> acceleratorArn;
 
     public Output<String> getAcceleratorArn() {
@@ -33,14 +33,14 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * Client affinity lets you direct all requests from a user to the same endpoint.
      * 
      */
-    @InputImport(name="clientAffinity")
+    @Import(name="clientAffinity")
       private final @Nullable Output<ListenerClientAffinity> clientAffinity;
 
     public Output<ListenerClientAffinity> getClientAffinity() {
         return this.clientAffinity == null ? Output.empty() : this.clientAffinity;
     }
 
-    @InputImport(name="portRanges", required=true)
+    @Import(name="portRanges", required=true)
       private final Output<List<ListenerPortRangeArgs>> portRanges;
 
     public Output<List<ListenerPortRangeArgs>> getPortRanges() {
@@ -51,7 +51,7 @@ public final class ListenerArgs extends io.pulumi.resources.ResourceArgs {
      * The protocol for the listener.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<ListenerProtocol> protocol;
 
     public Output<ListenerProtocol> getProtocol() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScanRunResponse {
     /**
      * The time at which the ScanRun reached termination state - that the ScanRun is either finished or stopped by user.
@@ -57,17 +57,17 @@ public final class ScanRunResponse {
      */
     private final String urlsTestedCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScanRunResponse(
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("executionState") String executionState,
-        @OutputCustomType.Parameter("hasVulnerabilities") Boolean hasVulnerabilities,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("progressPercent") Integer progressPercent,
-        @OutputCustomType.Parameter("resultState") String resultState,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("urlsCrawledCount") String urlsCrawledCount,
-        @OutputCustomType.Parameter("urlsTestedCount") String urlsTestedCount) {
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("executionState") String executionState,
+        @CustomType.Parameter("hasVulnerabilities") Boolean hasVulnerabilities,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("progressPercent") Integer progressPercent,
+        @CustomType.Parameter("resultState") String resultState,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("urlsCrawledCount") String urlsCrawledCount,
+        @CustomType.Parameter("urlsTestedCount") String urlsTestedCount) {
         this.endTime = endTime;
         this.executionState = executionState;
         this.hasVulnerabilities = hasVulnerabilities;

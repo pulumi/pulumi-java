@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.events.outputs;
 
 import io.pulumi.awsnative.events.enums.ApiDestinationHttpMethod;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApiDestinationResult {
     /**
      * The arn of the api destination.
@@ -32,14 +32,14 @@ public final class GetApiDestinationResult {
     private final @Nullable String invocationEndpoint;
     private final @Nullable Integer invocationRateLimitPerSecond;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApiDestinationResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("connectionArn") @Nullable String connectionArn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("httpMethod") @Nullable ApiDestinationHttpMethod httpMethod,
-        @OutputCustomType.Parameter("invocationEndpoint") @Nullable String invocationEndpoint,
-        @OutputCustomType.Parameter("invocationRateLimitPerSecond") @Nullable Integer invocationRateLimitPerSecond) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("connectionArn") @Nullable String connectionArn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("httpMethod") @Nullable ApiDestinationHttpMethod httpMethod,
+        @CustomType.Parameter("invocationEndpoint") @Nullable String invocationEndpoint,
+        @CustomType.Parameter("invocationRateLimitPerSecond") @Nullable Integer invocationRateLimitPerSecond) {
         this.arn = arn;
         this.connectionArn = connectionArn;
         this.description = description;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CrawlerS3Target {
     /**
      * The name of the connection to use to connect to the Delta table target.
@@ -44,14 +44,14 @@ public final class CrawlerS3Target {
      */
     private final @Nullable Integer sampleSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CrawlerS3Target(
-        @OutputCustomType.Parameter("connectionName") @Nullable String connectionName,
-        @OutputCustomType.Parameter("dlqEventQueueArn") @Nullable String dlqEventQueueArn,
-        @OutputCustomType.Parameter("eventQueueArn") @Nullable String eventQueueArn,
-        @OutputCustomType.Parameter("exclusions") @Nullable List<String> exclusions,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("sampleSize") @Nullable Integer sampleSize) {
+        @CustomType.Parameter("connectionName") @Nullable String connectionName,
+        @CustomType.Parameter("dlqEventQueueArn") @Nullable String dlqEventQueueArn,
+        @CustomType.Parameter("eventQueueArn") @Nullable String eventQueueArn,
+        @CustomType.Parameter("exclusions") @Nullable List<String> exclusions,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("sampleSize") @Nullable Integer sampleSize) {
         this.connectionName = connectionName;
         this.dlqEventQueueArn = dlqEventQueueArn;
         this.eventQueueArn = eventQueueArn;

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelPackageGroupTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,21 +17,21 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
 
     public static final ModelPackageGroupArgs Empty = new ModelPackageGroupArgs();
 
-    @InputImport(name="modelPackageGroupDescription")
+    @Import(name="modelPackageGroupDescription")
       private final @Nullable Output<String> modelPackageGroupDescription;
 
     public Output<String> getModelPackageGroupDescription() {
         return this.modelPackageGroupDescription == null ? Output.empty() : this.modelPackageGroupDescription;
     }
 
-    @InputImport(name="modelPackageGroupName")
+    @Import(name="modelPackageGroupName")
       private final @Nullable Output<String> modelPackageGroupName;
 
     public Output<String> getModelPackageGroupName() {
         return this.modelPackageGroupName == null ? Output.empty() : this.modelPackageGroupName;
     }
 
-    @InputImport(name="modelPackageGroupPolicy")
+    @Import(name="modelPackageGroupPolicy")
       private final @Nullable Output<Object> modelPackageGroupPolicy;
 
     public Output<Object> getModelPackageGroupPolicy() {
@@ -42,7 +42,7 @@ public final class ModelPackageGroupArgs extends io.pulumi.resources.ResourceArg
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ModelPackageGroupTagArgs>> tags;
 
     public Output<List<ModelPackageGroupTagArgs>> getTags() {

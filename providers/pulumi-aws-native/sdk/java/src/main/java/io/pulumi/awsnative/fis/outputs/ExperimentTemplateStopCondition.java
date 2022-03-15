@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.fis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExperimentTemplateStopCondition {
     private final String source;
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExperimentTemplateStopCondition(
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.source = source;
         this.value = value;
     }

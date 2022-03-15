@@ -20,7 +20,7 @@ import io.pulumi.azurenative.batch.outputs.TaskSchedulingPolicyResponse;
 import io.pulumi.azurenative.batch.outputs.UserAccountResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -44,13 +44,13 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="azure-native:batch:Pool")
 public class Pool extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="allocationState", type=String.class, parameters={})
+    @Export(name="allocationState", type=String.class, parameters={})
     private Output<String> allocationState;
 
     public Output<String> getAllocationState() {
         return this.allocationState;
     }
-    @OutputExport(name="allocationStateTransitionTime", type=String.class, parameters={})
+    @Export(name="allocationStateTransitionTime", type=String.class, parameters={})
     private Output<String> allocationStateTransitionTime;
 
     public Output<String> getAllocationStateTransitionTime() {
@@ -60,7 +60,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * The list of application licenses must be a subset of available Batch service application licenses. If a license is requested which is not supported, pool creation will fail.
      * 
      */
-    @OutputExport(name="applicationLicenses", type=List.class, parameters={String.class})
+    @Export(name="applicationLicenses", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> applicationLicenses;
 
     /**
@@ -74,7 +74,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * Changes to application package references affect all new compute nodes joining the pool, but do not affect compute nodes that are already in the pool until they are rebooted or reimaged. There is a maximum of 10 application package references on any given pool.
      * 
      */
-    @OutputExport(name="applicationPackages", type=List.class, parameters={ApplicationPackageReferenceResponse.class})
+    @Export(name="applicationPackages", type=List.class, parameters={ApplicationPackageReferenceResponse.class})
     private Output</* @Nullable */ List<ApplicationPackageReferenceResponse>> applicationPackages;
 
     /**
@@ -88,7 +88,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * This property is set only if the pool automatically scales, i.e. autoScaleSettings are used.
      * 
      */
-    @OutputExport(name="autoScaleRun", type=AutoScaleRunResponse.class, parameters={})
+    @Export(name="autoScaleRun", type=AutoScaleRunResponse.class, parameters={})
     private Output<AutoScaleRunResponse> autoScaleRun;
 
     /**
@@ -102,7 +102,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * For Windows compute nodes, the Batch service installs the certificates to the specified certificate store and location. For Linux compute nodes, the certificates are stored in a directory inside the task working directory and an environment variable AZ_BATCH_CERTIFICATES_DIR is supplied to the task to query for this location. For certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/{user-name}/certs) and certificates are placed in that directory.
      * 
      */
-    @OutputExport(name="certificates", type=List.class, parameters={CertificateReferenceResponse.class})
+    @Export(name="certificates", type=List.class, parameters={CertificateReferenceResponse.class})
     private Output</* @Nullable */ List<CertificateReferenceResponse>> certificates;
 
     /**
@@ -112,19 +112,19 @@ public class Pool extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<CertificateReferenceResponse>> getCertificates() {
         return this.certificates;
     }
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     public Output<String> getCreationTime() {
         return this.creationTime;
     }
-    @OutputExport(name="currentDedicatedNodes", type=Integer.class, parameters={})
+    @Export(name="currentDedicatedNodes", type=Integer.class, parameters={})
     private Output<Integer> currentDedicatedNodes;
 
     public Output<Integer> getCurrentDedicatedNodes() {
         return this.currentDedicatedNodes;
     }
-    @OutputExport(name="currentLowPriorityNodes", type=Integer.class, parameters={})
+    @Export(name="currentLowPriorityNodes", type=Integer.class, parameters={})
     private Output<Integer> currentLowPriorityNodes;
 
     public Output<Integer> getCurrentLowPriorityNodes() {
@@ -134,7 +134,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * Using CloudServiceConfiguration specifies that the nodes should be creating using Azure Cloud Services (PaaS), while VirtualMachineConfiguration uses Azure Virtual Machines (IaaS).
      * 
      */
-    @OutputExport(name="deploymentConfiguration", type=DeploymentConfigurationResponse.class, parameters={})
+    @Export(name="deploymentConfiguration", type=DeploymentConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ DeploymentConfigurationResponse> deploymentConfiguration;
 
     /**
@@ -148,7 +148,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -162,7 +162,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * The ETag of the resource, used for concurrency statements.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -176,7 +176,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * The type of identity used for the Batch Pool.
      * 
      */
-    @OutputExport(name="identity", type=BatchPoolIdentityResponse.class, parameters={})
+    @Export(name="identity", type=BatchPoolIdentityResponse.class, parameters={})
     private Output</* @Nullable */ BatchPoolIdentityResponse> identity;
 
     /**
@@ -190,7 +190,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * This imposes restrictions on which nodes can be assigned to the pool. Enabling this value can reduce the chance of the requested number of nodes to be allocated in the pool. If not specified, this value defaults to 'Disabled'.
      * 
      */
-    @OutputExport(name="interNodeCommunication", type=String.class, parameters={})
+    @Export(name="interNodeCommunication", type=String.class, parameters={})
     private Output</* @Nullable */ String> interNodeCommunication;
 
     /**
@@ -204,7 +204,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * This is the last time at which the pool level data, such as the targetDedicatedNodes or autoScaleSettings, changed. It does not factor in node-level changes such as a compute node changing state.
      * 
      */
-    @OutputExport(name="lastModified", type=String.class, parameters={})
+    @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
@@ -218,7 +218,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * The Batch service does not assign any meaning to metadata; it is solely for the use of user code.
      * 
      */
-    @OutputExport(name="metadata", type=List.class, parameters={MetadataItemResponse.class})
+    @Export(name="metadata", type=List.class, parameters={MetadataItemResponse.class})
     private Output</* @Nullable */ List<MetadataItemResponse>> metadata;
 
     /**
@@ -232,7 +232,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * This supports Azure Files, NFS, CIFS/SMB, and Blobfuse.
      * 
      */
-    @OutputExport(name="mountConfiguration", type=List.class, parameters={MountConfigurationResponse.class})
+    @Export(name="mountConfiguration", type=List.class, parameters={MountConfigurationResponse.class})
     private Output</* @Nullable */ List<MountConfigurationResponse>> mountConfiguration;
 
     /**
@@ -246,7 +246,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -260,7 +260,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * The network configuration for a pool.
      * 
      */
-    @OutputExport(name="networkConfiguration", type=NetworkConfigurationResponse.class, parameters={})
+    @Export(name="networkConfiguration", type=NetworkConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ NetworkConfigurationResponse> networkConfiguration;
 
     /**
@@ -270,13 +270,13 @@ public class Pool extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ NetworkConfigurationResponse> getNetworkConfiguration() {
         return this.networkConfiguration;
     }
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
         return this.provisioningState;
     }
-    @OutputExport(name="provisioningStateTransitionTime", type=String.class, parameters={})
+    @Export(name="provisioningStateTransitionTime", type=String.class, parameters={})
     private Output<String> provisioningStateTransitionTime;
 
     public Output<String> getProvisioningStateTransitionTime() {
@@ -286,7 +286,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * Describes either the current operation (if the pool AllocationState is Resizing) or the previously completed operation (if the AllocationState is Steady).
      * 
      */
-    @OutputExport(name="resizeOperationStatus", type=ResizeOperationStatusResponse.class, parameters={})
+    @Export(name="resizeOperationStatus", type=ResizeOperationStatusResponse.class, parameters={})
     private Output<ResizeOperationStatusResponse> resizeOperationStatus;
 
     /**
@@ -300,7 +300,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * Defines the desired size of the pool. This can either be 'fixedScale' where the requested targetDedicatedNodes is specified, or 'autoScale' which defines a formula which is periodically reevaluated. If this property is not specified, the pool will have a fixed scale with 0 targetDedicatedNodes.
      * 
      */
-    @OutputExport(name="scaleSettings", type=ScaleSettingsResponse.class, parameters={})
+    @Export(name="scaleSettings", type=ScaleSettingsResponse.class, parameters={})
     private Output</* @Nullable */ ScaleSettingsResponse> scaleSettings;
 
     /**
@@ -314,7 +314,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * In an PATCH (update) operation, this property can be set to an empty object to remove the start task from the pool.
      * 
      */
-    @OutputExport(name="startTask", type=StartTaskResponse.class, parameters={})
+    @Export(name="startTask", type=StartTaskResponse.class, parameters={})
     private Output</* @Nullable */ StartTaskResponse> startTask;
 
     /**
@@ -328,7 +328,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * If not specified, the default is spread.
      * 
      */
-    @OutputExport(name="taskSchedulingPolicy", type=TaskSchedulingPolicyResponse.class, parameters={})
+    @Export(name="taskSchedulingPolicy", type=TaskSchedulingPolicyResponse.class, parameters={})
     private Output</* @Nullable */ TaskSchedulingPolicyResponse> taskSchedulingPolicy;
 
     /**
@@ -342,7 +342,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * The default value is 1. The maximum value is the smaller of 4 times the number of cores of the vmSize of the pool or 256.
      * 
      */
-    @OutputExport(name="taskSlotsPerNode", type=Integer.class, parameters={})
+    @Export(name="taskSlotsPerNode", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> taskSlotsPerNode;
 
     /**
@@ -356,7 +356,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -366,7 +366,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
     public Output<String> getType() {
         return this.type;
     }
-    @OutputExport(name="userAccounts", type=List.class, parameters={UserAccountResponse.class})
+    @Export(name="userAccounts", type=List.class, parameters={UserAccountResponse.class})
     private Output</* @Nullable */ List<UserAccountResponse>> userAccounts;
 
     public Output</* @Nullable */ List<UserAccountResponse>> getUserAccounts() {
@@ -376,7 +376,7 @@ public class Pool extends io.pulumi.resources.CustomResource {
      * For information about available sizes of virtual machines for Cloud Services pools (pools created with cloudServiceConfiguration), see Sizes for Cloud Services (https://azure.microsoft.com/documentation/articles/cloud-services-sizes-specs/). Batch supports all Cloud Services VM sizes except ExtraSmall. For information about available VM sizes for pools using images from the Virtual Machines Marketplace (pools created with virtualMachineConfiguration) see Sizes for Virtual Machines (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) or Sizes for Virtual Machines (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch supports all Azure VM sizes except STANDARD_A0 and those with premium storage (STANDARD_GS, STANDARD_DS, and STANDARD_DSV2 series).
      * 
      */
-    @OutputExport(name="vmSize", type=String.class, parameters={})
+    @Export(name="vmSize", type=String.class, parameters={})
     private Output</* @Nullable */ String> vmSize;
 
     /**

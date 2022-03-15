@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * A map of arguments used to configure the endpoint.
      * 
      */
-    @InputImport(name="arguments")
+    @Import(name="arguments")
       private final @Nullable Output<Map<String,Object>> arguments;
 
     public Output<Map<String,Object>> getArguments() {
@@ -33,7 +33,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the endpoint.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -44,7 +44,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * The AWS availability zone where this endpoint is located.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -55,7 +55,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * Path to one or more Java Jars in an S3 bucket that should be loaded in this endpoint.
      * 
      */
-    @InputImport(name="extraJarsS3Path")
+    @Import(name="extraJarsS3Path")
       private final @Nullable Output<String> extraJarsS3Path;
 
     public Output<String> getExtraJarsS3Path() {
@@ -66,7 +66,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * Path(s) to one or more Python libraries in an S3 bucket that should be loaded in this endpoint. Multiple values must be complete paths separated by a comma.
      * 
      */
-    @InputImport(name="extraPythonLibsS3Path")
+    @Import(name="extraPythonLibsS3Path")
       private final @Nullable Output<String> extraPythonLibsS3Path;
 
     public Output<String> getExtraPythonLibsS3Path() {
@@ -77,7 +77,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * The reason for a current failure in this endpoint.
      * 
      */
-    @InputImport(name="failureReason")
+    @Import(name="failureReason")
       private final @Nullable Output<String> failureReason;
 
     public Output<String> getFailureReason() {
@@ -88,7 +88,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * -  Specifies the versions of Python and Apache Spark to use. Defaults to AWS Glue version 0.9.
      * 
      */
-    @InputImport(name="glueVersion")
+    @Import(name="glueVersion")
       private final @Nullable Output<String> glueVersion;
 
     public Output<String> getGlueVersion() {
@@ -99,7 +99,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * The name of this endpoint. It must be unique in your account.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -110,7 +110,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * The number of AWS Glue Data Processing Units (DPUs) to allocate to this endpoint. Conflicts with `worker_type`.
      * 
      */
-    @InputImport(name="numberOfNodes")
+    @Import(name="numberOfNodes")
       private final @Nullable Output<Integer> numberOfNodes;
 
     public Output<Integer> getNumberOfNodes() {
@@ -121,7 +121,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * The number of workers of a defined worker type that are allocated to this endpoint. This field is available only when you choose worker type G.1X or G.2X.
      * 
      */
-    @InputImport(name="numberOfWorkers")
+    @Import(name="numberOfWorkers")
       private final @Nullable Output<Integer> numberOfWorkers;
 
     public Output<Integer> getNumberOfWorkers() {
@@ -132,7 +132,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * A private IP address to access the endpoint within a VPC, if this endpoint is created within one.
      * 
      */
-    @InputImport(name="privateAddress")
+    @Import(name="privateAddress")
       private final @Nullable Output<String> privateAddress;
 
     public Output<String> getPrivateAddress() {
@@ -143,7 +143,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * The public IP address used by this endpoint. The PublicAddress field is present only when you create a non-VPC endpoint.
      * 
      */
-    @InputImport(name="publicAddress")
+    @Import(name="publicAddress")
       private final @Nullable Output<String> publicAddress;
 
     public Output<String> getPublicAddress() {
@@ -154,7 +154,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * The public key to be used by this endpoint for authentication.
      * 
      */
-    @InputImport(name="publicKey")
+    @Import(name="publicKey")
       private final @Nullable Output<String> publicKey;
 
     public Output<String> getPublicKey() {
@@ -165,7 +165,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * A list of public keys to be used by this endpoint for authentication.
      * 
      */
-    @InputImport(name="publicKeys")
+    @Import(name="publicKeys")
       private final @Nullable Output<List<String>> publicKeys;
 
     public Output<List<String>> getPublicKeys() {
@@ -176,7 +176,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * The IAM role for this endpoint.
      * 
      */
-    @InputImport(name="roleArn")
+    @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
@@ -187,7 +187,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * The name of the Security Configuration structure to be used with this endpoint.
      * 
      */
-    @InputImport(name="securityConfiguration")
+    @Import(name="securityConfiguration")
       private final @Nullable Output<String> securityConfiguration;
 
     public Output<String> getSecurityConfiguration() {
@@ -198,7 +198,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * Security group IDs for the security groups to be used by this endpoint.
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -209,7 +209,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * The current status of this endpoint.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -220,7 +220,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * The subnet ID for the new endpoint to use.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -231,7 +231,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -242,7 +242,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -253,7 +253,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * he ID of the VPC used by this endpoint.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
@@ -264,7 +264,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * The type of predefined worker that is allocated to this endpoint. Accepts a value of Standard, G.1X, or G.2X.
      * 
      */
-    @InputImport(name="workerType")
+    @Import(name="workerType")
       private final @Nullable Output<String> workerType;
 
     public Output<String> getWorkerType() {
@@ -275,7 +275,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * The YARN endpoint address used by this endpoint.
      * 
      */
-    @InputImport(name="yarnEndpointAddress")
+    @Import(name="yarnEndpointAddress")
       private final @Nullable Output<String> yarnEndpointAddress;
 
     public Output<String> getYarnEndpointAddress() {
@@ -286,7 +286,7 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
      * The Apache Zeppelin port for the remote Apache Spark interpreter.
      * 
      */
-    @InputImport(name="zeppelinRemoteSparkInterpreterPort")
+    @Import(name="zeppelinRemoteSparkInterpreterPort")
       private final @Nullable Output<Integer> zeppelinRemoteSparkInterpreterPort;
 
     public Output<Integer> getZeppelinRemoteSparkInterpreterPort() {

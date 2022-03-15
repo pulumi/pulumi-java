@@ -10,7 +10,7 @@ import io.pulumi.azurenative.compute.outputs.SkuResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class AvailabilitySet extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -53,7 +53,7 @@ public class AvailabilitySet extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -67,7 +67,7 @@ public class AvailabilitySet extends io.pulumi.resources.CustomResource {
      * Fault Domain count.
      * 
      */
-    @OutputExport(name="platformFaultDomainCount", type=Integer.class, parameters={})
+    @Export(name="platformFaultDomainCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> platformFaultDomainCount;
 
     /**
@@ -81,7 +81,7 @@ public class AvailabilitySet extends io.pulumi.resources.CustomResource {
      * Update Domain count.
      * 
      */
-    @OutputExport(name="platformUpdateDomainCount", type=Integer.class, parameters={})
+    @Export(name="platformUpdateDomainCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> platformUpdateDomainCount;
 
     /**
@@ -95,7 +95,7 @@ public class AvailabilitySet extends io.pulumi.resources.CustomResource {
      * Specifies information about the proximity placement group that the availability set should be assigned to. <br><br>Minimum api-version: 2018-04-01.
      * 
      */
-    @OutputExport(name="proximityPlacementGroup", type=SubResourceResponse.class, parameters={})
+    @Export(name="proximityPlacementGroup", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> proximityPlacementGroup;
 
     /**
@@ -109,7 +109,7 @@ public class AvailabilitySet extends io.pulumi.resources.CustomResource {
      * Sku of the availability set, only name is required to be set. See AvailabilitySetSkuTypes for possible set of values. Use 'Aligned' for virtual machines with managed disks and 'Classic' for virtual machines with unmanaged disks. Default value is 'Classic'.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -123,7 +123,7 @@ public class AvailabilitySet extends io.pulumi.resources.CustomResource {
      * The resource status information.
      * 
      */
-    @OutputExport(name="statuses", type=List.class, parameters={InstanceViewStatusResponse.class})
+    @Export(name="statuses", type=List.class, parameters={InstanceViewStatusResponse.class})
     private Output<List<InstanceViewStatusResponse>> statuses;
 
     /**
@@ -137,7 +137,7 @@ public class AvailabilitySet extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -151,7 +151,7 @@ public class AvailabilitySet extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -165,7 +165,7 @@ public class AvailabilitySet extends io.pulumi.resources.CustomResource {
      * A list of references to all virtual machines in the availability set.
      * 
      */
-    @OutputExport(name="virtualMachines", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="virtualMachines", type=List.class, parameters={SubResourceResponse.class})
     private Output</* @Nullable */ List<SubResourceResponse>> virtualMachines;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1.inputs.NodeConfigDefaultsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class NodePoolDefaultsArgs extends io.pulumi.resources.ResourceArgs
      * Subset of NodeConfig message that has defaults.
      * 
      */
-    @InputImport(name="nodeConfigDefaults")
+    @Import(name="nodeConfigDefaults")
       private final @Nullable Output<NodeConfigDefaultsArgs> nodeConfigDefaults;
 
     public Output<NodeConfigDefaultsArgs> getNodeConfigDefaults() {

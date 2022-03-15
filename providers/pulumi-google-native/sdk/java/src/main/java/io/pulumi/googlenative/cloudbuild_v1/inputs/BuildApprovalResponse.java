@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.ApprovalConfigResponse;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.ApprovalResultResponse;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class BuildApprovalResponse extends io.pulumi.resources.InvokeArgs 
      * Configuration for manual approval of this build.
      * 
      */
-    @InputImport(name="config", required=true)
+    @Import(name="config", required=true)
       private final ApprovalConfigResponse config;
 
     public ApprovalConfigResponse getConfig() {
@@ -33,7 +33,7 @@ public final class BuildApprovalResponse extends io.pulumi.resources.InvokeArgs 
      * Result of manual approval for this Build.
      * 
      */
-    @InputImport(name="result", required=true)
+    @Import(name="result", required=true)
       private final ApprovalResultResponse result;
 
     public ApprovalResultResponse getResult() {
@@ -44,7 +44,7 @@ public final class BuildApprovalResponse extends io.pulumi.resources.InvokeArgs 
      * The state of this build's approval.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {

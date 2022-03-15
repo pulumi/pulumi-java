@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PipelineDatastore {
     private final String datastoreName;
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineDatastore(
-        @OutputCustomType.Parameter("datastoreName") String datastoreName,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("datastoreName") String datastoreName,
+        @CustomType.Parameter("name") String name) {
         this.datastoreName = datastoreName;
         this.name = name;
     }

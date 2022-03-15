@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.StandardSqlStructTypeResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class StandardSqlDataTypeResponse extends io.pulumi.resources.Invok
      * The type of the array's elements, if type_kind = "ARRAY".
      * 
      */
-    @InputImport(name="arrayElementType", required=true)
+    @Import(name="arrayElementType", required=true)
       private final StandardSqlDataTypeResponse arrayElementType;
 
     public StandardSqlDataTypeResponse getArrayElementType() {
@@ -32,7 +32,7 @@ public final class StandardSqlDataTypeResponse extends io.pulumi.resources.Invok
      * The fields of this struct, in order, if type_kind = "STRUCT".
      * 
      */
-    @InputImport(name="structType", required=true)
+    @Import(name="structType", required=true)
       private final StandardSqlStructTypeResponse structType;
 
     public StandardSqlStructTypeResponse getStructType() {
@@ -43,7 +43,7 @@ public final class StandardSqlDataTypeResponse extends io.pulumi.resources.Invok
      * The top level type of this field. Can be any standard SQL data type (e.g., "INT64", "DATE", "ARRAY").
      * 
      */
-    @InputImport(name="typeKind", required=true)
+    @Import(name="typeKind", required=true)
       private final String typeKind;
 
     public String getTypeKind() {

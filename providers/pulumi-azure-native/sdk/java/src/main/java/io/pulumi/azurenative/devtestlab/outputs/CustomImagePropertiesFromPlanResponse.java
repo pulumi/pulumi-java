@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomImagePropertiesFromPlanResponse {
     /**
      * The id of the plan, equivalent to name of the plan
@@ -27,11 +27,11 @@ public final class CustomImagePropertiesFromPlanResponse {
      */
     private final @Nullable String publisher;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomImagePropertiesFromPlanResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("offer") @Nullable String offer,
-        @OutputCustomType.Parameter("publisher") @Nullable String publisher) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("offer") @Nullable String offer,
+        @CustomType.Parameter("publisher") @Nullable String publisher) {
         this.id = id;
         this.offer = offer;
         this.publisher = publisher;

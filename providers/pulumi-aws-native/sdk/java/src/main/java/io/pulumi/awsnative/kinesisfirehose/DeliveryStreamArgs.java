@@ -15,7 +15,7 @@ import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamS3DestinationCon
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamSplunkDestinationConfigurationArgs;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,84 +26,84 @@ public final class DeliveryStreamArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeliveryStreamArgs Empty = new DeliveryStreamArgs();
 
-    @InputImport(name="amazonopensearchserviceDestinationConfiguration")
+    @Import(name="amazonopensearchserviceDestinationConfiguration")
       private final @Nullable Output<DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs> amazonopensearchserviceDestinationConfiguration;
 
     public Output<DeliveryStreamAmazonopensearchserviceDestinationConfigurationArgs> getAmazonopensearchserviceDestinationConfiguration() {
         return this.amazonopensearchserviceDestinationConfiguration == null ? Output.empty() : this.amazonopensearchserviceDestinationConfiguration;
     }
 
-    @InputImport(name="deliveryStreamEncryptionConfigurationInput")
+    @Import(name="deliveryStreamEncryptionConfigurationInput")
       private final @Nullable Output<DeliveryStreamEncryptionConfigurationInputArgs> deliveryStreamEncryptionConfigurationInput;
 
     public Output<DeliveryStreamEncryptionConfigurationInputArgs> getDeliveryStreamEncryptionConfigurationInput() {
         return this.deliveryStreamEncryptionConfigurationInput == null ? Output.empty() : this.deliveryStreamEncryptionConfigurationInput;
     }
 
-    @InputImport(name="deliveryStreamName")
+    @Import(name="deliveryStreamName")
       private final @Nullable Output<String> deliveryStreamName;
 
     public Output<String> getDeliveryStreamName() {
         return this.deliveryStreamName == null ? Output.empty() : this.deliveryStreamName;
     }
 
-    @InputImport(name="deliveryStreamType")
+    @Import(name="deliveryStreamType")
       private final @Nullable Output<DeliveryStreamType> deliveryStreamType;
 
     public Output<DeliveryStreamType> getDeliveryStreamType() {
         return this.deliveryStreamType == null ? Output.empty() : this.deliveryStreamType;
     }
 
-    @InputImport(name="elasticsearchDestinationConfiguration")
+    @Import(name="elasticsearchDestinationConfiguration")
       private final @Nullable Output<DeliveryStreamElasticsearchDestinationConfigurationArgs> elasticsearchDestinationConfiguration;
 
     public Output<DeliveryStreamElasticsearchDestinationConfigurationArgs> getElasticsearchDestinationConfiguration() {
         return this.elasticsearchDestinationConfiguration == null ? Output.empty() : this.elasticsearchDestinationConfiguration;
     }
 
-    @InputImport(name="extendedS3DestinationConfiguration")
+    @Import(name="extendedS3DestinationConfiguration")
       private final @Nullable Output<DeliveryStreamExtendedS3DestinationConfigurationArgs> extendedS3DestinationConfiguration;
 
     public Output<DeliveryStreamExtendedS3DestinationConfigurationArgs> getExtendedS3DestinationConfiguration() {
         return this.extendedS3DestinationConfiguration == null ? Output.empty() : this.extendedS3DestinationConfiguration;
     }
 
-    @InputImport(name="httpEndpointDestinationConfiguration")
+    @Import(name="httpEndpointDestinationConfiguration")
       private final @Nullable Output<DeliveryStreamHttpEndpointDestinationConfigurationArgs> httpEndpointDestinationConfiguration;
 
     public Output<DeliveryStreamHttpEndpointDestinationConfigurationArgs> getHttpEndpointDestinationConfiguration() {
         return this.httpEndpointDestinationConfiguration == null ? Output.empty() : this.httpEndpointDestinationConfiguration;
     }
 
-    @InputImport(name="kinesisStreamSourceConfiguration")
+    @Import(name="kinesisStreamSourceConfiguration")
       private final @Nullable Output<DeliveryStreamKinesisStreamSourceConfigurationArgs> kinesisStreamSourceConfiguration;
 
     public Output<DeliveryStreamKinesisStreamSourceConfigurationArgs> getKinesisStreamSourceConfiguration() {
         return this.kinesisStreamSourceConfiguration == null ? Output.empty() : this.kinesisStreamSourceConfiguration;
     }
 
-    @InputImport(name="redshiftDestinationConfiguration")
+    @Import(name="redshiftDestinationConfiguration")
       private final @Nullable Output<DeliveryStreamRedshiftDestinationConfigurationArgs> redshiftDestinationConfiguration;
 
     public Output<DeliveryStreamRedshiftDestinationConfigurationArgs> getRedshiftDestinationConfiguration() {
         return this.redshiftDestinationConfiguration == null ? Output.empty() : this.redshiftDestinationConfiguration;
     }
 
-    @InputImport(name="s3DestinationConfiguration")
+    @Import(name="s3DestinationConfiguration")
       private final @Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3DestinationConfiguration;
 
     public Output<DeliveryStreamS3DestinationConfigurationArgs> getS3DestinationConfiguration() {
         return this.s3DestinationConfiguration == null ? Output.empty() : this.s3DestinationConfiguration;
     }
 
-    @InputImport(name="splunkDestinationConfiguration")
+    @Import(name="splunkDestinationConfiguration")
       private final @Nullable Output<DeliveryStreamSplunkDestinationConfigurationArgs> splunkDestinationConfiguration;
 
     public Output<DeliveryStreamSplunkDestinationConfigurationArgs> getSplunkDestinationConfiguration() {
         return this.splunkDestinationConfiguration == null ? Output.empty() : this.splunkDestinationConfiguration;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DeliveryStreamTagArgs>> tags;
 
     public Output<List<DeliveryStreamTagArgs>> getTags() {

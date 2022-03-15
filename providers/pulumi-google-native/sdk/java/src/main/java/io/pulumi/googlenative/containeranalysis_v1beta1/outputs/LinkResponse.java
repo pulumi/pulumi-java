@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.ByProductsResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.EnvironmentResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.GrafeasV1beta1IntotoArtifactResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LinkResponse {
     /**
      * ByProducts are data generated as part of a software supply chain step, but are not the actual result of the step.
@@ -39,13 +39,13 @@ public final class LinkResponse {
      */
     private final List<GrafeasV1beta1IntotoArtifactResponse> products;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LinkResponse(
-        @OutputCustomType.Parameter("byproducts") ByProductsResponse byproducts,
-        @OutputCustomType.Parameter("command") List<String> command,
-        @OutputCustomType.Parameter("environment") EnvironmentResponse environment,
-        @OutputCustomType.Parameter("materials") List<GrafeasV1beta1IntotoArtifactResponse> materials,
-        @OutputCustomType.Parameter("products") List<GrafeasV1beta1IntotoArtifactResponse> products) {
+        @CustomType.Parameter("byproducts") ByProductsResponse byproducts,
+        @CustomType.Parameter("command") List<String> command,
+        @CustomType.Parameter("environment") EnvironmentResponse environment,
+        @CustomType.Parameter("materials") List<GrafeasV1beta1IntotoArtifactResponse> materials,
+        @CustomType.Parameter("products") List<GrafeasV1beta1IntotoArtifactResponse> products) {
         this.byproducts = byproducts;
         this.command = command;
         this.environment = environment;

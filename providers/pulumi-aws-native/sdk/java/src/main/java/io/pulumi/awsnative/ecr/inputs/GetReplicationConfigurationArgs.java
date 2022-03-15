@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecr.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetReplicationConfigurationArgs extends io.pulumi.resources.I
      * The RegistryId associated with the aws account.
      * 
      */
-    @InputImport(name="registryId", required=true)
+    @Import(name="registryId", required=true)
       private final String registryId;
 
     public String getRegistryId() {

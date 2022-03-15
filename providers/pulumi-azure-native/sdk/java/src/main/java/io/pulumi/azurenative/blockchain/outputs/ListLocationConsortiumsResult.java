@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.blockchain.outputs;
 
 import io.pulumi.azurenative.blockchain.outputs.ConsortiumResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListLocationConsortiumsResult {
     /**
      * Gets or sets the collection of consortiums.
@@ -17,8 +17,8 @@ public final class ListLocationConsortiumsResult {
      */
     private final @Nullable List<ConsortiumResponse> value;
 
-    @OutputCustomType.Constructor
-    private ListLocationConsortiumsResult(@OutputCustomType.Parameter("value") @Nullable List<ConsortiumResponse> value) {
+    @CustomType.Constructor
+    private ListLocationConsortiumsResult(@CustomType.Parameter("value") @Nullable List<ConsortiumResponse> value) {
         this.value = value;
     }
 

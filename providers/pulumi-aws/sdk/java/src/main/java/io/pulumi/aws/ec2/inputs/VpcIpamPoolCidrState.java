@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.VpcIpamPoolCidrCidrAuthorizationContextGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class VpcIpamPoolCidrState extends io.pulumi.resources.ResourceArgs
      * The CIDR you want to assign to the pool.
      * 
      */
-    @InputImport(name="cidr")
+    @Import(name="cidr")
       private final @Nullable Output<String> cidr;
 
     public Output<String> getCidr() {
@@ -30,7 +30,7 @@ public final class VpcIpamPoolCidrState extends io.pulumi.resources.ResourceArgs
      * A signed document that proves that you are authorized to bring the specified IP address range to Amazon using BYOIP. This is not stored in the state file. See cidr_authorization_context for more information.
      * 
      */
-    @InputImport(name="cidrAuthorizationContext")
+    @Import(name="cidrAuthorizationContext")
       private final @Nullable Output<VpcIpamPoolCidrCidrAuthorizationContextGetArgs> cidrAuthorizationContext;
 
     public Output<VpcIpamPoolCidrCidrAuthorizationContextGetArgs> getCidrAuthorizationContext() {
@@ -41,7 +41,7 @@ public final class VpcIpamPoolCidrState extends io.pulumi.resources.ResourceArgs
      * The ID of the pool to which you want to assign a CIDR.
      * 
      */
-    @InputImport(name="ipamPoolId")
+    @Import(name="ipamPoolId")
       private final @Nullable Output<String> ipamPoolId;
 
     public Output<String> getIpamPoolId() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront;
 
 import io.pulumi.aws.cloudfront.inputs.RealtimeLogConfigEndpointArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class RealtimeLogConfigArgs extends io.pulumi.resources.ResourceArg
      * The Amazon Kinesis data streams where real-time log data is sent.
      * 
      */
-    @InputImport(name="endpoint", required=true)
+    @Import(name="endpoint", required=true)
       private final Output<RealtimeLogConfigEndpointArgs> endpoint;
 
     public Output<RealtimeLogConfigEndpointArgs> getEndpoint() {
@@ -32,7 +32,7 @@ public final class RealtimeLogConfigArgs extends io.pulumi.resources.ResourceArg
      * The fields that are included in each real-time log record. See the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/real-time-logs.html#understand-real-time-log-config-fields) for supported values.
      * 
      */
-    @InputImport(name="fields", required=true)
+    @Import(name="fields", required=true)
       private final Output<List<String>> fields;
 
     public Output<List<String>> getFields() {
@@ -43,7 +43,7 @@ public final class RealtimeLogConfigArgs extends io.pulumi.resources.ResourceArg
      * The unique name to identify this real-time log configuration.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class RealtimeLogConfigArgs extends io.pulumi.resources.ResourceArg
      * The sampling rate for this real-time log configuration. The sampling rate determines the percentage of viewer requests that are represented in the real-time log data. An integer between `1` and `100`, inclusive.
      * 
      */
-    @InputImport(name="samplingRate", required=true)
+    @Import(name="samplingRate", required=true)
       private final Output<Integer> samplingRate;
 
     public Output<Integer> getSamplingRate() {

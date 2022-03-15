@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.datalakeanalytics.outputs;
 
 import io.pulumi.azurenative.datalakeanalytics.outputs.SasTokenInformationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListStorageAccountSasTokensResult {
     /**
      * The link (url) to the next page of results.
@@ -22,10 +22,10 @@ public final class ListStorageAccountSasTokensResult {
      */
     private final List<SasTokenInformationResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListStorageAccountSasTokensResult(
-        @OutputCustomType.Parameter("nextLink") String nextLink,
-        @OutputCustomType.Parameter("value") List<SasTokenInformationResponse> value) {
+        @CustomType.Parameter("nextLink") String nextLink,
+        @CustomType.Parameter("value") List<SasTokenInformationResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

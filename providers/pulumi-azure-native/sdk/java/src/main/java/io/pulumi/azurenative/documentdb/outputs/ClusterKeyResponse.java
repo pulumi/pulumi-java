@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterKeyResponse {
     /**
      * Name of the Cosmos DB Cassandra table cluster key
@@ -22,10 +22,10 @@ public final class ClusterKeyResponse {
      */
     private final @Nullable String orderBy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterKeyResponse(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("orderBy") @Nullable String orderBy) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("orderBy") @Nullable String orderBy) {
         this.name = name;
         this.orderBy = orderBy;
     }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.SubscriptionStateOverrideActionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotifi
 
     public static final ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs Empty = new ResourceTypeRegistrationPropertiesSubscriptionLifecycleNotificationSpecificationsArgs();
 
-    @InputImport(name="softDeleteTTL")
+    @Import(name="softDeleteTTL")
       private final @Nullable Output<String> softDeleteTTL;
 
     public Output<String> getSoftDeleteTTL() {
         return this.softDeleteTTL == null ? Output.empty() : this.softDeleteTTL;
     }
 
-    @InputImport(name="subscriptionStateOverrideActions")
+    @Import(name="subscriptionStateOverrideActions")
       private final @Nullable Output<List<SubscriptionStateOverrideActionArgs>> subscriptionStateOverrideActions;
 
     public Output<List<SubscriptionStateOverrideActionArgs>> getSubscriptionStateOverrideActions() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.docdb.inputs;
 
 import io.pulumi.aws.docdb.inputs.GlobalClusterGlobalClusterMemberGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * Global Cluster Amazon Resource Name (ARN)
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * Name for an automatically created database on cluster creation.
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -43,14 +43,14 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * If the Global Cluster should have deletion protection enabled. The database can't be deleted when this value is set to `true`. The default is `false`.
      * 
      */
-    @InputImport(name="deletionProtection")
+    @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
     public Output<Boolean> getDeletionProtection() {
         return this.deletionProtection == null ? Output.empty() : this.deletionProtection;
     }
 
-    @InputImport(name="engine")
+    @Import(name="engine")
       private final @Nullable Output<String> engine;
 
     public Output<String> getEngine() {
@@ -62,7 +62,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * * **NOTE:** Upgrading major versions is not supported.
      * 
      */
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
@@ -73,7 +73,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * The global cluster identifier.
      * 
      */
-    @InputImport(name="globalClusterIdentifier")
+    @Import(name="globalClusterIdentifier")
       private final @Nullable Output<String> globalClusterIdentifier;
 
     public Output<String> getGlobalClusterIdentifier() {
@@ -84,7 +84,7 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * Set of objects containing Global Cluster members.
      * 
      */
-    @InputImport(name="globalClusterMembers")
+    @Import(name="globalClusterMembers")
       private final @Nullable Output<List<GlobalClusterGlobalClusterMemberGetArgs>> globalClusterMembers;
 
     public Output<List<GlobalClusterGlobalClusterMemberGetArgs>> getGlobalClusterMembers() {
@@ -95,28 +95,28 @@ public final class GlobalClusterState extends io.pulumi.resources.ResourceArgs {
      * AWS Region-unique, immutable identifier for the global database cluster. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB cluster is accessed.
      * 
      */
-    @InputImport(name="globalClusterResourceId")
+    @Import(name="globalClusterResourceId")
       private final @Nullable Output<String> globalClusterResourceId;
 
     public Output<String> getGlobalClusterResourceId() {
         return this.globalClusterResourceId == null ? Output.empty() : this.globalClusterResourceId;
     }
 
-    @InputImport(name="sourceDbClusterIdentifier")
+    @Import(name="sourceDbClusterIdentifier")
       private final @Nullable Output<String> sourceDbClusterIdentifier;
 
     public Output<String> getSourceDbClusterIdentifier() {
         return this.sourceDbClusterIdentifier == null ? Output.empty() : this.sourceDbClusterIdentifier;
     }
 
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
         return this.status == null ? Output.empty() : this.status;
     }
 
-    @InputImport(name="storageEncrypted")
+    @Import(name="storageEncrypted")
       private final @Nullable Output<Boolean> storageEncrypted;
 
     public Output<Boolean> getStorageEncrypted() {

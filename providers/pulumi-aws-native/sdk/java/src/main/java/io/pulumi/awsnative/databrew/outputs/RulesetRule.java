@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.outputs;
 import io.pulumi.awsnative.databrew.outputs.RulesetColumnSelector;
 import io.pulumi.awsnative.databrew.outputs.RulesetSubstitutionValue;
 import io.pulumi.awsnative.databrew.outputs.RulesetThreshold;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RulesetRule {
     private final String checkExpression;
     private final @Nullable List<RulesetColumnSelector> columnSelectors;
@@ -27,14 +27,14 @@ public final class RulesetRule {
     private final @Nullable List<RulesetSubstitutionValue> substitutionMap;
     private final @Nullable RulesetThreshold threshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RulesetRule(
-        @OutputCustomType.Parameter("checkExpression") String checkExpression,
-        @OutputCustomType.Parameter("columnSelectors") @Nullable List<RulesetColumnSelector> columnSelectors,
-        @OutputCustomType.Parameter("disabled") @Nullable Boolean disabled,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("substitutionMap") @Nullable List<RulesetSubstitutionValue> substitutionMap,
-        @OutputCustomType.Parameter("threshold") @Nullable RulesetThreshold threshold) {
+        @CustomType.Parameter("checkExpression") String checkExpression,
+        @CustomType.Parameter("columnSelectors") @Nullable List<RulesetColumnSelector> columnSelectors,
+        @CustomType.Parameter("disabled") @Nullable Boolean disabled,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("substitutionMap") @Nullable List<RulesetSubstitutionValue> substitutionMap,
+        @CustomType.Parameter("threshold") @Nullable RulesetThreshold threshold) {
         this.checkExpression = checkExpression;
         this.columnSelectors = columnSelectors;
         this.disabled = disabled;

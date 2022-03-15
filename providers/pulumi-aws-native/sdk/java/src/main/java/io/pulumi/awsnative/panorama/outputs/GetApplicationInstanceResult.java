@@ -7,7 +7,7 @@ import io.pulumi.awsnative.panorama.enums.ApplicationInstanceHealthStatus;
 import io.pulumi.awsnative.panorama.enums.ApplicationInstanceStatus;
 import io.pulumi.awsnative.panorama.enums.ApplicationInstanceStatusFilter;
 import io.pulumi.awsnative.panorama.outputs.ApplicationInstanceTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetApplicationInstanceResult {
     private final @Nullable String applicationInstanceId;
     private final @Nullable String arn;
@@ -29,19 +29,19 @@ public final class GetApplicationInstanceResult {
     private final @Nullable ApplicationInstanceStatusFilter statusFilter;
     private final @Nullable List<ApplicationInstanceTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApplicationInstanceResult(
-        @OutputCustomType.Parameter("applicationInstanceId") @Nullable String applicationInstanceId,
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("createdTime") @Nullable Integer createdTime,
-        @OutputCustomType.Parameter("defaultRuntimeContextDeviceName") @Nullable String defaultRuntimeContextDeviceName,
-        @OutputCustomType.Parameter("deviceId") @Nullable String deviceId,
-        @OutputCustomType.Parameter("healthStatus") @Nullable ApplicationInstanceHealthStatus healthStatus,
-        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable Integer lastUpdatedTime,
-        @OutputCustomType.Parameter("status") @Nullable ApplicationInstanceStatus status,
-        @OutputCustomType.Parameter("statusDescription") @Nullable String statusDescription,
-        @OutputCustomType.Parameter("statusFilter") @Nullable ApplicationInstanceStatusFilter statusFilter,
-        @OutputCustomType.Parameter("tags") @Nullable List<ApplicationInstanceTag> tags) {
+        @CustomType.Parameter("applicationInstanceId") @Nullable String applicationInstanceId,
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("createdTime") @Nullable Integer createdTime,
+        @CustomType.Parameter("defaultRuntimeContextDeviceName") @Nullable String defaultRuntimeContextDeviceName,
+        @CustomType.Parameter("deviceId") @Nullable String deviceId,
+        @CustomType.Parameter("healthStatus") @Nullable ApplicationInstanceHealthStatus healthStatus,
+        @CustomType.Parameter("lastUpdatedTime") @Nullable Integer lastUpdatedTime,
+        @CustomType.Parameter("status") @Nullable ApplicationInstanceStatus status,
+        @CustomType.Parameter("statusDescription") @Nullable String statusDescription,
+        @CustomType.Parameter("statusFilter") @Nullable ApplicationInstanceStatusFilter statusFilter,
+        @CustomType.Parameter("tags") @Nullable List<ApplicationInstanceTag> tags) {
         this.applicationInstanceId = applicationInstanceId;
         this.arn = arn;
         this.createdTime = createdTime;

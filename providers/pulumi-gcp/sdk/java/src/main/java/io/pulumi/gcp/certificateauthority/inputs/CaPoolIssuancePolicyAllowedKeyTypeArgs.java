@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedKeyTypeRsaArgs;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends io.pulumi.reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="ellipticCurve")
+    @Import(name="ellipticCurve")
       private final @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> ellipticCurve;
 
     public Output<CaPoolIssuancePolicyAllowedKeyTypeEllipticCurveArgs> getEllipticCurve() {
@@ -32,7 +32,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeArgs extends io.pulumi.reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="rsa")
+    @Import(name="rsa")
       private final @Nullable Output<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> rsa;
 
     public Output<CaPoolIssuancePolicyAllowedKeyTypeRsaArgs> getRsa() {

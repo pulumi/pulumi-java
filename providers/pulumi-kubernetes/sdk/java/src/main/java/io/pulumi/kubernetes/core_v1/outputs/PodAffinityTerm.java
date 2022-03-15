@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PodAffinityTerm {
     /**
      * A label query over a set of resources, in this case pods.
@@ -34,12 +34,12 @@ public final class PodAffinityTerm {
      */
     private final String topologyKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PodAffinityTerm(
-        @OutputCustomType.Parameter("labelSelector") @Nullable LabelSelector labelSelector,
-        @OutputCustomType.Parameter("namespaceSelector") @Nullable LabelSelector namespaceSelector,
-        @OutputCustomType.Parameter("namespaces") @Nullable List<String> namespaces,
-        @OutputCustomType.Parameter("topologyKey") String topologyKey) {
+        @CustomType.Parameter("labelSelector") @Nullable LabelSelector labelSelector,
+        @CustomType.Parameter("namespaceSelector") @Nullable LabelSelector namespaceSelector,
+        @CustomType.Parameter("namespaces") @Nullable List<String> namespaces,
+        @CustomType.Parameter("topologyKey") String topologyKey) {
         this.labelSelector = labelSelector;
         this.namespaceSelector = namespaceSelector;
         this.namespaces = namespaces;

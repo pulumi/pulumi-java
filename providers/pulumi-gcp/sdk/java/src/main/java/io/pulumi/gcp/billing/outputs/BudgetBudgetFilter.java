@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.billing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BudgetBudgetFilter {
     /**
      * A set of subaccounts of the form billingAccounts/{account_id},
@@ -67,14 +67,14 @@ public final class BudgetBudgetFilter {
      */
     private final @Nullable List<String> subaccounts;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetBudgetFilter(
-        @OutputCustomType.Parameter("creditTypes") @Nullable List<String> creditTypes,
-        @OutputCustomType.Parameter("creditTypesTreatment") @Nullable String creditTypesTreatment,
-        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
-        @OutputCustomType.Parameter("projects") @Nullable List<String> projects,
-        @OutputCustomType.Parameter("services") @Nullable List<String> services,
-        @OutputCustomType.Parameter("subaccounts") @Nullable List<String> subaccounts) {
+        @CustomType.Parameter("creditTypes") @Nullable List<String> creditTypes,
+        @CustomType.Parameter("creditTypesTreatment") @Nullable String creditTypesTreatment,
+        @CustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @CustomType.Parameter("projects") @Nullable List<String> projects,
+        @CustomType.Parameter("services") @Nullable List<String> services,
+        @CustomType.Parameter("subaccounts") @Nullable List<String> subaccounts) {
         this.creditTypes = creditTypes;
         this.creditTypesTreatment = creditTypesTreatment;
         this.labels = labels;

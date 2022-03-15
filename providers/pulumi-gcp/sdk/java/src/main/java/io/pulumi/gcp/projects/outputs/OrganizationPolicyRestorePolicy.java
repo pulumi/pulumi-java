@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.projects.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OrganizationPolicyRestorePolicy {
     /**
      * May only be set to true. If set, then the default Policy is restored.
@@ -15,8 +15,8 @@ public final class OrganizationPolicyRestorePolicy {
      */
     private final Boolean $default;
 
-    @OutputCustomType.Constructor
-    private OrganizationPolicyRestorePolicy(@OutputCustomType.Parameter("default") Boolean $default) {
+    @CustomType.Constructor
+    private OrganizationPolicyRestorePolicy(@CustomType.Parameter("default") Boolean $default) {
         this.$default = $default;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.datacatalog.inputs.EntryBigqueryTableSpecTableSpecGetArgs;
 import io.pulumi.gcp.datacatalog.inputs.EntryBigqueryTableSpecViewSpecGetArgs;
 import java.lang.String;
@@ -17,21 +17,21 @@ public final class EntryBigqueryTableSpecGetArgs extends io.pulumi.resources.Res
 
     public static final EntryBigqueryTableSpecGetArgs Empty = new EntryBigqueryTableSpecGetArgs();
 
-    @InputImport(name="tableSourceType")
+    @Import(name="tableSourceType")
       private final @Nullable Output<String> tableSourceType;
 
     public Output<String> getTableSourceType() {
         return this.tableSourceType == null ? Output.empty() : this.tableSourceType;
     }
 
-    @InputImport(name="tableSpecs")
+    @Import(name="tableSpecs")
       private final @Nullable Output<List<EntryBigqueryTableSpecTableSpecGetArgs>> tableSpecs;
 
     public Output<List<EntryBigqueryTableSpecTableSpecGetArgs>> getTableSpecs() {
         return this.tableSpecs == null ? Output.empty() : this.tableSpecs;
     }
 
-    @InputImport(name="viewSpecs")
+    @Import(name="viewSpecs")
       private final @Nullable Output<List<EntryBigqueryTableSpecViewSpecGetArgs>> viewSpecs;
 
     public Output<List<EntryBigqueryTableSpecViewSpecGetArgs>> getViewSpecs() {

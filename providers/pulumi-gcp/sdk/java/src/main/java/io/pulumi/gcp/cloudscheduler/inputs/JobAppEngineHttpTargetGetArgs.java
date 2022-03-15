@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudscheduler.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudscheduler.inputs.JobAppEngineHttpTargetAppEngineRoutingGetArgs;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class JobAppEngineHttpTargetGetArgs extends io.pulumi.resources.Res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="appEngineRouting")
+    @Import(name="appEngineRouting")
       private final @Nullable Output<JobAppEngineHttpTargetAppEngineRoutingGetArgs> appEngineRouting;
 
     public Output<JobAppEngineHttpTargetAppEngineRoutingGetArgs> getAppEngineRouting() {
@@ -35,7 +35,7 @@ public final class JobAppEngineHttpTargetGetArgs extends io.pulumi.resources.Res
      * A base64-encoded string.
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<String> body;
 
     public Output<String> getBody() {
@@ -47,7 +47,7 @@ public final class JobAppEngineHttpTargetGetArgs extends io.pulumi.resources.Res
      * Repeated headers are not supported, but a header value can contain commas.
      * 
      */
-    @InputImport(name="headers")
+    @Import(name="headers")
       private final @Nullable Output<Map<String,String>> headers;
 
     public Output<Map<String,String>> getHeaders() {
@@ -58,7 +58,7 @@ public final class JobAppEngineHttpTargetGetArgs extends io.pulumi.resources.Res
      * Which HTTP method to use for the request.
      * 
      */
-    @InputImport(name="httpMethod")
+    @Import(name="httpMethod")
       private final @Nullable Output<String> httpMethod;
 
     public Output<String> getHttpMethod() {
@@ -73,7 +73,7 @@ public final class JobAppEngineHttpTargetGetArgs extends io.pulumi.resources.Res
      * No spaces are allowed, and the maximum length allowed is 2083 characters
      * 
      */
-    @InputImport(name="relativeUri", required=true)
+    @Import(name="relativeUri", required=true)
       private final Output<String> relativeUri;
 
     public Output<String> getRelativeUri() {

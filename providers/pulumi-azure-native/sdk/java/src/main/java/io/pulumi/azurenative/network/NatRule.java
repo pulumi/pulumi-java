@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VpnNatRuleMappingResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * List of egress VpnSiteLinkConnections.
      * 
      */
-    @OutputExport(name="egressVpnSiteLinkConnections", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="egressVpnSiteLinkConnections", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> egressVpnSiteLinkConnections;
 
     /**
@@ -50,7 +50,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -64,7 +64,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * The private IP address external mapping for NAT.
      * 
      */
-    @OutputExport(name="externalMappings", type=List.class, parameters={VpnNatRuleMappingResponse.class})
+    @Export(name="externalMappings", type=List.class, parameters={VpnNatRuleMappingResponse.class})
     private Output</* @Nullable */ List<VpnNatRuleMappingResponse>> externalMappings;
 
     /**
@@ -78,7 +78,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * List of ingress VpnSiteLinkConnections.
      * 
      */
-    @OutputExport(name="ingressVpnSiteLinkConnections", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="ingressVpnSiteLinkConnections", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> ingressVpnSiteLinkConnections;
 
     /**
@@ -92,7 +92,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * The private IP address internal mapping for NAT.
      * 
      */
-    @OutputExport(name="internalMappings", type=List.class, parameters={VpnNatRuleMappingResponse.class})
+    @Export(name="internalMappings", type=List.class, parameters={VpnNatRuleMappingResponse.class})
     private Output</* @Nullable */ List<VpnNatRuleMappingResponse>> internalMappings;
 
     /**
@@ -106,7 +106,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * The IP Configuration ID this NAT rule applies to.
      * 
      */
-    @OutputExport(name="ipConfigurationId", type=String.class, parameters={})
+    @Export(name="ipConfigurationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipConfigurationId;
 
     /**
@@ -120,7 +120,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * The Source NAT direction of a VPN NAT.
      * 
      */
-    @OutputExport(name="mode", type=String.class, parameters={})
+    @Export(name="mode", type=String.class, parameters={})
     private Output</* @Nullable */ String> mode;
 
     /**
@@ -134,7 +134,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -148,7 +148,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * The provisioning state of the NAT Rule resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -162,7 +162,7 @@ public class NatRule extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

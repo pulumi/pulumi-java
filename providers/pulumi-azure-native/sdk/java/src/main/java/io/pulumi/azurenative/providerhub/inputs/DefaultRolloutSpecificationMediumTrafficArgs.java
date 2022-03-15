@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class DefaultRolloutSpecificationMediumTrafficArgs extends io.pulum
 
     public static final DefaultRolloutSpecificationMediumTrafficArgs Empty = new DefaultRolloutSpecificationMediumTrafficArgs();
 
-    @InputImport(name="regions")
+    @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
     public Output<List<String>> getRegions() {
         return this.regions == null ? Output.empty() : this.regions;
     }
 
-    @InputImport(name="waitDuration")
+    @Import(name="waitDuration")
       private final @Nullable Output<String> waitDuration;
 
     public Output<String> getWaitDuration() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -13,42 +13,42 @@ public final class GetProjectProject extends io.pulumi.resources.InvokeArgs {
 
     public static final GetProjectProject Empty = new GetProjectProject();
 
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
     }
 
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
     }
 
-    @InputImport(name="lifecycleState", required=true)
+    @Import(name="lifecycleState", required=true)
       private final String lifecycleState;
 
     public String getLifecycleState() {
         return this.lifecycleState;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="number", required=true)
+    @Import(name="number", required=true)
       private final String number;
 
     public String getNumber() {
         return this.number;
     }
 
-    @InputImport(name="parent", required=true)
+    @Import(name="parent", required=true)
       private final Map<String,String> parent;
 
     public Map<String,String> getParent() {
@@ -59,7 +59,7 @@ public final class GetProjectProject extends io.pulumi.resources.InvokeArgs {
      * The project id of the project.
      * 
      */
-    @InputImport(name="projectId", required=true)
+    @Import(name="projectId", required=true)
       private final String projectId;
 
     public String getProjectId() {

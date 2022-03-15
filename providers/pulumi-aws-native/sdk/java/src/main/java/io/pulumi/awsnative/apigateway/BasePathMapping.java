@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apigateway;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.apigateway.BasePathMappingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * The base path name that callers of the API must provide in the URL after the domain name.
      * 
      */
-    @OutputExport(name="basePath", type=String.class, parameters={})
+    @Export(name="basePath", type=String.class, parameters={})
     private Output</* @Nullable */ String> basePath;
 
     /**
@@ -35,7 +35,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * The DomainName of an AWS::ApiGateway::DomainName resource.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -49,7 +49,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * The ID of the API.
      * 
      */
-    @OutputExport(name="restApiId", type=String.class, parameters={})
+    @Export(name="restApiId", type=String.class, parameters={})
     private Output</* @Nullable */ String> restApiId;
 
     /**
@@ -63,7 +63,7 @@ public class BasePathMapping extends io.pulumi.resources.CustomResource {
      * The name of the API's stage.
      * 
      */
-    @OutputExport(name="stage", type=String.class, parameters={})
+    @Export(name="stage", type=String.class, parameters={})
     private Output</* @Nullable */ String> stage;
 
     /**

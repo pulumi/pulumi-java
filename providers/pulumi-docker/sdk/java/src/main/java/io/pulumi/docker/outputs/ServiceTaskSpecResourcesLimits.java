@@ -3,21 +3,21 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTaskSpecResourcesLimits {
     private final @Nullable Integer memoryBytes;
     private final @Nullable Integer nanoCpus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTaskSpecResourcesLimits(
-        @OutputCustomType.Parameter("memoryBytes") @Nullable Integer memoryBytes,
-        @OutputCustomType.Parameter("nanoCpus") @Nullable Integer nanoCpus) {
+        @CustomType.Parameter("memoryBytes") @Nullable Integer memoryBytes,
+        @CustomType.Parameter("nanoCpus") @Nullable Integer nanoCpus) {
         this.memoryBytes = memoryBytes;
         this.nanoCpus = nanoCpus;
     }

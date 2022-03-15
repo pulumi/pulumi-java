@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
      * Type of backup management for the backed up item.
      * 
      */
-    @InputImport(name="backupManagementType")
+    @Import(name="backupManagementType")
       private final @Nullable String backupManagementType;
 
     public Optional<String> getBackupManagementType() {
@@ -33,7 +33,7 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
      * Friendly name of the VM represented by this backup item.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
@@ -44,7 +44,7 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
      * ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId
      * 
      */
-    @InputImport(name="itemId")
+    @Import(name="itemId")
       private final @Nullable String itemId;
 
     public Optional<String> getItemId() {
@@ -55,7 +55,7 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
      * ID of the backup policy with which this item is backed up.
      * 
      */
-    @InputImport(name="policyId")
+    @Import(name="policyId")
       private final @Nullable String policyId;
 
     public Optional<String> getPolicyId() {
@@ -67,7 +67,7 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
      * Expected value is 'AzureResourceItem'.
      * 
      */
-    @InputImport(name="protectionIntentItemType", required=true)
+    @Import(name="protectionIntentItemType", required=true)
       private final String protectionIntentItemType;
 
     public String getProtectionIntentItemType() {
@@ -78,7 +78,7 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
      * Backup state of this backup item.
      * 
      */
-    @InputImport(name="protectionState")
+    @Import(name="protectionState")
       private final @Nullable String protectionState;
 
     public Optional<String> getProtectionState() {
@@ -89,7 +89,7 @@ public final class AzureResourceProtectionIntentResponse extends io.pulumi.resou
      * ARM ID of the resource to be backed up.
      * 
      */
-    @InputImport(name="sourceResourceId")
+    @Import(name="sourceResourceId")
       private final @Nullable String sourceResourceId;
 
     public Optional<String> getSourceResourceId() {

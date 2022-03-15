@@ -7,7 +7,7 @@ import io.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationDistribu
 import io.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs;
 import io.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationLaunchTemplateConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
      * The specific AMI settings (for example, launch permissions, AMI tags).
      * 
      */
-    @InputImport(name="amiDistributionConfiguration")
+    @Import(name="amiDistributionConfiguration")
       private final @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> amiDistributionConfiguration;
 
     public Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> getAmiDistributionConfiguration() {
@@ -37,7 +37,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
      * Container distribution settings for encryption, licensing, and sharing in a specific Region.
      * 
      */
-    @InputImport(name="containerDistributionConfiguration")
+    @Import(name="containerDistributionConfiguration")
       private final @Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration;
 
     public Output<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> getContainerDistributionConfiguration() {
@@ -48,7 +48,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
      * A group of launchTemplateConfiguration settings that apply to image distribution.
      * 
      */
-    @InputImport(name="launchTemplateConfigurations")
+    @Import(name="launchTemplateConfigurations")
       private final @Nullable Output<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> launchTemplateConfigurations;
 
     public Output<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> getLaunchTemplateConfigurations() {
@@ -59,7 +59,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
      * The License Manager Configuration to associate with the AMI in the specified Region.
      * 
      */
-    @InputImport(name="licenseConfigurationArns")
+    @Import(name="licenseConfigurationArns")
       private final @Nullable Output<List<String>> licenseConfigurationArns;
 
     public Output<List<String>> getLicenseConfigurationArns() {
@@ -70,7 +70,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
      * region
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.InstanceGroupManagerStatusAllInstancesConfigResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.InstanceGroupManagerStatusStatefulResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.InstanceGroupManagerStatusVersionTargetResponse;
@@ -20,7 +20,7 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
      * A status of consistency of Instances' config applied to instances with Instances' config defined in managed instance group.
      * 
      */
-    @InputImport(name="allInstancesConfig", required=true)
+    @Import(name="allInstancesConfig", required=true)
       private final InstanceGroupManagerStatusAllInstancesConfigResponse allInstancesConfig;
 
     public InstanceGroupManagerStatusAllInstancesConfigResponse getAllInstancesConfig() {
@@ -31,7 +31,7 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
      * The URL of the Autoscaler that targets this instance group manager.
      * 
      */
-    @InputImport(name="autoscaler", required=true)
+    @Import(name="autoscaler", required=true)
       private final String autoscaler;
 
     public String getAutoscaler() {
@@ -42,7 +42,7 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
      * A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
      * 
      */
-    @InputImport(name="isStable", required=true)
+    @Import(name="isStable", required=true)
       private final Boolean isStable;
 
     public Boolean getIsStable() {
@@ -53,7 +53,7 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
      * Stateful status of the given Instance Group Manager.
      * 
      */
-    @InputImport(name="stateful", required=true)
+    @Import(name="stateful", required=true)
       private final InstanceGroupManagerStatusStatefulResponse stateful;
 
     public InstanceGroupManagerStatusStatefulResponse getStateful() {
@@ -64,7 +64,7 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
      * A status of consistency of Instances' versions with their target version specified by version field on Instance Group Manager.
      * 
      */
-    @InputImport(name="versionTarget", required=true)
+    @Import(name="versionTarget", required=true)
       private final InstanceGroupManagerStatusVersionTargetResponse versionTarget;
 
     public InstanceGroupManagerStatusVersionTargetResponse getVersionTarget() {

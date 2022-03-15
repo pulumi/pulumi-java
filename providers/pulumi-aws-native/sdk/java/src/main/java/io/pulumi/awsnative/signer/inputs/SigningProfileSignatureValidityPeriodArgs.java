@@ -5,7 +5,7 @@ package io.pulumi.awsnative.signer.inputs;
 
 import io.pulumi.awsnative.signer.enums.SigningProfileSignatureValidityPeriodType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class SigningProfileSignatureValidityPeriodArgs extends io.pulumi.r
 
     public static final SigningProfileSignatureValidityPeriodArgs Empty = new SigningProfileSignatureValidityPeriodArgs();
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<SigningProfileSignatureValidityPeriodType> type;
 
     public Output<SigningProfileSignatureValidityPeriodType> getType() {
         return this.type == null ? Output.empty() : this.type;
     }
 
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<Integer> value;
 
     public Output<Integer> getValue() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.BigQueryDestinationResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.ConsumptionMeteringConfigResponse;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceUsageExportConfigResponse {
     /**
      * Configuration to use BigQuery as usage export destination.
@@ -27,11 +27,11 @@ public final class ResourceUsageExportConfigResponse {
      */
     private final Boolean enableNetworkEgressMetering;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceUsageExportConfigResponse(
-        @OutputCustomType.Parameter("bigqueryDestination") BigQueryDestinationResponse bigqueryDestination,
-        @OutputCustomType.Parameter("consumptionMeteringConfig") ConsumptionMeteringConfigResponse consumptionMeteringConfig,
-        @OutputCustomType.Parameter("enableNetworkEgressMetering") Boolean enableNetworkEgressMetering) {
+        @CustomType.Parameter("bigqueryDestination") BigQueryDestinationResponse bigqueryDestination,
+        @CustomType.Parameter("consumptionMeteringConfig") ConsumptionMeteringConfigResponse consumptionMeteringConfig,
+        @CustomType.Parameter("enableNetworkEgressMetering") Boolean enableNetworkEgressMetering) {
         this.bigqueryDestination = bigqueryDestination;
         this.consumptionMeteringConfig = consumptionMeteringConfig;
         this.enableNetworkEgressMetering = enableNetworkEgressMetering;

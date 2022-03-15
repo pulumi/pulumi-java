@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionRestrictionsGeoRestriction {
     /**
      * The [ISO 3166-1-alpha-2 codes][4] for which you
@@ -26,10 +26,10 @@ public final class DistributionRestrictionsGeoRestriction {
      */
     private final String restrictionType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionRestrictionsGeoRestriction(
-        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
-        @OutputCustomType.Parameter("restrictionType") String restrictionType) {
+        @CustomType.Parameter("locations") @Nullable List<String> locations,
+        @CustomType.Parameter("restrictionType") String restrictionType) {
         this.locations = locations;
         this.restrictionType = restrictionType;
     }

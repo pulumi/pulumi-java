@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * Group to map volume access to Default is no group
      * 
      */
-    @InputImport(name="group")
+    @Import(name="group")
       private final @Nullable Output<String> group;
 
     public Output<String> getGroup() {
@@ -34,7 +34,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * ReadOnly here will force the Quobyte volume to be mounted with read-only permissions. Defaults to false.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
@@ -45,7 +45,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * Registry represents a single or multiple Quobyte Registry services specified as a string as host:port pair (multiple entries are separated with commas) which acts as the central registry for volumes
      * 
      */
-    @InputImport(name="registry", required=true)
+    @Import(name="registry", required=true)
       private final Output<String> registry;
 
     public Output<String> getRegistry() {
@@ -56,7 +56,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * Tenant owning the given Quobyte volume in the Backend Used with dynamically provisioned Quobyte volumes, value is set by the plugin
      * 
      */
-    @InputImport(name="tenant")
+    @Import(name="tenant")
       private final @Nullable Output<String> tenant;
 
     public Output<String> getTenant() {
@@ -67,7 +67,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * User to map volume access to Defaults to serivceaccount user
      * 
      */
-    @InputImport(name="user")
+    @Import(name="user")
       private final @Nullable Output<String> user;
 
     public Output<String> getUser() {
@@ -78,7 +78,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * Volume is a string that references an already created Quobyte volume by name.
      * 
      */
-    @InputImport(name="volume", required=true)
+    @Import(name="volume", required=true)
       private final Output<String> volume;
 
     public Output<String> getVolume() {

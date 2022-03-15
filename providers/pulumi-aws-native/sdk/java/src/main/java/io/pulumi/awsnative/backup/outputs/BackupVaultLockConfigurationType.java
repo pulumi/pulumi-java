@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.backup.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackupVaultLockConfigurationType {
     private final @Nullable Double changeableForDays;
     private final @Nullable Double maxRetentionDays;
     private final Double minRetentionDays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackupVaultLockConfigurationType(
-        @OutputCustomType.Parameter("changeableForDays") @Nullable Double changeableForDays,
-        @OutputCustomType.Parameter("maxRetentionDays") @Nullable Double maxRetentionDays,
-        @OutputCustomType.Parameter("minRetentionDays") Double minRetentionDays) {
+        @CustomType.Parameter("changeableForDays") @Nullable Double changeableForDays,
+        @CustomType.Parameter("maxRetentionDays") @Nullable Double maxRetentionDays,
+        @CustomType.Parameter("minRetentionDays") Double minRetentionDays) {
         this.changeableForDays = changeableForDays;
         this.maxRetentionDays = maxRetentionDays;
         this.minRetentionDays = minRetentionDays;

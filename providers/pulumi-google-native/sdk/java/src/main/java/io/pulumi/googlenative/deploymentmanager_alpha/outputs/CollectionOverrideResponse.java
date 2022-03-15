@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.MethodMapResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.OptionsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CollectionOverrideResponse {
     /**
      * The collection that identifies this resource within its service.
@@ -27,11 +27,11 @@ public final class CollectionOverrideResponse {
      */
     private final OptionsResponse options;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CollectionOverrideResponse(
-        @OutputCustomType.Parameter("collection") String collection,
-        @OutputCustomType.Parameter("methodMap") MethodMapResponse methodMap,
-        @OutputCustomType.Parameter("options") OptionsResponse options) {
+        @CustomType.Parameter("collection") String collection,
+        @CustomType.Parameter("methodMap") MethodMapResponse methodMap,
+        @CustomType.Parameter("options") OptionsResponse options) {
         this.collection = collection;
         this.methodMap = methodMap;
         this.options = options;

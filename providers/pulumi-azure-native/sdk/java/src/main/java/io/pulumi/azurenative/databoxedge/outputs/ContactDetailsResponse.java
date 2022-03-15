@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContactDetailsResponse {
     /**
      * The name of the company.
@@ -31,12 +31,12 @@ public final class ContactDetailsResponse {
      */
     private final String phone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContactDetailsResponse(
-        @OutputCustomType.Parameter("companyName") String companyName,
-        @OutputCustomType.Parameter("contactPerson") String contactPerson,
-        @OutputCustomType.Parameter("emailList") List<String> emailList,
-        @OutputCustomType.Parameter("phone") String phone) {
+        @CustomType.Parameter("companyName") String companyName,
+        @CustomType.Parameter("contactPerson") String contactPerson,
+        @CustomType.Parameter("emailList") List<String> emailList,
+        @CustomType.Parameter("phone") String phone) {
         this.companyName = companyName;
         this.contactPerson = contactPerson;
         this.emailList = emailList;

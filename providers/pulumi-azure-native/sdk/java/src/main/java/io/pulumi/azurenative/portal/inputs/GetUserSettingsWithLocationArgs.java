@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetUserSettingsWithLocationArgs extends io.pulumi.resources.I
      * The provider location
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -27,7 +27,7 @@ public final class GetUserSettingsWithLocationArgs extends io.pulumi.resources.I
      * The name of the user settings
      * 
      */
-    @InputImport(name="userSettingsName", required=true)
+    @Import(name="userSettingsName", required=true)
       private final String userSettingsName;
 
     public String getUserSettingsName() {

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.hdinsight.inputs.HardwareProfileResponse;
 import io.pulumi.azurenative.hdinsight.inputs.OsProfileResponse;
 import io.pulumi.azurenative.hdinsight.inputs.ScriptActionResponse;
 import io.pulumi.azurenative.hdinsight.inputs.VirtualNetworkProfileResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,7 +31,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * The autoscale configurations.
      * 
      */
-    @InputImport(name="autoscaleConfiguration")
+    @Import(name="autoscaleConfiguration")
       private final @Nullable AutoscaleResponse autoscaleConfiguration;
 
     public Optional<AutoscaleResponse> getAutoscaleConfiguration() {
@@ -42,7 +42,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * The data disks groups for the role.
      * 
      */
-    @InputImport(name="dataDisksGroups")
+    @Import(name="dataDisksGroups")
       private final @Nullable List<DataDisksGroupsResponse> dataDisksGroups;
 
     public List<DataDisksGroupsResponse> getDataDisksGroups() {
@@ -53,7 +53,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * Indicates whether encrypt the data disks.
      * 
      */
-    @InputImport(name="encryptDataDisks")
+    @Import(name="encryptDataDisks")
       private final @Nullable Boolean encryptDataDisks;
 
     public Optional<Boolean> getEncryptDataDisks() {
@@ -64,7 +64,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * The hardware profile.
      * 
      */
-    @InputImport(name="hardwareProfile")
+    @Import(name="hardwareProfile")
       private final @Nullable HardwareProfileResponse hardwareProfile;
 
     public Optional<HardwareProfileResponse> getHardwareProfile() {
@@ -75,7 +75,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * The minimum instance count of the cluster.
      * 
      */
-    @InputImport(name="minInstanceCount")
+    @Import(name="minInstanceCount")
       private final @Nullable Integer minInstanceCount;
 
     public Optional<Integer> getMinInstanceCount() {
@@ -86,7 +86,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the role.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -97,7 +97,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * The operating system profile.
      * 
      */
-    @InputImport(name="osProfile")
+    @Import(name="osProfile")
       private final @Nullable OsProfileResponse osProfile;
 
     public Optional<OsProfileResponse> getOsProfile() {
@@ -108,7 +108,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * The list of script actions on the role.
      * 
      */
-    @InputImport(name="scriptActions")
+    @Import(name="scriptActions")
       private final @Nullable List<ScriptActionResponse> scriptActions;
 
     public List<ScriptActionResponse> getScriptActions() {
@@ -119,7 +119,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * The instance count of the cluster.
      * 
      */
-    @InputImport(name="targetInstanceCount")
+    @Import(name="targetInstanceCount")
       private final @Nullable Integer targetInstanceCount;
 
     public Optional<Integer> getTargetInstanceCount() {
@@ -130,7 +130,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the virtual machine group.
      * 
      */
-    @InputImport(name="vMGroupName")
+    @Import(name="vMGroupName")
       private final @Nullable String vMGroupName;
 
     public Optional<String> getVMGroupName() {
@@ -141,7 +141,7 @@ public final class RoleResponse extends io.pulumi.resources.InvokeArgs {
      * The virtual network profile.
      * 
      */
-    @InputImport(name="virtualNetworkProfile")
+    @Import(name="virtualNetworkProfile")
       private final @Nullable VirtualNetworkProfileResponse virtualNetworkProfile;
 
     public Optional<VirtualNetworkProfileResponse> getVirtualNetworkProfile() {

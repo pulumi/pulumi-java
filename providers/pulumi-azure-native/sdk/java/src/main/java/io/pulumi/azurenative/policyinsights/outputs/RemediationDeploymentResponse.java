@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.policyinsights.outputs;
 
 import io.pulumi.azurenative.policyinsights.outputs.ErrorDefinitionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RemediationDeploymentResponse {
     /**
      * The time at which the remediation was created.
@@ -46,15 +46,15 @@ public final class RemediationDeploymentResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RemediationDeploymentResponse(
-        @OutputCustomType.Parameter("createdOn") String createdOn,
-        @OutputCustomType.Parameter("deploymentId") String deploymentId,
-        @OutputCustomType.Parameter("error") ErrorDefinitionResponse error,
-        @OutputCustomType.Parameter("lastUpdatedOn") String lastUpdatedOn,
-        @OutputCustomType.Parameter("remediatedResourceId") String remediatedResourceId,
-        @OutputCustomType.Parameter("resourceLocation") String resourceLocation,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("createdOn") String createdOn,
+        @CustomType.Parameter("deploymentId") String deploymentId,
+        @CustomType.Parameter("error") ErrorDefinitionResponse error,
+        @CustomType.Parameter("lastUpdatedOn") String lastUpdatedOn,
+        @CustomType.Parameter("remediatedResourceId") String remediatedResourceId,
+        @CustomType.Parameter("resourceLocation") String resourceLocation,
+        @CustomType.Parameter("status") String status) {
         this.createdOn = createdOn;
         this.deploymentId = deploymentId;
         this.error = error;

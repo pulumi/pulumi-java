@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetResourceConfiguration;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetVariable;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,28 +17,28 @@ public final class DatasetContainerAction extends io.pulumi.resources.InvokeArgs
 
     public static final DatasetContainerAction Empty = new DatasetContainerAction();
 
-    @InputImport(name="executionRoleArn", required=true)
+    @Import(name="executionRoleArn", required=true)
       private final String executionRoleArn;
 
     public String getExecutionRoleArn() {
         return this.executionRoleArn;
     }
 
-    @InputImport(name="image", required=true)
+    @Import(name="image", required=true)
       private final String image;
 
     public String getImage() {
         return this.image;
     }
 
-    @InputImport(name="resourceConfiguration", required=true)
+    @Import(name="resourceConfiguration", required=true)
       private final DatasetResourceConfiguration resourceConfiguration;
 
     public DatasetResourceConfiguration getResourceConfiguration() {
         return this.resourceConfiguration;
     }
 
-    @InputImport(name="variables")
+    @Import(name="variables")
       private final @Nullable List<DatasetVariable> variables;
 
     public List<DatasetVariable> getVariables() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.deploymentmanager_v2.outputs.OperationErrorResponse;
 import io.pulumi.googlenative.deploymentmanager_v2.outputs.OperationWarningsItemResponse;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OperationResponse {
     /**
      * The value of `requestId` if you provided it in the request. Not present otherwise.
@@ -124,30 +124,30 @@ public final class OperationResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OperationResponse(
-        @OutputCustomType.Parameter("clientOperationId") String clientOperationId,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("error") OperationErrorResponse error,
-        @OutputCustomType.Parameter("httpErrorMessage") String httpErrorMessage,
-        @OutputCustomType.Parameter("httpErrorStatusCode") Integer httpErrorStatusCode,
-        @OutputCustomType.Parameter("insertTime") String insertTime,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operationGroupId") String operationGroupId,
-        @OutputCustomType.Parameter("operationType") String operationType,
-        @OutputCustomType.Parameter("progress") Integer progress,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statusMessage") String statusMessage,
-        @OutputCustomType.Parameter("targetId") String targetId,
-        @OutputCustomType.Parameter("targetLink") String targetLink,
-        @OutputCustomType.Parameter("user") String user,
-        @OutputCustomType.Parameter("warnings") List<OperationWarningsItemResponse> warnings,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("clientOperationId") String clientOperationId,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("error") OperationErrorResponse error,
+        @CustomType.Parameter("httpErrorMessage") String httpErrorMessage,
+        @CustomType.Parameter("httpErrorStatusCode") Integer httpErrorStatusCode,
+        @CustomType.Parameter("insertTime") String insertTime,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operationGroupId") String operationGroupId,
+        @CustomType.Parameter("operationType") String operationType,
+        @CustomType.Parameter("progress") Integer progress,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statusMessage") String statusMessage,
+        @CustomType.Parameter("targetId") String targetId,
+        @CustomType.Parameter("targetLink") String targetLink,
+        @CustomType.Parameter("user") String user,
+        @CustomType.Parameter("warnings") List<OperationWarningsItemResponse> warnings,
+        @CustomType.Parameter("zone") String zone) {
         this.clientOperationId = clientOperationId;
         this.description = description;
         this.endTime = endTime;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The capacity of the SKU
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<String> capacity;
 
     public Output<String> getCapacity() {
@@ -33,7 +33,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * dedicatedCloudNode example: 8 x Ten-Core Intel® Xeon® Processor E5-2640 v4 2.40GHz 25MB Cache (90W); 12 x 64GB PC4-19200 2400MHz DDR4 ECC Registered DIMM, ...
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * If the service has different generations of hardware, for the same SKU, then that can be captured here
      * 
      */
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable Output<String> family;
 
     public Output<String> getFamily() {
@@ -55,7 +55,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the SKU for VMWare CloudSimple Node
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -66,7 +66,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * The tier of the SKU
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {

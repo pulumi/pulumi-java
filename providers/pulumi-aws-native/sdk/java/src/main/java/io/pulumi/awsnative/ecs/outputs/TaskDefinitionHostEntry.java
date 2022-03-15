@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionHostEntry {
     private final @Nullable String hostname;
     private final @Nullable String ipAddress;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionHostEntry(
-        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress) {
+        @CustomType.Parameter("hostname") @Nullable String hostname,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress) {
         this.hostname = hostname;
         this.ipAddress = ipAddress;
     }

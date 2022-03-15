@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.inputs.ColumnResponse;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ColumnLayoutResponse extends io.pulumi.resources.InvokeArgs {
      * The columns of content to display.
      * 
      */
-    @InputImport(name="columns", required=true)
+    @Import(name="columns", required=true)
       private final List<ColumnResponse> columns;
 
     public List<ColumnResponse> getColumns() {

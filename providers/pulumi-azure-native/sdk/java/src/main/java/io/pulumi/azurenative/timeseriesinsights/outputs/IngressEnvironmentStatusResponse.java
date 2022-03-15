@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.timeseriesinsights.outputs;
 
 import io.pulumi.azurenative.timeseriesinsights.outputs.EnvironmentStateDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IngressEnvironmentStatusResponse {
     /**
      * This string represents the state of ingress operations on an environment. It can be "Disabled", "Ready", "Running", "Paused" or "Unknown"
@@ -23,10 +23,10 @@ public final class IngressEnvironmentStatusResponse {
      */
     private final EnvironmentStateDetailsResponse stateDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IngressEnvironmentStatusResponse(
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("stateDetails") EnvironmentStateDetailsResponse stateDetails) {
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("stateDetails") EnvironmentStateDetailsResponse stateDetails) {
         this.state = state;
         this.stateDetails = stateDetails;
     }

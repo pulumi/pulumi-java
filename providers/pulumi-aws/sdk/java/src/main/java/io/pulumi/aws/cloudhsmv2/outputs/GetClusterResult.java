@@ -4,12 +4,12 @@
 package io.pulumi.aws.cloudhsmv2.outputs;
 
 import io.pulumi.aws.cloudhsmv2.outputs.GetClusterClusterCertificates;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterResult {
     /**
      * The list of cluster certificates.
@@ -45,15 +45,15 @@ public final class GetClusterResult {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterResult(
-        @OutputCustomType.Parameter("clusterCertificates") GetClusterClusterCertificates clusterCertificates,
-        @OutputCustomType.Parameter("clusterId") String clusterId,
-        @OutputCustomType.Parameter("clusterState") String clusterState,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("securityGroupId") String securityGroupId,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("clusterCertificates") GetClusterClusterCertificates clusterCertificates,
+        @CustomType.Parameter("clusterId") String clusterId,
+        @CustomType.Parameter("clusterState") String clusterState,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("securityGroupId") String securityGroupId,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.clusterCertificates = clusterCertificates;
         this.clusterId = clusterId;
         this.clusterState = clusterState;

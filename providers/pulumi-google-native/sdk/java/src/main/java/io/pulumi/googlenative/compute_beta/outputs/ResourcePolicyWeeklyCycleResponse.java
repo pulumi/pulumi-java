@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_beta.outputs.ResourcePolicyWeeklyCycleDayOfWeekResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicyWeeklyCycleResponse {
     /**
      * Up to 7 intervals/windows, one for each day of the week.
@@ -16,8 +16,8 @@ public final class ResourcePolicyWeeklyCycleResponse {
      */
     private final List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks;
 
-    @OutputCustomType.Constructor
-    private ResourcePolicyWeeklyCycleResponse(@OutputCustomType.Parameter("dayOfWeeks") List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks) {
+    @CustomType.Constructor
+    private ResourcePolicyWeeklyCycleResponse(@CustomType.Parameter("dayOfWeeks") List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks) {
         this.dayOfWeeks = dayOfWeeks;
     }
 

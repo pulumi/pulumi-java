@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.IPAllocationMethod;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -36,7 +36,7 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
      * Name of the frontend IP configuration that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -47,7 +47,7 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
      * PrivateIPAddress of the network interface IP Configuration.
      * 
      */
-    @InputImport(name="privateIPAddress")
+    @Import(name="privateIPAddress")
       private final @Nullable Output<String> privateIPAddress;
 
     public Output<String> getPrivateIPAddress() {
@@ -58,7 +58,7 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
      * The private IP address allocation method.
      * 
      */
-    @InputImport(name="privateIPAllocationMethod")
+    @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
     public Output<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
@@ -69,7 +69,7 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
      * Reference to the application gateway private link configuration.
      * 
      */
-    @InputImport(name="privateLinkConfiguration")
+    @Import(name="privateLinkConfiguration")
       private final @Nullable Output<SubResourceArgs> privateLinkConfiguration;
 
     public Output<SubResourceArgs> getPrivateLinkConfiguration() {
@@ -80,7 +80,7 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
      * Reference to the PublicIP resource.
      * 
      */
-    @InputImport(name="publicIPAddress")
+    @Import(name="publicIPAddress")
       private final @Nullable Output<SubResourceArgs> publicIPAddress;
 
     public Output<SubResourceArgs> getPublicIPAddress() {
@@ -91,7 +91,7 @@ public final class ApplicationGatewayFrontendIPConfigurationArgs extends io.pulu
      * Reference to the subnet resource.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<SubResourceArgs> subnet;
 
     public Output<SubResourceArgs> getSubnet() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageDiskReferenceResponse {
     /**
      * A relative uri containing either a Platform Image Repository or user image reference.
@@ -23,10 +23,10 @@ public final class ImageDiskReferenceResponse {
      */
     private final @Nullable Integer lun;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageDiskReferenceResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lun") @Nullable Integer lun) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lun") @Nullable Integer lun) {
         this.id = id;
         this.lun = lun;
     }

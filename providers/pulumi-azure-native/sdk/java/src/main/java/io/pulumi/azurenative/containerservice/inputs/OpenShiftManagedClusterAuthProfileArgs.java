@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.OpenShiftManagedClusterIdentityProviderArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class OpenShiftManagedClusterAuthProfileArgs extends io.pulumi.reso
      * Type of authentication profile to use.
      * 
      */
-    @InputImport(name="identityProviders")
+    @Import(name="identityProviders")
       private final @Nullable Output<List<OpenShiftManagedClusterIdentityProviderArgs>> identityProviders;
 
     public Output<List<OpenShiftManagedClusterIdentityProviderArgs>> getIdentityProviders() {

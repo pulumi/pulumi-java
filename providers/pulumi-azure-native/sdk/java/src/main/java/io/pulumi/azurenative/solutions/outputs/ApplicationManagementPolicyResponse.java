@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationManagementPolicyResponse {
     /**
      * The managed application management mode.
@@ -17,8 +17,8 @@ public final class ApplicationManagementPolicyResponse {
      */
     private final @Nullable String mode;
 
-    @OutputCustomType.Constructor
-    private ApplicationManagementPolicyResponse(@OutputCustomType.Parameter("mode") @Nullable String mode) {
+    @CustomType.Constructor
+    private ApplicationManagementPolicyResponse(@CustomType.Parameter("mode") @Nullable String mode) {
         this.mode = mode;
     }
 

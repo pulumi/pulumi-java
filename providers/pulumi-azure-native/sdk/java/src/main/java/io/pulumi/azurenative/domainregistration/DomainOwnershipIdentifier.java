@@ -8,7 +8,7 @@ import io.pulumi.azurenative.domainregistration.DomainOwnershipIdentifierArgs;
 import io.pulumi.azurenative.domainregistration.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public class DomainOwnershipIdentifier extends io.pulumi.resources.CustomResourc
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -46,7 +46,7 @@ public class DomainOwnershipIdentifier extends io.pulumi.resources.CustomResourc
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -60,7 +60,7 @@ public class DomainOwnershipIdentifier extends io.pulumi.resources.CustomResourc
      * Ownership Id.
      * 
      */
-    @OutputExport(name="ownershipId", type=String.class, parameters={})
+    @Export(name="ownershipId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ownershipId;
 
     /**
@@ -74,7 +74,7 @@ public class DomainOwnershipIdentifier extends io.pulumi.resources.CustomResourc
      * The system metadata relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -88,7 +88,7 @@ public class DomainOwnershipIdentifier extends io.pulumi.resources.CustomResourc
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

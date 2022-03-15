@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * a value of `UTF8` at creation time.
      * 
      */
-    @InputImport(name="charset")
+    @Import(name="charset")
       private final @Nullable Output<String> charset;
 
     public Output<String> getCharset() {
@@ -37,7 +37,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * a value of `en_US.UTF8` at creation time.
      * 
      */
-    @InputImport(name="collation")
+    @Import(name="collation")
       private final @Nullable Output<String> collation;
 
     public Output<String> getCollation() {
@@ -49,7 +49,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * ID.
      * 
      */
-    @InputImport(name="instance", required=true)
+    @Import(name="instance", required=true)
       private final Output<String> instance;
 
     public Output<String> getInstance() {
@@ -61,7 +61,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * This does not include the project ID or instance name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -73,7 +73,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

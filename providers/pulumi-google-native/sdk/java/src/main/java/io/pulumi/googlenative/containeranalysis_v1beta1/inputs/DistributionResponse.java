@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.VersionResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
      * The CPU architecture for which packages in this distribution channel were built.
      * 
      */
-    @InputImport(name="architecture", required=true)
+    @Import(name="architecture", required=true)
       private final String architecture;
 
     public String getArchitecture() {
@@ -32,7 +32,7 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
      * The cpe_uri in [CPE format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
      * 
      */
-    @InputImport(name="cpeUri", required=true)
+    @Import(name="cpeUri", required=true)
       private final String cpeUri;
 
     public String getCpeUri() {
@@ -43,7 +43,7 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
      * The distribution channel-specific description of this package.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -54,7 +54,7 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
      * The latest available version of this package in this distribution channel.
      * 
      */
-    @InputImport(name="latestVersion", required=true)
+    @Import(name="latestVersion", required=true)
       private final VersionResponse latestVersion;
 
     public VersionResponse getLatestVersion() {
@@ -65,7 +65,7 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
      * A freeform string denoting the maintainer of this package.
      * 
      */
-    @InputImport(name="maintainer", required=true)
+    @Import(name="maintainer", required=true)
       private final String maintainer;
 
     public String getMaintainer() {
@@ -76,7 +76,7 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
      * The distribution channel-specific homepage for this package.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {

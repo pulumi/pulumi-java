@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.containerinstance.outputs;
 
 import io.pulumi.azurenative.containerinstance.outputs.PortResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IpAddressResponse {
     /**
      * The Dns name label for the IP.
@@ -39,13 +39,13 @@ public final class IpAddressResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IpAddressResponse(
-        @OutputCustomType.Parameter("dnsNameLabel") @Nullable String dnsNameLabel,
-        @OutputCustomType.Parameter("fqdn") String fqdn,
-        @OutputCustomType.Parameter("ip") @Nullable String ip,
-        @OutputCustomType.Parameter("ports") List<PortResponse> ports,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("dnsNameLabel") @Nullable String dnsNameLabel,
+        @CustomType.Parameter("fqdn") String fqdn,
+        @CustomType.Parameter("ip") @Nullable String ip,
+        @CustomType.Parameter("ports") List<PortResponse> ports,
+        @CustomType.Parameter("type") String type) {
         this.dnsNameLabel = dnsNameLabel;
         this.fqdn = fqdn;
         this.ip = ip;

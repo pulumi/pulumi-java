@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetInstanceTemplateShieldedInstanceConfig extends io.pulumi.r
 
     public static final GetInstanceTemplateShieldedInstanceConfig Empty = new GetInstanceTemplateShieldedInstanceConfig();
 
-    @InputImport(name="enableIntegrityMonitoring", required=true)
+    @Import(name="enableIntegrityMonitoring", required=true)
       private final Boolean enableIntegrityMonitoring;
 
     public Boolean getEnableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring;
     }
 
-    @InputImport(name="enableSecureBoot", required=true)
+    @Import(name="enableSecureBoot", required=true)
       private final Boolean enableSecureBoot;
 
     public Boolean getEnableSecureBoot() {
         return this.enableSecureBoot;
     }
 
-    @InputImport(name="enableVtpm", required=true)
+    @Import(name="enableVtpm", required=true)
       private final Boolean enableVtpm;
 
     public Boolean getEnableVtpm() {

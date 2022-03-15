@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.azurenative.securityinsights.inputs.AwsCloudTrailDataConnectorDataTypesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
      * The Aws Role Arn (with CloudTrailReadOnly policy) that is used to access the Aws account.
      * 
      */
-    @InputImport(name="awsRoleArn")
+    @Import(name="awsRoleArn")
       private final @Nullable Output<String> awsRoleArn;
 
     public Output<String> getAwsRoleArn() {
@@ -30,7 +30,7 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
      * Connector ID
      * 
      */
-    @InputImport(name="dataConnectorId")
+    @Import(name="dataConnectorId")
       private final @Nullable Output<String> dataConnectorId;
 
     public Output<String> getDataConnectorId() {
@@ -41,7 +41,7 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
      * The available data types for the connector.
      * 
      */
-    @InputImport(name="dataTypes")
+    @Import(name="dataTypes")
       private final @Nullable Output<AwsCloudTrailDataConnectorDataTypesArgs> dataTypes;
 
     public Output<AwsCloudTrailDataConnectorDataTypesArgs> getDataTypes() {
@@ -53,7 +53,7 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
      * Expected value is 'AmazonWebServicesCloudTrail'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -64,7 +64,7 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -75,7 +75,7 @@ public final class AwsCloudTrailDataConnectorArgs extends io.pulumi.resources.Re
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

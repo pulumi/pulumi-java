@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.RegionInstanceGroupManagerVersionTargetSize;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionInstanceGroupManagerVersion {
     /**
      * - The full URL to an instance template from which all new instances of this version will be created.
@@ -28,11 +28,11 @@ public final class RegionInstanceGroupManagerVersion {
      */
     private final @Nullable RegionInstanceGroupManagerVersionTargetSize targetSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionInstanceGroupManagerVersion(
-        @OutputCustomType.Parameter("instanceTemplate") String instanceTemplate,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("targetSize") @Nullable RegionInstanceGroupManagerVersionTargetSize targetSize) {
+        @CustomType.Parameter("instanceTemplate") String instanceTemplate,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("targetSize") @Nullable RegionInstanceGroupManagerVersionTargetSize targetSize) {
         this.instanceTemplate = instanceTemplate;
         this.name = name;
         this.targetSize = targetSize;

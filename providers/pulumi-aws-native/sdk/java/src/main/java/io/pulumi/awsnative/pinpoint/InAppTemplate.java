@@ -8,7 +8,7 @@ import io.pulumi.awsnative.pinpoint.InAppTemplateArgs;
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateLayout;
 import io.pulumi.awsnative.pinpoint.outputs.InAppTemplateInAppMessageContent;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -21,43 +21,43 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:pinpoint:InAppTemplate")
 public class InAppTemplate extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="content", type=List.class, parameters={InAppTemplateInAppMessageContent.class})
+    @Export(name="content", type=List.class, parameters={InAppTemplateInAppMessageContent.class})
     private Output</* @Nullable */ List<InAppTemplateInAppMessageContent>> content;
 
     public Output</* @Nullable */ List<InAppTemplateInAppMessageContent>> getContent() {
         return this.content;
     }
-    @OutputExport(name="customConfig", type=Object.class, parameters={})
+    @Export(name="customConfig", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> customConfig;
 
     public Output</* @Nullable */ Object> getCustomConfig() {
         return this.customConfig;
     }
-    @OutputExport(name="layout", type=InAppTemplateLayout.class, parameters={})
+    @Export(name="layout", type=InAppTemplateLayout.class, parameters={})
     private Output</* @Nullable */ InAppTemplateLayout> layout;
 
     public Output</* @Nullable */ InAppTemplateLayout> getLayout() {
         return this.layout;
     }
-    @OutputExport(name="tags", type=Object.class, parameters={})
+    @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
     public Output</* @Nullable */ Object> getTags() {
         return this.tags;
     }
-    @OutputExport(name="templateDescription", type=String.class, parameters={})
+    @Export(name="templateDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateDescription;
 
     public Output</* @Nullable */ String> getTemplateDescription() {
         return this.templateDescription;
     }
-    @OutputExport(name="templateName", type=String.class, parameters={})
+    @Export(name="templateName", type=String.class, parameters={})
     private Output<String> templateName;
 
     public Output<String> getTemplateName() {

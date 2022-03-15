@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetSubnetFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSubnetResult {
     /**
      * ARN of the subnet.
@@ -96,32 +96,32 @@ public final class GetSubnetResult {
     private final Map<String,String> tags;
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSubnetResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("assignIpv6AddressOnCreation") Boolean assignIpv6AddressOnCreation,
-        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
-        @OutputCustomType.Parameter("availabilityZoneId") String availabilityZoneId,
-        @OutputCustomType.Parameter("availableIpAddressCount") Integer availableIpAddressCount,
-        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
-        @OutputCustomType.Parameter("customerOwnedIpv4Pool") String customerOwnedIpv4Pool,
-        @OutputCustomType.Parameter("defaultForAz") Boolean defaultForAz,
-        @OutputCustomType.Parameter("enableDns64") Boolean enableDns64,
-        @OutputCustomType.Parameter("enableResourceNameDnsARecordOnLaunch") Boolean enableResourceNameDnsARecordOnLaunch,
-        @OutputCustomType.Parameter("enableResourceNameDnsAaaaRecordOnLaunch") Boolean enableResourceNameDnsAaaaRecordOnLaunch,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetSubnetFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ipv6CidrBlock") String ipv6CidrBlock,
-        @OutputCustomType.Parameter("ipv6CidrBlockAssociationId") String ipv6CidrBlockAssociationId,
-        @OutputCustomType.Parameter("ipv6Native") Boolean ipv6Native,
-        @OutputCustomType.Parameter("mapCustomerOwnedIpOnLaunch") Boolean mapCustomerOwnedIpOnLaunch,
-        @OutputCustomType.Parameter("mapPublicIpOnLaunch") Boolean mapPublicIpOnLaunch,
-        @OutputCustomType.Parameter("outpostArn") String outpostArn,
-        @OutputCustomType.Parameter("ownerId") String ownerId,
-        @OutputCustomType.Parameter("privateDnsHostnameTypeOnLaunch") String privateDnsHostnameTypeOnLaunch,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("assignIpv6AddressOnCreation") Boolean assignIpv6AddressOnCreation,
+        @CustomType.Parameter("availabilityZone") String availabilityZone,
+        @CustomType.Parameter("availabilityZoneId") String availabilityZoneId,
+        @CustomType.Parameter("availableIpAddressCount") Integer availableIpAddressCount,
+        @CustomType.Parameter("cidrBlock") String cidrBlock,
+        @CustomType.Parameter("customerOwnedIpv4Pool") String customerOwnedIpv4Pool,
+        @CustomType.Parameter("defaultForAz") Boolean defaultForAz,
+        @CustomType.Parameter("enableDns64") Boolean enableDns64,
+        @CustomType.Parameter("enableResourceNameDnsARecordOnLaunch") Boolean enableResourceNameDnsARecordOnLaunch,
+        @CustomType.Parameter("enableResourceNameDnsAaaaRecordOnLaunch") Boolean enableResourceNameDnsAaaaRecordOnLaunch,
+        @CustomType.Parameter("filters") @Nullable List<GetSubnetFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ipv6CidrBlock") String ipv6CidrBlock,
+        @CustomType.Parameter("ipv6CidrBlockAssociationId") String ipv6CidrBlockAssociationId,
+        @CustomType.Parameter("ipv6Native") Boolean ipv6Native,
+        @CustomType.Parameter("mapCustomerOwnedIpOnLaunch") Boolean mapCustomerOwnedIpOnLaunch,
+        @CustomType.Parameter("mapPublicIpOnLaunch") Boolean mapPublicIpOnLaunch,
+        @CustomType.Parameter("outpostArn") String outpostArn,
+        @CustomType.Parameter("ownerId") String ownerId,
+        @CustomType.Parameter("privateDnsHostnameTypeOnLaunch") String privateDnsHostnameTypeOnLaunch,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.arn = arn;
         this.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
         this.availabilityZone = availabilityZone;

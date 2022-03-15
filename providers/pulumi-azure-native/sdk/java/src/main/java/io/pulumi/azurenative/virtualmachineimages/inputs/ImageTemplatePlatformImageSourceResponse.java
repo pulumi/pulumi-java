@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.azurenative.virtualmachineimages.inputs.PlatformImagePurchasePlanResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
      * Image offer from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
      * 
      */
-    @InputImport(name="offer")
+    @Import(name="offer")
       private final @Nullable String offer;
 
     public Optional<String> getOffer() {
@@ -34,7 +34,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
      * Optional configuration of purchase plan for platform image.
      * 
      */
-    @InputImport(name="planInfo")
+    @Import(name="planInfo")
       private final @Nullable PlatformImagePurchasePlanResponse planInfo;
 
     public Optional<PlatformImagePurchasePlanResponse> getPlanInfo() {
@@ -45,7 +45,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
      * Image Publisher in [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
      * 
      */
-    @InputImport(name="publisher")
+    @Import(name="publisher")
       private final @Nullable String publisher;
 
     public Optional<String> getPublisher() {
@@ -56,7 +56,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
      * Image sku from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages).
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable String sku;
 
     public Optional<String> getSku() {
@@ -68,7 +68,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
      * Expected value is 'PlatformImage'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -79,7 +79,7 @@ public final class ImageTemplatePlatformImageSourceResponse extends io.pulumi.re
      * Image version from the [Azure Gallery Images](https://docs.microsoft.com/en-us/rest/api/compute/virtualmachineimages). If 'latest' is specified here, the version is evaluated when the image build takes place, not when the template is submitted. Specifying 'latest' could cause ROUNDTRIP_INCONSISTENT_PROPERTY issue which will be fixed.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable String version;
 
     public Optional<String> getVersion() {

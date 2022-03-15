@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AttachNewDataDiskOptionsResponse {
     /**
      * The name of the disk to be attached.
@@ -28,11 +28,11 @@ public final class AttachNewDataDiskOptionsResponse {
      */
     private final @Nullable String diskType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AttachNewDataDiskOptionsResponse(
-        @OutputCustomType.Parameter("diskName") @Nullable String diskName,
-        @OutputCustomType.Parameter("diskSizeGiB") @Nullable Integer diskSizeGiB,
-        @OutputCustomType.Parameter("diskType") @Nullable String diskType) {
+        @CustomType.Parameter("diskName") @Nullable String diskName,
+        @CustomType.Parameter("diskSizeGiB") @Nullable Integer diskSizeGiB,
+        @CustomType.Parameter("diskType") @Nullable String diskType) {
         this.diskName = diskName;
         this.diskSizeGiB = diskSizeGiB;
         this.diskType = diskType;

@@ -3,18 +3,18 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOption;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage {
     private final @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOption> keyUsageOptions;
 
-    @OutputCustomType.Constructor
-    private CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage(@OutputCustomType.Parameter("keyUsageOptions") @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOption> keyUsageOptions) {
+    @CustomType.Constructor
+    private CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsage(@CustomType.Parameter("keyUsageOptions") @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageKeyUsageOption> keyUsageOptions) {
         this.keyUsageOptions = keyUsageOptions;
     }
 

@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.ivs.outputs;
 
 import io.pulumi.awsnative.ivs.outputs.PlaybackKeyPairTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPlaybackKeyPairResult {
     /**
      * Key-pair identifier.
@@ -29,11 +29,11 @@ public final class GetPlaybackKeyPairResult {
      */
     private final @Nullable List<PlaybackKeyPairTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPlaybackKeyPairResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("fingerprint") @Nullable String fingerprint,
-        @OutputCustomType.Parameter("tags") @Nullable List<PlaybackKeyPairTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("fingerprint") @Nullable String fingerprint,
+        @CustomType.Parameter("tags") @Nullable List<PlaybackKeyPairTag> tags) {
         this.arn = arn;
         this.fingerprint = fingerprint;
         this.tags = tags;

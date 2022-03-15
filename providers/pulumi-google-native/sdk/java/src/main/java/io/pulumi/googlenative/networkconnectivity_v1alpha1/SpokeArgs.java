@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkconnectivity_v1alpha1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.networkconnectivity_v1alpha1.inputs.RouterApplianceInstanceArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * The time when the Spoke was created.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -32,7 +32,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * Short description of the spoke resource
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * The resource URL of the hub resource that the spoke is attached to
      * 
      */
-    @InputImport(name="hub")
+    @Import(name="hub")
       private final @Nullable Output<String> hub;
 
     public Output<String> getHub() {
@@ -54,7 +54,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * User-defined labels.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -65,7 +65,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * The URIs of linked interconnect attachment resources
      * 
      */
-    @InputImport(name="linkedInterconnectAttachments")
+    @Import(name="linkedInterconnectAttachments")
       private final @Nullable Output<List<String>> linkedInterconnectAttachments;
 
     public Output<List<String>> getLinkedInterconnectAttachments() {
@@ -76,7 +76,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * The URIs of linked Router appliance resources
      * 
      */
-    @InputImport(name="linkedRouterApplianceInstances")
+    @Import(name="linkedRouterApplianceInstances")
       private final @Nullable Output<List<RouterApplianceInstanceArgs>> linkedRouterApplianceInstances;
 
     public Output<List<RouterApplianceInstanceArgs>> getLinkedRouterApplianceInstances() {
@@ -87,14 +87,14 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * The URIs of linked VPN tunnel resources
      * 
      */
-    @InputImport(name="linkedVpnTunnels")
+    @Import(name="linkedVpnTunnels")
       private final @Nullable Output<List<String>> linkedVpnTunnels;
 
     public Output<List<String>> getLinkedVpnTunnels() {
         return this.linkedVpnTunnels == null ? Output.empty() : this.linkedVpnTunnels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -105,28 +105,28 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The name of a Spoke resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
         return this.requestId == null ? Output.empty() : this.requestId;
     }
 
-    @InputImport(name="spokeId")
+    @Import(name="spokeId")
       private final @Nullable Output<String> spokeId;
 
     public Output<String> getSpokeId() {
@@ -137,7 +137,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * The time when the Spoke was updated.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

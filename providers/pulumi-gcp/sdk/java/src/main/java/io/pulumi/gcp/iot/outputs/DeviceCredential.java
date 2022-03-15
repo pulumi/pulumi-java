@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.iot.outputs.DeviceCredentialPublicKey;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeviceCredential {
     /**
      * The time at which this credential becomes invalid.
@@ -24,10 +24,10 @@ public final class DeviceCredential {
      */
     private final DeviceCredentialPublicKey publicKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeviceCredential(
-        @OutputCustomType.Parameter("expirationTime") @Nullable String expirationTime,
-        @OutputCustomType.Parameter("publicKey") DeviceCredentialPublicKey publicKey) {
+        @CustomType.Parameter("expirationTime") @Nullable String expirationTime,
+        @CustomType.Parameter("publicKey") DeviceCredentialPublicKey publicKey) {
         this.expirationTime = expirationTime;
         this.publicKey = publicKey;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.ServiceMeshAnalysisMessageBaseResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ServiceMeshAnalysisMessageResponse extends io.pulumi.resource
      * A UI can combine these args with a template (based on message_base.type) to produce an internationalized message.
      * 
      */
-    @InputImport(name="args", required=true)
+    @Import(name="args", required=true)
       private final Map<String,String> args;
 
     public Map<String,String> getArgs() {
@@ -34,7 +34,7 @@ public final class ServiceMeshAnalysisMessageResponse extends io.pulumi.resource
      * A human readable description of what the error means. It is suitable for non-internationalize display purposes.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -45,7 +45,7 @@ public final class ServiceMeshAnalysisMessageResponse extends io.pulumi.resource
      * Details common to all types of Istio and ServiceMesh analysis messages.
      * 
      */
-    @InputImport(name="messageBase", required=true)
+    @Import(name="messageBase", required=true)
       private final ServiceMeshAnalysisMessageBaseResponse messageBase;
 
     public ServiceMeshAnalysisMessageBaseResponse getMessageBase() {
@@ -56,7 +56,7 @@ public final class ServiceMeshAnalysisMessageResponse extends io.pulumi.resource
      * A list of strings specifying the resource identifiers that were the cause of message generation. A "path" here may be: * MEMBERSHIP_ID if the cause is a specific member cluster * MEMBERSHIP_ID/(NAMESPACE\/)?RESOURCETYPE/NAME if the cause is a resource in a cluster
      * 
      */
-    @InputImport(name="resourcePaths", required=true)
+    @Import(name="resourcePaths", required=true)
       private final List<String> resourcePaths;
 
     public List<String> getResourcePaths() {

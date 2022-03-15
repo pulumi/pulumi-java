@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.StorageLensPrefixLevelStorageMetricsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class StorageLensPrefixLevelArgs extends io.pulumi.resources.Resour
 
     public static final StorageLensPrefixLevelArgs Empty = new StorageLensPrefixLevelArgs();
 
-    @InputImport(name="storageMetrics", required=true)
+    @Import(name="storageMetrics", required=true)
       private final Output<StorageLensPrefixLevelStorageMetricsArgs> storageMetrics;
 
     public Output<StorageLensPrefixLevelStorageMetricsArgs> getStorageMetrics() {

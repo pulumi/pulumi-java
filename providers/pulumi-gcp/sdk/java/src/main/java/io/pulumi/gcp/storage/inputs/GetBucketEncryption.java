@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetBucketEncryption extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBucketEncryption Empty = new GetBucketEncryption();
 
-    @InputImport(name="defaultKmsKeyName", required=true)
+    @Import(name="defaultKmsKeyName", required=true)
       private final String defaultKmsKeyName;
 
     public String getDefaultKmsKeyName() {

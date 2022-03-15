@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kendra.inputs;
 import io.pulumi.awsnative.kendra.enums.DataSourceSalesforceStandardObjectName;
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,28 +17,28 @@ public final class DataSourceSalesforceStandardObjectConfigurationArgs extends i
 
     public static final DataSourceSalesforceStandardObjectConfigurationArgs Empty = new DataSourceSalesforceStandardObjectConfigurationArgs();
 
-    @InputImport(name="documentDataFieldName", required=true)
+    @Import(name="documentDataFieldName", required=true)
       private final Output<String> documentDataFieldName;
 
     public Output<String> getDocumentDataFieldName() {
         return this.documentDataFieldName;
     }
 
-    @InputImport(name="documentTitleFieldName")
+    @Import(name="documentTitleFieldName")
       private final @Nullable Output<String> documentTitleFieldName;
 
     public Output<String> getDocumentTitleFieldName() {
         return this.documentTitleFieldName == null ? Output.empty() : this.documentTitleFieldName;
     }
 
-    @InputImport(name="fieldMappings")
+    @Import(name="fieldMappings")
       private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
         return this.fieldMappings == null ? Output.empty() : this.fieldMappings;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<DataSourceSalesforceStandardObjectName> name;
 
     public Output<DataSourceSalesforceStandardObjectName> getName() {

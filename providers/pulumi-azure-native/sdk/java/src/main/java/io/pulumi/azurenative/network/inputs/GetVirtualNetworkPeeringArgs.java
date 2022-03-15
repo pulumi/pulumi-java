@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetVirtualNetworkPeeringArgs extends io.pulumi.resources.Invo
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -27,7 +27,7 @@ public final class GetVirtualNetworkPeeringArgs extends io.pulumi.resources.Invo
      * The name of the virtual network.
      * 
      */
-    @InputImport(name="virtualNetworkName", required=true)
+    @Import(name="virtualNetworkName", required=true)
       private final String virtualNetworkName;
 
     public String getVirtualNetworkName() {
@@ -38,7 +38,7 @@ public final class GetVirtualNetworkPeeringArgs extends io.pulumi.resources.Invo
      * The name of the virtual network peering.
      * 
      */
-    @InputImport(name="virtualNetworkPeeringName", required=true)
+    @Import(name="virtualNetworkPeeringName", required=true)
       private final String virtualNetworkPeeringName;
 
     public String getVirtualNetworkPeeringName() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.kms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the key alias.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * The display name of the alias. The name must start with the word "alias" followed by a forward slash (alias/)
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * The name must start with the word "alias" followed by a forward slash (alias/).  Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -52,7 +52,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the target key identifier.
      * 
      */
-    @InputImport(name="targetKeyArn")
+    @Import(name="targetKeyArn")
       private final @Nullable Output<String> targetKeyArn;
 
     public Output<String> getTargetKeyArn() {
@@ -63,7 +63,7 @@ public final class AliasState extends io.pulumi.resources.ResourceArgs {
      * Identifier for the key for which the alias is for, can be either an ARN or key_id.
      * 
      */
-    @InputImport(name="targetKeyId")
+    @Import(name="targetKeyId")
       private final @Nullable Output<String> targetKeyId;
 
     public Output<String> getTargetKeyId() {

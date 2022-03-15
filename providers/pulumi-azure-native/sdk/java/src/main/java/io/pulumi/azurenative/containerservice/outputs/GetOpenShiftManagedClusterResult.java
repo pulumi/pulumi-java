@@ -9,7 +9,7 @@ import io.pulumi.azurenative.containerservice.outputs.OpenShiftManagedClusterAut
 import io.pulumi.azurenative.containerservice.outputs.OpenShiftManagedClusterMasterPoolProfileResponse;
 import io.pulumi.azurenative.containerservice.outputs.OpenShiftRouterProfileResponse;
 import io.pulumi.azurenative.containerservice.outputs.PurchasePlanResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOpenShiftManagedClusterResult {
     /**
      * Configuration of OpenShift cluster VMs.
@@ -100,24 +100,24 @@ public final class GetOpenShiftManagedClusterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOpenShiftManagedClusterResult(
-        @OutputCustomType.Parameter("agentPoolProfiles") @Nullable List<OpenShiftManagedClusterAgentPoolProfileResponse> agentPoolProfiles,
-        @OutputCustomType.Parameter("authProfile") @Nullable OpenShiftManagedClusterAuthProfileResponse authProfile,
-        @OutputCustomType.Parameter("clusterVersion") String clusterVersion,
-        @OutputCustomType.Parameter("fqdn") String fqdn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("masterPoolProfile") @Nullable OpenShiftManagedClusterMasterPoolProfileResponse masterPoolProfile,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
-        @OutputCustomType.Parameter("openShiftVersion") String openShiftVersion,
-        @OutputCustomType.Parameter("plan") @Nullable PurchasePlanResponse plan,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicHostname") String publicHostname,
-        @OutputCustomType.Parameter("routerProfiles") @Nullable List<OpenShiftRouterProfileResponse> routerProfiles,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("agentPoolProfiles") @Nullable List<OpenShiftManagedClusterAgentPoolProfileResponse> agentPoolProfiles,
+        @CustomType.Parameter("authProfile") @Nullable OpenShiftManagedClusterAuthProfileResponse authProfile,
+        @CustomType.Parameter("clusterVersion") String clusterVersion,
+        @CustomType.Parameter("fqdn") String fqdn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("masterPoolProfile") @Nullable OpenShiftManagedClusterMasterPoolProfileResponse masterPoolProfile,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
+        @CustomType.Parameter("openShiftVersion") String openShiftVersion,
+        @CustomType.Parameter("plan") @Nullable PurchasePlanResponse plan,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicHostname") String publicHostname,
+        @CustomType.Parameter("routerProfiles") @Nullable List<OpenShiftRouterProfileResponse> routerProfiles,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.agentPoolProfiles = agentPoolProfiles;
         this.authProfile = authProfile;
         this.clusterVersion = clusterVersion;

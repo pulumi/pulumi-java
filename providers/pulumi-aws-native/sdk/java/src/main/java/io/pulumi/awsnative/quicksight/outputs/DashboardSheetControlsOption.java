@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.enums.DashboardUIState;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DashboardSheetControlsOption {
     private final @Nullable DashboardUIState visibilityState;
 
-    @OutputCustomType.Constructor
-    private DashboardSheetControlsOption(@OutputCustomType.Parameter("visibilityState") @Nullable DashboardUIState visibilityState) {
+    @CustomType.Constructor
+    private DashboardSheetControlsOption(@CustomType.Parameter("visibilityState") @Nullable DashboardUIState visibilityState) {
         this.visibilityState = visibilityState;
     }
 

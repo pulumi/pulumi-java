@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class NodePoolNetworkConfigGetArgs extends io.pulumi.resources.Reso
 
     public static final NodePoolNetworkConfigGetArgs Empty = new NodePoolNetworkConfigGetArgs();
 
-    @InputImport(name="createPodRange")
+    @Import(name="createPodRange")
       private final @Nullable Output<Boolean> createPodRange;
 
     public Output<Boolean> getCreatePodRange() {
         return this.createPodRange == null ? Output.empty() : this.createPodRange;
     }
 
-    @InputImport(name="podIpv4CidrBlock")
+    @Import(name="podIpv4CidrBlock")
       private final @Nullable Output<String> podIpv4CidrBlock;
 
     public Output<String> getPodIpv4CidrBlock() {
         return this.podIpv4CidrBlock == null ? Output.empty() : this.podIpv4CidrBlock;
     }
 
-    @InputImport(name="podRange", required=true)
+    @Import(name="podRange", required=true)
       private final Output<String> podRange;
 
     public Output<String> getPodRange() {

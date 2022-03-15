@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.AttemptStatusResponse;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TaskStatusResponse {
     /**
      * The number of attempts dispatched. This count includes attempts which have been dispatched but haven't received a response.
@@ -31,12 +31,12 @@ public final class TaskStatusResponse {
      */
     private final AttemptStatusResponse lastAttemptStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskStatusResponse(
-        @OutputCustomType.Parameter("attemptDispatchCount") Integer attemptDispatchCount,
-        @OutputCustomType.Parameter("attemptResponseCount") Integer attemptResponseCount,
-        @OutputCustomType.Parameter("firstAttemptStatus") AttemptStatusResponse firstAttemptStatus,
-        @OutputCustomType.Parameter("lastAttemptStatus") AttemptStatusResponse lastAttemptStatus) {
+        @CustomType.Parameter("attemptDispatchCount") Integer attemptDispatchCount,
+        @CustomType.Parameter("attemptResponseCount") Integer attemptResponseCount,
+        @CustomType.Parameter("firstAttemptStatus") AttemptStatusResponse firstAttemptStatus,
+        @CustomType.Parameter("lastAttemptStatus") AttemptStatusResponse lastAttemptStatus) {
         this.attemptDispatchCount = attemptDispatchCount;
         this.attemptResponseCount = attemptResponseCount;
         this.firstAttemptStatus = firstAttemptStatus;

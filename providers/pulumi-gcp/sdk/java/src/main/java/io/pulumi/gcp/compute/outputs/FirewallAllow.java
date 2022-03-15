@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallAllow {
     /**
      * An optional list of ports to which this rule applies. This field
@@ -30,10 +30,10 @@ public final class FirewallAllow {
      */
     private final String protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallAllow(
-        @OutputCustomType.Parameter("ports") @Nullable List<String> ports,
-        @OutputCustomType.Parameter("protocol") String protocol) {
+        @CustomType.Parameter("ports") @Nullable List<String> ports,
+        @CustomType.Parameter("protocol") String protocol) {
         this.ports = ports;
         this.protocol = protocol;
     }

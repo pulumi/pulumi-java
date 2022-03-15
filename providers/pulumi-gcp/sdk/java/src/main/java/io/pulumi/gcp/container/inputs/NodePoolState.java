@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.NodePoolAutoscalingGetArgs;
 import io.pulumi.gcp.container.inputs.NodePoolManagementGetArgs;
 import io.pulumi.gcp.container.inputs.NodePoolNetworkConfigGetArgs;
@@ -26,7 +26,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
      * the size of the node pool to the current cluster usage. Structure is documented below.
      * 
      */
-    @InputImport(name="autoscaling")
+    @Import(name="autoscaling")
       private final @Nullable Output<NodePoolAutoscalingGetArgs> autoscaling;
 
     public Output<NodePoolAutoscalingGetArgs> getAutoscaling() {
@@ -37,7 +37,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
      * The cluster to create the node pool for. Cluster must be present in `location` provided for clusters. May be specified in the format `projects/{{project}}/locations/{{location}}/clusters/{{cluster}}` or as just the name of the cluster.
      * 
      */
-    @InputImport(name="cluster")
+    @Import(name="cluster")
       private final @Nullable Output<String> cluster;
 
     public Output<String> getCluster() {
@@ -54,7 +54,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
      * ignore subsqeuent changes to this field.
      * 
      */
-    @InputImport(name="initialNodeCount")
+    @Import(name="initialNodeCount")
       private final @Nullable Output<Integer> initialNodeCount;
 
     public Output<Integer> getInitialNodeCount() {
@@ -65,7 +65,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
      * The resource URLs of the managed instance groups associated with this node pool.
      * 
      */
-    @InputImport(name="instanceGroupUrls")
+    @Import(name="instanceGroupUrls")
       private final @Nullable Output<List<String>> instanceGroupUrls;
 
     public Output<List<String>> getInstanceGroupUrls() {
@@ -76,7 +76,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
      * The location (region or zone) of the cluster.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -87,7 +87,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
      * List of instance group URLs which have been assigned to this node pool.
      * 
      */
-    @InputImport(name="managedInstanceGroupUrls")
+    @Import(name="managedInstanceGroupUrls")
       private final @Nullable Output<List<String>> managedInstanceGroupUrls;
 
     public Output<List<String>> getManagedInstanceGroupUrls() {
@@ -99,7 +99,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
      * auto-upgrade is configured. Structure is documented below.
      * 
      */
-    @InputImport(name="management")
+    @Import(name="management")
       private final @Nullable Output<NodePoolManagementGetArgs> management;
 
     public Output<NodePoolManagementGetArgs> getManagement() {
@@ -114,7 +114,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
      * for more information.
      * 
      */
-    @InputImport(name="maxPodsPerNode")
+    @Import(name="maxPodsPerNode")
       private final @Nullable Output<Integer> maxPodsPerNode;
 
     public Output<Integer> getMaxPodsPerNode() {
@@ -126,7 +126,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
      * auto-generate a unique name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -138,7 +138,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
      * with the specified prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -150,7 +150,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
      * gcp.container.Cluster for schema.
      * 
      */
-    @InputImport(name="networkConfig")
+    @Import(name="networkConfig")
       private final @Nullable Output<NodePoolNetworkConfigGetArgs> networkConfig;
 
     public Output<NodePoolNetworkConfigGetArgs> getNetworkConfig() {
@@ -162,7 +162,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
      * gcp.container.Cluster for schema.
      * 
      */
-    @InputImport(name="nodeConfig")
+    @Import(name="nodeConfig")
       private final @Nullable Output<NodePoolNodeConfigGetArgs> nodeConfig;
 
     public Output<NodePoolNodeConfigGetArgs> getNodeConfig() {
@@ -174,7 +174,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
      * update the number of nodes per instance group but should not be used alongside `autoscaling`.
      * 
      */
-    @InputImport(name="nodeCount")
+    @Import(name="nodeCount")
       private final @Nullable Output<Integer> nodeCount;
 
     public Output<Integer> getNodeCount() {
@@ -188,14 +188,14 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
      * `node_locations` will be used.
      * 
      */
-    @InputImport(name="nodeLocations")
+    @Import(name="nodeLocations")
       private final @Nullable Output<List<String>> nodeLocations;
 
     public Output<List<String>> getNodeLocations() {
         return this.nodeLocations == null ? Output.empty() : this.nodeLocations;
     }
 
-    @InputImport(name="operation")
+    @Import(name="operation")
       private final @Nullable Output<String> operation;
 
     public Output<String> getOperation() {
@@ -207,7 +207,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
      * the provider-configured project will be used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -220,7 +220,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
      * The maximum number of nodes upgraded simultaneously is limited to 20. Structure is documented below.
      * 
      */
-    @InputImport(name="upgradeSettings")
+    @Import(name="upgradeSettings")
       private final @Nullable Output<NodePoolUpgradeSettingsGetArgs> upgradeSettings;
 
     public Output<NodePoolUpgradeSettingsGetArgs> getUpgradeSettings() {
@@ -236,7 +236,7 @@ public final class NodePoolState extends io.pulumi.resources.ResourceArgs {
      * `version_prefix` field to approximate fuzzy versions in a provider-compatible way.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

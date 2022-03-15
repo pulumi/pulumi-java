@@ -5,7 +5,7 @@ package io.pulumi.awsnative.elasticache.inputs;
 
 import io.pulumi.awsnative.elasticache.enums.GlobalReplicationGroupMemberRole;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class GlobalReplicationGroupMemberArgs extends io.pulumi.resources.
      * Regionally unique identifier for the member i.e. ReplicationGroupId.
      * 
      */
-    @InputImport(name="replicationGroupId")
+    @Import(name="replicationGroupId")
       private final @Nullable Output<String> replicationGroupId;
 
     public Output<String> getReplicationGroupId() {
@@ -30,7 +30,7 @@ public final class GlobalReplicationGroupMemberArgs extends io.pulumi.resources.
      * The AWS region of the Global Datastore member.
      * 
      */
-    @InputImport(name="replicationGroupRegion")
+    @Import(name="replicationGroupRegion")
       private final @Nullable Output<String> replicationGroupRegion;
 
     public Output<String> getReplicationGroupRegion() {
@@ -41,7 +41,7 @@ public final class GlobalReplicationGroupMemberArgs extends io.pulumi.resources.
      * Indicates the role of the member, primary or secondary.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<GlobalReplicationGroupMemberRole> role;
 
     public Output<GlobalReplicationGroupMemberRole> getRole() {

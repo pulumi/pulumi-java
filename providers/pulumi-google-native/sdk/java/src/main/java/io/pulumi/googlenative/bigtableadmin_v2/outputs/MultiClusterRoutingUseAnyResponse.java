@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MultiClusterRoutingUseAnyResponse {
     /**
      * The set of clusters to route to. The order is ignored; clusters will be tried in order of distance. If left empty, all clusters are eligible.
@@ -16,8 +16,8 @@ public final class MultiClusterRoutingUseAnyResponse {
      */
     private final List<String> clusterIds;
 
-    @OutputCustomType.Constructor
-    private MultiClusterRoutingUseAnyResponse(@OutputCustomType.Parameter("clusterIds") List<String> clusterIds) {
+    @CustomType.Constructor
+    private MultiClusterRoutingUseAnyResponse(@CustomType.Parameter("clusterIds") List<String> clusterIds) {
         this.clusterIds = clusterIds;
     }
 

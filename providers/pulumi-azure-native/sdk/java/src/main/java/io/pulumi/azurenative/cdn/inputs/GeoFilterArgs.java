@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.enums.GeoFilterActions;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GeoFilterArgs extends io.pulumi.resources.ResourceArgs {
      * Action of the geo filter, i.e. allow or block access.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<GeoFilterActions> action;
 
     public Output<GeoFilterActions> getAction() {
@@ -34,7 +34,7 @@ public final class GeoFilterArgs extends io.pulumi.resources.ResourceArgs {
      * Two letter country codes defining user country access in a geo filter, e.g. AU, MX, US.
      * 
      */
-    @InputImport(name="countryCodes", required=true)
+    @Import(name="countryCodes", required=true)
       private final Output<List<String>> countryCodes;
 
     public Output<List<String>> getCountryCodes() {
@@ -45,7 +45,7 @@ public final class GeoFilterArgs extends io.pulumi.resources.ResourceArgs {
      * Relative path applicable to geo filter. (e.g. '/mypictures', '/mypicture/kitty.jpg', and etc.)
      * 
      */
-    @InputImport(name="relativePath", required=true)
+    @Import(name="relativePath", required=true)
       private final Output<String> relativePath;
 
     public Output<String> getRelativePath() {

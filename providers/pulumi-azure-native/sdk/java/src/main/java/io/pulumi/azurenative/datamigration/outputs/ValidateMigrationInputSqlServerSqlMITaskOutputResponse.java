@@ -5,14 +5,14 @@ package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.DatabaseBackupInfoResponse;
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse {
     /**
      * Errors associated with the BackupFolder path
@@ -55,16 +55,16 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> restoreDatabaseNameErrors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ValidateMigrationInputSqlServerSqlMITaskOutputResponse(
-        @OutputCustomType.Parameter("backupFolderErrors") List<ReportableExceptionResponse> backupFolderErrors,
-        @OutputCustomType.Parameter("backupShareCredentialsErrors") List<ReportableExceptionResponse> backupShareCredentialsErrors,
-        @OutputCustomType.Parameter("backupStorageAccountErrors") List<ReportableExceptionResponse> backupStorageAccountErrors,
-        @OutputCustomType.Parameter("databaseBackupInfo") @Nullable DatabaseBackupInfoResponse databaseBackupInfo,
-        @OutputCustomType.Parameter("existingBackupErrors") List<ReportableExceptionResponse> existingBackupErrors,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("restoreDatabaseNameErrors") List<ReportableExceptionResponse> restoreDatabaseNameErrors) {
+        @CustomType.Parameter("backupFolderErrors") List<ReportableExceptionResponse> backupFolderErrors,
+        @CustomType.Parameter("backupShareCredentialsErrors") List<ReportableExceptionResponse> backupShareCredentialsErrors,
+        @CustomType.Parameter("backupStorageAccountErrors") List<ReportableExceptionResponse> backupStorageAccountErrors,
+        @CustomType.Parameter("databaseBackupInfo") @Nullable DatabaseBackupInfoResponse databaseBackupInfo,
+        @CustomType.Parameter("existingBackupErrors") List<ReportableExceptionResponse> existingBackupErrors,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("restoreDatabaseNameErrors") List<ReportableExceptionResponse> restoreDatabaseNameErrors) {
         this.backupFolderErrors = backupFolderErrors;
         this.backupShareCredentialsErrors = backupShareCredentialsErrors;
         this.backupStorageAccountErrors = backupStorageAccountErrors;

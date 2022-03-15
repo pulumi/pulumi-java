@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig {
     /**
      * Access point ID to use. If an access point is specified, the root directory value will be relative to the directory set for the access point. If specified, transit encryption must be enabled in the EFSVolumeConfiguration.
@@ -22,10 +22,10 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
      */
     private final @Nullable String iam;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig(
-        @OutputCustomType.Parameter("accessPointId") @Nullable String accessPointId,
-        @OutputCustomType.Parameter("iam") @Nullable String iam) {
+        @CustomType.Parameter("accessPointId") @Nullable String accessPointId,
+        @CustomType.Parameter("iam") @Nullable String iam) {
         this.accessPointId = accessPointId;
         this.iam = iam;
     }

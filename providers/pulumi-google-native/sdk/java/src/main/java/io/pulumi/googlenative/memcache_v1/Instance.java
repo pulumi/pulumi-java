@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.memcache_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.memcache_v1.InstanceArgs;
@@ -28,7 +28,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The full name of the Google Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to which the instance is connected. If left unspecified, the `default` network will be used.
      * 
      */
-    @OutputExport(name="authorizedNetwork", type=String.class, parameters={})
+    @Export(name="authorizedNetwork", type=String.class, parameters={})
     private Output<String> authorizedNetwork;
 
     /**
@@ -42,7 +42,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The time the instance was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -56,7 +56,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Endpoint for the Discovery API.
      * 
      */
-    @OutputExport(name="discoveryEndpoint", type=String.class, parameters={})
+    @Export(name="discoveryEndpoint", type=String.class, parameters={})
     private Output<String> discoveryEndpoint;
 
     /**
@@ -70,7 +70,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * User provided name for the instance, which is only used for display purposes. Cannot be more than 80 characters.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -84,7 +84,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * List of messages that describe the current state of the Memcached instance.
      * 
      */
-    @OutputExport(name="instanceMessages", type=List.class, parameters={InstanceMessageResponse.class})
+    @Export(name="instanceMessages", type=List.class, parameters={InstanceMessageResponse.class})
     private Output<List<InstanceMessageResponse>> instanceMessages;
 
     /**
@@ -98,7 +98,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -112,7 +112,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The full version of memcached server running on this instance. System automatically determines the full memcached version for an instance based on the input MemcacheVersion. The full version format will be "memcached-1.5.16".
      * 
      */
-    @OutputExport(name="memcacheFullVersion", type=String.class, parameters={})
+    @Export(name="memcacheFullVersion", type=String.class, parameters={})
     private Output<String> memcacheFullVersion;
 
     /**
@@ -126,7 +126,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * List of Memcached nodes. Refer to Node message for more details.
      * 
      */
-    @OutputExport(name="memcacheNodes", type=List.class, parameters={NodeResponse.class})
+    @Export(name="memcacheNodes", type=List.class, parameters={NodeResponse.class})
     private Output<List<NodeResponse>> memcacheNodes;
 
     /**
@@ -140,7 +140,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The major version of Memcached software. If not provided, latest supported version will be used. Currently the latest supported major version is `MEMCACHE_1_5`. The minor version will be automatically determined by our system based on the latest supported minor version.
      * 
      */
-    @OutputExport(name="memcacheVersion", type=String.class, parameters={})
+    @Export(name="memcacheVersion", type=String.class, parameters={})
     private Output<String> memcacheVersion;
 
     /**
@@ -154,7 +154,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Unique name of the resource in this scope including project and location using the form: `projects/{project_id}/locations/{location_id}/instances/{instance_id}` Note: Memcached instances are managed and addressed at the regional level so `location_id` here refers to a Google Cloud region; however, users may choose which zones Memcached nodes should be provisioned in within an instance. Refer to zones field for more details.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -168,7 +168,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Configuration for Memcached nodes.
      * 
      */
-    @OutputExport(name="nodeConfig", type=NodeConfigResponse.class, parameters={})
+    @Export(name="nodeConfig", type=NodeConfigResponse.class, parameters={})
     private Output<NodeConfigResponse> nodeConfig;
 
     /**
@@ -182,7 +182,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Number of nodes in the Memcached instance.
      * 
      */
-    @OutputExport(name="nodeCount", type=Integer.class, parameters={})
+    @Export(name="nodeCount", type=Integer.class, parameters={})
     private Output<Integer> nodeCount;
 
     /**
@@ -196,7 +196,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * User defined parameters to apply to the memcached process on each node.
      * 
      */
-    @OutputExport(name="parameters", type=MemcacheParametersResponse.class, parameters={})
+    @Export(name="parameters", type=MemcacheParametersResponse.class, parameters={})
     private Output<MemcacheParametersResponse> parameters;
 
     /**
@@ -210,7 +210,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The state of this Memcached instance.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -224,7 +224,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The time the instance was updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -238,7 +238,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Zones in which Memcached nodes should be provisioned. Memcached nodes will be equally distributed across these zones. If not provided, the service will by default create nodes in all zones in the region for the instance.
      * 
      */
-    @OutputExport(name="zones", type=List.class, parameters={String.class})
+    @Export(name="zones", type=List.class, parameters={String.class})
     private Output<List<String>> zones;
 
     /**

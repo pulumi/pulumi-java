@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.robomaker.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetSimulationApplicationArgs extends io.pulumi.resources.Invo
 
     public static final GetSimulationApplicationArgs Empty = new GetSimulationApplicationArgs();
 
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {

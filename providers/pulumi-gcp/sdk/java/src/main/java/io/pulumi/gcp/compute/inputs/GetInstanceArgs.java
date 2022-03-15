@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the instance. One of `name` or `self_link` must be provided.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -31,7 +31,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
      * nor `project` are provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
@@ -42,7 +42,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
      * The self link of the instance. One of `name` or `self_link` must be provided.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable String selfLink;
 
     public Optional<String> getSelfLink() {
@@ -55,7 +55,7 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
      * provider zone is used.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable String zone;
 
     public Optional<String> getZone() {

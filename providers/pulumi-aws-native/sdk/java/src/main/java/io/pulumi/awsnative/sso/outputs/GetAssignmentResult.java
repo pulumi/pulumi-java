@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.sso.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAssignmentResult {
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAssignmentResult() {
     }
 

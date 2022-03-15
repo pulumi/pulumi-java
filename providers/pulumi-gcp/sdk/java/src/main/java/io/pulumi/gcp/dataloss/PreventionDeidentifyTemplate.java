@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataloss.PreventionDeidentifyTemplateArgs;
@@ -44,7 +44,7 @@ public class PreventionDeidentifyTemplate extends io.pulumi.resources.CustomReso
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="deidentifyConfig", type=PreventionDeidentifyTemplateDeidentifyConfig.class, parameters={})
+    @Export(name="deidentifyConfig", type=PreventionDeidentifyTemplateDeidentifyConfig.class, parameters={})
     private Output<PreventionDeidentifyTemplateDeidentifyConfig> deidentifyConfig;
 
     /**
@@ -59,7 +59,7 @@ public class PreventionDeidentifyTemplate extends io.pulumi.resources.CustomReso
      * A description of the template.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -73,7 +73,7 @@ public class PreventionDeidentifyTemplate extends io.pulumi.resources.CustomReso
      * User set display name of the template.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -87,7 +87,7 @@ public class PreventionDeidentifyTemplate extends io.pulumi.resources.CustomReso
      * Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class PreventionDeidentifyTemplate extends io.pulumi.resources.CustomReso
      * * `organizations/{{organization_id}}/locations/{{location}}`
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**

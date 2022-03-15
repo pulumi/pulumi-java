@@ -5,7 +5,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.azurenative.webpubsub.inputs.UpstreamAuthSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class EventHandlerTemplateArgs extends io.pulumi.resources.Resource
      * Gets or sets the auth settings for an event handler. If not set, no auth is used.
      * 
      */
-    @InputImport(name="auth")
+    @Import(name="auth")
       private final @Nullable Output<UpstreamAuthSettingsArgs> auth;
 
     public Output<UpstreamAuthSettingsArgs> getAuth() {
@@ -37,7 +37,7 @@ public final class EventHandlerTemplateArgs extends io.pulumi.resources.Resource
      *     2. Combine multiple events with ",", for example "connect,disconnected", it matches event "connect" and "disconnected"
      * 
      */
-    @InputImport(name="systemEventPattern")
+    @Import(name="systemEventPattern")
       private final @Nullable Output<String> systemEventPattern;
 
     public Output<String> getSystemEventPattern() {
@@ -49,7 +49,7 @@ public final class EventHandlerTemplateArgs extends io.pulumi.resources.Resource
      * For example, UrlTemplate can be `http://example.com/api/{hub}/{event}`. The host part can't contains parameters.
      * 
      */
-    @InputImport(name="urlTemplate", required=true)
+    @Import(name="urlTemplate", required=true)
       private final Output<String> urlTemplate;
 
     public Output<String> getUrlTemplate() {
@@ -64,7 +64,7 @@ public final class EventHandlerTemplateArgs extends io.pulumi.resources.Resource
      *     3. The single event name, for example, "event1", it matches "event1"
      * 
      */
-    @InputImport(name="userEventPattern")
+    @Import(name="userEventPattern")
       private final @Nullable Output<String> userEventPattern;
 
     public Output<String> getUserEventPattern() {

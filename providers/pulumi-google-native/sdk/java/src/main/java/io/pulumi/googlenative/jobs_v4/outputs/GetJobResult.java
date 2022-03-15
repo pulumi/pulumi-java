@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v4.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.jobs_v4.outputs.ApplicationInfoResponse;
 import io.pulumi.googlenative.jobs_v4.outputs.CompensationInfoResponse;
 import io.pulumi.googlenative.jobs_v4.outputs.JobDerivedInfoResponse;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetJobResult {
     /**
      * Strongly recommended for the best service experience. Location(s) where the employer is looking to hire for this job posting. Specifying the full street address(es) of the hiring location enables better API results, especially job searches by commute time. At most 50 locations are allowed for best search performance. If a job has more locations, it is suggested to split it into multiple jobs with unique requisition_ids (e.g. 'ReqA' becomes 'ReqA-1', 'ReqA-2', and so on.) as multiple jobs with the same company, language_code and requisition_id are not allowed. If the original requisition_id must be preserved, a custom field should be used for storage. It is also suggested to group the locations that close to each other in the same job for better search experience. Jobs with multiple addresses must have their addresses with the same LocationType to allow location filtering to work properly. (For example, a Job with addresses "1600 Amphitheatre Parkway, Mountain View, CA, USA" and "London, UK" may not have location filters applied correctly at search time since the first is a LocationType.STREET_ADDRESS and the second is a LocationType.LOCALITY.) If a job needs to have multiple addresses, it is suggested to split it into multiple jobs with same LocationTypes. The maximum number of allowed characters is 500.
@@ -162,37 +162,37 @@ public final class GetJobResult {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobResult(
-        @OutputCustomType.Parameter("addresses") List<String> addresses,
-        @OutputCustomType.Parameter("applicationInfo") ApplicationInfoResponse applicationInfo,
-        @OutputCustomType.Parameter("company") String company,
-        @OutputCustomType.Parameter("companyDisplayName") String companyDisplayName,
-        @OutputCustomType.Parameter("compensationInfo") CompensationInfoResponse compensationInfo,
-        @OutputCustomType.Parameter("customAttributes") Map<String,String> customAttributes,
-        @OutputCustomType.Parameter("degreeTypes") List<String> degreeTypes,
-        @OutputCustomType.Parameter("department") String department,
-        @OutputCustomType.Parameter("derivedInfo") JobDerivedInfoResponse derivedInfo,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("employmentTypes") List<String> employmentTypes,
-        @OutputCustomType.Parameter("incentives") String incentives,
-        @OutputCustomType.Parameter("jobBenefits") List<String> jobBenefits,
-        @OutputCustomType.Parameter("jobEndTime") String jobEndTime,
-        @OutputCustomType.Parameter("jobLevel") String jobLevel,
-        @OutputCustomType.Parameter("jobStartTime") String jobStartTime,
-        @OutputCustomType.Parameter("languageCode") String languageCode,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("postingCreateTime") String postingCreateTime,
-        @OutputCustomType.Parameter("postingExpireTime") String postingExpireTime,
-        @OutputCustomType.Parameter("postingPublishTime") String postingPublishTime,
-        @OutputCustomType.Parameter("postingRegion") String postingRegion,
-        @OutputCustomType.Parameter("postingUpdateTime") String postingUpdateTime,
-        @OutputCustomType.Parameter("processingOptions") ProcessingOptionsResponse processingOptions,
-        @OutputCustomType.Parameter("promotionValue") Integer promotionValue,
-        @OutputCustomType.Parameter("qualifications") String qualifications,
-        @OutputCustomType.Parameter("requisitionId") String requisitionId,
-        @OutputCustomType.Parameter("responsibilities") String responsibilities,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("addresses") List<String> addresses,
+        @CustomType.Parameter("applicationInfo") ApplicationInfoResponse applicationInfo,
+        @CustomType.Parameter("company") String company,
+        @CustomType.Parameter("companyDisplayName") String companyDisplayName,
+        @CustomType.Parameter("compensationInfo") CompensationInfoResponse compensationInfo,
+        @CustomType.Parameter("customAttributes") Map<String,String> customAttributes,
+        @CustomType.Parameter("degreeTypes") List<String> degreeTypes,
+        @CustomType.Parameter("department") String department,
+        @CustomType.Parameter("derivedInfo") JobDerivedInfoResponse derivedInfo,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("employmentTypes") List<String> employmentTypes,
+        @CustomType.Parameter("incentives") String incentives,
+        @CustomType.Parameter("jobBenefits") List<String> jobBenefits,
+        @CustomType.Parameter("jobEndTime") String jobEndTime,
+        @CustomType.Parameter("jobLevel") String jobLevel,
+        @CustomType.Parameter("jobStartTime") String jobStartTime,
+        @CustomType.Parameter("languageCode") String languageCode,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("postingCreateTime") String postingCreateTime,
+        @CustomType.Parameter("postingExpireTime") String postingExpireTime,
+        @CustomType.Parameter("postingPublishTime") String postingPublishTime,
+        @CustomType.Parameter("postingRegion") String postingRegion,
+        @CustomType.Parameter("postingUpdateTime") String postingUpdateTime,
+        @CustomType.Parameter("processingOptions") ProcessingOptionsResponse processingOptions,
+        @CustomType.Parameter("promotionValue") Integer promotionValue,
+        @CustomType.Parameter("qualifications") String qualifications,
+        @CustomType.Parameter("requisitionId") String requisitionId,
+        @CustomType.Parameter("responsibilities") String responsibilities,
+        @CustomType.Parameter("title") String title) {
         this.addresses = addresses;
         this.applicationInfo = applicationInfo;
         this.company = company;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetGlobalForwardingRuleArgs extends io.pulumi.resources.Invok
 
     public static final GetGlobalForwardingRuleArgs Empty = new GetGlobalForwardingRuleArgs();
 
-    @InputImport(name="forwardingRule", required=true)
+    @Import(name="forwardingRule", required=true)
       private final String forwardingRule;
 
     public String getForwardingRule() {
         return this.forwardingRule;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

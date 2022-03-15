@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SapTablePartitionSettingsResponse extends io.pulumi.resources
      * The maximum value of partitions the table will be split into. Type: integer (or Expression with resultType string).
      * 
      */
-    @InputImport(name="maxPartitionsNumber")
+    @Import(name="maxPartitionsNumber")
       private final @Nullable Object maxPartitionsNumber;
 
     public Optional<Object> getMaxPartitionsNumber() {
@@ -33,7 +33,7 @@ public final class SapTablePartitionSettingsResponse extends io.pulumi.resources
      * The name of the column that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="partitionColumnName")
+    @Import(name="partitionColumnName")
       private final @Nullable Object partitionColumnName;
 
     public Optional<Object> getPartitionColumnName() {
@@ -44,7 +44,7 @@ public final class SapTablePartitionSettingsResponse extends io.pulumi.resources
      * The minimum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="partitionLowerBound")
+    @Import(name="partitionLowerBound")
       private final @Nullable Object partitionLowerBound;
 
     public Optional<Object> getPartitionLowerBound() {
@@ -55,7 +55,7 @@ public final class SapTablePartitionSettingsResponse extends io.pulumi.resources
      * The maximum value of column specified in partitionColumnName that will be used for proceeding range partitioning. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="partitionUpperBound")
+    @Import(name="partitionUpperBound")
       private final @Nullable Object partitionUpperBound;
 
     public Optional<Object> getPartitionUpperBound() {

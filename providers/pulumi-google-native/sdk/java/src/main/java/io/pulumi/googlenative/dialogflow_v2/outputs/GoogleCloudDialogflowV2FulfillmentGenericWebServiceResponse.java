@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse {
     /**
      * Optional. Indicates if generic web service is created through Cloud Functions integration. Defaults to false. is_cloud_function is deprecated. Cloud functions can be configured by its uri as a regular web service now.
@@ -37,13 +37,13 @@ public final class GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse(
-        @OutputCustomType.Parameter("isCloudFunction") Boolean isCloudFunction,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("requestHeaders") Map<String,String> requestHeaders,
-        @OutputCustomType.Parameter("uri") String uri,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("isCloudFunction") Boolean isCloudFunction,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("requestHeaders") Map<String,String> requestHeaders,
+        @CustomType.Parameter("uri") String uri,
+        @CustomType.Parameter("username") String username) {
         this.isCloudFunction = isCloudFunction;
         this.password = password;
         this.requestHeaders = requestHeaders;

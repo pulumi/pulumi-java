@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetZonesResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -26,13 +26,13 @@ public final class GetZonesResult {
     private final @Nullable String region;
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetZonesResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("names") List<String> names,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("status") @Nullable String status) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("names") List<String> names,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("status") @Nullable String status) {
         this.id = id;
         this.names = names;
         this.project = project;

@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DashboardResourcePermission {
     /**
      * <p>The IAM action to grant or revoke permissions on.</p>
@@ -35,10 +35,10 @@ public final class DashboardResourcePermission {
      */
     private final String principal;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DashboardResourcePermission(
-        @OutputCustomType.Parameter("actions") List<String> actions,
-        @OutputCustomType.Parameter("principal") String principal) {
+        @CustomType.Parameter("actions") List<String> actions,
+        @CustomType.Parameter("principal") String principal) {
         this.actions = actions;
         this.principal = principal;
     }

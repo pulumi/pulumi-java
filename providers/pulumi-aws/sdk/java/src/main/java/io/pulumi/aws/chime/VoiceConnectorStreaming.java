@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.chime.VoiceConnectorStreamingArgs;
 import io.pulumi.aws.chime.inputs.VoiceConnectorStreamingState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -36,7 +36,7 @@ public class VoiceConnectorStreaming extends io.pulumi.resources.CustomResource 
      * The retention period, in hours, for the Amazon Kinesis data.
      * 
      */
-    @OutputExport(name="dataRetention", type=Integer.class, parameters={})
+    @Export(name="dataRetention", type=Integer.class, parameters={})
     private Output<Integer> dataRetention;
 
     /**
@@ -50,7 +50,7 @@ public class VoiceConnectorStreaming extends io.pulumi.resources.CustomResource 
      * When true, media streaming to Amazon Kinesis is turned off. Default: `false`
      * 
      */
-    @OutputExport(name="disabled", type=Boolean.class, parameters={})
+    @Export(name="disabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disabled;
 
     /**
@@ -64,7 +64,7 @@ public class VoiceConnectorStreaming extends io.pulumi.resources.CustomResource 
      * The streaming notification targets. Valid Values: `EventBridge | SNS | SQS`
      * 
      */
-    @OutputExport(name="streamingNotificationTargets", type=List.class, parameters={String.class})
+    @Export(name="streamingNotificationTargets", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> streamingNotificationTargets;
 
     /**
@@ -78,7 +78,7 @@ public class VoiceConnectorStreaming extends io.pulumi.resources.CustomResource 
      * The Amazon Chime Voice Connector ID.
      * 
      */
-    @OutputExport(name="voiceConnectorId", type=String.class, parameters={})
+    @Export(name="voiceConnectorId", type=String.class, parameters={})
     private Output<String> voiceConnectorId;
 
     /**

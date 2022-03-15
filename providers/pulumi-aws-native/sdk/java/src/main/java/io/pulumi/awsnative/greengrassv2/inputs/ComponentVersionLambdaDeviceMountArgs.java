@@ -5,7 +5,7 @@ package io.pulumi.awsnative.greengrassv2.inputs;
 
 import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaFilesystemPermission;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class ComponentVersionLambdaDeviceMountArgs extends io.pulumi.resou
 
     public static final ComponentVersionLambdaDeviceMountArgs Empty = new ComponentVersionLambdaDeviceMountArgs();
 
-    @InputImport(name="addGroupOwner")
+    @Import(name="addGroupOwner")
       private final @Nullable Output<Boolean> addGroupOwner;
 
     public Output<Boolean> getAddGroupOwner() {
         return this.addGroupOwner == null ? Output.empty() : this.addGroupOwner;
     }
 
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
         return this.path == null ? Output.empty() : this.path;
     }
 
-    @InputImport(name="permission")
+    @Import(name="permission")
       private final @Nullable Output<ComponentVersionLambdaFilesystemPermission> permission;
 
     public Output<ComponentVersionLambdaFilesystemPermission> getPermission() {

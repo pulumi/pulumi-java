@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,28 +12,28 @@ public final class GetAliasArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetAliasArgs Empty = new GetAliasArgs();
 
-    @InputImport(name="aliasId", required=true)
+    @Import(name="aliasId", required=true)
       private final String aliasId;
 
     public String getAliasId() {
         return this.aliasId;
     }
 
-    @InputImport(name="environmentId", required=true)
+    @Import(name="environmentId", required=true)
       private final String environmentId;
 
     public String getEnvironmentId() {
         return this.environmentId;
     }
 
-    @InputImport(name="keystoreId", required=true)
+    @Import(name="keystoreId", required=true)
       private final String keystoreId;
 
     public String getKeystoreId() {
         return this.keystoreId;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final String organizationId;
 
     public String getOrganizationId() {

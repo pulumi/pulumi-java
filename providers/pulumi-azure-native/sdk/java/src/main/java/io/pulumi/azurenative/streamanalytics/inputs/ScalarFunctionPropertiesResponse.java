@@ -8,7 +8,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.FunctionInputResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.FunctionOutputResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.JavaScriptFunctionBindingResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
      * The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
      * 
      */
-    @InputImport(name="binding")
+    @Import(name="binding")
       private final @Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding;
 
     public Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> getBinding() {
@@ -39,7 +39,7 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
      * The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -50,7 +50,7 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
      * A list of inputs describing the parameters of the function.
      * 
      */
-    @InputImport(name="inputs")
+    @Import(name="inputs")
       private final @Nullable List<FunctionInputResponse> inputs;
 
     public List<FunctionInputResponse> getInputs() {
@@ -61,7 +61,7 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
      * The output of the function.
      * 
      */
-    @InputImport(name="output")
+    @Import(name="output")
       private final @Nullable FunctionOutputResponse output;
 
     public Optional<FunctionOutputResponse> getOutput() {
@@ -73,7 +73,7 @@ public final class ScalarFunctionPropertiesResponse extends io.pulumi.resources.
      * Expected value is 'Scalar'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

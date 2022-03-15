@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServiceAcrConfigurationInfoResponse extends io.pulumi.resourc
      * The list of the ACR login servers.
      * 
      */
-    @InputImport(name="loginServers")
+    @Import(name="loginServers")
       private final @Nullable List<String> loginServers;
 
     public List<String> getLoginServers() {

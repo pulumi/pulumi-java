@@ -13,7 +13,7 @@ import io.pulumi.azurenative.datalakeanalytics.outputs.StorageAccountInformation
 import io.pulumi.azurenative.datalakeanalytics.outputs.VirtualNetworkRuleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -42,7 +42,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The unique identifier associated with this Data Lake Analytics account.
      * 
      */
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
@@ -56,7 +56,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The list of compute policies associated with this account.
      * 
      */
-    @OutputExport(name="computePolicies", type=List.class, parameters={ComputePolicyResponse.class})
+    @Export(name="computePolicies", type=List.class, parameters={ComputePolicyResponse.class})
     private Output<List<ComputePolicyResponse>> computePolicies;
 
     /**
@@ -70,7 +70,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The account creation time.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -84,7 +84,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The commitment tier in use for the current month.
      * 
      */
-    @OutputExport(name="currentTier", type=String.class, parameters={})
+    @Export(name="currentTier", type=String.class, parameters={})
     private Output<String> currentTier;
 
     /**
@@ -98,7 +98,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The list of Data Lake Store accounts associated with this account.
      * 
      */
-    @OutputExport(name="dataLakeStoreAccounts", type=List.class, parameters={DataLakeStoreAccountInformationResponse.class})
+    @Export(name="dataLakeStoreAccounts", type=List.class, parameters={DataLakeStoreAccountInformationResponse.class})
     private Output<List<DataLakeStoreAccountInformationResponse>> dataLakeStoreAccounts;
 
     /**
@@ -112,7 +112,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The current state of the DebugDataAccessLevel for this account.
      * 
      */
-    @OutputExport(name="debugDataAccessLevel", type=String.class, parameters={})
+    @Export(name="debugDataAccessLevel", type=String.class, parameters={})
     private Output<String> debugDataAccessLevel;
 
     /**
@@ -126,7 +126,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The default Data Lake Store account associated with this account.
      * 
      */
-    @OutputExport(name="defaultDataLakeStoreAccount", type=String.class, parameters={})
+    @Export(name="defaultDataLakeStoreAccount", type=String.class, parameters={})
     private Output<String> defaultDataLakeStoreAccount;
 
     /**
@@ -140,7 +140,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The full CName endpoint for this account.
      * 
      */
-    @OutputExport(name="endpoint", type=String.class, parameters={})
+    @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
@@ -154,7 +154,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The current state of allowing or disallowing IPs originating within Azure through the firewall. If the firewall is disabled, this is not enforced.
      * 
      */
-    @OutputExport(name="firewallAllowAzureIps", type=String.class, parameters={})
+    @Export(name="firewallAllowAzureIps", type=String.class, parameters={})
     private Output</* @Nullable */ String> firewallAllowAzureIps;
 
     /**
@@ -168,7 +168,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The list of firewall rules associated with this account.
      * 
      */
-    @OutputExport(name="firewallRules", type=List.class, parameters={FirewallRuleResponse.class})
+    @Export(name="firewallRules", type=List.class, parameters={FirewallRuleResponse.class})
     private Output<List<FirewallRuleResponse>> firewallRules;
 
     /**
@@ -182,7 +182,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The current state of the IP address firewall for this account.
      * 
      */
-    @OutputExport(name="firewallState", type=String.class, parameters={})
+    @Export(name="firewallState", type=String.class, parameters={})
     private Output</* @Nullable */ String> firewallState;
 
     /**
@@ -196,7 +196,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The list of hiveMetastores associated with this account.
      * 
      */
-    @OutputExport(name="hiveMetastores", type=List.class, parameters={HiveMetastoreResponse.class})
+    @Export(name="hiveMetastores", type=List.class, parameters={HiveMetastoreResponse.class})
     private Output<List<HiveMetastoreResponse>> hiveMetastores;
 
     /**
@@ -210,7 +210,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The account last modified time.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
@@ -224,7 +224,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -238,7 +238,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The maximum supported active jobs under the account at the same time.
      * 
      */
-    @OutputExport(name="maxActiveJobCountPerUser", type=Integer.class, parameters={})
+    @Export(name="maxActiveJobCountPerUser", type=Integer.class, parameters={})
     private Output<Integer> maxActiveJobCountPerUser;
 
     /**
@@ -252,7 +252,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The maximum supported degree of parallelism for this account.
      * 
      */
-    @OutputExport(name="maxDegreeOfParallelism", type=Integer.class, parameters={})
+    @Export(name="maxDegreeOfParallelism", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxDegreeOfParallelism;
 
     /**
@@ -266,7 +266,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The maximum supported degree of parallelism per job for this account.
      * 
      */
-    @OutputExport(name="maxDegreeOfParallelismPerJob", type=Integer.class, parameters={})
+    @Export(name="maxDegreeOfParallelismPerJob", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxDegreeOfParallelismPerJob;
 
     /**
@@ -280,7 +280,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The maximum supported jobs running under the account at the same time.
      * 
      */
-    @OutputExport(name="maxJobCount", type=Integer.class, parameters={})
+    @Export(name="maxJobCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maxJobCount;
 
     /**
@@ -294,7 +294,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The maximum supported active jobs under the account at the same time.
      * 
      */
-    @OutputExport(name="maxJobRunningTimeInMin", type=Integer.class, parameters={})
+    @Export(name="maxJobRunningTimeInMin", type=Integer.class, parameters={})
     private Output<Integer> maxJobRunningTimeInMin;
 
     /**
@@ -308,7 +308,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The maximum supported jobs queued under the account at the same time.
      * 
      */
-    @OutputExport(name="maxQueuedJobCountPerUser", type=Integer.class, parameters={})
+    @Export(name="maxQueuedJobCountPerUser", type=Integer.class, parameters={})
     private Output<Integer> maxQueuedJobCountPerUser;
 
     /**
@@ -322,7 +322,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The minimum supported priority per job for this account.
      * 
      */
-    @OutputExport(name="minPriorityPerJob", type=Integer.class, parameters={})
+    @Export(name="minPriorityPerJob", type=Integer.class, parameters={})
     private Output<Integer> minPriorityPerJob;
 
     /**
@@ -336,7 +336,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -350,7 +350,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The commitment tier for the next month.
      * 
      */
-    @OutputExport(name="newTier", type=String.class, parameters={})
+    @Export(name="newTier", type=String.class, parameters={})
     private Output</* @Nullable */ String> newTier;
 
     /**
@@ -364,7 +364,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The provisioning status of the Data Lake Analytics account.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -378,7 +378,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The list of Data Lake Store accounts associated with this account.
      * 
      */
-    @OutputExport(name="publicDataLakeStoreAccounts", type=List.class, parameters={DataLakeStoreAccountInformationResponse.class})
+    @Export(name="publicDataLakeStoreAccounts", type=List.class, parameters={DataLakeStoreAccountInformationResponse.class})
     private Output</* @Nullable */ List<DataLakeStoreAccountInformationResponse>> publicDataLakeStoreAccounts;
 
     /**
@@ -392,7 +392,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The number of days that job metadata is retained.
      * 
      */
-    @OutputExport(name="queryStoreRetention", type=Integer.class, parameters={})
+    @Export(name="queryStoreRetention", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> queryStoreRetention;
 
     /**
@@ -406,7 +406,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The state of the Data Lake Analytics account.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -420,7 +420,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The list of Azure Blob Storage accounts associated with this account.
      * 
      */
-    @OutputExport(name="storageAccounts", type=List.class, parameters={StorageAccountInformationResponse.class})
+    @Export(name="storageAccounts", type=List.class, parameters={StorageAccountInformationResponse.class})
     private Output<List<StorageAccountInformationResponse>> storageAccounts;
 
     /**
@@ -434,7 +434,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The system defined maximum supported degree of parallelism for this account, which restricts the maximum value of parallelism the user can set for the account.
      * 
      */
-    @OutputExport(name="systemMaxDegreeOfParallelism", type=Integer.class, parameters={})
+    @Export(name="systemMaxDegreeOfParallelism", type=Integer.class, parameters={})
     private Output<Integer> systemMaxDegreeOfParallelism;
 
     /**
@@ -448,7 +448,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The system defined maximum supported jobs running under the account at the same time, which restricts the maximum number of running jobs the user can set for the account.
      * 
      */
-    @OutputExport(name="systemMaxJobCount", type=Integer.class, parameters={})
+    @Export(name="systemMaxJobCount", type=Integer.class, parameters={})
     private Output<Integer> systemMaxJobCount;
 
     /**
@@ -462,7 +462,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tags;
 
     /**
@@ -476,7 +476,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -490,7 +490,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The list of virtualNetwork rules associated with this account.
      * 
      */
-    @OutputExport(name="virtualNetworkRules", type=List.class, parameters={VirtualNetworkRuleResponse.class})
+    @Export(name="virtualNetworkRules", type=List.class, parameters={VirtualNetworkRuleResponse.class})
     private Output<List<VirtualNetworkRuleResponse>> virtualNetworkRules;
 
     /**

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.msk.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetConfigurationResult {
     /**
      * Amazon Resource Name (ARN) of the configuration.
@@ -43,15 +43,15 @@ public final class GetConfigurationResult {
      */
     private final String serverProperties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConfigurationResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kafkaVersions") List<String> kafkaVersions,
-        @OutputCustomType.Parameter("latestRevision") Integer latestRevision,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("serverProperties") String serverProperties) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kafkaVersions") List<String> kafkaVersions,
+        @CustomType.Parameter("latestRevision") Integer latestRevision,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("serverProperties") String serverProperties) {
         this.arn = arn;
         this.description = description;
         this.id = id;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ParametersLinkArgs extends io.pulumi.resources.ResourceArgs {
      * If included, must match the ContentVersion in the template.
      * 
      */
-    @InputImport(name="contentVersion")
+    @Import(name="contentVersion")
       private final @Nullable Output<String> contentVersion;
 
     public Output<String> getContentVersion() {
@@ -33,7 +33,7 @@ public final class ParametersLinkArgs extends io.pulumi.resources.ResourceArgs {
      * The URI of the parameters file.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {

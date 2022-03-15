@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidInstrumentationTestResponse;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidRoboTestResponse;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidTestLoopResponse;
@@ -28,7 +28,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * An Android instrumentation test.
      * 
      */
-    @InputImport(name="androidInstrumentationTest", required=true)
+    @Import(name="androidInstrumentationTest", required=true)
       private final AndroidInstrumentationTestResponse androidInstrumentationTest;
 
     public AndroidInstrumentationTestResponse getAndroidInstrumentationTest() {
@@ -39,7 +39,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * An Android robo test.
      * 
      */
-    @InputImport(name="androidRoboTest", required=true)
+    @Import(name="androidRoboTest", required=true)
       private final AndroidRoboTestResponse androidRoboTest;
 
     public AndroidRoboTestResponse getAndroidRoboTest() {
@@ -50,7 +50,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * An Android Application with a Test Loop.
      * 
      */
-    @InputImport(name="androidTestLoop", required=true)
+    @Import(name="androidTestLoop", required=true)
       private final AndroidTestLoopResponse androidTestLoop;
 
     public AndroidTestLoopResponse getAndroidTestLoop() {
@@ -61,7 +61,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * Disables performance metrics recording. May reduce test latency.
      * 
      */
-    @InputImport(name="disablePerformanceMetrics", required=true)
+    @Import(name="disablePerformanceMetrics", required=true)
       private final Boolean disablePerformanceMetrics;
 
     public Boolean getDisablePerformanceMetrics() {
@@ -72,7 +72,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * Disables video recording. May reduce test latency.
      * 
      */
-    @InputImport(name="disableVideoRecording", required=true)
+    @Import(name="disableVideoRecording", required=true)
       private final Boolean disableVideoRecording;
 
     public Boolean getDisableVideoRecording() {
@@ -83,7 +83,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * An iOS application with a test loop.
      * 
      */
-    @InputImport(name="iosTestLoop", required=true)
+    @Import(name="iosTestLoop", required=true)
       private final IosTestLoopResponse iosTestLoop;
 
     public IosTestLoopResponse getIosTestLoop() {
@@ -94,7 +94,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * Test setup requirements for iOS.
      * 
      */
-    @InputImport(name="iosTestSetup", required=true)
+    @Import(name="iosTestSetup", required=true)
       private final IosTestSetupResponse iosTestSetup;
 
     public IosTestSetupResponse getIosTestSetup() {
@@ -105,7 +105,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * An iOS XCTest, via an .xctestrun file.
      * 
      */
-    @InputImport(name="iosXcTest", required=true)
+    @Import(name="iosXcTest", required=true)
       private final IosXcTestResponse iosXcTest;
 
     public IosXcTestResponse getIosXcTest() {
@@ -116,7 +116,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * Test setup requirements for Android e.g. files to install, bootstrap scripts.
      * 
      */
-    @InputImport(name="testSetup", required=true)
+    @Import(name="testSetup", required=true)
       private final TestSetupResponse testSetup;
 
     public TestSetupResponse getTestSetup() {
@@ -127,7 +127,7 @@ public final class TestSpecificationResponse extends io.pulumi.resources.InvokeA
      * Max time a test execution is allowed to run before it is automatically cancelled. The default value is 5 min.
      * 
      */
-    @InputImport(name="testTimeout", required=true)
+    @Import(name="testTimeout", required=true)
       private final String testTimeout;
 
     public String getTestTimeout() {

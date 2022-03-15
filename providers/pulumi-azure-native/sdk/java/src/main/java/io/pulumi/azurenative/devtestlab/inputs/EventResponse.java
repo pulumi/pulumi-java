@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * The event type for which this notification is enabled (i.e. AutoShutdown, Cost)
      * 
      */
-    @InputImport(name="eventName")
+    @Import(name="eventName")
       private final @Nullable String eventName;
 
     public Optional<String> getEventName() {

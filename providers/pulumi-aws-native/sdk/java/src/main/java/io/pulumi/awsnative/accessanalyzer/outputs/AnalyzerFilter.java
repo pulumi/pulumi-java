@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.accessanalyzer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnalyzerFilter {
     private final @Nullable List<String> contains;
     private final @Nullable List<String> eq;
@@ -19,13 +19,13 @@ public final class AnalyzerFilter {
     private final @Nullable List<String> neq;
     private final String property;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalyzerFilter(
-        @OutputCustomType.Parameter("contains") @Nullable List<String> contains,
-        @OutputCustomType.Parameter("eq") @Nullable List<String> eq,
-        @OutputCustomType.Parameter("exists") @Nullable Boolean exists,
-        @OutputCustomType.Parameter("neq") @Nullable List<String> neq,
-        @OutputCustomType.Parameter("property") String property) {
+        @CustomType.Parameter("contains") @Nullable List<String> contains,
+        @CustomType.Parameter("eq") @Nullable List<String> eq,
+        @CustomType.Parameter("exists") @Nullable Boolean exists,
+        @CustomType.Parameter("neq") @Nullable List<String> neq,
+        @CustomType.Parameter("property") String property) {
         this.contains = contains;
         this.eq = eq;
         this.exists = exists;

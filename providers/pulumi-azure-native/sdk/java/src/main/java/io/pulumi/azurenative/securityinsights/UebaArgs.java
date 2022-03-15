@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.securityinsights.enums.UebaDataSources;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
      * The relevant data sources that enriched by ueba
      * 
      */
-    @InputImport(name="dataSources")
+    @Import(name="dataSources")
       private final @Nullable Output<List<Either<String,UebaDataSources>>> dataSources;
 
     public Output<List<Either<String,UebaDataSources>>> getDataSources() {
@@ -33,7 +33,7 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'Ueba'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -44,7 +44,7 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
      * 
      */
-    @InputImport(name="operationalInsightsResourceProvider", required=true)
+    @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
     public Output<String> getOperationalInsightsResourceProvider() {
@@ -55,7 +55,7 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -66,7 +66,7 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
      * The setting name. Supports - Anomalies, EyesOn, EntityAnalytics, Ueba
      * 
      */
-    @InputImport(name="settingsName")
+    @Import(name="settingsName")
       private final @Nullable Output<String> settingsName;
 
     public Output<String> getSettingsName() {
@@ -77,7 +77,7 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

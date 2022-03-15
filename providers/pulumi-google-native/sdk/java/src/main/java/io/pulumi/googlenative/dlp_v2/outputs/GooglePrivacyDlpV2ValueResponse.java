@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GoogleTypeDateResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GoogleTypeTimeOfDayResponse;
 import java.lang.Boolean;
@@ -11,7 +11,7 @@ import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2ValueResponse {
     /**
      * boolean
@@ -54,16 +54,16 @@ public final class GooglePrivacyDlpV2ValueResponse {
      */
     private final String timestampValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2ValueResponse(
-        @OutputCustomType.Parameter("booleanValue") Boolean booleanValue,
-        @OutputCustomType.Parameter("dateValue") GoogleTypeDateResponse dateValue,
-        @OutputCustomType.Parameter("dayOfWeekValue") String dayOfWeekValue,
-        @OutputCustomType.Parameter("floatValue") Double floatValue,
-        @OutputCustomType.Parameter("integerValue") String integerValue,
-        @OutputCustomType.Parameter("stringValue") String stringValue,
-        @OutputCustomType.Parameter("timeValue") GoogleTypeTimeOfDayResponse timeValue,
-        @OutputCustomType.Parameter("timestampValue") String timestampValue) {
+        @CustomType.Parameter("booleanValue") Boolean booleanValue,
+        @CustomType.Parameter("dateValue") GoogleTypeDateResponse dateValue,
+        @CustomType.Parameter("dayOfWeekValue") String dayOfWeekValue,
+        @CustomType.Parameter("floatValue") Double floatValue,
+        @CustomType.Parameter("integerValue") String integerValue,
+        @CustomType.Parameter("stringValue") String stringValue,
+        @CustomType.Parameter("timeValue") GoogleTypeTimeOfDayResponse timeValue,
+        @CustomType.Parameter("timestampValue") String timestampValue) {
         this.booleanValue = booleanValue;
         this.dateValue = dateValue;
         this.dayOfWeekValue = dayOfWeekValue;

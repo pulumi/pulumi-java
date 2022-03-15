@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.appengine_v1.outputs.CloudBuildOptionsResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.ContainerInfoResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.ZipInfoResponse;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentResponse {
     /**
      * Options for any Google Cloud Build builds created as a part of this deployment.These options will only be used if a new build is created, such as when deploying to the App Engine flexible environment using files or zip.
@@ -34,12 +34,12 @@ public final class DeploymentResponse {
      */
     private final ZipInfoResponse zip;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentResponse(
-        @OutputCustomType.Parameter("cloudBuildOptions") CloudBuildOptionsResponse cloudBuildOptions,
-        @OutputCustomType.Parameter("container") ContainerInfoResponse container,
-        @OutputCustomType.Parameter("files") Map<String,String> files,
-        @OutputCustomType.Parameter("zip") ZipInfoResponse zip) {
+        @CustomType.Parameter("cloudBuildOptions") CloudBuildOptionsResponse cloudBuildOptions,
+        @CustomType.Parameter("container") ContainerInfoResponse container,
+        @CustomType.Parameter("files") Map<String,String> files,
+        @CustomType.Parameter("zip") ZipInfoResponse zip) {
         this.cloudBuildOptions = cloudBuildOptions;
         this.container = container;
         this.files = files;

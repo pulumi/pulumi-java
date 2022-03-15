@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class SecurityPolicyAdvancedOptionsConfigResponse extends io.pulumi
 
     public static final SecurityPolicyAdvancedOptionsConfigResponse Empty = new SecurityPolicyAdvancedOptionsConfigResponse();
 
-    @InputImport(name="jsonParsing", required=true)
+    @Import(name="jsonParsing", required=true)
       private final String jsonParsing;
 
     public String getJsonParsing() {
         return this.jsonParsing;
     }
 
-    @InputImport(name="logLevel", required=true)
+    @Import(name="logLevel", required=true)
       private final String logLevel;
 
     public String getLogLevel() {

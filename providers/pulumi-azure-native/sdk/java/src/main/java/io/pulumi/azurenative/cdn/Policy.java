@@ -14,7 +14,7 @@ import io.pulumi.azurenative.cdn.outputs.SkuResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +42,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Describes custom rules inside the policy.
      * 
      */
-    @OutputExport(name="customRules", type=CustomRuleListResponse.class, parameters={})
+    @Export(name="customRules", type=CustomRuleListResponse.class, parameters={})
     private Output</* @Nullable */ CustomRuleListResponse> customRules;
 
     /**
@@ -56,7 +56,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Describes Azure CDN endpoints associated with this Web Application Firewall policy.
      * 
      */
-    @OutputExport(name="endpointLinks", type=List.class, parameters={CdnEndpointResponse.class})
+    @Export(name="endpointLinks", type=List.class, parameters={CdnEndpointResponse.class})
     private Output<List<CdnEndpointResponse>> endpointLinks;
 
     /**
@@ -70,7 +70,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Gets a unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -84,7 +84,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -98,7 +98,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Describes managed rules inside the policy.
      * 
      */
-    @OutputExport(name="managedRules", type=ManagedRuleSetListResponse.class, parameters={})
+    @Export(name="managedRules", type=ManagedRuleSetListResponse.class, parameters={})
     private Output</* @Nullable */ ManagedRuleSetListResponse> managedRules;
 
     /**
@@ -112,7 +112,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -126,7 +126,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Describes  policySettings for policy
      * 
      */
-    @OutputExport(name="policySettings", type=PolicySettingsResponse.class, parameters={})
+    @Export(name="policySettings", type=PolicySettingsResponse.class, parameters={})
     private Output</* @Nullable */ PolicySettingsResponse> policySettings;
 
     /**
@@ -140,7 +140,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Provisioning state of the WebApplicationFirewallPolicy.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -154,7 +154,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Describes rate limit rules inside the policy.
      * 
      */
-    @OutputExport(name="rateLimitRules", type=RateLimitRuleListResponse.class, parameters={})
+    @Export(name="rateLimitRules", type=RateLimitRuleListResponse.class, parameters={})
     private Output</* @Nullable */ RateLimitRuleListResponse> rateLimitRules;
 
     /**
@@ -164,7 +164,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ RateLimitRuleListResponse> getRateLimitRules() {
         return this.rateLimitRules;
     }
-    @OutputExport(name="resourceState", type=String.class, parameters={})
+    @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     public Output<String> getResourceState() {
@@ -174,7 +174,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * The pricing tier (defines a CDN provider, feature list and rate) of the CdnWebApplicationFirewallPolicy.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
@@ -188,7 +188,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Read only system data
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -202,7 +202,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -216,7 +216,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

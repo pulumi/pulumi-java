@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.acm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateDomainValidationOption {
     /**
      * A domain name for which the certificate should be issued
@@ -32,12 +32,12 @@ public final class CertificateDomainValidationOption {
      */
     private final @Nullable String resourceRecordValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateDomainValidationOption(
-        @OutputCustomType.Parameter("domainName") @Nullable String domainName,
-        @OutputCustomType.Parameter("resourceRecordName") @Nullable String resourceRecordName,
-        @OutputCustomType.Parameter("resourceRecordType") @Nullable String resourceRecordType,
-        @OutputCustomType.Parameter("resourceRecordValue") @Nullable String resourceRecordValue) {
+        @CustomType.Parameter("domainName") @Nullable String domainName,
+        @CustomType.Parameter("resourceRecordName") @Nullable String resourceRecordName,
+        @CustomType.Parameter("resourceRecordType") @Nullable String resourceRecordType,
+        @CustomType.Parameter("resourceRecordValue") @Nullable String resourceRecordValue) {
         this.domainName = domainName;
         this.resourceRecordName = resourceRecordName;
         this.resourceRecordType = resourceRecordType;

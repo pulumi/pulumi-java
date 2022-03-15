@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSubnetNetworkAclAssociationResult {
     private final @Nullable String associationId;
 
-    @OutputCustomType.Constructor
-    private GetSubnetNetworkAclAssociationResult(@OutputCustomType.Parameter("associationId") @Nullable String associationId) {
+    @CustomType.Constructor
+    private GetSubnetNetworkAclAssociationResult(@CustomType.Parameter("associationId") @Nullable String associationId) {
         this.associationId = associationId;
     }
 

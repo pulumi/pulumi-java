@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IosTestLoopResponse {
     /**
      * The bundle id for the application under test.
@@ -28,11 +28,11 @@ public final class IosTestLoopResponse {
      */
     private final List<Integer> scenarios;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IosTestLoopResponse(
-        @OutputCustomType.Parameter("appBundleId") String appBundleId,
-        @OutputCustomType.Parameter("appIpa") FileReferenceResponse appIpa,
-        @OutputCustomType.Parameter("scenarios") List<Integer> scenarios) {
+        @CustomType.Parameter("appBundleId") String appBundleId,
+        @CustomType.Parameter("appIpa") FileReferenceResponse appIpa,
+        @CustomType.Parameter("scenarios") List<Integer> scenarios) {
         this.appBundleId = appBundleId;
         this.appIpa = appIpa;
         this.scenarios = scenarios;

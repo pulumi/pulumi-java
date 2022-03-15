@@ -4,7 +4,7 @@
 package io.pulumi.gcp.servicedirectory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * Metadata that goes beyond any these limits will be rejected.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -33,7 +33,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * The resource name for the service in the format 'projects/*{@literal /}locations/*{@literal /}namespaces/*{@literal /}services/*'.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * The resource name of the namespace this service will belong to.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -56,7 +56,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * lowercase letters or the hyphen character.
      * 
      */
-    @InputImport(name="serviceId")
+    @Import(name="serviceId")
       private final @Nullable Output<String> serviceId;
 
     public Output<String> getServiceId() {

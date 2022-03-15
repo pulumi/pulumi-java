@@ -12,7 +12,7 @@ import io.pulumi.azurenative.timeseriesinsights.outputs.TimeSeriesIdPropertyResp
 import io.pulumi.azurenative.timeseriesinsights.outputs.WarmStoreConfigurationPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +40,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * The time the resource was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -54,7 +54,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * The fully qualified domain name used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
      * 
      */
-    @OutputExport(name="dataAccessFqdn", type=String.class, parameters={})
+    @Export(name="dataAccessFqdn", type=String.class, parameters={})
     private Output<String> dataAccessFqdn;
 
     /**
@@ -68,7 +68,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * An id used to access the environment data, e.g. to query the environment's events or upload reference data for the environment.
      * 
      */
-    @OutputExport(name="dataAccessId", type=String.class, parameters={})
+    @Export(name="dataAccessId", type=String.class, parameters={})
     private Output<String> dataAccessId;
 
     /**
@@ -83,7 +83,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * Expected value is 'Gen2'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -98,7 +98,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -112,7 +112,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -126,7 +126,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * Provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -140,7 +140,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output<SkuResponse> sku;
 
     /**
@@ -154,7 +154,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * An object that represents the status of the environment, and its internal state in the Time Series Insights service.
      * 
      */
-    @OutputExport(name="status", type=EnvironmentStatusResponse.class, parameters={})
+    @Export(name="status", type=EnvironmentStatusResponse.class, parameters={})
     private Output<EnvironmentStatusResponse> status;
 
     /**
@@ -168,7 +168,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment's data.
      * 
      */
-    @OutputExport(name="storageConfiguration", type=Gen2StorageConfigurationOutputResponse.class, parameters={})
+    @Export(name="storageConfiguration", type=Gen2StorageConfigurationOutputResponse.class, parameters={})
     private Output<Gen2StorageConfigurationOutputResponse> storageConfiguration;
 
     /**
@@ -182,7 +182,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -196,7 +196,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * The list of event properties which will be used to define the environment's time series id.
      * 
      */
-    @OutputExport(name="timeSeriesIdProperties", type=List.class, parameters={TimeSeriesIdPropertyResponse.class})
+    @Export(name="timeSeriesIdProperties", type=List.class, parameters={TimeSeriesIdPropertyResponse.class})
     private Output<List<TimeSeriesIdPropertyResponse>> timeSeriesIdProperties;
 
     /**
@@ -210,7 +210,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -224,7 +224,7 @@ public class Gen2Environment extends io.pulumi.resources.CustomResource {
      * The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment's data available for faster query.
      * 
      */
-    @OutputExport(name="warmStoreConfiguration", type=WarmStoreConfigurationPropertiesResponse.class, parameters={})
+    @Export(name="warmStoreConfiguration", type=WarmStoreConfigurationPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ WarmStoreConfigurationPropertiesResponse> warmStoreConfiguration;
 
     /**

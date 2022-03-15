@@ -3,18 +3,18 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LogAnalyticsConfigurationResponse {
     private final @Nullable String customerId;
 
-    @OutputCustomType.Constructor
-    private LogAnalyticsConfigurationResponse(@OutputCustomType.Parameter("customerId") @Nullable String customerId) {
+    @CustomType.Constructor
+    private LogAnalyticsConfigurationResponse(@CustomType.Parameter("customerId") @Nullable String customerId) {
         this.customerId = customerId;
     }
 

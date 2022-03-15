@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
      * The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
      * 
      */
-    @InputImport(name="backendPort", required=true)
+    @Import(name="backendPort", required=true)
       private final Integer backendPort;
 
     public Integer getBackendPort() {
@@ -34,7 +34,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
      * The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
      * 
      */
-    @InputImport(name="frontendPort", required=true)
+    @Import(name="frontendPort", required=true)
       private final Integer frontendPort;
 
     public Integer getFrontendPort() {
@@ -45,7 +45,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
      * the reference to the load balancer probe used by the load balancing rule.
      * 
      */
-    @InputImport(name="probeProtocol", required=true)
+    @Import(name="probeProtocol", required=true)
       private final String probeProtocol;
 
     public String getProbeProtocol() {
@@ -56,7 +56,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
      * The probe request path. Only supported for HTTP/HTTPS probes.
      * 
      */
-    @InputImport(name="probeRequestPath")
+    @Import(name="probeRequestPath")
       private final @Nullable String probeRequestPath;
 
     public Optional<String> getProbeRequestPath() {
@@ -67,7 +67,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
      * The reference to the transport protocol used by the load balancing rule.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final String protocol;
 
     public String getProtocol() {

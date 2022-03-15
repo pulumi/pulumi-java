@@ -4,12 +4,12 @@
 package io.pulumi.aws.glue.outputs;
 
 import io.pulumi.aws.glue.outputs.GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDataCatalogEncryptionSettingsResult {
     private final String catalogId;
     /**
@@ -23,11 +23,11 @@ public final class GetDataCatalogEncryptionSettingsResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDataCatalogEncryptionSettingsResult(
-        @OutputCustomType.Parameter("catalogId") String catalogId,
-        @OutputCustomType.Parameter("dataCatalogEncryptionSettings") List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting> dataCatalogEncryptionSettings,
-        @OutputCustomType.Parameter("id") String id) {
+        @CustomType.Parameter("catalogId") String catalogId,
+        @CustomType.Parameter("dataCatalogEncryptionSettings") List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting> dataCatalogEncryptionSettings,
+        @CustomType.Parameter("id") String id) {
         this.catalogId = catalogId;
         this.dataCatalogEncryptionSettings = dataCatalogEncryptionSettings;
         this.id = id;

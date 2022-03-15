@@ -11,7 +11,7 @@ import io.pulumi.azurenative.elastic.outputs.ResourceSkuResponse;
 import io.pulumi.azurenative.elastic.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public class Monitor extends io.pulumi.resources.CustomResource {
      * Identity properties of the monitor resource.
      * 
      */
-    @OutputExport(name="identity", type=IdentityPropertiesResponse.class, parameters={})
+    @Export(name="identity", type=IdentityPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ IdentityPropertiesResponse> identity;
 
     /**
@@ -53,7 +53,7 @@ public class Monitor extends io.pulumi.resources.CustomResource {
      * The location of the monitor resource
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -67,7 +67,7 @@ public class Monitor extends io.pulumi.resources.CustomResource {
      * Name of the monitor resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -81,7 +81,7 @@ public class Monitor extends io.pulumi.resources.CustomResource {
      * Properties of the monitor resource.
      * 
      */
-    @OutputExport(name="properties", type=MonitorPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=MonitorPropertiesResponse.class, parameters={})
     private Output<MonitorPropertiesResponse> properties;
 
     /**
@@ -95,7 +95,7 @@ public class Monitor extends io.pulumi.resources.CustomResource {
      * SKU of the monitor resource.
      * 
      */
-    @OutputExport(name="sku", type=ResourceSkuResponse.class, parameters={})
+    @Export(name="sku", type=ResourceSkuResponse.class, parameters={})
     private Output</* @Nullable */ ResourceSkuResponse> sku;
 
     /**
@@ -109,7 +109,7 @@ public class Monitor extends io.pulumi.resources.CustomResource {
      * The system metadata relating to this resource
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -123,7 +123,7 @@ public class Monitor extends io.pulumi.resources.CustomResource {
      * The tags of the monitor resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -137,7 +137,7 @@ public class Monitor extends io.pulumi.resources.CustomResource {
      * The type of the monitor resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

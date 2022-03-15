@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.CertificateConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -16,14 +16,14 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final CertificateArgs Empty = new CertificateArgs();
 
-    @InputImport(name="certificateAuthorityId", required=true)
+    @Import(name="certificateAuthorityId", required=true)
       private final Output<String> certificateAuthorityId;
 
     public Output<String> getCertificateAuthorityId() {
         return this.certificateAuthorityId;
     }
 
-    @InputImport(name="certificateId")
+    @Import(name="certificateId")
       private final @Nullable Output<String> certificateId;
 
     public Output<String> getCertificateId() {
@@ -34,7 +34,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. A description of the certificate and key that does not require X.509 or ASN.1.
      * 
      */
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Output<CertificateConfigArgs> config;
 
     public Output<CertificateConfigArgs> getConfig() {
@@ -45,7 +45,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Labels with user-defined metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -56,14 +56,14 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The desired lifetime of a certificate. Used to create the "not_before_time" and "not_after_time" fields inside an X.509 certificate. Note that the lifetime may be truncated if it would extend past the life of any certificate authority in the issuing chain.
      * 
      */
-    @InputImport(name="lifetime", required=true)
+    @Import(name="lifetime", required=true)
       private final Output<String> lifetime;
 
     public Output<String> getLifetime() {
         return this.lifetime;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -74,21 +74,21 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. A pem-encoded X.509 certificate signing request (CSR).
      * 
      */
-    @InputImport(name="pemCsr")
+    @Import(name="pemCsr")
       private final @Nullable Output<String> pemCsr;
 
     public Output<String> getPemCsr() {
         return this.pemCsr == null ? Output.empty() : this.pemCsr;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {

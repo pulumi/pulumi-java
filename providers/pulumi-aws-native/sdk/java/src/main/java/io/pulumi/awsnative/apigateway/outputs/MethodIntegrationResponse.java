@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.apigateway.outputs;
 
 import io.pulumi.awsnative.apigateway.enums.MethodIntegrationResponseContentHandling;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MethodIntegrationResponse {
     /**
      * Specifies how to handle request payload content type conversions.
@@ -39,13 +39,13 @@ public final class MethodIntegrationResponse {
      */
     private final String statusCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MethodIntegrationResponse(
-        @OutputCustomType.Parameter("contentHandling") @Nullable MethodIntegrationResponseContentHandling contentHandling,
-        @OutputCustomType.Parameter("responseParameters") @Nullable Object responseParameters,
-        @OutputCustomType.Parameter("responseTemplates") @Nullable Object responseTemplates,
-        @OutputCustomType.Parameter("selectionPattern") @Nullable String selectionPattern,
-        @OutputCustomType.Parameter("statusCode") String statusCode) {
+        @CustomType.Parameter("contentHandling") @Nullable MethodIntegrationResponseContentHandling contentHandling,
+        @CustomType.Parameter("responseParameters") @Nullable Object responseParameters,
+        @CustomType.Parameter("responseTemplates") @Nullable Object responseTemplates,
+        @CustomType.Parameter("selectionPattern") @Nullable String selectionPattern,
+        @CustomType.Parameter("statusCode") String statusCode) {
         this.contentHandling = contentHandling;
         this.responseParameters = responseParameters;
         this.responseTemplates = responseTemplates;

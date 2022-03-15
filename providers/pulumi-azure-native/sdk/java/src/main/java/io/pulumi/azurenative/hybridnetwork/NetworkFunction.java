@@ -9,7 +9,7 @@ import io.pulumi.azurenative.hybridnetwork.outputs.NetworkFunctionUserConfigurat
 import io.pulumi.azurenative.hybridnetwork.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class NetworkFunction extends io.pulumi.resources.CustomResource {
      * The reference to the device resource.
      * 
      */
-    @OutputExport(name="device", type=SubResourceResponse.class, parameters={})
+    @Export(name="device", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> device;
 
     /**
@@ -52,7 +52,7 @@ public class NetworkFunction extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -66,7 +66,7 @@ public class NetworkFunction extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -80,7 +80,7 @@ public class NetworkFunction extends io.pulumi.resources.CustomResource {
      * The resource URI of the managed application.
      * 
      */
-    @OutputExport(name="managedApplication", type=SubResourceResponse.class, parameters={})
+    @Export(name="managedApplication", type=SubResourceResponse.class, parameters={})
     private Output<SubResourceResponse> managedApplication;
 
     /**
@@ -94,7 +94,7 @@ public class NetworkFunction extends io.pulumi.resources.CustomResource {
      * The parameters for the managed application.
      * 
      */
-    @OutputExport(name="managedApplicationParameters", type=Object.class, parameters={})
+    @Export(name="managedApplicationParameters", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> managedApplicationParameters;
 
     /**
@@ -108,7 +108,7 @@ public class NetworkFunction extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -122,7 +122,7 @@ public class NetworkFunction extends io.pulumi.resources.CustomResource {
      * The network function configurations from the user.
      * 
      */
-    @OutputExport(name="networkFunctionUserConfigurations", type=List.class, parameters={NetworkFunctionUserConfigurationResponse.class})
+    @Export(name="networkFunctionUserConfigurations", type=List.class, parameters={NetworkFunctionUserConfigurationResponse.class})
     private Output</* @Nullable */ List<NetworkFunctionUserConfigurationResponse>> networkFunctionUserConfigurations;
 
     /**
@@ -136,7 +136,7 @@ public class NetworkFunction extends io.pulumi.resources.CustomResource {
      * The provisioning state of the network function resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -150,7 +150,7 @@ public class NetworkFunction extends io.pulumi.resources.CustomResource {
      * The service key for the network function resource.
      * 
      */
-    @OutputExport(name="serviceKey", type=String.class, parameters={})
+    @Export(name="serviceKey", type=String.class, parameters={})
     private Output<String> serviceKey;
 
     /**
@@ -164,7 +164,7 @@ public class NetworkFunction extends io.pulumi.resources.CustomResource {
      * The sku name for the network function.
      * 
      */
-    @OutputExport(name="skuName", type=String.class, parameters={})
+    @Export(name="skuName", type=String.class, parameters={})
     private Output</* @Nullable */ String> skuName;
 
     /**
@@ -178,7 +178,7 @@ public class NetworkFunction extends io.pulumi.resources.CustomResource {
      * The sku type for the network function.
      * 
      */
-    @OutputExport(name="skuType", type=String.class, parameters={})
+    @Export(name="skuType", type=String.class, parameters={})
     private Output<String> skuType;
 
     /**
@@ -192,7 +192,7 @@ public class NetworkFunction extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -206,7 +206,7 @@ public class NetworkFunction extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -220,7 +220,7 @@ public class NetworkFunction extends io.pulumi.resources.CustomResource {
      * The vendor name for the network function.
      * 
      */
-    @OutputExport(name="vendorName", type=String.class, parameters={})
+    @Export(name="vendorName", type=String.class, parameters={})
     private Output</* @Nullable */ String> vendorName;
 
     /**
@@ -234,7 +234,7 @@ public class NetworkFunction extends io.pulumi.resources.CustomResource {
      * The vendor provisioning state for the network function resource.
      * 
      */
-    @OutputExport(name="vendorProvisioningState", type=String.class, parameters={})
+    @Export(name="vendorProvisioningState", type=String.class, parameters={})
     private Output<String> vendorProvisioningState;
 
     /**

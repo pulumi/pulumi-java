@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.deploymentmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.deploymentmanager.outputs.DeploymentTargetConfig;
 import io.pulumi.gcp.deploymentmanager.outputs.DeploymentTargetImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentTarget {
     /**
      * The root configuration file to use for this deployment.
@@ -27,10 +27,10 @@ public final class DeploymentTarget {
      */
     private final @Nullable List<DeploymentTargetImport> imports;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentTarget(
-        @OutputCustomType.Parameter("config") DeploymentTargetConfig config,
-        @OutputCustomType.Parameter("imports") @Nullable List<DeploymentTargetImport> imports) {
+        @CustomType.Parameter("config") DeploymentTargetConfig config,
+        @CustomType.Parameter("imports") @Nullable List<DeploymentTargetImport> imports) {
         this.config = config;
         this.imports = imports;
     }

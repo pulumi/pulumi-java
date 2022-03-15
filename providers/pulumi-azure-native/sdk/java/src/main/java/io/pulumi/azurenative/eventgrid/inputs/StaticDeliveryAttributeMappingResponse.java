@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
      * Boolean flag to tell if the attribute contains sensitive information .
      * 
      */
-    @InputImport(name="isSecret")
+    @Import(name="isSecret")
       private final @Nullable Boolean isSecret;
 
     public Optional<Boolean> getIsSecret() {
@@ -34,7 +34,7 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
      * Name of the delivery attribute or header.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -46,7 +46,7 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
      * Expected value is 'Static'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -57,7 +57,7 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
      * Value of the delivery attribute.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

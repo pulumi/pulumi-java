@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,15 +11,15 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions {
     private final @Nullable List<String> preflightOptions;
     private final @Nullable Boolean preflightSupported;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions(
-        @OutputCustomType.Parameter("preflightOptions") @Nullable List<String> preflightOptions,
-        @OutputCustomType.Parameter("preflightSupported") @Nullable Boolean preflightSupported) {
+        @CustomType.Parameter("preflightOptions") @Nullable List<String> preflightOptions,
+        @CustomType.Parameter("preflightSupported") @Nullable Boolean preflightSupported) {
         this.preflightOptions = preflightOptions;
         this.preflightSupported = preflightSupported;
     }

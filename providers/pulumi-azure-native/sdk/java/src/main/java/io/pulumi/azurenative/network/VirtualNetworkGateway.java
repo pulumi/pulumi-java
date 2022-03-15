@@ -14,7 +14,7 @@ import io.pulumi.azurenative.network.outputs.VirtualNetworkGatewaySkuResponse;
 import io.pulumi.azurenative.network.outputs.VpnClientConfigurationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -43,7 +43,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * ActiveActive flag.
      * 
      */
-    @OutputExport(name="activeActive", type=Boolean.class, parameters={})
+    @Export(name="activeActive", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> activeActive;
 
     /**
@@ -57,7 +57,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * Virtual network gateway's BGP speaker settings.
      * 
      */
-    @OutputExport(name="bgpSettings", type=BgpSettingsResponse.class, parameters={})
+    @Export(name="bgpSettings", type=BgpSettingsResponse.class, parameters={})
     private Output</* @Nullable */ BgpSettingsResponse> bgpSettings;
 
     /**
@@ -71,7 +71,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * The reference to the address space resource which represents the custom routes address space specified by the customer for virtual network gateway and VpnClient.
      * 
      */
-    @OutputExport(name="customRoutes", type=AddressSpaceResponse.class, parameters={})
+    @Export(name="customRoutes", type=AddressSpaceResponse.class, parameters={})
     private Output</* @Nullable */ AddressSpaceResponse> customRoutes;
 
     /**
@@ -85,7 +85,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * Whether BGP is enabled for this virtual network gateway or not.
      * 
      */
-    @OutputExport(name="enableBgp", type=Boolean.class, parameters={})
+    @Export(name="enableBgp", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableBgp;
 
     /**
@@ -99,7 +99,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * Whether dns forwarding is enabled or not.
      * 
      */
-    @OutputExport(name="enableDnsForwarding", type=Boolean.class, parameters={})
+    @Export(name="enableDnsForwarding", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDnsForwarding;
 
     /**
@@ -113,7 +113,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * Whether private IP needs to be enabled on this gateway for connections or not.
      * 
      */
-    @OutputExport(name="enablePrivateIpAddress", type=Boolean.class, parameters={})
+    @Export(name="enablePrivateIpAddress", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enablePrivateIpAddress;
 
     /**
@@ -127,7 +127,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -141,7 +141,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * The extended location of type local virtual network gateway.
      * 
      */
-    @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
+    @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
@@ -155,7 +155,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * The reference to the LocalNetworkGateway resource which represents local network site having default routes. Assign Null value in case of removing existing default site setting.
      * 
      */
-    @OutputExport(name="gatewayDefaultSite", type=SubResourceResponse.class, parameters={})
+    @Export(name="gatewayDefaultSite", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> gatewayDefaultSite;
 
     /**
@@ -169,7 +169,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * The type of this virtual network gateway.
      * 
      */
-    @OutputExport(name="gatewayType", type=String.class, parameters={})
+    @Export(name="gatewayType", type=String.class, parameters={})
     private Output</* @Nullable */ String> gatewayType;
 
     /**
@@ -183,7 +183,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * The IP address allocated by the gateway to which dns requests can be sent.
      * 
      */
-    @OutputExport(name="inboundDnsForwardingEndpoint", type=String.class, parameters={})
+    @Export(name="inboundDnsForwardingEndpoint", type=String.class, parameters={})
     private Output<String> inboundDnsForwardingEndpoint;
 
     /**
@@ -197,7 +197,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * IP configurations for virtual network gateway.
      * 
      */
-    @OutputExport(name="ipConfigurations", type=List.class, parameters={VirtualNetworkGatewayIPConfigurationResponse.class})
+    @Export(name="ipConfigurations", type=List.class, parameters={VirtualNetworkGatewayIPConfigurationResponse.class})
     private Output</* @Nullable */ List<VirtualNetworkGatewayIPConfigurationResponse>> ipConfigurations;
 
     /**
@@ -211,7 +211,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -225,7 +225,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -239,7 +239,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * The provisioning state of the virtual network gateway resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -253,7 +253,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * The resource GUID property of the virtual network gateway resource.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -267,7 +267,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * The reference to the VirtualNetworkGatewaySku resource which represents the SKU selected for Virtual network gateway.
      * 
      */
-    @OutputExport(name="sku", type=VirtualNetworkGatewaySkuResponse.class, parameters={})
+    @Export(name="sku", type=VirtualNetworkGatewaySkuResponse.class, parameters={})
     private Output</* @Nullable */ VirtualNetworkGatewaySkuResponse> sku;
 
     /**
@@ -281,7 +281,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -295,7 +295,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -309,7 +309,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * Customer vnet resource id. VirtualNetworkGateway of type local gateway is associated with the customer vnet.
      * 
      */
-    @OutputExport(name="vNetExtendedLocationResourceId", type=String.class, parameters={})
+    @Export(name="vNetExtendedLocationResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> vNetExtendedLocationResourceId;
 
     /**
@@ -323,7 +323,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * The reference to the VpnClientConfiguration resource which represents the P2S VpnClient configurations.
      * 
      */
-    @OutputExport(name="vpnClientConfiguration", type=VpnClientConfigurationResponse.class, parameters={})
+    @Export(name="vpnClientConfiguration", type=VpnClientConfigurationResponse.class, parameters={})
     private Output</* @Nullable */ VpnClientConfigurationResponse> vpnClientConfiguration;
 
     /**
@@ -337,7 +337,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * The generation for this VirtualNetworkGateway. Must be None if gatewayType is not VPN.
      * 
      */
-    @OutputExport(name="vpnGatewayGeneration", type=String.class, parameters={})
+    @Export(name="vpnGatewayGeneration", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpnGatewayGeneration;
 
     /**
@@ -351,7 +351,7 @@ public class VirtualNetworkGateway extends io.pulumi.resources.CustomResource {
      * The type of this virtual network gateway.
      * 
      */
-    @OutputExport(name="vpnType", type=String.class, parameters={})
+    @Export(name="vpnType", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpnType;
 
     /**

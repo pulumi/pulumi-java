@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class EventChannelDestinationResponse extends io.pulumi.resources.I
      * associated with the event channel will be created under this Azure subscription.
      * 
      */
-    @InputImport(name="azureSubscriptionId")
+    @Import(name="azureSubscriptionId")
       private final @Nullable String azureSubscriptionId;
 
     public Optional<String> getAzureSubscriptionId() {
@@ -34,7 +34,7 @@ public final class EventChannelDestinationResponse extends io.pulumi.resources.I
      * Name of the partner topic associated with the event channel.
      * 
      */
-    @InputImport(name="partnerTopicName")
+    @Import(name="partnerTopicName")
       private final @Nullable String partnerTopicName;
 
     public Optional<String> getPartnerTopicName() {
@@ -46,7 +46,7 @@ public final class EventChannelDestinationResponse extends io.pulumi.resources.I
      * associated with the event channel will be created under this resource group.
      * 
      */
-    @InputImport(name="resourceGroup")
+    @Import(name="resourceGroup")
       private final @Nullable String resourceGroup;
 
     public Optional<String> getResourceGroup() {

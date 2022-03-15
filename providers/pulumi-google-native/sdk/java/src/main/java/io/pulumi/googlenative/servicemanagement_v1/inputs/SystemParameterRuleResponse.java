@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.SystemParameterResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class SystemParameterRuleResponse extends io.pulumi.resources.Invok
      * Define parameters. Multiple names may be defined for a parameter. For a given method call, only one of them should be used. If multiple names are used the behavior is implementation-dependent. If none of the specified names are present the behavior is parameter-dependent.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final List<SystemParameterResponse> parameters;
 
     public List<SystemParameterResponse> getParameters() {
@@ -33,7 +33,7 @@ public final class SystemParameterRuleResponse extends io.pulumi.resources.Invok
      * Selects the methods to which this rule applies. Use '*' to indicate all methods in all APIs. Refer to selector for syntax details.
      * 
      */
-    @InputImport(name="selector", required=true)
+    @Import(name="selector", required=true)
       private final String selector;
 
     public String getSelector() {

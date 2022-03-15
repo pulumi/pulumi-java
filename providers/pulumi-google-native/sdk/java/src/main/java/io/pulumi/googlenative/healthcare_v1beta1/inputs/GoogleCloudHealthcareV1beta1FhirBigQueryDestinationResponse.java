@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.SchemaConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse e
      * BigQuery URI to an existing dataset, up to 2000 characters long, in the format `bq://projectId.bqDatasetId`.
      * 
      */
-    @InputImport(name="datasetUri", required=true)
+    @Import(name="datasetUri", required=true)
       private final String datasetUri;
 
     public String getDatasetUri() {
@@ -33,7 +33,7 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse e
      * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is equivalent to write_disposition=WRITE_TRUNCATE.
      * 
      */
-    @InputImport(name="force", required=true)
+    @Import(name="force", required=true)
       private final Boolean force;
 
     public Boolean getForce() {
@@ -44,7 +44,7 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse e
      * The configuration for the exported BigQuery schema.
      * 
      */
-    @InputImport(name="schemaConfig", required=true)
+    @Import(name="schemaConfig", required=true)
       private final SchemaConfigResponse schemaConfig;
 
     public SchemaConfigResponse getSchemaConfig() {
@@ -55,7 +55,7 @@ public final class GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse e
      * Determines if existing data in the destination dataset is overwritten, appended to, or not written if the tables contain data. If a write_disposition is specified, the `force` parameter is ignored.
      * 
      */
-    @InputImport(name="writeDisposition", required=true)
+    @Import(name="writeDisposition", required=true)
       private final String writeDisposition;
 
     public String getWriteDisposition() {

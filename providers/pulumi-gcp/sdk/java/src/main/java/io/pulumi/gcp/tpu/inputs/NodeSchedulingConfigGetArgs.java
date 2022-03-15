@@ -4,7 +4,7 @@
 package io.pulumi.gcp.tpu.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class NodeSchedulingConfigGetArgs extends io.pulumi.resources.Resou
      * Defines whether the TPU instance is preemptible.
      * 
      */
-    @InputImport(name="preemptible", required=true)
+    @Import(name="preemptible", required=true)
       private final Output<Boolean> preemptible;
 
     public Output<Boolean> getPreemptible() {

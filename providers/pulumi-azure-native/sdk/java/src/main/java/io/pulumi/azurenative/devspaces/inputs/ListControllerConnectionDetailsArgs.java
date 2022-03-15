@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devspaces.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListControllerConnectionDetailsArgs extends io.pulumi.resourc
      * Name of the resource.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -27,7 +27,7 @@ public final class ListControllerConnectionDetailsArgs extends io.pulumi.resourc
      * Resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class ListControllerConnectionDetailsArgs extends io.pulumi.resourc
      * Resource ID of the target container host mapped to the Azure Dev Spaces Controller.
      * 
      */
-    @InputImport(name="targetContainerHostResourceId", required=true)
+    @Import(name="targetContainerHostResourceId", required=true)
       private final String targetContainerHostResourceId;
 
     public String getTargetContainerHostResourceId() {

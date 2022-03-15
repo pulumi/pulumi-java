@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudiot_v1.enums.HttpConfigHttpEnabledState;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * If enabled, allows devices to use DeviceService via the HTTP protocol. Otherwise, any requests to DeviceService will fail for this registry.
      * 
      */
-    @InputImport(name="httpEnabledState")
+    @Import(name="httpEnabledState")
       private final @Nullable Output<HttpConfigHttpEnabledState> httpEnabledState;
 
     public Output<HttpConfigHttpEnabledState> getHttpEnabledState() {

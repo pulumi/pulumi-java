@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.SearchParameterResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SearchConfigResponse {
     /**
      * A list of search parameters in this FHIR store that are used to configure this FHIR store.
@@ -16,8 +16,8 @@ public final class SearchConfigResponse {
      */
     private final List<SearchParameterResponse> searchParameters;
 
-    @OutputCustomType.Constructor
-    private SearchConfigResponse(@OutputCustomType.Parameter("searchParameters") List<SearchParameterResponse> searchParameters) {
+    @CustomType.Constructor
+    private SearchConfigResponse(@CustomType.Parameter("searchParameters") List<SearchParameterResponse> searchParameters) {
         this.searchParameters = searchParameters;
     }
 

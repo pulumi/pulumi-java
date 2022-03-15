@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class HybridRunbookWorkerLegacyResponse extends io.pulumi.resources
      * Gets or sets the assigned machine IP address.
      * 
      */
-    @InputImport(name="ip")
+    @Import(name="ip")
       private final @Nullable String ip;
 
     public Optional<String> getIp() {
@@ -33,7 +33,7 @@ public final class HybridRunbookWorkerLegacyResponse extends io.pulumi.resources
      * Last Heartbeat from the Worker
      * 
      */
-    @InputImport(name="lastSeenDateTime")
+    @Import(name="lastSeenDateTime")
       private final @Nullable String lastSeenDateTime;
 
     public Optional<String> getLastSeenDateTime() {
@@ -44,7 +44,7 @@ public final class HybridRunbookWorkerLegacyResponse extends io.pulumi.resources
      * Gets or sets the worker machine name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -55,7 +55,7 @@ public final class HybridRunbookWorkerLegacyResponse extends io.pulumi.resources
      * Gets or sets the registration time of the worker machine.
      * 
      */
-    @InputImport(name="registrationTime")
+    @Import(name="registrationTime")
       private final @Nullable String registrationTime;
 
     public Optional<String> getRegistrationTime() {

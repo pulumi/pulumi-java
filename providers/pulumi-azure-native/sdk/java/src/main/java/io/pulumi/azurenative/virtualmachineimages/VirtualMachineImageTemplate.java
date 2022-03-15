@@ -22,7 +22,7 @@ import io.pulumi.azurenative.virtualmachineimages.outputs.ImageTemplateWindowsUp
 import io.pulumi.azurenative.virtualmachineimages.outputs.ProvisioningErrorResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.Object;
@@ -52,7 +52,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * Maximum duration to wait while building the image template. Omit or specify 0 to use the default (4 hours).
      * 
      */
-    @OutputExport(name="buildTimeoutInMinutes", type=Integer.class, parameters={})
+    @Export(name="buildTimeoutInMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> buildTimeoutInMinutes;
 
     /**
@@ -66,7 +66,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * Specifies the properties used to describe the customization steps of the image, like Image source etc
      * 
      */
-    @OutputExport(name="customize", type=List.class, parameters={Object.class})
+    @Export(name="customize", type=List.class, parameters={Object.class})
     private Output</* @Nullable */ List<Object>> customize;
 
     /**
@@ -80,7 +80,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * The distribution targets where the image output needs to go to.
      * 
      */
-    @OutputExport(name="distribute", type=List.class, parameters={Object.class})
+    @Export(name="distribute", type=List.class, parameters={Object.class})
     private Output<List<Object>> distribute;
 
     /**
@@ -94,7 +94,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * The identity of the image template, if configured.
      * 
      */
-    @OutputExport(name="identity", type=ImageTemplateIdentityResponse.class, parameters={})
+    @Export(name="identity", type=ImageTemplateIdentityResponse.class, parameters={})
     private Output<ImageTemplateIdentityResponse> identity;
 
     /**
@@ -108,7 +108,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * State of 'run' that is currently executing or was last executed.
      * 
      */
-    @OutputExport(name="lastRunStatus", type=ImageTemplateLastRunStatusResponse.class, parameters={})
+    @Export(name="lastRunStatus", type=ImageTemplateLastRunStatusResponse.class, parameters={})
     private Output<ImageTemplateLastRunStatusResponse> lastRunStatus;
 
     /**
@@ -122,7 +122,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -136,7 +136,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -150,7 +150,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * Provisioning error, if any
      * 
      */
-    @OutputExport(name="provisioningError", type=ProvisioningErrorResponse.class, parameters={})
+    @Export(name="provisioningError", type=ProvisioningErrorResponse.class, parameters={})
     private Output<ProvisioningErrorResponse> provisioningError;
 
     /**
@@ -164,7 +164,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * Provisioning state of the resource
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -178,7 +178,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * Specifies the properties used to describe the source image.
      * 
      */
-    @OutputExport(name="source", type=Object.class, parameters={})
+    @Export(name="source", type=Object.class, parameters={})
     private Output<Object> source;
 
     /**
@@ -192,7 +192,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -206,7 +206,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -220,7 +220,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * Describes how virtual machine is set up to build images
      * 
      */
-    @OutputExport(name="vmProfile", type=ImageTemplateVmProfileResponse.class, parameters={})
+    @Export(name="vmProfile", type=ImageTemplateVmProfileResponse.class, parameters={})
     private Output</* @Nullable */ ImageTemplateVmProfileResponse> vmProfile;
 
     /**

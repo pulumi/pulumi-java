@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.ServiceStatusCondition;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceStatus {
     private final @Nullable List<ServiceStatusCondition> conditions;
     private final @Nullable String latestCreatedRevisionName;
@@ -20,13 +20,13 @@ public final class ServiceStatus {
     private final @Nullable Integer observedGeneration;
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceStatus(
-        @OutputCustomType.Parameter("conditions") @Nullable List<ServiceStatusCondition> conditions,
-        @OutputCustomType.Parameter("latestCreatedRevisionName") @Nullable String latestCreatedRevisionName,
-        @OutputCustomType.Parameter("latestReadyRevisionName") @Nullable String latestReadyRevisionName,
-        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("conditions") @Nullable List<ServiceStatusCondition> conditions,
+        @CustomType.Parameter("latestCreatedRevisionName") @Nullable String latestCreatedRevisionName,
+        @CustomType.Parameter("latestReadyRevisionName") @Nullable String latestReadyRevisionName,
+        @CustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.conditions = conditions;
         this.latestCreatedRevisionName = latestCreatedRevisionName;
         this.latestReadyRevisionName = latestReadyRevisionName;

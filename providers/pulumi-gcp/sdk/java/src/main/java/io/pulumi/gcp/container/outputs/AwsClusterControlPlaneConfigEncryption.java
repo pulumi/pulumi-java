@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AwsClusterControlPlaneConfigEncryption {
     /**
      * Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used.
@@ -15,8 +15,8 @@ public final class AwsClusterControlPlaneConfigEncryption {
      */
     private final String kmsKeyArn;
 
-    @OutputCustomType.Constructor
-    private AwsClusterControlPlaneConfigEncryption(@OutputCustomType.Parameter("kmsKeyArn") String kmsKeyArn) {
+    @CustomType.Constructor
+    private AwsClusterControlPlaneConfigEncryption(@CustomType.Parameter("kmsKeyArn") String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
     }
 

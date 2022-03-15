@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.CanaryEvaluationArgs;
@@ -25,7 +25,7 @@ public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
      * The stable version that is serving requests.
      * 
      */
-    @OutputExport(name="control", type=String.class, parameters={})
+    @Export(name="control", type=String.class, parameters={})
     private Output<String> control;
 
     /**
@@ -39,7 +39,7 @@ public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
      * Create time of the canary evaluation.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -53,7 +53,7 @@ public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
      * End time for the evaluation's analysis.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
@@ -67,7 +67,7 @@ public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
      * Labels used to filter the metrics used for a canary evaluation.
      * 
      */
-    @OutputExport(name="metricLabels", type=GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse.class, parameters={})
+    @Export(name="metricLabels", type=GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse.class, parameters={})
     private Output<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse> metricLabels;
 
     /**
@@ -81,7 +81,7 @@ public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
      * Name of the canary evalution.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -95,7 +95,7 @@ public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
      * Start time for the canary evaluation's analysis.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
@@ -109,7 +109,7 @@ public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
      * The current state of the canary evaluation.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -123,7 +123,7 @@ public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
      * The newer version that is serving requests.
      * 
      */
-    @OutputExport(name="treatment", type=String.class, parameters={})
+    @Export(name="treatment", type=String.class, parameters={})
     private Output<String> treatment;
 
     /**
@@ -137,7 +137,7 @@ public class CanaryEvaluation extends io.pulumi.resources.CustomResource {
      * The resulting verdict of the canary evaluations: NONE, PASS, or FAIL.
      * 
      */
-    @OutputExport(name="verdict", type=String.class, parameters={})
+    @Export(name="verdict", type=String.class, parameters={})
     private Output<String> verdict;
 
     /**

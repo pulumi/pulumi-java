@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetTransferJobArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetTransferJobArgs Empty = new GetTransferJobArgs();
 
-    @InputImport(name="projectId", required=true)
+    @Import(name="projectId", required=true)
       private final String projectId;
 
     public String getProjectId() {
         return this.projectId;
     }
 
-    @InputImport(name="transferJobId", required=true)
+    @Import(name="transferJobId", required=true)
       private final String transferJobId;
 
     public String getTransferJobId() {

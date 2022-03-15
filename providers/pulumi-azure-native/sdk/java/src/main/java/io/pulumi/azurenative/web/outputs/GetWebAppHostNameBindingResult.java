@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebAppHostNameBindingResult {
     /**
      * Azure resource name.
@@ -77,21 +77,21 @@ public final class GetWebAppHostNameBindingResult {
      */
     private final String virtualIP;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebAppHostNameBindingResult(
-        @OutputCustomType.Parameter("azureResourceName") @Nullable String azureResourceName,
-        @OutputCustomType.Parameter("azureResourceType") @Nullable String azureResourceType,
-        @OutputCustomType.Parameter("customHostNameDnsRecordType") @Nullable String customHostNameDnsRecordType,
-        @OutputCustomType.Parameter("domainId") @Nullable String domainId,
-        @OutputCustomType.Parameter("hostNameType") @Nullable String hostNameType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("siteName") @Nullable String siteName,
-        @OutputCustomType.Parameter("sslState") @Nullable String sslState,
-        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("virtualIP") String virtualIP) {
+        @CustomType.Parameter("azureResourceName") @Nullable String azureResourceName,
+        @CustomType.Parameter("azureResourceType") @Nullable String azureResourceType,
+        @CustomType.Parameter("customHostNameDnsRecordType") @Nullable String customHostNameDnsRecordType,
+        @CustomType.Parameter("domainId") @Nullable String domainId,
+        @CustomType.Parameter("hostNameType") @Nullable String hostNameType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("siteName") @Nullable String siteName,
+        @CustomType.Parameter("sslState") @Nullable String sslState,
+        @CustomType.Parameter("thumbprint") @Nullable String thumbprint,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("virtualIP") String virtualIP) {
         this.azureResourceName = azureResourceName;
         this.azureResourceType = azureResourceType;
         this.customHostNameDnsRecordType = customHostNameDnsRecordType;

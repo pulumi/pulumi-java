@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.RouterStatusBestRoute;
 import io.pulumi.gcp.compute.outputs.RouterStatusBestRoutesForRouter;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RouterStatusResult {
     private final List<RouterStatusBestRoute> bestRoutes;
     private final List<RouterStatusBestRoutesForRouter> bestRoutesForRouters;
@@ -31,15 +31,15 @@ public final class RouterStatusResult {
     private final @Nullable String project;
     private final String region;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouterStatusResult(
-        @OutputCustomType.Parameter("bestRoutes") List<RouterStatusBestRoute> bestRoutes,
-        @OutputCustomType.Parameter("bestRoutesForRouters") List<RouterStatusBestRoutesForRouter> bestRoutesForRouters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("region") String region) {
+        @CustomType.Parameter("bestRoutes") List<RouterStatusBestRoute> bestRoutes,
+        @CustomType.Parameter("bestRoutesForRouters") List<RouterStatusBestRoutesForRouter> bestRoutesForRouters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("region") String region) {
         this.bestRoutes = bestRoutes;
         this.bestRoutesForRouters = bestRoutesForRouters;
         this.id = id;

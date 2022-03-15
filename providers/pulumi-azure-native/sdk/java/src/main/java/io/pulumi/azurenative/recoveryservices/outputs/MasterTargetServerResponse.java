@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.DataStoreResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.HealthErrorResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RetentionVolumeResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VersionDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MasterTargetServerResponse {
     /**
      * Agent expiry date.
@@ -108,26 +108,26 @@ public final class MasterTargetServerResponse {
      */
     private final @Nullable String versionStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MasterTargetServerResponse(
-        @OutputCustomType.Parameter("agentExpiryDate") @Nullable String agentExpiryDate,
-        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
-        @OutputCustomType.Parameter("agentVersionDetails") @Nullable VersionDetailsResponse agentVersionDetails,
-        @OutputCustomType.Parameter("dataStores") @Nullable List<DataStoreResponse> dataStores,
-        @OutputCustomType.Parameter("diskCount") @Nullable Integer diskCount,
-        @OutputCustomType.Parameter("healthErrors") @Nullable List<HealthErrorResponse> healthErrors,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
-        @OutputCustomType.Parameter("marsAgentExpiryDate") @Nullable String marsAgentExpiryDate,
-        @OutputCustomType.Parameter("marsAgentVersion") @Nullable String marsAgentVersion,
-        @OutputCustomType.Parameter("marsAgentVersionDetails") @Nullable VersionDetailsResponse marsAgentVersionDetails,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("osVersion") @Nullable String osVersion,
-        @OutputCustomType.Parameter("retentionVolumes") @Nullable List<RetentionVolumeResponse> retentionVolumes,
-        @OutputCustomType.Parameter("validationErrors") @Nullable List<HealthErrorResponse> validationErrors,
-        @OutputCustomType.Parameter("versionStatus") @Nullable String versionStatus) {
+        @CustomType.Parameter("agentExpiryDate") @Nullable String agentExpiryDate,
+        @CustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @CustomType.Parameter("agentVersionDetails") @Nullable VersionDetailsResponse agentVersionDetails,
+        @CustomType.Parameter("dataStores") @Nullable List<DataStoreResponse> dataStores,
+        @CustomType.Parameter("diskCount") @Nullable Integer diskCount,
+        @CustomType.Parameter("healthErrors") @Nullable List<HealthErrorResponse> healthErrors,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
+        @CustomType.Parameter("marsAgentExpiryDate") @Nullable String marsAgentExpiryDate,
+        @CustomType.Parameter("marsAgentVersion") @Nullable String marsAgentVersion,
+        @CustomType.Parameter("marsAgentVersionDetails") @Nullable VersionDetailsResponse marsAgentVersionDetails,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("osVersion") @Nullable String osVersion,
+        @CustomType.Parameter("retentionVolumes") @Nullable List<RetentionVolumeResponse> retentionVolumes,
+        @CustomType.Parameter("validationErrors") @Nullable List<HealthErrorResponse> validationErrors,
+        @CustomType.Parameter("versionStatus") @Nullable String versionStatus) {
         this.agentExpiryDate = agentExpiryDate;
         this.agentVersion = agentVersion;
         this.agentVersionDetails = agentVersionDetails;

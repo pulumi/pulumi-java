@@ -7,7 +7,7 @@ import io.pulumi.azurenative.synapse.enums.EngineType;
 import io.pulumi.azurenative.synapse.inputs.AzureSkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The engine type
      * 
      */
-    @InputImport(name="engineType")
+    @Import(name="engineType")
       private final @Nullable Output<Either<String,EngineType>> engineType;
 
     public Output<Either<String,EngineType>> getEngineType() {
@@ -33,7 +33,7 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Kusto pool.
      * 
      */
-    @InputImport(name="kustoPoolName")
+    @Import(name="kustoPoolName")
       private final @Nullable Output<String> kustoPoolName;
 
     public Output<String> getKustoPoolName() {
@@ -44,7 +44,7 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -55,7 +55,7 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -66,7 +66,7 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The SKU of the kusto pool.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<AzureSkuArgs> sku;
 
     public Output<AzureSkuArgs> getSku() {
@@ -77,7 +77,7 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -88,7 +88,7 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workspace
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {
@@ -99,7 +99,7 @@ public final class KustoPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The workspace unique identifier.
      * 
      */
-    @InputImport(name="workspaceUid")
+    @Import(name="workspaceUid")
       private final @Nullable Output<String> workspaceUid;
 
     public Output<String> getWorkspaceUid() {

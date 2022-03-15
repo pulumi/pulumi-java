@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudbuild.inputs.WorkerPoolNetworkConfigGetArgs;
 import io.pulumi.gcp.cloudbuild.inputs.WorkerPoolWorkerConfigGetArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * limitations.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
     public Output<Map<String,String>> getAnnotations() {
@@ -33,7 +33,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * Output only. Time at which the request to create the `WorkerPool` was received.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -44,7 +44,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * Output only. Time at which the request to delete the `WorkerPool` was received.
      * 
      */
-    @InputImport(name="deleteTime")
+    @Import(name="deleteTime")
       private final @Nullable Output<String> deleteTime;
 
     public Output<String> getDeleteTime() {
@@ -55,7 +55,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -66,7 +66,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * The location for the resource
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -77,7 +77,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * User-defined name of the `WorkerPool`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -88,7 +88,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * Network configuration for the `WorkerPool`. Structure is documented below.
      * 
      */
-    @InputImport(name="networkConfig")
+    @Import(name="networkConfig")
       private final @Nullable Output<WorkerPoolNetworkConfigGetArgs> networkConfig;
 
     public Output<WorkerPoolNetworkConfigGetArgs> getNetworkConfig() {
@@ -99,7 +99,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * The project for the resource
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -110,7 +110,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * Output only. `WorkerPool` state. Possible values: STATE_UNSPECIFIED, PENDING, APPROVED, REJECTED, CANCELLED
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -121,7 +121,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * Output only. A unique identifier for the `WorkerPool`.
      * 
      */
-    @InputImport(name="uid")
+    @Import(name="uid")
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {
@@ -132,7 +132,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * Output only. Time at which the request to update the `WorkerPool` was received.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
@@ -143,7 +143,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * Configuration to be used for a creating workers in the `WorkerPool`. Structure is documented below.
      * 
      */
-    @InputImport(name="workerConfig")
+    @Import(name="workerConfig")
       private final @Nullable Output<WorkerPoolWorkerConfigGetArgs> workerConfig;
 
     public Output<WorkerPoolWorkerConfigGetArgs> getWorkerConfig() {

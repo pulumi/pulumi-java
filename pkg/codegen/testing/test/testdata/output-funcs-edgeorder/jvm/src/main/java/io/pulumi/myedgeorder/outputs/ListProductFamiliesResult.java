@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.myedgeorder.outputs.ProductFamilyResponse;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListProductFamiliesResult {
     /**
      * Link for the next set of product families.
@@ -24,10 +24,10 @@ public final class ListProductFamiliesResult {
      */
     private final List<ProductFamilyResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListProductFamiliesResult(
-        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
-        @OutputCustomType.Parameter("value") List<ProductFamilyResponse> value) {
+        @CustomType.Parameter("nextLink") @Nullable String nextLink,
+        @CustomType.Parameter("value") List<ProductFamilyResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

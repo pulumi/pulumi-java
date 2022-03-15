@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
      * Must be set if ParameterType is DOUBLE or DISCRETE.
      * 
      */
-    @InputImport(name="floatValue")
+    @Import(name="floatValue")
       private final @Nullable Output<Double> floatValue;
 
     public Output<Double> getFloatValue() {
@@ -34,7 +34,7 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
      * Must be set if ParameterType is INTEGER
      * 
      */
-    @InputImport(name="intValue")
+    @Import(name="intValue")
       private final @Nullable Output<String> intValue;
 
     public Output<String> getIntValue() {
@@ -45,7 +45,7 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
      * The name of the parameter.
      * 
      */
-    @InputImport(name="parameter")
+    @Import(name="parameter")
       private final @Nullable Output<String> parameter;
 
     public Output<String> getParameter() {
@@ -56,7 +56,7 @@ public final class GoogleCloudMlV1_Trial_ParameterArgs extends io.pulumi.resourc
      * Must be set if ParameterTypeis CATEGORICAL
      * 
      */
-    @InputImport(name="stringValue")
+    @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
     public Output<String> getStringValue() {

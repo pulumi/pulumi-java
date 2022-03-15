@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.pubsub.inputs.LiteTopicPartitionConfigGetArgs;
 import io.pulumi.gcp.pubsub.inputs.LiteTopicReservationConfigGetArgs;
 import io.pulumi.gcp.pubsub.inputs.LiteTopicRetentionConfigGetArgs;
@@ -21,7 +21,7 @@ public final class LiteTopicState extends io.pulumi.resources.ResourceArgs {
      * Name of the topic.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -33,7 +33,7 @@ public final class LiteTopicState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="partitionConfig")
+    @Import(name="partitionConfig")
       private final @Nullable Output<LiteTopicPartitionConfigGetArgs> partitionConfig;
 
     public Output<LiteTopicPartitionConfigGetArgs> getPartitionConfig() {
@@ -45,7 +45,7 @@ public final class LiteTopicState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -56,7 +56,7 @@ public final class LiteTopicState extends io.pulumi.resources.ResourceArgs {
      * The region of the pubsub lite topic.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -68,7 +68,7 @@ public final class LiteTopicState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="reservationConfig")
+    @Import(name="reservationConfig")
       private final @Nullable Output<LiteTopicReservationConfigGetArgs> reservationConfig;
 
     public Output<LiteTopicReservationConfigGetArgs> getReservationConfig() {
@@ -80,7 +80,7 @@ public final class LiteTopicState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="retentionConfig")
+    @Import(name="retentionConfig")
       private final @Nullable Output<LiteTopicRetentionConfigGetArgs> retentionConfig;
 
     public Output<LiteTopicRetentionConfigGetArgs> getRetentionConfig() {
@@ -91,7 +91,7 @@ public final class LiteTopicState extends io.pulumi.resources.ResourceArgs {
      * The zone of the pubsub lite topic.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

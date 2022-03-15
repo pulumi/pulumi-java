@@ -4,22 +4,22 @@
 package io.pulumi.azurenative.providerhub.outputs;
 
 import io.pulumi.azurenative.providerhub.outputs.SkuSettingResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SkuResourceResponseProperties {
     private final @Nullable String provisioningState;
     private final List<SkuSettingResponse> skuSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkuResourceResponseProperties(
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("skuSettings") List<SkuSettingResponse> skuSettings) {
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("skuSettings") List<SkuSettingResponse> skuSettings) {
         this.provisioningState = provisioningState;
         this.skuSettings = skuSettings;
     }

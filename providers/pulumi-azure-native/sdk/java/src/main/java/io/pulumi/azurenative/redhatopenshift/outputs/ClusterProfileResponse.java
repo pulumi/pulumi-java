@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.redhatopenshift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterProfileResponse {
     /**
      * The domain for the cluster (immutable).
@@ -32,12 +32,12 @@ public final class ClusterProfileResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterProfileResponse(
-        @OutputCustomType.Parameter("domain") @Nullable String domain,
-        @OutputCustomType.Parameter("pullSecret") @Nullable String pullSecret,
-        @OutputCustomType.Parameter("resourceGroupId") @Nullable String resourceGroupId,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("domain") @Nullable String domain,
+        @CustomType.Parameter("pullSecret") @Nullable String pullSecret,
+        @CustomType.Parameter("resourceGroupId") @Nullable String resourceGroupId,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.domain = domain;
         this.pullSecret = pullSecret;
         this.resourceGroupId = resourceGroupId;

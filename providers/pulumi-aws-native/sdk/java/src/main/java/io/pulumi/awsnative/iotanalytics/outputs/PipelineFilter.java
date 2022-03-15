@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineFilter {
     private final String filter;
     private final String name;
     private final @Nullable String next;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineFilter(
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("next") @Nullable String next) {
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("next") @Nullable String next) {
         this.filter = filter;
         this.name = name;
         this.next = next;

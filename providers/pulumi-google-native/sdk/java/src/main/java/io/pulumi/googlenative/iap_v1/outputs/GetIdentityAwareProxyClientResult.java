@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.iap_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetIdentityAwareProxyClientResult {
     /**
      * Human-friendly name given to the OAuth client.
@@ -25,11 +25,11 @@ public final class GetIdentityAwareProxyClientResult {
      */
     private final String secret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIdentityAwareProxyClientResult(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("secret") String secret) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("secret") String secret) {
         this.displayName = displayName;
         this.name = name;
         this.secret = secret;

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.managednetwork.inputs;
 
 import io.pulumi.azurenative.managednetwork.inputs.ManagedNetworkGroupResponse;
 import io.pulumi.azurenative.managednetwork.inputs.ManagedNetworkPeeringPolicyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ConnectivityCollectionResponse extends io.pulumi.resources.In
      * The collection of connectivity related Managed Network Groups within the Managed Network
      * 
      */
-    @InputImport(name="groups", required=true)
+    @Import(name="groups", required=true)
       private final List<ManagedNetworkGroupResponse> groups;
 
     public List<ManagedNetworkGroupResponse> getGroups() {
@@ -33,7 +33,7 @@ public final class ConnectivityCollectionResponse extends io.pulumi.resources.In
      * The collection of Managed Network Peering Policies within the Managed Network
      * 
      */
-    @InputImport(name="peerings", required=true)
+    @Import(name="peerings", required=true)
       private final List<ManagedNetworkPeeringPolicyResponse> peerings;
 
     public List<ManagedNetworkPeeringPolicyResponse> getPeerings() {

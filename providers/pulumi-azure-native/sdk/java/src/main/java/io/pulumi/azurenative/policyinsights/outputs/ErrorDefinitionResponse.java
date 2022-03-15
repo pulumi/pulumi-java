@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.policyinsights.outputs;
 
 import io.pulumi.azurenative.policyinsights.outputs.TypedErrorInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ErrorDefinitionResponse {
     /**
      * Additional scenario specific error details.
@@ -37,13 +37,13 @@ public final class ErrorDefinitionResponse {
      */
     private final String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ErrorDefinitionResponse(
-        @OutputCustomType.Parameter("additionalInfo") List<TypedErrorInfoResponse> additionalInfo,
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("details") List<ErrorDefinitionResponse> details,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("target") String target) {
+        @CustomType.Parameter("additionalInfo") List<TypedErrorInfoResponse> additionalInfo,
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("details") List<ErrorDefinitionResponse> details,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("target") String target) {
         this.additionalInfo = additionalInfo;
         this.code = code;
         this.details = details;

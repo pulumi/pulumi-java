@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.notificationhubs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class WnsCredentialResponse extends io.pulumi.resources.InvokeArgs 
      * The package ID for this credential.
      * 
      */
-    @InputImport(name="packageSid")
+    @Import(name="packageSid")
       private final @Nullable String packageSid;
 
     public Optional<String> getPackageSid() {
@@ -33,7 +33,7 @@ public final class WnsCredentialResponse extends io.pulumi.resources.InvokeArgs 
      * The secret key.
      * 
      */
-    @InputImport(name="secretKey")
+    @Import(name="secretKey")
       private final @Nullable String secretKey;
 
     public Optional<String> getSecretKey() {
@@ -44,7 +44,7 @@ public final class WnsCredentialResponse extends io.pulumi.resources.InvokeArgs 
      * The Windows Live endpoint.
      * 
      */
-    @InputImport(name="windowsLiveEndpoint")
+    @Import(name="windowsLiveEndpoint")
       private final @Nullable String windowsLiveEndpoint;
 
     public Optional<String> getWindowsLiveEndpoint() {

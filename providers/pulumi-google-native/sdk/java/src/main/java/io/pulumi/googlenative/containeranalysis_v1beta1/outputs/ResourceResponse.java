@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceResponse {
     /**
      * The unique URI of the resource. For example, `https://gcr.io/project/image@sha256:foo` for a Docker image.
@@ -15,8 +15,8 @@ public final class ResourceResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
-    private ResourceResponse(@OutputCustomType.Parameter("uri") String uri) {
+    @CustomType.Constructor
+    private ResourceResponse(@CustomType.Parameter("uri") String uri) {
         this.uri = uri;
     }
 

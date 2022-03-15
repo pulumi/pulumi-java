@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.imagebuilder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +18,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends io.pulumi.resource
      * Whether to delete the volume on termination. Defaults to unset, which is the value inherited from the parent image.
      * 
      */
-    @InputImport(name="deleteOnTermination", required=true)
+    @Import(name="deleteOnTermination", required=true)
       private final Boolean deleteOnTermination;
 
     public Boolean getDeleteOnTermination() {
@@ -29,7 +29,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends io.pulumi.resource
      * Whether to encrypt the volume. Defaults to unset, which is the value inherited from the parent image.
      * 
      */
-    @InputImport(name="encrypted", required=true)
+    @Import(name="encrypted", required=true)
       private final Boolean encrypted;
 
     public Boolean getEncrypted() {
@@ -40,7 +40,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends io.pulumi.resource
      * Number of Input/Output (I/O) operations per second to provision for an `io1` or `io2` volume.
      * 
      */
-    @InputImport(name="iops", required=true)
+    @Import(name="iops", required=true)
       private final Integer iops;
 
     public Integer getIops() {
@@ -51,7 +51,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends io.pulumi.resource
      * Amazon Resource Name (ARN) of the Key Management Service (KMS) Key for encryption.
      * 
      */
-    @InputImport(name="kmsKeyId", required=true)
+    @Import(name="kmsKeyId", required=true)
       private final String kmsKeyId;
 
     public String getKmsKeyId() {
@@ -62,7 +62,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends io.pulumi.resource
      * Identifier of the EC2 Volume Snapshot.
      * 
      */
-    @InputImport(name="snapshotId", required=true)
+    @Import(name="snapshotId", required=true)
       private final String snapshotId;
 
     public String getSnapshotId() {
@@ -73,7 +73,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends io.pulumi.resource
      * Size of the volume, in GiB.
      * 
      */
-    @InputImport(name="volumeSize", required=true)
+    @Import(name="volumeSize", required=true)
       private final Integer volumeSize;
 
     public Integer getVolumeSize() {
@@ -84,7 +84,7 @@ public final class GetImageRecipeBlockDeviceMappingEb extends io.pulumi.resource
      * Type of the volume. For example, `gp2` or `io2`.
      * 
      */
-    @InputImport(name="volumeType", required=true)
+    @Import(name="volumeType", required=true)
       private final String volumeType;
 
     public String getVolumeType() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventgrid.outputs;
 
 import io.pulumi.azurenative.eventgrid.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPartnerRegistrationResult {
     /**
      * List of Azure subscription Ids that are authorized to create a partner namespace
@@ -118,27 +118,27 @@ public final class GetPartnerRegistrationResult {
      */
     private final @Nullable String visibilityState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPartnerRegistrationResult(
-        @OutputCustomType.Parameter("authorizedAzureSubscriptionIds") @Nullable List<String> authorizedAzureSubscriptionIds,
-        @OutputCustomType.Parameter("customerServiceUri") @Nullable String customerServiceUri,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("logoUri") @Nullable String logoUri,
-        @OutputCustomType.Parameter("longDescription") @Nullable String longDescription,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("partnerCustomerServiceExtension") @Nullable String partnerCustomerServiceExtension,
-        @OutputCustomType.Parameter("partnerCustomerServiceNumber") @Nullable String partnerCustomerServiceNumber,
-        @OutputCustomType.Parameter("partnerName") @Nullable String partnerName,
-        @OutputCustomType.Parameter("partnerResourceTypeDescription") @Nullable String partnerResourceTypeDescription,
-        @OutputCustomType.Parameter("partnerResourceTypeDisplayName") @Nullable String partnerResourceTypeDisplayName,
-        @OutputCustomType.Parameter("partnerResourceTypeName") @Nullable String partnerResourceTypeName,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("setupUri") @Nullable String setupUri,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("visibilityState") @Nullable String visibilityState) {
+        @CustomType.Parameter("authorizedAzureSubscriptionIds") @Nullable List<String> authorizedAzureSubscriptionIds,
+        @CustomType.Parameter("customerServiceUri") @Nullable String customerServiceUri,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("logoUri") @Nullable String logoUri,
+        @CustomType.Parameter("longDescription") @Nullable String longDescription,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("partnerCustomerServiceExtension") @Nullable String partnerCustomerServiceExtension,
+        @CustomType.Parameter("partnerCustomerServiceNumber") @Nullable String partnerCustomerServiceNumber,
+        @CustomType.Parameter("partnerName") @Nullable String partnerName,
+        @CustomType.Parameter("partnerResourceTypeDescription") @Nullable String partnerResourceTypeDescription,
+        @CustomType.Parameter("partnerResourceTypeDisplayName") @Nullable String partnerResourceTypeDisplayName,
+        @CustomType.Parameter("partnerResourceTypeName") @Nullable String partnerResourceTypeName,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("setupUri") @Nullable String setupUri,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("visibilityState") @Nullable String visibilityState) {
         this.authorizedAzureSubscriptionIds = authorizedAzureSubscriptionIds;
         this.customerServiceUri = customerServiceUri;
         this.id = id;

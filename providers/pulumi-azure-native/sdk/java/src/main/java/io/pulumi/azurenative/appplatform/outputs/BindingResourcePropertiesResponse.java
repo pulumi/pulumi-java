@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BindingResourcePropertiesResponse {
     /**
      * Binding parameters of the Binding resource
@@ -54,16 +54,16 @@ public final class BindingResourcePropertiesResponse {
      */
     private final String updatedAt;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BindingResourcePropertiesResponse(
-        @OutputCustomType.Parameter("bindingParameters") @Nullable Map<String,Object> bindingParameters,
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("generatedProperties") String generatedProperties,
-        @OutputCustomType.Parameter("key") @Nullable String key,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
-        @OutputCustomType.Parameter("resourceName") String resourceName,
-        @OutputCustomType.Parameter("resourceType") String resourceType,
-        @OutputCustomType.Parameter("updatedAt") String updatedAt) {
+        @CustomType.Parameter("bindingParameters") @Nullable Map<String,Object> bindingParameters,
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("generatedProperties") String generatedProperties,
+        @CustomType.Parameter("key") @Nullable String key,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId,
+        @CustomType.Parameter("resourceName") String resourceName,
+        @CustomType.Parameter("resourceType") String resourceType,
+        @CustomType.Parameter("updatedAt") String updatedAt) {
         this.bindingParameters = bindingParameters;
         this.createdAt = createdAt;
         this.generatedProperties = generatedProperties;

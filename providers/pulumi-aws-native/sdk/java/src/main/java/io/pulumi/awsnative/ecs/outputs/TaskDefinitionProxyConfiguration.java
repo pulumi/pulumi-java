@@ -4,24 +4,24 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionKeyValuePair;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionProxyConfiguration {
     private final String containerName;
     private final @Nullable List<TaskDefinitionKeyValuePair> proxyConfigurationProperties;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionProxyConfiguration(
-        @OutputCustomType.Parameter("containerName") String containerName,
-        @OutputCustomType.Parameter("proxyConfigurationProperties") @Nullable List<TaskDefinitionKeyValuePair> proxyConfigurationProperties,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("containerName") String containerName,
+        @CustomType.Parameter("proxyConfigurationProperties") @Nullable List<TaskDefinitionKeyValuePair> proxyConfigurationProperties,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.containerName = containerName;
         this.proxyConfigurationProperties = proxyConfigurationProperties;
         this.type = type;

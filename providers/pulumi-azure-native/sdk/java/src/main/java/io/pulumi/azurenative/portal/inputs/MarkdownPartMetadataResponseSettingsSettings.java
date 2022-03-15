@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulum
      * The content of the markdown part.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable String content;
 
     public Optional<String> getContent() {
@@ -34,7 +34,7 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulum
      * The source of the content of the markdown part.
      * 
      */
-    @InputImport(name="markdownSource")
+    @Import(name="markdownSource")
       private final @Nullable Integer markdownSource;
 
     public Optional<Integer> getMarkdownSource() {
@@ -45,7 +45,7 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulum
      * The uri of markdown content.
      * 
      */
-    @InputImport(name="markdownUri")
+    @Import(name="markdownUri")
       private final @Nullable String markdownUri;
 
     public Optional<String> getMarkdownUri() {
@@ -56,7 +56,7 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulum
      * The subtitle of the markdown part.
      * 
      */
-    @InputImport(name="subtitle")
+    @Import(name="subtitle")
       private final @Nullable String subtitle;
 
     public Optional<String> getSubtitle() {
@@ -67,7 +67,7 @@ public final class MarkdownPartMetadataResponseSettingsSettings extends io.pulum
      * The title of the markdown part.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable String title;
 
     public Optional<String> getTitle() {

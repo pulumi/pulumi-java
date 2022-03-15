@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildArgs;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerGithubArgs;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerPubsubConfigArgs;
@@ -27,7 +27,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="build")
+    @Import(name="build")
       private final @Nullable Output<TriggerBuildArgs> build;
 
     public Output<TriggerBuildArgs> getBuild() {
@@ -38,7 +38,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Human-readable description of the trigger.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -49,7 +49,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the trigger is disabled or not. If true, the trigger will never result in a build.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -60,7 +60,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Path, from the source root, to a file whose contents is used for the template. Either a filename or build template must be provided.
      * 
      */
-    @InputImport(name="filename")
+    @Import(name="filename")
       private final @Nullable Output<String> filename;
 
     public Output<String> getFilename() {
@@ -73,7 +73,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="github")
+    @Import(name="github")
       private final @Nullable Output<TriggerGithubArgs> github;
 
     public Output<TriggerGithubArgs> getGithub() {
@@ -90,7 +90,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * of the ignoredFiles globs, then we do not trigger a build.
      * 
      */
-    @InputImport(name="ignoredFiles")
+    @Import(name="ignoredFiles")
       private final @Nullable Output<List<String>> ignoredFiles;
 
     public Output<List<String>> getIgnoredFiles() {
@@ -109,7 +109,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * a build.
      * 
      */
-    @InputImport(name="includedFiles")
+    @Import(name="includedFiles")
       private final @Nullable Output<List<String>> includedFiles;
 
     public Output<List<String>> getIncludedFiles() {
@@ -122,7 +122,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Each named volume must be used by at least two build steps.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -134,7 +134,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -148,7 +148,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="pubsubConfig")
+    @Import(name="pubsubConfig")
       private final @Nullable Output<TriggerPubsubConfigArgs> pubsubConfig;
 
     public Output<TriggerPubsubConfigArgs> getPubsubConfig() {
@@ -163,7 +163,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Format: projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
@@ -174,7 +174,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Substitutions to use in a triggered build. Should only be used with triggers.run
      * 
      */
-    @InputImport(name="substitutions")
+    @Import(name="substitutions")
       private final @Nullable Output<Map<String,String>> substitutions;
 
     public Output<Map<String,String>> getSubstitutions() {
@@ -185,7 +185,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Tags for annotation of a Build. These are not docker tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
@@ -201,7 +201,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="triggerTemplate")
+    @Import(name="triggerTemplate")
       private final @Nullable Output<TriggerTriggerTemplateArgs> triggerTemplate;
 
     public Output<TriggerTriggerTemplateArgs> getTriggerTemplate() {
@@ -215,7 +215,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="webhookConfig")
+    @Import(name="webhookConfig")
       private final @Nullable Output<TriggerWebhookConfigArgs> webhookConfig;
 
     public Output<TriggerWebhookConfigArgs> getWebhookConfig() {

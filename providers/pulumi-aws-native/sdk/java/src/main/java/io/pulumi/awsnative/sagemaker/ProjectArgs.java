@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker;
 import io.pulumi.awsnative.sagemaker.inputs.ProjectTagArgs;
 import io.pulumi.awsnative.sagemaker.inputs.ServiceCatalogProvisioningDetailsPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ProjectArgs Empty = new ProjectArgs();
 
-    @InputImport(name="projectDescription")
+    @Import(name="projectDescription")
       private final @Nullable Output<String> projectDescription;
 
     public Output<String> getProjectDescription() {
         return this.projectDescription == null ? Output.empty() : this.projectDescription;
     }
 
-    @InputImport(name="projectName")
+    @Import(name="projectName")
       private final @Nullable Output<String> projectName;
 
     public Output<String> getProjectName() {
@@ -35,7 +35,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * Input ServiceCatalog Provisioning Details
      * 
      */
-    @InputImport(name="serviceCatalogProvisioningDetails", required=true)
+    @Import(name="serviceCatalogProvisioningDetails", required=true)
       private final Output<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails;
 
     public Output<ServiceCatalogProvisioningDetailsPropertiesArgs> getServiceCatalogProvisioningDetails() {
@@ -46,7 +46,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ProjectTagArgs>> tags;
 
     public Output<List<ProjectTagArgs>> getTags() {

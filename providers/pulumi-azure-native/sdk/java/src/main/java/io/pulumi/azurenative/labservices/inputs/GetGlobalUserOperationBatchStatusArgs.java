@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetGlobalUserOperationBatchStatusArgs extends io.pulumi.resou
      * The operation url of long running operation
      * 
      */
-    @InputImport(name="urls", required=true)
+    @Import(name="urls", required=true)
       private final List<String> urls;
 
     public List<String> getUrls() {
@@ -28,7 +28,7 @@ public final class GetGlobalUserOperationBatchStatusArgs extends io.pulumi.resou
      * The name of the user.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final String userName;
 
     public String getUserName() {

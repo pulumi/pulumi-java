@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.compute.inputs.RestorePointCollectionSourcePropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -31,7 +31,7 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -42,7 +42,7 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
      * The name of the restore point collection.
      * 
      */
-    @InputImport(name="restorePointCollectionName")
+    @Import(name="restorePointCollectionName")
       private final @Nullable Output<String> restorePointCollectionName;
 
     public Output<String> getRestorePointCollectionName() {
@@ -53,7 +53,7 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
      * The properties of the source resource that this restore point collection is created from.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<RestorePointCollectionSourcePropertiesArgs> source;
 
     public Output<RestorePointCollectionSourcePropertiesArgs> getSource() {
@@ -64,7 +64,7 @@ public final class RestorePointCollectionArgs extends io.pulumi.resources.Resour
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

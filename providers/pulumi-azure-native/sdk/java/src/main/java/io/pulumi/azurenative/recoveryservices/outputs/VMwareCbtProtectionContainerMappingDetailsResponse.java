@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VMwareCbtProtectionContainerMappingDetailsResponse {
     /**
      * Gets the class type. Overridden in derived classes.
@@ -46,15 +46,15 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse {
      */
     private final String targetLocation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VMwareCbtProtectionContainerMappingDetailsResponse(
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("keyVaultId") String keyVaultId,
-        @OutputCustomType.Parameter("keyVaultUri") String keyVaultUri,
-        @OutputCustomType.Parameter("serviceBusConnectionStringSecretName") String serviceBusConnectionStringSecretName,
-        @OutputCustomType.Parameter("storageAccountId") String storageAccountId,
-        @OutputCustomType.Parameter("storageAccountSasSecretName") String storageAccountSasSecretName,
-        @OutputCustomType.Parameter("targetLocation") String targetLocation) {
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("keyVaultId") String keyVaultId,
+        @CustomType.Parameter("keyVaultUri") String keyVaultUri,
+        @CustomType.Parameter("serviceBusConnectionStringSecretName") String serviceBusConnectionStringSecretName,
+        @CustomType.Parameter("storageAccountId") String storageAccountId,
+        @CustomType.Parameter("storageAccountSasSecretName") String storageAccountSasSecretName,
+        @CustomType.Parameter("targetLocation") String targetLocation) {
         this.instanceType = instanceType;
         this.keyVaultId = keyVaultId;
         this.keyVaultUri = keyVaultUri;

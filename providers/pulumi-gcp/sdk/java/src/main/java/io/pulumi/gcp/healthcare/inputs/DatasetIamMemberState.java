@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.healthcare.inputs.DatasetIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
 
     public static final DatasetIamMemberState Empty = new DatasetIamMemberState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<DatasetIamMemberConditionGetArgs> condition;
 
     public Output<DatasetIamMemberConditionGetArgs> getCondition() {
@@ -29,7 +29,7 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
      * project setting will be used as a fallback.
      * 
      */
-    @InputImport(name="datasetId")
+    @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
 
     public Output<String> getDatasetId() {
@@ -40,14 +40,14 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
      * (Computed) The etag of the dataset's IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="member")
+    @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
@@ -60,7 +60,7 @@ public final class DatasetIamMemberState extends io.pulumi.resources.ResourceArg
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

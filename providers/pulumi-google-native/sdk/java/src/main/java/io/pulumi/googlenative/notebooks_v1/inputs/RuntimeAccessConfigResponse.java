@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RuntimeAccessConfigResponse extends io.pulumi.resources.Invok
      * The type of access mode this instance.
      * 
      */
-    @InputImport(name="accessType", required=true)
+    @Import(name="accessType", required=true)
       private final String accessType;
 
     public String getAccessType() {
@@ -31,7 +31,7 @@ public final class RuntimeAccessConfigResponse extends io.pulumi.resources.Invok
      * The proxy endpoint that is used to access the runtime.
      * 
      */
-    @InputImport(name="proxyUri", required=true)
+    @Import(name="proxyUri", required=true)
       private final String proxyUri;
 
     public String getProxyUri() {
@@ -42,7 +42,7 @@ public final class RuntimeAccessConfigResponse extends io.pulumi.resources.Invok
      * The owner of this runtime after creation. Format: `alias@example.com` Currently supports one owner only.
      * 
      */
-    @InputImport(name="runtimeOwner", required=true)
+    @Import(name="runtimeOwner", required=true)
       private final String runtimeOwner;
 
     public String getRuntimeOwner() {

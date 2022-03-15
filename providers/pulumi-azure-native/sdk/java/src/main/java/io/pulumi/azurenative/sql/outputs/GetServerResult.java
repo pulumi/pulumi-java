@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql.outputs;
 import io.pulumi.azurenative.sql.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.sql.outputs.ServerExternalAdministratorResponse;
 import io.pulumi.azurenative.sql.outputs.ServerPrivateEndpointConnectionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetServerResult {
     /**
      * Administrator username for the server. Once created it cannot be changed.
@@ -107,26 +107,26 @@ public final class GetServerResult {
      */
     private final String workspaceFeature;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServerResult(
-        @OutputCustomType.Parameter("administratorLogin") @Nullable String administratorLogin,
-        @OutputCustomType.Parameter("administrators") @Nullable ServerExternalAdministratorResponse administrators,
-        @OutputCustomType.Parameter("fullyQualifiedDomainName") String fullyQualifiedDomainName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
-        @OutputCustomType.Parameter("keyId") @Nullable String keyId,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("minimalTlsVersion") @Nullable String minimalTlsVersion,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("primaryUserAssignedIdentityId") @Nullable String primaryUserAssignedIdentityId,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") @Nullable String version,
-        @OutputCustomType.Parameter("workspaceFeature") String workspaceFeature) {
+        @CustomType.Parameter("administratorLogin") @Nullable String administratorLogin,
+        @CustomType.Parameter("administrators") @Nullable ServerExternalAdministratorResponse administrators,
+        @CustomType.Parameter("fullyQualifiedDomainName") String fullyQualifiedDomainName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @CustomType.Parameter("keyId") @Nullable String keyId,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("minimalTlsVersion") @Nullable String minimalTlsVersion,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("primaryUserAssignedIdentityId") @Nullable String primaryUserAssignedIdentityId,
+        @CustomType.Parameter("privateEndpointConnections") List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") @Nullable String version,
+        @CustomType.Parameter("workspaceFeature") String workspaceFeature) {
         this.administratorLogin = administratorLogin;
         this.administrators = administrators;
         this.fullyQualifiedDomainName = fullyQualifiedDomainName;

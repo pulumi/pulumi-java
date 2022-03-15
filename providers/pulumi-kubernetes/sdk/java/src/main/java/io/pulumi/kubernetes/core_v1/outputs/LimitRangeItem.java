@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LimitRangeItem {
     /**
      * Default resource requirement limit value by resource name if resource limit is omitted.
@@ -47,14 +47,14 @@ public final class LimitRangeItem {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LimitRangeItem(
-        @OutputCustomType.Parameter("default") @Nullable Map<String,String> $default,
-        @OutputCustomType.Parameter("defaultRequest") @Nullable Map<String,String> defaultRequest,
-        @OutputCustomType.Parameter("max") @Nullable Map<String,String> max,
-        @OutputCustomType.Parameter("maxLimitRequestRatio") @Nullable Map<String,String> maxLimitRequestRatio,
-        @OutputCustomType.Parameter("min") @Nullable Map<String,String> min,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("default") @Nullable Map<String,String> $default,
+        @CustomType.Parameter("defaultRequest") @Nullable Map<String,String> defaultRequest,
+        @CustomType.Parameter("max") @Nullable Map<String,String> max,
+        @CustomType.Parameter("maxLimitRequestRatio") @Nullable Map<String,String> maxLimitRequestRatio,
+        @CustomType.Parameter("min") @Nullable Map<String,String> min,
+        @CustomType.Parameter("type") String type) {
         this.$default = $default;
         this.defaultRequest = defaultRequest;
         this.max = max;

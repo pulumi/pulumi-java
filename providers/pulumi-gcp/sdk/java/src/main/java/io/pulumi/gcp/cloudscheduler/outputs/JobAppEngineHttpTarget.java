@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudscheduler.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudscheduler.outputs.JobAppEngineHttpTargetAppEngineRouting;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobAppEngineHttpTarget {
     /**
      * App Engine Routing setting for the job.
@@ -48,13 +48,13 @@ public final class JobAppEngineHttpTarget {
      */
     private final String relativeUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobAppEngineHttpTarget(
-        @OutputCustomType.Parameter("appEngineRouting") @Nullable JobAppEngineHttpTargetAppEngineRouting appEngineRouting,
-        @OutputCustomType.Parameter("body") @Nullable String body,
-        @OutputCustomType.Parameter("headers") @Nullable Map<String,String> headers,
-        @OutputCustomType.Parameter("httpMethod") @Nullable String httpMethod,
-        @OutputCustomType.Parameter("relativeUri") String relativeUri) {
+        @CustomType.Parameter("appEngineRouting") @Nullable JobAppEngineHttpTargetAppEngineRouting appEngineRouting,
+        @CustomType.Parameter("body") @Nullable String body,
+        @CustomType.Parameter("headers") @Nullable Map<String,String> headers,
+        @CustomType.Parameter("httpMethod") @Nullable String httpMethod,
+        @CustomType.Parameter("relativeUri") String relativeUri) {
         this.appEngineRouting = appEngineRouting;
         this.body = body;
         this.headers = headers;

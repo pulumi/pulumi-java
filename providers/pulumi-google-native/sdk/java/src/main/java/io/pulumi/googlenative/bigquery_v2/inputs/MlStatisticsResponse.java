@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.IterationResultResponse;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ public final class MlStatisticsResponse extends io.pulumi.resources.InvokeArgs {
      * Results for all completed iterations.
      * 
      */
-    @InputImport(name="iterationResults", required=true)
+    @Import(name="iterationResults", required=true)
       private final List<IterationResultResponse> iterationResults;
 
     public List<IterationResultResponse> getIterationResults() {
@@ -29,7 +29,7 @@ public final class MlStatisticsResponse extends io.pulumi.resources.InvokeArgs {
      * Maximum number of iterations specified as max_iterations in the 'CREATE MODEL' query. The actual number of iterations may be less than this number due to early stop.
      * 
      */
-    @InputImport(name="maxIterations", required=true)
+    @Import(name="maxIterations", required=true)
       private final String maxIterations;
 
     public String getMaxIterations() {

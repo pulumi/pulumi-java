@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformance {
     /**
      * Used when good_service is defined by a count of values aggregated in a
@@ -33,10 +33,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformance {
      */
     private final @Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio goodTotalRatio;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SloWindowsBasedSliGoodTotalRatioThresholdPerformance(
-        @OutputCustomType.Parameter("distributionCut") @Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut distributionCut,
-        @OutputCustomType.Parameter("goodTotalRatio") @Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio goodTotalRatio) {
+        @CustomType.Parameter("distributionCut") @Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut distributionCut,
+        @CustomType.Parameter("goodTotalRatio") @Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGoodTotalRatio goodTotalRatio) {
         this.distributionCut = distributionCut;
         this.goodTotalRatio = goodTotalRatio;
     }

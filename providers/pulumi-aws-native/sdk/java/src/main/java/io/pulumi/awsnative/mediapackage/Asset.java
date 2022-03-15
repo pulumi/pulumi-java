@@ -8,7 +8,7 @@ import io.pulumi.awsnative.mediapackage.AssetArgs;
 import io.pulumi.awsnative.mediapackage.outputs.AssetEgressEndpoint;
 import io.pulumi.awsnative.mediapackage.outputs.AssetTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The ARN of the Asset.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -38,7 +38,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The time the Asset was initially submitted for Ingest.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -52,7 +52,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The list of egress endpoints available for the Asset.
      * 
      */
-    @OutputExport(name="egressEndpoints", type=List.class, parameters={AssetEgressEndpoint.class})
+    @Export(name="egressEndpoints", type=List.class, parameters={AssetEgressEndpoint.class})
     private Output<List<AssetEgressEndpoint>> egressEndpoints;
 
     /**
@@ -66,7 +66,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The ID of the PackagingGroup for the Asset.
      * 
      */
-    @OutputExport(name="packagingGroupId", type=String.class, parameters={})
+    @Export(name="packagingGroupId", type=String.class, parameters={})
     private Output<String> packagingGroupId;
 
     /**
@@ -80,7 +80,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The resource ID to include in SPEKE key requests.
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
     /**
@@ -94,7 +94,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * ARN of the source object in S3.
      * 
      */
-    @OutputExport(name="sourceArn", type=String.class, parameters={})
+    @Export(name="sourceArn", type=String.class, parameters={})
     private Output<String> sourceArn;
 
     /**
@@ -108,7 +108,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * The IAM role_arn used to access the source S3 bucket.
      * 
      */
-    @OutputExport(name="sourceRoleArn", type=String.class, parameters={})
+    @Export(name="sourceRoleArn", type=String.class, parameters={})
     private Output<String> sourceRoleArn;
 
     /**
@@ -122,7 +122,7 @@ public class Asset extends io.pulumi.resources.CustomResource {
      * A collection of tags associated with a resource
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={AssetTag.class})
+    @Export(name="tags", type=List.class, parameters={AssetTag.class})
     private Output</* @Nullable */ List<AssetTag>> tags;
 
     /**

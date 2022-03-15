@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServicePerimeterSpecVpcAccessibleServices {
     /**
      * The list of APIs usable within the Service Perimeter.
@@ -26,10 +26,10 @@ public final class ServicePerimeterSpecVpcAccessibleServices {
      */
     private final @Nullable Boolean enableRestriction;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicePerimeterSpecVpcAccessibleServices(
-        @OutputCustomType.Parameter("allowedServices") @Nullable List<String> allowedServices,
-        @OutputCustomType.Parameter("enableRestriction") @Nullable Boolean enableRestriction) {
+        @CustomType.Parameter("allowedServices") @Nullable List<String> allowedServices,
+        @CustomType.Parameter("enableRestriction") @Nullable Boolean enableRestriction) {
         this.allowedServices = allowedServices;
         this.enableRestriction = enableRestriction;
     }

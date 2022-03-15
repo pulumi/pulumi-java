@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * PARTNER type this will Pre-Activate the interconnect attachment
      * 
      */
-    @InputImport(name="adminEnabled")
+    @Import(name="adminEnabled")
       private final @Nullable Output<Boolean> adminEnabled;
 
     public Output<Boolean> getAdminEnabled() {
@@ -38,7 +38,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * Possible values are `BPS_50M`, `BPS_100M`, `BPS_200M`, `BPS_300M`, `BPS_400M`, `BPS_500M`, `BPS_1G`, `BPS_2G`, `BPS_5G`, `BPS_10G`, `BPS_20G`, and `BPS_50G`.
      * 
      */
-    @InputImport(name="bandwidth")
+    @Import(name="bandwidth")
       private final @Nullable Output<String> bandwidth;
 
     public Output<String> getBandwidth() {
@@ -55,7 +55,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * Google will randomly select an unused /29 from all of link-local space.
      * 
      */
-    @InputImport(name="candidateSubnets")
+    @Import(name="candidateSubnets")
       private final @Nullable Output<List<String>> candidateSubnets;
 
     public Output<List<String>> getCandidateSubnets() {
@@ -66,7 +66,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -82,7 +82,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * domain. If not specified, the value will default to AVAILABILITY_DOMAIN_ANY.
      * 
      */
-    @InputImport(name="edgeAvailabilityDomain")
+    @Import(name="edgeAvailabilityDomain")
       private final @Nullable Output<String> edgeAvailabilityDomain;
 
     public Output<String> getEdgeAvailabilityDomain() {
@@ -105,7 +105,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * Possible values are `NONE` and `IPSEC`.
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<String> encryption;
 
     public Output<String> getEncryption() {
@@ -118,7 +118,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * be set if type is PARTNER.
      * 
      */
-    @InputImport(name="interconnect")
+    @Import(name="interconnect")
       private final @Nullable Output<String> interconnect;
 
     public Output<String> getInterconnect() {
@@ -144,7 +144,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * allocated from regional external IP address pool.
      * 
      */
-    @InputImport(name="ipsecInternalAddresses")
+    @Import(name="ipsecInternalAddresses")
       private final @Nullable Output<List<String>> ipsecInternalAddresses;
 
     public Output<List<String>> getIpsecInternalAddresses() {
@@ -156,7 +156,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * this interconnect attachment. Currently, only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
      * 
      */
-    @InputImport(name="mtu")
+    @Import(name="mtu")
       private final @Nullable Output<String> mtu;
 
     public Output<String> getMtu() {
@@ -172,7 +172,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -184,7 +184,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -195,7 +195,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * Region where the regional interconnect attachment resides.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -209,7 +209,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * Cloud Router is configured.
      * 
      */
-    @InputImport(name="router", required=true)
+    @Import(name="router", required=true)
       private final Output<String> router;
 
     public Output<String> getRouter() {
@@ -222,7 +222,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * Possible values are `DEDICATED`, `PARTNER`, and `PARTNER_PROVIDER`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -234,7 +234,7 @@ public final class InterconnectAttachmentArgs extends io.pulumi.resources.Resour
      * using PARTNER type this will be managed upstream.
      * 
      */
-    @InputImport(name="vlanTag8021q")
+    @Import(name="vlanTag8021q")
       private final @Nullable Output<Integer> vlanTag8021q;
 
     public Output<Integer> getVlanTag8021q() {

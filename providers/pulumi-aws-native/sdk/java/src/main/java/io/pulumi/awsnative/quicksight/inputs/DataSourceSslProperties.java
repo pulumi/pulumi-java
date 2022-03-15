@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DataSourceSslProperties extends io.pulumi.resources.InvokeArg
      * <p>A Boolean option to control whether SSL should be disabled.</p>
      * 
      */
-    @InputImport(name="disableSsl")
+    @Import(name="disableSsl")
       private final @Nullable Boolean disableSsl;
 
     public Optional<Boolean> getDisableSsl() {

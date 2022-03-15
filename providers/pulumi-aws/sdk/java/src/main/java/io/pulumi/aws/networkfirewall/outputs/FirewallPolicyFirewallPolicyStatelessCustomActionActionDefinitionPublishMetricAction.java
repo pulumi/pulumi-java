@@ -4,11 +4,11 @@
 package io.pulumi.aws.networkfirewall.outputs;
 
 import io.pulumi.aws.networkfirewall.outputs.FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction {
     /**
      * Set of configuration blocks describing dimension settings to use for Amazon CloudWatch custom metrics. See Dimension below for more details.
@@ -16,8 +16,8 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
      */
     private final List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension> dimensions;
 
-    @OutputCustomType.Constructor
-    private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction(@OutputCustomType.Parameter("dimensions") List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension> dimensions) {
+    @CustomType.Constructor
+    private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction(@CustomType.Parameter("dimensions") List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension> dimensions) {
         this.dimensions = dimensions;
     }
 

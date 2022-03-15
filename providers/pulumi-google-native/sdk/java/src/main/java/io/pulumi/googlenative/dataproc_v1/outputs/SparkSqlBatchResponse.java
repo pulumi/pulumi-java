@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SparkSqlBatchResponse {
     /**
      * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
@@ -27,11 +27,11 @@ public final class SparkSqlBatchResponse {
      */
     private final Map<String,String> queryVariables;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SparkSqlBatchResponse(
-        @OutputCustomType.Parameter("jarFileUris") List<String> jarFileUris,
-        @OutputCustomType.Parameter("queryFileUri") String queryFileUri,
-        @OutputCustomType.Parameter("queryVariables") Map<String,String> queryVariables) {
+        @CustomType.Parameter("jarFileUris") List<String> jarFileUris,
+        @CustomType.Parameter("queryFileUri") String queryFileUri,
+        @CustomType.Parameter("queryVariables") Map<String,String> queryVariables) {
         this.jarFileUris = jarFileUris;
         this.queryFileUri = queryFileUri;
         this.queryVariables = queryVariables;

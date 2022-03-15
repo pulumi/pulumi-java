@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.ServiceEndpointPolicyDefinitionResp
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -51,7 +51,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * Kind of service endpoint policy. This is metadata used for the Azure portal experience.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -65,7 +65,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -79,7 +79,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * The provisioning state of the service endpoint policy resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -107,7 +107,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * The resource GUID property of the service endpoint policy resource.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -121,7 +121,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * A collection of service endpoint policy definitions of the service endpoint policy.
      * 
      */
-    @OutputExport(name="serviceEndpointPolicyDefinitions", type=List.class, parameters={ServiceEndpointPolicyDefinitionResponse.class})
+    @Export(name="serviceEndpointPolicyDefinitions", type=List.class, parameters={ServiceEndpointPolicyDefinitionResponse.class})
     private Output</* @Nullable */ List<ServiceEndpointPolicyDefinitionResponse>> serviceEndpointPolicyDefinitions;
 
     /**
@@ -135,7 +135,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * A collection of references to subnets.
      * 
      */
-    @OutputExport(name="subnets", type=List.class, parameters={SubnetResponse.class})
+    @Export(name="subnets", type=List.class, parameters={SubnetResponse.class})
     private Output<List<SubnetResponse>> subnets;
 
     /**
@@ -149,7 +149,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -163,7 +163,7 @@ public class ServiceEndpointPolicy extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

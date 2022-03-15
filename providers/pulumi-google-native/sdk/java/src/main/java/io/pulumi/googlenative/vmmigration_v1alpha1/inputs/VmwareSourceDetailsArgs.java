@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
      * Input only. The credentials password. This is write only and can not be read in a GET operation.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -33,7 +33,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
      * The thumbprint representing the certificate for the vcenter.
      * 
      */
-    @InputImport(name="thumbprint")
+    @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
     public Output<String> getThumbprint() {
@@ -44,7 +44,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
      * The credentials username.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
@@ -55,7 +55,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
      * The ip address of the vcenter this Source represents.
      * 
      */
-    @InputImport(name="vcenterIp")
+    @Import(name="vcenterIp")
       private final @Nullable Output<String> vcenterIp;
 
     public Output<String> getVcenterIp() {

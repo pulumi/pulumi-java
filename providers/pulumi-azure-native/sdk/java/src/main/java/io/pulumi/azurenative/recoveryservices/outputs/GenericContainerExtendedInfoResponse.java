@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.ContainerIdentityInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GenericContainerExtendedInfoResponse {
     /**
      * Container identity information
@@ -29,11 +29,11 @@ public final class GenericContainerExtendedInfoResponse {
      */
     private final @Nullable Map<String,String> serviceEndpoints;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GenericContainerExtendedInfoResponse(
-        @OutputCustomType.Parameter("containerIdentityInfo") @Nullable ContainerIdentityInfoResponse containerIdentityInfo,
-        @OutputCustomType.Parameter("rawCertData") @Nullable String rawCertData,
-        @OutputCustomType.Parameter("serviceEndpoints") @Nullable Map<String,String> serviceEndpoints) {
+        @CustomType.Parameter("containerIdentityInfo") @Nullable ContainerIdentityInfoResponse containerIdentityInfo,
+        @CustomType.Parameter("rawCertData") @Nullable String rawCertData,
+        @CustomType.Parameter("serviceEndpoints") @Nullable Map<String,String> serviceEndpoints) {
         this.containerIdentityInfo = containerIdentityInfo;
         this.rawCertData = rawCertData;
         this.serviceEndpoints = serviceEndpoints;

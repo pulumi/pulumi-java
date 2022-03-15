@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption {
     /**
      * A Boolean value that determines whether CloudFront overrides the X-XSS-Protection HTTP response header received from the origin with the one specified in this response headers policy.
@@ -15,8 +15,8 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigContentTypeOptio
      */
     private final Boolean override;
 
-    @OutputCustomType.Constructor
-    private GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption(@OutputCustomType.Parameter("override") Boolean override) {
+    @CustomType.Constructor
+    private GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption(@CustomType.Parameter("override") Boolean override) {
         this.override = override;
     }
 

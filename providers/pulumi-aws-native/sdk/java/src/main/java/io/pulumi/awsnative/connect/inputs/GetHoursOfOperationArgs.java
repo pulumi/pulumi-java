@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.connect.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetHoursOfOperationArgs extends io.pulumi.resources.InvokeArg
      * The Amazon Resource Name (ARN) for the hours of operation.
      * 
      */
-    @InputImport(name="hoursOfOperationArn", required=true)
+    @Import(name="hoursOfOperationArn", required=true)
       private final String hoursOfOperationArn;
 
     public String getHoursOfOperationArn() {

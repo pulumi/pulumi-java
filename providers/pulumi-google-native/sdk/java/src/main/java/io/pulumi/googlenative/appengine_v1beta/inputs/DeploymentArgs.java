@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.appengine_v1beta.inputs.BuildInfoArgs;
 import io.pulumi.googlenative.appengine_v1beta.inputs.CloudBuildOptionsArgs;
 import io.pulumi.googlenative.appengine_v1beta.inputs.ContainerInfoArgs;
@@ -27,7 +27,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * Google Cloud Build build information. Only applicable for instances running in the App Engine flexible environment.
      * 
      */
-    @InputImport(name="build")
+    @Import(name="build")
       private final @Nullable Output<BuildInfoArgs> build;
 
     public Output<BuildInfoArgs> getBuild() {
@@ -38,7 +38,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * Options for any Google Cloud Build builds created as a part of this deployment.These options will only be used if a new build is created, such as when deploying to the App Engine flexible environment using files or zip.
      * 
      */
-    @InputImport(name="cloudBuildOptions")
+    @Import(name="cloudBuildOptions")
       private final @Nullable Output<CloudBuildOptionsArgs> cloudBuildOptions;
 
     public Output<CloudBuildOptionsArgs> getCloudBuildOptions() {
@@ -49,7 +49,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * The Docker image for the container that runs the version. Only applicable for instances running in the App Engine flexible environment.
      * 
      */
-    @InputImport(name="container")
+    @Import(name="container")
       private final @Nullable Output<ContainerInfoArgs> container;
 
     public Output<ContainerInfoArgs> getContainer() {
@@ -60,7 +60,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call.
      * 
      */
-    @InputImport(name="files")
+    @Import(name="files")
       private final @Nullable Output<Map<String,String>> files;
 
     public Output<Map<String,String>> getFiles() {
@@ -71,7 +71,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * The zip file for this deployment, if this is a zip deployment.
      * 
      */
-    @InputImport(name="zip")
+    @Import(name="zip")
       private final @Nullable Output<ZipInfoArgs> zip;
 
     public Output<ZipInfoArgs> getZip() {

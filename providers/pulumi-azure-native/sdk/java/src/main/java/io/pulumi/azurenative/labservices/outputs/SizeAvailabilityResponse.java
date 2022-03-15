@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SizeAvailabilityResponse {
     /**
      * Whether or not this size category is available
@@ -23,10 +23,10 @@ public final class SizeAvailabilityResponse {
      */
     private final @Nullable String sizeCategory;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SizeAvailabilityResponse(
-        @OutputCustomType.Parameter("isAvailable") @Nullable Boolean isAvailable,
-        @OutputCustomType.Parameter("sizeCategory") @Nullable String sizeCategory) {
+        @CustomType.Parameter("isAvailable") @Nullable Boolean isAvailable,
+        @CustomType.Parameter("sizeCategory") @Nullable String sizeCategory) {
         this.isAvailable = isAvailable;
         this.sizeCategory = sizeCategory;
     }

@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.AmiFromInstanceEbsBlockDeviceArgs;
 import io.pulumi.aws.ec2.inputs.AmiFromInstanceEphemeralBlockDeviceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * A longer, human-readable description for the AMI.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * attached to created instances. The structure of this block is described below.
      * 
      */
-    @InputImport(name="ebsBlockDevices")
+    @Import(name="ebsBlockDevices")
       private final @Nullable Output<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices;
 
     public Output<List<AmiFromInstanceEbsBlockDeviceArgs>> getEbsBlockDevices() {
@@ -47,7 +47,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * should be attached to created instances. The structure of this block is described below.
      * 
      */
-    @InputImport(name="ephemeralBlockDevices")
+    @Import(name="ephemeralBlockDevices")
       private final @Nullable Output<List<AmiFromInstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
     public Output<List<AmiFromInstanceEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
@@ -58,7 +58,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * A region-unique name for the AMI.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -72,7 +72,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * guarantees that no filesystem writes will be underway at the time of snapshot.
      * 
      */
-    @InputImport(name="snapshotWithoutReboot")
+    @Import(name="snapshotWithoutReboot")
       private final @Nullable Output<Boolean> snapshotWithoutReboot;
 
     public Output<Boolean> getSnapshotWithoutReboot() {
@@ -83,7 +83,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * The id of the instance to use as the basis of the AMI.
      * 
      */
-    @InputImport(name="sourceInstanceId", required=true)
+    @Import(name="sourceInstanceId", required=true)
       private final Output<String> sourceInstanceId;
 
     public Output<String> getSourceInstanceId() {
@@ -94,7 +94,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.authorization.outputs;
 
 import io.pulumi.azurenative.authorization.outputs.AccessReviewInstanceResponse;
 import io.pulumi.azurenative.authorization.outputs.AccessReviewReviewerResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAccessReviewScheduleDefinitionByIdResult {
     /**
      * The role assignment state eligible/active to review
@@ -172,39 +172,39 @@ public final class GetAccessReviewScheduleDefinitionByIdResult {
      */
     private final String userPrincipalName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccessReviewScheduleDefinitionByIdResult(
-        @OutputCustomType.Parameter("assignmentState") String assignmentState,
-        @OutputCustomType.Parameter("autoApplyDecisionsEnabled") @Nullable Boolean autoApplyDecisionsEnabled,
-        @OutputCustomType.Parameter("backupReviewers") @Nullable List<AccessReviewReviewerResponse> backupReviewers,
-        @OutputCustomType.Parameter("defaultDecision") @Nullable String defaultDecision,
-        @OutputCustomType.Parameter("defaultDecisionEnabled") @Nullable Boolean defaultDecisionEnabled,
-        @OutputCustomType.Parameter("descriptionForAdmins") @Nullable String descriptionForAdmins,
-        @OutputCustomType.Parameter("descriptionForReviewers") @Nullable String descriptionForReviewers,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("endDate") @Nullable String endDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("inactiveDuration") @Nullable String inactiveDuration,
-        @OutputCustomType.Parameter("instanceDurationInDays") @Nullable Integer instanceDurationInDays,
-        @OutputCustomType.Parameter("instances") @Nullable List<AccessReviewInstanceResponse> instances,
-        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
-        @OutputCustomType.Parameter("justificationRequiredOnApproval") @Nullable Boolean justificationRequiredOnApproval,
-        @OutputCustomType.Parameter("mailNotificationsEnabled") @Nullable Boolean mailNotificationsEnabled,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("numberOfOccurrences") @Nullable Integer numberOfOccurrences,
-        @OutputCustomType.Parameter("principalId") String principalId,
-        @OutputCustomType.Parameter("principalName") String principalName,
-        @OutputCustomType.Parameter("principalType") String principalType,
-        @OutputCustomType.Parameter("recommendationsEnabled") @Nullable Boolean recommendationsEnabled,
-        @OutputCustomType.Parameter("reminderNotificationsEnabled") @Nullable Boolean reminderNotificationsEnabled,
-        @OutputCustomType.Parameter("resourceId") String resourceId,
-        @OutputCustomType.Parameter("reviewers") @Nullable List<AccessReviewReviewerResponse> reviewers,
-        @OutputCustomType.Parameter("reviewersType") String reviewersType,
-        @OutputCustomType.Parameter("roleDefinitionId") String roleDefinitionId,
-        @OutputCustomType.Parameter("startDate") @Nullable String startDate,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userPrincipalName") String userPrincipalName) {
+        @CustomType.Parameter("assignmentState") String assignmentState,
+        @CustomType.Parameter("autoApplyDecisionsEnabled") @Nullable Boolean autoApplyDecisionsEnabled,
+        @CustomType.Parameter("backupReviewers") @Nullable List<AccessReviewReviewerResponse> backupReviewers,
+        @CustomType.Parameter("defaultDecision") @Nullable String defaultDecision,
+        @CustomType.Parameter("defaultDecisionEnabled") @Nullable Boolean defaultDecisionEnabled,
+        @CustomType.Parameter("descriptionForAdmins") @Nullable String descriptionForAdmins,
+        @CustomType.Parameter("descriptionForReviewers") @Nullable String descriptionForReviewers,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("endDate") @Nullable String endDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("inactiveDuration") @Nullable String inactiveDuration,
+        @CustomType.Parameter("instanceDurationInDays") @Nullable Integer instanceDurationInDays,
+        @CustomType.Parameter("instances") @Nullable List<AccessReviewInstanceResponse> instances,
+        @CustomType.Parameter("interval") @Nullable Integer interval,
+        @CustomType.Parameter("justificationRequiredOnApproval") @Nullable Boolean justificationRequiredOnApproval,
+        @CustomType.Parameter("mailNotificationsEnabled") @Nullable Boolean mailNotificationsEnabled,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("numberOfOccurrences") @Nullable Integer numberOfOccurrences,
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("principalName") String principalName,
+        @CustomType.Parameter("principalType") String principalType,
+        @CustomType.Parameter("recommendationsEnabled") @Nullable Boolean recommendationsEnabled,
+        @CustomType.Parameter("reminderNotificationsEnabled") @Nullable Boolean reminderNotificationsEnabled,
+        @CustomType.Parameter("resourceId") String resourceId,
+        @CustomType.Parameter("reviewers") @Nullable List<AccessReviewReviewerResponse> reviewers,
+        @CustomType.Parameter("reviewersType") String reviewersType,
+        @CustomType.Parameter("roleDefinitionId") String roleDefinitionId,
+        @CustomType.Parameter("startDate") @Nullable String startDate,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userPrincipalName") String userPrincipalName) {
         this.assignmentState = assignmentState;
         this.autoApplyDecisionsEnabled = autoApplyDecisionsEnabled;
         this.backupReviewers = backupReviewers;

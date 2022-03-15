@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuntimeConfigResponse {
     /**
      * Optional. Optional custom container image for the job runtime environment. If not specified, a default container image will be used.
@@ -26,11 +26,11 @@ public final class RuntimeConfigResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuntimeConfigResponse(
-        @OutputCustomType.Parameter("containerImage") String containerImage,
-        @OutputCustomType.Parameter("properties") Map<String,String> properties,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("containerImage") String containerImage,
+        @CustomType.Parameter("properties") Map<String,String> properties,
+        @CustomType.Parameter("version") String version) {
         this.containerImage = containerImage;
         this.properties = properties;
         this.version = version;

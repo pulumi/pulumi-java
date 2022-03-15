@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AccessPolicyState extends io.pulumi.resources.ResourceArgs {
      * Time the AccessPolicy was created in UTC.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -29,7 +29,7 @@ public final class AccessPolicyState extends io.pulumi.resources.ResourceArgs {
      * Resource name of the AccessPolicy. Format: {policy_id}
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class AccessPolicyState extends io.pulumi.resources.ResourceArgs {
      * Format: organizations/{organization_id}
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -52,7 +52,7 @@ public final class AccessPolicyState extends io.pulumi.resources.ResourceArgs {
      * Human readable title. Does not affect behavior.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
@@ -63,7 +63,7 @@ public final class AccessPolicyState extends io.pulumi.resources.ResourceArgs {
      * Time the AccessPolicy was updated in UTC.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

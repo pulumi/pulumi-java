@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v3beta1.WebhookArgs;
@@ -24,7 +24,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * Indicates whether the webhook is disabled.
      * 
      */
-    @OutputExport(name="disabled", type=Boolean.class, parameters={})
+    @Export(name="disabled", type=Boolean.class, parameters={})
     private Output<Boolean> disabled;
 
     /**
@@ -38,7 +38,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * The human-readable name of the webhook, unique within the agent.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -52,7 +52,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * Configuration for a generic web service.
      * 
      */
-    @OutputExport(name="genericWebService", type=GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse.class, parameters={})
+    @Export(name="genericWebService", type=GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceResponse> genericWebService;
 
     /**
@@ -66,7 +66,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * The unique identifier of the webhook. Required for the Webhooks.UpdateWebhook method. Webhooks.CreateWebhook populates the name automatically. Format: `projects//locations//agents//webhooks/`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * Configuration for a [Service Directory](https://cloud.google.com/service-directory) service.
      * 
      */
-    @OutputExport(name="serviceDirectory", type=GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse.class, parameters={})
+    @Export(name="serviceDirectory", type=GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse.class, parameters={})
     private Output<GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfigResponse> serviceDirectory;
 
     /**
@@ -94,7 +94,7 @@ public class Webhook extends io.pulumi.resources.CustomResource {
      * Webhook execution timeout. Execution is considered failed if Dialogflow doesn't receive a response from webhook at the end of the timeout period. Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
      * 
      */
-    @OutputExport(name="timeout", type=String.class, parameters={})
+    @Export(name="timeout", type=String.class, parameters={})
     private Output<String> timeout;
 
     /**

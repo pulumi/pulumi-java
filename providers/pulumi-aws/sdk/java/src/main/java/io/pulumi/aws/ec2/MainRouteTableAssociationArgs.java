@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class MainRouteTableAssociationArgs extends io.pulumi.resources.Res
      * main route table for the target VPC
      * 
      */
-    @InputImport(name="routeTableId", required=true)
+    @Import(name="routeTableId", required=true)
       private final Output<String> routeTableId;
 
     public Output<String> getRouteTableId() {
@@ -29,7 +29,7 @@ public final class MainRouteTableAssociationArgs extends io.pulumi.resources.Res
      * The ID of the VPC whose main route table should be set
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
     public Output<String> getVpcId() {

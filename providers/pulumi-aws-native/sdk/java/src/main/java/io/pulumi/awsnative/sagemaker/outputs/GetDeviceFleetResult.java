@@ -5,14 +5,14 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.DeviceFleetEdgeOutputConfig;
 import io.pulumi.awsnative.sagemaker.outputs.DeviceFleetTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDeviceFleetResult {
     /**
      * Description for the edge device fleet
@@ -35,12 +35,12 @@ public final class GetDeviceFleetResult {
      */
     private final @Nullable List<DeviceFleetTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDeviceFleetResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("outputConfig") @Nullable DeviceFleetEdgeOutputConfig outputConfig,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<DeviceFleetTag> tags) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("outputConfig") @Nullable DeviceFleetEdgeOutputConfig outputConfig,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("tags") @Nullable List<DeviceFleetTag> tags) {
         this.description = description;
         this.outputConfig = outputConfig;
         this.roleArn = roleArn;

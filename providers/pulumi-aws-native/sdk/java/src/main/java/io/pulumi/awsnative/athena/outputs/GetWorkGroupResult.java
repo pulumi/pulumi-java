@@ -7,7 +7,7 @@ import io.pulumi.awsnative.athena.enums.WorkGroupState;
 import io.pulumi.awsnative.athena.outputs.WorkGroupConfiguration;
 import io.pulumi.awsnative.athena.outputs.WorkGroupConfigurationUpdates;
 import io.pulumi.awsnative.athena.outputs.WorkGroupTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkGroupResult {
     /**
      * The date and time the workgroup was created.
@@ -53,15 +53,15 @@ public final class GetWorkGroupResult {
      */
     private final @Nullable WorkGroupConfigurationUpdates workGroupConfigurationUpdates;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkGroupResult(
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("recursiveDeleteOption") @Nullable Boolean recursiveDeleteOption,
-        @OutputCustomType.Parameter("state") @Nullable WorkGroupState state,
-        @OutputCustomType.Parameter("tags") @Nullable List<WorkGroupTag> tags,
-        @OutputCustomType.Parameter("workGroupConfiguration") @Nullable WorkGroupConfiguration workGroupConfiguration,
-        @OutputCustomType.Parameter("workGroupConfigurationUpdates") @Nullable WorkGroupConfigurationUpdates workGroupConfigurationUpdates) {
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("recursiveDeleteOption") @Nullable Boolean recursiveDeleteOption,
+        @CustomType.Parameter("state") @Nullable WorkGroupState state,
+        @CustomType.Parameter("tags") @Nullable List<WorkGroupTag> tags,
+        @CustomType.Parameter("workGroupConfiguration") @Nullable WorkGroupConfiguration workGroupConfiguration,
+        @CustomType.Parameter("workGroupConfigurationUpdates") @Nullable WorkGroupConfigurationUpdates workGroupConfigurationUpdates) {
         this.creationTime = creationTime;
         this.description = description;
         this.recursiveDeleteOption = recursiveDeleteOption;

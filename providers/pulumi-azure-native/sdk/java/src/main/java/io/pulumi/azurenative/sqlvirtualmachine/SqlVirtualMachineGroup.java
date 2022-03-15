@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.SqlVirtualMachineGroupArgs;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.WsfcDomainProfileResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * Cluster type.
      * 
      */
-    @OutputExport(name="clusterConfiguration", type=String.class, parameters={})
+    @Export(name="clusterConfiguration", type=String.class, parameters={})
     private Output<String> clusterConfiguration;
 
     /**
@@ -50,7 +50,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * Type of cluster manager: Windows Server Failover Cluster (WSFC), implied by the scale type of the group and the OS type.
      * 
      */
-    @OutputExport(name="clusterManagerType", type=String.class, parameters={})
+    @Export(name="clusterManagerType", type=String.class, parameters={})
     private Output<String> clusterManagerType;
 
     /**
@@ -64,7 +64,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -78,7 +78,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * Provisioning state to track the async operation status.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -106,7 +106,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * Scale type.
      * 
      */
-    @OutputExport(name="scaleType", type=String.class, parameters={})
+    @Export(name="scaleType", type=String.class, parameters={})
     private Output<String> scaleType;
 
     /**
@@ -120,7 +120,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * SQL image offer. Examples may include SQL2016-WS2016, SQL2017-WS2016.
      * 
      */
-    @OutputExport(name="sqlImageOffer", type=String.class, parameters={})
+    @Export(name="sqlImageOffer", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlImageOffer;
 
     /**
@@ -134,7 +134,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * SQL image sku.
      * 
      */
-    @OutputExport(name="sqlImageSku", type=String.class, parameters={})
+    @Export(name="sqlImageSku", type=String.class, parameters={})
     private Output</* @Nullable */ String> sqlImageSku;
 
     /**
@@ -148,7 +148,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -162,7 +162,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -176,7 +176,7 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
      * Cluster Active Directory domain profile.
      * 
      */
-    @OutputExport(name="wsfcDomainProfile", type=WsfcDomainProfileResponse.class, parameters={})
+    @Export(name="wsfcDomainProfile", type=WsfcDomainProfileResponse.class, parameters={})
     private Output</* @Nullable */ WsfcDomainProfileResponse> wsfcDomainProfile;
 
     /**

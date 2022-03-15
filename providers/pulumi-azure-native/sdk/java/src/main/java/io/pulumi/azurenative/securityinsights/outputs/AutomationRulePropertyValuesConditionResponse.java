@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.AutomationRulePropertyValuesConditionResponseConditionProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AutomationRulePropertyValuesConditionResponse {
     /**
      * The configuration of the automation rule condition
@@ -22,10 +22,10 @@ public final class AutomationRulePropertyValuesConditionResponse {
      */
     private final String conditionType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutomationRulePropertyValuesConditionResponse(
-        @OutputCustomType.Parameter("conditionProperties") AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties,
-        @OutputCustomType.Parameter("conditionType") String conditionType) {
+        @CustomType.Parameter("conditionProperties") AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties,
+        @CustomType.Parameter("conditionType") String conditionType) {
         this.conditionProperties = conditionProperties;
         this.conditionType = conditionType;
     }

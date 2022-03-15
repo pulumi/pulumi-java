@@ -9,7 +9,7 @@ import io.pulumi.awsnative.xray.outputs.SamplingRuleRecord;
 import io.pulumi.awsnative.xray.outputs.SamplingRuleUpdate;
 import io.pulumi.awsnative.xray.outputs.TagsItemProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,37 +23,37 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:xray:SamplingRule")
 public class SamplingRule extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="ruleARN", type=String.class, parameters={})
+    @Export(name="ruleARN", type=String.class, parameters={})
     private Output<String> ruleARN;
 
     public Output<String> getRuleARN() {
         return this.ruleARN;
     }
-    @OutputExport(name="ruleName", type=String.class, parameters={})
+    @Export(name="ruleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> ruleName;
 
     public Output</* @Nullable */ String> getRuleName() {
         return this.ruleName;
     }
-    @OutputExport(name="samplingRule", type=io.pulumi.awsnative.xray.outputs.SamplingRule.class, parameters={})
+    @Export(name="samplingRule", type=io.pulumi.awsnative.xray.outputs.SamplingRule.class, parameters={})
     private Output</* @Nullable */ io.pulumi.awsnative.xray.outputs.SamplingRule> samplingRule;
 
     public Output</* @Nullable */ io.pulumi.awsnative.xray.outputs.SamplingRule> getSamplingRule() {
         return this.samplingRule;
     }
-    @OutputExport(name="samplingRuleRecord", type=SamplingRuleRecord.class, parameters={})
+    @Export(name="samplingRuleRecord", type=SamplingRuleRecord.class, parameters={})
     private Output</* @Nullable */ SamplingRuleRecord> samplingRuleRecord;
 
     public Output</* @Nullable */ SamplingRuleRecord> getSamplingRuleRecord() {
         return this.samplingRuleRecord;
     }
-    @OutputExport(name="samplingRuleUpdate", type=SamplingRuleUpdate.class, parameters={})
+    @Export(name="samplingRuleUpdate", type=SamplingRuleUpdate.class, parameters={})
     private Output</* @Nullable */ SamplingRuleUpdate> samplingRuleUpdate;
 
     public Output</* @Nullable */ SamplingRuleUpdate> getSamplingRuleUpdate() {
         return this.samplingRuleUpdate;
     }
-    @OutputExport(name="tags", type=List.class, parameters={TagsItemProperties.class})
+    @Export(name="tags", type=List.class, parameters={TagsItemProperties.class})
     private Output</* @Nullable */ List<TagsItemProperties>> tags;
 
     public Output</* @Nullable */ List<TagsItemProperties>> getTags() {

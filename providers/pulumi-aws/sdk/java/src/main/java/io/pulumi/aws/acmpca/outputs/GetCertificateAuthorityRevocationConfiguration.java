@@ -4,16 +4,16 @@
 package io.pulumi.aws.acmpca.outputs;
 
 import io.pulumi.aws.acmpca.outputs.GetCertificateAuthorityRevocationConfigurationCrlConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCertificateAuthorityRevocationConfiguration {
     private final List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations;
 
-    @OutputCustomType.Constructor
-    private GetCertificateAuthorityRevocationConfiguration(@OutputCustomType.Parameter("crlConfigurations") List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations) {
+    @CustomType.Constructor
+    private GetCertificateAuthorityRevocationConfiguration(@CustomType.Parameter("crlConfigurations") List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations) {
         this.crlConfigurations = crlConfigurations;
     }
 

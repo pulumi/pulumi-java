@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SchematizedDataResponse extends io.pulumi.resources.InvokeArg
      * JSON output of the parser.
      * 
      */
-    @InputImport(name="data", required=true)
+    @Import(name="data", required=true)
       private final String data;
 
     public String getData() {
@@ -31,7 +31,7 @@ public final class SchematizedDataResponse extends io.pulumi.resources.InvokeArg
      * The error output of the parser.
      * 
      */
-    @InputImport(name="error", required=true)
+    @Import(name="error", required=true)
       private final String error;
 
     public String getError() {

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.acmpca.inputs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityAccessDescriptionArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityKeyUsageArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,14 +20,14 @@ public final class CertificateAuthorityCsrExtensionsArgs extends io.pulumi.resou
 
     public static final CertificateAuthorityCsrExtensionsArgs Empty = new CertificateAuthorityCsrExtensionsArgs();
 
-    @InputImport(name="keyUsage")
+    @Import(name="keyUsage")
       private final @Nullable Output<CertificateAuthorityKeyUsageArgs> keyUsage;
 
     public Output<CertificateAuthorityKeyUsageArgs> getKeyUsage() {
         return this.keyUsage == null ? Output.empty() : this.keyUsage;
     }
 
-    @InputImport(name="subjectInformationAccess")
+    @Import(name="subjectInformationAccess")
       private final @Nullable Output<List<CertificateAuthorityAccessDescriptionArgs>> subjectInformationAccess;
 
     public Output<List<CertificateAuthorityAccessDescriptionArgs>> getSubjectInformationAccess() {

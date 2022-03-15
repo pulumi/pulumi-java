@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 import io.pulumi.azurenative.servicefabric.enums.ServiceCorrelationScheme;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ServiceCorrelationDescriptionArgs extends io.pulumi.resources
      * The ServiceCorrelationScheme which describes the relationship between this service and the service specified via ServiceName.
      * 
      */
-    @InputImport(name="scheme", required=true)
+    @Import(name="scheme", required=true)
       private final Output<Either<String,ServiceCorrelationScheme>> scheme;
 
     public Output<Either<String,ServiceCorrelationScheme>> getScheme() {
@@ -34,7 +34,7 @@ public final class ServiceCorrelationDescriptionArgs extends io.pulumi.resources
      * The name of the service that the correlation relationship is established with.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {

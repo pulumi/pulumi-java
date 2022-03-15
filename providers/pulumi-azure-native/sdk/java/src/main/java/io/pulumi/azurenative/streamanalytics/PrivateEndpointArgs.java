@@ -5,7 +5,7 @@ package io.pulumi.azurenative.streamanalytics;
 
 import io.pulumi.azurenative.streamanalytics.inputs.PrivateEndpointPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the cluster.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -30,7 +30,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the private endpoint.
      * 
      */
-    @InputImport(name="privateEndpointName")
+    @Import(name="privateEndpointName")
       private final @Nullable Output<String> privateEndpointName;
 
     public Output<String> getPrivateEndpointName() {
@@ -41,7 +41,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * The properties associated with a private endpoint.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<PrivateEndpointPropertiesArgs> properties;
 
     public Output<PrivateEndpointPropertiesArgs> getProperties() {
@@ -52,7 +52,7 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

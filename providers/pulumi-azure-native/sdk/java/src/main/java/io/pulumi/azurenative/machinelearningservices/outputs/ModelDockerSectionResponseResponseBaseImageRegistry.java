@@ -3,18 +3,18 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ModelDockerSectionResponseResponseBaseImageRegistry {
     private final @Nullable String address;
 
-    @OutputCustomType.Constructor
-    private ModelDockerSectionResponseResponseBaseImageRegistry(@OutputCustomType.Parameter("address") @Nullable String address) {
+    @CustomType.Constructor
+    private ModelDockerSectionResponseResponseBaseImageRegistry(@CustomType.Parameter("address") @Nullable String address) {
         this.address = address;
     }
 

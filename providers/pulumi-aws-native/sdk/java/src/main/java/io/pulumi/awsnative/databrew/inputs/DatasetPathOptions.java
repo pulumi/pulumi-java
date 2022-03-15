@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.DatasetFilesLimit;
 import io.pulumi.awsnative.databrew.inputs.DatasetFilterExpression;
 import io.pulumi.awsnative.databrew.inputs.DatasetPathParameter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,21 +21,21 @@ public final class DatasetPathOptions extends io.pulumi.resources.InvokeArgs {
 
     public static final DatasetPathOptions Empty = new DatasetPathOptions();
 
-    @InputImport(name="filesLimit")
+    @Import(name="filesLimit")
       private final @Nullable DatasetFilesLimit filesLimit;
 
     public Optional<DatasetFilesLimit> getFilesLimit() {
         return this.filesLimit == null ? Optional.empty() : Optional.ofNullable(this.filesLimit);
     }
 
-    @InputImport(name="lastModifiedDateCondition")
+    @Import(name="lastModifiedDateCondition")
       private final @Nullable DatasetFilterExpression lastModifiedDateCondition;
 
     public Optional<DatasetFilterExpression> getLastModifiedDateCondition() {
         return this.lastModifiedDateCondition == null ? Optional.empty() : Optional.ofNullable(this.lastModifiedDateCondition);
     }
 
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable List<DatasetPathParameter> parameters;
 
     public List<DatasetPathParameter> getParameters() {

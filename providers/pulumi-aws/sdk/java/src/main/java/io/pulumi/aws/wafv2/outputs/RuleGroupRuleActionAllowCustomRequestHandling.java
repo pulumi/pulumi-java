@@ -4,11 +4,11 @@
 package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleActionAllowCustomRequestHandlingInsertHeader;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleActionAllowCustomRequestHandling {
     /**
      * The `insert_header` blocks used to define HTTP headers added to the request. See Custom HTTP Header below for details.
@@ -16,8 +16,8 @@ public final class RuleGroupRuleActionAllowCustomRequestHandling {
      */
     private final List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeader> insertHeaders;
 
-    @OutputCustomType.Constructor
-    private RuleGroupRuleActionAllowCustomRequestHandling(@OutputCustomType.Parameter("insertHeaders") List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeader> insertHeaders) {
+    @CustomType.Constructor
+    private RuleGroupRuleActionAllowCustomRequestHandling(@CustomType.Parameter("insertHeaders") List<RuleGroupRuleActionAllowCustomRequestHandlingInsertHeader> insertHeaders) {
         this.insertHeaders = insertHeaders;
     }
 

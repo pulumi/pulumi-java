@@ -4,7 +4,7 @@
 package io.pulumi.aws.licensemanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * ARN of the license configuration.
      * 
      */
-    @InputImport(name="licenseConfigurationArn")
+    @Import(name="licenseConfigurationArn")
       private final @Nullable Output<String> licenseConfigurationArn;
 
     public Output<String> getLicenseConfigurationArn() {
@@ -29,7 +29,7 @@ public final class AssociationState extends io.pulumi.resources.ResourceArgs {
      * ARN of the resource associated with the license configuration.
      * 
      */
-    @InputImport(name="resourceArn")
+    @Import(name="resourceArn")
       private final @Nullable Output<String> resourceArn;
 
     public Output<String> getResourceArn() {

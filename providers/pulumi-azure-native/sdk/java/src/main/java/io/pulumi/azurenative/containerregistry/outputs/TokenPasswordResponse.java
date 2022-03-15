@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TokenPasswordResponse {
     /**
      * The creation datetime of the password.
@@ -32,12 +32,12 @@ public final class TokenPasswordResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TokenPasswordResponse(
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("expiry") @Nullable String expiry,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("expiry") @Nullable String expiry,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("value") String value) {
         this.creationTime = creationTime;
         this.expiry = expiry;
         this.name = name;

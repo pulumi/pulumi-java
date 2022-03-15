@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetKeystoreResult {
     /**
      * Aliases in this keystore.
@@ -21,10 +21,10 @@ public final class GetKeystoreResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKeystoreResult(
-        @OutputCustomType.Parameter("aliases") List<String> aliases,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("aliases") List<String> aliases,
+        @CustomType.Parameter("name") String name) {
         this.aliases = aliases;
         this.name = name;
     }

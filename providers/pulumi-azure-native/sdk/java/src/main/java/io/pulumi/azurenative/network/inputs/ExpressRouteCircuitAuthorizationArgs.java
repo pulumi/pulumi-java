@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.AuthorizationUseStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * The authorization key.
      * 
      */
-    @InputImport(name="authorizationKey")
+    @Import(name="authorizationKey")
       private final @Nullable Output<String> authorizationKey;
 
     public Output<String> getAuthorizationKey() {
@@ -35,7 +35,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * The authorization use status.
      * 
      */
-    @InputImport(name="authorizationUseStatus")
+    @Import(name="authorizationUseStatus")
       private final @Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
 
     public Output<Either<String,AuthorizationUseStatus>> getAuthorizationUseStatus() {
@@ -46,7 +46,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -57,7 +57,7 @@ public final class ExpressRouteCircuitAuthorizationArgs extends io.pulumi.resour
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

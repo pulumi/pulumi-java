@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.chaos.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CapabilityPropertiesResponse extends io.pulumi.resources.Invo
      * Localized string of the description.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -31,7 +31,7 @@ public final class CapabilityPropertiesResponse extends io.pulumi.resources.Invo
      * URL to retrieve JSON schema of the Capability parameters.
      * 
      */
-    @InputImport(name="parametersSchema", required=true)
+    @Import(name="parametersSchema", required=true)
       private final String parametersSchema;
 
     public String getParametersSchema() {
@@ -42,7 +42,7 @@ public final class CapabilityPropertiesResponse extends io.pulumi.resources.Invo
      * String of the Publisher that this Capability extends.
      * 
      */
-    @InputImport(name="publisher", required=true)
+    @Import(name="publisher", required=true)
       private final String publisher;
 
     public String getPublisher() {
@@ -53,7 +53,7 @@ public final class CapabilityPropertiesResponse extends io.pulumi.resources.Invo
      * String of the Target Type that this Capability extends.
      * 
      */
-    @InputImport(name="targetType", required=true)
+    @Import(name="targetType", required=true)
       private final String targetType;
 
     public String getTargetType() {
@@ -64,7 +64,7 @@ public final class CapabilityPropertiesResponse extends io.pulumi.resources.Invo
      * String of the URN for this Capability Type.
      * 
      */
-    @InputImport(name="urn", required=true)
+    @Import(name="urn", required=true)
       private final String urn;
 
     public String getUrn() {

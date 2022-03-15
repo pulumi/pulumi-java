@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ImageRecipeComponentParameter {
     /**
      * The name of the component parameter to set.
@@ -21,10 +21,10 @@ public final class ImageRecipeComponentParameter {
      */
     private final List<String> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageRecipeComponentParameter(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("value") List<String> value) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("value") List<String> value) {
         this.name = name;
         this.value = value;
     }

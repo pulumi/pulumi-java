@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs ex
      * Optional. Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification. This overrides the default SSL trust store. If this is empty or unspecified, Dialogflow will use Google's default trust store to verify certificates. N.B. Make sure the HTTPS server certificates are signed with "subject alt name". For instance a certificate can be self-signed using the following command, openssl x509 -req -days 200 -in example.com.csr \ -signkey example.com.key \ -out example.com.crt \ -extfile <(printf "\nsubjectAltName='DNS:www.example.com'")
      * 
      */
-    @InputImport(name="allowedCaCerts")
+    @Import(name="allowedCaCerts")
       private final @Nullable Output<List<String>> allowedCaCerts;
 
     public Output<List<String>> getAllowedCaCerts() {
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs ex
      * The password for HTTP Basic authentication.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs ex
      * The HTTP request headers to send together with webhook requests.
      * 
      */
-    @InputImport(name="requestHeaders")
+    @Import(name="requestHeaders")
       private final @Nullable Output<Map<String,String>> requestHeaders;
 
     public Output<Map<String,String>> getRequestHeaders() {
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs ex
      * The webhook URI for receiving POST requests. It must use https protocol.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {
@@ -68,7 +68,7 @@ public final class GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceArgs ex
      * The user name for HTTP Basic authentication.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

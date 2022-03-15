@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.rds.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCertificateResult {
     /**
      * Amazon Resource Name (ARN) of the certificate.
@@ -50,17 +50,17 @@ public final class GetCertificateResult {
      */
     private final String validTill;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCertificateResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("certificateType") String certificateType,
-        @OutputCustomType.Parameter("customerOverride") Boolean customerOverride,
-        @OutputCustomType.Parameter("customerOverrideValidTill") String customerOverrideValidTill,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("latestValidTill") @Nullable Boolean latestValidTill,
-        @OutputCustomType.Parameter("thumbprint") String thumbprint,
-        @OutputCustomType.Parameter("validFrom") String validFrom,
-        @OutputCustomType.Parameter("validTill") String validTill) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("certificateType") String certificateType,
+        @CustomType.Parameter("customerOverride") Boolean customerOverride,
+        @CustomType.Parameter("customerOverrideValidTill") String customerOverrideValidTill,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("latestValidTill") @Nullable Boolean latestValidTill,
+        @CustomType.Parameter("thumbprint") String thumbprint,
+        @CustomType.Parameter("validFrom") String validFrom,
+        @CustomType.Parameter("validTill") String validTill) {
         this.arn = arn;
         this.certificateType = certificateType;
         this.customerOverride = customerOverride;

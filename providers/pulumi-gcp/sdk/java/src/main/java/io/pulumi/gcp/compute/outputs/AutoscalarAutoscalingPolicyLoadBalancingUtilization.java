@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AutoscalarAutoscalingPolicyLoadBalancingUtilization {
     /**
      * Fraction of backend capacity utilization (set in HTTP(s) load
@@ -17,8 +17,8 @@ public final class AutoscalarAutoscalingPolicyLoadBalancingUtilization {
      */
     private final Double target;
 
-    @OutputCustomType.Constructor
-    private AutoscalarAutoscalingPolicyLoadBalancingUtilization(@OutputCustomType.Parameter("target") Double target) {
+    @CustomType.Constructor
+    private AutoscalarAutoscalingPolicyLoadBalancingUtilization(@CustomType.Parameter("target") Double target) {
         this.target = target;
     }
 

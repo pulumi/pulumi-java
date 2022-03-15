@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CxIntentTrainingPhrasePart {
     /**
      * The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
@@ -22,10 +22,10 @@ public final class CxIntentTrainingPhrasePart {
      */
     private final String text;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CxIntentTrainingPhrasePart(
-        @OutputCustomType.Parameter("parameterId") @Nullable String parameterId,
-        @OutputCustomType.Parameter("text") String text) {
+        @CustomType.Parameter("parameterId") @Nullable String parameterId,
+        @CustomType.Parameter("text") String text) {
         this.parameterId = parameterId;
         this.text = text;
     }

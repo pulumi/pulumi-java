@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
      * Gets or sets memory size in MBs for the vm.
      * 
      */
-    @InputImport(name="memorySizeMB")
+    @Import(name="memorySizeMB")
       private final @Nullable Output<Integer> memorySizeMB;
 
     public Output<Integer> getMemorySizeMB() {
@@ -33,7 +33,7 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
      * Gets or sets the number of vCPUs for the vm.
      * 
      */
-    @InputImport(name="numCPUs")
+    @Import(name="numCPUs")
       private final @Nullable Output<Integer> numCPUs;
 
     public Output<Integer> getNumCPUs() {
@@ -44,7 +44,7 @@ public final class HardwareProfileArgs extends io.pulumi.resources.ResourceArgs 
      * Gets or sets the number of cores per socket for the vm. Defaults to 1 if unspecified.
      * 
      */
-    @InputImport(name="numCoresPerSocket")
+    @Import(name="numCoresPerSocket")
       private final @Nullable Output<Integer> numCoresPerSocket;
 
     public Output<Integer> getNumCoresPerSocket() {

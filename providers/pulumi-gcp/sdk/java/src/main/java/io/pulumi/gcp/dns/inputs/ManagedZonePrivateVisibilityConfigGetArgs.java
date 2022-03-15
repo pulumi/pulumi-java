@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dns.inputs.ManagedZonePrivateVisibilityConfigNetworkGetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +14,7 @@ public final class ManagedZonePrivateVisibilityConfigGetArgs extends io.pulumi.r
 
     public static final ManagedZonePrivateVisibilityConfigGetArgs Empty = new ManagedZonePrivateVisibilityConfigGetArgs();
 
-    @InputImport(name="networks", required=true)
+    @Import(name="networks", required=true)
       private final Output<List<ManagedZonePrivateVisibilityConfigNetworkGetArgs>> networks;
 
     public Output<List<ManagedZonePrivateVisibilityConfigNetworkGetArgs>> getNetworks() {

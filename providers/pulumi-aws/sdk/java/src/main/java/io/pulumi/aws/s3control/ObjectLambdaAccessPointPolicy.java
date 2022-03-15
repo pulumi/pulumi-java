@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.s3control.ObjectLambdaAccessPointPolicyArgs;
 import io.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws:s3control/objectLambdaAccessPointPolicy:ObjectLambdaAccessPointPolicy")
 public class ObjectLambdaAccessPointPolicy extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -39,7 +39,7 @@ public class ObjectLambdaAccessPointPolicy extends io.pulumi.resources.CustomRes
      * Indicates whether this access point currently has a policy that allows public access.
      * 
      */
-    @OutputExport(name="hasPublicAccessPolicy", type=Boolean.class, parameters={})
+    @Export(name="hasPublicAccessPolicy", type=Boolean.class, parameters={})
     private Output<Boolean> hasPublicAccessPolicy;
 
     /**
@@ -53,7 +53,7 @@ public class ObjectLambdaAccessPointPolicy extends io.pulumi.resources.CustomRes
      * The name of the Object Lambda Access Point.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -67,7 +67,7 @@ public class ObjectLambdaAccessPointPolicy extends io.pulumi.resources.CustomRes
      * The Object Lambda Access Point resource policy document.
      * 
      */
-    @OutputExport(name="policy", type=String.class, parameters={})
+    @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
     /**

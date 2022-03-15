@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudChannelV1PeriodResponse {
     /**
      * Total duration of Period Type defined.
@@ -21,10 +21,10 @@ public final class GoogleCloudChannelV1PeriodResponse {
      */
     private final String periodType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudChannelV1PeriodResponse(
-        @OutputCustomType.Parameter("duration") Integer duration,
-        @OutputCustomType.Parameter("periodType") String periodType) {
+        @CustomType.Parameter("duration") Integer duration,
+        @CustomType.Parameter("periodType") String periodType) {
         this.duration = duration;
         this.periodType = periodType;
     }

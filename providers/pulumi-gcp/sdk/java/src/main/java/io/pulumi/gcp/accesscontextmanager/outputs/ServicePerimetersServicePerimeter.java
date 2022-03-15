@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterSpec;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterStatus;
 import java.lang.Boolean;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServicePerimetersServicePerimeter {
     /**
      * - 
@@ -95,17 +95,17 @@ public final class ServicePerimetersServicePerimeter {
      */
     private final @Nullable Boolean useExplicitDryRunSpec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicePerimetersServicePerimeter(
-        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("perimeterType") @Nullable String perimeterType,
-        @OutputCustomType.Parameter("spec") @Nullable ServicePerimetersServicePerimeterSpec spec,
-        @OutputCustomType.Parameter("status") @Nullable ServicePerimetersServicePerimeterStatus status,
-        @OutputCustomType.Parameter("title") String title,
-        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime,
-        @OutputCustomType.Parameter("useExplicitDryRunSpec") @Nullable Boolean useExplicitDryRunSpec) {
+        @CustomType.Parameter("createTime") @Nullable String createTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("perimeterType") @Nullable String perimeterType,
+        @CustomType.Parameter("spec") @Nullable ServicePerimetersServicePerimeterSpec spec,
+        @CustomType.Parameter("status") @Nullable ServicePerimetersServicePerimeterStatus status,
+        @CustomType.Parameter("title") String title,
+        @CustomType.Parameter("updateTime") @Nullable String updateTime,
+        @CustomType.Parameter("useExplicitDryRunSpec") @Nullable Boolean useExplicitDryRunSpec) {
         this.createTime = createTime;
         this.description = description;
         this.name = name;

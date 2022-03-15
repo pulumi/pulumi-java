@@ -7,14 +7,14 @@ import io.pulumi.azurenative.datadog.outputs.IdentityPropertiesResponse;
 import io.pulumi.azurenative.datadog.outputs.MonitorPropertiesResponse;
 import io.pulumi.azurenative.datadog.outputs.ResourceSkuResponse;
 import io.pulumi.azurenative.datadog.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMonitorResult {
     /**
      * ARM id of the monitor resource.
@@ -46,17 +46,17 @@ public final class GetMonitorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMonitorResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable IdentityPropertiesResponse identity,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") MonitorPropertiesResponse properties,
-        @OutputCustomType.Parameter("sku") @Nullable ResourceSkuResponse sku,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable IdentityPropertiesResponse identity,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") MonitorPropertiesResponse properties,
+        @CustomType.Parameter("sku") @Nullable ResourceSkuResponse sku,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.identity = identity;
         this.location = location;

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.datasync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LocationHdfsQopConfiguration {
     /**
      * The data transfer protection setting configured on the HDFS cluster. This setting corresponds to your dfs.data.transfer.protection setting in the hdfs-site.xml file on your Hadoop cluster. Valid values are `DISABLED`, `AUTHENTICATION`, `INTEGRITY` and `PRIVACY`.
@@ -22,10 +22,10 @@ public final class LocationHdfsQopConfiguration {
      */
     private final @Nullable String rpcProtection;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LocationHdfsQopConfiguration(
-        @OutputCustomType.Parameter("dataTransferProtection") @Nullable String dataTransferProtection,
-        @OutputCustomType.Parameter("rpcProtection") @Nullable String rpcProtection) {
+        @CustomType.Parameter("dataTransferProtection") @Nullable String dataTransferProtection,
+        @CustomType.Parameter("rpcProtection") @Nullable String rpcProtection) {
         this.dataTransferProtection = dataTransferProtection;
         this.rpcProtection = rpcProtection;
     }

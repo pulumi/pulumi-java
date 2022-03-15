@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lookoutmetrics.inputs;
 
 import io.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorCsvFormatDescriptorFileCompression;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,42 +17,42 @@ public final class AnomalyDetectorCsvFormatDescriptorArgs extends io.pulumi.reso
 
     public static final AnomalyDetectorCsvFormatDescriptorArgs Empty = new AnomalyDetectorCsvFormatDescriptorArgs();
 
-    @InputImport(name="charset")
+    @Import(name="charset")
       private final @Nullable Output<String> charset;
 
     public Output<String> getCharset() {
         return this.charset == null ? Output.empty() : this.charset;
     }
 
-    @InputImport(name="containsHeader")
+    @Import(name="containsHeader")
       private final @Nullable Output<Boolean> containsHeader;
 
     public Output<Boolean> getContainsHeader() {
         return this.containsHeader == null ? Output.empty() : this.containsHeader;
     }
 
-    @InputImport(name="delimiter")
+    @Import(name="delimiter")
       private final @Nullable Output<String> delimiter;
 
     public Output<String> getDelimiter() {
         return this.delimiter == null ? Output.empty() : this.delimiter;
     }
 
-    @InputImport(name="fileCompression")
+    @Import(name="fileCompression")
       private final @Nullable Output<AnomalyDetectorCsvFormatDescriptorFileCompression> fileCompression;
 
     public Output<AnomalyDetectorCsvFormatDescriptorFileCompression> getFileCompression() {
         return this.fileCompression == null ? Output.empty() : this.fileCompression;
     }
 
-    @InputImport(name="headerList")
+    @Import(name="headerList")
       private final @Nullable Output<List<String>> headerList;
 
     public Output<List<String>> getHeaderList() {
         return this.headerList == null ? Output.empty() : this.headerList;
     }
 
-    @InputImport(name="quoteSymbol")
+    @Import(name="quoteSymbol")
       private final @Nullable Output<String> quoteSymbol;
 
     public Output<String> getQuoteSymbol() {

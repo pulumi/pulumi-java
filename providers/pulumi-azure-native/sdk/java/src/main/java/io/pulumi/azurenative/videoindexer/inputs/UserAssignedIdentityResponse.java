@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoindexer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class UserAssignedIdentityResponse extends io.pulumi.resources.Invo
      * The client ID of the assigned identity.
      * 
      */
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final String clientId;
 
     public String getClientId() {
@@ -31,7 +31,7 @@ public final class UserAssignedIdentityResponse extends io.pulumi.resources.Invo
      * The principal ID of the assigned identity.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {

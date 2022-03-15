@@ -9,7 +9,7 @@ import io.pulumi.aws.ec2.inputs.PeeringConnectionOptionsState;
 import io.pulumi.aws.ec2.outputs.PeeringConnectionOptionsAccepter;
 import io.pulumi.aws.ec2.outputs.PeeringConnectionOptionsRequester;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -45,7 +45,7 @@ public class PeeringConnectionOptions extends io.pulumi.resources.CustomResource
      * the peering connection (a maximum of one).
      * 
      */
-    @OutputExport(name="accepter", type=PeeringConnectionOptionsAccepter.class, parameters={})
+    @Export(name="accepter", type=PeeringConnectionOptionsAccepter.class, parameters={})
     private Output<PeeringConnectionOptionsAccepter> accepter;
 
     /**
@@ -63,7 +63,7 @@ public class PeeringConnectionOptions extends io.pulumi.resources.CustomResource
      * the peering connection (a maximum of one).
      * 
      */
-    @OutputExport(name="requester", type=PeeringConnectionOptionsRequester.class, parameters={})
+    @Export(name="requester", type=PeeringConnectionOptionsRequester.class, parameters={})
     private Output<PeeringConnectionOptionsRequester> requester;
 
     /**
@@ -79,7 +79,7 @@ public class PeeringConnectionOptions extends io.pulumi.resources.CustomResource
      * The ID of the requester VPC peering connection.
      * 
      */
-    @OutputExport(name="vpcPeeringConnectionId", type=String.class, parameters={})
+    @Export(name="vpcPeeringConnectionId", type=String.class, parameters={})
     private Output<String> vpcPeeringConnectionId;
 
     /**

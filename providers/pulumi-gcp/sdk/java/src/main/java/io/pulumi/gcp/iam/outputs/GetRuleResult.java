@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRuleResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -32,13 +32,13 @@ public final class GetRuleResult {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRuleResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("includedPermissions") List<String> includedPermissions,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("stage") String stage,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("includedPermissions") List<String> includedPermissions,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("stage") String stage,
+        @CustomType.Parameter("title") String title) {
         this.id = id;
         this.includedPermissions = includedPermissions;
         this.name = name;

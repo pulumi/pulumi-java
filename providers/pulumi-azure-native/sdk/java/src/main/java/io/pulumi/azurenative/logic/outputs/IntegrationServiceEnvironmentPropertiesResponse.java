@@ -6,13 +6,13 @@ package io.pulumi.azurenative.logic.outputs;
 import io.pulumi.azurenative.logic.outputs.FlowEndpointsConfigurationResponse;
 import io.pulumi.azurenative.logic.outputs.IntegrationServiceEnvironmenEncryptionConfigurationResponse;
 import io.pulumi.azurenative.logic.outputs.NetworkConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationServiceEnvironmentPropertiesResponse {
     /**
      * The encryption configuration.
@@ -45,14 +45,14 @@ public final class IntegrationServiceEnvironmentPropertiesResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationServiceEnvironmentPropertiesResponse(
-        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration,
-        @OutputCustomType.Parameter("endpointsConfiguration") @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration,
-        @OutputCustomType.Parameter("integrationServiceEnvironmentId") @Nullable String integrationServiceEnvironmentId,
-        @OutputCustomType.Parameter("networkConfiguration") @Nullable NetworkConfigurationResponse networkConfiguration,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("encryptionConfiguration") @Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration,
+        @CustomType.Parameter("endpointsConfiguration") @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration,
+        @CustomType.Parameter("integrationServiceEnvironmentId") @Nullable String integrationServiceEnvironmentId,
+        @CustomType.Parameter("networkConfiguration") @Nullable NetworkConfigurationResponse networkConfiguration,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.encryptionConfiguration = encryptionConfiguration;
         this.endpointsConfiguration = endpointsConfiguration;
         this.integrationServiceEnvironmentId = integrationServiceEnvironmentId;

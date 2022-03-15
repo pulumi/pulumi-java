@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse {
     /**
      * An alias, which may be a branch or tag.
@@ -27,11 +27,11 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
      */
     private final String revisionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse(
-        @OutputCustomType.Parameter("aliasContext") GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext,
-        @OutputCustomType.Parameter("repoId") GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId,
-        @OutputCustomType.Parameter("revisionId") String revisionId) {
+        @CustomType.Parameter("aliasContext") GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext,
+        @CustomType.Parameter("repoId") GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId,
+        @CustomType.Parameter("revisionId") String revisionId) {
         this.aliasContext = aliasContext;
         this.repoId = repoId;
         this.revisionId = revisionId;

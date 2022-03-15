@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.BlobInventoryPolicyFilterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class BlobInventoryPolicyDefinitionArgs extends io.pulumi.resources
      * An object that defines the filter set.
      * 
      */
-    @InputImport(name="filters", required=true)
+    @Import(name="filters", required=true)
       private final Output<BlobInventoryPolicyFilterArgs> filters;
 
     public Output<BlobInventoryPolicyFilterArgs> getFilters() {

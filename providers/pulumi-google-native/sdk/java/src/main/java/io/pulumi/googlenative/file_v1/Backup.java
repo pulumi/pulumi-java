@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.file_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.file_v1.BackupArgs;
@@ -24,7 +24,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Capacity of the source file share when the backup was created.
      * 
      */
-    @OutputExport(name="capacityGb", type=String.class, parameters={})
+    @Export(name="capacityGb", type=String.class, parameters={})
     private Output<String> capacityGb;
 
     /**
@@ -38,7 +38,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The time when the backup was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -52,7 +52,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * A description of the backup with 2048 characters or less. Requests with longer descriptions will be rejected.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -66,7 +66,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Amount of bytes that will be downloaded if the backup is restored. This may be different than storage bytes, since sequential backups of the same disk will share storage.
      * 
      */
-    @OutputExport(name="downloadBytes", type=String.class, parameters={})
+    @Export(name="downloadBytes", type=String.class, parameters={})
     private Output<String> downloadBytes;
 
     /**
@@ -80,7 +80,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Resource labels to represent user provided metadata.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -94,7 +94,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The resource name of the backup, in the format `projects/{project_number}/locations/{location_id}/backups/{backup_id}`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Reserved for future use.
      * 
      */
-    @OutputExport(name="satisfiesPzs", type=Boolean.class, parameters={})
+    @Export(name="satisfiesPzs", type=Boolean.class, parameters={})
     private Output<Boolean> satisfiesPzs;
 
     /**
@@ -122,7 +122,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * Name of the file share in the source Cloud Filestore instance that the backup is created from.
      * 
      */
-    @OutputExport(name="sourceFileShare", type=String.class, parameters={})
+    @Export(name="sourceFileShare", type=String.class, parameters={})
     private Output<String> sourceFileShare;
 
     /**
@@ -136,7 +136,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The resource name of the source Cloud Filestore instance, in the format `projects/{project_number}/locations/{location_id}/instances/{instance_id}`, used to create this backup.
      * 
      */
-    @OutputExport(name="sourceInstance", type=String.class, parameters={})
+    @Export(name="sourceInstance", type=String.class, parameters={})
     private Output<String> sourceInstance;
 
     /**
@@ -150,7 +150,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The service tier of the source Cloud Filestore instance that this backup is created from.
      * 
      */
-    @OutputExport(name="sourceInstanceTier", type=String.class, parameters={})
+    @Export(name="sourceInstanceTier", type=String.class, parameters={})
     private Output<String> sourceInstanceTier;
 
     /**
@@ -164,7 +164,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The backup state.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -178,7 +178,7 @@ public class Backup extends io.pulumi.resources.CustomResource {
      * The size of the storage used by the backup. As backups share storage, this number is expected to change with backup creation/deletion.
      * 
      */
-    @OutputExport(name="storageBytes", type=String.class, parameters={})
+    @Export(name="storageBytes", type=String.class, parameters={})
     private Output<String> storageBytes;
 
     /**

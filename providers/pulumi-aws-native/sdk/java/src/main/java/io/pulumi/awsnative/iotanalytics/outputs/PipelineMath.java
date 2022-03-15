@@ -3,25 +3,25 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineMath {
     private final String attribute;
     private final String math;
     private final String name;
     private final @Nullable String next;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineMath(
-        @OutputCustomType.Parameter("attribute") String attribute,
-        @OutputCustomType.Parameter("math") String math,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("next") @Nullable String next) {
+        @CustomType.Parameter("attribute") String attribute,
+        @CustomType.Parameter("math") String math,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("next") @Nullable String next) {
         this.attribute = attribute;
         this.math = math;
         this.name = name;

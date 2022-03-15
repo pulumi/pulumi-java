@@ -4,12 +4,12 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecListenerTimeoutTcpIdle;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecListenerTimeoutTcp {
     /**
      * The idle timeout. An idle timeout bounds the amount of time that a connection may be idle.
@@ -17,8 +17,8 @@ public final class VirtualNodeSpecListenerTimeoutTcp {
      */
     private final @Nullable VirtualNodeSpecListenerTimeoutTcpIdle idle;
 
-    @OutputCustomType.Constructor
-    private VirtualNodeSpecListenerTimeoutTcp(@OutputCustomType.Parameter("idle") @Nullable VirtualNodeSpecListenerTimeoutTcpIdle idle) {
+    @CustomType.Constructor
+    private VirtualNodeSpecListenerTimeoutTcp(@CustomType.Parameter("idle") @Nullable VirtualNodeSpecListenerTimeoutTcpIdle idle) {
         this.idle = idle;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.AvroOptionsResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.BigtableOptionsResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.CsvOptionsResponse;
@@ -17,7 +17,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExternalDataConfigurationResponse {
     /**
      * Try to detect schema and format options automatically. Any option specified explicitly will be honored.
@@ -95,23 +95,23 @@ public final class ExternalDataConfigurationResponse {
      */
     private final List<String> sourceUris;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExternalDataConfigurationResponse(
-        @OutputCustomType.Parameter("autodetect") Boolean autodetect,
-        @OutputCustomType.Parameter("avroOptions") AvroOptionsResponse avroOptions,
-        @OutputCustomType.Parameter("bigtableOptions") BigtableOptionsResponse bigtableOptions,
-        @OutputCustomType.Parameter("compression") String compression,
-        @OutputCustomType.Parameter("connectionId") String connectionId,
-        @OutputCustomType.Parameter("csvOptions") CsvOptionsResponse csvOptions,
-        @OutputCustomType.Parameter("decimalTargetTypes") List<String> decimalTargetTypes,
-        @OutputCustomType.Parameter("googleSheetsOptions") GoogleSheetsOptionsResponse googleSheetsOptions,
-        @OutputCustomType.Parameter("hivePartitioningOptions") HivePartitioningOptionsResponse hivePartitioningOptions,
-        @OutputCustomType.Parameter("ignoreUnknownValues") Boolean ignoreUnknownValues,
-        @OutputCustomType.Parameter("maxBadRecords") Integer maxBadRecords,
-        @OutputCustomType.Parameter("parquetOptions") ParquetOptionsResponse parquetOptions,
-        @OutputCustomType.Parameter("schema") TableSchemaResponse schema,
-        @OutputCustomType.Parameter("sourceFormat") String sourceFormat,
-        @OutputCustomType.Parameter("sourceUris") List<String> sourceUris) {
+        @CustomType.Parameter("autodetect") Boolean autodetect,
+        @CustomType.Parameter("avroOptions") AvroOptionsResponse avroOptions,
+        @CustomType.Parameter("bigtableOptions") BigtableOptionsResponse bigtableOptions,
+        @CustomType.Parameter("compression") String compression,
+        @CustomType.Parameter("connectionId") String connectionId,
+        @CustomType.Parameter("csvOptions") CsvOptionsResponse csvOptions,
+        @CustomType.Parameter("decimalTargetTypes") List<String> decimalTargetTypes,
+        @CustomType.Parameter("googleSheetsOptions") GoogleSheetsOptionsResponse googleSheetsOptions,
+        @CustomType.Parameter("hivePartitioningOptions") HivePartitioningOptionsResponse hivePartitioningOptions,
+        @CustomType.Parameter("ignoreUnknownValues") Boolean ignoreUnknownValues,
+        @CustomType.Parameter("maxBadRecords") Integer maxBadRecords,
+        @CustomType.Parameter("parquetOptions") ParquetOptionsResponse parquetOptions,
+        @CustomType.Parameter("schema") TableSchemaResponse schema,
+        @CustomType.Parameter("sourceFormat") String sourceFormat,
+        @CustomType.Parameter("sourceUris") List<String> sourceUris) {
         this.autodetect = autodetect;
         this.avroOptions = avroOptions;
         this.bigtableOptions = bigtableOptions;

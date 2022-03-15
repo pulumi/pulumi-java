@@ -3,25 +3,25 @@
 
 package io.pulumi.awsnative.evidently.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExperimentTreatmentObject {
     private final @Nullable String description;
     private final String feature;
     private final String treatmentName;
     private final String variation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExperimentTreatmentObject(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("feature") String feature,
-        @OutputCustomType.Parameter("treatmentName") String treatmentName,
-        @OutputCustomType.Parameter("variation") String variation) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("feature") String feature,
+        @CustomType.Parameter("treatmentName") String treatmentName,
+        @CustomType.Parameter("variation") String variation) {
         this.description = description;
         this.feature = feature;
         this.treatmentName = treatmentName;

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudkms_v1.outputs.CertificateChainsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KeyOperationAttestationResponse {
     /**
      * The certificate chains needed to validate the attestation
@@ -26,11 +26,11 @@ public final class KeyOperationAttestationResponse {
      */
     private final String format;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyOperationAttestationResponse(
-        @OutputCustomType.Parameter("certChains") CertificateChainsResponse certChains,
-        @OutputCustomType.Parameter("content") String content,
-        @OutputCustomType.Parameter("format") String format) {
+        @CustomType.Parameter("certChains") CertificateChainsResponse certChains,
+        @CustomType.Parameter("content") String content,
+        @CustomType.Parameter("format") String format) {
         this.certChains = certChains;
         this.content = content;
         this.format = format;

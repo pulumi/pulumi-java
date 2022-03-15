@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.datasync.inputs;
 
 import io.pulumi.awsnative.datasync.enums.LocationNFSMountOptionsVersion;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class LocationNFSMountOptions extends io.pulumi.resources.InvokeArg
      * The specific NFS version that you want DataSync to use to mount your NFS share.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable LocationNFSMountOptionsVersion version;
 
     public Optional<LocationNFSMountOptionsVersion> getVersion() {

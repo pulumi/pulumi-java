@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class MongoDbV2LinkedServiceResponse extends io.pulumi.resources.In
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -38,7 +38,7 @@ public final class MongoDbV2LinkedServiceResponse extends io.pulumi.resources.In
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -49,7 +49,7 @@ public final class MongoDbV2LinkedServiceResponse extends io.pulumi.resources.In
      * The MongoDB connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="connectionString", required=true)
+    @Import(name="connectionString", required=true)
       private final Object connectionString;
 
     public Object getConnectionString() {
@@ -60,7 +60,7 @@ public final class MongoDbV2LinkedServiceResponse extends io.pulumi.resources.In
      * The name of the MongoDB database that you want to access. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="database", required=true)
+    @Import(name="database", required=true)
       private final Object database;
 
     public Object getDatabase() {
@@ -71,7 +71,7 @@ public final class MongoDbV2LinkedServiceResponse extends io.pulumi.resources.In
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -82,7 +82,7 @@ public final class MongoDbV2LinkedServiceResponse extends io.pulumi.resources.In
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -94,7 +94,7 @@ public final class MongoDbV2LinkedServiceResponse extends io.pulumi.resources.In
      * Expected value is 'MongoDbV2'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

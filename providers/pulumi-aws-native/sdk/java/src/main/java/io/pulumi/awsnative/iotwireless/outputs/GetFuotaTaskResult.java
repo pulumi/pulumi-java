@@ -5,14 +5,14 @@ package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.outputs.FuotaTaskLoRaWAN;
 import io.pulumi.awsnative.iotwireless.outputs.FuotaTaskTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFuotaTaskResult {
     /**
      * FUOTA task arn. Returned after successful create.
@@ -80,21 +80,21 @@ public final class GetFuotaTaskResult {
      */
     private final @Nullable List<FuotaTaskTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFuotaTaskResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("associateMulticastGroup") @Nullable String associateMulticastGroup,
-        @OutputCustomType.Parameter("associateWirelessDevice") @Nullable String associateWirelessDevice,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("disassociateMulticastGroup") @Nullable String disassociateMulticastGroup,
-        @OutputCustomType.Parameter("disassociateWirelessDevice") @Nullable String disassociateWirelessDevice,
-        @OutputCustomType.Parameter("firmwareUpdateImage") @Nullable String firmwareUpdateImage,
-        @OutputCustomType.Parameter("firmwareUpdateRole") @Nullable String firmwareUpdateRole,
-        @OutputCustomType.Parameter("fuotaTaskStatus") @Nullable String fuotaTaskStatus,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("loRaWAN") @Nullable FuotaTaskLoRaWAN loRaWAN,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tags") @Nullable List<FuotaTaskTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("associateMulticastGroup") @Nullable String associateMulticastGroup,
+        @CustomType.Parameter("associateWirelessDevice") @Nullable String associateWirelessDevice,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("disassociateMulticastGroup") @Nullable String disassociateMulticastGroup,
+        @CustomType.Parameter("disassociateWirelessDevice") @Nullable String disassociateWirelessDevice,
+        @CustomType.Parameter("firmwareUpdateImage") @Nullable String firmwareUpdateImage,
+        @CustomType.Parameter("firmwareUpdateRole") @Nullable String firmwareUpdateRole,
+        @CustomType.Parameter("fuotaTaskStatus") @Nullable String fuotaTaskStatus,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("loRaWAN") @Nullable FuotaTaskLoRaWAN loRaWAN,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tags") @Nullable List<FuotaTaskTag> tags) {
         this.arn = arn;
         this.associateMulticastGroup = associateMulticastGroup;
         this.associateWirelessDevice = associateWirelessDevice;

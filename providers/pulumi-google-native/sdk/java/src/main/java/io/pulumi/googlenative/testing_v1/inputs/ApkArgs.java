@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
      * The path to an APK to be installed on the device before the test begins.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<FileReferenceArgs> location;
 
     public Output<FileReferenceArgs> getLocation() {
@@ -34,7 +34,7 @@ public final class ApkArgs extends io.pulumi.resources.ResourceArgs {
      * The java package for the APK to be installed. Value is determined by examining the application's manifest.
      * 
      */
-    @InputImport(name="packageName")
+    @Import(name="packageName")
       private final @Nullable Output<String> packageName;
 
     public Output<String> getPackageName() {

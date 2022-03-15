@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.LiteReservationArgs;
@@ -51,7 +51,7 @@ public class LiteReservation extends io.pulumi.resources.CustomResource {
      * Name of the reservation.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -66,7 +66,7 @@ public class LiteReservation extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -81,7 +81,7 @@ public class LiteReservation extends io.pulumi.resources.CustomResource {
      * The region of the pubsub lite reservation.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output</* @Nullable */ String> region;
 
     /**
@@ -97,7 +97,7 @@ public class LiteReservation extends io.pulumi.resources.CustomResource {
      * messages.
      * 
      */
-    @OutputExport(name="throughputCapacity", type=Integer.class, parameters={})
+    @Export(name="throughputCapacity", type=Integer.class, parameters={})
     private Output<Integer> throughputCapacity;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.apigateway_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigateway_v1.outputs.ApigatewayApiConfigFileResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApigatewayApiConfigOpenApiDocumentResponse {
     /**
      * The OpenAPI Specification document file.
@@ -15,8 +15,8 @@ public final class ApigatewayApiConfigOpenApiDocumentResponse {
      */
     private final ApigatewayApiConfigFileResponse document;
 
-    @OutputCustomType.Constructor
-    private ApigatewayApiConfigOpenApiDocumentResponse(@OutputCustomType.Parameter("document") ApigatewayApiConfigFileResponse document) {
+    @CustomType.Constructor
+    private ApigatewayApiConfigOpenApiDocumentResponse(@CustomType.Parameter("document") ApigatewayApiConfigFileResponse document) {
         this.document = document;
     }
 

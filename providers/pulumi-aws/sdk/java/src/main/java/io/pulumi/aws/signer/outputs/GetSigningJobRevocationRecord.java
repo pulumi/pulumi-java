@@ -3,21 +3,21 @@
 
 package io.pulumi.aws.signer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSigningJobRevocationRecord {
     private final String reason;
     private final String revokedAt;
     private final String revokedBy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSigningJobRevocationRecord(
-        @OutputCustomType.Parameter("reason") String reason,
-        @OutputCustomType.Parameter("revokedAt") String revokedAt,
-        @OutputCustomType.Parameter("revokedBy") String revokedBy) {
+        @CustomType.Parameter("reason") String reason,
+        @CustomType.Parameter("revokedAt") String revokedAt,
+        @CustomType.Parameter("revokedBy") String revokedBy) {
         this.reason = reason;
         this.revokedAt = revokedAt;
         this.revokedBy = revokedBy;

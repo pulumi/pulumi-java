@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.memorydb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * The DNS address of the primary read-write node.
      * 
      */
-    @InputImport(name="address")
+    @Import(name="address")
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
@@ -30,7 +30,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * The port number that the engine is listening on.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {

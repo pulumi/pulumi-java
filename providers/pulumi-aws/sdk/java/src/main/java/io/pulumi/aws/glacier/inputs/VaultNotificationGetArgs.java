@@ -4,7 +4,7 @@
 package io.pulumi.aws.glacier.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class VaultNotificationGetArgs extends io.pulumi.resources.Resource
      * You can configure a vault to publish a notification for `ArchiveRetrievalCompleted` and `InventoryRetrievalCompleted` events.
      * 
      */
-    @InputImport(name="events", required=true)
+    @Import(name="events", required=true)
       private final Output<List<String>> events;
 
     public Output<List<String>> getEvents() {
@@ -29,7 +29,7 @@ public final class VaultNotificationGetArgs extends io.pulumi.resources.Resource
      * The SNS Topic ARN.
      * 
      */
-    @InputImport(name="snsTopic", required=true)
+    @Import(name="snsTopic", required=true)
       private final Output<String> snsTopic;
 
     public Output<String> getSnsTopic() {

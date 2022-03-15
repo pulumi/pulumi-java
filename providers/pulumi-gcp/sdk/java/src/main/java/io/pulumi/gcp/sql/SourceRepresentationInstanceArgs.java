@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
      * Possible values are `MYSQL_5_5`, `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
      * 
      */
-    @InputImport(name="databaseVersion", required=true)
+    @Import(name="databaseVersion", required=true)
       private final Output<String> databaseVersion;
 
     public Output<String> getDatabaseVersion() {
@@ -31,7 +31,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
      * The externally accessible IPv4 address for the source database server.
      * 
      */
-    @InputImport(name="host", required=true)
+    @Import(name="host", required=true)
       private final Output<String> host;
 
     public Output<String> getHost() {
@@ -42,7 +42,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
      * The name of the source representation instance. Use any valid Cloud SQL instance name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
      * Defaults to 3306.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -66,7 +66,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -78,7 +78,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
      * If it is not provided, the provider region is used.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {

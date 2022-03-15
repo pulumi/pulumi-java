@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceMetadata {
     /**
      * Annotations is a key value map stored with a resource that
@@ -73,15 +73,15 @@ public final class ServiceMetadata {
      */
     private final @Nullable String uid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceMetadata(
-        @OutputCustomType.Parameter("annotations") @Nullable Map<String,String> annotations,
-        @OutputCustomType.Parameter("generation") @Nullable Integer generation,
-        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
-        @OutputCustomType.Parameter("resourceVersion") @Nullable String resourceVersion,
-        @OutputCustomType.Parameter("selfLink") @Nullable String selfLink,
-        @OutputCustomType.Parameter("uid") @Nullable String uid) {
+        @CustomType.Parameter("annotations") @Nullable Map<String,String> annotations,
+        @CustomType.Parameter("generation") @Nullable Integer generation,
+        @CustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @CustomType.Parameter("namespace") @Nullable String namespace,
+        @CustomType.Parameter("resourceVersion") @Nullable String resourceVersion,
+        @CustomType.Parameter("selfLink") @Nullable String selfLink,
+        @CustomType.Parameter("uid") @Nullable String uid) {
         this.annotations = annotations;
         this.generation = generation;
         this.labels = labels;

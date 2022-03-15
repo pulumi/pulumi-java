@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.MyWorkbookManagedIdentityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMyWorkbookResult {
     /**
      * Workbook category, as defined by the user at creation time.
@@ -94,24 +94,24 @@ public final class GetMyWorkbookResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMyWorkbookResult(
-        @OutputCustomType.Parameter("category") String category,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("etag") @Nullable Map<String,String> etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("identity") @Nullable MyWorkbookManagedIdentityResponse identity,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("serializedData") String serializedData,
-        @OutputCustomType.Parameter("sourceId") @Nullable String sourceId,
-        @OutputCustomType.Parameter("storageUri") @Nullable String storageUri,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("timeModified") String timeModified,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("userId") String userId,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("category") String category,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("etag") @Nullable Map<String,String> etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("identity") @Nullable MyWorkbookManagedIdentityResponse identity,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("serializedData") String serializedData,
+        @CustomType.Parameter("sourceId") @Nullable String sourceId,
+        @CustomType.Parameter("storageUri") @Nullable String storageUri,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("timeModified") String timeModified,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("userId") String userId,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.category = category;
         this.displayName = displayName;
         this.etag = etag;

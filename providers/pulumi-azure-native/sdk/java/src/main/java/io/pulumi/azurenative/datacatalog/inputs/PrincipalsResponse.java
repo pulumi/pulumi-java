@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datacatalog.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PrincipalsResponse extends io.pulumi.resources.InvokeArgs {
      * Object Id for the user
      * 
      */
-    @InputImport(name="objectId")
+    @Import(name="objectId")
       private final @Nullable String objectId;
 
     public Optional<String> getObjectId() {
@@ -33,7 +33,7 @@ public final class PrincipalsResponse extends io.pulumi.resources.InvokeArgs {
      * UPN of the user.
      * 
      */
-    @InputImport(name="upn")
+    @Import(name="upn")
       private final @Nullable String upn;
 
     public Optional<String> getUpn() {

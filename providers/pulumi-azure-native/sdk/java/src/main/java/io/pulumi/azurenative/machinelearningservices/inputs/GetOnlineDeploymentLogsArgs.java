@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.enums.ContainerType;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
      * The type of container to retrieve logs from.
      * 
      */
-    @InputImport(name="containerType")
+    @Import(name="containerType")
       private final @Nullable Either<String,ContainerType> containerType;
 
     public Either<String,ContainerType> getContainerType() {
@@ -32,7 +32,7 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
      * The name and identifier for the endpoint.
      * 
      */
-    @InputImport(name="deploymentName", required=true)
+    @Import(name="deploymentName", required=true)
       private final String deploymentName;
 
     public String getDeploymentName() {
@@ -43,7 +43,7 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
      * Inference endpoint name.
      * 
      */
-    @InputImport(name="endpointName", required=true)
+    @Import(name="endpointName", required=true)
       private final String endpointName;
 
     public String getEndpointName() {
@@ -54,7 +54,7 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
      * The maximum number of lines to tail.
      * 
      */
-    @InputImport(name="tail")
+    @Import(name="tail")
       private final @Nullable Integer tail;
 
     public Optional<Integer> getTail() {
@@ -76,7 +76,7 @@ public final class GetOnlineDeploymentLogsArgs extends io.pulumi.resources.Invok
      * Name of Azure Machine Learning workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
     public String getWorkspaceName() {

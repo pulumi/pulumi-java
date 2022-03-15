@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.contactcenterinsights_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
      * The representative name for the issue model.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -30,14 +30,14 @@ public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
      * Configs for the input data that used to create the issue model.
      * 
      */
-    @InputImport(name="inputDataConfig")
+    @Import(name="inputDataConfig")
       private final @Nullable Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs> inputDataConfig;
 
     public Output<GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigArgs> getInputDataConfig() {
         return this.inputDataConfig == null ? Output.empty() : this.inputDataConfig;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -48,14 +48,14 @@ public final class IssueModelArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The resource name of the issue model. Format: projects/{project}/locations/{location}/issueModels/{issue_model}
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security;
 
 import io.pulumi.azurenative.security.inputs.StandardComponentPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
      * category of the standard provided
      * 
      */
-    @InputImport(name="category")
+    @Import(name="category")
       private final @Nullable Output<String> category;
 
     public Output<String> getCategory() {
@@ -32,7 +32,7 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
      * List of component objects containing component unique keys (such as assessment keys) to apply to standard scope.  Currently only supports assessment keys.
      * 
      */
-    @InputImport(name="components")
+    @Import(name="components")
       private final @Nullable Output<List<StandardComponentPropertiesArgs>> components;
 
     public Output<List<StandardComponentPropertiesArgs>> getComponents() {
@@ -43,7 +43,7 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
      * description of the standard
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -54,7 +54,7 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
      * display name of the standard, equivalent to the standardId
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -65,7 +65,7 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
      * Kind of the resource
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -76,7 +76,7 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
      * Location where the resource is stored
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -87,7 +87,7 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -98,7 +98,7 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
      * The Security Standard key - unique key for the standard type
      * 
      */
-    @InputImport(name="standardId")
+    @Import(name="standardId")
       private final @Nullable Output<String> standardId;
 
     public Output<String> getStandardId() {
@@ -109,7 +109,7 @@ public final class StandardArgs extends io.pulumi.resources.ResourceArgs {
      * A list of key value pairs that describe the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

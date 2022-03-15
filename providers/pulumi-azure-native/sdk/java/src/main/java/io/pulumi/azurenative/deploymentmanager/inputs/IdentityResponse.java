@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
      * The list of identities.
      * 
      */
-    @InputImport(name="identityIds", required=true)
+    @Import(name="identityIds", required=true)
       private final List<String> identityIds;
 
     public List<String> getIdentityIds() {
@@ -32,7 +32,7 @@ public final class IdentityResponse extends io.pulumi.resources.InvokeArgs {
      * The identity type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

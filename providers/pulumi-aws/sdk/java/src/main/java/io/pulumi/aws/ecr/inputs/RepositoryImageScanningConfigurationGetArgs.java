@@ -4,7 +4,7 @@
 package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class RepositoryImageScanningConfigurationGetArgs extends io.pulumi
      * Indicates whether images are scanned after being pushed to the repository (true) or not scanned (false).
      * 
      */
-    @InputImport(name="scanOnPush", required=true)
+    @Import(name="scanOnPush", required=true)
       private final Output<Boolean> scanOnPush;
 
     public Output<Boolean> getScanOnPush() {

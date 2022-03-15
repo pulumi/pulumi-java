@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.secretmanager_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.secretmanager_v1.inputs.CustomerManagedEncryptionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. The customer-managed encryption configuration of the User-Managed Replica. If no configuration is provided, Google-managed default encryption is used. Updates to the Secret encryption configuration only apply to SecretVersions added afterwards. They do not apply retroactively to existing SecretVersions.
      * 
      */
-    @InputImport(name="customerManagedEncryption")
+    @Import(name="customerManagedEncryption")
       private final @Nullable Output<CustomerManagedEncryptionArgs> customerManagedEncryption;
 
     public Output<CustomerManagedEncryptionArgs> getCustomerManagedEncryption() {
@@ -34,7 +34,7 @@ public final class ReplicaArgs extends io.pulumi.resources.ResourceArgs {
      * The canonical IDs of the location to replicate data. For example: `"us-east1"`.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentCloudBuildOptionsArgs;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentContainerArgs;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentFileArgs;
@@ -23,7 +23,7 @@ public final class FlexibleAppVersionDeploymentArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="cloudBuildOptions")
+    @Import(name="cloudBuildOptions")
       private final @Nullable Output<FlexibleAppVersionDeploymentCloudBuildOptionsArgs> cloudBuildOptions;
 
     public Output<FlexibleAppVersionDeploymentCloudBuildOptionsArgs> getCloudBuildOptions() {
@@ -35,7 +35,7 @@ public final class FlexibleAppVersionDeploymentArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="container")
+    @Import(name="container")
       private final @Nullable Output<FlexibleAppVersionDeploymentContainerArgs> container;
 
     public Output<FlexibleAppVersionDeploymentContainerArgs> getContainer() {
@@ -48,7 +48,7 @@ public final class FlexibleAppVersionDeploymentArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="files")
+    @Import(name="files")
       private final @Nullable Output<List<FlexibleAppVersionDeploymentFileArgs>> files;
 
     public Output<List<FlexibleAppVersionDeploymentFileArgs>> getFiles() {
@@ -60,7 +60,7 @@ public final class FlexibleAppVersionDeploymentArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="zip")
+    @Import(name="zip")
       private final @Nullable Output<FlexibleAppVersionDeploymentZipArgs> zip;
 
     public Output<FlexibleAppVersionDeploymentZipArgs> getZip() {

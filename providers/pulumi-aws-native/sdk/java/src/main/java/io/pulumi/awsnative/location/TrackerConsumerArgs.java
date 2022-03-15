@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.location;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class TrackerConsumerArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final TrackerConsumerArgs Empty = new TrackerConsumerArgs();
 
-    @InputImport(name="consumerArn", required=true)
+    @Import(name="consumerArn", required=true)
       private final Output<String> consumerArn;
 
     public Output<String> getConsumerArn() {
         return this.consumerArn;
     }
 
-    @InputImport(name="trackerName", required=true)
+    @Import(name="trackerName", required=true)
       private final Output<String> trackerName;
 
     public Output<String> getTrackerName() {

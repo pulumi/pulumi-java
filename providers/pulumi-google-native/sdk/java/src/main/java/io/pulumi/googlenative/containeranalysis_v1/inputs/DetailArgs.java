@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.VersionArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability affects.
      * 
      */
-    @InputImport(name="affectedCpeUri", required=true)
+    @Import(name="affectedCpeUri", required=true)
       private final Output<String> affectedCpeUri;
 
     public Output<String> getAffectedCpeUri() {
@@ -35,7 +35,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * The package this vulnerability affects.
      * 
      */
-    @InputImport(name="affectedPackage", required=true)
+    @Import(name="affectedPackage", required=true)
       private final Output<String> affectedPackage;
 
     public Output<String> getAffectedPackage() {
@@ -46,7 +46,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * The version number at the end of an interval in which this vulnerability exists. A vulnerability can affect a package between version numbers that are disjoint sets of intervals (example: [1.0.0-1.1.0], [2.4.6-2.4.8] and [4.5.6-4.6.8]) each of which will be represented in its own Detail. If a specific affected version is provided by a vulnerability database, affected_version_start and affected_version_end will be the same in that Detail.
      * 
      */
-    @InputImport(name="affectedVersionEnd")
+    @Import(name="affectedVersionEnd")
       private final @Nullable Output<VersionArgs> affectedVersionEnd;
 
     public Output<VersionArgs> getAffectedVersionEnd() {
@@ -57,7 +57,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * The version number at the start of an interval in which this vulnerability exists. A vulnerability can affect a package between version numbers that are disjoint sets of intervals (example: [1.0.0-1.1.0], [2.4.6-2.4.8] and [4.5.6-4.6.8]) each of which will be represented in its own Detail. If a specific affected version is provided by a vulnerability database, affected_version_start and affected_version_end will be the same in that Detail.
      * 
      */
-    @InputImport(name="affectedVersionStart")
+    @Import(name="affectedVersionStart")
       private final @Nullable Output<VersionArgs> affectedVersionStart;
 
     public Output<VersionArgs> getAffectedVersionStart() {
@@ -68,7 +68,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * A vendor-specific description of this vulnerability.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -79,7 +79,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * The distro recommended [CPE URI](https://cpe.mitre.org/specification/) to update to that contains a fix for this vulnerability. It is possible for this to be different from the affected_cpe_uri.
      * 
      */
-    @InputImport(name="fixedCpeUri")
+    @Import(name="fixedCpeUri")
       private final @Nullable Output<String> fixedCpeUri;
 
     public Output<String> getFixedCpeUri() {
@@ -90,7 +90,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * The distro recommended package to update to that contains a fix for this vulnerability. It is possible for this to be different from the affected_package.
      * 
      */
-    @InputImport(name="fixedPackage")
+    @Import(name="fixedPackage")
       private final @Nullable Output<String> fixedPackage;
 
     public Output<String> getFixedPackage() {
@@ -101,7 +101,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * The distro recommended version to update to that contains a fix for this vulnerability. Setting this to VersionKind.MAXIMUM means no such version is yet available.
      * 
      */
-    @InputImport(name="fixedVersion")
+    @Import(name="fixedVersion")
       private final @Nullable Output<VersionArgs> fixedVersion;
 
     public Output<VersionArgs> getFixedVersion() {
@@ -112,7 +112,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * Whether this detail is obsolete. Occurrences are expected not to point to obsolete details.
      * 
      */
-    @InputImport(name="isObsolete")
+    @Import(name="isObsolete")
       private final @Nullable Output<Boolean> isObsolete;
 
     public Output<Boolean> getIsObsolete() {
@@ -123,7 +123,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * The type of package; whether native or non native (e.g., ruby gems, node.js packages, etc.).
      * 
      */
-    @InputImport(name="packageType")
+    @Import(name="packageType")
       private final @Nullable Output<String> packageType;
 
     public Output<String> getPackageType() {
@@ -134,7 +134,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * The distro assigned severity of this vulnerability.
      * 
      */
-    @InputImport(name="severityName")
+    @Import(name="severityName")
       private final @Nullable Output<String> severityName;
 
     public Output<String> getSeverityName() {
@@ -145,7 +145,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * The source from which the information in this Detail was obtained.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
@@ -156,7 +156,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * The time this information was last changed at the source. This is an upstream timestamp from the underlying information source - e.g. Ubuntu security tracker.
      * 
      */
-    @InputImport(name="sourceUpdateTime")
+    @Import(name="sourceUpdateTime")
       private final @Nullable Output<String> sourceUpdateTime;
 
     public Output<String> getSourceUpdateTime() {
@@ -167,7 +167,7 @@ public final class DetailArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the vendor of the product.
      * 
      */
-    @InputImport(name="vendor")
+    @Import(name="vendor")
       private final @Nullable Output<String> vendor;
 
     public Output<String> getVendor() {

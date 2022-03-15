@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.OracleSchemaResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OracleRdbmsResponse {
     /**
      * Oracle schemas/databases in the database server.
@@ -16,8 +16,8 @@ public final class OracleRdbmsResponse {
      */
     private final List<OracleSchemaResponse> oracleSchemas;
 
-    @OutputCustomType.Constructor
-    private OracleRdbmsResponse(@OutputCustomType.Parameter("oracleSchemas") List<OracleSchemaResponse> oracleSchemas) {
+    @CustomType.Constructor
+    private OracleRdbmsResponse(@CustomType.Parameter("oracleSchemas") List<OracleSchemaResponse> oracleSchemas) {
         this.oracleSchemas = oracleSchemas;
     }
 

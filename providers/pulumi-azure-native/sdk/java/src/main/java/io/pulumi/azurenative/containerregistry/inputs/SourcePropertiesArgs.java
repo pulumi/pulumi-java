@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.SourceControlType;
 import io.pulumi.azurenative.containerregistry.inputs.AuthInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
      * The branch name of the source code.
      * 
      */
-    @InputImport(name="branch")
+    @Import(name="branch")
       private final @Nullable Output<String> branch;
 
     public Output<String> getBranch() {
@@ -36,7 +36,7 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
      * The full URL to the source code repository
      * 
      */
-    @InputImport(name="repositoryUrl", required=true)
+    @Import(name="repositoryUrl", required=true)
       private final Output<String> repositoryUrl;
 
     public Output<String> getRepositoryUrl() {
@@ -48,7 +48,7 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
      * webhooks for notifications.
      * 
      */
-    @InputImport(name="sourceControlAuthProperties")
+    @Import(name="sourceControlAuthProperties")
       private final @Nullable Output<AuthInfoArgs> sourceControlAuthProperties;
 
     public Output<AuthInfoArgs> getSourceControlAuthProperties() {
@@ -59,7 +59,7 @@ public final class SourcePropertiesArgs extends io.pulumi.resources.ResourceArgs
      * The type of source control service.
      * 
      */
-    @InputImport(name="sourceControlType", required=true)
+    @Import(name="sourceControlType", required=true)
       private final Output<Either<String,SourceControlType>> sourceControlType;
 
     public Output<Either<String,SourceControlType>> getSourceControlType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetGlobalUserEnvironmentArgs extends io.pulumi.resources.Invo
      * The resourceId of the environment
      * 
      */
-    @InputImport(name="environmentId", required=true)
+    @Import(name="environmentId", required=true)
       private final String environmentId;
 
     public String getEnvironmentId() {
@@ -29,7 +29,7 @@ public final class GetGlobalUserEnvironmentArgs extends io.pulumi.resources.Invo
      * Specify the $expand query. Example: 'properties($expand=environment)'
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -40,7 +40,7 @@ public final class GetGlobalUserEnvironmentArgs extends io.pulumi.resources.Invo
      * The name of the user.
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final String userName;
 
     public String getUserName() {

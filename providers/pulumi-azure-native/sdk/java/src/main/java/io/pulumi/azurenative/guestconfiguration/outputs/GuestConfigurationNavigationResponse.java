@@ -5,14 +5,14 @@ package io.pulumi.azurenative.guestconfiguration.outputs;
 
 import io.pulumi.azurenative.guestconfiguration.outputs.ConfigurationParameterResponse;
 import io.pulumi.azurenative.guestconfiguration.outputs.ConfigurationSettingResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GuestConfigurationNavigationResponse {
     /**
      * Specifies the assignment type and execution of the configuration. Possible values are Audit, DeployAndAutoCorrect, ApplyAndAutoCorrect and ApplyAndMonitor.
@@ -65,18 +65,18 @@ public final class GuestConfigurationNavigationResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestConfigurationNavigationResponse(
-        @OutputCustomType.Parameter("assignmentType") @Nullable String assignmentType,
-        @OutputCustomType.Parameter("configurationParameter") @Nullable List<ConfigurationParameterResponse> configurationParameter,
-        @OutputCustomType.Parameter("configurationProtectedParameter") @Nullable List<ConfigurationParameterResponse> configurationProtectedParameter,
-        @OutputCustomType.Parameter("configurationSetting") @Nullable ConfigurationSettingResponse configurationSetting,
-        @OutputCustomType.Parameter("contentHash") @Nullable String contentHash,
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("contentUri") @Nullable String contentUri,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("assignmentType") @Nullable String assignmentType,
+        @CustomType.Parameter("configurationParameter") @Nullable List<ConfigurationParameterResponse> configurationParameter,
+        @CustomType.Parameter("configurationProtectedParameter") @Nullable List<ConfigurationParameterResponse> configurationProtectedParameter,
+        @CustomType.Parameter("configurationSetting") @Nullable ConfigurationSettingResponse configurationSetting,
+        @CustomType.Parameter("contentHash") @Nullable String contentHash,
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("contentUri") @Nullable String contentUri,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.assignmentType = assignmentType;
         this.configurationParameter = configurationParameter;
         this.configurationProtectedParameter = configurationProtectedParameter;

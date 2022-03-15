@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.configuration.AggregationAuthorizationArgs;
 import io.pulumi.awsnative.configuration.outputs.AggregationAuthorizationTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class AggregationAuthorization extends io.pulumi.resources.CustomResource
      * The ARN of the AggregationAuthorization.
      * 
      */
-    @OutputExport(name="aggregationAuthorizationArn", type=String.class, parameters={})
+    @Export(name="aggregationAuthorizationArn", type=String.class, parameters={})
     private Output<String> aggregationAuthorizationArn;
 
     /**
@@ -37,7 +37,7 @@ public class AggregationAuthorization extends io.pulumi.resources.CustomResource
      * The 12-digit account ID of the account authorized to aggregate data.
      * 
      */
-    @OutputExport(name="authorizedAccountId", type=String.class, parameters={})
+    @Export(name="authorizedAccountId", type=String.class, parameters={})
     private Output<String> authorizedAccountId;
 
     /**
@@ -51,7 +51,7 @@ public class AggregationAuthorization extends io.pulumi.resources.CustomResource
      * The region authorized to collect aggregated data.
      * 
      */
-    @OutputExport(name="authorizedAwsRegion", type=String.class, parameters={})
+    @Export(name="authorizedAwsRegion", type=String.class, parameters={})
     private Output<String> authorizedAwsRegion;
 
     /**
@@ -65,7 +65,7 @@ public class AggregationAuthorization extends io.pulumi.resources.CustomResource
      * The tags for the AggregationAuthorization.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={AggregationAuthorizationTag.class})
+    @Export(name="tags", type=List.class, parameters={AggregationAuthorizationTag.class})
     private Output</* @Nullable */ List<AggregationAuthorizationTag>> tags;
 
     /**

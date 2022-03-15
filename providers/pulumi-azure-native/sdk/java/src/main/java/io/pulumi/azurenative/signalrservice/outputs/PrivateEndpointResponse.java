@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.signalrservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateEndpointResponse {
     /**
      * Full qualified Id of the private endpoint
@@ -17,8 +17,8 @@ public final class PrivateEndpointResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
-    private PrivateEndpointResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
+    @CustomType.Constructor
+    private PrivateEndpointResponse(@CustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

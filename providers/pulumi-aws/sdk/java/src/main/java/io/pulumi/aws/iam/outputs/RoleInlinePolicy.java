@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RoleInlinePolicy {
     /**
      * Name of the role policy.
@@ -22,10 +22,10 @@ public final class RoleInlinePolicy {
      */
     private final @Nullable String policy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RoleInlinePolicy(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("policy") @Nullable String policy) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("policy") @Nullable String policy) {
         this.name = name;
         this.policy = policy;
     }

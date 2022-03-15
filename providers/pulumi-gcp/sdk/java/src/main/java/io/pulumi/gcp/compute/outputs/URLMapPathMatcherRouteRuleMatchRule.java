@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleMatchRuleHeaderMatch;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleMatchRuleMetadataFilter;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class URLMapPathMatcherRouteRuleMatchRule {
     /**
      * For satisfying the matchRule condition, the path of the request must exactly
@@ -77,15 +77,15 @@ public final class URLMapPathMatcherRouteRuleMatchRule {
      */
     private final @Nullable String regexMatch;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private URLMapPathMatcherRouteRuleMatchRule(
-        @OutputCustomType.Parameter("fullPathMatch") @Nullable String fullPathMatch,
-        @OutputCustomType.Parameter("headerMatches") @Nullable List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches,
-        @OutputCustomType.Parameter("ignoreCase") @Nullable Boolean ignoreCase,
-        @OutputCustomType.Parameter("metadataFilters") @Nullable List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilter> metadataFilters,
-        @OutputCustomType.Parameter("prefixMatch") @Nullable String prefixMatch,
-        @OutputCustomType.Parameter("queryParameterMatches") @Nullable List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches,
-        @OutputCustomType.Parameter("regexMatch") @Nullable String regexMatch) {
+        @CustomType.Parameter("fullPathMatch") @Nullable String fullPathMatch,
+        @CustomType.Parameter("headerMatches") @Nullable List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches,
+        @CustomType.Parameter("ignoreCase") @Nullable Boolean ignoreCase,
+        @CustomType.Parameter("metadataFilters") @Nullable List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilter> metadataFilters,
+        @CustomType.Parameter("prefixMatch") @Nullable String prefixMatch,
+        @CustomType.Parameter("queryParameterMatches") @Nullable List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches,
+        @CustomType.Parameter("regexMatch") @Nullable String regexMatch) {
         this.fullPathMatch = fullPathMatch;
         this.headerMatches = headerMatches;
         this.ignoreCase = ignoreCase;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +18,14 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
      * The Organizations ARN for the delegate account.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn == null ? Output.empty() : this.arn;
     }
 
-    @InputImport(name="delegatedAdminAccountId")
+    @Import(name="delegatedAdminAccountId")
       private final @Nullable Output<String> delegatedAdminAccountId;
 
     public Output<String> getDelegatedAdminAccountId() {
@@ -36,7 +36,7 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
      * The Organizations email for the delegate account.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
@@ -47,7 +47,7 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
      * The Organizations name for the delegate account.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -58,7 +58,7 @@ public final class VpcIpamOrganizationAdminAccountState extends io.pulumi.resour
      * The AWS service principal.
      * 
      */
-    @InputImport(name="servicePrincipal")
+    @Import(name="servicePrincipal")
       private final @Nullable Output<String> servicePrincipal;
 
     public Output<String> getServicePrincipal() {

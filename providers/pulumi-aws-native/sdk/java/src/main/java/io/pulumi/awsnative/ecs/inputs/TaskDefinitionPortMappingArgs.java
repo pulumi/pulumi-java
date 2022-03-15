@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class TaskDefinitionPortMappingArgs extends io.pulumi.resources.Res
 
     public static final TaskDefinitionPortMappingArgs Empty = new TaskDefinitionPortMappingArgs();
 
-    @InputImport(name="containerPort")
+    @Import(name="containerPort")
       private final @Nullable Output<Integer> containerPort;
 
     public Output<Integer> getContainerPort() {
         return this.containerPort == null ? Output.empty() : this.containerPort;
     }
 
-    @InputImport(name="hostPort")
+    @Import(name="hostPort")
       private final @Nullable Output<Integer> hostPort;
 
     public Output<Integer> getHostPort() {
         return this.hostPort == null ? Output.empty() : this.hostPort;
     }
 
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {

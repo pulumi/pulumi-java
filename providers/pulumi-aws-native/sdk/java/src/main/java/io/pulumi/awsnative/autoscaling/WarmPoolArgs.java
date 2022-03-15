@@ -5,7 +5,7 @@ package io.pulumi.awsnative.autoscaling;
 
 import io.pulumi.awsnative.autoscaling.inputs.WarmPoolInstanceReusePolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,35 +16,35 @@ public final class WarmPoolArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final WarmPoolArgs Empty = new WarmPoolArgs();
 
-    @InputImport(name="autoScalingGroupName", required=true)
+    @Import(name="autoScalingGroupName", required=true)
       private final Output<String> autoScalingGroupName;
 
     public Output<String> getAutoScalingGroupName() {
         return this.autoScalingGroupName;
     }
 
-    @InputImport(name="instanceReusePolicy")
+    @Import(name="instanceReusePolicy")
       private final @Nullable Output<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy;
 
     public Output<WarmPoolInstanceReusePolicyArgs> getInstanceReusePolicy() {
         return this.instanceReusePolicy == null ? Output.empty() : this.instanceReusePolicy;
     }
 
-    @InputImport(name="maxGroupPreparedCapacity")
+    @Import(name="maxGroupPreparedCapacity")
       private final @Nullable Output<Integer> maxGroupPreparedCapacity;
 
     public Output<Integer> getMaxGroupPreparedCapacity() {
         return this.maxGroupPreparedCapacity == null ? Output.empty() : this.maxGroupPreparedCapacity;
     }
 
-    @InputImport(name="minSize")
+    @Import(name="minSize")
       private final @Nullable Output<Integer> minSize;
 
     public Output<Integer> getMinSize() {
         return this.minSize == null ? Output.empty() : this.minSize;
     }
 
-    @InputImport(name="poolState")
+    @Import(name="poolState")
       private final @Nullable Output<String> poolState;
 
     public Output<String> getPoolState() {

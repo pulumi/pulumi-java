@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.ManagedPrefixListEntryArgs;
 import io.pulumi.aws.ec2.inputs.ManagedPrefixListEntryState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -28,7 +28,7 @@ public class ManagedPrefixListEntry extends io.pulumi.resources.CustomResource {
      * CIDR block of this entry.
      * 
      */
-    @OutputExport(name="cidr", type=String.class, parameters={})
+    @Export(name="cidr", type=String.class, parameters={})
     private Output<String> cidr;
 
     /**
@@ -42,7 +42,7 @@ public class ManagedPrefixListEntry extends io.pulumi.resources.CustomResource {
      * Description of this entry. Due to API limitations, updating only the description of an entry requires recreating the entry.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -56,7 +56,7 @@ public class ManagedPrefixListEntry extends io.pulumi.resources.CustomResource {
      * CIDR block of this entry.
      * 
      */
-    @OutputExport(name="prefixListId", type=String.class, parameters={})
+    @Export(name="prefixListId", type=String.class, parameters={})
     private Output<String> prefixListId;
 
     /**

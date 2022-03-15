@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SecurityContextResponse extends io.pulumi.resources.InvokeArg
      * (Optional) The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.
      * 
      */
-    @InputImport(name="runAsUser", required=true)
+    @Import(name="runAsUser", required=true)
       private final Integer runAsUser;
 
     public Integer getRunAsUser() {

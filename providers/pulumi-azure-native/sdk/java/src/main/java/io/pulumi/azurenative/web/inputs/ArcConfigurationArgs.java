@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.StorageType;
 import io.pulumi.azurenative.web.inputs.FrontEndConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,49 +16,49 @@ public final class ArcConfigurationArgs extends io.pulumi.resources.ResourceArgs
 
     public static final ArcConfigurationArgs Empty = new ArcConfigurationArgs();
 
-    @InputImport(name="artifactStorageAccessMode")
+    @Import(name="artifactStorageAccessMode")
       private final @Nullable Output<String> artifactStorageAccessMode;
 
     public Output<String> getArtifactStorageAccessMode() {
         return this.artifactStorageAccessMode == null ? Output.empty() : this.artifactStorageAccessMode;
     }
 
-    @InputImport(name="artifactStorageClassName")
+    @Import(name="artifactStorageClassName")
       private final @Nullable Output<String> artifactStorageClassName;
 
     public Output<String> getArtifactStorageClassName() {
         return this.artifactStorageClassName == null ? Output.empty() : this.artifactStorageClassName;
     }
 
-    @InputImport(name="artifactStorageMountPath")
+    @Import(name="artifactStorageMountPath")
       private final @Nullable Output<String> artifactStorageMountPath;
 
     public Output<String> getArtifactStorageMountPath() {
         return this.artifactStorageMountPath == null ? Output.empty() : this.artifactStorageMountPath;
     }
 
-    @InputImport(name="artifactStorageNodeName")
+    @Import(name="artifactStorageNodeName")
       private final @Nullable Output<String> artifactStorageNodeName;
 
     public Output<String> getArtifactStorageNodeName() {
         return this.artifactStorageNodeName == null ? Output.empty() : this.artifactStorageNodeName;
     }
 
-    @InputImport(name="artifactsStorageType")
+    @Import(name="artifactsStorageType")
       private final @Nullable Output<StorageType> artifactsStorageType;
 
     public Output<StorageType> getArtifactsStorageType() {
         return this.artifactsStorageType == null ? Output.empty() : this.artifactsStorageType;
     }
 
-    @InputImport(name="frontEndServiceConfiguration")
+    @Import(name="frontEndServiceConfiguration")
       private final @Nullable Output<FrontEndConfigurationArgs> frontEndServiceConfiguration;
 
     public Output<FrontEndConfigurationArgs> getFrontEndServiceConfiguration() {
         return this.frontEndServiceConfiguration == null ? Output.empty() : this.frontEndServiceConfiguration;
     }
 
-    @InputImport(name="kubeConfig")
+    @Import(name="kubeConfig")
       private final @Nullable Output<String> kubeConfig;
 
     public Output<String> getKubeConfig() {

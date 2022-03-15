@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestack.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetCustomerSubscriptionArgs extends io.pulumi.resources.Invok
      * Name of the product.
      * 
      */
-    @InputImport(name="customerSubscriptionName", required=true)
+    @Import(name="customerSubscriptionName", required=true)
       private final String customerSubscriptionName;
 
     public String getCustomerSubscriptionName() {
@@ -27,7 +27,7 @@ public final class GetCustomerSubscriptionArgs extends io.pulumi.resources.Invok
      * Name of the Azure Stack registration.
      * 
      */
-    @InputImport(name="registrationName", required=true)
+    @Import(name="registrationName", required=true)
       private final String registrationName;
 
     public String getRegistrationName() {
@@ -38,7 +38,7 @@ public final class GetCustomerSubscriptionArgs extends io.pulumi.resources.Invok
      * Name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroup", required=true)
+    @Import(name="resourceGroup", required=true)
       private final String resourceGroup;
 
     public String getResourceGroup() {

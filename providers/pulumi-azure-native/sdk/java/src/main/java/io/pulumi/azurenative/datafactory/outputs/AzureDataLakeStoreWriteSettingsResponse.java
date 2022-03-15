@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureDataLakeStoreWriteSettingsResponse {
     /**
      * The type of copy behavior for copy sink.
@@ -39,13 +39,13 @@ public final class AzureDataLakeStoreWriteSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureDataLakeStoreWriteSettingsResponse(
-        @OutputCustomType.Parameter("copyBehavior") @Nullable Object copyBehavior,
-        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
-        @OutputCustomType.Parameter("expiryDateTime") @Nullable Object expiryDateTime,
-        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("copyBehavior") @Nullable Object copyBehavior,
+        @CustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @CustomType.Parameter("expiryDateTime") @Nullable Object expiryDateTime,
+        @CustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @CustomType.Parameter("type") String type) {
         this.copyBehavior = copyBehavior;
         this.disableMetricsCollection = disableMetricsCollection;
         this.expiryDateTime = expiryDateTime;

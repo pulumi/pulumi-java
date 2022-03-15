@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DiagnosticConditionResponse {
     /**
      * The opaque diagnostic code.
@@ -25,11 +25,11 @@ public final class DiagnosticConditionResponse {
      */
     private final String since;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DiagnosticConditionResponse(
-        @OutputCustomType.Parameter("code") String code,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("since") String since) {
+        @CustomType.Parameter("code") String code,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("since") String since) {
         this.code = code;
         this.message = message;
         this.since = since;

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.xray.inputs.SamplingRuleRecordArgs;
 import io.pulumi.awsnative.xray.inputs.SamplingRuleUpdateArgs;
 import io.pulumi.awsnative.xray.inputs.TagsItemPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,35 +18,35 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final SamplingRuleArgs Empty = new SamplingRuleArgs();
 
-    @InputImport(name="ruleName")
+    @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {
         return this.ruleName == null ? Output.empty() : this.ruleName;
     }
 
-    @InputImport(name="samplingRule")
+    @Import(name="samplingRule")
       private final @Nullable Output<io.pulumi.awsnative.xray.inputs.SamplingRuleArgs> samplingRule;
 
     public Output<io.pulumi.awsnative.xray.inputs.SamplingRuleArgs> getSamplingRule() {
         return this.samplingRule == null ? Output.empty() : this.samplingRule;
     }
 
-    @InputImport(name="samplingRuleRecord")
+    @Import(name="samplingRuleRecord")
       private final @Nullable Output<SamplingRuleRecordArgs> samplingRuleRecord;
 
     public Output<SamplingRuleRecordArgs> getSamplingRuleRecord() {
         return this.samplingRuleRecord == null ? Output.empty() : this.samplingRuleRecord;
     }
 
-    @InputImport(name="samplingRuleUpdate")
+    @Import(name="samplingRuleUpdate")
       private final @Nullable Output<SamplingRuleUpdateArgs> samplingRuleUpdate;
 
     public Output<SamplingRuleUpdateArgs> getSamplingRuleUpdate() {
         return this.samplingRuleUpdate == null ? Output.empty() : this.samplingRuleUpdate;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<TagsItemPropertiesArgs>> tags;
 
     public Output<List<TagsItemPropertiesArgs>> getTags() {

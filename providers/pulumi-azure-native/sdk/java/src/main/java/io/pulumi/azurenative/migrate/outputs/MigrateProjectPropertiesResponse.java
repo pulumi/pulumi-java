@@ -6,7 +6,7 @@ package io.pulumi.azurenative.migrate.outputs;
 import io.pulumi.azurenative.migrate.outputs.DatabaseProjectSummaryResponse;
 import io.pulumi.azurenative.migrate.outputs.ServersProjectSummaryResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MigrateProjectPropertiesResponse {
     /**
      * Gets the last time the project summary was refreshed.
@@ -42,13 +42,13 @@ public final class MigrateProjectPropertiesResponse {
      */
     private final Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MigrateProjectPropertiesResponse(
-        @OutputCustomType.Parameter("lastSummaryRefreshedTime") String lastSummaryRefreshedTime,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("refreshSummaryState") String refreshSummaryState,
-        @OutputCustomType.Parameter("registeredTools") @Nullable List<String> registeredTools,
-        @OutputCustomType.Parameter("summary") Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary) {
+        @CustomType.Parameter("lastSummaryRefreshedTime") String lastSummaryRefreshedTime,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("refreshSummaryState") String refreshSummaryState,
+        @CustomType.Parameter("registeredTools") @Nullable List<String> registeredTools,
+        @CustomType.Parameter("summary") Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary) {
         this.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
         this.provisioningState = provisioningState;
         this.refreshSummaryState = refreshSummaryState;

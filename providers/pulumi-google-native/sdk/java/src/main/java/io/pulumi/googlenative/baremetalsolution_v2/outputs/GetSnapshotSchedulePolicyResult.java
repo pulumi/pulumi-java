@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.baremetalsolution_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.baremetalsolution_v2.outputs.ScheduleResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSnapshotSchedulePolicyResult {
     /**
      * The description of the snapshot schedule policy.
@@ -33,12 +33,12 @@ public final class GetSnapshotSchedulePolicyResult {
      */
     private final List<ScheduleResponse> schedules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSnapshotSchedulePolicyResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("schedules") List<ScheduleResponse> schedules) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("schedules") List<ScheduleResponse> schedules) {
         this.description = description;
         this.labels = labels;
         this.name = name;

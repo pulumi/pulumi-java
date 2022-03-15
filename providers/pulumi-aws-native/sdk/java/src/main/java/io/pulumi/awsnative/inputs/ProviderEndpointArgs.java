@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Access Analyzer
      * 
      */
-    @InputImport(name="accessanalyzer")
+    @Import(name="accessanalyzer")
       private final @Nullable Output<String> accessanalyzer;
 
     public Output<String> getAccessanalyzer() {
@@ -33,7 +33,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Certificate Manager
      * 
      */
-    @InputImport(name="acm")
+    @Import(name="acm")
       private final @Nullable Output<String> acm;
 
     public Output<String> getAcm() {
@@ -44,7 +44,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Certificate Manager Private Certificate Authority
      * 
      */
-    @InputImport(name="acmpca")
+    @Import(name="acmpca")
       private final @Nullable Output<String> acmpca;
 
     public Output<String> getAcmpca() {
@@ -55,7 +55,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Amplify Console
      * 
      */
-    @InputImport(name="amplify")
+    @Import(name="amplify")
       private final @Nullable Output<String> amplify;
 
     public Output<String> getAmplify() {
@@ -66,7 +66,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS AppConfig
      * 
      */
-    @InputImport(name="appconfig")
+    @Import(name="appconfig")
       private final @Nullable Output<String> appconfig;
 
     public Output<String> getAppconfig() {
@@ -77,7 +77,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Application Auto Scaling
      * 
      */
-    @InputImport(name="applicationautoscaling")
+    @Import(name="applicationautoscaling")
       private final @Nullable Output<String> applicationautoscaling;
 
     public Output<String> getApplicationautoscaling() {
@@ -88,7 +88,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS CloudWatch Application Insights
      * 
      */
-    @InputImport(name="applicationinsights")
+    @Import(name="applicationinsights")
       private final @Nullable Output<String> applicationinsights;
 
     public Output<String> getApplicationinsights() {
@@ -99,7 +99,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS App Mesh
      * 
      */
-    @InputImport(name="appmesh")
+    @Import(name="appmesh")
       private final @Nullable Output<String> appmesh;
 
     public Output<String> getAppmesh() {
@@ -110,7 +110,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS App Runner
      * 
      */
-    @InputImport(name="apprunner")
+    @Import(name="apprunner")
       private final @Nullable Output<String> apprunner;
 
     public Output<String> getApprunner() {
@@ -121,7 +121,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS AppStream 2.0
      * 
      */
-    @InputImport(name="appstream")
+    @Import(name="appstream")
       private final @Nullable Output<String> appstream;
 
     public Output<String> getAppstream() {
@@ -132,7 +132,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS AppSync
      * 
      */
-    @InputImport(name="appsync")
+    @Import(name="appsync")
       private final @Nullable Output<String> appsync;
 
     public Output<String> getAppsync() {
@@ -143,7 +143,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Athena
      * 
      */
-    @InputImport(name="athena")
+    @Import(name="athena")
       private final @Nullable Output<String> athena;
 
     public Output<String> getAthena() {
@@ -154,7 +154,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Audit Manager
      * 
      */
-    @InputImport(name="auditmanager")
+    @Import(name="auditmanager")
       private final @Nullable Output<String> auditmanager;
 
     public Output<String> getAuditmanager() {
@@ -165,7 +165,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Auto Scaling
      * 
      */
-    @InputImport(name="autoscaling")
+    @Import(name="autoscaling")
       private final @Nullable Output<String> autoscaling;
 
     public Output<String> getAutoscaling() {
@@ -176,7 +176,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Backup
      * 
      */
-    @InputImport(name="backup")
+    @Import(name="backup")
       private final @Nullable Output<String> backup;
 
     public Output<String> getBackup() {
@@ -187,7 +187,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Batch
      * 
      */
-    @InputImport(name="batch")
+    @Import(name="batch")
       private final @Nullable Output<String> batch;
 
     public Output<String> getBatch() {
@@ -198,7 +198,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Budgets
      * 
      */
-    @InputImport(name="budgets")
+    @Import(name="budgets")
       private final @Nullable Output<String> budgets;
 
     public Output<String> getBudgets() {
@@ -209,7 +209,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Chime
      * 
      */
-    @InputImport(name="chime")
+    @Import(name="chime")
       private final @Nullable Output<String> chime;
 
     public Output<String> getChime() {
@@ -220,7 +220,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Cloud9
      * 
      */
-    @InputImport(name="cloud9")
+    @Import(name="cloud9")
       private final @Nullable Output<String> cloud9;
 
     public Output<String> getCloud9() {
@@ -231,7 +231,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS CloudFormation
      * 
      */
-    @InputImport(name="cloudformation")
+    @Import(name="cloudformation")
       private final @Nullable Output<String> cloudformation;
 
     public Output<String> getCloudformation() {
@@ -242,7 +242,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS CloudFront
      * 
      */
-    @InputImport(name="cloudfront")
+    @Import(name="cloudfront")
       private final @Nullable Output<String> cloudfront;
 
     public Output<String> getCloudfront() {
@@ -253,7 +253,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS CloudHSM
      * 
      */
-    @InputImport(name="cloudhsm")
+    @Import(name="cloudhsm")
       private final @Nullable Output<String> cloudhsm;
 
     public Output<String> getCloudhsm() {
@@ -264,7 +264,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS CloudSearch
      * 
      */
-    @InputImport(name="cloudsearch")
+    @Import(name="cloudsearch")
       private final @Nullable Output<String> cloudsearch;
 
     public Output<String> getCloudsearch() {
@@ -275,7 +275,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS CloudTrail
      * 
      */
-    @InputImport(name="cloudtrail")
+    @Import(name="cloudtrail")
       private final @Nullable Output<String> cloudtrail;
 
     public Output<String> getCloudtrail() {
@@ -286,7 +286,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS CloudWatch
      * 
      */
-    @InputImport(name="cloudwatch")
+    @Import(name="cloudwatch")
       private final @Nullable Output<String> cloudwatch;
 
     public Output<String> getCloudwatch() {
@@ -297,7 +297,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS CloudWatch Events
      * 
      */
-    @InputImport(name="cloudwatchevents")
+    @Import(name="cloudwatchevents")
       private final @Nullable Output<String> cloudwatchevents;
 
     public Output<String> getCloudwatchevents() {
@@ -308,7 +308,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS CloudWatch Logs
      * 
      */
-    @InputImport(name="cloudwatchlogs")
+    @Import(name="cloudwatchlogs")
       private final @Nullable Output<String> cloudwatchlogs;
 
     public Output<String> getCloudwatchlogs() {
@@ -319,7 +319,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS CodeArtifact
      * 
      */
-    @InputImport(name="codeartifact")
+    @Import(name="codeartifact")
       private final @Nullable Output<String> codeartifact;
 
     public Output<String> getCodeartifact() {
@@ -330,7 +330,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS CodeBuild
      * 
      */
-    @InputImport(name="codebuild")
+    @Import(name="codebuild")
       private final @Nullable Output<String> codebuild;
 
     public Output<String> getCodebuild() {
@@ -341,7 +341,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS CodeCommit
      * 
      */
-    @InputImport(name="codecommit")
+    @Import(name="codecommit")
       private final @Nullable Output<String> codecommit;
 
     public Output<String> getCodecommit() {
@@ -352,7 +352,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS CodeDeploy
      * 
      */
-    @InputImport(name="codedeploy")
+    @Import(name="codedeploy")
       private final @Nullable Output<String> codedeploy;
 
     public Output<String> getCodedeploy() {
@@ -363,7 +363,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS CodePipeline
      * 
      */
-    @InputImport(name="codepipeline")
+    @Import(name="codepipeline")
       private final @Nullable Output<String> codepipeline;
 
     public Output<String> getCodepipeline() {
@@ -374,7 +374,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS CodeStart Connections
      * 
      */
-    @InputImport(name="codestarconnections")
+    @Import(name="codestarconnections")
       private final @Nullable Output<String> codestarconnections;
 
     public Output<String> getCodestarconnections() {
@@ -385,7 +385,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Cognito
      * 
      */
-    @InputImport(name="cognitoidentity")
+    @Import(name="cognitoidentity")
       private final @Nullable Output<String> cognitoidentity;
 
     public Output<String> getCognitoidentity() {
@@ -396,7 +396,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Config
      * 
      */
-    @InputImport(name="configservice")
+    @Import(name="configservice")
       private final @Nullable Output<String> configservice;
 
     public Output<String> getConfigservice() {
@@ -407,7 +407,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Connect
      * 
      */
-    @InputImport(name="connect")
+    @Import(name="connect")
       private final @Nullable Output<String> connect;
 
     public Output<String> getConnect() {
@@ -418,7 +418,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Cost and Usage Reports
      * 
      */
-    @InputImport(name="cur")
+    @Import(name="cur")
       private final @Nullable Output<String> cur;
 
     public Output<String> getCur() {
@@ -429,7 +429,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Data Exchange
      * 
      */
-    @InputImport(name="dataexchange")
+    @Import(name="dataexchange")
       private final @Nullable Output<String> dataexchange;
 
     public Output<String> getDataexchange() {
@@ -440,7 +440,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Data Pipeline
      * 
      */
-    @InputImport(name="datapipeline")
+    @Import(name="datapipeline")
       private final @Nullable Output<String> datapipeline;
 
     public Output<String> getDatapipeline() {
@@ -451,7 +451,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS DataSync
      * 
      */
-    @InputImport(name="datasync")
+    @Import(name="datasync")
       private final @Nullable Output<String> datasync;
 
     public Output<String> getDatasync() {
@@ -462,7 +462,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS DynamoDB Accelerator
      * 
      */
-    @InputImport(name="dax")
+    @Import(name="dax")
       private final @Nullable Output<String> dax;
 
     public Output<String> getDax() {
@@ -473,7 +473,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Detective
      * 
      */
-    @InputImport(name="detective")
+    @Import(name="detective")
       private final @Nullable Output<String> detective;
 
     public Output<String> getDetective() {
@@ -484,7 +484,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Device Farm
      * 
      */
-    @InputImport(name="devicefarm")
+    @Import(name="devicefarm")
       private final @Nullable Output<String> devicefarm;
 
     public Output<String> getDevicefarm() {
@@ -495,7 +495,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Direct Connect
      * 
      */
-    @InputImport(name="directconnect")
+    @Import(name="directconnect")
       private final @Nullable Output<String> directconnect;
 
     public Output<String> getDirectconnect() {
@@ -506,7 +506,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Data Lifecycle Manager
      * 
      */
-    @InputImport(name="dlm")
+    @Import(name="dlm")
       private final @Nullable Output<String> dlm;
 
     public Output<String> getDlm() {
@@ -517,7 +517,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Database Migration Service
      * 
      */
-    @InputImport(name="dms")
+    @Import(name="dms")
       private final @Nullable Output<String> dms;
 
     public Output<String> getDms() {
@@ -528,7 +528,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS DocumentDB
      * 
      */
-    @InputImport(name="docdb")
+    @Import(name="docdb")
       private final @Nullable Output<String> docdb;
 
     public Output<String> getDocdb() {
@@ -539,7 +539,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Directory Service
      * 
      */
-    @InputImport(name="ds")
+    @Import(name="ds")
       private final @Nullable Output<String> ds;
 
     public Output<String> getDs() {
@@ -550,7 +550,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS DynamoDB
      * 
      */
-    @InputImport(name="dynamodb")
+    @Import(name="dynamodb")
       private final @Nullable Output<String> dynamodb;
 
     public Output<String> getDynamodb() {
@@ -561,7 +561,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Elastic Compute Cloud (EC2)
      * 
      */
-    @InputImport(name="ec2")
+    @Import(name="ec2")
       private final @Nullable Output<String> ec2;
 
     public Output<String> getEc2() {
@@ -572,7 +572,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Elastic Container Registry (ECR)
      * 
      */
-    @InputImport(name="ecr")
+    @Import(name="ecr")
       private final @Nullable Output<String> ecr;
 
     public Output<String> getEcr() {
@@ -583,7 +583,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Elastic Container Registry (ECR) Public
      * 
      */
-    @InputImport(name="ecrpublic")
+    @Import(name="ecrpublic")
       private final @Nullable Output<String> ecrpublic;
 
     public Output<String> getEcrpublic() {
@@ -594,7 +594,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Elastic Container Service (ECS)
      * 
      */
-    @InputImport(name="ecs")
+    @Import(name="ecs")
       private final @Nullable Output<String> ecs;
 
     public Output<String> getEcs() {
@@ -605,7 +605,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Elastic File System (EFS)
      * 
      */
-    @InputImport(name="efs")
+    @Import(name="efs")
       private final @Nullable Output<String> efs;
 
     public Output<String> getEfs() {
@@ -616,7 +616,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Elastic Kubernetes Service (EKS)
      * 
      */
-    @InputImport(name="eks")
+    @Import(name="eks")
       private final @Nullable Output<String> eks;
 
     public Output<String> getEks() {
@@ -627,7 +627,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS ElastiCache
      * 
      */
-    @InputImport(name="elasticache")
+    @Import(name="elasticache")
       private final @Nullable Output<String> elasticache;
 
     public Output<String> getElasticache() {
@@ -638,7 +638,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Elastic Beanstalk
      * 
      */
-    @InputImport(name="elasticbeanstalk")
+    @Import(name="elasticbeanstalk")
       private final @Nullable Output<String> elasticbeanstalk;
 
     public Output<String> getElasticbeanstalk() {
@@ -649,7 +649,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Elastic Transcoder
      * 
      */
-    @InputImport(name="elastictranscoder")
+    @Import(name="elastictranscoder")
       private final @Nullable Output<String> elastictranscoder;
 
     public Output<String> getElastictranscoder() {
@@ -660,7 +660,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Elastic Load Balancing
      * 
      */
-    @InputImport(name="elb")
+    @Import(name="elb")
       private final @Nullable Output<String> elb;
 
     public Output<String> getElb() {
@@ -671,7 +671,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Elastic Load Balancing V2
      * 
      */
-    @InputImport(name="elbv2")
+    @Import(name="elbv2")
       private final @Nullable Output<String> elbv2;
 
     public Output<String> getElbv2() {
@@ -682,7 +682,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS EMR
      * 
      */
-    @InputImport(name="emr")
+    @Import(name="emr")
       private final @Nullable Output<String> emr;
 
     public Output<String> getEmr() {
@@ -693,7 +693,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS EMR on EKS
      * 
      */
-    @InputImport(name="emrcontainers")
+    @Import(name="emrcontainers")
       private final @Nullable Output<String> emrcontainers;
 
     public Output<String> getEmrcontainers() {
@@ -704,7 +704,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS OpenSearch Service (formerly Elasticsearch)
      * 
      */
-    @InputImport(name="es")
+    @Import(name="es")
       private final @Nullable Output<String> es;
 
     public Output<String> getEs() {
@@ -715,7 +715,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Kinesis Data Firehose
      * 
      */
-    @InputImport(name="firehose")
+    @Import(name="firehose")
       private final @Nullable Output<String> firehose;
 
     public Output<String> getFirehose() {
@@ -726,7 +726,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Firewall Manager
      * 
      */
-    @InputImport(name="fms")
+    @Import(name="fms")
       private final @Nullable Output<String> fms;
 
     public Output<String> getFms() {
@@ -737,7 +737,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Forecast
      * 
      */
-    @InputImport(name="forecast")
+    @Import(name="forecast")
       private final @Nullable Output<String> forecast;
 
     public Output<String> getForecast() {
@@ -748,7 +748,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS FSx
      * 
      */
-    @InputImport(name="fsx")
+    @Import(name="fsx")
       private final @Nullable Output<String> fsx;
 
     public Output<String> getFsx() {
@@ -759,7 +759,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS GameLift
      * 
      */
-    @InputImport(name="gamelift")
+    @Import(name="gamelift")
       private final @Nullable Output<String> gamelift;
 
     public Output<String> getGamelift() {
@@ -770,7 +770,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon S3 Glacier
      * 
      */
-    @InputImport(name="glacier")
+    @Import(name="glacier")
       private final @Nullable Output<String> glacier;
 
     public Output<String> getGlacier() {
@@ -781,7 +781,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Global Accelerator
      * 
      */
-    @InputImport(name="globalaccelerator")
+    @Import(name="globalaccelerator")
       private final @Nullable Output<String> globalaccelerator;
 
     public Output<String> getGlobalaccelerator() {
@@ -792,7 +792,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Glue
      * 
      */
-    @InputImport(name="glue")
+    @Import(name="glue")
       private final @Nullable Output<String> glue;
 
     public Output<String> getGlue() {
@@ -803,7 +803,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS IoT Greengrass
      * 
      */
-    @InputImport(name="greengrass")
+    @Import(name="greengrass")
       private final @Nullable Output<String> greengrass;
 
     public Output<String> getGreengrass() {
@@ -814,7 +814,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS GuardDuty
      * 
      */
-    @InputImport(name="guardduty")
+    @Import(name="guardduty")
       private final @Nullable Output<String> guardduty;
 
     public Output<String> getGuardduty() {
@@ -825,7 +825,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Identity and Access Management
      * 
      */
-    @InputImport(name="iam")
+    @Import(name="iam")
       private final @Nullable Output<String> iam;
 
     public Output<String> getIam() {
@@ -836,7 +836,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Single Sign-On (SSO) Identity Store
      * 
      */
-    @InputImport(name="identitystore")
+    @Import(name="identitystore")
       private final @Nullable Output<String> identitystore;
 
     public Output<String> getIdentitystore() {
@@ -847,7 +847,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Image Builder
      * 
      */
-    @InputImport(name="imagebuilder")
+    @Import(name="imagebuilder")
       private final @Nullable Output<String> imagebuilder;
 
     public Output<String> getImagebuilder() {
@@ -858,7 +858,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Inspector
      * 
      */
-    @InputImport(name="inspector")
+    @Import(name="inspector")
       private final @Nullable Output<String> inspector;
 
     public Output<String> getInspector() {
@@ -869,7 +869,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS IoT
      * 
      */
-    @InputImport(name="iot")
+    @Import(name="iot")
       private final @Nullable Output<String> iot;
 
     public Output<String> getIot() {
@@ -880,7 +880,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS IoT Analytics
      * 
      */
-    @InputImport(name="iotanalytics")
+    @Import(name="iotanalytics")
       private final @Nullable Output<String> iotanalytics;
 
     public Output<String> getIotanalytics() {
@@ -891,7 +891,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS IoT Events
      * 
      */
-    @InputImport(name="iotevents")
+    @Import(name="iotevents")
       private final @Nullable Output<String> iotevents;
 
     public Output<String> getIotevents() {
@@ -902,7 +902,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Managed Streaming for Apache Kafka (MSK)
      * 
      */
-    @InputImport(name="kafka")
+    @Import(name="kafka")
       private final @Nullable Output<String> kafka;
 
     public Output<String> getKafka() {
@@ -913,7 +913,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Kinesis
      * 
      */
-    @InputImport(name="kinesis")
+    @Import(name="kinesis")
       private final @Nullable Output<String> kinesis;
 
     public Output<String> getKinesis() {
@@ -924,7 +924,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Kinesis Data Analytics
      * 
      */
-    @InputImport(name="kinesisanalytics")
+    @Import(name="kinesisanalytics")
       private final @Nullable Output<String> kinesisanalytics;
 
     public Output<String> getKinesisanalytics() {
@@ -935,7 +935,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Kinesis Data Analytics V2
      * 
      */
-    @InputImport(name="kinesisanalyticsv2")
+    @Import(name="kinesisanalyticsv2")
       private final @Nullable Output<String> kinesisanalyticsv2;
 
     public Output<String> getKinesisanalyticsv2() {
@@ -946,7 +946,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Kinesis Video Streams
      * 
      */
-    @InputImport(name="kinesisvideo")
+    @Import(name="kinesisvideo")
       private final @Nullable Output<String> kinesisvideo;
 
     public Output<String> getKinesisvideo() {
@@ -957,7 +957,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Key Management Service
      * 
      */
-    @InputImport(name="kms")
+    @Import(name="kms")
       private final @Nullable Output<String> kms;
 
     public Output<String> getKms() {
@@ -968,7 +968,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Lake Formation
      * 
      */
-    @InputImport(name="lakeformation")
+    @Import(name="lakeformation")
       private final @Nullable Output<String> lakeformation;
 
     public Output<String> getLakeformation() {
@@ -979,7 +979,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Lambda
      * 
      */
-    @InputImport(name="lambda")
+    @Import(name="lambda")
       private final @Nullable Output<String> lambda;
 
     public Output<String> getLambda() {
@@ -990,7 +990,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Lex
      * 
      */
-    @InputImport(name="lexmodels")
+    @Import(name="lexmodels")
       private final @Nullable Output<String> lexmodels;
 
     public Output<String> getLexmodels() {
@@ -1001,7 +1001,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS License Manager
      * 
      */
-    @InputImport(name="licensemanager")
+    @Import(name="licensemanager")
       private final @Nullable Output<String> licensemanager;
 
     public Output<String> getLicensemanager() {
@@ -1012,7 +1012,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Lightsail
      * 
      */
-    @InputImport(name="lightsail")
+    @Import(name="lightsail")
       private final @Nullable Output<String> lightsail;
 
     public Output<String> getLightsail() {
@@ -1023,7 +1023,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -1034,7 +1034,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Macie
      * 
      */
-    @InputImport(name="macie")
+    @Import(name="macie")
       private final @Nullable Output<String> macie;
 
     public Output<String> getMacie() {
@@ -1045,7 +1045,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Macie V2
      * 
      */
-    @InputImport(name="macie2")
+    @Import(name="macie2")
       private final @Nullable Output<String> macie2;
 
     public Output<String> getMacie2() {
@@ -1056,7 +1056,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Managed Blockchain
      * 
      */
-    @InputImport(name="managedblockchain")
+    @Import(name="managedblockchain")
       private final @Nullable Output<String> managedblockchain;
 
     public Output<String> getManagedblockchain() {
@@ -1067,7 +1067,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Marketplace Catalog
      * 
      */
-    @InputImport(name="marketplacecatalog")
+    @Import(name="marketplacecatalog")
       private final @Nullable Output<String> marketplacecatalog;
 
     public Output<String> getMarketplacecatalog() {
@@ -1078,7 +1078,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS MediaConnect
      * 
      */
-    @InputImport(name="mediaconnect")
+    @Import(name="mediaconnect")
       private final @Nullable Output<String> mediaconnect;
 
     public Output<String> getMediaconnect() {
@@ -1089,7 +1089,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS MediaConvert
      * 
      */
-    @InputImport(name="mediaconvert")
+    @Import(name="mediaconvert")
       private final @Nullable Output<String> mediaconvert;
 
     public Output<String> getMediaconvert() {
@@ -1100,7 +1100,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS MediaLive
      * 
      */
-    @InputImport(name="medialive")
+    @Import(name="medialive")
       private final @Nullable Output<String> medialive;
 
     public Output<String> getMedialive() {
@@ -1111,7 +1111,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS MediaPackage
      * 
      */
-    @InputImport(name="mediapackage")
+    @Import(name="mediapackage")
       private final @Nullable Output<String> mediapackage;
 
     public Output<String> getMediapackage() {
@@ -1122,7 +1122,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Elemental MediaStore container
      * 
      */
-    @InputImport(name="mediastore")
+    @Import(name="mediastore")
       private final @Nullable Output<String> mediastore;
 
     public Output<String> getMediastore() {
@@ -1133,7 +1133,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Elemental MediaStore asset
      * 
      */
-    @InputImport(name="mediastoredata")
+    @Import(name="mediastoredata")
       private final @Nullable Output<String> mediastoredata;
 
     public Output<String> getMediastoredata() {
@@ -1144,7 +1144,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS MemoryDB for Redis
      * 
      */
-    @InputImport(name="memorydb")
+    @Import(name="memorydb")
       private final @Nullable Output<String> memorydb;
 
     public Output<String> getMemorydb() {
@@ -1155,7 +1155,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon MQ
      * 
      */
-    @InputImport(name="mq")
+    @Import(name="mq")
       private final @Nullable Output<String> mq;
 
     public Output<String> getMq() {
@@ -1166,7 +1166,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Managed Workflows for Apache Airflow
      * 
      */
-    @InputImport(name="mwaa")
+    @Import(name="mwaa")
       private final @Nullable Output<String> mwaa;
 
     public Output<String> getMwaa() {
@@ -1177,7 +1177,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Neptune
      * 
      */
-    @InputImport(name="neptune")
+    @Import(name="neptune")
       private final @Nullable Output<String> neptune;
 
     public Output<String> getNeptune() {
@@ -1188,7 +1188,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Network Firewall
      * 
      */
-    @InputImport(name="networkfirewall")
+    @Import(name="networkfirewall")
       private final @Nullable Output<String> networkfirewall;
 
     public Output<String> getNetworkfirewall() {
@@ -1199,7 +1199,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Network Manager
      * 
      */
-    @InputImport(name="networkmanager")
+    @Import(name="networkmanager")
       private final @Nullable Output<String> networkmanager;
 
     public Output<String> getNetworkmanager() {
@@ -1210,7 +1210,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS OpsWorks
      * 
      */
-    @InputImport(name="opsworks")
+    @Import(name="opsworks")
       private final @Nullable Output<String> opsworks;
 
     public Output<String> getOpsworks() {
@@ -1221,7 +1221,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Organizations
      * 
      */
-    @InputImport(name="organizations")
+    @Import(name="organizations")
       private final @Nullable Output<String> organizations;
 
     public Output<String> getOrganizations() {
@@ -1232,7 +1232,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Outposts
      * 
      */
-    @InputImport(name="outposts")
+    @Import(name="outposts")
       private final @Nullable Output<String> outposts;
 
     public Output<String> getOutposts() {
@@ -1243,7 +1243,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Personalize
      * 
      */
-    @InputImport(name="personalize")
+    @Import(name="personalize")
       private final @Nullable Output<String> personalize;
 
     public Output<String> getPersonalize() {
@@ -1254,7 +1254,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Pinpoint
      * 
      */
-    @InputImport(name="pinpoint")
+    @Import(name="pinpoint")
       private final @Nullable Output<String> pinpoint;
 
     public Output<String> getPinpoint() {
@@ -1265,7 +1265,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Web Services Price List Service
      * 
      */
-    @InputImport(name="pricing")
+    @Import(name="pricing")
       private final @Nullable Output<String> pricing;
 
     public Output<String> getPricing() {
@@ -1276,7 +1276,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon QLDB
      * 
      */
-    @InputImport(name="qldb")
+    @Import(name="qldb")
       private final @Nullable Output<String> qldb;
 
     public Output<String> getQldb() {
@@ -1287,7 +1287,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon QuickSight
      * 
      */
-    @InputImport(name="quicksight")
+    @Import(name="quicksight")
       private final @Nullable Output<String> quicksight;
 
     public Output<String> getQuicksight() {
@@ -1298,7 +1298,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Resource Access Manager
      * 
      */
-    @InputImport(name="ram")
+    @Import(name="ram")
       private final @Nullable Output<String> ram;
 
     public Output<String> getRam() {
@@ -1309,7 +1309,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Relational Database Service
      * 
      */
-    @InputImport(name="rds")
+    @Import(name="rds")
       private final @Nullable Output<String> rds;
 
     public Output<String> getRds() {
@@ -1320,7 +1320,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Redshift
      * 
      */
-    @InputImport(name="redshift")
+    @Import(name="redshift")
       private final @Nullable Output<String> redshift;
 
     public Output<String> getRedshift() {
@@ -1331,7 +1331,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Resource Groups
      * 
      */
-    @InputImport(name="resourcegroups")
+    @Import(name="resourcegroups")
       private final @Nullable Output<String> resourcegroups;
 
     public Output<String> getResourcegroups() {
@@ -1342,7 +1342,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Resource Groups Tagging API
      * 
      */
-    @InputImport(name="resourcegroupstaggingapi")
+    @Import(name="resourcegroupstaggingapi")
       private final @Nullable Output<String> resourcegroupstaggingapi;
 
     public Output<String> getResourcegroupstaggingapi() {
@@ -1353,7 +1353,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Route 53
      * 
      */
-    @InputImport(name="route53")
+    @Import(name="route53")
       private final @Nullable Output<String> route53;
 
     public Output<String> getRoute53() {
@@ -1364,7 +1364,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Route 53 Domains
      * 
      */
-    @InputImport(name="route53domains")
+    @Import(name="route53domains")
       private final @Nullable Output<String> route53domains;
 
     public Output<String> getRoute53domains() {
@@ -1375,7 +1375,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Route 53 Recovery Control
      * 
      */
-    @InputImport(name="route53recoverycontrolconfig")
+    @Import(name="route53recoverycontrolconfig")
       private final @Nullable Output<String> route53recoverycontrolconfig;
 
     public Output<String> getRoute53recoverycontrolconfig() {
@@ -1386,7 +1386,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Route 53 Recovery Readiness
      * 
      */
-    @InputImport(name="route53recoveryreadiness")
+    @Import(name="route53recoveryreadiness")
       private final @Nullable Output<String> route53recoveryreadiness;
 
     public Output<String> getRoute53recoveryreadiness() {
@@ -1397,7 +1397,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Route 53 Resolver
      * 
      */
-    @InputImport(name="route53resolver")
+    @Import(name="route53resolver")
       private final @Nullable Output<String> route53resolver;
 
     public Output<String> getRoute53resolver() {
@@ -1408,7 +1408,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Simple Storage Service (S3)
      * 
      */
-    @InputImport(name="s3")
+    @Import(name="s3")
       private final @Nullable Output<String> s3;
 
     public Output<String> getS3() {
@@ -1419,7 +1419,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Simple Storage Service (S3) Control
      * 
      */
-    @InputImport(name="s3control")
+    @Import(name="s3control")
       private final @Nullable Output<String> s3control;
 
     public Output<String> getS3control() {
@@ -1430,7 +1430,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon S3 on Outposts
      * 
      */
-    @InputImport(name="s3outposts")
+    @Import(name="s3outposts")
       private final @Nullable Output<String> s3outposts;
 
     public Output<String> getS3outposts() {
@@ -1441,7 +1441,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS SageMaker
      * 
      */
-    @InputImport(name="sagemaker")
+    @Import(name="sagemaker")
       private final @Nullable Output<String> sagemaker;
 
     public Output<String> getSagemaker() {
@@ -1452,7 +1452,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon EventBridge Schema Registry
      * 
      */
-    @InputImport(name="schemas")
+    @Import(name="schemas")
       private final @Nullable Output<String> schemas;
 
     public Output<String> getSchemas() {
@@ -1463,7 +1463,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon SimpleDB
      * 
      */
-    @InputImport(name="sdb")
+    @Import(name="sdb")
       private final @Nullable Output<String> sdb;
 
     public Output<String> getSdb() {
@@ -1474,7 +1474,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Secrets Manager
      * 
      */
-    @InputImport(name="secretsmanager")
+    @Import(name="secretsmanager")
       private final @Nullable Output<String> secretsmanager;
 
     public Output<String> getSecretsmanager() {
@@ -1485,7 +1485,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Security Hub
      * 
      */
-    @InputImport(name="securityhub")
+    @Import(name="securityhub")
       private final @Nullable Output<String> securityhub;
 
     public Output<String> getSecurityhub() {
@@ -1496,7 +1496,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Serverless Application Repository
      * 
      */
-    @InputImport(name="serverlessrepo")
+    @Import(name="serverlessrepo")
       private final @Nullable Output<String> serverlessrepo;
 
     public Output<String> getServerlessrepo() {
@@ -1507,7 +1507,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Service Catalog
      * 
      */
-    @InputImport(name="servicecatalog")
+    @Import(name="servicecatalog")
       private final @Nullable Output<String> servicecatalog;
 
     public Output<String> getServicecatalog() {
@@ -1518,7 +1518,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Cloud Map
      * 
      */
-    @InputImport(name="servicediscovery")
+    @Import(name="servicediscovery")
       private final @Nullable Output<String> servicediscovery;
 
     public Output<String> getServicediscovery() {
@@ -1529,7 +1529,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Service Quotas
      * 
      */
-    @InputImport(name="servicequotas")
+    @Import(name="servicequotas")
       private final @Nullable Output<String> servicequotas;
 
     public Output<String> getServicequotas() {
@@ -1540,7 +1540,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Simple Email Service (SES)
      * 
      */
-    @InputImport(name="ses")
+    @Import(name="ses")
       private final @Nullable Output<String> ses;
 
     public Output<String> getSes() {
@@ -1551,7 +1551,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Shield Advanced API
      * 
      */
-    @InputImport(name="shield")
+    @Import(name="shield")
       private final @Nullable Output<String> shield;
 
     public Output<String> getShield() {
@@ -1562,7 +1562,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Signer
      * 
      */
-    @InputImport(name="signer")
+    @Import(name="signer")
       private final @Nullable Output<String> signer;
 
     public Output<String> getSigner() {
@@ -1573,7 +1573,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Simple Notification Service (SNS)
      * 
      */
-    @InputImport(name="sns")
+    @Import(name="sns")
       private final @Nullable Output<String> sns;
 
     public Output<String> getSns() {
@@ -1584,7 +1584,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Simple Queue Service (SQS)
      * 
      */
-    @InputImport(name="sqs")
+    @Import(name="sqs")
       private final @Nullable Output<String> sqs;
 
     public Output<String> getSqs() {
@@ -1595,7 +1595,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Systems Manager
      * 
      */
-    @InputImport(name="ssm")
+    @Import(name="ssm")
       private final @Nullable Output<String> ssm;
 
     public Output<String> getSsm() {
@@ -1606,7 +1606,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Single Sign On (SSO)
      * 
      */
-    @InputImport(name="ssoadmin")
+    @Import(name="ssoadmin")
       private final @Nullable Output<String> ssoadmin;
 
     public Output<String> getSsoadmin() {
@@ -1617,7 +1617,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Step Functions
      * 
      */
-    @InputImport(name="stepfunctions")
+    @Import(name="stepfunctions")
       private final @Nullable Output<String> stepfunctions;
 
     public Output<String> getStepfunctions() {
@@ -1628,7 +1628,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Storage Gateway
      * 
      */
-    @InputImport(name="storagegateway")
+    @Import(name="storagegateway")
       private final @Nullable Output<String> storagegateway;
 
     public Output<String> getStoragegateway() {
@@ -1639,7 +1639,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Security Token Service (STS)
      * 
      */
-    @InputImport(name="sts")
+    @Import(name="sts")
       private final @Nullable Output<String> sts;
 
     public Output<String> getSts() {
@@ -1650,7 +1650,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Simple Workflow Service (SWF)
      * 
      */
-    @InputImport(name="swf")
+    @Import(name="swf")
       private final @Nullable Output<String> swf;
 
     public Output<String> getSwf() {
@@ -1661,7 +1661,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon CloudWatch Synthetics
      * 
      */
-    @InputImport(name="synthetics")
+    @Import(name="synthetics")
       private final @Nullable Output<String> synthetics;
 
     public Output<String> getSynthetics() {
@@ -1672,7 +1672,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon Timestream
      * 
      */
-    @InputImport(name="timestreamwrite")
+    @Import(name="timestreamwrite")
       private final @Nullable Output<String> timestreamwrite;
 
     public Output<String> getTimestreamwrite() {
@@ -1683,7 +1683,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS Transfer Family
      * 
      */
-    @InputImport(name="transfer")
+    @Import(name="transfer")
       private final @Nullable Output<String> transfer;
 
     public Output<String> getTransfer() {
@@ -1694,7 +1694,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS WAF Classic
      * 
      */
-    @InputImport(name="waf")
+    @Import(name="waf")
       private final @Nullable Output<String> waf;
 
     public Output<String> getWaf() {
@@ -1705,7 +1705,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS WAF Regional Classic
      * 
      */
-    @InputImport(name="wafregional")
+    @Import(name="wafregional")
       private final @Nullable Output<String> wafregional;
 
     public Output<String> getWafregional() {
@@ -1716,7 +1716,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS WAF V2
      * 
      */
-    @InputImport(name="wafv2")
+    @Import(name="wafv2")
       private final @Nullable Output<String> wafv2;
 
     public Output<String> getWafv2() {
@@ -1727,7 +1727,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon WorkLink
      * 
      */
-    @InputImport(name="worklink")
+    @Import(name="worklink")
       private final @Nullable Output<String> worklink;
 
     public Output<String> getWorklink() {
@@ -1738,7 +1738,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon WorkMail
      * 
      */
-    @InputImport(name="workmail")
+    @Import(name="workmail")
       private final @Nullable Output<String> workmail;
 
     public Output<String> getWorkmail() {
@@ -1749,7 +1749,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for Amazon WorkSpaces
      * 
      */
-    @InputImport(name="workspaces")
+    @Import(name="workspaces")
       private final @Nullable Output<String> workspaces;
 
     public Output<String> getWorkspaces() {
@@ -1760,7 +1760,7 @@ public final class ProviderEndpointArgs extends io.pulumi.resources.ResourceArgs
      * Override the default endpoint for AWS X-Ray
      * 
      */
-    @InputImport(name="xray")
+    @Import(name="xray")
       private final @Nullable Output<String> xray;
 
     public Output<String> getXray() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.composer.inputs.GetEnvironmentConfigDatabaseConfig;
 import io.pulumi.gcp.composer.inputs.GetEnvironmentConfigEncryptionConfig;
 import io.pulumi.gcp.composer.inputs.GetEnvironmentConfigMaintenanceWindow;
@@ -24,105 +24,105 @@ public final class GetEnvironmentConfig extends io.pulumi.resources.InvokeArgs {
 
     public static final GetEnvironmentConfig Empty = new GetEnvironmentConfig();
 
-    @InputImport(name="airflowUri", required=true)
+    @Import(name="airflowUri", required=true)
       private final String airflowUri;
 
     public String getAirflowUri() {
         return this.airflowUri;
     }
 
-    @InputImport(name="dagGcsPrefix", required=true)
+    @Import(name="dagGcsPrefix", required=true)
       private final String dagGcsPrefix;
 
     public String getDagGcsPrefix() {
         return this.dagGcsPrefix;
     }
 
-    @InputImport(name="databaseConfigs", required=true)
+    @Import(name="databaseConfigs", required=true)
       private final List<GetEnvironmentConfigDatabaseConfig> databaseConfigs;
 
     public List<GetEnvironmentConfigDatabaseConfig> getDatabaseConfigs() {
         return this.databaseConfigs;
     }
 
-    @InputImport(name="encryptionConfigs", required=true)
+    @Import(name="encryptionConfigs", required=true)
       private final List<GetEnvironmentConfigEncryptionConfig> encryptionConfigs;
 
     public List<GetEnvironmentConfigEncryptionConfig> getEncryptionConfigs() {
         return this.encryptionConfigs;
     }
 
-    @InputImport(name="environmentSize", required=true)
+    @Import(name="environmentSize", required=true)
       private final String environmentSize;
 
     public String getEnvironmentSize() {
         return this.environmentSize;
     }
 
-    @InputImport(name="gkeCluster", required=true)
+    @Import(name="gkeCluster", required=true)
       private final String gkeCluster;
 
     public String getGkeCluster() {
         return this.gkeCluster;
     }
 
-    @InputImport(name="maintenanceWindows", required=true)
+    @Import(name="maintenanceWindows", required=true)
       private final List<GetEnvironmentConfigMaintenanceWindow> maintenanceWindows;
 
     public List<GetEnvironmentConfigMaintenanceWindow> getMaintenanceWindows() {
         return this.maintenanceWindows;
     }
 
-    @InputImport(name="masterAuthorizedNetworksConfigs", required=true)
+    @Import(name="masterAuthorizedNetworksConfigs", required=true)
       private final List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs;
 
     public List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> getMasterAuthorizedNetworksConfigs() {
         return this.masterAuthorizedNetworksConfigs;
     }
 
-    @InputImport(name="nodeConfigs", required=true)
+    @Import(name="nodeConfigs", required=true)
       private final List<GetEnvironmentConfigNodeConfig> nodeConfigs;
 
     public List<GetEnvironmentConfigNodeConfig> getNodeConfigs() {
         return this.nodeConfigs;
     }
 
-    @InputImport(name="nodeCount", required=true)
+    @Import(name="nodeCount", required=true)
       private final Integer nodeCount;
 
     public Integer getNodeCount() {
         return this.nodeCount;
     }
 
-    @InputImport(name="privateEnvironmentConfigs", required=true)
+    @Import(name="privateEnvironmentConfigs", required=true)
       private final List<GetEnvironmentConfigPrivateEnvironmentConfig> privateEnvironmentConfigs;
 
     public List<GetEnvironmentConfigPrivateEnvironmentConfig> getPrivateEnvironmentConfigs() {
         return this.privateEnvironmentConfigs;
     }
 
-    @InputImport(name="softwareConfigs", required=true)
+    @Import(name="softwareConfigs", required=true)
       private final List<GetEnvironmentConfigSoftwareConfig> softwareConfigs;
 
     public List<GetEnvironmentConfigSoftwareConfig> getSoftwareConfigs() {
         return this.softwareConfigs;
     }
 
-    @InputImport(name="webServerConfigs", required=true)
+    @Import(name="webServerConfigs", required=true)
       private final List<GetEnvironmentConfigWebServerConfig> webServerConfigs;
 
     public List<GetEnvironmentConfigWebServerConfig> getWebServerConfigs() {
         return this.webServerConfigs;
     }
 
-    @InputImport(name="webServerNetworkAccessControls", required=true)
+    @Import(name="webServerNetworkAccessControls", required=true)
       private final List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls;
 
     public List<GetEnvironmentConfigWebServerNetworkAccessControl> getWebServerNetworkAccessControls() {
         return this.webServerNetworkAccessControls;
     }
 
-    @InputImport(name="workloadsConfigs", required=true)
+    @Import(name="workloadsConfigs", required=true)
       private final List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs;
 
     public List<GetEnvironmentConfigWorkloadsConfig> getWorkloadsConfigs() {

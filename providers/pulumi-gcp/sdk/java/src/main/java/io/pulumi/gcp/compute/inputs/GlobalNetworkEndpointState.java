@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GlobalNetworkEndpointState extends io.pulumi.resources.Resour
      * This can only be specified when network_endpoint_type of the NEG is INTERNET_FQDN_PORT.
      * 
      */
-    @InputImport(name="fqdn")
+    @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
     public Output<String> getFqdn() {
@@ -31,7 +31,7 @@ public final class GlobalNetworkEndpointState extends io.pulumi.resources.Resour
      * The global network endpoint group this endpoint is part of.
      * 
      */
-    @InputImport(name="globalNetworkEndpointGroup")
+    @Import(name="globalNetworkEndpointGroup")
       private final @Nullable Output<String> globalNetworkEndpointGroup;
 
     public Output<String> getGlobalNetworkEndpointGroup() {
@@ -42,7 +42,7 @@ public final class GlobalNetworkEndpointState extends io.pulumi.resources.Resour
      * IPv4 address external endpoint.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -53,7 +53,7 @@ public final class GlobalNetworkEndpointState extends io.pulumi.resources.Resour
      * Port number of the external endpoint.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -65,7 +65,7 @@ public final class GlobalNetworkEndpointState extends io.pulumi.resources.Resour
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

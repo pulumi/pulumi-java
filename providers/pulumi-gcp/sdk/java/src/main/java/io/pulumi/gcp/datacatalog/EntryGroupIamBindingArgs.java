@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.datacatalog.inputs.EntryGroupIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class EntryGroupIamBindingArgs extends io.pulumi.resources.Resource
 
     public static final EntryGroupIamBindingArgs Empty = new EntryGroupIamBindingArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<EntryGroupIamBindingConditionArgs> condition;
 
     public Output<EntryGroupIamBindingConditionArgs> getCondition() {
@@ -27,14 +27,14 @@ public final class EntryGroupIamBindingArgs extends io.pulumi.resources.Resource
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="entryGroup", required=true)
+    @Import(name="entryGroup", required=true)
       private final Output<String> entryGroup;
 
     public Output<String> getEntryGroup() {
         return this.entryGroup;
     }
 
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -46,14 +46,14 @@ public final class EntryGroupIamBindingArgs extends io.pulumi.resources.Resource
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -66,7 +66,7 @@ public final class EntryGroupIamBindingArgs extends io.pulumi.resources.Resource
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

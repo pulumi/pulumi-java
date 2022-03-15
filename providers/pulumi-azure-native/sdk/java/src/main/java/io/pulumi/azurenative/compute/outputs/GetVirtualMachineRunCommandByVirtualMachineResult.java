@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.RunCommandInputParameterResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineRunCommandInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineRunCommandScriptSourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualMachineRunCommandByVirtualMachineResult {
     /**
      * Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.
@@ -99,24 +99,24 @@ public final class GetVirtualMachineRunCommandByVirtualMachineResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetVirtualMachineRunCommandByVirtualMachineResult(
-        @OutputCustomType.Parameter("asyncExecution") @Nullable Boolean asyncExecution,
-        @OutputCustomType.Parameter("errorBlobUri") @Nullable String errorBlobUri,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceView") VirtualMachineRunCommandInstanceViewResponse instanceView,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputBlobUri") @Nullable String outputBlobUri,
-        @OutputCustomType.Parameter("parameters") @Nullable List<RunCommandInputParameterResponse> parameters,
-        @OutputCustomType.Parameter("protectedParameters") @Nullable List<RunCommandInputParameterResponse> protectedParameters,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("runAsPassword") @Nullable String runAsPassword,
-        @OutputCustomType.Parameter("runAsUser") @Nullable String runAsUser,
-        @OutputCustomType.Parameter("source") @Nullable VirtualMachineRunCommandScriptSourceResponse source,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("asyncExecution") @Nullable Boolean asyncExecution,
+        @CustomType.Parameter("errorBlobUri") @Nullable String errorBlobUri,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceView") VirtualMachineRunCommandInstanceViewResponse instanceView,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputBlobUri") @Nullable String outputBlobUri,
+        @CustomType.Parameter("parameters") @Nullable List<RunCommandInputParameterResponse> parameters,
+        @CustomType.Parameter("protectedParameters") @Nullable List<RunCommandInputParameterResponse> protectedParameters,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("runAsPassword") @Nullable String runAsPassword,
+        @CustomType.Parameter("runAsUser") @Nullable String runAsUser,
+        @CustomType.Parameter("source") @Nullable VirtualMachineRunCommandScriptSourceResponse source,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds,
+        @CustomType.Parameter("type") String type) {
         this.asyncExecution = asyncExecution;
         this.errorBlobUri = errorBlobUri;
         this.id = id;

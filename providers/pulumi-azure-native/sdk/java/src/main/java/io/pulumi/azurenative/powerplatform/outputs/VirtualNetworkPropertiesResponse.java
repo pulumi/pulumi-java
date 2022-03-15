@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.powerplatform.outputs;
 
 import io.pulumi.azurenative.powerplatform.outputs.SubnetPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNetworkPropertiesResponse {
     /**
      * Uri of the virtual network.
@@ -23,10 +23,10 @@ public final class VirtualNetworkPropertiesResponse {
      */
     private final @Nullable SubnetPropertiesResponse subnet;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNetworkPropertiesResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("subnet") @Nullable SubnetPropertiesResponse subnet) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("subnet") @Nullable SubnetPropertiesResponse subnet) {
         this.id = id;
         this.subnet = subnet;
     }

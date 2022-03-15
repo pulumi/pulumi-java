@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.enums.RuleGroupLabelMatchScope;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupLabelMatchStatement {
     private final String key;
     private final RuleGroupLabelMatchScope scope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupLabelMatchStatement(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("scope") RuleGroupLabelMatchScope scope) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("scope") RuleGroupLabelMatchScope scope) {
         this.key = key;
         this.scope = scope;
     }

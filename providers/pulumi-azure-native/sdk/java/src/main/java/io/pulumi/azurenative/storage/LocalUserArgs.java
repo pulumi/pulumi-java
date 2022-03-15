@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage;
 import io.pulumi.azurenative.storage.inputs.PermissionScopeArgs;
 import io.pulumi.azurenative.storage.inputs.SshPublicKeyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -33,7 +33,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether shared key exists. Set it to false to remove existing shared key.
      * 
      */
-    @InputImport(name="hasSharedKey")
+    @Import(name="hasSharedKey")
       private final @Nullable Output<Boolean> hasSharedKey;
 
     public Output<Boolean> getHasSharedKey() {
@@ -44,7 +44,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether ssh key exists. Set it to false to remove existing SSH key.
      * 
      */
-    @InputImport(name="hasSshKey")
+    @Import(name="hasSshKey")
       private final @Nullable Output<Boolean> hasSshKey;
 
     public Output<Boolean> getHasSshKey() {
@@ -55,7 +55,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates whether ssh password exists. Set it to false to remove existing SSH password.
      * 
      */
-    @InputImport(name="hasSshPassword")
+    @Import(name="hasSshPassword")
       private final @Nullable Output<Boolean> hasSshPassword;
 
     public Output<Boolean> getHasSshPassword() {
@@ -66,7 +66,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * Optional, local user home directory.
      * 
      */
-    @InputImport(name="homeDirectory")
+    @Import(name="homeDirectory")
       private final @Nullable Output<String> homeDirectory;
 
     public Output<String> getHomeDirectory() {
@@ -77,7 +77,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * The permission scopes of the local user.
      * 
      */
-    @InputImport(name="permissionScopes")
+    @Import(name="permissionScopes")
       private final @Nullable Output<List<PermissionScopeArgs>> permissionScopes;
 
     public Output<List<PermissionScopeArgs>> getPermissionScopes() {
@@ -88,7 +88,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -99,7 +99,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * Optional, local user ssh authorized keys for SFTP.
      * 
      */
-    @InputImport(name="sshAuthorizedKeys")
+    @Import(name="sshAuthorizedKeys")
       private final @Nullable Output<List<SshPublicKeyArgs>> sshAuthorizedKeys;
 
     public Output<List<SshPublicKeyArgs>> getSshAuthorizedKeys() {
@@ -110,7 +110,7 @@ public final class LocalUserArgs extends io.pulumi.resources.ResourceArgs {
      * The name of local user. The username must contain lowercase letters and numbers only. It must be unique only within the storage account.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

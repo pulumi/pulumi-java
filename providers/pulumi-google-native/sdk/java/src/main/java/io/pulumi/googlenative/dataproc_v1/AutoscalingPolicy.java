@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dataproc_v1.AutoscalingPolicyArgs;
@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="google-native:dataproc/v1:AutoscalingPolicy")
 public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="basicAlgorithm", type=BasicAutoscalingAlgorithmResponse.class, parameters={})
+    @Export(name="basicAlgorithm", type=BasicAutoscalingAlgorithmResponse.class, parameters={})
     private Output<BasicAutoscalingAlgorithmResponse> basicAlgorithm;
 
     public Output<BasicAutoscalingAlgorithmResponse> getBasicAlgorithm() {
@@ -31,7 +31,7 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
      * Optional. The labels to associate with this autoscaling policy. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with an autoscaling policy.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -45,7 +45,7 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
      * The "resource name" of the autoscaling policy, as described in https://cloud.google.com/apis/design/resource_names. For projects.regions.autoscalingPolicies, the resource name of the policy has the following format: projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For projects.locations.autoscalingPolicies, the resource name of the policy has the following format: projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -59,7 +59,7 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
      * Optional. Describes how the autoscaler will operate for secondary workers.
      * 
      */
-    @OutputExport(name="secondaryWorkerConfig", type=InstanceGroupAutoscalingPolicyConfigResponse.class, parameters={})
+    @Export(name="secondaryWorkerConfig", type=InstanceGroupAutoscalingPolicyConfigResponse.class, parameters={})
     private Output<InstanceGroupAutoscalingPolicyConfigResponse> secondaryWorkerConfig;
 
     /**
@@ -73,7 +73,7 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
      * Describes how the autoscaler will operate for primary workers.
      * 
      */
-    @OutputExport(name="workerConfig", type=InstanceGroupAutoscalingPolicyConfigResponse.class, parameters={})
+    @Export(name="workerConfig", type=InstanceGroupAutoscalingPolicyConfigResponse.class, parameters={})
     private Output<InstanceGroupAutoscalingPolicyConfigResponse> workerConfig;
 
     /**

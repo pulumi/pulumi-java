@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet {
     /**
      * The name of a Cloud Storage bucket.
@@ -31,11 +31,11 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      */
     private final @Nullable List<String> includeRegexes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("excludeRegexes") @Nullable List<String> excludeRegexes,
-        @OutputCustomType.Parameter("includeRegexes") @Nullable List<String> includeRegexes) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("excludeRegexes") @Nullable List<String> excludeRegexes,
+        @CustomType.Parameter("includeRegexes") @Nullable List<String> includeRegexes) {
         this.bucketName = bucketName;
         this.excludeRegexes = excludeRegexes;
         this.includeRegexes = includeRegexes;

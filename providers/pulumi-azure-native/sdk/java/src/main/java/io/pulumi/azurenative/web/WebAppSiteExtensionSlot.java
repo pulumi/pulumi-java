@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppSiteExtensionSlotArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -33,7 +33,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * List of authors.
      * 
      */
-    @OutputExport(name="authors", type=List.class, parameters={String.class})
+    @Export(name="authors", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> authors;
 
     /**
@@ -47,7 +47,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * Site Extension comment.
      * 
      */
-    @OutputExport(name="comment", type=String.class, parameters={})
+    @Export(name="comment", type=String.class, parameters={})
     private Output</* @Nullable */ String> comment;
 
     /**
@@ -61,7 +61,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * Detailed description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -75,7 +75,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * Count of downloads.
      * 
      */
-    @OutputExport(name="downloadCount", type=Integer.class, parameters={})
+    @Export(name="downloadCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> downloadCount;
 
     /**
@@ -89,7 +89,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * Site extension ID.
      * 
      */
-    @OutputExport(name="extensionId", type=String.class, parameters={})
+    @Export(name="extensionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> extensionId;
 
     /**
@@ -103,7 +103,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * Site extension type.
      * 
      */
-    @OutputExport(name="extensionType", type=String.class, parameters={})
+    @Export(name="extensionType", type=String.class, parameters={})
     private Output</* @Nullable */ String> extensionType;
 
     /**
@@ -117,7 +117,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * Extension URL.
      * 
      */
-    @OutputExport(name="extensionUrl", type=String.class, parameters={})
+    @Export(name="extensionUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> extensionUrl;
 
     /**
@@ -131,7 +131,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * Feed URL.
      * 
      */
-    @OutputExport(name="feedUrl", type=String.class, parameters={})
+    @Export(name="feedUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> feedUrl;
 
     /**
@@ -145,7 +145,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * Icon URL.
      * 
      */
-    @OutputExport(name="iconUrl", type=String.class, parameters={})
+    @Export(name="iconUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> iconUrl;
 
     /**
@@ -159,7 +159,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * Installed timestamp.
      * 
      */
-    @OutputExport(name="installedDateTime", type=String.class, parameters={})
+    @Export(name="installedDateTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> installedDateTime;
 
     /**
@@ -173,7 +173,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * Installer command line parameters.
      * 
      */
-    @OutputExport(name="installerCommandLineParams", type=String.class, parameters={})
+    @Export(name="installerCommandLineParams", type=String.class, parameters={})
     private Output</* @Nullable */ String> installerCommandLineParams;
 
     /**
@@ -187,7 +187,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -201,7 +201,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * License URL.
      * 
      */
-    @OutputExport(name="licenseUrl", type=String.class, parameters={})
+    @Export(name="licenseUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> licenseUrl;
 
     /**
@@ -215,7 +215,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * <code>true</code> if the local version is the latest version; <code>false</code> otherwise.
      * 
      */
-    @OutputExport(name="localIsLatestVersion", type=Boolean.class, parameters={})
+    @Export(name="localIsLatestVersion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> localIsLatestVersion;
 
     /**
@@ -229,7 +229,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * Local path.
      * 
      */
-    @OutputExport(name="localPath", type=String.class, parameters={})
+    @Export(name="localPath", type=String.class, parameters={})
     private Output</* @Nullable */ String> localPath;
 
     /**
@@ -243,7 +243,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -257,7 +257,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * Project URL.
      * 
      */
-    @OutputExport(name="projectUrl", type=String.class, parameters={})
+    @Export(name="projectUrl", type=String.class, parameters={})
     private Output</* @Nullable */ String> projectUrl;
 
     /**
@@ -271,7 +271,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * Provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -285,7 +285,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * Published timestamp.
      * 
      */
-    @OutputExport(name="publishedDateTime", type=String.class, parameters={})
+    @Export(name="publishedDateTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> publishedDateTime;
 
     /**
@@ -299,7 +299,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * Summary description.
      * 
      */
-    @OutputExport(name="summary", type=String.class, parameters={})
+    @Export(name="summary", type=String.class, parameters={})
     private Output</* @Nullable */ String> summary;
 
     /**
@@ -309,7 +309,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
     public Output</* @Nullable */ String> getSummary() {
         return this.summary;
     }
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output</* @Nullable */ String> title;
 
     public Output</* @Nullable */ String> getTitle() {
@@ -319,7 +319,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -333,7 +333,7 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
      * Version information.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output</* @Nullable */ String> version;
 
     /**

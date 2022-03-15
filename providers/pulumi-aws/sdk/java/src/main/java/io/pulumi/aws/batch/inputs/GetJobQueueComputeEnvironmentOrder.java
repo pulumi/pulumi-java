@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.batch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,14 +13,14 @@ public final class GetJobQueueComputeEnvironmentOrder extends io.pulumi.resource
 
     public static final GetJobQueueComputeEnvironmentOrder Empty = new GetJobQueueComputeEnvironmentOrder();
 
-    @InputImport(name="computeEnvironment", required=true)
+    @Import(name="computeEnvironment", required=true)
       private final String computeEnvironment;
 
     public String getComputeEnvironment() {
         return this.computeEnvironment;
     }
 
-    @InputImport(name="order", required=true)
+    @Import(name="order", required=true)
       private final Integer order;
 
     public Integer getOrder() {

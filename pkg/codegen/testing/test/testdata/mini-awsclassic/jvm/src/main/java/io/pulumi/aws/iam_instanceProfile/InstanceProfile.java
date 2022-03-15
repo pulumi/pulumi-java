@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iam_instanceProfile.InstanceProfileArgs;
 import io.pulumi.aws.iam_instanceProfile.inputs.InstanceProfileState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public class InstanceProfile extends io.pulumi.resources.CustomResource {
      * Name of the role to add to the profile.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output</* @Nullable */ String> role;
 
     /**

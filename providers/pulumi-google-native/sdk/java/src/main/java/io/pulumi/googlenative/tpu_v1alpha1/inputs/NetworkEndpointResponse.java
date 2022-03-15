@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class NetworkEndpointResponse extends io.pulumi.resources.InvokeArg
      * The IP address of this network endpoint.
      * 
      */
-    @InputImport(name="ipAddress", required=true)
+    @Import(name="ipAddress", required=true)
       private final String ipAddress;
 
     public String getIpAddress() {
@@ -32,7 +32,7 @@ public final class NetworkEndpointResponse extends io.pulumi.resources.InvokeArg
      * The port of this network endpoint.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {

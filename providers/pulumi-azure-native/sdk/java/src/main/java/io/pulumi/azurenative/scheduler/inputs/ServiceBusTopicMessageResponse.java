@@ -5,7 +5,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.azurenative.scheduler.inputs.ServiceBusAuthenticationResponse;
 import io.pulumi.azurenative.scheduler.inputs.ServiceBusBrokeredMessagePropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ServiceBusTopicMessageResponse extends io.pulumi.resources.In
      * Gets or sets the Service Bus authentication.
      * 
      */
-    @InputImport(name="authentication")
+    @Import(name="authentication")
       private final @Nullable ServiceBusAuthenticationResponse authentication;
 
     public Optional<ServiceBusAuthenticationResponse> getAuthentication() {
@@ -32,7 +32,7 @@ public final class ServiceBusTopicMessageResponse extends io.pulumi.resources.In
      * Gets or sets the brokered message properties.
      * 
      */
-    @InputImport(name="brokeredMessageProperties")
+    @Import(name="brokeredMessageProperties")
       private final @Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties;
 
     public Optional<ServiceBusBrokeredMessagePropertiesResponse> getBrokeredMessageProperties() {
@@ -43,7 +43,7 @@ public final class ServiceBusTopicMessageResponse extends io.pulumi.resources.In
      * Gets or sets the custom message properties.
      * 
      */
-    @InputImport(name="customMessageProperties")
+    @Import(name="customMessageProperties")
       private final @Nullable Map<String,String> customMessageProperties;
 
     public Map<String,String> getCustomMessageProperties() {
@@ -54,7 +54,7 @@ public final class ServiceBusTopicMessageResponse extends io.pulumi.resources.In
      * Gets or sets the message.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
@@ -65,7 +65,7 @@ public final class ServiceBusTopicMessageResponse extends io.pulumi.resources.In
      * Gets or sets the namespace.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable String namespace;
 
     public Optional<String> getNamespace() {
@@ -76,7 +76,7 @@ public final class ServiceBusTopicMessageResponse extends io.pulumi.resources.In
      * Gets or sets the topic path.
      * 
      */
-    @InputImport(name="topicPath")
+    @Import(name="topicPath")
       private final @Nullable String topicPath;
 
     public Optional<String> getTopicPath() {
@@ -87,7 +87,7 @@ public final class ServiceBusTopicMessageResponse extends io.pulumi.resources.In
      * Gets or sets the transport type.
      * 
      */
-    @InputImport(name="transportType")
+    @Import(name="transportType")
       private final @Nullable String transportType;
 
     public Optional<String> getTransportType() {

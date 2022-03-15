@@ -4,7 +4,7 @@
 package io.pulumi.aws.directoryservice;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class LogServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The id of directory.
      * 
      */
-    @InputImport(name="directoryId", required=true)
+    @Import(name="directoryId", required=true)
       private final Output<String> directoryId;
 
     public Output<String> getDirectoryId() {
@@ -28,7 +28,7 @@ public final class LogServiceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the cloudwatch log group to which the logs should be published. The log group should be already created and the directory service principal should be provided with required permission to create stream and publish logs. Changing this value would delete the current subscription and create a new one. A directory can only have one log subscription at a time.
      * 
      */
-    @InputImport(name="logGroupName", required=true)
+    @Import(name="logGroupName", required=true)
       private final Output<String> logGroupName;
 
     public Output<String> getLogGroupName() {

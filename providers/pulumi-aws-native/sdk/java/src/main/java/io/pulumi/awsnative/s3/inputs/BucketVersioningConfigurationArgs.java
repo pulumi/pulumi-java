@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketVersioningConfigurationStatus;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class BucketVersioningConfigurationArgs extends io.pulumi.resources
      * The versioning state of the bucket.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<BucketVersioningConfigurationStatus> status;
 
     public Output<BucketVersioningConfigurationStatus> getStatus() {

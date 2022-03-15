@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceParametersAthena {
     /**
      * The work-group to which to connect.
@@ -17,8 +17,8 @@ public final class DataSourceParametersAthena {
      */
     private final @Nullable String workGroup;
 
-    @OutputCustomType.Constructor
-    private DataSourceParametersAthena(@OutputCustomType.Parameter("workGroup") @Nullable String workGroup) {
+    @CustomType.Constructor
+    private DataSourceParametersAthena(@CustomType.Parameter("workGroup") @Nullable String workGroup) {
         this.workGroup = workGroup;
     }
 

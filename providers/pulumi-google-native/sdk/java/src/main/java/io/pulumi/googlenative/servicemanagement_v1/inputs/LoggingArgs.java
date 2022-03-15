@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.LoggingDestinationArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
      * Logging configurations for sending logs to the consumer project. There can be multiple consumer destinations, each one must have a different monitored resource type. A log can be used in at most one consumer destination.
      * 
      */
-    @InputImport(name="consumerDestinations")
+    @Import(name="consumerDestinations")
       private final @Nullable Output<List<LoggingDestinationArgs>> consumerDestinations;
 
     public Output<List<LoggingDestinationArgs>> getConsumerDestinations() {
@@ -34,7 +34,7 @@ public final class LoggingArgs extends io.pulumi.resources.ResourceArgs {
      * Logging configurations for sending logs to the producer project. There can be multiple producer destinations, each one must have a different monitored resource type. A log can be used in at most one producer destination.
      * 
      */
-    @InputImport(name="producerDestinations")
+    @Import(name="producerDestinations")
       private final @Nullable Output<List<LoggingDestinationArgs>> producerDestinations;
 
     public Output<List<LoggingDestinationArgs>> getProducerDestinations() {

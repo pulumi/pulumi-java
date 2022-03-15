@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudiot_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudiot_v1.RegistryArgs;
@@ -27,7 +27,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The credentials used to verify the device credentials. No more than 10 credentials can be bound to a single registry at a time. The verification process occurs at the time of device creation or update. If this field is empty, no verification is performed. Otherwise, the credentials of a newly created device or added credentials of an updated device should be signed with one of these registry credentials. Note, however, that existing devices will never be affected by modifications to this list of credentials: after a device has been successfully created in a registry, it should be able to connect even if its registry credentials are revoked, deleted, or modified.
      * 
      */
-    @OutputExport(name="credentials", type=List.class, parameters={RegistryCredentialResponse.class})
+    @Export(name="credentials", type=List.class, parameters={RegistryCredentialResponse.class})
     private Output<List<RegistryCredentialResponse>> credentials;
 
     /**
@@ -41,7 +41,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The configuration for notification of telemetry events received from the device. All telemetry events that were successfully published by the device and acknowledged by Cloud IoT Core are guaranteed to be delivered to Cloud Pub/Sub. If multiple configurations match a message, only the first matching configuration is used. If you try to publish a device telemetry event using MQTT without specifying a Cloud Pub/Sub topic for the device's registry, the connection closes automatically. If you try to do so using an HTTP connection, an error is returned. Up to 10 configurations may be provided.
      * 
      */
-    @OutputExport(name="eventNotificationConfigs", type=List.class, parameters={EventNotificationConfigResponse.class})
+    @Export(name="eventNotificationConfigs", type=List.class, parameters={EventNotificationConfigResponse.class})
     private Output<List<EventNotificationConfigResponse>> eventNotificationConfigs;
 
     /**
@@ -55,7 +55,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The DeviceService (HTTP) configuration for this device registry.
      * 
      */
-    @OutputExport(name="httpConfig", type=HttpConfigResponse.class, parameters={})
+    @Export(name="httpConfig", type=HttpConfigResponse.class, parameters={})
     private Output<HttpConfigResponse> httpConfig;
 
     /**
@@ -69,7 +69,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * **Beta Feature** The default logging verbosity for activity from devices in this registry. The verbosity level can be overridden by Device.log_level.
      * 
      */
-    @OutputExport(name="logLevel", type=String.class, parameters={})
+    @Export(name="logLevel", type=String.class, parameters={})
     private Output<String> logLevel;
 
     /**
@@ -83,7 +83,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The MQTT configuration for this device registry.
      * 
      */
-    @OutputExport(name="mqttConfig", type=MqttConfigResponse.class, parameters={})
+    @Export(name="mqttConfig", type=MqttConfigResponse.class, parameters={})
     private Output<MqttConfigResponse> mqttConfig;
 
     /**
@@ -97,7 +97,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The resource path name. For example, `projects/example-project/locations/us-central1/registries/my-registry`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -111,7 +111,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The configuration for notification of new states received from the device. State updates are guaranteed to be stored in the state history, but notifications to Cloud Pub/Sub are not guaranteed. For example, if permissions are misconfigured or the specified topic doesn't exist, no notification will be published but the state will still be stored in Cloud IoT Core.
      * 
      */
-    @OutputExport(name="stateNotificationConfig", type=StateNotificationConfigResponse.class, parameters={})
+    @Export(name="stateNotificationConfig", type=StateNotificationConfigResponse.class, parameters={})
     private Output<StateNotificationConfigResponse> stateNotificationConfig;
 
     /**

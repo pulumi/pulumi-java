@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,7 +13,7 @@ public final class GetServiceTemplateSpecContainerPort extends io.pulumi.resourc
 
     public static final GetServiceTemplateSpecContainerPort Empty = new GetServiceTemplateSpecContainerPort();
 
-    @InputImport(name="containerPort", required=true)
+    @Import(name="containerPort", required=true)
       private final Integer containerPort;
 
     public Integer getContainerPort() {
@@ -24,14 +24,14 @@ public final class GetServiceTemplateSpecContainerPort extends io.pulumi.resourc
      * The name of the Cloud Run Service.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final String protocol;
 
     public String getProtocol() {

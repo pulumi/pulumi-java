@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FlavorDataArgs extends io.pulumi.resources.ResourceArgs {
      * Model flavor-specific data.
      * 
      */
-    @InputImport(name="data")
+    @Import(name="data")
       private final @Nullable Output<Map<String,String>> data;
 
     public Output<Map<String,String>> getData() {

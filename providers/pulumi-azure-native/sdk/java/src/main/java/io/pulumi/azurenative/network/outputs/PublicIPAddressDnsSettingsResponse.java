@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PublicIPAddressDnsSettingsResponse {
     /**
      * The domain name label. The concatenation of the domain name label and the regionalized DNS zone make up the fully qualified domain name associated with the public IP address. If a domain name label is specified, an A DNS record is created for the public IP in the Microsoft Azure DNS system.
@@ -27,11 +27,11 @@ public final class PublicIPAddressDnsSettingsResponse {
      */
     private final @Nullable String reverseFqdn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PublicIPAddressDnsSettingsResponse(
-        @OutputCustomType.Parameter("domainNameLabel") @Nullable String domainNameLabel,
-        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
-        @OutputCustomType.Parameter("reverseFqdn") @Nullable String reverseFqdn) {
+        @CustomType.Parameter("domainNameLabel") @Nullable String domainNameLabel,
+        @CustomType.Parameter("fqdn") @Nullable String fqdn,
+        @CustomType.Parameter("reverseFqdn") @Nullable String reverseFqdn) {
         this.domainNameLabel = domainNameLabel;
         this.fqdn = fqdn;
         this.reverseFqdn = reverseFqdn;

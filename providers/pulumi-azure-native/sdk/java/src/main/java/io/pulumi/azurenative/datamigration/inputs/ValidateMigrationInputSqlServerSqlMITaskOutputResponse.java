@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.DatabaseBackupInfoResponse;
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
      * Errors associated with the BackupFolder path
      * 
      */
-    @InputImport(name="backupFolderErrors", required=true)
+    @Import(name="backupFolderErrors", required=true)
       private final List<ReportableExceptionResponse> backupFolderErrors;
 
     public List<ReportableExceptionResponse> getBackupFolderErrors() {
@@ -36,7 +36,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
      * Errors associated with backup share user name and password credentials
      * 
      */
-    @InputImport(name="backupShareCredentialsErrors", required=true)
+    @Import(name="backupShareCredentialsErrors", required=true)
       private final List<ReportableExceptionResponse> backupShareCredentialsErrors;
 
     public List<ReportableExceptionResponse> getBackupShareCredentialsErrors() {
@@ -47,7 +47,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
      * Errors associated with the storage account provided.
      * 
      */
-    @InputImport(name="backupStorageAccountErrors", required=true)
+    @Import(name="backupStorageAccountErrors", required=true)
       private final List<ReportableExceptionResponse> backupStorageAccountErrors;
 
     public List<ReportableExceptionResponse> getBackupStorageAccountErrors() {
@@ -58,7 +58,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
      * Information about backup files when existing backup mode is used.
      * 
      */
-    @InputImport(name="databaseBackupInfo")
+    @Import(name="databaseBackupInfo")
       private final @Nullable DatabaseBackupInfoResponse databaseBackupInfo;
 
     public Optional<DatabaseBackupInfoResponse> getDatabaseBackupInfo() {
@@ -69,7 +69,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
      * Errors associated with existing backup files.
      * 
      */
-    @InputImport(name="existingBackupErrors", required=true)
+    @Import(name="existingBackupErrors", required=true)
       private final List<ReportableExceptionResponse> existingBackupErrors;
 
     public List<ReportableExceptionResponse> getExistingBackupErrors() {
@@ -80,7 +80,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
      * Result identifier
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -91,7 +91,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
      * Name of database
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -102,7 +102,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
      * Errors associated with the RestoreDatabaseName
      * 
      */
-    @InputImport(name="restoreDatabaseNameErrors", required=true)
+    @Import(name="restoreDatabaseNameErrors", required=true)
       private final List<ReportableExceptionResponse> restoreDatabaseNameErrors;
 
     public List<ReportableExceptionResponse> getRestoreDatabaseNameErrors() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2LDiversityEquivalenceClassResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends i
      * Total number of equivalence classes in this bucket.
      * 
      */
-    @InputImport(name="bucketSize", required=true)
+    @Import(name="bucketSize", required=true)
       private final String bucketSize;
 
     public String getBucketSize() {
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends i
      * Total number of distinct equivalence classes in this bucket.
      * 
      */
-    @InputImport(name="bucketValueCount", required=true)
+    @Import(name="bucketValueCount", required=true)
       private final String bucketValueCount;
 
     public String getBucketValueCount() {
@@ -44,7 +44,7 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends i
      * Sample of equivalence classes in this bucket. The total number of classes returned per bucket is capped at 20.
      * 
      */
-    @InputImport(name="bucketValues", required=true)
+    @Import(name="bucketValues", required=true)
       private final List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues;
 
     public List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> getBucketValues() {
@@ -55,7 +55,7 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends i
      * Lower bound on the sensitive value frequencies of the equivalence classes in this bucket.
      * 
      */
-    @InputImport(name="sensitiveValueFrequencyLowerBound", required=true)
+    @Import(name="sensitiveValueFrequencyLowerBound", required=true)
       private final String sensitiveValueFrequencyLowerBound;
 
     public String getSensitiveValueFrequencyLowerBound() {
@@ -66,7 +66,7 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse extends i
      * Upper bound on the sensitive value frequencies of the equivalence classes in this bucket.
      * 
      */
-    @InputImport(name="sensitiveValueFrequencyUpperBound", required=true)
+    @Import(name="sensitiveValueFrequencyUpperBound", required=true)
       private final String sensitiveValueFrequencyUpperBound;
 
     public String getSensitiveValueFrequencyUpperBound() {

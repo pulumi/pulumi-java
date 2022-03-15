@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic;
 import io.pulumi.azurenative.logic.inputs.RosettaNetPipActivitySettingsArgs;
 import io.pulumi.azurenative.logic.inputs.RosettaNetPipRoleSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * The RosettaNet process configuration activity settings.
      * 
      */
-    @InputImport(name="activitySettings", required=true)
+    @Import(name="activitySettings", required=true)
       private final Output<RosettaNetPipActivitySettingsArgs> activitySettings;
 
     public Output<RosettaNetPipActivitySettingsArgs> getActivitySettings() {
@@ -32,7 +32,7 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * The integration account RosettaNet ProcessConfiguration properties.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * The RosettaNet initiator role settings.
      * 
      */
-    @InputImport(name="initiatorRoleSettings", required=true)
+    @Import(name="initiatorRoleSettings", required=true)
       private final Output<RosettaNetPipRoleSettingsArgs> initiatorRoleSettings;
 
     public Output<RosettaNetPipRoleSettingsArgs> getInitiatorRoleSettings() {
@@ -54,7 +54,7 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * The integration account name.
      * 
      */
-    @InputImport(name="integrationAccountName", required=true)
+    @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
 
     public Output<String> getIntegrationAccountName() {
@@ -65,7 +65,7 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -76,7 +76,7 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * The metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -87,7 +87,7 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * The integration account RosettaNet process code.
      * 
      */
-    @InputImport(name="processCode", required=true)
+    @Import(name="processCode", required=true)
       private final Output<String> processCode;
 
     public Output<String> getProcessCode() {
@@ -98,7 +98,7 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * The integration account RosettaNet process name.
      * 
      */
-    @InputImport(name="processName", required=true)
+    @Import(name="processName", required=true)
       private final Output<String> processName;
 
     public Output<String> getProcessName() {
@@ -109,7 +109,7 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * The integration account RosettaNet process version.
      * 
      */
-    @InputImport(name="processVersion", required=true)
+    @Import(name="processVersion", required=true)
       private final Output<String> processVersion;
 
     public Output<String> getProcessVersion() {
@@ -120,7 +120,7 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -131,7 +131,7 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * The RosettaNet responder role settings.
      * 
      */
-    @InputImport(name="responderRoleSettings", required=true)
+    @Import(name="responderRoleSettings", required=true)
       private final Output<RosettaNetPipRoleSettingsArgs> responderRoleSettings;
 
     public Output<RosettaNetPipRoleSettingsArgs> getResponderRoleSettings() {
@@ -142,7 +142,7 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * The integration account RosettaNet ProcessConfiguration name.
      * 
      */
-    @InputImport(name="rosettaNetProcessConfigurationName")
+    @Import(name="rosettaNetProcessConfigurationName")
       private final @Nullable Output<String> rosettaNetProcessConfigurationName;
 
     public Output<String> getRosettaNetProcessConfigurationName() {
@@ -153,7 +153,7 @@ public final class RosettaNetProcessConfigurationArgs extends io.pulumi.resource
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

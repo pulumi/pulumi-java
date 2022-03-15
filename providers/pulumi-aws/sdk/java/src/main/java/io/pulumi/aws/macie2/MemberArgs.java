@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * The AWS account ID for the account.
      * 
      */
-    @InputImport(name="accountId", required=true)
+    @Import(name="accountId", required=true)
       private final Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -31,7 +31,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * The email address for the account.
      * 
      */
-    @InputImport(name="email", required=true)
+    @Import(name="email", required=true)
       private final Output<String> email;
 
     public Output<String> getEmail() {
@@ -42,7 +42,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether to send an email notification to the root user of each account that the invitation will be sent to. This notification is in addition to an alert that the root user receives in AWS Personal Health Dashboard. To send an email notification to the root user of each account, set this value to `true`.
      * 
      */
-    @InputImport(name="invitationDisableEmailNotification")
+    @Import(name="invitationDisableEmailNotification")
       private final @Nullable Output<String> invitationDisableEmailNotification;
 
     public Output<String> getInvitationDisableEmailNotification() {
@@ -53,7 +53,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * A custom message to include in the invitation. Amazon Macie adds this message to the standard content that it sends for an invitation.
      * 
      */
-    @InputImport(name="invitationMessage")
+    @Import(name="invitationMessage")
       private final @Nullable Output<String> invitationMessage;
 
     public Output<String> getInvitationMessage() {
@@ -64,7 +64,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * Send an invitation to a member
      * 
      */
-    @InputImport(name="invite")
+    @Import(name="invite")
       private final @Nullable Output<Boolean> invite;
 
     public Output<Boolean> getInvite() {
@@ -75,7 +75,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the status for the account. To enable Amazon Macie and start all Macie activities for the account, set this value to `ENABLED`. Valid values are `ENABLED` or `PAUSED`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -86,7 +86,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
      * A map of key-value pairs that specifies the tags to associate with the account in Amazon Macie.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

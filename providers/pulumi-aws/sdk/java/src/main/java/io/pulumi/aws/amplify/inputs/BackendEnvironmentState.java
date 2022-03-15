@@ -4,7 +4,7 @@
 package io.pulumi.aws.amplify.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BackendEnvironmentState extends io.pulumi.resources.ResourceA
      * The unique ID for an Amplify app.
      * 
      */
-    @InputImport(name="appId")
+    @Import(name="appId")
       private final @Nullable Output<String> appId;
 
     public Output<String> getAppId() {
@@ -29,7 +29,7 @@ public final class BackendEnvironmentState extends io.pulumi.resources.ResourceA
      * The Amazon Resource Name (ARN) for a backend environment that is part of an Amplify app.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -40,7 +40,7 @@ public final class BackendEnvironmentState extends io.pulumi.resources.ResourceA
      * The name of deployment artifacts.
      * 
      */
-    @InputImport(name="deploymentArtifacts")
+    @Import(name="deploymentArtifacts")
       private final @Nullable Output<String> deploymentArtifacts;
 
     public Output<String> getDeploymentArtifacts() {
@@ -51,7 +51,7 @@ public final class BackendEnvironmentState extends io.pulumi.resources.ResourceA
      * The name for the backend environment.
      * 
      */
-    @InputImport(name="environmentName")
+    @Import(name="environmentName")
       private final @Nullable Output<String> environmentName;
 
     public Output<String> getEnvironmentName() {
@@ -62,7 +62,7 @@ public final class BackendEnvironmentState extends io.pulumi.resources.ResourceA
      * The AWS CloudFormation stack name of a backend environment.
      * 
      */
-    @InputImport(name="stackName")
+    @Import(name="stackName")
       private final @Nullable Output<String> stackName;
 
     public Output<String> getStackName() {

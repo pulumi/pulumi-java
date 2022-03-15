@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventTargetHttpTarget {
     /**
      * Enables you to specify HTTP headers to add to the request.
@@ -28,11 +28,11 @@ public final class EventTargetHttpTarget {
      */
     private final @Nullable Map<String,String> queryStringParameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventTargetHttpTarget(
-        @OutputCustomType.Parameter("headerParameters") @Nullable Map<String,String> headerParameters,
-        @OutputCustomType.Parameter("pathParameterValues") @Nullable List<String> pathParameterValues,
-        @OutputCustomType.Parameter("queryStringParameters") @Nullable Map<String,String> queryStringParameters) {
+        @CustomType.Parameter("headerParameters") @Nullable Map<String,String> headerParameters,
+        @CustomType.Parameter("pathParameterValues") @Nullable List<String> pathParameterValues,
+        @CustomType.Parameter("queryStringParameters") @Nullable Map<String,String> queryStringParameters) {
         this.headerParameters = headerParameters;
         this.pathParameterValues = pathParameterValues;
         this.queryStringParameters = queryStringParameters;

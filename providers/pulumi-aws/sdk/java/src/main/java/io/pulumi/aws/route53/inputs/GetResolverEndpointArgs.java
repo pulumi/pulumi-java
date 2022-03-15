@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.aws.route53.inputs.GetResolverEndpointFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GetResolverEndpointArgs extends io.pulumi.resources.InvokeArg
      * [Route53resolver Filter value in the AWS API reference][1].
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetResolverEndpointFilter> filters;
 
     public List<GetResolverEndpointFilter> getFilters() {
@@ -33,7 +33,7 @@ public final class GetResolverEndpointArgs extends io.pulumi.resources.InvokeArg
      * The ID of the Route53 Resolver Endpoint.
      * 
      */
-    @InputImport(name="resolverEndpointId")
+    @Import(name="resolverEndpointId")
       private final @Nullable String resolverEndpointId;
 
     public Optional<String> getResolverEndpointId() {

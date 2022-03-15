@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
      * Specifies the security identifier (SID) for Azure Storage.
      * 
      */
-    @InputImport(name="azureStorageSid", required=true)
+    @Import(name="azureStorageSid", required=true)
       private final Output<String> azureStorageSid;
 
     public Output<String> getAzureStorageSid() {
@@ -32,7 +32,7 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
      * Specifies the domain GUID.
      * 
      */
-    @InputImport(name="domainGuid", required=true)
+    @Import(name="domainGuid", required=true)
       private final Output<String> domainGuid;
 
     public Output<String> getDomainGuid() {
@@ -43,7 +43,7 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
      * Specifies the primary domain that the AD DNS server is authoritative for.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -54,7 +54,7 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
      * Specifies the security identifier (SID).
      * 
      */
-    @InputImport(name="domainSid", required=true)
+    @Import(name="domainSid", required=true)
       private final Output<String> domainSid;
 
     public Output<String> getDomainSid() {
@@ -65,7 +65,7 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
      * Specifies the Active Directory forest to get.
      * 
      */
-    @InputImport(name="forestName", required=true)
+    @Import(name="forestName", required=true)
       private final Output<String> forestName;
 
     public Output<String> getForestName() {
@@ -76,7 +76,7 @@ public final class ActiveDirectoryPropertiesArgs extends io.pulumi.resources.Res
      * Specifies the NetBIOS domain name.
      * 
      */
-    @InputImport(name="netBiosDomainName", required=true)
+    @Import(name="netBiosDomainName", required=true)
       private final Output<String> netBiosDomainName;
 
     public Output<String> getNetBiosDomainName() {

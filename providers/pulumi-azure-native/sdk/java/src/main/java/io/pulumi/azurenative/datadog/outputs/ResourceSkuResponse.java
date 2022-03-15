@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.datadog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourceSkuResponse {
     /**
      * Name of the SKU.
@@ -15,8 +15,8 @@ public final class ResourceSkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private ResourceSkuResponse(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private ResourceSkuResponse(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

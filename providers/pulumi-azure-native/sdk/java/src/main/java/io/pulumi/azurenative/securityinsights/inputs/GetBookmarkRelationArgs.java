@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetBookmarkRelationArgs extends io.pulumi.resources.InvokeArg
      * Bookmark ID
      * 
      */
-    @InputImport(name="bookmarkId", required=true)
+    @Import(name="bookmarkId", required=true)
       private final String bookmarkId;
 
     public String getBookmarkId() {
@@ -27,7 +27,7 @@ public final class GetBookmarkRelationArgs extends io.pulumi.resources.InvokeArg
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
      * 
      */
-    @InputImport(name="operationalInsightsResourceProvider", required=true)
+    @Import(name="operationalInsightsResourceProvider", required=true)
       private final String operationalInsightsResourceProvider;
 
     public String getOperationalInsightsResourceProvider() {
@@ -38,7 +38,7 @@ public final class GetBookmarkRelationArgs extends io.pulumi.resources.InvokeArg
      * Relation Name
      * 
      */
-    @InputImport(name="relationName", required=true)
+    @Import(name="relationName", required=true)
       private final String relationName;
 
     public String getRelationName() {
@@ -49,7 +49,7 @@ public final class GetBookmarkRelationArgs extends io.pulumi.resources.InvokeArg
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -60,7 +60,7 @@ public final class GetBookmarkRelationArgs extends io.pulumi.resources.InvokeArg
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
     public String getWorkspaceName() {

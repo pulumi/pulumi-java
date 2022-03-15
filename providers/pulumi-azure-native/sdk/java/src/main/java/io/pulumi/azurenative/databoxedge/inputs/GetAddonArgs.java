@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
      * The addon name.
      * 
      */
-    @InputImport(name="addonName", required=true)
+    @Import(name="addonName", required=true)
       private final String addonName;
 
     public String getAddonName() {
@@ -27,7 +27,7 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
      * The device name.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final String deviceName;
 
     public String getDeviceName() {
@@ -38,7 +38,7 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
      * The role name.
      * 
      */
-    @InputImport(name="roleName", required=true)
+    @Import(name="roleName", required=true)
       private final String roleName;
 
     public String getRoleName() {

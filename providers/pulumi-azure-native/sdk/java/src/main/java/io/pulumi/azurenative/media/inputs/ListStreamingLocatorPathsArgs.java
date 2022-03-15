@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ListStreamingLocatorPathsArgs extends io.pulumi.resources.Inv
      * The Media Services account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -27,7 +27,7 @@ public final class ListStreamingLocatorPathsArgs extends io.pulumi.resources.Inv
      * The name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class ListStreamingLocatorPathsArgs extends io.pulumi.resources.Inv
      * The Streaming Locator name.
      * 
      */
-    @InputImport(name="streamingLocatorName", required=true)
+    @Import(name="streamingLocatorName", required=true)
       private final String streamingLocatorName;
 
     public String getStreamingLocatorName() {

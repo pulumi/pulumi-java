@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
      * weight to apply for a given iot h.
      * 
      */
-    @InputImport(name="allocationWeight")
+    @Import(name="allocationWeight")
       private final @Nullable Output<Integer> allocationWeight;
 
     public Output<Integer> getAllocationWeight() {
@@ -35,7 +35,7 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
      * flag for applying allocationPolicy or not for a given iot hub.
      * 
      */
-    @InputImport(name="applyAllocationPolicy")
+    @Import(name="applyAllocationPolicy")
       private final @Nullable Output<Boolean> applyAllocationPolicy;
 
     public Output<Boolean> getApplyAllocationPolicy() {
@@ -46,7 +46,7 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
      * Connection string of the IoT hub.
      * 
      */
-    @InputImport(name="connectionString", required=true)
+    @Import(name="connectionString", required=true)
       private final Output<String> connectionString;
 
     public Output<String> getConnectionString() {
@@ -57,7 +57,7 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
      * ARM region of the IoT hub.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {

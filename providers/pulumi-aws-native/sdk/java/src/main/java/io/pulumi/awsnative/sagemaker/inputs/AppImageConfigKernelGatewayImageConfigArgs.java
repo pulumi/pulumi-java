@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.inputs.AppImageConfigFileSystemConfigArgs;
 import io.pulumi.awsnative.sagemaker.inputs.AppImageConfigKernelSpecArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class AppImageConfigKernelGatewayImageConfigArgs extends io.pulumi.
      * The Amazon Elastic File System (EFS) storage configuration for a SageMaker image.
      * 
      */
-    @InputImport(name="fileSystemConfig")
+    @Import(name="fileSystemConfig")
       private final @Nullable Output<AppImageConfigFileSystemConfigArgs> fileSystemConfig;
 
     public Output<AppImageConfigFileSystemConfigArgs> getFileSystemConfig() {
@@ -35,7 +35,7 @@ public final class AppImageConfigKernelGatewayImageConfigArgs extends io.pulumi.
      * The specification of the Jupyter kernels in the image.
      * 
      */
-    @InputImport(name="kernelSpecs", required=true)
+    @Import(name="kernelSpecs", required=true)
       private final Output<List<AppImageConfigKernelSpecArgs>> kernelSpecs;
 
     public Output<List<AppImageConfigKernelSpecArgs>> getKernelSpecs() {

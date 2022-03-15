@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReleaseChannelResponse {
     /**
      * channel specifies which release channel the cluster is subscribed to.
@@ -15,8 +15,8 @@ public final class ReleaseChannelResponse {
      */
     private final String channel;
 
-    @OutputCustomType.Constructor
-    private ReleaseChannelResponse(@OutputCustomType.Parameter("channel") String channel) {
+    @CustomType.Constructor
+    private ReleaseChannelResponse(@CustomType.Parameter("channel") String channel) {
         this.channel = channel;
     }
 

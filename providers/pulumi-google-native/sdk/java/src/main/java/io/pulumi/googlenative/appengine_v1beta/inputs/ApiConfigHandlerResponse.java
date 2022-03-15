@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
      * Action to take when users access resources that require authentication. Defaults to redirect.
      * 
      */
-    @InputImport(name="authFailAction", required=true)
+    @Import(name="authFailAction", required=true)
       private final String authFailAction;
 
     public String getAuthFailAction() {
@@ -31,7 +31,7 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
      * Level of login required to access this resource. Defaults to optional.
      * 
      */
-    @InputImport(name="login", required=true)
+    @Import(name="login", required=true)
       private final String login;
 
     public String getLogin() {
@@ -42,7 +42,7 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
      * Path to the script from the application root directory.
      * 
      */
-    @InputImport(name="script", required=true)
+    @Import(name="script", required=true)
       private final String script;
 
     public String getScript() {
@@ -53,7 +53,7 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
      * Security (HTTPS) enforcement for this URL.
      * 
      */
-    @InputImport(name="securityLevel", required=true)
+    @Import(name="securityLevel", required=true)
       private final String securityLevel;
 
     public String getSecurityLevel() {
@@ -64,7 +64,7 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
      * URL to serve the endpoint at.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {

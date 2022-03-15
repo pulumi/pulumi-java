@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExpressRouteGatewayPropertiesResponseBounds {
     /**
      * Maximum number of scale units deployed for ExpressRoute gateway.
@@ -22,10 +22,10 @@ public final class ExpressRouteGatewayPropertiesResponseBounds {
      */
     private final @Nullable Integer min;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExpressRouteGatewayPropertiesResponseBounds(
-        @OutputCustomType.Parameter("max") @Nullable Integer max,
-        @OutputCustomType.Parameter("min") @Nullable Integer min) {
+        @CustomType.Parameter("max") @Nullable Integer max,
+        @CustomType.Parameter("min") @Nullable Integer min) {
         this.max = max;
         this.min = min;
     }

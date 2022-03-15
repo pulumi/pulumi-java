@@ -5,25 +5,25 @@ package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetResourceConfiguration;
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetVariable;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetContainerAction {
     private final String executionRoleArn;
     private final String image;
     private final DatasetResourceConfiguration resourceConfiguration;
     private final @Nullable List<DatasetVariable> variables;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetContainerAction(
-        @OutputCustomType.Parameter("executionRoleArn") String executionRoleArn,
-        @OutputCustomType.Parameter("image") String image,
-        @OutputCustomType.Parameter("resourceConfiguration") DatasetResourceConfiguration resourceConfiguration,
-        @OutputCustomType.Parameter("variables") @Nullable List<DatasetVariable> variables) {
+        @CustomType.Parameter("executionRoleArn") String executionRoleArn,
+        @CustomType.Parameter("image") String image,
+        @CustomType.Parameter("resourceConfiguration") DatasetResourceConfiguration resourceConfiguration,
+        @CustomType.Parameter("variables") @Nullable List<DatasetVariable> variables) {
         this.executionRoleArn = executionRoleArn;
         this.image = image;
         this.resourceConfiguration = resourceConfiguration;

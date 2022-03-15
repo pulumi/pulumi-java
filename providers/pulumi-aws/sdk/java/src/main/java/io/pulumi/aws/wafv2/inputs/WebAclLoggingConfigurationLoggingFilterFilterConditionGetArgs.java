@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs
      * A single action condition. See Action Condition below for more details.
      * 
      */
-    @InputImport(name="actionCondition")
+    @Import(name="actionCondition")
       private final @Nullable Output<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs> actionCondition;
 
     public Output<WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionGetArgs> getActionCondition() {
@@ -30,7 +30,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionGetArgs
      * A single label name condition. See Label Name Condition below for more details.
      * 
      */
-    @InputImport(name="labelNameCondition")
+    @Import(name="labelNameCondition")
       private final @Nullable Output<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs> labelNameCondition;
 
     public Output<WebAclLoggingConfigurationLoggingFilterFilterConditionLabelNameConditionGetArgs> getLabelNameCondition() {

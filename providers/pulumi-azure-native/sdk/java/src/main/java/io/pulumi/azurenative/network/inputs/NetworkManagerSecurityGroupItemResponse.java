@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class NetworkManagerSecurityGroupItemResponse extends io.pulumi.res
      * Network manager group Id.
      * 
      */
-    @InputImport(name="networkGroupId")
+    @Import(name="networkGroupId")
       private final @Nullable String networkGroupId;
 
     public Optional<String> getNetworkGroupId() {

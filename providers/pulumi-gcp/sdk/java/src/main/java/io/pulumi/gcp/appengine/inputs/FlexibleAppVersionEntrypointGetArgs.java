@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class FlexibleAppVersionEntrypointGetArgs extends io.pulumi.resourc
      * The format should be a shell command that can be fed to bash -c.
      * 
      */
-    @InputImport(name="shell", required=true)
+    @Import(name="shell", required=true)
       private final Output<String> shell;
 
     public Output<String> getShell() {

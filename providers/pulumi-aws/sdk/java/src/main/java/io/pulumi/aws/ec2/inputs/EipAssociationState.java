@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EipAssociationState extends io.pulumi.resources.ResourceArgs 
      * The allocation ID. This is required for EC2-VPC.
      * 
      */
-    @InputImport(name="allocationId")
+    @Import(name="allocationId")
       private final @Nullable Output<String> allocationId;
 
     public Output<String> getAllocationId() {
@@ -31,7 +31,7 @@ public final class EipAssociationState extends io.pulumi.resources.ResourceArgs 
      * be re-associated. Defaults to `true` in VPC.
      * 
      */
-    @InputImport(name="allowReassociation")
+    @Import(name="allowReassociation")
       private final @Nullable Output<Boolean> allowReassociation;
 
     public Output<Boolean> getAllowReassociation() {
@@ -45,7 +45,7 @@ public final class EipAssociationState extends io.pulumi.resources.ResourceArgs 
      * instance ID unless exactly one network interface is attached.
      * 
      */
-    @InputImport(name="instanceId")
+    @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -58,7 +58,7 @@ public final class EipAssociationState extends io.pulumi.resources.ResourceArgs 
      * interface ID.
      * 
      */
-    @InputImport(name="networkInterfaceId")
+    @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {
@@ -72,7 +72,7 @@ public final class EipAssociationState extends io.pulumi.resources.ResourceArgs 
      * address.
      * 
      */
-    @InputImport(name="privateIpAddress")
+    @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
     public Output<String> getPrivateIpAddress() {
@@ -83,7 +83,7 @@ public final class EipAssociationState extends io.pulumi.resources.ResourceArgs 
      * The Elastic IP address. This is required for EC2-Classic.
      * 
      */
-    @InputImport(name="publicIp")
+    @Import(name="publicIp")
       private final @Nullable Output<String> publicIp;
 
     public Output<String> getPublicIp() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sagemaker.ModelPackageGroupPolicyArgs;
 import io.pulumi.aws.sagemaker.inputs.ModelPackageGroupPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class ModelPackageGroupPolicy extends io.pulumi.resources.CustomResource 
      * The name of the model package group.
      * 
      */
-    @OutputExport(name="modelPackageGroupName", type=String.class, parameters={})
+    @Export(name="modelPackageGroupName", type=String.class, parameters={})
     private Output<String> modelPackageGroupName;
 
     /**
@@ -42,7 +42,7 @@ public class ModelPackageGroupPolicy extends io.pulumi.resources.CustomResource 
     public Output<String> getModelPackageGroupName() {
         return this.modelPackageGroupName;
     }
-    @OutputExport(name="resourcePolicy", type=String.class, parameters={})
+    @Export(name="resourcePolicy", type=String.class, parameters={})
     private Output<String> resourcePolicy;
 
     public Output<String> getResourcePolicy() {

@@ -5,14 +5,14 @@ package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.LinkedIntegrationRuntimeResponse;
 import io.pulumi.azurenative.synapse.outputs.SelfHostedIntegrationRuntimeNodeResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SelfHostedIntegrationRuntimeStatusResponse {
     /**
      * Whether Self-hosted integration runtime auto update has been turned on.
@@ -116,28 +116,28 @@ public final class SelfHostedIntegrationRuntimeStatusResponse {
      */
     private final String versionStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SelfHostedIntegrationRuntimeStatusResponse(
-        @OutputCustomType.Parameter("autoUpdate") String autoUpdate,
-        @OutputCustomType.Parameter("autoUpdateETA") String autoUpdateETA,
-        @OutputCustomType.Parameter("capabilities") Map<String,String> capabilities,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("dataFactoryName") String dataFactoryName,
-        @OutputCustomType.Parameter("internalChannelEncryption") String internalChannelEncryption,
-        @OutputCustomType.Parameter("latestVersion") String latestVersion,
-        @OutputCustomType.Parameter("links") @Nullable List<LinkedIntegrationRuntimeResponse> links,
-        @OutputCustomType.Parameter("localTimeZoneOffset") String localTimeZoneOffset,
-        @OutputCustomType.Parameter("nodeCommunicationChannelEncryptionMode") String nodeCommunicationChannelEncryptionMode,
-        @OutputCustomType.Parameter("nodes") @Nullable List<SelfHostedIntegrationRuntimeNodeResponse> nodes,
-        @OutputCustomType.Parameter("pushedVersion") String pushedVersion,
-        @OutputCustomType.Parameter("scheduledUpdateDate") String scheduledUpdateDate,
-        @OutputCustomType.Parameter("serviceUrls") List<String> serviceUrls,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("taskQueueId") String taskQueueId,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("updateDelayOffset") String updateDelayOffset,
-        @OutputCustomType.Parameter("version") String version,
-        @OutputCustomType.Parameter("versionStatus") String versionStatus) {
+        @CustomType.Parameter("autoUpdate") String autoUpdate,
+        @CustomType.Parameter("autoUpdateETA") String autoUpdateETA,
+        @CustomType.Parameter("capabilities") Map<String,String> capabilities,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("dataFactoryName") String dataFactoryName,
+        @CustomType.Parameter("internalChannelEncryption") String internalChannelEncryption,
+        @CustomType.Parameter("latestVersion") String latestVersion,
+        @CustomType.Parameter("links") @Nullable List<LinkedIntegrationRuntimeResponse> links,
+        @CustomType.Parameter("localTimeZoneOffset") String localTimeZoneOffset,
+        @CustomType.Parameter("nodeCommunicationChannelEncryptionMode") String nodeCommunicationChannelEncryptionMode,
+        @CustomType.Parameter("nodes") @Nullable List<SelfHostedIntegrationRuntimeNodeResponse> nodes,
+        @CustomType.Parameter("pushedVersion") String pushedVersion,
+        @CustomType.Parameter("scheduledUpdateDate") String scheduledUpdateDate,
+        @CustomType.Parameter("serviceUrls") List<String> serviceUrls,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("taskQueueId") String taskQueueId,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("updateDelayOffset") String updateDelayOffset,
+        @CustomType.Parameter("version") String version,
+        @CustomType.Parameter("versionStatus") String versionStatus) {
         this.autoUpdate = autoUpdate;
         this.autoUpdateETA = autoUpdateETA;
         this.capabilities = capabilities;

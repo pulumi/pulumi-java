@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.FirewallPolicyRuleMatchLayer4ConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class FirewallPolicyRuleMatchArgs extends io.pulumi.resources.Resou
      * CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 256.
      * 
      */
-    @InputImport(name="destIpRanges")
+    @Import(name="destIpRanges")
       private final @Nullable Output<List<String>> destIpRanges;
 
     public Output<List<String>> getDestIpRanges() {
@@ -31,7 +31,7 @@ public final class FirewallPolicyRuleMatchArgs extends io.pulumi.resources.Resou
      * Pairs of IP protocols and ports that the rule should match. Structure is documented below.
      * 
      */
-    @InputImport(name="layer4Configs", required=true)
+    @Import(name="layer4Configs", required=true)
       private final Output<List<FirewallPolicyRuleMatchLayer4ConfigArgs>> layer4Configs;
 
     public Output<List<FirewallPolicyRuleMatchLayer4ConfigArgs>> getLayer4Configs() {
@@ -42,7 +42,7 @@ public final class FirewallPolicyRuleMatchArgs extends io.pulumi.resources.Resou
      * CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 256.
      * 
      */
-    @InputImport(name="srcIpRanges")
+    @Import(name="srcIpRanges")
       private final @Nullable Output<List<String>> srcIpRanges;
 
     public Output<List<String>> getSrcIpRanges() {

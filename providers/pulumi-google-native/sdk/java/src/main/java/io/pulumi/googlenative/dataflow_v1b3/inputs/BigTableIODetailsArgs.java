@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
      * InstanceId accessed in the connection.
      * 
      */
-    @InputImport(name="instanceId")
+    @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -33,7 +33,7 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
      * ProjectId accessed in the connection.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -44,7 +44,7 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
      * TableId accessed in the connection.
      * 
      */
-    @InputImport(name="tableId")
+    @Import(name="tableId")
       private final @Nullable Output<String> tableId;
 
     public Output<String> getTableId() {

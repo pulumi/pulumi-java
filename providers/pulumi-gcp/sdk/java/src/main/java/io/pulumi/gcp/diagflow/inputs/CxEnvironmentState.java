@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.diagflow.inputs.CxEnvironmentVersionConfigGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
      * The human-readable description of the environment. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
      * The human-readable name of the environment (unique in an agent). Limit of 64 characters.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -42,7 +42,7 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
      * The name of the environment.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -66,7 +66,7 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
      * fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
@@ -78,7 +78,7 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="versionConfigs")
+    @Import(name="versionConfigs")
       private final @Nullable Output<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs;
 
     public Output<List<CxEnvironmentVersionConfigGetArgs>> getVersionConfigs() {

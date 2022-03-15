@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerGithubPullRequestArgs;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerGithubPushArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class TriggerGithubArgs extends io.pulumi.resources.ResourceArgs {
      * Each named volume must be used by at least two build steps.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class TriggerGithubArgs extends io.pulumi.resources.ResourceArgs {
      * https://github.com/googlecloudplatform/cloud-builders is "googlecloudplatform".
      * 
      */
-    @InputImport(name="owner")
+    @Import(name="owner")
       private final @Nullable Output<String> owner;
 
     public Output<String> getOwner() {
@@ -46,7 +46,7 @@ public final class TriggerGithubArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="pullRequest")
+    @Import(name="pullRequest")
       private final @Nullable Output<TriggerGithubPullRequestArgs> pullRequest;
 
     public Output<TriggerGithubPullRequestArgs> getPullRequest() {
@@ -58,7 +58,7 @@ public final class TriggerGithubArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="push")
+    @Import(name="push")
       private final @Nullable Output<TriggerGithubPushArgs> push;
 
     public Output<TriggerGithubPushArgs> getPush() {

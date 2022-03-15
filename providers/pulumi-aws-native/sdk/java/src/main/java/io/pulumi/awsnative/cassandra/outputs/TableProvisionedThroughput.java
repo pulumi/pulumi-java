@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.cassandra.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TableProvisionedThroughput {
     private final Integer readCapacityUnits;
     private final Integer writeCapacityUnits;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableProvisionedThroughput(
-        @OutputCustomType.Parameter("readCapacityUnits") Integer readCapacityUnits,
-        @OutputCustomType.Parameter("writeCapacityUnits") Integer writeCapacityUnits) {
+        @CustomType.Parameter("readCapacityUnits") Integer readCapacityUnits,
+        @CustomType.Parameter("writeCapacityUnits") Integer writeCapacityUnits) {
         this.readCapacityUnits = readCapacityUnits;
         this.writeCapacityUnits = writeCapacityUnits;
     }

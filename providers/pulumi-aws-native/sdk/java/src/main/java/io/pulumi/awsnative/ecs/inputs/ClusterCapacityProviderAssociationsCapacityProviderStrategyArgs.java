@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ecs.inputs;
 import io.pulumi.awsnative.ecs.enums.ClusterCapacityProviderAssociationsCapacityProvider;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class ClusterCapacityProviderAssociationsCapacityProviderStrategyAr
 
     public static final ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs Empty = new ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs();
 
-    @InputImport(name="base")
+    @Import(name="base")
       private final @Nullable Output<Integer> base;
 
     public Output<Integer> getBase() {
         return this.base == null ? Output.empty() : this.base;
     }
 
-    @InputImport(name="capacityProvider", required=true)
+    @Import(name="capacityProvider", required=true)
       private final Output<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider;
 
     public Output<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> getCapacityProvider() {
         return this.capacityProvider;
     }
 
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
     public Output<Integer> getWeight() {

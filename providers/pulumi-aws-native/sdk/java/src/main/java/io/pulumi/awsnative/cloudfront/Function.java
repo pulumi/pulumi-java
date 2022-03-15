@@ -8,7 +8,7 @@ import io.pulumi.awsnative.cloudfront.FunctionArgs;
 import io.pulumi.awsnative.cloudfront.outputs.FunctionConfig;
 import io.pulumi.awsnative.cloudfront.outputs.FunctionMetadata;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,43 +20,43 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:cloudfront:Function")
 public class Function extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="autoPublish", type=Boolean.class, parameters={})
+    @Export(name="autoPublish", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoPublish;
 
     public Output</* @Nullable */ Boolean> getAutoPublish() {
         return this.autoPublish;
     }
-    @OutputExport(name="functionARN", type=String.class, parameters={})
+    @Export(name="functionARN", type=String.class, parameters={})
     private Output<String> functionARN;
 
     public Output<String> getFunctionARN() {
         return this.functionARN;
     }
-    @OutputExport(name="functionCode", type=String.class, parameters={})
+    @Export(name="functionCode", type=String.class, parameters={})
     private Output</* @Nullable */ String> functionCode;
 
     public Output</* @Nullable */ String> getFunctionCode() {
         return this.functionCode;
     }
-    @OutputExport(name="functionConfig", type=FunctionConfig.class, parameters={})
+    @Export(name="functionConfig", type=FunctionConfig.class, parameters={})
     private Output</* @Nullable */ FunctionConfig> functionConfig;
 
     public Output</* @Nullable */ FunctionConfig> getFunctionConfig() {
         return this.functionConfig;
     }
-    @OutputExport(name="functionMetadata", type=FunctionMetadata.class, parameters={})
+    @Export(name="functionMetadata", type=FunctionMetadata.class, parameters={})
     private Output</* @Nullable */ FunctionMetadata> functionMetadata;
 
     public Output</* @Nullable */ FunctionMetadata> getFunctionMetadata() {
         return this.functionMetadata;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="stage", type=String.class, parameters={})
+    @Export(name="stage", type=String.class, parameters={})
     private Output<String> stage;
 
     public Output<String> getStage() {

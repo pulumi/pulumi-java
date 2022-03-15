@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.transcoder_v1.JobArgs;
@@ -24,7 +24,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The configuration for this job.
      * 
      */
-    @OutputExport(name="config", type=JobConfigResponse.class, parameters={})
+    @Export(name="config", type=JobConfigResponse.class, parameters={})
     private Output<JobConfigResponse> config;
 
     /**
@@ -38,7 +38,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The time the job was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -52,7 +52,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The time the transcoding finished.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
@@ -66,7 +66,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * An error object that describes the reason for the failure. This property is always present when `state` is `FAILED`.
      * 
      */
-    @OutputExport(name="error", type=StatusResponse.class, parameters={})
+    @Export(name="error", type=StatusResponse.class, parameters={})
     private Output<StatusResponse> error;
 
     /**
@@ -80,7 +80,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Input only. Specify the `input_uri` to populate empty `uri` fields in each element of `Job.config.inputs` or `JobTemplate.config.inputs` when using template. URI of the media. Input files must be at least 5 seconds in duration and stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`).
      * 
      */
-    @OutputExport(name="inputUri", type=String.class, parameters={})
+    @Export(name="inputUri", type=String.class, parameters={})
     private Output<String> inputUri;
 
     /**
@@ -94,7 +94,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The resource name of the job. Format: `projects/{project_number}/locations/{location}/jobs/{job}`
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Input only. Specify the `output_uri` to populate an empty `Job.config.output.uri` or `JobTemplate.config.output.uri` when using template. URI for the output file(s). For example, `gs://my-bucket/outputs/`.
      * 
      */
-    @OutputExport(name="outputUri", type=String.class, parameters={})
+    @Export(name="outputUri", type=String.class, parameters={})
     private Output<String> outputUri;
 
     /**
@@ -122,7 +122,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The time the transcoding started.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
@@ -136,7 +136,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The current state of the job.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -150,7 +150,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Input only. Specify the `template_id` to use for populating `Job.config`. The default is `preset/web-hd`. Preset Transcoder templates: - `preset/{preset_id}` - User defined JobTemplate: `{job_template_id}`
      * 
      */
-    @OutputExport(name="templateId", type=String.class, parameters={})
+    @Export(name="templateId", type=String.class, parameters={})
     private Output<String> templateId;
 
     /**
@@ -164,7 +164,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Job time to live value in days, which will be effective after job completion. Job should be deleted automatically after the given TTL. Enter a value between 1 and 90. The default is 30.
      * 
      */
-    @OutputExport(name="ttlAfterCompletionDays", type=Integer.class, parameters={})
+    @Export(name="ttlAfterCompletionDays", type=Integer.class, parameters={})
     private Output<Integer> ttlAfterCompletionDays;
 
     /**

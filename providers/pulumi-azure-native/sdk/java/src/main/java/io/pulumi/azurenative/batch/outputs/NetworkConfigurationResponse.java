@@ -5,13 +5,13 @@ package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.PoolEndpointConfigurationResponse;
 import io.pulumi.azurenative.batch.outputs.PublicIPAddressConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkConfigurationResponse {
     /**
      * Pool endpoint configuration is only supported on pools with the virtualMachineConfiguration property.
@@ -29,11 +29,11 @@ public final class NetworkConfigurationResponse {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkConfigurationResponse(
-        @OutputCustomType.Parameter("endpointConfiguration") @Nullable PoolEndpointConfigurationResponse endpointConfiguration,
-        @OutputCustomType.Parameter("publicIPAddressConfiguration") @Nullable PublicIPAddressConfigurationResponse publicIPAddressConfiguration,
-        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
+        @CustomType.Parameter("endpointConfiguration") @Nullable PoolEndpointConfigurationResponse endpointConfiguration,
+        @CustomType.Parameter("publicIPAddressConfiguration") @Nullable PublicIPAddressConfigurationResponse publicIPAddressConfiguration,
+        @CustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.endpointConfiguration = endpointConfiguration;
         this.publicIPAddressConfiguration = publicIPAddressConfiguration;
         this.subnetId = subnetId;

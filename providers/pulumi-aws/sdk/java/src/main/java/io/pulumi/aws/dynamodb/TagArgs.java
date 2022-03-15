@@ -4,7 +4,7 @@
 package io.pulumi.aws.dynamodb;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * Tag name.
      * 
      */
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
@@ -28,7 +28,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of the DynamoDB resource to tag.
      * 
      */
-    @InputImport(name="resourceArn", required=true)
+    @Import(name="resourceArn", required=true)
       private final Output<String> resourceArn;
 
     public Output<String> getResourceArn() {
@@ -39,7 +39,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * Tag value.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

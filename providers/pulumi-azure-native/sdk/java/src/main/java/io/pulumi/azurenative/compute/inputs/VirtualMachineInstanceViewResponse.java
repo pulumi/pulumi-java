@@ -11,7 +11,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualMachineAgentInstanceViewRespo
 import io.pulumi.azurenative.compute.inputs.VirtualMachineExtensionInstanceViewResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineHealthStatusResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachinePatchStatusResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * Resource id of the dedicated host, on which the virtual machine is allocated through automatic placement, when the virtual machine is associated with a dedicated host group that has automatic placement enabled. <br><br>Minimum api-version: 2020-06-01.
      * 
      */
-    @InputImport(name="assignedHost", required=true)
+    @Import(name="assignedHost", required=true)
       private final String assignedHost;
 
     public String getAssignedHost() {
@@ -43,7 +43,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * Boot Diagnostics is a debugging feature which allows you to view Console Output and Screenshot to diagnose VM status. <br><br> You can easily view the output of your console log. <br><br> Azure also enables you to see a screenshot of the VM from the hypervisor.
      * 
      */
-    @InputImport(name="bootDiagnostics")
+    @Import(name="bootDiagnostics")
       private final @Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics;
 
     public Optional<BootDiagnosticsInstanceViewResponse> getBootDiagnostics() {
@@ -54,7 +54,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * The computer name assigned to the virtual machine.
      * 
      */
-    @InputImport(name="computerName")
+    @Import(name="computerName")
       private final @Nullable String computerName;
 
     public Optional<String> getComputerName() {
@@ -65,7 +65,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * The virtual machine disk information.
      * 
      */
-    @InputImport(name="disks")
+    @Import(name="disks")
       private final @Nullable List<DiskInstanceViewResponse> disks;
 
     public List<DiskInstanceViewResponse> getDisks() {
@@ -76,7 +76,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * The extensions information.
      * 
      */
-    @InputImport(name="extensions")
+    @Import(name="extensions")
       private final @Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions;
 
     public List<VirtualMachineExtensionInstanceViewResponse> getExtensions() {
@@ -87,7 +87,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * Specifies the HyperVGeneration Type associated with a resource
      * 
      */
-    @InputImport(name="hyperVGeneration")
+    @Import(name="hyperVGeneration")
       private final @Nullable String hyperVGeneration;
 
     public Optional<String> getHyperVGeneration() {
@@ -98,7 +98,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * The Maintenance Operation status on the virtual machine.
      * 
      */
-    @InputImport(name="maintenanceRedeployStatus")
+    @Import(name="maintenanceRedeployStatus")
       private final @Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus;
 
     public Optional<MaintenanceRedeployStatusResponse> getMaintenanceRedeployStatus() {
@@ -109,7 +109,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * The Operating System running on the virtual machine.
      * 
      */
-    @InputImport(name="osName")
+    @Import(name="osName")
       private final @Nullable String osName;
 
     public Optional<String> getOsName() {
@@ -120,7 +120,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * The version of Operating System running on the virtual machine.
      * 
      */
-    @InputImport(name="osVersion")
+    @Import(name="osVersion")
       private final @Nullable String osVersion;
 
     public Optional<String> getOsVersion() {
@@ -131,7 +131,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * [Preview Feature] The status of virtual machine patch operations.
      * 
      */
-    @InputImport(name="patchStatus")
+    @Import(name="patchStatus")
       private final @Nullable VirtualMachinePatchStatusResponse patchStatus;
 
     public Optional<VirtualMachinePatchStatusResponse> getPatchStatus() {
@@ -142,7 +142,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * Specifies the fault domain of the virtual machine.
      * 
      */
-    @InputImport(name="platformFaultDomain")
+    @Import(name="platformFaultDomain")
       private final @Nullable Integer platformFaultDomain;
 
     public Optional<Integer> getPlatformFaultDomain() {
@@ -153,7 +153,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * Specifies the update domain of the virtual machine.
      * 
      */
-    @InputImport(name="platformUpdateDomain")
+    @Import(name="platformUpdateDomain")
       private final @Nullable Integer platformUpdateDomain;
 
     public Optional<Integer> getPlatformUpdateDomain() {
@@ -164,7 +164,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * The Remote desktop certificate thumbprint.
      * 
      */
-    @InputImport(name="rdpThumbPrint")
+    @Import(name="rdpThumbPrint")
       private final @Nullable String rdpThumbPrint;
 
     public Optional<String> getRdpThumbPrint() {
@@ -175,7 +175,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * The resource status information.
      * 
      */
-    @InputImport(name="statuses")
+    @Import(name="statuses")
       private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     public List<InstanceViewStatusResponse> getStatuses() {
@@ -186,7 +186,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * The VM Agent running on the virtual machine.
      * 
      */
-    @InputImport(name="vmAgent")
+    @Import(name="vmAgent")
       private final @Nullable VirtualMachineAgentInstanceViewResponse vmAgent;
 
     public Optional<VirtualMachineAgentInstanceViewResponse> getVmAgent() {
@@ -197,7 +197,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * The health status for the VM.
      * 
      */
-    @InputImport(name="vmHealth", required=true)
+    @Import(name="vmHealth", required=true)
       private final VirtualMachineHealthStatusResponse vmHealth;
 
     public VirtualMachineHealthStatusResponse getVmHealth() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vision_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.vision_v1.inputs.BoundingPolyArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,14 +20,14 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Bounding polygons around the areas of interest in the reference image. If this field is empty, the system will try to detect regions of interest. At most 10 bounding polygons will be used. The provided shape is converted into a non-rotated rectangle. Once converted, the small edge of the rectangle must be greater than or equal to 300 pixels. The aspect ratio must be 1:4 or less (i.e. 1:3 is ok; 1:5 is not).
      * 
      */
-    @InputImport(name="boundingPolys")
+    @Import(name="boundingPolys")
       private final @Nullable Output<List<BoundingPolyArgs>> boundingPolys;
 
     public Output<List<BoundingPolyArgs>> getBoundingPolys() {
         return this.boundingPolys == null ? Output.empty() : this.boundingPolys;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -38,28 +38,28 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the reference image. Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID/referenceImages/IMAGE_ID`. This field is ignored when creating a reference image.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="productId", required=true)
+    @Import(name="productId", required=true)
       private final Output<String> productId;
 
     public Output<String> getProductId() {
         return this.productId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="referenceImageId")
+    @Import(name="referenceImageId")
       private final @Nullable Output<String> referenceImageId;
 
     public Output<String> getReferenceImageId() {
@@ -70,7 +70,7 @@ public final class ReferenceImageArgs extends io.pulumi.resources.ResourceArgs {
      * The Google Cloud Storage URI of the reference image. The URI must start with `gs://`.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {

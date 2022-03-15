@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.FirewallPolicyLogAnalyticsResourcesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyInsightsResponse {
     /**
      * A flag to indicate if the insights are enabled on the policy.
@@ -29,11 +29,11 @@ public final class FirewallPolicyInsightsResponse {
      */
     private final @Nullable Integer retentionDays;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyInsightsResponse(
-        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
-        @OutputCustomType.Parameter("logAnalyticsResources") @Nullable FirewallPolicyLogAnalyticsResourcesResponse logAnalyticsResources,
-        @OutputCustomType.Parameter("retentionDays") @Nullable Integer retentionDays) {
+        @CustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
+        @CustomType.Parameter("logAnalyticsResources") @Nullable FirewallPolicyLogAnalyticsResourcesResponse logAnalyticsResources,
+        @CustomType.Parameter("retentionDays") @Nullable Integer retentionDays) {
         this.isEnabled = isEnabled;
         this.logAnalyticsResources = logAnalyticsResources;
         this.retentionDays = retentionDays;

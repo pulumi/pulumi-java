@@ -8,7 +8,7 @@ import io.pulumi.aws.route53.ResolverRuleArgs;
 import io.pulumi.aws.route53.inputs.ResolverRuleState;
 import io.pulumi.aws.route53.outputs.ResolverRuleTargetIp;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * The ARN (Amazon Resource Name) for the resolver rule.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * DNS queries for this domain name are forwarded to the IP addresses that are specified using `target_ip`.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -63,7 +63,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * A friendly name that lets you easily find a rule in the Resolver dashboard in the Route 53 console.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * When a rule is shared with another AWS account, the account ID of the account that the rule is shared with.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -92,7 +92,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * This argument should only be specified for `FORWARD` type rules.
      * 
      */
-    @OutputExport(name="resolverEndpointId", type=String.class, parameters={})
+    @Export(name="resolverEndpointId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resolverEndpointId;
 
     /**
@@ -107,7 +107,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * The rule type. Valid values are `FORWARD`, `SYSTEM` and `RECURSIVE`.
      * 
      */
-    @OutputExport(name="ruleType", type=String.class, parameters={})
+    @Export(name="ruleType", type=String.class, parameters={})
     private Output<String> ruleType;
 
     /**
@@ -122,7 +122,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
      * 
      */
-    @OutputExport(name="shareStatus", type=String.class, parameters={})
+    @Export(name="shareStatus", type=String.class, parameters={})
     private Output<String> shareStatus;
 
     /**
@@ -137,7 +137,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -151,7 +151,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -166,7 +166,7 @@ public class ResolverRule extends io.pulumi.resources.CustomResource {
      * This argument should only be specified for `FORWARD` type rules.
      * 
      */
-    @OutputExport(name="targetIps", type=List.class, parameters={ResolverRuleTargetIp.class})
+    @Export(name="targetIps", type=List.class, parameters={ResolverRuleTargetIp.class})
     private Output</* @Nullable */ List<ResolverRuleTargetIp>> targetIps;
 
     /**

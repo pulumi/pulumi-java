@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.redhatopenshift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The CIDR used for OpenShift/Kubernetes Pods (immutable).
      * 
      */
-    @InputImport(name="podCidr")
+    @Import(name="podCidr")
       private final @Nullable Output<String> podCidr;
 
     public Output<String> getPodCidr() {
@@ -33,7 +33,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * The CIDR used for OpenShift/Kubernetes Services (immutable).
      * 
      */
-    @InputImport(name="serviceCidr")
+    @Import(name="serviceCidr")
       private final @Nullable Output<String> serviceCidr;
 
     public Output<String> getServiceCidr() {

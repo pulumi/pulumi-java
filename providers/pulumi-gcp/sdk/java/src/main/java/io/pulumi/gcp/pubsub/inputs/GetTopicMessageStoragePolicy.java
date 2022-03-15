@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +13,7 @@ public final class GetTopicMessageStoragePolicy extends io.pulumi.resources.Invo
 
     public static final GetTopicMessageStoragePolicy Empty = new GetTopicMessageStoragePolicy();
 
-    @InputImport(name="allowedPersistenceRegions", required=true)
+    @Import(name="allowedPersistenceRegions", required=true)
       private final List<String> allowedPersistenceRegions;
 
     public List<String> getAllowedPersistenceRegions() {

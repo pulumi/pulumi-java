@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.workspaces.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBundleComputeType {
     /**
      * The name of the bundle. You cannot combine this parameter with `bundle_id`.
@@ -15,8 +15,8 @@ public final class GetBundleComputeType {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private GetBundleComputeType(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private GetBundleComputeType(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

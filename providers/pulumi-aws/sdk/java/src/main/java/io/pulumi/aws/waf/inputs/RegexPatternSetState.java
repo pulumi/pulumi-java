@@ -4,7 +4,7 @@
 package io.pulumi.aws.waf.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
      * Amazon Resource Name (ARN)
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
      * The name or description of the Regex Pattern Set.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class RegexPatternSetState extends io.pulumi.resources.ResourceArgs
      * A list of regular expression (regex) patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`.
      * 
      */
-    @InputImport(name="regexPatternStrings")
+    @Import(name="regexPatternStrings")
       private final @Nullable Output<List<String>> regexPatternStrings;
 
     public Output<List<String>> getRegexPatternStrings() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class NodePoolNodeConfigGuestAcceleratorGetArgs extends io.pulumi.r
 
     public static final NodePoolNodeConfigGuestAcceleratorGetArgs Empty = new NodePoolNodeConfigGuestAcceleratorGetArgs();
 
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Output<Integer> count;
 
     public Output<Integer> getCount() {
         return this.count;
     }
 
-    @InputImport(name="gpuPartitionSize")
+    @Import(name="gpuPartitionSize")
       private final @Nullable Output<String> gpuPartitionSize;
 
     public Output<String> getGpuPartitionSize() {
         return this.gpuPartitionSize == null ? Output.empty() : this.gpuPartitionSize;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

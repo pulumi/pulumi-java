@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DateAfterCreationResponse {
     /**
      * Value indicating the age in days after creation
@@ -15,8 +15,8 @@ public final class DateAfterCreationResponse {
      */
     private final Double daysAfterCreationGreaterThan;
 
-    @OutputCustomType.Constructor
-    private DateAfterCreationResponse(@OutputCustomType.Parameter("daysAfterCreationGreaterThan") Double daysAfterCreationGreaterThan) {
+    @CustomType.Constructor
+    private DateAfterCreationResponse(@CustomType.Parameter("daysAfterCreationGreaterThan") Double daysAfterCreationGreaterThan) {
         this.daysAfterCreationGreaterThan = daysAfterCreationGreaterThan;
     }
 

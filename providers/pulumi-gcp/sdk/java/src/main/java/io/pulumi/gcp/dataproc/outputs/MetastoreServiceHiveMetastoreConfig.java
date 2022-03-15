@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.MetastoreServiceHiveMetastoreConfigKerberosConfig;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetastoreServiceHiveMetastoreConfig {
     /**
      * A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore (configured in hive-site.xml).
@@ -31,11 +31,11 @@ public final class MetastoreServiceHiveMetastoreConfig {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetastoreServiceHiveMetastoreConfig(
-        @OutputCustomType.Parameter("configOverrides") @Nullable Map<String,String> configOverrides,
-        @OutputCustomType.Parameter("kerberosConfig") @Nullable MetastoreServiceHiveMetastoreConfigKerberosConfig kerberosConfig,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("configOverrides") @Nullable Map<String,String> configOverrides,
+        @CustomType.Parameter("kerberosConfig") @Nullable MetastoreServiceHiveMetastoreConfigKerberosConfig kerberosConfig,
+        @CustomType.Parameter("version") String version) {
         this.configOverrides = configOverrides;
         this.kerberosConfig = kerberosConfig;
         this.version = version;

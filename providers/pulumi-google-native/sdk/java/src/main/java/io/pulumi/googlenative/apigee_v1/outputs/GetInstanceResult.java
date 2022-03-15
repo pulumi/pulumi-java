@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceResult {
     /**
      * Time the instance was created in milliseconds since epoch.
@@ -75,21 +75,21 @@ public final class GetInstanceResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceResult(
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("diskEncryptionKeyName") String diskEncryptionKeyName,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("ipRange") String ipRange,
-        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("peeringCidrRange") String peeringCidrRange,
-        @OutputCustomType.Parameter("port") String port,
-        @OutputCustomType.Parameter("runtimeVersion") String runtimeVersion,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("diskEncryptionKeyName") String diskEncryptionKeyName,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("ipRange") String ipRange,
+        @CustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("peeringCidrRange") String peeringCidrRange,
+        @CustomType.Parameter("port") String port,
+        @CustomType.Parameter("runtimeVersion") String runtimeVersion,
+        @CustomType.Parameter("state") String state) {
         this.createdAt = createdAt;
         this.description = description;
         this.diskEncryptionKeyName = diskEncryptionKeyName;

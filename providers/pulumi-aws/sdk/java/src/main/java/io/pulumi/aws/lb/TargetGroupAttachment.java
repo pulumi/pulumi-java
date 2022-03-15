@@ -8,7 +8,7 @@ import io.pulumi.aws.lb.TargetGroupAttachmentArgs;
 import io.pulumi.aws.lb.inputs.TargetGroupAttachmentState;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class TargetGroupAttachment extends io.pulumi.resources.CustomResource {
      * The Availability Zone where the IP address of the target is to be registered. If the private ip address is outside of the VPC scope, this value must be set to 'all'.
      * 
      */
-    @OutputExport(name="availabilityZone", type=String.class, parameters={})
+    @Export(name="availabilityZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> availabilityZone;
 
     /**
@@ -48,7 +48,7 @@ public class TargetGroupAttachment extends io.pulumi.resources.CustomResource {
      * The port on which targets receive traffic.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     /**
@@ -62,7 +62,7 @@ public class TargetGroupAttachment extends io.pulumi.resources.CustomResource {
      * The ARN of the target group with which to register targets
      * 
      */
-    @OutputExport(name="targetGroupArn", type=String.class, parameters={})
+    @Export(name="targetGroupArn", type=String.class, parameters={})
     private Output<String> targetGroupArn;
 
     /**
@@ -76,7 +76,7 @@ public class TargetGroupAttachment extends io.pulumi.resources.CustomResource {
      * The ID of the target. This is the Instance ID for an instance, or the container ID for an ECS container. If the target type is ip, specify an IP address. If the target type is lambda, specify the arn of lambda. If the target type is alb, specify the arn of alb.
      * 
      */
-    @OutputExport(name="targetId", type=String.class, parameters={})
+    @Export(name="targetId", type=String.class, parameters={})
     private Output<String> targetId;
 
     /**

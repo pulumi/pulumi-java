@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AgentDiskDetailsResponse {
     /**
      * The disk capacity in bytes.
@@ -37,13 +37,13 @@ public final class AgentDiskDetailsResponse {
      */
     private final Integer lunId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AgentDiskDetailsResponse(
-        @OutputCustomType.Parameter("capacityInBytes") Double capacityInBytes,
-        @OutputCustomType.Parameter("diskId") String diskId,
-        @OutputCustomType.Parameter("diskName") String diskName,
-        @OutputCustomType.Parameter("isOSDisk") String isOSDisk,
-        @OutputCustomType.Parameter("lunId") Integer lunId) {
+        @CustomType.Parameter("capacityInBytes") Double capacityInBytes,
+        @CustomType.Parameter("diskId") String diskId,
+        @CustomType.Parameter("diskName") String diskName,
+        @CustomType.Parameter("isOSDisk") String isOSDisk,
+        @CustomType.Parameter("lunId") Integer lunId) {
         this.capacityInBytes = capacityInBytes;
         this.diskId = diskId;
         this.diskName = diskName;

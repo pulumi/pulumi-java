@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ComputeResourceResponse {
     /**
      * Memory in GB
@@ -21,10 +21,10 @@ public final class ComputeResourceResponse {
      */
     private final Integer processorCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComputeResourceResponse(
-        @OutputCustomType.Parameter("memoryInGB") Double memoryInGB,
-        @OutputCustomType.Parameter("processorCount") Integer processorCount) {
+        @CustomType.Parameter("memoryInGB") Double memoryInGB,
+        @CustomType.Parameter("processorCount") Integer processorCount) {
         this.memoryInGB = memoryInGB;
         this.processorCount = processorCount;
     }

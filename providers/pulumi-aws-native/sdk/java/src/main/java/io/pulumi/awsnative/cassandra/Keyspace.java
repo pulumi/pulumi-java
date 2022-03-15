@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cassandra.KeyspaceArgs;
 import io.pulumi.awsnative.cassandra.outputs.KeyspaceTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class Keyspace extends io.pulumi.resources.CustomResource {
      * Name for Cassandra keyspace
      * 
      */
-    @OutputExport(name="keyspaceName", type=String.class, parameters={})
+    @Export(name="keyspaceName", type=String.class, parameters={})
     private Output</* @Nullable */ String> keyspaceName;
 
     /**
@@ -35,7 +35,7 @@ public class Keyspace extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getKeyspaceName() {
         return this.keyspaceName;
     }
-    @OutputExport(name="tags", type=List.class, parameters={KeyspaceTag.class})
+    @Export(name="tags", type=List.class, parameters={KeyspaceTag.class})
     private Output</* @Nullable */ List<KeyspaceTag>> tags;
 
     public Output</* @Nullable */ List<KeyspaceTag>> getTags() {

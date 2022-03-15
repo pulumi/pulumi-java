@@ -8,12 +8,12 @@ import io.pulumi.awsnative.customerprofiles.enums.IntegrationS3ConnectorOperator
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationSalesforceConnectorOperator;
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationServiceNowConnectorOperator;
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationZendeskConnectorOperator;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationConnectorOperator {
     private final @Nullable IntegrationMarketoConnectorOperator marketo;
     private final @Nullable IntegrationS3ConnectorOperator s3;
@@ -21,13 +21,13 @@ public final class IntegrationConnectorOperator {
     private final @Nullable IntegrationServiceNowConnectorOperator serviceNow;
     private final @Nullable IntegrationZendeskConnectorOperator zendesk;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationConnectorOperator(
-        @OutputCustomType.Parameter("marketo") @Nullable IntegrationMarketoConnectorOperator marketo,
-        @OutputCustomType.Parameter("s3") @Nullable IntegrationS3ConnectorOperator s3,
-        @OutputCustomType.Parameter("salesforce") @Nullable IntegrationSalesforceConnectorOperator salesforce,
-        @OutputCustomType.Parameter("serviceNow") @Nullable IntegrationServiceNowConnectorOperator serviceNow,
-        @OutputCustomType.Parameter("zendesk") @Nullable IntegrationZendeskConnectorOperator zendesk) {
+        @CustomType.Parameter("marketo") @Nullable IntegrationMarketoConnectorOperator marketo,
+        @CustomType.Parameter("s3") @Nullable IntegrationS3ConnectorOperator s3,
+        @CustomType.Parameter("salesforce") @Nullable IntegrationSalesforceConnectorOperator salesforce,
+        @CustomType.Parameter("serviceNow") @Nullable IntegrationServiceNowConnectorOperator serviceNow,
+        @CustomType.Parameter("zendesk") @Nullable IntegrationZendeskConnectorOperator zendesk) {
         this.marketo = marketo;
         this.s3 = s3;
         this.salesforce = salesforce;

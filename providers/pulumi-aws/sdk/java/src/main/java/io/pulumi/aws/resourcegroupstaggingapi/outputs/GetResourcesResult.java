@@ -5,7 +5,7 @@ package io.pulumi.aws.resourcegroupstaggingapi.outputs;
 
 import io.pulumi.aws.resourcegroupstaggingapi.outputs.GetResourcesResourceTagMappingList;
 import io.pulumi.aws.resourcegroupstaggingapi.outputs.GetResourcesTagFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResourcesResult {
     private final @Nullable Boolean excludeCompliantResources;
     /**
@@ -31,15 +31,15 @@ public final class GetResourcesResult {
     private final @Nullable List<String> resourceTypeFilters;
     private final @Nullable List<GetResourcesTagFilter> tagFilters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourcesResult(
-        @OutputCustomType.Parameter("excludeCompliantResources") @Nullable Boolean excludeCompliantResources,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("includeComplianceDetails") @Nullable Boolean includeComplianceDetails,
-        @OutputCustomType.Parameter("resourceArnLists") @Nullable List<String> resourceArnLists,
-        @OutputCustomType.Parameter("resourceTagMappingLists") List<GetResourcesResourceTagMappingList> resourceTagMappingLists,
-        @OutputCustomType.Parameter("resourceTypeFilters") @Nullable List<String> resourceTypeFilters,
-        @OutputCustomType.Parameter("tagFilters") @Nullable List<GetResourcesTagFilter> tagFilters) {
+        @CustomType.Parameter("excludeCompliantResources") @Nullable Boolean excludeCompliantResources,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("includeComplianceDetails") @Nullable Boolean includeComplianceDetails,
+        @CustomType.Parameter("resourceArnLists") @Nullable List<String> resourceArnLists,
+        @CustomType.Parameter("resourceTagMappingLists") List<GetResourcesResourceTagMappingList> resourceTagMappingLists,
+        @CustomType.Parameter("resourceTypeFilters") @Nullable List<String> resourceTypeFilters,
+        @CustomType.Parameter("tagFilters") @Nullable List<GetResourcesTagFilter> tagFilters) {
         this.excludeCompliantResources = excludeCompliantResources;
         this.id = id;
         this.includeComplianceDetails = includeComplianceDetails;

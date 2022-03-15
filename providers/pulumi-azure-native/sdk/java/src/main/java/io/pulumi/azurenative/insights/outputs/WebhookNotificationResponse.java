@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebhookNotificationResponse {
     /**
      * a property bag of settings. This value can be empty.
@@ -23,10 +23,10 @@ public final class WebhookNotificationResponse {
      */
     private final @Nullable String serviceUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebhookNotificationResponse(
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("serviceUri") @Nullable String serviceUri) {
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("serviceUri") @Nullable String serviceUri) {
         this.properties = properties;
         this.serviceUri = serviceUri;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resourc
      * Number of virtual CPUs to use.
      * 
      */
-    @InputImport(name="cpus")
+    @Import(name="cpus")
       private final @Nullable Output<String> cpus;
 
     public Output<String> getCpus() {
@@ -30,7 +30,7 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resourc
      * Use local SSD
      * 
      */
-    @InputImport(name="localSsd")
+    @Import(name="localSsd")
       private final @Nullable Output<String> localSsd;
 
     public Output<String> getLocalSsd() {
@@ -41,7 +41,7 @@ public final class NodeTemplateNodeTypeFlexibilityArgs extends io.pulumi.resourc
      * Physical memory available to the node, defined in MB.
      * 
      */
-    @InputImport(name="memory")
+    @Import(name="memory")
       private final @Nullable Output<String> memory;
 
     public Output<String> getMemory() {

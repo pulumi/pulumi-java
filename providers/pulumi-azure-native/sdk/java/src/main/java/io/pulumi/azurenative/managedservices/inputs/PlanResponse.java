@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.managedservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * The plan name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -31,7 +31,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * The product code.
      * 
      */
-    @InputImport(name="product", required=true)
+    @Import(name="product", required=true)
       private final String product;
 
     public String getProduct() {
@@ -42,7 +42,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * The publisher ID.
      * 
      */
-    @InputImport(name="publisher", required=true)
+    @Import(name="publisher", required=true)
       private final String publisher;
 
     public String getPublisher() {
@@ -53,7 +53,7 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
      * The plan's version.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {

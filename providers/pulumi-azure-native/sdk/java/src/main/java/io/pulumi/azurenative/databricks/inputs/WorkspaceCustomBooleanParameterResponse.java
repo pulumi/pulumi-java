@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databricks.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WorkspaceCustomBooleanParameterResponse extends io.pulumi.res
      * The type of variable that this is
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -32,7 +32,7 @@ public final class WorkspaceCustomBooleanParameterResponse extends io.pulumi.res
      * The value which should be used for this field.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Boolean value;
 
     public Boolean getValue() {

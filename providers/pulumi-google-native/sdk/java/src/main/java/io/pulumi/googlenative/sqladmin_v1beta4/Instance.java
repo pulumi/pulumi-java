@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.sqladmin_v1beta4.InstanceArgs;
@@ -33,7 +33,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The backend type. `SECOND_GEN`: Cloud SQL database instance. `EXTERNAL`: A database server that is not managed by Google. This property is read-only; use the `tier` property in the `settings` object to determine the database type.
      * 
      */
-    @OutputExport(name="backendType", type=String.class, parameters={})
+    @Export(name="backendType", type=String.class, parameters={})
     private Output<String> backendType;
 
     /**
@@ -47,7 +47,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Connection name of the Cloud SQL instance used in connection strings.
      * 
      */
-    @OutputExport(name="connectionName", type=String.class, parameters={})
+    @Export(name="connectionName", type=String.class, parameters={})
     private Output<String> connectionName;
 
     /**
@@ -61,7 +61,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The time when the instance was created in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, for example `2012-11-15T16:19:00.094Z`.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -75,7 +75,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The current disk usage of the instance in bytes. This property has been deprecated. Use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead. Please see [this announcement](https://groups.google.com/d/msg/google-cloud-sql-announce/I_7-F9EBhT0/BtvFtdFeAgAJ) for details.
      * 
      */
-    @OutputExport(name="currentDiskSize", type=String.class, parameters={})
+    @Export(name="currentDiskSize", type=String.class, parameters={})
     private Output<String> currentDiskSize;
 
     /**
@@ -89,7 +89,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Stores the current database version running on the instance including minor version such as `MYSQL_8_0_18`.
      * 
      */
-    @OutputExport(name="databaseInstalledVersion", type=String.class, parameters={})
+    @Export(name="databaseInstalledVersion", type=String.class, parameters={})
     private Output<String> databaseInstalledVersion;
 
     /**
@@ -103,7 +103,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The database engine type and version. The `databaseVersion` field cannot be changed after instance creation.
      * 
      */
-    @OutputExport(name="databaseVersion", type=String.class, parameters={})
+    @Export(name="databaseVersion", type=String.class, parameters={})
     private Output<String> databaseVersion;
 
     /**
@@ -117,7 +117,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Disk encryption configuration specific to an instance.
      * 
      */
-    @OutputExport(name="diskEncryptionConfiguration", type=DiskEncryptionConfigurationResponse.class, parameters={})
+    @Export(name="diskEncryptionConfiguration", type=DiskEncryptionConfigurationResponse.class, parameters={})
     private Output<DiskEncryptionConfigurationResponse> diskEncryptionConfiguration;
 
     /**
@@ -131,7 +131,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Disk encryption status specific to an instance.
      * 
      */
-    @OutputExport(name="diskEncryptionStatus", type=DiskEncryptionStatusResponse.class, parameters={})
+    @Export(name="diskEncryptionStatus", type=DiskEncryptionStatusResponse.class, parameters={})
     private Output<DiskEncryptionStatusResponse> diskEncryptionStatus;
 
     /**
@@ -145,7 +145,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The name and status of the failover replica.
      * 
      */
-    @OutputExport(name="failoverReplica", type=InstanceFailoverReplicaResponse.class, parameters={})
+    @Export(name="failoverReplica", type=InstanceFailoverReplicaResponse.class, parameters={})
     private Output<InstanceFailoverReplicaResponse> failoverReplica;
 
     /**
@@ -159,7 +159,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The Compute Engine zone that the instance is currently serving from. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary zone. WARNING: Changing this might restart the instance.
      * 
      */
-    @OutputExport(name="gceZone", type=String.class, parameters={})
+    @Export(name="gceZone", type=String.class, parameters={})
     private Output<String> gceZone;
 
     /**
@@ -173,7 +173,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The instance type.
      * 
      */
-    @OutputExport(name="instanceType", type=String.class, parameters={})
+    @Export(name="instanceType", type=String.class, parameters={})
     private Output<String> instanceType;
 
     /**
@@ -187,7 +187,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The assigned IP addresses for the instance.
      * 
      */
-    @OutputExport(name="ipAddresses", type=List.class, parameters={IpMappingResponse.class})
+    @Export(name="ipAddresses", type=List.class, parameters={IpMappingResponse.class})
     private Output<List<IpMappingResponse>> ipAddresses;
 
     /**
@@ -201,7 +201,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * This is always `sql#instance`.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -215,7 +215,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The name of the instance which will act as primary in the replication setup.
      * 
      */
-    @OutputExport(name="masterInstanceName", type=String.class, parameters={})
+    @Export(name="masterInstanceName", type=String.class, parameters={})
     private Output<String> masterInstanceName;
 
     /**
@@ -229,7 +229,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The maximum disk size of the instance in bytes.
      * 
      */
-    @OutputExport(name="maxDiskSize", type=String.class, parameters={})
+    @Export(name="maxDiskSize", type=String.class, parameters={})
     private Output<String> maxDiskSize;
 
     /**
@@ -243,7 +243,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Name of the Cloud SQL instance. This does not include the project ID.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -257,7 +257,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Configuration specific to on-premises instances.
      * 
      */
-    @OutputExport(name="onPremisesConfiguration", type=OnPremisesConfigurationResponse.class, parameters={})
+    @Export(name="onPremisesConfiguration", type=OnPremisesConfigurationResponse.class, parameters={})
     private Output<OnPremisesConfigurationResponse> onPremisesConfiguration;
 
     /**
@@ -271,7 +271,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * This field represents the report generated by the proactive database wellness job for OutOfDisk issues. * Writers: * the proactive database wellness job for OOD. * Readers: * the proactive database wellness job
      * 
      */
-    @OutputExport(name="outOfDiskReport", type=SqlOutOfDiskReportResponse.class, parameters={})
+    @Export(name="outOfDiskReport", type=SqlOutOfDiskReportResponse.class, parameters={})
     private Output<SqlOutOfDiskReportResponse> outOfDiskReport;
 
     /**
@@ -285,7 +285,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed if applicable.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -299,7 +299,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The geographical region. Can be: * `us-central` (`FIRST_GEN` instances only) * `us-central1` (`SECOND_GEN` instances only) * `asia-east1` or `europe-west1`. Defaults to `us-central` or `us-central1` depending on the instance type. The region cannot be changed after instance creation.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -313,7 +313,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Configuration specific to failover replicas and read replicas.
      * 
      */
-    @OutputExport(name="replicaConfiguration", type=ReplicaConfigurationResponse.class, parameters={})
+    @Export(name="replicaConfiguration", type=ReplicaConfigurationResponse.class, parameters={})
     private Output<ReplicaConfigurationResponse> replicaConfiguration;
 
     /**
@@ -327,7 +327,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The replicas of the instance.
      * 
      */
-    @OutputExport(name="replicaNames", type=List.class, parameters={String.class})
+    @Export(name="replicaNames", type=List.class, parameters={String.class})
     private Output<List<String>> replicaNames;
 
     /**
@@ -341,7 +341,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Initial root password. Use only on creation.
      * 
      */
-    @OutputExport(name="rootPassword", type=String.class, parameters={})
+    @Export(name="rootPassword", type=String.class, parameters={})
     private Output<String> rootPassword;
 
     /**
@@ -355,7 +355,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The status indicating if instance satisfiesPzs. Reserved for future use.
      * 
      */
-    @OutputExport(name="satisfiesPzs", type=Boolean.class, parameters={})
+    @Export(name="satisfiesPzs", type=Boolean.class, parameters={})
     private Output<Boolean> satisfiesPzs;
 
     /**
@@ -369,7 +369,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The start time of any upcoming scheduled maintenance for this instance.
      * 
      */
-    @OutputExport(name="scheduledMaintenance", type=SqlScheduledMaintenanceResponse.class, parameters={})
+    @Export(name="scheduledMaintenance", type=SqlScheduledMaintenanceResponse.class, parameters={})
     private Output<SqlScheduledMaintenanceResponse> scheduledMaintenance;
 
     /**
@@ -383,7 +383,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The Compute Engine zone that the failover instance is currently serving from for a regional instance. This value could be different from the zone that was specified when the instance was created if the instance has failed over to its secondary/failover zone. Reserved for future use.
      * 
      */
-    @OutputExport(name="secondaryGceZone", type=String.class, parameters={})
+    @Export(name="secondaryGceZone", type=String.class, parameters={})
     private Output<String> secondaryGceZone;
 
     /**
@@ -397,7 +397,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The URI of this resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -411,7 +411,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * SSL configuration.
      * 
      */
-    @OutputExport(name="serverCaCert", type=SslCertResponse.class, parameters={})
+    @Export(name="serverCaCert", type=SslCertResponse.class, parameters={})
     private Output<SslCertResponse> serverCaCert;
 
     /**
@@ -425,7 +425,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The service account email address assigned to the instance. \This property is read-only.
      * 
      */
-    @OutputExport(name="serviceAccountEmailAddress", type=String.class, parameters={})
+    @Export(name="serviceAccountEmailAddress", type=String.class, parameters={})
     private Output<String> serviceAccountEmailAddress;
 
     /**
@@ -439,7 +439,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The user settings.
      * 
      */
-    @OutputExport(name="settings", type=SettingsResponse.class, parameters={})
+    @Export(name="settings", type=SettingsResponse.class, parameters={})
     private Output<SettingsResponse> settings;
 
     /**
@@ -453,7 +453,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The current serving state of the Cloud SQL instance.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -467,7 +467,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * If the instance state is SUSPENDED, the reason for the suspension.
      * 
      */
-    @OutputExport(name="suspensionReason", type=List.class, parameters={String.class})
+    @Export(name="suspensionReason", type=List.class, parameters={String.class})
     private Output<List<String>> suspensionReason;
 
     /**

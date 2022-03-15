@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatastoreIODetailsResponse {
     /**
      * Namespace used in the connection.
@@ -20,10 +20,10 @@ public final class DatastoreIODetailsResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatastoreIODetailsResponse(
-        @OutputCustomType.Parameter("namespace") String namespace,
-        @OutputCustomType.Parameter("project") String project) {
+        @CustomType.Parameter("namespace") String namespace,
+        @CustomType.Parameter("project") String project) {
         this.namespace = namespace;
         this.project = project;
     }

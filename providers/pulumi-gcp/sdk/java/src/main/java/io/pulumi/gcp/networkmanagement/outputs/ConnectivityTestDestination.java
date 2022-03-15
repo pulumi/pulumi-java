@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.networkmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectivityTestDestination {
     /**
      * A Compute Engine instance URI.
@@ -48,13 +48,13 @@ public final class ConnectivityTestDestination {
      */
     private final @Nullable String projectId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectivityTestDestination(
-        @OutputCustomType.Parameter("instance") @Nullable String instance,
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("network") @Nullable String network,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("projectId") @Nullable String projectId) {
+        @CustomType.Parameter("instance") @Nullable String instance,
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("network") @Nullable String network,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("projectId") @Nullable String projectId) {
         this.instance = instance;
         this.ipAddress = ipAddress;
         this.network = network;

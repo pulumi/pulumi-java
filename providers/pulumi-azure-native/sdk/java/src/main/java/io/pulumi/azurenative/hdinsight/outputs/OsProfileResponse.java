@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.hdinsight.outputs;
 
 import io.pulumi.azurenative.hdinsight.outputs.LinuxOperatingSystemProfileResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsProfileResponse {
     /**
      * The Linux OS profile.
@@ -17,8 +17,8 @@ public final class OsProfileResponse {
      */
     private final @Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile;
 
-    @OutputCustomType.Constructor
-    private OsProfileResponse(@OutputCustomType.Parameter("linuxOperatingSystemProfile") @Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile) {
+    @CustomType.Constructor
+    private OsProfileResponse(@CustomType.Parameter("linuxOperatingSystemProfile") @Nullable LinuxOperatingSystemProfileResponse linuxOperatingSystemProfile) {
         this.linuxOperatingSystemProfile = linuxOperatingSystemProfile;
     }
 

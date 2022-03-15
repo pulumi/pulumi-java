@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeKubeletConfigResponse {
     /**
      * Enable CPU CFS quota enforcement for containers that specify CPU limits. This option is enabled by default which makes kubelet use CFS quota (https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt) to enforce container CPU limits. Otherwise, CPU limits will not be enforced at all. Disable this option to mitigate CPU throttling problems while still having your pods to be in Guaranteed QoS class by specifying the CPU limits. The default value is 'true' if unspecified.
@@ -26,11 +26,11 @@ public final class NodeKubeletConfigResponse {
      */
     private final String cpuManagerPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeKubeletConfigResponse(
-        @OutputCustomType.Parameter("cpuCfsQuota") Boolean cpuCfsQuota,
-        @OutputCustomType.Parameter("cpuCfsQuotaPeriod") String cpuCfsQuotaPeriod,
-        @OutputCustomType.Parameter("cpuManagerPolicy") String cpuManagerPolicy) {
+        @CustomType.Parameter("cpuCfsQuota") Boolean cpuCfsQuota,
+        @CustomType.Parameter("cpuCfsQuotaPeriod") String cpuCfsQuotaPeriod,
+        @CustomType.Parameter("cpuManagerPolicy") String cpuManagerPolicy) {
         this.cpuCfsQuota = cpuCfsQuota;
         this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
         this.cpuManagerPolicy = cpuManagerPolicy;

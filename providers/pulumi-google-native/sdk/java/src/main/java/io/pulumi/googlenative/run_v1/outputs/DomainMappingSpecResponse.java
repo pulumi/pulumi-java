@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DomainMappingSpecResponse {
     /**
      * The mode of the certificate.
@@ -26,11 +26,11 @@ public final class DomainMappingSpecResponse {
      */
     private final String routeName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainMappingSpecResponse(
-        @OutputCustomType.Parameter("certificateMode") String certificateMode,
-        @OutputCustomType.Parameter("forceOverride") Boolean forceOverride,
-        @OutputCustomType.Parameter("routeName") String routeName) {
+        @CustomType.Parameter("certificateMode") String certificateMode,
+        @CustomType.Parameter("forceOverride") Boolean forceOverride,
+        @CustomType.Parameter("routeName") String routeName) {
         this.certificateMode = certificateMode;
         this.forceOverride = forceOverride;
         this.routeName = routeName;

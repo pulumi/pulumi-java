@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationConfigRuleDestinationReplicationTimeTime {
     /**
      * Time in minutes. Valid values: `15`.
@@ -15,8 +15,8 @@ public final class BucketReplicationConfigRuleDestinationReplicationTimeTime {
      */
     private final Integer minutes;
 
-    @OutputCustomType.Constructor
-    private BucketReplicationConfigRuleDestinationReplicationTimeTime(@OutputCustomType.Parameter("minutes") Integer minutes) {
+    @CustomType.Constructor
+    private BucketReplicationConfigRuleDestinationReplicationTimeTime(@CustomType.Parameter("minutes") Integer minutes) {
         this.minutes = minutes;
     }
 

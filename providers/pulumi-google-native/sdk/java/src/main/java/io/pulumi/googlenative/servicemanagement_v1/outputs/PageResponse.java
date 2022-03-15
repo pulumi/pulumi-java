@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PageResponse {
     /**
      * The Markdown content of the page. You can use (== include {path} ==) to include content from a Markdown file. The content can be used to produce the documentation page such as HTML format page.
@@ -26,11 +26,11 @@ public final class PageResponse {
      */
     private final List<PageResponse> subpages;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PageResponse(
-        @OutputCustomType.Parameter("content") String content,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("subpages") List<PageResponse> subpages) {
+        @CustomType.Parameter("content") String content,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("subpages") List<PageResponse> subpages) {
         this.content = content;
         this.name = name;
         this.subpages = subpages;

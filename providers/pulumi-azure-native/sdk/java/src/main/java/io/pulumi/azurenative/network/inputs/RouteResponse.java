@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
      * The destination CIDR to which the route applies.
      * 
      */
-    @InputImport(name="addressPrefix")
+    @Import(name="addressPrefix")
       private final @Nullable String addressPrefix;
 
     public Optional<String> getAddressPrefix() {
@@ -34,7 +34,7 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -45,7 +45,7 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
      * A value indicating whether this route overrides overlapping BGP routes regardless of LPM.
      * 
      */
-    @InputImport(name="hasBgpOverride")
+    @Import(name="hasBgpOverride")
       private final @Nullable Boolean hasBgpOverride;
 
     public Optional<Boolean> getHasBgpOverride() {
@@ -56,7 +56,7 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -67,7 +67,7 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -78,7 +78,7 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
      * The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.
      * 
      */
-    @InputImport(name="nextHopIpAddress")
+    @Import(name="nextHopIpAddress")
       private final @Nullable String nextHopIpAddress;
 
     public Optional<String> getNextHopIpAddress() {
@@ -89,7 +89,7 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
      * The type of Azure hop the packet should be sent to.
      * 
      */
-    @InputImport(name="nextHopType", required=true)
+    @Import(name="nextHopType", required=true)
       private final String nextHopType;
 
     public String getNextHopType() {
@@ -100,7 +100,7 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
      * The provisioning state of the route resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -111,7 +111,7 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
      * The type of the resource.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

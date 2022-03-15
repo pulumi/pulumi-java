@@ -4,7 +4,7 @@
 package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class CodeSigningConfigPoliciesArgs extends io.pulumi.resources.Res
      * Code signing configuration policy for deployment validation failure. If you set the policy to Enforce, Lambda blocks the deployment request if code-signing validation checks fail. If you set the policy to Warn, Lambda allows the deployment and creates a CloudWatch log. Valid values: `Warn`, `Enforce`. Default value: `Warn`.
      * 
      */
-    @InputImport(name="untrustedArtifactOnDeployment", required=true)
+    @Import(name="untrustedArtifactOnDeployment", required=true)
       private final Output<String> untrustedArtifactOnDeployment;
 
     public Output<String> getUntrustedArtifactOnDeployment() {

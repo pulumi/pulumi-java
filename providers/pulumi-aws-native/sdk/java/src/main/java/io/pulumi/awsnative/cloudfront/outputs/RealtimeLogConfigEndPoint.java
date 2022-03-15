@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.RealtimeLogConfigKinesisStreamConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RealtimeLogConfigEndPoint {
     private final RealtimeLogConfigKinesisStreamConfig kinesisStreamConfig;
     private final String streamType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RealtimeLogConfigEndPoint(
-        @OutputCustomType.Parameter("kinesisStreamConfig") RealtimeLogConfigKinesisStreamConfig kinesisStreamConfig,
-        @OutputCustomType.Parameter("streamType") String streamType) {
+        @CustomType.Parameter("kinesisStreamConfig") RealtimeLogConfigKinesisStreamConfig kinesisStreamConfig,
+        @CustomType.Parameter("streamType") String streamType) {
         this.kinesisStreamConfig = kinesisStreamConfig;
         this.streamType = streamType;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
      * The instance where the static IP is attached.
      * 
      */
-    @InputImport(name="attachedTo")
+    @Import(name="attachedTo")
       private final @Nullable Output<String> attachedTo;
 
     public Output<String> getAttachedTo() {
@@ -29,7 +29,7 @@ public final class StaticIpArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the static IP address.
      * 
      */
-    @InputImport(name="staticIpName")
+    @Import(name="staticIpName")
       private final @Nullable Output<String> staticIpName;
 
     public Output<String> getStaticIpName() {

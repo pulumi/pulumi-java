@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserIdentityPropertiesResponse {
     /**
      * The client id of user assigned identity.
@@ -22,10 +22,10 @@ public final class UserIdentityPropertiesResponse {
      */
     private final @Nullable String principalId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserIdentityPropertiesResponse(
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("principalId") @Nullable String principalId) {
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("principalId") @Nullable String principalId) {
         this.clientId = clientId;
         this.principalId = principalId;
     }

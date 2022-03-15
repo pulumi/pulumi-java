@@ -5,7 +5,7 @@ package io.pulumi.azurenative.iotcentral;
 
 import io.pulumi.azurenative.iotcentral.inputs.AppSkuInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The display name of the application.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -31,7 +31,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -42,7 +42,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the IoT Central application.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -53,7 +53,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The ARM resource name of the IoT Central application.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -64,7 +64,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * A valid instance SKU.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<AppSkuInfoArgs> sku;
 
     public Output<AppSkuInfoArgs> getSku() {
@@ -75,7 +75,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The subdomain of the application.
      * 
      */
-    @InputImport(name="subdomain")
+    @Import(name="subdomain")
       private final @Nullable Output<String> subdomain;
 
     public Output<String> getSubdomain() {
@@ -86,7 +86,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -97,7 +97,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the application template, which is a blueprint that defines the characteristics and behaviors of an application. Optional; if not specified, defaults to a blank blueprint and allows the application to be defined from scratch.
      * 
      */
-    @InputImport(name="template")
+    @Import(name="template")
       private final @Nullable Output<String> template;
 
     public Output<String> getTemplate() {

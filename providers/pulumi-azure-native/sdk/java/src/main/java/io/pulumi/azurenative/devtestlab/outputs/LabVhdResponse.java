@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LabVhdResponse {
     /**
      * The URI to the VHD.
@@ -17,8 +17,8 @@ public final class LabVhdResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
-    private LabVhdResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
+    @CustomType.Constructor
+    private LabVhdResponse(@CustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

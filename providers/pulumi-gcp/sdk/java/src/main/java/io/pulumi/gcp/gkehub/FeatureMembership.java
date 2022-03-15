@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.gkehub.FeatureMembershipArgs;
@@ -37,7 +37,7 @@ public class FeatureMembership extends io.pulumi.resources.CustomResource {
      * Config Management-specific spec. Structure is documented below.
      * 
      */
-    @OutputExport(name="configmanagement", type=FeatureMembershipConfigmanagement.class, parameters={})
+    @Export(name="configmanagement", type=FeatureMembershipConfigmanagement.class, parameters={})
     private Output<FeatureMembershipConfigmanagement> configmanagement;
 
     /**
@@ -51,7 +51,7 @@ public class FeatureMembership extends io.pulumi.resources.CustomResource {
      * The name of the feature
      * 
      */
-    @OutputExport(name="feature", type=String.class, parameters={})
+    @Export(name="feature", type=String.class, parameters={})
     private Output<String> feature;
 
     /**
@@ -65,7 +65,7 @@ public class FeatureMembership extends io.pulumi.resources.CustomResource {
      * The location of the feature
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -79,7 +79,7 @@ public class FeatureMembership extends io.pulumi.resources.CustomResource {
      * The name of the membership
      * 
      */
-    @OutputExport(name="membership", type=String.class, parameters={})
+    @Export(name="membership", type=String.class, parameters={})
     private Output<String> membership;
 
     /**
@@ -93,7 +93,7 @@ public class FeatureMembership extends io.pulumi.resources.CustomResource {
      * The project of the feature
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

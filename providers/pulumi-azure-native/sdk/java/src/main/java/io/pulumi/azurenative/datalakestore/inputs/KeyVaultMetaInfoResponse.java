@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakestore.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class KeyVaultMetaInfoResponse extends io.pulumi.resources.InvokeAr
      * The name of the user managed encryption key.
      * 
      */
-    @InputImport(name="encryptionKeyName", required=true)
+    @Import(name="encryptionKeyName", required=true)
       private final String encryptionKeyName;
 
     public String getEncryptionKeyName() {
@@ -31,7 +31,7 @@ public final class KeyVaultMetaInfoResponse extends io.pulumi.resources.InvokeAr
      * The version of the user managed encryption key.
      * 
      */
-    @InputImport(name="encryptionKeyVersion", required=true)
+    @Import(name="encryptionKeyVersion", required=true)
       private final String encryptionKeyVersion;
 
     public String getEncryptionKeyVersion() {
@@ -42,7 +42,7 @@ public final class KeyVaultMetaInfoResponse extends io.pulumi.resources.InvokeAr
      * The resource identifier for the user managed Key Vault being used to encrypt.
      * 
      */
-    @InputImport(name="keyVaultResourceId", required=true)
+    @Import(name="keyVaultResourceId", required=true)
       private final String keyVaultResourceId;
 
     public String getKeyVaultResourceId() {

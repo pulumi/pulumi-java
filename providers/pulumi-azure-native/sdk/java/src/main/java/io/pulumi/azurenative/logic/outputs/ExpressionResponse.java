@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.AzureResourceErrorInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExpressionResponse {
     /**
      * The azure resource error info.
@@ -31,12 +31,12 @@ public final class ExpressionResponse {
     private final @Nullable String text;
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExpressionResponse(
-        @OutputCustomType.Parameter("error") @Nullable AzureResourceErrorInfoResponse error,
-        @OutputCustomType.Parameter("subexpressions") @Nullable List<ExpressionResponse> subexpressions,
-        @OutputCustomType.Parameter("text") @Nullable String text,
-        @OutputCustomType.Parameter("value") @Nullable Object value) {
+        @CustomType.Parameter("error") @Nullable AzureResourceErrorInfoResponse error,
+        @CustomType.Parameter("subexpressions") @Nullable List<ExpressionResponse> subexpressions,
+        @CustomType.Parameter("text") @Nullable String text,
+        @CustomType.Parameter("value") @Nullable Object value) {
         this.error = error;
         this.subexpressions = subexpressions;
         this.text = text;

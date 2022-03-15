@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datafusion.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class InstanceNetworkConfigArgs extends io.pulumi.resources.Resourc
      * nodes. This range must not overlap with any other ranges used in the Data Fusion instance network.
      * 
      */
-    @InputImport(name="ipAllocation", required=true)
+    @Import(name="ipAllocation", required=true)
       private final Output<String> ipAllocation;
 
     public Output<String> getIpAllocation() {
@@ -31,7 +31,7 @@ public final class InstanceNetworkConfigArgs extends io.pulumi.resources.Resourc
      * project the network should specified in the form of projects/{host-project-id}/global/networks/{network}
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final Output<String> network;
 
     public Output<String> getNetwork() {

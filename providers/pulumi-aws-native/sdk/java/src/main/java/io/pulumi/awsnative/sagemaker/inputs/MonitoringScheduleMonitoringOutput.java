@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleS3Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -16,7 +16,7 @@ public final class MonitoringScheduleMonitoringOutput extends io.pulumi.resource
 
     public static final MonitoringScheduleMonitoringOutput Empty = new MonitoringScheduleMonitoringOutput();
 
-    @InputImport(name="s3Output", required=true)
+    @Import(name="s3Output", required=true)
       private final MonitoringScheduleS3Output s3Output;
 
     public MonitoringScheduleS3Output getS3Output() {

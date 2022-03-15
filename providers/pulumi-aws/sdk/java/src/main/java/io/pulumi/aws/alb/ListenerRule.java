@@ -10,7 +10,7 @@ import io.pulumi.aws.alb.outputs.ListenerRuleAction;
 import io.pulumi.aws.alb.outputs.ListenerRuleCondition;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -40,7 +40,7 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
      * An Action block. Action blocks are documented below.
      * 
      */
-    @OutputExport(name="actions", type=List.class, parameters={ListenerRuleAction.class})
+    @Export(name="actions", type=List.class, parameters={ListenerRuleAction.class})
     private Output<List<ListenerRuleAction>> actions;
 
     /**
@@ -54,7 +54,7 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the target group.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -68,7 +68,7 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
      * A Condition block. Multiple condition blocks of different types can be set and all must be satisfied for the rule to match. Condition blocks are documented below.
      * 
      */
-    @OutputExport(name="conditions", type=List.class, parameters={ListenerRuleCondition.class})
+    @Export(name="conditions", type=List.class, parameters={ListenerRuleCondition.class})
     private Output<List<ListenerRuleCondition>> conditions;
 
     /**
@@ -82,7 +82,7 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
      * The ARN of the listener to which to attach the rule.
      * 
      */
-    @OutputExport(name="listenerArn", type=String.class, parameters={})
+    @Export(name="listenerArn", type=String.class, parameters={})
     private Output<String> listenerArn;
 
     /**
@@ -96,7 +96,7 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
      * The priority for the rule between `1` and `50000`. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can't have multiple rules with the same priority.
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output<Integer> priority;
 
     /**
@@ -110,7 +110,7 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -124,7 +124,7 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

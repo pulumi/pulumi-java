@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.dynamics365fraudprotection.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DFPInstanceAdministratorsResponse {
     /**
      * An array of administrator user identities.
@@ -17,8 +17,8 @@ public final class DFPInstanceAdministratorsResponse {
      */
     private final @Nullable List<String> members;
 
-    @OutputCustomType.Constructor
-    private DFPInstanceAdministratorsResponse(@OutputCustomType.Parameter("members") @Nullable List<String> members) {
+    @CustomType.Constructor
+    private DFPInstanceAdministratorsResponse(@CustomType.Parameter("members") @Nullable List<String> members) {
         this.members = members;
     }
 

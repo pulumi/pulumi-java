@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.azurenative.datafactory.inputs.SqlAlwaysEncryptedPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * Sql always encrypted properties.
      * 
      */
-    @InputImport(name="alwaysEncryptedSettings")
+    @Import(name="alwaysEncryptedSettings")
       private final @Nullable Output<SqlAlwaysEncryptedPropertiesArgs> alwaysEncryptedSettings;
 
     public Output<SqlAlwaysEncryptedPropertiesArgs> getAlwaysEncryptedSettings() {
@@ -42,7 +42,7 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
@@ -53,7 +53,7 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
@@ -64,7 +64,7 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
-    @InputImport(name="connectionString", required=true)
+    @Import(name="connectionString", required=true)
       private final Output<Object> connectionString;
 
     public Output<Object> getConnectionString() {
@@ -75,7 +75,7 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -86,7 +86,7 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
@@ -97,7 +97,7 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
@@ -108,7 +108,7 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * The on-premises Windows authentication password.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
@@ -120,7 +120,7 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * Expected value is 'SqlServer'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -131,7 +131,7 @@ public final class SqlServerLinkedServiceArgs extends io.pulumi.resources.Resour
      * The on-premises Windows authentication user name. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<Object> userName;
 
     public Output<Object> getUserName() {

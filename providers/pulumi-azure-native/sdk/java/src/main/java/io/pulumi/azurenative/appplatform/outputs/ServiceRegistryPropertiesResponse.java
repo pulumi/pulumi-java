@@ -5,12 +5,12 @@ package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.ServiceRegistryInstanceResponse;
 import io.pulumi.azurenative.appplatform.outputs.ServiceRegistryResourceRequestsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceRegistryPropertiesResponse {
     /**
      * Collection of instances belong to Service Registry.
@@ -28,11 +28,11 @@ public final class ServiceRegistryPropertiesResponse {
      */
     private final ServiceRegistryResourceRequestsResponse resourceRequests;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceRegistryPropertiesResponse(
-        @OutputCustomType.Parameter("instances") List<ServiceRegistryInstanceResponse> instances,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceRequests") ServiceRegistryResourceRequestsResponse resourceRequests) {
+        @CustomType.Parameter("instances") List<ServiceRegistryInstanceResponse> instances,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceRequests") ServiceRegistryResourceRequestsResponse resourceRequests) {
         this.instances = instances;
         this.provisioningState = provisioningState;
         this.resourceRequests = resourceRequests;

@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodeGroupRemoteAccess {
     /**
      * EC2 Key Pair name that provides access for SSH communication with the worker nodes in the EKS Node Group. If you specify this configuration, but do not specify `source_security_group_ids` when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).
@@ -23,10 +23,10 @@ public final class NodeGroupRemoteAccess {
      */
     private final @Nullable List<String> sourceSecurityGroupIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeGroupRemoteAccess(
-        @OutputCustomType.Parameter("ec2SshKey") @Nullable String ec2SshKey,
-        @OutputCustomType.Parameter("sourceSecurityGroupIds") @Nullable List<String> sourceSecurityGroupIds) {
+        @CustomType.Parameter("ec2SshKey") @Nullable String ec2SshKey,
+        @CustomType.Parameter("sourceSecurityGroupIds") @Nullable List<String> sourceSecurityGroupIds) {
         this.ec2SshKey = ec2SshKey;
         this.sourceSecurityGroupIds = sourceSecurityGroupIds;
     }

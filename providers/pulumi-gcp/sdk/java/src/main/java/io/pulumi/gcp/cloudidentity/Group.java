@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudidentity;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudidentity.GroupArgs;
@@ -46,7 +46,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The time when the Group was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -61,7 +61,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Must not be longer than 4,096 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -76,7 +76,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The display name of the Group.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -91,7 +91,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="groupKey", type=GroupGroupKey.class, parameters={})
+    @Export(name="groupKey", type=GroupGroupKey.class, parameters={})
     private Output<GroupGroupKey> groupKey;
 
     /**
@@ -111,7 +111,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Possible values are `INITIAL_GROUP_CONFIG_UNSPECIFIED`, `WITH_INITIAL_OWNER`, and `EMPTY`.
      * 
      */
-    @OutputExport(name="initialGroupConfig", type=String.class, parameters={})
+    @Export(name="initialGroupConfig", type=String.class, parameters={})
     private Output</* @Nullable */ String> initialGroupConfig;
 
     /**
@@ -133,7 +133,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * 'system/groups/external': '' if the Group is an external-identity-mapped group.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -150,7 +150,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * Resource name of the Group in the format: groups/{group_id}, where group_id is the unique ID assigned to the Group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -167,7 +167,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * groups or customers/{customer_id} for Google Groups.
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -184,7 +184,7 @@ public class Group extends io.pulumi.resources.CustomResource {
      * The time when the Group was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

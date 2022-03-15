@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPublicKeyResult {
     /**
      * Key ARN of the asymmetric CMK from which the public key was downloaded.
@@ -49,17 +49,17 @@ public final class GetPublicKeyResult {
      */
     private final List<String> signingAlgorithms;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPublicKeyResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("customerMasterKeySpec") String customerMasterKeySpec,
-        @OutputCustomType.Parameter("encryptionAlgorithms") List<String> encryptionAlgorithms,
-        @OutputCustomType.Parameter("grantTokens") @Nullable List<String> grantTokens,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("keyId") String keyId,
-        @OutputCustomType.Parameter("keyUsage") String keyUsage,
-        @OutputCustomType.Parameter("publicKey") String publicKey,
-        @OutputCustomType.Parameter("signingAlgorithms") List<String> signingAlgorithms) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("customerMasterKeySpec") String customerMasterKeySpec,
+        @CustomType.Parameter("encryptionAlgorithms") List<String> encryptionAlgorithms,
+        @CustomType.Parameter("grantTokens") @Nullable List<String> grantTokens,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("keyId") String keyId,
+        @CustomType.Parameter("keyUsage") String keyUsage,
+        @CustomType.Parameter("publicKey") String publicKey,
+        @CustomType.Parameter("signingAlgorithms") List<String> signingAlgorithms) {
         this.arn = arn;
         this.customerMasterKeySpec = customerMasterKeySpec;
         this.encryptionAlgorithms = encryptionAlgorithms;

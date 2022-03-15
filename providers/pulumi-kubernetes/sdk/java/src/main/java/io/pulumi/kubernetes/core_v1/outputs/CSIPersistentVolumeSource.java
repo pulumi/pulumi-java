@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.SecretReference;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CSIPersistentVolumeSource {
     /**
      * ControllerExpandSecretRef is a reference to the secret object containing sensitive information to pass to the CSI driver to complete the CSI ControllerExpandVolume call. This is an alpha field and requires enabling ExpandCSIVolumes feature gate. This field is optional, and may be empty if no secret is required. If the secret object contains more than one secret, all secrets are passed.
@@ -60,17 +60,17 @@ public final class CSIPersistentVolumeSource {
      */
     private final String volumeHandle;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CSIPersistentVolumeSource(
-        @OutputCustomType.Parameter("controllerExpandSecretRef") @Nullable SecretReference controllerExpandSecretRef,
-        @OutputCustomType.Parameter("controllerPublishSecretRef") @Nullable SecretReference controllerPublishSecretRef,
-        @OutputCustomType.Parameter("driver") String driver,
-        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
-        @OutputCustomType.Parameter("nodePublishSecretRef") @Nullable SecretReference nodePublishSecretRef,
-        @OutputCustomType.Parameter("nodeStageSecretRef") @Nullable SecretReference nodeStageSecretRef,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("volumeAttributes") @Nullable Map<String,String> volumeAttributes,
-        @OutputCustomType.Parameter("volumeHandle") String volumeHandle) {
+        @CustomType.Parameter("controllerExpandSecretRef") @Nullable SecretReference controllerExpandSecretRef,
+        @CustomType.Parameter("controllerPublishSecretRef") @Nullable SecretReference controllerPublishSecretRef,
+        @CustomType.Parameter("driver") String driver,
+        @CustomType.Parameter("fsType") @Nullable String fsType,
+        @CustomType.Parameter("nodePublishSecretRef") @Nullable SecretReference nodePublishSecretRef,
+        @CustomType.Parameter("nodeStageSecretRef") @Nullable SecretReference nodeStageSecretRef,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("volumeAttributes") @Nullable Map<String,String> volumeAttributes,
+        @CustomType.Parameter("volumeHandle") String volumeHandle) {
         this.controllerExpandSecretRef = controllerExpandSecretRef;
         this.controllerPublishSecretRef = controllerPublishSecretRef;
         this.driver = driver;

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudwatch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCompositeAlarmResult {
     /**
      * Indicates whether actions should be executed during any changes to the alarm state. The default is TRUE.
@@ -49,15 +49,15 @@ public final class GetCompositeAlarmResult {
      */
     private final @Nullable List<String> oKActions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCompositeAlarmResult(
-        @OutputCustomType.Parameter("actionsEnabled") @Nullable Boolean actionsEnabled,
-        @OutputCustomType.Parameter("alarmActions") @Nullable List<String> alarmActions,
-        @OutputCustomType.Parameter("alarmDescription") @Nullable String alarmDescription,
-        @OutputCustomType.Parameter("alarmRule") @Nullable String alarmRule,
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("insufficientDataActions") @Nullable List<String> insufficientDataActions,
-        @OutputCustomType.Parameter("oKActions") @Nullable List<String> oKActions) {
+        @CustomType.Parameter("actionsEnabled") @Nullable Boolean actionsEnabled,
+        @CustomType.Parameter("alarmActions") @Nullable List<String> alarmActions,
+        @CustomType.Parameter("alarmDescription") @Nullable String alarmDescription,
+        @CustomType.Parameter("alarmRule") @Nullable String alarmRule,
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("insufficientDataActions") @Nullable List<String> insufficientDataActions,
+        @CustomType.Parameter("oKActions") @Nullable List<String> oKActions) {
         this.actionsEnabled = actionsEnabled;
         this.alarmActions = alarmActions;
         this.alarmDescription = alarmDescription;

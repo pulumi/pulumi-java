@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ThresholdResponse extends io.pulumi.resources.InvokeArgs {
      * The state color for this threshold. Color is not allowed in a XyChart.
      * 
      */
-    @InputImport(name="color", required=true)
+    @Import(name="color", required=true)
       private final String color;
 
     public String getColor() {
@@ -32,7 +32,7 @@ public final class ThresholdResponse extends io.pulumi.resources.InvokeArgs {
      * The direction for the current threshold. Direction is not allowed in a XyChart.
      * 
      */
-    @InputImport(name="direction", required=true)
+    @Import(name="direction", required=true)
       private final String direction;
 
     public String getDirection() {
@@ -43,7 +43,7 @@ public final class ThresholdResponse extends io.pulumi.resources.InvokeArgs {
      * A label for the threshold.
      * 
      */
-    @InputImport(name="label", required=true)
+    @Import(name="label", required=true)
       private final String label;
 
     public String getLabel() {
@@ -54,7 +54,7 @@ public final class ThresholdResponse extends io.pulumi.resources.InvokeArgs {
      * The target axis to use for plotting the threshold. Target axis is not allowed in a Scorecard.
      * 
      */
-    @InputImport(name="targetAxis", required=true)
+    @Import(name="targetAxis", required=true)
       private final String targetAxis;
 
     public String getTargetAxis() {
@@ -65,7 +65,7 @@ public final class ThresholdResponse extends io.pulumi.resources.InvokeArgs {
      * The value of the threshold. The value should be defined in the native scale of the metric.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Double value;
 
     public Double getValue() {

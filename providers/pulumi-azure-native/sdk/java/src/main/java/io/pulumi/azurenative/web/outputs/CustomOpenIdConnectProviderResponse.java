@@ -5,13 +5,13 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.OpenIdConnectLoginResponse;
 import io.pulumi.azurenative.web.outputs.OpenIdConnectRegistrationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CustomOpenIdConnectProviderResponse {
     /**
      * <code>false</code> if the custom Open ID provider provider should not be enabled; otherwise, <code>true</code>.
@@ -29,11 +29,11 @@ public final class CustomOpenIdConnectProviderResponse {
      */
     private final @Nullable OpenIdConnectRegistrationResponse registration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomOpenIdConnectProviderResponse(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("login") @Nullable OpenIdConnectLoginResponse login,
-        @OutputCustomType.Parameter("registration") @Nullable OpenIdConnectRegistrationResponse registration) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("login") @Nullable OpenIdConnectLoginResponse login,
+        @CustomType.Parameter("registration") @Nullable OpenIdConnectRegistrationResponse registration) {
         this.enabled = enabled;
         this.login = login;
         this.registration = registration;

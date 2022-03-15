@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iot.TopicRuleArgs;
 import io.pulumi.awsnative.iot.outputs.TopicRulePayload;
 import io.pulumi.awsnative.iot.outputs.TopicRuleTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -20,25 +20,25 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:iot:TopicRule")
 public class TopicRule extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="ruleName", type=String.class, parameters={})
+    @Export(name="ruleName", type=String.class, parameters={})
     private Output</* @Nullable */ String> ruleName;
 
     public Output</* @Nullable */ String> getRuleName() {
         return this.ruleName;
     }
-    @OutputExport(name="tags", type=List.class, parameters={TopicRuleTag.class})
+    @Export(name="tags", type=List.class, parameters={TopicRuleTag.class})
     private Output</* @Nullable */ List<TopicRuleTag>> tags;
 
     public Output</* @Nullable */ List<TopicRuleTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="topicRulePayload", type=TopicRulePayload.class, parameters={})
+    @Export(name="topicRulePayload", type=TopicRulePayload.class, parameters={})
     private Output<TopicRulePayload> topicRulePayload;
 
     public Output<TopicRulePayload> getTopicRulePayload() {

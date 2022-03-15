@@ -9,7 +9,7 @@ import io.pulumi.azurenative.operationsmanagement.outputs.SolutionPlanResponse;
 import io.pulumi.azurenative.operationsmanagement.outputs.SolutionPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -51,7 +51,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -65,7 +65,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * Plan for solution object supported by the OperationsManagement resource provider.
      * 
      */
-    @OutputExport(name="plan", type=SolutionPlanResponse.class, parameters={})
+    @Export(name="plan", type=SolutionPlanResponse.class, parameters={})
     private Output</* @Nullable */ SolutionPlanResponse> plan;
 
     /**
@@ -79,7 +79,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * Properties for solution object supported by the OperationsManagement resource provider.
      * 
      */
-    @OutputExport(name="properties", type=SolutionPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=SolutionPropertiesResponse.class, parameters={})
     private Output<SolutionPropertiesResponse> properties;
 
     /**
@@ -93,7 +93,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -107,7 +107,7 @@ public class Solution extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

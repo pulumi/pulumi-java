@@ -4,7 +4,7 @@
 package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class BrokerMaintenanceWindowStartTimeArgs extends io.pulumi.resour
      * Day of the week, e.g., `MONDAY`, `TUESDAY`, or `WEDNESDAY`.
      * 
      */
-    @InputImport(name="dayOfWeek", required=true)
+    @Import(name="dayOfWeek", required=true)
       private final Output<String> dayOfWeek;
 
     public Output<String> getDayOfWeek() {
@@ -28,7 +28,7 @@ public final class BrokerMaintenanceWindowStartTimeArgs extends io.pulumi.resour
      * Time, in 24-hour format, e.g., `02:00`.
      * 
      */
-    @InputImport(name="timeOfDay", required=true)
+    @Import(name="timeOfDay", required=true)
       private final Output<String> timeOfDay;
 
     public Output<String> getTimeOfDay() {
@@ -39,7 +39,7 @@ public final class BrokerMaintenanceWindowStartTimeArgs extends io.pulumi.resour
      * Time zone in either the Country/City format or the UTC offset format, e.g., `CET`.
      * 
      */
-    @InputImport(name="timeZone", required=true)
+    @Import(name="timeZone", required=true)
       private final Output<String> timeZone;
 
     public Output<String> getTimeZone() {

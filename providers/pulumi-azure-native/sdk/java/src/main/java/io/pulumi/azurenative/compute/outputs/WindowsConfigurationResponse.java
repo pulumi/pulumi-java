@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.AdditionalUnattendContentResponse;
 import io.pulumi.azurenative.compute.outputs.PatchSettingsResponse;
 import io.pulumi.azurenative.compute.outputs.WinRMConfigurationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WindowsConfigurationResponse {
     /**
      * Specifies additional base-64 encoded XML formatted information that can be included in the Unattend.xml file, which is used by Windows Setup.
@@ -47,14 +47,14 @@ public final class WindowsConfigurationResponse {
      */
     private final @Nullable WinRMConfigurationResponse winRM;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WindowsConfigurationResponse(
-        @OutputCustomType.Parameter("additionalUnattendContent") @Nullable List<AdditionalUnattendContentResponse> additionalUnattendContent,
-        @OutputCustomType.Parameter("enableAutomaticUpdates") @Nullable Boolean enableAutomaticUpdates,
-        @OutputCustomType.Parameter("patchSettings") @Nullable PatchSettingsResponse patchSettings,
-        @OutputCustomType.Parameter("provisionVMAgent") @Nullable Boolean provisionVMAgent,
-        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone,
-        @OutputCustomType.Parameter("winRM") @Nullable WinRMConfigurationResponse winRM) {
+        @CustomType.Parameter("additionalUnattendContent") @Nullable List<AdditionalUnattendContentResponse> additionalUnattendContent,
+        @CustomType.Parameter("enableAutomaticUpdates") @Nullable Boolean enableAutomaticUpdates,
+        @CustomType.Parameter("patchSettings") @Nullable PatchSettingsResponse patchSettings,
+        @CustomType.Parameter("provisionVMAgent") @Nullable Boolean provisionVMAgent,
+        @CustomType.Parameter("timeZone") @Nullable String timeZone,
+        @CustomType.Parameter("winRM") @Nullable WinRMConfigurationResponse winRM) {
         this.additionalUnattendContent = additionalUnattendContent;
         this.enableAutomaticUpdates = enableAutomaticUpdates;
         this.patchSettings = patchSettings;

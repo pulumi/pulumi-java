@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
      * The link to the blueprint.
      * 
      */
-    @InputImport(name="blueprint")
+    @Import(name="blueprint")
       private final @Nullable Output<String> blueprint;
 
     public Output<String> getBlueprint() {
@@ -35,7 +35,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
      * The versions of different services in the cluster.
      * 
      */
-    @InputImport(name="componentVersion")
+    @Import(name="componentVersion")
       private final @Nullable Output<Map<String,String>> componentVersion;
 
     public Output<Map<String,String>> getComponentVersion() {
@@ -46,7 +46,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
      * The cluster configurations.
      * 
      */
-    @InputImport(name="configurations")
+    @Import(name="configurations")
       private final @Nullable Output<Object> configurations;
 
     public Output<Object> getConfigurations() {
@@ -57,7 +57,7 @@ public final class ClusterDefinitionArgs extends io.pulumi.resources.ResourceArg
      * The type of cluster.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {

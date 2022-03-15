@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.MongoIndexArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
      * Analytical TTL.
      * 
      */
-    @InputImport(name="analyticalStorageTtl")
+    @Import(name="analyticalStorageTtl")
       private final @Nullable Output<Integer> analyticalStorageTtl;
 
     public Output<Integer> getAnalyticalStorageTtl() {
@@ -37,7 +37,7 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
      * Name of the Cosmos DB MongoDB collection
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -48,7 +48,7 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
      * List of index keys
      * 
      */
-    @InputImport(name="indexes")
+    @Import(name="indexes")
       private final @Nullable Output<List<MongoIndexArgs>> indexes;
 
     public Output<List<MongoIndexArgs>> getIndexes() {
@@ -59,7 +59,7 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
      * A key-value pair of shard keys to be applied for the request.
      * 
      */
-    @InputImport(name="shardKey")
+    @Import(name="shardKey")
       private final @Nullable Output<Map<String,String>> shardKey;
 
     public Output<Map<String,String>> getShardKey() {

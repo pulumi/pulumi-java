@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class HttpRouteMatchPathResponse {
     /**
      * replacement string for matched part of the Uri.
@@ -27,11 +27,11 @@ public final class HttpRouteMatchPathResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpRouteMatchPathResponse(
-        @OutputCustomType.Parameter("rewrite") @Nullable String rewrite,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("rewrite") @Nullable String rewrite,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("value") String value) {
         this.rewrite = rewrite;
         this.type = type;
         this.value = value;

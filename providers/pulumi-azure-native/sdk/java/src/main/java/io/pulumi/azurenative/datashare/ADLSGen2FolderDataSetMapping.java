@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datashare.ADLSGen2FolderDataSetMappingArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ADLSGen2FolderDataSetMapping extends io.pulumi.resources.CustomReso
      * The id of the source data set.
      * 
      */
-    @OutputExport(name="dataSetId", type=String.class, parameters={})
+    @Export(name="dataSetId", type=String.class, parameters={})
     private Output<String> dataSetId;
 
     /**
@@ -49,7 +49,7 @@ public class ADLSGen2FolderDataSetMapping extends io.pulumi.resources.CustomReso
      * Gets the status of the data set mapping.
      * 
      */
-    @OutputExport(name="dataSetMappingStatus", type=String.class, parameters={})
+    @Export(name="dataSetMappingStatus", type=String.class, parameters={})
     private Output<String> dataSetMappingStatus;
 
     /**
@@ -63,7 +63,7 @@ public class ADLSGen2FolderDataSetMapping extends io.pulumi.resources.CustomReso
      * File system to which the folder belongs.
      * 
      */
-    @OutputExport(name="fileSystem", type=String.class, parameters={})
+    @Export(name="fileSystem", type=String.class, parameters={})
     private Output<String> fileSystem;
 
     /**
@@ -77,7 +77,7 @@ public class ADLSGen2FolderDataSetMapping extends io.pulumi.resources.CustomReso
      * Folder path within the file system.
      * 
      */
-    @OutputExport(name="folderPath", type=String.class, parameters={})
+    @Export(name="folderPath", type=String.class, parameters={})
     private Output<String> folderPath;
 
     /**
@@ -92,7 +92,7 @@ public class ADLSGen2FolderDataSetMapping extends io.pulumi.resources.CustomReso
      * Expected value is 'AdlsGen2Folder'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -107,7 +107,7 @@ public class ADLSGen2FolderDataSetMapping extends io.pulumi.resources.CustomReso
      * Name of the azure resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class ADLSGen2FolderDataSetMapping extends io.pulumi.resources.CustomReso
      * Provisioning state of the data set mapping.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -135,7 +135,7 @@ public class ADLSGen2FolderDataSetMapping extends io.pulumi.resources.CustomReso
      * Resource group of storage account.
      * 
      */
-    @OutputExport(name="resourceGroup", type=String.class, parameters={})
+    @Export(name="resourceGroup", type=String.class, parameters={})
     private Output<String> resourceGroup;
 
     /**
@@ -149,7 +149,7 @@ public class ADLSGen2FolderDataSetMapping extends io.pulumi.resources.CustomReso
      * Storage account name of the source data set.
      * 
      */
-    @OutputExport(name="storageAccountName", type=String.class, parameters={})
+    @Export(name="storageAccountName", type=String.class, parameters={})
     private Output<String> storageAccountName;
 
     /**
@@ -163,7 +163,7 @@ public class ADLSGen2FolderDataSetMapping extends io.pulumi.resources.CustomReso
      * Subscription id of storage account.
      * 
      */
-    @OutputExport(name="subscriptionId", type=String.class, parameters={})
+    @Export(name="subscriptionId", type=String.class, parameters={})
     private Output<String> subscriptionId;
 
     /**
@@ -177,7 +177,7 @@ public class ADLSGen2FolderDataSetMapping extends io.pulumi.resources.CustomReso
      * System Data of the Azure resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -191,7 +191,7 @@ public class ADLSGen2FolderDataSetMapping extends io.pulumi.resources.CustomReso
      * Type of the azure resource
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

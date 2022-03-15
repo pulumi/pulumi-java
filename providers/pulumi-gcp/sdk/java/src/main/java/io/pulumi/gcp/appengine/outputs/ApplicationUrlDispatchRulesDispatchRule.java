@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationUrlDispatchRulesDispatchRule {
     /**
      * Domain name to match against. The wildcard "*" is supported if specified before a period: "*.".
@@ -30,11 +30,11 @@ public final class ApplicationUrlDispatchRulesDispatchRule {
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationUrlDispatchRulesDispatchRule(
-        @OutputCustomType.Parameter("domain") @Nullable String domain,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("domain") @Nullable String domain,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("service") String service) {
         this.domain = domain;
         this.path = path;
         this.service = service;

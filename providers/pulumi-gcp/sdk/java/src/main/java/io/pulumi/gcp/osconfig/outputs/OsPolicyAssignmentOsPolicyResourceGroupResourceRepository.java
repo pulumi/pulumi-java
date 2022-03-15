@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepository {
     /**
      * An Apt Repository.
@@ -35,12 +35,12 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepository {
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper zypper;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourceRepository(
-        @OutputCustomType.Parameter("apt") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt apt,
-        @OutputCustomType.Parameter("goo") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo goo,
-        @OutputCustomType.Parameter("yum") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum yum,
-        @OutputCustomType.Parameter("zypper") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper zypper) {
+        @CustomType.Parameter("apt") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt apt,
+        @CustomType.Parameter("goo") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo goo,
+        @CustomType.Parameter("yum") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum yum,
+        @CustomType.Parameter("zypper") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper zypper) {
         this.apt = apt;
         this.goo = goo;
         this.yum = yum;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebServiceKeysResponse {
     /**
      * The primary access key.
@@ -22,10 +22,10 @@ public final class WebServiceKeysResponse {
      */
     private final @Nullable String secondary;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebServiceKeysResponse(
-        @OutputCustomType.Parameter("primary") @Nullable String primary,
-        @OutputCustomType.Parameter("secondary") @Nullable String secondary) {
+        @CustomType.Parameter("primary") @Nullable String primary,
+        @CustomType.Parameter("secondary") @Nullable String secondary) {
         this.primary = primary;
         this.secondary = secondary;
     }

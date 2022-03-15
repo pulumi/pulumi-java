@@ -7,7 +7,7 @@ import io.pulumi.awsnative.datasync.enums.LocationS3S3StorageClass;
 import io.pulumi.awsnative.datasync.inputs.LocationS3S3ConfigArgs;
 import io.pulumi.awsnative.datasync.inputs.LocationS3TagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,14 +22,14 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the Amazon S3 bucket.
      * 
      */
-    @InputImport(name="s3BucketArn", required=true)
+    @Import(name="s3BucketArn", required=true)
       private final Output<String> s3BucketArn;
 
     public Output<String> getS3BucketArn() {
         return this.s3BucketArn;
     }
 
-    @InputImport(name="s3Config", required=true)
+    @Import(name="s3Config", required=true)
       private final Output<LocationS3S3ConfigArgs> s3Config;
 
     public Output<LocationS3S3ConfigArgs> getS3Config() {
@@ -40,7 +40,7 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
      * The Amazon S3 storage class you want to store your files in when this location is used as a task destination.
      * 
      */
-    @InputImport(name="s3StorageClass")
+    @Import(name="s3StorageClass")
       private final @Nullable Output<LocationS3S3StorageClass> s3StorageClass;
 
     public Output<LocationS3S3StorageClass> getS3StorageClass() {
@@ -51,7 +51,7 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
      * A subdirectory in the Amazon S3 bucket. This subdirectory in Amazon S3 is used to read data from the S3 source location or write data to the S3 destination.
      * 
      */
-    @InputImport(name="subdirectory")
+    @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
@@ -62,7 +62,7 @@ public final class LocationS3Args extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<LocationS3TagArgs>> tags;
 
     public Output<List<LocationS3TagArgs>> getTags() {

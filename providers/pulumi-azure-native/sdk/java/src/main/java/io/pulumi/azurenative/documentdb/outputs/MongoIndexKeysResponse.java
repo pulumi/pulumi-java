@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MongoIndexKeysResponse {
     /**
      * List of keys for each MongoDB collection in the Azure Cosmos DB service
@@ -17,8 +17,8 @@ public final class MongoIndexKeysResponse {
      */
     private final @Nullable List<String> keys;
 
-    @OutputCustomType.Constructor
-    private MongoIndexKeysResponse(@OutputCustomType.Parameter("keys") @Nullable List<String> keys) {
+    @CustomType.Constructor
+    private MongoIndexKeysResponse(@CustomType.Parameter("keys") @Nullable List<String> keys) {
         this.keys = keys;
     }
 

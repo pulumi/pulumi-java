@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketOwnerResponse {
     /**
      * The entity, in the form project-owner-projectId.
@@ -20,10 +20,10 @@ public final class BucketOwnerResponse {
      */
     private final String entityId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketOwnerResponse(
-        @OutputCustomType.Parameter("entity") String entity,
-        @OutputCustomType.Parameter("entityId") String entityId) {
+        @CustomType.Parameter("entity") String entity,
+        @CustomType.Parameter("entityId") String entityId) {
         this.entity = entity;
         this.entityId = entityId;
     }

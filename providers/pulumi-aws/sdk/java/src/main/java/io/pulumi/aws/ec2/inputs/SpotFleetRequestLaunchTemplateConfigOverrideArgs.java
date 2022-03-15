@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
      * The availability zone in which to place the request.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -30,7 +30,7 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
      * The type of instance to request.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -41,7 +41,7 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
      * The priority for the launch template override. The lower the number, the higher the priority. If no number is set, the launch template override has the lowest priority.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Double> priority;
 
     public Output<Double> getPriority() {
@@ -52,7 +52,7 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
      * The maximum spot bid for this override request.
      * 
      */
-    @InputImport(name="spotPrice")
+    @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
 
     public Output<String> getSpotPrice() {
@@ -63,7 +63,7 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
      * The subnet in which to launch the requested instance.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -74,7 +74,7 @@ public final class SpotFleetRequestLaunchTemplateConfigOverrideArgs extends io.p
      * The capacity added to the fleet by a fulfilled request.
      * 
      */
-    @InputImport(name="weightedCapacity")
+    @Import(name="weightedCapacity")
       private final @Nullable Output<Double> weightedCapacity;
 
     public Output<Double> getWeightedCapacity() {

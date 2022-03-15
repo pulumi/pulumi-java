@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.sagemaker.NotebookInstanceArgs;
 import io.pulumi.aws.sagemaker.inputs.NotebookInstanceState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * These can be either the names of Git repositories stored as resources in your account, or the URL of Git repositories in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository. These repositories are cloned at the same level as the default repository of your notebook instance.
      * 
      */
-    @OutputExport(name="additionalCodeRepositories", type=List.class, parameters={String.class})
+    @Export(name="additionalCodeRepositories", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> additionalCodeRepositories;
 
     /**
@@ -51,7 +51,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) assigned by AWS to this notebook instance.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -65,7 +65,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * The Git repository associated with the notebook instance as its default code repository. This can be either the name of a Git repository stored as a resource in your account, or the URL of a Git repository in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html) or in any other Git repository.
      * 
      */
-    @OutputExport(name="defaultCodeRepository", type=String.class, parameters={})
+    @Export(name="defaultCodeRepository", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultCodeRepository;
 
     /**
@@ -79,7 +79,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * Set to `Disabled` to disable internet access to notebook. Requires `security_groups` and `subnet_id` to be set. Supported values: `Enabled` (Default) or `Disabled`. If set to `Disabled`, the notebook instance will be able to access resources only in your VPC, and will not be able to connect to Amazon SageMaker training and endpoint services unless your configure a NAT Gateway in your VPC.
      * 
      */
-    @OutputExport(name="directInternetAccess", type=String.class, parameters={})
+    @Export(name="directInternetAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> directInternetAccess;
 
     /**
@@ -93,7 +93,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * The name of ML compute instance type.
      * 
      */
-    @OutputExport(name="instanceType", type=String.class, parameters={})
+    @Export(name="instanceType", type=String.class, parameters={})
     private Output<String> instanceType;
 
     /**
@@ -107,7 +107,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt the model artifacts at rest using Amazon S3 server-side encryption.
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyId;
 
     /**
@@ -121,7 +121,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * The name of a lifecycle configuration to associate with the notebook instance.
      * 
      */
-    @OutputExport(name="lifecycleConfigName", type=String.class, parameters={})
+    @Export(name="lifecycleConfigName", type=String.class, parameters={})
     private Output</* @Nullable */ String> lifecycleConfigName;
 
     /**
@@ -135,7 +135,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * The name of the notebook instance (must be unique).
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -149,7 +149,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * The network interface ID that Amazon SageMaker created at the time of creating the instance. Only available when setting `subnet_id`.
      * 
      */
-    @OutputExport(name="networkInterfaceId", type=String.class, parameters={})
+    @Export(name="networkInterfaceId", type=String.class, parameters={})
     private Output<String> networkInterfaceId;
 
     /**
@@ -163,7 +163,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * The platform identifier of the notebook instance runtime environment. This value can be either `notebook-al1-v1` or `notebook-al2-v1`, depending on which version of Amazon Linux you require.
      * 
      */
-    @OutputExport(name="platformIdentifier", type=String.class, parameters={})
+    @Export(name="platformIdentifier", type=String.class, parameters={})
     private Output<String> platformIdentifier;
 
     /**
@@ -177,7 +177,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * The ARN of the IAM role to be used by the notebook instance which allows SageMaker to call other services on your behalf.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -191,7 +191,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * Whether root access is `Enabled` or `Disabled` for users of the notebook instance. The default value is `Enabled`.
      * 
      */
-    @OutputExport(name="rootAccess", type=String.class, parameters={})
+    @Export(name="rootAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> rootAccess;
 
     /**
@@ -205,7 +205,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * The associated security groups.
      * 
      */
-    @OutputExport(name="securityGroups", type=List.class, parameters={String.class})
+    @Export(name="securityGroups", type=List.class, parameters={String.class})
     private Output<List<String>> securityGroups;
 
     /**
@@ -219,7 +219,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * The VPC subnet ID.
      * 
      */
-    @OutputExport(name="subnetId", type=String.class, parameters={})
+    @Export(name="subnetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subnetId;
 
     /**
@@ -233,7 +233,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -247,7 +247,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -261,7 +261,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * The URL that you use to connect to the Jupyter notebook that is running in your notebook instance.
      * 
      */
-    @OutputExport(name="url", type=String.class, parameters={})
+    @Export(name="url", type=String.class, parameters={})
     private Output<String> url;
 
     /**
@@ -275,7 +275,7 @@ public class NotebookInstance extends io.pulumi.resources.CustomResource {
      * The size, in GB, of the ML storage volume to attach to the notebook instance. The default value is 5 GB.
      * 
      */
-    @OutputExport(name="volumeSize", type=Integer.class, parameters={})
+    @Export(name="volumeSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> volumeSize;
 
     /**

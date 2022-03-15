@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubnetworkLogConfig {
     /**
      * Can only be specified if VPC flow logging for this subnetwork is enabled.
@@ -55,13 +55,13 @@ public final class SubnetworkLogConfig {
      */
     private final @Nullable List<String> metadataFields;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubnetworkLogConfig(
-        @OutputCustomType.Parameter("aggregationInterval") @Nullable String aggregationInterval,
-        @OutputCustomType.Parameter("filterExpr") @Nullable String filterExpr,
-        @OutputCustomType.Parameter("flowSampling") @Nullable Double flowSampling,
-        @OutputCustomType.Parameter("metadata") @Nullable String metadata,
-        @OutputCustomType.Parameter("metadataFields") @Nullable List<String> metadataFields) {
+        @CustomType.Parameter("aggregationInterval") @Nullable String aggregationInterval,
+        @CustomType.Parameter("filterExpr") @Nullable String filterExpr,
+        @CustomType.Parameter("flowSampling") @Nullable Double flowSampling,
+        @CustomType.Parameter("metadata") @Nullable String metadata,
+        @CustomType.Parameter("metadataFields") @Nullable List<String> metadataFields) {
         this.aggregationInterval = aggregationInterval;
         this.filterExpr = filterExpr;
         this.flowSampling = flowSampling;

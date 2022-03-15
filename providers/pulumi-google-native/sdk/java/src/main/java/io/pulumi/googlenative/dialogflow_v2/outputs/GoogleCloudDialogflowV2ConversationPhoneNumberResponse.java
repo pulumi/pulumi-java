@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2ConversationPhoneNumberResponse {
     /**
      * The phone number to connect to this conversation.
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2ConversationPhoneNumberResponse {
      */
     private final String phoneNumber;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowV2ConversationPhoneNumberResponse(@OutputCustomType.Parameter("phoneNumber") String phoneNumber) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowV2ConversationPhoneNumberResponse(@CustomType.Parameter("phoneNumber") String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

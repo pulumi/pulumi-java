@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.BackendBucketArgs;
@@ -24,7 +24,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * Cloud Storage bucket name.
      * 
      */
-    @OutputExport(name="bucketName", type=String.class, parameters={})
+    @Export(name="bucketName", type=String.class, parameters={})
     private Output<String> bucketName;
 
     /**
@@ -38,7 +38,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * Cloud CDN configuration for this BackendBucket.
      * 
      */
-    @OutputExport(name="cdnPolicy", type=BackendBucketCdnPolicyResponse.class, parameters={})
+    @Export(name="cdnPolicy", type=BackendBucketCdnPolicyResponse.class, parameters={})
     private Output<BackendBucketCdnPolicyResponse> cdnPolicy;
 
     /**
@@ -52,7 +52,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -66,7 +66,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * Headers that the HTTP/S load balancer should add to proxied responses.
      * 
      */
-    @OutputExport(name="customResponseHeaders", type=List.class, parameters={String.class})
+    @Export(name="customResponseHeaders", type=List.class, parameters={String.class})
     private Output<List<String>> customResponseHeaders;
 
     /**
@@ -80,7 +80,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * An optional textual description of the resource; provided by the client when the resource is created.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -94,7 +94,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * The resource URL for the edge security policy associated with this backend bucket.
      * 
      */
-    @OutputExport(name="edgeSecurityPolicy", type=String.class, parameters={})
+    @Export(name="edgeSecurityPolicy", type=String.class, parameters={})
     private Output<String> edgeSecurityPolicy;
 
     /**
@@ -108,7 +108,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * If true, enable Cloud CDN for this BackendBucket.
      * 
      */
-    @OutputExport(name="enableCdn", type=Boolean.class, parameters={})
+    @Export(name="enableCdn", type=Boolean.class, parameters={})
     private Output<Boolean> enableCdn;
 
     /**
@@ -122,7 +122,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * Type of the resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -136,7 +136,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -150,7 +150,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**

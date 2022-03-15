@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,35 +14,35 @@ public final class GetIntentArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetIntentArgs Empty = new GetIntentArgs();
 
-    @InputImport(name="intentId", required=true)
+    @Import(name="intentId", required=true)
       private final String intentId;
 
     public String getIntentId() {
         return this.intentId;
     }
 
-    @InputImport(name="intentView")
+    @Import(name="intentView")
       private final @Nullable String intentView;
 
     public Optional<String> getIntentView() {
         return this.intentView == null ? Optional.empty() : Optional.ofNullable(this.intentView);
     }
 
-    @InputImport(name="languageCode")
+    @Import(name="languageCode")
       private final @Nullable String languageCode;
 
     public Optional<String> getLanguageCode() {
         return this.languageCode == null ? Optional.empty() : Optional.ofNullable(this.languageCode);
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

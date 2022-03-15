@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.ids_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEndpointResult {
     /**
      * The create time timestamp.
@@ -67,19 +67,19 @@ public final class GetEndpointResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEndpointResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("endpointForwardingRule") String endpointForwardingRule,
-        @OutputCustomType.Parameter("endpointIp") String endpointIp,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("severity") String severity,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("trafficLogs") Boolean trafficLogs,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("endpointForwardingRule") String endpointForwardingRule,
+        @CustomType.Parameter("endpointIp") String endpointIp,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("severity") String severity,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("trafficLogs") Boolean trafficLogs,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.endpointForwardingRule = endpointForwardingRule;

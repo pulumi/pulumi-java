@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoscaleCapacityResponse {
     /**
      * The maximum instance count of the cluster
@@ -22,10 +22,10 @@ public final class AutoscaleCapacityResponse {
      */
     private final @Nullable Integer minInstanceCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscaleCapacityResponse(
-        @OutputCustomType.Parameter("maxInstanceCount") @Nullable Integer maxInstanceCount,
-        @OutputCustomType.Parameter("minInstanceCount") @Nullable Integer minInstanceCount) {
+        @CustomType.Parameter("maxInstanceCount") @Nullable Integer maxInstanceCount,
+        @CustomType.Parameter("minInstanceCount") @Nullable Integer minInstanceCount) {
         this.maxInstanceCount = maxInstanceCount;
         this.minInstanceCount = minInstanceCount;
     }

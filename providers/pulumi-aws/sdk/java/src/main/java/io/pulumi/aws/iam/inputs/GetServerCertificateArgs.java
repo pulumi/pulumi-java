@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetServerCertificateArgs extends io.pulumi.resources.InvokeAr
      * sort results by expiration date. returns the certificate with expiration date in furthest in the future.
      * 
      */
-    @InputImport(name="latest")
+    @Import(name="latest")
       private final @Nullable Boolean latest;
 
     public Optional<Boolean> getLatest() {
@@ -30,7 +30,7 @@ public final class GetServerCertificateArgs extends io.pulumi.resources.InvokeAr
      * exact name of the cert to lookup
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -41,7 +41,7 @@ public final class GetServerCertificateArgs extends io.pulumi.resources.InvokeAr
      * prefix of cert to filter by
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable String namePrefix;
 
     public Optional<String> getNamePrefix() {
@@ -52,7 +52,7 @@ public final class GetServerCertificateArgs extends io.pulumi.resources.InvokeAr
      * prefix of path to filter by
      * 
      */
-    @InputImport(name="pathPrefix")
+    @Import(name="pathPrefix")
       private final @Nullable String pathPrefix;
 
     public Optional<String> getPathPrefix() {

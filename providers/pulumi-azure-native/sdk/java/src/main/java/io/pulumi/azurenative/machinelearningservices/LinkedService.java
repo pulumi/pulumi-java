@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.IdentityResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.LinkedServicePropsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class LinkedService extends io.pulumi.resources.CustomResource {
      * Identity for the resource.
      * 
      */
-    @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
+    @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
@@ -50,7 +50,7 @@ public class LinkedService extends io.pulumi.resources.CustomResource {
      * location of the linked service.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -64,7 +64,7 @@ public class LinkedService extends io.pulumi.resources.CustomResource {
      * Friendly name of the linked service.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class LinkedService extends io.pulumi.resources.CustomResource {
      * LinkedService specific properties.
      * 
      */
-    @OutputExport(name="properties", type=LinkedServicePropsResponse.class, parameters={})
+    @Export(name="properties", type=LinkedServicePropsResponse.class, parameters={})
     private Output<LinkedServicePropsResponse> properties;
 
     /**
@@ -92,7 +92,7 @@ public class LinkedService extends io.pulumi.resources.CustomResource {
      * Resource type of linked service.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

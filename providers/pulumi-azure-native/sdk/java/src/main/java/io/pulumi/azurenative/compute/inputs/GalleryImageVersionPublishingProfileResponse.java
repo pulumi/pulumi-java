@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.TargetRegionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
      * The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
      * 
      */
-    @InputImport(name="endOfLifeDate")
+    @Import(name="endOfLifeDate")
       private final @Nullable String endOfLifeDate;
 
     public Optional<String> getEndOfLifeDate() {
@@ -37,7 +37,7 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
      * If set to true, Virtual Machines deployed from the latest version of the Image Definition won't use this Image Version.
      * 
      */
-    @InputImport(name="excludeFromLatest")
+    @Import(name="excludeFromLatest")
       private final @Nullable Boolean excludeFromLatest;
 
     public Optional<Boolean> getExcludeFromLatest() {
@@ -48,7 +48,7 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
      * The timestamp for when the gallery image version is published.
      * 
      */
-    @InputImport(name="publishedDate", required=true)
+    @Import(name="publishedDate", required=true)
       private final String publishedDate;
 
     public String getPublishedDate() {
@@ -59,7 +59,7 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
      * The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
      * 
      */
-    @InputImport(name="replicaCount")
+    @Import(name="replicaCount")
       private final @Nullable Integer replicaCount;
 
     public Optional<Integer> getReplicaCount() {
@@ -70,7 +70,7 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
      * Specifies the storage account type to be used to store the image. This property is not updatable.
      * 
      */
-    @InputImport(name="storageAccountType")
+    @Import(name="storageAccountType")
       private final @Nullable String storageAccountType;
 
     public Optional<String> getStorageAccountType() {
@@ -81,7 +81,7 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
      * The target regions where the Image Version is going to be replicated to. This property is updatable.
      * 
      */
-    @InputImport(name="targetRegions")
+    @Import(name="targetRegions")
       private final @Nullable List<TargetRegionResponse> targetRegions;
 
     public List<TargetRegionResponse> getTargetRegions() {

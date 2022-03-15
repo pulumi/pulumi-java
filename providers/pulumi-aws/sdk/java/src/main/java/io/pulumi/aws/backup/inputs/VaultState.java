@@ -4,7 +4,7 @@
 package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the vault.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * The server-side encryption key that is used to protect your backups.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -42,7 +42,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * Name of the backup vault to create.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -53,7 +53,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * The number of recovery points that are stored in a backup vault.
      * 
      */
-    @InputImport(name="recoveryPoints")
+    @Import(name="recoveryPoints")
       private final @Nullable Output<Integer> recoveryPoints;
 
     public Output<Integer> getRecoveryPoints() {
@@ -64,7 +64,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * Metadata that you can assign to help organize the resources that you create. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -75,7 +75,7 @@ public final class VaultState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.PacketMirroringMirroredResourceInfoInstanceInfoArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.PacketMirroringMirroredResourceInfoSubnetInfoArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class PacketMirroringMirroredResourceInfoArgs extends io.pulumi.res
      * A set of virtual machine instances that are being mirrored. They must live in zones contained in the same region as this packetMirroring. Note that this config will apply only to those network interfaces of the Instances that belong to the network specified in this packetMirroring. You may specify a maximum of 50 Instances.
      * 
      */
-    @InputImport(name="instances")
+    @Import(name="instances")
       private final @Nullable Output<List<PacketMirroringMirroredResourceInfoInstanceInfoArgs>> instances;
 
     public Output<List<PacketMirroringMirroredResourceInfoInstanceInfoArgs>> getInstances() {
@@ -32,7 +32,7 @@ public final class PacketMirroringMirroredResourceInfoArgs extends io.pulumi.res
      * A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must live in the same region as this packetMirroring. You may specify a maximum of 5 subnetworks.
      * 
      */
-    @InputImport(name="subnetworks")
+    @Import(name="subnetworks")
       private final @Nullable Output<List<PacketMirroringMirroredResourceInfoSubnetInfoArgs>> subnetworks;
 
     public Output<List<PacketMirroringMirroredResourceInfoSubnetInfoArgs>> getSubnetworks() {
@@ -43,7 +43,7 @@ public final class PacketMirroringMirroredResourceInfoArgs extends io.pulumi.res
      * A set of mirrored tags. Traffic from/to all VM instances that have one or more of these tags will be mirrored.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {

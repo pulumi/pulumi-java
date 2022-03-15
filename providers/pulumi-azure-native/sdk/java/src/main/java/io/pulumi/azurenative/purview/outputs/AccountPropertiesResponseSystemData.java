@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.purview.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AccountPropertiesResponseSystemData {
     /**
      * The timestamp of resource creation (UTC).
@@ -40,14 +40,14 @@ public final class AccountPropertiesResponseSystemData {
      */
     private final String lastModifiedByType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccountPropertiesResponseSystemData(
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("createdBy") String createdBy,
-        @OutputCustomType.Parameter("createdByType") String createdByType,
-        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
-        @OutputCustomType.Parameter("lastModifiedBy") String lastModifiedBy,
-        @OutputCustomType.Parameter("lastModifiedByType") String lastModifiedByType) {
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("createdBy") String createdBy,
+        @CustomType.Parameter("createdByType") String createdByType,
+        @CustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @CustomType.Parameter("lastModifiedBy") String lastModifiedBy,
+        @CustomType.Parameter("lastModifiedByType") String lastModifiedByType) {
         this.createdAt = createdAt;
         this.createdBy = createdBy;
         this.createdByType = createdByType;

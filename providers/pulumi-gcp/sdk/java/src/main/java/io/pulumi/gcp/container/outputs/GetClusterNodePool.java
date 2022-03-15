@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.GetClusterNodePoolAutoscaling;
 import io.pulumi.gcp.container.outputs.GetClusterNodePoolManagement;
 import io.pulumi.gcp.container.outputs.GetClusterNodePoolNetworkConfig;
@@ -14,7 +14,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterNodePool {
     private final List<GetClusterNodePoolAutoscaling> autoscalings;
     private final Integer initialNodeCount;
@@ -35,22 +35,22 @@ public final class GetClusterNodePool {
     private final List<GetClusterNodePoolUpgradeSetting> upgradeSettings;
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterNodePool(
-        @OutputCustomType.Parameter("autoscalings") List<GetClusterNodePoolAutoscaling> autoscalings,
-        @OutputCustomType.Parameter("initialNodeCount") Integer initialNodeCount,
-        @OutputCustomType.Parameter("instanceGroupUrls") List<String> instanceGroupUrls,
-        @OutputCustomType.Parameter("managedInstanceGroupUrls") List<String> managedInstanceGroupUrls,
-        @OutputCustomType.Parameter("managements") List<GetClusterNodePoolManagement> managements,
-        @OutputCustomType.Parameter("maxPodsPerNode") Integer maxPodsPerNode,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namePrefix") String namePrefix,
-        @OutputCustomType.Parameter("networkConfigs") List<GetClusterNodePoolNetworkConfig> networkConfigs,
-        @OutputCustomType.Parameter("nodeConfigs") List<GetClusterNodePoolNodeConfig> nodeConfigs,
-        @OutputCustomType.Parameter("nodeCount") Integer nodeCount,
-        @OutputCustomType.Parameter("nodeLocations") List<String> nodeLocations,
-        @OutputCustomType.Parameter("upgradeSettings") List<GetClusterNodePoolUpgradeSetting> upgradeSettings,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("autoscalings") List<GetClusterNodePoolAutoscaling> autoscalings,
+        @CustomType.Parameter("initialNodeCount") Integer initialNodeCount,
+        @CustomType.Parameter("instanceGroupUrls") List<String> instanceGroupUrls,
+        @CustomType.Parameter("managedInstanceGroupUrls") List<String> managedInstanceGroupUrls,
+        @CustomType.Parameter("managements") List<GetClusterNodePoolManagement> managements,
+        @CustomType.Parameter("maxPodsPerNode") Integer maxPodsPerNode,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namePrefix") String namePrefix,
+        @CustomType.Parameter("networkConfigs") List<GetClusterNodePoolNetworkConfig> networkConfigs,
+        @CustomType.Parameter("nodeConfigs") List<GetClusterNodePoolNodeConfig> nodeConfigs,
+        @CustomType.Parameter("nodeCount") Integer nodeCount,
+        @CustomType.Parameter("nodeLocations") List<String> nodeLocations,
+        @CustomType.Parameter("upgradeSettings") List<GetClusterNodePoolUpgradeSetting> upgradeSettings,
+        @CustomType.Parameter("version") String version) {
         this.autoscalings = autoscalings;
         this.initialNodeCount = initialNodeCount;
         this.instanceGroupUrls = instanceGroupUrls;

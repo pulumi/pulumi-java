@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.networksecurity_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SourceResponse {
     /**
      * Optional. List of CIDR ranges to match based on source IP address. At least one IP block should match. Single IP (e.g., "1.2.3.4") and CIDR (e.g., "1.2.3.0/24") are supported. Authorization based on source IP alone should be avoided. The IP addresses of any load balancers or proxies should be considered untrusted.
@@ -21,10 +21,10 @@ public final class SourceResponse {
      */
     private final List<String> principals;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceResponse(
-        @OutputCustomType.Parameter("ipBlocks") List<String> ipBlocks,
-        @OutputCustomType.Parameter("principals") List<String> principals) {
+        @CustomType.Parameter("ipBlocks") List<String> ipBlocks,
+        @CustomType.Parameter("principals") List<String> principals) {
         this.ipBlocks = ipBlocks;
         this.principals = principals;
     }

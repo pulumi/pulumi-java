@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2betaIntervalResponse {
     /**
      * Exclusive upper bound.
@@ -30,12 +30,12 @@ public final class GoogleCloudRetailV2betaIntervalResponse {
      */
     private final Double minimum;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRetailV2betaIntervalResponse(
-        @OutputCustomType.Parameter("exclusiveMaximum") Double exclusiveMaximum,
-        @OutputCustomType.Parameter("exclusiveMinimum") Double exclusiveMinimum,
-        @OutputCustomType.Parameter("maximum") Double maximum,
-        @OutputCustomType.Parameter("minimum") Double minimum) {
+        @CustomType.Parameter("exclusiveMaximum") Double exclusiveMaximum,
+        @CustomType.Parameter("exclusiveMinimum") Double exclusiveMinimum,
+        @CustomType.Parameter("maximum") Double maximum,
+        @CustomType.Parameter("minimum") Double minimum) {
         this.exclusiveMaximum = exclusiveMaximum;
         this.exclusiveMinimum = exclusiveMinimum;
         this.maximum = maximum;

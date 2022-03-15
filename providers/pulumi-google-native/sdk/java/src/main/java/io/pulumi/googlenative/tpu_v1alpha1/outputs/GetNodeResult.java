@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.tpu_v1alpha1.outputs.NetworkEndpointResponse;
 import io.pulumi.googlenative.tpu_v1alpha1.outputs.SchedulingConfigResponse;
 import io.pulumi.googlenative.tpu_v1alpha1.outputs.SymptomResponse;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetNodeResult {
     /**
      * The type of hardware accelerators associated with this node.
@@ -101,25 +101,25 @@ public final class GetNodeResult {
      */
     private final Boolean useServiceNetworking;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNodeResult(
-        @OutputCustomType.Parameter("acceleratorType") String acceleratorType,
-        @OutputCustomType.Parameter("apiVersion") String apiVersion,
-        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("health") String health,
-        @OutputCustomType.Parameter("healthDescription") String healthDescription,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("networkEndpoints") List<NetworkEndpointResponse> networkEndpoints,
-        @OutputCustomType.Parameter("schedulingConfig") SchedulingConfigResponse schedulingConfig,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("symptoms") List<SymptomResponse> symptoms,
-        @OutputCustomType.Parameter("tensorflowVersion") String tensorflowVersion,
-        @OutputCustomType.Parameter("useServiceNetworking") Boolean useServiceNetworking) {
+        @CustomType.Parameter("acceleratorType") String acceleratorType,
+        @CustomType.Parameter("apiVersion") String apiVersion,
+        @CustomType.Parameter("cidrBlock") String cidrBlock,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("health") String health,
+        @CustomType.Parameter("healthDescription") String healthDescription,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("networkEndpoints") List<NetworkEndpointResponse> networkEndpoints,
+        @CustomType.Parameter("schedulingConfig") SchedulingConfigResponse schedulingConfig,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("symptoms") List<SymptomResponse> symptoms,
+        @CustomType.Parameter("tensorflowVersion") String tensorflowVersion,
+        @CustomType.Parameter("useServiceNetworking") Boolean useServiceNetworking) {
         this.acceleratorType = acceleratorType;
         this.apiVersion = apiVersion;
         this.cidrBlock = cidrBlock;

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetInstanceTemplateDiskDiskEncryptionKey;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceTemplateDisk {
     /**
      * Whether or not the disk should be auto-deleted.
@@ -102,22 +102,22 @@ public final class GetInstanceTemplateDisk {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceTemplateDisk(
-        @OutputCustomType.Parameter("autoDelete") Boolean autoDelete,
-        @OutputCustomType.Parameter("boot") Boolean boot,
-        @OutputCustomType.Parameter("deviceName") String deviceName,
-        @OutputCustomType.Parameter("diskEncryptionKeys") List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys,
-        @OutputCustomType.Parameter("diskName") String diskName,
-        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
-        @OutputCustomType.Parameter("diskType") String diskType,
-        @OutputCustomType.Parameter("interface") String $interface,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("sourceImage") String sourceImage,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("autoDelete") Boolean autoDelete,
+        @CustomType.Parameter("boot") Boolean boot,
+        @CustomType.Parameter("deviceName") String deviceName,
+        @CustomType.Parameter("diskEncryptionKeys") List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys,
+        @CustomType.Parameter("diskName") String diskName,
+        @CustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @CustomType.Parameter("diskType") String diskType,
+        @CustomType.Parameter("interface") String $interface,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("sourceImage") String sourceImage,
+        @CustomType.Parameter("type") String type) {
         this.autoDelete = autoDelete;
         this.boot = boot;
         this.deviceName = deviceName;

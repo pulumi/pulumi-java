@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.iot.inputs.RegistryCredentialGetArgs;
 import io.pulumi.gcp.iot.inputs.RegistryEventNotificationConfigItemGetArgs;
 import java.lang.Object;
@@ -24,7 +24,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * The structure is documented below.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable Output<List<RegistryCredentialGetArgs>> credentials;
 
     public Output<List<RegistryCredentialGetArgs>> getCredentials() {
@@ -37,7 +37,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="eventNotificationConfigs")
+    @Import(name="eventNotificationConfigs")
       private final @Nullable Output<List<RegistryEventNotificationConfigItemGetArgs>> eventNotificationConfigs;
 
     public Output<List<RegistryEventNotificationConfigItemGetArgs>> getEventNotificationConfigs() {
@@ -49,7 +49,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * The structure is documented below.
      * 
      */
-    @InputImport(name="httpConfig")
+    @Import(name="httpConfig")
       private final @Nullable Output<Map<String,Object>> httpConfig;
 
     public Output<Map<String,Object>> getHttpConfig() {
@@ -66,7 +66,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
      * 
      */
-    @InputImport(name="logLevel")
+    @Import(name="logLevel")
       private final @Nullable Output<String> logLevel;
 
     public Output<String> getLogLevel() {
@@ -78,7 +78,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * The structure is documented below.
      * 
      */
-    @InputImport(name="mqttConfig")
+    @Import(name="mqttConfig")
       private final @Nullable Output<Map<String,Object>> mqttConfig;
 
     public Output<Map<String,Object>> getMqttConfig() {
@@ -89,7 +89,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * A unique name for the resource, required by device registry.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -101,7 +101,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -113,7 +113,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider region is used.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -125,7 +125,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * The structure is documented below.
      * 
      */
-    @InputImport(name="stateNotificationConfig")
+    @Import(name="stateNotificationConfig")
       private final @Nullable Output<Map<String,Object>> stateNotificationConfig;
 
     public Output<Map<String,Object>> getStateNotificationConfig() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
      * One or more ACM Amazon Resource Name (ARN)s.
      * 
      */
-    @InputImport(name="certificateAuthorityArns", required=true)
+    @Import(name="certificateAuthorityArns", required=true)
       private final Output<List<String>> certificateAuthorityArns;
 
     public Output<List<String>> getCertificateAuthorityArns() {

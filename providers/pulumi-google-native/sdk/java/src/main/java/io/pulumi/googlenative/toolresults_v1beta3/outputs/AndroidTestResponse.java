@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.AndroidAppInfoResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.AndroidInstrumentationTestResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.AndroidRoboTestResponse;
@@ -11,7 +11,7 @@ import io.pulumi.googlenative.toolresults_v1beta3.outputs.AndroidTestLoopRespons
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.DurationResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AndroidTestResponse {
     /**
      * Information about the application under test.
@@ -39,13 +39,13 @@ public final class AndroidTestResponse {
      */
     private final DurationResponse testTimeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AndroidTestResponse(
-        @OutputCustomType.Parameter("androidAppInfo") AndroidAppInfoResponse androidAppInfo,
-        @OutputCustomType.Parameter("androidInstrumentationTest") AndroidInstrumentationTestResponse androidInstrumentationTest,
-        @OutputCustomType.Parameter("androidRoboTest") AndroidRoboTestResponse androidRoboTest,
-        @OutputCustomType.Parameter("androidTestLoop") AndroidTestLoopResponse androidTestLoop,
-        @OutputCustomType.Parameter("testTimeout") DurationResponse testTimeout) {
+        @CustomType.Parameter("androidAppInfo") AndroidAppInfoResponse androidAppInfo,
+        @CustomType.Parameter("androidInstrumentationTest") AndroidInstrumentationTestResponse androidInstrumentationTest,
+        @CustomType.Parameter("androidRoboTest") AndroidRoboTestResponse androidRoboTest,
+        @CustomType.Parameter("androidTestLoop") AndroidTestLoopResponse androidTestLoop,
+        @CustomType.Parameter("testTimeout") DurationResponse testTimeout) {
         this.androidAppInfo = androidAppInfo;
         this.androidInstrumentationTest = androidInstrumentationTest;
         this.androidRoboTest = androidRoboTest;

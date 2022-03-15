@@ -8,7 +8,7 @@ import io.pulumi.aws.elb.AttachmentArgs;
 import io.pulumi.aws.elb.inputs.AttachmentState;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public class Attachment extends io.pulumi.resources.CustomResource {
      * The name of the ELB.
      * 
      */
-    @OutputExport(name="elb", type=String.class, parameters={})
+    @Export(name="elb", type=String.class, parameters={})
     private Output<String> elb;
 
     /**
@@ -47,7 +47,7 @@ public class Attachment extends io.pulumi.resources.CustomResource {
      * Instance ID to place in the ELB pool.
      * 
      */
-    @OutputExport(name="instance", type=String.class, parameters={})
+    @Export(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
     /**

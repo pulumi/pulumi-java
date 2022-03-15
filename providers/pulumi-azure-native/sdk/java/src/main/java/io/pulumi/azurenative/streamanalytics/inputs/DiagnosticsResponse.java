@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.azurenative.streamanalytics.inputs.DiagnosticConditionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DiagnosticsResponse extends io.pulumi.resources.InvokeArgs {
      * A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.
      * 
      */
-    @InputImport(name="conditions", required=true)
+    @Import(name="conditions", required=true)
       private final List<DiagnosticConditionResponse> conditions;
 
     public List<DiagnosticConditionResponse> getConditions() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PartitionStorageDescriptorColumn {
     /**
      * Free-form text comment.
@@ -27,11 +27,11 @@ public final class PartitionStorageDescriptorColumn {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PartitionStorageDescriptorColumn(
-        @OutputCustomType.Parameter("comment") @Nullable String comment,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("comment") @Nullable String comment,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.comment = comment;
         this.name = name;
         this.type = type;

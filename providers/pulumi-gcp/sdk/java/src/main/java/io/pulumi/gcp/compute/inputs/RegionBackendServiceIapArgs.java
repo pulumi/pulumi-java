@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RegionBackendServiceIapArgs extends io.pulumi.resources.Resou
      * OAuth2 Client ID for IAP
      * 
      */
-    @InputImport(name="oauth2ClientId", required=true)
+    @Import(name="oauth2ClientId", required=true)
       private final Output<String> oauth2ClientId;
 
     public Output<String> getOauth2ClientId() {
@@ -30,7 +30,7 @@ public final class RegionBackendServiceIapArgs extends io.pulumi.resources.Resou
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @InputImport(name="oauth2ClientSecret", required=true)
+    @Import(name="oauth2ClientSecret", required=true)
       private final Output<String> oauth2ClientSecret;
 
     public Output<String> getOauth2ClientSecret() {
@@ -43,7 +43,7 @@ public final class RegionBackendServiceIapArgs extends io.pulumi.resources.Resou
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @InputImport(name="oauth2ClientSecretSha256")
+    @Import(name="oauth2ClientSecretSha256")
       private final @Nullable Output<String> oauth2ClientSecretSha256;
 
     public Output<String> getOauth2ClientSecretSha256() {

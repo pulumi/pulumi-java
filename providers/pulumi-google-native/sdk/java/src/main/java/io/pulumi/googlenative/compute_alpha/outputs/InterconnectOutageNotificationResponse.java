@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InterconnectOutageNotificationResponse {
     /**
      * If issue_type is IT_PARTIAL_OUTAGE, a list of the Google-side circuit IDs that will be affected.
@@ -51,16 +51,16 @@ public final class InterconnectOutageNotificationResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InterconnectOutageNotificationResponse(
-        @OutputCustomType.Parameter("affectedCircuits") List<String> affectedCircuits,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("issueType") String issueType,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("affectedCircuits") List<String> affectedCircuits,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("issueType") String issueType,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("state") String state) {
         this.affectedCircuits = affectedCircuits;
         this.description = description;
         this.endTime = endTime;

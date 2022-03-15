@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.keyvault.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IPRuleResponse {
     /**
      * An IPv4 address range in CIDR notation, such as '124.56.78.91' (simple IP address) or '124.56.78.0/24' (all addresses that start with 124.56.78).
@@ -15,8 +15,8 @@ public final class IPRuleResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
-    private IPRuleResponse(@OutputCustomType.Parameter("value") String value) {
+    @CustomType.Constructor
+    private IPRuleResponse(@CustomType.Parameter("value") String value) {
         this.value = value;
     }
 

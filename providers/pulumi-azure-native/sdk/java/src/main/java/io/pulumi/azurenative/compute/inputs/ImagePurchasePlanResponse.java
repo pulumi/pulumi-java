@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ImagePurchasePlanResponse extends io.pulumi.resources.InvokeA
      * The plan ID.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -33,7 +33,7 @@ public final class ImagePurchasePlanResponse extends io.pulumi.resources.InvokeA
      * The product ID.
      * 
      */
-    @InputImport(name="product")
+    @Import(name="product")
       private final @Nullable String product;
 
     public Optional<String> getProduct() {
@@ -44,7 +44,7 @@ public final class ImagePurchasePlanResponse extends io.pulumi.resources.InvokeA
      * The publisher ID.
      * 
      */
-    @InputImport(name="publisher")
+    @Import(name="publisher")
       private final @Nullable String publisher;
 
     public Optional<String> getPublisher() {

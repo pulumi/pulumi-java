@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class FirehoseDeliveryStreamKinesisSourceConfigurationArgs extends 
      * The kinesis stream used as the source of the firehose delivery stream.
      * 
      */
-    @InputImport(name="kinesisStreamArn", required=true)
+    @Import(name="kinesisStreamArn", required=true)
       private final Output<String> kinesisStreamArn;
 
     public Output<String> getKinesisStreamArn() {
@@ -28,7 +28,7 @@ public final class FirehoseDeliveryStreamKinesisSourceConfigurationArgs extends 
      * The ARN of the role that provides access to the source Kinesis stream.
      * 
      */
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {

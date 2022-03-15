@@ -23,12 +23,12 @@ import io.pulumi.azurenative.web.inputs.SkuDescriptionArgs;
 import io.pulumi.core.Archive;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.deployment.InvokeOptions;
 
 public final class MyStack extends Stack {
 
-    @OutputExport(name="endpoint", type=String.class)
+    @Export(name="endpoint", type=String.class)
     private final Output<String> endpoint;
 
     public MyStack() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BuildpackBindingLaunchPropertiesResponse {
     /**
      * Non-sensitive properties for launchProperties
@@ -22,10 +22,10 @@ public final class BuildpackBindingLaunchPropertiesResponse {
      */
     private final @Nullable Map<String,String> secrets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BuildpackBindingLaunchPropertiesResponse(
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("secrets") @Nullable Map<String,String> secrets) {
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("secrets") @Nullable Map<String,String> secrets) {
         this.properties = properties;
         this.secrets = secrets;
     }

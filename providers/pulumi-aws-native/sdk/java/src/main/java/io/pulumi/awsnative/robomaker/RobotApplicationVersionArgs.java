@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.robomaker;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class RobotApplicationVersionArgs extends io.pulumi.resources.Resou
 
     public static final RobotApplicationVersionArgs Empty = new RobotApplicationVersionArgs();
 
-    @InputImport(name="application", required=true)
+    @Import(name="application", required=true)
       private final Output<String> application;
 
     public Output<String> getApplication() {
@@ -25,7 +25,7 @@ public final class RobotApplicationVersionArgs extends io.pulumi.resources.Resou
      * The revision ID of robot application.
      * 
      */
-    @InputImport(name="currentRevisionId")
+    @Import(name="currentRevisionId")
       private final @Nullable Output<String> currentRevisionId;
 
     public Output<String> getCurrentRevisionId() {

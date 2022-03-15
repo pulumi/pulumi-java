@@ -15,7 +15,7 @@ import io.pulumi.azurenative.eventgrid.outputs.StringContainsAdvancedFilterRespo
 import io.pulumi.azurenative.eventgrid.outputs.StringEndsWithAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.outputs.StringInAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.outputs.StringNotInAdvancedFilterResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -24,7 +24,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventSubscriptionFilterResponse {
     /**
      * An array of advanced filters that are used for filtering event subscriptions.
@@ -56,13 +56,13 @@ public final class EventSubscriptionFilterResponse {
      */
     private final @Nullable String subjectEndsWith;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventSubscriptionFilterResponse(
-        @OutputCustomType.Parameter("advancedFilters") @Nullable List<Object> advancedFilters,
-        @OutputCustomType.Parameter("includedEventTypes") @Nullable List<String> includedEventTypes,
-        @OutputCustomType.Parameter("isSubjectCaseSensitive") @Nullable Boolean isSubjectCaseSensitive,
-        @OutputCustomType.Parameter("subjectBeginsWith") @Nullable String subjectBeginsWith,
-        @OutputCustomType.Parameter("subjectEndsWith") @Nullable String subjectEndsWith) {
+        @CustomType.Parameter("advancedFilters") @Nullable List<Object> advancedFilters,
+        @CustomType.Parameter("includedEventTypes") @Nullable List<String> includedEventTypes,
+        @CustomType.Parameter("isSubjectCaseSensitive") @Nullable Boolean isSubjectCaseSensitive,
+        @CustomType.Parameter("subjectBeginsWith") @Nullable String subjectBeginsWith,
+        @CustomType.Parameter("subjectEndsWith") @Nullable String subjectEndsWith) {
         this.advancedFilters = advancedFilters;
         this.includedEventTypes = includedEventTypes;
         this.isSubjectCaseSensitive = isSubjectCaseSensitive;

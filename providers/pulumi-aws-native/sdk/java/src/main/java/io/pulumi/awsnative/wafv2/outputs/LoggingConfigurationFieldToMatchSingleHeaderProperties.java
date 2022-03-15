@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.wafv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LoggingConfigurationFieldToMatchSingleHeaderProperties {
     /**
      * The name of the query header to inspect.
@@ -15,8 +15,8 @@ public final class LoggingConfigurationFieldToMatchSingleHeaderProperties {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private LoggingConfigurationFieldToMatchSingleHeaderProperties(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private LoggingConfigurationFieldToMatchSingleHeaderProperties(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.datasync.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LocationEFSEc2Config {
     /**
      * The Amazon Resource Names (ARNs) of the security groups that are configured for the Amazon EC2 resource.
@@ -21,10 +21,10 @@ public final class LocationEFSEc2Config {
      */
     private final String subnetArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LocationEFSEc2Config(
-        @OutputCustomType.Parameter("securityGroupArns") List<String> securityGroupArns,
-        @OutputCustomType.Parameter("subnetArn") String subnetArn) {
+        @CustomType.Parameter("securityGroupArns") List<String> securityGroupArns,
+        @CustomType.Parameter("subnetArn") String subnetArn) {
         this.securityGroupArns = securityGroupArns;
         this.subnetArn = subnetArn;
     }

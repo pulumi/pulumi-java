@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1.enums.NetworkPolicyProvider;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Whether network policy is enabled on the cluster.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -34,7 +34,7 @@ public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The selected network policy provider.
      * 
      */
-    @InputImport(name="provider")
+    @Import(name="provider")
       private final @Nullable Output<NetworkPolicyProvider> provider;
 
     public Output<NetworkPolicyProvider> getProvider() {

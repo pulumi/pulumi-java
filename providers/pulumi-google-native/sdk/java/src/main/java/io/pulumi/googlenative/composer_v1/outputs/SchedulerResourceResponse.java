@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.composer_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SchedulerResourceResponse {
     /**
      * Optional. The number of schedulers.
@@ -31,12 +31,12 @@ public final class SchedulerResourceResponse {
      */
     private final Double storageGb;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SchedulerResourceResponse(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("cpu") Double cpu,
-        @OutputCustomType.Parameter("memoryGb") Double memoryGb,
-        @OutputCustomType.Parameter("storageGb") Double storageGb) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("cpu") Double cpu,
+        @CustomType.Parameter("memoryGb") Double memoryGb,
+        @CustomType.Parameter("storageGb") Double storageGb) {
         this.count = count;
         this.cpu = cpu;
         this.memoryGb = memoryGb;

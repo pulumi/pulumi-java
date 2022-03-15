@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.WorkerSettingsResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TaskRunnerSettingsResponse {
     /**
      * Whether to also send taskrunner log info to stderr.
@@ -108,27 +108,27 @@ public final class TaskRunnerSettingsResponse {
      */
     private final String workflowFileName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskRunnerSettingsResponse(
-        @OutputCustomType.Parameter("alsologtostderr") Boolean alsologtostderr,
-        @OutputCustomType.Parameter("baseTaskDir") String baseTaskDir,
-        @OutputCustomType.Parameter("baseUrl") String baseUrl,
-        @OutputCustomType.Parameter("commandlinesFileName") String commandlinesFileName,
-        @OutputCustomType.Parameter("continueOnException") Boolean continueOnException,
-        @OutputCustomType.Parameter("dataflowApiVersion") String dataflowApiVersion,
-        @OutputCustomType.Parameter("harnessCommand") String harnessCommand,
-        @OutputCustomType.Parameter("languageHint") String languageHint,
-        @OutputCustomType.Parameter("logDir") String logDir,
-        @OutputCustomType.Parameter("logToSerialconsole") Boolean logToSerialconsole,
-        @OutputCustomType.Parameter("logUploadLocation") String logUploadLocation,
-        @OutputCustomType.Parameter("oauthScopes") List<String> oauthScopes,
-        @OutputCustomType.Parameter("parallelWorkerSettings") WorkerSettingsResponse parallelWorkerSettings,
-        @OutputCustomType.Parameter("streamingWorkerMainClass") String streamingWorkerMainClass,
-        @OutputCustomType.Parameter("taskGroup") String taskGroup,
-        @OutputCustomType.Parameter("taskUser") String taskUser,
-        @OutputCustomType.Parameter("tempStoragePrefix") String tempStoragePrefix,
-        @OutputCustomType.Parameter("vmId") String vmId,
-        @OutputCustomType.Parameter("workflowFileName") String workflowFileName) {
+        @CustomType.Parameter("alsologtostderr") Boolean alsologtostderr,
+        @CustomType.Parameter("baseTaskDir") String baseTaskDir,
+        @CustomType.Parameter("baseUrl") String baseUrl,
+        @CustomType.Parameter("commandlinesFileName") String commandlinesFileName,
+        @CustomType.Parameter("continueOnException") Boolean continueOnException,
+        @CustomType.Parameter("dataflowApiVersion") String dataflowApiVersion,
+        @CustomType.Parameter("harnessCommand") String harnessCommand,
+        @CustomType.Parameter("languageHint") String languageHint,
+        @CustomType.Parameter("logDir") String logDir,
+        @CustomType.Parameter("logToSerialconsole") Boolean logToSerialconsole,
+        @CustomType.Parameter("logUploadLocation") String logUploadLocation,
+        @CustomType.Parameter("oauthScopes") List<String> oauthScopes,
+        @CustomType.Parameter("parallelWorkerSettings") WorkerSettingsResponse parallelWorkerSettings,
+        @CustomType.Parameter("streamingWorkerMainClass") String streamingWorkerMainClass,
+        @CustomType.Parameter("taskGroup") String taskGroup,
+        @CustomType.Parameter("taskUser") String taskUser,
+        @CustomType.Parameter("tempStoragePrefix") String tempStoragePrefix,
+        @CustomType.Parameter("vmId") String vmId,
+        @CustomType.Parameter("workflowFileName") String workflowFileName) {
         this.alsologtostderr = alsologtostderr;
         this.baseTaskDir = baseTaskDir;
         this.baseUrl = baseUrl;

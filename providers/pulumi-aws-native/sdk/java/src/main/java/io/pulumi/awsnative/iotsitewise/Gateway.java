@@ -9,7 +9,7 @@ import io.pulumi.awsnative.iotsitewise.outputs.GatewayCapabilitySummary;
 import io.pulumi.awsnative.iotsitewise.outputs.GatewayPlatform;
 import io.pulumi.awsnative.iotsitewise.outputs.GatewayTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * A list of gateway capability summaries that each contain a namespace and status.
      * 
      */
-    @OutputExport(name="gatewayCapabilitySummaries", type=List.class, parameters={GatewayCapabilitySummary.class})
+    @Export(name="gatewayCapabilitySummaries", type=List.class, parameters={GatewayCapabilitySummary.class})
     private Output</* @Nullable */ List<GatewayCapabilitySummary>> gatewayCapabilitySummaries;
 
     /**
@@ -39,7 +39,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * The ID of the gateway device.
      * 
      */
-    @OutputExport(name="gatewayId", type=String.class, parameters={})
+    @Export(name="gatewayId", type=String.class, parameters={})
     private Output<String> gatewayId;
 
     /**
@@ -53,7 +53,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * A unique, friendly name for the gateway.
      * 
      */
-    @OutputExport(name="gatewayName", type=String.class, parameters={})
+    @Export(name="gatewayName", type=String.class, parameters={})
     private Output<String> gatewayName;
 
     /**
@@ -67,7 +67,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * The gateway's platform. You can only specify one platform in a gateway.
      * 
      */
-    @OutputExport(name="gatewayPlatform", type=GatewayPlatform.class, parameters={})
+    @Export(name="gatewayPlatform", type=GatewayPlatform.class, parameters={})
     private Output<GatewayPlatform> gatewayPlatform;
 
     /**
@@ -81,7 +81,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * A list of key-value pairs that contain metadata for the gateway.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={GatewayTag.class})
+    @Export(name="tags", type=List.class, parameters={GatewayTag.class})
     private Output</* @Nullable */ List<GatewayTag>> tags;
 
     /**

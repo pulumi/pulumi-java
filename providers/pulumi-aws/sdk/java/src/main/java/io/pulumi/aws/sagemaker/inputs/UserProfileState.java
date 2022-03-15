@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * The user profile Amazon Resource Name (ARN).
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * The ID of the associated Domain.
      * 
      */
-    @InputImport(name="domainId")
+    @Import(name="domainId")
       private final @Nullable Output<String> domainId;
 
     public Output<String> getDomainId() {
@@ -42,7 +42,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * The ID of the user's profile in the Amazon Elastic File System (EFS) volume.
      * 
      */
-    @InputImport(name="homeEfsFileSystemUid")
+    @Import(name="homeEfsFileSystemUid")
       private final @Nullable Output<String> homeEfsFileSystemUid;
 
     public Output<String> getHomeEfsFileSystemUid() {
@@ -53,7 +53,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * A specifier for the type of value specified in `single_sign_on_user_value`. Currently, the only supported value is `UserName`. If the Domain's AuthMode is SSO, this field is required. If the Domain's AuthMode is not SSO, this field cannot be specified.
      * 
      */
-    @InputImport(name="singleSignOnUserIdentifier")
+    @Import(name="singleSignOnUserIdentifier")
       private final @Nullable Output<String> singleSignOnUserIdentifier;
 
     public Output<String> getSingleSignOnUserIdentifier() {
@@ -64,7 +64,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * The username of the associated AWS Single Sign-On User for this User Profile. If the Domain's AuthMode is SSO, this field is required, and must match a valid username of a user in your directory. If the Domain's AuthMode is not SSO, this field cannot be specified.
      * 
      */
-    @InputImport(name="singleSignOnUserValue")
+    @Import(name="singleSignOnUserValue")
       private final @Nullable Output<String> singleSignOnUserValue;
 
     public Output<String> getSingleSignOnUserValue() {
@@ -75,7 +75,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -86,7 +86,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -97,7 +97,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * The name for the User Profile.
      * 
      */
-    @InputImport(name="userProfileName")
+    @Import(name="userProfileName")
       private final @Nullable Output<String> userProfileName;
 
     public Output<String> getUserProfileName() {
@@ -108,7 +108,7 @@ public final class UserProfileState extends io.pulumi.resources.ResourceArgs {
      * The user settings. See User Settings below.
      * 
      */
-    @InputImport(name="userSettings")
+    @Import(name="userSettings")
       private final @Nullable Output<UserProfileUserSettingsGetArgs> userSettings;
 
     public Output<UserProfileUserSettingsGetArgs> getUserSettings() {

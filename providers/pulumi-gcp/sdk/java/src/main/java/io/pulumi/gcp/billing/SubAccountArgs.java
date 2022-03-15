@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
      * Default is "".
      * 
      */
-    @InputImport(name="deletionPolicy")
+    @Import(name="deletionPolicy")
       private final @Nullable Output<String> deletionPolicy;
 
     public Output<String> getDeletionPolicy() {
@@ -31,7 +31,7 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
      * The display name of the billing account.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -43,7 +43,7 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
      * will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
      * 
      */
-    @InputImport(name="masterBillingAccount", required=true)
+    @Import(name="masterBillingAccount", required=true)
       private final Output<String> masterBillingAccount;
 
     public Output<String> getMasterBillingAccount() {

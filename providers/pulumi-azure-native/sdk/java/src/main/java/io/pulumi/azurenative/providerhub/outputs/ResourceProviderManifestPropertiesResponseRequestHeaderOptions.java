@@ -3,18 +3,18 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceProviderManifestPropertiesResponseRequestHeaderOptions {
     private final @Nullable String optInHeaders;
 
-    @OutputCustomType.Constructor
-    private ResourceProviderManifestPropertiesResponseRequestHeaderOptions(@OutputCustomType.Parameter("optInHeaders") @Nullable String optInHeaders) {
+    @CustomType.Constructor
+    private ResourceProviderManifestPropertiesResponseRequestHeaderOptions(@CustomType.Parameter("optInHeaders") @Nullable String optInHeaders) {
         this.optInHeaders = optInHeaders;
     }
 

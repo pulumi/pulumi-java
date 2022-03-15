@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class UserAccessPolicyResponse extends io.pulumi.resources.InvokeAr
      * The resource path to get access relative to factory. Currently only empty string is supported which corresponds to the factory resource.
      * 
      */
-    @InputImport(name="accessResourcePath")
+    @Import(name="accessResourcePath")
       private final @Nullable String accessResourcePath;
 
     public Optional<String> getAccessResourcePath() {
@@ -33,7 +33,7 @@ public final class UserAccessPolicyResponse extends io.pulumi.resources.InvokeAr
      * Expiration time for the token. Maximum duration for the token is eight hours and by default the token will expire in eight hours.
      * 
      */
-    @InputImport(name="expireTime")
+    @Import(name="expireTime")
       private final @Nullable String expireTime;
 
     public Optional<String> getExpireTime() {
@@ -44,7 +44,7 @@ public final class UserAccessPolicyResponse extends io.pulumi.resources.InvokeAr
      * The string with permissions for Data Plane access. Currently only 'r' is supported which grants read only access.
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable String permissions;
 
     public Optional<String> getPermissions() {
@@ -55,7 +55,7 @@ public final class UserAccessPolicyResponse extends io.pulumi.resources.InvokeAr
      * The name of the profile. Currently only the default is supported. The default value is DefaultProfile.
      * 
      */
-    @InputImport(name="profileName")
+    @Import(name="profileName")
       private final @Nullable String profileName;
 
     public Optional<String> getProfileName() {
@@ -66,7 +66,7 @@ public final class UserAccessPolicyResponse extends io.pulumi.resources.InvokeAr
      * Start time for the token. If not specified the current time will be used.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {

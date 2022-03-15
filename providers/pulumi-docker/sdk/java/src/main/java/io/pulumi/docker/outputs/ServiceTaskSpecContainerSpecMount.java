@@ -3,7 +3,7 @@
 
 package io.pulumi.docker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.docker.outputs.ServiceTaskSpecContainerSpecMountBindOptions;
 import io.pulumi.docker.outputs.ServiceTaskSpecContainerSpecMountTmpfsOptions;
 import io.pulumi.docker.outputs.ServiceTaskSpecContainerSpecMountVolumeOptions;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTaskSpecContainerSpecMount {
     private final @Nullable ServiceTaskSpecContainerSpecMountBindOptions bindOptions;
     private final @Nullable Boolean readOnly;
@@ -23,15 +23,15 @@ public final class ServiceTaskSpecContainerSpecMount {
     private final String type;
     private final @Nullable ServiceTaskSpecContainerSpecMountVolumeOptions volumeOptions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTaskSpecContainerSpecMount(
-        @OutputCustomType.Parameter("bindOptions") @Nullable ServiceTaskSpecContainerSpecMountBindOptions bindOptions,
-        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
-        @OutputCustomType.Parameter("source") @Nullable String source,
-        @OutputCustomType.Parameter("target") String target,
-        @OutputCustomType.Parameter("tmpfsOptions") @Nullable ServiceTaskSpecContainerSpecMountTmpfsOptions tmpfsOptions,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("volumeOptions") @Nullable ServiceTaskSpecContainerSpecMountVolumeOptions volumeOptions) {
+        @CustomType.Parameter("bindOptions") @Nullable ServiceTaskSpecContainerSpecMountBindOptions bindOptions,
+        @CustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @CustomType.Parameter("source") @Nullable String source,
+        @CustomType.Parameter("target") String target,
+        @CustomType.Parameter("tmpfsOptions") @Nullable ServiceTaskSpecContainerSpecMountTmpfsOptions tmpfsOptions,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("volumeOptions") @Nullable ServiceTaskSpecContainerSpecMountVolumeOptions volumeOptions) {
         this.bindOptions = bindOptions;
         this.readOnly = readOnly;
         this.source = source;

@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.file_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackupResult {
     /**
      * Capacity of the source file share when the backup was created.
@@ -72,20 +72,20 @@ public final class GetBackupResult {
      */
     private final String storageBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackupResult(
-        @OutputCustomType.Parameter("capacityGb") String capacityGb,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("downloadBytes") String downloadBytes,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
-        @OutputCustomType.Parameter("sourceFileShare") String sourceFileShare,
-        @OutputCustomType.Parameter("sourceInstance") String sourceInstance,
-        @OutputCustomType.Parameter("sourceInstanceTier") String sourceInstanceTier,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("storageBytes") String storageBytes) {
+        @CustomType.Parameter("capacityGb") String capacityGb,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("downloadBytes") String downloadBytes,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @CustomType.Parameter("sourceFileShare") String sourceFileShare,
+        @CustomType.Parameter("sourceInstance") String sourceInstance,
+        @CustomType.Parameter("sourceInstanceTier") String sourceInstanceTier,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("storageBytes") String storageBytes) {
         this.capacityGb = capacityGb;
         this.createTime = createTime;
         this.description = description;

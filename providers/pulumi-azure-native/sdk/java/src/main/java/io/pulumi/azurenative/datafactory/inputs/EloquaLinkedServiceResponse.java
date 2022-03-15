@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class EloquaLinkedServiceResponse extends io.pulumi.resources.Invok
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -41,7 +41,7 @@ public final class EloquaLinkedServiceResponse extends io.pulumi.resources.Invok
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -52,7 +52,7 @@ public final class EloquaLinkedServiceResponse extends io.pulumi.resources.Invok
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -63,7 +63,7 @@ public final class EloquaLinkedServiceResponse extends io.pulumi.resources.Invok
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -74,7 +74,7 @@ public final class EloquaLinkedServiceResponse extends io.pulumi.resources.Invok
      * The endpoint of the Eloqua server. (i.e. eloqua.example.com)
      * 
      */
-    @InputImport(name="endpoint", required=true)
+    @Import(name="endpoint", required=true)
       private final Object endpoint;
 
     public Object getEndpoint() {
@@ -85,7 +85,7 @@ public final class EloquaLinkedServiceResponse extends io.pulumi.resources.Invok
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -96,7 +96,7 @@ public final class EloquaLinkedServiceResponse extends io.pulumi.resources.Invok
      * The password corresponding to the user name.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
@@ -108,7 +108,7 @@ public final class EloquaLinkedServiceResponse extends io.pulumi.resources.Invok
      * Expected value is 'Eloqua'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -119,7 +119,7 @@ public final class EloquaLinkedServiceResponse extends io.pulumi.resources.Invok
      * Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.
      * 
      */
-    @InputImport(name="useEncryptedEndpoints")
+    @Import(name="useEncryptedEndpoints")
       private final @Nullable Object useEncryptedEndpoints;
 
     public Optional<Object> getUseEncryptedEndpoints() {
@@ -130,7 +130,7 @@ public final class EloquaLinkedServiceResponse extends io.pulumi.resources.Invok
      * Specifies whether to require the host name in the server's certificate to match the host name of the server when connecting over SSL. The default value is true.
      * 
      */
-    @InputImport(name="useHostVerification")
+    @Import(name="useHostVerification")
       private final @Nullable Object useHostVerification;
 
     public Optional<Object> getUseHostVerification() {
@@ -141,7 +141,7 @@ public final class EloquaLinkedServiceResponse extends io.pulumi.resources.Invok
      * Specifies whether to verify the identity of the server when connecting over SSL. The default value is true.
      * 
      */
-    @InputImport(name="usePeerVerification")
+    @Import(name="usePeerVerification")
       private final @Nullable Object usePeerVerification;
 
     public Optional<Object> getUsePeerVerification() {
@@ -152,7 +152,7 @@ public final class EloquaLinkedServiceResponse extends io.pulumi.resources.Invok
      * The site name and user name of your Eloqua account in the form: sitename/username. (i.e. Eloqua/Alice)
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final Object username;
 
     public Object getUsername() {

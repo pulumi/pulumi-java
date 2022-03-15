@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SourceInfoResponse {
     /**
      * All files used during config generation.
@@ -17,8 +17,8 @@ public final class SourceInfoResponse {
      */
     private final List<Map<String,String>> sourceFiles;
 
-    @OutputCustomType.Constructor
-    private SourceInfoResponse(@OutputCustomType.Parameter("sourceFiles") List<Map<String,String>> sourceFiles) {
+    @CustomType.Constructor
+    private SourceInfoResponse(@CustomType.Parameter("sourceFiles") List<Map<String,String>> sourceFiles) {
         this.sourceFiles = sourceFiles;
     }
 

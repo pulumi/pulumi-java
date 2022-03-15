@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredent
      * Azure shared access signature. See [Grant limited access to Azure Storage resources using shared access signatures (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
      * 
      */
-    @InputImport(name="sasToken", required=true)
+    @Import(name="sasToken", required=true)
       private final Output<String> sasToken;
 
     public Output<String> getSasToken() {

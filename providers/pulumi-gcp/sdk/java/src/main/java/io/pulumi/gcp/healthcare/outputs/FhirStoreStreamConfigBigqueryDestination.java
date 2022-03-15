@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.healthcare.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.healthcare.outputs.FhirStoreStreamConfigBigqueryDestinationSchemaConfig;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FhirStoreStreamConfigBigqueryDestination {
     /**
      * BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
@@ -22,10 +22,10 @@ public final class FhirStoreStreamConfigBigqueryDestination {
      */
     private final FhirStoreStreamConfigBigqueryDestinationSchemaConfig schemaConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FhirStoreStreamConfigBigqueryDestination(
-        @OutputCustomType.Parameter("datasetUri") String datasetUri,
-        @OutputCustomType.Parameter("schemaConfig") FhirStoreStreamConfigBigqueryDestinationSchemaConfig schemaConfig) {
+        @CustomType.Parameter("datasetUri") String datasetUri,
+        @CustomType.Parameter("schemaConfig") FhirStoreStreamConfigBigqueryDestinationSchemaConfig schemaConfig) {
         this.datasetUri = datasetUri;
         this.schemaConfig = schemaConfig;
     }

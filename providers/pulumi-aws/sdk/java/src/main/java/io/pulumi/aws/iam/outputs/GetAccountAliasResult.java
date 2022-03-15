@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAccountAliasResult {
     /**
      * The alias associated with the AWS account.
@@ -20,10 +20,10 @@ public final class GetAccountAliasResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccountAliasResult(
-        @OutputCustomType.Parameter("accountAlias") String accountAlias,
-        @OutputCustomType.Parameter("id") String id) {
+        @CustomType.Parameter("accountAlias") String accountAlias,
+        @CustomType.Parameter("id") String id) {
         this.accountAlias = accountAlias;
         this.id = id;
     }

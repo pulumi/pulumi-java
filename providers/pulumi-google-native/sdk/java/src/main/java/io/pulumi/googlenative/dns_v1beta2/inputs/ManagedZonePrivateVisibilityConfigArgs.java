@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ManagedZonePrivateVisibilityConfigGKEClusterArgs;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ManagedZonePrivateVisibilityConfigNetworkArgs;
 import java.lang.String;
@@ -21,14 +21,14 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
      * The list of Google Kubernetes Engine clusters that can see this zone.
      * 
      */
-    @InputImport(name="gkeClusters")
+    @Import(name="gkeClusters")
       private final @Nullable Output<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>> gkeClusters;
 
     public Output<List<ManagedZonePrivateVisibilityConfigGKEClusterArgs>> getGkeClusters() {
         return this.gkeClusters == null ? Output.empty() : this.gkeClusters;
     }
 
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -39,7 +39,7 @@ public final class ManagedZonePrivateVisibilityConfigArgs extends io.pulumi.reso
      * The list of VPC networks that can see this zone.
      * 
      */
-    @InputImport(name="networks")
+    @Import(name="networks")
       private final @Nullable Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> networks;
 
     public Output<List<ManagedZonePrivateVisibilityConfigNetworkArgs>> getNetworks() {

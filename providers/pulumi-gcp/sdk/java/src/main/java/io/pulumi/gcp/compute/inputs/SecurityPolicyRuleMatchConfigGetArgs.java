@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SecurityPolicyRuleMatchConfigGetArgs extends io.pulumi.resour
      * (can be used to override the default behavior).
      * 
      */
-    @InputImport(name="srcIpRanges", required=true)
+    @Import(name="srcIpRanges", required=true)
       private final Output<List<String>> srcIpRanges;
 
     public Output<List<String>> getSrcIpRanges() {

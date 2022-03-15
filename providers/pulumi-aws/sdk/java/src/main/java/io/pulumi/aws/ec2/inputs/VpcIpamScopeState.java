@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,7 +17,7 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
 
     public static final VpcIpamScopeState Empty = new VpcIpamScopeState();
 
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -28,7 +28,7 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
      * A description for the scope you're creating.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -39,7 +39,7 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the IPAM for which you're creating this scope.
      * 
      */
-    @InputImport(name="ipamArn")
+    @Import(name="ipamArn")
       private final @Nullable Output<String> ipamArn;
 
     public Output<String> getIpamArn() {
@@ -50,14 +50,14 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
      * The ID of the IPAM for which you're creating this scope.
      * 
      */
-    @InputImport(name="ipamId")
+    @Import(name="ipamId")
       private final @Nullable Output<String> ipamId;
 
     public Output<String> getIpamId() {
         return this.ipamId == null ? Output.empty() : this.ipamId;
     }
 
-    @InputImport(name="ipamScopeType")
+    @Import(name="ipamScopeType")
       private final @Nullable Output<String> ipamScopeType;
 
     public Output<String> getIpamScopeType() {
@@ -68,7 +68,7 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
      * Defines if the scope is the default scope or not.
      * 
      */
-    @InputImport(name="isDefault")
+    @Import(name="isDefault")
       private final @Nullable Output<Boolean> isDefault;
 
     public Output<Boolean> getIsDefault() {
@@ -79,21 +79,21 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
      * Count of pools under this scope
      * 
      */
-    @InputImport(name="poolCount")
+    @Import(name="poolCount")
       private final @Nullable Output<Integer> poolCount;
 
     public Output<Integer> getPoolCount() {
         return this.poolCount == null ? Output.empty() : this.poolCount;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

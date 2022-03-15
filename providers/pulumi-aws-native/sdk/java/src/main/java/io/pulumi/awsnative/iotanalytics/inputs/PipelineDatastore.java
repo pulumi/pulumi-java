@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class PipelineDatastore extends io.pulumi.resources.InvokeArgs {
 
     public static final PipelineDatastore Empty = new PipelineDatastore();
 
-    @InputImport(name="datastoreName", required=true)
+    @Import(name="datastoreName", required=true)
       private final String datastoreName;
 
     public String getDatastoreName() {
         return this.datastoreName;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentSettingsResponse {
     /**
      * Required CPU, basic tier should be 1, standard tier should be in range (1, 4)
@@ -44,14 +44,14 @@ public final class DeploymentSettingsResponse {
      */
     private final @Nullable String runtimeVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentSettingsResponse(
-        @OutputCustomType.Parameter("cpu") @Nullable Integer cpu,
-        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
-        @OutputCustomType.Parameter("jvmOptions") @Nullable String jvmOptions,
-        @OutputCustomType.Parameter("memoryInGB") @Nullable Integer memoryInGB,
-        @OutputCustomType.Parameter("netCoreMainEntryPath") @Nullable String netCoreMainEntryPath,
-        @OutputCustomType.Parameter("runtimeVersion") @Nullable String runtimeVersion) {
+        @CustomType.Parameter("cpu") @Nullable Integer cpu,
+        @CustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @CustomType.Parameter("jvmOptions") @Nullable String jvmOptions,
+        @CustomType.Parameter("memoryInGB") @Nullable Integer memoryInGB,
+        @CustomType.Parameter("netCoreMainEntryPath") @Nullable String netCoreMainEntryPath,
+        @CustomType.Parameter("runtimeVersion") @Nullable String runtimeVersion) {
         this.cpu = cpu;
         this.environmentVariables = environmentVariables;
         this.jvmOptions = jvmOptions;

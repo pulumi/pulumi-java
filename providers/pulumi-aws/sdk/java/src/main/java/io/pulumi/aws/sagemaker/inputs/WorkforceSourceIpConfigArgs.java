@@ -4,7 +4,7 @@
 package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class WorkforceSourceIpConfigArgs extends io.pulumi.resources.Resou
      * A list of up to 10 CIDR values.
      * 
      */
-    @InputImport(name="cidrs", required=true)
+    @Import(name="cidrs", required=true)
       private final Output<List<String>> cidrs;
 
     public Output<List<String>> getCidrs() {

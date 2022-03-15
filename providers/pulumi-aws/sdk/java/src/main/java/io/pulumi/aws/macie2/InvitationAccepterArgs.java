@@ -4,7 +4,7 @@
 package io.pulumi.aws.macie2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class InvitationAccepterArgs extends io.pulumi.resources.ResourceAr
      * The AWS account ID for the account that sent the invitation.
      * 
      */
-    @InputImport(name="administratorAccountId", required=true)
+    @Import(name="administratorAccountId", required=true)
       private final Output<String> administratorAccountId;
 
     public Output<String> getAdministratorAccountId() {

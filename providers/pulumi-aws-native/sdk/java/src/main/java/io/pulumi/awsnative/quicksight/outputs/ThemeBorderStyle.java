@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ThemeBorderStyle {
     /**
      * <p>The option to enable display of borders for visuals.</p>
@@ -17,8 +17,8 @@ public final class ThemeBorderStyle {
      */
     private final @Nullable Boolean show;
 
-    @OutputCustomType.Constructor
-    private ThemeBorderStyle(@OutputCustomType.Parameter("show") @Nullable Boolean show) {
+    @CustomType.Constructor
+    private ThemeBorderStyle(@CustomType.Parameter("show") @Nullable Boolean show) {
         this.show = show;
     }
 

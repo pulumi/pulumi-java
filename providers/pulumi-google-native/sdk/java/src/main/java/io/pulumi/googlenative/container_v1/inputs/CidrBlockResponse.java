@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class CidrBlockResponse extends io.pulumi.resources.InvokeArgs {
      * cidr_block must be specified in CIDR notation.
      * 
      */
-    @InputImport(name="cidrBlock", required=true)
+    @Import(name="cidrBlock", required=true)
       private final String cidrBlock;
 
     public String getCidrBlock() {
@@ -31,7 +31,7 @@ public final class CidrBlockResponse extends io.pulumi.resources.InvokeArgs {
      * display_name is an optional field for users to identify CIDR blocks.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {

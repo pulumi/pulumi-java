@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BotButton {
     /**
      * The text that appears on the button.
@@ -20,10 +20,10 @@ public final class BotButton {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotButton(
-        @OutputCustomType.Parameter("text") String text,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("text") String text,
+        @CustomType.Parameter("value") String value) {
         this.text = text;
         this.value = value;
     }

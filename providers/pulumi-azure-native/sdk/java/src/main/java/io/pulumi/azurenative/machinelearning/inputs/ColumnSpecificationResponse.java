@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
      * If the data type is categorical, this provides the list of accepted categories.
      * 
      */
-    @InputImport(name="enum")
+    @Import(name="enum")
       private final @Nullable List<Object> $enum;
 
     public List<Object> get$enum() {
@@ -36,7 +36,7 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
      * Additional format information for the data type.
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable String format;
 
     public Optional<String> getFormat() {
@@ -47,7 +47,7 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
      * Data type of the column.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -58,7 +58,7 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
      * Flag indicating if the type supports null values or not.
      * 
      */
-    @InputImport(name="xMsIsnullable")
+    @Import(name="xMsIsnullable")
       private final @Nullable Boolean xMsIsnullable;
 
     public Optional<Boolean> getXMsIsnullable() {
@@ -69,7 +69,7 @@ public final class ColumnSpecificationResponse extends io.pulumi.resources.Invok
      * Flag indicating whether the categories are treated as an ordered set or not, if this is a categorical column.
      * 
      */
-    @InputImport(name="xMsIsordered")
+    @Import(name="xMsIsordered")
       private final @Nullable Boolean xMsIsordered;
 
     public Optional<Boolean> getXMsIsordered() {

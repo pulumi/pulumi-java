@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.AzureFirewallApplicationRuleResponse;
 import io.pulumi.azurenative.network.outputs.AzureFirewallRCActionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureFirewallApplicationRuleCollectionResponse {
     /**
      * The action type of a rule collection.
@@ -51,15 +51,15 @@ public final class AzureFirewallApplicationRuleCollectionResponse {
      */
     private final @Nullable List<AzureFirewallApplicationRuleResponse> rules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureFirewallApplicationRuleCollectionResponse(
-        @OutputCustomType.Parameter("action") @Nullable AzureFirewallRCActionResponse action,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("rules") @Nullable List<AzureFirewallApplicationRuleResponse> rules) {
+        @CustomType.Parameter("action") @Nullable AzureFirewallRCActionResponse action,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("rules") @Nullable List<AzureFirewallApplicationRuleResponse> rules) {
         this.action = action;
         this.etag = etag;
         this.id = id;

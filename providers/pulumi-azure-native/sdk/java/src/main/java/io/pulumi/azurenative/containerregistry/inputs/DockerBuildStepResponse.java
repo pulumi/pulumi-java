@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.ArgumentResponse;
 import io.pulumi.azurenative.containerregistry.inputs.BaseImageDependencyResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * The collection of override arguments to be used when executing this build step.
      * 
      */
-    @InputImport(name="arguments")
+    @Import(name="arguments")
       private final @Nullable List<ArgumentResponse> arguments;
 
     public List<ArgumentResponse> getArguments() {
@@ -37,7 +37,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * List of base image dependencies for a step.
      * 
      */
-    @InputImport(name="baseImageDependencies", required=true)
+    @Import(name="baseImageDependencies", required=true)
       private final List<BaseImageDependencyResponse> baseImageDependencies;
 
     public List<BaseImageDependencyResponse> getBaseImageDependencies() {
@@ -48,7 +48,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * The token (git PAT or SAS token of storage account blob) associated with the context for a step.
      * 
      */
-    @InputImport(name="contextAccessToken")
+    @Import(name="contextAccessToken")
       private final @Nullable String contextAccessToken;
 
     public Optional<String> getContextAccessToken() {
@@ -59,7 +59,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * The URL(absolute or relative) of the source context for the task step.
      * 
      */
-    @InputImport(name="contextPath")
+    @Import(name="contextPath")
       private final @Nullable String contextPath;
 
     public Optional<String> getContextPath() {
@@ -70,7 +70,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * The Docker file path relative to the source context.
      * 
      */
-    @InputImport(name="dockerFilePath", required=true)
+    @Import(name="dockerFilePath", required=true)
       private final String dockerFilePath;
 
     public String getDockerFilePath() {
@@ -81,7 +81,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * The fully qualified image names including the repository and tag.
      * 
      */
-    @InputImport(name="imageNames")
+    @Import(name="imageNames")
       private final @Nullable List<String> imageNames;
 
     public List<String> getImageNames() {
@@ -92,7 +92,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * The value of this property indicates whether the image built should be pushed to the registry or not.
      * 
      */
-    @InputImport(name="isPushEnabled")
+    @Import(name="isPushEnabled")
       private final @Nullable Boolean isPushEnabled;
 
     public Optional<Boolean> getIsPushEnabled() {
@@ -103,7 +103,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * The value of this property indicates whether the image cache is enabled or not.
      * 
      */
-    @InputImport(name="noCache")
+    @Import(name="noCache")
       private final @Nullable Boolean noCache;
 
     public Optional<Boolean> getNoCache() {
@@ -114,7 +114,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * The name of the target build stage for the docker build.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable String target;
 
     public Optional<String> getTarget() {
@@ -126,7 +126,7 @@ public final class DockerBuildStepResponse extends io.pulumi.resources.InvokeArg
      * Expected value is 'Docker'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

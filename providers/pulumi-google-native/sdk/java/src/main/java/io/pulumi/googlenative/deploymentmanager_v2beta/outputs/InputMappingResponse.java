@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InputMappingResponse {
     /**
      * The name of the field that is going to be injected.
@@ -30,12 +30,12 @@ public final class InputMappingResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InputMappingResponse(
-        @OutputCustomType.Parameter("fieldName") String fieldName,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("methodMatch") String methodMatch,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("fieldName") String fieldName,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("methodMatch") String methodMatch,
+        @CustomType.Parameter("value") String value) {
         this.fieldName = fieldName;
         this.location = location;
         this.methodMatch = methodMatch;

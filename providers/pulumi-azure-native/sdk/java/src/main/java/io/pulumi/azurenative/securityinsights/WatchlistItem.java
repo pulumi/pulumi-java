@@ -9,7 +9,7 @@ import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
 import io.pulumi.azurenative.securityinsights.outputs.WatchlistUserInfoResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
@@ -38,7 +38,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * The time the watchlist item was created
      * 
      */
-    @OutputExport(name="created", type=String.class, parameters={})
+    @Export(name="created", type=String.class, parameters={})
     private Output</* @Nullable */ String> created;
 
     /**
@@ -52,7 +52,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * Describes a user that created the watchlist item
      * 
      */
-    @OutputExport(name="createdBy", type=WatchlistUserInfoResponse.class, parameters={})
+    @Export(name="createdBy", type=WatchlistUserInfoResponse.class, parameters={})
     private Output</* @Nullable */ WatchlistUserInfoResponse> createdBy;
 
     /**
@@ -66,7 +66,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * key-value pairs for a watchlist item entity mapping
      * 
      */
-    @OutputExport(name="entityMapping", type=Object.class, parameters={})
+    @Export(name="entityMapping", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> entityMapping;
 
     /**
@@ -80,7 +80,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * Etag of the azure resource
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -94,7 +94,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * A flag that indicates if the watchlist item is deleted or not
      * 
      */
-    @OutputExport(name="isDeleted", type=Boolean.class, parameters={})
+    @Export(name="isDeleted", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isDeleted;
 
     /**
@@ -108,7 +108,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * key-value pairs for a watchlist item
      * 
      */
-    @OutputExport(name="itemsKeyValue", type=Object.class, parameters={})
+    @Export(name="itemsKeyValue", type=Object.class, parameters={})
     private Output<Object> itemsKeyValue;
 
     /**
@@ -122,7 +122,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -136,7 +136,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -150,7 +150,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * The tenantId to which the watchlist item belongs to
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
@@ -164,7 +164,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -178,7 +178,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * The last time the watchlist item was updated
      * 
      */
-    @OutputExport(name="updated", type=String.class, parameters={})
+    @Export(name="updated", type=String.class, parameters={})
     private Output</* @Nullable */ String> updated;
 
     /**
@@ -192,7 +192,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * Describes a user that updated the watchlist item
      * 
      */
-    @OutputExport(name="updatedBy", type=WatchlistUserInfoResponse.class, parameters={})
+    @Export(name="updatedBy", type=WatchlistUserInfoResponse.class, parameters={})
     private Output</* @Nullable */ WatchlistUserInfoResponse> updatedBy;
 
     /**
@@ -206,7 +206,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * The id (a Guid) of the watchlist item
      * 
      */
-    @OutputExport(name="watchlistItemId", type=String.class, parameters={})
+    @Export(name="watchlistItemId", type=String.class, parameters={})
     private Output</* @Nullable */ String> watchlistItemId;
 
     /**
@@ -220,7 +220,7 @@ public class WatchlistItem extends io.pulumi.resources.CustomResource {
      * The type of the watchlist item
      * 
      */
-    @OutputExport(name="watchlistItemType", type=String.class, parameters={})
+    @Export(name="watchlistItemType", type=String.class, parameters={})
     private Output</* @Nullable */ String> watchlistItemType;
 
     /**

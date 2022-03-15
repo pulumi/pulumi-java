@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.pinpoint.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppCampaignHook {
     /**
      * Lambda function name or ARN to be called for delivery. Conflicts with `web_url`
@@ -27,11 +27,11 @@ public final class AppCampaignHook {
      */
     private final @Nullable String webUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppCampaignHook(
-        @OutputCustomType.Parameter("lambdaFunctionName") @Nullable String lambdaFunctionName,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("webUrl") @Nullable String webUrl) {
+        @CustomType.Parameter("lambdaFunctionName") @Nullable String lambdaFunctionName,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("webUrl") @Nullable String webUrl) {
         this.lambdaFunctionName = lambdaFunctionName;
         this.mode = mode;
         this.webUrl = webUrl;

@@ -12,7 +12,7 @@ import io.pulumi.awsnative.quicksight.outputs.DataSetPhysicalTableMap;
 import io.pulumi.awsnative.quicksight.outputs.DataSetResourcePermission;
 import io.pulumi.awsnative.quicksight.outputs.DataSetRowLevelPermissionDataSet;
 import io.pulumi.awsnative.quicksight.outputs.DataSetTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDataSetResult {
     /**
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
@@ -75,22 +75,22 @@ public final class GetDataSetResult {
      */
     private final @Nullable List<DataSetTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDataSetResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("columnGroups") @Nullable List<DataSetColumnGroup> columnGroups,
-        @OutputCustomType.Parameter("columnLevelPermissionRules") @Nullable List<DataSetColumnLevelPermissionRule> columnLevelPermissionRules,
-        @OutputCustomType.Parameter("consumedSpiceCapacityInBytes") @Nullable Double consumedSpiceCapacityInBytes,
-        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
-        @OutputCustomType.Parameter("importMode") @Nullable DataSetImportMode importMode,
-        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
-        @OutputCustomType.Parameter("logicalTableMap") @Nullable DataSetLogicalTableMap logicalTableMap,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("outputColumns") @Nullable List<DataSetOutputColumn> outputColumns,
-        @OutputCustomType.Parameter("permissions") @Nullable List<DataSetResourcePermission> permissions,
-        @OutputCustomType.Parameter("physicalTableMap") @Nullable DataSetPhysicalTableMap physicalTableMap,
-        @OutputCustomType.Parameter("rowLevelPermissionDataSet") @Nullable DataSetRowLevelPermissionDataSet rowLevelPermissionDataSet,
-        @OutputCustomType.Parameter("tags") @Nullable List<DataSetTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("columnGroups") @Nullable List<DataSetColumnGroup> columnGroups,
+        @CustomType.Parameter("columnLevelPermissionRules") @Nullable List<DataSetColumnLevelPermissionRule> columnLevelPermissionRules,
+        @CustomType.Parameter("consumedSpiceCapacityInBytes") @Nullable Double consumedSpiceCapacityInBytes,
+        @CustomType.Parameter("createdTime") @Nullable String createdTime,
+        @CustomType.Parameter("importMode") @Nullable DataSetImportMode importMode,
+        @CustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @CustomType.Parameter("logicalTableMap") @Nullable DataSetLogicalTableMap logicalTableMap,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("outputColumns") @Nullable List<DataSetOutputColumn> outputColumns,
+        @CustomType.Parameter("permissions") @Nullable List<DataSetResourcePermission> permissions,
+        @CustomType.Parameter("physicalTableMap") @Nullable DataSetPhysicalTableMap physicalTableMap,
+        @CustomType.Parameter("rowLevelPermissionDataSet") @Nullable DataSetRowLevelPermissionDataSet rowLevelPermissionDataSet,
+        @CustomType.Parameter("tags") @Nullable List<DataSetTag> tags) {
         this.arn = arn;
         this.columnGroups = columnGroups;
         this.columnLevelPermissionRules = columnLevelPermissionRules;

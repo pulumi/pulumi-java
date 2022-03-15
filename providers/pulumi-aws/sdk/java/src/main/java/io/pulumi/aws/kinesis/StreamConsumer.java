@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.kinesis.StreamConsumerArgs;
 import io.pulumi.aws.kinesis.inputs.StreamConsumerState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -38,7 +38,7 @@ public class StreamConsumer extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the stream consumer.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -52,7 +52,7 @@ public class StreamConsumer extends io.pulumi.resources.CustomResource {
      * Approximate timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) of when the stream consumer was created.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -66,7 +66,7 @@ public class StreamConsumer extends io.pulumi.resources.CustomResource {
      * Name of the stream consumer.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class StreamConsumer extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of the data stream the consumer is registered with.
      * 
      */
-    @OutputExport(name="streamArn", type=String.class, parameters={})
+    @Export(name="streamArn", type=String.class, parameters={})
     private Output<String> streamArn;
 
     /**

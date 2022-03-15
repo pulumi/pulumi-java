@@ -4,16 +4,16 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.SpotFleetTargetGroup;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SpotFleetTargetGroupsConfig {
     private final List<SpotFleetTargetGroup> targetGroups;
 
-    @OutputCustomType.Constructor
-    private SpotFleetTargetGroupsConfig(@OutputCustomType.Parameter("targetGroups") List<SpotFleetTargetGroup> targetGroups) {
+    @CustomType.Constructor
+    private SpotFleetTargetGroupsConfig(@CustomType.Parameter("targetGroups") List<SpotFleetTargetGroup> targetGroups) {
         this.targetGroups = targetGroups;
     }
 

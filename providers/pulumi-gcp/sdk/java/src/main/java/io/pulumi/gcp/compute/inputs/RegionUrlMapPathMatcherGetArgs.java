@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleGetArgs;
@@ -24,7 +24,7 @@ public final class RegionUrlMapPathMatcherGetArgs extends io.pulumi.resources.Re
      * the URL's path portion.
      * 
      */
-    @InputImport(name="defaultService")
+    @Import(name="defaultService")
       private final @Nullable Output<String> defaultService;
 
     public Output<String> getDefaultService() {
@@ -38,7 +38,7 @@ public final class RegionUrlMapPathMatcherGetArgs extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="defaultUrlRedirect")
+    @Import(name="defaultUrlRedirect")
       private final @Nullable Output<RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs> defaultUrlRedirect;
 
     public Output<RegionUrlMapPathMatcherDefaultUrlRedirectGetArgs> getDefaultUrlRedirect() {
@@ -49,7 +49,7 @@ public final class RegionUrlMapPathMatcherGetArgs extends io.pulumi.resources.Re
      * Description of this test case.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -61,7 +61,7 @@ public final class RegionUrlMapPathMatcherGetArgs extends io.pulumi.resources.Re
      * request, in the absence of which the request match fails.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -78,7 +78,7 @@ public final class RegionUrlMapPathMatcherGetArgs extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="pathRules")
+    @Import(name="pathRules")
       private final @Nullable Output<List<RegionUrlMapPathMatcherPathRuleGetArgs>> pathRules;
 
     public Output<List<RegionUrlMapPathMatcherPathRuleGetArgs>> getPathRules() {
@@ -95,7 +95,7 @@ public final class RegionUrlMapPathMatcherGetArgs extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="routeRules")
+    @Import(name="routeRules")
       private final @Nullable Output<List<RegionUrlMapPathMatcherRouteRuleGetArgs>> routeRules;
 
     public Output<List<RegionUrlMapPathMatcherRouteRuleGetArgs>> getRouteRules() {

@@ -11,7 +11,7 @@ import io.pulumi.aws.lakeformation.outputs.PermissionsDatabase;
 import io.pulumi.aws.lakeformation.outputs.PermissionsTable;
 import io.pulumi.aws.lakeformation.outputs.PermissionsTableWithColumns;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public class Permissions extends io.pulumi.resources.CustomResource {
      * Identifier for the Data Catalog. By default, it is the account ID of the caller.
      * 
      */
-    @OutputExport(name="catalogId", type=String.class, parameters={})
+    @Export(name="catalogId", type=String.class, parameters={})
     private Output</* @Nullable */ String> catalogId;
 
     /**
@@ -38,7 +38,7 @@ public class Permissions extends io.pulumi.resources.CustomResource {
      * Whether the permissions are to be granted for the Data Catalog. Defaults to `false`.
      * 
      */
-    @OutputExport(name="catalogResource", type=Boolean.class, parameters={})
+    @Export(name="catalogResource", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> catalogResource;
 
     /**
@@ -52,7 +52,7 @@ public class Permissions extends io.pulumi.resources.CustomResource {
      * Configuration block for a data location resource. Detailed below.
      * 
      */
-    @OutputExport(name="dataLocation", type=PermissionsDataLocation.class, parameters={})
+    @Export(name="dataLocation", type=PermissionsDataLocation.class, parameters={})
     private Output<PermissionsDataLocation> dataLocation;
 
     /**
@@ -66,7 +66,7 @@ public class Permissions extends io.pulumi.resources.CustomResource {
      * Configuration block for a database resource. Detailed below.
      * 
      */
-    @OutputExport(name="database", type=PermissionsDatabase.class, parameters={})
+    @Export(name="database", type=PermissionsDatabase.class, parameters={})
     private Output<PermissionsDatabase> database;
 
     /**
@@ -80,7 +80,7 @@ public class Permissions extends io.pulumi.resources.CustomResource {
      * List of permissions granted to the principal. Valid values may include `ALL`, `ALTER`, `CREATE_DATABASE`, `CREATE_TABLE`, `DATA_LOCATION_ACCESS`, `DELETE`, `DESCRIBE`, `DROP`, `INSERT`, and `SELECT`. For details on each permission, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
      * 
      */
-    @OutputExport(name="permissions", type=List.class, parameters={String.class})
+    @Export(name="permissions", type=List.class, parameters={String.class})
     private Output<List<String>> permissions;
 
     /**
@@ -94,7 +94,7 @@ public class Permissions extends io.pulumi.resources.CustomResource {
      * Subset of `permissions` which the principal can pass.
      * 
      */
-    @OutputExport(name="permissionsWithGrantOptions", type=List.class, parameters={String.class})
+    @Export(name="permissionsWithGrantOptions", type=List.class, parameters={String.class})
     private Output<List<String>> permissionsWithGrantOptions;
 
     /**
@@ -108,7 +108,7 @@ public class Permissions extends io.pulumi.resources.CustomResource {
      * Principal to be granted the permissions on the resource. Supported principals include `IAM_ALLOWED_PRINCIPALS` (see Default Behavior and `IAMAllowedPrincipals` above), IAM roles, users, groups, SAML groups and users, QuickSight groups, OUs, and organizations as well as AWS account IDs for cross-account permissions. For more information, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
      * 
      */
-    @OutputExport(name="principal", type=String.class, parameters={})
+    @Export(name="principal", type=String.class, parameters={})
     private Output<String> principal;
 
     /**
@@ -122,7 +122,7 @@ public class Permissions extends io.pulumi.resources.CustomResource {
      * Configuration block for a table resource. Detailed below.
      * 
      */
-    @OutputExport(name="table", type=PermissionsTable.class, parameters={})
+    @Export(name="table", type=PermissionsTable.class, parameters={})
     private Output<PermissionsTable> table;
 
     /**
@@ -136,7 +136,7 @@ public class Permissions extends io.pulumi.resources.CustomResource {
      * Configuration block for a table with columns resource. Detailed below.
      * 
      */
-    @OutputExport(name="tableWithColumns", type=PermissionsTableWithColumns.class, parameters={})
+    @Export(name="tableWithColumns", type=PermissionsTableWithColumns.class, parameters={})
     private Output<PermissionsTableWithColumns> tableWithColumns;
 
     /**

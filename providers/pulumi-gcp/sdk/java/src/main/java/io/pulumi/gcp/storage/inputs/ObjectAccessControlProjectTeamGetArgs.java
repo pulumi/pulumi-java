@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class ObjectAccessControlProjectTeamGetArgs extends io.pulumi.resou
 
     public static final ObjectAccessControlProjectTeamGetArgs Empty = new ObjectAccessControlProjectTeamGetArgs();
 
-    @InputImport(name="projectNumber")
+    @Import(name="projectNumber")
       private final @Nullable Output<String> projectNumber;
 
     public Output<String> getProjectNumber() {
         return this.projectNumber == null ? Output.empty() : this.projectNumber;
     }
 
-    @InputImport(name="team")
+    @Import(name="team")
       private final @Nullable Output<String> team;
 
     public Output<String> getTeam() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.migrate.inputs.LoadBalancerBackendAddressPoolRefere
 import io.pulumi.azurenative.migrate.inputs.LoadBalancerNatRuleReferenceResponse;
 import io.pulumi.azurenative.migrate.inputs.PublicIpReferenceResponse;
 import io.pulumi.azurenative.migrate.inputs.SubnetReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class NicIpConfigurationResourceSettingsResponse extends io.pulumi.
      * Gets or sets the references of the load balancer backend address pools.
      * 
      */
-    @InputImport(name="loadBalancerBackendAddressPools")
+    @Import(name="loadBalancerBackendAddressPools")
       private final @Nullable List<LoadBalancerBackendAddressPoolReferenceResponse> loadBalancerBackendAddressPools;
 
     public List<LoadBalancerBackendAddressPoolReferenceResponse> getLoadBalancerBackendAddressPools() {
@@ -39,7 +39,7 @@ public final class NicIpConfigurationResourceSettingsResponse extends io.pulumi.
      * Gets or sets the references of the load balancer NAT rules.
      * 
      */
-    @InputImport(name="loadBalancerNatRules")
+    @Import(name="loadBalancerNatRules")
       private final @Nullable List<LoadBalancerNatRuleReferenceResponse> loadBalancerNatRules;
 
     public List<LoadBalancerNatRuleReferenceResponse> getLoadBalancerNatRules() {
@@ -50,7 +50,7 @@ public final class NicIpConfigurationResourceSettingsResponse extends io.pulumi.
      * Gets or sets the IP configuration name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -61,7 +61,7 @@ public final class NicIpConfigurationResourceSettingsResponse extends io.pulumi.
      * Gets or sets a value indicating whether this IP configuration is the primary.
      * 
      */
-    @InputImport(name="primary")
+    @Import(name="primary")
       private final @Nullable Boolean primary;
 
     public Optional<Boolean> getPrimary() {
@@ -72,7 +72,7 @@ public final class NicIpConfigurationResourceSettingsResponse extends io.pulumi.
      * Gets or sets the private IP address of the network interface IP Configuration.
      * 
      */
-    @InputImport(name="privateIpAddress")
+    @Import(name="privateIpAddress")
       private final @Nullable String privateIpAddress;
 
     public Optional<String> getPrivateIpAddress() {
@@ -83,7 +83,7 @@ public final class NicIpConfigurationResourceSettingsResponse extends io.pulumi.
      * Gets or sets the private IP address allocation method.
      * 
      */
-    @InputImport(name="privateIpAllocationMethod")
+    @Import(name="privateIpAllocationMethod")
       private final @Nullable String privateIpAllocationMethod;
 
     public Optional<String> getPrivateIpAllocationMethod() {
@@ -94,7 +94,7 @@ public final class NicIpConfigurationResourceSettingsResponse extends io.pulumi.
      * Defines reference to a public IP.
      * 
      */
-    @InputImport(name="publicIp")
+    @Import(name="publicIp")
       private final @Nullable PublicIpReferenceResponse publicIp;
 
     public Optional<PublicIpReferenceResponse> getPublicIp() {
@@ -105,7 +105,7 @@ public final class NicIpConfigurationResourceSettingsResponse extends io.pulumi.
      * Defines reference to subnet.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable SubnetReferenceResponse subnet;
 
     public Optional<SubnetReferenceResponse> getSubnet() {

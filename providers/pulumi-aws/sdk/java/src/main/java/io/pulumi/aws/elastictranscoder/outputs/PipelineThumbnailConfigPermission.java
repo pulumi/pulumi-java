@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.elastictranscoder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PipelineThumbnailConfigPermission {
     /**
      * The permission that you want to give to the AWS user that you specified in `thumbnail_config_permissions.grantee`. Valid values are `Read`, `ReadAcp`, `WriteAcp` or `FullControl`.
@@ -28,11 +28,11 @@ public final class PipelineThumbnailConfigPermission {
      */
     private final @Nullable String granteeType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PipelineThumbnailConfigPermission(
-        @OutputCustomType.Parameter("accesses") @Nullable List<String> accesses,
-        @OutputCustomType.Parameter("grantee") @Nullable String grantee,
-        @OutputCustomType.Parameter("granteeType") @Nullable String granteeType) {
+        @CustomType.Parameter("accesses") @Nullable List<String> accesses,
+        @CustomType.Parameter("grantee") @Nullable String grantee,
+        @CustomType.Parameter("granteeType") @Nullable String granteeType) {
         this.accesses = accesses;
         this.grantee = grantee;
         this.granteeType = granteeType;

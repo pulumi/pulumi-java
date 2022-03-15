@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
      * A flag to determine whether or not KerberosArmoring is enabled or disabled.
      * 
      */
-    @InputImport(name="kerberosArmoring")
+    @Import(name="kerberosArmoring")
       private final @Nullable String kerberosArmoring;
 
     public Optional<String> getKerberosArmoring() {
@@ -33,7 +33,7 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
      * A flag to determine whether or not KerberosRc4Encryption is enabled or disabled.
      * 
      */
-    @InputImport(name="kerberosRc4Encryption")
+    @Import(name="kerberosRc4Encryption")
       private final @Nullable String kerberosRc4Encryption;
 
     public Optional<String> getKerberosRc4Encryption() {
@@ -44,7 +44,7 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
      * A flag to determine whether or not NtlmV1 is enabled or disabled.
      * 
      */
-    @InputImport(name="ntlmV1")
+    @Import(name="ntlmV1")
       private final @Nullable String ntlmV1;
 
     public Optional<String> getNtlmV1() {
@@ -55,7 +55,7 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
      * A flag to determine whether or not SyncKerberosPasswords is enabled or disabled.
      * 
      */
-    @InputImport(name="syncKerberosPasswords")
+    @Import(name="syncKerberosPasswords")
       private final @Nullable String syncKerberosPasswords;
 
     public Optional<String> getSyncKerberosPasswords() {
@@ -66,7 +66,7 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
      * A flag to determine whether or not SyncNtlmPasswords is enabled or disabled.
      * 
      */
-    @InputImport(name="syncNtlmPasswords")
+    @Import(name="syncNtlmPasswords")
       private final @Nullable String syncNtlmPasswords;
 
     public Optional<String> getSyncNtlmPasswords() {
@@ -77,7 +77,7 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
      * A flag to determine whether or not SyncOnPremPasswords is enabled or disabled.
      * 
      */
-    @InputImport(name="syncOnPremPasswords")
+    @Import(name="syncOnPremPasswords")
       private final @Nullable String syncOnPremPasswords;
 
     public Optional<String> getSyncOnPremPasswords() {
@@ -88,7 +88,7 @@ public final class DomainSecuritySettingsResponse extends io.pulumi.resources.In
      * A flag to determine whether or not TlsV1 is enabled or disabled.
      * 
      */
-    @InputImport(name="tlsV1")
+    @Import(name="tlsV1")
       private final @Nullable String tlsV1;
 
     public Optional<String> getTlsV1() {

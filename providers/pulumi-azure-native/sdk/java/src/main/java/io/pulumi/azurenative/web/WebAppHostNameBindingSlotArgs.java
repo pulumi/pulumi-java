@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.enums.CustomHostNameDnsRecordType;
 import io.pulumi.azurenative.web.enums.HostNameType;
 import io.pulumi.azurenative.web.enums.SslState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * Azure resource name.
      * 
      */
-    @InputImport(name="azureResourceName")
+    @Import(name="azureResourceName")
       private final @Nullable Output<String> azureResourceName;
 
     public Output<String> getAzureResourceName() {
@@ -33,7 +33,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * Azure resource type.
      * 
      */
-    @InputImport(name="azureResourceType")
+    @Import(name="azureResourceType")
       private final @Nullable Output<AzureResourceType> azureResourceType;
 
     public Output<AzureResourceType> getAzureResourceType() {
@@ -44,7 +44,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * Custom DNS record type.
      * 
      */
-    @InputImport(name="customHostNameDnsRecordType")
+    @Import(name="customHostNameDnsRecordType")
       private final @Nullable Output<CustomHostNameDnsRecordType> customHostNameDnsRecordType;
 
     public Output<CustomHostNameDnsRecordType> getCustomHostNameDnsRecordType() {
@@ -55,7 +55,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * Fully qualified ARM domain resource URI.
      * 
      */
-    @InputImport(name="domainId")
+    @Import(name="domainId")
       private final @Nullable Output<String> domainId;
 
     public Output<String> getDomainId() {
@@ -66,7 +66,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * Hostname in the hostname binding.
      * 
      */
-    @InputImport(name="hostName")
+    @Import(name="hostName")
       private final @Nullable Output<String> hostName;
 
     public Output<String> getHostName() {
@@ -77,7 +77,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * Hostname type.
      * 
      */
-    @InputImport(name="hostNameType")
+    @Import(name="hostNameType")
       private final @Nullable Output<HostNameType> hostNameType;
 
     public Output<HostNameType> getHostNameType() {
@@ -88,7 +88,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * Kind of resource.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -99,7 +99,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * Name of the app.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -110,7 +110,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * Name of the resource group to which the resource belongs.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -121,7 +121,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * App Service app name.
      * 
      */
-    @InputImport(name="siteName")
+    @Import(name="siteName")
       private final @Nullable Output<String> siteName;
 
     public Output<String> getSiteName() {
@@ -132,7 +132,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * Name of the deployment slot. If a slot is not specified, the API will create a binding for the production slot.
      * 
      */
-    @InputImport(name="slot", required=true)
+    @Import(name="slot", required=true)
       private final Output<String> slot;
 
     public Output<String> getSlot() {
@@ -143,7 +143,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * SSL type
      * 
      */
-    @InputImport(name="sslState")
+    @Import(name="sslState")
       private final @Nullable Output<SslState> sslState;
 
     public Output<SslState> getSslState() {
@@ -154,7 +154,7 @@ public final class WebAppHostNameBindingSlotArgs extends io.pulumi.resources.Res
      * SSL certificate thumbprint
      * 
      */
-    @InputImport(name="thumbprint")
+    @Import(name="thumbprint")
       private final @Nullable Output<String> thumbprint;
 
     public Output<String> getThumbprint() {

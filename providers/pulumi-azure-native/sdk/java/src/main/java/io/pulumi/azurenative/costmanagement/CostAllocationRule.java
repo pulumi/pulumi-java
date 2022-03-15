@@ -8,7 +8,7 @@ import io.pulumi.azurenative.costmanagement.CostAllocationRuleArgs;
 import io.pulumi.azurenative.costmanagement.outputs.CostAllocationRulePropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class CostAllocationRule extends io.pulumi.resources.CustomResource {
      * Name of the rule. This is a read only value.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -49,7 +49,7 @@ public class CostAllocationRule extends io.pulumi.resources.CustomResource {
      * Cost allocation rule properties
      * 
      */
-    @OutputExport(name="properties", type=CostAllocationRulePropertiesResponse.class, parameters={})
+    @Export(name="properties", type=CostAllocationRulePropertiesResponse.class, parameters={})
     private Output<CostAllocationRulePropertiesResponse> properties;
 
     /**
@@ -63,7 +63,7 @@ public class CostAllocationRule extends io.pulumi.resources.CustomResource {
      * Resource type of the rule. This is a read only value of Microsoft.CostManagement/CostAllocationRule.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

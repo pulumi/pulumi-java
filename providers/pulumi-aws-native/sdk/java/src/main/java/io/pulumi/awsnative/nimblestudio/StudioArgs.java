@@ -6,7 +6,7 @@ package io.pulumi.awsnative.nimblestudio;
 import io.pulumi.awsnative.nimblestudio.inputs.StudioEncryptionConfigurationArgs;
 import io.pulumi.awsnative.nimblestudio.inputs.StudioTagsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * <p>The IAM role that Studio Admins will assume when logging in to the Nimble Studio portal.</p>
      * 
      */
-    @InputImport(name="adminRoleArn", required=true)
+    @Import(name="adminRoleArn", required=true)
       private final Output<String> adminRoleArn;
 
     public Output<String> getAdminRoleArn() {
@@ -31,14 +31,14 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * <p>A friendly name for the studio.</p>
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
         return this.displayName;
     }
 
-    @InputImport(name="studioEncryptionConfiguration")
+    @Import(name="studioEncryptionConfiguration")
       private final @Nullable Output<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration;
 
     public Output<StudioEncryptionConfigurationArgs> getStudioEncryptionConfiguration() {
@@ -49,14 +49,14 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * <p>The studio name that is used in the URL of the Nimble Studio portal when accessed by Nimble Studio users.</p>
      * 
      */
-    @InputImport(name="studioName")
+    @Import(name="studioName")
       private final @Nullable Output<String> studioName;
 
     public Output<String> getStudioName() {
         return this.studioName == null ? Output.empty() : this.studioName;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<StudioTagsArgs> tags;
 
     public Output<StudioTagsArgs> getTags() {
@@ -67,7 +67,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * <p>The IAM role that Studio Users will assume when logging in to the Nimble Studio portal.</p>
      * 
      */
-    @InputImport(name="userRoleArn", required=true)
+    @Import(name="userRoleArn", required=true)
       private final Output<String> userRoleArn;
 
     public Output<String> getUserRoleArn() {

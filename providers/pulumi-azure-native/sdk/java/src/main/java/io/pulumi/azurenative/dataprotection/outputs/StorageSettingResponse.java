@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageSettingResponse {
     /**
      * Gets or sets the type of the datastore.
@@ -22,10 +22,10 @@ public final class StorageSettingResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageSettingResponse(
-        @OutputCustomType.Parameter("datastoreType") @Nullable String datastoreType,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("datastoreType") @Nullable String datastoreType,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.datastoreType = datastoreType;
         this.type = type;
     }

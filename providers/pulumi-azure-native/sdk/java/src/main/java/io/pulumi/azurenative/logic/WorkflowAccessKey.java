@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.logic.WorkflowAccessKeyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public class WorkflowAccessKey extends io.pulumi.resources.CustomResource {
      * Gets the workflow access key name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -44,7 +44,7 @@ public class WorkflowAccessKey extends io.pulumi.resources.CustomResource {
      * Gets or sets the not-after time.
      * 
      */
-    @OutputExport(name="notAfter", type=String.class, parameters={})
+    @Export(name="notAfter", type=String.class, parameters={})
     private Output</* @Nullable */ String> notAfter;
 
     /**
@@ -58,7 +58,7 @@ public class WorkflowAccessKey extends io.pulumi.resources.CustomResource {
      * Gets or sets the not-before time.
      * 
      */
-    @OutputExport(name="notBefore", type=String.class, parameters={})
+    @Export(name="notBefore", type=String.class, parameters={})
     private Output</* @Nullable */ String> notBefore;
 
     /**
@@ -72,7 +72,7 @@ public class WorkflowAccessKey extends io.pulumi.resources.CustomResource {
      * Gets the workflow access key type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

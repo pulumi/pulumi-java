@@ -5,7 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.aws.ecs.inputs.CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CapacityProviderAutoScalingGroupProviderGetArgs extends io.pu
      * - ARN of the associated auto scaling group.
      * 
      */
-    @InputImport(name="autoScalingGroupArn", required=true)
+    @Import(name="autoScalingGroupArn", required=true)
       private final Output<String> autoScalingGroupArn;
 
     public Output<String> getAutoScalingGroupArn() {
@@ -30,7 +30,7 @@ public final class CapacityProviderAutoScalingGroupProviderGetArgs extends io.pu
      * - Configuration block defining the parameters of the auto scaling. Detailed below.
      * 
      */
-    @InputImport(name="managedScaling")
+    @Import(name="managedScaling")
       private final @Nullable Output<CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs> managedScaling;
 
     public Output<CapacityProviderAutoScalingGroupProviderManagedScalingGetArgs> getManagedScaling() {
@@ -41,7 +41,7 @@ public final class CapacityProviderAutoScalingGroupProviderGetArgs extends io.pu
      * - Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are `ENABLED` and `DISABLED`.
      * 
      */
-    @InputImport(name="managedTerminationProtection")
+    @Import(name="managedTerminationProtection")
       private final @Nullable Output<String> managedTerminationProtection;
 
     public Output<String> getManagedTerminationProtection() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudrun.inputs.GetServiceTemplateSpecContainerEnvValueFrom;
 import java.lang.String;
 import java.util.List;
@@ -18,21 +18,21 @@ public final class GetServiceTemplateSpecContainerEnv extends io.pulumi.resource
      * The name of the Cloud Run Service.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {
         return this.value;
     }
 
-    @InputImport(name="valueFroms", required=true)
+    @Import(name="valueFroms", required=true)
       private final List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms;
 
     public List<GetServiceTemplateSpecContainerEnvValueFrom> getValueFroms() {

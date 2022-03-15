@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StatusResponse {
     /**
      * The status code, which should be an enum value of google.rpc.Code.
@@ -28,11 +28,11 @@ public final class StatusResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StatusResponse(
-        @OutputCustomType.Parameter("code") Integer code,
-        @OutputCustomType.Parameter("details") List<Map<String,String>> details,
-        @OutputCustomType.Parameter("message") String message) {
+        @CustomType.Parameter("code") Integer code,
+        @CustomType.Parameter("details") List<Map<String,String>> details,
+        @CustomType.Parameter("message") String message) {
         this.code = code;
         this.details = details;
         this.message = message;

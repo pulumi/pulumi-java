@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.redis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TlsCertificateResponse {
     /**
      * PEM representation.
@@ -35,13 +35,13 @@ public final class TlsCertificateResponse {
      */
     private final String sha1Fingerprint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TlsCertificateResponse(
-        @OutputCustomType.Parameter("cert") String cert,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("expireTime") String expireTime,
-        @OutputCustomType.Parameter("serialNumber") String serialNumber,
-        @OutputCustomType.Parameter("sha1Fingerprint") String sha1Fingerprint) {
+        @CustomType.Parameter("cert") String cert,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("expireTime") String expireTime,
+        @CustomType.Parameter("serialNumber") String serialNumber,
+        @CustomType.Parameter("sha1Fingerprint") String sha1Fingerprint) {
         this.cert = cert;
         this.createTime = createTime;
         this.expireTime = expireTime;

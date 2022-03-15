@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.sqladmin_v1.outputs.BackupConfigurationResponse;
 import io.pulumi.googlenative.sqladmin_v1.outputs.DatabaseFlagsResponse;
 import io.pulumi.googlenative.sqladmin_v1.outputs.DenyMaintenancePeriodResponse;
@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SettingsResponse {
     /**
      * The activation policy specifies when the instance is activated; it is applicable only when the instance state is RUNNABLE. Valid values: * `ALWAYS`: The instance is on, and remains so even in the absence of connection requests. * `NEVER`: The instance is off; it is not activated, even if a connection request arrives.
@@ -143,32 +143,32 @@ public final class SettingsResponse {
      */
     private final Map<String,String> userLabels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SettingsResponse(
-        @OutputCustomType.Parameter("activationPolicy") String activationPolicy,
-        @OutputCustomType.Parameter("activeDirectoryConfig") SqlActiveDirectoryConfigResponse activeDirectoryConfig,
-        @OutputCustomType.Parameter("availabilityType") String availabilityType,
-        @OutputCustomType.Parameter("backupConfiguration") BackupConfigurationResponse backupConfiguration,
-        @OutputCustomType.Parameter("collation") String collation,
-        @OutputCustomType.Parameter("crashSafeReplicationEnabled") Boolean crashSafeReplicationEnabled,
-        @OutputCustomType.Parameter("dataDiskSizeGb") String dataDiskSizeGb,
-        @OutputCustomType.Parameter("dataDiskType") String dataDiskType,
-        @OutputCustomType.Parameter("databaseFlags") List<DatabaseFlagsResponse> databaseFlags,
-        @OutputCustomType.Parameter("databaseReplicationEnabled") Boolean databaseReplicationEnabled,
-        @OutputCustomType.Parameter("denyMaintenancePeriods") List<DenyMaintenancePeriodResponse> denyMaintenancePeriods,
-        @OutputCustomType.Parameter("insightsConfig") InsightsConfigResponse insightsConfig,
-        @OutputCustomType.Parameter("ipConfiguration") IpConfigurationResponse ipConfiguration,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("locationPreference") LocationPreferenceResponse locationPreference,
-        @OutputCustomType.Parameter("maintenanceWindow") MaintenanceWindowResponse maintenanceWindow,
-        @OutputCustomType.Parameter("passwordValidationPolicy") PasswordValidationPolicyResponse passwordValidationPolicy,
-        @OutputCustomType.Parameter("pricingPlan") String pricingPlan,
-        @OutputCustomType.Parameter("settingsVersion") String settingsVersion,
-        @OutputCustomType.Parameter("sqlServerAuditConfig") SqlServerAuditConfigResponse sqlServerAuditConfig,
-        @OutputCustomType.Parameter("storageAutoResize") Boolean storageAutoResize,
-        @OutputCustomType.Parameter("storageAutoResizeLimit") String storageAutoResizeLimit,
-        @OutputCustomType.Parameter("tier") String tier,
-        @OutputCustomType.Parameter("userLabels") Map<String,String> userLabels) {
+        @CustomType.Parameter("activationPolicy") String activationPolicy,
+        @CustomType.Parameter("activeDirectoryConfig") SqlActiveDirectoryConfigResponse activeDirectoryConfig,
+        @CustomType.Parameter("availabilityType") String availabilityType,
+        @CustomType.Parameter("backupConfiguration") BackupConfigurationResponse backupConfiguration,
+        @CustomType.Parameter("collation") String collation,
+        @CustomType.Parameter("crashSafeReplicationEnabled") Boolean crashSafeReplicationEnabled,
+        @CustomType.Parameter("dataDiskSizeGb") String dataDiskSizeGb,
+        @CustomType.Parameter("dataDiskType") String dataDiskType,
+        @CustomType.Parameter("databaseFlags") List<DatabaseFlagsResponse> databaseFlags,
+        @CustomType.Parameter("databaseReplicationEnabled") Boolean databaseReplicationEnabled,
+        @CustomType.Parameter("denyMaintenancePeriods") List<DenyMaintenancePeriodResponse> denyMaintenancePeriods,
+        @CustomType.Parameter("insightsConfig") InsightsConfigResponse insightsConfig,
+        @CustomType.Parameter("ipConfiguration") IpConfigurationResponse ipConfiguration,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("locationPreference") LocationPreferenceResponse locationPreference,
+        @CustomType.Parameter("maintenanceWindow") MaintenanceWindowResponse maintenanceWindow,
+        @CustomType.Parameter("passwordValidationPolicy") PasswordValidationPolicyResponse passwordValidationPolicy,
+        @CustomType.Parameter("pricingPlan") String pricingPlan,
+        @CustomType.Parameter("settingsVersion") String settingsVersion,
+        @CustomType.Parameter("sqlServerAuditConfig") SqlServerAuditConfigResponse sqlServerAuditConfig,
+        @CustomType.Parameter("storageAutoResize") Boolean storageAutoResize,
+        @CustomType.Parameter("storageAutoResizeLimit") String storageAutoResizeLimit,
+        @CustomType.Parameter("tier") String tier,
+        @CustomType.Parameter("userLabels") Map<String,String> userLabels) {
         this.activationPolicy = activationPolicy;
         this.activeDirectoryConfig = activeDirectoryConfig;
         this.availabilityType = availabilityType;

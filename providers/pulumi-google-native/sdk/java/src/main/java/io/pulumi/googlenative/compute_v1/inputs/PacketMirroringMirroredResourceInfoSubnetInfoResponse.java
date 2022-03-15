@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class PacketMirroringMirroredResourceInfoSubnetInfoResponse extends
      * Unique identifier for the subnetwork; defined by the server.
      * 
      */
-    @InputImport(name="canonicalUrl", required=true)
+    @Import(name="canonicalUrl", required=true)
       private final String canonicalUrl;
 
     public String getCanonicalUrl() {
@@ -27,7 +27,7 @@ public final class PacketMirroringMirroredResourceInfoSubnetInfoResponse extends
      * Resource URL to the subnetwork for which traffic from/to all VM instances will be mirrored.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {

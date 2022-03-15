@@ -5,14 +5,14 @@ package io.pulumi.awsnative.s3outposts.outputs;
 
 import io.pulumi.awsnative.s3outposts.outputs.BucketLifecycleConfiguration;
 import io.pulumi.awsnative.s3outposts.outputs.BucketTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketResult {
     /**
      * The Amazon Resource Name (ARN) of the specified bucket.
@@ -30,11 +30,11 @@ public final class GetBucketResult {
      */
     private final @Nullable List<BucketTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBucketResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("lifecycleConfiguration") @Nullable BucketLifecycleConfiguration lifecycleConfiguration,
-        @OutputCustomType.Parameter("tags") @Nullable List<BucketTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("lifecycleConfiguration") @Nullable BucketLifecycleConfiguration lifecycleConfiguration,
+        @CustomType.Parameter("tags") @Nullable List<BucketTag> tags) {
         this.arn = arn;
         this.lifecycleConfiguration = lifecycleConfiguration;
         this.tags = tags;

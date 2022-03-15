@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.datacatalog.inputs.PolicyTagIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class PolicyTagIamMemberState extends io.pulumi.resources.ResourceA
 
     public static final PolicyTagIamMemberState Empty = new PolicyTagIamMemberState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<PolicyTagIamMemberConditionGetArgs> condition;
 
     public Output<PolicyTagIamMemberConditionGetArgs> getCondition() {
@@ -26,14 +26,14 @@ public final class PolicyTagIamMemberState extends io.pulumi.resources.ResourceA
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="member")
+    @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
@@ -44,7 +44,7 @@ public final class PolicyTagIamMemberState extends io.pulumi.resources.ResourceA
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="policyTag")
+    @Import(name="policyTag")
       private final @Nullable Output<String> policyTag;
 
     public Output<String> getPolicyTag() {
@@ -57,7 +57,7 @@ public final class PolicyTagIamMemberState extends io.pulumi.resources.ResourceA
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

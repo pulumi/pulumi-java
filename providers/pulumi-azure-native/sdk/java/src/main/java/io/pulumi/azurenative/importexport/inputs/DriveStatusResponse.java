@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * The BitLocker key used to encrypt the drive.
      * 
      */
-    @InputImport(name="bitLockerKey")
+    @Import(name="bitLockerKey")
       private final @Nullable String bitLockerKey;
 
     public Optional<String> getBitLockerKey() {
@@ -35,7 +35,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Bytes successfully transferred for the drive.
      * 
      */
-    @InputImport(name="bytesSucceeded")
+    @Import(name="bytesSucceeded")
       private final @Nullable Double bytesSucceeded;
 
     public Optional<Double> getBytesSucceeded() {
@@ -46,7 +46,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Detailed status about the data transfer process. This field is not returned in the response until the drive is in the Transferring state.
      * 
      */
-    @InputImport(name="copyStatus")
+    @Import(name="copyStatus")
       private final @Nullable String copyStatus;
 
     public Optional<String> getCopyStatus() {
@@ -57,7 +57,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * The drive header hash value.
      * 
      */
-    @InputImport(name="driveHeaderHash")
+    @Import(name="driveHeaderHash")
       private final @Nullable String driveHeaderHash;
 
     public Optional<String> getDriveHeaderHash() {
@@ -68,7 +68,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * The drive's hardware serial number, without spaces.
      * 
      */
-    @InputImport(name="driveId")
+    @Import(name="driveId")
       private final @Nullable String driveId;
 
     public Optional<String> getDriveId() {
@@ -79,7 +79,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * A URI that points to the blob containing the error log for the data transfer operation.
      * 
      */
-    @InputImport(name="errorLogUri")
+    @Import(name="errorLogUri")
       private final @Nullable String errorLogUri;
 
     public Optional<String> getErrorLogUri() {
@@ -90,7 +90,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * The relative path of the manifest file on the drive.
      * 
      */
-    @InputImport(name="manifestFile")
+    @Import(name="manifestFile")
       private final @Nullable String manifestFile;
 
     public Optional<String> getManifestFile() {
@@ -101,7 +101,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * The Base16-encoded MD5 hash of the manifest file on the drive.
      * 
      */
-    @InputImport(name="manifestHash")
+    @Import(name="manifestHash")
       private final @Nullable String manifestHash;
 
     public Optional<String> getManifestHash() {
@@ -112,7 +112,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * A URI that points to the blob containing the drive manifest file.
      * 
      */
-    @InputImport(name="manifestUri")
+    @Import(name="manifestUri")
       private final @Nullable String manifestUri;
 
     public Optional<String> getManifestUri() {
@@ -123,7 +123,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Percentage completed for the drive.
      * 
      */
-    @InputImport(name="percentComplete")
+    @Import(name="percentComplete")
       private final @Nullable Integer percentComplete;
 
     public Optional<Integer> getPercentComplete() {
@@ -134,7 +134,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * The drive's current state.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable String state;
 
     public Optional<String> getState() {
@@ -145,7 +145,7 @@ public final class DriveStatusResponse extends io.pulumi.resources.InvokeArgs {
      * A URI that points to the blob containing the verbose log for the data transfer operation.
      * 
      */
-    @InputImport(name="verboseLogUri")
+    @Import(name="verboseLogUri")
       private final @Nullable String verboseLogUri;
 
     public Optional<String> getVerboseLogUri() {

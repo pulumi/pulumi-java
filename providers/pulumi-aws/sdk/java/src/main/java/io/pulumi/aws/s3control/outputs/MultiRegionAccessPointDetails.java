@@ -5,14 +5,14 @@ package io.pulumi.aws.s3control.outputs;
 
 import io.pulumi.aws.s3control.outputs.MultiRegionAccessPointDetailsPublicAccessBlock;
 import io.pulumi.aws.s3control.outputs.MultiRegionAccessPointDetailsRegion;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MultiRegionAccessPointDetails {
     /**
      * The name of the Multi-Region Access Point.
@@ -30,11 +30,11 @@ public final class MultiRegionAccessPointDetails {
      */
     private final List<MultiRegionAccessPointDetailsRegion> regions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MultiRegionAccessPointDetails(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("publicAccessBlock") @Nullable MultiRegionAccessPointDetailsPublicAccessBlock publicAccessBlock,
-        @OutputCustomType.Parameter("regions") List<MultiRegionAccessPointDetailsRegion> regions) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("publicAccessBlock") @Nullable MultiRegionAccessPointDetailsPublicAccessBlock publicAccessBlock,
+        @CustomType.Parameter("regions") List<MultiRegionAccessPointDetailsRegion> regions) {
         this.name = name;
         this.publicAccessBlock = publicAccessBlock;
         this.regions = regions;

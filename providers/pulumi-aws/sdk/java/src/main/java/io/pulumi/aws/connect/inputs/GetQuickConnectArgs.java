@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.connect.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetQuickConnectArgs extends io.pulumi.resources.InvokeArgs {
      * Reference to the hosting Amazon Connect Instance
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final String instanceId;
 
     public String getInstanceId() {
@@ -30,7 +30,7 @@ public final class GetQuickConnectArgs extends io.pulumi.resources.InvokeArgs {
      * Returns information on a specific Quick Connect by name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -41,7 +41,7 @@ public final class GetQuickConnectArgs extends io.pulumi.resources.InvokeArgs {
      * Returns information on a specific Quick Connect by Quick Connect id
      * 
      */
-    @InputImport(name="quickConnectId")
+    @Import(name="quickConnectId")
       private final @Nullable String quickConnectId;
 
     public Optional<String> getQuickConnectId() {
@@ -52,7 +52,7 @@ public final class GetQuickConnectArgs extends io.pulumi.resources.InvokeArgs {
      * A map of tags to assign to the Quick Connect.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

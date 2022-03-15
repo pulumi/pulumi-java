@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SortOptionsResponse {
     /**
      * Name of the operator corresponding to the field to sort on. The corresponding property must be marked as sortable.
@@ -20,10 +20,10 @@ public final class SortOptionsResponse {
      */
     private final String sortOrder;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SortOptionsResponse(
-        @OutputCustomType.Parameter("operatorName") String operatorName,
-        @OutputCustomType.Parameter("sortOrder") String sortOrder) {
+        @CustomType.Parameter("operatorName") String operatorName,
+        @CustomType.Parameter("sortOrder") String sortOrder) {
         this.operatorName = operatorName;
         this.sortOrder = sortOrder;
     }

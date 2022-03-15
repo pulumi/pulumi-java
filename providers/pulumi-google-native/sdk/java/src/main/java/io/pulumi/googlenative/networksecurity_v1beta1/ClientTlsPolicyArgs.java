@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networksecurity_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.GoogleCloudNetworksecurityV1beta1CertificateProviderArgs;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.ValidationCAArgs;
 import java.lang.String;
@@ -22,14 +22,14 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. Defines a mechanism to provision client identity (public and private keys) for peer to peer authentication. The presence of this dictates mTLS.
      * 
      */
-    @InputImport(name="clientCertificate")
+    @Import(name="clientCertificate")
       private final @Nullable Output<GoogleCloudNetworksecurityV1beta1CertificateProviderArgs> clientCertificate;
 
     public Output<GoogleCloudNetworksecurityV1beta1CertificateProviderArgs> getClientCertificate() {
         return this.clientCertificate == null ? Output.empty() : this.clientCertificate;
     }
 
-    @InputImport(name="clientTlsPolicyId", required=true)
+    @Import(name="clientTlsPolicyId", required=true)
       private final Output<String> clientTlsPolicyId;
 
     public Output<String> getClientTlsPolicyId() {
@@ -40,7 +40,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. Free-text description of the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -51,14 +51,14 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. Set of label tags associated with the resource.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -69,14 +69,14 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the ClientTlsPolicy resource. It matches the pattern `projects/*{@literal /}locations/{location}/clientTlsPolicies/{client_tls_policy}`
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -87,7 +87,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. Defines the mechanism to obtain the Certificate Authority certificate to validate the server certificate. If empty, client does not validate the server certificate.
      * 
      */
-    @InputImport(name="serverValidationCa")
+    @Import(name="serverValidationCa")
       private final @Nullable Output<List<ValidationCAArgs>> serverValidationCa;
 
     public Output<List<ValidationCAArgs>> getServerValidationCa() {
@@ -98,7 +98,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. Server Name Indication string to present to the server during TLS handshake. E.g: "secure.example.com".
      * 
      */
-    @InputImport(name="sni")
+    @Import(name="sni")
       private final @Nullable Output<String> sni;
 
     public Output<String> getSni() {

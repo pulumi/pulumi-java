@@ -4,7 +4,7 @@
 package io.pulumi.aws.inspector.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * The template assessment ARN.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * The duration of the inspector run.
      * 
      */
-    @InputImport(name="duration")
+    @Import(name="duration")
       private final @Nullable Output<Integer> duration;
 
     public Output<Integer> getDuration() {
@@ -43,7 +43,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * The name of the assessment template.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * The rules to be used during the run.
      * 
      */
-    @InputImport(name="rulesPackageArns")
+    @Import(name="rulesPackageArns")
       private final @Nullable Output<List<String>> rulesPackageArns;
 
     public Output<List<String>> getRulesPackageArns() {
@@ -65,7 +65,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * Key-value map of tags for the Inspector assessment template. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -76,7 +76,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -87,7 +87,7 @@ public final class AssessmentTemplateState extends io.pulumi.resources.ResourceA
      * The assessment target ARN to attach the template to.
      * 
      */
-    @InputImport(name="targetArn")
+    @Import(name="targetArn")
       private final @Nullable Output<String> targetArn;
 
     public Output<String> getTargetArn() {

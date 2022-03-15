@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.SeedNodeResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataCenterResourceResponseProperties {
     /**
      * A fragment of a cassandra.yaml configuration file to be included in the cassandra.yaml for all nodes in this data center. The fragment should be Base64 encoded, and only a subset of keys are allowed.
@@ -45,14 +45,14 @@ public final class DataCenterResourceResponseProperties {
      */
     private final List<SeedNodeResponse> seedNodes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataCenterResourceResponseProperties(
-        @OutputCustomType.Parameter("base64EncodedCassandraYamlFragment") @Nullable String base64EncodedCassandraYamlFragment,
-        @OutputCustomType.Parameter("dataCenterLocation") @Nullable String dataCenterLocation,
-        @OutputCustomType.Parameter("delegatedSubnetId") @Nullable String delegatedSubnetId,
-        @OutputCustomType.Parameter("nodeCount") @Nullable Integer nodeCount,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("seedNodes") List<SeedNodeResponse> seedNodes) {
+        @CustomType.Parameter("base64EncodedCassandraYamlFragment") @Nullable String base64EncodedCassandraYamlFragment,
+        @CustomType.Parameter("dataCenterLocation") @Nullable String dataCenterLocation,
+        @CustomType.Parameter("delegatedSubnetId") @Nullable String delegatedSubnetId,
+        @CustomType.Parameter("nodeCount") @Nullable Integer nodeCount,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("seedNodes") List<SeedNodeResponse> seedNodes) {
         this.base64EncodedCassandraYamlFragment = base64EncodedCassandraYamlFragment;
         this.dataCenterLocation = dataCenterLocation;
         this.delegatedSubnetId = delegatedSubnetId;

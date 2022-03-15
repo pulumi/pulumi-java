@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.helm.sh_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
      * The Repository's CA File
      * 
      */
-    @InputImport(name="caFile")
+    @Import(name="caFile")
       private final @Nullable Output<String> caFile;
 
     public Output<String> getCaFile() {
@@ -33,7 +33,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
      * The repository's cert file
      * 
      */
-    @InputImport(name="certFile")
+    @Import(name="certFile")
       private final @Nullable Output<String> certFile;
 
     public Output<String> getCertFile() {
@@ -44,7 +44,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
      * The repository's cert key file
      * 
      */
-    @InputImport(name="keyFile")
+    @Import(name="keyFile")
       private final @Nullable Output<String> keyFile;
 
     public Output<String> getKeyFile() {
@@ -55,7 +55,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
      * Password for HTTP basic authentication
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -66,7 +66,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
      * Repository where to locate the requested chart. If is a URL the chart is installed without installing the repository.
      * 
      */
-    @InputImport(name="repo")
+    @Import(name="repo")
       private final @Nullable Output<String> repo;
 
     public Output<String> getRepo() {
@@ -77,7 +77,7 @@ public final class RepositoryOptsArgs extends io.pulumi.resources.ResourceArgs {
      * Username for HTTP basic authentication
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {

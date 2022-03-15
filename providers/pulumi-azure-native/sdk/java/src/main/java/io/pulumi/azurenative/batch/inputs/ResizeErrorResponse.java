@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class ResizeErrorResponse extends io.pulumi.resources.InvokeArgs {
      * An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
      * 
      */
-    @InputImport(name="code", required=true)
+    @Import(name="code", required=true)
       private final String code;
 
     public String getCode() {
         return this.code;
     }
 
-    @InputImport(name="details")
+    @Import(name="details")
       private final @Nullable List<ResizeErrorResponse> details;
 
     public List<ResizeErrorResponse> getDetails() {
@@ -37,7 +37,7 @@ public final class ResizeErrorResponse extends io.pulumi.resources.InvokeArgs {
      * A message describing the error, intended to be suitable for display in a user interface.
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {

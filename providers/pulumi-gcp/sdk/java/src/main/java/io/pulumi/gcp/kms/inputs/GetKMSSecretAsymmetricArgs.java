@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetKMSSecretAsymmetricArgs extends io.pulumi.resources.Invoke
      * The ciphertext to be decrypted, encoded in base64
      * 
      */
-    @InputImport(name="ciphertext", required=true)
+    @Import(name="ciphertext", required=true)
       private final String ciphertext;
 
     public String getCiphertext() {
@@ -29,7 +29,7 @@ public final class GetKMSSecretAsymmetricArgs extends io.pulumi.resources.Invoke
      * The crc32 checksum of the `ciphertext` in hexadecimal notation. If not specified, it will be computed.
      * 
      */
-    @InputImport(name="crc32")
+    @Import(name="crc32")
       private final @Nullable String crc32;
 
     public Optional<String> getCrc32() {
@@ -42,7 +42,7 @@ public final class GetKMSSecretAsymmetricArgs extends io.pulumi.resources.Invoke
      * `projects/{project}/locations/{location}/keyRings/{keyring}/cryptoKeys/{key}/cryptoKeyVersions/{version}`.
      * 
      */
-    @InputImport(name="cryptoKeyVersion", required=true)
+    @Import(name="cryptoKeyVersion", required=true)
       private final String cryptoKeyVersion;
 
     public String getCryptoKeyVersion() {

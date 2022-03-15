@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datashare.ADLSGen1FolderDataSetArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ADLSGen1FolderDataSet extends io.pulumi.resources.CustomResource {
      * The ADLS account name.
      * 
      */
-    @OutputExport(name="accountName", type=String.class, parameters={})
+    @Export(name="accountName", type=String.class, parameters={})
     private Output<String> accountName;
 
     /**
@@ -49,7 +49,7 @@ public class ADLSGen1FolderDataSet extends io.pulumi.resources.CustomResource {
      * Unique id for identifying a data set resource
      * 
      */
-    @OutputExport(name="dataSetId", type=String.class, parameters={})
+    @Export(name="dataSetId", type=String.class, parameters={})
     private Output<String> dataSetId;
 
     /**
@@ -63,7 +63,7 @@ public class ADLSGen1FolderDataSet extends io.pulumi.resources.CustomResource {
      * The folder path within the ADLS account.
      * 
      */
-    @OutputExport(name="folderPath", type=String.class, parameters={})
+    @Export(name="folderPath", type=String.class, parameters={})
     private Output<String> folderPath;
 
     /**
@@ -78,7 +78,7 @@ public class ADLSGen1FolderDataSet extends io.pulumi.resources.CustomResource {
      * Expected value is 'AdlsGen1Folder'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -93,7 +93,7 @@ public class ADLSGen1FolderDataSet extends io.pulumi.resources.CustomResource {
      * Name of the azure resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class ADLSGen1FolderDataSet extends io.pulumi.resources.CustomResource {
      * Resource group of ADLS account.
      * 
      */
-    @OutputExport(name="resourceGroup", type=String.class, parameters={})
+    @Export(name="resourceGroup", type=String.class, parameters={})
     private Output<String> resourceGroup;
 
     /**
@@ -121,7 +121,7 @@ public class ADLSGen1FolderDataSet extends io.pulumi.resources.CustomResource {
      * Subscription id of ADLS account.
      * 
      */
-    @OutputExport(name="subscriptionId", type=String.class, parameters={})
+    @Export(name="subscriptionId", type=String.class, parameters={})
     private Output<String> subscriptionId;
 
     /**
@@ -135,7 +135,7 @@ public class ADLSGen1FolderDataSet extends io.pulumi.resources.CustomResource {
      * System Data of the Azure resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -149,7 +149,7 @@ public class ADLSGen1FolderDataSet extends io.pulumi.resources.CustomResource {
      * Type of the azure resource
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.networkconnectivity_v1.inputs.RouterApplianceInstanceResponse;
 import java.lang.Boolean;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class LinkedRouterApplianceInstancesResponse extends io.pulumi.reso
      * The list of router appliance instances.
      * 
      */
-    @InputImport(name="instances", required=true)
+    @Import(name="instances", required=true)
       private final List<RouterApplianceInstanceResponse> instances;
 
     public List<RouterApplianceInstanceResponse> getInstances() {
@@ -33,7 +33,7 @@ public final class LinkedRouterApplianceInstancesResponse extends io.pulumi.reso
      * A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
      * 
      */
-    @InputImport(name="siteToSiteDataTransfer", required=true)
+    @Import(name="siteToSiteDataTransfer", required=true)
       private final Boolean siteToSiteDataTransfer;
 
     public Boolean getSiteToSiteDataTransfer() {

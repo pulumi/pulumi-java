@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionScopeKeyVaultPropertiesResponse {
     /**
      * The object identifier of the current versioned Key Vault Key in use.
@@ -27,11 +27,11 @@ public final class EncryptionScopeKeyVaultPropertiesResponse {
      */
     private final String lastKeyRotationTimestamp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EncryptionScopeKeyVaultPropertiesResponse(
-        @OutputCustomType.Parameter("currentVersionedKeyIdentifier") String currentVersionedKeyIdentifier,
-        @OutputCustomType.Parameter("keyUri") @Nullable String keyUri,
-        @OutputCustomType.Parameter("lastKeyRotationTimestamp") String lastKeyRotationTimestamp) {
+        @CustomType.Parameter("currentVersionedKeyIdentifier") String currentVersionedKeyIdentifier,
+        @CustomType.Parameter("keyUri") @Nullable String keyUri,
+        @CustomType.Parameter("lastKeyRotationTimestamp") String lastKeyRotationTimestamp) {
         this.currentVersionedKeyIdentifier = currentVersionedKeyIdentifier;
         this.keyUri = keyUri;
         this.lastKeyRotationTimestamp = lastKeyRotationTimestamp;

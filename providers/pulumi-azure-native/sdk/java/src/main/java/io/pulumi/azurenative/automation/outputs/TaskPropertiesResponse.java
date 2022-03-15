@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskPropertiesResponse {
     /**
      * Gets or sets the parameters of the task.
@@ -23,10 +23,10 @@ public final class TaskPropertiesResponse {
      */
     private final @Nullable String source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskPropertiesResponse(
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
-        @OutputCustomType.Parameter("source") @Nullable String source) {
+        @CustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @CustomType.Parameter("source") @Nullable String source) {
         this.parameters = parameters;
         this.source = source;
     }

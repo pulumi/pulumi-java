@@ -3,23 +3,23 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleSnsAction {
     private final @Nullable String messageFormat;
     private final String roleArn;
     private final String targetArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleSnsAction(
-        @OutputCustomType.Parameter("messageFormat") @Nullable String messageFormat,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("targetArn") String targetArn) {
+        @CustomType.Parameter("messageFormat") @Nullable String messageFormat,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("targetArn") String targetArn) {
         this.messageFormat = messageFormat;
         this.roleArn = roleArn;
         this.targetArn = targetArn;

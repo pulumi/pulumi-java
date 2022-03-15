@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * The Amazon Resource Name (ARN) specifying the role.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -30,7 +30,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * The AWS service to which this role is attached. You use a string similar to a URL but without the `http://` in front. For example: `elasticbeanstalk.amazonaws.com`. To find the full list of services that support service-linked roles, check [the docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-services-that-work-with-iam.html).
      * 
      */
-    @InputImport(name="awsServiceName")
+    @Import(name="awsServiceName")
       private final @Nullable Output<String> awsServiceName;
 
     public Output<String> getAwsServiceName() {
@@ -41,7 +41,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * The creation date of the IAM role.
      * 
      */
-    @InputImport(name="createDate")
+    @Import(name="createDate")
       private final @Nullable Output<String> createDate;
 
     public Output<String> getCreateDate() {
@@ -52,7 +52,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * Additional string appended to the role name. Not all AWS services support custom suffixes.
      * 
      */
-    @InputImport(name="customSuffix")
+    @Import(name="customSuffix")
       private final @Nullable Output<String> customSuffix;
 
     public Output<String> getCustomSuffix() {
@@ -63,7 +63,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * The description of the role.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -74,7 +74,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * The name of the role.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -85,7 +85,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * The path of the role.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -96,7 +96,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * Key-value mapping of tags for the IAM role. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -107,7 +107,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -118,7 +118,7 @@ public final class ServiceLinkedRoleState extends io.pulumi.resources.ResourceAr
      * The stable and unique string identifying the role.
      * 
      */
-    @InputImport(name="uniqueId")
+    @Import(name="uniqueId")
       private final @Nullable Output<String> uniqueId;
 
     public Output<String> getUniqueId() {

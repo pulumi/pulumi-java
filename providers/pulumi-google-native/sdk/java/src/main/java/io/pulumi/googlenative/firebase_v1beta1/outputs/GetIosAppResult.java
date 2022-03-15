@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.firebase_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetIosAppResult {
     /**
      * Immutable. The globally unique, Firebase-assigned identifier for the `IosApp`. This identifier should be treated as an opaque token, as the data format is not specified.
@@ -45,15 +45,15 @@ public final class GetIosAppResult {
      */
     private final String teamId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIosAppResult(
-        @OutputCustomType.Parameter("appId") String appId,
-        @OutputCustomType.Parameter("appStoreId") String appStoreId,
-        @OutputCustomType.Parameter("bundleId") String bundleId,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("teamId") String teamId) {
+        @CustomType.Parameter("appId") String appId,
+        @CustomType.Parameter("appStoreId") String appStoreId,
+        @CustomType.Parameter("bundleId") String bundleId,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("teamId") String teamId) {
         this.appId = appId;
         this.appStoreId = appStoreId;
         this.bundleId = bundleId;

@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs;
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsGetArgs extend
      * A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.
      * 
      */
-    @InputImport(name="customImages")
+    @Import(name="customImages")
       private final @Nullable Output<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs>> customImages;
 
     public Output<List<UserProfileUserSettingsKernelGatewayAppSettingsCustomImageGetArgs>> getCustomImages() {
@@ -32,7 +32,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsGetArgs extend
      * The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.
      * 
      */
-    @InputImport(name="defaultResourceSpec", required=true)
+    @Import(name="defaultResourceSpec", required=true)
       private final Output<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> defaultResourceSpec;
 
     public Output<UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs> getDefaultResourceSpec() {
@@ -43,7 +43,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsGetArgs extend
      * The Amazon Resource Name (ARN) of the Lifecycle Configurations.
      * 
      */
-    @InputImport(name="lifecycleConfigArns")
+    @Import(name="lifecycleConfigArns")
       private final @Nullable Output<List<String>> lifecycleConfigArns;
 
     public Output<List<String>> getLifecycleConfigArns() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTableGlobalSecondaryIndex {
     private final String hashKey;
     /**
@@ -23,15 +23,15 @@ public final class GetTableGlobalSecondaryIndex {
     private final Integer readCapacity;
     private final Integer writeCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTableGlobalSecondaryIndex(
-        @OutputCustomType.Parameter("hashKey") String hashKey,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nonKeyAttributes") List<String> nonKeyAttributes,
-        @OutputCustomType.Parameter("projectionType") String projectionType,
-        @OutputCustomType.Parameter("rangeKey") String rangeKey,
-        @OutputCustomType.Parameter("readCapacity") Integer readCapacity,
-        @OutputCustomType.Parameter("writeCapacity") Integer writeCapacity) {
+        @CustomType.Parameter("hashKey") String hashKey,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nonKeyAttributes") List<String> nonKeyAttributes,
+        @CustomType.Parameter("projectionType") String projectionType,
+        @CustomType.Parameter("rangeKey") String rangeKey,
+        @CustomType.Parameter("readCapacity") Integer readCapacity,
+        @CustomType.Parameter("writeCapacity") Integer writeCapacity) {
         this.hashKey = hashKey;
         this.name = name;
         this.nonKeyAttributes = nonKeyAttributes;

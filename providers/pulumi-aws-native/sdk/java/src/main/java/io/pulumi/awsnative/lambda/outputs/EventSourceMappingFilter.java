@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventSourceMappingFilter {
     /**
      * The filter pattern that defines which events should be passed for invocations.
@@ -17,8 +17,8 @@ public final class EventSourceMappingFilter {
      */
     private final @Nullable String pattern;
 
-    @OutputCustomType.Constructor
-    private EventSourceMappingFilter(@OutputCustomType.Parameter("pattern") @Nullable String pattern) {
+    @CustomType.Constructor
+    private EventSourceMappingFilter(@CustomType.Parameter("pattern") @Nullable String pattern) {
         this.pattern = pattern;
     }
 

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.SubscriptionArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Determines whether tracing is enabled
      * 
      */
-    @OutputExport(name="allowTracing", type=Boolean.class, parameters={})
+    @Export(name="allowTracing", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowTracing;
 
     /**
@@ -49,7 +49,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Subscription creation date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    @OutputExport(name="createdDate", type=String.class, parameters={})
+    @Export(name="createdDate", type=String.class, parameters={})
     private Output<String> createdDate;
 
     /**
@@ -63,7 +63,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * The name of the subscription, or null if the subscription has no name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -77,7 +77,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Date when subscription was cancelled or expired. The setting is for audit purposes only and the subscription is not automatically cancelled. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    @OutputExport(name="endDate", type=String.class, parameters={})
+    @Export(name="endDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> endDate;
 
     /**
@@ -91,7 +91,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Subscription expiration date. The setting is for audit purposes only and the subscription is not automatically expired. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    @OutputExport(name="expirationDate", type=String.class, parameters={})
+    @Export(name="expirationDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> expirationDate;
 
     /**
@@ -105,7 +105,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -119,7 +119,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Upcoming subscription expiration notification date. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    @OutputExport(name="notificationDate", type=String.class, parameters={})
+    @Export(name="notificationDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> notificationDate;
 
     /**
@@ -133,7 +133,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * The user resource identifier of the subscription owner. The value is a valid relative URL in the format of /users/{userId} where {userId} is a user identifier.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output</* @Nullable */ String> ownerId;
 
     /**
@@ -147,7 +147,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Subscription primary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
      * 
      */
-    @OutputExport(name="primaryKey", type=String.class, parameters={})
+    @Export(name="primaryKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> primaryKey;
 
     /**
@@ -161,7 +161,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Scope like /products/{productId} or /apis or /apis/{apiId}.
      * 
      */
-    @OutputExport(name="scope", type=String.class, parameters={})
+    @Export(name="scope", type=String.class, parameters={})
     private Output<String> scope;
 
     /**
@@ -175,7 +175,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Subscription secondary key. This property will not be filled on 'GET' operations! Use '/listSecrets' POST request to get the value.
      * 
      */
-    @OutputExport(name="secondaryKey", type=String.class, parameters={})
+    @Export(name="secondaryKey", type=String.class, parameters={})
     private Output</* @Nullable */ String> secondaryKey;
 
     /**
@@ -189,7 +189,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Subscription activation date. The setting is for audit purposes only and the subscription is not automatically activated. The subscription lifecycle can be managed by using the `state` property. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    @OutputExport(name="startDate", type=String.class, parameters={})
+    @Export(name="startDate", type=String.class, parameters={})
     private Output</* @Nullable */ String> startDate;
 
     /**
@@ -203,7 +203,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Subscription state. Possible states are * active – the subscription is active, * suspended – the subscription is blocked, and the subscriber cannot call any APIs of the product, * submitted – the subscription request has been made by the developer, but has not yet been approved or rejected, * rejected – the subscription request has been denied by an administrator, * cancelled – the subscription has been cancelled by the developer or administrator, * expired – the subscription reached its expiration date and was deactivated.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -217,7 +217,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Optional subscription comment added by an administrator when the state is changed to the 'rejected'.
      * 
      */
-    @OutputExport(name="stateComment", type=String.class, parameters={})
+    @Export(name="stateComment", type=String.class, parameters={})
     private Output</* @Nullable */ String> stateComment;
 
     /**
@@ -231,7 +231,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

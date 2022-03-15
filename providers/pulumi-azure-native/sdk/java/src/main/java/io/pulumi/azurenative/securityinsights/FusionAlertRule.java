@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityinsights.FusionAlertRuleArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * The Name of the alert rule template used to create this rule.
      * 
      */
-    @OutputExport(name="alertRuleTemplateName", type=String.class, parameters={})
+    @Export(name="alertRuleTemplateName", type=String.class, parameters={})
     private Output<String> alertRuleTemplateName;
 
     /**
@@ -49,7 +49,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * The description of the alert rule.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -63,7 +63,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * The display name for alerts created by this alert rule.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -77,7 +77,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * Determines whether this alert rule is enabled or disabled.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output<Boolean> enabled;
 
     /**
@@ -91,7 +91,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * Etag of the azure resource
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -106,7 +106,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * Expected value is 'Fusion'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -121,7 +121,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * The last time that this alert has been modified.
      * 
      */
-    @OutputExport(name="lastModifiedUtc", type=String.class, parameters={})
+    @Export(name="lastModifiedUtc", type=String.class, parameters={})
     private Output<String> lastModifiedUtc;
 
     /**
@@ -135,7 +135,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -149,7 +149,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * The severity for alerts created by this alert rule.
      * 
      */
-    @OutputExport(name="severity", type=String.class, parameters={})
+    @Export(name="severity", type=String.class, parameters={})
     private Output<String> severity;
 
     /**
@@ -163,7 +163,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * The tactics of the alert rule
      * 
      */
-    @OutputExport(name="tactics", type=List.class, parameters={String.class})
+    @Export(name="tactics", type=List.class, parameters={String.class})
     private Output<List<String>> tactics;
 
     /**
@@ -177,7 +177,7 @@ public class FusionAlertRule extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

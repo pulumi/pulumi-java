@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRetailV2alphaConditionQueryTermResponse {
     /**
      * Whether this is supposed to be a full or partial match.
@@ -21,10 +21,10 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRetailV2alphaConditionQueryTermResponse(
-        @OutputCustomType.Parameter("fullMatch") Boolean fullMatch,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("fullMatch") Boolean fullMatch,
+        @CustomType.Parameter("value") String value) {
         this.fullMatch = fullMatch;
         this.value = value;
     }

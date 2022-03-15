@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.cloudwatch.outputs;
 
 import io.pulumi.awsnative.cloudwatch.outputs.MetricStreamFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMetricStreamResult {
     /**
      * Amazon Resource Name of the metric stream.
@@ -59,17 +59,17 @@ public final class GetMetricStreamResult {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMetricStreamResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("creationDate") @Nullable String creationDate,
-        @OutputCustomType.Parameter("excludeFilters") @Nullable List<MetricStreamFilter> excludeFilters,
-        @OutputCustomType.Parameter("firehoseArn") @Nullable String firehoseArn,
-        @OutputCustomType.Parameter("includeFilters") @Nullable List<MetricStreamFilter> includeFilters,
-        @OutputCustomType.Parameter("lastUpdateDate") @Nullable String lastUpdateDate,
-        @OutputCustomType.Parameter("outputFormat") @Nullable String outputFormat,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("creationDate") @Nullable String creationDate,
+        @CustomType.Parameter("excludeFilters") @Nullable List<MetricStreamFilter> excludeFilters,
+        @CustomType.Parameter("firehoseArn") @Nullable String firehoseArn,
+        @CustomType.Parameter("includeFilters") @Nullable List<MetricStreamFilter> includeFilters,
+        @CustomType.Parameter("lastUpdateDate") @Nullable String lastUpdateDate,
+        @CustomType.Parameter("outputFormat") @Nullable String outputFormat,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.arn = arn;
         this.creationDate = creationDate;
         this.excludeFilters = excludeFilters;

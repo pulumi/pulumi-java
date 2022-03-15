@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayCustomErrorResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * Custom error configurations of the HTTP listener.
      * 
      */
-    @InputImport(name="customErrorConfigurations")
+    @Import(name="customErrorConfigurations")
       private final @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations;
 
     public List<ApplicationGatewayCustomErrorResponse> getCustomErrorConfigurations() {
@@ -37,7 +37,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -48,7 +48,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * Reference to the FirewallPolicy resource.
      * 
      */
-    @InputImport(name="firewallPolicy")
+    @Import(name="firewallPolicy")
       private final @Nullable SubResourceResponse firewallPolicy;
 
     public Optional<SubResourceResponse> getFirewallPolicy() {
@@ -59,7 +59,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * Frontend IP configuration resource of an application gateway.
      * 
      */
-    @InputImport(name="frontendIPConfiguration")
+    @Import(name="frontendIPConfiguration")
       private final @Nullable SubResourceResponse frontendIPConfiguration;
 
     public Optional<SubResourceResponse> getFrontendIPConfiguration() {
@@ -70,7 +70,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * Frontend port resource of an application gateway.
      * 
      */
-    @InputImport(name="frontendPort")
+    @Import(name="frontendPort")
       private final @Nullable SubResourceResponse frontendPort;
 
     public Optional<SubResourceResponse> getFrontendPort() {
@@ -81,7 +81,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * Host name of HTTP listener.
      * 
      */
-    @InputImport(name="hostName")
+    @Import(name="hostName")
       private final @Nullable String hostName;
 
     public Optional<String> getHostName() {
@@ -92,7 +92,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * List of Host names for HTTP Listener that allows special wildcard characters as well.
      * 
      */
-    @InputImport(name="hostNames")
+    @Import(name="hostNames")
       private final @Nullable List<String> hostNames;
 
     public List<String> getHostNames() {
@@ -103,7 +103,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -114,7 +114,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * Name of the HTTP listener that is unique within an Application Gateway.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -125,7 +125,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * Protocol of the HTTP listener.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
@@ -136,7 +136,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * The provisioning state of the HTTP listener resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -147,7 +147,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * Applicable only if protocol is https. Enables SNI for multi-hosting.
      * 
      */
-    @InputImport(name="requireServerNameIndication")
+    @Import(name="requireServerNameIndication")
       private final @Nullable Boolean requireServerNameIndication;
 
     public Optional<Boolean> getRequireServerNameIndication() {
@@ -158,7 +158,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * SSL certificate resource of an application gateway.
      * 
      */
-    @InputImport(name="sslCertificate")
+    @Import(name="sslCertificate")
       private final @Nullable SubResourceResponse sslCertificate;
 
     public Optional<SubResourceResponse> getSslCertificate() {
@@ -169,7 +169,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * SSL profile resource of the application gateway.
      * 
      */
-    @InputImport(name="sslProfile")
+    @Import(name="sslProfile")
       private final @Nullable SubResourceResponse sslProfile;
 
     public Optional<SubResourceResponse> getSslProfile() {
@@ -180,7 +180,7 @@ public final class ApplicationGatewayHttpListenerResponse extends io.pulumi.reso
      * Type of the resource.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

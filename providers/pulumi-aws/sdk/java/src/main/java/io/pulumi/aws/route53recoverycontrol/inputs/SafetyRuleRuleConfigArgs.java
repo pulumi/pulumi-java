@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoverycontrol.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +19,7 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
      * Logical negation of the rule.
      * 
      */
-    @InputImport(name="inverted", required=true)
+    @Import(name="inverted", required=true)
       private final Output<Boolean> inverted;
 
     public Output<Boolean> getInverted() {
@@ -30,7 +30,7 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
      * Number of controls that must be set when you specify an `ATLEAST` type rule.
      * 
      */
-    @InputImport(name="threshold", required=true)
+    @Import(name="threshold", required=true)
       private final Output<Integer> threshold;
 
     public Output<Integer> getThreshold() {
@@ -41,7 +41,7 @@ public final class SafetyRuleRuleConfigArgs extends io.pulumi.resources.Resource
      * Rule type. Valid values are `ATLEAST`, `AND`, and `OR`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

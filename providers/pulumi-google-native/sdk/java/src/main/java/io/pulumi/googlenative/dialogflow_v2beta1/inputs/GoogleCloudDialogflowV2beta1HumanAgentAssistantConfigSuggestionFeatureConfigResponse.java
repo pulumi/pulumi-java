@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse;
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * Configs of custom conversation model.
      * 
      */
-    @InputImport(name="conversationModelConfig", required=true)
+    @Import(name="conversationModelConfig", required=true)
       private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse conversationModelConfig;
 
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfigResponse getConversationModelConfig() {
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * Configs for processing conversation.
      * 
      */
-    @InputImport(name="conversationProcessConfig", required=true)
+    @Import(name="conversationProcessConfig", required=true)
       private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse conversationProcessConfig;
 
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse getConversationProcessConfig() {
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * Automatically iterates all participants and tries to compile suggestions. Supported features: ARTICLE_SUGGESTION, FAQ, DIALOGFLOW_ASSIST.
      * 
      */
-    @InputImport(name="enableEventBasedSuggestion", required=true)
+    @Import(name="enableEventBasedSuggestion", required=true)
       private final Boolean enableEventBasedSuggestion;
 
     public Boolean getEnableEventBasedSuggestion() {
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * Configs of query.
      * 
      */
-    @InputImport(name="queryConfig", required=true)
+    @Import(name="queryConfig", required=true)
       private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse queryConfig;
 
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigResponse getQueryConfig() {
@@ -69,7 +69,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * The suggestion feature.
      * 
      */
-    @InputImport(name="suggestionFeature", required=true)
+    @Import(name="suggestionFeature", required=true)
       private final GoogleCloudDialogflowV2beta1SuggestionFeatureResponse suggestionFeature;
 
     public GoogleCloudDialogflowV2beta1SuggestionFeatureResponse getSuggestionFeature() {
@@ -80,7 +80,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      * Settings of suggestion trigger. Currently, only ARTICLE_SUGGESTION, FAQ, and DIALOGFLOW_ASSIST will use this field.
      * 
      */
-    @InputImport(name="suggestionTriggerSettings", required=true)
+    @Import(name="suggestionTriggerSettings", required=true)
       private final GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse suggestionTriggerSettings;
 
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionTriggerSettingsResponse getSuggestionTriggerSettings() {

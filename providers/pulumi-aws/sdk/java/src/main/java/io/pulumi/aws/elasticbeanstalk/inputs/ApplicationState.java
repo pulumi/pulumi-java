@@ -5,7 +5,7 @@ package io.pulumi.aws.elasticbeanstalk.inputs;
 
 import io.pulumi.aws.elasticbeanstalk.inputs.ApplicationAppversionLifecycleGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
 
     public static final ApplicationState Empty = new ApplicationState();
 
-    @InputImport(name="appversionLifecycle")
+    @Import(name="appversionLifecycle")
       private final @Nullable Output<ApplicationAppversionLifecycleGetArgs> appversionLifecycle;
 
     public Output<ApplicationAppversionLifecycleGetArgs> getAppversionLifecycle() {
@@ -27,7 +27,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The ARN assigned by AWS for this Elastic Beanstalk Application.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -38,7 +38,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * Short description of the application
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -49,7 +49,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * The name of the application, must be unique within your account
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -60,7 +60,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of tags for the Elastic Beanstalk Application. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -71,7 +71,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

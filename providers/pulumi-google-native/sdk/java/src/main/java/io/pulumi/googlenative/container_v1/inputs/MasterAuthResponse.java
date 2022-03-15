@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1.inputs.ClientCertificateConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MasterAuthResponse extends io.pulumi.resources.InvokeArgs {
      * [Output only] Base64-encoded public certificate used by clients to authenticate to the cluster endpoint.
      * 
      */
-    @InputImport(name="clientCertificate", required=true)
+    @Import(name="clientCertificate", required=true)
       private final String clientCertificate;
 
     public String getClientCertificate() {
@@ -32,7 +32,7 @@ public final class MasterAuthResponse extends io.pulumi.resources.InvokeArgs {
      * Configuration for client certificate authentication on the cluster. For clusters before v1.12, if no configuration is specified, a client certificate is issued.
      * 
      */
-    @InputImport(name="clientCertificateConfig", required=true)
+    @Import(name="clientCertificateConfig", required=true)
       private final ClientCertificateConfigResponse clientCertificateConfig;
 
     public ClientCertificateConfigResponse getClientCertificateConfig() {
@@ -43,7 +43,7 @@ public final class MasterAuthResponse extends io.pulumi.resources.InvokeArgs {
      * [Output only] Base64-encoded private key used by clients to authenticate to the cluster endpoint.
      * 
      */
-    @InputImport(name="clientKey", required=true)
+    @Import(name="clientKey", required=true)
       private final String clientKey;
 
     public String getClientKey() {
@@ -54,7 +54,7 @@ public final class MasterAuthResponse extends io.pulumi.resources.InvokeArgs {
      * [Output only] Base64-encoded public certificate that is the root of trust for the cluster.
      * 
      */
-    @InputImport(name="clusterCaCertificate", required=true)
+    @Import(name="clusterCaCertificate", required=true)
       private final String clusterCaCertificate;
 
     public String getClusterCaCertificate() {
@@ -65,7 +65,7 @@ public final class MasterAuthResponse extends io.pulumi.resources.InvokeArgs {
      * The password to use for HTTP basic authentication to the master endpoint. Because the master endpoint is open to the Internet, you should create a strong password. If a password is provided for cluster creation, username must be non-empty. Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final String password;
 
     public String getPassword() {
@@ -76,7 +76,7 @@ public final class MasterAuthResponse extends io.pulumi.resources.InvokeArgs {
      * The username to use for HTTP basic authentication to the master endpoint. For clusters v1.6.0 and later, basic authentication can be disabled by leaving username unspecified (or setting it to the empty string). Warning: basic authentication is deprecated, and will be removed in GKE control plane versions 1.19 and newer. For a list of recommended authentication methods, see: https://cloud.google.com/kubernetes-engine/docs/how-to/api-server-authentication
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final String username;
 
     public String getUsername() {

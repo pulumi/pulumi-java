@@ -6,7 +6,7 @@ package io.pulumi.azurenative.visualstudio;
 import io.pulumi.azurenative.visualstudio.enums.AccountResourceRequestOperationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The account name.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -32,7 +32,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The Azure instance location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -43,7 +43,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The type of the operation.
      * 
      */
-    @InputImport(name="operationType")
+    @Import(name="operationType")
       private final @Nullable Output<Either<String,AccountResourceRequestOperationType>> operationType;
 
     public Output<Either<String,AccountResourceRequestOperationType>> getOperationType() {
@@ -54,7 +54,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The custom properties of the resource.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -65,7 +65,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -76,7 +76,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -87,7 +87,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
      * The custom tags of the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

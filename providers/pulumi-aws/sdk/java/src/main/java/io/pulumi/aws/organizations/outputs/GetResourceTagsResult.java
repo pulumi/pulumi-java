@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.organizations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResourceTagsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -22,11 +22,11 @@ public final class GetResourceTagsResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourceTagsResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("resourceId") String resourceId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("resourceId") String resourceId,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.id = id;
         this.resourceId = resourceId;
         this.tags = tags;

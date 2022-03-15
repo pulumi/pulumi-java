@@ -5,7 +5,7 @@ package io.pulumi.azurenative.operationalinsights.outputs;
 
 import io.pulumi.azurenative.operationalinsights.outputs.StorageAccountResponse;
 import io.pulumi.azurenative.operationalinsights.outputs.StorageInsightStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetStorageInsightConfigResult {
     /**
      * The names of the blob containers that the workspace should read
@@ -61,17 +61,17 @@ public final class GetStorageInsightConfigResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetStorageInsightConfigResult(
-        @OutputCustomType.Parameter("containers") @Nullable List<String> containers,
-        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("status") StorageInsightStatusResponse status,
-        @OutputCustomType.Parameter("storageAccount") StorageAccountResponse storageAccount,
-        @OutputCustomType.Parameter("tables") @Nullable List<String> tables,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("containers") @Nullable List<String> containers,
+        @CustomType.Parameter("eTag") @Nullable String eTag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("status") StorageInsightStatusResponse status,
+        @CustomType.Parameter("storageAccount") StorageAccountResponse storageAccount,
+        @CustomType.Parameter("tables") @Nullable List<String> tables,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.containers = containers;
         this.eTag = eTag;
         this.id = id;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.MangedSslCertificateManagedArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
      * The unique identifier for the resource.
      * 
      */
-    @InputImport(name="certificateId")
+    @Import(name="certificateId")
       private final @Nullable Output<Integer> certificateId;
 
     public Output<Integer> getCertificateId() {
@@ -31,7 +31,7 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
      * of 'MANAGED' in 'type').
      * 
      */
-    @InputImport(name="managed")
+    @Import(name="managed")
       private final @Nullable Output<MangedSslCertificateManagedArgs> managed;
 
     public Output<MangedSslCertificateManagedArgs> getManaged() {
@@ -58,14 +58,14 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
      * namespace as the managed SSL certificates.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -77,7 +77,7 @@ public final class MangedSslCertificateArgs extends io.pulumi.resources.Resource
      * Possible values: ["MANAGED"]
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

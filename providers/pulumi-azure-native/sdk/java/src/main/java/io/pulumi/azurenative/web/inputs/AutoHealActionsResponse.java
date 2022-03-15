@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.AutoHealCustomActionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AutoHealActionsResponse extends io.pulumi.resources.InvokeArg
      * Predefined action to be taken.
      * 
      */
-    @InputImport(name="actionType")
+    @Import(name="actionType")
       private final @Nullable String actionType;
 
     public Optional<String> getActionType() {
@@ -34,7 +34,7 @@ public final class AutoHealActionsResponse extends io.pulumi.resources.InvokeArg
      * Custom action to be taken.
      * 
      */
-    @InputImport(name="customAction")
+    @Import(name="customAction")
       private final @Nullable AutoHealCustomActionResponse customAction;
 
     public Optional<AutoHealCustomActionResponse> getCustomAction() {
@@ -46,7 +46,7 @@ public final class AutoHealActionsResponse extends io.pulumi.resources.InvokeArg
      * before taking the action
      * 
      */
-    @InputImport(name="minProcessExecutionTime")
+    @Import(name="minProcessExecutionTime")
       private final @Nullable String minProcessExecutionTime;
 
     public Optional<String> getMinProcessExecutionTime() {

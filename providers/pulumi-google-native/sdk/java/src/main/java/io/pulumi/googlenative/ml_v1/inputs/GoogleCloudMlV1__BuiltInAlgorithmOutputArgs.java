@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
      * Framework on which the built-in algorithm was trained.
      * 
      */
-    @InputImport(name="framework")
+    @Import(name="framework")
       private final @Nullable Output<String> framework;
 
     public Output<String> getFramework() {
@@ -33,7 +33,7 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
      * The Cloud Storage path to the `model/` directory where the training job saves the trained model. Only set for successful jobs that don't use hyperparameter tuning.
      * 
      */
-    @InputImport(name="modelPath")
+    @Import(name="modelPath")
       private final @Nullable Output<String> modelPath;
 
     public Output<String> getModelPath() {
@@ -44,7 +44,7 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
      * Python version on which the built-in algorithm was trained.
      * 
      */
-    @InputImport(name="pythonVersion")
+    @Import(name="pythonVersion")
       private final @Nullable Output<String> pythonVersion;
 
     public Output<String> getPythonVersion() {
@@ -55,7 +55,7 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputArgs extends io.pulumi
      * AI Platform runtime version on which the built-in algorithm was trained.
      * 
      */
-    @InputImport(name="runtimeVersion")
+    @Import(name="runtimeVersion")
       private final @Nullable Output<String> runtimeVersion;
 
     public Output<String> getRuntimeVersion() {

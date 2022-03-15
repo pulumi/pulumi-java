@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class GraphEdgeResponse extends io.pulumi.resources.InvokeArgs {
      * The source graph node's identifier.
      * 
      */
-    @InputImport(name="sourceNodeId")
+    @Import(name="sourceNodeId")
       private final @Nullable String sourceNodeId;
 
     public Optional<String> getSourceNodeId() {
@@ -33,7 +33,7 @@ public final class GraphEdgeResponse extends io.pulumi.resources.InvokeArgs {
      * The identifier of the source node's port that the edge connects from.
      * 
      */
-    @InputImport(name="sourcePortId")
+    @Import(name="sourcePortId")
       private final @Nullable String sourcePortId;
 
     public Optional<String> getSourcePortId() {
@@ -44,7 +44,7 @@ public final class GraphEdgeResponse extends io.pulumi.resources.InvokeArgs {
      * The destination graph node's identifier.
      * 
      */
-    @InputImport(name="targetNodeId")
+    @Import(name="targetNodeId")
       private final @Nullable String targetNodeId;
 
     public Optional<String> getTargetNodeId() {
@@ -55,7 +55,7 @@ public final class GraphEdgeResponse extends io.pulumi.resources.InvokeArgs {
      * The identifier of the destination node's port that the edge connects into.
      * 
      */
-    @InputImport(name="targetPortId")
+    @Import(name="targetPortId")
       private final @Nullable String targetPortId;
 
     public Optional<String> getTargetPortId() {

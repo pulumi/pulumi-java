@@ -8,7 +8,7 @@ import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllo
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseSku;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ScalingHostPoolReferenceResponse;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ScalingScheduleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetScalingPlanResult {
     /**
      * Description of scaling plan.
@@ -108,28 +108,28 @@ public final class GetScalingPlanResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetScalingPlanResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("exclusionTag") @Nullable String exclusionTag,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("hostPoolReferences") @Nullable List<ScalingHostPoolReferenceResponse> hostPoolReferences,
-        @OutputCustomType.Parameter("hostPoolType") @Nullable String hostPoolType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("managedBy") @Nullable String managedBy,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("objectId") String objectId,
-        @OutputCustomType.Parameter("plan") @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
-        @OutputCustomType.Parameter("ring") @Nullable Integer ring,
-        @OutputCustomType.Parameter("schedules") @Nullable List<ScalingScheduleResponse> schedules,
-        @OutputCustomType.Parameter("sku") @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("exclusionTag") @Nullable String exclusionTag,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("hostPoolReferences") @Nullable List<ScalingHostPoolReferenceResponse> hostPoolReferences,
+        @CustomType.Parameter("hostPoolType") @Nullable String hostPoolType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("managedBy") @Nullable String managedBy,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("objectId") String objectId,
+        @CustomType.Parameter("plan") @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
+        @CustomType.Parameter("ring") @Nullable Integer ring,
+        @CustomType.Parameter("schedules") @Nullable List<ScalingScheduleResponse> schedules,
+        @CustomType.Parameter("sku") @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("timeZone") @Nullable String timeZone,
+        @CustomType.Parameter("type") String type) {
         this.description = description;
         this.etag = etag;
         this.exclusionTag = exclusionTag;

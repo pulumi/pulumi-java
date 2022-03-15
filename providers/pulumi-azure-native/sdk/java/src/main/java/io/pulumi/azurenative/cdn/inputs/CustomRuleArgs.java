@@ -8,7 +8,7 @@ import io.pulumi.azurenative.cdn.enums.CustomRuleEnabledState;
 import io.pulumi.azurenative.cdn.inputs.MatchConditionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Describes what action to be applied when rule matches
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<Either<String,ActionType>> action;
 
     public Output<Either<String,ActionType>> getAction() {
@@ -39,7 +39,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Describes if the custom rule is in enabled or disabled state. Defaults to Enabled if not specified.
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable Output<Either<String,CustomRuleEnabledState>> enabledState;
 
     public Output<Either<String,CustomRuleEnabledState>> getEnabledState() {
@@ -50,7 +50,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * List of match conditions.
      * 
      */
-    @InputImport(name="matchConditions", required=true)
+    @Import(name="matchConditions", required=true)
       private final Output<List<MatchConditionArgs>> matchConditions;
 
     public Output<List<MatchConditionArgs>> getMatchConditions() {
@@ -61,7 +61,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Defines the name of the custom rule
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -72,7 +72,7 @@ public final class CustomRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Defines in what order this rule be evaluated in the overall list of custom rules
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
     public Output<Integer> getPriority() {

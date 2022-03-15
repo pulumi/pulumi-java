@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse {
     /**
      * Number of recent non-small-talk sentences to use as context for article and FAQ suggestion
@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
      */
     private final Integer recentSentencesCount;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse(@OutputCustomType.Parameter("recentSentencesCount") Integer recentSentencesCount) {
+    @CustomType.Constructor
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfigResponse(@CustomType.Parameter("recentSentencesCount") Integer recentSentencesCount) {
         this.recentSentencesCount = recentSentencesCount;
     }
 

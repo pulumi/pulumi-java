@@ -6,13 +6,13 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.AvailablePatchSummaryResponse;
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
 import io.pulumi.azurenative.compute.outputs.LastPatchInstallationSummaryResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualMachinePatchStatusResponse {
     /**
      * The available patch summary of the latest assessment operation for the virtual machine.
@@ -30,11 +30,11 @@ public final class VirtualMachinePatchStatusResponse {
      */
     private final @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualMachinePatchStatusResponse(
-        @OutputCustomType.Parameter("availablePatchSummary") @Nullable AvailablePatchSummaryResponse availablePatchSummary,
-        @OutputCustomType.Parameter("configurationStatuses") List<InstanceViewStatusResponse> configurationStatuses,
-        @OutputCustomType.Parameter("lastPatchInstallationSummary") @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary) {
+        @CustomType.Parameter("availablePatchSummary") @Nullable AvailablePatchSummaryResponse availablePatchSummary,
+        @CustomType.Parameter("configurationStatuses") List<InstanceViewStatusResponse> configurationStatuses,
+        @CustomType.Parameter("lastPatchInstallationSummary") @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary) {
         this.availablePatchSummary = availablePatchSummary;
         this.configurationStatuses = configurationStatuses;
         this.lastPatchInstallationSummary = lastPatchInstallationSummary;

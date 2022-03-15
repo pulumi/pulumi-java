@@ -6,22 +6,22 @@ package io.pulumi.awsnative.budgets.outputs;
 import io.pulumi.awsnative.budgets.outputs.BudgetsActionIamActionDefinition;
 import io.pulumi.awsnative.budgets.outputs.BudgetsActionScpActionDefinition;
 import io.pulumi.awsnative.budgets.outputs.BudgetsActionSsmActionDefinition;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BudgetsActionDefinition {
     private final @Nullable BudgetsActionIamActionDefinition iamActionDefinition;
     private final @Nullable BudgetsActionScpActionDefinition scpActionDefinition;
     private final @Nullable BudgetsActionSsmActionDefinition ssmActionDefinition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetsActionDefinition(
-        @OutputCustomType.Parameter("iamActionDefinition") @Nullable BudgetsActionIamActionDefinition iamActionDefinition,
-        @OutputCustomType.Parameter("scpActionDefinition") @Nullable BudgetsActionScpActionDefinition scpActionDefinition,
-        @OutputCustomType.Parameter("ssmActionDefinition") @Nullable BudgetsActionSsmActionDefinition ssmActionDefinition) {
+        @CustomType.Parameter("iamActionDefinition") @Nullable BudgetsActionIamActionDefinition iamActionDefinition,
+        @CustomType.Parameter("scpActionDefinition") @Nullable BudgetsActionScpActionDefinition scpActionDefinition,
+        @CustomType.Parameter("ssmActionDefinition") @Nullable BudgetsActionSsmActionDefinition ssmActionDefinition) {
         this.iamActionDefinition = iamActionDefinition;
         this.scpActionDefinition = scpActionDefinition;
         this.ssmActionDefinition = ssmActionDefinition;

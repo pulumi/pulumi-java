@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.ExtendedKeyUsageOptionsResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.KeyUsageOptionsResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.ObjectIdResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KeyUsageResponse {
     /**
      * Describes high-level ways in which a key may be used.
@@ -28,11 +28,11 @@ public final class KeyUsageResponse {
      */
     private final List<ObjectIdResponse> unknownExtendedKeyUsages;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyUsageResponse(
-        @OutputCustomType.Parameter("baseKeyUsage") KeyUsageOptionsResponse baseKeyUsage,
-        @OutputCustomType.Parameter("extendedKeyUsage") ExtendedKeyUsageOptionsResponse extendedKeyUsage,
-        @OutputCustomType.Parameter("unknownExtendedKeyUsages") List<ObjectIdResponse> unknownExtendedKeyUsages) {
+        @CustomType.Parameter("baseKeyUsage") KeyUsageOptionsResponse baseKeyUsage,
+        @CustomType.Parameter("extendedKeyUsage") ExtendedKeyUsageOptionsResponse extendedKeyUsage,
+        @CustomType.Parameter("unknownExtendedKeyUsages") List<ObjectIdResponse> unknownExtendedKeyUsages) {
         this.baseKeyUsage = baseKeyUsage;
         this.extendedKeyUsage = extendedKeyUsage;
         this.unknownExtendedKeyUsages = unknownExtendedKeyUsages;

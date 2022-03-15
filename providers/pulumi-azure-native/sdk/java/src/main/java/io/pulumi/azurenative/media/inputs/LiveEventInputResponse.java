@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.LiveEventEndpointResponse;
 import io.pulumi.azurenative.media.inputs.LiveEventInputAccessControlResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
      * Access control for live event input.
      * 
      */
-    @InputImport(name="accessControl")
+    @Import(name="accessControl")
       private final @Nullable LiveEventInputAccessControlResponse accessControl;
 
     public Optional<LiveEventInputAccessControlResponse> getAccessControl() {
@@ -36,7 +36,7 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
      * A UUID in string form to uniquely identify the stream. This can be specified at creation time but cannot be updated. If omitted, the service will generate a unique value.
      * 
      */
-    @InputImport(name="accessToken")
+    @Import(name="accessToken")
       private final @Nullable String accessToken;
 
     public Optional<String> getAccessToken() {
@@ -47,7 +47,7 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
      * The input endpoints for the live event.
      * 
      */
-    @InputImport(name="endpoints")
+    @Import(name="endpoints")
       private final @Nullable List<LiveEventEndpointResponse> endpoints;
 
     public List<LiveEventEndpointResponse> getEndpoints() {
@@ -58,7 +58,7 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
      * ISO 8601 time duration of the key frame interval duration of the input. This value sets the EXT-X-TARGETDURATION property in the HLS output. For example, use PT2S to indicate 2 seconds. Leave the value empty for encoding live events.
      * 
      */
-    @InputImport(name="keyFrameIntervalDuration")
+    @Import(name="keyFrameIntervalDuration")
       private final @Nullable String keyFrameIntervalDuration;
 
     public Optional<String> getKeyFrameIntervalDuration() {
@@ -69,7 +69,7 @@ public final class LiveEventInputResponse extends io.pulumi.resources.InvokeArgs
      * The input protocol for the live event. This is specified at creation time and cannot be updated.
      * 
      */
-    @InputImport(name="streamingProtocol", required=true)
+    @Import(name="streamingProtocol", required=true)
       private final String streamingProtocol;
 
     public String getStreamingProtocol() {

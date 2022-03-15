@@ -4,7 +4,7 @@
 package io.pulumi.gcp.tags;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TagKeyArgs extends io.pulumi.resources.ResourceArgs {
      * User-assigned description of the TagKey. Must not exceed 256 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -29,7 +29,7 @@ public final class TagKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Input only. The resource name of the new TagKey's parent. Must be of the form organizations/{org_id}.
      * 
      */
-    @InputImport(name="parent", required=true)
+    @Import(name="parent", required=true)
       private final Output<String> parent;
 
     public Output<String> getParent() {
@@ -41,7 +41,7 @@ public final class TagKeyArgs extends io.pulumi.resources.ResourceArgs {
      * The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
      */
-    @InputImport(name="shortName", required=true)
+    @Import(name="shortName", required=true)
       private final Output<String> shortName;
 
     public Output<String> getShortName() {

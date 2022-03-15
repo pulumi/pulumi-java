@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.ServiceTaskSpecResourcesReservationGenericResourcesGetArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class ServiceTaskSpecResourcesReservationGetArgs extends io.pulumi.
 
     public static final ServiceTaskSpecResourcesReservationGetArgs Empty = new ServiceTaskSpecResourcesReservationGetArgs();
 
-    @InputImport(name="genericResources")
+    @Import(name="genericResources")
       private final @Nullable Output<ServiceTaskSpecResourcesReservationGenericResourcesGetArgs> genericResources;
 
     public Output<ServiceTaskSpecResourcesReservationGenericResourcesGetArgs> getGenericResources() {
         return this.genericResources == null ? Output.empty() : this.genericResources;
     }
 
-    @InputImport(name="memoryBytes")
+    @Import(name="memoryBytes")
       private final @Nullable Output<Integer> memoryBytes;
 
     public Output<Integer> getMemoryBytes() {
         return this.memoryBytes == null ? Output.empty() : this.memoryBytes;
     }
 
-    @InputImport(name="nanoCpus")
+    @Import(name="nanoCpus")
       private final @Nullable Output<Integer> nanoCpus;
 
     public Output<Integer> getNanoCpus() {

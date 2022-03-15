@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.HttpHeadersResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ContainerHttpGetResponse extends io.pulumi.resources.InvokeAr
      * The HTTP headers.
      * 
      */
-    @InputImport(name="httpHeaders")
+    @Import(name="httpHeaders")
       private final @Nullable HttpHeadersResponse httpHeaders;
 
     public Optional<HttpHeadersResponse> getHttpHeaders() {
@@ -35,7 +35,7 @@ public final class ContainerHttpGetResponse extends io.pulumi.resources.InvokeAr
      * The path to probe.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable String path;
 
     public Optional<String> getPath() {
@@ -46,7 +46,7 @@ public final class ContainerHttpGetResponse extends io.pulumi.resources.InvokeAr
      * The port number to probe.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {
@@ -57,7 +57,7 @@ public final class ContainerHttpGetResponse extends io.pulumi.resources.InvokeAr
      * The scheme.
      * 
      */
-    @InputImport(name="scheme")
+    @Import(name="scheme")
       private final @Nullable String scheme;
 
     public Optional<String> getScheme() {

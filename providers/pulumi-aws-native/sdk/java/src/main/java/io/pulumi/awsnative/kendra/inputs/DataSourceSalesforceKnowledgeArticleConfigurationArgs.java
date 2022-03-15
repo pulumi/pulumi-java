@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kendra.enums.DataSourceSalesforceKnowledgeArticleStat
 import io.pulumi.awsnative.kendra.inputs.DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,21 +17,21 @@ public final class DataSourceSalesforceKnowledgeArticleConfigurationArgs extends
 
     public static final DataSourceSalesforceKnowledgeArticleConfigurationArgs Empty = new DataSourceSalesforceKnowledgeArticleConfigurationArgs();
 
-    @InputImport(name="customKnowledgeArticleTypeConfigurations")
+    @Import(name="customKnowledgeArticleTypeConfigurations")
       private final @Nullable Output<List<DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs>> customKnowledgeArticleTypeConfigurations;
 
     public Output<List<DataSourceSalesforceCustomKnowledgeArticleTypeConfigurationArgs>> getCustomKnowledgeArticleTypeConfigurations() {
         return this.customKnowledgeArticleTypeConfigurations == null ? Output.empty() : this.customKnowledgeArticleTypeConfigurations;
     }
 
-    @InputImport(name="includedStates", required=true)
+    @Import(name="includedStates", required=true)
       private final Output<List<DataSourceSalesforceKnowledgeArticleState>> includedStates;
 
     public Output<List<DataSourceSalesforceKnowledgeArticleState>> getIncludedStates() {
         return this.includedStates;
     }
 
-    @InputImport(name="standardKnowledgeArticleTypeConfiguration")
+    @Import(name="standardKnowledgeArticleTypeConfiguration")
       private final @Nullable Output<DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs> standardKnowledgeArticleTypeConfiguration;
 
     public Output<DataSourceSalesforceStandardKnowledgeArticleTypeConfigurationArgs> getStandardKnowledgeArticleTypeConfiguration() {

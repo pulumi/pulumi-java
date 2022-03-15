@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.redis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.redis.outputs.GetInstanceMaintenancePolicy;
 import io.pulumi.gcp.redis.outputs.GetInstanceMaintenanceSchedule;
 import io.pulumi.gcp.redis.outputs.GetInstanceNode;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceResult {
     private final String alternativeLocationId;
     private final Boolean authEnabled;
@@ -55,39 +55,39 @@ public final class GetInstanceResult {
     private final String tier;
     private final String transitEncryptionMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceResult(
-        @OutputCustomType.Parameter("alternativeLocationId") String alternativeLocationId,
-        @OutputCustomType.Parameter("authEnabled") Boolean authEnabled,
-        @OutputCustomType.Parameter("authString") String authString,
-        @OutputCustomType.Parameter("authorizedNetwork") String authorizedNetwork,
-        @OutputCustomType.Parameter("connectMode") String connectMode,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("currentLocationId") String currentLocationId,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("locationId") String locationId,
-        @OutputCustomType.Parameter("maintenancePolicies") List<GetInstanceMaintenancePolicy> maintenancePolicies,
-        @OutputCustomType.Parameter("maintenanceSchedules") List<GetInstanceMaintenanceSchedule> maintenanceSchedules,
-        @OutputCustomType.Parameter("memorySizeGb") Integer memorySizeGb,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nodes") List<GetInstanceNode> nodes,
-        @OutputCustomType.Parameter("persistenceIamIdentity") String persistenceIamIdentity,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("readEndpoint") String readEndpoint,
-        @OutputCustomType.Parameter("readEndpointPort") Integer readEndpointPort,
-        @OutputCustomType.Parameter("readReplicasMode") String readReplicasMode,
-        @OutputCustomType.Parameter("redisConfigs") Map<String,String> redisConfigs,
-        @OutputCustomType.Parameter("redisVersion") String redisVersion,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("replicaCount") Integer replicaCount,
-        @OutputCustomType.Parameter("reservedIpRange") String reservedIpRange,
-        @OutputCustomType.Parameter("serverCaCerts") List<GetInstanceServerCaCert> serverCaCerts,
-        @OutputCustomType.Parameter("tier") String tier,
-        @OutputCustomType.Parameter("transitEncryptionMode") String transitEncryptionMode) {
+        @CustomType.Parameter("alternativeLocationId") String alternativeLocationId,
+        @CustomType.Parameter("authEnabled") Boolean authEnabled,
+        @CustomType.Parameter("authString") String authString,
+        @CustomType.Parameter("authorizedNetwork") String authorizedNetwork,
+        @CustomType.Parameter("connectMode") String connectMode,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("currentLocationId") String currentLocationId,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("locationId") String locationId,
+        @CustomType.Parameter("maintenancePolicies") List<GetInstanceMaintenancePolicy> maintenancePolicies,
+        @CustomType.Parameter("maintenanceSchedules") List<GetInstanceMaintenanceSchedule> maintenanceSchedules,
+        @CustomType.Parameter("memorySizeGb") Integer memorySizeGb,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nodes") List<GetInstanceNode> nodes,
+        @CustomType.Parameter("persistenceIamIdentity") String persistenceIamIdentity,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("readEndpoint") String readEndpoint,
+        @CustomType.Parameter("readEndpointPort") Integer readEndpointPort,
+        @CustomType.Parameter("readReplicasMode") String readReplicasMode,
+        @CustomType.Parameter("redisConfigs") Map<String,String> redisConfigs,
+        @CustomType.Parameter("redisVersion") String redisVersion,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("replicaCount") Integer replicaCount,
+        @CustomType.Parameter("reservedIpRange") String reservedIpRange,
+        @CustomType.Parameter("serverCaCerts") List<GetInstanceServerCaCert> serverCaCerts,
+        @CustomType.Parameter("tier") String tier,
+        @CustomType.Parameter("transitEncryptionMode") String transitEncryptionMode) {
         this.alternativeLocationId = alternativeLocationId;
         this.authEnabled = authEnabled;
         this.authString = authString;

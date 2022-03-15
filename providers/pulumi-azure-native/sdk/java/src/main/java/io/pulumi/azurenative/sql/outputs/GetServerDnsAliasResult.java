@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServerDnsAliasResult {
     /**
      * The fully qualified DNS record for alias
@@ -30,12 +30,12 @@ public final class GetServerDnsAliasResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServerDnsAliasResult(
-        @OutputCustomType.Parameter("azureDnsRecord") String azureDnsRecord,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("azureDnsRecord") String azureDnsRecord,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.azureDnsRecord = azureDnsRecord;
         this.id = id;
         this.name = name;

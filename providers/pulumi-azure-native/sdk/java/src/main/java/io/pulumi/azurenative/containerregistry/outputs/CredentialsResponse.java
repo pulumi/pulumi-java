@@ -5,14 +5,14 @@ package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.CustomRegistryCredentialsResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SourceRegistryCredentialsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CredentialsResponse {
     /**
      * Describes the credential parameters for accessing other custom registries. The key
@@ -27,10 +27,10 @@ public final class CredentialsResponse {
      */
     private final @Nullable SourceRegistryCredentialsResponse sourceRegistry;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CredentialsResponse(
-        @OutputCustomType.Parameter("customRegistries") @Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries,
-        @OutputCustomType.Parameter("sourceRegistry") @Nullable SourceRegistryCredentialsResponse sourceRegistry) {
+        @CustomType.Parameter("customRegistries") @Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries,
+        @CustomType.Parameter("sourceRegistry") @Nullable SourceRegistryCredentialsResponse sourceRegistry) {
         this.customRegistries = customRegistries;
         this.sourceRegistry = sourceRegistry;
     }

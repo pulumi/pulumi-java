@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ExpressionsResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2RecordConditionResponse {
     /**
      * An expression.
@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2RecordConditionResponse {
      */
     private final GooglePrivacyDlpV2ExpressionsResponse expressions;
 
-    @OutputCustomType.Constructor
-    private GooglePrivacyDlpV2RecordConditionResponse(@OutputCustomType.Parameter("expressions") GooglePrivacyDlpV2ExpressionsResponse expressions) {
+    @CustomType.Constructor
+    private GooglePrivacyDlpV2RecordConditionResponse(@CustomType.Parameter("expressions") GooglePrivacyDlpV2ExpressionsResponse expressions) {
         this.expressions = expressions;
     }
 

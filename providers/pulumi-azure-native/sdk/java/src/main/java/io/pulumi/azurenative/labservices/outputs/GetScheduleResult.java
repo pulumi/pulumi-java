@@ -5,13 +5,13 @@ package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.RecurrencePatternResponse;
 import io.pulumi.azurenative.labservices.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetScheduleResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
@@ -64,18 +64,18 @@ public final class GetScheduleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetScheduleResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notes") @Nullable String notes,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("recurrencePattern") @Nullable RecurrencePatternResponse recurrencePattern,
-        @OutputCustomType.Parameter("startAt") @Nullable String startAt,
-        @OutputCustomType.Parameter("stopAt") String stopAt,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("timeZoneId") String timeZoneId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notes") @Nullable String notes,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("recurrencePattern") @Nullable RecurrencePatternResponse recurrencePattern,
+        @CustomType.Parameter("startAt") @Nullable String startAt,
+        @CustomType.Parameter("stopAt") String stopAt,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("timeZoneId") String timeZoneId,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.notes = notes;

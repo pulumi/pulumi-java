@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codedeploy.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentGroupAutoRollbackConfiguration {
     /**
      * Indicates whether a defined automatic rollback configuration is currently enabled for this Deployment Group. If you enable automatic rollback, you must specify at least one event type.
@@ -24,10 +24,10 @@ public final class DeploymentGroupAutoRollbackConfiguration {
      */
     private final @Nullable List<String> events;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentGroupAutoRollbackConfiguration(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("events") @Nullable List<String> events) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("events") @Nullable List<String> events) {
         this.enabled = enabled;
         this.events = events;
     }

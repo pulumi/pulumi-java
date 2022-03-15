@@ -10,7 +10,7 @@ import io.pulumi.azurenative.logz.inputs.PlanDataArgs;
 import io.pulumi.azurenative.logz.inputs.UserInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
 
     public static final MonitorPropertiesArgs Empty = new MonitorPropertiesArgs();
 
-    @InputImport(name="logzOrganizationProperties")
+    @Import(name="logzOrganizationProperties")
       private final @Nullable Output<LogzOrganizationPropertiesArgs> logzOrganizationProperties;
 
     public Output<LogzOrganizationPropertiesArgs> getLogzOrganizationProperties() {
@@ -35,7 +35,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Flag specifying the Marketplace Subscription Status of the resource. If payment is not made in time, the resource will go in Suspended state.
      * 
      */
-    @InputImport(name="marketplaceSubscriptionStatus")
+    @Import(name="marketplaceSubscriptionStatus")
       private final @Nullable Output<Either<String,MarketplaceSubscriptionStatus>> marketplaceSubscriptionStatus;
 
     public Output<Either<String,MarketplaceSubscriptionStatus>> getMarketplaceSubscriptionStatus() {
@@ -46,21 +46,21 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Flag specifying if the resource monitoring is enabled or disabled.
      * 
      */
-    @InputImport(name="monitoringStatus")
+    @Import(name="monitoringStatus")
       private final @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
 
     public Output<Either<String,MonitoringStatus>> getMonitoringStatus() {
         return this.monitoringStatus == null ? Output.empty() : this.monitoringStatus;
     }
 
-    @InputImport(name="planData")
+    @Import(name="planData")
       private final @Nullable Output<PlanDataArgs> planData;
 
     public Output<PlanDataArgs> getPlanData() {
         return this.planData == null ? Output.empty() : this.planData;
     }
 
-    @InputImport(name="userInfo")
+    @Import(name="userInfo")
       private final @Nullable Output<UserInfoArgs> userInfo;
 
     public Output<UserInfoArgs> getUserInfo() {

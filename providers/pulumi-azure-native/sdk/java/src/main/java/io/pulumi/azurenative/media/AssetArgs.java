@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * The Media Services account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -29,7 +29,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * The alternate ID of the Asset.
      * 
      */
-    @InputImport(name="alternateId")
+    @Import(name="alternateId")
       private final @Nullable Output<String> alternateId;
 
     public Output<String> getAlternateId() {
@@ -40,7 +40,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * The Asset name.
      * 
      */
-    @InputImport(name="assetName")
+    @Import(name="assetName")
       private final @Nullable Output<String> assetName;
 
     public Output<String> getAssetName() {
@@ -51,7 +51,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the asset blob container.
      * 
      */
-    @InputImport(name="container")
+    @Import(name="container")
       private final @Nullable Output<String> container;
 
     public Output<String> getContainer() {
@@ -62,7 +62,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * The Asset description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -73,7 +73,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -84,7 +84,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the storage account.
      * 
      */
-    @InputImport(name="storageAccountName")
+    @Import(name="storageAccountName")
       private final @Nullable Output<String> storageAccountName;
 
     public Output<String> getStorageAccountName() {

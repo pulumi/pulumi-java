@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId {
     /**
      * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
@@ -17,8 +17,8 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      */
     private final @Nullable List<Integer> objectIdPaths;
 
-    @OutputCustomType.Constructor
-    private CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId(@OutputCustomType.Parameter("objectIdPaths") @Nullable List<Integer> objectIdPaths) {
+    @CustomType.Constructor
+    private CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId(@CustomType.Parameter("objectIdPaths") @Nullable List<Integer> objectIdPaths) {
         this.objectIdPaths = objectIdPaths;
     }
 

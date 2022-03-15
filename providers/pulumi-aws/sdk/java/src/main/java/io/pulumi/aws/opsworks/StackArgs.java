@@ -5,7 +5,7 @@ package io.pulumi.aws.opsworks;
 
 import io.pulumi.aws.opsworks.inputs.StackCustomCookbooksSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * If set to `"LATEST"`, OpsWorks will automatically install the latest version.
      * 
      */
-    @InputImport(name="agentVersion")
+    @Import(name="agentVersion")
       private final @Nullable Output<String> agentVersion;
 
     public Output<String> getAgentVersion() {
@@ -33,7 +33,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * If `manage_berkshelf` is enabled, the version of Berkshelf to use.
      * 
      */
-    @InputImport(name="berkshelfVersion")
+    @Import(name="berkshelfVersion")
       private final @Nullable Output<String> berkshelfVersion;
 
     public Output<String> getBerkshelfVersion() {
@@ -44,7 +44,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * Color to paint next to the stack's resources in the OpsWorks console.
      * 
      */
-    @InputImport(name="color")
+    @Import(name="color")
       private final @Nullable Output<String> color;
 
     public Output<String> getColor() {
@@ -55,7 +55,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the configuration manager to use. Defaults to "Chef".
      * 
      */
-    @InputImport(name="configurationManagerName")
+    @Import(name="configurationManagerName")
       private final @Nullable Output<String> configurationManagerName;
 
     public Output<String> getConfigurationManagerName() {
@@ -66,7 +66,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * Version of the configuration manager to use. Defaults to "11.4".
      * 
      */
-    @InputImport(name="configurationManagerVersion")
+    @Import(name="configurationManagerVersion")
       private final @Nullable Output<String> configurationManagerVersion;
 
     public Output<String> getConfigurationManagerVersion() {
@@ -78,7 +78,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * described below.
      * 
      */
-    @InputImport(name="customCookbooksSources")
+    @Import(name="customCookbooksSources")
       private final @Nullable Output<List<StackCustomCookbooksSourceArgs>> customCookbooksSources;
 
     public Output<List<StackCustomCookbooksSourceArgs>> getCustomCookbooksSources() {
@@ -89,7 +89,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * Custom JSON attributes to apply to the entire stack.
      * 
      */
-    @InputImport(name="customJson")
+    @Import(name="customJson")
       private final @Nullable Output<String> customJson;
 
     public Output<String> getCustomJson() {
@@ -101,7 +101,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * by default. This is required unless you set `vpc_id`.
      * 
      */
-    @InputImport(name="defaultAvailabilityZone")
+    @Import(name="defaultAvailabilityZone")
       private final @Nullable Output<String> defaultAvailabilityZone;
 
     public Output<String> getDefaultAvailabilityZone() {
@@ -113,7 +113,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * will have by default.
      * 
      */
-    @InputImport(name="defaultInstanceProfileArn", required=true)
+    @Import(name="defaultInstanceProfileArn", required=true)
       private final Output<String> defaultInstanceProfileArn;
 
     public Output<String> getDefaultInstanceProfileArn() {
@@ -124,7 +124,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * Name of OS that will be installed on instances by default.
      * 
      */
-    @InputImport(name="defaultOs")
+    @Import(name="defaultOs")
       private final @Nullable Output<String> defaultOs;
 
     public Output<String> getDefaultOs() {
@@ -135,7 +135,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the type of root device instances will have by default.
      * 
      */
-    @InputImport(name="defaultRootDeviceType")
+    @Import(name="defaultRootDeviceType")
       private final @Nullable Output<String> defaultRootDeviceType;
 
     public Output<String> getDefaultRootDeviceType() {
@@ -146,7 +146,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the SSH keypair that instances will have by default.
      * 
      */
-    @InputImport(name="defaultSshKeyName")
+    @Import(name="defaultSshKeyName")
       private final @Nullable Output<String> defaultSshKeyName;
 
     public Output<String> getDefaultSshKeyName() {
@@ -158,7 +158,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * if `vpc_id` is set, and forbidden if it isn't.
      * 
      */
-    @InputImport(name="defaultSubnetId")
+    @Import(name="defaultSubnetId")
       private final @Nullable Output<String> defaultSubnetId;
 
     public Output<String> getDefaultSubnetId() {
@@ -170,7 +170,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * within this stack.
      * 
      */
-    @InputImport(name="hostnameTheme")
+    @Import(name="hostnameTheme")
       private final @Nullable Output<String> hostnameTheme;
 
     public Output<String> getHostnameTheme() {
@@ -181,7 +181,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * Boolean value controlling whether Opsworks will run Berkshelf for this stack.
      * 
      */
-    @InputImport(name="manageBerkshelf")
+    @Import(name="manageBerkshelf")
       private final @Nullable Output<Boolean> manageBerkshelf;
 
     public Output<Boolean> getManageBerkshelf() {
@@ -192,7 +192,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the stack.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -203,7 +203,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the region where the stack will exist.
      * 
      */
-    @InputImport(name="region", required=true)
+    @Import(name="region", required=true)
       private final Output<String> region;
 
     public Output<String> getRegion() {
@@ -214,7 +214,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN of an IAM role that the OpsWorks service will act as.
      * 
      */
-    @InputImport(name="serviceRoleArn", required=true)
+    @Import(name="serviceRoleArn", required=true)
       private final Output<String> serviceRoleArn;
 
     public Output<String> getServiceRoleArn() {
@@ -225,7 +225,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -237,7 +237,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * enabled.
      * 
      */
-    @InputImport(name="useCustomCookbooks")
+    @Import(name="useCustomCookbooks")
       private final @Nullable Output<Boolean> useCustomCookbooks;
 
     public Output<Boolean> getUseCustomCookbooks() {
@@ -249,7 +249,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * security groups apply to created instances.
      * 
      */
-    @InputImport(name="useOpsworksSecurityGroups")
+    @Import(name="useOpsworksSecurityGroups")
       private final @Nullable Output<Boolean> useOpsworksSecurityGroups;
 
     public Output<Boolean> getUseOpsworksSecurityGroups() {
@@ -260,7 +260,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
      * The id of the VPC that this stack belongs to.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

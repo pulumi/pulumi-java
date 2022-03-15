@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudformation;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
      * The Amazon Resource Name (ARN) of the module version to set as the default version.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
      * The name of a module existing in the registry.
      * 
      */
-    @InputImport(name="moduleName")
+    @Import(name="moduleName")
       private final @Nullable Output<String> moduleName;
 
     public Output<String> getModuleName() {
@@ -40,7 +40,7 @@ public final class ModuleDefaultVersionArgs extends io.pulumi.resources.Resource
      * The ID of an existing version of the named module to set as the default.
      * 
      */
-    @InputImport(name="versionId")
+    @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
     public Output<String> getVersionId() {

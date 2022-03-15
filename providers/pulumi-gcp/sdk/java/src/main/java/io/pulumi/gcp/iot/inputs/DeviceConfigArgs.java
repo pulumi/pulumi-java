@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,28 +14,28 @@ public final class DeviceConfigArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DeviceConfigArgs Empty = new DeviceConfigArgs();
 
-    @InputImport(name="binaryData")
+    @Import(name="binaryData")
       private final @Nullable Output<String> binaryData;
 
     public Output<String> getBinaryData() {
         return this.binaryData == null ? Output.empty() : this.binaryData;
     }
 
-    @InputImport(name="cloudUpdateTime")
+    @Import(name="cloudUpdateTime")
       private final @Nullable Output<String> cloudUpdateTime;
 
     public Output<String> getCloudUpdateTime() {
         return this.cloudUpdateTime == null ? Output.empty() : this.cloudUpdateTime;
     }
 
-    @InputImport(name="deviceAckTime")
+    @Import(name="deviceAckTime")
       private final @Nullable Output<String> deviceAckTime;
 
     public Output<String> getDeviceAckTime() {
         return this.deviceAckTime == null ? Output.empty() : this.deviceAckTime;
     }
 
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

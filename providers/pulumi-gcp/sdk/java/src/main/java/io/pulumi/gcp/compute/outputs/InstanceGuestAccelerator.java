@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceGuestAccelerator {
     /**
      * The number of the guest accelerator cards exposed to this instance.
@@ -21,10 +21,10 @@ public final class InstanceGuestAccelerator {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceGuestAccelerator(
-        @OutputCustomType.Parameter("count") Integer count,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("count") Integer count,
+        @CustomType.Parameter("type") String type) {
         this.count = count;
         this.type = type;
     }

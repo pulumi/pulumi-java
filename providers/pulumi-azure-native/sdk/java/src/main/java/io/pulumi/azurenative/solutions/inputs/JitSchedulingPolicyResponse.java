@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class JitSchedulingPolicyResponse extends io.pulumi.resources.Invok
 
     public static final JitSchedulingPolicyResponse Empty = new JitSchedulingPolicyResponse();
 
-    @InputImport(name="duration", required=true)
+    @Import(name="duration", required=true)
       private final String duration;
 
     public String getDuration() {
@@ -27,7 +27,7 @@ public final class JitSchedulingPolicyResponse extends io.pulumi.resources.Invok
      * The start time of the request.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -38,7 +38,7 @@ public final class JitSchedulingPolicyResponse extends io.pulumi.resources.Invok
      * The type of JIT schedule.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

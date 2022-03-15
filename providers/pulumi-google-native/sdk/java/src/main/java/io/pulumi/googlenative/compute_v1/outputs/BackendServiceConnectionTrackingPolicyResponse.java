@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackendServiceConnectionTrackingPolicyResponse {
     /**
      * Specifies connection persistence when backends are unhealthy. The default value is DEFAULT_FOR_PROTOCOL. If set to DEFAULT_FOR_PROTOCOL, the existing connections persist on unhealthy backends only for connection-oriented protocols (TCP and SCTP) and only if the Tracking Mode is PER_CONNECTION (default tracking mode) or the Session Affinity is configured for 5-tuple. They do not persist for UDP. If set to NEVER_PERSIST, after a backend becomes unhealthy, the existing connections on the unhealthy backend are never persisted on the unhealthy backend. They are always diverted to newly selected healthy backends (unless all backends are unhealthy). If set to ALWAYS_PERSIST, existing connections always persist on unhealthy backends regardless of protocol and session affinity. It is generally not recommended to use this mode overriding the default. For more details, see [Connection Persistence for Network Load Balancing](https://cloud.google.com/load-balancing/docs/network/networklb-backend-service#connection-persistence) and [Connection Persistence for Internal TCP/UDP Load Balancing](https://cloud.google.com/load-balancing/docs/internal#connection-persistence).
@@ -26,11 +26,11 @@ public final class BackendServiceConnectionTrackingPolicyResponse {
      */
     private final String trackingMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendServiceConnectionTrackingPolicyResponse(
-        @OutputCustomType.Parameter("connectionPersistenceOnUnhealthyBackends") String connectionPersistenceOnUnhealthyBackends,
-        @OutputCustomType.Parameter("idleTimeoutSec") Integer idleTimeoutSec,
-        @OutputCustomType.Parameter("trackingMode") String trackingMode) {
+        @CustomType.Parameter("connectionPersistenceOnUnhealthyBackends") String connectionPersistenceOnUnhealthyBackends,
+        @CustomType.Parameter("idleTimeoutSec") Integer idleTimeoutSec,
+        @CustomType.Parameter("trackingMode") String trackingMode) {
         this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
         this.idleTimeoutSec = idleTimeoutSec;
         this.trackingMode = trackingMode;

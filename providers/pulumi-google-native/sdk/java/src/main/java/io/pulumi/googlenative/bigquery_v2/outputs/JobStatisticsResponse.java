@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobStatistics2Response;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobStatistics3Response;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobStatistics4Response;
@@ -17,7 +17,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobStatisticsResponse {
     /**
      * [TrustedTester] [Output-only] Job progress (0.0 -> 1.0) for LOAD and EXTRACT jobs.
@@ -105,25 +105,25 @@ public final class JobStatisticsResponse {
      */
     private final TransactionInfoResponse transactionInfo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStatisticsResponse(
-        @OutputCustomType.Parameter("completionRatio") Double completionRatio,
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("extract") JobStatistics4Response extract,
-        @OutputCustomType.Parameter("load") JobStatistics3Response load,
-        @OutputCustomType.Parameter("numChildJobs") String numChildJobs,
-        @OutputCustomType.Parameter("parentJobId") String parentJobId,
-        @OutputCustomType.Parameter("query") JobStatistics2Response query,
-        @OutputCustomType.Parameter("quotaDeferments") List<String> quotaDeferments,
-        @OutputCustomType.Parameter("reservationId") String reservationId,
-        @OutputCustomType.Parameter("reservationUsage") List<JobStatisticsReservationUsageItemResponse> reservationUsage,
-        @OutputCustomType.Parameter("rowLevelSecurityStatistics") RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics,
-        @OutputCustomType.Parameter("scriptStatistics") ScriptStatisticsResponse scriptStatistics,
-        @OutputCustomType.Parameter("sessionInfo") SessionInfoResponse sessionInfo,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("totalSlotMs") String totalSlotMs,
-        @OutputCustomType.Parameter("transactionInfo") TransactionInfoResponse transactionInfo) {
+        @CustomType.Parameter("completionRatio") Double completionRatio,
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("extract") JobStatistics4Response extract,
+        @CustomType.Parameter("load") JobStatistics3Response load,
+        @CustomType.Parameter("numChildJobs") String numChildJobs,
+        @CustomType.Parameter("parentJobId") String parentJobId,
+        @CustomType.Parameter("query") JobStatistics2Response query,
+        @CustomType.Parameter("quotaDeferments") List<String> quotaDeferments,
+        @CustomType.Parameter("reservationId") String reservationId,
+        @CustomType.Parameter("reservationUsage") List<JobStatisticsReservationUsageItemResponse> reservationUsage,
+        @CustomType.Parameter("rowLevelSecurityStatistics") RowLevelSecurityStatisticsResponse rowLevelSecurityStatistics,
+        @CustomType.Parameter("scriptStatistics") ScriptStatisticsResponse scriptStatistics,
+        @CustomType.Parameter("sessionInfo") SessionInfoResponse sessionInfo,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("totalSlotMs") String totalSlotMs,
+        @CustomType.Parameter("transactionInfo") TransactionInfoResponse transactionInfo) {
         this.completionRatio = completionRatio;
         this.creationTime = creationTime;
         this.endTime = endTime;

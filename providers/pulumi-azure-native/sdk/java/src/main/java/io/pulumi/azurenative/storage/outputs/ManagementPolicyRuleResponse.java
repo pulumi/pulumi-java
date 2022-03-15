@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.ManagementPolicyDefinitionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagementPolicyRuleResponse {
     /**
      * An object that defines the Lifecycle rule.
@@ -34,12 +34,12 @@ public final class ManagementPolicyRuleResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagementPolicyRuleResponse(
-        @OutputCustomType.Parameter("definition") ManagementPolicyDefinitionResponse definition,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("definition") ManagementPolicyDefinitionResponse definition,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.definition = definition;
         this.enabled = enabled;
         this.name = name;

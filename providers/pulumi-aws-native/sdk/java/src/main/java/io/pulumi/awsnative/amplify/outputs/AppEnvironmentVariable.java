@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.amplify.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AppEnvironmentVariable {
     private final String name;
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppEnvironmentVariable(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("value") String value) {
         this.name = name;
         this.value = value;
     }

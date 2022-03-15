@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.portal.outputs;
 
 import io.pulumi.azurenative.portal.outputs.MarkdownPartMetadataResponseSettingsSettings;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MarkdownPartMetadataResponseContent {
     /**
      * The setting of the content of markdown part.
@@ -17,8 +17,8 @@ public final class MarkdownPartMetadataResponseContent {
      */
     private final @Nullable MarkdownPartMetadataResponseSettingsSettings settings;
 
-    @OutputCustomType.Constructor
-    private MarkdownPartMetadataResponseContent(@OutputCustomType.Parameter("settings") @Nullable MarkdownPartMetadataResponseSettingsSettings settings) {
+    @CustomType.Constructor
+    private MarkdownPartMetadataResponseContent(@CustomType.Parameter("settings") @Nullable MarkdownPartMetadataResponseSettingsSettings settings) {
         this.settings = settings;
     }
 

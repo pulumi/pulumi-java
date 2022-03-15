@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class OrganizationPolicyListPolicyDenyArgs extends io.pulumi.resour
      * The policy allows or denies all values.
      * 
      */
-    @InputImport(name="all")
+    @Import(name="all")
       private final @Nullable Output<Boolean> all;
 
     public Output<Boolean> getAll() {
@@ -31,7 +31,7 @@ public final class OrganizationPolicyListPolicyDenyArgs extends io.pulumi.resour
      * The policy can define specific values that are allowed or denied.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {

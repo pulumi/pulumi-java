@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentRolloutDisruptionBudgetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PatchDeploymentRolloutArgs extends io.pulumi.resources.Resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="disruptionBudget", required=true)
+    @Import(name="disruptionBudget", required=true)
       private final Output<PatchDeploymentRolloutDisruptionBudgetArgs> disruptionBudget;
 
     public Output<PatchDeploymentRolloutDisruptionBudgetArgs> getDisruptionBudget() {
@@ -35,7 +35,7 @@ public final class PatchDeploymentRolloutArgs extends io.pulumi.resources.Resour
      * Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
      * 
      */
-    @InputImport(name="mode", required=true)
+    @Import(name="mode", required=true)
       private final Output<String> mode;
 
     public Output<String> getMode() {

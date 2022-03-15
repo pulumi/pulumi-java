@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apigateway;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.apigateway.RequestValidatorArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public class RequestValidator extends io.pulumi.resources.CustomResource {
      * Name of the request validator.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -36,7 +36,7 @@ public class RequestValidator extends io.pulumi.resources.CustomResource {
      * ID of the request validator.
      * 
      */
-    @OutputExport(name="requestValidatorId", type=String.class, parameters={})
+    @Export(name="requestValidatorId", type=String.class, parameters={})
     private Output<String> requestValidatorId;
 
     /**
@@ -50,7 +50,7 @@ public class RequestValidator extends io.pulumi.resources.CustomResource {
      * The identifier of the targeted API entity.
      * 
      */
-    @OutputExport(name="restApiId", type=String.class, parameters={})
+    @Export(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
     /**
@@ -64,7 +64,7 @@ public class RequestValidator extends io.pulumi.resources.CustomResource {
      * Indicates whether to validate the request body according to the configured schema for the targeted API and method.
      * 
      */
-    @OutputExport(name="validateRequestBody", type=Boolean.class, parameters={})
+    @Export(name="validateRequestBody", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> validateRequestBody;
 
     /**
@@ -78,7 +78,7 @@ public class RequestValidator extends io.pulumi.resources.CustomResource {
      * Indicates whether to validate request parameters.
      * 
      */
-    @OutputExport(name="validateRequestParameters", type=Boolean.class, parameters={})
+    @Export(name="validateRequestParameters", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> validateRequestParameters;
 
     /**

@@ -5,20 +5,20 @@ package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.enums.BotSlotValueResolutionStrategy;
 import io.pulumi.awsnative.lex.outputs.BotSlotValueRegexFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotSlotValueSelectionSetting {
     private final @Nullable BotSlotValueRegexFilter regexFilter;
     private final BotSlotValueResolutionStrategy resolutionStrategy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotSlotValueSelectionSetting(
-        @OutputCustomType.Parameter("regexFilter") @Nullable BotSlotValueRegexFilter regexFilter,
-        @OutputCustomType.Parameter("resolutionStrategy") BotSlotValueResolutionStrategy resolutionStrategy) {
+        @CustomType.Parameter("regexFilter") @Nullable BotSlotValueRegexFilter regexFilter,
+        @CustomType.Parameter("resolutionStrategy") BotSlotValueResolutionStrategy resolutionStrategy) {
         this.regexFilter = regexFilter;
         this.resolutionStrategy = resolutionStrategy;
     }

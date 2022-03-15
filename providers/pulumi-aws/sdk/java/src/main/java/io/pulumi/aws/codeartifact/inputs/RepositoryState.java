@@ -6,7 +6,7 @@ package io.pulumi.aws.codeartifact.inputs;
 import io.pulumi.aws.codeartifact.inputs.RepositoryExternalConnectionsGetArgs;
 import io.pulumi.aws.codeartifact.inputs.RepositoryUpstreamGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The account number of the AWS account that manages the repository.
      * 
      */
-    @InputImport(name="administratorAccount")
+    @Import(name="administratorAccount")
       private final @Nullable Output<String> administratorAccount;
 
     public Output<String> getAdministratorAccount() {
@@ -33,7 +33,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the repository.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -44,7 +44,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The description of the repository.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -55,7 +55,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The domain that contains the created repository.
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
@@ -66,7 +66,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The account number of the AWS account that owns the domain.
      * 
      */
-    @InputImport(name="domainOwner")
+    @Import(name="domainOwner")
       private final @Nullable Output<String> domainOwner;
 
     public Output<String> getDomainOwner() {
@@ -77,7 +77,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * An array of external connections associated with the repository. Only one external connection can be set per repository. see External Connections.
      * 
      */
-    @InputImport(name="externalConnections")
+    @Import(name="externalConnections")
       private final @Nullable Output<RepositoryExternalConnectionsGetArgs> externalConnections;
 
     public Output<RepositoryExternalConnectionsGetArgs> getExternalConnections() {
@@ -88,7 +88,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * The name of the repository to create.
      * 
      */
-    @InputImport(name="repository")
+    @Import(name="repository")
       private final @Nullable Output<String> repository;
 
     public Output<String> getRepository() {
@@ -99,7 +99,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -110,7 +110,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -121,7 +121,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * A list of upstream repositories to associate with the repository. The order of the upstream repositories in the list determines their priority order when AWS CodeArtifact looks for a requested package version. see Upstream
      * 
      */
-    @InputImport(name="upstreams")
+    @Import(name="upstreams")
       private final @Nullable Output<List<RepositoryUpstreamGetArgs>> upstreams;
 
     public Output<List<RepositoryUpstreamGetArgs>> getUpstreams() {

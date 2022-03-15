@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamAmazonopensearchserviceRetryOptions {
     private final @Nullable Integer durationInSeconds;
 
-    @OutputCustomType.Constructor
-    private DeliveryStreamAmazonopensearchserviceRetryOptions(@OutputCustomType.Parameter("durationInSeconds") @Nullable Integer durationInSeconds) {
+    @CustomType.Constructor
+    private DeliveryStreamAmazonopensearchserviceRetryOptions(@CustomType.Parameter("durationInSeconds") @Nullable Integer durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
     }
 

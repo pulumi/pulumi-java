@@ -5,7 +5,7 @@ package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.aws.eks.inputs.FargateProfileSelectorGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * Amazon Resource Name (ARN) of the EKS Fargate Profile.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * Name of the EKS Cluster. Must be between 1-100 characters in length. Must begin with an alphanumeric character, and must only contain alphanumeric characters, dashes and underscores (`^[0-9A-Za-z][A-Za-z0-9\-_]+$`).
      * 
      */
-    @InputImport(name="clusterName")
+    @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -43,7 +43,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * Name of the EKS Fargate Profile.
      * 
      */
-    @InputImport(name="fargateProfileName")
+    @Import(name="fargateProfileName")
       private final @Nullable Output<String> fargateProfileName;
 
     public Output<String> getFargateProfileName() {
@@ -54,7 +54,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Fargate Profile.
      * 
      */
-    @InputImport(name="podExecutionRoleArn")
+    @Import(name="podExecutionRoleArn")
       private final @Nullable Output<String> podExecutionRoleArn;
 
     public Output<String> getPodExecutionRoleArn() {
@@ -65,7 +65,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * Configuration block(s) for selecting Kubernetes Pods to execute with this EKS Fargate Profile. Detailed below.
      * 
      */
-    @InputImport(name="selectors")
+    @Import(name="selectors")
       private final @Nullable Output<List<FargateProfileSelectorGetArgs>> selectors;
 
     public Output<List<FargateProfileSelectorGetArgs>> getSelectors() {
@@ -76,7 +76,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * Status of the EKS Fargate Profile.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -87,7 +87,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * Identifiers of private EC2 Subnets to associate with the EKS Fargate Profile. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -98,7 +98,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -109,7 +109,7 @@ public final class FargateProfileState extends io.pulumi.resources.ResourceArgs 
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

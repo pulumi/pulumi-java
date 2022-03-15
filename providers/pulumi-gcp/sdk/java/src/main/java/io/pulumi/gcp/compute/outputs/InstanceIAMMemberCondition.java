@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceIAMMemberCondition {
     /**
      * An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
@@ -27,11 +27,11 @@ public final class InstanceIAMMemberCondition {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceIAMMemberCondition(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("expression") String expression,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("expression") String expression,
+        @CustomType.Parameter("title") String title) {
         this.description = description;
         this.expression = expression;
         this.title = title;

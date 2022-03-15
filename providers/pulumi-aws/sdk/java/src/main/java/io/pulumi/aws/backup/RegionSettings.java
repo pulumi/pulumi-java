@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.backup.RegionSettingsArgs;
 import io.pulumi.aws.backup.inputs.RegionSettingsState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class RegionSettings extends io.pulumi.resources.CustomResource {
      * A map of services along with the management preferences for the Region.
      * 
      */
-    @OutputExport(name="resourceTypeManagementPreference", type=Map.class, parameters={String.class, Boolean.class})
+    @Export(name="resourceTypeManagementPreference", type=Map.class, parameters={String.class, Boolean.class})
     private Output<Map<String,Boolean>> resourceTypeManagementPreference;
 
     /**
@@ -48,7 +48,7 @@ public class RegionSettings extends io.pulumi.resources.CustomResource {
      * A map of services along with the opt-in preferences for the Region.
      * 
      */
-    @OutputExport(name="resourceTypeOptInPreference", type=Map.class, parameters={String.class, Boolean.class})
+    @Export(name="resourceTypeOptInPreference", type=Map.class, parameters={String.class, Boolean.class})
     private Output<Map<String,Boolean>> resourceTypeOptInPreference;
 
     /**

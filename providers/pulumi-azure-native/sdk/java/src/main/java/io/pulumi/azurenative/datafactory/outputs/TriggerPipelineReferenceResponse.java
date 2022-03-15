@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.PipelineReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerPipelineReferenceResponse {
     /**
      * Pipeline parameters.
@@ -25,10 +25,10 @@ public final class TriggerPipelineReferenceResponse {
      */
     private final @Nullable PipelineReferenceResponse pipelineReference;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerPipelineReferenceResponse(
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
-        @OutputCustomType.Parameter("pipelineReference") @Nullable PipelineReferenceResponse pipelineReference) {
+        @CustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
+        @CustomType.Parameter("pipelineReference") @Nullable PipelineReferenceResponse pipelineReference) {
         this.parameters = parameters;
         this.pipelineReference = pipelineReference;
     }

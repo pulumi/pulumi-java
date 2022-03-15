@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FirewallPolicyCertificateAuthorityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class FirewallPolicyTransportSecurityArgs extends io.pulumi.resourc
      * The CA used for intermediate CA generation.
      * 
      */
-    @InputImport(name="certificateAuthority")
+    @Import(name="certificateAuthority")
       private final @Nullable Output<FirewallPolicyCertificateAuthorityArgs> certificateAuthority;
 
     public Output<FirewallPolicyCertificateAuthorityArgs> getCertificateAuthority() {

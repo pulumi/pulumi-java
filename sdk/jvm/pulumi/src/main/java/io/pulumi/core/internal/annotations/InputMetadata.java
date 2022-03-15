@@ -2,7 +2,7 @@ package io.pulumi.core.internal.annotations;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableMap;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.core.internal.Reflection;
 
 import java.lang.reflect.Field;
@@ -12,17 +12,17 @@ import java.util.function.Predicate;
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static java.util.Objects.requireNonNull;
 
-public final class InputMetadata<F> extends InputOutputMetadata<InputImport, F> {
+public final class InputMetadata<F> extends InputOutputMetadata<Import, F> {
 
-    private final InputImport annotation;
+    private final Import annotation;
 
-    private InputMetadata(Field field, InputImport annotation, Class<F> fieldType) {
+    private InputMetadata(Field field, Import annotation, Class<F> fieldType) {
         super(field, fieldType);
         this.annotation = requireNonNull(annotation);
     }
 
     @Override
-    public InputImport getAnnotation() {
+    public Import getAnnotation() {
         return this.annotation;
     }
 
@@ -49,12 +49,12 @@ public final class InputMetadata<F> extends InputOutputMetadata<InputImport, F> 
             Predicate<Field> fieldFilter
     ) {
         return Reflection.allFields(extractionType).stream()
-                .filter(f -> f.isAnnotationPresent(InputImport.class))
+                .filter(f -> f.isAnnotationPresent(Import.class))
                 .filter(fieldFilter)
                 .map(f -> {
                     f.setAccessible(true);
                     return new InputMetadata<>(
-                            f, f.getAnnotation(InputImport.class), f.getType()
+                            f, f.getAnnotation(Import.class), f.getType()
                     );
                 })
                 .collect(toImmutableMap(

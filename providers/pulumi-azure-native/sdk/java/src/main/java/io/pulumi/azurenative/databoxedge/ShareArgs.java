@@ -13,7 +13,7 @@ import io.pulumi.azurenative.databoxedge.inputs.RefreshDetailsArgs;
 import io.pulumi.azurenative.databoxedge.inputs.UserAccessRightArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * Access protocol to be used by the share.
      * 
      */
-    @InputImport(name="accessProtocol", required=true)
+    @Import(name="accessProtocol", required=true)
       private final Output<Either<String,ShareAccessProtocol>> accessProtocol;
 
     public Output<Either<String,ShareAccessProtocol>> getAccessProtocol() {
@@ -39,7 +39,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * Azure container mapping for the share.
      * 
      */
-    @InputImport(name="azureContainerInfo")
+    @Import(name="azureContainerInfo")
       private final @Nullable Output<AzureContainerInfoArgs> azureContainerInfo;
 
     public Output<AzureContainerInfoArgs> getAzureContainerInfo() {
@@ -50,7 +50,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * List of IP addresses and corresponding access rights on the share(required for NFS protocol).
      * 
      */
-    @InputImport(name="clientAccessRights")
+    @Import(name="clientAccessRights")
       private final @Nullable Output<List<ClientAccessRightArgs>> clientAccessRights;
 
     public Output<List<ClientAccessRightArgs>> getClientAccessRights() {
@@ -61,7 +61,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * Data policy of the share.
      * 
      */
-    @InputImport(name="dataPolicy")
+    @Import(name="dataPolicy")
       private final @Nullable Output<Either<String,DataPolicy>> dataPolicy;
 
     public Output<Either<String,DataPolicy>> getDataPolicy() {
@@ -72,7 +72,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * Description for the share.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -83,7 +83,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * The device name.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -94,7 +94,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * Current monitoring status of the share.
      * 
      */
-    @InputImport(name="monitoringStatus", required=true)
+    @Import(name="monitoringStatus", required=true)
       private final Output<Either<String,MonitoringStatus>> monitoringStatus;
 
     public Output<Either<String,MonitoringStatus>> getMonitoringStatus() {
@@ -105,7 +105,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * The share name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -116,7 +116,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * Details of the refresh job on this share.
      * 
      */
-    @InputImport(name="refreshDetails")
+    @Import(name="refreshDetails")
       private final @Nullable Output<RefreshDetailsArgs> refreshDetails;
 
     public Output<RefreshDetailsArgs> getRefreshDetails() {
@@ -127,7 +127,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -138,7 +138,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * Current status of the share.
      * 
      */
-    @InputImport(name="shareStatus", required=true)
+    @Import(name="shareStatus", required=true)
       private final Output<Either<String,ShareStatus>> shareStatus;
 
     public Output<Either<String,ShareStatus>> getShareStatus() {
@@ -149,7 +149,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
      * Mapping of users and corresponding access rights on the share (required for SMB protocol).
      * 
      */
-    @InputImport(name="userAccessRights")
+    @Import(name="userAccessRights")
       private final @Nullable Output<List<UserAccessRightArgs>> userAccessRights;
 
     public Output<List<UserAccessRightArgs>> getUserAccessRights() {

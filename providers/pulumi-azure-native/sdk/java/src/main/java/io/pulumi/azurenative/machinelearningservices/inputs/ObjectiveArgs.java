@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.enums.Goal;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ObjectiveArgs extends io.pulumi.resources.ResourceArgs {
      * Defines supported metric goals for hyperparameter tuning
      * 
      */
-    @InputImport(name="goal", required=true)
+    @Import(name="goal", required=true)
       private final Output<Either<String,Goal>> goal;
 
     public Output<Either<String,Goal>> getGoal() {
@@ -34,7 +34,7 @@ public final class ObjectiveArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the metric to optimize.
      * 
      */
-    @InputImport(name="primaryMetric", required=true)
+    @Import(name="primaryMetric", required=true)
       private final Output<String> primaryMetric;
 
     public Output<String> getPrimaryMetric() {

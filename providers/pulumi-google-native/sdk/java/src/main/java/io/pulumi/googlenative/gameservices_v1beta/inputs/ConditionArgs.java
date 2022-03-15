@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gameservices_v1beta.enums.ConditionIam;
 import io.pulumi.googlenative.gameservices_v1beta.enums.ConditionOp;
 import io.pulumi.googlenative.gameservices_v1beta.enums.ConditionSys;
@@ -26,7 +26,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * Trusted attributes supplied by the IAM system.
      * 
      */
-    @InputImport(name="iam")
+    @Import(name="iam")
       private final @Nullable Output<ConditionIam> iam;
 
     public Output<ConditionIam> getIam() {
@@ -37,7 +37,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * An operator to apply the subject with.
      * 
      */
-    @InputImport(name="op")
+    @Import(name="op")
       private final @Nullable Output<ConditionOp> op;
 
     public Output<ConditionOp> getOp() {
@@ -48,7 +48,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * Trusted attributes discharged by the service.
      * 
      */
-    @InputImport(name="svc")
+    @Import(name="svc")
       private final @Nullable Output<String> svc;
 
     public Output<String> getSvc() {
@@ -59,7 +59,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * Trusted attributes supplied by any service that owns resources and uses the IAM system for access control.
      * 
      */
-    @InputImport(name="sys")
+    @Import(name="sys")
       private final @Nullable Output<ConditionSys> sys;
 
     public Output<ConditionSys> getSys() {
@@ -70,7 +70,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * The objects of the condition.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {

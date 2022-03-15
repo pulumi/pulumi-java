@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.WebAppSwiftVirtualNetworkConnectionArgs;
 import io.pulumi.azurenative.web.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class WebAppSwiftVirtualNetworkConnection extends io.pulumi.resources.Cus
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -47,7 +47,7 @@ public class WebAppSwiftVirtualNetworkConnection extends io.pulumi.resources.Cus
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -61,7 +61,7 @@ public class WebAppSwiftVirtualNetworkConnection extends io.pulumi.resources.Cus
      * The Virtual Network subnet's resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
      * 
      */
-    @OutputExport(name="subnetResourceId", type=String.class, parameters={})
+    @Export(name="subnetResourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> subnetResourceId;
 
     /**
@@ -75,7 +75,7 @@ public class WebAppSwiftVirtualNetworkConnection extends io.pulumi.resources.Cus
      * A flag that specifies if the scale unit this Web App is on supports Swift integration.
      * 
      */
-    @OutputExport(name="swiftSupported", type=Boolean.class, parameters={})
+    @Export(name="swiftSupported", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> swiftSupported;
 
     /**
@@ -89,7 +89,7 @@ public class WebAppSwiftVirtualNetworkConnection extends io.pulumi.resources.Cus
      * The system metadata relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -103,7 +103,7 @@ public class WebAppSwiftVirtualNetworkConnection extends io.pulumi.resources.Cus
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

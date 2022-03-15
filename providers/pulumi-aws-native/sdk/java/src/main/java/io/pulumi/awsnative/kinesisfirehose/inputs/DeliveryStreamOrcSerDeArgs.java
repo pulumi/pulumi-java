@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -18,70 +18,70 @@ public final class DeliveryStreamOrcSerDeArgs extends io.pulumi.resources.Resour
 
     public static final DeliveryStreamOrcSerDeArgs Empty = new DeliveryStreamOrcSerDeArgs();
 
-    @InputImport(name="blockSizeBytes")
+    @Import(name="blockSizeBytes")
       private final @Nullable Output<Integer> blockSizeBytes;
 
     public Output<Integer> getBlockSizeBytes() {
         return this.blockSizeBytes == null ? Output.empty() : this.blockSizeBytes;
     }
 
-    @InputImport(name="bloomFilterColumns")
+    @Import(name="bloomFilterColumns")
       private final @Nullable Output<List<String>> bloomFilterColumns;
 
     public Output<List<String>> getBloomFilterColumns() {
         return this.bloomFilterColumns == null ? Output.empty() : this.bloomFilterColumns;
     }
 
-    @InputImport(name="bloomFilterFalsePositiveProbability")
+    @Import(name="bloomFilterFalsePositiveProbability")
       private final @Nullable Output<Double> bloomFilterFalsePositiveProbability;
 
     public Output<Double> getBloomFilterFalsePositiveProbability() {
         return this.bloomFilterFalsePositiveProbability == null ? Output.empty() : this.bloomFilterFalsePositiveProbability;
     }
 
-    @InputImport(name="compression")
+    @Import(name="compression")
       private final @Nullable Output<String> compression;
 
     public Output<String> getCompression() {
         return this.compression == null ? Output.empty() : this.compression;
     }
 
-    @InputImport(name="dictionaryKeyThreshold")
+    @Import(name="dictionaryKeyThreshold")
       private final @Nullable Output<Double> dictionaryKeyThreshold;
 
     public Output<Double> getDictionaryKeyThreshold() {
         return this.dictionaryKeyThreshold == null ? Output.empty() : this.dictionaryKeyThreshold;
     }
 
-    @InputImport(name="enablePadding")
+    @Import(name="enablePadding")
       private final @Nullable Output<Boolean> enablePadding;
 
     public Output<Boolean> getEnablePadding() {
         return this.enablePadding == null ? Output.empty() : this.enablePadding;
     }
 
-    @InputImport(name="formatVersion")
+    @Import(name="formatVersion")
       private final @Nullable Output<String> formatVersion;
 
     public Output<String> getFormatVersion() {
         return this.formatVersion == null ? Output.empty() : this.formatVersion;
     }
 
-    @InputImport(name="paddingTolerance")
+    @Import(name="paddingTolerance")
       private final @Nullable Output<Double> paddingTolerance;
 
     public Output<Double> getPaddingTolerance() {
         return this.paddingTolerance == null ? Output.empty() : this.paddingTolerance;
     }
 
-    @InputImport(name="rowIndexStride")
+    @Import(name="rowIndexStride")
       private final @Nullable Output<Integer> rowIndexStride;
 
     public Output<Integer> getRowIndexStride() {
         return this.rowIndexStride == null ? Output.empty() : this.rowIndexStride;
     }
 
-    @InputImport(name="stripeSizeBytes")
+    @Import(name="stripeSizeBytes")
       private final @Nullable Output<Integer> stripeSizeBytes;
 
     public Output<Integer> getStripeSizeBytes() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class EC2FleetNetworkInterfaceCountRequestArgs extends io.pulumi.re
 
     public static final EC2FleetNetworkInterfaceCountRequestArgs Empty = new EC2FleetNetworkInterfaceCountRequestArgs();
 
-    @InputImport(name="max")
+    @Import(name="max")
       private final @Nullable Output<Integer> max;
 
     public Output<Integer> getMax() {
         return this.max == null ? Output.empty() : this.max;
     }
 
-    @InputImport(name="min")
+    @Import(name="min")
       private final @Nullable Output<Integer> min;
 
     public Output<Integer> getMin() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudasset_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OptionsResponse {
     /**
      * Optional. If true, the response will include access analysis from identities to resources via service account impersonation. This is a very expensive operation, because many derived queries will be executed. We highly recommend you use AssetService.AnalyzeIamPolicyLongrunning rpc instead. For example, if the request analyzes for which resources user A has permission P, and there's an IAM policy states user A has iam.serviceAccounts.getAccessToken permission to a service account SA, and there's another IAM policy states service account SA has permission P to a GCP folder F, then user A potentially has access to the GCP folder F. And those advanced analysis results will be included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Another example, if the request analyzes for who has permission P to a GCP folder F, and there's an IAM policy states user A has iam.serviceAccounts.actAs permission to a service account SA, and there's another IAM policy states service account SA has permission P to the GCP folder F, then user A potentially has access to the GCP folder F. And those advanced analysis results will be included in AnalyzeIamPolicyResponse.service_account_impersonation_analysis. Only the following permissions are considered in this analysis: * `iam.serviceAccounts.actAs` * `iam.serviceAccounts.signBlob` * `iam.serviceAccounts.signJwt` * `iam.serviceAccounts.getAccessToken` * `iam.serviceAccounts.getOpenIdToken` * `iam.serviceAccounts.implicitDelegation` Default is false.
@@ -40,14 +40,14 @@ public final class OptionsResponse {
      */
     private final Boolean outputResourceEdges;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OptionsResponse(
-        @OutputCustomType.Parameter("analyzeServiceAccountImpersonation") Boolean analyzeServiceAccountImpersonation,
-        @OutputCustomType.Parameter("expandGroups") Boolean expandGroups,
-        @OutputCustomType.Parameter("expandResources") Boolean expandResources,
-        @OutputCustomType.Parameter("expandRoles") Boolean expandRoles,
-        @OutputCustomType.Parameter("outputGroupEdges") Boolean outputGroupEdges,
-        @OutputCustomType.Parameter("outputResourceEdges") Boolean outputResourceEdges) {
+        @CustomType.Parameter("analyzeServiceAccountImpersonation") Boolean analyzeServiceAccountImpersonation,
+        @CustomType.Parameter("expandGroups") Boolean expandGroups,
+        @CustomType.Parameter("expandResources") Boolean expandResources,
+        @CustomType.Parameter("expandRoles") Boolean expandRoles,
+        @CustomType.Parameter("outputGroupEdges") Boolean outputGroupEdges,
+        @CustomType.Parameter("outputResourceEdges") Boolean outputResourceEdges) {
         this.analyzeServiceAccountImpersonation = analyzeServiceAccountImpersonation;
         this.expandGroups = expandGroups;
         this.expandResources = expandResources;

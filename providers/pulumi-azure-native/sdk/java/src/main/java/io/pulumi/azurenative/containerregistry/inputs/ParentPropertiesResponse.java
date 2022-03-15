@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.SyncPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ParentPropertiesResponse extends io.pulumi.resources.InvokeAr
      * The resource ID of the parent to which the connected registry will be associated.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -34,7 +34,7 @@ public final class ParentPropertiesResponse extends io.pulumi.resources.InvokeAr
      * The sync properties of the connected registry with its parent.
      * 
      */
-    @InputImport(name="syncProperties", required=true)
+    @Import(name="syncProperties", required=true)
       private final SyncPropertiesResponse syncProperties;
 
     public SyncPropertiesResponse getSyncProperties() {

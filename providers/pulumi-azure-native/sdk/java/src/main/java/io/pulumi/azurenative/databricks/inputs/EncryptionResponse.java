@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databricks.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
      * The name of KeyVault key.
      * 
      */
-    @InputImport(name="keyName")
+    @Import(name="keyName")
       private final @Nullable String keyName;
 
     public Optional<String> getKeyName() {
@@ -33,7 +33,7 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
      * The encryption keySource (provider). Possible values (case-insensitive):  Default, Microsoft.Keyvault
      * 
      */
-    @InputImport(name="keySource")
+    @Import(name="keySource")
       private final @Nullable String keySource;
 
     public Optional<String> getKeySource() {
@@ -44,7 +44,7 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
      * The Uri of KeyVault.
      * 
      */
-    @InputImport(name="keyVaultUri")
+    @Import(name="keyVaultUri")
       private final @Nullable String keyVaultUri;
 
     public Optional<String> getKeyVaultUri() {
@@ -55,7 +55,7 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
      * The version of KeyVault key.
      * 
      */
-    @InputImport(name="keyVersion")
+    @Import(name="keyVersion")
       private final @Nullable String keyVersion;
 
     public Optional<String> getKeyVersion() {

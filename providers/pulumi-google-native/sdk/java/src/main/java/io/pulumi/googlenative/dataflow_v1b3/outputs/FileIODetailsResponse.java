@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FileIODetailsResponse {
     /**
      * File Pattern used to access files by the connector.
@@ -15,8 +15,8 @@ public final class FileIODetailsResponse {
      */
     private final String filePattern;
 
-    @OutputCustomType.Constructor
-    private FileIODetailsResponse(@OutputCustomType.Parameter("filePattern") String filePattern) {
+    @CustomType.Constructor
+    private FileIODetailsResponse(@CustomType.Parameter("filePattern") String filePattern) {
         this.filePattern = filePattern;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.diagflow.outputs.CxIntentTrainingPhrasePart;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CxIntentTrainingPhrase {
     /**
      * The unique identifier of the parameter. This field is used by training phrases to annotate their parts.
@@ -37,11 +37,11 @@ public final class CxIntentTrainingPhrase {
      */
     private final @Nullable Integer repeatCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CxIntentTrainingPhrase(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("parts") List<CxIntentTrainingPhrasePart> parts,
-        @OutputCustomType.Parameter("repeatCount") @Nullable Integer repeatCount) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("parts") List<CxIntentTrainingPhrasePart> parts,
+        @CustomType.Parameter("repeatCount") @Nullable Integer repeatCount) {
         this.id = id;
         this.parts = parts;
         this.repeatCount = repeatCount;

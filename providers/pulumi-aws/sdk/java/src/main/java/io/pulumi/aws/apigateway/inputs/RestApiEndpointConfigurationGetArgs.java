@@ -4,7 +4,7 @@
 package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RestApiEndpointConfigurationGetArgs extends io.pulumi.resourc
      * A list of endpoint types. This resource currently only supports managing a single value. Valid values: `EDGE`, `REGIONAL` or `PRIVATE`. If unspecified, defaults to `EDGE`. Must be declared as `REGIONAL` in non-Commercial partitions. Refer to the [documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/create-regional-api.html) for more information on the difference between edge-optimized and regional APIs.
      * 
      */
-    @InputImport(name="types", required=true)
+    @Import(name="types", required=true)
       private final Output<String> types;
 
     public Output<String> getTypes() {
@@ -30,7 +30,7 @@ public final class RestApiEndpointConfigurationGetArgs extends io.pulumi.resourc
      * Set of VPC Endpoint identifiers. It is only supported for `PRIVATE` endpoint type. If importing an OpenAPI specification via the `body` argument, this corresponds to the [`x-amazon-apigateway-endpoint-configuration` extension `vpcEndpointIds` property](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-endpoint-configuration.html). If the argument value is provided and is different than the OpenAPI value, the argument value will override the OpenAPI value.
      * 
      */
-    @InputImport(name="vpcEndpointIds")
+    @Import(name="vpcEndpointIds")
       private final @Nullable Output<List<String>> vpcEndpointIds;
 
     public Output<List<String>> getVpcEndpointIds() {

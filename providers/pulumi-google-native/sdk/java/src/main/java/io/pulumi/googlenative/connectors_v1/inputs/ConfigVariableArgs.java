@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.connectors_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.connectors_v1.inputs.SecretArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
      * Value is a bool.
      * 
      */
-    @InputImport(name="boolValue")
+    @Import(name="boolValue")
       private final @Nullable Output<Boolean> boolValue;
 
     public Output<Boolean> getBoolValue() {
@@ -35,7 +35,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
      * Value is an integer
      * 
      */
-    @InputImport(name="intValue")
+    @Import(name="intValue")
       private final @Nullable Output<String> intValue;
 
     public Output<String> getIntValue() {
@@ -46,7 +46,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
      * Key of the config variable.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -57,7 +57,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
      * Value is a secret.
      * 
      */
-    @InputImport(name="secretValue")
+    @Import(name="secretValue")
       private final @Nullable Output<SecretArgs> secretValue;
 
     public Output<SecretArgs> getSecretValue() {
@@ -68,7 +68,7 @@ public final class ConfigVariableArgs extends io.pulumi.resources.ResourceArgs {
      * Value is a string.
      * 
      */
-    @InputImport(name="stringValue")
+    @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
     public Output<String> getStringValue() {

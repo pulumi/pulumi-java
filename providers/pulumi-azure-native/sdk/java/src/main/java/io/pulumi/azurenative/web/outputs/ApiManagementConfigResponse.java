@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiManagementConfigResponse {
     /**
      * APIM-Api Identifier.
@@ -17,8 +17,8 @@ public final class ApiManagementConfigResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
-    private ApiManagementConfigResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
+    @CustomType.Constructor
+    private ApiManagementConfigResponse(@CustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 

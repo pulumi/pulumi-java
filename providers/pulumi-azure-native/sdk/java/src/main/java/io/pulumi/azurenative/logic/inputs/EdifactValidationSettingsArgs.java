@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.enums.TrailingSeparatorPolicy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
      * The value indicating whether to allow leading and trailing spaces and zeroes.
      * 
      */
-    @InputImport(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
+    @Import(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
       private final Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
 
     public Output<Boolean> getAllowLeadingAndTrailingSpacesAndZeroes() {
@@ -36,7 +36,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
      * The value indicating whether to check for duplicate group control number.
      * 
      */
-    @InputImport(name="checkDuplicateGroupControlNumber", required=true)
+    @Import(name="checkDuplicateGroupControlNumber", required=true)
       private final Output<Boolean> checkDuplicateGroupControlNumber;
 
     public Output<Boolean> getCheckDuplicateGroupControlNumber() {
@@ -47,7 +47,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
      * The value indicating whether to check for duplicate interchange control number.
      * 
      */
-    @InputImport(name="checkDuplicateInterchangeControlNumber", required=true)
+    @Import(name="checkDuplicateInterchangeControlNumber", required=true)
       private final Output<Boolean> checkDuplicateInterchangeControlNumber;
 
     public Output<Boolean> getCheckDuplicateInterchangeControlNumber() {
@@ -58,7 +58,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
      * The value indicating whether to check for duplicate transaction set control number.
      * 
      */
-    @InputImport(name="checkDuplicateTransactionSetControlNumber", required=true)
+    @Import(name="checkDuplicateTransactionSetControlNumber", required=true)
       private final Output<Boolean> checkDuplicateTransactionSetControlNumber;
 
     public Output<Boolean> getCheckDuplicateTransactionSetControlNumber() {
@@ -69,7 +69,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
      * The validity period of interchange control number.
      * 
      */
-    @InputImport(name="interchangeControlNumberValidityDays", required=true)
+    @Import(name="interchangeControlNumberValidityDays", required=true)
       private final Output<Integer> interchangeControlNumberValidityDays;
 
     public Output<Integer> getInterchangeControlNumberValidityDays() {
@@ -80,7 +80,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
      * The trailing separator policy.
      * 
      */
-    @InputImport(name="trailingSeparatorPolicy", required=true)
+    @Import(name="trailingSeparatorPolicy", required=true)
       private final Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
 
     public Output<Either<String,TrailingSeparatorPolicy>> getTrailingSeparatorPolicy() {
@@ -91,7 +91,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
      * The value indicating whether to trim leading and trailing spaces and zeroes.
      * 
      */
-    @InputImport(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
+    @Import(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
       private final Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
 
     public Output<Boolean> getTrimLeadingAndTrailingSpacesAndZeroes() {
@@ -102,7 +102,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
      * The value indicating whether to validate character set in the message.
      * 
      */
-    @InputImport(name="validateCharacterSet", required=true)
+    @Import(name="validateCharacterSet", required=true)
       private final Output<Boolean> validateCharacterSet;
 
     public Output<Boolean> getValidateCharacterSet() {
@@ -113,7 +113,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
      * The value indicating whether to Whether to validate EDI types.
      * 
      */
-    @InputImport(name="validateEDITypes", required=true)
+    @Import(name="validateEDITypes", required=true)
       private final Output<Boolean> validateEDITypes;
 
     public Output<Boolean> getValidateEDITypes() {
@@ -124,7 +124,7 @@ public final class EdifactValidationSettingsArgs extends io.pulumi.resources.Res
      * The value indicating whether to Whether to validate XSD types.
      * 
      */
-    @InputImport(name="validateXSDTypes", required=true)
+    @Import(name="validateXSDTypes", required=true)
       private final Output<Boolean> validateXSDTypes;
 
     public Output<Boolean> getValidateXSDTypes() {

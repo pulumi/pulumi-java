@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ClientCertificateThumbprintResponse extends io.pulumi.resourc
      * The thumbprint of the client certificate.
      * 
      */
-    @InputImport(name="certificateThumbprint", required=true)
+    @Import(name="certificateThumbprint", required=true)
       private final String certificateThumbprint;
 
     public String getCertificateThumbprint() {
@@ -32,7 +32,7 @@ public final class ClientCertificateThumbprintResponse extends io.pulumi.resourc
      * Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
      * 
      */
-    @InputImport(name="isAdmin", required=true)
+    @Import(name="isAdmin", required=true)
       private final Boolean isAdmin;
 
     public Boolean getIsAdmin() {

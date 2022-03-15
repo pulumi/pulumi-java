@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
      * Used only for Stateless services. The default amount of load, as a number, that this service creates for this metric.
      * 
      */
-    @InputImport(name="defaultLoad")
+    @Import(name="defaultLoad")
       private final @Nullable Integer defaultLoad;
 
     public Optional<Integer> getDefaultLoad() {
@@ -34,7 +34,7 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
      * The name of the metric. If the service chooses to report load during runtime, the load metric name should match the name that is specified in Name exactly. Note that metric names are case sensitive.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -45,7 +45,7 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
      * Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Primary replica.
      * 
      */
-    @InputImport(name="primaryDefaultLoad")
+    @Import(name="primaryDefaultLoad")
       private final @Nullable Integer primaryDefaultLoad;
 
     public Optional<Integer> getPrimaryDefaultLoad() {
@@ -56,7 +56,7 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
      * Used only for Stateful services. The default amount of load, as a number, that this service creates for this metric when it is a Secondary replica.
      * 
      */
-    @InputImport(name="secondaryDefaultLoad")
+    @Import(name="secondaryDefaultLoad")
       private final @Nullable Integer secondaryDefaultLoad;
 
     public Optional<Integer> getSecondaryDefaultLoad() {
@@ -67,7 +67,7 @@ public final class ServiceLoadMetricDescriptionResponse extends io.pulumi.resour
      * The service load metric relative weight, compared to other metrics configured for this service, as a number.
      * 
      */
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable String weight;
 
     public Optional<String> getWeight() {

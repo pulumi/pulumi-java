@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorScaleInPolicy;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorScaleOutPolicy;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ConnectorAutoScaling extends io.pulumi.resources.InvokeArgs {
      * The maximum number of workers for a connector.
      * 
      */
-    @InputImport(name="maxWorkerCount", required=true)
+    @Import(name="maxWorkerCount", required=true)
       private final Integer maxWorkerCount;
 
     public Integer getMaxWorkerCount() {
@@ -33,7 +33,7 @@ public final class ConnectorAutoScaling extends io.pulumi.resources.InvokeArgs {
      * Specifies how many MSK Connect Units (MCU) as the minimum scaling unit.
      * 
      */
-    @InputImport(name="mcuCount", required=true)
+    @Import(name="mcuCount", required=true)
       private final Integer mcuCount;
 
     public Integer getMcuCount() {
@@ -44,21 +44,21 @@ public final class ConnectorAutoScaling extends io.pulumi.resources.InvokeArgs {
      * The minimum number of workers for a connector.
      * 
      */
-    @InputImport(name="minWorkerCount", required=true)
+    @Import(name="minWorkerCount", required=true)
       private final Integer minWorkerCount;
 
     public Integer getMinWorkerCount() {
         return this.minWorkerCount;
     }
 
-    @InputImport(name="scaleInPolicy", required=true)
+    @Import(name="scaleInPolicy", required=true)
       private final ConnectorScaleInPolicy scaleInPolicy;
 
     public ConnectorScaleInPolicy getScaleInPolicy() {
         return this.scaleInPolicy;
     }
 
-    @InputImport(name="scaleOutPolicy", required=true)
+    @Import(name="scaleOutPolicy", required=true)
       private final ConnectorScaleOutPolicy scaleOutPolicy;
 
     public ConnectorScaleOutPolicy getScaleOutPolicy() {

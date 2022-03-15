@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class InventoryScheduleArgs extends io.pulumi.resources.ResourceArg
      * Specifies how frequently inventory results are produced. Valid values: `Daily`, `Weekly`.
      * 
      */
-    @InputImport(name="frequency", required=true)
+    @Import(name="frequency", required=true)
       private final Output<String> frequency;
 
     public Output<String> getFrequency() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Toleration {
     /**
      * Effect indicates the taint effect to match. Empty means match all taint effects. When specified, allowed values are NoSchedule, PreferNoSchedule and NoExecute.
@@ -47,13 +47,13 @@ public final class Toleration {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Toleration(
-        @OutputCustomType.Parameter("effect") @Nullable String effect,
-        @OutputCustomType.Parameter("key") @Nullable String key,
-        @OutputCustomType.Parameter("operator") @Nullable String operator,
-        @OutputCustomType.Parameter("tolerationSeconds") @Nullable Integer tolerationSeconds,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("effect") @Nullable String effect,
+        @CustomType.Parameter("key") @Nullable String key,
+        @CustomType.Parameter("operator") @Nullable String operator,
+        @CustomType.Parameter("tolerationSeconds") @Nullable Integer tolerationSeconds,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.effect = effect;
         this.key = key;
         this.operator = operator;

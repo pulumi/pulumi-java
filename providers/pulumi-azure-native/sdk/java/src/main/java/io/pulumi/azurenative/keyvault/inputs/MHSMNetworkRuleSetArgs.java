@@ -9,7 +9,7 @@ import io.pulumi.azurenative.keyvault.inputs.MHSMIPRuleArgs;
 import io.pulumi.azurenative.keyvault.inputs.MHSMVirtualNetworkRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class MHSMNetworkRuleSetArgs extends io.pulumi.resources.ResourceAr
      * Tells what traffic can bypass network rules. This can be 'AzureServices' or 'None'.  If not specified the default is 'AzureServices'.
      * 
      */
-    @InputImport(name="bypass")
+    @Import(name="bypass")
       private final @Nullable Output<Either<String,NetworkRuleBypassOptions>> bypass;
 
     public Output<Either<String,NetworkRuleBypassOptions>> getBypass() {
@@ -39,7 +39,7 @@ public final class MHSMNetworkRuleSetArgs extends io.pulumi.resources.ResourceAr
      * The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
      * 
      */
-    @InputImport(name="defaultAction")
+    @Import(name="defaultAction")
       private final @Nullable Output<Either<String,NetworkRuleAction>> defaultAction;
 
     public Output<Either<String,NetworkRuleAction>> getDefaultAction() {
@@ -50,7 +50,7 @@ public final class MHSMNetworkRuleSetArgs extends io.pulumi.resources.ResourceAr
      * The list of IP address rules.
      * 
      */
-    @InputImport(name="ipRules")
+    @Import(name="ipRules")
       private final @Nullable Output<List<MHSMIPRuleArgs>> ipRules;
 
     public Output<List<MHSMIPRuleArgs>> getIpRules() {
@@ -61,7 +61,7 @@ public final class MHSMNetworkRuleSetArgs extends io.pulumi.resources.ResourceAr
      * The list of virtual network rules.
      * 
      */
-    @InputImport(name="virtualNetworkRules")
+    @Import(name="virtualNetworkRules")
       private final @Nullable Output<List<MHSMVirtualNetworkRuleArgs>> virtualNetworkRules;
 
     public Output<List<MHSMVirtualNetworkRuleArgs>> getVirtualNetworkRules() {

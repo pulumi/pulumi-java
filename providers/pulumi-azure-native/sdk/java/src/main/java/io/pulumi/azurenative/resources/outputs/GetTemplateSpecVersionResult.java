@@ -5,7 +5,7 @@ package io.pulumi.azurenative.resources.outputs;
 
 import io.pulumi.azurenative.resources.outputs.LinkedTemplateArtifactResponse;
 import io.pulumi.azurenative.resources.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetTemplateSpecVersionResult {
     /**
      * Template Spec version description.
@@ -72,19 +72,19 @@ public final class GetTemplateSpecVersionResult {
      */
     private final @Nullable Object uiFormDefinition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTemplateSpecVersionResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("linkedTemplates") @Nullable List<LinkedTemplateArtifactResponse> linkedTemplates,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("mainTemplate") @Nullable Object mainTemplate,
-        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("uiFormDefinition") @Nullable Object uiFormDefinition) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("linkedTemplates") @Nullable List<LinkedTemplateArtifactResponse> linkedTemplates,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("mainTemplate") @Nullable Object mainTemplate,
+        @CustomType.Parameter("metadata") @Nullable Object metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("uiFormDefinition") @Nullable Object uiFormDefinition) {
         this.description = description;
         this.id = id;
         this.linkedTemplates = linkedTemplates;

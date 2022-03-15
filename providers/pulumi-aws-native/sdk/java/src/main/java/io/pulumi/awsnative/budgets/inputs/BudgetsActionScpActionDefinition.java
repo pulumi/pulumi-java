@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.budgets.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,14 +13,14 @@ public final class BudgetsActionScpActionDefinition extends io.pulumi.resources.
 
     public static final BudgetsActionScpActionDefinition Empty = new BudgetsActionScpActionDefinition();
 
-    @InputImport(name="policyId", required=true)
+    @Import(name="policyId", required=true)
       private final String policyId;
 
     public String getPolicyId() {
         return this.policyId;
     }
 
-    @InputImport(name="targetIds", required=true)
+    @Import(name="targetIds", required=true)
       private final List<String> targetIds;
 
     public List<String> getTargetIds() {

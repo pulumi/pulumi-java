@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.dms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointKinesisSettings {
     /**
      * Shows detailed control information for table definition, column definition, and table and column changes in the Kinesis message output. The default is `false`.
@@ -58,17 +58,17 @@ public final class EndpointKinesisSettings {
      */
     private final @Nullable String streamArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointKinesisSettings(
-        @OutputCustomType.Parameter("includeControlDetails") @Nullable Boolean includeControlDetails,
-        @OutputCustomType.Parameter("includeNullAndEmpty") @Nullable Boolean includeNullAndEmpty,
-        @OutputCustomType.Parameter("includePartitionValue") @Nullable Boolean includePartitionValue,
-        @OutputCustomType.Parameter("includeTableAlterOperations") @Nullable Boolean includeTableAlterOperations,
-        @OutputCustomType.Parameter("includeTransactionDetails") @Nullable Boolean includeTransactionDetails,
-        @OutputCustomType.Parameter("messageFormat") @Nullable String messageFormat,
-        @OutputCustomType.Parameter("partitionIncludeSchemaTable") @Nullable Boolean partitionIncludeSchemaTable,
-        @OutputCustomType.Parameter("serviceAccessRoleArn") @Nullable String serviceAccessRoleArn,
-        @OutputCustomType.Parameter("streamArn") @Nullable String streamArn) {
+        @CustomType.Parameter("includeControlDetails") @Nullable Boolean includeControlDetails,
+        @CustomType.Parameter("includeNullAndEmpty") @Nullable Boolean includeNullAndEmpty,
+        @CustomType.Parameter("includePartitionValue") @Nullable Boolean includePartitionValue,
+        @CustomType.Parameter("includeTableAlterOperations") @Nullable Boolean includeTableAlterOperations,
+        @CustomType.Parameter("includeTransactionDetails") @Nullable Boolean includeTransactionDetails,
+        @CustomType.Parameter("messageFormat") @Nullable String messageFormat,
+        @CustomType.Parameter("partitionIncludeSchemaTable") @Nullable Boolean partitionIncludeSchemaTable,
+        @CustomType.Parameter("serviceAccessRoleArn") @Nullable String serviceAccessRoleArn,
+        @CustomType.Parameter("streamArn") @Nullable String streamArn) {
         this.includeControlDetails = includeControlDetails;
         this.includeNullAndEmpty = includeNullAndEmpty;
         this.includePartitionValue = includePartitionValue;

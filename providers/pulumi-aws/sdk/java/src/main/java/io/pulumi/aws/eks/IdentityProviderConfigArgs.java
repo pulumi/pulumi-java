@@ -5,7 +5,7 @@ package io.pulumi.aws.eks;
 
 import io.pulumi.aws.eks.inputs.IdentityProviderConfigOidcArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
      * Name of the EKS Cluster.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -31,7 +31,7 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
      * Nested attribute containing [OpenID Connect](https://openid.net/connect/) identity provider information for the cluster. Detailed below.
      * 
      */
-    @InputImport(name="oidc", required=true)
+    @Import(name="oidc", required=true)
       private final Output<IdentityProviderConfigOidcArgs> oidc;
 
     public Output<IdentityProviderConfigOidcArgs> getOidc() {
@@ -42,7 +42,7 @@ public final class IdentityProviderConfigArgs extends io.pulumi.resources.Resour
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

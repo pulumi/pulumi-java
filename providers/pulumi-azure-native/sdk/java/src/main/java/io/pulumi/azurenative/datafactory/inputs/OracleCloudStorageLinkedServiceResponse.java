@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
      * The access key identifier of the Oracle Cloud Storage Identity and Access Management (IAM) user. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="accessKeyId")
+    @Import(name="accessKeyId")
       private final @Nullable Object accessKeyId;
 
     public Optional<Object> getAccessKeyId() {
@@ -41,7 +41,7 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -52,7 +52,7 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -63,7 +63,7 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -74,7 +74,7 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -85,7 +85,7 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -96,7 +96,7 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
      * The secret access key of the Oracle Cloud Storage Identity and Access Management (IAM) user.
      * 
      */
-    @InputImport(name="secretAccessKey")
+    @Import(name="secretAccessKey")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getSecretAccessKey() {
@@ -107,7 +107,7 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
      * This value specifies the endpoint to access with the Oracle Cloud Storage Connector. This is an optional property; change it only if you want to try a different service endpoint or want to switch between https and http. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="serviceUrl")
+    @Import(name="serviceUrl")
       private final @Nullable Object serviceUrl;
 
     public Optional<Object> getServiceUrl() {
@@ -119,7 +119,7 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
      * Expected value is 'OracleCloudStorage'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

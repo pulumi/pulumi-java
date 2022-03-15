@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v1.inputs.TileResponse;
 import java.lang.Integer;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class MosaicLayoutResponse extends io.pulumi.resources.InvokeArgs {
      * The number of columns in the mosaic grid. The number of columns must be between 1 and 12, inclusive.
      * 
      */
-    @InputImport(name="columns", required=true)
+    @Import(name="columns", required=true)
       private final Integer columns;
 
     public Integer getColumns() {
@@ -33,7 +33,7 @@ public final class MosaicLayoutResponse extends io.pulumi.resources.InvokeArgs {
      * The tiles to display.
      * 
      */
-    @InputImport(name="tiles", required=true)
+    @Import(name="tiles", required=true)
       private final List<TileResponse> tiles;
 
     public List<TileResponse> getTiles() {

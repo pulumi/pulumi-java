@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.DurationResponse;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OutlierDetectionResponse {
     /**
      * The base time that a host is ejected for. The real ejection time is equal to the base ejection time multiplied by the number of times the host has been ejected. Defaults to 30000ms or 30s.
@@ -66,19 +66,19 @@ public final class OutlierDetectionResponse {
      */
     private final Integer successRateStdevFactor;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OutlierDetectionResponse(
-        @OutputCustomType.Parameter("baseEjectionTime") DurationResponse baseEjectionTime,
-        @OutputCustomType.Parameter("consecutiveErrors") Integer consecutiveErrors,
-        @OutputCustomType.Parameter("consecutiveGatewayFailure") Integer consecutiveGatewayFailure,
-        @OutputCustomType.Parameter("enforcingConsecutiveErrors") Integer enforcingConsecutiveErrors,
-        @OutputCustomType.Parameter("enforcingConsecutiveGatewayFailure") Integer enforcingConsecutiveGatewayFailure,
-        @OutputCustomType.Parameter("enforcingSuccessRate") Integer enforcingSuccessRate,
-        @OutputCustomType.Parameter("interval") DurationResponse interval,
-        @OutputCustomType.Parameter("maxEjectionPercent") Integer maxEjectionPercent,
-        @OutputCustomType.Parameter("successRateMinimumHosts") Integer successRateMinimumHosts,
-        @OutputCustomType.Parameter("successRateRequestVolume") Integer successRateRequestVolume,
-        @OutputCustomType.Parameter("successRateStdevFactor") Integer successRateStdevFactor) {
+        @CustomType.Parameter("baseEjectionTime") DurationResponse baseEjectionTime,
+        @CustomType.Parameter("consecutiveErrors") Integer consecutiveErrors,
+        @CustomType.Parameter("consecutiveGatewayFailure") Integer consecutiveGatewayFailure,
+        @CustomType.Parameter("enforcingConsecutiveErrors") Integer enforcingConsecutiveErrors,
+        @CustomType.Parameter("enforcingConsecutiveGatewayFailure") Integer enforcingConsecutiveGatewayFailure,
+        @CustomType.Parameter("enforcingSuccessRate") Integer enforcingSuccessRate,
+        @CustomType.Parameter("interval") DurationResponse interval,
+        @CustomType.Parameter("maxEjectionPercent") Integer maxEjectionPercent,
+        @CustomType.Parameter("successRateMinimumHosts") Integer successRateMinimumHosts,
+        @CustomType.Parameter("successRateRequestVolume") Integer successRateRequestVolume,
+        @CustomType.Parameter("successRateStdevFactor") Integer successRateStdevFactor) {
         this.baseEjectionTime = baseEjectionTime;
         this.consecutiveErrors = consecutiveErrors;
         this.consecutiveGatewayFailure = consecutiveGatewayFailure;

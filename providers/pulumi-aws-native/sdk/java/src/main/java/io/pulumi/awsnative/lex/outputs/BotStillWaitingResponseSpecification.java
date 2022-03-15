@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotMessageGroup;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BotStillWaitingResponseSpecification {
     /**
      * Indicates whether the user can interrupt a speech prompt from the bot.
@@ -23,12 +23,12 @@ public final class BotStillWaitingResponseSpecification {
     private final List<BotMessageGroup> messageGroupsList;
     private final Integer timeoutInSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BotStillWaitingResponseSpecification(
-        @OutputCustomType.Parameter("allowInterrupt") @Nullable Boolean allowInterrupt,
-        @OutputCustomType.Parameter("frequencyInSeconds") Integer frequencyInSeconds,
-        @OutputCustomType.Parameter("messageGroupsList") List<BotMessageGroup> messageGroupsList,
-        @OutputCustomType.Parameter("timeoutInSeconds") Integer timeoutInSeconds) {
+        @CustomType.Parameter("allowInterrupt") @Nullable Boolean allowInterrupt,
+        @CustomType.Parameter("frequencyInSeconds") Integer frequencyInSeconds,
+        @CustomType.Parameter("messageGroupsList") List<BotMessageGroup> messageGroupsList,
+        @CustomType.Parameter("timeoutInSeconds") Integer timeoutInSeconds) {
         this.allowInterrupt = allowInterrupt;
         this.frequencyInSeconds = frequencyInSeconds;
         this.messageGroupsList = messageGroupsList;

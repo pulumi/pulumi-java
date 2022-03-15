@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.diagflow.inputs.CxPageTransitionRouteTriggerFulfillmentMessageArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class CxPageTransitionRouteTriggerFulfillmentArgs extends io.pulumi
      * Structure is documented below.
      * 
      */
-    @InputImport(name="messages")
+    @Import(name="messages")
       private final @Nullable Output<List<CxPageTransitionRouteTriggerFulfillmentMessageArgs>> messages;
 
     public Output<List<CxPageTransitionRouteTriggerFulfillmentMessageArgs>> getMessages() {
@@ -33,7 +33,7 @@ public final class CxPageTransitionRouteTriggerFulfillmentArgs extends io.pulumi
      * Whether Dialogflow should return currently queued fulfillment response messages in streaming APIs. If a webhook is specified, it happens before Dialogflow invokes webhook. Warning: 1) This flag only affects streaming API. Responses are still queued and returned once in non-streaming API. 2) The flag can be enabled in any fulfillment but only the first 3 partial responses will be returned. You may only want to apply it to fulfillments that have slow webhooks.
      * 
      */
-    @InputImport(name="returnPartialResponses")
+    @Import(name="returnPartialResponses")
       private final @Nullable Output<Boolean> returnPartialResponses;
 
     public Output<Boolean> getReturnPartialResponses() {
@@ -44,7 +44,7 @@ public final class CxPageTransitionRouteTriggerFulfillmentArgs extends io.pulumi
      * The tag used by the webhook to identify which fulfillment is being called. This field is required if webhook is specified.
      * 
      */
-    @InputImport(name="tag")
+    @Import(name="tag")
       private final @Nullable Output<String> tag;
 
     public Output<String> getTag() {
@@ -55,7 +55,7 @@ public final class CxPageTransitionRouteTriggerFulfillmentArgs extends io.pulumi
      * The webhook to call. Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/webhooks/<Webhook ID>.
      * 
      */
-    @InputImport(name="webhook")
+    @Import(name="webhook")
       private final @Nullable Output<String> webhook;
 
     public Output<String> getWebhook() {

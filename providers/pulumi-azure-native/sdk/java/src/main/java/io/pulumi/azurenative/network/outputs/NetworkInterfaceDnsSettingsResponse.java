@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInterfaceDnsSettingsResponse {
     /**
      * If the VM that uses this NIC is part of an Availability Set, then this list will have the union of all DNS servers from all NICs that are part of the Availability Set. This property is what is configured on each of those VMs.
@@ -38,13 +38,13 @@ public final class NetworkInterfaceDnsSettingsResponse {
      */
     private final String internalFqdn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInterfaceDnsSettingsResponse(
-        @OutputCustomType.Parameter("appliedDnsServers") List<String> appliedDnsServers,
-        @OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
-        @OutputCustomType.Parameter("internalDnsNameLabel") @Nullable String internalDnsNameLabel,
-        @OutputCustomType.Parameter("internalDomainNameSuffix") String internalDomainNameSuffix,
-        @OutputCustomType.Parameter("internalFqdn") String internalFqdn) {
+        @CustomType.Parameter("appliedDnsServers") List<String> appliedDnsServers,
+        @CustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
+        @CustomType.Parameter("internalDnsNameLabel") @Nullable String internalDnsNameLabel,
+        @CustomType.Parameter("internalDomainNameSuffix") String internalDomainNameSuffix,
+        @CustomType.Parameter("internalFqdn") String internalFqdn) {
         this.appliedDnsServers = appliedDnsServers;
         this.dnsServers = dnsServers;
         this.internalDnsNameLabel = internalDnsNameLabel;

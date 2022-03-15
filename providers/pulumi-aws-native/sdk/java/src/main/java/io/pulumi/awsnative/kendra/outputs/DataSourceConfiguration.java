@@ -13,12 +13,12 @@ import io.pulumi.awsnative.kendra.outputs.DataSourceServiceNowConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceSharePointConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceWebCrawlerConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceWorkDocsConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceConfiguration {
     private final @Nullable DataSourceConfluenceConfiguration confluenceConfiguration;
     private final @Nullable DataSourceDatabaseConfiguration databaseConfiguration;
@@ -31,18 +31,18 @@ public final class DataSourceConfiguration {
     private final @Nullable DataSourceWebCrawlerConfiguration webCrawlerConfiguration;
     private final @Nullable DataSourceWorkDocsConfiguration workDocsConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceConfiguration(
-        @OutputCustomType.Parameter("confluenceConfiguration") @Nullable DataSourceConfluenceConfiguration confluenceConfiguration,
-        @OutputCustomType.Parameter("databaseConfiguration") @Nullable DataSourceDatabaseConfiguration databaseConfiguration,
-        @OutputCustomType.Parameter("googleDriveConfiguration") @Nullable DataSourceGoogleDriveConfiguration googleDriveConfiguration,
-        @OutputCustomType.Parameter("oneDriveConfiguration") @Nullable DataSourceOneDriveConfiguration oneDriveConfiguration,
-        @OutputCustomType.Parameter("s3Configuration") @Nullable DataSourceS3DataSourceConfiguration s3Configuration,
-        @OutputCustomType.Parameter("salesforceConfiguration") @Nullable DataSourceSalesforceConfiguration salesforceConfiguration,
-        @OutputCustomType.Parameter("serviceNowConfiguration") @Nullable DataSourceServiceNowConfiguration serviceNowConfiguration,
-        @OutputCustomType.Parameter("sharePointConfiguration") @Nullable DataSourceSharePointConfiguration sharePointConfiguration,
-        @OutputCustomType.Parameter("webCrawlerConfiguration") @Nullable DataSourceWebCrawlerConfiguration webCrawlerConfiguration,
-        @OutputCustomType.Parameter("workDocsConfiguration") @Nullable DataSourceWorkDocsConfiguration workDocsConfiguration) {
+        @CustomType.Parameter("confluenceConfiguration") @Nullable DataSourceConfluenceConfiguration confluenceConfiguration,
+        @CustomType.Parameter("databaseConfiguration") @Nullable DataSourceDatabaseConfiguration databaseConfiguration,
+        @CustomType.Parameter("googleDriveConfiguration") @Nullable DataSourceGoogleDriveConfiguration googleDriveConfiguration,
+        @CustomType.Parameter("oneDriveConfiguration") @Nullable DataSourceOneDriveConfiguration oneDriveConfiguration,
+        @CustomType.Parameter("s3Configuration") @Nullable DataSourceS3DataSourceConfiguration s3Configuration,
+        @CustomType.Parameter("salesforceConfiguration") @Nullable DataSourceSalesforceConfiguration salesforceConfiguration,
+        @CustomType.Parameter("serviceNowConfiguration") @Nullable DataSourceServiceNowConfiguration serviceNowConfiguration,
+        @CustomType.Parameter("sharePointConfiguration") @Nullable DataSourceSharePointConfiguration sharePointConfiguration,
+        @CustomType.Parameter("webCrawlerConfiguration") @Nullable DataSourceWebCrawlerConfiguration webCrawlerConfiguration,
+        @CustomType.Parameter("workDocsConfiguration") @Nullable DataSourceWorkDocsConfiguration workDocsConfiguration) {
         this.confluenceConfiguration = confluenceConfiguration;
         this.databaseConfiguration = databaseConfiguration;
         this.googleDriveConfiguration = googleDriveConfiguration;

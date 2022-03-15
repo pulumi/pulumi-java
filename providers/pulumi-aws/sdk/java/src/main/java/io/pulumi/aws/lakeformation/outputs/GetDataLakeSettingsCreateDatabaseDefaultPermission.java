@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.lakeformation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDataLakeSettingsCreateDatabaseDefaultPermission {
     /**
      * List of permissions granted to the principal.
@@ -21,10 +21,10 @@ public final class GetDataLakeSettingsCreateDatabaseDefaultPermission {
      */
     private final String principal;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDataLakeSettingsCreateDatabaseDefaultPermission(
-        @OutputCustomType.Parameter("permissions") List<String> permissions,
-        @OutputCustomType.Parameter("principal") String principal) {
+        @CustomType.Parameter("permissions") List<String> permissions,
+        @CustomType.Parameter("principal") String principal) {
         this.permissions = permissions;
         this.principal = principal;
     }

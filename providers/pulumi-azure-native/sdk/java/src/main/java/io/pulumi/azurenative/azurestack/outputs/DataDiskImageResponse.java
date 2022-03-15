@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.azurestack.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataDiskImageResponse {
     /**
      * The LUN.
@@ -21,10 +21,10 @@ public final class DataDiskImageResponse {
      */
     private final String sourceBlobSasUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataDiskImageResponse(
-        @OutputCustomType.Parameter("lun") Integer lun,
-        @OutputCustomType.Parameter("sourceBlobSasUri") String sourceBlobSasUri) {
+        @CustomType.Parameter("lun") Integer lun,
+        @CustomType.Parameter("sourceBlobSasUri") String sourceBlobSasUri) {
         this.lun = lun;
         this.sourceBlobSasUri = sourceBlobSasUri;
     }

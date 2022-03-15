@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.apimanagement.inputs.ResourceLocationDataContractArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Gateway description
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Gateway entity identifier. Must be unique in the current API Management service instance. Must not have value 'managed'
      * 
      */
-    @InputImport(name="gatewayId")
+    @Import(name="gatewayId")
       private final @Nullable Output<String> gatewayId;
 
     public Output<String> getGatewayId() {
@@ -41,7 +41,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * Gateway location.
      * 
      */
-    @InputImport(name="locationData")
+    @Import(name="locationData")
       private final @Nullable Output<ResourceLocationDataContractArgs> locationData;
 
     public Output<ResourceLocationDataContractArgs> getLocationData() {
@@ -52,7 +52,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the API Management service.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {

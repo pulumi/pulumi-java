@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databricks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PrivateLinkServiceConnectionStateResponse {
     /**
      * Actions required for a private endpoint connection
@@ -27,11 +27,11 @@ public final class PrivateLinkServiceConnectionStateResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PrivateLinkServiceConnectionStateResponse(
-        @OutputCustomType.Parameter("actionRequired") @Nullable String actionRequired,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("actionRequired") @Nullable String actionRequired,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("status") String status) {
         this.actionRequired = actionRequired;
         this.description = description;
         this.status = status;

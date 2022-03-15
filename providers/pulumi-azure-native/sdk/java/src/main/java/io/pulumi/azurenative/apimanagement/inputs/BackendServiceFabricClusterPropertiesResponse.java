@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.X509CertificateNameResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class BackendServiceFabricClusterPropertiesResponse extends io.pulu
      * The client certificate id for the management endpoint.
      * 
      */
-    @InputImport(name="clientCertificateId")
+    @Import(name="clientCertificateId")
       private final @Nullable String clientCertificateId;
 
     public Optional<String> getClientCertificateId() {
@@ -36,7 +36,7 @@ public final class BackendServiceFabricClusterPropertiesResponse extends io.pulu
      * The client certificate thumbprint for the management endpoint. Will be ignored if certificatesIds are provided
      * 
      */
-    @InputImport(name="clientCertificatethumbprint")
+    @Import(name="clientCertificatethumbprint")
       private final @Nullable String clientCertificatethumbprint;
 
     public Optional<String> getClientCertificatethumbprint() {
@@ -47,7 +47,7 @@ public final class BackendServiceFabricClusterPropertiesResponse extends io.pulu
      * The cluster management endpoint.
      * 
      */
-    @InputImport(name="managementEndpoints", required=true)
+    @Import(name="managementEndpoints", required=true)
       private final List<String> managementEndpoints;
 
     public List<String> getManagementEndpoints() {
@@ -58,7 +58,7 @@ public final class BackendServiceFabricClusterPropertiesResponse extends io.pulu
      * Maximum number of retries while attempting resolve the partition.
      * 
      */
-    @InputImport(name="maxPartitionResolutionRetries")
+    @Import(name="maxPartitionResolutionRetries")
       private final @Nullable Integer maxPartitionResolutionRetries;
 
     public Optional<Integer> getMaxPartitionResolutionRetries() {
@@ -69,7 +69,7 @@ public final class BackendServiceFabricClusterPropertiesResponse extends io.pulu
      * Thumbprints of certificates cluster management service uses for tls communication
      * 
      */
-    @InputImport(name="serverCertificateThumbprints")
+    @Import(name="serverCertificateThumbprints")
       private final @Nullable List<String> serverCertificateThumbprints;
 
     public List<String> getServerCertificateThumbprints() {
@@ -80,7 +80,7 @@ public final class BackendServiceFabricClusterPropertiesResponse extends io.pulu
      * Server X509 Certificate Names Collection
      * 
      */
-    @InputImport(name="serverX509Names")
+    @Import(name="serverX509Names")
       private final @Nullable List<X509CertificateNameResponse> serverX509Names;
 
     public List<X509CertificateNameResponse> getServerX509Names() {

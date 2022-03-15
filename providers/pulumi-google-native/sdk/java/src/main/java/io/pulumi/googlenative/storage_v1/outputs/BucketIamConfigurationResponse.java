@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.storage_v1.outputs.BucketIamConfigurationBucketPolicyOnlyResponse;
 import io.pulumi.googlenative.storage_v1.outputs.BucketIamConfigurationUniformBucketLevelAccessResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketIamConfigurationResponse {
     /**
      * The bucket's uniform bucket-level access configuration. The feature was formerly known as Bucket Policy Only. For backward compatibility, this field will be populated with identical information as the uniformBucketLevelAccess field. We recommend using the uniformBucketLevelAccess field to enable and disable the feature.
@@ -27,11 +27,11 @@ public final class BucketIamConfigurationResponse {
      */
     private final BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketIamConfigurationResponse(
-        @OutputCustomType.Parameter("bucketPolicyOnly") BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly,
-        @OutputCustomType.Parameter("publicAccessPrevention") String publicAccessPrevention,
-        @OutputCustomType.Parameter("uniformBucketLevelAccess") BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess) {
+        @CustomType.Parameter("bucketPolicyOnly") BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly,
+        @CustomType.Parameter("publicAccessPrevention") String publicAccessPrevention,
+        @CustomType.Parameter("uniformBucketLevelAccess") BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess) {
         this.bucketPolicyOnly = bucketPolicyOnly;
         this.publicAccessPrevention = publicAccessPrevention;
         this.uniformBucketLevelAccess = uniformBucketLevelAccess;

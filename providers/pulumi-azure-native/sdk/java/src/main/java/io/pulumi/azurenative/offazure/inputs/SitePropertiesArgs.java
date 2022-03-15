@@ -6,7 +6,7 @@ package io.pulumi.azurenative.offazure.inputs;
 import io.pulumi.azurenative.offazure.inputs.SiteAgentPropertiesArgs;
 import io.pulumi.azurenative.offazure.inputs.SiteSpnPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * On-premises agent details.
      * 
      */
-    @InputImport(name="agentDetails")
+    @Import(name="agentDetails")
       private final @Nullable Output<SiteAgentPropertiesArgs> agentDetails;
 
     public Output<SiteAgentPropertiesArgs> getAgentDetails() {
@@ -35,7 +35,7 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * Appliance Name.
      * 
      */
-    @InputImport(name="applianceName")
+    @Import(name="applianceName")
       private final @Nullable Output<String> applianceName;
 
     public Output<String> getApplianceName() {
@@ -46,7 +46,7 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * ARM ID of migration hub solution for SDS.
      * 
      */
-    @InputImport(name="discoverySolutionId")
+    @Import(name="discoverySolutionId")
       private final @Nullable Output<String> discoverySolutionId;
 
     public Output<String> getDiscoverySolutionId() {
@@ -57,7 +57,7 @@ public final class SitePropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * Service principal identity details used by agent for communication to the service.
      * 
      */
-    @InputImport(name="servicePrincipalIdentityDetails")
+    @Import(name="servicePrincipalIdentityDetails")
       private final @Nullable Output<SiteSpnPropertiesArgs> servicePrincipalIdentityDetails;
 
     public Output<SiteSpnPropertiesArgs> getServicePrincipalIdentityDetails() {

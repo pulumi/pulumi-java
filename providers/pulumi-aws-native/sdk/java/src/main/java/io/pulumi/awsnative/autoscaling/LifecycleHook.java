@@ -6,7 +6,7 @@ package io.pulumi.awsnative.autoscaling;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.autoscaling.LifecycleHookArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public class LifecycleHook extends io.pulumi.resources.CustomResource {
      * The name of the Auto Scaling group for the lifecycle hook.
      * 
      */
-    @OutputExport(name="autoScalingGroupName", type=String.class, parameters={})
+    @Export(name="autoScalingGroupName", type=String.class, parameters={})
     private Output<String> autoScalingGroupName;
 
     /**
@@ -36,7 +36,7 @@ public class LifecycleHook extends io.pulumi.resources.CustomResource {
      * The action the Auto Scaling group takes when the lifecycle hook timeout elapses or if an unexpected failure occurs. The valid values are CONTINUE and ABANDON (default).
      * 
      */
-    @OutputExport(name="defaultResult", type=String.class, parameters={})
+    @Export(name="defaultResult", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultResult;
 
     /**
@@ -50,7 +50,7 @@ public class LifecycleHook extends io.pulumi.resources.CustomResource {
      * The maximum time, in seconds, that can elapse before the lifecycle hook times out. The range is from 30 to 7200 seconds. The default value is 3600 seconds (1 hour). If the lifecycle hook times out, Amazon EC2 Auto Scaling performs the action that you specified in the DefaultResult property.
      * 
      */
-    @OutputExport(name="heartbeatTimeout", type=Integer.class, parameters={})
+    @Export(name="heartbeatTimeout", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> heartbeatTimeout;
 
     /**
@@ -64,7 +64,7 @@ public class LifecycleHook extends io.pulumi.resources.CustomResource {
      * The name of the lifecycle hook.
      * 
      */
-    @OutputExport(name="lifecycleHookName", type=String.class, parameters={})
+    @Export(name="lifecycleHookName", type=String.class, parameters={})
     private Output</* @Nullable */ String> lifecycleHookName;
 
     /**
@@ -78,7 +78,7 @@ public class LifecycleHook extends io.pulumi.resources.CustomResource {
      * The instance state to which you want to attach the lifecycle hook.
      * 
      */
-    @OutputExport(name="lifecycleTransition", type=String.class, parameters={})
+    @Export(name="lifecycleTransition", type=String.class, parameters={})
     private Output<String> lifecycleTransition;
 
     /**
@@ -92,7 +92,7 @@ public class LifecycleHook extends io.pulumi.resources.CustomResource {
      * Additional information that is included any time Amazon EC2 Auto Scaling sends a message to the notification target.
      * 
      */
-    @OutputExport(name="notificationMetadata", type=String.class, parameters={})
+    @Export(name="notificationMetadata", type=String.class, parameters={})
     private Output</* @Nullable */ String> notificationMetadata;
 
     /**
@@ -106,7 +106,7 @@ public class LifecycleHook extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the notification target that Amazon EC2 Auto Scaling uses to notify you when an instance is in the transition state for the lifecycle hook. You can specify an Amazon SQS queue or an Amazon SNS topic. The notification message includes the following information: lifecycle action token, user account ID, Auto Scaling group name, lifecycle hook name, instance ID, lifecycle transition, and notification metadata.
      * 
      */
-    @OutputExport(name="notificationTargetARN", type=String.class, parameters={})
+    @Export(name="notificationTargetARN", type=String.class, parameters={})
     private Output</* @Nullable */ String> notificationTargetARN;
 
     /**
@@ -120,7 +120,7 @@ public class LifecycleHook extends io.pulumi.resources.CustomResource {
      * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified notification target, for example, an Amazon SNS topic or an Amazon SQS queue.
      * 
      */
-    @OutputExport(name="roleARN", type=String.class, parameters={})
+    @Export(name="roleARN", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleARN;
 
     /**

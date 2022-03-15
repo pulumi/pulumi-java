@@ -4,24 +4,24 @@
 package io.pulumi.awsnative.backup.outputs;
 
 import io.pulumi.awsnative.backup.outputs.BackupSelectionConditionParameter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackupSelectionResourceTypeConditionsProperties {
     private final @Nullable List<BackupSelectionConditionParameter> stringEquals;
     private final @Nullable List<BackupSelectionConditionParameter> stringLike;
     private final @Nullable List<BackupSelectionConditionParameter> stringNotEquals;
     private final @Nullable List<BackupSelectionConditionParameter> stringNotLike;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackupSelectionResourceTypeConditionsProperties(
-        @OutputCustomType.Parameter("stringEquals") @Nullable List<BackupSelectionConditionParameter> stringEquals,
-        @OutputCustomType.Parameter("stringLike") @Nullable List<BackupSelectionConditionParameter> stringLike,
-        @OutputCustomType.Parameter("stringNotEquals") @Nullable List<BackupSelectionConditionParameter> stringNotEquals,
-        @OutputCustomType.Parameter("stringNotLike") @Nullable List<BackupSelectionConditionParameter> stringNotLike) {
+        @CustomType.Parameter("stringEquals") @Nullable List<BackupSelectionConditionParameter> stringEquals,
+        @CustomType.Parameter("stringLike") @Nullable List<BackupSelectionConditionParameter> stringLike,
+        @CustomType.Parameter("stringNotEquals") @Nullable List<BackupSelectionConditionParameter> stringNotEquals,
+        @CustomType.Parameter("stringNotLike") @Nullable List<BackupSelectionConditionParameter> stringNotLike) {
         this.stringEquals = stringEquals;
         this.stringLike = stringLike;
         this.stringNotEquals = stringNotEquals;

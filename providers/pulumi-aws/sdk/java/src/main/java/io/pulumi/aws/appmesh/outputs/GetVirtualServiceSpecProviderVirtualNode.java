@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetVirtualServiceSpecProviderVirtualNode {
     /**
      * The name of the virtual node that is acting as a service provider.
@@ -15,8 +15,8 @@ public final class GetVirtualServiceSpecProviderVirtualNode {
      */
     private final String virtualNodeName;
 
-    @OutputCustomType.Constructor
-    private GetVirtualServiceSpecProviderVirtualNode(@OutputCustomType.Parameter("virtualNodeName") String virtualNodeName) {
+    @CustomType.Constructor
+    private GetVirtualServiceSpecProviderVirtualNode(@CustomType.Parameter("virtualNodeName") String virtualNodeName) {
         this.virtualNodeName = virtualNodeName;
     }
 

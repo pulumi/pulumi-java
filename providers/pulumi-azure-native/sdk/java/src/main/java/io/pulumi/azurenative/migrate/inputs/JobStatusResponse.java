@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Defines the job name.
      * 
      */
-    @InputImport(name="jobName", required=true)
+    @Import(name="jobName", required=true)
       private final String jobName;
 
     public String getJobName() {
@@ -31,7 +31,7 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Gets or sets the monitoring job percentage.
      * 
      */
-    @InputImport(name="jobProgress", required=true)
+    @Import(name="jobProgress", required=true)
       private final String jobProgress;
 
     public String getJobProgress() {

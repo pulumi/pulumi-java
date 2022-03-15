@@ -7,7 +7,7 @@ import io.pulumi.azurenative.kubernetes.enums.ProvisioningState;
 import io.pulumi.azurenative.kubernetes.inputs.ConnectedClusterIdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
      * Base64 encoded public certificate used by the agent to do the initial handshake to the backend services in Azure.
      * 
      */
-    @InputImport(name="agentPublicKeyCertificate", required=true)
+    @Import(name="agentPublicKeyCertificate", required=true)
       private final Output<String> agentPublicKeyCertificate;
 
     public Output<String> getAgentPublicKeyCertificate() {
@@ -33,7 +33,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
      * The name of the Kubernetes cluster on which get is called.
      * 
      */
-    @InputImport(name="clusterName")
+    @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -44,7 +44,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
      * The Kubernetes distribution running on this connected cluster.
      * 
      */
-    @InputImport(name="distribution")
+    @Import(name="distribution")
       private final @Nullable Output<String> distribution;
 
     public Output<String> getDistribution() {
@@ -55,7 +55,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
      * The identity of the connected cluster.
      * 
      */
-    @InputImport(name="identity", required=true)
+    @Import(name="identity", required=true)
       private final Output<ConnectedClusterIdentityArgs> identity;
 
     public Output<ConnectedClusterIdentityArgs> getIdentity() {
@@ -66,7 +66,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
      * The infrastructure on which the Kubernetes cluster represented by this connected cluster is running on.
      * 
      */
-    @InputImport(name="infrastructure")
+    @Import(name="infrastructure")
       private final @Nullable Output<String> infrastructure;
 
     public Output<String> getInfrastructure() {
@@ -77,7 +77,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -88,7 +88,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
      * Provisioning state of the connected cluster resource.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable Output<Either<String,ProvisioningState>> provisioningState;
 
     public Output<Either<String,ProvisioningState>> getProvisioningState() {
@@ -99,7 +99,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -110,7 +110,7 @@ public final class ConnectedClusterArgs extends io.pulumi.resources.ResourceArgs
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

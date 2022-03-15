@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.macie.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCustomDataIdentifierResult {
     /**
      * Custom data identifier ARN.
@@ -22,10 +22,10 @@ public final class GetCustomDataIdentifierResult {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCustomDataIdentifierResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("id") @Nullable String id) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("id") @Nullable String id) {
         this.arn = arn;
         this.id = id;
     }

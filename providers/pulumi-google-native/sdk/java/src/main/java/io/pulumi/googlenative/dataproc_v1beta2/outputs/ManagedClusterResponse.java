@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.ClusterConfigResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedClusterResponse {
     /**
      * The cluster name prefix. A unique cluster name will be formed by appending a random suffix.The name must contain only lower-case letters (a-z), numbers (0-9), and hyphens (-). Must begin with a letter. Cannot begin or end with hyphen. Must consist of between 2 and 35 characters.
@@ -27,11 +27,11 @@ public final class ManagedClusterResponse {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedClusterResponse(
-        @OutputCustomType.Parameter("clusterName") String clusterName,
-        @OutputCustomType.Parameter("config") ClusterConfigResponse config,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels) {
+        @CustomType.Parameter("clusterName") String clusterName,
+        @CustomType.Parameter("config") ClusterConfigResponse config,
+        @CustomType.Parameter("labels") Map<String,String> labels) {
         this.clusterName = clusterName;
         this.config = config;
         this.labels = labels;

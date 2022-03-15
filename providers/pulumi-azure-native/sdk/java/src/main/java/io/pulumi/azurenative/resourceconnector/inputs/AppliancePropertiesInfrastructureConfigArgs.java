@@ -6,7 +6,7 @@ package io.pulumi.azurenative.resourceconnector.inputs;
 import io.pulumi.azurenative.resourceconnector.enums.Provider;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class AppliancePropertiesInfrastructureConfigArgs extends io.pulumi
      * Information about the connected appliance.
      * 
      */
-    @InputImport(name="provider")
+    @Import(name="provider")
       private final @Nullable Output<Either<String,Provider>> provider;
 
     public Output<Either<String,Provider>> getProvider() {

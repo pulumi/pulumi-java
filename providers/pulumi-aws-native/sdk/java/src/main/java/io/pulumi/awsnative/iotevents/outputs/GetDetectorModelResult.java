@@ -6,14 +6,14 @@ package io.pulumi.awsnative.iotevents.outputs;
 import io.pulumi.awsnative.iotevents.enums.DetectorModelEvaluationMethod;
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelDefinition;
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDetectorModelResult {
     private final @Nullable DetectorModelDefinition detectorModelDefinition;
     /**
@@ -39,13 +39,13 @@ public final class GetDetectorModelResult {
      */
     private final @Nullable List<DetectorModelTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDetectorModelResult(
-        @OutputCustomType.Parameter("detectorModelDefinition") @Nullable DetectorModelDefinition detectorModelDefinition,
-        @OutputCustomType.Parameter("detectorModelDescription") @Nullable String detectorModelDescription,
-        @OutputCustomType.Parameter("evaluationMethod") @Nullable DetectorModelEvaluationMethod evaluationMethod,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<DetectorModelTag> tags) {
+        @CustomType.Parameter("detectorModelDefinition") @Nullable DetectorModelDefinition detectorModelDefinition,
+        @CustomType.Parameter("detectorModelDescription") @Nullable String detectorModelDescription,
+        @CustomType.Parameter("evaluationMethod") @Nullable DetectorModelEvaluationMethod evaluationMethod,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn,
+        @CustomType.Parameter("tags") @Nullable List<DetectorModelTag> tags) {
         this.detectorModelDefinition = detectorModelDefinition;
         this.detectorModelDescription = detectorModelDescription;
         this.evaluationMethod = evaluationMethod;

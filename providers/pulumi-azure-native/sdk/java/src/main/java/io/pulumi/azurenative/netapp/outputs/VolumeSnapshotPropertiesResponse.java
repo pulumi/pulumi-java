@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VolumeSnapshotPropertiesResponse {
     /**
      * Snapshot Policy ResourceId
@@ -17,8 +17,8 @@ public final class VolumeSnapshotPropertiesResponse {
      */
     private final @Nullable String snapshotPolicyId;
 
-    @OutputCustomType.Constructor
-    private VolumeSnapshotPropertiesResponse(@OutputCustomType.Parameter("snapshotPolicyId") @Nullable String snapshotPolicyId) {
+    @CustomType.Constructor
+    private VolumeSnapshotPropertiesResponse(@CustomType.Parameter("snapshotPolicyId") @Nullable String snapshotPolicyId) {
         this.snapshotPolicyId = snapshotPolicyId;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetInstanceNetworkInterfaceAliasIpRange extends io.pulumi.res
      * The IP CIDR range represented by this alias IP range.
      * 
      */
-    @InputImport(name="ipCidrRange", required=true)
+    @Import(name="ipCidrRange", required=true)
       private final String ipCidrRange;
 
     public String getIpCidrRange() {
@@ -29,7 +29,7 @@ public final class GetInstanceNetworkInterfaceAliasIpRange extends io.pulumi.res
      * range.
      * 
      */
-    @InputImport(name="subnetworkRangeName", required=true)
+    @Import(name="subnetworkRangeName", required=true)
       private final String subnetworkRangeName;
 
     public String getSubnetworkRangeName() {

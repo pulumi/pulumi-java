@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.enums.ConditionIam;
 import io.pulumi.googlenative.compute_alpha.enums.ConditionOp;
 import io.pulumi.googlenative.compute_alpha.enums.ConditionSys;
@@ -26,7 +26,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="iam")
+    @Import(name="iam")
       private final @Nullable Output<ConditionIam> iam;
 
     public Output<ConditionIam> getIam() {
@@ -37,7 +37,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="op")
+    @Import(name="op")
       private final @Nullable Output<ConditionOp> op;
 
     public Output<ConditionOp> getOp() {
@@ -48,7 +48,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="svc")
+    @Import(name="svc")
       private final @Nullable Output<String> svc;
 
     public Output<String> getSvc() {
@@ -59,7 +59,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="sys")
+    @Import(name="sys")
       private final @Nullable Output<ConditionSys> sys;
 
     public Output<ConditionSys> getSys() {
@@ -70,7 +70,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {

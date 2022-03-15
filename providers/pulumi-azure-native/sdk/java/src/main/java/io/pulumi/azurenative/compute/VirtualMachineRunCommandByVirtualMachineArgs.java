@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.compute.inputs.RunCommandInputParameterArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineRunCommandScriptSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
      * Optional. If set to true, provisioning will complete as soon as the script starts and will not wait for script to complete.
      * 
      */
-    @InputImport(name="asyncExecution")
+    @Import(name="asyncExecution")
       private final @Nullable Output<Boolean> asyncExecution;
 
     public Output<Boolean> getAsyncExecution() {
@@ -35,7 +35,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
      * Specifies the Azure storage blob where script error stream will be uploaded.
      * 
      */
-    @InputImport(name="errorBlobUri")
+    @Import(name="errorBlobUri")
       private final @Nullable Output<String> errorBlobUri;
 
     public Output<String> getErrorBlobUri() {
@@ -46,7 +46,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -57,7 +57,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
      * Specifies the Azure storage blob where script output stream will be uploaded.
      * 
      */
-    @InputImport(name="outputBlobUri")
+    @Import(name="outputBlobUri")
       private final @Nullable Output<String> outputBlobUri;
 
     public Output<String> getOutputBlobUri() {
@@ -68,7 +68,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
      * The parameters used by the script.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<RunCommandInputParameterArgs>> parameters;
 
     public Output<List<RunCommandInputParameterArgs>> getParameters() {
@@ -79,7 +79,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
      * The parameters used by the script.
      * 
      */
-    @InputImport(name="protectedParameters")
+    @Import(name="protectedParameters")
       private final @Nullable Output<List<RunCommandInputParameterArgs>> protectedParameters;
 
     public Output<List<RunCommandInputParameterArgs>> getProtectedParameters() {
@@ -90,7 +90,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -101,7 +101,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
      * Specifies the user account password on the VM when executing the run command.
      * 
      */
-    @InputImport(name="runAsPassword")
+    @Import(name="runAsPassword")
       private final @Nullable Output<String> runAsPassword;
 
     public Output<String> getRunAsPassword() {
@@ -112,7 +112,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
      * Specifies the user account on the VM when executing the run command.
      * 
      */
-    @InputImport(name="runAsUser")
+    @Import(name="runAsUser")
       private final @Nullable Output<String> runAsUser;
 
     public Output<String> getRunAsUser() {
@@ -123,7 +123,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
      * The name of the virtual machine run command.
      * 
      */
-    @InputImport(name="runCommandName")
+    @Import(name="runCommandName")
       private final @Nullable Output<String> runCommandName;
 
     public Output<String> getRunCommandName() {
@@ -134,7 +134,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
      * The source of the run command script.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<VirtualMachineRunCommandScriptSourceArgs> source;
 
     public Output<VirtualMachineRunCommandScriptSourceArgs> getSource() {
@@ -145,7 +145,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -156,7 +156,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
      * The timeout in seconds to execute the run command.
      * 
      */
-    @InputImport(name="timeoutInSeconds")
+    @Import(name="timeoutInSeconds")
       private final @Nullable Output<Integer> timeoutInSeconds;
 
     public Output<Integer> getTimeoutInSeconds() {
@@ -167,7 +167,7 @@ public final class VirtualMachineRunCommandByVirtualMachineArgs extends io.pulum
      * The name of the virtual machine where the run command should be created or updated.
      * 
      */
-    @InputImport(name="vmName", required=true)
+    @Import(name="vmName", required=true)
       private final Output<String> vmName;
 
     public Output<String> getVmName() {

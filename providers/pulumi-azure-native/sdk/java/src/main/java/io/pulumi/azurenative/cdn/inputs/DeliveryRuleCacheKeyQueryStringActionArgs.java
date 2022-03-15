@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.CacheKeyQueryStringActionParametersArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class DeliveryRuleCacheKeyQueryStringActionArgs extends io.pulumi.r
      * Expected value is 'CacheKeyQueryString'.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class DeliveryRuleCacheKeyQueryStringActionArgs extends io.pulumi.r
      * Defines the parameters for the action.
      * 
      */
-    @InputImport(name="parameters", required=true)
+    @Import(name="parameters", required=true)
       private final Output<CacheKeyQueryStringActionParametersArgs> parameters;
 
     public Output<CacheKeyQueryStringActionParametersArgs> getParameters() {

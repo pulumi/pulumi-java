@@ -5,7 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.aws.glue.inputs.GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption;
 import io.pulumi.aws.glue.inputs.GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting 
      * When connection password protection is enabled, the Data Catalog uses a customer-provided key to encrypt the password as part of CreateConnection or UpdateConnection and store it in the ENCRYPTED_PASSWORD field in the connection properties. You can enable catalog encryption or only password encryption. see Connection Password Encryption.
      * 
      */
-    @InputImport(name="connectionPasswordEncryptions", required=true)
+    @Import(name="connectionPasswordEncryptions", required=true)
       private final List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> connectionPasswordEncryptions;
 
     public List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption> getConnectionPasswordEncryptions() {
@@ -29,7 +29,7 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting 
      * Specifies the encryption-at-rest configuration for the Data Catalog. see Encryption At Rest.
      * 
      */
-    @InputImport(name="encryptionAtRests", required=true)
+    @Import(name="encryptionAtRests", required=true)
       private final List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> encryptionAtRests;
 
     public List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingEncryptionAtRest> getEncryptionAtRests() {

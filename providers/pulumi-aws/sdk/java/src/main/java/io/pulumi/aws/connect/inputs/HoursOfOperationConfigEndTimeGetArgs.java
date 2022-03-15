@@ -4,7 +4,7 @@
 package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class HoursOfOperationConfigEndTimeGetArgs extends io.pulumi.resour
      * Specifies the hour of closing.
      * 
      */
-    @InputImport(name="hours", required=true)
+    @Import(name="hours", required=true)
       private final Output<Integer> hours;
 
     public Output<Integer> getHours() {
@@ -28,7 +28,7 @@ public final class HoursOfOperationConfigEndTimeGetArgs extends io.pulumi.resour
      * Specifies the minute of closing.
      * 
      */
-    @InputImport(name="minutes", required=true)
+    @Import(name="minutes", required=true)
       private final Output<Integer> minutes;
 
     public Output<Integer> getMinutes() {

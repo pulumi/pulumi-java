@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appflow.inputs;
 import io.pulumi.awsnative.appflow.enums.FlowWriteOperationType;
 import io.pulumi.awsnative.appflow.inputs.FlowErrorHandlingConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class FlowSalesforceDestinationPropertiesArgs extends io.pulumi.res
 
     public static final FlowSalesforceDestinationPropertiesArgs Empty = new FlowSalesforceDestinationPropertiesArgs();
 
-    @InputImport(name="errorHandlingConfig")
+    @Import(name="errorHandlingConfig")
       private final @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig;
 
     public Output<FlowErrorHandlingConfigArgs> getErrorHandlingConfig() {
@@ -28,21 +28,21 @@ public final class FlowSalesforceDestinationPropertiesArgs extends io.pulumi.res
      * List of fields used as ID when performing a write operation.
      * 
      */
-    @InputImport(name="idFieldNames")
+    @Import(name="idFieldNames")
       private final @Nullable Output<List<String>> idFieldNames;
 
     public Output<List<String>> getIdFieldNames() {
         return this.idFieldNames == null ? Output.empty() : this.idFieldNames;
     }
 
-    @InputImport(name="object", required=true)
+    @Import(name="object", required=true)
       private final Output<String> object;
 
     public Output<String> getObject() {
         return this.object;
     }
 
-    @InputImport(name="writeOperationType")
+    @Import(name="writeOperationType")
       private final @Nullable Output<FlowWriteOperationType> writeOperationType;
 
     public Output<FlowWriteOperationType> getWriteOperationType() {

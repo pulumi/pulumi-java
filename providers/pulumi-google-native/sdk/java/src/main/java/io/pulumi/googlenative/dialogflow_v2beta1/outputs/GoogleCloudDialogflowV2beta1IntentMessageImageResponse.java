@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2beta1IntentMessageImageResponse {
     /**
      * A text description of the image to be used for accessibility, e.g., screen readers. Required if image_uri is set for CarouselSelect.
@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageResponse {
      */
     private final String imageUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageImageResponse(
-        @OutputCustomType.Parameter("accessibilityText") String accessibilityText,
-        @OutputCustomType.Parameter("imageUri") String imageUri) {
+        @CustomType.Parameter("accessibilityText") String accessibilityText,
+        @CustomType.Parameter("imageUri") String imageUri) {
         this.accessibilityText = accessibilityText;
         this.imageUri = imageUri;
     }

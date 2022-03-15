@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.IssuancePolicyResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.PublishingOptionsResponse;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCaPoolResult {
     /**
      * Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.
@@ -38,13 +38,13 @@ public final class GetCaPoolResult {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCaPoolResult(
-        @OutputCustomType.Parameter("issuancePolicy") IssuancePolicyResponse issuancePolicy,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("publishingOptions") PublishingOptionsResponse publishingOptions,
-        @OutputCustomType.Parameter("tier") String tier) {
+        @CustomType.Parameter("issuancePolicy") IssuancePolicyResponse issuancePolicy,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("publishingOptions") PublishingOptionsResponse publishingOptions,
+        @CustomType.Parameter("tier") String tier) {
         this.issuancePolicy = issuancePolicy;
         this.labels = labels;
         this.name = name;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.InstanceGroupManagerAutoHealingPoliciesGetArgs;
 import io.pulumi.gcp.compute.inputs.InstanceGroupManagerNamedPortGetArgs;
 import io.pulumi.gcp.compute.inputs.InstanceGroupManagerStatefulDiskGetArgs;
@@ -28,7 +28,7 @@ public final class InstanceGroupManagerState extends io.pulumi.resources.Resourc
      * group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
      * 
      */
-    @InputImport(name="autoHealingPolicies")
+    @Import(name="autoHealingPolicies")
       private final @Nullable Output<InstanceGroupManagerAutoHealingPoliciesGetArgs> autoHealingPolicies;
 
     public Output<InstanceGroupManagerAutoHealingPoliciesGetArgs> getAutoHealingPolicies() {
@@ -44,7 +44,7 @@ public final class InstanceGroupManagerState extends io.pulumi.resources.Resourc
      * name.
      * 
      */
-    @InputImport(name="baseInstanceName")
+    @Import(name="baseInstanceName")
       private final @Nullable Output<String> baseInstanceName;
 
     public Output<String> getBaseInstanceName() {
@@ -56,7 +56,7 @@ public final class InstanceGroupManagerState extends io.pulumi.resources.Resourc
      * group manager.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -67,7 +67,7 @@ public final class InstanceGroupManagerState extends io.pulumi.resources.Resourc
      * The fingerprint of the instance group manager.
      * 
      */
-    @InputImport(name="fingerprint")
+    @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
@@ -78,7 +78,7 @@ public final class InstanceGroupManagerState extends io.pulumi.resources.Resourc
      * The full URL of the instance group created by the manager.
      * 
      */
-    @InputImport(name="instanceGroup")
+    @Import(name="instanceGroup")
       private final @Nullable Output<String> instanceGroup;
 
     public Output<String> getInstanceGroup() {
@@ -89,7 +89,7 @@ public final class InstanceGroupManagerState extends io.pulumi.resources.Resourc
      * - Version name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -101,14 +101,14 @@ public final class InstanceGroupManagerState extends io.pulumi.resources.Resourc
      * for details on configuration.
      * 
      */
-    @InputImport(name="namedPorts")
+    @Import(name="namedPorts")
       private final @Nullable Output<List<InstanceGroupManagerNamedPortGetArgs>> namedPorts;
 
     public Output<List<InstanceGroupManagerNamedPortGetArgs>> getNamedPorts() {
         return this.namedPorts == null ? Output.empty() : this.namedPorts;
     }
 
-    @InputImport(name="operation")
+    @Import(name="operation")
       private final @Nullable Output<String> operation;
 
     public Output<String> getOperation() {
@@ -120,7 +120,7 @@ public final class InstanceGroupManagerState extends io.pulumi.resources.Resourc
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -131,7 +131,7 @@ public final class InstanceGroupManagerState extends io.pulumi.resources.Resourc
      * The URL of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -142,7 +142,7 @@ public final class InstanceGroupManagerState extends io.pulumi.resources.Resourc
      * ) Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs).
      * 
      */
-    @InputImport(name="statefulDisks")
+    @Import(name="statefulDisks")
       private final @Nullable Output<List<InstanceGroupManagerStatefulDiskGetArgs>> statefulDisks;
 
     public Output<List<InstanceGroupManagerStatefulDiskGetArgs>> getStatefulDisks() {
@@ -153,7 +153,7 @@ public final class InstanceGroupManagerState extends io.pulumi.resources.Resourc
      * The status of this managed instance group.
      * 
      */
-    @InputImport(name="statuses")
+    @Import(name="statuses")
       private final @Nullable Output<List<InstanceGroupManagerStatusGetArgs>> statuses;
 
     public Output<List<InstanceGroupManagerStatusGetArgs>> getStatuses() {
@@ -166,7 +166,7 @@ public final class InstanceGroupManagerState extends io.pulumi.resources.Resourc
      * not affect existing instances.
      * 
      */
-    @InputImport(name="targetPools")
+    @Import(name="targetPools")
       private final @Nullable Output<List<String>> targetPools;
 
     public Output<List<String>> getTargetPools() {
@@ -177,7 +177,7 @@ public final class InstanceGroupManagerState extends io.pulumi.resources.Resourc
      * - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
      * 
      */
-    @InputImport(name="targetSize")
+    @Import(name="targetSize")
       private final @Nullable Output<Integer> targetSize;
 
     public Output<Integer> getTargetSize() {
@@ -188,7 +188,7 @@ public final class InstanceGroupManagerState extends io.pulumi.resources.Resourc
      * The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/instanceGroupManagers/patch)
      * 
      */
-    @InputImport(name="updatePolicy")
+    @Import(name="updatePolicy")
       private final @Nullable Output<InstanceGroupManagerUpdatePolicyGetArgs> updatePolicy;
 
     public Output<InstanceGroupManagerUpdatePolicyGetArgs> getUpdatePolicy() {
@@ -201,7 +201,7 @@ public final class InstanceGroupManagerState extends io.pulumi.resources.Resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="versions")
+    @Import(name="versions")
       private final @Nullable Output<List<InstanceGroupManagerVersionGetArgs>> versions;
 
     public Output<List<InstanceGroupManagerVersionGetArgs>> getVersions() {
@@ -214,7 +214,7 @@ public final class InstanceGroupManagerState extends io.pulumi.resources.Resourc
      * continue trying until it times out.
      * 
      */
-    @InputImport(name="waitForInstances")
+    @Import(name="waitForInstances")
       private final @Nullable Output<Boolean> waitForInstances;
 
     public Output<Boolean> getWaitForInstances() {
@@ -228,7 +228,7 @@ public final class InstanceGroupManagerState extends io.pulumi.resources.Resourc
      * instances to be stable before returning. The possible values are `STABLE` and `UPDATED`
      * 
      */
-    @InputImport(name="waitForInstancesStatus")
+    @Import(name="waitForInstancesStatus")
       private final @Nullable Output<String> waitForInstancesStatus;
 
     public Output<String> getWaitForInstancesStatus() {
@@ -240,7 +240,7 @@ public final class InstanceGroupManagerState extends io.pulumi.resources.Resourc
      * in.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

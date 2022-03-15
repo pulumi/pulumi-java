@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.vmmigration_v1.inputs.ComputeEngineTargetDetailsResponse;
 import io.pulumi.googlenative.vmmigration_v1.inputs.StatusResponse;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
      * Details of the target VM in Compute Engine.
      * 
      */
-    @InputImport(name="computeEngineTargetDetails", required=true)
+    @Import(name="computeEngineTargetDetails", required=true)
       private final ComputeEngineTargetDetailsResponse computeEngineTargetDetails;
 
     public ComputeEngineTargetDetailsResponse getComputeEngineTargetDetails() {
@@ -34,7 +34,7 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
      * The time the cutover job was created (as an API call, not when it was actually created in the target).
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -45,7 +45,7 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
      * Provides details for the errors that led to the Cutover Job's state.
      * 
      */
-    @InputImport(name="error", required=true)
+    @Import(name="error", required=true)
       private final StatusResponse error;
 
     public StatusResponse getError() {
@@ -56,7 +56,7 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the cutover job.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -67,7 +67,7 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
      * The current progress in percentage of the cutover job.
      * 
      */
-    @InputImport(name="progressPercent", required=true)
+    @Import(name="progressPercent", required=true)
       private final Integer progressPercent;
 
     public Integer getProgressPercent() {
@@ -78,7 +78,7 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
      * State of the cutover job.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -89,7 +89,7 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
      * A message providing possible extra details about the current state.
      * 
      */
-    @InputImport(name="stateMessage", required=true)
+    @Import(name="stateMessage", required=true)
       private final String stateMessage;
 
     public String getStateMessage() {
@@ -100,7 +100,7 @@ public final class CutoverJobResponse extends io.pulumi.resources.InvokeArgs {
      * The time the state was last updated.
      * 
      */
-    @InputImport(name="stateTime", required=true)
+    @Import(name="stateTime", required=true)
       private final String stateTime;
 
     public String getStateTime() {

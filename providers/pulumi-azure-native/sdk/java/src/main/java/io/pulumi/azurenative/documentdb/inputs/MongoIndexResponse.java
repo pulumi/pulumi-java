@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.MongoIndexKeysResponse;
 import io.pulumi.azurenative.documentdb.inputs.MongoIndexOptionsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class MongoIndexResponse extends io.pulumi.resources.InvokeArgs {
      * Cosmos DB MongoDB collection index keys
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable MongoIndexKeysResponse key;
 
     public Optional<MongoIndexKeysResponse> getKey() {
@@ -34,7 +34,7 @@ public final class MongoIndexResponse extends io.pulumi.resources.InvokeArgs {
      * Cosmos DB MongoDB collection index key options
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable MongoIndexOptionsResponse options;
 
     public Optional<MongoIndexOptionsResponse> getOptions() {

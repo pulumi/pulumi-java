@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
      * Enum value name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -36,7 +36,7 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
      * Enum value number.
      * 
      */
-    @InputImport(name="number")
+    @Import(name="number")
       private final @Nullable Output<Integer> number;
 
     public Output<Integer> getNumber() {
@@ -47,7 +47,7 @@ public final class EnumValueArgs extends io.pulumi.resources.ResourceArgs {
      * Protocol buffer options.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<List<OptionArgs>> options;
 
     public Output<List<OptionArgs>> getOptions() {

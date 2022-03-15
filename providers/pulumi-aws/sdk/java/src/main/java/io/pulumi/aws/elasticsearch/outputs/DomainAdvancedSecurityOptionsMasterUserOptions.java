@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.elasticsearch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainAdvancedSecurityOptionsMasterUserOptions {
     /**
      * ARN for the main user. Only specify if `internal_user_database_enabled` is not set or set to `false`.
@@ -27,11 +27,11 @@ public final class DomainAdvancedSecurityOptionsMasterUserOptions {
      */
     private final @Nullable String masterUserPassword;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainAdvancedSecurityOptionsMasterUserOptions(
-        @OutputCustomType.Parameter("masterUserArn") @Nullable String masterUserArn,
-        @OutputCustomType.Parameter("masterUserName") @Nullable String masterUserName,
-        @OutputCustomType.Parameter("masterUserPassword") @Nullable String masterUserPassword) {
+        @CustomType.Parameter("masterUserArn") @Nullable String masterUserArn,
+        @CustomType.Parameter("masterUserName") @Nullable String masterUserName,
+        @CustomType.Parameter("masterUserPassword") @Nullable String masterUserPassword) {
         this.masterUserArn = masterUserArn;
         this.masterUserName = masterUserName;
         this.masterUserPassword = masterUserPassword;

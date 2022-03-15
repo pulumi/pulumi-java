@@ -8,7 +8,7 @@ import io.pulumi.awsnative.memorydb.UserArgs;
 import io.pulumi.awsnative.memorydb.outputs.AuthenticationModeProperties;
 import io.pulumi.awsnative.memorydb.outputs.UserTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * Access permissions string used for this user account.
      * 
      */
-    @OutputExport(name="accessString", type=String.class, parameters={})
+    @Export(name="accessString", type=String.class, parameters={})
     private Output<String> accessString;
 
     /**
@@ -38,7 +38,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the user account.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -48,7 +48,7 @@ public class User extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="authenticationMode", type=AuthenticationModeProperties.class, parameters={})
+    @Export(name="authenticationMode", type=AuthenticationModeProperties.class, parameters={})
     private Output<AuthenticationModeProperties> authenticationMode;
 
     public Output<AuthenticationModeProperties> getAuthenticationMode() {
@@ -58,7 +58,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * Indicates the user status. Can be "active", "modifying" or "deleting".
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -72,7 +72,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this user.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={UserTag.class})
+    @Export(name="tags", type=List.class, parameters={UserTag.class})
     private Output</* @Nullable */ List<UserTag>> tags;
 
     /**
@@ -86,7 +86,7 @@ public class User extends io.pulumi.resources.CustomResource {
      * The name of the user.
      * 
      */
-    @OutputExport(name="userName", type=String.class, parameters={})
+    @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetNetworkFirewallPolicyArgs extends io.pulumi.resources.Invo
 
     public static final GetNetworkFirewallPolicyArgs Empty = new GetNetworkFirewallPolicyArgs();
 
-    @InputImport(name="firewallPolicy", required=true)
+    @Import(name="firewallPolicy", required=true)
       private final String firewallPolicy;
 
     public String getFirewallPolicy() {
         return this.firewallPolicy;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

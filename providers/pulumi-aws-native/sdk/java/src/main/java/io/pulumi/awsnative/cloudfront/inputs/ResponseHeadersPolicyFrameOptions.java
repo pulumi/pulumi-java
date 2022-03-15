@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -13,14 +13,14 @@ public final class ResponseHeadersPolicyFrameOptions extends io.pulumi.resources
 
     public static final ResponseHeadersPolicyFrameOptions Empty = new ResponseHeadersPolicyFrameOptions();
 
-    @InputImport(name="frameOption", required=true)
+    @Import(name="frameOption", required=true)
       private final String frameOption;
 
     public String getFrameOption() {
         return this.frameOption;
     }
 
-    @InputImport(name="override", required=true)
+    @Import(name="override", required=true)
       private final Boolean override;
 
     public Boolean getOverride() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse {
     /**
      * The unique identifier of this training phrase.
@@ -33,12 +33,12 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2IntentTrainingPhraseResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parts") List<GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse> parts,
-        @OutputCustomType.Parameter("timesAddedCount") Integer timesAddedCount,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parts") List<GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse> parts,
+        @CustomType.Parameter("timesAddedCount") Integer timesAddedCount,
+        @CustomType.Parameter("type") String type) {
         this.name = name;
         this.parts = parts;
         this.timesAddedCount = timesAddedCount;

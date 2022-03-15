@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GatewayDestinationResponse {
     /**
      * Name of the service fabric Mesh application.
@@ -25,11 +25,11 @@ public final class GatewayDestinationResponse {
      */
     private final String serviceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GatewayDestinationResponse(
-        @OutputCustomType.Parameter("applicationName") String applicationName,
-        @OutputCustomType.Parameter("endpointName") String endpointName,
-        @OutputCustomType.Parameter("serviceName") String serviceName) {
+        @CustomType.Parameter("applicationName") String applicationName,
+        @CustomType.Parameter("endpointName") String endpointName,
+        @CustomType.Parameter("serviceName") String serviceName) {
         this.applicationName = applicationName;
         this.endpointName = endpointName;
         this.serviceName = serviceName;

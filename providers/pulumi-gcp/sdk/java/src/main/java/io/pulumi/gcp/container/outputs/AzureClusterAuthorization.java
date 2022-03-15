@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.AzureClusterAuthorizationAdminUser;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzureClusterAuthorization {
     /**
      * Required. Users that can perform operations as a cluster admin. A new ClusterRoleBinding will be created to grant the cluster-admin ClusterRole to the users. At most one user can be specified. For more info on RBAC, see https://kubernetes.io/docs/reference/access-authn-authz/rbac/#user-facing-roles
@@ -16,8 +16,8 @@ public final class AzureClusterAuthorization {
      */
     private final List<AzureClusterAuthorizationAdminUser> adminUsers;
 
-    @OutputCustomType.Constructor
-    private AzureClusterAuthorization(@OutputCustomType.Parameter("adminUsers") List<AzureClusterAuthorizationAdminUser> adminUsers) {
+    @CustomType.Constructor
+    private AzureClusterAuthorization(@CustomType.Parameter("adminUsers") List<AzureClusterAuthorizationAdminUser> adminUsers) {
         this.adminUsers = adminUsers;
     }
 

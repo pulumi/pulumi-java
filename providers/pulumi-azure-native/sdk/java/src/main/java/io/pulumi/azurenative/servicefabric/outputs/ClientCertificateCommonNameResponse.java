@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClientCertificateCommonNameResponse {
     /**
      * The common name of the client certificate.
@@ -26,11 +26,11 @@ public final class ClientCertificateCommonNameResponse {
      */
     private final Boolean isAdmin;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClientCertificateCommonNameResponse(
-        @OutputCustomType.Parameter("certificateCommonName") String certificateCommonName,
-        @OutputCustomType.Parameter("certificateIssuerThumbprint") String certificateIssuerThumbprint,
-        @OutputCustomType.Parameter("isAdmin") Boolean isAdmin) {
+        @CustomType.Parameter("certificateCommonName") String certificateCommonName,
+        @CustomType.Parameter("certificateIssuerThumbprint") String certificateIssuerThumbprint,
+        @CustomType.Parameter("isAdmin") Boolean isAdmin) {
         this.certificateCommonName = certificateCommonName;
         this.certificateIssuerThumbprint = certificateIssuerThumbprint;
         this.isAdmin = isAdmin;

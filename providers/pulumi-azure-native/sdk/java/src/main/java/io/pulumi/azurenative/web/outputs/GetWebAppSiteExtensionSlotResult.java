@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebAppSiteExtensionSlotResult {
     /**
      * List of authors.
@@ -131,32 +131,32 @@ public final class GetWebAppSiteExtensionSlotResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebAppSiteExtensionSlotResult(
-        @OutputCustomType.Parameter("authors") @Nullable List<String> authors,
-        @OutputCustomType.Parameter("comment") @Nullable String comment,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("downloadCount") @Nullable Integer downloadCount,
-        @OutputCustomType.Parameter("extensionId") @Nullable String extensionId,
-        @OutputCustomType.Parameter("extensionType") @Nullable String extensionType,
-        @OutputCustomType.Parameter("extensionUrl") @Nullable String extensionUrl,
-        @OutputCustomType.Parameter("feedUrl") @Nullable String feedUrl,
-        @OutputCustomType.Parameter("iconUrl") @Nullable String iconUrl,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("installedDateTime") @Nullable String installedDateTime,
-        @OutputCustomType.Parameter("installerCommandLineParams") @Nullable String installerCommandLineParams,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("licenseUrl") @Nullable String licenseUrl,
-        @OutputCustomType.Parameter("localIsLatestVersion") @Nullable Boolean localIsLatestVersion,
-        @OutputCustomType.Parameter("localPath") @Nullable String localPath,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("projectUrl") @Nullable String projectUrl,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("publishedDateTime") @Nullable String publishedDateTime,
-        @OutputCustomType.Parameter("summary") @Nullable String summary,
-        @OutputCustomType.Parameter("title") @Nullable String title,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("authors") @Nullable List<String> authors,
+        @CustomType.Parameter("comment") @Nullable String comment,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("downloadCount") @Nullable Integer downloadCount,
+        @CustomType.Parameter("extensionId") @Nullable String extensionId,
+        @CustomType.Parameter("extensionType") @Nullable String extensionType,
+        @CustomType.Parameter("extensionUrl") @Nullable String extensionUrl,
+        @CustomType.Parameter("feedUrl") @Nullable String feedUrl,
+        @CustomType.Parameter("iconUrl") @Nullable String iconUrl,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("installedDateTime") @Nullable String installedDateTime,
+        @CustomType.Parameter("installerCommandLineParams") @Nullable String installerCommandLineParams,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("licenseUrl") @Nullable String licenseUrl,
+        @CustomType.Parameter("localIsLatestVersion") @Nullable Boolean localIsLatestVersion,
+        @CustomType.Parameter("localPath") @Nullable String localPath,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("projectUrl") @Nullable String projectUrl,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("publishedDateTime") @Nullable String publishedDateTime,
+        @CustomType.Parameter("summary") @Nullable String summary,
+        @CustomType.Parameter("title") @Nullable String title,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.authors = authors;
         this.comment = comment;
         this.description = description;

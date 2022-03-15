@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -16,28 +16,28 @@ public final class GlobalTableTargetTrackingScalingPolicyConfigurationArgs exten
 
     public static final GlobalTableTargetTrackingScalingPolicyConfigurationArgs Empty = new GlobalTableTargetTrackingScalingPolicyConfigurationArgs();
 
-    @InputImport(name="disableScaleIn")
+    @Import(name="disableScaleIn")
       private final @Nullable Output<Boolean> disableScaleIn;
 
     public Output<Boolean> getDisableScaleIn() {
         return this.disableScaleIn == null ? Output.empty() : this.disableScaleIn;
     }
 
-    @InputImport(name="scaleInCooldown")
+    @Import(name="scaleInCooldown")
       private final @Nullable Output<Integer> scaleInCooldown;
 
     public Output<Integer> getScaleInCooldown() {
         return this.scaleInCooldown == null ? Output.empty() : this.scaleInCooldown;
     }
 
-    @InputImport(name="scaleOutCooldown")
+    @Import(name="scaleOutCooldown")
       private final @Nullable Output<Integer> scaleOutCooldown;
 
     public Output<Integer> getScaleOutCooldown() {
         return this.scaleOutCooldown == null ? Output.empty() : this.scaleOutCooldown;
     }
 
-    @InputImport(name="targetValue", required=true)
+    @Import(name="targetValue", required=true)
       private final Output<Double> targetValue;
 
     public Output<Double> getTargetValue() {

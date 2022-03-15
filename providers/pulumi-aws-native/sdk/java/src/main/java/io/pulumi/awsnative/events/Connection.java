@@ -8,7 +8,7 @@ import io.pulumi.awsnative.events.ConnectionArgs;
 import io.pulumi.awsnative.events.enums.ConnectionAuthorizationType;
 import io.pulumi.awsnative.events.outputs.AuthParametersProperties;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The arn of the connection resource.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -35,13 +35,13 @@ public class Connection extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="authParameters", type=AuthParametersProperties.class, parameters={})
+    @Export(name="authParameters", type=AuthParametersProperties.class, parameters={})
     private Output<AuthParametersProperties> authParameters;
 
     public Output<AuthParametersProperties> getAuthParameters() {
         return this.authParameters;
     }
-    @OutputExport(name="authorizationType", type=ConnectionAuthorizationType.class, parameters={})
+    @Export(name="authorizationType", type=ConnectionAuthorizationType.class, parameters={})
     private Output<ConnectionAuthorizationType> authorizationType;
 
     public Output<ConnectionAuthorizationType> getAuthorizationType() {
@@ -51,7 +51,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Description of the connection.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -65,7 +65,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Name of the connection.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -79,7 +79,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * The arn of the secrets manager secret created in the customer account.
      * 
      */
-    @OutputExport(name="secretArn", type=String.class, parameters={})
+    @Export(name="secretArn", type=String.class, parameters={})
     private Output<String> secretArn;
 
     /**

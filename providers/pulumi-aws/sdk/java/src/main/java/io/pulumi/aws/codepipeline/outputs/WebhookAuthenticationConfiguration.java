@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.codepipeline.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebhookAuthenticationConfiguration {
     /**
      * A valid CIDR block for `IP` filtering. Required for `IP`.
@@ -22,10 +22,10 @@ public final class WebhookAuthenticationConfiguration {
      */
     private final @Nullable String secretToken;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebhookAuthenticationConfiguration(
-        @OutputCustomType.Parameter("allowedIpRange") @Nullable String allowedIpRange,
-        @OutputCustomType.Parameter("secretToken") @Nullable String secretToken) {
+        @CustomType.Parameter("allowedIpRange") @Nullable String allowedIpRange,
+        @CustomType.Parameter("secretToken") @Nullable String secretToken) {
         this.allowedIpRange = allowedIpRange;
         this.secretToken = secretToken;
     }

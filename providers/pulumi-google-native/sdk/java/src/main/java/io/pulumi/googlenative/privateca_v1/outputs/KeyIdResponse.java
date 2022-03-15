@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KeyIdResponse {
     /**
      * Optional. The value of this KeyId encoded in lowercase hexadecimal. This is most likely the 160 bit SHA-1 hash of the public key.
@@ -15,8 +15,8 @@ public final class KeyIdResponse {
      */
     private final String keyId;
 
-    @OutputCustomType.Constructor
-    private KeyIdResponse(@OutputCustomType.Parameter("keyId") String keyId) {
+    @CustomType.Constructor
+    private KeyIdResponse(@CustomType.Parameter("keyId") String keyId) {
         this.keyId = keyId;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class OutputPathAssetReferenceResponse extends io.pulumi.resources.
      * ARM resource ID of the job.
      * 
      */
-    @InputImport(name="jobId")
+    @Import(name="jobId")
       private final @Nullable String jobId;
 
     public Optional<String> getJobId() {
@@ -33,7 +33,7 @@ public final class OutputPathAssetReferenceResponse extends io.pulumi.resources.
      * The path of the file/directory in the job output.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable String path;
 
     public Optional<String> getPath() {
@@ -45,7 +45,7 @@ public final class OutputPathAssetReferenceResponse extends io.pulumi.resources.
      * Expected value is 'OutputPath'.
      * 
      */
-    @InputImport(name="referenceType", required=true)
+    @Import(name="referenceType", required=true)
       private final String referenceType;
 
     public String getReferenceType() {

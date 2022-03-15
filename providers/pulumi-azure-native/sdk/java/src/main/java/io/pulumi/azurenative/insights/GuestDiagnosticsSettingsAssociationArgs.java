@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
      * The name of the diagnostic settings association.
      * 
      */
-    @InputImport(name="associationName")
+    @Import(name="associationName")
       private final @Nullable Output<String> associationName;
 
     public Output<String> getAssociationName() {
@@ -30,7 +30,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
      * The guest diagnostic settings name.
      * 
      */
-    @InputImport(name="guestDiagnosticSettingsName", required=true)
+    @Import(name="guestDiagnosticSettingsName", required=true)
       private final Output<String> guestDiagnosticSettingsName;
 
     public Output<String> getGuestDiagnosticSettingsName() {
@@ -41,7 +41,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -52,7 +52,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
      * The fully qualified ID of the resource, including the resource name and resource type.
      * 
      */
-    @InputImport(name="resourceUri", required=true)
+    @Import(name="resourceUri", required=true)
       private final Output<String> resourceUri;
 
     public Output<String> getResourceUri() {
@@ -63,7 +63,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

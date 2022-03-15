@@ -10,7 +10,7 @@ import io.pulumi.awsnative.evidently.outputs.LaunchMetricDefinitionObject;
 import io.pulumi.awsnative.evidently.outputs.LaunchStepConfig;
 import io.pulumi.awsnative.evidently.outputs.LaunchTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -22,49 +22,49 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:evidently:Launch")
 public class Launch extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="groups", type=List.class, parameters={LaunchGroupObject.class})
+    @Export(name="groups", type=List.class, parameters={LaunchGroupObject.class})
     private Output<List<LaunchGroupObject>> groups;
 
     public Output<List<LaunchGroupObject>> getGroups() {
         return this.groups;
     }
-    @OutputExport(name="metricMonitors", type=List.class, parameters={LaunchMetricDefinitionObject.class})
+    @Export(name="metricMonitors", type=List.class, parameters={LaunchMetricDefinitionObject.class})
     private Output</* @Nullable */ List<LaunchMetricDefinitionObject>> metricMonitors;
 
     public Output</* @Nullable */ List<LaunchMetricDefinitionObject>> getMetricMonitors() {
         return this.metricMonitors;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     public Output<String> getProject() {
         return this.project;
     }
-    @OutputExport(name="randomizationSalt", type=String.class, parameters={})
+    @Export(name="randomizationSalt", type=String.class, parameters={})
     private Output</* @Nullable */ String> randomizationSalt;
 
     public Output</* @Nullable */ String> getRandomizationSalt() {
         return this.randomizationSalt;
     }
-    @OutputExport(name="scheduledSplitsConfig", type=List.class, parameters={LaunchStepConfig.class})
+    @Export(name="scheduledSplitsConfig", type=List.class, parameters={LaunchStepConfig.class})
     private Output<List<LaunchStepConfig>> scheduledSplitsConfig;
 
     public Output<List<LaunchStepConfig>> getScheduledSplitsConfig() {
@@ -74,7 +74,7 @@ public class Launch extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={LaunchTag.class})
+    @Export(name="tags", type=List.class, parameters={LaunchTag.class})
     private Output</* @Nullable */ List<LaunchTag>> tags;
 
     /**

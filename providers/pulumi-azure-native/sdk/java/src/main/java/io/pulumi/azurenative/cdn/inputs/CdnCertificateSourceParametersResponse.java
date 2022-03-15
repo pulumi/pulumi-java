@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,14 +20,14 @@ public final class CdnCertificateSourceParametersResponse extends io.pulumi.reso
      * Type of certificate used
      * 
      */
-    @InputImport(name="certificateType", required=true)
+    @Import(name="certificateType", required=true)
       private final String certificateType;
 
     public String getCertificateType() {
         return this.certificateType;
     }
 
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {

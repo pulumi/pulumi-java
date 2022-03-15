@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.run_v2.enums.GoogleCloudRunOpV2VpcAccessEgress;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudRunOpV2VpcAccessArgs extends io.pulumi.resources.R
      * VPC Access connector name. Format: projects/{project}/locations/{location}/connectors/{connector}
      * 
      */
-    @InputImport(name="connector")
+    @Import(name="connector")
       private final @Nullable Output<String> connector;
 
     public Output<String> getConnector() {
@@ -34,7 +34,7 @@ public final class GoogleCloudRunOpV2VpcAccessArgs extends io.pulumi.resources.R
      * Traffic VPC egress settings.
      * 
      */
-    @InputImport(name="egress")
+    @Import(name="egress")
       private final @Nullable Output<GoogleCloudRunOpV2VpcAccessEgress> egress;
 
     public Output<GoogleCloudRunOpV2VpcAccessEgress> getEgress() {

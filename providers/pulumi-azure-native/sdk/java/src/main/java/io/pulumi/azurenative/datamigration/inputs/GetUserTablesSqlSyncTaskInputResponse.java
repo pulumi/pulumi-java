@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GetUserTablesSqlSyncTaskInputResponse extends io.pulumi.resou
      * List of source database names to collect tables for
      * 
      */
-    @InputImport(name="selectedSourceDatabases", required=true)
+    @Import(name="selectedSourceDatabases", required=true)
       private final List<String> selectedSourceDatabases;
 
     public List<String> getSelectedSourceDatabases() {
@@ -33,7 +33,7 @@ public final class GetUserTablesSqlSyncTaskInputResponse extends io.pulumi.resou
      * List of target database names to collect tables for
      * 
      */
-    @InputImport(name="selectedTargetDatabases", required=true)
+    @Import(name="selectedTargetDatabases", required=true)
       private final List<String> selectedTargetDatabases;
 
     public List<String> getSelectedTargetDatabases() {
@@ -44,7 +44,7 @@ public final class GetUserTablesSqlSyncTaskInputResponse extends io.pulumi.resou
      * Connection information for SQL Server
      * 
      */
-    @InputImport(name="sourceConnectionInfo", required=true)
+    @Import(name="sourceConnectionInfo", required=true)
       private final SqlConnectionInfoResponse sourceConnectionInfo;
 
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
@@ -55,7 +55,7 @@ public final class GetUserTablesSqlSyncTaskInputResponse extends io.pulumi.resou
      * Connection information for SQL DB
      * 
      */
-    @InputImport(name="targetConnectionInfo", required=true)
+    @Import(name="targetConnectionInfo", required=true)
       private final SqlConnectionInfoResponse targetConnectionInfo;
 
     public SqlConnectionInfoResponse getTargetConnectionInfo() {

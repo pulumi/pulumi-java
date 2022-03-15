@@ -3,20 +3,20 @@
 
 package io.pulumi.awsnative.evidently.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExperimentTreatmentToWeight {
     private final Integer splitWeight;
     private final String treatment;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExperimentTreatmentToWeight(
-        @OutputCustomType.Parameter("splitWeight") Integer splitWeight,
-        @OutputCustomType.Parameter("treatment") String treatment) {
+        @CustomType.Parameter("splitWeight") Integer splitWeight,
+        @CustomType.Parameter("treatment") String treatment) {
         this.splitWeight = splitWeight;
         this.treatment = treatment;
     }

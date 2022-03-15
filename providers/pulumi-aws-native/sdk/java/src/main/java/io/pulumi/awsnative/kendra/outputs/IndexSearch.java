@@ -3,25 +3,25 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IndexSearch {
     private final @Nullable Boolean displayable;
     private final @Nullable Boolean facetable;
     private final @Nullable Boolean searchable;
     private final @Nullable Boolean sortable;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IndexSearch(
-        @OutputCustomType.Parameter("displayable") @Nullable Boolean displayable,
-        @OutputCustomType.Parameter("facetable") @Nullable Boolean facetable,
-        @OutputCustomType.Parameter("searchable") @Nullable Boolean searchable,
-        @OutputCustomType.Parameter("sortable") @Nullable Boolean sortable) {
+        @CustomType.Parameter("displayable") @Nullable Boolean displayable,
+        @CustomType.Parameter("facetable") @Nullable Boolean facetable,
+        @CustomType.Parameter("searchable") @Nullable Boolean searchable,
+        @CustomType.Parameter("sortable") @Nullable Boolean sortable) {
         this.displayable = displayable;
         this.facetable = facetable;
         this.searchable = searchable;

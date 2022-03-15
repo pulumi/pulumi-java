@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WaitStepAttributesResponse {
     /**
      * The duration in ISO 8601 format of how long the wait should be.
@@ -15,8 +15,8 @@ public final class WaitStepAttributesResponse {
      */
     private final String duration;
 
-    @OutputCustomType.Constructor
-    private WaitStepAttributesResponse(@OutputCustomType.Parameter("duration") String duration) {
+    @CustomType.Constructor
+    private WaitStepAttributesResponse(@CustomType.Parameter("duration") String duration) {
         this.duration = duration;
     }
 

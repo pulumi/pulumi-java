@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.certificates.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateSigningRequestSpec {
     /**
      * Extra information about the requesting user. See user.Info interface for details.
@@ -56,15 +56,15 @@ public final class CertificateSigningRequestSpec {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateSigningRequestSpec(
-        @OutputCustomType.Parameter("extra") @Nullable Map<String,List<String>> extra,
-        @OutputCustomType.Parameter("groups") @Nullable List<String> groups,
-        @OutputCustomType.Parameter("request") String request,
-        @OutputCustomType.Parameter("signerName") @Nullable String signerName,
-        @OutputCustomType.Parameter("uid") @Nullable String uid,
-        @OutputCustomType.Parameter("usages") @Nullable List<String> usages,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("extra") @Nullable Map<String,List<String>> extra,
+        @CustomType.Parameter("groups") @Nullable List<String> groups,
+        @CustomType.Parameter("request") String request,
+        @CustomType.Parameter("signerName") @Nullable String signerName,
+        @CustomType.Parameter("uid") @Nullable String uid,
+        @CustomType.Parameter("usages") @Nullable List<String> usages,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.extra = extra;
         this.groups = groups;
         this.request = request;

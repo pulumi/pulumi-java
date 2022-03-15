@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StaticSiteBuildPropertiesResponse {
     /**
      * A custom command to run during deployment of the Azure Functions API application.
@@ -53,16 +53,16 @@ public final class StaticSiteBuildPropertiesResponse {
      */
     private final @Nullable Boolean skipGithubActionWorkflowGeneration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StaticSiteBuildPropertiesResponse(
-        @OutputCustomType.Parameter("apiBuildCommand") @Nullable String apiBuildCommand,
-        @OutputCustomType.Parameter("apiLocation") @Nullable String apiLocation,
-        @OutputCustomType.Parameter("appArtifactLocation") @Nullable String appArtifactLocation,
-        @OutputCustomType.Parameter("appBuildCommand") @Nullable String appBuildCommand,
-        @OutputCustomType.Parameter("appLocation") @Nullable String appLocation,
-        @OutputCustomType.Parameter("githubActionSecretNameOverride") @Nullable String githubActionSecretNameOverride,
-        @OutputCustomType.Parameter("outputLocation") @Nullable String outputLocation,
-        @OutputCustomType.Parameter("skipGithubActionWorkflowGeneration") @Nullable Boolean skipGithubActionWorkflowGeneration) {
+        @CustomType.Parameter("apiBuildCommand") @Nullable String apiBuildCommand,
+        @CustomType.Parameter("apiLocation") @Nullable String apiLocation,
+        @CustomType.Parameter("appArtifactLocation") @Nullable String appArtifactLocation,
+        @CustomType.Parameter("appBuildCommand") @Nullable String appBuildCommand,
+        @CustomType.Parameter("appLocation") @Nullable String appLocation,
+        @CustomType.Parameter("githubActionSecretNameOverride") @Nullable String githubActionSecretNameOverride,
+        @CustomType.Parameter("outputLocation") @Nullable String outputLocation,
+        @CustomType.Parameter("skipGithubActionWorkflowGeneration") @Nullable Boolean skipGithubActionWorkflowGeneration) {
         this.apiBuildCommand = apiBuildCommand;
         this.apiLocation = apiLocation;
         this.appArtifactLocation = appArtifactLocation;

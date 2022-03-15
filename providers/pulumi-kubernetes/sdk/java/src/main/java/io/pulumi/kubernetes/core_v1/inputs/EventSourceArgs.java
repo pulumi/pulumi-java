@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Component from which the event is generated.
      * 
      */
-    @InputImport(name="component")
+    @Import(name="component")
       private final @Nullable Output<String> component;
 
     public Output<String> getComponent() {
@@ -33,7 +33,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Node name on which the event is generated.
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {

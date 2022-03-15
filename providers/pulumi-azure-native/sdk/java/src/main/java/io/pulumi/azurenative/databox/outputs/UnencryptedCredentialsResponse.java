@@ -6,12 +6,12 @@ package io.pulumi.azurenative.databox.outputs;
 import io.pulumi.azurenative.databox.outputs.DataBoxDiskJobSecretsResponse;
 import io.pulumi.azurenative.databox.outputs.DataBoxHeavyJobSecretsResponse;
 import io.pulumi.azurenative.databox.outputs.DataboxJobSecretsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UnencryptedCredentialsResponse {
     /**
      * Name of the job.
@@ -24,10 +24,10 @@ public final class UnencryptedCredentialsResponse {
      */
     private final Object jobSecrets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UnencryptedCredentialsResponse(
-        @OutputCustomType.Parameter("jobName") String jobName,
-        @OutputCustomType.Parameter("jobSecrets") Object jobSecrets) {
+        @CustomType.Parameter("jobName") String jobName,
+        @CustomType.Parameter("jobSecrets") Object jobSecrets) {
         this.jobName = jobName;
         this.jobSecrets = jobSecrets;
     }

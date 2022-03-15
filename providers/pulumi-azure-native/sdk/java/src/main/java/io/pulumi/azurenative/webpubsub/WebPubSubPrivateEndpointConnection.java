@@ -10,7 +10,7 @@ import io.pulumi.azurenative.webpubsub.outputs.PrivateLinkServiceConnectionState
 import io.pulumi.azurenative.webpubsub.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class WebPubSubPrivateEndpointConnection extends io.pulumi.resources.Cust
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -51,7 +51,7 @@ public class WebPubSubPrivateEndpointConnection extends io.pulumi.resources.Cust
      * Private endpoint associated with the private endpoint connection
      * 
      */
-    @OutputExport(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
+    @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output</* @Nullable */ PrivateEndpointResponse> privateEndpoint;
 
     /**
@@ -65,7 +65,7 @@ public class WebPubSubPrivateEndpointConnection extends io.pulumi.resources.Cust
      * Connection state
      * 
      */
-    @OutputExport(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
+    @Export(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
@@ -79,7 +79,7 @@ public class WebPubSubPrivateEndpointConnection extends io.pulumi.resources.Cust
      * Provisioning state of the private endpoint connection
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -93,7 +93,7 @@ public class WebPubSubPrivateEndpointConnection extends io.pulumi.resources.Cust
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -107,7 +107,7 @@ public class WebPubSubPrivateEndpointConnection extends io.pulumi.resources.Cust
      * The type of the resource - e.g. "Microsoft.SignalRService/SignalR"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

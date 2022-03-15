@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelExpressionVariableArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AssetModelTransformArgs extends io.pulumi.resources.ResourceA
      * The mathematical expression that defines the transformation function. You can specify up to 10 functions per expression.
      * 
      */
-    @InputImport(name="expression", required=true)
+    @Import(name="expression", required=true)
       private final Output<String> expression;
 
     public Output<String> getExpression() {
@@ -30,7 +30,7 @@ public final class AssetModelTransformArgs extends io.pulumi.resources.ResourceA
      * The list of variables used in the expression.
      * 
      */
-    @InputImport(name="variables", required=true)
+    @Import(name="variables", required=true)
       private final Output<List<AssetModelExpressionVariableArgs>> variables;
 
     public Output<List<AssetModelExpressionVariableArgs>> getVariables() {

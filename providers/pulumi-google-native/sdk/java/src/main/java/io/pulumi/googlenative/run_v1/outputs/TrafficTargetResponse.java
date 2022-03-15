@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TrafficTargetResponse {
     /**
      * ConfigurationName of a configuration to whose latest revision we will send this portion of traffic. When the "status.latestReadyRevisionName" of the referenced configuration changes, we will automatically migrate traffic from the prior "latest ready" revision to the new one. This field is never set in Route's status, only its spec. This is mutually exclusive with RevisionName. Cloud Run currently supports a single ConfigurationName.
@@ -42,14 +42,14 @@ public final class TrafficTargetResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TrafficTargetResponse(
-        @OutputCustomType.Parameter("configurationName") String configurationName,
-        @OutputCustomType.Parameter("latestRevision") Boolean latestRevision,
-        @OutputCustomType.Parameter("percent") Integer percent,
-        @OutputCustomType.Parameter("revisionName") String revisionName,
-        @OutputCustomType.Parameter("tag") String tag,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("configurationName") String configurationName,
+        @CustomType.Parameter("latestRevision") Boolean latestRevision,
+        @CustomType.Parameter("percent") Integer percent,
+        @CustomType.Parameter("revisionName") String revisionName,
+        @CustomType.Parameter("tag") String tag,
+        @CustomType.Parameter("url") String url) {
         this.configurationName = configurationName;
         this.latestRevision = latestRevision;
         this.percent = percent;

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RetentionTagResponse {
     /**
      * Retention Tag version.
@@ -25,11 +25,11 @@ public final class RetentionTagResponse {
      */
     private final String tagName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RetentionTagResponse(
-        @OutputCustomType.Parameter("eTag") String eTag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("tagName") String tagName) {
+        @CustomType.Parameter("eTag") String eTag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("tagName") String tagName) {
         this.eTag = eTag;
         this.id = id;
         this.tagName = tagName;

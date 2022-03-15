@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.billing.outputs;
 
 import io.pulumi.azurenative.billing.outputs.InvoiceSectionWithCreateSubPermissionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult {
     /**
      * The link (url) to the next page of results.
@@ -23,10 +23,10 @@ public final class ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissi
      */
     private final @Nullable List<InvoiceSectionWithCreateSubPermissionResponse> value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListBillingAccountInvoiceSectionsByCreateSubscriptionPermissionResult(
-        @OutputCustomType.Parameter("nextLink") String nextLink,
-        @OutputCustomType.Parameter("value") @Nullable List<InvoiceSectionWithCreateSubPermissionResponse> value) {
+        @CustomType.Parameter("nextLink") String nextLink,
+        @CustomType.Parameter("value") @Nullable List<InvoiceSectionWithCreateSubPermissionResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }

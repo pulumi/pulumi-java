@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ImageGuestOsFeature {
     /**
      * The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options.
@@ -16,8 +16,8 @@ public final class ImageGuestOsFeature {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private ImageGuestOsFeature(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private ImageGuestOsFeature(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

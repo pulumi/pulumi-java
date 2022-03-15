@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLaunchConfigurationMetadataOption {
     /**
      * The state of the metadata service: `enabled`, `disabled`.
@@ -26,11 +26,11 @@ public final class GetLaunchConfigurationMetadataOption {
      */
     private final String httpTokens;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLaunchConfigurationMetadataOption(
-        @OutputCustomType.Parameter("httpEndpoint") String httpEndpoint,
-        @OutputCustomType.Parameter("httpPutResponseHopLimit") Integer httpPutResponseHopLimit,
-        @OutputCustomType.Parameter("httpTokens") String httpTokens) {
+        @CustomType.Parameter("httpEndpoint") String httpEndpoint,
+        @CustomType.Parameter("httpPutResponseHopLimit") Integer httpPutResponseHopLimit,
+        @CustomType.Parameter("httpTokens") String httpTokens) {
         this.httpEndpoint = httpEndpoint;
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         this.httpTokens = httpTokens;

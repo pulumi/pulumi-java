@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.peering.outputs;
 
 import io.pulumi.azurenative.peering.outputs.PeeringServiceSkuResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPeeringServiceResult {
     /**
      * The ID of the resource.
@@ -69,19 +69,19 @@ public final class GetPeeringServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPeeringServiceResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("peeringServiceLocation") @Nullable String peeringServiceLocation,
-        @OutputCustomType.Parameter("peeringServiceProvider") @Nullable String peeringServiceProvider,
-        @OutputCustomType.Parameter("providerBackupPeeringLocation") @Nullable String providerBackupPeeringLocation,
-        @OutputCustomType.Parameter("providerPrimaryPeeringLocation") @Nullable String providerPrimaryPeeringLocation,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sku") @Nullable PeeringServiceSkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("peeringServiceLocation") @Nullable String peeringServiceLocation,
+        @CustomType.Parameter("peeringServiceProvider") @Nullable String peeringServiceProvider,
+        @CustomType.Parameter("providerBackupPeeringLocation") @Nullable String providerBackupPeeringLocation,
+        @CustomType.Parameter("providerPrimaryPeeringLocation") @Nullable String providerPrimaryPeeringLocation,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sku") @Nullable PeeringServiceSkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;

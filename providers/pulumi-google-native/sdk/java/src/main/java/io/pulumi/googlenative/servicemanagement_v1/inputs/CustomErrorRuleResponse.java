@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CustomErrorRuleResponse extends io.pulumi.resources.InvokeArg
      * Mark this message as possible payload in error response. Otherwise, objects of this type will be filtered when they appear in error payload.
      * 
      */
-    @InputImport(name="isErrorType", required=true)
+    @Import(name="isErrorType", required=true)
       private final Boolean isErrorType;
 
     public Boolean getIsErrorType() {
@@ -32,7 +32,7 @@ public final class CustomErrorRuleResponse extends io.pulumi.resources.InvokeArg
      * Selects messages to which this rule applies. Refer to selector for syntax details.
      * 
      */
-    @InputImport(name="selector", required=true)
+    @Import(name="selector", required=true)
       private final String selector;
 
     public String getSelector() {

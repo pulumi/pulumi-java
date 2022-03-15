@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class BackupPlanLifecycleResourceTypeArgs extends io.pulumi.resourc
 
     public static final BackupPlanLifecycleResourceTypeArgs Empty = new BackupPlanLifecycleResourceTypeArgs();
 
-    @InputImport(name="deleteAfterDays")
+    @Import(name="deleteAfterDays")
       private final @Nullable Output<Double> deleteAfterDays;
 
     public Output<Double> getDeleteAfterDays() {
         return this.deleteAfterDays == null ? Output.empty() : this.deleteAfterDays;
     }
 
-    @InputImport(name="moveToColdStorageAfterDays")
+    @Import(name="moveToColdStorageAfterDays")
       private final @Nullable Output<Double> moveToColdStorageAfterDays;
 
     public Output<Double> getMoveToColdStorageAfterDays() {

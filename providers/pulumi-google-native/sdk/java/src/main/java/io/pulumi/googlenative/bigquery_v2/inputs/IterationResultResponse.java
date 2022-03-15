@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +18,7 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
      * Time taken to run the iteration in milliseconds.
      * 
      */
-    @InputImport(name="durationMs", required=true)
+    @Import(name="durationMs", required=true)
       private final String durationMs;
 
     public String getDurationMs() {
@@ -29,7 +29,7 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
      * Loss computed on the eval data at the end of iteration.
      * 
      */
-    @InputImport(name="evalLoss", required=true)
+    @Import(name="evalLoss", required=true)
       private final Double evalLoss;
 
     public Double getEvalLoss() {
@@ -40,7 +40,7 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
      * Index of the iteration, 0 based.
      * 
      */
-    @InputImport(name="index", required=true)
+    @Import(name="index", required=true)
       private final Integer index;
 
     public Integer getIndex() {
@@ -51,7 +51,7 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
      * Learn rate used for this iteration.
      * 
      */
-    @InputImport(name="learnRate", required=true)
+    @Import(name="learnRate", required=true)
       private final Double learnRate;
 
     public Double getLearnRate() {
@@ -62,7 +62,7 @@ public final class IterationResultResponse extends io.pulumi.resources.InvokeArg
      * Loss computed on the training data at the end of iteration.
      * 
      */
-    @InputImport(name="trainingLoss", required=true)
+    @Import(name="trainingLoss", required=true)
       private final Double trainingLoss;
 
     public Double getTrainingLoss() {

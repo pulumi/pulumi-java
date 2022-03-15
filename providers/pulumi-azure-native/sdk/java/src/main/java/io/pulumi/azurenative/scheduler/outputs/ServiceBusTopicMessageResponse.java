@@ -5,14 +5,14 @@ package io.pulumi.azurenative.scheduler.outputs;
 
 import io.pulumi.azurenative.scheduler.outputs.ServiceBusAuthenticationResponse;
 import io.pulumi.azurenative.scheduler.outputs.ServiceBusBrokeredMessagePropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceBusTopicMessageResponse {
     /**
      * Gets or sets the Service Bus authentication.
@@ -50,15 +50,15 @@ public final class ServiceBusTopicMessageResponse {
      */
     private final @Nullable String transportType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceBusTopicMessageResponse(
-        @OutputCustomType.Parameter("authentication") @Nullable ServiceBusAuthenticationResponse authentication,
-        @OutputCustomType.Parameter("brokeredMessageProperties") @Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties,
-        @OutputCustomType.Parameter("customMessageProperties") @Nullable Map<String,String> customMessageProperties,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
-        @OutputCustomType.Parameter("topicPath") @Nullable String topicPath,
-        @OutputCustomType.Parameter("transportType") @Nullable String transportType) {
+        @CustomType.Parameter("authentication") @Nullable ServiceBusAuthenticationResponse authentication,
+        @CustomType.Parameter("brokeredMessageProperties") @Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties,
+        @CustomType.Parameter("customMessageProperties") @Nullable Map<String,String> customMessageProperties,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("namespace") @Nullable String namespace,
+        @CustomType.Parameter("topicPath") @Nullable String topicPath,
+        @CustomType.Parameter("transportType") @Nullable String transportType) {
         this.authentication = authentication;
         this.brokeredMessageProperties = brokeredMessageProperties;
         this.customMessageProperties = customMessageProperties;

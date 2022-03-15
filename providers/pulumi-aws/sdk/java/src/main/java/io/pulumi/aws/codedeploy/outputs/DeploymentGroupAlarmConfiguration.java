@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.codedeploy.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentGroupAlarmConfiguration {
     /**
      * A list of alarms configured for the deployment group. _A maximum of 10 alarms can be added to a deployment group_.
@@ -31,11 +31,11 @@ public final class DeploymentGroupAlarmConfiguration {
      */
     private final @Nullable Boolean ignorePollAlarmFailure;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentGroupAlarmConfiguration(
-        @OutputCustomType.Parameter("alarms") @Nullable List<String> alarms,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("ignorePollAlarmFailure") @Nullable Boolean ignorePollAlarmFailure) {
+        @CustomType.Parameter("alarms") @Nullable List<String> alarms,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("ignorePollAlarmFailure") @Nullable Boolean ignorePollAlarmFailure) {
         this.alarms = alarms;
         this.enabled = enabled;
         this.ignorePollAlarmFailure = ignorePollAlarmFailure;

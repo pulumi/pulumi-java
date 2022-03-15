@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class InstanceDisk extends io.pulumi.resources.InvokeArgs {
      * Instance attached to the disk.
      * 
      */
-    @InputImport(name="attachedTo")
+    @Import(name="attachedTo")
       private final @Nullable String attachedTo;
 
     public Optional<String> getAttachedTo() {
@@ -35,7 +35,7 @@ public final class InstanceDisk extends io.pulumi.resources.InvokeArgs {
      * Attachment state of the disk.
      * 
      */
-    @InputImport(name="attachmentState")
+    @Import(name="attachmentState")
       private final @Nullable String attachmentState;
 
     public Optional<String> getAttachmentState() {
@@ -46,7 +46,7 @@ public final class InstanceDisk extends io.pulumi.resources.InvokeArgs {
      * The names to use for your new Lightsail disk.
      * 
      */
-    @InputImport(name="diskName", required=true)
+    @Import(name="diskName", required=true)
       private final String diskName;
 
     public String getDiskName() {
@@ -57,7 +57,7 @@ public final class InstanceDisk extends io.pulumi.resources.InvokeArgs {
      * IOPS of disk.
      * 
      */
-    @InputImport(name="iOPS")
+    @Import(name="iOPS")
       private final @Nullable Integer iOPS;
 
     public Optional<Integer> getIOPS() {
@@ -68,7 +68,7 @@ public final class InstanceDisk extends io.pulumi.resources.InvokeArgs {
      * Is the Attached disk is the system disk of the Instance.
      * 
      */
-    @InputImport(name="isSystemDisk")
+    @Import(name="isSystemDisk")
       private final @Nullable Boolean isSystemDisk;
 
     public Optional<Boolean> getIsSystemDisk() {
@@ -79,7 +79,7 @@ public final class InstanceDisk extends io.pulumi.resources.InvokeArgs {
      * Path of the disk attached to the instance.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final String path;
 
     public String getPath() {
@@ -90,7 +90,7 @@ public final class InstanceDisk extends io.pulumi.resources.InvokeArgs {
      * Size of the disk attached to the Instance.
      * 
      */
-    @InputImport(name="sizeInGb")
+    @Import(name="sizeInGb")
       private final @Nullable String sizeInGb;
 
     public Optional<String> getSizeInGb() {

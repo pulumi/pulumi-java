@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iotwireless.inputs.TaskDefinitionLoRaWANUpdateGateway
 import io.pulumi.awsnative.iotwireless.inputs.TaskDefinitionTagArgs;
 import io.pulumi.awsnative.iotwireless.inputs.TaskDefinitionUpdateWirelessGatewayTaskCreateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to automatically create tasks using this task definition for all gateways with the specified current version. If false, the task must me created by calling CreateWirelessGatewayTask.
      * 
      */
-    @InputImport(name="autoCreateTasks", required=true)
+    @Import(name="autoCreateTasks", required=true)
       private final Output<Boolean> autoCreateTasks;
 
     public Output<Boolean> getAutoCreateTasks() {
@@ -35,7 +35,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * The list of task definitions.
      * 
      */
-    @InputImport(name="loRaWANUpdateGatewayTaskEntry")
+    @Import(name="loRaWANUpdateGatewayTaskEntry")
       private final @Nullable Output<TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs> loRaWANUpdateGatewayTaskEntry;
 
     public Output<TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs> getLoRaWANUpdateGatewayTaskEntry() {
@@ -46,7 +46,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the new resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * A list of key-value pairs that contain metadata for the destination.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<TaskDefinitionTagArgs>> tags;
 
     public Output<List<TaskDefinitionTagArgs>> getTags() {
@@ -68,7 +68,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * A filter to list only the wireless gateway task definitions that use this task definition type
      * 
      */
-    @InputImport(name="taskDefinitionType")
+    @Import(name="taskDefinitionType")
       private final @Nullable Output<TaskDefinitionType> taskDefinitionType;
 
     public Output<TaskDefinitionType> getTaskDefinitionType() {
@@ -79,7 +79,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Information about the gateways to update.
      * 
      */
-    @InputImport(name="update")
+    @Import(name="update")
       private final @Nullable Output<TaskDefinitionUpdateWirelessGatewayTaskCreateArgs> update;
 
     public Output<TaskDefinitionUpdateWirelessGatewayTaskCreateArgs> getUpdate() {

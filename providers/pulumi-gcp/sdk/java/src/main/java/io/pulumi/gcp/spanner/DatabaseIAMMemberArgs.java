@@ -4,7 +4,7 @@
 package io.pulumi.gcp.spanner;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.spanner.inputs.DatabaseIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
 
     public static final DatabaseIAMMemberArgs Empty = new DatabaseIAMMemberArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<DatabaseIAMMemberConditionArgs> condition;
 
     public Output<DatabaseIAMMemberConditionArgs> getCondition() {
@@ -26,7 +26,7 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * The name of the Spanner database.
      * 
      */
-    @InputImport(name="database", required=true)
+    @Import(name="database", required=true)
       private final Output<String> database;
 
     public Output<String> getDatabase() {
@@ -37,14 +37,14 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * The name of the Spanner instance the database belongs to.
      * 
      */
-    @InputImport(name="instance", required=true)
+    @Import(name="instance", required=true)
       private final Output<String> instance;
 
     public Output<String> getInstance() {
         return this.instance;
     }
 
-    @InputImport(name="member", required=true)
+    @Import(name="member", required=true)
       private final Output<String> member;
 
     public Output<String> getMember() {
@@ -56,7 +56,7 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -69,7 +69,7 @@ public final class DatabaseIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

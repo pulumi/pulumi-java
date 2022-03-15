@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualDirectoryResponse {
     /**
      * Physical path.
@@ -22,10 +22,10 @@ public final class VirtualDirectoryResponse {
      */
     private final @Nullable String virtualPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualDirectoryResponse(
-        @OutputCustomType.Parameter("physicalPath") @Nullable String physicalPath,
-        @OutputCustomType.Parameter("virtualPath") @Nullable String virtualPath) {
+        @CustomType.Parameter("physicalPath") @Nullable String physicalPath,
+        @CustomType.Parameter("virtualPath") @Nullable String virtualPath) {
         this.physicalPath = physicalPath;
         this.virtualPath = virtualPath;
     }

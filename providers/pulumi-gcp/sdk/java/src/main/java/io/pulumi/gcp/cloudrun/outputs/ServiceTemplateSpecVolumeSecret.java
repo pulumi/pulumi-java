@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecVolumeSecretItem;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTemplateSpecVolumeSecret {
     /**
      * Mode bits to use on created files by default. Must be a value between 0000
@@ -46,11 +46,11 @@ public final class ServiceTemplateSpecVolumeSecret {
      */
     private final String secretName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTemplateSpecVolumeSecret(
-        @OutputCustomType.Parameter("defaultMode") @Nullable Integer defaultMode,
-        @OutputCustomType.Parameter("items") @Nullable List<ServiceTemplateSpecVolumeSecretItem> items,
-        @OutputCustomType.Parameter("secretName") String secretName) {
+        @CustomType.Parameter("defaultMode") @Nullable Integer defaultMode,
+        @CustomType.Parameter("items") @Nullable List<ServiceTemplateSpecVolumeSecretItem> items,
+        @CustomType.Parameter("secretName") String secretName) {
         this.defaultMode = defaultMode;
         this.items = items;
         this.secretName = secretName;

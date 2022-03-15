@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.AzureFirewallNetworkRuleArgs;
 import io.pulumi.azurenative.network.inputs.AzureFirewallRCActionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
      * The action type of a rule collection.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<AzureFirewallRCActionArgs> action;
 
     public Output<AzureFirewallRCActionArgs> getAction() {
@@ -37,7 +37,7 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -48,7 +48,7 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
      * The name of the resource that is unique within the Azure firewall. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -59,7 +59,7 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
      * Priority of the network rule collection resource.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -70,7 +70,7 @@ public final class AzureFirewallNetworkRuleCollectionArgs extends io.pulumi.reso
      * Collection of rules used by a network rule collection.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<AzureFirewallNetworkRuleArgs>> rules;
 
     public Output<List<AzureFirewallNetworkRuleArgs>> getRules() {

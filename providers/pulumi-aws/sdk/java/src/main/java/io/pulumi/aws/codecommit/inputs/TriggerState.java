@@ -5,7 +5,7 @@ package io.pulumi.aws.codecommit.inputs;
 
 import io.pulumi.aws.codecommit.inputs.TriggerTriggerGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * System-generated unique identifier.
      * 
      */
-    @InputImport(name="configurationId")
+    @Import(name="configurationId")
       private final @Nullable Output<String> configurationId;
 
     public Output<String> getConfigurationId() {
@@ -31,14 +31,14 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
      * The name for the repository. This needs to be less than 100 characters.
      * 
      */
-    @InputImport(name="repositoryName")
+    @Import(name="repositoryName")
       private final @Nullable Output<String> repositoryName;
 
     public Output<String> getRepositoryName() {
         return this.repositoryName == null ? Output.empty() : this.repositoryName;
     }
 
-    @InputImport(name="triggers")
+    @Import(name="triggers")
       private final @Nullable Output<List<TriggerTriggerGetArgs>> triggers;
 
     public Output<List<TriggerTriggerGetArgs>> getTriggers() {

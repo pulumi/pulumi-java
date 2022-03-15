@@ -3,20 +3,20 @@
 
 package io.pulumi.aws.mq.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBrokerConfiguration {
     private final String id;
     private final Integer revision;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBrokerConfiguration(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("revision") Integer revision) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("revision") Integer revision) {
         this.id = id;
         this.revision = revision;
     }

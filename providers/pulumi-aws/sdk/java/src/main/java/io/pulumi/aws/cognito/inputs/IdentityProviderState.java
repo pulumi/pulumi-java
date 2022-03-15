@@ -4,7 +4,7 @@
 package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
      * The map of attribute mapping of user pool attributes. [AttributeMapping in AWS API documentation](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-AttributeMapping)
      * 
      */
-    @InputImport(name="attributeMapping")
+    @Import(name="attributeMapping")
       private final @Nullable Output<Map<String,String>> attributeMapping;
 
     public Output<Map<String,String>> getAttributeMapping() {
@@ -31,7 +31,7 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
      * The list of identity providers.
      * 
      */
-    @InputImport(name="idpIdentifiers")
+    @Import(name="idpIdentifiers")
       private final @Nullable Output<List<String>> idpIdentifiers;
 
     public Output<List<String>> getIdpIdentifiers() {
@@ -42,7 +42,7 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
      * The map of identity details, such as access token
      * 
      */
-    @InputImport(name="providerDetails")
+    @Import(name="providerDetails")
       private final @Nullable Output<Map<String,String>> providerDetails;
 
     public Output<Map<String,String>> getProviderDetails() {
@@ -53,7 +53,7 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
      * The provider name
      * 
      */
-    @InputImport(name="providerName")
+    @Import(name="providerName")
       private final @Nullable Output<String> providerName;
 
     public Output<String> getProviderName() {
@@ -64,7 +64,7 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
      * The provider type.  [See AWS API for valid values](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateIdentityProvider.html#CognitoUserPools-CreateIdentityProvider-request-ProviderType)
      * 
      */
-    @InputImport(name="providerType")
+    @Import(name="providerType")
       private final @Nullable Output<String> providerType;
 
     public Output<String> getProviderType() {
@@ -75,7 +75,7 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
      * The user pool id
      * 
      */
-    @InputImport(name="userPoolId")
+    @Import(name="userPoolId")
       private final @Nullable Output<String> userPoolId;
 
     public Output<String> getUserPoolId() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.testing_v1.inputs.AppBundleResponse;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceResponse;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class AndroidTestLoopResponse extends io.pulumi.resources.InvokeArg
      * The APK for the application under test.
      * 
      */
-    @InputImport(name="appApk", required=true)
+    @Import(name="appApk", required=true)
       private final FileReferenceResponse appApk;
 
     public FileReferenceResponse getAppApk() {
@@ -35,7 +35,7 @@ public final class AndroidTestLoopResponse extends io.pulumi.resources.InvokeArg
      * A multi-apk app bundle for the application under test.
      * 
      */
-    @InputImport(name="appBundle", required=true)
+    @Import(name="appBundle", required=true)
       private final AppBundleResponse appBundle;
 
     public AppBundleResponse getAppBundle() {
@@ -46,7 +46,7 @@ public final class AndroidTestLoopResponse extends io.pulumi.resources.InvokeArg
      * The java package for the application under test. The default is determined by examining the application's manifest.
      * 
      */
-    @InputImport(name="appPackageId", required=true)
+    @Import(name="appPackageId", required=true)
       private final String appPackageId;
 
     public String getAppPackageId() {
@@ -57,7 +57,7 @@ public final class AndroidTestLoopResponse extends io.pulumi.resources.InvokeArg
      * The list of scenario labels that should be run during the test. The scenario labels should map to labels defined in the application's manifest. For example, player_experience and com.google.test.loops.player_experience add all of the loops labeled in the manifest with the com.google.test.loops.player_experience name to the execution. Scenarios can also be specified in the scenarios field.
      * 
      */
-    @InputImport(name="scenarioLabels", required=true)
+    @Import(name="scenarioLabels", required=true)
       private final List<String> scenarioLabels;
 
     public List<String> getScenarioLabels() {
@@ -68,7 +68,7 @@ public final class AndroidTestLoopResponse extends io.pulumi.resources.InvokeArg
      * The list of scenarios that should be run during the test. The default is all test loops, derived from the application's manifest.
      * 
      */
-    @InputImport(name="scenarios", required=true)
+    @Import(name="scenarios", required=true)
       private final List<Integer> scenarios;
 
     public List<Integer> getScenarios() {

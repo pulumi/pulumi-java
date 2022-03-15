@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.forecast.outputs;
 
 import io.pulumi.awsnative.forecast.outputs.AttributesItemProperties;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SchemaProperties {
     private final @Nullable List<AttributesItemProperties> attributes;
 
-    @OutputCustomType.Constructor
-    private SchemaProperties(@OutputCustomType.Parameter("attributes") @Nullable List<AttributesItemProperties> attributes) {
+    @CustomType.Constructor
+    private SchemaProperties(@CustomType.Parameter("attributes") @Nullable List<AttributesItemProperties> attributes) {
         this.attributes = attributes;
     }
 

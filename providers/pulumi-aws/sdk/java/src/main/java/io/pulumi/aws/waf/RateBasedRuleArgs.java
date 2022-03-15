@@ -5,7 +5,7 @@ package io.pulumi.aws.waf;
 
 import io.pulumi.aws.waf.inputs.RateBasedRulePredicateArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name or description for the Amazon CloudWatch metric of this rule.
      * 
      */
-    @InputImport(name="metricName", required=true)
+    @Import(name="metricName", required=true)
       private final Output<String> metricName;
 
     public Output<String> getMetricName() {
@@ -33,7 +33,7 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name or description of the rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The objects to include in a rule (documented below).
      * 
      */
-    @InputImport(name="predicates")
+    @Import(name="predicates")
       private final @Nullable Output<List<RateBasedRulePredicateArgs>> predicates;
 
     public Output<List<RateBasedRulePredicateArgs>> getPredicates() {
@@ -55,7 +55,7 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Valid value is IP.
      * 
      */
-    @InputImport(name="rateKey", required=true)
+    @Import(name="rateKey", required=true)
       private final Output<String> rateKey;
 
     public Output<String> getRateKey() {
@@ -66,7 +66,7 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum number of requests, which have an identical value in the field specified by the RateKey, allowed in a five-minute period. Minimum value is 100.
      * 
      */
-    @InputImport(name="rateLimit", required=true)
+    @Import(name="rateLimit", required=true)
       private final Output<Integer> rateLimit;
 
     public Output<Integer> getRateLimit() {
@@ -77,7 +77,7 @@ public final class RateBasedRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

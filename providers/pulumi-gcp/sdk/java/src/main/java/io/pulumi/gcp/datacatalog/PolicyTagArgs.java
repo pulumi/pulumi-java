@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
      * If not set, defaults to an empty description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -34,7 +34,7 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
      * not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -47,7 +47,7 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
      * If not set, defaults to an empty string.
      * 
      */
-    @InputImport(name="parentPolicyTag")
+    @Import(name="parentPolicyTag")
       private final @Nullable Output<String> parentPolicyTag;
 
     public Output<String> getParentPolicyTag() {
@@ -58,7 +58,7 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
      * Taxonomy the policy tag is associated with
      * 
      */
-    @InputImport(name="taxonomy", required=true)
+    @Import(name="taxonomy", required=true)
       private final Output<String> taxonomy;
 
     public Output<String> getTaxonomy() {

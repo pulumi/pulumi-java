@@ -4,26 +4,26 @@
 package io.pulumi.awsnative.appstream.outputs;
 
 import io.pulumi.awsnative.appstream.outputs.AppBlockS3Location;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppBlockScriptDetails {
     private final @Nullable String executableParameters;
     private final String executablePath;
     private final AppBlockS3Location scriptS3Location;
     private final Integer timeoutInSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppBlockScriptDetails(
-        @OutputCustomType.Parameter("executableParameters") @Nullable String executableParameters,
-        @OutputCustomType.Parameter("executablePath") String executablePath,
-        @OutputCustomType.Parameter("scriptS3Location") AppBlockS3Location scriptS3Location,
-        @OutputCustomType.Parameter("timeoutInSeconds") Integer timeoutInSeconds) {
+        @CustomType.Parameter("executableParameters") @Nullable String executableParameters,
+        @CustomType.Parameter("executablePath") String executablePath,
+        @CustomType.Parameter("scriptS3Location") AppBlockS3Location scriptS3Location,
+        @CustomType.Parameter("timeoutInSeconds") Integer timeoutInSeconds) {
         this.executableParameters = executableParameters;
         this.executablePath = executablePath;
         this.scriptS3Location = scriptS3Location;

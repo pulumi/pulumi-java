@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.SqlPartitionSettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
      */
-    @InputImport(name="additionalColumns")
+    @Import(name="additionalColumns")
       private final @Nullable Object additionalColumns;
 
     public Optional<Object> getAdditionalColumns() {
@@ -35,7 +35,7 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
@@ -46,7 +46,7 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
@@ -57,7 +57,7 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
      * The partition mechanism that will be used for Sql read in parallel. Possible values include: "None", "PhysicalPartitionsOfTable", "DynamicRange".
      * 
      */
-    @InputImport(name="partitionOption")
+    @Import(name="partitionOption")
       private final @Nullable Object partitionOption;
 
     public Optional<Object> getPartitionOption() {
@@ -68,7 +68,7 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
      * The settings that will be leveraged for Sql source partitioning.
      * 
      */
-    @InputImport(name="partitionSettings")
+    @Import(name="partitionSettings")
       private final @Nullable SqlPartitionSettingsResponse partitionSettings;
 
     public Optional<SqlPartitionSettingsResponse> getPartitionSettings() {
@@ -79,7 +79,7 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
      * Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="queryTimeout")
+    @Import(name="queryTimeout")
       private final @Nullable Object queryTimeout;
 
     public Optional<Object> getQueryTimeout() {
@@ -90,7 +90,7 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
      * Source retry count. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="sourceRetryCount")
+    @Import(name="sourceRetryCount")
       private final @Nullable Object sourceRetryCount;
 
     public Optional<Object> getSourceRetryCount() {
@@ -101,7 +101,7 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
      * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
-    @InputImport(name="sourceRetryWait")
+    @Import(name="sourceRetryWait")
       private final @Nullable Object sourceRetryWait;
 
     public Optional<Object> getSourceRetryWait() {
@@ -112,7 +112,7 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
      * SQL Data Warehouse reader query. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="sqlReaderQuery")
+    @Import(name="sqlReaderQuery")
       private final @Nullable Object sqlReaderQuery;
 
     public Optional<Object> getSqlReaderQuery() {
@@ -123,7 +123,7 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the stored procedure for a SQL Data Warehouse source. This cannot be used at the same time as SqlReaderQuery. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="sqlReaderStoredProcedureName")
+    @Import(name="sqlReaderStoredProcedureName")
       private final @Nullable Object sqlReaderStoredProcedureName;
 
     public Optional<Object> getSqlReaderStoredProcedureName() {
@@ -134,7 +134,7 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
      * Value and type setting for stored procedure parameters. Example: "{Parameter1: {value: "1", type: "int"}}". Type: object (or Expression with resultType object), itemType: StoredProcedureParameter.
      * 
      */
-    @InputImport(name="storedProcedureParameters")
+    @Import(name="storedProcedureParameters")
       private final @Nullable Object storedProcedureParameters;
 
     public Optional<Object> getStoredProcedureParameters() {
@@ -146,7 +146,7 @@ public final class SqlDWSourceResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'SqlDWSource'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

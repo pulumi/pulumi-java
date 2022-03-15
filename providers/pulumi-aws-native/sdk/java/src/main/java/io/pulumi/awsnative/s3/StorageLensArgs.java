@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3;
 import io.pulumi.awsnative.s3.inputs.StorageLensConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.StorageLensTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ public final class StorageLensArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StorageLensArgs Empty = new StorageLensArgs();
 
-    @InputImport(name="storageLensConfiguration", required=true)
+    @Import(name="storageLensConfiguration", required=true)
       private final Output<StorageLensConfigurationArgs> storageLensConfiguration;
 
     public Output<StorageLensConfigurationArgs> getStorageLensConfiguration() {
@@ -27,7 +27,7 @@ public final class StorageLensArgs extends io.pulumi.resources.ResourceArgs {
      * A set of tags (key-value pairs) for this Amazon S3 Storage Lens configuration.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<StorageLensTagArgs>> tags;
 
     public Output<List<StorageLensTagArgs>> getTags() {

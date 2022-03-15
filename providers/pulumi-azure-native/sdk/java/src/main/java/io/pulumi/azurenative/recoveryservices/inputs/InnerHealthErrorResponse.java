@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * Error creation time (UTC)
      * 
      */
-    @InputImport(name="creationTimeUtc")
+    @Import(name="creationTimeUtc")
       private final @Nullable String creationTimeUtc;
 
     public Optional<String> getCreationTimeUtc() {
@@ -33,7 +33,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * ID of the entity.
      * 
      */
-    @InputImport(name="entityId")
+    @Import(name="entityId")
       private final @Nullable String entityId;
 
     public Optional<String> getEntityId() {
@@ -44,7 +44,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * Category of error.
      * 
      */
-    @InputImport(name="errorCategory")
+    @Import(name="errorCategory")
       private final @Nullable String errorCategory;
 
     public Optional<String> getErrorCategory() {
@@ -55,7 +55,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * Error code.
      * 
      */
-    @InputImport(name="errorCode")
+    @Import(name="errorCode")
       private final @Nullable String errorCode;
 
     public Optional<String> getErrorCode() {
@@ -66,7 +66,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * Level of error.
      * 
      */
-    @InputImport(name="errorLevel")
+    @Import(name="errorLevel")
       private final @Nullable String errorLevel;
 
     public Optional<String> getErrorLevel() {
@@ -77,7 +77,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * Error message.
      * 
      */
-    @InputImport(name="errorMessage")
+    @Import(name="errorMessage")
       private final @Nullable String errorMessage;
 
     public Optional<String> getErrorMessage() {
@@ -88,7 +88,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * Source of error.
      * 
      */
-    @InputImport(name="errorSource")
+    @Import(name="errorSource")
       private final @Nullable String errorSource;
 
     public Optional<String> getErrorSource() {
@@ -99,7 +99,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * Type of error.
      * 
      */
-    @InputImport(name="errorType")
+    @Import(name="errorType")
       private final @Nullable String errorType;
 
     public Optional<String> getErrorType() {
@@ -110,7 +110,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * Possible causes of error.
      * 
      */
-    @InputImport(name="possibleCauses")
+    @Import(name="possibleCauses")
       private final @Nullable String possibleCauses;
 
     public Optional<String> getPossibleCauses() {
@@ -121,7 +121,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * Recommended action to resolve error.
      * 
      */
-    @InputImport(name="recommendedAction")
+    @Import(name="recommendedAction")
       private final @Nullable String recommendedAction;
 
     public Optional<String> getRecommendedAction() {
@@ -132,7 +132,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * DRA error message.
      * 
      */
-    @InputImport(name="recoveryProviderErrorMessage")
+    @Import(name="recoveryProviderErrorMessage")
       private final @Nullable String recoveryProviderErrorMessage;
 
     public Optional<String> getRecoveryProviderErrorMessage() {
@@ -143,7 +143,7 @@ public final class InnerHealthErrorResponse extends io.pulumi.resources.InvokeAr
      * Summary message of the entity.
      * 
      */
-    @InputImport(name="summaryMessage")
+    @Import(name="summaryMessage")
       private final @Nullable String summaryMessage;
 
     public Optional<String> getSummaryMessage() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.backup.GlobalSettingsArgs;
 import io.pulumi.aws.backup.inputs.GlobalSettingsState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +33,7 @@ public class GlobalSettings extends io.pulumi.resources.CustomResource {
      * A list of resources along with the opt-in preferences for the account.
      * 
      */
-    @OutputExport(name="globalSettings", type=Map.class, parameters={String.class, String.class})
+    @Export(name="globalSettings", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> globalSettings;
 
     /**

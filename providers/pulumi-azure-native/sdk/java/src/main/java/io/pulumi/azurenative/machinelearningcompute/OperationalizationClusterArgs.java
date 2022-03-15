@@ -11,7 +11,7 @@ import io.pulumi.azurenative.machinelearningcompute.inputs.GlobalServiceConfigur
 import io.pulumi.azurenative.machinelearningcompute.inputs.StorageAccountPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * AppInsights configuration.
      * 
      */
-    @InputImport(name="appInsights")
+    @Import(name="appInsights")
       private final @Nullable Output<AppInsightsPropertiesArgs> appInsights;
 
     public Output<AppInsightsPropertiesArgs> getAppInsights() {
@@ -37,7 +37,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * The name of the cluster.
      * 
      */
-    @InputImport(name="clusterName")
+    @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -48,7 +48,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * The cluster type.
      * 
      */
-    @InputImport(name="clusterType", required=true)
+    @Import(name="clusterType", required=true)
       private final Output<Either<String,ClusterType>> clusterType;
 
     public Output<Either<String,ClusterType>> getClusterType() {
@@ -59,7 +59,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * Container Registry properties.
      * 
      */
-    @InputImport(name="containerRegistry")
+    @Import(name="containerRegistry")
       private final @Nullable Output<ContainerRegistryPropertiesArgs> containerRegistry;
 
     public Output<ContainerRegistryPropertiesArgs> getContainerRegistry() {
@@ -70,7 +70,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * Parameters for the Azure Container Service cluster.
      * 
      */
-    @InputImport(name="containerService")
+    @Import(name="containerService")
       private final @Nullable Output<AcsClusterPropertiesArgs> containerService;
 
     public Output<AcsClusterPropertiesArgs> getContainerService() {
@@ -81,7 +81,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * The description of the cluster.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -92,7 +92,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * Contains global configuration for the web services in the cluster.
      * 
      */
-    @InputImport(name="globalServiceConfiguration")
+    @Import(name="globalServiceConfiguration")
       private final @Nullable Output<GlobalServiceConfigurationArgs> globalServiceConfiguration;
 
     public Output<GlobalServiceConfigurationArgs> getGlobalServiceConfiguration() {
@@ -103,7 +103,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * Specifies the location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -114,7 +114,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * Name of the resource group in which the cluster is located.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -125,7 +125,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * Storage Account properties.
      * 
      */
-    @InputImport(name="storageAccount")
+    @Import(name="storageAccount")
       private final @Nullable Output<StorageAccountPropertiesArgs> storageAccount;
 
     public Output<StorageAccountPropertiesArgs> getStorageAccount() {
@@ -136,7 +136,7 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
      * Contains resource tags defined as key/value pairs.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RouterNatSubnetwork {
     /**
      * Self-link of subnetwork to NAT
@@ -33,11 +33,11 @@ public final class RouterNatSubnetwork {
      */
     private final List<String> sourceIpRangesToNats;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouterNatSubnetwork(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("secondaryIpRangeNames") @Nullable List<String> secondaryIpRangeNames,
-        @OutputCustomType.Parameter("sourceIpRangesToNats") List<String> sourceIpRangesToNats) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("secondaryIpRangeNames") @Nullable List<String> secondaryIpRangeNames,
+        @CustomType.Parameter("sourceIpRangesToNats") List<String> sourceIpRangesToNats) {
         this.name = name;
         this.secondaryIpRangeNames = secondaryIpRangeNames;
         this.sourceIpRangesToNats = sourceIpRangesToNats;

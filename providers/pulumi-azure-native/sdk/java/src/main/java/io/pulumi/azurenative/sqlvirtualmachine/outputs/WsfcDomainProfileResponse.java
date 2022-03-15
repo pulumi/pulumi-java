@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WsfcDomainProfileResponse {
     /**
      * Account name used for creating cluster (at minimum needs permissions to 'Create Computer Objects' in domain).
@@ -47,15 +47,15 @@ public final class WsfcDomainProfileResponse {
      */
     private final @Nullable String storageAccountUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WsfcDomainProfileResponse(
-        @OutputCustomType.Parameter("clusterBootstrapAccount") @Nullable String clusterBootstrapAccount,
-        @OutputCustomType.Parameter("clusterOperatorAccount") @Nullable String clusterOperatorAccount,
-        @OutputCustomType.Parameter("domainFqdn") @Nullable String domainFqdn,
-        @OutputCustomType.Parameter("fileShareWitnessPath") @Nullable String fileShareWitnessPath,
-        @OutputCustomType.Parameter("ouPath") @Nullable String ouPath,
-        @OutputCustomType.Parameter("sqlServiceAccount") @Nullable String sqlServiceAccount,
-        @OutputCustomType.Parameter("storageAccountUrl") @Nullable String storageAccountUrl) {
+        @CustomType.Parameter("clusterBootstrapAccount") @Nullable String clusterBootstrapAccount,
+        @CustomType.Parameter("clusterOperatorAccount") @Nullable String clusterOperatorAccount,
+        @CustomType.Parameter("domainFqdn") @Nullable String domainFqdn,
+        @CustomType.Parameter("fileShareWitnessPath") @Nullable String fileShareWitnessPath,
+        @CustomType.Parameter("ouPath") @Nullable String ouPath,
+        @CustomType.Parameter("sqlServiceAccount") @Nullable String sqlServiceAccount,
+        @CustomType.Parameter("storageAccountUrl") @Nullable String storageAccountUrl) {
         this.clusterBootstrapAccount = clusterBootstrapAccount;
         this.clusterOperatorAccount = clusterOperatorAccount;
         this.domainFqdn = domainFqdn;

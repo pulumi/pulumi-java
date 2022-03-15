@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetCodeSigningConfigArgs extends io.pulumi.resources.InvokeAr
      * A unique Arn for CodeSigningConfig resource
      * 
      */
-    @InputImport(name="codeSigningConfigArn", required=true)
+    @Import(name="codeSigningConfigArn", required=true)
       private final String codeSigningConfigArn;
 
     public String getCodeSigningConfigArn() {

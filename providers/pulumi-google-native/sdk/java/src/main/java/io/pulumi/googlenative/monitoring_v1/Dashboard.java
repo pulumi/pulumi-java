@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.monitoring_v1.DashboardArgs;
@@ -26,7 +26,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * The content is divided into equally spaced columns and the widgets are arranged vertically.
      * 
      */
-    @OutputExport(name="columnLayout", type=ColumnLayoutResponse.class, parameters={})
+    @Export(name="columnLayout", type=ColumnLayoutResponse.class, parameters={})
     private Output<ColumnLayoutResponse> columnLayout;
 
     /**
@@ -40,7 +40,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * The mutable, human-readable name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -54,7 +54,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * etag is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other. An etag is returned in the response to GetDashboard, and users are expected to put that etag in the request to UpdateDashboard to ensure that their change will be applied to the same version of the Dashboard configuration. The field should not be passed during dashboard creation.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -68,7 +68,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * Content is arranged with a basic layout that re-flows a simple list of informational elements like widgets or tiles.
      * 
      */
-    @OutputExport(name="gridLayout", type=GridLayoutResponse.class, parameters={})
+    @Export(name="gridLayout", type=GridLayoutResponse.class, parameters={})
     private Output<GridLayoutResponse> gridLayout;
 
     /**
@@ -82,7 +82,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * Labels applied to the dashboard
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -96,7 +96,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * The content is arranged as a grid of tiles, with each content widget occupying one or more grid blocks.
      * 
      */
-    @OutputExport(name="mosaicLayout", type=MosaicLayoutResponse.class, parameters={})
+    @Export(name="mosaicLayout", type=MosaicLayoutResponse.class, parameters={})
     private Output<MosaicLayoutResponse> mosaicLayout;
 
     /**
@@ -110,7 +110,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * Immutable. The resource name of the dashboard.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -124,7 +124,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * The content is divided into equally spaced rows and the widgets are arranged horizontally.
      * 
      */
-    @OutputExport(name="rowLayout", type=RowLayoutResponse.class, parameters={})
+    @Export(name="rowLayout", type=RowLayoutResponse.class, parameters={})
     private Output<RowLayoutResponse> rowLayout;
 
     /**

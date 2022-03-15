@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleDynamodbv2PutItem {
     /**
      * The name of the DynamoDB table.
@@ -15,8 +15,8 @@ public final class TopicRuleDynamodbv2PutItem {
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor
-    private TopicRuleDynamodbv2PutItem(@OutputCustomType.Parameter("tableName") String tableName) {
+    @CustomType.Constructor
+    private TopicRuleDynamodbv2PutItem(@CustomType.Parameter("tableName") String tableName) {
         this.tableName = tableName;
     }
 

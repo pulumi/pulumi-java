@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.azurenative.machinelearning.inputs.WebServiceParameterResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GraphNodeResponse extends io.pulumi.resources.InvokeArgs {
      * The id of the asset represented by this node.
      * 
      */
-    @InputImport(name="assetId")
+    @Import(name="assetId")
       private final @Nullable String assetId;
 
     public Optional<String> getAssetId() {
@@ -35,7 +35,7 @@ public final class GraphNodeResponse extends io.pulumi.resources.InvokeArgs {
      * The id of the input element represented by this node.
      * 
      */
-    @InputImport(name="inputId")
+    @Import(name="inputId")
       private final @Nullable String inputId;
 
     public Optional<String> getInputId() {
@@ -46,7 +46,7 @@ public final class GraphNodeResponse extends io.pulumi.resources.InvokeArgs {
      * The id of the output element represented by this node.
      * 
      */
-    @InputImport(name="outputId")
+    @Import(name="outputId")
       private final @Nullable String outputId;
 
     public Optional<String> getOutputId() {
@@ -57,7 +57,7 @@ public final class GraphNodeResponse extends io.pulumi.resources.InvokeArgs {
      * If applicable, parameters of the node. Global graph parameters map into these, with values set at runtime.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,WebServiceParameterResponse> parameters;
 
     public Map<String,WebServiceParameterResponse> getParameters() {

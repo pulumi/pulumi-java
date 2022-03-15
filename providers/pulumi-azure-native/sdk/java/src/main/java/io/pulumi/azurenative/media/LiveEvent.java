@@ -13,7 +13,7 @@ import io.pulumi.azurenative.media.outputs.LiveEventTranscriptionResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -42,7 +42,7 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * The creation time for the live event
      * 
      */
-    @OutputExport(name="created", type=String.class, parameters={})
+    @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
@@ -56,7 +56,7 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * Live event cross site access policies.
      * 
      */
-    @OutputExport(name="crossSiteAccessPolicies", type=CrossSiteAccessPoliciesResponse.class, parameters={})
+    @Export(name="crossSiteAccessPolicies", type=CrossSiteAccessPoliciesResponse.class, parameters={})
     private Output</* @Nullable */ CrossSiteAccessPoliciesResponse> crossSiteAccessPolicies;
 
     /**
@@ -70,7 +70,7 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * A description for the live event.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -84,7 +84,7 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.
      * 
      */
-    @OutputExport(name="encoding", type=LiveEventEncodingResponse.class, parameters={})
+    @Export(name="encoding", type=LiveEventEncodingResponse.class, parameters={})
     private Output</* @Nullable */ LiveEventEncodingResponse> encoding;
 
     /**
@@ -98,7 +98,7 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
      * 
      */
-    @OutputExport(name="hostnamePrefix", type=String.class, parameters={})
+    @Export(name="hostnamePrefix", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostnamePrefix;
 
     /**
@@ -112,7 +112,7 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * Live event input settings. It defines how the live event receives input from a contribution encoder.
      * 
      */
-    @OutputExport(name="input", type=LiveEventInputResponse.class, parameters={})
+    @Export(name="input", type=LiveEventInputResponse.class, parameters={})
     private Output<LiveEventInputResponse> input;
 
     /**
@@ -126,7 +126,7 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * The last modified time of the live event.
      * 
      */
-    @OutputExport(name="lastModified", type=String.class, parameters={})
+    @Export(name="lastModified", type=String.class, parameters={})
     private Output<String> lastModified;
 
     /**
@@ -140,7 +140,7 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -154,7 +154,7 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -168,7 +168,7 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.
      * 
      */
-    @OutputExport(name="preview", type=LiveEventPreviewResponse.class, parameters={})
+    @Export(name="preview", type=LiveEventPreviewResponse.class, parameters={})
     private Output</* @Nullable */ LiveEventPreviewResponse> preview;
 
     /**
@@ -182,7 +182,7 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * The provisioning state of the live event.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -196,7 +196,7 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * The resource state of the live event. See https://go.microsoft.com/fwlink/?linkid=2139012 for more information.
      * 
      */
-    @OutputExport(name="resourceState", type=String.class, parameters={})
+    @Export(name="resourceState", type=String.class, parameters={})
     private Output<String> resourceState;
 
     /**
@@ -210,7 +210,7 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are 'Default' and 'LowLatency'.
      * 
      */
-    @OutputExport(name="streamOptions", type=List.class, parameters={String.class})
+    @Export(name="streamOptions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> streamOptions;
 
     /**
@@ -224,7 +224,7 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * The system metadata relating to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -238,7 +238,7 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -252,7 +252,7 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.
      * 
      */
-    @OutputExport(name="transcriptions", type=List.class, parameters={LiveEventTranscriptionResponse.class})
+    @Export(name="transcriptions", type=List.class, parameters={LiveEventTranscriptionResponse.class})
     private Output</* @Nullable */ List<LiveEventTranscriptionResponse>> transcriptions;
 
     /**
@@ -266,7 +266,7 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -280,7 +280,7 @@ public class LiveEvent extends io.pulumi.resources.CustomResource {
      * Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state
      * 
      */
-    @OutputExport(name="useStaticHostname", type=Boolean.class, parameters={})
+    @Export(name="useStaticHostname", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> useStaticHostname;
 
     /**

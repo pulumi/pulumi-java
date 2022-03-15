@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the bucket.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -31,7 +31,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * A set of key/value attribute pairs to attach to each Cloud PubSub message published for this notification subscription
      * 
      */
-    @InputImport(name="customAttributes")
+    @Import(name="customAttributes")
       private final @Nullable Output<Map<String,String>> customAttributes;
 
     public Output<Map<String,String>> getCustomAttributes() {
@@ -42,7 +42,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * List of event type filters for this notification config. If not specified, Cloud Storage will send notifications for all event types. The valid types are: `"OBJECT_FINALIZE"`, `"OBJECT_METADATA_UPDATE"`, `"OBJECT_DELETE"`, `"OBJECT_ARCHIVE"`
      * 
      */
-    @InputImport(name="eventTypes")
+    @Import(name="eventTypes")
       private final @Nullable Output<List<String>> eventTypes;
 
     public Output<List<String>> getEventTypes() {
@@ -53,7 +53,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies a prefix path filter for this notification config. Cloud Storage will only send notifications for objects in this bucket whose names begin with the specified prefix.
      * 
      */
-    @InputImport(name="objectNamePrefix")
+    @Import(name="objectNamePrefix")
       private final @Nullable Output<String> objectNamePrefix;
 
     public Output<String> getObjectNamePrefix() {
@@ -64,7 +64,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * The desired content of the Payload. One of `"JSON_API_V1"` or `"NONE"`.
      * 
      */
-    @InputImport(name="payloadFormat", required=true)
+    @Import(name="payloadFormat", required=true)
       private final Output<String> payloadFormat;
 
     public Output<String> getPayloadFormat() {
@@ -78,7 +78,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * you will need to use the project-level name.
      * 
      */
-    @InputImport(name="topic", required=true)
+    @Import(name="topic", required=true)
       private final Output<String> topic;
 
     public Output<String> getTopic() {

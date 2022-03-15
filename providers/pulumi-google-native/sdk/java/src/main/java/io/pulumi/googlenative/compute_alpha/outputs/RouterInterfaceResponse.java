@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouterInterfaceResponse {
     /**
      * IP address and range of the interface. The IP range must be in the RFC3927 link-local IP address space. The value must be a CIDR-formatted string, for example: 169.254.0.1/30. NOTE: Do not truncate the address as it represents the IP address of the interface.
@@ -50,16 +50,16 @@ public final class RouterInterfaceResponse {
      */
     private final String subnetwork;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouterInterfaceResponse(
-        @OutputCustomType.Parameter("ipRange") String ipRange,
-        @OutputCustomType.Parameter("linkedInterconnectAttachment") String linkedInterconnectAttachment,
-        @OutputCustomType.Parameter("linkedVpnTunnel") String linkedVpnTunnel,
-        @OutputCustomType.Parameter("managementType") String managementType,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
-        @OutputCustomType.Parameter("redundantInterface") String redundantInterface,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork) {
+        @CustomType.Parameter("ipRange") String ipRange,
+        @CustomType.Parameter("linkedInterconnectAttachment") String linkedInterconnectAttachment,
+        @CustomType.Parameter("linkedVpnTunnel") String linkedVpnTunnel,
+        @CustomType.Parameter("managementType") String managementType,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @CustomType.Parameter("redundantInterface") String redundantInterface,
+        @CustomType.Parameter("subnetwork") String subnetwork) {
         this.ipRange = ipRange;
         this.linkedInterconnectAttachment = linkedInterconnectAttachment;
         this.linkedVpnTunnel = linkedVpnTunnel;

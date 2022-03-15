@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
 
     public static final ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs Empty = new ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceGetArgs();
 
-    @InputImport(name="referenceId")
+    @Import(name="referenceId")
       private final @Nullable Output<String> referenceId;
 
     public Output<String> getReferenceId() {
@@ -27,7 +27,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * Describes the format of the data in the streaming source, and how each data element maps to corresponding columns created in the in-application stream.
      * 
      */
-    @InputImport(name="referenceSchema", required=true)
+    @Import(name="referenceSchema", required=true)
       private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> referenceSchema;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaGetArgs> getReferenceSchema() {
@@ -38,7 +38,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * Identifies the S3 bucket and object that contains the reference data.
      * 
      */
-    @InputImport(name="s3ReferenceDataSource", required=true)
+    @Import(name="s3ReferenceDataSource", required=true)
       private final Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> s3ReferenceDataSource;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSourceGetArgs> getS3ReferenceDataSource() {
@@ -49,7 +49,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * The name of the in-application table to create.
      * 
      */
-    @InputImport(name="tableName", required=true)
+    @Import(name="tableName", required=true)
       private final Output<String> tableName;
 
     public Output<String> getTableName() {

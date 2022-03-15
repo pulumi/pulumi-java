@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class VpcDhcpOptionsAssociationState extends io.pulumi.resources.Re
      * The ID of the DHCP Options Set to associate to the VPC.
      * 
      */
-    @InputImport(name="dhcpOptionsId")
+    @Import(name="dhcpOptionsId")
       private final @Nullable Output<String> dhcpOptionsId;
 
     public Output<String> getDhcpOptionsId() {
@@ -29,7 +29,7 @@ public final class VpcDhcpOptionsAssociationState extends io.pulumi.resources.Re
      * The ID of the VPC to which we would like to associate a DHCP Options Set.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

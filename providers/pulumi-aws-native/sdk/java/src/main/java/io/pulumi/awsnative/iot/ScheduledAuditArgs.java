@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iot.enums.ScheduledAuditDayOfWeek;
 import io.pulumi.awsnative.iot.enums.ScheduledAuditFrequency;
 import io.pulumi.awsnative.iot.inputs.ScheduledAuditTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
      * The day of the month on which the scheduled audit takes place. Can be 1 through 31 or LAST. This field is required if the frequency parameter is set to MONTHLY.
      * 
      */
-    @InputImport(name="dayOfMonth")
+    @Import(name="dayOfMonth")
       private final @Nullable Output<String> dayOfMonth;
 
     public Output<String> getDayOfMonth() {
@@ -33,7 +33,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
      * The day of the week on which the scheduled audit takes place. Can be one of SUN, MON, TUE,WED, THU, FRI, or SAT. This field is required if the frequency parameter is set to WEEKLY or BIWEEKLY.
      * 
      */
-    @InputImport(name="dayOfWeek")
+    @Import(name="dayOfWeek")
       private final @Nullable Output<ScheduledAuditDayOfWeek> dayOfWeek;
 
     public Output<ScheduledAuditDayOfWeek> getDayOfWeek() {
@@ -44,7 +44,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
      * How often the scheduled audit takes place. Can be one of DAILY, WEEKLY, BIWEEKLY, or MONTHLY.
      * 
      */
-    @InputImport(name="frequency", required=true)
+    @Import(name="frequency", required=true)
       private final Output<ScheduledAuditFrequency> frequency;
 
     public Output<ScheduledAuditFrequency> getFrequency() {
@@ -55,7 +55,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
      * The name you want to give to the scheduled audit.
      * 
      */
-    @InputImport(name="scheduledAuditName")
+    @Import(name="scheduledAuditName")
       private final @Nullable Output<String> scheduledAuditName;
 
     public Output<String> getScheduledAuditName() {
@@ -66,7 +66,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ScheduledAuditTagArgs>> tags;
 
     public Output<List<ScheduledAuditTagArgs>> getTags() {
@@ -77,7 +77,7 @@ public final class ScheduledAuditArgs extends io.pulumi.resources.ResourceArgs {
      * Which checks are performed during the scheduled audit. Checks must be enabled for your account.
      * 
      */
-    @InputImport(name="targetCheckNames", required=true)
+    @Import(name="targetCheckNames", required=true)
       private final Output<List<String>> targetCheckNames;
 
     public Output<List<String>> getTargetCheckNames() {

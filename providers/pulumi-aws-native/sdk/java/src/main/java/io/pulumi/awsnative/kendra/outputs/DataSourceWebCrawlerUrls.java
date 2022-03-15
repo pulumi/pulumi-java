@@ -5,20 +5,20 @@ package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceWebCrawlerSeedUrlConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceWebCrawlerSiteMapsConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceWebCrawlerUrls {
     private final @Nullable DataSourceWebCrawlerSeedUrlConfiguration seedUrlConfiguration;
     private final @Nullable DataSourceWebCrawlerSiteMapsConfiguration siteMapsConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceWebCrawlerUrls(
-        @OutputCustomType.Parameter("seedUrlConfiguration") @Nullable DataSourceWebCrawlerSeedUrlConfiguration seedUrlConfiguration,
-        @OutputCustomType.Parameter("siteMapsConfiguration") @Nullable DataSourceWebCrawlerSiteMapsConfiguration siteMapsConfiguration) {
+        @CustomType.Parameter("seedUrlConfiguration") @Nullable DataSourceWebCrawlerSeedUrlConfiguration seedUrlConfiguration,
+        @CustomType.Parameter("siteMapsConfiguration") @Nullable DataSourceWebCrawlerSiteMapsConfiguration siteMapsConfiguration) {
         this.seedUrlConfiguration = seedUrlConfiguration;
         this.siteMapsConfiguration = siteMapsConfiguration;
     }

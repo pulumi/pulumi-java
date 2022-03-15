@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.TransportProtocol;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
      * 
      */
-    @InputImport(name="backendPort", required=true)
+    @Import(name="backendPort", required=true)
       private final Output<Integer> backendPort;
 
     public Output<Integer> getBackendPort() {
@@ -38,7 +38,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Configures a virtual machine's endpoint for the floating IP capability required to configure a SQL AlwaysOn Availability Group. This setting is required when using the SQL AlwaysOn Availability Groups in SQL server. This setting can't be changed after you create the endpoint.
      * 
      */
-    @InputImport(name="enableFloatingIP")
+    @Import(name="enableFloatingIP")
       private final @Nullable Output<Boolean> enableFloatingIP;
 
     public Output<Boolean> getEnableFloatingIP() {
@@ -49,7 +49,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
      * 
      */
-    @InputImport(name="enableTcpReset")
+    @Import(name="enableTcpReset")
       private final @Nullable Output<Boolean> enableTcpReset;
 
     public Output<Boolean> getEnableTcpReset() {
@@ -60,7 +60,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to frontend IP addresses.
      * 
      */
-    @InputImport(name="frontendIPConfiguration")
+    @Import(name="frontendIPConfiguration")
       private final @Nullable Output<SubResourceArgs> frontendIPConfiguration;
 
     public Output<SubResourceArgs> getFrontendIPConfiguration() {
@@ -71,7 +71,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The last port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65535.
      * 
      */
-    @InputImport(name="frontendPortRangeEnd", required=true)
+    @Import(name="frontendPortRangeEnd", required=true)
       private final Output<Integer> frontendPortRangeEnd;
 
     public Output<Integer> getFrontendPortRangeEnd() {
@@ -82,7 +82,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The first port number in the range of external ports that will be used to provide Inbound Nat to NICs associated with a load balancer. Acceptable values range between 1 and 65534.
      * 
      */
-    @InputImport(name="frontendPortRangeStart", required=true)
+    @Import(name="frontendPortRangeStart", required=true)
       private final Output<Integer> frontendPortRangeStart;
 
     public Output<Integer> getFrontendPortRangeStart() {
@@ -93,7 +93,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -104,7 +104,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The timeout for the TCP idle connection. The value can be set between 4 and 30 minutes. The default value is 4 minutes. This element is only used when the protocol is set to TCP.
      * 
      */
-    @InputImport(name="idleTimeoutInMinutes")
+    @Import(name="idleTimeoutInMinutes")
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
     public Output<Integer> getIdleTimeoutInMinutes() {
@@ -115,7 +115,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource that is unique within the set of inbound NAT pools used by the load balancer. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -126,7 +126,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
      * The reference to the transport protocol used by the inbound NAT pool.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<Either<String,TransportProtocol>> protocol;
 
     public Output<Either<String,TransportProtocol>> getProtocol() {

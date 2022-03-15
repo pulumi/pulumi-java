@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetDatetimeOptions {
     /**
      * Date/time format of a date parameter
@@ -27,11 +27,11 @@ public final class DatasetDatetimeOptions {
      */
     private final @Nullable String timezoneOffset;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetDatetimeOptions(
-        @OutputCustomType.Parameter("format") String format,
-        @OutputCustomType.Parameter("localeCode") @Nullable String localeCode,
-        @OutputCustomType.Parameter("timezoneOffset") @Nullable String timezoneOffset) {
+        @CustomType.Parameter("format") String format,
+        @CustomType.Parameter("localeCode") @Nullable String localeCode,
+        @CustomType.Parameter("timezoneOffset") @Nullable String timezoneOffset) {
         this.format = format;
         this.localeCode = localeCode;
         this.timezoneOffset = timezoneOffset;

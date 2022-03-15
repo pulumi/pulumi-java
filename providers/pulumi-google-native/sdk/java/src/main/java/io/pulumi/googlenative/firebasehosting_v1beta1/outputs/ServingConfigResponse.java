@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.HeaderResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.I18nConfigResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.RedirectResponse;
@@ -13,7 +13,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServingConfigResponse {
     /**
      * How to handle well known App Association files.
@@ -51,15 +51,15 @@ public final class ServingConfigResponse {
      */
     private final String trailingSlashBehavior;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServingConfigResponse(
-        @OutputCustomType.Parameter("appAssociation") String appAssociation,
-        @OutputCustomType.Parameter("cleanUrls") Boolean cleanUrls,
-        @OutputCustomType.Parameter("headers") List<HeaderResponse> headers,
-        @OutputCustomType.Parameter("i18n") I18nConfigResponse i18n,
-        @OutputCustomType.Parameter("redirects") List<RedirectResponse> redirects,
-        @OutputCustomType.Parameter("rewrites") List<RewriteResponse> rewrites,
-        @OutputCustomType.Parameter("trailingSlashBehavior") String trailingSlashBehavior) {
+        @CustomType.Parameter("appAssociation") String appAssociation,
+        @CustomType.Parameter("cleanUrls") Boolean cleanUrls,
+        @CustomType.Parameter("headers") List<HeaderResponse> headers,
+        @CustomType.Parameter("i18n") I18nConfigResponse i18n,
+        @CustomType.Parameter("redirects") List<RedirectResponse> redirects,
+        @CustomType.Parameter("rewrites") List<RewriteResponse> rewrites,
+        @CustomType.Parameter("trailingSlashBehavior") String trailingSlashBehavior) {
         this.appAssociation = appAssociation;
         this.cleanUrls = cleanUrls;
         this.headers = headers;

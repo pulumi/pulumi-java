@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.TrackingInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
      * by the already existing properties
      * 
      */
-    @InputImport(name="additionalOrderDetails", required=true)
+    @Import(name="additionalOrderDetails", required=true)
       private final Map<String,String> additionalOrderDetails;
 
     public Map<String,String> getAdditionalOrderDetails() {
@@ -36,7 +36,7 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Comments related to this status change.
      * 
      */
-    @InputImport(name="comments")
+    @Import(name="comments")
       private final @Nullable String comments;
 
     public Optional<String> getComments() {
@@ -47,7 +47,7 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Status of the order as per the allowed status types.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -58,7 +58,7 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Tracking information related to the state in the ordering flow
      * 
      */
-    @InputImport(name="trackingInformation", required=true)
+    @Import(name="trackingInformation", required=true)
       private final TrackingInfoResponse trackingInformation;
 
     public TrackingInfoResponse getTrackingInformation() {
@@ -69,7 +69,7 @@ public final class OrderStatusResponse extends io.pulumi.resources.InvokeArgs {
      * Time of status update.
      * 
      */
-    @InputImport(name="updateDateTime", required=true)
+    @Import(name="updateDateTime", required=true)
       private final String updateDateTime;
 
     public String getUpdateDateTime() {

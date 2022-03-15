@@ -6,14 +6,14 @@ package io.pulumi.awsnative.iotwireless.outputs;
 import io.pulumi.awsnative.iotwireless.enums.WirelessDeviceType;
 import io.pulumi.awsnative.iotwireless.outputs.WirelessDeviceLoRaWANDevice;
 import io.pulumi.awsnative.iotwireless.outputs.WirelessDeviceTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWirelessDeviceResult {
     /**
      * Wireless device arn. Returned after successful create.
@@ -71,19 +71,19 @@ public final class GetWirelessDeviceResult {
      */
     private final @Nullable WirelessDeviceType type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWirelessDeviceResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("destinationName") @Nullable String destinationName,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("lastUplinkReceivedAt") @Nullable String lastUplinkReceivedAt,
-        @OutputCustomType.Parameter("loRaWAN") @Nullable WirelessDeviceLoRaWANDevice loRaWAN,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("tags") @Nullable List<WirelessDeviceTag> tags,
-        @OutputCustomType.Parameter("thingArn") @Nullable String thingArn,
-        @OutputCustomType.Parameter("thingName") @Nullable String thingName,
-        @OutputCustomType.Parameter("type") @Nullable WirelessDeviceType type) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("destinationName") @Nullable String destinationName,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("lastUplinkReceivedAt") @Nullable String lastUplinkReceivedAt,
+        @CustomType.Parameter("loRaWAN") @Nullable WirelessDeviceLoRaWANDevice loRaWAN,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("tags") @Nullable List<WirelessDeviceTag> tags,
+        @CustomType.Parameter("thingArn") @Nullable String thingArn,
+        @CustomType.Parameter("thingName") @Nullable String thingName,
+        @CustomType.Parameter("type") @Nullable WirelessDeviceType type) {
         this.arn = arn;
         this.description = description;
         this.destinationName = destinationName;

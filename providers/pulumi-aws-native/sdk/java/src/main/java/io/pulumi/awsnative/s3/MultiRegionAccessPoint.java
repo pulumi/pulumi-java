@@ -8,7 +8,7 @@ import io.pulumi.awsnative.s3.MultiRegionAccessPointArgs;
 import io.pulumi.awsnative.s3.outputs.MultiRegionAccessPointPublicAccessBlockConfiguration;
 import io.pulumi.awsnative.s3.outputs.MultiRegionAccessPointRegion;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class MultiRegionAccessPoint extends io.pulumi.resources.CustomResource {
      * The alias is a unique identifier to, and is part of the public DNS name for this Multi Region Access Point
      * 
      */
-    @OutputExport(name="alias", type=String.class, parameters={})
+    @Export(name="alias", type=String.class, parameters={})
     private Output<String> alias;
 
     /**
@@ -38,7 +38,7 @@ public class MultiRegionAccessPoint extends io.pulumi.resources.CustomResource {
      * The timestamp of the when the Multi Region Access Point is created
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -52,7 +52,7 @@ public class MultiRegionAccessPoint extends io.pulumi.resources.CustomResource {
      * The name you want to assign to this Multi Region Access Point.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -66,7 +66,7 @@ public class MultiRegionAccessPoint extends io.pulumi.resources.CustomResource {
      * The PublicAccessBlock configuration that you want to apply to this Multi Region Access Point. You can enable the configuration options in any combination. For more information about when Amazon S3 considers a bucket or object public, see https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status 'The Meaning of Public' in the Amazon Simple Storage Service Developer Guide.
      * 
      */
-    @OutputExport(name="publicAccessBlockConfiguration", type=MultiRegionAccessPointPublicAccessBlockConfiguration.class, parameters={})
+    @Export(name="publicAccessBlockConfiguration", type=MultiRegionAccessPointPublicAccessBlockConfiguration.class, parameters={})
     private Output</* @Nullable */ MultiRegionAccessPointPublicAccessBlockConfiguration> publicAccessBlockConfiguration;
 
     /**
@@ -80,7 +80,7 @@ public class MultiRegionAccessPoint extends io.pulumi.resources.CustomResource {
      * The list of buckets that you want to associate this Multi Region Access Point with.
      * 
      */
-    @OutputExport(name="regions", type=List.class, parameters={MultiRegionAccessPointRegion.class})
+    @Export(name="regions", type=List.class, parameters={MultiRegionAccessPointRegion.class})
     private Output<List<MultiRegionAccessPointRegion>> regions;
 
     /**

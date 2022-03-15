@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kendra.outputs;
 import io.pulumi.awsnative.kendra.outputs.DataSourceProxyConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceWebCrawlerAuthenticationConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceWebCrawlerUrls;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceWebCrawlerConfiguration {
     private final @Nullable DataSourceWebCrawlerAuthenticationConfiguration authenticationConfiguration;
     private final @Nullable Integer crawlDepth;
@@ -27,17 +27,17 @@ public final class DataSourceWebCrawlerConfiguration {
     private final @Nullable List<String> urlInclusionPatterns;
     private final DataSourceWebCrawlerUrls urls;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceWebCrawlerConfiguration(
-        @OutputCustomType.Parameter("authenticationConfiguration") @Nullable DataSourceWebCrawlerAuthenticationConfiguration authenticationConfiguration,
-        @OutputCustomType.Parameter("crawlDepth") @Nullable Integer crawlDepth,
-        @OutputCustomType.Parameter("maxContentSizePerPageInMegaBytes") @Nullable Double maxContentSizePerPageInMegaBytes,
-        @OutputCustomType.Parameter("maxLinksPerPage") @Nullable Integer maxLinksPerPage,
-        @OutputCustomType.Parameter("maxUrlsPerMinuteCrawlRate") @Nullable Integer maxUrlsPerMinuteCrawlRate,
-        @OutputCustomType.Parameter("proxyConfiguration") @Nullable DataSourceProxyConfiguration proxyConfiguration,
-        @OutputCustomType.Parameter("urlExclusionPatterns") @Nullable List<String> urlExclusionPatterns,
-        @OutputCustomType.Parameter("urlInclusionPatterns") @Nullable List<String> urlInclusionPatterns,
-        @OutputCustomType.Parameter("urls") DataSourceWebCrawlerUrls urls) {
+        @CustomType.Parameter("authenticationConfiguration") @Nullable DataSourceWebCrawlerAuthenticationConfiguration authenticationConfiguration,
+        @CustomType.Parameter("crawlDepth") @Nullable Integer crawlDepth,
+        @CustomType.Parameter("maxContentSizePerPageInMegaBytes") @Nullable Double maxContentSizePerPageInMegaBytes,
+        @CustomType.Parameter("maxLinksPerPage") @Nullable Integer maxLinksPerPage,
+        @CustomType.Parameter("maxUrlsPerMinuteCrawlRate") @Nullable Integer maxUrlsPerMinuteCrawlRate,
+        @CustomType.Parameter("proxyConfiguration") @Nullable DataSourceProxyConfiguration proxyConfiguration,
+        @CustomType.Parameter("urlExclusionPatterns") @Nullable List<String> urlExclusionPatterns,
+        @CustomType.Parameter("urlInclusionPatterns") @Nullable List<String> urlInclusionPatterns,
+        @CustomType.Parameter("urls") DataSourceWebCrawlerUrls urls) {
         this.authenticationConfiguration = authenticationConfiguration;
         this.crawlDepth = crawlDepth;
         this.maxContentSizePerPageInMegaBytes = maxContentSizePerPageInMegaBytes;

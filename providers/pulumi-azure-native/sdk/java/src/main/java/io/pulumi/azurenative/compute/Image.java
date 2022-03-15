@@ -10,7 +10,7 @@ import io.pulumi.azurenative.compute.outputs.ImageStorageProfileResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * The extended location of the Image.
      * 
      */
-    @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
+    @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
@@ -52,7 +52,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * Specifies the HyperVGenerationType of the VirtualMachine created from the image. From API Version 2019-03-01 if the image source is a blob, then we need the user to specify the value, if the source is managed resource like disk or snapshot, we may require the user to specify the property if we cannot deduce it from the source managed resource.
      * 
      */
-    @OutputExport(name="hyperVGeneration", type=String.class, parameters={})
+    @Export(name="hyperVGeneration", type=String.class, parameters={})
     private Output</* @Nullable */ String> hyperVGeneration;
 
     /**
@@ -66,7 +66,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -80,7 +80,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * The provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -108,7 +108,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * The source virtual machine from which Image is created.
      * 
      */
-    @OutputExport(name="sourceVirtualMachine", type=SubResourceResponse.class, parameters={})
+    @Export(name="sourceVirtualMachine", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> sourceVirtualMachine;
 
     /**
@@ -122,7 +122,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * Specifies the storage settings for the virtual machine disks.
      * 
      */
-    @OutputExport(name="storageProfile", type=ImageStorageProfileResponse.class, parameters={})
+    @Export(name="storageProfile", type=ImageStorageProfileResponse.class, parameters={})
     private Output</* @Nullable */ ImageStorageProfileResponse> storageProfile;
 
     /**
@@ -136,7 +136,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -150,7 +150,7 @@ public class Image extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

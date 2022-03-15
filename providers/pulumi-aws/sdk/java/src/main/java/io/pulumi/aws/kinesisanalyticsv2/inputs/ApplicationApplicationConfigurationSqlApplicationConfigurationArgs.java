@@ -7,7 +7,7 @@ import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurati
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * The input stream used by the application.
      * 
      */
-    @InputImport(name="input")
+    @Import(name="input")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs> input;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationInputArgs> getInput() {
@@ -32,7 +32,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * The destination streams used by the application.
      * 
      */
-    @InputImport(name="outputs")
+    @Import(name="outputs")
       private final @Nullable Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs>> outputs;
 
     public Output<List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs>> getOutputs() {
@@ -43,7 +43,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      * The reference data source used by the application.
      * 
      */
-    @InputImport(name="referenceDataSource")
+    @Import(name="referenceDataSource")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs> referenceDataSource;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceArgs> getReferenceDataSource() {

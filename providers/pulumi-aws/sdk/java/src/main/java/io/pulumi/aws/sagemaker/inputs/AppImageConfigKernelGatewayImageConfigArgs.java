@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs;
 import io.pulumi.aws.sagemaker.inputs.AppImageConfigKernelGatewayImageConfigKernelSpecArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class AppImageConfigKernelGatewayImageConfigArgs extends io.pulumi.
      * The URL where the Git repository is located. See File System Config details below.
      * 
      */
-    @InputImport(name="fileSystemConfig")
+    @Import(name="fileSystemConfig")
       private final @Nullable Output<AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs> fileSystemConfig;
 
     public Output<AppImageConfigKernelGatewayImageConfigFileSystemConfigArgs> getFileSystemConfig() {
@@ -30,7 +30,7 @@ public final class AppImageConfigKernelGatewayImageConfigArgs extends io.pulumi.
      * The default branch for the Git repository. See Kernel Spec details below.
      * 
      */
-    @InputImport(name="kernelSpec", required=true)
+    @Import(name="kernelSpec", required=true)
       private final Output<AppImageConfigKernelGatewayImageConfigKernelSpecArgs> kernelSpec;
 
     public Output<AppImageConfigKernelGatewayImageConfigKernelSpecArgs> getKernelSpec() {

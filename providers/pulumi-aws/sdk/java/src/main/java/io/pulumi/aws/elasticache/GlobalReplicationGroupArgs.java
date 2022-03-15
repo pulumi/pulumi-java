@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticache;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * A user-created description for the global replication group.
      * 
      */
-    @InputImport(name="globalReplicationGroupDescription")
+    @Import(name="globalReplicationGroupDescription")
       private final @Nullable Output<String> globalReplicationGroupDescription;
 
     public Output<String> getGlobalReplicationGroupDescription() {
@@ -29,7 +29,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * The suffix name of a Global Datastore. If `global_replication_group_id_suffix` is changed, creates a new resource.
      * 
      */
-    @InputImport(name="globalReplicationGroupIdSuffix", required=true)
+    @Import(name="globalReplicationGroupIdSuffix", required=true)
       private final Output<String> globalReplicationGroupIdSuffix;
 
     public Output<String> getGlobalReplicationGroupIdSuffix() {
@@ -40,7 +40,7 @@ public final class GlobalReplicationGroupArgs extends io.pulumi.resources.Resour
      * The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If `primary_replication_group_id` is changed, creates a new resource.
      * 
      */
-    @InputImport(name="primaryReplicationGroupId", required=true)
+    @Import(name="primaryReplicationGroupId", required=true)
       private final Output<String> primaryReplicationGroupId;
 
     public Output<String> getPrimaryReplicationGroupId() {

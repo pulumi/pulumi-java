@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse {
     /**
      * The piece of text from the `source` knowledge base document.
@@ -42,14 +42,14 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse {
      */
     private final String source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse(
-        @OutputCustomType.Parameter("answer") String answer,
-        @OutputCustomType.Parameter("confidenceScore") Double confidenceScore,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("queryRecord") String queryRecord,
-        @OutputCustomType.Parameter("question") String question,
-        @OutputCustomType.Parameter("source") String source) {
+        @CustomType.Parameter("answer") String answer,
+        @CustomType.Parameter("confidenceScore") Double confidenceScore,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("queryRecord") String queryRecord,
+        @CustomType.Parameter("question") String question,
+        @CustomType.Parameter("source") String source) {
         this.answer = answer;
         this.confidenceScore = confidenceScore;
         this.metadata = metadata;

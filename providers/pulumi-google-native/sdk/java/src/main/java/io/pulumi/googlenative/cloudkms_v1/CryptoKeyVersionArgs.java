@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudkms_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudkms_v1.enums.CryptoKeyVersionState;
 import io.pulumi.googlenative.cloudkms_v1.inputs.ExternalProtectionLevelOptionsArgs;
 import java.lang.String;
@@ -16,7 +16,7 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
 
     public static final CryptoKeyVersionArgs Empty = new CryptoKeyVersionArgs();
 
-    @InputImport(name="cryptoKeyId", required=true)
+    @Import(name="cryptoKeyId", required=true)
       private final Output<String> cryptoKeyId;
 
     public Output<String> getCryptoKeyId() {
@@ -27,28 +27,28 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
      * ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels.
      * 
      */
-    @InputImport(name="externalProtectionLevelOptions")
+    @Import(name="externalProtectionLevelOptions")
       private final @Nullable Output<ExternalProtectionLevelOptionsArgs> externalProtectionLevelOptions;
 
     public Output<ExternalProtectionLevelOptionsArgs> getExternalProtectionLevelOptions() {
         return this.externalProtectionLevelOptions == null ? Output.empty() : this.externalProtectionLevelOptions;
     }
 
-    @InputImport(name="keyRingId", required=true)
+    @Import(name="keyRingId", required=true)
       private final Output<String> keyRingId;
 
     public Output<String> getKeyRingId() {
         return this.keyRingId;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -59,7 +59,7 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
      * The current state of the CryptoKeyVersion.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<CryptoKeyVersionState> state;
 
     public Output<CryptoKeyVersionState> getState() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.pinpoint.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AppQuietTimeGetArgs extends io.pulumi.resources.ResourceArgs 
      * The default end time for quiet time in ISO 8601 format. Required if `start` is set
      * 
      */
-    @InputImport(name="end")
+    @Import(name="end")
       private final @Nullable Output<String> end;
 
     public Output<String> getEnd() {
@@ -29,7 +29,7 @@ public final class AppQuietTimeGetArgs extends io.pulumi.resources.ResourceArgs 
      * The default start time for quiet time in ISO 8601 format. Required if `end` is set
      * 
      */
-    @InputImport(name="start")
+    @Import(name="start")
       private final @Nullable Output<String> start;
 
     public Output<String> getStart() {

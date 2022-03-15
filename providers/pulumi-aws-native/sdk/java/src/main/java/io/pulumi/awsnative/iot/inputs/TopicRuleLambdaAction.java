@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,7 +14,7 @@ public final class TopicRuleLambdaAction extends io.pulumi.resources.InvokeArgs 
 
     public static final TopicRuleLambdaAction Empty = new TopicRuleLambdaAction();
 
-    @InputImport(name="functionArn")
+    @Import(name="functionArn")
       private final @Nullable String functionArn;
 
     public Optional<String> getFunctionArn() {

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AggregationRuleArgs extends io.pulumi.resources.ResourceArgs 
      * ClusterRoleSelectors holds a list of selectors which will be used to find ClusterRoles and create the rules. If any of the selectors match, then the ClusterRole's permissions will be added
      * 
      */
-    @InputImport(name="clusterRoleSelectors")
+    @Import(name="clusterRoleSelectors")
       private final @Nullable Output<List<LabelSelectorArgs>> clusterRoleSelectors;
 
     public Output<List<LabelSelectorArgs>> getClusterRoleSelectors() {

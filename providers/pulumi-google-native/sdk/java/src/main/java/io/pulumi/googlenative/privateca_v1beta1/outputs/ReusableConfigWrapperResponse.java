@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.ReusableConfigValuesResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReusableConfigWrapperResponse {
     /**
      * A resource path to a ReusableConfig in the format `projects/*{@literal /}locations/*{@literal /}reusableConfigs/*`.
@@ -21,10 +21,10 @@ public final class ReusableConfigWrapperResponse {
      */
     private final ReusableConfigValuesResponse reusableConfigValues;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReusableConfigWrapperResponse(
-        @OutputCustomType.Parameter("reusableConfig") String reusableConfig,
-        @OutputCustomType.Parameter("reusableConfigValues") ReusableConfigValuesResponse reusableConfigValues) {
+        @CustomType.Parameter("reusableConfig") String reusableConfig,
+        @CustomType.Parameter("reusableConfigValues") ReusableConfigValuesResponse reusableConfigValues) {
         this.reusableConfig = reusableConfig;
         this.reusableConfigValues = reusableConfigValues;
     }

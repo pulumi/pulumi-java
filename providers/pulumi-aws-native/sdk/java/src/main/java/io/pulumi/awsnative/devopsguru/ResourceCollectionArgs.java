@@ -5,7 +5,7 @@ package io.pulumi.awsnative.devopsguru;
 
 import io.pulumi.awsnative.devopsguru.inputs.ResourceCollectionFilterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -13,7 +13,7 @@ public final class ResourceCollectionArgs extends io.pulumi.resources.ResourceAr
 
     public static final ResourceCollectionArgs Empty = new ResourceCollectionArgs();
 
-    @InputImport(name="resourceCollectionFilter", required=true)
+    @Import(name="resourceCollectionFilter", required=true)
       private final Output<ResourceCollectionFilterArgs> resourceCollectionFilter;
 
     public Output<ResourceCollectionFilterArgs> getResourceCollectionFilter() {

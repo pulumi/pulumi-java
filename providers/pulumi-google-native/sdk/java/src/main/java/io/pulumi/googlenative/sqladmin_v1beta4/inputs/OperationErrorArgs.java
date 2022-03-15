@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
      * Identifies the specific error that occurred.
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable Output<String> code;
 
     public Output<String> getCode() {
@@ -33,7 +33,7 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
      * This is always `sql#operationError`.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -44,7 +44,7 @@ public final class OperationErrorArgs extends io.pulumi.resources.ResourceArgs {
      * Additional information about the error encountered.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {

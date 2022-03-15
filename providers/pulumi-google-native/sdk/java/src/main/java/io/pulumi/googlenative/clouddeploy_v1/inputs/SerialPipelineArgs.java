@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.StageArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SerialPipelineArgs extends io.pulumi.resources.ResourceArgs {
      * Each stage specifies configuration for a `Target`. The ordering of this list defines the promotion flow.
      * 
      */
-    @InputImport(name="stages")
+    @Import(name="stages")
       private final @Nullable Output<List<StageArgs>> stages;
 
     public Output<List<StageArgs>> getStages() {

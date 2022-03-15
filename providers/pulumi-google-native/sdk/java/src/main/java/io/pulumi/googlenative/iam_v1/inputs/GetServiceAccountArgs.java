@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iam_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetServiceAccountArgs extends io.pulumi.resources.InvokeArgs 
 
     public static final GetServiceAccountArgs Empty = new GetServiceAccountArgs();
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="serviceAccountId", required=true)
+    @Import(name="serviceAccountId", required=true)
       private final String serviceAccountId;
 
     public String getServiceAccountId() {

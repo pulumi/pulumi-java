@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 import io.pulumi.azurenative.securityinsights.enums.SourceKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Source type of the content
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<Either<String,SourceKind>> kind;
 
     public Output<Either<String,SourceKind>> getKind() {
@@ -35,7 +35,7 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the content source.  The repo name, solution name, LA workspace name etc.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class MetadataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the content source.  The solution ID, workspace ID, etc
      * 
      */
-    @InputImport(name="sourceId")
+    @Import(name="sourceId")
       private final @Nullable Output<String> sourceId;
 
     public Output<String> getSourceId() {

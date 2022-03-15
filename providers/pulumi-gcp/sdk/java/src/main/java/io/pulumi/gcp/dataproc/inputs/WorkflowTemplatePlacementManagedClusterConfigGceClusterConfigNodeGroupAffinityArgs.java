@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
      * Required. The URI of a sole-tenant /zones/us-central1-a/nodeGroups/node-group-1`*`node-group-1`
      * 
      */
-    @InputImport(name="nodeGroup", required=true)
+    @Import(name="nodeGroup", required=true)
       private final Output<String> nodeGroup;
 
     public Output<String> getNodeGroup() {

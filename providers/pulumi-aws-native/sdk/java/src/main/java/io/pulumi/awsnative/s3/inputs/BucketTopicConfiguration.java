@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketNotificationFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class BucketTopicConfiguration extends io.pulumi.resources.InvokeAr
      * The Amazon S3 bucket event about which to send notifications.
      * 
      */
-    @InputImport(name="event", required=true)
+    @Import(name="event", required=true)
       private final String event;
 
     public String getEvent() {
@@ -34,7 +34,7 @@ public final class BucketTopicConfiguration extends io.pulumi.resources.InvokeAr
      * The filtering rules that determine for which objects to send notifications.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable BucketNotificationFilter filter;
 
     public Optional<BucketNotificationFilter> getFilter() {
@@ -45,7 +45,7 @@ public final class BucketTopicConfiguration extends io.pulumi.resources.InvokeAr
      * The Amazon Resource Name (ARN) of the Amazon SNS topic to which Amazon S3 publishes a message when it detects events of the specified type.
      * 
      */
-    @InputImport(name="topic", required=true)
+    @Import(name="topic", required=true)
       private final String topic;
 
     public String getTopic() {

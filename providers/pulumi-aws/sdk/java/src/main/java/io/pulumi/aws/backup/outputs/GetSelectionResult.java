@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.backup.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSelectionResult {
     /**
      * The ARN of the IAM role that AWS Backup uses to authenticate when restoring and backing up the target resource. See the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#managed-policies) for additional information about using AWS managed policies or creating custom policies attached to the IAM role.
@@ -33,14 +33,14 @@ public final class GetSelectionResult {
     private final List<String> resources;
     private final String selectionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSelectionResult(
-        @OutputCustomType.Parameter("iamRoleArn") String iamRoleArn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("planId") String planId,
-        @OutputCustomType.Parameter("resources") List<String> resources,
-        @OutputCustomType.Parameter("selectionId") String selectionId) {
+        @CustomType.Parameter("iamRoleArn") String iamRoleArn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("planId") String planId,
+        @CustomType.Parameter("resources") List<String> resources,
+        @CustomType.Parameter("selectionId") String selectionId) {
         this.iamRoleArn = iamRoleArn;
         this.id = id;
         this.name = name;

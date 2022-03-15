@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.SubscriptionNetworkManagerConnectionArgs;
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class SubscriptionNetworkManagerConnection extends io.pulumi.resources.Cu
      * A description of the scope connection.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -49,7 +49,7 @@ public class SubscriptionNetworkManagerConnection extends io.pulumi.resources.Cu
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -63,7 +63,7 @@ public class SubscriptionNetworkManagerConnection extends io.pulumi.resources.Cu
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class SubscriptionNetworkManagerConnection extends io.pulumi.resources.Cu
      * Network Manager Id.
      * 
      */
-    @OutputExport(name="networkManagerId", type=String.class, parameters={})
+    @Export(name="networkManagerId", type=String.class, parameters={})
     private Output</* @Nullable */ String> networkManagerId;
 
     /**
@@ -91,7 +91,7 @@ public class SubscriptionNetworkManagerConnection extends io.pulumi.resources.Cu
      * The system metadata related to this resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -105,7 +105,7 @@ public class SubscriptionNetworkManagerConnection extends io.pulumi.resources.Cu
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

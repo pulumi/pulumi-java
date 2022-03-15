@@ -4,7 +4,7 @@
 package io.pulumi.gcp.securitycenter;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the source (max of 1024 characters).
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * and underscores, and can be no longer than 32 characters.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -45,7 +45,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * lives in.
      * 
      */
-    @InputImport(name="organization", required=true)
+    @Import(name="organization", required=true)
       private final Output<String> organization;
 
     public Output<String> getOrganization() {

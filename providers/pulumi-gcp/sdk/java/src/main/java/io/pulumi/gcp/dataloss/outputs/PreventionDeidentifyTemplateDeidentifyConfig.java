@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfig {
     /**
      * Specifies free-text based transformations to be applied to the dataset.
@@ -16,8 +16,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfig {
      */
     private final PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations infoTypeTransformations;
 
-    @OutputCustomType.Constructor
-    private PreventionDeidentifyTemplateDeidentifyConfig(@OutputCustomType.Parameter("infoTypeTransformations") PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations infoTypeTransformations) {
+    @CustomType.Constructor
+    private PreventionDeidentifyTemplateDeidentifyConfig(@CustomType.Parameter("infoTypeTransformations") PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations infoTypeTransformations) {
         this.infoTypeTransformations = infoTypeTransformations;
     }
 

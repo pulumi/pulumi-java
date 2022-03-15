@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ErrorDetailResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GuestAgentProfileResponse {
     /**
      * The hybrid machine agent full version.
@@ -37,13 +37,13 @@ public final class GuestAgentProfileResponse {
      */
     private final String vmUuid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestAgentProfileResponse(
-        @OutputCustomType.Parameter("agentVersion") String agentVersion,
-        @OutputCustomType.Parameter("errorDetails") List<ErrorDetailResponse> errorDetails,
-        @OutputCustomType.Parameter("lastStatusChange") String lastStatusChange,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("vmUuid") String vmUuid) {
+        @CustomType.Parameter("agentVersion") String agentVersion,
+        @CustomType.Parameter("errorDetails") List<ErrorDetailResponse> errorDetails,
+        @CustomType.Parameter("lastStatusChange") String lastStatusChange,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("vmUuid") String vmUuid) {
         this.agentVersion = agentVersion;
         this.errorDetails = errorDetails;
         this.lastStatusChange = lastStatusChange;

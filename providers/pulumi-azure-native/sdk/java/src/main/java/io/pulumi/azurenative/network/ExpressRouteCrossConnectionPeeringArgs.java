@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.inputs.ExpressRouteCircuitPeeringConfigArgs
 import io.pulumi.azurenative.network.inputs.Ipv6ExpressRouteCircuitPeeringConfigArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
      * The name of the ExpressRouteCrossConnection.
      * 
      */
-    @InputImport(name="crossConnectionName", required=true)
+    @Import(name="crossConnectionName", required=true)
       private final Output<String> crossConnectionName;
 
     public Output<String> getCrossConnectionName() {
@@ -36,7 +36,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
      * The GatewayManager Etag.
      * 
      */
-    @InputImport(name="gatewayManagerEtag")
+    @Import(name="gatewayManagerEtag")
       private final @Nullable Output<String> gatewayManagerEtag;
 
     public Output<String> getGatewayManagerEtag() {
@@ -47,7 +47,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -58,7 +58,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
      * The IPv6 peering configuration.
      * 
      */
-    @InputImport(name="ipv6PeeringConfig")
+    @Import(name="ipv6PeeringConfig")
       private final @Nullable Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> ipv6PeeringConfig;
 
     public Output<Ipv6ExpressRouteCircuitPeeringConfigArgs> getIpv6PeeringConfig() {
@@ -69,7 +69,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
      * The Microsoft peering configuration.
      * 
      */
-    @InputImport(name="microsoftPeeringConfig")
+    @Import(name="microsoftPeeringConfig")
       private final @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
 
     public Output<ExpressRouteCircuitPeeringConfigArgs> getMicrosoftPeeringConfig() {
@@ -80,7 +80,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -91,7 +91,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
      * The peer ASN.
      * 
      */
-    @InputImport(name="peerASN")
+    @Import(name="peerASN")
       private final @Nullable Output<Double> peerASN;
 
     public Output<Double> getPeerASN() {
@@ -102,7 +102,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
      * The name of the peering.
      * 
      */
-    @InputImport(name="peeringName")
+    @Import(name="peeringName")
       private final @Nullable Output<String> peeringName;
 
     public Output<String> getPeeringName() {
@@ -113,7 +113,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
      * The peering type.
      * 
      */
-    @InputImport(name="peeringType")
+    @Import(name="peeringType")
       private final @Nullable Output<Either<String,ExpressRoutePeeringType>> peeringType;
 
     public Output<Either<String,ExpressRoutePeeringType>> getPeeringType() {
@@ -124,7 +124,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
      * The primary address prefix.
      * 
      */
-    @InputImport(name="primaryPeerAddressPrefix")
+    @Import(name="primaryPeerAddressPrefix")
       private final @Nullable Output<String> primaryPeerAddressPrefix;
 
     public Output<String> getPrimaryPeerAddressPrefix() {
@@ -135,7 +135,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -146,7 +146,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
      * The secondary address prefix.
      * 
      */
-    @InputImport(name="secondaryPeerAddressPrefix")
+    @Import(name="secondaryPeerAddressPrefix")
       private final @Nullable Output<String> secondaryPeerAddressPrefix;
 
     public Output<String> getSecondaryPeerAddressPrefix() {
@@ -157,7 +157,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
      * The shared key.
      * 
      */
-    @InputImport(name="sharedKey")
+    @Import(name="sharedKey")
       private final @Nullable Output<String> sharedKey;
 
     public Output<String> getSharedKey() {
@@ -168,7 +168,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
      * The peering state.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<Either<String,ExpressRoutePeeringState>> state;
 
     public Output<Either<String,ExpressRoutePeeringState>> getState() {
@@ -179,7 +179,7 @@ public final class ExpressRouteCrossConnectionPeeringArgs extends io.pulumi.reso
      * The VLAN ID.
      * 
      */
-    @InputImport(name="vlanId")
+    @Import(name="vlanId")
       private final @Nullable Output<Integer> vlanId;
 
     public Output<Integer> getVlanId() {

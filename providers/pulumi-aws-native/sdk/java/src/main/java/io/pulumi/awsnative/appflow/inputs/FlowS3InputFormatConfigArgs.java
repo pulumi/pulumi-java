@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowS3InputFormatConfigS3InputFileType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -14,7 +14,7 @@ public final class FlowS3InputFormatConfigArgs extends io.pulumi.resources.Resou
 
     public static final FlowS3InputFormatConfigArgs Empty = new FlowS3InputFormatConfigArgs();
 
-    @InputImport(name="s3InputFileType")
+    @Import(name="s3InputFileType")
       private final @Nullable Output<FlowS3InputFormatConfigS3InputFileType> s3InputFileType;
 
     public Output<FlowS3InputFormatConfigS3InputFileType> getS3InputFileType() {

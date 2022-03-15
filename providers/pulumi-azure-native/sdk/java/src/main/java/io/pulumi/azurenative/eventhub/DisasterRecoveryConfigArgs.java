@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventhub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
      * The Disaster Recovery configuration name
      * 
      */
-    @InputImport(name="alias")
+    @Import(name="alias")
       private final @Nullable Output<String> alias;
 
     public Output<String> getAlias() {
@@ -29,7 +29,7 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
      * Alternate name specified when alias and namespace names are same.
      * 
      */
-    @InputImport(name="alternateName")
+    @Import(name="alternateName")
       private final @Nullable Output<String> alternateName;
 
     public Output<String> getAlternateName() {
@@ -40,7 +40,7 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
      * The Namespace name
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
@@ -51,7 +51,7 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
      * ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
      * 
      */
-    @InputImport(name="partnerNamespace")
+    @Import(name="partnerNamespace")
       private final @Nullable Output<String> partnerNamespace;
 
     public Output<String> getPartnerNamespace() {
@@ -62,7 +62,7 @@ public final class DisasterRecoveryConfigArgs extends io.pulumi.resources.Resour
      * Name of the resource group within the azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

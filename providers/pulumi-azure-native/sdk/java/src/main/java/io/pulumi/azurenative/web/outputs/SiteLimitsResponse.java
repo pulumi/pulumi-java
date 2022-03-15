@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SiteLimitsResponse {
     /**
      * Maximum allowed disk size usage in MB.
@@ -27,11 +27,11 @@ public final class SiteLimitsResponse {
      */
     private final @Nullable Double maxPercentageCpu;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SiteLimitsResponse(
-        @OutputCustomType.Parameter("maxDiskSizeInMb") @Nullable Double maxDiskSizeInMb,
-        @OutputCustomType.Parameter("maxMemoryInMb") @Nullable Double maxMemoryInMb,
-        @OutputCustomType.Parameter("maxPercentageCpu") @Nullable Double maxPercentageCpu) {
+        @CustomType.Parameter("maxDiskSizeInMb") @Nullable Double maxDiskSizeInMb,
+        @CustomType.Parameter("maxMemoryInMb") @Nullable Double maxMemoryInMb,
+        @CustomType.Parameter("maxPercentageCpu") @Nullable Double maxPercentageCpu) {
         this.maxDiskSizeInMb = maxDiskSizeInMb;
         this.maxMemoryInMb = maxMemoryInMb;
         this.maxPercentageCpu = maxPercentageCpu;

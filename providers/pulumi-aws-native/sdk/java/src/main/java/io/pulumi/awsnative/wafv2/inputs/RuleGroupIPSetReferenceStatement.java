@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupIPSetForwardedIPConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class RuleGroupIPSetReferenceStatement extends io.pulumi.resources.
 
     public static final RuleGroupIPSetReferenceStatement Empty = new RuleGroupIPSetReferenceStatement();
 
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {
         return this.arn;
     }
 
-    @InputImport(name="iPSetForwardedIPConfig")
+    @Import(name="iPSetForwardedIPConfig")
       private final @Nullable RuleGroupIPSetForwardedIPConfiguration iPSetForwardedIPConfig;
 
     public Optional<RuleGroupIPSetForwardedIPConfiguration> getIPSetForwardedIPConfig() {

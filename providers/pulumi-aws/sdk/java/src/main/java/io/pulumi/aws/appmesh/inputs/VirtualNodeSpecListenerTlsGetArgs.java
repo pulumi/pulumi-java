@@ -6,7 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsCertificateGetArgs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsValidationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class VirtualNodeSpecListenerTlsGetArgs extends io.pulumi.resources
      * The listener's TLS certificate.
      * 
      */
-    @InputImport(name="certificate", required=true)
+    @Import(name="certificate", required=true)
       private final Output<VirtualNodeSpecListenerTlsCertificateGetArgs> certificate;
 
     public Output<VirtualNodeSpecListenerTlsCertificateGetArgs> getCertificate() {
@@ -31,7 +31,7 @@ public final class VirtualNodeSpecListenerTlsGetArgs extends io.pulumi.resources
      * The listener's TLS mode. Valid values: `DISABLED`, `PERMISSIVE`, `STRICT`.
      * 
      */
-    @InputImport(name="mode", required=true)
+    @Import(name="mode", required=true)
       private final Output<String> mode;
 
     public Output<String> getMode() {
@@ -42,7 +42,7 @@ public final class VirtualNodeSpecListenerTlsGetArgs extends io.pulumi.resources
      * The listener's Transport Layer Security (TLS) validation context.
      * 
      */
-    @InputImport(name="validation")
+    @Import(name="validation")
       private final @Nullable Output<VirtualNodeSpecListenerTlsValidationGetArgs> validation;
 
     public Output<VirtualNodeSpecListenerTlsValidationGetArgs> getValidation() {

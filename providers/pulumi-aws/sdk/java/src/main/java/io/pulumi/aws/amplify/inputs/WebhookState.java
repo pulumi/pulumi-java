@@ -4,7 +4,7 @@
 package io.pulumi.aws.amplify.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * The unique ID for an Amplify app.
      * 
      */
-    @InputImport(name="appId")
+    @Import(name="appId")
       private final @Nullable Output<String> appId;
 
     public Output<String> getAppId() {
@@ -29,7 +29,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) for the webhook.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -40,7 +40,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * The name for a branch that is part of the Amplify app.
      * 
      */
-    @InputImport(name="branchName")
+    @Import(name="branchName")
       private final @Nullable Output<String> branchName;
 
     public Output<String> getBranchName() {
@@ -51,7 +51,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * The description for a webhook.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -62,7 +62,7 @@ public final class WebhookState extends io.pulumi.resources.ResourceArgs {
      * The URL of the webhook.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

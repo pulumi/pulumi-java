@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigtable.inputs.TableIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class TableIamBindingArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final TableIamBindingArgs Empty = new TableIamBindingArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<TableIamBindingConditionArgs> condition;
 
     public Output<TableIamBindingConditionArgs> getCondition() {
@@ -27,14 +27,14 @@ public final class TableIamBindingArgs extends io.pulumi.resources.ResourceArgs 
      * The name or relative resource id of the instance that owns the table.
      * 
      */
-    @InputImport(name="instance", required=true)
+    @Import(name="instance", required=true)
       private final Output<String> instance;
 
     public Output<String> getInstance() {
         return this.instance;
     }
 
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -46,7 +46,7 @@ public final class TableIamBindingArgs extends io.pulumi.resources.ResourceArgs 
      * is not provided, this provider will use the provider default.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -59,7 +59,7 @@ public final class TableIamBindingArgs extends io.pulumi.resources.ResourceArgs 
      * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {
@@ -70,7 +70,7 @@ public final class TableIamBindingArgs extends io.pulumi.resources.ResourceArgs 
      * The name or relative resource id of the table to manage IAM policies for.
      * 
      */
-    @InputImport(name="table", required=true)
+    @Import(name="table", required=true)
       private final Output<String> table;
 
     public Output<String> getTable() {

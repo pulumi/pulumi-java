@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class InboundIpRuleResponse extends io.pulumi.resources.InvokeArgs 
      * Action to perform based on the match or no match of the IpMask.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable String action;
 
     public Optional<String> getAction() {
@@ -29,7 +29,7 @@ public final class InboundIpRuleResponse extends io.pulumi.resources.InvokeArgs 
      * IP Address in CIDR notation e.g., 10.0.0.0/8.
      * 
      */
-    @InputImport(name="ipMask")
+    @Import(name="ipMask")
       private final @Nullable String ipMask;
 
     public Optional<String> getIpMask() {

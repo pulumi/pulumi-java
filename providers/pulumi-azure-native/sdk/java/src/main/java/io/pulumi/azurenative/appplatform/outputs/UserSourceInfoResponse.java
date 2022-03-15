@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserSourceInfoResponse {
     /**
      * Selector for the artifact to be used for the deployment for multi-module projects. This should be
@@ -33,12 +33,12 @@ public final class UserSourceInfoResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserSourceInfoResponse(
-        @OutputCustomType.Parameter("artifactSelector") @Nullable String artifactSelector,
-        @OutputCustomType.Parameter("relativePath") @Nullable String relativePath,
-        @OutputCustomType.Parameter("type") @Nullable String type,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("artifactSelector") @Nullable String artifactSelector,
+        @CustomType.Parameter("relativePath") @Nullable String relativePath,
+        @CustomType.Parameter("type") @Nullable String type,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.artifactSelector = artifactSelector;
         this.relativePath = relativePath;
         this.type = type;

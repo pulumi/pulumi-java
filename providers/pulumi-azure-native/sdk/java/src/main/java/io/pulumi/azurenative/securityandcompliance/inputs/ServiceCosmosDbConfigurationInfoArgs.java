@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityandcompliance.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServiceCosmosDbConfigurationInfoArgs extends io.pulumi.resour
      * The URI of the customer-managed key for the backing database.
      * 
      */
-    @InputImport(name="keyVaultKeyUri")
+    @Import(name="keyVaultKeyUri")
       private final @Nullable Output<String> keyVaultKeyUri;
 
     public Output<String> getKeyVaultKeyUri() {
@@ -34,7 +34,7 @@ public final class ServiceCosmosDbConfigurationInfoArgs extends io.pulumi.resour
      * The provisioned throughput for the backing database.
      * 
      */
-    @InputImport(name="offerThroughput")
+    @Import(name="offerThroughput")
       private final @Nullable Output<Double> offerThroughput;
 
     public Output<Double> getOfferThroughput() {

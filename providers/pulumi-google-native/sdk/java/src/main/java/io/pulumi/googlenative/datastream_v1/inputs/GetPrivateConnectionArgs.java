@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetPrivateConnectionArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetPrivateConnectionArgs Empty = new GetPrivateConnectionArgs();
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="privateConnectionId", required=true)
+    @Import(name="privateConnectionId", required=true)
       private final String privateConnectionId;
 
     public String getPrivateConnectionId() {
         return this.privateConnectionId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

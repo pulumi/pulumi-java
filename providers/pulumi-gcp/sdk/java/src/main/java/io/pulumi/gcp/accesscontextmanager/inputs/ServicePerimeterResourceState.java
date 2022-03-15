@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ServicePerimeterResourceState extends io.pulumi.resources.Res
      * The name of the Service Perimeter to add this resource to.
      * 
      */
-    @InputImport(name="perimeterName")
+    @Import(name="perimeterName")
       private final @Nullable Output<String> perimeterName;
 
     public Output<String> getPerimeterName() {
@@ -31,7 +31,7 @@ public final class ServicePerimeterResourceState extends io.pulumi.resources.Res
      * Format: projects/{project_number}
      * 
      */
-    @InputImport(name="resource")
+    @Import(name="resource")
       private final @Nullable Output<String> resource;
 
     public Output<String> getResource() {

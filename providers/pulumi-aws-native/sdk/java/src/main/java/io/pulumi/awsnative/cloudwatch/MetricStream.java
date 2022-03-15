@@ -8,7 +8,7 @@ import io.pulumi.awsnative.cloudwatch.MetricStreamArgs;
 import io.pulumi.awsnative.cloudwatch.outputs.MetricStreamFilter;
 import io.pulumi.awsnative.cloudwatch.outputs.MetricStreamTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name of the metric stream.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -40,7 +40,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * The date of creation of the metric stream.
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -54,7 +54,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * Define which metrics will be not streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
      * 
      */
-    @OutputExport(name="excludeFilters", type=List.class, parameters={MetricStreamFilter.class})
+    @Export(name="excludeFilters", type=List.class, parameters={MetricStreamFilter.class})
     private Output</* @Nullable */ List<MetricStreamFilter>> excludeFilters;
 
     /**
@@ -68,7 +68,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * The ARN of the Kinesis Firehose where to stream the data.
      * 
      */
-    @OutputExport(name="firehoseArn", type=String.class, parameters={})
+    @Export(name="firehoseArn", type=String.class, parameters={})
     private Output<String> firehoseArn;
 
     /**
@@ -82,7 +82,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * Define which metrics will be streamed. Metrics matched by multiple instances of MetricStreamFilter are joined with an OR operation by default. If both IncludeFilters and ExcludeFilters are omitted, all metrics in the account will be streamed. IncludeFilters and ExcludeFilters are mutually exclusive. Default to null.
      * 
      */
-    @OutputExport(name="includeFilters", type=List.class, parameters={MetricStreamFilter.class})
+    @Export(name="includeFilters", type=List.class, parameters={MetricStreamFilter.class})
     private Output</* @Nullable */ List<MetricStreamFilter>> includeFilters;
 
     /**
@@ -96,7 +96,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * The date of the last update of the metric stream.
      * 
      */
-    @OutputExport(name="lastUpdateDate", type=String.class, parameters={})
+    @Export(name="lastUpdateDate", type=String.class, parameters={})
     private Output<String> lastUpdateDate;
 
     /**
@@ -110,7 +110,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * Name of the metric stream.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -124,7 +124,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * The output format of the data streamed to the Kinesis Firehose.
      * 
      */
-    @OutputExport(name="outputFormat", type=String.class, parameters={})
+    @Export(name="outputFormat", type=String.class, parameters={})
     private Output<String> outputFormat;
 
     /**
@@ -138,7 +138,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * The ARN of the role that provides access to the Kinesis Firehose.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -152,7 +152,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * Displays the state of the Metric Stream.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -166,7 +166,7 @@ public class MetricStream extends io.pulumi.resources.CustomResource {
      * A set of tags to assign to the delivery stream.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={MetricStreamTag.class})
+    @Export(name="tags", type=List.class, parameters={MetricStreamTag.class})
     private Output</* @Nullable */ List<MetricStreamTag>> tags;
 
     /**

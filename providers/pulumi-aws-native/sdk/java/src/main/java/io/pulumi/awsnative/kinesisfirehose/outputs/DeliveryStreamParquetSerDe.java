@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamParquetSerDe {
     private final @Nullable Integer blockSizeBytes;
     private final @Nullable String compression;
@@ -20,14 +20,14 @@ public final class DeliveryStreamParquetSerDe {
     private final @Nullable Integer pageSizeBytes;
     private final @Nullable String writerVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamParquetSerDe(
-        @OutputCustomType.Parameter("blockSizeBytes") @Nullable Integer blockSizeBytes,
-        @OutputCustomType.Parameter("compression") @Nullable String compression,
-        @OutputCustomType.Parameter("enableDictionaryCompression") @Nullable Boolean enableDictionaryCompression,
-        @OutputCustomType.Parameter("maxPaddingBytes") @Nullable Integer maxPaddingBytes,
-        @OutputCustomType.Parameter("pageSizeBytes") @Nullable Integer pageSizeBytes,
-        @OutputCustomType.Parameter("writerVersion") @Nullable String writerVersion) {
+        @CustomType.Parameter("blockSizeBytes") @Nullable Integer blockSizeBytes,
+        @CustomType.Parameter("compression") @Nullable String compression,
+        @CustomType.Parameter("enableDictionaryCompression") @Nullable Boolean enableDictionaryCompression,
+        @CustomType.Parameter("maxPaddingBytes") @Nullable Integer maxPaddingBytes,
+        @CustomType.Parameter("pageSizeBytes") @Nullable Integer pageSizeBytes,
+        @CustomType.Parameter("writerVersion") @Nullable String writerVersion) {
         this.blockSizeBytes = blockSizeBytes;
         this.compression = compression;
         this.enableDictionaryCompression = enableDictionaryCompression;

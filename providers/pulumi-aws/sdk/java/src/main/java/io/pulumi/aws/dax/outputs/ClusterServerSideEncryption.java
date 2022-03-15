@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.dax.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterServerSideEncryption {
     /**
      * Whether to enable encryption at rest. Defaults to `false`.
@@ -17,8 +17,8 @@ public final class ClusterServerSideEncryption {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private ClusterServerSideEncryption(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
+    @CustomType.Constructor
+    private ClusterServerSideEncryption(@CustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

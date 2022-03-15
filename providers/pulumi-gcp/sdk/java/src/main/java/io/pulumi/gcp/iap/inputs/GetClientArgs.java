@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iap.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetClientArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the brand.
      * 
      */
-    @InputImport(name="brand", required=true)
+    @Import(name="brand", required=true)
       private final String brand;
 
     public String getBrand() {
@@ -27,7 +27,7 @@ public final class GetClientArgs extends io.pulumi.resources.InvokeArgs {
      * The client_id of the brand.
      * 
      */
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final String clientId;
 
     public String getClientId() {

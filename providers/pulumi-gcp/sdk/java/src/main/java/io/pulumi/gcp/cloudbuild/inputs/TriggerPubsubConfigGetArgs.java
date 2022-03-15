@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
      * Service account that will make the push request.
      * 
      */
-    @InputImport(name="serviceAccountEmail")
+    @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
     public Output<String> getServiceAccountEmail() {
@@ -31,7 +31,7 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
      * Only populated on get requests.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -43,7 +43,7 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
      * Output only. Name of the subscription.
      * 
      */
-    @InputImport(name="subscription")
+    @Import(name="subscription")
       private final @Nullable Output<String> subscription;
 
     public Output<String> getSubscription() {
@@ -54,7 +54,7 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
      * The name of the topic from which this subscription is receiving messages.
      * 
      */
-    @InputImport(name="topic", required=true)
+    @Import(name="topic", required=true)
       private final Output<String> topic;
 
     public Output<String> getTopic() {

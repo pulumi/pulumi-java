@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationArgs extends 
      * Period of time over which CPU utilization is calculated.
      * 
      */
-    @InputImport(name="aggregationWindowLength")
+    @Import(name="aggregationWindowLength")
       private final @Nullable Output<String> aggregationWindowLength;
 
     public Output<String> getAggregationWindowLength() {
@@ -30,7 +30,7 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilizationArgs extends 
      * Target CPU utilization ratio to maintain when scaling. Must be between 0 and 1.
      * 
      */
-    @InputImport(name="targetUtilization", required=true)
+    @Import(name="targetUtilization", required=true)
       private final Output<Double> targetUtilization;
 
     public Output<Double> getTargetUtilization() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetConnectorResult {
     /**
      * ID of the connector.
@@ -86,22 +86,22 @@ public final class GetConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetConnectorResult(
-        @OutputCustomType.Parameter("connectorId") Integer connectorId,
-        @OutputCustomType.Parameter("connectorName") @Nullable String connectorName,
-        @OutputCustomType.Parameter("connectorProperties") Map<String,Object> connectorProperties,
-        @OutputCustomType.Parameter("connectorType") String connectorType,
-        @OutputCustomType.Parameter("created") String created,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isInternal") @Nullable Boolean isInternal,
-        @OutputCustomType.Parameter("lastModified") String lastModified,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("connectorId") Integer connectorId,
+        @CustomType.Parameter("connectorName") @Nullable String connectorName,
+        @CustomType.Parameter("connectorProperties") Map<String,Object> connectorProperties,
+        @CustomType.Parameter("connectorType") String connectorType,
+        @CustomType.Parameter("created") String created,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isInternal") @Nullable Boolean isInternal,
+        @CustomType.Parameter("lastModified") String lastModified,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") String type) {
         this.connectorId = connectorId;
         this.connectorName = connectorName;
         this.connectorProperties = connectorProperties;

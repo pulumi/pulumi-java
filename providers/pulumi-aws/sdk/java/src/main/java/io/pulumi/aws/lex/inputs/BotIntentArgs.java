@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the intent. Must be less than or equal to 100 characters in length.
      * 
      */
-    @InputImport(name="intentName", required=true)
+    @Import(name="intentName", required=true)
       private final Output<String> intentName;
 
     public Output<String> getIntentName() {
@@ -28,7 +28,7 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
      * The version of the intent. Must be less than or equal to 64 characters in length.
      * 
      */
-    @InputImport(name="intentVersion", required=true)
+    @Import(name="intentVersion", required=true)
       private final Output<String> intentVersion;
 
     public Output<String> getIntentVersion() {

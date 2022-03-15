@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LineRegistrationResponse {
     /**
      * Access token for the line channel registration
@@ -27,11 +27,11 @@ public final class LineRegistrationResponse {
      */
     private final String generatedId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LineRegistrationResponse(
-        @OutputCustomType.Parameter("channelAccessToken") @Nullable String channelAccessToken,
-        @OutputCustomType.Parameter("channelSecret") @Nullable String channelSecret,
-        @OutputCustomType.Parameter("generatedId") String generatedId) {
+        @CustomType.Parameter("channelAccessToken") @Nullable String channelAccessToken,
+        @CustomType.Parameter("channelSecret") @Nullable String channelSecret,
+        @CustomType.Parameter("generatedId") String generatedId) {
         this.channelAccessToken = channelAccessToken;
         this.channelSecret = channelSecret;
         this.generatedId = generatedId;

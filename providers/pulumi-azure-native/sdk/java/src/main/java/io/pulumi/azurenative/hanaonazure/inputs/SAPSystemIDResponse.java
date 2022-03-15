@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hanaonazure.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class SAPSystemIDResponse extends io.pulumi.resources.InvokeArgs {
      * Group ID of the HANA database user.
      * 
      */
-    @InputImport(name="gid")
+    @Import(name="gid")
       private final @Nullable String gid;
 
     public Optional<String> getGid() {
@@ -33,7 +33,7 @@ public final class SAPSystemIDResponse extends io.pulumi.resources.InvokeArgs {
      * Percent of memory to allocate to this SID.
      * 
      */
-    @InputImport(name="memoryAllocation", required=true)
+    @Import(name="memoryAllocation", required=true)
       private final String memoryAllocation;
 
     public String getMemoryAllocation() {
@@ -44,7 +44,7 @@ public final class SAPSystemIDResponse extends io.pulumi.resources.InvokeArgs {
      * SAP system ID as database identifier.
      * 
      */
-    @InputImport(name="sid")
+    @Import(name="sid")
       private final @Nullable String sid;
 
     public Optional<String> getSid() {
@@ -55,7 +55,7 @@ public final class SAPSystemIDResponse extends io.pulumi.resources.InvokeArgs {
      * User ID of the HANA database user.
      * 
      */
-    @InputImport(name="uid")
+    @Import(name="uid")
       private final @Nullable String uid;
 
     public Optional<String> getUid() {
@@ -66,7 +66,7 @@ public final class SAPSystemIDResponse extends io.pulumi.resources.InvokeArgs {
      * Name of the HANA database user.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable String username;
 
     public Optional<String> getUsername() {

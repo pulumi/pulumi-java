@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.assuredworkloads_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse {
     /**
      * User-assigned resource display name. If not empty it will be used to create a resource with the specified name.
@@ -25,11 +25,11 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse
      */
     private final String resourceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("resourceId") String resourceId,
-        @OutputCustomType.Parameter("resourceType") String resourceType) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("resourceId") String resourceId,
+        @CustomType.Parameter("resourceType") String resourceType) {
         this.displayName = displayName;
         this.resourceId = resourceId;
         this.resourceType = resourceType;

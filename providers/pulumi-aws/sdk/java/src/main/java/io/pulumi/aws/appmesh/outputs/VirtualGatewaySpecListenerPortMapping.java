@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualGatewaySpecListenerPortMapping {
     /**
      * The port used for the port mapping.
@@ -21,10 +21,10 @@ public final class VirtualGatewaySpecListenerPortMapping {
      */
     private final String protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualGatewaySpecListenerPortMapping(
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("protocol") String protocol) {
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("protocol") String protocol) {
         this.port = port;
         this.protocol = protocol;
     }

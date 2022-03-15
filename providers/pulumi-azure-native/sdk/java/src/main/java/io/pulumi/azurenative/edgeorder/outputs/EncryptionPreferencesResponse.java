@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EncryptionPreferencesResponse {
     /**
      * Double encryption status as entered by the customer. It is compulsory to give this parameter if the 'Deny' or 'Disabled' policy is configured.
@@ -17,8 +17,8 @@ public final class EncryptionPreferencesResponse {
      */
     private final @Nullable String doubleEncryptionStatus;
 
-    @OutputCustomType.Constructor
-    private EncryptionPreferencesResponse(@OutputCustomType.Parameter("doubleEncryptionStatus") @Nullable String doubleEncryptionStatus) {
+    @CustomType.Constructor
+    private EncryptionPreferencesResponse(@CustomType.Parameter("doubleEncryptionStatus") @Nullable String doubleEncryptionStatus) {
         this.doubleEncryptionStatus = doubleEncryptionStatus;
     }
 

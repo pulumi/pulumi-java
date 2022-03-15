@@ -11,7 +11,7 @@ import io.pulumi.awsnative.amplify.outputs.AppCustomRule;
 import io.pulumi.awsnative.amplify.outputs.AppEnvironmentVariable;
 import io.pulumi.awsnative.amplify.outputs.AppTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,109 +24,109 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:amplify:App")
 public class App extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="accessToken", type=String.class, parameters={})
+    @Export(name="accessToken", type=String.class, parameters={})
     private Output</* @Nullable */ String> accessToken;
 
     public Output</* @Nullable */ String> getAccessToken() {
         return this.accessToken;
     }
-    @OutputExport(name="appId", type=String.class, parameters={})
+    @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
     public Output<String> getAppId() {
         return this.appId;
     }
-    @OutputExport(name="appName", type=String.class, parameters={})
+    @Export(name="appName", type=String.class, parameters={})
     private Output<String> appName;
 
     public Output<String> getAppName() {
         return this.appName;
     }
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="autoBranchCreationConfig", type=AppAutoBranchCreationConfig.class, parameters={})
+    @Export(name="autoBranchCreationConfig", type=AppAutoBranchCreationConfig.class, parameters={})
     private Output</* @Nullable */ AppAutoBranchCreationConfig> autoBranchCreationConfig;
 
     public Output</* @Nullable */ AppAutoBranchCreationConfig> getAutoBranchCreationConfig() {
         return this.autoBranchCreationConfig;
     }
-    @OutputExport(name="basicAuthConfig", type=AppBasicAuthConfig.class, parameters={})
+    @Export(name="basicAuthConfig", type=AppBasicAuthConfig.class, parameters={})
     private Output</* @Nullable */ AppBasicAuthConfig> basicAuthConfig;
 
     public Output</* @Nullable */ AppBasicAuthConfig> getBasicAuthConfig() {
         return this.basicAuthConfig;
     }
-    @OutputExport(name="buildSpec", type=String.class, parameters={})
+    @Export(name="buildSpec", type=String.class, parameters={})
     private Output</* @Nullable */ String> buildSpec;
 
     public Output</* @Nullable */ String> getBuildSpec() {
         return this.buildSpec;
     }
-    @OutputExport(name="customHeaders", type=String.class, parameters={})
+    @Export(name="customHeaders", type=String.class, parameters={})
     private Output</* @Nullable */ String> customHeaders;
 
     public Output</* @Nullable */ String> getCustomHeaders() {
         return this.customHeaders;
     }
-    @OutputExport(name="customRules", type=List.class, parameters={AppCustomRule.class})
+    @Export(name="customRules", type=List.class, parameters={AppCustomRule.class})
     private Output</* @Nullable */ List<AppCustomRule>> customRules;
 
     public Output</* @Nullable */ List<AppCustomRule>> getCustomRules() {
         return this.customRules;
     }
-    @OutputExport(name="defaultDomain", type=String.class, parameters={})
+    @Export(name="defaultDomain", type=String.class, parameters={})
     private Output<String> defaultDomain;
 
     public Output<String> getDefaultDomain() {
         return this.defaultDomain;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="enableBranchAutoDeletion", type=Boolean.class, parameters={})
+    @Export(name="enableBranchAutoDeletion", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableBranchAutoDeletion;
 
     public Output</* @Nullable */ Boolean> getEnableBranchAutoDeletion() {
         return this.enableBranchAutoDeletion;
     }
-    @OutputExport(name="environmentVariables", type=List.class, parameters={AppEnvironmentVariable.class})
+    @Export(name="environmentVariables", type=List.class, parameters={AppEnvironmentVariable.class})
     private Output</* @Nullable */ List<AppEnvironmentVariable>> environmentVariables;
 
     public Output</* @Nullable */ List<AppEnvironmentVariable>> getEnvironmentVariables() {
         return this.environmentVariables;
     }
-    @OutputExport(name="iAMServiceRole", type=String.class, parameters={})
+    @Export(name="iAMServiceRole", type=String.class, parameters={})
     private Output</* @Nullable */ String> iAMServiceRole;
 
     public Output</* @Nullable */ String> getIAMServiceRole() {
         return this.iAMServiceRole;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="oauthToken", type=String.class, parameters={})
+    @Export(name="oauthToken", type=String.class, parameters={})
     private Output</* @Nullable */ String> oauthToken;
 
     public Output</* @Nullable */ String> getOauthToken() {
         return this.oauthToken;
     }
-    @OutputExport(name="repository", type=String.class, parameters={})
+    @Export(name="repository", type=String.class, parameters={})
     private Output</* @Nullable */ String> repository;
 
     public Output</* @Nullable */ String> getRepository() {
         return this.repository;
     }
-    @OutputExport(name="tags", type=List.class, parameters={AppTag.class})
+    @Export(name="tags", type=List.class, parameters={AppTag.class})
     private Output</* @Nullable */ List<AppTag>> tags;
 
     public Output</* @Nullable */ List<AppTag>> getTags() {

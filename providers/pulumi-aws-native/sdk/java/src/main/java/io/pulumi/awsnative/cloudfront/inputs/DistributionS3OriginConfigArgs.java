@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class DistributionS3OriginConfigArgs extends io.pulumi.resources.Re
 
     public static final DistributionS3OriginConfigArgs Empty = new DistributionS3OriginConfigArgs();
 
-    @InputImport(name="originAccessIdentity")
+    @Import(name="originAccessIdentity")
       private final @Nullable Output<String> originAccessIdentity;
 
     public Output<String> getOriginAccessIdentity() {

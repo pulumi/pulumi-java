@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.LoadBalancerOutboundRuleProtocol;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The number of outbound ports to be used for NAT.
      * 
      */
-    @InputImport(name="allocatedOutboundPorts")
+    @Import(name="allocatedOutboundPorts")
       private final @Nullable Output<Integer> allocatedOutboundPorts;
 
     public Output<Integer> getAllocatedOutboundPorts() {
@@ -39,7 +39,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to a pool of DIPs. Outbound traffic is randomly load balanced across IPs in the backend IPs.
      * 
      */
-    @InputImport(name="backendAddressPool", required=true)
+    @Import(name="backendAddressPool", required=true)
       private final Output<SubResourceArgs> backendAddressPool;
 
     public Output<SubResourceArgs> getBackendAddressPool() {
@@ -50,7 +50,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Receive bidirectional TCP Reset on TCP flow idle timeout or unexpected connection termination. This element is only used when the protocol is set to TCP.
      * 
      */
-    @InputImport(name="enableTcpReset")
+    @Import(name="enableTcpReset")
       private final @Nullable Output<Boolean> enableTcpReset;
 
     public Output<Boolean> getEnableTcpReset() {
@@ -61,7 +61,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The Frontend IP addresses of the load balancer.
      * 
      */
-    @InputImport(name="frontendIPConfigurations", required=true)
+    @Import(name="frontendIPConfigurations", required=true)
       private final Output<List<SubResourceArgs>> frontendIPConfigurations;
 
     public Output<List<SubResourceArgs>> getFrontendIPConfigurations() {
@@ -72,7 +72,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -83,7 +83,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The timeout for the TCP idle connection.
      * 
      */
-    @InputImport(name="idleTimeoutInMinutes")
+    @Import(name="idleTimeoutInMinutes")
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
     public Output<Integer> getIdleTimeoutInMinutes() {
@@ -94,7 +94,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource that is unique within the set of outbound rules used by the load balancer. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -105,7 +105,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The protocol for the outbound rule in load balancer.
      * 
      */
-    @InputImport(name="protocol", required=true)
+    @Import(name="protocol", required=true)
       private final Output<Either<String,LoadBalancerOutboundRuleProtocol>> protocol;
 
     public Output<Either<String,LoadBalancerOutboundRuleProtocol>> getProtocol() {

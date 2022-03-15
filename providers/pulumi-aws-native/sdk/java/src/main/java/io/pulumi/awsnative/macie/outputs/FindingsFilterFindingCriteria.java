@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.macie.outputs;
 
 import io.pulumi.awsnative.macie.outputs.FindingsFilterCriterion;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FindingsFilterFindingCriteria {
     private final @Nullable FindingsFilterCriterion criterion;
 
-    @OutputCustomType.Constructor
-    private FindingsFilterFindingCriteria(@OutputCustomType.Parameter("criterion") @Nullable FindingsFilterCriterion criterion) {
+    @CustomType.Constructor
+    private FindingsFilterFindingCriteria(@CustomType.Parameter("criterion") @Nullable FindingsFilterCriterion criterion) {
         this.criterion = criterion;
     }
 

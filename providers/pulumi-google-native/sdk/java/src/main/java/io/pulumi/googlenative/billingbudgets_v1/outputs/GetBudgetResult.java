@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.billingbudgets_v1.outputs.GoogleCloudBillingBudgetsV1BudgetAmountResponse;
 import io.pulumi.googlenative.billingbudgets_v1.outputs.GoogleCloudBillingBudgetsV1FilterResponse;
 import io.pulumi.googlenative.billingbudgets_v1.outputs.GoogleCloudBillingBudgetsV1NotificationsRuleResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBudgetResult {
     /**
      * Budgeted amount.
@@ -50,15 +50,15 @@ public final class GetBudgetResult {
      */
     private final List<GoogleCloudBillingBudgetsV1ThresholdRuleResponse> thresholdRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBudgetResult(
-        @OutputCustomType.Parameter("amount") GoogleCloudBillingBudgetsV1BudgetAmountResponse amount,
-        @OutputCustomType.Parameter("budgetFilter") GoogleCloudBillingBudgetsV1FilterResponse budgetFilter,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notificationsRule") GoogleCloudBillingBudgetsV1NotificationsRuleResponse notificationsRule,
-        @OutputCustomType.Parameter("thresholdRules") List<GoogleCloudBillingBudgetsV1ThresholdRuleResponse> thresholdRules) {
+        @CustomType.Parameter("amount") GoogleCloudBillingBudgetsV1BudgetAmountResponse amount,
+        @CustomType.Parameter("budgetFilter") GoogleCloudBillingBudgetsV1FilterResponse budgetFilter,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notificationsRule") GoogleCloudBillingBudgetsV1NotificationsRuleResponse notificationsRule,
+        @CustomType.Parameter("thresholdRules") List<GoogleCloudBillingBudgetsV1ThresholdRuleResponse> thresholdRules) {
         this.amount = amount;
         this.budgetFilter = budgetFilter;
         this.displayName = displayName;

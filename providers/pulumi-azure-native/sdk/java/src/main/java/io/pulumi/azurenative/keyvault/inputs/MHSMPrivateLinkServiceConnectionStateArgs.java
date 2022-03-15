@@ -7,7 +7,7 @@ import io.pulumi.azurenative.keyvault.enums.ActionsRequired;
 import io.pulumi.azurenative.keyvault.enums.PrivateEndpointServiceConnectionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends io.pulumi.r
      * A message indicating if changes on the service provider require any updates on the consumer.
      * 
      */
-    @InputImport(name="actionsRequired")
+    @Import(name="actionsRequired")
       private final @Nullable Output<Either<String,ActionsRequired>> actionsRequired;
 
     public Output<Either<String,ActionsRequired>> getActionsRequired() {
@@ -36,7 +36,7 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends io.pulumi.r
      * The reason for approval or rejection.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -47,7 +47,7 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends io.pulumi.r
      * Indicates whether the connection has been approved, rejected or removed by the key vault owner.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status;
 
     public Output<Either<String,PrivateEndpointServiceConnectionStatus>> getStatus() {

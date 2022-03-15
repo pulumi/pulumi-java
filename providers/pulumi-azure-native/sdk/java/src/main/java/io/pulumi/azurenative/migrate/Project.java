@@ -8,7 +8,7 @@ import io.pulumi.azurenative.migrate.ProjectArgs;
 import io.pulumi.azurenative.migrate.outputs.ProjectPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * For optimistic concurrency control.
      * 
      */
-    @OutputExport(name="eTag", type=String.class, parameters={})
+    @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
@@ -50,7 +50,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Azure location in which project is created.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -64,7 +64,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Name of the project.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Properties of the project.
      * 
      */
-    @OutputExport(name="properties", type=ProjectPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=ProjectPropertiesResponse.class, parameters={})
     private Output<ProjectPropertiesResponse> properties;
 
     /**
@@ -92,7 +92,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Tags provided by Azure Tagging service.
      * 
      */
-    @OutputExport(name="tags", type=Object.class, parameters={})
+    @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
     /**
@@ -106,7 +106,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * Type of the object = [Microsoft.Migrate/assessmentProjects].
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

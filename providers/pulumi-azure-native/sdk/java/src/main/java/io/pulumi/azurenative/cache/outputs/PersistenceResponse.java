@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.cache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PersistenceResponse {
     /**
      * Sets whether AOF is enabled.
@@ -33,12 +33,12 @@ public final class PersistenceResponse {
      */
     private final @Nullable String rdbFrequency;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PersistenceResponse(
-        @OutputCustomType.Parameter("aofEnabled") @Nullable Boolean aofEnabled,
-        @OutputCustomType.Parameter("aofFrequency") @Nullable String aofFrequency,
-        @OutputCustomType.Parameter("rdbEnabled") @Nullable Boolean rdbEnabled,
-        @OutputCustomType.Parameter("rdbFrequency") @Nullable String rdbFrequency) {
+        @CustomType.Parameter("aofEnabled") @Nullable Boolean aofEnabled,
+        @CustomType.Parameter("aofFrequency") @Nullable String aofFrequency,
+        @CustomType.Parameter("rdbEnabled") @Nullable Boolean rdbEnabled,
+        @CustomType.Parameter("rdbFrequency") @Nullable String rdbFrequency) {
         this.aofEnabled = aofEnabled;
         this.aofFrequency = aofFrequency;
         this.rdbEnabled = rdbEnabled;

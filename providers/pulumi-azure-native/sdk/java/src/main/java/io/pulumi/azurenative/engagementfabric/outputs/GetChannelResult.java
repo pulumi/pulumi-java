@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.engagementfabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetChannelResult {
     /**
      * The functions to be enabled for the channel
@@ -43,14 +43,14 @@ public final class GetChannelResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetChannelResult(
-        @OutputCustomType.Parameter("channelFunctions") @Nullable List<String> channelFunctions,
-        @OutputCustomType.Parameter("channelType") String channelType,
-        @OutputCustomType.Parameter("credentials") @Nullable Map<String,String> credentials,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("channelFunctions") @Nullable List<String> channelFunctions,
+        @CustomType.Parameter("channelType") String channelType,
+        @CustomType.Parameter("credentials") @Nullable Map<String,String> credentials,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.channelFunctions = channelFunctions;
         this.channelType = channelType;
         this.credentials = credentials;

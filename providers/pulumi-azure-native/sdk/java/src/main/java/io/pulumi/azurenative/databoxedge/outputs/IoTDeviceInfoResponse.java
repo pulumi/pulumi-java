@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.AuthenticationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IoTDeviceInfoResponse {
     /**
      * Encrypted IoT device/IoT edge device connection string.
@@ -33,12 +33,12 @@ public final class IoTDeviceInfoResponse {
      */
     private final @Nullable String ioTHostHubId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IoTDeviceInfoResponse(
-        @OutputCustomType.Parameter("authentication") @Nullable AuthenticationResponse authentication,
-        @OutputCustomType.Parameter("deviceId") String deviceId,
-        @OutputCustomType.Parameter("ioTHostHub") String ioTHostHub,
-        @OutputCustomType.Parameter("ioTHostHubId") @Nullable String ioTHostHubId) {
+        @CustomType.Parameter("authentication") @Nullable AuthenticationResponse authentication,
+        @CustomType.Parameter("deviceId") String deviceId,
+        @CustomType.Parameter("ioTHostHub") String ioTHostHub,
+        @CustomType.Parameter("ioTHostHubId") @Nullable String ioTHostHubId) {
         this.authentication = authentication;
         this.deviceId = deviceId;
         this.ioTHostHub = ioTHostHub;

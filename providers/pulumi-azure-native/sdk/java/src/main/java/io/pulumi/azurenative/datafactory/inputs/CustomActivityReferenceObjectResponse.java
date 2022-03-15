@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.DatasetReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class CustomActivityReferenceObjectResponse extends io.pulumi.resou
      * Dataset references.
      * 
      */
-    @InputImport(name="datasets")
+    @Import(name="datasets")
       private final @Nullable List<DatasetReferenceResponse> datasets;
 
     public List<DatasetReferenceResponse> getDatasets() {
@@ -35,7 +35,7 @@ public final class CustomActivityReferenceObjectResponse extends io.pulumi.resou
      * Linked service references.
      * 
      */
-    @InputImport(name="linkedServices")
+    @Import(name="linkedServices")
       private final @Nullable List<LinkedServiceReferenceResponse> linkedServices;
 
     public List<LinkedServiceReferenceResponse> getLinkedServices() {

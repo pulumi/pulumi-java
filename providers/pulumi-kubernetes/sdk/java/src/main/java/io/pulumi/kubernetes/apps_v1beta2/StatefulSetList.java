@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1beta2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.apps_v1beta2.StatefulSetListArgs;
@@ -24,7 +24,7 @@ public class StatefulSetList extends io.pulumi.resources.CustomResource {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @OutputExport(name="apiVersion", type=String.class, parameters={})
+    @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
@@ -34,7 +34,7 @@ public class StatefulSetList extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getApiVersion() {
         return this.apiVersion;
     }
-    @OutputExport(name="items", type=List.class, parameters={StatefulSet.class})
+    @Export(name="items", type=List.class, parameters={StatefulSet.class})
     private Output<List<StatefulSet>> items;
 
     public Output<List<StatefulSet>> getItems() {
@@ -44,7 +44,7 @@ public class StatefulSetList extends io.pulumi.resources.CustomResource {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -54,7 +54,7 @@ public class StatefulSetList extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getKind() {
         return this.kind;
     }
-    @OutputExport(name="metadata", type=ListMeta.class, parameters={})
+    @Export(name="metadata", type=ListMeta.class, parameters={})
     private Output</* @Nullable */ ListMeta> metadata;
 
     public Output</* @Nullable */ ListMeta> getMetadata() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class NetworkInsightsAnalysisAlternatePathHint extends io.pulumi.re
 
     public static final NetworkInsightsAnalysisAlternatePathHint Empty = new NetworkInsightsAnalysisAlternatePathHint();
 
-    @InputImport(name="componentArn")
+    @Import(name="componentArn")
       private final @Nullable String componentArn;
 
     public Optional<String> getComponentArn() {
         return this.componentArn == null ? Optional.empty() : Optional.ofNullable(this.componentArn);
     }
 
-    @InputImport(name="componentId")
+    @Import(name="componentId")
       private final @Nullable String componentId;
 
     public Optional<String> getComponentId() {

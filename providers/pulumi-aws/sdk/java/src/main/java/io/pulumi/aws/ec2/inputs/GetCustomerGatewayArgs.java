@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.GetCustomerGatewayFilter;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GetCustomerGatewayArgs extends io.pulumi.resources.InvokeArgs
      * One or more [name-value pairs][dcg-filters] to filter by.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable List<GetCustomerGatewayFilter> filters;
 
     public List<GetCustomerGatewayFilter> getFilters() {
@@ -32,7 +32,7 @@ public final class GetCustomerGatewayArgs extends io.pulumi.resources.InvokeArgs
      * The ID of the gateway.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -43,7 +43,7 @@ public final class GetCustomerGatewayArgs extends io.pulumi.resources.InvokeArgs
      * Map of key-value pairs assigned to the gateway.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

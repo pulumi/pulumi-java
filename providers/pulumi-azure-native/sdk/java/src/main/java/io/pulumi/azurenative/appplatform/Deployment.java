@@ -9,7 +9,7 @@ import io.pulumi.azurenative.appplatform.outputs.DeploymentResourcePropertiesRes
 import io.pulumi.azurenative.appplatform.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Properties of the Deployment resource
      * 
      */
-    @OutputExport(name="properties", type=DeploymentResourcePropertiesResponse.class, parameters={})
+    @Export(name="properties", type=DeploymentResourcePropertiesResponse.class, parameters={})
     private Output<DeploymentResourcePropertiesResponse> properties;
 
     /**
@@ -64,7 +64,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Sku of the Deployment resource
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -78,7 +78,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

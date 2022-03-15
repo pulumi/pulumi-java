@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.BusinessIdentityResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class B2BPartnerContentResponse {
     /**
      * The list of partner business identities.
@@ -17,8 +17,8 @@ public final class B2BPartnerContentResponse {
      */
     private final @Nullable List<BusinessIdentityResponse> businessIdentities;
 
-    @OutputCustomType.Constructor
-    private B2BPartnerContentResponse(@OutputCustomType.Parameter("businessIdentities") @Nullable List<BusinessIdentityResponse> businessIdentities) {
+    @CustomType.Constructor
+    private B2BPartnerContentResponse(@CustomType.Parameter("businessIdentities") @Nullable List<BusinessIdentityResponse> businessIdentities) {
         this.businessIdentities = businessIdentities;
     }
 

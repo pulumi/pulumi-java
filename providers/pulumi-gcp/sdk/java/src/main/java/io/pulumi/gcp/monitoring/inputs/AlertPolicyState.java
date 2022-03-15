@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyAlertStrategyGetArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionGetArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyCreationRecordGetArgs;
@@ -26,7 +26,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="alertStrategy")
+    @Import(name="alertStrategy")
       private final @Nullable Output<AlertPolicyAlertStrategyGetArgs> alertStrategy;
 
     public Output<AlertPolicyAlertStrategyGetArgs> getAlertStrategy() {
@@ -39,7 +39,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
      * 
      */
-    @InputImport(name="combiner")
+    @Import(name="combiner")
       private final @Nullable Output<String> combiner;
 
     public Output<String> getCombiner() {
@@ -54,7 +54,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<AlertPolicyConditionGetArgs>> conditions;
 
     public Output<List<AlertPolicyConditionGetArgs>> getConditions() {
@@ -66,7 +66,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
      * ignored.
      * 
      */
-    @InputImport(name="creationRecords")
+    @Import(name="creationRecords")
       private final @Nullable Output<List<AlertPolicyCreationRecordGetArgs>> creationRecords;
 
     public Output<List<AlertPolicyCreationRecordGetArgs>> getCreationRecords() {
@@ -81,7 +81,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
      * policy.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -97,7 +97,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="documentation")
+    @Import(name="documentation")
       private final @Nullable Output<AlertPolicyDocumentationGetArgs> documentation;
 
     public Output<AlertPolicyDocumentationGetArgs> getDocumentation() {
@@ -108,7 +108,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
      * Whether or not the policy is enabled. The default is true.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -125,7 +125,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
      * policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -142,7 +142,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
      * `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
      * 
      */
-    @InputImport(name="notificationChannels")
+    @Import(name="notificationChannels")
       private final @Nullable Output<List<String>> notificationChannels;
 
     public Output<List<String>> getNotificationChannels() {
@@ -154,7 +154,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -169,7 +169,7 @@ public final class AlertPolicyState extends io.pulumi.resources.ResourceArgs {
      * must begin with a letter.
      * 
      */
-    @InputImport(name="userLabels")
+    @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;
 
     public Output<Map<String,String>> getUserLabels() {

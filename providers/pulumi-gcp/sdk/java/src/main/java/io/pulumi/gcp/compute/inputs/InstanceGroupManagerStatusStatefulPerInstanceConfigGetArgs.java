@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigGetArgs ex
      * A bit indicating if all of the group's per-instance configs (listed in the output of a listPerInstanceConfigs API call) have status `EFFECTIVE` or there are no per-instance-configs.
      * 
      */
-    @InputImport(name="allEffective")
+    @Import(name="allEffective")
       private final @Nullable Output<Boolean> allEffective;
 
     public Output<Boolean> getAllEffective() {

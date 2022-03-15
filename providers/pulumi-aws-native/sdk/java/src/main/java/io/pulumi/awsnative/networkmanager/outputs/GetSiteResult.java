@@ -5,14 +5,14 @@ package io.pulumi.awsnative.networkmanager.outputs;
 
 import io.pulumi.awsnative.networkmanager.outputs.SiteLocation;
 import io.pulumi.awsnative.networkmanager.outputs.SiteTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSiteResult {
     /**
      * The description of the site.
@@ -40,13 +40,13 @@ public final class GetSiteResult {
      */
     private final @Nullable List<SiteTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSiteResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("location") @Nullable SiteLocation location,
-        @OutputCustomType.Parameter("siteArn") @Nullable String siteArn,
-        @OutputCustomType.Parameter("siteId") @Nullable String siteId,
-        @OutputCustomType.Parameter("tags") @Nullable List<SiteTag> tags) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("location") @Nullable SiteLocation location,
+        @CustomType.Parameter("siteArn") @Nullable String siteArn,
+        @CustomType.Parameter("siteId") @Nullable String siteId,
+        @CustomType.Parameter("tags") @Nullable List<SiteTag> tags) {
         this.description = description;
         this.location = location;
         this.siteArn = siteArn;

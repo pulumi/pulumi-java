@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.ActionGroupResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ActionListResponse {
     /**
      * The list of the Action Groups.
@@ -17,8 +17,8 @@ public final class ActionListResponse {
      */
     private final @Nullable List<ActionGroupResponse> actionGroups;
 
-    @OutputCustomType.Constructor
-    private ActionListResponse(@OutputCustomType.Parameter("actionGroups") @Nullable List<ActionGroupResponse> actionGroups) {
+    @CustomType.Constructor
+    private ActionListResponse(@CustomType.Parameter("actionGroups") @Nullable List<ActionGroupResponse> actionGroups) {
         this.actionGroups = actionGroups;
     }
 

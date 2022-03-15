@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig {
     /**
      * A flag that indicates whether additional CloudWatch metrics are enabled for a given CloudFront distribution. Valid values are `Enabled` and `Disabled`. See below.
@@ -15,8 +15,8 @@ public final class MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSu
      */
     private final String realtimeMetricsSubscriptionStatus;
 
-    @OutputCustomType.Constructor
-    private MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig(@OutputCustomType.Parameter("realtimeMetricsSubscriptionStatus") String realtimeMetricsSubscriptionStatus) {
+    @CustomType.Constructor
+    private MonitoringSubscriptionMonitoringSubscriptionRealtimeMetricsSubscriptionConfig(@CustomType.Parameter("realtimeMetricsSubscriptionStatus") String realtimeMetricsSubscriptionStatus) {
         this.realtimeMetricsSubscriptionStatus = realtimeMetricsSubscriptionStatus;
     }
 

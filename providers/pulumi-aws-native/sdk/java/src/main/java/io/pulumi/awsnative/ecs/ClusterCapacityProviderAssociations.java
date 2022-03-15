@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ecs.ClusterCapacityProviderAssociationsArgs;
 import io.pulumi.awsnative.ecs.outputs.ClusterCapacityProviderAssociationsCapacityProviderStrategy;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -21,19 +21,19 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:ecs:ClusterCapacityProviderAssociations")
 public class ClusterCapacityProviderAssociations extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="capacityProviders", type=List.class, parameters={String.class})
+    @Export(name="capacityProviders", type=List.class, parameters={String.class})
     private Output<List<String>> capacityProviders;
 
     public Output<List<String>> getCapacityProviders() {
         return this.capacityProviders;
     }
-    @OutputExport(name="cluster", type=String.class, parameters={})
+    @Export(name="cluster", type=String.class, parameters={})
     private Output<String> cluster;
 
     public Output<String> getCluster() {
         return this.cluster;
     }
-    @OutputExport(name="defaultCapacityProviderStrategy", type=List.class, parameters={ClusterCapacityProviderAssociationsCapacityProviderStrategy.class})
+    @Export(name="defaultCapacityProviderStrategy", type=List.class, parameters={ClusterCapacityProviderAssociationsCapacityProviderStrategy.class})
     private Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategy>> defaultCapacityProviderStrategy;
 
     public Output<List<ClusterCapacityProviderAssociationsCapacityProviderStrategy>> getDefaultCapacityProviderStrategy() {

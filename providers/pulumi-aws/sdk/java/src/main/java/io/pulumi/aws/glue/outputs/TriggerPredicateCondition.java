@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerPredicateCondition {
     /**
      * The condition crawl state. Currently, the values supported are `RUNNING`, `SUCCEEDED`, `CANCELLED`, and `FAILED`. If this is specified, `crawler_name` must also be specified. Conflicts with `state`.
@@ -37,13 +37,13 @@ public final class TriggerPredicateCondition {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerPredicateCondition(
-        @OutputCustomType.Parameter("crawlState") @Nullable String crawlState,
-        @OutputCustomType.Parameter("crawlerName") @Nullable String crawlerName,
-        @OutputCustomType.Parameter("jobName") @Nullable String jobName,
-        @OutputCustomType.Parameter("logicalOperator") @Nullable String logicalOperator,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("crawlState") @Nullable String crawlState,
+        @CustomType.Parameter("crawlerName") @Nullable String crawlerName,
+        @CustomType.Parameter("jobName") @Nullable String jobName,
+        @CustomType.Parameter("logicalOperator") @Nullable String logicalOperator,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.crawlState = crawlState;
         this.crawlerName = crawlerName;
         this.jobName = jobName;

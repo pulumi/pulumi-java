@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.orbital.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EndPointResponse {
     /**
      * Name of an end point.
@@ -30,12 +30,12 @@ public final class EndPointResponse {
      */
     private final String protocol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndPointResponse(
-        @OutputCustomType.Parameter("endPointName") String endPointName,
-        @OutputCustomType.Parameter("ipAddress") String ipAddress,
-        @OutputCustomType.Parameter("port") String port,
-        @OutputCustomType.Parameter("protocol") String protocol) {
+        @CustomType.Parameter("endPointName") String endPointName,
+        @CustomType.Parameter("ipAddress") String ipAddress,
+        @CustomType.Parameter("port") String port,
+        @CustomType.Parameter("protocol") String protocol) {
         this.endPointName = endPointName;
         this.ipAddress = ipAddress;
         this.port = port;

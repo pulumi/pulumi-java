@@ -9,7 +9,7 @@ import io.pulumi.azurenative.labservices.outputs.RecurrencePatternResponse;
 import io.pulumi.azurenative.labservices.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -50,7 +50,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Notes for this schedule.
      * 
      */
-    @OutputExport(name="notes", type=String.class, parameters={})
+    @Export(name="notes", type=String.class, parameters={})
     private Output</* @Nullable */ String> notes;
 
     /**
@@ -64,7 +64,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Current provisioning state of the schedule.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -78,7 +78,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * The recurrence pattern of the scheduled actions.
      * 
      */
-    @OutputExport(name="recurrencePattern", type=RecurrencePatternResponse.class, parameters={})
+    @Export(name="recurrencePattern", type=RecurrencePatternResponse.class, parameters={})
     private Output</* @Nullable */ RecurrencePatternResponse> recurrencePattern;
 
     /**
@@ -92,7 +92,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * When lab user virtual machines will be started. Timestamp offsets will be ignored and timeZoneId is used instead.
      * 
      */
-    @OutputExport(name="startAt", type=String.class, parameters={})
+    @Export(name="startAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> startAt;
 
     /**
@@ -106,7 +106,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * When lab user virtual machines will be stopped. Timestamp offsets will be ignored and timeZoneId is used instead.
      * 
      */
-    @OutputExport(name="stopAt", type=String.class, parameters={})
+    @Export(name="stopAt", type=String.class, parameters={})
     private Output<String> stopAt;
 
     /**
@@ -120,7 +120,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the schedule.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -134,7 +134,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * The IANA timezone id for the schedule.
      * 
      */
-    @OutputExport(name="timeZoneId", type=String.class, parameters={})
+    @Export(name="timeZoneId", type=String.class, parameters={})
     private Output<String> timeZoneId;
 
     /**
@@ -148,7 +148,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

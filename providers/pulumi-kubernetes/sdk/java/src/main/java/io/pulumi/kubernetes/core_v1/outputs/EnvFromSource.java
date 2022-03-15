@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ConfigMapEnvSource;
 import io.pulumi.kubernetes.core_v1.outputs.SecretEnvSource;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvFromSource {
     /**
      * The ConfigMap to select from
@@ -29,11 +29,11 @@ public final class EnvFromSource {
      */
     private final @Nullable SecretEnvSource secretRef;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvFromSource(
-        @OutputCustomType.Parameter("configMapRef") @Nullable ConfigMapEnvSource configMapRef,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("secretRef") @Nullable SecretEnvSource secretRef) {
+        @CustomType.Parameter("configMapRef") @Nullable ConfigMapEnvSource configMapRef,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("secretRef") @Nullable SecretEnvSource secretRef) {
         this.configMapRef = configMapRef;
         this.prefix = prefix;
         this.secretRef = secretRef;

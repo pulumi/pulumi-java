@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datashare.ScheduledTriggerArgs;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * Time at which the trigger was created.
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     /**
@@ -50,7 +50,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * Expected value is 'ScheduleBased'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -65,7 +65,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * Name of the azure resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * Gets the provisioning state
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -93,7 +93,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * Recurrence Interval
      * 
      */
-    @OutputExport(name="recurrenceInterval", type=String.class, parameters={})
+    @Export(name="recurrenceInterval", type=String.class, parameters={})
     private Output<String> recurrenceInterval;
 
     /**
@@ -107,7 +107,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * Synchronization mode
      * 
      */
-    @OutputExport(name="synchronizationMode", type=String.class, parameters={})
+    @Export(name="synchronizationMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> synchronizationMode;
 
     /**
@@ -121,7 +121,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * Synchronization time
      * 
      */
-    @OutputExport(name="synchronizationTime", type=String.class, parameters={})
+    @Export(name="synchronizationTime", type=String.class, parameters={})
     private Output<String> synchronizationTime;
 
     /**
@@ -135,7 +135,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * System Data of the Azure resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -149,7 +149,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * Gets the trigger state
      * 
      */
-    @OutputExport(name="triggerStatus", type=String.class, parameters={})
+    @Export(name="triggerStatus", type=String.class, parameters={})
     private Output<String> triggerStatus;
 
     /**
@@ -163,7 +163,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * Type of the azure resource
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -177,7 +177,7 @@ public class ScheduledTrigger extends io.pulumi.resources.CustomResource {
      * Name of the user who created the trigger.
      * 
      */
-    @OutputExport(name="userName", type=String.class, parameters={})
+    @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**

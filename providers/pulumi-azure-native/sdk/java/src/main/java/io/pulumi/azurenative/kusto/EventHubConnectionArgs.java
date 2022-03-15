@@ -6,7 +6,7 @@ package io.pulumi.azurenative.kusto;
 import io.pulumi.azurenative.kusto.enums.DataFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * The name of the Kusto cluster.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -31,7 +31,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * The event hub consumer group.
      * 
      */
-    @InputImport(name="consumerGroup", required=true)
+    @Import(name="consumerGroup", required=true)
       private final Output<String> consumerGroup;
 
     public Output<String> getConsumerGroup() {
@@ -42,7 +42,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * The data format of the message. Optionally the data format can be added to each message.
      * 
      */
-    @InputImport(name="dataFormat")
+    @Import(name="dataFormat")
       private final @Nullable Output<Either<String,DataFormat>> dataFormat;
 
     public Output<Either<String,DataFormat>> getDataFormat() {
@@ -53,7 +53,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * The name of the database in the Kusto cluster.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -64,7 +64,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * The name of the event hub connection.
      * 
      */
-    @InputImport(name="eventHubConnectionName")
+    @Import(name="eventHubConnectionName")
       private final @Nullable Output<String> eventHubConnectionName;
 
     public Output<String> getEventHubConnectionName() {
@@ -75,7 +75,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * The resource ID of the event hub to be used to create a data connection.
      * 
      */
-    @InputImport(name="eventHubResourceId", required=true)
+    @Import(name="eventHubResourceId", required=true)
       private final Output<String> eventHubResourceId;
 
     public Output<String> getEventHubResourceId() {
@@ -86,7 +86,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -97,7 +97,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * The mapping rule to be used to ingest the data. Optionally the mapping information can be added to each message.
      * 
      */
-    @InputImport(name="mappingRuleName")
+    @Import(name="mappingRuleName")
       private final @Nullable Output<String> mappingRuleName;
 
     public Output<String> getMappingRuleName() {
@@ -108,7 +108,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group containing the Kusto cluster.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -119,7 +119,7 @@ public final class EventHubConnectionArgs extends io.pulumi.resources.ResourceAr
      * The table where the data should be ingested. Optionally the table information can be added to each message.
      * 
      */
-    @InputImport(name="tableName")
+    @Import(name="tableName")
       private final @Nullable Output<String> tableName;
 
     public Output<String> getTableName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the NetApp account
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -27,7 +27,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the capacity pool
      * 
      */
-    @InputImport(name="poolName", required=true)
+    @Import(name="poolName", required=true)
       private final String poolName;
 
     public String getPoolName() {
@@ -38,7 +38,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the snapshot
      * 
      */
-    @InputImport(name="snapshotName", required=true)
+    @Import(name="snapshotName", required=true)
       private final String snapshotName;
 
     public String getSnapshotName() {
@@ -60,7 +60,7 @@ public final class GetSnapshotArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the volume
      * 
      */
-    @InputImport(name="volumeName", required=true)
+    @Import(name="volumeName", required=true)
       private final String volumeName;
 
     public String getVolumeName() {

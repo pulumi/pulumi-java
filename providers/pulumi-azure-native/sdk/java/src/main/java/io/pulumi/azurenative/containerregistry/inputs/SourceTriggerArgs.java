@@ -8,7 +8,7 @@ import io.pulumi.azurenative.containerregistry.enums.TriggerStatus;
 import io.pulumi.azurenative.containerregistry.inputs.SourcePropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the trigger.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -38,7 +38,7 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * The properties that describes the source(code) for the task.
      * 
      */
-    @InputImport(name="sourceRepository", required=true)
+    @Import(name="sourceRepository", required=true)
       private final Output<SourcePropertiesArgs> sourceRepository;
 
     public Output<SourcePropertiesArgs> getSourceRepository() {
@@ -49,7 +49,7 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * The source event corresponding to the trigger.
      * 
      */
-    @InputImport(name="sourceTriggerEvents", required=true)
+    @Import(name="sourceTriggerEvents", required=true)
       private final Output<List<Either<String,SourceTriggerEvent>>> sourceTriggerEvents;
 
     public Output<List<Either<String,SourceTriggerEvent>>> getSourceTriggerEvents() {
@@ -60,7 +60,7 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
      * The current status of trigger.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<Either<String,TriggerStatus>> status;
 
     public Output<Either<String,TriggerStatus>> getStatus() {

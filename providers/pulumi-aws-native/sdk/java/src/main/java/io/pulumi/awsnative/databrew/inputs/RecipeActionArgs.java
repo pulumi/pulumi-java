@@ -7,7 +7,7 @@ import io.pulumi.awsnative.databrew.inputs.RecipeParameterMapArgs;
 import io.pulumi.awsnative.databrew.inputs.RecipeParametersArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,14 +21,14 @@ public final class RecipeActionArgs extends io.pulumi.resources.ResourceArgs {
      * Step action operation
      * 
      */
-    @InputImport(name="operation", required=true)
+    @Import(name="operation", required=true)
       private final Output<String> operation;
 
     public Output<String> getOperation() {
         return this.operation;
     }
 
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters;
 
     public Output<Either<RecipeParametersArgs,RecipeParameterMapArgs>> getParameters() {

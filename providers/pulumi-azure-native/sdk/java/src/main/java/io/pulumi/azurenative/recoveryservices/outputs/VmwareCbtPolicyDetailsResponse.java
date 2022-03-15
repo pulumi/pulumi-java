@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VmwareCbtPolicyDetailsResponse {
     /**
      * The app consistent snapshot frequency in minutes.
@@ -34,12 +34,12 @@ public final class VmwareCbtPolicyDetailsResponse {
      */
     private final @Nullable Integer recoveryPointHistoryInMinutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VmwareCbtPolicyDetailsResponse(
-        @OutputCustomType.Parameter("appConsistentFrequencyInMinutes") @Nullable Integer appConsistentFrequencyInMinutes,
-        @OutputCustomType.Parameter("crashConsistentFrequencyInMinutes") @Nullable Integer crashConsistentFrequencyInMinutes,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("recoveryPointHistoryInMinutes") @Nullable Integer recoveryPointHistoryInMinutes) {
+        @CustomType.Parameter("appConsistentFrequencyInMinutes") @Nullable Integer appConsistentFrequencyInMinutes,
+        @CustomType.Parameter("crashConsistentFrequencyInMinutes") @Nullable Integer crashConsistentFrequencyInMinutes,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("recoveryPointHistoryInMinutes") @Nullable Integer recoveryPointHistoryInMinutes) {
         this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
         this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
         this.instanceType = instanceType;

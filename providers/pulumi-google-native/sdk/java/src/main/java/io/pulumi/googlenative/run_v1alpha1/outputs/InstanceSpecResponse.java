@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.ContainerResponse;
 import io.pulumi.googlenative.run_v1alpha1.outputs.VolumeResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceSpecResponse {
     /**
      * Optional. Optional duration in seconds the instance may be active relative to StartTime before the system will actively try to mark it failed and kill associated containers. If set to zero, the system will never attempt to kill an instance based on time. Otherwise, value must be a positive integer. +optional
@@ -43,14 +43,14 @@ public final class InstanceSpecResponse {
      */
     private final List<VolumeResponse> volumes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceSpecResponse(
-        @OutputCustomType.Parameter("activeDeadlineSeconds") String activeDeadlineSeconds,
-        @OutputCustomType.Parameter("containers") List<ContainerResponse> containers,
-        @OutputCustomType.Parameter("restartPolicy") String restartPolicy,
-        @OutputCustomType.Parameter("serviceAccountName") String serviceAccountName,
-        @OutputCustomType.Parameter("terminationGracePeriodSeconds") String terminationGracePeriodSeconds,
-        @OutputCustomType.Parameter("volumes") List<VolumeResponse> volumes) {
+        @CustomType.Parameter("activeDeadlineSeconds") String activeDeadlineSeconds,
+        @CustomType.Parameter("containers") List<ContainerResponse> containers,
+        @CustomType.Parameter("restartPolicy") String restartPolicy,
+        @CustomType.Parameter("serviceAccountName") String serviceAccountName,
+        @CustomType.Parameter("terminationGracePeriodSeconds") String terminationGracePeriodSeconds,
+        @CustomType.Parameter("volumes") List<VolumeResponse> volumes) {
         this.activeDeadlineSeconds = activeDeadlineSeconds;
         this.containers = containers;
         this.restartPolicy = restartPolicy;

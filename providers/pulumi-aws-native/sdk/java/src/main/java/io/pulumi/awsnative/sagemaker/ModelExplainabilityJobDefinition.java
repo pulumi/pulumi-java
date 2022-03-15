@@ -14,7 +14,7 @@ import io.pulumi.awsnative.sagemaker.outputs.ModelExplainabilityJobDefinitionNet
 import io.pulumi.awsnative.sagemaker.outputs.ModelExplainabilityJobDefinitionStoppingCondition;
 import io.pulumi.awsnative.sagemaker.outputs.ModelExplainabilityJobDefinitionTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public class ModelExplainabilityJobDefinition extends io.pulumi.resources.Custom
      * The time at which the job definition was created.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -44,7 +44,7 @@ public class ModelExplainabilityJobDefinition extends io.pulumi.resources.Custom
      * The Amazon Resource Name (ARN) of job definition.
      * 
      */
-    @OutputExport(name="jobDefinitionArn", type=String.class, parameters={})
+    @Export(name="jobDefinitionArn", type=String.class, parameters={})
     private Output<String> jobDefinitionArn;
 
     /**
@@ -54,43 +54,43 @@ public class ModelExplainabilityJobDefinition extends io.pulumi.resources.Custom
     public Output<String> getJobDefinitionArn() {
         return this.jobDefinitionArn;
     }
-    @OutputExport(name="jobDefinitionName", type=String.class, parameters={})
+    @Export(name="jobDefinitionName", type=String.class, parameters={})
     private Output</* @Nullable */ String> jobDefinitionName;
 
     public Output</* @Nullable */ String> getJobDefinitionName() {
         return this.jobDefinitionName;
     }
-    @OutputExport(name="jobResources", type=ModelExplainabilityJobDefinitionMonitoringResources.class, parameters={})
+    @Export(name="jobResources", type=ModelExplainabilityJobDefinitionMonitoringResources.class, parameters={})
     private Output<ModelExplainabilityJobDefinitionMonitoringResources> jobResources;
 
     public Output<ModelExplainabilityJobDefinitionMonitoringResources> getJobResources() {
         return this.jobResources;
     }
-    @OutputExport(name="modelExplainabilityAppSpecification", type=ModelExplainabilityJobDefinitionModelExplainabilityAppSpecification.class, parameters={})
+    @Export(name="modelExplainabilityAppSpecification", type=ModelExplainabilityJobDefinitionModelExplainabilityAppSpecification.class, parameters={})
     private Output<ModelExplainabilityJobDefinitionModelExplainabilityAppSpecification> modelExplainabilityAppSpecification;
 
     public Output<ModelExplainabilityJobDefinitionModelExplainabilityAppSpecification> getModelExplainabilityAppSpecification() {
         return this.modelExplainabilityAppSpecification;
     }
-    @OutputExport(name="modelExplainabilityBaselineConfig", type=ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfig.class, parameters={})
+    @Export(name="modelExplainabilityBaselineConfig", type=ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfig.class, parameters={})
     private Output</* @Nullable */ ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfig> modelExplainabilityBaselineConfig;
 
     public Output</* @Nullable */ ModelExplainabilityJobDefinitionModelExplainabilityBaselineConfig> getModelExplainabilityBaselineConfig() {
         return this.modelExplainabilityBaselineConfig;
     }
-    @OutputExport(name="modelExplainabilityJobInput", type=ModelExplainabilityJobDefinitionModelExplainabilityJobInput.class, parameters={})
+    @Export(name="modelExplainabilityJobInput", type=ModelExplainabilityJobDefinitionModelExplainabilityJobInput.class, parameters={})
     private Output<ModelExplainabilityJobDefinitionModelExplainabilityJobInput> modelExplainabilityJobInput;
 
     public Output<ModelExplainabilityJobDefinitionModelExplainabilityJobInput> getModelExplainabilityJobInput() {
         return this.modelExplainabilityJobInput;
     }
-    @OutputExport(name="modelExplainabilityJobOutputConfig", type=ModelExplainabilityJobDefinitionMonitoringOutputConfig.class, parameters={})
+    @Export(name="modelExplainabilityJobOutputConfig", type=ModelExplainabilityJobDefinitionMonitoringOutputConfig.class, parameters={})
     private Output<ModelExplainabilityJobDefinitionMonitoringOutputConfig> modelExplainabilityJobOutputConfig;
 
     public Output<ModelExplainabilityJobDefinitionMonitoringOutputConfig> getModelExplainabilityJobOutputConfig() {
         return this.modelExplainabilityJobOutputConfig;
     }
-    @OutputExport(name="networkConfig", type=ModelExplainabilityJobDefinitionNetworkConfig.class, parameters={})
+    @Export(name="networkConfig", type=ModelExplainabilityJobDefinitionNetworkConfig.class, parameters={})
     private Output</* @Nullable */ ModelExplainabilityJobDefinitionNetworkConfig> networkConfig;
 
     public Output</* @Nullable */ ModelExplainabilityJobDefinitionNetworkConfig> getNetworkConfig() {
@@ -100,7 +100,7 @@ public class ModelExplainabilityJobDefinition extends io.pulumi.resources.Custom
      * The Amazon Resource Name (ARN) of an IAM role that Amazon SageMaker can assume to perform tasks on your behalf.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**
@@ -110,7 +110,7 @@ public class ModelExplainabilityJobDefinition extends io.pulumi.resources.Custom
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
-    @OutputExport(name="stoppingCondition", type=ModelExplainabilityJobDefinitionStoppingCondition.class, parameters={})
+    @Export(name="stoppingCondition", type=ModelExplainabilityJobDefinitionStoppingCondition.class, parameters={})
     private Output</* @Nullable */ ModelExplainabilityJobDefinitionStoppingCondition> stoppingCondition;
 
     public Output</* @Nullable */ ModelExplainabilityJobDefinitionStoppingCondition> getStoppingCondition() {
@@ -120,7 +120,7 @@ public class ModelExplainabilityJobDefinition extends io.pulumi.resources.Custom
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={ModelExplainabilityJobDefinitionTag.class})
+    @Export(name="tags", type=List.class, parameters={ModelExplainabilityJobDefinitionTag.class})
     private Output</* @Nullable */ List<ModelExplainabilityJobDefinitionTag>> tags;
 
     /**

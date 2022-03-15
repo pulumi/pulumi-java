@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.enums.PolicyEnabledState;
 import io.pulumi.azurenative.cdn.enums.PolicyMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
      * 
      */
-    @InputImport(name="defaultCustomBlockResponseBody")
+    @Import(name="defaultCustomBlockResponseBody")
       private final @Nullable Output<String> defaultCustomBlockResponseBody;
 
     public Output<String> getDefaultCustomBlockResponseBody() {
@@ -37,7 +37,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * If the action type is block, this field defines the default customer overridable http response status code.
      * 
      */
-    @InputImport(name="defaultCustomBlockResponseStatusCode")
+    @Import(name="defaultCustomBlockResponseStatusCode")
       private final @Nullable Output<Integer> defaultCustomBlockResponseStatusCode;
 
     public Output<Integer> getDefaultCustomBlockResponseStatusCode() {
@@ -48,7 +48,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * If action type is redirect, this field represents the default redirect URL for the client.
      * 
      */
-    @InputImport(name="defaultRedirectUrl")
+    @Import(name="defaultRedirectUrl")
       private final @Nullable Output<String> defaultRedirectUrl;
 
     public Output<String> getDefaultRedirectUrl() {
@@ -59,7 +59,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * describes if the policy is in enabled state or disabled state
      * 
      */
-    @InputImport(name="enabledState")
+    @Import(name="enabledState")
       private final @Nullable Output<Either<String,PolicyEnabledState>> enabledState;
 
     public Output<Either<String,PolicyEnabledState>> getEnabledState() {
@@ -70,7 +70,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * Describes if it is in detection mode or prevention mode at policy level.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<Either<String,PolicyMode>> mode;
 
     public Output<Either<String,PolicyMode>> getMode() {

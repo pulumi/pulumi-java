@@ -8,7 +8,7 @@ import io.pulumi.azurenative.logic.IntegrationAccountAssemblyArgs;
 import io.pulumi.azurenative.logic.outputs.AssemblyPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class IntegrationAccountAssembly extends io.pulumi.resources.CustomResour
      * The resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -50,7 +50,7 @@ public class IntegrationAccountAssembly extends io.pulumi.resources.CustomResour
      * Gets the resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class IntegrationAccountAssembly extends io.pulumi.resources.CustomResour
      * The assembly properties.
      * 
      */
-    @OutputExport(name="properties", type=AssemblyPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=AssemblyPropertiesResponse.class, parameters={})
     private Output<AssemblyPropertiesResponse> properties;
 
     /**
@@ -78,7 +78,7 @@ public class IntegrationAccountAssembly extends io.pulumi.resources.CustomResour
      * The resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -92,7 +92,7 @@ public class IntegrationAccountAssembly extends io.pulumi.resources.CustomResour
      * Gets the resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -8,7 +8,7 @@ import io.pulumi.aws.route53.ZoneArgs;
 import io.pulumi.aws.route53.inputs.ZoneState;
 import io.pulumi.aws.route53.outputs.ZoneVpc;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Hosted Zone.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -50,7 +50,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
      * 
      */
-    @OutputExport(name="comment", type=String.class, parameters={})
+    @Export(name="comment", type=String.class, parameters={})
     private Output<String> comment;
 
     /**
@@ -64,7 +64,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with `vpc` as delegation sets can only be used for public zones.
      * 
      */
-    @OutputExport(name="delegationSetId", type=String.class, parameters={})
+    @Export(name="delegationSetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> delegationSetId;
 
     /**
@@ -78,7 +78,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.
      * 
      */
-    @OutputExport(name="forceDestroy", type=Boolean.class, parameters={})
+    @Export(name="forceDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDestroy;
 
     /**
@@ -92,7 +92,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * This is the name of the hosted zone.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html).
      * 
      */
-    @OutputExport(name="nameServers", type=List.class, parameters={String.class})
+    @Export(name="nameServers", type=List.class, parameters={String.class})
     private Output<List<String>> nameServers;
 
     /**
@@ -122,7 +122,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * A mapping of tags to assign to the zone.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -136,7 +136,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -150,7 +150,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any `aws.route53.ZoneAssociation` resource specifying the same zone ID. Detailed below.
      * 
      */
-    @OutputExport(name="vpcs", type=List.class, parameters={ZoneVpc.class})
+    @Export(name="vpcs", type=List.class, parameters={ZoneVpc.class})
     private Output</* @Nullable */ List<ZoneVpc>> vpcs;
 
     /**
@@ -164,7 +164,7 @@ public class Zone extends io.pulumi.resources.CustomResource {
      * The Hosted Zone ID. This can be referenced by zone records.
      * 
      */
-    @OutputExport(name="zoneId", type=String.class, parameters={})
+    @Export(name="zoneId", type=String.class, parameters={})
     private Output<String> zoneId;
 
     /**

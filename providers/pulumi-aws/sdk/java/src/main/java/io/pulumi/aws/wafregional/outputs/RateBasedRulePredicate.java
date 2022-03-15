@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.wafregional.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RateBasedRulePredicate {
     /**
      * A unique identifier for a predicate in the rule, such as Byte Match Set ID or IPSet ID.
@@ -29,11 +29,11 @@ public final class RateBasedRulePredicate {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RateBasedRulePredicate(
-        @OutputCustomType.Parameter("dataId") String dataId,
-        @OutputCustomType.Parameter("negated") Boolean negated,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("dataId") String dataId,
+        @CustomType.Parameter("negated") Boolean negated,
+        @CustomType.Parameter("type") String type) {
         this.dataId = dataId;
         this.negated = negated;
         this.type = type;

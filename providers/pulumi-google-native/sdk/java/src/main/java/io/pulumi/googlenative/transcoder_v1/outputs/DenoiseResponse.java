@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DenoiseResponse {
     /**
      * Set strength of the denoise. Enter a value between 0 and 1. The higher the value, the smoother the image. 0 is no denoising. The default is 0.
@@ -21,10 +21,10 @@ public final class DenoiseResponse {
      */
     private final String tune;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DenoiseResponse(
-        @OutputCustomType.Parameter("strength") Double strength,
-        @OutputCustomType.Parameter("tune") String tune) {
+        @CustomType.Parameter("strength") Double strength,
+        @CustomType.Parameter("tune") String tune) {
         this.strength = strength;
         this.tune = tune;
     }

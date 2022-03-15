@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationCmafEncryption;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationHlsManifest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PackagingConfigurationCmafPackage {
     private final @Nullable PackagingConfigurationCmafEncryption encryption;
     /**
@@ -28,12 +28,12 @@ public final class PackagingConfigurationCmafPackage {
     private final @Nullable Boolean includeEncoderConfigurationInSegments;
     private final @Nullable Integer segmentDurationSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PackagingConfigurationCmafPackage(
-        @OutputCustomType.Parameter("encryption") @Nullable PackagingConfigurationCmafEncryption encryption,
-        @OutputCustomType.Parameter("hlsManifests") List<PackagingConfigurationHlsManifest> hlsManifests,
-        @OutputCustomType.Parameter("includeEncoderConfigurationInSegments") @Nullable Boolean includeEncoderConfigurationInSegments,
-        @OutputCustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds) {
+        @CustomType.Parameter("encryption") @Nullable PackagingConfigurationCmafEncryption encryption,
+        @CustomType.Parameter("hlsManifests") List<PackagingConfigurationHlsManifest> hlsManifests,
+        @CustomType.Parameter("includeEncoderConfigurationInSegments") @Nullable Boolean includeEncoderConfigurationInSegments,
+        @CustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds) {
         this.encryption = encryption;
         this.hlsManifests = hlsManifests;
         this.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;

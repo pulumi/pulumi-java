@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleS3Output;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MonitoringScheduleMonitoringOutput {
     private final MonitoringScheduleS3Output s3Output;
 
-    @OutputCustomType.Constructor
-    private MonitoringScheduleMonitoringOutput(@OutputCustomType.Parameter("s3Output") MonitoringScheduleS3Output s3Output) {
+    @CustomType.Constructor
+    private MonitoringScheduleMonitoringOutput(@CustomType.Parameter("s3Output") MonitoringScheduleS3Output s3Output) {
         this.s3Output = s3Output;
     }
 

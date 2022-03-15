@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetEventChannelArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the event channel.
      * 
      */
-    @InputImport(name="eventChannelName", required=true)
+    @Import(name="eventChannelName", required=true)
       private final String eventChannelName;
 
     public String getEventChannelName() {
@@ -27,7 +27,7 @@ public final class GetEventChannelArgs extends io.pulumi.resources.InvokeArgs {
      * Name of the partner namespace.
      * 
      */
-    @InputImport(name="partnerNamespaceName", required=true)
+    @Import(name="partnerNamespaceName", required=true)
       private final String partnerNamespaceName;
 
     public String getPartnerNamespaceName() {
@@ -38,7 +38,7 @@ public final class GetEventChannelArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group within the user's subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

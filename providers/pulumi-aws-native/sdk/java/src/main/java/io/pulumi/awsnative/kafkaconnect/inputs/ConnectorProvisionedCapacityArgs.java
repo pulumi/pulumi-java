@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ConnectorProvisionedCapacityArgs extends io.pulumi.resources.
      * Specifies how many MSK Connect Units (MCU) are allocated to the connector.
      * 
      */
-    @InputImport(name="mcuCount")
+    @Import(name="mcuCount")
       private final @Nullable Output<Integer> mcuCount;
 
     public Output<Integer> getMcuCount() {
@@ -33,7 +33,7 @@ public final class ConnectorProvisionedCapacityArgs extends io.pulumi.resources.
      * Number of workers for a connector.
      * 
      */
-    @InputImport(name="workerCount", required=true)
+    @Import(name="workerCount", required=true)
       private final Output<Integer> workerCount;
 
     public Output<Integer> getWorkerCount() {

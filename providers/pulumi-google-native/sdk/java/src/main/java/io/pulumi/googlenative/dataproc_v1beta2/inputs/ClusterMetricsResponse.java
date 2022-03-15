@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ClusterMetricsResponse extends io.pulumi.resources.InvokeArgs
      * The HDFS metrics.
      * 
      */
-    @InputImport(name="hdfsMetrics", required=true)
+    @Import(name="hdfsMetrics", required=true)
       private final Map<String,String> hdfsMetrics;
 
     public Map<String,String> getHdfsMetrics() {
@@ -32,7 +32,7 @@ public final class ClusterMetricsResponse extends io.pulumi.resources.InvokeArgs
      * The YARN metrics.
      * 
      */
-    @InputImport(name="yarnMetrics", required=true)
+    @Import(name="yarnMetrics", required=true)
       private final Map<String,String> yarnMetrics;
 
     public Map<String,String> getYarnMetrics() {

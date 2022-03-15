@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
      * Name of the column. Must be a UTF-8 string without dots (.). The maximum size is 64 bytes.
      * 
      */
-    @InputImport(name="column", required=true)
+    @Import(name="column", required=true)
       private final Output<String> column;
 
     public Output<String> getColumn() {
@@ -34,7 +34,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
      * Optional. Description of the column. Default value is an empty string. The description must be a UTF-8 string with the maximum size of 2000 bytes.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
      * Optional. A column's mode indicates whether values in this column are required, nullable, or repeated. Only `NULLABLE`, `REQUIRED`, and `REPEATED` values are supported. Default mode is `NULLABLE`.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
@@ -56,7 +56,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
      * Optional. Schema of sub-columns. A column can have zero or more sub-columns.
      * 
      */
-    @InputImport(name="subcolumns")
+    @Import(name="subcolumns")
       private final @Nullable Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> subcolumns;
 
     public Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> getSubcolumns() {
@@ -67,7 +67,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
      * Type of the column. Must be a UTF-8 string with the maximum size of 128 bytes.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

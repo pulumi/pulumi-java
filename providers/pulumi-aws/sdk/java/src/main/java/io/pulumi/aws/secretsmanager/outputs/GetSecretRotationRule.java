@@ -3,16 +3,16 @@
 
 package io.pulumi.aws.secretsmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSecretRotationRule {
     private final Integer automaticallyAfterDays;
 
-    @OutputCustomType.Constructor
-    private GetSecretRotationRule(@OutputCustomType.Parameter("automaticallyAfterDays") Integer automaticallyAfterDays) {
+    @CustomType.Constructor
+    private GetSecretRotationRule(@CustomType.Parameter("automaticallyAfterDays") Integer automaticallyAfterDays) {
         this.automaticallyAfterDays = automaticallyAfterDays;
     }
 

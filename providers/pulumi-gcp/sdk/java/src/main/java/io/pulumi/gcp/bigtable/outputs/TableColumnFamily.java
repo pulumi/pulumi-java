@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.bigtable.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TableColumnFamily {
     /**
      * The name of the column family.
@@ -15,8 +15,8 @@ public final class TableColumnFamily {
      */
     private final String family;
 
-    @OutputCustomType.Constructor
-    private TableColumnFamily(@OutputCustomType.Parameter("family") String family) {
+    @CustomType.Constructor
+    private TableColumnFamily(@CustomType.Parameter("family") String family) {
         this.family = family;
     }
 

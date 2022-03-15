@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.DiskDiskEncryptionKeyGetArgs;
 import io.pulumi.gcp.compute.inputs.DiskSourceImageEncryptionKeyGetArgs;
 import io.pulumi.gcp.compute.inputs.DiskSourceSnapshotEncryptionKeyGetArgs;
@@ -25,7 +25,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @InputImport(name="creationTimestamp")
+    @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
@@ -37,7 +37,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -57,7 +57,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="diskEncryptionKey")
+    @Import(name="diskEncryptionKey")
       private final @Nullable Output<DiskDiskEncryptionKeyGetArgs> diskEncryptionKey;
 
     public Output<DiskDiskEncryptionKeyGetArgs> getDiskEncryptionKey() {
@@ -76,7 +76,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * These images can be referred by family name here.
      * 
      */
-    @InputImport(name="image")
+    @Import(name="image")
       private final @Nullable Output<String> image;
 
     public Output<String> getImage() {
@@ -91,7 +91,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
-    @InputImport(name="interface")
+    @Import(name="interface")
       private final @Nullable Output<String> $interface;
 
     @Deprecated /* This field is no longer in use, disk interfaces will be automatically determined on attachment. To resolve this issue, remove this field from your config. */
@@ -103,7 +103,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * The fingerprint used for optimistic locking of this resource. Used internally during updates.
      * 
      */
-    @InputImport(name="labelFingerprint")
+    @Import(name="labelFingerprint")
       private final @Nullable Output<String> labelFingerprint;
 
     public Output<String> getLabelFingerprint() {
@@ -114,7 +114,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * Labels to apply to this disk.  A list of key->value pairs.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -125,7 +125,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * Last attach timestamp in RFC3339 text format.
      * 
      */
-    @InputImport(name="lastAttachTimestamp")
+    @Import(name="lastAttachTimestamp")
       private final @Nullable Output<String> lastAttachTimestamp;
 
     public Output<String> getLastAttachTimestamp() {
@@ -136,7 +136,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * Last detach timestamp in RFC3339 text format.
      * 
      */
-    @InputImport(name="lastDetachTimestamp")
+    @Import(name="lastDetachTimestamp")
       private final @Nullable Output<String> lastDetachTimestamp;
 
     public Output<String> getLastDetachTimestamp() {
@@ -147,7 +147,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether or not the disk can be read/write attached to more than one instance.
      * 
      */
-    @InputImport(name="multiWriter")
+    @Import(name="multiWriter")
       private final @Nullable Output<Boolean> multiWriter;
 
     public Output<Boolean> getMultiWriter() {
@@ -164,7 +164,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -179,7 +179,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * the supported values for the caller's project.
      * 
      */
-    @InputImport(name="physicalBlockSizeBytes")
+    @Import(name="physicalBlockSizeBytes")
       private final @Nullable Output<Integer> physicalBlockSizeBytes;
 
     public Output<Integer> getPhysicalBlockSizeBytes() {
@@ -191,7 +191,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -202,7 +202,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * Indicates how many IOPS must be provisioned for the disk.
      * 
      */
-    @InputImport(name="provisionedIops")
+    @Import(name="provisionedIops")
       private final @Nullable Output<Integer> provisionedIops;
 
     public Output<Integer> getProvisionedIops() {
@@ -218,7 +218,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * to allow for updating the resource policy attached to the disk.
      * 
      */
-    @InputImport(name="resourcePolicies")
+    @Import(name="resourcePolicies")
       private final @Nullable Output<List<String>> resourcePolicies;
 
     public Output<List<String>> getResourcePolicies() {
@@ -229,7 +229,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -250,7 +250,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * and recreating.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<Integer> size;
 
     public Output<Integer> getSize() {
@@ -268,7 +268,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * * `snapshot`
      * 
      */
-    @InputImport(name="snapshot")
+    @Import(name="snapshot")
       private final @Nullable Output<String> snapshot;
 
     public Output<String> getSnapshot() {
@@ -281,7 +281,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="sourceImageEncryptionKey")
+    @Import(name="sourceImageEncryptionKey")
       private final @Nullable Output<DiskSourceImageEncryptionKeyGetArgs> sourceImageEncryptionKey;
 
     public Output<DiskSourceImageEncryptionKeyGetArgs> getSourceImageEncryptionKey() {
@@ -294,7 +294,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * under the same name, the source image ID would identify the exact version of the image that was used.
      * 
      */
-    @InputImport(name="sourceImageId")
+    @Import(name="sourceImageId")
       private final @Nullable Output<String> sourceImageId;
 
     public Output<String> getSourceImageId() {
@@ -308,7 +308,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="sourceSnapshotEncryptionKey")
+    @Import(name="sourceSnapshotEncryptionKey")
       private final @Nullable Output<DiskSourceSnapshotEncryptionKeyGetArgs> sourceSnapshotEncryptionKey;
 
     public Output<DiskSourceSnapshotEncryptionKeyGetArgs> getSourceSnapshotEncryptionKey() {
@@ -321,7 +321,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * recreated under the same name, the source snapshot ID would identify the exact version of the snapshot that was used.
      * 
      */
-    @InputImport(name="sourceSnapshotId")
+    @Import(name="sourceSnapshotId")
       private final @Nullable Output<String> sourceSnapshotId;
 
     public Output<String> getSourceSnapshotId() {
@@ -333,7 +333,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * create the disk. Provide this when creating the disk.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -344,7 +344,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
      * 
      */
-    @InputImport(name="users")
+    @Import(name="users")
       private final @Nullable Output<List<String>> users;
 
     public Output<List<String>> getUsers() {
@@ -355,7 +355,7 @@ public final class DiskState extends io.pulumi.resources.ResourceArgs {
      * A reference to the zone where the disk resides.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IpFilterRuleResponse {
     /**
      * The desired action for requests captured by this rule.
@@ -25,11 +25,11 @@ public final class IpFilterRuleResponse {
      */
     private final String ipMask;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IpFilterRuleResponse(
-        @OutputCustomType.Parameter("action") String action,
-        @OutputCustomType.Parameter("filterName") String filterName,
-        @OutputCustomType.Parameter("ipMask") String ipMask) {
+        @CustomType.Parameter("action") String action,
+        @CustomType.Parameter("filterName") String filterName,
+        @CustomType.Parameter("ipMask") String ipMask) {
         this.action = action;
         this.filterName = filterName;
         this.ipMask = ipMask;

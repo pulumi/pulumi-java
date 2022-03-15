@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
      * Optional. Additional metadata for describing this parameter.
      * 
      */
-    @InputImport(name="customMetadata", required=true)
+    @Import(name="customMetadata", required=true)
       private final Map<String,String> customMetadata;
 
     public Map<String,String> getCustomMetadata() {
@@ -34,7 +34,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
      * The help text to display for the parameter.
      * 
      */
-    @InputImport(name="helpText", required=true)
+    @Import(name="helpText", required=true)
       private final String helpText;
 
     public String getHelpText() {
@@ -45,7 +45,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
      * Optional. Whether the parameter is optional. Defaults to false.
      * 
      */
-    @InputImport(name="isOptional", required=true)
+    @Import(name="isOptional", required=true)
       private final Boolean isOptional;
 
     public Boolean getIsOptional() {
@@ -56,7 +56,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
      * The label to display for the parameter.
      * 
      */
-    @InputImport(name="label", required=true)
+    @Import(name="label", required=true)
       private final String label;
 
     public String getLabel() {
@@ -67,7 +67,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
      * The name of the parameter.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -78,7 +78,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
      * Optional. The type of the parameter. Used for selecting input picker.
      * 
      */
-    @InputImport(name="paramType", required=true)
+    @Import(name="paramType", required=true)
       private final String paramType;
 
     public String getParamType() {
@@ -89,7 +89,7 @@ public final class ParameterMetadataResponse extends io.pulumi.resources.InvokeA
      * Optional. Regexes that the parameter must match.
      * 
      */
-    @InputImport(name="regexes", required=true)
+    @Import(name="regexes", required=true)
       private final List<String> regexes;
 
     public List<String> getRegexes() {

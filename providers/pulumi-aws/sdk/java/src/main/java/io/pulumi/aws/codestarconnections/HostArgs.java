@@ -5,7 +5,7 @@ package io.pulumi.aws.codestarconnections;
 
 import io.pulumi.aws.codestarconnections.inputs.HostVpcConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the host to be created. The name must be unique in the calling AWS account.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -30,7 +30,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * The endpoint of the infrastructure to be represented by the host after it is created.
      * 
      */
-    @InputImport(name="providerEndpoint", required=true)
+    @Import(name="providerEndpoint", required=true)
       private final Output<String> providerEndpoint;
 
     public Output<String> getProviderEndpoint() {
@@ -41,7 +41,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the external provider where your third-party code repository is configured.
      * 
      */
-    @InputImport(name="providerType", required=true)
+    @Import(name="providerType", required=true)
       private final Output<String> providerType;
 
     public Output<String> getProviderType() {
@@ -52,7 +52,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * The VPC configuration to be provisioned for the host. A VPC must be configured, and the infrastructure to be represented by the host must already be connected to the VPC.
      * 
      */
-    @InputImport(name="vpcConfiguration")
+    @Import(name="vpcConfiguration")
       private final @Nullable Output<HostVpcConfigurationArgs> vpcConfiguration;
 
     public Output<HostVpcConfigurationArgs> getVpcConfiguration() {

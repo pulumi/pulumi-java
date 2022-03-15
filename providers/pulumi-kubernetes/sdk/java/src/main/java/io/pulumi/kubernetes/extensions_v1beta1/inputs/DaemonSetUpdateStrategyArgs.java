@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.RollingUpdateDaemonSetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
      * Rolling update config params. Present only if type = "RollingUpdate".
      * 
      */
-    @InputImport(name="rollingUpdate")
+    @Import(name="rollingUpdate")
       private final @Nullable Output<RollingUpdateDaemonSetArgs> rollingUpdate;
 
     public Output<RollingUpdateDaemonSetArgs> getRollingUpdate() {
@@ -30,7 +30,7 @@ public final class DaemonSetUpdateStrategyArgs extends io.pulumi.resources.Resou
      * Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is OnDelete.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

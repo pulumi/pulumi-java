@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.inputs.PerfCounterDataSourceArgs;
 import io.pulumi.azurenative.insights.inputs.SyslogDataSourceArgs;
 import io.pulumi.azurenative.insights.inputs.WindowsEventLogDataSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
      * The list of Azure VM extension data source configurations.
      * 
      */
-    @InputImport(name="extensions")
+    @Import(name="extensions")
       private final @Nullable Output<List<ExtensionDataSourceArgs>> extensions;
 
     public Output<List<ExtensionDataSourceArgs>> getExtensions() {
@@ -38,7 +38,7 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
      * The list of performance counter data source configurations.
      * 
      */
-    @InputImport(name="performanceCounters")
+    @Import(name="performanceCounters")
       private final @Nullable Output<List<PerfCounterDataSourceArgs>> performanceCounters;
 
     public Output<List<PerfCounterDataSourceArgs>> getPerformanceCounters() {
@@ -49,7 +49,7 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
      * The list of Syslog data source configurations.
      * 
      */
-    @InputImport(name="syslog")
+    @Import(name="syslog")
       private final @Nullable Output<List<SyslogDataSourceArgs>> syslog;
 
     public Output<List<SyslogDataSourceArgs>> getSyslog() {
@@ -60,7 +60,7 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
      * The list of Windows Event Log data source configurations.
      * 
      */
-    @InputImport(name="windowsEventLogs")
+    @Import(name="windowsEventLogs")
       private final @Nullable Output<List<WindowsEventLogDataSourceArgs>> windowsEventLogs;
 
     public Output<List<WindowsEventLogDataSourceArgs>> getWindowsEventLogs() {

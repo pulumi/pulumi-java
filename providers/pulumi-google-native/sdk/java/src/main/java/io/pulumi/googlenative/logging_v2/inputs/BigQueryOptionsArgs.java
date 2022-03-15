@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.logging_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BigQueryOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * Optional. Whether to use BigQuery's partition tables (https://cloud.google.com/bigquery/docs/partitioned-tables). By default, Cloud Logging creates dated tables based on the log entries' timestamps, e.g. syslog_20170523. With partitioned tables the date suffix is no longer present and special query syntax (https://cloud.google.com/bigquery/docs/querying-partitioned-tables) has to be used instead. In both cases, tables are sharded based on UTC timezone.
      * 
      */
-    @InputImport(name="usePartitionedTables")
+    @Import(name="usePartitionedTables")
       private final @Nullable Output<Boolean> usePartitionedTables;
 
     public Output<Boolean> getUsePartitionedTables() {

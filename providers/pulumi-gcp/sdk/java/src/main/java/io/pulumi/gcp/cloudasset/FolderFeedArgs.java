@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudasset;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudasset.inputs.FolderFeedConditionArgs;
 import io.pulumi.gcp.cloudasset.inputs.FolderFeedFeedOutputConfigArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
      * See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
      * 
      */
-    @InputImport(name="assetNames")
+    @Import(name="assetNames")
       private final @Nullable Output<List<String>> assetNames;
 
     public Output<List<String>> getAssetNames() {
@@ -39,7 +39,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
      * supported asset types.
      * 
      */
-    @InputImport(name="assetTypes")
+    @Import(name="assetTypes")
       private final @Nullable Output<List<String>> assetTypes;
 
     public Output<List<String>> getAssetTypes() {
@@ -52,7 +52,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
      * enablement check, quota, and billing.
      * 
      */
-    @InputImport(name="billingProject", required=true)
+    @Import(name="billingProject", required=true)
       private final Output<String> billingProject;
 
     public Output<String> getBillingProject() {
@@ -68,7 +68,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<FolderFeedConditionArgs> condition;
 
     public Output<FolderFeedConditionArgs> getCondition() {
@@ -80,7 +80,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -91,7 +91,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
      * This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
      * 
      */
-    @InputImport(name="feedId", required=true)
+    @Import(name="feedId", required=true)
       private final Output<String> feedId;
 
     public Output<String> getFeedId() {
@@ -103,7 +103,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="feedOutputConfig", required=true)
+    @Import(name="feedOutputConfig", required=true)
       private final Output<FolderFeedFeedOutputConfigArgs> feedOutputConfig;
 
     public Output<FolderFeedFeedOutputConfigArgs> getFeedOutputConfig() {
@@ -114,7 +114,7 @@ public final class FolderFeedArgs extends io.pulumi.resources.ResourceArgs {
      * The folder this feed should be created in.
      * 
      */
-    @InputImport(name="folder", required=true)
+    @Import(name="folder", required=true)
       private final Output<String> folder;
 
     public Output<String> getFolder() {

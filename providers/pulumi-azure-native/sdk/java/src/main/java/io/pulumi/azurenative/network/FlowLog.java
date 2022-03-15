@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.RetentionPolicyParametersResponse;
 import io.pulumi.azurenative.network.outputs.TrafficAnalyticsPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * Flag to enable/disable flow logging.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -53,7 +53,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -67,7 +67,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * Parameters that define the configuration of traffic analytics.
      * 
      */
-    @OutputExport(name="flowAnalyticsConfiguration", type=TrafficAnalyticsPropertiesResponse.class, parameters={})
+    @Export(name="flowAnalyticsConfiguration", type=TrafficAnalyticsPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ TrafficAnalyticsPropertiesResponse> flowAnalyticsConfiguration;
 
     /**
@@ -81,7 +81,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * Parameters that define the flow log format.
      * 
      */
-    @OutputExport(name="format", type=FlowLogFormatParametersResponse.class, parameters={})
+    @Export(name="format", type=FlowLogFormatParametersResponse.class, parameters={})
     private Output</* @Nullable */ FlowLogFormatParametersResponse> format;
 
     /**
@@ -95,7 +95,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -109,7 +109,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -123,7 +123,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * The provisioning state of the flow log.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -137,7 +137,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * Parameters that define the retention policy for flow log.
      * 
      */
-    @OutputExport(name="retentionPolicy", type=RetentionPolicyParametersResponse.class, parameters={})
+    @Export(name="retentionPolicy", type=RetentionPolicyParametersResponse.class, parameters={})
     private Output</* @Nullable */ RetentionPolicyParametersResponse> retentionPolicy;
 
     /**
@@ -151,7 +151,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * ID of the storage account which is used to store the flow log.
      * 
      */
-    @OutputExport(name="storageId", type=String.class, parameters={})
+    @Export(name="storageId", type=String.class, parameters={})
     private Output<String> storageId;
 
     /**
@@ -165,7 +165,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -179,7 +179,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * Guid of network security group to which flow log will be applied.
      * 
      */
-    @OutputExport(name="targetResourceGuid", type=String.class, parameters={})
+    @Export(name="targetResourceGuid", type=String.class, parameters={})
     private Output<String> targetResourceGuid;
 
     /**
@@ -193,7 +193,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * ID of network security group to which flow log will be applied.
      * 
      */
-    @OutputExport(name="targetResourceId", type=String.class, parameters={})
+    @Export(name="targetResourceId", type=String.class, parameters={})
     private Output<String> targetResourceId;
 
     /**
@@ -207,7 +207,7 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

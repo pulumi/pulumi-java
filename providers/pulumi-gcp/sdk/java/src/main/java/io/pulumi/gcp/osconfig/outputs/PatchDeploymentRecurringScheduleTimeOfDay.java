@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PatchDeploymentRecurringScheduleTimeOfDay {
     /**
      * Hours of day in 24 hour format. Should be from 0 to 23.
@@ -33,12 +33,12 @@ public final class PatchDeploymentRecurringScheduleTimeOfDay {
      */
     private final @Nullable Integer seconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchDeploymentRecurringScheduleTimeOfDay(
-        @OutputCustomType.Parameter("hours") @Nullable Integer hours,
-        @OutputCustomType.Parameter("minutes") @Nullable Integer minutes,
-        @OutputCustomType.Parameter("nanos") @Nullable Integer nanos,
-        @OutputCustomType.Parameter("seconds") @Nullable Integer seconds) {
+        @CustomType.Parameter("hours") @Nullable Integer hours,
+        @CustomType.Parameter("minutes") @Nullable Integer minutes,
+        @CustomType.Parameter("nanos") @Nullable Integer nanos,
+        @CustomType.Parameter("seconds") @Nullable Integer seconds) {
         this.hours = hours;
         this.minutes = minutes;
         this.nanos = nanos;

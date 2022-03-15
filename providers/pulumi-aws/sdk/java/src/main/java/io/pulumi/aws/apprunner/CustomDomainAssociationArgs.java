@@ -4,7 +4,7 @@
 package io.pulumi.aws.apprunner;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CustomDomainAssociationArgs extends io.pulumi.resources.Resou
      * The custom domain endpoint to association. Specify a base domain e.g., `example.com` or a subdomain e.g., `subdomain.example.com`.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -30,7 +30,7 @@ public final class CustomDomainAssociationArgs extends io.pulumi.resources.Resou
      * Whether to associate the subdomain with the App Runner service in addition to the base domain. Defaults to `true`.
      * 
      */
-    @InputImport(name="enableWwwSubdomain")
+    @Import(name="enableWwwSubdomain")
       private final @Nullable Output<Boolean> enableWwwSubdomain;
 
     public Output<Boolean> getEnableWwwSubdomain() {
@@ -41,7 +41,7 @@ public final class CustomDomainAssociationArgs extends io.pulumi.resources.Resou
      * The ARN of the App Runner service.
      * 
      */
-    @InputImport(name="serviceArn", required=true)
+    @Import(name="serviceArn", required=true)
       private final Output<String> serviceArn;
 
     public Output<String> getServiceArn() {

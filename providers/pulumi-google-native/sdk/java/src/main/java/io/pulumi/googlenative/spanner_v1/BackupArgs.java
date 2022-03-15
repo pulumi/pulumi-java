@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.spanner_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BackupArgs Empty = new BackupArgs();
 
-    @InputImport(name="backupId", required=true)
+    @Import(name="backupId", required=true)
       private final Output<String> backupId;
 
     public Output<String> getBackupId() {
@@ -25,21 +25,21 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * Required for the CreateBackup operation. Name of the database from which this backup was created. This needs to be in the same instance as the backup. Values are of the form `projects//instances//databases/`.
      * 
      */
-    @InputImport(name="database")
+    @Import(name="database")
       private final @Nullable Output<String> database;
 
     public Output<String> getDatabase() {
         return this.database == null ? Output.empty() : this.database;
     }
 
-    @InputImport(name="encryptionConfigEncryptionType", required=true)
+    @Import(name="encryptionConfigEncryptionType", required=true)
       private final Output<String> encryptionConfigEncryptionType;
 
     public Output<String> getEncryptionConfigEncryptionType() {
         return this.encryptionConfigEncryptionType;
     }
 
-    @InputImport(name="encryptionConfigKmsKeyName")
+    @Import(name="encryptionConfigKmsKeyName")
       private final @Nullable Output<String> encryptionConfigKmsKeyName;
 
     public Output<String> getEncryptionConfigKmsKeyName() {
@@ -50,14 +50,14 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * Required for the CreateBackup operation. The expiration time of the backup, with microseconds granularity that must be at least 6 hours and at most 366 days from the time the CreateBackup request is processed. Once the `expire_time` has passed, the backup is eligible to be automatically deleted by Cloud Spanner to free the resources used by the backup.
      * 
      */
-    @InputImport(name="expireTime")
+    @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
 
     public Output<String> getExpireTime() {
         return this.expireTime == null ? Output.empty() : this.expireTime;
     }
 
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -68,14 +68,14 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * Output only for the CreateBackup operation. Required for the UpdateBackup operation. A globally unique identifier for the backup which cannot be changed. Values are of the form `projects//instances//backups/a-z*[a-z0-9]` The final segment of the name must be between 2 and 60 characters in length. The backup is stored in the location(s) specified in the instance configuration of the instance containing the backup, identified by the prefix of the backup name of the form `projects//instances/`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -86,7 +86,7 @@ public final class BackupArgs extends io.pulumi.resources.ResourceArgs {
      * The backup will contain an externally consistent copy of the database at the timestamp specified by `version_time`. If `version_time` is not specified, the system will set `version_time` to the `create_time` of the backup.
      * 
      */
-    @InputImport(name="versionTime")
+    @Import(name="versionTime")
       private final @Nullable Output<String> versionTime;
 
     public Output<String> getVersionTime() {

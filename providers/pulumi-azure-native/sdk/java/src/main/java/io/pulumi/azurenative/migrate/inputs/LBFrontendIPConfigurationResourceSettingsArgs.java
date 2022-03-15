@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.SubnetReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
      * Gets or sets the frontend IP configuration name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -35,7 +35,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
      * private IP address shall be allocated from the subnet specified in subnetRef.
      * 
      */
-    @InputImport(name="privateIpAddress")
+    @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
     public Output<String> getPrivateIpAddress() {
@@ -46,7 +46,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
      * Gets or sets PrivateIP allocation method (Static/Dynamic).
      * 
      */
-    @InputImport(name="privateIpAllocationMethod")
+    @Import(name="privateIpAllocationMethod")
       private final @Nullable Output<String> privateIpAllocationMethod;
 
     public Output<String> getPrivateIpAllocationMethod() {
@@ -57,7 +57,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
      * Defines reference to subnet.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<SubnetReferenceArgs> subnet;
 
     public Output<SubnetReferenceArgs> getSubnet() {
@@ -68,7 +68,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
      * Gets or sets the csv list of zones.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<String> zones;
 
     public Output<String> getZones() {

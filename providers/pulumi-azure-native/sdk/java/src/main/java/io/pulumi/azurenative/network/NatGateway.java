@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.NatGatewaySkuResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -52,7 +52,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * The idle timeout of the nat gateway.
      * 
      */
-    @OutputExport(name="idleTimeoutInMinutes", type=Integer.class, parameters={})
+    @Export(name="idleTimeoutInMinutes", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> idleTimeoutInMinutes;
 
     /**
@@ -66,7 +66,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -80,7 +80,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * The provisioning state of the NAT gateway resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -108,7 +108,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * An array of public ip addresses associated with the nat gateway resource.
      * 
      */
-    @OutputExport(name="publicIpAddresses", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="publicIpAddresses", type=List.class, parameters={SubResourceResponse.class})
     private Output</* @Nullable */ List<SubResourceResponse>> publicIpAddresses;
 
     /**
@@ -122,7 +122,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * An array of public ip prefixes associated with the nat gateway resource.
      * 
      */
-    @OutputExport(name="publicIpPrefixes", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="publicIpPrefixes", type=List.class, parameters={SubResourceResponse.class})
     private Output</* @Nullable */ List<SubResourceResponse>> publicIpPrefixes;
 
     /**
@@ -136,7 +136,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * The resource GUID property of the NAT gateway resource.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -150,7 +150,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * The nat gateway SKU.
      * 
      */
-    @OutputExport(name="sku", type=NatGatewaySkuResponse.class, parameters={})
+    @Export(name="sku", type=NatGatewaySkuResponse.class, parameters={})
     private Output</* @Nullable */ NatGatewaySkuResponse> sku;
 
     /**
@@ -164,7 +164,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * An array of references to the subnets using this nat gateway resource.
      * 
      */
-    @OutputExport(name="subnets", type=List.class, parameters={SubResourceResponse.class})
+    @Export(name="subnets", type=List.class, parameters={SubResourceResponse.class})
     private Output<List<SubResourceResponse>> subnets;
 
     /**
@@ -178,7 +178,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -192,7 +192,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -206,7 +206,7 @@ public class NatGateway extends io.pulumi.resources.CustomResource {
      * A list of availability zones denoting the zone in which Nat Gateway should be deployed.
      * 
      */
-    @OutputExport(name="zones", type=List.class, parameters={String.class})
+    @Export(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
     /**

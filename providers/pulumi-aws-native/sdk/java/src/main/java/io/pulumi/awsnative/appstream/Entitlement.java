@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.appstream.EntitlementArgs;
 import io.pulumi.awsnative.appstream.outputs.EntitlementAttribute;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -19,43 +19,43 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:appstream:Entitlement")
 public class Entitlement extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="appVisibility", type=String.class, parameters={})
+    @Export(name="appVisibility", type=String.class, parameters={})
     private Output<String> appVisibility;
 
     public Output<String> getAppVisibility() {
         return this.appVisibility;
     }
-    @OutputExport(name="attributes", type=List.class, parameters={EntitlementAttribute.class})
+    @Export(name="attributes", type=List.class, parameters={EntitlementAttribute.class})
     private Output<List<EntitlementAttribute>> attributes;
 
     public Output<List<EntitlementAttribute>> getAttributes() {
         return this.attributes;
     }
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     public Output<String> getLastModifiedTime() {
         return this.lastModifiedTime;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="stackName", type=String.class, parameters={})
+    @Export(name="stackName", type=String.class, parameters={})
     private Output<String> stackName;
 
     public Output<String> getStackName() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.enums.AgreementType;
 import io.pulumi.azurenative.logic.inputs.AgreementContentArgs;
 import io.pulumi.azurenative.logic.inputs.BusinessIdentityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * The integration account agreement name.
      * 
      */
-    @InputImport(name="agreementName")
+    @Import(name="agreementName")
       private final @Nullable Output<String> agreementName;
 
     public Output<String> getAgreementName() {
@@ -34,7 +34,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * The agreement type.
      * 
      */
-    @InputImport(name="agreementType", required=true)
+    @Import(name="agreementType", required=true)
       private final Output<AgreementType> agreementType;
 
     public Output<AgreementType> getAgreementType() {
@@ -45,7 +45,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * The agreement content.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final Output<AgreementContentArgs> content;
 
     public Output<AgreementContentArgs> getContent() {
@@ -56,7 +56,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * The business identity of the guest partner.
      * 
      */
-    @InputImport(name="guestIdentity", required=true)
+    @Import(name="guestIdentity", required=true)
       private final Output<BusinessIdentityArgs> guestIdentity;
 
     public Output<BusinessIdentityArgs> getGuestIdentity() {
@@ -67,7 +67,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * The integration account partner that is set as guest partner for this agreement.
      * 
      */
-    @InputImport(name="guestPartner", required=true)
+    @Import(name="guestPartner", required=true)
       private final Output<String> guestPartner;
 
     public Output<String> getGuestPartner() {
@@ -78,7 +78,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * The business identity of the host partner.
      * 
      */
-    @InputImport(name="hostIdentity", required=true)
+    @Import(name="hostIdentity", required=true)
       private final Output<BusinessIdentityArgs> hostIdentity;
 
     public Output<BusinessIdentityArgs> getHostIdentity() {
@@ -89,7 +89,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * The integration account partner that is set as host partner for this agreement.
      * 
      */
-    @InputImport(name="hostPartner", required=true)
+    @Import(name="hostPartner", required=true)
       private final Output<String> hostPartner;
 
     public Output<String> getHostPartner() {
@@ -100,7 +100,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * The integration account name.
      * 
      */
-    @InputImport(name="integrationAccountName", required=true)
+    @Import(name="integrationAccountName", required=true)
       private final Output<String> integrationAccountName;
 
     public Output<String> getIntegrationAccountName() {
@@ -111,7 +111,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * The resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -122,7 +122,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * The metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
@@ -133,7 +133,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -144,7 +144,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
      * The resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cognitiveservices;
 
 import io.pulumi.azurenative.cognitiveservices.inputs.DeploymentPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of Cognitive Services account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -30,7 +30,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the deployment associated with the Cognitive Services Account
      * 
      */
-    @InputImport(name="deploymentName")
+    @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
 
     public Output<String> getDeploymentName() {
@@ -41,7 +41,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of Cognitive Services account deployment.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<DeploymentPropertiesArgs> properties;
 
     public Output<DeploymentPropertiesArgs> getProperties() {
@@ -52,7 +52,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

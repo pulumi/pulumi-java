@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceMariaDbParameters {
     /**
      * <p>Database.</p>
@@ -26,11 +26,11 @@ public final class DataSourceMariaDbParameters {
      */
     private final Double port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceMariaDbParameters(
-        @OutputCustomType.Parameter("database") String database,
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("port") Double port) {
+        @CustomType.Parameter("database") String database,
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("port") Double port) {
         this.database = database;
         this.host = host;
         this.port = port;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class AdditionalUnattendContentResponse extends io.pulumi.resources
      * The component name. Currently, the only allowable value is Microsoft-Windows-Shell-Setup.
      * 
      */
-    @InputImport(name="componentName")
+    @Import(name="componentName")
       private final @Nullable String componentName;
 
     public Optional<String> getComponentName() {
@@ -33,7 +33,7 @@ public final class AdditionalUnattendContentResponse extends io.pulumi.resources
      * Specifies the XML formatted content that is added to the unattend.xml file for the specified path and component. The XML must be less than 4KB and must include the root element for the setting or feature that is being inserted.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable String content;
 
     public Optional<String> getContent() {
@@ -44,7 +44,7 @@ public final class AdditionalUnattendContentResponse extends io.pulumi.resources
      * The pass name. Currently, the only allowable value is OobeSystem.
      * 
      */
-    @InputImport(name="passName")
+    @Import(name="passName")
       private final @Nullable String passName;
 
     public Optional<String> getPassName() {
@@ -55,7 +55,7 @@ public final class AdditionalUnattendContentResponse extends io.pulumi.resources
      * Specifies the name of the setting to which the content applies. Possible values are: FirstLogonCommands and AutoLogon.
      * 
      */
-    @InputImport(name="settingName")
+    @Import(name="settingName")
       private final @Nullable String settingName;
 
     public Optional<String> getSettingName() {

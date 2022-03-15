@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.fsx.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration {
     /**
      * A list of up to three IP addresses of DNS servers or domain controllers in the self-managed AD directory.
@@ -50,15 +50,15 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration(
-        @OutputCustomType.Parameter("dnsIps") List<String> dnsIps,
-        @OutputCustomType.Parameter("domainName") String domainName,
-        @OutputCustomType.Parameter("fileSystemAdministratorsGroup") @Nullable String fileSystemAdministratorsGroup,
-        @OutputCustomType.Parameter("organizationalUnitDistinguidshedName") @Nullable String organizationalUnitDistinguidshedName,
-        @OutputCustomType.Parameter("organizationalUnitDistinguishedName") @Nullable String organizationalUnitDistinguishedName,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("dnsIps") List<String> dnsIps,
+        @CustomType.Parameter("domainName") String domainName,
+        @CustomType.Parameter("fileSystemAdministratorsGroup") @Nullable String fileSystemAdministratorsGroup,
+        @CustomType.Parameter("organizationalUnitDistinguidshedName") @Nullable String organizationalUnitDistinguidshedName,
+        @CustomType.Parameter("organizationalUnitDistinguishedName") @Nullable String organizationalUnitDistinguishedName,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("username") String username) {
         this.dnsIps = dnsIps;
         this.domainName = domainName;
         this.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;

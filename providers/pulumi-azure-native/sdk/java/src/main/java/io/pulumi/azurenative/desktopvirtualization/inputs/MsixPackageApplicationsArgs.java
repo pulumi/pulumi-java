@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.desktopvirtualization.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
      * Package Application Id, found in appxmanifest.xml.
      * 
      */
-    @InputImport(name="appId")
+    @Import(name="appId")
       private final @Nullable Output<String> appId;
 
     public Output<String> getAppId() {
@@ -33,7 +33,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
      * Used to activate Package Application. Consists of Package Name and ApplicationID. Found in appxmanifest.xml.
      * 
      */
-    @InputImport(name="appUserModelID")
+    @Import(name="appUserModelID")
       private final @Nullable Output<String> appUserModelID;
 
     public Output<String> getAppUserModelID() {
@@ -44,7 +44,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
      * Description of Package Application.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -55,7 +55,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
      * User friendly name.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -66,7 +66,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
      * User friendly name.
      * 
      */
-    @InputImport(name="iconImageName")
+    @Import(name="iconImageName")
       private final @Nullable Output<String> iconImageName;
 
     public Output<String> getIconImageName() {
@@ -77,7 +77,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
      * the icon a 64 bit string as a byte array.
      * 
      */
-    @InputImport(name="rawIcon")
+    @Import(name="rawIcon")
       private final @Nullable Output<String> rawIcon;
 
     public Output<String> getRawIcon() {
@@ -88,7 +88,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
      * the icon a 64 bit string as a byte array.
      * 
      */
-    @InputImport(name="rawPng")
+    @Import(name="rawPng")
       private final @Nullable Output<String> rawPng;
 
     public Output<String> getRawPng() {

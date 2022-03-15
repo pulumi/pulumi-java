@@ -9,7 +9,7 @@ import io.pulumi.azurenative.compute.outputs.DedicatedHostGroupInstanceViewRespo
 import io.pulumi.azurenative.compute.outputs.SubResourceReadOnlyResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -39,7 +39,7 @@ public class DedicatedHostGroup extends io.pulumi.resources.CustomResource {
      * A list of references to all dedicated hosts in the dedicated host group.
      * 
      */
-    @OutputExport(name="hosts", type=List.class, parameters={SubResourceReadOnlyResponse.class})
+    @Export(name="hosts", type=List.class, parameters={SubResourceReadOnlyResponse.class})
     private Output<List<SubResourceReadOnlyResponse>> hosts;
 
     /**
@@ -53,7 +53,7 @@ public class DedicatedHostGroup extends io.pulumi.resources.CustomResource {
      * The dedicated host group instance view, which has the list of instance view of the dedicated hosts under the dedicated host group.
      * 
      */
-    @OutputExport(name="instanceView", type=DedicatedHostGroupInstanceViewResponse.class, parameters={})
+    @Export(name="instanceView", type=DedicatedHostGroupInstanceViewResponse.class, parameters={})
     private Output<DedicatedHostGroupInstanceViewResponse> instanceView;
 
     /**
@@ -67,7 +67,7 @@ public class DedicatedHostGroup extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -81,7 +81,7 @@ public class DedicatedHostGroup extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -95,7 +95,7 @@ public class DedicatedHostGroup extends io.pulumi.resources.CustomResource {
      * Number of fault domains that the host group can span.
      * 
      */
-    @OutputExport(name="platformFaultDomainCount", type=Integer.class, parameters={})
+    @Export(name="platformFaultDomainCount", type=Integer.class, parameters={})
     private Output<Integer> platformFaultDomainCount;
 
     /**
@@ -109,7 +109,7 @@ public class DedicatedHostGroup extends io.pulumi.resources.CustomResource {
      * Specifies whether virtual machines or virtual machine scale sets can be placed automatically on the dedicated host group. Automatic placement means resources are allocated on dedicated hosts, that are chosen by Azure, under the dedicated host group. The value is defaulted to 'false' when not provided. <br><br>Minimum api-version: 2020-06-01.
      * 
      */
-    @OutputExport(name="supportAutomaticPlacement", type=Boolean.class, parameters={})
+    @Export(name="supportAutomaticPlacement", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> supportAutomaticPlacement;
 
     /**
@@ -123,7 +123,7 @@ public class DedicatedHostGroup extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -137,7 +137,7 @@ public class DedicatedHostGroup extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -151,7 +151,7 @@ public class DedicatedHostGroup extends io.pulumi.resources.CustomResource {
      * Availability Zone to use for this host group. Only single zone is supported. The zone can be assigned only during creation. If not provided, the group supports all zones in the region. If provided, enforces each host in the group to be in the same zone.
      * 
      */
-    @OutputExport(name="zones", type=List.class, parameters={String.class})
+    @Export(name="zones", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> zones;
 
     /**

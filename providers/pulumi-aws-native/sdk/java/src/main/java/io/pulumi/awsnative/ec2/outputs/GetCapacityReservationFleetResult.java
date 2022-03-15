@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,19 +11,19 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCapacityReservationFleetResult {
     private final @Nullable String capacityReservationFleetId;
     private final @Nullable Boolean noRemoveEndDate;
     private final @Nullable Boolean removeEndDate;
     private final @Nullable Integer totalTargetCapacity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCapacityReservationFleetResult(
-        @OutputCustomType.Parameter("capacityReservationFleetId") @Nullable String capacityReservationFleetId,
-        @OutputCustomType.Parameter("noRemoveEndDate") @Nullable Boolean noRemoveEndDate,
-        @OutputCustomType.Parameter("removeEndDate") @Nullable Boolean removeEndDate,
-        @OutputCustomType.Parameter("totalTargetCapacity") @Nullable Integer totalTargetCapacity) {
+        @CustomType.Parameter("capacityReservationFleetId") @Nullable String capacityReservationFleetId,
+        @CustomType.Parameter("noRemoveEndDate") @Nullable Boolean noRemoveEndDate,
+        @CustomType.Parameter("removeEndDate") @Nullable Boolean removeEndDate,
+        @CustomType.Parameter("totalTargetCapacity") @Nullable Integer totalTargetCapacity) {
         this.capacityReservationFleetId = capacityReservationFleetId;
         this.noRemoveEndDate = noRemoveEndDate;
         this.removeEndDate = removeEndDate;

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datashare;
 import io.pulumi.azurenative.datashare.enums.RecurrenceInterval;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
      * The name of the share account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -32,7 +32,7 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
      * Expected value is 'ScheduleBased'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -43,7 +43,7 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
      * Recurrence Interval
      * 
      */
-    @InputImport(name="recurrenceInterval", required=true)
+    @Import(name="recurrenceInterval", required=true)
       private final Output<Either<String,RecurrenceInterval>> recurrenceInterval;
 
     public Output<Either<String,RecurrenceInterval>> getRecurrenceInterval() {
@@ -54,7 +54,7 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -65,7 +65,7 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
      * The name of the share to add the synchronization setting to.
      * 
      */
-    @InputImport(name="shareName", required=true)
+    @Import(name="shareName", required=true)
       private final Output<String> shareName;
 
     public Output<String> getShareName() {
@@ -76,7 +76,7 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
      * The name of the synchronizationSetting.
      * 
      */
-    @InputImport(name="synchronizationSettingName")
+    @Import(name="synchronizationSettingName")
       private final @Nullable Output<String> synchronizationSettingName;
 
     public Output<String> getSynchronizationSettingName() {
@@ -87,7 +87,7 @@ public final class ScheduledSynchronizationSettingArgs extends io.pulumi.resourc
      * Synchronization time
      * 
      */
-    @InputImport(name="synchronizationTime", required=true)
+    @Import(name="synchronizationTime", required=true)
       private final Output<String> synchronizationTime;
 
     public Output<String> getSynchronizationTime() {

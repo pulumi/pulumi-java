@@ -17,7 +17,7 @@ import io.pulumi.aws.codedeploy.outputs.DeploymentGroupLoadBalancerInfo;
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupOnPremisesInstanceTagFilter;
 import io.pulumi.aws.codedeploy.outputs.DeploymentGroupTriggerConfiguration;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +48,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * Configuration block of alarms associated with the deployment group (documented below).
      * 
      */
-    @OutputExport(name="alarmConfiguration", type=DeploymentGroupAlarmConfiguration.class, parameters={})
+    @Export(name="alarmConfiguration", type=DeploymentGroupAlarmConfiguration.class, parameters={})
     private Output</* @Nullable */ DeploymentGroupAlarmConfiguration> alarmConfiguration;
 
     /**
@@ -62,7 +62,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * The name of the application.
      * 
      */
-    @OutputExport(name="appName", type=String.class, parameters={})
+    @Export(name="appName", type=String.class, parameters={})
     private Output<String> appName;
 
     /**
@@ -76,7 +76,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * The ARN of the CodeDeploy deployment group.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -90,7 +90,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * Configuration block of the automatic rollback configuration associated with the deployment group (documented below).
      * 
      */
-    @OutputExport(name="autoRollbackConfiguration", type=DeploymentGroupAutoRollbackConfiguration.class, parameters={})
+    @Export(name="autoRollbackConfiguration", type=DeploymentGroupAutoRollbackConfiguration.class, parameters={})
     private Output</* @Nullable */ DeploymentGroupAutoRollbackConfiguration> autoRollbackConfiguration;
 
     /**
@@ -104,7 +104,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * Autoscaling groups associated with the deployment group.
      * 
      */
-    @OutputExport(name="autoscalingGroups", type=List.class, parameters={String.class})
+    @Export(name="autoscalingGroups", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> autoscalingGroups;
 
     /**
@@ -118,7 +118,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * Configuration block of the blue/green deployment options for a deployment group (documented below).
      * 
      */
-    @OutputExport(name="blueGreenDeploymentConfig", type=DeploymentGroupBlueGreenDeploymentConfig.class, parameters={})
+    @Export(name="blueGreenDeploymentConfig", type=DeploymentGroupBlueGreenDeploymentConfig.class, parameters={})
     private Output<DeploymentGroupBlueGreenDeploymentConfig> blueGreenDeploymentConfig;
 
     /**
@@ -132,7 +132,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * The destination platform type for the deployment.
      * 
      */
-    @OutputExport(name="computePlatform", type=String.class, parameters={})
+    @Export(name="computePlatform", type=String.class, parameters={})
     private Output<String> computePlatform;
 
     /**
@@ -146,7 +146,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * The name of the group's deployment config. The default is "CodeDeployDefault.OneAtATime".
      * 
      */
-    @OutputExport(name="deploymentConfigName", type=String.class, parameters={})
+    @Export(name="deploymentConfigName", type=String.class, parameters={})
     private Output</* @Nullable */ String> deploymentConfigName;
 
     /**
@@ -160,7 +160,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * The ID of the CodeDeploy deployment group.
      * 
      */
-    @OutputExport(name="deploymentGroupId", type=String.class, parameters={})
+    @Export(name="deploymentGroupId", type=String.class, parameters={})
     private Output<String> deploymentGroupId;
 
     /**
@@ -174,7 +174,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * The name of the deployment group.
      * 
      */
-    @OutputExport(name="deploymentGroupName", type=String.class, parameters={})
+    @Export(name="deploymentGroupName", type=String.class, parameters={})
     private Output<String> deploymentGroupName;
 
     /**
@@ -188,7 +188,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * Configuration block of the type of deployment, either in-place or blue/green, you want to run and whether to route deployment traffic behind a load balancer (documented below).
      * 
      */
-    @OutputExport(name="deploymentStyle", type=DeploymentGroupDeploymentStyle.class, parameters={})
+    @Export(name="deploymentStyle", type=DeploymentGroupDeploymentStyle.class, parameters={})
     private Output</* @Nullable */ DeploymentGroupDeploymentStyle> deploymentStyle;
 
     /**
@@ -202,7 +202,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * Tag filters associated with the deployment group. See the AWS docs for details.
      * 
      */
-    @OutputExport(name="ec2TagFilters", type=List.class, parameters={DeploymentGroupEc2TagFilter.class})
+    @Export(name="ec2TagFilters", type=List.class, parameters={DeploymentGroupEc2TagFilter.class})
     private Output</* @Nullable */ List<DeploymentGroupEc2TagFilter>> ec2TagFilters;
 
     /**
@@ -216,7 +216,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * Configuration block(s) of Tag filters associated with the deployment group, which are also referred to as tag groups (documented below). See the AWS docs for details.
      * 
      */
-    @OutputExport(name="ec2TagSets", type=List.class, parameters={DeploymentGroupEc2TagSet.class})
+    @Export(name="ec2TagSets", type=List.class, parameters={DeploymentGroupEc2TagSet.class})
     private Output</* @Nullable */ List<DeploymentGroupEc2TagSet>> ec2TagSets;
 
     /**
@@ -230,7 +230,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * Configuration block(s) of the ECS services for a deployment group (documented below).
      * 
      */
-    @OutputExport(name="ecsService", type=DeploymentGroupEcsService.class, parameters={})
+    @Export(name="ecsService", type=DeploymentGroupEcsService.class, parameters={})
     private Output</* @Nullable */ DeploymentGroupEcsService> ecsService;
 
     /**
@@ -244,7 +244,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * Single configuration block of the load balancer to use in a blue/green deployment (documented below).
      * 
      */
-    @OutputExport(name="loadBalancerInfo", type=DeploymentGroupLoadBalancerInfo.class, parameters={})
+    @Export(name="loadBalancerInfo", type=DeploymentGroupLoadBalancerInfo.class, parameters={})
     private Output</* @Nullable */ DeploymentGroupLoadBalancerInfo> loadBalancerInfo;
 
     /**
@@ -258,7 +258,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * On premise tag filters associated with the group. See the AWS docs for details.
      * 
      */
-    @OutputExport(name="onPremisesInstanceTagFilters", type=List.class, parameters={DeploymentGroupOnPremisesInstanceTagFilter.class})
+    @Export(name="onPremisesInstanceTagFilters", type=List.class, parameters={DeploymentGroupOnPremisesInstanceTagFilter.class})
     private Output</* @Nullable */ List<DeploymentGroupOnPremisesInstanceTagFilter>> onPremisesInstanceTagFilters;
 
     /**
@@ -272,7 +272,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * The service role ARN that allows deployments.
      * 
      */
-    @OutputExport(name="serviceRoleArn", type=String.class, parameters={})
+    @Export(name="serviceRoleArn", type=String.class, parameters={})
     private Output<String> serviceRoleArn;
 
     /**
@@ -286,7 +286,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -300,7 +300,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -314,7 +314,7 @@ public class DeploymentGroup extends io.pulumi.resources.CustomResource {
      * Configuration block(s) of the triggers for the deployment group (documented below).
      * 
      */
-    @OutputExport(name="triggerConfigurations", type=List.class, parameters={DeploymentGroupTriggerConfiguration.class})
+    @Export(name="triggerConfigurations", type=List.class, parameters={DeploymentGroupTriggerConfiguration.class})
     private Output</* @Nullable */ List<DeploymentGroupTriggerConfiguration>> triggerConfigurations;
 
     /**

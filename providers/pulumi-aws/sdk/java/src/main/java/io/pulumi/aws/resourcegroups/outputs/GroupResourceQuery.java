@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.resourcegroups.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GroupResourceQuery {
     /**
      * The resource query as a JSON string.
@@ -22,10 +22,10 @@ public final class GroupResourceQuery {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GroupResourceQuery(
-        @OutputCustomType.Parameter("query") String query,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("query") String query,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.query = query;
         this.type = type;
     }

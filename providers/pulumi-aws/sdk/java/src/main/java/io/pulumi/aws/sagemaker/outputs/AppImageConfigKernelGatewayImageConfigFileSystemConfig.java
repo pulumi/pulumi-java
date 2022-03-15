@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AppImageConfigKernelGatewayImageConfigFileSystemConfig {
     /**
      * The default POSIX group ID (GID). If not specified, defaults to `100`. Valid values are `0` and `100`.
@@ -28,11 +28,11 @@ public final class AppImageConfigKernelGatewayImageConfigFileSystemConfig {
      */
     private final @Nullable String mountPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AppImageConfigKernelGatewayImageConfigFileSystemConfig(
-        @OutputCustomType.Parameter("defaultGid") @Nullable Integer defaultGid,
-        @OutputCustomType.Parameter("defaultUid") @Nullable Integer defaultUid,
-        @OutputCustomType.Parameter("mountPath") @Nullable String mountPath) {
+        @CustomType.Parameter("defaultGid") @Nullable Integer defaultGid,
+        @CustomType.Parameter("defaultUid") @Nullable Integer defaultUid,
+        @CustomType.Parameter("mountPath") @Nullable String mountPath) {
         this.defaultGid = defaultGid;
         this.defaultUid = defaultUid;
         this.mountPath = mountPath;

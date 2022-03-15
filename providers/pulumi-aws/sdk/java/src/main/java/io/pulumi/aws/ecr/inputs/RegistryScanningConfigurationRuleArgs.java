@@ -5,7 +5,7 @@ package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.aws.ecr.inputs.RegistryScanningConfigurationRuleRepositoryFilterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RegistryScanningConfigurationRuleArgs extends io.pulumi.resou
      * One or more repository filter blocks, containing a `filter` (required string filtering repositories, see pattern regex [here](https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_ScanningRepositoryFilter.html)) and a `filter_type` (required string, currently only `WILDCARD` is supported).
      * 
      */
-    @InputImport(name="repositoryFilters", required=true)
+    @Import(name="repositoryFilters", required=true)
       private final Output<List<RegistryScanningConfigurationRuleRepositoryFilterArgs>> repositoryFilters;
 
     public Output<List<RegistryScanningConfigurationRuleRepositoryFilterArgs>> getRepositoryFilters() {
@@ -30,7 +30,7 @@ public final class RegistryScanningConfigurationRuleArgs extends io.pulumi.resou
      * The frequency that scans are performed at for a private registry. Can be `SCAN_ON_PUSH`, `CONTINUOUS_SCAN`, or `MANUAL`.
      * 
      */
-    @InputImport(name="scanFrequency", required=true)
+    @Import(name="scanFrequency", required=true)
       private final Output<String> scanFrequency;
 
     public Output<String> getScanFrequency() {

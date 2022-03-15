@@ -5,7 +5,7 @@ package io.pulumi.azurenative.consumption.inputs;
 
 import io.pulumi.azurenative.consumption.inputs.BudgetComparisonExpressionResponse;
 import io.pulumi.azurenative.consumption.inputs.BudgetFilterPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class BudgetFilterResponse extends io.pulumi.resources.InvokeArgs {
      * The logical "AND" expression. Must have at least 2 items.
      * 
      */
-    @InputImport(name="and")
+    @Import(name="and")
       private final @Nullable List<BudgetFilterPropertiesResponse> and;
 
     public List<BudgetFilterPropertiesResponse> getAnd() {
@@ -35,7 +35,7 @@ public final class BudgetFilterResponse extends io.pulumi.resources.InvokeArgs {
      * Has comparison expression for a dimension
      * 
      */
-    @InputImport(name="dimensions")
+    @Import(name="dimensions")
       private final @Nullable BudgetComparisonExpressionResponse dimensions;
 
     public Optional<BudgetComparisonExpressionResponse> getDimensions() {
@@ -46,7 +46,7 @@ public final class BudgetFilterResponse extends io.pulumi.resources.InvokeArgs {
      * The logical "NOT" expression.
      * 
      */
-    @InputImport(name="not")
+    @Import(name="not")
       private final @Nullable BudgetFilterPropertiesResponse not;
 
     public Optional<BudgetFilterPropertiesResponse> getNot() {
@@ -57,7 +57,7 @@ public final class BudgetFilterResponse extends io.pulumi.resources.InvokeArgs {
      * Has comparison expression for a tag
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable BudgetComparisonExpressionResponse tags;
 
     public Optional<BudgetComparisonExpressionResponse> getTags() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,14 +13,14 @@ public final class GetResourcePolicySnapshotSchedulePolicyRetentionPolicy extend
 
     public static final GetResourcePolicySnapshotSchedulePolicyRetentionPolicy Empty = new GetResourcePolicySnapshotSchedulePolicyRetentionPolicy();
 
-    @InputImport(name="maxRetentionDays", required=true)
+    @Import(name="maxRetentionDays", required=true)
       private final Integer maxRetentionDays;
 
     public Integer getMaxRetentionDays() {
         return this.maxRetentionDays;
     }
 
-    @InputImport(name="onSourceDiskDelete", required=true)
+    @Import(name="onSourceDiskDelete", required=true)
       private final String onSourceDiskDelete;
 
     public String getOnSourceDiskDelete() {

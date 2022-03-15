@@ -5,7 +5,7 @@ package io.pulumi.awsnative.configuration;
 
 import io.pulumi.awsnative.configuration.inputs.AggregationAuthorizationTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
      * The 12-digit account ID of the account authorized to aggregate data.
      * 
      */
-    @InputImport(name="authorizedAccountId", required=true)
+    @Import(name="authorizedAccountId", required=true)
       private final Output<String> authorizedAccountId;
 
     public Output<String> getAuthorizedAccountId() {
@@ -31,7 +31,7 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
      * The region authorized to collect aggregated data.
      * 
      */
-    @InputImport(name="authorizedAwsRegion", required=true)
+    @Import(name="authorizedAwsRegion", required=true)
       private final Output<String> authorizedAwsRegion;
 
     public Output<String> getAuthorizedAwsRegion() {
@@ -42,7 +42,7 @@ public final class AggregationAuthorizationArgs extends io.pulumi.resources.Reso
      * The tags for the AggregationAuthorization.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<AggregationAuthorizationTagArgs>> tags;
 
     public Output<List<AggregationAuthorizationTagArgs>> getTags() {

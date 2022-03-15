@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoScaleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VideoEncoderH264Response {
     /**
      * The maximum bitrate, in kilobits per second or Kbps, at which video should be encoded. If omitted, encoder sets it automatically to try and match the quality of the input video.
@@ -34,12 +34,12 @@ public final class VideoEncoderH264Response {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VideoEncoderH264Response(
-        @OutputCustomType.Parameter("bitrateKbps") @Nullable String bitrateKbps,
-        @OutputCustomType.Parameter("frameRate") @Nullable String frameRate,
-        @OutputCustomType.Parameter("scale") @Nullable VideoScaleResponse scale,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("bitrateKbps") @Nullable String bitrateKbps,
+        @CustomType.Parameter("frameRate") @Nullable String frameRate,
+        @CustomType.Parameter("scale") @Nullable VideoScaleResponse scale,
+        @CustomType.Parameter("type") String type) {
         this.bitrateKbps = bitrateKbps;
         this.frameRate = frameRate;
         this.scale = scale;

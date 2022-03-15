@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetApiPortalCustomDomainArgs extends io.pulumi.resources.Invo
      * The name of API portal.
      * 
      */
-    @InputImport(name="apiPortalName", required=true)
+    @Import(name="apiPortalName", required=true)
       private final String apiPortalName;
 
     public String getApiPortalName() {
@@ -27,7 +27,7 @@ public final class GetApiPortalCustomDomainArgs extends io.pulumi.resources.Invo
      * The name of the API portal custom domain.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final String domainName;
 
     public String getDomainName() {
@@ -38,7 +38,7 @@ public final class GetApiPortalCustomDomainArgs extends io.pulumi.resources.Invo
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class GetApiPortalCustomDomainArgs extends io.pulumi.resources.Invo
      * The name of the Service resource.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final String serviceName;
 
     public String getServiceName() {

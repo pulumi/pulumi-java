@@ -9,7 +9,7 @@ import io.pulumi.awsnative.ec2.enums.PrefixListAddressFamily;
 import io.pulumi.awsnative.ec2.outputs.PrefixListEntry;
 import io.pulumi.awsnative.ec2.outputs.PrefixListTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * Ip Version of Prefix List.
      * 
      */
-    @OutputExport(name="addressFamily", type=PrefixListAddressFamily.class, parameters={})
+    @Export(name="addressFamily", type=PrefixListAddressFamily.class, parameters={})
     private Output<PrefixListAddressFamily> addressFamily;
 
     /**
@@ -42,7 +42,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the Prefix List.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -56,7 +56,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * Entries of Prefix List.
      * 
      */
-    @OutputExport(name="entries", type=List.class, parameters={PrefixListEntry.class})
+    @Export(name="entries", type=List.class, parameters={PrefixListEntry.class})
     private Output</* @Nullable */ List<PrefixListEntry>> entries;
 
     /**
@@ -70,7 +70,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * Max Entries of Prefix List.
      * 
      */
-    @OutputExport(name="maxEntries", type=Integer.class, parameters={})
+    @Export(name="maxEntries", type=Integer.class, parameters={})
     private Output<Integer> maxEntries;
 
     /**
@@ -84,7 +84,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * Owner Id of Prefix List.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -98,7 +98,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * Id of Prefix List.
      * 
      */
-    @OutputExport(name="prefixListId", type=String.class, parameters={})
+    @Export(name="prefixListId", type=String.class, parameters={})
     private Output<String> prefixListId;
 
     /**
@@ -112,7 +112,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * Name of Prefix List.
      * 
      */
-    @OutputExport(name="prefixListName", type=String.class, parameters={})
+    @Export(name="prefixListName", type=String.class, parameters={})
     private Output<String> prefixListName;
 
     /**
@@ -126,7 +126,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * Tags for Prefix List
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={PrefixListTag.class})
+    @Export(name="tags", type=List.class, parameters={PrefixListTag.class})
     private Output</* @Nullable */ List<PrefixListTag>> tags;
 
     /**
@@ -140,7 +140,7 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
      * Version of Prefix List.
      * 
      */
-    @OutputExport(name="version", type=Integer.class, parameters={})
+    @Export(name="version", type=Integer.class, parameters={})
     private Output<Integer> version;
 
     /**

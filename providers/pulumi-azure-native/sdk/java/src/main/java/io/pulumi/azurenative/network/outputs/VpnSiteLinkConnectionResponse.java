@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.IpsecPolicyResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VpnSiteLinkConnectionResponse {
     /**
      * Expected bandwidth in MBPS.
@@ -123,29 +123,29 @@ public final class VpnSiteLinkConnectionResponse {
      */
     private final @Nullable SubResourceResponse vpnSiteLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpnSiteLinkConnectionResponse(
-        @OutputCustomType.Parameter("connectionBandwidth") @Nullable Integer connectionBandwidth,
-        @OutputCustomType.Parameter("connectionStatus") String connectionStatus,
-        @OutputCustomType.Parameter("egressBytesTransferred") Double egressBytesTransferred,
-        @OutputCustomType.Parameter("egressNatRules") @Nullable List<SubResourceResponse> egressNatRules,
-        @OutputCustomType.Parameter("enableBgp") @Nullable Boolean enableBgp,
-        @OutputCustomType.Parameter("enableRateLimiting") @Nullable Boolean enableRateLimiting,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("ingressBytesTransferred") Double ingressBytesTransferred,
-        @OutputCustomType.Parameter("ingressNatRules") @Nullable List<SubResourceResponse> ingressNatRules,
-        @OutputCustomType.Parameter("ipsecPolicies") @Nullable List<IpsecPolicyResponse> ipsecPolicies,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("routingWeight") @Nullable Integer routingWeight,
-        @OutputCustomType.Parameter("sharedKey") @Nullable String sharedKey,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("useLocalAzureIpAddress") @Nullable Boolean useLocalAzureIpAddress,
-        @OutputCustomType.Parameter("usePolicyBasedTrafficSelectors") @Nullable Boolean usePolicyBasedTrafficSelectors,
-        @OutputCustomType.Parameter("vpnConnectionProtocolType") @Nullable String vpnConnectionProtocolType,
-        @OutputCustomType.Parameter("vpnLinkConnectionMode") @Nullable String vpnLinkConnectionMode,
-        @OutputCustomType.Parameter("vpnSiteLink") @Nullable SubResourceResponse vpnSiteLink) {
+        @CustomType.Parameter("connectionBandwidth") @Nullable Integer connectionBandwidth,
+        @CustomType.Parameter("connectionStatus") String connectionStatus,
+        @CustomType.Parameter("egressBytesTransferred") Double egressBytesTransferred,
+        @CustomType.Parameter("egressNatRules") @Nullable List<SubResourceResponse> egressNatRules,
+        @CustomType.Parameter("enableBgp") @Nullable Boolean enableBgp,
+        @CustomType.Parameter("enableRateLimiting") @Nullable Boolean enableRateLimiting,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("ingressBytesTransferred") Double ingressBytesTransferred,
+        @CustomType.Parameter("ingressNatRules") @Nullable List<SubResourceResponse> ingressNatRules,
+        @CustomType.Parameter("ipsecPolicies") @Nullable List<IpsecPolicyResponse> ipsecPolicies,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("routingWeight") @Nullable Integer routingWeight,
+        @CustomType.Parameter("sharedKey") @Nullable String sharedKey,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("useLocalAzureIpAddress") @Nullable Boolean useLocalAzureIpAddress,
+        @CustomType.Parameter("usePolicyBasedTrafficSelectors") @Nullable Boolean usePolicyBasedTrafficSelectors,
+        @CustomType.Parameter("vpnConnectionProtocolType") @Nullable String vpnConnectionProtocolType,
+        @CustomType.Parameter("vpnLinkConnectionMode") @Nullable String vpnLinkConnectionMode,
+        @CustomType.Parameter("vpnSiteLink") @Nullable SubResourceResponse vpnSiteLink) {
         this.connectionBandwidth = connectionBandwidth;
         this.connectionStatus = connectionStatus;
         this.egressBytesTransferred = egressBytesTransferred;

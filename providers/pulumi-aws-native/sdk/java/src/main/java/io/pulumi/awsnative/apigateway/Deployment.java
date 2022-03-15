@@ -8,7 +8,7 @@ import io.pulumi.awsnative.apigateway.DeploymentArgs;
 import io.pulumi.awsnative.apigateway.outputs.DeploymentCanarySettings;
 import io.pulumi.awsnative.apigateway.outputs.DeploymentStageDescription;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Specifies settings for the canary deployment.
      * 
      */
-    @OutputExport(name="deploymentCanarySettings", type=DeploymentCanarySettings.class, parameters={})
+    @Export(name="deploymentCanarySettings", type=DeploymentCanarySettings.class, parameters={})
     private Output</* @Nullable */ DeploymentCanarySettings> deploymentCanarySettings;
 
     /**
@@ -37,7 +37,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Primary Id for this resource
      * 
      */
-    @OutputExport(name="deploymentId", type=String.class, parameters={})
+    @Export(name="deploymentId", type=String.class, parameters={})
     private Output<String> deploymentId;
 
     /**
@@ -51,7 +51,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * A description of the purpose of the API Gateway deployment.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -65,7 +65,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * The ID of the RestApi resource to deploy.
      * 
      */
-    @OutputExport(name="restApiId", type=String.class, parameters={})
+    @Export(name="restApiId", type=String.class, parameters={})
     private Output<String> restApiId;
 
     /**
@@ -79,7 +79,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * Configures the stage that API Gateway creates with this deployment.
      * 
      */
-    @OutputExport(name="stageDescription", type=DeploymentStageDescription.class, parameters={})
+    @Export(name="stageDescription", type=DeploymentStageDescription.class, parameters={})
     private Output</* @Nullable */ DeploymentStageDescription> stageDescription;
 
     /**
@@ -93,7 +93,7 @@ public class Deployment extends io.pulumi.resources.CustomResource {
      * A name for the stage that API Gateway creates with this deployment. Use only alphanumeric characters.
      * 
      */
-    @OutputExport(name="stageName", type=String.class, parameters={})
+    @Export(name="stageName", type=String.class, parameters={})
     private Output</* @Nullable */ String> stageName;
 
     /**

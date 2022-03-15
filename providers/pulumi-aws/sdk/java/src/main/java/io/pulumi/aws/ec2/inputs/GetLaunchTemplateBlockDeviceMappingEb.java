@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,56 +13,56 @@ public final class GetLaunchTemplateBlockDeviceMappingEb extends io.pulumi.resou
 
     public static final GetLaunchTemplateBlockDeviceMappingEb Empty = new GetLaunchTemplateBlockDeviceMappingEb();
 
-    @InputImport(name="deleteOnTermination", required=true)
+    @Import(name="deleteOnTermination", required=true)
       private final String deleteOnTermination;
 
     public String getDeleteOnTermination() {
         return this.deleteOnTermination;
     }
 
-    @InputImport(name="encrypted", required=true)
+    @Import(name="encrypted", required=true)
       private final String encrypted;
 
     public String getEncrypted() {
         return this.encrypted;
     }
 
-    @InputImport(name="iops", required=true)
+    @Import(name="iops", required=true)
       private final Integer iops;
 
     public Integer getIops() {
         return this.iops;
     }
 
-    @InputImport(name="kmsKeyId", required=true)
+    @Import(name="kmsKeyId", required=true)
       private final String kmsKeyId;
 
     public String getKmsKeyId() {
         return this.kmsKeyId;
     }
 
-    @InputImport(name="snapshotId", required=true)
+    @Import(name="snapshotId", required=true)
       private final String snapshotId;
 
     public String getSnapshotId() {
         return this.snapshotId;
     }
 
-    @InputImport(name="throughput", required=true)
+    @Import(name="throughput", required=true)
       private final Integer throughput;
 
     public Integer getThroughput() {
         return this.throughput;
     }
 
-    @InputImport(name="volumeSize", required=true)
+    @Import(name="volumeSize", required=true)
       private final Integer volumeSize;
 
     public Integer getVolumeSize() {
         return this.volumeSize;
     }
 
-    @InputImport(name="volumeType", required=true)
+    @Import(name="volumeType", required=true)
       private final String volumeType;
 
     public String getVolumeType() {

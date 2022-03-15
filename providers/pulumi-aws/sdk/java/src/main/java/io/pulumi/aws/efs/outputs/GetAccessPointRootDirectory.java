@@ -4,12 +4,12 @@
 package io.pulumi.aws.efs.outputs;
 
 import io.pulumi.aws.efs.outputs.GetAccessPointRootDirectoryCreationInfo;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAccessPointRootDirectory {
     /**
      * Single element list containing information on the creation permissions of the directory
@@ -22,10 +22,10 @@ public final class GetAccessPointRootDirectory {
      */
     private final String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccessPointRootDirectory(
-        @OutputCustomType.Parameter("creationInfos") List<GetAccessPointRootDirectoryCreationInfo> creationInfos,
-        @OutputCustomType.Parameter("path") String path) {
+        @CustomType.Parameter("creationInfos") List<GetAccessPointRootDirectoryCreationInfo> creationInfos,
+        @CustomType.Parameter("path") String path) {
         this.creationInfos = creationInfos;
         this.path = path;
     }

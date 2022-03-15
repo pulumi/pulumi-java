@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.osconfig_v1beta.GuestPolicyArgs;
@@ -26,7 +26,7 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
      * Specifies the VM instances that are assigned to this policy. This allows you to target sets or groups of VM instances by different parameters such as labels, names, OS, or zones. If left empty, all VM instances underneath this policy are targeted. At the same level in the resource hierarchy (that is within a project), the service prevents the creation of multiple policies that conflict with each other. For more information, see how the service [handles assignment conflicts](/compute/docs/os-config-management/create-guest-policy#handle-conflicts).
      * 
      */
-    @OutputExport(name="assignment", type=AssignmentResponse.class, parameters={})
+    @Export(name="assignment", type=AssignmentResponse.class, parameters={})
     private Output<AssignmentResponse> assignment;
 
     /**
@@ -40,7 +40,7 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
      * Time this guest policy was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -54,7 +54,7 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
      * Description of the guest policy. Length of the description is limited to 1024 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -68,7 +68,7 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
      * The etag for this guest policy. If this is provided on update, it must match the server's etag.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -82,7 +82,7 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
      * Unique name of the resource in this project using one of the following forms: `projects/{project_number}/guestPolicies/{guest_policy_id}`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -96,7 +96,7 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
      * A list of package repositories to configure on the VM instance. This is done before any other configs are applied so they can use these repos. Package repositories are only configured if the corresponding package manager(s) are available.
      * 
      */
-    @OutputExport(name="packageRepositories", type=List.class, parameters={PackageRepositoryResponse.class})
+    @Export(name="packageRepositories", type=List.class, parameters={PackageRepositoryResponse.class})
     private Output<List<PackageRepositoryResponse>> packageRepositories;
 
     /**
@@ -110,7 +110,7 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
      * The software packages to be managed by this policy.
      * 
      */
-    @OutputExport(name="packages", type=List.class, parameters={PackageResponse.class})
+    @Export(name="packages", type=List.class, parameters={PackageResponse.class})
     private Output<List<PackageResponse>> packages;
 
     /**
@@ -124,7 +124,7 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
      * A list of Recipes to install on the VM instance.
      * 
      */
-    @OutputExport(name="recipes", type=List.class, parameters={SoftwareRecipeResponse.class})
+    @Export(name="recipes", type=List.class, parameters={SoftwareRecipeResponse.class})
     private Output<List<SoftwareRecipeResponse>> recipes;
 
     /**
@@ -138,7 +138,7 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
      * Last time this guest policy was updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

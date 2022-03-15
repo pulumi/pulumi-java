@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.nimblestudio.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends io.pulum
      * <p>The endpoint of the shared file system that is accessed by the studio component resource.</p>
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable String endpoint;
 
     public Optional<String> getEndpoint() {
@@ -33,7 +33,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends io.pulum
      * <p>The unique identifier for a file system.</p>
      * 
      */
-    @InputImport(name="fileSystemId")
+    @Import(name="fileSystemId")
       private final @Nullable String fileSystemId;
 
     public Optional<String> getFileSystemId() {
@@ -44,7 +44,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends io.pulum
      * <p>The mount location for a shared file system on a Linux virtual workstation.</p>
      * 
      */
-    @InputImport(name="linuxMountPoint")
+    @Import(name="linuxMountPoint")
       private final @Nullable String linuxMountPoint;
 
     public Optional<String> getLinuxMountPoint() {
@@ -55,7 +55,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends io.pulum
      * <p>The name of the file share.</p>
      * 
      */
-    @InputImport(name="shareName")
+    @Import(name="shareName")
       private final @Nullable String shareName;
 
     public Optional<String> getShareName() {
@@ -66,7 +66,7 @@ public final class StudioComponentSharedFileSystemConfiguration extends io.pulum
      * <p>The mount location for a shared file system on a Windows virtual workstation.</p>
      * 
      */
-    @InputImport(name="windowsMountDrive")
+    @Import(name="windowsMountDrive")
       private final @Nullable String windowsMountDrive;
 
     public Optional<String> getWindowsMountDrive() {

@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.rds.ClusterEndpointArgs;
 import io.pulumi.aws.rds.inputs.ClusterEndpointState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class ClusterEndpoint extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of cluster
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -51,7 +51,7 @@ public class ClusterEndpoint extends io.pulumi.resources.CustomResource {
      * The identifier to use for the new endpoint. This parameter is stored as a lowercase string.
      * 
      */
-    @OutputExport(name="clusterEndpointIdentifier", type=String.class, parameters={})
+    @Export(name="clusterEndpointIdentifier", type=String.class, parameters={})
     private Output<String> clusterEndpointIdentifier;
 
     /**
@@ -65,7 +65,7 @@ public class ClusterEndpoint extends io.pulumi.resources.CustomResource {
      * The cluster identifier.
      * 
      */
-    @OutputExport(name="clusterIdentifier", type=String.class, parameters={})
+    @Export(name="clusterIdentifier", type=String.class, parameters={})
     private Output<String> clusterIdentifier;
 
     /**
@@ -79,7 +79,7 @@ public class ClusterEndpoint extends io.pulumi.resources.CustomResource {
      * The type of the endpoint. One of: READER , ANY .
      * 
      */
-    @OutputExport(name="customEndpointType", type=String.class, parameters={})
+    @Export(name="customEndpointType", type=String.class, parameters={})
     private Output<String> customEndpointType;
 
     /**
@@ -93,7 +93,7 @@ public class ClusterEndpoint extends io.pulumi.resources.CustomResource {
      * A custom endpoint for the Aurora cluster
      * 
      */
-    @OutputExport(name="endpoint", type=String.class, parameters={})
+    @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
@@ -107,7 +107,7 @@ public class ClusterEndpoint extends io.pulumi.resources.CustomResource {
      * List of DB instance identifiers that aren't part of the custom endpoint group. All other eligible instances are reachable through the custom endpoint. Only relevant if the list of static members is empty. Conflicts with `static_members`.
      * 
      */
-    @OutputExport(name="excludedMembers", type=List.class, parameters={String.class})
+    @Export(name="excludedMembers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> excludedMembers;
 
     /**
@@ -121,7 +121,7 @@ public class ClusterEndpoint extends io.pulumi.resources.CustomResource {
      * List of DB instance identifiers that are part of the custom endpoint group. Conflicts with `excluded_members`.
      * 
      */
-    @OutputExport(name="staticMembers", type=List.class, parameters={String.class})
+    @Export(name="staticMembers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> staticMembers;
 
     /**
@@ -135,7 +135,7 @@ public class ClusterEndpoint extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -149,7 +149,7 @@ public class ClusterEndpoint extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

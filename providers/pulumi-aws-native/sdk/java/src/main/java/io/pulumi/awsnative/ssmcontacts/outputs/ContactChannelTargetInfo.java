@@ -3,12 +3,12 @@
 
 package io.pulumi.awsnative.ssmcontacts.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContactChannelTargetInfo {
     /**
      * The Amazon Resource Name (ARN) of the contact channel.
@@ -21,10 +21,10 @@ public final class ContactChannelTargetInfo {
      */
     private final Integer retryIntervalInMinutes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContactChannelTargetInfo(
-        @OutputCustomType.Parameter("channelId") String channelId,
-        @OutputCustomType.Parameter("retryIntervalInMinutes") Integer retryIntervalInMinutes) {
+        @CustomType.Parameter("channelId") String channelId,
+        @CustomType.Parameter("retryIntervalInMinutes") Integer retryIntervalInMinutes) {
         this.channelId = channelId;
         this.retryIntervalInMinutes = retryIntervalInMinutes;
     }

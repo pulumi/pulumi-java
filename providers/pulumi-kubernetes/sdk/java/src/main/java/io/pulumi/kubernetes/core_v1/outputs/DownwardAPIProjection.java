@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.DownwardAPIVolumeFile;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DownwardAPIProjection {
     /**
      * Items is a list of DownwardAPIVolume file
@@ -17,8 +17,8 @@ public final class DownwardAPIProjection {
      */
     private final @Nullable List<DownwardAPIVolumeFile> items;
 
-    @OutputCustomType.Constructor
-    private DownwardAPIProjection(@OutputCustomType.Parameter("items") @Nullable List<DownwardAPIVolumeFile> items) {
+    @CustomType.Constructor
+    private DownwardAPIProjection(@CustomType.Parameter("items") @Nullable List<DownwardAPIVolumeFile> items) {
         this.items = items;
     }
 

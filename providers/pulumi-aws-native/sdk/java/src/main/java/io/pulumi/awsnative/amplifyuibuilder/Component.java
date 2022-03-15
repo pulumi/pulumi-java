@@ -13,7 +13,7 @@ import io.pulumi.awsnative.amplifyuibuilder.outputs.ComponentProperties;
 import io.pulumi.awsnative.amplifyuibuilder.outputs.ComponentTags;
 import io.pulumi.awsnative.amplifyuibuilder.outputs.ComponentVariant;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,85 +25,85 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:amplifyuibuilder:Component")
 public class Component extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="appId", type=String.class, parameters={})
+    @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
     public Output<String> getAppId() {
         return this.appId;
     }
-    @OutputExport(name="bindingProperties", type=ComponentBindingProperties.class, parameters={})
+    @Export(name="bindingProperties", type=ComponentBindingProperties.class, parameters={})
     private Output</* @Nullable */ ComponentBindingProperties> bindingProperties;
 
     public Output</* @Nullable */ ComponentBindingProperties> getBindingProperties() {
         return this.bindingProperties;
     }
-    @OutputExport(name="children", type=List.class, parameters={ComponentChild.class})
+    @Export(name="children", type=List.class, parameters={ComponentChild.class})
     private Output</* @Nullable */ List<ComponentChild>> children;
 
     public Output</* @Nullable */ List<ComponentChild>> getChildren() {
         return this.children;
     }
-    @OutputExport(name="collectionProperties", type=ComponentCollectionProperties.class, parameters={})
+    @Export(name="collectionProperties", type=ComponentCollectionProperties.class, parameters={})
     private Output</* @Nullable */ ComponentCollectionProperties> collectionProperties;
 
     public Output</* @Nullable */ ComponentCollectionProperties> getCollectionProperties() {
         return this.collectionProperties;
     }
-    @OutputExport(name="componentType", type=String.class, parameters={})
+    @Export(name="componentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> componentType;
 
     public Output</* @Nullable */ String> getComponentType() {
         return this.componentType;
     }
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
         return this.createdAt;
     }
-    @OutputExport(name="environmentName", type=String.class, parameters={})
+    @Export(name="environmentName", type=String.class, parameters={})
     private Output<String> environmentName;
 
     public Output<String> getEnvironmentName() {
         return this.environmentName;
     }
-    @OutputExport(name="modifiedAt", type=String.class, parameters={})
+    @Export(name="modifiedAt", type=String.class, parameters={})
     private Output<String> modifiedAt;
 
     public Output<String> getModifiedAt() {
         return this.modifiedAt;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     public Output</* @Nullable */ String> getName() {
         return this.name;
     }
-    @OutputExport(name="overrides", type=ComponentOverrides.class, parameters={})
+    @Export(name="overrides", type=ComponentOverrides.class, parameters={})
     private Output</* @Nullable */ ComponentOverrides> overrides;
 
     public Output</* @Nullable */ ComponentOverrides> getOverrides() {
         return this.overrides;
     }
-    @OutputExport(name="properties", type=ComponentProperties.class, parameters={})
+    @Export(name="properties", type=ComponentProperties.class, parameters={})
     private Output</* @Nullable */ ComponentProperties> properties;
 
     public Output</* @Nullable */ ComponentProperties> getProperties() {
         return this.properties;
     }
-    @OutputExport(name="sourceId", type=String.class, parameters={})
+    @Export(name="sourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceId;
 
     public Output</* @Nullable */ String> getSourceId() {
         return this.sourceId;
     }
-    @OutputExport(name="tags", type=ComponentTags.class, parameters={})
+    @Export(name="tags", type=ComponentTags.class, parameters={})
     private Output</* @Nullable */ ComponentTags> tags;
 
     public Output</* @Nullable */ ComponentTags> getTags() {
         return this.tags;
     }
-    @OutputExport(name="variants", type=List.class, parameters={ComponentVariant.class})
+    @Export(name="variants", type=List.class, parameters={ComponentVariant.class})
     private Output</* @Nullable */ List<ComponentVariant>> variants;
 
     public Output</* @Nullable */ List<ComponentVariant>> getVariants() {

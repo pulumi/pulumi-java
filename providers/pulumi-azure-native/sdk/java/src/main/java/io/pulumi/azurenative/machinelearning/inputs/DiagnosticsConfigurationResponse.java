@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DiagnosticsConfigurationResponse extends io.pulumi.resources.
      * Specifies the date and time when the logging will cease. If null, diagnostic collection is not time limited.
      * 
      */
-    @InputImport(name="expiry")
+    @Import(name="expiry")
       private final @Nullable String expiry;
 
     public Optional<String> getExpiry() {
@@ -33,7 +33,7 @@ public final class DiagnosticsConfigurationResponse extends io.pulumi.resources.
      * Specifies the verbosity of the diagnostic output. Valid values are: None - disables tracing; Error - collects only error (stderr) traces; All - collects all traces (stdout and stderr).
      * 
      */
-    @InputImport(name="level", required=true)
+    @Import(name="level", required=true)
       private final String level;
 
     public String getLevel() {

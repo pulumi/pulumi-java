@@ -8,7 +8,7 @@ import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleDestinationEncryptionC
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleDestinationMetricsGetArgs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleDestinationReplicationTimeGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
      * A configuration block that specifies the overrides to use for object owners on replication documented below. Specify this only in a cross-account scenario (where source and destination bucket owners are not the same), and you want to change replica ownership to the AWS account that owns the destination bucket. If this is not specified in the replication configuration, the replicas are owned by same AWS account that owns the source object. Must be used in conjunction with `account` owner override configuration.
      * 
      */
-    @InputImport(name="accessControlTranslation")
+    @Import(name="accessControlTranslation")
       private final @Nullable Output<BucketReplicationConfigRuleDestinationAccessControlTranslationGetArgs> accessControlTranslation;
 
     public Output<BucketReplicationConfigRuleDestinationAccessControlTranslationGetArgs> getAccessControlTranslation() {
@@ -33,7 +33,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
      * The Account ID to specify the replica ownership. Must be used in conjunction with `access_control_translation` override configuration.
      * 
      */
-    @InputImport(name="account")
+    @Import(name="account")
       private final @Nullable Output<String> account;
 
     public Output<String> getAccount() {
@@ -44,7 +44,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
      * The ARN of the S3 bucket where you want Amazon S3 to store replicas of the objects identified by the rule.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -55,7 +55,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
      * A configuration block that provides information about encryption documented below. If `source_selection_criteria` is specified, you must specify this element.
      * 
      */
-    @InputImport(name="encryptionConfiguration")
+    @Import(name="encryptionConfiguration")
       private final @Nullable Output<BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs> encryptionConfiguration;
 
     public Output<BucketReplicationConfigRuleDestinationEncryptionConfigurationGetArgs> getEncryptionConfiguration() {
@@ -66,7 +66,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
      * A configuration block that specifies replication metrics-related settings enabling replication metrics and events documented below.
      * 
      */
-    @InputImport(name="metrics")
+    @Import(name="metrics")
       private final @Nullable Output<BucketReplicationConfigRuleDestinationMetricsGetArgs> metrics;
 
     public Output<BucketReplicationConfigRuleDestinationMetricsGetArgs> getMetrics() {
@@ -77,7 +77,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
      * A configuration block that specifies S3 Replication Time Control (S3 RTC), including whether S3 RTC is enabled and the time when all objects and operations on objects must be replicated documented below. Replication Time Control must be used in conjunction with `metrics`.
      * 
      */
-    @InputImport(name="replicationTime")
+    @Import(name="replicationTime")
       private final @Nullable Output<BucketReplicationConfigRuleDestinationReplicationTimeGetArgs> replicationTime;
 
     public Output<BucketReplicationConfigRuleDestinationReplicationTimeGetArgs> getReplicationTime() {
@@ -88,7 +88,7 @@ public final class BucketReplicationConfigRuleDestinationGetArgs extends io.pulu
      * The [storage class](https://docs.aws.amazon.com/AmazonS3/latest/API/API_Destination.html#AmazonS3-Type-Destination-StorageClass) used to store the object. By default, Amazon S3 uses the storage class of the source object to create the object replica.
      * 
      */
-    @InputImport(name="storageClass")
+    @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
     public Output<String> getStorageClass() {

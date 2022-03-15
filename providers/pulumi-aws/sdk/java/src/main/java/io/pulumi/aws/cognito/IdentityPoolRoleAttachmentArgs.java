@@ -5,7 +5,7 @@ package io.pulumi.aws.cognito;
 
 import io.pulumi.aws.cognito.inputs.IdentityPoolRoleAttachmentRoleMappingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class IdentityPoolRoleAttachmentArgs extends io.pulumi.resources.Re
      * An identity pool ID in the format REGION:GUID.
      * 
      */
-    @InputImport(name="identityPoolId", required=true)
+    @Import(name="identityPoolId", required=true)
       private final Output<String> identityPoolId;
 
     public Output<String> getIdentityPoolId() {
@@ -32,7 +32,7 @@ public final class IdentityPoolRoleAttachmentArgs extends io.pulumi.resources.Re
      * A List of Role Mapping.
      * 
      */
-    @InputImport(name="roleMappings")
+    @Import(name="roleMappings")
       private final @Nullable Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>> roleMappings;
 
     public Output<List<IdentityPoolRoleAttachmentRoleMappingArgs>> getRoleMappings() {
@@ -43,7 +43,7 @@ public final class IdentityPoolRoleAttachmentArgs extends io.pulumi.resources.Re
      * The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
      * 
      */
-    @InputImport(name="roles", required=true)
+    @Import(name="roles", required=true)
       private final Output<Map<String,String>> roles;
 
     public Output<Map<String,String>> getRoles() {

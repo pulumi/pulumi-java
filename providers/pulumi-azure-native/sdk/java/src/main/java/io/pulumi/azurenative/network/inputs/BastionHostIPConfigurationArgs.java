@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.IPAllocationMethod;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -36,7 +36,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
      * Name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -47,7 +47,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
      * Private IP allocation method.
      * 
      */
-    @InputImport(name="privateIPAllocationMethod")
+    @Import(name="privateIPAllocationMethod")
       private final @Nullable Output<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
     public Output<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
@@ -58,7 +58,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
      * Reference of the PublicIP resource.
      * 
      */
-    @InputImport(name="publicIPAddress", required=true)
+    @Import(name="publicIPAddress", required=true)
       private final Output<SubResourceArgs> publicIPAddress;
 
     public Output<SubResourceArgs> getPublicIPAddress() {
@@ -69,7 +69,7 @@ public final class BastionHostIPConfigurationArgs extends io.pulumi.resources.Re
      * Reference of the subnet resource.
      * 
      */
-    @InputImport(name="subnet", required=true)
+    @Import(name="subnet", required=true)
       private final Output<SubResourceArgs> subnet;
 
     public Output<SubResourceArgs> getSubnet() {

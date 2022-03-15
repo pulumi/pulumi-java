@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class IncidentLabelResponse extends io.pulumi.resources.InvokeArgs 
      * The name of the label
      * 
      */
-    @InputImport(name="labelName", required=true)
+    @Import(name="labelName", required=true)
       private final String labelName;
 
     public String getLabelName() {
@@ -31,7 +31,7 @@ public final class IncidentLabelResponse extends io.pulumi.resources.InvokeArgs 
      * The type of the label
      * 
      */
-    @InputImport(name="labelType", required=true)
+    @Import(name="labelType", required=true)
       private final String labelType;
 
     public String getLabelType() {

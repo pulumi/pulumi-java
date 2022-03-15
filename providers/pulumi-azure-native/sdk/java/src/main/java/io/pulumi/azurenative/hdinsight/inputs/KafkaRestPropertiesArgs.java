@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.ClientGroupInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceA
      * The information of AAD security group.
      * 
      */
-    @InputImport(name="clientGroupInfo")
+    @Import(name="clientGroupInfo")
       private final @Nullable Output<ClientGroupInfoArgs> clientGroupInfo;
 
     public Output<ClientGroupInfoArgs> getClientGroupInfo() {
@@ -35,7 +35,7 @@ public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceA
      * The configurations that need to be overriden.
      * 
      */
-    @InputImport(name="configurationOverride")
+    @Import(name="configurationOverride")
       private final @Nullable Output<Map<String,String>> configurationOverride;
 
     public Output<Map<String,String>> getConfigurationOverride() {

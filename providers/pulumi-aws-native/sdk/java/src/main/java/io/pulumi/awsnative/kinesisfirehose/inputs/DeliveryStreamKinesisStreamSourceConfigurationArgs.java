@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class DeliveryStreamKinesisStreamSourceConfigurationArgs extends io
 
     public static final DeliveryStreamKinesisStreamSourceConfigurationArgs Empty = new DeliveryStreamKinesisStreamSourceConfigurationArgs();
 
-    @InputImport(name="kinesisStreamARN", required=true)
+    @Import(name="kinesisStreamARN", required=true)
       private final Output<String> kinesisStreamARN;
 
     public Output<String> getKinesisStreamARN() {
         return this.kinesisStreamARN;
     }
 
-    @InputImport(name="roleARN", required=true)
+    @Import(name="roleARN", required=true)
       private final Output<String> roleARN;
 
     public Output<String> getRoleARN() {

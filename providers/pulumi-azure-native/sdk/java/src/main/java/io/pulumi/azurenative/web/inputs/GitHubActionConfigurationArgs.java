@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.GitHubActionCodeConfigurationArgs;
 import io.pulumi.azurenative.web.inputs.GitHubActionContainerConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
      * GitHub Action code configuration.
      * 
      */
-    @InputImport(name="codeConfiguration")
+    @Import(name="codeConfiguration")
       private final @Nullable Output<GitHubActionCodeConfigurationArgs> codeConfiguration;
 
     public Output<GitHubActionCodeConfigurationArgs> getCodeConfiguration() {
@@ -35,7 +35,7 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
      * GitHub Action container configuration.
      * 
      */
-    @InputImport(name="containerConfiguration")
+    @Import(name="containerConfiguration")
       private final @Nullable Output<GitHubActionContainerConfigurationArgs> containerConfiguration;
 
     public Output<GitHubActionContainerConfigurationArgs> getContainerConfiguration() {
@@ -46,7 +46,7 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
      * Workflow option to determine whether the workflow file should be generated and written to the repository.
      * 
      */
-    @InputImport(name="generateWorkflowFile")
+    @Import(name="generateWorkflowFile")
       private final @Nullable Output<Boolean> generateWorkflowFile;
 
     public Output<Boolean> getGenerateWorkflowFile() {
@@ -57,7 +57,7 @@ public final class GitHubActionConfigurationArgs extends io.pulumi.resources.Res
      * This will help determine the workflow configuration to select.
      * 
      */
-    @InputImport(name="isLinux")
+    @Import(name="isLinux")
       private final @Nullable Output<Boolean> isLinux;
 
     public Output<Boolean> getIsLinux() {

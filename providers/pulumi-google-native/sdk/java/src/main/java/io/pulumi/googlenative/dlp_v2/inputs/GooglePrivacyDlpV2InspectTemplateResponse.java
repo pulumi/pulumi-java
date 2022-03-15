@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends io.pulumi.r
      * The creation timestamp of an inspectTemplate.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends io.pulumi.r
      * Short description (max 256 chars).
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -43,7 +43,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends io.pulumi.r
      * Display name (max 256 chars).
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -54,7 +54,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends io.pulumi.r
      * The core content of the template. Configuration of the scanning process.
      * 
      */
-    @InputImport(name="inspectConfig", required=true)
+    @Import(name="inspectConfig", required=true)
       private final GooglePrivacyDlpV2InspectConfigResponse inspectConfig;
 
     public GooglePrivacyDlpV2InspectConfigResponse getInspectConfig() {
@@ -65,7 +65,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends io.pulumi.r
      * The template name. The template will have one of the following formats: `projects/PROJECT_ID/inspectTemplates/TEMPLATE_ID` OR `organizations/ORGANIZATION_ID/inspectTemplates/TEMPLATE_ID`;
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -76,7 +76,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends io.pulumi.r
      * The last update timestamp of an inspectTemplate.
      * 
      */
-    @InputImport(name="updateTime", required=true)
+    @Import(name="updateTime", required=true)
       private final String updateTime;
 
     public String getUpdateTime() {

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyIamRoleArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyIamUserArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.AccessPolicyUserArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,21 +20,21 @@ public final class AccessPolicyIdentityArgs extends io.pulumi.resources.Resource
 
     public static final AccessPolicyIdentityArgs Empty = new AccessPolicyIdentityArgs();
 
-    @InputImport(name="iamRole")
+    @Import(name="iamRole")
       private final @Nullable Output<AccessPolicyIamRoleArgs> iamRole;
 
     public Output<AccessPolicyIamRoleArgs> getIamRole() {
         return this.iamRole == null ? Output.empty() : this.iamRole;
     }
 
-    @InputImport(name="iamUser")
+    @Import(name="iamUser")
       private final @Nullable Output<AccessPolicyIamUserArgs> iamUser;
 
     public Output<AccessPolicyIamUserArgs> getIamUser() {
         return this.iamUser == null ? Output.empty() : this.iamUser;
     }
 
-    @InputImport(name="user")
+    @Import(name="user")
       private final @Nullable Output<AccessPolicyUserArgs> user;
 
     public Output<AccessPolicyUserArgs> getUser() {

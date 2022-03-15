@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.redshift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterSnapshotCopy {
     /**
      * The destination region that you want to copy snapshots to.
@@ -28,11 +28,11 @@ public final class ClusterSnapshotCopy {
      */
     private final @Nullable Integer retentionPeriod;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterSnapshotCopy(
-        @OutputCustomType.Parameter("destinationRegion") String destinationRegion,
-        @OutputCustomType.Parameter("grantName") @Nullable String grantName,
-        @OutputCustomType.Parameter("retentionPeriod") @Nullable Integer retentionPeriod) {
+        @CustomType.Parameter("destinationRegion") String destinationRegion,
+        @CustomType.Parameter("grantName") @Nullable String grantName,
+        @CustomType.Parameter("retentionPeriod") @Nullable Integer retentionPeriod) {
         this.destinationRegion = destinationRegion;
         this.grantName = grantName;
         this.retentionPeriod = retentionPeriod;

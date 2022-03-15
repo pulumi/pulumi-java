@@ -3,22 +3,22 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatasetVersioningConfiguration {
     private final @Nullable Integer maxVersions;
     private final @Nullable Boolean unlimited;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetVersioningConfiguration(
-        @OutputCustomType.Parameter("maxVersions") @Nullable Integer maxVersions,
-        @OutputCustomType.Parameter("unlimited") @Nullable Boolean unlimited) {
+        @CustomType.Parameter("maxVersions") @Nullable Integer maxVersions,
+        @CustomType.Parameter("unlimited") @Nullable Boolean unlimited) {
         this.maxVersions = maxVersions;
         this.unlimited = unlimited;
     }

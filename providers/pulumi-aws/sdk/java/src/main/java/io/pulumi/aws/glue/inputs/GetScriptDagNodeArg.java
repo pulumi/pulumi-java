@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.glue.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetScriptDagNodeArg extends io.pulumi.resources.InvokeArgs {
      * The name of the argument or property.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -30,7 +30,7 @@ public final class GetScriptDagNodeArg extends io.pulumi.resources.InvokeArgs {
      * Boolean if the value is used as a parameter. Defaults to `false`.
      * 
      */
-    @InputImport(name="param")
+    @Import(name="param")
       private final @Nullable Boolean param;
 
     public Optional<Boolean> getParam() {
@@ -41,7 +41,7 @@ public final class GetScriptDagNodeArg extends io.pulumi.resources.InvokeArgs {
      * The value of the argument or property.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

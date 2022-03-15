@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AS2ErrorSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The value indicating whether to resend message If MDN is not received.
      * 
      */
-    @InputImport(name="resendIfMDNNotReceived", required=true)
+    @Import(name="resendIfMDNNotReceived", required=true)
       private final Output<Boolean> resendIfMDNNotReceived;
 
     public Output<Boolean> getResendIfMDNNotReceived() {
@@ -32,7 +32,7 @@ public final class AS2ErrorSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The value indicating whether to suspend duplicate message.
      * 
      */
-    @InputImport(name="suspendDuplicateMessage", required=true)
+    @Import(name="suspendDuplicateMessage", required=true)
       private final Output<Boolean> suspendDuplicateMessage;
 
     public Output<Boolean> getSuspendDuplicateMessage() {

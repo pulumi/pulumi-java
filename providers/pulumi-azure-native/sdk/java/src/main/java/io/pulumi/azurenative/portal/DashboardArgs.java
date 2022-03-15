@@ -5,7 +5,7 @@ package io.pulumi.azurenative.portal;
 
 import io.pulumi.azurenative.portal.inputs.DashboardLensArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the dashboard.
      * 
      */
-    @InputImport(name="dashboardName")
+    @Import(name="dashboardName")
       private final @Nullable Output<String> dashboardName;
 
     public Output<String> getDashboardName() {
@@ -33,7 +33,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * The dashboard lenses.
      * 
      */
-    @InputImport(name="lenses")
+    @Import(name="lenses")
       private final @Nullable Output<List<DashboardLensArgs>> lenses;
 
     public Output<List<DashboardLensArgs>> getLenses() {
@@ -44,7 +44,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -55,7 +55,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * The dashboard metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,Object>> metadata;
 
     public Output<Map<String,Object>> getMetadata() {
@@ -66,7 +66,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -77,7 +77,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

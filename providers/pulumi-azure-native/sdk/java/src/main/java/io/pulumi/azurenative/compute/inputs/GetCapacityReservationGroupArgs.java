@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetCapacityReservationGroupArgs extends io.pulumi.resources.I
      * The name of the capacity reservation group.
      * 
      */
-    @InputImport(name="capacityReservationGroupName", required=true)
+    @Import(name="capacityReservationGroupName", required=true)
       private final String capacityReservationGroupName;
 
     public String getCapacityReservationGroupName() {
@@ -29,7 +29,7 @@ public final class GetCapacityReservationGroupArgs extends io.pulumi.resources.I
      * The expand expression to apply on the operation. 'InstanceView' will retrieve the list of instance views of the capacity reservations under the capacity reservation group which is a snapshot of the runtime properties of a capacity reservation that is managed by the platform and can change outside of control plane operations.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -40,7 +40,7 @@ public final class GetCapacityReservationGroupArgs extends io.pulumi.resources.I
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

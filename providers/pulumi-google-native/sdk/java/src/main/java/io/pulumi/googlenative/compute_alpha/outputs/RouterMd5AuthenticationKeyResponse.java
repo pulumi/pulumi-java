@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouterMd5AuthenticationKeyResponse {
     /**
      * [Input only] Value of the key. For patch and update calls, it can be skipped to copy the value from the previous configuration. This is allowed if the key with the same name existed before the operation. Maximum length is 80 characters. Can only contain printable ASCII characters.
@@ -20,10 +20,10 @@ public final class RouterMd5AuthenticationKeyResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouterMd5AuthenticationKeyResponse(
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("name") String name) {
         this.key = key;
         this.name = name;
     }

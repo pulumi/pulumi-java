@@ -4,12 +4,12 @@
 package io.pulumi.awsnative.lambda.outputs;
 
 import io.pulumi.awsnative.lambda.enums.FunctionTracingConfigMode;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FunctionTracingConfig {
     /**
      * The tracing mode.
@@ -17,8 +17,8 @@ public final class FunctionTracingConfig {
      */
     private final @Nullable FunctionTracingConfigMode mode;
 
-    @OutputCustomType.Constructor
-    private FunctionTracingConfig(@OutputCustomType.Parameter("mode") @Nullable FunctionTracingConfigMode mode) {
+    @CustomType.Constructor
+    private FunctionTracingConfig(@CustomType.Parameter("mode") @Nullable FunctionTracingConfigMode mode) {
         this.mode = mode;
     }
 

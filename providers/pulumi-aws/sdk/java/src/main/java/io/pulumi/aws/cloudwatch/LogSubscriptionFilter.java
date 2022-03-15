@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.cloudwatch.LogSubscriptionFilterArgs;
 import io.pulumi.aws.cloudwatch.inputs.LogSubscriptionFilterState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class LogSubscriptionFilter extends io.pulumi.resources.CustomResource {
      * The ARN of the destination to deliver matching log events to. Kinesis stream or Lambda function ARN.
      * 
      */
-    @OutputExport(name="destinationArn", type=String.class, parameters={})
+    @Export(name="destinationArn", type=String.class, parameters={})
     private Output<String> destinationArn;
 
     /**
@@ -46,7 +46,7 @@ public class LogSubscriptionFilter extends io.pulumi.resources.CustomResource {
      * The method used to distribute log data to the destination. By default log data is grouped by log stream, but the grouping can be set to random for a more even distribution. This property is only applicable when the destination is an Amazon Kinesis stream. Valid values are "Random" and "ByLogStream".
      * 
      */
-    @OutputExport(name="distribution", type=String.class, parameters={})
+    @Export(name="distribution", type=String.class, parameters={})
     private Output</* @Nullable */ String> distribution;
 
     /**
@@ -60,7 +60,7 @@ public class LogSubscriptionFilter extends io.pulumi.resources.CustomResource {
      * A valid CloudWatch Logs filter pattern for subscribing to a filtered stream of log events.
      * 
      */
-    @OutputExport(name="filterPattern", type=String.class, parameters={})
+    @Export(name="filterPattern", type=String.class, parameters={})
     private Output<String> filterPattern;
 
     /**
@@ -74,7 +74,7 @@ public class LogSubscriptionFilter extends io.pulumi.resources.CustomResource {
      * The name of the log group to associate the subscription filter with
      * 
      */
-    @OutputExport(name="logGroup", type=String.class, parameters={})
+    @Export(name="logGroup", type=String.class, parameters={})
     private Output<String> logGroup;
 
     /**
@@ -88,7 +88,7 @@ public class LogSubscriptionFilter extends io.pulumi.resources.CustomResource {
      * A name for the subscription filter
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -102,7 +102,7 @@ public class LogSubscriptionFilter extends io.pulumi.resources.CustomResource {
      * The ARN of an IAM role that grants Amazon CloudWatch Logs permissions to deliver ingested log events to the destination. If you use Lambda as a destination, you should skip this argument and use `aws.lambda.Permission` resource for granting access from CloudWatch logs to the destination Lambda function.
      * 
      */
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     /**

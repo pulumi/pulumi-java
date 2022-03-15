@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InnerErrorResponse {
     /**
      * Any Key value pairs that can be provided to the client for additional  verbose information.
@@ -28,11 +28,11 @@ public final class InnerErrorResponse {
      */
     private final @Nullable InnerErrorResponse embeddedInnerError;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InnerErrorResponse(
-        @OutputCustomType.Parameter("additionalInfo") @Nullable Map<String,String> additionalInfo,
-        @OutputCustomType.Parameter("code") @Nullable String code,
-        @OutputCustomType.Parameter("embeddedInnerError") @Nullable InnerErrorResponse embeddedInnerError) {
+        @CustomType.Parameter("additionalInfo") @Nullable Map<String,String> additionalInfo,
+        @CustomType.Parameter("code") @Nullable String code,
+        @CustomType.Parameter("embeddedInnerError") @Nullable InnerErrorResponse embeddedInnerError) {
         this.additionalInfo = additionalInfo;
         this.code = code;
         this.embeddedInnerError = embeddedInnerError;

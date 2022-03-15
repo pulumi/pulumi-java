@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.ComputeNodeFillType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -13,7 +13,7 @@ public final class TaskSchedulingPolicyArgs extends io.pulumi.resources.Resource
 
     public static final TaskSchedulingPolicyArgs Empty = new TaskSchedulingPolicyArgs();
 
-    @InputImport(name="nodeFillType", required=true)
+    @Import(name="nodeFillType", required=true)
       private final Output<ComputeNodeFillType> nodeFillType;
 
     public Output<ComputeNodeFillType> getNodeFillType() {

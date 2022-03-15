@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.enums.KnownExtensionDataSourceStreams;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
      * The name of the VM extension.
      * 
      */
-    @InputImport(name="extensionName", required=true)
+    @Import(name="extensionName", required=true)
       private final Output<String> extensionName;
 
     public Output<String> getExtensionName() {
@@ -38,7 +38,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
      * The extension settings. The format is specific for particular extension.
      * 
      */
-    @InputImport(name="extensionSettings")
+    @Import(name="extensionSettings")
       private final @Nullable Output<Object> extensionSettings;
 
     public Output<Object> getExtensionSettings() {
@@ -49,7 +49,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
      * The list of data sources this extension needs data from.
      * 
      */
-    @InputImport(name="inputDataSources")
+    @Import(name="inputDataSources")
       private final @Nullable Output<List<String>> inputDataSources;
 
     public Output<List<String>> getInputDataSources() {
@@ -61,7 +61,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
      * This name should be unique across all data sources (regardless of type) within the data collection rule.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -73,7 +73,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
      * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
      * 
      */
-    @InputImport(name="streams")
+    @Import(name="streams")
       private final @Nullable Output<List<Either<String,KnownExtensionDataSourceStreams>>> streams;
 
     public Output<List<Either<String,KnownExtensionDataSourceStreams>>> getStreams() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.redhatopenshift.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class APIServerProfileResponse {
     /**
      * The IP of the cluster API server (immutable).
@@ -27,11 +27,11 @@ public final class APIServerProfileResponse {
      */
     private final @Nullable String visibility;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private APIServerProfileResponse(
-        @OutputCustomType.Parameter("ip") @Nullable String ip,
-        @OutputCustomType.Parameter("url") @Nullable String url,
-        @OutputCustomType.Parameter("visibility") @Nullable String visibility) {
+        @CustomType.Parameter("ip") @Nullable String ip,
+        @CustomType.Parameter("url") @Nullable String url,
+        @CustomType.Parameter("visibility") @Nullable String visibility) {
         this.ip = ip;
         this.url = url;
         this.visibility = visibility;

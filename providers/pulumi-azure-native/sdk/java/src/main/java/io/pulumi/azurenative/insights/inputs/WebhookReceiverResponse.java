@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
      * Indicates the identifier uri for aad auth.
      * 
      */
-    @InputImport(name="identifierUri")
+    @Import(name="identifierUri")
       private final @Nullable String identifierUri;
 
     public Optional<String> getIdentifierUri() {
@@ -34,7 +34,7 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
      * The name of the webhook receiver. Names must be unique across all receivers within an action group.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -45,7 +45,7 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
      * Indicates the webhook app object Id for aad auth.
      * 
      */
-    @InputImport(name="objectId")
+    @Import(name="objectId")
       private final @Nullable String objectId;
 
     public Optional<String> getObjectId() {
@@ -56,7 +56,7 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
      * The URI where webhooks should be sent.
      * 
      */
-    @InputImport(name="serviceUri", required=true)
+    @Import(name="serviceUri", required=true)
       private final String serviceUri;
 
     public String getServiceUri() {
@@ -67,7 +67,7 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
      * Indicates the tenant id for aad auth.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
@@ -78,7 +78,7 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
      * Indicates whether or not use AAD authentication.
      * 
      */
-    @InputImport(name="useAadAuth")
+    @Import(name="useAadAuth")
       private final @Nullable Boolean useAadAuth;
 
     public Optional<Boolean> getUseAadAuth() {
@@ -89,7 +89,7 @@ public final class WebhookReceiverResponse extends io.pulumi.resources.InvokeArg
      * Indicates whether to use common alert schema.
      * 
      */
-    @InputImport(name="useCommonAlertSchema")
+    @Import(name="useCommonAlertSchema")
       private final @Nullable Boolean useCommonAlertSchema;
 
     public Optional<Boolean> getUseCommonAlertSchema() {

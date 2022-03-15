@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.engagementfabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ChannelTypeDescriptionResponse {
     /**
      * Text description for the channel
@@ -28,11 +28,11 @@ public final class ChannelTypeDescriptionResponse {
      */
     private final @Nullable String channelType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ChannelTypeDescriptionResponse(
-        @OutputCustomType.Parameter("channelDescription") @Nullable String channelDescription,
-        @OutputCustomType.Parameter("channelFunctions") @Nullable List<String> channelFunctions,
-        @OutputCustomType.Parameter("channelType") @Nullable String channelType) {
+        @CustomType.Parameter("channelDescription") @Nullable String channelDescription,
+        @CustomType.Parameter("channelFunctions") @Nullable List<String> channelFunctions,
+        @CustomType.Parameter("channelType") @Nullable String channelType) {
         this.channelDescription = channelDescription;
         this.channelFunctions = channelFunctions;
         this.channelType = channelType;

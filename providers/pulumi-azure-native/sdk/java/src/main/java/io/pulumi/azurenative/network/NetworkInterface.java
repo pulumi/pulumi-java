@@ -15,7 +15,7 @@ import io.pulumi.azurenative.network.outputs.PrivateLinkServiceResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -44,7 +44,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * The DNS settings in network interface.
      * 
      */
-    @OutputExport(name="dnsSettings", type=NetworkInterfaceDnsSettingsResponse.class, parameters={})
+    @Export(name="dnsSettings", type=NetworkInterfaceDnsSettingsResponse.class, parameters={})
     private Output</* @Nullable */ NetworkInterfaceDnsSettingsResponse> dnsSettings;
 
     /**
@@ -58,7 +58,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * A reference to the dscp configuration to which the network interface is linked.
      * 
      */
-    @OutputExport(name="dscpConfiguration", type=SubResourceResponse.class, parameters={})
+    @Export(name="dscpConfiguration", type=SubResourceResponse.class, parameters={})
     private Output<SubResourceResponse> dscpConfiguration;
 
     /**
@@ -72,7 +72,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * If the network interface is accelerated networking enabled.
      * 
      */
-    @OutputExport(name="enableAcceleratedNetworking", type=Boolean.class, parameters={})
+    @Export(name="enableAcceleratedNetworking", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableAcceleratedNetworking;
 
     /**
@@ -86,7 +86,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Indicates whether IP forwarding is enabled on this network interface.
      * 
      */
-    @OutputExport(name="enableIPForwarding", type=Boolean.class, parameters={})
+    @Export(name="enableIPForwarding", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableIPForwarding;
 
     /**
@@ -100,7 +100,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -114,7 +114,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * The extended location of the network interface.
      * 
      */
-    @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
+    @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
@@ -128,7 +128,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * A list of references to linked BareMetal resources.
      * 
      */
-    @OutputExport(name="hostedWorkloads", type=List.class, parameters={String.class})
+    @Export(name="hostedWorkloads", type=List.class, parameters={String.class})
     private Output<List<String>> hostedWorkloads;
 
     /**
@@ -142,7 +142,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * A list of IPConfigurations of the network interface.
      * 
      */
-    @OutputExport(name="ipConfigurations", type=List.class, parameters={NetworkInterfaceIPConfigurationResponse.class})
+    @Export(name="ipConfigurations", type=List.class, parameters={NetworkInterfaceIPConfigurationResponse.class})
     private Output</* @Nullable */ List<NetworkInterfaceIPConfigurationResponse>> ipConfigurations;
 
     /**
@@ -156,7 +156,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -170,7 +170,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * The MAC address of the network interface.
      * 
      */
-    @OutputExport(name="macAddress", type=String.class, parameters={})
+    @Export(name="macAddress", type=String.class, parameters={})
     private Output<String> macAddress;
 
     /**
@@ -184,7 +184,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Migration phase of Network Interface resource.
      * 
      */
-    @OutputExport(name="migrationPhase", type=String.class, parameters={})
+    @Export(name="migrationPhase", type=String.class, parameters={})
     private Output</* @Nullable */ String> migrationPhase;
 
     /**
@@ -198,7 +198,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -212,7 +212,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * The reference to the NetworkSecurityGroup resource.
      * 
      */
-    @OutputExport(name="networkSecurityGroup", type=NetworkSecurityGroupResponse.class, parameters={})
+    @Export(name="networkSecurityGroup", type=NetworkSecurityGroupResponse.class, parameters={})
     private Output</* @Nullable */ NetworkSecurityGroupResponse> networkSecurityGroup;
 
     /**
@@ -226,7 +226,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Type of Network Interface resource.
      * 
      */
-    @OutputExport(name="nicType", type=String.class, parameters={})
+    @Export(name="nicType", type=String.class, parameters={})
     private Output</* @Nullable */ String> nicType;
 
     /**
@@ -240,7 +240,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Whether this is a primary network interface on a virtual machine.
      * 
      */
-    @OutputExport(name="primary", type=Boolean.class, parameters={})
+    @Export(name="primary", type=Boolean.class, parameters={})
     private Output<Boolean> primary;
 
     /**
@@ -254,7 +254,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * A reference to the private endpoint to which the network interface is linked.
      * 
      */
-    @OutputExport(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
+    @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output<PrivateEndpointResponse> privateEndpoint;
 
     /**
@@ -268,7 +268,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Privatelinkservice of the network interface resource.
      * 
      */
-    @OutputExport(name="privateLinkService", type=PrivateLinkServiceResponse.class, parameters={})
+    @Export(name="privateLinkService", type=PrivateLinkServiceResponse.class, parameters={})
     private Output</* @Nullable */ PrivateLinkServiceResponse> privateLinkService;
 
     /**
@@ -282,7 +282,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * The provisioning state of the network interface resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -296,7 +296,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * The resource GUID property of the network interface resource.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -310,7 +310,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -324,7 +324,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * A list of TapConfigurations of the network interface.
      * 
      */
-    @OutputExport(name="tapConfigurations", type=List.class, parameters={NetworkInterfaceTapConfigurationResponse.class})
+    @Export(name="tapConfigurations", type=List.class, parameters={NetworkInterfaceTapConfigurationResponse.class})
     private Output<List<NetworkInterfaceTapConfigurationResponse>> tapConfigurations;
 
     /**
@@ -338,7 +338,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -352,7 +352,7 @@ public class NetworkInterface extends io.pulumi.resources.CustomResource {
      * The reference to a virtual machine.
      * 
      */
-    @OutputExport(name="virtualMachine", type=SubResourceResponse.class, parameters={})
+    @Export(name="virtualMachine", type=SubResourceResponse.class, parameters={})
     private Output<SubResourceResponse> virtualMachine;
 
     /**

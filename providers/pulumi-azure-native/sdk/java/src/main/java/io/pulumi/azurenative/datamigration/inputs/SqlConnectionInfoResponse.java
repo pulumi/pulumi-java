@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
      * Additional connection settings
      * 
      */
-    @InputImport(name="additionalSettings")
+    @Import(name="additionalSettings")
       private final @Nullable String additionalSettings;
 
     public Optional<String> getAdditionalSettings() {
@@ -34,7 +34,7 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
      * Authentication type to use for connection
      * 
      */
-    @InputImport(name="authentication")
+    @Import(name="authentication")
       private final @Nullable String authentication;
 
     public Optional<String> getAuthentication() {
@@ -45,7 +45,7 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
      * Data source in the format Protocol:MachineName\SQLServerInstanceName,PortNumber
      * 
      */
-    @InputImport(name="dataSource", required=true)
+    @Import(name="dataSource", required=true)
       private final String dataSource;
 
     public String getDataSource() {
@@ -56,7 +56,7 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
      * Whether to encrypt the connection
      * 
      */
-    @InputImport(name="encryptConnection")
+    @Import(name="encryptConnection")
       private final @Nullable Boolean encryptConnection;
 
     public Optional<Boolean> getEncryptConnection() {
@@ -67,7 +67,7 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
      * Password credential.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable String password;
 
     public Optional<String> getPassword() {
@@ -78,7 +78,7 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
      * Server platform type for connection
      * 
      */
-    @InputImport(name="platform")
+    @Import(name="platform")
       private final @Nullable String platform;
 
     public Optional<String> getPlatform() {
@@ -89,7 +89,7 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
      * Whether to trust the server certificate
      * 
      */
-    @InputImport(name="trustServerCertificate")
+    @Import(name="trustServerCertificate")
       private final @Nullable Boolean trustServerCertificate;
 
     public Optional<Boolean> getTrustServerCertificate() {
@@ -101,7 +101,7 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
      * Expected value is 'SqlConnectionInfo'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -112,7 +112,7 @@ public final class SqlConnectionInfoResponse extends io.pulumi.resources.InvokeA
      * User name
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable String userName;
 
     public Optional<String> getUserName() {

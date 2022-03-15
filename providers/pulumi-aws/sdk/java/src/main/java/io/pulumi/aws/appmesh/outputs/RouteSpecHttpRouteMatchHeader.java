@@ -4,14 +4,14 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.RouteSpecHttpRouteMatchHeaderMatch;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RouteSpecHttpRouteMatchHeader {
     /**
      * If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
@@ -29,11 +29,11 @@ public final class RouteSpecHttpRouteMatchHeader {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouteSpecHttpRouteMatchHeader(
-        @OutputCustomType.Parameter("invert") @Nullable Boolean invert,
-        @OutputCustomType.Parameter("match") @Nullable RouteSpecHttpRouteMatchHeaderMatch match,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("invert") @Nullable Boolean invert,
+        @CustomType.Parameter("match") @Nullable RouteSpecHttpRouteMatchHeaderMatch match,
+        @CustomType.Parameter("name") String name) {
         this.invert = invert;
         this.match = match;
         this.name = name;

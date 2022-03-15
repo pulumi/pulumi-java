@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aadiam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetprivateLinkForAzureAdResult {
     /**
      * Flag indicating whether all tenants are allowed
@@ -65,18 +65,18 @@ public final class GetprivateLinkForAzureAdResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetprivateLinkForAzureAdResult(
-        @OutputCustomType.Parameter("allTenants") @Nullable Boolean allTenants,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("ownerTenantId") @Nullable String ownerTenantId,
-        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
-        @OutputCustomType.Parameter("resourceName") @Nullable String resourceName,
-        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("tenants") @Nullable List<String> tenants,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("allTenants") @Nullable Boolean allTenants,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("ownerTenantId") @Nullable String ownerTenantId,
+        @CustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @CustomType.Parameter("resourceName") @Nullable String resourceName,
+        @CustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("tenants") @Nullable List<String> tenants,
+        @CustomType.Parameter("type") String type) {
         this.allTenants = allTenants;
         this.id = id;
         this.name = name;

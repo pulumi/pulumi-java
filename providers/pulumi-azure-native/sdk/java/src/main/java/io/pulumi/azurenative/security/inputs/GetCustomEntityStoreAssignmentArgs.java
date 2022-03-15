@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetCustomEntityStoreAssignmentArgs extends io.pulumi.resource
      * Name of the custom entity store assignment. Generated name is GUID.
      * 
      */
-    @InputImport(name="customEntityStoreAssignmentName", required=true)
+    @Import(name="customEntityStoreAssignmentName", required=true)
       private final String customEntityStoreAssignmentName;
 
     public String getCustomEntityStoreAssignmentName() {
@@ -27,7 +27,7 @@ public final class GetCustomEntityStoreAssignmentArgs extends io.pulumi.resource
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

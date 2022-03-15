@@ -6,22 +6,22 @@ package io.pulumi.awsnative.appflow.outputs;
 import io.pulumi.awsnative.appflow.enums.FlowFileType;
 import io.pulumi.awsnative.appflow.outputs.FlowAggregationConfig;
 import io.pulumi.awsnative.appflow.outputs.FlowPrefixConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlowS3OutputFormatConfig {
     private final @Nullable FlowAggregationConfig aggregationConfig;
     private final @Nullable FlowFileType fileType;
     private final @Nullable FlowPrefixConfig prefixConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlowS3OutputFormatConfig(
-        @OutputCustomType.Parameter("aggregationConfig") @Nullable FlowAggregationConfig aggregationConfig,
-        @OutputCustomType.Parameter("fileType") @Nullable FlowFileType fileType,
-        @OutputCustomType.Parameter("prefixConfig") @Nullable FlowPrefixConfig prefixConfig) {
+        @CustomType.Parameter("aggregationConfig") @Nullable FlowAggregationConfig aggregationConfig,
+        @CustomType.Parameter("fileType") @Nullable FlowFileType fileType,
+        @CustomType.Parameter("prefixConfig") @Nullable FlowPrefixConfig prefixConfig) {
         this.aggregationConfig = aggregationConfig;
         this.fileType = fileType;
         this.prefixConfig = prefixConfig;

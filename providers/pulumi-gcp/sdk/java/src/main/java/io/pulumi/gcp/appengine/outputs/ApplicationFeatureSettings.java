@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationFeatureSettings {
     /**
      * Set to false to use the legacy health check instead of the readiness
@@ -16,8 +16,8 @@ public final class ApplicationFeatureSettings {
      */
     private final Boolean splitHealthChecks;
 
-    @OutputCustomType.Constructor
-    private ApplicationFeatureSettings(@OutputCustomType.Parameter("splitHealthChecks") Boolean splitHealthChecks) {
+    @CustomType.Constructor
+    private ApplicationFeatureSettings(@CustomType.Parameter("splitHealthChecks") Boolean splitHealthChecks) {
         this.splitHealthChecks = splitHealthChecks;
     }
 

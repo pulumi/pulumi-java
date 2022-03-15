@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DicomStoreStreamConfigBigqueryDestinationGetArgs extends io.p
      * a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
      * 
      */
-    @InputImport(name="tableUri", required=true)
+    @Import(name="tableUri", required=true)
       private final Output<String> tableUri;
 
     public Output<String> getTableUri() {

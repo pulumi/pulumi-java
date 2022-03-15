@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayProbeHealthResponseMatchResponse {
     /**
      * Body that must be contained in the health response. Default value is empty.
@@ -23,10 +23,10 @@ public final class ApplicationGatewayProbeHealthResponseMatchResponse {
      */
     private final @Nullable List<String> statusCodes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayProbeHealthResponseMatchResponse(
-        @OutputCustomType.Parameter("body") @Nullable String body,
-        @OutputCustomType.Parameter("statusCodes") @Nullable List<String> statusCodes) {
+        @CustomType.Parameter("body") @Nullable String body,
+        @CustomType.Parameter("statusCodes") @Nullable List<String> statusCodes) {
         this.body = body;
         this.statusCodes = statusCodes;
     }

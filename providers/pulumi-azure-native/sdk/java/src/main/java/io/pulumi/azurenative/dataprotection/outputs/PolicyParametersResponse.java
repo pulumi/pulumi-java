@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.AzureOperationalStoreParametersResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyParametersResponse {
     /**
      * Gets or sets the DataStore Parameters
@@ -17,8 +17,8 @@ public final class PolicyParametersResponse {
      */
     private final @Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList;
 
-    @OutputCustomType.Constructor
-    private PolicyParametersResponse(@OutputCustomType.Parameter("dataStoreParametersList") @Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList) {
+    @CustomType.Constructor
+    private PolicyParametersResponse(@CustomType.Parameter("dataStoreParametersList") @Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList) {
         this.dataStoreParametersList = dataStoreParametersList;
     }
 

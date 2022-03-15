@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.ApiErrorResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * The errors that were encountered during execution of the operation. The details array contains the list of them.
      * 
      */
-    @InputImport(name="error", required=true)
+    @Import(name="error", required=true)
       private final ApiErrorResponse error;
 
     public ApiErrorResponse getError() {
@@ -34,7 +34,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * The number of all available patches but excluded explicitly by a customer-specified exclusion list match.
      * 
      */
-    @InputImport(name="excludedPatchCount", required=true)
+    @Import(name="excludedPatchCount", required=true)
       private final Integer excludedPatchCount;
 
     public Integer getExcludedPatchCount() {
@@ -45,7 +45,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * The count of patches that failed installation.
      * 
      */
-    @InputImport(name="failedPatchCount", required=true)
+    @Import(name="failedPatchCount", required=true)
       private final Integer failedPatchCount;
 
     public Integer getFailedPatchCount() {
@@ -56,7 +56,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * The activity ID of the operation that produced this result. It is used to correlate across CRP and extension logs.
      * 
      */
-    @InputImport(name="installationActivityId", required=true)
+    @Import(name="installationActivityId", required=true)
       private final String installationActivityId;
 
     public String getInstallationActivityId() {
@@ -67,7 +67,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * The count of patches that successfully installed.
      * 
      */
-    @InputImport(name="installedPatchCount", required=true)
+    @Import(name="installedPatchCount", required=true)
       private final Integer installedPatchCount;
 
     public Integer getInstalledPatchCount() {
@@ -78,7 +78,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * The UTC timestamp when the operation began.
      * 
      */
-    @InputImport(name="lastModifiedTime", required=true)
+    @Import(name="lastModifiedTime", required=true)
       private final String lastModifiedTime;
 
     public String getLastModifiedTime() {
@@ -89,7 +89,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * Describes whether the operation ran out of time before it completed all its intended actions
      * 
      */
-    @InputImport(name="maintenanceWindowExceeded", required=true)
+    @Import(name="maintenanceWindowExceeded", required=true)
       private final Boolean maintenanceWindowExceeded;
 
     public Boolean getMaintenanceWindowExceeded() {
@@ -100,7 +100,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * The number of all available patches but not going to be installed because it didn't match a classification or inclusion list entry.
      * 
      */
-    @InputImport(name="notSelectedPatchCount", required=true)
+    @Import(name="notSelectedPatchCount", required=true)
       private final Integer notSelectedPatchCount;
 
     public Integer getNotSelectedPatchCount() {
@@ -111,7 +111,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * The number of all available patches expected to be installed over the course of the patch installation operation.
      * 
      */
-    @InputImport(name="pendingPatchCount", required=true)
+    @Import(name="pendingPatchCount", required=true)
       private final Integer pendingPatchCount;
 
     public Integer getPendingPatchCount() {
@@ -122,7 +122,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * The UTC timestamp when the operation began.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -133,7 +133,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * The overall success or failure status of the operation. It remains "InProgress" until the operation completes. At that point it will become "Unknown", "Failed", "Succeeded", or "CompletedWithWarnings."
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

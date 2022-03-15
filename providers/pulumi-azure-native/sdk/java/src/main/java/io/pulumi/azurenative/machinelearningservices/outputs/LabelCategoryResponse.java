@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.LabelClassResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LabelCategoryResponse {
     /**
      * Indicates whether it is allowed to select multiple classes in this category.
@@ -30,11 +30,11 @@ public final class LabelCategoryResponse {
      */
     private final @Nullable String displayName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LabelCategoryResponse(
-        @OutputCustomType.Parameter("allowMultiSelect") @Nullable Boolean allowMultiSelect,
-        @OutputCustomType.Parameter("classes") Map<String,LabelClassResponse> classes,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName) {
+        @CustomType.Parameter("allowMultiSelect") @Nullable Boolean allowMultiSelect,
+        @CustomType.Parameter("classes") Map<String,LabelClassResponse> classes,
+        @CustomType.Parameter("displayName") @Nullable String displayName) {
         this.allowMultiSelect = allowMultiSelect;
         this.classes = classes;
         this.displayName = displayName;

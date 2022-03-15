@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.batch_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UncountedTerminatedPods {
     /**
      * Failed holds UIDs of failed Pods.
@@ -22,10 +22,10 @@ public final class UncountedTerminatedPods {
      */
     private final @Nullable List<String> succeeded;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UncountedTerminatedPods(
-        @OutputCustomType.Parameter("failed") @Nullable List<String> failed,
-        @OutputCustomType.Parameter("succeeded") @Nullable List<String> succeeded) {
+        @CustomType.Parameter("failed") @Nullable List<String> failed,
+        @CustomType.Parameter("succeeded") @Nullable List<String> succeeded) {
         this.failed = failed;
         this.succeeded = succeeded;
     }

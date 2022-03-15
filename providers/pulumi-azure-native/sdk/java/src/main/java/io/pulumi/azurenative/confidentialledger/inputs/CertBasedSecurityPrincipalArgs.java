@@ -6,7 +6,7 @@ package io.pulumi.azurenative.confidentialledger.inputs;
 import io.pulumi.azurenative.confidentialledger.enums.LedgerRoleName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class CertBasedSecurityPrincipalArgs extends io.pulumi.resources.Re
      * Base64 encoded public key of the user cert (.pem or .cer)
      * 
      */
-    @InputImport(name="cert")
+    @Import(name="cert")
       private final @Nullable Output<String> cert;
 
     public Output<String> getCert() {
@@ -35,7 +35,7 @@ public final class CertBasedSecurityPrincipalArgs extends io.pulumi.resources.Re
      * LedgerRole associated with the Security Principal of Ledger
      * 
      */
-    @InputImport(name="ledgerRoleName")
+    @Import(name="ledgerRoleName")
       private final @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName;
 
     public Output<Either<String,LedgerRoleName>> getLedgerRoleName() {

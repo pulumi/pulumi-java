@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * then the rest of the bytes are omitted.
      * 
      */
-    @InputImport(name="bytesLimitPerFile")
+    @Import(name="bytesLimitPerFile")
       private final @Nullable Output<Integer> bytesLimitPerFile;
 
     public Output<Integer> getBytesLimitPerFile() {
@@ -34,7 +34,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
      * 
      */
-    @InputImport(name="bytesLimitPerFilePercent")
+    @Import(name="bytesLimitPerFilePercent")
       private final @Nullable Output<Integer> bytesLimitPerFilePercent;
 
     public Output<Integer> getBytesLimitPerFilePercent() {
@@ -46,7 +46,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * Structure is documented below.
      * 
      */
-    @InputImport(name="fileSet", required=true)
+    @Import(name="fileSet", required=true)
       private final Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetGetArgs> fileSet;
 
     public Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetGetArgs> getFileSet() {
@@ -60,7 +60,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * Each value may be one of `BINARY_FILE`, `TEXT_FILE`, `IMAGE`, `WORD`, `PDF`, `AVRO`, `CSV`, and `TSV`.
      * 
      */
-    @InputImport(name="fileTypes")
+    @Import(name="fileTypes")
       private final @Nullable Output<List<String>> fileTypes;
 
     public Output<List<String>> getFileTypes() {
@@ -72,7 +72,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
      * 
      */
-    @InputImport(name="filesLimitPercent")
+    @Import(name="filesLimitPercent")
       private final @Nullable Output<Integer> filesLimitPercent;
 
     public Output<Integer> getFilesLimitPercent() {
@@ -85,7 +85,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * Possible values are `TOP` and `RANDOM_START`.
      * 
      */
-    @InputImport(name="sampleMethod")
+    @Import(name="sampleMethod")
       private final @Nullable Output<String> sampleMethod;
 
     public Output<String> getSampleMethod() {

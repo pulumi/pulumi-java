@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ServicePrincipalPropertiesResponse extends io.pulumi.resource
      * Application ID of service principal.
      * 
      */
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable String applicationId;
 
     public Optional<String> getApplicationId() {
@@ -33,7 +33,7 @@ public final class ServicePrincipalPropertiesResponse extends io.pulumi.resource
      * A secret string that the application uses to prove its identity, also can be referred to as application password (write only).
      * 
      */
-    @InputImport(name="secret")
+    @Import(name="secret")
       private final @Nullable String secret;
 
     public Optional<String> getSecret() {

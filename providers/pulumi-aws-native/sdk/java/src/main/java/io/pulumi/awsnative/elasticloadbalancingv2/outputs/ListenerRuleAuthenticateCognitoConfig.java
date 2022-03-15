@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerRuleAuthenticateCognitoConfig {
     private final @Nullable Object authenticationRequestExtraParams;
     private final @Nullable String onUnauthenticatedRequest;
@@ -22,16 +22,16 @@ public final class ListenerRuleAuthenticateCognitoConfig {
     private final String userPoolClientId;
     private final String userPoolDomain;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerRuleAuthenticateCognitoConfig(
-        @OutputCustomType.Parameter("authenticationRequestExtraParams") @Nullable Object authenticationRequestExtraParams,
-        @OutputCustomType.Parameter("onUnauthenticatedRequest") @Nullable String onUnauthenticatedRequest,
-        @OutputCustomType.Parameter("scope") @Nullable String scope,
-        @OutputCustomType.Parameter("sessionCookieName") @Nullable String sessionCookieName,
-        @OutputCustomType.Parameter("sessionTimeout") @Nullable Integer sessionTimeout,
-        @OutputCustomType.Parameter("userPoolArn") String userPoolArn,
-        @OutputCustomType.Parameter("userPoolClientId") String userPoolClientId,
-        @OutputCustomType.Parameter("userPoolDomain") String userPoolDomain) {
+        @CustomType.Parameter("authenticationRequestExtraParams") @Nullable Object authenticationRequestExtraParams,
+        @CustomType.Parameter("onUnauthenticatedRequest") @Nullable String onUnauthenticatedRequest,
+        @CustomType.Parameter("scope") @Nullable String scope,
+        @CustomType.Parameter("sessionCookieName") @Nullable String sessionCookieName,
+        @CustomType.Parameter("sessionTimeout") @Nullable Integer sessionTimeout,
+        @CustomType.Parameter("userPoolArn") String userPoolArn,
+        @CustomType.Parameter("userPoolClientId") String userPoolClientId,
+        @CustomType.Parameter("userPoolDomain") String userPoolDomain) {
         this.authenticationRequestExtraParams = authenticationRequestExtraParams;
         this.onUnauthenticatedRequest = onUnauthenticatedRequest;
         this.scope = scope;

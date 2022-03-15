@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * Path within the container at which the volume should be mounted.  Must not contain ':'.
      * 
      */
-    @InputImport(name="mountPath", required=true)
+    @Import(name="mountPath", required=true)
       private final Output<String> mountPath;
 
     public Output<String> getMountPath() {
@@ -34,7 +34,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * mountPropagation determines how mounts are propagated from the host to container and the other way around. When not set, MountPropagationNone is used. This field is beta in 1.10.
      * 
      */
-    @InputImport(name="mountPropagation")
+    @Import(name="mountPropagation")
       private final @Nullable Output<String> mountPropagation;
 
     public Output<String> getMountPropagation() {
@@ -45,7 +45,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * This must match the Name of a Volume.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -56,7 +56,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * Mounted read-only if true, read-write otherwise (false or unspecified). Defaults to false.
      * 
      */
-    @InputImport(name="readOnly")
+    @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
@@ -67,7 +67,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * Path within the volume from which the container's volume should be mounted. Defaults to "" (volume's root).
      * 
      */
-    @InputImport(name="subPath")
+    @Import(name="subPath")
       private final @Nullable Output<String> subPath;
 
     public Output<String> getSubPath() {
@@ -78,7 +78,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
      * Expanded path within the volume from which the container's volume should be mounted. Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container's environment. Defaults to "" (volume's root). SubPathExpr and SubPath are mutually exclusive.
      * 
      */
-    @InputImport(name="subPathExpr")
+    @Import(name="subPathExpr")
       private final @Nullable Output<String> subPathExpr;
 
     public Output<String> getSubPathExpr() {

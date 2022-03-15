@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.ArtifactObjectsResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ArtifactsResponse extends io.pulumi.resources.InvokeArgs {
      * A list of images to be pushed upon the successful completion of all build steps. The images will be pushed using the builder service account's credentials. The digests of the pushed images will be stored in the Build resource's results field. If any of the images fail to be pushed, the build is marked FAILURE.
      * 
      */
-    @InputImport(name="images", required=true)
+    @Import(name="images", required=true)
       private final List<String> images;
 
     public List<String> getImages() {
@@ -33,7 +33,7 @@ public final class ArtifactsResponse extends io.pulumi.resources.InvokeArgs {
      * A list of objects to be uploaded to Cloud Storage upon successful completion of all build steps. Files in the workspace matching specified paths globs will be uploaded to the specified Cloud Storage location using the builder service account's credentials. The location and generation of the uploaded objects will be stored in the Build resource's results field. If any objects fail to be pushed, the build is marked FAILURE.
      * 
      */
-    @InputImport(name="objects", required=true)
+    @Import(name="objects", required=true)
       private final ArtifactObjectsResponse objects;
 
     public ArtifactObjectsResponse getObjects() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoginScopesResponse {
     /**
      * A list of the scopes that should be requested while authenticating.
@@ -17,8 +17,8 @@ public final class LoginScopesResponse {
      */
     private final @Nullable List<String> scopes;
 
-    @OutputCustomType.Constructor
-    private LoginScopesResponse(@OutputCustomType.Parameter("scopes") @Nullable List<String> scopes) {
+    @CustomType.Constructor
+    private LoginScopesResponse(@CustomType.Parameter("scopes") @Nullable List<String> scopes) {
         this.scopes = scopes;
     }
 

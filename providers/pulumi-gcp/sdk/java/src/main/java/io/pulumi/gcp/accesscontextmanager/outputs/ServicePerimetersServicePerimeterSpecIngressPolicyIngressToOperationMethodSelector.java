@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOperationMethodSelector {
     /**
      * Value for `method` should be a valid method name for the corresponding
@@ -25,10 +25,10 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOp
      */
     private final @Nullable String permission;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOperationMethodSelector(
-        @OutputCustomType.Parameter("method") @Nullable String method,
-        @OutputCustomType.Parameter("permission") @Nullable String permission) {
+        @CustomType.Parameter("method") @Nullable String method,
+        @CustomType.Parameter("permission") @Nullable String permission) {
         this.method = method;
         this.permission = permission;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.aws.datapipeline.inputs;
 
 import io.pulumi.aws.datapipeline.inputs.GetPipelineDefinitionPipelineObjectField;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetPipelineDefinitionPipelineObject extends io.pulumi.resourc
      * Key-value pairs that define the properties of the object. See below
      * 
      */
-    @InputImport(name="fields")
+    @Import(name="fields")
       private final @Nullable List<GetPipelineDefinitionPipelineObjectField> fields;
 
     public List<GetPipelineDefinitionPipelineObjectField> getFields() {
@@ -31,7 +31,7 @@ public final class GetPipelineDefinitionPipelineObject extends io.pulumi.resourc
      * ID of the object.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -42,7 +42,7 @@ public final class GetPipelineDefinitionPipelineObject extends io.pulumi.resourc
      * ARN of the storage connector.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

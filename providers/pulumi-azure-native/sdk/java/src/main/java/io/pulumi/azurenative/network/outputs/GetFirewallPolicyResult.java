@@ -12,7 +12,7 @@ import io.pulumi.azurenative.network.outputs.FirewallPolicyThreatIntelWhitelistR
 import io.pulumi.azurenative.network.outputs.FirewallPolicyTransportSecurityResponse;
 import io.pulumi.azurenative.network.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFirewallPolicyResult {
     /**
      * The parent firewall policy from which rules are inherited.
@@ -123,28 +123,28 @@ public final class GetFirewallPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFirewallPolicyResult(
-        @OutputCustomType.Parameter("basePolicy") @Nullable SubResourceResponse basePolicy,
-        @OutputCustomType.Parameter("childPolicies") List<SubResourceResponse> childPolicies,
-        @OutputCustomType.Parameter("dnsSettings") @Nullable DnsSettingsResponse dnsSettings,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("firewalls") List<SubResourceResponse> firewalls,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
-        @OutputCustomType.Parameter("insights") @Nullable FirewallPolicyInsightsResponse insights,
-        @OutputCustomType.Parameter("intrusionDetection") @Nullable FirewallPolicyIntrusionDetectionResponse intrusionDetection,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("ruleCollectionGroups") List<SubResourceResponse> ruleCollectionGroups,
-        @OutputCustomType.Parameter("sku") @Nullable FirewallPolicySkuResponse sku,
-        @OutputCustomType.Parameter("snat") @Nullable FirewallPolicySNATResponse snat,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("threatIntelMode") @Nullable String threatIntelMode,
-        @OutputCustomType.Parameter("threatIntelWhitelist") @Nullable FirewallPolicyThreatIntelWhitelistResponse threatIntelWhitelist,
-        @OutputCustomType.Parameter("transportSecurity") @Nullable FirewallPolicyTransportSecurityResponse transportSecurity,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("basePolicy") @Nullable SubResourceResponse basePolicy,
+        @CustomType.Parameter("childPolicies") List<SubResourceResponse> childPolicies,
+        @CustomType.Parameter("dnsSettings") @Nullable DnsSettingsResponse dnsSettings,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("firewalls") List<SubResourceResponse> firewalls,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @CustomType.Parameter("insights") @Nullable FirewallPolicyInsightsResponse insights,
+        @CustomType.Parameter("intrusionDetection") @Nullable FirewallPolicyIntrusionDetectionResponse intrusionDetection,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("ruleCollectionGroups") List<SubResourceResponse> ruleCollectionGroups,
+        @CustomType.Parameter("sku") @Nullable FirewallPolicySkuResponse sku,
+        @CustomType.Parameter("snat") @Nullable FirewallPolicySNATResponse snat,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("threatIntelMode") @Nullable String threatIntelMode,
+        @CustomType.Parameter("threatIntelWhitelist") @Nullable FirewallPolicyThreatIntelWhitelistResponse threatIntelWhitelist,
+        @CustomType.Parameter("transportSecurity") @Nullable FirewallPolicyTransportSecurityResponse transportSecurity,
+        @CustomType.Parameter("type") String type) {
         this.basePolicy = basePolicy;
         this.childPolicies = childPolicies;
         this.dnsSettings = dnsSettings;

@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.helm.sh_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReleaseStatus {
     /**
      * The version number of the application being deployed.
@@ -48,15 +48,15 @@ public final class ReleaseStatus {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReleaseStatus(
-        @OutputCustomType.Parameter("appVersion") @Nullable String appVersion,
-        @OutputCustomType.Parameter("chart") @Nullable String chart,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
-        @OutputCustomType.Parameter("revision") @Nullable Integer revision,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("appVersion") @Nullable String appVersion,
+        @CustomType.Parameter("chart") @Nullable String chart,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("namespace") @Nullable String namespace,
+        @CustomType.Parameter("revision") @Nullable Integer revision,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.appVersion = appVersion;
         this.chart = chart;
         this.name = name;

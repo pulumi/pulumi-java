@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.s3control.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketLifecycleConfigurationRuleAbortIncompleteMultipartUpload {
     /**
      * Number of days after which Amazon S3 aborts an incomplete multipart upload.
@@ -15,8 +15,8 @@ public final class BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploa
      */
     private final Integer daysAfterInitiation;
 
-    @OutputCustomType.Constructor
-    private BucketLifecycleConfigurationRuleAbortIncompleteMultipartUpload(@OutputCustomType.Parameter("daysAfterInitiation") Integer daysAfterInitiation) {
+    @CustomType.Constructor
+    private BucketLifecycleConfigurationRuleAbortIncompleteMultipartUpload(@CustomType.Parameter("daysAfterInitiation") Integer daysAfterInitiation) {
         this.daysAfterInitiation = daysAfterInitiation;
     }
 

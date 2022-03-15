@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VirtualSCSIControllerResponse extends io.pulumi.resources.Inv
      * Gets or sets the bus number of the controller.
      * 
      */
-    @InputImport(name="busNumber")
+    @Import(name="busNumber")
       private final @Nullable Integer busNumber;
 
     public Optional<Integer> getBusNumber() {
@@ -34,7 +34,7 @@ public final class VirtualSCSIControllerResponse extends io.pulumi.resources.Inv
      * Gets or sets the key of the controller.
      * 
      */
-    @InputImport(name="controllerKey")
+    @Import(name="controllerKey")
       private final @Nullable Integer controllerKey;
 
     public Optional<Integer> getControllerKey() {
@@ -45,7 +45,7 @@ public final class VirtualSCSIControllerResponse extends io.pulumi.resources.Inv
      * Gets or sets the SCSI controller unit number.
      * 
      */
-    @InputImport(name="scsiCtlrUnitNumber")
+    @Import(name="scsiCtlrUnitNumber")
       private final @Nullable Integer scsiCtlrUnitNumber;
 
     public Optional<Integer> getScsiCtlrUnitNumber() {
@@ -56,7 +56,7 @@ public final class VirtualSCSIControllerResponse extends io.pulumi.resources.Inv
      * Gets or sets the sharing mode.
      * 
      */
-    @InputImport(name="sharing")
+    @Import(name="sharing")
       private final @Nullable String sharing;
 
     public Optional<String> getSharing() {
@@ -67,7 +67,7 @@ public final class VirtualSCSIControllerResponse extends io.pulumi.resources.Inv
      * Gets or sets the controller type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

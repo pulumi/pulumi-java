@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DPMProtectedItemExtendedInfoResponse {
     /**
      * Used Disk storage in bytes.
@@ -85,22 +85,22 @@ public final class DPMProtectedItemExtendedInfoResponse {
      */
     private final @Nullable String totalDiskStorageSizeInBytes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DPMProtectedItemExtendedInfoResponse(
-        @OutputCustomType.Parameter("diskStorageUsedInBytes") @Nullable String diskStorageUsedInBytes,
-        @OutputCustomType.Parameter("isCollocated") @Nullable Boolean isCollocated,
-        @OutputCustomType.Parameter("isPresentOnCloud") @Nullable Boolean isPresentOnCloud,
-        @OutputCustomType.Parameter("lastBackupStatus") @Nullable String lastBackupStatus,
-        @OutputCustomType.Parameter("lastRefreshedAt") @Nullable String lastRefreshedAt,
-        @OutputCustomType.Parameter("oldestRecoveryPoint") @Nullable String oldestRecoveryPoint,
-        @OutputCustomType.Parameter("onPremiseLatestRecoveryPoint") @Nullable String onPremiseLatestRecoveryPoint,
-        @OutputCustomType.Parameter("onPremiseOldestRecoveryPoint") @Nullable String onPremiseOldestRecoveryPoint,
-        @OutputCustomType.Parameter("onPremiseRecoveryPointCount") @Nullable Integer onPremiseRecoveryPointCount,
-        @OutputCustomType.Parameter("protectableObjectLoadPath") @Nullable Map<String,String> protectableObjectLoadPath,
-        @OutputCustomType.Parameter("protected") @Nullable Boolean $protected,
-        @OutputCustomType.Parameter("protectionGroupName") @Nullable String protectionGroupName,
-        @OutputCustomType.Parameter("recoveryPointCount") @Nullable Integer recoveryPointCount,
-        @OutputCustomType.Parameter("totalDiskStorageSizeInBytes") @Nullable String totalDiskStorageSizeInBytes) {
+        @CustomType.Parameter("diskStorageUsedInBytes") @Nullable String diskStorageUsedInBytes,
+        @CustomType.Parameter("isCollocated") @Nullable Boolean isCollocated,
+        @CustomType.Parameter("isPresentOnCloud") @Nullable Boolean isPresentOnCloud,
+        @CustomType.Parameter("lastBackupStatus") @Nullable String lastBackupStatus,
+        @CustomType.Parameter("lastRefreshedAt") @Nullable String lastRefreshedAt,
+        @CustomType.Parameter("oldestRecoveryPoint") @Nullable String oldestRecoveryPoint,
+        @CustomType.Parameter("onPremiseLatestRecoveryPoint") @Nullable String onPremiseLatestRecoveryPoint,
+        @CustomType.Parameter("onPremiseOldestRecoveryPoint") @Nullable String onPremiseOldestRecoveryPoint,
+        @CustomType.Parameter("onPremiseRecoveryPointCount") @Nullable Integer onPremiseRecoveryPointCount,
+        @CustomType.Parameter("protectableObjectLoadPath") @Nullable Map<String,String> protectableObjectLoadPath,
+        @CustomType.Parameter("protected") @Nullable Boolean $protected,
+        @CustomType.Parameter("protectionGroupName") @Nullable String protectionGroupName,
+        @CustomType.Parameter("recoveryPointCount") @Nullable Integer recoveryPointCount,
+        @CustomType.Parameter("totalDiskStorageSizeInBytes") @Nullable String totalDiskStorageSizeInBytes) {
         this.diskStorageUsedInBytes = diskStorageUsedInBytes;
         this.isCollocated = isCollocated;
         this.isPresentOnCloud = isPresentOnCloud;

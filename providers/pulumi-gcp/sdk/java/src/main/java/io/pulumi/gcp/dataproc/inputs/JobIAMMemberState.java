@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.JobIAMMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class JobIAMMemberState extends io.pulumi.resources.ResourceArgs {
 
     public static final JobIAMMemberState Empty = new JobIAMMemberState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<JobIAMMemberConditionGetArgs> condition;
 
     public Output<JobIAMMemberConditionGetArgs> getCondition() {
@@ -26,21 +26,21 @@ public final class JobIAMMemberState extends io.pulumi.resources.ResourceArgs {
      * (Computed) The etag of the jobs's IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="jobId")
+    @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
     public Output<String> getJobId() {
         return this.jobId == null ? Output.empty() : this.jobId;
     }
 
-    @InputImport(name="member")
+    @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
@@ -52,7 +52,7 @@ public final class JobIAMMemberState extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider will use a default.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -64,7 +64,7 @@ public final class JobIAMMemberState extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider will use a default.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -77,7 +77,7 @@ public final class JobIAMMemberState extends io.pulumi.resources.ResourceArgs {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

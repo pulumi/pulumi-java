@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.network.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class PrivateLinkServicePrivateEndpointConnection extends io.pulumi.resou
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -50,7 +50,7 @@ public class PrivateLinkServicePrivateEndpointConnection extends io.pulumi.resou
      * The consumer link id.
      * 
      */
-    @OutputExport(name="linkIdentifier", type=String.class, parameters={})
+    @Export(name="linkIdentifier", type=String.class, parameters={})
     private Output<String> linkIdentifier;
 
     /**
@@ -64,7 +64,7 @@ public class PrivateLinkServicePrivateEndpointConnection extends io.pulumi.resou
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -78,7 +78,7 @@ public class PrivateLinkServicePrivateEndpointConnection extends io.pulumi.resou
      * The resource of private end point.
      * 
      */
-    @OutputExport(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
+    @Export(name="privateEndpoint", type=PrivateEndpointResponse.class, parameters={})
     private Output<PrivateEndpointResponse> privateEndpoint;
 
     /**
@@ -92,7 +92,7 @@ public class PrivateLinkServicePrivateEndpointConnection extends io.pulumi.resou
      * A collection of information about the state of the connection between service consumer and provider.
      * 
      */
-    @OutputExport(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
+    @Export(name="privateLinkServiceConnectionState", type=PrivateLinkServiceConnectionStateResponse.class, parameters={})
     private Output</* @Nullable */ PrivateLinkServiceConnectionStateResponse> privateLinkServiceConnectionState;
 
     /**
@@ -106,7 +106,7 @@ public class PrivateLinkServicePrivateEndpointConnection extends io.pulumi.resou
      * The provisioning state of the private endpoint connection resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -120,7 +120,7 @@ public class PrivateLinkServicePrivateEndpointConnection extends io.pulumi.resou
      * The resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

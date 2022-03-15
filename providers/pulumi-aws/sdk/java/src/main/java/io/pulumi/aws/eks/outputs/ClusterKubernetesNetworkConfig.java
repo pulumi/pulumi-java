@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.eks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterKubernetesNetworkConfig {
     /**
      * The IP family used to assign Kubernetes pod and service addresses. Valid values are `ipv4` (default) and `ipv6`. You can only specify an IP family when you create a cluster, changing this value will force a new cluster to be created.
@@ -22,10 +22,10 @@ public final class ClusterKubernetesNetworkConfig {
      */
     private final @Nullable String serviceIpv4Cidr;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterKubernetesNetworkConfig(
-        @OutputCustomType.Parameter("ipFamily") @Nullable String ipFamily,
-        @OutputCustomType.Parameter("serviceIpv4Cidr") @Nullable String serviceIpv4Cidr) {
+        @CustomType.Parameter("ipFamily") @Nullable String ipFamily,
+        @CustomType.Parameter("serviceIpv4Cidr") @Nullable String serviceIpv4Cidr) {
         this.ipFamily = ipFamily;
         this.serviceIpv4Cidr = serviceIpv4Cidr;
     }

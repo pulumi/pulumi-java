@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dns_v1.outputs.ResponsePolicyRuleLocalDataResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResponsePolicyRuleResult {
     /**
      * Answer this query with a behavior rather than DNS data.
@@ -32,13 +32,13 @@ public final class GetResponsePolicyRuleResult {
      */
     private final String ruleName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResponsePolicyRuleResult(
-        @OutputCustomType.Parameter("behavior") String behavior,
-        @OutputCustomType.Parameter("dnsName") String dnsName,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("localData") ResponsePolicyRuleLocalDataResponse localData,
-        @OutputCustomType.Parameter("ruleName") String ruleName) {
+        @CustomType.Parameter("behavior") String behavior,
+        @CustomType.Parameter("dnsName") String dnsName,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("localData") ResponsePolicyRuleLocalDataResponse localData,
+        @CustomType.Parameter("ruleName") String ruleName) {
         this.behavior = behavior;
         this.dnsName = dnsName;
         this.kind = kind;

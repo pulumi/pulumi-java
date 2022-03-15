@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.DataQualityJobDefinitionEndpointInput;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataQualityJobDefinitionDataQualityJobInput {
     private final DataQualityJobDefinitionEndpointInput endpointInput;
 
-    @OutputCustomType.Constructor
-    private DataQualityJobDefinitionDataQualityJobInput(@OutputCustomType.Parameter("endpointInput") DataQualityJobDefinitionEndpointInput endpointInput) {
+    @CustomType.Constructor
+    private DataQualityJobDefinitionDataQualityJobInput(@CustomType.Parameter("endpointInput") DataQualityJobDefinitionEndpointInput endpointInput) {
         this.endpointInput = endpointInput;
     }
 

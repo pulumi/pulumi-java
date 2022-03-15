@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PatchDeploymentRolloutDisruptionBudget {
     /**
      * Specifies a fixed value.
@@ -22,10 +22,10 @@ public final class PatchDeploymentRolloutDisruptionBudget {
      */
     private final @Nullable Integer percentage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchDeploymentRolloutDisruptionBudget(
-        @OutputCustomType.Parameter("fixed") @Nullable Integer fixed,
-        @OutputCustomType.Parameter("percentage") @Nullable Integer percentage) {
+        @CustomType.Parameter("fixed") @Nullable Integer fixed,
+        @CustomType.Parameter("percentage") @Nullable Integer percentage) {
         this.fixed = fixed;
         this.percentage = percentage;
     }

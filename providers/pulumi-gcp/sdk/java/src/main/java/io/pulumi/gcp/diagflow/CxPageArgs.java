@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.diagflow.inputs.CxPageEntryFulfillmentArgs;
 import io.pulumi.gcp.diagflow.inputs.CxPageEventHandlerArgs;
 import io.pulumi.gcp.diagflow.inputs.CxPageFormArgs;
@@ -23,7 +23,7 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * The human-readable name of the parameter, unique within the form.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -35,7 +35,7 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="entryFulfillment")
+    @Import(name="entryFulfillment")
       private final @Nullable Output<CxPageEntryFulfillmentArgs> entryFulfillment;
 
     public Output<CxPageEntryFulfillmentArgs> getEntryFulfillment() {
@@ -47,7 +47,7 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="eventHandlers")
+    @Import(name="eventHandlers")
       private final @Nullable Output<List<CxPageEventHandlerArgs>> eventHandlers;
 
     public Output<List<CxPageEventHandlerArgs>> getEventHandlers() {
@@ -59,7 +59,7 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="form")
+    @Import(name="form")
       private final @Nullable Output<CxPageFormArgs> form;
 
     public Output<CxPageFormArgs> getForm() {
@@ -81,7 +81,7 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
-    @InputImport(name="languageCode")
+    @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
     public Output<String> getLanguageCode() {
@@ -93,7 +93,7 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -107,7 +107,7 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.
      * 
      */
-    @InputImport(name="transitionRouteGroups")
+    @Import(name="transitionRouteGroups")
       private final @Nullable Output<List<String>> transitionRouteGroups;
 
     public Output<List<String>> getTransitionRouteGroups() {
@@ -126,7 +126,7 @@ public final class CxPageArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="transitionRoutes")
+    @Import(name="transitionRoutes")
       private final @Nullable Output<List<CxPageTransitionRouteArgs>> transitionRoutes;
 
     public Output<List<CxPageTransitionRouteArgs>> getTransitionRoutes() {

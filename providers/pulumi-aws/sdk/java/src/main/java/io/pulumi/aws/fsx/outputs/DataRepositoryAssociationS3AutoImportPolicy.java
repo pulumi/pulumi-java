@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.fsx.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataRepositoryAssociationS3AutoImportPolicy {
     /**
      * A list of file event types to automatically export to your linked S3 bucket or import from the linked S3 bucket. Valid values are `NEW`, `CHANGED`, `DELETED`. Max of 3.
@@ -17,8 +17,8 @@ public final class DataRepositoryAssociationS3AutoImportPolicy {
      */
     private final @Nullable List<String> events;
 
-    @OutputCustomType.Constructor
-    private DataRepositoryAssociationS3AutoImportPolicy(@OutputCustomType.Parameter("events") @Nullable List<String> events) {
+    @CustomType.Constructor
+    private DataRepositoryAssociationS3AutoImportPolicy(@CustomType.Parameter("events") @Nullable List<String> events) {
         this.events = events;
     }
 

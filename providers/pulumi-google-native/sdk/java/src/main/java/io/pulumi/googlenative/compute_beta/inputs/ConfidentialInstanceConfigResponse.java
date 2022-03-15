@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ConfidentialInstanceConfigResponse extends io.pulumi.resource
      * Defines whether the instance should have confidential compute enabled.
      * 
      */
-    @InputImport(name="enableConfidentialCompute", required=true)
+    @Import(name="enableConfidentialCompute", required=true)
       private final Boolean enableConfidentialCompute;
 
     public Boolean getEnableConfidentialCompute() {

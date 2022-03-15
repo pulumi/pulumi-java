@@ -7,13 +7,13 @@ import io.pulumi.azurenative.containerregistry.outputs.ActorResponse;
 import io.pulumi.azurenative.containerregistry.outputs.RequestResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SourceResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TargetResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EventContentResponse {
     /**
      * The action that encompasses the provided event.
@@ -51,15 +51,15 @@ public final class EventContentResponse {
      */
     private final @Nullable String timestamp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EventContentResponse(
-        @OutputCustomType.Parameter("action") @Nullable String action,
-        @OutputCustomType.Parameter("actor") @Nullable ActorResponse actor,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("request") @Nullable RequestResponse request,
-        @OutputCustomType.Parameter("source") @Nullable SourceResponse source,
-        @OutputCustomType.Parameter("target") @Nullable TargetResponse target,
-        @OutputCustomType.Parameter("timestamp") @Nullable String timestamp) {
+        @CustomType.Parameter("action") @Nullable String action,
+        @CustomType.Parameter("actor") @Nullable ActorResponse actor,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("request") @Nullable RequestResponse request,
+        @CustomType.Parameter("source") @Nullable SourceResponse source,
+        @CustomType.Parameter("target") @Nullable TargetResponse target,
+        @CustomType.Parameter("timestamp") @Nullable String timestamp) {
         this.action = action;
         this.actor = actor;
         this.id = id;

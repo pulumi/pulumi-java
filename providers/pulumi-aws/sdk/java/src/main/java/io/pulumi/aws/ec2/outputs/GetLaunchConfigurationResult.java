@@ -7,13 +7,13 @@ import io.pulumi.aws.ec2.outputs.GetLaunchConfigurationEbsBlockDevice;
 import io.pulumi.aws.ec2.outputs.GetLaunchConfigurationEphemeralBlockDevice;
 import io.pulumi.aws.ec2.outputs.GetLaunchConfigurationMetadataOption;
 import io.pulumi.aws.ec2.outputs.GetLaunchConfigurationRootBlockDevice;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLaunchConfigurationResult {
     /**
      * The Amazon Resource Name of the launch configuration.
@@ -116,28 +116,28 @@ public final class GetLaunchConfigurationResult {
      */
     private final List<String> vpcClassicLinkSecurityGroups;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLaunchConfigurationResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("associatePublicIpAddress") Boolean associatePublicIpAddress,
-        @OutputCustomType.Parameter("ebsBlockDevices") List<GetLaunchConfigurationEbsBlockDevice> ebsBlockDevices,
-        @OutputCustomType.Parameter("ebsOptimized") Boolean ebsOptimized,
-        @OutputCustomType.Parameter("enableMonitoring") Boolean enableMonitoring,
-        @OutputCustomType.Parameter("ephemeralBlockDevices") List<GetLaunchConfigurationEphemeralBlockDevice> ephemeralBlockDevices,
-        @OutputCustomType.Parameter("iamInstanceProfile") String iamInstanceProfile,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("imageId") String imageId,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("keyName") String keyName,
-        @OutputCustomType.Parameter("metadataOptions") List<GetLaunchConfigurationMetadataOption> metadataOptions,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("placementTenancy") String placementTenancy,
-        @OutputCustomType.Parameter("rootBlockDevices") List<GetLaunchConfigurationRootBlockDevice> rootBlockDevices,
-        @OutputCustomType.Parameter("securityGroups") List<String> securityGroups,
-        @OutputCustomType.Parameter("spotPrice") String spotPrice,
-        @OutputCustomType.Parameter("userData") String userData,
-        @OutputCustomType.Parameter("vpcClassicLinkId") String vpcClassicLinkId,
-        @OutputCustomType.Parameter("vpcClassicLinkSecurityGroups") List<String> vpcClassicLinkSecurityGroups) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("associatePublicIpAddress") Boolean associatePublicIpAddress,
+        @CustomType.Parameter("ebsBlockDevices") List<GetLaunchConfigurationEbsBlockDevice> ebsBlockDevices,
+        @CustomType.Parameter("ebsOptimized") Boolean ebsOptimized,
+        @CustomType.Parameter("enableMonitoring") Boolean enableMonitoring,
+        @CustomType.Parameter("ephemeralBlockDevices") List<GetLaunchConfigurationEphemeralBlockDevice> ephemeralBlockDevices,
+        @CustomType.Parameter("iamInstanceProfile") String iamInstanceProfile,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("imageId") String imageId,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("keyName") String keyName,
+        @CustomType.Parameter("metadataOptions") List<GetLaunchConfigurationMetadataOption> metadataOptions,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("placementTenancy") String placementTenancy,
+        @CustomType.Parameter("rootBlockDevices") List<GetLaunchConfigurationRootBlockDevice> rootBlockDevices,
+        @CustomType.Parameter("securityGroups") List<String> securityGroups,
+        @CustomType.Parameter("spotPrice") String spotPrice,
+        @CustomType.Parameter("userData") String userData,
+        @CustomType.Parameter("vpcClassicLinkId") String vpcClassicLinkId,
+        @CustomType.Parameter("vpcClassicLinkSecurityGroups") List<String> vpcClassicLinkSecurityGroups) {
         this.arn = arn;
         this.associatePublicIpAddress = associatePublicIpAddress;
         this.ebsBlockDevices = ebsBlockDevices;

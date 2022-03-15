@@ -6,7 +6,7 @@ package io.pulumi.aws.lambda;
 import io.pulumi.aws.lambda.inputs.CodeSigningConfigAllowedPublishersArgs;
 import io.pulumi.aws.lambda.inputs.CodeSigningConfigPoliciesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
      * A configuration block of allowed publishers as signing profiles for this code signing configuration. Detailed below.
      * 
      */
-    @InputImport(name="allowedPublishers", required=true)
+    @Import(name="allowedPublishers", required=true)
       private final Output<CodeSigningConfigAllowedPublishersArgs> allowedPublishers;
 
     public Output<CodeSigningConfigAllowedPublishersArgs> getAllowedPublishers() {
@@ -31,7 +31,7 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
      * Descriptive name for this code signing configuration.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class CodeSigningConfigArgs extends io.pulumi.resources.ResourceArg
      * A configuration block of code signing policies that define the actions to take if the validation checks fail. Detailed below.
      * 
      */
-    @InputImport(name="policies")
+    @Import(name="policies")
       private final @Nullable Output<CodeSigningConfigPoliciesArgs> policies;
 
     public Output<CodeSigningConfigPoliciesArgs> getPolicies() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.DiskDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.InitialReplicationDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VMNicDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
      * Initial replication details.
      * 
      */
-    @InputImport(name="initialReplicationDetails")
+    @Import(name="initialReplicationDetails")
       private final @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
 
     public Optional<InitialReplicationDetailsResponse> getInitialReplicationDetails() {
@@ -38,7 +38,7 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
      * Expected value is 'HyperVReplica2012'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -49,7 +49,7 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
      * The Last replication time.
      * 
      */
-    @InputImport(name="lastReplicatedTime")
+    @Import(name="lastReplicatedTime")
       private final @Nullable String lastReplicatedTime;
 
     public Optional<String> getLastReplicatedTime() {
@@ -60,7 +60,7 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
      * VM disk details.
      * 
      */
-    @InputImport(name="vMDiskDetails")
+    @Import(name="vMDiskDetails")
       private final @Nullable List<DiskDetailsResponse> vMDiskDetails;
 
     public List<DiskDetailsResponse> getVMDiskDetails() {
@@ -71,7 +71,7 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
      * The virtual machine Id.
      * 
      */
-    @InputImport(name="vmId")
+    @Import(name="vmId")
       private final @Nullable String vmId;
 
     public Optional<String> getVmId() {
@@ -82,7 +82,7 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
      * The PE Network details.
      * 
      */
-    @InputImport(name="vmNics")
+    @Import(name="vmNics")
       private final @Nullable List<VMNicDetailsResponse> vmNics;
 
     public List<VMNicDetailsResponse> getVmNics() {
@@ -93,7 +93,7 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
      * The protection state for the vm.
      * 
      */
-    @InputImport(name="vmProtectionState")
+    @Import(name="vmProtectionState")
       private final @Nullable String vmProtectionState;
 
     public Optional<String> getVmProtectionState() {
@@ -104,7 +104,7 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
      * The protection state description for the vm.
      * 
      */
-    @InputImport(name="vmProtectionStateDescription")
+    @Import(name="vmProtectionStateDescription")
       private final @Nullable String vmProtectionStateDescription;
 
     public Optional<String> getVmProtectionStateDescription() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
      * The S3 URI to an analysis configuration file
      * 
      */
-    @InputImport(name="configUri", required=true)
+    @Import(name="configUri", required=true)
       private final Output<String> configUri;
 
     public Output<String> getConfigUri() {
@@ -34,7 +34,7 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
      * Sets the environment variables in the Docker container
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable Output<Object> environment;
 
     public Output<Object> getEnvironment() {
@@ -45,7 +45,7 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
      * The container image to be run by the monitoring job.
      * 
      */
-    @InputImport(name="imageUri", required=true)
+    @Import(name="imageUri", required=true)
       private final Output<String> imageUri;
 
     public Output<String> getImageUri() {

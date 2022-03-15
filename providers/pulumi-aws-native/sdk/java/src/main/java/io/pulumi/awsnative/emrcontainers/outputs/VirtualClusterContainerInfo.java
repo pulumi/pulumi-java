@@ -4,15 +4,15 @@
 package io.pulumi.awsnative.emrcontainers.outputs;
 
 import io.pulumi.awsnative.emrcontainers.outputs.VirtualClusterEksInfo;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualClusterContainerInfo {
     private final VirtualClusterEksInfo eksInfo;
 
-    @OutputCustomType.Constructor
-    private VirtualClusterContainerInfo(@OutputCustomType.Parameter("eksInfo") VirtualClusterEksInfo eksInfo) {
+    @CustomType.Constructor
+    private VirtualClusterContainerInfo(@CustomType.Parameter("eksInfo") VirtualClusterEksInfo eksInfo) {
         this.eksInfo = eksInfo;
     }
 

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.changeanalysis;
 import io.pulumi.azurenative.changeanalysis.inputs.ConfigurationProfileResourcePropertiesArgs;
 import io.pulumi.azurenative.changeanalysis.inputs.ResourceIdentityArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * The identity block returned by ARM resource that supports managed identity.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
     public Output<ResourceIdentityArgs> getIdentity() {
@@ -31,7 +31,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * The location where the resource is to be deployed.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -42,7 +42,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * The name of the configuration profile. The profile name should be set to 'default', all other names will be overwritten.
      * 
      */
-    @InputImport(name="profileName")
+    @Import(name="profileName")
       private final @Nullable Output<String> profileName;
 
     public Output<String> getProfileName() {
@@ -53,7 +53,7 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
      * The properties of a configuration profile.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<ConfigurationProfileResourcePropertiesArgs> properties;
 
     public Output<ConfigurationProfileResourcePropertiesArgs> getProperties() {

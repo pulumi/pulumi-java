@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.DomainResourceSpec;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DomainJupyterServerAppSettings extends io.pulumi.resources.In
 
     public static final DomainJupyterServerAppSettings Empty = new DomainJupyterServerAppSettings();
 
-    @InputImport(name="defaultResourceSpec")
+    @Import(name="defaultResourceSpec")
       private final @Nullable DomainResourceSpec defaultResourceSpec;
 
     public Optional<DomainResourceSpec> getDefaultResourceSpec() {

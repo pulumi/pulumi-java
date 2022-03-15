@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridcompute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends io.
      * The actions required for private link service connection.
      * 
      */
-    @InputImport(name="actionsRequired", required=true)
+    @Import(name="actionsRequired", required=true)
       private final String actionsRequired;
 
     public String getActionsRequired() {
@@ -31,7 +31,7 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends io.
      * The private link service connection description.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -42,7 +42,7 @@ public final class PrivateLinkServiceConnectionStatePropertyResponse extends io.
      * The private link service connection status.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

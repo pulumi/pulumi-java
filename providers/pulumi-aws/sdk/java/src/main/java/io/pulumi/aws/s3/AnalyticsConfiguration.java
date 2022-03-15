@@ -9,7 +9,7 @@ import io.pulumi.aws.s3.inputs.AnalyticsConfigurationState;
 import io.pulumi.aws.s3.outputs.AnalyticsConfigurationFilter;
 import io.pulumi.aws.s3.outputs.AnalyticsConfigurationStorageClassAnalysis;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class AnalyticsConfiguration extends io.pulumi.resources.CustomResource {
      * The name of the bucket this analytics configuration is associated with.
      * 
      */
-    @OutputExport(name="bucket", type=String.class, parameters={})
+    @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
@@ -48,7 +48,7 @@ public class AnalyticsConfiguration extends io.pulumi.resources.CustomResource {
      * Object filtering that accepts a prefix, tags, or a logical AND of prefix and tags (documented below).
      * 
      */
-    @OutputExport(name="filter", type=AnalyticsConfigurationFilter.class, parameters={})
+    @Export(name="filter", type=AnalyticsConfigurationFilter.class, parameters={})
     private Output</* @Nullable */ AnalyticsConfigurationFilter> filter;
 
     /**
@@ -62,7 +62,7 @@ public class AnalyticsConfiguration extends io.pulumi.resources.CustomResource {
      * Unique identifier of the analytics configuration for the bucket.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class AnalyticsConfiguration extends io.pulumi.resources.CustomResource {
      * Configuration for the analytics data export (documented below).
      * 
      */
-    @OutputExport(name="storageClassAnalysis", type=AnalyticsConfigurationStorageClassAnalysis.class, parameters={})
+    @Export(name="storageClassAnalysis", type=AnalyticsConfigurationStorageClassAnalysis.class, parameters={})
     private Output</* @Nullable */ AnalyticsConfigurationStorageClassAnalysis> storageClassAnalysis;
 
     /**

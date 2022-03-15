@@ -4,10 +4,10 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualRouterSpecListener;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualRouterSpec {
     /**
      * The listeners that the virtual router is expected to receive inbound traffic from.
@@ -16,8 +16,8 @@ public final class VirtualRouterSpec {
      */
     private final VirtualRouterSpecListener listener;
 
-    @OutputCustomType.Constructor
-    private VirtualRouterSpec(@OutputCustomType.Parameter("listener") VirtualRouterSpecListener listener) {
+    @CustomType.Constructor
+    private VirtualRouterSpec(@CustomType.Parameter("listener") VirtualRouterSpecListener listener) {
         this.listener = listener;
     }
 

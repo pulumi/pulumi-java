@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.awsnative.lambda.inputs.EventSourceMappingEndpointsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +22,7 @@ public final class EventSourceMappingSelfManagedEventSourceArgs extends io.pulum
      * The endpoints for a self-managed event source.
      * 
      */
-    @InputImport(name="endpoints")
+    @Import(name="endpoints")
       private final @Nullable Output<EventSourceMappingEndpointsArgs> endpoints;
 
     public Output<EventSourceMappingEndpointsArgs> getEndpoints() {

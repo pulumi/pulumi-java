@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigqueryconnection_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigqueryconnection_v1beta1.enums.CloudSqlPropertiesType;
 import io.pulumi.googlenative.bigqueryconnection_v1beta1.inputs.CloudSqlCredentialArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
      * Input only. Cloud SQL credential.
      * 
      */
-    @InputImport(name="credential")
+    @Import(name="credential")
       private final @Nullable Output<CloudSqlCredentialArgs> credential;
 
     public Output<CloudSqlCredentialArgs> getCredential() {
@@ -35,7 +35,7 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
      * Database name.
      * 
      */
-    @InputImport(name="database")
+    @Import(name="database")
       private final @Nullable Output<String> database;
 
     public Output<String> getDatabase() {
@@ -46,7 +46,7 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
      * Cloud SQL instance ID in the form `project:location:instance`.
      * 
      */
-    @InputImport(name="instanceId")
+    @Import(name="instanceId")
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -57,7 +57,7 @@ public final class CloudSqlPropertiesArgs extends io.pulumi.resources.ResourceAr
      * Type of the Cloud SQL database.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<CloudSqlPropertiesType> type;
 
     public Output<CloudSqlPropertiesType> getType() {

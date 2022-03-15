@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aadiam.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetprivateLinkForAzureAdArgs extends io.pulumi.resources.Invo
      * The name of the private link policy in Azure AD.
      * 
      */
-    @InputImport(name="policyName", required=true)
+    @Import(name="policyName", required=true)
       private final String policyName;
 
     public String getPolicyName() {
@@ -27,7 +27,7 @@ public final class GetprivateLinkForAzureAdArgs extends io.pulumi.resources.Invo
      * Name of an Azure resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

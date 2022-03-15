@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class ApiPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * Describes the ServerVersion of an a MongoDB account.
      * 
      */
-    @InputImport(name="serverVersion")
+    @Import(name="serverVersion")
       private final @Nullable String serverVersion;
 
     public Optional<String> getServerVersion() {

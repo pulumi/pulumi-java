@@ -3,18 +3,18 @@
 
 package io.pulumi.awsnative.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GlobalTablePointInTimeRecoverySpecification {
     private final @Nullable Boolean pointInTimeRecoveryEnabled;
 
-    @OutputCustomType.Constructor
-    private GlobalTablePointInTimeRecoverySpecification(@OutputCustomType.Parameter("pointInTimeRecoveryEnabled") @Nullable Boolean pointInTimeRecoveryEnabled) {
+    @CustomType.Constructor
+    private GlobalTablePointInTimeRecoverySpecification(@CustomType.Parameter("pointInTimeRecoveryEnabled") @Nullable Boolean pointInTimeRecoveryEnabled) {
         this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
     }
 

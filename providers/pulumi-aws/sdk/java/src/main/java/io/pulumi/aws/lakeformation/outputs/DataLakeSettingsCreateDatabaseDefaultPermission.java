@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.lakeformation.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataLakeSettingsCreateDatabaseDefaultPermission {
     /**
      * List of permissions that are granted to the principal. Valid values may include `ALL`, `SELECT`, `ALTER`, `DROP`, `DELETE`, `INSERT`, and `DESCRIBE`. For more details, see [Lake Formation Permissions Reference](https://docs.aws.amazon.com/lake-formation/latest/dg/lf-permissions-reference.html).
@@ -23,10 +23,10 @@ public final class DataLakeSettingsCreateDatabaseDefaultPermission {
      */
     private final @Nullable String principal;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataLakeSettingsCreateDatabaseDefaultPermission(
-        @OutputCustomType.Parameter("permissions") @Nullable List<String> permissions,
-        @OutputCustomType.Parameter("principal") @Nullable String principal) {
+        @CustomType.Parameter("permissions") @Nullable List<String> permissions,
+        @CustomType.Parameter("principal") @Nullable String principal) {
         this.permissions = permissions;
         this.principal = principal;
     }

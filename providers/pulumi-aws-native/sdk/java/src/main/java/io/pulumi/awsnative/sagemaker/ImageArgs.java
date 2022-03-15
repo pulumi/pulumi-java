@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker;
 
 import io.pulumi.awsnative.sagemaker.inputs.ImageTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,28 +16,28 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ImageArgs Empty = new ImageArgs();
 
-    @InputImport(name="imageDescription")
+    @Import(name="imageDescription")
       private final @Nullable Output<String> imageDescription;
 
     public Output<String> getImageDescription() {
         return this.imageDescription == null ? Output.empty() : this.imageDescription;
     }
 
-    @InputImport(name="imageDisplayName")
+    @Import(name="imageDisplayName")
       private final @Nullable Output<String> imageDisplayName;
 
     public Output<String> getImageDisplayName() {
         return this.imageDisplayName == null ? Output.empty() : this.imageDisplayName;
     }
 
-    @InputImport(name="imageName")
+    @Import(name="imageName")
       private final @Nullable Output<String> imageName;
 
     public Output<String> getImageName() {
         return this.imageName == null ? Output.empty() : this.imageName;
     }
 
-    @InputImport(name="imageRoleArn", required=true)
+    @Import(name="imageRoleArn", required=true)
       private final Output<String> imageRoleArn;
 
     public Output<String> getImageRoleArn() {
@@ -48,7 +48,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<ImageTagArgs>> tags;
 
     public Output<List<ImageTagArgs>> getTags() {

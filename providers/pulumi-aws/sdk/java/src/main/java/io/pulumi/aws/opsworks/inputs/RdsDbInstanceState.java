@@ -4,7 +4,7 @@
 package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RdsDbInstanceState extends io.pulumi.resources.ResourceArgs {
      * A db password
      * 
      */
-    @InputImport(name="dbPassword")
+    @Import(name="dbPassword")
       private final @Nullable Output<String> dbPassword;
 
     public Output<String> getDbPassword() {
@@ -29,7 +29,7 @@ public final class RdsDbInstanceState extends io.pulumi.resources.ResourceArgs {
      * A db username
      * 
      */
-    @InputImport(name="dbUser")
+    @Import(name="dbUser")
       private final @Nullable Output<String> dbUser;
 
     public Output<String> getDbUser() {
@@ -40,7 +40,7 @@ public final class RdsDbInstanceState extends io.pulumi.resources.ResourceArgs {
      * The db instance to register for this stack. Changing this will force a new resource.
      * 
      */
-    @InputImport(name="rdsDbInstanceArn")
+    @Import(name="rdsDbInstanceArn")
       private final @Nullable Output<String> rdsDbInstanceArn;
 
     public Output<String> getRdsDbInstanceArn() {
@@ -51,7 +51,7 @@ public final class RdsDbInstanceState extends io.pulumi.resources.ResourceArgs {
      * The stack to register a db instance for. Changing this will force a new resource.
      * 
      */
-    @InputImport(name="stackId")
+    @Import(name="stackId")
       private final @Nullable Output<String> stackId;
 
     public Output<String> getStackId() {

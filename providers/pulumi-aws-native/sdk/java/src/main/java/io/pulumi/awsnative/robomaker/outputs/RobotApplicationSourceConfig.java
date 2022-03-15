@@ -4,11 +4,11 @@
 package io.pulumi.awsnative.robomaker.outputs;
 
 import io.pulumi.awsnative.robomaker.enums.RobotApplicationSourceConfigArchitecture;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RobotApplicationSourceConfig {
     /**
      * The architecture of robot application.
@@ -26,11 +26,11 @@ public final class RobotApplicationSourceConfig {
      */
     private final String s3Key;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RobotApplicationSourceConfig(
-        @OutputCustomType.Parameter("architecture") RobotApplicationSourceConfigArchitecture architecture,
-        @OutputCustomType.Parameter("s3Bucket") String s3Bucket,
-        @OutputCustomType.Parameter("s3Key") String s3Key) {
+        @CustomType.Parameter("architecture") RobotApplicationSourceConfigArchitecture architecture,
+        @CustomType.Parameter("s3Bucket") String s3Bucket,
+        @CustomType.Parameter("s3Key") String s3Key) {
         this.architecture = architecture;
         this.s3Bucket = s3Bucket;
         this.s3Key = s3Key;

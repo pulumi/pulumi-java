@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class PipelineElapsedTimeMetricPolicyResponse extends io.pulumi.res
      * TimeSpan value, after which an Azure Monitoring Metric is fired.
      * 
      */
-    @InputImport(name="duration")
+    @Import(name="duration")
       private final @Nullable Object duration;
 
     public Optional<Object> getDuration() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RosettaNetPipActivityBehaviorResponse {
     /**
      * The value indicating whether the RosettaNet PIP is used for a single action.
@@ -52,16 +52,16 @@ public final class RosettaNetPipActivityBehaviorResponse {
      */
     private final Integer timeToPerformInSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RosettaNetPipActivityBehaviorResponse(
-        @OutputCustomType.Parameter("actionType") String actionType,
-        @OutputCustomType.Parameter("isAuthorizationRequired") Boolean isAuthorizationRequired,
-        @OutputCustomType.Parameter("isSecuredTransportRequired") Boolean isSecuredTransportRequired,
-        @OutputCustomType.Parameter("nonRepudiationOfOriginAndContent") Boolean nonRepudiationOfOriginAndContent,
-        @OutputCustomType.Parameter("persistentConfidentialityScope") String persistentConfidentialityScope,
-        @OutputCustomType.Parameter("responseType") String responseType,
-        @OutputCustomType.Parameter("retryCount") Integer retryCount,
-        @OutputCustomType.Parameter("timeToPerformInSeconds") Integer timeToPerformInSeconds) {
+        @CustomType.Parameter("actionType") String actionType,
+        @CustomType.Parameter("isAuthorizationRequired") Boolean isAuthorizationRequired,
+        @CustomType.Parameter("isSecuredTransportRequired") Boolean isSecuredTransportRequired,
+        @CustomType.Parameter("nonRepudiationOfOriginAndContent") Boolean nonRepudiationOfOriginAndContent,
+        @CustomType.Parameter("persistentConfidentialityScope") String persistentConfidentialityScope,
+        @CustomType.Parameter("responseType") String responseType,
+        @CustomType.Parameter("retryCount") Integer retryCount,
+        @CustomType.Parameter("timeToPerformInSeconds") Integer timeToPerformInSeconds) {
         this.actionType = actionType;
         this.isAuthorizationRequired = isAuthorizationRequired;
         this.isSecuredTransportRequired = isSecuredTransportRequired;

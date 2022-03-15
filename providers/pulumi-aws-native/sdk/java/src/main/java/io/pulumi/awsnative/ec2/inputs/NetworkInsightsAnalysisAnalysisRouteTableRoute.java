@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,70 +14,70 @@ public final class NetworkInsightsAnalysisAnalysisRouteTableRoute extends io.pul
 
     public static final NetworkInsightsAnalysisAnalysisRouteTableRoute Empty = new NetworkInsightsAnalysisAnalysisRouteTableRoute();
 
-    @InputImport(name="destinationCidr")
+    @Import(name="destinationCidr")
       private final @Nullable String destinationCidr;
 
     public Optional<String> getDestinationCidr() {
         return this.destinationCidr == null ? Optional.empty() : Optional.ofNullable(this.destinationCidr);
     }
 
-    @InputImport(name="destinationPrefixListId")
+    @Import(name="destinationPrefixListId")
       private final @Nullable String destinationPrefixListId;
 
     public Optional<String> getDestinationPrefixListId() {
         return this.destinationPrefixListId == null ? Optional.empty() : Optional.ofNullable(this.destinationPrefixListId);
     }
 
-    @InputImport(name="egressOnlyInternetGatewayId")
+    @Import(name="egressOnlyInternetGatewayId")
       private final @Nullable String egressOnlyInternetGatewayId;
 
     public Optional<String> getEgressOnlyInternetGatewayId() {
         return this.egressOnlyInternetGatewayId == null ? Optional.empty() : Optional.ofNullable(this.egressOnlyInternetGatewayId);
     }
 
-    @InputImport(name="gatewayId")
+    @Import(name="gatewayId")
       private final @Nullable String gatewayId;
 
     public Optional<String> getGatewayId() {
         return this.gatewayId == null ? Optional.empty() : Optional.ofNullable(this.gatewayId);
     }
 
-    @InputImport(name="instanceId")
+    @Import(name="instanceId")
       private final @Nullable String instanceId;
 
     public Optional<String> getInstanceId() {
         return this.instanceId == null ? Optional.empty() : Optional.ofNullable(this.instanceId);
     }
 
-    @InputImport(name="natGatewayId")
+    @Import(name="natGatewayId")
       private final @Nullable String natGatewayId;
 
     public Optional<String> getNatGatewayId() {
         return this.natGatewayId == null ? Optional.empty() : Optional.ofNullable(this.natGatewayId);
     }
 
-    @InputImport(name="networkInterfaceId")
+    @Import(name="networkInterfaceId")
       private final @Nullable String networkInterfaceId;
 
     public Optional<String> getNetworkInterfaceId() {
         return this.networkInterfaceId == null ? Optional.empty() : Optional.ofNullable(this.networkInterfaceId);
     }
 
-    @InputImport(name="origin")
+    @Import(name="origin")
       private final @Nullable String origin;
 
     public Optional<String> getOrigin() {
         return this.origin == null ? Optional.empty() : Optional.ofNullable(this.origin);
     }
 
-    @InputImport(name="transitGatewayId")
+    @Import(name="transitGatewayId")
       private final @Nullable String transitGatewayId;
 
     public Optional<String> getTransitGatewayId() {
         return this.transitGatewayId == null ? Optional.empty() : Optional.ofNullable(this.transitGatewayId);
     }
 
-    @InputImport(name="vpcPeeringConnectionId")
+    @Import(name="vpcPeeringConnectionId")
       private final @Nullable String vpcPeeringConnectionId;
 
     public Optional<String> getVpcPeeringConnectionId() {

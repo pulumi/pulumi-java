@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ScramSecretAssociationState extends io.pulumi.resources.Resou
      * Amazon Resource Name (ARN) of the MSK cluster.
      * 
      */
-    @InputImport(name="clusterArn")
+    @Import(name="clusterArn")
       private final @Nullable Output<String> clusterArn;
 
     public Output<String> getClusterArn() {
@@ -30,7 +30,7 @@ public final class ScramSecretAssociationState extends io.pulumi.resources.Resou
      * List of AWS Secrets Manager secret ARNs.
      * 
      */
-    @InputImport(name="secretArnLists")
+    @Import(name="secretArnLists")
       private final @Nullable Output<List<String>> secretArnLists;
 
     public Output<List<String>> getSecretArnLists() {

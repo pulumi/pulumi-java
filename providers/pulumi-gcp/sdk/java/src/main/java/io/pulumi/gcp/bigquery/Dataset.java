@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.DatasetArgs;
@@ -43,7 +43,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="accesses", type=List.class, parameters={DatasetAccess.class})
+    @Export(name="accesses", type=List.class, parameters={DatasetAccess.class})
     private Output<List<DatasetAccess>> accesses;
 
     /**
@@ -58,7 +58,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * The time when this dataset was created, in milliseconds since the epoch.
      * 
      */
-    @OutputExport(name="creationTime", type=Integer.class, parameters={})
+    @Export(name="creationTime", type=Integer.class, parameters={})
     private Output<Integer> creationTime;
 
     /**
@@ -72,7 +72,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * The ID of the dataset containing this table.
      * 
      */
-    @OutputExport(name="datasetId", type=String.class, parameters={})
+    @Export(name="datasetId", type=String.class, parameters={})
     private Output<String> datasetId;
 
     /**
@@ -89,7 +89,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="defaultEncryptionConfiguration", type=DatasetDefaultEncryptionConfiguration.class, parameters={})
+    @Export(name="defaultEncryptionConfiguration", type=DatasetDefaultEncryptionConfiguration.class, parameters={})
     private Output</* @Nullable */ DatasetDefaultEncryptionConfiguration> defaultEncryptionConfiguration;
 
     /**
@@ -107,7 +107,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * the dataset, in milliseconds.
      * 
      */
-    @OutputExport(name="defaultPartitionExpirationMs", type=Integer.class, parameters={})
+    @Export(name="defaultPartitionExpirationMs", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> defaultPartitionExpirationMs;
 
     /**
@@ -123,7 +123,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * The minimum value is 3600000 milliseconds (one hour).
      * 
      */
-    @OutputExport(name="defaultTableExpirationMs", type=Integer.class, parameters={})
+    @Export(name="defaultTableExpirationMs", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> defaultTableExpirationMs;
 
     /**
@@ -140,7 +140,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * destroying the resource will fail if tables are present.
      * 
      */
-    @OutputExport(name="deleteContentsOnDestroy", type=Boolean.class, parameters={})
+    @Export(name="deleteContentsOnDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deleteContentsOnDestroy;
 
     /**
@@ -156,7 +156,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * A user-friendly description of the dataset
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -170,7 +170,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * A hash of the resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -184,7 +184,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * A descriptive name for the dataset
      * 
      */
-    @OutputExport(name="friendlyName", type=String.class, parameters={})
+    @Export(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
     /**
@@ -199,7 +199,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * organize and group your datasets
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -214,7 +214,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=Integer.class, parameters={})
+    @Export(name="lastModifiedTime", type=Integer.class, parameters={})
     private Output<Integer> lastModifiedTime;
 
     /**
@@ -229,7 +229,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -245,7 +245,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -260,7 +260,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**

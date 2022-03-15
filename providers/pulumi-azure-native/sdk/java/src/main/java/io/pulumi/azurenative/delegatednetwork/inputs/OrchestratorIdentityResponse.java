@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.delegatednetwork.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class OrchestratorIdentityResponse extends io.pulumi.resources.Invo
      * The principal id of the system assigned identity which is used by orchestrator.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {
@@ -29,7 +29,7 @@ public final class OrchestratorIdentityResponse extends io.pulumi.resources.Invo
      * The tenant id of the system assigned identity which is used by orchestrator.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {
@@ -40,7 +40,7 @@ public final class OrchestratorIdentityResponse extends io.pulumi.resources.Invo
      * The type of identity used for orchestrator cluster. Type 'SystemAssigned' will use an implicitly created identity orchestrator clusters
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

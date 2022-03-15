@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.alb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class GetListenerDefaultActionForwardTargetGroup extends io.pulumi.
      * ARN of the listener. Required if `load_balancer_arn` and `port` is not set.
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {
         return this.arn;
     }
 
-    @InputImport(name="weight", required=true)
+    @Import(name="weight", required=true)
       private final Integer weight;
 
     public Integer getWeight() {

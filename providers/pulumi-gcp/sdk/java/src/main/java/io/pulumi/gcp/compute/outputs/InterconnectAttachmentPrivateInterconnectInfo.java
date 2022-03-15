@@ -3,18 +3,18 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InterconnectAttachmentPrivateInterconnectInfo {
     private final @Nullable Integer tag8021q;
 
-    @OutputCustomType.Constructor
-    private InterconnectAttachmentPrivateInterconnectInfo(@OutputCustomType.Parameter("tag8021q") @Nullable Integer tag8021q) {
+    @CustomType.Constructor
+    private InterconnectAttachmentPrivateInterconnectInfo(@CustomType.Parameter("tag8021q") @Nullable Integer tag8021q) {
         this.tag8021q = tag8021q;
     }
 

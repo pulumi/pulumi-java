@@ -4,14 +4,14 @@
 package io.pulumi.aws.appautoscaling.outputs;
 
 import io.pulumi.aws.appautoscaling.outputs.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification {
     /**
      * Configuration block(s) with the dimensions of the metric if the metric was published with dimensions. Detailed below.
@@ -39,13 +39,13 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
      */
     private final @Nullable String unit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification(
-        @OutputCustomType.Parameter("dimensions") @Nullable List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension> dimensions,
-        @OutputCustomType.Parameter("metricName") String metricName,
-        @OutputCustomType.Parameter("namespace") String namespace,
-        @OutputCustomType.Parameter("statistic") String statistic,
-        @OutputCustomType.Parameter("unit") @Nullable String unit) {
+        @CustomType.Parameter("dimensions") @Nullable List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension> dimensions,
+        @CustomType.Parameter("metricName") String metricName,
+        @CustomType.Parameter("namespace") String namespace,
+        @CustomType.Parameter("statistic") String statistic,
+        @CustomType.Parameter("unit") @Nullable String unit) {
         this.dimensions = dimensions;
         this.metricName = metricName;
         this.namespace = namespace;

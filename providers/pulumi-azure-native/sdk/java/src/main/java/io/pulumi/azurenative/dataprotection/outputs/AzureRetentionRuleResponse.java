@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.SourceLifeCycleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureRetentionRuleResponse {
     private final @Nullable Boolean isDefault;
     private final List<SourceLifeCycleResponse> lifecycles;
@@ -23,12 +23,12 @@ public final class AzureRetentionRuleResponse {
      */
     private final String objectType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureRetentionRuleResponse(
-        @OutputCustomType.Parameter("isDefault") @Nullable Boolean isDefault,
-        @OutputCustomType.Parameter("lifecycles") List<SourceLifeCycleResponse> lifecycles,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("objectType") String objectType) {
+        @CustomType.Parameter("isDefault") @Nullable Boolean isDefault,
+        @CustomType.Parameter("lifecycles") List<SourceLifeCycleResponse> lifecycles,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("objectType") String objectType) {
         this.isDefault = isDefault;
         this.lifecycles = lifecycles;
         this.name = name;

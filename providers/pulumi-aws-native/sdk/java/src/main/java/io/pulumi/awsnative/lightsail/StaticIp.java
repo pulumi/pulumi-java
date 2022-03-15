@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lightsail;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.lightsail.StaticIpArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
      * The instance where the static IP is attached.
      * 
      */
-    @OutputExport(name="attachedTo", type=String.class, parameters={})
+    @Export(name="attachedTo", type=String.class, parameters={})
     private Output</* @Nullable */ String> attachedTo;
 
     /**
@@ -36,7 +36,7 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
      * The static IP address.
      * 
      */
-    @OutputExport(name="ipAddress", type=String.class, parameters={})
+    @Export(name="ipAddress", type=String.class, parameters={})
     private Output<String> ipAddress;
 
     /**
@@ -50,7 +50,7 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
      * A Boolean value indicating whether the static IP is attached.
      * 
      */
-    @OutputExport(name="isAttached", type=Boolean.class, parameters={})
+    @Export(name="isAttached", type=Boolean.class, parameters={})
     private Output<Boolean> isAttached;
 
     /**
@@ -60,7 +60,7 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
     public Output<Boolean> getIsAttached() {
         return this.isAttached;
     }
-    @OutputExport(name="staticIpArn", type=String.class, parameters={})
+    @Export(name="staticIpArn", type=String.class, parameters={})
     private Output<String> staticIpArn;
 
     public Output<String> getStaticIpArn() {
@@ -70,7 +70,7 @@ public class StaticIp extends io.pulumi.resources.CustomResource {
      * The name of the static IP address.
      * 
      */
-    @OutputExport(name="staticIpName", type=String.class, parameters={})
+    @Export(name="staticIpName", type=String.class, parameters={})
     private Output<String> staticIpName;
 
     /**

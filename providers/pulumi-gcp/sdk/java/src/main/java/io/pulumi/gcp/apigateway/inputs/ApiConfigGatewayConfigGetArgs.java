@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigGatewayConfigBackendConfigGetArgs;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ApiConfigGatewayConfigGetArgs extends io.pulumi.resources.Res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="backendConfig", required=true)
+    @Import(name="backendConfig", required=true)
       private final Output<ApiConfigGatewayConfigBackendConfigGetArgs> backendConfig;
 
     public Output<ApiConfigGatewayConfigBackendConfigGetArgs> getBackendConfig() {

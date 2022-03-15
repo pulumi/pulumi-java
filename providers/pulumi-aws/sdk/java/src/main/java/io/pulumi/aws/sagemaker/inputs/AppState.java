@@ -5,7 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.aws.sagemaker.inputs.AppResourceSpecGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The name of the app.
      * 
      */
-    @InputImport(name="appName")
+    @Import(name="appName")
       private final @Nullable Output<String> appName;
 
     public Output<String> getAppName() {
@@ -31,7 +31,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The type of app. Valid values are `JupyterServer`, `KernelGateway` and `TensorBoard`.
      * 
      */
-    @InputImport(name="appType")
+    @Import(name="appType")
       private final @Nullable Output<String> appType;
 
     public Output<String> getAppType() {
@@ -42,7 +42,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the app.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -53,7 +53,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The domain ID.
      * 
      */
-    @InputImport(name="domainId")
+    @Import(name="domainId")
       private final @Nullable Output<String> domainId;
 
     public Output<String> getDomainId() {
@@ -64,7 +64,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.See Resource Spec below.
      * 
      */
-    @InputImport(name="resourceSpec")
+    @Import(name="resourceSpec")
       private final @Nullable Output<AppResourceSpecGetArgs> resourceSpec;
 
     public Output<AppResourceSpecGetArgs> getResourceSpec() {
@@ -75,7 +75,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -86,7 +86,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -97,7 +97,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
      * The user profile name.
      * 
      */
-    @InputImport(name="userProfileName")
+    @Import(name="userProfileName")
       private final @Nullable Output<String> userProfileName;
 
     public Output<String> getUserProfileName() {

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMapping;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -17,42 +17,42 @@ public final class DataSourceServiceNowServiceCatalogConfiguration extends io.pu
 
     public static final DataSourceServiceNowServiceCatalogConfiguration Empty = new DataSourceServiceNowServiceCatalogConfiguration();
 
-    @InputImport(name="crawlAttachments")
+    @Import(name="crawlAttachments")
       private final @Nullable Boolean crawlAttachments;
 
     public Optional<Boolean> getCrawlAttachments() {
         return this.crawlAttachments == null ? Optional.empty() : Optional.ofNullable(this.crawlAttachments);
     }
 
-    @InputImport(name="documentDataFieldName", required=true)
+    @Import(name="documentDataFieldName", required=true)
       private final String documentDataFieldName;
 
     public String getDocumentDataFieldName() {
         return this.documentDataFieldName;
     }
 
-    @InputImport(name="documentTitleFieldName")
+    @Import(name="documentTitleFieldName")
       private final @Nullable String documentTitleFieldName;
 
     public Optional<String> getDocumentTitleFieldName() {
         return this.documentTitleFieldName == null ? Optional.empty() : Optional.ofNullable(this.documentTitleFieldName);
     }
 
-    @InputImport(name="excludeAttachmentFilePatterns")
+    @Import(name="excludeAttachmentFilePatterns")
       private final @Nullable List<String> excludeAttachmentFilePatterns;
 
     public List<String> getExcludeAttachmentFilePatterns() {
         return this.excludeAttachmentFilePatterns == null ? List.of() : this.excludeAttachmentFilePatterns;
     }
 
-    @InputImport(name="fieldMappings")
+    @Import(name="fieldMappings")
       private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
     public List<DataSourceToIndexFieldMapping> getFieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
 
-    @InputImport(name="includeAttachmentFilePatterns")
+    @Import(name="includeAttachmentFilePatterns")
       private final @Nullable List<String> includeAttachmentFilePatterns;
 
     public List<String> getIncludeAttachmentFilePatterns() {

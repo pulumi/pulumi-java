@@ -4,7 +4,7 @@
 package io.pulumi.gcp.binaryauthorization;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.binaryauthorization.inputs.AttestorIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,21 +20,21 @@ public final class AttestorIamBindingArgs extends io.pulumi.resources.ResourceAr
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="attestor", required=true)
+    @Import(name="attestor", required=true)
       private final Output<String> attestor;
 
     public Output<String> getAttestor() {
         return this.attestor;
     }
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<AttestorIamBindingConditionArgs> condition;
 
     public Output<AttestorIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -46,7 +46,7 @@ public final class AttestorIamBindingArgs extends io.pulumi.resources.ResourceAr
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -59,7 +59,7 @@ public final class AttestorIamBindingArgs extends io.pulumi.resources.ResourceAr
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

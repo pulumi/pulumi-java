@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GoogleProtobufEmptyResponse;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2QuasiIdResponse extends io.pulumi.resources
      * A column can be tagged with a custom tag. In this case, the user must indicate an auxiliary table that contains statistical information on the possible values of this column (below).
      * 
      */
-    @InputImport(name="customTag", required=true)
+    @Import(name="customTag", required=true)
       private final String customTag;
 
     public String getCustomTag() {
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2QuasiIdResponse extends io.pulumi.resources
      * Identifies the column.
      * 
      */
-    @InputImport(name="field", required=true)
+    @Import(name="field", required=true)
       private final GooglePrivacyDlpV2FieldIdResponse field;
 
     public GooglePrivacyDlpV2FieldIdResponse getField() {
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2QuasiIdResponse extends io.pulumi.resources
      * If no semantic tag is indicated, we infer the statistical model from the distribution of values in the input data
      * 
      */
-    @InputImport(name="inferred", required=true)
+    @Import(name="inferred", required=true)
       private final GoogleProtobufEmptyResponse inferred;
 
     public GoogleProtobufEmptyResponse getInferred() {
@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2QuasiIdResponse extends io.pulumi.resources
      * A column can be tagged with a InfoType to use the relevant public dataset as a statistical model of population, if available. We currently support US ZIP codes, region codes, ages and genders. To programmatically obtain the list of supported InfoTypes, use ListInfoTypes with the supported_by=RISK_ANALYSIS filter.
      * 
      */
-    @InputImport(name="infoType", required=true)
+    @Import(name="infoType", required=true)
       private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 
     public GooglePrivacyDlpV2InfoTypeResponse getInfoType() {

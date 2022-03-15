@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.azurenative.network.inputs.VirtualHubRouteTableArgs;
 import io.pulumi.azurenative.network.inputs.VirtualHubRouteTableV2Args;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * Address-prefix for this VirtualHub.
      * 
      */
-    @InputImport(name="addressPrefix")
+    @Import(name="addressPrefix")
       private final @Nullable Output<String> addressPrefix;
 
     public Output<String> getAddressPrefix() {
@@ -36,7 +36,7 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * Flag to control transit for VirtualRouter hub.
      * 
      */
-    @InputImport(name="allowBranchToBranchTraffic")
+    @Import(name="allowBranchToBranchTraffic")
       private final @Nullable Output<Boolean> allowBranchToBranchTraffic;
 
     public Output<Boolean> getAllowBranchToBranchTraffic() {
@@ -47,7 +47,7 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * The azureFirewall associated with this VirtualHub.
      * 
      */
-    @InputImport(name="azureFirewall")
+    @Import(name="azureFirewall")
       private final @Nullable Output<SubResourceArgs> azureFirewall;
 
     public Output<SubResourceArgs> getAzureFirewall() {
@@ -58,7 +58,7 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * The expressRouteGateway associated with this VirtualHub.
      * 
      */
-    @InputImport(name="expressRouteGateway")
+    @Import(name="expressRouteGateway")
       private final @Nullable Output<SubResourceArgs> expressRouteGateway;
 
     public Output<SubResourceArgs> getExpressRouteGateway() {
@@ -69,7 +69,7 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -80,7 +80,7 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -91,7 +91,7 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * The P2SVpnGateway associated with this VirtualHub.
      * 
      */
-    @InputImport(name="p2SVpnGateway")
+    @Import(name="p2SVpnGateway")
       private final @Nullable Output<SubResourceArgs> p2SVpnGateway;
 
     public Output<SubResourceArgs> getP2SVpnGateway() {
@@ -102,7 +102,7 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name of the VirtualHub.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -113,7 +113,7 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * The routeTable associated with this virtual hub.
      * 
      */
-    @InputImport(name="routeTable")
+    @Import(name="routeTable")
       private final @Nullable Output<VirtualHubRouteTableArgs> routeTable;
 
     public Output<VirtualHubRouteTableArgs> getRouteTable() {
@@ -124,7 +124,7 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * The securityPartnerProvider associated with this VirtualHub.
      * 
      */
-    @InputImport(name="securityPartnerProvider")
+    @Import(name="securityPartnerProvider")
       private final @Nullable Output<SubResourceArgs> securityPartnerProvider;
 
     public Output<SubResourceArgs> getSecurityPartnerProvider() {
@@ -135,7 +135,7 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * The Security Provider name.
      * 
      */
-    @InputImport(name="securityProviderName")
+    @Import(name="securityProviderName")
       private final @Nullable Output<String> securityProviderName;
 
     public Output<String> getSecurityProviderName() {
@@ -146,7 +146,7 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * The sku of this VirtualHub.
      * 
      */
-    @InputImport(name="sku")
+    @Import(name="sku")
       private final @Nullable Output<String> sku;
 
     public Output<String> getSku() {
@@ -157,7 +157,7 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -168,7 +168,7 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the VirtualHub.
      * 
      */
-    @InputImport(name="virtualHubName")
+    @Import(name="virtualHubName")
       private final @Nullable Output<String> virtualHubName;
 
     public Output<String> getVirtualHubName() {
@@ -179,7 +179,7 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * List of all virtual hub route table v2s associated with this VirtualHub.
      * 
      */
-    @InputImport(name="virtualHubRouteTableV2s")
+    @Import(name="virtualHubRouteTableV2s")
       private final @Nullable Output<List<VirtualHubRouteTableV2Args>> virtualHubRouteTableV2s;
 
     public Output<List<VirtualHubRouteTableV2Args>> getVirtualHubRouteTableV2s() {
@@ -190,7 +190,7 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * VirtualRouter ASN.
      * 
      */
-    @InputImport(name="virtualRouterAsn")
+    @Import(name="virtualRouterAsn")
       private final @Nullable Output<Double> virtualRouterAsn;
 
     public Output<Double> getVirtualRouterAsn() {
@@ -201,7 +201,7 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * VirtualRouter IPs.
      * 
      */
-    @InputImport(name="virtualRouterIps")
+    @Import(name="virtualRouterIps")
       private final @Nullable Output<List<String>> virtualRouterIps;
 
     public Output<List<String>> getVirtualRouterIps() {
@@ -212,7 +212,7 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * The VirtualWAN to which the VirtualHub belongs.
      * 
      */
-    @InputImport(name="virtualWan")
+    @Import(name="virtualWan")
       private final @Nullable Output<SubResourceArgs> virtualWan;
 
     public Output<SubResourceArgs> getVirtualWan() {
@@ -223,7 +223,7 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
      * The VpnGateway associated with this VirtualHub.
      * 
      */
-    @InputImport(name="vpnGateway")
+    @Import(name="vpnGateway")
       private final @Nullable Output<SubResourceArgs> vpnGateway;
 
     public Output<SubResourceArgs> getVpnGateway() {

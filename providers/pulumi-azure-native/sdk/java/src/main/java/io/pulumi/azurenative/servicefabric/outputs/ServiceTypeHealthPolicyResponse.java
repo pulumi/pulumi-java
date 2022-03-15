@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTypeHealthPolicyResponse {
     /**
      * The maximum percentage of services allowed to be unhealthy before your application is considered in error.
@@ -17,8 +17,8 @@ public final class ServiceTypeHealthPolicyResponse {
      */
     private final @Nullable Integer maxPercentUnhealthyServices;
 
-    @OutputCustomType.Constructor
-    private ServiceTypeHealthPolicyResponse(@OutputCustomType.Parameter("maxPercentUnhealthyServices") @Nullable Integer maxPercentUnhealthyServices) {
+    @CustomType.Constructor
+    private ServiceTypeHealthPolicyResponse(@CustomType.Parameter("maxPercentUnhealthyServices") @Nullable Integer maxPercentUnhealthyServices) {
         this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
     }
 

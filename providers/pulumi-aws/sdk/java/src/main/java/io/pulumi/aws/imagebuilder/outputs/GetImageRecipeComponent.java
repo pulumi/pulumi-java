@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetImageRecipeComponent {
     /**
      * Amazon Resource Name (ARN) of the Image Builder Component.
@@ -15,8 +15,8 @@ public final class GetImageRecipeComponent {
      */
     private final String componentArn;
 
-    @OutputCustomType.Constructor
-    private GetImageRecipeComponent(@OutputCustomType.Parameter("componentArn") String componentArn) {
+    @CustomType.Constructor
+    private GetImageRecipeComponent(@CustomType.Parameter("componentArn") String componentArn) {
         this.componentArn = componentArn;
     }
 

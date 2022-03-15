@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeCustomSetupSc
 import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeDataProxyPropertiesResponse;
 import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeSsisCatalogInfoResponse;
 import io.pulumi.azurenative.datafactory.outputs.PackageStoreResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationRuntimeSsisPropertiesResponse {
     /**
      * Catalog information for managed dedicated integration runtime.
@@ -63,16 +63,16 @@ public final class IntegrationRuntimeSsisPropertiesResponse {
      */
     private final @Nullable List<PackageStoreResponse> packageStores;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationRuntimeSsisPropertiesResponse(
-        @OutputCustomType.Parameter("catalogInfo") @Nullable IntegrationRuntimeSsisCatalogInfoResponse catalogInfo,
-        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
-        @OutputCustomType.Parameter("customSetupScriptProperties") @Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties,
-        @OutputCustomType.Parameter("dataProxyProperties") @Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties,
-        @OutputCustomType.Parameter("edition") @Nullable String edition,
-        @OutputCustomType.Parameter("expressCustomSetupProperties") @Nullable List<Object> expressCustomSetupProperties,
-        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
-        @OutputCustomType.Parameter("packageStores") @Nullable List<PackageStoreResponse> packageStores) {
+        @CustomType.Parameter("catalogInfo") @Nullable IntegrationRuntimeSsisCatalogInfoResponse catalogInfo,
+        @CustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @CustomType.Parameter("customSetupScriptProperties") @Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties,
+        @CustomType.Parameter("dataProxyProperties") @Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties,
+        @CustomType.Parameter("edition") @Nullable String edition,
+        @CustomType.Parameter("expressCustomSetupProperties") @Nullable List<Object> expressCustomSetupProperties,
+        @CustomType.Parameter("licenseType") @Nullable String licenseType,
+        @CustomType.Parameter("packageStores") @Nullable List<PackageStoreResponse> packageStores) {
         this.catalogInfo = catalogInfo;
         this.credential = credential;
         this.customSetupScriptProperties = customSetupScriptProperties;

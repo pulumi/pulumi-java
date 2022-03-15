@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDistributionResult {
     /**
      * A list that contains information about CNAMEs (alternate domain names), if any, for this distribution.
@@ -69,19 +69,19 @@ public final class GetDistributionResult {
     private final String status;
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDistributionResult(
-        @OutputCustomType.Parameter("aliases") List<String> aliases,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("domainName") String domainName,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("hostedZoneId") String hostedZoneId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("inProgressValidationBatches") Integer inProgressValidationBatches,
-        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
+        @CustomType.Parameter("aliases") List<String> aliases,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("domainName") String domainName,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("hostedZoneId") String hostedZoneId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("inProgressValidationBatches") Integer inProgressValidationBatches,
+        @CustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.aliases = aliases;
         this.arn = arn;
         this.domainName = domainName;

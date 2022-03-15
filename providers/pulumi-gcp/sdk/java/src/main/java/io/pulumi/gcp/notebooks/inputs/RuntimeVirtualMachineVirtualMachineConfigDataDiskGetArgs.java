@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * detached from the instance).
      * 
      */
-    @InputImport(name="autoDelete")
+    @Import(name="autoDelete")
       private final @Nullable Output<Boolean> autoDelete;
 
     public Output<Boolean> getAutoDelete() {
@@ -39,7 +39,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * root filesystem.
      * 
      */
-    @InputImport(name="boot")
+    @Import(name="boot")
       private final @Nullable Output<Boolean> boot;
 
     public Output<Boolean> getBoot() {
@@ -59,7 +59,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * is only applicable for persistent disks.
      * 
      */
-    @InputImport(name="deviceName")
+    @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -75,7 +75,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * options. ``
      * 
      */
-    @InputImport(name="guestOsFeatures")
+    @Import(name="guestOsFeatures")
       private final @Nullable Output<List<String>> guestOsFeatures;
 
     public Output<List<String>> getGuestOsFeatures() {
@@ -89,7 +89,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * to an instance, each disk would have a unique index number.
      * 
      */
-    @InputImport(name="index")
+    @Import(name="index")
       private final @Nullable Output<Integer> index;
 
     public Output<Integer> getIndex() {
@@ -106,7 +106,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * Structure is documented below.
      * 
      */
-    @InputImport(name="initializeParams")
+    @Import(name="initializeParams")
       private final @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs> initializeParams;
 
     public Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs> getInitializeParams() {
@@ -122,7 +122,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * over NVMe, see Local SSD performance. Valid values: * NVME * SCSI".
      * 
      */
-    @InputImport(name="interface")
+    @Import(name="interface")
       private final @Nullable Output<String> $interface;
 
     public Output<String> get$interface() {
@@ -135,7 +135,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * disks.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -147,7 +147,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * Output only. Any valid publicly visible licenses.
      * 
      */
-    @InputImport(name="licenses")
+    @Import(name="licenses")
       private final @Nullable Output<List<String>> licenses;
 
     public Output<List<String>> getLicenses() {
@@ -160,7 +160,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * the disk in READ_WRITE mode.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
@@ -172,7 +172,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * Persistent Disk resource.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
@@ -185,7 +185,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs exte
      * rest/v1/projects.locations.runtimes#AcceleratorType`
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

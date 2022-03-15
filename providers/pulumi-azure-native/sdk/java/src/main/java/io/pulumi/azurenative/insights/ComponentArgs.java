@@ -9,7 +9,7 @@ import io.pulumi.azurenative.insights.enums.IngestionMode;
 import io.pulumi.azurenative.insights.enums.RequestSource;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -27,7 +27,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Type of application being monitored.
      * 
      */
-    @InputImport(name="applicationType", required=true)
+    @Import(name="applicationType", required=true)
       private final Output<Either<String,ApplicationType>> applicationType;
 
     public Output<Either<String,ApplicationType>> getApplicationType() {
@@ -38,7 +38,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Disable IP masking.
      * 
      */
-    @InputImport(name="disableIpMasking")
+    @Import(name="disableIpMasking")
       private final @Nullable Output<Boolean> disableIpMasking;
 
     public Output<Boolean> getDisableIpMasking() {
@@ -49,7 +49,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Used by the Application Insights system to determine what kind of flow this component was created by. This is to be set to 'Bluefield' when creating/updating a component via the REST API.
      * 
      */
-    @InputImport(name="flowType")
+    @Import(name="flowType")
       private final @Nullable Output<Either<String,FlowType>> flowType;
 
     public Output<Either<String,FlowType>> getFlowType() {
@@ -60,7 +60,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * The unique application ID created when a new application is added to HockeyApp, used for communications with HockeyApp.
      * 
      */
-    @InputImport(name="hockeyAppId")
+    @Import(name="hockeyAppId")
       private final @Nullable Output<String> hockeyAppId;
 
     public Output<String> getHockeyAppId() {
@@ -71,7 +71,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Purge data immediately after 30 days.
      * 
      */
-    @InputImport(name="immediatePurgeDataOn30Days")
+    @Import(name="immediatePurgeDataOn30Days")
       private final @Nullable Output<Boolean> immediatePurgeDataOn30Days;
 
     public Output<Boolean> getImmediatePurgeDataOn30Days() {
@@ -82,7 +82,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates the flow of the ingestion.
      * 
      */
-    @InputImport(name="ingestionMode")
+    @Import(name="ingestionMode")
       private final @Nullable Output<Either<String,IngestionMode>> ingestionMode;
 
     public Output<Either<String,IngestionMode>> getIngestionMode() {
@@ -93,7 +93,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * The kind of application that this component refers to, used to customize UI. This value is a freeform string, values should typically be one of the following: web, ios, other, store, java, phone.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -104,7 +104,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -115,7 +115,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Describes what tool created this Application Insights component. Customers using this API should set this to the default 'rest'.
      * 
      */
-    @InputImport(name="requestSource")
+    @Import(name="requestSource")
       private final @Nullable Output<Either<String,RequestSource>> requestSource;
 
     public Output<Either<String,RequestSource>> getRequestSource() {
@@ -126,7 +126,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -137,7 +137,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Application Insights component resource.
      * 
      */
-    @InputImport(name="resourceName")
+    @Import(name="resourceName")
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -148,7 +148,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Retention period in days.
      * 
      */
-    @InputImport(name="retentionInDays")
+    @Import(name="retentionInDays")
       private final @Nullable Output<Integer> retentionInDays;
 
     public Output<Integer> getRetentionInDays() {
@@ -159,7 +159,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Percentage of the data produced by the application being monitored that is being sampled for Application Insights telemetry.
      * 
      */
-    @InputImport(name="samplingPercentage")
+    @Import(name="samplingPercentage")
       private final @Nullable Output<Double> samplingPercentage;
 
     public Output<Double> getSamplingPercentage() {
@@ -170,7 +170,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

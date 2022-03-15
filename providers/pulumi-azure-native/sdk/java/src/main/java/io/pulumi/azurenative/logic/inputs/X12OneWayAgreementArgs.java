@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.BusinessIdentityArgs;
 import io.pulumi.azurenative.logic.inputs.X12ProtocolSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -22,7 +22,7 @@ public final class X12OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
      * The X12 protocol settings.
      * 
      */
-    @InputImport(name="protocolSettings", required=true)
+    @Import(name="protocolSettings", required=true)
       private final Output<X12ProtocolSettingsArgs> protocolSettings;
 
     public Output<X12ProtocolSettingsArgs> getProtocolSettings() {
@@ -33,7 +33,7 @@ public final class X12OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
      * The receiver business identity
      * 
      */
-    @InputImport(name="receiverBusinessIdentity", required=true)
+    @Import(name="receiverBusinessIdentity", required=true)
       private final Output<BusinessIdentityArgs> receiverBusinessIdentity;
 
     public Output<BusinessIdentityArgs> getReceiverBusinessIdentity() {
@@ -44,7 +44,7 @@ public final class X12OneWayAgreementArgs extends io.pulumi.resources.ResourceAr
      * The sender business identity
      * 
      */
-    @InputImport(name="senderBusinessIdentity", required=true)
+    @Import(name="senderBusinessIdentity", required=true)
       private final Output<BusinessIdentityArgs> senderBusinessIdentity;
 
     public Output<BusinessIdentityArgs> getSenderBusinessIdentity() {

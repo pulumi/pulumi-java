@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.quicksight.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataSourceParametersSnowflake {
     /**
      * The database to which to connect.
@@ -25,11 +25,11 @@ public final class DataSourceParametersSnowflake {
      */
     private final String warehouse;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataSourceParametersSnowflake(
-        @OutputCustomType.Parameter("database") String database,
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("warehouse") String warehouse) {
+        @CustomType.Parameter("database") String database,
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("warehouse") String warehouse) {
         this.database = database;
         this.host = host;
         this.warehouse = warehouse;

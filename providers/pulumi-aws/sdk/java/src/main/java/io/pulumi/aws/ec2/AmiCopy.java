@@ -9,7 +9,7 @@ import io.pulumi.aws.ec2.inputs.AmiCopyState;
 import io.pulumi.aws.ec2.outputs.AmiCopyEbsBlockDevice;
 import io.pulumi.aws.ec2.outputs.AmiCopyEphemeralBlockDevice;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -39,7 +39,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
      * Machine architecture for created instances. Defaults to "x86_64".
      * 
      */
-    @OutputExport(name="architecture", type=String.class, parameters={})
+    @Export(name="architecture", type=String.class, parameters={})
     private Output<String> architecture;
 
     /**
@@ -53,7 +53,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
      * The ARN of the AMI.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -67,7 +67,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
      * A longer, human-readable description for the AMI.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -82,7 +82,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
      * Only specify this parameter when copying an AMI from an AWS Region to an Outpost. The AMI must be in the Region of the destination Outpost.
      * 
      */
-    @OutputExport(name="destinationOutpostArn", type=String.class, parameters={})
+    @Export(name="destinationOutpostArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> destinationOutpostArn;
 
     /**
@@ -98,7 +98,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
      * attached to created instances. The structure of this block is described below.
      * 
      */
-    @OutputExport(name="ebsBlockDevices", type=List.class, parameters={AmiCopyEbsBlockDevice.class})
+    @Export(name="ebsBlockDevices", type=List.class, parameters={AmiCopyEbsBlockDevice.class})
     private Output<List<AmiCopyEbsBlockDevice>> ebsBlockDevices;
 
     /**
@@ -113,7 +113,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
      * Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
      * 
      */
-    @OutputExport(name="enaSupport", type=Boolean.class, parameters={})
+    @Export(name="enaSupport", type=Boolean.class, parameters={})
     private Output<Boolean> enaSupport;
 
     /**
@@ -127,7 +127,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
      * Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with `snapshot_id`.
      * 
      */
-    @OutputExport(name="encrypted", type=Boolean.class, parameters={})
+    @Export(name="encrypted", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> encrypted;
 
     /**
@@ -142,7 +142,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
      * should be attached to created instances. The structure of this block is described below.
      * 
      */
-    @OutputExport(name="ephemeralBlockDevices", type=List.class, parameters={AmiCopyEphemeralBlockDevice.class})
+    @Export(name="ephemeralBlockDevices", type=List.class, parameters={AmiCopyEphemeralBlockDevice.class})
     private Output<List<AmiCopyEphemeralBlockDevice>> ephemeralBlockDevices;
 
     /**
@@ -153,7 +153,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
     public Output<List<AmiCopyEphemeralBlockDevice>> getEphemeralBlockDevices() {
         return this.ephemeralBlockDevices;
     }
-    @OutputExport(name="hypervisor", type=String.class, parameters={})
+    @Export(name="hypervisor", type=String.class, parameters={})
     private Output<String> hypervisor;
 
     public Output<String> getHypervisor() {
@@ -164,7 +164,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
      * by the `ec2-upload-bundle` command in the EC2 command line tools.
      * 
      */
-    @OutputExport(name="imageLocation", type=String.class, parameters={})
+    @Export(name="imageLocation", type=String.class, parameters={})
     private Output<String> imageLocation;
 
     /**
@@ -175,13 +175,13 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
     public Output<String> getImageLocation() {
         return this.imageLocation;
     }
-    @OutputExport(name="imageOwnerAlias", type=String.class, parameters={})
+    @Export(name="imageOwnerAlias", type=String.class, parameters={})
     private Output<String> imageOwnerAlias;
 
     public Output<String> getImageOwnerAlias() {
         return this.imageOwnerAlias;
     }
-    @OutputExport(name="imageType", type=String.class, parameters={})
+    @Export(name="imageType", type=String.class, parameters={})
     private Output<String> imageType;
 
     public Output<String> getImageType() {
@@ -192,7 +192,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
      * kernel in created instances.
      * 
      */
-    @OutputExport(name="kernelId", type=String.class, parameters={})
+    @Export(name="kernelId", type=String.class, parameters={})
     private Output<String> kernelId;
 
     /**
@@ -209,7 +209,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
      * if this parameter is not specified, the default CMK for EBS is used
      * 
      */
-    @OutputExport(name="kmsKeyId", type=String.class, parameters={})
+    @Export(name="kmsKeyId", type=String.class, parameters={})
     private Output<String> kmsKeyId;
 
     /**
@@ -221,7 +221,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
     public Output<String> getKmsKeyId() {
         return this.kmsKeyId;
     }
-    @OutputExport(name="manageEbsSnapshots", type=Boolean.class, parameters={})
+    @Export(name="manageEbsSnapshots", type=Boolean.class, parameters={})
     private Output<Boolean> manageEbsSnapshots;
 
     public Output<Boolean> getManageEbsSnapshots() {
@@ -231,7 +231,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
      * A region-unique name for the AMI.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -241,25 +241,25 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     public Output<String> getOwnerId() {
         return this.ownerId;
     }
-    @OutputExport(name="platform", type=String.class, parameters={})
+    @Export(name="platform", type=String.class, parameters={})
     private Output<String> platform;
 
     public Output<String> getPlatform() {
         return this.platform;
     }
-    @OutputExport(name="platformDetails", type=String.class, parameters={})
+    @Export(name="platformDetails", type=String.class, parameters={})
     private Output<String> platformDetails;
 
     public Output<String> getPlatformDetails() {
         return this.platformDetails;
     }
-    @OutputExport(name="public", type=Boolean.class, parameters={})
+    @Export(name="public", type=Boolean.class, parameters={})
     private Output<Boolean> $public;
 
     public Output<Boolean> get$public() {
@@ -270,7 +270,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
      * created instances.
      * 
      */
-    @OutputExport(name="ramdiskId", type=String.class, parameters={})
+    @Export(name="ramdiskId", type=String.class, parameters={})
     private Output<String> ramdiskId;
 
     /**
@@ -285,7 +285,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
      * The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
      * 
      */
-    @OutputExport(name="rootDeviceName", type=String.class, parameters={})
+    @Export(name="rootDeviceName", type=String.class, parameters={})
     private Output<String> rootDeviceName;
 
     /**
@@ -295,7 +295,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
     public Output<String> getRootDeviceName() {
         return this.rootDeviceName;
     }
-    @OutputExport(name="rootSnapshotId", type=String.class, parameters={})
+    @Export(name="rootSnapshotId", type=String.class, parameters={})
     private Output<String> rootSnapshotId;
 
     public Output<String> getRootSnapshotId() {
@@ -306,7 +306,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
      * given by `source_ami_region`.
      * 
      */
-    @OutputExport(name="sourceAmiId", type=String.class, parameters={})
+    @Export(name="sourceAmiId", type=String.class, parameters={})
     private Output<String> sourceAmiId;
 
     /**
@@ -322,7 +322,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
      * same as the AWS provider region in order to create a copy within the same region.
      * 
      */
-    @OutputExport(name="sourceAmiRegion", type=String.class, parameters={})
+    @Export(name="sourceAmiRegion", type=String.class, parameters={})
     private Output<String> sourceAmiRegion;
 
     /**
@@ -338,7 +338,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
      * for created instances. No other value is supported at this time.
      * 
      */
-    @OutputExport(name="sriovNetSupport", type=String.class, parameters={})
+    @Export(name="sriovNetSupport", type=String.class, parameters={})
     private Output<String> sriovNetSupport;
 
     /**
@@ -353,7 +353,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -363,13 +363,13 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
         return this.tagsAll;
     }
-    @OutputExport(name="usageOperation", type=String.class, parameters={})
+    @Export(name="usageOperation", type=String.class, parameters={})
     private Output<String> usageOperation;
 
     public Output<String> getUsageOperation() {
@@ -381,7 +381,7 @@ public class AmiCopy extends io.pulumi.resources.CustomResource {
      * changes the set of further arguments that are required, as described below.
      * 
      */
-    @OutputExport(name="virtualizationType", type=String.class, parameters={})
+    @Export(name="virtualizationType", type=String.class, parameters={})
     private Output<String> virtualizationType;
 
     /**

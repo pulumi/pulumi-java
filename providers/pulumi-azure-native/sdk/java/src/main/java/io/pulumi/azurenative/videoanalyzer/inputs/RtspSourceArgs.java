@@ -8,7 +8,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.TlsEndpointArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.UnsecuredEndpointArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
      * RTSP endpoint information for Video Analyzer to connect to. This contains the required information for Video Analyzer to connect to RTSP cameras and/or generic RTSP servers.
      * 
      */
-    @InputImport(name="endpoint", required=true)
+    @Import(name="endpoint", required=true)
       private final Output<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> endpoint;
 
     public Output<Either<TlsEndpointArgs,UnsecuredEndpointArgs>> getEndpoint() {
@@ -37,7 +37,7 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Node name. Must be unique within the topology.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -48,7 +48,7 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Network transport utilized by the RTSP and RTP exchange: TCP or HTTP. When using TCP, the RTP packets are interleaved on the TCP RTSP connection. When using HTTP, the RTSP messages are exchanged through long lived HTTP connections, and the RTP packages are interleaved in the HTTP connections alongside the RTSP messages.
      * 
      */
-    @InputImport(name="transport")
+    @Import(name="transport")
       private final @Nullable Output<Either<String,RtspTransport>> transport;
 
     public Output<Either<String,RtspTransport>> getTransport() {
@@ -60,7 +60,7 @@ public final class RtspSourceArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is '#Microsoft.VideoAnalyzer.RtspSource'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

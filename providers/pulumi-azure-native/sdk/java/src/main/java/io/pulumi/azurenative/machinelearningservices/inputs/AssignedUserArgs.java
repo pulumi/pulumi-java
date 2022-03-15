@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
      * User’s AAD Object Id.
      * 
      */
-    @InputImport(name="objectId", required=true)
+    @Import(name="objectId", required=true)
       private final Output<String> objectId;
 
     public Output<String> getObjectId() {
@@ -32,7 +32,7 @@ public final class AssignedUserArgs extends io.pulumi.resources.ResourceArgs {
      * User’s AAD Tenant Id.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final Output<String> tenantId;
 
     public Output<String> getTenantId() {

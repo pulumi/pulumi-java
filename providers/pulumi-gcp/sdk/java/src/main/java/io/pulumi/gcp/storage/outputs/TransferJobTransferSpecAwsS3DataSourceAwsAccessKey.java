@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKey {
     /**
      * AWS Key ID.
@@ -20,10 +20,10 @@ public final class TransferJobTransferSpecAwsS3DataSourceAwsAccessKey {
      */
     private final String secretAccessKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TransferJobTransferSpecAwsS3DataSourceAwsAccessKey(
-        @OutputCustomType.Parameter("accessKeyId") String accessKeyId,
-        @OutputCustomType.Parameter("secretAccessKey") String secretAccessKey) {
+        @CustomType.Parameter("accessKeyId") String accessKeyId,
+        @CustomType.Parameter("secretAccessKey") String secretAccessKey) {
         this.accessKeyId = accessKeyId;
         this.secretAccessKey = secretAccessKey;
     }

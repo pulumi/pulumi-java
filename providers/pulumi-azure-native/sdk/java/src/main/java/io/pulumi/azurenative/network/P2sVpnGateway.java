@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VpnClientConnectionHealthResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -40,7 +40,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * List of all customer specified DNS servers IP addresses.
      * 
      */
-    @OutputExport(name="customDnsServers", type=List.class, parameters={String.class})
+    @Export(name="customDnsServers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customDnsServers;
 
     /**
@@ -54,7 +54,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -68,7 +68,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * Enable Routing Preference property for the Public IP Interface of the P2SVpnGateway.
      * 
      */
-    @OutputExport(name="isRoutingPreferenceInternet", type=Boolean.class, parameters={})
+    @Export(name="isRoutingPreferenceInternet", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isRoutingPreferenceInternet;
 
     /**
@@ -82,7 +82,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -96,7 +96,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -110,7 +110,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * List of all p2s connection configurations of the gateway.
      * 
      */
-    @OutputExport(name="p2SConnectionConfigurations", type=List.class, parameters={P2SConnectionConfigurationResponse.class})
+    @Export(name="p2SConnectionConfigurations", type=List.class, parameters={P2SConnectionConfigurationResponse.class})
     private Output</* @Nullable */ List<P2SConnectionConfigurationResponse>> p2SConnectionConfigurations;
 
     /**
@@ -124,7 +124,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * The provisioning state of the P2S VPN gateway resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -138,7 +138,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -152,7 +152,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -166,7 +166,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * The VirtualHub to which the gateway belongs.
      * 
      */
-    @OutputExport(name="virtualHub", type=SubResourceResponse.class, parameters={})
+    @Export(name="virtualHub", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> virtualHub;
 
     /**
@@ -180,7 +180,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * All P2S VPN clients' connection health status.
      * 
      */
-    @OutputExport(name="vpnClientConnectionHealth", type=VpnClientConnectionHealthResponse.class, parameters={})
+    @Export(name="vpnClientConnectionHealth", type=VpnClientConnectionHealthResponse.class, parameters={})
     private Output<VpnClientConnectionHealthResponse> vpnClientConnectionHealth;
 
     /**
@@ -194,7 +194,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * The scale unit for this p2s vpn gateway.
      * 
      */
-    @OutputExport(name="vpnGatewayScaleUnit", type=Integer.class, parameters={})
+    @Export(name="vpnGatewayScaleUnit", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> vpnGatewayScaleUnit;
 
     /**
@@ -208,7 +208,7 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
      * The VpnServerConfiguration to which the p2sVpnGateway is attached to.
      * 
      */
-    @OutputExport(name="vpnServerConfiguration", type=SubResourceResponse.class, parameters={})
+    @Export(name="vpnServerConfiguration", type=SubResourceResponse.class, parameters={})
     private Output</* @Nullable */ SubResourceResponse> vpnServerConfiguration;
 
     /**

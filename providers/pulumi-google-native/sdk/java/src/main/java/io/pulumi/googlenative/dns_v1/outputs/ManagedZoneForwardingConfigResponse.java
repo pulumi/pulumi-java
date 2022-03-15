@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dns_v1.outputs.ManagedZoneForwardingConfigNameServerTargetResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedZoneForwardingConfigResponse {
     private final String kind;
     /**
@@ -18,10 +18,10 @@ public final class ManagedZoneForwardingConfigResponse {
      */
     private final List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedZoneForwardingConfigResponse(
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("targetNameServers") List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers) {
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("targetNameServers") List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers) {
         this.kind = kind;
         this.targetNameServers = targetNameServers;
     }

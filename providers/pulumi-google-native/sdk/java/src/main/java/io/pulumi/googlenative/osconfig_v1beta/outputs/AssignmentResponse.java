@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.AssignmentGroupLabelResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.AssignmentOsTypeResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AssignmentResponse {
     /**
      * Targets instances matching at least one of these label sets. This allows an assignment to target disparate groups, for example "env=prod or env=staging".
@@ -38,13 +38,13 @@ public final class AssignmentResponse {
      */
     private final List<String> zones;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AssignmentResponse(
-        @OutputCustomType.Parameter("groupLabels") List<AssignmentGroupLabelResponse> groupLabels,
-        @OutputCustomType.Parameter("instanceNamePrefixes") List<String> instanceNamePrefixes,
-        @OutputCustomType.Parameter("instances") List<String> instances,
-        @OutputCustomType.Parameter("osTypes") List<AssignmentOsTypeResponse> osTypes,
-        @OutputCustomType.Parameter("zones") List<String> zones) {
+        @CustomType.Parameter("groupLabels") List<AssignmentGroupLabelResponse> groupLabels,
+        @CustomType.Parameter("instanceNamePrefixes") List<String> instanceNamePrefixes,
+        @CustomType.Parameter("instances") List<String> instances,
+        @CustomType.Parameter("osTypes") List<AssignmentOsTypeResponse> osTypes,
+        @CustomType.Parameter("zones") List<String> zones) {
         this.groupLabels = groupLabels;
         this.instanceNamePrefixes = instanceNamePrefixes;
         this.instances = instances;

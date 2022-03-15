@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.containeranalysis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.containeranalysis.outputs.NoteAttestationAuthorityHint;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NoteAttestationAuthority {
     /**
      * This submessage provides human-readable hints about the purpose of
@@ -23,8 +23,8 @@ public final class NoteAttestationAuthority {
      */
     private final NoteAttestationAuthorityHint hint;
 
-    @OutputCustomType.Constructor
-    private NoteAttestationAuthority(@OutputCustomType.Parameter("hint") NoteAttestationAuthorityHint hint) {
+    @CustomType.Constructor
+    private NoteAttestationAuthority(@CustomType.Parameter("hint") NoteAttestationAuthorityHint hint) {
         this.hint = hint;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudasset_v1.inputs.AccessSelectorArgs;
 import io.pulumi.googlenative.cloudasset_v1.inputs.ConditionContextArgs;
 import io.pulumi.googlenative.cloudasset_v1.inputs.IdentitySelectorArgs;
@@ -27,7 +27,7 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
      * Optional. Specifies roles or permissions for analysis. This is optional.
      * 
      */
-    @InputImport(name="accessSelector")
+    @Import(name="accessSelector")
       private final @Nullable Output<AccessSelectorArgs> accessSelector;
 
     public Output<AccessSelectorArgs> getAccessSelector() {
@@ -38,7 +38,7 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
      * Optional. The hypothetical context for IAM conditions evaluation.
      * 
      */
-    @InputImport(name="conditionContext")
+    @Import(name="conditionContext")
       private final @Nullable Output<ConditionContextArgs> conditionContext;
 
     public Output<ConditionContextArgs> getConditionContext() {
@@ -49,7 +49,7 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
      * Optional. Specifies an identity for analysis.
      * 
      */
-    @InputImport(name="identitySelector")
+    @Import(name="identitySelector")
       private final @Nullable Output<IdentitySelectorArgs> identitySelector;
 
     public Output<IdentitySelectorArgs> getIdentitySelector() {
@@ -60,7 +60,7 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
      * Optional. The query options.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<OptionsArgs> options;
 
     public Output<OptionsArgs> getOptions() {
@@ -71,7 +71,7 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
      * Optional. Specifies a resource for analysis.
      * 
      */
-    @InputImport(name="resourceSelector")
+    @Import(name="resourceSelector")
       private final @Nullable Output<ResourceSelectorArgs> resourceSelector;
 
     public Output<ResourceSelectorArgs> getResourceSelector() {
@@ -82,7 +82,7 @@ public final class IamPolicyAnalysisQueryArgs extends io.pulumi.resources.Resour
      * The relative name of the root asset. Only resources and IAM policies within the scope will be analyzed. This can only be an organization number (such as "organizations/123"), a folder number (such as "folders/123"), a project ID (such as "projects/my-project-id"), or a project number (such as "projects/12345"). To know how to get organization id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id). To know how to get folder or project id, visit [here ](https://cloud.google.com/resource-manager/docs/creating-managing-folders#viewing_or_listing_folders_and_projects).
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {

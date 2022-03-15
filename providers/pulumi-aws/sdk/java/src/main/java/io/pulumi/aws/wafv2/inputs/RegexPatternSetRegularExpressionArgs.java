@@ -4,7 +4,7 @@
 package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class RegexPatternSetRegularExpressionArgs extends io.pulumi.resour
      * The string representing the regular expression, see the AWS WAF [documentation](https://docs.aws.amazon.com/waf/latest/developerguide/waf-regex-pattern-set-creating.html) for more information.
      * 
      */
-    @InputImport(name="regexString", required=true)
+    @Import(name="regexString", required=true)
       private final Output<String> regexString;
 
     public Output<String> getRegexString() {

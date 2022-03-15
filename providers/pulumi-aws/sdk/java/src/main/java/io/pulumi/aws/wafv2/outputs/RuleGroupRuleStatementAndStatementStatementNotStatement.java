@@ -4,11 +4,11 @@
 package io.pulumi.aws.wafv2.outputs;
 
 import io.pulumi.aws.wafv2.outputs.RuleGroupRuleStatementAndStatementStatementNotStatementStatement;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupRuleStatementAndStatementStatementNotStatement {
     /**
      * The statement to negate. You can use any statement that can be nested. See Statement above for details.
@@ -16,8 +16,8 @@ public final class RuleGroupRuleStatementAndStatementStatementNotStatement {
      */
     private final List<RuleGroupRuleStatementAndStatementStatementNotStatementStatement> statements;
 
-    @OutputCustomType.Constructor
-    private RuleGroupRuleStatementAndStatementStatementNotStatement(@OutputCustomType.Parameter("statements") List<RuleGroupRuleStatementAndStatementStatementNotStatementStatement> statements) {
+    @CustomType.Constructor
+    private RuleGroupRuleStatementAndStatementStatementNotStatement(@CustomType.Parameter("statements") List<RuleGroupRuleStatementAndStatementStatementNotStatementStatement> statements) {
         this.statements = statements;
     }
 

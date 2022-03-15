@@ -8,7 +8,7 @@ import io.pulumi.awsnative.networkfirewall.RuleGroupArgs;
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupTypeEnum;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,49 +21,49 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:networkfirewall:RuleGroup")
 public class RuleGroup extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="capacity", type=Integer.class, parameters={})
+    @Export(name="capacity", type=Integer.class, parameters={})
     private Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
         return this.capacity;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="ruleGroup", type=io.pulumi.awsnative.networkfirewall.outputs.RuleGroup.class, parameters={})
+    @Export(name="ruleGroup", type=io.pulumi.awsnative.networkfirewall.outputs.RuleGroup.class, parameters={})
     private Output</* @Nullable */ io.pulumi.awsnative.networkfirewall.outputs.RuleGroup> ruleGroup;
 
     public Output</* @Nullable */ io.pulumi.awsnative.networkfirewall.outputs.RuleGroup> getRuleGroup() {
         return this.ruleGroup;
     }
-    @OutputExport(name="ruleGroupArn", type=String.class, parameters={})
+    @Export(name="ruleGroupArn", type=String.class, parameters={})
     private Output<String> ruleGroupArn;
 
     public Output<String> getRuleGroupArn() {
         return this.ruleGroupArn;
     }
-    @OutputExport(name="ruleGroupId", type=String.class, parameters={})
+    @Export(name="ruleGroupId", type=String.class, parameters={})
     private Output<String> ruleGroupId;
 
     public Output<String> getRuleGroupId() {
         return this.ruleGroupId;
     }
-    @OutputExport(name="ruleGroupName", type=String.class, parameters={})
+    @Export(name="ruleGroupName", type=String.class, parameters={})
     private Output<String> ruleGroupName;
 
     public Output<String> getRuleGroupName() {
         return this.ruleGroupName;
     }
-    @OutputExport(name="tags", type=List.class, parameters={RuleGroupTag.class})
+    @Export(name="tags", type=List.class, parameters={RuleGroupTag.class})
     private Output</* @Nullable */ List<RuleGroupTag>> tags;
 
     public Output</* @Nullable */ List<RuleGroupTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="type", type=RuleGroupTypeEnum.class, parameters={})
+    @Export(name="type", type=RuleGroupTypeEnum.class, parameters={})
     private Output<RuleGroupTypeEnum> type;
 
     public Output<RuleGroupTypeEnum> getType() {

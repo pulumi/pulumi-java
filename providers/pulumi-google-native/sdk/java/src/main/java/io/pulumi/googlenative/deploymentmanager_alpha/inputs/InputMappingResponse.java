@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class InputMappingResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the field that is going to be injected.
      * 
      */
-    @InputImport(name="fieldName", required=true)
+    @Import(name="fieldName", required=true)
       private final String fieldName;
 
     public String getFieldName() {
@@ -31,7 +31,7 @@ public final class InputMappingResponse extends io.pulumi.resources.InvokeArgs {
      * The location where this mapping applies.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -42,7 +42,7 @@ public final class InputMappingResponse extends io.pulumi.resources.InvokeArgs {
      * Regex to evaluate on method to decide if input applies.
      * 
      */
-    @InputImport(name="methodMatch", required=true)
+    @Import(name="methodMatch", required=true)
       private final String methodMatch;
 
     public String getMethodMatch() {
@@ -53,7 +53,7 @@ public final class InputMappingResponse extends io.pulumi.resources.InvokeArgs {
      * A jsonPath expression to select an element.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

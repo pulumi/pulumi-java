@@ -6,11 +6,11 @@ package io.pulumi.azurenative.synapse.outputs;
 import io.pulumi.azurenative.synapse.outputs.ManagedIntegrationRuntimeResponse;
 import io.pulumi.azurenative.synapse.outputs.SelfHostedIntegrationRuntimeResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetIntegrationRuntimeResult {
     /**
      * Resource Etag.
@@ -38,13 +38,13 @@ public final class GetIntegrationRuntimeResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIntegrationRuntimeResult(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") Either<ManagedIntegrationRuntimeResponse,SelfHostedIntegrationRuntimeResponse> properties,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") Either<ManagedIntegrationRuntimeResponse,SelfHostedIntegrationRuntimeResponse> properties,
+        @CustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;

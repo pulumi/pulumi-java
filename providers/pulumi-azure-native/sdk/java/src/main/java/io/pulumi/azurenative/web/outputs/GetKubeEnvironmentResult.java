@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.AppLogsConfigurationResponse;
 import io.pulumi.azurenative.web.outputs.ArcConfigurationResponse;
 import io.pulumi.azurenative.web.outputs.ExtendedLocationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetKubeEnvironmentResult {
     private final @Nullable String aksResourceID;
     /**
@@ -92,23 +92,23 @@ public final class GetKubeEnvironmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKubeEnvironmentResult(
-        @OutputCustomType.Parameter("aksResourceID") @Nullable String aksResourceID,
-        @OutputCustomType.Parameter("appLogsConfiguration") @Nullable AppLogsConfigurationResponse appLogsConfiguration,
-        @OutputCustomType.Parameter("arcConfiguration") @Nullable ArcConfigurationResponse arcConfiguration,
-        @OutputCustomType.Parameter("defaultDomain") String defaultDomain,
-        @OutputCustomType.Parameter("deploymentErrors") String deploymentErrors,
-        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("internalLoadBalancerEnabled") @Nullable Boolean internalLoadBalancerEnabled,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("staticIp") @Nullable String staticIp,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("aksResourceID") @Nullable String aksResourceID,
+        @CustomType.Parameter("appLogsConfiguration") @Nullable AppLogsConfigurationResponse appLogsConfiguration,
+        @CustomType.Parameter("arcConfiguration") @Nullable ArcConfigurationResponse arcConfiguration,
+        @CustomType.Parameter("defaultDomain") String defaultDomain,
+        @CustomType.Parameter("deploymentErrors") String deploymentErrors,
+        @CustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("internalLoadBalancerEnabled") @Nullable Boolean internalLoadBalancerEnabled,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("staticIp") @Nullable String staticIp,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.aksResourceID = aksResourceID;
         this.appLogsConfiguration = appLogsConfiguration;
         this.arcConfiguration = arcConfiguration;

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.iam.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * The ARN of the IAM policy.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable String arn;
 
     public Optional<String> getArn() {
@@ -30,7 +30,7 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the IAM policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -41,7 +41,7 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * The prefix of the path to the IAM policy. Defaults to a slash (`/`).
      * 
      */
-    @InputImport(name="pathPrefix")
+    @Import(name="pathPrefix")
       private final @Nullable String pathPrefix;
 
     public Optional<String> getPathPrefix() {
@@ -52,7 +52,7 @@ public final class GetPolicyArgs extends io.pulumi.resources.InvokeArgs {
      * Key-value mapping of tags for the IAM Policy.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

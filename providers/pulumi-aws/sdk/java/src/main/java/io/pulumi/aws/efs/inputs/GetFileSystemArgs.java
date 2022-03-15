@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.efs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetFileSystemArgs extends io.pulumi.resources.InvokeArgs {
      * Restricts the list to the file system with this creation token.
      * 
      */
-    @InputImport(name="creationToken")
+    @Import(name="creationToken")
       private final @Nullable String creationToken;
 
     public Optional<String> getCreationToken() {
@@ -30,7 +30,7 @@ public final class GetFileSystemArgs extends io.pulumi.resources.InvokeArgs {
      * The ID that identifies the file system (e.g., fs-ccfc0d65).
      * 
      */
-    @InputImport(name="fileSystemId")
+    @Import(name="fileSystemId")
       private final @Nullable String fileSystemId;
 
     public Optional<String> getFileSystemId() {
@@ -41,7 +41,7 @@ public final class GetFileSystemArgs extends io.pulumi.resources.InvokeArgs {
      * Restricts the list to the file system with these tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

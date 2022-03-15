@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.containeranalysis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NoteRelatedUrl {
     /**
      * Label to describe usage of the URL
@@ -22,10 +22,10 @@ public final class NoteRelatedUrl {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NoteRelatedUrl(
-        @OutputCustomType.Parameter("label") @Nullable String label,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("label") @Nullable String label,
+        @CustomType.Parameter("url") String url) {
         this.label = label;
         this.url = url;
     }

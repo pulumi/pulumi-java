@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AutoStoragePropertiesResponse {
     /**
      * The UTC time at which storage keys were last synchronized with the Batch account.
@@ -20,10 +20,10 @@ public final class AutoStoragePropertiesResponse {
      */
     private final String storageAccountId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoStoragePropertiesResponse(
-        @OutputCustomType.Parameter("lastKeySync") String lastKeySync,
-        @OutputCustomType.Parameter("storageAccountId") String storageAccountId) {
+        @CustomType.Parameter("lastKeySync") String lastKeySync,
+        @CustomType.Parameter("storageAccountId") String storageAccountId) {
         this.lastKeySync = lastKeySync;
         this.storageAccountId = storageAccountId;
     }

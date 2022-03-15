@@ -4,7 +4,7 @@
 package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
      * The ARN of an ALB Target Group.
      * 
      */
-    @InputImport(name="albTargetGroupArn")
+    @Import(name="albTargetGroupArn")
       private final @Nullable Output<String> albTargetGroupArn;
 
     public Output<String> getAlbTargetGroupArn() {
@@ -29,7 +29,7 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
      * Name of ASG to associate with the ELB.
      * 
      */
-    @InputImport(name="autoscalingGroupName")
+    @Import(name="autoscalingGroupName")
       private final @Nullable Output<String> autoscalingGroupName;
 
     public Output<String> getAutoscalingGroupName() {
@@ -40,7 +40,7 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
      * The name of the ELB.
      * 
      */
-    @InputImport(name="elb")
+    @Import(name="elb")
       private final @Nullable Output<String> elb;
 
     public Output<String> getElb() {

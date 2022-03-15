@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvFromConfigMapRefArgs;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvFromSecretRefArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ServiceTemplateSpecContainerEnvFromArgs extends io.pulumi.res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="configMapRef")
+    @Import(name="configMapRef")
       private final @Nullable Output<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> configMapRef;
 
     public Output<ServiceTemplateSpecContainerEnvFromConfigMapRefArgs> getConfigMapRef() {
@@ -32,7 +32,7 @@ public final class ServiceTemplateSpecContainerEnvFromArgs extends io.pulumi.res
      * An optional identifier to prepend to each key in the ConfigMap.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
@@ -44,7 +44,7 @@ public final class ServiceTemplateSpecContainerEnvFromArgs extends io.pulumi.res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="secretRef")
+    @Import(name="secretRef")
       private final @Nullable Output<ServiceTemplateSpecContainerEnvFromSecretRefArgs> secretRef;
 
     public Output<ServiceTemplateSpecContainerEnvFromSecretRefArgs> getSecretRef() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.AuthRequirementArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OAuthRequirementsArgs;
 import java.lang.Boolean;
@@ -26,7 +26,7 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
      * If true, the service accepts API keys without any other credential. This flag only applies to HTTP and gRPC requests.
      * 
      */
-    @InputImport(name="allowWithoutCredential")
+    @Import(name="allowWithoutCredential")
       private final @Nullable Output<Boolean> allowWithoutCredential;
 
     public Output<Boolean> getAllowWithoutCredential() {
@@ -37,7 +37,7 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
      * The requirements for OAuth credentials.
      * 
      */
-    @InputImport(name="oauth")
+    @Import(name="oauth")
       private final @Nullable Output<OAuthRequirementsArgs> oauth;
 
     public Output<OAuthRequirementsArgs> getOauth() {
@@ -48,7 +48,7 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
      * Requirements for additional authentication providers.
      * 
      */
-    @InputImport(name="requirements")
+    @Import(name="requirements")
       private final @Nullable Output<List<AuthRequirementArgs>> requirements;
 
     public Output<List<AuthRequirementArgs>> getRequirements() {
@@ -59,7 +59,7 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
      * Selects the methods to which this rule applies. Refer to selector for syntax details.
      * 
      */
-    @InputImport(name="selector")
+    @Import(name="selector")
       private final @Nullable Output<String> selector;
 
     public Output<String> getSelector() {

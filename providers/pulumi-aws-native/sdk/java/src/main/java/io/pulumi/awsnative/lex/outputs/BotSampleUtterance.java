@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BotSampleUtterance {
     private final String utterance;
 
-    @OutputCustomType.Constructor
-    private BotSampleUtterance(@OutputCustomType.Parameter("utterance") String utterance) {
+    @CustomType.Constructor
+    private BotSampleUtterance(@CustomType.Parameter("utterance") String utterance) {
         this.utterance = utterance;
     }
 

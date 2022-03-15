@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetadataSourceResponse {
     /**
      * Source type of the content
@@ -27,11 +27,11 @@ public final class MetadataSourceResponse {
      */
     private final @Nullable String sourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetadataSourceResponse(
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("sourceId") @Nullable String sourceId) {
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("sourceId") @Nullable String sourceId) {
         this.kind = kind;
         this.name = name;
         this.sourceId = sourceId;

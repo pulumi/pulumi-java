@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.BasicSliResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.RequestBasedSliResponse;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PerformanceThresholdResponse {
     /**
      * BasicSli to evaluate to judge window quality.
@@ -27,11 +27,11 @@ public final class PerformanceThresholdResponse {
      */
     private final Double threshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PerformanceThresholdResponse(
-        @OutputCustomType.Parameter("basicSliPerformance") BasicSliResponse basicSliPerformance,
-        @OutputCustomType.Parameter("performance") RequestBasedSliResponse performance,
-        @OutputCustomType.Parameter("threshold") Double threshold) {
+        @CustomType.Parameter("basicSliPerformance") BasicSliResponse basicSliPerformance,
+        @CustomType.Parameter("performance") RequestBasedSliResponse performance,
+        @CustomType.Parameter("threshold") Double threshold) {
         this.basicSliPerformance = basicSliPerformance;
         this.performance = performance;
         this.threshold = threshold;

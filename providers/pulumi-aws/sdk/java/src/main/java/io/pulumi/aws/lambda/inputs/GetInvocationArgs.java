@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lambda.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetInvocationArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the lambda function.
      * 
      */
-    @InputImport(name="functionName", required=true)
+    @Import(name="functionName", required=true)
       private final String functionName;
 
     public String getFunctionName() {
@@ -29,7 +29,7 @@ public final class GetInvocationArgs extends io.pulumi.resources.InvokeArgs {
      * A string in JSON format that is passed as payload to the lambda function.
      * 
      */
-    @InputImport(name="input", required=true)
+    @Import(name="input", required=true)
       private final String input;
 
     public String getInput() {
@@ -41,7 +41,7 @@ public final class GetInvocationArgs extends io.pulumi.resources.InvokeArgs {
      * to `$LATEST`.
      * 
      */
-    @InputImport(name="qualifier")
+    @Import(name="qualifier")
       private final @Nullable String qualifier;
 
     public Optional<String> getQualifier() {

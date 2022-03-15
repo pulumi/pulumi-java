@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.kinesis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson {
     /**
      * Path to the top-level parent that contains the records.
@@ -15,8 +15,8 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
      */
     private final String recordRowPath;
 
-    @OutputCustomType.Constructor
-    private AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson(@OutputCustomType.Parameter("recordRowPath") String recordRowPath) {
+    @CustomType.Constructor
+    private AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson(@CustomType.Parameter("recordRowPath") String recordRowPath) {
         this.recordRowPath = recordRowPath;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.DistributionResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
      * The various channels by which a package is distributed.
      * 
      */
-    @InputImport(name="distribution", required=true)
+    @Import(name="distribution", required=true)
       private final List<DistributionResponse> distribution;
 
     public List<DistributionResponse> getDistribution() {
@@ -33,7 +33,7 @@ public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the package.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {

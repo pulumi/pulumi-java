@@ -6,7 +6,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 import com.google.gson.JsonElement;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.ExternalDocumentationArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.ValidationRuleArgs;
 import java.lang.Boolean;
@@ -27,42 +27,42 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final JSONSchemaPropsArgs Empty = new JSONSchemaPropsArgs();
 
-    @InputImport(name="$ref")
+    @Import(name="$ref")
       private final @Nullable Output<String> $ref;
 
     public Output<String> get$ref() {
         return this.$ref == null ? Output.empty() : this.$ref;
     }
 
-    @InputImport(name="$schema")
+    @Import(name="$schema")
       private final @Nullable Output<String> $schema;
 
     public Output<String> get$schema() {
         return this.$schema == null ? Output.empty() : this.$schema;
     }
 
-    @InputImport(name="additionalItems")
+    @Import(name="additionalItems")
       private final @Nullable Output<Either<JSONSchemaPropsArgs,Boolean>> additionalItems;
 
     public Output<Either<JSONSchemaPropsArgs,Boolean>> getAdditionalItems() {
         return this.additionalItems == null ? Output.empty() : this.additionalItems;
     }
 
-    @InputImport(name="additionalProperties")
+    @Import(name="additionalProperties")
       private final @Nullable Output<Either<JSONSchemaPropsArgs,Boolean>> additionalProperties;
 
     public Output<Either<JSONSchemaPropsArgs,Boolean>> getAdditionalProperties() {
         return this.additionalProperties == null ? Output.empty() : this.additionalProperties;
     }
 
-    @InputImport(name="allOf")
+    @Import(name="allOf")
       private final @Nullable Output<List<JSONSchemaPropsArgs>> allOf;
 
     public Output<List<JSONSchemaPropsArgs>> getAllOf() {
         return this.allOf == null ? Output.empty() : this.allOf;
     }
 
-    @InputImport(name="anyOf")
+    @Import(name="anyOf")
       private final @Nullable Output<List<JSONSchemaPropsArgs>> anyOf;
 
     public Output<List<JSONSchemaPropsArgs>> getAnyOf() {
@@ -73,63 +73,63 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * default is a default value for undefined object fields. Defaulting is a beta feature under the CustomResourceDefaulting feature gate. Defaulting requires spec.preserveUnknownFields to be false.
      * 
      */
-    @InputImport(name="default")
+    @Import(name="default")
       private final @Nullable Output<JsonElement> $default;
 
     public Output<JsonElement> get$default() {
         return this.$default == null ? Output.empty() : this.$default;
     }
 
-    @InputImport(name="definitions")
+    @Import(name="definitions")
       private final @Nullable Output<Map<String,JSONSchemaPropsArgs>> definitions;
 
     public Output<Map<String,JSONSchemaPropsArgs>> getDefinitions() {
         return this.definitions == null ? Output.empty() : this.definitions;
     }
 
-    @InputImport(name="dependencies")
+    @Import(name="dependencies")
       private final @Nullable Output<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> dependencies;
 
     public Output<Map<String,Either<JSONSchemaPropsArgs,List<String>>>> getDependencies() {
         return this.dependencies == null ? Output.empty() : this.dependencies;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="enum")
+    @Import(name="enum")
       private final @Nullable Output<List<JsonElement>> $enum;
 
     public Output<List<JsonElement>> get$enum() {
         return this.$enum == null ? Output.empty() : this.$enum;
     }
 
-    @InputImport(name="example")
+    @Import(name="example")
       private final @Nullable Output<JsonElement> example;
 
     public Output<JsonElement> getExample() {
         return this.example == null ? Output.empty() : this.example;
     }
 
-    @InputImport(name="exclusiveMaximum")
+    @Import(name="exclusiveMaximum")
       private final @Nullable Output<Boolean> exclusiveMaximum;
 
     public Output<Boolean> getExclusiveMaximum() {
         return this.exclusiveMaximum == null ? Output.empty() : this.exclusiveMaximum;
     }
 
-    @InputImport(name="exclusiveMinimum")
+    @Import(name="exclusiveMinimum")
       private final @Nullable Output<Boolean> exclusiveMinimum;
 
     public Output<Boolean> getExclusiveMinimum() {
         return this.exclusiveMinimum == null ? Output.empty() : this.exclusiveMinimum;
     }
 
-    @InputImport(name="externalDocs")
+    @Import(name="externalDocs")
       private final @Nullable Output<ExternalDocumentationArgs> externalDocs;
 
     public Output<ExternalDocumentationArgs> getExternalDocs() {
@@ -142,154 +142,154 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * - bsonobjectid: a bson object ID, i.e. a 24 characters hex string - uri: an URI as parsed by Golang net/url.ParseRequestURI - email: an email address as parsed by Golang net/mail.ParseAddress - hostname: a valid representation for an Internet host name, as defined by RFC 1034, section 3.1 [RFC1034]. - ipv4: an IPv4 IP as parsed by Golang net.ParseIP - ipv6: an IPv6 IP as parsed by Golang net.ParseIP - cidr: a CIDR as parsed by Golang net.ParseCIDR - mac: a MAC address as parsed by Golang net.ParseMAC - uuid: an UUID that allows uppercase defined by the regex (?i)^[0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12}$ - uuid3: an UUID3 that allows uppercase defined by the regex (?i)^[0-9a-f]{8}-?[0-9a-f]{4}-?3[0-9a-f]{3}-?[0-9a-f]{4}-?[0-9a-f]{12}$ - uuid4: an UUID4 that allows uppercase defined by the regex (?i)^[0-9a-f]{8}-?[0-9a-f]{4}-?4[0-9a-f]{3}-?[89ab][0-9a-f]{3}-?[0-9a-f]{12}$ - uuid5: an UUID5 that allows uppercase defined by the regex (?i)^[0-9a-f]{8}-?[0-9a-f]{4}-?5[0-9a-f]{3}-?[89ab][0-9a-f]{3}-?[0-9a-f]{12}$ - isbn: an ISBN10 or ISBN13 number string like "0321751043" or "978-0321751041" - isbn10: an ISBN10 number string like "0321751043" - isbn13: an ISBN13 number string like "978-0321751041" - creditcard: a credit card number defined by the regex ^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$ with any non digit characters mixed in - ssn: a U.S. social security number following the regex ^\d{3}[- ]?\d{2}[- ]?\d{4}$ - hexcolor: an hexadecimal color code like "#FFFFFF: following the regex ^#?([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$ - rgbcolor: an RGB color code like rgb like "rgb(255,255,2559" - byte: base64 encoded binary data - password: any kind of string - date: a date string like "2006-01-02" as defined by full-date in RFC3339 - duration: a duration string like "22 ns" as parsed by Golang time.ParseDuration or compatible with Scala duration format - datetime: a date time string like "2014-12-15T19:30:20.000Z" as defined by date-time in RFC3339.
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable Output<String> format;
 
     public Output<String> getFormat() {
         return this.format == null ? Output.empty() : this.format;
     }
 
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
         return this.id == null ? Output.empty() : this.id;
     }
 
-    @InputImport(name="items")
+    @Import(name="items")
       private final @Nullable Output<Either<JSONSchemaPropsArgs,List<JsonElement>>> items;
 
     public Output<Either<JSONSchemaPropsArgs,List<JsonElement>>> getItems() {
         return this.items == null ? Output.empty() : this.items;
     }
 
-    @InputImport(name="maxItems")
+    @Import(name="maxItems")
       private final @Nullable Output<Integer> maxItems;
 
     public Output<Integer> getMaxItems() {
         return this.maxItems == null ? Output.empty() : this.maxItems;
     }
 
-    @InputImport(name="maxLength")
+    @Import(name="maxLength")
       private final @Nullable Output<Integer> maxLength;
 
     public Output<Integer> getMaxLength() {
         return this.maxLength == null ? Output.empty() : this.maxLength;
     }
 
-    @InputImport(name="maxProperties")
+    @Import(name="maxProperties")
       private final @Nullable Output<Integer> maxProperties;
 
     public Output<Integer> getMaxProperties() {
         return this.maxProperties == null ? Output.empty() : this.maxProperties;
     }
 
-    @InputImport(name="maximum")
+    @Import(name="maximum")
       private final @Nullable Output<Double> maximum;
 
     public Output<Double> getMaximum() {
         return this.maximum == null ? Output.empty() : this.maximum;
     }
 
-    @InputImport(name="minItems")
+    @Import(name="minItems")
       private final @Nullable Output<Integer> minItems;
 
     public Output<Integer> getMinItems() {
         return this.minItems == null ? Output.empty() : this.minItems;
     }
 
-    @InputImport(name="minLength")
+    @Import(name="minLength")
       private final @Nullable Output<Integer> minLength;
 
     public Output<Integer> getMinLength() {
         return this.minLength == null ? Output.empty() : this.minLength;
     }
 
-    @InputImport(name="minProperties")
+    @Import(name="minProperties")
       private final @Nullable Output<Integer> minProperties;
 
     public Output<Integer> getMinProperties() {
         return this.minProperties == null ? Output.empty() : this.minProperties;
     }
 
-    @InputImport(name="minimum")
+    @Import(name="minimum")
       private final @Nullable Output<Double> minimum;
 
     public Output<Double> getMinimum() {
         return this.minimum == null ? Output.empty() : this.minimum;
     }
 
-    @InputImport(name="multipleOf")
+    @Import(name="multipleOf")
       private final @Nullable Output<Double> multipleOf;
 
     public Output<Double> getMultipleOf() {
         return this.multipleOf == null ? Output.empty() : this.multipleOf;
     }
 
-    @InputImport(name="not")
+    @Import(name="not")
       private final @Nullable Output<JSONSchemaPropsArgs> not;
 
     public Output<JSONSchemaPropsArgs> getNot() {
         return this.not == null ? Output.empty() : this.not;
     }
 
-    @InputImport(name="nullable")
+    @Import(name="nullable")
       private final @Nullable Output<Boolean> nullable;
 
     public Output<Boolean> getNullable() {
         return this.nullable == null ? Output.empty() : this.nullable;
     }
 
-    @InputImport(name="oneOf")
+    @Import(name="oneOf")
       private final @Nullable Output<List<JSONSchemaPropsArgs>> oneOf;
 
     public Output<List<JSONSchemaPropsArgs>> getOneOf() {
         return this.oneOf == null ? Output.empty() : this.oneOf;
     }
 
-    @InputImport(name="pattern")
+    @Import(name="pattern")
       private final @Nullable Output<String> pattern;
 
     public Output<String> getPattern() {
         return this.pattern == null ? Output.empty() : this.pattern;
     }
 
-    @InputImport(name="patternProperties")
+    @Import(name="patternProperties")
       private final @Nullable Output<Map<String,JSONSchemaPropsArgs>> patternProperties;
 
     public Output<Map<String,JSONSchemaPropsArgs>> getPatternProperties() {
         return this.patternProperties == null ? Output.empty() : this.patternProperties;
     }
 
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,JSONSchemaPropsArgs>> properties;
 
     public Output<Map<String,JSONSchemaPropsArgs>> getProperties() {
         return this.properties == null ? Output.empty() : this.properties;
     }
 
-    @InputImport(name="required")
+    @Import(name="required")
       private final @Nullable Output<List<String>> required;
 
     public Output<List<String>> getRequired() {
         return this.required == null ? Output.empty() : this.required;
     }
 
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
         return this.title == null ? Output.empty() : this.title;
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
         return this.type == null ? Output.empty() : this.type;
     }
 
-    @InputImport(name="uniqueItems")
+    @Import(name="uniqueItems")
       private final @Nullable Output<Boolean> uniqueItems;
 
     public Output<Boolean> getUniqueItems() {
@@ -300,7 +300,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * x-kubernetes-embedded-resource defines that the value is an embedded Kubernetes runtime.Object, with TypeMeta and ObjectMeta. The type must be object. It is allowed to further restrict the embedded object. kind, apiVersion and metadata are validated automatically. x-kubernetes-preserve-unknown-fields is allowed to be true, but does not have to be if the object is fully specified (up to kind, apiVersion, metadata).
      * 
      */
-    @InputImport(name="x_kubernetes_embedded_resource")
+    @Import(name="x_kubernetes_embedded_resource")
       private final @Nullable Output<Boolean> x_kubernetes_embedded_resource;
 
     public Output<Boolean> getX_kubernetes_embedded_resource() {
@@ -320,7 +320,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      *    - ... zero or more
      * 
      */
-    @InputImport(name="x_kubernetes_int_or_string")
+    @Import(name="x_kubernetes_int_or_string")
       private final @Nullable Output<Boolean> x_kubernetes_int_or_string;
 
     public Output<Boolean> getX_kubernetes_int_or_string() {
@@ -335,7 +335,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * The properties specified must either be required or have a default value, to ensure those properties are present for all list items.
      * 
      */
-    @InputImport(name="x_kubernetes_list_map_keys")
+    @Import(name="x_kubernetes_list_map_keys")
       private final @Nullable Output<List<String>> x_kubernetes_list_map_keys;
 
     public Output<List<String>> getX_kubernetes_list_map_keys() {
@@ -359,7 +359,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      *    Defaults to atomic for arrays.
      * 
      */
-    @InputImport(name="x_kubernetes_list_type")
+    @Import(name="x_kubernetes_list_type")
       private final @Nullable Output<String> x_kubernetes_list_type;
 
     public Output<String> getX_kubernetes_list_type() {
@@ -377,7 +377,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      *      Atomic maps will be entirely replaced when updated.
      * 
      */
-    @InputImport(name="x_kubernetes_map_type")
+    @Import(name="x_kubernetes_map_type")
       private final @Nullable Output<String> x_kubernetes_map_type;
 
     public Output<String> getX_kubernetes_map_type() {
@@ -388,7 +388,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * x-kubernetes-preserve-unknown-fields stops the API server decoding step from pruning fields which are not specified in the validation schema. This affects fields recursively, but switches back to normal pruning behaviour if nested properties or additionalProperties are specified in the schema. This can either be true or undefined. False is forbidden.
      * 
      */
-    @InputImport(name="x_kubernetes_preserve_unknown_fields")
+    @Import(name="x_kubernetes_preserve_unknown_fields")
       private final @Nullable Output<Boolean> x_kubernetes_preserve_unknown_fields;
 
     public Output<Boolean> getX_kubernetes_preserve_unknown_fields() {
@@ -399,7 +399,7 @@ public final class JSONSchemaPropsArgs extends io.pulumi.resources.ResourceArgs 
      * x-kubernetes-validations describes a list of validation rules written in the CEL expression language. This field is an alpha-level. Using this field requires the feature gate `CustomResourceValidationExpressions` to be enabled.
      * 
      */
-    @InputImport(name="x_kubernetes_validations")
+    @Import(name="x_kubernetes_validations")
       private final @Nullable Output<List<ValidationRuleArgs>> x_kubernetes_validations;
 
     public Output<List<ValidationRuleArgs>> getX_kubernetes_validations() {

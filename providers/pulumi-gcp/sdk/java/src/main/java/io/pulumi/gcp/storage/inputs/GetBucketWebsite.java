@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetBucketWebsite extends io.pulumi.resources.InvokeArgs {
 
     public static final GetBucketWebsite Empty = new GetBucketWebsite();
 
-    @InputImport(name="mainPageSuffix", required=true)
+    @Import(name="mainPageSuffix", required=true)
       private final String mainPageSuffix;
 
     public String getMainPageSuffix() {
         return this.mainPageSuffix;
     }
 
-    @InputImport(name="notFoundPage", required=true)
+    @Import(name="notFoundPage", required=true)
       private final String notFoundPage;
 
     public String getNotFoundPage() {

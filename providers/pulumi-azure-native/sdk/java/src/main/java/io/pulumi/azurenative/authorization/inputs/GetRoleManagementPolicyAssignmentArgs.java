@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetRoleManagementPolicyAssignmentArgs extends io.pulumi.resou
      * The name of format {guid_guid} the role management policy assignment to get.
      * 
      */
-    @InputImport(name="roleManagementPolicyAssignmentName", required=true)
+    @Import(name="roleManagementPolicyAssignmentName", required=true)
       private final String roleManagementPolicyAssignmentName;
 
     public String getRoleManagementPolicyAssignmentName() {
@@ -27,7 +27,7 @@ public final class GetRoleManagementPolicyAssignmentArgs extends io.pulumi.resou
      * The scope of the role management policy.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final String scope;
 
     public String getScope() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class GitHubClientSecretArgs extends io.pulumi.resources.ResourceAr
      * Bring your own app client secret AKV URL.
      * 
      */
-    @InputImport(name="byoaSecretAkvUrl")
+    @Import(name="byoaSecretAkvUrl")
       private final @Nullable Output<String> byoaSecretAkvUrl;
 
     public Output<String> getByoaSecretAkvUrl() {
@@ -33,7 +33,7 @@ public final class GitHubClientSecretArgs extends io.pulumi.resources.ResourceAr
      * Bring your own app client secret name in AKV.
      * 
      */
-    @InputImport(name="byoaSecretName")
+    @Import(name="byoaSecretName")
       private final @Nullable Output<String> byoaSecretName;
 
     public Output<String> getByoaSecretName() {

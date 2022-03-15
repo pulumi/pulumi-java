@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.azurenative.machinelearning.inputs.TableSpecificationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ServiceInputOutputSpecificationArgs extends io.pulumi.resourc
      * The description of the Swagger schema.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class ServiceInputOutputSpecificationArgs extends io.pulumi.resourc
      * Specifies a collection that contains the column schema for each input or output of the web service. For more information, see the Swagger specification.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<Map<String,TableSpecificationArgs>> properties;
 
     public Output<Map<String,TableSpecificationArgs>> getProperties() {
@@ -46,7 +46,7 @@ public final class ServiceInputOutputSpecificationArgs extends io.pulumi.resourc
      * The title of your Swagger schema.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
@@ -57,7 +57,7 @@ public final class ServiceInputOutputSpecificationArgs extends io.pulumi.resourc
      * The type of the entity described in swagger. Always 'object'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

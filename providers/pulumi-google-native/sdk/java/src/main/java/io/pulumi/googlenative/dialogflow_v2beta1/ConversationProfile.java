@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v2beta1.ConversationProfileArgs;
@@ -27,7 +27,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * Configuration for an automated agent to use with this profile.
      * 
      */
-    @OutputExport(name="automatedAgentConfig", type=GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse.class, parameters={})
+    @Export(name="automatedAgentConfig", type=GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse.class, parameters={})
     private Output<GoogleCloudDialogflowV2beta1AutomatedAgentConfigResponse> automatedAgentConfig;
 
     /**
@@ -41,7 +41,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * Create time of the conversation profile.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -55,7 +55,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * Human readable name for this profile. Max length 1024 bytes.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -69,7 +69,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * Configuration for agent assistance to use with this profile.
      * 
      */
-    @OutputExport(name="humanAgentAssistantConfig", type=GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse.class, parameters={})
+    @Export(name="humanAgentAssistantConfig", type=GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse.class, parameters={})
     private Output<GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigResponse> humanAgentAssistantConfig;
 
     /**
@@ -83,7 +83,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * Configuration for connecting to a live agent. Currently, this feature is not general available, please contact Google to get access.
      * 
      */
-    @OutputExport(name="humanAgentHandoffConfig", type=GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse.class, parameters={})
+    @Export(name="humanAgentHandoffConfig", type=GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse.class, parameters={})
     private Output<GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse> humanAgentHandoffConfig;
 
     /**
@@ -97,7 +97,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * Language code for the conversation profile. If not specified, the language is en-US. Language at ConversationProfile should be set for all non en-us languages. This should be a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. Example: "en-US".
      * 
      */
-    @OutputExport(name="languageCode", type=String.class, parameters={})
+    @Export(name="languageCode", type=String.class, parameters={})
     private Output<String> languageCode;
 
     /**
@@ -111,7 +111,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * Configuration for logging conversation lifecycle events.
      * 
      */
-    @OutputExport(name="loggingConfig", type=GoogleCloudDialogflowV2beta1LoggingConfigResponse.class, parameters={})
+    @Export(name="loggingConfig", type=GoogleCloudDialogflowV2beta1LoggingConfigResponse.class, parameters={})
     private Output<GoogleCloudDialogflowV2beta1LoggingConfigResponse> loggingConfig;
 
     /**
@@ -125,7 +125,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * The unique identifier of this conversation profile. Format: `projects//locations//conversationProfiles/`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -139,7 +139,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * Configuration for publishing new message events. Event will be sent in format of ConversationEvent
      * 
      */
-    @OutputExport(name="newMessageEventNotificationConfig", type=GoogleCloudDialogflowV2beta1NotificationConfigResponse.class, parameters={})
+    @Export(name="newMessageEventNotificationConfig", type=GoogleCloudDialogflowV2beta1NotificationConfigResponse.class, parameters={})
     private Output<GoogleCloudDialogflowV2beta1NotificationConfigResponse> newMessageEventNotificationConfig;
 
     /**
@@ -153,7 +153,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * Configuration for publishing conversation lifecycle events.
      * 
      */
-    @OutputExport(name="notificationConfig", type=GoogleCloudDialogflowV2beta1NotificationConfigResponse.class, parameters={})
+    @Export(name="notificationConfig", type=GoogleCloudDialogflowV2beta1NotificationConfigResponse.class, parameters={})
     private Output<GoogleCloudDialogflowV2beta1NotificationConfigResponse> notificationConfig;
 
     /**
@@ -167,7 +167,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * Name of the CX SecuritySettings reference for the agent. Format: `projects//locations//securitySettings/`.
      * 
      */
-    @OutputExport(name="securitySettings", type=String.class, parameters={})
+    @Export(name="securitySettings", type=String.class, parameters={})
     private Output<String> securitySettings;
 
     /**
@@ -181,7 +181,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * Settings for speech transcription.
      * 
      */
-    @OutputExport(name="sttConfig", type=GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse.class, parameters={})
+    @Export(name="sttConfig", type=GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse.class, parameters={})
     private Output<GoogleCloudDialogflowV2beta1SpeechToTextConfigResponse> sttConfig;
 
     /**
@@ -195,7 +195,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * The time zone of this conversational profile from the [time zone database](https://www.iana.org/time-zones), e.g., America/New_York, Europe/Paris. Defaults to America/New_York.
      * 
      */
-    @OutputExport(name="timeZone", type=String.class, parameters={})
+    @Export(name="timeZone", type=String.class, parameters={})
     private Output<String> timeZone;
 
     /**
@@ -209,7 +209,7 @@ public class ConversationProfile extends io.pulumi.resources.CustomResource {
      * Update time of the conversation profile.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

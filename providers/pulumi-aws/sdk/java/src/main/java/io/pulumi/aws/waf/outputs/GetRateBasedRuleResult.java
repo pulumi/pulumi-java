@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.waf.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetRateBasedRuleResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -16,10 +16,10 @@ public final class GetRateBasedRuleResult {
     private final String id;
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRateBasedRuleResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name) {
         this.id = id;
         this.name = name;
     }

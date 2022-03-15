@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.msk.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterConfigurationInfo {
     /**
      * Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
@@ -21,10 +21,10 @@ public final class ClusterConfigurationInfo {
      */
     private final Integer revision;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterConfigurationInfo(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("revision") Integer revision) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("revision") Integer revision) {
         this.arn = arn;
         this.revision = revision;
     }

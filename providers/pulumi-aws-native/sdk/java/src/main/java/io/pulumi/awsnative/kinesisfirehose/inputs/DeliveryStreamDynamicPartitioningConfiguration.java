@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamRetryOptions;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class DeliveryStreamDynamicPartitioningConfiguration extends io.pul
 
     public static final DeliveryStreamDynamicPartitioningConfiguration Empty = new DeliveryStreamDynamicPartitioningConfiguration();
 
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
-    @InputImport(name="retryOptions")
+    @Import(name="retryOptions")
       private final @Nullable DeliveryStreamRetryOptions retryOptions;
 
     public Optional<DeliveryStreamRetryOptions> getRetryOptions() {

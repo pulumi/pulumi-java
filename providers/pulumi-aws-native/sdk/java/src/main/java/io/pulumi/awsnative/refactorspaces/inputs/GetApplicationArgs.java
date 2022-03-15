@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.refactorspaces.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetApplicationArgs Empty = new GetApplicationArgs();
 
-    @InputImport(name="applicationIdentifier", required=true)
+    @Import(name="applicationIdentifier", required=true)
       private final String applicationIdentifier;
 
     public String getApplicationIdentifier() {
         return this.applicationIdentifier;
     }
 
-    @InputImport(name="environmentIdentifier", required=true)
+    @Import(name="environmentIdentifier", required=true)
       private final String environmentIdentifier;
 
     public String getEnvironmentIdentifier() {

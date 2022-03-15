@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudRunOpV2ConditionResponse {
     /**
      * A reason for the domain mapping condition.
@@ -60,18 +60,18 @@ public final class GoogleCloudRunOpV2ConditionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudRunOpV2ConditionResponse(
-        @OutputCustomType.Parameter("domainMappingReason") String domainMappingReason,
-        @OutputCustomType.Parameter("executionReason") String executionReason,
-        @OutputCustomType.Parameter("internalReason") String internalReason,
-        @OutputCustomType.Parameter("lastTransitionTime") String lastTransitionTime,
-        @OutputCustomType.Parameter("message") String message,
-        @OutputCustomType.Parameter("reason") String reason,
-        @OutputCustomType.Parameter("revisionReason") String revisionReason,
-        @OutputCustomType.Parameter("severity") String severity,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("domainMappingReason") String domainMappingReason,
+        @CustomType.Parameter("executionReason") String executionReason,
+        @CustomType.Parameter("internalReason") String internalReason,
+        @CustomType.Parameter("lastTransitionTime") String lastTransitionTime,
+        @CustomType.Parameter("message") String message,
+        @CustomType.Parameter("reason") String reason,
+        @CustomType.Parameter("revisionReason") String revisionReason,
+        @CustomType.Parameter("severity") String severity,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("type") String type) {
         this.domainMappingReason = domainMappingReason;
         this.executionReason = executionReason;
         this.internalReason = internalReason;

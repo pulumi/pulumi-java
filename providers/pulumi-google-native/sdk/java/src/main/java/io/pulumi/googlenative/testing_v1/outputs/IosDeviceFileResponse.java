@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class IosDeviceFileResponse {
     /**
      * The bundle id of the app where this file lives. iOS apps sandbox their own filesystem, so app files must specify which app installed on the device.
@@ -26,11 +26,11 @@ public final class IosDeviceFileResponse {
      */
     private final String devicePath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IosDeviceFileResponse(
-        @OutputCustomType.Parameter("bundleId") String bundleId,
-        @OutputCustomType.Parameter("content") FileReferenceResponse content,
-        @OutputCustomType.Parameter("devicePath") String devicePath) {
+        @CustomType.Parameter("bundleId") String bundleId,
+        @CustomType.Parameter("content") FileReferenceResponse content,
+        @CustomType.Parameter("devicePath") String devicePath) {
         this.bundleId = bundleId;
         this.content = content;
         this.devicePath = devicePath;

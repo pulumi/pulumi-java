@@ -7,7 +7,7 @@ import io.pulumi.aws.appstream.inputs.FleetComputeCapacityArgs;
 import io.pulumi.aws.appstream.inputs.FleetDomainJoinInfoArgs;
 import io.pulumi.aws.appstream.inputs.FleetVpcConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for the desired capacity of the fleet. See below.
      * 
      */
-    @InputImport(name="computeCapacity", required=true)
+    @Import(name="computeCapacity", required=true)
       private final Output<FleetComputeCapacityArgs> computeCapacity;
 
     public Output<FleetComputeCapacityArgs> getComputeCapacity() {
@@ -35,7 +35,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Description to display.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Amount of time that a streaming session remains active after users disconnect.
      * 
      */
-    @InputImport(name="disconnectTimeoutInSeconds")
+    @Import(name="disconnectTimeoutInSeconds")
       private final @Nullable Output<Integer> disconnectTimeoutInSeconds;
 
     public Output<Integer> getDisconnectTimeoutInSeconds() {
@@ -57,7 +57,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Human-readable friendly name for the AppStream fleet.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -68,7 +68,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for the name of the directory and organizational unit (OU) to use to join the fleet to a Microsoft Active Directory domain. See below.
      * 
      */
-    @InputImport(name="domainJoinInfo")
+    @Import(name="domainJoinInfo")
       private final @Nullable Output<FleetDomainJoinInfoArgs> domainJoinInfo;
 
     public Output<FleetDomainJoinInfoArgs> getDomainJoinInfo() {
@@ -79,7 +79,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Enables or disables default internet access for the fleet.
      * 
      */
-    @InputImport(name="enableDefaultInternetAccess")
+    @Import(name="enableDefaultInternetAccess")
       private final @Nullable Output<Boolean> enableDefaultInternetAccess;
 
     public Output<Boolean> getEnableDefaultInternetAccess() {
@@ -90,7 +90,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Fleet type. Valid values are: `ON_DEMAND`, `ALWAYS_ON`
      * 
      */
-    @InputImport(name="fleetType")
+    @Import(name="fleetType")
       private final @Nullable Output<String> fleetType;
 
     public Output<String> getFleetType() {
@@ -101,7 +101,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of the IAM role to apply to the fleet.
      * 
      */
-    @InputImport(name="iamRoleArn")
+    @Import(name="iamRoleArn")
       private final @Nullable Output<String> iamRoleArn;
 
     public Output<String> getIamRoleArn() {
@@ -112,7 +112,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Amount of time that users can be idle (inactive) before they are disconnected from their streaming session and the `disconnect_timeout_in_seconds` time interval begins.
      * 
      */
-    @InputImport(name="idleDisconnectTimeoutInSeconds")
+    @Import(name="idleDisconnectTimeoutInSeconds")
       private final @Nullable Output<Integer> idleDisconnectTimeoutInSeconds;
 
     public Output<Integer> getIdleDisconnectTimeoutInSeconds() {
@@ -123,7 +123,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of the public, private, or shared image to use.
      * 
      */
-    @InputImport(name="imageArn")
+    @Import(name="imageArn")
       private final @Nullable Output<String> imageArn;
 
     public Output<String> getImageArn() {
@@ -134,7 +134,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the image used to create the fleet.
      * 
      */
-    @InputImport(name="imageName")
+    @Import(name="imageName")
       private final @Nullable Output<String> imageName;
 
     public Output<String> getImageName() {
@@ -145,7 +145,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Instance type to use when launching fleet instances.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -156,7 +156,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Maximum amount of time that a streaming session can remain active, in seconds.
      * 
      */
-    @InputImport(name="maxUserDurationInSeconds")
+    @Import(name="maxUserDurationInSeconds")
       private final @Nullable Output<Integer> maxUserDurationInSeconds;
 
     public Output<Integer> getMaxUserDurationInSeconds() {
@@ -167,7 +167,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Unique name for the fleet.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -178,7 +178,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * AppStream 2.0 view that is displayed to your users when they stream from the fleet. When `APP` is specified, only the windows of applications opened by users display. When `DESKTOP` is specified, the standard desktop that is provided by the operating system displays. If not specified, defaults to `APP`.
      * 
      */
-    @InputImport(name="streamView")
+    @Import(name="streamView")
       private final @Nullable Output<String> streamView;
 
     public Output<String> getStreamView() {
@@ -189,7 +189,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Map of tags to attach to AppStream instances.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -200,7 +200,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for the VPC configuration for the image builder. See below.
      * 
      */
-    @InputImport(name="vpcConfig")
+    @Import(name="vpcConfig")
       private final @Nullable Output<FleetVpcConfigArgs> vpcConfig;
 
     public Output<FleetVpcConfigArgs> getVpcConfig() {

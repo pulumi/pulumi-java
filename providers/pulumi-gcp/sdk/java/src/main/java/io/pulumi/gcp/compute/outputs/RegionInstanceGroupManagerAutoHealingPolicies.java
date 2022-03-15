@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RegionInstanceGroupManagerAutoHealingPolicies {
     /**
      * The health check resource that signals autohealing.
@@ -22,10 +22,10 @@ public final class RegionInstanceGroupManagerAutoHealingPolicies {
      */
     private final Integer initialDelaySec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionInstanceGroupManagerAutoHealingPolicies(
-        @OutputCustomType.Parameter("healthCheck") String healthCheck,
-        @OutputCustomType.Parameter("initialDelaySec") Integer initialDelaySec) {
+        @CustomType.Parameter("healthCheck") String healthCheck,
+        @CustomType.Parameter("initialDelaySec") Integer initialDelaySec) {
         this.healthCheck = healthCheck;
         this.initialDelaySec = initialDelaySec;
     }

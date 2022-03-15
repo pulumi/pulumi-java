@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MutationRecordArgs extends io.pulumi.resources.ResourceArgs {
      * When the change occurred.
      * 
      */
-    @InputImport(name="mutateTime")
+    @Import(name="mutateTime")
       private final @Nullable Output<String> mutateTime;
 
     public Output<String> getMutateTime() {
@@ -33,7 +33,7 @@ public final class MutationRecordArgs extends io.pulumi.resources.ResourceArgs {
      * The email address of the user making the change.
      * 
      */
-    @InputImport(name="mutatedBy")
+    @Import(name="mutatedBy")
       private final @Nullable Output<String> mutatedBy;
 
     public Output<String> getMutatedBy() {

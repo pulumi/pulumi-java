@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentRolloutDisruptionBudget;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentRollout {
     /**
      * Required. The maximum number (or percentage) of VMs per zone to disrupt at any given moment.
@@ -21,10 +21,10 @@ public final class OsPolicyAssignmentRollout {
      */
     private final String minWaitDuration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsPolicyAssignmentRollout(
-        @OutputCustomType.Parameter("disruptionBudget") OsPolicyAssignmentRolloutDisruptionBudget disruptionBudget,
-        @OutputCustomType.Parameter("minWaitDuration") String minWaitDuration) {
+        @CustomType.Parameter("disruptionBudget") OsPolicyAssignmentRolloutDisruptionBudget disruptionBudget,
+        @CustomType.Parameter("minWaitDuration") String minWaitDuration) {
         this.disruptionBudget = disruptionBudget;
         this.minWaitDuration = minWaitDuration;
     }

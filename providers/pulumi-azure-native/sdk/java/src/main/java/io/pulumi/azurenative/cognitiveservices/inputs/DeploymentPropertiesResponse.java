@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.azurenative.cognitiveservices.inputs.DeploymentModelResponse;
 import io.pulumi.azurenative.cognitiveservices.inputs.DeploymentScaleSettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class DeploymentPropertiesResponse extends io.pulumi.resources.Invo
      * Properties of Cognitive Services account deployment model.
      * 
      */
-    @InputImport(name="model")
+    @Import(name="model")
       private final @Nullable DeploymentModelResponse model;
 
     public Optional<DeploymentModelResponse> getModel() {
@@ -35,7 +35,7 @@ public final class DeploymentPropertiesResponse extends io.pulumi.resources.Invo
      * Gets the status of the resource at the time the operation was called.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -46,7 +46,7 @@ public final class DeploymentPropertiesResponse extends io.pulumi.resources.Invo
      * Properties of Cognitive Services account deployment model.
      * 
      */
-    @InputImport(name="scaleSettings")
+    @Import(name="scaleSettings")
       private final @Nullable DeploymentScaleSettingsResponse scaleSettings;
 
     public Optional<DeploymentScaleSettingsResponse> getScaleSettings() {

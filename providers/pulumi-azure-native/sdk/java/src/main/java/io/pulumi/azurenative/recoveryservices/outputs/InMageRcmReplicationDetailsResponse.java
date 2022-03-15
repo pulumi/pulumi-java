@@ -8,14 +8,14 @@ import io.pulumi.azurenative.recoveryservices.outputs.InMageRcmLastAgentUpgradeE
 import io.pulumi.azurenative.recoveryservices.outputs.InMageRcmMobilityAgentDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.InMageRcmNicDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.InMageRcmProtectedDiskDetailsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InMageRcmReplicationDetailsResponse {
     /**
      * The agent upgrade blocking error information.
@@ -244,53 +244,53 @@ public final class InMageRcmReplicationDetailsResponse {
      */
     private final List<InMageRcmNicDetailsResponse> vmNics;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InMageRcmReplicationDetailsResponse(
-        @OutputCustomType.Parameter("agentUpgradeBlockingErrorDetails") List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> agentUpgradeBlockingErrorDetails,
-        @OutputCustomType.Parameter("agentUpgradeState") String agentUpgradeState,
-        @OutputCustomType.Parameter("allocatedMemoryInMB") Double allocatedMemoryInMB,
-        @OutputCustomType.Parameter("discoveryType") String discoveryType,
-        @OutputCustomType.Parameter("fabricDiscoveryMachineId") String fabricDiscoveryMachineId,
-        @OutputCustomType.Parameter("failoverRecoveryPointId") String failoverRecoveryPointId,
-        @OutputCustomType.Parameter("firmwareType") String firmwareType,
-        @OutputCustomType.Parameter("initialReplicationProcessedBytes") Double initialReplicationProcessedBytes,
-        @OutputCustomType.Parameter("initialReplicationProgressPercentage") Integer initialReplicationProgressPercentage,
-        @OutputCustomType.Parameter("initialReplicationTransferredBytes") Double initialReplicationTransferredBytes,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("internalIdentifier") String internalIdentifier,
-        @OutputCustomType.Parameter("isLastUpgradeSuccessful") String isLastUpgradeSuccessful,
-        @OutputCustomType.Parameter("lastAgentUpgradeErrorDetails") List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails,
-        @OutputCustomType.Parameter("lastAgentUpgradeFailedJobId") String lastAgentUpgradeFailedJobId,
-        @OutputCustomType.Parameter("lastAgentUpgradeType") String lastAgentUpgradeType,
-        @OutputCustomType.Parameter("lastRecoveryPointId") String lastRecoveryPointId,
-        @OutputCustomType.Parameter("lastRecoveryPointReceived") String lastRecoveryPointReceived,
-        @OutputCustomType.Parameter("lastRpoCalculatedTime") String lastRpoCalculatedTime,
-        @OutputCustomType.Parameter("lastRpoInSeconds") Double lastRpoInSeconds,
-        @OutputCustomType.Parameter("licenseType") String licenseType,
-        @OutputCustomType.Parameter("mobilityAgentDetails") InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails,
-        @OutputCustomType.Parameter("multiVmGroupName") String multiVmGroupName,
-        @OutputCustomType.Parameter("osType") String osType,
-        @OutputCustomType.Parameter("processServerId") String processServerId,
-        @OutputCustomType.Parameter("processServerName") String processServerName,
-        @OutputCustomType.Parameter("processorCoreCount") Integer processorCoreCount,
-        @OutputCustomType.Parameter("protectedDisks") List<InMageRcmProtectedDiskDetailsResponse> protectedDisks,
-        @OutputCustomType.Parameter("resyncProcessedBytes") Double resyncProcessedBytes,
-        @OutputCustomType.Parameter("resyncProgressPercentage") Integer resyncProgressPercentage,
-        @OutputCustomType.Parameter("resyncRequired") String resyncRequired,
-        @OutputCustomType.Parameter("resyncState") String resyncState,
-        @OutputCustomType.Parameter("resyncTransferredBytes") Double resyncTransferredBytes,
-        @OutputCustomType.Parameter("runAsAccountId") String runAsAccountId,
-        @OutputCustomType.Parameter("targetAvailabilitySetId") String targetAvailabilitySetId,
-        @OutputCustomType.Parameter("targetAvailabilityZone") String targetAvailabilityZone,
-        @OutputCustomType.Parameter("targetBootDiagnosticsStorageAccountId") String targetBootDiagnosticsStorageAccountId,
-        @OutputCustomType.Parameter("targetGeneration") String targetGeneration,
-        @OutputCustomType.Parameter("targetNetworkId") String targetNetworkId,
-        @OutputCustomType.Parameter("targetProximityPlacementGroupId") String targetProximityPlacementGroupId,
-        @OutputCustomType.Parameter("targetResourceGroupId") String targetResourceGroupId,
-        @OutputCustomType.Parameter("targetVmName") String targetVmName,
-        @OutputCustomType.Parameter("targetVmSize") String targetVmSize,
-        @OutputCustomType.Parameter("testNetworkId") String testNetworkId,
-        @OutputCustomType.Parameter("vmNics") List<InMageRcmNicDetailsResponse> vmNics) {
+        @CustomType.Parameter("agentUpgradeBlockingErrorDetails") List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> agentUpgradeBlockingErrorDetails,
+        @CustomType.Parameter("agentUpgradeState") String agentUpgradeState,
+        @CustomType.Parameter("allocatedMemoryInMB") Double allocatedMemoryInMB,
+        @CustomType.Parameter("discoveryType") String discoveryType,
+        @CustomType.Parameter("fabricDiscoveryMachineId") String fabricDiscoveryMachineId,
+        @CustomType.Parameter("failoverRecoveryPointId") String failoverRecoveryPointId,
+        @CustomType.Parameter("firmwareType") String firmwareType,
+        @CustomType.Parameter("initialReplicationProcessedBytes") Double initialReplicationProcessedBytes,
+        @CustomType.Parameter("initialReplicationProgressPercentage") Integer initialReplicationProgressPercentage,
+        @CustomType.Parameter("initialReplicationTransferredBytes") Double initialReplicationTransferredBytes,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("internalIdentifier") String internalIdentifier,
+        @CustomType.Parameter("isLastUpgradeSuccessful") String isLastUpgradeSuccessful,
+        @CustomType.Parameter("lastAgentUpgradeErrorDetails") List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails,
+        @CustomType.Parameter("lastAgentUpgradeFailedJobId") String lastAgentUpgradeFailedJobId,
+        @CustomType.Parameter("lastAgentUpgradeType") String lastAgentUpgradeType,
+        @CustomType.Parameter("lastRecoveryPointId") String lastRecoveryPointId,
+        @CustomType.Parameter("lastRecoveryPointReceived") String lastRecoveryPointReceived,
+        @CustomType.Parameter("lastRpoCalculatedTime") String lastRpoCalculatedTime,
+        @CustomType.Parameter("lastRpoInSeconds") Double lastRpoInSeconds,
+        @CustomType.Parameter("licenseType") String licenseType,
+        @CustomType.Parameter("mobilityAgentDetails") InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails,
+        @CustomType.Parameter("multiVmGroupName") String multiVmGroupName,
+        @CustomType.Parameter("osType") String osType,
+        @CustomType.Parameter("processServerId") String processServerId,
+        @CustomType.Parameter("processServerName") String processServerName,
+        @CustomType.Parameter("processorCoreCount") Integer processorCoreCount,
+        @CustomType.Parameter("protectedDisks") List<InMageRcmProtectedDiskDetailsResponse> protectedDisks,
+        @CustomType.Parameter("resyncProcessedBytes") Double resyncProcessedBytes,
+        @CustomType.Parameter("resyncProgressPercentage") Integer resyncProgressPercentage,
+        @CustomType.Parameter("resyncRequired") String resyncRequired,
+        @CustomType.Parameter("resyncState") String resyncState,
+        @CustomType.Parameter("resyncTransferredBytes") Double resyncTransferredBytes,
+        @CustomType.Parameter("runAsAccountId") String runAsAccountId,
+        @CustomType.Parameter("targetAvailabilitySetId") String targetAvailabilitySetId,
+        @CustomType.Parameter("targetAvailabilityZone") String targetAvailabilityZone,
+        @CustomType.Parameter("targetBootDiagnosticsStorageAccountId") String targetBootDiagnosticsStorageAccountId,
+        @CustomType.Parameter("targetGeneration") String targetGeneration,
+        @CustomType.Parameter("targetNetworkId") String targetNetworkId,
+        @CustomType.Parameter("targetProximityPlacementGroupId") String targetProximityPlacementGroupId,
+        @CustomType.Parameter("targetResourceGroupId") String targetResourceGroupId,
+        @CustomType.Parameter("targetVmName") String targetVmName,
+        @CustomType.Parameter("targetVmSize") String targetVmSize,
+        @CustomType.Parameter("testNetworkId") String testNetworkId,
+        @CustomType.Parameter("vmNics") List<InMageRcmNicDetailsResponse> vmNics) {
         this.agentUpgradeBlockingErrorDetails = agentUpgradeBlockingErrorDetails;
         this.agentUpgradeState = agentUpgradeState;
         this.allocatedMemoryInMB = allocatedMemoryInMB;

@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkbookTemplateGalleryResponse {
     /**
      * Category for the gallery.
@@ -38,13 +38,13 @@ public final class WorkbookTemplateGalleryResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkbookTemplateGalleryResponse(
-        @OutputCustomType.Parameter("category") @Nullable String category,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("order") @Nullable Integer order,
-        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("category") @Nullable String category,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("order") @Nullable Integer order,
+        @CustomType.Parameter("resourceType") @Nullable String resourceType,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.category = category;
         this.name = name;
         this.order = order;

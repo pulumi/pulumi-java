@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetGalleryArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the Shared Image Gallery.
      * 
      */
-    @InputImport(name="galleryName", required=true)
+    @Import(name="galleryName", required=true)
       private final String galleryName;
 
     public String getGalleryName() {
@@ -29,7 +29,7 @@ public final class GetGalleryArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -40,7 +40,7 @@ public final class GetGalleryArgs extends io.pulumi.resources.InvokeArgs {
      * The select expression to apply on the operation.
      * 
      */
-    @InputImport(name="select")
+    @Import(name="select")
       private final @Nullable String select;
 
     public Optional<String> getSelect() {

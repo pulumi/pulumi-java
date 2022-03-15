@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.VersionResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.VulnerabilityLocationResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DetailResponse {
     /**
      * The cpe_uri in [cpe format] (https://cpe.mitre.org/specification/) in which the vulnerability manifests. Examples include distro or storage location for vulnerable jar. This field can be used as a filter in list requests.
@@ -68,19 +68,19 @@ public final class DetailResponse {
      */
     private final String vendor;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetailResponse(
-        @OutputCustomType.Parameter("cpeUri") String cpeUri,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("fixedLocation") VulnerabilityLocationResponse fixedLocation,
-        @OutputCustomType.Parameter("isObsolete") Boolean isObsolete,
-        @OutputCustomType.Parameter("maxAffectedVersion") VersionResponse maxAffectedVersion,
-        @OutputCustomType.Parameter("minAffectedVersion") VersionResponse minAffectedVersion,
-        @OutputCustomType.Parameter("package") String $package,
-        @OutputCustomType.Parameter("packageType") String packageType,
-        @OutputCustomType.Parameter("severityName") String severityName,
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("vendor") String vendor) {
+        @CustomType.Parameter("cpeUri") String cpeUri,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("fixedLocation") VulnerabilityLocationResponse fixedLocation,
+        @CustomType.Parameter("isObsolete") Boolean isObsolete,
+        @CustomType.Parameter("maxAffectedVersion") VersionResponse maxAffectedVersion,
+        @CustomType.Parameter("minAffectedVersion") VersionResponse minAffectedVersion,
+        @CustomType.Parameter("package") String $package,
+        @CustomType.Parameter("packageType") String packageType,
+        @CustomType.Parameter("severityName") String severityName,
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("vendor") String vendor) {
         this.cpeUri = cpeUri;
         this.description = description;
         this.fixedLocation = fixedLocation;

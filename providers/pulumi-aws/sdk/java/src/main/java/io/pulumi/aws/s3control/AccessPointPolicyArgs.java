@@ -4,7 +4,7 @@
 package io.pulumi.aws.s3control;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AccessPointPolicyArgs extends io.pulumi.resources.ResourceArg
      * The ARN of the access point that you want to associate with the specified policy.
      * 
      */
-    @InputImport(name="accessPointArn", required=true)
+    @Import(name="accessPointArn", required=true)
       private final Output<String> accessPointArn;
 
     public Output<String> getAccessPointArn() {
@@ -28,7 +28,7 @@ public final class AccessPointPolicyArgs extends io.pulumi.resources.ResourceArg
      * The policy that you want to apply to the specified access point.
      * 
      */
-    @InputImport(name="policy", required=true)
+    @Import(name="policy", required=true)
       private final Output<String> policy;
 
     public Output<String> getPolicy() {

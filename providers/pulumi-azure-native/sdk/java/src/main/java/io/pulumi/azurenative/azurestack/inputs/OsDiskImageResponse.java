@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestack.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class OsDiskImageResponse extends io.pulumi.resources.InvokeArgs {
      * OS operating system type.
      * 
      */
-    @InputImport(name="operatingSystem", required=true)
+    @Import(name="operatingSystem", required=true)
       private final String operatingSystem;
 
     public String getOperatingSystem() {
@@ -31,7 +31,7 @@ public final class OsDiskImageResponse extends io.pulumi.resources.InvokeArgs {
      * SAS key for source blob.
      * 
      */
-    @InputImport(name="sourceBlobSasUri", required=true)
+    @Import(name="sourceBlobSasUri", required=true)
       private final String sourceBlobSasUri;
 
     public String getSourceBlobSasUri() {

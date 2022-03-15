@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.QueuingConfigurationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LimitResponseArgs extends io.pulumi.resources.ResourceArgs {
      * `queuing` holds the configuration parameters for queuing. This field may be non-empty only if `type` is `"Queue"`.
      * 
      */
-    @InputImport(name="queuing")
+    @Import(name="queuing")
       private final @Nullable Output<QueuingConfigurationArgs> queuing;
 
     public Output<QueuingConfigurationArgs> getQueuing() {
@@ -34,7 +34,7 @@ public final class LimitResponseArgs extends io.pulumi.resources.ResourceArgs {
      * `type` is "Queue" or "Reject". "Queue" means that requests that can not be executed upon arrival are held in a queue until they can be executed or a queuing limit is reached. "Reject" means that requests that can not be executed upon arrival are rejected. Required.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

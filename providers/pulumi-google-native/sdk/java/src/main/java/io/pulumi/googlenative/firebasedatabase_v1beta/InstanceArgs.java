@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebasedatabase_v1beta;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.firebasedatabase_v1beta.enums.InstanceState;
 import io.pulumi.googlenative.firebasedatabase_v1beta.enums.InstanceType;
 import java.lang.String;
@@ -16,7 +16,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final InstanceArgs Empty = new InstanceArgs();
 
-    @InputImport(name="databaseId")
+    @Import(name="databaseId")
       private final @Nullable Output<String> databaseId;
 
     public Output<String> getDatabaseId() {
@@ -27,14 +27,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The globally unique hostname of the database.
      * 
      */
-    @InputImport(name="databaseUrl")
+    @Import(name="databaseUrl")
       private final @Nullable Output<String> databaseUrl;
 
     public Output<String> getDatabaseUrl() {
         return this.databaseUrl == null ? Output.empty() : this.databaseUrl;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -45,7 +45,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The fully qualified resource name of the database instance, in the form: `projects/{project-number}/locations/{location-id}/instances/{database-id}`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -56,7 +56,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the project this instance belongs to. For example: `projects/{project-number}`.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -67,7 +67,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The database's lifecycle state. Read-only.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<InstanceState> state;
 
     public Output<InstanceState> getState() {
@@ -78,14 +78,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The database instance type. On creation only USER_DATABASE is allowed, which is also the default when omitted.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<InstanceType> type;
 
     public Output<InstanceType> getType() {
         return this.type == null ? Output.empty() : this.type;
     }
 
-    @InputImport(name="validateOnly")
+    @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
     public Output<String> getValidateOnly() {

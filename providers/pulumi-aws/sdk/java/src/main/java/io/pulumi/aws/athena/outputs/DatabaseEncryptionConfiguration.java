@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.athena.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseEncryptionConfiguration {
     /**
      * The type of key; one of `SSE_S3`, `SSE_KMS`, `CSE_KMS`
@@ -22,10 +22,10 @@ public final class DatabaseEncryptionConfiguration {
      */
     private final @Nullable String kmsKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseEncryptionConfiguration(
-        @OutputCustomType.Parameter("encryptionOption") String encryptionOption,
-        @OutputCustomType.Parameter("kmsKey") @Nullable String kmsKey) {
+        @CustomType.Parameter("encryptionOption") String encryptionOption,
+        @CustomType.Parameter("kmsKey") @Nullable String kmsKey) {
         this.encryptionOption = encryptionOption;
         this.kmsKey = kmsKey;
     }

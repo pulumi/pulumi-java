@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.healthcare.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FhirStoreNotificationConfig {
     /**
      * The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
@@ -20,8 +20,8 @@ public final class FhirStoreNotificationConfig {
      */
     private final String pubsubTopic;
 
-    @OutputCustomType.Constructor
-    private FhirStoreNotificationConfig(@OutputCustomType.Parameter("pubsubTopic") String pubsubTopic) {
+    @CustomType.Constructor
+    private FhirStoreNotificationConfig(@CustomType.Parameter("pubsubTopic") String pubsubTopic) {
         this.pubsubTopic = pubsubTopic;
     }
 

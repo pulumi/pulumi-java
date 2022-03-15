@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.s3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketLogging {
     /**
      * The name of the bucket that will receive the log objects.
@@ -22,10 +22,10 @@ public final class BucketLogging {
      */
     private final @Nullable String targetPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketLogging(
-        @OutputCustomType.Parameter("targetBucket") String targetBucket,
-        @OutputCustomType.Parameter("targetPrefix") @Nullable String targetPrefix) {
+        @CustomType.Parameter("targetBucket") String targetBucket,
+        @CustomType.Parameter("targetPrefix") @Nullable String targetPrefix) {
         this.targetBucket = targetBucket;
         this.targetPrefix = targetPrefix;
     }

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetApplicationPackageResult {
     /**
      * The ETag of the resource, used for concurrency statements.
@@ -55,17 +55,17 @@ public final class GetApplicationPackageResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApplicationPackageResult(
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("format") String format,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lastActivationTime") String lastActivationTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("storageUrl") String storageUrl,
-        @OutputCustomType.Parameter("storageUrlExpiry") String storageUrlExpiry,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("format") String format,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lastActivationTime") String lastActivationTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("storageUrl") String storageUrl,
+        @CustomType.Parameter("storageUrlExpiry") String storageUrlExpiry,
+        @CustomType.Parameter("type") String type) {
         this.etag = etag;
         this.format = format;
         this.id = id;

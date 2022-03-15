@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceCloneGetArgs;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceIpAddressGetArgs;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceReplicaConfigurationGetArgs;
@@ -28,7 +28,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * configuration is detailed below.
      * 
      */
-    @InputImport(name="clone")
+    @Import(name="clone")
       private final @Nullable Output<DatabaseInstanceCloneGetArgs> clone;
 
     public Output<DatabaseInstanceCloneGetArgs> getClone() {
@@ -40,7 +40,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * connection strings. For example, when connecting with [Cloud SQL Proxy](https://cloud.google.com/sql/docs/mysql/connect-admin-proxy).
      * 
      */
-    @InputImport(name="connectionName")
+    @Import(name="connectionName")
       private final @Nullable Output<String> connectionName;
 
     public Output<String> getConnectionName() {
@@ -59,7 +59,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * includes an up-to-date reference of supported versions.
      * 
      */
-    @InputImport(name="databaseVersion")
+    @Import(name="databaseVersion")
       private final @Nullable Output<String> databaseVersion;
 
     public Output<String> getDatabaseVersion() {
@@ -71,7 +71,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * in state, a `destroy` or `update` command that deletes the instance will fail.
      * 
      */
-    @InputImport(name="deletionProtection")
+    @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
     public Output<Boolean> getDeletionProtection() {
@@ -89,7 +89,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
      * 
      */
-    @InputImport(name="encryptionKeyName")
+    @Import(name="encryptionKeyName")
       private final @Nullable Output<String> encryptionKeyName;
 
     public Output<String> getEncryptionKeyName() {
@@ -100,14 +100,14 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * The first IPv4 address of any type assigned.
      * 
      */
-    @InputImport(name="firstIpAddress")
+    @Import(name="firstIpAddress")
       private final @Nullable Output<String> firstIpAddress;
 
     public Output<String> getFirstIpAddress() {
         return this.firstIpAddress == null ? Output.empty() : this.firstIpAddress;
     }
 
-    @InputImport(name="ipAddresses")
+    @Import(name="ipAddresses")
       private final @Nullable Output<List<DatabaseInstanceIpAddressGetArgs>> ipAddresses;
 
     public Output<List<DatabaseInstanceIpAddressGetArgs>> getIpAddresses() {
@@ -120,7 +120,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * have `binary_log_enabled` set, as well as existing backups.
      * 
      */
-    @InputImport(name="masterInstanceName")
+    @Import(name="masterInstanceName")
       private final @Nullable Output<String> masterInstanceName;
 
     public Output<String> getMasterInstanceName() {
@@ -131,7 +131,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * A name for this whitelist entry.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -142,7 +142,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * The first private (`PRIVATE`) IPv4 address assigned.
      * 
      */
-    @InputImport(name="privateIpAddress")
+    @Import(name="privateIpAddress")
       private final @Nullable Output<String> privateIpAddress;
 
     public Output<String> getPrivateIpAddress() {
@@ -153,7 +153,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * The full project ID of the source instance.`
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -164,7 +164,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * The first public (`PRIMARY`) IPv4 address assigned.
      * 
      */
-    @InputImport(name="publicIpAddress")
+    @Import(name="publicIpAddress")
       private final @Nullable Output<String> publicIpAddress;
 
     public Output<String> getPublicIpAddress() {
@@ -180,7 +180,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * make sure you understand this.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -192,7 +192,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * configuration is detailed below. Valid only for MySQL instances.
      * 
      */
-    @InputImport(name="replicaConfiguration")
+    @Import(name="replicaConfiguration")
       private final @Nullable Output<DatabaseInstanceReplicaConfigurationGetArgs> replicaConfiguration;
 
     public Output<DatabaseInstanceReplicaConfigurationGetArgs> getReplicaConfiguration() {
@@ -206,7 +206,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * block during resource creation/update will trigger the restore action after the resource is created/updated.
      * 
      */
-    @InputImport(name="restoreBackupContext")
+    @Import(name="restoreBackupContext")
       private final @Nullable Output<DatabaseInstanceRestoreBackupContextGetArgs> restoreBackupContext;
 
     public Output<DatabaseInstanceRestoreBackupContextGetArgs> getRestoreBackupContext() {
@@ -217,7 +217,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
      * 
      */
-    @InputImport(name="rootPassword")
+    @Import(name="rootPassword")
       private final @Nullable Output<String> rootPassword;
 
     public Output<String> getRootPassword() {
@@ -228,14 +228,14 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
         return this.selfLink == null ? Output.empty() : this.selfLink;
     }
 
-    @InputImport(name="serverCaCerts")
+    @Import(name="serverCaCerts")
       private final @Nullable Output<List<DatabaseInstanceServerCaCertGetArgs>> serverCaCerts;
 
     public Output<List<DatabaseInstanceServerCaCertGetArgs>> getServerCaCerts() {
@@ -247,7 +247,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * instance.
      * 
      */
-    @InputImport(name="serviceAccountEmailAddress")
+    @Import(name="serviceAccountEmailAddress")
       private final @Nullable Output<String> serviceAccountEmailAddress;
 
     public Output<String> getServiceAccountEmailAddress() {
@@ -259,7 +259,7 @@ public final class DatabaseInstanceState extends io.pulumi.resources.ResourceArg
      * configuration is detailed below. Required if `clone` is not set.
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable Output<DatabaseInstanceSettingsGetArgs> settings;
 
     public Output<DatabaseInstanceSettingsGetArgs> getSettings() {

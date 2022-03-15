@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyRuleMatcherResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyRuleSecureTagResponse;
 import java.lang.Boolean;
@@ -25,7 +25,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * The Action to perform when the client connection triggers the rule. Can currently be either "allow" or "deny()" where valid values for status are 403, 404, and 502.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final String action;
 
     public String getAction() {
@@ -36,7 +36,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * An optional description for this resource.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -47,7 +47,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * The direction in which this rule applies.
      * 
      */
-    @InputImport(name="direction", required=true)
+    @Import(name="direction", required=true)
       private final String direction;
 
     public String getDirection() {
@@ -58,7 +58,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled.
      * 
      */
-    @InputImport(name="disabled", required=true)
+    @Import(name="disabled", required=true)
       private final Boolean disabled;
 
     public Boolean getDisabled() {
@@ -69,7 +69,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
      * 
      */
-    @InputImport(name="enableLogging", required=true)
+    @Import(name="enableLogging", required=true)
       private final Boolean enableLogging;
 
     public Boolean getEnableLogging() {
@@ -80,7 +80,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * [Output only] Type of the resource. Always compute#firewallPolicyRule for firewall policy rules
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final String kind;
 
     public String getKind() {
@@ -91,7 +91,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
      * 
      */
-    @InputImport(name="match", required=true)
+    @Import(name="match", required=true)
       private final FirewallPolicyRuleMatcherResponse match;
 
     public FirewallPolicyRuleMatcherResponse getMatch() {
@@ -102,7 +102,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest prority.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Integer priority;
 
     public Integer getPriority() {
@@ -113,7 +113,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * Calculation of the complexity of a single firewall policy rule.
      * 
      */
-    @InputImport(name="ruleTupleCount", required=true)
+    @Import(name="ruleTupleCount", required=true)
       private final Integer ruleTupleCount;
 
     public Integer getRuleTupleCount() {
@@ -124,7 +124,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
      * 
      */
-    @InputImport(name="targetResources", required=true)
+    @Import(name="targetResources", required=true)
       private final List<String> targetResources;
 
     public List<String> getTargetResources() {
@@ -135,7 +135,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * A list of secure tags that controls which instances the firewall rule applies to. If targetSecureTag are specified, then the firewall rule applies only to instances in the VPC network that have one of those EFFECTIVE secure tags, if all the target_secure_tag are in INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are specified, the firewall rule applies to all instances on the specified network. Maximum number of target label tags allowed is 256.
      * 
      */
-    @InputImport(name="targetSecureTags", required=true)
+    @Import(name="targetSecureTags", required=true)
       private final List<FirewallPolicyRuleSecureTagResponse> targetSecureTags;
 
     public List<FirewallPolicyRuleSecureTagResponse> getTargetSecureTags() {
@@ -146,7 +146,7 @@ public final class FirewallPolicyRuleResponse extends io.pulumi.resources.Invoke
      * A list of service accounts indicating the sets of instances that are applied with this rule.
      * 
      */
-    @InputImport(name="targetServiceAccounts", required=true)
+    @Import(name="targetServiceAccounts", required=true)
       private final List<String> targetServiceAccounts;
 
     public List<String> getTargetServiceAccounts() {

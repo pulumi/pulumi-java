@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.organizations.inputs.PolicyBooleanPolicyGetArgs;
 import io.pulumi.gcp.organizations.inputs.PolicyListPolicyGetArgs;
 import io.pulumi.gcp.organizations.inputs.PolicyRestorePolicyGetArgs;
@@ -23,7 +23,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * below.
      * 
      */
-    @InputImport(name="booleanPolicy")
+    @Import(name="booleanPolicy")
       private final @Nullable Output<PolicyBooleanPolicyGetArgs> booleanPolicy;
 
     public Output<PolicyBooleanPolicyGetArgs> getBooleanPolicy() {
@@ -34,7 +34,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
      * 
      */
-    @InputImport(name="constraint")
+    @Import(name="constraint")
       private final @Nullable Output<String> constraint;
 
     public Output<String> getConstraint() {
@@ -45,7 +45,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * (Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -56,7 +56,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
      * 
      */
-    @InputImport(name="listPolicy")
+    @Import(name="listPolicy")
       private final @Nullable Output<PolicyListPolicyGetArgs> listPolicy;
 
     public Output<PolicyListPolicyGetArgs> getListPolicy() {
@@ -67,7 +67,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * The numeric ID of the organization to set the policy for.
      * 
      */
-    @InputImport(name="orgId")
+    @Import(name="orgId")
       private final @Nullable Output<String> orgId;
 
     public Output<String> getOrgId() {
@@ -78,7 +78,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * A restore policy is a constraint to restore the default policy. Structure is documented below.
      * 
      */
-    @InputImport(name="restorePolicy")
+    @Import(name="restorePolicy")
       private final @Nullable Output<PolicyRestorePolicyGetArgs> restorePolicy;
 
     public Output<PolicyRestorePolicyGetArgs> getRestorePolicy() {
@@ -89,7 +89,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * (Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
@@ -100,7 +100,7 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
      * Version of the Policy. Default version is 0.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {

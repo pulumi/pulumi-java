@@ -4,7 +4,7 @@
 package io.pulumi.aws.athena.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WorkgroupConfigurationResultConfigurationEncryptionConfigurat
      * Indicates whether Amazon S3 server-side encryption with Amazon S3-managed keys (`SSE_S3`), server-side encryption with KMS-managed keys (`SSE_KMS`), or client-side encryption with KMS-managed keys (`CSE_KMS`) is used. If a query runs in a workgroup and the workgroup overrides client-side settings, then the workgroup's setting for encryption is used. It specifies whether query results must be encrypted, for all queries that run in this workgroup.
      * 
      */
-    @InputImport(name="encryptionOption")
+    @Import(name="encryptionOption")
       private final @Nullable Output<String> encryptionOption;
 
     public Output<String> getEncryptionOption() {
@@ -29,7 +29,7 @@ public final class WorkgroupConfigurationResultConfigurationEncryptionConfigurat
      * For `SSE_KMS` and `CSE_KMS`, this is the KMS key Amazon Resource Name (ARN).
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {

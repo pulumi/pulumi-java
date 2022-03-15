@@ -6,24 +6,24 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.enums.RuleGroupSizeConstraintStatementComparisonOperator;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupFieldToMatch;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupTextTransformation;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupSizeConstraintStatement {
     private final RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator;
     private final RuleGroupFieldToMatch fieldToMatch;
     private final Double size;
     private final List<RuleGroupTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupSizeConstraintStatement(
-        @OutputCustomType.Parameter("comparisonOperator") RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator,
-        @OutputCustomType.Parameter("fieldToMatch") RuleGroupFieldToMatch fieldToMatch,
-        @OutputCustomType.Parameter("size") Double size,
-        @OutputCustomType.Parameter("textTransformations") List<RuleGroupTextTransformation> textTransformations) {
+        @CustomType.Parameter("comparisonOperator") RuleGroupSizeConstraintStatementComparisonOperator comparisonOperator,
+        @CustomType.Parameter("fieldToMatch") RuleGroupFieldToMatch fieldToMatch,
+        @CustomType.Parameter("size") Double size,
+        @CustomType.Parameter("textTransformations") List<RuleGroupTextTransformation> textTransformations) {
         this.comparisonOperator = comparisonOperator;
         this.fieldToMatch = fieldToMatch;
         this.size = size;

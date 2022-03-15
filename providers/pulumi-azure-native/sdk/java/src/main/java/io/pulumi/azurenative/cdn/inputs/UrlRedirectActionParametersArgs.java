@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.enums.DestinationProtocol;
 import io.pulumi.azurenative.cdn.enums.RedirectType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
      * Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
      * 
      */
-    @InputImport(name="customFragment")
+    @Import(name="customFragment")
       private final @Nullable Output<String> customFragment;
 
     public Output<String> getCustomFragment() {
@@ -36,7 +36,7 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
      * Host to redirect. Leave empty to use the incoming host as the destination host.
      * 
      */
-    @InputImport(name="customHostname")
+    @Import(name="customHostname")
       private final @Nullable Output<String> customHostname;
 
     public Output<String> getCustomHostname() {
@@ -47,7 +47,7 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
      * The full path to redirect. Path cannot be empty and must start with /. Leave empty to use the incoming path as destination path.
      * 
      */
-    @InputImport(name="customPath")
+    @Import(name="customPath")
       private final @Nullable Output<String> customPath;
 
     public Output<String> getCustomPath() {
@@ -58,7 +58,7 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
      * The set of query strings to be placed in the redirect URL. Setting this value would replace any existing query string; leave empty to preserve the incoming query string. Query string must be in <key>=<value> format. ? and & will be added automatically so do not include them.
      * 
      */
-    @InputImport(name="customQueryString")
+    @Import(name="customQueryString")
       private final @Nullable Output<String> customQueryString;
 
     public Output<String> getCustomQueryString() {
@@ -69,14 +69,14 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
      * Protocol to use for the redirect. The default value is MatchRequest
      * 
      */
-    @InputImport(name="destinationProtocol")
+    @Import(name="destinationProtocol")
       private final @Nullable Output<Either<String,DestinationProtocol>> destinationProtocol;
 
     public Output<Either<String,DestinationProtocol>> getDestinationProtocol() {
         return this.destinationProtocol == null ? Output.empty() : this.destinationProtocol;
     }
 
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -87,7 +87,7 @@ public final class UrlRedirectActionParametersArgs extends io.pulumi.resources.R
      * The redirect type the rule will use when redirecting traffic.
      * 
      */
-    @InputImport(name="redirectType", required=true)
+    @Import(name="redirectType", required=true)
       private final Output<Either<String,RedirectType>> redirectType;
 
     public Output<Either<String,RedirectType>> getRedirectType() {

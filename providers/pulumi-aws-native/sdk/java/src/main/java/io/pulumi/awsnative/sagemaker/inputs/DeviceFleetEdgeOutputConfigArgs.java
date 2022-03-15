@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DeviceFleetEdgeOutputConfigArgs extends io.pulumi.resources.R
      * The KMS key id used for encryption on the S3 bucket
      * 
      */
-    @InputImport(name="kmsKeyId")
+    @Import(name="kmsKeyId")
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
@@ -29,7 +29,7 @@ public final class DeviceFleetEdgeOutputConfigArgs extends io.pulumi.resources.R
      * The Amazon Simple Storage (S3) bucket URI
      * 
      */
-    @InputImport(name="s3OutputLocation", required=true)
+    @Import(name="s3OutputLocation", required=true)
       private final Output<String> s3OutputLocation;
 
     public Output<String> getS3OutputLocation() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ExternalVpnGatewayArgs;
@@ -46,7 +46,7 @@ public class ExternalVpnGateway extends io.pulumi.resources.CustomResource {
      * An optional description of this resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -61,7 +61,7 @@ public class ExternalVpnGateway extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="interfaces", type=List.class, parameters={ExternalVpnGatewayInterface.class})
+    @Export(name="interfaces", type=List.class, parameters={ExternalVpnGatewayInterface.class})
     private Output</* @Nullable */ List<ExternalVpnGatewayInterface>> interfaces;
 
     /**
@@ -82,7 +82,7 @@ public class ExternalVpnGateway extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -103,7 +103,7 @@ public class ExternalVpnGateway extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -119,7 +119,7 @@ public class ExternalVpnGateway extends io.pulumi.resources.CustomResource {
      * Possible values are `FOUR_IPS_REDUNDANCY`, `SINGLE_IP_INTERNALLY_REDUNDANT`, and `TWO_IPS_REDUNDANCY`.
      * 
      */
-    @OutputExport(name="redundancyType", type=String.class, parameters={})
+    @Export(name="redundancyType", type=String.class, parameters={})
     private Output</* @Nullable */ String> redundancyType;
 
     /**
@@ -134,7 +134,7 @@ public class ExternalVpnGateway extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**

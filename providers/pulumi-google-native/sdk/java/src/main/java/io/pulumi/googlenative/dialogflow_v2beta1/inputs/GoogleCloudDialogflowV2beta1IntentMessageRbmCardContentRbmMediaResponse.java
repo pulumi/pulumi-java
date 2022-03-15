@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
      * Publicly reachable URI of the file. The RBM platform determines the MIME type of the file from the content-type field in the HTTP headers when the platform fetches the file. The content-type field must be present and accurate in the HTTP response from the URL.
      * 
      */
-    @InputImport(name="fileUri", required=true)
+    @Import(name="fileUri", required=true)
       private final String fileUri;
 
     public String getFileUri() {
@@ -31,7 +31,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
      * Required for cards with vertical orientation. The height of the media within a rich card with a vertical layout. For a standalone card with horizontal layout, height is not customizable, and this field is ignored.
      * 
      */
-    @InputImport(name="height", required=true)
+    @Import(name="height", required=true)
       private final String height;
 
     public String getHeight() {
@@ -42,7 +42,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
      * Optional. Publicly reachable URI of the thumbnail.If you don't provide a thumbnail URI, the RBM platform displays a blank placeholder thumbnail until the user's device downloads the file. Depending on the user's setting, the file may not download automatically and may require the user to tap a download button.
      * 
      */
-    @InputImport(name="thumbnailUri", required=true)
+    @Import(name="thumbnailUri", required=true)
       private final String thumbnailUri;
 
     public String getThumbnailUri() {

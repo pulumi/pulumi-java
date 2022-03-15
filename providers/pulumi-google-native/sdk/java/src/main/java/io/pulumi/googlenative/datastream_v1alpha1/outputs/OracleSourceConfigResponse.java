@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.OracleRdbmsResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OracleSourceConfigResponse {
     /**
      * Oracle objects to include in the stream.
@@ -20,10 +20,10 @@ public final class OracleSourceConfigResponse {
      */
     private final OracleRdbmsResponse rejectlist;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OracleSourceConfigResponse(
-        @OutputCustomType.Parameter("allowlist") OracleRdbmsResponse allowlist,
-        @OutputCustomType.Parameter("rejectlist") OracleRdbmsResponse rejectlist) {
+        @CustomType.Parameter("allowlist") OracleRdbmsResponse allowlist,
+        @CustomType.Parameter("rejectlist") OracleRdbmsResponse rejectlist) {
         this.allowlist = allowlist;
         this.rejectlist = rejectlist;
     }

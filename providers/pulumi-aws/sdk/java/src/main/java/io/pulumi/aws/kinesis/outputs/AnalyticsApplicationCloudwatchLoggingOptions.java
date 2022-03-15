@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.kinesis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsApplicationCloudwatchLoggingOptions {
     /**
      * The ARN of the Kinesis Analytics Application.
@@ -27,11 +27,11 @@ public final class AnalyticsApplicationCloudwatchLoggingOptions {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalyticsApplicationCloudwatchLoggingOptions(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("logStreamArn") String logStreamArn,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("logStreamArn") String logStreamArn,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.id = id;
         this.logStreamArn = logStreamArn;
         this.roleArn = roleArn;

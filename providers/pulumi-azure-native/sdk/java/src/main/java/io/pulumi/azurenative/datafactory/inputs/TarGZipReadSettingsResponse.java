@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TarGZipReadSettingsResponse extends io.pulumi.resources.Invok
      * Preserve the compression file name as folder path. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="preserveCompressionFileNameAsFolder")
+    @Import(name="preserveCompressionFileNameAsFolder")
       private final @Nullable Object preserveCompressionFileNameAsFolder;
 
     public Optional<Object> getPreserveCompressionFileNameAsFolder() {
@@ -35,7 +35,7 @@ public final class TarGZipReadSettingsResponse extends io.pulumi.resources.Invok
      * Expected value is 'TarGZipReadSettings'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

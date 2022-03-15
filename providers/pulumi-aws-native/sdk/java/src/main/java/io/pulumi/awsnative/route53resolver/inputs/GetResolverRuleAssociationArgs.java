@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53resolver.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetResolverRuleAssociationArgs extends io.pulumi.resources.In
      * Primary Identifier for Resolver Rule Association
      * 
      */
-    @InputImport(name="resolverRuleAssociationId", required=true)
+    @Import(name="resolverRuleAssociationId", required=true)
       private final String resolverRuleAssociationId;
 
     public String getResolverRuleAssociationId() {

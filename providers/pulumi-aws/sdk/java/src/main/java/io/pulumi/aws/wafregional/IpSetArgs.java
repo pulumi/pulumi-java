@@ -5,7 +5,7 @@ package io.pulumi.aws.wafregional;
 
 import io.pulumi.aws.wafregional.inputs.IpSetIpSetDescriptorArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
      * One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.
      * 
      */
-    @InputImport(name="ipSetDescriptors")
+    @Import(name="ipSetDescriptors")
       private final @Nullable Output<List<IpSetIpSetDescriptorArgs>> ipSetDescriptors;
 
     public Output<List<IpSetIpSetDescriptorArgs>> getIpSetDescriptors() {
@@ -31,7 +31,7 @@ public final class IpSetArgs extends io.pulumi.resources.ResourceArgs {
      * The name or description of the IPSet.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

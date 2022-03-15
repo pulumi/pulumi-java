@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.EnvVarSourceResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EnvVarResponse {
     /**
      * Name of the environment variable. Must be a C_IDENTIFIER.
@@ -26,11 +26,11 @@ public final class EnvVarResponse {
      */
     private final EnvVarSourceResponse valueFrom;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvVarResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("value") String value,
-        @OutputCustomType.Parameter("valueFrom") EnvVarSourceResponse valueFrom) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("value") String value,
+        @CustomType.Parameter("valueFrom") EnvVarSourceResponse valueFrom) {
         this.name = name;
         this.value = value;
         this.valueFrom = valueFrom;

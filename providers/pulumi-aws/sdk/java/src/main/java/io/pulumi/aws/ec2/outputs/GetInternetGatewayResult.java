@@ -5,14 +5,14 @@ package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetInternetGatewayAttachment;
 import io.pulumi.aws.ec2.outputs.GetInternetGatewayFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInternetGatewayResult {
     /**
      * The ARN of the Internet Gateway.
@@ -34,15 +34,15 @@ public final class GetInternetGatewayResult {
     private final String ownerId;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInternetGatewayResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("attachments") List<GetInternetGatewayAttachment> attachments,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetInternetGatewayFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("internetGatewayId") String internetGatewayId,
-        @OutputCustomType.Parameter("ownerId") String ownerId,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("attachments") List<GetInternetGatewayAttachment> attachments,
+        @CustomType.Parameter("filters") @Nullable List<GetInternetGatewayFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("internetGatewayId") String internetGatewayId,
+        @CustomType.Parameter("ownerId") String ownerId,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.attachments = attachments;
         this.filters = filters;

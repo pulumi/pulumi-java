@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticsearch.outputs;
 
 import io.pulumi.aws.elasticsearch.outputs.GetDomainClusterConfigZoneAwarenessConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainClusterConfig {
     /**
      * Number of dedicated master nodes in the cluster.
@@ -66,18 +66,18 @@ public final class GetDomainClusterConfig {
      */
     private final Boolean zoneAwarenessEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainClusterConfig(
-        @OutputCustomType.Parameter("dedicatedMasterCount") Integer dedicatedMasterCount,
-        @OutputCustomType.Parameter("dedicatedMasterEnabled") Boolean dedicatedMasterEnabled,
-        @OutputCustomType.Parameter("dedicatedMasterType") String dedicatedMasterType,
-        @OutputCustomType.Parameter("instanceCount") Integer instanceCount,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("warmCount") Integer warmCount,
-        @OutputCustomType.Parameter("warmEnabled") @Nullable Boolean warmEnabled,
-        @OutputCustomType.Parameter("warmType") String warmType,
-        @OutputCustomType.Parameter("zoneAwarenessConfigs") List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs,
-        @OutputCustomType.Parameter("zoneAwarenessEnabled") Boolean zoneAwarenessEnabled) {
+        @CustomType.Parameter("dedicatedMasterCount") Integer dedicatedMasterCount,
+        @CustomType.Parameter("dedicatedMasterEnabled") Boolean dedicatedMasterEnabled,
+        @CustomType.Parameter("dedicatedMasterType") String dedicatedMasterType,
+        @CustomType.Parameter("instanceCount") Integer instanceCount,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("warmCount") Integer warmCount,
+        @CustomType.Parameter("warmEnabled") @Nullable Boolean warmEnabled,
+        @CustomType.Parameter("warmType") String warmType,
+        @CustomType.Parameter("zoneAwarenessConfigs") List<GetDomainClusterConfigZoneAwarenessConfig> zoneAwarenessConfigs,
+        @CustomType.Parameter("zoneAwarenessEnabled") Boolean zoneAwarenessEnabled) {
         this.dedicatedMasterCount = dedicatedMasterCount;
         this.dedicatedMasterEnabled = dedicatedMasterEnabled;
         this.dedicatedMasterType = dedicatedMasterType;

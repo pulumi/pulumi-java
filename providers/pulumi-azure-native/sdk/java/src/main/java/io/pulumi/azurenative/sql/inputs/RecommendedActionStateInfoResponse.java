@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class RecommendedActionStateInfoResponse extends io.pulumi.resource
      * Gets who initiated the execution of this recommended action. Possible Value are: User    -> When user explicity notified system to apply the recommended action. System  -> When auto-execute status of this advisor was set to 'Enabled', in which case the system applied it.
      * 
      */
-    @InputImport(name="actionInitiatedBy", required=true)
+    @Import(name="actionInitiatedBy", required=true)
       private final String actionInitiatedBy;
 
     public String getActionInitiatedBy() {
@@ -31,7 +31,7 @@ public final class RecommendedActionStateInfoResponse extends io.pulumi.resource
      * Current state the recommended action is in. Some commonly used states are: Active      -> recommended action is active and no action has been taken yet. Pending     -> recommended action is approved for and is awaiting execution. Executing   -> recommended action is being applied on the user database. Verifying   -> recommended action was applied and is being verified of its usefulness by the system. Success     -> recommended action was applied and improvement found during verification. Pending Revert  -> verification found little or no improvement so recommended action is queued for revert or user has manually reverted. Reverting   -> changes made while applying recommended action are being reverted on the user database. Reverted    -> successfully reverted the changes made by recommended action on user database. Ignored     -> user explicitly ignored/discarded the recommended action.
      * 
      */
-    @InputImport(name="currentValue", required=true)
+    @Import(name="currentValue", required=true)
       private final String currentValue;
 
     public String getCurrentValue() {
@@ -42,7 +42,7 @@ public final class RecommendedActionStateInfoResponse extends io.pulumi.resource
      * Gets the time when the state was last modified
      * 
      */
-    @InputImport(name="lastModified", required=true)
+    @Import(name="lastModified", required=true)
       private final String lastModified;
 
     public String getLastModified() {

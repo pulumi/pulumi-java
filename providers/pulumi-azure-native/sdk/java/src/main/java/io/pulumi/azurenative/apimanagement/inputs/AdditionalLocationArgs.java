@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.inputs.ApiManagementServiceSkuPropertiesArgs;
 import io.pulumi.azurenative.apimanagement.inputs.VirtualNetworkConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
      * Property only valid for an Api Management service deployed in multiple locations. This can be used to disable the gateway in this additional location.
      * 
      */
-    @InputImport(name="disableGateway")
+    @Import(name="disableGateway")
       private final @Nullable Output<Boolean> disableGateway;
 
     public Output<Boolean> getDisableGateway() {
@@ -37,7 +37,7 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
      * The location name of the additional region among Azure Data center regions.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -48,7 +48,7 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
      * SKU properties of the API Management service.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<ApiManagementServiceSkuPropertiesArgs> sku;
 
     public Output<ApiManagementServiceSkuPropertiesArgs> getSku() {
@@ -59,7 +59,7 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
      * Virtual network configuration for the location.
      * 
      */
-    @InputImport(name="virtualNetworkConfiguration")
+    @Import(name="virtualNetworkConfiguration")
       private final @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
 
     public Output<VirtualNetworkConfigurationArgs> getVirtualNetworkConfiguration() {
@@ -70,7 +70,7 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
      * A list of availability zones denoting where the resource needs to come from.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {

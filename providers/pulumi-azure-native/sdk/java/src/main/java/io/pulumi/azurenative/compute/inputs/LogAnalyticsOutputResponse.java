@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class LogAnalyticsOutputResponse extends io.pulumi.resources.Invoke
      * Output file Uri path to blob container.
      * 
      */
-    @InputImport(name="output", required=true)
+    @Import(name="output", required=true)
       private final String output;
 
     public String getOutput() {

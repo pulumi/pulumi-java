@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs;
@@ -29,7 +29,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
      * Indicates that the conversation succeeded.
      * 
      */
-    @InputImport(name="conversationSuccess")
+    @Import(name="conversationSuccess")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessArgs> conversationSuccess;
 
     public Output<GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessArgs> getConversationSuccess() {
@@ -40,7 +40,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
      * Hands off conversation to a human agent.
      * 
      */
-    @InputImport(name="liveAgentHandoff")
+    @Import(name="liveAgentHandoff")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs> liveAgentHandoff;
 
     public Output<GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoffArgs> getLiveAgentHandoff() {
@@ -51,7 +51,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
      * A text or ssml response that is preferentially used for TTS output audio synthesis, as described in the comment on the ResponseMessage message.
      * 
      */
-    @InputImport(name="outputAudioText")
+    @Import(name="outputAudioText")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs> outputAudioText;
 
     public Output<GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs> getOutputAudioText() {
@@ -62,7 +62,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
      * Returns a response containing a custom, platform-specific payload.
      * 
      */
-    @InputImport(name="payload")
+    @Import(name="payload")
       private final @Nullable Output<Map<String,String>> payload;
 
     public Output<Map<String,String>> getPayload() {
@@ -73,7 +73,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
      * Signal that the client should play an audio clip hosted at a client-specific URI. Dialogflow uses this to construct mixed_audio. However, Dialogflow itself does not try to read or process the URI in any way.
      * 
      */
-    @InputImport(name="playAudio")
+    @Import(name="playAudio")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs> playAudio;
 
     public Output<GoogleCloudDialogflowCxV3ResponseMessagePlayAudioArgs> getPlayAudio() {
@@ -84,7 +84,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
      * A signal that the client should transfer the phone call connected to this agent to a third-party endpoint.
      * 
      */
-    @InputImport(name="telephonyTransferCall")
+    @Import(name="telephonyTransferCall")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallArgs> telephonyTransferCall;
 
     public Output<GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallArgs> getTelephonyTransferCall() {
@@ -95,7 +95,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageArgs extends io.pulum
      * Returns a text response.
      * 
      */
-    @InputImport(name="text")
+    @Import(name="text")
       private final @Nullable Output<GoogleCloudDialogflowCxV3ResponseMessageTextArgs> text;
 
     public Output<GoogleCloudDialogflowCxV3ResponseMessageTextArgs> getText() {

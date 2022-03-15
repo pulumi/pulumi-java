@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.RulesEngineActionResponse;
 import io.pulumi.azurenative.network.outputs.RulesEngineMatchConditionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RulesEngineRuleResponse {
     /**
      * Actions to perform on the request and response if all of the match conditions are met.
@@ -41,13 +41,13 @@ public final class RulesEngineRuleResponse {
      */
     private final Integer priority;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RulesEngineRuleResponse(
-        @OutputCustomType.Parameter("action") RulesEngineActionResponse action,
-        @OutputCustomType.Parameter("matchConditions") @Nullable List<RulesEngineMatchConditionResponse> matchConditions,
-        @OutputCustomType.Parameter("matchProcessingBehavior") @Nullable String matchProcessingBehavior,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("priority") Integer priority) {
+        @CustomType.Parameter("action") RulesEngineActionResponse action,
+        @CustomType.Parameter("matchConditions") @Nullable List<RulesEngineMatchConditionResponse> matchConditions,
+        @CustomType.Parameter("matchProcessingBehavior") @Nullable String matchProcessingBehavior,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("priority") Integer priority) {
         this.action = action;
         this.matchConditions = matchConditions;
         this.matchProcessingBehavior = matchProcessingBehavior;

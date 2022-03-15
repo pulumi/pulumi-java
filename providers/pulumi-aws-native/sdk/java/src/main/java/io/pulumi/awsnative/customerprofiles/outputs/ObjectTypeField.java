@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.customerprofiles.outputs;
 
 import io.pulumi.awsnative.customerprofiles.enums.ObjectTypeFieldContentType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ObjectTypeField {
     /**
      * The content type of the field. Used for determining equality when searching.
@@ -28,11 +28,11 @@ public final class ObjectTypeField {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObjectTypeField(
-        @OutputCustomType.Parameter("contentType") @Nullable ObjectTypeFieldContentType contentType,
-        @OutputCustomType.Parameter("source") @Nullable String source,
-        @OutputCustomType.Parameter("target") @Nullable String target) {
+        @CustomType.Parameter("contentType") @Nullable ObjectTypeFieldContentType contentType,
+        @CustomType.Parameter("source") @Nullable String source,
+        @CustomType.Parameter("target") @Nullable String target) {
         this.contentType = contentType;
         this.source = source;
         this.target = target;

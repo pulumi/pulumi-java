@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAccessPolicyResult {
     /**
      * Resource name of the `AccessPolicy`. Format: `accessPolicies/{policy_id}`
@@ -25,11 +25,11 @@ public final class GetAccessPolicyResult {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccessPolicyResult(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parent") String parent,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parent") String parent,
+        @CustomType.Parameter("title") String title) {
         this.name = name;
         this.parent = parent;
         this.title = title;

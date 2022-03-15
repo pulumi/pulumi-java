@@ -5,7 +5,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.aws.apigatewayv2.inputs.ApiCorsConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * The URI of the API, of the form `https://{api-id}.execute-api.{region}.amazonaws.com` for HTTP APIs and `wss://{api-id}.execute-api.{region}.amazonaws.com` for WebSocket APIs.
      * 
      */
-    @InputImport(name="apiEndpoint")
+    @Import(name="apiEndpoint")
       private final @Nullable Output<String> apiEndpoint;
 
     public Output<String> getApiEndpoint() {
@@ -34,7 +34,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * Applicable for WebSocket APIs.
      * 
      */
-    @InputImport(name="apiKeySelectionExpression")
+    @Import(name="apiKeySelectionExpression")
       private final @Nullable Output<String> apiKeySelectionExpression;
 
     public Output<String> getApiKeySelectionExpression() {
@@ -45,7 +45,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * The ARN of the API.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -56,7 +56,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * An OpenAPI specification that defines the set of routes and integrations to create as part of the HTTP APIs. Supported only for HTTP APIs.
      * 
      */
-    @InputImport(name="body")
+    @Import(name="body")
       private final @Nullable Output<String> body;
 
     public Output<String> getBody() {
@@ -67,7 +67,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * The cross-origin resource sharing (CORS) [configuration](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-cors.html). Applicable for HTTP APIs.
      * 
      */
-    @InputImport(name="corsConfiguration")
+    @Import(name="corsConfiguration")
       private final @Nullable Output<ApiCorsConfigurationGetArgs> corsConfiguration;
 
     public Output<ApiCorsConfigurationGetArgs> getCorsConfiguration() {
@@ -78,7 +78,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * Part of _quick create_. Specifies any credentials required for the integration. Applicable for HTTP APIs.
      * 
      */
-    @InputImport(name="credentialsArn")
+    @Import(name="credentialsArn")
       private final @Nullable Output<String> credentialsArn;
 
     public Output<String> getCredentialsArn() {
@@ -89,7 +89,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * The description of the API. Must be less than or equal to 1024 characters in length.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -102,7 +102,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * To require that clients use a custom domain name to invoke the API, disable the default endpoint.
      * 
      */
-    @InputImport(name="disableExecuteApiEndpoint")
+    @Import(name="disableExecuteApiEndpoint")
       private final @Nullable Output<Boolean> disableExecuteApiEndpoint;
 
     public Output<Boolean> getDisableExecuteApiEndpoint() {
@@ -115,7 +115,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
      * 
      */
-    @InputImport(name="executionArn")
+    @Import(name="executionArn")
       private final @Nullable Output<String> executionArn;
 
     public Output<String> getExecutionArn() {
@@ -126,7 +126,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * Whether warnings should return an error while API Gateway is creating or updating the resource using an OpenAPI specification. Defaults to `false`. Applicable for HTTP APIs.
      * 
      */
-    @InputImport(name="failOnWarnings")
+    @Import(name="failOnWarnings")
       private final @Nullable Output<Boolean> failOnWarnings;
 
     public Output<Boolean> getFailOnWarnings() {
@@ -137,7 +137,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * The name of the API. Must be less than or equal to 128 characters in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -148,7 +148,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * The API protocol. Valid values: `HTTP`, `WEBSOCKET`.
      * 
      */
-    @InputImport(name="protocolType")
+    @Import(name="protocolType")
       private final @Nullable Output<String> protocolType;
 
     public Output<String> getProtocolType() {
@@ -159,7 +159,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * Part of _quick create_. Specifies any [route key](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-routes.html). Applicable for HTTP APIs.
      * 
      */
-    @InputImport(name="routeKey")
+    @Import(name="routeKey")
       private final @Nullable Output<String> routeKey;
 
     public Output<String> getRouteKey() {
@@ -171,7 +171,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * Defaults to `$request.method $request.path`.
      * 
      */
-    @InputImport(name="routeSelectionExpression")
+    @Import(name="routeSelectionExpression")
       private final @Nullable Output<String> routeSelectionExpression;
 
     public Output<String> getRouteSelectionExpression() {
@@ -182,7 +182,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the API. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -193,7 +193,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -206,7 +206,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * The type of the integration will be `HTTP_PROXY` or `AWS_PROXY`, respectively. Applicable for HTTP APIs.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {
@@ -217,7 +217,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
      * A version identifier for the API. Must be between 1 and 64 characters in length.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

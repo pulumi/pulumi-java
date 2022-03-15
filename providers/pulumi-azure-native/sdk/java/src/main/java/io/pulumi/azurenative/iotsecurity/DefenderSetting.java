@@ -8,7 +8,7 @@ import io.pulumi.azurenative.iotsecurity.DefenderSettingArgs;
 import io.pulumi.azurenative.iotsecurity.outputs.DefenderSettingsPropertiesResponseMdeIntegration;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class DefenderSetting extends io.pulumi.resources.CustomResource {
      * Size of the device quota. Value is required to be in multiples of 100.
      * 
      */
-    @OutputExport(name="deviceQuota", type=Integer.class, parameters={})
+    @Export(name="deviceQuota", type=Integer.class, parameters={})
     private Output<Integer> deviceQuota;
 
     /**
@@ -50,7 +50,7 @@ public class DefenderSetting extends io.pulumi.resources.CustomResource {
      * End time of the evaluation period, if such exist
      * 
      */
-    @OutputExport(name="evaluationEndTime", type=String.class, parameters={})
+    @Export(name="evaluationEndTime", type=String.class, parameters={})
     private Output<String> evaluationEndTime;
 
     /**
@@ -64,7 +64,7 @@ public class DefenderSetting extends io.pulumi.resources.CustomResource {
      * MDE integration configuration
      * 
      */
-    @OutputExport(name="mdeIntegration", type=DefenderSettingsPropertiesResponseMdeIntegration.class, parameters={})
+    @Export(name="mdeIntegration", type=DefenderSettingsPropertiesResponseMdeIntegration.class, parameters={})
     private Output<DefenderSettingsPropertiesResponseMdeIntegration> mdeIntegration;
 
     /**
@@ -78,7 +78,7 @@ public class DefenderSetting extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class DefenderSetting extends io.pulumi.resources.CustomResource {
      * The kind of onboarding for the subscription
      * 
      */
-    @OutputExport(name="onboardingKind", type=String.class, parameters={})
+    @Export(name="onboardingKind", type=String.class, parameters={})
     private Output<String> onboardingKind;
 
     /**
@@ -106,7 +106,7 @@ public class DefenderSetting extends io.pulumi.resources.CustomResource {
      * Sentinel Workspace Resource Ids
      * 
      */
-    @OutputExport(name="sentinelWorkspaceResourceIds", type=List.class, parameters={String.class})
+    @Export(name="sentinelWorkspaceResourceIds", type=List.class, parameters={String.class})
     private Output<List<String>> sentinelWorkspaceResourceIds;
 
     /**
@@ -120,7 +120,7 @@ public class DefenderSetting extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

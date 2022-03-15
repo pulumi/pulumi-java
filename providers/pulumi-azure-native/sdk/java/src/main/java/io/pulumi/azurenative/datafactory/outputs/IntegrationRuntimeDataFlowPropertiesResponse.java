@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationRuntimeDataFlowPropertiesResponse {
     /**
      * Cluster will not be recycled and it will be used in next data flow activity run until TTL (time to live) is reached if this is set as false. Default is true.
@@ -34,12 +34,12 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse {
      */
     private final @Nullable Integer timeToLive;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationRuntimeDataFlowPropertiesResponse(
-        @OutputCustomType.Parameter("cleanup") @Nullable Boolean cleanup,
-        @OutputCustomType.Parameter("computeType") @Nullable String computeType,
-        @OutputCustomType.Parameter("coreCount") @Nullable Integer coreCount,
-        @OutputCustomType.Parameter("timeToLive") @Nullable Integer timeToLive) {
+        @CustomType.Parameter("cleanup") @Nullable Boolean cleanup,
+        @CustomType.Parameter("computeType") @Nullable String computeType,
+        @CustomType.Parameter("coreCount") @Nullable Integer coreCount,
+        @CustomType.Parameter("timeToLive") @Nullable Integer timeToLive) {
         this.cleanup = cleanup;
         this.computeType = computeType;
         this.coreCount = coreCount;

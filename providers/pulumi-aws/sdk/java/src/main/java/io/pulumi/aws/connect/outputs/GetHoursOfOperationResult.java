@@ -4,13 +4,13 @@
 package io.pulumi.aws.connect.outputs;
 
 import io.pulumi.aws.connect.outputs.GetHoursOfOperationConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetHoursOfOperationResult {
     /**
      * Specifies configuration information for the hours of operation: day, start time, and end time . Config blocks are documented below. Config blocks are documented below.
@@ -58,17 +58,17 @@ public final class GetHoursOfOperationResult {
      */
     private final String timeZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHoursOfOperationResult(
-        @OutputCustomType.Parameter("configs") List<GetHoursOfOperationConfig> configs,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("hoursOfOperationArn") String hoursOfOperationArn,
-        @OutputCustomType.Parameter("hoursOfOperationId") String hoursOfOperationId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instanceId") String instanceId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("timeZone") String timeZone) {
+        @CustomType.Parameter("configs") List<GetHoursOfOperationConfig> configs,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("hoursOfOperationArn") String hoursOfOperationArn,
+        @CustomType.Parameter("hoursOfOperationId") String hoursOfOperationId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instanceId") String instanceId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("timeZone") String timeZone) {
         this.configs = configs;
         this.description = description;
         this.hoursOfOperationArn = hoursOfOperationArn;

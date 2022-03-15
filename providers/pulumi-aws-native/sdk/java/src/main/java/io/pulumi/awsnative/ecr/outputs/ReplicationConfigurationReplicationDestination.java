@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.ecr.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReplicationConfigurationReplicationDestination {
     private final String region;
     private final String registryId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicationConfigurationReplicationDestination(
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("registryId") String registryId) {
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("registryId") String registryId) {
         this.region = region;
         this.registryId = registryId;
     }

@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionInstanceGroupManagerUpdatePolicy {
     /**
      * - The instance redistribution policy for regional managed instance groups. Valid values are: `"PROACTIVE"`, `"NONE"`. If `PROACTIVE` (default), the group attempts to maintain an even distribution of VM instances across zones in the region. If `NONE`, proactive redistribution is disabled.
@@ -59,17 +59,17 @@ public final class RegionInstanceGroupManagerUpdatePolicy {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionInstanceGroupManagerUpdatePolicy(
-        @OutputCustomType.Parameter("instanceRedistributionType") @Nullable String instanceRedistributionType,
-        @OutputCustomType.Parameter("maxSurgeFixed") @Nullable Integer maxSurgeFixed,
-        @OutputCustomType.Parameter("maxSurgePercent") @Nullable Integer maxSurgePercent,
-        @OutputCustomType.Parameter("maxUnavailableFixed") @Nullable Integer maxUnavailableFixed,
-        @OutputCustomType.Parameter("maxUnavailablePercent") @Nullable Integer maxUnavailablePercent,
-        @OutputCustomType.Parameter("minReadySec") @Nullable Integer minReadySec,
-        @OutputCustomType.Parameter("minimalAction") String minimalAction,
-        @OutputCustomType.Parameter("replacementMethod") @Nullable String replacementMethod,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("instanceRedistributionType") @Nullable String instanceRedistributionType,
+        @CustomType.Parameter("maxSurgeFixed") @Nullable Integer maxSurgeFixed,
+        @CustomType.Parameter("maxSurgePercent") @Nullable Integer maxSurgePercent,
+        @CustomType.Parameter("maxUnavailableFixed") @Nullable Integer maxUnavailableFixed,
+        @CustomType.Parameter("maxUnavailablePercent") @Nullable Integer maxUnavailablePercent,
+        @CustomType.Parameter("minReadySec") @Nullable Integer minReadySec,
+        @CustomType.Parameter("minimalAction") String minimalAction,
+        @CustomType.Parameter("replacementMethod") @Nullable String replacementMethod,
+        @CustomType.Parameter("type") String type) {
         this.instanceRedistributionType = instanceRedistributionType;
         this.maxSurgeFixed = maxSurgeFixed;
         this.maxSurgePercent = maxSurgePercent;

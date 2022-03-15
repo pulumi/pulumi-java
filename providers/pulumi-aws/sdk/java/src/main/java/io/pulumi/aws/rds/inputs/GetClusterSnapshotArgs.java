@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.rds.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
      * Returns the list of snapshots created by the specific db_cluster
      * 
      */
-    @InputImport(name="dbClusterIdentifier")
+    @Import(name="dbClusterIdentifier")
       private final @Nullable String dbClusterIdentifier;
 
     public Optional<String> getDbClusterIdentifier() {
@@ -31,7 +31,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
      * Returns information on a specific snapshot_id.
      * 
      */
-    @InputImport(name="dbClusterSnapshotIdentifier")
+    @Import(name="dbClusterSnapshotIdentifier")
       private final @Nullable String dbClusterSnapshotIdentifier;
 
     public Optional<String> getDbClusterSnapshotIdentifier() {
@@ -43,7 +43,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
      * copied or restored by any AWS account, otherwise set this value to false. The default is `false`.
      * 
      */
-    @InputImport(name="includePublic")
+    @Import(name="includePublic")
       private final @Nullable Boolean includePublic;
 
     public Optional<Boolean> getIncludePublic() {
@@ -56,7 +56,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
      * The default is `false`.
      * 
      */
-    @InputImport(name="includeShared")
+    @Import(name="includeShared")
       private final @Nullable Boolean includeShared;
 
     public Optional<Boolean> getIncludeShared() {
@@ -67,7 +67,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
      * If more than one result is returned, use the most recent Snapshot.
      * 
      */
-    @InputImport(name="mostRecent")
+    @Import(name="mostRecent")
       private final @Nullable Boolean mostRecent;
 
     public Optional<Boolean> getMostRecent() {
@@ -80,7 +80,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
      * included in the returned results by default. Possible values are, `automated`, `manual`, `shared`, `public` and `awsbackup`.
      * 
      */
-    @InputImport(name="snapshotType")
+    @Import(name="snapshotType")
       private final @Nullable String snapshotType;
 
     public Optional<String> getSnapshotType() {
@@ -91,7 +91,7 @@ public final class GetClusterSnapshotArgs extends io.pulumi.resources.InvokeArgs
      * A map of tags for the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

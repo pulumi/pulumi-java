@@ -9,7 +9,7 @@ import io.pulumi.aws.globalaccelerator.inputs.EndpointGroupState;
 import io.pulumi.aws.globalaccelerator.outputs.EndpointGroupEndpointConfiguration;
 import io.pulumi.aws.globalaccelerator.outputs.EndpointGroupPortOverride;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.Integer;
@@ -37,7 +37,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the endpoint group.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -51,7 +51,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * The list of endpoint objects. Fields documented below.
      * 
      */
-    @OutputExport(name="endpointConfigurations", type=List.class, parameters={EndpointGroupEndpointConfiguration.class})
+    @Export(name="endpointConfigurations", type=List.class, parameters={EndpointGroupEndpointConfiguration.class})
     private Output</* @Nullable */ List<EndpointGroupEndpointConfiguration>> endpointConfigurations;
 
     /**
@@ -65,7 +65,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * The name of the AWS Region where the endpoint group is located.
      * 
      */
-    @OutputExport(name="endpointGroupRegion", type=String.class, parameters={})
+    @Export(name="endpointGroupRegion", type=String.class, parameters={})
     private Output<String> endpointGroupRegion;
 
     /**
@@ -79,7 +79,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
      * 
      */
-    @OutputExport(name="healthCheckIntervalSeconds", type=Integer.class, parameters={})
+    @Export(name="healthCheckIntervalSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> healthCheckIntervalSeconds;
 
     /**
@@ -93,7 +93,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (`/`). the provider will only perform drift detection of its value when present in a configuration.
      * 
      */
-    @OutputExport(name="healthCheckPath", type=String.class, parameters={})
+    @Export(name="healthCheckPath", type=String.class, parameters={})
     private Output<String> healthCheckPath;
 
     /**
@@ -108,7 +108,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * the provider will only perform drift detection of its value when present in a configuration.
      * 
      */
-    @OutputExport(name="healthCheckPort", type=Integer.class, parameters={})
+    @Export(name="healthCheckPort", type=Integer.class, parameters={})
     private Output<Integer> healthCheckPort;
 
     /**
@@ -123,7 +123,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
      * 
      */
-    @OutputExport(name="healthCheckProtocol", type=String.class, parameters={})
+    @Export(name="healthCheckProtocol", type=String.class, parameters={})
     private Output</* @Nullable */ String> healthCheckProtocol;
 
     /**
@@ -137,7 +137,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the listener.
      * 
      */
-    @OutputExport(name="listenerArn", type=String.class, parameters={})
+    @Export(name="listenerArn", type=String.class, parameters={})
     private Output<String> listenerArn;
 
     /**
@@ -151,7 +151,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * Override specific listener ports used to route traffic to endpoints that are part of this endpoint group. Fields documented below.
      * 
      */
-    @OutputExport(name="portOverrides", type=List.class, parameters={EndpointGroupPortOverride.class})
+    @Export(name="portOverrides", type=List.class, parameters={EndpointGroupPortOverride.class})
     private Output</* @Nullable */ List<EndpointGroupPortOverride>> portOverrides;
 
     /**
@@ -165,7 +165,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
      * 
      */
-    @OutputExport(name="thresholdCount", type=Integer.class, parameters={})
+    @Export(name="thresholdCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> thresholdCount;
 
     /**
@@ -179,7 +179,7 @@ public class EndpointGroup extends io.pulumi.resources.CustomResource {
      * The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
      * 
      */
-    @OutputExport(name="trafficDialPercentage", type=Double.class, parameters={})
+    @Export(name="trafficDialPercentage", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> trafficDialPercentage;
 
     /**

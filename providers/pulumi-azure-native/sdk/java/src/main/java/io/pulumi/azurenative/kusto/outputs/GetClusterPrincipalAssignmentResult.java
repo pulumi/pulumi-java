@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.kusto.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterPrincipalAssignmentResult {
     /**
      * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
@@ -62,18 +62,18 @@ public final class GetClusterPrincipalAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterPrincipalAssignmentResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("principalId") String principalId,
-        @OutputCustomType.Parameter("principalName") String principalName,
-        @OutputCustomType.Parameter("principalType") String principalType,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("role") String role,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
-        @OutputCustomType.Parameter("tenantName") String tenantName,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("principalName") String principalName,
+        @CustomType.Parameter("principalType") String principalType,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("role") String role,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId,
+        @CustomType.Parameter("tenantName") String tenantName,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.principalId = principalId;

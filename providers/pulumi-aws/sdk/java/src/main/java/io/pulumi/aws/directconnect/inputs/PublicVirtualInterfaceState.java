@@ -4,7 +4,7 @@
 package io.pulumi.aws.directconnect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
      * The address family for the BGP peer. ` ipv4  ` or `ipv6`.
      * 
      */
-    @InputImport(name="addressFamily")
+    @Import(name="addressFamily")
       private final @Nullable Output<String> addressFamily;
 
     public Output<String> getAddressFamily() {
@@ -32,14 +32,14 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
      * The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
      * 
      */
-    @InputImport(name="amazonAddress")
+    @Import(name="amazonAddress")
       private final @Nullable Output<String> amazonAddress;
 
     public Output<String> getAmazonAddress() {
         return this.amazonAddress == null ? Output.empty() : this.amazonAddress;
     }
 
-    @InputImport(name="amazonSideAsn")
+    @Import(name="amazonSideAsn")
       private final @Nullable Output<String> amazonSideAsn;
 
     public Output<String> getAmazonSideAsn() {
@@ -50,7 +50,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
      * The ARN of the virtual interface.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -61,7 +61,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
      * The Direct Connect endpoint on which the virtual interface terminates.
      * 
      */
-    @InputImport(name="awsDevice")
+    @Import(name="awsDevice")
       private final @Nullable Output<String> awsDevice;
 
     public Output<String> getAwsDevice() {
@@ -72,7 +72,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
      * The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
      * 
      */
-    @InputImport(name="bgpAsn")
+    @Import(name="bgpAsn")
       private final @Nullable Output<Integer> bgpAsn;
 
     public Output<Integer> getBgpAsn() {
@@ -83,7 +83,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
      * The authentication key for BGP configuration.
      * 
      */
-    @InputImport(name="bgpAuthKey")
+    @Import(name="bgpAuthKey")
       private final @Nullable Output<String> bgpAuthKey;
 
     public Output<String> getBgpAuthKey() {
@@ -94,7 +94,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
      * The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
      * 
      */
-    @InputImport(name="connectionId")
+    @Import(name="connectionId")
       private final @Nullable Output<String> connectionId;
 
     public Output<String> getConnectionId() {
@@ -105,7 +105,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
      * The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
      * 
      */
-    @InputImport(name="customerAddress")
+    @Import(name="customerAddress")
       private final @Nullable Output<String> customerAddress;
 
     public Output<String> getCustomerAddress() {
@@ -116,7 +116,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
      * The name for the virtual interface.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -127,7 +127,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
      * A list of routes to be advertised to the AWS network in this region.
      * 
      */
-    @InputImport(name="routeFilterPrefixes")
+    @Import(name="routeFilterPrefixes")
       private final @Nullable Output<List<String>> routeFilterPrefixes;
 
     public Output<List<String>> getRouteFilterPrefixes() {
@@ -138,7 +138,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -149,7 +149,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -160,7 +160,7 @@ public final class PublicVirtualInterfaceState extends io.pulumi.resources.Resou
      * The VLAN ID.
      * 
      */
-    @InputImport(name="vlan")
+    @Import(name="vlan")
       private final @Nullable Output<Integer> vlan;
 
     public Output<Integer> getVlan() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetInstanceSerialPortArgs extends io.pulumi.resources.InvokeA
      * The name of the Compute Instance to read output from.
      * 
      */
-    @InputImport(name="instance", required=true)
+    @Import(name="instance", required=true)
       private final String instance;
 
     public String getInstance() {
@@ -30,7 +30,7 @@ public final class GetInstanceSerialPortArgs extends io.pulumi.resources.InvokeA
      * The number of the serial port to read output from. Possible values are 1-4.
      * 
      */
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {
@@ -42,7 +42,7 @@ public final class GetInstanceSerialPortArgs extends io.pulumi.resources.InvokeA
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
@@ -54,7 +54,7 @@ public final class GetInstanceSerialPortArgs extends io.pulumi.resources.InvokeA
      * If it is not provided, the provider zone is used.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable String zone;
 
     public Optional<String> getZone() {

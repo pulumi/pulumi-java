@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
 import io.pulumi.azurenative.alertsmanagement.outputs.HealthStateResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VmGuestHealthAlertCriterionResponse {
     /**
      * Health states to alert on
@@ -34,12 +34,12 @@ public final class VmGuestHealthAlertCriterionResponse {
      */
     private final String namespace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VmGuestHealthAlertCriterionResponse(
-        @OutputCustomType.Parameter("healthStates") List<HealthStateResponse> healthStates,
-        @OutputCustomType.Parameter("monitorNames") @Nullable List<String> monitorNames,
-        @OutputCustomType.Parameter("monitorTypes") @Nullable List<String> monitorTypes,
-        @OutputCustomType.Parameter("namespace") String namespace) {
+        @CustomType.Parameter("healthStates") List<HealthStateResponse> healthStates,
+        @CustomType.Parameter("monitorNames") @Nullable List<String> monitorNames,
+        @CustomType.Parameter("monitorTypes") @Nullable List<String> monitorTypes,
+        @CustomType.Parameter("namespace") String namespace) {
         this.healthStates = healthStates;
         this.monitorNames = monitorNames;
         this.monitorTypes = monitorTypes;

@@ -9,7 +9,7 @@ import io.pulumi.aws.glue.inputs.TriggerState;
 import io.pulumi.aws.glue.outputs.TriggerAction;
 import io.pulumi.aws.glue.outputs.TriggerPredicate;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * List of actions initiated by this trigger when it fires. See Actions Below.
      * 
      */
-    @OutputExport(name="actions", type=List.class, parameters={TriggerAction.class})
+    @Export(name="actions", type=List.class, parameters={TriggerAction.class})
     private Output<List<TriggerAction>> actions;
 
     /**
@@ -51,7 +51,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Amazon Resource Name (ARN) of Glue Trigger
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -65,7 +65,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * A description of the new trigger.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -79,7 +79,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Start the trigger. Defaults to `true`.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -93,7 +93,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * The name of the trigger.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. See Predicate Below.
      * 
      */
-    @OutputExport(name="predicate", type=TriggerPredicate.class, parameters={})
+    @Export(name="predicate", type=TriggerPredicate.class, parameters={})
     private Output</* @Nullable */ TriggerPredicate> predicate;
 
     /**
@@ -121,7 +121,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
      * 
      */
-    @OutputExport(name="schedule", type=String.class, parameters={})
+    @Export(name="schedule", type=String.class, parameters={})
     private Output</* @Nullable */ String> schedule;
 
     /**
@@ -135,7 +135,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Set to true to start `SCHEDULED` and `CONDITIONAL` triggers when created. True is not supported for `ON_DEMAND` triggers.
      * 
      */
-    @OutputExport(name="startOnCreation", type=Boolean.class, parameters={})
+    @Export(name="startOnCreation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> startOnCreation;
 
     /**
@@ -149,7 +149,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -163,7 +163,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -177,7 +177,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -191,7 +191,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * The type of trigger. Valid values are `CONDITIONAL`, `ON_DEMAND`, and `SCHEDULED`.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -205,7 +205,7 @@ public class Trigger extends io.pulumi.resources.CustomResource {
      * A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (`ON_DEMAND` or `SCHEDULED` type) and can contain multiple additional `CONDITIONAL` triggers.
      * 
      */
-    @OutputExport(name="workflowName", type=String.class, parameters={})
+    @Export(name="workflowName", type=String.class, parameters={})
     private Output</* @Nullable */ String> workflowName;
 
     /**

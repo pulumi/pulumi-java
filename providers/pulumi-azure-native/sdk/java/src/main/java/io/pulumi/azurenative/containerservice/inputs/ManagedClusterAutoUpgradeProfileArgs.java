@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 import io.pulumi.azurenative.containerservice.enums.UpgradeChannel;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ManagedClusterAutoUpgradeProfileArgs extends io.pulumi.resour
      * upgrade channel for auto upgrade.
      * 
      */
-    @InputImport(name="upgradeChannel")
+    @Import(name="upgradeChannel")
       private final @Nullable Output<Either<String,UpgradeChannel>> upgradeChannel;
 
     public Output<Either<String,UpgradeChannel>> getUpgradeChannel() {

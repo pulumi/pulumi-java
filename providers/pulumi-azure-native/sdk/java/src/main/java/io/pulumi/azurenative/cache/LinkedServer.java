@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.cache.LinkedServerArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class LinkedServer extends io.pulumi.resources.CustomResource {
      * Fully qualified resourceId of the linked redis cache.
      * 
      */
-    @OutputExport(name="linkedRedisCacheId", type=String.class, parameters={})
+    @Export(name="linkedRedisCacheId", type=String.class, parameters={})
     private Output<String> linkedRedisCacheId;
 
     /**
@@ -48,7 +48,7 @@ public class LinkedServer extends io.pulumi.resources.CustomResource {
      * Location of the linked redis cache.
      * 
      */
-    @OutputExport(name="linkedRedisCacheLocation", type=String.class, parameters={})
+    @Export(name="linkedRedisCacheLocation", type=String.class, parameters={})
     private Output<String> linkedRedisCacheLocation;
 
     /**
@@ -62,7 +62,7 @@ public class LinkedServer extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class LinkedServer extends io.pulumi.resources.CustomResource {
      * Terminal state of the link between primary and secondary redis cache.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -90,7 +90,7 @@ public class LinkedServer extends io.pulumi.resources.CustomResource {
      * Role of the linked server.
      * 
      */
-    @OutputExport(name="serverRole", type=String.class, parameters={})
+    @Export(name="serverRole", type=String.class, parameters={})
     private Output<String> serverRole;
 
     /**
@@ -104,7 +104,7 @@ public class LinkedServer extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

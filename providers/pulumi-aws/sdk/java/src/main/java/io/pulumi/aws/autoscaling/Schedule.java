@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.autoscaling.ScheduleArgs;
 import io.pulumi.aws.autoscaling.inputs.ScheduleState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * The ARN assigned by AWS to the autoscaling schedule.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -47,7 +47,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * The name or Amazon Resource Name (ARN) of the Auto Scaling group.
      * 
      */
-    @OutputExport(name="autoscalingGroupName", type=String.class, parameters={})
+    @Export(name="autoscalingGroupName", type=String.class, parameters={})
     private Output<String> autoscalingGroupName;
 
     /**
@@ -61,7 +61,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * The number of EC2 instances that should be running in the group. Default 0.  Set to -1 if you don't want to change the desired capacity at the scheduled time.
      * 
      */
-    @OutputExport(name="desiredCapacity", type=Integer.class, parameters={})
+    @Export(name="desiredCapacity", type=Integer.class, parameters={})
     private Output<Integer> desiredCapacity;
 
     /**
@@ -76,7 +76,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * If you try to schedule your action in the past, Auto Scaling returns an error message.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output<String> endTime;
 
     /**
@@ -92,7 +92,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Set to -1 if you don't want to change the maximum size at the scheduled time.
      * 
      */
-    @OutputExport(name="maxSize", type=Integer.class, parameters={})
+    @Export(name="maxSize", type=Integer.class, parameters={})
     private Output<Integer> maxSize;
 
     /**
@@ -108,7 +108,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * Set to -1 if you don't want to change the minimum size at the scheduled time.
      * 
      */
-    @OutputExport(name="minSize", type=Integer.class, parameters={})
+    @Export(name="minSize", type=Integer.class, parameters={})
     private Output<Integer> minSize;
 
     /**
@@ -123,7 +123,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * The time when recurring future actions will start. Start time is specified by the user following the Unix cron syntax format.
      * 
      */
-    @OutputExport(name="recurrence", type=String.class, parameters={})
+    @Export(name="recurrence", type=String.class, parameters={})
     private Output<String> recurrence;
 
     /**
@@ -137,7 +137,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * The name of this scaling action.
      * 
      */
-    @OutputExport(name="scheduledActionName", type=String.class, parameters={})
+    @Export(name="scheduledActionName", type=String.class, parameters={})
     private Output<String> scheduledActionName;
 
     /**
@@ -152,7 +152,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * If you try to schedule your action in the past, Auto Scaling returns an error message.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output<String> startTime;
 
     /**
@@ -167,7 +167,7 @@ public class Schedule extends io.pulumi.resources.CustomResource {
      * The timezone for the cron expression. Valid values are the canonical names of the IANA time zones (such as Etc/GMT+9 or Pacific/Tahiti).
      * 
      */
-    @OutputExport(name="timeZone", type=String.class, parameters={})
+    @Export(name="timeZone", type=String.class, parameters={})
     private Output<String> timeZone;
 
     /**

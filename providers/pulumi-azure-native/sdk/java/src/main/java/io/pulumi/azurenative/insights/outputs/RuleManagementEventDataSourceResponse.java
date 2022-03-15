@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.RuleManagementEventClaimsDataSourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleManagementEventDataSourceResponse {
     /**
      * the claims.
@@ -84,22 +84,22 @@ public final class RuleManagementEventDataSourceResponse {
      */
     private final @Nullable String subStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleManagementEventDataSourceResponse(
-        @OutputCustomType.Parameter("claims") @Nullable RuleManagementEventClaimsDataSourceResponse claims,
-        @OutputCustomType.Parameter("eventName") @Nullable String eventName,
-        @OutputCustomType.Parameter("eventSource") @Nullable String eventSource,
-        @OutputCustomType.Parameter("legacyResourceId") @Nullable String legacyResourceId,
-        @OutputCustomType.Parameter("level") @Nullable String level,
-        @OutputCustomType.Parameter("metricNamespace") @Nullable String metricNamespace,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("operationName") @Nullable String operationName,
-        @OutputCustomType.Parameter("resourceGroupName") @Nullable String resourceGroupName,
-        @OutputCustomType.Parameter("resourceLocation") @Nullable String resourceLocation,
-        @OutputCustomType.Parameter("resourceProviderName") @Nullable String resourceProviderName,
-        @OutputCustomType.Parameter("resourceUri") @Nullable String resourceUri,
-        @OutputCustomType.Parameter("status") @Nullable String status,
-        @OutputCustomType.Parameter("subStatus") @Nullable String subStatus) {
+        @CustomType.Parameter("claims") @Nullable RuleManagementEventClaimsDataSourceResponse claims,
+        @CustomType.Parameter("eventName") @Nullable String eventName,
+        @CustomType.Parameter("eventSource") @Nullable String eventSource,
+        @CustomType.Parameter("legacyResourceId") @Nullable String legacyResourceId,
+        @CustomType.Parameter("level") @Nullable String level,
+        @CustomType.Parameter("metricNamespace") @Nullable String metricNamespace,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("operationName") @Nullable String operationName,
+        @CustomType.Parameter("resourceGroupName") @Nullable String resourceGroupName,
+        @CustomType.Parameter("resourceLocation") @Nullable String resourceLocation,
+        @CustomType.Parameter("resourceProviderName") @Nullable String resourceProviderName,
+        @CustomType.Parameter("resourceUri") @Nullable String resourceUri,
+        @CustomType.Parameter("status") @Nullable String status,
+        @CustomType.Parameter("subStatus") @Nullable String subStatus) {
         this.claims = claims;
         this.eventName = eventName;
         this.eventSource = eventSource;

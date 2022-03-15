@@ -6,7 +6,7 @@ package io.pulumi.awsnative.events;
 import io.pulumi.awsnative.events.enums.ConnectionAuthorizationType;
 import io.pulumi.awsnative.events.inputs.AuthParametersPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectionArgs Empty = new ConnectionArgs();
 
-    @InputImport(name="authParameters", required=true)
+    @Import(name="authParameters", required=true)
       private final Output<AuthParametersPropertiesArgs> authParameters;
 
     public Output<AuthParametersPropertiesArgs> getAuthParameters() {
         return this.authParameters;
     }
 
-    @InputImport(name="authorizationType", required=true)
+    @Import(name="authorizationType", required=true)
       private final Output<ConnectionAuthorizationType> authorizationType;
 
     public Output<ConnectionAuthorizationType> getAuthorizationType() {
@@ -34,7 +34,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the connection.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the connection.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

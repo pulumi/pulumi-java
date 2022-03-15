@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.ArmTemplateParameterPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentDeploymentPropertiesResponse {
     /**
      * The Azure Resource Manager template's identifier.
@@ -24,10 +24,10 @@ public final class EnvironmentDeploymentPropertiesResponse {
      */
     private final @Nullable List<ArmTemplateParameterPropertiesResponse> parameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentDeploymentPropertiesResponse(
-        @OutputCustomType.Parameter("armTemplateId") @Nullable String armTemplateId,
-        @OutputCustomType.Parameter("parameters") @Nullable List<ArmTemplateParameterPropertiesResponse> parameters) {
+        @CustomType.Parameter("armTemplateId") @Nullable String armTemplateId,
+        @CustomType.Parameter("parameters") @Nullable List<ArmTemplateParameterPropertiesResponse> parameters) {
         this.armTemplateId = armTemplateId;
         this.parameters = parameters;
     }

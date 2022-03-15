@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetAssessmentMetadataInSubscriptionArgs extends io.pulumi.res
      * The Assessment Key - Unique key for the assessment type
      * 
      */
-    @InputImport(name="assessmentMetadataName", required=true)
+    @Import(name="assessmentMetadataName", required=true)
       private final String assessmentMetadataName;
 
     public String getAssessmentMetadataName() {

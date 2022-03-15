@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datastream_v1alpha1.ConnectionProfileArgs;
@@ -30,7 +30,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * The create time of the resource.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -44,7 +44,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * Display name.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -58,7 +58,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * Forward SSH tunnel connectivity.
      * 
      */
-    @OutputExport(name="forwardSshConnectivity", type=ForwardSshTunnelConnectivityResponse.class, parameters={})
+    @Export(name="forwardSshConnectivity", type=ForwardSshTunnelConnectivityResponse.class, parameters={})
     private Output<ForwardSshTunnelConnectivityResponse> forwardSshConnectivity;
 
     /**
@@ -72,7 +72,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * Cloud Storage ConnectionProfile configuration.
      * 
      */
-    @OutputExport(name="gcsProfile", type=GcsProfileResponse.class, parameters={})
+    @Export(name="gcsProfile", type=GcsProfileResponse.class, parameters={})
     private Output<GcsProfileResponse> gcsProfile;
 
     /**
@@ -86,7 +86,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * Labels.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -100,7 +100,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * MySQL ConnectionProfile configuration.
      * 
      */
-    @OutputExport(name="mysqlProfile", type=MysqlProfileResponse.class, parameters={})
+    @Export(name="mysqlProfile", type=MysqlProfileResponse.class, parameters={})
     private Output<MysqlProfileResponse> mysqlProfile;
 
     /**
@@ -114,7 +114,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * The resource's name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -128,7 +128,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * No connectivity option chosen.
      * 
      */
-    @OutputExport(name="noConnectivity", type=NoConnectivitySettingsResponse.class, parameters={})
+    @Export(name="noConnectivity", type=NoConnectivitySettingsResponse.class, parameters={})
     private Output<NoConnectivitySettingsResponse> noConnectivity;
 
     /**
@@ -142,7 +142,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * Oracle ConnectionProfile configuration.
      * 
      */
-    @OutputExport(name="oracleProfile", type=OracleProfileResponse.class, parameters={})
+    @Export(name="oracleProfile", type=OracleProfileResponse.class, parameters={})
     private Output<OracleProfileResponse> oracleProfile;
 
     /**
@@ -156,7 +156,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * Private connectivity.
      * 
      */
-    @OutputExport(name="privateConnectivity", type=PrivateConnectivityResponse.class, parameters={})
+    @Export(name="privateConnectivity", type=PrivateConnectivityResponse.class, parameters={})
     private Output<PrivateConnectivityResponse> privateConnectivity;
 
     /**
@@ -170,7 +170,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * Static Service IP connectivity.
      * 
      */
-    @OutputExport(name="staticServiceIpConnectivity", type=StaticServiceIpConnectivityResponse.class, parameters={})
+    @Export(name="staticServiceIpConnectivity", type=StaticServiceIpConnectivityResponse.class, parameters={})
     private Output<StaticServiceIpConnectivityResponse> staticServiceIpConnectivity;
 
     /**
@@ -184,7 +184,7 @@ public class ConnectionProfile extends io.pulumi.resources.CustomResource {
      * The update time of the resource.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

@@ -4,12 +4,12 @@
 package io.pulumi.aws.identitystore.outputs;
 
 import io.pulumi.aws.identitystore.outputs.GetUserFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetUserResult {
     private final List<GetUserFilter> filters;
     /**
@@ -25,13 +25,13 @@ public final class GetUserResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserResult(
-        @OutputCustomType.Parameter("filters") List<GetUserFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identityStoreId") String identityStoreId,
-        @OutputCustomType.Parameter("userId") String userId,
-        @OutputCustomType.Parameter("userName") String userName) {
+        @CustomType.Parameter("filters") List<GetUserFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identityStoreId") String identityStoreId,
+        @CustomType.Parameter("userId") String userId,
+        @CustomType.Parameter("userName") String userName) {
         this.filters = filters;
         this.id = id;
         this.identityStoreId = identityStoreId;

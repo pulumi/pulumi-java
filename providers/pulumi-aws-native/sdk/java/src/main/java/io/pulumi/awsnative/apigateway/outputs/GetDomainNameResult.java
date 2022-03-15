@@ -6,14 +6,14 @@ package io.pulumi.awsnative.apigateway.outputs;
 import io.pulumi.awsnative.apigateway.outputs.DomainNameEndpointConfiguration;
 import io.pulumi.awsnative.apigateway.outputs.DomainNameMutualTlsAuthentication;
 import io.pulumi.awsnative.apigateway.outputs.DomainNameTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDomainNameResult {
     private final @Nullable String certificateArn;
     private final @Nullable String distributionDomainName;
@@ -27,19 +27,19 @@ public final class GetDomainNameResult {
     private final @Nullable String securityPolicy;
     private final @Nullable List<DomainNameTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDomainNameResult(
-        @OutputCustomType.Parameter("certificateArn") @Nullable String certificateArn,
-        @OutputCustomType.Parameter("distributionDomainName") @Nullable String distributionDomainName,
-        @OutputCustomType.Parameter("distributionHostedZoneId") @Nullable String distributionHostedZoneId,
-        @OutputCustomType.Parameter("endpointConfiguration") @Nullable DomainNameEndpointConfiguration endpointConfiguration,
-        @OutputCustomType.Parameter("mutualTlsAuthentication") @Nullable DomainNameMutualTlsAuthentication mutualTlsAuthentication,
-        @OutputCustomType.Parameter("ownershipVerificationCertificateArn") @Nullable String ownershipVerificationCertificateArn,
-        @OutputCustomType.Parameter("regionalCertificateArn") @Nullable String regionalCertificateArn,
-        @OutputCustomType.Parameter("regionalDomainName") @Nullable String regionalDomainName,
-        @OutputCustomType.Parameter("regionalHostedZoneId") @Nullable String regionalHostedZoneId,
-        @OutputCustomType.Parameter("securityPolicy") @Nullable String securityPolicy,
-        @OutputCustomType.Parameter("tags") @Nullable List<DomainNameTag> tags) {
+        @CustomType.Parameter("certificateArn") @Nullable String certificateArn,
+        @CustomType.Parameter("distributionDomainName") @Nullable String distributionDomainName,
+        @CustomType.Parameter("distributionHostedZoneId") @Nullable String distributionHostedZoneId,
+        @CustomType.Parameter("endpointConfiguration") @Nullable DomainNameEndpointConfiguration endpointConfiguration,
+        @CustomType.Parameter("mutualTlsAuthentication") @Nullable DomainNameMutualTlsAuthentication mutualTlsAuthentication,
+        @CustomType.Parameter("ownershipVerificationCertificateArn") @Nullable String ownershipVerificationCertificateArn,
+        @CustomType.Parameter("regionalCertificateArn") @Nullable String regionalCertificateArn,
+        @CustomType.Parameter("regionalDomainName") @Nullable String regionalDomainName,
+        @CustomType.Parameter("regionalHostedZoneId") @Nullable String regionalHostedZoneId,
+        @CustomType.Parameter("securityPolicy") @Nullable String securityPolicy,
+        @CustomType.Parameter("tags") @Nullable List<DomainNameTag> tags) {
         this.certificateArn = certificateArn;
         this.distributionDomainName = distributionDomainName;
         this.distributionHostedZoneId = distributionHostedZoneId;

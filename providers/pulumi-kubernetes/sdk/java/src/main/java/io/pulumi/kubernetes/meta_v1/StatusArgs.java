@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.meta_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.meta_v1.inputs.ListMetaArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.StatusDetailsArgs;
 import java.lang.Integer;
@@ -21,7 +21,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
@@ -32,7 +32,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * Suggested HTTP return code for this status, 0 if not set.
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable Output<Integer> code;
 
     public Output<Integer> getCode() {
@@ -43,7 +43,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * Extended data associated with the reason.  Each reason may define its own extended details. This field is optional and the data returned is not guaranteed to conform to any schema except that defined by the reason type.
      * 
      */
-    @InputImport(name="details")
+    @Import(name="details")
       private final @Nullable Output<StatusDetailsArgs> details;
 
     public Output<StatusDetailsArgs> getDetails() {
@@ -54,7 +54,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -65,7 +65,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * A human-readable description of the status of this operation.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
@@ -76,7 +76,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<ListMetaArgs> metadata;
 
     public Output<ListMetaArgs> getMetadata() {
@@ -87,7 +87,7 @@ public final class StatusArgs extends io.pulumi.resources.ResourceArgs {
      * A machine-readable description of why this operation is in the "Failure" status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it.
      * 
      */
-    @InputImport(name="reason")
+    @Import(name="reason")
       private final @Nullable Output<String> reason;
 
     public Output<String> getReason() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WindowsUpdateSettingsResponse {
     /**
      * Only apply updates of these windows update classifications. If empty, all updates are applied.
@@ -26,11 +26,11 @@ public final class WindowsUpdateSettingsResponse {
      */
     private final List<String> exclusivePatches;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WindowsUpdateSettingsResponse(
-        @OutputCustomType.Parameter("classifications") List<String> classifications,
-        @OutputCustomType.Parameter("excludes") List<String> excludes,
-        @OutputCustomType.Parameter("exclusivePatches") List<String> exclusivePatches) {
+        @CustomType.Parameter("classifications") List<String> classifications,
+        @CustomType.Parameter("excludes") List<String> excludes,
+        @CustomType.Parameter("exclusivePatches") List<String> exclusivePatches) {
         this.classifications = classifications;
         this.excludes = excludes;
         this.exclusivePatches = exclusivePatches;

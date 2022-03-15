@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FirewallLogConfig {
     /**
      * This field denotes whether to include or exclude metadata for firewall logs.
@@ -16,8 +16,8 @@ public final class FirewallLogConfig {
      */
     private final String metadata;
 
-    @OutputCustomType.Constructor
-    private FirewallLogConfig(@OutputCustomType.Parameter("metadata") String metadata) {
+    @CustomType.Constructor
+    private FirewallLogConfig(@CustomType.Parameter("metadata") String metadata) {
         this.metadata = metadata;
     }
 

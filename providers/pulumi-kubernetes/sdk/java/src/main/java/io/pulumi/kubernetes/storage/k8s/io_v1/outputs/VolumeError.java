@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VolumeError {
     /**
      * String detailing the error encountered during Attach or Detach operation. This string may be logged, so it should not contain sensitive information.
@@ -22,10 +22,10 @@ public final class VolumeError {
      */
     private final @Nullable String time;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VolumeError(
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("time") @Nullable String time) {
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("time") @Nullable String time) {
         this.message = message;
         this.time = time;
     }

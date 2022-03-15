@@ -5,14 +5,14 @@ package io.pulumi.aws.waf.outputs;
 
 import io.pulumi.aws.waf.outputs.WebAclRuleAction;
 import io.pulumi.aws.waf.outputs.WebAclRuleOverrideAction;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRule {
     /**
      * The action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule. Not used if `type` is `GROUP`.
@@ -41,13 +41,13 @@ public final class WebAclRule {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WebAclRule(
-        @OutputCustomType.Parameter("action") @Nullable WebAclRuleAction action,
-        @OutputCustomType.Parameter("overrideAction") @Nullable WebAclRuleOverrideAction overrideAction,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("ruleId") String ruleId,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("action") @Nullable WebAclRuleAction action,
+        @CustomType.Parameter("overrideAction") @Nullable WebAclRuleOverrideAction overrideAction,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("ruleId") String ruleId,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.action = action;
         this.overrideAction = overrideAction;
         this.priority = priority;

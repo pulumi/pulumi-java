@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dlp_v2.StoredInfoTypeArgs;
@@ -24,7 +24,7 @@ public class StoredInfoType extends io.pulumi.resources.CustomResource {
      * Current version of the stored info type.
      * 
      */
-    @OutputExport(name="currentVersion", type=GooglePrivacyDlpV2StoredInfoTypeVersionResponse.class, parameters={})
+    @Export(name="currentVersion", type=GooglePrivacyDlpV2StoredInfoTypeVersionResponse.class, parameters={})
     private Output<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> currentVersion;
 
     /**
@@ -38,7 +38,7 @@ public class StoredInfoType extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -52,7 +52,7 @@ public class StoredInfoType extends io.pulumi.resources.CustomResource {
      * Pending versions of the stored info type. Empty if no versions are pending.
      * 
      */
-    @OutputExport(name="pendingVersions", type=List.class, parameters={GooglePrivacyDlpV2StoredInfoTypeVersionResponse.class})
+    @Export(name="pendingVersions", type=List.class, parameters={GooglePrivacyDlpV2StoredInfoTypeVersionResponse.class})
     private Output<List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse>> pendingVersions;
 
     /**

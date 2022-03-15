@@ -4,7 +4,7 @@
 package io.pulumi.gcp.binaryauthorization.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs ex
      * `https://tools.ietf.org/html/rfc7468#section-13`
      * 
      */
-    @InputImport(name="publicKeyPem")
+    @Import(name="publicKeyPem")
       private final @Nullable Output<String> publicKeyPem;
 
     public Output<String> getPublicKeyPem() {
@@ -34,7 +34,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs ex
      * public key).
      * 
      */
-    @InputImport(name="signatureAlgorithm")
+    @Import(name="signatureAlgorithm")
       private final @Nullable Output<String> signatureAlgorithm;
 
     public Output<String> getSignatureAlgorithm() {

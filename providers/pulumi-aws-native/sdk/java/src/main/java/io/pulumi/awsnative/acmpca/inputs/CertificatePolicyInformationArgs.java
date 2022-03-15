@@ -5,7 +5,7 @@ package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.awsnative.acmpca.inputs.CertificatePolicyQualifierInfoArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class CertificatePolicyInformationArgs extends io.pulumi.resources.
 
     public static final CertificatePolicyInformationArgs Empty = new CertificatePolicyInformationArgs();
 
-    @InputImport(name="certPolicyId", required=true)
+    @Import(name="certPolicyId", required=true)
       private final Output<String> certPolicyId;
 
     public Output<String> getCertPolicyId() {
         return this.certPolicyId;
     }
 
-    @InputImport(name="policyQualifiers")
+    @Import(name="policyQualifiers")
       private final @Nullable Output<List<CertificatePolicyQualifierInfoArgs>> policyQualifiers;
 
     public Output<List<CertificatePolicyQualifierInfoArgs>> getPolicyQualifiers() {

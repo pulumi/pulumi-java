@@ -7,7 +7,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.inputs.ConfigurationIdentit
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ExtensionStatusArgs;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ScopeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * Flag to note if this instance participates in auto upgrade of minor version, or not.
      * 
      */
-    @InputImport(name="autoUpgradeMinorVersion")
+    @Import(name="autoUpgradeMinorVersion")
       private final @Nullable Output<Boolean> autoUpgradeMinorVersion;
 
     public Output<Boolean> getAutoUpgradeMinorVersion() {
@@ -35,7 +35,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the kubernetes cluster.
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -46,7 +46,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
      * 
      */
-    @InputImport(name="clusterResourceName", required=true)
+    @Import(name="clusterResourceName", required=true)
       private final Output<String> clusterResourceName;
 
     public Output<String> getClusterResourceName() {
@@ -57,7 +57,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
      * 
      */
-    @InputImport(name="clusterRp", required=true)
+    @Import(name="clusterRp", required=true)
       private final Output<String> clusterRp;
 
     public Output<String> getClusterRp() {
@@ -68,7 +68,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration settings that are sensitive, as name-value pairs for configuring this instance of the extension.
      * 
      */
-    @InputImport(name="configurationProtectedSettings")
+    @Import(name="configurationProtectedSettings")
       private final @Nullable Output<Map<String,String>> configurationProtectedSettings;
 
     public Output<Map<String,String>> getConfigurationProtectedSettings() {
@@ -79,7 +79,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration settings, as name-value pairs for configuring this instance of the extension.
      * 
      */
-    @InputImport(name="configurationSettings")
+    @Import(name="configurationSettings")
       private final @Nullable Output<Map<String,String>> configurationSettings;
 
     public Output<Map<String,String>> getConfigurationSettings() {
@@ -90,7 +90,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * Name of an instance of the Extension.
      * 
      */
-    @InputImport(name="extensionInstanceName")
+    @Import(name="extensionInstanceName")
       private final @Nullable Output<String> extensionInstanceName;
 
     public Output<String> getExtensionInstanceName() {
@@ -101,7 +101,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * Type of the Extension, of which this resource is an instance of.  It must be one of the Extension Types registered with Microsoft.KubernetesConfiguration by the Extension publisher.
      * 
      */
-    @InputImport(name="extensionType")
+    @Import(name="extensionType")
       private final @Nullable Output<String> extensionType;
 
     public Output<String> getExtensionType() {
@@ -112,7 +112,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * The identity of the configuration.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<ConfigurationIdentityArgs> identity;
 
     public Output<ConfigurationIdentityArgs> getIdentity() {
@@ -123,7 +123,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * ReleaseTrain this extension instance participates in for auto-upgrade (e.g. Stable, Preview, etc.) - only if autoUpgradeMinorVersion is 'true'.
      * 
      */
-    @InputImport(name="releaseTrain")
+    @Import(name="releaseTrain")
       private final @Nullable Output<String> releaseTrain;
 
     public Output<String> getReleaseTrain() {
@@ -134,7 +134,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -145,7 +145,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * Scope at which the extension instance is installed.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<ScopeArgs> scope;
 
     public Output<ScopeArgs> getScope() {
@@ -156,7 +156,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * Status from this instance of the extension.
      * 
      */
-    @InputImport(name="statuses")
+    @Import(name="statuses")
       private final @Nullable Output<List<ExtensionStatusArgs>> statuses;
 
     public Output<List<ExtensionStatusArgs>> getStatuses() {
@@ -167,7 +167,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * Version of the extension for this extension instance, if it is 'pinned' to a specific version. autoUpgradeMinorVersion must be 'false'.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

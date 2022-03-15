@@ -6,13 +6,13 @@ package io.pulumi.azurenative.scheduler.outputs;
 import io.pulumi.azurenative.scheduler.outputs.JobActionResponse;
 import io.pulumi.azurenative.scheduler.outputs.JobRecurrenceResponse;
 import io.pulumi.azurenative.scheduler.outputs.JobStatusResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobPropertiesResponse {
     /**
      * Gets or sets the job action.
@@ -40,13 +40,13 @@ public final class JobPropertiesResponse {
      */
     private final JobStatusResponse status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobPropertiesResponse(
-        @OutputCustomType.Parameter("action") @Nullable JobActionResponse action,
-        @OutputCustomType.Parameter("recurrence") @Nullable JobRecurrenceResponse recurrence,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("status") JobStatusResponse status) {
+        @CustomType.Parameter("action") @Nullable JobActionResponse action,
+        @CustomType.Parameter("recurrence") @Nullable JobRecurrenceResponse recurrence,
+        @CustomType.Parameter("startTime") @Nullable String startTime,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("status") JobStatusResponse status) {
         this.action = action;
         this.recurrence = recurrence;
         this.startTime = startTime;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.BiEngineReasonResponse;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ public final class BiEngineStatisticsResponse extends io.pulumi.resources.Invoke
      * Specifies which mode of BI Engine acceleration was performed (if any).
      * 
      */
-    @InputImport(name="biEngineMode", required=true)
+    @Import(name="biEngineMode", required=true)
       private final String biEngineMode;
 
     public String getBiEngineMode() {
@@ -29,7 +29,7 @@ public final class BiEngineStatisticsResponse extends io.pulumi.resources.Invoke
      * In case of DISABLED or PARTIAL bi_engine_mode, these contain the explanatory reasons as to why BI Engine could not accelerate. In case the full query was accelerated, this field is not populated.
      * 
      */
-    @InputImport(name="biEngineReasons", required=true)
+    @Import(name="biEngineReasons", required=true)
       private final List<BiEngineReasonResponse> biEngineReasons;
 
     public List<BiEngineReasonResponse> getBiEngineReasons() {

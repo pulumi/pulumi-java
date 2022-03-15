@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SchemaComparisonValidationResultTypeResponse extends io.pulum
      * Name of the object that has the difference
      * 
      */
-    @InputImport(name="objectName", required=true)
+    @Import(name="objectName", required=true)
       private final String objectName;
 
     public String getObjectName() {
@@ -31,7 +31,7 @@ public final class SchemaComparisonValidationResultTypeResponse extends io.pulum
      * Type of the object that has the difference. e.g (Table/View/StoredProcedure)
      * 
      */
-    @InputImport(name="objectType", required=true)
+    @Import(name="objectType", required=true)
       private final String objectType;
 
     public String getObjectType() {
@@ -42,7 +42,7 @@ public final class SchemaComparisonValidationResultTypeResponse extends io.pulum
      * Update action type with respect to target
      * 
      */
-    @InputImport(name="updateAction", required=true)
+    @Import(name="updateAction", required=true)
       private final String updateAction;
 
     public String getUpdateAction() {

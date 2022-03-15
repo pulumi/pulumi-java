@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GcsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * The full project and resource path for Cloud Storage bucket including the name.
      * 
      */
-    @InputImport(name="bucketName", required=true)
+    @Import(name="bucketName", required=true)
       private final String bucketName;
 
     public String getBucketName() {
@@ -31,7 +31,7 @@ public final class GcsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * The root path inside the Cloud Storage bucket.
      * 
      */
-    @InputImport(name="rootPath", required=true)
+    @Import(name="rootPath", required=true)
       private final String rootPath;
 
     public String getRootPath() {

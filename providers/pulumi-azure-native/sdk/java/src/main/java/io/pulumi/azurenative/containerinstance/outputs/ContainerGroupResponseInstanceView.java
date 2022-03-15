@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.containerinstance.outputs;
 
 import io.pulumi.azurenative.containerinstance.outputs.EventResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContainerGroupResponseInstanceView {
     /**
      * The events of this container group.
@@ -22,10 +22,10 @@ public final class ContainerGroupResponseInstanceView {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContainerGroupResponseInstanceView(
-        @OutputCustomType.Parameter("events") List<EventResponse> events,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("events") List<EventResponse> events,
+        @CustomType.Parameter("state") String state) {
         this.events = events;
         this.state = state;
     }

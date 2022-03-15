@@ -6,12 +6,12 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.ManagedIntegrationRuntimeErrorResponse;
 import io.pulumi.azurenative.datafactory.outputs.ManagedIntegrationRuntimeNodeResponse;
 import io.pulumi.azurenative.datafactory.outputs.ManagedIntegrationRuntimeOperationResultResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedIntegrationRuntimeStatusResponse {
     /**
      * The time at which the integration runtime was created, in ISO8601 format.
@@ -50,15 +50,15 @@ public final class ManagedIntegrationRuntimeStatusResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedIntegrationRuntimeStatusResponse(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("dataFactoryName") String dataFactoryName,
-        @OutputCustomType.Parameter("lastOperation") ManagedIntegrationRuntimeOperationResultResponse lastOperation,
-        @OutputCustomType.Parameter("nodes") List<ManagedIntegrationRuntimeNodeResponse> nodes,
-        @OutputCustomType.Parameter("otherErrors") List<ManagedIntegrationRuntimeErrorResponse> otherErrors,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("dataFactoryName") String dataFactoryName,
+        @CustomType.Parameter("lastOperation") ManagedIntegrationRuntimeOperationResultResponse lastOperation,
+        @CustomType.Parameter("nodes") List<ManagedIntegrationRuntimeNodeResponse> nodes,
+        @CustomType.Parameter("otherErrors") List<ManagedIntegrationRuntimeErrorResponse> otherErrors,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("type") String type) {
         this.createTime = createTime;
         this.dataFactoryName = dataFactoryName;
         this.lastOperation = lastOperation;

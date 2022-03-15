@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FirewallPolicyRuleConditionApplicationProtocolResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
      * Description of the rule condition.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -35,7 +35,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
      * List of destination IP addresses or Service Tags.
      * 
      */
-    @InputImport(name="destinationAddresses")
+    @Import(name="destinationAddresses")
       private final @Nullable List<String> destinationAddresses;
 
     public List<String> getDestinationAddresses() {
@@ -46,7 +46,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
      * List of FQDN Tags for this rule condition.
      * 
      */
-    @InputImport(name="fqdnTags")
+    @Import(name="fqdnTags")
       private final @Nullable List<String> fqdnTags;
 
     public List<String> getFqdnTags() {
@@ -57,7 +57,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
      * Name of the rule condition.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -68,7 +68,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
      * Array of Application Protocols.
      * 
      */
-    @InputImport(name="protocols")
+    @Import(name="protocols")
       private final @Nullable List<FirewallPolicyRuleConditionApplicationProtocolResponse> protocols;
 
     public List<FirewallPolicyRuleConditionApplicationProtocolResponse> getProtocols() {
@@ -80,7 +80,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
      * Expected value is 'ApplicationRuleCondition'.
      * 
      */
-    @InputImport(name="ruleConditionType", required=true)
+    @Import(name="ruleConditionType", required=true)
       private final String ruleConditionType;
 
     public String getRuleConditionType() {
@@ -91,7 +91,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
      * List of source IP addresses for this rule.
      * 
      */
-    @InputImport(name="sourceAddresses")
+    @Import(name="sourceAddresses")
       private final @Nullable List<String> sourceAddresses;
 
     public List<String> getSourceAddresses() {
@@ -102,7 +102,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
      * List of source IpGroups for this rule.
      * 
      */
-    @InputImport(name="sourceIpGroups")
+    @Import(name="sourceIpGroups")
       private final @Nullable List<String> sourceIpGroups;
 
     public List<String> getSourceIpGroups() {
@@ -113,7 +113,7 @@ public final class ApplicationRuleConditionResponse extends io.pulumi.resources.
      * List of FQDNs for this rule condition.
      * 
      */
-    @InputImport(name="targetFqdns")
+    @Import(name="targetFqdns")
       private final @Nullable List<String> targetFqdns;
 
     public List<String> getTargetFqdns() {

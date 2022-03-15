@@ -6,7 +6,7 @@ package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 import io.pulumi.azurenative.kubernetesconfiguration.enums.LevelType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
      * Status code provided by the Extension
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable Output<String> code;
 
     public Output<String> getCode() {
@@ -35,7 +35,7 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
      * Short description of status of this instance of the extension.
      * 
      */
-    @InputImport(name="displayStatus")
+    @Import(name="displayStatus")
       private final @Nullable Output<String> displayStatus;
 
     public Output<String> getDisplayStatus() {
@@ -46,7 +46,7 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
      * Level of the status.
      * 
      */
-    @InputImport(name="level")
+    @Import(name="level")
       private final @Nullable Output<Either<String,LevelType>> level;
 
     public Output<Either<String,LevelType>> getLevel() {
@@ -57,7 +57,7 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
      * Detailed message of the status from the Extension instance.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
@@ -68,7 +68,7 @@ public final class ExtensionStatusArgs extends io.pulumi.resources.ResourceArgs 
      * DateLiteral (per ISO8601) noting the time of installation status.
      * 
      */
-    @InputImport(name="time")
+    @Import(name="time")
       private final @Nullable Output<String> time;
 
     public Output<String> getTime() {

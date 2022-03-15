@@ -5,20 +5,20 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAccessScopePacketHeaderStatementRequest;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAccessScopeResourceStatementRequest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInsightsAccessScopePathStatementRequest {
     private final @Nullable NetworkInsightsAccessScopePacketHeaderStatementRequest packetHeaderStatement;
     private final @Nullable NetworkInsightsAccessScopeResourceStatementRequest resourceStatement;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkInsightsAccessScopePathStatementRequest(
-        @OutputCustomType.Parameter("packetHeaderStatement") @Nullable NetworkInsightsAccessScopePacketHeaderStatementRequest packetHeaderStatement,
-        @OutputCustomType.Parameter("resourceStatement") @Nullable NetworkInsightsAccessScopeResourceStatementRequest resourceStatement) {
+        @CustomType.Parameter("packetHeaderStatement") @Nullable NetworkInsightsAccessScopePacketHeaderStatementRequest packetHeaderStatement,
+        @CustomType.Parameter("resourceStatement") @Nullable NetworkInsightsAccessScopeResourceStatementRequest resourceStatement) {
         this.packetHeaderStatement = packetHeaderStatement;
         this.resourceStatement = resourceStatement;
     }

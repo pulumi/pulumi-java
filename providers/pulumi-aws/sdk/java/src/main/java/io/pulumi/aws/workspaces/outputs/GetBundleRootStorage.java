@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.workspaces.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBundleRootStorage {
     /**
      * The size of the user storage.
@@ -15,8 +15,8 @@ public final class GetBundleRootStorage {
      */
     private final String capacity;
 
-    @OutputCustomType.Constructor
-    private GetBundleRootStorage(@OutputCustomType.Parameter("capacity") String capacity) {
+    @CustomType.Constructor
+    private GetBundleRootStorage(@CustomType.Parameter("capacity") String capacity) {
         this.capacity = capacity;
     }
 

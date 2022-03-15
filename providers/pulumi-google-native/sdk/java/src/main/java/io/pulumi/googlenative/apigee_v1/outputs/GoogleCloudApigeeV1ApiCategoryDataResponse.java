@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1ApiCategoryDataResponse {
     /**
      * Name of the category.
@@ -25,11 +25,11 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1ApiCategoryDataResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("siteId") String siteId,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("siteId") String siteId,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.name = name;
         this.siteId = siteId;
         this.updateTime = updateTime;

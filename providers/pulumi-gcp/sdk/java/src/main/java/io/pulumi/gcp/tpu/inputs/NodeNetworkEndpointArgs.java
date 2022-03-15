@@ -4,7 +4,7 @@
 package io.pulumi.gcp.tpu.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class NodeNetworkEndpointArgs extends io.pulumi.resources.ResourceA
 
     public static final NodeNetworkEndpointArgs Empty = new NodeNetworkEndpointArgs();
 
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
         return this.ipAddress == null ? Output.empty() : this.ipAddress;
     }
 
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {

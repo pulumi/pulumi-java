@@ -4,19 +4,19 @@
 package io.pulumi.awsnative.budgets.outputs;
 
 import io.pulumi.awsnative.budgets.enums.BudgetsActionActionThresholdType;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BudgetsActionActionThreshold {
     private final BudgetsActionActionThresholdType type;
     private final Double value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetsActionActionThreshold(
-        @OutputCustomType.Parameter("type") BudgetsActionActionThresholdType type,
-        @OutputCustomType.Parameter("value") Double value) {
+        @CustomType.Parameter("type") BudgetsActionActionThresholdType type,
+        @CustomType.Parameter("value") Double value) {
         this.type = type;
         this.value = value;
     }

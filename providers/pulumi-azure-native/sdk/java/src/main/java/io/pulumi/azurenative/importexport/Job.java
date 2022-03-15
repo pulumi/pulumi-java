@@ -10,7 +10,7 @@ import io.pulumi.azurenative.importexport.outputs.JobDetailsResponse;
 import io.pulumi.azurenative.importexport.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Specifies the job identity details
      * 
      */
-    @OutputExport(name="identity", type=IdentityDetailsResponse.class, parameters={})
+    @Export(name="identity", type=IdentityDetailsResponse.class, parameters={})
     private Output</* @Nullable */ IdentityDetailsResponse> identity;
 
     /**
@@ -52,7 +52,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Specifies the Azure location where the job is created.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -66,7 +66,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Specifies the name of the job.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Specifies the job properties
      * 
      */
-    @OutputExport(name="properties", type=JobDetailsResponse.class, parameters={})
+    @Export(name="properties", type=JobDetailsResponse.class, parameters={})
     private Output<JobDetailsResponse> properties;
 
     /**
@@ -94,7 +94,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * SystemData of ImportExport Jobs.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -108,7 +108,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Specifies the tags that are assigned to the job.
      * 
      */
-    @OutputExport(name="tags", type=Object.class, parameters={})
+    @Export(name="tags", type=Object.class, parameters={})
     private Output</* @Nullable */ Object> tags;
 
     /**
@@ -122,7 +122,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Specifies the type of the job resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

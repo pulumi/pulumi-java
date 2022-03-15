@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.cognito.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UserPoolUserPoolAddOns {
     /**
      * Mode for advanced security, must be one of `OFF`, `AUDIT` or `ENFORCED`.
@@ -15,8 +15,8 @@ public final class UserPoolUserPoolAddOns {
      */
     private final String advancedSecurityMode;
 
-    @OutputCustomType.Constructor
-    private UserPoolUserPoolAddOns(@OutputCustomType.Parameter("advancedSecurityMode") String advancedSecurityMode) {
+    @CustomType.Constructor
+    private UserPoolUserPoolAddOns(@CustomType.Parameter("advancedSecurityMode") String advancedSecurityMode) {
         this.advancedSecurityMode = advancedSecurityMode;
     }
 

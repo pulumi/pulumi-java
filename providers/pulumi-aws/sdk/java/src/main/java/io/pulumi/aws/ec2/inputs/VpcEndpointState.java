@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.VpcEndpointDnsEntryGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class VpcEndpointState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the VPC endpoint.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class VpcEndpointState extends io.pulumi.resources.ResourceArgs {
      * Accept the VPC endpoint (the VPC endpoint and service need to be in the same AWS account).
      * 
      */
-    @InputImport(name="autoAccept")
+    @Import(name="autoAccept")
       private final @Nullable Output<Boolean> autoAccept;
 
     public Output<Boolean> getAutoAccept() {
@@ -44,7 +44,7 @@ public final class VpcEndpointState extends io.pulumi.resources.ResourceArgs {
      * The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of type `Gateway`.
      * 
      */
-    @InputImport(name="cidrBlocks")
+    @Import(name="cidrBlocks")
       private final @Nullable Output<List<String>> cidrBlocks;
 
     public Output<List<String>> getCidrBlocks() {
@@ -55,7 +55,7 @@ public final class VpcEndpointState extends io.pulumi.resources.ResourceArgs {
      * The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
      * 
      */
-    @InputImport(name="dnsEntries")
+    @Import(name="dnsEntries")
       private final @Nullable Output<List<VpcEndpointDnsEntryGetArgs>> dnsEntries;
 
     public Output<List<VpcEndpointDnsEntryGetArgs>> getDnsEntries() {
@@ -66,7 +66,7 @@ public final class VpcEndpointState extends io.pulumi.resources.ResourceArgs {
      * One or more network interfaces for the VPC Endpoint. Applicable for endpoints of type `Interface`.
      * 
      */
-    @InputImport(name="networkInterfaceIds")
+    @Import(name="networkInterfaceIds")
       private final @Nullable Output<List<String>> networkInterfaceIds;
 
     public Output<List<String>> getNetworkInterfaceIds() {
@@ -77,7 +77,7 @@ public final class VpcEndpointState extends io.pulumi.resources.ResourceArgs {
      * The ID of the AWS account that owns the VPC endpoint.
      * 
      */
-    @InputImport(name="ownerId")
+    @Import(name="ownerId")
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
@@ -88,7 +88,7 @@ public final class VpcEndpointState extends io.pulumi.resources.ResourceArgs {
      * A policy to attach to the endpoint that controls access to the service. This is a JSON formatted string. Defaults to full access. All `Gateway` and some `Interface` endpoints support policies - see the [relevant AWS documentation](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) for more details.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -99,7 +99,7 @@ public final class VpcEndpointState extends io.pulumi.resources.ResourceArgs {
      * The prefix list ID of the exposed AWS service. Applicable for endpoints of type `Gateway`.
      * 
      */
-    @InputImport(name="prefixListId")
+    @Import(name="prefixListId")
       private final @Nullable Output<String> prefixListId;
 
     public Output<String> getPrefixListId() {
@@ -111,7 +111,7 @@ public final class VpcEndpointState extends io.pulumi.resources.ResourceArgs {
      * Defaults to `false`.
      * 
      */
-    @InputImport(name="privateDnsEnabled")
+    @Import(name="privateDnsEnabled")
       private final @Nullable Output<Boolean> privateDnsEnabled;
 
     public Output<Boolean> getPrivateDnsEnabled() {
@@ -122,7 +122,7 @@ public final class VpcEndpointState extends io.pulumi.resources.ResourceArgs {
      * Whether or not the VPC Endpoint is being managed by its service - `true` or `false`.
      * 
      */
-    @InputImport(name="requesterManaged")
+    @Import(name="requesterManaged")
       private final @Nullable Output<Boolean> requesterManaged;
 
     public Output<Boolean> getRequesterManaged() {
@@ -133,7 +133,7 @@ public final class VpcEndpointState extends io.pulumi.resources.ResourceArgs {
      * One or more route table IDs. Applicable for endpoints of type `Gateway`.
      * 
      */
-    @InputImport(name="routeTableIds")
+    @Import(name="routeTableIds")
       private final @Nullable Output<List<String>> routeTableIds;
 
     public Output<List<String>> getRouteTableIds() {
@@ -144,7 +144,7 @@ public final class VpcEndpointState extends io.pulumi.resources.ResourceArgs {
      * The ID of one or more security groups to associate with the network interface. Required for endpoints of type `Interface`.
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -155,7 +155,7 @@ public final class VpcEndpointState extends io.pulumi.resources.ResourceArgs {
      * The service name. For AWS services the service name is usually in the form `com.amazonaws.<region>.<service>` (the SageMaker Notebook service is an exception to this rule, the service name is in the form `aws.sagemaker.<region>.notebook`).
      * 
      */
-    @InputImport(name="serviceName")
+    @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
@@ -166,7 +166,7 @@ public final class VpcEndpointState extends io.pulumi.resources.ResourceArgs {
      * The state of the VPC endpoint.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -177,7 +177,7 @@ public final class VpcEndpointState extends io.pulumi.resources.ResourceArgs {
      * The ID of one or more subnets in which to create a network interface for the endpoint. Applicable for endpoints of type `GatewayLoadBalancer` and `Interface`.
      * 
      */
-    @InputImport(name="subnetIds")
+    @Import(name="subnetIds")
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -188,7 +188,7 @@ public final class VpcEndpointState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -199,7 +199,7 @@ public final class VpcEndpointState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -210,7 +210,7 @@ public final class VpcEndpointState extends io.pulumi.resources.ResourceArgs {
      * The VPC endpoint type, `Gateway`, `GatewayLoadBalancer`, or `Interface`. Defaults to `Gateway`.
      * 
      */
-    @InputImport(name="vpcEndpointType")
+    @Import(name="vpcEndpointType")
       private final @Nullable Output<String> vpcEndpointType;
 
     public Output<String> getVpcEndpointType() {
@@ -221,7 +221,7 @@ public final class VpcEndpointState extends io.pulumi.resources.ResourceArgs {
      * The ID of the VPC in which the endpoint will be used.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

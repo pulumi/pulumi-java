@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.NetworkPolicyPeerArgs;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.NetworkPolicyPortArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class NetworkPolicyEgressRuleArgs extends io.pulumi.resources.Resou
      * List of destination ports for outgoing traffic. Each item in this list is combined using a logical OR. If this field is empty or missing, this rule matches all ports (traffic not restricted by port). If this field is present and contains at least one item, then this rule allows traffic only if the traffic matches at least one port in the list.
      * 
      */
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable Output<List<NetworkPolicyPortArgs>> ports;
 
     public Output<List<NetworkPolicyPortArgs>> getPorts() {
@@ -35,7 +35,7 @@ public final class NetworkPolicyEgressRuleArgs extends io.pulumi.resources.Resou
      * List of destinations for outgoing traffic of pods selected for this rule. Items in this list are combined using a logical OR operation. If this field is empty or missing, this rule matches all destinations (traffic not restricted by destination). If this field is present and contains at least one item, this rule allows traffic only if the traffic matches at least one item in the to list.
      * 
      */
-    @InputImport(name="to")
+    @Import(name="to")
       private final @Nullable Output<List<NetworkPolicyPeerArgs>> to;
 
     public Output<List<NetworkPolicyPeerArgs>> getTo() {

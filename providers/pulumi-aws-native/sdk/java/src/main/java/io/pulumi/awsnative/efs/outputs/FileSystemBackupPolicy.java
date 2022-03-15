@@ -3,16 +3,16 @@
 
 package io.pulumi.awsnative.efs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FileSystemBackupPolicy {
     private final String status;
 
-    @OutputCustomType.Constructor
-    private FileSystemBackupPolicy(@OutputCustomType.Parameter("status") String status) {
+    @CustomType.Constructor
+    private FileSystemBackupPolicy(@CustomType.Parameter("status") String status) {
         this.status = status;
     }
 

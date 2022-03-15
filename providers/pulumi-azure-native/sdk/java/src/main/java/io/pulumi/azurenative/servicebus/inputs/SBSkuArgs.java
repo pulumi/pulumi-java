@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicebus.inputs;
 import io.pulumi.azurenative.servicebus.enums.SkuName;
 import io.pulumi.azurenative.servicebus.enums.SkuTier;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
      * The specified messaging units for the tier. For Premium tier, capacity are 1,2 and 4.
      * 
      */
-    @InputImport(name="capacity")
+    @Import(name="capacity")
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
@@ -35,7 +35,7 @@ public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
      * Name of this SKU.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<SkuName> name;
 
     public Output<SkuName> getName() {
@@ -46,7 +46,7 @@ public final class SBSkuArgs extends io.pulumi.resources.ResourceArgs {
      * The billing tier of this particular SKU.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<SkuTier> tier;
 
     public Output<SkuTier> getTier() {

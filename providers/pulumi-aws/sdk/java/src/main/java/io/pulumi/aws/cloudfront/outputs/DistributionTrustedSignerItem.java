@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionTrustedSignerItem {
     /**
      * AWS account ID or `self`
@@ -23,10 +23,10 @@ public final class DistributionTrustedSignerItem {
      */
     private final @Nullable List<String> keyPairIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionTrustedSignerItem(
-        @OutputCustomType.Parameter("awsAccountNumber") @Nullable String awsAccountNumber,
-        @OutputCustomType.Parameter("keyPairIds") @Nullable List<String> keyPairIds) {
+        @CustomType.Parameter("awsAccountNumber") @Nullable String awsAccountNumber,
+        @CustomType.Parameter("keyPairIds") @Nullable List<String> keyPairIds) {
         this.awsAccountNumber = awsAccountNumber;
         this.keyPairIds = keyPairIds;
     }

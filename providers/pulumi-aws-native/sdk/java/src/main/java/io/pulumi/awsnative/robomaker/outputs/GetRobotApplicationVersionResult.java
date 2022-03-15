@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.robomaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRobotApplicationVersionResult {
     private final @Nullable String applicationVersion;
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRobotApplicationVersionResult(
-        @OutputCustomType.Parameter("applicationVersion") @Nullable String applicationVersion,
-        @OutputCustomType.Parameter("arn") @Nullable String arn) {
+        @CustomType.Parameter("applicationVersion") @Nullable String applicationVersion,
+        @CustomType.Parameter("arn") @Nullable String arn) {
         this.applicationVersion = applicationVersion;
         this.arn = arn;
     }

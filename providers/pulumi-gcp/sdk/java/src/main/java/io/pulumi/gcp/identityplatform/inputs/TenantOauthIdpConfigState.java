@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * The client id of an OAuth client.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -30,7 +30,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * The client secret of the OAuth client, to enable OIDC code flow.
      * 
      */
-    @InputImport(name="clientSecret")
+    @Import(name="clientSecret")
       private final @Nullable Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
@@ -41,7 +41,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * Human friendly display name.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -52,7 +52,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * If this config allows users to sign in with the provider.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -63,7 +63,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * For OIDC Idps, the issuer identifier.
      * 
      */
-    @InputImport(name="issuer")
+    @Import(name="issuer")
       private final @Nullable Output<String> issuer;
 
     public Output<String> getIssuer() {
@@ -74,7 +74,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * The name of the OauthIdpConfig. Must start with `oidc.`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -86,7 +86,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -97,7 +97,7 @@ public final class TenantOauthIdpConfigState extends io.pulumi.resources.Resourc
      * The name of the tenant where this OIDC IDP configuration resource exists
      * 
      */
-    @InputImport(name="tenant")
+    @Import(name="tenant")
       private final @Nullable Output<String> tenant;
 
     public Output<String> getTenant() {

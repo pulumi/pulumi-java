@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MaterializedViewDefinitionResponse {
     /**
      * [Optional] [TrustedTester] Enable automatic refresh of the materialized view when the base table is updated. The default value is "true".
@@ -31,12 +31,12 @@ public final class MaterializedViewDefinitionResponse {
      */
     private final String refreshIntervalMs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MaterializedViewDefinitionResponse(
-        @OutputCustomType.Parameter("enableRefresh") Boolean enableRefresh,
-        @OutputCustomType.Parameter("lastRefreshTime") String lastRefreshTime,
-        @OutputCustomType.Parameter("query") String query,
-        @OutputCustomType.Parameter("refreshIntervalMs") String refreshIntervalMs) {
+        @CustomType.Parameter("enableRefresh") Boolean enableRefresh,
+        @CustomType.Parameter("lastRefreshTime") String lastRefreshTime,
+        @CustomType.Parameter("query") String query,
+        @CustomType.Parameter("refreshIntervalMs") String refreshIntervalMs) {
         this.enableRefresh = enableRefresh;
         this.lastRefreshTime = lastRefreshTime;
         this.query = query;

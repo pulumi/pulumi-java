@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBackupPolicyResult {
     /**
      * The backup policy creation type. Indicates whether this was created through SaaS or through StorSimple Snapshot Manager.
@@ -69,19 +69,19 @@ public final class GetBackupPolicyResult {
      */
     private final List<String> volumeIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackupPolicyResult(
-        @OutputCustomType.Parameter("backupPolicyCreationType") String backupPolicyCreationType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("lastBackupTime") String lastBackupTime,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nextBackupTime") String nextBackupTime,
-        @OutputCustomType.Parameter("scheduledBackupStatus") String scheduledBackupStatus,
-        @OutputCustomType.Parameter("schedulesCount") Double schedulesCount,
-        @OutputCustomType.Parameter("ssmHostName") String ssmHostName,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("volumeIds") List<String> volumeIds) {
+        @CustomType.Parameter("backupPolicyCreationType") String backupPolicyCreationType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("lastBackupTime") String lastBackupTime,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nextBackupTime") String nextBackupTime,
+        @CustomType.Parameter("scheduledBackupStatus") String scheduledBackupStatus,
+        @CustomType.Parameter("schedulesCount") Double schedulesCount,
+        @CustomType.Parameter("ssmHostName") String ssmHostName,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("volumeIds") List<String> volumeIds) {
         this.backupPolicyCreationType = backupPolicyCreationType;
         this.id = id;
         this.kind = kind;

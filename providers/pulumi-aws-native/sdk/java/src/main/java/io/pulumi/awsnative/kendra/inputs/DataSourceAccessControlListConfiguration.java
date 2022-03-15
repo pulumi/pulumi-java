@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,7 +14,7 @@ public final class DataSourceAccessControlListConfiguration extends io.pulumi.re
 
     public static final DataSourceAccessControlListConfiguration Empty = new DataSourceAccessControlListConfiguration();
 
-    @InputImport(name="keyPath")
+    @Import(name="keyPath")
       private final @Nullable String keyPath;
 
     public Optional<String> getKeyPath() {

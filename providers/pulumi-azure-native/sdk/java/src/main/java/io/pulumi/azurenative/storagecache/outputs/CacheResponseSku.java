@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CacheResponseSku {
     /**
      * SKU name for this Cache.
@@ -17,8 +17,8 @@ public final class CacheResponseSku {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
-    private CacheResponseSku(@OutputCustomType.Parameter("name") @Nullable String name) {
+    @CustomType.Constructor
+    private CacheResponseSku(@CustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeExtensionOptionsResponseResourceCreationBegin;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class ResourceTypeRegistrationPropertiesResponseExtensionOptions ex
 
     public static final ResourceTypeRegistrationPropertiesResponseExtensionOptions Empty = new ResourceTypeRegistrationPropertiesResponseExtensionOptions();
 
-    @InputImport(name="resourceCreationBegin")
+    @Import(name="resourceCreationBegin")
       private final @Nullable ResourceTypeExtensionOptionsResponseResourceCreationBegin resourceCreationBegin;
 
     public Optional<ResourceTypeExtensionOptionsResponseResourceCreationBegin> getResourceCreationBegin() {

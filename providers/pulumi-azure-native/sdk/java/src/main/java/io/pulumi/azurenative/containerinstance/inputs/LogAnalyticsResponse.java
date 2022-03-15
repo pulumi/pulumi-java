@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LogAnalyticsResponse extends io.pulumi.resources.InvokeArgs {
      * The log type to be used.
      * 
      */
-    @InputImport(name="logType")
+    @Import(name="logType")
       private final @Nullable String logType;
 
     public Optional<String> getLogType() {
@@ -34,7 +34,7 @@ public final class LogAnalyticsResponse extends io.pulumi.resources.InvokeArgs {
      * Metadata for log analytics.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
@@ -45,7 +45,7 @@ public final class LogAnalyticsResponse extends io.pulumi.resources.InvokeArgs {
      * The workspace id for log analytics
      * 
      */
-    @InputImport(name="workspaceId", required=true)
+    @Import(name="workspaceId", required=true)
       private final String workspaceId;
 
     public String getWorkspaceId() {
@@ -56,7 +56,7 @@ public final class LogAnalyticsResponse extends io.pulumi.resources.InvokeArgs {
      * The workspace key for log analytics
      * 
      */
-    @InputImport(name="workspaceKey", required=true)
+    @Import(name="workspaceKey", required=true)
       private final String workspaceKey;
 
     public String getWorkspaceKey() {
@@ -67,7 +67,7 @@ public final class LogAnalyticsResponse extends io.pulumi.resources.InvokeArgs {
      * The workspace resource id for log analytics
      * 
      */
-    @InputImport(name="workspaceResourceId")
+    @Import(name="workspaceResourceId")
       private final @Nullable Map<String,String> workspaceResourceId;
 
     public Map<String,String> getWorkspaceResourceId() {

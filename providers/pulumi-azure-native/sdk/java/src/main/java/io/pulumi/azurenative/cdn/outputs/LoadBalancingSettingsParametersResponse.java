@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LoadBalancingSettingsParametersResponse {
     /**
      * The additional latency in milliseconds for probes to fall into the lowest latency bucket
@@ -27,11 +27,11 @@ public final class LoadBalancingSettingsParametersResponse {
      */
     private final @Nullable Integer successfulSamplesRequired;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LoadBalancingSettingsParametersResponse(
-        @OutputCustomType.Parameter("additionalLatencyInMilliseconds") @Nullable Integer additionalLatencyInMilliseconds,
-        @OutputCustomType.Parameter("sampleSize") @Nullable Integer sampleSize,
-        @OutputCustomType.Parameter("successfulSamplesRequired") @Nullable Integer successfulSamplesRequired) {
+        @CustomType.Parameter("additionalLatencyInMilliseconds") @Nullable Integer additionalLatencyInMilliseconds,
+        @CustomType.Parameter("sampleSize") @Nullable Integer sampleSize,
+        @CustomType.Parameter("successfulSamplesRequired") @Nullable Integer successfulSamplesRequired) {
         this.additionalLatencyInMilliseconds = additionalLatencyInMilliseconds;
         this.sampleSize = sampleSize;
         this.successfulSamplesRequired = successfulSamplesRequired;

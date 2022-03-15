@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.cloudscheduler.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobHttpTargetOauthToken {
     /**
      * OAuth scope to be used for generating OAuth access token. If not specified,
@@ -24,10 +24,10 @@ public final class JobHttpTargetOauthToken {
      */
     private final String serviceAccountEmail;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobHttpTargetOauthToken(
-        @OutputCustomType.Parameter("scope") @Nullable String scope,
-        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail) {
+        @CustomType.Parameter("scope") @Nullable String scope,
+        @CustomType.Parameter("serviceAccountEmail") String serviceAccountEmail) {
         this.scope = scope;
         this.serviceAccountEmail = serviceAccountEmail;
     }

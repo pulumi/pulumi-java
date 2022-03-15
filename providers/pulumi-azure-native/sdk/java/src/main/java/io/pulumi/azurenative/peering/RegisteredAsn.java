@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.peering.RegisteredAsnArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class RegisteredAsn extends io.pulumi.resources.CustomResource {
      * The customer's ASN from which traffic originates.
      * 
      */
-    @OutputExport(name="asn", type=Integer.class, parameters={})
+    @Export(name="asn", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> asn;
 
     /**
@@ -49,7 +49,7 @@ public class RegisteredAsn extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class RegisteredAsn extends io.pulumi.resources.CustomResource {
      * The peering service prefix key that is to be shared with the customer.
      * 
      */
-    @OutputExport(name="peeringServicePrefixKey", type=String.class, parameters={})
+    @Export(name="peeringServicePrefixKey", type=String.class, parameters={})
     private Output<String> peeringServicePrefixKey;
 
     /**
@@ -77,7 +77,7 @@ public class RegisteredAsn extends io.pulumi.resources.CustomResource {
      * The provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -91,7 +91,7 @@ public class RegisteredAsn extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

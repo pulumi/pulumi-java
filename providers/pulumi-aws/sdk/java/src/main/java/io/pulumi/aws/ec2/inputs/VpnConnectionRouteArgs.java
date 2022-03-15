@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
      * The CIDR block associated with the local subnet of the customer data center.
      * 
      */
-    @InputImport(name="destinationCidrBlock")
+    @Import(name="destinationCidrBlock")
       private final @Nullable Output<String> destinationCidrBlock;
 
     public Output<String> getDestinationCidrBlock() {
@@ -29,7 +29,7 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
      * Indicates how the routes were provided.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
@@ -40,7 +40,7 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
      * The current state of the static route.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {

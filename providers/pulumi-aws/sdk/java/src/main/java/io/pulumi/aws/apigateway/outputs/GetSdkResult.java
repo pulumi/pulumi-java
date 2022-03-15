@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSdkResult {
     /**
      * The SDK as a string.
@@ -36,16 +36,16 @@ public final class GetSdkResult {
     private final String sdkType;
     private final String stageName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSdkResult(
-        @OutputCustomType.Parameter("body") String body,
-        @OutputCustomType.Parameter("contentDisposition") String contentDisposition,
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
-        @OutputCustomType.Parameter("restApiId") String restApiId,
-        @OutputCustomType.Parameter("sdkType") String sdkType,
-        @OutputCustomType.Parameter("stageName") String stageName) {
+        @CustomType.Parameter("body") String body,
+        @CustomType.Parameter("contentDisposition") String contentDisposition,
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @CustomType.Parameter("restApiId") String restApiId,
+        @CustomType.Parameter("sdkType") String sdkType,
+        @CustomType.Parameter("stageName") String stageName) {
         this.body = body;
         this.contentDisposition = contentDisposition;
         this.contentType = contentType;

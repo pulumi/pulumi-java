@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.cloudhsmv2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
      * The id of Cloud HSM v2 cluster.
      * 
      */
-    @InputImport(name="clusterId", required=true)
+    @Import(name="clusterId", required=true)
       private final String clusterId;
 
     public String getClusterId() {
@@ -29,7 +29,7 @@ public final class GetClusterArgs extends io.pulumi.resources.InvokeArgs {
      * The state of the cluster to be found.
      * 
      */
-    @InputImport(name="clusterState")
+    @Import(name="clusterState")
       private final @Nullable String clusterState;
 
     public Optional<String> getClusterState() {

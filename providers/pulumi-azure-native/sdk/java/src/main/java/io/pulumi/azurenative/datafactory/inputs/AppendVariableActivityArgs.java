@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
      * Activity depends on condition.
      * 
      */
-    @InputImport(name="dependsOn")
+    @Import(name="dependsOn")
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
@@ -37,7 +37,7 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
      * Activity description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -48,7 +48,7 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
      * Activity name.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -60,7 +60,7 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
      * Expected value is 'AppendVariable'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {
@@ -71,7 +71,7 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
      * Activity user properties.
      * 
      */
-    @InputImport(name="userProperties")
+    @Import(name="userProperties")
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {
@@ -82,7 +82,7 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
      * Value to be appended. Could be a static value or Expression
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<Object> value;
 
     public Output<Object> getValue() {
@@ -93,7 +93,7 @@ public final class AppendVariableActivityArgs extends io.pulumi.resources.Resour
      * Name of the variable whose value needs to be appended to.
      * 
      */
-    @InputImport(name="variableName")
+    @Import(name="variableName")
       private final @Nullable Output<String> variableName;
 
     public Output<String> getVariableName() {

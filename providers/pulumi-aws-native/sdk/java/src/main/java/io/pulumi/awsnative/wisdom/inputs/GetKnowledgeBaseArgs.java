@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wisdom.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetKnowledgeBaseArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetKnowledgeBaseArgs Empty = new GetKnowledgeBaseArgs();
 
-    @InputImport(name="knowledgeBaseId", required=true)
+    @Import(name="knowledgeBaseId", required=true)
       private final String knowledgeBaseId;
 
     public String getKnowledgeBaseId() {

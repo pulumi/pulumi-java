@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
      * Id of the Active Directory
      * 
      */
-    @InputImport(name="activeDirectoryId")
+    @Import(name="activeDirectoryId")
       private final @Nullable String activeDirectoryId;
 
     public Optional<String> getActiveDirectoryId() {
@@ -35,7 +35,7 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
      * Name of the active directory machine. This optional parameter is used only while creating kerberos volume
      * 
      */
-    @InputImport(name="adName")
+    @Import(name="adName")
       private final @Nullable String adName;
 
     public Optional<String> getAdName() {
@@ -46,7 +46,7 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
      * If enabled, AES encryption will be enabled for SMB communication.
      * 
      */
-    @InputImport(name="aesEncryption")
+    @Import(name="aesEncryption")
       private final @Nullable Boolean aesEncryption;
 
     public Optional<Boolean> getAesEncryption() {
@@ -57,7 +57,7 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
      *  If enabled, NFS client local users can also (in addition to LDAP users) access the NFS volumes.
      * 
      */
-    @InputImport(name="allowLocalNfsUsersWithLdap")
+    @Import(name="allowLocalNfsUsersWithLdap")
       private final @Nullable Boolean allowLocalNfsUsersWithLdap;
 
     public Optional<Boolean> getAllowLocalNfsUsersWithLdap() {
@@ -68,7 +68,7 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
      * Users to be added to the Built-in Backup Operator active directory group. A list of unique usernames without domain specifier
      * 
      */
-    @InputImport(name="backupOperators")
+    @Import(name="backupOperators")
       private final @Nullable List<String> backupOperators;
 
     public List<String> getBackupOperators() {
@@ -79,7 +79,7 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
      * Comma separated list of DNS server IP addresses (IPv4 only) for the Active Directory domain
      * 
      */
-    @InputImport(name="dns")
+    @Import(name="dns")
       private final @Nullable String dns;
 
     public Optional<String> getDns() {
@@ -90,7 +90,7 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
      * Name of the Active Directory domain
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable String domain;
 
     public Optional<String> getDomain() {
@@ -101,7 +101,7 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
      * kdc server IP addresses for the active directory machine. This optional parameter is used only while creating kerberos volume.
      * 
      */
-    @InputImport(name="kdcIP")
+    @Import(name="kdcIP")
       private final @Nullable String kdcIP;
 
     public Optional<String> getKdcIP() {
@@ -112,7 +112,7 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
      * Specifies whether or not the LDAP traffic needs to be secured via TLS.
      * 
      */
-    @InputImport(name="ldapOverTLS")
+    @Import(name="ldapOverTLS")
       private final @Nullable Boolean ldapOverTLS;
 
     public Optional<Boolean> getLdapOverTLS() {
@@ -123,7 +123,7 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
      * Specifies whether or not the LDAP traffic needs to be signed.
      * 
      */
-    @InputImport(name="ldapSigning")
+    @Import(name="ldapSigning")
       private final @Nullable Boolean ldapSigning;
 
     public Optional<Boolean> getLdapSigning() {
@@ -134,7 +134,7 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
      * The Organizational Unit (OU) within the Windows Active Directory
      * 
      */
-    @InputImport(name="organizationalUnit")
+    @Import(name="organizationalUnit")
       private final @Nullable String organizationalUnit;
 
     public Optional<String> getOrganizationalUnit() {
@@ -145,7 +145,7 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
      * Plain text password of Active Directory domain administrator, value is masked in the response
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable String password;
 
     public Optional<String> getPassword() {
@@ -156,7 +156,7 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
      * Domain Users in the Active directory to be given SeSecurityPrivilege privilege (Needed for SMB Continuously available shares for SQL). A list of unique usernames without domain specifier
      * 
      */
-    @InputImport(name="securityOperators")
+    @Import(name="securityOperators")
       private final @Nullable List<String> securityOperators;
 
     public List<String> getSecurityOperators() {
@@ -167,7 +167,7 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
      * When LDAP over SSL/TLS is enabled, the LDAP client is required to have base64 encoded Active Directory Certificate Service's self-signed root CA certificate, this optional parameter is used only for dual protocol with LDAP user-mapping volumes.
      * 
      */
-    @InputImport(name="serverRootCACertificate")
+    @Import(name="serverRootCACertificate")
       private final @Nullable String serverRootCACertificate;
 
     public Optional<String> getServerRootCACertificate() {
@@ -178,7 +178,7 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
      * The Active Directory site the service will limit Domain Controller discovery to
      * 
      */
-    @InputImport(name="site")
+    @Import(name="site")
       private final @Nullable String site;
 
     public Optional<String> getSite() {
@@ -189,7 +189,7 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
      * NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes
      * 
      */
-    @InputImport(name="smbServerName")
+    @Import(name="smbServerName")
       private final @Nullable String smbServerName;
 
     public Optional<String> getSmbServerName() {
@@ -200,7 +200,7 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
      * Status of the Active Directory
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -211,7 +211,7 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
      * Any details in regards to the Status of the Active Directory
      * 
      */
-    @InputImport(name="statusDetails", required=true)
+    @Import(name="statusDetails", required=true)
       private final String statusDetails;
 
     public String getStatusDetails() {
@@ -222,7 +222,7 @@ public final class ActiveDirectoryResponse extends io.pulumi.resources.InvokeArg
      * Username of Active Directory domain administrator
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable String username;
 
     public Optional<String> getUsername() {

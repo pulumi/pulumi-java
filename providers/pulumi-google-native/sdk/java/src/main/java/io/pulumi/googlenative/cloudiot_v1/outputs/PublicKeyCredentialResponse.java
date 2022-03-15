@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudiot_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PublicKeyCredentialResponse {
     /**
      * The format of the key.
@@ -20,10 +20,10 @@ public final class PublicKeyCredentialResponse {
      */
     private final String key;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PublicKeyCredentialResponse(
-        @OutputCustomType.Parameter("format") String format,
-        @OutputCustomType.Parameter("key") String key) {
+        @CustomType.Parameter("format") String format,
+        @CustomType.Parameter("key") String key) {
         this.format = format;
         this.key = key;
     }

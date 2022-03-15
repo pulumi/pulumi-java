@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DependsOnDefinitionResponse {
     /**
      * Name of the kustomization to claim dependency on
@@ -17,8 +17,8 @@ public final class DependsOnDefinitionResponse {
      */
     private final @Nullable String kustomizationName;
 
-    @OutputCustomType.Constructor
-    private DependsOnDefinitionResponse(@OutputCustomType.Parameter("kustomizationName") @Nullable String kustomizationName) {
+    @CustomType.Constructor
+    private DependsOnDefinitionResponse(@CustomType.Parameter("kustomizationName") @Nullable String kustomizationName) {
         this.kustomizationName = kustomizationName;
     }
 

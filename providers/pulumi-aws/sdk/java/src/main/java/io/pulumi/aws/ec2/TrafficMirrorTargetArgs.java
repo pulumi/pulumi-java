@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TrafficMirrorTargetArgs extends io.pulumi.resources.ResourceA
      * A description of the traffic mirror session.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class TrafficMirrorTargetArgs extends io.pulumi.resources.ResourceA
      * The network interface ID that is associated with the target.
      * 
      */
-    @InputImport(name="networkInterfaceId")
+    @Import(name="networkInterfaceId")
       private final @Nullable Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {
@@ -41,7 +41,7 @@ public final class TrafficMirrorTargetArgs extends io.pulumi.resources.ResourceA
      * The Amazon Resource Name (ARN) of the Network Load Balancer that is associated with the target.
      * 
      */
-    @InputImport(name="networkLoadBalancerArn")
+    @Import(name="networkLoadBalancerArn")
       private final @Nullable Output<String> networkLoadBalancerArn;
 
     public Output<String> getNetworkLoadBalancerArn() {
@@ -52,7 +52,7 @@ public final class TrafficMirrorTargetArgs extends io.pulumi.resources.ResourceA
      * Key-value map of resource tags. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

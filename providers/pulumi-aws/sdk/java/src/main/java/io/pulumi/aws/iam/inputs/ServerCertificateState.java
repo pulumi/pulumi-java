@@ -4,7 +4,7 @@
 package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * The Amazon Resource Name (ARN) specifying the server certificate.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -31,7 +31,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * PEM-encoded format.
      * 
      */
-    @InputImport(name="certificateBody")
+    @Import(name="certificateBody")
       private final @Nullable Output<String> certificateBody;
 
     public Output<String> getCertificateBody() {
@@ -44,7 +44,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * of the chain.
      * 
      */
-    @InputImport(name="certificateChain")
+    @Import(name="certificateChain")
       private final @Nullable Output<String> certificateChain;
 
     public Output<String> getCertificateChain() {
@@ -55,7 +55,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) on which the certificate is set to expire.
      * 
      */
-    @InputImport(name="expiration")
+    @Import(name="expiration")
       private final @Nullable Output<String> expiration;
 
     public Output<String> getExpiration() {
@@ -67,7 +67,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * path in this value. If omitted, this provider will assign a random, unique name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -79,7 +79,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -93,7 +93,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * See [IAM Identifiers](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_Identifiers.html) for more details on IAM Paths.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -104,7 +104,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * The contents of the private key in PEM-encoded format.
      * 
      */
-    @InputImport(name="privateKey")
+    @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
     public Output<String> getPrivateKey() {
@@ -115,7 +115,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * Map of resource tags for the server certificate. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -126,7 +126,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -137,7 +137,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
      * Date and time in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) when the server certificate was uploaded.
      * 
      */
-    @InputImport(name="uploadDate")
+    @Import(name="uploadDate")
       private final @Nullable Output<String> uploadDate;
 
     public Output<String> getUploadDate() {

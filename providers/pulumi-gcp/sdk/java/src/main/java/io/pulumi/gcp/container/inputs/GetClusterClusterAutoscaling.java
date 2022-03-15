@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.GetClusterClusterAutoscalingAutoProvisioningDefault;
 import io.pulumi.gcp.container.inputs.GetClusterClusterAutoscalingResourceLimit;
 import java.lang.Boolean;
@@ -16,28 +16,28 @@ public final class GetClusterClusterAutoscaling extends io.pulumi.resources.Invo
 
     public static final GetClusterClusterAutoscaling Empty = new GetClusterClusterAutoscaling();
 
-    @InputImport(name="autoProvisioningDefaults", required=true)
+    @Import(name="autoProvisioningDefaults", required=true)
       private final List<GetClusterClusterAutoscalingAutoProvisioningDefault> autoProvisioningDefaults;
 
     public List<GetClusterClusterAutoscalingAutoProvisioningDefault> getAutoProvisioningDefaults() {
         return this.autoProvisioningDefaults;
     }
 
-    @InputImport(name="autoscalingProfile", required=true)
+    @Import(name="autoscalingProfile", required=true)
       private final String autoscalingProfile;
 
     public String getAutoscalingProfile() {
         return this.autoscalingProfile;
     }
 
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
     }
 
-    @InputImport(name="resourceLimits", required=true)
+    @Import(name="resourceLimits", required=true)
       private final List<GetClusterClusterAutoscalingResourceLimit> resourceLimits;
 
     public List<GetClusterClusterAutoscalingResourceLimit> getResourceLimits() {

@@ -3,19 +3,19 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListNotebookKeysResult {
     private final String primaryAccessKey;
     private final String secondaryAccessKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListNotebookKeysResult(
-        @OutputCustomType.Parameter("primaryAccessKey") String primaryAccessKey,
-        @OutputCustomType.Parameter("secondaryAccessKey") String secondaryAccessKey) {
+        @CustomType.Parameter("primaryAccessKey") String primaryAccessKey,
+        @CustomType.Parameter("secondaryAccessKey") String secondaryAccessKey) {
         this.primaryAccessKey = primaryAccessKey;
         this.secondaryAccessKey = secondaryAccessKey;
     }

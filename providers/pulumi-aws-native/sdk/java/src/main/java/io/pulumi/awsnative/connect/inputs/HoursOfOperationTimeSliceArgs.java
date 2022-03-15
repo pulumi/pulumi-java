@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.connect.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class HoursOfOperationTimeSliceArgs extends io.pulumi.resources.Res
      * The hours.
      * 
      */
-    @InputImport(name="hours", required=true)
+    @Import(name="hours", required=true)
       private final Output<Integer> hours;
 
     public Output<Integer> getHours() {
@@ -32,7 +32,7 @@ public final class HoursOfOperationTimeSliceArgs extends io.pulumi.resources.Res
      * The minutes.
      * 
      */
-    @InputImport(name="minutes", required=true)
+    @Import(name="minutes", required=true)
       private final Output<Integer> minutes;
 
     public Output<Integer> getMinutes() {

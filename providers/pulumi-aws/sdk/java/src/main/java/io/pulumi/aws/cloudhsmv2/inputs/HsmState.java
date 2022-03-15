@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudhsmv2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * The IDs of AZ in which HSM module will be located. Do not use together with subnet_id.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
@@ -29,7 +29,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * The ID of Cloud HSM v2 cluster to which HSM will be added.
      * 
      */
-    @InputImport(name="clusterId")
+    @Import(name="clusterId")
       private final @Nullable Output<String> clusterId;
 
     public Output<String> getClusterId() {
@@ -40,7 +40,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * The id of the ENI interface allocated for HSM module.
      * 
      */
-    @InputImport(name="hsmEniId")
+    @Import(name="hsmEniId")
       private final @Nullable Output<String> hsmEniId;
 
     public Output<String> getHsmEniId() {
@@ -51,7 +51,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * The id of the HSM module.
      * 
      */
-    @InputImport(name="hsmId")
+    @Import(name="hsmId")
       private final @Nullable Output<String> hsmId;
 
     public Output<String> getHsmId() {
@@ -62,7 +62,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * The state of the HSM module.
      * 
      */
-    @InputImport(name="hsmState")
+    @Import(name="hsmState")
       private final @Nullable Output<String> hsmState;
 
     public Output<String> getHsmState() {
@@ -73,7 +73,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * The IP address of HSM module. Must be within the CIDR of selected subnet.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -84,7 +84,7 @@ public final class HsmState extends io.pulumi.resources.ResourceArgs {
      * The ID of subnet in which HSM module will be located.
      * 
      */
-    @InputImport(name="subnetId")
+    @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {

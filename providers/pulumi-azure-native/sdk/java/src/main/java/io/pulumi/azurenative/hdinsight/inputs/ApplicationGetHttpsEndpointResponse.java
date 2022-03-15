@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
      * The list of access modes for the application.
      * 
      */
-    @InputImport(name="accessModes")
+    @Import(name="accessModes")
       private final @Nullable List<String> accessModes;
 
     public List<String> getAccessModes() {
@@ -36,7 +36,7 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
      * The destination port to connect to.
      * 
      */
-    @InputImport(name="destinationPort")
+    @Import(name="destinationPort")
       private final @Nullable Integer destinationPort;
 
     public Optional<Integer> getDestinationPort() {
@@ -47,7 +47,7 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
      * The value indicates whether to disable GatewayAuth.
      * 
      */
-    @InputImport(name="disableGatewayAuth")
+    @Import(name="disableGatewayAuth")
       private final @Nullable Boolean disableGatewayAuth;
 
     public Optional<Boolean> getDisableGatewayAuth() {
@@ -58,7 +58,7 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
      * The location of the endpoint.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -69,7 +69,7 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
      * The private ip address of the endpoint.
      * 
      */
-    @InputImport(name="privateIPAddress")
+    @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
 
     public Optional<String> getPrivateIPAddress() {
@@ -80,7 +80,7 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
      * The public port to connect to.
      * 
      */
-    @InputImport(name="publicPort", required=true)
+    @Import(name="publicPort", required=true)
       private final Integer publicPort;
 
     public Integer getPublicPort() {
@@ -91,7 +91,7 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
      * The subdomain suffix of the application.
      * 
      */
-    @InputImport(name="subDomainSuffix")
+    @Import(name="subDomainSuffix")
       private final @Nullable String subDomainSuffix;
 
     public Optional<String> getSubDomainSuffix() {

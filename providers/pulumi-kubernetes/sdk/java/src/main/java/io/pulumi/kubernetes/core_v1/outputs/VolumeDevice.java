@@ -3,11 +3,11 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VolumeDevice {
     /**
      * devicePath is the path inside of the container that the device will be mapped to.
@@ -20,10 +20,10 @@ public final class VolumeDevice {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VolumeDevice(
-        @OutputCustomType.Parameter("devicePath") String devicePath,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("devicePath") String devicePath,
+        @CustomType.Parameter("name") String name) {
         this.devicePath = devicePath;
         this.name = name;
     }

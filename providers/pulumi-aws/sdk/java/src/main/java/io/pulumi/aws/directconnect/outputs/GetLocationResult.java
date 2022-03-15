@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.directconnect.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetLocationResult {
     /**
      * The available port speeds for the location.
@@ -32,13 +32,13 @@ public final class GetLocationResult {
      */
     private final String locationName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetLocationResult(
-        @OutputCustomType.Parameter("availablePortSpeeds") List<String> availablePortSpeeds,
-        @OutputCustomType.Parameter("availableProviders") List<String> availableProviders,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("locationCode") String locationCode,
-        @OutputCustomType.Parameter("locationName") String locationName) {
+        @CustomType.Parameter("availablePortSpeeds") List<String> availablePortSpeeds,
+        @CustomType.Parameter("availableProviders") List<String> availableProviders,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("locationCode") String locationCode,
+        @CustomType.Parameter("locationName") String locationName) {
         this.availablePortSpeeds = availablePortSpeeds;
         this.availableProviders = availableProviders;
         this.id = id;

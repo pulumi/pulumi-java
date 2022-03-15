@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationInsightsComponentAnalyticsItemPropertiesResponse {
     /**
      * A function alias, used when the type of the item is Function
@@ -17,8 +17,8 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesResponse {
      */
     private final @Nullable String functionAlias;
 
-    @OutputCustomType.Constructor
-    private ApplicationInsightsComponentAnalyticsItemPropertiesResponse(@OutputCustomType.Parameter("functionAlias") @Nullable String functionAlias) {
+    @CustomType.Constructor
+    private ApplicationInsightsComponentAnalyticsItemPropertiesResponse(@CustomType.Parameter("functionAlias") @Nullable String functionAlias) {
         this.functionAlias = functionAlias;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class MigrateProjectResponseTags extends io.pulumi.resources.Invoke
 
     public static final MigrateProjectResponseTags Empty = new MigrateProjectResponseTags();
 
-    @InputImport(name="additionalProperties")
+    @Import(name="additionalProperties")
       private final @Nullable String additionalProperties;
 
     public Optional<String> getAdditionalProperties() {

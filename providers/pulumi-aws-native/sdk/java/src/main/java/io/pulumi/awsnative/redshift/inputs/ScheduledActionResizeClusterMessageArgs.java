@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.redshift.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,35 +20,35 @@ public final class ScheduledActionResizeClusterMessageArgs extends io.pulumi.res
 
     public static final ScheduledActionResizeClusterMessageArgs Empty = new ScheduledActionResizeClusterMessageArgs();
 
-    @InputImport(name="classic")
+    @Import(name="classic")
       private final @Nullable Output<Boolean> classic;
 
     public Output<Boolean> getClassic() {
         return this.classic == null ? Output.empty() : this.classic;
     }
 
-    @InputImport(name="clusterIdentifier", required=true)
+    @Import(name="clusterIdentifier", required=true)
       private final Output<String> clusterIdentifier;
 
     public Output<String> getClusterIdentifier() {
         return this.clusterIdentifier;
     }
 
-    @InputImport(name="clusterType")
+    @Import(name="clusterType")
       private final @Nullable Output<String> clusterType;
 
     public Output<String> getClusterType() {
         return this.clusterType == null ? Output.empty() : this.clusterType;
     }
 
-    @InputImport(name="nodeType")
+    @Import(name="nodeType")
       private final @Nullable Output<String> nodeType;
 
     public Output<String> getNodeType() {
         return this.nodeType == null ? Output.empty() : this.nodeType;
     }
 
-    @InputImport(name="numberOfNodes")
+    @Import(name="numberOfNodes")
       private final @Nullable Output<Integer> numberOfNodes;
 
     public Output<Integer> getNumberOfNodes() {

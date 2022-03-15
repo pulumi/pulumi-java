@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSyncMemberArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the database on which the sync group is hosted.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final String databaseName;
 
     public String getDatabaseName() {
@@ -27,7 +27,7 @@ public final class GetSyncMemberArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetSyncMemberArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the server.
      * 
      */
-    @InputImport(name="serverName", required=true)
+    @Import(name="serverName", required=true)
       private final String serverName;
 
     public String getServerName() {
@@ -49,7 +49,7 @@ public final class GetSyncMemberArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the sync group on which the sync member is hosted.
      * 
      */
-    @InputImport(name="syncGroupName", required=true)
+    @Import(name="syncGroupName", required=true)
       private final String syncGroupName;
 
     public String getSyncGroupName() {
@@ -60,7 +60,7 @@ public final class GetSyncMemberArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the sync member.
      * 
      */
-    @InputImport(name="syncMemberName", required=true)
+    @Import(name="syncMemberName", required=true)
       private final String syncMemberName;
 
     public String getSyncMemberName() {

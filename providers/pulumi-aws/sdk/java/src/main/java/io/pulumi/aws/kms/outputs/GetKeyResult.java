@@ -4,14 +4,14 @@
 package io.pulumi.aws.kms.outputs;
 
 import io.pulumi.aws.kms.outputs.GetKeyMultiRegionConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetKeyResult {
     private final String arn;
     private final String awsAccountId;
@@ -36,26 +36,26 @@ public final class GetKeyResult {
     private final String origin;
     private final String validTo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKeyResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("awsAccountId") String awsAccountId,
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("customerMasterKeySpec") String customerMasterKeySpec,
-        @OutputCustomType.Parameter("deletionDate") String deletionDate,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("expirationModel") String expirationModel,
-        @OutputCustomType.Parameter("grantTokens") @Nullable List<String> grantTokens,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("keyId") String keyId,
-        @OutputCustomType.Parameter("keyManager") String keyManager,
-        @OutputCustomType.Parameter("keyState") String keyState,
-        @OutputCustomType.Parameter("keyUsage") String keyUsage,
-        @OutputCustomType.Parameter("multiRegion") Boolean multiRegion,
-        @OutputCustomType.Parameter("multiRegionConfigurations") List<GetKeyMultiRegionConfiguration> multiRegionConfigurations,
-        @OutputCustomType.Parameter("origin") String origin,
-        @OutputCustomType.Parameter("validTo") String validTo) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("awsAccountId") String awsAccountId,
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("customerMasterKeySpec") String customerMasterKeySpec,
+        @CustomType.Parameter("deletionDate") String deletionDate,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("expirationModel") String expirationModel,
+        @CustomType.Parameter("grantTokens") @Nullable List<String> grantTokens,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("keyId") String keyId,
+        @CustomType.Parameter("keyManager") String keyManager,
+        @CustomType.Parameter("keyState") String keyState,
+        @CustomType.Parameter("keyUsage") String keyUsage,
+        @CustomType.Parameter("multiRegion") Boolean multiRegion,
+        @CustomType.Parameter("multiRegionConfigurations") List<GetKeyMultiRegionConfiguration> multiRegionConfigurations,
+        @CustomType.Parameter("origin") String origin,
+        @CustomType.Parameter("validTo") String validTo) {
         this.arn = arn;
         this.awsAccountId = awsAccountId;
         this.creationDate = creationDate;

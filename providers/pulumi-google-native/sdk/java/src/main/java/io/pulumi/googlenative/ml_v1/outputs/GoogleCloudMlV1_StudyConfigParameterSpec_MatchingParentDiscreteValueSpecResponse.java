@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse {
     /**
      * Matches values of the parent parameter with type 'DISCRETE'. All values must exist in `discrete_value_spec` of parent parameter.
@@ -16,8 +16,8 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscre
      */
     private final List<Double> values;
 
-    @OutputCustomType.Constructor
-    private GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse(@OutputCustomType.Parameter("values") List<Double> values) {
+    @CustomType.Constructor
+    private GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse(@CustomType.Parameter("values") List<Double> values) {
         this.values = values;
     }
 

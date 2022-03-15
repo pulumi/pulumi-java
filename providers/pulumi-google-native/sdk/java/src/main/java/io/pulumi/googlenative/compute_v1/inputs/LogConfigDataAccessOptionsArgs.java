@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.enums.LogConfigDataAccessOptionsLogMode;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class LogConfigDataAccessOptionsArgs extends io.pulumi.resources.Re
      * This is deprecated and has no effect. Do not use.
      * 
      */
-    @InputImport(name="logMode")
+    @Import(name="logMode")
       private final @Nullable Output<LogConfigDataAccessOptionsLogMode> logMode;
 
     public Output<LogConfigDataAccessOptionsLogMode> getLogMode() {

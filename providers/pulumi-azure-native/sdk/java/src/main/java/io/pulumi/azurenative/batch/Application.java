@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.batch.ApplicationArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * A value indicating whether packages within the application may be overwritten using the same version string.
      * 
      */
-    @OutputExport(name="allowUpdates", type=Boolean.class, parameters={})
+    @Export(name="allowUpdates", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> allowUpdates;
 
     /**
@@ -49,7 +49,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The package to use if a client requests the application but does not specify a version. This property can only be set to the name of an existing package.
      * 
      */
-    @OutputExport(name="defaultVersion", type=String.class, parameters={})
+    @Export(name="defaultVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultVersion;
 
     /**
@@ -63,7 +63,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The display name for the application.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -77,7 +77,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The ETag of the resource, used for concurrency statements.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -91,7 +91,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class Application extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

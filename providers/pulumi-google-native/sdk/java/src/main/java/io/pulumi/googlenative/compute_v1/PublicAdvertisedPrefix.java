@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.PublicAdvertisedPrefixArgs;
@@ -23,7 +23,7 @@ public class PublicAdvertisedPrefix extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -37,7 +37,7 @@ public class PublicAdvertisedPrefix extends io.pulumi.resources.CustomResource {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -51,7 +51,7 @@ public class PublicAdvertisedPrefix extends io.pulumi.resources.CustomResource {
      * The IPv4 address to be used for reverse DNS verification.
      * 
      */
-    @OutputExport(name="dnsVerificationIp", type=String.class, parameters={})
+    @Export(name="dnsVerificationIp", type=String.class, parameters={})
     private Output<String> dnsVerificationIp;
 
     /**
@@ -65,7 +65,7 @@ public class PublicAdvertisedPrefix extends io.pulumi.resources.CustomResource {
      * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a new PublicAdvertisedPrefix. An up-to-date fingerprint must be provided in order to update the PublicAdvertisedPrefix, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve a PublicAdvertisedPrefix.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -79,7 +79,7 @@ public class PublicAdvertisedPrefix extends io.pulumi.resources.CustomResource {
      * The IPv4 address range, in CIDR format, represented by this public advertised prefix.
      * 
      */
-    @OutputExport(name="ipCidrRange", type=String.class, parameters={})
+    @Export(name="ipCidrRange", type=String.class, parameters={})
     private Output<String> ipCidrRange;
 
     /**
@@ -93,7 +93,7 @@ public class PublicAdvertisedPrefix extends io.pulumi.resources.CustomResource {
      * Type of the resource. Always compute#publicAdvertisedPrefix for public advertised prefixes.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -107,7 +107,7 @@ public class PublicAdvertisedPrefix extends io.pulumi.resources.CustomResource {
      * Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class PublicAdvertisedPrefix extends io.pulumi.resources.CustomResource {
      * The list of public delegated prefixes that exist for this public advertised prefix.
      * 
      */
-    @OutputExport(name="publicDelegatedPrefixs", type=List.class, parameters={PublicAdvertisedPrefixPublicDelegatedPrefixResponse.class})
+    @Export(name="publicDelegatedPrefixs", type=List.class, parameters={PublicAdvertisedPrefixPublicDelegatedPrefixResponse.class})
     private Output<List<PublicAdvertisedPrefixPublicDelegatedPrefixResponse>> publicDelegatedPrefixs;
 
     /**
@@ -135,7 +135,7 @@ public class PublicAdvertisedPrefix extends io.pulumi.resources.CustomResource {
      * Server-defined URL for the resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -149,7 +149,7 @@ public class PublicAdvertisedPrefix extends io.pulumi.resources.CustomResource {
      * The shared secret to be used for reverse DNS verification.
      * 
      */
-    @OutputExport(name="sharedSecret", type=String.class, parameters={})
+    @Export(name="sharedSecret", type=String.class, parameters={})
     private Output<String> sharedSecret;
 
     /**
@@ -163,7 +163,7 @@ public class PublicAdvertisedPrefix extends io.pulumi.resources.CustomResource {
      * The status of the public advertised prefix. Possible values include: - `INITIAL`: RPKI validation is complete. - `PTR_CONFIGURED`: User has configured the PTR. - `VALIDATED`: Reverse DNS lookup is successful. - `REVERSE_DNS_LOOKUP_FAILED`: Reverse DNS lookup failed. - `PREFIX_CONFIGURATION_IN_PROGRESS`: The prefix is being configured. - `PREFIX_CONFIGURATION_COMPLETE`: The prefix is fully configured. - `PREFIX_REMOVAL_IN_PROGRESS`: The prefix is being removed.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**

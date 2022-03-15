@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs.RuleWithOperationsArgs;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs.WebhookClientConfigArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
@@ -27,7 +27,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * AdmissionReviewVersions is an ordered list of preferred `AdmissionReview` versions the Webhook expects. API server will try to use first version in the list which it supports. If none of the versions specified in this list supported by API server, validation will fail for this object. If a persisted webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail and be subject to the failure policy.
      * 
      */
-    @InputImport(name="admissionReviewVersions", required=true)
+    @Import(name="admissionReviewVersions", required=true)
       private final Output<List<String>> admissionReviewVersions;
 
     public Output<List<String>> getAdmissionReviewVersions() {
@@ -38,7 +38,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * ClientConfig defines how to communicate with the hook. Required
      * 
      */
-    @InputImport(name="clientConfig", required=true)
+    @Import(name="clientConfig", required=true)
       private final Output<WebhookClientConfigArgs> clientConfig;
 
     public Output<WebhookClientConfigArgs> getClientConfig() {
@@ -49,7 +49,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * FailurePolicy defines how unrecognized errors from the admission endpoint are handled - allowed values are Ignore or Fail. Defaults to Fail.
      * 
      */
-    @InputImport(name="failurePolicy")
+    @Import(name="failurePolicy")
       private final @Nullable Output<String> failurePolicy;
 
     public Output<String> getFailurePolicy() {
@@ -66,7 +66,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * Defaults to "Equivalent"
      * 
      */
-    @InputImport(name="matchPolicy")
+    @Import(name="matchPolicy")
       private final @Nullable Output<String> matchPolicy;
 
     public Output<String> getMatchPolicy() {
@@ -77,7 +77,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * The name of the admission webhook. Name should be fully qualified, e.g., imagepolicy.kubernetes.io, where "imagepolicy" is the name of the webhook, and kubernetes.io is the name of the organization. Required.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -118,7 +118,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * Default to the empty LabelSelector, which matches everything.
      * 
      */
-    @InputImport(name="namespaceSelector")
+    @Import(name="namespaceSelector")
       private final @Nullable Output<LabelSelectorArgs> namespaceSelector;
 
     public Output<LabelSelectorArgs> getNamespaceSelector() {
@@ -129,7 +129,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * ObjectSelector decides whether to run the webhook based on if the object has matching labels. objectSelector is evaluated against both the oldObject and newObject that would be sent to the webhook, and is considered to match if either object matches the selector. A null object (oldObject in the case of create, or newObject in the case of delete) or an object that cannot have labels (like a DeploymentRollback or a PodProxyOptions object) is not considered to match. Use the object selector only if the webhook is opt-in, because end users may skip the admission webhook by setting the labels. Default to the empty LabelSelector, which matches everything.
      * 
      */
-    @InputImport(name="objectSelector")
+    @Import(name="objectSelector")
       private final @Nullable Output<LabelSelectorArgs> objectSelector;
 
     public Output<LabelSelectorArgs> getObjectSelector() {
@@ -140,7 +140,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * Rules describes what operations on what resources/subresources the webhook cares about. The webhook cares about an operation if it matches _any_ Rule. However, in order to prevent ValidatingAdmissionWebhooks and MutatingAdmissionWebhooks from putting the cluster in a state which cannot be recovered from without completely disabling the plugin, ValidatingAdmissionWebhooks and MutatingAdmissionWebhooks are never called on admission requests for ValidatingWebhookConfiguration and MutatingWebhookConfiguration objects.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<RuleWithOperationsArgs>> rules;
 
     public Output<List<RuleWithOperationsArgs>> getRules() {
@@ -151,7 +151,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * SideEffects states whether this webhook has side effects. Acceptable values are: None, NoneOnDryRun (webhooks created via v1beta1 may also specify Some or Unknown). Webhooks with side effects MUST implement a reconciliation system, since a request may be rejected by a future step in the admission chain and the side effects therefore need to be undone. Requests with the dryRun attribute will be auto-rejected if they match a webhook with sideEffects == Unknown or Some.
      * 
      */
-    @InputImport(name="sideEffects", required=true)
+    @Import(name="sideEffects", required=true)
       private final Output<String> sideEffects;
 
     public Output<String> getSideEffects() {
@@ -162,7 +162,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * TimeoutSeconds specifies the timeout for this webhook. After the timeout passes, the webhook call will be ignored or the API call will fail based on the failure policy. The timeout value must be between 1 and 30 seconds. Default to 10 seconds.
      * 
      */
-    @InputImport(name="timeoutSeconds")
+    @Import(name="timeoutSeconds")
       private final @Nullable Output<Integer> timeoutSeconds;
 
     public Output<Integer> getTimeoutSeconds() {

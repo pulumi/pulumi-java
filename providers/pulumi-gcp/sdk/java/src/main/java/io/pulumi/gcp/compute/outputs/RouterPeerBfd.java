@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RouterPeerBfd {
     /**
      * The minimum interval, in milliseconds, between BFD control packets
@@ -48,12 +48,12 @@ public final class RouterPeerBfd {
      */
     private final String sessionInitializationMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouterPeerBfd(
-        @OutputCustomType.Parameter("minReceiveInterval") @Nullable Integer minReceiveInterval,
-        @OutputCustomType.Parameter("minTransmitInterval") @Nullable Integer minTransmitInterval,
-        @OutputCustomType.Parameter("multiplier") @Nullable Integer multiplier,
-        @OutputCustomType.Parameter("sessionInitializationMode") String sessionInitializationMode) {
+        @CustomType.Parameter("minReceiveInterval") @Nullable Integer minReceiveInterval,
+        @CustomType.Parameter("minTransmitInterval") @Nullable Integer minTransmitInterval,
+        @CustomType.Parameter("multiplier") @Nullable Integer multiplier,
+        @CustomType.Parameter("sessionInitializationMode") String sessionInitializationMode) {
         this.minReceiveInterval = minReceiveInterval;
         this.minTransmitInterval = minTransmitInterval;
         this.multiplier = multiplier;

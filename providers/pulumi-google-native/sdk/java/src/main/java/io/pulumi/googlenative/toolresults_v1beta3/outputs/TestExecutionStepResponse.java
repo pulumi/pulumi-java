@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.TestIssueResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.TestSuiteOverviewResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.TestTimingResponse;
@@ -11,7 +11,7 @@ import io.pulumi.googlenative.toolresults_v1beta3.outputs.ToolExecutionResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TestExecutionStepResponse {
     /**
      * Issues observed during the test execution. For example, if the mobile app under test crashed during the test, the error message and the stack trace content can be recorded here to assist debugging. - In response: present if set by create or update - In create/update request: optional
@@ -34,12 +34,12 @@ public final class TestExecutionStepResponse {
      */
     private final ToolExecutionResponse toolExecution;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TestExecutionStepResponse(
-        @OutputCustomType.Parameter("testIssues") List<TestIssueResponse> testIssues,
-        @OutputCustomType.Parameter("testSuiteOverviews") List<TestSuiteOverviewResponse> testSuiteOverviews,
-        @OutputCustomType.Parameter("testTiming") TestTimingResponse testTiming,
-        @OutputCustomType.Parameter("toolExecution") ToolExecutionResponse toolExecution) {
+        @CustomType.Parameter("testIssues") List<TestIssueResponse> testIssues,
+        @CustomType.Parameter("testSuiteOverviews") List<TestSuiteOverviewResponse> testSuiteOverviews,
+        @CustomType.Parameter("testTiming") TestTimingResponse testTiming,
+        @CustomType.Parameter("toolExecution") ToolExecutionResponse toolExecution) {
         this.testIssues = testIssues;
         this.testSuiteOverviews = testSuiteOverviews;
         this.testTiming = testTiming;

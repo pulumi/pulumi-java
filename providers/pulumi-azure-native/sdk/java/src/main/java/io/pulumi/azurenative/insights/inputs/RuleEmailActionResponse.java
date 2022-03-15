@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class RuleEmailActionResponse extends io.pulumi.resources.InvokeArg
      * the list of administrator's custom email addresses to notify of the activation of the alert.
      * 
      */
-    @InputImport(name="customEmails")
+    @Import(name="customEmails")
       private final @Nullable List<String> customEmails;
 
     public List<String> getCustomEmails() {
@@ -36,7 +36,7 @@ public final class RuleEmailActionResponse extends io.pulumi.resources.InvokeArg
      * Expected value is 'Microsoft.Azure.Management.Insights.Models.RuleEmailAction'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -47,7 +47,7 @@ public final class RuleEmailActionResponse extends io.pulumi.resources.InvokeArg
      * Whether the administrators (service and co-administrators) of the service should be notified when the alert is activated.
      * 
      */
-    @InputImport(name="sendToServiceOwners")
+    @Import(name="sendToServiceOwners")
       private final @Nullable Boolean sendToServiceOwners;
 
     public Optional<Boolean> getSendToServiceOwners() {

@@ -3,25 +3,25 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PublicKeyConfig {
     private final String callerReference;
     private final @Nullable String comment;
     private final String encodedKey;
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PublicKeyConfig(
-        @OutputCustomType.Parameter("callerReference") String callerReference,
-        @OutputCustomType.Parameter("comment") @Nullable String comment,
-        @OutputCustomType.Parameter("encodedKey") String encodedKey,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("callerReference") String callerReference,
+        @CustomType.Parameter("comment") @Nullable String comment,
+        @CustomType.Parameter("encodedKey") String encodedKey,
+        @CustomType.Parameter("name") String name) {
         this.callerReference = callerReference;
         this.comment = comment;
         this.encodedKey = encodedKey;

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.gameservices_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FleetConfigResponse {
     /**
      * Agones fleet spec. Example spec: `https://agones.dev/site/docs/reference/fleet/`.
@@ -20,10 +20,10 @@ public final class FleetConfigResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FleetConfigResponse(
-        @OutputCustomType.Parameter("fleetSpec") String fleetSpec,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("fleetSpec") String fleetSpec,
+        @CustomType.Parameter("name") String name) {
         this.fleetSpec = fleetSpec;
         this.name = name;
     }

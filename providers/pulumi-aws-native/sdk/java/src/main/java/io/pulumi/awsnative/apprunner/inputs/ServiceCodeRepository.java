@@ -5,7 +5,7 @@ package io.pulumi.awsnative.apprunner.inputs;
 
 import io.pulumi.awsnative.apprunner.inputs.ServiceCodeConfiguration;
 import io.pulumi.awsnative.apprunner.inputs.ServiceSourceCodeVersion;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class ServiceCodeRepository extends io.pulumi.resources.InvokeArgs 
 
     public static final ServiceCodeRepository Empty = new ServiceCodeRepository();
 
-    @InputImport(name="codeConfiguration")
+    @Import(name="codeConfiguration")
       private final @Nullable ServiceCodeConfiguration codeConfiguration;
 
     public Optional<ServiceCodeConfiguration> getCodeConfiguration() {
@@ -31,14 +31,14 @@ public final class ServiceCodeRepository extends io.pulumi.resources.InvokeArgs 
      * Repository Url
      * 
      */
-    @InputImport(name="repositoryUrl", required=true)
+    @Import(name="repositoryUrl", required=true)
       private final String repositoryUrl;
 
     public String getRepositoryUrl() {
         return this.repositoryUrl;
     }
 
-    @InputImport(name="sourceCodeVersion", required=true)
+    @Import(name="sourceCodeVersion", required=true)
       private final ServiceSourceCodeVersion sourceCodeVersion;
 
     public ServiceSourceCodeVersion getSourceCodeVersion() {

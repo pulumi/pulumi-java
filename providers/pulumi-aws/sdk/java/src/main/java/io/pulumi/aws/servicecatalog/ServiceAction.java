@@ -8,7 +8,7 @@ import io.pulumi.aws.servicecatalog.ServiceActionArgs;
 import io.pulumi.aws.servicecatalog.inputs.ServiceActionState;
 import io.pulumi.aws.servicecatalog.outputs.ServiceActionDefinition;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class ServiceAction extends io.pulumi.resources.CustomResource {
      * Language code. Valid values are `en` (English), `jp` (Japanese), and `zh` (Chinese). Default is `en`.
      * 
      */
-    @OutputExport(name="acceptLanguage", type=String.class, parameters={})
+    @Export(name="acceptLanguage", type=String.class, parameters={})
     private Output</* @Nullable */ String> acceptLanguage;
 
     /**
@@ -47,7 +47,7 @@ public class ServiceAction extends io.pulumi.resources.CustomResource {
      * Self-service action definition configuration block. Detailed below.
      * 
      */
-    @OutputExport(name="definition", type=ServiceActionDefinition.class, parameters={})
+    @Export(name="definition", type=ServiceActionDefinition.class, parameters={})
     private Output<ServiceActionDefinition> definition;
 
     /**
@@ -61,7 +61,7 @@ public class ServiceAction extends io.pulumi.resources.CustomResource {
      * Self-service action description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -75,7 +75,7 @@ public class ServiceAction extends io.pulumi.resources.CustomResource {
      * Self-service action name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

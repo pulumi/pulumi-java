@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_v1.outputs.ExprResponse;
 import io.pulumi.googlenative.compute_v1.outputs.SecurityPolicyRuleMatcherConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyRuleMatcherResponse {
     /**
      * The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified.
@@ -27,11 +27,11 @@ public final class SecurityPolicyRuleMatcherResponse {
      */
     private final String versionedExpr;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityPolicyRuleMatcherResponse(
-        @OutputCustomType.Parameter("config") SecurityPolicyRuleMatcherConfigResponse config,
-        @OutputCustomType.Parameter("expr") ExprResponse expr,
-        @OutputCustomType.Parameter("versionedExpr") String versionedExpr) {
+        @CustomType.Parameter("config") SecurityPolicyRuleMatcherConfigResponse config,
+        @CustomType.Parameter("expr") ExprResponse expr,
+        @CustomType.Parameter("versionedExpr") String versionedExpr) {
         this.config = config;
         this.expr = expr;
         this.versionedExpr = versionedExpr;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.DNSConfigResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.DefaultSnatStatusResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.ServiceExternalIPsConfigResponse;
@@ -11,7 +11,7 @@ import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NetworkConfigResponse {
     /**
      * The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy implementation.
@@ -59,17 +59,17 @@ public final class NetworkConfigResponse {
      */
     private final String subnetwork;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NetworkConfigResponse(
-        @OutputCustomType.Parameter("datapathProvider") String datapathProvider,
-        @OutputCustomType.Parameter("defaultSnatStatus") DefaultSnatStatusResponse defaultSnatStatus,
-        @OutputCustomType.Parameter("dnsConfig") DNSConfigResponse dnsConfig,
-        @OutputCustomType.Parameter("enableIntraNodeVisibility") Boolean enableIntraNodeVisibility,
-        @OutputCustomType.Parameter("enableL4ilbSubsetting") Boolean enableL4ilbSubsetting,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
-        @OutputCustomType.Parameter("serviceExternalIpsConfig") ServiceExternalIPsConfigResponse serviceExternalIpsConfig,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork) {
+        @CustomType.Parameter("datapathProvider") String datapathProvider,
+        @CustomType.Parameter("defaultSnatStatus") DefaultSnatStatusResponse defaultSnatStatus,
+        @CustomType.Parameter("dnsConfig") DNSConfigResponse dnsConfig,
+        @CustomType.Parameter("enableIntraNodeVisibility") Boolean enableIntraNodeVisibility,
+        @CustomType.Parameter("enableL4ilbSubsetting") Boolean enableL4ilbSubsetting,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
+        @CustomType.Parameter("serviceExternalIpsConfig") ServiceExternalIPsConfigResponse serviceExternalIpsConfig,
+        @CustomType.Parameter("subnetwork") String subnetwork) {
         this.datapathProvider = datapathProvider;
         this.defaultSnatStatus = defaultSnatStatus;
         this.dnsConfig = dnsConfig;

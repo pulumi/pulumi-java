@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties {
     /**
      * The password that corresponds to the username.
@@ -22,10 +22,10 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthC
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties(
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.username = username;
     }

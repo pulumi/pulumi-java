@@ -8,7 +8,7 @@ import io.pulumi.awsnative.frauddetector.enums.VariableDataType;
 import io.pulumi.awsnative.frauddetector.enums.VariableType;
 import io.pulumi.awsnative.frauddetector.inputs.VariableTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * The source of the data.
      * 
      */
-    @InputImport(name="dataSource", required=true)
+    @Import(name="dataSource", required=true)
       private final Output<VariableDataSource> dataSource;
 
     public Output<VariableDataSource> getDataSource() {
@@ -34,7 +34,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * The data type.
      * 
      */
-    @InputImport(name="dataType", required=true)
+    @Import(name="dataType", required=true)
       private final Output<VariableDataType> dataType;
 
     public Output<VariableDataType> getDataType() {
@@ -45,7 +45,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * The default value for the variable when no value is received.
      * 
      */
-    @InputImport(name="defaultValue", required=true)
+    @Import(name="defaultValue", required=true)
       private final Output<String> defaultValue;
 
     public Output<String> getDefaultValue() {
@@ -56,7 +56,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * The description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -67,7 +67,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the variable.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -78,7 +78,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * Tags associated with this variable.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<VariableTagArgs>> tags;
 
     public Output<List<VariableTagArgs>> getTags() {
@@ -89,7 +89,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * The variable type. For more information see https://docs.aws.amazon.com/frauddetector/latest/ug/create-a-variable.html#variable-types
      * 
      */
-    @InputImport(name="variableType")
+    @Import(name="variableType")
       private final @Nullable Output<VariableType> variableType;
 
     public Output<VariableType> getVariableType() {

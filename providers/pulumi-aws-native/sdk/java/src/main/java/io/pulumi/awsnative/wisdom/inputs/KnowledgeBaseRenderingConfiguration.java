@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wisdom.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,7 +14,7 @@ public final class KnowledgeBaseRenderingConfiguration extends io.pulumi.resourc
 
     public static final KnowledgeBaseRenderingConfiguration Empty = new KnowledgeBaseRenderingConfiguration();
 
-    @InputImport(name="templateUri")
+    @Import(name="templateUri")
       private final @Nullable String templateUri;
 
     public Optional<String> getTemplateUri() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutomationActionLogicAppResponse {
     /**
      * The type of the action that will be triggered by the Automation
@@ -28,11 +28,11 @@ public final class AutomationActionLogicAppResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutomationActionLogicAppResponse(
-        @OutputCustomType.Parameter("actionType") String actionType,
-        @OutputCustomType.Parameter("logicAppResourceId") @Nullable String logicAppResourceId,
-        @OutputCustomType.Parameter("uri") @Nullable String uri) {
+        @CustomType.Parameter("actionType") String actionType,
+        @CustomType.Parameter("logicAppResourceId") @Nullable String logicAppResourceId,
+        @CustomType.Parameter("uri") @Nullable String uri) {
         this.actionType = actionType;
         this.logicAppResourceId = logicAppResourceId;
         this.uri = uri;

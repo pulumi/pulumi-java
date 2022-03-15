@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.azureactivedirectory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class B2CTenantResourcePropertiesResponseBillingConfig {
     /**
      * The type of billing. Will be MAU for all new customers. If 'Auths', it can be updated to 'MAU'. Cannot be changed if value is 'MAU'. Learn more about Azure AD B2C billing at [aka.ms/b2cBilling](https://aka.ms/b2cbilling).
@@ -22,10 +22,10 @@ public final class B2CTenantResourcePropertiesResponseBillingConfig {
      */
     private final String effectiveStartDateUtc;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private B2CTenantResourcePropertiesResponseBillingConfig(
-        @OutputCustomType.Parameter("billingType") @Nullable String billingType,
-        @OutputCustomType.Parameter("effectiveStartDateUtc") String effectiveStartDateUtc) {
+        @CustomType.Parameter("billingType") @Nullable String billingType,
+        @CustomType.Parameter("effectiveStartDateUtc") String effectiveStartDateUtc) {
         this.billingType = billingType;
         this.effectiveStartDateUtc = effectiveStartDateUtc;
     }

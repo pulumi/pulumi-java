@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VpnClientConnectionHealthResponse {
     /**
      * List of allocated ip addresses to the connected p2s vpn clients.
@@ -35,12 +35,12 @@ public final class VpnClientConnectionHealthResponse {
      */
     private final @Nullable Integer vpnClientConnectionsCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpnClientConnectionHealthResponse(
-        @OutputCustomType.Parameter("allocatedIpAddresses") @Nullable List<String> allocatedIpAddresses,
-        @OutputCustomType.Parameter("totalEgressBytesTransferred") Double totalEgressBytesTransferred,
-        @OutputCustomType.Parameter("totalIngressBytesTransferred") Double totalIngressBytesTransferred,
-        @OutputCustomType.Parameter("vpnClientConnectionsCount") @Nullable Integer vpnClientConnectionsCount) {
+        @CustomType.Parameter("allocatedIpAddresses") @Nullable List<String> allocatedIpAddresses,
+        @CustomType.Parameter("totalEgressBytesTransferred") Double totalEgressBytesTransferred,
+        @CustomType.Parameter("totalIngressBytesTransferred") Double totalIngressBytesTransferred,
+        @CustomType.Parameter("vpnClientConnectionsCount") @Nullable Integer vpnClientConnectionsCount) {
         this.allocatedIpAddresses = allocatedIpAddresses;
         this.totalEgressBytesTransferred = totalEgressBytesTransferred;
         this.totalIngressBytesTransferred = totalIngressBytesTransferred;

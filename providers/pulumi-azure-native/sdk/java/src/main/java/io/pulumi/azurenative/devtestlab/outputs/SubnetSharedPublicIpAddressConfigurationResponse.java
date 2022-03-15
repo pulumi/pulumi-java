@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.PortResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubnetSharedPublicIpAddressConfigurationResponse {
     /**
      * Backend ports that virtual machines on this subnet are allowed to expose
@@ -17,8 +17,8 @@ public final class SubnetSharedPublicIpAddressConfigurationResponse {
      */
     private final @Nullable List<PortResponse> allowedPorts;
 
-    @OutputCustomType.Constructor
-    private SubnetSharedPublicIpAddressConfigurationResponse(@OutputCustomType.Parameter("allowedPorts") @Nullable List<PortResponse> allowedPorts) {
+    @CustomType.Constructor
+    private SubnetSharedPublicIpAddressConfigurationResponse(@CustomType.Parameter("allowedPorts") @Nullable List<PortResponse> allowedPorts) {
         this.allowedPorts = allowedPorts;
     }
 

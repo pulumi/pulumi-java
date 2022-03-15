@@ -15,7 +15,7 @@ import io.pulumi.azurenative.redhatopenshift.outputs.ServicePrincipalProfileResp
 import io.pulumi.azurenative.redhatopenshift.outputs.WorkerProfileResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +43,7 @@ public class OpenShiftCluster extends io.pulumi.resources.CustomResource {
      * The cluster API server profile.
      * 
      */
-    @OutputExport(name="apiserverProfile", type=APIServerProfileResponse.class, parameters={})
+    @Export(name="apiserverProfile", type=APIServerProfileResponse.class, parameters={})
     private Output</* @Nullable */ APIServerProfileResponse> apiserverProfile;
 
     /**
@@ -57,7 +57,7 @@ public class OpenShiftCluster extends io.pulumi.resources.CustomResource {
      * The cluster profile.
      * 
      */
-    @OutputExport(name="clusterProfile", type=ClusterProfileResponse.class, parameters={})
+    @Export(name="clusterProfile", type=ClusterProfileResponse.class, parameters={})
     private Output</* @Nullable */ ClusterProfileResponse> clusterProfile;
 
     /**
@@ -71,7 +71,7 @@ public class OpenShiftCluster extends io.pulumi.resources.CustomResource {
      * The console profile.
      * 
      */
-    @OutputExport(name="consoleProfile", type=ConsoleProfileResponse.class, parameters={})
+    @Export(name="consoleProfile", type=ConsoleProfileResponse.class, parameters={})
     private Output</* @Nullable */ ConsoleProfileResponse> consoleProfile;
 
     /**
@@ -85,7 +85,7 @@ public class OpenShiftCluster extends io.pulumi.resources.CustomResource {
      * The cluster ingress profiles.
      * 
      */
-    @OutputExport(name="ingressProfiles", type=List.class, parameters={IngressProfileResponse.class})
+    @Export(name="ingressProfiles", type=List.class, parameters={IngressProfileResponse.class})
     private Output</* @Nullable */ List<IngressProfileResponse>> ingressProfiles;
 
     /**
@@ -99,7 +99,7 @@ public class OpenShiftCluster extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -113,7 +113,7 @@ public class OpenShiftCluster extends io.pulumi.resources.CustomResource {
      * The cluster master profile.
      * 
      */
-    @OutputExport(name="masterProfile", type=MasterProfileResponse.class, parameters={})
+    @Export(name="masterProfile", type=MasterProfileResponse.class, parameters={})
     private Output</* @Nullable */ MasterProfileResponse> masterProfile;
 
     /**
@@ -127,7 +127,7 @@ public class OpenShiftCluster extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -141,7 +141,7 @@ public class OpenShiftCluster extends io.pulumi.resources.CustomResource {
      * The cluster network profile.
      * 
      */
-    @OutputExport(name="networkProfile", type=NetworkProfileResponse.class, parameters={})
+    @Export(name="networkProfile", type=NetworkProfileResponse.class, parameters={})
     private Output</* @Nullable */ NetworkProfileResponse> networkProfile;
 
     /**
@@ -155,7 +155,7 @@ public class OpenShiftCluster extends io.pulumi.resources.CustomResource {
      * The cluster provisioning state (immutable).
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output</* @Nullable */ String> provisioningState;
 
     /**
@@ -169,7 +169,7 @@ public class OpenShiftCluster extends io.pulumi.resources.CustomResource {
      * The cluster service principal profile.
      * 
      */
-    @OutputExport(name="servicePrincipalProfile", type=ServicePrincipalProfileResponse.class, parameters={})
+    @Export(name="servicePrincipalProfile", type=ServicePrincipalProfileResponse.class, parameters={})
     private Output</* @Nullable */ ServicePrincipalProfileResponse> servicePrincipalProfile;
 
     /**
@@ -183,7 +183,7 @@ public class OpenShiftCluster extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -197,7 +197,7 @@ public class OpenShiftCluster extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -211,7 +211,7 @@ public class OpenShiftCluster extends io.pulumi.resources.CustomResource {
      * The cluster worker profiles.
      * 
      */
-    @OutputExport(name="workerProfiles", type=List.class, parameters={WorkerProfileResponse.class})
+    @Export(name="workerProfiles", type=List.class, parameters={WorkerProfileResponse.class})
     private Output</* @Nullable */ List<WorkerProfileResponse>> workerProfiles;
 
     /**

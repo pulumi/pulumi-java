@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3outposts;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.s3outposts.BucketPolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -22,7 +22,7 @@ public class BucketPolicy extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the specified bucket.
      * 
      */
-    @OutputExport(name="bucket", type=String.class, parameters={})
+    @Export(name="bucket", type=String.class, parameters={})
     private Output<String> bucket;
 
     /**
@@ -36,7 +36,7 @@ public class BucketPolicy extends io.pulumi.resources.CustomResource {
      * A policy document containing permissions to add to the specified bucket.
      * 
      */
-    @OutputExport(name="policyDocument", type=Object.class, parameters={})
+    @Export(name="policyDocument", type=Object.class, parameters={})
     private Output<Object> policyDocument;
 
     /**

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.enums.IngressTransportMethod;
 import io.pulumi.azurenative.web.inputs.TrafficWeightArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
      * Bool indicating if HTTP connections to is allowed. If set to false HTTP connections are automatically redirected to HTTPS connections
      * 
      */
-    @InputImport(name="allowInsecure")
+    @Import(name="allowInsecure")
       private final @Nullable Output<Boolean> allowInsecure;
 
     public Output<Boolean> getAllowInsecure() {
@@ -39,7 +39,7 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
      * Bool indicating if app exposes an external http endpoint
      * 
      */
-    @InputImport(name="external")
+    @Import(name="external")
       private final @Nullable Output<Boolean> external;
 
     public Output<Boolean> getExternal() {
@@ -50,14 +50,14 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
      * Target Port in containers for traffic from ingress
      * 
      */
-    @InputImport(name="targetPort")
+    @Import(name="targetPort")
       private final @Nullable Output<Integer> targetPort;
 
     public Output<Integer> getTargetPort() {
         return this.targetPort == null ? Output.empty() : this.targetPort;
     }
 
-    @InputImport(name="traffic")
+    @Import(name="traffic")
       private final @Nullable Output<List<TrafficWeightArgs>> traffic;
 
     public Output<List<TrafficWeightArgs>> getTraffic() {
@@ -68,7 +68,7 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
      * Ingress transport protocol
      * 
      */
-    @InputImport(name="transport")
+    @Import(name="transport")
       private final @Nullable Output<Either<String,IngressTransportMethod>> transport;
 
     public Output<Either<String,IngressTransportMethod>> getTransport() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.sfn.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StateMachineTracingConfiguration {
     /**
      * When set to `true`, AWS X-Ray tracing is enabled. Make sure the State Machine has the correct IAM policies for logging. See the [AWS Step Functions Developer Guide](https://docs.aws.amazon.com/step-functions/latest/dg/xray-iam.html) for details.
@@ -17,8 +17,8 @@ public final class StateMachineTracingConfiguration {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private StateMachineTracingConfiguration(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
+    @CustomType.Constructor
+    private StateMachineTracingConfiguration(@CustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

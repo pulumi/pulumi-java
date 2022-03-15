@@ -8,7 +8,7 @@ import io.pulumi.aws.cloudfront.inputs.DistributionOriginCustomOriginConfigArgs;
 import io.pulumi.aws.cloudfront.inputs.DistributionOriginOriginShieldArgs;
 import io.pulumi.aws.cloudfront.inputs.DistributionOriginS3OriginConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
      * The number of times that CloudFront attempts to connect to the origin. Must be between 1-3. Defaults to 3.
      * 
      */
-    @InputImport(name="connectionAttempts")
+    @Import(name="connectionAttempts")
       private final @Nullable Output<Integer> connectionAttempts;
 
     public Output<Integer> getConnectionAttempts() {
@@ -35,7 +35,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
      * The number of seconds that CloudFront waits when trying to establish a connection to the origin. Must be between 1-10. Defaults to 10.
      * 
      */
-    @InputImport(name="connectionTimeout")
+    @Import(name="connectionTimeout")
       private final @Nullable Output<Integer> connectionTimeout;
 
     public Output<Integer> getConnectionTimeout() {
@@ -48,7 +48,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
      * (multiples allowed).
      * 
      */
-    @InputImport(name="customHeaders")
+    @Import(name="customHeaders")
       private final @Nullable Output<List<DistributionOriginCustomHeaderArgs>> customHeaders;
 
     public Output<List<DistributionOriginCustomHeaderArgs>> getCustomHeaders() {
@@ -61,7 +61,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
      * origin is required, use `s3_origin_config` instead.
      * 
      */
-    @InputImport(name="customOriginConfig")
+    @Import(name="customOriginConfig")
       private final @Nullable Output<DistributionOriginCustomOriginConfigArgs> customOriginConfig;
 
     public Output<DistributionOriginCustomOriginConfigArgs> getCustomOriginConfig() {
@@ -73,7 +73,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
      * web site of your custom origin.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -84,7 +84,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
      * The unique identifier of the member origin
      * 
      */
-    @InputImport(name="originId", required=true)
+    @Import(name="originId", required=true)
       private final Output<String> originId;
 
     public Output<String> getOriginId() {
@@ -97,7 +97,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
      * custom origin.
      * 
      */
-    @InputImport(name="originPath")
+    @Import(name="originPath")
       private final @Nullable Output<String> originPath;
 
     public Output<String> getOriginPath() {
@@ -109,7 +109,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
      * configuration information. Using Origin Shield can help reduce the load on your origin. For more information, see [Using Origin Shield](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html) in the Amazon CloudFront Developer Guide.
      * 
      */
-    @InputImport(name="originShield")
+    @Import(name="originShield")
       private final @Nullable Output<DistributionOriginOriginShieldArgs> originShield;
 
     public Output<DistributionOriginOriginShieldArgs> getOriginShield() {
@@ -122,7 +122,7 @@ public final class DistributionOriginArgs extends io.pulumi.resources.ResourceAr
      * `custom_origin_config` instead.
      * 
      */
-    @InputImport(name="s3OriginConfig")
+    @Import(name="s3OriginConfig")
       private final @Nullable Output<DistributionOriginS3OriginConfigArgs> s3OriginConfig;
 
     public Output<DistributionOriginS3OriginConfigArgs> getS3OriginConfig() {

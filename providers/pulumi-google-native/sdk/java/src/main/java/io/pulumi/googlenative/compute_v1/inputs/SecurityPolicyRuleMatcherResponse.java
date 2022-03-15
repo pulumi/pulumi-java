@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.inputs.ExprResponse;
 import io.pulumi.googlenative.compute_v1.inputs.SecurityPolicyRuleMatcherConfigResponse;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class SecurityPolicyRuleMatcherResponse extends io.pulumi.resources
      * The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified.
      * 
      */
-    @InputImport(name="config", required=true)
+    @Import(name="config", required=true)
       private final SecurityPolicyRuleMatcherConfigResponse config;
 
     public SecurityPolicyRuleMatcherConfigResponse getConfig() {
@@ -33,7 +33,7 @@ public final class SecurityPolicyRuleMatcherResponse extends io.pulumi.resources
      * User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as origin.ip, source.region_code and contents in the request header.
      * 
      */
-    @InputImport(name="expr", required=true)
+    @Import(name="expr", required=true)
       private final ExprResponse expr;
 
     public ExprResponse getExpr() {
@@ -44,7 +44,7 @@ public final class SecurityPolicyRuleMatcherResponse extends io.pulumi.resources
      * Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.
      * 
      */
-    @InputImport(name="versionedExpr", required=true)
+    @Import(name="versionedExpr", required=true)
       private final String versionedExpr;
 
     public String getVersionedExpr() {

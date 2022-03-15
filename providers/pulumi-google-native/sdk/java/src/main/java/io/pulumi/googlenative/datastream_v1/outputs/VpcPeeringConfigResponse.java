@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VpcPeeringConfigResponse {
     /**
      * A free subnet for peering. (CIDR of /29) TODO(b/172995841) add validators.
@@ -20,10 +20,10 @@ public final class VpcPeeringConfigResponse {
      */
     private final String vpc;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpcPeeringConfigResponse(
-        @OutputCustomType.Parameter("subnet") String subnet,
-        @OutputCustomType.Parameter("vpc") String vpc) {
+        @CustomType.Parameter("subnet") String subnet,
+        @CustomType.Parameter("vpc") String vpc) {
         this.subnet = subnet;
         this.vpc = vpc;
     }

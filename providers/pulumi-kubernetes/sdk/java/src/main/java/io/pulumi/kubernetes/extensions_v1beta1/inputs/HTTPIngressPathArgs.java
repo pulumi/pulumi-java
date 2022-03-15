@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.IngressBackendArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
      * Backend defines the referenced service endpoint to which the traffic will be forwarded to.
      * 
      */
-    @InputImport(name="backend", required=true)
+    @Import(name="backend", required=true)
       private final Output<IngressBackendArgs> backend;
 
     public Output<IngressBackendArgs> getBackend() {
@@ -34,7 +34,7 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
      * Path is an extended POSIX regex as defined by IEEE Std 1003.1, (i.e this follows the egrep/unix syntax, not the perl syntax) matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional "path" part of a URL as defined by RFC 3986. Paths must begin with a '/'. If unspecified, the path defaults to a catch all sending traffic to the backend.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -55,7 +55,7 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
      *   Implementations are required to support all path types. Defaults to ImplementationSpecific.
      * 
      */
-    @InputImport(name="pathType")
+    @Import(name="pathType")
       private final @Nullable Output<String> pathType;
 
     public Output<String> getPathType() {

@@ -11,7 +11,7 @@ import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorLogDeliveryArgs;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorPluginArgs;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorWorkerConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ConnectorArgs Empty = new ConnectorArgs();
 
-    @InputImport(name="capacity", required=true)
+    @Import(name="capacity", required=true)
       private final Output<ConnectorCapacityArgs> capacity;
 
     public Output<ConnectorCapacityArgs> getCapacity() {
@@ -34,7 +34,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration for the connector.
      * 
      */
-    @InputImport(name="connectorConfiguration", required=true)
+    @Import(name="connectorConfiguration", required=true)
       private final Output<Object> connectorConfiguration;
 
     public Output<Object> getConnectorConfiguration() {
@@ -45,7 +45,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * A summary description of the connector.
      * 
      */
-    @InputImport(name="connectorDescription")
+    @Import(name="connectorDescription")
       private final @Nullable Output<String> connectorDescription;
 
     public Output<String> getConnectorDescription() {
@@ -56,28 +56,28 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the connector.
      * 
      */
-    @InputImport(name="connectorName")
+    @Import(name="connectorName")
       private final @Nullable Output<String> connectorName;
 
     public Output<String> getConnectorName() {
         return this.connectorName == null ? Output.empty() : this.connectorName;
     }
 
-    @InputImport(name="kafkaCluster", required=true)
+    @Import(name="kafkaCluster", required=true)
       private final Output<ConnectorKafkaClusterArgs> kafkaCluster;
 
     public Output<ConnectorKafkaClusterArgs> getKafkaCluster() {
         return this.kafkaCluster;
     }
 
-    @InputImport(name="kafkaClusterClientAuthentication", required=true)
+    @Import(name="kafkaClusterClientAuthentication", required=true)
       private final Output<ConnectorKafkaClusterClientAuthenticationArgs> kafkaClusterClientAuthentication;
 
     public Output<ConnectorKafkaClusterClientAuthenticationArgs> getKafkaClusterClientAuthentication() {
         return this.kafkaClusterClientAuthentication;
     }
 
-    @InputImport(name="kafkaClusterEncryptionInTransit", required=true)
+    @Import(name="kafkaClusterEncryptionInTransit", required=true)
       private final Output<ConnectorKafkaClusterEncryptionInTransitArgs> kafkaClusterEncryptionInTransit;
 
     public Output<ConnectorKafkaClusterEncryptionInTransitArgs> getKafkaClusterEncryptionInTransit() {
@@ -88,14 +88,14 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * The version of Kafka Connect. It has to be compatible with both the Kafka cluster's version and the plugins.
      * 
      */
-    @InputImport(name="kafkaConnectVersion", required=true)
+    @Import(name="kafkaConnectVersion", required=true)
       private final Output<String> kafkaConnectVersion;
 
     public Output<String> getKafkaConnectVersion() {
         return this.kafkaConnectVersion;
     }
 
-    @InputImport(name="logDelivery")
+    @Import(name="logDelivery")
       private final @Nullable Output<ConnectorLogDeliveryArgs> logDelivery;
 
     public Output<ConnectorLogDeliveryArgs> getLogDelivery() {
@@ -106,7 +106,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * List of plugins to use with the connector.
      * 
      */
-    @InputImport(name="plugins", required=true)
+    @Import(name="plugins", required=true)
       private final Output<List<ConnectorPluginArgs>> plugins;
 
     public Output<List<ConnectorPluginArgs>> getPlugins() {
@@ -117,14 +117,14 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the IAM role used by the connector to access Amazon S3 objects and other external resources.
      * 
      */
-    @InputImport(name="serviceExecutionRoleArn", required=true)
+    @Import(name="serviceExecutionRoleArn", required=true)
       private final Output<String> serviceExecutionRoleArn;
 
     public Output<String> getServiceExecutionRoleArn() {
         return this.serviceExecutionRoleArn;
     }
 
-    @InputImport(name="workerConfiguration")
+    @Import(name="workerConfiguration")
       private final @Nullable Output<ConnectorWorkerConfigurationArgs> workerConfiguration;
 
     public Output<ConnectorWorkerConfigurationArgs> getWorkerConfiguration() {

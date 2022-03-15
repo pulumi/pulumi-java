@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AutoscalingConfigResponse {
     /**
      * Optional. The autoscaling policy used by the cluster.Only resource names including projectid and location (region) are valid. Examples: https://www.googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id] projects/[project_id]/locations/[dataproc_region]/autoscalingPolicies/[policy_id]Note that the policy must be in the same project and Dataproc region.
@@ -15,8 +15,8 @@ public final class AutoscalingConfigResponse {
      */
     private final String policyUri;
 
-    @OutputCustomType.Constructor
-    private AutoscalingConfigResponse(@OutputCustomType.Parameter("policyUri") String policyUri) {
+    @CustomType.Constructor
+    private AutoscalingConfigResponse(@CustomType.Parameter("policyUri") String policyUri) {
         this.policyUri = policyUri;
     }
 

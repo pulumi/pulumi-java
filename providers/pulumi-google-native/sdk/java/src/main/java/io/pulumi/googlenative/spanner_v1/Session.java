@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.spanner_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.spanner_v1.SessionArgs;
@@ -23,7 +23,7 @@ public class Session extends io.pulumi.resources.CustomResource {
      * The approximate timestamp when the session is last used. It is typically earlier than the actual last use time.
      * 
      */
-    @OutputExport(name="approximateLastUseTime", type=String.class, parameters={})
+    @Export(name="approximateLastUseTime", type=String.class, parameters={})
     private Output<String> approximateLastUseTime;
 
     /**
@@ -37,7 +37,7 @@ public class Session extends io.pulumi.resources.CustomResource {
      * The timestamp when the session is created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -51,7 +51,7 @@ public class Session extends io.pulumi.resources.CustomResource {
      * The labels for the session. * Label keys must be between 1 and 63 characters long and must conform to the following regular expression: `[a-z]([-a-z0-9]*[a-z0-9])?`. * Label values must be between 0 and 63 characters long and must conform to the regular expression `([a-z]([-a-z0-9]*[a-z0-9])?)?`. * No more than 64 labels can be associated with a given session. See https://goo.gl/xmQnxf for more information on and examples of labels.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -65,7 +65,7 @@ public class Session extends io.pulumi.resources.CustomResource {
      * The name of the session. This is always system-assigned.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

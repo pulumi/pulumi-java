@@ -5,7 +5,7 @@ package io.pulumi.awsnative.datasync.inputs;
 
 import io.pulumi.awsnative.datasync.enums.TaskFilterRuleFilterType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class TaskFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
      * The type of filter rule to apply. AWS DataSync only supports the SIMPLE_PATTERN rule type.
      * 
      */
-    @InputImport(name="filterType")
+    @Import(name="filterType")
       private final @Nullable Output<TaskFilterRuleFilterType> filterType;
 
     public Output<TaskFilterRuleFilterType> getFilterType() {
@@ -34,7 +34,7 @@ public final class TaskFilterRuleArgs extends io.pulumi.resources.ResourceArgs {
      * A single filter string that consists of the patterns to include or exclude. The patterns are delimited by "|".
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

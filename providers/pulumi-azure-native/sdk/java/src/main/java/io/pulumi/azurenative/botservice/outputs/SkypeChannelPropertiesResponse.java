@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SkypeChannelPropertiesResponse {
     /**
      * Calling web hook for Skype channel
@@ -63,18 +63,18 @@ public final class SkypeChannelPropertiesResponse {
      */
     private final Boolean isEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SkypeChannelPropertiesResponse(
-        @OutputCustomType.Parameter("callingWebHook") @Nullable String callingWebHook,
-        @OutputCustomType.Parameter("enableCalling") @Nullable Boolean enableCalling,
-        @OutputCustomType.Parameter("enableGroups") @Nullable Boolean enableGroups,
-        @OutputCustomType.Parameter("enableMediaCards") @Nullable Boolean enableMediaCards,
-        @OutputCustomType.Parameter("enableMessaging") @Nullable Boolean enableMessaging,
-        @OutputCustomType.Parameter("enableScreenSharing") @Nullable Boolean enableScreenSharing,
-        @OutputCustomType.Parameter("enableVideo") @Nullable Boolean enableVideo,
-        @OutputCustomType.Parameter("groupsMode") @Nullable String groupsMode,
-        @OutputCustomType.Parameter("incomingCallRoute") @Nullable String incomingCallRoute,
-        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled) {
+        @CustomType.Parameter("callingWebHook") @Nullable String callingWebHook,
+        @CustomType.Parameter("enableCalling") @Nullable Boolean enableCalling,
+        @CustomType.Parameter("enableGroups") @Nullable Boolean enableGroups,
+        @CustomType.Parameter("enableMediaCards") @Nullable Boolean enableMediaCards,
+        @CustomType.Parameter("enableMessaging") @Nullable Boolean enableMessaging,
+        @CustomType.Parameter("enableScreenSharing") @Nullable Boolean enableScreenSharing,
+        @CustomType.Parameter("enableVideo") @Nullable Boolean enableVideo,
+        @CustomType.Parameter("groupsMode") @Nullable String groupsMode,
+        @CustomType.Parameter("incomingCallRoute") @Nullable String incomingCallRoute,
+        @CustomType.Parameter("isEnabled") Boolean isEnabled) {
         this.callingWebHook = callingWebHook;
         this.enableCalling = enableCalling;
         this.enableGroups = enableGroups;

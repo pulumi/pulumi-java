@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class WebBasicAuthenticationResponse extends io.pulumi.resources.In
      * Expected value is 'Basic'.
      * 
      */
-    @InputImport(name="authenticationType", required=true)
+    @Import(name="authenticationType", required=true)
       private final String authenticationType;
 
     public String getAuthenticationType() {
@@ -36,7 +36,7 @@ public final class WebBasicAuthenticationResponse extends io.pulumi.resources.In
      * The password for Basic authentication.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
@@ -47,7 +47,7 @@ public final class WebBasicAuthenticationResponse extends io.pulumi.resources.In
      * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final Object url;
 
     public Object getUrl() {
@@ -58,7 +58,7 @@ public final class WebBasicAuthenticationResponse extends io.pulumi.resources.In
      * User name for Basic authentication. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final Object username;
 
     public Object getUsername() {

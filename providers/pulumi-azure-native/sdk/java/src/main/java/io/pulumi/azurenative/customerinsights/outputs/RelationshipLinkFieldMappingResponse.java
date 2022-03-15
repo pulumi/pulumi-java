@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RelationshipLinkFieldMappingResponse {
     /**
      * The field name on the Interaction Type.
@@ -27,11 +27,11 @@ public final class RelationshipLinkFieldMappingResponse {
      */
     private final String relationshipFieldName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RelationshipLinkFieldMappingResponse(
-        @OutputCustomType.Parameter("interactionFieldName") String interactionFieldName,
-        @OutputCustomType.Parameter("linkType") @Nullable String linkType,
-        @OutputCustomType.Parameter("relationshipFieldName") String relationshipFieldName) {
+        @CustomType.Parameter("interactionFieldName") String interactionFieldName,
+        @CustomType.Parameter("linkType") @Nullable String linkType,
+        @CustomType.Parameter("relationshipFieldName") String relationshipFieldName) {
         this.interactionFieldName = interactionFieldName;
         this.linkType = linkType;
         this.relationshipFieldName = relationshipFieldName;

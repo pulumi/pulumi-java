@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceAttachmentConnectedEndpointResponse {
     /**
      * The url of a connected endpoint.
@@ -25,11 +25,11 @@ public final class ServiceAttachmentConnectedEndpointResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceAttachmentConnectedEndpointResponse(
-        @OutputCustomType.Parameter("endpoint") String endpoint,
-        @OutputCustomType.Parameter("pscConnectionId") String pscConnectionId,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("endpoint") String endpoint,
+        @CustomType.Parameter("pscConnectionId") String pscConnectionId,
+        @CustomType.Parameter("status") String status) {
         this.endpoint = endpoint;
         this.pscConnectionId = pscConnectionId;
         this.status = status;

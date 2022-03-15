@@ -5,7 +5,7 @@ package io.pulumi.aws.appautoscaling.outputs;
 
 import io.pulumi.aws.appautoscaling.outputs.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification;
 import io.pulumi.aws.appautoscaling.outputs.PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyTargetTrackingScalingPolicyConfiguration {
     /**
      * A custom CloudWatch metric. Documentation can be found  at: [AWS Customized Metric Specification](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_CustomizedMetricSpecification.html). See supported fields below.
@@ -46,14 +46,14 @@ public final class PolicyTargetTrackingScalingPolicyConfiguration {
      */
     private final Double targetValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyTargetTrackingScalingPolicyConfiguration(
-        @OutputCustomType.Parameter("customizedMetricSpecification") @Nullable PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification customizedMetricSpecification,
-        @OutputCustomType.Parameter("disableScaleIn") @Nullable Boolean disableScaleIn,
-        @OutputCustomType.Parameter("predefinedMetricSpecification") @Nullable PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification predefinedMetricSpecification,
-        @OutputCustomType.Parameter("scaleInCooldown") @Nullable Integer scaleInCooldown,
-        @OutputCustomType.Parameter("scaleOutCooldown") @Nullable Integer scaleOutCooldown,
-        @OutputCustomType.Parameter("targetValue") Double targetValue) {
+        @CustomType.Parameter("customizedMetricSpecification") @Nullable PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecification customizedMetricSpecification,
+        @CustomType.Parameter("disableScaleIn") @Nullable Boolean disableScaleIn,
+        @CustomType.Parameter("predefinedMetricSpecification") @Nullable PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification predefinedMetricSpecification,
+        @CustomType.Parameter("scaleInCooldown") @Nullable Integer scaleInCooldown,
+        @CustomType.Parameter("scaleOutCooldown") @Nullable Integer scaleOutCooldown,
+        @CustomType.Parameter("targetValue") Double targetValue) {
         this.customizedMetricSpecification = customizedMetricSpecification;
         this.disableScaleIn = disableScaleIn;
         this.predefinedMetricSpecification = predefinedMetricSpecification;

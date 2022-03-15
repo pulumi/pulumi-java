@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.BigQueryIODetailsResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.BigTableIODetailsResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.DatastoreIODetailsResponse;
@@ -14,7 +14,7 @@ import io.pulumi.googlenative.dataflow_v1b3.outputs.SpannerIODetailsResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JobMetadataResponse {
     /**
      * Identification of a Cloud Bigtable source used in the Dataflow job.
@@ -52,15 +52,15 @@ public final class JobMetadataResponse {
      */
     private final List<SpannerIODetailsResponse> spannerDetails;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobMetadataResponse(
-        @OutputCustomType.Parameter("bigTableDetails") List<BigTableIODetailsResponse> bigTableDetails,
-        @OutputCustomType.Parameter("bigqueryDetails") List<BigQueryIODetailsResponse> bigqueryDetails,
-        @OutputCustomType.Parameter("datastoreDetails") List<DatastoreIODetailsResponse> datastoreDetails,
-        @OutputCustomType.Parameter("fileDetails") List<FileIODetailsResponse> fileDetails,
-        @OutputCustomType.Parameter("pubsubDetails") List<PubSubIODetailsResponse> pubsubDetails,
-        @OutputCustomType.Parameter("sdkVersion") SdkVersionResponse sdkVersion,
-        @OutputCustomType.Parameter("spannerDetails") List<SpannerIODetailsResponse> spannerDetails) {
+        @CustomType.Parameter("bigTableDetails") List<BigTableIODetailsResponse> bigTableDetails,
+        @CustomType.Parameter("bigqueryDetails") List<BigQueryIODetailsResponse> bigqueryDetails,
+        @CustomType.Parameter("datastoreDetails") List<DatastoreIODetailsResponse> datastoreDetails,
+        @CustomType.Parameter("fileDetails") List<FileIODetailsResponse> fileDetails,
+        @CustomType.Parameter("pubsubDetails") List<PubSubIODetailsResponse> pubsubDetails,
+        @CustomType.Parameter("sdkVersion") SdkVersionResponse sdkVersion,
+        @CustomType.Parameter("spannerDetails") List<SpannerIODetailsResponse> spannerDetails) {
         this.bigTableDetails = bigTableDetails;
         this.bigqueryDetails = bigqueryDetails;
         this.datastoreDetails = datastoreDetails;

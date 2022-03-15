@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.DicomStoreArgs;
@@ -48,7 +48,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * 'projects/{project}/locations/{location}/datasets/{dataset}'
      * 
      */
-    @OutputExport(name="dataset", type=String.class, parameters={})
+    @Export(name="dataset", type=String.class, parameters={})
     private Output<String> dataset;
 
     /**
@@ -70,7 +70,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -92,7 +92,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * ** Changing this property may recreate the Dicom store (removing all data) **
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="notificationConfig", type=DicomStoreNotificationConfig.class, parameters={})
+    @Export(name="notificationConfig", type=DicomStoreNotificationConfig.class, parameters={})
     private Output</* @Nullable */ DicomStoreNotificationConfig> notificationConfig;
 
     /**
@@ -123,7 +123,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * The fully qualified name of this dataset
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -139,7 +139,7 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="streamConfigs", type=List.class, parameters={DicomStoreStreamConfig.class})
+    @Export(name="streamConfigs", type=List.class, parameters={DicomStoreStreamConfig.class})
     private Output</* @Nullable */ List<DicomStoreStreamConfig>> streamConfigs;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ClientAccessRightResponse extends io.pulumi.resources.InvokeA
      * Type of access to be allowed for the client.
      * 
      */
-    @InputImport(name="accessPermission", required=true)
+    @Import(name="accessPermission", required=true)
       private final String accessPermission;
 
     public String getAccessPermission() {
@@ -31,7 +31,7 @@ public final class ClientAccessRightResponse extends io.pulumi.resources.InvokeA
      * IP of the client.
      * 
      */
-    @InputImport(name="client", required=true)
+    @Import(name="client", required=true)
       private final String client;
 
     public String getClient() {

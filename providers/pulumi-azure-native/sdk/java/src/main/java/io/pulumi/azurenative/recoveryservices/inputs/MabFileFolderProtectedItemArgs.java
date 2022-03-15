@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.enums.DataSourceType;
 import io.pulumi.azurenative.recoveryservices.inputs.MabFileFolderProtectedItemExtendedInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * Type of backup management for the backed up item.
      * 
      */
-    @InputImport(name="backupManagementType")
+    @Import(name="backupManagementType")
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
     public Output<Either<String,BackupManagementType>> getBackupManagementType() {
@@ -40,7 +40,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * Name of the backup set the backup item belongs to
      * 
      */
-    @InputImport(name="backupSetName")
+    @Import(name="backupSetName")
       private final @Nullable Output<String> backupSetName;
 
     public Output<String> getBackupSetName() {
@@ -51,7 +51,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * Name of the computer associated with this backup item.
      * 
      */
-    @InputImport(name="computerName")
+    @Import(name="computerName")
       private final @Nullable Output<String> computerName;
 
     public Output<String> getComputerName() {
@@ -62,7 +62,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * Unique name of container
      * 
      */
-    @InputImport(name="containerName")
+    @Import(name="containerName")
       private final @Nullable Output<String> containerName;
 
     public Output<String> getContainerName() {
@@ -73,7 +73,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * Create mode to indicate recovery of existing soft deleted data source or creation of new data source.
      * 
      */
-    @InputImport(name="createMode")
+    @Import(name="createMode")
       private final @Nullable Output<Either<String,CreateMode>> createMode;
 
     public Output<Either<String,CreateMode>> getCreateMode() {
@@ -84,7 +84,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * Sync time for deferred deletion in UTC
      * 
      */
-    @InputImport(name="deferredDeleteSyncTimeInUTC")
+    @Import(name="deferredDeleteSyncTimeInUTC")
       private final @Nullable Output<Double> deferredDeleteSyncTimeInUTC;
 
     public Output<Double> getDeferredDeleteSyncTimeInUTC() {
@@ -95,7 +95,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * Time for deferred deletion in UTC
      * 
      */
-    @InputImport(name="deferredDeleteTimeInUTC")
+    @Import(name="deferredDeleteTimeInUTC")
       private final @Nullable Output<String> deferredDeleteTimeInUTC;
 
     public Output<String> getDeferredDeleteTimeInUTC() {
@@ -106,7 +106,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * Time remaining before the DS marked for deferred delete is permanently deleted
      * 
      */
-    @InputImport(name="deferredDeleteTimeRemaining")
+    @Import(name="deferredDeleteTimeRemaining")
       private final @Nullable Output<String> deferredDeleteTimeRemaining;
 
     public Output<String> getDeferredDeleteTimeRemaining() {
@@ -117,7 +117,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * Additional information with this backup item.
      * 
      */
-    @InputImport(name="extendedInfo")
+    @Import(name="extendedInfo")
       private final @Nullable Output<MabFileFolderProtectedItemExtendedInfoArgs> extendedInfo;
 
     public Output<MabFileFolderProtectedItemExtendedInfoArgs> getExtendedInfo() {
@@ -128,7 +128,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * Friendly name of this backup item.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -139,7 +139,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * Flag to identify whether the deferred deleted DS is to be purged soon
      * 
      */
-    @InputImport(name="isDeferredDeleteScheduleUpcoming")
+    @Import(name="isDeferredDeleteScheduleUpcoming")
       private final @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
 
     public Output<Boolean> getIsDeferredDeleteScheduleUpcoming() {
@@ -150,7 +150,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * Flag to identify that deferred deleted DS is to be moved into Pause state
      * 
      */
-    @InputImport(name="isRehydrate")
+    @Import(name="isRehydrate")
       private final @Nullable Output<Boolean> isRehydrate;
 
     public Output<Boolean> getIsRehydrate() {
@@ -161,7 +161,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * Flag to identify whether the DS is scheduled for deferred delete
      * 
      */
-    @InputImport(name="isScheduledForDeferredDelete")
+    @Import(name="isScheduledForDeferredDelete")
       private final @Nullable Output<Boolean> isScheduledForDeferredDelete;
 
     public Output<Boolean> getIsScheduledForDeferredDelete() {
@@ -172,7 +172,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * Status of last backup operation.
      * 
      */
-    @InputImport(name="lastBackupStatus")
+    @Import(name="lastBackupStatus")
       private final @Nullable Output<String> lastBackupStatus;
 
     public Output<String> getLastBackupStatus() {
@@ -183,7 +183,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * Timestamp of the last backup operation on this backup item.
      * 
      */
-    @InputImport(name="lastBackupTime")
+    @Import(name="lastBackupTime")
       private final @Nullable Output<String> lastBackupTime;
 
     public Output<String> getLastBackupTime() {
@@ -194,7 +194,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * Timestamp when the last (latest) backup copy was created for this backup item.
      * 
      */
-    @InputImport(name="lastRecoveryPoint")
+    @Import(name="lastRecoveryPoint")
       private final @Nullable Output<String> lastRecoveryPoint;
 
     public Output<String> getLastRecoveryPoint() {
@@ -205,7 +205,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * ID of the backup policy with which this item is backed up.
      * 
      */
-    @InputImport(name="policyId")
+    @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {
@@ -217,7 +217,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * Expected value is 'MabFileFolderProtectedItem'.
      * 
      */
-    @InputImport(name="protectedItemType", required=true)
+    @Import(name="protectedItemType", required=true)
       private final Output<String> protectedItemType;
 
     public Output<String> getProtectedItemType() {
@@ -228,7 +228,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * Protected, ProtectionStopped, IRPending or ProtectionError
      * 
      */
-    @InputImport(name="protectionState")
+    @Import(name="protectionState")
       private final @Nullable Output<String> protectionState;
 
     public Output<String> getProtectionState() {
@@ -239,7 +239,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * ARM ID of the resource to be backed up.
      * 
      */
-    @InputImport(name="sourceResourceId")
+    @Import(name="sourceResourceId")
       private final @Nullable Output<String> sourceResourceId;
 
     public Output<String> getSourceResourceId() {
@@ -250,7 +250,7 @@ public final class MabFileFolderProtectedItemArgs extends io.pulumi.resources.Re
      * Type of workload this item represents.
      * 
      */
-    @InputImport(name="workloadType")
+    @Import(name="workloadType")
       private final @Nullable Output<Either<String,DataSourceType>> workloadType;
 
     public Output<Either<String,DataSourceType>> getWorkloadType() {

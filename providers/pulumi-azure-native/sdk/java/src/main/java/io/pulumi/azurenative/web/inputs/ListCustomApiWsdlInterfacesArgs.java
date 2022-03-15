@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.WsdlImportMethod;
 import io.pulumi.azurenative.web.inputs.WsdlService;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,7 +21,7 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
      * The WSDL content
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable String content;
 
     public Optional<String> getContent() {
@@ -32,7 +32,7 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
      * The WSDL import method
      * 
      */
-    @InputImport(name="importMethod")
+    @Import(name="importMethod")
       private final @Nullable Either<String,WsdlImportMethod> importMethod;
 
     public Either<String,WsdlImportMethod> getImportMethod() {
@@ -43,7 +43,7 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
      * The location
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
@@ -54,7 +54,7 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
      * The service with name and endpoint names
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable WsdlService service;
 
     public Optional<WsdlService> getService() {
@@ -65,7 +65,7 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
      * Subscription Id
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {
@@ -76,7 +76,7 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
      * The WSDL URL
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable String url;
 
     public Optional<String> getUrl() {

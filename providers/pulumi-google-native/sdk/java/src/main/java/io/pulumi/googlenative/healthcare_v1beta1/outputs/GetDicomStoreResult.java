@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.GoogleCloudHealthcareV1beta1DicomStreamConfigResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.NotificationConfigResponse;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDicomStoreResult {
     /**
      * User-supplied key-value pairs used to organize DICOM stores. Label keys must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63 characters long, have a UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regular expression: [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a given store.
@@ -34,12 +34,12 @@ public final class GetDicomStoreResult {
      */
     private final List<GoogleCloudHealthcareV1beta1DicomStreamConfigResponse> streamConfigs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDicomStoreResult(
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("notificationConfig") NotificationConfigResponse notificationConfig,
-        @OutputCustomType.Parameter("streamConfigs") List<GoogleCloudHealthcareV1beta1DicomStreamConfigResponse> streamConfigs) {
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("notificationConfig") NotificationConfigResponse notificationConfig,
+        @CustomType.Parameter("streamConfigs") List<GoogleCloudHealthcareV1beta1DicomStreamConfigResponse> streamConfigs) {
         this.labels = labels;
         this.name = name;
         this.notificationConfig = notificationConfig;

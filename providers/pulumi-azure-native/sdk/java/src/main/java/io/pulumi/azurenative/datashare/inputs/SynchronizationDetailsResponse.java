@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * Id of data set
      * 
      */
-    @InputImport(name="dataSetId", required=true)
+    @Import(name="dataSetId", required=true)
       private final String dataSetId;
 
     public String getDataSetId() {
@@ -33,7 +33,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * Type of the data set
      * 
      */
-    @InputImport(name="dataSetType", required=true)
+    @Import(name="dataSetType", required=true)
       private final String dataSetType;
 
     public String getDataSetType() {
@@ -44,7 +44,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * Duration of data set level copy
      * 
      */
-    @InputImport(name="durationMs", required=true)
+    @Import(name="durationMs", required=true)
       private final Integer durationMs;
 
     public Integer getDurationMs() {
@@ -55,7 +55,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * End time of data set level copy
      * 
      */
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
@@ -66,7 +66,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * The number of files read from the source data set
      * 
      */
-    @InputImport(name="filesRead", required=true)
+    @Import(name="filesRead", required=true)
       private final Double filesRead;
 
     public Double getFilesRead() {
@@ -77,7 +77,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * The number of files written into the sink data set
      * 
      */
-    @InputImport(name="filesWritten", required=true)
+    @Import(name="filesWritten", required=true)
       private final Double filesWritten;
 
     public Double getFilesWritten() {
@@ -88,7 +88,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * Error message if any
      * 
      */
-    @InputImport(name="message", required=true)
+    @Import(name="message", required=true)
       private final String message;
 
     public String getMessage() {
@@ -99,7 +99,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * Name of the data set
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -110,7 +110,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * The number of files copied into the sink data set
      * 
      */
-    @InputImport(name="rowsCopied", required=true)
+    @Import(name="rowsCopied", required=true)
       private final Double rowsCopied;
 
     public Double getRowsCopied() {
@@ -121,7 +121,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * The number of rows read from the source data set.
      * 
      */
-    @InputImport(name="rowsRead", required=true)
+    @Import(name="rowsRead", required=true)
       private final Double rowsRead;
 
     public Double getRowsRead() {
@@ -132,7 +132,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * The size of the data read from the source data set in bytes
      * 
      */
-    @InputImport(name="sizeRead", required=true)
+    @Import(name="sizeRead", required=true)
       private final Double sizeRead;
 
     public Double getSizeRead() {
@@ -143,7 +143,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * The size of the data written into the sink data set in bytes
      * 
      */
-    @InputImport(name="sizeWritten", required=true)
+    @Import(name="sizeWritten", required=true)
       private final Double sizeWritten;
 
     public Double getSizeWritten() {
@@ -154,7 +154,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * Start time of data set level copy
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {
@@ -165,7 +165,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * Raw Status
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {
@@ -176,7 +176,7 @@ public final class SynchronizationDetailsResponse extends io.pulumi.resources.In
      * The vCore units consumed for the data set synchronization
      * 
      */
-    @InputImport(name="vCore", required=true)
+    @Import(name="vCore", required=true)
       private final Double vCore;
 
     public Double getVCore() {

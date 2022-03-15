@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.apimanagement.ApiVersionSetArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class ApiVersionSet extends io.pulumi.resources.CustomResource {
      * Description of API Version Set.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -48,7 +48,7 @@ public class ApiVersionSet extends io.pulumi.resources.CustomResource {
      * Name of API Version Set
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -62,7 +62,7 @@ public class ApiVersionSet extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class ApiVersionSet extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -90,7 +90,7 @@ public class ApiVersionSet extends io.pulumi.resources.CustomResource {
      * Name of HTTP header parameter that indicates the API Version if versioningScheme is set to `header`.
      * 
      */
-    @OutputExport(name="versionHeaderName", type=String.class, parameters={})
+    @Export(name="versionHeaderName", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionHeaderName;
 
     /**
@@ -104,7 +104,7 @@ public class ApiVersionSet extends io.pulumi.resources.CustomResource {
      * Name of query parameter that indicates the API Version if versioningScheme is set to `query`.
      * 
      */
-    @OutputExport(name="versionQueryName", type=String.class, parameters={})
+    @Export(name="versionQueryName", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionQueryName;
 
     /**
@@ -118,7 +118,7 @@ public class ApiVersionSet extends io.pulumi.resources.CustomResource {
      * An value that determines where the API Version identifier will be located in a HTTP request.
      * 
      */
-    @OutputExport(name="versioningScheme", type=String.class, parameters={})
+    @Export(name="versioningScheme", type=String.class, parameters={})
     private Output<String> versioningScheme;
 
     /**

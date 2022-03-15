@@ -5,7 +5,7 @@ package io.pulumi.azurenative.portal.inputs;
 
 import io.pulumi.azurenative.portal.inputs.DashboardPartsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class DashboardLensArgs extends io.pulumi.resources.ResourceArgs {
      * The dashboard len's metadata.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,Object>> metadata;
 
     public Output<Map<String,Object>> getMetadata() {
@@ -38,7 +38,7 @@ public final class DashboardLensArgs extends io.pulumi.resources.ResourceArgs {
      * The lens order.
      * 
      */
-    @InputImport(name="order", required=true)
+    @Import(name="order", required=true)
       private final Output<Integer> order;
 
     public Output<Integer> getOrder() {
@@ -49,7 +49,7 @@ public final class DashboardLensArgs extends io.pulumi.resources.ResourceArgs {
      * The dashboard parts.
      * 
      */
-    @InputImport(name="parts", required=true)
+    @Import(name="parts", required=true)
       private final Output<List<DashboardPartsArgs>> parts;
 
     public Output<List<DashboardPartsArgs>> getParts() {

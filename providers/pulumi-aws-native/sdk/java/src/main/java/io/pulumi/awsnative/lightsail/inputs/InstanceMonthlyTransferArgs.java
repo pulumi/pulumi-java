@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class InstanceMonthlyTransferArgs extends io.pulumi.resources.Resou
      * GbPerMonthAllocated of the Instance.
      * 
      */
-    @InputImport(name="gbPerMonthAllocated")
+    @Import(name="gbPerMonthAllocated")
       private final @Nullable Output<String> gbPerMonthAllocated;
 
     public Output<String> getGbPerMonthAllocated() {

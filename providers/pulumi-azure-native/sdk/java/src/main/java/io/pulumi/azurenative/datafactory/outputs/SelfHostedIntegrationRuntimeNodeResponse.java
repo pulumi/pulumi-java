@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SelfHostedIntegrationRuntimeNodeResponse {
     /**
      * The integration runtime capabilities dictionary
@@ -103,26 +103,26 @@ public final class SelfHostedIntegrationRuntimeNodeResponse {
      */
     private final String versionStatus;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SelfHostedIntegrationRuntimeNodeResponse(
-        @OutputCustomType.Parameter("capabilities") Map<String,String> capabilities,
-        @OutputCustomType.Parameter("concurrentJobsLimit") Integer concurrentJobsLimit,
-        @OutputCustomType.Parameter("expiryTime") String expiryTime,
-        @OutputCustomType.Parameter("hostServiceUri") String hostServiceUri,
-        @OutputCustomType.Parameter("isActiveDispatcher") Boolean isActiveDispatcher,
-        @OutputCustomType.Parameter("lastConnectTime") String lastConnectTime,
-        @OutputCustomType.Parameter("lastEndUpdateTime") String lastEndUpdateTime,
-        @OutputCustomType.Parameter("lastStartTime") String lastStartTime,
-        @OutputCustomType.Parameter("lastStartUpdateTime") String lastStartUpdateTime,
-        @OutputCustomType.Parameter("lastStopTime") String lastStopTime,
-        @OutputCustomType.Parameter("lastUpdateResult") String lastUpdateResult,
-        @OutputCustomType.Parameter("machineName") String machineName,
-        @OutputCustomType.Parameter("maxConcurrentJobs") Integer maxConcurrentJobs,
-        @OutputCustomType.Parameter("nodeName") String nodeName,
-        @OutputCustomType.Parameter("registerTime") String registerTime,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("version") String version,
-        @OutputCustomType.Parameter("versionStatus") String versionStatus) {
+        @CustomType.Parameter("capabilities") Map<String,String> capabilities,
+        @CustomType.Parameter("concurrentJobsLimit") Integer concurrentJobsLimit,
+        @CustomType.Parameter("expiryTime") String expiryTime,
+        @CustomType.Parameter("hostServiceUri") String hostServiceUri,
+        @CustomType.Parameter("isActiveDispatcher") Boolean isActiveDispatcher,
+        @CustomType.Parameter("lastConnectTime") String lastConnectTime,
+        @CustomType.Parameter("lastEndUpdateTime") String lastEndUpdateTime,
+        @CustomType.Parameter("lastStartTime") String lastStartTime,
+        @CustomType.Parameter("lastStartUpdateTime") String lastStartUpdateTime,
+        @CustomType.Parameter("lastStopTime") String lastStopTime,
+        @CustomType.Parameter("lastUpdateResult") String lastUpdateResult,
+        @CustomType.Parameter("machineName") String machineName,
+        @CustomType.Parameter("maxConcurrentJobs") Integer maxConcurrentJobs,
+        @CustomType.Parameter("nodeName") String nodeName,
+        @CustomType.Parameter("registerTime") String registerTime,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("version") String version,
+        @CustomType.Parameter("versionStatus") String versionStatus) {
         this.capabilities = capabilities;
         this.concurrentJobsLimit = concurrentJobsLimit;
         this.expiryTime = expiryTime;

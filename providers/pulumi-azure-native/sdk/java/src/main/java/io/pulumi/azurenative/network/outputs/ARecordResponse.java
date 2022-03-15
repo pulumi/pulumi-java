@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ARecordResponse {
     /**
      * The IPv4 address of this A record.
@@ -17,8 +17,8 @@ public final class ARecordResponse {
      */
     private final @Nullable String ipv4Address;
 
-    @OutputCustomType.Constructor
-    private ARecordResponse(@OutputCustomType.Parameter("ipv4Address") @Nullable String ipv4Address) {
+    @CustomType.Constructor
+    private ARecordResponse(@CustomType.Parameter("ipv4Address") @Nullable String ipv4Address) {
         this.ipv4Address = ipv4Address;
     }
 

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.azurenative.documentdb.inputs.RoleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * Cosmos DB database account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -31,7 +31,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * A custom definition for the USer Definition.
      * 
      */
-    @InputImport(name="customData")
+    @Import(name="customData")
       private final @Nullable Output<String> customData;
 
     public Output<String> getCustomData() {
@@ -42,7 +42,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * The database name for which access is being granted for this User Definition.
      * 
      */
-    @InputImport(name="databaseName")
+    @Import(name="databaseName")
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
@@ -53,7 +53,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * The Mongo Auth mechanism. For now, we only support auth mechanism SCRAM-SHA-256.
      * 
      */
-    @InputImport(name="mechanisms")
+    @Import(name="mechanisms")
       private final @Nullable Output<String> mechanisms;
 
     public Output<String> getMechanisms() {
@@ -64,7 +64,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * The ID for the User Definition {dbName.userName}.
      * 
      */
-    @InputImport(name="mongoUserDefinitionId")
+    @Import(name="mongoUserDefinitionId")
       private final @Nullable Output<String> mongoUserDefinitionId;
 
     public Output<String> getMongoUserDefinitionId() {
@@ -75,7 +75,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * The password for User Definition. Response does not contain user password.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -86,7 +86,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -97,7 +97,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * The set of roles inherited by the User Definition.
      * 
      */
-    @InputImport(name="roles")
+    @Import(name="roles")
       private final @Nullable Output<List<RoleArgs>> roles;
 
     public Output<List<RoleArgs>> getRoles() {
@@ -108,7 +108,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
      * The user name for User Definition.
      * 
      */
-    @InputImport(name="userName")
+    @Import(name="userName")
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {

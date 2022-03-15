@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketRedirectRuleProtocol;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketRedirectRule {
     /**
      * The host name to use in the redirect request.
@@ -38,13 +38,13 @@ public final class BucketRedirectRule {
      */
     private final @Nullable String replaceKeyWith;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketRedirectRule(
-        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
-        @OutputCustomType.Parameter("httpRedirectCode") @Nullable String httpRedirectCode,
-        @OutputCustomType.Parameter("protocol") @Nullable BucketRedirectRuleProtocol protocol,
-        @OutputCustomType.Parameter("replaceKeyPrefixWith") @Nullable String replaceKeyPrefixWith,
-        @OutputCustomType.Parameter("replaceKeyWith") @Nullable String replaceKeyWith) {
+        @CustomType.Parameter("hostName") @Nullable String hostName,
+        @CustomType.Parameter("httpRedirectCode") @Nullable String httpRedirectCode,
+        @CustomType.Parameter("protocol") @Nullable BucketRedirectRuleProtocol protocol,
+        @CustomType.Parameter("replaceKeyPrefixWith") @Nullable String replaceKeyPrefixWith,
+        @CustomType.Parameter("replaceKeyWith") @Nullable String replaceKeyWith) {
         this.hostName = hostName;
         this.httpRedirectCode = httpRedirectCode;
         this.protocol = protocol;

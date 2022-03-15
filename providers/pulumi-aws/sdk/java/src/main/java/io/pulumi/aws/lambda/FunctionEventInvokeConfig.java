@@ -8,7 +8,7 @@ import io.pulumi.aws.lambda.FunctionEventInvokeConfigArgs;
 import io.pulumi.aws.lambda.inputs.FunctionEventInvokeConfigState;
 import io.pulumi.aws.lambda.outputs.FunctionEventInvokeConfigDestinationConfig;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -52,7 +52,7 @@ public class FunctionEventInvokeConfig extends io.pulumi.resources.CustomResourc
      * Configuration block with destination configuration. See below for details.
      * 
      */
-    @OutputExport(name="destinationConfig", type=FunctionEventInvokeConfigDestinationConfig.class, parameters={})
+    @Export(name="destinationConfig", type=FunctionEventInvokeConfigDestinationConfig.class, parameters={})
     private Output</* @Nullable */ FunctionEventInvokeConfigDestinationConfig> destinationConfig;
 
     /**
@@ -66,7 +66,7 @@ public class FunctionEventInvokeConfig extends io.pulumi.resources.CustomResourc
      * Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
      * 
      */
-    @OutputExport(name="functionName", type=String.class, parameters={})
+    @Export(name="functionName", type=String.class, parameters={})
     private Output<String> functionName;
 
     /**
@@ -80,7 +80,7 @@ public class FunctionEventInvokeConfig extends io.pulumi.resources.CustomResourc
      * Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
      * 
      */
-    @OutputExport(name="maximumEventAgeInSeconds", type=Integer.class, parameters={})
+    @Export(name="maximumEventAgeInSeconds", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maximumEventAgeInSeconds;
 
     /**
@@ -94,7 +94,7 @@ public class FunctionEventInvokeConfig extends io.pulumi.resources.CustomResourc
      * Maximum number of times to retry when the function returns an error. Valid values between 0 and 2. Defaults to 2.
      * 
      */
-    @OutputExport(name="maximumRetryAttempts", type=Integer.class, parameters={})
+    @Export(name="maximumRetryAttempts", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> maximumRetryAttempts;
 
     /**
@@ -108,7 +108,7 @@ public class FunctionEventInvokeConfig extends io.pulumi.resources.CustomResourc
      * Lambda Function published version, `$LATEST`, or Lambda Alias name.
      * 
      */
-    @OutputExport(name="qualifier", type=String.class, parameters={})
+    @Export(name="qualifier", type=String.class, parameters={})
     private Output</* @Nullable */ String> qualifier;
 
     /**

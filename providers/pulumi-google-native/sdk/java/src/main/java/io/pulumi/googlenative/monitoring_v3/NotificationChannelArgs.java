@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.monitoring_v3.enums.NotificationChannelVerificationStatus;
 import io.pulumi.googlenative.monitoring_v3.inputs.MutationRecordArgs;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * Record of the creation of this channel.
      * 
      */
-    @InputImport(name="creationRecord")
+    @Import(name="creationRecord")
       private final @Nullable Output<MutationRecordArgs> creationRecord;
 
     public Output<MutationRecordArgs> getCreationRecord() {
@@ -34,7 +34,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * An optional human-readable description of this notification channel. This description may provide additional details, beyond the display name, for the channel. This may not exceed 1024 Unicode characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique name in order to make it easier to identify the channels in your project, though this is not enforced. The display name is limited to 512 Unicode characters.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -56,7 +56,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * Whether notifications are forwarded to the described channel. This makes it possible to disable delivery of notifications to a particular channel without removing the channel from all alerting policies that reference the channel. This is a more convenient approach when the change is temporary and you want to receive notifications from the same set of alerting policies on the channel at some point in the future.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -67,7 +67,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * Configuration fields that define the channel and its behavior. The permissible and required labels are specified in the NotificationChannelDescriptor.labels of the NotificationChannelDescriptor corresponding to the type field.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -78,7 +78,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * Records of the modification of this channel.
      * 
      */
-    @InputImport(name="mutationRecords")
+    @Import(name="mutationRecords")
       private final @Nullable Output<List<MutationRecordArgs>> mutationRecords;
 
     public Output<List<MutationRecordArgs>> getMutationRecords() {
@@ -89,14 +89,14 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * The full REST resource name for this channel. The format is: projects/[PROJECT_ID_OR_NUMBER]/notificationChannels/[CHANNEL_ID] The [CHANNEL_ID] is automatically assigned by the server on creation.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -107,7 +107,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * The type of the notification channel. This field matches the value of the NotificationChannelDescriptor.type field.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -118,7 +118,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * User-supplied key/value data that does not need to conform to the corresponding NotificationChannelDescriptor's schema, unlike the labels field. This field is intended to be used for organizing and identifying the NotificationChannel objects.The field can contain up to 64 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
      * 
      */
-    @InputImport(name="userLabels")
+    @Import(name="userLabels")
       private final @Nullable Output<Map<String,String>> userLabels;
 
     public Output<Map<String,String>> getUserLabels() {
@@ -129,7 +129,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * Indicates whether this channel has been verified or not. On a ListNotificationChannels or GetNotificationChannel operation, this field is expected to be populated.If the value is UNVERIFIED, then it indicates that the channel is non-functioning (it both requires verification and lacks verification); otherwise, it is assumed that the channel works.If the channel is neither VERIFIED nor UNVERIFIED, it implies that the channel is of a type that does not require verification or that this specific channel has been exempted from verification because it was created prior to verification being required for channels of this type.This field cannot be modified using a standard UpdateNotificationChannel operation. To change the value of this field, you must call VerifyNotificationChannel.
      * 
      */
-    @InputImport(name="verificationStatus")
+    @Import(name="verificationStatus")
       private final @Nullable Output<NotificationChannelVerificationStatus> verificationStatus;
 
     public Output<NotificationChannelVerificationStatus> getVerificationStatus() {

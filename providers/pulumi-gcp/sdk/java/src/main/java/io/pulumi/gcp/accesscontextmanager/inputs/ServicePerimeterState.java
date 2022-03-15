@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterSpecGetArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterStatusGetArgs;
 import java.lang.Boolean;
@@ -21,7 +21,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * Time the AccessPolicy was created in UTC.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -33,7 +33,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * behavior.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -58,7 +58,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * Format: accessPolicies/{policy_id}
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -84,7 +84,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
      * 
      */
-    @InputImport(name="perimeterType")
+    @Import(name="perimeterType")
       private final @Nullable Output<String> perimeterType;
 
     public Output<String> getPerimeterType() {
@@ -99,7 +99,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="spec")
+    @Import(name="spec")
       private final @Nullable Output<ServicePerimeterSpecGetArgs> spec;
 
     public Output<ServicePerimeterSpecGetArgs> getSpec() {
@@ -113,7 +113,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<ServicePerimeterStatusGetArgs> status;
 
     public Output<ServicePerimeterStatusGetArgs> getStatus() {
@@ -124,7 +124,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * Human readable title. Must be unique within the Policy.
      * 
      */
-    @InputImport(name="title")
+    @Import(name="title")
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
@@ -135,7 +135,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * Time the AccessPolicy was updated in UTC.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
@@ -154,7 +154,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * bet set to True if any of the fields in the spec are set to non-default values.
      * 
      */
-    @InputImport(name="useExplicitDryRunSpec")
+    @Import(name="useExplicitDryRunSpec")
       private final @Nullable Output<Boolean> useExplicitDryRunSpec;
 
     public Output<Boolean> getUseExplicitDryRunSpec() {

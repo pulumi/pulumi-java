@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayFirewallDisabledRuleGroupResponse {
     /**
      * The name of the rule group that will be disabled.
@@ -23,10 +23,10 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupResponse {
      */
     private final @Nullable List<Integer> rules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayFirewallDisabledRuleGroupResponse(
-        @OutputCustomType.Parameter("ruleGroupName") String ruleGroupName,
-        @OutputCustomType.Parameter("rules") @Nullable List<Integer> rules) {
+        @CustomType.Parameter("ruleGroupName") String ruleGroupName,
+        @CustomType.Parameter("rules") @Nullable List<Integer> rules) {
         this.ruleGroupName = ruleGroupName;
         this.rules = rules;
     }

@@ -3,14 +3,14 @@
 
 package io.pulumi.awsnative.logs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetQueryDefinitionResult {
     /**
      * Optionally define specific log groups as part of your query definition
@@ -33,12 +33,12 @@ public final class GetQueryDefinitionResult {
      */
     private final @Nullable String queryString;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetQueryDefinitionResult(
-        @OutputCustomType.Parameter("logGroupNames") @Nullable List<String> logGroupNames,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("queryDefinitionId") @Nullable String queryDefinitionId,
-        @OutputCustomType.Parameter("queryString") @Nullable String queryString) {
+        @CustomType.Parameter("logGroupNames") @Nullable List<String> logGroupNames,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("queryDefinitionId") @Nullable String queryDefinitionId,
+        @CustomType.Parameter("queryString") @Nullable String queryString) {
         this.logGroupNames = logGroupNames;
         this.name = name;
         this.queryDefinitionId = queryDefinitionId;

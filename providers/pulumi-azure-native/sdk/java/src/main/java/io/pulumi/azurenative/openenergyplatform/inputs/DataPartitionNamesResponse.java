@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.openenergyplatform.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class DataPartitionNamesResponse extends io.pulumi.resources.Invoke
 
     public static final DataPartitionNamesResponse Empty = new DataPartitionNamesResponse();
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

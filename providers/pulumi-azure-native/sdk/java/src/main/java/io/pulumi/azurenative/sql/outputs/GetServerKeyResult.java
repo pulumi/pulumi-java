@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServerKeyResult {
     /**
      * Key auto rotation opt-in flag. Either true or false.
@@ -56,17 +56,17 @@ public final class GetServerKeyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServerKeyResult(
-        @OutputCustomType.Parameter("autoRotationEnabled") Boolean autoRotationEnabled,
-        @OutputCustomType.Parameter("creationDate") String creationDate,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("subregion") String subregion,
-        @OutputCustomType.Parameter("thumbprint") String thumbprint,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("autoRotationEnabled") Boolean autoRotationEnabled,
+        @CustomType.Parameter("creationDate") String creationDate,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("subregion") String subregion,
+        @CustomType.Parameter("thumbprint") String thumbprint,
+        @CustomType.Parameter("type") String type) {
         this.autoRotationEnabled = autoRotationEnabled;
         this.creationDate = creationDate;
         this.id = id;

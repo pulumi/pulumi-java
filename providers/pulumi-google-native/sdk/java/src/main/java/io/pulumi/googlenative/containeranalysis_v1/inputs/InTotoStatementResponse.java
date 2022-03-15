@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.InTotoProvenanceResponse;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.SlsaProvenanceResponse;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.SubjectResponse;
@@ -24,28 +24,28 @@ public final class InTotoStatementResponse extends io.pulumi.resources.InvokeArg
      * "https://slsa.dev/provenance/v0.1" for SlsaProvenance.
      * 
      */
-    @InputImport(name="predicateType", required=true)
+    @Import(name="predicateType", required=true)
       private final String predicateType;
 
     public String getPredicateType() {
         return this.predicateType;
     }
 
-    @InputImport(name="provenance", required=true)
+    @Import(name="provenance", required=true)
       private final InTotoProvenanceResponse provenance;
 
     public InTotoProvenanceResponse getProvenance() {
         return this.provenance;
     }
 
-    @InputImport(name="slsaProvenance", required=true)
+    @Import(name="slsaProvenance", required=true)
       private final SlsaProvenanceResponse slsaProvenance;
 
     public SlsaProvenanceResponse getSlsaProvenance() {
         return this.slsaProvenance;
     }
 
-    @InputImport(name="subject", required=true)
+    @Import(name="subject", required=true)
       private final List<SubjectResponse> subject;
 
     public List<SubjectResponse> getSubject() {
@@ -56,7 +56,7 @@ public final class InTotoStatementResponse extends io.pulumi.resources.InvokeArg
      * Always "https://in-toto.io/Statement/v0.1".
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

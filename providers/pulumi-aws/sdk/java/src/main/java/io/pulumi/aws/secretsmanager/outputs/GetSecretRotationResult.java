@@ -4,13 +4,13 @@
 package io.pulumi.aws.secretsmanager.outputs;
 
 import io.pulumi.aws.secretsmanager.outputs.GetSecretRotationRotationRule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSecretRotationResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -34,13 +34,13 @@ public final class GetSecretRotationResult {
     private final List<GetSecretRotationRotationRule> rotationRules;
     private final String secretId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSecretRotationResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("rotationEnabled") Boolean rotationEnabled,
-        @OutputCustomType.Parameter("rotationLambdaArn") String rotationLambdaArn,
-        @OutputCustomType.Parameter("rotationRules") List<GetSecretRotationRotationRule> rotationRules,
-        @OutputCustomType.Parameter("secretId") String secretId) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("rotationEnabled") Boolean rotationEnabled,
+        @CustomType.Parameter("rotationLambdaArn") String rotationLambdaArn,
+        @CustomType.Parameter("rotationRules") List<GetSecretRotationRotationRule> rotationRules,
+        @CustomType.Parameter("secretId") String secretId) {
         this.id = id;
         this.rotationEnabled = rotationEnabled;
         this.rotationLambdaArn = rotationLambdaArn;

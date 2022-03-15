@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BigQueryDestinationResponse {
     /**
      * The ID of a BigQuery Dataset.
@@ -15,8 +15,8 @@ public final class BigQueryDestinationResponse {
      */
     private final String datasetId;
 
-    @OutputCustomType.Constructor
-    private BigQueryDestinationResponse(@OutputCustomType.Parameter("datasetId") String datasetId) {
+    @CustomType.Constructor
+    private BigQueryDestinationResponse(@CustomType.Parameter("datasetId") String datasetId) {
         this.datasetId = datasetId;
     }
 

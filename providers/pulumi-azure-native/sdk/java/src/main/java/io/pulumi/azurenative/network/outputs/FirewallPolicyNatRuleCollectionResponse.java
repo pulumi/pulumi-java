@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.outputs.ApplicationRuleResponse;
 import io.pulumi.azurenative.network.outputs.FirewallPolicyNatRuleCollectionActionResponse;
 import io.pulumi.azurenative.network.outputs.NatRuleResponse;
 import io.pulumi.azurenative.network.outputs.NetworkRuleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FirewallPolicyNatRuleCollectionResponse {
     /**
      * The action type of a Nat rule collection.
@@ -45,13 +45,13 @@ public final class FirewallPolicyNatRuleCollectionResponse {
      */
     private final @Nullable List<Object> rules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FirewallPolicyNatRuleCollectionResponse(
-        @OutputCustomType.Parameter("action") @Nullable FirewallPolicyNatRuleCollectionActionResponse action,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("ruleCollectionType") String ruleCollectionType,
-        @OutputCustomType.Parameter("rules") @Nullable List<Object> rules) {
+        @CustomType.Parameter("action") @Nullable FirewallPolicyNatRuleCollectionActionResponse action,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("ruleCollectionType") String ruleCollectionType,
+        @CustomType.Parameter("rules") @Nullable List<Object> rules) {
         this.action = action;
         this.name = name;
         this.priority = priority;

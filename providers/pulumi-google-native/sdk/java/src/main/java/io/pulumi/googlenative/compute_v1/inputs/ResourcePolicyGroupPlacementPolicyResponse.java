@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
      * The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network
      * 
      */
-    @InputImport(name="availabilityDomainCount", required=true)
+    @Import(name="availabilityDomainCount", required=true)
       private final Integer availabilityDomainCount;
 
     public Integer getAvailabilityDomainCount() {
@@ -32,7 +32,7 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
      * Specifies network collocation
      * 
      */
-    @InputImport(name="collocation", required=true)
+    @Import(name="collocation", required=true)
       private final String collocation;
 
     public String getCollocation() {
@@ -43,7 +43,7 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
      * Number of vms in this placement group
      * 
      */
-    @InputImport(name="vmCount", required=true)
+    @Import(name="vmCount", required=true)
       private final Integer vmCount;
 
     public Integer getVmCount() {

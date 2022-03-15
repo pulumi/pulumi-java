@@ -5,7 +5,7 @@ package io.pulumi.aws.connect;
 
 import io.pulumi.aws.connect.inputs.QueueOutboundCallerConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the description of the Queue.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the identifier of the Hours of Operation.
      * 
      */
-    @InputImport(name="hoursOfOperationId", required=true)
+    @Import(name="hoursOfOperationId", required=true)
       private final Output<String> hoursOfOperationId;
 
     public Output<String> getHoursOfOperationId() {
@@ -44,7 +44,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the identifier of the hosting Amazon Connect Instance.
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -55,7 +55,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the maximum number of contacts that can be in the queue before it is considered full. Minimum value of 0.
      * 
      */
-    @InputImport(name="maxContacts")
+    @Import(name="maxContacts")
       private final @Nullable Output<Integer> maxContacts;
 
     public Output<Integer> getMaxContacts() {
@@ -66,7 +66,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the name of the Queue.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -77,7 +77,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * A block that defines the outbound caller ID name, number, and outbound whisper flow. The Outbound Caller Config block is documented below.
      * 
      */
-    @InputImport(name="outboundCallerConfig")
+    @Import(name="outboundCallerConfig")
       private final @Nullable Output<QueueOutboundCallerConfigArgs> outboundCallerConfig;
 
     public Output<QueueOutboundCallerConfigArgs> getOutboundCallerConfig() {
@@ -88,7 +88,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies a list of quick connects ids that determine the quick connects available to agents who are working the queue.
      * 
      */
-    @InputImport(name="quickConnectIds")
+    @Import(name="quickConnectIds")
       private final @Nullable Output<List<String>> quickConnectIds;
 
     public Output<List<String>> getQuickConnectIds() {
@@ -99,7 +99,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies the description of the Queue. Valid values are `ENABLED`, `DISABLED`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
@@ -110,7 +110,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * Tags to apply to the Queue. If configured with a provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block) present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -121,7 +121,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider [`default_tags` configuration block](https://www.terraform.io/docs/providers/aws/index.html#default_tags-configuration-block).
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

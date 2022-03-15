@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.notificationhubs.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
      * A string that describes the claim type
      * 
      */
-    @InputImport(name="claimType", required=true)
+    @Import(name="claimType", required=true)
       private final String claimType;
 
     public String getClaimType() {
@@ -35,7 +35,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
      * A string that describes the claim value
      * 
      */
-    @InputImport(name="claimValue", required=true)
+    @Import(name="claimValue", required=true)
       private final String claimValue;
 
     public String getClaimValue() {
@@ -46,7 +46,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
      * The created time for this rule
      * 
      */
-    @InputImport(name="createdTime", required=true)
+    @Import(name="createdTime", required=true)
       private final String createdTime;
 
     public String getCreatedTime() {
@@ -57,7 +57,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
      * A string that describes the authorization rule.
      * 
      */
-    @InputImport(name="keyName", required=true)
+    @Import(name="keyName", required=true)
       private final String keyName;
 
     public String getKeyName() {
@@ -68,7 +68,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
      * The last modified time for this rule
      * 
      */
-    @InputImport(name="modifiedTime", required=true)
+    @Import(name="modifiedTime", required=true)
       private final String modifiedTime;
 
     public String getModifiedTime() {
@@ -79,7 +79,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
      * A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
      */
-    @InputImport(name="primaryKey", required=true)
+    @Import(name="primaryKey", required=true)
       private final String primaryKey;
 
     public String getPrimaryKey() {
@@ -90,7 +90,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
      * The revision number for the rule
      * 
      */
-    @InputImport(name="revision", required=true)
+    @Import(name="revision", required=true)
       private final Integer revision;
 
     public Integer getRevision() {
@@ -101,7 +101,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
      * The rights associated with the rule.
      * 
      */
-    @InputImport(name="rights")
+    @Import(name="rights")
       private final @Nullable List<String> rights;
 
     public List<String> getRights() {
@@ -112,7 +112,7 @@ public final class SharedAccessAuthorizationRulePropertiesResponse extends io.pu
      * A base64-encoded 256-bit primary key for signing and validating the SAS token.
      * 
      */
-    @InputImport(name="secondaryKey", required=true)
+    @Import(name="secondaryKey", required=true)
       private final String secondaryKey;
 
     public String getSecondaryKey() {

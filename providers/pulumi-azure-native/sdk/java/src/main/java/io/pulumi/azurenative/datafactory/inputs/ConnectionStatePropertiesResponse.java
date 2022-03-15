@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ConnectionStatePropertiesResponse extends io.pulumi.resources
      * The actions required on the managed private endpoint
      * 
      */
-    @InputImport(name="actionsRequired", required=true)
+    @Import(name="actionsRequired", required=true)
       private final String actionsRequired;
 
     public String getActionsRequired() {
@@ -31,7 +31,7 @@ public final class ConnectionStatePropertiesResponse extends io.pulumi.resources
      * The managed private endpoint description
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -42,7 +42,7 @@ public final class ConnectionStatePropertiesResponse extends io.pulumi.resources
      * The approval status
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

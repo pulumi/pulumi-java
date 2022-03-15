@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.StandardSqlFieldResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class StandardSqlTableTypeResponse {
     /**
      * The columns in this table type
@@ -16,8 +16,8 @@ public final class StandardSqlTableTypeResponse {
      */
     private final List<StandardSqlFieldResponse> columns;
 
-    @OutputCustomType.Constructor
-    private StandardSqlTableTypeResponse(@OutputCustomType.Parameter("columns") List<StandardSqlFieldResponse> columns) {
+    @CustomType.Constructor
+    private StandardSqlTableTypeResponse(@CustomType.Parameter("columns") List<StandardSqlFieldResponse> columns) {
         this.columns = columns;
     }
 

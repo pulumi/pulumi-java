@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.discovery.k8s.io_v1;
 
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.discovery.k8s.io_v1.EndpointSliceArgs;
@@ -31,7 +31,7 @@ public class EndpointSlice extends io.pulumi.resources.CustomResource {
      *  - `"IPv6"` represents an IPv6 Address.
      * 
      */
-    @OutputExport(name="addressType", type=String.class, parameters={})
+    @Export(name="addressType", type=String.class, parameters={})
     private Output<String> addressType;
 
     /**
@@ -50,7 +50,7 @@ public class EndpointSlice extends io.pulumi.resources.CustomResource {
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
      * 
      */
-    @OutputExport(name="apiVersion", type=String.class, parameters={})
+    @Export(name="apiVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> apiVersion;
 
     /**
@@ -64,7 +64,7 @@ public class EndpointSlice extends io.pulumi.resources.CustomResource {
      * endpoints is a list of unique endpoints in this slice. Each slice may include a maximum of 1000 endpoints.
      * 
      */
-    @OutputExport(name="endpoints", type=List.class, parameters={Endpoint.class})
+    @Export(name="endpoints", type=List.class, parameters={Endpoint.class})
     private Output<List<Endpoint>> endpoints;
 
     /**
@@ -78,7 +78,7 @@ public class EndpointSlice extends io.pulumi.resources.CustomResource {
      * Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -92,7 +92,7 @@ public class EndpointSlice extends io.pulumi.resources.CustomResource {
      * Standard object's metadata.
      * 
      */
-    @OutputExport(name="metadata", type=ObjectMeta.class, parameters={})
+    @Export(name="metadata", type=ObjectMeta.class, parameters={})
     private Output</* @Nullable */ ObjectMeta> metadata;
 
     /**
@@ -106,7 +106,7 @@ public class EndpointSlice extends io.pulumi.resources.CustomResource {
      * ports specifies the list of network ports exposed by each endpoint in this slice. Each port must have a unique name. When ports is empty, it indicates that there are no defined ports. When a port is defined with a nil port value, it indicates "all ports". Each slice may include a maximum of 100 ports.
      * 
      */
-    @OutputExport(name="ports", type=List.class, parameters={EndpointPort.class})
+    @Export(name="ports", type=List.class, parameters={EndpointPort.class})
     private Output</* @Nullable */ List<EndpointPort>> ports;
 
     /**

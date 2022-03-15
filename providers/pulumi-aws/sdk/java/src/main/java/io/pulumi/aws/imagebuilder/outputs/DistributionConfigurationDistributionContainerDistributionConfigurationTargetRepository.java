@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository {
     /**
      * The name of the container repository where the output container image is stored. This name is prefixed by the repository location.
@@ -20,10 +20,10 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository(
-        @OutputCustomType.Parameter("repositoryName") String repositoryName,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("repositoryName") String repositoryName,
+        @CustomType.Parameter("service") String service) {
         this.repositoryName = repositoryName;
         this.service = service;
     }

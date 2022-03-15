@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.acm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetCertificateResult {
     /**
      * Amazon Resource Name (ARN) of the found certificate, suitable for referencing in other resources that support ACM certificates.
@@ -40,17 +40,17 @@ public final class GetCertificateResult {
     private final Map<String,String> tags;
     private final @Nullable List<String> types;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCertificateResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("domain") String domain,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("keyTypes") @Nullable List<String> keyTypes,
-        @OutputCustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("statuses") @Nullable List<String> statuses,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags,
-        @OutputCustomType.Parameter("types") @Nullable List<String> types) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("domain") String domain,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("keyTypes") @Nullable List<String> keyTypes,
+        @CustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("statuses") @Nullable List<String> statuses,
+        @CustomType.Parameter("tags") Map<String,String> tags,
+        @CustomType.Parameter("types") @Nullable List<String> types) {
         this.arn = arn;
         this.domain = domain;
         this.id = id;

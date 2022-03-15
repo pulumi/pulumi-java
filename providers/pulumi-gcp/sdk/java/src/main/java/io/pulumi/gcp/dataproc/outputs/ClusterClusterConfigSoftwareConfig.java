@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClusterConfigSoftwareConfig {
     /**
      * The Cloud Dataproc image version to use
@@ -50,12 +50,12 @@ public final class ClusterClusterConfigSoftwareConfig {
     private final @Nullable Map<String,String> overrideProperties;
     private final @Nullable Map<String,Object> properties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterClusterConfigSoftwareConfig(
-        @OutputCustomType.Parameter("imageVersion") @Nullable String imageVersion,
-        @OutputCustomType.Parameter("optionalComponents") @Nullable List<String> optionalComponents,
-        @OutputCustomType.Parameter("overrideProperties") @Nullable Map<String,String> overrideProperties,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,Object> properties) {
+        @CustomType.Parameter("imageVersion") @Nullable String imageVersion,
+        @CustomType.Parameter("optionalComponents") @Nullable List<String> optionalComponents,
+        @CustomType.Parameter("overrideProperties") @Nullable Map<String,String> overrideProperties,
+        @CustomType.Parameter("properties") @Nullable Map<String,Object> properties) {
         this.imageVersion = imageVersion;
         this.optionalComponents = optionalComponents;
         this.overrideProperties = overrideProperties;

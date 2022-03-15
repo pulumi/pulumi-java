@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.QueryParameterTypeStructTypesItemResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class QueryParameterTypeResponse {
     /**
      * [Optional] The type of the array's elements, if this is an array.
@@ -27,11 +27,11 @@ public final class QueryParameterTypeResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QueryParameterTypeResponse(
-        @OutputCustomType.Parameter("arrayType") QueryParameterTypeResponse arrayType,
-        @OutputCustomType.Parameter("structTypes") List<QueryParameterTypeStructTypesItemResponse> structTypes,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("arrayType") QueryParameterTypeResponse arrayType,
+        @CustomType.Parameter("structTypes") List<QueryParameterTypeStructTypesItemResponse> structTypes,
+        @CustomType.Parameter("type") String type) {
         this.arrayType = arrayType;
         this.structTypes = structTypes;
         this.type = type;

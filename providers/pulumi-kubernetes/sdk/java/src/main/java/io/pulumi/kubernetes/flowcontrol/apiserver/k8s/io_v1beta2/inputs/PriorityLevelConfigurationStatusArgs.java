@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.PriorityLevelConfigurationConditionArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PriorityLevelConfigurationStatusArgs extends io.pulumi.resour
      * `conditions` is the current state of "request-priority".
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<PriorityLevelConfigurationConditionArgs>> conditions;
 
     public Output<List<PriorityLevelConfigurationConditionArgs>> getConditions() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.documentdb.outputs.ConflictResolutionPolicyResponse
 import io.pulumi.azurenative.documentdb.outputs.ContainerPartitionKeyResponse;
 import io.pulumi.azurenative.documentdb.outputs.IndexingPolicyResponse;
 import io.pulumi.azurenative.documentdb.outputs.UniqueKeyPolicyResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GremlinGraphGetPropertiesResponseResource {
     /**
      * The conflict resolution policy for the graph.
@@ -63,17 +63,17 @@ public final class GremlinGraphGetPropertiesResponseResource {
      */
     private final @Nullable UniqueKeyPolicyResponse uniqueKeyPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GremlinGraphGetPropertiesResponseResource(
-        @OutputCustomType.Parameter("conflictResolutionPolicy") @Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy,
-        @OutputCustomType.Parameter("defaultTtl") @Nullable Integer defaultTtl,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("indexingPolicy") @Nullable IndexingPolicyResponse indexingPolicy,
-        @OutputCustomType.Parameter("partitionKey") @Nullable ContainerPartitionKeyResponse partitionKey,
-        @OutputCustomType.Parameter("rid") String rid,
-        @OutputCustomType.Parameter("ts") Double ts,
-        @OutputCustomType.Parameter("uniqueKeyPolicy") @Nullable UniqueKeyPolicyResponse uniqueKeyPolicy) {
+        @CustomType.Parameter("conflictResolutionPolicy") @Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy,
+        @CustomType.Parameter("defaultTtl") @Nullable Integer defaultTtl,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("indexingPolicy") @Nullable IndexingPolicyResponse indexingPolicy,
+        @CustomType.Parameter("partitionKey") @Nullable ContainerPartitionKeyResponse partitionKey,
+        @CustomType.Parameter("rid") String rid,
+        @CustomType.Parameter("ts") Double ts,
+        @CustomType.Parameter("uniqueKeyPolicy") @Nullable UniqueKeyPolicyResponse uniqueKeyPolicy) {
         this.conflictResolutionPolicy = conflictResolutionPolicy;
         this.defaultTtl = defaultTtl;
         this.etag = etag;

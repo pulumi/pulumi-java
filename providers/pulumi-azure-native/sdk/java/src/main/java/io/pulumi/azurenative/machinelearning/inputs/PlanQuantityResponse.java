@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PlanQuantityResponse extends io.pulumi.resources.InvokeArgs {
      * The quantity added to the commitment plan at an interval specified by its allowance frequency.
      * 
      */
-    @InputImport(name="allowance", required=true)
+    @Import(name="allowance", required=true)
       private final Double allowance;
 
     public Double getAllowance() {
@@ -32,7 +32,7 @@ public final class PlanQuantityResponse extends io.pulumi.resources.InvokeArgs {
      * The quantity available to the plan the last time usage was calculated.
      * 
      */
-    @InputImport(name="amount", required=true)
+    @Import(name="amount", required=true)
       private final Double amount;
 
     public Double getAmount() {
@@ -43,7 +43,7 @@ public final class PlanQuantityResponse extends io.pulumi.resources.InvokeArgs {
      * The Azure meter for usage against included quantities.
      * 
      */
-    @InputImport(name="includedQuantityMeter", required=true)
+    @Import(name="includedQuantityMeter", required=true)
       private final String includedQuantityMeter;
 
     public String getIncludedQuantityMeter() {
@@ -54,7 +54,7 @@ public final class PlanQuantityResponse extends io.pulumi.resources.InvokeArgs {
      * The Azure meter for usage which exceeds included quantities.
      * 
      */
-    @InputImport(name="overageMeter", required=true)
+    @Import(name="overageMeter", required=true)
       private final String overageMeter;
 
     public String getOverageMeter() {

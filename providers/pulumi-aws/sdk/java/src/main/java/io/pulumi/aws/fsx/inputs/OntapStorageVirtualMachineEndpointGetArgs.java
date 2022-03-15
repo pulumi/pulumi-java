@@ -8,7 +8,7 @@ import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineEndpointManagementGetA
 import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineEndpointNfGetArgs;
 import io.pulumi.aws.fsx.inputs.OntapStorageVirtualMachineEndpointSmbGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class OntapStorageVirtualMachineEndpointGetArgs extends io.pulumi.r
      * An endpoint for accessing data on your storage virtual machine via iSCSI protocol. See Endpoint.
      * 
      */
-    @InputImport(name="iscses")
+    @Import(name="iscses")
       private final @Nullable Output<List<OntapStorageVirtualMachineEndpointIscseGetArgs>> iscses;
 
     public Output<List<OntapStorageVirtualMachineEndpointIscseGetArgs>> getIscses() {
@@ -33,7 +33,7 @@ public final class OntapStorageVirtualMachineEndpointGetArgs extends io.pulumi.r
      * An endpoint for managing your file system using the NetApp ONTAP CLI and NetApp ONTAP API. See Endpoint.
      * 
      */
-    @InputImport(name="managements")
+    @Import(name="managements")
       private final @Nullable Output<List<OntapStorageVirtualMachineEndpointManagementGetArgs>> managements;
 
     public Output<List<OntapStorageVirtualMachineEndpointManagementGetArgs>> getManagements() {
@@ -44,7 +44,7 @@ public final class OntapStorageVirtualMachineEndpointGetArgs extends io.pulumi.r
      * An endpoint for accessing data on your storage virtual machine via NFS protocol. See Endpoint.
      * 
      */
-    @InputImport(name="nfs")
+    @Import(name="nfs")
       private final @Nullable Output<List<OntapStorageVirtualMachineEndpointNfGetArgs>> nfs;
 
     public Output<List<OntapStorageVirtualMachineEndpointNfGetArgs>> getNfs() {
@@ -55,7 +55,7 @@ public final class OntapStorageVirtualMachineEndpointGetArgs extends io.pulumi.r
      * An endpoint for accessing data on your storage virtual machine via SMB protocol. This is only set if an active_directory_configuration has been set. See Endpoint.
      * 
      */
-    @InputImport(name="smbs")
+    @Import(name="smbs")
       private final @Nullable Output<List<OntapStorageVirtualMachineEndpointSmbGetArgs>> smbs;
 
     public Output<List<OntapStorageVirtualMachineEndpointSmbGetArgs>> getSmbs() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.operationsmanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagementAssociationPropertiesResponse {
     /**
      * The applicationId of the appliance for this association.
@@ -15,8 +15,8 @@ public final class ManagementAssociationPropertiesResponse {
      */
     private final String applicationId;
 
-    @OutputCustomType.Constructor
-    private ManagementAssociationPropertiesResponse(@OutputCustomType.Parameter("applicationId") String applicationId) {
+    @CustomType.Constructor
+    private ManagementAssociationPropertiesResponse(@CustomType.Parameter("applicationId") String applicationId) {
         this.applicationId = applicationId;
     }
 

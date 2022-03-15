@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.servicecatalog.PortfolioShareArgs;
 import io.pulumi.aws.servicecatalog.inputs.PortfolioShareState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -41,7 +41,7 @@ public class PortfolioShare extends io.pulumi.resources.CustomResource {
      * Language code. Valid values: `en` (English), `jp` (Japanese), `zh` (Chinese). Default value is `en`.
      * 
      */
-    @OutputExport(name="acceptLanguage", type=String.class, parameters={})
+    @Export(name="acceptLanguage", type=String.class, parameters={})
     private Output</* @Nullable */ String> acceptLanguage;
 
     /**
@@ -55,7 +55,7 @@ public class PortfolioShare extends io.pulumi.resources.CustomResource {
      * Whether the shared portfolio is imported by the recipient account. If the recipient is organizational, the share is automatically imported, and the field is always set to true.
      * 
      */
-    @OutputExport(name="accepted", type=Boolean.class, parameters={})
+    @Export(name="accepted", type=Boolean.class, parameters={})
     private Output<Boolean> accepted;
 
     /**
@@ -69,7 +69,7 @@ public class PortfolioShare extends io.pulumi.resources.CustomResource {
      * Portfolio identifier.
      * 
      */
-    @OutputExport(name="portfolioId", type=String.class, parameters={})
+    @Export(name="portfolioId", type=String.class, parameters={})
     private Output<String> portfolioId;
 
     /**
@@ -83,7 +83,7 @@ public class PortfolioShare extends io.pulumi.resources.CustomResource {
      * Identifier of the principal with whom you will share the portfolio. Valid values AWS account IDs and ARNs of AWS Organizations and organizational units.
      * 
      */
-    @OutputExport(name="principalId", type=String.class, parameters={})
+    @Export(name="principalId", type=String.class, parameters={})
     private Output<String> principalId;
 
     /**
@@ -97,7 +97,7 @@ public class PortfolioShare extends io.pulumi.resources.CustomResource {
      * Whether to enable sharing of `aws.servicecatalog.TagOption` resources when creating the portfolio share.
      * 
      */
-    @OutputExport(name="shareTagOptions", type=Boolean.class, parameters={})
+    @Export(name="shareTagOptions", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> shareTagOptions;
 
     /**
@@ -111,7 +111,7 @@ public class PortfolioShare extends io.pulumi.resources.CustomResource {
      * Type of portfolio share. Valid values are `ACCOUNT` (an external account), `ORGANIZATION` (a share to every account in an organization), `ORGANIZATIONAL_UNIT`, `ORGANIZATION_MEMBER_ACCOUNT` (a share to an account in an organization).
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -125,7 +125,7 @@ public class PortfolioShare extends io.pulumi.resources.CustomResource {
      * Whether to wait (up to the timeout) for the share to be accepted. Organizational shares are automatically accepted.
      * 
      */
-    @OutputExport(name="waitForAcceptance", type=Boolean.class, parameters={})
+    @Export(name="waitForAcceptance", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> waitForAcceptance;
 
     /**

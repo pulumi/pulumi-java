@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstancePropertiesPatchResponse {
     /**
      * The label key-value pairs that you want to patch onto the instance.
@@ -21,10 +21,10 @@ public final class InstancePropertiesPatchResponse {
      */
     private final Map<String,String> metadata;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstancePropertiesPatchResponse(
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata) {
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("metadata") Map<String,String> metadata) {
         this.labels = labels;
         this.metadata = metadata;
     }

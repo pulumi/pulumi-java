@@ -4,24 +4,24 @@
 package io.pulumi.awsnative.mwaa.outputs;
 
 import io.pulumi.awsnative.mwaa.enums.EnvironmentLoggingLevel;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentModuleLoggingConfiguration {
     private final @Nullable String cloudWatchLogGroupArn;
     private final @Nullable Boolean enabled;
     private final @Nullable EnvironmentLoggingLevel logLevel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentModuleLoggingConfiguration(
-        @OutputCustomType.Parameter("cloudWatchLogGroupArn") @Nullable String cloudWatchLogGroupArn,
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("logLevel") @Nullable EnvironmentLoggingLevel logLevel) {
+        @CustomType.Parameter("cloudWatchLogGroupArn") @Nullable String cloudWatchLogGroupArn,
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("logLevel") @Nullable EnvironmentLoggingLevel logLevel) {
         this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
         this.enabled = enabled;
         this.logLevel = logLevel;

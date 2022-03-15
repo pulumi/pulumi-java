@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
      * The interval (in hours) at which Hyper-V Replica should create an application consistent snapshot within the VM.
      * 
      */
-    @InputImport(name="applicationConsistentSnapshotFrequencyInHours")
+    @Import(name="applicationConsistentSnapshotFrequencyInHours")
       private final @Nullable Output<Integer> applicationConsistentSnapshotFrequencyInHours;
 
     public Output<Integer> getApplicationConsistentSnapshotFrequencyInHours() {
@@ -36,7 +36,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
      * Expected value is 'HyperVReplicaAzure'.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -47,7 +47,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
      * The scheduled start time for the initial replication. If this parameter is Null, the initial replication starts immediately.
      * 
      */
-    @InputImport(name="onlineReplicationStartTime")
+    @Import(name="onlineReplicationStartTime")
       private final @Nullable Output<String> onlineReplicationStartTime;
 
     public Output<String> getOnlineReplicationStartTime() {
@@ -58,7 +58,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
      * The duration (in hours) to which point the recovery history needs to be maintained.
      * 
      */
-    @InputImport(name="recoveryPointHistoryDuration")
+    @Import(name="recoveryPointHistoryDuration")
       private final @Nullable Output<Integer> recoveryPointHistoryDuration;
 
     public Output<Integer> getRecoveryPointHistoryDuration() {
@@ -69,7 +69,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
      * The replication interval.
      * 
      */
-    @InputImport(name="replicationInterval")
+    @Import(name="replicationInterval")
       private final @Nullable Output<Integer> replicationInterval;
 
     public Output<Integer> getReplicationInterval() {
@@ -80,7 +80,7 @@ public final class HyperVReplicaAzurePolicyInputArgs extends io.pulumi.resources
      * The list of storage accounts to which the VMs in the primary cloud can replicate to.
      * 
      */
-    @InputImport(name="storageAccounts")
+    @Import(name="storageAccounts")
       private final @Nullable Output<List<String>> storageAccounts;
 
     public Output<List<String>> getStorageAccounts() {

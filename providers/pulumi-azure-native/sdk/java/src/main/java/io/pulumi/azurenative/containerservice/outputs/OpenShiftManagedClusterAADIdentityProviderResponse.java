@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OpenShiftManagedClusterAADIdentityProviderResponse {
     /**
      * The clientId password associated with the provider.
@@ -38,13 +38,13 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OpenShiftManagedClusterAADIdentityProviderResponse(
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("customerAdminGroupId") @Nullable String customerAdminGroupId,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("secret") @Nullable String secret,
-        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("customerAdminGroupId") @Nullable String customerAdminGroupId,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("secret") @Nullable String secret,
+        @CustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.clientId = clientId;
         this.customerAdminGroupId = customerAdminGroupId;
         this.kind = kind;

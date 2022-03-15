@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class TargetEligibilityErrorMessageResponse extends io.pulumi.resou
      * The localized error message stating the reason why the device is not eligible as a target device.
      * 
      */
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable String message;
 
     public Optional<String> getMessage() {
@@ -33,7 +33,7 @@ public final class TargetEligibilityErrorMessageResponse extends io.pulumi.resou
      * The localized resolution message for the error.
      * 
      */
-    @InputImport(name="resolution")
+    @Import(name="resolution")
       private final @Nullable String resolution;
 
     public Optional<String> getResolution() {
@@ -44,7 +44,7 @@ public final class TargetEligibilityErrorMessageResponse extends io.pulumi.resou
      * The result code for the error, due to which the device does not qualify as a failover target device.
      * 
      */
-    @InputImport(name="resultCode")
+    @Import(name="resultCode")
       private final @Nullable String resultCode;
 
     public Optional<String> getResultCode() {

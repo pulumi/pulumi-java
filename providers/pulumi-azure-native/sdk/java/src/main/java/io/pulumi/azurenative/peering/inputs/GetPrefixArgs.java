@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetPrefixArgs extends io.pulumi.resources.InvokeArgs {
      * The properties to be expanded.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {
@@ -29,7 +29,7 @@ public final class GetPrefixArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the peering service.
      * 
      */
-    @InputImport(name="peeringServiceName", required=true)
+    @Import(name="peeringServiceName", required=true)
       private final String peeringServiceName;
 
     public String getPeeringServiceName() {
@@ -40,7 +40,7 @@ public final class GetPrefixArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the prefix.
      * 
      */
-    @InputImport(name="prefixName", required=true)
+    @Import(name="prefixName", required=true)
       private final String prefixName;
 
     public String getPrefixName() {
@@ -51,7 +51,7 @@ public final class GetPrefixArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

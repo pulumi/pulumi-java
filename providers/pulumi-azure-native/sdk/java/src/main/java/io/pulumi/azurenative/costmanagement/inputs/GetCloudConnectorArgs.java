@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetCloudConnectorArgs extends io.pulumi.resources.InvokeArgs 
      * Connector Name.
      * 
      */
-    @InputImport(name="connectorName", required=true)
+    @Import(name="connectorName", required=true)
       private final String connectorName;
 
     public String getConnectorName() {
@@ -29,7 +29,7 @@ public final class GetCloudConnectorArgs extends io.pulumi.resources.InvokeArgs 
      * May be used to expand the collectionInfo property. By default, collectionInfo is not included.
      * 
      */
-    @InputImport(name="expand")
+    @Import(name="expand")
       private final @Nullable String expand;
 
     public Optional<String> getExpand() {

@@ -6,7 +6,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationGetArgs ex
      * The restore behavior of a restarting application.
      * 
      */
-    @InputImport(name="applicationRestoreConfiguration")
+    @Import(name="applicationRestoreConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs> applicationRestoreConfiguration;
 
     public Output<ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfigurationGetArgs> getApplicationRestoreConfiguration() {
@@ -30,7 +30,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationGetArgs ex
      * The starting parameters for a Flink-based Kinesis Data Analytics application.
      * 
      */
-    @InputImport(name="flinkRunConfiguration")
+    @Import(name="flinkRunConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationGetArgs> flinkRunConfiguration;
 
     public Output<ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationGetArgs> getFlinkRunConfiguration() {

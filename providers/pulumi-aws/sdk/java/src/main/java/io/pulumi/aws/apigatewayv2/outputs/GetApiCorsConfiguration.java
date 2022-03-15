@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.apigatewayv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetApiCorsConfiguration {
     /**
      * Whether credentials are included in the CORS request.
@@ -43,14 +43,14 @@ public final class GetApiCorsConfiguration {
      */
     private final Integer maxAge;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetApiCorsConfiguration(
-        @OutputCustomType.Parameter("allowCredentials") Boolean allowCredentials,
-        @OutputCustomType.Parameter("allowHeaders") List<String> allowHeaders,
-        @OutputCustomType.Parameter("allowMethods") List<String> allowMethods,
-        @OutputCustomType.Parameter("allowOrigins") List<String> allowOrigins,
-        @OutputCustomType.Parameter("exposeHeaders") List<String> exposeHeaders,
-        @OutputCustomType.Parameter("maxAge") Integer maxAge) {
+        @CustomType.Parameter("allowCredentials") Boolean allowCredentials,
+        @CustomType.Parameter("allowHeaders") List<String> allowHeaders,
+        @CustomType.Parameter("allowMethods") List<String> allowMethods,
+        @CustomType.Parameter("allowOrigins") List<String> allowOrigins,
+        @CustomType.Parameter("exposeHeaders") List<String> exposeHeaders,
+        @CustomType.Parameter("maxAge") Integer maxAge) {
         this.allowCredentials = allowCredentials;
         this.allowHeaders = allowHeaders;
         this.allowMethods = allowMethods;

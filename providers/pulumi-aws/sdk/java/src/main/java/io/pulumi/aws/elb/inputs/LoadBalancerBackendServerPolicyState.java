@@ -4,7 +4,7 @@
 package io.pulumi.aws.elb.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class LoadBalancerBackendServerPolicyState extends io.pulumi.resour
      * The instance port to apply the policy to.
      * 
      */
-    @InputImport(name="instancePort")
+    @Import(name="instancePort")
       private final @Nullable Output<Integer> instancePort;
 
     public Output<Integer> getInstancePort() {
@@ -31,7 +31,7 @@ public final class LoadBalancerBackendServerPolicyState extends io.pulumi.resour
      * The load balancer to attach the policy to.
      * 
      */
-    @InputImport(name="loadBalancerName")
+    @Import(name="loadBalancerName")
       private final @Nullable Output<String> loadBalancerName;
 
     public Output<String> getLoadBalancerName() {
@@ -42,7 +42,7 @@ public final class LoadBalancerBackendServerPolicyState extends io.pulumi.resour
      * List of Policy Names to apply to the backend server.
      * 
      */
-    @InputImport(name="policyNames")
+    @Import(name="policyNames")
       private final @Nullable Output<List<String>> policyNames;
 
     public Output<List<String>> getPolicyNames() {

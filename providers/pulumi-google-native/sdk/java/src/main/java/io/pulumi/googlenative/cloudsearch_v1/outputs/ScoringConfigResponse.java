@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ScoringConfigResponse {
     /**
      * Whether to use freshness as a ranking signal. By default, freshness is used as a ranking signal. Note that this setting is not available in the Admin UI.
@@ -20,10 +20,10 @@ public final class ScoringConfigResponse {
      */
     private final Boolean disablePersonalization;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ScoringConfigResponse(
-        @OutputCustomType.Parameter("disableFreshness") Boolean disableFreshness,
-        @OutputCustomType.Parameter("disablePersonalization") Boolean disablePersonalization) {
+        @CustomType.Parameter("disableFreshness") Boolean disableFreshness,
+        @CustomType.Parameter("disablePersonalization") Boolean disablePersonalization) {
         this.disableFreshness = disableFreshness;
         this.disablePersonalization = disablePersonalization;
     }

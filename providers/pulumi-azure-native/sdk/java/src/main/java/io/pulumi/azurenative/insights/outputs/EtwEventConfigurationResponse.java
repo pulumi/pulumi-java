@@ -3,24 +3,24 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EtwEventConfigurationResponse {
     private final @Nullable String filter;
     private final Integer id;
     private final String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EtwEventConfigurationResponse(
-        @OutputCustomType.Parameter("filter") @Nullable String filter,
-        @OutputCustomType.Parameter("id") Integer id,
-        @OutputCustomType.Parameter("name") String name) {
+        @CustomType.Parameter("filter") @Nullable String filter,
+        @CustomType.Parameter("id") Integer id,
+        @CustomType.Parameter("name") String name) {
         this.filter = filter;
         this.id = id;
         this.name = name;

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.macie;
 import io.pulumi.awsnative.macie.enums.FindingsFilterFindingFilterAction;
 import io.pulumi.awsnative.macie.inputs.FindingsFilterFindingCriteriaArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
      * Findings filter action.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<FindingsFilterFindingFilterAction> action;
 
     public Output<FindingsFilterFindingFilterAction> getAction() {
@@ -32,7 +32,7 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
      * Findings filter description
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
      * Findings filter criteria.
      * 
      */
-    @InputImport(name="findingCriteria", required=true)
+    @Import(name="findingCriteria", required=true)
       private final Output<FindingsFilterFindingCriteriaArgs> findingCriteria;
 
     public Output<FindingsFilterFindingCriteriaArgs> getFindingCriteria() {
@@ -54,7 +54,7 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
      * Findings filter name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class FindingsFilterArgs extends io.pulumi.resources.ResourceArgs {
      * Findings filter position.
      * 
      */
-    @InputImport(name="position")
+    @Import(name="position")
       private final @Nullable Output<Integer> position;
 
     public Output<Integer> getPosition() {

@@ -4,13 +4,13 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTdeCertificatesSqlTaskOutputResponse {
     /**
      * Mapping from certificate name to base 64 encoded format.
@@ -23,10 +23,10 @@ public final class GetTdeCertificatesSqlTaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTdeCertificatesSqlTaskOutputResponse(
-        @OutputCustomType.Parameter("base64EncodedCertificates") Map<String,List<String>> base64EncodedCertificates,
-        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
+        @CustomType.Parameter("base64EncodedCertificates") Map<String,List<String>> base64EncodedCertificates,
+        @CustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.base64EncodedCertificates = base64EncodedCertificates;
         this.validationErrors = validationErrors;
     }

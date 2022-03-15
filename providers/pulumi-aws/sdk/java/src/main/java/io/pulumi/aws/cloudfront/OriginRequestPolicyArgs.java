@@ -7,7 +7,7 @@ import io.pulumi.aws.cloudfront.inputs.OriginRequestPolicyCookiesConfigArgs;
 import io.pulumi.aws.cloudfront.inputs.OriginRequestPolicyHeadersConfigArgs;
 import io.pulumi.aws.cloudfront.inputs.OriginRequestPolicyQueryStringsConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class OriginRequestPolicyArgs extends io.pulumi.resources.ResourceA
      * Comment to describe the origin request policy.
      * 
      */
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
@@ -32,7 +32,7 @@ public final class OriginRequestPolicyArgs extends io.pulumi.resources.ResourceA
      * Object that determines whether any cookies in viewer requests (and if so, which cookies) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Cookies Config for more information.
      * 
      */
-    @InputImport(name="cookiesConfig", required=true)
+    @Import(name="cookiesConfig", required=true)
       private final Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig;
 
     public Output<OriginRequestPolicyCookiesConfigArgs> getCookiesConfig() {
@@ -43,7 +43,7 @@ public final class OriginRequestPolicyArgs extends io.pulumi.resources.ResourceA
      * Object that determines whether any HTTP headers (and if so, which headers) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Headers Config for more information.
      * 
      */
-    @InputImport(name="headersConfig", required=true)
+    @Import(name="headersConfig", required=true)
       private final Output<OriginRequestPolicyHeadersConfigArgs> headersConfig;
 
     public Output<OriginRequestPolicyHeadersConfigArgs> getHeadersConfig() {
@@ -54,7 +54,7 @@ public final class OriginRequestPolicyArgs extends io.pulumi.resources.ResourceA
      * Unique name to identify the origin request policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -65,7 +65,7 @@ public final class OriginRequestPolicyArgs extends io.pulumi.resources.ResourceA
      * Object that determines whether any URL query strings in viewer requests (and if so, which query strings) are included in the origin request key and automatically included in requests that CloudFront sends to the origin. See Query String Config for more information.
      * 
      */
-    @InputImport(name="queryStringsConfig", required=true)
+    @Import(name="queryStringsConfig", required=true)
       private final Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig;
 
     public Output<OriginRequestPolicyQueryStringsConfigArgs> getQueryStringsConfig() {

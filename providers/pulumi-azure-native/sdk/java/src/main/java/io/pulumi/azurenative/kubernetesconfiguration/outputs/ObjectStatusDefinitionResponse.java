@@ -6,14 +6,14 @@ package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.HelmReleasePropertiesDefinitionResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ObjectReferenceDefinitionResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ObjectStatusConditionDefinitionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ObjectStatusDefinitionResponse {
     /**
      * Object reference to the Kustomization that applied this object
@@ -51,15 +51,15 @@ public final class ObjectStatusDefinitionResponse {
      */
     private final @Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObjectStatusDefinitionResponse(
-        @OutputCustomType.Parameter("appliedBy") @Nullable ObjectReferenceDefinitionResponse appliedBy,
-        @OutputCustomType.Parameter("complianceState") @Nullable String complianceState,
-        @OutputCustomType.Parameter("helmReleaseProperties") @Nullable HelmReleasePropertiesDefinitionResponse helmReleaseProperties,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
-        @OutputCustomType.Parameter("statusConditions") @Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions) {
+        @CustomType.Parameter("appliedBy") @Nullable ObjectReferenceDefinitionResponse appliedBy,
+        @CustomType.Parameter("complianceState") @Nullable String complianceState,
+        @CustomType.Parameter("helmReleaseProperties") @Nullable HelmReleasePropertiesDefinitionResponse helmReleaseProperties,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("namespace") @Nullable String namespace,
+        @CustomType.Parameter("statusConditions") @Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions) {
         this.appliedBy = appliedBy;
         this.complianceState = complianceState;
         this.helmReleaseProperties = helmReleaseProperties;

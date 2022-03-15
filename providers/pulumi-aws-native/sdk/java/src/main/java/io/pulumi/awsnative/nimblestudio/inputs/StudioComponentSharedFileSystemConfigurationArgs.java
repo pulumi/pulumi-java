@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.nimblestudio.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
      * <p>The endpoint of the shared file system that is accessed by the studio component resource.</p>
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable Output<String> endpoint;
 
     public Output<String> getEndpoint() {
@@ -33,7 +33,7 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
      * <p>The unique identifier for a file system.</p>
      * 
      */
-    @InputImport(name="fileSystemId")
+    @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
 
     public Output<String> getFileSystemId() {
@@ -44,7 +44,7 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
      * <p>The mount location for a shared file system on a Linux virtual workstation.</p>
      * 
      */
-    @InputImport(name="linuxMountPoint")
+    @Import(name="linuxMountPoint")
       private final @Nullable Output<String> linuxMountPoint;
 
     public Output<String> getLinuxMountPoint() {
@@ -55,7 +55,7 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
      * <p>The name of the file share.</p>
      * 
      */
-    @InputImport(name="shareName")
+    @Import(name="shareName")
       private final @Nullable Output<String> shareName;
 
     public Output<String> getShareName() {
@@ -66,7 +66,7 @@ public final class StudioComponentSharedFileSystemConfigurationArgs extends io.p
      * <p>The mount location for a shared file system on a Windows virtual workstation.</p>
      * 
      */
-    @InputImport(name="windowsMountDrive")
+    @Import(name="windowsMountDrive")
       private final @Nullable Output<String> windowsMountDrive;
 
     public Output<String> getWindowsMountDrive() {

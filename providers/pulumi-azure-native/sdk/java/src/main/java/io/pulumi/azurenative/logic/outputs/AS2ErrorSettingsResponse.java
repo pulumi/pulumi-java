@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AS2ErrorSettingsResponse {
     /**
      * The value indicating whether to resend message If MDN is not received.
@@ -20,10 +20,10 @@ public final class AS2ErrorSettingsResponse {
      */
     private final Boolean suspendDuplicateMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AS2ErrorSettingsResponse(
-        @OutputCustomType.Parameter("resendIfMDNNotReceived") Boolean resendIfMDNNotReceived,
-        @OutputCustomType.Parameter("suspendDuplicateMessage") Boolean suspendDuplicateMessage) {
+        @CustomType.Parameter("resendIfMDNNotReceived") Boolean resendIfMDNNotReceived,
+        @CustomType.Parameter("suspendDuplicateMessage") Boolean suspendDuplicateMessage) {
         this.resendIfMDNNotReceived = resendIfMDNNotReceived;
         this.suspendDuplicateMessage = suspendDuplicateMessage;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDataCollectionEndpointArgs extends io.pulumi.resources.Inv
      * The name of the data collection endpoint. The name is case insensitive.
      * 
      */
-    @InputImport(name="dataCollectionEndpointName", required=true)
+    @Import(name="dataCollectionEndpointName", required=true)
       private final String dataCollectionEndpointName;
 
     public String getDataCollectionEndpointName() {
@@ -27,7 +27,7 @@ public final class GetDataCollectionEndpointArgs extends io.pulumi.resources.Inv
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

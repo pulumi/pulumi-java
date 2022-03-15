@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VpcIpamScopeArgs extends io.pulumi.resources.ResourceArgs {
      * A description for the scope you're creating.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,14 +30,14 @@ public final class VpcIpamScopeArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the IPAM for which you're creating this scope.
      * 
      */
-    @InputImport(name="ipamId", required=true)
+    @Import(name="ipamId", required=true)
       private final Output<String> ipamId;
 
     public Output<String> getIpamId() {
         return this.ipamId;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

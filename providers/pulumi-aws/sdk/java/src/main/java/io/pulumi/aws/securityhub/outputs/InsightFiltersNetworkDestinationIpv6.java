@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.securityhub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InsightFiltersNetworkDestinationIpv6 {
     /**
      * A finding's CIDR value.
@@ -15,8 +15,8 @@ public final class InsightFiltersNetworkDestinationIpv6 {
      */
     private final String cidr;
 
-    @OutputCustomType.Constructor
-    private InsightFiltersNetworkDestinationIpv6(@OutputCustomType.Parameter("cidr") String cidr) {
+    @CustomType.Constructor
+    private InsightFiltersNetworkDestinationIpv6(@CustomType.Parameter("cidr") String cidr) {
         this.cidr = cidr;
     }
 

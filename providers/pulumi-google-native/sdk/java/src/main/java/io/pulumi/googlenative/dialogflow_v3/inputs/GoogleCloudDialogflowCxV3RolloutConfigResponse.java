@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigResponse extends io.pul
      * The conditions that are used to evaluate the failure of a rollout step. If not specified, no rollout steps will fail. E.g. "containment_rate < 10% OR average_turn_count < 3". See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
      * 
      */
-    @InputImport(name="failureCondition", required=true)
+    @Import(name="failureCondition", required=true)
       private final String failureCondition;
 
     public String getFailureCondition() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigResponse extends io.pul
      * The conditions that are used to evaluate the success of a rollout step. If not specified, all rollout steps will proceed to the next one unless failure conditions are met. E.g. "containment_rate > 60% AND callback_rate < 20%". See the [conditions reference](https://cloud.google.com/dialogflow/cx/docs/reference/condition).
      * 
      */
-    @InputImport(name="rolloutCondition", required=true)
+    @Import(name="rolloutCondition", required=true)
       private final String rolloutCondition;
 
     public String getRolloutCondition() {
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigResponse extends io.pul
      * Steps to roll out a flow version. Steps should be sorted by percentage in ascending order.
      * 
      */
-    @InputImport(name="rolloutSteps", required=true)
+    @Import(name="rolloutSteps", required=true)
       private final List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps;
 
     public List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> getRolloutSteps() {

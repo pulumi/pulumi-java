@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managedservices.inputs;
 
 import io.pulumi.azurenative.managedservices.inputs.RegistrationAssignmentPropertiesResponseRegistrationDefinition;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class RegistrationAssignmentPropertiesResponse extends io.pulumi.re
      * Current state of the registration assignment.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -32,7 +32,7 @@ public final class RegistrationAssignmentPropertiesResponse extends io.pulumi.re
      * Registration definition inside registration assignment.
      * 
      */
-    @InputImport(name="registrationDefinition", required=true)
+    @Import(name="registrationDefinition", required=true)
       private final RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition;
 
     public RegistrationAssignmentPropertiesResponseRegistrationDefinition getRegistrationDefinition() {
@@ -43,7 +43,7 @@ public final class RegistrationAssignmentPropertiesResponse extends io.pulumi.re
      * Fully qualified path of the registration definition.
      * 
      */
-    @InputImport(name="registrationDefinitionId", required=true)
+    @Import(name="registrationDefinitionId", required=true)
       private final String registrationDefinitionId;
 
     public String getRegistrationDefinitionId() {

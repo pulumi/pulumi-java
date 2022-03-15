@@ -13,7 +13,7 @@ import io.pulumi.azurenative.compute.outputs.PurchasePlanResponse;
 import io.pulumi.azurenative.compute.outputs.SnapshotSkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -44,7 +44,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Disk source information. CreationData information cannot be changed after the disk has been created.
      * 
      */
-    @OutputExport(name="creationData", type=CreationDataResponse.class, parameters={})
+    @Export(name="creationData", type=CreationDataResponse.class, parameters={})
     private Output<CreationDataResponse> creationData;
 
     /**
@@ -58,7 +58,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * ARM id of the DiskAccess resource for using private endpoints on disks.
      * 
      */
-    @OutputExport(name="diskAccessId", type=String.class, parameters={})
+    @Export(name="diskAccessId", type=String.class, parameters={})
     private Output</* @Nullable */ String> diskAccessId;
 
     /**
@@ -72,7 +72,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The size of the disk in bytes. This field is read only.
      * 
      */
-    @OutputExport(name="diskSizeBytes", type=Double.class, parameters={})
+    @Export(name="diskSizeBytes", type=Double.class, parameters={})
     private Output<Double> diskSizeBytes;
 
     /**
@@ -86,7 +86,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * If creationData.createOption is Empty, this field is mandatory and it indicates the size of the disk to create. If this field is present for updates or creation with other options, it indicates a resize. Resizes are only allowed if the disk is not attached to a running VM, and can only increase the disk's size.
      * 
      */
-    @OutputExport(name="diskSizeGB", type=Integer.class, parameters={})
+    @Export(name="diskSizeGB", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> diskSizeGB;
 
     /**
@@ -100,7 +100,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The state of the snapshot.
      * 
      */
-    @OutputExport(name="diskState", type=String.class, parameters={})
+    @Export(name="diskState", type=String.class, parameters={})
     private Output<String> diskState;
 
     /**
@@ -114,7 +114,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Encryption property can be used to encrypt data at rest with customer managed keys or platform managed keys.
      * 
      */
-    @OutputExport(name="encryption", type=EncryptionResponse.class, parameters={})
+    @Export(name="encryption", type=EncryptionResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionResponse> encryption;
 
     /**
@@ -128,7 +128,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.
      * 
      */
-    @OutputExport(name="encryptionSettingsCollection", type=EncryptionSettingsCollectionResponse.class, parameters={})
+    @Export(name="encryptionSettingsCollection", type=EncryptionSettingsCollectionResponse.class, parameters={})
     private Output</* @Nullable */ EncryptionSettingsCollectionResponse> encryptionSettingsCollection;
 
     /**
@@ -142,7 +142,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The extended location where the snapshot will be created. Extended location cannot be changed.
      * 
      */
-    @OutputExport(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
+    @Export(name="extendedLocation", type=ExtendedLocationResponse.class, parameters={})
     private Output</* @Nullable */ ExtendedLocationResponse> extendedLocation;
 
     /**
@@ -156,7 +156,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The hypervisor generation of the Virtual Machine. Applicable to OS disks only.
      * 
      */
-    @OutputExport(name="hyperVGeneration", type=String.class, parameters={})
+    @Export(name="hyperVGeneration", type=String.class, parameters={})
     private Output</* @Nullable */ String> hyperVGeneration;
 
     /**
@@ -170,7 +170,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.
      * 
      */
-    @OutputExport(name="incremental", type=Boolean.class, parameters={})
+    @Export(name="incremental", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> incremental;
 
     /**
@@ -184,7 +184,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -198,7 +198,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Unused. Always Null.
      * 
      */
-    @OutputExport(name="managedBy", type=String.class, parameters={})
+    @Export(name="managedBy", type=String.class, parameters={})
     private Output<String> managedBy;
 
     /**
@@ -212,7 +212,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -226,7 +226,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Policy for accessing the disk via network.
      * 
      */
-    @OutputExport(name="networkAccessPolicy", type=String.class, parameters={})
+    @Export(name="networkAccessPolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> networkAccessPolicy;
 
     /**
@@ -240,7 +240,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The Operating System type.
      * 
      */
-    @OutputExport(name="osType", type=String.class, parameters={})
+    @Export(name="osType", type=String.class, parameters={})
     private Output</* @Nullable */ String> osType;
 
     /**
@@ -254,7 +254,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The disk provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -268,7 +268,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Purchase plan information for the image from which the source disk for the snapshot was originally created.
      * 
      */
-    @OutputExport(name="purchasePlan", type=PurchasePlanResponse.class, parameters={})
+    @Export(name="purchasePlan", type=PurchasePlanResponse.class, parameters={})
     private Output</* @Nullable */ PurchasePlanResponse> purchasePlan;
 
     /**
@@ -282,7 +282,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot
      * 
      */
-    @OutputExport(name="sku", type=SnapshotSkuResponse.class, parameters={})
+    @Export(name="sku", type=SnapshotSkuResponse.class, parameters={})
     private Output</* @Nullable */ SnapshotSkuResponse> sku;
 
     /**
@@ -296,7 +296,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Indicates the OS on a snapshot supports hibernation.
      * 
      */
-    @OutputExport(name="supportsHibernation", type=Boolean.class, parameters={})
+    @Export(name="supportsHibernation", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> supportsHibernation;
 
     /**
@@ -310,7 +310,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -324,7 +324,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * The time when the snapshot was created.
      * 
      */
-    @OutputExport(name="timeCreated", type=String.class, parameters={})
+    @Export(name="timeCreated", type=String.class, parameters={})
     private Output<String> timeCreated;
 
     /**
@@ -338,7 +338,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -352,7 +352,7 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
      * Unique Guid identifying the resource.
      * 
      */
-    @OutputExport(name="uniqueId", type=String.class, parameters={})
+    @Export(name="uniqueId", type=String.class, parameters={})
     private Output<String> uniqueId;
 
     /**

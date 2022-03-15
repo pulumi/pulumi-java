@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserIdentityContractResponse {
     /**
      * Identifier value within provider.
@@ -22,10 +22,10 @@ public final class UserIdentityContractResponse {
      */
     private final @Nullable String provider;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserIdentityContractResponse(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("provider") @Nullable String provider) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("provider") @Nullable String provider) {
         this.id = id;
         this.provider = provider;
     }

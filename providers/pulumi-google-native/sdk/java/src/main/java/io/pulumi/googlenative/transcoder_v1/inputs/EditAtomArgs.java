@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
      * End time in seconds for the atom, relative to the input file timeline. When `end_time_offset` is not specified, the `inputs` are used until the end of the atom.
      * 
      */
-    @InputImport(name="endTimeOffset")
+    @Import(name="endTimeOffset")
       private final @Nullable Output<String> endTimeOffset;
 
     public Output<String> getEndTimeOffset() {
@@ -34,7 +34,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
      * List of `Input.key`s identifying files that should be used in this atom. The listed `inputs` must have the same timeline.
      * 
      */
-    @InputImport(name="inputs")
+    @Import(name="inputs")
       private final @Nullable Output<List<String>> inputs;
 
     public Output<List<String>> getInputs() {
@@ -45,7 +45,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
      * A unique key for this atom. Must be specified when using advanced mapping.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -56,7 +56,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
      * Start time in seconds for the atom, relative to the input file timeline. The default is `0s`.
      * 
      */
-    @InputImport(name="startTimeOffset")
+    @Import(name="startTimeOffset")
       private final @Nullable Output<String> startTimeOffset;
 
     public Output<String> getStartTimeOffset() {

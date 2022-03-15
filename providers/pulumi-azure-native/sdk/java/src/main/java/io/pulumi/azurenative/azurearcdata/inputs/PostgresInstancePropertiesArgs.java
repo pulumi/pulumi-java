@@ -5,7 +5,7 @@ package io.pulumi.azurenative.azurearcdata.inputs;
 
 import io.pulumi.azurenative.azurearcdata.inputs.BasicLoginInformationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
      * The instance admin
      * 
      */
-    @InputImport(name="admin")
+    @Import(name="admin")
       private final @Nullable Output<String> admin;
 
     public Output<String> getAdmin() {
@@ -35,7 +35,7 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
      * Username and password for basic authentication.
      * 
      */
-    @InputImport(name="basicLoginInformation")
+    @Import(name="basicLoginInformation")
       private final @Nullable Output<BasicLoginInformationArgs> basicLoginInformation;
 
     public Output<BasicLoginInformationArgs> getBasicLoginInformation() {
@@ -46,7 +46,7 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
      * The data controller id
      * 
      */
-    @InputImport(name="dataControllerId")
+    @Import(name="dataControllerId")
       private final @Nullable Output<String> dataControllerId;
 
     public Output<String> getDataControllerId() {
@@ -57,7 +57,7 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
      * The raw kubernetes information
      * 
      */
-    @InputImport(name="k8sRaw")
+    @Import(name="k8sRaw")
       private final @Nullable Output<Object> k8sRaw;
 
     public Output<Object> getK8sRaw() {
@@ -68,7 +68,7 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
      * Last uploaded date from Kubernetes cluster. Defaults to current date time
      * 
      */
-    @InputImport(name="lastUploadedDate")
+    @Import(name="lastUploadedDate")
       private final @Nullable Output<String> lastUploadedDate;
 
     public Output<String> getLastUploadedDate() {

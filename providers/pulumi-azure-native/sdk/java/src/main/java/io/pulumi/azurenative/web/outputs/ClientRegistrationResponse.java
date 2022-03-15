@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClientRegistrationResponse {
     /**
      * The Client ID of the app used for login.
@@ -22,10 +22,10 @@ public final class ClientRegistrationResponse {
      */
     private final @Nullable String clientSecretSettingName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClientRegistrationResponse(
-        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
-        @OutputCustomType.Parameter("clientSecretSettingName") @Nullable String clientSecretSettingName) {
+        @CustomType.Parameter("clientId") @Nullable String clientId,
+        @CustomType.Parameter("clientSecretSettingName") @Nullable String clientSecretSettingName) {
         this.clientId = clientId;
         this.clientSecretSettingName = clientSecretSettingName;
     }

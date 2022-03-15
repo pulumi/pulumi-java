@@ -8,7 +8,7 @@ import io.pulumi.azurenative.securityinsights.TIDataConnectorArgs;
 import io.pulumi.azurenative.securityinsights.outputs.TIDataConnectorDataTypesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
      * The available data types for the connector.
      * 
      */
-    @OutputExport(name="dataTypes", type=TIDataConnectorDataTypesResponse.class, parameters={})
+    @Export(name="dataTypes", type=TIDataConnectorDataTypesResponse.class, parameters={})
     private Output</* @Nullable */ TIDataConnectorDataTypesResponse> dataTypes;
 
     /**
@@ -49,7 +49,7 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
      * Etag of the azure resource
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -64,7 +64,7 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
      * Expected value is 'ThreatIntelligence'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -79,7 +79,7 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
      * Azure resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -93,7 +93,7 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
      * The tenant id to connect to, and get the data from.
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> tenantId;
 
     /**
@@ -107,7 +107,7 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
      * The lookback period for the feed to be imported.
      * 
      */
-    @OutputExport(name="tipLookbackPeriod", type=String.class, parameters={})
+    @Export(name="tipLookbackPeriod", type=String.class, parameters={})
     private Output</* @Nullable */ String> tipLookbackPeriod;
 
     /**
@@ -121,7 +121,7 @@ public class TIDataConnector extends io.pulumi.resources.CustomResource {
      * Azure resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

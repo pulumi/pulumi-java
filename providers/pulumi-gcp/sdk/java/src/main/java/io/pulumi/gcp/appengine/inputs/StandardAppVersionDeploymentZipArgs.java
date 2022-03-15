@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class StandardAppVersionDeploymentZipArgs extends io.pulumi.resourc
      * files count
      * 
      */
-    @InputImport(name="filesCount")
+    @Import(name="filesCount")
       private final @Nullable Output<Integer> filesCount;
 
     public Output<Integer> getFilesCount() {
@@ -30,7 +30,7 @@ public final class StandardAppVersionDeploymentZipArgs extends io.pulumi.resourc
      * Source URL
      * 
      */
-    @InputImport(name="sourceUrl", required=true)
+    @Import(name="sourceUrl", required=true)
       private final Output<String> sourceUrl;
 
     public Output<String> getSourceUrl() {

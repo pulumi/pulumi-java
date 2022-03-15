@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ssoadmin.PermissionSetInlinePolicyArgs;
 import io.pulumi.aws.ssoadmin.inputs.PermissionSetInlinePolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class PermissionSetInlinePolicy extends io.pulumi.resources.CustomResourc
      * The IAM inline policy to attach to a Permission Set.
      * 
      */
-    @OutputExport(name="inlinePolicy", type=String.class, parameters={})
+    @Export(name="inlinePolicy", type=String.class, parameters={})
     private Output<String> inlinePolicy;
 
     /**
@@ -47,7 +47,7 @@ public class PermissionSetInlinePolicy extends io.pulumi.resources.CustomResourc
      * The Amazon Resource Name (ARN) of the SSO Instance under which the operation will be executed.
      * 
      */
-    @OutputExport(name="instanceArn", type=String.class, parameters={})
+    @Export(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
     /**
@@ -61,7 +61,7 @@ public class PermissionSetInlinePolicy extends io.pulumi.resources.CustomResourc
      * The Amazon Resource Name (ARN) of the Permission Set.
      * 
      */
-    @OutputExport(name="permissionSetArn", type=String.class, parameters={})
+    @Export(name="permissionSetArn", type=String.class, parameters={})
     private Output<String> permissionSetArn;
 
     /**

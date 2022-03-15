@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
      * Hard is the set of enforced hard limits for each named resource. More info: https://kubernetes.io/docs/concepts/policy/resource-quotas/
      * 
      */
-    @InputImport(name="hard")
+    @Import(name="hard")
       private final @Nullable Output<Map<String,String>> hard;
 
     public Output<Map<String,String>> getHard() {
@@ -34,7 +34,7 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
      * Used is the current observed total usage of the resource in the namespace.
      * 
      */
-    @InputImport(name="used")
+    @Import(name="used")
       private final @Nullable Output<Map<String,String>> used;
 
     public Output<Map<String,String>> getUsed() {

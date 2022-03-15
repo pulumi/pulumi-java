@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.lex.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,14 +13,14 @@ public final class GetSlotTypeEnumerationValue extends io.pulumi.resources.Invok
 
     public static final GetSlotTypeEnumerationValue Empty = new GetSlotTypeEnumerationValue();
 
-    @InputImport(name="synonyms", required=true)
+    @Import(name="synonyms", required=true)
       private final List<String> synonyms;
 
     public List<String> getSynonyms() {
         return this.synonyms;
     }
 
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

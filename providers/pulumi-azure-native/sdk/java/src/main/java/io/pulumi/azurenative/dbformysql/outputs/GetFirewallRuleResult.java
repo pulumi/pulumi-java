@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.dbformysql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFirewallRuleResult {
     /**
      * The end IP address of the server firewall rule. Must be IPv4 format.
@@ -35,13 +35,13 @@ public final class GetFirewallRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFirewallRuleResult(
-        @OutputCustomType.Parameter("endIpAddress") String endIpAddress,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("startIpAddress") String startIpAddress,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("endIpAddress") String endIpAddress,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("startIpAddress") String startIpAddress,
+        @CustomType.Parameter("type") String type) {
         this.endIpAddress = endIpAddress;
         this.id = id;
         this.name = name;

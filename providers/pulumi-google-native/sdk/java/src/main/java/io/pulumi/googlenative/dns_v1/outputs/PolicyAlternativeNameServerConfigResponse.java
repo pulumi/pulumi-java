@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dns_v1.outputs.PolicyAlternativeNameServerConfigTargetNameServerResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PolicyAlternativeNameServerConfigResponse {
     private final String kind;
     /**
@@ -18,10 +18,10 @@ public final class PolicyAlternativeNameServerConfigResponse {
      */
     private final List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyAlternativeNameServerConfigResponse(
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("targetNameServers") List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers) {
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("targetNameServers") List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers) {
         this.kind = kind;
         this.targetNameServers = targetNameServers;
     }

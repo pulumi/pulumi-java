@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,28 +14,28 @@ public final class GetImportJobArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetImportJobArgs Empty = new GetImportJobArgs();
 
-    @InputImport(name="importJobId", required=true)
+    @Import(name="importJobId", required=true)
       private final String importJobId;
 
     public String getImportJobId() {
         return this.importJobId;
     }
 
-    @InputImport(name="keyRingId", required=true)
+    @Import(name="keyRingId", required=true)
       private final String keyRingId;
 
     public String getKeyRingId() {
         return this.keyRingId;
     }
 
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

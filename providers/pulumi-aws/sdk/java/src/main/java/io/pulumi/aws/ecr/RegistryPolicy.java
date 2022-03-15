@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ecr.RegistryPolicyArgs;
 import io.pulumi.aws.ecr.inputs.RegistryPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -28,7 +28,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws:ecr/registryPolicy:RegistryPolicy")
 public class RegistryPolicy extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="policy", type=String.class, parameters={})
+    @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -38,7 +38,7 @@ public class RegistryPolicy extends io.pulumi.resources.CustomResource {
      * The registry ID where the registry was created.
      * 
      */
-    @OutputExport(name="registryId", type=String.class, parameters={})
+    @Export(name="registryId", type=String.class, parameters={})
     private Output<String> registryId;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotwireless.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class TaskDefinitionLoRaWANGatewayVersionArgs extends io.pulumi.res
 
     public static final TaskDefinitionLoRaWANGatewayVersionArgs Empty = new TaskDefinitionLoRaWANGatewayVersionArgs();
 
-    @InputImport(name="model")
+    @Import(name="model")
       private final @Nullable Output<String> model;
 
     public Output<String> getModel() {
         return this.model == null ? Output.empty() : this.model;
     }
 
-    @InputImport(name="packageVersion")
+    @Import(name="packageVersion")
       private final @Nullable Output<String> packageVersion;
 
     public Output<String> getPackageVersion() {
         return this.packageVersion == null ? Output.empty() : this.packageVersion;
     }
 
-    @InputImport(name="station")
+    @Import(name="station")
       private final @Nullable Output<String> station;
 
     public Output<String> getStation() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devices.inputs.RoutingEventHubPropertiesResponse;
 import io.pulumi.azurenative.devices.inputs.RoutingServiceBusQueueEndpointPropertiesResponse;
 import io.pulumi.azurenative.devices.inputs.RoutingServiceBusTopicEndpointPropertiesResponse;
 import io.pulumi.azurenative.devices.inputs.RoutingStorageContainerPropertiesResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class RoutingEndpointsResponse extends io.pulumi.resources.InvokeAr
      * The list of Event Hubs endpoints that IoT hub routes messages to, based on the routing rules. This list does not include the built-in Event Hubs endpoint.
      * 
      */
-    @InputImport(name="eventHubs")
+    @Import(name="eventHubs")
       private final @Nullable List<RoutingEventHubPropertiesResponse> eventHubs;
 
     public List<RoutingEventHubPropertiesResponse> getEventHubs() {
@@ -37,7 +37,7 @@ public final class RoutingEndpointsResponse extends io.pulumi.resources.InvokeAr
      * The list of Service Bus queue endpoints that IoT hub routes the messages to, based on the routing rules.
      * 
      */
-    @InputImport(name="serviceBusQueues")
+    @Import(name="serviceBusQueues")
       private final @Nullable List<RoutingServiceBusQueueEndpointPropertiesResponse> serviceBusQueues;
 
     public List<RoutingServiceBusQueueEndpointPropertiesResponse> getServiceBusQueues() {
@@ -48,7 +48,7 @@ public final class RoutingEndpointsResponse extends io.pulumi.resources.InvokeAr
      * The list of Service Bus topic endpoints that the IoT hub routes the messages to, based on the routing rules.
      * 
      */
-    @InputImport(name="serviceBusTopics")
+    @Import(name="serviceBusTopics")
       private final @Nullable List<RoutingServiceBusTopicEndpointPropertiesResponse> serviceBusTopics;
 
     public List<RoutingServiceBusTopicEndpointPropertiesResponse> getServiceBusTopics() {
@@ -59,7 +59,7 @@ public final class RoutingEndpointsResponse extends io.pulumi.resources.InvokeAr
      * The list of storage container endpoints that IoT hub routes messages to, based on the routing rules.
      * 
      */
-    @InputImport(name="storageContainers")
+    @Import(name="storageContainers")
       private final @Nullable List<RoutingStorageContainerPropertiesResponse> storageContainers;
 
     public List<RoutingStorageContainerPropertiesResponse> getStorageContainers() {

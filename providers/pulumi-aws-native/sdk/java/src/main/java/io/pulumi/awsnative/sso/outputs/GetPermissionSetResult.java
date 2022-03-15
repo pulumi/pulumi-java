@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sso.outputs;
 
 import io.pulumi.awsnative.sso.outputs.PermissionSetTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPermissionSetResult {
     /**
      * The permission set description.
@@ -42,15 +42,15 @@ public final class GetPermissionSetResult {
     private final @Nullable String sessionDuration;
     private final @Nullable List<PermissionSetTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPermissionSetResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("inlinePolicy") @Nullable Object inlinePolicy,
-        @OutputCustomType.Parameter("managedPolicies") @Nullable List<String> managedPolicies,
-        @OutputCustomType.Parameter("permissionSetArn") @Nullable String permissionSetArn,
-        @OutputCustomType.Parameter("relayStateType") @Nullable String relayStateType,
-        @OutputCustomType.Parameter("sessionDuration") @Nullable String sessionDuration,
-        @OutputCustomType.Parameter("tags") @Nullable List<PermissionSetTag> tags) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("inlinePolicy") @Nullable Object inlinePolicy,
+        @CustomType.Parameter("managedPolicies") @Nullable List<String> managedPolicies,
+        @CustomType.Parameter("permissionSetArn") @Nullable String permissionSetArn,
+        @CustomType.Parameter("relayStateType") @Nullable String relayStateType,
+        @CustomType.Parameter("sessionDuration") @Nullable String sessionDuration,
+        @CustomType.Parameter("tags") @Nullable List<PermissionSetTag> tags) {
         this.description = description;
         this.inlinePolicy = inlinePolicy;
         this.managedPolicies = managedPolicies;

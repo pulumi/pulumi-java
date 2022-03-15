@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.AutomationRulePropertyValuesConditionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class AutomationRuleTriggeringLogicResponse extends io.pulumi.resou
      * The conditions to evaluate to determine if the automation rule should be triggered on a given object
      * 
      */
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable List<AutomationRulePropertyValuesConditionResponse> conditions;
 
     public List<AutomationRulePropertyValuesConditionResponse> getConditions() {
@@ -36,7 +36,7 @@ public final class AutomationRuleTriggeringLogicResponse extends io.pulumi.resou
      * Determines when the automation rule should automatically expire and be disabled.
      * 
      */
-    @InputImport(name="expirationTimeUtc")
+    @Import(name="expirationTimeUtc")
       private final @Nullable String expirationTimeUtc;
 
     public Optional<String> getExpirationTimeUtc() {
@@ -47,7 +47,7 @@ public final class AutomationRuleTriggeringLogicResponse extends io.pulumi.resou
      * Determines whether the automation rule is enabled or disabled.
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
@@ -58,7 +58,7 @@ public final class AutomationRuleTriggeringLogicResponse extends io.pulumi.resou
      * The type of object the automation rule triggers on
      * 
      */
-    @InputImport(name="triggersOn", required=true)
+    @Import(name="triggersOn", required=true)
       private final String triggersOn;
 
     public String getTriggersOn() {
@@ -69,7 +69,7 @@ public final class AutomationRuleTriggeringLogicResponse extends io.pulumi.resou
      * The type of event the automation rule triggers on
      * 
      */
-    @InputImport(name="triggersWhen", required=true)
+    @Import(name="triggersWhen", required=true)
       private final String triggersWhen;
 
     public String getTriggersWhen() {

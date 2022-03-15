@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.enums.BucketIntelligentTieringConfigurationStatus;
 import io.pulumi.awsnative.s3.inputs.BucketTagFilter;
 import io.pulumi.awsnative.s3.inputs.BucketTiering;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BucketIntelligentTieringConfiguration extends io.pulumi.resou
      * The ID used to identify the S3 Intelligent-Tiering configuration.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -33,7 +33,7 @@ public final class BucketIntelligentTieringConfiguration extends io.pulumi.resou
      * An object key name prefix that identifies the subset of objects to which the rule applies.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable String prefix;
 
     public Optional<String> getPrefix() {
@@ -44,7 +44,7 @@ public final class BucketIntelligentTieringConfiguration extends io.pulumi.resou
      * Specifies the status of the configuration.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final BucketIntelligentTieringConfigurationStatus status;
 
     public BucketIntelligentTieringConfigurationStatus getStatus() {
@@ -55,7 +55,7 @@ public final class BucketIntelligentTieringConfiguration extends io.pulumi.resou
      * A container for a key-value pair.
      * 
      */
-    @InputImport(name="tagFilters")
+    @Import(name="tagFilters")
       private final @Nullable List<BucketTagFilter> tagFilters;
 
     public List<BucketTagFilter> getTagFilters() {
@@ -66,7 +66,7 @@ public final class BucketIntelligentTieringConfiguration extends io.pulumi.resou
      * Specifies a list of S3 Intelligent-Tiering storage class tiers in the configuration. At least one tier must be defined in the list. At most, you can specify two tiers in the list, one for each available AccessTier: ARCHIVE_ACCESS and DEEP_ARCHIVE_ACCESS.
      * 
      */
-    @InputImport(name="tierings", required=true)
+    @Import(name="tierings", required=true)
       private final List<BucketTiering> tierings;
 
     public List<BucketTiering> getTierings() {

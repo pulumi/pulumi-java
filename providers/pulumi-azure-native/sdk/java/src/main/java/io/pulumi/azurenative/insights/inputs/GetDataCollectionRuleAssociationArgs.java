@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetDataCollectionRuleAssociationArgs extends io.pulumi.resour
      * The name of the association. The name is case insensitive.
      * 
      */
-    @InputImport(name="associationName", required=true)
+    @Import(name="associationName", required=true)
       private final String associationName;
 
     public String getAssociationName() {
@@ -27,7 +27,7 @@ public final class GetDataCollectionRuleAssociationArgs extends io.pulumi.resour
      * The identifier of the resource.
      * 
      */
-    @InputImport(name="resourceUri", required=true)
+    @Import(name="resourceUri", required=true)
       private final String resourceUri;
 
     public String getResourceUri() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.glacier.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
      * Boolean whether to permanently apply this Glacier Lock Policy. Once completed, this cannot be undone. If set to `false`, the Glacier Lock Policy remains in a testing mode for 24 hours. After that time, the Glacier Lock Policy is automatically removed by Glacier and the this provider resource will show as needing recreation. Changing this from `false` to `true` will show as resource recreation, which is expected. Changing this from `true` to `false` is not possible unless the Glacier Vault is recreated at the same time.
      * 
      */
-    @InputImport(name="completeLock")
+    @Import(name="completeLock")
       private final @Nullable Output<Boolean> completeLock;
 
     public Output<Boolean> getCompleteLock() {
@@ -30,7 +30,7 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
      * Allow this provider to ignore the error returned when attempting to delete the Glacier Lock Policy. This can be used to delete or recreate the Glacier Vault via this provider, for example, if the Glacier Vault Lock policy permits that action. This should only be used in conjunction with `complete_lock` being set to `true`.
      * 
      */
-    @InputImport(name="ignoreDeletionError")
+    @Import(name="ignoreDeletionError")
       private final @Nullable Output<Boolean> ignoreDeletionError;
 
     public Output<Boolean> getIgnoreDeletionError() {
@@ -41,7 +41,7 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
      * JSON string containing the IAM policy to apply as the Glacier Vault Lock policy.
      * 
      */
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -52,7 +52,7 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
      * The name of the Glacier Vault.
      * 
      */
-    @InputImport(name="vaultName")
+    @Import(name="vaultName")
       private final @Nullable Output<String> vaultName;
 
     public Output<String> getVaultName() {

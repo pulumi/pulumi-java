@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends io.pulumi.r
      * Expected value is '#Microsoft.Media.ContentKeyPolicyWidevineConfiguration'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final Output<String> odataType;
 
     public Output<String> getOdataType() {
@@ -33,7 +33,7 @@ public final class ContentKeyPolicyWidevineConfigurationArgs extends io.pulumi.r
      * The Widevine template.
      * 
      */
-    @InputImport(name="widevineTemplate", required=true)
+    @Import(name="widevineTemplate", required=true)
       private final Output<String> widevineTemplate;
 
     public Output<String> getWidevineTemplate() {

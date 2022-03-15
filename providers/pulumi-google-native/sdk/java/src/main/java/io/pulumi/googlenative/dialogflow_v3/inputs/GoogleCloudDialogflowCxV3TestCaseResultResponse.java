@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ConversationTurnResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends io.pu
      * The conversation turns uttered during the test case replay in chronological order.
      * 
      */
-    @InputImport(name="conversationTurns", required=true)
+    @Import(name="conversationTurns", required=true)
       private final List<GoogleCloudDialogflowCxV3ConversationTurnResponse> conversationTurns;
 
     public List<GoogleCloudDialogflowCxV3ConversationTurnResponse> getConversationTurns() {
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends io.pu
      * Environment where the test was run. If not set, it indicates the draft environment.
      * 
      */
-    @InputImport(name="environment", required=true)
+    @Import(name="environment", required=true)
       private final String environment;
 
     public String getEnvironment() {
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends io.pu
      * The resource name for the test case result. Format: `projects//locations//agents//testCases/ /results/`.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends io.pu
      * Whether the test case passed in the agent environment.
      * 
      */
-    @InputImport(name="testResult", required=true)
+    @Import(name="testResult", required=true)
       private final String testResult;
 
     public String getTestResult() {
@@ -66,7 +66,7 @@ public final class GoogleCloudDialogflowCxV3TestCaseResultResponse extends io.pu
      * The time that the test was run.
      * 
      */
-    @InputImport(name="testTime", required=true)
+    @Import(name="testTime", required=true)
       private final String testTime;
 
     public String getTestTime() {

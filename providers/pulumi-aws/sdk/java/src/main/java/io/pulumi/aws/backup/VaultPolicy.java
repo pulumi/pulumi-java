@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.backup.VaultPolicyArgs;
 import io.pulumi.aws.backup.inputs.VaultPolicyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class VaultPolicy extends io.pulumi.resources.CustomResource {
      * The ARN of the vault.
      * 
      */
-    @OutputExport(name="backupVaultArn", type=String.class, parameters={})
+    @Export(name="backupVaultArn", type=String.class, parameters={})
     private Output<String> backupVaultArn;
 
     /**
@@ -46,7 +46,7 @@ public class VaultPolicy extends io.pulumi.resources.CustomResource {
      * Name of the backup vault to add policy for.
      * 
      */
-    @OutputExport(name="backupVaultName", type=String.class, parameters={})
+    @Export(name="backupVaultName", type=String.class, parameters={})
     private Output<String> backupVaultName;
 
     /**
@@ -60,7 +60,7 @@ public class VaultPolicy extends io.pulumi.resources.CustomResource {
      * The backup vault access policy document in JSON format.
      * 
      */
-    @OutputExport(name="policy", type=String.class, parameters={})
+    @Export(name="policy", type=String.class, parameters={})
     private Output<String> policy;
 
     /**

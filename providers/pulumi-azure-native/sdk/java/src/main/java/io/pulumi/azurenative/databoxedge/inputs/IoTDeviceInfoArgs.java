@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.AuthenticationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Encrypted IoT device/IoT edge device connection string.
      * 
      */
-    @InputImport(name="authentication")
+    @Import(name="authentication")
       private final @Nullable Output<AuthenticationArgs> authentication;
 
     public Output<AuthenticationArgs> getAuthentication() {
@@ -34,7 +34,7 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the IoT device/edge device.
      * 
      */
-    @InputImport(name="deviceId", required=true)
+    @Import(name="deviceId", required=true)
       private final Output<String> deviceId;
 
     public Output<String> getDeviceId() {
@@ -45,7 +45,7 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Host name for the IoT hub associated to the device.
      * 
      */
-    @InputImport(name="ioTHostHub", required=true)
+    @Import(name="ioTHostHub", required=true)
       private final Output<String> ioTHostHub;
 
     public Output<String> getIoTHostHub() {
@@ -56,7 +56,7 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
      * Id for the IoT hub associated to the device.
      * 
      */
-    @InputImport(name="ioTHostHubId")
+    @Import(name="ioTHostHubId")
       private final @Nullable Output<String> ioTHostHubId;
 
     public Output<String> getIoTHostHubId() {

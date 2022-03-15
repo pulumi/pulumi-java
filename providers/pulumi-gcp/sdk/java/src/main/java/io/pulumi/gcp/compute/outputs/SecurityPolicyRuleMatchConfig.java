@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyRuleMatchConfig {
     /**
      * Set of IP addresses or ranges (IPV4 or IPV6) in CIDR notation
@@ -18,8 +18,8 @@ public final class SecurityPolicyRuleMatchConfig {
      */
     private final List<String> srcIpRanges;
 
-    @OutputCustomType.Constructor
-    private SecurityPolicyRuleMatchConfig(@OutputCustomType.Parameter("srcIpRanges") List<String> srcIpRanges) {
+    @CustomType.Constructor
+    private SecurityPolicyRuleMatchConfig(@CustomType.Parameter("srcIpRanges") List<String> srcIpRanges) {
         this.srcIpRanges = srcIpRanges;
     }
 

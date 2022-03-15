@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dns_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dns_v1beta2.outputs.RRSetRoutingPolicyGeoPolicyResponse;
 import io.pulumi.googlenative.dns_v1beta2.outputs.RRSetRoutingPolicyWrrPolicyResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RRSetRoutingPolicyResponse {
     private final RRSetRoutingPolicyGeoPolicyResponse geo;
     private final RRSetRoutingPolicyGeoPolicyResponse geoPolicy;
@@ -17,13 +17,13 @@ public final class RRSetRoutingPolicyResponse {
     private final RRSetRoutingPolicyWrrPolicyResponse wrr;
     private final RRSetRoutingPolicyWrrPolicyResponse wrrPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RRSetRoutingPolicyResponse(
-        @OutputCustomType.Parameter("geo") RRSetRoutingPolicyGeoPolicyResponse geo,
-        @OutputCustomType.Parameter("geoPolicy") RRSetRoutingPolicyGeoPolicyResponse geoPolicy,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("wrr") RRSetRoutingPolicyWrrPolicyResponse wrr,
-        @OutputCustomType.Parameter("wrrPolicy") RRSetRoutingPolicyWrrPolicyResponse wrrPolicy) {
+        @CustomType.Parameter("geo") RRSetRoutingPolicyGeoPolicyResponse geo,
+        @CustomType.Parameter("geoPolicy") RRSetRoutingPolicyGeoPolicyResponse geoPolicy,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("wrr") RRSetRoutingPolicyWrrPolicyResponse wrr,
+        @CustomType.Parameter("wrrPolicy") RRSetRoutingPolicyWrrPolicyResponse wrrPolicy) {
         this.geo = geo;
         this.geoPolicy = geoPolicy;
         this.kind = kind;

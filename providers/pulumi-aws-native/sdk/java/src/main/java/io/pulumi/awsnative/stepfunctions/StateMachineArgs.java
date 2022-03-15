@@ -11,7 +11,7 @@ import io.pulumi.awsnative.stepfunctions.inputs.StateMachineS3LocationArgs;
 import io.pulumi.awsnative.stepfunctions.inputs.StateMachineTagsEntryArgs;
 import io.pulumi.awsnative.stepfunctions.inputs.StateMachineTracingConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,70 +22,70 @@ public final class StateMachineArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final StateMachineArgs Empty = new StateMachineArgs();
 
-    @InputImport(name="definition")
+    @Import(name="definition")
       private final @Nullable Output<StateMachineDefinitionArgs> definition;
 
     public Output<StateMachineDefinitionArgs> getDefinition() {
         return this.definition == null ? Output.empty() : this.definition;
     }
 
-    @InputImport(name="definitionS3Location")
+    @Import(name="definitionS3Location")
       private final @Nullable Output<StateMachineS3LocationArgs> definitionS3Location;
 
     public Output<StateMachineS3LocationArgs> getDefinitionS3Location() {
         return this.definitionS3Location == null ? Output.empty() : this.definitionS3Location;
     }
 
-    @InputImport(name="definitionString")
+    @Import(name="definitionString")
       private final @Nullable Output<String> definitionString;
 
     public Output<String> getDefinitionString() {
         return this.definitionString == null ? Output.empty() : this.definitionString;
     }
 
-    @InputImport(name="definitionSubstitutions")
+    @Import(name="definitionSubstitutions")
       private final @Nullable Output<StateMachineDefinitionSubstitutionsArgs> definitionSubstitutions;
 
     public Output<StateMachineDefinitionSubstitutionsArgs> getDefinitionSubstitutions() {
         return this.definitionSubstitutions == null ? Output.empty() : this.definitionSubstitutions;
     }
 
-    @InputImport(name="loggingConfiguration")
+    @Import(name="loggingConfiguration")
       private final @Nullable Output<StateMachineLoggingConfigurationArgs> loggingConfiguration;
 
     public Output<StateMachineLoggingConfigurationArgs> getLoggingConfiguration() {
         return this.loggingConfiguration == null ? Output.empty() : this.loggingConfiguration;
     }
 
-    @InputImport(name="roleArn", required=true)
+    @Import(name="roleArn", required=true)
       private final Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
 
-    @InputImport(name="stateMachineName")
+    @Import(name="stateMachineName")
       private final @Nullable Output<String> stateMachineName;
 
     public Output<String> getStateMachineName() {
         return this.stateMachineName == null ? Output.empty() : this.stateMachineName;
     }
 
-    @InputImport(name="stateMachineType")
+    @Import(name="stateMachineType")
       private final @Nullable Output<StateMachineType> stateMachineType;
 
     public Output<StateMachineType> getStateMachineType() {
         return this.stateMachineType == null ? Output.empty() : this.stateMachineType;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<StateMachineTagsEntryArgs>> tags;
 
     public Output<List<StateMachineTagsEntryArgs>> getTags() {
         return this.tags == null ? Output.empty() : this.tags;
     }
 
-    @InputImport(name="tracingConfiguration")
+    @Import(name="tracingConfiguration")
       private final @Nullable Output<StateMachineTracingConfigurationArgs> tracingConfiguration;
 
     public Output<StateMachineTracingConfigurationArgs> getTracingConfiguration() {

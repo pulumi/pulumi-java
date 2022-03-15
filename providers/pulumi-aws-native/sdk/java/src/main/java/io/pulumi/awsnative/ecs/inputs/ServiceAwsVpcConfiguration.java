@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.enums.ServiceAwsVpcConfigurationAssignPublicIp;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class ServiceAwsVpcConfiguration extends io.pulumi.resources.Invoke
 
     public static final ServiceAwsVpcConfiguration Empty = new ServiceAwsVpcConfiguration();
 
-    @InputImport(name="assignPublicIp")
+    @Import(name="assignPublicIp")
       private final @Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp;
 
     public Optional<ServiceAwsVpcConfigurationAssignPublicIp> getAssignPublicIp() {
         return this.assignPublicIp == null ? Optional.empty() : Optional.ofNullable(this.assignPublicIp);
     }
 
-    @InputImport(name="securityGroups")
+    @Import(name="securityGroups")
       private final @Nullable List<String> securityGroups;
 
     public List<String> getSecurityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
 
-    @InputImport(name="subnets")
+    @Import(name="subnets")
       private final @Nullable List<String> subnets;
 
     public List<String> getSubnets() {

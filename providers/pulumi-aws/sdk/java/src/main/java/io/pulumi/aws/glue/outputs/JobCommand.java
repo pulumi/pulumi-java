@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.glue.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobCommand {
     /**
      * The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, `max_capacity` needs to be set if `pythonshell` is chosen.
@@ -27,11 +27,11 @@ public final class JobCommand {
      */
     private final String scriptLocation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobCommand(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("pythonVersion") @Nullable String pythonVersion,
-        @OutputCustomType.Parameter("scriptLocation") String scriptLocation) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("pythonVersion") @Nullable String pythonVersion,
+        @CustomType.Parameter("scriptLocation") String scriptLocation) {
         this.name = name;
         this.pythonVersion = pythonVersion;
         this.scriptLocation = scriptLocation;

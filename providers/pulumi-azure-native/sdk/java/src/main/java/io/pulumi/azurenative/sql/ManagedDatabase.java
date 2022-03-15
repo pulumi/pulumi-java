@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.sql.ManagedDatabaseArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ManagedDatabase extends io.pulumi.resources.CustomResource {
      * Collation of the metadata catalog.
      * 
      */
-    @OutputExport(name="catalogCollation", type=String.class, parameters={})
+    @Export(name="catalogCollation", type=String.class, parameters={})
     private Output</* @Nullable */ String> catalogCollation;
 
     /**
@@ -49,7 +49,7 @@ public class ManagedDatabase extends io.pulumi.resources.CustomResource {
      * Collation of the managed database.
      * 
      */
-    @OutputExport(name="collation", type=String.class, parameters={})
+    @Export(name="collation", type=String.class, parameters={})
     private Output</* @Nullable */ String> collation;
 
     /**
@@ -63,7 +63,7 @@ public class ManagedDatabase extends io.pulumi.resources.CustomResource {
      * Creation date of the database.
      * 
      */
-    @OutputExport(name="creationDate", type=String.class, parameters={})
+    @Export(name="creationDate", type=String.class, parameters={})
     private Output<String> creationDate;
 
     /**
@@ -77,7 +77,7 @@ public class ManagedDatabase extends io.pulumi.resources.CustomResource {
      * Geo paired region.
      * 
      */
-    @OutputExport(name="defaultSecondaryLocation", type=String.class, parameters={})
+    @Export(name="defaultSecondaryLocation", type=String.class, parameters={})
     private Output<String> defaultSecondaryLocation;
 
     /**
@@ -91,7 +91,7 @@ public class ManagedDatabase extends io.pulumi.resources.CustomResource {
      * Earliest restore point in time for point in time restore.
      * 
      */
-    @OutputExport(name="earliestRestorePoint", type=String.class, parameters={})
+    @Export(name="earliestRestorePoint", type=String.class, parameters={})
     private Output<String> earliestRestorePoint;
 
     /**
@@ -105,7 +105,7 @@ public class ManagedDatabase extends io.pulumi.resources.CustomResource {
      * Instance Failover Group resource identifier that this managed database belongs to.
      * 
      */
-    @OutputExport(name="failoverGroupId", type=String.class, parameters={})
+    @Export(name="failoverGroupId", type=String.class, parameters={})
     private Output<String> failoverGroupId;
 
     /**
@@ -119,7 +119,7 @@ public class ManagedDatabase extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -133,7 +133,7 @@ public class ManagedDatabase extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -147,7 +147,7 @@ public class ManagedDatabase extends io.pulumi.resources.CustomResource {
      * Status of the database.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -161,7 +161,7 @@ public class ManagedDatabase extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -175,7 +175,7 @@ public class ManagedDatabase extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

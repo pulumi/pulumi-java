@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationEventLevel;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationWindowsEvent extends io.pulumi.resources.InvokeArg
      * The levels of event to log.
      * 
      */
-    @InputImport(name="eventLevels", required=true)
+    @Import(name="eventLevels", required=true)
       private final List<ApplicationEventLevel> eventLevels;
 
     public List<ApplicationEventLevel> getEventLevels() {
@@ -35,7 +35,7 @@ public final class ApplicationWindowsEvent extends io.pulumi.resources.InvokeArg
      * The type of Windows Events to log.
      * 
      */
-    @InputImport(name="eventName", required=true)
+    @Import(name="eventName", required=true)
       private final String eventName;
 
     public String getEventName() {
@@ -46,7 +46,7 @@ public final class ApplicationWindowsEvent extends io.pulumi.resources.InvokeArg
      * The CloudWatch log group name to be associated to the monitored log.
      * 
      */
-    @InputImport(name="logGroupName", required=true)
+    @Import(name="logGroupName", required=true)
       private final String logGroupName;
 
     public String getLogGroupName() {
@@ -57,7 +57,7 @@ public final class ApplicationWindowsEvent extends io.pulumi.resources.InvokeArg
      * The name of the log pattern set.
      * 
      */
-    @InputImport(name="patternSet")
+    @Import(name="patternSet")
       private final @Nullable String patternSet;
 
     public Optional<String> getPatternSet() {

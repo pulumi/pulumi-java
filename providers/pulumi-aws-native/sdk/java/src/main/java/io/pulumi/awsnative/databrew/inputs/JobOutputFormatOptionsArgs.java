@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.JobCsvOutputOptionsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class JobOutputFormatOptionsArgs extends io.pulumi.resources.Resour
 
     public static final JobOutputFormatOptionsArgs Empty = new JobOutputFormatOptionsArgs();
 
-    @InputImport(name="csv")
+    @Import(name="csv")
       private final @Nullable Output<JobCsvOutputOptionsArgs> csv;
 
     public Output<JobCsvOutputOptionsArgs> getCsv() {

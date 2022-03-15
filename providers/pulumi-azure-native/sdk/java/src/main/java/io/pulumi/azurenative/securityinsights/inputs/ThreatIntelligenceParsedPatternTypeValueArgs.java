@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
      * Value of parsed pattern
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
@@ -33,7 +33,7 @@ public final class ThreatIntelligenceParsedPatternTypeValueArgs extends io.pulum
      * Type of the value
      * 
      */
-    @InputImport(name="valueType")
+    @Import(name="valueType")
       private final @Nullable Output<String> valueType;
 
     public Output<String> getValueType() {

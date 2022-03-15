@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * Provide this property when creating the disk.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -34,7 +34,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * new name will be automatically generated.
      * 
      */
-    @InputImport(name="diskName")
+    @Import(name="diskName")
       private final @Nullable Output<String> diskName;
 
     public Output<String> getDiskName() {
@@ -48,7 +48,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * or larger than 10GB. Default 100 GB.
      * 
      */
-    @InputImport(name="diskSizeGb")
+    @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
     public Output<Integer> getDiskSizeGb() {
@@ -62,7 +62,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * reference/rest/v1/projects.locations.runtimes#disktype`
      * 
      */
-    @InputImport(name="diskType")
+    @Import(name="diskType")
       private final @Nullable Output<String> diskType;
 
     public Output<String> getDiskType() {
@@ -75,7 +75,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
      * applicable for persistent disks.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {

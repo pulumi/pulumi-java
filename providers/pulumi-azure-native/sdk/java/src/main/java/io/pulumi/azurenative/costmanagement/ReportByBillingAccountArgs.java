@@ -9,7 +9,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ReportDeliveryInfoArgs;
 import io.pulumi.azurenative.costmanagement.inputs.ReportScheduleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ReportByBillingAccountArgs extends io.pulumi.resources.Resour
      * BillingAccount ID
      * 
      */
-    @InputImport(name="billingAccountId", required=true)
+    @Import(name="billingAccountId", required=true)
       private final Output<String> billingAccountId;
 
     public Output<String> getBillingAccountId() {
@@ -34,7 +34,7 @@ public final class ReportByBillingAccountArgs extends io.pulumi.resources.Resour
      * Has definition for the report.
      * 
      */
-    @InputImport(name="definition", required=true)
+    @Import(name="definition", required=true)
       private final Output<ReportDefinitionArgs> definition;
 
     public Output<ReportDefinitionArgs> getDefinition() {
@@ -45,7 +45,7 @@ public final class ReportByBillingAccountArgs extends io.pulumi.resources.Resour
      * Has delivery information for the report.
      * 
      */
-    @InputImport(name="deliveryInfo", required=true)
+    @Import(name="deliveryInfo", required=true)
       private final Output<ReportDeliveryInfoArgs> deliveryInfo;
 
     public Output<ReportDeliveryInfoArgs> getDeliveryInfo() {
@@ -56,7 +56,7 @@ public final class ReportByBillingAccountArgs extends io.pulumi.resources.Resour
      * The format of the report being delivered.
      * 
      */
-    @InputImport(name="format")
+    @Import(name="format")
       private final @Nullable Output<Either<String,FormatType>> format;
 
     public Output<Either<String,FormatType>> getFormat() {
@@ -67,7 +67,7 @@ public final class ReportByBillingAccountArgs extends io.pulumi.resources.Resour
      * Report Name.
      * 
      */
-    @InputImport(name="reportName")
+    @Import(name="reportName")
       private final @Nullable Output<String> reportName;
 
     public Output<String> getReportName() {
@@ -78,7 +78,7 @@ public final class ReportByBillingAccountArgs extends io.pulumi.resources.Resour
      * Has schedule information for the report.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<ReportScheduleArgs> schedule;
 
     public Output<ReportScheduleArgs> getSchedule() {

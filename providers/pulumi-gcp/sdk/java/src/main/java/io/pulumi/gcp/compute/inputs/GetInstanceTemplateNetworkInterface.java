@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.GetInstanceTemplateNetworkInterfaceAccessConfig;
 import io.pulumi.gcp.compute.inputs.GetInstanceTemplateNetworkInterfaceAliasIpRange;
 import io.pulumi.gcp.compute.inputs.GetInstanceTemplateNetworkInterfaceIpv6AccessConfig;
@@ -26,7 +26,7 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
      * on that network). This block can be repeated multiple times. Structure documented below.
      * 
      */
-    @InputImport(name="accessConfigs", required=true)
+    @Import(name="accessConfigs", required=true)
       private final List<GetInstanceTemplateNetworkInterfaceAccessConfig> accessConfigs;
 
     public List<GetInstanceTemplateNetworkInterfaceAccessConfig> getAccessConfigs() {
@@ -39,21 +39,21 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
      * interfaces on subnet-mode networks. Structure documented below.
      * 
      */
-    @InputImport(name="aliasIpRanges", required=true)
+    @Import(name="aliasIpRanges", required=true)
       private final List<GetInstanceTemplateNetworkInterfaceAliasIpRange> aliasIpRanges;
 
     public List<GetInstanceTemplateNetworkInterfaceAliasIpRange> getAliasIpRanges() {
         return this.aliasIpRanges;
     }
 
-    @InputImport(name="ipv6AccessConfigs", required=true)
+    @Import(name="ipv6AccessConfigs", required=true)
       private final List<GetInstanceTemplateNetworkInterfaceIpv6AccessConfig> ipv6AccessConfigs;
 
     public List<GetInstanceTemplateNetworkInterfaceIpv6AccessConfig> getIpv6AccessConfigs() {
         return this.ipv6AccessConfigs;
     }
 
-    @InputImport(name="ipv6AccessType", required=true)
+    @Import(name="ipv6AccessType", required=true)
       private final String ipv6AccessType;
 
     public String getIpv6AccessType() {
@@ -64,7 +64,7 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
      * The name of the instance template. One of `name` or `filter` must be provided.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -77,7 +77,7 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
      * `subnetwork` for custom subnetted networks.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final String network;
 
     public String getNetwork() {
@@ -89,28 +89,28 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
      * empty, the address will be automatically assigned.
      * 
      */
-    @InputImport(name="networkIp", required=true)
+    @Import(name="networkIp", required=true)
       private final String networkIp;
 
     public String getNetworkIp() {
         return this.networkIp;
     }
 
-    @InputImport(name="nicType", required=true)
+    @Import(name="nicType", required=true)
       private final String nicType;
 
     public String getNicType() {
         return this.nicType;
     }
 
-    @InputImport(name="queueCount", required=true)
+    @Import(name="queueCount", required=true)
       private final Integer queueCount;
 
     public Integer getQueueCount() {
         return this.queueCount;
     }
 
-    @InputImport(name="stackType", required=true)
+    @Import(name="stackType", required=true)
       private final String stackType;
 
     public String getStackType() {
@@ -123,7 +123,7 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
      * created in. Either `network` or `subnetwork` must be provided.
      * 
      */
-    @InputImport(name="subnetwork", required=true)
+    @Import(name="subnetwork", required=true)
       private final String subnetwork;
 
     public String getSubnetwork() {
@@ -135,7 +135,7 @@ public final class GetInstanceTemplateNetworkInterface extends io.pulumi.resourc
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="subnetworkProject", required=true)
+    @Import(name="subnetworkProject", required=true)
       private final String subnetworkProject;
 
     public String getSubnetworkProject() {

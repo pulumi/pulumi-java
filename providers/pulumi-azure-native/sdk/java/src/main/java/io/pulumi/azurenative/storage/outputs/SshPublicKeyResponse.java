@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SshPublicKeyResponse {
     /**
      * Optional. It is used to store the function/usage of the key
@@ -22,10 +22,10 @@ public final class SshPublicKeyResponse {
      */
     private final @Nullable String key;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SshPublicKeyResponse(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("key") @Nullable String key) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("key") @Nullable String key) {
         this.description = description;
         this.key = key;
     }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.NetworkInterfaceReferenceResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineNetworkInterfaceConfigurationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * specifies the Microsoft.Network API version used when creating networking resources in the Network Interface Configurations
      * 
      */
-    @InputImport(name="networkApiVersion")
+    @Import(name="networkApiVersion")
       private final @Nullable String networkApiVersion;
 
     public Optional<String> getNetworkApiVersion() {
@@ -36,7 +36,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * Specifies the networking configurations that will be used to create the virtual machine networking resources.
      * 
      */
-    @InputImport(name="networkInterfaceConfigurations")
+    @Import(name="networkInterfaceConfigurations")
       private final @Nullable List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations;
 
     public List<VirtualMachineNetworkInterfaceConfigurationResponse> getNetworkInterfaceConfigurations() {
@@ -47,7 +47,7 @@ public final class NetworkProfileResponse extends io.pulumi.resources.InvokeArgs
      * Specifies the list of resource Ids for the network interfaces associated with the virtual machine.
      * 
      */
-    @InputImport(name="networkInterfaces")
+    @Import(name="networkInterfaces")
       private final @Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces;
 
     public List<NetworkInterfaceReferenceResponse> getNetworkInterfaces() {

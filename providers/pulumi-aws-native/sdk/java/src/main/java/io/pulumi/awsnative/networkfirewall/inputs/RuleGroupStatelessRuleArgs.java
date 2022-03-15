@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupRuleDefinitionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class RuleGroupStatelessRuleArgs extends io.pulumi.resources.Resour
 
     public static final RuleGroupStatelessRuleArgs Empty = new RuleGroupStatelessRuleArgs();
 
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
     public Output<Integer> getPriority() {
         return this.priority;
     }
 
-    @InputImport(name="ruleDefinition", required=true)
+    @Import(name="ruleDefinition", required=true)
       private final Output<RuleGroupRuleDefinitionArgs> ruleDefinition;
 
     public Output<RuleGroupRuleDefinitionArgs> getRuleDefinition() {

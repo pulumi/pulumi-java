@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.AllowedConfigListArgs;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.AllowedSubjectAltNamesArgs;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.IssuanceModesArgs;
@@ -28,7 +28,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
      * Optional. If any value is specified here, then all Certificates issued by the CertificateAuthority must match at least one listed value. If no value is specified, all values will be allowed for this fied. Glob patterns are also supported.
      * 
      */
-    @InputImport(name="allowedCommonNames")
+    @Import(name="allowedCommonNames")
       private final @Nullable Output<List<String>> allowedCommonNames;
 
     public Output<List<String>> getAllowedCommonNames() {
@@ -39,7 +39,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
      * Optional. All Certificates issued by the CertificateAuthority must match at least one listed ReusableConfigWrapper in the list.
      * 
      */
-    @InputImport(name="allowedConfigList")
+    @Import(name="allowedConfigList")
       private final @Nullable Output<AllowedConfigListArgs> allowedConfigList;
 
     public Output<AllowedConfigListArgs> getAllowedConfigList() {
@@ -50,7 +50,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
      * Optional. If specified, then only methods allowed in the IssuanceModes may be used to issue Certificates.
      * 
      */
-    @InputImport(name="allowedIssuanceModes")
+    @Import(name="allowedIssuanceModes")
       private final @Nullable Output<IssuanceModesArgs> allowedIssuanceModes;
 
     public Output<IssuanceModesArgs> getAllowedIssuanceModes() {
@@ -61,7 +61,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
      * Optional. If any Subject is specified here, then all Certificates issued by the CertificateAuthority must match at least one listed Subject. If a Subject has an empty field, any value will be allowed for that field.
      * 
      */
-    @InputImport(name="allowedLocationsAndOrganizations")
+    @Import(name="allowedLocationsAndOrganizations")
       private final @Nullable Output<List<SubjectArgs>> allowedLocationsAndOrganizations;
 
     public Output<List<SubjectArgs>> getAllowedLocationsAndOrganizations() {
@@ -72,7 +72,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
      * Optional. If a AllowedSubjectAltNames is specified here, then all Certificates issued by the CertificateAuthority must match AllowedSubjectAltNames. If no value or an empty value is specified, any value will be allowed for the SubjectAltNames field.
      * 
      */
-    @InputImport(name="allowedSans")
+    @Import(name="allowedSans")
       private final @Nullable Output<AllowedSubjectAltNamesArgs> allowedSans;
 
     public Output<AllowedSubjectAltNamesArgs> getAllowedSans() {
@@ -83,7 +83,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
      * Optional. The maximum lifetime allowed by the CertificateAuthority. Note that if the any part if the issuing chain expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated.
      * 
      */
-    @InputImport(name="maximumLifetime")
+    @Import(name="maximumLifetime")
       private final @Nullable Output<String> maximumLifetime;
 
     public Output<String> getMaximumLifetime() {
@@ -94,7 +94,7 @@ public final class CertificateAuthorityPolicyArgs extends io.pulumi.resources.Re
      * Optional. All Certificates issued by the CertificateAuthority will use the provided configuration values, overwriting any requested configuration values.
      * 
      */
-    @InputImport(name="overwriteConfigValues")
+    @Import(name="overwriteConfigValues")
       private final @Nullable Output<ReusableConfigWrapperArgs> overwriteConfigValues;
 
     public Output<ReusableConfigWrapperArgs> getOverwriteConfigValues() {

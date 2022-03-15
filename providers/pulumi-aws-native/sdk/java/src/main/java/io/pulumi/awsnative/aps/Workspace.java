@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.aps.WorkspaceArgs;
 import io.pulumi.awsnative.aps.outputs.WorkspaceTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * The AMP Workspace alert manager definition data
      * 
      */
-    @OutputExport(name="alertManagerDefinition", type=String.class, parameters={})
+    @Export(name="alertManagerDefinition", type=String.class, parameters={})
     private Output</* @Nullable */ String> alertManagerDefinition;
 
     /**
@@ -39,7 +39,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * AMP Workspace alias.
      * 
      */
-    @OutputExport(name="alias", type=String.class, parameters={})
+    @Export(name="alias", type=String.class, parameters={})
     private Output</* @Nullable */ String> alias;
 
     /**
@@ -53,7 +53,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Workspace arn.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -67,7 +67,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * AMP Workspace prometheus endpoint
      * 
      */
-    @OutputExport(name="prometheusEndpoint", type=String.class, parameters={})
+    @Export(name="prometheusEndpoint", type=String.class, parameters={})
     private Output<String> prometheusEndpoint;
 
     /**
@@ -81,7 +81,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={WorkspaceTag.class})
+    @Export(name="tags", type=List.class, parameters={WorkspaceTag.class})
     private Output</* @Nullable */ List<WorkspaceTag>> tags;
 
     /**
@@ -95,7 +95,7 @@ public class Workspace extends io.pulumi.resources.CustomResource {
      * Required to identify a specific APS Workspace.
      * 
      */
-    @OutputExport(name="workspaceId", type=String.class, parameters={})
+    @Export(name="workspaceId", type=String.class, parameters={})
     private Output<String> workspaceId;
 
     /**

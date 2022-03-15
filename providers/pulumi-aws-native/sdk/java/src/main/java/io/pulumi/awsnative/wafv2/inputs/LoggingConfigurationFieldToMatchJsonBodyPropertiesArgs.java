@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFieldToMatchJsonBodyP
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs extend
      * What AWS WAF should do if it fails to completely parse the JSON body.
      * 
      */
-    @InputImport(name="invalidFallbackBehavior")
+    @Import(name="invalidFallbackBehavior")
       private final @Nullable Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> invalidFallbackBehavior;
 
     public Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> getInvalidFallbackBehavior() {
@@ -35,7 +35,7 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs extend
      * The patterns to look for in the JSON body. AWS WAF inspects the results of these pattern matches against the rule inspection criteria.
      * 
      */
-    @InputImport(name="matchPattern", required=true)
+    @Import(name="matchPattern", required=true)
       private final Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs> matchPattern;
 
     public Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs> getMatchPattern() {
@@ -46,7 +46,7 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs extend
      * The parts of the JSON to match against using the MatchPattern. If you specify All, AWS WAF matches against keys and values.
      * 
      */
-    @InputImport(name="matchScope", required=true)
+    @Import(name="matchScope", required=true)
       private final Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope> matchScope;
 
     public Output<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope> getMatchScope() {

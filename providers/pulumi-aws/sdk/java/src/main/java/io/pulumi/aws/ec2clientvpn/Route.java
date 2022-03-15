@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2clientvpn.RouteArgs;
 import io.pulumi.aws.ec2clientvpn.inputs.RouteState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The ID of the Client VPN endpoint.
      * 
      */
-    @OutputExport(name="clientVpnEndpointId", type=String.class, parameters={})
+    @Export(name="clientVpnEndpointId", type=String.class, parameters={})
     private Output<String> clientVpnEndpointId;
 
     /**
@@ -47,7 +47,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * A brief description of the authorization rule.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -61,7 +61,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The IPv4 address range, in CIDR notation, of the route destination.
      * 
      */
-    @OutputExport(name="destinationCidrBlock", type=String.class, parameters={})
+    @Export(name="destinationCidrBlock", type=String.class, parameters={})
     private Output<String> destinationCidrBlock;
 
     /**
@@ -75,7 +75,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * Indicates how the Client VPN route was added. Will be `add-route` for routes created by this resource.
      * 
      */
-    @OutputExport(name="origin", type=String.class, parameters={})
+    @Export(name="origin", type=String.class, parameters={})
     private Output<String> origin;
 
     /**
@@ -89,7 +89,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The ID of the Subnet to route the traffic through. It must already be attached to the Client VPN.
      * 
      */
-    @OutputExport(name="targetVpcSubnetId", type=String.class, parameters={})
+    @Export(name="targetVpcSubnetId", type=String.class, parameters={})
     private Output<String> targetVpcSubnetId;
 
     /**
@@ -103,7 +103,7 @@ public class Route extends io.pulumi.resources.CustomResource {
      * The type of the route.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

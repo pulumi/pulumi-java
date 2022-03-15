@@ -9,7 +9,7 @@ import io.pulumi.azurenative.eventhub.outputs.NWRuleSetIpRulesResponse;
 import io.pulumi.azurenative.eventhub.outputs.NWRuleSetVirtualNetworkRulesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +36,7 @@ public class NamespaceNetworkRuleSet extends io.pulumi.resources.CustomResource 
      * Default Action for Network Rule Set
      * 
      */
-    @OutputExport(name="defaultAction", type=String.class, parameters={})
+    @Export(name="defaultAction", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultAction;
 
     /**
@@ -50,7 +50,7 @@ public class NamespaceNetworkRuleSet extends io.pulumi.resources.CustomResource 
      * List of IpRules
      * 
      */
-    @OutputExport(name="ipRules", type=List.class, parameters={NWRuleSetIpRulesResponse.class})
+    @Export(name="ipRules", type=List.class, parameters={NWRuleSetIpRulesResponse.class})
     private Output</* @Nullable */ List<NWRuleSetIpRulesResponse>> ipRules;
 
     /**
@@ -64,7 +64,7 @@ public class NamespaceNetworkRuleSet extends io.pulumi.resources.CustomResource 
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -78,7 +78,7 @@ public class NamespaceNetworkRuleSet extends io.pulumi.resources.CustomResource 
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -92,7 +92,7 @@ public class NamespaceNetworkRuleSet extends io.pulumi.resources.CustomResource 
      * List VirtualNetwork Rules
      * 
      */
-    @OutputExport(name="virtualNetworkRules", type=List.class, parameters={NWRuleSetVirtualNetworkRulesResponse.class})
+    @Export(name="virtualNetworkRules", type=List.class, parameters={NWRuleSetVirtualNetworkRulesResponse.class})
     private Output</* @Nullable */ List<NWRuleSetVirtualNetworkRulesResponse>> virtualNetworkRules;
 
     /**

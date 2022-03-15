@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
 import io.pulumi.azurenative.cognitiveservices.outputs.CommitmentQuotaResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CommitmentPeriodResponse {
     /**
      * Commitment period commitment count.
@@ -39,13 +39,13 @@ public final class CommitmentPeriodResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CommitmentPeriodResponse(
-        @OutputCustomType.Parameter("count") @Nullable Integer count,
-        @OutputCustomType.Parameter("endDate") String endDate,
-        @OutputCustomType.Parameter("quota") CommitmentQuotaResponse quota,
-        @OutputCustomType.Parameter("startDate") String startDate,
-        @OutputCustomType.Parameter("tier") @Nullable String tier) {
+        @CustomType.Parameter("count") @Nullable Integer count,
+        @CustomType.Parameter("endDate") String endDate,
+        @CustomType.Parameter("quota") CommitmentQuotaResponse quota,
+        @CustomType.Parameter("startDate") String startDate,
+        @CustomType.Parameter("tier") @Nullable String tier) {
         this.count = count;
         this.endDate = endDate;
         this.quota = quota;

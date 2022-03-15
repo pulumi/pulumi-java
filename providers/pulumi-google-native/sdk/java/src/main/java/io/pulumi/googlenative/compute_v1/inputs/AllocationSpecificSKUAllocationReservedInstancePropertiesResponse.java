@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_v1.inputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.compute_v1.inputs.AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      * Specifies accelerator type and count.
      * 
      */
-    @InputImport(name="guestAccelerators", required=true)
+    @Import(name="guestAccelerators", required=true)
       private final List<AcceleratorConfigResponse> guestAccelerators;
 
     public List<AcceleratorConfigResponse> getGuestAccelerators() {
@@ -34,7 +34,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      * Specifies amount of local ssd to reserve with each instance. The type of disk is local-ssd.
      * 
      */
-    @InputImport(name="localSsds", required=true)
+    @Import(name="localSsds", required=true)
       private final List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds;
 
     public List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> getLocalSsds() {
@@ -45,7 +45,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      * An opaque location hint used to place the allocation close to other resources. This field is for use by internal tools that use the public API.
      * 
      */
-    @InputImport(name="locationHint", required=true)
+    @Import(name="locationHint", required=true)
       private final String locationHint;
 
     public String getLocationHint() {
@@ -56,7 +56,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      * Specifies type of machine (name only) which has fixed number of vCPUs and fixed amount of memory. This also includes specifying custom machine type following custom-NUMBER_OF_CPUS-AMOUNT_OF_MEMORY pattern.
      * 
      */
-    @InputImport(name="machineType", required=true)
+    @Import(name="machineType", required=true)
       private final String machineType;
 
     public String getMachineType() {
@@ -67,7 +67,7 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      * Minimum cpu platform the reservation.
      * 
      */
-    @InputImport(name="minCpuPlatform", required=true)
+    @Import(name="minCpuPlatform", required=true)
       private final String minCpuPlatform;
 
     public String getMinCpuPlatform() {

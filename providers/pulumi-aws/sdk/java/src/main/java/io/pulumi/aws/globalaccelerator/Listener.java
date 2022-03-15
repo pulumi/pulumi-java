@@ -8,7 +8,7 @@ import io.pulumi.aws.globalaccelerator.ListenerArgs;
 import io.pulumi.aws.globalaccelerator.inputs.ListenerState;
 import io.pulumi.aws.globalaccelerator.outputs.ListenerPortRange;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of your accelerator.
      * 
      */
-    @OutputExport(name="acceleratorArn", type=String.class, parameters={})
+    @Export(name="acceleratorArn", type=String.class, parameters={})
     private Output<String> acceleratorArn;
 
     /**
@@ -48,7 +48,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * Direct all requests from a user to the same endpoint. Valid values are `NONE`, `SOURCE_IP`. Default: `NONE`. If `NONE`, Global Accelerator uses the "five-tuple" properties of source IP address, source port, destination IP address, destination port, and protocol to select the hash value. If `SOURCE_IP`, Global Accelerator uses the "two-tuple" properties of source (client) IP address and destination IP address to select the hash value.
      * 
      */
-    @OutputExport(name="clientAffinity", type=String.class, parameters={})
+    @Export(name="clientAffinity", type=String.class, parameters={})
     private Output</* @Nullable */ String> clientAffinity;
 
     /**
@@ -62,7 +62,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * The list of port ranges for the connections from clients to the accelerator. Fields documented below.
      * 
      */
-    @OutputExport(name="portRanges", type=List.class, parameters={ListenerPortRange.class})
+    @Export(name="portRanges", type=List.class, parameters={ListenerPortRange.class})
     private Output<List<ListenerPortRange>> portRanges;
 
     /**
@@ -76,7 +76,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * The protocol for the connections from clients to the accelerator. Valid values are `TCP`, `UDP`.
      * 
      */
-    @OutputExport(name="protocol", type=String.class, parameters={})
+    @Export(name="protocol", type=String.class, parameters={})
     private Output<String> protocol;
 
     /**

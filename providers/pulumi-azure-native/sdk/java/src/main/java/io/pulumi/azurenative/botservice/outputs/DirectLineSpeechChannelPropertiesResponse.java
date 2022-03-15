@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DirectLineSpeechChannelPropertiesResponse {
     /**
      * The cognitive service region with this channel registration.
@@ -43,14 +43,14 @@ public final class DirectLineSpeechChannelPropertiesResponse {
      */
     private final @Nullable Boolean isEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DirectLineSpeechChannelPropertiesResponse(
-        @OutputCustomType.Parameter("cognitiveServiceRegion") String cognitiveServiceRegion,
-        @OutputCustomType.Parameter("cognitiveServiceSubscriptionKey") String cognitiveServiceSubscriptionKey,
-        @OutputCustomType.Parameter("customSpeechModelId") @Nullable String customSpeechModelId,
-        @OutputCustomType.Parameter("customVoiceDeploymentId") @Nullable String customVoiceDeploymentId,
-        @OutputCustomType.Parameter("isDefaultBotForCogSvcAccount") @Nullable Boolean isDefaultBotForCogSvcAccount,
-        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled) {
+        @CustomType.Parameter("cognitiveServiceRegion") String cognitiveServiceRegion,
+        @CustomType.Parameter("cognitiveServiceSubscriptionKey") String cognitiveServiceSubscriptionKey,
+        @CustomType.Parameter("customSpeechModelId") @Nullable String customSpeechModelId,
+        @CustomType.Parameter("customVoiceDeploymentId") @Nullable String customVoiceDeploymentId,
+        @CustomType.Parameter("isDefaultBotForCogSvcAccount") @Nullable Boolean isDefaultBotForCogSvcAccount,
+        @CustomType.Parameter("isEnabled") @Nullable Boolean isEnabled) {
         this.cognitiveServiceRegion = cognitiveServiceRegion;
         this.cognitiveServiceSubscriptionKey = cognitiveServiceSubscriptionKey;
         this.customSpeechModelId = customSpeechModelId;

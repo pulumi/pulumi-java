@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.organizations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetOrganizationNonMasterAccount {
     /**
      * ARN of the root
@@ -35,13 +35,13 @@ public final class GetOrganizationNonMasterAccount {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOrganizationNonMasterAccount(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("status") String status) {
         this.arn = arn;
         this.email = email;
         this.id = id;

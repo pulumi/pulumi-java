@@ -4,12 +4,12 @@
 package io.pulumi.aws.organizations.outputs;
 
 import io.pulumi.aws.organizations.outputs.GetOrganizationalUnitsChildren;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetOrganizationalUnitsResult {
     /**
      * List of child organizational units, which have the following attributes:
@@ -23,11 +23,11 @@ public final class GetOrganizationalUnitsResult {
     private final String id;
     private final String parentId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOrganizationalUnitsResult(
-        @OutputCustomType.Parameter("childrens") List<GetOrganizationalUnitsChildren> childrens,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("parentId") String parentId) {
+        @CustomType.Parameter("childrens") List<GetOrganizationalUnitsChildren> childrens,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("parentId") String parentId) {
         this.childrens = childrens;
         this.id = id;
         this.parentId = parentId;

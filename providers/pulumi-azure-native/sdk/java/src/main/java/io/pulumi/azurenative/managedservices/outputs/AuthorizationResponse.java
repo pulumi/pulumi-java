@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.managedservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AuthorizationResponse {
     /**
      * The delegatedRoleDefinitionIds field is required when the roleDefinitionId refers to the User Access Administrator Role. It is the list of role definition ids which define all the permissions that the user in the authorization can assign to other security groups/service principals/users.
@@ -33,12 +33,12 @@ public final class AuthorizationResponse {
      */
     private final String roleDefinitionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuthorizationResponse(
-        @OutputCustomType.Parameter("delegatedRoleDefinitionIds") @Nullable List<String> delegatedRoleDefinitionIds,
-        @OutputCustomType.Parameter("principalId") String principalId,
-        @OutputCustomType.Parameter("principalIdDisplayName") @Nullable String principalIdDisplayName,
-        @OutputCustomType.Parameter("roleDefinitionId") String roleDefinitionId) {
+        @CustomType.Parameter("delegatedRoleDefinitionIds") @Nullable List<String> delegatedRoleDefinitionIds,
+        @CustomType.Parameter("principalId") String principalId,
+        @CustomType.Parameter("principalIdDisplayName") @Nullable String principalIdDisplayName,
+        @CustomType.Parameter("roleDefinitionId") String roleDefinitionId) {
         this.delegatedRoleDefinitionIds = delegatedRoleDefinitionIds;
         this.principalId = principalId;
         this.principalIdDisplayName = principalIdDisplayName;

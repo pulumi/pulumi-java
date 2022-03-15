@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.billing.inputs;
 
 import io.pulumi.azurenative.billing.inputs.AzurePlanResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * The name of the billing profile for the invoice section.
      * 
      */
-    @InputImport(name="billingProfileDisplayName", required=true)
+    @Import(name="billingProfileDisplayName", required=true)
       private final String billingProfileDisplayName;
 
     public String getBillingProfileDisplayName() {
@@ -35,7 +35,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * The ID of the billing profile for the invoice section.
      * 
      */
-    @InputImport(name="billingProfileId", required=true)
+    @Import(name="billingProfileId", required=true)
       private final String billingProfileId;
 
     public String getBillingProfileId() {
@@ -46,7 +46,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * The billing profile spending limit.
      * 
      */
-    @InputImport(name="billingProfileSpendingLimit", required=true)
+    @Import(name="billingProfileSpendingLimit", required=true)
       private final String billingProfileSpendingLimit;
 
     public String getBillingProfileSpendingLimit() {
@@ -57,7 +57,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * The status of the billing profile.
      * 
      */
-    @InputImport(name="billingProfileStatus", required=true)
+    @Import(name="billingProfileStatus", required=true)
       private final String billingProfileStatus;
 
     public String getBillingProfileStatus() {
@@ -68,7 +68,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * Reason for the specified billing profile status.
      * 
      */
-    @InputImport(name="billingProfileStatusReasonCode", required=true)
+    @Import(name="billingProfileStatusReasonCode", required=true)
       private final String billingProfileStatusReasonCode;
 
     public String getBillingProfileStatusReasonCode() {
@@ -79,7 +79,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * The system generated unique identifier for a billing profile.
      * 
      */
-    @InputImport(name="billingProfileSystemId", required=true)
+    @Import(name="billingProfileSystemId", required=true)
       private final String billingProfileSystemId;
 
     public String getBillingProfileSystemId() {
@@ -90,7 +90,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * Enabled azure plans for the associated billing profile.
      * 
      */
-    @InputImport(name="enabledAzurePlans")
+    @Import(name="enabledAzurePlans")
       private final @Nullable List<AzurePlanResponse> enabledAzurePlans;
 
     public List<AzurePlanResponse> getEnabledAzurePlans() {
@@ -101,7 +101,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * The name of the invoice section.
      * 
      */
-    @InputImport(name="invoiceSectionDisplayName", required=true)
+    @Import(name="invoiceSectionDisplayName", required=true)
       private final String invoiceSectionDisplayName;
 
     public String getInvoiceSectionDisplayName() {
@@ -112,7 +112,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * The ID of the invoice section.
      * 
      */
-    @InputImport(name="invoiceSectionId", required=true)
+    @Import(name="invoiceSectionId", required=true)
       private final String invoiceSectionId;
 
     public String getInvoiceSectionId() {
@@ -123,7 +123,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * The system generated unique identifier for an invoice section.
      * 
      */
-    @InputImport(name="invoiceSectionSystemId", required=true)
+    @Import(name="invoiceSectionSystemId", required=true)
       private final String invoiceSectionSystemId;
 
     public String getInvoiceSectionSystemId() {

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.CommissionedState;
 import io.pulumi.azurenative.network.inputs.ExtendedLocationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * The prefix range in CIDR notation. Should include the start address and the prefix length.
      * 
      */
-    @InputImport(name="cidr")
+    @Import(name="cidr")
       private final @Nullable Output<String> cidr;
 
     public Output<String> getCidr() {
@@ -34,7 +34,7 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * The commissioned state of the Custom IP Prefix.
      * 
      */
-    @InputImport(name="commissionedState")
+    @Import(name="commissionedState")
       private final @Nullable Output<Either<String,CommissionedState>> commissionedState;
 
     public Output<Either<String,CommissionedState>> getCommissionedState() {
@@ -45,7 +45,7 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the custom IP prefix.
      * 
      */
-    @InputImport(name="customIpPrefixName")
+    @Import(name="customIpPrefixName")
       private final @Nullable Output<String> customIpPrefixName;
 
     public Output<String> getCustomIpPrefixName() {
@@ -56,7 +56,7 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * The extended location of the custom IP prefix.
      * 
      */
-    @InputImport(name="extendedLocation")
+    @Import(name="extendedLocation")
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
     public Output<ExtendedLocationArgs> getExtendedLocation() {
@@ -67,7 +67,7 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -78,7 +78,7 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -89,7 +89,7 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -100,7 +100,7 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -111,7 +111,7 @@ public final class CustomIPPrefixArgs extends io.pulumi.resources.ResourceArgs {
      * A list of availability zones denoting the IP allocated for the resource needs to come from.
      * 
      */
-    @InputImport(name="zones")
+    @Import(name="zones")
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {

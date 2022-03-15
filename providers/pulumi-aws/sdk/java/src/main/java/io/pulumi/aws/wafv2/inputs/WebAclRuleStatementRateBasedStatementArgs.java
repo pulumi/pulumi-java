@@ -6,7 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementForwardedIpConfigArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDownStatementArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends io.pulumi.r
      * Setting that indicates how to aggregate the request counts. Valid values include: `FORWARDED_IP` or `IP`. Default: `IP`.
      * 
      */
-    @InputImport(name="aggregateKeyType")
+    @Import(name="aggregateKeyType")
       private final @Nullable Output<String> aggregateKeyType;
 
     public Output<String> getAggregateKeyType() {
@@ -32,7 +32,7 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends io.pulumi.r
      * The configuration for inspecting IP addresses in an HTTP header that you specify, instead of using the IP address that's reported by the web request origin. If `aggregate_key_type` is set to `FORWARDED_IP`, this block is required. See Forwarded IP Config below for details.
      * 
      */
-    @InputImport(name="forwardedIpConfig")
+    @Import(name="forwardedIpConfig")
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementForwardedIpConfigArgs> forwardedIpConfig;
 
     public Output<WebAclRuleStatementRateBasedStatementForwardedIpConfigArgs> getForwardedIpConfig() {
@@ -43,7 +43,7 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends io.pulumi.r
      * The limit on requests per 5-minute period for a single originating IP address.
      * 
      */
-    @InputImport(name="limit", required=true)
+    @Import(name="limit", required=true)
       private final Output<Integer> limit;
 
     public Output<Integer> getLimit() {
@@ -54,7 +54,7 @@ public final class WebAclRuleStatementRateBasedStatementArgs extends io.pulumi.r
      * An optional nested statement that narrows the scope of the rate-based statement to matching web requests. This can be any nestable statement, and you can nest statements at any level below this scope-down statement. See Statement above for details.
      * 
      */
-    @InputImport(name="scopeDownStatement")
+    @Import(name="scopeDownStatement")
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementArgs> scopeDownStatement;
 
     public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementArgs> getScopeDownStatement() {

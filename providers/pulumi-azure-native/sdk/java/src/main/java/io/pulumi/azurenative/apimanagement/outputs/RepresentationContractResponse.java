@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.ParameterContractResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RepresentationContractResponse {
     /**
      * Specifies a registered or custom content type for this representation, e.g. application/xml.
@@ -39,13 +39,13 @@ public final class RepresentationContractResponse {
      */
     private final @Nullable String typeName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RepresentationContractResponse(
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("formParameters") @Nullable List<ParameterContractResponse> formParameters,
-        @OutputCustomType.Parameter("sample") @Nullable String sample,
-        @OutputCustomType.Parameter("schemaId") @Nullable String schemaId,
-        @OutputCustomType.Parameter("typeName") @Nullable String typeName) {
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("formParameters") @Nullable List<ParameterContractResponse> formParameters,
+        @CustomType.Parameter("sample") @Nullable String sample,
+        @CustomType.Parameter("schemaId") @Nullable String schemaId,
+        @CustomType.Parameter("typeName") @Nullable String typeName) {
         this.contentType = contentType;
         this.formParameters = formParameters;
         this.sample = sample;

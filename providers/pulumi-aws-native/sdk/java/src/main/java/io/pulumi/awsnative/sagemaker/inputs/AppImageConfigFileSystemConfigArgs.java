@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AppImageConfigFileSystemConfigArgs extends io.pulumi.resource
      * The default POSIX group ID (GID). If not specified, defaults to 100.
      * 
      */
-    @InputImport(name="defaultGid")
+    @Import(name="defaultGid")
       private final @Nullable Output<Integer> defaultGid;
 
     public Output<Integer> getDefaultGid() {
@@ -34,7 +34,7 @@ public final class AppImageConfigFileSystemConfigArgs extends io.pulumi.resource
      * The default POSIX user ID (UID). If not specified, defaults to 1000.
      * 
      */
-    @InputImport(name="defaultUid")
+    @Import(name="defaultUid")
       private final @Nullable Output<Integer> defaultUid;
 
     public Output<Integer> getDefaultUid() {
@@ -45,7 +45,7 @@ public final class AppImageConfigFileSystemConfigArgs extends io.pulumi.resource
      * The path within the image to mount the user's EFS home directory. The directory should be empty. If not specified, defaults to /home/sagemaker-user.
      * 
      */
-    @InputImport(name="mountPath")
+    @Import(name="mountPath")
       private final @Nullable Output<String> mountPath;
 
     public Output<String> getMountPath() {

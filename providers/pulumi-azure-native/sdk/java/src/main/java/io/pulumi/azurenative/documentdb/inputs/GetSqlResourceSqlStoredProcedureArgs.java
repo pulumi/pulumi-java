@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends io.pulumi.resour
      * Cosmos DB database account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -27,7 +27,7 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends io.pulumi.resour
      * Cosmos DB container name.
      * 
      */
-    @InputImport(name="containerName", required=true)
+    @Import(name="containerName", required=true)
       private final String containerName;
 
     public String getContainerName() {
@@ -38,7 +38,7 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends io.pulumi.resour
      * Cosmos DB database name.
      * 
      */
-    @InputImport(name="databaseName", required=true)
+    @Import(name="databaseName", required=true)
       private final String databaseName;
 
     public String getDatabaseName() {
@@ -49,7 +49,7 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends io.pulumi.resour
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -60,7 +60,7 @@ public final class GetSqlResourceSqlStoredProcedureArgs extends io.pulumi.resour
      * Cosmos DB storedProcedure name.
      * 
      */
-    @InputImport(name="storedProcedureName", required=true)
+    @Import(name="storedProcedureName", required=true)
       private final String storedProcedureName;
 
     public String getStoredProcedureName() {

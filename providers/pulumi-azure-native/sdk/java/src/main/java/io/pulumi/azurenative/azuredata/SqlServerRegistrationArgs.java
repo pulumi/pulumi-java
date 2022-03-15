@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azuredata;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -30,7 +30,7 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
      * Optional Properties as JSON string
      * 
      */
-    @InputImport(name="propertyBag")
+    @Import(name="propertyBag")
       private final @Nullable Output<String> propertyBag;
 
     public Output<String> getPropertyBag() {
@@ -41,7 +41,7 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
      * Resource Group Name
      * 
      */
-    @InputImport(name="resourceGroup")
+    @Import(name="resourceGroup")
       private final @Nullable Output<String> resourceGroup;
 
     public Output<String> getResourceGroup() {
@@ -52,7 +52,7 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
      * Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
      * Name of the SQL Server registration.
      * 
      */
-    @InputImport(name="sqlServerRegistrationName")
+    @Import(name="sqlServerRegistrationName")
       private final @Nullable Output<String> sqlServerRegistrationName;
 
     public Output<String> getSqlServerRegistrationName() {
@@ -74,7 +74,7 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
      * Subscription Id
      * 
      */
-    @InputImport(name="subscriptionId")
+    @Import(name="subscriptionId")
       private final @Nullable Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {
@@ -85,7 +85,7 @@ public final class SqlServerRegistrationArgs extends io.pulumi.resources.Resourc
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class InstanceRestoreToPointInTimeGetArgs extends io.pulumi.resourc
      * The date and time to restore from. Value must be a time in Universal Coordinated Time (UTC) format and must be before the latest restorable time for the DB instance. Cannot be specified with `use_latest_restorable_time`.
      * 
      */
-    @InputImport(name="restoreTime")
+    @Import(name="restoreTime")
       private final @Nullable Output<String> restoreTime;
 
     public Output<String> getRestoreTime() {
@@ -30,7 +30,7 @@ public final class InstanceRestoreToPointInTimeGetArgs extends io.pulumi.resourc
      * The identifier of the source DB instance from which to restore. Must match the identifier of an existing DB instance. Required if `source_dbi_resource_id` is not specified.
      * 
      */
-    @InputImport(name="sourceDbInstanceIdentifier")
+    @Import(name="sourceDbInstanceIdentifier")
       private final @Nullable Output<String> sourceDbInstanceIdentifier;
 
     public Output<String> getSourceDbInstanceIdentifier() {
@@ -41,7 +41,7 @@ public final class InstanceRestoreToPointInTimeGetArgs extends io.pulumi.resourc
      * The resource ID of the source DB instance from which to restore. Required if `source_db_instance_identifier` is not specified.
      * 
      */
-    @InputImport(name="sourceDbiResourceId")
+    @Import(name="sourceDbiResourceId")
       private final @Nullable Output<String> sourceDbiResourceId;
 
     public Output<String> getSourceDbiResourceId() {
@@ -52,7 +52,7 @@ public final class InstanceRestoreToPointInTimeGetArgs extends io.pulumi.resourc
      * A boolean value that indicates whether the DB instance is restored from the latest backup time. Defaults to `false`. Cannot be specified with `restore_time`.
      * 
      */
-    @InputImport(name="useLatestRestorableTime")
+    @Import(name="useLatestRestorableTime")
       private final @Nullable Output<Boolean> useLatestRestorableTime;
 
     public Output<Boolean> getUseLatestRestorableTime() {

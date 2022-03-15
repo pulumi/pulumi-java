@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.NodeSelector;
 import io.pulumi.kubernetes.core_v1.outputs.PreferredSchedulingTerm;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodeAffinity {
     /**
      * The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred.
@@ -24,10 +24,10 @@ public final class NodeAffinity {
      */
     private final @Nullable NodeSelector requiredDuringSchedulingIgnoredDuringExecution;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeAffinity(
-        @OutputCustomType.Parameter("preferredDuringSchedulingIgnoredDuringExecution") @Nullable List<PreferredSchedulingTerm> preferredDuringSchedulingIgnoredDuringExecution,
-        @OutputCustomType.Parameter("requiredDuringSchedulingIgnoredDuringExecution") @Nullable NodeSelector requiredDuringSchedulingIgnoredDuringExecution) {
+        @CustomType.Parameter("preferredDuringSchedulingIgnoredDuringExecution") @Nullable List<PreferredSchedulingTerm> preferredDuringSchedulingIgnoredDuringExecution,
+        @CustomType.Parameter("requiredDuringSchedulingIgnoredDuringExecution") @Nullable NodeSelector requiredDuringSchedulingIgnoredDuringExecution) {
         this.preferredDuringSchedulingIgnoredDuringExecution = preferredDuringSchedulingIgnoredDuringExecution;
         this.requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution;
     }

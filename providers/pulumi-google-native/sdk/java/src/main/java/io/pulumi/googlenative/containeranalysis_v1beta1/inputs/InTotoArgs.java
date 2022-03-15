@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.ArtifactRuleArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.SigningKeyArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
      * This field contains the expected command used to perform the step.
      * 
      */
-    @InputImport(name="expectedCommand")
+    @Import(name="expectedCommand")
       private final @Nullable Output<List<String>> expectedCommand;
 
     public Output<List<String>> getExpectedCommand() {
@@ -36,14 +36,14 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
      * The following fields contain in-toto artifact rules identifying the artifacts that enter this supply chain step, and exit the supply chain step, i.e. materials and products of the step.
      * 
      */
-    @InputImport(name="expectedMaterials")
+    @Import(name="expectedMaterials")
       private final @Nullable Output<List<ArtifactRuleArgs>> expectedMaterials;
 
     public Output<List<ArtifactRuleArgs>> getExpectedMaterials() {
         return this.expectedMaterials == null ? Output.empty() : this.expectedMaterials;
     }
 
-    @InputImport(name="expectedProducts")
+    @Import(name="expectedProducts")
       private final @Nullable Output<List<ArtifactRuleArgs>> expectedProducts;
 
     public Output<List<ArtifactRuleArgs>> getExpectedProducts() {
@@ -54,7 +54,7 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
      * This field contains the public keys that can be used to verify the signatures on the step metadata.
      * 
      */
-    @InputImport(name="signingKeys")
+    @Import(name="signingKeys")
       private final @Nullable Output<List<SigningKeyArgs>> signingKeys;
 
     public Output<List<SigningKeyArgs>> getSigningKeys() {
@@ -65,7 +65,7 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
      * This field identifies the name of the step in the supply chain.
      * 
      */
-    @InputImport(name="stepName")
+    @Import(name="stepName")
       private final @Nullable Output<String> stepName;
 
     public Output<String> getStepName() {
@@ -76,7 +76,7 @@ public final class InTotoArgs extends io.pulumi.resources.ResourceArgs {
      * This field contains a value that indicates the minimum number of keys that need to be used to sign the step's in-toto link.
      * 
      */
-    @InputImport(name="threshold")
+    @Import(name="threshold")
       private final @Nullable Output<String> threshold;
 
     public Output<String> getThreshold() {

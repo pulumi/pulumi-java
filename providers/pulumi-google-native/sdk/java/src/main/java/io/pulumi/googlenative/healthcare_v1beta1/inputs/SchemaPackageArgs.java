@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.healthcare_v1beta1.enums.SchemaPackageSchematizedParsingType;
 import io.pulumi.googlenative.healthcare_v1beta1.enums.SchemaPackageUnexpectedSegmentHandling;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.Hl7SchemaConfigArgs;
@@ -27,7 +27,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
      * Flag to ignore all min_occurs restrictions in the schema. This means that incoming messages can omit any group, segment, field, component, or subcomponent.
      * 
      */
-    @InputImport(name="ignoreMinOccurs")
+    @Import(name="ignoreMinOccurs")
       private final @Nullable Output<Boolean> ignoreMinOccurs;
 
     public Output<Boolean> getIgnoreMinOccurs() {
@@ -38,7 +38,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
      * Schema configs that are layered based on their VersionSources that match the incoming message. Schema configs present in higher indices override those in lower indices with the same message type and trigger event if their VersionSources all match an incoming message.
      * 
      */
-    @InputImport(name="schemas")
+    @Import(name="schemas")
       private final @Nullable Output<List<Hl7SchemaConfigArgs>> schemas;
 
     public Output<List<Hl7SchemaConfigArgs>> getSchemas() {
@@ -49,7 +49,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
      * Determines how messages that fail to parse are handled.
      * 
      */
-    @InputImport(name="schematizedParsingType")
+    @Import(name="schematizedParsingType")
       private final @Nullable Output<SchemaPackageSchematizedParsingType> schematizedParsingType;
 
     public Output<SchemaPackageSchematizedParsingType> getSchematizedParsingType() {
@@ -60,7 +60,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
      * Schema type definitions that are layered based on their VersionSources that match the incoming message. Type definitions present in higher indices override those in lower indices with the same type name if their VersionSources all match an incoming message.
      * 
      */
-    @InputImport(name="types")
+    @Import(name="types")
       private final @Nullable Output<List<Hl7TypesConfigArgs>> types;
 
     public Output<List<Hl7TypesConfigArgs>> getTypes() {
@@ -71,7 +71,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
      * Determines how unexpected segments (segments not matched to the schema) are handled.
      * 
      */
-    @InputImport(name="unexpectedSegmentHandling")
+    @Import(name="unexpectedSegmentHandling")
       private final @Nullable Output<SchemaPackageUnexpectedSegmentHandling> unexpectedSegmentHandling;
 
     public Output<SchemaPackageUnexpectedSegmentHandling> getUnexpectedSegmentHandling() {

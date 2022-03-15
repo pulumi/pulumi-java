@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.CustomerManagedKeyDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
      * Customer Managed Key Details
      * 
      */
-    @InputImport(name="cmk")
+    @Import(name="cmk")
       private final @Nullable CustomerManagedKeyDetailsResponse cmk;
 
     public Optional<CustomerManagedKeyDetailsResponse> getCmk() {
@@ -34,7 +34,7 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
      * Double Encryption enabled
      * 
      */
-    @InputImport(name="doubleEncryptionEnabled", required=true)
+    @Import(name="doubleEncryptionEnabled", required=true)
       private final Boolean doubleEncryptionEnabled;
 
     public Boolean getDoubleEncryptionEnabled() {

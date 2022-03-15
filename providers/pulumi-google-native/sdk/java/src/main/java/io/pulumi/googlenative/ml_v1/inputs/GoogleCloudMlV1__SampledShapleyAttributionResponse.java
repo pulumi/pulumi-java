@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionResponse extends io
      * The number of feature permutations to consider when approximating the Shapley values.
      * 
      */
-    @InputImport(name="numPaths", required=true)
+    @Import(name="numPaths", required=true)
       private final Integer numPaths;
 
     public Integer getNumPaths() {

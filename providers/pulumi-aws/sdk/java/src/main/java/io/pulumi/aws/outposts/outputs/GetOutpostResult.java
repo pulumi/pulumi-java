@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.outposts.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetOutpostResult {
     private final String arn;
     /**
@@ -34,16 +34,16 @@ public final class GetOutpostResult {
      */
     private final String siteId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOutpostResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
-        @OutputCustomType.Parameter("availabilityZoneId") String availabilityZoneId,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("ownerId") String ownerId,
-        @OutputCustomType.Parameter("siteId") String siteId) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("availabilityZone") String availabilityZone,
+        @CustomType.Parameter("availabilityZoneId") String availabilityZoneId,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("ownerId") String ownerId,
+        @CustomType.Parameter("siteId") String siteId) {
         this.arn = arn;
         this.availabilityZone = availabilityZone;
         this.availabilityZoneId = availabilityZoneId;

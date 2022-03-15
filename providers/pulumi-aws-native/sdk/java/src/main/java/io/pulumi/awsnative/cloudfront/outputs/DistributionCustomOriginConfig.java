@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionCustomOriginConfig {
     private final @Nullable Integer hTTPPort;
     private final @Nullable Integer hTTPSPort;
@@ -20,14 +20,14 @@ public final class DistributionCustomOriginConfig {
     private final @Nullable Integer originReadTimeout;
     private final @Nullable List<String> originSSLProtocols;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionCustomOriginConfig(
-        @OutputCustomType.Parameter("hTTPPort") @Nullable Integer hTTPPort,
-        @OutputCustomType.Parameter("hTTPSPort") @Nullable Integer hTTPSPort,
-        @OutputCustomType.Parameter("originKeepaliveTimeout") @Nullable Integer originKeepaliveTimeout,
-        @OutputCustomType.Parameter("originProtocolPolicy") String originProtocolPolicy,
-        @OutputCustomType.Parameter("originReadTimeout") @Nullable Integer originReadTimeout,
-        @OutputCustomType.Parameter("originSSLProtocols") @Nullable List<String> originSSLProtocols) {
+        @CustomType.Parameter("hTTPPort") @Nullable Integer hTTPPort,
+        @CustomType.Parameter("hTTPSPort") @Nullable Integer hTTPSPort,
+        @CustomType.Parameter("originKeepaliveTimeout") @Nullable Integer originKeepaliveTimeout,
+        @CustomType.Parameter("originProtocolPolicy") String originProtocolPolicy,
+        @CustomType.Parameter("originReadTimeout") @Nullable Integer originReadTimeout,
+        @CustomType.Parameter("originSSLProtocols") @Nullable List<String> originSSLProtocols) {
         this.hTTPPort = hTTPPort;
         this.hTTPSPort = hTTPSPort;
         this.originKeepaliveTimeout = originKeepaliveTimeout;

@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PeriodicTimerSourceInfoResponse {
     /**
      * Periodic frequency at which timer event needs to be raised. Supports daily, hourly, minutes, and seconds.
@@ -27,11 +27,11 @@ public final class PeriodicTimerSourceInfoResponse {
      */
     private final @Nullable String topic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PeriodicTimerSourceInfoResponse(
-        @OutputCustomType.Parameter("schedule") String schedule,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("topic") @Nullable String topic) {
+        @CustomType.Parameter("schedule") String schedule,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("topic") @Nullable String topic) {
         this.schedule = schedule;
         this.startTime = startTime;
         this.topic = topic;

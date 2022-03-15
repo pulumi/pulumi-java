@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class TrackPropertyConditionResponse extends io.pulumi.resources.In
      * Track property condition operation
      * 
      */
-    @InputImport(name="operation", required=true)
+    @Import(name="operation", required=true)
       private final String operation;
 
     public String getOperation() {
@@ -33,7 +33,7 @@ public final class TrackPropertyConditionResponse extends io.pulumi.resources.In
      * Track property type
      * 
      */
-    @InputImport(name="property", required=true)
+    @Import(name="property", required=true)
       private final String property;
 
     public String getProperty() {
@@ -44,7 +44,7 @@ public final class TrackPropertyConditionResponse extends io.pulumi.resources.In
      * Track property value
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

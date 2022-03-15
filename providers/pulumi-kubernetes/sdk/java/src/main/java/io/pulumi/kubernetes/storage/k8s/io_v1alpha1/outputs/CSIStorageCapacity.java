@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CSIStorageCapacity {
     /**
      * APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
@@ -57,15 +57,15 @@ public final class CSIStorageCapacity {
      */
     private final String storageClassName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CSIStorageCapacity(
-        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
-        @OutputCustomType.Parameter("capacity") @Nullable String capacity,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("maximumVolumeSize") @Nullable String maximumVolumeSize,
-        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
-        @OutputCustomType.Parameter("nodeTopology") @Nullable LabelSelector nodeTopology,
-        @OutputCustomType.Parameter("storageClassName") String storageClassName) {
+        @CustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @CustomType.Parameter("capacity") @Nullable String capacity,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("maximumVolumeSize") @Nullable String maximumVolumeSize,
+        @CustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @CustomType.Parameter("nodeTopology") @Nullable LabelSelector nodeTopology,
+        @CustomType.Parameter("storageClassName") String storageClassName) {
         this.apiVersion = apiVersion;
         this.capacity = capacity;
         this.kind = kind;

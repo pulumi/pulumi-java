@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.netapp.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
      * Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names
      * 
      */
-    @InputImport(name="allowedClients")
+    @Import(name="allowedClients")
       private final @Nullable Output<String> allowedClients;
 
     public Output<String> getAllowedClients() {
@@ -35,7 +35,7 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
      * Allows CIFS protocol
      * 
      */
-    @InputImport(name="cifs")
+    @Import(name="cifs")
       private final @Nullable Output<Boolean> cifs;
 
     public Output<Boolean> getCifs() {
@@ -46,7 +46,7 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
      * Has root access to volume
      * 
      */
-    @InputImport(name="hasRootAccess")
+    @Import(name="hasRootAccess")
       private final @Nullable Output<Boolean> hasRootAccess;
 
     public Output<Boolean> getHasRootAccess() {
@@ -57,7 +57,7 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
      * Kerberos5 Read only access. To be use with swagger version 2020-05-01 or later
      * 
      */
-    @InputImport(name="kerberos5ReadOnly")
+    @Import(name="kerberos5ReadOnly")
       private final @Nullable Output<Boolean> kerberos5ReadOnly;
 
     public Output<Boolean> getKerberos5ReadOnly() {
@@ -68,7 +68,7 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
      * Kerberos5 Read and write access. To be use with swagger version 2020-05-01 or later
      * 
      */
-    @InputImport(name="kerberos5ReadWrite")
+    @Import(name="kerberos5ReadWrite")
       private final @Nullable Output<Boolean> kerberos5ReadWrite;
 
     public Output<Boolean> getKerberos5ReadWrite() {
@@ -79,7 +79,7 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
      * Kerberos5i Read only access. To be use with swagger version 2020-05-01 or later
      * 
      */
-    @InputImport(name="kerberos5iReadOnly")
+    @Import(name="kerberos5iReadOnly")
       private final @Nullable Output<Boolean> kerberos5iReadOnly;
 
     public Output<Boolean> getKerberos5iReadOnly() {
@@ -90,7 +90,7 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
      * Kerberos5i Read and write access. To be use with swagger version 2020-05-01 or later
      * 
      */
-    @InputImport(name="kerberos5iReadWrite")
+    @Import(name="kerberos5iReadWrite")
       private final @Nullable Output<Boolean> kerberos5iReadWrite;
 
     public Output<Boolean> getKerberos5iReadWrite() {
@@ -101,7 +101,7 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
      * Kerberos5p Read only access. To be use with swagger version 2020-05-01 or later
      * 
      */
-    @InputImport(name="kerberos5pReadOnly")
+    @Import(name="kerberos5pReadOnly")
       private final @Nullable Output<Boolean> kerberos5pReadOnly;
 
     public Output<Boolean> getKerberos5pReadOnly() {
@@ -112,7 +112,7 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
      * Kerberos5p Read and write access. To be use with swagger version 2020-05-01 or later
      * 
      */
-    @InputImport(name="kerberos5pReadWrite")
+    @Import(name="kerberos5pReadWrite")
       private final @Nullable Output<Boolean> kerberos5pReadWrite;
 
     public Output<Boolean> getKerberos5pReadWrite() {
@@ -123,7 +123,7 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
      * Allows NFSv3 protocol. Enable only for NFSv3 type volumes
      * 
      */
-    @InputImport(name="nfsv3")
+    @Import(name="nfsv3")
       private final @Nullable Output<Boolean> nfsv3;
 
     public Output<Boolean> getNfsv3() {
@@ -134,7 +134,7 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
      * Allows NFSv4.1 protocol. Enable only for NFSv4.1 type volumes
      * 
      */
-    @InputImport(name="nfsv41")
+    @Import(name="nfsv41")
       private final @Nullable Output<Boolean> nfsv41;
 
     public Output<Boolean> getNfsv41() {
@@ -145,7 +145,7 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
      * Order index
      * 
      */
-    @InputImport(name="ruleIndex")
+    @Import(name="ruleIndex")
       private final @Nullable Output<Integer> ruleIndex;
 
     public Output<Integer> getRuleIndex() {
@@ -156,7 +156,7 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
      * Read only access
      * 
      */
-    @InputImport(name="unixReadOnly")
+    @Import(name="unixReadOnly")
       private final @Nullable Output<Boolean> unixReadOnly;
 
     public Output<Boolean> getUnixReadOnly() {
@@ -167,7 +167,7 @@ public final class ExportPolicyRuleArgs extends io.pulumi.resources.ResourceArgs
      * Read and write access
      * 
      */
-    @InputImport(name="unixReadWrite")
+    @Import(name="unixReadWrite")
       private final @Nullable Output<Boolean> unixReadWrite;
 
     public Output<Boolean> getUnixReadWrite() {

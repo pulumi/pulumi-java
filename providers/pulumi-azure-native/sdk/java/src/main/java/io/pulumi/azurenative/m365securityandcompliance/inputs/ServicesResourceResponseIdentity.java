@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.m365securityandcompliance.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ServicesResourceResponseIdentity extends io.pulumi.resources.
      * The principal ID of the resource identity.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {
@@ -33,7 +33,7 @@ public final class ServicesResourceResponseIdentity extends io.pulumi.resources.
      * The tenant ID of the resource.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {
@@ -44,7 +44,7 @@ public final class ServicesResourceResponseIdentity extends io.pulumi.resources.
      * Type of identity being specified, currently SystemAssigned and None are allowed.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquerydatatransfer_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ScheduleOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * If true, automatic scheduling of data transfer runs for this configuration will be disabled. The runs can be started on ad-hoc basis using StartManualTransferRuns API. When automatic scheduling is disabled, the TransferConfig.schedule field will be ignored.
      * 
      */
-    @InputImport(name="disableAutoScheduling")
+    @Import(name="disableAutoScheduling")
       private final @Nullable Output<Boolean> disableAutoScheduling;
 
     public Output<Boolean> getDisableAutoScheduling() {
@@ -34,7 +34,7 @@ public final class ScheduleOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * Defines time to stop scheduling transfer runs. A transfer run cannot be scheduled at or after the end time. The end time can be changed at any moment. The time when a data transfer can be trigerred manually is not limited by this option.
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -45,7 +45,7 @@ public final class ScheduleOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies time to start scheduling transfer runs. The first run will be scheduled at or after the start time according to a recurrence pattern defined in the schedule string. The start time can be changed at any moment. The time when a data transfer can be trigerred manually is not limited by this option.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.cloudfront.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResponseHeadersPolicySecurityHeadersConfigReferrerPolicy {
     /**
      * A Boolean value that determines whether CloudFront overrides the `X-XSS-Protection` HTTP response header received from the origin with the one specified in this response headers policy.
@@ -21,10 +21,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigReferrerPolicy {
      */
     private final String referrerPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResponseHeadersPolicySecurityHeadersConfigReferrerPolicy(
-        @OutputCustomType.Parameter("override") Boolean override,
-        @OutputCustomType.Parameter("referrerPolicy") String referrerPolicy) {
+        @CustomType.Parameter("override") Boolean override,
+        @CustomType.Parameter("referrerPolicy") String referrerPolicy) {
         this.override = override;
         this.referrerPolicy = referrerPolicy;
     }

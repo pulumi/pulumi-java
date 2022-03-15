@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.pubsub_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSchemaResult {
     /**
      * The definition of the schema. This should contain a string representing the full definition of the schema that is a valid schema definition of the type specified in `type`.
@@ -25,11 +25,11 @@ public final class GetSchemaResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSchemaResult(
-        @OutputCustomType.Parameter("definition") String definition,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("definition") String definition,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.definition = definition;
         this.name = name;
         this.type = type;

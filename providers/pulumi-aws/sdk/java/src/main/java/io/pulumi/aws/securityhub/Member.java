@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.securityhub.MemberArgs;
 import io.pulumi.aws.securityhub.inputs.MemberState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -33,7 +33,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * The ID of the member AWS account.
      * 
      */
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
@@ -47,7 +47,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * The email of the member AWS account.
      * 
      */
-    @OutputExport(name="email", type=String.class, parameters={})
+    @Export(name="email", type=String.class, parameters={})
     private Output<String> email;
 
     /**
@@ -61,7 +61,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * Boolean whether to invite the account to Security Hub as a member. Defaults to `false`.
      * 
      */
-    @OutputExport(name="invite", type=Boolean.class, parameters={})
+    @Export(name="invite", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> invite;
 
     /**
@@ -75,7 +75,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * The ID of the master Security Hub AWS account.
      * 
      */
-    @OutputExport(name="masterId", type=String.class, parameters={})
+    @Export(name="masterId", type=String.class, parameters={})
     private Output<String> masterId;
 
     /**
@@ -89,7 +89,7 @@ public class Member extends io.pulumi.resources.CustomResource {
      * The status of the member account relationship.
      * 
      */
-    @OutputExport(name="memberStatus", type=String.class, parameters={})
+    @Export(name="memberStatus", type=String.class, parameters={})
     private Output<String> memberStatus;
 
     /**

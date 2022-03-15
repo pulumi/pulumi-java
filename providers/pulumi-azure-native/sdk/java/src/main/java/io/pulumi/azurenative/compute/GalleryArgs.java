@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.compute.inputs.SharingProfileArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
      * The description of this Shared Image Gallery resource. This property is updatable.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Shared Image Gallery. The allowed characters are alphabets and numbers with dots and periods allowed in the middle. The maximum length is 80 characters.
      * 
      */
-    @InputImport(name="galleryName")
+    @Import(name="galleryName")
       private final @Nullable Output<String> galleryName;
 
     public Output<String> getGalleryName() {
@@ -42,7 +42,7 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -53,7 +53,7 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
      * Profile for gallery sharing to subscription or tenant
      * 
      */
-    @InputImport(name="sharingProfile")
+    @Import(name="sharingProfile")
       private final @Nullable Output<SharingProfileArgs> sharingProfile;
 
     public Output<SharingProfileArgs> getSharingProfile() {
@@ -75,7 +75,7 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

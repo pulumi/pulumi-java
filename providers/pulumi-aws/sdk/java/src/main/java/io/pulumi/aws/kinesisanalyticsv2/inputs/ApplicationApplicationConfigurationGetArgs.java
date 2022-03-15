@@ -11,7 +11,7 @@ import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurati
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs;
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationVpcConfigurationGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
      * The code location and type parameters for the application.
      * 
      */
-    @InputImport(name="applicationCodeConfiguration", required=true)
+    @Import(name="applicationCodeConfiguration", required=true)
       private final Output<ApplicationApplicationConfigurationApplicationCodeConfigurationGetArgs> applicationCodeConfiguration;
 
     public Output<ApplicationApplicationConfigurationApplicationCodeConfigurationGetArgs> getApplicationCodeConfiguration() {
@@ -35,7 +35,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
      * Describes whether snapshots are enabled for a Flink-based application.
      * 
      */
-    @InputImport(name="applicationSnapshotConfiguration")
+    @Import(name="applicationSnapshotConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationApplicationSnapshotConfigurationGetArgs> applicationSnapshotConfiguration;
 
     public Output<ApplicationApplicationConfigurationApplicationSnapshotConfigurationGetArgs> getApplicationSnapshotConfiguration() {
@@ -46,7 +46,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
      * Describes execution properties for a Flink-based application.
      * 
      */
-    @InputImport(name="environmentProperties")
+    @Import(name="environmentProperties")
       private final @Nullable Output<ApplicationApplicationConfigurationEnvironmentPropertiesGetArgs> environmentProperties;
 
     public Output<ApplicationApplicationConfigurationEnvironmentPropertiesGetArgs> getEnvironmentProperties() {
@@ -57,7 +57,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
      * The configuration of a Flink-based application.
      * 
      */
-    @InputImport(name="flinkApplicationConfiguration")
+    @Import(name="flinkApplicationConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationGetArgs> flinkApplicationConfiguration;
 
     public Output<ApplicationApplicationConfigurationFlinkApplicationConfigurationGetArgs> getFlinkApplicationConfiguration() {
@@ -68,7 +68,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
      * Describes the starting properties for a Flink-based application.
      * 
      */
-    @InputImport(name="runConfiguration")
+    @Import(name="runConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationRunConfigurationGetArgs> runConfiguration;
 
     public Output<ApplicationApplicationConfigurationRunConfigurationGetArgs> getRunConfiguration() {
@@ -79,7 +79,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
      * The configuration of a SQL-based application.
      * 
      */
-    @InputImport(name="sqlApplicationConfiguration")
+    @Import(name="sqlApplicationConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs> sqlApplicationConfiguration;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationGetArgs> getSqlApplicationConfiguration() {
@@ -90,7 +90,7 @@ public final class ApplicationApplicationConfigurationGetArgs extends io.pulumi.
      * The VPC configuration of a Flink-based application.
      * 
      */
-    @InputImport(name="vpcConfiguration")
+    @Import(name="vpcConfiguration")
       private final @Nullable Output<ApplicationApplicationConfigurationVpcConfigurationGetArgs> vpcConfiguration;
 
     public Output<ApplicationApplicationConfigurationVpcConfigurationGetArgs> getVpcConfiguration() {

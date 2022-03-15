@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'TensorFlow'.
      * 
      */
-    @InputImport(name="distributionType", required=true)
+    @Import(name="distributionType", required=true)
       private final Output<String> distributionType;
 
     public Output<String> getDistributionType() {
@@ -35,7 +35,7 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
      * Number of parameter server tasks.
      * 
      */
-    @InputImport(name="parameterServerCount")
+    @Import(name="parameterServerCount")
       private final @Nullable Output<Integer> parameterServerCount;
 
     public Output<Integer> getParameterServerCount() {
@@ -46,7 +46,7 @@ public final class TensorFlowArgs extends io.pulumi.resources.ResourceArgs {
      * Number of workers. Overwrites the node count in compute binding.
      * 
      */
-    @InputImport(name="workerCount")
+    @Import(name="workerCount")
       private final @Nullable Output<Integer> workerCount;
 
     public Output<Integer> getWorkerCount() {

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.MySqlConnectionInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -20,7 +20,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputResponse extends io.pu
      * Connection information for source MySQL server
      * 
      */
-    @InputImport(name="sourceConnectionInfo", required=true)
+    @Import(name="sourceConnectionInfo", required=true)
       private final MySqlConnectionInfoResponse sourceConnectionInfo;
 
     public MySqlConnectionInfoResponse getSourceConnectionInfo() {
@@ -31,7 +31,7 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputResponse extends io.pu
      * Connection information for target Azure Database for MySQL server
      * 
      */
-    @InputImport(name="targetConnectionInfo", required=true)
+    @Import(name="targetConnectionInfo", required=true)
       private final MySqlConnectionInfoResponse targetConnectionInfo;
 
     public MySqlConnectionInfoResponse getTargetConnectionInfo() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.lookoutmetrics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AlertLambdaConfiguration {
     /**
      * ARN of a Lambda to send alert notifications to.
@@ -20,10 +20,10 @@ public final class AlertLambdaConfiguration {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AlertLambdaConfiguration(
-        @OutputCustomType.Parameter("lambdaArn") String lambdaArn,
-        @OutputCustomType.Parameter("roleArn") String roleArn) {
+        @CustomType.Parameter("lambdaArn") String lambdaArn,
+        @CustomType.Parameter("roleArn") String roleArn) {
         this.lambdaArn = lambdaArn;
         this.roleArn = roleArn;
     }

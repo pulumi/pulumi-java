@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.billingbudgets_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.billingbudgets_v1beta1.outputs.GoogleCloudBillingBudgetsV1beta1LastPeriodAmountResponse;
 import io.pulumi.googlenative.billingbudgets_v1beta1.outputs.GoogleTypeMoneyResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse {
     /**
      * Use the last period's actual spend as the budget for the present period. LastPeriodAmount can only be set when the budget's time period is a Filter.calendar_period. It cannot be set in combination with Filter.custom_period.
@@ -21,10 +21,10 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse {
      */
     private final GoogleTypeMoneyResponse specifiedAmount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse(
-        @OutputCustomType.Parameter("lastPeriodAmount") GoogleCloudBillingBudgetsV1beta1LastPeriodAmountResponse lastPeriodAmount,
-        @OutputCustomType.Parameter("specifiedAmount") GoogleTypeMoneyResponse specifiedAmount) {
+        @CustomType.Parameter("lastPeriodAmount") GoogleCloudBillingBudgetsV1beta1LastPeriodAmountResponse lastPeriodAmount,
+        @CustomType.Parameter("specifiedAmount") GoogleTypeMoneyResponse specifiedAmount) {
         this.lastPeriodAmount = lastPeriodAmount;
         this.specifiedAmount = specifiedAmount;
     }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.servicecatalogappregistry;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.servicecatalogappregistry.AttributeGroupAssociationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class AttributeGroupAssociation extends io.pulumi.resources.CustomResourc
      * The name or the Id of the Application.
      * 
      */
-    @OutputExport(name="application", type=String.class, parameters={})
+    @Export(name="application", type=String.class, parameters={})
     private Output<String> application;
 
     /**
@@ -31,7 +31,7 @@ public class AttributeGroupAssociation extends io.pulumi.resources.CustomResourc
     public Output<String> getApplication() {
         return this.application;
     }
-    @OutputExport(name="applicationArn", type=String.class, parameters={})
+    @Export(name="applicationArn", type=String.class, parameters={})
     private Output<String> applicationArn;
 
     public Output<String> getApplicationArn() {
@@ -41,7 +41,7 @@ public class AttributeGroupAssociation extends io.pulumi.resources.CustomResourc
      * The name or the Id of the AttributeGroup.
      * 
      */
-    @OutputExport(name="attributeGroup", type=String.class, parameters={})
+    @Export(name="attributeGroup", type=String.class, parameters={})
     private Output<String> attributeGroup;
 
     /**
@@ -51,7 +51,7 @@ public class AttributeGroupAssociation extends io.pulumi.resources.CustomResourc
     public Output<String> getAttributeGroup() {
         return this.attributeGroup;
     }
-    @OutputExport(name="attributeGroupArn", type=String.class, parameters={})
+    @Export(name="attributeGroupArn", type=String.class, parameters={})
     private Output<String> attributeGroupArn;
 
     public Output<String> getAttributeGroupArn() {

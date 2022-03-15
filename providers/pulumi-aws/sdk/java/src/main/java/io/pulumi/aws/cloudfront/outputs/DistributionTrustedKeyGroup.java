@@ -4,14 +4,14 @@
 package io.pulumi.aws.cloudfront.outputs;
 
 import io.pulumi.aws.cloudfront.outputs.DistributionTrustedKeyGroupItem;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DistributionTrustedKeyGroup {
     /**
      * A flag that specifies whether Origin Shield is enabled.
@@ -24,10 +24,10 @@ public final class DistributionTrustedKeyGroup {
      */
     private final @Nullable List<DistributionTrustedKeyGroupItem> items;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionTrustedKeyGroup(
-        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
-        @OutputCustomType.Parameter("items") @Nullable List<DistributionTrustedKeyGroupItem> items) {
+        @CustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @CustomType.Parameter("items") @Nullable List<DistributionTrustedKeyGroupItem> items) {
         this.enabled = enabled;
         this.items = items;
     }

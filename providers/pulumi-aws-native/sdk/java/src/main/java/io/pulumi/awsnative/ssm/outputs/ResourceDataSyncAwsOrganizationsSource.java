@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.ssm.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourceDataSyncAwsOrganizationsSource {
     private final String organizationSourceType;
     private final @Nullable List<String> organizationalUnits;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourceDataSyncAwsOrganizationsSource(
-        @OutputCustomType.Parameter("organizationSourceType") String organizationSourceType,
-        @OutputCustomType.Parameter("organizationalUnits") @Nullable List<String> organizationalUnits) {
+        @CustomType.Parameter("organizationSourceType") String organizationSourceType,
+        @CustomType.Parameter("organizationalUnits") @Nullable List<String> organizationalUnits) {
         this.organizationSourceType = organizationSourceType;
         this.organizationalUnits = organizationalUnits;
     }

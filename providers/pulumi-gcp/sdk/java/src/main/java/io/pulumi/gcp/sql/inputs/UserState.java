@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * for Postgres, where users cannot be deleted from the API if they have been granted SQL roles.
      * 
      */
-    @InputImport(name="deletionPolicy")
+    @Import(name="deletionPolicy")
       private final @Nullable Output<String> deletionPolicy;
 
     public Output<String> getDeletionPolicy() {
@@ -33,7 +33,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * Can be an IP address. Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
@@ -45,7 +45,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * forces a new resource to be created.
      * 
      */
-    @InputImport(name="instance")
+    @Import(name="instance")
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
@@ -57,7 +57,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * to be created.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * instances this is a Required field.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
@@ -81,7 +81,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -94,7 +94,7 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
      * include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

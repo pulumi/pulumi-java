@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.transfer.SshKeyArgs;
 import io.pulumi.aws.transfer.inputs.SshKeyState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -32,7 +32,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * The public key portion of an SSH key pair.
      * 
      */
-    @OutputExport(name="body", type=String.class, parameters={})
+    @Export(name="body", type=String.class, parameters={})
     private Output<String> body;
 
     /**
@@ -46,7 +46,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * The Server ID of the Transfer Server (e.g., `s-12345678`)
      * 
      */
-    @OutputExport(name="serverId", type=String.class, parameters={})
+    @Export(name="serverId", type=String.class, parameters={})
     private Output<String> serverId;
 
     /**
@@ -60,7 +60,7 @@ public class SshKey extends io.pulumi.resources.CustomResource {
      * The name of the user account that is assigned to one or more servers.
      * 
      */
-    @OutputExport(name="userName", type=String.class, parameters={})
+    @Export(name="userName", type=String.class, parameters={})
     private Output<String> userName;
 
     /**

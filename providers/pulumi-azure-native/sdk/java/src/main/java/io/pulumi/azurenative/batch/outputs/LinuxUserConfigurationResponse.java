@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LinuxUserConfigurationResponse {
     /**
      * The uid and gid properties must be specified together or not at all. If not specified the underlying operating system picks the gid.
@@ -28,11 +28,11 @@ public final class LinuxUserConfigurationResponse {
      */
     private final @Nullable Integer uid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LinuxUserConfigurationResponse(
-        @OutputCustomType.Parameter("gid") @Nullable Integer gid,
-        @OutputCustomType.Parameter("sshPrivateKey") @Nullable String sshPrivateKey,
-        @OutputCustomType.Parameter("uid") @Nullable Integer uid) {
+        @CustomType.Parameter("gid") @Nullable Integer gid,
+        @CustomType.Parameter("sshPrivateKey") @Nullable String sshPrivateKey,
+        @CustomType.Parameter("uid") @Nullable Integer uid) {
         this.gid = gid;
         this.sshPrivateKey = sshPrivateKey;
         this.uid = uid;

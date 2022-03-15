@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPrebuiltEcrImageResult {
     private final @Nullable String dnsSuffix;
     /**
@@ -31,15 +31,15 @@ public final class GetPrebuiltEcrImageResult {
     private final String registryPath;
     private final String repositoryName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPrebuiltEcrImageResult(
-        @OutputCustomType.Parameter("dnsSuffix") @Nullable String dnsSuffix,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("imageTag") @Nullable String imageTag,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("registryId") String registryId,
-        @OutputCustomType.Parameter("registryPath") String registryPath,
-        @OutputCustomType.Parameter("repositoryName") String repositoryName) {
+        @CustomType.Parameter("dnsSuffix") @Nullable String dnsSuffix,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("imageTag") @Nullable String imageTag,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("registryId") String registryId,
+        @CustomType.Parameter("registryPath") String registryPath,
+        @CustomType.Parameter("repositoryName") String repositoryName) {
         this.dnsSuffix = dnsSuffix;
         this.id = id;
         this.imageTag = imageTag;

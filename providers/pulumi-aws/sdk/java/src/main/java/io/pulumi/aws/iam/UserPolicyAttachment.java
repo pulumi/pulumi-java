@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.iam.UserPolicyAttachmentArgs;
 import io.pulumi.aws.iam.inputs.UserPolicyAttachmentState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class UserPolicyAttachment extends io.pulumi.resources.CustomResource {
      * The ARN of the policy you want to apply
      * 
      */
-    @OutputExport(name="policyArn", type=String.class, parameters={})
+    @Export(name="policyArn", type=String.class, parameters={})
     private Output<String> policyArn;
 
     /**
@@ -48,7 +48,7 @@ public class UserPolicyAttachment extends io.pulumi.resources.CustomResource {
      * The user the policy should be applied to
      * 
      */
-    @OutputExport(name="user", type=String.class, parameters={})
+    @Export(name="user", type=String.class, parameters={})
     private Output<String> user;
 
     /**

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DataFlowStagingInfoArgs extends io.pulumi.resources.ResourceA
      * Folder path for staging blob. Type: string (or Expression with resultType string)
      * 
      */
-    @InputImport(name="folderPath")
+    @Import(name="folderPath")
       private final @Nullable Output<Object> folderPath;
 
     public Output<Object> getFolderPath() {
@@ -34,7 +34,7 @@ public final class DataFlowStagingInfoArgs extends io.pulumi.resources.ResourceA
      * Staging linked service reference.
      * 
      */
-    @InputImport(name="linkedService")
+    @Import(name="linkedService")
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedService;
 
     public Output<LinkedServiceReferenceArgs> getLinkedService() {

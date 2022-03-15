@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.outputs.SecurityRuleResponse;
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +39,7 @@ public class NetworkSecurityGroup extends io.pulumi.resources.CustomResource {
      * The default security rules of network security group.
      * 
      */
-    @OutputExport(name="defaultSecurityRules", type=List.class, parameters={SecurityRuleResponse.class})
+    @Export(name="defaultSecurityRules", type=List.class, parameters={SecurityRuleResponse.class})
     private Output<List<SecurityRuleResponse>> defaultSecurityRules;
 
     /**
@@ -53,7 +53,7 @@ public class NetworkSecurityGroup extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -67,7 +67,7 @@ public class NetworkSecurityGroup extends io.pulumi.resources.CustomResource {
      * A collection of references to flow log resources.
      * 
      */
-    @OutputExport(name="flowLogs", type=List.class, parameters={FlowLogResponse.class})
+    @Export(name="flowLogs", type=List.class, parameters={FlowLogResponse.class})
     private Output<List<FlowLogResponse>> flowLogs;
 
     /**
@@ -81,7 +81,7 @@ public class NetworkSecurityGroup extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -95,7 +95,7 @@ public class NetworkSecurityGroup extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -109,7 +109,7 @@ public class NetworkSecurityGroup extends io.pulumi.resources.CustomResource {
      * A collection of references to network interfaces.
      * 
      */
-    @OutputExport(name="networkInterfaces", type=List.class, parameters={NetworkInterfaceResponse.class})
+    @Export(name="networkInterfaces", type=List.class, parameters={NetworkInterfaceResponse.class})
     private Output<List<NetworkInterfaceResponse>> networkInterfaces;
 
     /**
@@ -123,7 +123,7 @@ public class NetworkSecurityGroup extends io.pulumi.resources.CustomResource {
      * The provisioning state of the network security group resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -137,7 +137,7 @@ public class NetworkSecurityGroup extends io.pulumi.resources.CustomResource {
      * The resource GUID property of the network security group resource.
      * 
      */
-    @OutputExport(name="resourceGuid", type=String.class, parameters={})
+    @Export(name="resourceGuid", type=String.class, parameters={})
     private Output<String> resourceGuid;
 
     /**
@@ -151,7 +151,7 @@ public class NetworkSecurityGroup extends io.pulumi.resources.CustomResource {
      * A collection of security rules of the network security group.
      * 
      */
-    @OutputExport(name="securityRules", type=List.class, parameters={SecurityRuleResponse.class})
+    @Export(name="securityRules", type=List.class, parameters={SecurityRuleResponse.class})
     private Output</* @Nullable */ List<SecurityRuleResponse>> securityRules;
 
     /**
@@ -165,7 +165,7 @@ public class NetworkSecurityGroup extends io.pulumi.resources.CustomResource {
      * A collection of references to subnets.
      * 
      */
-    @OutputExport(name="subnets", type=List.class, parameters={SubnetResponse.class})
+    @Export(name="subnets", type=List.class, parameters={SubnetResponse.class})
     private Output<List<SubnetResponse>> subnets;
 
     /**
@@ -179,7 +179,7 @@ public class NetworkSecurityGroup extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -193,7 +193,7 @@ public class NetworkSecurityGroup extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

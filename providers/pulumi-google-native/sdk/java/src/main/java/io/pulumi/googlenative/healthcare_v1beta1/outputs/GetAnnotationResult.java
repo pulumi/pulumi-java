@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.AnnotationSourceResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.ImageAnnotationResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.ResourceAnnotationResponse;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAnnotationResult {
     /**
      * Details of the source.
@@ -45,14 +45,14 @@ public final class GetAnnotationResult {
      */
     private final SensitiveTextAnnotationResponse textAnnotation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAnnotationResult(
-        @OutputCustomType.Parameter("annotationSource") AnnotationSourceResponse annotationSource,
-        @OutputCustomType.Parameter("customData") Map<String,String> customData,
-        @OutputCustomType.Parameter("imageAnnotation") ImageAnnotationResponse imageAnnotation,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("resourceAnnotation") ResourceAnnotationResponse resourceAnnotation,
-        @OutputCustomType.Parameter("textAnnotation") SensitiveTextAnnotationResponse textAnnotation) {
+        @CustomType.Parameter("annotationSource") AnnotationSourceResponse annotationSource,
+        @CustomType.Parameter("customData") Map<String,String> customData,
+        @CustomType.Parameter("imageAnnotation") ImageAnnotationResponse imageAnnotation,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("resourceAnnotation") ResourceAnnotationResponse resourceAnnotation,
+        @CustomType.Parameter("textAnnotation") SensitiveTextAnnotationResponse textAnnotation) {
         this.annotationSource = annotationSource;
         this.customData = customData;
         this.imageAnnotation = imageAnnotation;

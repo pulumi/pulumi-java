@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
      * The value to emit when a filter pattern does not match a log event. Conflicts with `dimensions`.
      * 
      */
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable Output<String> defaultValue;
 
     public Output<String> getDefaultValue() {
@@ -30,7 +30,7 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
      * Map of fields to use as dimensions for the metric. Up to 3 dimensions are allowed. Conflicts with `default_value`.
      * 
      */
-    @InputImport(name="dimensions")
+    @Import(name="dimensions")
       private final @Nullable Output<Map<String,String>> dimensions;
 
     public Output<Map<String,String>> getDimensions() {
@@ -41,7 +41,7 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
      * The name of the CloudWatch metric to which the monitored log information should be published (e.g., `ErrorCount`)
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
      * The destination namespace of the CloudWatch metric.
      * 
      */
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -63,7 +63,7 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
      * The unit to assign to the metric. If you omit this, the unit is set as `None`.
      * 
      */
-    @InputImport(name="unit")
+    @Import(name="unit")
       private final @Nullable Output<String> unit;
 
     public Output<String> getUnit() {
@@ -74,7 +74,7 @@ public final class LogMetricFilterMetricTransformationArgs extends io.pulumi.res
      * What to publish to the metric. For example, if you're counting the occurrences of a particular term like "Error", the value will be "1" for each occurrence. If you're counting the bytes transferred the published value will be the value in the log event.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

@@ -5,11 +5,11 @@ package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupHeaderDirection;
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupHeaderProtocol;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupHeader {
     private final String destination;
     private final String destinationPort;
@@ -18,14 +18,14 @@ public final class RuleGroupHeader {
     private final String source;
     private final String sourcePort;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuleGroupHeader(
-        @OutputCustomType.Parameter("destination") String destination,
-        @OutputCustomType.Parameter("destinationPort") String destinationPort,
-        @OutputCustomType.Parameter("direction") RuleGroupHeaderDirection direction,
-        @OutputCustomType.Parameter("protocol") RuleGroupHeaderProtocol protocol,
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("sourcePort") String sourcePort) {
+        @CustomType.Parameter("destination") String destination,
+        @CustomType.Parameter("destinationPort") String destinationPort,
+        @CustomType.Parameter("direction") RuleGroupHeaderDirection direction,
+        @CustomType.Parameter("protocol") RuleGroupHeaderProtocol protocol,
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("sourcePort") String sourcePort) {
         this.destination = destination;
         this.destinationPort = destinationPort;
         this.direction = direction;

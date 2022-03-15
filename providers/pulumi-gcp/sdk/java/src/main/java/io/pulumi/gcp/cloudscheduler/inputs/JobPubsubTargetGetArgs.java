@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudscheduler.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class JobPubsubTargetGetArgs extends io.pulumi.resources.ResourceAr
      * Pubsub message must contain either non-empty data, or at least one attribute.
      * 
      */
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable Output<Map<String,String>> attributes;
 
     public Output<Map<String,String>> getAttributes() {
@@ -33,7 +33,7 @@ public final class JobPubsubTargetGetArgs extends io.pulumi.resources.ResourceAr
      * A base64-encoded string.
      * 
      */
-    @InputImport(name="data")
+    @Import(name="data")
       private final @Nullable Output<String> data;
 
     public Output<String> getData() {
@@ -47,7 +47,7 @@ public final class JobPubsubTargetGetArgs extends io.pulumi.resources.ResourceAr
      * PublishRequest.name, e.g. `projects/my-project/topics/my-topic`.
      * 
      */
-    @InputImport(name="topicName", required=true)
+    @Import(name="topicName", required=true)
       private final Output<String> topicName;
 
     public Output<String> getTopicName() {

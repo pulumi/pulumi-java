@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionHealthCheckHttpHealthCheck {
     /**
      * The value of the host header in the HTTP2 health check request.
@@ -69,15 +69,15 @@ public final class RegionHealthCheckHttpHealthCheck {
      */
     private final @Nullable String response;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionHealthCheckHttpHealthCheck(
-        @OutputCustomType.Parameter("host") @Nullable String host,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("portName") @Nullable String portName,
-        @OutputCustomType.Parameter("portSpecification") @Nullable String portSpecification,
-        @OutputCustomType.Parameter("proxyHeader") @Nullable String proxyHeader,
-        @OutputCustomType.Parameter("requestPath") @Nullable String requestPath,
-        @OutputCustomType.Parameter("response") @Nullable String response) {
+        @CustomType.Parameter("host") @Nullable String host,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("portName") @Nullable String portName,
+        @CustomType.Parameter("portSpecification") @Nullable String portSpecification,
+        @CustomType.Parameter("proxyHeader") @Nullable String proxyHeader,
+        @CustomType.Parameter("requestPath") @Nullable String requestPath,
+        @CustomType.Parameter("response") @Nullable String response) {
         this.host = host;
         this.port = port;
         this.portName = portName;

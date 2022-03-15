@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AptRepositoryResponse extends io.pulumi.resources.InvokeArgs 
      * Type of archive files in this repository. The default behavior is DEB.
      * 
      */
-    @InputImport(name="archiveType", required=true)
+    @Import(name="archiveType", required=true)
       private final String archiveType;
 
     public String getArchiveType() {
@@ -32,7 +32,7 @@ public final class AptRepositoryResponse extends io.pulumi.resources.InvokeArgs 
      * List of components for this repository. Must contain at least one item.
      * 
      */
-    @InputImport(name="components", required=true)
+    @Import(name="components", required=true)
       private final List<String> components;
 
     public List<String> getComponents() {
@@ -43,7 +43,7 @@ public final class AptRepositoryResponse extends io.pulumi.resources.InvokeArgs 
      * Distribution of this repository.
      * 
      */
-    @InputImport(name="distribution", required=true)
+    @Import(name="distribution", required=true)
       private final String distribution;
 
     public String getDistribution() {
@@ -54,7 +54,7 @@ public final class AptRepositoryResponse extends io.pulumi.resources.InvokeArgs 
      * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg` containing all the keys in any applied guest policy.
      * 
      */
-    @InputImport(name="gpgKey", required=true)
+    @Import(name="gpgKey", required=true)
       private final String gpgKey;
 
     public String getGpgKey() {
@@ -65,7 +65,7 @@ public final class AptRepositoryResponse extends io.pulumi.resources.InvokeArgs 
      * URI for this repository.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final String uri;
 
     public String getUri() {

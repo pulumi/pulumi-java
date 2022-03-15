@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.AnthosClusterResponse;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.ExecutionConfigResponse;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.GkeClusterResponse;
@@ -26,7 +26,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
      * 
      */
-    @InputImport(name="annotations", required=true)
+    @Import(name="annotations", required=true)
       private final Map<String,String> annotations;
 
     public Map<String,String> getAnnotations() {
@@ -37,7 +37,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * Information specifying an Anthos Cluster.
      * 
      */
-    @InputImport(name="anthosCluster", required=true)
+    @Import(name="anthosCluster", required=true)
       private final AnthosClusterResponse anthosCluster;
 
     public AnthosClusterResponse getAnthosCluster() {
@@ -48,7 +48,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * Time at which the `Target` was created.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -59,7 +59,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Description of the `Target`. Max length is 255 characters.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -70,7 +70,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -81,7 +81,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * Configurations for all execution that relates to this `Target`. Each `ExecutionEnvironmentUsage` value may only be used in a single configuration; using the same value multiple times is an error. When one or more configurations are specified, they must include the `RENDER` and `DEPLOY` `ExecutionEnvironmentUsage` values. When no configurations are specified, execution will use the default specified in `DefaultPool`.
      * 
      */
-    @InputImport(name="executionConfigs", required=true)
+    @Import(name="executionConfigs", required=true)
       private final List<ExecutionConfigResponse> executionConfigs;
 
     public List<ExecutionConfigResponse> getExecutionConfigs() {
@@ -92,7 +92,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * Information specifying a GKE Cluster.
      * 
      */
-    @InputImport(name="gke", required=true)
+    @Import(name="gke", required=true)
       private final GkeClusterResponse gke;
 
     public GkeClusterResponse getGke() {
@@ -103,7 +103,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Labels are attributes that can be set and used by both the user and by Google Cloud Deploy. Labels must meet the following constraints: * Keys and values can contain only lowercase letters, numeric characters, underscores, and dashes. * All characters must use UTF-8 encoding, and international characters are allowed. * Keys must start with a lowercase letter or international character. * Each resource is limited to a maximum of 64 labels. Both keys and values are additionally constrained to be <= 128 bytes.
      * 
      */
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
@@ -114,7 +114,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Name of the `Target`. Format is projects/{project}/locations/{location}/targets/a-z{0,62}.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -125,7 +125,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * Optional. Whether or not the `Target` requires approval.
      * 
      */
-    @InputImport(name="requireApproval", required=true)
+    @Import(name="requireApproval", required=true)
       private final Boolean requireApproval;
 
     public Boolean getRequireApproval() {
@@ -136,7 +136,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * Resource id of the `Target`.
      * 
      */
-    @InputImport(name="targetId", required=true)
+    @Import(name="targetId", required=true)
       private final String targetId;
 
     public String getTargetId() {
@@ -147,7 +147,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * Unique identifier of the `Target`.
      * 
      */
-    @InputImport(name="uid", required=true)
+    @Import(name="uid", required=true)
       private final String uid;
 
     public String getUid() {
@@ -158,7 +158,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * Most recent time at which the `Target` was updated.
      * 
      */
-    @InputImport(name="updateTime", required=true)
+    @Import(name="updateTime", required=true)
       private final String updateTime;
 
     public String getUpdateTime() {

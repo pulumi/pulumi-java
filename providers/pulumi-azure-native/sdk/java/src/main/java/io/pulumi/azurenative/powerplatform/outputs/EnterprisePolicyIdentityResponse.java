@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.powerplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnterprisePolicyIdentityResponse {
     /**
      * The principal id of EnterprisePolicy identity.
@@ -27,11 +27,11 @@ public final class EnterprisePolicyIdentityResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnterprisePolicyIdentityResponse(
-        @OutputCustomType.Parameter("systemAssignedIdentityPrincipalId") String systemAssignedIdentityPrincipalId,
-        @OutputCustomType.Parameter("tenantId") String tenantId,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("systemAssignedIdentityPrincipalId") String systemAssignedIdentityPrincipalId,
+        @CustomType.Parameter("tenantId") String tenantId,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.systemAssignedIdentityPrincipalId = systemAssignedIdentityPrincipalId;
         this.tenantId = tenantId;
         this.type = type;

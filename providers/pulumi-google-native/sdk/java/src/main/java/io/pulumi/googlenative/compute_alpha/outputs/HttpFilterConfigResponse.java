@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HttpFilterConfigResponse {
     /**
      * The configuration needed to enable the networkservices.HttpFilter resource. The configuration must be YAML formatted and only contain fields defined in the protobuf identified in configTypeUrl
@@ -25,11 +25,11 @@ public final class HttpFilterConfigResponse {
      */
     private final String filterName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private HttpFilterConfigResponse(
-        @OutputCustomType.Parameter("config") String config,
-        @OutputCustomType.Parameter("configTypeUrl") String configTypeUrl,
-        @OutputCustomType.Parameter("filterName") String filterName) {
+        @CustomType.Parameter("config") String config,
+        @CustomType.Parameter("configTypeUrl") String configTypeUrl,
+        @CustomType.Parameter("filterName") String filterName) {
         this.config = config;
         this.configTypeUrl = configTypeUrl;
         this.filterName = filterName;

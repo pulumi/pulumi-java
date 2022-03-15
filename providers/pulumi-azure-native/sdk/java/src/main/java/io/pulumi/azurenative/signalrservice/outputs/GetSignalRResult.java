@@ -9,7 +9,7 @@ import io.pulumi.azurenative.signalrservice.outputs.ServerlessUpstreamSettingsRe
 import io.pulumi.azurenative.signalrservice.outputs.SignalRCorsSettingsResponse;
 import io.pulumi.azurenative.signalrservice.outputs.SignalRFeatureResponse;
 import io.pulumi.azurenative.signalrservice.outputs.SignalRNetworkACLsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSignalRResult {
     /**
      * Cross-Origin Resource Sharing (CORS) settings.
@@ -122,27 +122,27 @@ public final class GetSignalRResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSignalRResult(
-        @OutputCustomType.Parameter("cors") @Nullable SignalRCorsSettingsResponse cors,
-        @OutputCustomType.Parameter("externalIP") String externalIP,
-        @OutputCustomType.Parameter("features") @Nullable List<SignalRFeatureResponse> features,
-        @OutputCustomType.Parameter("hostName") String hostName,
-        @OutputCustomType.Parameter("hostNamePrefix") String hostNamePrefix,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kind") @Nullable String kind,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("networkACLs") @Nullable SignalRNetworkACLsResponse networkACLs,
-        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("publicPort") Integer publicPort,
-        @OutputCustomType.Parameter("serverPort") Integer serverPort,
-        @OutputCustomType.Parameter("sku") @Nullable ResourceSkuResponse sku,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("upstream") @Nullable ServerlessUpstreamSettingsResponse upstream,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("cors") @Nullable SignalRCorsSettingsResponse cors,
+        @CustomType.Parameter("externalIP") String externalIP,
+        @CustomType.Parameter("features") @Nullable List<SignalRFeatureResponse> features,
+        @CustomType.Parameter("hostName") String hostName,
+        @CustomType.Parameter("hostNamePrefix") String hostNamePrefix,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kind") @Nullable String kind,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("networkACLs") @Nullable SignalRNetworkACLsResponse networkACLs,
+        @CustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("publicPort") Integer publicPort,
+        @CustomType.Parameter("serverPort") Integer serverPort,
+        @CustomType.Parameter("sku") @Nullable ResourceSkuResponse sku,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("upstream") @Nullable ServerlessUpstreamSettingsResponse upstream,
+        @CustomType.Parameter("version") String version) {
         this.cors = cors;
         this.externalIP = externalIP;
         this.features = features;

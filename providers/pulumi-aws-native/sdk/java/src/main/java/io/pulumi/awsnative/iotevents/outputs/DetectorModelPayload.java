@@ -3,11 +3,11 @@
 
 package io.pulumi.awsnative.iotevents.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DetectorModelPayload {
     /**
      * The content of the payload. You can use a string expression that includes quoted strings (`'<string>'`), variables (`$variable.<variable-name>`), input values (`$input.<input-name>.<path-to-datum>`), string concatenations, and quoted strings that contain `${}` as the content. The recommended maximum size of a content expression is 1 KB.
@@ -20,10 +20,10 @@ public final class DetectorModelPayload {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DetectorModelPayload(
-        @OutputCustomType.Parameter("contentExpression") String contentExpression,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("contentExpression") String contentExpression,
+        @CustomType.Parameter("type") String type) {
         this.contentExpression = contentExpression;
         this.type = type;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.alb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetListenerDefaultActionAuthenticateCognito {
     private final Map<String,String> authenticationRequestExtraParams;
     private final String onUnauthenticatedRequest;
@@ -20,16 +20,16 @@ public final class GetListenerDefaultActionAuthenticateCognito {
     private final String userPoolClientId;
     private final String userPoolDomain;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetListenerDefaultActionAuthenticateCognito(
-        @OutputCustomType.Parameter("authenticationRequestExtraParams") Map<String,String> authenticationRequestExtraParams,
-        @OutputCustomType.Parameter("onUnauthenticatedRequest") String onUnauthenticatedRequest,
-        @OutputCustomType.Parameter("scope") String scope,
-        @OutputCustomType.Parameter("sessionCookieName") String sessionCookieName,
-        @OutputCustomType.Parameter("sessionTimeout") Integer sessionTimeout,
-        @OutputCustomType.Parameter("userPoolArn") String userPoolArn,
-        @OutputCustomType.Parameter("userPoolClientId") String userPoolClientId,
-        @OutputCustomType.Parameter("userPoolDomain") String userPoolDomain) {
+        @CustomType.Parameter("authenticationRequestExtraParams") Map<String,String> authenticationRequestExtraParams,
+        @CustomType.Parameter("onUnauthenticatedRequest") String onUnauthenticatedRequest,
+        @CustomType.Parameter("scope") String scope,
+        @CustomType.Parameter("sessionCookieName") String sessionCookieName,
+        @CustomType.Parameter("sessionTimeout") Integer sessionTimeout,
+        @CustomType.Parameter("userPoolArn") String userPoolArn,
+        @CustomType.Parameter("userPoolClientId") String userPoolClientId,
+        @CustomType.Parameter("userPoolDomain") String userPoolDomain) {
         this.authenticationRequestExtraParams = authenticationRequestExtraParams;
         this.onUnauthenticatedRequest = onUnauthenticatedRequest;
         this.scope = scope;

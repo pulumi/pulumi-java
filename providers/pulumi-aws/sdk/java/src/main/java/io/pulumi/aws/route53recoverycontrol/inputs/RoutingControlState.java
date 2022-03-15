@@ -4,7 +4,7 @@
 package io.pulumi.aws.route53recoverycontrol.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
      * ARN of the routing control.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -29,7 +29,7 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
      * ARN of the cluster in which this routing control will reside.
      * 
      */
-    @InputImport(name="clusterArn")
+    @Import(name="clusterArn")
       private final @Nullable Output<String> clusterArn;
 
     public Output<String> getClusterArn() {
@@ -40,7 +40,7 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
      * ARN of the control panel in which this routing control will reside.
      * 
      */
-    @InputImport(name="controlPanelArn")
+    @Import(name="controlPanelArn")
       private final @Nullable Output<String> controlPanelArn;
 
     public Output<String> getControlPanelArn() {
@@ -51,7 +51,7 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
      * The name describing the routing control.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -62,7 +62,7 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
      * Status of routing control. `PENDING` when it is being created/updated, `PENDING_DELETION` when it is being deleted, and `DEPLOYED` otherwise.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

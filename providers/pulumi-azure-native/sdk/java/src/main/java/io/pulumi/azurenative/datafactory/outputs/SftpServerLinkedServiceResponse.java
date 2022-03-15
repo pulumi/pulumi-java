@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SftpServerLinkedServiceResponse {
     /**
      * List of tags that can be used for describing the linked service.
@@ -101,24 +101,24 @@ public final class SftpServerLinkedServiceResponse {
      */
     private final @Nullable Object userName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SftpServerLinkedServiceResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
-        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
-        @OutputCustomType.Parameter("host") Object host,
-        @OutputCustomType.Parameter("hostKeyFingerprint") @Nullable Object hostKeyFingerprint,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("passPhrase") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> passPhrase,
-        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @OutputCustomType.Parameter("port") @Nullable Object port,
-        @OutputCustomType.Parameter("privateKeyContent") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKeyContent,
-        @OutputCustomType.Parameter("privateKeyPath") @Nullable Object privateKeyPath,
-        @OutputCustomType.Parameter("skipHostKeyValidation") @Nullable Object skipHostKeyValidation,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("userName") @Nullable Object userName) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @CustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @CustomType.Parameter("host") Object host,
+        @CustomType.Parameter("hostKeyFingerprint") @Nullable Object hostKeyFingerprint,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("passPhrase") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> passPhrase,
+        @CustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @CustomType.Parameter("port") @Nullable Object port,
+        @CustomType.Parameter("privateKeyContent") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> privateKeyContent,
+        @CustomType.Parameter("privateKeyPath") @Nullable Object privateKeyPath,
+        @CustomType.Parameter("skipHostKeyValidation") @Nullable Object skipHostKeyValidation,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("userName") @Nullable Object userName) {
         this.annotations = annotations;
         this.authenticationType = authenticationType;
         this.connectVia = connectVia;

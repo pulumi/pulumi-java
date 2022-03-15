@@ -5,7 +5,7 @@ package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.azurenative.operationalinsights.inputs.LogAnalyticsQueryPackQueryPropertiesRelatedArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * Body of the query.
      * 
      */
-    @InputImport(name="body", required=true)
+    @Import(name="body", required=true)
       private final Output<String> body;
 
     public Output<String> getBody() {
@@ -33,7 +33,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the query.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * Unique display name for your query within the Query Pack.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -55,7 +55,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * The id of a specific query defined in the Log Analytics QueryPack
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -66,7 +66,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * Additional properties that can be set for the query.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Object> properties;
 
     public Output<Object> getProperties() {
@@ -77,7 +77,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Log Analytics QueryPack resource.
      * 
      */
-    @InputImport(name="queryPackName", required=true)
+    @Import(name="queryPackName", required=true)
       private final Output<String> queryPackName;
 
     public Output<String> getQueryPackName() {
@@ -88,7 +88,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * The related metadata items for the function.
      * 
      */
-    @InputImport(name="related")
+    @Import(name="related")
       private final @Nullable Output<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related;
 
     public Output<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> getRelated() {
@@ -99,7 +99,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -110,7 +110,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
      * Tags associated with the query.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,List<String>>> tags;
 
     public Output<Map<String,List<String>>> getTags() {

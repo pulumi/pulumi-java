@@ -6,7 +6,7 @@ package io.pulumi.aws.elasticbeanstalk.inputs;
 import io.pulumi.aws.elasticbeanstalk.inputs.EnvironmentAllSettingGetArgs;
 import io.pulumi.aws.elasticbeanstalk.inputs.EnvironmentSettingGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * the configuration.
      * 
      */
-    @InputImport(name="allSettings")
+    @Import(name="allSettings")
       private final @Nullable Output<List<EnvironmentAllSettingGetArgs>> allSettings;
 
     public Output<List<EnvironmentAllSettingGetArgs>> getAllSettings() {
@@ -36,14 +36,14 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * to be deployed
      * 
      */
-    @InputImport(name="application")
+    @Import(name="application")
       private final @Nullable Output<String> application;
 
     public Output<String> getApplication() {
         return this.application == null ? Output.empty() : this.application;
     }
 
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -54,7 +54,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * The autoscaling groups used by this Environment.
      * 
      */
-    @InputImport(name="autoscalingGroups")
+    @Import(name="autoscalingGroups")
       private final @Nullable Output<List<String>> autoscalingGroups;
 
     public Output<List<String>> getAutoscalingGroups() {
@@ -65,7 +65,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * Fully qualified DNS name for this Environment.
      * 
      */
-    @InputImport(name="cname")
+    @Import(name="cname")
       private final @Nullable Output<String> cname;
 
     public Output<String> getCname() {
@@ -77,7 +77,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * the Environment.
      * 
      */
-    @InputImport(name="cnamePrefix")
+    @Import(name="cnamePrefix")
       private final @Nullable Output<String> cnamePrefix;
 
     public Output<String> getCnamePrefix() {
@@ -88,7 +88,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * Short description of the Environment
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -99,7 +99,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * The URL to the Load Balancer for this Environment
      * 
      */
-    @InputImport(name="endpointUrl")
+    @Import(name="endpointUrl")
       private final @Nullable Output<String> endpointUrl;
 
     public Output<String> getEndpointUrl() {
@@ -110,7 +110,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * Instances used by this Environment.
      * 
      */
-    @InputImport(name="instances")
+    @Import(name="instances")
       private final @Nullable Output<List<String>> instances;
 
     public Output<List<String>> getInstances() {
@@ -121,7 +121,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * Launch configurations in use by this Environment.
      * 
      */
-    @InputImport(name="launchConfigurations")
+    @Import(name="launchConfigurations")
       private final @Nullable Output<List<String>> launchConfigurations;
 
     public Output<List<String>> getLaunchConfigurations() {
@@ -132,7 +132,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * Elastic load balancers in use by this Environment.
      * 
      */
-    @InputImport(name="loadBalancers")
+    @Import(name="loadBalancers")
       private final @Nullable Output<List<String>> loadBalancers;
 
     public Output<List<String>> getLoadBalancers() {
@@ -144,7 +144,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * in the application URL
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -156,7 +156,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * to use in deployment
      * 
      */
-    @InputImport(name="platformArn")
+    @Import(name="platformArn")
       private final @Nullable Output<String> platformArn;
 
     public Output<String> getPlatformArn() {
@@ -170,7 +170,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * use the default behavior, which is an exponential backoff
      * 
      */
-    @InputImport(name="pollInterval")
+    @Import(name="pollInterval")
       private final @Nullable Output<String> pollInterval;
 
     public Output<String> getPollInterval() {
@@ -181,7 +181,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * SQS queues in use by this Environment.
      * 
      */
-    @InputImport(name="queues")
+    @Import(name="queues")
       private final @Nullable Output<List<String>> queues;
 
     public Output<List<String>> getQueues() {
@@ -194,7 +194,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * below in Option Settings
      * 
      */
-    @InputImport(name="settings")
+    @Import(name="settings")
       private final @Nullable Output<List<EnvironmentSettingGetArgs>> settings;
 
     public Output<List<EnvironmentSettingGetArgs>> getSettings() {
@@ -206,7 +206,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * off of. Example stacks can be found in the [Amazon API documentation](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.platforms.html)
      * 
      */
-    @InputImport(name="solutionStackName")
+    @Import(name="solutionStackName")
       private final @Nullable Output<String> solutionStackName;
 
     public Output<String> getSolutionStackName() {
@@ -217,7 +217,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * A set of tags to apply to the Environment. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -228,7 +228,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -240,7 +240,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * template to use in deployment
      * 
      */
-    @InputImport(name="templateName")
+    @Import(name="templateName")
       private final @Nullable Output<String> templateName;
 
     public Output<String> getTemplateName() {
@@ -252,7 +252,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * or `WebServer`. If tier is left blank `WebServer` will be used.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {
@@ -263,7 +263,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * Autoscaling triggers in use by this Environment.
      * 
      */
-    @InputImport(name="triggers")
+    @Import(name="triggers")
       private final @Nullable Output<List<String>> triggers;
 
     public Output<List<String>> getTriggers() {
@@ -275,7 +275,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * to use in deployment.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
@@ -289,7 +289,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * out.
      * 
      */
-    @InputImport(name="waitForReadyTimeout")
+    @Import(name="waitForReadyTimeout")
       private final @Nullable Output<String> waitForReadyTimeout;
 
     public Output<String> getWaitForReadyTimeout() {

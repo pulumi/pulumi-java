@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicebus;
 
 import io.pulumi.azurenative.servicebus.enums.EntityStatus;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * ISO 8061 timeSpan idle interval after which the topic is automatically deleted. The minimum duration is 5 minutes.
      * 
      */
-    @InputImport(name="autoDeleteOnIdle")
+    @Import(name="autoDeleteOnIdle")
       private final @Nullable Output<String> autoDeleteOnIdle;
 
     public Output<String> getAutoDeleteOnIdle() {
@@ -32,7 +32,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Value that indicates whether a subscription has dead letter support on filter evaluation exceptions.
      * 
      */
-    @InputImport(name="deadLetteringOnFilterEvaluationExceptions")
+    @Import(name="deadLetteringOnFilterEvaluationExceptions")
       private final @Nullable Output<Boolean> deadLetteringOnFilterEvaluationExceptions;
 
     public Output<Boolean> getDeadLetteringOnFilterEvaluationExceptions() {
@@ -43,7 +43,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Value that indicates whether a subscription has dead letter support when a message expires.
      * 
      */
-    @InputImport(name="deadLetteringOnMessageExpiration")
+    @Import(name="deadLetteringOnMessageExpiration")
       private final @Nullable Output<Boolean> deadLetteringOnMessageExpiration;
 
     public Output<Boolean> getDeadLetteringOnMessageExpiration() {
@@ -54,7 +54,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * ISO 8061 Default message timespan to live value. This is the duration after which the message expires, starting from when the message is sent to Service Bus. This is the default value used when TimeToLive is not set on a message itself.
      * 
      */
-    @InputImport(name="defaultMessageTimeToLive")
+    @Import(name="defaultMessageTimeToLive")
       private final @Nullable Output<String> defaultMessageTimeToLive;
 
     public Output<String> getDefaultMessageTimeToLive() {
@@ -65,7 +65,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * ISO 8601 timeSpan structure that defines the duration of the duplicate detection history. The default value is 10 minutes.
      * 
      */
-    @InputImport(name="duplicateDetectionHistoryTimeWindow")
+    @Import(name="duplicateDetectionHistoryTimeWindow")
       private final @Nullable Output<String> duplicateDetectionHistoryTimeWindow;
 
     public Output<String> getDuplicateDetectionHistoryTimeWindow() {
@@ -76,7 +76,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Value that indicates whether server-side batched operations are enabled.
      * 
      */
-    @InputImport(name="enableBatchedOperations")
+    @Import(name="enableBatchedOperations")
       private final @Nullable Output<Boolean> enableBatchedOperations;
 
     public Output<Boolean> getEnableBatchedOperations() {
@@ -87,7 +87,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Queue/Topic name to forward the Dead Letter message
      * 
      */
-    @InputImport(name="forwardDeadLetteredMessagesTo")
+    @Import(name="forwardDeadLetteredMessagesTo")
       private final @Nullable Output<String> forwardDeadLetteredMessagesTo;
 
     public Output<String> getForwardDeadLetteredMessagesTo() {
@@ -98,7 +98,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Queue/Topic name to forward the messages
      * 
      */
-    @InputImport(name="forwardTo")
+    @Import(name="forwardTo")
       private final @Nullable Output<String> forwardTo;
 
     public Output<String> getForwardTo() {
@@ -109,7 +109,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * ISO 8061 lock duration timespan for the subscription. The default value is 1 minute.
      * 
      */
-    @InputImport(name="lockDuration")
+    @Import(name="lockDuration")
       private final @Nullable Output<String> lockDuration;
 
     public Output<String> getLockDuration() {
@@ -120,7 +120,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Number of maximum deliveries.
      * 
      */
-    @InputImport(name="maxDeliveryCount")
+    @Import(name="maxDeliveryCount")
       private final @Nullable Output<Integer> maxDeliveryCount;
 
     public Output<Integer> getMaxDeliveryCount() {
@@ -131,7 +131,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * The namespace name
      * 
      */
-    @InputImport(name="namespaceName", required=true)
+    @Import(name="namespaceName", required=true)
       private final Output<String> namespaceName;
 
     public Output<String> getNamespaceName() {
@@ -142,7 +142,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Value indicating if a subscription supports the concept of sessions.
      * 
      */
-    @InputImport(name="requiresSession")
+    @Import(name="requiresSession")
       private final @Nullable Output<Boolean> requiresSession;
 
     public Output<Boolean> getRequiresSession() {
@@ -153,7 +153,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the Resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -164,7 +164,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * Enumerates the possible values for the status of a messaging entity.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<EntityStatus> status;
 
     public Output<EntityStatus> getStatus() {
@@ -175,7 +175,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * The subscription name.
      * 
      */
-    @InputImport(name="subscriptionName")
+    @Import(name="subscriptionName")
       private final @Nullable Output<String> subscriptionName;
 
     public Output<String> getSubscriptionName() {
@@ -186,7 +186,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * The topic name.
      * 
      */
-    @InputImport(name="topicName", required=true)
+    @Import(name="topicName", required=true)
       private final Output<String> topicName;
 
     public Output<String> getTopicName() {

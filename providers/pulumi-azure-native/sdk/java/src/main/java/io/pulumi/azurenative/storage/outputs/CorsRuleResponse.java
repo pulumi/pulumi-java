@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CorsRuleResponse {
     /**
      * Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin request.
@@ -37,13 +37,13 @@ public final class CorsRuleResponse {
      */
     private final Integer maxAgeInSeconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CorsRuleResponse(
-        @OutputCustomType.Parameter("allowedHeaders") List<String> allowedHeaders,
-        @OutputCustomType.Parameter("allowedMethods") List<String> allowedMethods,
-        @OutputCustomType.Parameter("allowedOrigins") List<String> allowedOrigins,
-        @OutputCustomType.Parameter("exposedHeaders") List<String> exposedHeaders,
-        @OutputCustomType.Parameter("maxAgeInSeconds") Integer maxAgeInSeconds) {
+        @CustomType.Parameter("allowedHeaders") List<String> allowedHeaders,
+        @CustomType.Parameter("allowedMethods") List<String> allowedMethods,
+        @CustomType.Parameter("allowedOrigins") List<String> allowedOrigins,
+        @CustomType.Parameter("exposedHeaders") List<String> exposedHeaders,
+        @CustomType.Parameter("maxAgeInSeconds") Integer maxAgeInSeconds) {
         this.allowedHeaders = allowedHeaders;
         this.allowedMethods = allowedMethods;
         this.allowedOrigins = allowedOrigins;

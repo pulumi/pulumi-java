@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceCatalogProvisionedProductDetailsProperties {
     private final @Nullable String provisionedProductId;
     private final @Nullable String provisionedProductStatusMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceCatalogProvisionedProductDetailsProperties(
-        @OutputCustomType.Parameter("provisionedProductId") @Nullable String provisionedProductId,
-        @OutputCustomType.Parameter("provisionedProductStatusMessage") @Nullable String provisionedProductStatusMessage) {
+        @CustomType.Parameter("provisionedProductId") @Nullable String provisionedProductId,
+        @CustomType.Parameter("provisionedProductStatusMessage") @Nullable String provisionedProductStatusMessage) {
         this.provisionedProductId = provisionedProductId;
         this.provisionedProductStatusMessage = provisionedProductStatusMessage;
     }

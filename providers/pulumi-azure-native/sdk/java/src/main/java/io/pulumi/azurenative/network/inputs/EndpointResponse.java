@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.EndpointPropertiesResponseCustomHeaders;
 import io.pulumi.azurenative.network.inputs.EndpointPropertiesResponseSubnets;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * List of custom headers.
      * 
      */
-    @InputImport(name="customHeaders")
+    @Import(name="customHeaders")
       private final @Nullable List<EndpointPropertiesResponseCustomHeaders> customHeaders;
 
     public List<EndpointPropertiesResponseCustomHeaders> getCustomHeaders() {
@@ -37,7 +37,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * Specifies the location of the external or nested endpoints when using the 'Performance' traffic routing method.
      * 
      */
-    @InputImport(name="endpointLocation")
+    @Import(name="endpointLocation")
       private final @Nullable String endpointLocation;
 
     public Optional<String> getEndpointLocation() {
@@ -48,7 +48,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * The monitoring status of the endpoint.
      * 
      */
-    @InputImport(name="endpointMonitorStatus")
+    @Import(name="endpointMonitorStatus")
       private final @Nullable String endpointMonitorStatus;
 
     public Optional<String> getEndpointMonitorStatus() {
@@ -59,7 +59,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.
      * 
      */
-    @InputImport(name="endpointStatus")
+    @Import(name="endpointStatus")
       private final @Nullable String endpointStatus;
 
     public Optional<String> getEndpointStatus() {
@@ -70,7 +70,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * The list of countries/regions mapped to this endpoint when using the 'Geographic' traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
      * 
      */
-    @InputImport(name="geoMapping")
+    @Import(name="geoMapping")
       private final @Nullable List<String> geoMapping;
 
     public List<String> getGeoMapping() {
@@ -81,7 +81,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -92,7 +92,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
      * 
      */
-    @InputImport(name="minChildEndpoints")
+    @Import(name="minChildEndpoints")
       private final @Nullable Double minChildEndpoints;
 
     public Optional<Double> getMinChildEndpoints() {
@@ -103,7 +103,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
      * 
      */
-    @InputImport(name="minChildEndpointsIPv4")
+    @Import(name="minChildEndpointsIPv4")
       private final @Nullable Double minChildEndpointsIPv4;
 
     public Optional<Double> getMinChildEndpointsIPv4() {
@@ -114,7 +114,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type 'NestedEndpoints'.
      * 
      */
-    @InputImport(name="minChildEndpointsIPv6")
+    @Import(name="minChildEndpointsIPv6")
       private final @Nullable Double minChildEndpointsIPv6;
 
     public Optional<Double> getMinChildEndpointsIPv6() {
@@ -125,7 +125,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * The name of the resource
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -136,7 +136,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * The priority of this endpoint when using the 'Priority' traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Double priority;
 
     public Optional<Double> getPriority() {
@@ -147,7 +147,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the 'Subnet' traffic routing method. An empty list will match all ranges not covered by other endpoints.
      * 
      */
-    @InputImport(name="subnets")
+    @Import(name="subnets")
       private final @Nullable List<EndpointPropertiesResponseSubnets> subnets;
 
     public List<EndpointPropertiesResponseSubnets> getSubnets() {
@@ -158,7 +158,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable String target;
 
     public Optional<String> getTarget() {
@@ -169,7 +169,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type 'ExternalEndpoints'.
      * 
      */
-    @InputImport(name="targetResourceId")
+    @Import(name="targetResourceId")
       private final @Nullable String targetResourceId;
 
     public Optional<String> getTargetResourceId() {
@@ -180,7 +180,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -191,7 +191,7 @@ public final class EndpointResponse extends io.pulumi.resources.InvokeArgs {
      * The weight of this endpoint when using the 'Weighted' traffic routing method. Possible values are from 1 to 1000.
      * 
      */
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Double weight;
 
     public Optional<Double> getWeight() {

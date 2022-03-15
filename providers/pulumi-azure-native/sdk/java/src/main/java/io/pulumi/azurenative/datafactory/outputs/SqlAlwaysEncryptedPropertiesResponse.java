@@ -7,14 +7,14 @@ import io.pulumi.azurenative.datafactory.outputs.AzureKeyVaultSecretReferenceRes
 import io.pulumi.azurenative.datafactory.outputs.CredentialReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SqlAlwaysEncryptedPropertiesResponse {
     /**
      * Sql always encrypted AKV authentication type. Type: string (or Expression with resultType string).
@@ -37,12 +37,12 @@ public final class SqlAlwaysEncryptedPropertiesResponse {
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SqlAlwaysEncryptedPropertiesResponse(
-        @OutputCustomType.Parameter("alwaysEncryptedAkvAuthType") String alwaysEncryptedAkvAuthType,
-        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
-        @OutputCustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
-        @OutputCustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
+        @CustomType.Parameter("alwaysEncryptedAkvAuthType") String alwaysEncryptedAkvAuthType,
+        @CustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @CustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
+        @CustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
         this.alwaysEncryptedAkvAuthType = alwaysEncryptedAkvAuthType;
         this.credential = credential;
         this.servicePrincipalId = servicePrincipalId;

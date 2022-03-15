@@ -3,21 +3,21 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionInferenceAccelerator {
     private final @Nullable String deviceName;
     private final @Nullable String deviceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionInferenceAccelerator(
-        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
-        @OutputCustomType.Parameter("deviceType") @Nullable String deviceType) {
+        @CustomType.Parameter("deviceName") @Nullable String deviceName,
+        @CustomType.Parameter("deviceType") @Nullable String deviceType) {
         this.deviceName = deviceName;
         this.deviceType = deviceType;
     }

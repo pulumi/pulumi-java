@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AppleRegistrationArgs extends io.pulumi.resources.ResourceArg
      * The Client ID of the app used for login.
      * 
      */
-    @InputImport(name="clientId")
+    @Import(name="clientId")
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -33,7 +33,7 @@ public final class AppleRegistrationArgs extends io.pulumi.resources.ResourceArg
      * The app setting name that contains the client secret.
      * 
      */
-    @InputImport(name="clientSecretSettingName")
+    @Import(name="clientSecretSettingName")
       private final @Nullable Output<String> clientSecretSettingName;
 
     public Output<String> getClientSecretSettingName() {

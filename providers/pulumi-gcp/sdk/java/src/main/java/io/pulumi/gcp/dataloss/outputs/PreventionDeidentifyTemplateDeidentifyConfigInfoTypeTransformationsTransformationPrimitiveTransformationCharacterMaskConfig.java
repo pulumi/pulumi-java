@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfig {
     /**
      * Characters to skip when doing de-identification of a value. These will be left alone and skipped.
@@ -40,12 +40,12 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      */
     private final @Nullable Boolean reverseOrder;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfig(
-        @OutputCustomType.Parameter("charactersToIgnores") @Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore> charactersToIgnores,
-        @OutputCustomType.Parameter("maskingCharacter") @Nullable String maskingCharacter,
-        @OutputCustomType.Parameter("numberToMask") @Nullable Integer numberToMask,
-        @OutputCustomType.Parameter("reverseOrder") @Nullable Boolean reverseOrder) {
+        @CustomType.Parameter("charactersToIgnores") @Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore> charactersToIgnores,
+        @CustomType.Parameter("maskingCharacter") @Nullable String maskingCharacter,
+        @CustomType.Parameter("numberToMask") @Nullable Integer numberToMask,
+        @CustomType.Parameter("reverseOrder") @Nullable Boolean reverseOrder) {
         this.charactersToIgnores = charactersToIgnores;
         this.maskingCharacter = maskingCharacter;
         this.numberToMask = numberToMask;

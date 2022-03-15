@@ -8,7 +8,7 @@ import io.pulumi.aws.mediapackage.ChannelArgs;
 import io.pulumi.aws.mediapackage.inputs.ChannelState;
 import io.pulumi.aws.mediapackage.outputs.ChannelHlsIngest;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * The ARN of the channel
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * A unique identifier describing the channel
      * 
      */
-    @OutputExport(name="channelId", type=String.class, parameters={})
+    @Export(name="channelId", type=String.class, parameters={})
     private Output<String> channelId;
 
     /**
@@ -63,7 +63,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * A description of the channel
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -77,7 +77,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * A single item list of HLS ingest information
      * 
      */
-    @OutputExport(name="hlsIngests", type=List.class, parameters={ChannelHlsIngest.class})
+    @Export(name="hlsIngests", type=List.class, parameters={ChannelHlsIngest.class})
     private Output<List<ChannelHlsIngest>> hlsIngests;
 
     /**
@@ -91,7 +91,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -105,7 +105,7 @@ public class Channel extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

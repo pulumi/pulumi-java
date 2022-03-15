@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.JobScheduleResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetJobResult {
     /**
      * User-defined description of the job.
@@ -44,14 +44,14 @@ public final class GetJobResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetJobResult(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("schedule") @Nullable JobScheduleResponse schedule,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("version") Integer version) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("schedule") @Nullable JobScheduleResponse schedule,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("version") Integer version) {
         this.description = description;
         this.id = id;
         this.name = name;

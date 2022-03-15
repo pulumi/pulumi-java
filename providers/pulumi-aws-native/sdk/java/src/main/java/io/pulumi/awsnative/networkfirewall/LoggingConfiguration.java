@@ -6,7 +6,7 @@ package io.pulumi.awsnative.networkfirewall;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.networkfirewall.LoggingConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -17,19 +17,19 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:networkfirewall:LoggingConfiguration")
 public class LoggingConfiguration extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="firewallArn", type=String.class, parameters={})
+    @Export(name="firewallArn", type=String.class, parameters={})
     private Output<String> firewallArn;
 
     public Output<String> getFirewallArn() {
         return this.firewallArn;
     }
-    @OutputExport(name="firewallName", type=String.class, parameters={})
+    @Export(name="firewallName", type=String.class, parameters={})
     private Output</* @Nullable */ String> firewallName;
 
     public Output</* @Nullable */ String> getFirewallName() {
         return this.firewallName;
     }
-    @OutputExport(name="loggingConfiguration", type=io.pulumi.awsnative.networkfirewall.outputs.LoggingConfiguration.class, parameters={})
+    @Export(name="loggingConfiguration", type=io.pulumi.awsnative.networkfirewall.outputs.LoggingConfiguration.class, parameters={})
     private Output<io.pulumi.awsnative.networkfirewall.outputs.LoggingConfiguration> loggingConfiguration;
 
     public Output<io.pulumi.awsnative.networkfirewall.outputs.LoggingConfiguration> getLoggingConfiguration() {

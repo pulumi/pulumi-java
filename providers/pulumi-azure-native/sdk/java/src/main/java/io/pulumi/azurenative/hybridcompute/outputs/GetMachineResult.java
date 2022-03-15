@@ -8,7 +8,7 @@ import io.pulumi.azurenative.hybridcompute.outputs.LocationDataResponse;
 import io.pulumi.azurenative.hybridcompute.outputs.MachineExtensionInstanceViewResponse;
 import io.pulumi.azurenative.hybridcompute.outputs.MachinePropertiesResponseOsProfile;
 import io.pulumi.azurenative.hybridcompute.outputs.MachineResponseIdentity;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetMachineResult {
     /**
      * Specifies the AD fully qualified display name.
@@ -140,33 +140,33 @@ public final class GetMachineResult {
      */
     private final String vmUuid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMachineResult(
-        @OutputCustomType.Parameter("adFqdn") String adFqdn,
-        @OutputCustomType.Parameter("agentVersion") String agentVersion,
-        @OutputCustomType.Parameter("clientPublicKey") @Nullable String clientPublicKey,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("dnsFqdn") String dnsFqdn,
-        @OutputCustomType.Parameter("domainName") String domainName,
-        @OutputCustomType.Parameter("errorDetails") List<ErrorDetailResponse> errorDetails,
-        @OutputCustomType.Parameter("extensions") List<MachineExtensionInstanceViewResponse> extensions,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identity") @Nullable MachineResponseIdentity identity,
-        @OutputCustomType.Parameter("lastStatusChange") String lastStatusChange,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("locationData") @Nullable LocationDataResponse locationData,
-        @OutputCustomType.Parameter("machineFqdn") String machineFqdn,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("osName") String osName,
-        @OutputCustomType.Parameter("osProfile") @Nullable MachinePropertiesResponseOsProfile osProfile,
-        @OutputCustomType.Parameter("osSku") String osSku,
-        @OutputCustomType.Parameter("osVersion") String osVersion,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("vmId") @Nullable String vmId,
-        @OutputCustomType.Parameter("vmUuid") String vmUuid) {
+        @CustomType.Parameter("adFqdn") String adFqdn,
+        @CustomType.Parameter("agentVersion") String agentVersion,
+        @CustomType.Parameter("clientPublicKey") @Nullable String clientPublicKey,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("dnsFqdn") String dnsFqdn,
+        @CustomType.Parameter("domainName") String domainName,
+        @CustomType.Parameter("errorDetails") List<ErrorDetailResponse> errorDetails,
+        @CustomType.Parameter("extensions") List<MachineExtensionInstanceViewResponse> extensions,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identity") @Nullable MachineResponseIdentity identity,
+        @CustomType.Parameter("lastStatusChange") String lastStatusChange,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("locationData") @Nullable LocationDataResponse locationData,
+        @CustomType.Parameter("machineFqdn") String machineFqdn,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("osName") String osName,
+        @CustomType.Parameter("osProfile") @Nullable MachinePropertiesResponseOsProfile osProfile,
+        @CustomType.Parameter("osSku") String osSku,
+        @CustomType.Parameter("osVersion") String osVersion,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("vmId") @Nullable String vmId,
+        @CustomType.Parameter("vmUuid") String vmUuid) {
         this.adFqdn = adFqdn;
         this.agentVersion = agentVersion;
         this.clientPublicKey = clientPublicKey;

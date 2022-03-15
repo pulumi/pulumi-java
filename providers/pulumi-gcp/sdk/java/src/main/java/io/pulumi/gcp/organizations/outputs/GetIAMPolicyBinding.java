@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.organizations.outputs.GetIAMPolicyBindingCondition;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIAMPolicyBinding {
     /**
      * An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding. Structure is documented below.
@@ -38,11 +38,11 @@ public final class GetIAMPolicyBinding {
      */
     private final String role;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIAMPolicyBinding(
-        @OutputCustomType.Parameter("condition") @Nullable GetIAMPolicyBindingCondition condition,
-        @OutputCustomType.Parameter("members") List<String> members,
-        @OutputCustomType.Parameter("role") String role) {
+        @CustomType.Parameter("condition") @Nullable GetIAMPolicyBindingCondition condition,
+        @CustomType.Parameter("members") List<String> members,
+        @CustomType.Parameter("role") String role) {
         this.condition = condition;
         this.members = members;
         this.role = role;

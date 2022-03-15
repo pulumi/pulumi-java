@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.AddressSpaceArgs;
 import io.pulumi.azurenative.network.inputs.BgpSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * Local network gateway's BGP speaker settings.
      * 
      */
-    @InputImport(name="bgpSettings")
+    @Import(name="bgpSettings")
       private final @Nullable Output<BgpSettingsArgs> bgpSettings;
 
     public Output<BgpSettingsArgs> getBgpSettings() {
@@ -36,7 +36,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * FQDN of local network gateway.
      * 
      */
-    @InputImport(name="fqdn")
+    @Import(name="fqdn")
       private final @Nullable Output<String> fqdn;
 
     public Output<String> getFqdn() {
@@ -47,7 +47,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * IP address of local network gateway.
      * 
      */
-    @InputImport(name="gatewayIpAddress")
+    @Import(name="gatewayIpAddress")
       private final @Nullable Output<String> gatewayIpAddress;
 
     public Output<String> getGatewayIpAddress() {
@@ -58,7 +58,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -69,7 +69,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * Local network site address space.
      * 
      */
-    @InputImport(name="localNetworkAddressSpace")
+    @Import(name="localNetworkAddressSpace")
       private final @Nullable Output<AddressSpaceArgs> localNetworkAddressSpace;
 
     public Output<AddressSpaceArgs> getLocalNetworkAddressSpace() {
@@ -80,7 +80,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -91,7 +91,7 @@ public final class LocalNetworkGatewayArgs extends io.pulumi.resources.ResourceA
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

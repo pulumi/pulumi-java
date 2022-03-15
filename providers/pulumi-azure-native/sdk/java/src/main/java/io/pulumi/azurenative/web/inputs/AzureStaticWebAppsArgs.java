@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.AzureStaticWebAppsRegistrationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AzureStaticWebAppsArgs extends io.pulumi.resources.ResourceAr
      * <code>false</code> if the Azure Static Web Apps provider should not be enabled despite the set registration; otherwise, <code>true</code>.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -34,7 +34,7 @@ public final class AzureStaticWebAppsArgs extends io.pulumi.resources.ResourceAr
      * The configuration settings of the Azure Static Web Apps registration.
      * 
      */
-    @InputImport(name="registration")
+    @Import(name="registration")
       private final @Nullable Output<AzureStaticWebAppsRegistrationArgs> registration;
 
     public Output<AzureStaticWebAppsRegistrationArgs> getRegistration() {

@@ -14,7 +14,7 @@ import io.pulumi.awsnative.quicksight.inputs.DataSetResourcePermissionArgs;
 import io.pulumi.awsnative.quicksight.inputs.DataSetRowLevelPermissionDataSetArgs;
 import io.pulumi.awsnative.quicksight.inputs.DataSetTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final DataSetArgs Empty = new DataSetArgs();
 
-    @InputImport(name="awsAccountId")
+    @Import(name="awsAccountId")
       private final @Nullable Output<String> awsAccountId;
 
     public Output<String> getAwsAccountId() {
@@ -36,49 +36,49 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * <p>Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.</p>
      * 
      */
-    @InputImport(name="columnGroups")
+    @Import(name="columnGroups")
       private final @Nullable Output<List<DataSetColumnGroupArgs>> columnGroups;
 
     public Output<List<DataSetColumnGroupArgs>> getColumnGroups() {
         return this.columnGroups == null ? Output.empty() : this.columnGroups;
     }
 
-    @InputImport(name="columnLevelPermissionRules")
+    @Import(name="columnLevelPermissionRules")
       private final @Nullable Output<List<DataSetColumnLevelPermissionRuleArgs>> columnLevelPermissionRules;
 
     public Output<List<DataSetColumnLevelPermissionRuleArgs>> getColumnLevelPermissionRules() {
         return this.columnLevelPermissionRules == null ? Output.empty() : this.columnLevelPermissionRules;
     }
 
-    @InputImport(name="dataSetId")
+    @Import(name="dataSetId")
       private final @Nullable Output<String> dataSetId;
 
     public Output<String> getDataSetId() {
         return this.dataSetId == null ? Output.empty() : this.dataSetId;
     }
 
-    @InputImport(name="fieldFolders")
+    @Import(name="fieldFolders")
       private final @Nullable Output<DataSetFieldFolderMapArgs> fieldFolders;
 
     public Output<DataSetFieldFolderMapArgs> getFieldFolders() {
         return this.fieldFolders == null ? Output.empty() : this.fieldFolders;
     }
 
-    @InputImport(name="importMode")
+    @Import(name="importMode")
       private final @Nullable Output<DataSetImportMode> importMode;
 
     public Output<DataSetImportMode> getImportMode() {
         return this.importMode == null ? Output.empty() : this.importMode;
     }
 
-    @InputImport(name="ingestionWaitPolicy")
+    @Import(name="ingestionWaitPolicy")
       private final @Nullable Output<DataSetIngestionWaitPolicyArgs> ingestionWaitPolicy;
 
     public Output<DataSetIngestionWaitPolicyArgs> getIngestionWaitPolicy() {
         return this.ingestionWaitPolicy == null ? Output.empty() : this.ingestionWaitPolicy;
     }
 
-    @InputImport(name="logicalTableMap")
+    @Import(name="logicalTableMap")
       private final @Nullable Output<DataSetLogicalTableMapArgs> logicalTableMap;
 
     public Output<DataSetLogicalTableMapArgs> getLogicalTableMap() {
@@ -89,7 +89,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * <p>The display name for the dataset.</p>
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -100,21 +100,21 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * <p>A list of resource permissions on the dataset.</p>
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable Output<List<DataSetResourcePermissionArgs>> permissions;
 
     public Output<List<DataSetResourcePermissionArgs>> getPermissions() {
         return this.permissions == null ? Output.empty() : this.permissions;
     }
 
-    @InputImport(name="physicalTableMap")
+    @Import(name="physicalTableMap")
       private final @Nullable Output<DataSetPhysicalTableMapArgs> physicalTableMap;
 
     public Output<DataSetPhysicalTableMapArgs> getPhysicalTableMap() {
         return this.physicalTableMap == null ? Output.empty() : this.physicalTableMap;
     }
 
-    @InputImport(name="rowLevelPermissionDataSet")
+    @Import(name="rowLevelPermissionDataSet")
       private final @Nullable Output<DataSetRowLevelPermissionDataSetArgs> rowLevelPermissionDataSet;
 
     public Output<DataSetRowLevelPermissionDataSetArgs> getRowLevelPermissionDataSet() {
@@ -125,7 +125,7 @@ public final class DataSetArgs extends io.pulumi.resources.ResourceArgs {
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.</p>
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<DataSetTagArgs>> tags;
 
     public Output<List<DataSetTagArgs>> getTags() {

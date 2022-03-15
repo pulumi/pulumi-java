@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sourcerepo.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,14 +14,14 @@ public final class GetRepositoryArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetRepositoryArgs Empty = new GetRepositoryArgs();
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

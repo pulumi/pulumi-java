@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * Possible values are `INTERVAL_5_SEC`, `INTERVAL_30_SEC`, `INTERVAL_1_MIN`, `INTERVAL_5_MIN`, `INTERVAL_10_MIN`, and `INTERVAL_15_MIN`.
      * 
      */
-    @InputImport(name="aggregationInterval")
+    @Import(name="aggregationInterval")
       private final @Nullable Output<String> aggregationInterval;
 
     public Output<String> getAggregationInterval() {
@@ -38,7 +38,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * The default value is 'true', which evaluates to include everything.
      * 
      */
-    @InputImport(name="filterExpr")
+    @Import(name="filterExpr")
       private final @Nullable Output<String> filterExpr;
 
     public Output<String> getFilterExpr() {
@@ -53,7 +53,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * half of all collected logs are reported.
      * 
      */
-    @InputImport(name="flowSampling")
+    @Import(name="flowSampling")
       private final @Nullable Output<Double> flowSampling;
 
     public Output<Double> getFlowSampling() {
@@ -68,7 +68,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * Possible values are `EXCLUDE_ALL_METADATA`, `INCLUDE_ALL_METADATA`, and `CUSTOM_METADATA`.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<String> metadata;
 
     public Output<String> getMetadata() {
@@ -80,7 +80,7 @@ public final class SubnetworkLogConfigArgs extends io.pulumi.resources.ResourceA
      * Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" is set to CUSTOM_METADATA.
      * 
      */
-    @InputImport(name="metadataFields")
+    @Import(name="metadataFields")
       private final @Nullable Output<List<String>> metadataFields;
 
     public Output<List<String>> getMetadataFields() {

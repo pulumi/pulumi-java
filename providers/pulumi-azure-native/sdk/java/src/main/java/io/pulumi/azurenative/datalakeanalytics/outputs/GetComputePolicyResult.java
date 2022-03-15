@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.datalakeanalytics.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetComputePolicyResult {
     /**
      * The resource identifier.
@@ -46,15 +46,15 @@ public final class GetComputePolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetComputePolicyResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("maxDegreeOfParallelismPerJob") Integer maxDegreeOfParallelismPerJob,
-        @OutputCustomType.Parameter("minPriorityPerJob") Integer minPriorityPerJob,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("objectId") String objectId,
-        @OutputCustomType.Parameter("objectType") String objectType,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("maxDegreeOfParallelismPerJob") Integer maxDegreeOfParallelismPerJob,
+        @CustomType.Parameter("minPriorityPerJob") Integer minPriorityPerJob,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("objectId") String objectId,
+        @CustomType.Parameter("objectType") String objectType,
+        @CustomType.Parameter("type") String type) {
         this.id = id;
         this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
         this.minPriorityPerJob = minPriorityPerJob;

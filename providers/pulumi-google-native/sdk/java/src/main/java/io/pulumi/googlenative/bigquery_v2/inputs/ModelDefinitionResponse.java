@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.bigquery_v2.inputs.BqmlTrainingRunResponse;
 import io.pulumi.googlenative.bigquery_v2.inputs.ModelDefinitionModelOptionsResponse;
 import java.util.List;
@@ -18,7 +18,7 @@ public final class ModelDefinitionResponse extends io.pulumi.resources.InvokeArg
      * [Output-only, Beta] Model options used for the first training run. These options are immutable for subsequent training runs. Default values are used for any options not specified in the input query.
      * 
      */
-    @InputImport(name="modelOptions", required=true)
+    @Import(name="modelOptions", required=true)
       private final ModelDefinitionModelOptionsResponse modelOptions;
 
     public ModelDefinitionModelOptionsResponse getModelOptions() {
@@ -29,7 +29,7 @@ public final class ModelDefinitionResponse extends io.pulumi.resources.InvokeArg
      * [Output-only, Beta] Information about ml training runs, each training run comprises of multiple iterations and there may be multiple training runs for the model if warm start is used or if a user decides to continue a previously cancelled query.
      * 
      */
-    @InputImport(name="trainingRuns", required=true)
+    @Import(name="trainingRuns", required=true)
       private final List<BqmlTrainingRunResponse> trainingRuns;
 
     public List<BqmlTrainingRunResponse> getTrainingRuns() {

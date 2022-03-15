@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.AutoscalingSettingsResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.DiskResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.PackageResponse;
@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkerPoolResponse {
     /**
      * Settings for autoscaling of this WorkerPool.
@@ -123,29 +123,29 @@ public final class WorkerPoolResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkerPoolResponse(
-        @OutputCustomType.Parameter("autoscalingSettings") AutoscalingSettingsResponse autoscalingSettings,
-        @OutputCustomType.Parameter("dataDisks") List<DiskResponse> dataDisks,
-        @OutputCustomType.Parameter("defaultPackageSet") String defaultPackageSet,
-        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
-        @OutputCustomType.Parameter("diskSourceImage") String diskSourceImage,
-        @OutputCustomType.Parameter("diskType") String diskType,
-        @OutputCustomType.Parameter("ipConfiguration") String ipConfiguration,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("numThreadsPerWorker") Integer numThreadsPerWorker,
-        @OutputCustomType.Parameter("numWorkers") Integer numWorkers,
-        @OutputCustomType.Parameter("onHostMaintenance") String onHostMaintenance,
-        @OutputCustomType.Parameter("packages") List<PackageResponse> packages,
-        @OutputCustomType.Parameter("poolArgs") Map<String,String> poolArgs,
-        @OutputCustomType.Parameter("sdkHarnessContainerImages") List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork,
-        @OutputCustomType.Parameter("taskrunnerSettings") TaskRunnerSettingsResponse taskrunnerSettings,
-        @OutputCustomType.Parameter("teardownPolicy") String teardownPolicy,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("autoscalingSettings") AutoscalingSettingsResponse autoscalingSettings,
+        @CustomType.Parameter("dataDisks") List<DiskResponse> dataDisks,
+        @CustomType.Parameter("defaultPackageSet") String defaultPackageSet,
+        @CustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @CustomType.Parameter("diskSourceImage") String diskSourceImage,
+        @CustomType.Parameter("diskType") String diskType,
+        @CustomType.Parameter("ipConfiguration") String ipConfiguration,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("numThreadsPerWorker") Integer numThreadsPerWorker,
+        @CustomType.Parameter("numWorkers") Integer numWorkers,
+        @CustomType.Parameter("onHostMaintenance") String onHostMaintenance,
+        @CustomType.Parameter("packages") List<PackageResponse> packages,
+        @CustomType.Parameter("poolArgs") Map<String,String> poolArgs,
+        @CustomType.Parameter("sdkHarnessContainerImages") List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages,
+        @CustomType.Parameter("subnetwork") String subnetwork,
+        @CustomType.Parameter("taskrunnerSettings") TaskRunnerSettingsResponse taskrunnerSettings,
+        @CustomType.Parameter("teardownPolicy") String teardownPolicy,
+        @CustomType.Parameter("zone") String zone) {
         this.autoscalingSettings = autoscalingSettings;
         this.dataDisks = dataDisks;
         this.defaultPackageSet = defaultPackageSet;

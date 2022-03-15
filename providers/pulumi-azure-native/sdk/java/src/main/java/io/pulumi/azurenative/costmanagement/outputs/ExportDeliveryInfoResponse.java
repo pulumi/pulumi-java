@@ -4,10 +4,10 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ExportDeliveryDestinationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExportDeliveryInfoResponse {
     /**
      * Has destination for the export being delivered.
@@ -15,8 +15,8 @@ public final class ExportDeliveryInfoResponse {
      */
     private final ExportDeliveryDestinationResponse destination;
 
-    @OutputCustomType.Constructor
-    private ExportDeliveryInfoResponse(@OutputCustomType.Parameter("destination") ExportDeliveryDestinationResponse destination) {
+    @CustomType.Constructor
+    private ExportDeliveryInfoResponse(@CustomType.Parameter("destination") ExportDeliveryDestinationResponse destination) {
         this.destination = destination;
     }
 

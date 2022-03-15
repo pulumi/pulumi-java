@@ -8,7 +8,7 @@ import io.pulumi.azurenative.migrate.ImportCollectorArgs;
 import io.pulumi.azurenative.migrate.outputs.ImportCollectorPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -30,25 +30,25 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="azure-native:migrate:ImportCollector")
 public class ImportCollector extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="eTag", type=String.class, parameters={})
+    @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     public Output</* @Nullable */ String> getETag() {
         return this.eTag;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="properties", type=ImportCollectorPropertiesResponse.class, parameters={})
+    @Export(name="properties", type=ImportCollectorPropertiesResponse.class, parameters={})
     private Output<ImportCollectorPropertiesResponse> properties;
 
     public Output<ImportCollectorPropertiesResponse> getProperties() {
         return this.properties;
     }
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     public Output<String> getType() {

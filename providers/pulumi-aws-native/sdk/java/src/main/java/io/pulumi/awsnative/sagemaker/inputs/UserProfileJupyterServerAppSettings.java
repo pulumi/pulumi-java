@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.UserProfileResourceSpec;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class UserProfileJupyterServerAppSettings extends io.pulumi.resourc
 
     public static final UserProfileJupyterServerAppSettings Empty = new UserProfileJupyterServerAppSettings();
 
-    @InputImport(name="defaultResourceSpec")
+    @Import(name="defaultResourceSpec")
       private final @Nullable UserProfileResourceSpec defaultResourceSpec;
 
     public Optional<UserProfileResourceSpec> getDefaultResourceSpec() {

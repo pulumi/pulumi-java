@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionDeploymentCloudBuildOptions;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionDeploymentContainer;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionDeploymentFile;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlexibleAppVersionDeployment {
     /**
      * Options for the build operations performed as a part of the version deployment. Only applicable when creating a version using source code directly.
@@ -41,12 +41,12 @@ public final class FlexibleAppVersionDeployment {
      */
     private final @Nullable FlexibleAppVersionDeploymentZip zip;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlexibleAppVersionDeployment(
-        @OutputCustomType.Parameter("cloudBuildOptions") @Nullable FlexibleAppVersionDeploymentCloudBuildOptions cloudBuildOptions,
-        @OutputCustomType.Parameter("container") @Nullable FlexibleAppVersionDeploymentContainer container,
-        @OutputCustomType.Parameter("files") @Nullable List<FlexibleAppVersionDeploymentFile> files,
-        @OutputCustomType.Parameter("zip") @Nullable FlexibleAppVersionDeploymentZip zip) {
+        @CustomType.Parameter("cloudBuildOptions") @Nullable FlexibleAppVersionDeploymentCloudBuildOptions cloudBuildOptions,
+        @CustomType.Parameter("container") @Nullable FlexibleAppVersionDeploymentContainer container,
+        @CustomType.Parameter("files") @Nullable List<FlexibleAppVersionDeploymentFile> files,
+        @CustomType.Parameter("zip") @Nullable FlexibleAppVersionDeploymentZip zip) {
         this.cloudBuildOptions = cloudBuildOptions;
         this.container = container;
         this.files = files;

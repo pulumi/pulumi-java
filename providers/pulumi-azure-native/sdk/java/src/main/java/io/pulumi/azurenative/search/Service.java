@@ -12,7 +12,7 @@ import io.pulumi.azurenative.search.outputs.SharedPrivateLinkResourceResponse;
 import io.pulumi.azurenative.search.outputs.SkuResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -41,7 +41,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.
      * 
      */
-    @OutputExport(name="hostingMode", type=String.class, parameters={})
+    @Export(name="hostingMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostingMode;
 
     /**
@@ -55,7 +55,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The identity of the resource.
      * 
      */
-    @OutputExport(name="identity", type=IdentityResponse.class, parameters={})
+    @Export(name="identity", type=IdentityResponse.class, parameters={})
     private Output</* @Nullable */ IdentityResponse> identity;
 
     /**
@@ -69,7 +69,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -83,7 +83,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -97,7 +97,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Network specific rules that determine how the Azure Cognitive Search service may be reached.
      * 
      */
-    @OutputExport(name="networkRuleSet", type=NetworkRuleSetResponse.class, parameters={})
+    @Export(name="networkRuleSet", type=NetworkRuleSetResponse.class, parameters={})
     private Output</* @Nullable */ NetworkRuleSetResponse> networkRuleSet;
 
     /**
@@ -111,7 +111,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the allowed values are between 1 and 3.
      * 
      */
-    @OutputExport(name="partitionCount", type=Integer.class, parameters={})
+    @Export(name="partitionCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> partitionCount;
 
     /**
@@ -125,7 +125,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The list of private endpoint connections to the Azure Cognitive Search service.
      * 
      */
-    @OutputExport(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
+    @Export(name="privateEndpointConnections", type=List.class, parameters={PrivateEndpointConnectionResponse.class})
     private Output<List<PrivateEndpointConnectionResponse>> privateEndpointConnections;
 
     /**
@@ -139,7 +139,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The state of the last provisioning operation performed on the search service. Provisioning is an intermediate state that occurs while service capacity is being established. After capacity is set up, provisioningState changes to either 'succeeded' or 'failed'. Client applications can poll provisioning status (the recommended polling interval is from 30 seconds to one minute) by using the Get Search Service operation to see when an operation is completed. If you are using the free service, this value tends to come back as 'succeeded' directly in the call to Create search service. This is because the free service uses capacity that is already set up.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -153,7 +153,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method.
      * 
      */
-    @OutputExport(name="publicNetworkAccess", type=String.class, parameters={})
+    @Export(name="publicNetworkAccess", type=String.class, parameters={})
     private Output</* @Nullable */ String> publicNetworkAccess;
 
     /**
@@ -167,7 +167,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The number of replicas in the search service. If specified, it must be a value between 1 and 12 inclusive for standard SKUs or between 1 and 3 inclusive for basic SKU.
      * 
      */
-    @OutputExport(name="replicaCount", type=Integer.class, parameters={})
+    @Export(name="replicaCount", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> replicaCount;
 
     /**
@@ -181,7 +181,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The list of shared private link resources managed by the Azure Cognitive Search service.
      * 
      */
-    @OutputExport(name="sharedPrivateLinkResources", type=List.class, parameters={SharedPrivateLinkResourceResponse.class})
+    @Export(name="sharedPrivateLinkResources", type=List.class, parameters={SharedPrivateLinkResourceResponse.class})
     private Output<List<SharedPrivateLinkResourceResponse>> sharedPrivateLinkResources;
 
     /**
@@ -195,7 +195,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The SKU of the Search Service, which determines price tier and capacity limits. This property is required when creating a new Search Service.
      * 
      */
-    @OutputExport(name="sku", type=SkuResponse.class, parameters={})
+    @Export(name="sku", type=SkuResponse.class, parameters={})
     private Output</* @Nullable */ SkuResponse> sku;
 
     /**
@@ -209,7 +209,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The status of the search service. Possible values include: 'running': The search service is running and no provisioning operations are underway. 'provisioning': The search service is being provisioned or scaled up or down. 'deleting': The search service is being deleted. 'degraded': The search service is degraded. This can occur when the underlying search units are not healthy. The search service is most likely operational, but performance might be slow and some requests might be dropped. 'disabled': The search service is disabled. In this state, the service will reject all API requests. 'error': The search service is in an error state. If your service is in the degraded, disabled, or error states, it means the Azure Cognitive Search team is actively investigating the underlying issue. Dedicated services in these states are still chargeable based on the number of search units provisioned.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -223,7 +223,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The details of the search service status.
      * 
      */
-    @OutputExport(name="statusDetails", type=String.class, parameters={})
+    @Export(name="statusDetails", type=String.class, parameters={})
     private Output<String> statusDetails;
 
     /**
@@ -237,7 +237,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -251,7 +251,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

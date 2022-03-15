@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.HostArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class Host extends io.pulumi.resources.CustomResource {
      * Indicates whether the host accepts any untargeted instance launches that match its instance type configuration, or if it only accepts Host tenancy instance launches that specify its unique host ID.
      * 
      */
-    @OutputExport(name="autoPlacement", type=String.class, parameters={})
+    @Export(name="autoPlacement", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoPlacement;
 
     /**
@@ -35,7 +35,7 @@ public class Host extends io.pulumi.resources.CustomResource {
      * The Availability Zone in which to allocate the Dedicated Host.
      * 
      */
-    @OutputExport(name="availabilityZone", type=String.class, parameters={})
+    @Export(name="availabilityZone", type=String.class, parameters={})
     private Output<String> availabilityZone;
 
     /**
@@ -49,7 +49,7 @@ public class Host extends io.pulumi.resources.CustomResource {
      * Id of the host created.
      * 
      */
-    @OutputExport(name="hostId", type=String.class, parameters={})
+    @Export(name="hostId", type=String.class, parameters={})
     private Output<String> hostId;
 
     /**
@@ -63,7 +63,7 @@ public class Host extends io.pulumi.resources.CustomResource {
      * Indicates whether to enable or disable host recovery for the Dedicated Host. Host recovery is disabled by default.
      * 
      */
-    @OutputExport(name="hostRecovery", type=String.class, parameters={})
+    @Export(name="hostRecovery", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostRecovery;
 
     /**
@@ -77,7 +77,7 @@ public class Host extends io.pulumi.resources.CustomResource {
      * Specifies the instance type to be supported by the Dedicated Hosts. If you specify an instance type, the Dedicated Hosts support instances of the specified instance type only.
      * 
      */
-    @OutputExport(name="instanceType", type=String.class, parameters={})
+    @Export(name="instanceType", type=String.class, parameters={})
     private Output<String> instanceType;
 
     /**

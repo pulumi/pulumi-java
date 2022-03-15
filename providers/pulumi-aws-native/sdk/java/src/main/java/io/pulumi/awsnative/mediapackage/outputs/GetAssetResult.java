@@ -5,14 +5,14 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.AssetEgressEndpoint;
 import io.pulumi.awsnative.mediapackage.outputs.AssetTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAssetResult {
     /**
      * The ARN of the Asset.
@@ -60,17 +60,17 @@ public final class GetAssetResult {
      */
     private final @Nullable List<AssetTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAssetResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
-        @OutputCustomType.Parameter("egressEndpoints") @Nullable List<AssetEgressEndpoint> egressEndpoints,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("packagingGroupId") @Nullable String packagingGroupId,
-        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
-        @OutputCustomType.Parameter("sourceArn") @Nullable String sourceArn,
-        @OutputCustomType.Parameter("sourceRoleArn") @Nullable String sourceRoleArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<AssetTag> tags) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("createdAt") @Nullable String createdAt,
+        @CustomType.Parameter("egressEndpoints") @Nullable List<AssetEgressEndpoint> egressEndpoints,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("packagingGroupId") @Nullable String packagingGroupId,
+        @CustomType.Parameter("resourceId") @Nullable String resourceId,
+        @CustomType.Parameter("sourceArn") @Nullable String sourceArn,
+        @CustomType.Parameter("sourceRoleArn") @Nullable String sourceRoleArn,
+        @CustomType.Parameter("tags") @Nullable List<AssetTag> tags) {
         this.arn = arn;
         this.createdAt = createdAt;
         this.egressEndpoints = egressEndpoints;

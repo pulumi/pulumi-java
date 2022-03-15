@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MetricStreamFilterArgs extends io.pulumi.resources.ResourceAr
      * Only metrics with Namespace matching this value will be streamed.
      * 
      */
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
     public Output<String> getNamespace() {

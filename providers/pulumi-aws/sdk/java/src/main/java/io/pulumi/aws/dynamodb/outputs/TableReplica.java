@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.dynamodb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TableReplica {
     /**
      * The ARN of the CMK that should be used for the AWS KMS encryption.
@@ -23,10 +23,10 @@ public final class TableReplica {
      */
     private final String regionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableReplica(
-        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
-        @OutputCustomType.Parameter("regionName") String regionName) {
+        @CustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @CustomType.Parameter("regionName") String regionName) {
         this.kmsKeyArn = kmsKeyArn;
         this.regionName = regionName;
     }

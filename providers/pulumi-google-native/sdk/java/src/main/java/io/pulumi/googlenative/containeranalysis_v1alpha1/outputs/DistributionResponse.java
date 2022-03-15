@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.VersionResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DistributionResponse {
     /**
      * The CPU architecture for which packages in this distribution channel were built
@@ -41,14 +41,14 @@ public final class DistributionResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DistributionResponse(
-        @OutputCustomType.Parameter("architecture") String architecture,
-        @OutputCustomType.Parameter("cpeUri") String cpeUri,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("latestVersion") VersionResponse latestVersion,
-        @OutputCustomType.Parameter("maintainer") String maintainer,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("architecture") String architecture,
+        @CustomType.Parameter("cpeUri") String cpeUri,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("latestVersion") VersionResponse latestVersion,
+        @CustomType.Parameter("maintainer") String maintainer,
+        @CustomType.Parameter("url") String url) {
         this.architecture = architecture;
         this.cpeUri = cpeUri;
         this.description = description;

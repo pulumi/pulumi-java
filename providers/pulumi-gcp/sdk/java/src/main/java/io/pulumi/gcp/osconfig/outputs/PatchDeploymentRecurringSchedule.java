@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentRecurringScheduleMonthly;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentRecurringScheduleTimeOfDay;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentRecurringScheduleTimeZone;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PatchDeploymentRecurringSchedule {
     /**
      * The end time at which a recurring patch deployment schedule is no longer active.
@@ -67,16 +67,16 @@ public final class PatchDeploymentRecurringSchedule {
      */
     private final @Nullable PatchDeploymentRecurringScheduleWeekly weekly;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchDeploymentRecurringSchedule(
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("lastExecuteTime") @Nullable String lastExecuteTime,
-        @OutputCustomType.Parameter("monthly") @Nullable PatchDeploymentRecurringScheduleMonthly monthly,
-        @OutputCustomType.Parameter("nextExecuteTime") @Nullable String nextExecuteTime,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
-        @OutputCustomType.Parameter("timeOfDay") PatchDeploymentRecurringScheduleTimeOfDay timeOfDay,
-        @OutputCustomType.Parameter("timeZone") PatchDeploymentRecurringScheduleTimeZone timeZone,
-        @OutputCustomType.Parameter("weekly") @Nullable PatchDeploymentRecurringScheduleWeekly weekly) {
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("lastExecuteTime") @Nullable String lastExecuteTime,
+        @CustomType.Parameter("monthly") @Nullable PatchDeploymentRecurringScheduleMonthly monthly,
+        @CustomType.Parameter("nextExecuteTime") @Nullable String nextExecuteTime,
+        @CustomType.Parameter("startTime") @Nullable String startTime,
+        @CustomType.Parameter("timeOfDay") PatchDeploymentRecurringScheduleTimeOfDay timeOfDay,
+        @CustomType.Parameter("timeZone") PatchDeploymentRecurringScheduleTimeZone timeZone,
+        @CustomType.Parameter("weekly") @Nullable PatchDeploymentRecurringScheduleWeekly weekly) {
         this.endTime = endTime;
         this.lastExecuteTime = lastExecuteTime;
         this.monthly = monthly;

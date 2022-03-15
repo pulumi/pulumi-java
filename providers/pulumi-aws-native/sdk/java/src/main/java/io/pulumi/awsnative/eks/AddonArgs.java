@@ -6,7 +6,7 @@ package io.pulumi.awsnative.eks;
 import io.pulumi.awsnative.eks.enums.AddonResolveConflicts;
 import io.pulumi.awsnative.eks.inputs.AddonTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * Name of Addon
      * 
      */
-    @InputImport(name="addonName")
+    @Import(name="addonName")
       private final @Nullable Output<String> addonName;
 
     public Output<String> getAddonName() {
@@ -32,7 +32,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * Version of Addon
      * 
      */
-    @InputImport(name="addonVersion")
+    @Import(name="addonVersion")
       private final @Nullable Output<String> addonVersion;
 
     public Output<String> getAddonVersion() {
@@ -43,7 +43,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * Name of Cluster
      * 
      */
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -54,7 +54,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * Resolve parameter value conflicts
      * 
      */
-    @InputImport(name="resolveConflicts")
+    @Import(name="resolveConflicts")
       private final @Nullable Output<AddonResolveConflicts> resolveConflicts;
 
     public Output<AddonResolveConflicts> getResolveConflicts() {
@@ -65,7 +65,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * IAM role to bind to the add-on's service account
      * 
      */
-    @InputImport(name="serviceAccountRoleArn")
+    @Import(name="serviceAccountRoleArn")
       private final @Nullable Output<String> serviceAccountRoleArn;
 
     public Output<String> getServiceAccountRoleArn() {
@@ -76,7 +76,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * An array of key-value pairs to apply to this resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<AddonTagArgs>> tags;
 
     public Output<List<AddonTagArgs>> getTags() {

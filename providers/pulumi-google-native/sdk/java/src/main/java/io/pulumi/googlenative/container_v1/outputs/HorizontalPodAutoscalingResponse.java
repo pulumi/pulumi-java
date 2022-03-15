@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class HorizontalPodAutoscalingResponse {
     /**
      * Whether the Horizontal Pod Autoscaling feature is enabled in the cluster. When enabled, it ensures that metrics are collected into Stackdriver Monitoring.
@@ -15,8 +15,8 @@ public final class HorizontalPodAutoscalingResponse {
      */
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor
-    private HorizontalPodAutoscalingResponse(@OutputCustomType.Parameter("disabled") Boolean disabled) {
+    @CustomType.Constructor
+    private HorizontalPodAutoscalingResponse(@CustomType.Parameter("disabled") Boolean disabled) {
         this.disabled = disabled;
     }
 

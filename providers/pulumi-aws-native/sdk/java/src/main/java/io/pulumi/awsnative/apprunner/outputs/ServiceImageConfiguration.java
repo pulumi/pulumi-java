@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.apprunner.outputs;
 
 import io.pulumi.awsnative.apprunner.outputs.ServiceKeyValuePair;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceImageConfiguration {
     /**
      * Port
@@ -25,11 +25,11 @@ public final class ServiceImageConfiguration {
      */
     private final @Nullable String startCommand;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceImageConfiguration(
-        @OutputCustomType.Parameter("port") @Nullable String port,
-        @OutputCustomType.Parameter("runtimeEnvironmentVariables") @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables,
-        @OutputCustomType.Parameter("startCommand") @Nullable String startCommand) {
+        @CustomType.Parameter("port") @Nullable String port,
+        @CustomType.Parameter("runtimeEnvironmentVariables") @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables,
+        @CustomType.Parameter("startCommand") @Nullable String startCommand) {
         this.port = port;
         this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
         this.startCommand = startCommand;

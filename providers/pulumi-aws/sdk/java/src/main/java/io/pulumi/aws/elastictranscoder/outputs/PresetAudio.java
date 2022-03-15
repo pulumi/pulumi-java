@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.elastictranscoder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PresetAudio {
     /**
      * The method of organizing audio channels and tracks. Use Audio:Channels to specify the number of channels in your output, and Audio:AudioPackingMode to specify the number of tracks and their relation to the channels. If you do not specify an Audio:AudioPackingMode, Elastic Transcoder uses SingleTrack.
@@ -37,13 +37,13 @@ public final class PresetAudio {
      */
     private final @Nullable String sampleRate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PresetAudio(
-        @OutputCustomType.Parameter("audioPackingMode") @Nullable String audioPackingMode,
-        @OutputCustomType.Parameter("bitRate") @Nullable String bitRate,
-        @OutputCustomType.Parameter("channels") @Nullable String channels,
-        @OutputCustomType.Parameter("codec") @Nullable String codec,
-        @OutputCustomType.Parameter("sampleRate") @Nullable String sampleRate) {
+        @CustomType.Parameter("audioPackingMode") @Nullable String audioPackingMode,
+        @CustomType.Parameter("bitRate") @Nullable String bitRate,
+        @CustomType.Parameter("channels") @Nullable String channels,
+        @CustomType.Parameter("codec") @Nullable String codec,
+        @CustomType.Parameter("sampleRate") @Nullable String sampleRate) {
         this.audioPackingMode = audioPackingMode;
         this.bitRate = bitRate;
         this.channels = channels;

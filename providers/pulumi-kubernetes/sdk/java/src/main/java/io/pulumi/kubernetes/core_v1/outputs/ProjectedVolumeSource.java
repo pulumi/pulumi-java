@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.VolumeProjection;
 import java.lang.Integer;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ProjectedVolumeSource {
     /**
      * Mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
@@ -24,10 +24,10 @@ public final class ProjectedVolumeSource {
      */
     private final List<VolumeProjection> sources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ProjectedVolumeSource(
-        @OutputCustomType.Parameter("defaultMode") @Nullable Integer defaultMode,
-        @OutputCustomType.Parameter("sources") List<VolumeProjection> sources) {
+        @CustomType.Parameter("defaultMode") @Nullable Integer defaultMode,
+        @CustomType.Parameter("sources") List<VolumeProjection> sources) {
         this.defaultMode = defaultMode;
         this.sources = sources;
     }

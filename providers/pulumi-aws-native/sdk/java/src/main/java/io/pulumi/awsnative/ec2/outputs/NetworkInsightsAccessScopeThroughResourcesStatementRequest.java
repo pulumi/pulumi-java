@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAccessScopeResourceStatementRequest;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NetworkInsightsAccessScopeThroughResourcesStatementRequest {
     private final @Nullable NetworkInsightsAccessScopeResourceStatementRequest resourceStatement;
 
-    @OutputCustomType.Constructor
-    private NetworkInsightsAccessScopeThroughResourcesStatementRequest(@OutputCustomType.Parameter("resourceStatement") @Nullable NetworkInsightsAccessScopeResourceStatementRequest resourceStatement) {
+    @CustomType.Constructor
+    private NetworkInsightsAccessScopeThroughResourcesStatementRequest(@CustomType.Parameter("resourceStatement") @Nullable NetworkInsightsAccessScopeResourceStatementRequest resourceStatement) {
         this.resourceStatement = resourceStatement;
     }
 

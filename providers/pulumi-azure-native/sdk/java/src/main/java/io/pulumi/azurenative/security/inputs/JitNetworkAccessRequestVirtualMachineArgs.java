@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.JitNetworkAccessRequestPortArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class JitNetworkAccessRequestVirtualMachineArgs extends io.pulumi.r
      * Resource ID of the virtual machine that is linked to this policy
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -30,7 +30,7 @@ public final class JitNetworkAccessRequestVirtualMachineArgs extends io.pulumi.r
      * The ports that were opened for the virtual machine
      * 
      */
-    @InputImport(name="ports", required=true)
+    @Import(name="ports", required=true)
       private final Output<List<JitNetworkAccessRequestPortArgs>> ports;
 
     public Output<List<JitNetworkAccessRequestPortArgs>> getPorts() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.aws.cloudfront.inputs.RealtimeLogConfigEndpointKinesisStreamConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class RealtimeLogConfigEndpointArgs extends io.pulumi.resources.Res
      * The Amazon Kinesis data stream configuration.
      * 
      */
-    @InputImport(name="kinesisStreamConfig", required=true)
+    @Import(name="kinesisStreamConfig", required=true)
       private final Output<RealtimeLogConfigEndpointKinesisStreamConfigArgs> kinesisStreamConfig;
 
     public Output<RealtimeLogConfigEndpointKinesisStreamConfigArgs> getKinesisStreamConfig() {
@@ -29,7 +29,7 @@ public final class RealtimeLogConfigEndpointArgs extends io.pulumi.resources.Res
      * The type of data stream where real-time log data is sent. The only valid value is `Kinesis`.
      * 
      */
-    @InputImport(name="streamType", required=true)
+    @Import(name="streamType", required=true)
       private final Output<String> streamType;
 
     public Output<String> getStreamType() {

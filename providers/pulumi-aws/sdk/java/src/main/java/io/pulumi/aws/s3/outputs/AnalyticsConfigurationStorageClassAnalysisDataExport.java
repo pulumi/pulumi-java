@@ -4,13 +4,13 @@
 package io.pulumi.aws.s3.outputs;
 
 import io.pulumi.aws.s3.outputs.AnalyticsConfigurationStorageClassAnalysisDataExportDestination;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnalyticsConfigurationStorageClassAnalysisDataExport {
     /**
      * Specifies the destination for the exported analytics data (documented below).
@@ -23,10 +23,10 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExport {
      */
     private final @Nullable String outputSchemaVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnalyticsConfigurationStorageClassAnalysisDataExport(
-        @OutputCustomType.Parameter("destination") AnalyticsConfigurationStorageClassAnalysisDataExportDestination destination,
-        @OutputCustomType.Parameter("outputSchemaVersion") @Nullable String outputSchemaVersion) {
+        @CustomType.Parameter("destination") AnalyticsConfigurationStorageClassAnalysisDataExportDestination destination,
+        @CustomType.Parameter("outputSchemaVersion") @Nullable String outputSchemaVersion) {
         this.destination = destination;
         this.outputSchemaVersion = outputSchemaVersion;
     }

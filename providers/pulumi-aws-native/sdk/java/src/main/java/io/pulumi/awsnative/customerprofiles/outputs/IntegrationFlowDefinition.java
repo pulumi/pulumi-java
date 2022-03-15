@@ -6,14 +6,14 @@ package io.pulumi.awsnative.customerprofiles.outputs;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationSourceFlowConfig;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationTask;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationTriggerConfig;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IntegrationFlowDefinition {
     private final @Nullable String description;
     private final String flowName;
@@ -22,14 +22,14 @@ public final class IntegrationFlowDefinition {
     private final List<IntegrationTask> tasks;
     private final IntegrationTriggerConfig triggerConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IntegrationFlowDefinition(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("flowName") String flowName,
-        @OutputCustomType.Parameter("kmsArn") String kmsArn,
-        @OutputCustomType.Parameter("sourceFlowConfig") IntegrationSourceFlowConfig sourceFlowConfig,
-        @OutputCustomType.Parameter("tasks") List<IntegrationTask> tasks,
-        @OutputCustomType.Parameter("triggerConfig") IntegrationTriggerConfig triggerConfig) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("flowName") String flowName,
+        @CustomType.Parameter("kmsArn") String kmsArn,
+        @CustomType.Parameter("sourceFlowConfig") IntegrationSourceFlowConfig sourceFlowConfig,
+        @CustomType.Parameter("tasks") List<IntegrationTask> tasks,
+        @CustomType.Parameter("triggerConfig") IntegrationTriggerConfig triggerConfig) {
         this.description = description;
         this.flowName = flowName;
         this.kmsArn = kmsArn;

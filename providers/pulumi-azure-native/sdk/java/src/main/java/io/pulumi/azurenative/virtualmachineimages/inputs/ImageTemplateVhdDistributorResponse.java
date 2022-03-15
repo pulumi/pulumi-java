@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ImageTemplateVhdDistributorResponse extends io.pulumi.resourc
      * Tags that will be applied to the artifact once it has been created/updated by the distributor.
      * 
      */
-    @InputImport(name="artifactTags")
+    @Import(name="artifactTags")
       private final @Nullable Map<String,String> artifactTags;
 
     public Map<String,String> getArtifactTags() {
@@ -34,7 +34,7 @@ public final class ImageTemplateVhdDistributorResponse extends io.pulumi.resourc
      * The name to be used for the associated RunOutput.
      * 
      */
-    @InputImport(name="runOutputName", required=true)
+    @Import(name="runOutputName", required=true)
       private final String runOutputName;
 
     public String getRunOutputName() {
@@ -46,7 +46,7 @@ public final class ImageTemplateVhdDistributorResponse extends io.pulumi.resourc
      * Expected value is 'VHD'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

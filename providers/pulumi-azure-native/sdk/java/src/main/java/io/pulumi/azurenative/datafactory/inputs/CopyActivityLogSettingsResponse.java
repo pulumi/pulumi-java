@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class CopyActivityLogSettingsResponse extends io.pulumi.resources.I
      * Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="enableReliableLogging")
+    @Import(name="enableReliableLogging")
       private final @Nullable Object enableReliableLogging;
 
     public Optional<Object> getEnableReliableLogging() {
@@ -33,7 +33,7 @@ public final class CopyActivityLogSettingsResponse extends io.pulumi.resources.I
      * Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="logLevel")
+    @Import(name="logLevel")
       private final @Nullable Object logLevel;
 
     public Optional<Object> getLogLevel() {

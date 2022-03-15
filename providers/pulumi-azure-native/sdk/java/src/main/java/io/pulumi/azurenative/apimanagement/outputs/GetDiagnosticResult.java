@@ -5,14 +5,14 @@ package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.PipelineDiagnosticSettingsResponse;
 import io.pulumi.azurenative.apimanagement.outputs.SamplingSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDiagnosticResult {
     /**
      * Specifies for what type of messages sampling settings should not apply.
@@ -75,20 +75,20 @@ public final class GetDiagnosticResult {
      */
     private final @Nullable String verbosity;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDiagnosticResult(
-        @OutputCustomType.Parameter("alwaysLog") @Nullable String alwaysLog,
-        @OutputCustomType.Parameter("backend") @Nullable PipelineDiagnosticSettingsResponse backend,
-        @OutputCustomType.Parameter("frontend") @Nullable PipelineDiagnosticSettingsResponse frontend,
-        @OutputCustomType.Parameter("httpCorrelationProtocol") @Nullable String httpCorrelationProtocol,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("logClientIp") @Nullable Boolean logClientIp,
-        @OutputCustomType.Parameter("loggerId") String loggerId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operationNameFormat") @Nullable String operationNameFormat,
-        @OutputCustomType.Parameter("sampling") @Nullable SamplingSettingsResponse sampling,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("verbosity") @Nullable String verbosity) {
+        @CustomType.Parameter("alwaysLog") @Nullable String alwaysLog,
+        @CustomType.Parameter("backend") @Nullable PipelineDiagnosticSettingsResponse backend,
+        @CustomType.Parameter("frontend") @Nullable PipelineDiagnosticSettingsResponse frontend,
+        @CustomType.Parameter("httpCorrelationProtocol") @Nullable String httpCorrelationProtocol,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("logClientIp") @Nullable Boolean logClientIp,
+        @CustomType.Parameter("loggerId") String loggerId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operationNameFormat") @Nullable String operationNameFormat,
+        @CustomType.Parameter("sampling") @Nullable SamplingSettingsResponse sampling,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("verbosity") @Nullable String verbosity) {
         this.alwaysLog = alwaysLog;
         this.backend = backend;
         this.frontend = frontend;

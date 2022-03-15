@@ -9,7 +9,7 @@ import io.pulumi.awsnative.globalaccelerator.enums.ListenerClientAffinity;
 import io.pulumi.awsnative.globalaccelerator.enums.ListenerProtocol;
 import io.pulumi.awsnative.globalaccelerator.outputs.ListenerPortRange;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the accelerator.
      * 
      */
-    @OutputExport(name="acceleratorArn", type=String.class, parameters={})
+    @Export(name="acceleratorArn", type=String.class, parameters={})
     private Output<String> acceleratorArn;
 
     /**
@@ -39,7 +39,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * Client affinity lets you direct all requests from a user to the same endpoint.
      * 
      */
-    @OutputExport(name="clientAffinity", type=ListenerClientAffinity.class, parameters={})
+    @Export(name="clientAffinity", type=ListenerClientAffinity.class, parameters={})
     private Output</* @Nullable */ ListenerClientAffinity> clientAffinity;
 
     /**
@@ -53,7 +53,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) of the listener.
      * 
      */
-    @OutputExport(name="listenerArn", type=String.class, parameters={})
+    @Export(name="listenerArn", type=String.class, parameters={})
     private Output<String> listenerArn;
 
     /**
@@ -63,7 +63,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
     public Output<String> getListenerArn() {
         return this.listenerArn;
     }
-    @OutputExport(name="portRanges", type=List.class, parameters={ListenerPortRange.class})
+    @Export(name="portRanges", type=List.class, parameters={ListenerPortRange.class})
     private Output<List<ListenerPortRange>> portRanges;
 
     public Output<List<ListenerPortRange>> getPortRanges() {
@@ -73,7 +73,7 @@ public class Listener extends io.pulumi.resources.CustomResource {
      * The protocol for the listener.
      * 
      */
-    @OutputExport(name="protocol", type=ListenerProtocol.class, parameters={})
+    @Export(name="protocol", type=ListenerProtocol.class, parameters={})
     private Output<ListenerProtocol> protocol;
 
     /**

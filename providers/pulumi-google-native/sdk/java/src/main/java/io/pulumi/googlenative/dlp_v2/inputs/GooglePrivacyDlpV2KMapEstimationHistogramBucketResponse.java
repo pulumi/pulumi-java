@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
      * Number of records within these anonymity bounds.
      * 
      */
-    @InputImport(name="bucketSize", required=true)
+    @Import(name="bucketSize", required=true)
       private final String bucketSize;
 
     public String getBucketSize() {
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
      * Total number of distinct quasi-identifier tuple values in this bucket.
      * 
      */
-    @InputImport(name="bucketValueCount", required=true)
+    @Import(name="bucketValueCount", required=true)
       private final String bucketValueCount;
 
     public String getBucketValueCount() {
@@ -44,7 +44,7 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
      * Sample of quasi-identifier tuple values in this bucket. The total number of classes returned per bucket is capped at 20.
      * 
      */
-    @InputImport(name="bucketValues", required=true)
+    @Import(name="bucketValues", required=true)
       private final List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> bucketValues;
 
     public List<GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse> getBucketValues() {
@@ -55,7 +55,7 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
      * Always greater than or equal to min_anonymity.
      * 
      */
-    @InputImport(name="maxAnonymity", required=true)
+    @Import(name="maxAnonymity", required=true)
       private final String maxAnonymity;
 
     public String getMaxAnonymity() {
@@ -66,7 +66,7 @@ public final class GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse exten
      * Always positive.
      * 
      */
-    @InputImport(name="minAnonymity", required=true)
+    @Import(name="minAnonymity", required=true)
       private final String minAnonymity;
 
     public String getMinAnonymity() {

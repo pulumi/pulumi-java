@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RectangleResponse {
     /**
      * The height of the rectangular region in pixels. This can be absolute pixel value (e.g 100), or relative to the size of the video (For example, 50%).
@@ -32,12 +32,12 @@ public final class RectangleResponse {
      */
     private final @Nullable String width;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RectangleResponse(
-        @OutputCustomType.Parameter("height") @Nullable String height,
-        @OutputCustomType.Parameter("left") @Nullable String left,
-        @OutputCustomType.Parameter("top") @Nullable String top,
-        @OutputCustomType.Parameter("width") @Nullable String width) {
+        @CustomType.Parameter("height") @Nullable String height,
+        @CustomType.Parameter("left") @Nullable String left,
+        @CustomType.Parameter("top") @Nullable String top,
+        @CustomType.Parameter("width") @Nullable String width) {
         this.height = height;
         this.left = left;
         this.top = top;

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
      * Gets or sets the count of servers assessed.
      * 
      */
-    @InputImport(name="assessedCount")
+    @Import(name="assessedCount")
       private final @Nullable Integer assessedCount;
 
     public Optional<Integer> getAssessedCount() {
@@ -34,7 +34,7 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
      * Gets or sets the count of servers discovered.
      * 
      */
-    @InputImport(name="discoveredCount")
+    @Import(name="discoveredCount")
       private final @Nullable Integer discoveredCount;
 
     public Optional<Integer> getDiscoveredCount() {
@@ -46,7 +46,7 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
      * Expected value is 'Servers'.
      * 
      */
-    @InputImport(name="instanceType", required=true)
+    @Import(name="instanceType", required=true)
       private final String instanceType;
 
     public String getInstanceType() {
@@ -57,7 +57,7 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
      * Gets or sets the count of servers migrated.
      * 
      */
-    @InputImport(name="migratedCount")
+    @Import(name="migratedCount")
       private final @Nullable Integer migratedCount;
 
     public Optional<Integer> getMigratedCount() {
@@ -68,7 +68,7 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
      * Gets or sets the count of servers being replicated.
      * 
      */
-    @InputImport(name="replicatingCount")
+    @Import(name="replicatingCount")
       private final @Nullable Integer replicatingCount;
 
     public Optional<Integer> getReplicatingCount() {
@@ -79,7 +79,7 @@ public final class ServersSolutionSummaryResponse extends io.pulumi.resources.In
      * Gets or sets the count of servers test migrated.
      * 
      */
-    @InputImport(name="testMigratedCount")
+    @Import(name="testMigratedCount")
       private final @Nullable Integer testMigratedCount;
 
     public Optional<Integer> getTestMigratedCount() {

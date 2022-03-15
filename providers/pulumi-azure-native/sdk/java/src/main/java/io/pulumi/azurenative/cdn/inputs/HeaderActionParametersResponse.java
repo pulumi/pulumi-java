@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class HeaderActionParametersResponse extends io.pulumi.resources.In
      * Action to perform
      * 
      */
-    @InputImport(name="headerAction", required=true)
+    @Import(name="headerAction", required=true)
       private final String headerAction;
 
     public String getHeaderAction() {
@@ -33,14 +33,14 @@ public final class HeaderActionParametersResponse extends io.pulumi.resources.In
      * Name of the header to modify
      * 
      */
-    @InputImport(name="headerName", required=true)
+    @Import(name="headerName", required=true)
       private final String headerName;
 
     public String getHeaderName() {
         return this.headerName;
     }
 
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {
@@ -51,7 +51,7 @@ public final class HeaderActionParametersResponse extends io.pulumi.resources.In
      * Value for the specified action
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable String value;
 
     public Optional<String> getValue() {

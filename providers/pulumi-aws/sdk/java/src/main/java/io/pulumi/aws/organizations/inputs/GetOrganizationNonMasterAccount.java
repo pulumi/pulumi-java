@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.organizations.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetOrganizationNonMasterAccount extends io.pulumi.resources.I
      * ARN of the root
      * 
      */
-    @InputImport(name="arn", required=true)
+    @Import(name="arn", required=true)
       private final String arn;
 
     public String getArn() {
@@ -27,7 +27,7 @@ public final class GetOrganizationNonMasterAccount extends io.pulumi.resources.I
      * Email of the account
      * 
      */
-    @InputImport(name="email", required=true)
+    @Import(name="email", required=true)
       private final String email;
 
     public String getEmail() {
@@ -38,7 +38,7 @@ public final class GetOrganizationNonMasterAccount extends io.pulumi.resources.I
      * Identifier of the root
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -49,7 +49,7 @@ public final class GetOrganizationNonMasterAccount extends io.pulumi.resources.I
      * The name of the policy type
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -60,7 +60,7 @@ public final class GetOrganizationNonMasterAccount extends io.pulumi.resources.I
      * The status of the policy type as it relates to the associated root
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

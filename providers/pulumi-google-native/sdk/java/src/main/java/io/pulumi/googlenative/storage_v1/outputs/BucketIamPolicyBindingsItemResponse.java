@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.storage_v1.outputs.ExprResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketIamPolicyBindingsItemResponse {
     /**
      * The condition that is associated with this binding. NOTE: an unsatisfied condition will not allow user access via current binding. Different bindings, including their conditions, are examined independently.
@@ -46,11 +46,11 @@ public final class BucketIamPolicyBindingsItemResponse {
      */
     private final String role;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketIamPolicyBindingsItemResponse(
-        @OutputCustomType.Parameter("condition") ExprResponse condition,
-        @OutputCustomType.Parameter("members") List<String> members,
-        @OutputCustomType.Parameter("role") String role) {
+        @CustomType.Parameter("condition") ExprResponse condition,
+        @CustomType.Parameter("members") List<String> members,
+        @CustomType.Parameter("role") String role) {
         this.condition = condition;
         this.members = members;
         this.role = role;

@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.wafregional.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WebAclRuleOverrideAction {
     /**
      * Specifies how you want AWS WAF Regional to respond to requests that match the settings in a rule. Valid values for `action` are `ALLOW`, `BLOCK` or `COUNT`. Valid values for `override_action` are `COUNT` and `NONE`.
@@ -15,8 +15,8 @@ public final class WebAclRuleOverrideAction {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
-    private WebAclRuleOverrideAction(@OutputCustomType.Parameter("type") String type) {
+    @CustomType.Constructor
+    private WebAclRuleOverrideAction(@CustomType.Parameter("type") String type) {
         this.type = type;
     }
 

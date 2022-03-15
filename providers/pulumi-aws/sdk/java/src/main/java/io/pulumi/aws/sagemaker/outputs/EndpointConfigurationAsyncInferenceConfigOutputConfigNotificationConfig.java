@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig {
     /**
      * Amazon SNS topic to post a notification to when inference fails. If no topic is provided, no notification is sent on failure.
@@ -22,10 +22,10 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
      */
     private final @Nullable String successTopic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig(
-        @OutputCustomType.Parameter("errorTopic") @Nullable String errorTopic,
-        @OutputCustomType.Parameter("successTopic") @Nullable String successTopic) {
+        @CustomType.Parameter("errorTopic") @Nullable String errorTopic,
+        @CustomType.Parameter("successTopic") @Nullable String successTopic) {
         this.errorTopic = errorTopic;
         this.successTopic = successTopic;
     }

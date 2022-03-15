@@ -6,14 +6,14 @@ package io.pulumi.azurenative.guestconfiguration.outputs;
 import io.pulumi.azurenative.guestconfiguration.outputs.AssignmentReportResponse;
 import io.pulumi.azurenative.guestconfiguration.outputs.GuestConfigurationNavigationResponse;
 import io.pulumi.azurenative.guestconfiguration.outputs.VMSSVMInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GuestConfigurationAssignmentPropertiesResponse {
     /**
      * Combined hash of the configuration package and parameters.
@@ -76,20 +76,20 @@ public final class GuestConfigurationAssignmentPropertiesResponse {
      */
     private final @Nullable List<VMSSVMInfoResponse> vmssVMList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestConfigurationAssignmentPropertiesResponse(
-        @OutputCustomType.Parameter("assignmentHash") String assignmentHash,
-        @OutputCustomType.Parameter("complianceStatus") String complianceStatus,
-        @OutputCustomType.Parameter("context") @Nullable String context,
-        @OutputCustomType.Parameter("guestConfiguration") @Nullable GuestConfigurationNavigationResponse guestConfiguration,
-        @OutputCustomType.Parameter("lastComplianceStatusChecked") String lastComplianceStatusChecked,
-        @OutputCustomType.Parameter("latestAssignmentReport") @Nullable AssignmentReportResponse latestAssignmentReport,
-        @OutputCustomType.Parameter("latestReportId") String latestReportId,
-        @OutputCustomType.Parameter("parameterHash") String parameterHash,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("resourceType") String resourceType,
-        @OutputCustomType.Parameter("targetResourceId") String targetResourceId,
-        @OutputCustomType.Parameter("vmssVMList") @Nullable List<VMSSVMInfoResponse> vmssVMList) {
+        @CustomType.Parameter("assignmentHash") String assignmentHash,
+        @CustomType.Parameter("complianceStatus") String complianceStatus,
+        @CustomType.Parameter("context") @Nullable String context,
+        @CustomType.Parameter("guestConfiguration") @Nullable GuestConfigurationNavigationResponse guestConfiguration,
+        @CustomType.Parameter("lastComplianceStatusChecked") String lastComplianceStatusChecked,
+        @CustomType.Parameter("latestAssignmentReport") @Nullable AssignmentReportResponse latestAssignmentReport,
+        @CustomType.Parameter("latestReportId") String latestReportId,
+        @CustomType.Parameter("parameterHash") String parameterHash,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("resourceType") String resourceType,
+        @CustomType.Parameter("targetResourceId") String targetResourceId,
+        @CustomType.Parameter("vmssVMList") @Nullable List<VMSSVMInfoResponse> vmssVMList) {
         this.assignmentHash = assignmentHash;
         this.complianceStatus = complianceStatus;
         this.context = context;

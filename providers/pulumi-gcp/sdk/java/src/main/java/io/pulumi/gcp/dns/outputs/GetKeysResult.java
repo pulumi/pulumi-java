@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dns.outputs.GetKeysKeySigningKey;
 import io.pulumi.gcp.dns.outputs.GetKeysZoneSigningKey;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetKeysResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -30,13 +30,13 @@ public final class GetKeysResult {
      */
     private final List<GetKeysZoneSigningKey> zoneSigningKeys;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKeysResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("keySigningKeys") List<GetKeysKeySigningKey> keySigningKeys,
-        @OutputCustomType.Parameter("managedZone") String managedZone,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("zoneSigningKeys") List<GetKeysZoneSigningKey> zoneSigningKeys) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("keySigningKeys") List<GetKeysKeySigningKey> keySigningKeys,
+        @CustomType.Parameter("managedZone") String managedZone,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("zoneSigningKeys") List<GetKeysZoneSigningKey> zoneSigningKeys) {
         this.id = id;
         this.keySigningKeys = keySigningKeys;
         this.managedZone = managedZone;

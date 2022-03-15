@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class TrafficWeightResponse extends io.pulumi.resources.InvokeArgs 
      * Indicates that the traffic weight belongs to a latest stable revision
      * 
      */
-    @InputImport(name="latestRevision")
+    @Import(name="latestRevision")
       private final @Nullable Boolean latestRevision;
 
     public Optional<Boolean> getLatestRevision() {
@@ -35,7 +35,7 @@ public final class TrafficWeightResponse extends io.pulumi.resources.InvokeArgs 
      * Name of a revision
      * 
      */
-    @InputImport(name="revisionName")
+    @Import(name="revisionName")
       private final @Nullable String revisionName;
 
     public Optional<String> getRevisionName() {
@@ -46,7 +46,7 @@ public final class TrafficWeightResponse extends io.pulumi.resources.InvokeArgs 
      * Traffic weight assigned to a revision
      * 
      */
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Integer weight;
 
     public Optional<Integer> getWeight() {

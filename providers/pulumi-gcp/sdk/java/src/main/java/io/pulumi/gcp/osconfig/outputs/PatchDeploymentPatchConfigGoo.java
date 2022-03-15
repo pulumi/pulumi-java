@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PatchDeploymentPatchConfigGoo {
     /**
      * goo update settings. Use this setting to override the default goo patch rules.
@@ -15,8 +15,8 @@ public final class PatchDeploymentPatchConfigGoo {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private PatchDeploymentPatchConfigGoo(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private PatchDeploymentPatchConfigGoo(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

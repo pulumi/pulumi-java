@@ -5,7 +5,7 @@ package io.pulumi.azurenative.avs;
 
 import io.pulumi.azurenative.avs.inputs.WorkloadNetworkSegmentSubnetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * Gateway which to connect segment to.
      * 
      */
-    @InputImport(name="connectedGateway")
+    @Import(name="connectedGateway")
       private final @Nullable Output<String> connectedGateway;
 
     public Output<String> getConnectedGateway() {
@@ -31,7 +31,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * Display name of the segment.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -42,7 +42,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * Name of the private cloud
      * 
      */
-    @InputImport(name="privateCloudName", required=true)
+    @Import(name="privateCloudName", required=true)
       private final Output<String> privateCloudName;
 
     public Output<String> getPrivateCloudName() {
@@ -53,7 +53,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -64,7 +64,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * NSX revision number.
      * 
      */
-    @InputImport(name="revision")
+    @Import(name="revision")
       private final @Nullable Output<Double> revision;
 
     public Output<Double> getRevision() {
@@ -75,7 +75,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * NSX Segment identifier. Generally the same as the Segment's display name
      * 
      */
-    @InputImport(name="segmentId")
+    @Import(name="segmentId")
       private final @Nullable Output<String> segmentId;
 
     public Output<String> getSegmentId() {
@@ -86,7 +86,7 @@ public final class WorkloadNetworkSegmentArgs extends io.pulumi.resources.Resour
      * Subnet which to connect segment to.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<WorkloadNetworkSegmentSubnetArgs> subnet;
 
     public Output<WorkloadNetworkSegmentSubnetArgs> getSubnet() {

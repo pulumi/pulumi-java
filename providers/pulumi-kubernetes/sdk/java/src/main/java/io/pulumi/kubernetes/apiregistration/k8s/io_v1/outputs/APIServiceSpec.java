@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiregistration.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.apiregistration.k8s.io_v1.outputs.ServiceReference;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class APIServiceSpec {
     /**
      * CABundle is a PEM encoded CA bundle which will be used to validate an API server's serving certificate. If unspecified, system trust roots on the apiserver are used.
@@ -50,15 +50,15 @@ public final class APIServiceSpec {
      */
     private final Integer versionPriority;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private APIServiceSpec(
-        @OutputCustomType.Parameter("caBundle") @Nullable String caBundle,
-        @OutputCustomType.Parameter("group") @Nullable String group,
-        @OutputCustomType.Parameter("groupPriorityMinimum") Integer groupPriorityMinimum,
-        @OutputCustomType.Parameter("insecureSkipTLSVerify") @Nullable Boolean insecureSkipTLSVerify,
-        @OutputCustomType.Parameter("service") @Nullable ServiceReference service,
-        @OutputCustomType.Parameter("version") @Nullable String version,
-        @OutputCustomType.Parameter("versionPriority") Integer versionPriority) {
+        @CustomType.Parameter("caBundle") @Nullable String caBundle,
+        @CustomType.Parameter("group") @Nullable String group,
+        @CustomType.Parameter("groupPriorityMinimum") Integer groupPriorityMinimum,
+        @CustomType.Parameter("insecureSkipTLSVerify") @Nullable Boolean insecureSkipTLSVerify,
+        @CustomType.Parameter("service") @Nullable ServiceReference service,
+        @CustomType.Parameter("version") @Nullable String version,
+        @CustomType.Parameter("versionPriority") Integer versionPriority) {
         this.caBundle = caBundle;
         this.group = group;
         this.groupPriorityMinimum = groupPriorityMinimum;

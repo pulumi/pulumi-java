@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 import io.pulumi.azurenative.machinelearningservices.outputs.AksNetworkingConfigurationResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SslConfigurationResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemServiceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AKSResponseProperties {
     /**
      * Number of agents
@@ -52,15 +52,15 @@ public final class AKSResponseProperties {
      */
     private final List<SystemServiceResponse> systemServices;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AKSResponseProperties(
-        @OutputCustomType.Parameter("agentCount") @Nullable Integer agentCount,
-        @OutputCustomType.Parameter("agentVmSize") @Nullable String agentVmSize,
-        @OutputCustomType.Parameter("aksNetworkingConfiguration") @Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration,
-        @OutputCustomType.Parameter("clusterFqdn") @Nullable String clusterFqdn,
-        @OutputCustomType.Parameter("clusterPurpose") @Nullable String clusterPurpose,
-        @OutputCustomType.Parameter("sslConfiguration") @Nullable SslConfigurationResponse sslConfiguration,
-        @OutputCustomType.Parameter("systemServices") List<SystemServiceResponse> systemServices) {
+        @CustomType.Parameter("agentCount") @Nullable Integer agentCount,
+        @CustomType.Parameter("agentVmSize") @Nullable String agentVmSize,
+        @CustomType.Parameter("aksNetworkingConfiguration") @Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration,
+        @CustomType.Parameter("clusterFqdn") @Nullable String clusterFqdn,
+        @CustomType.Parameter("clusterPurpose") @Nullable String clusterPurpose,
+        @CustomType.Parameter("sslConfiguration") @Nullable SslConfigurationResponse sslConfiguration,
+        @CustomType.Parameter("systemServices") List<SystemServiceResponse> systemServices) {
         this.agentCount = agentCount;
         this.agentVmSize = agentVmSize;
         this.aksNetworkingConfiguration = aksNetworkingConfiguration;

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudasset_v1.inputs.IamPolicyAnalysisQueryResponse;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class QueryContentResponse extends io.pulumi.resources.InvokeArgs {
      * An IAM Policy Analysis query, which could be used in the AssetService.AnalyzeIamPolicy rpc or the AssetService.AnalyzeIamPolicyLongrunning rpc.
      * 
      */
-    @InputImport(name="iamPolicyAnalysisQuery", required=true)
+    @Import(name="iamPolicyAnalysisQuery", required=true)
       private final IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery;
 
     public IamPolicyAnalysisQueryResponse getIamPolicyAnalysisQuery() {

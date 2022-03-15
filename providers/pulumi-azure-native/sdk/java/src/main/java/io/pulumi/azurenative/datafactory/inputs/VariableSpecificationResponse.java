@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class VariableSpecificationResponse extends io.pulumi.resources.Inv
      * Default value of variable.
      * 
      */
-    @InputImport(name="defaultValue")
+    @Import(name="defaultValue")
       private final @Nullable Object defaultValue;
 
     public Optional<Object> getDefaultValue() {
@@ -34,7 +34,7 @@ public final class VariableSpecificationResponse extends io.pulumi.resources.Inv
      * Variable type.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

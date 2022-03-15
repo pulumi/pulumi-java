@@ -4,7 +4,7 @@
 package io.pulumi.aws.neptune;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is `false`.
      * 
      */
-    @InputImport(name="applyImmediately")
+    @Import(name="applyImmediately")
       private final @Nullable Output<Boolean> applyImmediately;
 
     public Output<Boolean> getApplyImmediately() {
@@ -33,7 +33,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * A list of EC2 Availability Zones that instances in the Neptune cluster can be created in.
      * 
      */
-    @InputImport(name="availabilityZones")
+    @Import(name="availabilityZones")
       private final @Nullable Output<List<String>> availabilityZones;
 
     public Output<List<String>> getAvailabilityZones() {
@@ -44,7 +44,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The days to retain backups for. Default `1`
      * 
      */
-    @InputImport(name="backupRetentionPeriod")
+    @Import(name="backupRetentionPeriod")
       private final @Nullable Output<Integer> backupRetentionPeriod;
 
     public Output<Integer> getBackupRetentionPeriod() {
@@ -55,7 +55,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The cluster identifier. If omitted, this provider will assign a random, unique identifier.
      * 
      */
-    @InputImport(name="clusterIdentifier")
+    @Import(name="clusterIdentifier")
       private final @Nullable Output<String> clusterIdentifier;
 
     public Output<String> getClusterIdentifier() {
@@ -66,7 +66,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Creates a unique cluster identifier beginning with the specified prefix. Conflicts with `cluster_identifier`.
      * 
      */
-    @InputImport(name="clusterIdentifierPrefix")
+    @Import(name="clusterIdentifierPrefix")
       private final @Nullable Output<String> clusterIdentifierPrefix;
 
     public Output<String> getClusterIdentifierPrefix() {
@@ -77,7 +77,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * If set to true, tags are copied to any snapshot of the DB cluster that is created.
      * 
      */
-    @InputImport(name="copyTagsToSnapshot")
+    @Import(name="copyTagsToSnapshot")
       private final @Nullable Output<Boolean> copyTagsToSnapshot;
 
     public Output<Boolean> getCopyTagsToSnapshot() {
@@ -88,7 +88,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * A value that indicates whether the DB cluster has deletion protection enabled.The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.
      * 
      */
-    @InputImport(name="deletionProtection")
+    @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
     public Output<Boolean> getDeletionProtection() {
@@ -99,7 +99,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * A list of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports `audit`.
      * 
      */
-    @InputImport(name="enableCloudwatchLogsExports")
+    @Import(name="enableCloudwatchLogsExports")
       private final @Nullable Output<List<String>> enableCloudwatchLogsExports;
 
     public Output<List<String>> getEnableCloudwatchLogsExports() {
@@ -110,7 +110,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the database engine to be used for this Neptune cluster. Defaults to `neptune`.
      * 
      */
-    @InputImport(name="engine")
+    @Import(name="engine")
       private final @Nullable Output<String> engine;
 
     public Output<String> getEngine() {
@@ -121,7 +121,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The database engine version.
      * 
      */
-    @InputImport(name="engineVersion")
+    @Import(name="engineVersion")
       private final @Nullable Output<String> engineVersion;
 
     public Output<String> getEngineVersion() {
@@ -132,7 +132,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The name of your final Neptune snapshot when this Neptune cluster is deleted. If omitted, no final snapshot will be made.
      * 
      */
-    @InputImport(name="finalSnapshotIdentifier")
+    @Import(name="finalSnapshotIdentifier")
       private final @Nullable Output<String> finalSnapshotIdentifier;
 
     public Output<String> getFinalSnapshotIdentifier() {
@@ -143,7 +143,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether or not mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.
      * 
      */
-    @InputImport(name="iamDatabaseAuthenticationEnabled")
+    @Import(name="iamDatabaseAuthenticationEnabled")
       private final @Nullable Output<Boolean> iamDatabaseAuthenticationEnabled;
 
     public Output<Boolean> getIamDatabaseAuthenticationEnabled() {
@@ -154,7 +154,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * A List of ARNs for the IAM roles to associate to the Neptune Cluster.
      * 
      */
-    @InputImport(name="iamRoles")
+    @Import(name="iamRoles")
       private final @Nullable Output<List<String>> iamRoles;
 
     public Output<List<String>> getIamRoles() {
@@ -165,7 +165,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The ARN for the KMS encryption key. When specifying `kms_key_arn`, `storage_encrypted` needs to be set to true.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -176,7 +176,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * A cluster parameter group to associate with the cluster.
      * 
      */
-    @InputImport(name="neptuneClusterParameterGroupName")
+    @Import(name="neptuneClusterParameterGroupName")
       private final @Nullable Output<String> neptuneClusterParameterGroupName;
 
     public Output<String> getNeptuneClusterParameterGroupName() {
@@ -187,7 +187,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * A Neptune subnet group to associate with this Neptune instance.
      * 
      */
-    @InputImport(name="neptuneSubnetGroupName")
+    @Import(name="neptuneSubnetGroupName")
       private final @Nullable Output<String> neptuneSubnetGroupName;
 
     public Output<String> getNeptuneSubnetGroupName() {
@@ -198,7 +198,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The port on which the Neptune accepts connections. Default is `8182`.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -209,7 +209,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00
      * 
      */
-    @InputImport(name="preferredBackupWindow")
+    @Import(name="preferredBackupWindow")
       private final @Nullable Output<String> preferredBackupWindow;
 
     public Output<String> getPreferredBackupWindow() {
@@ -220,7 +220,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30
      * 
      */
-    @InputImport(name="preferredMaintenanceWindow")
+    @Import(name="preferredMaintenanceWindow")
       private final @Nullable Output<String> preferredMaintenanceWindow;
 
     public Output<String> getPreferredMaintenanceWindow() {
@@ -231,7 +231,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of a source Neptune cluster or Neptune instance if this Neptune cluster is to be created as a Read Replica.
      * 
      */
-    @InputImport(name="replicationSourceIdentifier")
+    @Import(name="replicationSourceIdentifier")
       private final @Nullable Output<String> replicationSourceIdentifier;
 
     public Output<String> getReplicationSourceIdentifier() {
@@ -242,7 +242,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Determines whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from `final_snapshot_identifier`. Default is `false`.
      * 
      */
-    @InputImport(name="skipFinalSnapshot")
+    @Import(name="skipFinalSnapshot")
       private final @Nullable Output<Boolean> skipFinalSnapshot;
 
     public Output<Boolean> getSkipFinalSnapshot() {
@@ -253,7 +253,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot.
      * 
      */
-    @InputImport(name="snapshotIdentifier")
+    @Import(name="snapshotIdentifier")
       private final @Nullable Output<String> snapshotIdentifier;
 
     public Output<String> getSnapshotIdentifier() {
@@ -264,7 +264,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies whether the Neptune cluster is encrypted. The default is `false` if not specified.
      * 
      */
-    @InputImport(name="storageEncrypted")
+    @Import(name="storageEncrypted")
       private final @Nullable Output<Boolean> storageEncrypted;
 
     public Output<Boolean> getStorageEncrypted() {
@@ -275,7 +275,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the Neptune cluster. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -286,7 +286,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * List of VPC security groups to associate with the Cluster
      * 
      */
-    @InputImport(name="vpcSecurityGroupIds")
+    @Import(name="vpcSecurityGroupIds")
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
     public Output<List<String>> getVpcSecurityGroupIds() {

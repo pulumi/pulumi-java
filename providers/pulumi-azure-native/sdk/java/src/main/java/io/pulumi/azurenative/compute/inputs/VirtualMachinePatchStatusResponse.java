@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.AvailablePatchSummaryResponse;
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusResponse;
 import io.pulumi.azurenative.compute.inputs.LastPatchInstallationSummaryResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class VirtualMachinePatchStatusResponse extends io.pulumi.resources
      * The available patch summary of the latest assessment operation for the virtual machine.
      * 
      */
-    @InputImport(name="availablePatchSummary")
+    @Import(name="availablePatchSummary")
       private final @Nullable AvailablePatchSummaryResponse availablePatchSummary;
 
     public Optional<AvailablePatchSummaryResponse> getAvailablePatchSummary() {
@@ -36,7 +36,7 @@ public final class VirtualMachinePatchStatusResponse extends io.pulumi.resources
      * The enablement status of the specified patchMode
      * 
      */
-    @InputImport(name="configurationStatuses", required=true)
+    @Import(name="configurationStatuses", required=true)
       private final List<InstanceViewStatusResponse> configurationStatuses;
 
     public List<InstanceViewStatusResponse> getConfigurationStatuses() {
@@ -47,7 +47,7 @@ public final class VirtualMachinePatchStatusResponse extends io.pulumi.resources
      * The installation summary of the latest installation operation for the virtual machine.
      * 
      */
-    @InputImport(name="lastPatchInstallationSummary")
+    @Import(name="lastPatchInstallationSummary")
       private final @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary;
 
     public Optional<LastPatchInstallationSummaryResponse> getLastPatchInstallationSummary() {

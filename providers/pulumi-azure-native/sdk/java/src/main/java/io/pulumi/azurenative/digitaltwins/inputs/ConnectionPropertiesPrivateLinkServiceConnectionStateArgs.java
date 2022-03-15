@@ -6,7 +6,7 @@ package io.pulumi.azurenative.digitaltwins.inputs;
 import io.pulumi.azurenative.digitaltwins.enums.PrivateLinkServiceConnectionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ConnectionPropertiesPrivateLinkServiceConnectionStateArgs ext
      * Actions required for a private endpoint connection.
      * 
      */
-    @InputImport(name="actionsRequired")
+    @Import(name="actionsRequired")
       private final @Nullable Output<String> actionsRequired;
 
     public Output<String> getActionsRequired() {
@@ -31,7 +31,7 @@ public final class ConnectionPropertiesPrivateLinkServiceConnectionStateArgs ext
      * The description for the current state of a private endpoint connection.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class ConnectionPropertiesPrivateLinkServiceConnectionStateArgs ext
      * The status of a private endpoint connection.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final Output<Either<String,PrivateLinkServiceConnectionStatus>> status;
 
     public Output<Either<String,PrivateLinkServiceConnectionStatus>> getStatus() {

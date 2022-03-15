@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2.DefaultSubnetArgs;
 import io.pulumi.aws.ec2.inputs.DefaultSubnetState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class DefaultSubnet extends io.pulumi.resources.CustomResource {
      * ARN for the subnet.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -53,7 +53,7 @@ public class DefaultSubnet extends io.pulumi.resources.CustomResource {
      * * `availability_zone_id`- AZ ID of the subnet.
      * 
      */
-    @OutputExport(name="assignIpv6AddressOnCreation", type=Boolean.class, parameters={})
+    @Export(name="assignIpv6AddressOnCreation", type=Boolean.class, parameters={})
     private Output<Boolean> assignIpv6AddressOnCreation;
 
     /**
@@ -68,7 +68,7 @@ public class DefaultSubnet extends io.pulumi.resources.CustomResource {
      * AZ for the subnet.
      * 
      */
-    @OutputExport(name="availabilityZone", type=String.class, parameters={})
+    @Export(name="availabilityZone", type=String.class, parameters={})
     private Output<String> availabilityZone;
 
     /**
@@ -78,7 +78,7 @@ public class DefaultSubnet extends io.pulumi.resources.CustomResource {
     public Output<String> getAvailabilityZone() {
         return this.availabilityZone;
     }
-    @OutputExport(name="availabilityZoneId", type=String.class, parameters={})
+    @Export(name="availabilityZoneId", type=String.class, parameters={})
     private Output<String> availabilityZoneId;
 
     public Output<String> getAvailabilityZoneId() {
@@ -88,7 +88,7 @@ public class DefaultSubnet extends io.pulumi.resources.CustomResource {
      * CIDR block for the subnet.
      * 
      */
-    @OutputExport(name="cidrBlock", type=String.class, parameters={})
+    @Export(name="cidrBlock", type=String.class, parameters={})
     private Output<String> cidrBlock;
 
     /**
@@ -98,25 +98,25 @@ public class DefaultSubnet extends io.pulumi.resources.CustomResource {
     public Output<String> getCidrBlock() {
         return this.cidrBlock;
     }
-    @OutputExport(name="customerOwnedIpv4Pool", type=String.class, parameters={})
+    @Export(name="customerOwnedIpv4Pool", type=String.class, parameters={})
     private Output</* @Nullable */ String> customerOwnedIpv4Pool;
 
     public Output</* @Nullable */ String> getCustomerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool;
     }
-    @OutputExport(name="enableDns64", type=Boolean.class, parameters={})
+    @Export(name="enableDns64", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableDns64;
 
     public Output</* @Nullable */ Boolean> getEnableDns64() {
         return this.enableDns64;
     }
-    @OutputExport(name="enableResourceNameDnsARecordOnLaunch", type=Boolean.class, parameters={})
+    @Export(name="enableResourceNameDnsARecordOnLaunch", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableResourceNameDnsARecordOnLaunch;
 
     public Output</* @Nullable */ Boolean> getEnableResourceNameDnsARecordOnLaunch() {
         return this.enableResourceNameDnsARecordOnLaunch;
     }
-    @OutputExport(name="enableResourceNameDnsAaaaRecordOnLaunch", type=Boolean.class, parameters={})
+    @Export(name="enableResourceNameDnsAaaaRecordOnLaunch", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableResourceNameDnsAaaaRecordOnLaunch;
 
     public Output</* @Nullable */ Boolean> getEnableResourceNameDnsAaaaRecordOnLaunch() {
@@ -126,7 +126,7 @@ public class DefaultSubnet extends io.pulumi.resources.CustomResource {
      * IPv6 CIDR block.
      * 
      */
-    @OutputExport(name="ipv6CidrBlock", type=String.class, parameters={})
+    @Export(name="ipv6CidrBlock", type=String.class, parameters={})
     private Output<String> ipv6CidrBlock;
 
     /**
@@ -136,19 +136,19 @@ public class DefaultSubnet extends io.pulumi.resources.CustomResource {
     public Output<String> getIpv6CidrBlock() {
         return this.ipv6CidrBlock;
     }
-    @OutputExport(name="ipv6CidrBlockAssociationId", type=String.class, parameters={})
+    @Export(name="ipv6CidrBlockAssociationId", type=String.class, parameters={})
     private Output<String> ipv6CidrBlockAssociationId;
 
     public Output<String> getIpv6CidrBlockAssociationId() {
         return this.ipv6CidrBlockAssociationId;
     }
-    @OutputExport(name="ipv6Native", type=Boolean.class, parameters={})
+    @Export(name="ipv6Native", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> ipv6Native;
 
     public Output</* @Nullable */ Boolean> getIpv6Native() {
         return this.ipv6Native;
     }
-    @OutputExport(name="mapCustomerOwnedIpOnLaunch", type=Boolean.class, parameters={})
+    @Export(name="mapCustomerOwnedIpOnLaunch", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> mapCustomerOwnedIpOnLaunch;
 
     public Output</* @Nullable */ Boolean> getMapCustomerOwnedIpOnLaunch() {
@@ -158,7 +158,7 @@ public class DefaultSubnet extends io.pulumi.resources.CustomResource {
      * Whether instances launched into the subnet should be assigned a public IP address.
      * 
      */
-    @OutputExport(name="mapPublicIpOnLaunch", type=Boolean.class, parameters={})
+    @Export(name="mapPublicIpOnLaunch", type=Boolean.class, parameters={})
     private Output<Boolean> mapPublicIpOnLaunch;
 
     /**
@@ -168,7 +168,7 @@ public class DefaultSubnet extends io.pulumi.resources.CustomResource {
     public Output<Boolean> getMapPublicIpOnLaunch() {
         return this.mapPublicIpOnLaunch;
     }
-    @OutputExport(name="outpostArn", type=String.class, parameters={})
+    @Export(name="outpostArn", type=String.class, parameters={})
     private Output</* @Nullable */ String> outpostArn;
 
     public Output</* @Nullable */ String> getOutpostArn() {
@@ -178,7 +178,7 @@ public class DefaultSubnet extends io.pulumi.resources.CustomResource {
      * ID of the AWS account that owns the subnet.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -188,7 +188,7 @@ public class DefaultSubnet extends io.pulumi.resources.CustomResource {
     public Output<String> getOwnerId() {
         return this.ownerId;
     }
-    @OutputExport(name="privateDnsHostnameTypeOnLaunch", type=String.class, parameters={})
+    @Export(name="privateDnsHostnameTypeOnLaunch", type=String.class, parameters={})
     private Output<String> privateDnsHostnameTypeOnLaunch;
 
     public Output<String> getPrivateDnsHostnameTypeOnLaunch() {
@@ -198,7 +198,7 @@ public class DefaultSubnet extends io.pulumi.resources.CustomResource {
      * Map of tags to assign to the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -208,7 +208,7 @@ public class DefaultSubnet extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ Map<String,String>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -218,7 +218,7 @@ public class DefaultSubnet extends io.pulumi.resources.CustomResource {
      * VPC ID.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

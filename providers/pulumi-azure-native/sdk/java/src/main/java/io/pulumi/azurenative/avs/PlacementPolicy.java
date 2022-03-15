@@ -10,7 +10,7 @@ import io.pulumi.azurenative.avs.outputs.VmVmPlacementPolicyPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class PlacementPolicy extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -51,7 +51,7 @@ public class PlacementPolicy extends io.pulumi.resources.CustomResource {
      * placement policy properties
      * 
      */
-    @OutputExport(name="properties", type=Either.class, parameters={VmHostPlacementPolicyPropertiesResponse.class, VmVmPlacementPolicyPropertiesResponse.class})
+    @Export(name="properties", type=Either.class, parameters={VmHostPlacementPolicyPropertiesResponse.class, VmVmPlacementPolicyPropertiesResponse.class})
     private Output<Either<VmHostPlacementPolicyPropertiesResponse,VmVmPlacementPolicyPropertiesResponse>> properties;
 
     /**
@@ -65,7 +65,7 @@ public class PlacementPolicy extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

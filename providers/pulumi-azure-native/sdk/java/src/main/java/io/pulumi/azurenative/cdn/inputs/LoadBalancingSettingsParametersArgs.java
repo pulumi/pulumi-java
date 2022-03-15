@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
      * The additional latency in milliseconds for probes to fall into the lowest latency bucket
      * 
      */
-    @InputImport(name="additionalLatencyInMilliseconds")
+    @Import(name="additionalLatencyInMilliseconds")
       private final @Nullable Output<Integer> additionalLatencyInMilliseconds;
 
     public Output<Integer> getAdditionalLatencyInMilliseconds() {
@@ -33,7 +33,7 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
      * The number of samples to consider for load balancing decisions
      * 
      */
-    @InputImport(name="sampleSize")
+    @Import(name="sampleSize")
       private final @Nullable Output<Integer> sampleSize;
 
     public Output<Integer> getSampleSize() {
@@ -44,7 +44,7 @@ public final class LoadBalancingSettingsParametersArgs extends io.pulumi.resourc
      * The number of samples within the sample period that must succeed
      * 
      */
-    @InputImport(name="successfulSamplesRequired")
+    @Import(name="successfulSamplesRequired")
       private final @Nullable Output<Integer> successfulSamplesRequired;
 
     public Output<Integer> getSuccessfulSamplesRequired() {

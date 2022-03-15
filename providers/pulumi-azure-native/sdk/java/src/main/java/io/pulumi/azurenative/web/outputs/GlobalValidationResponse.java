@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GlobalValidationResponse {
     /**
      * The paths for which unauthenticated flow would not be redirected to the login page.
@@ -36,12 +36,12 @@ public final class GlobalValidationResponse {
      */
     private final @Nullable String unauthenticatedClientAction;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GlobalValidationResponse(
-        @OutputCustomType.Parameter("excludedPaths") @Nullable List<String> excludedPaths,
-        @OutputCustomType.Parameter("redirectToProvider") @Nullable String redirectToProvider,
-        @OutputCustomType.Parameter("requireAuthentication") @Nullable Boolean requireAuthentication,
-        @OutputCustomType.Parameter("unauthenticatedClientAction") @Nullable String unauthenticatedClientAction) {
+        @CustomType.Parameter("excludedPaths") @Nullable List<String> excludedPaths,
+        @CustomType.Parameter("redirectToProvider") @Nullable String redirectToProvider,
+        @CustomType.Parameter("requireAuthentication") @Nullable Boolean requireAuthentication,
+        @CustomType.Parameter("unauthenticatedClientAction") @Nullable String unauthenticatedClientAction) {
         this.excludedPaths = excludedPaths;
         this.redirectToProvider = redirectToProvider;
         this.requireAuthentication = requireAuthentication;

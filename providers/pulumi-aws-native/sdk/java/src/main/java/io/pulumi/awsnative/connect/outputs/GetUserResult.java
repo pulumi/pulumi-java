@@ -6,14 +6,14 @@ package io.pulumi.awsnative.connect.outputs;
 import io.pulumi.awsnative.connect.outputs.UserIdentityInfo;
 import io.pulumi.awsnative.connect.outputs.UserPhoneConfig;
 import io.pulumi.awsnative.connect.outputs.UserTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetUserResult {
     /**
      * The identifier of the user account in the directory used for identity management.
@@ -66,18 +66,18 @@ public final class GetUserResult {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUserResult(
-        @OutputCustomType.Parameter("directoryUserId") @Nullable String directoryUserId,
-        @OutputCustomType.Parameter("hierarchyGroupArn") @Nullable String hierarchyGroupArn,
-        @OutputCustomType.Parameter("identityInfo") @Nullable UserIdentityInfo identityInfo,
-        @OutputCustomType.Parameter("instanceArn") @Nullable String instanceArn,
-        @OutputCustomType.Parameter("phoneConfig") @Nullable UserPhoneConfig phoneConfig,
-        @OutputCustomType.Parameter("routingProfileArn") @Nullable String routingProfileArn,
-        @OutputCustomType.Parameter("securityProfileArns") @Nullable List<String> securityProfileArns,
-        @OutputCustomType.Parameter("tags") @Nullable List<UserTag> tags,
-        @OutputCustomType.Parameter("userArn") @Nullable String userArn,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("directoryUserId") @Nullable String directoryUserId,
+        @CustomType.Parameter("hierarchyGroupArn") @Nullable String hierarchyGroupArn,
+        @CustomType.Parameter("identityInfo") @Nullable UserIdentityInfo identityInfo,
+        @CustomType.Parameter("instanceArn") @Nullable String instanceArn,
+        @CustomType.Parameter("phoneConfig") @Nullable UserPhoneConfig phoneConfig,
+        @CustomType.Parameter("routingProfileArn") @Nullable String routingProfileArn,
+        @CustomType.Parameter("securityProfileArns") @Nullable List<String> securityProfileArns,
+        @CustomType.Parameter("tags") @Nullable List<UserTag> tags,
+        @CustomType.Parameter("userArn") @Nullable String userArn,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.directoryUserId = directoryUserId;
         this.hierarchyGroupArn = hierarchyGroupArn;
         this.identityInfo = identityInfo;

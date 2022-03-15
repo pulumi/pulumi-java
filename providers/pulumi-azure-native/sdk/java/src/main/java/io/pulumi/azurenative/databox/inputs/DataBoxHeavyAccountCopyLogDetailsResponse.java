@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends io.pulumi.r
      * Account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -33,7 +33,7 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends io.pulumi.r
      * Expected value is 'DataBoxHeavy'.
      * 
      */
-    @InputImport(name="copyLogDetailsType", required=true)
+    @Import(name="copyLogDetailsType", required=true)
       private final String copyLogDetailsType;
 
     public String getCopyLogDetailsType() {
@@ -44,7 +44,7 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends io.pulumi.r
      * Link for copy logs.
      * 
      */
-    @InputImport(name="copyLogLink", required=true)
+    @Import(name="copyLogLink", required=true)
       private final List<String> copyLogLink;
 
     public List<String> getCopyLogLink() {
@@ -55,7 +55,7 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends io.pulumi.r
      * Link for copy verbose logs. This will be set only when the LogCollectionLevel is set to verbose.
      * 
      */
-    @InputImport(name="copyVerboseLogLink", required=true)
+    @Import(name="copyVerboseLogLink", required=true)
       private final List<String> copyVerboseLogLink;
 
     public List<String> getCopyVerboseLogLink() {

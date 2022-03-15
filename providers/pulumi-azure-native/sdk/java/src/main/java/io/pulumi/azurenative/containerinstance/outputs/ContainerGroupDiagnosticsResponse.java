@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.containerinstance.outputs;
 
 import io.pulumi.azurenative.containerinstance.outputs.LogAnalyticsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerGroupDiagnosticsResponse {
     /**
      * Container group log analytics information.
@@ -17,8 +17,8 @@ public final class ContainerGroupDiagnosticsResponse {
      */
     private final @Nullable LogAnalyticsResponse logAnalytics;
 
-    @OutputCustomType.Constructor
-    private ContainerGroupDiagnosticsResponse(@OutputCustomType.Parameter("logAnalytics") @Nullable LogAnalyticsResponse logAnalytics) {
+    @CustomType.Constructor
+    private ContainerGroupDiagnosticsResponse(@CustomType.Parameter("logAnalytics") @Nullable LogAnalyticsResponse logAnalytics) {
         this.logAnalytics = logAnalytics;
     }
 

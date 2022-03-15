@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.codebuild.SourceCredentialArgs;
 import io.pulumi.aws.codebuild.inputs.SourceCredentialState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -35,7 +35,7 @@ public class SourceCredential extends io.pulumi.resources.CustomResource {
      * The ARN of Source Credential.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class SourceCredential extends io.pulumi.resources.CustomResource {
      * The type of authentication used to connect to a GitHub, GitHub Enterprise, or Bitbucket repository. An OAUTH connection is not supported by the API.
      * 
      */
-    @OutputExport(name="authType", type=String.class, parameters={})
+    @Export(name="authType", type=String.class, parameters={})
     private Output<String> authType;
 
     /**
@@ -63,7 +63,7 @@ public class SourceCredential extends io.pulumi.resources.CustomResource {
      * The source provider used for this project.
      * 
      */
-    @OutputExport(name="serverType", type=String.class, parameters={})
+    @Export(name="serverType", type=String.class, parameters={})
     private Output<String> serverType;
 
     /**
@@ -77,7 +77,7 @@ public class SourceCredential extends io.pulumi.resources.CustomResource {
      * For `GitHub` or `GitHub Enterprise`, this is the personal access token. For `Bitbucket`, this is the app password.
      * 
      */
-    @OutputExport(name="token", type=String.class, parameters={})
+    @Export(name="token", type=String.class, parameters={})
     private Output<String> token;
 
     /**
@@ -91,7 +91,7 @@ public class SourceCredential extends io.pulumi.resources.CustomResource {
      * The Bitbucket username when the authType is `BASIC_AUTH`. This parameter is not valid for other types of source providers or connections.
      * 
      */
-    @OutputExport(name="userName", type=String.class, parameters={})
+    @Export(name="userName", type=String.class, parameters={})
     private Output</* @Nullable */ String> userName;
 
     /**

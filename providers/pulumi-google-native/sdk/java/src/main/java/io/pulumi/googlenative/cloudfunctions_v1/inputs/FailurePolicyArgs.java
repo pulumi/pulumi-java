@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudfunctions_v1.inputs.RetryArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class FailurePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * If specified, then the function will be retried in case of a failure.
      * 
      */
-    @InputImport(name="retry")
+    @Import(name="retry")
       private final @Nullable Output<RetryArgs> retry;
 
     public Output<RetryArgs> getRetry() {

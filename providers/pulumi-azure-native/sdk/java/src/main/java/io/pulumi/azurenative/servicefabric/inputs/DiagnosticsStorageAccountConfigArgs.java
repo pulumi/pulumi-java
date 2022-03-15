@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
      * The blob endpoint of the azure storage account.
      * 
      */
-    @InputImport(name="blobEndpoint", required=true)
+    @Import(name="blobEndpoint", required=true)
       private final Output<String> blobEndpoint;
 
     public Output<String> getBlobEndpoint() {
@@ -33,7 +33,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
      * The protected diagnostics storage key name.
      * 
      */
-    @InputImport(name="protectedAccountKeyName", required=true)
+    @Import(name="protectedAccountKeyName", required=true)
       private final Output<String> protectedAccountKeyName;
 
     public Output<String> getProtectedAccountKeyName() {
@@ -44,7 +44,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
      * The secondary protected diagnostics storage key name. If one of the storage account keys is rotated the cluster will fallback to using the other.
      * 
      */
-    @InputImport(name="protectedAccountKeyName2")
+    @Import(name="protectedAccountKeyName2")
       private final @Nullable Output<String> protectedAccountKeyName2;
 
     public Output<String> getProtectedAccountKeyName2() {
@@ -55,7 +55,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
      * The queue endpoint of the azure storage account.
      * 
      */
-    @InputImport(name="queueEndpoint", required=true)
+    @Import(name="queueEndpoint", required=true)
       private final Output<String> queueEndpoint;
 
     public Output<String> getQueueEndpoint() {
@@ -66,7 +66,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
      * The Azure storage account name.
      * 
      */
-    @InputImport(name="storageAccountName", required=true)
+    @Import(name="storageAccountName", required=true)
       private final Output<String> storageAccountName;
 
     public Output<String> getStorageAccountName() {
@@ -77,7 +77,7 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
      * The table endpoint of the azure storage account.
      * 
      */
-    @InputImport(name="tableEndpoint", required=true)
+    @Import(name="tableEndpoint", required=true)
       private final Output<String> tableEndpoint;
 
     public Output<String> getTableEndpoint() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.inputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.compute_beta.inputs.AdvancedMachineFeaturesResponse;
 import io.pulumi.googlenative.compute_beta.inputs.AttachedDiskResponse;
@@ -33,7 +33,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * Controls for advanced machine-related behavior features. Note that for MachineImage, this is not supported yet.
      * 
      */
-    @InputImport(name="advancedMachineFeatures", required=true)
+    @Import(name="advancedMachineFeatures", required=true)
       private final AdvancedMachineFeaturesResponse advancedMachineFeatures;
 
     public AdvancedMachineFeaturesResponse getAdvancedMachineFeatures() {
@@ -44,7 +44,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * Enables instances created based on these properties to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
      * 
      */
-    @InputImport(name="canIpForward", required=true)
+    @Import(name="canIpForward", required=true)
       private final Boolean canIpForward;
 
     public Boolean getCanIpForward() {
@@ -55,7 +55,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * Specifies the Confidential Instance options. Note that for MachineImage, this is not supported yet.
      * 
      */
-    @InputImport(name="confidentialInstanceConfig", required=true)
+    @Import(name="confidentialInstanceConfig", required=true)
       private final ConfidentialInstanceConfigResponse confidentialInstanceConfig;
 
     public ConfidentialInstanceConfigResponse getConfidentialInstanceConfig() {
@@ -66,7 +66,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * An optional text description for the instances that are created from these properties.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
@@ -77,7 +77,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * An array of disks that are associated with the instances that are created from these properties.
      * 
      */
-    @InputImport(name="disks", required=true)
+    @Import(name="disks", required=true)
       private final List<AttachedDiskResponse> disks;
 
     public List<AttachedDiskResponse> getDisks() {
@@ -88,7 +88,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * Display Device properties to enable support for remote display products like: Teradici, VNC and TeamViewer Note that for MachineImage, this is not supported yet.
      * 
      */
-    @InputImport(name="displayDevice", required=true)
+    @Import(name="displayDevice", required=true)
       private final DisplayDeviceResponse displayDevice;
 
     public DisplayDeviceResponse getDisplayDevice() {
@@ -99,7 +99,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * A list of guest accelerator cards' type and count to use for instances created from these properties.
      * 
      */
-    @InputImport(name="guestAccelerators", required=true)
+    @Import(name="guestAccelerators", required=true)
       private final List<AcceleratorConfigResponse> guestAccelerators;
 
     public List<AcceleratorConfigResponse> getGuestAccelerators() {
@@ -110,7 +110,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * Labels to apply to instances that are created from these properties.
      * 
      */
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
@@ -121,7 +121,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * The machine type to use for instances that are created from these properties.
      * 
      */
-    @InputImport(name="machineType", required=true)
+    @Import(name="machineType", required=true)
       private final String machineType;
 
     public String getMachineType() {
@@ -132,7 +132,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * The metadata key/value pairs to assign to instances that are created from these properties. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
      * 
      */
-    @InputImport(name="metadata", required=true)
+    @Import(name="metadata", required=true)
       private final MetadataResponse metadata;
 
     public MetadataResponse getMetadata() {
@@ -143,7 +143,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information, read Specifying a Minimum CPU Platform.
      * 
      */
-    @InputImport(name="minCpuPlatform", required=true)
+    @Import(name="minCpuPlatform", required=true)
       private final String minCpuPlatform;
 
     public String getMinCpuPlatform() {
@@ -154,7 +154,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * An array of network access configurations for this interface.
      * 
      */
-    @InputImport(name="networkInterfaces", required=true)
+    @Import(name="networkInterfaces", required=true)
       private final List<NetworkInterfaceResponse> networkInterfaces;
 
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
@@ -165,7 +165,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * Note that for MachineImage, this is not supported yet.
      * 
      */
-    @InputImport(name="networkPerformanceConfig", required=true)
+    @Import(name="networkPerformanceConfig", required=true)
       private final NetworkPerformanceConfigResponse networkPerformanceConfig;
 
     public NetworkPerformanceConfigResponse getNetworkPerformanceConfig() {
@@ -176,7 +176,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * PostKeyRevocationActionType of the instance.
      * 
      */
-    @InputImport(name="postKeyRevocationActionType", required=true)
+    @Import(name="postKeyRevocationActionType", required=true)
       private final String postKeyRevocationActionType;
 
     public String getPostKeyRevocationActionType() {
@@ -187,7 +187,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as default. Note that for MachineImage, this is not supported yet.
      * 
      */
-    @InputImport(name="privateIpv6GoogleAccess", required=true)
+    @Import(name="privateIpv6GoogleAccess", required=true)
       private final String privateIpv6GoogleAccess;
 
     public String getPrivateIpv6GoogleAccess() {
@@ -198,7 +198,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * Specifies the reservations that instances can consume from. Note that for MachineImage, this is not supported yet.
      * 
      */
-    @InputImport(name="reservationAffinity", required=true)
+    @Import(name="reservationAffinity", required=true)
       private final ReservationAffinityResponse reservationAffinity;
 
     public ReservationAffinityResponse getReservationAffinity() {
@@ -209,7 +209,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys must be in the format `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The field is ignored (both PUT & PATCH) when empty.
      * 
      */
-    @InputImport(name="resourceManagerTags", required=true)
+    @Import(name="resourceManagerTags", required=true)
       private final Map<String,String> resourceManagerTags;
 
     public Map<String,String> getResourceManagerTags() {
@@ -220,7 +220,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * Resource policies (names, not URLs) applied to instances created from these properties. Note that for MachineImage, this is not supported yet.
      * 
      */
-    @InputImport(name="resourcePolicies", required=true)
+    @Import(name="resourcePolicies", required=true)
       private final List<String> resourcePolicies;
 
     public List<String> getResourcePolicies() {
@@ -231,7 +231,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * Specifies the scheduling options for the instances that are created from these properties.
      * 
      */
-    @InputImport(name="scheduling", required=true)
+    @Import(name="scheduling", required=true)
       private final SchedulingResponse scheduling;
 
     public SchedulingResponse getScheduling() {
@@ -242,7 +242,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from these properties. Use metadata queries to obtain the access tokens for these instances.
      * 
      */
-    @InputImport(name="serviceAccounts", required=true)
+    @Import(name="serviceAccounts", required=true)
       private final List<ServiceAccountResponse> serviceAccounts;
 
     public List<ServiceAccountResponse> getServiceAccounts() {
@@ -253,7 +253,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * Note that for MachineImage, this is not supported yet.
      * 
      */
-    @InputImport(name="shieldedInstanceConfig", required=true)
+    @Import(name="shieldedInstanceConfig", required=true)
       private final ShieldedInstanceConfigResponse shieldedInstanceConfig;
 
     public ShieldedInstanceConfigResponse getShieldedInstanceConfig() {
@@ -264,7 +264,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * Specifies the Shielded VM options for the instances that are created from these properties.
      * 
      */
-    @InputImport(name="shieldedVmConfig", required=true)
+    @Import(name="shieldedVmConfig", required=true)
       private final ShieldedVmConfigResponse shieldedVmConfig;
 
     public ShieldedVmConfigResponse getShieldedVmConfig() {
@@ -275,7 +275,7 @@ public final class InstancePropertiesResponse extends io.pulumi.resources.Invoke
      * A list of tags to apply to the instances that are created from these properties. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
      * 
      */
-    @InputImport(name="tags", required=true)
+    @Import(name="tags", required=true)
       private final TagsResponse tags;
 
     public TagsResponse getTags() {

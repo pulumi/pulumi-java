@@ -9,7 +9,7 @@ import io.pulumi.awsnative.wisdom.enums.AssistantAssociationAssociationType;
 import io.pulumi.awsnative.wisdom.outputs.AssistantAssociationAssociationData;
 import io.pulumi.awsnative.wisdom.outputs.AssistantAssociationTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -21,43 +21,43 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:wisdom:AssistantAssociation")
 public class AssistantAssociation extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="assistantArn", type=String.class, parameters={})
+    @Export(name="assistantArn", type=String.class, parameters={})
     private Output<String> assistantArn;
 
     public Output<String> getAssistantArn() {
         return this.assistantArn;
     }
-    @OutputExport(name="assistantAssociationArn", type=String.class, parameters={})
+    @Export(name="assistantAssociationArn", type=String.class, parameters={})
     private Output<String> assistantAssociationArn;
 
     public Output<String> getAssistantAssociationArn() {
         return this.assistantAssociationArn;
     }
-    @OutputExport(name="assistantAssociationId", type=String.class, parameters={})
+    @Export(name="assistantAssociationId", type=String.class, parameters={})
     private Output<String> assistantAssociationId;
 
     public Output<String> getAssistantAssociationId() {
         return this.assistantAssociationId;
     }
-    @OutputExport(name="assistantId", type=String.class, parameters={})
+    @Export(name="assistantId", type=String.class, parameters={})
     private Output<String> assistantId;
 
     public Output<String> getAssistantId() {
         return this.assistantId;
     }
-    @OutputExport(name="association", type=AssistantAssociationAssociationData.class, parameters={})
+    @Export(name="association", type=AssistantAssociationAssociationData.class, parameters={})
     private Output<AssistantAssociationAssociationData> association;
 
     public Output<AssistantAssociationAssociationData> getAssociation() {
         return this.association;
     }
-    @OutputExport(name="associationType", type=AssistantAssociationAssociationType.class, parameters={})
+    @Export(name="associationType", type=AssistantAssociationAssociationType.class, parameters={})
     private Output<AssistantAssociationAssociationType> associationType;
 
     public Output<AssistantAssociationAssociationType> getAssociationType() {
         return this.associationType;
     }
-    @OutputExport(name="tags", type=List.class, parameters={AssistantAssociationTag.class})
+    @Export(name="tags", type=List.class, parameters={AssistantAssociationTag.class})
     private Output</* @Nullable */ List<AssistantAssociationTag>> tags;
 
     public Output</* @Nullable */ List<AssistantAssociationTag>> getTags() {

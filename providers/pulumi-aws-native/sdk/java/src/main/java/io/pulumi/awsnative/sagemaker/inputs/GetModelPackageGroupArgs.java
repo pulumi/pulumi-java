@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetModelPackageGroupArgs extends io.pulumi.resources.InvokeAr
 
     public static final GetModelPackageGroupArgs Empty = new GetModelPackageGroupArgs();
 
-    @InputImport(name="modelPackageGroupArn", required=true)
+    @Import(name="modelPackageGroupArn", required=true)
       private final String modelPackageGroupArn;
 
     public String getModelPackageGroupArn() {

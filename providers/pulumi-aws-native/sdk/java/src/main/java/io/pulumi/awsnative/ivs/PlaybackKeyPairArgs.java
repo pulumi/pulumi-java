@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ivs;
 
 import io.pulumi.awsnative.ivs.inputs.PlaybackKeyPairTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
      * An arbitrary string (a nickname) assigned to a playback key pair that helps the customer identify that resource. The value does not need to be unique.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -31,7 +31,7 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
      * The public portion of a customer-generated key pair.
      * 
      */
-    @InputImport(name="publicKeyMaterial", required=true)
+    @Import(name="publicKeyMaterial", required=true)
       private final Output<String> publicKeyMaterial;
 
     public Output<String> getPublicKeyMaterial() {
@@ -42,7 +42,7 @@ public final class PlaybackKeyPairArgs extends io.pulumi.resources.ResourceArgs 
      * A list of key-value pairs that contain metadata for the asset model.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<PlaybackKeyPairTagArgs>> tags;
 
     public Output<List<PlaybackKeyPairTagArgs>> getTags() {

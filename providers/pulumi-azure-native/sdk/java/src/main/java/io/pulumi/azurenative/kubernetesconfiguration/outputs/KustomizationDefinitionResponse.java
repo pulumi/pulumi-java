@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.DependsOnDefinitionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KustomizationDefinitionResponse {
     /**
      * Specifies other Kustomizations that this Kustomization depends on. This Kustomization will not reconcile until all dependencies have completed their reconciliation.
@@ -56,16 +56,16 @@ public final class KustomizationDefinitionResponse {
      */
     private final @Nullable String validation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KustomizationDefinitionResponse(
-        @OutputCustomType.Parameter("dependsOn") @Nullable List<DependsOnDefinitionResponse> dependsOn,
-        @OutputCustomType.Parameter("force") @Nullable Boolean force,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("prune") @Nullable Boolean prune,
-        @OutputCustomType.Parameter("retryIntervalInSeconds") @Nullable Double retryIntervalInSeconds,
-        @OutputCustomType.Parameter("syncIntervalInSeconds") @Nullable Double syncIntervalInSeconds,
-        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Double timeoutInSeconds,
-        @OutputCustomType.Parameter("validation") @Nullable String validation) {
+        @CustomType.Parameter("dependsOn") @Nullable List<DependsOnDefinitionResponse> dependsOn,
+        @CustomType.Parameter("force") @Nullable Boolean force,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("prune") @Nullable Boolean prune,
+        @CustomType.Parameter("retryIntervalInSeconds") @Nullable Double retryIntervalInSeconds,
+        @CustomType.Parameter("syncIntervalInSeconds") @Nullable Double syncIntervalInSeconds,
+        @CustomType.Parameter("timeoutInSeconds") @Nullable Double timeoutInSeconds,
+        @CustomType.Parameter("validation") @Nullable String validation) {
         this.dependsOn = dependsOn;
         this.force = force;
         this.path = path;

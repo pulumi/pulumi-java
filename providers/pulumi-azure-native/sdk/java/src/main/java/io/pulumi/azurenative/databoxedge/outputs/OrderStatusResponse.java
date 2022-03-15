@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.TrackingInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OrderStatusResponse {
     /**
      * Dictionary to hold generic information which is not stored
@@ -40,13 +40,13 @@ public final class OrderStatusResponse {
      */
     private final String updateDateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OrderStatusResponse(
-        @OutputCustomType.Parameter("additionalOrderDetails") Map<String,String> additionalOrderDetails,
-        @OutputCustomType.Parameter("comments") @Nullable String comments,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("trackingInformation") TrackingInfoResponse trackingInformation,
-        @OutputCustomType.Parameter("updateDateTime") String updateDateTime) {
+        @CustomType.Parameter("additionalOrderDetails") Map<String,String> additionalOrderDetails,
+        @CustomType.Parameter("comments") @Nullable String comments,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("trackingInformation") TrackingInfoResponse trackingInformation,
+        @CustomType.Parameter("updateDateTime") String updateDateTime) {
         this.additionalOrderDetails = additionalOrderDetails;
         this.comments = comments;
         this.status = status;

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.customerinsights.ViewArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * Date time when view was last modified.
      * 
      */
-    @OutputExport(name="changed", type=String.class, parameters={})
+    @Export(name="changed", type=String.class, parameters={})
     private Output<String> changed;
 
     /**
@@ -49,7 +49,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * Date time when view was created.
      * 
      */
-    @OutputExport(name="created", type=String.class, parameters={})
+    @Export(name="created", type=String.class, parameters={})
     private Output<String> created;
 
     /**
@@ -63,7 +63,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * View definition.
      * 
      */
-    @OutputExport(name="definition", type=String.class, parameters={})
+    @Export(name="definition", type=String.class, parameters={})
     private Output<String> definition;
 
     /**
@@ -77,7 +77,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * Localized display name for the view.
      * 
      */
-    @OutputExport(name="displayName", type=Map.class, parameters={String.class, String.class})
+    @Export(name="displayName", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> displayName;
 
     /**
@@ -91,7 +91,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * the hub name.
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
@@ -119,7 +119,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -133,7 +133,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * the user ID.
      * 
      */
-    @OutputExport(name="userId", type=String.class, parameters={})
+    @Export(name="userId", type=String.class, parameters={})
     private Output</* @Nullable */ String> userId;
 
     /**
@@ -147,7 +147,7 @@ public class View extends io.pulumi.resources.CustomResource {
      * Name of the view.
      * 
      */
-    @OutputExport(name="viewName", type=String.class, parameters={})
+    @Export(name="viewName", type=String.class, parameters={})
     private Output<String> viewName;
 
     /**

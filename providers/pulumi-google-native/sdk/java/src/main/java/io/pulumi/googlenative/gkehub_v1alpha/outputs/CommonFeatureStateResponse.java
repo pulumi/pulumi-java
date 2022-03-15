@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.AppDevExperienceFeatureStateResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.FeatureStateResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.ServiceMeshFeatureStateResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CommonFeatureStateResponse {
     /**
      * Appdevexperience specific state.
@@ -27,11 +27,11 @@ public final class CommonFeatureStateResponse {
      */
     private final FeatureStateResponse state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CommonFeatureStateResponse(
-        @OutputCustomType.Parameter("appdevexperience") AppDevExperienceFeatureStateResponse appdevexperience,
-        @OutputCustomType.Parameter("servicemesh") ServiceMeshFeatureStateResponse servicemesh,
-        @OutputCustomType.Parameter("state") FeatureStateResponse state) {
+        @CustomType.Parameter("appdevexperience") AppDevExperienceFeatureStateResponse appdevexperience,
+        @CustomType.Parameter("servicemesh") ServiceMeshFeatureStateResponse servicemesh,
+        @CustomType.Parameter("state") FeatureStateResponse state) {
         this.appdevexperience = appdevexperience;
         this.servicemesh = servicemesh;
         this.state = state;

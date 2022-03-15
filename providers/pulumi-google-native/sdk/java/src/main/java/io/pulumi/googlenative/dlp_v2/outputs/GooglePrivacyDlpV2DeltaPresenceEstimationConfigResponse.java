@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2QuasiIdResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2StatisticalTableResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse {
     /**
      * Several auxiliary tables can be used in the analysis. Each custom_tag used to tag a quasi-identifiers field must appear in exactly one field of one auxiliary table.
@@ -28,11 +28,11 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse {
      */
     private final String regionCode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse(
-        @OutputCustomType.Parameter("auxiliaryTables") List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables,
-        @OutputCustomType.Parameter("quasiIds") List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds,
-        @OutputCustomType.Parameter("regionCode") String regionCode) {
+        @CustomType.Parameter("auxiliaryTables") List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables,
+        @CustomType.Parameter("quasiIds") List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds,
+        @CustomType.Parameter("regionCode") String regionCode) {
         this.auxiliaryTables = auxiliaryTables;
         this.quasiIds = quasiIds;
         this.regionCode = regionCode;

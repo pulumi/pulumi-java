@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeliveryStreamSchemaConfiguration {
     private final @Nullable String catalogId;
     private final @Nullable String databaseName;
@@ -18,14 +18,14 @@ public final class DeliveryStreamSchemaConfiguration {
     private final @Nullable String tableName;
     private final @Nullable String versionId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeliveryStreamSchemaConfiguration(
-        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
-        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("roleARN") @Nullable String roleARN,
-        @OutputCustomType.Parameter("tableName") @Nullable String tableName,
-        @OutputCustomType.Parameter("versionId") @Nullable String versionId) {
+        @CustomType.Parameter("catalogId") @Nullable String catalogId,
+        @CustomType.Parameter("databaseName") @Nullable String databaseName,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("roleARN") @Nullable String roleARN,
+        @CustomType.Parameter("tableName") @Nullable String tableName,
+        @CustomType.Parameter("versionId") @Nullable String versionId) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.region = region;

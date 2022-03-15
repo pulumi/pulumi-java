@@ -11,7 +11,7 @@ import io.pulumi.azurenative.netapp.outputs.MonthlyScheduleResponse;
 import io.pulumi.azurenative.netapp.outputs.WeeklyScheduleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -40,7 +40,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * Schedule for daily snapshots
      * 
      */
-    @OutputExport(name="dailySchedule", type=DailyScheduleResponse.class, parameters={})
+    @Export(name="dailySchedule", type=DailyScheduleResponse.class, parameters={})
     private Output</* @Nullable */ DailyScheduleResponse> dailySchedule;
 
     /**
@@ -54,7 +54,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * The property to decide policy is enabled or not
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -68,7 +68,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * Schedule for hourly snapshots
      * 
      */
-    @OutputExport(name="hourlySchedule", type=HourlyScheduleResponse.class, parameters={})
+    @Export(name="hourlySchedule", type=HourlyScheduleResponse.class, parameters={})
     private Output</* @Nullable */ HourlyScheduleResponse> hourlySchedule;
 
     /**
@@ -82,7 +82,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * Resource location
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -96,7 +96,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * Schedule for monthly snapshots
      * 
      */
-    @OutputExport(name="monthlySchedule", type=MonthlyScheduleResponse.class, parameters={})
+    @Export(name="monthlySchedule", type=MonthlyScheduleResponse.class, parameters={})
     private Output</* @Nullable */ MonthlyScheduleResponse> monthlySchedule;
 
     /**
@@ -110,7 +110,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * Resource name
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -124,7 +124,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * Azure lifecycle management
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -138,7 +138,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * Resource tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -152,7 +152,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * Resource type
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -166,7 +166,7 @@ public class SnapshotPolicy extends io.pulumi.resources.CustomResource {
      * Schedule for weekly snapshots
      * 
      */
-    @OutputExport(name="weeklySchedule", type=WeeklyScheduleResponse.class, parameters={})
+    @Export(name="weeklySchedule", type=WeeklyScheduleResponse.class, parameters={})
     private Output</* @Nullable */ WeeklyScheduleResponse> weeklySchedule;
 
     /**

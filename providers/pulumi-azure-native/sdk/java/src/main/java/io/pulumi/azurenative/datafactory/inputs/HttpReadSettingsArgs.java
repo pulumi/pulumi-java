@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The additional HTTP headers in the request to the RESTful API. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="additionalHeaders")
+    @Import(name="additionalHeaders")
       private final @Nullable Output<Object> additionalHeaders;
 
     public Output<Object> getAdditionalHeaders() {
@@ -35,7 +35,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
-    @InputImport(name="disableMetricsCollection")
+    @Import(name="disableMetricsCollection")
       private final @Nullable Output<Object> disableMetricsCollection;
 
     public Output<Object> getDisableMetricsCollection() {
@@ -46,7 +46,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Indicates whether to enable partition discovery.
      * 
      */
-    @InputImport(name="enablePartitionDiscovery")
+    @Import(name="enablePartitionDiscovery")
       private final @Nullable Output<Boolean> enablePartitionDiscovery;
 
     public Output<Boolean> getEnablePartitionDiscovery() {
@@ -57,7 +57,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
-    @InputImport(name="maxConcurrentConnections")
+    @Import(name="maxConcurrentConnections")
       private final @Nullable Output<Object> maxConcurrentConnections;
 
     public Output<Object> getMaxConcurrentConnections() {
@@ -68,7 +68,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Specify the root path where partition discovery starts from. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="partitionRootPath")
+    @Import(name="partitionRootPath")
       private final @Nullable Output<Object> partitionRootPath;
 
     public Output<Object> getPartitionRootPath() {
@@ -79,7 +79,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The HTTP request body to the RESTful API if requestMethod is POST. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="requestBody")
+    @Import(name="requestBody")
       private final @Nullable Output<Object> requestBody;
 
     public Output<Object> getRequestBody() {
@@ -90,7 +90,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * The HTTP method used to call the RESTful API. The default is GET. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="requestMethod")
+    @Import(name="requestMethod")
       private final @Nullable Output<Object> requestMethod;
 
     public Output<Object> getRequestMethod() {
@@ -101,7 +101,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Specifies the timeout for a HTTP client to get HTTP response from HTTP server.
      * 
      */
-    @InputImport(name="requestTimeout")
+    @Import(name="requestTimeout")
       private final @Nullable Output<Object> requestTimeout;
 
     public Output<Object> getRequestTimeout() {
@@ -113,7 +113,7 @@ public final class HttpReadSettingsArgs extends io.pulumi.resources.ResourceArgs
      * Expected value is 'HttpReadSettings'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

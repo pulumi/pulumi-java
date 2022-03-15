@@ -5,7 +5,7 @@ package io.pulumi.aws.appconfig.inputs;
 
 import io.pulumi.aws.appconfig.inputs.EnvironmentMonitorGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * The AppConfig application ID. Must be between 4 and 7 characters in length.
      * 
      */
-    @InputImport(name="applicationId")
+    @Import(name="applicationId")
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -32,7 +32,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the AppConfig Environment.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -43,7 +43,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * The description of the environment. Can be at most 1024 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -54,7 +54,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * The AppConfig environment ID.
      * 
      */
-    @InputImport(name="environmentId")
+    @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
@@ -65,7 +65,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * Set of Amazon CloudWatch alarms to monitor during the deployment process. Maximum of 5. See Monitor below for more details.
      * 
      */
-    @InputImport(name="monitors")
+    @Import(name="monitors")
       private final @Nullable Output<List<EnvironmentMonitorGetArgs>> monitors;
 
     public Output<List<EnvironmentMonitorGetArgs>> getMonitors() {
@@ -76,14 +76,14 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * The name for the environment. Must be between 1 and 64 characters in length.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -94,7 +94,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -105,7 +105,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudtrace_v2beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OutputConfigResponse {
     /**
      * The destination for writing trace data. Currently only BigQuery is supported. E.g.: "bigquery.googleapis.com/projects/[PROJECT_ID]/datasets/[DATASET]"
@@ -15,8 +15,8 @@ public final class OutputConfigResponse {
      */
     private final String destination;
 
-    @OutputCustomType.Constructor
-    private OutputConfigResponse(@OutputCustomType.Parameter("destination") String destination) {
+    @CustomType.Constructor
+    private OutputConfigResponse(@CustomType.Parameter("destination") String destination) {
         this.destination = destination;
     }
 

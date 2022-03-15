@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.VersionResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LocationResponse {
     /**
      * The CPE URI in [CPE format](https://cpe.mitre.org/specification/) denoting the package manager version distributing a package.
@@ -26,11 +26,11 @@ public final class LocationResponse {
      */
     private final VersionResponse version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LocationResponse(
-        @OutputCustomType.Parameter("cpeUri") String cpeUri,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("version") VersionResponse version) {
+        @CustomType.Parameter("cpeUri") String cpeUri,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("version") VersionResponse version) {
         this.cpeUri = cpeUri;
         this.path = path;
         this.version = version;

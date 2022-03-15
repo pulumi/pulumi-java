@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.cur.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetReportDefinitionResult {
     /**
      * A list of additional artifacts.
@@ -68,20 +68,20 @@ public final class GetReportDefinitionResult {
      */
     private final String timeUnit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetReportDefinitionResult(
-        @OutputCustomType.Parameter("additionalArtifacts") List<String> additionalArtifacts,
-        @OutputCustomType.Parameter("additionalSchemaElements") List<String> additionalSchemaElements,
-        @OutputCustomType.Parameter("compression") String compression,
-        @OutputCustomType.Parameter("format") String format,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("refreshClosedReports") Boolean refreshClosedReports,
-        @OutputCustomType.Parameter("reportName") String reportName,
-        @OutputCustomType.Parameter("reportVersioning") String reportVersioning,
-        @OutputCustomType.Parameter("s3Bucket") String s3Bucket,
-        @OutputCustomType.Parameter("s3Prefix") String s3Prefix,
-        @OutputCustomType.Parameter("s3Region") String s3Region,
-        @OutputCustomType.Parameter("timeUnit") String timeUnit) {
+        @CustomType.Parameter("additionalArtifacts") List<String> additionalArtifacts,
+        @CustomType.Parameter("additionalSchemaElements") List<String> additionalSchemaElements,
+        @CustomType.Parameter("compression") String compression,
+        @CustomType.Parameter("format") String format,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("refreshClosedReports") Boolean refreshClosedReports,
+        @CustomType.Parameter("reportName") String reportName,
+        @CustomType.Parameter("reportVersioning") String reportVersioning,
+        @CustomType.Parameter("s3Bucket") String s3Bucket,
+        @CustomType.Parameter("s3Prefix") String s3Prefix,
+        @CustomType.Parameter("s3Region") String s3Region,
+        @CustomType.Parameter("timeUnit") String timeUnit) {
         this.additionalArtifacts = additionalArtifacts;
         this.additionalSchemaElements = additionalSchemaElements;
         this.compression = compression;

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class DiskLocation extends io.pulumi.resources.InvokeArgs {
      * The Availability Zone in which to create your disk. Use the following format: us-east-2a (case sensitive). Be sure to add the include Availability Zones parameter to your request.
      * 
      */
-    @InputImport(name="availabilityZone")
+    @Import(name="availabilityZone")
       private final @Nullable String availabilityZone;
 
     public Optional<String> getAvailabilityZone() {
@@ -33,7 +33,7 @@ public final class DiskLocation extends io.pulumi.resources.InvokeArgs {
      * The Region Name in which to create your disk.
      * 
      */
-    @InputImport(name="regionName")
+    @Import(name="regionName")
       private final @Nullable String regionName;
 
     public Optional<String> getRegionName() {

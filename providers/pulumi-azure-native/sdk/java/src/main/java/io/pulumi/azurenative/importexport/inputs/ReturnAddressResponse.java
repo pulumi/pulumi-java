@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
      * The city name to use when returning the drives.
      * 
      */
-    @InputImport(name="city", required=true)
+    @Import(name="city", required=true)
       private final String city;
 
     public String getCity() {
@@ -33,7 +33,7 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
      * The country or region to use when returning the drives.
      * 
      */
-    @InputImport(name="countryOrRegion", required=true)
+    @Import(name="countryOrRegion", required=true)
       private final String countryOrRegion;
 
     public String getCountryOrRegion() {
@@ -44,7 +44,7 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
      * Email address of the recipient of the returned drives.
      * 
      */
-    @InputImport(name="email", required=true)
+    @Import(name="email", required=true)
       private final String email;
 
     public String getEmail() {
@@ -55,7 +55,7 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
      * Phone number of the recipient of the returned drives.
      * 
      */
-    @InputImport(name="phone", required=true)
+    @Import(name="phone", required=true)
       private final String phone;
 
     public String getPhone() {
@@ -66,7 +66,7 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
      * The postal code to use when returning the drives.
      * 
      */
-    @InputImport(name="postalCode", required=true)
+    @Import(name="postalCode", required=true)
       private final String postalCode;
 
     public String getPostalCode() {
@@ -77,7 +77,7 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
      * The name of the recipient who will receive the hard drives when they are returned.
      * 
      */
-    @InputImport(name="recipientName", required=true)
+    @Import(name="recipientName", required=true)
       private final String recipientName;
 
     public String getRecipientName() {
@@ -88,7 +88,7 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
      * The state or province to use when returning the drives.
      * 
      */
-    @InputImport(name="stateOrProvince")
+    @Import(name="stateOrProvince")
       private final @Nullable String stateOrProvince;
 
     public Optional<String> getStateOrProvince() {
@@ -99,7 +99,7 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
      * The first line of the street address to use when returning the drives.
      * 
      */
-    @InputImport(name="streetAddress1", required=true)
+    @Import(name="streetAddress1", required=true)
       private final String streetAddress1;
 
     public String getStreetAddress1() {
@@ -110,7 +110,7 @@ public final class ReturnAddressResponse extends io.pulumi.resources.InvokeArgs 
      * The second line of the street address to use when returning the drives.
      * 
      */
-    @InputImport(name="streetAddress2")
+    @Import(name="streetAddress2")
       private final @Nullable String streetAddress2;
 
     public Optional<String> getStreetAddress2() {

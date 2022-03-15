@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EmailNotificationResponse {
     /**
      * the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored.
@@ -29,11 +29,11 @@ public final class EmailNotificationResponse {
      */
     private final @Nullable Boolean sendToSubscriptionCoAdministrators;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EmailNotificationResponse(
-        @OutputCustomType.Parameter("customEmails") @Nullable List<String> customEmails,
-        @OutputCustomType.Parameter("sendToSubscriptionAdministrator") @Nullable Boolean sendToSubscriptionAdministrator,
-        @OutputCustomType.Parameter("sendToSubscriptionCoAdministrators") @Nullable Boolean sendToSubscriptionCoAdministrators) {
+        @CustomType.Parameter("customEmails") @Nullable List<String> customEmails,
+        @CustomType.Parameter("sendToSubscriptionAdministrator") @Nullable Boolean sendToSubscriptionAdministrator,
+        @CustomType.Parameter("sendToSubscriptionCoAdministrators") @Nullable Boolean sendToSubscriptionCoAdministrators) {
         this.customEmails = customEmails;
         this.sendToSubscriptionAdministrator = sendToSubscriptionAdministrator;
         this.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators;

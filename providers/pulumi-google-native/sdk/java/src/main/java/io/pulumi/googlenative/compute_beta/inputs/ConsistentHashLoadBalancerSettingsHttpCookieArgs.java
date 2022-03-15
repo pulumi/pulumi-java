@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.compute_beta.inputs.DurationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
      * Name of the cookie.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -34,7 +34,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
      * Path to set for the cookie.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
@@ -45,7 +45,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
      * Lifetime of the cookie.
      * 
      */
-    @InputImport(name="ttl")
+    @Import(name="ttl")
       private final @Nullable Output<DurationArgs> ttl;
 
     public Output<DurationArgs> getTtl() {

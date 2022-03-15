@@ -7,12 +7,12 @@ import io.pulumi.awsnative.quicksight.outputs.DashboardDateTimeParameter;
 import io.pulumi.awsnative.quicksight.outputs.DashboardDecimalParameter;
 import io.pulumi.awsnative.quicksight.outputs.DashboardIntegerParameter;
 import io.pulumi.awsnative.quicksight.outputs.DashboardStringParameter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DashboardParameters {
     /**
      * <p>Date-time parameters.</p>
@@ -35,12 +35,12 @@ public final class DashboardParameters {
      */
     private final @Nullable List<DashboardStringParameter> stringParameters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DashboardParameters(
-        @OutputCustomType.Parameter("dateTimeParameters") @Nullable List<DashboardDateTimeParameter> dateTimeParameters,
-        @OutputCustomType.Parameter("decimalParameters") @Nullable List<DashboardDecimalParameter> decimalParameters,
-        @OutputCustomType.Parameter("integerParameters") @Nullable List<DashboardIntegerParameter> integerParameters,
-        @OutputCustomType.Parameter("stringParameters") @Nullable List<DashboardStringParameter> stringParameters) {
+        @CustomType.Parameter("dateTimeParameters") @Nullable List<DashboardDateTimeParameter> dateTimeParameters,
+        @CustomType.Parameter("decimalParameters") @Nullable List<DashboardDecimalParameter> decimalParameters,
+        @CustomType.Parameter("integerParameters") @Nullable List<DashboardIntegerParameter> integerParameters,
+        @CustomType.Parameter("stringParameters") @Nullable List<DashboardStringParameter> stringParameters) {
         this.dateTimeParameters = dateTimeParameters;
         this.decimalParameters = decimalParameters;
         this.integerParameters = integerParameters;

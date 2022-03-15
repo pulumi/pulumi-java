@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.pubsublite_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RetentionConfigResponse {
     /**
      * The provisioned storage, in bytes, per partition. If the number of bytes stored in any of the topic's partitions grows beyond this value, older messages will be dropped to make room for newer ones, regardless of the value of `period`.
@@ -20,10 +20,10 @@ public final class RetentionConfigResponse {
      */
     private final String period;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RetentionConfigResponse(
-        @OutputCustomType.Parameter("perPartitionBytes") String perPartitionBytes,
-        @OutputCustomType.Parameter("period") String period) {
+        @CustomType.Parameter("perPartitionBytes") String perPartitionBytes,
+        @CustomType.Parameter("period") String period) {
         this.perPartitionBytes = perPartitionBytes;
         this.period = period;
     }

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.FirewallPolicyNatRuleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -38,7 +38,7 @@ public class FirewallPolicyRuleGroup extends io.pulumi.resources.CustomResource 
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -52,7 +52,7 @@ public class FirewallPolicyRuleGroup extends io.pulumi.resources.CustomResource 
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -66,7 +66,7 @@ public class FirewallPolicyRuleGroup extends io.pulumi.resources.CustomResource 
      * Priority of the Firewall Policy Rule Group resource.
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> priority;
 
     /**
@@ -80,7 +80,7 @@ public class FirewallPolicyRuleGroup extends io.pulumi.resources.CustomResource 
      * The provisioning state of the firewall policy rule group resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -94,7 +94,7 @@ public class FirewallPolicyRuleGroup extends io.pulumi.resources.CustomResource 
      * Group of Firewall Policy rules.
      * 
      */
-    @OutputExport(name="rules", type=List.class, parameters={Either.class})
+    @Export(name="rules", type=List.class, parameters={Either.class})
     private Output</* @Nullable */ List<Either<FirewallPolicyFilterRuleResponse,FirewallPolicyNatRuleResponse>>> rules;
 
     /**
@@ -108,7 +108,7 @@ public class FirewallPolicyRuleGroup extends io.pulumi.resources.CustomResource 
      * Rule Group type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

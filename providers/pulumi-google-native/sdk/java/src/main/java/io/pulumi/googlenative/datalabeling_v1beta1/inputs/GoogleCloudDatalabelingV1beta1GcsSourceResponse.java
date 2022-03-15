@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse extends io.pu
      * The input URI of source file. This must be a Cloud Storage path (`gs://...`).
      * 
      */
-    @InputImport(name="inputUri", required=true)
+    @Import(name="inputUri", required=true)
       private final String inputUri;
 
     public String getInputUri() {
@@ -31,7 +31,7 @@ public final class GoogleCloudDatalabelingV1beta1GcsSourceResponse extends io.pu
      * The format of the source file. Only "text/csv" is supported.
      * 
      */
-    @InputImport(name="mimeType", required=true)
+    @Import(name="mimeType", required=true)
       private final String mimeType;
 
     public String getMimeType() {

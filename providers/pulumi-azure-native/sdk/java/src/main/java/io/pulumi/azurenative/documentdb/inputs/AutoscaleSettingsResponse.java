@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class AutoscaleSettingsResponse extends io.pulumi.resources.InvokeA
      * Represents maximum throughput, the resource can scale up to.
      * 
      */
-    @InputImport(name="maxThroughput")
+    @Import(name="maxThroughput")
       private final @Nullable Integer maxThroughput;
 
     public Optional<Integer> getMaxThroughput() {

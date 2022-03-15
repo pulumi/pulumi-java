@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.PodAffinityTermArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WeightedPodAffinityTermArgs extends io.pulumi.resources.Resou
      * Required. A pod affinity term, associated with the corresponding weight.
      * 
      */
-    @InputImport(name="podAffinityTerm", required=true)
+    @Import(name="podAffinityTerm", required=true)
       private final Output<PodAffinityTermArgs> podAffinityTerm;
 
     public Output<PodAffinityTermArgs> getPodAffinityTerm() {
@@ -33,7 +33,7 @@ public final class WeightedPodAffinityTermArgs extends io.pulumi.resources.Resou
      * weight associated with matching the corresponding podAffinityTerm, in the range 1-100.
      * 
      */
-    @InputImport(name="weight", required=true)
+    @Import(name="weight", required=true)
       private final Output<Integer> weight;
 
     public Output<Integer> getWeight() {

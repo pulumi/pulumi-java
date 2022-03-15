@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.loadtestservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SystemAssignedServiceIdentityResponse extends io.pulumi.resou
      * The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
      * 
      */
-    @InputImport(name="principalId", required=true)
+    @Import(name="principalId", required=true)
       private final String principalId;
 
     public String getPrincipalId() {
@@ -31,7 +31,7 @@ public final class SystemAssignedServiceIdentityResponse extends io.pulumi.resou
      * The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
      * 
      */
-    @InputImport(name="tenantId", required=true)
+    @Import(name="tenantId", required=true)
       private final String tenantId;
 
     public String getTenantId() {
@@ -42,7 +42,7 @@ public final class SystemAssignedServiceIdentityResponse extends io.pulumi.resou
      * Type of managed service identity (either system assigned, or none).
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

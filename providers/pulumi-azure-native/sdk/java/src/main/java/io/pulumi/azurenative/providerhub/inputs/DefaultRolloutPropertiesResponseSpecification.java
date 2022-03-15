@@ -11,7 +11,7 @@ import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutSpecificationRespo
 import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne;
 import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo;
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeRegistrationResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,56 +22,56 @@ public final class DefaultRolloutPropertiesResponseSpecification extends io.pulu
 
     public static final DefaultRolloutPropertiesResponseSpecification Empty = new DefaultRolloutPropertiesResponseSpecification();
 
-    @InputImport(name="canary")
+    @Import(name="canary")
       private final @Nullable DefaultRolloutSpecificationResponseCanary canary;
 
     public Optional<DefaultRolloutSpecificationResponseCanary> getCanary() {
         return this.canary == null ? Optional.empty() : Optional.ofNullable(this.canary);
     }
 
-    @InputImport(name="highTraffic")
+    @Import(name="highTraffic")
       private final @Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic;
 
     public Optional<DefaultRolloutSpecificationResponseHighTraffic> getHighTraffic() {
         return this.highTraffic == null ? Optional.empty() : Optional.ofNullable(this.highTraffic);
     }
 
-    @InputImport(name="lowTraffic")
+    @Import(name="lowTraffic")
       private final @Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic;
 
     public Optional<DefaultRolloutSpecificationResponseLowTraffic> getLowTraffic() {
         return this.lowTraffic == null ? Optional.empty() : Optional.ofNullable(this.lowTraffic);
     }
 
-    @InputImport(name="mediumTraffic")
+    @Import(name="mediumTraffic")
       private final @Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic;
 
     public Optional<DefaultRolloutSpecificationResponseMediumTraffic> getMediumTraffic() {
         return this.mediumTraffic == null ? Optional.empty() : Optional.ofNullable(this.mediumTraffic);
     }
 
-    @InputImport(name="providerRegistration")
+    @Import(name="providerRegistration")
       private final @Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration;
 
     public Optional<DefaultRolloutSpecificationResponseProviderRegistration> getProviderRegistration() {
         return this.providerRegistration == null ? Optional.empty() : Optional.ofNullable(this.providerRegistration);
     }
 
-    @InputImport(name="resourceTypeRegistrations")
+    @Import(name="resourceTypeRegistrations")
       private final @Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations;
 
     public List<ResourceTypeRegistrationResponse> getResourceTypeRegistrations() {
         return this.resourceTypeRegistrations == null ? List.of() : this.resourceTypeRegistrations;
     }
 
-    @InputImport(name="restOfTheWorldGroupOne")
+    @Import(name="restOfTheWorldGroupOne")
       private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne;
 
     public Optional<DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne> getRestOfTheWorldGroupOne() {
         return this.restOfTheWorldGroupOne == null ? Optional.empty() : Optional.ofNullable(this.restOfTheWorldGroupOne);
     }
 
-    @InputImport(name="restOfTheWorldGroupTwo")
+    @Import(name="restOfTheWorldGroupTwo")
       private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo;
 
     public Optional<DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo> getRestOfTheWorldGroupTwo() {

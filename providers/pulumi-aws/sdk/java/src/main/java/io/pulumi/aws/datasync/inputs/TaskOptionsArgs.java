@@ -4,7 +4,7 @@
 package io.pulumi.aws.datasync.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * A file metadata that shows the last time a file was accessed (that is when the file was read or written to). If set to `BEST_EFFORT`, the DataSync Task attempts to preserve the original (that is, the version before sync `PREPARING` phase) `atime` attribute on all source files. Valid values: `BEST_EFFORT`, `NONE`. Default: `BEST_EFFORT`.
      * 
      */
-    @InputImport(name="atime")
+    @Import(name="atime")
       private final @Nullable Output<String> atime;
 
     public Output<String> getAtime() {
@@ -30,7 +30,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Limits the bandwidth utilized. For example, to set a maximum of 1 MB, set this value to `1048576`. Value values: `-1` or greater. Default: `-1` (unlimited).
      * 
      */
-    @InputImport(name="bytesPerSecond")
+    @Import(name="bytesPerSecond")
       private final @Nullable Output<Integer> bytesPerSecond;
 
     public Output<Integer> getBytesPerSecond() {
@@ -41,7 +41,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Group identifier of the file's owners. Valid values: `BOTH`, `INT_VALUE`, `NAME`, `NONE`. Default: `INT_VALUE` (preserve integer value of the ID).
      * 
      */
-    @InputImport(name="gid")
+    @Import(name="gid")
       private final @Nullable Output<String> gid;
 
     public Output<String> getGid() {
@@ -52,7 +52,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Determines the type of logs that DataSync publishes to a log stream in the Amazon CloudWatch log group that you provide. Valid values: `OFF`, `BASIC`, `TRANSFER`. Default: `OFF`.
      * 
      */
-    @InputImport(name="logLevel")
+    @Import(name="logLevel")
       private final @Nullable Output<String> logLevel;
 
     public Output<String> getLogLevel() {
@@ -63,7 +63,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * A file metadata that indicates the last time a file was modified (written to) before the sync `PREPARING` phase. Value values: `NONE`, `PRESERVE`. Default: `PRESERVE`.
      * 
      */
-    @InputImport(name="mtime")
+    @Import(name="mtime")
       private final @Nullable Output<String> mtime;
 
     public Output<String> getMtime() {
@@ -74,7 +74,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Determines whether files at the destination should be overwritten or preserved when copying files. Valid values: `ALWAYS`, `NEVER`. Default: `ALWAYS`.
      * 
      */
-    @InputImport(name="overwriteMode")
+    @Import(name="overwriteMode")
       private final @Nullable Output<String> overwriteMode;
 
     public Output<String> getOverwriteMode() {
@@ -85,7 +85,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Determines which users or groups can access a file for a specific purpose such as reading, writing, or execution of the file. Valid values: `NONE`, `PRESERVE`. Default: `PRESERVE`.
      * 
      */
-    @InputImport(name="posixPermissions")
+    @Import(name="posixPermissions")
       private final @Nullable Output<String> posixPermissions;
 
     public Output<String> getPosixPermissions() {
@@ -96,7 +96,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Whether files deleted in the source should be removed or preserved in the destination file system. Valid values: `PRESERVE`, `REMOVE`. Default: `PRESERVE`.
      * 
      */
-    @InputImport(name="preserveDeletedFiles")
+    @Import(name="preserveDeletedFiles")
       private final @Nullable Output<String> preserveDeletedFiles;
 
     public Output<String> getPreserveDeletedFiles() {
@@ -107,7 +107,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Whether the DataSync Task should preserve the metadata of block and character devices in the source files system, and recreate the files with that device name and metadata on the destination. The DataSync Task can’t sync the actual contents of such devices, because many of the devices are non-terminal and don’t return an end of file (EOF) marker. Valid values: `NONE`, `PRESERVE`. Default: `NONE` (ignore special devices).
      * 
      */
-    @InputImport(name="preserveDevices")
+    @Import(name="preserveDevices")
       private final @Nullable Output<String> preserveDevices;
 
     public Output<String> getPreserveDevices() {
@@ -118,7 +118,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Determines whether tasks should be queued before executing the tasks. Valid values: `ENABLED`, `DISABLED`. Default `ENABLED`.
      * 
      */
-    @InputImport(name="taskQueueing")
+    @Import(name="taskQueueing")
       private final @Nullable Output<String> taskQueueing;
 
     public Output<String> getTaskQueueing() {
@@ -129,7 +129,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Determines whether DataSync transfers only the data and metadata that differ between the source and the destination location, or whether DataSync transfers all the content from the source, without comparing to the destination location. Valid values: `CHANGED`, `ALL`. Default: `CHANGED`
      * 
      */
-    @InputImport(name="transferMode")
+    @Import(name="transferMode")
       private final @Nullable Output<String> transferMode;
 
     public Output<String> getTransferMode() {
@@ -140,7 +140,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * User identifier of the file's owners. Valid values: `BOTH`, `INT_VALUE`, `NAME`, `NONE`. Default: `INT_VALUE` (preserve integer value of the ID).
      * 
      */
-    @InputImport(name="uid")
+    @Import(name="uid")
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {
@@ -151,7 +151,7 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * Whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred. Valid values: `NONE`, `POINT_IN_TIME_CONSISTENT`, `ONLY_FILES_TRANSFERRED`. Default: `POINT_IN_TIME_CONSISTENT`.
      * 
      */
-    @InputImport(name="verifyMode")
+    @Import(name="verifyMode")
       private final @Nullable Output<String> verifyMode;
 
     public Output<String> getVerifyMode() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudMlV1_Trial_ParameterResponse {
     /**
      * Must be set if ParameterType is DOUBLE or DISCRETE.
@@ -31,12 +31,12 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse {
      */
     private final String stringValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudMlV1_Trial_ParameterResponse(
-        @OutputCustomType.Parameter("floatValue") Double floatValue,
-        @OutputCustomType.Parameter("intValue") String intValue,
-        @OutputCustomType.Parameter("parameter") String parameter,
-        @OutputCustomType.Parameter("stringValue") String stringValue) {
+        @CustomType.Parameter("floatValue") Double floatValue,
+        @CustomType.Parameter("intValue") String intValue,
+        @CustomType.Parameter("parameter") String parameter,
+        @CustomType.Parameter("stringValue") String stringValue) {
         this.floatValue = floatValue;
         this.intValue = intValue;
         this.parameter = parameter;

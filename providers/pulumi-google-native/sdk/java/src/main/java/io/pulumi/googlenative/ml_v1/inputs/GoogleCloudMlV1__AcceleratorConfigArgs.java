@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__AcceleratorConfigType;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__AcceleratorConfigArgs extends io.pulumi.reso
      * The number of accelerators to attach to each machine running the job.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Output<String> count;
 
     public Output<String> getCount() {
@@ -34,7 +34,7 @@ public final class GoogleCloudMlV1__AcceleratorConfigArgs extends io.pulumi.reso
      * The type of accelerator to use.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<GoogleCloudMlV1__AcceleratorConfigType> type;
 
     public Output<GoogleCloudMlV1__AcceleratorConfigType> getType() {

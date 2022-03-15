@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AutoUpgradeOptionsResponse {
     /**
      * [Output only] This field is set when upgrades are about to commence with the approximate start time for the upgrades, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.
@@ -20,10 +20,10 @@ public final class AutoUpgradeOptionsResponse {
      */
     private final String description;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoUpgradeOptionsResponse(
-        @OutputCustomType.Parameter("autoUpgradeStartTime") String autoUpgradeStartTime,
-        @OutputCustomType.Parameter("description") String description) {
+        @CustomType.Parameter("autoUpgradeStartTime") String autoUpgradeStartTime,
+        @CustomType.Parameter("description") String description) {
         this.autoUpgradeStartTime = autoUpgradeStartTime;
         this.description = description;
     }

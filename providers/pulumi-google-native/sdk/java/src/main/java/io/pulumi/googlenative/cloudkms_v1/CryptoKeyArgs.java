@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudkms_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.cloudkms_v1.enums.CryptoKeyPurpose;
 import io.pulumi.googlenative.cloudkms_v1.inputs.CryptoKeyVersionTemplateArgs;
 import java.lang.Boolean;
@@ -22,14 +22,14 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The resource name of the backend environment where the key material for all CryptoKeyVersions associated with this CryptoKey reside and where all related cryptographic operations are performed. Only applicable if CryptoKeyVersions have a ProtectionLevel of EXTERNAL_VPC, with the resource name in the format `projects/*{@literal /}locations/*{@literal /}ekmConnections/*`. Note, this list is non-exhaustive and may apply to additional ProtectionLevels in the future.
      * 
      */
-    @InputImport(name="cryptoKeyBackend")
+    @Import(name="cryptoKeyBackend")
       private final @Nullable Output<String> cryptoKeyBackend;
 
     public Output<String> getCryptoKeyBackend() {
         return this.cryptoKeyBackend == null ? Output.empty() : this.cryptoKeyBackend;
     }
 
-    @InputImport(name="cryptoKeyId", required=true)
+    @Import(name="cryptoKeyId", required=true)
       private final Output<String> cryptoKeyId;
 
     public Output<String> getCryptoKeyId() {
@@ -40,7 +40,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The period of time that versions of this key spend in the DESTROY_SCHEDULED state before transitioning to DESTROYED. If not specified at creation time, the default duration is 24 hours.
      * 
      */
-    @InputImport(name="destroyScheduledDuration")
+    @Import(name="destroyScheduledDuration")
       private final @Nullable Output<String> destroyScheduledDuration;
 
     public Output<String> getDestroyScheduledDuration() {
@@ -51,14 +51,14 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. Whether this key may contain imported versions only.
      * 
      */
-    @InputImport(name="importOnly")
+    @Import(name="importOnly")
       private final @Nullable Output<Boolean> importOnly;
 
     public Output<Boolean> getImportOnly() {
         return this.importOnly == null ? Output.empty() : this.importOnly;
     }
 
-    @InputImport(name="keyRingId", required=true)
+    @Import(name="keyRingId", required=true)
       private final Output<String> keyRingId;
 
     public Output<String> getKeyRingId() {
@@ -69,14 +69,14 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Labels with user-defined metadata. For more information, see [Labeling Keys](https://cloud.google.com/kms/docs/labeling-keys).
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -87,14 +87,14 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
      * At next_rotation_time, the Key Management Service will automatically: 1. Create a new version of this CryptoKey. 2. Mark the new version as primary. Key rotations performed manually via CreateCryptoKeyVersion and UpdateCryptoKeyPrimaryVersion do not affect next_rotation_time. Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must be omitted.
      * 
      */
-    @InputImport(name="nextRotationTime")
+    @Import(name="nextRotationTime")
       private final @Nullable Output<String> nextRotationTime;
 
     public Output<String> getNextRotationTime() {
         return this.nextRotationTime == null ? Output.empty() : this.nextRotationTime;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -105,7 +105,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The immutable purpose of this CryptoKey.
      * 
      */
-    @InputImport(name="purpose")
+    @Import(name="purpose")
       private final @Nullable Output<CryptoKeyPurpose> purpose;
 
     public Output<CryptoKeyPurpose> getPurpose() {
@@ -116,14 +116,14 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
      * next_rotation_time will be advanced by this period when the service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours. If rotation_period is set, next_rotation_time must also be set. Keys with purpose ENCRYPT_DECRYPT support automatic rotation. For other keys, this field must be omitted.
      * 
      */
-    @InputImport(name="rotationPeriod")
+    @Import(name="rotationPeriod")
       private final @Nullable Output<String> rotationPeriod;
 
     public Output<String> getRotationPeriod() {
         return this.rotationPeriod == null ? Output.empty() : this.rotationPeriod;
     }
 
-    @InputImport(name="skipInitialVersionCreation")
+    @Import(name="skipInitialVersionCreation")
       private final @Nullable Output<String> skipInitialVersionCreation;
 
     public Output<String> getSkipInitialVersionCreation() {
@@ -134,7 +134,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
      * A template describing settings for new CryptoKeyVersion instances. The properties of new CryptoKeyVersion instances created by either CreateCryptoKeyVersion or auto-rotation are controlled by this template.
      * 
      */
-    @InputImport(name="versionTemplate")
+    @Import(name="versionTemplate")
       private final @Nullable Output<CryptoKeyVersionTemplateArgs> versionTemplate;
 
     public Output<CryptoKeyVersionTemplateArgs> getVersionTemplate() {

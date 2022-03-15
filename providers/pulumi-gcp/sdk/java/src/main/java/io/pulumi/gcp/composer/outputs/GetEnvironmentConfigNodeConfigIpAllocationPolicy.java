@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentConfigNodeConfigIpAllocationPolicy {
     private final String clusterIpv4CidrBlock;
     private final String clusterSecondaryRangeName;
@@ -16,13 +16,13 @@ public final class GetEnvironmentConfigNodeConfigIpAllocationPolicy {
     private final String servicesSecondaryRangeName;
     private final Boolean useIpAliases;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentConfigNodeConfigIpAllocationPolicy(
-        @OutputCustomType.Parameter("clusterIpv4CidrBlock") String clusterIpv4CidrBlock,
-        @OutputCustomType.Parameter("clusterSecondaryRangeName") String clusterSecondaryRangeName,
-        @OutputCustomType.Parameter("servicesIpv4CidrBlock") String servicesIpv4CidrBlock,
-        @OutputCustomType.Parameter("servicesSecondaryRangeName") String servicesSecondaryRangeName,
-        @OutputCustomType.Parameter("useIpAliases") Boolean useIpAliases) {
+        @CustomType.Parameter("clusterIpv4CidrBlock") String clusterIpv4CidrBlock,
+        @CustomType.Parameter("clusterSecondaryRangeName") String clusterSecondaryRangeName,
+        @CustomType.Parameter("servicesIpv4CidrBlock") String servicesIpv4CidrBlock,
+        @CustomType.Parameter("servicesSecondaryRangeName") String servicesSecondaryRangeName,
+        @CustomType.Parameter("useIpAliases") Boolean useIpAliases) {
         this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
         this.clusterSecondaryRangeName = clusterSecondaryRangeName;
         this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;

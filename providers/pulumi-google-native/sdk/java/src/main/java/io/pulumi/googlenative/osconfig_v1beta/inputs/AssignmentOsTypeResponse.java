@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class AssignmentOsTypeResponse extends io.pulumi.resources.InvokeAr
      * Targets VM instances with OS Inventory enabled and having the following OS architecture.
      * 
      */
-    @InputImport(name="osArchitecture", required=true)
+    @Import(name="osArchitecture", required=true)
       private final String osArchitecture;
 
     public String getOsArchitecture() {
@@ -31,7 +31,7 @@ public final class AssignmentOsTypeResponse extends io.pulumi.resources.InvokeAr
      * Targets VM instances with OS Inventory enabled and having the following OS short name, for example "debian" or "windows".
      * 
      */
-    @InputImport(name="osShortName", required=true)
+    @Import(name="osShortName", required=true)
       private final String osShortName;
 
     public String getOsShortName() {
@@ -42,7 +42,7 @@ public final class AssignmentOsTypeResponse extends io.pulumi.resources.InvokeAr
      * Targets VM instances with OS Inventory enabled and having the following following OS version.
      * 
      */
-    @InputImport(name="osVersion", required=true)
+    @Import(name="osVersion", required=true)
       private final String osVersion;
 
     public String getOsVersion() {

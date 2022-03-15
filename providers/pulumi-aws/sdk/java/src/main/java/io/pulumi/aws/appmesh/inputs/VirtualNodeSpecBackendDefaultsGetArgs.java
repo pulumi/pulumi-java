@@ -5,7 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class VirtualNodeSpecBackendDefaultsGetArgs extends io.pulumi.resou
      * The default client policy for virtual service backends. See above for details.
      * 
      */
-    @InputImport(name="clientPolicy")
+    @Import(name="clientPolicy")
       private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> clientPolicy;
 
     public Output<VirtualNodeSpecBackendDefaultsClientPolicyGetArgs> getClientPolicy() {

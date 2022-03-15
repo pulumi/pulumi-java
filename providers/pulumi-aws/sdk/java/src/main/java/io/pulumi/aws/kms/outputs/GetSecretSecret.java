@@ -3,26 +3,26 @@
 
 package io.pulumi.aws.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSecretSecret {
     private final @Nullable Map<String,String> context;
     private final @Nullable List<String> grantTokens;
     private final String name;
     private final String payload;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSecretSecret(
-        @OutputCustomType.Parameter("context") @Nullable Map<String,String> context,
-        @OutputCustomType.Parameter("grantTokens") @Nullable List<String> grantTokens,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("payload") String payload) {
+        @CustomType.Parameter("context") @Nullable Map<String,String> context,
+        @CustomType.Parameter("grantTokens") @Nullable List<String> grantTokens,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("payload") String payload) {
         this.context = context;
         this.grantTokens = grantTokens;
         this.name = name;

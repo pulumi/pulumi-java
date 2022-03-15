@@ -6,7 +6,7 @@ package io.pulumi.azurenative.managedservices;
 import io.pulumi.azurenative.managedservices.inputs.PlanArgs;
 import io.pulumi.azurenative.managedservices.inputs.RegistrationDefinitionPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
      * Plan details for the managed services.
      * 
      */
-    @InputImport(name="plan")
+    @Import(name="plan")
       private final @Nullable Output<PlanArgs> plan;
 
     public Output<PlanArgs> getPlan() {
@@ -31,7 +31,7 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
      * Properties of a registration definition.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<RegistrationDefinitionPropertiesArgs> properties;
 
     public Output<RegistrationDefinitionPropertiesArgs> getProperties() {
@@ -42,7 +42,7 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
      * Guid of the registration definition.
      * 
      */
-    @InputImport(name="registrationDefinitionId")
+    @Import(name="registrationDefinitionId")
       private final @Nullable Output<String> registrationDefinitionId;
 
     public Output<String> getRegistrationDefinitionId() {
@@ -53,7 +53,7 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
      * Scope of the resource.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSiteResult {
     /**
      * Optional. The [ID of a Web App](https://firebase.google.com/docs/projects/api/reference/rest/v1beta1/projects.webApps#WebApp.FIELDS.app_id) associated with the Hosting site.
@@ -36,13 +36,13 @@ public final class GetSiteResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSiteResult(
-        @OutputCustomType.Parameter("appId") String appId,
-        @OutputCustomType.Parameter("defaultUrl") String defaultUrl,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("appId") String appId,
+        @CustomType.Parameter("defaultUrl") String defaultUrl,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("type") String type) {
         this.appId = appId;
         this.defaultUrl = defaultUrl;
         this.labels = labels;

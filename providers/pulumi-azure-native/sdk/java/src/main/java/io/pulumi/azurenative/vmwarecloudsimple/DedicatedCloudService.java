@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.vmwarecloudsimple.DedicatedCloudServiceArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
      * gateway Subnet for the account. It will collect the subnet address and always treat it as /28
      * 
      */
-    @OutputExport(name="gatewaySubnet", type=String.class, parameters={})
+    @Export(name="gatewaySubnet", type=String.class, parameters={})
     private Output<String> gatewaySubnet;
 
     /**
@@ -50,7 +50,7 @@ public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
      * indicates whether account onboarded or not in a given region
      * 
      */
-    @OutputExport(name="isAccountOnboarded", type=String.class, parameters={})
+    @Export(name="isAccountOnboarded", type=String.class, parameters={})
     private Output<String> isAccountOnboarded;
 
     /**
@@ -64,7 +64,7 @@ public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
      * Azure region
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -78,7 +78,7 @@ public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
      * {dedicatedCloudServiceName}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
      * total nodes purchased
      * 
      */
-    @OutputExport(name="nodes", type=Integer.class, parameters={})
+    @Export(name="nodes", type=Integer.class, parameters={})
     private Output<Integer> nodes;
 
     /**
@@ -106,7 +106,7 @@ public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
      * link to a service management web portal
      * 
      */
-    @OutputExport(name="serviceURL", type=String.class, parameters={})
+    @Export(name="serviceURL", type=String.class, parameters={})
     private Output<String> serviceURL;
 
     /**
@@ -120,7 +120,7 @@ public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
      * The list of tags
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -134,7 +134,7 @@ public class DedicatedCloudService extends io.pulumi.resources.CustomResource {
      * {resourceProviderNamespace}/{resourceType}
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

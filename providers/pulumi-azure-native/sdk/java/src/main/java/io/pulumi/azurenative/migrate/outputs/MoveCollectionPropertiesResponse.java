@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.MoveCollectionPropertiesResponseErrors;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class MoveCollectionPropertiesResponse {
     /**
      * Defines the move collection errors.
@@ -31,12 +31,12 @@ public final class MoveCollectionPropertiesResponse {
      */
     private final String targetRegion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MoveCollectionPropertiesResponse(
-        @OutputCustomType.Parameter("errors") MoveCollectionPropertiesResponseErrors errors,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sourceRegion") String sourceRegion,
-        @OutputCustomType.Parameter("targetRegion") String targetRegion) {
+        @CustomType.Parameter("errors") MoveCollectionPropertiesResponseErrors errors,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sourceRegion") String sourceRegion,
+        @CustomType.Parameter("targetRegion") String targetRegion) {
         this.errors = errors;
         this.provisioningState = provisioningState;
         this.sourceRegion = sourceRegion;

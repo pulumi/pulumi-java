@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
      * The values sent must match the specified values exactly.
      * 
      */
-    @InputImport(name="exacts", required=true)
+    @Import(name="exacts", required=true)
       private final Output<List<String>> exacts;
 
     public Output<List<String>> getExacts() {

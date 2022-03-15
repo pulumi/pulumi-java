@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DefaultObjectAccessControlProjectTeamArgs extends io.pulumi.r
      * The project number.
      * 
      */
-    @InputImport(name="projectNumber")
+    @Import(name="projectNumber")
       private final @Nullable Output<String> projectNumber;
 
     public Output<String> getProjectNumber() {
@@ -33,7 +33,7 @@ public final class DefaultObjectAccessControlProjectTeamArgs extends io.pulumi.r
      * The team.
      * 
      */
-    @InputImport(name="team")
+    @Import(name="team")
       private final @Nullable Output<String> team;
 
     public Output<String> getTeam() {

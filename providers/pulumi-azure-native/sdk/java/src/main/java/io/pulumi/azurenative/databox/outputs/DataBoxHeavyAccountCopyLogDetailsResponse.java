@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataBoxHeavyAccountCopyLogDetailsResponse {
     /**
      * Account name.
@@ -32,12 +32,12 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse {
      */
     private final List<String> copyVerboseLogLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataBoxHeavyAccountCopyLogDetailsResponse(
-        @OutputCustomType.Parameter("accountName") String accountName,
-        @OutputCustomType.Parameter("copyLogDetailsType") String copyLogDetailsType,
-        @OutputCustomType.Parameter("copyLogLink") List<String> copyLogLink,
-        @OutputCustomType.Parameter("copyVerboseLogLink") List<String> copyVerboseLogLink) {
+        @CustomType.Parameter("accountName") String accountName,
+        @CustomType.Parameter("copyLogDetailsType") String copyLogDetailsType,
+        @CustomType.Parameter("copyLogLink") List<String> copyLogLink,
+        @CustomType.Parameter("copyVerboseLogLink") List<String> copyVerboseLogLink) {
         this.accountName = accountName;
         this.copyLogDetailsType = copyLogDetailsType;
         this.copyLogLink = copyLogLink;

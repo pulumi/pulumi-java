@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SpatialSpecResponse {
     /**
      * The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard (/path/*)
@@ -23,10 +23,10 @@ public final class SpatialSpecResponse {
      */
     private final @Nullable List<String> types;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SpatialSpecResponse(
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("types") @Nullable List<String> types) {
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("types") @Nullable List<String> types) {
         this.path = path;
         this.types = types;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetActionArgs extends io.pulumi.resources.InvokeArgs {
      * Action ID
      * 
      */
-    @InputImport(name="actionId", required=true)
+    @Import(name="actionId", required=true)
       private final String actionId;
 
     public String getActionId() {
@@ -27,7 +27,7 @@ public final class GetActionArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -38,7 +38,7 @@ public final class GetActionArgs extends io.pulumi.resources.InvokeArgs {
      * Alert rule ID
      * 
      */
-    @InputImport(name="ruleId", required=true)
+    @Import(name="ruleId", required=true)
       private final String ruleId;
 
     public String getRuleId() {
@@ -49,7 +49,7 @@ public final class GetActionArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final String workspaceName;
 
     public String getWorkspaceName() {

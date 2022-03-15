@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.redis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.redis_v1beta1.enums.WeeklyMaintenanceWindowDay;
 import io.pulumi.googlenative.redis_v1beta1.inputs.TimeOfDayArgs;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WeeklyMaintenanceWindowArgs extends io.pulumi.resources.Resou
      * The day of week that maintenance updates occur.
      * 
      */
-    @InputImport(name="day", required=true)
+    @Import(name="day", required=true)
       private final Output<WeeklyMaintenanceWindowDay> day;
 
     public Output<WeeklyMaintenanceWindowDay> getDay() {
@@ -33,7 +33,7 @@ public final class WeeklyMaintenanceWindowArgs extends io.pulumi.resources.Resou
      * Start time of the window in UTC time.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final Output<TimeOfDayArgs> startTime;
 
     public Output<TimeOfDayArgs> getStartTime() {

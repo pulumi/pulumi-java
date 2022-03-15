@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse {
     /**
      * Indicates whether this restriction is enforced on a Best Effort basis.
@@ -21,10 +21,10 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
      */
     private final Integer configurationData;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse(
-        @OutputCustomType.Parameter("bestEffort") Boolean bestEffort,
-        @OutputCustomType.Parameter("configurationData") Integer configurationData) {
+        @CustomType.Parameter("bestEffort") Boolean bestEffort,
+        @CustomType.Parameter("configurationData") Integer configurationData) {
         this.bestEffort = bestEffort;
         this.configurationData = configurationData;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2IntentMessageMediaContentMediaType;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentArgs extends 
      * List of media objects.
      * 
      */
-    @InputImport(name="mediaObjects", required=true)
+    @Import(name="mediaObjects", required=true)
       private final Output<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> mediaObjects;
 
     public Output<List<GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObjectArgs>> getMediaObjects() {
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentArgs extends 
      * Optional. What type of media is the content (ie "audio").
      * 
      */
-    @InputImport(name="mediaType")
+    @Import(name="mediaType")
       private final @Nullable Output<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> mediaType;
 
     public Output<GoogleCloudDialogflowV2IntentMessageMediaContentMediaType> getMediaType() {

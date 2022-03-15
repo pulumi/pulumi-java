@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AdvancedScheduleMonthlyOccurrenceResponse extends io.pulumi.r
      * Day of the occurrence. Must be one of monday, tuesday, wednesday, thursday, friday, saturday, sunday.
      * 
      */
-    @InputImport(name="day")
+    @Import(name="day")
       private final @Nullable String day;
 
     public Optional<String> getDay() {
@@ -34,7 +34,7 @@ public final class AdvancedScheduleMonthlyOccurrenceResponse extends io.pulumi.r
      * Occurrence of the week within the month. Must be between 1 and 5
      * 
      */
-    @InputImport(name="occurrence")
+    @Import(name="occurrence")
       private final @Nullable Integer occurrence;
 
     public Optional<Integer> getOccurrence() {

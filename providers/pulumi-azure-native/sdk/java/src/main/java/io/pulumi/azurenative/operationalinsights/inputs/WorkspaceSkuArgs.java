@@ -6,7 +6,7 @@ package io.pulumi.azurenative.operationalinsights.inputs;
 import io.pulumi.azurenative.operationalinsights.enums.WorkspaceSkuNameEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class WorkspaceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * The capacity reservation level for this workspace, when CapacityReservation sku is selected.
      * 
      */
-    @InputImport(name="capacityReservationLevel")
+    @Import(name="capacityReservationLevel")
       private final @Nullable Output<Integer> capacityReservationLevel;
 
     public Output<Integer> getCapacityReservationLevel() {
@@ -36,7 +36,7 @@ public final class WorkspaceSkuArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the SKU.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<Either<String,WorkspaceSkuNameEnum>> name;
 
     public Output<Either<String,WorkspaceSkuNameEnum>> getName() {

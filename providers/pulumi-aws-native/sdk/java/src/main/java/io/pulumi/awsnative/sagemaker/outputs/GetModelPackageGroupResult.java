@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.enums.ModelPackageGroupStatus;
 import io.pulumi.awsnative.sagemaker.outputs.ModelPackageGroupTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetModelPackageGroupResult {
     /**
      * The time at which the model package group was created.
@@ -33,13 +33,13 @@ public final class GetModelPackageGroupResult {
      */
     private final @Nullable List<ModelPackageGroupTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetModelPackageGroupResult(
-        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
-        @OutputCustomType.Parameter("modelPackageGroupArn") @Nullable String modelPackageGroupArn,
-        @OutputCustomType.Parameter("modelPackageGroupPolicy") @Nullable Object modelPackageGroupPolicy,
-        @OutputCustomType.Parameter("modelPackageGroupStatus") @Nullable ModelPackageGroupStatus modelPackageGroupStatus,
-        @OutputCustomType.Parameter("tags") @Nullable List<ModelPackageGroupTag> tags) {
+        @CustomType.Parameter("creationTime") @Nullable String creationTime,
+        @CustomType.Parameter("modelPackageGroupArn") @Nullable String modelPackageGroupArn,
+        @CustomType.Parameter("modelPackageGroupPolicy") @Nullable Object modelPackageGroupPolicy,
+        @CustomType.Parameter("modelPackageGroupStatus") @Nullable ModelPackageGroupStatus modelPackageGroupStatus,
+        @CustomType.Parameter("tags") @Nullable List<ModelPackageGroupTag> tags) {
         this.creationTime = creationTime;
         this.modelPackageGroupArn = modelPackageGroupArn;
         this.modelPackageGroupPolicy = modelPackageGroupPolicy;

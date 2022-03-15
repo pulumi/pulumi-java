@@ -4,7 +4,7 @@
 package io.pulumi.aws.kms;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ReplicaExternalKeyArgs extends io.pulumi.resources.ResourceAr
      * The default value is `false`.
      * 
      */
-    @InputImport(name="bypassPolicyLockoutSafetyCheck")
+    @Import(name="bypassPolicyLockoutSafetyCheck")
       private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
     public Output<Boolean> getBypassPolicyLockoutSafetyCheck() {
@@ -36,7 +36,7 @@ public final class ReplicaExternalKeyArgs extends io.pulumi.resources.ResourceAr
      * If you specify a value, it must be between `7` and `30`, inclusive. If you do not specify a value, it defaults to `30`.
      * 
      */
-    @InputImport(name="deletionWindowInDays")
+    @Import(name="deletionWindowInDays")
       private final @Nullable Output<Integer> deletionWindowInDays;
 
     public Output<Integer> getDeletionWindowInDays() {
@@ -47,7 +47,7 @@ public final class ReplicaExternalKeyArgs extends io.pulumi.resources.ResourceAr
      * A description of the KMS key.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -58,7 +58,7 @@ public final class ReplicaExternalKeyArgs extends io.pulumi.resources.ResourceAr
      * Specifies whether the replica key is enabled. Disabled KMS keys cannot be used in cryptographic operations. Keys pending import can only be `false`. Imported keys default to `true` unless expired.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -69,14 +69,14 @@ public final class ReplicaExternalKeyArgs extends io.pulumi.resources.ResourceAr
      * Base64 encoded 256-bit symmetric encryption key material to import. The KMS key is permanently associated with this key material. The same key material can be [reimported](https://docs.aws.amazon.com/kms/latest/developerguide/importing-keys.html#reimport-key-material), but you cannot import different key material.
      * 
      */
-    @InputImport(name="keyMaterialBase64")
+    @Import(name="keyMaterialBase64")
       private final @Nullable Output<String> keyMaterialBase64;
 
     public Output<String> getKeyMaterialBase64() {
         return this.keyMaterialBase64 == null ? Output.empty() : this.keyMaterialBase64;
     }
 
-    @InputImport(name="policy")
+    @Import(name="policy")
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
@@ -87,7 +87,7 @@ public final class ReplicaExternalKeyArgs extends io.pulumi.resources.ResourceAr
      * The ARN of the multi-Region primary key to replicate. The primary key must be in a different AWS Region of the same AWS Partition. You can create only one replica of a given primary key in each AWS Region.
      * 
      */
-    @InputImport(name="primaryKeyArn", required=true)
+    @Import(name="primaryKeyArn", required=true)
       private final Output<String> primaryKeyArn;
 
     public Output<String> getPrimaryKeyArn() {
@@ -98,7 +98,7 @@ public final class ReplicaExternalKeyArgs extends io.pulumi.resources.ResourceAr
      * A map of tags to assign to the replica key. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -109,7 +109,7 @@ public final class ReplicaExternalKeyArgs extends io.pulumi.resources.ResourceAr
      * Time at which the imported key material expires. When the key material expires, AWS KMS deletes the key material and the key becomes unusable. If not specified, key material does not expire. Valid values: [RFC3339 time string](https://tools.ietf.org/html/rfc3339#section-5.8) (`YYYY-MM-DDTHH:MM:SSZ`)
      * 
      */
-    @InputImport(name="validTo")
+    @Import(name="validTo")
       private final @Nullable Output<String> validTo;
 
     public Output<String> getValidTo() {

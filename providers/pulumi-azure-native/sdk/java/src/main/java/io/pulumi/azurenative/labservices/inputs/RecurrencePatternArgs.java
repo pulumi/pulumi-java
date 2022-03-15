@@ -6,7 +6,7 @@ package io.pulumi.azurenative.labservices.inputs;
 import io.pulumi.azurenative.labservices.enums.RecurrenceFrequency;
 import io.pulumi.azurenative.labservices.enums.WeekDay;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
      * When the recurrence will expire. This date is inclusive.
      * 
      */
-    @InputImport(name="expirationDate", required=true)
+    @Import(name="expirationDate", required=true)
       private final Output<String> expirationDate;
 
     public Output<String> getExpirationDate() {
@@ -37,7 +37,7 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
      * The frequency of the recurrence.
      * 
      */
-    @InputImport(name="frequency", required=true)
+    @Import(name="frequency", required=true)
       private final Output<RecurrenceFrequency> frequency;
 
     public Output<RecurrenceFrequency> getFrequency() {
@@ -48,7 +48,7 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
      * The interval to invoke the schedule on. For example, interval = 2 and RecurrenceFrequency.Daily will run every 2 days. When no interval is supplied, an interval of 1 is used.
      * 
      */
-    @InputImport(name="interval")
+    @Import(name="interval")
       private final @Nullable Output<Integer> interval;
 
     public Output<Integer> getInterval() {
@@ -59,7 +59,7 @@ public final class RecurrencePatternArgs extends io.pulumi.resources.ResourceArg
      * The week days the schedule runs. Used for when the Frequency is set to Weekly.
      * 
      */
-    @InputImport(name="weekDays")
+    @Import(name="weekDays")
       private final @Nullable Output<List<WeekDay>> weekDays;
 
     public Output<List<WeekDay>> getWeekDays() {

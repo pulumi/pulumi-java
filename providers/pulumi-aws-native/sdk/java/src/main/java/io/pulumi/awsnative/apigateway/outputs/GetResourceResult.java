@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetResourceResult {
     /**
      * A unique primary identifier for a Resource
@@ -17,8 +17,8 @@ public final class GetResourceResult {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor
-    private GetResourceResult(@OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
+    @CustomType.Constructor
+    private GetResourceResult(@CustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.resourceId = resourceId;
     }
 

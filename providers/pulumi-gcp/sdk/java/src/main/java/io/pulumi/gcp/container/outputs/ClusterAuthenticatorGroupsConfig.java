@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterAuthenticatorGroupsConfig {
     /**
      * The name of the RBAC security group for use with Google security groups in Kubernetes RBAC. Group name must be in format `gke-security-groups@yourdomain.com`.
@@ -15,8 +15,8 @@ public final class ClusterAuthenticatorGroupsConfig {
      */
     private final String securityGroup;
 
-    @OutputCustomType.Constructor
-    private ClusterAuthenticatorGroupsConfig(@OutputCustomType.Parameter("securityGroup") String securityGroup) {
+    @CustomType.Constructor
+    private ClusterAuthenticatorGroupsConfig(@CustomType.Parameter("securityGroup") String securityGroup) {
         this.securityGroup = securityGroup;
     }
 

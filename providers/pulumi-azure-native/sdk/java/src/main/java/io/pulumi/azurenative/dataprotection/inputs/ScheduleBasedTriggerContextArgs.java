@@ -6,7 +6,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 import io.pulumi.azurenative.dataprotection.inputs.BackupScheduleArgs;
 import io.pulumi.azurenative.dataprotection.inputs.TaggingCriteriaArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
      * Expected value is 'ScheduleBasedTriggerContext'.
      * 
      */
-    @InputImport(name="objectType", required=true)
+    @Import(name="objectType", required=true)
       private final Output<String> objectType;
 
     public Output<String> getObjectType() {
@@ -36,7 +36,7 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
      * Schedule for this backup
      * 
      */
-    @InputImport(name="schedule", required=true)
+    @Import(name="schedule", required=true)
       private final Output<BackupScheduleArgs> schedule;
 
     public Output<BackupScheduleArgs> getSchedule() {
@@ -47,7 +47,7 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
      * List of tags that can be applicable for given schedule.
      * 
      */
-    @InputImport(name="taggingCriteria", required=true)
+    @Import(name="taggingCriteria", required=true)
       private final Output<List<TaggingCriteriaArgs>> taggingCriteria;
 
     public Output<List<TaggingCriteriaArgs>> getTaggingCriteria() {

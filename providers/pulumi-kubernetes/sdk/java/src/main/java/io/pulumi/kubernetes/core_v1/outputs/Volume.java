@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.AWSElasticBlockStoreVolumeSource;
 import io.pulumi.kubernetes.core_v1.outputs.AzureDiskVolumeSource;
 import io.pulumi.kubernetes.core_v1.outputs.AzureFileVolumeSource;
@@ -38,7 +38,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Volume {
     /**
      * AWSElasticBlockStore represents an AWS Disk resource that is attached to a kubelet's host machine and then exposed to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore
@@ -204,38 +204,38 @@ public final class Volume {
      */
     private final @Nullable VsphereVirtualDiskVolumeSource vsphereVolume;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Volume(
-        @OutputCustomType.Parameter("awsElasticBlockStore") @Nullable AWSElasticBlockStoreVolumeSource awsElasticBlockStore,
-        @OutputCustomType.Parameter("azureDisk") @Nullable AzureDiskVolumeSource azureDisk,
-        @OutputCustomType.Parameter("azureFile") @Nullable AzureFileVolumeSource azureFile,
-        @OutputCustomType.Parameter("cephfs") @Nullable CephFSVolumeSource cephfs,
-        @OutputCustomType.Parameter("cinder") @Nullable CinderVolumeSource cinder,
-        @OutputCustomType.Parameter("configMap") @Nullable ConfigMapVolumeSource configMap,
-        @OutputCustomType.Parameter("csi") @Nullable CSIVolumeSource csi,
-        @OutputCustomType.Parameter("downwardAPI") @Nullable DownwardAPIVolumeSource downwardAPI,
-        @OutputCustomType.Parameter("emptyDir") @Nullable EmptyDirVolumeSource emptyDir,
-        @OutputCustomType.Parameter("ephemeral") @Nullable EphemeralVolumeSource ephemeral,
-        @OutputCustomType.Parameter("fc") @Nullable FCVolumeSource fc,
-        @OutputCustomType.Parameter("flexVolume") @Nullable FlexVolumeSource flexVolume,
-        @OutputCustomType.Parameter("flocker") @Nullable FlockerVolumeSource flocker,
-        @OutputCustomType.Parameter("gcePersistentDisk") @Nullable GCEPersistentDiskVolumeSource gcePersistentDisk,
-        @OutputCustomType.Parameter("gitRepo") @Nullable GitRepoVolumeSource gitRepo,
-        @OutputCustomType.Parameter("glusterfs") @Nullable GlusterfsVolumeSource glusterfs,
-        @OutputCustomType.Parameter("hostPath") @Nullable HostPathVolumeSource hostPath,
-        @OutputCustomType.Parameter("iscsi") @Nullable ISCSIVolumeSource iscsi,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("nfs") @Nullable NFSVolumeSource nfs,
-        @OutputCustomType.Parameter("persistentVolumeClaim") @Nullable PersistentVolumeClaimVolumeSource persistentVolumeClaim,
-        @OutputCustomType.Parameter("photonPersistentDisk") @Nullable PhotonPersistentDiskVolumeSource photonPersistentDisk,
-        @OutputCustomType.Parameter("portworxVolume") @Nullable PortworxVolumeSource portworxVolume,
-        @OutputCustomType.Parameter("projected") @Nullable ProjectedVolumeSource projected,
-        @OutputCustomType.Parameter("quobyte") @Nullable QuobyteVolumeSource quobyte,
-        @OutputCustomType.Parameter("rbd") @Nullable RBDVolumeSource rbd,
-        @OutputCustomType.Parameter("scaleIO") @Nullable ScaleIOVolumeSource scaleIO,
-        @OutputCustomType.Parameter("secret") @Nullable SecretVolumeSource secret,
-        @OutputCustomType.Parameter("storageos") @Nullable StorageOSVolumeSource storageos,
-        @OutputCustomType.Parameter("vsphereVolume") @Nullable VsphereVirtualDiskVolumeSource vsphereVolume) {
+        @CustomType.Parameter("awsElasticBlockStore") @Nullable AWSElasticBlockStoreVolumeSource awsElasticBlockStore,
+        @CustomType.Parameter("azureDisk") @Nullable AzureDiskVolumeSource azureDisk,
+        @CustomType.Parameter("azureFile") @Nullable AzureFileVolumeSource azureFile,
+        @CustomType.Parameter("cephfs") @Nullable CephFSVolumeSource cephfs,
+        @CustomType.Parameter("cinder") @Nullable CinderVolumeSource cinder,
+        @CustomType.Parameter("configMap") @Nullable ConfigMapVolumeSource configMap,
+        @CustomType.Parameter("csi") @Nullable CSIVolumeSource csi,
+        @CustomType.Parameter("downwardAPI") @Nullable DownwardAPIVolumeSource downwardAPI,
+        @CustomType.Parameter("emptyDir") @Nullable EmptyDirVolumeSource emptyDir,
+        @CustomType.Parameter("ephemeral") @Nullable EphemeralVolumeSource ephemeral,
+        @CustomType.Parameter("fc") @Nullable FCVolumeSource fc,
+        @CustomType.Parameter("flexVolume") @Nullable FlexVolumeSource flexVolume,
+        @CustomType.Parameter("flocker") @Nullable FlockerVolumeSource flocker,
+        @CustomType.Parameter("gcePersistentDisk") @Nullable GCEPersistentDiskVolumeSource gcePersistentDisk,
+        @CustomType.Parameter("gitRepo") @Nullable GitRepoVolumeSource gitRepo,
+        @CustomType.Parameter("glusterfs") @Nullable GlusterfsVolumeSource glusterfs,
+        @CustomType.Parameter("hostPath") @Nullable HostPathVolumeSource hostPath,
+        @CustomType.Parameter("iscsi") @Nullable ISCSIVolumeSource iscsi,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("nfs") @Nullable NFSVolumeSource nfs,
+        @CustomType.Parameter("persistentVolumeClaim") @Nullable PersistentVolumeClaimVolumeSource persistentVolumeClaim,
+        @CustomType.Parameter("photonPersistentDisk") @Nullable PhotonPersistentDiskVolumeSource photonPersistentDisk,
+        @CustomType.Parameter("portworxVolume") @Nullable PortworxVolumeSource portworxVolume,
+        @CustomType.Parameter("projected") @Nullable ProjectedVolumeSource projected,
+        @CustomType.Parameter("quobyte") @Nullable QuobyteVolumeSource quobyte,
+        @CustomType.Parameter("rbd") @Nullable RBDVolumeSource rbd,
+        @CustomType.Parameter("scaleIO") @Nullable ScaleIOVolumeSource scaleIO,
+        @CustomType.Parameter("secret") @Nullable SecretVolumeSource secret,
+        @CustomType.Parameter("storageos") @Nullable StorageOSVolumeSource storageos,
+        @CustomType.Parameter("vsphereVolume") @Nullable VsphereVirtualDiskVolumeSource vsphereVolume) {
         this.awsElasticBlockStore = awsElasticBlockStore;
         this.azureDisk = azureDisk;
         this.azureFile = azureFile;

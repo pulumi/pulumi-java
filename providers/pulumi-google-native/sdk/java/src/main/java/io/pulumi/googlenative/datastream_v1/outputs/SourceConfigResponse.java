@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datastream_v1.outputs.MysqlSourceConfigResponse;
 import io.pulumi.googlenative.datastream_v1.outputs.OracleSourceConfigResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SourceConfigResponse {
     /**
      * MySQL data source configuration
@@ -27,11 +27,11 @@ public final class SourceConfigResponse {
      */
     private final String sourceConnectionProfile;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SourceConfigResponse(
-        @OutputCustomType.Parameter("mysqlSourceConfig") MysqlSourceConfigResponse mysqlSourceConfig,
-        @OutputCustomType.Parameter("oracleSourceConfig") OracleSourceConfigResponse oracleSourceConfig,
-        @OutputCustomType.Parameter("sourceConnectionProfile") String sourceConnectionProfile) {
+        @CustomType.Parameter("mysqlSourceConfig") MysqlSourceConfigResponse mysqlSourceConfig,
+        @CustomType.Parameter("oracleSourceConfig") OracleSourceConfigResponse oracleSourceConfig,
+        @CustomType.Parameter("sourceConnectionProfile") String sourceConnectionProfile) {
         this.mysqlSourceConfig = mysqlSourceConfig;
         this.oracleSourceConfig = oracleSourceConfig;
         this.sourceConnectionProfile = sourceConnectionProfile;

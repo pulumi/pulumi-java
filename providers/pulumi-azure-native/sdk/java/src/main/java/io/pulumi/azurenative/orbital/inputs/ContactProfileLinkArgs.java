@@ -8,7 +8,7 @@ import io.pulumi.azurenative.orbital.enums.Polarization;
 import io.pulumi.azurenative.orbital.inputs.ContactProfileLinkChannelArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
      * Contact Profile Link Channel
      * 
      */
-    @InputImport(name="channels", required=true)
+    @Import(name="channels", required=true)
       private final Output<List<ContactProfileLinkChannelArgs>> channels;
 
     public Output<List<ContactProfileLinkChannelArgs>> getChannels() {
@@ -39,7 +39,7 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
      * Direction (uplink or downlink)
      * 
      */
-    @InputImport(name="direction", required=true)
+    @Import(name="direction", required=true)
       private final Output<Either<String,Direction>> direction;
 
     public Output<Either<String,Direction>> getDirection() {
@@ -50,7 +50,7 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
      * Effective Isotropic Radiated Power (EIRP) in dBW.
      * 
      */
-    @InputImport(name="eirpdBW")
+    @Import(name="eirpdBW")
       private final @Nullable Output<Double> eirpdBW;
 
     public Output<Double> getEirpdBW() {
@@ -61,7 +61,7 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
      * Gain To Noise Temperature in db/K.
      * 
      */
-    @InputImport(name="gainOverTemperature")
+    @Import(name="gainOverTemperature")
       private final @Nullable Output<Double> gainOverTemperature;
 
     public Output<Double> getGainOverTemperature() {
@@ -72,7 +72,7 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
      * polarization. eg (RHCP, LHCP)
      * 
      */
-    @InputImport(name="polarization", required=true)
+    @Import(name="polarization", required=true)
       private final Output<Either<String,Polarization>> polarization;
 
     public Output<Either<String,Polarization>> getPolarization() {

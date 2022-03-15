@@ -4,17 +4,17 @@
 package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupRuleOrder;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuleGroupStatefulRuleOptions {
     private final @Nullable RuleGroupRuleOrder ruleOrder;
 
-    @OutputCustomType.Constructor
-    private RuleGroupStatefulRuleOptions(@OutputCustomType.Parameter("ruleOrder") @Nullable RuleGroupRuleOrder ruleOrder) {
+    @CustomType.Constructor
+    private RuleGroupStatefulRuleOptions(@CustomType.Parameter("ruleOrder") @Nullable RuleGroupRuleOrder ruleOrder) {
         this.ruleOrder = ruleOrder;
     }
 

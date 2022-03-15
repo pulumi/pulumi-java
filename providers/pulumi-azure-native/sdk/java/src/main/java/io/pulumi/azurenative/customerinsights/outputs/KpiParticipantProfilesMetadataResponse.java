@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class KpiParticipantProfilesMetadataResponse {
     /**
      * Name of the type.
@@ -15,8 +15,8 @@ public final class KpiParticipantProfilesMetadataResponse {
      */
     private final String typeName;
 
-    @OutputCustomType.Constructor
-    private KpiParticipantProfilesMetadataResponse(@OutputCustomType.Parameter("typeName") String typeName) {
+    @CustomType.Constructor
+    private KpiParticipantProfilesMetadataResponse(@CustomType.Parameter("typeName") String typeName) {
         this.typeName = typeName;
     }
 

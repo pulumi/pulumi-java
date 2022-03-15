@@ -4,7 +4,7 @@
 package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.docker.inputs.NetworkIpamConfigGetArgs;
 import io.pulumi.docker.inputs.NetworkLabelGetArgs;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * Enable manual container attachment to the network.
      * 
      */
-    @InputImport(name="attachable")
+    @Import(name="attachable")
       private final @Nullable Output<Boolean> attachable;
 
     public Output<Boolean> getAttachable() {
@@ -35,7 +35,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * Requests daemon to check for networks with same name.
      * 
      */
-    @InputImport(name="checkDuplicate")
+    @Import(name="checkDuplicate")
       private final @Nullable Output<Boolean> checkDuplicate;
 
     public Output<Boolean> getCheckDuplicate() {
@@ -47,7 +47,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * docs](https://docs.docker.com/network/#network-drivers) for more details.
      * 
      */
-    @InputImport(name="driver")
+    @Import(name="driver")
       private final @Nullable Output<String> driver;
 
     public Output<String> getDriver() {
@@ -58,7 +58,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * Create swarm routing-mesh network. Defaults to `false`.
      * 
      */
-    @InputImport(name="ingress")
+    @Import(name="ingress")
       private final @Nullable Output<Boolean> ingress;
 
     public Output<Boolean> getIngress() {
@@ -69,7 +69,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * Whether the network is internal.
      * 
      */
-    @InputImport(name="internal")
+    @Import(name="internal")
       private final @Nullable Output<Boolean> internal;
 
     public Output<Boolean> getInternal() {
@@ -80,7 +80,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * The IPAM configuration options
      * 
      */
-    @InputImport(name="ipamConfigs")
+    @Import(name="ipamConfigs")
       private final @Nullable Output<List<NetworkIpamConfigGetArgs>> ipamConfigs;
 
     public Output<List<NetworkIpamConfigGetArgs>> getIpamConfigs() {
@@ -91,7 +91,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * Driver used by the custom IP scheme of the network. Defaults to `default`
      * 
      */
-    @InputImport(name="ipamDriver")
+    @Import(name="ipamDriver")
       private final @Nullable Output<String> ipamDriver;
 
     public Output<String> getIpamDriver() {
@@ -102,7 +102,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * Enable IPv6 networking. Defaults to `false`.
      * 
      */
-    @InputImport(name="ipv6")
+    @Import(name="ipv6")
       private final @Nullable Output<Boolean> ipv6;
 
     public Output<Boolean> getIpv6() {
@@ -113,7 +113,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * User-defined key/value metadata
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<NetworkLabelGetArgs>> labels;
 
     public Output<List<NetworkLabelGetArgs>> getLabels() {
@@ -124,7 +124,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * The name of the Docker network.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -136,7 +136,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * docs](https://docs.docker.com/engine/reference/commandline/network_create/#bridge-driver-options) for more details.
      * 
      */
-    @InputImport(name="options")
+    @Import(name="options")
       private final @Nullable Output<Map<String,Object>> options;
 
     public Output<Map<String,Object>> getOptions() {
@@ -147,7 +147,7 @@ public final class NetworkState extends io.pulumi.resources.ResourceArgs {
      * Scope of the network. One of `swarm`, `global`, or `local`.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {

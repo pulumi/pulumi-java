@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse extends io.pulu
      * The resource name of the KMS CryptoKey to use for unwrapping.
      * 
      */
-    @InputImport(name="cryptoKeyName", required=true)
+    @Import(name="cryptoKeyName", required=true)
       private final String cryptoKeyName;
 
     public String getCryptoKeyName() {
@@ -31,7 +31,7 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse extends io.pulu
      * The wrapped data crypto key.
      * 
      */
-    @InputImport(name="wrappedKey", required=true)
+    @Import(name="wrappedKey", required=true)
       private final String wrappedKey;
 
     public String getWrappedKey() {

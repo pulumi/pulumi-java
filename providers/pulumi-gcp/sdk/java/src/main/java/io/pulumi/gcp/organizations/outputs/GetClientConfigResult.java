@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClientConfigResult {
     /**
      * The OAuth2 access token used by the client to authenticate against the Google Cloud API.
@@ -35,13 +35,13 @@ public final class GetClientConfigResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClientConfigResult(
-        @OutputCustomType.Parameter("accessToken") String accessToken,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("accessToken") String accessToken,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("zone") String zone) {
         this.accessToken = accessToken;
         this.id = id;
         this.project = project;

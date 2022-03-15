@@ -10,7 +10,7 @@ import io.pulumi.azurenative.insights.inputs.ScheduleArgs;
 import io.pulumi.azurenative.insights.inputs.SourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * Action needs to be taken on rule execution.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<Either<AlertingActionArgs,LogToMetricActionArgs>> action;
 
     public Output<Either<AlertingActionArgs,LogToMetricActionArgs>> getAction() {
@@ -37,7 +37,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * The flag that indicates whether the alert should be automatically resolved or not. The default is false.
      * 
      */
-    @InputImport(name="autoMitigate")
+    @Import(name="autoMitigate")
       private final @Nullable Output<Boolean> autoMitigate;
 
     public Output<Boolean> getAutoMitigate() {
@@ -48,7 +48,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * The description of the Log Search rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -59,7 +59,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * The display name of the alert rule
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -70,7 +70,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * The flag which indicates whether the Log Search rule is enabled. Value should be true or false
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Either<String,Enabled>> enabled;
 
     public Output<Either<String,Enabled>> getEnabled() {
@@ -81,7 +81,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * Resource location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -92,7 +92,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -103,7 +103,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * The name of the rule.
      * 
      */
-    @InputImport(name="ruleName")
+    @Import(name="ruleName")
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {
@@ -114,7 +114,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * Schedule (Frequency, Time Window) for rule. Required for action type - AlertingAction
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<ScheduleArgs> schedule;
 
     public Output<ScheduleArgs> getSchedule() {
@@ -125,7 +125,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * Data Source against which rule will Query Data
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<SourceArgs> source;
 
     public Output<SourceArgs> getSource() {
@@ -136,7 +136,7 @@ public final class ScheduledQueryRuleArgs extends io.pulumi.resources.ResourceAr
      * Resource tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

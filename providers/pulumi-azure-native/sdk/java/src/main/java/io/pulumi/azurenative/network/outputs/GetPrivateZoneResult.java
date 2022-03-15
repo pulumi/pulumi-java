@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetPrivateZoneResult {
     /**
      * The ETag of the zone.
@@ -84,22 +84,22 @@ public final class GetPrivateZoneResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetPrivateZoneResult(
-        @OutputCustomType.Parameter("etag") @Nullable String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("internalId") String internalId,
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("maxNumberOfRecordSets") Double maxNumberOfRecordSets,
-        @OutputCustomType.Parameter("maxNumberOfVirtualNetworkLinks") Double maxNumberOfVirtualNetworkLinks,
-        @OutputCustomType.Parameter("maxNumberOfVirtualNetworkLinksWithRegistration") Double maxNumberOfVirtualNetworkLinksWithRegistration,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("numberOfRecordSets") Double numberOfRecordSets,
-        @OutputCustomType.Parameter("numberOfVirtualNetworkLinks") Double numberOfVirtualNetworkLinks,
-        @OutputCustomType.Parameter("numberOfVirtualNetworkLinksWithRegistration") Double numberOfVirtualNetworkLinksWithRegistration,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("etag") @Nullable String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("internalId") String internalId,
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("maxNumberOfRecordSets") Double maxNumberOfRecordSets,
+        @CustomType.Parameter("maxNumberOfVirtualNetworkLinks") Double maxNumberOfVirtualNetworkLinks,
+        @CustomType.Parameter("maxNumberOfVirtualNetworkLinksWithRegistration") Double maxNumberOfVirtualNetworkLinksWithRegistration,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("numberOfRecordSets") Double numberOfRecordSets,
+        @CustomType.Parameter("numberOfVirtualNetworkLinks") Double numberOfVirtualNetworkLinks,
+        @CustomType.Parameter("numberOfVirtualNetworkLinksWithRegistration") Double numberOfVirtualNetworkLinksWithRegistration,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.internalId = internalId;

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
     /**
      * Whether to perform a 'guest aware' snapshot.
@@ -30,11 +30,11 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
      */
     private final @Nullable String storageLocations;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicySnapshotProperties(
-        @OutputCustomType.Parameter("guestFlush") @Nullable Boolean guestFlush,
-        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
-        @OutputCustomType.Parameter("storageLocations") @Nullable String storageLocations) {
+        @CustomType.Parameter("guestFlush") @Nullable Boolean guestFlush,
+        @CustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @CustomType.Parameter("storageLocations") @Nullable String storageLocations) {
         this.guestFlush = guestFlush;
         this.labels = labels;
         this.storageLocations = storageLocations;

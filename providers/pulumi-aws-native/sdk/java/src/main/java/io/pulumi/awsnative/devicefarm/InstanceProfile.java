@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.devicefarm.InstanceProfileArgs;
 import io.pulumi.awsnative.devicefarm.outputs.InstanceProfileTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,43 +20,43 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:devicefarm:InstanceProfile")
 public class InstanceProfile extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="excludeAppPackagesFromCleanup", type=List.class, parameters={String.class})
+    @Export(name="excludeAppPackagesFromCleanup", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> excludeAppPackagesFromCleanup;
 
     public Output</* @Nullable */ List<String>> getExcludeAppPackagesFromCleanup() {
         return this.excludeAppPackagesFromCleanup;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="packageCleanup", type=Boolean.class, parameters={})
+    @Export(name="packageCleanup", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> packageCleanup;
 
     public Output</* @Nullable */ Boolean> getPackageCleanup() {
         return this.packageCleanup;
     }
-    @OutputExport(name="rebootAfterUse", type=Boolean.class, parameters={})
+    @Export(name="rebootAfterUse", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> rebootAfterUse;
 
     public Output</* @Nullable */ Boolean> getRebootAfterUse() {
         return this.rebootAfterUse;
     }
-    @OutputExport(name="tags", type=List.class, parameters={InstanceProfileTag.class})
+    @Export(name="tags", type=List.class, parameters={InstanceProfileTag.class})
     private Output</* @Nullable */ List<InstanceProfileTag>> tags;
 
     public Output</* @Nullable */ List<InstanceProfileTag>> getTags() {

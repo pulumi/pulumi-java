@@ -5,13 +5,13 @@ package io.pulumi.awsnative.macie.outputs;
 
 import io.pulumi.awsnative.macie.enums.SessionFindingPublishingFrequency;
 import io.pulumi.awsnative.macie.enums.SessionStatus;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSessionResult {
     /**
      * AWS account ID of customer
@@ -34,12 +34,12 @@ public final class GetSessionResult {
      */
     private final @Nullable SessionStatus status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSessionResult(
-        @OutputCustomType.Parameter("awsAccountId") @Nullable String awsAccountId,
-        @OutputCustomType.Parameter("findingPublishingFrequency") @Nullable SessionFindingPublishingFrequency findingPublishingFrequency,
-        @OutputCustomType.Parameter("serviceRole") @Nullable String serviceRole,
-        @OutputCustomType.Parameter("status") @Nullable SessionStatus status) {
+        @CustomType.Parameter("awsAccountId") @Nullable String awsAccountId,
+        @CustomType.Parameter("findingPublishingFrequency") @Nullable SessionFindingPublishingFrequency findingPublishingFrequency,
+        @CustomType.Parameter("serviceRole") @Nullable String serviceRole,
+        @CustomType.Parameter("status") @Nullable SessionStatus status) {
         this.awsAccountId = awsAccountId;
         this.findingPublishingFrequency = findingPublishingFrequency;
         this.serviceRole = serviceRole;

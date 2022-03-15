@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SpannerIODetailsResponse {
     /**
      * DatabaseId accessed in the connection.
@@ -25,11 +25,11 @@ public final class SpannerIODetailsResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SpannerIODetailsResponse(
-        @OutputCustomType.Parameter("databaseId") String databaseId,
-        @OutputCustomType.Parameter("instanceId") String instanceId,
-        @OutputCustomType.Parameter("project") String project) {
+        @CustomType.Parameter("databaseId") String databaseId,
+        @CustomType.Parameter("instanceId") String instanceId,
+        @CustomType.Parameter("project") String project) {
         this.databaseId = databaseId;
         this.instanceId = instanceId;
         this.project = project;

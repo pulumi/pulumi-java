@@ -5,12 +5,12 @@ package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.VirtualDiskResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.VirtualSCSIControllerResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StorageProfileResponse {
     /**
      * Gets or sets the list of virtual disks associated with the virtual machine.
@@ -23,10 +23,10 @@ public final class StorageProfileResponse {
      */
     private final List<VirtualSCSIControllerResponse> scsiControllers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StorageProfileResponse(
-        @OutputCustomType.Parameter("disks") @Nullable List<VirtualDiskResponse> disks,
-        @OutputCustomType.Parameter("scsiControllers") List<VirtualSCSIControllerResponse> scsiControllers) {
+        @CustomType.Parameter("disks") @Nullable List<VirtualDiskResponse> disks,
+        @CustomType.Parameter("scsiControllers") List<VirtualSCSIControllerResponse> scsiControllers) {
         this.disks = disks;
         this.scsiControllers = scsiControllers;
     }

@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.folder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IamAuditConfigAuditLogConfig {
     private final @Nullable List<String> exemptedMembers;
     private final String logType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IamAuditConfigAuditLogConfig(
-        @OutputCustomType.Parameter("exemptedMembers") @Nullable List<String> exemptedMembers,
-        @OutputCustomType.Parameter("logType") String logType) {
+        @CustomType.Parameter("exemptedMembers") @Nullable List<String> exemptedMembers,
+        @CustomType.Parameter("logType") String logType) {
         this.exemptedMembers = exemptedMembers;
         this.logType = logType;
     }

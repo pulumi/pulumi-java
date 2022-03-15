@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,35 +12,35 @@ public final class GetDebugSessionArgs extends io.pulumi.resources.InvokeArgs {
 
     public static final GetDebugSessionArgs Empty = new GetDebugSessionArgs();
 
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final String apiId;
 
     public String getApiId() {
         return this.apiId;
     }
 
-    @InputImport(name="debugsessionId", required=true)
+    @Import(name="debugsessionId", required=true)
       private final String debugsessionId;
 
     public String getDebugsessionId() {
         return this.debugsessionId;
     }
 
-    @InputImport(name="environmentId", required=true)
+    @Import(name="environmentId", required=true)
       private final String environmentId;
 
     public String getEnvironmentId() {
         return this.environmentId;
     }
 
-    @InputImport(name="organizationId", required=true)
+    @Import(name="organizationId", required=true)
       private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
-    @InputImport(name="revisionId", required=true)
+    @Import(name="revisionId", required=true)
       private final String revisionId;
 
     public String getRevisionId() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.AnthosClusterResponse;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.ExecutionConfigResponse;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.GkeClusterResponse;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTargetResult {
     /**
      * Optional. User annotations. These attributes can only be set and used by the user, and not by Google Cloud Deploy. See https://google.aip.dev/128#annotations for more details such as format and size limitations.
@@ -81,21 +81,21 @@ public final class GetTargetResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTargetResult(
-        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
-        @OutputCustomType.Parameter("anthosCluster") AnthosClusterResponse anthosCluster,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("executionConfigs") List<ExecutionConfigResponse> executionConfigs,
-        @OutputCustomType.Parameter("gke") GkeClusterResponse gke,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("requireApproval") Boolean requireApproval,
-        @OutputCustomType.Parameter("targetId") String targetId,
-        @OutputCustomType.Parameter("uid") String uid,
-        @OutputCustomType.Parameter("updateTime") String updateTime) {
+        @CustomType.Parameter("annotations") Map<String,String> annotations,
+        @CustomType.Parameter("anthosCluster") AnthosClusterResponse anthosCluster,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("executionConfigs") List<ExecutionConfigResponse> executionConfigs,
+        @CustomType.Parameter("gke") GkeClusterResponse gke,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("requireApproval") Boolean requireApproval,
+        @CustomType.Parameter("targetId") String targetId,
+        @CustomType.Parameter("uid") String uid,
+        @CustomType.Parameter("updateTime") String updateTime) {
         this.annotations = annotations;
         this.anthosCluster = anthosCluster;
         this.createTime = createTime;

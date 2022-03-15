@@ -5,13 +5,13 @@ package io.pulumi.aws.codedeploy.outputs;
 
 import io.pulumi.aws.codedeploy.outputs.DeploymentConfigTrafficRoutingConfigTimeBasedCanary;
 import io.pulumi.aws.codedeploy.outputs.DeploymentConfigTrafficRoutingConfigTimeBasedLinear;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentConfigTrafficRoutingConfig {
     /**
      * The time based canary configuration information. If `type` is `TimeBasedLinear`, use `time_based_linear` instead.
@@ -29,11 +29,11 @@ public final class DeploymentConfigTrafficRoutingConfig {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeploymentConfigTrafficRoutingConfig(
-        @OutputCustomType.Parameter("timeBasedCanary") @Nullable DeploymentConfigTrafficRoutingConfigTimeBasedCanary timeBasedCanary,
-        @OutputCustomType.Parameter("timeBasedLinear") @Nullable DeploymentConfigTrafficRoutingConfigTimeBasedLinear timeBasedLinear,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("timeBasedCanary") @Nullable DeploymentConfigTrafficRoutingConfigTimeBasedCanary timeBasedCanary,
+        @CustomType.Parameter("timeBasedLinear") @Nullable DeploymentConfigTrafficRoutingConfigTimeBasedLinear timeBasedLinear,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.timeBasedCanary = timeBasedCanary;
         this.timeBasedLinear = timeBasedLinear;
         this.type = type;

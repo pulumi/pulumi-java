@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.core_v1.inputs.NodeSelectorTermArgs;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class NodeSelectorArgs extends io.pulumi.resources.ResourceArgs {
      * Required. A list of node selector terms. The terms are ORed.
      * 
      */
-    @InputImport(name="nodeSelectorTerms", required=true)
+    @Import(name="nodeSelectorTerms", required=true)
       private final Output<List<NodeSelectorTermArgs>> nodeSelectorTerms;
 
     public Output<List<NodeSelectorTermArgs>> getNodeSelectorTerms() {

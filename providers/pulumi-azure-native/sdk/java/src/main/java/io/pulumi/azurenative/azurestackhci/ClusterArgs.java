@@ -6,7 +6,7 @@ package io.pulumi.azurenative.azurestackhci;
 import io.pulumi.azurenative.azurestackhci.enums.CreatedByType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * App id of cluster AAD identity.
      * 
      */
-    @InputImport(name="aadClientId", required=true)
+    @Import(name="aadClientId", required=true)
       private final Output<String> aadClientId;
 
     public Output<String> getAadClientId() {
@@ -32,7 +32,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Tenant id of cluster AAD identity.
      * 
      */
-    @InputImport(name="aadTenantId", required=true)
+    @Import(name="aadTenantId", required=true)
       private final Output<String> aadTenantId;
 
     public Output<String> getAadTenantId() {
@@ -43,7 +43,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the cluster.
      * 
      */
-    @InputImport(name="clusterName")
+    @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -54,7 +54,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The timestamp of resource creation (UTC).
      * 
      */
-    @InputImport(name="createdAt")
+    @Import(name="createdAt")
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
@@ -65,7 +65,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The identity that created the resource.
      * 
      */
-    @InputImport(name="createdBy")
+    @Import(name="createdBy")
       private final @Nullable Output<String> createdBy;
 
     public Output<String> getCreatedBy() {
@@ -76,7 +76,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The type of identity that created the resource.
      * 
      */
-    @InputImport(name="createdByType")
+    @Import(name="createdByType")
       private final @Nullable Output<Either<String,CreatedByType>> createdByType;
 
     public Output<Either<String,CreatedByType>> getCreatedByType() {
@@ -87,7 +87,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The timestamp of resource last modification (UTC)
      * 
      */
-    @InputImport(name="lastModifiedAt")
+    @Import(name="lastModifiedAt")
       private final @Nullable Output<String> lastModifiedAt;
 
     public Output<String> getLastModifiedAt() {
@@ -98,7 +98,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The identity that last modified the resource.
      * 
      */
-    @InputImport(name="lastModifiedBy")
+    @Import(name="lastModifiedBy")
       private final @Nullable Output<String> lastModifiedBy;
 
     public Output<String> getLastModifiedBy() {
@@ -109,7 +109,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The type of identity that last modified the resource.
      * 
      */
-    @InputImport(name="lastModifiedByType")
+    @Import(name="lastModifiedByType")
       private final @Nullable Output<Either<String,CreatedByType>> lastModifiedByType;
 
     public Output<Either<String,CreatedByType>> getLastModifiedByType() {
@@ -120,7 +120,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -131,7 +131,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -142,7 +142,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

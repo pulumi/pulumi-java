@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.AptRepositoryArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.GooRepositoryArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.YumRepositoryArgs;
@@ -25,7 +25,7 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
      * An Apt Repository.
      * 
      */
-    @InputImport(name="apt")
+    @Import(name="apt")
       private final @Nullable Output<AptRepositoryArgs> apt;
 
     public Output<AptRepositoryArgs> getApt() {
@@ -36,7 +36,7 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
      * A Goo Repository.
      * 
      */
-    @InputImport(name="goo")
+    @Import(name="goo")
       private final @Nullable Output<GooRepositoryArgs> goo;
 
     public Output<GooRepositoryArgs> getGoo() {
@@ -47,7 +47,7 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
      * A Yum Repository.
      * 
      */
-    @InputImport(name="yum")
+    @Import(name="yum")
       private final @Nullable Output<YumRepositoryArgs> yum;
 
     public Output<YumRepositoryArgs> getYum() {
@@ -58,7 +58,7 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
      * A Zypper Repository.
      * 
      */
-    @InputImport(name="zypper")
+    @Import(name="zypper")
       private final @Nullable Output<ZypperRepositoryArgs> zypper;
 
     public Output<ZypperRepositoryArgs> getZypper() {

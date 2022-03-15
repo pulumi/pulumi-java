@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.HealthErrorResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.IdentityProviderDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VersionDetailsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * The scenarios allowed on this provider.
      * 
      */
-    @InputImport(name="allowedScenarios")
+    @Import(name="allowedScenarios")
       private final @Nullable List<String> allowedScenarios;
 
     public List<String> getAllowedScenarios() {
@@ -38,7 +38,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * The authentication identity details.
      * 
      */
-    @InputImport(name="authenticationIdentityDetails")
+    @Import(name="authenticationIdentityDetails")
       private final @Nullable IdentityProviderDetailsResponse authenticationIdentityDetails;
 
     public Optional<IdentityProviderDetailsResponse> getAuthenticationIdentityDetails() {
@@ -49,7 +49,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * A value indicating whether DRA is responsive.
      * 
      */
-    @InputImport(name="connectionStatus")
+    @Import(name="connectionStatus")
       private final @Nullable String connectionStatus;
 
     public Optional<String> getConnectionStatus() {
@@ -60,7 +60,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * The DRA Id.
      * 
      */
-    @InputImport(name="draIdentifier")
+    @Import(name="draIdentifier")
       private final @Nullable String draIdentifier;
 
     public Optional<String> getDraIdentifier() {
@@ -71,7 +71,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * The fabric friendly name.
      * 
      */
-    @InputImport(name="fabricFriendlyName")
+    @Import(name="fabricFriendlyName")
       private final @Nullable String fabricFriendlyName;
 
     public Optional<String> getFabricFriendlyName() {
@@ -82,7 +82,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * Type of the site.
      * 
      */
-    @InputImport(name="fabricType")
+    @Import(name="fabricType")
       private final @Nullable String fabricType;
 
     public Optional<String> getFabricType() {
@@ -93,7 +93,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * Friendly name of the DRA.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
@@ -104,7 +104,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * The recovery services provider health error details.
      * 
      */
-    @InputImport(name="healthErrorDetails")
+    @Import(name="healthErrorDetails")
       private final @Nullable List<HealthErrorResponse> healthErrorDetails;
 
     public List<HealthErrorResponse> getHealthErrorDetails() {
@@ -115,7 +115,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * Time when last heartbeat was sent by the DRA.
      * 
      */
-    @InputImport(name="lastHeartBeat")
+    @Import(name="lastHeartBeat")
       private final @Nullable String lastHeartBeat;
 
     public Optional<String> getLastHeartBeat() {
@@ -126,7 +126,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * Number of protected VMs currently managed by the DRA.
      * 
      */
-    @InputImport(name="protectedItemCount")
+    @Import(name="protectedItemCount")
       private final @Nullable Integer protectedItemCount;
 
     public Optional<Integer> getProtectedItemCount() {
@@ -137,7 +137,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * The provider version.
      * 
      */
-    @InputImport(name="providerVersion")
+    @Import(name="providerVersion")
       private final @Nullable String providerVersion;
 
     public Optional<String> getProviderVersion() {
@@ -148,7 +148,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * The provider version details.
      * 
      */
-    @InputImport(name="providerVersionDetails")
+    @Import(name="providerVersionDetails")
       private final @Nullable VersionDetailsResponse providerVersionDetails;
 
     public Optional<VersionDetailsResponse> getProviderVersionDetails() {
@@ -159,7 +159,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * Expiry date of the version.
      * 
      */
-    @InputImport(name="providerVersionExpiryDate")
+    @Import(name="providerVersionExpiryDate")
       private final @Nullable String providerVersionExpiryDate;
 
     public Optional<String> getProviderVersionExpiryDate() {
@@ -170,7 +170,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * DRA version status.
      * 
      */
-    @InputImport(name="providerVersionState")
+    @Import(name="providerVersionState")
       private final @Nullable String providerVersionState;
 
     public Optional<String> getProviderVersionState() {
@@ -181,7 +181,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * The resource access identity details.
      * 
      */
-    @InputImport(name="resourceAccessIdentityDetails")
+    @Import(name="resourceAccessIdentityDetails")
       private final @Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails;
 
     public Optional<IdentityProviderDetailsResponse> getResourceAccessIdentityDetails() {
@@ -192,7 +192,7 @@ public final class RecoveryServicesProviderPropertiesResponse extends io.pulumi.
      * The fabric provider.
      * 
      */
-    @InputImport(name="serverVersion")
+    @Import(name="serverVersion")
       private final @Nullable String serverVersion;
 
     public Optional<String> getServerVersion() {

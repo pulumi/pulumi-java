@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GSuitePrincipalResponse {
     /**
      * This principal represents all users of the G Suite domain of the customer.
@@ -26,11 +26,11 @@ public final class GSuitePrincipalResponse {
      */
     private final String gsuiteUserEmail;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GSuitePrincipalResponse(
-        @OutputCustomType.Parameter("gsuiteDomain") Boolean gsuiteDomain,
-        @OutputCustomType.Parameter("gsuiteGroupEmail") String gsuiteGroupEmail,
-        @OutputCustomType.Parameter("gsuiteUserEmail") String gsuiteUserEmail) {
+        @CustomType.Parameter("gsuiteDomain") Boolean gsuiteDomain,
+        @CustomType.Parameter("gsuiteGroupEmail") String gsuiteGroupEmail,
+        @CustomType.Parameter("gsuiteUserEmail") String gsuiteUserEmail) {
         this.gsuiteDomain = gsuiteDomain;
         this.gsuiteGroupEmail = gsuiteGroupEmail;
         this.gsuiteUserEmail = gsuiteUserEmail;

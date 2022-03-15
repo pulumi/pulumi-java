@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.UpcomingMaintenanceTimeWindowResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class UpcomingMaintenanceResponse {
     /**
      * Indicates if the maintenance can be customer triggered. From more detail, see go/sf-ctm-design.
@@ -27,11 +27,11 @@ public final class UpcomingMaintenanceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UpcomingMaintenanceResponse(
-        @OutputCustomType.Parameter("canReschedule") Boolean canReschedule,
-        @OutputCustomType.Parameter("startTimeWindow") UpcomingMaintenanceTimeWindowResponse startTimeWindow,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("canReschedule") Boolean canReschedule,
+        @CustomType.Parameter("startTimeWindow") UpcomingMaintenanceTimeWindowResponse startTimeWindow,
+        @CustomType.Parameter("type") String type) {
         this.canReschedule = canReschedule;
         this.startTimeWindow = startTimeWindow;
         this.type = type;

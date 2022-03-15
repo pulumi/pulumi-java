@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.appmesh.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcm {
     /**
      * One or more ACM Amazon Resource Name (ARN)s.
@@ -16,8 +16,8 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
      */
     private final List<String> certificateAuthorityArns;
 
-    @OutputCustomType.Constructor
-    private VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcm(@OutputCustomType.Parameter("certificateAuthorityArns") List<String> certificateAuthorityArns) {
+    @CustomType.Constructor
+    private VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcm(@CustomType.Parameter("certificateAuthorityArns") List<String> certificateAuthorityArns) {
         this.certificateAuthorityArns = certificateAuthorityArns;
     }
 

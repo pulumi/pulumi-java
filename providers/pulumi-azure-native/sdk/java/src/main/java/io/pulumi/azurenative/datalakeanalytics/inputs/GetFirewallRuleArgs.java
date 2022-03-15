@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakeanalytics.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the Data Lake Analytics account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -27,7 +27,7 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the firewall rule to retrieve.
      * 
      */
-    @InputImport(name="firewallRuleName", required=true)
+    @Import(name="firewallRuleName", required=true)
       private final String firewallRuleName;
 
     public String getFirewallRuleName() {
@@ -38,7 +38,7 @@ public final class GetFirewallRuleArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the Azure resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {

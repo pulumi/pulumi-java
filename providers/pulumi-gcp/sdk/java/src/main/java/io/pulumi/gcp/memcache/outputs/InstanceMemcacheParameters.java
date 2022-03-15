@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.memcache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceMemcacheParameters {
     /**
      * - 
@@ -24,10 +24,10 @@ public final class InstanceMemcacheParameters {
      */
     private final @Nullable Map<String,String> params;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceMemcacheParameters(
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("params") @Nullable Map<String,String> params) {
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("params") @Nullable Map<String,String> params) {
         this.id = id;
         this.params = params;
     }

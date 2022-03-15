@@ -5,14 +5,14 @@ package io.pulumi.aws.globalaccelerator.outputs;
 
 import io.pulumi.aws.globalaccelerator.outputs.GetAcceleratorAttribute;
 import io.pulumi.aws.globalaccelerator.outputs.GetAcceleratorIpSet;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetAcceleratorResult {
     private final String arn;
     private final List<GetAcceleratorAttribute> attributes;
@@ -29,18 +29,18 @@ public final class GetAcceleratorResult {
     private final String name;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAcceleratorResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("attributes") List<GetAcceleratorAttribute> attributes,
-        @OutputCustomType.Parameter("dnsName") String dnsName,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("hostedZoneId") String hostedZoneId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ipAddressType") String ipAddressType,
-        @OutputCustomType.Parameter("ipSets") List<GetAcceleratorIpSet> ipSets,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("attributes") List<GetAcceleratorAttribute> attributes,
+        @CustomType.Parameter("dnsName") String dnsName,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("hostedZoneId") String hostedZoneId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ipAddressType") String ipAddressType,
+        @CustomType.Parameter("ipSets") List<GetAcceleratorIpSet> ipSets,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.attributes = attributes;
         this.dnsName = dnsName;

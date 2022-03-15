@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AzureFileshareProtectedItemExtendedInfoArgs extends io.pulumi
      * The oldest backup copy available for this item in the service.
      * 
      */
-    @InputImport(name="oldestRecoveryPoint")
+    @Import(name="oldestRecoveryPoint")
       private final @Nullable Output<String> oldestRecoveryPoint;
 
     public Output<String> getOldestRecoveryPoint() {
@@ -34,7 +34,7 @@ public final class AzureFileshareProtectedItemExtendedInfoArgs extends io.pulumi
      * Indicates consistency of policy object and policy applied to this backup item.
      * 
      */
-    @InputImport(name="policyState")
+    @Import(name="policyState")
       private final @Nullable Output<String> policyState;
 
     public Output<String> getPolicyState() {
@@ -45,7 +45,7 @@ public final class AzureFileshareProtectedItemExtendedInfoArgs extends io.pulumi
      * Number of available backup copies associated with this backup item.
      * 
      */
-    @InputImport(name="recoveryPointCount")
+    @Import(name="recoveryPointCount")
       private final @Nullable Output<Integer> recoveryPointCount;
 
     public Output<Integer> getRecoveryPointCount() {

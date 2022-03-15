@@ -6,7 +6,7 @@ package io.pulumi.azurenative.migrate.inputs;
 import io.pulumi.azurenative.migrate.inputs.DatabaseProjectSummaryResponse;
 import io.pulumi.azurenative.migrate.inputs.ServersProjectSummaryResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
      * Gets the last time the project summary was refreshed.
      * 
      */
-    @InputImport(name="lastSummaryRefreshedTime", required=true)
+    @Import(name="lastSummaryRefreshedTime", required=true)
       private final String lastSummaryRefreshedTime;
 
     public String getLastSummaryRefreshedTime() {
@@ -38,7 +38,7 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
      * Provisioning state of the migrate project.
      * 
      */
-    @InputImport(name="provisioningState")
+    @Import(name="provisioningState")
       private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
@@ -49,7 +49,7 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
      * Gets the refresh summary state.
      * 
      */
-    @InputImport(name="refreshSummaryState", required=true)
+    @Import(name="refreshSummaryState", required=true)
       private final String refreshSummaryState;
 
     public String getRefreshSummaryState() {
@@ -60,7 +60,7 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
      * Gets or sets the list of tools registered with the migrate project.
      * 
      */
-    @InputImport(name="registeredTools")
+    @Import(name="registeredTools")
       private final @Nullable List<String> registeredTools;
 
     public List<String> getRegisteredTools() {
@@ -71,7 +71,7 @@ public final class MigrateProjectPropertiesResponse extends io.pulumi.resources.
      * Gets the summary of the migrate project.
      * 
      */
-    @InputImport(name="summary", required=true)
+    @Import(name="summary", required=true)
       private final Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary;
 
     public Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> getSummary() {

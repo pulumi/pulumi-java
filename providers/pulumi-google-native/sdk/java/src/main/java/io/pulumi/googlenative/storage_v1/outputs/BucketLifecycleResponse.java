@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.storage_v1.outputs.BucketLifecycleRuleItemResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketLifecycleResponse {
     /**
      * A lifecycle management rule, which is made of an action to take and the condition(s) under which the action will be taken.
@@ -16,8 +16,8 @@ public final class BucketLifecycleResponse {
      */
     private final List<BucketLifecycleRuleItemResponse> rule;
 
-    @OutputCustomType.Constructor
-    private BucketLifecycleResponse(@OutputCustomType.Parameter("rule") List<BucketLifecycleRuleItemResponse> rule) {
+    @CustomType.Constructor
+    private BucketLifecycleResponse(@CustomType.Parameter("rule") List<BucketLifecycleRuleItemResponse> rule) {
         this.rule = rule;
     }
 

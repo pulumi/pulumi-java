@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ClusterClientAuthenticationSaslArgs extends io.pulumi.resourc
      * Enables IAM client authentication. Defaults to `false`.
      * 
      */
-    @InputImport(name="iam")
+    @Import(name="iam")
       private final @Nullable Output<Boolean> iam;
 
     public Output<Boolean> getIam() {
@@ -29,7 +29,7 @@ public final class ClusterClientAuthenticationSaslArgs extends io.pulumi.resourc
      * Enables SCRAM client authentication via AWS Secrets Manager. Defaults to `false`.
      * 
      */
-    @InputImport(name="scram")
+    @Import(name="scram")
       private final @Nullable Output<Boolean> scram;
 
     public Output<Boolean> getScram() {

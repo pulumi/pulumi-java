@@ -7,7 +7,7 @@ import io.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleAbortIncom
 import io.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleExpirationGetArgs;
 import io.pulumi.aws.s3control.inputs.BucketLifecycleConfigurationRuleFilterGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
      * Configuration block containing settings for abort incomplete multipart upload.
      * 
      */
-    @InputImport(name="abortIncompleteMultipartUpload")
+    @Import(name="abortIncompleteMultipartUpload")
       private final @Nullable Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> abortIncompleteMultipartUpload;
 
     public Output<BucketLifecycleConfigurationRuleAbortIncompleteMultipartUploadGetArgs> getAbortIncompleteMultipartUpload() {
@@ -32,7 +32,7 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
      * Configuration block containing settings for expiration of objects.
      * 
      */
-    @InputImport(name="expiration")
+    @Import(name="expiration")
       private final @Nullable Output<BucketLifecycleConfigurationRuleExpirationGetArgs> expiration;
 
     public Output<BucketLifecycleConfigurationRuleExpirationGetArgs> getExpiration() {
@@ -43,7 +43,7 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
      * Configuration block containing settings for filtering.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<BucketLifecycleConfigurationRuleFilterGetArgs> filter;
 
     public Output<BucketLifecycleConfigurationRuleFilterGetArgs> getFilter() {
@@ -54,7 +54,7 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
      * Unique identifier for the rule.
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -65,7 +65,7 @@ public final class BucketLifecycleConfigurationRuleGetArgs extends io.pulumi.res
      * Status of the rule. Valid values: `Enabled` and `Disabled`. Defaults to `Enabled`.
      * 
      */
-    @InputImport(name="status")
+    @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {

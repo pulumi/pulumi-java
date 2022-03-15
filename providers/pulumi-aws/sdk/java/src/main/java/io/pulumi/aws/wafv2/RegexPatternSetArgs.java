@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2;
 
 import io.pulumi.aws.wafv2.inputs.RegexPatternSetRegularExpressionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * A friendly description of the regular expression pattern set.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * A friendly name of the regular expression pattern set.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * One or more blocks of regular expression patterns that you want AWS WAF to search for, such as `B[a@]dB[o0]t`. See Regular Expression below for details.
      * 
      */
-    @InputImport(name="regularExpressions")
+    @Import(name="regularExpressions")
       private final @Nullable Output<List<RegexPatternSetRegularExpressionArgs>> regularExpressions;
 
     public Output<List<RegexPatternSetRegularExpressionArgs>> getRegularExpressions() {
@@ -54,7 +54,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * Specifies whether this is for an AWS CloudFront distribution or for a regional application. Valid values are `CLOUDFRONT` or `REGIONAL`. To work with CloudFront, you must also specify the region `us-east-1` (N. Virginia) on the AWS provider.
      * 
      */
-    @InputImport(name="scope", required=true)
+    @Import(name="scope", required=true)
       private final Output<String> scope;
 
     public Output<String> getScope() {
@@ -65,7 +65,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
      * An array of key:value pairs to associate with the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.directoryservice.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DirectoryConnectSettings {
     private final @Nullable List<String> availabilityZones;
     /**
@@ -38,14 +38,14 @@ public final class DirectoryConnectSettings {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DirectoryConnectSettings(
-        @OutputCustomType.Parameter("availabilityZones") @Nullable List<String> availabilityZones,
-        @OutputCustomType.Parameter("connectIps") @Nullable List<String> connectIps,
-        @OutputCustomType.Parameter("customerDnsIps") List<String> customerDnsIps,
-        @OutputCustomType.Parameter("customerUsername") String customerUsername,
-        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("availabilityZones") @Nullable List<String> availabilityZones,
+        @CustomType.Parameter("connectIps") @Nullable List<String> connectIps,
+        @CustomType.Parameter("customerDnsIps") List<String> customerDnsIps,
+        @CustomType.Parameter("customerUsername") String customerUsername,
+        @CustomType.Parameter("subnetIds") List<String> subnetIds,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.availabilityZones = availabilityZones;
         this.connectIps = connectIps;
         this.customerDnsIps = customerDnsIps;

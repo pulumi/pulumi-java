@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.aps.outputs;
 
 import io.pulumi.awsnative.aps.outputs.RuleGroupsNamespaceTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRuleGroupsNamespaceResult {
     /**
      * The RuleGroupsNamespace ARN.
@@ -34,12 +34,12 @@ public final class GetRuleGroupsNamespaceResult {
      */
     private final @Nullable String workspace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRuleGroupsNamespaceResult(
-        @OutputCustomType.Parameter("arn") @Nullable String arn,
-        @OutputCustomType.Parameter("data") @Nullable String data,
-        @OutputCustomType.Parameter("tags") @Nullable List<RuleGroupsNamespaceTag> tags,
-        @OutputCustomType.Parameter("workspace") @Nullable String workspace) {
+        @CustomType.Parameter("arn") @Nullable String arn,
+        @CustomType.Parameter("data") @Nullable String data,
+        @CustomType.Parameter("tags") @Nullable List<RuleGroupsNamespaceTag> tags,
+        @CustomType.Parameter("workspace") @Nullable String workspace) {
         this.arn = arn;
         this.data = data;
         this.tags = tags;

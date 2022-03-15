@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.HubRouteTableArgs;
 import io.pulumi.azurenative.network.outputs.HubRouteResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class HubRouteTable extends io.pulumi.resources.CustomResource {
      * List of all connections associated with this route table.
      * 
      */
-    @OutputExport(name="associatedConnections", type=List.class, parameters={String.class})
+    @Export(name="associatedConnections", type=List.class, parameters={String.class})
     private Output<List<String>> associatedConnections;
 
     /**
@@ -49,7 +49,7 @@ public class HubRouteTable extends io.pulumi.resources.CustomResource {
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -63,7 +63,7 @@ public class HubRouteTable extends io.pulumi.resources.CustomResource {
      * List of labels associated with this route table.
      * 
      */
-    @OutputExport(name="labels", type=List.class, parameters={String.class})
+    @Export(name="labels", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> labels;
 
     /**
@@ -77,7 +77,7 @@ public class HubRouteTable extends io.pulumi.resources.CustomResource {
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -91,7 +91,7 @@ public class HubRouteTable extends io.pulumi.resources.CustomResource {
      * List of all connections that advertise to this route table.
      * 
      */
-    @OutputExport(name="propagatingConnections", type=List.class, parameters={String.class})
+    @Export(name="propagatingConnections", type=List.class, parameters={String.class})
     private Output<List<String>> propagatingConnections;
 
     /**
@@ -105,7 +105,7 @@ public class HubRouteTable extends io.pulumi.resources.CustomResource {
      * The provisioning state of the RouteTable resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -119,7 +119,7 @@ public class HubRouteTable extends io.pulumi.resources.CustomResource {
      * List of all routes.
      * 
      */
-    @OutputExport(name="routes", type=List.class, parameters={HubRouteResponse.class})
+    @Export(name="routes", type=List.class, parameters={HubRouteResponse.class})
     private Output</* @Nullable */ List<HubRouteResponse>> routes;
 
     /**
@@ -133,7 +133,7 @@ public class HubRouteTable extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

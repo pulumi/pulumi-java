@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
      * The addon name.
      * 
      */
-    @InputImport(name="addonName")
+    @Import(name="addonName")
       private final @Nullable Output<String> addonName;
 
     public Output<String> getAddonName() {
@@ -29,7 +29,7 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
      * The device name.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -41,7 +41,7 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'ArcForKubernetes'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -52,7 +52,7 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
      * The resource group name.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -63,7 +63,7 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
      * Arc resource location
      * 
      */
-    @InputImport(name="resourceLocation", required=true)
+    @Import(name="resourceLocation", required=true)
       private final Output<String> resourceLocation;
 
     public Output<String> getResourceLocation() {
@@ -74,7 +74,7 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
      * Arc resource Name
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
@@ -85,7 +85,7 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
      * The role name.
      * 
      */
-    @InputImport(name="roleName", required=true)
+    @Import(name="roleName", required=true)
       private final Output<String> roleName;
 
     public Output<String> getRoleName() {
@@ -96,7 +96,7 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
      * Arc resource subscription Id
      * 
      */
-    @InputImport(name="subscriptionId", required=true)
+    @Import(name="subscriptionId", required=true)
       private final Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {

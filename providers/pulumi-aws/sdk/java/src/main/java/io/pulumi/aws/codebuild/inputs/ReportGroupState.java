@@ -5,7 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.aws.codebuild.inputs.ReportGroupExportConfigGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
      * The ARN of Report Group.
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -32,7 +32,7 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
      * The date and time this Report Group was created.
      * 
      */
-    @InputImport(name="created")
+    @Import(name="created")
       private final @Nullable Output<String> created;
 
     public Output<String> getCreated() {
@@ -43,7 +43,7 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
      * If `true`, deletes any reports that belong to a report group before deleting the report group. If `false`, you must delete any reports in the report group before deleting it. Default value is `false`.
      * 
      */
-    @InputImport(name="deleteReports")
+    @Import(name="deleteReports")
       private final @Nullable Output<Boolean> deleteReports;
 
     public Output<Boolean> getDeleteReports() {
@@ -54,7 +54,7 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
      * Information about the destination where the raw data of this Report Group is exported. see Export Config documented below.
      * 
      */
-    @InputImport(name="exportConfig")
+    @Import(name="exportConfig")
       private final @Nullable Output<ReportGroupExportConfigGetArgs> exportConfig;
 
     public Output<ReportGroupExportConfigGetArgs> getExportConfig() {
@@ -65,7 +65,7 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
      * The name of a Report Group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -76,7 +76,7 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
      * Key-value mapping of resource tags. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -87,7 +87,7 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
@@ -98,7 +98,7 @@ public final class ReportGroupState extends io.pulumi.resources.ResourceArgs {
      * The export configuration type. Valid values are `S3` and `NO_EXPORT`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datalakeanalytics;
 import io.pulumi.azurenative.datalakeanalytics.enums.AADObjectType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Data Lake Analytics account.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -32,7 +32,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the compute policy to create or update.
      * 
      */
-    @InputImport(name="computePolicyName")
+    @Import(name="computePolicyName")
       private final @Nullable Output<String> computePolicyName;
 
     public Output<String> getComputePolicyName() {
@@ -43,7 +43,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum degree of parallelism per job this user can use to submit jobs. This property, the min priority per job property, or both must be passed.
      * 
      */
-    @InputImport(name="maxDegreeOfParallelismPerJob")
+    @Import(name="maxDegreeOfParallelismPerJob")
       private final @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
 
     public Output<Integer> getMaxDegreeOfParallelismPerJob() {
@@ -54,7 +54,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The minimum priority per job this user can use to submit jobs. This property, the max degree of parallelism per job property, or both must be passed.
      * 
      */
-    @InputImport(name="minPriorityPerJob")
+    @Import(name="minPriorityPerJob")
       private final @Nullable Output<Integer> minPriorityPerJob;
 
     public Output<Integer> getMinPriorityPerJob() {
@@ -65,7 +65,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The AAD object identifier for the entity to create a policy for.
      * 
      */
-    @InputImport(name="objectId", required=true)
+    @Import(name="objectId", required=true)
       private final Output<String> objectId;
 
     public Output<String> getObjectId() {
@@ -76,7 +76,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The type of AAD object the object identifier refers to.
      * 
      */
-    @InputImport(name="objectType", required=true)
+    @Import(name="objectType", required=true)
       private final Output<Either<String,AADObjectType>> objectType;
 
     public Output<Either<String,AADObjectType>> getObjectType() {
@@ -87,7 +87,7 @@ public final class ComputePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Azure resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {

@@ -6,14 +6,14 @@ package io.pulumi.azurenative.databricks.outputs;
 import io.pulumi.azurenative.databricks.outputs.AddressSpaceResponse;
 import io.pulumi.azurenative.databricks.outputs.VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork;
 import io.pulumi.azurenative.databricks.outputs.VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetvNetPeeringResult {
     /**
      * Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
@@ -81,21 +81,21 @@ public final class GetvNetPeeringResult {
      */
     private final @Nullable Boolean useRemoteGateways;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetvNetPeeringResult(
-        @OutputCustomType.Parameter("allowForwardedTraffic") @Nullable Boolean allowForwardedTraffic,
-        @OutputCustomType.Parameter("allowGatewayTransit") @Nullable Boolean allowGatewayTransit,
-        @OutputCustomType.Parameter("allowVirtualNetworkAccess") @Nullable Boolean allowVirtualNetworkAccess,
-        @OutputCustomType.Parameter("databricksAddressSpace") @Nullable AddressSpaceResponse databricksAddressSpace,
-        @OutputCustomType.Parameter("databricksVirtualNetwork") @Nullable VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork databricksVirtualNetwork,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("peeringState") String peeringState,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("remoteAddressSpace") @Nullable AddressSpaceResponse remoteAddressSpace,
-        @OutputCustomType.Parameter("remoteVirtualNetwork") VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork remoteVirtualNetwork,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("useRemoteGateways") @Nullable Boolean useRemoteGateways) {
+        @CustomType.Parameter("allowForwardedTraffic") @Nullable Boolean allowForwardedTraffic,
+        @CustomType.Parameter("allowGatewayTransit") @Nullable Boolean allowGatewayTransit,
+        @CustomType.Parameter("allowVirtualNetworkAccess") @Nullable Boolean allowVirtualNetworkAccess,
+        @CustomType.Parameter("databricksAddressSpace") @Nullable AddressSpaceResponse databricksAddressSpace,
+        @CustomType.Parameter("databricksVirtualNetwork") @Nullable VirtualNetworkPeeringPropertiesFormatResponseDatabricksVirtualNetwork databricksVirtualNetwork,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("peeringState") String peeringState,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("remoteAddressSpace") @Nullable AddressSpaceResponse remoteAddressSpace,
+        @CustomType.Parameter("remoteVirtualNetwork") VirtualNetworkPeeringPropertiesFormatResponseRemoteVirtualNetwork remoteVirtualNetwork,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("useRemoteGateways") @Nullable Boolean useRemoteGateways) {
         this.allowForwardedTraffic = allowForwardedTraffic;
         this.allowGatewayTransit = allowGatewayTransit;
         this.allowVirtualNetworkAccess = allowVirtualNetworkAccess;

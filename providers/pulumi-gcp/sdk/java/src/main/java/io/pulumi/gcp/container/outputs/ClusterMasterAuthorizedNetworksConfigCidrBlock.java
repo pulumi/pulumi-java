@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterMasterAuthorizedNetworksConfigCidrBlock {
     /**
      * External network that can access Kubernetes master through HTTPS.
@@ -23,10 +23,10 @@ public final class ClusterMasterAuthorizedNetworksConfigCidrBlock {
      */
     private final @Nullable String displayName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterMasterAuthorizedNetworksConfigCidrBlock(
-        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName) {
+        @CustomType.Parameter("cidrBlock") String cidrBlock,
+        @CustomType.Parameter("displayName") @Nullable String displayName) {
         this.cidrBlock = cidrBlock;
         this.displayName = displayName;
     }

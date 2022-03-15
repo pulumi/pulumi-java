@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class KeyVaultPropertiesResponse {
     /**
      * Name of the Key from KeyVault
@@ -27,11 +27,11 @@ public final class KeyVaultPropertiesResponse {
      */
     private final @Nullable String keyVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private KeyVaultPropertiesResponse(
-        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
-        @OutputCustomType.Parameter("keyVaultUri") @Nullable String keyVaultUri,
-        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion) {
+        @CustomType.Parameter("keyName") @Nullable String keyName,
+        @CustomType.Parameter("keyVaultUri") @Nullable String keyVaultUri,
+        @CustomType.Parameter("keyVersion") @Nullable String keyVersion) {
         this.keyName = keyName;
         this.keyVaultUri = keyVaultUri;
         this.keyVersion = keyVersion;

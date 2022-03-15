@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum number of times this field can be repeated. 0 or -1 means unbounded.
      * 
      */
-    @InputImport(name="maxOccurs")
+    @Import(name="maxOccurs")
       private final @Nullable Output<Integer> maxOccurs;
 
     public Output<Integer> getMaxOccurs() {
@@ -34,7 +34,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * The minimum number of times this field must be present/repeated.
      * 
      */
-    @InputImport(name="minOccurs")
+    @Import(name="minOccurs")
       private final @Nullable Output<Integer> minOccurs;
 
     public Output<Integer> getMinOccurs() {
@@ -45,7 +45,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the field. For example, "PID-1" or just "1".
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -56,7 +56,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * The HL7v2 table this field refers to. For example, PID-15 (Patient's Primary Language) usually refers to table "0296".
      * 
      */
-    @InputImport(name="table")
+    @Import(name="table")
       private final @Nullable Output<String> table;
 
     public Output<String> getTable() {
@@ -67,7 +67,7 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
      * The type of this field. A Type with this name must be defined in an Hl7TypesConfig.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.MetricArgs;
@@ -49,7 +49,7 @@ public class Metric extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="bucketOptions", type=MetricBucketOptions.class, parameters={})
+    @Export(name="bucketOptions", type=MetricBucketOptions.class, parameters={})
     private Output</* @Nullable */ MetricBucketOptions> bucketOptions;
 
     /**
@@ -66,7 +66,7 @@ public class Metric extends io.pulumi.resources.CustomResource {
      * description is 8000 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -82,7 +82,7 @@ public class Metric extends io.pulumi.resources.CustomResource {
      * is used to match log entries.
      * 
      */
-    @OutputExport(name="filter", type=String.class, parameters={})
+    @Export(name="filter", type=String.class, parameters={})
     private Output<String> filter;
 
     /**
@@ -100,7 +100,7 @@ public class Metric extends io.pulumi.resources.CustomResource {
      * the same as for the valueExtractor field.
      * 
      */
-    @OutputExport(name="labelExtractors", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labelExtractors", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labelExtractors;
 
     /**
@@ -118,7 +118,7 @@ public class Metric extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="metricDescriptor", type=MetricMetricDescriptor.class, parameters={})
+    @Export(name="metricDescriptor", type=MetricMetricDescriptor.class, parameters={})
     private Output<MetricMetricDescriptor> metricDescriptor;
 
     /**
@@ -137,7 +137,7 @@ public class Metric extends io.pulumi.resources.CustomResource {
      * of the name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -156,7 +156,7 @@ public class Metric extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -177,7 +177,7 @@ public class Metric extends io.pulumi.resources.CustomResource {
      * error to specify a regex that does not include exactly one capture group.
      * 
      */
-    @OutputExport(name="valueExtractor", type=String.class, parameters={})
+    @Export(name="valueExtractor", type=String.class, parameters={})
     private Output</* @Nullable */ String> valueExtractor;
 
     /**

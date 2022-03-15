@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
      * Cosmos DB database account name.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -29,7 +29,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
      * The unique identifier for the associated AAD principal in the AAD graph to which access is being granted through this Role Assignment. Tenant ID for the principal is inferred using the tenant associated with the subscription.
      * 
      */
-    @InputImport(name="principalId")
+    @Import(name="principalId")
       private final @Nullable Output<String> principalId;
 
     public Output<String> getPrincipalId() {
@@ -40,7 +40,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -51,7 +51,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
      * The GUID for the Role Assignment.
      * 
      */
-    @InputImport(name="roleAssignmentId")
+    @Import(name="roleAssignmentId")
       private final @Nullable Output<String> roleAssignmentId;
 
     public Output<String> getRoleAssignmentId() {
@@ -62,7 +62,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
      * The unique identifier for the associated Role Definition.
      * 
      */
-    @InputImport(name="roleDefinitionId")
+    @Import(name="roleDefinitionId")
       private final @Nullable Output<String> roleDefinitionId;
 
     public Output<String> getRoleDefinitionId() {
@@ -73,7 +73,7 @@ public final class SqlResourceSqlRoleAssignmentArgs extends io.pulumi.resources.
      * The data plane resource path for which access is being granted through this Role Assignment.
      * 
      */
-    @InputImport(name="scope")
+    @Import(name="scope")
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {

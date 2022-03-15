@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobPlacement {
     private final String clusterName;
     private final @Nullable String clusterUuid;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobPlacement(
-        @OutputCustomType.Parameter("clusterName") String clusterName,
-        @OutputCustomType.Parameter("clusterUuid") @Nullable String clusterUuid) {
+        @CustomType.Parameter("clusterName") String clusterName,
+        @CustomType.Parameter("clusterUuid") @Nullable String clusterUuid) {
         this.clusterName = clusterName;
         this.clusterUuid = clusterUuid;
     }

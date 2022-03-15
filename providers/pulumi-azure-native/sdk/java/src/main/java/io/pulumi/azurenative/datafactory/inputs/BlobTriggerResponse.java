@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * List of tags that can be used for describing the trigger.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -38,7 +38,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * Trigger description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -49,7 +49,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * The path of the container/folder that will trigger the pipeline.
      * 
      */
-    @InputImport(name="folderPath", required=true)
+    @Import(name="folderPath", required=true)
       private final String folderPath;
 
     public String getFolderPath() {
@@ -60,7 +60,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * The Azure Storage linked service reference.
      * 
      */
-    @InputImport(name="linkedService", required=true)
+    @Import(name="linkedService", required=true)
       private final LinkedServiceReferenceResponse linkedService;
 
     public LinkedServiceReferenceResponse getLinkedService() {
@@ -71,7 +71,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * The max number of parallel files to handle when it is triggered.
      * 
      */
-    @InputImport(name="maxConcurrency", required=true)
+    @Import(name="maxConcurrency", required=true)
       private final Integer maxConcurrency;
 
     public Integer getMaxConcurrency() {
@@ -82,7 +82,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * Pipelines that need to be started.
      * 
      */
-    @InputImport(name="pipelines")
+    @Import(name="pipelines")
       private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
 
     public List<TriggerPipelineReferenceResponse> getPipelines() {
@@ -93,7 +93,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
      */
-    @InputImport(name="runtimeState", required=true)
+    @Import(name="runtimeState", required=true)
       private final String runtimeState;
 
     public String getRuntimeState() {
@@ -105,7 +105,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'BlobTrigger'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

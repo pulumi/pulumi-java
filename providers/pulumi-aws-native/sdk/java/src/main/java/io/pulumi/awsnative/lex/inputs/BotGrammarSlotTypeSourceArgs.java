@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.Reso
      * The Amazon KMS key required to decrypt the contents of the grammar, if any.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
@@ -33,7 +33,7 @@ public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.Reso
      * The name of the S3 bucket that contains the grammar source.
      * 
      */
-    @InputImport(name="s3BucketName", required=true)
+    @Import(name="s3BucketName", required=true)
       private final Output<String> s3BucketName;
 
     public Output<String> getS3BucketName() {
@@ -44,7 +44,7 @@ public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.Reso
      * The path to the grammar in the S3 bucket.
      * 
      */
-    @InputImport(name="s3ObjectKey", required=true)
+    @Import(name="s3ObjectKey", required=true)
       private final Output<String> s3ObjectKey;
 
     public Output<String> getS3ObjectKey() {

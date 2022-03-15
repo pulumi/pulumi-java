@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class TokenPasswordResponse extends io.pulumi.resources.InvokeArgs 
      * The creation datetime of the password.
      * 
      */
-    @InputImport(name="creationTime")
+    @Import(name="creationTime")
       private final @Nullable String creationTime;
 
     public Optional<String> getCreationTime() {
@@ -33,7 +33,7 @@ public final class TokenPasswordResponse extends io.pulumi.resources.InvokeArgs 
      * The expiry datetime of the password.
      * 
      */
-    @InputImport(name="expiry")
+    @Import(name="expiry")
       private final @Nullable String expiry;
 
     public Optional<String> getExpiry() {
@@ -44,7 +44,7 @@ public final class TokenPasswordResponse extends io.pulumi.resources.InvokeArgs 
      * The password name "password1" or "password2"
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -55,7 +55,7 @@ public final class TokenPasswordResponse extends io.pulumi.resources.InvokeArgs 
      * The password value.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final String value;
 
     public String getValue() {

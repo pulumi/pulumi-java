@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DataTransferConfigScheduleOptionsArgs extends io.pulumi.resou
      * be ignored.
      * 
      */
-    @InputImport(name="disableAutoScheduling")
+    @Import(name="disableAutoScheduling")
       private final @Nullable Output<Boolean> disableAutoScheduling;
 
     public Output<Boolean> getDisableAutoScheduling() {
@@ -37,7 +37,7 @@ public final class DataTransferConfigScheduleOptionsArgs extends io.pulumi.resou
      * limited by this option.
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -52,7 +52,7 @@ public final class DataTransferConfigScheduleOptionsArgs extends io.pulumi.resou
      * limited by this option.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {

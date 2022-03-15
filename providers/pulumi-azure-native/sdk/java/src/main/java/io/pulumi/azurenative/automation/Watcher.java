@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.automation.WatcherArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -36,7 +36,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * Gets or sets the creation time.
      * 
      */
-    @OutputExport(name="creationTime", type=String.class, parameters={})
+    @Export(name="creationTime", type=String.class, parameters={})
     private Output<String> creationTime;
 
     /**
@@ -50,7 +50,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * Gets or sets the description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -64,7 +64,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * Gets or sets the etag of the resource.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output</* @Nullable */ String> etag;
 
     /**
@@ -78,7 +78,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * Gets or sets the frequency at which the watcher is invoked.
      * 
      */
-    @OutputExport(name="executionFrequencyInSeconds", type=Double.class, parameters={})
+    @Export(name="executionFrequencyInSeconds", type=Double.class, parameters={})
     private Output</* @Nullable */ Double> executionFrequencyInSeconds;
 
     /**
@@ -92,7 +92,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * Details of the user who last modified the watcher.
      * 
      */
-    @OutputExport(name="lastModifiedBy", type=String.class, parameters={})
+    @Export(name="lastModifiedBy", type=String.class, parameters={})
     private Output<String> lastModifiedBy;
 
     /**
@@ -106,7 +106,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * Gets or sets the last modified time.
      * 
      */
-    @OutputExport(name="lastModifiedTime", type=String.class, parameters={})
+    @Export(name="lastModifiedTime", type=String.class, parameters={})
     private Output<String> lastModifiedTime;
 
     /**
@@ -120,7 +120,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -134,7 +134,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -148,7 +148,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * Gets or sets the name of the script the watcher is attached to, i.e. the name of an existing runbook.
      * 
      */
-    @OutputExport(name="scriptName", type=String.class, parameters={})
+    @Export(name="scriptName", type=String.class, parameters={})
     private Output</* @Nullable */ String> scriptName;
 
     /**
@@ -162,7 +162,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * Gets or sets the parameters of the script.
      * 
      */
-    @OutputExport(name="scriptParameters", type=Map.class, parameters={String.class, String.class})
+    @Export(name="scriptParameters", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> scriptParameters;
 
     /**
@@ -176,7 +176,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * Gets or sets the name of the hybrid worker group the watcher will run on.
      * 
      */
-    @OutputExport(name="scriptRunOn", type=String.class, parameters={})
+    @Export(name="scriptRunOn", type=String.class, parameters={})
     private Output</* @Nullable */ String> scriptRunOn;
 
     /**
@@ -190,7 +190,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * Gets the current status of the watcher.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -204,7 +204,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -218,7 +218,7 @@ public class Watcher extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

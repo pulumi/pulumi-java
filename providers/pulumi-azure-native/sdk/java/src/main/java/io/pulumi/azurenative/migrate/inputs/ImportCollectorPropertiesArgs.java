@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class ImportCollectorPropertiesArgs extends io.pulumi.resources.Res
 
     public static final ImportCollectorPropertiesArgs Empty = new ImportCollectorPropertiesArgs();
 
-    @InputImport(name="discoverySiteId")
+    @Import(name="discoverySiteId")
       private final @Nullable Output<String> discoverySiteId;
 
     public Output<String> getDiscoverySiteId() {

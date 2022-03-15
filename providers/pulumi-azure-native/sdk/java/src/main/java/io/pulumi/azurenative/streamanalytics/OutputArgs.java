@@ -16,7 +16,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.PowerBIOutputDataSourceArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.ServiceBusQueueOutputDataSourceArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.ServiceBusTopicOutputDataSourceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
      * Describes the data source that output will be written to. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="datasource")
+    @Import(name="datasource")
       private final @Nullable Output<Object> datasource;
 
     public Output<Object> getDatasource() {
@@ -42,7 +42,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the streaming job.
      * 
      */
-    @InputImport(name="jobName", required=true)
+    @Import(name="jobName", required=true)
       private final Output<String> jobName;
 
     public Output<String> getJobName() {
@@ -53,7 +53,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
      * Resource name
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -64,7 +64,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the output.
      * 
      */
-    @InputImport(name="outputName")
+    @Import(name="outputName")
       private final @Nullable Output<String> outputName;
 
     public Output<String> getOutputName() {
@@ -75,7 +75,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -86,7 +86,7 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
      * Describes how data from an input is serialized or how data is serialized when written to an output. Required on PUT (CreateOrReplace) requests.
      * 
      */
-    @InputImport(name="serialization")
+    @Import(name="serialization")
       private final @Nullable Output<Object> serialization;
 
     public Output<Object> getSerialization() {

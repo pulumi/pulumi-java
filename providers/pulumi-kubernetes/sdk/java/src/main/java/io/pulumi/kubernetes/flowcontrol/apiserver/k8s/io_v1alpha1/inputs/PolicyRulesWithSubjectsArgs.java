@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.NonResourcePolicyRuleArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.ResourcePolicyRuleArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.SubjectArgs;
@@ -25,7 +25,7 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
      * `nonResourceRules` is a list of NonResourcePolicyRules that identify matching requests according to their verb and the target non-resource URL.
      * 
      */
-    @InputImport(name="nonResourceRules")
+    @Import(name="nonResourceRules")
       private final @Nullable Output<List<NonResourcePolicyRuleArgs>> nonResourceRules;
 
     public Output<List<NonResourcePolicyRuleArgs>> getNonResourceRules() {
@@ -36,7 +36,7 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
      * `resourceRules` is a slice of ResourcePolicyRules that identify matching requests according to their verb and the target resource. At least one of `resourceRules` and `nonResourceRules` has to be non-empty.
      * 
      */
-    @InputImport(name="resourceRules")
+    @Import(name="resourceRules")
       private final @Nullable Output<List<ResourcePolicyRuleArgs>> resourceRules;
 
     public Output<List<ResourcePolicyRuleArgs>> getResourceRules() {
@@ -47,7 +47,7 @@ public final class PolicyRulesWithSubjectsArgs extends io.pulumi.resources.Resou
      * subjects is the list of normal user, serviceaccount, or group that this rule cares about. There must be at least one member in this slice. A slice that includes both the system:authenticated and system:unauthenticated user groups matches every request. Required.
      * 
      */
-    @InputImport(name="subjects", required=true)
+    @Import(name="subjects", required=true)
       private final Output<List<SubjectArgs>> subjects;
 
     public Output<List<SubjectArgs>> getSubjects() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.aws.wafv2.inputs.WebAclRuleActionCountCustomRequestHandlingArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +18,7 @@ public final class WebAclRuleActionCountArgs extends io.pulumi.resources.Resourc
      * Defines custom handling for the web request. See Custom Request Handling below for details.
      * 
      */
-    @InputImport(name="customRequestHandling")
+    @Import(name="customRequestHandling")
       private final @Nullable Output<WebAclRuleActionCountCustomRequestHandlingArgs> customRequestHandling;
 
     public Output<WebAclRuleActionCountCustomRequestHandlingArgs> getCustomRequestHandling() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.storagegateway.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GatewaySmbActiveDirectorySettings {
     private final @Nullable String activeDirectoryStatus;
     /**
@@ -47,15 +47,15 @@ public final class GatewaySmbActiveDirectorySettings {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GatewaySmbActiveDirectorySettings(
-        @OutputCustomType.Parameter("activeDirectoryStatus") @Nullable String activeDirectoryStatus,
-        @OutputCustomType.Parameter("domainControllers") @Nullable List<String> domainControllers,
-        @OutputCustomType.Parameter("domainName") String domainName,
-        @OutputCustomType.Parameter("organizationalUnit") @Nullable String organizationalUnit,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("activeDirectoryStatus") @Nullable String activeDirectoryStatus,
+        @CustomType.Parameter("domainControllers") @Nullable List<String> domainControllers,
+        @CustomType.Parameter("domainName") String domainName,
+        @CustomType.Parameter("organizationalUnit") @Nullable String organizationalUnit,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds,
+        @CustomType.Parameter("username") String username) {
         this.activeDirectoryStatus = activeDirectoryStatus;
         this.domainControllers = domainControllers;
         this.domainName = domainName;

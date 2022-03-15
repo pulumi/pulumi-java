@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class LatestOperationResultResponse {
     /**
      * Error code on failure.
@@ -40,14 +40,14 @@ public final class LatestOperationResultResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LatestOperationResultResponse(
-        @OutputCustomType.Parameter("errorCode") String errorCode,
-        @OutputCustomType.Parameter("errorMessage") String errorMessage,
-        @OutputCustomType.Parameter("httpMethod") String httpMethod,
-        @OutputCustomType.Parameter("operationUrl") String operationUrl,
-        @OutputCustomType.Parameter("requestUri") String requestUri,
-        @OutputCustomType.Parameter("status") String status) {
+        @CustomType.Parameter("errorCode") String errorCode,
+        @CustomType.Parameter("errorMessage") String errorMessage,
+        @CustomType.Parameter("httpMethod") String httpMethod,
+        @CustomType.Parameter("operationUrl") String operationUrl,
+        @CustomType.Parameter("requestUri") String requestUri,
+        @CustomType.Parameter("status") String status) {
         this.errorCode = errorCode;
         this.errorMessage = errorMessage;
         this.httpMethod = httpMethod;

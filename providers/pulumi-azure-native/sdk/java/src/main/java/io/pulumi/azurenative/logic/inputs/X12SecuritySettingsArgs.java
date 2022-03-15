@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * The authorization qualifier.
      * 
      */
-    @InputImport(name="authorizationQualifier", required=true)
+    @Import(name="authorizationQualifier", required=true)
       private final Output<String> authorizationQualifier;
 
     public Output<String> getAuthorizationQualifier() {
@@ -33,7 +33,7 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * The authorization value.
      * 
      */
-    @InputImport(name="authorizationValue")
+    @Import(name="authorizationValue")
       private final @Nullable Output<String> authorizationValue;
 
     public Output<String> getAuthorizationValue() {
@@ -44,7 +44,7 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * The password value.
      * 
      */
-    @InputImport(name="passwordValue")
+    @Import(name="passwordValue")
       private final @Nullable Output<String> passwordValue;
 
     public Output<String> getPasswordValue() {
@@ -55,7 +55,7 @@ public final class X12SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * The security qualifier.
      * 
      */
-    @InputImport(name="securityQualifier", required=true)
+    @Import(name="securityQualifier", required=true)
       private final Output<String> securityQualifier;
 
     public Output<String> getSecurityQualifier() {

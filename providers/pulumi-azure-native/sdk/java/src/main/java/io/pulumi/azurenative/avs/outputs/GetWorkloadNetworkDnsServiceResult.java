@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkloadNetworkDnsServiceResult {
     /**
      * Default DNS zone of the DNS Service.
@@ -69,19 +69,19 @@ public final class GetWorkloadNetworkDnsServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkloadNetworkDnsServiceResult(
-        @OutputCustomType.Parameter("defaultDnsZone") @Nullable String defaultDnsZone,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("dnsServiceIp") @Nullable String dnsServiceIp,
-        @OutputCustomType.Parameter("fqdnZones") @Nullable List<String> fqdnZones,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("logLevel") @Nullable String logLevel,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("revision") @Nullable Double revision,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("defaultDnsZone") @Nullable String defaultDnsZone,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("dnsServiceIp") @Nullable String dnsServiceIp,
+        @CustomType.Parameter("fqdnZones") @Nullable List<String> fqdnZones,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("logLevel") @Nullable String logLevel,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("revision") @Nullable Double revision,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("type") String type) {
         this.defaultDnsZone = defaultDnsZone;
         this.displayName = displayName;
         this.dnsServiceIp = dnsServiceIp;

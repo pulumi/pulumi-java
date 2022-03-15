@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GuestPoliciesRecipeInstallStepMsiInstallation {
     /**
      * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
@@ -28,11 +28,11 @@ public final class GuestPoliciesRecipeInstallStepMsiInstallation {
      */
     private final @Nullable List<String> flags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestPoliciesRecipeInstallStepMsiInstallation(
-        @OutputCustomType.Parameter("allowedExitCodes") @Nullable List<Integer> allowedExitCodes,
-        @OutputCustomType.Parameter("artifactId") String artifactId,
-        @OutputCustomType.Parameter("flags") @Nullable List<String> flags) {
+        @CustomType.Parameter("allowedExitCodes") @Nullable List<Integer> allowedExitCodes,
+        @CustomType.Parameter("artifactId") String artifactId,
+        @CustomType.Parameter("flags") @Nullable List<String> flags) {
         this.allowedExitCodes = allowedExitCodes;
         this.artifactId = artifactId;
         this.flags = flags;

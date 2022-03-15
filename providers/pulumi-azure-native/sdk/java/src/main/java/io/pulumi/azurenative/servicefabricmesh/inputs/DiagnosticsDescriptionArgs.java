@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.AzureInternalMonitoringPipelineSinkDescriptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
      * The sinks to be used if diagnostics is enabled. Sink choices can be overridden at the service and code package level.
      * 
      */
-    @InputImport(name="defaultSinkRefs")
+    @Import(name="defaultSinkRefs")
       private final @Nullable Output<List<String>> defaultSinkRefs;
 
     public Output<List<String>> getDefaultSinkRefs() {
@@ -36,7 +36,7 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
      * Status of whether or not sinks are enabled.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -47,7 +47,7 @@ public final class DiagnosticsDescriptionArgs extends io.pulumi.resources.Resour
      * List of supported sinks that can be referenced.
      * 
      */
-    @InputImport(name="sinks")
+    @Import(name="sinks")
       private final @Nullable Output<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> sinks;
 
     public Output<List<AzureInternalMonitoringPipelineSinkDescriptionArgs>> getSinks() {

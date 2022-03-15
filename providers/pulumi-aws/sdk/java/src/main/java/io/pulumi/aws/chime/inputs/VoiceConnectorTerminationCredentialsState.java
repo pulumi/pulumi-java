@@ -5,7 +5,7 @@ package io.pulumi.aws.chime.inputs;
 
 import io.pulumi.aws.chime.inputs.VoiceConnectorTerminationCredentialsCredentialGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VoiceConnectorTerminationCredentialsState extends io.pulumi.r
      * List of termination SIP credentials.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials;
 
     public Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> getCredentials() {
@@ -31,7 +31,7 @@ public final class VoiceConnectorTerminationCredentialsState extends io.pulumi.r
      * Amazon Chime Voice Connector ID.
      * 
      */
-    @InputImport(name="voiceConnectorId")
+    @Import(name="voiceConnectorId")
       private final @Nullable Output<String> voiceConnectorId;
 
     public Output<String> getVoiceConnectorId() {

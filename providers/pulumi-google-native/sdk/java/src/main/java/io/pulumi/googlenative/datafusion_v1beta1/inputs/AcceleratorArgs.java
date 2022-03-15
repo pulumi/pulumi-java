@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datafusion_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.datafusion_v1beta1.enums.AcceleratorAcceleratorType;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * The type of an accelator for a CDF instance.
      * 
      */
-    @InputImport(name="acceleratorType")
+    @Import(name="acceleratorType")
       private final @Nullable Output<AcceleratorAcceleratorType> acceleratorType;
 
     public Output<AcceleratorAcceleratorType> getAcceleratorType() {

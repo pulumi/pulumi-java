@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.blueprint.RoleAssignmentArtifactArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -35,7 +35,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * Artifacts which need to be deployed before the specified artifact.
      * 
      */
-    @OutputExport(name="dependsOn", type=List.class, parameters={String.class})
+    @Export(name="dependsOn", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> dependsOn;
 
     /**
@@ -49,7 +49,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * Multi-line explain this resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -63,7 +63,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * One-liner string explain this resource.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -78,7 +78,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * Expected value is 'roleAssignment'.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -93,7 +93,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * Name of this resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -107,7 +107,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * Array of user or group identities in Azure Active Directory. The roleDefinition will apply to each identity.
      * 
      */
-    @OutputExport(name="principalIds", type=Object.class, parameters={})
+    @Export(name="principalIds", type=Object.class, parameters={})
     private Output<Object> principalIds;
 
     /**
@@ -121,7 +121,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * RoleAssignment will be scope to this resourceGroup. If empty, it scopes to the subscription.
      * 
      */
-    @OutputExport(name="resourceGroup", type=String.class, parameters={})
+    @Export(name="resourceGroup", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceGroup;
 
     /**
@@ -135,7 +135,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * Azure resource ID of the RoleDefinition.
      * 
      */
-    @OutputExport(name="roleDefinitionId", type=String.class, parameters={})
+    @Export(name="roleDefinitionId", type=String.class, parameters={})
     private Output<String> roleDefinitionId;
 
     /**
@@ -149,7 +149,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
      * Type of this resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.ManagedSslCertificateManagedGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
      * The unique identifier for the resource.
      * 
      */
-    @InputImport(name="certificateId")
+    @Import(name="certificateId")
       private final @Nullable Output<Integer> certificateId;
 
     public Output<Integer> getCertificateId() {
@@ -32,7 +32,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @InputImport(name="creationTimestamp")
+    @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
@@ -43,7 +43,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -54,7 +54,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
      * Expire time of the certificate.
      * 
      */
-    @InputImport(name="expireTime")
+    @Import(name="expireTime")
       private final @Nullable Output<String> expireTime;
 
     public Output<String> getExpireTime() {
@@ -67,7 +67,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="managed")
+    @Import(name="managed")
       private final @Nullable Output<ManagedSslCertificateManagedGetArgs> managed;
 
     public Output<ManagedSslCertificateManagedGetArgs> getManaged() {
@@ -84,7 +84,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -96,7 +96,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -107,7 +107,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -118,7 +118,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
      * Domains associated with the certificate via Subject Alternative Name.
      * 
      */
-    @InputImport(name="subjectAlternativeNames")
+    @Import(name="subjectAlternativeNames")
       private final @Nullable Output<List<String>> subjectAlternativeNames;
 
     public Output<List<String>> getSubjectAlternativeNames() {
@@ -132,7 +132,7 @@ public final class ManagedSslCertificateState extends io.pulumi.resources.Resour
      * Possible values are `MANAGED`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

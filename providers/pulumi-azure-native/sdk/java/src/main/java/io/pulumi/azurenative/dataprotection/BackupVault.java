@@ -10,7 +10,7 @@ import io.pulumi.azurenative.dataprotection.outputs.DppIdentityDetailsResponse;
 import io.pulumi.azurenative.dataprotection.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * Optional ETag.
      * 
      */
-    @OutputExport(name="eTag", type=String.class, parameters={})
+    @Export(name="eTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> eTag;
 
     /**
@@ -52,7 +52,7 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * Input Managed Identity Details
      * 
      */
-    @OutputExport(name="identity", type=DppIdentityDetailsResponse.class, parameters={})
+    @Export(name="identity", type=DppIdentityDetailsResponse.class, parameters={})
     private Output</* @Nullable */ DppIdentityDetailsResponse> identity;
 
     /**
@@ -66,7 +66,7 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * Resource location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -80,7 +80,7 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * Resource name associated with the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * BackupVaultResource properties
      * 
      */
-    @OutputExport(name="properties", type=BackupVaultResponse.class, parameters={})
+    @Export(name="properties", type=BackupVaultResponse.class, parameters={})
     private Output<BackupVaultResponse> properties;
 
     /**
@@ -108,7 +108,7 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * Metadata pertaining to creation and last modification of the resource.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -122,7 +122,7 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -136,7 +136,7 @@ public class BackupVault extends io.pulumi.resources.CustomResource {
      * Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/...
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

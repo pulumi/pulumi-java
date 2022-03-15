@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SoaRecordResponse {
     /**
      * The email contact for this SOA record.
@@ -48,15 +48,15 @@ public final class SoaRecordResponse {
      */
     private final @Nullable Double serialNumber;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SoaRecordResponse(
-        @OutputCustomType.Parameter("email") @Nullable String email,
-        @OutputCustomType.Parameter("expireTime") @Nullable Double expireTime,
-        @OutputCustomType.Parameter("host") @Nullable String host,
-        @OutputCustomType.Parameter("minimumTtl") @Nullable Double minimumTtl,
-        @OutputCustomType.Parameter("refreshTime") @Nullable Double refreshTime,
-        @OutputCustomType.Parameter("retryTime") @Nullable Double retryTime,
-        @OutputCustomType.Parameter("serialNumber") @Nullable Double serialNumber) {
+        @CustomType.Parameter("email") @Nullable String email,
+        @CustomType.Parameter("expireTime") @Nullable Double expireTime,
+        @CustomType.Parameter("host") @Nullable String host,
+        @CustomType.Parameter("minimumTtl") @Nullable Double minimumTtl,
+        @CustomType.Parameter("refreshTime") @Nullable Double refreshTime,
+        @CustomType.Parameter("retryTime") @Nullable Double retryTime,
+        @CustomType.Parameter("serialNumber") @Nullable Double serialNumber) {
         this.email = email;
         this.expireTime = expireTime;
         this.host = host;

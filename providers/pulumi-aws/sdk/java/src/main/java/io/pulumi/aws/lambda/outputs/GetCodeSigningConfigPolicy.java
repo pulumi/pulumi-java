@@ -3,11 +3,11 @@
 
 package io.pulumi.aws.lambda.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCodeSigningConfigPolicy {
     /**
      * Code signing configuration policy for deployment validation failure.
@@ -15,8 +15,8 @@ public final class GetCodeSigningConfigPolicy {
      */
     private final String untrustedArtifactOnDeployment;
 
-    @OutputCustomType.Constructor
-    private GetCodeSigningConfigPolicy(@OutputCustomType.Parameter("untrustedArtifactOnDeployment") String untrustedArtifactOnDeployment) {
+    @CustomType.Constructor
+    private GetCodeSigningConfigPolicy(@CustomType.Parameter("untrustedArtifactOnDeployment") String untrustedArtifactOnDeployment) {
         this.untrustedArtifactOnDeployment = untrustedArtifactOnDeployment;
     }
 

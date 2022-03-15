@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OSDiskDetailsResponse {
     /**
      * The type of the OS on the VM.
@@ -27,11 +27,11 @@ public final class OSDiskDetailsResponse {
      */
     private final @Nullable String vhdName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OSDiskDetailsResponse(
-        @OutputCustomType.Parameter("osType") @Nullable String osType,
-        @OutputCustomType.Parameter("osVhdId") @Nullable String osVhdId,
-        @OutputCustomType.Parameter("vhdName") @Nullable String vhdName) {
+        @CustomType.Parameter("osType") @Nullable String osType,
+        @CustomType.Parameter("osVhdId") @Nullable String osVhdId,
+        @CustomType.Parameter("vhdName") @Nullable String vhdName) {
         this.osType = osType;
         this.osVhdId = osVhdId;
         this.vhdName = vhdName;

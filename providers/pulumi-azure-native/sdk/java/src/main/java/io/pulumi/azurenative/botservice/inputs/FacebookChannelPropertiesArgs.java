@@ -5,7 +5,7 @@ package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.FacebookPageArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class FacebookChannelPropertiesArgs extends io.pulumi.resources.Res
      * Facebook application id
      * 
      */
-    @InputImport(name="appId", required=true)
+    @Import(name="appId", required=true)
       private final Output<String> appId;
 
     public Output<String> getAppId() {
@@ -36,7 +36,7 @@ public final class FacebookChannelPropertiesArgs extends io.pulumi.resources.Res
      * Facebook application secret. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
-    @InputImport(name="appSecret")
+    @Import(name="appSecret")
       private final @Nullable Output<String> appSecret;
 
     public Output<String> getAppSecret() {
@@ -47,7 +47,7 @@ public final class FacebookChannelPropertiesArgs extends io.pulumi.resources.Res
      * Whether this channel is enabled for the bot
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -58,7 +58,7 @@ public final class FacebookChannelPropertiesArgs extends io.pulumi.resources.Res
      * The list of Facebook pages
      * 
      */
-    @InputImport(name="pages")
+    @Import(name="pages")
       private final @Nullable Output<List<FacebookPageArgs>> pages;
 
     public Output<List<FacebookPageArgs>> getPages() {

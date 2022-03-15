@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.signalrservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SignalRCorsSettingsResponse extends io.pulumi.resources.Invok
      * Gets or sets the list of origins that should be allowed to make cross-origin calls (for example: http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.
      * 
      */
-    @InputImport(name="allowedOrigins")
+    @Import(name="allowedOrigins")
       private final @Nullable List<String> allowedOrigins;
 
     public List<String> getAllowedOrigins() {

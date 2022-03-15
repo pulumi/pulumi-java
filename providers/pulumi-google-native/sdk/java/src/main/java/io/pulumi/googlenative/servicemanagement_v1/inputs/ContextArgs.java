@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.ContextRuleArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ContextArgs extends io.pulumi.resources.ResourceArgs {
      * A list of RPC context rules that apply to individual API methods. **NOTE:** All service configuration rules follow "last one wins" order.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<ContextRuleArgs>> rules;
 
     public Output<List<ContextRuleArgs>> getRules() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.batch.outputs;
 
 import io.pulumi.aws.batch.outputs.ComputeEnvironmentComputeResourcesEc2Configuration;
 import io.pulumi.aws.batch.outputs.ComputeEnvironmentComputeResourcesLaunchTemplate;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComputeEnvironmentComputeResources {
     /**
      * The allocation strategy to use for the compute resource in case not enough instances of the best fitting instance type can be allocated. Valid items are `BEST_FIT_PROGRESSIVE`, `SPOT_CAPACITY_OPTIMIZED` or `BEST_FIT`. Defaults to `BEST_FIT`. See [AWS docs](https://docs.aws.amazon.com/batch/latest/userguide/allocation-strategies.html) for details. This parameter isn't applicable to jobs running on Fargate resources, and shouldn't be specified.
@@ -97,24 +97,24 @@ public final class ComputeEnvironmentComputeResources {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComputeEnvironmentComputeResources(
-        @OutputCustomType.Parameter("allocationStrategy") @Nullable String allocationStrategy,
-        @OutputCustomType.Parameter("bidPercentage") @Nullable Integer bidPercentage,
-        @OutputCustomType.Parameter("desiredVcpus") @Nullable Integer desiredVcpus,
-        @OutputCustomType.Parameter("ec2Configuration") @Nullable ComputeEnvironmentComputeResourcesEc2Configuration ec2Configuration,
-        @OutputCustomType.Parameter("ec2KeyPair") @Nullable String ec2KeyPair,
-        @OutputCustomType.Parameter("imageId") @Nullable String imageId,
-        @OutputCustomType.Parameter("instanceRole") @Nullable String instanceRole,
-        @OutputCustomType.Parameter("instanceTypes") @Nullable List<String> instanceTypes,
-        @OutputCustomType.Parameter("launchTemplate") @Nullable ComputeEnvironmentComputeResourcesLaunchTemplate launchTemplate,
-        @OutputCustomType.Parameter("maxVcpus") Integer maxVcpus,
-        @OutputCustomType.Parameter("minVcpus") @Nullable Integer minVcpus,
-        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
-        @OutputCustomType.Parameter("spotIamFleetRole") @Nullable String spotIamFleetRole,
-        @OutputCustomType.Parameter("subnets") List<String> subnets,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("allocationStrategy") @Nullable String allocationStrategy,
+        @CustomType.Parameter("bidPercentage") @Nullable Integer bidPercentage,
+        @CustomType.Parameter("desiredVcpus") @Nullable Integer desiredVcpus,
+        @CustomType.Parameter("ec2Configuration") @Nullable ComputeEnvironmentComputeResourcesEc2Configuration ec2Configuration,
+        @CustomType.Parameter("ec2KeyPair") @Nullable String ec2KeyPair,
+        @CustomType.Parameter("imageId") @Nullable String imageId,
+        @CustomType.Parameter("instanceRole") @Nullable String instanceRole,
+        @CustomType.Parameter("instanceTypes") @Nullable List<String> instanceTypes,
+        @CustomType.Parameter("launchTemplate") @Nullable ComputeEnvironmentComputeResourcesLaunchTemplate launchTemplate,
+        @CustomType.Parameter("maxVcpus") Integer maxVcpus,
+        @CustomType.Parameter("minVcpus") @Nullable Integer minVcpus,
+        @CustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @CustomType.Parameter("spotIamFleetRole") @Nullable String spotIamFleetRole,
+        @CustomType.Parameter("subnets") List<String> subnets,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("type") String type) {
         this.allocationStrategy = allocationStrategy;
         this.bidPercentage = bidPercentage;
         this.desiredVcpus = desiredVcpus;

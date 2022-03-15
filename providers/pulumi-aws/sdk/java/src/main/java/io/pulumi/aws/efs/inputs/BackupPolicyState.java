@@ -5,7 +5,7 @@ package io.pulumi.aws.efs.inputs;
 
 import io.pulumi.aws.efs.inputs.BackupPolicyBackupPolicyGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BackupPolicyState extends io.pulumi.resources.ResourceArgs {
      * A backup_policy object (documented below).
      * 
      */
-    @InputImport(name="backupPolicy")
+    @Import(name="backupPolicy")
       private final @Nullable Output<BackupPolicyBackupPolicyGetArgs> backupPolicy;
 
     public Output<BackupPolicyBackupPolicyGetArgs> getBackupPolicy() {
@@ -30,7 +30,7 @@ public final class BackupPolicyState extends io.pulumi.resources.ResourceArgs {
      * The ID of the EFS file system.
      * 
      */
-    @InputImport(name="fileSystemId")
+    @Import(name="fileSystemId")
       private final @Nullable Output<String> fileSystemId;
 
     public Output<String> getFileSystemId() {

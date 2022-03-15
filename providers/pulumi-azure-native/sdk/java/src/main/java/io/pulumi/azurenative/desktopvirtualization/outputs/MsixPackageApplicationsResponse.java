@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.desktopvirtualization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MsixPackageApplicationsResponse {
     /**
      * Package Application Id, found in appxmanifest.xml.
@@ -47,15 +47,15 @@ public final class MsixPackageApplicationsResponse {
      */
     private final @Nullable String rawPng;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MsixPackageApplicationsResponse(
-        @OutputCustomType.Parameter("appId") @Nullable String appId,
-        @OutputCustomType.Parameter("appUserModelID") @Nullable String appUserModelID,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
-        @OutputCustomType.Parameter("iconImageName") @Nullable String iconImageName,
-        @OutputCustomType.Parameter("rawIcon") @Nullable String rawIcon,
-        @OutputCustomType.Parameter("rawPng") @Nullable String rawPng) {
+        @CustomType.Parameter("appId") @Nullable String appId,
+        @CustomType.Parameter("appUserModelID") @Nullable String appUserModelID,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @CustomType.Parameter("iconImageName") @Nullable String iconImageName,
+        @CustomType.Parameter("rawIcon") @Nullable String rawIcon,
+        @CustomType.Parameter("rawPng") @Nullable String rawPng) {
         this.appId = appId;
         this.appUserModelID = appUserModelID;
         this.description = description;

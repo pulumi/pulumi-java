@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.iam.outputs.GetWorkloadIdentityPoolProviderAw;
 import io.pulumi.gcp.iam.outputs.GetWorkloadIdentityPoolProviderOidc;
 import java.lang.Boolean;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWorkloadIdentityPoolProviderResult {
     private final String attributeCondition;
     private final Map<String,String> attributeMapping;
@@ -34,21 +34,21 @@ public final class GetWorkloadIdentityPoolProviderResult {
     private final String workloadIdentityPoolId;
     private final String workloadIdentityPoolProviderId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWorkloadIdentityPoolProviderResult(
-        @OutputCustomType.Parameter("attributeCondition") String attributeCondition,
-        @OutputCustomType.Parameter("attributeMapping") Map<String,String> attributeMapping,
-        @OutputCustomType.Parameter("aws") List<GetWorkloadIdentityPoolProviderAw> aws,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("disabled") Boolean disabled,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("oidcs") List<GetWorkloadIdentityPoolProviderOidc> oidcs,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("state") String state,
-        @OutputCustomType.Parameter("workloadIdentityPoolId") String workloadIdentityPoolId,
-        @OutputCustomType.Parameter("workloadIdentityPoolProviderId") String workloadIdentityPoolProviderId) {
+        @CustomType.Parameter("attributeCondition") String attributeCondition,
+        @CustomType.Parameter("attributeMapping") Map<String,String> attributeMapping,
+        @CustomType.Parameter("aws") List<GetWorkloadIdentityPoolProviderAw> aws,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("disabled") Boolean disabled,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("oidcs") List<GetWorkloadIdentityPoolProviderOidc> oidcs,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("state") String state,
+        @CustomType.Parameter("workloadIdentityPoolId") String workloadIdentityPoolId,
+        @CustomType.Parameter("workloadIdentityPoolProviderId") String workloadIdentityPoolProviderId) {
         this.attributeCondition = attributeCondition;
         this.attributeMapping = attributeMapping;
         this.aws = aws;

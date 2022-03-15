@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.enums.TrailingSeparatorPolicy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * The value indicating whether to allow leading and trailing spaces and zeroes.
      * 
      */
-    @InputImport(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
+    @Import(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
       private final Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
 
     public Output<Boolean> getAllowLeadingAndTrailingSpacesAndZeroes() {
@@ -35,7 +35,7 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * The message id on which the validation settings has to be applied.
      * 
      */
-    @InputImport(name="messageId", required=true)
+    @Import(name="messageId", required=true)
       private final Output<String> messageId;
 
     public Output<String> getMessageId() {
@@ -46,7 +46,7 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * The trailing separator policy.
      * 
      */
-    @InputImport(name="trailingSeparatorPolicy", required=true)
+    @Import(name="trailingSeparatorPolicy", required=true)
       private final Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
 
     public Output<Either<String,TrailingSeparatorPolicy>> getTrailingSeparatorPolicy() {
@@ -57,7 +57,7 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * The value indicating whether to trim leading and trailing spaces and zeroes.
      * 
      */
-    @InputImport(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
+    @Import(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
       private final Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
 
     public Output<Boolean> getTrimLeadingAndTrailingSpacesAndZeroes() {
@@ -68,7 +68,7 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * The value indicating whether to validate character Set.
      * 
      */
-    @InputImport(name="validateCharacterSet", required=true)
+    @Import(name="validateCharacterSet", required=true)
       private final Output<Boolean> validateCharacterSet;
 
     public Output<Boolean> getValidateCharacterSet() {
@@ -79,7 +79,7 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * The value indicating whether to validate EDI types.
      * 
      */
-    @InputImport(name="validateEDITypes", required=true)
+    @Import(name="validateEDITypes", required=true)
       private final Output<Boolean> validateEDITypes;
 
     public Output<Boolean> getValidateEDITypes() {
@@ -90,7 +90,7 @@ public final class X12ValidationOverrideArgs extends io.pulumi.resources.Resourc
      * The value indicating whether to validate XSD types.
      * 
      */
-    @InputImport(name="validateXSDTypes", required=true)
+    @Import(name="validateXSDTypes", required=true)
       private final Output<Boolean> validateXSDTypes;
 
     public Output<Boolean> getValidateXSDTypes() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BuildNoteResponse {
     /**
      * Immutable. Version of the builder which produced this build.
@@ -15,8 +15,8 @@ public final class BuildNoteResponse {
      */
     private final String builderVersion;
 
-    @OutputCustomType.Constructor
-    private BuildNoteResponse(@OutputCustomType.Parameter("builderVersion") String builderVersion) {
+    @CustomType.Constructor
+    private BuildNoteResponse(@CustomType.Parameter("builderVersion") String builderVersion) {
         this.builderVersion = builderVersion;
     }
 

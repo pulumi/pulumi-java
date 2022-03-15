@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorWorkerLogDeliveryArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class ConnectorLogDeliveryArgs extends io.pulumi.resources.Resource
 
     public static final ConnectorLogDeliveryArgs Empty = new ConnectorLogDeliveryArgs();
 
-    @InputImport(name="workerLogDelivery", required=true)
+    @Import(name="workerLogDelivery", required=true)
       private final Output<ConnectorWorkerLogDeliveryArgs> workerLogDelivery;
 
     public Output<ConnectorWorkerLogDeliveryArgs> getWorkerLogDelivery() {

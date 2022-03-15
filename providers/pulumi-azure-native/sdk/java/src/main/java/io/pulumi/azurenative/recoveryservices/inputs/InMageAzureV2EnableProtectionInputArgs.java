@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.DiskAccountType;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageAzureV2DiskInputDetailsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The DiskEncryptionSet ARM ID.
      * 
      */
-    @InputImport(name="diskEncryptionSetId")
+    @Import(name="diskEncryptionSetId")
       private final @Nullable Output<String> diskEncryptionSetId;
 
     public Output<String> getDiskEncryptionSetId() {
@@ -37,7 +37,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The DiskType.
      * 
      */
-    @InputImport(name="diskType")
+    @Import(name="diskType")
       private final @Nullable Output<Either<String,DiskAccountType>> diskType;
 
     public Output<Either<String,DiskAccountType>> getDiskType() {
@@ -48,7 +48,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The disks to include list.
      * 
      */
-    @InputImport(name="disksToInclude")
+    @Import(name="disksToInclude")
       private final @Nullable Output<List<InMageAzureV2DiskInputDetailsArgs>> disksToInclude;
 
     public Output<List<InMageAzureV2DiskInputDetailsArgs>> getDisksToInclude() {
@@ -59,7 +59,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
      * 
      */
-    @InputImport(name="enableRdpOnTargetOption")
+    @Import(name="enableRdpOnTargetOption")
       private final @Nullable Output<String> enableRdpOnTargetOption;
 
     public Output<String> getEnableRdpOnTargetOption() {
@@ -71,7 +71,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * Expected value is 'InMageAzureV2'.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -82,7 +82,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The storage account to be used for logging during replication.
      * 
      */
-    @InputImport(name="logStorageAccountId")
+    @Import(name="logStorageAccountId")
       private final @Nullable Output<String> logStorageAccountId;
 
     public Output<String> getLogStorageAccountId() {
@@ -93,7 +93,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The Master target Id.
      * 
      */
-    @InputImport(name="masterTargetId")
+    @Import(name="masterTargetId")
       private final @Nullable Output<String> masterTargetId;
 
     public Output<String> getMasterTargetId() {
@@ -104,7 +104,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The multi vm group Id.
      * 
      */
-    @InputImport(name="multiVmGroupId")
+    @Import(name="multiVmGroupId")
       private final @Nullable Output<String> multiVmGroupId;
 
     public Output<String> getMultiVmGroupId() {
@@ -115,7 +115,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The multi vm group name.
      * 
      */
-    @InputImport(name="multiVmGroupName")
+    @Import(name="multiVmGroupName")
       private final @Nullable Output<String> multiVmGroupName;
 
     public Output<String> getMultiVmGroupName() {
@@ -126,7 +126,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The Process Server Id.
      * 
      */
-    @InputImport(name="processServerId")
+    @Import(name="processServerId")
       private final @Nullable Output<String> processServerId;
 
     public Output<String> getProcessServerId() {
@@ -137,7 +137,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The CS account Id.
      * 
      */
-    @InputImport(name="runAsAccountId")
+    @Import(name="runAsAccountId")
       private final @Nullable Output<String> runAsAccountId;
 
     public Output<String> getRunAsAccountId() {
@@ -148,7 +148,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The storage account name.
      * 
      */
-    @InputImport(name="storageAccountId")
+    @Import(name="storageAccountId")
       private final @Nullable Output<String> storageAccountId;
 
     public Output<String> getStorageAccountId() {
@@ -159,7 +159,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The availability set ARM Id.
      * 
      */
-    @InputImport(name="targetAvailabilitySetId")
+    @Import(name="targetAvailabilitySetId")
       private final @Nullable Output<String> targetAvailabilitySetId;
 
     public Output<String> getTargetAvailabilitySetId() {
@@ -170,7 +170,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The target availability zone.
      * 
      */
-    @InputImport(name="targetAvailabilityZone")
+    @Import(name="targetAvailabilityZone")
       private final @Nullable Output<String> targetAvailabilityZone;
 
     public Output<String> getTargetAvailabilityZone() {
@@ -181,7 +181,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The selected target Azure network Id.
      * 
      */
-    @InputImport(name="targetAzureNetworkId")
+    @Import(name="targetAzureNetworkId")
       private final @Nullable Output<String> targetAzureNetworkId;
 
     public Output<String> getTargetAzureNetworkId() {
@@ -192,7 +192,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The selected target Azure subnet Id.
      * 
      */
-    @InputImport(name="targetAzureSubnetId")
+    @Import(name="targetAzureSubnetId")
       private final @Nullable Output<String> targetAzureSubnetId;
 
     public Output<String> getTargetAzureSubnetId() {
@@ -203,7 +203,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The Id of the target resource group (for classic deployment) in which the failover VM is to be created.
      * 
      */
-    @InputImport(name="targetAzureV1ResourceGroupId")
+    @Import(name="targetAzureV1ResourceGroupId")
       private final @Nullable Output<String> targetAzureV1ResourceGroupId;
 
     public Output<String> getTargetAzureV1ResourceGroupId() {
@@ -214,7 +214,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The Id of the target resource group (for resource manager deployment) in which the failover VM is to be created.
      * 
      */
-    @InputImport(name="targetAzureV2ResourceGroupId")
+    @Import(name="targetAzureV2ResourceGroupId")
       private final @Nullable Output<String> targetAzureV2ResourceGroupId;
 
     public Output<String> getTargetAzureV2ResourceGroupId() {
@@ -225,7 +225,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The target azure Vm Name.
      * 
      */
-    @InputImport(name="targetAzureVmName")
+    @Import(name="targetAzureVmName")
       private final @Nullable Output<String> targetAzureVmName;
 
     public Output<String> getTargetAzureVmName() {
@@ -236,7 +236,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The proximity placement group ARM Id.
      * 
      */
-    @InputImport(name="targetProximityPlacementGroupId")
+    @Import(name="targetProximityPlacementGroupId")
       private final @Nullable Output<String> targetProximityPlacementGroupId;
 
     public Output<String> getTargetProximityPlacementGroupId() {
@@ -247,7 +247,7 @@ public final class InMageAzureV2EnableProtectionInputArgs extends io.pulumi.reso
      * The target VM size.
      * 
      */
-    @InputImport(name="targetVmSize")
+    @Import(name="targetVmSize")
       private final @Nullable Output<String> targetVmSize;
 
     public Output<String> getTargetVmSize() {

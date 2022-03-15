@@ -5,13 +5,13 @@ package io.pulumi.aws.lb.outputs;
 
 import io.pulumi.aws.lb.outputs.ListenerDefaultActionForwardStickiness;
 import io.pulumi.aws.lb.outputs.ListenerDefaultActionForwardTargetGroup;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListenerDefaultActionForward {
     /**
      * Configuration block for target group stickiness for the rule. Detailed below.
@@ -24,10 +24,10 @@ public final class ListenerDefaultActionForward {
      */
     private final List<ListenerDefaultActionForwardTargetGroup> targetGroups;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ListenerDefaultActionForward(
-        @OutputCustomType.Parameter("stickiness") @Nullable ListenerDefaultActionForwardStickiness stickiness,
-        @OutputCustomType.Parameter("targetGroups") List<ListenerDefaultActionForwardTargetGroup> targetGroups) {
+        @CustomType.Parameter("stickiness") @Nullable ListenerDefaultActionForwardStickiness stickiness,
+        @CustomType.Parameter("targetGroups") List<ListenerDefaultActionForwardTargetGroup> targetGroups) {
         this.stickiness = stickiness;
         this.targetGroups = targetGroups;
     }

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2QuasiIdFieldResponse {
     /**
      * A auxiliary field.
@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2QuasiIdFieldResponse {
      */
     private final GooglePrivacyDlpV2FieldIdResponse field;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2QuasiIdFieldResponse(
-        @OutputCustomType.Parameter("customTag") String customTag,
-        @OutputCustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field) {
+        @CustomType.Parameter("customTag") String customTag,
+        @CustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field) {
         this.customTag = customTag;
         this.field = field;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.GroupMembersItemResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
      * Network group conditional filter.
      * 
      */
-    @InputImport(name="conditionalMembership")
+    @Import(name="conditionalMembership")
       private final @Nullable String conditionalMembership;
 
     public Optional<String> getConditionalMembership() {
@@ -35,7 +35,7 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
      * A description of the network group.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -46,7 +46,7 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
      * A friendly name for the network group.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -57,7 +57,7 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
      * Group members of network group.
      * 
      */
-    @InputImport(name="groupMembers")
+    @Import(name="groupMembers")
       private final @Nullable List<GroupMembersItemResponse> groupMembers;
 
     public List<GroupMembersItemResponse> getGroupMembers() {
@@ -68,7 +68,7 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -79,7 +79,7 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
      * Group member type.
      * 
      */
-    @InputImport(name="memberType")
+    @Import(name="memberType")
       private final @Nullable String memberType;
 
     public Optional<String> getMemberType() {
@@ -90,7 +90,7 @@ public final class ConfigurationGroupResponse extends io.pulumi.resources.Invoke
      * The provisioning state of the scope assignment resource.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {

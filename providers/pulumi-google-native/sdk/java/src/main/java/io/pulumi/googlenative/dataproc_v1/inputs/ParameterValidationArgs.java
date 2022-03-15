@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dataproc_v1.inputs.RegexValidationArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.ValueValidationArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
      * Validation based on regular expressions.
      * 
      */
-    @InputImport(name="regex")
+    @Import(name="regex")
       private final @Nullable Output<RegexValidationArgs> regex;
 
     public Output<RegexValidationArgs> getRegex() {
@@ -34,7 +34,7 @@ public final class ParameterValidationArgs extends io.pulumi.resources.ResourceA
      * Validation based on a list of allowed values.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<ValueValidationArgs> values;
 
     public Output<ValueValidationArgs> getValues() {

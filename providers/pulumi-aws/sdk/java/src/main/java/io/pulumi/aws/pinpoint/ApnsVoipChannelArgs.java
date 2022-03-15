@@ -4,7 +4,7 @@
 package io.pulumi.aws.pinpoint;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
      * The application ID.
      * 
      */
-    @InputImport(name="applicationId", required=true)
+    @Import(name="applicationId", required=true)
       private final Output<String> applicationId;
 
     public Output<String> getApplicationId() {
@@ -30,7 +30,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
      * The ID assigned to your iOS app. To find this value, choose Certificates, IDs & Profiles, choose App IDs in the Identifiers section, and choose your app.
      * 
      */
-    @InputImport(name="bundleId")
+    @Import(name="bundleId")
       private final @Nullable Output<String> bundleId;
 
     public Output<String> getBundleId() {
@@ -41,7 +41,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
      * The pem encoded TLS Certificate from Apple.
      * 
      */
-    @InputImport(name="certificate")
+    @Import(name="certificate")
       private final @Nullable Output<String> certificate;
 
     public Output<String> getCertificate() {
@@ -55,7 +55,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
      * If your default authentication type fails, Amazon Pinpoint doesn't attempt to use the other authentication type.
      * 
      */
-    @InputImport(name="defaultAuthenticationMethod")
+    @Import(name="defaultAuthenticationMethod")
       private final @Nullable Output<String> defaultAuthenticationMethod;
 
     public Output<String> getDefaultAuthenticationMethod() {
@@ -66,7 +66,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
      * Whether the channel is enabled or disabled. Defaults to `true`.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -77,7 +77,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
      * The Certificate Private Key file (ie. `.key` file).
      * 
      */
-    @InputImport(name="privateKey")
+    @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
     public Output<String> getPrivateKey() {
@@ -88,7 +88,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
      * The ID assigned to your Apple developer account team. This value is provided on the Membership page.
      * 
      */
-    @InputImport(name="teamId")
+    @Import(name="teamId")
       private final @Nullable Output<String> teamId;
 
     public Output<String> getTeamId() {
@@ -99,7 +99,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
      * The `.p8` file that you download from your Apple developer account when you create an authentication key.
      * 
      */
-    @InputImport(name="tokenKey")
+    @Import(name="tokenKey")
       private final @Nullable Output<String> tokenKey;
 
     public Output<String> getTokenKey() {
@@ -110,7 +110,7 @@ public final class ApnsVoipChannelArgs extends io.pulumi.resources.ResourceArgs 
      * The ID assigned to your signing key. To find this value, choose Certificates, IDs & Profiles, and choose your key in the Keys section.
      * 
      */
-    @InputImport(name="tokenKeyId")
+    @Import(name="tokenKeyId")
       private final @Nullable Output<String> tokenKeyId;
 
     public Output<String> getTokenKeyId() {

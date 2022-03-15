@@ -5,7 +5,7 @@ package io.pulumi.gcp.storage;
 
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.storage.inputs.BucketObjectCustomerEncryptionArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the containing bucket.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -34,7 +34,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
      * 
      */
-    @InputImport(name="cacheControl")
+    @Import(name="cacheControl")
       private final @Nullable Output<String> cacheControl;
 
     public Output<String> getCacheControl() {
@@ -45,7 +45,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: The `content` field is marked as sensitive.
      * 
      */
-    @InputImport(name="content")
+    @Import(name="content")
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
@@ -56,7 +56,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
      * 
      */
-    @InputImport(name="contentDisposition")
+    @Import(name="contentDisposition")
       private final @Nullable Output<String> contentDisposition;
 
     public Output<String> getContentDisposition() {
@@ -67,7 +67,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
      * 
      */
-    @InputImport(name="contentEncoding")
+    @Import(name="contentEncoding")
       private final @Nullable Output<String> contentEncoding;
 
     public Output<String> getContentEncoding() {
@@ -78,7 +78,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
      * 
      */
-    @InputImport(name="contentLanguage")
+    @Import(name="contentLanguage")
       private final @Nullable Output<String> contentLanguage;
 
     public Output<String> getContentLanguage() {
@@ -89,7 +89,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to "application/octet-stream" or "text/plain; charset=utf-8".
      * 
      */
-    @InputImport(name="contentType")
+    @Import(name="contentType")
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -101,14 +101,14 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="customerEncryption")
+    @Import(name="customerEncryption")
       private final @Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption;
 
     public Output<BucketObjectCustomerEncryptionArgs> getCustomerEncryption() {
         return this.customerEncryption == null ? Output.empty() : this.customerEncryption;
     }
 
-    @InputImport(name="detectMd5hash")
+    @Import(name="detectMd5hash")
       private final @Nullable Output<String> detectMd5hash;
 
     public Output<String> getDetectMd5hash() {
@@ -121,7 +121,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * will be subject to bucket-level retention (if any).
      * 
      */
-    @InputImport(name="eventBasedHold")
+    @Import(name="eventBasedHold")
       private final @Nullable Output<Boolean> eventBasedHold;
 
     public Output<Boolean> getEventBasedHold() {
@@ -132,7 +132,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * The resource name of the Cloud KMS key that will be used to [encrypt](https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys) the object.
      * 
      */
-    @InputImport(name="kmsKeyName")
+    @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
@@ -143,7 +143,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * User-provided metadata, in key/value pairs.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -154,7 +154,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the object. If you're interpolating the name of this object, see `output_name` instead.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -166,7 +166,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * if `content` is not.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<AssetOrArchive> source;
 
     public Output<AssetOrArchive> getSource() {
@@ -179,7 +179,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
      * 
      */
-    @InputImport(name="storageClass")
+    @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
     public Output<String> getStorageClass() {
@@ -191,7 +191,7 @@ public final class BucketObjectArgs extends io.pulumi.resources.ResourceArgs {
      * overwrites.
      * 
      */
-    @InputImport(name="temporaryHold")
+    @Import(name="temporaryHold")
       private final @Nullable Output<Boolean> temporaryHold;
 
     public Output<Boolean> getTemporaryHold() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.TestIssueResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.TestSuiteOverviewResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.TestTimingResponse;
@@ -24,7 +24,7 @@ public final class TestExecutionStepResponse extends io.pulumi.resources.InvokeA
      * Issues observed during the test execution. For example, if the mobile app under test crashed during the test, the error message and the stack trace content can be recorded here to assist debugging. - In response: present if set by create or update - In create/update request: optional
      * 
      */
-    @InputImport(name="testIssues", required=true)
+    @Import(name="testIssues", required=true)
       private final List<TestIssueResponse> testIssues;
 
     public List<TestIssueResponse> getTestIssues() {
@@ -35,7 +35,7 @@ public final class TestExecutionStepResponse extends io.pulumi.resources.InvokeA
      * List of test suite overview contents. This could be parsed from xUnit XML log by server, or uploaded directly by user. This references should only be called when test suites are fully parsed or uploaded. The maximum allowed number of test suite overviews per step is 1000. - In response: always set - In create request: optional - In update request: never (use publishXunitXmlFiles custom method instead)
      * 
      */
-    @InputImport(name="testSuiteOverviews", required=true)
+    @Import(name="testSuiteOverviews", required=true)
       private final List<TestSuiteOverviewResponse> testSuiteOverviews;
 
     public List<TestSuiteOverviewResponse> getTestSuiteOverviews() {
@@ -46,7 +46,7 @@ public final class TestExecutionStepResponse extends io.pulumi.resources.InvokeA
      * The timing break down of the test execution. - In response: present if set by create or update - In create/update request: optional
      * 
      */
-    @InputImport(name="testTiming", required=true)
+    @Import(name="testTiming", required=true)
       private final TestTimingResponse testTiming;
 
     public TestTimingResponse getTestTiming() {
@@ -57,7 +57,7 @@ public final class TestExecutionStepResponse extends io.pulumi.resources.InvokeA
      * Represents the execution of the test runner. The exit code of this tool will be used to determine if the test passed. - In response: always set - In create/update request: optional
      * 
      */
-    @InputImport(name="toolExecution", required=true)
+    @Import(name="toolExecution", required=true)
       private final ToolExecutionResponse toolExecution;
 
     public ToolExecutionResponse getToolExecution() {

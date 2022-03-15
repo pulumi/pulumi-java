@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ListDeviceRegistrationKeyResult {
     /**
      * The registration key for the device.
@@ -15,8 +15,8 @@ public final class ListDeviceRegistrationKeyResult {
      */
     private final String registrationKey;
 
-    @OutputCustomType.Constructor
-    private ListDeviceRegistrationKeyResult(@OutputCustomType.Parameter("registrationKey") String registrationKey) {
+    @CustomType.Constructor
+    private ListDeviceRegistrationKeyResult(@CustomType.Parameter("registrationKey") String registrationKey) {
         this.registrationKey = registrationKey;
     }
 

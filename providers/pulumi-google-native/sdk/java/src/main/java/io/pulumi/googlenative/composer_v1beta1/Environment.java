@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.composer_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.composer_v1beta1.EnvironmentArgs;
@@ -23,7 +23,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Configuration parameters for this environment.
      * 
      */
-    @OutputExport(name="config", type=EnvironmentConfigResponse.class, parameters={})
+    @Export(name="config", type=EnvironmentConfigResponse.class, parameters={})
     private Output<EnvironmentConfigResponse> config;
 
     /**
@@ -37,7 +37,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The time at which this environment was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -51,7 +51,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * Optional. User-defined labels for this environment. The labels map can contain no more than 64 entries. Entries of the labels map are UTF8 strings that comply with the following restrictions: * Keys must conform to regexp: \p{Ll}\p{Lo}{0,62} * Values must conform to regexp: [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally constrained to be <= 128 bytes in size.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -65,7 +65,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The resource name of the environment, in the form: "projects/{projectId}/locations/{locationId}/environments/{environmentId}" EnvironmentId must start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -79,7 +79,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The current state of the environment.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -93,7 +93,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The time at which this environment was last modified.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -107,7 +107,7 @@ public class Environment extends io.pulumi.resources.CustomResource {
      * The UUID (Universally Unique IDentifier) associated with this environment. This value is generated when the environment is created.
      * 
      */
-    @OutputExport(name="uuid", type=String.class, parameters={})
+    @Export(name="uuid", type=String.class, parameters={})
     private Output<String> uuid;
 
     /**

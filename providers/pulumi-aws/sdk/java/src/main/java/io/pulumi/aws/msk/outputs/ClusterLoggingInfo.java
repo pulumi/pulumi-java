@@ -4,10 +4,10 @@
 package io.pulumi.aws.msk.outputs;
 
 import io.pulumi.aws.msk.outputs.ClusterLoggingInfoBrokerLogs;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterLoggingInfo {
     /**
      * Configuration block for Broker Logs settings for logging info. See below.
@@ -15,8 +15,8 @@ public final class ClusterLoggingInfo {
      */
     private final ClusterLoggingInfoBrokerLogs brokerLogs;
 
-    @OutputCustomType.Constructor
-    private ClusterLoggingInfo(@OutputCustomType.Parameter("brokerLogs") ClusterLoggingInfoBrokerLogs brokerLogs) {
+    @CustomType.Constructor
+    private ClusterLoggingInfo(@CustomType.Parameter("brokerLogs") ClusterLoggingInfoBrokerLogs brokerLogs) {
         this.brokerLogs = brokerLogs;
     }
 

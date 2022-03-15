@@ -3,12 +3,12 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClientCertificateThumbprintResponse {
     /**
      * The thumbprint of the client certificate.
@@ -21,10 +21,10 @@ public final class ClientCertificateThumbprintResponse {
      */
     private final Boolean isAdmin;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClientCertificateThumbprintResponse(
-        @OutputCustomType.Parameter("certificateThumbprint") String certificateThumbprint,
-        @OutputCustomType.Parameter("isAdmin") Boolean isAdmin) {
+        @CustomType.Parameter("certificateThumbprint") String certificateThumbprint,
+        @CustomType.Parameter("isAdmin") Boolean isAdmin) {
         this.certificateThumbprint = certificateThumbprint;
         this.isAdmin = isAdmin;
     }

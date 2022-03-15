@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.SecurityAssessmentMetadataPartnerDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityAssessmentMetadataPropertiesResponse {
     /**
      * BuiltIn if the assessment based on built-in Azure Policy definition, Custom if the assessment based on custom Azure Policy definition
@@ -67,20 +67,20 @@ public final class SecurityAssessmentMetadataPropertiesResponse {
      */
     private final @Nullable String userImpact;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityAssessmentMetadataPropertiesResponse(
-        @OutputCustomType.Parameter("assessmentType") String assessmentType,
-        @OutputCustomType.Parameter("categories") @Nullable List<String> categories,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("implementationEffort") @Nullable String implementationEffort,
-        @OutputCustomType.Parameter("partnerData") @Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData,
-        @OutputCustomType.Parameter("policyDefinitionId") String policyDefinitionId,
-        @OutputCustomType.Parameter("preview") @Nullable Boolean preview,
-        @OutputCustomType.Parameter("remediationDescription") @Nullable String remediationDescription,
-        @OutputCustomType.Parameter("severity") String severity,
-        @OutputCustomType.Parameter("threats") @Nullable List<String> threats,
-        @OutputCustomType.Parameter("userImpact") @Nullable String userImpact) {
+        @CustomType.Parameter("assessmentType") String assessmentType,
+        @CustomType.Parameter("categories") @Nullable List<String> categories,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("implementationEffort") @Nullable String implementationEffort,
+        @CustomType.Parameter("partnerData") @Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData,
+        @CustomType.Parameter("policyDefinitionId") String policyDefinitionId,
+        @CustomType.Parameter("preview") @Nullable Boolean preview,
+        @CustomType.Parameter("remediationDescription") @Nullable String remediationDescription,
+        @CustomType.Parameter("severity") String severity,
+        @CustomType.Parameter("threats") @Nullable List<String> threats,
+        @CustomType.Parameter("userImpact") @Nullable String userImpact) {
         this.assessmentType = assessmentType;
         this.categories = categories;
         this.description = description;

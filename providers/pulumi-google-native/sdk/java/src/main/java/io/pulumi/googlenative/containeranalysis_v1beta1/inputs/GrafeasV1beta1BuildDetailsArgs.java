@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.BuildProvenanceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GrafeasV1beta1BuildDetailsArgs extends io.pulumi.resources.Re
      * The actual provenance for the build.
      * 
      */
-    @InputImport(name="provenance", required=true)
+    @Import(name="provenance", required=true)
       private final Output<BuildProvenanceArgs> provenance;
 
     public Output<BuildProvenanceArgs> getProvenance() {
@@ -34,7 +34,7 @@ public final class GrafeasV1beta1BuildDetailsArgs extends io.pulumi.resources.Re
      * Serialized JSON representation of the provenance, used in generating the build signature in the corresponding build note. After verifying the signature, `provenance_bytes` can be unmarshalled and compared to the provenance to confirm that it is unchanged. A base64-encoded string representation of the provenance bytes is used for the signature in order to interoperate with openssl which expects this format for signature verification. The serialized form is captured both to avoid ambiguity in how the provenance is marshalled to json as well to prevent incompatibilities with future changes.
      * 
      */
-    @InputImport(name="provenanceBytes")
+    @Import(name="provenanceBytes")
       private final @Nullable Output<String> provenanceBytes;
 
     public Output<String> getProvenanceBytes() {

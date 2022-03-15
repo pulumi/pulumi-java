@@ -6,7 +6,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerTargetGroupStickinessConfigArgs;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerTargetGroupTupleArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class ListenerForwardConfigArgs extends io.pulumi.resources.Resourc
 
     public static final ListenerForwardConfigArgs Empty = new ListenerForwardConfigArgs();
 
-    @InputImport(name="targetGroupStickinessConfig")
+    @Import(name="targetGroupStickinessConfig")
       private final @Nullable Output<ListenerTargetGroupStickinessConfigArgs> targetGroupStickinessConfig;
 
     public Output<ListenerTargetGroupStickinessConfigArgs> getTargetGroupStickinessConfig() {
         return this.targetGroupStickinessConfig == null ? Output.empty() : this.targetGroupStickinessConfig;
     }
 
-    @InputImport(name="targetGroups")
+    @Import(name="targetGroups")
       private final @Nullable Output<List<ListenerTargetGroupTupleArgs>> targetGroups;
 
     public Output<List<ListenerTargetGroupTupleArgs>> getTargetGroups() {

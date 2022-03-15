@@ -4,7 +4,7 @@
 package io.pulumi.aws.cfg.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RuleScopeGetArgs extends io.pulumi.resources.ResourceArgs {
      * The IDs of the only AWS resource that you want to trigger an evaluation for the rule. If you specify a resource ID, you must specify one resource type for `compliance_resource_types`.
      * 
      */
-    @InputImport(name="complianceResourceId")
+    @Import(name="complianceResourceId")
       private final @Nullable Output<String> complianceResourceId;
 
     public Output<String> getComplianceResourceId() {
@@ -30,7 +30,7 @@ public final class RuleScopeGetArgs extends io.pulumi.resources.ResourceArgs {
      * A list of resource types of only those AWS resources that you want to trigger an evaluation for the ruleE.g., `AWS::EC2::Instance`. You can only specify one type if you also specify a resource ID for `compliance_resource_id`. See [relevant part of AWS Docs](http://docs.aws.amazon.com/config/latest/APIReference/API_ResourceIdentifier.html#config-Type-ResourceIdentifier-resourceType) for available types.
      * 
      */
-    @InputImport(name="complianceResourceTypes")
+    @Import(name="complianceResourceTypes")
       private final @Nullable Output<List<String>> complianceResourceTypes;
 
     public Output<List<String>> getComplianceResourceTypes() {
@@ -41,7 +41,7 @@ public final class RuleScopeGetArgs extends io.pulumi.resources.ResourceArgs {
      * The tag key that is applied to only those AWS resources that you want you want to trigger an evaluation for the rule.
      * 
      */
-    @InputImport(name="tagKey")
+    @Import(name="tagKey")
       private final @Nullable Output<String> tagKey;
 
     public Output<String> getTagKey() {
@@ -52,7 +52,7 @@ public final class RuleScopeGetArgs extends io.pulumi.resources.ResourceArgs {
      * The tag value applied to only those AWS resources that you want to trigger an evaluation for the rule.
      * 
      */
-    @InputImport(name="tagValue")
+    @Import(name="tagValue")
       private final @Nullable Output<String> tagValue;
 
     public Output<String> getTagValue() {

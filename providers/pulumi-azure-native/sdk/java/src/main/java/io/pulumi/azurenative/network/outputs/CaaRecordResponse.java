@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CaaRecordResponse {
     /**
      * The flags for this CAA record as an integer between 0 and 255.
@@ -28,11 +28,11 @@ public final class CaaRecordResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CaaRecordResponse(
-        @OutputCustomType.Parameter("flags") @Nullable Integer flags,
-        @OutputCustomType.Parameter("tag") @Nullable String tag,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("flags") @Nullable Integer flags,
+        @CustomType.Parameter("tag") @Nullable String tag,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.flags = flags;
         this.tag = tag;
         this.value = value;

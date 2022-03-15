@@ -6,7 +6,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 import io.pulumi.azurenative.dataprotection.inputs.AzureBackupRuleResponse;
 import io.pulumi.azurenative.dataprotection.inputs.AzureRetentionRuleResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BackupPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Type of datasource for the backup management
      * 
      */
-    @InputImport(name="datasourceTypes", required=true)
+    @Import(name="datasourceTypes", required=true)
       private final List<String> datasourceTypes;
 
     public List<String> getDatasourceTypes() {
@@ -35,7 +35,7 @@ public final class BackupPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'BackupPolicy'.
      * 
      */
-    @InputImport(name="objectType", required=true)
+    @Import(name="objectType", required=true)
       private final String objectType;
 
     public String getObjectType() {
@@ -46,7 +46,7 @@ public final class BackupPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * Policy rule dictionary that contains rules for each backuptype i.e Full/Incremental/Logs etc
      * 
      */
-    @InputImport(name="policyRules", required=true)
+    @Import(name="policyRules", required=true)
       private final List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules;
 
     public List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> getPolicyRules() {

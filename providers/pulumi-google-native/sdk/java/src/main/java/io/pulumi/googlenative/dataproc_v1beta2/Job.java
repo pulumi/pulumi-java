@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dataproc_v1beta2.JobArgs;
@@ -38,7 +38,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Indicates whether the job is completed. If the value is false, the job is still in progress. If true, the job is completed, and status.state field will indicate if it was successful, failed, or cancelled.
      * 
      */
-    @OutputExport(name="done", type=Boolean.class, parameters={})
+    @Export(name="done", type=Boolean.class, parameters={})
     private Output<Boolean> done;
 
     /**
@@ -52,7 +52,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
      * 
      */
-    @OutputExport(name="driverControlFilesUri", type=String.class, parameters={})
+    @Export(name="driverControlFilesUri", type=String.class, parameters={})
     private Output<String> driverControlFilesUri;
 
     /**
@@ -66,7 +66,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * A URI pointing to the location of the stdout of the job's driver program.
      * 
      */
-    @OutputExport(name="driverOutputResourceUri", type=String.class, parameters={})
+    @Export(name="driverOutputResourceUri", type=String.class, parameters={})
     private Output<String> driverOutputResourceUri;
 
     /**
@@ -80,7 +80,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Optional. Job is a Hadoop job.
      * 
      */
-    @OutputExport(name="hadoopJob", type=HadoopJobResponse.class, parameters={})
+    @Export(name="hadoopJob", type=HadoopJobResponse.class, parameters={})
     private Output<HadoopJobResponse> hadoopJob;
 
     /**
@@ -94,7 +94,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Optional. Job is a Hive job.
      * 
      */
-    @OutputExport(name="hiveJob", type=HiveJobResponse.class, parameters={})
+    @Export(name="hiveJob", type=HiveJobResponse.class, parameters={})
     private Output<HiveJobResponse> hiveJob;
 
     /**
@@ -108,7 +108,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * A UUID that uniquely identifies a job within the project over time. This is in contrast to a user-settable reference.job_id that may be reused over time.
      * 
      */
-    @OutputExport(name="jobUuid", type=String.class, parameters={})
+    @Export(name="jobUuid", type=String.class, parameters={})
     private Output<String> jobUuid;
 
     /**
@@ -122,7 +122,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Optional. The labels to associate with this job. Label keys must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if present, must contain 1 to 63 characters, and must conform to RFC 1035 (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be associated with a job.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -136,7 +136,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Optional. Job is a Pig job.
      * 
      */
-    @OutputExport(name="pigJob", type=PigJobResponse.class, parameters={})
+    @Export(name="pigJob", type=PigJobResponse.class, parameters={})
     private Output<PigJobResponse> pigJob;
 
     /**
@@ -150,7 +150,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Job information, including how, when, and where to run the job.
      * 
      */
-    @OutputExport(name="placement", type=JobPlacementResponse.class, parameters={})
+    @Export(name="placement", type=JobPlacementResponse.class, parameters={})
     private Output<JobPlacementResponse> placement;
 
     /**
@@ -164,7 +164,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Optional. Job is a Presto job.
      * 
      */
-    @OutputExport(name="prestoJob", type=PrestoJobResponse.class, parameters={})
+    @Export(name="prestoJob", type=PrestoJobResponse.class, parameters={})
     private Output<PrestoJobResponse> prestoJob;
 
     /**
@@ -178,7 +178,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Optional. Job is a PySpark job.
      * 
      */
-    @OutputExport(name="pysparkJob", type=PySparkJobResponse.class, parameters={})
+    @Export(name="pysparkJob", type=PySparkJobResponse.class, parameters={})
     private Output<PySparkJobResponse> pysparkJob;
 
     /**
@@ -192,7 +192,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Optional. The fully qualified reference to the job, which can be used to obtain the equivalent REST path of the job resource. If this property is not specified when a job is created, the server generates a job_id.
      * 
      */
-    @OutputExport(name="reference", type=JobReferenceResponse.class, parameters={})
+    @Export(name="reference", type=JobReferenceResponse.class, parameters={})
     private Output<JobReferenceResponse> reference;
 
     /**
@@ -206,7 +206,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Optional. Job scheduling configuration.
      * 
      */
-    @OutputExport(name="scheduling", type=JobSchedulingResponse.class, parameters={})
+    @Export(name="scheduling", type=JobSchedulingResponse.class, parameters={})
     private Output<JobSchedulingResponse> scheduling;
 
     /**
@@ -220,7 +220,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Optional. Job is a Spark job.
      * 
      */
-    @OutputExport(name="sparkJob", type=SparkJobResponse.class, parameters={})
+    @Export(name="sparkJob", type=SparkJobResponse.class, parameters={})
     private Output<SparkJobResponse> sparkJob;
 
     /**
@@ -234,7 +234,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Optional. Job is a SparkR job.
      * 
      */
-    @OutputExport(name="sparkRJob", type=SparkRJobResponse.class, parameters={})
+    @Export(name="sparkRJob", type=SparkRJobResponse.class, parameters={})
     private Output<SparkRJobResponse> sparkRJob;
 
     /**
@@ -248,7 +248,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Optional. Job is a SparkSql job.
      * 
      */
-    @OutputExport(name="sparkSqlJob", type=SparkSqlJobResponse.class, parameters={})
+    @Export(name="sparkSqlJob", type=SparkSqlJobResponse.class, parameters={})
     private Output<SparkSqlJobResponse> sparkSqlJob;
 
     /**
@@ -262,7 +262,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The job status. Additional application-specific status information may be contained in the type_job and yarn_applications fields.
      * 
      */
-    @OutputExport(name="status", type=JobStatusResponse.class, parameters={})
+    @Export(name="status", type=JobStatusResponse.class, parameters={})
     private Output<JobStatusResponse> status;
 
     /**
@@ -276,7 +276,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The previous job status.
      * 
      */
-    @OutputExport(name="statusHistory", type=List.class, parameters={JobStatusResponse.class})
+    @Export(name="statusHistory", type=List.class, parameters={JobStatusResponse.class})
     private Output<List<JobStatusResponse>> statusHistory;
 
     /**
@@ -290,7 +290,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The email address of the user submitting the job. For jobs submitted on the cluster, the address is username@hostname.
      * 
      */
-    @OutputExport(name="submittedBy", type=String.class, parameters={})
+    @Export(name="submittedBy", type=String.class, parameters={})
     private Output<String> submittedBy;
 
     /**
@@ -304,7 +304,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The collection of YARN applications spun up by this job.Beta Feature: This report is available for testing purposes only. It may be changed before final release.
      * 
      */
-    @OutputExport(name="yarnApplications", type=List.class, parameters={YarnApplicationResponse.class})
+    @Export(name="yarnApplications", type=List.class, parameters={YarnApplicationResponse.class})
     private Output<List<YarnApplicationResponse>> yarnApplications;
 
     /**

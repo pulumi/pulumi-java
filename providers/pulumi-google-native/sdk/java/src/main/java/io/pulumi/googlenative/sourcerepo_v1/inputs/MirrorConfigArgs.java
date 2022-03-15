@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sourcerepo_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the SSH deploy key at the other hosting service. Removing this key from the other service would deauthorize Google Cloud Source Repositories from mirroring.
      * 
      */
-    @InputImport(name="deployKeyId")
+    @Import(name="deployKeyId")
       private final @Nullable Output<String> deployKeyId;
 
     public Output<String> getDeployKeyId() {
@@ -33,7 +33,7 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * URL of the main repository at the other hosting service.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
@@ -44,7 +44,7 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * ID of the webhook listening to updates to trigger mirroring. Removing this webhook from the other hosting service will stop Google Cloud Source Repositories from receiving notifications, and thereby disabling mirroring.
      * 
      */
-    @InputImport(name="webhookId")
+    @Import(name="webhookId")
       private final @Nullable Output<String> webhookId;
 
     public Output<String> getWebhookId() {

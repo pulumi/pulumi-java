@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.AKSPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AKSArgs extends io.pulumi.resources.ResourceArgs {
      * Location for the underlying compute
      * 
      */
-    @InputImport(name="computeLocation")
+    @Import(name="computeLocation")
       private final @Nullable Output<String> computeLocation;
 
     public Output<String> getComputeLocation() {
@@ -35,7 +35,7 @@ public final class AKSArgs extends io.pulumi.resources.ResourceArgs {
      * Expected value is 'AKS'.
      * 
      */
-    @InputImport(name="computeType", required=true)
+    @Import(name="computeType", required=true)
       private final Output<String> computeType;
 
     public Output<String> getComputeType() {
@@ -46,7 +46,7 @@ public final class AKSArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the Machine Learning compute.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -57,7 +57,7 @@ public final class AKSArgs extends io.pulumi.resources.ResourceArgs {
      * AKS properties
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<AKSPropertiesArgs> properties;
 
     public Output<AKSPropertiesArgs> getProperties() {
@@ -68,7 +68,7 @@ public final class AKSArgs extends io.pulumi.resources.ResourceArgs {
      * ARM resource id of the underlying compute
      * 
      */
-    @InputImport(name="resourceId")
+    @Import(name="resourceId")
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {

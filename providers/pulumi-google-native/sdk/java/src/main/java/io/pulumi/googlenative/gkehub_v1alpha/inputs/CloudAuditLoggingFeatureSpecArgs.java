@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CloudAuditLoggingFeatureSpecArgs extends io.pulumi.resources.
      * Service account that should be allowlisted to send the audit logs; eg cloudauditlogging@gcp-project.iam.gserviceaccount.com. These accounts must already exist, but do not need to have any permissions granted to them. The customer's entitlements will be checked prior to allowlisting (i.e. the customer must be an Anthos customer.)
      * 
      */
-    @InputImport(name="allowlistedServiceAccounts")
+    @Import(name="allowlistedServiceAccounts")
       private final @Nullable Output<List<String>> allowlistedServiceAccounts;
 
     public Output<List<String>> getAllowlistedServiceAccounts() {

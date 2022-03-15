@@ -5,20 +5,20 @@ package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.RecipeDataCatalogInputDefinition;
 import io.pulumi.awsnative.databrew.outputs.RecipeS3Location;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RecipeParametersInputProperties {
     private final @Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition;
     private final @Nullable RecipeS3Location s3InputDefinition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RecipeParametersInputProperties(
-        @OutputCustomType.Parameter("dataCatalogInputDefinition") @Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition,
-        @OutputCustomType.Parameter("s3InputDefinition") @Nullable RecipeS3Location s3InputDefinition) {
+        @CustomType.Parameter("dataCatalogInputDefinition") @Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition,
+        @CustomType.Parameter("s3InputDefinition") @Nullable RecipeS3Location s3InputDefinition) {
         this.dataCatalogInputDefinition = dataCatalogInputDefinition;
         this.s3InputDefinition = s3InputDefinition;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EdgeCacheServiceRoutingHostRuleArgs extends io.pulumi.resourc
      * A human-readable description of the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class EdgeCacheServiceRoutingHostRuleArgs extends io.pulumi.resourc
      * Hosts are matched against the HTTP Host header, or for HTTP/2 and HTTP/3, the ":authority" header, from the incoming request.
      * 
      */
-    @InputImport(name="hosts", required=true)
+    @Import(name="hosts", required=true)
       private final Output<List<String>> hosts;
 
     public Output<List<String>> getHosts() {
@@ -44,7 +44,7 @@ public final class EdgeCacheServiceRoutingHostRuleArgs extends io.pulumi.resourc
      * The name of the pathMatcher associated with this hostRule.
      * 
      */
-    @InputImport(name="pathMatcher", required=true)
+    @Import(name="pathMatcher", required=true)
       private final Output<String> pathMatcher;
 
     public Output<String> getPathMatcher() {

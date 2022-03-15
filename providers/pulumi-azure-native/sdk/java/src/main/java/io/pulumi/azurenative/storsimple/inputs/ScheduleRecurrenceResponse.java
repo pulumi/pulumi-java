@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ScheduleRecurrenceResponse extends io.pulumi.resources.Invoke
      * The recurrence type.
      * 
      */
-    @InputImport(name="recurrenceType", required=true)
+    @Import(name="recurrenceType", required=true)
       private final String recurrenceType;
 
     public String getRecurrenceType() {
@@ -35,7 +35,7 @@ public final class ScheduleRecurrenceResponse extends io.pulumi.resources.Invoke
      * The recurrence value.
      * 
      */
-    @InputImport(name="recurrenceValue", required=true)
+    @Import(name="recurrenceValue", required=true)
       private final Integer recurrenceValue;
 
     public Integer getRecurrenceValue() {
@@ -46,7 +46,7 @@ public final class ScheduleRecurrenceResponse extends io.pulumi.resources.Invoke
      * The week days list. Applicable only for schedules of recurrence type 'weekly'.
      * 
      */
-    @InputImport(name="weeklyDaysList")
+    @Import(name="weeklyDaysList")
       private final @Nullable List<String> weeklyDaysList;
 
     public List<String> getWeeklyDaysList() {

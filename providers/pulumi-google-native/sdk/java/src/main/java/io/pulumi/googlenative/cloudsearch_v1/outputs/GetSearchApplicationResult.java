@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.DataSourceRestrictionResponse;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.FacetOptionsResponse;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.QueryInterpretationConfigResponse;
@@ -15,7 +15,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSearchApplicationResult {
     /**
      * Retrictions applied to the configurations. The maximum number of elements is 10.
@@ -73,19 +73,19 @@ public final class GetSearchApplicationResult {
      */
     private final List<SourceConfigResponse> sourceConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSearchApplicationResult(
-        @OutputCustomType.Parameter("dataSourceRestrictions") List<DataSourceRestrictionResponse> dataSourceRestrictions,
-        @OutputCustomType.Parameter("defaultFacetOptions") List<FacetOptionsResponse> defaultFacetOptions,
-        @OutputCustomType.Parameter("defaultSortOptions") SortOptionsResponse defaultSortOptions,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("enableAuditLog") Boolean enableAuditLog,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("operationIds") List<String> operationIds,
-        @OutputCustomType.Parameter("queryInterpretationConfig") QueryInterpretationConfigResponse queryInterpretationConfig,
-        @OutputCustomType.Parameter("returnResultThumbnailUrls") Boolean returnResultThumbnailUrls,
-        @OutputCustomType.Parameter("scoringConfig") ScoringConfigResponse scoringConfig,
-        @OutputCustomType.Parameter("sourceConfig") List<SourceConfigResponse> sourceConfig) {
+        @CustomType.Parameter("dataSourceRestrictions") List<DataSourceRestrictionResponse> dataSourceRestrictions,
+        @CustomType.Parameter("defaultFacetOptions") List<FacetOptionsResponse> defaultFacetOptions,
+        @CustomType.Parameter("defaultSortOptions") SortOptionsResponse defaultSortOptions,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("enableAuditLog") Boolean enableAuditLog,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("operationIds") List<String> operationIds,
+        @CustomType.Parameter("queryInterpretationConfig") QueryInterpretationConfigResponse queryInterpretationConfig,
+        @CustomType.Parameter("returnResultThumbnailUrls") Boolean returnResultThumbnailUrls,
+        @CustomType.Parameter("scoringConfig") ScoringConfigResponse scoringConfig,
+        @CustomType.Parameter("sourceConfig") List<SourceConfigResponse> sourceConfig) {
         this.dataSourceRestrictions = dataSourceRestrictions;
         this.defaultFacetOptions = defaultFacetOptions;
         this.defaultSortOptions = defaultSortOptions;

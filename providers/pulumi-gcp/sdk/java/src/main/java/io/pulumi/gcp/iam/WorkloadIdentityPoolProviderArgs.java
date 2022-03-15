@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iam;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.iam.inputs.WorkloadIdentityPoolProviderAwsArgs;
 import io.pulumi.gcp.iam.inputs.WorkloadIdentityPoolProviderOidcArgs;
 import java.lang.Boolean;
@@ -33,7 +33,7 @@ public final class WorkloadIdentityPoolProviderArgs extends io.pulumi.resources.
      *   value of `admins`:
      * 
      */
-    @InputImport(name="attributeCondition")
+    @Import(name="attributeCondition")
       private final @Nullable Output<String> attributeCondition;
 
     public Output<String> getAttributeCondition() {
@@ -80,7 +80,7 @@ public final class WorkloadIdentityPoolProviderArgs extends io.pulumi.resources.
      *   incoming credential to the `subject` attribute on a Google token.
      * 
      */
-    @InputImport(name="attributeMapping")
+    @Import(name="attributeMapping")
       private final @Nullable Output<Map<String,String>> attributeMapping;
 
     public Output<Map<String,String>> getAttributeMapping() {
@@ -92,7 +92,7 @@ public final class WorkloadIdentityPoolProviderArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="aws")
+    @Import(name="aws")
       private final @Nullable Output<WorkloadIdentityPoolProviderAwsArgs> aws;
 
     public Output<WorkloadIdentityPoolProviderAwsArgs> getAws() {
@@ -103,7 +103,7 @@ public final class WorkloadIdentityPoolProviderArgs extends io.pulumi.resources.
      * A description for the provider. Cannot exceed 256 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -115,7 +115,7 @@ public final class WorkloadIdentityPoolProviderArgs extends io.pulumi.resources.
      * However, existing tokens still grant access.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -126,7 +126,7 @@ public final class WorkloadIdentityPoolProviderArgs extends io.pulumi.resources.
      * A display name for the provider. Cannot exceed 32 characters.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -138,7 +138,7 @@ public final class WorkloadIdentityPoolProviderArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="oidc")
+    @Import(name="oidc")
       private final @Nullable Output<WorkloadIdentityPoolProviderOidcArgs> oidc;
 
     public Output<WorkloadIdentityPoolProviderOidcArgs> getOidc() {
@@ -150,7 +150,7 @@ public final class WorkloadIdentityPoolProviderArgs extends io.pulumi.resources.
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -163,7 +163,7 @@ public final class WorkloadIdentityPoolProviderArgs extends io.pulumi.resources.
      * `gcp-` is reserved for use by Google, and may not be specified.
      * 
      */
-    @InputImport(name="workloadIdentityPoolId", required=true)
+    @Import(name="workloadIdentityPoolId", required=true)
       private final Output<String> workloadIdentityPoolId;
 
     public Output<String> getWorkloadIdentityPoolId() {
@@ -176,7 +176,7 @@ public final class WorkloadIdentityPoolProviderArgs extends io.pulumi.resources.
      * `gcp-` is reserved for use by Google, and may not be specified.
      * 
      */
-    @InputImport(name="workloadIdentityPoolProviderId", required=true)
+    @Import(name="workloadIdentityPoolProviderId", required=true)
       private final Output<String> workloadIdentityPoolProviderId;
 
     public Output<String> getWorkloadIdentityPoolProviderId() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TopicRuleErrorActionFirehose {
     /**
      * The delivery stream name.
@@ -27,11 +27,11 @@ public final class TopicRuleErrorActionFirehose {
      */
     private final @Nullable String separator;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TopicRuleErrorActionFirehose(
-        @OutputCustomType.Parameter("deliveryStreamName") String deliveryStreamName,
-        @OutputCustomType.Parameter("roleArn") String roleArn,
-        @OutputCustomType.Parameter("separator") @Nullable String separator) {
+        @CustomType.Parameter("deliveryStreamName") String deliveryStreamName,
+        @CustomType.Parameter("roleArn") String roleArn,
+        @CustomType.Parameter("separator") @Nullable String separator) {
         this.deliveryStreamName = deliveryStreamName;
         this.roleArn = roleArn;
         this.separator = separator;

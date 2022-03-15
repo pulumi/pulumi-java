@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.datacatalog_v1beta1.outputs.GoogleCloudDatacatalogV1beta1TableSpecResponse;
 import io.pulumi.googlenative.datacatalog_v1beta1.outputs.GoogleCloudDatacatalogV1beta1ViewSpecResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse {
     /**
      * The table source type.
@@ -27,11 +27,11 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse {
      */
     private final GoogleCloudDatacatalogV1beta1ViewSpecResponse viewSpec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse(
-        @OutputCustomType.Parameter("tableSourceType") String tableSourceType,
-        @OutputCustomType.Parameter("tableSpec") GoogleCloudDatacatalogV1beta1TableSpecResponse tableSpec,
-        @OutputCustomType.Parameter("viewSpec") GoogleCloudDatacatalogV1beta1ViewSpecResponse viewSpec) {
+        @CustomType.Parameter("tableSourceType") String tableSourceType,
+        @CustomType.Parameter("tableSpec") GoogleCloudDatacatalogV1beta1TableSpecResponse tableSpec,
+        @CustomType.Parameter("viewSpec") GoogleCloudDatacatalogV1beta1ViewSpecResponse viewSpec) {
         this.tableSourceType = tableSourceType;
         this.tableSpec = tableSpec;
         this.viewSpec = viewSpec;

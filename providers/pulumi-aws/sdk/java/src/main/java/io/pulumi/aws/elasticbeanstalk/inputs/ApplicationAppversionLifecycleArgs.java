@@ -4,7 +4,7 @@
 package io.pulumi.aws.elasticbeanstalk.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class ApplicationAppversionLifecycleArgs extends io.pulumi.resource
      * Set to `true` to delete a version's source bundle from S3 when the application version is deleted.
      * 
      */
-    @InputImport(name="deleteSourceFromS3")
+    @Import(name="deleteSourceFromS3")
       private final @Nullable Output<Boolean> deleteSourceFromS3;
 
     public Output<Boolean> getDeleteSourceFromS3() {
@@ -31,7 +31,7 @@ public final class ApplicationAppversionLifecycleArgs extends io.pulumi.resource
      * The number of days to retain an application version ('max_age_in_days' and 'max_count' cannot be enabled simultaneously.).
      * 
      */
-    @InputImport(name="maxAgeInDays")
+    @Import(name="maxAgeInDays")
       private final @Nullable Output<Integer> maxAgeInDays;
 
     public Output<Integer> getMaxAgeInDays() {
@@ -42,7 +42,7 @@ public final class ApplicationAppversionLifecycleArgs extends io.pulumi.resource
      * The maximum number of application versions to retain ('max_age_in_days' and 'max_count' cannot be enabled simultaneously.).
      * 
      */
-    @InputImport(name="maxCount")
+    @Import(name="maxCount")
       private final @Nullable Output<Integer> maxCount;
 
     public Output<Integer> getMaxCount() {
@@ -53,7 +53,7 @@ public final class ApplicationAppversionLifecycleArgs extends io.pulumi.resource
      * The ARN of an IAM service role under which the application version is deleted.  Elastic Beanstalk must have permission to assume this role.
      * 
      */
-    @InputImport(name="serviceRole", required=true)
+    @Import(name="serviceRole", required=true)
       private final Output<String> serviceRole;
 
     public Output<String> getServiceRole() {

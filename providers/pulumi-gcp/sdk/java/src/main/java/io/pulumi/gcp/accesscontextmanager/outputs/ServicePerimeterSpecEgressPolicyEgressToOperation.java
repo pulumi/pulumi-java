@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimeterSpecEgressPolicyEgressToOperationMethodSelector;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServicePerimeterSpecEgressPolicyEgressToOperation {
     /**
      * API methods or permissions to allow. Method or permission must belong
@@ -30,10 +30,10 @@ public final class ServicePerimeterSpecEgressPolicyEgressToOperation {
      */
     private final @Nullable String serviceName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicePerimeterSpecEgressPolicyEgressToOperation(
-        @OutputCustomType.Parameter("methodSelectors") @Nullable List<ServicePerimeterSpecEgressPolicyEgressToOperationMethodSelector> methodSelectors,
-        @OutputCustomType.Parameter("serviceName") @Nullable String serviceName) {
+        @CustomType.Parameter("methodSelectors") @Nullable List<ServicePerimeterSpecEgressPolicyEgressToOperationMethodSelector> methodSelectors,
+        @CustomType.Parameter("serviceName") @Nullable String serviceName) {
         this.methodSelectors = methodSelectors;
         this.serviceName = serviceName;
     }

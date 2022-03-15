@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceCosmosDbConfigurationInfoResponse {
     /**
      * The URI of the customer-managed key for the backing database.
@@ -23,10 +23,10 @@ public final class ServiceCosmosDbConfigurationInfoResponse {
      */
     private final @Nullable Integer offerThroughput;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceCosmosDbConfigurationInfoResponse(
-        @OutputCustomType.Parameter("keyVaultKeyUri") @Nullable String keyVaultKeyUri,
-        @OutputCustomType.Parameter("offerThroughput") @Nullable Integer offerThroughput) {
+        @CustomType.Parameter("keyVaultKeyUri") @Nullable String keyVaultKeyUri,
+        @CustomType.Parameter("offerThroughput") @Nullable Integer offerThroughput) {
         this.keyVaultKeyUri = keyVaultKeyUri;
         this.offerThroughput = offerThroughput;
     }

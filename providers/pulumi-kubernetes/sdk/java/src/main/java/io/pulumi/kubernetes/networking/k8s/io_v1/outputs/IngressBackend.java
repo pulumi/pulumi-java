@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.TypedLocalObjectReference;
 import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.IngressServiceBackend;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IngressBackend {
     /**
      * Resource is an ObjectRef to another Kubernetes resource in the namespace of the Ingress object. If resource is specified, a service.Name and service.Port must not be specified. This is a mutually exclusive setting with "Service".
@@ -23,10 +23,10 @@ public final class IngressBackend {
      */
     private final @Nullable IngressServiceBackend service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IngressBackend(
-        @OutputCustomType.Parameter("resource") @Nullable TypedLocalObjectReference resource,
-        @OutputCustomType.Parameter("service") @Nullable IngressServiceBackend service) {
+        @CustomType.Parameter("resource") @Nullable TypedLocalObjectReference resource,
+        @CustomType.Parameter("service") @Nullable IngressServiceBackend service) {
         this.resource = resource;
         this.service = service;
     }

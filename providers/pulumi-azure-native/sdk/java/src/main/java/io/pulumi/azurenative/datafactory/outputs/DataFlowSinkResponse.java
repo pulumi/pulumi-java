@@ -6,13 +6,13 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.DataFlowReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.DatasetReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataFlowSinkResponse {
     /**
      * Dataset reference.
@@ -45,14 +45,14 @@ public final class DataFlowSinkResponse {
      */
     private final @Nullable LinkedServiceReferenceResponse schemaLinkedService;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataFlowSinkResponse(
-        @OutputCustomType.Parameter("dataset") @Nullable DatasetReferenceResponse dataset,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("flowlet") @Nullable DataFlowReferenceResponse flowlet,
-        @OutputCustomType.Parameter("linkedService") @Nullable LinkedServiceReferenceResponse linkedService,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("schemaLinkedService") @Nullable LinkedServiceReferenceResponse schemaLinkedService) {
+        @CustomType.Parameter("dataset") @Nullable DatasetReferenceResponse dataset,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("flowlet") @Nullable DataFlowReferenceResponse flowlet,
+        @CustomType.Parameter("linkedService") @Nullable LinkedServiceReferenceResponse linkedService,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("schemaLinkedService") @Nullable LinkedServiceReferenceResponse schemaLinkedService) {
         this.dataset = dataset;
         this.description = description;
         this.flowlet = flowlet;

@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig {
     /**
      * Required. Resource name of an existing Dataproc Metastore service. Example: * `projects/`
@@ -15,8 +15,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig 
      */
     private final String dataprocMetastoreService;
 
-    @OutputCustomType.Constructor
-    private WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig(@OutputCustomType.Parameter("dataprocMetastoreService") String dataprocMetastoreService) {
+    @CustomType.Constructor
+    private WorkflowTemplatePlacementManagedClusterConfigMetastoreConfig(@CustomType.Parameter("dataprocMetastoreService") String dataprocMetastoreService) {
         this.dataprocMetastoreService = dataprocMetastoreService;
     }
 

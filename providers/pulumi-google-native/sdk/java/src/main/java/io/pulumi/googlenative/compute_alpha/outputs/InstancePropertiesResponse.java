@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.AdvancedMachineFeaturesResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.AttachedDiskResponse;
@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstancePropertiesResponse {
     /**
      * Controls for advanced machine-related behavior features. Note that for MachineImage, this is not supported yet.
@@ -152,33 +152,33 @@ public final class InstancePropertiesResponse {
      */
     private final TagsResponse tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstancePropertiesResponse(
-        @OutputCustomType.Parameter("advancedMachineFeatures") AdvancedMachineFeaturesResponse advancedMachineFeatures,
-        @OutputCustomType.Parameter("canIpForward") Boolean canIpForward,
-        @OutputCustomType.Parameter("confidentialInstanceConfig") ConfidentialInstanceConfigResponse confidentialInstanceConfig,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("disks") List<AttachedDiskResponse> disks,
-        @OutputCustomType.Parameter("displayDevice") DisplayDeviceResponse displayDevice,
-        @OutputCustomType.Parameter("guestAccelerators") List<AcceleratorConfigResponse> guestAccelerators,
-        @OutputCustomType.Parameter("keyRevocationActionType") String keyRevocationActionType,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("metadata") MetadataResponse metadata,
-        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
-        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
-        @OutputCustomType.Parameter("networkPerformanceConfig") NetworkPerformanceConfigResponse networkPerformanceConfig,
-        @OutputCustomType.Parameter("postKeyRevocationActionType") String postKeyRevocationActionType,
-        @OutputCustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
-        @OutputCustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
-        @OutputCustomType.Parameter("resourceManagerTags") Map<String,String> resourceManagerTags,
-        @OutputCustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
-        @OutputCustomType.Parameter("scheduling") SchedulingResponse scheduling,
-        @OutputCustomType.Parameter("secureTags") List<String> secureTags,
-        @OutputCustomType.Parameter("serviceAccounts") List<ServiceAccountResponse> serviceAccounts,
-        @OutputCustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
-        @OutputCustomType.Parameter("shieldedVmConfig") ShieldedVmConfigResponse shieldedVmConfig,
-        @OutputCustomType.Parameter("tags") TagsResponse tags) {
+        @CustomType.Parameter("advancedMachineFeatures") AdvancedMachineFeaturesResponse advancedMachineFeatures,
+        @CustomType.Parameter("canIpForward") Boolean canIpForward,
+        @CustomType.Parameter("confidentialInstanceConfig") ConfidentialInstanceConfigResponse confidentialInstanceConfig,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("disks") List<AttachedDiskResponse> disks,
+        @CustomType.Parameter("displayDevice") DisplayDeviceResponse displayDevice,
+        @CustomType.Parameter("guestAccelerators") List<AcceleratorConfigResponse> guestAccelerators,
+        @CustomType.Parameter("keyRevocationActionType") String keyRevocationActionType,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("metadata") MetadataResponse metadata,
+        @CustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @CustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @CustomType.Parameter("networkPerformanceConfig") NetworkPerformanceConfigResponse networkPerformanceConfig,
+        @CustomType.Parameter("postKeyRevocationActionType") String postKeyRevocationActionType,
+        @CustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
+        @CustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
+        @CustomType.Parameter("resourceManagerTags") Map<String,String> resourceManagerTags,
+        @CustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
+        @CustomType.Parameter("scheduling") SchedulingResponse scheduling,
+        @CustomType.Parameter("secureTags") List<String> secureTags,
+        @CustomType.Parameter("serviceAccounts") List<ServiceAccountResponse> serviceAccounts,
+        @CustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
+        @CustomType.Parameter("shieldedVmConfig") ShieldedVmConfigResponse shieldedVmConfig,
+        @CustomType.Parameter("tags") TagsResponse tags) {
         this.advancedMachineFeatures = advancedMachineFeatures;
         this.canIpForward = canIpForward;
         this.confidentialInstanceConfig = confidentialInstanceConfig;

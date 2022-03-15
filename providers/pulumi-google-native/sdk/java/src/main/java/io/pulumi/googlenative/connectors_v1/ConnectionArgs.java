@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.connectors_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.connectors_v1.inputs.AuthConfigArgs;
 import io.pulumi.googlenative.connectors_v1.inputs.ConfigVariableArgs;
 import io.pulumi.googlenative.connectors_v1.inputs.LockConfigArgs;
@@ -24,7 +24,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Configuration for establishing the connection's authentication with an external system.
      * 
      */
-    @InputImport(name="authConfig")
+    @Import(name="authConfig")
       private final @Nullable Output<AuthConfigArgs> authConfig;
 
     public Output<AuthConfigArgs> getAuthConfig() {
@@ -35,14 +35,14 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Configuration for configuring the connection with an external system.
      * 
      */
-    @InputImport(name="configVariables")
+    @Import(name="configVariables")
       private final @Nullable Output<List<ConfigVariableArgs>> configVariables;
 
     public Output<List<ConfigVariableArgs>> getConfigVariables() {
         return this.configVariables == null ? Output.empty() : this.configVariables;
     }
 
-    @InputImport(name="connectionId", required=true)
+    @Import(name="connectionId", required=true)
       private final Output<String> connectionId;
 
     public Output<String> getConnectionId() {
@@ -53,7 +53,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Connector version on which the connection is created. The format is: projects/*{@literal /}locations/global/providers/*{@literal /}connectors/*{@literal /}versions/*
      * 
      */
-    @InputImport(name="connectorVersion", required=true)
+    @Import(name="connectorVersion", required=true)
       private final Output<String> connectorVersion;
 
     public Output<String> getConnectorVersion() {
@@ -64,7 +64,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Description of the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -75,14 +75,14 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Resource labels to represent user-provided metadata. Refer to cloud documentation on labels for more details. https://cloud.google.com/compute/docs/labeling-resources
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -93,14 +93,14 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Configuration that indicates whether or not the Connection can be edited.
      * 
      */
-    @InputImport(name="lockConfig")
+    @Import(name="lockConfig")
       private final @Nullable Output<LockConfigArgs> lockConfig;
 
     public Output<LockConfigArgs> getLockConfig() {
         return this.lockConfig == null ? Output.empty() : this.lockConfig;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -111,7 +111,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Service account needed for runtime plane to access GCP resources.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
@@ -122,7 +122,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Suspended indicates if a user has suspended a connection or not.
      * 
      */
-    @InputImport(name="suspended")
+    @Import(name="suspended")
       private final @Nullable Output<Boolean> suspended;
 
     public Output<Boolean> getSuspended() {

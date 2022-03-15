@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BackendServiceSecuritySettings {
     /**
      * ClientTlsPolicy is a resource that specifies how a client should authenticate
@@ -25,10 +25,10 @@ public final class BackendServiceSecuritySettings {
      */
     private final List<String> subjectAltNames;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendServiceSecuritySettings(
-        @OutputCustomType.Parameter("clientTlsPolicy") String clientTlsPolicy,
-        @OutputCustomType.Parameter("subjectAltNames") List<String> subjectAltNames) {
+        @CustomType.Parameter("clientTlsPolicy") String clientTlsPolicy,
+        @CustomType.Parameter("subjectAltNames") List<String> subjectAltNames) {
         this.clientTlsPolicy = clientTlsPolicy;
         this.subjectAltNames = subjectAltNames;
     }

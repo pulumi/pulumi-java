@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
      * The alias kind.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> kind;
 
     public Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextKind> getKind() {
@@ -34,7 +34,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs exten
      * The alias name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

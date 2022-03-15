@@ -4,7 +4,7 @@
 package io.pulumi.aws.storagegateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class WorkingStorageArgs extends io.pulumi.resources.ResourceArgs {
      * Local disk identifier. For example, `pci-0000:03:00.0-scsi-0:0:0:0`.
      * 
      */
-    @InputImport(name="diskId", required=true)
+    @Import(name="diskId", required=true)
       private final Output<String> diskId;
 
     public Output<String> getDiskId() {
@@ -28,7 +28,7 @@ public final class WorkingStorageArgs extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the gateway.
      * 
      */
-    @InputImport(name="gatewayArn", required=true)
+    @Import(name="gatewayArn", required=true)
       private final Output<String> gatewayArn;
 
     public Output<String> getGatewayArn() {

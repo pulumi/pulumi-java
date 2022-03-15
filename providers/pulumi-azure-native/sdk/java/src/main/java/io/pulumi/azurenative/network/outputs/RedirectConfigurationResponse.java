@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RedirectConfigurationResponse {
     /**
      * Fragment to add to the redirect URL. Fragment is the part of the URL that comes after #. Do not include the #.
@@ -47,15 +47,15 @@ public final class RedirectConfigurationResponse {
      */
     private final @Nullable String redirectType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RedirectConfigurationResponse(
-        @OutputCustomType.Parameter("customFragment") @Nullable String customFragment,
-        @OutputCustomType.Parameter("customHost") @Nullable String customHost,
-        @OutputCustomType.Parameter("customPath") @Nullable String customPath,
-        @OutputCustomType.Parameter("customQueryString") @Nullable String customQueryString,
-        @OutputCustomType.Parameter("odataType") String odataType,
-        @OutputCustomType.Parameter("redirectProtocol") @Nullable String redirectProtocol,
-        @OutputCustomType.Parameter("redirectType") @Nullable String redirectType) {
+        @CustomType.Parameter("customFragment") @Nullable String customFragment,
+        @CustomType.Parameter("customHost") @Nullable String customHost,
+        @CustomType.Parameter("customPath") @Nullable String customPath,
+        @CustomType.Parameter("customQueryString") @Nullable String customQueryString,
+        @CustomType.Parameter("odataType") String odataType,
+        @CustomType.Parameter("redirectProtocol") @Nullable String redirectProtocol,
+        @CustomType.Parameter("redirectType") @Nullable String redirectType) {
         this.customFragment = customFragment;
         this.customHost = customHost;
         this.customPath = customPath;

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.projects.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.projects.outputs.GetProjectProject;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetProjectResult {
     private final String filter;
     /**
@@ -23,11 +23,11 @@ public final class GetProjectResult {
      */
     private final List<GetProjectProject> projects;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProjectResult(
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("projects") List<GetProjectProject> projects) {
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("projects") List<GetProjectProject> projects) {
         this.filter = filter;
         this.id = id;
         this.projects = projects;

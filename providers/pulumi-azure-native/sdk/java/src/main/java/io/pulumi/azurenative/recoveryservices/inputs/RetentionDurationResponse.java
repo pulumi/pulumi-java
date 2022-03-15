@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RetentionDurationResponse extends io.pulumi.resources.InvokeA
      * For example, when Count = 3 and DurationType = Weeks, retention duration will be three weeks.
      * 
      */
-    @InputImport(name="count")
+    @Import(name="count")
       private final @Nullable Integer count;
 
     public Optional<Integer> getCount() {
@@ -35,7 +35,7 @@ public final class RetentionDurationResponse extends io.pulumi.resources.InvokeA
      * Retention duration type of retention policy.
      * 
      */
-    @InputImport(name="durationType")
+    @Import(name="durationType")
       private final @Nullable String durationType;
 
     public Optional<String> getDurationType() {

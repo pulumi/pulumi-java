@@ -8,7 +8,7 @@ import io.pulumi.azurenative.azurestackhci.ClusterArgs;
 import io.pulumi.azurenative.azurestackhci.outputs.ClusterReportedPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -37,7 +37,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * App id of cluster AAD identity.
      * 
      */
-    @OutputExport(name="aadClientId", type=String.class, parameters={})
+    @Export(name="aadClientId", type=String.class, parameters={})
     private Output<String> aadClientId;
 
     /**
@@ -51,7 +51,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Tenant id of cluster AAD identity.
      * 
      */
-    @OutputExport(name="aadTenantId", type=String.class, parameters={})
+    @Export(name="aadTenantId", type=String.class, parameters={})
     private Output<String> aadTenantId;
 
     /**
@@ -65,7 +65,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Type of billing applied to the resource.
      * 
      */
-    @OutputExport(name="billingModel", type=String.class, parameters={})
+    @Export(name="billingModel", type=String.class, parameters={})
     private Output<String> billingModel;
 
     /**
@@ -79,7 +79,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Unique, immutable resource id.
      * 
      */
-    @OutputExport(name="cloudId", type=String.class, parameters={})
+    @Export(name="cloudId", type=String.class, parameters={})
     private Output<String> cloudId;
 
     /**
@@ -93,7 +93,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The timestamp of resource creation (UTC).
      * 
      */
-    @OutputExport(name="createdAt", type=String.class, parameters={})
+    @Export(name="createdAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdAt;
 
     /**
@@ -107,7 +107,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The identity that created the resource.
      * 
      */
-    @OutputExport(name="createdBy", type=String.class, parameters={})
+    @Export(name="createdBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdBy;
 
     /**
@@ -121,7 +121,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The type of identity that created the resource.
      * 
      */
-    @OutputExport(name="createdByType", type=String.class, parameters={})
+    @Export(name="createdByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> createdByType;
 
     /**
@@ -135,7 +135,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Most recent billing meter timestamp.
      * 
      */
-    @OutputExport(name="lastBillingTimestamp", type=String.class, parameters={})
+    @Export(name="lastBillingTimestamp", type=String.class, parameters={})
     private Output<String> lastBillingTimestamp;
 
     /**
@@ -149,7 +149,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The timestamp of resource last modification (UTC)
      * 
      */
-    @OutputExport(name="lastModifiedAt", type=String.class, parameters={})
+    @Export(name="lastModifiedAt", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedAt;
 
     /**
@@ -163,7 +163,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The identity that last modified the resource.
      * 
      */
-    @OutputExport(name="lastModifiedBy", type=String.class, parameters={})
+    @Export(name="lastModifiedBy", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedBy;
 
     /**
@@ -177,7 +177,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The type of identity that last modified the resource.
      * 
      */
-    @OutputExport(name="lastModifiedByType", type=String.class, parameters={})
+    @Export(name="lastModifiedByType", type=String.class, parameters={})
     private Output</* @Nullable */ String> lastModifiedByType;
 
     /**
@@ -191,7 +191,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Most recent cluster sync timestamp.
      * 
      */
-    @OutputExport(name="lastSyncTimestamp", type=String.class, parameters={})
+    @Export(name="lastSyncTimestamp", type=String.class, parameters={})
     private Output<String> lastSyncTimestamp;
 
     /**
@@ -205,7 +205,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -219,7 +219,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -233,7 +233,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -247,7 +247,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * First cluster sync timestamp.
      * 
      */
-    @OutputExport(name="registrationTimestamp", type=String.class, parameters={})
+    @Export(name="registrationTimestamp", type=String.class, parameters={})
     private Output<String> registrationTimestamp;
 
     /**
@@ -261,7 +261,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Properties reported by cluster agent.
      * 
      */
-    @OutputExport(name="reportedProperties", type=ClusterReportedPropertiesResponse.class, parameters={})
+    @Export(name="reportedProperties", type=ClusterReportedPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ ClusterReportedPropertiesResponse> reportedProperties;
 
     /**
@@ -275,7 +275,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Status of the cluster agent.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output<String> status;
 
     /**
@@ -289,7 +289,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -303,7 +303,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Number of days remaining in the trial period.
      * 
      */
-    @OutputExport(name="trialDaysRemaining", type=Double.class, parameters={})
+    @Export(name="trialDaysRemaining", type=Double.class, parameters={})
     private Output<Double> trialDaysRemaining;
 
     /**
@@ -317,7 +317,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

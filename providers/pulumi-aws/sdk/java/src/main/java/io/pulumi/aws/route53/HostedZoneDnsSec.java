@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.route53.HostedZoneDnsSecArgs;
 import io.pulumi.aws.route53.inputs.HostedZoneDnsSecState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public class HostedZoneDnsSec extends io.pulumi.resources.CustomResource {
      * Identifier of the Route 53 Hosted Zone.
      * 
      */
-    @OutputExport(name="hostedZoneId", type=String.class, parameters={})
+    @Export(name="hostedZoneId", type=String.class, parameters={})
     private Output<String> hostedZoneId;
 
     /**
@@ -48,7 +48,7 @@ public class HostedZoneDnsSec extends io.pulumi.resources.CustomResource {
      * Hosted Zone signing status. Valid values: `SIGNING`, `NOT_SIGNING`. Defaults to `SIGNING`.
      * 
      */
-    @OutputExport(name="signingStatus", type=String.class, parameters={})
+    @Export(name="signingStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> signingStatus;
 
     /**

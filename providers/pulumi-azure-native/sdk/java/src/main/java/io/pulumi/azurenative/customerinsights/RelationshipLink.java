@@ -9,7 +9,7 @@ import io.pulumi.azurenative.customerinsights.outputs.ParticipantProfileProperty
 import io.pulumi.azurenative.customerinsights.outputs.RelationshipLinkFieldMappingResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +37,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * Localized descriptions for the Relationship Link.
      * 
      */
-    @OutputExport(name="description", type=Map.class, parameters={String.class, String.class})
+    @Export(name="description", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> description;
 
     /**
@@ -51,7 +51,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * Localized display name for the Relationship Link.
      * 
      */
-    @OutputExport(name="displayName", type=Map.class, parameters={String.class, String.class})
+    @Export(name="displayName", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> displayName;
 
     /**
@@ -65,7 +65,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * The InteractionType associated with the Relationship Link.
      * 
      */
-    @OutputExport(name="interactionType", type=String.class, parameters={})
+    @Export(name="interactionType", type=String.class, parameters={})
     private Output<String> interactionType;
 
     /**
@@ -79,7 +79,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * The name of the Relationship Link.
      * 
      */
-    @OutputExport(name="linkName", type=String.class, parameters={})
+    @Export(name="linkName", type=String.class, parameters={})
     private Output<String> linkName;
 
     /**
@@ -93,7 +93,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * The mappings between Interaction and Relationship fields.
      * 
      */
-    @OutputExport(name="mappings", type=List.class, parameters={RelationshipLinkFieldMappingResponse.class})
+    @Export(name="mappings", type=List.class, parameters={RelationshipLinkFieldMappingResponse.class})
     private Output</* @Nullable */ List<RelationshipLinkFieldMappingResponse>> mappings;
 
     /**
@@ -107,7 +107,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * The property references for the Profile of the Relationship.
      * 
      */
-    @OutputExport(name="profilePropertyReferences", type=List.class, parameters={ParticipantProfilePropertyReferenceResponse.class})
+    @Export(name="profilePropertyReferences", type=List.class, parameters={ParticipantProfilePropertyReferenceResponse.class})
     private Output<List<ParticipantProfilePropertyReferenceResponse>> profilePropertyReferences;
 
     /**
@@ -135,7 +135,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * Provisioning state.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -149,7 +149,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * The property references for the Related Profile of the Relationship.
      * 
      */
-    @OutputExport(name="relatedProfilePropertyReferences", type=List.class, parameters={ParticipantProfilePropertyReferenceResponse.class})
+    @Export(name="relatedProfilePropertyReferences", type=List.class, parameters={ParticipantProfilePropertyReferenceResponse.class})
     private Output<List<ParticipantProfilePropertyReferenceResponse>> relatedProfilePropertyReferences;
 
     /**
@@ -163,7 +163,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * The relationship guid id.
      * 
      */
-    @OutputExport(name="relationshipGuidId", type=String.class, parameters={})
+    @Export(name="relationshipGuidId", type=String.class, parameters={})
     private Output<String> relationshipGuidId;
 
     /**
@@ -177,7 +177,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * The Relationship associated with the Link.
      * 
      */
-    @OutputExport(name="relationshipName", type=String.class, parameters={})
+    @Export(name="relationshipName", type=String.class, parameters={})
     private Output<String> relationshipName;
 
     /**
@@ -191,7 +191,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * The hub name.
      * 
      */
-    @OutputExport(name="tenantId", type=String.class, parameters={})
+    @Export(name="tenantId", type=String.class, parameters={})
     private Output<String> tenantId;
 
     /**
@@ -205,7 +205,7 @@ public class RelationshipLink extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.cloudsupport_v2beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CaseClassificationResponse {
     /**
      * The display name of the classification.
@@ -15,8 +15,8 @@ public final class CaseClassificationResponse {
      */
     private final String displayName;
 
-    @OutputCustomType.Constructor
-    private CaseClassificationResponse(@OutputCustomType.Parameter("displayName") String displayName) {
+    @CustomType.Constructor
+    private CaseClassificationResponse(@CustomType.Parameter("displayName") String displayName) {
         this.displayName = displayName;
     }
 

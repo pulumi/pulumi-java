@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 import io.pulumi.azurenative.documentdb.enums.PartitionKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
      * Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum) are supported for container create
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<Either<String,PartitionKind>> kind;
 
     public Output<Either<String,PartitionKind>> getKind() {
@@ -37,7 +37,7 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
      * List of paths using which data within the container can be partitioned
      * 
      */
-    @InputImport(name="paths")
+    @Import(name="paths")
       private final @Nullable Output<List<String>> paths;
 
     public Output<List<String>> getPaths() {
@@ -48,7 +48,7 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
      * Indicates the version of the partition key definition
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {

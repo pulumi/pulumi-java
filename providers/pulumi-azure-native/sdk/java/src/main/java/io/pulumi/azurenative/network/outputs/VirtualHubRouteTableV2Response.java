@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.VirtualHubRouteV2Response;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualHubRouteTableV2Response {
     /**
      * List of all connections attached to this route table v2.
@@ -44,14 +44,14 @@ public final class VirtualHubRouteTableV2Response {
      */
     private final @Nullable List<VirtualHubRouteV2Response> routes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualHubRouteTableV2Response(
-        @OutputCustomType.Parameter("attachedConnections") @Nullable List<String> attachedConnections,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") @Nullable String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("routes") @Nullable List<VirtualHubRouteV2Response> routes) {
+        @CustomType.Parameter("attachedConnections") @Nullable List<String> attachedConnections,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") @Nullable String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("routes") @Nullable List<VirtualHubRouteV2Response> routes) {
         this.attachedConnections = attachedConnections;
         this.etag = etag;
         this.id = id;

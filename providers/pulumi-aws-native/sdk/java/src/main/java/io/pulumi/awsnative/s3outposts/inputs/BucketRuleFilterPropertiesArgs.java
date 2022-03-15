@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3outposts.inputs;
 import io.pulumi.awsnative.s3outposts.inputs.BucketFilterAndOperatorArgs;
 import io.pulumi.awsnative.s3outposts.inputs.BucketFilterTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
      * The container for the AND condition for the lifecycle rule. A combination of Prefix and 1 or more Tags OR a minimum of 2 or more tags.
      * 
      */
-    @InputImport(name="andOperator")
+    @Import(name="andOperator")
       private final @Nullable Output<BucketFilterAndOperatorArgs> andOperator;
 
     public Output<BucketFilterAndOperatorArgs> getAndOperator() {
@@ -35,7 +35,7 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
      * Object key prefix that identifies one or more objects to which this rule applies.
      * 
      */
-    @InputImport(name="prefix")
+    @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
@@ -46,7 +46,7 @@ public final class BucketRuleFilterPropertiesArgs extends io.pulumi.resources.Re
      * Specifies a tag used to identify a subset of objects for an Amazon S3Outposts bucket.
      * 
      */
-    @InputImport(name="tag")
+    @Import(name="tag")
       private final @Nullable Output<BucketFilterTagArgs> tag;
 
     public Output<BucketFilterTagArgs> getTag() {

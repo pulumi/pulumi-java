@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class FilterFileDetailsResponse extends io.pulumi.resources.InvokeA
      * Path of the file that contains the details of all items to transfer.
      * 
      */
-    @InputImport(name="filterFilePath", required=true)
+    @Import(name="filterFilePath", required=true)
       private final String filterFilePath;
 
     public String getFilterFilePath() {
@@ -31,7 +31,7 @@ public final class FilterFileDetailsResponse extends io.pulumi.resources.InvokeA
      * Type of the filter file.
      * 
      */
-    @InputImport(name="filterFileType", required=true)
+    @Import(name="filterFileType", required=true)
       private final String filterFileType;
 
     public String getFilterFileType() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * Action. Rolloback or Upgrade.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final String action;
 
     public String getAction() {
@@ -31,7 +31,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * The container image before this instance upgrade.
      * 
      */
-    @InputImport(name="containerImage", required=true)
+    @Import(name="containerImage", required=true)
       private final String containerImage;
 
     public String getContainerImage() {
@@ -42,7 +42,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * The time that this instance upgrade history entry is created.
      * 
      */
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
@@ -53,7 +53,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * The framework of this notebook instance.
      * 
      */
-    @InputImport(name="framework", required=true)
+    @Import(name="framework", required=true)
       private final String framework;
 
     public String getFramework() {
@@ -64,7 +64,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * The snapshot of the boot disk of this notebook instance before upgrade.
      * 
      */
-    @InputImport(name="snapshot", required=true)
+    @Import(name="snapshot", required=true)
       private final String snapshot;
 
     public String getSnapshot() {
@@ -75,7 +75,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * The state of this instance upgrade history entry.
      * 
      */
-    @InputImport(name="state", required=true)
+    @Import(name="state", required=true)
       private final String state;
 
     public String getState() {
@@ -86,7 +86,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * Target VM Image. Format: ainotebooks-vm/project/image-name/name.
      * 
      */
-    @InputImport(name="targetImage", required=true)
+    @Import(name="targetImage", required=true)
       private final String targetImage;
 
     public String getTargetImage() {
@@ -97,7 +97,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * Target VM Version, like m63.
      * 
      */
-    @InputImport(name="targetVersion", required=true)
+    @Import(name="targetVersion", required=true)
       private final String targetVersion;
 
     public String getTargetVersion() {
@@ -108,7 +108,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * The version of the notebook instance before this upgrade.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final String version;
 
     public String getVersion() {
@@ -119,7 +119,7 @@ public final class UpgradeHistoryEntryResponse extends io.pulumi.resources.Invok
      * The VM image before this instance upgrade.
      * 
      */
-    @InputImport(name="vmImage", required=true)
+    @Import(name="vmImage", required=true)
       private final String vmImage;
 
     public String getVmImage() {

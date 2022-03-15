@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicyRule {
     /**
      * `apiGroups` is a list of matching API groups and may not be empty. "*" matches all API groups and, if present, must be the only entry. Required.
@@ -39,13 +39,13 @@ public final class ResourcePolicyRule {
      */
     private final List<String> verbs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourcePolicyRule(
-        @OutputCustomType.Parameter("apiGroups") List<String> apiGroups,
-        @OutputCustomType.Parameter("clusterScope") @Nullable Boolean clusterScope,
-        @OutputCustomType.Parameter("namespaces") @Nullable List<String> namespaces,
-        @OutputCustomType.Parameter("resources") List<String> resources,
-        @OutputCustomType.Parameter("verbs") List<String> verbs) {
+        @CustomType.Parameter("apiGroups") List<String> apiGroups,
+        @CustomType.Parameter("clusterScope") @Nullable Boolean clusterScope,
+        @CustomType.Parameter("namespaces") @Nullable List<String> namespaces,
+        @CustomType.Parameter("resources") List<String> resources,
+        @CustomType.Parameter("verbs") List<String> verbs) {
         this.apiGroups = apiGroups;
         this.clusterScope = clusterScope;
         this.namespaces = namespaces;

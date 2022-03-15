@@ -5,7 +5,7 @@ package io.pulumi.azurenative.management.inputs;
 
 import io.pulumi.azurenative.management.inputs.ManagementGroupPathElementResponse;
 import io.pulumi.azurenative.management.inputs.ParentGroupInfoResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
      * (Optional) The ID of the parent management group.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable ParentGroupInfoResponse parent;
 
     public Optional<ParentGroupInfoResponse> getParent() {
@@ -37,7 +37,7 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
      * The path from the root to the current group.
      * 
      */
-    @InputImport(name="path")
+    @Import(name="path")
       private final @Nullable List<ManagementGroupPathElementResponse> path;
 
     public List<ManagementGroupPathElementResponse> getPath() {
@@ -48,7 +48,7 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
      * The identity of the principal or process that updated the object.
      * 
      */
-    @InputImport(name="updatedBy")
+    @Import(name="updatedBy")
       private final @Nullable String updatedBy;
 
     public Optional<String> getUpdatedBy() {
@@ -59,7 +59,7 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
      * The date and time when this object was last updated.
      * 
      */
-    @InputImport(name="updatedTime")
+    @Import(name="updatedTime")
       private final @Nullable String updatedTime;
 
     public Optional<String> getUpdatedTime() {
@@ -70,7 +70,7 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
      * The version number of the object.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Double version;
 
     public Optional<Double> getVersion() {

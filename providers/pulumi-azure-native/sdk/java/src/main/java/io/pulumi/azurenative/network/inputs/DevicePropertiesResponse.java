@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DevicePropertiesResponse extends io.pulumi.resources.InvokeAr
      * Model of the device.
      * 
      */
-    @InputImport(name="deviceModel")
+    @Import(name="deviceModel")
       private final @Nullable String deviceModel;
 
     public Optional<String> getDeviceModel() {
@@ -34,7 +34,7 @@ public final class DevicePropertiesResponse extends io.pulumi.resources.InvokeAr
      * Name of the device Vendor.
      * 
      */
-    @InputImport(name="deviceVendor")
+    @Import(name="deviceVendor")
       private final @Nullable String deviceVendor;
 
     public Optional<String> getDeviceVendor() {
@@ -45,7 +45,7 @@ public final class DevicePropertiesResponse extends io.pulumi.resources.InvokeAr
      * Link speed.
      * 
      */
-    @InputImport(name="linkSpeedInMbps")
+    @Import(name="linkSpeedInMbps")
       private final @Nullable Integer linkSpeedInMbps;
 
     public Optional<Integer> getLinkSpeedInMbps() {

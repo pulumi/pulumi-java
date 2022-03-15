@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.emrcontainers.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class VirtualClusterEksInfoArgs extends io.pulumi.resources.Resourc
 
     public static final VirtualClusterEksInfoArgs Empty = new VirtualClusterEksInfoArgs();
 
-    @InputImport(name="namespace", required=true)
+    @Import(name="namespace", required=true)
       private final Output<String> namespace;
 
     public Output<String> getNamespace() {

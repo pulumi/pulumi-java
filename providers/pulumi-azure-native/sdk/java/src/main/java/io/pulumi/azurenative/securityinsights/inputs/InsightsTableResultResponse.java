@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.InsightsTableResultResponseColumns;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class InsightsTableResultResponse extends io.pulumi.resources.Invok
      * Columns Metadata of the table
      * 
      */
-    @InputImport(name="columns")
+    @Import(name="columns")
       private final @Nullable List<InsightsTableResultResponseColumns> columns;
 
     public List<InsightsTableResultResponseColumns> getColumns() {
@@ -35,7 +35,7 @@ public final class InsightsTableResultResponse extends io.pulumi.resources.Invok
      * Rows data of the table
      * 
      */
-    @InputImport(name="rows")
+    @Import(name="rows")
       private final @Nullable List<List<String>> rows;
 
     public List<List<String>> getRows() {

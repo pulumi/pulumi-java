@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.WorkteamMemberDefinitionCognitoMemberDefinitionArgs;
 import io.pulumi.aws.sagemaker.inputs.WorkteamMemberDefinitionOidcMemberDefinitionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class WorkteamMemberDefinitionArgs extends io.pulumi.resources.Reso
      * The Amazon Cognito user group that is part of the work team. See Cognito Member Definition details below.
      * 
      */
-    @InputImport(name="cognitoMemberDefinition")
+    @Import(name="cognitoMemberDefinition")
       private final @Nullable Output<WorkteamMemberDefinitionCognitoMemberDefinitionArgs> cognitoMemberDefinition;
 
     public Output<WorkteamMemberDefinitionCognitoMemberDefinitionArgs> getCognitoMemberDefinition() {
@@ -30,7 +30,7 @@ public final class WorkteamMemberDefinitionArgs extends io.pulumi.resources.Reso
      * A list user groups that exist in your OIDC Identity Provider (IdP). One to ten groups can be used to create a single private work team. See Cognito Member Definition details below.
      * 
      */
-    @InputImport(name="oidcMemberDefinition")
+    @Import(name="oidcMemberDefinition")
       private final @Nullable Output<WorkteamMemberDefinitionOidcMemberDefinitionArgs> oidcMemberDefinition;
 
     public Output<WorkteamMemberDefinitionOidcMemberDefinitionArgs> getOidcMemberDefinition() {

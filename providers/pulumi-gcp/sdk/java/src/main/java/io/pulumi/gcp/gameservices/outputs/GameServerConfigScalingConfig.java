@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.gameservices.outputs.GameServerConfigScalingConfigSchedule;
 import io.pulumi.gcp.gameservices.outputs.GameServerConfigScalingConfigSelector;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GameServerConfigScalingConfig {
     /**
      * Fleet autoscaler spec, which is sent to Agones.
@@ -40,12 +40,12 @@ public final class GameServerConfigScalingConfig {
      */
     private final @Nullable List<GameServerConfigScalingConfigSelector> selectors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GameServerConfigScalingConfig(
-        @OutputCustomType.Parameter("fleetAutoscalerSpec") String fleetAutoscalerSpec,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("schedules") @Nullable List<GameServerConfigScalingConfigSchedule> schedules,
-        @OutputCustomType.Parameter("selectors") @Nullable List<GameServerConfigScalingConfigSelector> selectors) {
+        @CustomType.Parameter("fleetAutoscalerSpec") String fleetAutoscalerSpec,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("schedules") @Nullable List<GameServerConfigScalingConfigSchedule> schedules,
+        @CustomType.Parameter("selectors") @Nullable List<GameServerConfigScalingConfigSelector> selectors) {
         this.fleetAutoscalerSpec = fleetAutoscalerSpec;
         this.name = name;
         this.schedules = schedules;

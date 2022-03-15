@@ -5,13 +5,13 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayBackendHealthServerResponse;
 import io.pulumi.azurenative.network.outputs.ApplicationGatewayBackendHttpSettingsResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationGatewayBackendHealthHttpSettingsResponse {
     /**
      * Reference to an ApplicationGatewayBackendHttpSettings resource.
@@ -24,10 +24,10 @@ public final class ApplicationGatewayBackendHealthHttpSettingsResponse {
      */
     private final @Nullable List<ApplicationGatewayBackendHealthServerResponse> servers;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationGatewayBackendHealthHttpSettingsResponse(
-        @OutputCustomType.Parameter("backendHttpSettings") @Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings,
-        @OutputCustomType.Parameter("servers") @Nullable List<ApplicationGatewayBackendHealthServerResponse> servers) {
+        @CustomType.Parameter("backendHttpSettings") @Nullable ApplicationGatewayBackendHttpSettingsResponse backendHttpSettings,
+        @CustomType.Parameter("servers") @Nullable List<ApplicationGatewayBackendHealthServerResponse> servers) {
         this.backendHttpSettings = backendHttpSettings;
         this.servers = servers;
     }

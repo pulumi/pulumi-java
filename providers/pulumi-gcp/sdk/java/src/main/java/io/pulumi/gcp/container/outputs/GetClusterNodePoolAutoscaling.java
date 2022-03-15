@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterNodePoolAutoscaling {
     private final Integer maxNodeCount;
     private final Integer minNodeCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterNodePoolAutoscaling(
-        @OutputCustomType.Parameter("maxNodeCount") Integer maxNodeCount,
-        @OutputCustomType.Parameter("minNodeCount") Integer minNodeCount) {
+        @CustomType.Parameter("maxNodeCount") Integer maxNodeCount,
+        @CustomType.Parameter("minNodeCount") Integer minNodeCount) {
         this.maxNodeCount = maxNodeCount;
         this.minNodeCount = minNodeCount;
     }

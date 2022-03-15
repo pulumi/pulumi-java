@@ -8,7 +8,7 @@ import io.pulumi.awsnative.redshift.ScheduledActionArgs;
 import io.pulumi.awsnative.redshift.enums.ScheduledActionState;
 import io.pulumi.awsnative.redshift.outputs.ScheduledActionType;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * If true, the schedule is enabled. If false, the scheduled action does not trigger.
      * 
      */
-    @OutputExport(name="enable", type=Boolean.class, parameters={})
+    @Export(name="enable", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enable;
 
     /**
@@ -39,7 +39,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * The end time in UTC of the scheduled action. After this time, the scheduled action does not trigger.
      * 
      */
-    @OutputExport(name="endTime", type=String.class, parameters={})
+    @Export(name="endTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> endTime;
 
     /**
@@ -53,7 +53,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * The IAM role to assume to run the target action.
      * 
      */
-    @OutputExport(name="iamRole", type=String.class, parameters={})
+    @Export(name="iamRole", type=String.class, parameters={})
     private Output</* @Nullable */ String> iamRole;
 
     /**
@@ -67,7 +67,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * List of times when the scheduled action will run.
      * 
      */
-    @OutputExport(name="nextInvocations", type=List.class, parameters={String.class})
+    @Export(name="nextInvocations", type=List.class, parameters={String.class})
     private Output<List<String>> nextInvocations;
 
     /**
@@ -81,7 +81,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * The schedule in `at( )` or `cron( )` format.
      * 
      */
-    @OutputExport(name="schedule", type=String.class, parameters={})
+    @Export(name="schedule", type=String.class, parameters={})
     private Output</* @Nullable */ String> schedule;
 
     /**
@@ -95,7 +95,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * The description of the scheduled action.
      * 
      */
-    @OutputExport(name="scheduledActionDescription", type=String.class, parameters={})
+    @Export(name="scheduledActionDescription", type=String.class, parameters={})
     private Output</* @Nullable */ String> scheduledActionDescription;
 
     /**
@@ -109,7 +109,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * The name of the scheduled action. The name must be unique within an account.
      * 
      */
-    @OutputExport(name="scheduledActionName", type=String.class, parameters={})
+    @Export(name="scheduledActionName", type=String.class, parameters={})
     private Output<String> scheduledActionName;
 
     /**
@@ -123,7 +123,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * The start time in UTC of the scheduled action. Before this time, the scheduled action does not trigger.
      * 
      */
-    @OutputExport(name="startTime", type=String.class, parameters={})
+    @Export(name="startTime", type=String.class, parameters={})
     private Output</* @Nullable */ String> startTime;
 
     /**
@@ -137,7 +137,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * The state of the scheduled action.
      * 
      */
-    @OutputExport(name="state", type=ScheduledActionState.class, parameters={})
+    @Export(name="state", type=ScheduledActionState.class, parameters={})
     private Output<ScheduledActionState> state;
 
     /**
@@ -151,7 +151,7 @@ public class ScheduledAction extends io.pulumi.resources.CustomResource {
      * A JSON format string of the Amazon Redshift API operation with input parameters.
      * 
      */
-    @OutputExport(name="targetAction", type=ScheduledActionType.class, parameters={})
+    @Export(name="targetAction", type=ScheduledActionType.class, parameters={})
     private Output</* @Nullable */ ScheduledActionType> targetAction;
 
     /**

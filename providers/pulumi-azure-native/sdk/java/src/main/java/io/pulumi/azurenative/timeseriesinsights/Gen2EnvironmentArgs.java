@@ -8,7 +8,7 @@ import io.pulumi.azurenative.timeseriesinsights.inputs.SkuArgs;
 import io.pulumi.azurenative.timeseriesinsights.inputs.TimeSeriesIdPropertyArgs;
 import io.pulumi.azurenative.timeseriesinsights.inputs.WarmStoreConfigurationPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * Name of the environment
      * 
      */
-    @InputImport(name="environmentName")
+    @Import(name="environmentName")
       private final @Nullable Output<String> environmentName;
 
     public Output<String> getEnvironmentName() {
@@ -36,7 +36,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * Expected value is 'Gen2'.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -47,7 +47,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * The location of the resource.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -58,7 +58,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * Name of an Azure Resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -69,7 +69,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * The sku determines the type of environment, either Gen1 (S1 or S2) or Gen2 (L1). For Gen1 environments the sku determines the capacity of the environment, the ingress rate, and the billing rate.
      * 
      */
-    @InputImport(name="sku", required=true)
+    @Import(name="sku", required=true)
       private final Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
@@ -80,7 +80,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * The storage configuration provides the connection details that allows the Time Series Insights service to connect to the customer storage account that is used to store the environment's data.
      * 
      */
-    @InputImport(name="storageConfiguration", required=true)
+    @Import(name="storageConfiguration", required=true)
       private final Output<Gen2StorageConfigurationInputArgs> storageConfiguration;
 
     public Output<Gen2StorageConfigurationInputArgs> getStorageConfiguration() {
@@ -91,7 +91,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * Key-value pairs of additional properties for the resource.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -102,7 +102,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * The list of event properties which will be used to define the environment's time series id.
      * 
      */
-    @InputImport(name="timeSeriesIdProperties", required=true)
+    @Import(name="timeSeriesIdProperties", required=true)
       private final Output<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties;
 
     public Output<List<TimeSeriesIdPropertyArgs>> getTimeSeriesIdProperties() {
@@ -113,7 +113,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * The warm store configuration provides the details to create a warm store cache that will retain a copy of the environment's data available for faster query.
      * 
      */
-    @InputImport(name="warmStoreConfiguration")
+    @Import(name="warmStoreConfiguration")
       private final @Nullable Output<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration;
 
     public Output<WarmStoreConfigurationPropertiesArgs> getWarmStoreConfiguration() {

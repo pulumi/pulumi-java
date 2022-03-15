@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ManagedClusterServicePrincipalProfileResponse extends io.pulu
      * The ID for the service principal.
      * 
      */
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final String clientId;
 
     public String getClientId() {
@@ -33,7 +33,7 @@ public final class ManagedClusterServicePrincipalProfileResponse extends io.pulu
      * The secret password associated with the service principal in plain text.
      * 
      */
-    @InputImport(name="secret")
+    @Import(name="secret")
       private final @Nullable String secret;
 
     public Optional<String> getSecret() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.appplatform.inputs.GatewayCorsPropertiesArgs;
 import io.pulumi.azurenative.appplatform.inputs.GatewayResourceRequestsArgs;
 import io.pulumi.azurenative.appplatform.inputs.SsoPropertiesArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
      * API metadata property for Spring Cloud Gateway
      * 
      */
-    @InputImport(name="apiMetadataProperties")
+    @Import(name="apiMetadataProperties")
       private final @Nullable Output<GatewayApiMetadataPropertiesArgs> apiMetadataProperties;
 
     public Output<GatewayApiMetadataPropertiesArgs> getApiMetadataProperties() {
@@ -37,7 +37,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Cross-Origin Resource Sharing property
      * 
      */
-    @InputImport(name="corsProperties")
+    @Import(name="corsProperties")
       private final @Nullable Output<GatewayCorsPropertiesArgs> corsProperties;
 
     public Output<GatewayCorsPropertiesArgs> getCorsProperties() {
@@ -48,7 +48,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Indicate if only https is allowed.
      * 
      */
-    @InputImport(name="httpsOnly")
+    @Import(name="httpsOnly")
       private final @Nullable Output<Boolean> httpsOnly;
 
     public Output<Boolean> getHttpsOnly() {
@@ -59,7 +59,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Indicates whether the Spring Cloud Gateway exposes endpoint.
      * 
      */
-    @InputImport(name="public")
+    @Import(name="public")
       private final @Nullable Output<Boolean> $public;
 
     public Output<Boolean> get$public() {
@@ -70,7 +70,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
      * The requested resource quantity for required CPU and Memory.
      * 
      */
-    @InputImport(name="resourceRequests")
+    @Import(name="resourceRequests")
       private final @Nullable Output<GatewayResourceRequestsArgs> resourceRequests;
 
     public Output<GatewayResourceRequestsArgs> getResourceRequests() {
@@ -81,7 +81,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Single sign-on related configuration
      * 
      */
-    @InputImport(name="ssoProperties")
+    @Import(name="ssoProperties")
       private final @Nullable Output<SsoPropertiesArgs> ssoProperties;
 
     public Output<SsoPropertiesArgs> getSsoProperties() {

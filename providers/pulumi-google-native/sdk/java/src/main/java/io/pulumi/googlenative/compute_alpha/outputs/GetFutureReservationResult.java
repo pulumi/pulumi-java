@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.FutureReservationSpecificSKUPropertiesResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.FutureReservationStatusResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.FutureReservationTimeWindowResponse;
@@ -11,7 +11,7 @@ import io.pulumi.googlenative.compute_alpha.outputs.ShareSettingsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFutureReservationResult {
     /**
      * The creation timestamp for this future reservation in RFC3339 text format.
@@ -70,20 +70,20 @@ public final class GetFutureReservationResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFutureReservationResult(
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("namePrefix") String namePrefix,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("shareSettings") ShareSettingsResponse shareSettings,
-        @OutputCustomType.Parameter("specificSkuProperties") FutureReservationSpecificSKUPropertiesResponse specificSkuProperties,
-        @OutputCustomType.Parameter("status") FutureReservationStatusResponse status,
-        @OutputCustomType.Parameter("timeWindow") FutureReservationTimeWindowResponse timeWindow,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("namePrefix") String namePrefix,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("shareSettings") ShareSettingsResponse shareSettings,
+        @CustomType.Parameter("specificSkuProperties") FutureReservationSpecificSKUPropertiesResponse specificSkuProperties,
+        @CustomType.Parameter("status") FutureReservationStatusResponse status,
+        @CustomType.Parameter("timeWindow") FutureReservationTimeWindowResponse timeWindow,
+        @CustomType.Parameter("zone") String zone) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.kind = kind;

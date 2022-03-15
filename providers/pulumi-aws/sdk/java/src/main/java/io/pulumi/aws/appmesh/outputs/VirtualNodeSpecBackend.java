@@ -4,10 +4,10 @@
 package io.pulumi.aws.appmesh.outputs;
 
 import io.pulumi.aws.appmesh.outputs.VirtualNodeSpecBackendVirtualService;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNodeSpecBackend {
     /**
      * Specifies a virtual service to use as a backend for a virtual node.
@@ -15,8 +15,8 @@ public final class VirtualNodeSpecBackend {
      */
     private final VirtualNodeSpecBackendVirtualService virtualService;
 
-    @OutputCustomType.Constructor
-    private VirtualNodeSpecBackend(@OutputCustomType.Parameter("virtualService") VirtualNodeSpecBackendVirtualService virtualService) {
+    @CustomType.Constructor
+    private VirtualNodeSpecBackend(@CustomType.Parameter("virtualService") VirtualNodeSpecBackendVirtualService virtualService) {
         this.virtualService = virtualService;
     }
 

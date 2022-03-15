@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.VmUtilizationMetricsResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.VmwareVmDetailsResponse;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class VmUtilizationInfoResponse extends io.pulumi.resources.InvokeA
      * Utilization metrics for this VM.
      * 
      */
-    @InputImport(name="utilization", required=true)
+    @Import(name="utilization", required=true)
       private final VmUtilizationMetricsResponse utilization;
 
     public VmUtilizationMetricsResponse getUtilization() {
@@ -33,7 +33,7 @@ public final class VmUtilizationInfoResponse extends io.pulumi.resources.InvokeA
      * The VM's ID in the source.
      * 
      */
-    @InputImport(name="vmId", required=true)
+    @Import(name="vmId", required=true)
       private final String vmId;
 
     public String getVmId() {
@@ -44,7 +44,7 @@ public final class VmUtilizationInfoResponse extends io.pulumi.resources.InvokeA
      * The description of the VM in a Source of type Vmware.
      * 
      */
-    @InputImport(name="vmwareVmDetails", required=true)
+    @Import(name="vmwareVmDetails", required=true)
       private final VmwareVmDetailsResponse vmwareVmDetails;
 
     public VmwareVmDetailsResponse getVmwareVmDetails() {

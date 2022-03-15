@@ -7,7 +7,7 @@ import io.pulumi.awsnative.servicecatalog.enums.ServiceActionAcceptLanguage;
 import io.pulumi.awsnative.servicecatalog.enums.ServiceActionDefinitionType;
 import io.pulumi.awsnative.servicecatalog.inputs.ServiceActionDefinitionParameterArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,35 +18,35 @@ public final class ServiceActionArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ServiceActionArgs Empty = new ServiceActionArgs();
 
-    @InputImport(name="acceptLanguage")
+    @Import(name="acceptLanguage")
       private final @Nullable Output<ServiceActionAcceptLanguage> acceptLanguage;
 
     public Output<ServiceActionAcceptLanguage> getAcceptLanguage() {
         return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
     }
 
-    @InputImport(name="definition", required=true)
+    @Import(name="definition", required=true)
       private final Output<List<ServiceActionDefinitionParameterArgs>> definition;
 
     public Output<List<ServiceActionDefinitionParameterArgs>> getDefinition() {
         return this.definition;
     }
 
-    @InputImport(name="definitionType", required=true)
+    @Import(name="definitionType", required=true)
       private final Output<ServiceActionDefinitionType> definitionType;
 
     public Output<ServiceActionDefinitionType> getDefinitionType() {
         return this.definitionType;
     }
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
         return this.description == null ? Output.empty() : this.description;
     }
 
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

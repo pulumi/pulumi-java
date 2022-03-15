@@ -7,24 +7,24 @@ import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentActiveDirectoryCo
 import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentComputeFarmConfiguration;
 import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentLicenseServiceConfiguration;
 import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentSharedFileSystemConfiguration;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StudioComponentConfiguration {
     private final @Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration;
     private final @Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration;
     private final @Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration;
     private final @Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StudioComponentConfiguration(
-        @OutputCustomType.Parameter("activeDirectoryConfiguration") @Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration,
-        @OutputCustomType.Parameter("computeFarmConfiguration") @Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration,
-        @OutputCustomType.Parameter("licenseServiceConfiguration") @Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration,
-        @OutputCustomType.Parameter("sharedFileSystemConfiguration") @Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration) {
+        @CustomType.Parameter("activeDirectoryConfiguration") @Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration,
+        @CustomType.Parameter("computeFarmConfiguration") @Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration,
+        @CustomType.Parameter("licenseServiceConfiguration") @Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration,
+        @CustomType.Parameter("sharedFileSystemConfiguration") @Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration) {
         this.activeDirectoryConfiguration = activeDirectoryConfiguration;
         this.computeFarmConfiguration = computeFarmConfiguration;
         this.licenseServiceConfiguration = licenseServiceConfiguration;

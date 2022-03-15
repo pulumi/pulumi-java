@@ -8,7 +8,7 @@ import io.pulumi.aws.ec2.RouteTableArgs;
 import io.pulumi.aws.ec2.inputs.RouteTableState;
 import io.pulumi.aws.ec2.outputs.RouteTableRoute;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -54,7 +54,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * The ARN of the route table.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -68,7 +68,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * The ID of the AWS account that owns the route table.
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -82,7 +82,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * A list of virtual gateways for propagation.
      * 
      */
-    @OutputExport(name="propagatingVgws", type=List.class, parameters={String.class})
+    @Export(name="propagatingVgws", type=List.class, parameters={String.class})
     private Output<List<String>> propagatingVgws;
 
     /**
@@ -96,7 +96,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * A list of route objects. Their keys are documented below.
      * 
      */
-    @OutputExport(name="routes", type=List.class, parameters={RouteTableRoute.class})
+    @Export(name="routes", type=List.class, parameters={RouteTableRoute.class})
     private Output<List<RouteTableRoute>> routes;
 
     /**
@@ -110,7 +110,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -124,7 +124,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -138,7 +138,7 @@ public class RouteTable extends io.pulumi.resources.CustomResource {
      * The VPC ID.
      * 
      */
-    @OutputExport(name="vpcId", type=String.class, parameters={})
+    @Export(name="vpcId", type=String.class, parameters={})
     private Output<String> vpcId;
 
     /**

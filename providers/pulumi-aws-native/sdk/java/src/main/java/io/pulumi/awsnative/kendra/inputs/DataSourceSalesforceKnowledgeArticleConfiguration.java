@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kendra.inputs;
 import io.pulumi.awsnative.kendra.enums.DataSourceSalesforceKnowledgeArticleState;
 import io.pulumi.awsnative.kendra.inputs.DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration;
 import io.pulumi.awsnative.kendra.inputs.DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,21 +17,21 @@ public final class DataSourceSalesforceKnowledgeArticleConfiguration extends io.
 
     public static final DataSourceSalesforceKnowledgeArticleConfiguration Empty = new DataSourceSalesforceKnowledgeArticleConfiguration();
 
-    @InputImport(name="customKnowledgeArticleTypeConfigurations")
+    @Import(name="customKnowledgeArticleTypeConfigurations")
       private final @Nullable List<DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration> customKnowledgeArticleTypeConfigurations;
 
     public List<DataSourceSalesforceCustomKnowledgeArticleTypeConfiguration> getCustomKnowledgeArticleTypeConfigurations() {
         return this.customKnowledgeArticleTypeConfigurations == null ? List.of() : this.customKnowledgeArticleTypeConfigurations;
     }
 
-    @InputImport(name="includedStates", required=true)
+    @Import(name="includedStates", required=true)
       private final List<DataSourceSalesforceKnowledgeArticleState> includedStates;
 
     public List<DataSourceSalesforceKnowledgeArticleState> getIncludedStates() {
         return this.includedStates;
     }
 
-    @InputImport(name="standardKnowledgeArticleTypeConfiguration")
+    @Import(name="standardKnowledgeArticleTypeConfiguration")
       private final @Nullable DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration standardKnowledgeArticleTypeConfiguration;
 
     public Optional<DataSourceSalesforceStandardKnowledgeArticleTypeConfiguration> getStandardKnowledgeArticleTypeConfiguration() {

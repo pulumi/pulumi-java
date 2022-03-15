@@ -3,23 +3,23 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImportCollectorPropertiesResponse {
     private final String createdTimestamp;
     private final @Nullable String discoverySiteId;
     private final String updatedTimestamp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImportCollectorPropertiesResponse(
-        @OutputCustomType.Parameter("createdTimestamp") String createdTimestamp,
-        @OutputCustomType.Parameter("discoverySiteId") @Nullable String discoverySiteId,
-        @OutputCustomType.Parameter("updatedTimestamp") String updatedTimestamp) {
+        @CustomType.Parameter("createdTimestamp") String createdTimestamp,
+        @CustomType.Parameter("discoverySiteId") @Nullable String discoverySiteId,
+        @CustomType.Parameter("updatedTimestamp") String updatedTimestamp) {
         this.createdTimestamp = createdTimestamp;
         this.discoverySiteId = discoverySiteId;
         this.updatedTimestamp = updatedTimestamp;

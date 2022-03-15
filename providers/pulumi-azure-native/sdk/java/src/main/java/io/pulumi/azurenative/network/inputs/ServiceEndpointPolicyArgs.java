@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ServiceEndpointPolicyDefinitionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -36,7 +36,7 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
      * Resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -47,7 +47,7 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
      * A collection of service endpoint policy definitions of the service endpoint policy.
      * 
      */
-    @InputImport(name="serviceEndpointPolicyDefinitions")
+    @Import(name="serviceEndpointPolicyDefinitions")
       private final @Nullable Output<List<ServiceEndpointPolicyDefinitionArgs>> serviceEndpointPolicyDefinitions;
 
     public Output<List<ServiceEndpointPolicyDefinitionArgs>> getServiceEndpointPolicyDefinitions() {
@@ -58,7 +58,7 @@ public final class ServiceEndpointPolicyArgs extends io.pulumi.resources.Resourc
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

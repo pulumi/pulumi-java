@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridcompute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class HybridComputePrivateLinkScopePropertiesResponse extends io.pu
      * The Guid id of the private link scope.
      * 
      */
-    @InputImport(name="privateLinkScopeId", required=true)
+    @Import(name="privateLinkScopeId", required=true)
       private final String privateLinkScopeId;
 
     public String getPrivateLinkScopeId() {
@@ -33,7 +33,7 @@ public final class HybridComputePrivateLinkScopePropertiesResponse extends io.pu
      * Current state of this PrivateLinkScope: whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Provisioning ,Succeeded, Canceled and Failed.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -44,7 +44,7 @@ public final class HybridComputePrivateLinkScopePropertiesResponse extends io.pu
      * Indicates whether machines associated with the private link scope can also use public Azure Arc service endpoints.
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable String publicNetworkAccess;
 
     public Optional<String> getPublicNetworkAccess() {

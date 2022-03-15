@@ -11,7 +11,7 @@ import io.pulumi.awsnative.ec2.inputs.EC2FleetSpotOptionsRequestArgs;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetTagSpecificationArgs;
 import io.pulumi.awsnative.ec2.inputs.EC2FleetTargetCapacitySpecificationRequestArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,84 +23,84 @@ public final class EC2FleetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final EC2FleetArgs Empty = new EC2FleetArgs();
 
-    @InputImport(name="context")
+    @Import(name="context")
       private final @Nullable Output<String> context;
 
     public Output<String> getContext() {
         return this.context == null ? Output.empty() : this.context;
     }
 
-    @InputImport(name="excessCapacityTerminationPolicy")
+    @Import(name="excessCapacityTerminationPolicy")
       private final @Nullable Output<EC2FleetExcessCapacityTerminationPolicy> excessCapacityTerminationPolicy;
 
     public Output<EC2FleetExcessCapacityTerminationPolicy> getExcessCapacityTerminationPolicy() {
         return this.excessCapacityTerminationPolicy == null ? Output.empty() : this.excessCapacityTerminationPolicy;
     }
 
-    @InputImport(name="launchTemplateConfigs", required=true)
+    @Import(name="launchTemplateConfigs", required=true)
       private final Output<List<EC2FleetFleetLaunchTemplateConfigRequestArgs>> launchTemplateConfigs;
 
     public Output<List<EC2FleetFleetLaunchTemplateConfigRequestArgs>> getLaunchTemplateConfigs() {
         return this.launchTemplateConfigs;
     }
 
-    @InputImport(name="onDemandOptions")
+    @Import(name="onDemandOptions")
       private final @Nullable Output<EC2FleetOnDemandOptionsRequestArgs> onDemandOptions;
 
     public Output<EC2FleetOnDemandOptionsRequestArgs> getOnDemandOptions() {
         return this.onDemandOptions == null ? Output.empty() : this.onDemandOptions;
     }
 
-    @InputImport(name="replaceUnhealthyInstances")
+    @Import(name="replaceUnhealthyInstances")
       private final @Nullable Output<Boolean> replaceUnhealthyInstances;
 
     public Output<Boolean> getReplaceUnhealthyInstances() {
         return this.replaceUnhealthyInstances == null ? Output.empty() : this.replaceUnhealthyInstances;
     }
 
-    @InputImport(name="spotOptions")
+    @Import(name="spotOptions")
       private final @Nullable Output<EC2FleetSpotOptionsRequestArgs> spotOptions;
 
     public Output<EC2FleetSpotOptionsRequestArgs> getSpotOptions() {
         return this.spotOptions == null ? Output.empty() : this.spotOptions;
     }
 
-    @InputImport(name="tagSpecifications")
+    @Import(name="tagSpecifications")
       private final @Nullable Output<List<EC2FleetTagSpecificationArgs>> tagSpecifications;
 
     public Output<List<EC2FleetTagSpecificationArgs>> getTagSpecifications() {
         return this.tagSpecifications == null ? Output.empty() : this.tagSpecifications;
     }
 
-    @InputImport(name="targetCapacitySpecification", required=true)
+    @Import(name="targetCapacitySpecification", required=true)
       private final Output<EC2FleetTargetCapacitySpecificationRequestArgs> targetCapacitySpecification;
 
     public Output<EC2FleetTargetCapacitySpecificationRequestArgs> getTargetCapacitySpecification() {
         return this.targetCapacitySpecification;
     }
 
-    @InputImport(name="terminateInstancesWithExpiration")
+    @Import(name="terminateInstancesWithExpiration")
       private final @Nullable Output<Boolean> terminateInstancesWithExpiration;
 
     public Output<Boolean> getTerminateInstancesWithExpiration() {
         return this.terminateInstancesWithExpiration == null ? Output.empty() : this.terminateInstancesWithExpiration;
     }
 
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<EC2FleetType> type;
 
     public Output<EC2FleetType> getType() {
         return this.type == null ? Output.empty() : this.type;
     }
 
-    @InputImport(name="validFrom")
+    @Import(name="validFrom")
       private final @Nullable Output<String> validFrom;
 
     public Output<String> getValidFrom() {
         return this.validFrom == null ? Output.empty() : this.validFrom;
     }
 
-    @InputImport(name="validUntil")
+    @Import(name="validUntil")
       private final @Nullable Output<String> validUntil;
 
     public Output<String> getValidUntil() {

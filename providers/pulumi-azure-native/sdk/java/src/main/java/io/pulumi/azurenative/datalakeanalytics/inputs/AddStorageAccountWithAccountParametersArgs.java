@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datalakeanalytics.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AddStorageAccountWithAccountParametersArgs extends io.pulumi.
      * The access key associated with this Azure Storage account that will be used to connect to it.
      * 
      */
-    @InputImport(name="accessKey", required=true)
+    @Import(name="accessKey", required=true)
       private final Output<String> accessKey;
 
     public Output<String> getAccessKey() {
@@ -33,7 +33,7 @@ public final class AddStorageAccountWithAccountParametersArgs extends io.pulumi.
      * The unique name of the Azure Storage account to add.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -44,7 +44,7 @@ public final class AddStorageAccountWithAccountParametersArgs extends io.pulumi.
      * The optional suffix for the storage account.
      * 
      */
-    @InputImport(name="suffix")
+    @Import(name="suffix")
       private final @Nullable Output<String> suffix;
 
     public Output<String> getSuffix() {

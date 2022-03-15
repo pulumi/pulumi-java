@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2BigQueryTableResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2BigQueryOptionsResponse {
     /**
      * References to fields excluded from scanning. This allows you to skip inspection of entire columns which you know have no findings.
@@ -45,15 +45,15 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse {
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse tableReference;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooglePrivacyDlpV2BigQueryOptionsResponse(
-        @OutputCustomType.Parameter("excludedFields") List<GooglePrivacyDlpV2FieldIdResponse> excludedFields,
-        @OutputCustomType.Parameter("identifyingFields") List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields,
-        @OutputCustomType.Parameter("includedFields") List<GooglePrivacyDlpV2FieldIdResponse> includedFields,
-        @OutputCustomType.Parameter("rowsLimit") String rowsLimit,
-        @OutputCustomType.Parameter("rowsLimitPercent") Integer rowsLimitPercent,
-        @OutputCustomType.Parameter("sampleMethod") String sampleMethod,
-        @OutputCustomType.Parameter("tableReference") GooglePrivacyDlpV2BigQueryTableResponse tableReference) {
+        @CustomType.Parameter("excludedFields") List<GooglePrivacyDlpV2FieldIdResponse> excludedFields,
+        @CustomType.Parameter("identifyingFields") List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields,
+        @CustomType.Parameter("includedFields") List<GooglePrivacyDlpV2FieldIdResponse> includedFields,
+        @CustomType.Parameter("rowsLimit") String rowsLimit,
+        @CustomType.Parameter("rowsLimitPercent") Integer rowsLimitPercent,
+        @CustomType.Parameter("sampleMethod") String sampleMethod,
+        @CustomType.Parameter("tableReference") GooglePrivacyDlpV2BigQueryTableResponse tableReference) {
         this.excludedFields = excludedFields;
         this.identifyingFields = identifyingFields;
         this.includedFields = includedFields;

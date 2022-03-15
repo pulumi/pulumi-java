@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProductResult {
     /**
      * whether subscription approval is required. If false, new subscriptions will be approved automatically enabling developers to call the product’s APIs immediately after subscribing. If true, administrators must manually approve the subscription before the developer can any of the product’s APIs. Can be present only if subscriptionRequired property is present and has a value of false.
@@ -64,18 +64,18 @@ public final class GetProductResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProductResult(
-        @OutputCustomType.Parameter("approvalRequired") @Nullable Boolean approvalRequired,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("state") @Nullable String state,
-        @OutputCustomType.Parameter("subscriptionRequired") @Nullable Boolean subscriptionRequired,
-        @OutputCustomType.Parameter("subscriptionsLimit") @Nullable Integer subscriptionsLimit,
-        @OutputCustomType.Parameter("terms") @Nullable String terms,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("approvalRequired") @Nullable Boolean approvalRequired,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("state") @Nullable String state,
+        @CustomType.Parameter("subscriptionRequired") @Nullable Boolean subscriptionRequired,
+        @CustomType.Parameter("subscriptionsLimit") @Nullable Integer subscriptionsLimit,
+        @CustomType.Parameter("terms") @Nullable String terms,
+        @CustomType.Parameter("type") String type) {
         this.approvalRequired = approvalRequired;
         this.description = description;
         this.displayName = displayName;

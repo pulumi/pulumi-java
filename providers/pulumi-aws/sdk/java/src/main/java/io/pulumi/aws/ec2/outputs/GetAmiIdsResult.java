@@ -4,7 +4,7 @@
 package io.pulumi.aws.ec2.outputs;
 
 import io.pulumi.aws.ec2.outputs.GetAmiIdsFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAmiIdsResult {
     private final @Nullable List<String> executableUsers;
     private final @Nullable List<GetAmiIdsFilter> filters;
@@ -26,15 +26,15 @@ public final class GetAmiIdsResult {
     private final List<String> owners;
     private final @Nullable Boolean sortAscending;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAmiIdsResult(
-        @OutputCustomType.Parameter("executableUsers") @Nullable List<String> executableUsers,
-        @OutputCustomType.Parameter("filters") @Nullable List<GetAmiIdsFilter> filters,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ids") List<String> ids,
-        @OutputCustomType.Parameter("nameRegex") @Nullable String nameRegex,
-        @OutputCustomType.Parameter("owners") List<String> owners,
-        @OutputCustomType.Parameter("sortAscending") @Nullable Boolean sortAscending) {
+        @CustomType.Parameter("executableUsers") @Nullable List<String> executableUsers,
+        @CustomType.Parameter("filters") @Nullable List<GetAmiIdsFilter> filters,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ids") List<String> ids,
+        @CustomType.Parameter("nameRegex") @Nullable String nameRegex,
+        @CustomType.Parameter("owners") List<String> owners,
+        @CustomType.Parameter("sortAscending") @Nullable Boolean sortAscending) {
         this.executableUsers = executableUsers;
         this.filters = filters;
         this.id = id;

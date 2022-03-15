@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeStepCopyFileArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeStepExecFileArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeStepExtractArchiveArgs;
@@ -28,7 +28,7 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
      * Extracts an archive into the specified directory.
      * 
      */
-    @InputImport(name="archiveExtraction")
+    @Import(name="archiveExtraction")
       private final @Nullable Output<SoftwareRecipeStepExtractArchiveArgs> archiveExtraction;
 
     public Output<SoftwareRecipeStepExtractArchiveArgs> getArchiveExtraction() {
@@ -39,7 +39,7 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
      * Installs a deb file via dpkg.
      * 
      */
-    @InputImport(name="dpkgInstallation")
+    @Import(name="dpkgInstallation")
       private final @Nullable Output<SoftwareRecipeStepInstallDpkgArgs> dpkgInstallation;
 
     public Output<SoftwareRecipeStepInstallDpkgArgs> getDpkgInstallation() {
@@ -50,7 +50,7 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
      * Copies a file onto the instance.
      * 
      */
-    @InputImport(name="fileCopy")
+    @Import(name="fileCopy")
       private final @Nullable Output<SoftwareRecipeStepCopyFileArgs> fileCopy;
 
     public Output<SoftwareRecipeStepCopyFileArgs> getFileCopy() {
@@ -61,7 +61,7 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
      * Executes an artifact or local file.
      * 
      */
-    @InputImport(name="fileExec")
+    @Import(name="fileExec")
       private final @Nullable Output<SoftwareRecipeStepExecFileArgs> fileExec;
 
     public Output<SoftwareRecipeStepExecFileArgs> getFileExec() {
@@ -72,7 +72,7 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
      * Installs an MSI file.
      * 
      */
-    @InputImport(name="msiInstallation")
+    @Import(name="msiInstallation")
       private final @Nullable Output<SoftwareRecipeStepInstallMsiArgs> msiInstallation;
 
     public Output<SoftwareRecipeStepInstallMsiArgs> getMsiInstallation() {
@@ -83,7 +83,7 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
      * Installs an rpm file via the rpm utility.
      * 
      */
-    @InputImport(name="rpmInstallation")
+    @Import(name="rpmInstallation")
       private final @Nullable Output<SoftwareRecipeStepInstallRpmArgs> rpmInstallation;
 
     public Output<SoftwareRecipeStepInstallRpmArgs> getRpmInstallation() {
@@ -94,7 +94,7 @@ public final class SoftwareRecipeStepArgs extends io.pulumi.resources.ResourceAr
      * Runs commands in a shell.
      * 
      */
-    @InputImport(name="scriptRun")
+    @Import(name="scriptRun")
       private final @Nullable Output<SoftwareRecipeStepRunScriptArgs> scriptRun;
 
     public Output<SoftwareRecipeStepRunScriptArgs> getScriptRun() {

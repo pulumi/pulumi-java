@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.gkehub_v1.inputs.AuthorityArgs;
 import io.pulumi.googlenative.gkehub_v1.inputs.MembershipEndpointArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. How to identify workloads from this Membership. See the documentation on Workload Identity for more details: https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity
      * 
      */
-    @InputImport(name="authority")
+    @Import(name="authority")
       private final @Nullable Output<AuthorityArgs> authority;
 
     public Output<AuthorityArgs> getAuthority() {
@@ -32,7 +32,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. Endpoint information to reach this member.
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable Output<MembershipEndpointArgs> endpoint;
 
     public Output<MembershipEndpointArgs> getEndpoint() {
@@ -43,7 +43,7 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. An externally-generated and managed ID for this Membership. This ID may be modified after creation, but this is not recommended. The ID must match the regex: `a-zA-Z0-9*` If this Membership represents a Kubernetes cluster, this value should be set to the UID of the `kube-system` namespace object.
      * 
      */
-    @InputImport(name="externalId")
+    @Import(name="externalId")
       private final @Nullable Output<String> externalId;
 
     public Output<String> getExternalId() {
@@ -54,35 +54,35 @@ public final class MembershipArgs extends io.pulumi.resources.ResourceArgs {
      * Optional. GCP labels for this membership.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
         return this.labels == null ? Output.empty() : this.labels;
     }
 
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="membershipId", required=true)
+    @Import(name="membershipId", required=true)
       private final Output<String> membershipId;
 
     public Output<String> getMembershipId() {
         return this.membershipId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="requestId")
+    @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {

@@ -5,7 +5,7 @@ package io.pulumi.aws.signer.inputs;
 
 import io.pulumi.aws.signer.inputs.SigningJobSourceS3Args;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class SigningJobSourceArgs extends io.pulumi.resources.ResourceArgs
      * A configuration block describing the S3 Destination object: See S3 Destination below for details.
      * 
      */
-    @InputImport(name="s3", required=true)
+    @Import(name="s3", required=true)
       private final Output<SigningJobSourceS3Args> s3;
 
     public Output<SigningJobSourceS3Args> getS3() {

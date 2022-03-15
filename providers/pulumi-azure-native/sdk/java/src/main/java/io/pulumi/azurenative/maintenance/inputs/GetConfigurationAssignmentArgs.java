@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.maintenance.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetConfigurationAssignmentArgs extends io.pulumi.resources.In
      * Configuration assignment name
      * 
      */
-    @InputImport(name="configurationAssignmentName", required=true)
+    @Import(name="configurationAssignmentName", required=true)
       private final String configurationAssignmentName;
 
     public String getConfigurationAssignmentName() {
@@ -27,7 +27,7 @@ public final class GetConfigurationAssignmentArgs extends io.pulumi.resources.In
      * Resource provider name
      * 
      */
-    @InputImport(name="providerName", required=true)
+    @Import(name="providerName", required=true)
       private final String providerName;
 
     public String getProviderName() {
@@ -38,7 +38,7 @@ public final class GetConfigurationAssignmentArgs extends io.pulumi.resources.In
      * Resource group name
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -49,7 +49,7 @@ public final class GetConfigurationAssignmentArgs extends io.pulumi.resources.In
      * Resource identifier
      * 
      */
-    @InputImport(name="resourceName", required=true)
+    @Import(name="resourceName", required=true)
       private final String resourceName;
 
     public String getPropResourceName() {
@@ -60,7 +60,7 @@ public final class GetConfigurationAssignmentArgs extends io.pulumi.resources.In
      * Resource type
      * 
      */
-    @InputImport(name="resourceType", required=true)
+    @Import(name="resourceType", required=true)
       private final String resourceType;
 
     public String getPropResourceType() {

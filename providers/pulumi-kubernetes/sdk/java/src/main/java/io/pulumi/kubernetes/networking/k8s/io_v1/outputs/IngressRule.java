@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.HTTPIngressRuleValue;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class IngressRule {
     /**
      * Host is the fully qualified domain name of a network host, as defined by RFC 3986. Note the following deviations from the "host" part of the URI as defined in RFC 3986: 1. IPs are not allowed. Currently an IngressRuleValue can only apply to
@@ -26,10 +26,10 @@ public final class IngressRule {
     private final @Nullable String host;
     private final @Nullable HTTPIngressRuleValue http;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private IngressRule(
-        @OutputCustomType.Parameter("host") @Nullable String host,
-        @OutputCustomType.Parameter("http") @Nullable HTTPIngressRuleValue http) {
+        @CustomType.Parameter("host") @Nullable String host,
+        @CustomType.Parameter("http") @Nullable HTTPIngressRuleValue http) {
         this.host = host;
         this.http = http;
     }

@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.RangePartitioningRangeResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RangePartitioningResponse {
     /**
      * [TrustedTester] [Required] The table is partitioned by this field. The field must be a top-level NULLABLE/REQUIRED field. The only supported type is INTEGER/INT64.
@@ -21,10 +21,10 @@ public final class RangePartitioningResponse {
      */
     private final RangePartitioningRangeResponse range;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RangePartitioningResponse(
-        @OutputCustomType.Parameter("field") String field,
-        @OutputCustomType.Parameter("range") RangePartitioningRangeResponse range) {
+        @CustomType.Parameter("field") String field,
+        @CustomType.Parameter("range") RangePartitioningRangeResponse range) {
         this.field = field;
         this.range = range;
     }

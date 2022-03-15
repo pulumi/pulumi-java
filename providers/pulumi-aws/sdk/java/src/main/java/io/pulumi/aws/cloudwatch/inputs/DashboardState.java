@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
      * The Amazon Resource Name (ARN) of the dashboard.
      * 
      */
-    @InputImport(name="dashboardArn")
+    @Import(name="dashboardArn")
       private final @Nullable Output<String> dashboardArn;
 
     public Output<String> getDashboardArn() {
@@ -29,7 +29,7 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
      * The detailed information about the dashboard, including what widgets are included and their location on the dashboard. You can read more about the body structure in the [documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/CloudWatch-Dashboard-Body-Structure.html).
      * 
      */
-    @InputImport(name="dashboardBody")
+    @Import(name="dashboardBody")
       private final @Nullable Output<String> dashboardBody;
 
     public Output<String> getDashboardBody() {
@@ -40,7 +40,7 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
      * The name of the dashboard.
      * 
      */
-    @InputImport(name="dashboardName")
+    @Import(name="dashboardName")
       private final @Nullable Output<String> dashboardName;
 
     public Output<String> getDashboardName() {

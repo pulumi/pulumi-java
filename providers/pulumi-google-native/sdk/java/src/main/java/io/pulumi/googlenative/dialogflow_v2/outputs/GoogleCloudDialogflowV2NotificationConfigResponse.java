@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowV2NotificationConfigResponse {
     /**
      * Format of message.
@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2NotificationConfigResponse {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowV2NotificationConfigResponse(
-        @OutputCustomType.Parameter("messageFormat") String messageFormat,
-        @OutputCustomType.Parameter("topic") String topic) {
+        @CustomType.Parameter("messageFormat") String messageFormat,
+        @CustomType.Parameter("topic") String topic) {
         this.messageFormat = messageFormat;
         this.topic = topic;
     }

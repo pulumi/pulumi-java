@@ -4,7 +4,7 @@
 package io.pulumi.gcp.spanner;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.spanner.InstanceArgs;
@@ -55,7 +55,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * [Configuration section of the docs](https://cloud.google.com/spanner/docs/instances).
      * 
      */
-    @OutputExport(name="config", type=String.class, parameters={})
+    @Export(name="config", type=String.class, parameters={})
     private Output<String> config;
 
     /**
@@ -75,7 +75,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * unique per project and between 4 and 30 characters in length.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -91,7 +91,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * This must be set to true if you created a backup manually in the console.
      * 
      */
-    @OutputExport(name="forceDestroy", type=Boolean.class, parameters={})
+    @Export(name="forceDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> forceDestroy;
 
     /**
@@ -107,7 +107,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -124,7 +124,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * in length.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -141,7 +141,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * terraform.
      * 
      */
-    @OutputExport(name="numNodes", type=Integer.class, parameters={})
+    @Export(name="numNodes", type=Integer.class, parameters={})
     private Output<Integer> numNodes;
 
     /**
@@ -157,7 +157,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * in terraform.
      * 
      */
-    @OutputExport(name="processingUnits", type=Integer.class, parameters={})
+    @Export(name="processingUnits", type=Integer.class, parameters={})
     private Output<Integer> processingUnits;
 
     /**
@@ -173,7 +173,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -188,7 +188,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Instance status: 'CREATING' or 'READY'.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.connectors_v1.inputs.SecretResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class UserPasswordResponse extends io.pulumi.resources.InvokeArgs {
      * Secret version reference containing the password.
      * 
      */
-    @InputImport(name="password", required=true)
+    @Import(name="password", required=true)
       private final SecretResponse password;
 
     public SecretResponse getPassword() {
@@ -32,7 +32,7 @@ public final class UserPasswordResponse extends io.pulumi.resources.InvokeArgs {
      * Username.
      * 
      */
-    @InputImport(name="username", required=true)
+    @Import(name="username", required=true)
       private final String username;
 
     public String getUsername() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.importexport.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ReturnShippingResponse {
     /**
      * The customer's account number with the carrier.
@@ -20,10 +20,10 @@ public final class ReturnShippingResponse {
      */
     private final String carrierName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReturnShippingResponse(
-        @OutputCustomType.Parameter("carrierAccountNumber") String carrierAccountNumber,
-        @OutputCustomType.Parameter("carrierName") String carrierName) {
+        @CustomType.Parameter("carrierAccountNumber") String carrierAccountNumber,
+        @CustomType.Parameter("carrierName") String carrierName) {
         this.carrierAccountNumber = carrierAccountNumber;
         this.carrierName = carrierName;
     }

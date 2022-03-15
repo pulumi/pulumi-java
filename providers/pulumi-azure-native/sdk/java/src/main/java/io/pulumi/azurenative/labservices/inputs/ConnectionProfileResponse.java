@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
      * The enabled access level for Client Access over RDP.
      * 
      */
-    @InputImport(name="clientRdpAccess")
+    @Import(name="clientRdpAccess")
       private final @Nullable String clientRdpAccess;
 
     public Optional<String> getClientRdpAccess() {
@@ -33,7 +33,7 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
      * The enabled access level for Client Access over SSH.
      * 
      */
-    @InputImport(name="clientSshAccess")
+    @Import(name="clientSshAccess")
       private final @Nullable String clientSshAccess;
 
     public Optional<String> getClientSshAccess() {
@@ -44,7 +44,7 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
      * The enabled access level for Web Access over RDP.
      * 
      */
-    @InputImport(name="webRdpAccess")
+    @Import(name="webRdpAccess")
       private final @Nullable String webRdpAccess;
 
     public Optional<String> getWebRdpAccess() {
@@ -55,7 +55,7 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
      * The enabled access level for Web Access over SSH.
      * 
      */
-    @InputImport(name="webSshAccess")
+    @Import(name="webSshAccess")
       private final @Nullable String webSshAccess;
 
     public Optional<String> getWebSshAccess() {

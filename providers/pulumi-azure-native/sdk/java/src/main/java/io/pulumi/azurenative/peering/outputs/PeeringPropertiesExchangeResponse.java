@@ -5,13 +5,13 @@ package io.pulumi.azurenative.peering.outputs;
 
 import io.pulumi.azurenative.peering.outputs.ExchangeConnectionResponse;
 import io.pulumi.azurenative.peering.outputs.SubResourceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PeeringPropertiesExchangeResponse {
     /**
      * The set of connections that constitute an exchange peering.
@@ -24,10 +24,10 @@ public final class PeeringPropertiesExchangeResponse {
      */
     private final @Nullable SubResourceResponse peerAsn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PeeringPropertiesExchangeResponse(
-        @OutputCustomType.Parameter("connections") @Nullable List<ExchangeConnectionResponse> connections,
-        @OutputCustomType.Parameter("peerAsn") @Nullable SubResourceResponse peerAsn) {
+        @CustomType.Parameter("connections") @Nullable List<ExchangeConnectionResponse> connections,
+        @CustomType.Parameter("peerAsn") @Nullable SubResourceResponse peerAsn) {
         this.connections = connections;
         this.peerAsn = peerAsn;
     }

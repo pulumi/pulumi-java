@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlMIDatabaseI
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
      * SAS URI of Azure Storage Account Container to be used for storing backup files.
      * 
      */
-    @InputImport(name="backupBlobShare", required=true)
+    @Import(name="backupBlobShare", required=true)
       private final Output<BlobShareArgs> backupBlobShare;
 
     public Output<BlobShareArgs> getBackupBlobShare() {
@@ -40,7 +40,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
      * Backup file share information for all selected databases.
      * 
      */
-    @InputImport(name="backupFileShare")
+    @Import(name="backupFileShare")
       private final @Nullable Output<FileShareArgs> backupFileShare;
 
     public Output<FileShareArgs> getBackupFileShare() {
@@ -51,7 +51,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
      * Backup Mode to specify whether to use existing backup or create new backup. If using existing backups, backup file paths are required to be provided in selectedDatabases.
      * 
      */
-    @InputImport(name="backupMode")
+    @Import(name="backupMode")
       private final @Nullable Output<Either<String,BackupMode>> backupMode;
 
     public Output<Either<String,BackupMode>> getBackupMode() {
@@ -62,7 +62,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
      * Agent Jobs to migrate.
      * 
      */
-    @InputImport(name="selectedAgentJobs")
+    @Import(name="selectedAgentJobs")
       private final @Nullable Output<List<String>> selectedAgentJobs;
 
     public Output<List<String>> getSelectedAgentJobs() {
@@ -73,7 +73,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
      * Databases to migrate
      * 
      */
-    @InputImport(name="selectedDatabases", required=true)
+    @Import(name="selectedDatabases", required=true)
       private final Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> selectedDatabases;
 
     public Output<List<MigrateSqlServerSqlMIDatabaseInputArgs>> getSelectedDatabases() {
@@ -84,7 +84,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
      * Logins to migrate.
      * 
      */
-    @InputImport(name="selectedLogins")
+    @Import(name="selectedLogins")
       private final @Nullable Output<List<String>> selectedLogins;
 
     public Output<List<String>> getSelectedLogins() {
@@ -95,7 +95,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
      * Information for connecting to source
      * 
      */
-    @InputImport(name="sourceConnectionInfo", required=true)
+    @Import(name="sourceConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> getSourceConnectionInfo() {
@@ -106,7 +106,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
      * Information for connecting to target
      * 
      */
-    @InputImport(name="targetConnectionInfo", required=true)
+    @Import(name="targetConnectionInfo", required=true)
       private final Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
     public Output<SqlConnectionInfoArgs> getTargetConnectionInfo() {

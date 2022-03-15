@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.inputs.NetworkInterfaceIPConfigurationPriva
 import io.pulumi.azurenative.network.inputs.PublicIPAddressResponse;
 import io.pulumi.azurenative.network.inputs.SubnetResponse;
 import io.pulumi.azurenative.network.inputs.VirtualNetworkTapResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * The reference to ApplicationGatewayBackendAddressPool resource.
      * 
      */
-    @InputImport(name="applicationGatewayBackendAddressPools")
+    @Import(name="applicationGatewayBackendAddressPools")
       private final @Nullable List<ApplicationGatewayBackendAddressPoolResponse> applicationGatewayBackendAddressPools;
 
     public List<ApplicationGatewayBackendAddressPoolResponse> getApplicationGatewayBackendAddressPools() {
@@ -43,7 +43,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * Application security groups in which the IP configuration is included.
      * 
      */
-    @InputImport(name="applicationSecurityGroups")
+    @Import(name="applicationSecurityGroups")
       private final @Nullable List<ApplicationSecurityGroupResponse> applicationSecurityGroups;
 
     public List<ApplicationSecurityGroupResponse> getApplicationSecurityGroups() {
@@ -54,7 +54,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * A unique read-only string that changes whenever the resource is updated.
      * 
      */
-    @InputImport(name="etag", required=true)
+    @Import(name="etag", required=true)
       private final String etag;
 
     public String getEtag() {
@@ -65,7 +65,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * Resource ID.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable String id;
 
     public Optional<String> getId() {
@@ -76,7 +76,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * The reference to LoadBalancerBackendAddressPool resource.
      * 
      */
-    @InputImport(name="loadBalancerBackendAddressPools")
+    @Import(name="loadBalancerBackendAddressPools")
       private final @Nullable List<BackendAddressPoolResponse> loadBalancerBackendAddressPools;
 
     public List<BackendAddressPoolResponse> getLoadBalancerBackendAddressPools() {
@@ -87,7 +87,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * A list of references of LoadBalancerInboundNatRules.
      * 
      */
-    @InputImport(name="loadBalancerInboundNatRules")
+    @Import(name="loadBalancerInboundNatRules")
       private final @Nullable List<InboundNatRuleResponse> loadBalancerInboundNatRules;
 
     public List<InboundNatRuleResponse> getLoadBalancerInboundNatRules() {
@@ -98,7 +98,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -109,7 +109,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * Whether this is a primary customer address on the network interface.
      * 
      */
-    @InputImport(name="primary")
+    @Import(name="primary")
       private final @Nullable Boolean primary;
 
     public Optional<Boolean> getPrimary() {
@@ -120,7 +120,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * Private IP address of the IP configuration.
      * 
      */
-    @InputImport(name="privateIPAddress")
+    @Import(name="privateIPAddress")
       private final @Nullable String privateIPAddress;
 
     public Optional<String> getPrivateIPAddress() {
@@ -131,7 +131,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * Whether the specific IP configuration is IPv4 or IPv6. Default is IPv4.
      * 
      */
-    @InputImport(name="privateIPAddressVersion")
+    @Import(name="privateIPAddressVersion")
       private final @Nullable String privateIPAddressVersion;
 
     public Optional<String> getPrivateIPAddressVersion() {
@@ -142,7 +142,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * The private IP address allocation method.
      * 
      */
-    @InputImport(name="privateIPAllocationMethod")
+    @Import(name="privateIPAllocationMethod")
       private final @Nullable String privateIPAllocationMethod;
 
     public Optional<String> getPrivateIPAllocationMethod() {
@@ -153,7 +153,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * PrivateLinkConnection properties for the network interface.
      * 
      */
-    @InputImport(name="privateLinkConnectionProperties", required=true)
+    @Import(name="privateLinkConnectionProperties", required=true)
       private final NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse privateLinkConnectionProperties;
 
     public NetworkInterfaceIPConfigurationPrivateLinkConnectionPropertiesResponse getPrivateLinkConnectionProperties() {
@@ -164,7 +164,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * The provisioning state of the network interface IP configuration.
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -175,7 +175,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * Public IP address bound to the IP configuration.
      * 
      */
-    @InputImport(name="publicIPAddress")
+    @Import(name="publicIPAddress")
       private final @Nullable PublicIPAddressResponse publicIPAddress;
 
     public Optional<PublicIPAddressResponse> getPublicIPAddress() {
@@ -186,7 +186,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * Subnet bound to the IP configuration.
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable SubnetResponse subnet;
 
     public Optional<SubnetResponse> getSubnet() {
@@ -197,7 +197,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * Resource type.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -208,7 +208,7 @@ public final class NetworkInterfaceIPConfigurationResponse extends io.pulumi.res
      * The reference to Virtual Network Taps.
      * 
      */
-    @InputImport(name="virtualNetworkTaps")
+    @Import(name="virtualNetworkTaps")
       private final @Nullable List<VirtualNetworkTapResponse> virtualNetworkTaps;
 
     public List<VirtualNetworkTapResponse> getVirtualNetworkTaps() {

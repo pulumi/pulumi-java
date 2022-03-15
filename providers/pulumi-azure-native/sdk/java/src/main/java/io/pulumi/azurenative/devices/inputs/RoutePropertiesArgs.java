@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devices.inputs;
 import io.pulumi.azurenative.devices.enums.RoutingSource;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * The condition that is evaluated to apply the routing rule. If no condition is provided, it evaluates to true by default. For grammar, see: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-query-language
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<String> condition;
 
     public Output<String> getCondition() {
@@ -37,7 +37,7 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * The list of endpoints to which messages that satisfy the condition are routed. Currently only one endpoint is allowed.
      * 
      */
-    @InputImport(name="endpointNames", required=true)
+    @Import(name="endpointNames", required=true)
       private final Output<List<String>> endpointNames;
 
     public Output<List<String>> getEndpointNames() {
@@ -48,7 +48,7 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * Used to specify whether a route is enabled.
      * 
      */
-    @InputImport(name="isEnabled", required=true)
+    @Import(name="isEnabled", required=true)
       private final Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
@@ -59,7 +59,7 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the route. The name can only include alphanumeric characters, periods, underscores, hyphens, has a maximum length of 64 characters, and must be unique.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -70,7 +70,7 @@ public final class RoutePropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * The source that the routing rule is to be applied to, such as DeviceMessages.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final Output<Either<String,RoutingSource>> source;
 
     public Output<Either<String,RoutingSource>> getSource() {

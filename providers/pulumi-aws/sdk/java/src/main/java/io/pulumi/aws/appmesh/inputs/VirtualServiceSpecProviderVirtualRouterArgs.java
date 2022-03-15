@@ -4,7 +4,7 @@
 package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class VirtualServiceSpecProviderVirtualRouterArgs extends io.pulumi
      * The name of the virtual router that is acting as a service provider. Must be between 1 and 255 characters in length.
      * 
      */
-    @InputImport(name="virtualRouterName", required=true)
+    @Import(name="virtualRouterName", required=true)
       private final Output<String> virtualRouterName;
 
     public Output<String> getVirtualRouterName() {

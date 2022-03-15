@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logz.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetTagRuleArgs extends io.pulumi.resources.InvokeArgs {
      * Monitor resource name
      * 
      */
-    @InputImport(name="monitorName", required=true)
+    @Import(name="monitorName", required=true)
       private final String monitorName;
 
     public String getMonitorName() {
@@ -27,14 +27,14 @@ public final class GetTagRuleArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
     }
 
-    @InputImport(name="ruleSetName", required=true)
+    @Import(name="ruleSetName", required=true)
       private final String ruleSetName;
 
     public String getRuleSetName() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooRepositoryResponse {
     /**
      * The name of the repository.
@@ -20,10 +20,10 @@ public final class GooRepositoryResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GooRepositoryResponse(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("url") String url) {
         this.name = name;
         this.url = url;
     }

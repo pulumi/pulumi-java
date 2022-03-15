@@ -5,14 +5,14 @@ package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketStorageClassAnalysis;
 import io.pulumi.awsnative.s3.outputs.BucketTagFilter;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketAnalyticsConfiguration {
     /**
      * The ID that identifies the analytics configuration.
@@ -27,12 +27,12 @@ public final class BucketAnalyticsConfiguration {
     private final BucketStorageClassAnalysis storageClassAnalysis;
     private final @Nullable List<BucketTagFilter> tagFilters;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketAnalyticsConfiguration(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
-        @OutputCustomType.Parameter("storageClassAnalysis") BucketStorageClassAnalysis storageClassAnalysis,
-        @OutputCustomType.Parameter("tagFilters") @Nullable List<BucketTagFilter> tagFilters) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("prefix") @Nullable String prefix,
+        @CustomType.Parameter("storageClassAnalysis") BucketStorageClassAnalysis storageClassAnalysis,
+        @CustomType.Parameter("tagFilters") @Nullable List<BucketTagFilter> tagFilters) {
         this.id = id;
         this.prefix = prefix;
         this.storageClassAnalysis = storageClassAnalysis;

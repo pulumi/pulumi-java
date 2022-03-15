@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class LaunchTemplateInstanceMarketOptionsGetArgs extends io.pulumi.
      * The market type. Can be `spot`.
      * 
      */
-    @InputImport(name="marketType")
+    @Import(name="marketType")
       private final @Nullable Output<String> marketType;
 
     public Output<String> getMarketType() {
@@ -30,7 +30,7 @@ public final class LaunchTemplateInstanceMarketOptionsGetArgs extends io.pulumi.
      * The options for [Spot Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
      * 
      */
-    @InputImport(name="spotOptions")
+    @Import(name="spotOptions")
       private final @Nullable Output<LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs> spotOptions;
 
     public Output<LaunchTemplateInstanceMarketOptionsSpotOptionsGetArgs> getSpotOptions() {

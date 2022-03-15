@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SubnetworkSecondaryRangeResponse {
     /**
      * The range of IP addresses belonging to this subnetwork secondary range. Provide this property when you create the subnetwork. Ranges must be unique and non-overlapping with all primary and secondary IP ranges within a network. Only IPv4 is supported. The range can be any range listed in the Valid ranges list.
@@ -25,11 +25,11 @@ public final class SubnetworkSecondaryRangeResponse {
      */
     private final String reservedInternalRange;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubnetworkSecondaryRangeResponse(
-        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
-        @OutputCustomType.Parameter("rangeName") String rangeName,
-        @OutputCustomType.Parameter("reservedInternalRange") String reservedInternalRange) {
+        @CustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @CustomType.Parameter("rangeName") String rangeName,
+        @CustomType.Parameter("reservedInternalRange") String reservedInternalRange) {
         this.ipCidrRange = ipCidrRange;
         this.rangeName = rangeName;
         this.reservedInternalRange = reservedInternalRange;

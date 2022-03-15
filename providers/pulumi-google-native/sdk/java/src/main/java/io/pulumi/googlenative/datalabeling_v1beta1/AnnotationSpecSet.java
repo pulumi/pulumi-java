@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datalabeling_v1beta1.AnnotationSpecSetArgs;
@@ -24,7 +24,7 @@ public class AnnotationSpecSet extends io.pulumi.resources.CustomResource {
      * The array of AnnotationSpecs that you define when you create the AnnotationSpecSet. These are the possible labels for the labeling task.
      * 
      */
-    @OutputExport(name="annotationSpecs", type=List.class, parameters={GoogleCloudDatalabelingV1beta1AnnotationSpecResponse.class})
+    @Export(name="annotationSpecs", type=List.class, parameters={GoogleCloudDatalabelingV1beta1AnnotationSpecResponse.class})
     private Output<List<GoogleCloudDatalabelingV1beta1AnnotationSpecResponse>> annotationSpecs;
 
     /**
@@ -38,7 +38,7 @@ public class AnnotationSpecSet extends io.pulumi.resources.CustomResource {
      * The names of any related resources that are blocking changes to the annotation spec set.
      * 
      */
-    @OutputExport(name="blockingResources", type=List.class, parameters={String.class})
+    @Export(name="blockingResources", type=List.class, parameters={String.class})
     private Output<List<String>> blockingResources;
 
     /**
@@ -52,7 +52,7 @@ public class AnnotationSpecSet extends io.pulumi.resources.CustomResource {
      * Optional. User-provided description of the annotation specification set. The description can be up to 10,000 characters long.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -66,7 +66,7 @@ public class AnnotationSpecSet extends io.pulumi.resources.CustomResource {
      * The display name for AnnotationSpecSet that you define when you create it. Maximum of 64 characters.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -80,7 +80,7 @@ public class AnnotationSpecSet extends io.pulumi.resources.CustomResource {
      * The AnnotationSpecSet resource name in the following format: "projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}"
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

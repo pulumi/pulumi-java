@@ -8,7 +8,7 @@ import io.pulumi.aws.docdb.ClusterParameterGroupArgs;
 import io.pulumi.aws.docdb.inputs.ClusterParameterGroupState;
 import io.pulumi.aws.docdb.outputs.ClusterParameterGroupParameter;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ClusterParameterGroup extends io.pulumi.resources.CustomResource {
      * The ARN of the documentDB cluster parameter group.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -49,7 +49,7 @@ public class ClusterParameterGroup extends io.pulumi.resources.CustomResource {
      * The description of the documentDB cluster parameter group. Defaults to "Managed by Pulumi".
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -63,7 +63,7 @@ public class ClusterParameterGroup extends io.pulumi.resources.CustomResource {
      * The family of the documentDB cluster parameter group.
      * 
      */
-    @OutputExport(name="family", type=String.class, parameters={})
+    @Export(name="family", type=String.class, parameters={})
     private Output<String> family;
 
     /**
@@ -77,7 +77,7 @@ public class ClusterParameterGroup extends io.pulumi.resources.CustomResource {
      * The name of the documentDB parameter.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class ClusterParameterGroup extends io.pulumi.resources.CustomResource {
      * Creates a unique name beginning with the specified prefix. Conflicts with `name`.
      * 
      */
-    @OutputExport(name="namePrefix", type=String.class, parameters={})
+    @Export(name="namePrefix", type=String.class, parameters={})
     private Output<String> namePrefix;
 
     /**
@@ -105,7 +105,7 @@ public class ClusterParameterGroup extends io.pulumi.resources.CustomResource {
      * A list of documentDB parameters to apply. Setting parameters to system default values may show a difference on imported resources.
      * 
      */
-    @OutputExport(name="parameters", type=List.class, parameters={ClusterParameterGroupParameter.class})
+    @Export(name="parameters", type=List.class, parameters={ClusterParameterGroupParameter.class})
     private Output</* @Nullable */ List<ClusterParameterGroupParameter>> parameters;
 
     /**
@@ -119,7 +119,7 @@ public class ClusterParameterGroup extends io.pulumi.resources.CustomResource {
      * A map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -133,7 +133,7 @@ public class ClusterParameterGroup extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider .
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**

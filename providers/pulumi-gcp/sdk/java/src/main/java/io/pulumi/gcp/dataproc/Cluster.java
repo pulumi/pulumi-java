@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataproc.ClusterArgs;
@@ -39,7 +39,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Structure defined below.
      * 
      */
-    @OutputExport(name="clusterConfig", type=ClusterClusterConfig.class, parameters={})
+    @Export(name="clusterConfig", type=ClusterClusterConfig.class, parameters={})
     private Output<ClusterClusterConfig> clusterConfig;
 
     /**
@@ -55,7 +55,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * terraform apply
      * 
      */
-    @OutputExport(name="gracefulDecommissionTimeout", type=String.class, parameters={})
+    @Export(name="gracefulDecommissionTimeout", type=String.class, parameters={})
     private Output</* @Nullable */ String> gracefulDecommissionTimeout;
 
     /**
@@ -72,7 +72,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * which is the name of the cluster.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> labels;
 
     /**
@@ -89,7 +89,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * zone.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -105,7 +105,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -121,7 +121,7 @@ public class Cluster extends io.pulumi.resources.CustomResource {
      * Defaults to `global`.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output</* @Nullable */ String> region;
 
     /**

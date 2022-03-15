@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class VirtualMachineDetailsResponse extends io.pulumi.resources.Inv
      * Last known compute power state captured in DTL
      * 
      */
-    @InputImport(name="lastKnownPowerState", required=true)
+    @Import(name="lastKnownPowerState", required=true)
       private final String lastKnownPowerState;
 
     public String getLastKnownPowerState() {
@@ -31,7 +31,7 @@ public final class VirtualMachineDetailsResponse extends io.pulumi.resources.Inv
      * PrivateIp address of the compute VM
      * 
      */
-    @InputImport(name="privateIpAddress", required=true)
+    @Import(name="privateIpAddress", required=true)
       private final String privateIpAddress;
 
     public String getPrivateIpAddress() {
@@ -42,7 +42,7 @@ public final class VirtualMachineDetailsResponse extends io.pulumi.resources.Inv
      * Provisioning state of the Dtl VM
      * 
      */
-    @InputImport(name="provisioningState", required=true)
+    @Import(name="provisioningState", required=true)
       private final String provisioningState;
 
     public String getProvisioningState() {
@@ -53,7 +53,7 @@ public final class VirtualMachineDetailsResponse extends io.pulumi.resources.Inv
      * Connection information for Windows
      * 
      */
-    @InputImport(name="rdpAuthority", required=true)
+    @Import(name="rdpAuthority", required=true)
       private final String rdpAuthority;
 
     public String getRdpAuthority() {
@@ -64,7 +64,7 @@ public final class VirtualMachineDetailsResponse extends io.pulumi.resources.Inv
      * Connection information for Linux
      * 
      */
-    @InputImport(name="sshAuthority", required=true)
+    @Import(name="sshAuthority", required=true)
       private final String sshAuthority;
 
     public String getSshAuthority() {
@@ -75,7 +75,7 @@ public final class VirtualMachineDetailsResponse extends io.pulumi.resources.Inv
      * Compute VM login user name
      * 
      */
-    @InputImport(name="userName", required=true)
+    @Import(name="userName", required=true)
       private final String userName;
 
     public String getUserName() {

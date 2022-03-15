@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.stepfunctions.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,7 +14,7 @@ public final class StateMachineTracingConfiguration extends io.pulumi.resources.
 
     public static final StateMachineTracingConfiguration Empty = new StateMachineTracingConfiguration();
 
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {

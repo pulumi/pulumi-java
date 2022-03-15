@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.WebhookClientConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class WebhookConversionArgs extends io.pulumi.resources.ResourceArg
      * clientConfig is the instructions for how to call the webhook if strategy is `Webhook`.
      * 
      */
-    @InputImport(name="clientConfig")
+    @Import(name="clientConfig")
       private final @Nullable Output<WebhookClientConfigArgs> clientConfig;
 
     public Output<WebhookClientConfigArgs> getClientConfig() {
@@ -35,7 +35,7 @@ public final class WebhookConversionArgs extends io.pulumi.resources.ResourceArg
      * conversionReviewVersions is an ordered list of preferred `ConversionReview` versions the Webhook expects. The API server will use the first version in the list which it supports. If none of the versions specified in this list are supported by API server, conversion will fail for the custom resource. If a persisted Webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail.
      * 
      */
-    @InputImport(name="conversionReviewVersions", required=true)
+    @Import(name="conversionReviewVersions", required=true)
       private final Output<List<String>> conversionReviewVersions;
 
     public Output<List<String>> getConversionReviewVersions() {

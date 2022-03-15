@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.cloudfront.RealtimeLogConfigArgs;
 import io.pulumi.awsnative.cloudfront.outputs.RealtimeLogConfigEndPoint;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -20,31 +20,31 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:cloudfront:RealtimeLogConfig")
 public class RealtimeLogConfig extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="endPoints", type=List.class, parameters={RealtimeLogConfigEndPoint.class})
+    @Export(name="endPoints", type=List.class, parameters={RealtimeLogConfigEndPoint.class})
     private Output<List<RealtimeLogConfigEndPoint>> endPoints;
 
     public Output<List<RealtimeLogConfigEndPoint>> getEndPoints() {
         return this.endPoints;
     }
-    @OutputExport(name="fields", type=List.class, parameters={String.class})
+    @Export(name="fields", type=List.class, parameters={String.class})
     private Output<List<String>> fields;
 
     public Output<List<String>> getFields() {
         return this.fields;
     }
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
-    @OutputExport(name="samplingRate", type=Double.class, parameters={})
+    @Export(name="samplingRate", type=Double.class, parameters={})
     private Output<Double> samplingRate;
 
     public Output<Double> getSamplingRate() {

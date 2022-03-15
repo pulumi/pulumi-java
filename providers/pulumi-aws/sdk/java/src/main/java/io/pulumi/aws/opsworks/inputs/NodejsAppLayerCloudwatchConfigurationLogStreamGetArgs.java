@@ -4,7 +4,7 @@
 package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -15,77 +15,77 @@ public final class NodejsAppLayerCloudwatchConfigurationLogStreamGetArgs extends
 
     public static final NodejsAppLayerCloudwatchConfigurationLogStreamGetArgs Empty = new NodejsAppLayerCloudwatchConfigurationLogStreamGetArgs();
 
-    @InputImport(name="batchCount")
+    @Import(name="batchCount")
       private final @Nullable Output<Integer> batchCount;
 
     public Output<Integer> getBatchCount() {
         return this.batchCount == null ? Output.empty() : this.batchCount;
     }
 
-    @InputImport(name="batchSize")
+    @Import(name="batchSize")
       private final @Nullable Output<Integer> batchSize;
 
     public Output<Integer> getBatchSize() {
         return this.batchSize == null ? Output.empty() : this.batchSize;
     }
 
-    @InputImport(name="bufferDuration")
+    @Import(name="bufferDuration")
       private final @Nullable Output<Integer> bufferDuration;
 
     public Output<Integer> getBufferDuration() {
         return this.bufferDuration == null ? Output.empty() : this.bufferDuration;
     }
 
-    @InputImport(name="datetimeFormat")
+    @Import(name="datetimeFormat")
       private final @Nullable Output<String> datetimeFormat;
 
     public Output<String> getDatetimeFormat() {
         return this.datetimeFormat == null ? Output.empty() : this.datetimeFormat;
     }
 
-    @InputImport(name="encoding")
+    @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
     public Output<String> getEncoding() {
         return this.encoding == null ? Output.empty() : this.encoding;
     }
 
-    @InputImport(name="file", required=true)
+    @Import(name="file", required=true)
       private final Output<String> file;
 
     public Output<String> getFile() {
         return this.file;
     }
 
-    @InputImport(name="fileFingerprintLines")
+    @Import(name="fileFingerprintLines")
       private final @Nullable Output<String> fileFingerprintLines;
 
     public Output<String> getFileFingerprintLines() {
         return this.fileFingerprintLines == null ? Output.empty() : this.fileFingerprintLines;
     }
 
-    @InputImport(name="initialPosition")
+    @Import(name="initialPosition")
       private final @Nullable Output<String> initialPosition;
 
     public Output<String> getInitialPosition() {
         return this.initialPosition == null ? Output.empty() : this.initialPosition;
     }
 
-    @InputImport(name="logGroupName", required=true)
+    @Import(name="logGroupName", required=true)
       private final Output<String> logGroupName;
 
     public Output<String> getLogGroupName() {
         return this.logGroupName;
     }
 
-    @InputImport(name="multilineStartPattern")
+    @Import(name="multilineStartPattern")
       private final @Nullable Output<String> multilineStartPattern;
 
     public Output<String> getMultilineStartPattern() {
         return this.multilineStartPattern == null ? Output.empty() : this.multilineStartPattern;
     }
 
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {

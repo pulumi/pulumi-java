@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * Note: this should only be enabled if hosts share the same origin and content Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
      * 
      */
-    @InputImport(name="excludeHost")
+    @Import(name="excludeHost")
       private final @Nullable Output<Boolean> excludeHost;
 
     public Output<Boolean> getExcludeHost() {
@@ -37,7 +37,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * included.
      * 
      */
-    @InputImport(name="excludeQueryString")
+    @Import(name="excludeQueryString")
       private final @Nullable Output<Boolean> excludeQueryString;
 
     public Output<Boolean> getExcludeQueryString() {
@@ -49,7 +49,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * Either specify includedQueryParameters or excludedQueryParameters, not both. '&' and '=' will be percent encoded and not treated as delimiters.
      * 
      */
-    @InputImport(name="excludedQueryParameters")
+    @Import(name="excludedQueryParameters")
       private final @Nullable Output<List<String>> excludedQueryParameters;
 
     public Output<List<String>> getExcludedQueryParameters() {
@@ -60,7 +60,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * If true, http and https requests will be cached separately.
      * 
      */
-    @InputImport(name="includeProtocol")
+    @Import(name="includeProtocol")
       private final @Nullable Output<Boolean> includeProtocol;
 
     public Output<Boolean> getIncludeProtocol() {
@@ -75,7 +75,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      *   Note that specifying several headers, and/or headers that have a large range of values (e.g. per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
      * 
      */
-    @InputImport(name="includedHeaderNames")
+    @Import(name="includedHeaderNames")
       private final @Nullable Output<List<String>> includedHeaderNames;
 
     public Output<List<String>> getIncludedHeaderNames() {
@@ -87,7 +87,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      * Either specify includedQueryParameters or excludedQueryParameters, not both. '&' and '=' will be percent encoded and not treated as delimiters.
      * 
      */
-    @InputImport(name="includedQueryParameters")
+    @Import(name="includedQueryParameters")
       private final @Nullable Output<List<String>> includedQueryParameters;
 
     public Output<List<String>> getIncludedQueryParameters() {

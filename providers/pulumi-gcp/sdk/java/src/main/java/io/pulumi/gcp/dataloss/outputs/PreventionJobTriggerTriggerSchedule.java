@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionJobTriggerTriggerSchedule {
     /**
      * With this option a job is started a regular periodic basis. For example: every day (86400 seconds).
@@ -20,8 +20,8 @@ public final class PreventionJobTriggerTriggerSchedule {
      */
     private final @Nullable String recurrencePeriodDuration;
 
-    @OutputCustomType.Constructor
-    private PreventionJobTriggerTriggerSchedule(@OutputCustomType.Parameter("recurrencePeriodDuration") @Nullable String recurrencePeriodDuration) {
+    @CustomType.Constructor
+    private PreventionJobTriggerTriggerSchedule(@CustomType.Parameter("recurrencePeriodDuration") @Nullable String recurrencePeriodDuration) {
         this.recurrencePeriodDuration = recurrencePeriodDuration;
     }
 

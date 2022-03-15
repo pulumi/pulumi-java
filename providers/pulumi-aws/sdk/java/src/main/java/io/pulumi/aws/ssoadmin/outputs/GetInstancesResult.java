@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.ssoadmin.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstancesResult {
     /**
      * Set of Amazon Resource Names (ARNs) of the SSO Instances.
@@ -26,11 +26,11 @@ public final class GetInstancesResult {
      */
     private final List<String> identityStoreIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstancesResult(
-        @OutputCustomType.Parameter("arns") List<String> arns,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("identityStoreIds") List<String> identityStoreIds) {
+        @CustomType.Parameter("arns") List<String> arns,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("identityStoreIds") List<String> identityStoreIds) {
         this.arns = arns;
         this.id = id;
         this.identityStoreIds = identityStoreIds;

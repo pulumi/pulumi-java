@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ContentKeyPolicyRsaTokenKeyResponse extends io.pulumi.resourc
      * The RSA Parameter exponent
      * 
      */
-    @InputImport(name="exponent", required=true)
+    @Import(name="exponent", required=true)
       private final String exponent;
 
     public String getExponent() {
@@ -31,7 +31,7 @@ public final class ContentKeyPolicyRsaTokenKeyResponse extends io.pulumi.resourc
      * The RSA Parameter modulus
      * 
      */
-    @InputImport(name="modulus", required=true)
+    @Import(name="modulus", required=true)
       private final String modulus;
 
     public String getModulus() {
@@ -43,7 +43,7 @@ public final class ContentKeyPolicyRsaTokenKeyResponse extends io.pulumi.resourc
      * Expected value is '#Microsoft.Media.ContentKeyPolicyRsaTokenKey'.
      * 
      */
-    @InputImport(name="odataType", required=true)
+    @Import(name="odataType", required=true)
       private final String odataType;
 
     public String getOdataType() {

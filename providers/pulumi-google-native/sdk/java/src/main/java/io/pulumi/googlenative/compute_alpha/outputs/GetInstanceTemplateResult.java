@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.InstancePropertiesResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.SourceInstanceParamsResponse;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceTemplateResult {
     /**
      * The creation timestamp for this instance template in RFC3339 text format.
@@ -57,17 +57,17 @@ public final class GetInstanceTemplateResult {
      */
     private final SourceInstanceParamsResponse sourceInstanceParams;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceTemplateResult(
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("properties") InstancePropertiesResponse properties,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
-        @OutputCustomType.Parameter("sourceInstance") String sourceInstance,
-        @OutputCustomType.Parameter("sourceInstanceParams") SourceInstanceParamsResponse sourceInstanceParams) {
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("properties") InstancePropertiesResponse properties,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @CustomType.Parameter("sourceInstance") String sourceInstance,
+        @CustomType.Parameter("sourceInstanceParams") SourceInstanceParamsResponse sourceInstanceParams) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.kind = kind;

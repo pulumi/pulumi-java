@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
      * The resource ID of the environment.
      * 
      */
-    @InputImport(name="environment", required=true)
+    @Import(name="environment", required=true)
       private final Output<String> environment;
 
     public Output<String> getEnvironment() {
@@ -29,7 +29,7 @@ public final class InstanceAttachmentArgs extends io.pulumi.resources.ResourceAr
      * in the format `organisations/{{org_name}}/instances/{{instance_name}}`.
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
     public Output<String> getInstanceId() {

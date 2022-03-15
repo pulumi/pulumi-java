@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -14,21 +14,21 @@ public final class GetRegionClusterIamPolicyArgs extends io.pulumi.resources.Inv
 
     public static final GetRegionClusterIamPolicyArgs Empty = new GetRegionClusterIamPolicyArgs();
 
-    @InputImport(name="clusterId", required=true)
+    @Import(name="clusterId", required=true)
       private final String clusterId;
 
     public String getClusterId() {
         return this.clusterId;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
-    @InputImport(name="regionId", required=true)
+    @Import(name="regionId", required=true)
       private final String regionId;
 
     public String getRegionId() {

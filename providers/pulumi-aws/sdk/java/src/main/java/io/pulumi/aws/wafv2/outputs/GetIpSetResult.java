@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.wafv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetIpSetResult {
     /**
      * An array of strings that specify one or more IP addresses or blocks of IP addresses in Classless Inter-Domain Routing (CIDR) notation.
@@ -38,15 +38,15 @@ public final class GetIpSetResult {
     private final String name;
     private final String scope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIpSetResult(
-        @OutputCustomType.Parameter("addresses") List<String> addresses,
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ipAddressVersion") String ipAddressVersion,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("scope") String scope) {
+        @CustomType.Parameter("addresses") List<String> addresses,
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ipAddressVersion") String ipAddressVersion,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("scope") String scope) {
         this.addresses = addresses;
         this.arn = arn;
         this.description = description;

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessLevelsAccessLevelBasicConditionDevicePolicy {
     /**
      * A list of allowed device management levels.
@@ -52,14 +52,14 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicy {
      */
     private final @Nullable Boolean requireScreenLock;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessLevelsAccessLevelBasicConditionDevicePolicy(
-        @OutputCustomType.Parameter("allowedDeviceManagementLevels") @Nullable List<String> allowedDeviceManagementLevels,
-        @OutputCustomType.Parameter("allowedEncryptionStatuses") @Nullable List<String> allowedEncryptionStatuses,
-        @OutputCustomType.Parameter("osConstraints") @Nullable List<AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint> osConstraints,
-        @OutputCustomType.Parameter("requireAdminApproval") @Nullable Boolean requireAdminApproval,
-        @OutputCustomType.Parameter("requireCorpOwned") @Nullable Boolean requireCorpOwned,
-        @OutputCustomType.Parameter("requireScreenLock") @Nullable Boolean requireScreenLock) {
+        @CustomType.Parameter("allowedDeviceManagementLevels") @Nullable List<String> allowedDeviceManagementLevels,
+        @CustomType.Parameter("allowedEncryptionStatuses") @Nullable List<String> allowedEncryptionStatuses,
+        @CustomType.Parameter("osConstraints") @Nullable List<AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint> osConstraints,
+        @CustomType.Parameter("requireAdminApproval") @Nullable Boolean requireAdminApproval,
+        @CustomType.Parameter("requireCorpOwned") @Nullable Boolean requireCorpOwned,
+        @CustomType.Parameter("requireScreenLock") @Nullable Boolean requireScreenLock) {
         this.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
         this.allowedEncryptionStatuses = allowedEncryptionStatuses;
         this.osConstraints = osConstraints;

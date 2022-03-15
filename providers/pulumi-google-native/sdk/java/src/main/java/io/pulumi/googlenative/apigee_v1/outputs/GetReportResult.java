@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1CustomReportMetricResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1ReportPropertyResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetReportResult {
     /**
      * This field contains the chart type for the report
@@ -123,30 +123,30 @@ public final class GetReportResult {
      */
     private final String topk;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetReportResult(
-        @OutputCustomType.Parameter("chartType") String chartType,
-        @OutputCustomType.Parameter("comments") List<String> comments,
-        @OutputCustomType.Parameter("createdAt") String createdAt,
-        @OutputCustomType.Parameter("dimensions") List<String> dimensions,
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("environment") String environment,
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("fromTime") String fromTime,
-        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
-        @OutputCustomType.Parameter("lastViewedAt") String lastViewedAt,
-        @OutputCustomType.Parameter("limit") String limit,
-        @OutputCustomType.Parameter("metrics") List<GoogleCloudApigeeV1CustomReportMetricResponse> metrics,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("offset") String offset,
-        @OutputCustomType.Parameter("organization") String organization,
-        @OutputCustomType.Parameter("properties") List<GoogleCloudApigeeV1ReportPropertyResponse> properties,
-        @OutputCustomType.Parameter("sortByCols") List<String> sortByCols,
-        @OutputCustomType.Parameter("sortOrder") String sortOrder,
-        @OutputCustomType.Parameter("tags") List<String> tags,
-        @OutputCustomType.Parameter("timeUnit") String timeUnit,
-        @OutputCustomType.Parameter("toTime") String toTime,
-        @OutputCustomType.Parameter("topk") String topk) {
+        @CustomType.Parameter("chartType") String chartType,
+        @CustomType.Parameter("comments") List<String> comments,
+        @CustomType.Parameter("createdAt") String createdAt,
+        @CustomType.Parameter("dimensions") List<String> dimensions,
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("environment") String environment,
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("fromTime") String fromTime,
+        @CustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @CustomType.Parameter("lastViewedAt") String lastViewedAt,
+        @CustomType.Parameter("limit") String limit,
+        @CustomType.Parameter("metrics") List<GoogleCloudApigeeV1CustomReportMetricResponse> metrics,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("offset") String offset,
+        @CustomType.Parameter("organization") String organization,
+        @CustomType.Parameter("properties") List<GoogleCloudApigeeV1ReportPropertyResponse> properties,
+        @CustomType.Parameter("sortByCols") List<String> sortByCols,
+        @CustomType.Parameter("sortOrder") String sortOrder,
+        @CustomType.Parameter("tags") List<String> tags,
+        @CustomType.Parameter("timeUnit") String timeUnit,
+        @CustomType.Parameter("toTime") String toTime,
+        @CustomType.Parameter("topk") String topk) {
         this.chartType = chartType;
         this.comments = comments;
         this.createdAt = createdAt;

@@ -5,7 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.aws.ec2.inputs.VpcIpamOperatingRegionGetArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of IPAM
      * 
      */
-    @InputImport(name="arn")
+    @Import(name="arn")
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
@@ -33,7 +33,7 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * A description for the IPAM.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -44,7 +44,7 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * Determines which locales can be chosen when you create pools. Locale is the Region where you want to make an IPAM pool available for allocations. You can only create pools with locales that match the operating Regions of the IPAM. You can only create VPCs from a pool whose locale matches the VPC's Region. You specify a region using the region_name parameter. You **must** set your provider block region as an operating_region.
      * 
      */
-    @InputImport(name="operatingRegions")
+    @Import(name="operatingRegions")
       private final @Nullable Output<List<VpcIpamOperatingRegionGetArgs>> operatingRegions;
 
     public Output<List<VpcIpamOperatingRegionGetArgs>> getOperatingRegions() {
@@ -55,7 +55,7 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * The ID of the IPAM's private scope. A scope is a top-level container in IPAM. Each scope represents an IP-independent network. Scopes enable you to represent networks where you have overlapping IP space. When you create an IPAM, IPAM automatically creates two scopes: public and private. The private scope is intended for private IP space. The public scope is intended for all internet-routable IP space.
      * 
      */
-    @InputImport(name="privateDefaultScopeId")
+    @Import(name="privateDefaultScopeId")
       private final @Nullable Output<String> privateDefaultScopeId;
 
     public Output<String> getPrivateDefaultScopeId() {
@@ -67,7 +67,7 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * IP space. The public scope is intended for all internet-routable IP space.
      * 
      */
-    @InputImport(name="publicDefaultScopeId")
+    @Import(name="publicDefaultScopeId")
       private final @Nullable Output<String> publicDefaultScopeId;
 
     public Output<String> getPublicDefaultScopeId() {
@@ -78,7 +78,7 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * The number of scopes in the IPAM.
      * 
      */
-    @InputImport(name="scopeCount")
+    @Import(name="scopeCount")
       private final @Nullable Output<Integer> scopeCount;
 
     public Output<Integer> getScopeCount() {
@@ -89,7 +89,7 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -100,7 +100,7 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @InputImport(name="tagsAll")
+    @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {

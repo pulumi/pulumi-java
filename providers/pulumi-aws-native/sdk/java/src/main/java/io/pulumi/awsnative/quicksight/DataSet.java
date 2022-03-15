@@ -17,7 +17,7 @@ import io.pulumi.awsnative.quicksight.outputs.DataSetResourcePermission;
 import io.pulumi.awsnative.quicksight.outputs.DataSetRowLevelPermissionDataSet;
 import io.pulumi.awsnative.quicksight.outputs.DataSetTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class DataSet extends io.pulumi.resources.CustomResource {
      * <p>The Amazon Resource Name (ARN) of the resource.</p>
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -44,7 +44,7 @@ public class DataSet extends io.pulumi.resources.CustomResource {
     public Output<String> getArn() {
         return this.arn;
     }
-    @OutputExport(name="awsAccountId", type=String.class, parameters={})
+    @Export(name="awsAccountId", type=String.class, parameters={})
     private Output</* @Nullable */ String> awsAccountId;
 
     public Output</* @Nullable */ String> getAwsAccountId() {
@@ -54,7 +54,7 @@ public class DataSet extends io.pulumi.resources.CustomResource {
      * <p>Groupings of columns that work together in certain QuickSight features. Currently, only geospatial hierarchy is supported.</p>
      * 
      */
-    @OutputExport(name="columnGroups", type=List.class, parameters={DataSetColumnGroup.class})
+    @Export(name="columnGroups", type=List.class, parameters={DataSetColumnGroup.class})
     private Output</* @Nullable */ List<DataSetColumnGroup>> columnGroups;
 
     /**
@@ -64,7 +64,7 @@ public class DataSet extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<DataSetColumnGroup>> getColumnGroups() {
         return this.columnGroups;
     }
-    @OutputExport(name="columnLevelPermissionRules", type=List.class, parameters={DataSetColumnLevelPermissionRule.class})
+    @Export(name="columnLevelPermissionRules", type=List.class, parameters={DataSetColumnLevelPermissionRule.class})
     private Output</* @Nullable */ List<DataSetColumnLevelPermissionRule>> columnLevelPermissionRules;
 
     public Output</* @Nullable */ List<DataSetColumnLevelPermissionRule>> getColumnLevelPermissionRules() {
@@ -75,7 +75,7 @@ public class DataSet extends io.pulumi.resources.CustomResource {
      *             imported into SPICE.</p>
      * 
      */
-    @OutputExport(name="consumedSpiceCapacityInBytes", type=Double.class, parameters={})
+    @Export(name="consumedSpiceCapacityInBytes", type=Double.class, parameters={})
     private Output<Double> consumedSpiceCapacityInBytes;
 
     /**
@@ -90,7 +90,7 @@ public class DataSet extends io.pulumi.resources.CustomResource {
      * <p>The time that this dataset was created.</p>
      * 
      */
-    @OutputExport(name="createdTime", type=String.class, parameters={})
+    @Export(name="createdTime", type=String.class, parameters={})
     private Output<String> createdTime;
 
     /**
@@ -100,25 +100,25 @@ public class DataSet extends io.pulumi.resources.CustomResource {
     public Output<String> getCreatedTime() {
         return this.createdTime;
     }
-    @OutputExport(name="dataSetId", type=String.class, parameters={})
+    @Export(name="dataSetId", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataSetId;
 
     public Output</* @Nullable */ String> getDataSetId() {
         return this.dataSetId;
     }
-    @OutputExport(name="fieldFolders", type=DataSetFieldFolderMap.class, parameters={})
+    @Export(name="fieldFolders", type=DataSetFieldFolderMap.class, parameters={})
     private Output</* @Nullable */ DataSetFieldFolderMap> fieldFolders;
 
     public Output</* @Nullable */ DataSetFieldFolderMap> getFieldFolders() {
         return this.fieldFolders;
     }
-    @OutputExport(name="importMode", type=DataSetImportMode.class, parameters={})
+    @Export(name="importMode", type=DataSetImportMode.class, parameters={})
     private Output</* @Nullable */ DataSetImportMode> importMode;
 
     public Output</* @Nullable */ DataSetImportMode> getImportMode() {
         return this.importMode;
     }
-    @OutputExport(name="ingestionWaitPolicy", type=DataSetIngestionWaitPolicy.class, parameters={})
+    @Export(name="ingestionWaitPolicy", type=DataSetIngestionWaitPolicy.class, parameters={})
     private Output</* @Nullable */ DataSetIngestionWaitPolicy> ingestionWaitPolicy;
 
     public Output</* @Nullable */ DataSetIngestionWaitPolicy> getIngestionWaitPolicy() {
@@ -128,7 +128,7 @@ public class DataSet extends io.pulumi.resources.CustomResource {
      * <p>The last time that this dataset was updated.</p>
      * 
      */
-    @OutputExport(name="lastUpdatedTime", type=String.class, parameters={})
+    @Export(name="lastUpdatedTime", type=String.class, parameters={})
     private Output<String> lastUpdatedTime;
 
     /**
@@ -138,7 +138,7 @@ public class DataSet extends io.pulumi.resources.CustomResource {
     public Output<String> getLastUpdatedTime() {
         return this.lastUpdatedTime;
     }
-    @OutputExport(name="logicalTableMap", type=DataSetLogicalTableMap.class, parameters={})
+    @Export(name="logicalTableMap", type=DataSetLogicalTableMap.class, parameters={})
     private Output</* @Nullable */ DataSetLogicalTableMap> logicalTableMap;
 
     public Output</* @Nullable */ DataSetLogicalTableMap> getLogicalTableMap() {
@@ -148,7 +148,7 @@ public class DataSet extends io.pulumi.resources.CustomResource {
      * <p>The display name for the dataset.</p>
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output</* @Nullable */ String> name;
 
     /**
@@ -163,7 +163,7 @@ public class DataSet extends io.pulumi.resources.CustomResource {
      *             analyses, and dashboards.</p>
      * 
      */
-    @OutputExport(name="outputColumns", type=List.class, parameters={DataSetOutputColumn.class})
+    @Export(name="outputColumns", type=List.class, parameters={DataSetOutputColumn.class})
     private Output<List<DataSetOutputColumn>> outputColumns;
 
     /**
@@ -178,7 +178,7 @@ public class DataSet extends io.pulumi.resources.CustomResource {
      * <p>A list of resource permissions on the dataset.</p>
      * 
      */
-    @OutputExport(name="permissions", type=List.class, parameters={DataSetResourcePermission.class})
+    @Export(name="permissions", type=List.class, parameters={DataSetResourcePermission.class})
     private Output</* @Nullable */ List<DataSetResourcePermission>> permissions;
 
     /**
@@ -188,13 +188,13 @@ public class DataSet extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ List<DataSetResourcePermission>> getPermissions() {
         return this.permissions;
     }
-    @OutputExport(name="physicalTableMap", type=DataSetPhysicalTableMap.class, parameters={})
+    @Export(name="physicalTableMap", type=DataSetPhysicalTableMap.class, parameters={})
     private Output</* @Nullable */ DataSetPhysicalTableMap> physicalTableMap;
 
     public Output</* @Nullable */ DataSetPhysicalTableMap> getPhysicalTableMap() {
         return this.physicalTableMap;
     }
-    @OutputExport(name="rowLevelPermissionDataSet", type=DataSetRowLevelPermissionDataSet.class, parameters={})
+    @Export(name="rowLevelPermissionDataSet", type=DataSetRowLevelPermissionDataSet.class, parameters={})
     private Output</* @Nullable */ DataSetRowLevelPermissionDataSet> rowLevelPermissionDataSet;
 
     public Output</* @Nullable */ DataSetRowLevelPermissionDataSet> getRowLevelPermissionDataSet() {
@@ -204,7 +204,7 @@ public class DataSet extends io.pulumi.resources.CustomResource {
      * <p>Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.</p>
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={DataSetTag.class})
+    @Export(name="tags", type=List.class, parameters={DataSetTag.class})
     private Output</* @Nullable */ List<DataSetTag>> tags;
 
     /**

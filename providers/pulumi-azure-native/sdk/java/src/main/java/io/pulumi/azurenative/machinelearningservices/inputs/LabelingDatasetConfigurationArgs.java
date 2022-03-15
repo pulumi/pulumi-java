@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class LabelingDatasetConfigurationArgs extends io.pulumi.resources.
      * Name of the data asset to perform labeling.
      * 
      */
-    @InputImport(name="assetName", required=true)
+    @Import(name="assetName", required=true)
       private final Output<String> assetName;
 
     public Output<String> getAssetName() {
@@ -34,7 +34,7 @@ public final class LabelingDatasetConfigurationArgs extends io.pulumi.resources.
      * AML dataset version.
      * 
      */
-    @InputImport(name="datasetVersion", required=true)
+    @Import(name="datasetVersion", required=true)
       private final Output<String> datasetVersion;
 
     public Output<String> getDatasetVersion() {
@@ -45,7 +45,7 @@ public final class LabelingDatasetConfigurationArgs extends io.pulumi.resources.
      * Indicates whether to enable incremental dataset refresh.
      * 
      */
-    @InputImport(name="enableIncrementalDatasetRefresh")
+    @Import(name="enableIncrementalDatasetRefresh")
       private final @Nullable Output<Boolean> enableIncrementalDatasetRefresh;
 
     public Output<Boolean> getEnableIncrementalDatasetRefresh() {

@@ -3,22 +3,22 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterClusterAutoscalingResourceLimit {
     private final Integer maximum;
     private final Integer minimum;
     private final String resourceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterClusterAutoscalingResourceLimit(
-        @OutputCustomType.Parameter("maximum") Integer maximum,
-        @OutputCustomType.Parameter("minimum") Integer minimum,
-        @OutputCustomType.Parameter("resourceType") String resourceType) {
+        @CustomType.Parameter("maximum") Integer maximum,
+        @CustomType.Parameter("minimum") Integer minimum,
+        @CustomType.Parameter("resourceType") String resourceType) {
         this.maximum = maximum;
         this.minimum = minimum;
         this.resourceType = resourceType;

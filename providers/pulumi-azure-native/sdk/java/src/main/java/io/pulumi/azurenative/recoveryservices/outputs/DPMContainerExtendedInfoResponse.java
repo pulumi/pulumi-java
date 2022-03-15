@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DPMContainerExtendedInfoResponse {
     /**
      * Last refresh time of the DPMContainer.
@@ -17,8 +17,8 @@ public final class DPMContainerExtendedInfoResponse {
      */
     private final @Nullable String lastRefreshedAt;
 
-    @OutputCustomType.Constructor
-    private DPMContainerExtendedInfoResponse(@OutputCustomType.Parameter("lastRefreshedAt") @Nullable String lastRefreshedAt) {
+    @CustomType.Constructor
+    private DPMContainerExtendedInfoResponse(@CustomType.Parameter("lastRefreshedAt") @Nullable String lastRefreshedAt) {
         this.lastRefreshedAt = lastRefreshedAt;
     }
 

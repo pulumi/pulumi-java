@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.NsgReferenceResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SubnetResourceSettingsResponse extends io.pulumi.resources.In
      * Gets or sets address prefix for the subnet.
      * 
      */
-    @InputImport(name="addressPrefix")
+    @Import(name="addressPrefix")
       private final @Nullable String addressPrefix;
 
     public Optional<String> getAddressPrefix() {
@@ -34,7 +34,7 @@ public final class SubnetResourceSettingsResponse extends io.pulumi.resources.In
      * Gets or sets the Subnet name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {
@@ -45,7 +45,7 @@ public final class SubnetResourceSettingsResponse extends io.pulumi.resources.In
      * Defines reference to NSG.
      * 
      */
-    @InputImport(name="networkSecurityGroup")
+    @Import(name="networkSecurityGroup")
       private final @Nullable NsgReferenceResponse networkSecurityGroup;
 
     public Optional<NsgReferenceResponse> getNetworkSecurityGroup() {

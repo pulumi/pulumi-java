@@ -5,7 +5,7 @@ package io.pulumi.aws.datasync;
 
 import io.pulumi.aws.datasync.inputs.EfsLocationEc2ConfigArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EfsLocationArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block containing EC2 configurations for connecting to the EFS File System.
      * 
      */
-    @InputImport(name="ec2Config", required=true)
+    @Import(name="ec2Config", required=true)
       private final Output<EfsLocationEc2ConfigArgs> ec2Config;
 
     public Output<EfsLocationEc2ConfigArgs> getEc2Config() {
@@ -31,7 +31,7 @@ public final class EfsLocationArgs extends io.pulumi.resources.ResourceArgs {
      * Amazon Resource Name (ARN) of EFS File System.
      * 
      */
-    @InputImport(name="efsFileSystemArn", required=true)
+    @Import(name="efsFileSystemArn", required=true)
       private final Output<String> efsFileSystemArn;
 
     public Output<String> getEfsFileSystemArn() {
@@ -42,7 +42,7 @@ public final class EfsLocationArgs extends io.pulumi.resources.ResourceArgs {
      * Subdirectory to perform actions as source or destination. Default `/`.
      * 
      */
-    @InputImport(name="subdirectory")
+    @Import(name="subdirectory")
       private final @Nullable Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
@@ -53,7 +53,7 @@ public final class EfsLocationArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value pairs of resource tags to assign to the DataSync Location. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PodTemplateSpec;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReplicaSetSpec {
     /**
      * Minimum number of seconds for which a newly created pod should be ready without any of its container crashing, for it to be considered available. Defaults to 0 (pod will be considered available as soon as it is ready)
@@ -34,12 +34,12 @@ public final class ReplicaSetSpec {
      */
     private final @Nullable PodTemplateSpec template;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReplicaSetSpec(
-        @OutputCustomType.Parameter("minReadySeconds") @Nullable Integer minReadySeconds,
-        @OutputCustomType.Parameter("replicas") @Nullable Integer replicas,
-        @OutputCustomType.Parameter("selector") LabelSelector selector,
-        @OutputCustomType.Parameter("template") @Nullable PodTemplateSpec template) {
+        @CustomType.Parameter("minReadySeconds") @Nullable Integer minReadySeconds,
+        @CustomType.Parameter("replicas") @Nullable Integer replicas,
+        @CustomType.Parameter("selector") LabelSelector selector,
+        @CustomType.Parameter("template") @Nullable PodTemplateSpec template) {
         this.minReadySeconds = minReadySeconds;
         this.replicas = replicas;
         this.selector = selector;

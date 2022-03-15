@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.peering.ConnectionMonitorTestArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -36,7 +36,7 @@ public class ConnectionMonitorTest extends io.pulumi.resources.CustomResource {
      * The Connection Monitor test destination
      * 
      */
-    @OutputExport(name="destination", type=String.class, parameters={})
+    @Export(name="destination", type=String.class, parameters={})
     private Output</* @Nullable */ String> destination;
 
     /**
@@ -50,7 +50,7 @@ public class ConnectionMonitorTest extends io.pulumi.resources.CustomResource {
      * The Connection Monitor test destination port
      * 
      */
-    @OutputExport(name="destinationPort", type=Integer.class, parameters={})
+    @Export(name="destinationPort", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> destinationPort;
 
     /**
@@ -64,7 +64,7 @@ public class ConnectionMonitorTest extends io.pulumi.resources.CustomResource {
      * The flag that indicates if the Connection Monitor test is successful or not.
      * 
      */
-    @OutputExport(name="isTestSuccessful", type=Boolean.class, parameters={})
+    @Export(name="isTestSuccessful", type=Boolean.class, parameters={})
     private Output<Boolean> isTestSuccessful;
 
     /**
@@ -78,7 +78,7 @@ public class ConnectionMonitorTest extends io.pulumi.resources.CustomResource {
      * The name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -92,7 +92,7 @@ public class ConnectionMonitorTest extends io.pulumi.resources.CustomResource {
      * The path representing the Connection Monitor test.
      * 
      */
-    @OutputExport(name="path", type=List.class, parameters={String.class})
+    @Export(name="path", type=List.class, parameters={String.class})
     private Output<List<String>> path;
 
     /**
@@ -106,7 +106,7 @@ public class ConnectionMonitorTest extends io.pulumi.resources.CustomResource {
      * The provisioning state of the resource.
      * 
      */
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     /**
@@ -120,7 +120,7 @@ public class ConnectionMonitorTest extends io.pulumi.resources.CustomResource {
      * The Connection Monitor test source agent
      * 
      */
-    @OutputExport(name="sourceAgent", type=String.class, parameters={})
+    @Export(name="sourceAgent", type=String.class, parameters={})
     private Output</* @Nullable */ String> sourceAgent;
 
     /**
@@ -134,7 +134,7 @@ public class ConnectionMonitorTest extends io.pulumi.resources.CustomResource {
      * The Connection Monitor test frequency in seconds
      * 
      */
-    @OutputExport(name="testFrequencyInSec", type=Integer.class, parameters={})
+    @Export(name="testFrequencyInSec", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> testFrequencyInSec;
 
     /**
@@ -148,7 +148,7 @@ public class ConnectionMonitorTest extends io.pulumi.resources.CustomResource {
      * The type of the resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

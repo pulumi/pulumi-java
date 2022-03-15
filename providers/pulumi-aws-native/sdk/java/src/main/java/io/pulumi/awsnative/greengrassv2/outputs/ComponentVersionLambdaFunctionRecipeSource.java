@@ -5,7 +5,7 @@ package io.pulumi.awsnative.greengrassv2.outputs;
 
 import io.pulumi.awsnative.greengrassv2.outputs.ComponentVersionComponentPlatform;
 import io.pulumi.awsnative.greengrassv2.outputs.ComponentVersionLambdaExecutionParameters;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ComponentVersionLambdaFunctionRecipeSource {
     private final @Nullable Object componentDependencies;
     private final @Nullable ComponentVersionLambdaExecutionParameters componentLambdaParameters;
@@ -22,14 +22,14 @@ public final class ComponentVersionLambdaFunctionRecipeSource {
     private final @Nullable String componentVersion;
     private final @Nullable String lambdaArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ComponentVersionLambdaFunctionRecipeSource(
-        @OutputCustomType.Parameter("componentDependencies") @Nullable Object componentDependencies,
-        @OutputCustomType.Parameter("componentLambdaParameters") @Nullable ComponentVersionLambdaExecutionParameters componentLambdaParameters,
-        @OutputCustomType.Parameter("componentName") @Nullable String componentName,
-        @OutputCustomType.Parameter("componentPlatforms") @Nullable List<ComponentVersionComponentPlatform> componentPlatforms,
-        @OutputCustomType.Parameter("componentVersion") @Nullable String componentVersion,
-        @OutputCustomType.Parameter("lambdaArn") @Nullable String lambdaArn) {
+        @CustomType.Parameter("componentDependencies") @Nullable Object componentDependencies,
+        @CustomType.Parameter("componentLambdaParameters") @Nullable ComponentVersionLambdaExecutionParameters componentLambdaParameters,
+        @CustomType.Parameter("componentName") @Nullable String componentName,
+        @CustomType.Parameter("componentPlatforms") @Nullable List<ComponentVersionComponentPlatform> componentPlatforms,
+        @CustomType.Parameter("componentVersion") @Nullable String componentVersion,
+        @CustomType.Parameter("lambdaArn") @Nullable String lambdaArn) {
         this.componentDependencies = componentDependencies;
         this.componentLambdaParameters = componentLambdaParameters;
         this.componentName = componentName;

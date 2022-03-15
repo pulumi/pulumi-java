@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devops.enums.PipelineTypeEnum;
 import io.pulumi.azurenative.devops.inputs.BootstrapConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration used to bootstrap the Pipeline.
      * 
      */
-    @InputImport(name="bootstrapConfiguration", required=true)
+    @Import(name="bootstrapConfiguration", required=true)
       private final Output<BootstrapConfigurationArgs> bootstrapConfiguration;
 
     public Output<BootstrapConfigurationArgs> getBootstrapConfiguration() {
@@ -33,7 +33,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * Resource Location
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -44,7 +44,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Pipeline resource in ARM.
      * 
      */
-    @InputImport(name="pipelineName")
+    @Import(name="pipelineName")
       private final @Nullable Output<String> pipelineName;
 
     public Output<String> getPipelineName() {
@@ -55,7 +55,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * Specifies which CI/CD provider to use. Valid options are 'azurePipeline', 'githubWorkflow'.
      * 
      */
-    @InputImport(name="pipelineType", required=true)
+    @Import(name="pipelineType", required=true)
       private final Output<Either<String,PipelineTypeEnum>> pipelineType;
 
     public Output<Either<String,PipelineTypeEnum>> getPipelineType() {
@@ -66,7 +66,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource group within the Azure subscription.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -77,7 +77,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * Resource Tags
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

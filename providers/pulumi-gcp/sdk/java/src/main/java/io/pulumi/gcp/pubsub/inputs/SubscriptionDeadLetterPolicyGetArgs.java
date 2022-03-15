@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class SubscriptionDeadLetterPolicyGetArgs extends io.pulumi.resourc
      * since messages published to a topic with no subscriptions are lost.
      * 
      */
-    @InputImport(name="deadLetterTopic")
+    @Import(name="deadLetterTopic")
       private final @Nullable Output<String> deadLetterTopic;
 
     public Output<String> getDeadLetterTopic() {
@@ -45,7 +45,7 @@ public final class SubscriptionDeadLetterPolicyGetArgs extends io.pulumi.resourc
      * If this parameter is 0, a default value of 5 is used.
      * 
      */
-    @InputImport(name="maxDeliveryAttempts")
+    @Import(name="maxDeliveryAttempts")
       private final @Nullable Output<Integer> maxDeliveryAttempts;
 
     public Output<Integer> getMaxDeliveryAttempts() {

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.apimanagement.CertificateArgs;
 import io.pulumi.azurenative.apimanagement.outputs.KeyVaultContractPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
      * 
      */
-    @OutputExport(name="expirationDate", type=String.class, parameters={})
+    @Export(name="expirationDate", type=String.class, parameters={})
     private Output<String> expirationDate;
 
     /**
@@ -49,7 +49,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * KeyVault location details of the certificate.
      * 
      */
-    @OutputExport(name="keyVault", type=KeyVaultContractPropertiesResponse.class, parameters={})
+    @Export(name="keyVault", type=KeyVaultContractPropertiesResponse.class, parameters={})
     private Output</* @Nullable */ KeyVaultContractPropertiesResponse> keyVault;
 
     /**
@@ -63,7 +63,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Subject attribute of the certificate.
      * 
      */
-    @OutputExport(name="subject", type=String.class, parameters={})
+    @Export(name="subject", type=String.class, parameters={})
     private Output<String> subject;
 
     /**
@@ -91,7 +91,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Thumbprint of the certificate.
      * 
      */
-    @OutputExport(name="thumbprint", type=String.class, parameters={})
+    @Export(name="thumbprint", type=String.class, parameters={})
     private Output<String> thumbprint;
 
     /**
@@ -105,7 +105,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Resource type for API Management resource.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

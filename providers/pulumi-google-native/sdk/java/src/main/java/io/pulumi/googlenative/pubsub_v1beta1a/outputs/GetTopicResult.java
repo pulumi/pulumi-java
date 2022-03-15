@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.pubsub_v1beta1a.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTopicResult {
     /**
      * Name of the topic.
@@ -15,8 +15,8 @@ public final class GetTopicResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private GetTopicResult(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private GetTopicResult(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

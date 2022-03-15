@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.windowsesu.MultipleActivationKeyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -37,7 +37,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * Agreement number under which the key is requested.
      * 
      */
-    @OutputExport(name="agreementNumber", type=String.class, parameters={})
+    @Export(name="agreementNumber", type=String.class, parameters={})
     private Output</* @Nullable */ String> agreementNumber;
 
     /**
@@ -51,7 +51,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * End of support of security updates activated by the MAK key.
      * 
      */
-    @OutputExport(name="expirationDate", type=String.class, parameters={})
+    @Export(name="expirationDate", type=String.class, parameters={})
     private Output<String> expirationDate;
 
     /**
@@ -65,7 +65,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * Number of activations/servers using the MAK key.
      * 
      */
-    @OutputExport(name="installedServerNumber", type=Integer.class, parameters={})
+    @Export(name="installedServerNumber", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> installedServerNumber;
 
     /**
@@ -79,7 +79,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * <code> true </code> if user has eligible on-premises Windows physical or virtual machines, and that the requested key will only be used in their organization; <code> false </code> otherwise.
      * 
      */
-    @OutputExport(name="isEligible", type=Boolean.class, parameters={})
+    @Export(name="isEligible", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isEligible;
 
     /**
@@ -93,7 +93,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * The geo-location where the resource lives
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -107,7 +107,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * MAK 5x5 key.
      * 
      */
-    @OutputExport(name="multipleActivationKey", type=String.class, parameters={})
+    @Export(name="multipleActivationKey", type=String.class, parameters={})
     private Output<String> multipleActivationKey;
 
     /**
@@ -121,7 +121,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * The name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -135,7 +135,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * Type of OS for which the key is requested.
      * 
      */
-    @OutputExport(name="osType", type=String.class, parameters={})
+    @Export(name="osType", type=String.class, parameters={})
     private Output</* @Nullable */ String> osType;
 
     /**
@@ -145,7 +145,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
     public Output</* @Nullable */ String> getOsType() {
         return this.osType;
     }
-    @OutputExport(name="provisioningState", type=String.class, parameters={})
+    @Export(name="provisioningState", type=String.class, parameters={})
     private Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
@@ -155,7 +155,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * Type of support
      * 
      */
-    @OutputExport(name="supportType", type=String.class, parameters={})
+    @Export(name="supportType", type=String.class, parameters={})
     private Output</* @Nullable */ String> supportType;
 
     /**
@@ -169,7 +169,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -183,7 +183,7 @@ public class MultipleActivationKey extends io.pulumi.resources.CustomResource {
      * The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

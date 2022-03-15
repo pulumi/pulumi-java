@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisTagArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class NetworkInsightsAnalysisArgs extends io.pulumi.resources.Resou
 
     public static final NetworkInsightsAnalysisArgs Empty = new NetworkInsightsAnalysisArgs();
 
-    @InputImport(name="filterInArns")
+    @Import(name="filterInArns")
       private final @Nullable Output<List<String>> filterInArns;
 
     public Output<List<String>> getFilterInArns() {
         return this.filterInArns == null ? Output.empty() : this.filterInArns;
     }
 
-    @InputImport(name="networkInsightsPathId", required=true)
+    @Import(name="networkInsightsPathId", required=true)
       private final Output<String> networkInsightsPathId;
 
     public Output<String> getNetworkInsightsPathId() {
         return this.networkInsightsPathId;
     }
 
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<NetworkInsightsAnalysisTagArgs>> tags;
 
     public Output<List<NetworkInsightsAnalysisTagArgs>> getTags() {

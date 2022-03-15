@@ -5,14 +5,14 @@ package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.ApiDeploymentParameterMetadataSetResponse;
 import io.pulumi.azurenative.logic.outputs.WsdlServiceResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiResourceMetadataResponse {
     /**
      * The api type.
@@ -65,18 +65,18 @@ public final class ApiResourceMetadataResponse {
      */
     private final @Nullable WsdlServiceResponse wsdlService;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiResourceMetadataResponse(
-        @OutputCustomType.Parameter("apiType") @Nullable String apiType,
-        @OutputCustomType.Parameter("brandColor") @Nullable String brandColor,
-        @OutputCustomType.Parameter("connectionType") @Nullable String connectionType,
-        @OutputCustomType.Parameter("deploymentParameters") @Nullable ApiDeploymentParameterMetadataSetResponse deploymentParameters,
-        @OutputCustomType.Parameter("hideKey") @Nullable String hideKey,
-        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
-        @OutputCustomType.Parameter("source") @Nullable String source,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("wsdlImportMethod") @Nullable String wsdlImportMethod,
-        @OutputCustomType.Parameter("wsdlService") @Nullable WsdlServiceResponse wsdlService) {
+        @CustomType.Parameter("apiType") @Nullable String apiType,
+        @CustomType.Parameter("brandColor") @Nullable String brandColor,
+        @CustomType.Parameter("connectionType") @Nullable String connectionType,
+        @CustomType.Parameter("deploymentParameters") @Nullable ApiDeploymentParameterMetadataSetResponse deploymentParameters,
+        @CustomType.Parameter("hideKey") @Nullable String hideKey,
+        @CustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @CustomType.Parameter("source") @Nullable String source,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("wsdlImportMethod") @Nullable String wsdlImportMethod,
+        @CustomType.Parameter("wsdlService") @Nullable WsdlServiceResponse wsdlService) {
         this.apiType = apiType;
         this.brandColor = brandColor;
         this.connectionType = connectionType;

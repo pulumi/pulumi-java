@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseStatisticsResponse {
     /**
      * The database size - the total size of compressed data and index in bytes.
@@ -17,8 +17,8 @@ public final class DatabaseStatisticsResponse {
      */
     private final @Nullable Double size;
 
-    @OutputCustomType.Constructor
-    private DatabaseStatisticsResponse(@OutputCustomType.Parameter("size") @Nullable Double size) {
+    @CustomType.Constructor
+    private DatabaseStatisticsResponse(@CustomType.Parameter("size") @Nullable Double size) {
         this.size = size;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.changeanalysis.inputs;
 
 import io.pulumi.azurenative.changeanalysis.inputs.NotificationSettingsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ConfigurationProfileResourcePropertiesResponse extends io.pul
      * Settings of change notification configuration for a subscription.
      * 
      */
-    @InputImport(name="notifications")
+    @Import(name="notifications")
       private final @Nullable NotificationSettingsResponse notifications;
 
     public Optional<NotificationSettingsResponse> getNotifications() {

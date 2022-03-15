@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessReviewInstanceResponse {
     /**
      * The DateTime when the review instance is scheduled to end.
@@ -42,14 +42,14 @@ public final class AccessReviewInstanceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessReviewInstanceResponse(
-        @OutputCustomType.Parameter("endDateTime") @Nullable String endDateTime,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("startDateTime") @Nullable String startDateTime,
-        @OutputCustomType.Parameter("status") String status,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("endDateTime") @Nullable String endDateTime,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("startDateTime") @Nullable String startDateTime,
+        @CustomType.Parameter("status") String status,
+        @CustomType.Parameter("type") String type) {
         this.endDateTime = endDateTime;
         this.id = id;
         this.name = name;

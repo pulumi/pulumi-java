@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.inputs;
 import io.pulumi.azurenative.databox.inputs.DataBoxDiskJobSecretsResponse;
 import io.pulumi.azurenative.databox.inputs.DataBoxHeavyJobSecretsResponse;
 import io.pulumi.azurenative.databox.inputs.DataboxJobSecretsResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class UnencryptedCredentialsResponse extends io.pulumi.resources.In
      * Name of the job.
      * 
      */
-    @InputImport(name="jobName", required=true)
+    @Import(name="jobName", required=true)
       private final String jobName;
 
     public String getJobName() {
@@ -35,7 +35,7 @@ public final class UnencryptedCredentialsResponse extends io.pulumi.resources.In
      * Secrets related to this job.
      * 
      */
-    @InputImport(name="jobSecrets", required=true)
+    @Import(name="jobSecrets", required=true)
       private final Object jobSecrets;
 
     public Object getJobSecrets() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.msk.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterBrokerNodeGroupInfo {
     /**
      * The distribution of broker nodes across availability zones ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-model-brokerazdistribution)). Currently the only valid value is `DEFAULT`.
@@ -39,13 +39,13 @@ public final class ClusterBrokerNodeGroupInfo {
      */
     private final List<String> securityGroups;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterBrokerNodeGroupInfo(
-        @OutputCustomType.Parameter("azDistribution") @Nullable String azDistribution,
-        @OutputCustomType.Parameter("clientSubnets") List<String> clientSubnets,
-        @OutputCustomType.Parameter("ebsVolumeSize") Integer ebsVolumeSize,
-        @OutputCustomType.Parameter("instanceType") String instanceType,
-        @OutputCustomType.Parameter("securityGroups") List<String> securityGroups) {
+        @CustomType.Parameter("azDistribution") @Nullable String azDistribution,
+        @CustomType.Parameter("clientSubnets") List<String> clientSubnets,
+        @CustomType.Parameter("ebsVolumeSize") Integer ebsVolumeSize,
+        @CustomType.Parameter("instanceType") String instanceType,
+        @CustomType.Parameter("securityGroups") List<String> securityGroups) {
         this.azDistribution = azDistribution;
         this.clientSubnets = clientSubnets;
         this.ebsVolumeSize = ebsVolumeSize;

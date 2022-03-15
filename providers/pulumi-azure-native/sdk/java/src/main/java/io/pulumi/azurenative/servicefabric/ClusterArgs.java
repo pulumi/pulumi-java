@@ -14,7 +14,7 @@ import io.pulumi.azurenative.servicefabric.inputs.NodeTypeDescriptionArgs;
 import io.pulumi.azurenative.servicefabric.inputs.ServerCertificateCommonNamesArgs;
 import io.pulumi.azurenative.servicefabric.inputs.SettingsSectionDescriptionArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The list of add-on features to enable in the cluster.
      * 
      */
-    @InputImport(name="addOnFeatures")
+    @Import(name="addOnFeatures")
       private final @Nullable Output<List<String>> addOnFeatures;
 
     public Output<List<String>> getAddOnFeatures() {
@@ -42,7 +42,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The policy used to clean up unused versions.
      * 
      */
-    @InputImport(name="applicationTypeVersionsCleanupPolicy")
+    @Import(name="applicationTypeVersionsCleanupPolicy")
       private final @Nullable Output<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy;
 
     public Output<ApplicationTypeVersionsCleanupPolicyArgs> getApplicationTypeVersionsCleanupPolicy() {
@@ -53,7 +53,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The AAD authentication settings of the cluster.
      * 
      */
-    @InputImport(name="azureActiveDirectory")
+    @Import(name="azureActiveDirectory")
       private final @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
 
     public Output<AzureActiveDirectoryArgs> getAzureActiveDirectory() {
@@ -64,7 +64,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The certificate to use for securing the cluster. The certificate provided will be used for node to node security within the cluster, SSL certificate for cluster management endpoint and default admin client.
      * 
      */
-    @InputImport(name="certificate")
+    @Import(name="certificate")
       private final @Nullable Output<CertificateDescriptionArgs> certificate;
 
     public Output<CertificateDescriptionArgs> getCertificate() {
@@ -75,7 +75,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Describes a list of server certificates referenced by common name that are used to secure the cluster.
      * 
      */
-    @InputImport(name="certificateCommonNames")
+    @Import(name="certificateCommonNames")
       private final @Nullable Output<ServerCertificateCommonNamesArgs> certificateCommonNames;
 
     public Output<ServerCertificateCommonNamesArgs> getCertificateCommonNames() {
@@ -86,7 +86,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The list of client certificates referenced by common name that are allowed to manage the cluster.
      * 
      */
-    @InputImport(name="clientCertificateCommonNames")
+    @Import(name="clientCertificateCommonNames")
       private final @Nullable Output<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames;
 
     public Output<List<ClientCertificateCommonNameArgs>> getClientCertificateCommonNames() {
@@ -97,7 +97,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The list of client certificates referenced by thumbprint that are allowed to manage the cluster.
      * 
      */
-    @InputImport(name="clientCertificateThumbprints")
+    @Import(name="clientCertificateThumbprints")
       private final @Nullable Output<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints;
 
     public Output<List<ClientCertificateThumbprintArgs>> getClientCertificateThumbprints() {
@@ -108,7 +108,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The Service Fabric runtime version of the cluster. This property can only by set the user when **upgradeMode** is set to 'Manual'. To get list of available Service Fabric versions for new clusters use [ClusterVersion API](./ClusterVersion.md). To get the list of available version for existing clusters use **availableClusterVersions**.
      * 
      */
-    @InputImport(name="clusterCodeVersion")
+    @Import(name="clusterCodeVersion")
       private final @Nullable Output<String> clusterCodeVersion;
 
     public Output<String> getClusterCodeVersion() {
@@ -119,7 +119,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the cluster resource.
      * 
      */
-    @InputImport(name="clusterName")
+    @Import(name="clusterName")
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
@@ -130,7 +130,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The storage account information for storing Service Fabric diagnostic logs.
      * 
      */
-    @InputImport(name="diagnosticsStorageAccountConfig")
+    @Import(name="diagnosticsStorageAccountConfig")
       private final @Nullable Output<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig;
 
     public Output<DiagnosticsStorageAccountConfigArgs> getDiagnosticsStorageAccountConfig() {
@@ -141,7 +141,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Indicates if the event store service is enabled.
      * 
      */
-    @InputImport(name="eventStoreServiceEnabled")
+    @Import(name="eventStoreServiceEnabled")
       private final @Nullable Output<Boolean> eventStoreServiceEnabled;
 
     public Output<Boolean> getEventStoreServiceEnabled() {
@@ -152,7 +152,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The list of custom fabric settings to configure the cluster.
      * 
      */
-    @InputImport(name="fabricSettings")
+    @Import(name="fabricSettings")
       private final @Nullable Output<List<SettingsSectionDescriptionArgs>> fabricSettings;
 
     public Output<List<SettingsSectionDescriptionArgs>> getFabricSettings() {
@@ -163,7 +163,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Azure resource location.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -174,7 +174,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The http management endpoint of the cluster.
      * 
      */
-    @InputImport(name="managementEndpoint", required=true)
+    @Import(name="managementEndpoint", required=true)
       private final Output<String> managementEndpoint;
 
     public Output<String> getManagementEndpoint() {
@@ -185,7 +185,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The list of node types in the cluster.
      * 
      */
-    @InputImport(name="nodeTypes", required=true)
+    @Import(name="nodeTypes", required=true)
       private final Output<List<NodeTypeDescriptionArgs>> nodeTypes;
 
     public Output<List<NodeTypeDescriptionArgs>> getNodeTypes() {
@@ -202,7 +202,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      *   - Platinum - Run the System services with a target replica set count of 9.
      * 
      */
-    @InputImport(name="reliabilityLevel")
+    @Import(name="reliabilityLevel")
       private final @Nullable Output<String> reliabilityLevel;
 
     public Output<String> getReliabilityLevel() {
@@ -213,7 +213,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -224,7 +224,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The server certificate used by reverse proxy.
      * 
      */
-    @InputImport(name="reverseProxyCertificate")
+    @Import(name="reverseProxyCertificate")
       private final @Nullable Output<CertificateDescriptionArgs> reverseProxyCertificate;
 
     public Output<CertificateDescriptionArgs> getReverseProxyCertificate() {
@@ -235,7 +235,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Describes a list of server certificates referenced by common name that are used to secure the cluster.
      * 
      */
-    @InputImport(name="reverseProxyCertificateCommonNames")
+    @Import(name="reverseProxyCertificateCommonNames")
       private final @Nullable Output<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames;
 
     public Output<ServerCertificateCommonNamesArgs> getReverseProxyCertificateCommonNames() {
@@ -246,7 +246,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * Azure resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -257,7 +257,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The policy to use when upgrading the cluster.
      * 
      */
-    @InputImport(name="upgradeDescription")
+    @Import(name="upgradeDescription")
       private final @Nullable Output<ClusterUpgradePolicyArgs> upgradeDescription;
 
     public Output<ClusterUpgradePolicyArgs> getUpgradeDescription() {
@@ -271,7 +271,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      *   - Manual - The cluster will not be automatically upgraded to the latest Service Fabric runtime version. The cluster is upgraded by setting the **clusterCodeVersion** property in the cluster resource.
      * 
      */
-    @InputImport(name="upgradeMode")
+    @Import(name="upgradeMode")
       private final @Nullable Output<String> upgradeMode;
 
     public Output<String> getUpgradeMode() {
@@ -282,7 +282,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
      * The VM image VMSS has been configured with. Generic names such as Windows or Linux can be used.
      * 
      */
-    @InputImport(name="vmImage")
+    @Import(name="vmImage")
       private final @Nullable Output<String> vmImage;
 
     public Output<String> getVmImage() {

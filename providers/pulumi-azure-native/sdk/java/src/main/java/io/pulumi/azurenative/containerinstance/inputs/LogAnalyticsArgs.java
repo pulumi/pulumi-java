@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 import io.pulumi.azurenative.containerinstance.enums.LogAnalyticsLogType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
      * The log type to be used.
      * 
      */
-    @InputImport(name="logType")
+    @Import(name="logType")
       private final @Nullable Output<Either<String,LogAnalyticsLogType>> logType;
 
     public Output<Either<String,LogAnalyticsLogType>> getLogType() {
@@ -36,7 +36,7 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
      * Metadata for log analytics.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -47,7 +47,7 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
      * The workspace id for log analytics
      * 
      */
-    @InputImport(name="workspaceId", required=true)
+    @Import(name="workspaceId", required=true)
       private final Output<String> workspaceId;
 
     public Output<String> getWorkspaceId() {
@@ -58,7 +58,7 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
      * The workspace key for log analytics
      * 
      */
-    @InputImport(name="workspaceKey", required=true)
+    @Import(name="workspaceKey", required=true)
       private final Output<String> workspaceKey;
 
     public Output<String> getWorkspaceKey() {
@@ -69,7 +69,7 @@ public final class LogAnalyticsArgs extends io.pulumi.resources.ResourceArgs {
      * The workspace resource id for log analytics
      * 
      */
-    @InputImport(name="workspaceResourceId")
+    @Import(name="workspaceResourceId")
       private final @Nullable Output<Map<String,String>> workspaceResourceId;
 
     public Output<Map<String,String>> getWorkspaceResourceId() {

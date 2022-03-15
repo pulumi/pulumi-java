@@ -3,14 +3,14 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1QueryInputResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse {
     /**
      * Whether sentiment analysis is enabled.
@@ -33,12 +33,12 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputRespon
      */
     private final Boolean isWebhookEnabled;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse(
-        @OutputCustomType.Parameter("enableSentimentAnalysis") Boolean enableSentimentAnalysis,
-        @OutputCustomType.Parameter("injectedParameters") Map<String,String> injectedParameters,
-        @OutputCustomType.Parameter("input") GoogleCloudDialogflowCxV3beta1QueryInputResponse input,
-        @OutputCustomType.Parameter("isWebhookEnabled") Boolean isWebhookEnabled) {
+        @CustomType.Parameter("enableSentimentAnalysis") Boolean enableSentimentAnalysis,
+        @CustomType.Parameter("injectedParameters") Map<String,String> injectedParameters,
+        @CustomType.Parameter("input") GoogleCloudDialogflowCxV3beta1QueryInputResponse input,
+        @CustomType.Parameter("isWebhookEnabled") Boolean isWebhookEnabled) {
         this.enableSentimentAnalysis = enableSentimentAnalysis;
         this.injectedParameters = injectedParameters;
         this.input = input;

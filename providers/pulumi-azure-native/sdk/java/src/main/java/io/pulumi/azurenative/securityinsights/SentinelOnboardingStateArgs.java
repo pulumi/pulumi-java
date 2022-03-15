@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
      * Flag that indicates the status of the CMK setting
      * 
      */
-    @InputImport(name="customerManagedKey")
+    @Import(name="customerManagedKey")
       private final @Nullable Output<Boolean> customerManagedKey;
 
     public Output<Boolean> getCustomerManagedKey() {
@@ -30,7 +30,7 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
      * The namespace of workspaces resource provider- Microsoft.OperationalInsights.
      * 
      */
-    @InputImport(name="operationalInsightsResourceProvider", required=true)
+    @Import(name="operationalInsightsResourceProvider", required=true)
       private final Output<String> operationalInsightsResourceProvider;
 
     public Output<String> getOperationalInsightsResourceProvider() {
@@ -41,7 +41,7 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -52,7 +52,7 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
      * The Sentinel onboarding state name. Supports - default
      * 
      */
-    @InputImport(name="sentinelOnboardingStateName")
+    @Import(name="sentinelOnboardingStateName")
       private final @Nullable Output<String> sentinelOnboardingStateName;
 
     public Output<String> getSentinelOnboardingStateName() {
@@ -63,7 +63,7 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
      * The name of the workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.ec2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -19,7 +19,7 @@ public final class GetInstanceRootBlockDevice extends io.pulumi.resources.Invoke
      * If the root block device will be deleted on termination.
      * 
      */
-    @InputImport(name="deleteOnTermination", required=true)
+    @Import(name="deleteOnTermination", required=true)
       private final Boolean deleteOnTermination;
 
     public Boolean getDeleteOnTermination() {
@@ -30,7 +30,7 @@ public final class GetInstanceRootBlockDevice extends io.pulumi.resources.Invoke
      * The physical name of the device.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final String deviceName;
 
     public String getDeviceName() {
@@ -41,7 +41,7 @@ public final class GetInstanceRootBlockDevice extends io.pulumi.resources.Invoke
      * If the EBS volume is encrypted.
      * 
      */
-    @InputImport(name="encrypted", required=true)
+    @Import(name="encrypted", required=true)
       private final Boolean encrypted;
 
     public Boolean getEncrypted() {
@@ -52,14 +52,14 @@ public final class GetInstanceRootBlockDevice extends io.pulumi.resources.Invoke
      * `0` If the volume is not a provisioned IOPS image, otherwise the supported IOPS count.
      * 
      */
-    @InputImport(name="iops", required=true)
+    @Import(name="iops", required=true)
       private final Integer iops;
 
     public Integer getIops() {
         return this.iops;
     }
 
-    @InputImport(name="kmsKeyId", required=true)
+    @Import(name="kmsKeyId", required=true)
       private final String kmsKeyId;
 
     public String getKmsKeyId() {
@@ -70,7 +70,7 @@ public final class GetInstanceRootBlockDevice extends io.pulumi.resources.Invoke
      * A map of tags assigned to the Instance.
      * 
      */
-    @InputImport(name="tags", required=true)
+    @Import(name="tags", required=true)
       private final Map<String,String> tags;
 
     public Map<String,String> getTags() {
@@ -81,14 +81,14 @@ public final class GetInstanceRootBlockDevice extends io.pulumi.resources.Invoke
      * The throughput of the volume, in MiB/s.
      * 
      */
-    @InputImport(name="throughput", required=true)
+    @Import(name="throughput", required=true)
       private final Integer throughput;
 
     public Integer getThroughput() {
         return this.throughput;
     }
 
-    @InputImport(name="volumeId", required=true)
+    @Import(name="volumeId", required=true)
       private final String volumeId;
 
     public String getVolumeId() {
@@ -99,7 +99,7 @@ public final class GetInstanceRootBlockDevice extends io.pulumi.resources.Invoke
      * The size of the volume, in GiB.
      * 
      */
-    @InputImport(name="volumeSize", required=true)
+    @Import(name="volumeSize", required=true)
       private final Integer volumeSize;
 
     public Integer getVolumeSize() {
@@ -110,7 +110,7 @@ public final class GetInstanceRootBlockDevice extends io.pulumi.resources.Invoke
      * The type of the volume.
      * 
      */
-    @InputImport(name="volumeType", required=true)
+    @Import(name="volumeType", required=true)
       private final String volumeType;
 
     public String getVolumeType() {

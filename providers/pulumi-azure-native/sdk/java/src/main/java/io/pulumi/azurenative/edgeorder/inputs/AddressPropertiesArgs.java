@@ -6,7 +6,7 @@ package io.pulumi.azurenative.edgeorder.inputs;
 import io.pulumi.azurenative.edgeorder.inputs.ContactDetailsArgs;
 import io.pulumi.azurenative.edgeorder.inputs.ShippingAddressArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class AddressPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Contact details for the address
      * 
      */
-    @InputImport(name="contactDetails", required=true)
+    @Import(name="contactDetails", required=true)
       private final Output<ContactDetailsArgs> contactDetails;
 
     public Output<ContactDetailsArgs> getContactDetails() {
@@ -34,7 +34,7 @@ public final class AddressPropertiesArgs extends io.pulumi.resources.ResourceArg
      * Shipping details for the address
      * 
      */
-    @InputImport(name="shippingAddress")
+    @Import(name="shippingAddress")
       private final @Nullable Output<ShippingAddressArgs> shippingAddress;
 
     public Output<ShippingAddressArgs> getShippingAddress() {

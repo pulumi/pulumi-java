@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GatewayGreengrassArgs extends io.pulumi.resources.ResourceArg
      * The ARN of the Greengrass group.
      * 
      */
-    @InputImport(name="groupArn", required=true)
+    @Import(name="groupArn", required=true)
       private final Output<String> groupArn;
 
     public Output<String> getGroupArn() {

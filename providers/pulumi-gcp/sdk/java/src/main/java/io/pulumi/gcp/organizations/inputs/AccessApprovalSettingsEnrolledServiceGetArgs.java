@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +28,7 @@ public final class AccessApprovalSettingsEnrolledServiceGetArgs extends io.pulum
      * storage.googleapis.com
      * 
      */
-    @InputImport(name="cloudProduct", required=true)
+    @Import(name="cloudProduct", required=true)
       private final Output<String> cloudProduct;
 
     public Output<String> getCloudProduct() {
@@ -41,7 +41,7 @@ public final class AccessApprovalSettingsEnrolledServiceGetArgs extends io.pulum
      * Possible values are `BLOCK_ALL`.
      * 
      */
-    @InputImport(name="enrollmentLevel")
+    @Import(name="enrollmentLevel")
       private final @Nullable Output<String> enrollmentLevel;
 
     public Output<String> getEnrollmentLevel() {

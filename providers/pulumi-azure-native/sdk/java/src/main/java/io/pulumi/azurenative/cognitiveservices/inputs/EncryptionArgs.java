@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cognitiveservices.enums.KeySource;
 import io.pulumi.azurenative.cognitiveservices.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * Enumerates the possible value of keySource for Encryption
      * 
      */
-    @InputImport(name="keySource")
+    @Import(name="keySource")
       private final @Nullable Output<Either<String,KeySource>> keySource;
 
     public Output<Either<String,KeySource>> getKeySource() {
@@ -36,7 +36,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * Properties of KeyVault
      * 
      */
-    @InputImport(name="keyVaultProperties")
+    @Import(name="keyVaultProperties")
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {

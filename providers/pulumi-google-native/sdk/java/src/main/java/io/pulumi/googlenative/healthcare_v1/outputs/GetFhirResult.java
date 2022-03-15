@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetFhirResult {
     /**
      * The HTTP Content-Type header value specifying the content type of the body.
@@ -27,11 +27,11 @@ public final class GetFhirResult {
      */
     private final List<Map<String,String>> extensions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFhirResult(
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("data") String data,
-        @OutputCustomType.Parameter("extensions") List<Map<String,String>> extensions) {
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("data") String data,
+        @CustomType.Parameter("extensions") List<Map<String,String>> extensions) {
         this.contentType = contentType;
         this.data = data;
         this.extensions = extensions;

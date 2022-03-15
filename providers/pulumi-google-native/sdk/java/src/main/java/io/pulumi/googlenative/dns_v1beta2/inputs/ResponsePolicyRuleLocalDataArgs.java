@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ResourceRecordSetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ResponsePolicyRuleLocalDataArgs extends io.pulumi.resources.R
      * All resource record sets for this selector, one per resource record type. The name must match the dns_name.
      * 
      */
-    @InputImport(name="localDatas")
+    @Import(name="localDatas")
       private final @Nullable Output<List<ResourceRecordSetArgs>> localDatas;
 
     public Output<List<ResourceRecordSetArgs>> getLocalDatas() {

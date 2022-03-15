@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PyTorchResponse extends io.pulumi.resources.InvokeArgs {
      * Expected value is 'PyTorch'.
      * 
      */
-    @InputImport(name="distributionType", required=true)
+    @Import(name="distributionType", required=true)
       private final String distributionType;
 
     public String getDistributionType() {
@@ -35,7 +35,7 @@ public final class PyTorchResponse extends io.pulumi.resources.InvokeArgs {
      * Total process count for the distributed job.
      * 
      */
-    @InputImport(name="processCount")
+    @Import(name="processCount")
       private final @Nullable Integer processCount;
 
     public Optional<Integer> getProcessCount() {

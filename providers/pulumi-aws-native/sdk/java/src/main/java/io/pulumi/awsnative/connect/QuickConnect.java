@@ -8,7 +8,7 @@ import io.pulumi.awsnative.connect.QuickConnectArgs;
 import io.pulumi.awsnative.connect.outputs.QuickConnectConfig;
 import io.pulumi.awsnative.connect.outputs.QuickConnectTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public class QuickConnect extends io.pulumi.resources.CustomResource {
      * The description of the quick connect.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -38,7 +38,7 @@ public class QuickConnect extends io.pulumi.resources.CustomResource {
      * The identifier of the Amazon Connect instance.
      * 
      */
-    @OutputExport(name="instanceArn", type=String.class, parameters={})
+    @Export(name="instanceArn", type=String.class, parameters={})
     private Output<String> instanceArn;
 
     /**
@@ -52,7 +52,7 @@ public class QuickConnect extends io.pulumi.resources.CustomResource {
      * The name of the quick connect.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -66,7 +66,7 @@ public class QuickConnect extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) for the quick connect.
      * 
      */
-    @OutputExport(name="quickConnectArn", type=String.class, parameters={})
+    @Export(name="quickConnectArn", type=String.class, parameters={})
     private Output<String> quickConnectArn;
 
     /**
@@ -80,7 +80,7 @@ public class QuickConnect extends io.pulumi.resources.CustomResource {
      * Configuration settings for the quick connect.
      * 
      */
-    @OutputExport(name="quickConnectConfig", type=QuickConnectConfig.class, parameters={})
+    @Export(name="quickConnectConfig", type=QuickConnectConfig.class, parameters={})
     private Output<QuickConnectConfig> quickConnectConfig;
 
     /**
@@ -94,7 +94,7 @@ public class QuickConnect extends io.pulumi.resources.CustomResource {
      * One or more tags.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={QuickConnectTag.class})
+    @Export(name="tags", type=List.class, parameters={QuickConnectTag.class})
     private Output</* @Nullable */ List<QuickConnectTag>> tags;
 
     /**

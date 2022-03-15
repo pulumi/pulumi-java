@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.ServiceProviderParameterResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
      * Display Name of the Service Provider
      * 
      */
-    @InputImport(name="devPortalUrl", required=true)
+    @Import(name="devPortalUrl", required=true)
       private final String devPortalUrl;
 
     public String getDevPortalUrl() {
@@ -35,7 +35,7 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
      * Display Name of the Service Provider
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final String displayName;
 
     public String getDisplayName() {
@@ -46,7 +46,7 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
      * Display Name of the Service Provider
      * 
      */
-    @InputImport(name="iconUrl", required=true)
+    @Import(name="iconUrl", required=true)
       private final String iconUrl;
 
     public String getIconUrl() {
@@ -57,7 +57,7 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
      * Id for Service Provider
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final String id;
 
     public String getId() {
@@ -68,7 +68,7 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
      * The list of parameters for the Service Provider
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable List<ServiceProviderParameterResponse> parameters;
 
     public List<ServiceProviderParameterResponse> getParameters() {
@@ -79,7 +79,7 @@ public final class ServiceProviderPropertiesResponse extends io.pulumi.resources
      * Display Name of the Service Provider
      * 
      */
-    @InputImport(name="serviceProviderName", required=true)
+    @Import(name="serviceProviderName", required=true)
       private final String serviceProviderName;
 
     public String getServiceProviderName() {

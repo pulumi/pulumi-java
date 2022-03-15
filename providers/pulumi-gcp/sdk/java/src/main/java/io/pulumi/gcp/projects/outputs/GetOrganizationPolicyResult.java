@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.projects.outputs.GetOrganizationPolicyBooleanPolicy;
 import io.pulumi.gcp.projects.outputs.GetOrganizationPolicyListPolicy;
 import io.pulumi.gcp.projects.outputs.GetOrganizationPolicyRestorePolicy;
@@ -12,7 +12,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetOrganizationPolicyResult {
     private final List<GetOrganizationPolicyBooleanPolicy> booleanPolicies;
     private final String constraint;
@@ -28,17 +28,17 @@ public final class GetOrganizationPolicyResult {
     private final String updateTime;
     private final Integer version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOrganizationPolicyResult(
-        @OutputCustomType.Parameter("booleanPolicies") List<GetOrganizationPolicyBooleanPolicy> booleanPolicies,
-        @OutputCustomType.Parameter("constraint") String constraint,
-        @OutputCustomType.Parameter("etag") String etag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("listPolicies") List<GetOrganizationPolicyListPolicy> listPolicies,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("restorePolicies") List<GetOrganizationPolicyRestorePolicy> restorePolicies,
-        @OutputCustomType.Parameter("updateTime") String updateTime,
-        @OutputCustomType.Parameter("version") Integer version) {
+        @CustomType.Parameter("booleanPolicies") List<GetOrganizationPolicyBooleanPolicy> booleanPolicies,
+        @CustomType.Parameter("constraint") String constraint,
+        @CustomType.Parameter("etag") String etag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("listPolicies") List<GetOrganizationPolicyListPolicy> listPolicies,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("restorePolicies") List<GetOrganizationPolicyRestorePolicy> restorePolicies,
+        @CustomType.Parameter("updateTime") String updateTime,
+        @CustomType.Parameter("version") Integer version) {
         this.booleanPolicies = booleanPolicies;
         this.constraint = constraint;
         this.etag = etag;

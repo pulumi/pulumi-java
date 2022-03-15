@@ -4,7 +4,7 @@
 package io.pulumi.gcp.endpoints;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * protoc_output_base64. open_api config must not be provided.
      * 
      */
-    @InputImport(name="grpcConfig")
+    @Import(name="grpcConfig")
       private final @Nullable Output<String> grpcConfig;
 
     public Output<String> getGrpcConfig() {
@@ -31,7 +31,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * protoc_output_base64 must be specified.
      * 
      */
-    @InputImport(name="openapiConfig")
+    @Import(name="openapiConfig")
       private final @Nullable Output<String> openapiConfig;
 
     public Output<String> getOpenapiConfig() {
@@ -42,7 +42,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The project ID that the service belongs to. If not provided, provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -54,7 +54,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * base64-encoded.
      * 
      */
-    @InputImport(name="protocOutputBase64")
+    @Import(name="protocOutputBase64")
       private final @Nullable Output<String> protocOutputBase64;
 
     public Output<String> getProtocOutputBase64() {
@@ -65,7 +65,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the service. Usually of the form $apiname.endpoints.$projectid.cloud.goog.
      * 
      */
-    @InputImport(name="serviceName", required=true)
+    @Import(name="serviceName", required=true)
       private final Output<String> serviceName;
 
     public Output<String> getServiceName() {

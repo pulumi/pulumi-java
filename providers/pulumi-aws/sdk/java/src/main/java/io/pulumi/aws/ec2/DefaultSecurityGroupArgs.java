@@ -6,7 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.DefaultSecurityGroupEgressArgs;
 import io.pulumi.aws.ec2.inputs.DefaultSecurityGroupIngressArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class DefaultSecurityGroupArgs extends io.pulumi.resources.Resource
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="egress")
+    @Import(name="egress")
       private final @Nullable Output<List<DefaultSecurityGroupEgressArgs>> egress;
 
     public Output<List<DefaultSecurityGroupEgressArgs>> getEgress() {
@@ -34,14 +34,14 @@ public final class DefaultSecurityGroupArgs extends io.pulumi.resources.Resource
      * Configuration block. Detailed below.
      * 
      */
-    @InputImport(name="ingress")
+    @Import(name="ingress")
       private final @Nullable Output<List<DefaultSecurityGroupIngressArgs>> ingress;
 
     public Output<List<DefaultSecurityGroupIngressArgs>> getIngress() {
         return this.ingress == null ? Output.empty() : this.ingress;
     }
 
-    @InputImport(name="revokeRulesOnDelete")
+    @Import(name="revokeRulesOnDelete")
       private final @Nullable Output<Boolean> revokeRulesOnDelete;
 
     public Output<Boolean> getRevokeRulesOnDelete() {
@@ -52,7 +52,7 @@ public final class DefaultSecurityGroupArgs extends io.pulumi.resources.Resource
      * Map of tags to assign to the resource. .If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -63,7 +63,7 @@ public final class DefaultSecurityGroupArgs extends io.pulumi.resources.Resource
      * VPC ID. **Note that changing the `vpc_id` will _not_ restore any default security group rules that were modified, added, or removed.** It will be left in its current state.
      * 
      */
-    @InputImport(name="vpcId")
+    @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {

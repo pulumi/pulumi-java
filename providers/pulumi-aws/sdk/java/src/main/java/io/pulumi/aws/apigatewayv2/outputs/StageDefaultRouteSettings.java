@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.apigatewayv2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StageDefaultRouteSettings {
     /**
      * Whether data trace logging is enabled for the default route. Affects the log entries pushed to Amazon CloudWatch Logs.
@@ -42,13 +42,13 @@ public final class StageDefaultRouteSettings {
      */
     private final @Nullable Double throttlingRateLimit;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StageDefaultRouteSettings(
-        @OutputCustomType.Parameter("dataTraceEnabled") @Nullable Boolean dataTraceEnabled,
-        @OutputCustomType.Parameter("detailedMetricsEnabled") @Nullable Boolean detailedMetricsEnabled,
-        @OutputCustomType.Parameter("loggingLevel") @Nullable String loggingLevel,
-        @OutputCustomType.Parameter("throttlingBurstLimit") @Nullable Integer throttlingBurstLimit,
-        @OutputCustomType.Parameter("throttlingRateLimit") @Nullable Double throttlingRateLimit) {
+        @CustomType.Parameter("dataTraceEnabled") @Nullable Boolean dataTraceEnabled,
+        @CustomType.Parameter("detailedMetricsEnabled") @Nullable Boolean detailedMetricsEnabled,
+        @CustomType.Parameter("loggingLevel") @Nullable String loggingLevel,
+        @CustomType.Parameter("throttlingBurstLimit") @Nullable Integer throttlingBurstLimit,
+        @CustomType.Parameter("throttlingRateLimit") @Nullable Double throttlingRateLimit) {
         this.dataTraceEnabled = dataTraceEnabled;
         this.detailedMetricsEnabled = detailedMetricsEnabled;
         this.loggingLevel = loggingLevel;

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends io.pulumi.r
      * Template for the URL of the custom service delivering licenses to end user players.  Not required when using Azure Media Services for issuing licenses.  The template supports replaceable tokens that the service will update at runtime with the value specific to the request.  The currently supported token values are {AlternativeMediaId}, which is replaced with the value of StreamingLocatorId.AlternativeMediaId, and {ContentKeyId}, which is replaced with the value of identifier of the key being requested.
      * 
      */
-    @InputImport(name="customLicenseAcquisitionUrlTemplate")
+    @Import(name="customLicenseAcquisitionUrlTemplate")
       private final @Nullable Output<String> customLicenseAcquisitionUrlTemplate;
 
     public Output<String> getCustomLicenseAcquisitionUrlTemplate() {
@@ -33,7 +33,7 @@ public final class StreamingPolicyPlayReadyConfigurationArgs extends io.pulumi.r
      * Custom attributes for PlayReady
      * 
      */
-    @InputImport(name="playReadyCustomAttributes")
+    @Import(name="playReadyCustomAttributes")
       private final @Nullable Output<String> playReadyCustomAttributes;
 
     public Output<String> getPlayReadyCustomAttributes() {

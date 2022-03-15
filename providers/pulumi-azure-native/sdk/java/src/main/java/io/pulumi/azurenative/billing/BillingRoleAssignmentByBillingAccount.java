@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.billing.BillingRoleAssignmentByBillingAccountArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public class BillingRoleAssignmentByBillingAccount extends io.pulumi.resources.C
      * The principal Id of the user who created the role assignment.
      * 
      */
-    @OutputExport(name="createdByPrincipalId", type=String.class, parameters={})
+    @Export(name="createdByPrincipalId", type=String.class, parameters={})
     private Output<String> createdByPrincipalId;
 
     /**
@@ -48,7 +48,7 @@ public class BillingRoleAssignmentByBillingAccount extends io.pulumi.resources.C
      * The tenant Id of the user who created the role assignment.
      * 
      */
-    @OutputExport(name="createdByPrincipalTenantId", type=String.class, parameters={})
+    @Export(name="createdByPrincipalTenantId", type=String.class, parameters={})
     private Output<String> createdByPrincipalTenantId;
 
     /**
@@ -62,7 +62,7 @@ public class BillingRoleAssignmentByBillingAccount extends io.pulumi.resources.C
      * The email address of the user who created the role assignment. This is supported only for billing accounts with agreement type Enterprise Agreement.
      * 
      */
-    @OutputExport(name="createdByUserEmailAddress", type=String.class, parameters={})
+    @Export(name="createdByUserEmailAddress", type=String.class, parameters={})
     private Output<String> createdByUserEmailAddress;
 
     /**
@@ -76,7 +76,7 @@ public class BillingRoleAssignmentByBillingAccount extends io.pulumi.resources.C
      * The date the role assignment was created.
      * 
      */
-    @OutputExport(name="createdOn", type=String.class, parameters={})
+    @Export(name="createdOn", type=String.class, parameters={})
     private Output<String> createdOn;
 
     /**
@@ -90,7 +90,7 @@ public class BillingRoleAssignmentByBillingAccount extends io.pulumi.resources.C
      * Resource name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -104,7 +104,7 @@ public class BillingRoleAssignmentByBillingAccount extends io.pulumi.resources.C
      * The principal id of the user to whom the role was assigned.
      * 
      */
-    @OutputExport(name="principalId", type=String.class, parameters={})
+    @Export(name="principalId", type=String.class, parameters={})
     private Output</* @Nullable */ String> principalId;
 
     /**
@@ -118,7 +118,7 @@ public class BillingRoleAssignmentByBillingAccount extends io.pulumi.resources.C
      * The principal tenant id of the user to whom the role was assigned.
      * 
      */
-    @OutputExport(name="principalTenantId", type=String.class, parameters={})
+    @Export(name="principalTenantId", type=String.class, parameters={})
     private Output</* @Nullable */ String> principalTenantId;
 
     /**
@@ -132,7 +132,7 @@ public class BillingRoleAssignmentByBillingAccount extends io.pulumi.resources.C
      * The ID of the role definition.
      * 
      */
-    @OutputExport(name="roleDefinitionId", type=String.class, parameters={})
+    @Export(name="roleDefinitionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> roleDefinitionId;
 
     /**
@@ -146,7 +146,7 @@ public class BillingRoleAssignmentByBillingAccount extends io.pulumi.resources.C
      * The scope at which the role was assigned.
      * 
      */
-    @OutputExport(name="scope", type=String.class, parameters={})
+    @Export(name="scope", type=String.class, parameters={})
     private Output<String> scope;
 
     /**
@@ -160,7 +160,7 @@ public class BillingRoleAssignmentByBillingAccount extends io.pulumi.resources.C
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -174,7 +174,7 @@ public class BillingRoleAssignmentByBillingAccount extends io.pulumi.resources.C
      * The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
      * 
      */
-    @OutputExport(name="userAuthenticationType", type=String.class, parameters={})
+    @Export(name="userAuthenticationType", type=String.class, parameters={})
     private Output</* @Nullable */ String> userAuthenticationType;
 
     /**
@@ -188,7 +188,7 @@ public class BillingRoleAssignmentByBillingAccount extends io.pulumi.resources.C
      * The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
      * 
      */
-    @OutputExport(name="userEmailAddress", type=String.class, parameters={})
+    @Export(name="userEmailAddress", type=String.class, parameters={})
     private Output</* @Nullable */ String> userEmailAddress;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ConnectorProfileDynatraceConnectorProfileCredentialsArgs exte
      * The API tokens used by Dynatrace API to authenticate various API calls.
      * 
      */
-    @InputImport(name="apiToken", required=true)
+    @Import(name="apiToken", required=true)
       private final Output<String> apiToken;
 
     public Output<String> getApiToken() {

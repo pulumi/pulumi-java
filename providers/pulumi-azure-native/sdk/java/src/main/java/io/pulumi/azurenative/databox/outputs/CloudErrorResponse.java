@@ -4,14 +4,14 @@
 package io.pulumi.azurenative.databox.outputs;
 
 import io.pulumi.azurenative.databox.outputs.AdditionalErrorInfoResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CloudErrorResponse {
     /**
      * Cloud error additional info.
@@ -39,13 +39,13 @@ public final class CloudErrorResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CloudErrorResponse(
-        @OutputCustomType.Parameter("additionalInfo") List<AdditionalErrorInfoResponse> additionalInfo,
-        @OutputCustomType.Parameter("code") @Nullable String code,
-        @OutputCustomType.Parameter("details") List<CloudErrorResponse> details,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("target") @Nullable String target) {
+        @CustomType.Parameter("additionalInfo") List<AdditionalErrorInfoResponse> additionalInfo,
+        @CustomType.Parameter("code") @Nullable String code,
+        @CustomType.Parameter("details") List<CloudErrorResponse> details,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("target") @Nullable String target) {
         this.additionalInfo = additionalInfo;
         this.code = code;
         this.details = details;

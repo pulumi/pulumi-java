@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.projects.outputs.GetOrganizationPolicyListPolicyAllow;
 import io.pulumi.gcp.projects.outputs.GetOrganizationPolicyListPolicyDeny;
 import java.lang.Boolean;
@@ -11,19 +11,19 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetOrganizationPolicyListPolicy {
     private final List<GetOrganizationPolicyListPolicyAllow> allows;
     private final List<GetOrganizationPolicyListPolicyDeny> denies;
     private final Boolean inheritFromParent;
     private final String suggestedValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOrganizationPolicyListPolicy(
-        @OutputCustomType.Parameter("allows") List<GetOrganizationPolicyListPolicyAllow> allows,
-        @OutputCustomType.Parameter("denies") List<GetOrganizationPolicyListPolicyDeny> denies,
-        @OutputCustomType.Parameter("inheritFromParent") Boolean inheritFromParent,
-        @OutputCustomType.Parameter("suggestedValue") String suggestedValue) {
+        @CustomType.Parameter("allows") List<GetOrganizationPolicyListPolicyAllow> allows,
+        @CustomType.Parameter("denies") List<GetOrganizationPolicyListPolicyDeny> denies,
+        @CustomType.Parameter("inheritFromParent") Boolean inheritFromParent,
+        @CustomType.Parameter("suggestedValue") String suggestedValue) {
         this.allows = allows;
         this.denies = denies;
         this.inheritFromParent = inheritFromParent;

@@ -4,7 +4,7 @@
 package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
      * Encryption mode to use for CloudWatch data. Valid values: `DISABLED`, `SSE-KMS`. Default value: `DISABLED`.
      * 
      */
-    @InputImport(name="cloudwatchEncryptionMode")
+    @Import(name="cloudwatchEncryptionMode")
       private final @Nullable Output<String> cloudwatchEncryptionMode;
 
     public Output<String> getCloudwatchEncryptionMode() {
@@ -29,7 +29,7 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
      * Amazon Resource Name (ARN) of the KMS key to be used to encrypt the data.
      * 
      */
-    @InputImport(name="kmsKeyArn")
+    @Import(name="kmsKeyArn")
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {

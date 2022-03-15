@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs.HTTPIngressRuleValueArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -28,14 +28,14 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
      * Both these may change in the future. Incoming requests are matched against the host before the IngressRuleValue. If the host is unspecified, the Ingress routes all traffic based on the specified IngressRuleValue.
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
         return this.host == null ? Output.empty() : this.host;
     }
 
-    @InputImport(name="http")
+    @Import(name="http")
       private final @Nullable Output<HTTPIngressRuleValueArgs> http;
 
     public Output<HTTPIngressRuleValueArgs> getHttp() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.healthcare.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfig {
     /**
      * The depth for all recursive structures in the output analytics schema. For example, concept in the CodeSystem
@@ -30,10 +30,10 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfig {
      */
     private final @Nullable String schemaType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FhirStoreStreamConfigBigqueryDestinationSchemaConfig(
-        @OutputCustomType.Parameter("recursiveStructureDepth") Integer recursiveStructureDepth,
-        @OutputCustomType.Parameter("schemaType") @Nullable String schemaType) {
+        @CustomType.Parameter("recursiveStructureDepth") Integer recursiveStructureDepth,
+        @CustomType.Parameter("schemaType") @Nullable String schemaType) {
         this.recursiveStructureDepth = recursiveStructureDepth;
         this.schemaType = schemaType;
     }

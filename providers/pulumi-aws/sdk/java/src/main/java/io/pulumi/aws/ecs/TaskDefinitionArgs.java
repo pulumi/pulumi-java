@@ -10,7 +10,7 @@ import io.pulumi.aws.ecs.inputs.TaskDefinitionProxyConfigurationArgs;
 import io.pulumi.aws.ecs.inputs.TaskDefinitionRuntimePlatformArgs;
 import io.pulumi.aws.ecs.inputs.TaskDefinitionVolumeArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * A list of valid [container definitions](http://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContainerDefinition.html) provided as a single valid JSON document. Please note that you should only provide values that are part of the container definition document. For a detailed description of what parameters are available, see the [Task Definition Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html) section from the official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide).
      * 
      */
-    @InputImport(name="containerDefinitions", required=true)
+    @Import(name="containerDefinitions", required=true)
       private final Output<String> containerDefinitions;
 
     public Output<String> getContainerDefinitions() {
@@ -38,7 +38,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Number of cpu units used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
      * 
      */
-    @InputImport(name="cpu")
+    @Import(name="cpu")
       private final @Nullable Output<String> cpu;
 
     public Output<String> getCpu() {
@@ -49,7 +49,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.
      * 
      */
-    @InputImport(name="ephemeralStorage")
+    @Import(name="ephemeralStorage")
       private final @Nullable Output<TaskDefinitionEphemeralStorageArgs> ephemeralStorage;
 
     public Output<TaskDefinitionEphemeralStorageArgs> getEphemeralStorage() {
@@ -60,7 +60,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of the task execution role that the Amazon ECS container agent and the Docker daemon can assume.
      * 
      */
-    @InputImport(name="executionRoleArn")
+    @Import(name="executionRoleArn")
       private final @Nullable Output<String> executionRoleArn;
 
     public Output<String> getExecutionRoleArn() {
@@ -71,7 +71,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * A unique name for your task definition.
      * 
      */
-    @InputImport(name="family", required=true)
+    @Import(name="family", required=true)
       private final Output<String> family;
 
     public Output<String> getFamily() {
@@ -82,7 +82,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block(s) with Inference Accelerators settings. Detailed below.
      * 
      */
-    @InputImport(name="inferenceAccelerators")
+    @Import(name="inferenceAccelerators")
       private final @Nullable Output<List<TaskDefinitionInferenceAcceleratorArgs>> inferenceAccelerators;
 
     public Output<List<TaskDefinitionInferenceAcceleratorArgs>> getInferenceAccelerators() {
@@ -93,7 +93,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * IPC resource namespace to be used for the containers in the task The valid values are `host`, `task`, and `none`.
      * 
      */
-    @InputImport(name="ipcMode")
+    @Import(name="ipcMode")
       private final @Nullable Output<String> ipcMode;
 
     public Output<String> getIpcMode() {
@@ -104,7 +104,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Amount (in MiB) of memory used by the task. If the `requires_compatibilities` is `FARGATE` this field is required.
      * 
      */
-    @InputImport(name="memory")
+    @Import(name="memory")
       private final @Nullable Output<String> memory;
 
     public Output<String> getMemory() {
@@ -115,7 +115,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Docker networking mode to use for the containers in the task. Valid values are `none`, `bridge`, `awsvpc`, and `host`.
      * 
      */
-    @InputImport(name="networkMode")
+    @Import(name="networkMode")
       private final @Nullable Output<String> networkMode;
 
     public Output<String> getNetworkMode() {
@@ -126,7 +126,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Process namespace to use for the containers in the task. The valid values are `host` and `task`.
      * 
      */
-    @InputImport(name="pidMode")
+    @Import(name="pidMode")
       private final @Nullable Output<String> pidMode;
 
     public Output<String> getPidMode() {
@@ -137,7 +137,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for rules that are taken into consideration during task placement. Maximum number of `placement_constraints` is `10`. Detailed below.
      * 
      */
-    @InputImport(name="placementConstraints")
+    @Import(name="placementConstraints")
       private final @Nullable Output<List<TaskDefinitionPlacementConstraintArgs>> placementConstraints;
 
     public Output<List<TaskDefinitionPlacementConstraintArgs>> getPlacementConstraints() {
@@ -148,7 +148,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for the App Mesh proxy. Detailed below.
      * 
      */
-    @InputImport(name="proxyConfiguration")
+    @Import(name="proxyConfiguration")
       private final @Nullable Output<TaskDefinitionProxyConfigurationArgs> proxyConfiguration;
 
     public Output<TaskDefinitionProxyConfigurationArgs> getProxyConfiguration() {
@@ -159,7 +159,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Set of launch types required by the task. The valid values are `EC2` and `FARGATE`.
      * 
      */
-    @InputImport(name="requiresCompatibilities")
+    @Import(name="requiresCompatibilities")
       private final @Nullable Output<List<String>> requiresCompatibilities;
 
     public Output<List<String>> getRequiresCompatibilities() {
@@ -170,14 +170,14 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for runtime_platform that containers in your task may use.
      * 
      */
-    @InputImport(name="runtimePlatform")
+    @Import(name="runtimePlatform")
       private final @Nullable Output<TaskDefinitionRuntimePlatformArgs> runtimePlatform;
 
     public Output<TaskDefinitionRuntimePlatformArgs> getRuntimePlatform() {
         return this.runtimePlatform == null ? Output.empty() : this.runtimePlatform;
     }
 
-    @InputImport(name="skipDestroy")
+    @Import(name="skipDestroy")
       private final @Nullable Output<Boolean> skipDestroy;
 
     public Output<Boolean> getSkipDestroy() {
@@ -188,7 +188,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Key-value map of resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -199,7 +199,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * ARN of IAM role that allows your Amazon ECS container task to make calls to other AWS services.
      * 
      */
-    @InputImport(name="taskRoleArn")
+    @Import(name="taskRoleArn")
       private final @Nullable Output<String> taskRoleArn;
 
     public Output<String> getTaskRoleArn() {
@@ -210,7 +210,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration block for volumes that containers in your task may use. Detailed below.
      * 
      */
-    @InputImport(name="volumes")
+    @Import(name="volumes")
       private final @Nullable Output<List<TaskDefinitionVolumeArgs>> volumes;
 
     public Output<List<TaskDefinitionVolumeArgs>> getVolumes() {

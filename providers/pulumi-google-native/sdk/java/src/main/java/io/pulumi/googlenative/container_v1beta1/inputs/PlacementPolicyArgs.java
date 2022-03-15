@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.container_v1beta1.enums.PlacementPolicyType;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * The type of placement.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<PlacementPolicyType> type;
 
     public Output<PlacementPolicyType> getType() {

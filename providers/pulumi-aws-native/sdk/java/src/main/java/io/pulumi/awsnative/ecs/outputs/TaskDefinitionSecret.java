@@ -3,19 +3,19 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TaskDefinitionSecret {
     private final String name;
     private final String valueFrom;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TaskDefinitionSecret(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("valueFrom") String valueFrom) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("valueFrom") String valueFrom) {
         this.name = name;
         this.valueFrom = valueFrom;
     }

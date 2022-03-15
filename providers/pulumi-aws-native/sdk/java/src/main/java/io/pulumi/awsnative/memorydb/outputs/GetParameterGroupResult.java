@@ -4,14 +4,14 @@
 package io.pulumi.awsnative.memorydb.outputs;
 
 import io.pulumi.awsnative.memorydb.outputs.ParameterGroupTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetParameterGroupResult {
     /**
      * The Amazon Resource Name (ARN) of the parameter group.
@@ -24,10 +24,10 @@ public final class GetParameterGroupResult {
      */
     private final @Nullable List<ParameterGroupTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetParameterGroupResult(
-        @OutputCustomType.Parameter("aRN") @Nullable String aRN,
-        @OutputCustomType.Parameter("tags") @Nullable List<ParameterGroupTag> tags) {
+        @CustomType.Parameter("aRN") @Nullable String aRN,
+        @CustomType.Parameter("tags") @Nullable List<ParameterGroupTag> tags) {
         this.aRN = aRN;
         this.tags = tags;
     }

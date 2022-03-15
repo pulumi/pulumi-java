@@ -3,14 +3,14 @@
 
 package io.pulumi.aws.elasticache.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetReplicationGroupResult {
     /**
      * The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
@@ -89,24 +89,24 @@ public final class GetReplicationGroupResult {
      */
     private final String snapshotWindow;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetReplicationGroupResult(
-        @OutputCustomType.Parameter("arn") String arn,
-        @OutputCustomType.Parameter("authTokenEnabled") Boolean authTokenEnabled,
-        @OutputCustomType.Parameter("automaticFailoverEnabled") Boolean automaticFailoverEnabled,
-        @OutputCustomType.Parameter("configurationEndpointAddress") String configurationEndpointAddress,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("memberClusters") List<String> memberClusters,
-        @OutputCustomType.Parameter("multiAzEnabled") Boolean multiAzEnabled,
-        @OutputCustomType.Parameter("nodeType") String nodeType,
-        @OutputCustomType.Parameter("numberCacheClusters") Integer numberCacheClusters,
-        @OutputCustomType.Parameter("port") Integer port,
-        @OutputCustomType.Parameter("primaryEndpointAddress") String primaryEndpointAddress,
-        @OutputCustomType.Parameter("readerEndpointAddress") String readerEndpointAddress,
-        @OutputCustomType.Parameter("replicationGroupDescription") String replicationGroupDescription,
-        @OutputCustomType.Parameter("replicationGroupId") String replicationGroupId,
-        @OutputCustomType.Parameter("snapshotRetentionLimit") Integer snapshotRetentionLimit,
-        @OutputCustomType.Parameter("snapshotWindow") String snapshotWindow) {
+        @CustomType.Parameter("arn") String arn,
+        @CustomType.Parameter("authTokenEnabled") Boolean authTokenEnabled,
+        @CustomType.Parameter("automaticFailoverEnabled") Boolean automaticFailoverEnabled,
+        @CustomType.Parameter("configurationEndpointAddress") String configurationEndpointAddress,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("memberClusters") List<String> memberClusters,
+        @CustomType.Parameter("multiAzEnabled") Boolean multiAzEnabled,
+        @CustomType.Parameter("nodeType") String nodeType,
+        @CustomType.Parameter("numberCacheClusters") Integer numberCacheClusters,
+        @CustomType.Parameter("port") Integer port,
+        @CustomType.Parameter("primaryEndpointAddress") String primaryEndpointAddress,
+        @CustomType.Parameter("readerEndpointAddress") String readerEndpointAddress,
+        @CustomType.Parameter("replicationGroupDescription") String replicationGroupDescription,
+        @CustomType.Parameter("replicationGroupId") String replicationGroupId,
+        @CustomType.Parameter("snapshotRetentionLimit") Integer snapshotRetentionLimit,
+        @CustomType.Parameter("snapshotWindow") String snapshotWindow) {
         this.arn = arn;
         this.authTokenEnabled = authTokenEnabled;
         this.automaticFailoverEnabled = automaticFailoverEnabled;

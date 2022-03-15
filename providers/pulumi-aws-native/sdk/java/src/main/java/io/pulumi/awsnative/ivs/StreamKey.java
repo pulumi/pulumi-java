@@ -7,7 +7,7 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ivs.StreamKeyArgs;
 import io.pulumi.awsnative.ivs.outputs.StreamKeyTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public class StreamKey extends io.pulumi.resources.CustomResource {
      * Stream Key ARN is automatically generated on creation and assigned as the unique identifier.
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -37,7 +37,7 @@ public class StreamKey extends io.pulumi.resources.CustomResource {
      * Channel ARN for the stream.
      * 
      */
-    @OutputExport(name="channelArn", type=String.class, parameters={})
+    @Export(name="channelArn", type=String.class, parameters={})
     private Output<String> channelArn;
 
     /**
@@ -51,7 +51,7 @@ public class StreamKey extends io.pulumi.resources.CustomResource {
      * A list of key-value pairs that contain metadata for the asset model.
      * 
      */
-    @OutputExport(name="tags", type=List.class, parameters={StreamKeyTag.class})
+    @Export(name="tags", type=List.class, parameters={StreamKeyTag.class})
     private Output</* @Nullable */ List<StreamKeyTag>> tags;
 
     /**
@@ -65,7 +65,7 @@ public class StreamKey extends io.pulumi.resources.CustomResource {
      * Stream-key value.
      * 
      */
-    @OutputExport(name="value", type=String.class, parameters={})
+    @Export(name="value", type=String.class, parameters={})
     private Output<String> value;
 
     /**

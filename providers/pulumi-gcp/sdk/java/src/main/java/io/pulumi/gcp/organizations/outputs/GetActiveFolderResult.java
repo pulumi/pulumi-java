@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetActiveFolderResult {
     private final String displayName;
     /**
@@ -22,12 +22,12 @@ public final class GetActiveFolderResult {
     private final String name;
     private final String parent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetActiveFolderResult(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parent") String parent) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parent") String parent) {
         this.displayName = displayName;
         this.id = id;
         this.name = name;

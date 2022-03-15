@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GoogleCloudApigeeV1GraphQLOperationResponse {
     /**
      * GraphQL operation name. The name and operation type will be used to apply quotas. If no name is specified, the quota will be applied to all GraphQL operations irrespective of their operation names in the payload.
@@ -21,10 +21,10 @@ public final class GoogleCloudApigeeV1GraphQLOperationResponse {
      */
     private final List<String> operationTypes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GoogleCloudApigeeV1GraphQLOperationResponse(
-        @OutputCustomType.Parameter("operation") String operation,
-        @OutputCustomType.Parameter("operationTypes") List<String> operationTypes) {
+        @CustomType.Parameter("operation") String operation,
+        @CustomType.Parameter("operationTypes") List<String> operationTypes) {
         this.operation = operation;
         this.operationTypes = operationTypes;
     }

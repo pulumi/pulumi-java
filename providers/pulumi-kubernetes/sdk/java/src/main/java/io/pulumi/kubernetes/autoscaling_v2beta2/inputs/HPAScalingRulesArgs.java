@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.HPAScalingPolicyArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class HPAScalingRulesArgs extends io.pulumi.resources.ResourceArgs 
      * policies is a list of potential scaling polices which can be used during scaling. At least one policy must be specified, otherwise the HPAScalingRules will be discarded as invalid
      * 
      */
-    @InputImport(name="policies")
+    @Import(name="policies")
       private final @Nullable Output<List<HPAScalingPolicyArgs>> policies;
 
     public Output<List<HPAScalingPolicyArgs>> getPolicies() {
@@ -36,7 +36,7 @@ public final class HPAScalingRulesArgs extends io.pulumi.resources.ResourceArgs 
      * selectPolicy is used to specify which policy should be used. If not set, the default value MaxPolicySelect is used.
      * 
      */
-    @InputImport(name="selectPolicy")
+    @Import(name="selectPolicy")
       private final @Nullable Output<String> selectPolicy;
 
     public Output<String> getSelectPolicy() {
@@ -47,7 +47,7 @@ public final class HPAScalingRulesArgs extends io.pulumi.resources.ResourceArgs 
      * StabilizationWindowSeconds is the number of seconds for which past recommendations should be considered while scaling up or scaling down. StabilizationWindowSeconds must be greater than or equal to zero and less than or equal to 3600 (one hour). If not set, use the default values: - For scale up: 0 (i.e. no stabilization is done). - For scale down: 300 (i.e. the stabilization window is 300 seconds long).
      * 
      */
-    @InputImport(name="stabilizationWindowSeconds")
+    @Import(name="stabilizationWindowSeconds")
       private final @Nullable Output<Integer> stabilizationWindowSeconds;
 
     public Output<Integer> getStabilizationWindowSeconds() {

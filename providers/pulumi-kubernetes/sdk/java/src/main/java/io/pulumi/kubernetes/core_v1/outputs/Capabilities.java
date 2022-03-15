@@ -3,13 +3,13 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Capabilities {
     /**
      * Added capabilities
@@ -22,10 +22,10 @@ public final class Capabilities {
      */
     private final @Nullable List<String> drop;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Capabilities(
-        @OutputCustomType.Parameter("add") @Nullable List<String> add,
-        @OutputCustomType.Parameter("drop") @Nullable List<String> drop) {
+        @CustomType.Parameter("add") @Nullable List<String> add,
+        @CustomType.Parameter("drop") @Nullable List<String> drop) {
         this.add = add;
         this.drop = drop;
     }

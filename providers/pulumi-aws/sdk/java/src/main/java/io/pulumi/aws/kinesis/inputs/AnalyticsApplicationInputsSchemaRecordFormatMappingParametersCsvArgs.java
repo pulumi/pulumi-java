@@ -4,7 +4,7 @@
 package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
      * The Column Delimiter.
      * 
      */
-    @InputImport(name="recordColumnDelimiter", required=true)
+    @Import(name="recordColumnDelimiter", required=true)
       private final Output<String> recordColumnDelimiter;
 
     public Output<String> getRecordColumnDelimiter() {
@@ -28,7 +28,7 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
      * The Row Delimiter.
      * 
      */
-    @InputImport(name="recordRowDelimiter", required=true)
+    @Import(name="recordRowDelimiter", required=true)
       private final Output<String> recordRowDelimiter;
 
     public Output<String> getRecordRowDelimiter() {

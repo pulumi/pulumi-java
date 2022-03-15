@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.guestconfiguration.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class VMSSVMInfoResponse {
     /**
      * A value indicating compliance status of the machine for the assigned guest configuration.
@@ -35,13 +35,13 @@ public final class VMSSVMInfoResponse {
      */
     private final String vmResourceId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VMSSVMInfoResponse(
-        @OutputCustomType.Parameter("complianceStatus") String complianceStatus,
-        @OutputCustomType.Parameter("lastComplianceChecked") String lastComplianceChecked,
-        @OutputCustomType.Parameter("latestReportId") String latestReportId,
-        @OutputCustomType.Parameter("vmId") String vmId,
-        @OutputCustomType.Parameter("vmResourceId") String vmResourceId) {
+        @CustomType.Parameter("complianceStatus") String complianceStatus,
+        @CustomType.Parameter("lastComplianceChecked") String lastComplianceChecked,
+        @CustomType.Parameter("latestReportId") String latestReportId,
+        @CustomType.Parameter("vmId") String vmId,
+        @CustomType.Parameter("vmResourceId") String vmResourceId) {
         this.complianceStatus = complianceStatus;
         this.lastComplianceChecked = lastComplianceChecked;
         this.latestReportId = latestReportId;

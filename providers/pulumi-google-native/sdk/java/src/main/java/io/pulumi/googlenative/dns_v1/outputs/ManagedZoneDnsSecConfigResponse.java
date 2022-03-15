@@ -3,13 +3,13 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dns_v1.outputs.DnsKeySpecResponse;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedZoneDnsSecConfigResponse {
     /**
      * Specifies parameters for generating initial DnsKeys for this ManagedZone. Can only be changed while the state is OFF.
@@ -28,12 +28,12 @@ public final class ManagedZoneDnsSecConfigResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedZoneDnsSecConfigResponse(
-        @OutputCustomType.Parameter("defaultKeySpecs") List<DnsKeySpecResponse> defaultKeySpecs,
-        @OutputCustomType.Parameter("kind") String kind,
-        @OutputCustomType.Parameter("nonExistence") String nonExistence,
-        @OutputCustomType.Parameter("state") String state) {
+        @CustomType.Parameter("defaultKeySpecs") List<DnsKeySpecResponse> defaultKeySpecs,
+        @CustomType.Parameter("kind") String kind,
+        @CustomType.Parameter("nonExistence") String nonExistence,
+        @CustomType.Parameter("state") String state) {
         this.defaultKeySpecs = defaultKeySpecs;
         this.kind = kind;
         this.nonExistence = nonExistence;

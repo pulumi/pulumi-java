@@ -10,7 +10,7 @@ import io.pulumi.azurenative.batch.inputs.BatchAccountIdentityArgs;
 import io.pulumi.azurenative.batch.inputs.EncryptionPropertiesArgs;
 import io.pulumi.azurenative.batch.inputs.KeyVaultReferenceArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * A name for the Batch account which must be unique within the region. Batch account names must be between 3 and 24 characters in length and must use only numbers and lowercase letters. This name is used as part of the DNS name that is used to access the Batch service in the region in which the account is created. For example: http://accountname.region.batch.azure.com/.
      * 
      */
-    @InputImport(name="accountName")
+    @Import(name="accountName")
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
@@ -36,7 +36,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * The properties related to the auto-storage account.
      * 
      */
-    @InputImport(name="autoStorage")
+    @Import(name="autoStorage")
       private final @Nullable Output<AutoStorageBasePropertiesArgs> autoStorage;
 
     public Output<AutoStorageBasePropertiesArgs> getAutoStorage() {
@@ -47,7 +47,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * Configures how customer data is encrypted inside the Batch account. By default, accounts are encrypted using a Microsoft managed key. For additional control, a customer-managed key can be used instead.
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<EncryptionPropertiesArgs> encryption;
 
     public Output<EncryptionPropertiesArgs> getEncryption() {
@@ -58,7 +58,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * The identity of the Batch account.
      * 
      */
-    @InputImport(name="identity")
+    @Import(name="identity")
       private final @Nullable Output<BatchAccountIdentityArgs> identity;
 
     public Output<BatchAccountIdentityArgs> getIdentity() {
@@ -69,7 +69,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to the Azure key vault associated with the Batch account.
      * 
      */
-    @InputImport(name="keyVaultReference")
+    @Import(name="keyVaultReference")
       private final @Nullable Output<KeyVaultReferenceArgs> keyVaultReference;
 
     public Output<KeyVaultReferenceArgs> getKeyVaultReference() {
@@ -80,7 +80,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * The region in which to create the account.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -91,7 +91,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * The pool allocation mode also affects how clients may authenticate to the Batch Service API. If the mode is BatchService, clients may authenticate using access keys or Azure Active Directory. If the mode is UserSubscription, clients must use Azure Active Directory. The default is BatchService.
      * 
      */
-    @InputImport(name="poolAllocationMode")
+    @Import(name="poolAllocationMode")
       private final @Nullable Output<PoolAllocationMode> poolAllocationMode;
 
     public Output<PoolAllocationMode> getPoolAllocationMode() {
@@ -102,7 +102,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * If not specified, the default value is 'enabled'.
      * 
      */
-    @InputImport(name="publicNetworkAccess")
+    @Import(name="publicNetworkAccess")
       private final @Nullable Output<PublicNetworkAccessType> publicNetworkAccess;
 
     public Output<PublicNetworkAccessType> getPublicNetworkAccess() {
@@ -113,7 +113,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the resource group that contains the Batch account.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -124,7 +124,7 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
      * The user-specified tags associated with the account.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {

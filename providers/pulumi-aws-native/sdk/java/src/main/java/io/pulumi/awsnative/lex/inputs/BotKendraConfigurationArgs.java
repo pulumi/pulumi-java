@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,14 +19,14 @@ public final class BotKendraConfigurationArgs extends io.pulumi.resources.Resour
 
     public static final BotKendraConfigurationArgs Empty = new BotKendraConfigurationArgs();
 
-    @InputImport(name="kendraIndex", required=true)
+    @Import(name="kendraIndex", required=true)
       private final Output<String> kendraIndex;
 
     public Output<String> getKendraIndex() {
         return this.kendraIndex;
     }
 
-    @InputImport(name="queryFilterString")
+    @Import(name="queryFilterString")
       private final @Nullable Output<String> queryFilterString;
 
     public Output<String> getQueryFilterString() {
@@ -37,7 +37,7 @@ public final class BotKendraConfigurationArgs extends io.pulumi.resources.Resour
      * Determines whether the AMAZON.KendraSearchIntent intent uses a custom query string to query the Amazon Kendra index.
      * 
      */
-    @InputImport(name="queryFilterStringEnabled")
+    @Import(name="queryFilterStringEnabled")
       private final @Nullable Output<Boolean> queryFilterStringEnabled;
 
     public Output<Boolean> getQueryFilterStringEnabled() {

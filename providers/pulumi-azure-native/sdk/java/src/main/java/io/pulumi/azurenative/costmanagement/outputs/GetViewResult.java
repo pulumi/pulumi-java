@@ -7,7 +7,7 @@ import io.pulumi.azurenative.costmanagement.outputs.KpiPropertiesResponse;
 import io.pulumi.azurenative.costmanagement.outputs.PivotPropertiesResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportConfigDatasetResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportConfigTimePeriodResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetViewResult {
     /**
      * Show costs accumulated over time.
@@ -113,27 +113,27 @@ public final class GetViewResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetViewResult(
-        @OutputCustomType.Parameter("accumulated") @Nullable String accumulated,
-        @OutputCustomType.Parameter("chart") @Nullable String chart,
-        @OutputCustomType.Parameter("createdOn") String createdOn,
-        @OutputCustomType.Parameter("currency") String currency,
-        @OutputCustomType.Parameter("dataSet") @Nullable ReportConfigDatasetResponse dataSet,
-        @OutputCustomType.Parameter("dateRange") String dateRange,
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("includeMonetaryCommitment") Boolean includeMonetaryCommitment,
-        @OutputCustomType.Parameter("kpis") @Nullable List<KpiPropertiesResponse> kpis,
-        @OutputCustomType.Parameter("metric") @Nullable String metric,
-        @OutputCustomType.Parameter("modifiedOn") String modifiedOn,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pivots") @Nullable List<PivotPropertiesResponse> pivots,
-        @OutputCustomType.Parameter("scope") @Nullable String scope,
-        @OutputCustomType.Parameter("timePeriod") @Nullable ReportConfigTimePeriodResponse timePeriod,
-        @OutputCustomType.Parameter("timeframe") String timeframe,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("accumulated") @Nullable String accumulated,
+        @CustomType.Parameter("chart") @Nullable String chart,
+        @CustomType.Parameter("createdOn") String createdOn,
+        @CustomType.Parameter("currency") String currency,
+        @CustomType.Parameter("dataSet") @Nullable ReportConfigDatasetResponse dataSet,
+        @CustomType.Parameter("dateRange") String dateRange,
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("eTag") @Nullable String eTag,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("includeMonetaryCommitment") Boolean includeMonetaryCommitment,
+        @CustomType.Parameter("kpis") @Nullable List<KpiPropertiesResponse> kpis,
+        @CustomType.Parameter("metric") @Nullable String metric,
+        @CustomType.Parameter("modifiedOn") String modifiedOn,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pivots") @Nullable List<PivotPropertiesResponse> pivots,
+        @CustomType.Parameter("scope") @Nullable String scope,
+        @CustomType.Parameter("timePeriod") @Nullable ReportConfigTimePeriodResponse timePeriod,
+        @CustomType.Parameter("timeframe") String timeframe,
+        @CustomType.Parameter("type") String type) {
         this.accumulated = accumulated;
         this.chart = chart;
         this.createdOn = createdOn;

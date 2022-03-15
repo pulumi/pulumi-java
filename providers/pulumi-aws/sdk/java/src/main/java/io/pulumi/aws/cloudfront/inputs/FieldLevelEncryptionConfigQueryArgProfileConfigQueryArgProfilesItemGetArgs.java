@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
      * ID of profile to use for field-level encryption query argument-profile mapping
      * 
      */
-    @InputImport(name="profileId", required=true)
+    @Import(name="profileId", required=true)
       private final Output<String> profileId;
 
     public Output<String> getProfileId() {
@@ -28,7 +28,7 @@ public final class FieldLevelEncryptionConfigQueryArgProfileConfigQueryArgProfil
      * Query argument for field-level encryption query argument-profile mapping.
      * 
      */
-    @InputImport(name="queryArg", required=true)
+    @Import(name="queryArg", required=true)
       private final Output<String> queryArg;
 
     public Output<String> getQueryArg() {

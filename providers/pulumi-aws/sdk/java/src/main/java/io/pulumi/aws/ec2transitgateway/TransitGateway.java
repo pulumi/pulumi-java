@@ -7,7 +7,7 @@ import io.pulumi.aws.Utilities;
 import io.pulumi.aws.ec2transitgateway.TransitGatewayArgs;
 import io.pulumi.aws.ec2transitgateway.inputs.TransitGatewayState;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -34,7 +34,7 @@ public class TransitGateway extends io.pulumi.resources.CustomResource {
      * Private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is `64512` to `65534` for 16-bit ASNs and `4200000000` to `4294967294` for 32-bit ASNs. Default value: `64512`.
      * 
      */
-    @OutputExport(name="amazonSideAsn", type=Integer.class, parameters={})
+    @Export(name="amazonSideAsn", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> amazonSideAsn;
 
     /**
@@ -48,7 +48,7 @@ public class TransitGateway extends io.pulumi.resources.CustomResource {
      * EC2 Transit Gateway Amazon Resource Name (ARN)
      * 
      */
-    @OutputExport(name="arn", type=String.class, parameters={})
+    @Export(name="arn", type=String.class, parameters={})
     private Output<String> arn;
 
     /**
@@ -62,7 +62,7 @@ public class TransitGateway extends io.pulumi.resources.CustomResource {
      * Identifier of the default association route table
      * 
      */
-    @OutputExport(name="associationDefaultRouteTableId", type=String.class, parameters={})
+    @Export(name="associationDefaultRouteTableId", type=String.class, parameters={})
     private Output<String> associationDefaultRouteTableId;
 
     /**
@@ -76,7 +76,7 @@ public class TransitGateway extends io.pulumi.resources.CustomResource {
      * Whether resource attachment requests are automatically accepted. Valid values: `disable`, `enable`. Default value: `disable`.
      * 
      */
-    @OutputExport(name="autoAcceptSharedAttachments", type=String.class, parameters={})
+    @Export(name="autoAcceptSharedAttachments", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoAcceptSharedAttachments;
 
     /**
@@ -90,7 +90,7 @@ public class TransitGateway extends io.pulumi.resources.CustomResource {
      * Whether resource attachments are automatically associated with the default association route table. Valid values: `disable`, `enable`. Default value: `enable`.
      * 
      */
-    @OutputExport(name="defaultRouteTableAssociation", type=String.class, parameters={})
+    @Export(name="defaultRouteTableAssociation", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultRouteTableAssociation;
 
     /**
@@ -104,7 +104,7 @@ public class TransitGateway extends io.pulumi.resources.CustomResource {
      * Whether resource attachments automatically propagate routes to the default propagation route table. Valid values: `disable`, `enable`. Default value: `enable`.
      * 
      */
-    @OutputExport(name="defaultRouteTablePropagation", type=String.class, parameters={})
+    @Export(name="defaultRouteTablePropagation", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultRouteTablePropagation;
 
     /**
@@ -118,7 +118,7 @@ public class TransitGateway extends io.pulumi.resources.CustomResource {
      * Description of the EC2 Transit Gateway.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -132,7 +132,7 @@ public class TransitGateway extends io.pulumi.resources.CustomResource {
      * Whether DNS support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
      * 
      */
-    @OutputExport(name="dnsSupport", type=String.class, parameters={})
+    @Export(name="dnsSupport", type=String.class, parameters={})
     private Output</* @Nullable */ String> dnsSupport;
 
     /**
@@ -146,7 +146,7 @@ public class TransitGateway extends io.pulumi.resources.CustomResource {
      * Identifier of the AWS account that owns the EC2 Transit Gateway
      * 
      */
-    @OutputExport(name="ownerId", type=String.class, parameters={})
+    @Export(name="ownerId", type=String.class, parameters={})
     private Output<String> ownerId;
 
     /**
@@ -160,7 +160,7 @@ public class TransitGateway extends io.pulumi.resources.CustomResource {
      * Identifier of the default propagation route table
      * 
      */
-    @OutputExport(name="propagationDefaultRouteTableId", type=String.class, parameters={})
+    @Export(name="propagationDefaultRouteTableId", type=String.class, parameters={})
     private Output<String> propagationDefaultRouteTableId;
 
     /**
@@ -174,7 +174,7 @@ public class TransitGateway extends io.pulumi.resources.CustomResource {
      * Key-value tags for the EC2 Transit Gateway. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -188,7 +188,7 @@ public class TransitGateway extends io.pulumi.resources.CustomResource {
      * A map of tags assigned to the resource, including those inherited from the provider `default_tags` configuration block.
      * 
      */
-    @OutputExport(name="tagsAll", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tagsAll", type=Map.class, parameters={String.class, String.class})
     private Output<Map<String,String>> tagsAll;
 
     /**
@@ -202,7 +202,7 @@ public class TransitGateway extends io.pulumi.resources.CustomResource {
      * Whether VPN Equal Cost Multipath Protocol support is enabled. Valid values: `disable`, `enable`. Default value: `enable`.
      * 
      */
-    @OutputExport(name="vpnEcmpSupport", type=String.class, parameters={})
+    @Export(name="vpnEcmpSupport", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpnEcmpSupport;
 
     /**

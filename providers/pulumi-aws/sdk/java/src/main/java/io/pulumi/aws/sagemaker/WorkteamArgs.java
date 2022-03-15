@@ -6,7 +6,7 @@ package io.pulumi.aws.sagemaker;
 import io.pulumi.aws.sagemaker.inputs.WorkteamMemberDefinitionArgs;
 import io.pulumi.aws.sagemaker.inputs.WorkteamNotificationConfigurationArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the work team.
      * 
      */
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
      * A list of Member Definitions that contains objects that identify the workers that make up the work team. Workforces can be created using Amazon Cognito or your own OIDC Identity Provider (IdP). For private workforces created using Amazon Cognito use `cognito_member_definition`. For workforces created using your own OIDC identity provider (IdP) use `oidc_member_definition`. Do not provide input for both of these parameters in a single request. see Member Definition details below.
      * 
      */
-    @InputImport(name="memberDefinitions", required=true)
+    @Import(name="memberDefinitions", required=true)
       private final Output<List<WorkteamMemberDefinitionArgs>> memberDefinitions;
 
     public Output<List<WorkteamMemberDefinitionArgs>> getMemberDefinitions() {
@@ -44,7 +44,7 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
      * Configures notification of workers regarding available or expiring work items. see Notification Configuration details below.
      * 
      */
-    @InputImport(name="notificationConfiguration")
+    @Import(name="notificationConfiguration")
       private final @Nullable Output<WorkteamNotificationConfigurationArgs> notificationConfiguration;
 
     public Output<WorkteamNotificationConfigurationArgs> getNotificationConfiguration() {
@@ -55,7 +55,7 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
      * A map of tags to assign to the resource. If configured with a provider `default_tags` configuration block present, tags with matching keys will overwrite those defined at the provider-level.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -66,7 +66,7 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the Workteam (must be unique).
      * 
      */
-    @InputImport(name="workforceName", required=true)
+    @Import(name="workforceName", required=true)
       private final Output<String> workforceName;
 
     public Output<String> getWorkforceName() {
@@ -77,7 +77,7 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the workforce.
      * 
      */
-    @InputImport(name="workteamName", required=true)
+    @Import(name="workteamName", required=true)
       private final Output<String> workteamName;
 
     public Output<String> getWorkteamName() {

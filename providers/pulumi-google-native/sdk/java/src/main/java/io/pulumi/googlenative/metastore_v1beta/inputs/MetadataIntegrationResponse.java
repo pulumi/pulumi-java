@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.metastore_v1beta.inputs.DataCatalogConfigResponse;
 import io.pulumi.googlenative.metastore_v1beta.inputs.DataplexConfigResponse;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MetadataIntegrationResponse extends io.pulumi.resources.Invok
      * The integration config for the Data Catalog service.
      * 
      */
-    @InputImport(name="dataCatalogConfig", required=true)
+    @Import(name="dataCatalogConfig", required=true)
       private final DataCatalogConfigResponse dataCatalogConfig;
 
     public DataCatalogConfigResponse getDataCatalogConfig() {
@@ -32,7 +32,7 @@ public final class MetadataIntegrationResponse extends io.pulumi.resources.Invok
      * The integration config for the Dataplex service.
      * 
      */
-    @InputImport(name="dataplexConfig", required=true)
+    @Import(name="dataplexConfig", required=true)
       private final DataplexConfigResponse dataplexConfig;
 
     public DataplexConfigResponse getDataplexConfig() {

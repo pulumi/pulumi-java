@@ -3,11 +3,11 @@
 
 package io.pulumi.azurenative.hybriddata.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CustomerSecretResponse {
     /**
      * The encryption algorithm used to encrypt data.
@@ -25,11 +25,11 @@ public final class CustomerSecretResponse {
      */
     private final String keyValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CustomerSecretResponse(
-        @OutputCustomType.Parameter("algorithm") String algorithm,
-        @OutputCustomType.Parameter("keyIdentifier") String keyIdentifier,
-        @OutputCustomType.Parameter("keyValue") String keyValue) {
+        @CustomType.Parameter("algorithm") String algorithm,
+        @CustomType.Parameter("keyIdentifier") String keyIdentifier,
+        @CustomType.Parameter("keyValue") String keyValue) {
         this.algorithm = algorithm;
         this.keyIdentifier = keyIdentifier;
         this.keyValue = keyValue;

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobHadoopJobLoggingConfig;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplateJobHadoopJob {
     /**
      * Optional. HCFS URIs of archives to be extracted into the working directory of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and .zip.
@@ -55,16 +55,16 @@ public final class WorkflowTemplateJobHadoopJob {
      */
     private final @Nullable Map<String,String> properties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplateJobHadoopJob(
-        @OutputCustomType.Parameter("archiveUris") @Nullable List<String> archiveUris,
-        @OutputCustomType.Parameter("args") @Nullable List<String> args,
-        @OutputCustomType.Parameter("fileUris") @Nullable List<String> fileUris,
-        @OutputCustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
-        @OutputCustomType.Parameter("loggingConfig") @Nullable WorkflowTemplateJobHadoopJobLoggingConfig loggingConfig,
-        @OutputCustomType.Parameter("mainClass") @Nullable String mainClass,
-        @OutputCustomType.Parameter("mainJarFileUri") @Nullable String mainJarFileUri,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties) {
+        @CustomType.Parameter("archiveUris") @Nullable List<String> archiveUris,
+        @CustomType.Parameter("args") @Nullable List<String> args,
+        @CustomType.Parameter("fileUris") @Nullable List<String> fileUris,
+        @CustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
+        @CustomType.Parameter("loggingConfig") @Nullable WorkflowTemplateJobHadoopJobLoggingConfig loggingConfig,
+        @CustomType.Parameter("mainClass") @Nullable String mainClass,
+        @CustomType.Parameter("mainJarFileUri") @Nullable String mainJarFileUri,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;

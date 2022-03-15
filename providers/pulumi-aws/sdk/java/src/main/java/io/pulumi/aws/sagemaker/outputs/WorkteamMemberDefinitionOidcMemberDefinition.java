@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.sagemaker.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkteamMemberDefinitionOidcMemberDefinition {
     /**
      * A list of comma separated strings that identifies user groups in your OIDC IdP. Each user group is made up of a group of private workers.
@@ -16,8 +16,8 @@ public final class WorkteamMemberDefinitionOidcMemberDefinition {
      */
     private final List<String> groups;
 
-    @OutputCustomType.Constructor
-    private WorkteamMemberDefinitionOidcMemberDefinition(@OutputCustomType.Parameter("groups") List<String> groups) {
+    @CustomType.Constructor
+    private WorkteamMemberDefinitionOidcMemberDefinition(@CustomType.Parameter("groups") List<String> groups) {
         this.groups = groups;
     }
 

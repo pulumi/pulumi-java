@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.importexport.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExportResponse {
     /**
      * The relative URI to the block blob that contains the list of blob paths or blob path prefixes as defined above, beginning with the container name. If the blob is in root container, the URI must begin with $root.
@@ -28,11 +28,11 @@ public final class ExportResponse {
      */
     private final @Nullable List<String> blobPathPrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExportResponse(
-        @OutputCustomType.Parameter("blobListBlobPath") @Nullable String blobListBlobPath,
-        @OutputCustomType.Parameter("blobPath") @Nullable List<String> blobPath,
-        @OutputCustomType.Parameter("blobPathPrefix") @Nullable List<String> blobPathPrefix) {
+        @CustomType.Parameter("blobListBlobPath") @Nullable String blobListBlobPath,
+        @CustomType.Parameter("blobPath") @Nullable List<String> blobPath,
+        @CustomType.Parameter("blobPathPrefix") @Nullable List<String> blobPathPrefix) {
         this.blobListBlobPath = blobListBlobPath;
         this.blobPath = blobPath;
         this.blobPathPrefix = blobPathPrefix;

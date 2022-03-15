@@ -7,7 +7,7 @@ import io.pulumi.awsnative.lex.inputs.BotIntentArgs;
 import io.pulumi.awsnative.lex.inputs.BotSlotTypeArgs;
 import io.pulumi.awsnative.lex.inputs.BotVoiceSettingsArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final BotLocaleArgs Empty = new BotLocaleArgs();
 
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -34,21 +34,21 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
      * List of intents
      * 
      */
-    @InputImport(name="intents")
+    @Import(name="intents")
       private final @Nullable Output<List<BotIntentArgs>> intents;
 
     public Output<List<BotIntentArgs>> getIntents() {
         return this.intents == null ? Output.empty() : this.intents;
     }
 
-    @InputImport(name="localeId", required=true)
+    @Import(name="localeId", required=true)
       private final Output<String> localeId;
 
     public Output<String> getLocaleId() {
         return this.localeId;
     }
 
-    @InputImport(name="nluConfidenceThreshold", required=true)
+    @Import(name="nluConfidenceThreshold", required=true)
       private final Output<Double> nluConfidenceThreshold;
 
     public Output<Double> getNluConfidenceThreshold() {
@@ -59,14 +59,14 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
      * List of SlotTypes
      * 
      */
-    @InputImport(name="slotTypes")
+    @Import(name="slotTypes")
       private final @Nullable Output<List<BotSlotTypeArgs>> slotTypes;
 
     public Output<List<BotSlotTypeArgs>> getSlotTypes() {
         return this.slotTypes == null ? Output.empty() : this.slotTypes;
     }
 
-    @InputImport(name="voiceSettings")
+    @Import(name="voiceSettings")
       private final @Nullable Output<BotVoiceSettingsArgs> voiceSettings;
 
     public Output<BotVoiceSettingsArgs> getVoiceSettings() {

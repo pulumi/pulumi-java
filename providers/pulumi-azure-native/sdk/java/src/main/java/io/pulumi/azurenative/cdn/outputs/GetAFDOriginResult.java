@@ -6,14 +6,14 @@ package io.pulumi.azurenative.cdn.outputs;
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.SharedPrivateLinkResourcePropertiesResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAFDOriginResult {
     /**
      * Resource reference to the Azure origin resource.
@@ -87,23 +87,23 @@ public final class GetAFDOriginResult {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAFDOriginResult(
-        @OutputCustomType.Parameter("azureOrigin") @Nullable ResourceReferenceResponse azureOrigin,
-        @OutputCustomType.Parameter("deploymentStatus") String deploymentStatus,
-        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
-        @OutputCustomType.Parameter("hostName") String hostName,
-        @OutputCustomType.Parameter("httpPort") @Nullable Integer httpPort,
-        @OutputCustomType.Parameter("httpsPort") @Nullable Integer httpsPort,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("originHostHeader") @Nullable String originHostHeader,
-        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sharedPrivateLinkResource") @Nullable SharedPrivateLinkResourcePropertiesResponse sharedPrivateLinkResource,
-        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
+        @CustomType.Parameter("azureOrigin") @Nullable ResourceReferenceResponse azureOrigin,
+        @CustomType.Parameter("deploymentStatus") String deploymentStatus,
+        @CustomType.Parameter("enabledState") @Nullable String enabledState,
+        @CustomType.Parameter("hostName") String hostName,
+        @CustomType.Parameter("httpPort") @Nullable Integer httpPort,
+        @CustomType.Parameter("httpsPort") @Nullable Integer httpsPort,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("originHostHeader") @Nullable String originHostHeader,
+        @CustomType.Parameter("priority") @Nullable Integer priority,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sharedPrivateLinkResource") @Nullable SharedPrivateLinkResourcePropertiesResponse sharedPrivateLinkResource,
+        @CustomType.Parameter("systemData") SystemDataResponse systemData,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("weight") @Nullable Integer weight) {
         this.azureOrigin = azureOrigin;
         this.deploymentStatus = deploymentStatus;
         this.enabledState = enabledState;

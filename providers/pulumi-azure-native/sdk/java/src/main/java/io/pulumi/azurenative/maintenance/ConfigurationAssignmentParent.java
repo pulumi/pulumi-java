@@ -8,7 +8,7 @@ import io.pulumi.azurenative.maintenance.ConfigurationAssignmentParentArgs;
 import io.pulumi.azurenative.maintenance.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +35,7 @@ public class ConfigurationAssignmentParent extends io.pulumi.resources.CustomRes
      * Location of the resource
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -49,7 +49,7 @@ public class ConfigurationAssignmentParent extends io.pulumi.resources.CustomRes
      * The maintenance configuration Id
      * 
      */
-    @OutputExport(name="maintenanceConfigurationId", type=String.class, parameters={})
+    @Export(name="maintenanceConfigurationId", type=String.class, parameters={})
     private Output</* @Nullable */ String> maintenanceConfigurationId;
 
     /**
@@ -63,7 +63,7 @@ public class ConfigurationAssignmentParent extends io.pulumi.resources.CustomRes
      * Name of the resource
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class ConfigurationAssignmentParent extends io.pulumi.resources.CustomRes
      * The unique resourceId
      * 
      */
-    @OutputExport(name="resourceId", type=String.class, parameters={})
+    @Export(name="resourceId", type=String.class, parameters={})
     private Output</* @Nullable */ String> resourceId;
 
     /**
@@ -91,7 +91,7 @@ public class ConfigurationAssignmentParent extends io.pulumi.resources.CustomRes
      * Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
-    @OutputExport(name="systemData", type=SystemDataResponse.class, parameters={})
+    @Export(name="systemData", type=SystemDataResponse.class, parameters={})
     private Output<SystemDataResponse> systemData;
 
     /**
@@ -105,7 +105,7 @@ public class ConfigurationAssignmentParent extends io.pulumi.resources.CustomRes
      * Type of the resource
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

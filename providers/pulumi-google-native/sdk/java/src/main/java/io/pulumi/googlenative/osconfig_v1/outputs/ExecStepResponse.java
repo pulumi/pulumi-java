@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.osconfig_v1.outputs.ExecStepConfigResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExecStepResponse {
     /**
      * The ExecStepConfig for all Linux VMs targeted by the PatchJob.
@@ -20,10 +20,10 @@ public final class ExecStepResponse {
      */
     private final ExecStepConfigResponse windowsExecStepConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExecStepResponse(
-        @OutputCustomType.Parameter("linuxExecStepConfig") ExecStepConfigResponse linuxExecStepConfig,
-        @OutputCustomType.Parameter("windowsExecStepConfig") ExecStepConfigResponse windowsExecStepConfig) {
+        @CustomType.Parameter("linuxExecStepConfig") ExecStepConfigResponse linuxExecStepConfig,
+        @CustomType.Parameter("windowsExecStepConfig") ExecStepConfigResponse windowsExecStepConfig) {
         this.linuxExecStepConfig = linuxExecStepConfig;
         this.windowsExecStepConfig = windowsExecStepConfig;
     }

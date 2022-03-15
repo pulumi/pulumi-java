@@ -5,10 +5,10 @@ import com.google.common.collect.ImmutableMap;
 import io.pulumi.core.Output;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.TypeShape;
-import io.pulumi.core.annotations.InputImport;
-import io.pulumi.core.annotations.OutputCustomType;
-import io.pulumi.core.annotations.OutputCustomType.Constructor;
-import io.pulumi.core.annotations.OutputCustomType.Parameter;
+import io.pulumi.core.annotations.CustomType;
+import io.pulumi.core.annotations.CustomType.Constructor;
+import io.pulumi.core.annotations.CustomType.Parameter;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.TestOptions;
@@ -80,11 +80,11 @@ public class DeploymentInvokeTest {
     static class CustomArgs extends InvokeArgs {
         public static final CustomArgs Empty = new CustomArgs(null, null);
 
-        @InputImport(name = "text")
+        @Import(name = "text")
         @Nullable
         public final String text;
 
-        @InputImport(name = "defaultNamespace")
+        @Import(name = "defaultNamespace")
         @Nullable
         public final String defaultNamespace;
 
@@ -94,7 +94,7 @@ public class DeploymentInvokeTest {
         }
     }
 
-    @OutputCustomType
+    @CustomType
     static class CustomResult {
         public final ImmutableList<ImmutableMap<String, Object>> result;
 

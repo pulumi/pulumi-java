@@ -6,7 +6,7 @@ package io.pulumi.awsnative.logs;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.logs.ResourcePolicyArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * The policy document
      * 
      */
-    @OutputExport(name="policyDocument", type=String.class, parameters={})
+    @Export(name="policyDocument", type=String.class, parameters={})
     private Output<String> policyDocument;
 
     /**
@@ -35,7 +35,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * A name for resource policy
      * 
      */
-    @OutputExport(name="policyName", type=String.class, parameters={})
+    @Export(name="policyName", type=String.class, parameters={})
     private Output<String> policyName;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class JwtLocationResponse {
     /**
      * Specifies HTTP header name to extract JWT token.
@@ -25,11 +25,11 @@ public final class JwtLocationResponse {
      */
     private final String valuePrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JwtLocationResponse(
-        @OutputCustomType.Parameter("header") String header,
-        @OutputCustomType.Parameter("query") String query,
-        @OutputCustomType.Parameter("valuePrefix") String valuePrefix) {
+        @CustomType.Parameter("header") String header,
+        @CustomType.Parameter("query") String query,
+        @CustomType.Parameter("valuePrefix") String valuePrefix) {
         this.header = header;
         this.query = query;
         this.valuePrefix = valuePrefix;

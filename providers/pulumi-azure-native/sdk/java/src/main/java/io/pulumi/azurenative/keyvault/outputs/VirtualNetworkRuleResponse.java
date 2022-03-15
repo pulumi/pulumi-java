@@ -3,14 +3,14 @@
 
 package io.pulumi.azurenative.keyvault.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VirtualNetworkRuleResponse {
     /**
      * Full resource id of a vnet subnet, such as '/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1'.
@@ -23,10 +23,10 @@ public final class VirtualNetworkRuleResponse {
      */
     private final @Nullable Boolean ignoreMissingVnetServiceEndpoint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VirtualNetworkRuleResponse(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ignoreMissingVnetServiceEndpoint") @Nullable Boolean ignoreMissingVnetServiceEndpoint) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ignoreMissingVnetServiceEndpoint") @Nullable Boolean ignoreMissingVnetServiceEndpoint) {
         this.id = id;
         this.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
     }

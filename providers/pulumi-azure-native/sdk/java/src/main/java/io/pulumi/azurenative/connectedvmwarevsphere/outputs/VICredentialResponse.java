@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VICredentialResponse {
     /**
      * Gets or sets username to connect with the vCenter.
@@ -17,8 +17,8 @@ public final class VICredentialResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
-    private VICredentialResponse(@OutputCustomType.Parameter("username") @Nullable String username) {
+    @CustomType.Constructor
+    private VICredentialResponse(@CustomType.Parameter("username") @Nullable String username) {
         this.username = username;
     }
 

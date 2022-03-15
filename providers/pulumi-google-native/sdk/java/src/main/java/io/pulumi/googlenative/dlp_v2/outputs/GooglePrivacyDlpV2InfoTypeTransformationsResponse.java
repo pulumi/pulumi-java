@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeTransformationResponse;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GooglePrivacyDlpV2InfoTypeTransformationsResponse {
     /**
      * Transformation for each infoType. Cannot specify more than one for a given infoType.
@@ -16,8 +16,8 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationsResponse {
      */
     private final List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations;
 
-    @OutputCustomType.Constructor
-    private GooglePrivacyDlpV2InfoTypeTransformationsResponse(@OutputCustomType.Parameter("transformations") List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations) {
+    @CustomType.Constructor
+    private GooglePrivacyDlpV2InfoTypeTransformationsResponse(@CustomType.Parameter("transformations") List<GooglePrivacyDlpV2InfoTypeTransformationResponse> transformations) {
         this.transformations = transformations;
     }
 

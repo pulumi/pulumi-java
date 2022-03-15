@@ -9,7 +9,7 @@ import io.pulumi.awsnative.fis.outputs.ExperimentTemplateActionMap;
 import io.pulumi.awsnative.fis.outputs.ExperimentTemplateStopCondition;
 import io.pulumi.awsnative.fis.outputs.ExperimentTemplateTargetMap;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
@@ -22,37 +22,37 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:fis:ExperimentTemplate")
 public class ExperimentTemplate extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="actions", type=ExperimentTemplateActionMap.class, parameters={})
+    @Export(name="actions", type=ExperimentTemplateActionMap.class, parameters={})
     private Output</* @Nullable */ ExperimentTemplateActionMap> actions;
 
     public Output</* @Nullable */ ExperimentTemplateActionMap> getActions() {
         return this.actions;
     }
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     public Output<String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="roleArn", type=String.class, parameters={})
+    @Export(name="roleArn", type=String.class, parameters={})
     private Output<String> roleArn;
 
     public Output<String> getRoleArn() {
         return this.roleArn;
     }
-    @OutputExport(name="stopConditions", type=List.class, parameters={ExperimentTemplateStopCondition.class})
+    @Export(name="stopConditions", type=List.class, parameters={ExperimentTemplateStopCondition.class})
     private Output<List<ExperimentTemplateStopCondition>> stopConditions;
 
     public Output<List<ExperimentTemplateStopCondition>> getStopConditions() {
         return this.stopConditions;
     }
-    @OutputExport(name="tags", type=Object.class, parameters={})
+    @Export(name="tags", type=Object.class, parameters={})
     private Output<Object> tags;
 
     public Output<Object> getTags() {
         return this.tags;
     }
-    @OutputExport(name="targets", type=ExperimentTemplateTargetMap.class, parameters={})
+    @Export(name="targets", type=ExperimentTemplateTargetMap.class, parameters={})
     private Output<ExperimentTemplateTargetMap> targets;
 
     public Output<ExperimentTemplateTargetMap> getTargets() {

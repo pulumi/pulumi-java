@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lookoutmetrics.outputs;
 
 import io.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorCsvFormatDescriptorFileCompression;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AnomalyDetectorCsvFormatDescriptor {
     private final @Nullable String charset;
     private final @Nullable Boolean containsHeader;
@@ -21,14 +21,14 @@ public final class AnomalyDetectorCsvFormatDescriptor {
     private final @Nullable List<String> headerList;
     private final @Nullable String quoteSymbol;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AnomalyDetectorCsvFormatDescriptor(
-        @OutputCustomType.Parameter("charset") @Nullable String charset,
-        @OutputCustomType.Parameter("containsHeader") @Nullable Boolean containsHeader,
-        @OutputCustomType.Parameter("delimiter") @Nullable String delimiter,
-        @OutputCustomType.Parameter("fileCompression") @Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression,
-        @OutputCustomType.Parameter("headerList") @Nullable List<String> headerList,
-        @OutputCustomType.Parameter("quoteSymbol") @Nullable String quoteSymbol) {
+        @CustomType.Parameter("charset") @Nullable String charset,
+        @CustomType.Parameter("containsHeader") @Nullable Boolean containsHeader,
+        @CustomType.Parameter("delimiter") @Nullable String delimiter,
+        @CustomType.Parameter("fileCompression") @Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression,
+        @CustomType.Parameter("headerList") @Nullable List<String> headerList,
+        @CustomType.Parameter("quoteSymbol") @Nullable String quoteSymbol) {
         this.charset = charset;
         this.containsHeader = containsHeader;
         this.delimiter = delimiter;

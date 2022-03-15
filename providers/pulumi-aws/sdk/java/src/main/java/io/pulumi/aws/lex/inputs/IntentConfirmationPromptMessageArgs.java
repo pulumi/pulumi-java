@@ -4,7 +4,7 @@
 package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class IntentConfirmationPromptMessageArgs extends io.pulumi.resourc
      * The text of the message. Must be less than or equal to 1000 characters in length.
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final Output<String> content;
 
     public Output<String> getContent() {
@@ -30,7 +30,7 @@ public final class IntentConfirmationPromptMessageArgs extends io.pulumi.resourc
      * The content type of the message string.
      * 
      */
-    @InputImport(name="contentType", required=true)
+    @Import(name="contentType", required=true)
       private final Output<String> contentType;
 
     public Output<String> getContentType() {
@@ -42,7 +42,7 @@ public final class IntentConfirmationPromptMessageArgs extends io.pulumi.resourc
      * is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
      * 
      */
-    @InputImport(name="groupNumber")
+    @Import(name="groupNumber")
       private final @Nullable Output<Integer> groupNumber;
 
     public Output<Integer> getGroupNumber() {

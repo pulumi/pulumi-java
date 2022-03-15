@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.ObjectReplicationPolicyFilterResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ObjectReplicationPolicyRuleResponse extends io.pulumi.resourc
      * Required. Destination container name.
      * 
      */
-    @InputImport(name="destinationContainer", required=true)
+    @Import(name="destinationContainer", required=true)
       private final String destinationContainer;
 
     public String getDestinationContainer() {
@@ -34,7 +34,7 @@ public final class ObjectReplicationPolicyRuleResponse extends io.pulumi.resourc
      * Optional. An object that defines the filter set.
      * 
      */
-    @InputImport(name="filters")
+    @Import(name="filters")
       private final @Nullable ObjectReplicationPolicyFilterResponse filters;
 
     public Optional<ObjectReplicationPolicyFilterResponse> getFilters() {
@@ -45,7 +45,7 @@ public final class ObjectReplicationPolicyRuleResponse extends io.pulumi.resourc
      * Rule Id is auto-generated for each new rule on destination account. It is required for put policy on source account.
      * 
      */
-    @InputImport(name="ruleId")
+    @Import(name="ruleId")
       private final @Nullable String ruleId;
 
     public Optional<String> getRuleId() {
@@ -56,7 +56,7 @@ public final class ObjectReplicationPolicyRuleResponse extends io.pulumi.resourc
      * Required. Source container name.
      * 
      */
-    @InputImport(name="sourceContainer", required=true)
+    @Import(name="sourceContainer", required=true)
       private final String sourceContainer;
 
     public String getSourceContainer() {

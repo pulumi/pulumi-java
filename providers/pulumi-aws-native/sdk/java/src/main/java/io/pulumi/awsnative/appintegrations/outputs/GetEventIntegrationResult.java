@@ -5,14 +5,14 @@ package io.pulumi.awsnative.appintegrations.outputs;
 
 import io.pulumi.awsnative.appintegrations.outputs.EventIntegrationAssociation;
 import io.pulumi.awsnative.appintegrations.outputs.EventIntegrationTag;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEventIntegrationResult {
     /**
      * The associations with the event integration.
@@ -35,12 +35,12 @@ public final class GetEventIntegrationResult {
      */
     private final @Nullable List<EventIntegrationTag> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEventIntegrationResult(
-        @OutputCustomType.Parameter("associations") @Nullable List<EventIntegrationAssociation> associations,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("eventIntegrationArn") @Nullable String eventIntegrationArn,
-        @OutputCustomType.Parameter("tags") @Nullable List<EventIntegrationTag> tags) {
+        @CustomType.Parameter("associations") @Nullable List<EventIntegrationAssociation> associations,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("eventIntegrationArn") @Nullable String eventIntegrationArn,
+        @CustomType.Parameter("tags") @Nullable List<EventIntegrationTag> tags) {
         this.associations = associations;
         this.description = description;
         this.eventIntegrationArn = eventIntegrationArn;

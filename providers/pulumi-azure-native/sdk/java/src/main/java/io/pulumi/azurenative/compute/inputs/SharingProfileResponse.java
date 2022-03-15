@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.SharingProfileGroupResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SharingProfileResponse extends io.pulumi.resources.InvokeArgs
      * A list of sharing profile groups.
      * 
      */
-    @InputImport(name="groups", required=true)
+    @Import(name="groups", required=true)
       private final List<SharingProfileGroupResponse> groups;
 
     public List<SharingProfileGroupResponse> getGroups() {
@@ -35,7 +35,7 @@ public final class SharingProfileResponse extends io.pulumi.resources.InvokeArgs
      * This property allows you to specify the permission of sharing gallery. <br><br> Possible values are: <br><br> **Private** <br><br> **Groups**
      * 
      */
-    @InputImport(name="permissions")
+    @Import(name="permissions")
       private final @Nullable String permissions;
 
     public Optional<String> getPermissions() {

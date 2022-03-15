@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.policyinsights.inputs;
 
 import io.pulumi.azurenative.policyinsights.inputs.ErrorDefinitionResponse;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
      * The time at which the remediation was created.
      * 
      */
-    @InputImport(name="createdOn", required=true)
+    @Import(name="createdOn", required=true)
       private final String createdOn;
 
     public String getCreatedOn() {
@@ -32,7 +32,7 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
      * Resource ID of the template deployment that will remediate the resource.
      * 
      */
-    @InputImport(name="deploymentId", required=true)
+    @Import(name="deploymentId", required=true)
       private final String deploymentId;
 
     public String getDeploymentId() {
@@ -43,7 +43,7 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
      * Error encountered while remediated the resource.
      * 
      */
-    @InputImport(name="error", required=true)
+    @Import(name="error", required=true)
       private final ErrorDefinitionResponse error;
 
     public ErrorDefinitionResponse getError() {
@@ -54,7 +54,7 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
      * The time at which the remediation deployment was last updated.
      * 
      */
-    @InputImport(name="lastUpdatedOn", required=true)
+    @Import(name="lastUpdatedOn", required=true)
       private final String lastUpdatedOn;
 
     public String getLastUpdatedOn() {
@@ -65,7 +65,7 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
      * Resource ID of the resource that is being remediated by the deployment.
      * 
      */
-    @InputImport(name="remediatedResourceId", required=true)
+    @Import(name="remediatedResourceId", required=true)
       private final String remediatedResourceId;
 
     public String getRemediatedResourceId() {
@@ -76,7 +76,7 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
      * Location of the resource that is being remediated.
      * 
      */
-    @InputImport(name="resourceLocation", required=true)
+    @Import(name="resourceLocation", required=true)
       private final String resourceLocation;
 
     public String getResourceLocation() {
@@ -87,7 +87,7 @@ public final class RemediationDeploymentResponse extends io.pulumi.resources.Inv
      * Status of the remediation deployment.
      * 
      */
-    @InputImport(name="status", required=true)
+    @Import(name="status", required=true)
       private final String status;
 
     public String getStatus() {

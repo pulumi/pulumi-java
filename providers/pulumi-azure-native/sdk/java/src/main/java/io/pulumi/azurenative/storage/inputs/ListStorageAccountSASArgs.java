@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storage.enums.Permissions;
 import io.pulumi.azurenative.storage.enums.Services;
 import io.pulumi.azurenative.storage.enums.SignedResourceTypes;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
      * 
      */
-    @InputImport(name="accountName", required=true)
+    @Import(name="accountName", required=true)
       private final String accountName;
 
     public String getAccountName() {
@@ -34,7 +34,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * An IP address or a range of IP addresses from which to accept requests.
      * 
      */
-    @InputImport(name="iPAddressOrRange")
+    @Import(name="iPAddressOrRange")
       private final @Nullable String iPAddressOrRange;
 
     public Optional<String> getIPAddressOrRange() {
@@ -45,7 +45,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * The key to sign the account SAS token with.
      * 
      */
-    @InputImport(name="keyToSign")
+    @Import(name="keyToSign")
       private final @Nullable String keyToSign;
 
     public Optional<String> getKeyToSign() {
@@ -56,7 +56,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * The signed permissions for the account SAS. Possible values include: Read (r), Write (w), Delete (d), List (l), Add (a), Create (c), Update (u) and Process (p).
      * 
      */
-    @InputImport(name="permissions", required=true)
+    @Import(name="permissions", required=true)
       private final Either<String,Permissions> permissions;
 
     public Either<String,Permissions> getPermissions() {
@@ -67,7 +67,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * The protocol permitted for a request made with the account SAS.
      * 
      */
-    @InputImport(name="protocols")
+    @Import(name="protocols")
       private final @Nullable HttpProtocol protocols;
 
     public Optional<HttpProtocol> getProtocols() {
@@ -78,7 +78,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * The name of the resource group within the user's subscription. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final String resourceGroupName;
 
     public String getResourceGroupName() {
@@ -89,7 +89,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * The signed resource types that are accessible with the account SAS. Service (s): Access to service-level APIs; Container (c): Access to container-level APIs; Object (o): Access to object-level APIs for blobs, queue messages, table entities, and files.
      * 
      */
-    @InputImport(name="resourceTypes", required=true)
+    @Import(name="resourceTypes", required=true)
       private final Either<String,SignedResourceTypes> resourceTypes;
 
     public Either<String,SignedResourceTypes> getResourceTypes() {
@@ -100,7 +100,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * The signed services accessible with the account SAS. Possible values include: Blob (b), Queue (q), Table (t), File (f).
      * 
      */
-    @InputImport(name="services", required=true)
+    @Import(name="services", required=true)
       private final Either<String,Services> services;
 
     public Either<String,Services> getServices() {
@@ -111,7 +111,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * The time at which the shared access signature becomes invalid.
      * 
      */
-    @InputImport(name="sharedAccessExpiryTime", required=true)
+    @Import(name="sharedAccessExpiryTime", required=true)
       private final String sharedAccessExpiryTime;
 
     public String getSharedAccessExpiryTime() {
@@ -122,7 +122,7 @@ public final class ListStorageAccountSASArgs extends io.pulumi.resources.InvokeA
      * The time at which the SAS becomes valid.
      * 
      */
-    @InputImport(name="sharedAccessStartTime")
+    @Import(name="sharedAccessStartTime")
       private final @Nullable String sharedAccessStartTime;
 
     public Optional<String> getSharedAccessStartTime() {

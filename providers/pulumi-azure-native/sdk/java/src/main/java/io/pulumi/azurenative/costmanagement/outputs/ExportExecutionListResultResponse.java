@@ -4,11 +4,11 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ExportExecutionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ExportExecutionListResultResponse {
     /**
      * A list of export executions.
@@ -16,8 +16,8 @@ public final class ExportExecutionListResultResponse {
      */
     private final List<ExportExecutionResponse> value;
 
-    @OutputCustomType.Constructor
-    private ExportExecutionListResultResponse(@OutputCustomType.Parameter("value") List<ExportExecutionResponse> value) {
+    @CustomType.Constructor
+    private ExportExecutionListResultResponse(@CustomType.Parameter("value") List<ExportExecutionResponse> value) {
         this.value = value;
     }
 

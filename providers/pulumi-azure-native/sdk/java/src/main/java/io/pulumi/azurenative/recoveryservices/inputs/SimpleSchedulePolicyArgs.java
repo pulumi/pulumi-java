@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.DayOfWeek;
 import io.pulumi.azurenative.recoveryservices.enums.ScheduleRunType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
      * Expected value is 'SimpleSchedulePolicy'.
      * 
      */
-    @InputImport(name="schedulePolicyType", required=true)
+    @Import(name="schedulePolicyType", required=true)
       private final Output<String> schedulePolicyType;
 
     public Output<String> getSchedulePolicyType() {
@@ -39,7 +39,7 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
      * List of days of week this schedule has to be run.
      * 
      */
-    @InputImport(name="scheduleRunDays")
+    @Import(name="scheduleRunDays")
       private final @Nullable Output<List<DayOfWeek>> scheduleRunDays;
 
     public Output<List<DayOfWeek>> getScheduleRunDays() {
@@ -50,7 +50,7 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
      * Frequency of the schedule operation of this policy.
      * 
      */
-    @InputImport(name="scheduleRunFrequency")
+    @Import(name="scheduleRunFrequency")
       private final @Nullable Output<Either<String,ScheduleRunType>> scheduleRunFrequency;
 
     public Output<Either<String,ScheduleRunType>> getScheduleRunFrequency() {
@@ -61,7 +61,7 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
      * List of times of day this schedule has to be run.
      * 
      */
-    @InputImport(name="scheduleRunTimes")
+    @Import(name="scheduleRunTimes")
       private final @Nullable Output<List<String>> scheduleRunTimes;
 
     public Output<List<String>> getScheduleRunTimes() {
@@ -72,7 +72,7 @@ public final class SimpleSchedulePolicyArgs extends io.pulumi.resources.Resource
      * At every number weeks this schedule has to be run.
      * 
      */
-    @InputImport(name="scheduleWeeklyFrequency")
+    @Import(name="scheduleWeeklyFrequency")
       private final @Nullable Output<Integer> scheduleWeeklyFrequency;
 
     public Output<Integer> getScheduleWeeklyFrequency() {

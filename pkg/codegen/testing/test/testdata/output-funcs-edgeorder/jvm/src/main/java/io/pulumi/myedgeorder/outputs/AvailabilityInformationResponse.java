@@ -3,11 +3,11 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AvailabilityInformationResponse {
     /**
      * Current availability stage of the product. Availability stage
@@ -25,11 +25,11 @@ public final class AvailabilityInformationResponse {
      */
     private final String disabledReasonMessage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AvailabilityInformationResponse(
-        @OutputCustomType.Parameter("availabilityStage") String availabilityStage,
-        @OutputCustomType.Parameter("disabledReason") String disabledReason,
-        @OutputCustomType.Parameter("disabledReasonMessage") String disabledReasonMessage) {
+        @CustomType.Parameter("availabilityStage") String availabilityStage,
+        @CustomType.Parameter("disabledReason") String disabledReason,
+        @CustomType.Parameter("disabledReasonMessage") String disabledReasonMessage) {
         this.availabilityStage = availabilityStage;
         this.disabledReason = disabledReason;
         this.disabledReasonMessage = disabledReasonMessage;

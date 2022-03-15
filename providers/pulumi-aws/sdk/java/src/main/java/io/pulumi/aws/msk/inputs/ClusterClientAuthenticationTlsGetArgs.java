@@ -4,7 +4,7 @@
 package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterClientAuthenticationTlsGetArgs extends io.pulumi.resou
      * List of ACM Certificate Authority Amazon Resource Names (ARNs).
      * 
      */
-    @InputImport(name="certificateAuthorityArns")
+    @Import(name="certificateAuthorityArns")
       private final @Nullable Output<List<String>> certificateAuthorityArns;
 
     public Output<List<String>> getCertificateAuthorityArns() {

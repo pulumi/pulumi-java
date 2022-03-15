@@ -4,7 +4,7 @@
 package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterRestoreToPointInTimeArgs extends io.pulumi.resources.R
      * Date and time in UTC format to restore the database cluster to. Conflicts with `use_latest_restorable_time`.
      * 
      */
-    @InputImport(name="restoreToTime")
+    @Import(name="restoreToTime")
       private final @Nullable Output<String> restoreToTime;
 
     public Output<String> getRestoreToTime() {
@@ -31,7 +31,7 @@ public final class ClusterRestoreToPointInTimeArgs extends io.pulumi.resources.R
      * Valid options are `full-copy` (default) and `copy-on-write`.
      * 
      */
-    @InputImport(name="restoreType")
+    @Import(name="restoreType")
       private final @Nullable Output<String> restoreType;
 
     public Output<String> getRestoreType() {
@@ -42,7 +42,7 @@ public final class ClusterRestoreToPointInTimeArgs extends io.pulumi.resources.R
      * The identifier of the source database cluster from which to restore.
      * 
      */
-    @InputImport(name="sourceClusterIdentifier", required=true)
+    @Import(name="sourceClusterIdentifier", required=true)
       private final Output<String> sourceClusterIdentifier;
 
     public Output<String> getSourceClusterIdentifier() {
@@ -53,7 +53,7 @@ public final class ClusterRestoreToPointInTimeArgs extends io.pulumi.resources.R
      * Set to true to restore the database cluster to the latest restorable backup time. Defaults to false. Conflicts with `restore_to_time`.
      * 
      */
-    @InputImport(name="useLatestRestorableTime")
+    @Import(name="useLatestRestorableTime")
       private final @Nullable Output<Boolean> useLatestRestorableTime;
 
     public Output<Boolean> getUseLatestRestorableTime() {

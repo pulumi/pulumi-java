@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class DmlStatisticsResponse extends io.pulumi.resources.InvokeArgs 
      * Number of deleted Rows. populated by DML DELETE, MERGE and TRUNCATE statements.
      * 
      */
-    @InputImport(name="deletedRowCount", required=true)
+    @Import(name="deletedRowCount", required=true)
       private final String deletedRowCount;
 
     public String getDeletedRowCount() {
@@ -27,7 +27,7 @@ public final class DmlStatisticsResponse extends io.pulumi.resources.InvokeArgs 
      * Number of inserted Rows. Populated by DML INSERT and MERGE statements.
      * 
      */
-    @InputImport(name="insertedRowCount", required=true)
+    @Import(name="insertedRowCount", required=true)
       private final String insertedRowCount;
 
     public String getInsertedRowCount() {
@@ -38,7 +38,7 @@ public final class DmlStatisticsResponse extends io.pulumi.resources.InvokeArgs 
      * Number of updated Rows. Populated by DML UPDATE and MERGE statements.
      * 
      */
-    @InputImport(name="updatedRowCount", required=true)
+    @Import(name="updatedRowCount", required=true)
       private final String updatedRowCount;
 
     public String getUpdatedRowCount() {

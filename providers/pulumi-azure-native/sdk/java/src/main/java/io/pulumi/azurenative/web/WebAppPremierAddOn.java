@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppPremierAddOnArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public class WebAppPremierAddOn extends io.pulumi.resources.CustomResource {
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -46,7 +46,7 @@ public class WebAppPremierAddOn extends io.pulumi.resources.CustomResource {
      * Resource Location.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -60,7 +60,7 @@ public class WebAppPremierAddOn extends io.pulumi.resources.CustomResource {
      * Premier add on Marketplace offer.
      * 
      */
-    @OutputExport(name="marketplaceOffer", type=String.class, parameters={})
+    @Export(name="marketplaceOffer", type=String.class, parameters={})
     private Output</* @Nullable */ String> marketplaceOffer;
 
     /**
@@ -74,7 +74,7 @@ public class WebAppPremierAddOn extends io.pulumi.resources.CustomResource {
      * Premier add on Marketplace publisher.
      * 
      */
-    @OutputExport(name="marketplacePublisher", type=String.class, parameters={})
+    @Export(name="marketplacePublisher", type=String.class, parameters={})
     private Output</* @Nullable */ String> marketplacePublisher;
 
     /**
@@ -88,7 +88,7 @@ public class WebAppPremierAddOn extends io.pulumi.resources.CustomResource {
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -102,7 +102,7 @@ public class WebAppPremierAddOn extends io.pulumi.resources.CustomResource {
      * Premier add on Product.
      * 
      */
-    @OutputExport(name="product", type=String.class, parameters={})
+    @Export(name="product", type=String.class, parameters={})
     private Output</* @Nullable */ String> product;
 
     /**
@@ -116,7 +116,7 @@ public class WebAppPremierAddOn extends io.pulumi.resources.CustomResource {
      * Premier add on SKU.
      * 
      */
-    @OutputExport(name="sku", type=String.class, parameters={})
+    @Export(name="sku", type=String.class, parameters={})
     private Output</* @Nullable */ String> sku;
 
     /**
@@ -130,7 +130,7 @@ public class WebAppPremierAddOn extends io.pulumi.resources.CustomResource {
      * Resource tags.
      * 
      */
-    @OutputExport(name="tags", type=Map.class, parameters={String.class, String.class})
+    @Export(name="tags", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> tags;
 
     /**
@@ -144,7 +144,7 @@ public class WebAppPremierAddOn extends io.pulumi.resources.CustomResource {
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -158,7 +158,7 @@ public class WebAppPremierAddOn extends io.pulumi.resources.CustomResource {
      * Premier add on Vendor.
      * 
      */
-    @OutputExport(name="vendor", type=String.class, parameters={})
+    @Export(name="vendor", type=String.class, parameters={})
     private Output</* @Nullable */ String> vendor;
 
     /**

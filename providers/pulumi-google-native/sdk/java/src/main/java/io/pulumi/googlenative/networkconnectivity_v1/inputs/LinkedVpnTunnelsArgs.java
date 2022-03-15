@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkconnectivity_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class LinkedVpnTunnelsArgs extends io.pulumi.resources.ResourceArgs
      * A value that controls whether site-to-site data transfer is enabled for these resources. Data transfer is available only in [supported locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
      * 
      */
-    @InputImport(name="siteToSiteDataTransfer")
+    @Import(name="siteToSiteDataTransfer")
       private final @Nullable Output<Boolean> siteToSiteDataTransfer;
 
     public Output<Boolean> getSiteToSiteDataTransfer() {
@@ -35,7 +35,7 @@ public final class LinkedVpnTunnelsArgs extends io.pulumi.resources.ResourceArgs
      * The URIs of linked VPN tunnel resources.
      * 
      */
-    @InputImport(name="uris")
+    @Import(name="uris")
       private final @Nullable Output<List<String>> uris;
 
     public Output<List<String>> getUris() {

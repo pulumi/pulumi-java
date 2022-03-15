@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ServerExternalAdministratorResponse extends io.pulumi.resourc
      * Type of the sever administrator.
      * 
      */
-    @InputImport(name="administratorType")
+    @Import(name="administratorType")
       private final @Nullable String administratorType;
 
     public Optional<String> getAdministratorType() {
@@ -34,7 +34,7 @@ public final class ServerExternalAdministratorResponse extends io.pulumi.resourc
      * Azure Active Directory only Authentication enabled.
      * 
      */
-    @InputImport(name="azureADOnlyAuthentication")
+    @Import(name="azureADOnlyAuthentication")
       private final @Nullable Boolean azureADOnlyAuthentication;
 
     public Optional<Boolean> getAzureADOnlyAuthentication() {
@@ -45,7 +45,7 @@ public final class ServerExternalAdministratorResponse extends io.pulumi.resourc
      * Login name of the server administrator.
      * 
      */
-    @InputImport(name="login")
+    @Import(name="login")
       private final @Nullable String login;
 
     public Optional<String> getLogin() {
@@ -56,7 +56,7 @@ public final class ServerExternalAdministratorResponse extends io.pulumi.resourc
      * Principal Type of the sever administrator.
      * 
      */
-    @InputImport(name="principalType")
+    @Import(name="principalType")
       private final @Nullable String principalType;
 
     public Optional<String> getPrincipalType() {
@@ -67,7 +67,7 @@ public final class ServerExternalAdministratorResponse extends io.pulumi.resourc
      * SID (object ID) of the server administrator.
      * 
      */
-    @InputImport(name="sid")
+    @Import(name="sid")
       private final @Nullable String sid;
 
     public Optional<String> getSid() {
@@ -78,7 +78,7 @@ public final class ServerExternalAdministratorResponse extends io.pulumi.resourc
      * Tenant ID of the administrator.
      * 
      */
-    @InputImport(name="tenantId")
+    @Import(name="tenantId")
       private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {

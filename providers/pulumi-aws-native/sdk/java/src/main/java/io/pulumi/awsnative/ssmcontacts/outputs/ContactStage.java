@@ -4,13 +4,13 @@
 package io.pulumi.awsnative.ssmcontacts.outputs;
 
 import io.pulumi.awsnative.ssmcontacts.outputs.ContactTargets;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContactStage {
     /**
      * The time to wait until beginning the next stage.
@@ -23,10 +23,10 @@ public final class ContactStage {
      */
     private final @Nullable List<ContactTargets> targets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ContactStage(
-        @OutputCustomType.Parameter("durationInMinutes") Integer durationInMinutes,
-        @OutputCustomType.Parameter("targets") @Nullable List<ContactTargets> targets) {
+        @CustomType.Parameter("durationInMinutes") Integer durationInMinutes,
+        @CustomType.Parameter("targets") @Nullable List<ContactTargets> targets) {
         this.durationInMinutes = durationInMinutes;
         this.targets = targets;
     }

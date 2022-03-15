@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.outputs;
 import io.pulumi.azurenative.appplatform.outputs.ApiPortalInstanceResponse;
 import io.pulumi.azurenative.appplatform.outputs.ApiPortalResourceRequestsResponse;
 import io.pulumi.azurenative.appplatform.outputs.SsoPropertiesResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApiPortalPropertiesResponse {
     /**
      * The array of resource Ids of gateway to integrate with API portal.
@@ -62,17 +62,17 @@ public final class ApiPortalPropertiesResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApiPortalPropertiesResponse(
-        @OutputCustomType.Parameter("gatewayIds") @Nullable List<String> gatewayIds,
-        @OutputCustomType.Parameter("httpsOnly") @Nullable Boolean httpsOnly,
-        @OutputCustomType.Parameter("instances") List<ApiPortalInstanceResponse> instances,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("public") @Nullable Boolean $public,
-        @OutputCustomType.Parameter("resourceRequests") ApiPortalResourceRequestsResponse resourceRequests,
-        @OutputCustomType.Parameter("sourceUrls") @Nullable List<String> sourceUrls,
-        @OutputCustomType.Parameter("ssoProperties") @Nullable SsoPropertiesResponse ssoProperties,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("gatewayIds") @Nullable List<String> gatewayIds,
+        @CustomType.Parameter("httpsOnly") @Nullable Boolean httpsOnly,
+        @CustomType.Parameter("instances") List<ApiPortalInstanceResponse> instances,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("public") @Nullable Boolean $public,
+        @CustomType.Parameter("resourceRequests") ApiPortalResourceRequestsResponse resourceRequests,
+        @CustomType.Parameter("sourceUrls") @Nullable List<String> sourceUrls,
+        @CustomType.Parameter("ssoProperties") @Nullable SsoPropertiesResponse ssoProperties,
+        @CustomType.Parameter("url") String url) {
         this.gatewayIds = gatewayIds;
         this.httpsOnly = httpsOnly;
         this.instances = instances;

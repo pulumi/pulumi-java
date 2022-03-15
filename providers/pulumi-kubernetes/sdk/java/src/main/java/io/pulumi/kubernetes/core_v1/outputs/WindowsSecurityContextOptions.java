@@ -3,14 +3,14 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WindowsSecurityContextOptions {
     /**
      * GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field.
@@ -33,12 +33,12 @@ public final class WindowsSecurityContextOptions {
      */
     private final @Nullable String runAsUserName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WindowsSecurityContextOptions(
-        @OutputCustomType.Parameter("gmsaCredentialSpec") @Nullable String gmsaCredentialSpec,
-        @OutputCustomType.Parameter("gmsaCredentialSpecName") @Nullable String gmsaCredentialSpecName,
-        @OutputCustomType.Parameter("hostProcess") @Nullable Boolean hostProcess,
-        @OutputCustomType.Parameter("runAsUserName") @Nullable String runAsUserName) {
+        @CustomType.Parameter("gmsaCredentialSpec") @Nullable String gmsaCredentialSpec,
+        @CustomType.Parameter("gmsaCredentialSpecName") @Nullable String gmsaCredentialSpecName,
+        @CustomType.Parameter("hostProcess") @Nullable Boolean hostProcess,
+        @CustomType.Parameter("runAsUserName") @Nullable String runAsUserName) {
         this.gmsaCredentialSpec = gmsaCredentialSpec;
         this.gmsaCredentialSpecName = gmsaCredentialSpecName;
         this.hostProcess = hostProcess;

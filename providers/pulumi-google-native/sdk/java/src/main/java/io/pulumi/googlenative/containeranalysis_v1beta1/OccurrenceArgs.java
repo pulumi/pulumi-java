@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DetailsArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.DocumentOccurrenceArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.FileOccurrenceArgs;
@@ -31,7 +31,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Describes an attestation of an artifact.
      * 
      */
-    @InputImport(name="attestation")
+    @Import(name="attestation")
       private final @Nullable Output<DetailsArgs> attestation;
 
     public Output<DetailsArgs> getAttestation() {
@@ -42,7 +42,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Describes a verifiable build.
      * 
      */
-    @InputImport(name="build")
+    @Import(name="build")
       private final @Nullable Output<GrafeasV1beta1BuildDetailsArgs> build;
 
     public Output<GrafeasV1beta1BuildDetailsArgs> getBuild() {
@@ -53,7 +53,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Describes the deployment of an artifact on a runtime.
      * 
      */
-    @InputImport(name="deployment")
+    @Import(name="deployment")
       private final @Nullable Output<GrafeasV1beta1DeploymentDetailsArgs> deployment;
 
     public Output<GrafeasV1beta1DeploymentDetailsArgs> getDeployment() {
@@ -64,7 +64,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Describes how this resource derives from the basis in the associated note.
      * 
      */
-    @InputImport(name="derivedImage")
+    @Import(name="derivedImage")
       private final @Nullable Output<GrafeasV1beta1ImageDetailsArgs> derivedImage;
 
     public Output<GrafeasV1beta1ImageDetailsArgs> getDerivedImage() {
@@ -75,7 +75,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Describes when a resource was discovered.
      * 
      */
-    @InputImport(name="discovered")
+    @Import(name="discovered")
       private final @Nullable Output<GrafeasV1beta1DiscoveryDetailsArgs> discovered;
 
     public Output<GrafeasV1beta1DiscoveryDetailsArgs> getDiscovered() {
@@ -86,7 +86,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Describes the installation of a package on the linked resource.
      * 
      */
-    @InputImport(name="installation")
+    @Import(name="installation")
       private final @Nullable Output<GrafeasV1beta1PackageDetailsArgs> installation;
 
     public Output<GrafeasV1beta1PackageDetailsArgs> getInstallation() {
@@ -97,7 +97,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Describes a specific in-toto link.
      * 
      */
-    @InputImport(name="intoto")
+    @Import(name="intoto")
       private final @Nullable Output<GrafeasV1beta1IntotoDetailsArgs> intoto;
 
     public Output<GrafeasV1beta1IntotoDetailsArgs> getIntoto() {
@@ -108,14 +108,14 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The analysis note associated with this occurrence, in the form of `projects/[PROVIDER_ID]/notes/[NOTE_ID]`. This field can be used as a filter in list requests.
      * 
      */
-    @InputImport(name="noteName", required=true)
+    @Import(name="noteName", required=true)
       private final Output<String> noteName;
 
     public Output<String> getNoteName() {
         return this.noteName;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -126,7 +126,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * A description of actions that can be taken to remedy the note.
      * 
      */
-    @InputImport(name="remediation")
+    @Import(name="remediation")
       private final @Nullable Output<String> remediation;
 
     public Output<String> getRemediation() {
@@ -137,7 +137,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Immutable. The resource for which the occurrence applies.
      * 
      */
-    @InputImport(name="resource", required=true)
+    @Import(name="resource", required=true)
       private final Output<ResourceArgs> resource;
 
     public Output<ResourceArgs> getResource() {
@@ -148,7 +148,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Describes a specific software bill of materials document.
      * 
      */
-    @InputImport(name="sbom")
+    @Import(name="sbom")
       private final @Nullable Output<DocumentOccurrenceArgs> sbom;
 
     public Output<DocumentOccurrenceArgs> getSbom() {
@@ -159,7 +159,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Describes a specific SPDX File.
      * 
      */
-    @InputImport(name="spdxFile")
+    @Import(name="spdxFile")
       private final @Nullable Output<FileOccurrenceArgs> spdxFile;
 
     public Output<FileOccurrenceArgs> getSpdxFile() {
@@ -170,7 +170,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Describes a specific SPDX Package.
      * 
      */
-    @InputImport(name="spdxPackage")
+    @Import(name="spdxPackage")
       private final @Nullable Output<PackageInfoOccurrenceArgs> spdxPackage;
 
     public Output<PackageInfoOccurrenceArgs> getSpdxPackage() {
@@ -181,7 +181,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Describes a specific SPDX Relationship.
      * 
      */
-    @InputImport(name="spdxRelationship")
+    @Import(name="spdxRelationship")
       private final @Nullable Output<RelationshipOccurrenceArgs> spdxRelationship;
 
     public Output<RelationshipOccurrenceArgs> getSpdxRelationship() {
@@ -192,7 +192,7 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
      * Describes a security vulnerability.
      * 
      */
-    @InputImport(name="vulnerability")
+    @Import(name="vulnerability")
       private final @Nullable Output<GrafeasV1beta1VulnerabilityDetailsArgs> vulnerability;
 
     public Output<GrafeasV1beta1VulnerabilityDetailsArgs> getVulnerability() {

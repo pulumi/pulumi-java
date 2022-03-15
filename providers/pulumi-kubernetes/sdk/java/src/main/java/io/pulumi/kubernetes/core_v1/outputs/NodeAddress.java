@@ -3,11 +3,11 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NodeAddress {
     /**
      * The node address.
@@ -27,10 +27,10 @@ public final class NodeAddress {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodeAddress(
-        @OutputCustomType.Parameter("address") String address,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("address") String address,
+        @CustomType.Parameter("type") String type) {
         this.address = address;
         this.type = type;
     }

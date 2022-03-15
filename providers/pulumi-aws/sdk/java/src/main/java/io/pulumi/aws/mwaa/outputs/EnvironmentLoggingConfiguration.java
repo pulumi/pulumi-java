@@ -8,12 +8,12 @@ import io.pulumi.aws.mwaa.outputs.EnvironmentLoggingConfigurationSchedulerLogs;
 import io.pulumi.aws.mwaa.outputs.EnvironmentLoggingConfigurationTaskLogs;
 import io.pulumi.aws.mwaa.outputs.EnvironmentLoggingConfigurationWebserverLogs;
 import io.pulumi.aws.mwaa.outputs.EnvironmentLoggingConfigurationWorkerLogs;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentLoggingConfiguration {
     /**
      * (Optional) Log configuration options for processing DAGs. See Module logging configuration for more information. Disabled by default.
@@ -41,13 +41,13 @@ public final class EnvironmentLoggingConfiguration {
      */
     private final @Nullable EnvironmentLoggingConfigurationWorkerLogs workerLogs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentLoggingConfiguration(
-        @OutputCustomType.Parameter("dagProcessingLogs") @Nullable EnvironmentLoggingConfigurationDagProcessingLogs dagProcessingLogs,
-        @OutputCustomType.Parameter("schedulerLogs") @Nullable EnvironmentLoggingConfigurationSchedulerLogs schedulerLogs,
-        @OutputCustomType.Parameter("taskLogs") @Nullable EnvironmentLoggingConfigurationTaskLogs taskLogs,
-        @OutputCustomType.Parameter("webserverLogs") @Nullable EnvironmentLoggingConfigurationWebserverLogs webserverLogs,
-        @OutputCustomType.Parameter("workerLogs") @Nullable EnvironmentLoggingConfigurationWorkerLogs workerLogs) {
+        @CustomType.Parameter("dagProcessingLogs") @Nullable EnvironmentLoggingConfigurationDagProcessingLogs dagProcessingLogs,
+        @CustomType.Parameter("schedulerLogs") @Nullable EnvironmentLoggingConfigurationSchedulerLogs schedulerLogs,
+        @CustomType.Parameter("taskLogs") @Nullable EnvironmentLoggingConfigurationTaskLogs taskLogs,
+        @CustomType.Parameter("webserverLogs") @Nullable EnvironmentLoggingConfigurationWebserverLogs webserverLogs,
+        @CustomType.Parameter("workerLogs") @Nullable EnvironmentLoggingConfigurationWorkerLogs workerLogs) {
         this.dagProcessingLogs = dagProcessingLogs;
         this.schedulerLogs = schedulerLogs;
         this.taskLogs = taskLogs;

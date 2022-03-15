@@ -5,7 +5,7 @@ package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.awsnative.backup.inputs.BackupPlanCopyActionResourceType;
 import io.pulumi.awsnative.backup.inputs.BackupPlanLifecycleResourceType;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
@@ -20,63 +20,63 @@ public final class BackupPlanBackupRuleResourceType extends io.pulumi.resources.
 
     public static final BackupPlanBackupRuleResourceType Empty = new BackupPlanBackupRuleResourceType();
 
-    @InputImport(name="completionWindowMinutes")
+    @Import(name="completionWindowMinutes")
       private final @Nullable Double completionWindowMinutes;
 
     public Optional<Double> getCompletionWindowMinutes() {
         return this.completionWindowMinutes == null ? Optional.empty() : Optional.ofNullable(this.completionWindowMinutes);
     }
 
-    @InputImport(name="copyActions")
+    @Import(name="copyActions")
       private final @Nullable List<BackupPlanCopyActionResourceType> copyActions;
 
     public List<BackupPlanCopyActionResourceType> getCopyActions() {
         return this.copyActions == null ? List.of() : this.copyActions;
     }
 
-    @InputImport(name="enableContinuousBackup")
+    @Import(name="enableContinuousBackup")
       private final @Nullable Boolean enableContinuousBackup;
 
     public Optional<Boolean> getEnableContinuousBackup() {
         return this.enableContinuousBackup == null ? Optional.empty() : Optional.ofNullable(this.enableContinuousBackup);
     }
 
-    @InputImport(name="lifecycle")
+    @Import(name="lifecycle")
       private final @Nullable BackupPlanLifecycleResourceType lifecycle;
 
     public Optional<BackupPlanLifecycleResourceType> getLifecycle() {
         return this.lifecycle == null ? Optional.empty() : Optional.ofNullable(this.lifecycle);
     }
 
-    @InputImport(name="recoveryPointTags")
+    @Import(name="recoveryPointTags")
       private final @Nullable Object recoveryPointTags;
 
     public Optional<Object> getRecoveryPointTags() {
         return this.recoveryPointTags == null ? Optional.empty() : Optional.ofNullable(this.recoveryPointTags);
     }
 
-    @InputImport(name="ruleName", required=true)
+    @Import(name="ruleName", required=true)
       private final String ruleName;
 
     public String getRuleName() {
         return this.ruleName;
     }
 
-    @InputImport(name="scheduleExpression")
+    @Import(name="scheduleExpression")
       private final @Nullable String scheduleExpression;
 
     public Optional<String> getScheduleExpression() {
         return this.scheduleExpression == null ? Optional.empty() : Optional.ofNullable(this.scheduleExpression);
     }
 
-    @InputImport(name="startWindowMinutes")
+    @Import(name="startWindowMinutes")
       private final @Nullable Double startWindowMinutes;
 
     public Optional<Double> getStartWindowMinutes() {
         return this.startWindowMinutes == null ? Optional.empty() : Optional.ofNullable(this.startWindowMinutes);
     }
 
-    @InputImport(name="targetBackupVault", required=true)
+    @Import(name="targetBackupVault", required=true)
       private final String targetBackupVault;
 
     public String getTargetBackupVault() {

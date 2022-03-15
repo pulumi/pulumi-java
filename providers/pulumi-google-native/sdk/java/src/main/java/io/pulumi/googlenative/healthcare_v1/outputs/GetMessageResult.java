@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.ParsedDataResponse;
 import io.pulumi.googlenative.healthcare_v1.outputs.PatientIdResponse;
 import io.pulumi.googlenative.healthcare_v1.outputs.SchematizedDataResponse;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetMessageResult {
     /**
      * The datetime when the message was created. Set by the server.
@@ -65,18 +65,18 @@ public final class GetMessageResult {
      */
     private final String sendTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetMessageResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("data") String data,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("messageType") String messageType,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("parsedData") ParsedDataResponse parsedData,
-        @OutputCustomType.Parameter("patientIds") List<PatientIdResponse> patientIds,
-        @OutputCustomType.Parameter("schematizedData") SchematizedDataResponse schematizedData,
-        @OutputCustomType.Parameter("sendFacility") String sendFacility,
-        @OutputCustomType.Parameter("sendTime") String sendTime) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("data") String data,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("messageType") String messageType,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("parsedData") ParsedDataResponse parsedData,
+        @CustomType.Parameter("patientIds") List<PatientIdResponse> patientIds,
+        @CustomType.Parameter("schematizedData") SchematizedDataResponse schematizedData,
+        @CustomType.Parameter("sendFacility") String sendFacility,
+        @CustomType.Parameter("sendTime") String sendTime) {
         this.createTime = createTime;
         this.data = data;
         this.labels = labels;

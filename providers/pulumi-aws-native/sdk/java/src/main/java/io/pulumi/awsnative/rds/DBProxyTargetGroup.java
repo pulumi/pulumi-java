@@ -8,7 +8,7 @@ import io.pulumi.awsnative.rds.DBProxyTargetGroupArgs;
 import io.pulumi.awsnative.rds.enums.DBProxyTargetGroupTargetGroupName;
 import io.pulumi.awsnative.rds.outputs.DBProxyTargetGroupConnectionPoolConfigurationInfoFormat;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
@@ -20,19 +20,19 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:rds:DBProxyTargetGroup")
 public class DBProxyTargetGroup extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="connectionPoolConfigurationInfo", type=DBProxyTargetGroupConnectionPoolConfigurationInfoFormat.class, parameters={})
+    @Export(name="connectionPoolConfigurationInfo", type=DBProxyTargetGroupConnectionPoolConfigurationInfoFormat.class, parameters={})
     private Output</* @Nullable */ DBProxyTargetGroupConnectionPoolConfigurationInfoFormat> connectionPoolConfigurationInfo;
 
     public Output</* @Nullable */ DBProxyTargetGroupConnectionPoolConfigurationInfoFormat> getConnectionPoolConfigurationInfo() {
         return this.connectionPoolConfigurationInfo;
     }
-    @OutputExport(name="dBClusterIdentifiers", type=List.class, parameters={String.class})
+    @Export(name="dBClusterIdentifiers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> dBClusterIdentifiers;
 
     public Output</* @Nullable */ List<String>> getDBClusterIdentifiers() {
         return this.dBClusterIdentifiers;
     }
-    @OutputExport(name="dBInstanceIdentifiers", type=List.class, parameters={String.class})
+    @Export(name="dBInstanceIdentifiers", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> dBInstanceIdentifiers;
 
     public Output</* @Nullable */ List<String>> getDBInstanceIdentifiers() {
@@ -42,7 +42,7 @@ public class DBProxyTargetGroup extends io.pulumi.resources.CustomResource {
      * The identifier for the proxy.
      * 
      */
-    @OutputExport(name="dBProxyName", type=String.class, parameters={})
+    @Export(name="dBProxyName", type=String.class, parameters={})
     private Output<String> dBProxyName;
 
     /**
@@ -56,7 +56,7 @@ public class DBProxyTargetGroup extends io.pulumi.resources.CustomResource {
      * The Amazon Resource Name (ARN) representing the target group.
      * 
      */
-    @OutputExport(name="targetGroupArn", type=String.class, parameters={})
+    @Export(name="targetGroupArn", type=String.class, parameters={})
     private Output<String> targetGroupArn;
 
     /**
@@ -70,7 +70,7 @@ public class DBProxyTargetGroup extends io.pulumi.resources.CustomResource {
      * The identifier for the DBProxyTargetGroup
      * 
      */
-    @OutputExport(name="targetGroupName", type=DBProxyTargetGroupTargetGroupName.class, parameters={})
+    @Export(name="targetGroupName", type=DBProxyTargetGroupTargetGroupName.class, parameters={})
     private Output<DBProxyTargetGroupTargetGroupName> targetGroupName;
 
     /**

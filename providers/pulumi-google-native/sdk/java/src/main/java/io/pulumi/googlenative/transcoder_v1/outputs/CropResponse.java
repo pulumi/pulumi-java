@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CropResponse {
     /**
      * The number of pixels to crop from the bottom. The default is 0.
@@ -30,12 +30,12 @@ public final class CropResponse {
      */
     private final Integer topPixels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CropResponse(
-        @OutputCustomType.Parameter("bottomPixels") Integer bottomPixels,
-        @OutputCustomType.Parameter("leftPixels") Integer leftPixels,
-        @OutputCustomType.Parameter("rightPixels") Integer rightPixels,
-        @OutputCustomType.Parameter("topPixels") Integer topPixels) {
+        @CustomType.Parameter("bottomPixels") Integer bottomPixels,
+        @CustomType.Parameter("leftPixels") Integer leftPixels,
+        @CustomType.Parameter("rightPixels") Integer rightPixels,
+        @CustomType.Parameter("topPixels") Integer topPixels) {
         this.bottomPixels = bottomPixels;
         this.leftPixels = leftPixels;
         this.rightPixels = rightPixels;

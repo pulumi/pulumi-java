@@ -3,13 +3,13 @@
 
 package io.pulumi.awsnative.imagebuilder.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ContainerRecipeComponentConfiguration {
     /**
      * The Amazon Resource Name (ARN) of the component.
@@ -17,8 +17,8 @@ public final class ContainerRecipeComponentConfiguration {
      */
     private final @Nullable String componentArn;
 
-    @OutputCustomType.Constructor
-    private ContainerRecipeComponentConfiguration(@OutputCustomType.Parameter("componentArn") @Nullable String componentArn) {
+    @CustomType.Constructor
+    private ContainerRecipeComponentConfiguration(@CustomType.Parameter("componentArn") @Nullable String componentArn) {
         this.componentArn = componentArn;
     }
 

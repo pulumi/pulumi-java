@@ -7,7 +7,7 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppHybridConnectionSlotArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,7 +32,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * The hostname of the endpoint.
      * 
      */
-    @OutputExport(name="hostname", type=String.class, parameters={})
+    @Export(name="hostname", type=String.class, parameters={})
     private Output</* @Nullable */ String> hostname;
 
     /**
@@ -46,7 +46,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * Kind of resource.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output</* @Nullable */ String> kind;
 
     /**
@@ -60,7 +60,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * Resource Name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -74,7 +74,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * The port of the endpoint.
      * 
      */
-    @OutputExport(name="port", type=Integer.class, parameters={})
+    @Export(name="port", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> port;
 
     /**
@@ -88,7 +88,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * The ARM URI to the Service Bus relay.
      * 
      */
-    @OutputExport(name="relayArmUri", type=String.class, parameters={})
+    @Export(name="relayArmUri", type=String.class, parameters={})
     private Output</* @Nullable */ String> relayArmUri;
 
     /**
@@ -102,7 +102,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * The name of the Service Bus relay.
      * 
      */
-    @OutputExport(name="relayName", type=String.class, parameters={})
+    @Export(name="relayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> relayName;
 
     /**
@@ -116,7 +116,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * The name of the Service Bus key which has Send permissions. This is used to authenticate to Service Bus.
      * 
      */
-    @OutputExport(name="sendKeyName", type=String.class, parameters={})
+    @Export(name="sendKeyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> sendKeyName;
 
     /**
@@ -131,7 +131,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * normally, use the POST /listKeys API instead.
      * 
      */
-    @OutputExport(name="sendKeyValue", type=String.class, parameters={})
+    @Export(name="sendKeyValue", type=String.class, parameters={})
     private Output</* @Nullable */ String> sendKeyValue;
 
     /**
@@ -146,7 +146,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * The name of the Service Bus namespace.
      * 
      */
-    @OutputExport(name="serviceBusNamespace", type=String.class, parameters={})
+    @Export(name="serviceBusNamespace", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceBusNamespace;
 
     /**
@@ -160,7 +160,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * The suffix for the service bus endpoint. By default this is .servicebus.windows.net
      * 
      */
-    @OutputExport(name="serviceBusSuffix", type=String.class, parameters={})
+    @Export(name="serviceBusSuffix", type=String.class, parameters={})
     private Output</* @Nullable */ String> serviceBusSuffix;
 
     /**
@@ -174,7 +174,7 @@ public class WebAppHybridConnectionSlot extends io.pulumi.resources.CustomResour
      * Resource type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

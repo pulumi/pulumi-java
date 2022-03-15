@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterMaintenancePolicyDailyMaintenanceWindow {
     private final String duration;
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterMaintenancePolicyDailyMaintenanceWindow(
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("startTime") String startTime) {
         this.duration = duration;
         this.startTime = startTime;
     }

@@ -8,14 +8,14 @@ import io.pulumi.azurenative.hdinsight.outputs.ApplicationGetHttpsEndpointRespon
 import io.pulumi.azurenative.hdinsight.outputs.ComputeProfileResponse;
 import io.pulumi.azurenative.hdinsight.outputs.ErrorsResponse;
 import io.pulumi.azurenative.hdinsight.outputs.RuntimeScriptActionResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ApplicationPropertiesResponse {
     /**
      * The application state.
@@ -73,19 +73,19 @@ public final class ApplicationPropertiesResponse {
      */
     private final @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ApplicationPropertiesResponse(
-        @OutputCustomType.Parameter("applicationState") String applicationState,
-        @OutputCustomType.Parameter("applicationType") @Nullable String applicationType,
-        @OutputCustomType.Parameter("computeProfile") @Nullable ComputeProfileResponse computeProfile,
-        @OutputCustomType.Parameter("createdDate") String createdDate,
-        @OutputCustomType.Parameter("errors") @Nullable List<ErrorsResponse> errors,
-        @OutputCustomType.Parameter("httpsEndpoints") @Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints,
-        @OutputCustomType.Parameter("installScriptActions") @Nullable List<RuntimeScriptActionResponse> installScriptActions,
-        @OutputCustomType.Parameter("marketplaceIdentifier") String marketplaceIdentifier,
-        @OutputCustomType.Parameter("provisioningState") String provisioningState,
-        @OutputCustomType.Parameter("sshEndpoints") @Nullable List<ApplicationGetEndpointResponse> sshEndpoints,
-        @OutputCustomType.Parameter("uninstallScriptActions") @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions) {
+        @CustomType.Parameter("applicationState") String applicationState,
+        @CustomType.Parameter("applicationType") @Nullable String applicationType,
+        @CustomType.Parameter("computeProfile") @Nullable ComputeProfileResponse computeProfile,
+        @CustomType.Parameter("createdDate") String createdDate,
+        @CustomType.Parameter("errors") @Nullable List<ErrorsResponse> errors,
+        @CustomType.Parameter("httpsEndpoints") @Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints,
+        @CustomType.Parameter("installScriptActions") @Nullable List<RuntimeScriptActionResponse> installScriptActions,
+        @CustomType.Parameter("marketplaceIdentifier") String marketplaceIdentifier,
+        @CustomType.Parameter("provisioningState") String provisioningState,
+        @CustomType.Parameter("sshEndpoints") @Nullable List<ApplicationGetEndpointResponse> sshEndpoints,
+        @CustomType.Parameter("uninstallScriptActions") @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions) {
         this.applicationState = applicationState;
         this.applicationType = applicationType;
         this.computeProfile = computeProfile;

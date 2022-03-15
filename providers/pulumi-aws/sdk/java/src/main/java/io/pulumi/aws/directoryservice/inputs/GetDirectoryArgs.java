@@ -3,7 +3,7 @@
 
 package io.pulumi.aws.directoryservice.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetDirectoryArgs extends io.pulumi.resources.InvokeArgs {
      * The ID of the directory.
      * 
      */
-    @InputImport(name="directoryId", required=true)
+    @Import(name="directoryId", required=true)
       private final String directoryId;
 
     public String getDirectoryId() {
@@ -30,7 +30,7 @@ public final class GetDirectoryArgs extends io.pulumi.resources.InvokeArgs {
      * A map of tags assigned to the directory/connector.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {

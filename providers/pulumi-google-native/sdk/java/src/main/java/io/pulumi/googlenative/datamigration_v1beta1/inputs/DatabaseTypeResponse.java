@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1beta1.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DatabaseTypeResponse extends io.pulumi.resources.InvokeArgs {
      * The database engine.
      * 
      */
-    @InputImport(name="engine", required=true)
+    @Import(name="engine", required=true)
       private final String engine;
 
     public String getEngine() {
@@ -31,7 +31,7 @@ public final class DatabaseTypeResponse extends io.pulumi.resources.InvokeArgs {
      * The database provider.
      * 
      */
-    @InputImport(name="provider", required=true)
+    @Import(name="provider", required=true)
       private final String provider;
 
     public String getProvider() {

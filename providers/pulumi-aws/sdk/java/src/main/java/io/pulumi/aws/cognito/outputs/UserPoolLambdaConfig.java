@@ -5,13 +5,13 @@ package io.pulumi.aws.cognito.outputs;
 
 import io.pulumi.aws.cognito.outputs.UserPoolLambdaConfigCustomEmailSender;
 import io.pulumi.aws.cognito.outputs.UserPoolLambdaConfigCustomSmsSender;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UserPoolLambdaConfig {
     /**
      * ARN of the lambda creating an authentication challenge.
@@ -79,21 +79,21 @@ public final class UserPoolLambdaConfig {
      */
     private final @Nullable String verifyAuthChallengeResponse;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UserPoolLambdaConfig(
-        @OutputCustomType.Parameter("createAuthChallenge") @Nullable String createAuthChallenge,
-        @OutputCustomType.Parameter("customEmailSender") @Nullable UserPoolLambdaConfigCustomEmailSender customEmailSender,
-        @OutputCustomType.Parameter("customMessage") @Nullable String customMessage,
-        @OutputCustomType.Parameter("customSmsSender") @Nullable UserPoolLambdaConfigCustomSmsSender customSmsSender,
-        @OutputCustomType.Parameter("defineAuthChallenge") @Nullable String defineAuthChallenge,
-        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
-        @OutputCustomType.Parameter("postAuthentication") @Nullable String postAuthentication,
-        @OutputCustomType.Parameter("postConfirmation") @Nullable String postConfirmation,
-        @OutputCustomType.Parameter("preAuthentication") @Nullable String preAuthentication,
-        @OutputCustomType.Parameter("preSignUp") @Nullable String preSignUp,
-        @OutputCustomType.Parameter("preTokenGeneration") @Nullable String preTokenGeneration,
-        @OutputCustomType.Parameter("userMigration") @Nullable String userMigration,
-        @OutputCustomType.Parameter("verifyAuthChallengeResponse") @Nullable String verifyAuthChallengeResponse) {
+        @CustomType.Parameter("createAuthChallenge") @Nullable String createAuthChallenge,
+        @CustomType.Parameter("customEmailSender") @Nullable UserPoolLambdaConfigCustomEmailSender customEmailSender,
+        @CustomType.Parameter("customMessage") @Nullable String customMessage,
+        @CustomType.Parameter("customSmsSender") @Nullable UserPoolLambdaConfigCustomSmsSender customSmsSender,
+        @CustomType.Parameter("defineAuthChallenge") @Nullable String defineAuthChallenge,
+        @CustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @CustomType.Parameter("postAuthentication") @Nullable String postAuthentication,
+        @CustomType.Parameter("postConfirmation") @Nullable String postConfirmation,
+        @CustomType.Parameter("preAuthentication") @Nullable String preAuthentication,
+        @CustomType.Parameter("preSignUp") @Nullable String preSignUp,
+        @CustomType.Parameter("preTokenGeneration") @Nullable String preTokenGeneration,
+        @CustomType.Parameter("userMigration") @Nullable String userMigration,
+        @CustomType.Parameter("verifyAuthChallengeResponse") @Nullable String verifyAuthChallengeResponse) {
         this.createAuthChallenge = createAuthChallenge;
         this.customEmailSender = customEmailSender;
         this.customMessage = customMessage;

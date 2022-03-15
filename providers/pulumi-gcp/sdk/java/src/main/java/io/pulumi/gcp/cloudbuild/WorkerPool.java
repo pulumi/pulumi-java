@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudbuild.WorkerPoolArgs;
@@ -46,7 +46,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * limitations.
      * 
      */
-    @OutputExport(name="annotations", type=Map.class, parameters={String.class, String.class})
+    @Export(name="annotations", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> annotations;
 
     /**
@@ -61,7 +61,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Output only. Time at which the request to create the `WorkerPool` was received.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -75,7 +75,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Output only. Time at which the request to delete the `WorkerPool` was received.
      * 
      */
-    @OutputExport(name="deleteTime", type=String.class, parameters={})
+    @Export(name="deleteTime", type=String.class, parameters={})
     private Output<String> deleteTime;
 
     /**
@@ -89,7 +89,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * A user-specified, human-readable name for the `WorkerPool`. If provided, this value must be 1-63 characters.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -103,7 +103,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * The location for the resource
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -117,7 +117,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * User-defined name of the `WorkerPool`.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -131,7 +131,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Network configuration for the `WorkerPool`. Structure is documented below.
      * 
      */
-    @OutputExport(name="networkConfig", type=WorkerPoolNetworkConfig.class, parameters={})
+    @Export(name="networkConfig", type=WorkerPoolNetworkConfig.class, parameters={})
     private Output</* @Nullable */ WorkerPoolNetworkConfig> networkConfig;
 
     /**
@@ -145,7 +145,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * The project for the resource
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -159,7 +159,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Output only. `WorkerPool` state. Possible values: STATE_UNSPECIFIED, PENDING, APPROVED, REJECTED, CANCELLED
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -173,7 +173,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Output only. A unique identifier for the `WorkerPool`.
      * 
      */
-    @OutputExport(name="uid", type=String.class, parameters={})
+    @Export(name="uid", type=String.class, parameters={})
     private Output<String> uid;
 
     /**
@@ -187,7 +187,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Output only. Time at which the request to update the `WorkerPool` was received.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -201,7 +201,7 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
      * Configuration to be used for a creating workers in the `WorkerPool`. Structure is documented below.
      * 
      */
-    @OutputExport(name="workerConfig", type=WorkerPoolWorkerConfig.class, parameters={})
+    @Export(name="workerConfig", type=WorkerPoolWorkerConfig.class, parameters={})
     private Output<WorkerPoolWorkerConfig> workerConfig;
 
     /**

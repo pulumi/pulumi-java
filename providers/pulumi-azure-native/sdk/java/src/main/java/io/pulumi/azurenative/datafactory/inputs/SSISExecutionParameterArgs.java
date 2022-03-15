@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SSISExecutionParameterArgs extends io.pulumi.resources.Resour
      * SSIS package execution parameter value. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<Object> value;
 
     public Output<Object> getValue() {

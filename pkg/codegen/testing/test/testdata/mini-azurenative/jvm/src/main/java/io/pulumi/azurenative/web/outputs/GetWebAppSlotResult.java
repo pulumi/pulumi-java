@@ -4,12 +4,12 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.SiteConfigResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebAppSlotResult {
     /**
      * Configuration of the app.
@@ -17,8 +17,8 @@ public final class GetWebAppSlotResult {
      */
     private final @Nullable SiteConfigResponse siteConfig;
 
-    @OutputCustomType.Constructor
-    private GetWebAppSlotResult(@OutputCustomType.Parameter("siteConfig") @Nullable SiteConfigResponse siteConfig) {
+    @CustomType.Constructor
+    private GetWebAppSlotResult(@CustomType.Parameter("siteConfig") @Nullable SiteConfigResponse siteConfig) {
         this.siteConfig = siteConfig;
     }
 

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.awsnative.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginArgs;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -16,42 +16,42 @@ public final class CachePolicyConfigArgs extends io.pulumi.resources.ResourceArg
 
     public static final CachePolicyConfigArgs Empty = new CachePolicyConfigArgs();
 
-    @InputImport(name="comment")
+    @Import(name="comment")
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
         return this.comment == null ? Output.empty() : this.comment;
     }
 
-    @InputImport(name="defaultTTL", required=true)
+    @Import(name="defaultTTL", required=true)
       private final Output<Double> defaultTTL;
 
     public Output<Double> getDefaultTTL() {
         return this.defaultTTL;
     }
 
-    @InputImport(name="maxTTL", required=true)
+    @Import(name="maxTTL", required=true)
       private final Output<Double> maxTTL;
 
     public Output<Double> getMaxTTL() {
         return this.maxTTL;
     }
 
-    @InputImport(name="minTTL", required=true)
+    @Import(name="minTTL", required=true)
       private final Output<Double> minTTL;
 
     public Output<Double> getMinTTL() {
         return this.minTTL;
     }
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
         return this.name;
     }
 
-    @InputImport(name="parametersInCacheKeyAndForwardedToOrigin", required=true)
+    @Import(name="parametersInCacheKeyAndForwardedToOrigin", required=true)
       private final Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> parametersInCacheKeyAndForwardedToOrigin;
 
     public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginArgs> getParametersInCacheKeyAndForwardedToOrigin() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class IstioCanonicalServiceArgs extends io.pulumi.resources.Resourc
      * The name of the canonical service underlying this service. Corresponds to the destination_canonical_service_name metric label in label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
      * 
      */
-    @InputImport(name="canonicalService")
+    @Import(name="canonicalService")
       private final @Nullable Output<String> canonicalService;
 
     public Output<String> getCanonicalService() {
@@ -33,7 +33,7 @@ public final class IstioCanonicalServiceArgs extends io.pulumi.resources.Resourc
      * The namespace of the canonical service underlying this service. Corresponds to the destination_canonical_service_namespace metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
      * 
      */
-    @InputImport(name="canonicalServiceNamespace")
+    @Import(name="canonicalServiceNamespace")
       private final @Nullable Output<String> canonicalServiceNamespace;
 
     public Output<String> getCanonicalServiceNamespace() {
@@ -44,7 +44,7 @@ public final class IstioCanonicalServiceArgs extends io.pulumi.resources.Resourc
      * Identifier for the Istio mesh in which this canonical service is defined. Corresponds to the mesh_uid metric label in Istio metrics (https://cloud.google.com/monitoring/api/metrics_istio).
      * 
      */
-    @InputImport(name="meshUid")
+    @Import(name="meshUid")
       private final @Nullable Output<String> meshUid;
 
     public Output<String> getMeshUid() {

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
      * Allows HTTP request headers (by name) to be used in the cache key.
      * 
      */
-    @InputImport(name="includeHttpHeaders")
+    @Import(name="includeHttpHeaders")
       private final @Nullable Output<List<String>> includeHttpHeaders;
 
     public Output<List<String>> getIncludeHttpHeaders() {
@@ -34,7 +34,7 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyArgs extends io.pulumi.re
      * Names of query string parameters to include in cache keys. All other parameters will be excluded. '&' and '=' will be percent encoded and not treated as delimiters.
      * 
      */
-    @InputImport(name="queryStringWhitelist")
+    @Import(name="queryStringWhitelist")
       private final @Nullable Output<List<String>> queryStringWhitelist;
 
     public Output<List<String>> getQueryStringWhitelist() {

@@ -20,7 +20,7 @@ import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.OracleCloudStorageLocationResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SftpLocationResponse;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ExcelDatasetResponse {
     /**
      * List of tags that can be used for describing the Dataset.
@@ -108,23 +108,23 @@ public final class ExcelDatasetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ExcelDatasetResponse(
-        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
-        @OutputCustomType.Parameter("compression") @Nullable DatasetCompressionResponse compression,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("firstRowAsHeader") @Nullable Object firstRowAsHeader,
-        @OutputCustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
-        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
-        @OutputCustomType.Parameter("location") Object location,
-        @OutputCustomType.Parameter("nullValue") @Nullable Object nullValue,
-        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @OutputCustomType.Parameter("range") @Nullable Object range,
-        @OutputCustomType.Parameter("schema") @Nullable Object schema,
-        @OutputCustomType.Parameter("sheetIndex") @Nullable Object sheetIndex,
-        @OutputCustomType.Parameter("sheetName") @Nullable Object sheetName,
-        @OutputCustomType.Parameter("structure") @Nullable Object structure,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @CustomType.Parameter("compression") @Nullable DatasetCompressionResponse compression,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("firstRowAsHeader") @Nullable Object firstRowAsHeader,
+        @CustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
+        @CustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @CustomType.Parameter("location") Object location,
+        @CustomType.Parameter("nullValue") @Nullable Object nullValue,
+        @CustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @CustomType.Parameter("range") @Nullable Object range,
+        @CustomType.Parameter("schema") @Nullable Object schema,
+        @CustomType.Parameter("sheetIndex") @Nullable Object sheetIndex,
+        @CustomType.Parameter("sheetName") @Nullable Object sheetName,
+        @CustomType.Parameter("structure") @Nullable Object structure,
+        @CustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.compression = compression;
         this.description = description;

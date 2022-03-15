@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
      * List of tags that can be used for describing the linked service.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
@@ -41,7 +41,7 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
      * The integration runtime reference.
      * 
      */
-    @InputImport(name="connectVia")
+    @Import(name="connectVia")
       private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
@@ -52,7 +52,7 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
      * Linked service description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable String description;
 
     public Optional<String> getDescription() {
@@ -63,7 +63,7 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
      * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="encryptedCredential")
+    @Import(name="encryptedCredential")
       private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
@@ -74,7 +74,7 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
      * Admin Key for Azure Search service
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> key;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getKey() {
@@ -85,7 +85,7 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
      * Parameters for linked service.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
@@ -97,7 +97,7 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
      * Expected value is 'AzureSearch'.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {
@@ -108,7 +108,7 @@ public final class AzureSearchLinkedServiceResponse extends io.pulumi.resources.
      * URL for Azure Search service. Type: string (or Expression with resultType string).
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final Object url;
 
     public Object getUrl() {

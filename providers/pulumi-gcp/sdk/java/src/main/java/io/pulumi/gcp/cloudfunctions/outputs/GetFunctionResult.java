@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudfunctions.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudfunctions.outputs.GetFunctionEventTrigger;
 import io.pulumi.gcp.cloudfunctions.outputs.GetFunctionSourceRepository;
 import java.lang.Boolean;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetFunctionResult {
     /**
      * Available memory (in MB) to the function.
@@ -119,32 +119,32 @@ public final class GetFunctionResult {
      */
     private final String vpcConnectorEgressSettings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetFunctionResult(
-        @OutputCustomType.Parameter("availableMemoryMb") Integer availableMemoryMb,
-        @OutputCustomType.Parameter("buildEnvironmentVariables") Map<String,Object> buildEnvironmentVariables,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("entryPoint") String entryPoint,
-        @OutputCustomType.Parameter("environmentVariables") Map<String,Object> environmentVariables,
-        @OutputCustomType.Parameter("eventTriggers") List<GetFunctionEventTrigger> eventTriggers,
-        @OutputCustomType.Parameter("httpsTriggerUrl") String httpsTriggerUrl,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ingressSettings") String ingressSettings,
-        @OutputCustomType.Parameter("labels") Map<String,Object> labels,
-        @OutputCustomType.Parameter("maxInstances") Integer maxInstances,
-        @OutputCustomType.Parameter("minInstances") Integer minInstances,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("runtime") String runtime,
-        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
-        @OutputCustomType.Parameter("sourceArchiveBucket") String sourceArchiveBucket,
-        @OutputCustomType.Parameter("sourceArchiveObject") String sourceArchiveObject,
-        @OutputCustomType.Parameter("sourceRepositories") List<GetFunctionSourceRepository> sourceRepositories,
-        @OutputCustomType.Parameter("timeout") Integer timeout,
-        @OutputCustomType.Parameter("triggerHttp") Boolean triggerHttp,
-        @OutputCustomType.Parameter("vpcConnector") String vpcConnector,
-        @OutputCustomType.Parameter("vpcConnectorEgressSettings") String vpcConnectorEgressSettings) {
+        @CustomType.Parameter("availableMemoryMb") Integer availableMemoryMb,
+        @CustomType.Parameter("buildEnvironmentVariables") Map<String,Object> buildEnvironmentVariables,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("entryPoint") String entryPoint,
+        @CustomType.Parameter("environmentVariables") Map<String,Object> environmentVariables,
+        @CustomType.Parameter("eventTriggers") List<GetFunctionEventTrigger> eventTriggers,
+        @CustomType.Parameter("httpsTriggerUrl") String httpsTriggerUrl,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ingressSettings") String ingressSettings,
+        @CustomType.Parameter("labels") Map<String,Object> labels,
+        @CustomType.Parameter("maxInstances") Integer maxInstances,
+        @CustomType.Parameter("minInstances") Integer minInstances,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("runtime") String runtime,
+        @CustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
+        @CustomType.Parameter("sourceArchiveBucket") String sourceArchiveBucket,
+        @CustomType.Parameter("sourceArchiveObject") String sourceArchiveObject,
+        @CustomType.Parameter("sourceRepositories") List<GetFunctionSourceRepository> sourceRepositories,
+        @CustomType.Parameter("timeout") Integer timeout,
+        @CustomType.Parameter("triggerHttp") Boolean triggerHttp,
+        @CustomType.Parameter("vpcConnector") String vpcConnector,
+        @CustomType.Parameter("vpcConnectorEgressSettings") String vpcConnectorEgressSettings) {
         this.availableMemoryMb = availableMemoryMb;
         this.buildEnvironmentVariables = buildEnvironmentVariables;
         this.description = description;

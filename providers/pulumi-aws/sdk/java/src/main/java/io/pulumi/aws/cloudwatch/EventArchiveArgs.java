@@ -4,7 +4,7 @@
 package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EventArchiveArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the new event archive.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -30,7 +30,7 @@ public final class EventArchiveArgs extends io.pulumi.resources.ResourceArgs {
      * Instructs the new event archive to only capture events matched by this pattern. By default, it attempts to archive every event received in the `event_source_arn`.
      * 
      */
-    @InputImport(name="eventPattern")
+    @Import(name="eventPattern")
       private final @Nullable Output<String> eventPattern;
 
     public Output<String> getEventPattern() {
@@ -41,7 +41,7 @@ public final class EventArchiveArgs extends io.pulumi.resources.ResourceArgs {
      * Event bus source ARN from where these events should be archived.
      * 
      */
-    @InputImport(name="eventSourceArn", required=true)
+    @Import(name="eventSourceArn", required=true)
       private final Output<String> eventSourceArn;
 
     public Output<String> getEventSourceArn() {
@@ -52,7 +52,7 @@ public final class EventArchiveArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the new event archive. The archive name cannot exceed 48 characters.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -63,7 +63,7 @@ public final class EventArchiveArgs extends io.pulumi.resources.ResourceArgs {
      * The maximum number of days to retain events in the new event archive. By default, it archives indefinitely.
      * 
      */
-    @InputImport(name="retentionDays")
+    @Import(name="retentionDays")
       private final @Nullable Output<Integer> retentionDays;
 
     public Output<Integer> getRetentionDays() {

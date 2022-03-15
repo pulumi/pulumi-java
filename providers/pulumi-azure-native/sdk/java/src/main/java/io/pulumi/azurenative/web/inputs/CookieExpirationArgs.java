@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.CookieExpirationConvention;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CookieExpirationArgs extends io.pulumi.resources.ResourceArgs
      * The convention used when determining the session cookie's expiration.
      * 
      */
-    @InputImport(name="convention")
+    @Import(name="convention")
       private final @Nullable Output<CookieExpirationConvention> convention;
 
     public Output<CookieExpirationConvention> getConvention() {
@@ -34,7 +34,7 @@ public final class CookieExpirationArgs extends io.pulumi.resources.ResourceArgs
      * The time after the request is made when the session cookie should expire.
      * 
      */
-    @InputImport(name="timeToExpiration")
+    @Import(name="timeToExpiration")
       private final @Nullable Output<String> timeToExpiration;
 
     public Output<String> getTimeToExpiration() {

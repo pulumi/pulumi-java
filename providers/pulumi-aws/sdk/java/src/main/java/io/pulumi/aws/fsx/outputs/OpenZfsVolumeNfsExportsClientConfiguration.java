@@ -3,12 +3,12 @@
 
 package io.pulumi.aws.fsx.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OpenZfsVolumeNfsExportsClientConfiguration {
     /**
      * - A value that specifies who can mount the file system. You can provide a wildcard character (*), an IP address (0.0.0.0), or a CIDR address (192.0.2.0/24. By default, Amazon FSx uses the wildcard character when specifying the client.
@@ -21,10 +21,10 @@ public final class OpenZfsVolumeNfsExportsClientConfiguration {
      */
     private final List<String> options;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OpenZfsVolumeNfsExportsClientConfiguration(
-        @OutputCustomType.Parameter("clients") String clients,
-        @OutputCustomType.Parameter("options") List<String> options) {
+        @CustomType.Parameter("clients") String clients,
+        @CustomType.Parameter("options") List<String> options) {
         this.clients = clients;
         this.options = options;
     }

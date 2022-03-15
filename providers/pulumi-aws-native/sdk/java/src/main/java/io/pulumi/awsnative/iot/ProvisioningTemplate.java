@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iot.ProvisioningTemplateArgs;
 import io.pulumi.awsnative.iot.outputs.ProvisioningTemplateProvisioningHook;
 import io.pulumi.awsnative.iot.outputs.ProvisioningTemplateTag;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,49 +21,49 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="aws-native:iot:ProvisioningTemplate")
 public class ProvisioningTemplate extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     public Output</* @Nullable */ String> getDescription() {
         return this.description;
     }
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     public Output</* @Nullable */ Boolean> getEnabled() {
         return this.enabled;
     }
-    @OutputExport(name="preProvisioningHook", type=ProvisioningTemplateProvisioningHook.class, parameters={})
+    @Export(name="preProvisioningHook", type=ProvisioningTemplateProvisioningHook.class, parameters={})
     private Output</* @Nullable */ ProvisioningTemplateProvisioningHook> preProvisioningHook;
 
     public Output</* @Nullable */ ProvisioningTemplateProvisioningHook> getPreProvisioningHook() {
         return this.preProvisioningHook;
     }
-    @OutputExport(name="provisioningRoleArn", type=String.class, parameters={})
+    @Export(name="provisioningRoleArn", type=String.class, parameters={})
     private Output<String> provisioningRoleArn;
 
     public Output<String> getProvisioningRoleArn() {
         return this.provisioningRoleArn;
     }
-    @OutputExport(name="tags", type=List.class, parameters={ProvisioningTemplateTag.class})
+    @Export(name="tags", type=List.class, parameters={ProvisioningTemplateTag.class})
     private Output</* @Nullable */ List<ProvisioningTemplateTag>> tags;
 
     public Output</* @Nullable */ List<ProvisioningTemplateTag>> getTags() {
         return this.tags;
     }
-    @OutputExport(name="templateArn", type=String.class, parameters={})
+    @Export(name="templateArn", type=String.class, parameters={})
     private Output<String> templateArn;
 
     public Output<String> getTemplateArn() {
         return this.templateArn;
     }
-    @OutputExport(name="templateBody", type=String.class, parameters={})
+    @Export(name="templateBody", type=String.class, parameters={})
     private Output<String> templateBody;
 
     public Output<String> getTemplateBody() {
         return this.templateBody;
     }
-    @OutputExport(name="templateName", type=String.class, parameters={})
+    @Export(name="templateName", type=String.class, parameters={})
     private Output</* @Nullable */ String> templateName;
 
     public Output</* @Nullable */ String> getTemplateName() {

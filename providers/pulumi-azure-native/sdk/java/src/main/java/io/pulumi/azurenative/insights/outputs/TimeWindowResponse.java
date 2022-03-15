@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TimeWindowResponse {
     /**
      * the end time for the profile in ISO 8601 format.
@@ -27,11 +27,11 @@ public final class TimeWindowResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TimeWindowResponse(
-        @OutputCustomType.Parameter("end") String end,
-        @OutputCustomType.Parameter("start") String start,
-        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
+        @CustomType.Parameter("end") String end,
+        @CustomType.Parameter("start") String start,
+        @CustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.end = end;
         this.start = start;
         this.timeZone = timeZone;

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.googlenative.notebooks_v1.enums.AcceleratorConfigType;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
      * Count of cores of this accelerator.
      * 
      */
-    @InputImport(name="coreCount")
+    @Import(name="coreCount")
       private final @Nullable Output<String> coreCount;
 
     public Output<String> getCoreCount() {
@@ -34,7 +34,7 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
      * Type of this accelerator.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<AcceleratorConfigType> type;
 
     public Output<AcceleratorConfigType> getType() {

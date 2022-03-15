@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NumberInAdvancedFilterResponse {
     /**
      * The field/property in the event based on which you want to filter.
@@ -30,11 +30,11 @@ public final class NumberInAdvancedFilterResponse {
      */
     private final @Nullable List<Double> values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NumberInAdvancedFilterResponse(
-        @OutputCustomType.Parameter("key") @Nullable String key,
-        @OutputCustomType.Parameter("operatorType") String operatorType,
-        @OutputCustomType.Parameter("values") @Nullable List<Double> values) {
+        @CustomType.Parameter("key") @Nullable String key,
+        @CustomType.Parameter("operatorType") String operatorType,
+        @CustomType.Parameter("values") @Nullable List<Double> values) {
         this.key = key;
         this.operatorType = operatorType;
         this.values = values;

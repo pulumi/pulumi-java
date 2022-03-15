@@ -3,11 +3,11 @@
 
 package io.pulumi.googlenative.pubsub_v1beta2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTopicResult {
     /**
      * The name of the topic. It must have the format `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters in length, and it must not start with `"goog"`.
@@ -15,8 +15,8 @@ public final class GetTopicResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private GetTopicResult(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private GetTopicResult(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

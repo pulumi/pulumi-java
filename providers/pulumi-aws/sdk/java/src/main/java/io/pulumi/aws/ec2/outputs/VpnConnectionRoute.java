@@ -3,13 +3,13 @@
 
 package io.pulumi.aws.ec2.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class VpnConnectionRoute {
     /**
      * The CIDR block associated with the local subnet of the customer data center.
@@ -27,11 +27,11 @@ public final class VpnConnectionRoute {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private VpnConnectionRoute(
-        @OutputCustomType.Parameter("destinationCidrBlock") @Nullable String destinationCidrBlock,
-        @OutputCustomType.Parameter("source") @Nullable String source,
-        @OutputCustomType.Parameter("state") @Nullable String state) {
+        @CustomType.Parameter("destinationCidrBlock") @Nullable String destinationCidrBlock,
+        @CustomType.Parameter("source") @Nullable String source,
+        @CustomType.Parameter("state") @Nullable String state) {
         this.destinationCidrBlock = destinationCidrBlock;
         this.source = source;
         this.state = state;

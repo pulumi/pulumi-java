@@ -3,12 +3,12 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.TlsCertificateContextResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.TlsValidationContextResponse;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TlsContextResponse {
     /**
      * Defines the mechanism to obtain the client or server certificate.
@@ -21,10 +21,10 @@ public final class TlsContextResponse {
      */
     private final TlsValidationContextResponse validationContext;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TlsContextResponse(
-        @OutputCustomType.Parameter("certificateContext") TlsCertificateContextResponse certificateContext,
-        @OutputCustomType.Parameter("validationContext") TlsValidationContextResponse validationContext) {
+        @CustomType.Parameter("certificateContext") TlsCertificateContextResponse certificateContext,
+        @CustomType.Parameter("validationContext") TlsValidationContextResponse validationContext) {
         this.certificateContext = certificateContext;
         this.validationContext = validationContext;
     }

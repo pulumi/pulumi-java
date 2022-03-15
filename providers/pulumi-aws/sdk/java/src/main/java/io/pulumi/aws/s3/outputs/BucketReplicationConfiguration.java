@@ -4,12 +4,12 @@
 package io.pulumi.aws.s3.outputs;
 
 import io.pulumi.aws.s3.outputs.BucketReplicationConfigurationRule;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class BucketReplicationConfiguration {
     /**
      * The ARN of the IAM role for Amazon S3 to assume when replicating the objects.
@@ -22,10 +22,10 @@ public final class BucketReplicationConfiguration {
      */
     private final List<BucketReplicationConfigurationRule> rules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketReplicationConfiguration(
-        @OutputCustomType.Parameter("role") String role,
-        @OutputCustomType.Parameter("rules") List<BucketReplicationConfigurationRule> rules) {
+        @CustomType.Parameter("role") String role,
+        @CustomType.Parameter("rules") List<BucketReplicationConfigurationRule> rules) {
         this.role = role;
         this.rules = rules;
     }

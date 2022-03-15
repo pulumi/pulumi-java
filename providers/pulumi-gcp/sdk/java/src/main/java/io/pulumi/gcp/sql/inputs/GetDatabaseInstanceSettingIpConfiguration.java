@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.sql.inputs.GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork;
 import java.lang.Boolean;
 import java.lang.String;
@@ -15,35 +15,35 @@ public final class GetDatabaseInstanceSettingIpConfiguration extends io.pulumi.r
 
     public static final GetDatabaseInstanceSettingIpConfiguration Empty = new GetDatabaseInstanceSettingIpConfiguration();
 
-    @InputImport(name="allocatedIpRange", required=true)
+    @Import(name="allocatedIpRange", required=true)
       private final String allocatedIpRange;
 
     public String getAllocatedIpRange() {
         return this.allocatedIpRange;
     }
 
-    @InputImport(name="authorizedNetworks", required=true)
+    @Import(name="authorizedNetworks", required=true)
       private final List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> authorizedNetworks;
 
     public List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> getAuthorizedNetworks() {
         return this.authorizedNetworks;
     }
 
-    @InputImport(name="ipv4Enabled", required=true)
+    @Import(name="ipv4Enabled", required=true)
       private final Boolean ipv4Enabled;
 
     public Boolean getIpv4Enabled() {
         return this.ipv4Enabled;
     }
 
-    @InputImport(name="privateNetwork", required=true)
+    @Import(name="privateNetwork", required=true)
       private final String privateNetwork;
 
     public String getPrivateNetwork() {
         return this.privateNetwork;
     }
 
-    @InputImport(name="requireSsl", required=true)
+    @Import(name="requireSsl", required=true)
       private final Boolean requireSsl;
 
     public Boolean getRequireSsl() {
